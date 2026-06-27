@@ -1,0 +1,41 @@
+# Don Hopkins — SimCity / Micropolis lineage (public projection)
+# Source: DonHopkins/characters/don-hopkins/ — filtered, factual
+
+simcity_lineage:
+  - name: SimCity (Unix / NeWS)
+    era: "late 1980s–1990s"
+    don_role: "Ports to NeWS/HyperLook and X11/TCL/Tk; SimCityNet cooperative multiplayer"
+    runs_on: [NeWS, X11, TCL/Tk]
+    note: "Pie menus in the X11 port"
+
+  - name: SimCity 2000
+    era: "1990s"
+    don_role: "Maxis era — SimCity family; bridge to Dollhouse/Sims work"
+    runs_on: [Mac, PC, many platforms]
+
+  - name: The Sims
+    era: "1997–2000"
+    don_role: "UI (pie menus), architectural editing, Edith/SimAntics tools, Transmogrifier/RugOMatic/SimShow modding stack"
+    runs_on: [Windows, Mac — Sims 1; Legacy Collection on Steam]
+
+  - name: Micropolis (open source)
+    era: "2008"
+    don_role: "Worked with EA + OLPC to release SimCity as Micropolis under GPL"
+    runs_on: [Linux, OLPC XO, source distributions]
+    repo: https://github.com/SimHacker/micropolis
+
+  - name: MicropolisCore
+    era: "2020s–"
+    don_role: "Modern rewrite — WASM, embind, SvelteKit, federation peer games"
+    runs_on: [Web browser, native builds]
+    repo: https://github.com/SimHacker/MicropolisCore
+
+related_sims_tools:
+  - Transmogrifier
+  - RugOMatic
+  - SimShow
+  - OpenLaszlo SimFreaks prototype (unreleased web app)
+
+see_also:
+  - project-threads.yml
+  - ../README.md

@@ -1,0 +1,90 @@
+# SUGGESTED QUESTIONS — seeds for the Will Wright kickoff
+#
+# These are SEEDS (questions are seeds too!). Audience members VOTE by COPYING a
+# question into their own character (their CHARACTER.yml), elaborating /
+# contextualizing / editing it as they see fit. The more characters carry a
+# variant, the higher it bubbles. Don Philahue sees the whole shared list +
+# every copy/elaboration + the audience's interests, and DJs them — coalescing,
+# ordering, prioritizing — so the best ones bubble to the top in the limited
+# (long-form but finite) time. See ../../../skills/repo-show/CARD.yml question_voting.
+#
+# The centerpiece is the 1996 Winograd video + Medium article
+# (sources/1996-04-26-winograd-interfacing-to-microworlds/). Most seeds ask Will
+# about HIS OWN 1996 WORDS — what he got right, what he got wrong.
+
+meta:
+  status: seed-list
+  centerpiece: sources/1996-04-26-winograd-interfacing-to-microworlds/
+  voting: "Copy a question into your character = a vote + a fork you can edit. See SHOW skill question_voting."
+
+# WHAT HE GOT RIGHT (a lot!) — play the 1996 clip, then ask
+got_right:
+  - id: simlish-charlie-brown
+    q: "In 1996 you described the dolls' speech as Peanuts-style 'mwa mwa mwa' adult talk — structural ambiguity people read into. That BECAME Simlish. Did you know then it would land that perfectly? [clip: transcript 1:18:58]"
+  - id: plugin-objects-advertising
+    q: "1996-you said objects would 'advertise' — 'if you're hungry, eat me!' — behavior distributed in the environment, data-driven, the object tells the Sim what to do. That became SimAntics. How does it feel watching that idea become an entire modding ecosystem? [clip: 1:13:02]"
+  - id: net-shared-user-content
+    q: "You predicted users would build objects and 'post them on the net, and other people could download them, and the environment gets more rich.' That's exactly what happened. Did the scale of it surprise you?"
+  - id: data-portability-dream
+    q: "Your 1996 framing was 'data portability' — objects + persistent data moving between games (the train-set hobby model). That's STILL a frontier (it's literally a goal of this project). What got in the way? What would unlock it now?"
+  - id: modama-cod-hq-vs-gta-worlds
+    from: Modama (modama805@gmail.com)
+    correspondence: ../../../../characters/don-hopkins/correspondence/modama.yml
+    q: "You discussed persistent data carrying between games in 1996. Is the industry heading there — Call of Duty HQ-style unified shells — or still falling short of true cross-title worlds? Modama's example: own GTA 5 and 6, fly to Los Santos in 6 (plane as loading screen), play in the old city with shared persistent state across both games. [clip: transcript 1:08:19–1:09:54]"
+  - id: hobby-not-movie-model
+    q: "You contrasted the 'movie model' (one big title, hit or die) with the 'hobby model' (collect things that relate). Did the industry go where you hoped, or the other way?"
+
+# WHAT HE GOT WRONG (or that's fun to probe)
+got_wrong_or_open:
+  - id: people-no-hope
+    q: "1996-you said simulating people is 'really no hope' — best you can do is prop up a convincing illusion. The illusion worked WAY better than 'no hope.' Were you underselling it, or did something change?"
+  - id: multiplayer-easier-than-ai
+    q: "You said a multiplayer game would be far easier than an AI game ('you can use other people'). Then The Sims Online happened. Did 'just use real people' turn out as easy as it sounded?"
+  - id: three-d-fad
+    q: "You admitted you'd thought 3D would be a fad, then changed your mind. Anything you're calling a 'fad' now that you might be wrong about? (AI? something else?)"
+
+# THE SIMS ONLINE — good + bad
+the_sims_online:
+  - id: tso-graphic-mud
+    q: "In 1996 you mused you could 'think of this as a graphic MUD.' TSO (2002) was that. What worked, what didn't, and what would you do differently with today's tech?"
+  - id: tso-real-irrational-people
+    q: "The Sims gave NPCs seemingly-rational behavior; TSO gave you totally IRRATIONAL behavior — because they were real people. What did real players do that no simulation would have?"
+
+# USER-CREATED CONTENT COMMUNITY (from the Medium article)
+ucc_community:
+  - id: ucc-sites
+    q: "The modding community exploded — SimFreaks, SimSlice, Simprov/SimBabes, ZombieSim, Transmogrifier, IFFPencil2, FreeTheSims, RugOMatic. Which fan creations delighted or astonished you most?"
+  - id: tools-for-users
+    q: "You wanted 'tools where the user could build these things.' How important were user-creation tools to The Sims' success vs. the base game?"
+  - id: don-tools
+    q: "[Don's thread] We built Transmogrifier, RugOMatic, SimShow... and people made everything from green flamingos to wedding playsets. Reminisce about the wildest user content."
+
+# SIMCITY 3000 — scrapped 3D era (Modama preservation inquiry, Guru doc, Don HN 2026)
+simcity_3000_3d:
+  - id: sc3k-will-design-ignored
+    q: "You handed the team a design for the next SimCity — they ignored it and went off on the 3D/VR tangent. What was in YOUR design that they should have shipped instead?"
+  - id: sc3k-should-be-2001
+    q: "Don argues it should have been called SimCity 2001 not 3000 — to set realistic expectations. Do you agree? What would you have cut to ship on time?"
+  - id: sc3k-guru-document
+    q: "Guru's design doc promised to 'bridge the chasm of expectations and technology in the forthcoming year' on a Pentium 75. Ocean says Guru was sincere, not on mushrooms. Were you in the room? How did that happen?"
+  - id: sc3k-e3-1997-demo
+    q: "The E3 1997 3D prototype — what actually worked vs. smoke and mirrors? Anything worth salvaging for preservation, or right to burn it all?"
+  - id: sc3k-ea-pivot
+    q: "Maxis ran out of money; EA bought you; Luc Barthelet told reporters SC3K would be 2D and beautiful. What was the human story of that reset week?"
+  - id: sc3k-cylinder-and-egg
+    q: "[Fun] Guru wrote buildings metamorphosing: 'Now I'm a cylinder and Now I'm an egg / Now I'm smooth & shiny and Now I'm not.' Did anyone ever implement that, or was it pure design poetry?"
+  - id: modama-sc3k-wait-for-directx
+    from: Modama
+    correspondence: ../../../../characters/don-hopkins/correspondence/modama.yml
+    q: "Modama argues the 3D SC3K iteration was feasible if Maxis waited for DirectX and PC hardware to catch up (1999–2000) instead of abandoning in November 1997. Were they one generation early, or fundamentally on the wrong track regardless of hardware?"
+  - id: modama-sc3k-assets-november-1997
+    from: Modama
+    correspondence: ../../../../characters/don-hopkins/correspondence/modama.yml
+    q: "Preservation question: what happened to the SC3K 3D builds and data when the effort was abandoned (~November 1997)? Do you know anyone who still has assets, alphas, or archives from that era?"
+
+# META — the project itself
+meta_project:
+  - id: goals-were-your-goals
+    q: "Almost every goal of THIS project — plugin objects, content sharing, data portability, characters moving between worlds — you named in 1996. Are we finally building the thing you were describing? What did we miss?"
+
+note: "We can come up with a LOT more. Audience copies/forks/elaborates these into their characters; the popular + best-elaborated ones bubble up. Long-form, but finite — let the collective surface the gold."

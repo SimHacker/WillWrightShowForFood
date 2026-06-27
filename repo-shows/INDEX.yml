@@ -1,0 +1,89 @@
+# SHOWS — one document per show proposal
+#
+# Each show is a streamed conversation that FOLLOWS THROUGH to implementation
+# (Micropolis Class methodology). Two axes:
+#   solo:  one person × one topic (a person can do SEVERAL shows on different
+#          topics — especially Will Wright).
+#   group: multiple people × one topic.
+#
+# Add a show: copy _TEMPLATE.yml → <slug>.yml, fill it in, list it here.
+# Roster + consent: ../process/collaborators.yml. Method: ../process/design-in-public.yml.
+
+meta:
+  status: proposals
+  last_reviewed: 2026-06-25
+  standard_shape: "Per episode: (1) explain WHY the design works, (2) implement it from scratch with MOOLLM + Cursor."
+  github_native: "Each show's durable artifact is a PUBLIC GitHub repo: participants upload + review beforehand, edit live, viewers file HN-style discussion issues in real time. See ../process/design-in-public.yml github_native."
+
+# State: PLANTED = a directory (cloned from templates; seed kept beside + synced).
+#        SEED    = a single <name>.yml file (plant when ready).
+shows:
+  planted:
+    will-wright/:              "★ FIRST PLANTED SHOW. Topic-less kickoff (Will IS the topic), centered on the 1996 Winograd video. Holds SHOW.yml + README + invitation.md (draft email) + episodes.yml + suggested-questions.yml + sources/ + the Flower-Child icon. Topical shows flow from it. (Seed: will-wright-series.yml.)"
+    steve-wozniak/:            "Topic-less kickoff with Steve Wozniak. Apple II, 6502, open hardware, and browser-based emulators."
+    terry-winograd/:           "★ FOREBEAR SHOW. Terry Winograd as the dragon with the treasure trove of videos (CS547 archive). Stands explicitly on Terry's shoulders + the shoulders of all his great guests (Will 1996, Gosling Java 1995, Joy Mountford 1994, Raskin, Norman, etc.). Archive recovery, modern runnable seeds, Micropolis Class continuation, Connections series spine. (Pie menus = Don's own thread, not Joy Mountford's — corrected.)"
+  seeds:
+    group:
+      building-the-sims.yml:    "The Sims team reunion: Jamie Doornbos, Eric Bowman, Patrick Barrett, Don (programmers) + Jim Mackraz (manager) + Will. Designers Chris/Claire may join."
+      music-and-theory.yml:     "David Levitt + Jerry Martin — music and theory."
+      will-and-yoot.yml:        "Will Wright + Yoot Saito — whatever they want."
+      ben-and-heinz-pie-menus.yml:  "Ben Shneiderman + Heinz U. Lemke — pie menus, HCI, history (1969 PIXIE → CHI '88 → now)."
+      news-postscript-window-system.yml: "★ NeWS REUNION. James Gosling + David Rosenthal + Arthur van Hoff (+ Owen Densmore, Duncan Mak). 'Send a program, not a data structure' — PostScript code+graphics+data, the road not taken, made runnable in the browser. Don as participant-historian (pie menus, HyperTIES, X-Windows Disaster). Solos: james-gosling-news-java.yml, arthur-van-hoff-hyperlook.yml."
+      snap-logo-brian-jens.yml: "★ SNAP!/LOGO headline. Brian Harvey + Jens Mönig together — center Brian's books + lifelong Logo work, with Jens on the Snap! they built (first-class everything; the Y combinator; BJC). Solos: jens-monig/, brian-harvey/."
+      skill-creation.yml: "SKILL CREATION — authoring Anthropic Agent Skills + MOOLLM skills as constructionism + PBD for the LLM era. Candidate guests: Walter Bender, Henry Minsky, + people into Claude skills + constructionism (to vet/invite)."
+    bridges:   # the data-portability CROWN JEWEL (crystallized/DESIGN-WISDOM)
+      game-bridge-sims-stardew.yml: "Eric Barone — Sims ⇔ Simopolis ⇔ Stardew two-way bridge (parallel synchronized lives)."
+      game-bridge-proxi-sims.yml:   "Will — Proxi ⇔ Simopolis ⇔ Sims bridge (the crown-jewel payoff; Mind Mirror layer; the Wig-O-Matic worked example). Flows from the Will kickoff."
+      game-bridge-sims-shattered.yml: "Evan Debenham (00-Evan) — Sims ⇔ Simopolis ⇔ Shattered Pixel Dungeon (GPLv3 repo to show; brutal-roguelike contrast world; + the funding model)."
+      game-bridge-sims-spore.yml:   "Will + Spore team — Sims ⇔ Simopolis ⇔ Spore creatures. The CAPSTONE/big-ambition bridge: not just creature-DATA IO but a clean-room, web-native re-creation of the creature RENDERER/ANIMATOR/EDITOR/BUILDER, designed live from interviews (likely a multi-episode ARC). Will's last Maxis game; closes the lineage loop."
+      game-bridge-mind-mirror.yml:  "Sims ⇔ Simopolis ⇔ Timothy Leary's Mind Mirror (1986 EA) — the FIRST emulated-runtime organelle: run the real Apple ][ binary in a web emulator, round-trip a character through it, diffuse its personality readings into sibling organelles. Proves emulated runtimes + cross-organelle diffusion (process/character-endosymbiosis.yml)."
+      game-bridge-afterlife-soul.yml: "Simopolis Soul Bridge ⇔ LucasArts Afterlife (1996) — rescue souls FROM hell, send TO hell; hell-is-full → ZombieSims waves; They Are Billions scale (process/crazy-idea-jam.yml#hell_is_full_zombie_sims)."
+      heather-steve-alvey/afterlife-zombie-bridge.yml: "Heather Alvey (SimFreaks) + Steve Alvey (SimSlice) — drain hell into ZombieSims; religion skin mapping; catalog + authoring tool integration."
+    solo_and_series:
+      design-by-accretion.yml:  "Chris Trottier — 'Design by Accretion' ↔ the cauldron method. FLAGSHIP."
+      alan-kay-microworld.yml:  "Micropolis Class with Alan Kay — microworld-as-medium, objects+classes. DREAM GUEST."
+      will-wright-series.yml:   "Will Wright — SERIES seed. PLANTED → will-wright/."
+      yoot-saito-series.yml:    "Yoot Saito — SERIES; clean-room successor (YOOT BOOT / Building / Seaman) + frontier AI."
+      ben-shneiderman-series.yml: "Ben Shneiderman — SERIES; HyperTIES, hypermedia, direct manipulation, pie menus, info-viz."
+      building-simcity-chaim-gingold.yml: "Chaim Gingold — Building SimCity; turn the book's scholarship, diagrams, and reverse diagrams into executable Micropolis artifacts."
+      edd-coates-game-ui-database.yml: "Edd Coates — Game UI Database, The Game UI Bible, and strategies for ethical AI data licensing."
+      edd-coates/pie-menus-piecraft.yml: "Edd Coates — Pie menus & radials across games, success/failure cases, ultimate editable pies, and PieCraft as UI design literacy game."
+      ben-cerveny: "Ben Cerveny — Game Neverending/Flickr, Stamen maps, Public Code, civic DPI, speculative design. Early interview; public code meets Repo Show / PBD / MOOLLM play-lift-learn."
+      jens-monig: "Jens Mönig — Snap! (BYOB) architect. Solo on integrating Micropolis City with Snap!, Snap! internals + the Y combinator, schemas for Snap! (Don's Barcelona talk), and distributed messaging/dataflow/actor systems in Snap!. (Joint headline: snap-logo-brian-jens.yml.)"
+      brian-harvey: "Brian Harvey — UC Berkeley CS educator; Logo, Simply Scheme, CS Logo Style, Snap!, BJC. Solo on his books + lifelong Logo work; joint headline with Jens (snap-logo-brian-jens.yml)."
+      thomas-cherryhomes: "Thomas Cherryhomes (@tschak) — FujiNet (putting the internet on retro machines), IRATA.ONLINE/PLATO, 'Bus-over-IP', the Game Lobby. Repo-native + a real-hardware/network path for the Apple ][ stack + character bridges. 'Argue to gain insight.'"
+      terry-winograd: "Terry Winograd — The forebear. The dragon with the treasure trove (CS547 archive). Standing on his shoulders + the shoulders of Will Wright, James Gosling, Joy Mountford, and all the other guests. Archive as curriculum and series material."
+      ted-selker-input-languages.yml: "Ted Selker — TrackPoint, gesture languages, NPUC (+ the IBM-Burger/SunBurger story). Input as little languages."
+      brad-myers-garnet-vpl.yml: "Brad Myers — Garnet lab, All the Widgets, Pick Click Flick, Watch What I Do/PBD in the LLM era, VPL taxonomy, C32, 05-640 guest-lecture series. Don worked there ~1992–93 (GLASS). Includes Micropolis Class exercises for students/builders."
+      brad-myers/pbd-in-llm-era.yml: "Narrow vertical: PBD in the LLM Era. Watch What I Do (Cypher + Brad) chapter-by-chapter modern reimplementations as simple playable demo seeds + exercises. Explicit open courseware for CMU and others."
+      ted-nelson-intertwingled.yml: "Ted Nelson — Xanalinks vs jumplinks, intertwingling, MOOLLM, transcribe-the-vision. DREAM GUEST (warm lead). Optional co-guest Ted Selker for NPUC resurrection."
+      phoneloper-speech-synthesis.yml: "Kevin Lenzo — open-source Phoneloper Repo Show (Flite/Cepstral; SFC talking toys; phonoscoping → web vocal jam + Pink Trombone)."
+      pixie-pie-menus-pdp6.yml: "Heinz U. Lemke — PIXIE pie menus on the PDP-6 (1969)."
+      pie-menus-retrospective.yml: "Don (host-as-expert) — redesign + reimplement pie menus from scratch."
+      lambdamoo-pavel-curtis.yml: "Pavel Curtis — LambdaMOO's influence on MOOLLM (direct-source lineage)."
+      walter-bender-olpc.yml:   "Walter Bender — OLPC Stone Soup, open-sourcing SimCity, constructionist playgrounds."
+      bret-victor-explorable.yml: "Bret Victor — explorable explanations applied LIVE to Micropolis legibility, PLUS an honest patronage-vs-shipping conversation (Dynamicland = the cautionary tale). Design counsel + cautionary tale."
+      james-gosling-news-java.yml: "James Gosling (solo) — Emacs → NeWS → Java as one idea: cheesy little extension languages. Old friend/colleague. Feeds the NeWS reunion."
+      arthur-van-hoff-hyperlook.yml: "Arthur van Hoff (solo) — HyperLook (NeWS HyperCard), PdB, the Axis of Eval; how NeWS influenced Java. Long-time friend. Feeds the NeWS reunion."
+    game_show:   # a VARIETY format (not an interview) — the collection holds multiple TYPES
+      game-show-wigcercize.yml: "Wigcercize! — a wig GAME SHOW (MC: Boogaloo Stu). Competitive wigcercizes in outlandish wigs from the Wig-O-Matic."
+
+axes_note: "A person appears in multiple shows (solo + group + bridge). Will especially anchors several. The collection holds multiple FORMATS: design-interview, series, group, bridge, game-show."
+
+backlog_ideas:
+  - "Yoot Saito solo — SimTower → clean-room Yoot Tower (see design-in-public.yml yoot_tower)."
+  - "Bret Victor — legibility / explorable simulation."
+  - "Ted Nelson — intertwingled documents (seed exists: ted-nelson-intertwingled.yml; warm lead Nov 2021)."
+  - "Alan Kay — microworld-as-medium ('Micropolis Class with Alan Kay!')."
+  - "Ben Shneiderman / Jack Callahan — pie menu origins (direct manipulation)."
+  - "Chaim Gingold — Building SimCity as executable scholarship (seed exists: building-simcity-chaim-gingold.yml)."
+  - "Edd Coates — Game UI Database and ethical AI licensing (seed exists: edd-coates-game-ui-database.yml)."
+  - "Edd Coates — Pie menus in games, editable pie design, and PieCraft (seed exists: edd-coates/pie-menus-piecraft.yml)."
+  - "Brad Myers — Garnet constraints, All the Widgets, VPL taxonomy (seed exists: brad-myers-garnet-vpl.yml; warm CMU history)."
+  - "Scott Adams — interactive fiction; mutual seed exchange."
+  - "Eric Barone (ConcernedApe) — Stardew Valley; solo-dev success + farming-game resonance."
+  - "Steve Wozniak — Apple II, 6502, open hardware, and live floppy-buffer hacking."
+  - "More designers of games that resonate with SimCity / The Sims / MOO (open wishlist)."
+  - "Stephen Wolfram — cellular automata / computational thinking (a Lex-subject Don would interview)."
+  - "Other Lex-interview subjects Don would love to interview (open wishlist)."
+  - "RETRO BRIDGE: Wizardry (1981, Apple ][ UCSD Pascal) — TS Apple ][ disk + UCSD-Pascal-FS libs → edit save files → run in a web Apple ][ emulator. Send Sims to die in the dungeon; regenerate at will. (MODULES sim_obliterator_bridge backlog.)"

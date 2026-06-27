@@ -1,0 +1,46 @@
+# CARD — WillWrightShowForFood MOOLLM plugin interface
+# Semantic Image Pyramid: GLANCE → CARD → README → deep trees
+
+plugin:
+  name: WillWrightShowForFood
+  id: wwsff
+  type: moollm-microworld
+  repo: https://github.com/SimHacker/WillWrightShowForFood
+  public: true
+  compose_with:
+    - https://github.com/SimHacker/moollm
+    - https://github.com/SimHacker/MicropolisCore
+
+purpose: |
+  Public-facing Repo Show world for Will Wright kickoff. Filtered export from DonHopkins
+  private monorepo. Two-way navigable indexes. Guest characters as potential show hosts.
+
+methods:
+  ORIENT:
+    signature: "Read README.md → GLANCE.yml → active show dir"
+    returns: { cream: array, next: string }
+
+  FIND-GUEST:
+    signature: "Scan characters/INDEX.yml by invitation_status or topic"
+    returns: { guests: array }
+
+  FIND-SHOW:
+    signature: "Scan repo-shows/INDEX.yml"
+    returns: { shows: array }
+
+rooms:
+  repo-shows/: "Show seeds and planted instances"
+  characters/: "Guest + host portrayals (filtered, public-safe)"
+  process/: "Export/sync with DonHopkins private tree"
+  schemas/: "Shared metadata (invitation status, etc.)"
+
+k_lines:
+  - "So you have a Repo to Show us?"
+  - "Will Wright Show For Food"
+  - "Show, don't tell"
+  - "Homefun not homework"
+
+see_also:
+  - kernel/moollm-plugin.yml
+  - process/sync-with-donhopkins.yml
+  - ../DonHopkins/projects/micropolis-moollm/process/wwsff-export-sync.yml

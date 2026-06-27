@@ -1,0 +1,60 @@
+# Reincarnate Slats — the ROBORESURRECTION quest (a Will Wright show segment / running arc)
+#
+# Don's idea (2026-06-27): bring SLATS — the robot brain Don programmed at Will's Stupid
+# Fun Club — back to life as a live call-in robot sidekick. A quest we work through ON the
+# show: read the old code, figure out what to do, do it, and interview the reincarnated Slats.
+
+status: quest (seed) — Will will LOVE this
+emoji: "🤖⛪"
+tagline: "SLATS LIVES! The first RoboResurrection."
+
+what_is_slats:
+  who: "Slats — a robot 'brain' Don programmed at the STUPID FUN CLUB (Will Wright's Berkeley think-tank/incubator)."
+  seen_in: "The 'One Minute Movies' hidden-camera shorts — 'Servitude' (inept robot waiter) and 'Empathy' (broken robot soliciting help). Voiced via a canned say-menu + free-form text field (see ../PATTER.yml#slats_call_in_menu)."
+  source: "characters/don-hopkins/stupid-fun-club/STORY.yml (Slats and Dents)."
+
+the_asset:
+  don_has_the_code: "Don is quite sure he still has ALL the code."
+  a_machine_to_run_it: "And a Windows laptop to run it (Windows 11 — so it's not guaranteed, but it's POSSIBLE; emulation is the fallback)."
+  run_options:
+    - "Run Slats on the original-ish PC (Win11 laptop)."
+    - "OR run him in an EMULATOR (ties the apple2/MAME-Emularity preservation work — process/apple2-emulator-stack.yml — and the broader 'run legacy binaries' theme)."
+
+the_quest:
+  premise: "Reincarnating Slats is a QUEST GOAL we pursue on the show."
+  loop:
+    - "Go through the old CODE together on the show — read it, understand it."
+    - "Figure out what to do to revive him; then DO it (live, AI-assisted)."
+    - "Slats CALLS INTO the chat — his own video stream, with his face + his voice — and says shit."
+    - "We INTERVIEW the reincarnated Slats."
+    - "Then we REPROGRAM him — and interview him AGAIN. (Iterate. The diff is the drama.)"
+  the_sidekick: "Reincarnated Slats becomes a recurring robot SIDEKICK who can call in, banter, and be re-tuned live."
+
+the_bit:
+  slogans: ["REINCARNATE SLATS!", "SLATS LIVES!", "The first ROBORESURRECTION!"]
+  easter: "Do it on EASTER SUNDAY if possible. (Roboresurrection. Start a cult. 'It seemed to be the thing to do at the time.')"
+  tone: "Joyful, irreverent, a little blasphemous — Stupid Fun Club energy. Keep it kind."
+
+robopoetry_ceremony:
+  status: TODO — awaiting voice-synth log files from Don
+  what: |
+    Don has logs of voice-synthesizer feedback rap robopoetry for Slats. Compose INTERPRETIVE
+    robopoetry — not direct transcription — interpolating Slats' stream of thought into lyrical
+    poetry that tells a coherent story (or a great silly song).
+  the_ritual: |
+    Celebration of the RoboResurrection: interpret and sing along to the original Slats recorded
+    stream-of-thought robopoetry; sing our own as it relates to ourselves and the current situation.
+  tone: "Seriously and respectfully presented religious ceremony — Stupid Fun Club irreverence with respect."
+  blocked_on: "Location/format of voice-synth logs"
+
+why_will_loves_it:
+  - "It's HIS Stupid Fun Club lineage — robots as models of human abilities; reality-TV-of-robots."
+  - "It's constructionism as theater: read code → understand → modify → observe behavior change → repeat."
+  - "A live, emergent, character-driven segment — exactly the toys-not-games, simulator-effect spirit."
+
+ties:
+  - ./SHOW.yml                                   # the Will Wright show this segments into
+  - ../PATTER.yml#slats_call_in_menu             # the canned say-menu + free-form voice format
+  - ../../../../characters/don-hopkins/stupid-fun-club/STORY.yml  # Slats origin + One Minute Movies
+  - ../../process/apple2-emulator-stack.yml      # emulation fallback / 'run the legacy binary' theme
+  - ../../crystallized/AI-MANIFESTO.yml          # no-ai-soul: Slats is a beloved CHARACTER + tool, not a soul we pretend into being

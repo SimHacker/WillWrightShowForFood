@@ -1,0 +1,53 @@
+# Sync with DonHopkins private monorepo
+#
+# Sibling path: ../DonHopkins/ (same parent as this repo under ~/GroundUp/git/)
+# Authoritative plan: DonHopkins/projects/micropolis-moollm/process/wwsff-export-sync.yml
+
+sync:
+  direction: primarily one_way_export
+  source: ../DonHopkins/
+  target: .
+  reintegrate: "PRs/issues on this public repo → cherry-pick/review into DonHopkins"
+
+pipeline: [SELECT, FILTER, AUGMENT, EXPORT, SYNC]
+
+select:
+  cream_first:
+    - projects/micropolis-moollm/repo-shows/will-wright/
+    - projects/micropolis-moollm/repo-shows/INDEX.yml
+    - projects/micropolis-moollm/repo-shows/REPO-SHOWS.yml
+    - characters/*/CHARACTER.yml
+    - characters/*/GLANCE.yml
+    - characters/*/README.md
+    - characters/*/CARD.md
+  defer:
+    - characters/bots/
+    - ideas/scratchpad.yml
+
+filter:
+  always_exclude:
+    - "**/expat/**"
+    - "**/private/**"
+    - characters/don-hopkins/correspondence/
+    - characters/don-hopkins/email/
+    - "**/*credentials*"
+    - "**/.work/**"
+  strip_fields: [private.home, home_automation, postal_code, real_address]
+  don_hopkins: "Coalesce master-of-ceremonies into public don-hopkins/; never export expat/"
+
+augment:
+  - "Add invitation_status to guest CHARACTER exports (schemas/guest-invitation-status.yml)"
+  - "README.md at every navigable directory"
+  - "Cross-links up/down/sibling (two-way navigation)"
+
+export:
+  tool: "Manual + scripts/wwsff-sync.sh (TODO)"
+  manifest: MANIFEST.yml
+
+sync_cadence:
+  before_will_email: "Full cream pass — invitation.md links to this repo"
+  ongoing: "After each show segment or guest add — incremental export"
+
+visibility:
+  now: public
+  later: "May flip private pre-publication OR stay open — Will can browse without GitHub account via raw/README URLs"

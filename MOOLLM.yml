@@ -1,0 +1,23 @@
+# WillWrightShowForFood — MOOLLM plugin repository (PUBLIC)
+# Compose with SimHacker/moollm in Cursor.
+
+plugin:
+  name: WillWrightShowForFood
+  id: wwsff
+  type: repo-show-world
+  version: 0.1.0
+  visibility: public
+  description: |
+    Public Repo Show world — Will Wright kickoff + guest constellation.
+    Filtered export from DonHopkins private monorepo.
+  owner:
+    github: SimHacker
+    email: dhopkins@DonHopkins.com
+  compose_with:
+    - https://github.com/SimHacker/moollm
+    - https://github.com/SimHacker/MicropolisCore
+  entry_points:
+    glance: GLANCE.yml
+    card: CARD.yml
+    readme: README.md
+    kernel: kernel/moollm-plugin.yml

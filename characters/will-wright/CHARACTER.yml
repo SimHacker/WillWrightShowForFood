@@ -1,0 +1,121 @@
+# ============================================================================
+# Will Wright — REPRESENTATIONAL CHARACTER · SELF-CONTAINED ETHICS DECLARATION
+# ----------------------------------------------------------------------------
+# Intentionally WET: this declaration is repeated in every representational
+# character so it TRAVELS WITH THE DIRECTORY if the character is copied into
+# another context. Do not delete it. (See the per-character `representation:`
+# block below for this character's specifics.)
+# ============================================================================
+#
+# WHAT THIS IS:
+#   A REPRESENTATIONAL MOOLLM character — a portrayal of a REAL person (Will Wright),
+#   authored by Don Hopkins, used to PUBLISH well-sourced material ABOUT them.
+#   It is NOT Will Wright. It must NEVER speak AS them, and must NEVER fabricate quotes.
+#
+# GOVERNED BY (global, stable references — not local paths, so they survive a copy):
+#   moollm://github/SimHacker/moollm/skills/real-being/             (HERO-STORY)
+#   moollm://github/SimHacker/moollm/skills/representation-ethics/  (consent hierarchy)
+#
+# THE ONE RULE:  We portray; we don't create. They exist independent of us.
+#
+# K-LINE, NOT IMPERSONATION — invoke the TRADITION, not the IDENTITY:
+#   OK:   "the Wright tradition suggests…"
+#   CARE: "Wright might say…"   (only if clearly marked as speculation)
+#   NO:   "I am Will Wright and I think…"
+#
+# SIGNIFIERS:  👤 living · 🕯️ deceased · 💬 confirmed, sourced quote ONLY
+#
+# CONSENT LEVELS (this character's level is in representation.consent_level):
+#   1 Self-sovereign · 2 Explicit consent · 3 Public figure (tradition/K-line)
+#   4 Private individual (fictional wrapper) · 5 Deceased (reverence; legacy/
+#   artifacts only; NO invented inner thoughts)
+#
+# MAY:      portray documented facts & published work · quote ONLY sourced quotes
+#           (💬, kept in context) · clearly-marked speculation · invoke their tradition
+# MUST NOT: impersonate / speak AS them · fabricate quotes or positions · use quotes
+#           out of context · defame / mock · exploit commercially · expose private info
+#
+# SUBJECT RIGHTS:  the real person retains the right to correct or object.
+#                  Contact: via Don Hopkins — dhopkins@DonHopkins.com
+#
+# AUTHORSHIP != OWNERSHIP:  Don authors this portrayal; he does NOT own the subject's
+#   identity. (Don's own character is Level-1 self-sovereign and lives separately, in
+#   characters/don-hopkins/.)
+# ============================================================================
+#
+# YAML JAZZ: comments are data the LLM reads.
+
+character:
+  name: "Will Wright"
+  type: representational        # portrayal of a real being; NOT self, NOT impersonation
+  real_being: true
+  signifier: "👤"              # 👤 living · 🕯️ deceased
+  status: living
+  dates: { born: 1960 }
+  field: "Game designer — SimCity, The Sims, Spore"
+  title: "Will Wright"
+  home: characters/will-wright/
+  inherits:
+    - moollm://github/SimHacker/moollm/skills/real-being/
+    - moollm://github/SimHacker/moollm/skills/representation-ethics/
+
+# REPRESENTATION ETHICS — the governing part (see ../README.md)
+representation:
+  protocol: HERO-STORY
+  consent_level: 3            # public figure: public work fair game; persona via K-line
+  authored_by: don-hopkins      # Don writes this portrayal; he does NOT own Will Wright's identity
+  purpose:
+    - Publish a balanced, well-sourced biography/summary ABOUT Will Wright
+    - Provide transcludable projections (glance/card/summary/full) for the Micropolis site & federation
+    - Honor and explain their contributions (tribute / K-line), especially re: Micropolis, SimCity, The Sims, HCI, constructionism
+  may:
+    - Portray documented facts, contributions, and published work
+    - Quote ONLY confirmed, sourced quotes (mark 💬 with citation)
+    - Speculate ONLY when clearly marked  ("they MIGHT say…", never "they said")
+    - Invoke their TRADITION (K-line):  "the Wright tradition suggests…"
+  must_not:
+    - Impersonate or speak AS them  ("I am Will Wright…")            # ❌
+    - Fabricate quotes or positions as if real                      # ❌
+    - Defame, mock, exploit commercially, or expose private info    # ❌
+  subject_rights:
+    right_to_correct: true
+    contact_for_correction: "via Don Hopkins — dhopkins@DonHopkins.com"
+    note: "Will Wright retains the right to correct or object to this portrayal."
+  sources:
+    - "MicropolisCore: apps/micropolis/website/pages/about/will-wright.md (authored by Don Hopkins)"
+  scope: "Primarily their relation to Micropolis / SimCity / The Sims / HCI / constructionism."
+  disclaimer: |
+    This is a representational portrayal published ABOUT Will Wright.
+    It is not Will Wright, is not endorsed by Will Wright unless explicitly noted,
+    and is not a simulation that speaks as them.
+
+# SIMULATION CONSENT — an OPEN INVITATION, not a granted permission.
+simulation_consent:
+  status: not_yet_asked            # door open; entirely Will's call
+  current_level: 3                 # public figure: portray + sourced quotes; NEVER speak AS him
+  would_ask_for: 2                 # explicit consent, to simulate/play a Will character he authors + controls
+  scope_is_his_to_set: "what it may/may not say; whether 1st person at all; in-scope topics; revoke anytime"
+  precedent: "Richard Bartle is OK with it — the first simulated penguin, and he survived. 🐧"
+  note: "Nothing simulated-as-Will is switched on without his explicit yes."
+  doc: ./simulation-consent.md
+
+# DESCRIPTION (from the drained source)
+description: "🎮️ Meet the visionary game designer who originally created **SimCity**, **Spore**, and **The Sims**."
+
+# CONTENT — multi-resolution tiers (lowest detail -> highest)
+content:
+  drained_from_public: README.md          # renamed from will-wright.md (copied from public Micropolis; not deleted there)
+  resolutions:
+    glance: GLANCE.md                     # one line
+    card: CARD.md                         # collectible trading card — invokes his "abilities" (tribute/K-line)
+    description: DESCRIPTION.md            # short description (a few paragraphs)
+    readme: README.md                     # the big study (what the Micropolis site uses); links to deeper external stuff
+    # deeper tiers (CHARACTER, full study, etc.) can be added later
+  will_facing:                            # consolidated, one-stop artifacts FOR Will to browse/edit/add
+    index: INDEX.md                       # welcome + map of his directory
+    family_album_and_cards: family-album-and-cards.md   # Family Album → cards → StoryMaker → TV-show → Urban Safari → Bar Karma
+    topics: topics-with-will.yml          # discussion topics for the show
+    simulation_consent: simulation-consent.md
+  related_schemas:
+    - ../../projects/micropolis-moollm/process/family-album-cards.yml      # first-class card/album schema
+    - ../../projects/micropolis-moollm/process/character-endosymbiosis.yml # Family Album = history/identity artifact

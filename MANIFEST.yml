@@ -1,0 +1,46 @@
+# EXPORT MANIFEST — what maps from DonHopkins → WillWrightShowForFood
+# Actionable selection list. Update when syncing.
+
+meta:
+  source_repo: ../DonHopkins
+  target_repo: .
+  last_sync: null
+  public_url: https://github.com/SimHacker/WillWrightShowForFood
+
+bundles:
+  will_wright_show:
+    priority: 1
+    source: projects/micropolis-moollm/repo-shows/will-wright/
+    target: repo-shows/will-wright/
+    include: [README.md, SHOW.yml, GLANCE.yml, invitation.md, invitation-opus-draft.md, episodes.yml, suggested-questions.yml, slats-reincarnation.yml, sources/, assets/]
+    exclude: [.work/]
+
+  repo_shows_index:
+    priority: 2
+    source: projects/micropolis-moollm/repo-shows/
+    target: repo-shows/
+    include: [INDEX.yml, REPO-SHOWS.yml, GLANCE.yml, game-bridge-*.yml, heather-steve-alvey/]
+    exclude: [scaffold.py, _TEMPLATE.yml]
+
+  characters_public:
+    priority: 3
+    source: characters/
+    target: characters/
+    per_character: [CHARACTER.yml, README.md, GLANCE.yml, GLANCE.md, CARD.md, DESCRIPTION.md]
+    exclude_dirs: [expat, correspondence, email, persona-imports]
+    special:
+      don-hopkins: "Project to characters/don-hopkins/ — career/ only; coalesce master-of-ceremonies"
+      will-wright: "Full public portrayal OK (consent level 3; invitation pending)"
+
+  process_crystallized:
+    priority: 4
+    source: projects/micropolis-moollm/
+    target: micropolis-moollm/
+    include: [GLANCE.yml, crystallized/AI-MANIFESTO.yml, process/design-in-public.yml#the_soul_of_the_show]
+    note: "Partial — link-heavy excerpts only in v0.1"
+
+filtered_out_stays_private:
+  - characters/don-hopkins/expat/
+  - characters/don-hopkins/correspondence/
+  - projects/micropolis-moollm/ideas/scratchpad.yml
+  - "**/MOOLLM.yml with private paths"

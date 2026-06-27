@@ -1,0 +1,91 @@
+# REPO-SHOWS.yml — metadata for this repo-show COLLECTION
+#
+# Declares that EVERY file and directory in this collection is an instance of the
+# repo-show skill (/skills/repo-show). "Self all the way down": seeds, planted
+# instances, and the artifacts inside them are all repo-show objects.
+#
+# Naming: this collection follows MOOLLM conventions — a collection directory
+# (repo-shows/) with an UPPERCASE manifest (REPO-SHOWS.yml) naming the skill it
+# instantiates. "repo-show" is the brand (specific, viralizable); "show" alone is
+# too generic an ambiguous noun/verb.
+
+collection:
+  name: micropolis-moollm-repo-shows
+  of: Micropolis Class
+  instance_of: repo-show          # the skill every member instantiates
+  status: seeding                 # most shows are still seeds (single files)
+  last_reviewed: 2026-06-26
+
+# IMPLICIT INHERITANCE — the key declaration
+inherits_from:
+  skill: repo-show                # → /skills/repo-show/ (CARD.yml, SKILL.md, GLANCE.yml)
+  path: ../../../skills/repo-show
+  mode: implicit
+  declaration: |
+    EVERY file and directory in this collection (repo-shows/) IS AN INSTANCE of the
+    repo-show skill — IMPLICITLY, with no per-file declaration required. A seed
+    (single <name>.yml) is a repo-show; a planted <name>/ directory is a repo-show;
+    each numbered artifact inside inherits the instance's discipline. A file MAY
+    explicitly override its parent if needed. The coherence-engine TENDS implicit
+    declarations toward explicit over time, but implicit parenthood is fully
+    supported by default.
+  self_all_the_way_down: "Seeds are repo-shows. Planted instances are repo-shows. Artifacts within inherit the instance's discipline. Repo-shows all the way down."
+
+# SEED vs PLANTED
+states:
+  seed: "A single <name>.yml file = a whole show in miniature. Most entries here are seeds."
+  planted: "A <big-endian-name>/ directory cloned from the templates; the seed stays beside it, kept synced (RESEED)."
+planted_shows:
+  will-wright/: "★ First planted show. Topic-less kickoff with Will Wright (Will IS the topic; topical shows flow from it). Seed: will-wright-series.yml."
+  steve-wozniak/: "Topic-less kickoff with Steve Wozniak. Apple II, 6502, open hardware, and browser-based emulators."
+  terry-winograd/: "★ Forebear show. Terry Winograd (the dragon) + the CS547 treasure trove archive. Stands on his shoulders and the shoulders of all his guests (Will 1996, Gosling 1995, Joy Mountford 1994, etc.). Archive recovery, runnable seeds, Micropolis Class, Connections series. (Pie menus = Don's own thread.)"
+naming: "Planted directories use symbolic BIG-ENDIAN names (category-first) for coherent browsing. Seeds may be renamed to big-endian when planted."
+
+templates:
+  - _TEMPLATE.yml             # the seed/instance template
+
+# CURRENT SEEDS (single files; plant when ready)
+seeds:
+  building-the-sims.yml:        "Group: The Sims team reunion."
+  design-by-accretion.yml:      "Solo: Chris Trottier — design by accretion ↔ cauldron. FLAGSHIP."
+  music-and-theory.yml:         "Group: David Levitt + Jerry Martin — music + theory."
+  will-and-yoot.yml:            "Group: Will Wright + Yoot Saito — open-ended."
+  will-wright-series.yml:       "Series: Will Wright — multiple topics. PLANTED → will-wright/ (first show = topic-less kickoff)."
+  ben-shneiderman-series.yml:   "Series: Ben Shneiderman — HyperTIES, direct manipulation, etc."
+  ted-selker-input-languages.yml:"Solo: Ted Selker — input as little languages."
+  ted-nelson-intertwingled.yml:  "Series: Ted Nelson — Xanalinks, intertwingling, MOOLLM, documents of the future. DREAM GUEST (warm lead Nov 2021)."
+  phoneloper-speech-synthesis.yml: "Kevin Lenzo — Phoneloper open source + Flite/Cepstral Repo Show (SFC talking toys; web vocal jam)."
+  pixie-pie-menus-pdp6.yml:     "Solo: Heinz U. Lemke — PIXIE pie menus (1969)."
+  pie-menus-retrospective.yml:  "Solo: Don (host-as-expert) — pie menus from scratch."
+  edd-coates-pie-menus-piecraft.yml: "Edd Coates — Pie/radial menus in games, what worked and what didn't, ultimate editable pies, and PieCraft as UI literacy game."
+  lambdamoo-pavel-curtis.yml:   "Solo: Pavel Curtis — LambdaMOO → MOOLLM."
+  walter-bender-olpc.yml:       "Solo: Walter Bender — OLPC Stone Soup + open-sourcing SimCity."
+  bret-victor-explorable.yml:   "Solo: Bret Victor — explorable explanations + Micropolis legibility; patronage-vs-shipping cautionary tale (Dynamicland). Design counsel."
+  yoot-saito-series.yml:        "Series: Yoot Saito — clean-room successor (YOOT BOOT / Building / Seaman)."
+  game-bridge-sims-stardew.yml: "Group: Eric Barone — Sims ⇔ Simopolis ⇔ Stardew two-way bridge."
+  game-bridge-proxi-sims.yml:   "Will — Proxi ⇔ Simopolis ⇔ Sims bridge (data-portability payoff + Mind Mirror layer)."
+  game-bridge-sims-shattered.yml: "Evan Debenham — Sims ⇔ Simopolis ⇔ Shattered Pixel Dungeon (GPLv3 repo; roguelike contrast; funding exemplar)."
+  game-bridge-sims-spore.yml:   "Will + Spore team — Sims ⇔ Simopolis ⇔ Spore creatures. CAPSTONE/big-ambition bridge: clean-room web re-creation of the creature renderer/animator/editor/builder, designed from interviews. Likely a multi-episode ARC."
+  game-bridge-mind-mirror.yml:  "Sims ⇔ Simopolis ⇔ Timothy Leary's Mind Mirror (1986 EA) — first EMULATED-RUNTIME organelle (real Apple ][ binary in a web emulator) + cross-organelle property diffusion."
+  game-bridge-afterlife-soul.yml: "Simopolis Soul Bridge ⇔ LucasArts Afterlife (1996) — rescue souls FROM hell, send characters TO hell; hell-is-full → ZombieSims waves; They Are Billions scale."
+  heather-steve-alvey/afterlife-zombie-bridge.yml: "Heather Alvey (SimFreaks) + Steve Alvey (SimSlice) — drain hell into ZombieSims; catalog + tool integration show."
+  game-show-wigcercize.yml:     "Wigcercize! — a wig GAME SHOW (MC: Boogaloo Stu). A VARIETY format, not an interview — the collection holds multiple show TYPES."
+  alan-kay-microworld.yml:      "Solo: Micropolis Class with Alan Kay — DREAM GUEST."
+  ben-and-heinz-pie-menus.yml:  "Group: Ben Shneiderman + Heinz U. Lemke — pie menus + HCI history."
+  news-postscript-window-system.yml: "Group/flagship: NeWS reunion — Gosling + Rosenthal + van Hoff (+ Densmore, Mak). 'Send a program, not a data structure', made runnable in the browser."
+  james-gosling-news-java.yml:  "Solo: James Gosling — Emacs → NeWS → Java (cheesy little extension languages). Feeds the NeWS reunion."
+  arthur-van-hoff-hyperlook.yml: "Solo: Arthur van Hoff — HyperLook + PdB + the Axis of Eval. Feeds the NeWS reunion."
+  ben-cerveny: "Solo: Ben Cerveny — topic-less kickoff (public code, games-to-infra, maps, Connections-style series)."
+  terry-winograd: "Solo / Forebear: Terry Winograd — the dragon with the treasure trove of videos. Archive as origin story, curriculum, and series material. Shoulders credit to Terry + every guest."
+  jens-monig: "Solo: Jens Mönig — Snap! (BYOB) × Micropolis integration, Snap! internals + the Y combinator, schemas for Snap! (Don's Barcelona talk), and distributed/actor systems in Snap!."
+  brian-harvey: "Solo: Brian Harvey — Logo + his books (CS Logo Style, Simply Scheme), BJC, and a lifetime of joyful CS education."
+  thomas-cherryhomes: "Solo: Thomas Cherryhomes (@tschak) — FujiNet, Bus-over-IP, IRATA.ONLINE/PLATO, the Game Lobby. Repo-native retro infrastructure; a real-hardware/network path for the Apple ][ stack + bridges."
+  snap-logo-brian-jens.yml: "Group/headline: Brian Harvey + Jens Mönig — Snap! & Logo together, centering Brian's book + lifelong Logo work and the Snap! they built."
+  skill-creation.yml: "Group: Skill Creation — authoring Anthropic + MOOLLM skills as constructionism/PBD for the LLM era. Candidates: Walter Bender, Henry Minsky, + people into Claude skills + constructionism (to vet)."
+
+producer_role: "Each aired show needs a PRODUCER: pest control (moderation/good-faith) + surfacing good chat/issues to the hosts. See ../process/design-in-public.yml github_native.producer."
+
+see_also:
+  - ../../../skills/repo-show/CARD.yml
+  - ../process/design-in-public.yml
+  - INDEX.yml

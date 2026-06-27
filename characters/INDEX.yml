@@ -1,0 +1,66 @@
+# CHARACTER ROSTER — potential Repo Show guests
+# Filtered public projections. Source: DonHopkins/characters/ (private) → sync manifest.
+
+meta:
+  schema: ../schemas/guest-invitation-status.yml
+  rule: "OK to say we'd love a show before asking. Track invitation_status honestly."
+
+flagship:
+  will-wright:
+    name: Will Wright
+    field: "SimCity, The Sims, Spore, Proxi"
+    invitation_status: not_yet_asked
+    invitation_note: "Draft invitation ready; phone 2026-06-24; repo link is THIS repo"
+    show_seed: repo-shows/will-wright/
+    consent: not_yet_asked
+    path: characters/will-wright/
+
+host:
+  don-hopkins:
+    name: Don Hopkins
+    role: "Host, author of portrayals"
+    consent: self_sovereign
+    path: characters/don-hopkins/
+    note: "master-of-ceremonies coalesced here — not a separate character; don-philahue is orchestrator avatar"
+
+orchestrator:
+  don-philahue:
+    name: Don Philahue
+    role: "AI MC / Q&A agent (Phil Donahue homage)"
+    path: characters/don-philahue/
+
+guests:
+  alan-kay: { invitation_status: not_yet_asked, show_seed: repo-shows/alan-kay-microworld.yml }
+  arthur-van-hoff: { invitation_status: not_yet_asked }
+  ben-cerveny: { invitation_status: not_yet_asked, show_seed: repo-shows/ben-cerveny/ }
+  ben-shneiderman: { invitation_status: not_yet_asked, show_seed: repo-shows/ben-shneiderman/ }
+  bret-victor: { invitation_status: not_yet_asked }
+  brian-harvey: { invitation_status: not_yet_asked, show_seed: repo-shows/brian-harvey/ }
+  brad-myers: { invitation_status: not_yet_asked }
+  chaim-gingold: { invitation_status: not_yet_asked, show_seed: repo-shows/chaim-gingold/ }
+  david-rosenthal: { invitation_status: not_yet_asked }
+  doreen-nelson: { invitation_status: not_yet_asked }
+  edd-coates: { invitation_status: not_yet_asked, show_seed: repo-shows/edd-coates/ }
+  eric-hedman: { invitation_status: not_yet_asked, show_seed: repo-shows/eric-hedman/ }
+  golan-levin: { invitation_status: not_yet_asked }
+  heather-alvey: { invitation_status: not_yet_asked, show_seed: repo-shows/heather-steve-alvey/, note: "SimFreaks + Steve Alvey SimSlice" }
+  james-gosling: { invitation_status: not_yet_asked }
+  jens-monig: { invitation_status: not_yet_asked, show_seed: repo-shows/jens-monig/ }
+  jason-shankel: { invitation_status: not_yet_asked, show_seed: repo-shows/jason-shankel/ }
+  jean-piaget: { invitation_status: not_yet_asked, note: "historical K-line only" }
+  ken-kahn: { invitation_status: not_yet_asked, show_seed: repo-shows/ken-kahn/ }
+  ken-perlin: { invitation_status: not_yet_asked }
+  margaret-minsky: { invitation_status: not_yet_asked, show_seed: repo-shows/margaret-minsky/ }
+  marvin-minsky: { invitation_status: not_yet_asked, note: "deceased — reverence; legacy only" }
+  matthew-sibigtroth: { invitation_status: not_yet_asked, show_seed: repo-shows/matthew-sibigtroth/ }
+  paul-debevec: { invitation_status: not_yet_asked }
+  richard-bartle: { invitation_status: not_yet_asked, show_seed: repo-shows/richard-bartle/ }
+  seymour-papert: { invitation_status: not_yet_asked, note: "deceased — constructionist K-line" }
+  steve-wozniak: { invitation_status: not_yet_asked, show_seed: repo-shows/steve-wozniak/ }
+  stone-librande: { invitation_status: not_yet_asked }
+  terry-winograd: { invitation_status: not_yet_asked, show_seed: repo-shows/terry-winograd/ }
+  thomas-cherryhomes: { invitation_status: not_yet_asked, show_seed: repo-shows/thomas-cherryhomes/ }
+  yoot-saito: { invitation_status: not_yet_asked, show_seed: repo-shows/yoot-saito/ }
+
+bots:
+  note: "TMNN bots under characters/bots/ — sync later; not guest interview targets"

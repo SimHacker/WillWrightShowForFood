@@ -1,0 +1,42 @@
+# Don Hopkins — project threads (branch, merge, interrelate)
+# Public-safe career map — alternative to LinkedIn
+
+threads:
+  pie_menus:
+    span: "1988–present"
+    through: [CHI88 HCIL, NeWS, X11, The Sims, OLPC, web, Unity]
+    merges_with: [hypermedia, sims_ui]
+
+  hypermedia_news:
+    span: "late 1980s–1990s"
+    artifacts: [HyperTIES, NeWS applets, PSIBER Space Deck, PizzaTool]
+    merges_with: [pie_menus, unix_haters]
+
+  simcity_micropolis:
+    span: "1989–present"
+    artifacts: [SimCity Unix, SimCityNet, Micropolis GPL, MicropolisCore WASM]
+    merges_with: [maxis_sims, repo_show, federation]
+
+  maxis_sims:
+    span: "1997–2000"
+    artifacts: [Sims UI, mod tools, SimAntics/Edith advocacy, inclusive relationships]
+    merges_with: [simcity_micropolis, repo_show, browser_sims_stack]
+
+  browser_sims_stack:
+    span: "2020s–"
+    goal: "Reimagined Sims content tools in the web — render, read, write, edit, generate"
+    merges_with: [micropolis_core, moollm, simfreaks_lineage]
+
+  moollm_repo_show:
+    span: "2024–"
+    artifacts: [moollm, Micropolis Class, Repo Show, WillWrightShowForFood]
+    merges_with: [everything above]
+
+  federation:
+    span: "2025–"
+    repos: [MicropolisCore, moollm, DonHopkins private, WillWrightShowForFood public]
+    goal: "Open-border game + character federation; data portability crown jewel"
+
+coalesce_note: |
+  master-of-ceremonies/ in private DonHopkins is a compartment of don-hopkins (on-stream Don),
+  NOT don-hopkins-mc (never created as separate character). don-philahue/ is the orchestrator avatar.

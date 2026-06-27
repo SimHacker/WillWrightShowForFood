@@ -1,0 +1,31 @@
+# WILL WRIGHT — GLANCE (the first planted Repo Show)
+# 🎬 "So you have a Repo to Show us?" — the flagship kickoff.
+# up: ../INDEX.yml | deeper: SHOW.yml → README.md → sources/ | engine: /skills/repo-show/
+
+what: "The FIRST planted Repo Show. TOPIC-LESS — Will Wright IS the topic — but centered on ONE artifact: his 1996 Winograd talk. The topical shows flow from it."
+
+status: planted   # seed → PLANTED (here) → next: elaborate → DISTILL to its own repo → INVITE Will
+
+read_order:
+  - SHOW.yml          # the show instance (inherits SHOW): topic-less + centerpiece + the_arc + the_angle
+  - README.md         # the pitch + the Flower-Child icon
+  - invitation.md     # DRAFT email to Will (Don to edit + send)
+  - episodes.yml      # the kickoff + the topical episodes that flow from it
+  - suggested-questions.yml   # seed questions; audience votes by copying into their characters
+  - sources/1996-04-26-winograd-interfacing-to-microworlds/   # the CENTERPIECE: README + transcript.md + medium-article.md
+
+the_essence:
+  topic_less: "Anything goes; Will is the topic."
+  centerpiece: "The 1996 video + Medium article (the ONLY video — keep focused)."
+  the_arc: "1996 looked back (3 post-mortems: easy/hard/just-right) then pivoted time FORWARD to preview The Sims. This show completes the loop: the ~26-year POST-MORTEM on The Sims 1."
+  the_angle: "Ask Will about his OWN 1996 words — what he got RIGHT (Simlish, advertising objects, content sharing, DATA PORTABILITY = the crown jewel + this project's goals) and WRONG."
+  full_circle: "That 1996 talk (a Terry-Winograd seminar — a project forebear) sent Don to Maxis. First Repo Show with Will = closing the loop ~30 yrs on."
+
+flows_into:
+  - ../game-bridge-proxi-sims.yml   # the data-portability CROWN JEWEL payoff (+ Wig-O-Matic)
+
+across:
+  - ../../process/collaborators.yml#will_wright    # value offer + Proxi + consent
+  - ../../crystallized/CONSTELLATIONS.yml          # Will = brightest star, the_simulation_designers
+  - ../../crystallized/DESIGN-WISDOM.yml#data_portability_crown_jewel
+  - ../../process/design-in-public.yml#forebears   # the Winograd seminar lineage

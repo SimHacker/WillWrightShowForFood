@@ -1,0 +1,93 @@
+# SHOW SEED — Heather & Steve: Afterlife Soul Bridge → ZombieSims
+#
+# SimFreaks + SimSlice meet Afterlife hell-is-full. Drain damned souls as zombie waves;
+# religion-mapped skins; federation publishing for their catalog + new authoring tools.
+
+show:
+  id: heather-steve-afterlife-zombie-bridge
+  title: "Drain Hell — Afterlife × ZombieSims with SimFreaks & SimSlice"
+  type: group
+  host: Don Hopkins
+  guests: ["Heather Alvey (SimFreaks)", "Steve Alvey (SimSlice)"]
+  character: []                    # TODO: characters/heather-alvey/, characters/steve-alvey/ when consent
+  topic: |
+    Afterlife 'hell is full' — subtract souls by religion from hell saves, spawn ZombieSims waves
+    with interchangeable SimFreaks/SimSlice skins. Two-way round-trippable ledger. Scale toward
+    They Are Billions horde pressure. Integrate their sites + tools for existing customers.
+  status: seed
+  consent: not_yet_asked
+
+guests:
+  heather_alvey:
+    handle: SimFreaks
+    site: https://www.simfreaks.com/
+    what: "Original Sims object suites, sophisticated programming, extensive catalog"
+  steve_alvey:
+    handle: SimSlice
+    site: SimSlice / SliceCity fame
+    what: "SliceCity (SimCity in The Sims); object suites; ZombieSims project with Heather"
+  don: "Great friends; OpenLaszlo SimFreaks web app prototype; Transmogrifier demo video"
+
+hell_is_full:
+  scenario: "Overflow damned souls from Afterlife hell into The Sims as zombies"
+  save_editing: "Debit soul counts by religion/fate type from Afterlife save → spawn matching wave"
+  two_way: "Round-trippable — zombie outcomes credit/debit hell ledger (PITM)"
+  religion_skins: "Interchangeable texture/skin sets per Afterlife denomination — schemas/afterlife-religion-zombie-map.yml"
+  scale: "They Are Billions (2017) — billions-strong swarm as scaling target; NOT 'We Are Millions'"
+
+nurture_simfreaks_simslice:
+  goals:
+    - "Hosted-content CARD dirs for catalog + new releases (hosted-content-cards.yml)"
+    - "Tools to make new stuff — Transmogrifier/MOOLLM authoring lineage"
+    - "Publish federation content to their existing customer base — sites as storefronts"
+  not_just_archive: "EXTENSIVE EPIC catalog PLUS new objects, skins, zombie suites, authoring pipeline"
+
+interview_heather:
+  segment: "Zombie provenance — artisanal vs industrial"
+  ask: |
+    Where do you source your zombies? Are they artisanal? Farm-grown? Soil to spike?
+  why_on_air: |
+    Sets up the Afterlife bridge punchline — SimFreaks as craft UCC vs hell save as bulk supplier.
+    Audience learns how Heather + Steve actually build undead (IFF, SimAntics, skins) before we
+    pipe damned souls in by religion batch.
+  follow_ups:
+    - "Hand-sculpted vs kitbashed vs procedurally spawned — what's in the SimFreaks pipeline?"
+    - "If hell debits 10,000 Lutheran damned souls — do you skin them one suite or mix denominations?"
+    - "Steve: does SliceCity become the zombie farm, or the siege map when the horde arrives?"
+  bridge_reveal: "Afterlife save = industrial zombie supply chain; SimFreaks = the artisan label on the jar"
+
+interview_steve:
+  segment: "SliceCity under siege"
+  ask: "When the wave hits — is SliceCity the farm or the fortress?"
+
+segments:
+  order: [interview_heather, fresh_shipment, live_play, catalog_integration]
+
+  fresh_shipment:
+    beat: "Interview → play handoff"
+    don_line: "We're just getting in a fresh shipment from Afterlife now — let's go and play!"
+    on_screen: |
+      Truck/backing-beep gag optional. Show Afterlife hell save on one monitor; soul ledger by
+      religion on another. Batch just arrived — still warm from the damned.
+    live_steps:
+      - "Open Afterlife save — read hell population by denomination"
+      - "Debit first shipment (audience picks batch size — start small, TAB scale later)"
+      - "Map debited souls → SimFreaks/SimSlice zombie skins (afterlife-religion-zombie-map.yml)"
+      - "Spawn wave into Sims lot / SliceCity — Heather + Steve drive, Don runs the pipe"
+      - "PITM stamp — round-trip ledger visible in repo"
+    tone: "Homefun not homework — play first, explain the schema while zombies shamble"
+
+  live_play:
+    beat: "Drain hell wave by wave until Pleasantville falls or hell empties"
+    escalation: "Each wave = next save debit; They Are Billions energy if audience cranks the slider"
+
+implements: "Fresh shipment → read hell save → subtract soul batch → ZombieSims wave with SimFreaks skins → play live → catalog integration path."
+
+ties_to:
+  - ../process/crazy-idea-jam.yml#simopolis_soul_bridge_afterlife
+  - ../process/crazy-idea-jam.yml#hell_is_full_zombie_sims
+  - game-bridge-afterlife-soul.yml
+  - ../process/hosted-content-cards.yml
+  - ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/medium-article.md
+
+parent_bridge: game-bridge-afterlife-soul.yml

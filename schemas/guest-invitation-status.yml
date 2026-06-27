@@ -1,0 +1,21 @@
+# Guest show invitation status — per character metadata
+# OK to list dream guests not yet asked; track real status honestly.
+
+invitation_status:
+  enum:
+    not_yet_asked: "We would love a show — invitation not sent"
+    invited: "Invitation sent; awaiting response"
+    confirmed: "Yes — scheduling in progress"
+    scheduled: "Date/time set"
+    aired: "Show happened"
+    declined: "No (respect; do not re-pitch without new reason)"
+    another: "Custom — see invitation_note"
+
+fields:
+  invitation_status: { type: enum, required: true, default: not_yet_asked }
+  invitation_note: { type: string, optional: true }
+  show_seed: { type: path, optional: true, example: "repo-shows/will-wright/" }
+  consent: { type: enum, values: [not_yet_asked, granted, declined], default: not_yet_asked }
+
+representation:
+  rule: "Portrayal only — never impersonate. Per moollm representation-ethics."

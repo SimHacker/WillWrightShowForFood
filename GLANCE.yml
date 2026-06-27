@@ -1,0 +1,28 @@
+# WillWrightShowForFood — GLANCE
+# Public MOOLLM plugin world + Will Wright Repo Show. Browse without logging in.
+
+what: "SimHacker/WillWrightShowForFood — public Repo Show repo for Will Wright kickoff + guest constellation"
+
+status:
+  repo: public
+  will_invitation: draft_ready_not_sent
+  consent: not_yet_asked
+  lifecycle: distill_in_progress
+
+read_order:
+  - README.md
+  - repo-shows/will-wright/README.md
+  - repo-shows/will-wright/invitation.md
+  - characters/INDEX.yml
+  - CARD.yml
+
+cream_on_top:
+  - repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
+  - repo-shows/will-wright/README.md
+  - characters/don-hopkins/README.md
+
+moollm:
+  compose_with: https://github.com/SimHacker/moollm
+  plugin: kernel/moollm-plugin.yml
+
+chat: "PR or issue — github.com/SimHacker/WillWrightShowForFood/issues"

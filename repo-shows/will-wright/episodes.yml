@@ -1,0 +1,46 @@
+# EPISODES — the Will Wright thread
+# The kickoff is topic-less; the topical episodes FLOW FROM it (whatever threads
+# Will pulls). These are candidates, not a fixed agenda.
+
+kickoff:
+  id: will-wright-00-anything
+  title: "A Repo Show with Will Wright (anything goes)"
+  topic: TOPIC-LESS
+  status: planted
+  the_point: "Will is the topic. Open the door wide; the threads he pulls seed the rest."
+  centerpiece: "Anything goes, but we START WITH + ORBIT the 1996 Winograd video + Medium article (the ONLY video — keep focused). It's the seed for asking Will questions + making comments."
+  the_arc: "The 1996 talk did post-mortems of 3 games (SimAnt easy / SimEarth hard / SimCity 2000 just-right) then pivoted time FORWARD to preview The Sims. This show completes the loop: the long-overdue ~26-year POST-MORTEM on The Sims 1. (See ../SHOW.yml the_arc.)"
+
+flows_from_it:                 # candidate follow-up shows (from will-wright-series.yml)
+  - id: simulation-effect
+    topic: "The simulation effect — simple local rules → complex global behavior; player-as-author."
+  - id: original-simcity-intent
+    topic: "Original SimCity design intent + the 'Micropolis' working title; what he'd do now."
+  - id: proxi
+    topic: "Proxi — fold his ideas in; generate interest (players/investors/media)."
+    spelling: to_verify
+  - id: post-mortems
+    topic: "SimAnt / SimEarth / SimCity 2000 / The Sims post-mortems — too simple vs too complex vs just right."
+  - id: with-yoot
+    topic: "Will + Yoot Saito, open-ended (see ../will-and-yoot.yml)."
+  - id: proxi-sims-bridge
+    topic: "THE data-portability payoff: design a Proxi ⇔ Simopolis ⇔ Sims bridge — the thing Will NAILED in 1996 (moving characters/homes/cities/objects/ideas/memories between universes), finally built, connecting his own games, with a Timothy Leary Mind Mirror personality layer. See ../game-bridge-proxi-sims.yml."
+
+seeded_by_the_1996_video:
+  source: sources/1996-04-26-winograd-interfacing-to-microworlds/
+  note: "Will's 1996 Winograd talk could anchor a WHOLE show — maybe several. Candidate episodes drawn straight from it:"
+  candidates:
+    - id: the-taken-aback-moment
+      topic: "Replay + unpack the pivotal moment: the student's '$5-billion question' → Will 'Oh, God…' → the first public Dollhouse demo. The birth of The Sims, live."
+    - id: anatomy-of-a-simulation-game
+      topic: "Simulation × game × interface × user's MENTAL MODEL ('the computer model is just a compiler for the mental model')."
+    - id: objects-that-advertise
+      topic: "Dollhouse objects 'advertising' ('if you're hungry, eat me!') → SimAntics → the moollm advertisement skill → the Repo Show's OWN question-advertisements + the Sims⇔Stardew bridge. The mechanism, all the way down."
+    - id: story-as-medium
+      topic: "Players narrate causal chains Will knows don't exist — 'using it as a medium to tell stories.' Why the simulation effect (and the Repo Show) works."
+    - id: reverse-over-engineering-simcity
+      topic: "'Implication is more efficient than simulation'; Chaim Gingold's reverse diagrams. Pair with the Chaim show + design-by-accretion (SimEarth 'grew through accretion')."
+    - id: failure-modes-and-calvin-syndrome
+      topic: "Kids fail joyfully, adults fear failure; poking the city with a bulldozer to test if it's real. Constructionist design-of-learning."
+
+principle: "Don't pre-plan the season. Let the kickoff conversation tell us which episodes want to exist. Harvest (cauldron) the transcript → the next shows reveal themselves. The 1996 video is the richest pre-loaded seed."

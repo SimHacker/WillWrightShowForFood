@@ -1,0 +1,186 @@
+# SHOW — Will Wright (the kickoff; topic-less)
+# Planted from the seed ../will-wright-series.yml. Inherits from the SHOW skill (/skills/repo-show).
+# This is the FIRST show: Will Wright IS the topic. Other topical shows flow from it.
+
+show:
+  id: will-wright
+  title: "A Repo Show with Will Wright"
+  type: solo
+  host: Don Hopkins                # incarnations: User Interface Flower Child / Don Philahue
+  guests: ["Will Wright"]
+  character: characters/will-wright/    # represented, living, consent level 3
+  topic: TOPIC-LESS                 # Will Wright is the topic — talk about anything he wants.
+  status: planted                   # seed → PLANTED → DISTILL → public repo LIVE → INVITE
+
+public_repo:
+  url: https://github.com/SimHacker/WillWrightShowForFood
+  local_sibling: ../WillWrightShowForFood
+  visibility: public
+  browse_without_account: "README.md + raw file URLs on github.com"
+  sync_plan: ../../process/wwsff-export-sync.yml
+
+topic_less_by_design:
+  why: "The first show has NO assigned topic. Will Wright is the topic. We talk about whatever he wants — and the topical shows (the simulation effect, Proxi, original SimCity intent, post-mortems...) FLOW FROM it as follow-ups."
+  the_move: "Open the door wide first; let the threads he pulls become the season. Show, don't tell."
+  but_with_a_centerpiece:
+    centerpiece: "Anything goes — BUT we start with, and orbit, ONE artifact: the 1996 Winograd video + Don's Medium article (sources/1996-04-26-winograd-interfacing-to-microworlds/). It's the seed for asking Will questions + making comments."
+    focus_discipline: "NO more videos. Just that one. Keep focused — there's more than enough in it already."
+
+the_arc:
+  # The show's shape mirrors + completes the 1996 talk's own shape.
+  the_1996_talk:
+    looked_back: "Post-mortems of THREE games — a perfect constellation of easy / hard / just-right: SimAnt (too easy) · SimEarth (too complex) · SimCity 2000 (just right)."
+    then_pivoted_time: "Then it pivoted the DIRECTION OF TIME — from looking back to looking FORWARD — to preview Dollhouse (→ The Sims)."
+  this_show_completes_it:
+    the_loop: "1996 PREVIEWED The Sims. This show — ~26 years later (The Sims 1 shipped 2000) — can finally be the long-overdue POST-MORTEM on The Sims 1 itself."
+    times_arrow: "Time's arrow comes back around: the forward-preview gets its backward post-mortem, with the same two people in the room."
+    note: "Confirm the exact anniversary number when scheduling (shipped Feb 2000 → ~26 yrs in 2026)."
+
+why:
+  for_will:
+    - "Reify + build on his legacy — the open-source descendant of his own game, done right."
+    - "A platform to talk about Proxi and whatever he's into now; generate interest among players/investors/media."
+    - "His ideas get IMPLEMENTED, live, for free (my tokens working for him) — not just talked about."
+    - "Low-pressure: no prep, no assigned topic, just a great conversation with an old colleague."
+  for_audience: "An unscripted conversation with the originator of the whole genre — then watch his ideas become working code."
+  for_project: "The anchor episode. High-credibility ignition for the audience (the funding mechanism). Seeds the whole Will Wright constellation."
+
+format:
+  live: true
+  audience_qa: true
+  the_repo_show: "A Repo Show: the artifact + stage is this repo. 'So you have a Repo to Show us?'"
+  production_style: "Live Twitch Event. Will is a huge draw. We can avoid the 'ghost town' by priming the repo with his 1996 talk PLUS a 1-on-1 teaser."
+  pump_priming: "Announce the repo a week in advance. Harvest PRs, issues, questions, and audience avatars. Use this time-shifted participation to drive the actual interview."
+  intro_ritual: "Per /skills/repo-show: 'this episode's repos are:', AI announcer (superposition of acronyms for MOOLLM), license+credit beat, Will introduced as a Repo Man. Audience characters can ask their pre-loaded question-advertisements (Don Philahue wrangles)."
+  mspo_rpg_resonance: "The async audience (characters ask even when their author is offline; MSPO RPG = Massively Single-Player Online RPG) is WILL'S OWN Spore frame. Especially apt that he's the first guest — invite him to riff on it."
+  shape: "No agenda. Explain WHY when a design idea comes up → implement a little of it live (MOOLLM + Cursor). Whatever threads open become future shows."
+
+implements: "Whatever design seeds emerge → melted via cauldron → candidate Micropolis features / MOOLLM skills (follow-through to playable)."
+
+the_big_ask:
+  # Don's framing (2026-06-27): the ONE concrete request to Will for this show.
+  ask: "Use Claude (Opus) to MAKE the slides, illustrations, and even videos for this interview — author his own visual aids WITH the AI, ahead of / during the show, instead of slideware or a deck someone else builds."
+  why: "Demonstrates the thesis ON him: AI as a creative CO-AUTHOR for an originator, not a scraper hoovering his work. The making-of is itself content. And it models — for the audience — exactly the kind of AI-assisted creation we then invite THEM to do."
+  not_in_tension_with_centerpiece: "Distinct from the 'no more archival videos' focus rule (topic_less_by_design.but_with_a_centerpiece) — that caps SOURCE videos to react to; this is Will GENERATING fresh visuals with Claude. Different thing, fully compatible."
+  make_them_wild:
+    directive: "Will should make the slides REALLY WILD. The point isn't a clean corporate deck — it's an originator playing HARD with a new instrument, on camera. Maximal Will-Wright weirdness encouraged."
+    reference_glee: "Don's reaction to source material like the beautiful yellow slime mold (Physarum) image in the HN/Medium thread — THAT register of delight. Generative, organic, powers-of-ten, emergent-system imagery is exactly Will's vocabulary (cf. SimAnt, Spore, the Wired 'Evolve!' diagram)."
+    asset: ../../../../characters/will-wright/images/spore-wired-diagram-2004.jpeg  # Will's own 'grand unified theory' visual — the energy to match
+  defense_against_ai_slop:
+    # Pre-emptive rebuttal to the reflexive HN/social "That's AI slop → won't read/discuss" dismissal.
+    context: "Some people post zero-value 'that's ai slop' to refuse to engage the moment AI is involved. We answer it head-on, with charm, and keep moving."
+    the_patter: >
+      "Yeah, sure, it's AI slop — but it's WILL WRIGHT's AI slop. Like caviar is fish slop.
+      He actually reviewed it before publishing, iterated on it, and it expresses what he means
+      better than he could draw it in [the usual design-drafting tools]. We LOVE to use AI.
+      Effectively. And we want to show you how."
+    why_it_lands: "Concedes the framing playfully (no defensiveness), then reframes on the real axis: authorship, review, intent, and craft. The originator stays the author; AI is the instrument. Aligns with the AI manifesto (player-in-the-middle, no-ai-slop, no-ai-soul)."
+    do_not: "Don't argue the term. Don't get defensive. Land the caviar line, smile, and get back to the work."
+    ties:
+      - ../../crystallized/AI-MANIFESTO.yml
+      - /skills/no-ai-slop      # ambient: our standard is human-authored, reviewed, effective — not volume
+      - ../../funding/references.yml#mrbeast_approach  # study, don't ape; effective production without the vice
+
+audience_homefun:
+  # The reward loop. 'Homefun' = the social, rewarded sibling of homeplay (/skills/repo-show CARD homeplay.homefun).
+  invite: "Invite the audience to IMPLEMENT their own exploratory, live implementations of the ideas raised — AI-assisted (Claude/Cursor) on the MicropolisCore engine + MOOLLM."
+  the_real_reward: "A chance to actually WORK WITH WILL — the way Don and a lucky few have, and as depicted in Will's MasterClass (the scene where a student works through a design + prototyping task WITH Will)."
+  the_loop: "Do your homefun → check it into the repo → show Don + Will → we discuss the best / most interesting ones in a LATER episode. Feedback from the originator; your work becomes part of the show."
+  the_line: "'No homework — but as much homefun as you like.'"
+  ties:
+    - "/skills/repo-show CARD homeplay.homefun"
+    - ../../process/character-endosymbiosis.yml   # e.g. bridge a character as your homefun
+    - ../../process/executable-corpus-strategy.yml # learner_pipeline / Micropolis Class
+
+simultaneous_launch:
+  # Don's strategic call (2026-06-26): release PLAYABLE Micropolis at the same moment as this show.
+  decision: "Finish playable Micropolis + prepare this show in parallel, then RELEASE BOTH AT ONCE."
+  why: "The demo gives the conversation something to SHOW + build on live; Will's reach gives the demo its launch moment. Demo + reach amplify each other (levelsio/Lex data point)."
+  full_circle: "Will previewed Dollhouse in 1996; the open-source descendant of his SimCity launches alongside him, ~30 years on."
+  what_we_discuss_with_the_demo_live: "pie menus / PieCrafter, content sharing (Exchange revival), storytelling, AI advisors, generated newspapers, MOOLLM orchestration, players/multiplayer — each a future thread shown + seeded live, NOT a launch blocker."
+  convenience_site: "Pair with a subscription/donation-based hosted-convenience deployment (free to play; pay for convenience/cosmetics/time). The low-hanging fruit that unlocks the funding engine."
+  fallback: "If Will timing slips, do a solo 'implement a 1996 idea live' show still paired with the Micropolis release."
+  plan: ../../process/playable-micropolis-will-launch.yml
+
+relationship:
+  shared_history: "Don worked with Will on The Sims at Maxis; Will's 1996 Stanford 'Interfacing to Microworlds' talk is what drew Don to Maxis. Old colleagues, real rapport."
+  recent_call: "Don + Will had a great phone call (2026-06-24) — Don gave a whirlwind overview of the ideas. Too complicated to land in the first show, so invitation.md GROUNDS in writing what whizzed by. The show itself stays loose."
+
+the_mission_grounded_in_the_invite:
+  # The fuller mission the invitation lays out (so the show can stay focused/anything-goes).
+  bridges: "Bridging characters between worlds — Proxi ↔ Sims ↔ Stardew + beyond (data-portability crown jewel + Mind Mirror). See ../game-bridge-proxi-sims.yml, ../game-bridge-sims-stardew.yml."
+  web_tools_platform: "Rebuilding the whole Sims content stack (render/read/write/edit/GENERATE) as a web-browser platform for content tools — Transmogrifier/RugOMatic/WigOMatic reborn web-native. = Micropolis Home (MODULES)."
+  exchange_revival: "Reviving the Sims EXCHANGE (community save + story sharing) now that Sims 1 is on Steam without it — the piece that made The Sims a medium. (MODULES sims_exchange_revival.)"
+  full_circle: "That 1996 talk was a Terry-Winograd public UI seminar (the Repo Show's direct forebear — see ../../process/design-in-public.yml#forebears). Don was in the audience asking Will questions; he later uploaded the video + wrote the transcript + Medium article. Doing the FIRST Repo Show with Will = closing that loop, 30 years on."
+
+willwrightshowforfood_monorepo:
+  brand: "WillWrightShowForFood — too good a name not to keep + grow. Not just the kickoff gag: it becomes Will's OFFICIAL MONOREPO — everything he wants to publish, in one place HE owns."
+  contents: "All the stuff Will wants out there: e.g. the RELEASED Spore demo/prototypes (a show about THOSE + more), talks, design docs, the bridges. His one-stop published corpus + an ongoing show."
+  origin: "Started as the SimHacker/WillWrightShowForFood repo-invite gag (the JOIN ask in invitation-opus-draft.md)."
+  shows_as_cards: "Each show in it is a CARD with categorized links (next/prev + many kinds) + playlists — ../../process/family-album-cards.yml#shows_are_cards + /skills/repo-show CARD#shows_are_cards."
+  gather_inspired_code: "A repo to GATHER all the code Will has inspired people to write — and to inspire people to fork + build on it (with or without AI). Don will publish his own prototypes: the StoryMaker iPhone prototype (built from Will's slide symbols), MediaGraph (Unity3D drag-&-'glick' pie-menu node navigation + direct manipulation), Phonoloper, and add the released Spore prototype code. Contributors add theirs (or we link their repos/forks)."
+
+the_intro_be_wills_protege:
+  goes_in_intro: "The intro to Will should give people the EXPERIENCE OF BEING WILL'S PROTÉGÉ — the way Don and a lucky few were."
+  the_bluebird_story: "Don built the StoryMaker iPhone prototype at Coffeeshop Bluebird in Amsterdam (gezellig: warm, cozy, people chattering over the music — you can hear it in the YouTube video). The symbols are abstract (from Will's slides, meaningless on purpose); Don made an app of them to PLAY with the design they'd discussed — Miyamoto-style: figure out what you do with your hands (and your delighted face) and make THAT kinesthetically pleasurable. That led directly to MediaGraph's drag-&-glick pie-menu node navigation in Unity3D."
+
+invite_sfc_alumni:
+  note: "Invite Stupid Fun Club (SFC) alumni + collaborators to JOIN the show too."
+  people:
+    - "Chaim Gingold (Building SimCity / reverse diagrams)"
+    - "Eric Bowman (The Sims programmer) — characters/don-hopkins/people/colleagues/eric-bowman.yml + repo-shows/eric-bowman/"
+    - "Jamie Doornbos (The Sims / SimAntics) — repo-shows/jamie-doornbos/"
+    - "Jim Mackraz (The Sims manager — Jefferson naming story)"
+    - "Eric Hedman ('Irk', Sims 1 character animator) — characters/eric-hedman/ + repo-shows/eric-hedman/"
+    - "Chris Hecker (Spore prototyping)"
+    - "Jason Shankel — characters/jason-shankel/ + repo-shows/jason-shankel/ (AI + skills episode)"
+    - "Matthew Sibigtroth — characters/matthew-sibigtroth/ + repo-shows/matthew-sibigtroth/ (original StoryMaker!)"
+    - "Ken Kahn — characters/ken-kahn/ + repo-shows/ken-kahn/ (AI blocks; Snap! + skills episodes)"
+
+segments:
+  slats_reincarnation: ./slats-reincarnation.yml   # ROBORESURRECTION: revive Slats live as a call-in robot sidekick (Easter Sunday). Will will LOVE it.
+
+consent: not_yet_asked              # invitation WRITTEN (near-sendable draft): ./invitation.md — built on the 1996 centerpiece + arc + crown jewel. Per representation-ethics; Don personalizes + sends.
+files:
+  README.md:     "Overview + framing + the Flower-Child icon."
+  invitation.md: "The markdown invitation email to Will (DRAFT — Don to edit/send)."
+  invitation-gpt55-draft.md: "Alternate concise-weird friend-to-friend draft after the whirlwind call."
+  invitation-opus-draft.md: "THE BIG-PICTURE draft (deliberately not single-page): Proxi ⇔ Simopolis ⇔ Sims bridge → serial-endosymbiosis über-character; the powers-of-ten → his-own-games map (Home/Sims=content+LLM-dreaming, City/SimCity, Earth/SimEarth-Gaia, Space/Spore, Proxi=the character/AI layer; + Sims 1-4 versions & Spore's own levels); the Streets-of-SimCity continuation + 'we should federate'; the shared-situation / raise-funs-in-parallel pitch; and the JOIN ask (WillWrightShowForFood repo gag). Margulis↔Lovelock↔SimEarth loop."
+  episodes.yml:  "The kickoff + the topical episodes that flow from it."
+  assets/:       "DonHopkinsSimsCreditsIcon.jpg — the User Interface Flower Child."
+  sources/:      "Captured source material (Will's own words = the seeds)."
+
+sources:
+  winograd_1996:
+    dir: sources/1996-04-26-winograd-interfacing-to-microworlds/
+    what: "Will's 1996 Winograd-seminar talk (postmortems + the first public Dollhouse demo). README (framing + the 'taken aback → Dollhouse' moment + threads it seeds) + transcript.md + medium-article.md."
+    use: "The kickoff can OPEN by replaying the pivotal moment — the student's question that unspooled The Sims. Could anchor a whole show, maybe several (see episodes.yml)."
+    note: "Faithful capture of Will's own words (heartbeat: source, don't paraphrase). Stanford Archives: non-commercial use with attribution + Don's transcript."
+
+the_angle:
+  ask_will_about_his_own_words: "The richest angle: play Will's 1996 words (+ Don's and the students' questions + his answers) and ask — what did he get RIGHT, what WRONG?"
+  what_he_got_right: "A LOT. Simlish = the Peanuts 'mwa mwa mwa' adult talk he described; plugin objects 'advertising'; net-shared user content; data portability; the hobby model. Almost every GOAL OF THIS PROJECT was his 1996 goal."
+  what_he_got_wrong_or_open: "'No hope' simulating people (the illusion worked far better); multiplayer 'easier than AI' (then TSO happened); 3D-as-fad (he flipped)."
+  the_sims_online: "Good + bad — the 'graphic MUD' he mused about in 1996, made real in 2002. Real irrational people vs. simulated rational ones."
+  ucc_community: "User-created content sites: SimFreaks, SimSlice, Simprov/SimBabes, ZombieSim, Transmogrifier, RugOMatic, IFFPencil2, FreeTheSims..."
+  seeds: suggested-questions.yml   # the seed question list audience votes on by copying into their characters
+
+audience_contributions:
+  modama:
+    contact: characters/don-hopkins/people/contacts/modama.yml
+    correspondence: characters/don-hopkins/correspondence/modama.yml
+    submitted: 2026-06-26
+    questions:
+      - modama-cod-hq-vs-gta-worlds
+      - modama-sc3k-wait-for-directx
+      - modama-sc3k-assets-november-1997
+
+files_added:
+  suggested-questions.yml: "Seed questions (audience votes by copying into their characters; bubbles up). See /skills/repo-show question_voting."
+  slats-reincarnation.yml: "The ROBORESURRECTION quest segment — revive Slats (Stupid Fun Club robot) as a live call-in sidekick."
+
+ties_to:
+  - ../will-and-yoot.yml
+  - ../will-wright-series.yml        # the seed (kept beside, synced)
+  - ../../process/collaborators.yml  # will_wright value_offer + Proxi
+  - /skills/repo-show/CARD.yml            # lifecycle, intro ritual, characters

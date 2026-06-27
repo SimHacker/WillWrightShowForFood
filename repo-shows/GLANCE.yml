@@ -1,0 +1,28 @@
+# SHOWS — GLANCE
+# 🎬 The Repo Shows. ("So you have a Repo to Show us?")
+# up: ../INDEX.yml | map: INDEX.yml | collection meta: REPO-SHOWS.yml | engine: /skills/repo-show/
+
+what: "One file per Repo Show. Each is a collaborative, GitHub-native, live-streamed design conversation that FOLLOWS THROUGH to implementation. Show, don't tell."
+
+how_it_works:
+  inherit: "Every file/dir here inherits (implicitly) from the SHOW skill (/skills/repo-show). REPO-SHOWS.yml declares it. Self all the way down."
+  seed_to_plant: "A show starts as a SEED (single <name>.yml), then PLANTS into a big-endian-named dir, then DISTILLs into its own Repo Show (private → public). See /skills/repo-show repo_stages."
+  shape: "Per episode: explain WHY the design works → implement it live (MOOLLM + Cursor)."
+
+the_shows:
+  planted: "will-wright/ ★ — the FIRST planted show (topic-less kickoff, centered on the 1996 Winograd video; full dir w/ sources + suggested-questions + invitation)."
+  flagship_seeds: [design-by-accretion (Chris Trottier ↔ cauldron), alan-kay-microworld (DREAM GET), yoot-saito-series (YOOT BOOT)]
+  series:   [will-wright-series (→planted), ben-shneiderman-series, yoot-saito-series]
+  group:    [building-the-sims, music-and-theory, will-and-yoot, ben-and-heinz-pie-menus]
+  bridges:  [game-bridge-sims-stardew, game-bridge-proxi-sims]   # the data-portability CROWN JEWEL
+  solo:     [pie-menus-retrospective, ted-selker-input-languages, pixie-pie-menus-pdp6, lambdamoo-pavel-curtis, walter-bender-olpc]
+  game_show: [game-show-wigcercize]   # a VARIETY format — collection holds multiple TYPES
+  add_more: "Copy _TEMPLATE.yml → <slug>.yml; list in INDEX.yml + REPO-SHOWS.yml."
+
+formats: "design-interview · series · group · bridge · game-show. (Same SHOW skill; different TYPE.)"
+
+across:
+  - ../crystallized/CONSTELLATIONS.yml   # the cast grouped into star clusters
+  - ../crystallized/DESIGN-WISDOM.yml    # data_portability_crown_jewel (the bridges)
+  - ../process/collaborators.yml          # consent + value offers for each guest
+  - /skills/repo-show/CARD.yml                 # the show lifecycle + intro ritual + characters + question_voting
