@@ -95,6 +95,7 @@ rig_spectrum:
     axes: [tokens, spend_dollars, wall_clock, solution_quality, integration, abstraction]
     joke_reframed: "Compare how efficiently or extravagantly you arrived — not just how good the solution was"
     artisanal_baseline: "Zero tokens — the efficiency floor; taste must carry"
+    rolling_coal_ceiling: "Rolling coal with Gastown — gloriously extravagant token-wasting for the spectacle; the ceiling opposite the artisanal floor. Declare it, own the flex ;)"
   ai_rig_feedback:
     invitation: |
       If you do use AI — we are super interested. Not to sell you anything: to learn and document

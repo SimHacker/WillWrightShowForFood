@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/repo-show-format.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:2d533e33d5c030b3 -->
+<!-- content-sha256:34efa70621a79cac -->
 
 # Repo Show format
 
@@ -116,6 +116,7 @@ moment, arrive with taste and tokens to spare. Cursor spend log timestamps every
   - abstraction
 - **joke_reframed:** Compare how efficiently or extravagantly you arrived — not just how good the solution was
 - **artisanal_baseline:** Zero tokens — the efficiency floor; taste must carry
+- **rolling_coal_ceiling:** Rolling coal with Gastown — gloriously extravagant token-wasting for the spectacle; the ceiling opposite the artisanal floor. Declare it, own the flex ;)
 
 ### Ai Rig Feedback
 
