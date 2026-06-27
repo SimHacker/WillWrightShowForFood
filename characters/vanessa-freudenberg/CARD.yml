@@ -1,0 +1,78 @@
+# CARD — Vanessa Freudenberg (memorial tribute portrayal)
+# NOT the person. Memorial mode: celebrate documented work; never speak as her.
+# Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: vanessa-freudenberg
+  name: Vanessa Freudenberg
+  type:
+  - memorial
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: memorial_skills
+card:
+  name: Vanessa Freudenberg
+  title: Smalltalk in the Browser
+  rarity: legendary
+  signifier: 🕯️
+  flavor: She brought a live Smalltalk VM to the web — and saw where WebAssembly would take it.
+abilities:
+- id: VANESSA-SQUEAKJS
+  name: SqueakJS
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: squeakJS
+    signature: squeakJS(browser) → a live Smalltalk VM on a web page
+    score_when:
+    - trigger: causality_visible_without_manual
+      weight: 0.9
+  effect: Implement the Squeak VM in JavaScript — the foundation Caffeine builds on.
+  verifiable: SqueakJS (squeak.js.org)
+  combos_with:
+  - CRAIG-CAFFEINE-LIVECODE
+  - DAN-LIVELY-KERNEL
+- id: VANESSA-WASM-INSIGHT
+  name: WASM Insight
+  type: static
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: wasmInsight
+    signature: wasmInsight(vm) → where JS ends and WebAssembly wins
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: See clearly what WASM does and doesn't buy a live VM — the thread Craig carried forward.
+  verifiable: "Discussion: Dynamic translation of Smalltalk to WebAssembly"
+  combos_with:
+  - CRAIG-CATALYST-WASM
+- id: VANESSA-CROQUET-SYNC
+  name: Croquet Sync
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: croquetSync
+    signature: croquetSync(objects) → identical worlds, everywhere at once
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Keep synchronized object worlds in lockstep (Croquet / Multisynq).
+  verifiable: Croquet / Multisynq
+  combos_with: []
+invoke_rules:
+  consent: memorial
+  simulation: false
+  note: "Memorial — celebrate documented work; do not speak as her; Craig Latta + Dan Ingalls can remember her."
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — memorial status
+- path: memorial.md
+  why: Tribute — represent + discuss

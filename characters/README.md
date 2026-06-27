@@ -1,9 +1,26 @@
 # characters/
 
-Public **invitation portrayals** — polite, verifiable, respectful. **Not** the real people.
+Public portrayals **about** real people — polite, verifiable, respectful. These are **not** the
+real people, and we never impersonate them or speak as them.
 
-**Browse the tree.** One directory per guest — that is the interface, not a separate people index.
-Refer to guests organically in show copy and trails; [`INDEX.yml`](INDEX.yml) is for machines syncing status.
+**Browse the tree.** One directory per person — that is the interface, not a separate people index.
+Refer to people organically in show copy and trails; [`INDEX.yml`](INDEX.yml) is for machines syncing status.
+
+## What's here — two kinds of directory
+
+| Kind | Who | What it is |
+|------|-----|------------|
+| 🎟️ **Invitation** | living guests | A standing, public **invitation** to a Repo Show, plus a portrayal drawn from their documented public work. They can accept, decline, delay, ignore, edit, or delete it. |
+| 🕯️ **Memorial** | people who have passed | A tribute in **memorial mode**: we *represent and discuss* their documented work and the stories friends tell — we do **not** interview them, speak as them, or invent words. We invite living people who knew them to remember them on air. |
+
+**Ethical framing.** Everything here is sourced and public-safe (no private contact info, no
+fabricated quotes). It exists to honor people's documented work and, for the living, to invite a
+conversation — never to put words in anyone's mouth. See [portrayal standards](../schemas/portrayal-standards.yml)
+and, for the deceased, [memorial mode](../schemas/portrayal-standards.yml#memorial_mode).
+
+**We will edit or remove any portrayal — promptly and respectfully — on request from the person,
+or, for a memorial, from their family or estate.** Open a GitHub issue or contact Don Hopkins
+through any public channel. No reason needed; no questions asked.
 
 ## Read once
 
@@ -53,8 +70,9 @@ Normalize from DonHopkins sources: `pnpm run normalize:characters` · Scaffold c
 
 ## Subject rights
 
-Any portrayed person may request **correction, edit, or deletion** — we comply gracefully.
-Declines, delays, and silence are honored. See portrayal standards.
+Any portrayed person — or, for someone who has passed, their **family or estate** — may request
+**correction, edit, reduction, or deletion** at any time. We comply promptly and gracefully, no
+reason required. Declines, delays, and silence are all honored. See portrayal standards.
 
 ## Museum map
 

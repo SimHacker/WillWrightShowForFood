@@ -1,0 +1,93 @@
+# CARD — Ted Nelson (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: ted-nelson
+  name: Ted Nelson
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Ted Nelson
+  title: Inventor of Hypertext
+  rarity: rare
+  signifier: 🔗
+  flavor: Everything is deeply intertwingled. — Ted Nelson, Computer Lib / Dream Machines (1974)
+abilities:
+- id: COIN-HYPERTEXT
+  name: Coin Hypertext
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: coinHypertext
+    signature: coinHypertext(idea) → a word the whole field uses
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.9
+  effect: Name hypertext and hypermedia decades before the web caught up.
+  verifiable: Coined "hypertext"/"hypermedia"; Computer Lib / Dream Machines
+  combos_with: []
+- id: TRANSCLUDE
+  name: Transclude
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: transclude
+    signature: transclude(source) → quote that stays connected to its origin
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Include by reference with the connection visible — not copy-and-sever.
+  verifiable: Project Xanadu; transclusion
+  combos_with: []
+- id: XANALINK
+  name: Xanalink
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: xanalink
+    signature: xanalink(a, b) → visible parallel connection
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Show the connection both ways, in parallel — not a one-way jump into the dark.
+  verifiable: Xanadu visible connections; xanadu.com/demo
+  combos_with: []
+- id: DISCUSS-FOREBEARS
+  name: Discuss the Forebears
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: discussForebears
+    signature: discussForebears(memorial) → real stories, first-hand
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Remember the people he knew — Engelbart (who officiated his wedding) and Hugh Daniel.
+  verifiable: Engelbart officiated Ted's wedding; Hugh Daniel Xanadu collaborator
+  combos_with:
+  - ENGELBART-AUGMENT-INTELLECT
+  - HUGH-XANADU-EVANGELIST
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status (warm lead)
+- path: invitation.md
+  why: Public invitation document
+- path: correspondence.yml
+  why: Public-safe thread digest

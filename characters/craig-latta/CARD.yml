@@ -1,0 +1,77 @@
+# CARD — Craig Latta (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: craig-latta
+  name: Craig Latta
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Craig Latta
+  title: Livecoder of the Web
+  rarity: rare
+  signifier: 🎚️
+  flavor: Livecode the web — make persistent changes to a running page, without reloading.
+abilities:
+- id: CAFFEINE-LIVECODE
+  name: Caffeine Livecode
+  type: activated
+  mana: '{U}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: caffeineLivecode
+    signature: caffeineLivecode(page) → live persistent change, no reload
+    score_when:
+    - trigger: causality_visible_without_manual
+      weight: 0.9
+  effect: Bridge SqueakJS into any web page and edit it live, on air.
+  verifiable: Caffeine (caffeine.js.org)
+  combos_with:
+  - VANESSA-SQUEAKJS
+  - DAN-LIVELY-KERNEL
+- id: CATALYST-WASM
+  name: Catalyst WASM
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: catalystWasm
+    signature: catalystWasm(method) → just-in-time WebAssembly
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Translate Smalltalk methods to WASM at runtime — the thread Vanessa saw coming.
+  verifiable: Catalyst; "Dynamic translation of Smalltalk to WebAssembly"
+  combos_with:
+  - VANESSA-WASM-INSIGHT
+- id: LIVE-IMPROV
+  name: Live Improv
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: liveImprov
+    signature: liveImprov(stage) → code as music performance
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.8
+  effect: Treat livecoding as improvisation — Berkeley music meets Smalltalk.
+  verifiable: Black Page Digital; livecoding performances
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document (in-person Amsterdam, on camera; remember Vanessa)

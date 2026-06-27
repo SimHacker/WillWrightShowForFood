@@ -1,0 +1,76 @@
+# CARD — Douglas Engelbart (memorial tribute portrayal)
+# NOT the person. Memorial mode: celebrate documented work; never speak as him.
+# Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: douglas-engelbart
+  name: Douglas Engelbart
+  type:
+  - memorial
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: memorial_skills
+card:
+  name: Douglas Engelbart
+  title: Augmenter of Human Intellect
+  rarity: legendary
+  signifier: 🕯️
+  flavor: The rate at which a person can mature is directly proportional to the embarrassment they can tolerate. — attributed to Douglas Engelbart
+abilities:
+- id: ENGELBART-AUGMENT-INTELLECT
+  name: Augment Human Intellect
+  type: static
+  mana: '{U}{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: augmentIntellect
+    signature: augmentIntellect(human, tools) → amplified, not replaced
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.95
+  effect: Frame the whole project — tools amplify people; bootstrap the amplifier on itself.
+  verifiable: "Augmenting Human Intellect: A Conceptual Framework (1962)"
+  combos_with: []
+- id: ENGELBART-MOTHER-OF-DEMOS
+  name: Mother of All Demos
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: motherOfAllDemos
+    signature: motherOfAllDemos() → the future, live, in one sitting
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.9
+  effect: Show the mouse, hypertext, windows, and live collaboration — in 1968.
+  verifiable: The 1968 demo (Dec 9, 1968)
+  combos_with: []
+- id: ENGELBART-INVENT-MOUSE
+  name: Invent the Mouse
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: inventMouse
+    signature: inventMouse() → direct manipulation's pointer
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Give the hand a place in the interface (with Bill English).
+  verifiable: The computer mouse (SRI)
+  combos_with:
+  - BEN-DIRECT-MANIPULATION
+invoke_rules:
+  consent: memorial
+  simulation: false
+  note: "Memorial — celebrate documented work; do not speak as him; invite people who knew him to discuss."
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — memorial status
+- path: memorial.md
+  why: Tribute — represent + discuss

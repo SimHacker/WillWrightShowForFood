@@ -1,0 +1,95 @@
+# CARD — Dan Ingalls (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: dan-ingalls
+  name: Dan Ingalls
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Dan Ingalls
+  title: Architect of the Living System
+  rarity: rare
+  signifier: 🪟
+  flavor: An operating system is a collection of things that don't fit into a language. There shouldn't be one. — attributed to Dan Ingalls
+abilities:
+- id: BITBLT
+  name: BitBlt
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: bitBlt
+    signature: bitBlt(src, dst, rule) → every bitmap GUI
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.9
+  effect: Lay down the one primitive under all bitmap graphics, text, windows, and menus.
+  verifiable: BitBlt (Smalltalk; Alto)
+  combos_with: []
+- id: POPUP-MENU
+  name: Pop-Up Menu
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: popUpMenu
+    signature: popUpMenu(items) → choice at the cursor
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Invent the pop-up menu — the cousin Don turned into pie menus.
+  verifiable: Pop-up menus (Smalltalk)
+  combos_with:
+  - DON-PIE-MENU
+- id: SQUEAK-IN-ITSELF
+  name: Squeak In Itself
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: squeakInItself
+    signature: squeakInItself(vm) → Smalltalk written in Smalltalk
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Write the system in itself; translate to C; make it run anywhere.
+  verifiable: Squeak
+  combos_with:
+  - ALAN-SMALLTALK-MESSAGE
+- id: LIVELY-KERNEL
+  name: Lively Kernel
+  type: activated
+  mana: '{U}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: livelyKernel
+    signature: livelyKernel(page) → edit the world while it runs
+    score_when:
+    - trigger: causality_visible_without_manual
+      weight: 0.9
+  effect: Put a live, self-saving system into a web page — no install.
+  verifiable: Lively Kernel; Smalltalk Zoo
+  combos_with:
+  - VANESSA-SQUEAKJS
+  - CRAIG-CAFFEINE-LIVECODE
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document
+- path: correspondence.yml
+  why: Public-safe thread digest

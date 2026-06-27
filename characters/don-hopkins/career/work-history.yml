@@ -19,7 +19,7 @@ employment_timeline:
   - org: Ground Up Software
     years: "2017–present"
     role: Owner (eenmanszaak, Amsterdam)
-    note: iLoci Memory Palace; PieCraft; Sims animation research
+    note: PieCraft; Sims animation research (iLoci was earlier, TomTom-era 2008)
 
   - org: Pantomime Corporation
     years: "2014–2021"
@@ -41,6 +41,7 @@ employment_timeline:
     years: "2007–2009"
     role: Senior Developer
     location: Amsterdam
+    note: "Day job. On the side at the Bluebird coffeeshop: iLoci Memory Palace app + Mobile Dev Camp talk (2008), then the Amsterdam Coffeeshops app + BONGO BINGO (2009) — which led Will Wright to invite Don back to Stupid Fun Club. See stupid-fun-club.yml#how_don_rejoined_will"
 
   - org: NutritionQuest / Block Dietary
     years: "2005–2007, 2009+"
