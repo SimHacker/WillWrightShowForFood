@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/challenges/retrocomputing-drive.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:0053f01dad02a664 -->
+<!-- content-sha256:7a842cc0caa1754e -->
 
 # Retrocomputing Drive
 
@@ -27,9 +27,7 @@ the PET, MAME, or a breadboard with honor?
 
 ## What A Rig Declares
 
-### languages
-
-## Languages
+### Languages
 
 - **what:** Host language, target language, or both — declare honestly
 - **examples:**
@@ -42,9 +40,7 @@ the PET, MAME, or a breadboard with honor?
   - Pascal
   - Rust_on_host
 
-### tools
-
-## Tools
+### Tools
 
 - **what:** Assembler, IDE, emulator front-end, disk tools, AI orchestration
 - **examples:**
@@ -60,14 +56,10 @@ the PET, MAME, or a breadboard with honor?
   - MAME
   - Emularity
 
-### platforms
-
-## Platforms
+### Platforms
 
 - **what:** Where the spec actually runs — real, emulated, or hybrid
-### examples
-
-## Examples
+### Examples
 
 - {"id": "pdp10_its", "emulated": "PDP-10/its + SIMH", "languages": ["MACLISP", "MIDAS"]}
 - {"id": "symbolics_genera", "emulated": "Portable Genera / Open Genera VLM", "languages": ["ZetaLisp", "Flavors"]}
@@ -93,9 +85,7 @@ install/upgrade preserving .rig/<slug>/state.yml. Human decides whether agent ex
 
 ## Challenge Lanes
 
-### flair_showoff
-
-## Flair Showoff
+### Flair Showoff
 
 - **declare:** flair_class
 - **judges:**
@@ -105,9 +95,7 @@ install/upgrade preserving .rig/<slug>/state.yml. Human decides whether agent ex
 - **rule:** Spec ships on declared platform — language/tool choices are the costume
 - **slats:** Wrong platform for the challenge card? Sashay. Right platform, wrong werk? GOTO 20 with pride.
 
-### measurement_vertical
-
-## Measurement Vertical
+### Measurement Vertical
 
 - **declare:** stick_shift_or_artisanal
 - **judges:**
@@ -135,8 +123,6 @@ install/upgrade preserving .rig/<slug>/state.yml. Human decides whether agent ex
 
 ### Apple2 Drive
 
-## Apple2 Drive
-
 - **see:** apple2-drive.yml
 - **example_rig:** ../../rigs/apple2-flair-lap.rig.yml
 - **tagline:** Drive the ][ — INTEGER BASIC if you dare
@@ -144,16 +130,12 @@ install/upgrade preserving .rig/<slug>/state.yml. Human decides whether agent ex
 
 ### Pdp10 Maclisp Drive
 
-## Pdp10 Maclisp Drive
-
 - **see:** pdp10-maclisp-drive.yml
 - **example_rig:** ../../rigs/pdp10-maclisp-flair-lap.rig.yml
 - **tagline:** Write in MACLISP on a PDP-10 emulator running ITS!
 
 
 ### Lisp Machine Hack Off
-
-## Lisp Machine Hack Off
 
 - **see:** lisp-machine-hack-off.yml
 - **example_rigs:**
@@ -163,8 +145,6 @@ install/upgrade preserving .rig/<slug>/state.yml. Human decides whether agent ex
 
 
 ### Future Seeds
-
-## Future Seeds
 
 - {"id": "c64_drive", "note": "PETSCII flair lap — seed when first rig lands"}
 - {"id": "atari800_drive", "note": "Atari 8-bit — seed when first rig lands"}
@@ -201,6 +181,6 @@ install/upgrade preserving .rig/<slug>/state.yml. Human decides whether agent ex
 | [`homefun-grading.yml`](../homefun-grading.yml) | Homefun rubric applies to retro PRs |
 | [`../../characters/lars-brinkhoff/`](../../characters/lars-brinkhoff/) | PDP-10 anchor — make it so |
 | [`../../characters/thomas-cherryhomes/`](../../characters/thomas-cherryhomes/) | Real ][ on FujiNet — pairs with apple2-drive |
-| [`rig-setup-dna.yml`](../../schemas/rig-setup-dna.yml) | SETUP.md is viral Rig DNA — not generated md |
+| [`rig-setup-dna.yml`](../../schemas/rig-setup-dna.yml) | SETUP.md is Rig DNA — LLM may draft; not facade-registry bulk md |
 | [`SKILL.md`](../../skills/repo-show/SKILL.md) | Repo Show harvests retro technique back to skills/ |
 | [`constructionism`](https://github.com/SimHacker/moollm/skills/constructionism) | Microworlds — learn by building on your platform |

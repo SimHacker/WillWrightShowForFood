@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/manual-transmission.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:4141019d18415c27 -->
+<!-- content-sha256:a7b13ce142352536 -->
 
 # Manual Transmission
 
@@ -63,9 +63,7 @@ showed GitHub bug-fix commits train repair models; we extend with thoughtful-com
 ## Multi Rubric
 
 - **metaphor:** Rubik's cube — many faces scored at once; no single-axis winner required
-### moollm_skills
-
-## Moollm Skills
+### Moollm Skills
 
 - **rubric:**
   - repo: https://github.com/SimHacker/moollm/tree/main/skills/rubric
@@ -81,9 +79,7 @@ showed GitHub bug-fix commits train repair models; we extend with thoughtful-com
   - SCORE each contestant on N criteria simultaneously — weights explicit
   - experiment COMPARE runs across contestants or across your own retries
   - Slats judges subjective faces; spreadsheet judges measurable faces
-### example_axes
-
-## Example Axes
+### Example Axes
 
 - **measurable:**
   - cost_to_ship
@@ -110,9 +106,7 @@ showed GitHub bug-fix commits train repair models; we extend with thoughtful-com
 ## How It Works
 
 - **host_drops:** One spec CARD — yaml stub, issue, guest throw-down — identical for all lanes
-### contestants
-
-## Contestants
+### Contestants
 
 - **declare:**
   - rig_class
@@ -129,9 +123,7 @@ showed GitHub bug-fix commits train repair models; we extend with thoughtful-com
 - **audience:**
   - chant: CODE THAT SPEC!!!!!
   - ref: Misbid vs spend CSV — thumbs, chat, PR comments
-### overlay
-
-## Overlay
+### Overlay
 
 - **see:** brain-stream.yml
 - **shows:**
@@ -162,9 +154,7 @@ showed GitHub bug-fix commits train repair models; we extend with thoughtful-com
 ## Scoring
 
 - **engine:** MOOLLM rubric SCORE + experiment COMPARE — many criteria at once
-### measurable
-
-## Measurable
+### Measurable
 
 - **cost_to_ship:**
   - proof: Cursor spend CSV
@@ -188,13 +178,9 @@ showed GitHub bug-fix commits train repair models; we extend with thoughtful-com
   - proof: PR merged; skills/packages graft bonus
   - weight: high
 
-### subjective
+### Subjective
 
-## Subjective
-
-### eleganza
-
-## Eleganza
+### Eleganza
 
 - **judges:**
   - slats
@@ -221,9 +207,7 @@ showed GitHub bug-fix commits train repair models; we extend with thoughtful-com
   - role: celebrity_robot_judge
   - rubric: ../characters/slats/judge-rubric.yml
   - note: Subjective Rubik faces — camp, robopoetry, werk
-### rubric_experiment
-
-## Rubric Experiment
+### Rubric Experiment
 
 - **role:** MOOLLM rubric SCORE + experiment COMPARE — many axes at once
 - **credits:** Mike Gallaher
@@ -238,9 +222,7 @@ showed GitHub bug-fix commits train repair models; we extend with thoughtful-com
 
 ## Credits
 
-### mike_gallaher
-
-## Mike Gallaher
+### Mike Gallaher
 
 - **contributions:**
   - rubric_skill

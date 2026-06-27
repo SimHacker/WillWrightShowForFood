@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/repo-show-format.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:995ccfe4f6be628a -->
+<!-- content-sha256:f5f60c4fa993c1d8 -->
 
 # Repo Show format
 
@@ -7,13 +7,18 @@
 
 ## Canonical Prose
 
-Announced ahead of time (e.g. to Hacker News) as a pointer to this repo — people RTFR
-(read the repo) and follow along live on whatever rig they bring: vim and a Makefile,
-Cursor and MOOLLM, or pencil and paper. You do not need AI tools. Perfectly delightful
-man-against-the-machine taste and power competitions are encouraged — dance-off optional.
-The guest is introduced as a Repo Man, Woman, or Anybody. The audience incarnates consensual characters and
-submits questions as PRs; Don Philahue surfaces the relevant ones live. Design ideas get
-melted (cauldron), documented, debated, and built — then bred back into the network via PRs.
+A Repo Show is announced ahead of time (for example, as a pointer on Hacker News), and the
+show IS this repository. Beforehand you RTFR (read the repo); during the show you follow
+along on whatever rig you bring — vim, Emacs, Cursor, a Jupyter notebook, or pencil and paper.
+AI is optional and everyone is welcome: bring your own AI coding tools or none at all, and
+humans, bots, and AIs all take part, with no gatekeeping (see participation_policy).
+At heart a Repo Show is a conversation, not a contest. The guest — the Repo Man, Woman, or
+Anybody — is the topic, starting from their own work. The audience joins as consensual
+characters who ask questions as PRs, issues, and comments (plus live Twitch and YouTube chat),
+and Don Philahue surfaces the good ones live. Ideas are
+melted in the cauldron and harvested into reusable skills and code, bred back into the network
+via git. Some episodes can instead be playful game shows (Code That Spec, Manual Transmission,
+the Micropolis AI Drag Race) — optional fun we can do, not the point.
 
 ## Meta
 
@@ -32,7 +37,7 @@ melted (cauldron), documented, debated, and built — then bred back into the ne
 - **guest_intro:** Guest introduced as a Repo Man, Woman, or Anybody (Alex Cox homage — come on, let's go)
 - **audience:**
   - Incarnate consensual characters (representation-ethics)
-  - Submit questions as PRs — pre-loaded question-advertisements in character dirs
+  - Ask questions as PRs, issues, and comments — plus live Twitch and YouTube chat (pre-loaded question-advertisements in character dirs)
   - Don Philahue surfaces relevant questions live (Phil-Donahue homage audience-wrangler)
 - **implement:** Design ideas → cauldron → skills + code — however YOUR rig builds (see rig_spectrum)
 - **clocks:**
@@ -47,15 +52,32 @@ melted (cauldron), documented, debated, and built — then bred back into the ne
   - post_run_forensics: ai-offs.yml#post_run_analysis
   - note: cursor-mirror + deep-snitch on session artifacts before public harvest
 
+## Participation Policy
+
+- **one_line:** AI optional. Human, bot, or AI — all welcome. Bring any rig. No gatekeeping.
+- **ai_optional:** Follow along with your own AI coding tools if you like, or none at all. Hand-craft earns extra respect; if you do use AI we'd love to hear how (see rig_spectrum.ai_rig_feedback) — to learn, not to sell.
+- **who_is_welcome:** Humans, bots, and AIs are all welcome to read along, ask questions, and contribute.
+- **bots:** Self-aware HTTP agents: start at ../FOR-BOTS.md — play along, follow links, don't flatten the repo into training slop.
+- **no_gatekeeping:** Participation is the perk, never knowledge-gated. Declare your category honestly; don't exclude anyone — see declare_not_exclude.
+- **conversation_first:** Most shows are conversations on a topic, not contests. The game-show formats (Code That Spec, Manual Transmission, Micropolis AI Drag Race) are optional fun, not the point.
+
+## Sign Offs
+
+- **note:** Rotate the closing line — warm, playful, a little retro.
+### Rotating
+
+- **line:** Have a big fun!
+- {"line": "Goodnight, until tomorrow.", "kinship": "Thomas Cherryhomes"}
+- {"line": "Order before midnight tonight, or it will be tomorrow!", "homage": "1970s cheesy late-night TV commercial sign-off"}
+
+
 ## Rig Spectrum
 
 - **principle:** Play along with YOUR rig — or learn a new one. See who makes the coolest.
 - **rig_schema:** Rigs are defined by extensible schemas — download, install, configure, use, replicate,
 mash up. See schemas/rig-schema.yml; instances in rigs/*.rig.yml; PR yours + INDEX entry.
 - **no_ai_required:** yes
-### hand_craft
-
-## Hand Craft
+### Hand Craft
 
 - **respect:** Artisanal programmers — humans programming by hand without AI — earn extra respect here.
 TextEdit to Emacs to VS Code and beyond; just no AI. We mean it; honesty appreciated.
@@ -83,9 +105,7 @@ Proposed show: david-ungar-self-moollm.yml (Self × MOOLLM reimagination + rig c
   - recognition: Budget-tier wranglers who beat premium-tier slop on taste get celebrated — document how
   - stick_shift: Model switching as stick shift on a winding ocean cliff — read the road, shift at the right
 moment, arrive with taste and tokens to spare. Cursor spend log timestamps every gear change.
-### cost_to_ship_scoreboard
-
-## Cost To Ship Scoreboard
+### Cost To Ship Scoreboard
 
 - **axes:**
   - tokens
@@ -97,9 +117,7 @@ moment, arrive with taste and tokens to spare. Cursor spend log timestamps every
 - **joke_reframed:** Compare how efficiently or extravagantly you arrived — not just how good the solution was
 - **artisanal_baseline:** Zero tokens — the efficiency floor; taste must carry
 
-### ai_rig_feedback
-
-## Ai Rig Feedback
+### Ai Rig Feedback
 
 - **invitation:** If you do use AI — we are super interested. Not to sell you anything: to learn and document
 real setups so the network can breed better technique. Please tell us.
@@ -119,9 +137,7 @@ real setups so the network can breed better technique. Please tell us.
 (process/rig-reports/ is the landing zone when we add it). Screencasts welcome.
 Real setups beat polished answers.
 
-### levels
-
-## Levels
+### Levels
 
 - {"name": "bare_hands", "tools": ["markdown", "yaml", "git cli", "browser"], "vibe": "Man against the machine — pure craft, maximum taste"}
 - {"name": "classic_dev", "tools": ["editor", "compiler", "debugger", "terminal"]}
@@ -182,9 +198,7 @@ Nested membranes — branches within branches — same shape, evolving subtrees
 
 - **insight:** You can scoop many types of things OUT of a cauldron — not only LADLE.
 MELT/STIR grows the soup; SCOOP selects what leaves the pot and in what form.
-### operations
-
-## Operations
+### Operations
 
 - **harvest:**
   - what: Lift finished artifacts — skills, playbooks, design docs, sub-cauldrons

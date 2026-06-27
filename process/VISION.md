@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/vision-and-ambition.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:002309a2e0fcdcd2 -->
+<!-- content-sha256:29aa74723402e7be -->
 
 # Vision and ambition
 
@@ -17,12 +17,10 @@
 
 - **before_1996:** Microworlds, constructionism, simulation as thoughtware, design-in-public —
 decades of practice before this repo existed.
-### anchor_1996
-
-## Anchor 1996
+### Anchor 1996
 
 - **event:** Will Wright — Interfacing to Microworlds (Winograd CS547, Stanford)
-### date
+### Date
 
 - **artifact:** ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
 - **note:** Don was in the room. The talk sent him to Maxis. A proto–Repo Show.
@@ -60,9 +58,7 @@ Don't exclude — declare and have fun. It's just a game. (Same shape Don applie
 sports categories: weight class not banishment — including the trans-in-sports mess
 that should be a no-brainer.) Extra respect for artisanal hand programming.
 Curiosity about real AI setups. Constructionist microworld pedagogy: show workflow, breed DNA.
-### artisanal_programmers
-
-## Artisanal Programmers
+### Artisanal Programmers
 
 - **also_called:**
   - hand_programmers
@@ -98,9 +94,7 @@ Curiosity about real AI setups. Constructionist microworld pedagogy: show workfl
   - brand: Micropolis AI Drag Race — flagship variety game show
   - werk: Rig personas, challenges, spend-log judges, merge or sashay
   - see: micropolis-ai-drag-race.yml
-### history
-
-## History
+### History
 
 - **consciencious_objectors:**
   - coinage: Don Hopkins coined consciencious objectors at a meetup with David Ungar and Kaleida colleagues (ScriptX object-system era)
@@ -111,14 +105,10 @@ Curiosity about real AI setups. Constructionist microworld pedagogy: show workfl
 
 ## Audiences If You Stumbled Here
 
-### educators_and_constructionists
-
-## Educators And Constructionists
+### Educators And Constructionists
 
 - **for:** The people we are inviting — and everyone who teaches with microworlds
-### invited_guests
-
-## Invited Guests
+### Invited Guests
 
 - {"name": "Brian Harvey", "note": "Logo, Simply Scheme, CS Logo Style, Snap!, BJC — lifelong CS education", "show_seeds": ["brian-harvey", "snap-logo-brian-jens"]}
 - {"name": "Jens Mönig", "note": "Snap! architect — Micropolis × Snap!, blocks, Morphic.js, distributed systems in Snap!", "show_seeds": ["jens-monig", "snap-logo-brian-jens"]}
@@ -148,9 +138,7 @@ We want Brian + Jens headline Snap!/Logo; Walter on OLPC + skill creation — co
   - intentional_coders: Deliberate craft — the positive name for thoughtful anti-vibe
   - conscientious_coders: Show-your-work ethics; care and attribution
   - participate: Compare rigs honestly — coolest wins on taste, clarity, and constructionist generosity
-### ai_rig_reporters
-
-## Ai Rig Reporters
+### Ai Rig Reporters
 
 - **hook:** We want to learn from real AI setups — not vendor demos.
 - **tell_us:**
@@ -166,9 +154,7 @@ We want Brian + Jens headline Snap!/Logo; Walter on OLPC + skill creation — co
 - **streamers_and_makers:**
   - hook: Run your parallel show on your branch; link in via PR.
   - participate: Document techniques — yaml backbone, markdown facade — breed DNA back.
-### archive_and_library
-
-## Archive And Library
+### Archive And Library
 
 - **namesake_examples:**
   - Brewster_Kahle
@@ -177,9 +163,7 @@ We want Brian + Jens headline Snap!/Logo; Walter on OLPC + skill creation — co
 - **hook:** Permanent, attributed, forkable record — talk lineage from 1996 forward.
 - **participate:** Mirror, cite, ingest show objects; we want the graph to outlive any one platform.
 
-### hardware_hacker_builder
-
-## Hardware Hacker Builder
+### Hardware Hacker Builder
 
 - **namesake_examples:**
   - Steve_Wozniak
@@ -189,9 +173,7 @@ We want Brian + Jens headline Snap!/Logo; Walter on OLPC + skill creation — co
 - **publishers_and_editorial:**
   - hook: Publication network — graph of shows, not a flat feed. Each node is a CARD + README + optional pitch.
   - participate: Link shows, anthologize branches, credit contributors by git history.
-### platforms_and_production
-
-## Platforms And Production
+### Platforms And Production
 
 - **namesake_examples:**
   - Netflix

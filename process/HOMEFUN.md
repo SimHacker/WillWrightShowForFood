@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/homefun-grading.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:7092f9e4ca604fa6 -->
+<!-- content-sha256:98a071c8daafd6a3 -->
 
 # Homefun grading
 
@@ -38,9 +38,7 @@ and show-your-work — with optional AI rig, declared class, and public receipts
 - **why_brilliant:** One question bridges narrative (what you claim) and forensics (what the session
 actually shows). Teaches intellectual honesty, catches slop and clutch-riding,
 scales to human teachers AND rubric/experiment automation.
-### how_to_answer
-
-## How To Answer
+### How To Answer
 
 - **human_teacher:**
   - Read commit narrative + changes bullets
@@ -55,13 +53,9 @@ scales to human teachers AND rubric/experiment automation.
 
 ## Rubric Faces
 
-### primary
+### Primary
 
-## Primary
-
-### commit_thinking_alignment
-
-## Commit Thinking Alignment
+### Commit Thinking Alignment
 
 - **question:** Does the commit message match the thinking blocks?
 - **weight:** high
@@ -114,9 +108,7 @@ demonstration — see orchestration-gold.yml#training_by_demonstration
 
 ## Student Artifact
 
-### minimum
-
-## Minimum
+### Minimum
 
 - PR or branch
 - at least one thoughtful commit with Thinking: cursor-mirror:// ref

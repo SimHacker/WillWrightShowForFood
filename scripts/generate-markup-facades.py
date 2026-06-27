@@ -145,11 +145,11 @@ def render_dict_table(rows: dict[str, Any], lines: list[str]) -> None:
         return
     for k, v in rows.items():
         lines.extend([f"### {slug_title(k)}", ""])
-        render_value(v, lines, k)
+        render_value(v, lines, k, emit_header=False)
         lines.append("")
 
 
-def render_value(value: Any, lines: list[str], key: str = "") -> None:
+def render_value(value: Any, lines: list[str], key: str = "", emit_header: bool = True) -> None:
     if value is None:
         return
     if isinstance(value, str):
@@ -167,12 +167,14 @@ def render_value(value: Any, lines: list[str], key: str = "") -> None:
         if not value:
             return
         if all(isinstance(x, str) for x in value):
-            lines.extend([f"## {slug_title(key)}", ""])
+            if emit_header:
+                lines.extend([f"## {slug_title(key)}", ""])
             render_list_items(value, lines)
             lines.append("")
             return
         if all(isinstance(x, dict) for x in value):
-            lines.extend([f"## {slug_title(key)}", ""])
+            if emit_header:
+                lines.extend([f"## {slug_title(key)}", ""])
             for i, row in enumerate(value):
                 if len(row) == 1:
                     k, v = next(iter(row.items()))
@@ -181,13 +183,15 @@ def render_value(value: Any, lines: list[str], key: str = "") -> None:
                     lines.append(f"- {json.dumps(row, ensure_ascii=False)}")
             lines.append("")
             return
-        lines.extend([f"## {slug_title(key)}", ""])
+        if emit_header:
+            lines.extend([f"## {slug_title(key)}", ""])
         render_list_items(value, lines)
         lines.append("")
         return
     if isinstance(value, dict):
         if key in ("challenges", "rig_classes", "game_shows", "flagship_instances", "entries"):
-            lines.extend([f"## {slug_title(key)}", ""])
+            if emit_header:
+                lines.extend([f"## {slug_title(key)}", ""])
             if key == "challenges" and all(isinstance(v, dict) for v in value.values()):
                 lines.extend(["| Challenge | Detail |", "|-----------|--------|"])
                 for name, spec in value.items():
@@ -208,7 +212,8 @@ def render_value(value: Any, lines: list[str], key: str = "") -> None:
                 return
             render_dict_table(value, lines)
             return
-        lines.extend([f"## {slug_title(key)}", ""])
+        if emit_header:
+            lines.extend([f"## {slug_title(key)}", ""])
         for subk, subv in value.items():
             if isinstance(subv, (str, int, float, bool)) or subv is None:
                 lines.append(f"- **{subk}:** {fmt_scalar(subv)}")
@@ -221,8 +226,8 @@ def render_value(value: Any, lines: list[str], key: str = "") -> None:
                 for kk, vv in subv.items():
                     lines.append(f"  - {kk}: {fmt_scalar(vv)}")
             else:
-                lines.extend([f"### {subk}", ""])
-                render_value(subv, lines, subk)
+                lines.extend([f"### {slug_title(subk)}", ""])
+                render_value(subv, lines, subk, emit_header=False)
         lines.append("")
         return
 
@@ -328,6 +333,10 @@ def main(argv: list[str]) -> int:
     generated = 0
 
     for entry in registry.get("facades", []):
+        render = entry.get("render") or {}
+        if render.get("mode") == "llm":
+            # Instance-first — authored by an LLM; never bulk-regenerated/clobbered by this script.
+            continue
         output = (base_dir / entry["output"]).resolve()
         if check_only:
             if is_stale(entry, base_dir, output):

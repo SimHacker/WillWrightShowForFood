@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/ai-offs.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:47cc664a0e97ee59 -->
+<!-- content-sha256:43e8ed5ecee53f1b -->
 
 # AI-offs
 
@@ -39,9 +39,7 @@ GitHub logs trained bug-fix models (Steve Kommrusch); our logs + thoughtful comm
 
 ## Spend Proof
 
-### cursor_spend_csv
-
-## Cursor Spend Csv
+### Cursor Spend Csv
 
 - **required_for:**
   - manual_transmission
@@ -60,7 +58,7 @@ GitHub logs trained bug-fix models (Steve Kommrusch); our logs + thoughtful comm
 
 | Key | Value |
 |-----|-------|
-| **budget_bull_ride** | One tier, tight budget, wrangle through chaos |
+| **budget_bull_ride** | One tier, tight budget, wrangle through chaos and hallucinations |
 | **stick_shift** | Multi-model — shift efficiently; cliff-road metaphor; spend log is the tachometer |
 | **code_that_spec** | Game-show bid — tokens or time; audience CODE THAT SPEC; rig as Let's Make a Deal costume |
 
@@ -136,9 +134,7 @@ No — it's a floor wax!)
 - **what:** Analyze artifacts the chat generated — not just the merge diff. cursor-mirror
 reconstructs prompts, thinking, tool calls, context assembly; deep-snitch audits
 transcripts for secrets and sketch before anything goes public or into orchestration gold.
-### workflow
-
-## Workflow
+### Workflow
 
 - **mirror:**
   - timeline

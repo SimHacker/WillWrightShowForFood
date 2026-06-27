@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/brain-stream.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:6814662795b02ce2 -->
+<!-- content-sha256:53df24da2220432d -->
 
 # Brain stream
 
@@ -35,9 +35,7 @@ Pairs with Manual Transmission — the tachometer the audience watches.
 ## Architecture
 
 - **principle:** Tight integration, slippery coupling — one schema, many subscribers
-### sources
-
-## Sources
+### Sources
 
 - **cursor_mirror_live:**
   - status: designed
@@ -50,9 +48,7 @@ Pairs with Manual Transmission — the tachometer the audience watches.
 - **github:**
   - what: Commit webhooks → thoughtful-commitment links on bus
 
-### bus
-
-## Bus
+### Bus
 
 - **transport:**
   - SSE
@@ -81,9 +77,7 @@ Pairs with Manual Transmission — the tachometer the audience watches.
   - gear_shift
   - runbook_start
   - design_mode
-### fields
-
-## Fields
+### Fields
 
 - **composer_id:** string
 - **model:** string
@@ -93,15 +87,11 @@ Pairs with Manual Transmission — the tachometer the audience watches.
   - chat
   - full
   - redacted
-### payload
-
-## Payload
+### Payload
 
 - **text:** string
 - **summary:** optional rolling resummary for chat
-### attachments
-
-## Attachments
+### Attachments
 
 - {"kind": "github_file", "path": "repo-relative path", "url": "public blob URL"}
 

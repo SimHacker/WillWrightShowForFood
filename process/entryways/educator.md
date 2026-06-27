@@ -36,6 +36,6 @@ Micropolis Class treats credited public ideas as curriculum. Will's talk is prim
 
 | | |
 |---|---|
-| ← | [Retro — PDP-10, \]\[, LispM](retro.md) |
+| ← | [Retro — PDP-10, &#93;&#91;, LispM](retro.md) |
 | Map | [Museum map](README.md) |
 | Next | [Archivist / historian](archivist.md) |

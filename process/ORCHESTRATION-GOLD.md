@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/orchestration-gold.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:b632066067441f8a -->
+<!-- content-sha256:a2bfae8ed2b4cf82 -->
 
 # Orchestration gold
 
@@ -38,9 +38,7 @@ as labeled segments: task type, model chosen, outcome, spend — orchestration g
   - pbd: Programming by demonstration — Brad Myers, Watch What I Do, Garnet (Don ~1992–93)
   - see: ../characters/brad-myers/ · ../repo-shows/INDEX.yml#brad-myers-garnet-vpl
 - **tbd:** Training BY demonstration — harvest expert multi-model laps as supervised routing signal
-### macro_tier
-
-## Macro Tier
+### Macro Tier
 
 - **what:** Many steps are simple syntactic transformations — the kind Don used to do with
 Emacs keyboard macros over dired buffers: transform one file, next file, rinse, repeat.
@@ -63,9 +61,7 @@ training orchestration and routing, not just base models. Fun competition → ho
 
 ## Lineage
 
-### steve_kommrusch
-
-## Steve Kommrusch
+### Steve Kommrusch
 
 - **role:** Leela AI colleague; PhD Colorado State 2022
 - **thesis:** Machine Learning for Computer Aided Programming — stochastic program repair to verifiable equivalence
@@ -109,9 +105,7 @@ see stick-shift-protocol.yml#gear_commitment
   - cursor-mirror timeline / thinking / tools / context-sources since anchor
   - cursor-mirror export-prompts — instruction tape for this slice
   - Optional: deep-snitch on slice before public harvest
-### analyze_dimensions
-
-## Analyze Dimensions
+### Analyze Dimensions
 
 - **routing:**
   - models_used_and_when
@@ -133,9 +127,7 @@ see stick-shift-protocol.yml#gear_commitment
   - rubric SCORE on slice vs spec CARD
   - spec_compliance_diff
 
-### audit_questions
-
-## Audit Questions
+### Audit Questions
 
 - **flagship:** homefun-grading.yml#flagship_question
 - **examples:**
