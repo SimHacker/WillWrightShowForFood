@@ -1,0 +1,129 @@
+# MODEL BRANCHING — branching worlds, branching models
+# Chat snapshots → fork model at any bubble → compare trajectories → keep or sashay
+# Scooped: 2026-06-27 — Manual Transmission speed-run extension
+
+meta:
+  id: model-branching
+  also_called: [trajectory_fork, chat_branch, stick_shift_worlds]
+  status: seed
+  type: [orchestration_lab, manual_transmission, ai_off_analysis]
+  tagline: "Branch to a different model at any point — replay the instructions, compare the ride"
+
+pitch: |
+  Git branches parallel universes; chat branches parallel models. Snapshot a Cursor session
+  (or recreate close enough), fork at bubble N, replay prompts to model B instead of model A.
+  If B ships better cheaper faster — keep going on that trajectory. Analyze the fuck out of
+  it: cost, speed, tokens, rubric scores, merge quality. Orchestration gold with labels.
+
+metaphor:
+  git: "branches = parallel timelines; PRs = merge DNA"
+  chat: "branches = parallel model trajectories; winner = merge or adopt lane"
+  manual_transmission: "Stick shift — but you can rewind and try another gear at the same corner"
+
+snapshot_sources:
+  cursor_native:
+    what: "Cursor chat import/export — round-trip conversations"
+    note: "User can export chat, branch manually, import into fresh composer with different model"
+  cursor_mirror:
+    export_chat: "export-chat <composer> --yaml | --json"
+    export_jsonl: "export-jsonl — training/analysis format"
+    export_prompts: "export-prompts — prompts and generations for replay"
+    export_markdown: "export-markdown — human-readable archive"
+    transcript: "agent-transcripts/*.jsonl + timeline / thinking / tools"
+    watch: "watch @1 — timed replay of original trajectory"
+    datasette: "export_datasette → cursor-mirror.db — SQL compare runs"
+    repo: SimHacker/moollm/skills/cursor-mirror
+  checkpoints:
+    what: "checkpointId:* file snapshots in state.vscdb — code state at branch point"
+    pairs_with: git branch at same commit SHA
+
+branch_workflow:
+  before_fork:
+    - "cursor-mirror export-prompts <composer> — frozen instruction tape"
+    - "cursor-mirror export-chat <composer> --yaml — bubble snapshot"
+    - "Optional: deep-snitch before publishing snapshot"
+    - "Git commit or tag — code world matches chat world"
+  fork_point:
+    identify_by: [bubble_index, timestamp, user_prompt_hash, tool_call_boundary]
+    record: "branch manifest — parent composer id, fork bubble, chosen model B"
+  replay:
+    what: "New composer/session — same prompts + context summary up to fork; different model"
+    methods:
+      - "Cursor import exported chat → switch model → continue"
+      - "Hand replay: export-prompts tape fed to new session"
+      - "Future: stream-gateway replay lane — brain-stream.yml"
+  compare:
+    axes: [cost_usd, tokens_in_out, wall_clock, spec_compliance, rubric_score, merge_quality, shift_feel]
+    tools:
+      rubric: "MOOLLM rubric SCORE both trajectories on same criteria"
+      experiment: "experiment COMPARE runs — labeled configs per branch"
+      cursor_mirror: "timeline diff — what each model actually touched"
+      spend_csv: "piss test per branch — separate composer ids"
+  decide:
+    keep: "Adopt winning model lane; merge PR from that trajectory"
+    sashay: "Document losing branch — still orchestration gold"
+    merge_both: "Cherry-pick files from either world — git × chat merge"
+
+speed_run:
+  format: "Manual Transmission + model branching — multi-model slalom with rewind"
+  on_stream: "Audience sees fork live on brain-stream overlay — Branch B: mini, Branch A: premium"
+  declare: "Which branches you will try before the run — no surprise sandbagging"
+
+analysis_dimensions:
+  measurable:
+    - cost_per_branch
+    - tokens_per_branch
+    - wall_clock_to_merge
+    - tool_call_count
+    - files_touched_diff
+    - bid_honesty_per_lane
+  subjective:
+    - rubric_faces — Mike Gallaher multi-axis
+    - slats_werk — celebrity robot judge on branch aesthetics
+  aggregate:
+    - "Best quality per dollar across branches"
+    - "Smallest model that still merged"
+    - "Divergence point — where trajectories meaningfully split"
+
+orchestration_gold:
+  extends: manual-transmission.yml#orchestration_gold
+  extra_value: |
+    Labeled fork points + paired trajectories + outcomes = supervised signal for
+    when-to-switch-model. Real programmers, real specs, real costs — not synthetic bench.
+  artifact_bundle:
+    - parent_composer_id
+    - branch_manifest.yml per fork
+    - export-prompts tape
+    - spend CSV per branch
+    - rubric scores per branch
+    - experiment run configs
+    - post_run deep-snitch on each
+
+branch_manifest_shape:
+  example:
+    parent_composer: "abc123..."
+    fork_at_bubble: 17
+    fork_at_prompt: "Normalize guest characters to portrayal standards"
+    branch_a: { model: composer-fast, composer_id: "...", outcome: merged }
+    branch_b: { model: gpt-5-mini, composer_id: "...", outcome: sashay }
+    git_commit_at_fork: "e456ed5"
+    winner: branch_a
+    analysis: "experiment/runs/manual-transmission-001/"
+
+repo_layout:
+  proposed: "experiments/model-branches/<run-id>/ — manifests + exports + compare reports"
+  status: not_shipped
+
+ties_to:
+  - manual-transmission.yml
+  - ai-offs.yml
+  - brain-stream.yml
+  - repo-show-format.yml#breeding_and_nesting
+  - showmaker-network.yml#evolving_organism
+  - SimHacker/moollm/skills/cursor-mirror
+  - SimHacker/moollm/skills/rubric
+  - SimHacker/moollm/skills/experiment
+
+see_also:
+  - manual-transmission.yml#post_run_forensics
+  - ai-offs.yml#post_run_analysis

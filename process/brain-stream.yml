@@ -43,7 +43,7 @@ architecture:
     web_full: "/brain — scrollable, expandable, resummarized"
 
 event_schema:
-  types: [prompt, thinking, tool_call, tool_result, assistant_chunk, commit, shift, summary]
+  types: [prompt, thinking, tool_call, tool_result, assistant_chunk, commit, shift, summary, branch_fork, branch_compare]
   fields:
     composer_id: string
     model: string
@@ -71,6 +71,9 @@ privacy:
   after_run: |
     Post-stream: deep-snitch + cursor-mirror forensics on the session before replay,
     harvest, or orchestration gold export. See ai-offs.yml#post_run_analysis.
+  model_branching:
+    see: model-branching.yml
+    live: "Overlay shows fork events — Branch A vs Branch B on tachometer"
   stream_mode:
     delay_thinking_seconds: optional
     strip_private_paths: true
@@ -104,6 +107,7 @@ build_phases:
 ties_to:
   - manual-transmission.yml
   - ai-offs.yml
+  - model-branching.yml
   - micropolis-ai-drag-race.yml
   - ../apps/stream-gateway/GLANCE.yml
   - SimHacker/moollm/skills/cursor-mirror

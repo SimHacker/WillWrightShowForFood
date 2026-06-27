@@ -18,6 +18,7 @@ orchestration_lab:
     FUN competitive reason for real programmers to submit real multi-LLM routing traces.
     Gold data for training orchestrators — spec in, model shifts, tools, merge out.
   moollm: [rubric, experiment, evaluator, cursor-mirror]
+  model_branching: model-branching.yml
 
 spend_proof:
   cursor_spend_csv:
@@ -109,6 +110,7 @@ post_run_analysis:
     harvest:
       - "rubric SCORE forensics summary"
       - "experiment COMPARE vs bid and vs other contestants"
+      - "model-branching COMPARE across forked trajectories — see model-branching.yml"
       - "Optional: attach composer id + deep-snitch clean bill to PR"
   skill_snitch: SimHacker/moollm/skills/skill-snitch
   see: manual-transmission.yml#post_run_forensics
@@ -120,4 +122,5 @@ see_also:
   - showmaker-network.yml
   - manual-transmission.yml
   - brain-stream.yml
+  - model-branching.yml
   - ../skills/README.md

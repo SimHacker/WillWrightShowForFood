@@ -43,6 +43,7 @@ orchestration_gold:
     - post_run deep-snitch clean bill (before public export)
   ethics: "Opt-in, public repo, redact secrets — see brain-stream.yml#privacy"
   harvest: "Anonymized aggregates → MOOLLM experiment runs + future skills/ packages"
+  model_branching: model-branching.yml
 
 spend_csv_piss_test:
   metaphor: "Submitting your Cursor spend export is like taking a piss test — voluntary proof"
@@ -164,11 +165,17 @@ post_run_forensics:
     - "Attach forensics summary to PR / rig report / experiment run config"
   public_artifacts: "Redact before bus or repo — deep-snitch first, then publish"
 
+model_branching:
+  see: model-branching.yml
+  pitch: "Snapshot chat → fork model at any bubble → replay instructions → compare trajectories"
+  speed_run: "Stick-shift slalom with rewind — branch worlds branch models"
+
 ties_to:
   - micropolis-ai-drag-race.yml
   - ai-offs.yml
   - code-that-spec.yml
   - brain-stream.yml
+  - model-branching.yml
   - ../characters/slats/judge-rubric.yml
   - ../rigs/stick-shift-composer-moollm.rig.yml
   - SimHacker/moollm/skills/cursor-mirror

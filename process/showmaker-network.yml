@@ -135,6 +135,9 @@ competitions:
     see: brain-stream.yml
     tagline: "Spy on the brain — prompts, thinking, GH links on the broadcast bus"
     app: ../apps/stream-gateway/
+  model_branching:
+    see: model-branching.yml
+    tagline: "Snapshot chat, fork model at any bubble, compare trajectories — orchestration gold²"
   man_vs_machine: "Delightful adversarial play — not anti-AI, not anti-hand, not anti-budget; pro-declaration"
   breed_winners: "Merge technique DNA from winning branches — horizontal gene transfer via git"
 
