@@ -53,6 +53,14 @@ simcity_lineage:
       - EA donated source; Jim Gettys / Sugar integration
       - Pie menus on XO; constructionist education alignment
       - CellEngine CA bridge; Python scripting layer
+    chain_of_custody:
+      why_it_mattered: "Open-sourcing SimCity hinged on a clean contractual chain of custody — without it, EA's lawyers could not have said yes."
+      what_don_preserved:
+        - "Don's own contract with DUX (the Unix SimCity work)."
+        - "The original DUX ↔ Maxis contract — dug up just before Don left Maxis."
+      mike_perry: "Found with the help of Mike Perry, a long-time Maxis employee who knew where all the contracts (and bodies) were buried. Without that institutional memory the paperwork would have been lost and SimCity could not have been open-sourced."
+      the_clause: "The DUX/Maxis contract stated that ownership of everything Don did for DUX reverted to Maxis (now EA) after 10 years — and well more than 10 years had passed — firmly establishing that EA owned the rights to Don's changes to the source."
+      the_yes: "That let EA's lawyers, at Will Wright's ask, approve GPL-v3 relicensing — releasing it as free open source software for the OLPC Sugar 'Stone Soup' (Micropolis)."
 
   - name: MicropolisCore + web
     era: "2020s–"
