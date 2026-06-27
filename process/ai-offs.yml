@@ -29,7 +29,7 @@ spend_proof:
   see: manual-transmission.yml#spend_csv_piss_test
 
 rig_classes:
-  budget_bull_ride: "One tier, tight budget, wrangle through chaos"
+  budget_bull_ride: "One tier, tight budget, wrangle through chaos and hallucinations"
   stick_shift: "Multi-model — shift efficiently; cliff-road metaphor; spend log is the tachometer"
   code_that_spec: "Game-show bid — tokens or time; audience CODE THAT SPEC; rig as Let's Make a Deal costume"
 
