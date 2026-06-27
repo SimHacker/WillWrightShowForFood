@@ -14,6 +14,12 @@ gist: |
   seminar video archive — the open, recorded, one-guest-a-week public seminar that is the direct
   forebear of the Repo Show. Two recordings are the anchors, and both are WILL-adjacent gold.
 
+relationship: |
+  Don and Terry were colleagues at Interval Research; Terry invited Don to the CS547 seminar where
+  Will Wright gave the 1996 talk — the throughline that sent Don to Maxis. Terry's stewardship of the
+  CS547 archive (and his help recovering the talk during COVID) makes him a quiet forebear of the
+  whole quest. Deep gratitude.
+
 verified_talks:
   will_wright_1996:
     date: "1996-04-26"
