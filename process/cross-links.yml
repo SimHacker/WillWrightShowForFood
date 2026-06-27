@@ -170,6 +170,19 @@ trails:
       - { path: ../characters/will-wright/, why: "Flagship guest — the talk the repo orbits" }
       - { path: repo-show-format.yml, why: "The Repo Show — CS547's recorded-conversation descendant" }
 
+  augmentation_and_hypertext:
+    k_line: "Augment, don't replace — and connect everything"
+    human: trails/augmentation-and-hypertext.md
+    why: "Engelbart's augmentation + Nelson's hypertext + Weiser's calm tech — the forebears behind Player-in-the-Middle (memorial mode: represent + discuss)"
+    nodes:
+      - { path: ../characters/douglas-engelbart/, why: "🕯️ Augmenting human intellect — NLS, the mouse, the Mother of All Demos (memorial)" }
+      - { path: ../characters/ted-nelson/, why: "Coined hypertext; Xanadu; transclusion — living discussant for the memorials" }
+      - { path: ../characters/hugh-daniel/, why: "🕯️ Xanadu + NeWS — the Hugh + Ted + Don triangle (memorial)" }
+      - { path: ../characters/mark-weiser/, why: "🕯️ Ubiquitous + calm computing; CHI'88 pie-menu co-author with Don (memorial)" }
+      - { path: ../characters/don-hopkins/CARD.yml, why: "Pie menus + HyperTIES — augmentation in practice" }
+      - { path: crazy-idea-jam.yml#player_in_the_middle, why: "Augmentation-not-automation = the PITM tenet" }
+      - { path: ../schemas/portrayal-standards.yml#memorial_mode, why: "How we honor the deceased — represent + discuss, never interview" }
+
   game_design_lineage:
     k_line: "What is a game? Toys, possibility space, player types"
     human: trails/game-design-lineage.md
@@ -192,6 +205,8 @@ trails:
       - { path: ../characters/brad-myers/, why: "Garnet/Peridot/C32; programming by demonstration; VPL taxonomy (Don's lab ~1992)" }
       - { path: ../characters/bret-victor/, why: "Explorable explanations; Inventing on Principle; Dynamicland" }
       - { path: ../characters/terry-winograd/, why: "Stanford HCI; CS547 seminar host of the 1996 talk" }
+      - { path: ../characters/douglas-engelbart/, why: "🕯️ The mouse + NLS — direct manipulation's origin (memorial)" }
+      - { path: ../characters/mark-weiser/, why: "🕯️ Calm/ubiquitous computing; CHI'88 pie-menu co-author (memorial)" }
       - { path: ../characters/don-hopkins/CARD.yml, why: "Pie menus + PostScript UI — direct manipulation in practice" }
 
   live_objects:
@@ -209,6 +224,7 @@ trails:
       - { path: ../characters/craig-latta/, why: "Caffeine — SqueakJS + WASM livecoding the web today" }
       - { path: ../characters/vanessa-freudenberg/, why: "SqueakJS — Smalltalk VM in the browser (in memoriam)" }
       - { path: ../characters/bill-atkinson/, why: "HyperCard → HyperLook (van Hoff's NeWS reimagining) → SimCity (in memoriam)" }
+      - { path: ../characters/hugh-daniel/, why: "🕯️ Hacked NeWS with Don (Grasshopper Group) — Xanadu/NeWS lineage (memorial)" }
       - { path: ../characters/don-hopkins/career/simcity-lineage.yml, why: "SimCity on NeWS/HyperLook with pie menus — the lineage in action" }
 
   procedural_beauty:

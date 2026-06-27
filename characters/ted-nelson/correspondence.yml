@@ -1,0 +1,46 @@
+# Ted Nelson × Don Hopkins — correspondence summary (public-safe)
+# Tight public-safe digest of a real, decades-long exchange. NOT the full private thread.
+# Standards: ../../schemas/portrayal-standards.yml
+
+meta:
+  with: ted-nelson
+  curated_by: don-hopkins
+  consent: not_yet_asked
+  span: "1998–2026"
+  provenance_private: SimHacker/DonHopkins/characters/don-hopkins/correspondence/ted-nelson.yml
+
+gist: |
+  A long, warm correspondence of near-misses and real connection. Don first saw Ted at MIT's
+  545 Tech Square (a Xanadu demo, with Hugh Daniel in a winged Xanadu cap); Don's HyperTIES at
+  Maryland was deeply inspired by Computer Lib / Dream Machines. Over the years Don transcribed
+  Ted's talks (IEEE interview, NPUC 1996), fixed a Hacker News typo on Ted's "you know NOT where"
+  line, and — in 2026 — pitched the Repo Show. Ted, who ordinarily declines interviews, signaled
+  he "might be interested."
+
+themes:
+  intertwingularity:
+    - "Visible parallel connections (Xanalinks) vs jump-only weblinks (jumplinks)"
+    - "'You're jumping to you know not where — a diving board into the darkness'"
+    - "Repos as persistent, transcluded artifacts — documents over deceptive UI"
+  documents_and_media:
+    - "Transcribe video into durable text — the irony of a hypertext pioneer on video-only threads"
+    - "NPUC 1996 transcript needs reformatting (Ted Selker called it 'epic')"
+  memorial_glue:
+    - "Engelbart officiated Ted's wedding to Marlene — Ted can discuss Engelbart"
+    - "Hugh Daniel worked closely with Ted on Xanadu — the Hugh + Ted + Don triangle"
+
+sourced_quotes:
+  on_don: "Usually people I don't know get a polite brushoff from a (shhh!) fictitious assistant, but you are a major exception."
+  diving_board: "You're jumping to you know not where: it's a diving board into the darkness."
+
+connects_in_repo:
+  - { path: CHARACTER.yml, why: "Bio + invitation status (warm lead)" }
+  - { path: ../douglas-engelbart/, why: "Memorial — Ted is a discussant (Engelbart officiated his wedding)" }
+  - { path: ../hugh-daniel/, why: "Memorial — Xanadu collaborator" }
+  - { path: ../../process/trails/cs547-seminar-lineage.md, why: "Recorded-conversation / archive lineage" }
+  - { path: ../../process/trails/archive-and-provenance.md, why: "Transcribe + preserve as documents" }
+
+show_hooks:
+  - "Hypertext as Ted meant it — Xanadu, transclusion, visible connections"
+  - "Remember Engelbart and Hugh Daniel with the people who knew them"
+  - "Copy/paste-to-an-invisible-clipboard rant — a candidate segment"

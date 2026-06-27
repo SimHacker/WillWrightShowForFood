@@ -56,12 +56,14 @@ guests:
   chaim-gingold: { invitation_status: not_yet_asked, show_seed: repo-shows/chaim-gingold/ }
   craig-latta: { invitation_status: not_yet_asked, note: "Caffeine (SqueakJS+WASM livecoding), Amsterdam — NOT Craig Leres" }
   dan-ingalls: { invitation_status: not_yet_asked, note: "Smalltalk/BitBlt/pop-up menus/Squeak/Fabrik/Lively; introduced by Alan Kay" }
+  douglas-engelbart: { invitation_status: memorial, note: "deceased (1925–2013) — MEMORIAL MODE: represent + discuss; NLS/mouse/hypertext/Mother of All Demos; discussants: Ted Nelson, Alan Kay, Yoot Saito" }
   david-rosenthal: { invitation_status: not_yet_asked }
   david-ungar: { invitation_status: not_yet_asked, show_seed: repo-shows/david-ungar-self-moollm.yml, note: "Self × MOOLLM; Kaleida consciencious objectors meetup" }
   edd-coates: { invitation_status: not_yet_asked, show_seed: repo-shows/edd-coates/ }
   eric-hedman: { invitation_status: not_yet_asked, show_seed: repo-shows/eric-hedman/ }
   golan-levin: { invitation_status: not_yet_asked }
   heather-alvey: { invitation_status: not_yet_asked, show_seed: repo-shows/heather-steve-alvey/, note: "SimFreaks + Steve Alvey SimSlice" }
+  hugh-daniel: { invitation_status: memorial, note: "deceased (~2013) — MEMORIAL MODE: Xanadu/NeWS/FreeS-WAN; discussants: Ted Nelson, Don" }
   james-gosling: { invitation_status: not_yet_asked }
   jens-monig: { invitation_status: not_yet_asked, show_seed: repo-shows/jens-monig/ }
   jason-shankel: { invitation_status: not_yet_asked, show_seed: repo-shows/jason-shankel/ }
@@ -75,12 +77,14 @@ guests:
     note: "PDP-10/ITS — challenge make it so for pdp10-maclisp-drive; pair with Thomas Cherryhomes"
   margaret-minsky: { invitation_status: not_yet_asked, show_seed: repo-shows/margaret-minsky/ }
   marvin-minsky: { invitation_status: not_yet_asked, note: "deceased — reverence; legacy only" }
+  mark-weiser: { invitation_status: memorial, note: "deceased (1952–1999) — MEMORIAL MODE: ubicomp/calm tech; CHI'88 pie-menu co-author with Don; discussants: Don, Ben Shneiderman" }
   matthew-sibigtroth: { invitation_status: not_yet_asked, show_seed: repo-shows/matthew-sibigtroth/ }
   paul-debevec: { invitation_status: not_yet_asked }
   richard-bartle: { invitation_status: not_yet_asked, show_seed: repo-shows/richard-bartle/ }
   seymour-papert: { invitation_status: not_yet_asked, note: "deceased — constructionist K-line" }
   steve-wozniak: { invitation_status: not_yet_asked, show_seed: repo-shows/steve-wozniak/ }
   stone-librande: { invitation_status: not_yet_asked }
+  ted-nelson: { invitation_status: draft, show_seed: repo-shows/ted-nelson/, note: "Hypertext/Xanadu; warm interview lead (2021); discussant for Engelbart + Hugh Daniel memorials" }
   terry-winograd: { invitation_status: not_yet_asked, show_seed: repo-shows/terry-winograd/ }
   thomas-cherryhomes: { invitation_status: not_yet_asked, show_seed: repo-shows/thomas-cherryhomes/ }
   vanessa-freudenberg: { invitation_status: legacy_only, note: "deceased (2025) — SqueakJS/Croquet/Multisynq; SqueakJS → Caffeine lineage" }

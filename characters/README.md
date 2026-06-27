@@ -24,6 +24,8 @@ Each `characters/<slug>/` folder fills in as we prepare the show and hear back:
 
 **Contributions:** guests may edit their own directory (PR or commit, per consent). We are also glad to assist — email Don Hopkins with text, attachments, or URLs; we place public-safe material with attribution. No GitHub account required.
 
+**Memorial mode** 🕯️ — deceased forebears get full directories too, but we *represent and discuss* them; we never interview or speak as them. Each carries a `memorial:` block (who can discuss them, what shows can draw on) and a `memorial.md` tribute. See [memorial mode](../schemas/portrayal-standards.yml#memorial_mode). Examples: [douglas-engelbart/](douglas-engelbart/), [mark-weiser/](mark-weiser/), [hugh-daniel/](hugh-daniel/).
+
 Template: [`_TEMPLATE/`](_TEMPLATE/) · Schema: [`../schemas/guest-skills-card.yml`](../schemas/guest-skills-card.yml)
 
 ## Organic pointers (not a roster page)

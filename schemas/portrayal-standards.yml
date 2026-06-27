@@ -49,6 +49,25 @@ consent_levels:
   3_public_figure: "Public work + tradition/K-line; no impersonation"
   5_deceased_legacy: "Reverence; legacy and artifacts only; no invented inner life"
 
+memorial_mode:
+  what: "A full character directory for a deceased person, kept in memorial mode."
+  represent_discuss_not_interview: |
+    We REPRESENT and DISCUSS them — their documented work, ideas, and stories. We do NOT
+    interview them, do NOT speak AS them, and invent no inner life, dialogue, or quotes.
+  invite_those_who_knew_them: |
+    Episodes invite LIVING people who knew or worked with them to discuss and remember
+    (see each CHARACTER.yml memorial.who_can_discuss).
+  rich_for_shows: |
+    Memorial CHARACTER.yml carries plenty for shows to draw on (work, stories, connections,
+    artifacts) — but no episode is an interview OF them; the show is a remembrance ABOUT them.
+  doc: "characters/<id>/memorial.md (a tribute, not an invitation)"
+  fields:
+    status: deceased
+    invitation_status: memorial      # invitation-workflow.yml
+    consent_level: 5_deceased_legacy
+    block: "memorial: { mode, rule, who_can_discuss[], draw_on_for_shows[] }"
+  signifier_hint: "🕯️"
+
 invitation_documents:
   path: "characters/<id>/invitation.md"
   public: true

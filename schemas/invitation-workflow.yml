@@ -21,6 +21,7 @@ status:
     aired: "Show happened"
     n_a: "Not applicable (host, fictional, legacy-only)"
     legacy_only: "Deceased / historical K-line — no invitation sent"
+    memorial: "Deceased — memorial mode: represent + discuss, NEVER interview; invite living people who knew them to remember"
 
 fields:
   status: { type: enum, required: true, default: draft }

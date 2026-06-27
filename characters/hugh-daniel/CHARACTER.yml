@@ -1,0 +1,52 @@
+# Hugh Daniel — memorial portrayal (in memoriam). NOT Hugh Daniel.
+# Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.yml#memorial_mode
+
+character:
+  id: hugh-daniel
+  name: "Hugh Daniel"
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  field: "Xanadu, NeWS, FreeS/WAN — hacker, social connector, Don's dear friend"
+  home: characters/hugh-daniel/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 5
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  consent: not_yet_asked
+  document: memorial.md
+  note: "deceased (~2013) — represent + discuss; invite people who knew him"
+
+memorial:
+  mode: represent_and_discuss
+  rule: "Represent and discuss his documented work and the stories friends tell. Do not interview, do not speak as him, invent no inner life or quotes."
+  who_can_discuss:
+    - { who: ted-nelson, why: "Hugh worked closely with Ted on Xanadu" }
+    - { who: don-hopkins, why: "Hacked NeWS together (Grasshopper Group); dear friend" }
+    - { who: john-gilmore, why: "Grasshopper Group; brought Hugh's ashes to Amsterdam (not a repo character — a name in the story)" }
+  draw_on_for_shows:
+    - "Project **Xanadu** with Ted Nelson — first seen at MIT 545 Tech Square in a winged Xanadu cap"
+    - "**NeWS** hacking with Don (Grasshopper Group, with John Gilmore)"
+    - "Project manager of **FreeS/WAN** (John Gilmore's Linux IPsec project)"
+    - "A natural social hub — last birthday: a fluorescent rice-crispy cake with glowing LEDs"
+    - "Ashes scattered in the Amsterdam Jordaan (Brouwersgracht × Lijnbaansgracht); more planned for space"
+    - "The Hugh + Ted + Don triangle — Xanadu / hypertext / NeWS lineage"
+
+bio:
+  summary: "**Hugh Daniel** (d. ~2013) — hacker, evangelist, and irreplaceable social connector. He worked closely with **Ted Nelson on Project Xanadu**, hacked **NeWS** with Don Hopkins in the Grasshopper Group (with John Gilmore), and managed John Gilmore's **FreeS/WAN** Linux IPsec project. First spotted at MIT's 545 Tech Square in a winged Xanadu cap; remembered with a glowing LED rice-crispy cake and ashes scattered along an Amsterdam canal."
+
+sources:
+  wikipedia: null
+  web: []
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
+  - { path: ../ted-nelson/, why: "Xanadu collaborator who can discuss him on air" }
+  - { path: ../../process/trails/live-objects.md, why: "NeWS lineage" }
+  - { path: ../../schemas/portrayal-standards.yml#memorial_mode, why: "How memorial guests are handled" }

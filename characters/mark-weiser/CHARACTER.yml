@@ -1,0 +1,52 @@
+# Mark Weiser — memorial portrayal (in memoriam). NOT Mark Weiser.
+# Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.yml#memorial_mode
+
+character:
+  id: mark-weiser
+  name: "Mark Weiser"
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  field: "Ubiquitous computing, calm technology — Xerox PARC CTO; co-author of Don's CHI'88 pie-menu paper"
+  home: characters/mark-weiser/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 5
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  consent: not_yet_asked
+  document: memorial.md
+  note: "deceased (1952–1999) — represent + discuss; invite people who knew him"
+
+memorial:
+  mode: represent_and_discuss
+  rule: "Represent and discuss his documented work and stories. Do not interview, do not speak as him, invent no inner life or quotes."
+  who_can_discuss:
+    - { who: don-hopkins, why: "Co-author with Weiser on the CHI'88 pie-menu paper (Callahan, Hopkins, Weiser, Shneiderman)" }
+    - { who: ben-shneiderman, why: "Co-author on the same CHI'88 pie-menu paper" }
+    - { who: brad-myers, why: "HCI peer — UI tools and techniques era" }
+  draw_on_for_shows:
+    - "Coined **ubiquitous computing** (ubicomp); 'The Computer for the 21st Century' (Scientific American, 1991)"
+    - "**Calm technology** — tech that informs without demanding attention; tabs / pads / boards"
+    - "Xerox PARC CTO; garbage-collection and systems research"
+    - "Co-author of the **CHI'88 pie-menu empirical study** with Don, Jack Callahan, Ben Shneiderman"
+    - "Drummer for **Severe Tire Damage** — the first band to perform live on the Internet (1993)"
+
+bio:
+  summary: "**Mark Weiser** (1952–1999) — father of **ubiquitous computing** and **calm technology**, and CTO of Xerox PARC. His 1991 'The Computer for the 21st Century' imagined computing woven invisibly into everyday life (tabs, pads, boards). He co-authored the **CHI'88 empirical comparison of pie vs linear menus** with Jack Callahan, Don Hopkins, and Ben Shneiderman — and drummed for **Severe Tire Damage**, the first band to play live on the Internet."
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Mark_Weiser"
+  web:
+    - https://en.wikipedia.org/wiki/Calm_technology
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
+  - { path: ../don-hopkins/career/work-history.yml, why: "CHI'88 pie menus — Callahan, Hopkins, Weiser, Shneiderman" }
+  - { path: ../ben-shneiderman/, why: "Co-author who can discuss him on air" }
+  - { path: ../../schemas/portrayal-standards.yml#memorial_mode, why: "How memorial guests are handled" }

@@ -237,6 +237,7 @@ trails_pitch:
     - { id: maxis_sims_lineage, human: trails/maxis-sims-lineage.md, pitch: "SimCity → Dollhouse → The Sims → Spore — the genealogy + 167 source images" }
     - { id: the_card_game, human: trails/the-card-game.md, pitch: "Stack guest CARDs as MTG verbs — combos across guests; Slats judges" }
     - { id: cs547_seminar_lineage, human: trails/cs547-seminar-lineage.md, pitch: "Winograd's Stanford CS547 → Will's 1996 talk → Gosling's 1995 talk → the Repo Show" }
+    - { id: augmentation_and_hypertext, human: trails/augmentation-and-hypertext.md, pitch: "Engelbart's augmentation + Nelson's hypertext + Weiser's calm tech → Player-in-the-Middle (memorial mode)" }
 
 trails_pitch_wacky:
   note: "Get weird — put after the serious stuff. Reactor: crazy-idea-jam.yml / CRAZY-IDEA-JAM.md"

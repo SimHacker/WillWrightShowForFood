@@ -1,0 +1,40 @@
+# Ted Nelson — invitation portrayal. NOT Ted Nelson.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: ted-nelson
+  name: "Ted Nelson"
+  type: invitation
+  signifier: "🔗"
+  status: living
+  field: "Hypertext & hypermedia (coined the terms), Project Xanadu, Computer Lib / Dream Machines, transclusion, intertwingularity"
+  home: characters/ted-nelson/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/ted-nelson/
+  note: "Warm lead (2021): ordinarily declines interviews, but might be interested. Hero + north star for the guest list."
+
+bio:
+  summary: "**Ted Nelson** (b. 1937) — coined **hypertext** and **hypermedia**, founded **Project Xanadu**, and wrote **Computer Lib / Dream Machines** (1974). Champion of **transclusion**, visible parallel connections (Xanalinks vs jump-only weblinks), and **intertwingularity** — 'everything is deeply intertwingled.' A direct inspiration for Don's HyperTIES work at Maryland and a north star for the Repo Show."
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Ted_Nelson"
+  web:
+    - https://en.wikipedia.org/wiki/Project_Xanadu
+    - http://xanadu.com/demo
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: correspondence.yml, why: "Public-safe thread digest — Xanadu, hypertext, Repo Show outreach" }
+  - { path: ../douglas-engelbart/, why: "Engelbart officiated Ted's wedding; Ted can discuss him" }
+  - { path: ../hugh-daniel/, why: "Hugh worked with Ted on Xanadu" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

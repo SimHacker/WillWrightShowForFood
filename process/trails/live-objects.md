@@ -22,6 +22,7 @@ Smalltalk → Self → NeWS → Java. The live-object lineage behind HyperLook a
 | [**Craig Latta**](../../characters/craig-latta/) | Caffeine — SqueakJS + WASM livecoding the web today |
 | [**Vanessa Freudenberg**](../../characters/vanessa-freudenberg/) 🕯️ | SqueakJS — Smalltalk VM in the browser (in memoriam) |
 | [**Bill Atkinson**](../../characters/bill-atkinson/) 🕯️ | HyperCard → HyperLook → SimCity (in memoriam) |
+| [**Hugh Daniel**](../../characters/hugh-daniel/) 🕯️ | Hacked NeWS with Don (Grasshopper Group) — Xanadu/NeWS (memorial) |
 | [**SimCity lineage**](../../characters/don-hopkins/career/simcity-lineage.yml) | SimCity on NeWS/HyperLook with pie menus — the lineage in action |
 
 ---
