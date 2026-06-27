@@ -37,14 +37,18 @@ data portability) and follow wherever you want to go.
   read the old code together, revive him, call-in sidekick, reprogram, iterate. Stupid Fun Club
   energy — not a required topic. Details: [`slats-reincarnation.yml`](../../repo-shows/will-wright/slats-reincarnation.yml).
 
-### Materials
+### Browse — any order
 
-| What | Where |
-|------|--------|
-| Show bundle | [`repo-shows/will-wright/`](../../repo-shows/will-wright/) |
-| 1996 talk (centerpiece) | [`sources/1996-04-26-winograd-interfacing-to-microworlds/`](../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/) |
-| Slats RoboResurrection quest | [`slats-reincarnation.yml`](../../repo-shows/will-wright/slats-reincarnation.yml) |
-| Browse (no account needed) | [github.com/SimHacker/WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |
+**Landing page:** [BROWSE.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright/BROWSE.md)
+
+| What | Link |
+|------|------|
+| 🤖 **Slats RoboResurrection** | [slats-reincarnation.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright/slats-reincarnation.yml) · [characters/slats](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/slats) |
+| Show hub | [repo-shows/will-wright/README.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright/README.md) |
+| 1996 talk (centerpiece) | [source bundle](https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds) · [YouTube](https://www.youtube.com/watch?v=nsxoZXaYJSk) |
+| Root README | [github.com/SimHacker/WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood#readme) |
+
+### Materials (repo paths)
 
 ### Your call
 

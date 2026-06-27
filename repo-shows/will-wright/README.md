@@ -6,6 +6,8 @@ flow out of this one.*
 
 > *"So you have a Repo to Show us?"*
 
+**Browse in any order → [`BROWSE.md`](BROWSE.md)** *(Slats first if you feel like it)* 🤖⛪
+
 ![The User Interface Flower Child — Don's Sims credits icon](assets/DonHopkinsSimsCreditsIcon.jpg)
 
 *(The hosting spirit: the "User Interface Flower Child" — Don's actual Sims
@@ -60,7 +62,9 @@ Consent per representation-ethics: this is an invitation, not an assumption.
 
 ## Files
 
+- **`BROWSE.md`** — Will's landing page: click anything in any order (Slats up top).
 - `SHOW.yml` — the show instance (inherits from the SHOW skill).
 - `invitation.md` — the markdown invitation email (draft).
+- `slats-reincarnation.yml` — **RoboResurrection** quest (optional show segment).
 - `episodes.yml` — the kickoff + the topical episodes that flow from it.
 - `assets/` — the Flower-Child icon.

@@ -20,7 +20,8 @@ curb appeal up top, **brutalist GitHub underneath** (yaml girders, verify CI, re
 | **ShowMaker network** | [`process/showmaker-network.yml`](process/showmaker-network.yml) |
 | **Repo Show format** | [`process/repo-show-format.yml`](process/repo-show-format.yml) |
 | **Setup (dev)** | [**SETUP.md**](SETUP.md) |
-| **The show pitch** | [`repo-shows/will-wright/README.md`](repo-shows/will-wright/README.md) |
+| **The show pitch** | [`repo-shows/will-wright/README.md`](repo-shows/will-wright/README.md) · [**Will: browse any order**](repo-shows/will-wright/BROWSE.md) |
+| **🤖 Slats / RoboResurrection** | [`slats-reincarnation.yml`](repo-shows/will-wright/slats-reincarnation.yml) · [`characters/slats/`](characters/slats/) |
 | **1996 Winograd talk** (centerpiece) | [`repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/`](repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/) |
 | **Draft invitation to Will** | [`repo-shows/will-wright/invitation.md`](repo-shows/will-wright/invitation.md) |
 | **Guest roster** | [`characters/INDEX.yml`](characters/INDEX.yml) · [`characters/README.md`](characters/README.md) |

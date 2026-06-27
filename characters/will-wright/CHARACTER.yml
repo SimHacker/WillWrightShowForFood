@@ -20,6 +20,7 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
+  browse_landing: repo-shows/will-wright/BROWSE.md
   show_seed: repo-shows/will-wright/
   segments:
     - slats-reincarnation

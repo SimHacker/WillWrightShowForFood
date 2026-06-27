@@ -53,7 +53,18 @@ finally running.
   how to revive him, have him **call into the chat**, interview him, reprogram
   him, interview him again. **RoboResurrection** — Stupid Fun Club energy,
   constructionism as theater. Totally optional, but I think you'd get a kick out
-  of it. Seed doc: `repo-shows/will-wright/slats-reincarnation.yml`.
+  of it.
+
+**Browse the repo — any order, shallow or deep.** No GitHub account needed; every
+link opens in a browser. Start wherever grabs you:
+
+| If you're curious about… | Link |
+|--------------------------|------|
+| **🤖 Slats / RoboResurrection** | https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright/slats-reincarnation.yml |
+| **This show** (you're the topic) | https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright/BROWSE.md |
+| **Your 1996 talk** (+ transcript) | https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds |
+| **Watch the video** | https://www.youtube.com/watch?v=nsxoZXaYJSk |
+| **The whole repo** | https://github.com/SimHacker/WillWrightShowForFood#readme |
 
 **The bigger picture (the stuff that whizzed by on the call).** None of this has
 to make it into the first show — it's just the mission the show is part of:
@@ -87,11 +98,13 @@ All of it is **open to discussion** — the framing, what we record, what's publ
 Nothing happens without your say-so, and anything beyond the conversation itself
 we'd sort out separately.
 
-No rush, no pressure. If it sounds fun, poke around what I've been cooking:
+No rush, no pressure. If it sounds fun, poke around — start anywhere:
 
-**https://github.com/SimHacker/WillWrightShowForFood**
+**https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright/BROWSE.md**
 
-You can read it in a browser without a GitHub account — start at the README. We'll find a time.
+Or the repo root: **https://github.com/SimHacker/WillWrightShowForFood**
+
+You can read everything in a browser without a GitHub account. We'll find a time.
 
 It would mean the world to do the first one with you.
 
