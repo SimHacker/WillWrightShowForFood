@@ -1,0 +1,41 @@
+# SHOW — Craig Latta (livecode the web, in Amsterdam)
+# In-person, on-camera; remember Vanessa Freudenberg together.
+
+show:
+  id: craig-latta
+  title: "A Repo Show with Craig Latta — Livecoding the Web, Remembering Vanessa"
+  type: solo
+  host: Don Hopkins
+  guests: ["Craig Latta"]
+  character: characters/craig-latta/
+  topic: "Caffeine (SqueakJS + dynamically generated WebAssembly) livecoding the web; meeting the MicropolisCore WASM/SvelteKit stack; remembering Vanessa Freudenberg and her WebAssembly insights"
+  status: seed
+  format: in_person_amsterdam_on_camera
+
+why_him:
+  caffeine: "Caffeine — live, persistent changes to a running web page via SqueakJS + WASM; the JS bridge; Catalyst's LLM-assisted Smalltalk→WASM translation."
+  amsterdam_now: "Craig divides time between Amsterdam and Berkeley — an in-person, on-camera session while both are in town (heat-wave timing)."
+  live_object_lineage: "Sits on the live_objects trail with Dan Ingalls and Vanessa Freudenberg."
+
+remember_vanessa:
+  why: "Great friends; her SqueakJS is the foundation Caffeine builds on."
+  memorial_mode: "Represent + discuss — never speak as her. See characters/vanessa-freudenberg/ (memorial)."
+  wasm_thread: "Her sharp, insightful take on WebAssembly after SqueakJS — the exact thread Craig carried into Caffeine/Catalyst."
+
+threads:
+  livecode_on_air: "Bring a laptop — make live persistent changes to a running page on stream"
+  wasm_translation: "How (and when) to translate a VM and individual methods to WASM"
+  micropolis_meet: "Smalltalk-grade liveness applied to MicropolisCore + MOOLLM AI tutors"
+
+format:
+  live: true
+  audience_qa: true
+  homeplay: "Clone Caffeine; livecode a page; share the recipe"
+
+ties_to:
+  - ../../characters/craig-latta/invitation.md
+  - ../../characters/vanessa-freudenberg/
+  - ../../characters/dan-ingalls/
+  - ../../process/trails/live-objects.md
+
+consent: not_yet_asked

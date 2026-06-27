@@ -54,7 +54,7 @@ guests:
   brad-myers: { invitation_status: not_yet_asked }
   bill-atkinson: { invitation_status: memorial, note: "deceased (1951–2025) — MEMORIAL MODE: HyperCard/MacPaint/QuickDraw; HyperCard → HyperLook lineage; discussants: Arthur van Hoff, Don" }
   chaim-gingold: { invitation_status: not_yet_asked, show_seed: repo-shows/chaim-gingold/ }
-  craig-latta: { invitation_status: not_yet_asked, note: "Caffeine (SqueakJS+WASM livecoding), Amsterdam" }
+  craig-latta: { invitation_status: not_yet_asked, show_seed: repo-shows/craig-latta/, note: "Caffeine (SqueakJS+WASM livecoding), Amsterdam — in-person on-camera; remember Vanessa" }
   dan-ingalls: { invitation_status: not_yet_asked, note: "Smalltalk/BitBlt/pop-up menus/Squeak/Fabrik/Lively; introduced by Alan Kay" }
   douglas-engelbart: { invitation_status: memorial, note: "deceased (1925–2013) — MEMORIAL MODE: represent + discuss; NLS/mouse/hypertext/Mother of All Demos; discussants: Ted Nelson, Alan Kay, Yoot Saito" }
   david-rosenthal: { invitation_status: not_yet_asked }

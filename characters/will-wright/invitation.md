@@ -48,8 +48,6 @@ data portability) and follow wherever you want to go.
 | 1996 talk (centerpiece) | [source bundle](https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds) · [YouTube](https://www.youtube.com/watch?v=nsxoZXaYJSk) |
 | Root README | [github.com/SimHacker/WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood#readme) |
 
-### Materials (repo paths)
-
 ### Your call
 
 Anything about format, recording, or publicity is **open to discussion**. Nothing proceeds
