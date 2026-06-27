@@ -5,6 +5,8 @@ meta:
   note: "Priority order for finishing invitations — not pressure on guests"
 
 next:
+  - id: craig-latta
+    why: "TIME-SENSITIVE — in Amsterdam now; Caffeine (SqueakJS+WASM) live-web Smalltalk; reach out while in town"
   - id: will-wright
     why: "Flagship kickoff — invitation.md draft ready for review → finished → sent"
   - id: lars-brinkhoff
