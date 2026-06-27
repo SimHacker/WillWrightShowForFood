@@ -12,7 +12,7 @@ Schema: [`../schemas/rig-schema.yml`](../schemas/rig-schema.yml)
 | [`artisanal-vscode.rig.yml`](artisanal-vscode.rig.yml) | Hand-only VS Code |
 | [`stick-shift-composer-moollm.rig.yml`](stick-shift-composer-moollm.rig.yml) | Host seed — stick shift + Composer + MOOLLM |
 
-**Submit yours:** PR `rigs/<slug>.rig.yml` + line in [`INDEX.yml`](INDEX.yml). Link from rig-feedback or Code That Spec bid.
+**Submit yours:** PR `rigs/<slug>.rig.yml` + line in [`INDEX.yml`](INDEX.yml). Compete on [**Micropolis AI Drag Race**](../process/micropolis-ai-drag-race.yml).
 
 **Mash up:** `extends:` parent rig + `lifecycle.mash_up.graft` — breed technique DNA honestly.
 

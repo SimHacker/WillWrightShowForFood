@@ -27,6 +27,7 @@ curb appeal up top, **brutalist GitHub underneath** (yaml girders, verify CI, re
 | **Live repo policy** | [`process/live-repo.yml`](process/live-repo.yml) |
 | **AI-offs** (spend proof + thoughtful commits) | [`process/ai-offs.yml`](process/ai-offs.yml) |
 | **Rig schema** | [`schemas/rig-schema.yml`](schemas/rig-schema.yml) · [`rigs/`](rigs/) |
+| **Micropolis AI Drag Race** | [`process/micropolis-ai-drag-race.yml`](process/micropolis-ai-drag-race.yml) |
 | **Code That Spec** (game show) | [`process/code-that-spec.yml`](process/code-that-spec.yml) |
 | **Don Hopkins** (host bio) | [`characters/don-hopkins/README.md`](characters/don-hopkins/README.md) |
 | **All show seeds** | [`repo-shows/INDEX.yml`](repo-shows/INDEX.yml) |

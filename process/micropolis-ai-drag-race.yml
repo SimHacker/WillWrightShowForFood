@@ -1,0 +1,86 @@
+# MICROPOLIS AI DRAG RACE — flagship game-show variety format
+# Micropolis Class × AI-offs × rig costumes × Repo Show harvest
+
+meta:
+  id: micropolis-ai-drag-race
+  status: seed
+  type: [game_show, variety, ai_off, micropolis_class]
+  brand: "Micropolis AI Drag Race"
+  tagline: "Start your engines — may the best rig werk, commit, and merge."
+  homage: [RuPauls_Drag_Race, Drag_Queen_Olympics, Code_That_Spec]
+
+pitch: |
+  A Micropolis Class variety show: contestants bring RIG PERSONAS (Let's Make a Deal
+  costumes + rigs/*.rig.yml), compete in challenges, prove with Cursor spend logs,
+  lip-sync their thoughtful commits, and merge technique DNA back into the organism.
+  Declare class — don't exclude. It's just a game. Werk.
+
+host:
+  options: [Don_Philahue, Flower_Child_Don, guest_MC]
+  lines:
+    - "Gentlemen, start your engines — and may the best rig win!"
+    - "The library is open — RTFR!"
+    - "Shantay, you stay — PR merged. Sashay away — branch closed."
+
+challenges:
+  design_challenge:
+    what: "Given a spec CARD — city tile, skill, bridge, show seed — werk a look + implementation"
+    deliver: "Branch + README runway + yaml backbone"
+  code_that_spec_mini:
+    see: code-that-spec.yml
+    audience_chant: "CODE THAT SPEC!!!!!"
+  stiletto_sprint:
+    what: "Shortest honest token/time bid that still ships — heels optional, constraint mandatory"
+  stick_shift_slalom:
+    what: "Model-switch course — spend log proves clean shifts through the cliff road"
+  bull_ride_ball:
+    what: "Wrangle one cheap model through hallucination chaos — show the retries, werk anyway"
+  artisanal_eleganza:
+    what: "Zero tokens — hand-crafted yaml so fierce it doesn't need AI"
+  lip_sync_for_your_commits:
+    what: "thoughtful-commitment commits — narrate WHY on stream; cursor-mirror playback"
+  harvest_runway:
+    what: "Final — merge PR, abstract to skills/ + packages/, present the organism graft"
+
+judging:
+  criteria:
+    - "Taste — eleganza, clarity, humor, constructionist generosity"
+    - "Cost to ship — tokens, spend, wall-clock vs bid"
+    - "Commitment — did you werk the spec and merge back?"
+    - "Replication — can someone mash_up your rigs/*.rig.yml?"
+  scoreboard: showmaker-network.yml#competitions
+  proof: ai-offs.yml
+
+contestant_packet:
+  required:
+    - "rigs/<persona>.rig.yml — full lifecycle + costume"
+    - "Declare rig_classes honestly"
+    - "PR branch — the runway"
+  optional:
+    - "Screencast werk"
+    - "Cursor spend export + cursor-mirror composer id"
+    - "Code That Spec bid line"
+
+personas:
+  rule: "Your rig IS your drag persona — camp + honesty"
+  examples:
+    artisanal_queen: "NO AI sash, pencil crown, yaml nails"
+    bull_rider: "Retry-log chaps, hallucination hair"
+    stick_shift: "Sequin shift map, tachometer earrings"
+    orchestrated: "MCP tiara, MOOLLM cape, Composer scepter"
+
+episode_structure:
+  seed: "Single challenge episode OR season arc in repo-shows/"
+  merge: "Winners graft skills/packages; losers sashay with honor if they documented the ride"
+
+ties_to:
+  - code-that-spec.yml
+  - ai-offs.yml
+  - showmaker-network.yml
+  - ../schemas/rig-schema.yml
+  - ../rigs/README.md
+  - SimHacker/MicropolisCore
+
+see_also:
+  - ../repo-shows/micropolis-ai-drag-race.yml
+  - ../repo-shows/game-show-wigcercize.yml

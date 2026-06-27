@@ -82,6 +82,10 @@ rig_culture:
     rig_costumes: "Let's Make a Deal — your rig visualized as costume; camp + honest class declaration"
     stiletto_sprint: "Drag Queen Olympics Stiletto Sprint — sprint the spec in maximum flair under constraint"
     see: code-that-spec.yml
+  micropolis_ai_drag_race:
+    brand: "Micropolis AI Drag Race — flagship variety game show"
+    werk: "Rig personas, challenges, spend-log judges, merge or sashay"
+    see: micropolis-ai-drag-race.yml
   history:
     consciencious_objectors:
       coinage: "Don Hopkins coined consciencious objectors at a meetup with David Ungar and Kaleida colleagues (ScriptX object-system era)"

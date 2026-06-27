@@ -117,6 +117,11 @@ competitions:
       Audience: "CODE THAT SPEC!!!!!" Bid tokens or time; prove with spend log + PR.
     rig_costumes: "Let's Make a Deal — visualize your rig as a costume; declare class"
     stiletto_sprint: "Drag Queen Olympics energy — maximum flair under constraint; sprint the spec"
+  micropolis_ai_drag_race:
+    see: micropolis-ai-drag-race.yml
+    brand: "Micropolis AI Drag Race — flagship variety format"
+    tagline: "Start your engines — rig personas werk specs; spend log judges; merge or sashay"
+    challenges: [design_challenge, code_that_spec_mini, stiletto_sprint, lip_sync_for_your_commits, harvest_runway]
   man_vs_machine: "Delightful adversarial play — not anti-AI, not anti-hand, not anti-budget; pro-declaration"
   breed_winners: "Merge technique DNA from winning branches — horizontal gene transfer via git"
 
@@ -140,6 +145,7 @@ ties_to:
   - repo-show-format.yml
   - ai-offs.yml
   - code-that-spec.yml
+  - micropolis-ai-drag-race.yml
   - rig-feedback.yml
   - ../repo-shows/INDEX.yml
   - ../repo-shows/REPO-SHOWS.yml

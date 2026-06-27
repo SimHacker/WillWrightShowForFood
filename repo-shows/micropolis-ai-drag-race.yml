@@ -1,0 +1,38 @@
+# SEED — Micropolis AI Drag Race (variety game show)
+# TYPE: game_show | Micropolis Class ai-offs
+
+show:
+  id: micropolis-ai-drag-race
+  status: seed
+  type: game_show
+  brand: "Micropolis AI Drag Race"
+  format: ../process/micropolis-ai-drag-race.yml
+
+pitch: |
+  Flagship variety format: rig personas compete in design challenges, Code That Spec
+  minis, Stiletto Sprints, and lip-sync-for-your-commits finales. Cursor spend log
+  is the judge's spreadsheet. Winners merge to skills/ + packages/; werk.
+
+challenges_rotation:
+  - design_challenge
+  - code_that_spec_mini
+  - stiletto_sprint
+  - stick_shift_slalom
+  - bull_ride_ball
+  - artisanal_eleganza
+  - lip_sync_for_your_commits
+  - harvest_runway
+
+contestants:
+  how: "Anyone with a rigs/*.rig.yml persona + declared class"
+  no_gatekeeping: "Artisanal to orchestrated — declare and werk"
+
+host: don-philahue
+
+ties_to:
+  - ../process/code-that-spec.yml
+  - ../process/ai-offs.yml
+  - ../rigs/stick-shift-composer-moollm.rig.yml
+  - game-show-wigcercize.yml
+
+invitation_status: n_a

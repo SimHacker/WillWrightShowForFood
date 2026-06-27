@@ -18,7 +18,9 @@ rig_classes:
 
 game_shows:
   code_that_spec: code-that-spec.yml
+  micropolis_ai_drag_race: micropolis-ai-drag-race.yml
   chant: "CODE THAT SPEC!!!!!"
+  drag_race: "Start your engines — may the best rig werk, commit, and merge"
   stiletto_sprint: "Drag Queen Olympics Stiletto Sprint — flair + constraint + ship"
 
 cursor_mirror:
