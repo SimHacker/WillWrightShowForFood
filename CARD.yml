@@ -49,5 +49,6 @@ k_lines:
 
 see_also:
   - kernel/moollm-plugin.yml
+  - process/homefun-grading.yml
   - process/sync-with-donhopkins.yml
   - ../DonHopkins/projects/micropolis-moollm/process/wwsff-export-sync.yml

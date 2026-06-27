@@ -90,8 +90,9 @@ audience_homefun:
   the_line: "'No homework — but as much homefun as you like.'"
   ties:
     - "/skills/repo-show CARD homeplay.homefun"
-    - ../../process/character-endosymbiosis.yml   # e.g. bridge a character as your homefun
-    - ../../process/executable-corpus-strategy.yml # learner_pipeline / Micropolis Class
+    - ../../process/homefun-grading.yml
+    - ../../process/character-endosymbiosis.yml
+    - ../../process/executable-corpus-strategy.yml
 
 simultaneous_launch:
   # Don's strategic call (2026-06-26): release PLAYABLE Micropolis at the same moment as this show.

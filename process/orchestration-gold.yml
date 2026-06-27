@@ -70,12 +70,13 @@ since_last_commit:
       - rubric SCORE on slice vs spec CARD
       - spec_compliance_diff
   audit_questions:
+    flagship: homefun-grading.yml#flagship_question
     examples:
+      - "Does the commit message match the thinking blocks? — Micropolis Class homefun grading"
       - "Why did you add that image — where did it come from?"
       - "Which model wrote this yaml vs this prose?"
       - "What file selections drove this tool call?"
       - "Was this retry necessary or riding the clutch?"
-      - "Does the commit message match what thinking blocks show?"
   output:
     - enriched_commit_message
     - optional orchestration-gold appendix in PR or experiment run
@@ -98,6 +99,7 @@ ties_to:
   - model-branching.yml
   - ai-offs.yml
   - brain-stream.yml
+  - homefun-grading.yml
   - SimHacker/moollm/skills/thoughtful-commitment
   - SimHacker/moollm/skills/cursor-mirror
   - SimHacker/moollm/skills/rubric
