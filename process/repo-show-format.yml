@@ -47,13 +47,20 @@ rig_spectrum:
     conscientious: "Show-your-work ethics; care and attribution"
     vibe: "AI-forward flow-state — declare class; compete on taste and power"
     orchestrated: "Full agent stack — tell us how (see ai_rig_feedback)"
+    budget_bull_rider: "Tight token budget; wrangles smaller/faster models through hallucinations and retries to a better solution — declare tier; show the ride"
+  token_budget:
+    declare: "Model tier + monthly token budget — compare fair only within class"
+    bull_ride: "Skill like staying on a bull — thrash through bad outputs, recover, ship anyway; have fun"
+    split_strategy: "Premium model for planning/architecture; budget model (e.g. Composer 2.5 Fast) for knocking out designs — declare both"
+    recognition: "Budget-tier wranglers who beat premium-tier slop on taste get celebrated — document how"
   ai_rig_feedback:
     invitation: |
       If you do use AI — we are super interested. Not to sell you anything: to learn and document
       real setups so the network can breed better technique. Please tell us.
     tell_us:
       - "Tools and IDEs (Cursor, Claude Code, Copilot, custom, …)"
-      - "Models — which, when, why (declare your tier)"
+      - "Models — which, when, why (declare your tier AND token budget)"
+      - "Budget bull ride — retries, hallucination recovery, how you wrangled cheap/fast models"
       - "How you use it — prompts, agents, rules, hooks, workflows"
       - "MCP servers — which, wired how"
       - "Skills — Anthropic Agent Skills, MOOLLM skills, your own CARD/SKILL.md"
@@ -76,9 +83,10 @@ rig_spectrum:
     - name: orchestrated
       tools: [Cursor, MOOLLM, moollm skills, multi-model routing]
   competitions:
-    - "Taste — who ships the most elegant solution? (within declared class)"
+    - "Taste — who ships the most elegant solution? (within declared class + model tier)"
     - "Power — who implements the wildest idea in the time box?"
-    - "Man vs machine — artisanal vs vibe vs orchestrated (declare your class; don't exclude — it's a game)"
+    - "Budget bull ride — tight tokens, small model, better output; show hallucinations and retries"
+    - "Man vs machine — artisanal vs vibe vs orchestrated vs budget-tier (declare; don't exclude — it's a game)"
     - "Dance-off — show your workflow live; audience votes with thumbs and PRs"
   declare_not_exclude: |
     Don't ban people from the game — declare category and compete fair. Sports figured this

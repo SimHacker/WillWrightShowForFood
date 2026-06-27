@@ -22,7 +22,8 @@ ai_rig:
     we want to learn, document, and breed real technique into skills/ and the network.
   please_include:
     tools: "IDE, agent, CLI — Cursor, Claude Code, Copilot, custom, …"
-    models: "Which models, when, why — declare your tier"
+    models: "Which models, when, why — declare tier AND token budget"
+    budget_bull_ride: "How you wrangled cheap/fast models — hallucinations, retries, recoveries, wins"
     usage: "How you actually use it — prompts, rules, hooks, multi-step workflows"
     mcp_servers: "Which MCP servers, how wired"
     skills: "Anthropic Agent Skills, MOOLLM skills, your CARD/SKILL.md"

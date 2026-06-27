@@ -67,6 +67,11 @@ rig_culture:
   vibe_coders:
     definition: "AI-forward, flow-state, prompt-and-ship — declare it; compete on taste and power"
     note: "Welcome if honest — man-vs-machine and dance-off optional"
+  budget_bull_riders:
+    definition: "Tight token budget; wrangle smaller/faster models to better solutions"
+    metaphor: "Like staying on a bull — thrash through hallucinations and retries; have fun; show the ride"
+    recognition: "Real skill — compare within budget tier; can beat premium-tier slop on taste"
+    split_rig: "Premium planning + budget execution (e.g. Composer 2.5 Fast) is a valid declared strategy"
   history:
     consciencious_objectors:
       coinage: "Don Hopkins coined consciencious objectors at a meetup with David Ungar and Kaleida colleagues (ScriptX object-system era)"

@@ -44,7 +44,23 @@ your_show:
       Don's view: the trans-in-sports fight is mostly a no-brainer misfire — declare category,
       don't ban people from the game. We apply that here: every rig class welcome if declared.
     honesty: "Misdeclare your class and the audience votes with thumbs — that's the ref"
-  no_gatekeeping: "All rig classes welcome — declare honestly. Extra respect for artisanal hand programming."
+    token_budget_tiers:
+      principle: |
+        Declare your model tier and token budget — tight-budget wranglers get real recognition.
+        Wrangling a smaller model to a better solution is skill — like staying on a bull ride:
+        thrashing through hallucinations and retries and having a good time of it.
+      compare_within_class: "Premium-tier vs budget-tier vs artisanal — fair comparison only inside declared class"
+      budget_skill: |
+        People on tighter token budgets who steer cheap/fast models to elegant output demonstrate
+        craft every bit as much as hand programmers. Document the ride — retries, recoveries, wins.
+      split_rig_strategy: |
+        Valid pattern: spend on high-level planning (expensive model), execute designs on budget
+        model (e.g. Cursor Composer 2.5 Fast) — knock implementation out of the park, tokens left
+        for the month. Declare both tiers in your rig report.
+      host_note_2026-06: |
+        Don building this repo on Composer 2.5 Fast right now — eating it up, knocking designs
+        out of the park, shitloads of tokens left after prior spend on high-level planning.
+  no_gatekeeping: "All rig classes welcome — declare honestly (rig + model tier + token budget). Extra respect for artisanal hand programming AND budget-tier bull riders."
   share_your_rig: "AI users: tell us tools, models, MCP, skills, repos, moollm wiring, contexts — issue/PR rig-feedback (see repo-show-format.yml)"
 
 publication:
@@ -61,8 +77,11 @@ publication:
 
 competitions:
   declare_not_exclude: "Don't ban rigs — declare class, compete fair, have fun. It's just a game."
-  taste_and_power: "Compare implementations within declared class — artisanal vs vibe vs orchestrated"
-  man_vs_machine: "Delightful adversarial play — not anti-AI, not anti-hand; pro-declaration"
+  taste_and_power: "Compare implementations within declared class — artisanal vs vibe vs orchestrated vs budget-tier"
+  budget_bull_ride: |
+    Tight token budget + small/fast model wrangled to a better solution = bull-ride skill.
+    Hallucinations, retries, recoveries — show the ride; audience respects the wrangling.
+  man_vs_machine: "Delightful adversarial play — not anti-AI, not anti-hand, not anti-budget; pro-declaration"
   breed_winners: "Merge technique DNA from winning branches — horizontal gene transfer via git"
 
 nesting:
