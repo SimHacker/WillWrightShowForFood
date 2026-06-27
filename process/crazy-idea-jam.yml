@@ -100,8 +100,14 @@ ideas:
       diphones around, bend the pitch and amplitude tracks, stretch durations, and even load an
       audio file to "rotoscope" (phonescope) a natural pitch curve onto synthetic speech. Hold
       the spacebar and it SINGS — accidental granular-synthesis musical instrument. Python +
-      Tkinter + SWIG + Flite + Edinburgh Speech Tools. The expressive-speech ancestor of the
-      Slats robot voice — and exactly the toy-first, play-to-discover spirit Will loves.
+      Tkinter + SWIG + Flite + Edinburgh Speech Tools — a standalone expressive-speech toy,
+      exactly the toy-first, play-to-discover spirit Will loves.
+    not_the_slats_voice: |
+      Phoneloper is its own thing — NOT the Slats voice lineage. Slats spoke via IBM ViaVoice
+      first, then Microsoft SAPI and several voices including Cepstral. Synthesizer genealogy:
+      Festival (the big Scheme/Lisp-scripted synthesizer, CSTR Edinburgh) → Flite (CMU's small
+      embedded C version) → Cepstral (the commercial embedded-voice product in that lineage).
+      Phoneloper happens to ride on Flite for its diphones, but it's an editor, not Slats' voice.
     video: "https://www.youtube.com/watch?v=qy5cqV8ypIs"
     status: "Source releasable — Don will add it to this monorepo soon"
     ties: [../characters/don-hopkins/career/stupid-fun-club.yml, ../repo-shows/will-wright/slats-reincarnation.yml]

@@ -15,8 +15,10 @@ stupid_fun_club:
         - Slats — waiter personality, validation-seeking speech
         - Dents — broken robot, empathy probe
       speech:
-        - Phoneloper expressive speech editor (Python+Tkinter+Flite; XML "Phonelopes" — drag diphones, bend pitch, rotoscope a real voice, hold space to sing). Demo https://www.youtube.com/watch?v=qy5cqV8ypIs — source releasable, coming to this monorepo soon. See ../../../process/crazy-idea-jam.yml#phoneloper
-        - XML dialog scripting; Festival/Flite/ViaVoice stack
+        - Phoneloper expressive speech editor (Python+Tkinter+Flite; XML "Phonelopes" — drag diphones, bend pitch, rotoscope a real voice, hold space to sing). A standalone editing toy, NOT the Slats voice. Demo https://www.youtube.com/watch?v=qy5cqV8ypIs — source releasable, coming to this monorepo soon. See ../../../process/crazy-idea-jam.yml#phoneloper
+        - "Slats voice stack: IBM ViaVoice first, then Microsoft SAPI, with several voices including Cepstral"
+        - "Synthesizer genealogy: Festival (big Scheme/Lisp-scripted synth, CSTR Edinburgh) → Flite (CMU small embedded C version) → Cepstral (commercial embedded-voice product in that lineage)"
+        - XML dialog scripting
       storytelling:
         - "CreationTV iPhone prototype → StoryMaker — collaborative branching storytelling for CurrentTV's Bar Karma (first online community-developed network TV series). Demo https://www.youtube.com/watch?v=Nb_-J1lv-B8 · https://en.wikipedia.org/wiki/Bar_Karma"
         - Bar Karma Storymaker backend
