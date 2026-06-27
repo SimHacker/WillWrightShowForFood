@@ -36,8 +36,14 @@ pyramid:
     concrete underneath — CARD.yml, SHOW.yml, MANIFEST, pnpm, Python venv checks.
   expands_downward:
     - "More show objects + edges (ShowMaker network)"
-    - "More characters, techniques, apps, packages"
-    - "Harvest from live conversation → skills + code → breed back via git"
+    - "More MOOLLM skills — the big harvest (cauldron SCOOP → skills/ pyramid: GLANCE → CARD → SKILL → README)"
+    - "More characters, techniques, apps, packages — all feeding the skill library"
+    - "Live conversation → melt in cauldron → lift skills + code → breed back via git PRs"
+  skills_are_the_payoff: |
+    Shows are the stage; skills are the durable artifact. Every Repo Show is meant to
+    leave behind inheritable technique — MOOLLM skills you can compose with moollm,
+    fork, nest, and breed. Not slide decks: protocols, CARDs, SKILL.md bodies that
+    agents and humans can actually run. The pyramid grows downward mostly as skills.
   not_vapor: |
     Brutalist GitHub surface: rebar (schemas), i-beams (process/*.yml), poured slab
     (monorepo verify). Browse without an account. Clone and break it. PR or issue.
@@ -79,11 +85,24 @@ what_we_are_not_promising:
   - "A finished product — this is origin point, not launch day"
 
 what_we_are_building_in_public:
+  - "MOOLLM skills library (skills/) — harvested, credited, composable; the main long-term stack"
+  - "Cauldron SCOOP pipeline — live jam → lift skills out of the melt (see repo-show-format.yml)"
   - "Repo Show format (process/repo-show-format.yml)"
   - "ShowMaker graph (process/showmaker-network.yml)"
   - "Micropolis Class — credited ideas from people who were there"
   - "Polyglot monorepo — MOOLLM microworld + pnpm packages + verify CI"
-  - "Automation to scaffold show CARDs and link PRs (roadmap, not shipped)"
+  - "Automation to scaffold show CARDs, skill CARDs, and link PRs (roadmap, not shipped)"
+
+skills:
+  what: "Inheritable MOOLLM skills — protocols + CARD + SKILL.md — not one-off chat logs"
+  where: ../skills/
+  pyramid: "GLANCE.yml → CARD.yml → SKILL.md → README.md (same as SimHacker/moollm)"
+  harvest: "Cauldron SCOOP after each show — play → lift → learn; skills are the LIFT"
+  compose: "Compose with github.com/SimHacker/moollm — do not fork core; breed show-born skills here"
+  ambition: |
+    Over time this repo becomes a thick skill forest: repo-show, pray-to-play, soul-bridge,
+    hosted-content-cards, representation-ethics, … each traced to a guest, a show, a PR.
+    Skills are how the 1996 microworlds talk becomes *runnable* thirty years later.
 
 curb_appeal_meets_brutalism:
   facade: "README.md, show READMEs, VISION.md — human-readable, warm, Flower Child energy"
@@ -104,5 +123,7 @@ see_also:
   - VISION.md
   - repo-show-format.yml
   - showmaker-network.yml
+  - ../skills/README.md
+  - https://github.com/SimHacker/moollm/tree/main/skills
   - ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md
   - ../README.md

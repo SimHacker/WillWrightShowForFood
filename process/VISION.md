@@ -18,8 +18,10 @@ repo), follow along on **whatever rig they bring** (AI optional), and watch a
 guest introduced as a **Repo Man** — first invited guest: **Will Wright**, in a
 topic-less kickoff orbiting his **1996 Stanford talk** on microworlds. Ideas
 from the conversation get **documented, built, and bred back** into a **graph
-of shows** (the ShowMaker network) via pull requests. It is **Micropolis Class**:
-real people, credited ideas, constructionist payoff.
+of shows** (the ShowMaker network) and — critically — into **MOOLLM skills**
+(`skills/`: inheritable protocols harvested from each show via cauldron SCOOP).
+Pull requests carry technique DNA. It is **Micropolis Class**: real people,
+credited ideas, constructionist payoff.
 
 ---
 
@@ -40,6 +42,21 @@ small on purpose, inspectable today.
 - A finished product — this is **origin**, not launch day  
 
 **We are documenting** a direction and building the **concrete** underneath it.
+
+---
+
+## Skills — the big harvest
+
+Shows are the stage. **Skills are the durable artifact.**
+
+Each Repo Show is meant to leave behind **MOOLLM skills** — not slide decks,
+but runnable protocols (`GLANCE.yml` → `CARD.yml` → `SKILL.md`) you compose
+with [SimHacker/moollm](https://github.com/SimHacker/moollm). Live conversation
+melts in the **cauldron**; **SCOOP** lifts finished technique into [`skills/`](../skills/).
+Fork them, nest them, breed them back via PR.
+
+Over time this repo becomes a **skill forest** traced to guests, shows, and
+git history — how a 1996 microworlds talk becomes *runnable* decades later.
 
 ---
 
@@ -102,6 +119,7 @@ automation to scaffold CARDs and link PRs. Details:
 | Yaml girder | [`vision-and-ambition.yml`](vision-and-ambition.yml) |
 | How a show runs | [`repo-show-format.yml`](repo-show-format.yml) |
 | Show graph | [`showmaker-network.yml`](showmaker-network.yml) |
+| Skills harvest | [`../skills/README.md`](../skills/README.md) |
 | 1996 anchor | [`../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/`](../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/) |
 | Repo front door | [`../README.md`](../README.md) |
 

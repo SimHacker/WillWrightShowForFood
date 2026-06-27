@@ -39,6 +39,10 @@ talk** (and earlier): a living repo you enter, fork, and breed — not just a vi
 simulation. This public tree is the **apex seed** — small, inspectable, growing downward.
 No production promises; see [**process/VISION.md**](process/VISION.md).
 
+**Skills are the big harvest** — each show melts ideas in the cauldron and lifts
+MOOLLM skills into [`skills/`](skills/) (composable with [moollm](https://github.com/SimHacker/moollm)).
+Shows are the stage; inheritable technique is the stack that grows downward.
+
 **Will Wright — first guest, topic-less.** Orbit the 1996 Dollhouse talk; crown jewel = **data portability**
 (Proxi ↔ Sims ↔ …).
 
