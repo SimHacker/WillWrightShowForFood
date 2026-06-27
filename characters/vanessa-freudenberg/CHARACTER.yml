@@ -4,7 +4,7 @@
 character:
   id: vanessa-freudenberg
   name: "Vanessa Freudenberg"
-  type: invitation
+  type: memorial
   signifier: "🕯️"
   status: deceased
   field: "Smalltalk in the browser — SqueakJS, Croquet/Multisynq, Etoys, Plopp"
@@ -16,14 +16,25 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: legacy_only
+  status: memorial
   consent: not_yet_asked
-  document: invitation.md
-  show_seed: repo-shows/vanessa-freudenberg/
-  note: "deceased (2025) — reverence; legacy only"
+  document: memorial.md
+  note: "deceased (2025) — represent + discuss; invite people who knew her"
+
+memorial:
+  mode: represent_and_discuss
+  rule: "Represent and discuss her documented work and the stories friends tell. Do not interview, do not speak as her, invent no inner life or quotes."
+  who_can_discuss:
+    - { who: craig-latta, why: "Great friend and Smalltalk collaborator; Caffeine builds directly on her SqueakJS" }
+    - { who: dan-ingalls, why: "Squeak lineage; Lively / SqueakJS collaboration" }
+  draw_on_for_shows:
+    - "**SqueakJS** — a JavaScript implementation of the Squeak Smalltalk VM; live Smalltalk in the browser"
+    - "Squeak/Etoys; the playful **Plopp/Plop** projects; **Croquet / Multisynq** synchronized objects"
+    - "Her **insightful take on WebAssembly** after building SqueakJS — what WASM does and doesn't buy a live Smalltalk VM, where JS vs WASM each win, and how to translate a VM (and individual methods) to WASM. A topic Craig Latta (Caffeine/Catalyst) deeply resonates with; see the HN discussion 'Dynamic translation of Smalltalk to WebAssembly'."
+    - "Universally respected in the Squeak/Pharo communities; remembered for generosity and joy"
 
 bio:
-  summary: "**Vanessa Freudenberg** (d. 2025) — creator of **SqueakJS**, a JavaScript implementation of the Squeak Smalltalk virtual machine that brought Smalltalk live into the web browser. Longtime contributor to **Squeak/Etoys**, the playful **Plopp/Plop** projects, and the **Croquet / Multisynq** synchronized object work. A universally respected programmer in the Squeak and Pharo communities, widely loved for her generosity and joy."
+  summary: "**Vanessa Freudenberg** (d. 2025) — creator of **SqueakJS**, a JavaScript implementation of the Squeak Smalltalk virtual machine that brought Smalltalk live into the web browser. Longtime contributor to **Squeak/Etoys**, the playful **Plopp/Plop** projects, and the **Croquet / Multisynq** synchronized object work. After SqueakJS she had sharp, insightful things to say about **WebAssembly** — the live-VM-in-the-browser question Craig Latta's Caffeine took further. A universally respected programmer in the Squeak and Pharo communities, widely loved for her generosity and joy."
 
 sources:
   wikipedia: null
@@ -34,6 +45,7 @@ sources:
   blogs: []
 
 see_also:
-  - { path: ../craig-latta/, why: "Caffeine builds on SqueakJS — her VM, carried forward" }
+  - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
+  - { path: ../craig-latta/, why: "Caffeine builds on SqueakJS — her VM + her WASM thinking, carried forward" }
   - { path: ../dan-ingalls/, why: "Squeak lineage; Lively/SqueakJS collaboration" }
-  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Legacy directory — tribute, sourced quotes only" }
+  - { path: ../../schemas/portrayal-standards.yml#memorial_mode, why: "How memorial guests are handled" }

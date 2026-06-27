@@ -4,7 +4,7 @@
 character:
   id: bill-atkinson
   name: "Bill Atkinson"
-  type: invitation
+  type: memorial
   signifier: "🕯️"
   status: deceased
   field: "Apple GUI pioneer — QuickDraw, MacPaint, HyperCard, Atkinson dithering, marching ants"
@@ -16,11 +16,22 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: legacy_only
+  status: memorial
   consent: not_yet_asked
-  document: invitation.md
-  show_seed: repo-shows/bill-atkinson/
-  note: "deceased (1951–2025) — reverence; legacy only"
+  document: memorial.md
+  note: "deceased (1951–2025) — represent + discuss; invite people who knew his work"
+
+memorial:
+  mode: represent_and_discuss
+  rule: "Represent and discuss his documented work and stories. Do not interview, do not speak as him, invent no inner life or quotes."
+  who_can_discuss:
+    - { who: arthur-van-hoff, why: "Built HyperLook — a NeWS/PostScript reimagining of Atkinson's HyperCard" }
+    - { who: don-hopkins, why: "HyperLook → SimCity lineage; HyperCard's influence on his work" }
+  draw_on_for_shows:
+    - "**HyperCard** — the hypermedia stack-of-cards that put programming in non-programmers' hands and prefigured the web"
+    - "**QuickDraw**, **MacPaint** (FatBits, selection lasso, marching ants), the menu bar, **Atkinson dithering**"
+    - "HyperCard → **HyperLook** (van Hoff's NeWS reimagining) → SimCity ran inside it"
+    - "Apple #51; EFF Pioneer Award (1994); later a renowned nature photographer"
 
 bio:
   summary: "**Bill Atkinson** (1951–2025) — Apple employee #51 and architect of the Mac's graphical soul: **QuickDraw**, **MacPaint** (FatBits, the selection lasso, marching ants), the menu bar, **Atkinson dithering**, and **HyperCard** — the hypermedia stack-of-cards that put programming in non-programmers' hands and prefigured the web. EFF Pioneer Award (1994); later a renowned nature photographer."
@@ -33,5 +44,6 @@ sources:
   blogs: []
 
 see_also:
+  - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
   - { path: ../arthur-van-hoff/, why: "HyperLook = a NeWS reimagining of HyperCard — Atkinson's idea, carried forward" }
-  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Legacy directory — tribute, sourced quotes only" }
+  - { path: ../../schemas/portrayal-standards.yml#memorial_mode, why: "How memorial guests are handled" }

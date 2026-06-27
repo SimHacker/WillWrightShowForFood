@@ -4,8 +4,8 @@
 
 **Field:** Smalltalk in the browser — SqueakJS, Croquet/Multisynq, Etoys, Plopp
 
-[Tribute](invitation.md)
+[Tribute](memorial.md)
 
-**SqueakJS** put a live Smalltalk virtual machine into the web browser — the foundation Craig Latta's **Caffeine** builds on, and a cornerstone of the live-web lineage in this repo. A legacy K-line, honored with deep gratitude — sourced material only.
+**Memorial mode:** we represent and *discuss* her — never interview or speak as her. **SqueakJS** put a live Smalltalk VM in the browser — the foundation Craig Latta's **Caffeine** builds on. After it she had sharp, insightful things to say about **WebAssembly** that Craig deeply resonates with — so the right way to remember her is *with Craig*, livecoding the web. Discussants: [Craig Latta](../craig-latta/), [Dan Ingalls](../dan-ingalls/).
 
 Verifiable sources in `CHARACTER.yml`.
