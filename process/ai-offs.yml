@@ -29,6 +29,9 @@ spend_proof:
   see: manual-transmission.yml#spend_csv_piss_test
 
 rig_classes:
+  # "We can't stop here — this is bat country!" Bull-ride the cheap model through the swooping
+  # hallucinations ("the sky was full of what looked like huge bats") and ship anyway. No point
+  # mentioning the bats — the poor model will see them soon enough. — Fear and Loathing in Las Vegas
   budget_bull_ride: "One tier, tight budget, wrangle through chaos and hallucinations"
   stick_shift: "Multi-model — shift efficiently; cliff-road metaphor; spend log is the tachometer"
   code_that_spec: "Game-show bid — tokens or time; audience CODE THAT SPEC; rig as Let's Make a Deal costume"
