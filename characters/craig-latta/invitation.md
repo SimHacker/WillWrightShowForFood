@@ -48,4 +48,8 @@ No prep, no homework — just homeplay. **Your response:** yes, later, too busy,
 honored gracefully. But if you're free while this heat lasts, let's go find some shade and a
 power outlet.
 
-— Don Hopkins, Micropolis Class
+— Don Hopkins *(the User Interface Flower Child)* 🌸🌀
+
+`☕🥤 stay caffeinated` · `💬 small talk, big objects` · `🌐💻 livecode the web` · `🎚️🫧⚡📘🔵`
+
+*P.S. — Caffeine's on me — the molecule **and** the VM. ☕🥤🦋✨*
