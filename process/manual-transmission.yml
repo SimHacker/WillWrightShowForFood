@@ -1,10 +1,9 @@
 # MANUAL TRANSMISSION — Smallest Model That Works
-# Drag Race challenge + ai-off lane. THE QUESTION IS THE CONTEST.
-# Scooped: 2026-06-27 jam — twice, delightfully, from creative misunderstanding
+# Drag Race challenge + ai-off lane.
 
 meta:
   id: manual-transmission
-  also_called: [smallest_model_that_ships, sms_lane]
+  also_called: [smallest_model_that_works, sms_lane]
   status: seed
   type: [ai_off, drag_race_challenge, game_show, orchestration_lab]
   tagline: "What's the smallest model — or fewest tokens — you can code the spec with?"
@@ -13,7 +12,7 @@ meta:
 contest_prompt: |
   What's the smallest model — or fewest tokens — you can code the spec with?
 
-  Not meta-advice. Not a blog title. The on-air challenge. Same spec CARD for everyone.
+  Same spec CARD for everyone.
   Compete on as many dimensions as you dare — measurable and subjective — at the same time.
   Like a Rubik's cube: many faces, one solve, twist any axis you want to optimize.
 
@@ -22,11 +21,6 @@ pitch: |
   orchestrate LLMs. Submit your Cursor spend CSV like a piss test: voluntary, verified,
   the ref that doesn't lie. We are facilitating circumstances that collect invaluable data
   for training models to orchestrate multiple LLMs. This shit is GOLD.
-
-origin:
-  scooped_from: "Repo Show jam — question misread as meta twice; persisted on purpose"
-  cauldron: "play → lift → persist in process/ — see repo-show-format.yml#cauldron_scoop"
-  note: "Don may mumble on purpose. Misunderstanding is a feature."
 
 orchestration_gold:
   canonical: orchestration-gold.yml

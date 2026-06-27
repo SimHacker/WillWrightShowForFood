@@ -129,7 +129,6 @@ competitions:
     see: manual-transmission.yml
     contest_prompt: "What's the smallest model — or fewest tokens — you can code the spec with?"
     tagline: "Rubik's-cube scoring — many rubrics at once; spend CSV = piss test"
-    origin: "Scooped twice from creative misunderstanding — Don may mumble on purpose"
     overlay: brain-stream.yml
     moollm: [rubric, experiment]
     credits: Mike Gallaher

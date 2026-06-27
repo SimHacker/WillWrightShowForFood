@@ -26,15 +26,9 @@ for training models to orchestrate multiple LLMs. This shit is GOLD.
 
 **Contest Prompt:** What's the smallest model — or fewest tokens — you can code the spec with?
 
-Not meta-advice. Not a blog title. The on-air challenge. Same spec CARD for everyone.
+Same spec CARD for everyone.
 Compete on as many dimensions as you dare — measurable and subjective — at the same time.
 Like a Rubik's cube: many faces, one solve, twist any axis you want to optimize.
-
-## Origin
-
-- **scooped_from:** Repo Show jam — question misread as meta twice; persisted on purpose
-- **cauldron:** play → lift → persist in process/ — see repo-show-format.yml#cauldron_scoop
-- **note:** Don may mumble on purpose. Misunderstanding is a feature.
 
 ## Orchestration Gold
 
