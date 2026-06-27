@@ -5,12 +5,18 @@ Browse without a GitHub account. Clone to play along.
 
 > *"So you have a Repo to Show us?"*
 
+**Stumbled here?** Long-term ambition since Will's **1996 Stanford talk** (and before) —
+this repo is the **first public point of origin** (tip of the pyramid). Not a launch promise:
+curb appeal up top, **brutalist GitHub underneath** (yaml girders, verify CI, real monorepo).
+→ [**Vision** (readable)](process/VISION.md) · [yaml girder](process/vision-and-ambition.yml)
+
 [![The User Interface Flower Child](repo-shows/will-wright/assets/DonHopkinsSimsCreditsIcon.jpg)](repo-shows/will-wright/README.md)
 
 ## The cream (start here)
 
 | What | Where |
 |------|--------|
+| **Vision** (platforms, archives, viral readers) | [**process/VISION.md**](process/VISION.md) |
 | **ShowMaker network** | [`process/showmaker-network.yml`](process/showmaker-network.yml) |
 | **Repo Show format** | [`process/repo-show-format.yml`](process/repo-show-format.yml) |
 | **Setup (dev)** | [**SETUP.md**](SETUP.md) |
@@ -27,6 +33,11 @@ Browse without a GitHub account. Clone to play along.
 A **Repo Show**: live conversation whose stage is *this repo*, following through to working
 code and shared technique. **Micropolis Class** — real people, credited ideas in public.
 **Show, don't tell.** You do **not** need AI — bring your own rig.
+
+**Long-term ambition** Don and Will have discussed since the **1996 Winograd microworlds
+talk** (and earlier): a living repo you enter, fork, and breed — not just a video about
+simulation. This public tree is the **apex seed** — small, inspectable, growing downward.
+No production promises; see [**process/VISION.md**](process/VISION.md).
 
 **Will Wright — first guest, topic-less.** Orbit the 1996 Dollhouse talk; crown jewel = **data portability**
 (Proxi ↔ Sims ↔ …).
@@ -72,6 +83,9 @@ participants won't; that's fine.
 ## Wanna chat?
 
 **[Open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues)** or submit a PR.
+
+Platforms, archives, publishers, production shops: read [**VISION.md**](process/VISION.md) first —
+inspect the yaml, run verify, then talk. No NDAs to understand the shape.
 
 ## Status
 

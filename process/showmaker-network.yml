@@ -36,6 +36,8 @@ your_show:
   no_gatekeeping: "Declare your rig class. Man-against-the-machine welcome. Dance-off optional."
 
 publication:
+  vision: vision-and-ambition.yml
+  facade: VISION.md
   layers:
     - "GitHub renders README — browse without account"
     - "YouTube pitch cards — thumbs + donations as visible votes (show-proposal-network)"

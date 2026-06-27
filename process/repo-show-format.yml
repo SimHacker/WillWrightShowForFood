@@ -106,6 +106,8 @@ play_lift_learn:
   learn: "Fork, breed, nest — constructionist payoff across the network"
 
 see_also:
+  - vision-and-ambition.yml
+  - VISION.md
   - showmaker-network.yml
   - ../repo-shows/will-wright/README.md
   - ../skills/README.md

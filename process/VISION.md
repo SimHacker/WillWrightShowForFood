@@ -1,0 +1,111 @@
+# Vision — tip of the pyramid
+
+**If you stumbled here** — from Hacker News, a link, a search, or someone’s
+forward — this page is the short version of what you’re looking at and why it
+exists.
+
+**If you represent a platform, archive, publisher, or production shop** —
+Netflix-shaped, Brewster-shaped, Woz-shaped, or otherwise — same page applies.
+Read the repo. Run `pnpm run verify`. No meeting required to understand the shape.
+
+---
+
+## What this is (one paragraph)
+
+**Will Wright Show For Food** is a **public GitHub-native show format** called a
+**Repo Show**: the stage is the repository itself. People **RTFR** (read the
+repo), follow along on **whatever rig they bring** (AI optional), and watch a
+guest introduced as a **Repo Man** — first invited guest: **Will Wright**, in a
+topic-less kickoff orbiting his **1996 Stanford talk** on microworlds. Ideas
+from the conversation get **documented, built, and bred back** into a **graph
+of shows** (the ShowMaker network) via pull requests. It is **Micropolis Class**:
+real people, credited ideas, constructionist payoff.
+
+---
+
+## Long-term ambition — not a promise
+
+Don Hopkins and Will Wright have been circling this shape **since that 1996
+presentation — and before**. Microworlds, simulation as thoughtware, design in
+public: decades of practice. The Winograd seminar talk is the anchor artifact
+([1996 source bundle](../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/));
+**this repo is the first public point of origin** — the **tip of the pyramid**,
+small on purpose, inspectable today.
+
+**We are not promising:**
+
+- A greenlit series, stream, or distribution deal  
+- Confirmed guest participation (Will’s invitation is drafted; consent not yet asked)  
+- Viral scale, revenue, or a ship date  
+- A finished product — this is **origin**, not launch day  
+
+**We are documenting** a direction and building the **concrete** underneath it.
+
+---
+
+## Curb appeal, brutalist GitHub
+
+The README is the storefront. Under it:
+
+| Layer | What it is |
+|-------|------------|
+| **Facade** | Markdown — warm, readable, browse without a GitHub account |
+| **Girder** | YAML — `SHOW.yml`, `CARD.yml`, indexes, schemas, process definitions |
+| **Slab** | Monorepo — pnpm, Python venv, `pnpm run verify`, CI on PRs |
+
+We are not fooling around. If something is not built yet, the yaml says **seed**
+or **roadmap**. If it is built, you can clone it and break it.
+
+---
+
+## Why different people might care
+
+**General audience / viral thread** — A show you can *enter*. Fork it. Run your
+own parallel show on your branch. Man-vs-machine taste contests welcome.
+Dance-off optional. No AI required.
+
+**Archives & libraries** (Internet Archive ethos, university libraries, permanent
+record keepers) — Attributed, forkable lineage from **1996 forward**. Talk
+transcripts, show objects, technique DNA in git — meant to outlive any one
+platform. Mirror and cite; the graph is the publication.
+
+**Builders & hardware hackers** (Woz energy) — Schematics in the repo. Declare
+your rig class: bare hands to full orchestration. Show your workflow; breed
+winners back via merge.
+
+**Publishers & editorial** — Not a flat playlist: a **graph** of show objects
+and typed links. Each node is a directory with `CARD.yml` + README + optional
+pitch. Anthologize branches; credit by git history.
+
+**Platforms & production** (streaming, YouTube, Twitch, podcasts) — We are **not**
+pitching a deal. We are planting a **format** you can inspect: announce a
+pointer → audience RTFR on their rigs → live guest → harvest to code and skills
+→ network grows by PR. Production can wrap the same object graph if the shape
+fits.
+
+---
+
+## The ShowMaker network
+
+Shows are **nodes**. Relationships are **edges**. You run a show on **your
+branch**; you **PR to link** your show object into our index. Over time:
+automation to scaffold CARDs and link PRs. Details:
+[`showmaker-network.yml`](showmaker-network.yml).
+
+---
+
+## Start here
+
+| Depth | File |
+|-------|------|
+| This page | `process/VISION.md` |
+| Yaml girder | [`vision-and-ambition.yml`](vision-and-ambition.yml) |
+| How a show runs | [`repo-show-format.yml`](repo-show-format.yml) |
+| Show graph | [`showmaker-network.yml`](showmaker-network.yml) |
+| 1996 anchor | [`../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/`](../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/) |
+| Repo front door | [`../README.md`](../README.md) |
+
+**Talk to us:** [open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues) —
+inspect first, fork second, talk third.
+
+— Don Hopkins

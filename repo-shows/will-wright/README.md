@@ -21,6 +21,10 @@ people who actually invented this stuff, capturing their credited ideas in
 public, and letting AI implement them. The product is the methodology + the
 knowledge; the game is the proof. *Show, don't tell.*
 
+**Lineage:** Will's 1996 Stanford talk is the anchor; Don and Will have discussed
+a living microworld repo since then. This kickoff is the **public apex seed** —
+see [`../../process/VISION.md`](../../process/VISION.md) (ambition, not a production promise).
+
 ## Why topic-less
 
 Will contains multitudes. Rather than box the first conversation into one

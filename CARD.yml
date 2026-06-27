@@ -14,6 +14,7 @@ plugin:
 purpose: |
   Public-facing Repo Show world for Will Wright kickoff. Filtered export from DonHopkins
   private monorepo. Two-way navigable indexes. Guest characters as potential show hosts.
+  Long-term ambition (1996 lineage → living microworld) — see process/VISION.md; no promises.
 
 methods:
   ORIENT:
@@ -31,7 +32,7 @@ methods:
 rooms:
   repo-shows/: "Show seeds and planted instances"
   characters/: "Guest + host portrayals (filtered, public-safe)"
-  process/: "Export/sync with DonHopkins private tree"
+  process/: "Vision, format, ShowMaker network, export/sync"
   schemas/: "Shared metadata (invitation status, etc.)"
   apps/: "Future deployable apps (site, stream, adventure UI)"
   packages/: "@wwsff/* shared libraries"
