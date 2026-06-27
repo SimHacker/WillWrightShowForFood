@@ -258,4 +258,19 @@ Full pages: [**TRAILS.md**](TRAILS.md)
 | Schemas | [schemas/CARD.yml](schemas/CARD.yml) | Portrayal, rigs |
 | Apps | [apps/CARD.yml](apps/CARD.yml) | stream-gateway future |
 
+---
+
+## 🤯 Before you go — the Crazy Idea Jam
+
+The wackiest, most forward-thinking ideas in the whole show, in one place: a **robo-resurrection
+cult on Easter Sunday**, **character endosymbiosis** as a save format, **cellular automata that
+melt your city** if you don't pay, **"hell is full" ZombieSims**, and **GitHub as an MMORPG
+multiverse**. Some are jokes that turned out to be load-bearing. All of them are real.
+
+> *AI proposes; the **player** disposes — now let's get weird with it.*
+
+→ **[Read the Crazy Idea Jam](process/CRAZY-IDEA-JAM.md)** · girder [`crazy-idea-jam.yml`](process/crazy-idea-jam.yml) · trail [stupid_fun_forward](process/trails/stupid-fun-forward.md)
+
+---
+
 — Don Hopkins *(the User Interface Flower Child)* 🌀

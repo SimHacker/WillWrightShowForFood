@@ -153,6 +153,9 @@ trails:
       - { path: ../schemas/invitation-workflow.yml, why: "Status enum as corpus metadata" }
       - { path: ../characters/terry-winograd/, why: "CS547 forebear — open seminar recorded for posterity" }
       - { path: ../characters/terry-winograd/correspondence.yml, why: "Verified preservation record — Will 1996 + Gosling 1995 talks" }
+      - { path: ../characters/don-hopkins/career/simcity-lineage.yml, why: "Chain of custody — three contracts (DUX/Maxis/OLPC), the 10-year clause, OLPC/EA Exhibit A, and the two licenses (Micropolis GPL License Notice + MICROPOLIS Public Name License)" }
+      - { path: ../characters/don-hopkins/career/contracts/, why: "Primary evidence — the three SimCity/Micropolis contracts themselves (mirrored from donhopkins.com)" }
+      - { path: ../characters/chaim-gingold/, why: "Author of 'Open Sourcing SimCity' — the canonical published account; Don supplied the primary sources" }
       - { path: ../characters/, why: "Guest directories — organic discovery; grows with show prep" }
       - { path: ../characters/README.md, why: "Contribution channels — self-edit or email assisted" }
       - { path: vision-and-ambition.yml, why: "Forebears and long arc in yaml girder" }
@@ -190,6 +193,7 @@ trails:
     nodes:
       - { path: ../characters/will-wright/, why: "Toys not games — possibility space, the Simulator Effect" }
       - { path: ../characters/yoot-saito/, why: "The Tower/SimTower, Seaman, Odama — Japanese sim toys" }
+      - { path: ../characters/yoot-saito/yoot-tower-discussion.yml, why: "Yoot Tower & beyond — abstract, non-committal; AI-RE TypeScript engine, design-with-Yoot, Seaman for the LLM era" }
       - { path: ../characters/stone-librande/, why: "One-page designs — a whole system on one dense page" }
       - { path: ../characters/richard-bartle/, why: "MUD1 (1978) + the Bartle taxonomy of player types (incarnated with permission)" }
       - { path: ../characters/chaim-gingold/, why: "Building SimCity — the simulation loop drawn as diagrams" }

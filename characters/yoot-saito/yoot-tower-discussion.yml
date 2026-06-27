@@ -1,0 +1,59 @@
+# Yoot Saito × the show — Yoot Tower & beyond (abstract, non-committal)
+# Public-safe discussion notes. Makes NO promises and applies NO pressure to Yoot.
+# Anything touching his code, design docs, or trademarks happens ONLY with his permission,
+# in conjunction with him. Standards: ../../schemas/portrayal-standards.yml
+
+meta:
+  with: yoot-saito
+  curated_by: don-hopkins
+  consent: not_yet_asked
+  stance: |
+    No promises, no pressure. We're open to possibilities and would love Yoot on the show —
+    to talk about anything and everything he likes. Everything below is exploratory.
+
+yoot_tower_status:
+  state: "Delayed / unknown — licensing issues unresolved. Discussed here only in the abstract."
+  no_promises: "Nothing about a Yoot Tower release is committed. This file records possibilities, not plans."
+  what_exists_privately:
+    - "The full Yoot Tower source code (Don has it)."
+    - "Japanese design documents (incl. Nintendo-era materials) and production spreadsheets — a goldmine."
+  handling: |
+    Private and sensitive. Analyze and write about it only cleanly and ABSTRACTLY, and only in
+    conjunction with Yoot and with his permission. No leaking of code, docs, or proprietary content.
+
+community_reimplementation:
+  what: "Someone has already AI-reverse-engineered the Yoot Tower binary and reimplemented an engine + UI in TypeScript; there was a Hacker News discussion about it."
+  idea: "A possible integration path — collaborate with / build on that clean-room TS effort rather than touching proprietary binaries. Permissions and authorship respected throughout."
+  status: "lead — find the HN thread + repo and reach out; nothing committed."
+
+possibilities_no_promises:
+  - emulate: "Emulate the original code as-is, for preservation and study."
+  - adapt_and_ship: "Adapt, upgrade, and add quality-of-life improvements; potentially publish a version on Steam — Nintendo lawyers and other stakeholders permitting."
+  - design_new: |
+      Design a whole NEW clean simulator WITH Yoot — a tower, a boat (YOOT BOOT — 'boot' is 'boat'
+      in Dutch), a cruise liner, a spaceship, a submarine, whatever. He designs it with us; we code
+      it for him. He helps any way he likes.
+
+seaman_reincarnation:
+  what: "Reincarnate Seaman — the creature that remembers you, judges you, and insults you between life lessons — for the LLM era."
+  why_now: "It's certainly time: a talking creature with memory and attitude is exactly what LLMs are good at. 1999's forward-thinking move was treating the player as someone worth being rude to."
+  ties: [../../process/crazy-idea-jam.yml#yoot_boot_and_seaman]
+
+the_show_we_dream_of:
+  yoot_on_air: "Yoot on the show talking about anything and everything — no agenda required, no pressure."
+  alan_kay_pairing: "Pair Yoot WITH Alan Kay to revisit the interview Yoot conducted years ago — two voices on the same memory."
+  the_japan_trip: "The historic trip when Yoot interviewed Alan Kay, Doug Engelbart, and other luminaries (Apple ATG and others) in Japan — marking the 25th anniversary of Engelbart's 1968 'Mother of All Demos.'"
+  engelbart_eulogies:
+    mode: "Memorial mode — represent and discuss; never interview the deceased."
+    who: "Alan Kay, Yoot Saito, and Ted Nelson share eulogies and memories of Doug Engelbart."
+    ted_nelson_eulogy: "Ted's eulogy (on YouTube) is deeply moving — joy and tears. A centerpiece for the Engelbart memorial segment."
+    see: ../douglas-engelbart/memorial.md
+
+connects_in_repo:
+  - { path: CHARACTER.yml, why: "Bio + invitation status for Yoot" }
+  - { path: correspondence.yml, why: "Alan Kay 1993 interview restoration thread" }
+  - { path: ../alan-kay/, why: "Interview subject + eulogy voice" }
+  - { path: ../ted-nelson/, why: "Engelbart eulogy — the moving YouTube one" }
+  - { path: ../douglas-engelbart/memorial.md, why: "Memorial segment this material feeds" }
+  - { path: ../../repo-shows/yoot-saito/SHOW.yml, why: "Show seed pulling this together" }
+  - { path: ../../process/crazy-idea-jam.yml#yoot_boot_and_seaman, why: "YOOT BOOT successor + Seaman reincarnation" }

@@ -28,6 +28,11 @@ bio:
 sources:
   wikipedia: null
   web:
-    []
-  papers: []
-  blogs: []
+    - { title: "Building SimCity: How to Put the World in a Machine (MIT Press, 2024)", url: https://mitpress.mit.edu/9780262547482/building-simcity/ }
+    - { title: "SimCity Reverse Diagrams", url: https://smalltalkzoo.thechm.org/users/Dan/uploads/SimCityReverseDiagrams.pdf }
+  papers:
+    - { title: "Play Design (Ph.D. dissertation, UC Santa Cruz, 2016)", url: https://www.proquest.com/docview/1806122688 }
+  blogs:
+    - title: "Open Sourcing SimCity (excerpt, pp. 289–293 of Play Design)"
+      url: https://donhopkins.medium.com/open-sourcing-simcity-58470a275446
+      note: "The canonical published account of how EA open-sourced SimCity; Don supplied many of the primary sources (incl. the 1991 Sun GIS memo)."

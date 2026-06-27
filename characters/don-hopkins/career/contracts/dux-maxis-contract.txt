@@ -1,0 +1,247 @@
+CONTRACT BETWEEN MAXIS AND DUX SOFTWARE
+
+Here are the interesting parts of the 9 page contract, signed by Robert
+B Adams of DUX and Jeff Braun of Maxis on July 19th 1991, which I can
+scan and send to you in its entirety if you like.
+
+As far as I know, the terms of the contract were successfully met, and
+there were no problems with it.
+
+
+SOFTWARE LICENSING/DEVELOPMENT AGREEMENT
+
+THIS AGREEMENT is made and entered into this __July_19th_1991__ between,
+Sim-Business, a California Corporation, doing business as Maxis, with a
+place of business at Two Theatre Square Suite 230, Orinda California,
+94563, ("Licensor"), and DUX Software Corporation, ith a place of
+business at 4546 El Camino Real Suite W, Los Altos California 94022,
+("Pyblisher") who hereby agrees as follows:
+
+1. Introduction
+
+Licensor has developed the computer software described in Exhibit A
+attached hereto, and is interested in granting to Publisher an exclusive
+license to convert and translate to the Unix/X environment, and copy,
+reproduce, modify, manufacture, market, publish, distribute, sell, and
+use the converted software, all subject to the terms and conditions of
+this Agreement.
+
+2. Definitions
+
+(a) "Original Work" the English language version of the computer program
+described in Exhibit A, including the manual, artwork, promotional
+materials, software routines and algorithms and any related materials
+deigned to operate on computers described in Exhibit A.
+(b) "Program": A Unix/X Windows Version of the Orignial Work. The
+Program shall remain the property of the Licensor.
+(c) "Unit Sales": The total number of units of the Program.
+(d) "New Version": An updated or improved version of the Program.
+(e) "Translated Version": The Program, or New Version of the Program
+translated into a language other than English.
+(f) "Derivative Work": Any product that is based on or derived from the
+Program of which contains code from the Program is considered a
+derivative of the program.
+(g) "Sales Receipts": The gross monies actually received by Publisher
+(exclusive of sales, use, excise, VAT, withholding and other taxes,
+packing, insurance, shippping and similar charges reimbursed by
+customers) from all sales, development fees, leases or licenses of the
+Program, New and Translated Versions, Conversions, and Derivative Works,
+less: (i) sales commissions paid to independent sales representatives;
+(ii) the amount of any credits or refunds for returns, taking into
+account any reserves previously established by Publisher; (iii) any
+credits, discounts, rebates and promotional allowances to customers; and
+(iv) the amount of any sales or use taxes required to be paid or
+withheld by Publisher with respect to the payments due to Licensor. The
+amounts dedicated under items (i) through (iv) above will be reasonable
+and cinsistent with the amounts customarily paid in the industry.
+(h) "Conversions": Adaptations of the Program and Incorporated
+Procedures for use on the machines or operating systems other than those
+specified in Exhibit A.
+(i) Territory: Worldwide.
+
+3. Grant of Rights
+
+(a) Subject to the terms of this Agreement, Licensor hereby grants
+Publisher (i) an exclusive, license to copy, reproduce, modif, enhance,
+manufacture, market, publish, distribute, sell, and use the Program in
+the Territory.
+(b) Licensor retains all rigts to the Program. Publisher may not use
+portions of the Program without prior written permission from Licensor,
+other than as is consistent
+with the rights granted in this Agreement.
+(c) To use Licensor's trademarks or symbols, if any, where necessary for
+promotion of the Program.
+(d) To modify the English language version of the Original Work as
+Publisher deems appropriate to meet the needs of the market for the
+Territory.
+
+4. Delivery
+
+(a) Delivery of the Original Work and Supporting Materials. Within
+thirty (30) days of execution of this Agreement, Licensor shall deliver
+the following supporting materials: (i) the complete Macintosh, DOS and
+Windows source code listings for the Original Work in machine readable
+format; (ii) supporting documentation for the Original Work including
+the format, organization and content of the master diskettes; (iii) the
+name of any person or entity, other than Licensor, who has participated
+in or contributed to the authorship of the Original Work; and (iv) all
+promotional materials and artwork currently in use by Licensor to
+promote the Original Work. Publisher is responsible for all testing of
+the Program.
+
+5. Payments.
+
+(a) Advances. There are no advances in consideration of this Agreement.
+(b) Quarterly Payments. [...]
+(c) Accounting. [...]
+(d) Inspection of Publisher's Records. [...]
+[There is no part (e)]
+(f) Payments [...]
+
+6. Licensor's Obligations.
+
+(a) Consultation. [...]
+(b) Related Works. [...]
+
+
+7. Copyright, New and Translated Versions.
+
+(a) Licensor shall retain all rights in any New or Translated Vversions
+developed by Publisher. Licensor shall cooperate wand assist with the
+acquisition of language translation text for purposes of localization of
+the Program.
+(b) Publisher agrees to take all actions and cooperate as is necessary
+to protect the copyrightability of the Program, and any software and
+materials provided under this Agreement, and further agrees to execute
+any documents that might be necessary to perfect Licensor's ownership of
+copyrights in the Program and to registration.
+
+8. Warranties and Indemnification.
+
+(a) Title. [...]
+(b) LICENSOR MAKES NO WARRANTIES [...]
+
+9. Marketing.
+
+(a) Determinations by Publisher. [...]
+(b) Publisher's Marketing Efforts. [...]
+(c) Licensor's Copyrights. [...]
+(d) Credit. [...]
+(e) Publisher to secure copyright protection for the Program in the
+Territory.
+
+10. Infringement.
+
+In the event of any infringement [...]
+
+11. Terms and Termination.
+
+(a) Terms. The term of this Agreement shall commence on the date hereof
+and shall, unless sooner terminated, continue for a term of ten (10) years.
+
+(b) Effect of Termination. Publisher will have the right to retain
+copies of the Program and any version of the Program developed by
+Publisher for Publisher's own use and for the purpose of providing
+support for customers existing at the time of termination. Publisher
+shall have a period of six (6) months to dispose of existing inventory
+from the date of termination.
+
+(i) Publisher's Right to Terminate. [...]
+(ii) Licensor's Right to Terminate. [...]
+(iii) Termination in Event of Bankruptcy. [...]
+
+12. Confidentiality.
+
+(a) Retention of Proprietary Rights in Confidential Information. [...]
+(b) Confidentiality. [...]
+(c) Information Not Protected. [...]
+
+13. Agreement not to Constitute Joint Venture.
+
+Nothing in this Agreement shall be construed as making either Publisher,
+or Licensor the agent of, on in joint vengture with, the other for any
+purpose.
+
+14. Administrative Provisions.
+
+This Agreement represents the full and complete understanding [...]
+
+13. Licensor's Copies [The section numbering jumps back to 13]
+
+
+At the time of inital publication and distribution of the Program,
+Publisher shall deliver ten (10) copies of each final to-be-shipped
+Program the Licensor at no charge. Licensor shall also have the right to
+purchase from Publisher a reasonable number of copies of the Program, at
+current manufacturing cost. Licensor shall also be entitled to receive
+four (4) copies of the final to-be-shipped Program each time a
+revisedversion is released and shipped.
+
+14. Assignment.
+
+This Agreement and the rights and obligations hereunder shall not be
+assigned in whole or in part bu either party without the prior written
+consent of the other, [...]
+
+IN WITNESS WHEREOF, the parties hereto have executed this Agreement as
+of the date dfirst above written.
+
+[LICENSOR] Jeff Braun
+Date: July 19, 1991
+By: Jeff Braun
+Title: President
+
+[PUBLISHER] Robert B Adams
+Date: July 19, 1991
+By: Robert B Adams
+Title: President
+
+
+EXHIBIT A
+
+1. Program Specifications
+
+The program is the program currently shipping in the United States on
+the Macintosh computer, called SimCity.
+
+2. Microcomputers
+
+The Program shall execute on Workstations running the Unix Operating
+systems, networked PC workstations functioning solely as X Windows
+displays, and Intel microprocessors based workstations (i386/i486
+processors) executing variants of the Unix Operating System, or display
+systems such as Motif and OpenLook, either directly, or on top of MS-DOS.
+
+Specifically excluded from the list of Microcomputers are those relying
+solely upon the MS-DOS command shell, Microsoft Windows, and other
+MS-DOS Graphical User Interface based shells, or Command Line Interface
+shells.
+
+
+EXHIBIT B - PAYMENTS
+
+1. Advances and Delivery Schedule. There are no advances considered for
+this agreement. Publisher shall make its best efforts to effect the
+publication of the Program within twelve (12) months of the effective
+date of this Agreement.
+
+2. Payments: Except as provided below, Publisher shall make payments to
+Licensor based on Publisher's Sales Receipts with respect to all sales,
+leases, licenses, or other transactions pursuant to which copies of the
+Program, New or Trranslated Versions, Conversions, or Derivative Works
+are distributed.
+
+(a) Ten and one half percent (10.5%) of Sales Receipts from Publisher's
+distribution of finished units of the Program, including any language
+translation of the Software that Publisher distributes.e collection of
+overdue payments,
+
+3. Replacements for Defects or Damages: [...]
+
+4. Promotional Units: [...]
+
+5. Any failure to make payments when due pursuant to this section shall
+result in a late charge equal to 1.5% per month, or the maximum amount
+permitted by law, whichever is less, on the unpaid balances. In
+addition, Licensor shall pay all costs incurred by Licensor in the
+collection of overdue payments, including attorney's fees and costs.

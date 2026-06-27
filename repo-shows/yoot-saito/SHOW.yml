@@ -1,0 +1,45 @@
+# SHOW — Yoot Saito (anything and everything; no pressure, no promises)
+# Yoot is welcome to talk about whatever he likes. Yoot Tower stays abstract/non-committal.
+
+show:
+  id: yoot-saito
+  title: "A Repo Show with Yoot Saito — Towers, Seaman, and a Trip to Japan"
+  type: solo
+  host: Don Hopkins
+  guests: ["Yoot Saito"]
+  character: characters/yoot-saito/
+  topic: "Anything and everything Yoot likes — The Tower/SimTower, Seaman, Odama; the Alan Kay interview; sim design with the show"
+  status: seed
+  consent: not_yet_asked
+  stance: "No pressure, no promises. Open to possibilities; the conversation is the point."
+
+why_him:
+  designer: "The Tower / SimTower, Seaman, Odama — Japanese sim toys with soul and attitude."
+  historian: "Interviewed Alan Kay (1993) and other luminaries in Japan for the 25th anniversary of Engelbart's 1968 demo."
+
+dream_segments:
+  yoot_on_air: "Yoot, unscripted — whatever he wants to talk about."
+  alan_kay_pairing: "Pair Yoot WITH Alan Kay to revisit their 1993 interview — two voices on one memory."
+  japan_trip: "The historic trip interviewing Kay, Engelbart, and others (Apple ATG and beyond)."
+  engelbart_memorial:
+    mode: "Represent + discuss — never interview the deceased."
+    eulogies: "Alan Kay, Yoot Saito, and Ted Nelson share memories of Doug Engelbart (Ted's YouTube eulogy is a moving centerpiece)."
+    see: ../../characters/douglas-engelbart/memorial.md
+  seaman_reincarnation: "Bring Seaman back for the LLM era — a creature that remembers, judges, and insults you."
+
+yoot_tower:
+  abstract_only: "Delayed / unknown due to licensing; discussed in the abstract, with no promises."
+  details: ../../characters/yoot-saito/yoot-tower-discussion.yml
+
+format:
+  live: true
+  audience_qa: true
+  homeplay: "Play SimTower / Yoot Tower; watch the Alan Kay interview; bring questions as PRs/issues"
+
+ties_to:
+  - ../../characters/yoot-saito/yoot-tower-discussion.yml
+  - ../../characters/yoot-saito/correspondence.yml
+  - ../../characters/alan-kay/
+  - ../../characters/ted-nelson/
+  - ../../characters/douglas-engelbart/memorial.md
+  - ../../process/trails/game-design-lineage.md

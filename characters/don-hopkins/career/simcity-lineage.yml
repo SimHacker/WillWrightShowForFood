@@ -61,6 +61,48 @@ simcity_lineage:
       mike_perry: "Found with the help of Mike Perry, a long-time Maxis employee who knew where all the contracts (and bodies) were buried. Without that institutional memory the paperwork would have been lost and SimCity could not have been open-sourced."
       the_clause: "The DUX/Maxis contract stated that ownership of everything Don did for DUX reverted to Maxis (now EA) after 10 years — and well more than 10 years had passed — firmly establishing that EA owned the rights to Don's changes to the source."
       the_yes: "That let EA's lawyers, at Will Wright's ask, approve GPL-v3 relicensing — releasing it as free open source software for the OLPC Sugar 'Stone Soup' (Micropolis)."
+      published_account:
+        source: "Chaim Gingold, 'Open Sourcing SimCity' — excerpt from pp. 289–293 of his dissertation 'Play Design' (UC Santa Cruz, 2016); expanded in 'Building SimCity' (MIT Press, 2024)."
+        url: https://donhopkins.medium.com/open-sourcing-simcity-58470a275446
+        note: "The canonical published account of this chain of custody. Gingold frames it through Sutton-Smith's 'ambiguity of play': SimCity's polymorphism — playful, serious, educational, commercial at once — let each agent (Maxis, Sun, OLPC) see in it what they wanted."
+      origin_at_sun:
+        era: "1991"
+        what: "Sun circulated an internal memo to gauge interest in porting the #1-selling SimCity to Unix as a front-end to GIS (ToolTalk + import/export to standard GIS formats), citing support from ESRI and URISA."
+        note: "Don — a Sun programmer who first played SimCity in 1989 at UMD under Shneiderman & Weiser — responded enthusiastically; the port was finished under DUX Software."
+      the_ask:
+        era: "Nov 2006"
+        who: "John Gilmore (EFF co-founder, early Sun employee) asked Don to ask Will Wright about open-sourcing the original SimCity for OLPC."
+        note: "Don thought it futile but passed it to Will, who was enthusiastic and brought in EA execs (Rod Humble, Scott Evans); EA legal worked with Eben Moglen (FSF general counsel / Columbia Law / OLPC advisor). See the_shepherd for who pushed it through inside EA."
+      the_shepherd:
+        who: "Charles 'Chuck' Norman — an EA employee at the time, the liaison Will Wright appointed to relentlessly shepherd the release through EA Legal and QA."
+        why: "Clearing Legal and QA was the tricky challenge — and they won it. Without an inside champion deputized to drive it, it would have died on the vine (everyone at a big company is 500% busy with their own work). His shepherding cleared the way to release the code as FOSS, publish it on the OLPC as SimCity, and fork it into Micropolis."
+        note: "An exhilarating, true, and well-documented story — backed by the contracts, the licenses, and Chaim Gingold's published account above."
+      paper_trail: "Three contracts established the chain of custody; two licenses govern the released code and brand today."
+      three_contracts:
+        note: "The contracts that made open-sourcing legally possible — mirrored in-repo as primary evidence (contracts/), with Don's donhopkins.com copies he has also linked from Hacker News. Index: contracts/README.md"
+        items:
+          - { what: "Don ↔ DUX contract", who: "Don Hopkins & DUX Software", date: "18 Feb 1992", why: "Don's Unix/HyperNeWS SimCity work is 'work for hire'; rights flow to DUX, then Maxis", local: contracts/dux-don-hopkins-contract.txt, url: https://donhopkins.com/home/micropolis/dux-don-hopkins-contract.txt }
+          - { what: "DUX ↔ Maxis license", who: "DUX Software & Maxis", date: "19 Jul 1991", why: "The 10-year reversion clause — ownership returns to Maxis (later EA)", local: contracts/dux-maxis-contract.txt, url: https://donhopkins.com/home/micropolis/dux-maxis-contract.txt }
+          - { what: "EA ↔ OLPC agreement", who: "Electronic Arts & One Laptop Per Child", date: "4 Sep 2007", why: "Spells out GPL-v3 publishing WITH modifications protecting EA's SimCity trademark (Exhibit A below)", local: contracts/olpc-ea-contract.pdf, url: https://donhopkins.com/home/micropolis/olpc-ea-contract.pdf }
+      exhibit_a_stipulations:
+        note: "From the EA ↔ OLPC agreement (the third contract) — the conditions EA attached to the GPL-v3 release."
+        renamed_micropolis: "EA kept QA-approval rights over anything titled 'SimCity', so the open release was renamed 'Micropolis' — an earlier working title for SimCity."
+        air_crash_removed: "Post-9/11 consideration: the airplane-crash disaster was removed from the game."
+        ea_qa_bar: "QA unable to crash the game in 16 man-hours; ESRB 'E'-rating language/imagery; no EA trademark used negatively; copyright/license header added to each source file."
+        multiplayer_disabled: "Multiplayer was removed/disabled — the X11 network protocol wasn't safe or simple enough for kids on an OLPC mesh."
+        ea_splash: "An EA-approved splash screen shown before the game (its code kept out of the distributed source)."
+      two_licenses:
+        note: "The licenses the source actually ships under. Canonical copies live in the MicropolisCore repo (linked below) — don't copy the texts, link them. Don also mirrors them on donhopkins.com/home and has linked them from Hacker News."
+        ea_gpl_grant:
+          official_name: "Micropolis GPL License Notice"
+          what: "EA's grant: GNU GPL v3 PLUS Additional Terms per GPL Section 7 — grants no SimCity (or other EA) trademark/publicity rights, requires indemnifying EA, marking modified versions, and a full warranty disclaimer. Copyright EA 1989–2007."
+          repo: https://github.com/SimHacker/MicropolisCore/blob/main/MicropolisGPLLicenseNotice.md
+          gpl_text: https://github.com/SimHacker/MicropolisCore/blob/main/LICENSE
+        micropolis_public_name_license:
+          official_name: '"MICROPOLIS" Public Name License (Version 1, October 1st, 2024)'
+          what: "A more recent, generously granted trademark/brand license — separate from EA's GPL grant. The 'MICROPOLIS' mark is owned by Micropolis GmbH (Micropolis Corporation) and licensed to the project, enabling us to develop the Micropolis BRAND into the future: attribution + non-confusion terms, while software freedom is unaffected."
+          repo: https://github.com/SimHacker/MicropolisCore/blob/main/MicropolisPublicNameLicense.md
+          attribution_courtesy: '"Micropolis is a registered trademark of Micropolis Corporation (Micropolis GmbH) and is licensed here as a courtesy of the owner under the Micropolis Public Name License." → https://www.micropolis.com'
 
   - name: MicropolisCore + web
     era: "2020s–"

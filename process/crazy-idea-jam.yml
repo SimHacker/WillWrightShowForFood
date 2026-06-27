@@ -12,6 +12,7 @@ meta:
   status: jam (living seedbed — ideas graduate into shows, schemas, skills)
   authored_by: don-hopkins
   one_line: "AI proposes; the PLAYER disposes — now let's get weird with it."
+  idea_sources: "Ideas come from EVERYONE — not just AI. Humans, the audience, Will especially, Don even, famous over-reachers like Peter Molyneux, and you. Anyone can propose; the PLAYER disposes."
   human: CRAZY-IDEA-JAM.md
   upstream_full: SimHacker/DonHopkins/projects/micropolis-moollm/crystallized/DESIGN-WISDOM.yml
 
@@ -259,6 +260,10 @@ ideas:
       air) and the spirit of Seaman: a talking creature that remembers you, judges you, and
       insults you between life lessons. The most forward-thinking thing about 1999 Seaman was
       that it treated the player as someone worth being rude to. BOOT is BOAT in Dutch.
+    he_designs_we_code: "The collaboration model: Yoot designs it WITH us, we code it for him, he helps any way he likes — a new clean simulator (tower, boat, cruise liner, spaceship, submarine, whatever)."
+    seaman_llm: "Reincarnate Seaman for the LLM era — memory + attitude is exactly what LLMs do well. It's certainly time."
+    no_promises: "Yoot Tower itself is in a delayed/unknown licensing state — discussed only in the abstract, with no pressure on Yoot."
+    ties: [../characters/yoot-saito/yoot-tower-discussion.yml, ../repo-shows/yoot-saito/SHOW.yml]
 
   simulator_effect:
     emoji: "🧠"
@@ -277,6 +282,55 @@ ideas:
       Chaim Gingold's SimCity diagrams illustrate in his book Making SimCity). 
       Water = donations; fertilizer = tokens.
       A Nurturing Environment, not a Killer App — the Flower Child nurtures; the buyout extracts.
+
+  educational_data_literacy:
+    emoji: "📊"
+    blurb: |
+      Make the sim EXPORT its guts. Earth-science professor Upmanu Lall (Columbia) wanted SimCity
+      to spit out spreadsheets so students from any department would run experiments, analyze the
+      data, and learn science through a game they relate to. Modern version: Micropolis & Yoot
+      Tower stream raw + cooked telemetry and events into time-series DBs and d3 / Grafana
+      dashboards — the engaging hook that teaches general data-literacy. Don wrote the proposal
+      (OPTIMUS) in ~2002; it went nowhere until open-sourcing for OLPC finally made it possible.
+    ties: [../characters/don-hopkins/career/simcity-lineage.yml]
+
+  scriptable_simulators:
+    emoji: "🧩"
+    blurb: |
+      Push ALL the UI out of the engine and let players reprogram the rest. emscripten + embind
+      let you SUBCLASS the C++ game engine in JavaScript — so zones, agents, robots, monitors and
+      data exporters are plug-ins, not recompiles. Then wire visual programming (Snap! / Blockly,
+      Sandspiel-style) on top so kids live-code the simulation. Don already proved it with SWIG +
+      Python: PacBot follows the roads eating traffic; the Church of Pacmania worships and attracts
+      PacBots and feeds them. The SimAntics VPL spirit from The Sims — but easy to use and extend.
+    ties: [../characters/don-hopkins/career/simcity-lineage.yml]
+
+  towers_in_micropolis:
+    emoji: "🏙️"
+    blurb: |
+      The concrete crown-jewel facet that makes everyone grin: embed multiple YOOT TOWERS inside
+      your Micropolis city. Same era, same Maxis lineage, shared WASM / emscripten / embind /
+      SvelteKit infrastructure — two open games sharing one stack so a tower can be a building in a
+      city. Data portability you can point at.
+    ties: [crazy-idea-jam.yml#data_portability_crown_jewel, ../characters/yoot-saito/]
+
+  cellular_automata_as_drm:
+    emoji: "🫠"
+    blurb: |
+      The 1991 free-but-not-free demo: play the Unix SimCity for five minutes, and if you haven't
+      bought a license the cellular automata wake up and MELT your city. DRM as generative art — the
+      same CA rules (heat diffusion, EcoLiBra, Life, Brian's Brain) that later became the hypnotic
+      "Space Inventory" you can just watch for hours. Punishment and beauty from the same engine.
+
+  pie_menus_put_out_fires:
+    emoji: "🥧🔥"
+    blurb: |
+      A live on-air bit about the interface shaping the thinking. UI critic Don Norman complained
+      that pie menus made SimCity TOO easy — build a city fast without thinking, oops, nuclear
+      meltdown, merrily on your way. Don's reply: "Linear menus caused the meltdown. The round menus
+      put the fires out." Gestural, mouse-ahead pie menus turned a slow city-builder into a fast
+      twitch game. Demonstrate it; argue about whether ease helps or hurts learning.
+    ties: [../characters/don-hopkins/CARD.yml]
 
 graduation:
   note: "Ideas leave the jam by becoming something runnable."

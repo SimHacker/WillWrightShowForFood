@@ -16,9 +16,11 @@ what computing could be in the 1968 **"Mother of All Demos."** His thesis — th
 *augment* people, not replace them, and that we get there by **bootstrapping** — is the spine of
 this show's **Player-in-the-Middle** principle.
 
-We remember him by inviting people who knew and were shaped by him to talk: **Ted Nelson** (whose
-wedding Engelbart officiated), **Alan Kay**, and **Yoot Saito**, whose interview with Alan Kay
-marked the 25th anniversary of the 1968 demo.
+We remember him by inviting people who knew and were shaped by him to share **eulogies and
+memories**: **Ted Nelson** (whose wedding Engelbart officiated — Ted's eulogy on YouTube is deeply
+moving, joy and tears at once), **Alan Kay**, and **Yoot Saito**, whose 1993 interview with Alan
+Kay in Japan — alongside Engelbart and other luminaries (Apple ATG and beyond) — marked the 25th
+anniversary of the 1968 demo. Pairing Yoot and Alan to revisit that trip is a natural centerpiece.
 
 We celebrate his documented public work; we do not speak as him.
 

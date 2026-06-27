@@ -26,8 +26,9 @@ bio:
   summary: "**Yoot Saito** — Japanese game designer behind **The Tower / SimTower**, **Seaman**, and **Odama**; interviewer of Alan Kay (1993)."
 
 sources:
-  wikipedia: null
+  wikipedia: https://en.wikipedia.org/wiki/Yoot_Saito
   web:
-    []
+    - { title: "The Verge — Yoot Saito interview (Seaman, Odama, The Tower)", url: https://www.theverge.com/2019/9/6/20850674/yoot-saito-interview-seaman-sega-dreamcast-odama }
+    - { title: "My Mac — interview with Mr. Yoot Saito (1999, Mac-first dev)", url: https://www.mymac.com/1999/02/the-my-mac-interview-mr-yoot-saito/ }
   papers: []
   blogs: []

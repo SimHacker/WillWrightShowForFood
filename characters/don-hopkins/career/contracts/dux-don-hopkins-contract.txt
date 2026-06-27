@@ -1,0 +1,63 @@
+CONTRACT BETWEEN DUX SOFTWARE AND DON HOPKINS
+
+Here is the contract between DUX and me, which I will be glad to send
+you a copy of if you like.
+
+The terms of the contract were successfully met, and there were no
+problems with it.
+
+18 February 1992
+
+To: Donald Hopkins, SimCity Project Engineer
+From: Bob Adams, President DUX Software
+Subject: Development Agreement, Assignment of Rights, Payment and Royalties
+
+Both parties agree to the following:
+
+1. Don Hopkins is recognized as the developer for SimCity UNIX-HyperNeWS
+version.
+
+2. Don has worked on the project as "Work For Hire" and Don assigns all
+rights to DUX and MAXIS and recognizes that MAXIS and DUX possess full
+copyright status for the SimCity code, the user interface and all notes
+and documentation. All intellectual property rights are acknowledged for
+Don to be the property of MAXIS and DUX.
+
+3. DUX acknowledges that a balance due exists which will be paid to Don
+through royalties he will receive through the sale of SimCity over time.
+The formula used to compute his royalty payment is as follows:
+
+5% of all revenues paid to DUX for the sale of SimCity until the balance
+of contract is paid.
+2.5% of all revenues paid to DUX from the sale of SimCity for ongoing
+support of the source code and HyperNeWS.
+
+4. If Don wishes to continue to support te product after it is
+completed, the same formula will apply in addition to his logging
+programming time at $25. per hour for all new work. Bug fixes will
+constitute support of already paid for work and will be covered by
+royalty payments.
+
+5. Don agrees to support the product to the best of his ability while
+away in Europe via Internet, phone or fax.
+
+6. Don agrees to complete SimCity in a reasonable time frame while away
+and help DUX complete documentation by the creation of the text portion
+of the documentation and will make recommendations as to appropriate
+screen captures and graphics.
+
+7. Any major improvements to the current version beyond the basic game
+and current interface will be approved by a product planning group of
+which Don is a member.
+
+8. Don agrees to move SimCity to the latest version of HyperNeWS upon is
+arrival at Turing.
+
+
+Don Hopkins
+(signed) Don Hopkins
+Feb 18 92
+
+DUX Software
+(signed) Robert Adams
+2/18/92
