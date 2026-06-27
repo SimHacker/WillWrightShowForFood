@@ -49,6 +49,27 @@ pyramid:
     (monorepo verify). Browse without an account. Clone and break it. PR or issue.
 
 audiences_if_you_stumbled_here:
+  educators_and_constructionists:
+    for: "The people we are inviting — and everyone who teaches with microworlds"
+    invited_guests:
+      - name: Brian Harvey
+        note: "Logo, Simply Scheme, CS Logo Style, Snap!, BJC — lifelong CS education"
+        show_seeds: [brian-harvey, snap-logo-brian-jens]
+      - name: Jens Mönig
+        note: "Snap! architect — Micropolis × Snap!, blocks, Morphic.js, distributed systems in Snap!"
+        show_seeds: [jens-monig, snap-logo-brian-jens]
+      - name: Walter Bender
+        note: "OLPC Stone Soup, open-sourcing SimCity, constructionist playgrounds"
+        show_seeds: [walter-bender-olpc, skill-creation]
+    hook: |
+      This is for you. Repo Shows as constructionist microworlds — Winograd seminar lineage,
+      Papert energy, Logo/Snap!/BJC in the stack. Live conversation → cauldron → MOOLLM skills
+      students and teachers can actually run. Skill authoring as PBD for the LLM era.
+    participate: |
+      RTFR with your class. Fork a show seed. Homeplay on your rig (Snap! blocks optional).
+      PR questions in character. Host your own Repo Show; link harvested skills back.
+      We want Brian + Jens headline Snap!/Logo; Walter on OLPC + skill creation — consent not yet asked.
+    see: ../repo-shows/INDEX.yml
   general_public:
     hook: "A Repo Show — the stage is GitHub. Will Wright is the first invited guest."
     participate: "You don't need AI. Fork, homeplay, PR your show into the network."

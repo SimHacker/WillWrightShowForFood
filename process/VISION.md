@@ -77,6 +77,16 @@ or **roadmap**. If it is built, you can clone it and break it.
 
 ## Why different people might care
 
+**Educators & constructionists** — *This is for the people we are inviting.*
+**Brian Harvey** (Logo, *Simply Scheme*, *CS Logo Style*, Snap!, BJC),
+**Jens Mönig** (Snap! architect — Micropolis × Snap!, blocks, distributed systems),
+**Walter Bender** (OLPC Stone Soup, open-sourcing SimCity, constructionist playgrounds).
+Repo Shows as **constructionist microworlds**: Winograd seminar lineage, Papert energy,
+live conversation → cauldron → **MOOLLM skills** your students can run. Skill authoring
+as programming-by-demonstration for the LLM era. RTFR with your class; fork a show seed;
+PR harvested skills back. Show seeds: [`repo-shows/INDEX.yml`](../repo-shows/INDEX.yml)
+(consent not yet asked for any guest).
+
 **General audience / viral thread** — A show you can *enter*. Fork it. Run your
 own parallel show on your branch. Man-vs-machine taste contests welcome.
 Dance-off optional. No AI required.
