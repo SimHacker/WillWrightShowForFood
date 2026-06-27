@@ -55,6 +55,11 @@ with [SimHacker/moollm](https://github.com/SimHacker/moollm). Live conversation
 melts in the **cauldron**; **SCOOP** lifts finished technique into [`skills/`](../skills/).
 Fork them, nest them, breed them back via PR.
 
+**Hand programmers:** extra respect for honest work without AI — declare your class.
+
+**AI users:** please share your rig (tools, models, MCP, skills, repos, MOOLLM wiring,
+contexts) via issue or PR — we want real feedback, not vendor answers.
+
 Over time this repo becomes a **skill forest** traced to guests, shows, and
 git history — how a 1996 microworlds talk becomes *runnable* decades later.
 

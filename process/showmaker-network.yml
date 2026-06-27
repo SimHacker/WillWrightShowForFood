@@ -33,7 +33,8 @@ your_show:
     - "Run your Repo Show on your rig — any automation level"
     - "Document techniques — yaml backbone + markdown facade"
     - "PR back to link your show object + edges into the network"
-  no_gatekeeping: "Declare your rig class. Man-against-the-machine welcome. Dance-off optional."
+  no_gatekeeping: "Declare your rig class. Man-against-the-machine welcome — extra respect for honest hand programming."
+  share_your_rig: "AI users: tell us tools, models, MCP, skills, repos, moollm wiring, contexts — issue/PR rig-feedback (see repo-show-format.yml)"
 
 publication:
   vision: vision-and-ambition.yml

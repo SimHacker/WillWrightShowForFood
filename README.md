@@ -59,6 +59,18 @@ Run **your own show** on your branch; **PR to link** it into the [ShowMaker netw
 
 Full definition: [`process/repo-show-format.yml`](process/repo-show-format.yml)
 
+## Your rig — hand craft or AI
+
+**Hand programming without AI earns extra respect here** — we mean it, and honesty is
+appreciated. Declare human-only; show your editor and your taste.
+
+**Using AI?** We are super interested — not to sell you anything, but to learn and document
+real setups: which **tools and models**, **MCP servers**, **skills**, **repos**, whether you
+**include MOOLLM** and how it's wired, how it actually works day to day, and **what contexts**
+you've used it in (show jam, harvest, homeplay, classroom, …). **[Open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues)**
+or PR with `rig-feedback` — real setups beat polished answers. Details:
+[`process/repo-show-format.yml`](process/repo-show-format.yml) (`rig_spectrum`).
+
 ## Polyglot monorepo
 
 Two layers, one repo — patterned after [MicropolisCore](https://github.com/SimHacker/MicropolisCore)

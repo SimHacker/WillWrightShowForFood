@@ -1,0 +1,38 @@
+# Rig feedback — invitation to document your setup
+# Canonical detail: repo-show-format.yml → rig_spectrum
+
+meta:
+  id: rig-feedback
+  status: invitation
+
+hand_craft:
+  message: |
+    Programming by hand without AI earns extra respect here. We mean it.
+    Declare human-only. Show your editor, terminal, and taste. Honesty appreciated.
+
+ai_rig:
+  message: |
+    If you use AI — we are super interested in hearing how. Not a sales funnel:
+    we want to learn, document, and breed real technique into skills/ and the network.
+  please_include:
+    tools: "IDE, agent, CLI — Cursor, Claude Code, Copilot, custom, …"
+    models: "Which models, when, why — declare your tier"
+    usage: "How you actually use it — prompts, rules, hooks, multi-step workflows"
+    mcp_servers: "Which MCP servers, how wired"
+    skills: "Anthropic Agent Skills, MOOLLM skills, your CARD/SKILL.md"
+    repos: "Workspace repos, compose-with links, forks"
+    moollm:
+      question: "Do you include MOOLLM?"
+      wiring: "kernel/moollm-plugin.yml, hot.yml, skills loaded, …"
+    contexts: "Show jam, cauldron harvest, homeplay, teaching, porting, …"
+    feedback: "What worked, what broke, what you'd do differently"
+
+submit:
+  issue: "https://github.com/SimHacker/WillWrightShowForFood/issues — label or title rig-feedback"
+  pr: "Branch + yaml or markdown rig report; link from your show if you have one"
+  tone: "Real setups beat polished vendor answers. Screencasts welcome."
+
+see_also:
+  - repo-show-format.yml
+  - ../kernel/moollm-plugin.yml
+  - ../README.md

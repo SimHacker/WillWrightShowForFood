@@ -31,6 +31,29 @@ canonical_prose: |
 rig_spectrum:
   principle: "Play along with YOUR rig — or learn a new one. See who makes the coolest."
   no_ai_required: true
+  hand_craft:
+    respect: |
+      Programming by hand without AI earns extra respect here — we mean it, and we appreciate
+      honesty. Declare human-only; show your editor, your terminal, your taste. No performance.
+    bare_hands_welcome: true
+  ai_rig_feedback:
+    invitation: |
+      If you do use AI — we are super interested. Not to sell you anything: to learn and document
+      real setups so the network can breed better technique. Please tell us.
+    tell_us:
+      - "Tools and IDEs (Cursor, Claude Code, Copilot, custom, …)"
+      - "Models — which, when, why (declare your tier)"
+      - "How you use it — prompts, agents, rules, hooks, workflows"
+      - "MCP servers — which, wired how"
+      - "Skills — Anthropic Agent Skills, MOOLLM skills, your own CARD/SKILL.md"
+      - "Repos — what's in the workspace, what you compose with"
+      - "MOOLLM — do you include it? How wired? (see kernel/moollm-plugin.yml)"
+      - "How it actually works day to day — not the marketing page"
+      - "Contexts — show jam, harvest, homeplay, teaching, porting, …"
+    submit: |
+      Open an issue or PR — tag rig-feedback, or drop a yaml CARD in your branch
+      (process/rig-reports/ is the landing zone when we add it). Screencasts welcome.
+      Real setups beat polished answers.
   levels:
     - name: bare_hands
       tools: [markdown, yaml, git cli, browser]
@@ -50,6 +73,8 @@ rig_spectrum:
 
 play_along:
   your_rig: "Bring what you have. Fork the repo. Branch. Homeplay on your schedule."
+  hand_without_ai: "Extra respect for honest hand programming — declare human-only, show your work."
+  ai_users_please_share: "Using AI? Tell us tools, models, MCP, skills, repos, moollm wiring, contexts — see rig_spectrum.ai_rig_feedback"
   learn_new_rig: "RTFR to study how others work — then try their stack on your branch."
   coolest_wins: "Not single metric — taste, power, clarity, humor, constructionist generosity."
   document: "Everybody documents techniques — README, CARD, SKILL, screencast, yaml backbone."
@@ -108,6 +133,7 @@ play_lift_learn:
 see_also:
   - vision-and-ambition.yml
   - VISION.md
+  - rig-feedback.yml
   - showmaker-network.yml
   - ../repo-shows/will-wright/README.md
   - ../skills/README.md

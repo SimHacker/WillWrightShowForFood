@@ -73,6 +73,17 @@ audiences_if_you_stumbled_here:
   general_public:
     hook: "A Repo Show — the stage is GitHub. Will Wright is the first invited guest."
     participate: "You don't need AI. Fork, homeplay, PR your show into the network."
+  hand_programmers:
+    respect: "Programming by hand without AI earns extra respect here — honesty appreciated."
+    participate: "Declare human-only. Show editor + terminal + taste. Man-vs-machine competitions welcome."
+  ai_rig_reporters:
+    hook: "We want to learn from real AI setups — not vendor demos."
+    tell_us:
+      - "Tools, models, MCP servers, skills, repos in workspace"
+      - "MOOLLM included or not — how wired (kernel/moollm-plugin.yml)"
+      - "How you actually use it; what contexts (show, harvest, homeplay, class, …)"
+    participate: "Issue or PR with rig-feedback — help the network breed technique DNA."
+    see: repo-show-format.yml#rig_spectrum
   hacker_news_viral:
     hook: "RTFR. Man-vs-machine optional. Dance-off optional."
     participate: "Questions as PRs. Rig class declared. Coolest implementation wins attention, not a prize we guarantee."
@@ -142,6 +153,7 @@ invitation_to_stakeholders:
 
 see_also:
   - VISION.md
+  - rig-feedback.yml
   - repo-show-format.yml
   - showmaker-network.yml
   - ../skills/README.md
