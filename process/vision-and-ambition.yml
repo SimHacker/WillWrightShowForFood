@@ -48,6 +48,30 @@ pyramid:
     Brutalist GitHub surface: rebar (schemas), i-beams (process/*.yml), poured slab
     (monorepo verify). Browse without an account. Clone and break it. PR or issue.
 
+rig_culture:
+  teaching: |
+    Repo Shows teach rig culture — not just tools. Declare your class honestly.
+    Extra respect for artisanal hand programming. Curiosity about real AI setups.
+    This is constructionist microworld pedagogy: show your workflow, breed technique DNA.
+  artisanal_programmers:
+    also_called: [hand_programmers, human_only, bare_hands_rig]
+    definition: "Humans programming by hand — no AI. TextEdit to Emacs to VS Code and beyond."
+    respect: "Extra respect here — we mean it. Honesty appreciated."
+  intentional_coders:
+    definition: "Deliberate craft — every line chosen; anti-vibe in the best sense"
+    positive_term_for: "Programmers who reject sloppy AI-first defaults without rejecting all tools"
+  conscientious_coders:
+    definition: "Same family as intentional — care, attribution, show-your-work ethics"
+  vibe_coders:
+    definition: "AI-forward, flow-state, prompt-and-ship — declare it; compete on taste and power"
+    note: "Welcome if honest — man-vs-machine and dance-off optional"
+  history:
+    consciencious_objectors:
+      coinage: "Don Hopkins coined consciencious objectors at a meetup with David Ungar and Kaleida colleagues (ScriptX object-system era)"
+      meaning: "Programmers who conscientiously object to replacing hand craft with opaque automation"
+      show_tie: "david-ungar-self-moollm.yml — Self × MOOLLM + rig culture"
+  see: repo-show-format.yml#rig_spectrum
+
 audiences_if_you_stumbled_here:
   educators_and_constructionists:
     for: "The people we are inviting — and everyone who teaches with microworlds"
@@ -73,9 +97,18 @@ audiences_if_you_stumbled_here:
   general_public:
     hook: "A Repo Show — the stage is GitHub. Will Wright is the first invited guest."
     participate: "You don't need AI. Fork, homeplay, PR your show into the network."
-  hand_programmers:
-    respect: "Programming by hand without AI earns extra respect here — honesty appreciated."
-    participate: "Declare human-only. Show editor + terminal + taste. Man-vs-machine competitions welcome."
+  artisanal_programmers:
+    for: "Artisanal programmers — humans programming by hand, no AI"
+    tools: "TextEdit → Emacs → VS Code → whatever — just no AI in the loop"
+    respect: "Extra respect here — honesty appreciated. Intentional and conscientious coders welcome."
+    also: "Don coined consciencious objectors at a Kaleida meetup with David Ungar — that culture is what we teach"
+    participate: "Declare your rig class. Show editor + terminal + taste. Man-vs-machine competitions welcome."
+    proposed_show: david-ungar-self-moollm.yml
+  vibe_and_intentional:
+    vibe_coders: "AI-forward flow — declare it; dance-off optional"
+    intentional_coders: "Deliberate craft — the positive name for thoughtful anti-vibe"
+    conscientious_coders: "Show-your-work ethics; care and attribution"
+    participate: "Compare rigs honestly — coolest wins on taste, clarity, and constructionist generosity"
   ai_rig_reporters:
     hook: "We want to learn from real AI setups — not vendor demos."
     tell_us:

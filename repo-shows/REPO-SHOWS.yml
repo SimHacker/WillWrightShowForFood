@@ -47,6 +47,7 @@ templates:
 # CURRENT SEEDS (single files; plant when ready)
 seeds:
   building-the-sims.yml:        "Group: The Sims team reunion."
+  david-ungar-self-moollm.yml: "Solo: David Ungar — Self × MOOLLM reimagination; prototype inheritance; Stage Magic + Idea Scavenging; artisanal/intentional/conscientious rig culture."
   design-by-accretion.yml:      "Solo: Chris Trottier — design by accretion ↔ cauldron. FLAGSHIP."
   music-and-theory.yml:         "Group: David Levitt + Jerry Martin — music + theory."
   will-and-yoot.yml:            "Group: Will Wright + Yoot Saito — open-ended."

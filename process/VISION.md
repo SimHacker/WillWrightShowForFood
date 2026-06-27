@@ -55,9 +55,11 @@ with [SimHacker/moollm](https://github.com/SimHacker/moollm). Live conversation
 melts in the **cauldron**; **SCOOP** lifts finished technique into [`skills/`](../skills/).
 Fork them, nest them, breed them back via PR.
 
-**Hand programmers:** extra respect for honest work without AI — declare your class.
+**Hand programmers:** extra respect for **artisanal** work without AI — intentional and
+conscientious coders too. (See [David Ungar / Self × MOOLLM](repo-shows/david-ungar-self-moollm.yml)
+show seed — rig culture Don taught with Ungar at Kaleida.)
 
-**AI users:** please share your rig (tools, models, MCP, skills, repos, MOOLLM wiring,
+**Vibe coders & orchestrated rigs:** declare your class. **AI users:** please share your rig (tools, models, MCP, skills, repos, MOOLLM wiring,
 contexts) via issue or PR — we want real feedback, not vendor answers.
 
 Over time this repo becomes a **skill forest** traced to guests, shows, and

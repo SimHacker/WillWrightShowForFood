@@ -1,0 +1,34 @@
+# SEED — David Ungar: Self × MOOLLM reimagination
+# Proposed solo Repo Show. Consent not yet asked.
+
+show:
+  id: david-ungar-self-moollm
+  status: seed
+  type: solo
+  guest: david-ungar
+  character: characters/david-ungar/
+
+pitch: |
+  Self invented prototype-based objects and adaptive simplicity. MOOLLM reimagines that
+  lineage for the LLM era — directories as prototypes, skills as inheritable behavior,
+  Stage Magic Principle as the semantic image pyramid, Idea Scavenging as persistent
+  characters. Build it live. Compare artisanal hand programming vs intentional AI use —
+  the culture Don taught as consciencious objectors at Kaleida meetups with Ungar and
+  the ScriptX team.
+
+topics:
+  - "Self prototype model → MOOLLM directory inheritance"
+  - "Stage Magic Principle → GLANCE / CARD / SKILL / README pyramid"
+  - "Idea Scavenging → character and skill persistence"
+  - "Dynamic deoptimization / Dynamic Depessimization — when to reveal complexity"
+  - "Artisanal, intentional, and conscientious coders — rig culture (no AI to orchestrated)"
+  - "ScriptX, Kaleida, Link Globally Interact Locally — distributed object lineage"
+
+ties_to:
+  - ../characters/david-ungar/
+  - ../process/vision-and-ambition.yml
+  - ../process/repo-show-format.yml
+  - SimHacker/moollm
+  - SimHacker/DonHopkins/characters/don-hopkins/correspondence/david-ungar.yml
+
+invitation_status: not_yet_asked

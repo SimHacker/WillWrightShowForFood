@@ -39,7 +39,7 @@ guests:
   brad-myers: { invitation_status: not_yet_asked }
   chaim-gingold: { invitation_status: not_yet_asked, show_seed: repo-shows/chaim-gingold/ }
   david-rosenthal: { invitation_status: not_yet_asked }
-  doreen-nelson: { invitation_status: not_yet_asked }
+  david-ungar: { invitation_status: not_yet_asked, show_seed: repo-shows/david-ungar-self-moollm.yml, note: "Self × MOOLLM; Kaleida consciencious objectors meetup" }
   edd-coates: { invitation_status: not_yet_asked, show_seed: repo-shows/edd-coates/ }
   eric-hedman: { invitation_status: not_yet_asked, show_seed: repo-shows/eric-hedman/ }
   golan-levin: { invitation_status: not_yet_asked }

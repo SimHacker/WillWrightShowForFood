@@ -7,8 +7,14 @@ meta:
 
 hand_craft:
   message: |
-    Programming by hand without AI earns extra respect here. We mean it.
-    Declare human-only. Show your editor, terminal, and taste. Honesty appreciated.
+    Artisanal programmers — humans programming by hand without AI — earn extra respect here.
+    TextEdit, Emacs, VS Code, whatever editor — just no AI in the loop. Honesty appreciated.
+  also_honored:
+    intentional_coders: "Deliberate craft — positive term for thoughtful anti-vibe"
+    conscientious_coders: "Show-your-work ethics; care and attribution"
+  history:
+    consciencious_objectors: "Don coined at Kaleida meetup with David Ungar + colleagues — ScriptX era"
+    show: repo-shows/david-ungar-self-moollm.yml
 
 ai_rig:
   message: |

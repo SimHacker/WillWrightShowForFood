@@ -59,10 +59,16 @@ Run **your own show** on your branch; **PR to link** it into the [ShowMaker netw
 
 Full definition: [`process/repo-show-format.yml`](process/repo-show-format.yml)
 
-## Your rig — hand craft or AI
+## Your rig — artisanal, intentional, vibe, or orchestrated
 
-**Hand programming without AI earns extra respect here** — we mean it, and honesty is
-appreciated. Declare human-only; show your editor and your taste.
+**Artisanal programmers** (humans programming by hand, **no AI**) earn **extra respect
+here** — TextEdit to Emacs to VS Code and beyond; honesty appreciated. We also honor
+**intentional coders** and **conscientious coders** — deliberate craft and show-your-work
+ethics (Don coined **consciencious objectors** at a Kaleida meetup with **David Ungar**;
+proposed show: [Self × MOOLLM](repo-shows/david-ungar-self-moollm.yml)).
+
+**Vibe coders** — declare AI-forward flow; dance-off optional. **Orchestrated rigs** —
+tell us the stack (below).
 
 **Using AI?** We are super interested — not to sell you anything, but to learn and document
 real setups: which **tools and models**, **MCP servers**, **skills**, **repos**, whether you

@@ -33,9 +33,20 @@ rig_spectrum:
   no_ai_required: true
   hand_craft:
     respect: |
-      Programming by hand without AI earns extra respect here — we mean it, and we appreciate
-      honesty. Declare human-only; show your editor, your terminal, your taste. No performance.
+      Artisanal programmers — humans programming by hand without AI — earn extra respect here.
+      TextEdit to Emacs to VS Code and beyond; just no AI. We mean it; honesty appreciated.
+    also_honored: [intentional_coders, conscientious_coders]
+    history: |
+      Don coined consciencious objectors at a meetup with David Ungar and Kaleida colleagues
+      (ScriptX object-system era) — programmers who conscientiously object to opaque automation.
+      Proposed show: david-ungar-self-moollm.yml (Self × MOOLLM reimagination + rig culture).
     bare_hands_welcome: true
+  rig_classes:
+    artisanal: "Hand-only human programming — maximum respect when declared honestly"
+    intentional: "Deliberate craft; positive term for thoughtful anti-vibe"
+    conscientious: "Show-your-work ethics; care and attribution"
+    vibe: "AI-forward flow-state — declare class; compete on taste and power"
+    orchestrated: "Full agent stack — tell us how (see ai_rig_feedback)"
   ai_rig_feedback:
     invitation: |
       If you do use AI — we are super interested. Not to sell you anything: to learn and document
