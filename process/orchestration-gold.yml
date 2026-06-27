@@ -41,6 +41,9 @@ thoughtful_commitment:
 
 since_last_commit:
   when: "Each thoughtful COMMIT — analyze cursor-mirror from previous commit SHA to now"
+  stick_shift: |
+    If commit equals shift point — segment is one gear commitment until prompt closure;
+    see stick-shift-protocol.yml#gear_commitment
   workflow:
     - "git log -1 --format=%H — anchor"
     - "cursor-mirror timeline / thinking / tools / context-sources since anchor"

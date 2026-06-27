@@ -19,6 +19,7 @@ metaphor:
   git: "branches = parallel timelines; PRs = merge DNA"
   chat: "branches = parallel model trajectories; winner = merge or adopt lane"
   manual_transmission: "Stick shift — but you can rewind and try another gear at the same corner"
+  stick_shift_protocol: stick-shift-protocol.yml
 
 snapshot_sources:
   cursor_native:

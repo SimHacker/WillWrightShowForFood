@@ -108,8 +108,10 @@ competitions:
   stick_shift: |
     Stick shift on a winding ocean cliff — switch models efficiently through the curves.
     Premium for the hairpin, budget for the straightaway, artisanal for the final mile.
+    Every shift = thoughtful-commit — see stick-shift-protocol.yml.
     Proof lives in the Cursor spend log (timestamped shifts); cursor-mirror shows whether you
     shifted smooth or ground gears. Declare multi-model routing; compete on elegance of shifts.
+  stick_shift_protocol: stick-shift-protocol.yml
   code_that_spec:
     see: code-that-spec.yml
     tagline: |

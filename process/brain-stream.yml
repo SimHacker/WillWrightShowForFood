@@ -43,7 +43,7 @@ architecture:
     web_full: "/brain — scrollable, expandable, resummarized"
 
 event_schema:
-  types: [prompt, thinking, tool_call, tool_result, assistant_chunk, commit, shift, summary, branch_fork, branch_compare]
+  types: [prompt, thinking, tool_call, tool_result, assistant_chunk, commit, shift, summary, branch_fork, branch_compare, gear_shift, runbook_start, design_mode]
   fields:
     composer_id: string
     model: string

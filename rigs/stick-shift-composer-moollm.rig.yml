@@ -33,10 +33,10 @@ lifecycle:
       - ../moollm/.moollm/hot.yml
   use:
     workflow: |
-      Stick shift: architecture/planning on premium tier; bulk yaml/markdown/scaffold on Composer fast.
-      Export Cursor spend log — timestamped model switches are the tachometer.
-      cursor-mirror for session timeline; thoughtful-commitment for conscientious commits.
-      Code That Spec bids reference actual spend totals.
+      Stick shift protocol — see ../process/stick-shift-protocol.yml.
+      Every shift = thoughtful-commitment (gear recorded in commit). Commit to model until
+      prompt closure; scout in design mode (premium) → runbooks → execute runbook in chosen
+      gear (many prompts per runbook, not one). Spend log = tachometer; cursor-mirror = black box.
     contexts: [wwsff_priming, code_that_spec, ai_offs, show_harvest]
   replicate:
     checklist:
@@ -86,4 +86,5 @@ see_also:
   - ../process/ai-offs.yml
   - ../process/showmaker-network.yml
   - ../process/manual-transmission.yml
+  - ../process/stick-shift-protocol.yml
   - ../process/brain-stream.yml

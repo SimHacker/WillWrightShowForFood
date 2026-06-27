@@ -1,0 +1,109 @@
+# STICK SHIFT PROTOCOL — every shift is a commit; every commit can be a shift
+# Scooped: 2026-06-27 — gear commitment until prompt closure; runbooks; GPS through problem space
+
+meta:
+  id: stick-shift-protocol
+  also_called: [manual_transmission_driving, gear_commit_commits]
+  status: seed
+  type: [orchestration_lab, ai_off, rig_discipline]
+  tagline: "Commit when you shift; shift when you commit — sculpt each prompt to its gear"
+
+pitch: |
+  Naturally every stick shift can be a commit and a shift point. You commit to a model until
+  the current prompt reaches closure — sculpt the work to tightly envelope the task, tokens,
+  and budget. Upshift for hills, downshift for curves, pop into design mode with expensive
+  models to scout the surrounding design space, plot an efficient or pleasurable GPS path,
+  write runbooks for lower-power models, then execute each runbook in the gear you chose —
+  steering through many prompt iterations per runbook, not one prompt per runbook.
+
+commit_equals_shift:
+  rule: "thoughtful-commitment at each gear change — shift point = commit SHA"
+  commit_records:
+    - model_tier_and_name
+    - runbook_id_if_any
+    - prompt_closure_criteria
+    - reason — hill, curve, design_recon, runbook_start, merge_lane, flair
+    - spend_slice_since_last_shift
+    - "Thinking: cursor-mirror://composer/event-range"
+  see: orchestration-gold.yml#since_last_commit
+
+gear_commitment:
+  what: "Lock model M until this prompt's task envelope closes"
+  envelope:
+    sculpt: "Tight fit — task scope, token budget, time box, definition of done"
+    closure: "Prompt complete when runbook step done, file shipped, or explicit handoff"
+  no_grind: "Premium model for yaml indentation = riding the clutch — shift down or artisanal"
+
+driving_metaphor:
+  upshift: "Straightaway — cheap/fast model, bulk scaffold, known pattern"
+  downshift: "Hairpin — premium model, nasty bug, architecture fork"
+  hill: "Climb — more context, harder reasoning, may need premium torque"
+  curve: "Slow in, fast out — read road (context-sources), shift at apex"
+  design_mode:
+    what: "Expensive model reconnaissance — survey surrounding design space"
+    outputs: [design_docs, yaml_girders, runbooks, route_options]
+    not: "Implementation — scout then hand off"
+  gps_navigation:
+    efficient: "Minimum tokens/spend to merge — Manual Transmission bid"
+    pleasurable: "Scenic route — extra docs, fan service, driver flourish"
+    plot: "Choose route before descent — runbooks are turn-by-turn"
+
+runbooks:
+  definition: "Turn-by-turn instructions for a model lane — NOT one prompt per runbook"
+  journey: |
+    Implementing a runbook takes many prompt iterations. You steer all along the journey
+    with the model you chose for that runbook. Shift only when runbook completes or class
+    rules allow mid-runbook shift (see class_rules).
+  origin: "Design mode produces runbooks for lower-power models"
+  shape: "yaml CARD, checklist, runbook.md — whatever lower tier can follow"
+  proof: "Spend log shows runbook id spans multiple bubbles on one model tier"
+
+workflow_phases:
+  - id: scout
+    gear: premium
+    mode: design_mode
+    deliver: [route_choice, design_docs, runbooks]
+  - id: descend
+    gear: per_runbook
+    mode: implementation
+    deliver: "Execute runbook N with chosen model — many prompts, one gear"
+  - id: shift
+    action: thoughtful-commitment
+    records: shift_point manifest in commit message
+  - id: merge
+    gear: any
+    deliver: PR + orchestration gold bundle
+
+class_rules_vs_driver_flair:
+  measurement_class:
+    goal: "Clean signal — fewer shifts, tight envelopes, fair model capacity comparison"
+    judges: spreadsheet, rubric, experiment COMPARE
+  flair_class:
+    goal: "AI race driver style for the fans — flourish, camp, alma mater model pick"
+    judges: Slats, audience, brain-stream aesthetics
+    examples:
+      - "Use the model from your alma mater — go Terps! (driver choice, declare it)"
+      - "Scenic GPS route with extra narrative commits"
+  declare: "Same track — declare measurement vs flair emphasis in rigs/*.rig.yml"
+
+orchestration_gold:
+  each_shift_commit_adds:
+    - labeled gear segment with spend slice
+    - runbook id + prompt count in segment
+    - design_mode scout artifacts linked to execution commits
+  trains: "When to shift, which model for which runbook phase — Steve Kommrusch logs × richer"
+  see: orchestration-gold.yml
+
+ties_to:
+  - manual-transmission.yml
+  - model-branching.yml
+  - orchestration-gold.yml
+  - ai-offs.yml
+  - brain-stream.yml
+  - ../rigs/stick-shift-composer-moollm.rig.yml
+  - SimHacker/moollm/skills/thoughtful-commitment
+  - SimHacker/moollm/skills/cursor-mirror
+
+see_also:
+  - showmaker-network.yml#competitions
+  - repo-show-format.yml#rig_spectrum

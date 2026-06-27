@@ -104,7 +104,9 @@ bid_examples:
 rig_classes_same_track:
   artisanal: "Zero tokens — smallest model is you"
   single_gear_mini: "One cheap/fast model, no shifts — purity play"
-  stick_shift: "Mini for bulk, premium once for hairpin turns — proof in spend timestamps"
+  stick_shift:
+    see: stick-shift-protocol.yml
+    note: "Every shift = commit; runbooks span many prompts; design mode → descent"
   bull_ride: "One tier through hallucination hairpins — retries are costume"
   orchestrated: "Many models + MCP — judged on efficiency per complexity, not raw spend"
 
