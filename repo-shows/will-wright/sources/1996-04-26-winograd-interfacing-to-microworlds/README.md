@@ -32,8 +32,11 @@ After the postmortems + audience Q&A, a student asked the **$5-billion question*
 epic **Dollhouse** demo. The exact exchange:
 
 > **Student:** What projects are you working on now… what projects or models had you considered before that were kind of interesting that you didn't do?
+>
 > **Will Wright:** You mean like what systems have I considered modeling?
+>
 > **Student:** Right. And also what systems are you currently working on, if you can talk about them?
+>
 > **Will Wright:** Oh, God… Okay, well one thing we're working on, is a — we've been kind of interested in our company for a long time about the idea of **data portability**. Really, let me back up just a little bit here, and this might be a little bit more of an answer than you were looking for, but…
 
 …and then: *"This is a game I call Dollhouse. And if this looks familiar, it's because I've just loaded a SimCity file into here."* The birth of The Sims, in public, answering a student's question.
