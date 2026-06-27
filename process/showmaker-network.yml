@@ -127,7 +127,7 @@ competitions:
     challenges: [design_challenge, code_that_spec_mini, stiletto_sprint, manual_transmission, lip_sync_for_your_commits, harvest_runway]
   manual_transmission:
     see: manual-transmission.yml
-    contest_prompt: "What's the lowest cost / smallest model you can solve the problem with?"
+    contest_prompt: "What's the smallest model — or fewest tokens — you can code the spec with?"
     tagline: "Rubik's-cube scoring — many rubrics at once; spend CSV = piss test"
     origin: "Scooped twice from creative misunderstanding — Don may mumble on purpose"
     overlay: brain-stream.yml

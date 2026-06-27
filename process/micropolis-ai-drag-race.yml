@@ -36,7 +36,7 @@ challenges:
     what: "Model-switch course — spend log proves clean shifts through the cliff road"
   manual_transmission:
     see: manual-transmission.yml
-    tagline: "What's the lowest cost / smallest model you can solve the problem with?"
+    tagline: "What's the smallest model — or fewest tokens — you can code the spec with?"
     audience_chant: "CODE THAT SPEC!!!!!"
     overlay: brain-stream.yml
   bull_ride_ball:

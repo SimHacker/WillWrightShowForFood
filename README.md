@@ -33,7 +33,7 @@ curb appeal up top, **brutalist GitHub underneath** (yaml girders, verify CI, re
 | **Rig schema** | [`schemas/rig-schema.yml`](schemas/rig-schema.yml) · [`rigs/`](rigs/) (+ **SETUP.md** per rig) |
 | **Micropolis AI Drag Race** | [`process/DRAG-RACE.md`](process/DRAG-RACE.md) · [`process/micropolis-ai-drag-race.yml`](process/micropolis-ai-drag-race.yml) |
 | **Retrocomputing Drive** | [`process/challenges/RETROCOMPUTING.md`](process/challenges/RETROCOMPUTING.md) · Lars + Thomas |
-| **Manual Transmission** (smallest model that ships) | [`process/manual-transmission.yml`](process/manual-transmission.yml) |
+| **Manual Transmission** (fewest tokens to code the spec) | [`process/manual-transmission.yml`](process/manual-transmission.yml) |
 | **Orchestration gold** (training traces + thoughtful commits) | [`process/orchestration-gold.yml`](process/orchestration-gold.yml) |
 | **Homefun grading** (Micropolis Class — match commit to thinking) | [`process/homefun-grading.yml`](process/homefun-grading.yml) |
 | **Model branching** (fork chat, compare trajectories) | [`process/model-branching.yml`](process/model-branching.yml) |
@@ -84,8 +84,8 @@ in the **cauldron** and harvested into reusable **skills and code**, breeding te
 the repo through git branches, merges, and nested worlds.
 
 Some episodes can instead be playful game shows — **[Code That Spec](process/code-that-spec.yml)**,
-**[Manual Transmission](process/manual-transmission.yml)** (*what's the smallest model that
-ships?*), and the **[Micropolis AI Drag Race](process/DRAG-RACE.md)** (rig costumes welcome; Slats
+**[Manual Transmission](process/manual-transmission.yml)** (*what's the smallest model — or fewest
+tokens — you can code the spec with?*), and the **[Micropolis AI Drag Race](process/DRAG-RACE.md)** (rig costumes welcome; Slats
 judges the werk). Those are optional fun we can do — not the point.
 
 Run **your own show** on your branch; **PR to link** it into the [ShowMaker network](process/showmaker-network.yml).

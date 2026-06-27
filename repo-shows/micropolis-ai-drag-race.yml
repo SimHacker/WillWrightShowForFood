@@ -10,12 +10,12 @@ show:
 
 pitch: |
   Flagship variety format: rig personas compete in design challenges, Code That Spec
-  minis, Stiletto Sprints, Manual Transmission (smallest model that ships), Retrocomputing
+  minis, Stiletto Sprints, Manual Transmission (smallest model / fewest tokens to code the spec), Retrocomputing
   Drive (MACLISP on ITS, Apple ][, Lisp Machine Hack-Off Symbolics vs LMI), and
   lip-sync-for-your-commits finales. Cursor spend CSV is the piss test. Multi-rubric
   scoring via MOOLLM rubric + experiment. Winners merge to skills/ + packages/; werk.
 
-contest_prompt: "What's the lowest cost / smallest model you can solve the problem with?"
+contest_prompt: "What's the smallest model — or fewest tokens — you can code the spec with?"
 see: ../process/manual-transmission.yml
 
 challenges_rotation:

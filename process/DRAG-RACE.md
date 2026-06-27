@@ -44,7 +44,7 @@ lip-sync thoughtful commits, merge technique DNA back into the organism. Declare
 | `code_that_spec_mini` | see [code-that-spec.yml](code-that-spec.yml); audience_chant: CODE THAT SPEC!!!!! |
 | `stiletto_sprint` | what: Shortest honest token/time bid that still ships — heels optional, constraint mandatory |
 | `stick_shift_slalom` | what: Model-switch course — spend log proves clean shifts through the cliff road |
-| `manual_transmission` | see [manual-transmission.yml](manual-transmission.yml); tagline: What's the lowest cost / smallest model you can solve the problem with?; audience_chant: CODE THAT SPEC!!!!!; overlay: brain-stream.yml |
+| `manual_transmission` | see [manual-transmission.yml](manual-transmission.yml); tagline: What's the smallest model — or fewest tokens — you can code the spec with?; audience_chant: CODE THAT SPEC!!!!!; overlay: brain-stream.yml |
 | `bull_ride_ball` | what: Wrangle one cheap model through hallucination chaos — show the retries, werk anyway |
 | `artisanal_eleganza` | what: Zero tokens — hand-crafted yaml so fierce it doesn't need AI; flair_variant: Or apple2-drive — APPLESOFT/INTEGER BASIC on the ][ — see challenges/apple2-drive.yml |
 | `apple2_drive` | see [challenges/apple2-drive.yml](challenges/apple2-drive.yml); family: challenges/retrocomputing-drive.yml; tagline: Apple ][ instance — declare languages, tools, platform, emulator; example_rig: ../rigs/apple2-flair-lap.rig.yml |

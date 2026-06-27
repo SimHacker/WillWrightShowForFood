@@ -14,7 +14,7 @@ for training models to orchestrate multiple LLMs. This shit is GOLD.
 
 ## Tagline
 
-*What's the lowest cost / smallest model you can solve the problem with?*
+*What's the smallest model — or fewest tokens — you can code the spec with?*
 
 ## Meta
 
@@ -24,7 +24,7 @@ for training models to orchestrate multiple LLMs. This shit is GOLD.
 | **status** | seed |
 | **answer** | Declare class, prove with spend, score on many rubrics at once, let Slats werk. |
 
-**Contest Prompt:** What's the lowest cost / smallest model you can solve the problem with?
+**Contest Prompt:** What's the smallest model — or fewest tokens — you can code the spec with?
 
 Not meta-advice. Not a blog title. The on-air challenge. Same spec CARD for everyone.
 Compete on as many dimensions as you dare — measurable and subjective — at the same time.

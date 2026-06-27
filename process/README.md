@@ -56,7 +56,7 @@ Schema: [`../schemas/markup-facade.yml`](../schemas/markup-facade.yml)
 
 - [`DRAG-RACE.md`](DRAG-RACE.md) — Micropolis AI Drag Race variety show
 - [`AI-OFFS.md`](AI-OFFS.md) — spend proof, post-run forensics
-- [`MANUAL-TRANSMISSION.md`](MANUAL-TRANSMISSION.md) — smallest model that ships
+- [`MANUAL-TRANSMISSION.md`](MANUAL-TRANSMISSION.md) — smallest model / fewest tokens to code the spec
 - [`stick-shift-protocol.yml`](stick-shift-protocol.yml) — shift = commit
 - [`rig-feedback.yml`](rig-feedback.yml) — declare your stack
 - [`../rigs/`](../rigs/) — rig yaml + SETUP DNA

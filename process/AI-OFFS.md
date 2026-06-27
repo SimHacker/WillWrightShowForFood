@@ -73,7 +73,7 @@ GitHub logs trained bug-fix models (Steve Kommrusch); our logs + thoughtful comm
 | **manual_transmission** | manual-transmission.yml |
 | **chant** | CODE THAT SPEC!!!!! |
 | **drag_race** | Start your engines — may the best rig werk, commit, and merge |
-| **manual_transmission_prompt** | What's the lowest cost / smallest model you can solve the problem with? |
+| **manual_transmission_prompt** | What's the smallest model — or fewest tokens — you can code the spec with? |
 
 ## Brain Stream
 
