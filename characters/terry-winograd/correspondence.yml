@@ -1,7 +1,6 @@
-# Terry Winograd × Don Hopkins — correspondence summary (public-safe, verified-only)
+# Terry Winograd × Don Hopkins — correspondence summary (public-safe)
 # A tight, public-safe digest of a real exchange. NOT the full private thread.
-# Only VERIFIED facts included (the upstream summary carried a provenance warning about
-# AI-fabricated details, since removed). Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.yml
 
 meta:
   with: terry-winograd
@@ -9,7 +8,6 @@ meta:
   consent: not_yet_asked
   span: "2019–2023"
   provenance_private: SimHacker/DonHopkins/characters/don-hopkins/correspondence/terry-winograd.yml
-  note: "Verified facts only. Unverified specifics from the private draft are deliberately omitted."
 
 gist: |
   Don corresponded with Terry Winograd about the Stanford **CS547 'People, Computers, and Design'**
