@@ -11,6 +11,7 @@ Browse without a GitHub account. Clone to play along.
 
 | What | Where |
 |------|--------|
+| **Repo Show format** | [`process/repo-show-format.yml`](process/repo-show-format.yml) |
 | **Setup (dev)** | [**SETUP.md**](SETUP.md) |
 | **The show pitch** | [`repo-shows/will-wright/README.md`](repo-shows/will-wright/README.md) |
 | **1996 Winograd talk** (centerpiece) | [`repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/`](repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/) |
@@ -27,6 +28,16 @@ A **Repo Show**: live conversation whose stage is *this repo*, following through
 
 **Will Wright — first guest, topic-less.** Orbit the 1996 Dollhouse talk; crown jewel = **data portability**
 (Proxi ↔ Sims ↔ …).
+
+## How a Repo Show runs
+
+Announced ahead of time (e.g. to Hacker News) as a **pointer to this repo** — people **RTFR**
+(read the repo), open it in their own AI tools, and follow along live. The guest is introduced
+as a **Repo Man**. The audience incarnates consensual characters and submits questions as PRs;
+**Don Philahue** surfaces the relevant ones live. Design ideas get melted (**cauldron**) into
+MOOLLM skills and built in Cursor.
+
+Full definition + cauldron scoop semantics: [`process/repo-show-format.yml`](process/repo-show-format.yml)
 
 ## Polyglot monorepo
 

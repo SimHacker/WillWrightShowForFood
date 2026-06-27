@@ -41,12 +41,12 @@ he pulls become the season — each one a future show. (See `episodes.yml`.)
 
 ## How it runs
 
-Announced ahead of time (e.g. to Hacker News) as a pointer to this repo — people
-**RTFR** (read the repo), open it in their own AI tools, and follow along live.
-Will is introduced as a **Repo Man**. The audience can incarnate their own
-consensual characters and submit questions as PRs; **Don Philahue** (the
-Phil-Donahue-homage audience-wrangler) surfaces the relevant ones live. Whatever
-design ideas come up get melted (cauldron) into MOOLLM skills + built in Cursor.
+See **[`../../process/repo-show-format.yml`](../../process/repo-show-format.yml)** — canonical
+definition (HN → RTFR → Repo Man → audience character PRs → Don Philahue → cauldron → skills + Cursor).
+
+Short version: announced as a pointer to this repo; people RTFR and follow in their own AI tools;
+Will introduced as a **Repo Man**; audience questions via PRs; **Don Philahue** wrangles live;
+ideas melted into MOOLLM skills and built in Cursor.
 
 ## Status
 

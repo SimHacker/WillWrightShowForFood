@@ -1,0 +1,63 @@
+# REPO SHOW FORMAT — canonical definition
+# Synced from repo-shows/will-wright/README.md#how-it-runs (2026-06-27)
+# Facade: ../README.md | skill: SimHacker/moollm + DonHopkins skills/repo-show
+
+meta:
+  id: repo-show-format
+  canonical: true
+  play_lift_learn: https://github.com/SimHacker/moollm/tree/main/skills/play-learn-lift
+  cauldron: https://github.com/SimHacker/moollm/tree/main/skills/cauldron
+
+how_it_runs:
+  announce: "Ahead of time (e.g. Hacker News) — a pointer to THIS repo, not a wall of text"
+  rtfr: "Read The Fucking Repo — audience opens the repo in their own AI tools before and during air"
+  guest_intro: "Guest introduced as a Repo Man / Repo Woman (Alex Cox homage — come on, let's go)"
+  audience:
+    - "Incarnate consensual characters (representation-ethics)"
+    - "Submit questions as PRs — pre-loaded question-advertisements in character dirs"
+    - "Don Philahue surfaces relevant questions live (Phil-Donahue homage audience-wrangler)"
+  implement: "Design ideas → cauldron → MOOLLM skills + built in Cursor on stream"
+  clocks: [before_async_PRs, during_Twitch, after_harvest_PRs]
+
+canonical_prose: |
+  Announced ahead of time (e.g. to Hacker News) as a pointer to this repo — people
+  RTFR (read the repo), open it in their own AI tools, and follow along live.
+  Will is introduced as a Repo Man. The audience can incarnate their own
+  consensual characters and submit questions as PRs; Don Philahue (the
+  Phil-Donahue-homage audience-wrangler) surfaces the relevant ones live. Whatever
+  design ideas come up get melted (cauldron) into MOOLLM skills + built in Cursor.
+
+cauldron_scoop:
+  insight: |
+    You can scoop many types of things OUT of a cauldron — not only LADLE.
+    MELT/STIR grows the soup; SCOOP selects what leaves the pot and in what form.
+  operations:
+    harvest:
+      what: "Lift finished artifacts out — skills, playbooks, design docs, sub-cauldrons"
+      play_lift_learn: LIFT
+    filter:
+      what: "Remove redundancy, stale claims, noise — reduce soup toward concentrate"
+    structure:
+      what: "Create and reinforce skeleton — indexes, CARD/GLANCE pyramids, cross-links"
+    maintain:
+      what: "Invalidate/recalculate when code or facts drift; ANCHOR + SCRY loops"
+    summarize:
+      what: "Semantic Image Pyramid — GLANCE → CARD → SKILL → README extractions"
+    remove:
+      what: "Scoop out spent ingredients — walked-back ideas archived, not deleted silently"
+  outputs:
+    - MOOLLM skills (moollm-enabled, publishable SKILL.md + CARD.yml)
+    - design documents and playbooks
+    - sub-cauldrons (nested monoliths for a subtree of the plan)
+    - crystallized wisdom (DESIGN-WISDOM, RUNBOOKS, OPEN-QUESTIONS)
+    - working code (Cursor executors pick up ladled playbooks)
+
+play_lift_learn:
+  play: "Live jam + audience homeplay + RTFR — the show and the repo"
+  lift: "Cauldron SCOOP — especially skills and reusable design docs out of the melt"
+  learn: "Community forks starting points; methodology spreads; constructionist payoff"
+
+see_also:
+  - ../repo-shows/will-wright/README.md
+  - ../skills/README.md
+  - sync-with-donhopkins.yml

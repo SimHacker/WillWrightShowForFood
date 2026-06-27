@@ -12,6 +12,7 @@ status:
 read_order:
   - README.md
   - SETUP.md
+  - process/repo-show-format.yml
   - repo-shows/will-wright/README.md
   - CARD.yml
 
