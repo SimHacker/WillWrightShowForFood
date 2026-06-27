@@ -1,27 +1,29 @@
 # skills/
 
-**The big harvest.** MOOLLM skills born from Repo Shows — the durable artifact
-that outlives any single stream or thread.
+**The big harvest** — MOOLLM skills born from Repo Shows.
 
-Same pyramid as [moollm/skills/](https://github.com/SimHacker/moollm/tree/main/skills):
+## Pyramid (read in order)
 
-`GLANCE.yml` → `CARD.yml` → `SKILL.md` → `README.md`
+| Level | File |
+|-------|------|
+| Sniff | [`GLANCE.yml`](GLANCE.yml) |
+| Registry | [`INDEX.yml`](INDEX.yml) |
+| **Repo Show (live)** | [`repo-show/`](repo-show/) — GLANCE → CARD → SKILL → README |
 
-**Pipeline:** live show → cauldron melt → **SCOOP** (play-lift-learn) → skill lands here → PR breeds it into the network.
+## Pipeline
 
-**Compose with moollm** — do not fork core skills. Add here only skills harvested from shows
-(soul-bridge, pray-to-play, hosted-content-cards, repo-show slices, …).
+`show → cauldron SCOOP → skill lands here → PR breeds network`
 
-**Manual Transmission / ai-offs** compose with upstream:
-[`thoughtful-commitment`](https://github.com/SimHacker/moollm/tree/main/skills/thoughtful-commitment)
-(aka conscientious commits — WHY + thinking-ref),
-[`rubric`](https://github.com/SimHacker/moollm/tree/main/skills/rubric),
-[`experiment`](https://github.com/SimHacker/moollm/tree/main/skills/experiment),
-[`evaluator`](https://github.com/SimHacker/moollm/tree/main/skills/evaluator),
-[`cursor-mirror`](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror)
-— see [`process/orchestration-gold.yml`](../process/orchestration-gold.yml) (Steve Kommrusch lineage).
+Compose with [`SimHacker/moollm`](https://github.com/SimHacker/moollm) — do not fork core skills.
 
-Vision: [`../process/vision-and-ambition.yml`](../process/vision-and-ambition.yml#skills)
+## Transplanted
 
-The [`repo-show`](https://github.com/SimHacker/DonHopkins/tree/main/skills/repo-show) skill
-lives in DonHopkins private tree today; public distillations may land here after harvest.
+The **`repo-show`** orchestrator now lives here as the **public live instance** (lineage: DonHopkins private tree). Previously only a pointer stub.
+
+## Upstream skills (ai-offs / drag race)
+
+thoughtful-commitment · rubric · experiment · cursor-mirror · cauldron
+
+See [`../process/orchestration-gold.yml`](../process/orchestration-gold.yml)
+
+↑ [`../README.md`](../README.md)

@@ -1,0 +1,28 @@
+# Apple ][ emulator stack — public pointer + show-challenge hook
+# Authoritative layers: SimHacker/DonHopkins/.../apple2-emulator-stack.yml
+# WWSFF does not duplicate — see process/live-repo.yml
+
+meta:
+  id: apple2-emulator-stack
+  status: pointer
+  public_challenge: challenges/apple2-drive.yml
+
+summary: |
+  Layered stack: L0 raw disk I/O → L1 DOS/ProDOS/UCSD → L2 per-game drivers.
+  apple2js (hackable TS) for live hot-write. Emularity/MAME complementary.
+  Show: retrocomputing-drive family — rig declares languages, tools, platform, emulator.
+
+show:
+  challenge_family: challenges/retrocomputing-drive.yml
+  flagship_instance: challenges/apple2-drive.yml
+  slats: "RoboResurrection may run legacy Slats in emulator — optional segment"
+
+authoritative:
+  repo: SimHacker/DonHopkins
+  path: projects/micropolis-moollm/process/apple2-emulator-stack.yml
+
+ties:
+  - challenges/retrocomputing-drive.yml
+  - challenges/apple2-drive.yml
+  - ../repo-shows/will-wright/slats-reincarnation.yml
+  - ../characters/thomas-cherryhomes/

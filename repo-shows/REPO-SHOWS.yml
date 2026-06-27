@@ -18,8 +18,8 @@ collection:
 
 # IMPLICIT INHERITANCE — the key declaration
 inherits_from:
-  skill: repo-show                # → /skills/repo-show/ (CARD.yml, SKILL.md, GLANCE.yml)
-  path: ../../../skills/repo-show
+  skill: repo-show
+  path: ../skills/repo-show
   mode: implicit
   declaration: |
     EVERY file and directory in this collection (repo-shows/) IS AN INSTANCE of the
@@ -88,6 +88,6 @@ seeds:
 producer_role: "Each aired show needs a PRODUCER: pest control (moderation/good-faith) + surfacing good chat/issues to the hosts. See ../process/design-in-public.yml github_native.producer."
 
 see_also:
-  - ../../../skills/repo-show/CARD.yml
-  - ../process/design-in-public.yml
+  - ../skills/repo-show/CARD.yml
+  - ../process/FORMAT.md
   - INDEX.yml

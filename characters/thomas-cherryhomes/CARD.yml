@@ -1,0 +1,122 @@
+# CARD — Thomas Cherryhomes (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: thomas-cherryhomes
+  name: Thomas Cherryhomes
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Thomas Cherryhomes
+  title: Bus Over IP
+  rarity: rare
+  signifier: 📡
+  flavor: Put the internet on retro machines — politely.
+abilities:
+- id: FUJINET-BRIDGE
+  name: FujiNet Bridge
+  type: activated
+  mana: '{U}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: fujiNetBridge
+    signature: 'fujiNetBridge(host, retro) → N: device online'
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Attach modern network services to classic hardware.
+  verifiable: FujiNet co-founder; fujinet.online
+  combos_with:
+  - LARS-BOOT-ITS
+  - STEVE-DISK-II
+- id: IRATA-PLATO
+  name: IRATA PLATO
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: irataOnline
+    signature: irataOnline(terminal) → PLATO session
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Host a living PLATO-style community on the net.
+  verifiable: irata.online
+  combos_with: []
+- id: GAME-LOBBY
+  name: Game Lobby
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: crossPlatformLobby
+    signature: crossPlatformLobby(machines[]) → shared high-score room
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Let unlike consoles agree on one lobby.
+  verifiable: FujiNet Game Lobby (public descriptions)
+  combos_with: []
+- id: FIRMWARE-KINDNESS
+  name: Firmware Kindness
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: firmwareKindness
+    signature: firmwareKindness(bugReport) → reproducible fix
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Debug real hardware with patient cross-platform C.
+  verifiable: Public GitHub; community role
+  combos_with: []
+- id: REAL-IRON-WIRE
+  name: Real Iron Wire
+  type: activated
+  mana: '{G}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: realIronOnWire
+    signature: realIronOnWire(apple2|atari) → live net demo
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Pair emulated AI Lab with real ][ on the wire.
+  verifiable: Invitation pairing with Lars Brinkhoff
+  combos_with:
+  - LARS-MAKE-IT-SO
+- id: RETRO-PRESERVE
+  name: Retro Preserve
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: retroPreserve
+    signature: retroPreserve(platform) → open toolchain path
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Document how the next person boots without you.
+  verifiable: Retrocomputing drive ethos
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

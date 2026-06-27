@@ -20,7 +20,7 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/thomas-cherryhomes/
-
+  paired_guest: lars-brinkhoff
 
 bio:
   summary: "**Thomas Cherryhomes** (@tschak / tschak909) — Retrocomputing hacker/engineer; firmware developer and co-founder of **FujiNet**, the open-source software-defined network peripheral that puts the *internet* on retro machines (Atari 8-bit → Apple II, Coleco Adam, MS-DOS RS-232, Atari 2600, MSX, Intellivision, TRS-80 CoCo, and more). \"Bus over IP,\" an `N:` network device, a cross-platform **Game Lobby**, high-score servers, and a disk-less **NOS**. Also runs **IRATA.ONLINE** (a PLATO service) and"
@@ -34,3 +34,8 @@ sources:
     - https://fujinet.online
   papers: []
   blogs: []
+
+ties_to:
+  - ../lars-brinkhoff/CHARACTER.yml
+  - ../../process/pdp10-its-stack.yml
+  - ../../process/challenges/pdp10-maclisp-drive.yml

@@ -1,0 +1,105 @@
+# CARD — Golan Levin (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: golan-levin
+  name: Golan Levin
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Golan Levin
+  title: Interactive Art Engineer
+  rarity: uncommon
+  signifier: 🎨
+  flavor: Engineering and aesthetics in the same commit.
+abilities:
+- id: INTERACTIVE-ART
+  name: Interactive Art
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: interactiveArt
+    signature: interactiveArt(sketch) → audience participates
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Build pieces where the viewer completes the work.
+  verifiable: CMU electronic art practice
+  combos_with: []
+- id: STUDIO-INQUIRY
+  name: STUDIO Inquiry
+  type: activated
+  mana: '{G}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: studioInquiry
+    signature: studioInquiry(student) → ambitious prototype
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Run a studio that funds weird beautiful demos.
+  verifiable: Frank-Ratchye STUDIO director role
+  combos_with: []
+- id: INTERVAL-ROUEN
+  name: Rouen Revisited
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: rouenRevisited
+    signature: rouenRevisited(capture) → light stage heritage
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Connect art history to modern capture rigs.
+  verifiable: Interval era work with Paul Debevec
+  combos_with:
+  - PAUL-LIGHT-STAGE
+- id: TEACH-BY-SHOWING
+  name: Teach by Showing
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: teachByShowing
+    signature: teachByShowing(live) → code as performance
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Live-code visuals without losing the poetry.
+  verifiable: Public lectures
+  combos_with: []
+- id: TOOLMAKER-ARTIST
+  name: Toolmaker Artist
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: toolmakerArtist
+    signature: toolmakerArtist(tool) → others make art next
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Ship tools, not just pieces.
+  verifiable: Creative coding tools lineage
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

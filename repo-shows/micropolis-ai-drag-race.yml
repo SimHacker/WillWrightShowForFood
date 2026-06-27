@@ -10,7 +10,8 @@ show:
 
 pitch: |
   Flagship variety format: rig personas compete in design challenges, Code That Spec
-  minis, Stiletto Sprints, Manual Transmission (smallest model that ships), and
+  minis, Stiletto Sprints, Manual Transmission (smallest model that ships), Retrocomputing
+  Drive (MACLISP on ITS, Apple ][, Lisp Machine Hack-Off Symbolics vs LMI), and
   lip-sync-for-your-commits finales. Cursor spend CSV is the piss test. Multi-rubric
   scoring via MOOLLM rubric + experiment. Winners merge to skills/ + packages/; werk.
 
@@ -23,6 +24,10 @@ challenges_rotation:
   - stiletto_sprint
   - stick_shift_slalom
   - manual_transmission
+  - retrocomputing_drive
+  - apple2_drive
+  - pdp10_maclisp_drive
+  - lisp_machine_hack_off
   - bull_ride_ball
   - artisanal_eleganza
   - lip_sync_for_your_commits
@@ -43,6 +48,12 @@ ties_to:
   - ../process/ai-offs.yml
   - ../process/manual-transmission.yml
   - ../process/brain-stream.yml
+  - ../process/challenges/retrocomputing-drive.yml
+  - ../process/challenges/apple2-drive.yml
+  - ../process/challenges/pdp10-maclisp-drive.yml
+  - ../process/challenges/lisp-machine-hack-off.yml
+  - ../rigs/lisp-machine-symbolics.rig.yml
+  - ../rigs/lisp-machine-lmi.rig.yml
   - ../characters/slats/judge-rubric.yml
   - ../rigs/stick-shift-composer-moollm.rig.yml
   - game-show-wigcercize.yml

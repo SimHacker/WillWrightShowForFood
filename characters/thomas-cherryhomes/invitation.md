@@ -17,6 +17,8 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** Retrocomputing hacker/engineer; firmware developer + co-founder of FujiNet; IRATA.ONLINE (PLATO). Cross-platform C; community-builder; preservationist.
 
+**Paired guest:** [**Lars Brinkhoff**](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/lars-brinkhoff/invitation.md) — PDP-10/ITS restoration; we challenge him to **make it so** for MACLISP on emulated iron. Your FujiNet/IRATA tree fort meets his AI Lab boot — natural tag-team for **Retrocomputing Drive**.
+
 **Materials:** [`repo-shows/thomas-cherryhomes/`](../../repo-shows/thomas-cherryhomes/)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).

@@ -1,0 +1,60 @@
+# LISP MACHINE STACK — public pointer + hack-off hook
+# Symbolics Genera vs LMI Lambda — both fork MIT AI Lab Lisp Machine lineage
+# WWSFF does not duplicate install runbooks — declare rig + obey license of your lane
+
+meta:
+  id: lisp-machine-stack
+  status: pointer
+  public_challenge: challenges/lisp-machine-hack-off.yml
+
+summary: |
+  Lisp Machines: tagged architecture, incremental GC, Zmacs, Dynamic Windows, Flavors.
+  Symbolics (Genera, Ivory) vs LMI (Lambda, NuBus) — the battle continues from the
+  MIT CADR era. Emulators exist at multiple tiers; pick your vendor lane honestly.
+
+lineage:
+  mit: "CADR → commercial forks (Symbolics, LMI, TI Explorer)"
+  common_ancestor: "MIT AI Lab Lisp Machine microcode + OS ideas"
+
+emulators:
+  mit_cadr:
+    project: usim
+    repo: https://github.com/unya/usim
+    license: open
+    note: "MIT CADR — ancestor hardware; good heritage boot, not Genera/LMI proper"
+  lmi_lambda:
+    project: LambdaDelta
+    repo: https://github.com/salewski/ld-lambda-delta
+    license: open
+    author: Daniel Seagraves
+    note: "LMI Lambda — SDU telnet + graphical console, Zmacs, Release 5 class images"
+    docs: https://lisp-machine.org/hacking-lambdadelta-an-lmi-lambda-emulator/
+  symbolics_genera:
+    tiers:
+      portable_genera:
+        vendor: symbolics-dks.com
+        license: proprietary_commercial
+        note: "Portable Genera — Ivory VLM on Linux/macOS x86-64/Arm64 (current product)"
+      open_genera_vlm:
+        name: "Virtual Lisp Machine (Open Genera 2)"
+        license: murky_community
+        note: "Community x86-64 ports (Brad Parker et al.), og2vlm on Debian; world files + NFS/TAP setup"
+        repos:
+          - https://github.com/JMlisp/og2vlm
+        caution: "Copyright/licensing ambiguous — show contestants declare compliance; no piracy on air"
+  related_not_vendor_battle:
+    medley_interlisp:
+      note: "Xerox Interlisp-D lineage — Maiko VM, open source; excellent Lisp history, not Symbolics-vs-LMI"
+
+show:
+  challenge: challenges/lisp-machine-hack-off.yml
+  tagline: "Lisp Machine Hack-Off — Symbolics vs LMI: the battle continues"
+
+ties:
+  - challenges/lisp-machine-hack-off.yml
+  - challenges/retrocomputing-drive.yml
+  - pdp10-its-stack.yml
+
+see_also:
+  - https://lisp-machine.org/
+  - SimHacker/DonHopkins/characters/margaret-minsky/correspondence/memory-lane-2019.yml

@@ -1,0 +1,9 @@
+# WillWrightShowForFood — hello bots
+# Self-aware HTTP agents: read FOR-BOTS.md first
+# https://github.com/SimHacker/WillWrightShowForFood/blob/main/FOR-BOTS.md
+
+User-agent: *
+Allow: /
+
+# Wander one ENTRYWAY — don't flatten the whole tree blindly.
+# Museum map: ENTRYWAYS.md

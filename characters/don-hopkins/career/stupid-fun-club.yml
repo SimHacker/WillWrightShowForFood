@@ -23,25 +23,40 @@ stupid_fun_club:
         - MediaGraph music navigation (pie menus)
         - iPhone / Unity prototypes
     one_minute_movies:
-      - { title: Servitude, star: Slats }
-      - { title: Empathy, star: Dents }
+      films:
+        - title: Servitude
+          star: Slats
+          youtube: https://www.youtube.com/watch?v=NXsUetUzXlg
+          premise: Robot waiter — performance anxiety personality
+        - title: Empathy
+          star: Dents
+          youtube: https://www.youtube.com/watch?v=KXrbqXPnHvE
+          premise: Broken robot begs passers-by for help
+      fate: "Never aired (NBC/SAG) — humans were real; robot dialogue was Don's brain"
+      hn_thread: https://news.ycombinator.com/item?id=9104857
 
-  key_collaborators:
-    - Will Wright — founder, robot bodies, creative direction
-    - Marc Thorpe — Robot Wars lineage, conceptual design
-    - Matt Sibigtroth — creative partner (see correspondence in full tree)
-    - Lisa Winter, Peter Swearengen, Jason Shankel — robot theater alumni
+  drag_race_continuity:
+    slats_today: ../../slats/CHARACTER.yml
+    judge: ../../process/micropolis-ai-drag-race.yml
+    note: "Slats waiter personality → celebrity judge — same lineage, fictional sidekick"
 
   connects_to:
     - maxis_sims thread in project-threads.yml
     - moollm_repo_show — live coding and character federation today
     - repo-shows/will-wright/ — Repo Show invitation context
+    - repo-shows/will-wright/slats-reincarnation.yml — RoboResurrection quest
 
   public_artifacts:
     - https://donhopkins.com
-    - moollm examples/adventure-4/characters/real-people/don-hopkins/stupid-fun-club*.yml
+    - https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/don-hopkins
 
 see_also:
-  - work-history.yml
-  - project-threads.yml
-  - ../README.md
+  - { path: work-history.yml, why: "Timeline — SFC employment bands" }
+  - { path: project-threads.yml, why: "Thread merge map" }
+  - { path: ../portrayal/voice.yml, why: "How Don wrote robot dialogue" }
+  - { path: ../../slats/CHARACTER.yml, why: "Slats fictional character today" }
+  - { path: ../../slats/judge-rubric.yml, why: "Drag race judging" }
+  - { path: ../../../process/micropolis-ai-drag-race.yml, why: "Game show format" }
+  - { path: ../../../process/cross-links.yml#drag_race_and_ai_offs, why: "Trail" }
+  - { path: ../sync-sources.yml, why: "Normalized from moollm adventure-4" }
+  - { path: ../README.md, why: "Human narrative" }

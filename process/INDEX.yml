@@ -1,0 +1,81 @@
+# process/ — spec registry (yaml girders → generated markup facades)
+# Registry: markup-facades.yml | Schema: ../schemas/markup-facade.yml
+
+meta:
+  girder_rule: "Yaml is machine-readable source of truth — compact data, includes, dependency refs"
+  markup_rule: "Markdown views are generated on demand — LLM instance-first; pnpm run facades for cheap deterministic refresh"
+  exception: "rigs/<slug>.SETUP.md is Rig DNA — may be LLM-authored initially; not in facade registry"
+  entryways: entryways.yml
+  entryways_md: ../ENTRYWAYS.md
+  entryways_dir: entryways/
+  trails_md: ../TRAILS.md
+  trails_dir: trails/
+  for_bots_md: ../FOR-BOTS.md
+  for_bots: for-bots.yml
+
+show_and_network:
+  repo-show-format.yml:
+    markup: FORMAT.md
+    topic: "Canonical Repo Show definition — RTFR, rigs, cauldron harvest"
+  showmaker-network.yml:
+    topic: "Graph of linked shows — PR adds nodes"
+  live-repo.yml:
+    topic: "Public WWSFF vs DonHopkins private — no backfill"
+  sync-with-donhopkins.yml:
+    topic: "Export/sync bundle from DonHopkins"
+  repo-show-format:
+    skill: ../skills/repo-show/
+
+competition_and_rigs:
+  micropolis-ai-drag-race.yml:
+    markup: DRAG-RACE.md
+    show_seed: ../repo-shows/micropolis-ai-drag-race.yml
+  code-that-spec.yml:
+    topic: "CODE THAT SPEC!!!!! audience chant game"
+  ai-offs.yml:
+    markup: AI-OFFS.md
+  manual-transmission.yml:
+    markup: MANUAL-TRANSMISSION.md
+  stick-shift-protocol.yml:
+    topic: "Every shift = commit; flair vs measurement class"
+  rig-feedback.yml:
+    topic: "Tell us your real AI stack"
+  homefun-grading.yml:
+    markup: HOMEFUN.md
+
+retro_stacks:
+  apple2-emulator-stack.yml:
+    challenge: challenges/apple2-drive.yml
+  pdp10-its-stack.yml:
+    challenge: challenges/pdp10-maclisp-drive.yml
+    guest: ../characters/lars-brinkhoff/
+  lisp-machine-stack.yml:
+    challenge: challenges/lisp-machine-hack-off.yml
+
+challenges:
+  dir: challenges/
+  index: challenges/INDEX.yml
+  markup: challenges/RETROCOMPUTING.md
+  umbrella: challenges/retrocomputing-drive.yml
+
+live_and_training:
+  brain-stream.yml:
+    markup: BRAIN-STREAM.md
+    app: ../apps/stream-gateway/
+  model-branching.yml:
+    topic: "Fork model at bubble — compare trajectories"
+  orchestration-gold.yml:
+    markup: ORCHESTRATION-GOLD.md
+
+vision:
+  vision-and-ambition.yml:
+    markup: VISION.md
+
+markup_facades:
+  registry: markup-facades.yml
+  generator: ../scripts/generate-markup-facades.py
+  invoke: "pnpm run facades"
+
+cross_links:
+  registry: cross-links.yml
+  habit: "Generous see_also — path strings or { path, why } objects — mind-expanding trails"

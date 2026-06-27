@@ -1,0 +1,75 @@
+# LMI camp — Lisp Machine Hack-Off example rig (Lambda / LambdaDelta)
+
+rig:
+  id: lisp-machine-lmi
+  name: "LMI Lambda — LambdaDelta (Hack-Off camp)"
+  version: "0.1"
+  author: don-hopkins
+  rig_classes: [intentional, flair]
+  description: |
+    LMI lane for lisp-machine-hack-off: Lambda on LambdaDelta emulator. SDU telnet,
+    init/newboot, Zmacs, Peek Mode flair. Open-source emulator path.
+
+lifecycle:
+  download:
+    steps:
+      - "Read process/challenges/lisp-machine-hack-off.yml — LMI camp"
+      - "Clone https://github.com/salewski/ld-lambda-delta"
+      - "Obtain Lambda Release 5 class disk images (bitsavers / community archives — declare source)"
+    urls:
+      - "https://github.com/salewski/ld-lambda-delta"
+      - "https://lisp-machine.org/hacking-lambdadelta-an-lmi-lambda-emulator/"
+  install:
+    steps:
+      - "Build ./lam per LambdaDelta README"
+      - "Second terminal: telnet localhost 3637 for SDU"
+    verify: "SDU init → newboot → Lisp console + Zmacs"
+  configure:
+    steps:
+      - "components.vendor_lane: lmi"
+      - "Document disk image provenance in PR"
+    files:
+      - process/challenges/lisp-machine-hack-off.yml
+  use:
+    workflow: |
+      Hack-Off: ship spec CARD in Zmacs on LMI Lambda. Peek Mode victory lap optional.
+      Capture SDU boot sequence for the fans. thoughtful-commitment on host side.
+    contexts: [lisp_machine_hack_off, retrocomputing_drive, micropolis_ai_drag_race]
+  replicate:
+    checklist:
+      - "./lam + telnet SDU boot"
+      - "Spec defun eval on listener"
+    estimated_time: "First boot 1–4 hours; hack-off segment 30–90 min"
+
+components:
+  vendor_lane: lmi
+  languages:
+    target: [ZetaLisp, Flavors]
+    host: [Common_Lisp, Python_for_orchestration]
+  tools:
+    - { name: LambdaDelta, repo: "https://github.com/salewski/ld-lambda-delta", role: "hardware emulator" }
+    - { name: SDU_telnet, role: "bootstrap console port 3637" }
+    - { name: Zmacs, role: "editor on Lambda" }
+    - { name: Peek_mode, role: "system object viewer flair", optional: true }
+    - { name: Cursor, role: "host orchestration" }
+  platforms:
+    primary: lmi_lambda
+    mode: emulated
+  emulators:
+    - { name: LambdaDelta, license: open, author: Daniel Seagraves }
+
+declare:
+  class: flair
+  camp: lmi
+  honesty: "Lambda must boot via LambdaDelta — SDU init or sashay"
+
+proof:
+  demo: "Listener eval + optional Peek Mode screencast"
+  disk_images: "Declare archive source in PR"
+
+costume:
+  drag_race: "NuBus cape, SDU telnet gloves, Release 5 badge"
+
+see_also:
+  - ../process/challenges/lisp-machine-hack-off.yml
+  - ../process/lisp-machine-stack.yml

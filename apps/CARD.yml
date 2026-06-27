@@ -1,0 +1,17 @@
+# CARD — apps/ room
+
+room:
+  id: apps
+  name: "Deployable applications"
+  type: [pnpm_workspace, code_monorepo]
+
+entries:
+  stream-gateway:
+    status: seed
+    glance: stream-gateway/GLANCE.yml
+    spec: ../process/BRAIN-STREAM.md
+
+see_also:
+  - README.md
+  - ../packages/
+  - ../process/brain-stream.yml

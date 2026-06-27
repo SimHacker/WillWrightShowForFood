@@ -1,0 +1,22 @@
+# skills/ — GLANCE
+
+what: "Harvest landing zone — MOOLLM skills distilled from Repo Shows"
+
+status:
+  repo_show: public_live
+  other_skills: awaiting_harvest
+
+read_order:
+  - README.md
+  - INDEX.yml
+  - repo-show/GLANCE.yml
+
+pipeline: "AIR → HARVEST → cauldron → SCOOP → skills/<name>/"
+
+see_also:
+  - { path: INDEX.yml, why: "Registry + upstream moollm pointers + narrative connections" }
+  - { path: repo-show/GLANCE.yml, why: "Flagship skill — public live instance" }
+  - { path: ../process/cross-links.yml#moollm_compose, why: "Compose trail" }
+  - { path: ../process/vision-and-ambition.yml, why: "Why harvest exists — breed DNA back" }
+  - { path: ../repo-shows/will-wright/SHOW.yml, why: "Flagship show feeding future harvests" }
+  - { path: https://github.com/SimHacker/moollm/skills/cauldron, why: "Cauldron SCOOP protocol" }

@@ -22,6 +22,11 @@ select:
     - characters/*/GLANCE.yml
     - characters/*/README.md
     - characters/*/CARD.md
+  moollm_adventure_4:
+    repo: SimHacker/moollm
+    path: examples/adventure-4/characters/real-people/don-hopkins/
+    rule: "SELECT + FILTER per characters/don-hopkins/sync-sources.yml — career + portrayal only"
+    exclude: [sessions/, selfies/, dreams/, fmc-898/, inventory/, correspondence/]
   defer:
     - characters/bots/
     - ideas/scratchpad.yml

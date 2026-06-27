@@ -9,7 +9,11 @@
 		"test": "pnpm -r --stream --if-present run test",
 		"verify:structure": "node scripts/verify-monorepo-structure.mjs",
 		"verify:yaml": "node scripts/verify-yaml.mjs",
+		"facades": "node scripts/generate-markup-facades.mjs --force",
+		"facades:check": "node scripts/generate-markup-facades.mjs --check",
 		"scaffold:characters": "node scripts/scaffold-invitation-characters.mjs",
+		"scaffold:cards": "python3 scripts/scaffold-guest-skills-cards.py",
+		"scaffold:skills-cards": "python3 scripts/scaffold-guest-skills-cards.py",
 		"normalize:characters": "node scripts/normalize-guest-characters.mjs",
 		"verify": "pnpm run verify:structure && pnpm run verify:yaml",
 		"setup:python": "python3 -m venv .venv && .venv/bin/pip install -r requirements.txt"

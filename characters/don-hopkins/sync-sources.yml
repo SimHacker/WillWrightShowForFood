@@ -1,0 +1,81 @@
+# Don Hopkins — sync sources (dedupe + normalize for WWSFF)
+# WWSFF is live; this file records what was pulled from upstream and what stays private.
+
+meta:
+  id: don-hopkins-sync
+  live_repo: ../../process/live-repo.yml
+  normalized_for: WillWrightShowForFood
+  last_sync_pass: "2026-06-27"
+
+upstream:
+  moollm_adventure_4:
+    repo: https://github.com/SimHacker/moollm
+    path: examples/adventure-4/characters/real-people/don-hopkins/
+    role: public_character_layer
+    note: |
+      Adventure microworld layer — rich CHARACTER.yml + artifacts.
+      WWSFF takes Repo Show–relevant backbone; adventure-only state stays upstream.
+
+  donhopkins_private:
+    repo: SimHacker/DonHopkins
+    path: characters/don-hopkins/
+    role: authoritative_archive
+    rule: "One-way cream export per sync-with-donhopkins.yml — do not dual-edit"
+
+sync_policy:
+  include_in_wwsff:
+    - career timeline (condensed)
+    - stupid fun club / Slats / Dents (public artifacts + YouTube)
+    - pie menus / Sims / Micropolis threads
+    - verified presentations (titles + links only)
+    - voice + frobisms (portrayal layer — no adventure plot)
+    - heroes roster (direct mentors — condensed)
+  exclude_from_wwsff:
+    items:
+      - adventure transformation (Bunny Backfire, rabbit form sessions)
+      - FMC Motorcoach #898 room graph, selfies, dreams
+      - inventory, companions as live game state
+      - sessions/, correspondence/, private email
+    reason: "Adventure fiction + personal space — not Repo Show public projection"
+
+wwsff_layout:
+  CHARACTER.yml: self_sovereign host card
+  CARD.yml: MOOLLM room interface
+  GLANCE.yml: one-screen sniff
+  README.md: human narrative (hand-authored)
+  career/: yaml backbone (condensed from upstream)
+  portrayal/: public-safe voice, heroes, presentations (normalized subset)
+  sync-sources.yml: this file
+
+dedupe_rules:
+  - "career/work-history.yml is canonical timeline — do not duplicate full resume in CHARACTER"
+  - "stupid-fun-club.yml owns SFC detail — CHARACTER links, does not repeat"
+  - "portrayal/presentations.yml owns verified talks — README links, does not list all"
+  - "Adventure CHARACTER.yml remains upstream — WWSFF CHARACTER.yml is Repo Show host layer"
+
+files_mapped:
+  - wwsff: career/work-history.yml
+    from: [moollm/.../work-history.yml]
+    action: condensed_timeline
+  - wwsff: career/stupid-fun-club.yml
+    from: [moollm/.../stupid-fun-club.yml, moollm/.../CHARACTER.yml#stupid_fun_club]
+    action: merge_dedupe
+  - wwsff: portrayal/voice.yml
+    from: [moollm/.../CHARACTER.yml#voice, moollm/.../CHARACTER.yml#frobisms]
+    action: extract_public
+  - wwsff: portrayal/heroes.yml
+    from: [moollm/.../HEROS.yml#direct_mentors]
+    action: condense
+  - wwsff: portrayal/presentations.yml
+    from: [moollm/.../presentations.yml]
+    action: condense_verified_only
+  - wwsff: career/simcity-lineage.yml
+    from: [moollm/.../micropolis-project.yml#timeline]
+    action: already_parallel_verify_dates
+
+see_also:
+  - { path: ../../process/sync-with-donhopkins.yml, why: "Export pipeline from DonHopkins" }
+  - { path: ../../process/live-repo.yml, why: "Edit WWSFF — source on hold when projected" }
+  - { path: ../slats/CHARACTER.yml, why: "Slats — SFC robot → drag race judge" }
+  - { path: ../../process/cross-links.yml#constructionist_lineage, why: "Will show + microworld arc" }
+  - { path: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/don-hopkins, why: "Full adventure layer upstream" }

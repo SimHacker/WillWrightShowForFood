@@ -1,0 +1,105 @@
+# CARD — Marvin Minsky (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: marvin-minsky
+  name: Marvin Minsky
+  type:
+  - legacy
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Marvin Minsky
+  title: Society of Mind
+  rarity: legacy
+  signifier: 🧠
+  flavor: Minds are what minds are made of.
+abilities:
+- id: K-LINES
+  name: K-Lines
+  type: legacy
+  mana: ∞
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: kLines
+    signature: kLines(name) → constellation activates
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Name things so ideas snap together later.
+  verifiable: K-lines theory (Society of Mind)
+  combos_with: []
+- id: SOCIETY-OF-MIND
+  name: Society of Mind
+  type: legacy
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: societyOfMind
+    signature: societyOfMind(agent) → mind as agents
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Explain intelligence as many little processes.
+  verifiable: Society of Mind book
+  combos_with: []
+- id: FRAMES
+  name: Frames
+  type: legacy
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: frames
+    signature: frames(situation) → structured expectation
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Use frames to talk about knowledge structures.
+  verifiable: Frames theory (public legacy)
+  combos_with: []
+- id: AI-LAB
+  name: AI Lab
+  type: legacy
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: aiLab
+    signature: aiLab(hack) → playful serious research
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Honor MIT AI Lab culture without mythologizing individuals.
+  verifiable: MIT AI Lab co-founder
+  combos_with: []
+- id: MOOLLM-LINEAGE
+  name: MOOLLM Lineage
+  type: legacy
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: moollmLineage
+    signature: moollmLineage(symbol) → names activate skills
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Connect K-lines to MOOLLM skill activation.
+  verifiable: MOOLLM design homage (explicit)
+  combos_with:
+  - DON-YAML-GIRDER
+invoke_rules:
+  consent: deceased_legacy
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

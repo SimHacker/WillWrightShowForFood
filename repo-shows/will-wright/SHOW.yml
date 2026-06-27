@@ -182,7 +182,9 @@ files_added:
   slats-reincarnation.yml: "The ROBORESURRECTION quest segment — revive Slats (Stupid Fun Club robot) as a live call-in sidekick."
 
 ties_to:
-  - ../will-and-yoot.yml
-  - ../will-wright-series.yml        # the seed (kept beside, synced)
-  - ../../process/collaborators.yml  # will_wright value_offer + Proxi
-  - /skills/repo-show/CARD.yml            # lifecycle, intro ritual, characters
+  - { path: ../../characters/will-wright/CHARACTER.yml, why: "Guest portrayal girder" }
+  - { path: ../../characters/will-wright/CARD.yml, why: "Invokable abilities" }
+  - { path: ../../process/vision-and-ambition.yml, why: "Long arc — data portability crown jewel" }
+  - { path: ../../skills/repo-show/CARD.yml, why: "SHOW skill interface" }
+  - { path: ../../process/entryways/guest-will.md, why: "Suggested guest playlist" }
+  - { path: ../../process/cross-links.yml, why: "Thematic trails" }

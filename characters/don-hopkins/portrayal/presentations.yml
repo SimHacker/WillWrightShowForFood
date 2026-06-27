@@ -1,0 +1,44 @@
+# Don Hopkins — verified presentations (condensed)
+# Source: moollm adventure-4 presentations.yml — titles + links only
+
+meta:
+  ethics: "Public sources only; colleagues mentioned in context of Don's work"
+
+papers:
+  chi_88_pie_menus:
+    title: "An Empirical Comparison of Pie vs. Linear Menus"
+    venue: "ACM CHI'88"
+    authors: [John Raymond Callahan, Don Hopkins, Mark Weiser, Ben Shneiderman]
+    significance: "Foundational pie menu research — Fitts's Law, error rates"
+
+  ddj_pie_menus:
+    title: "The Design and Implementation of Pie Menus"
+    venue: "Dr. Dobb's Journal"
+    year: 1991
+    url: https://donhopkins.com/home/catalog/piemenus/ddj/piemenus.html
+
+talks:
+  umd_hcil_demo:
+    title: "Pie Menus Demo"
+    venue: "UMD HCIL"
+    youtube: https://www.youtube.com/watch?v=8Fne3j7cWzg
+
+  ibm_almaden_npuc_1995:
+    title: "New Paradigms for Using Computers"
+    venue: "IBM Almaden NPUC Workshop"
+    fellows: [Donald Norman, David Kelley, Doug Engelbart]
+    youtube: https://www.youtube.com/watch?v=5GCPQxJttf0
+
+  baychi_pie_menus_1998:
+    title: "Natural Selection: The Evolution of Pie Menus"
+    venue: BayCHI
+
+intellectual_lineage_note: |
+  DreamScape (Kaleida) → iLoci (2008) → MediaGraph (SFC) → PieCraft → MOOLLM (now).
+  See career/project-threads.yml.
+
+see_also:
+  - heroes.yml
+  - ../career/work-history.yml
+  - ../career/project-threads.yml
+  - https://github.com/SimHacker/moollm/examples/adventure-4/characters/real-people/don-hopkins/presentations.yml

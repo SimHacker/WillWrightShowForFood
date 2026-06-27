@@ -1,0 +1,49 @@
+# skills/ — MOOLLM skill harvest registry (WWSFF public)
+
+meta:
+  pyramid: "GLANCE.yml → CARD.yml → SKILL.md → README.md"
+  compose_with: https://github.com/SimHacker/moollm
+  pipeline: "show → cauldron SCOOP → skill lands here → PR breeds network"
+  cross_links: ../process/cross-links.yml
+
+entries:
+  repo-show:
+    path: repo-show/
+    status: public_live
+    note: "Show orchestrator — transplanted from DonHopkins; canonical public instance"
+  repo-show-format:
+    path: repo-show-format.yml
+    status: pointer
+    note: "Thin pointer — canonical spec in process/repo-show-format.yml"
+
+upstream_moollm:
+  thoughtful_commitment: SimHacker/moollm/skills/thoughtful-commitment
+  rubric: SimHacker/moollm/skills/rubric
+  experiment: SimHacker/moollm/skills/experiment
+  cursor_mirror: SimHacker/moollm/skills/cursor-mirror
+  cauldron: SimHacker/moollm/skills/cauldron
+  character: SimHacker/moollm/skills/character
+  constructionism: SimHacker/moollm/skills/constructionism
+  play_learn_lift: SimHacker/moollm/skills/play-learn-lift
+  representation_ethics: SimHacker/moollm/skills/representation-ethics
+
+narrative_connections:
+  repo_show_spine: "repo-show skill ↔ process/repo-show-format.yml ↔ repo-shows/ — the show IS the repo"
+  harvest_loop: "cauldron SCOOP → skills/ here → showmaker-network breeds to other repos"
+  retro_rigs: "thoughtful-commitment + cursor-mirror prove retro laps — see process/challenges/"
+  ethics_first: "representation-ethics before reading characters/ — portrayal-standards.yml"
+
+harvest_targets:
+  note: "Skills born from shows land as new directories here after HARVEST"
+
+see_also:
+  - { path: repo-show/SKILL.md, why: "Public live orchestrator — start here" }
+  - { path: repo-show/CARD.yml, why: "Interface — lifecycle methods" }
+  - { path: ../process/cross-links.yml#moollm_compose, why: "Compose trail — kernel + upstream skills" }
+  - { path: ../process/cross-links.yml#repo_show_spine, why: "Show spine — FORMAT, network, Will show" }
+  - { path: ../process/repo-show-format.yml, why: "Format girder — not duplicated in skill body" }
+  - { path: ../process/showmaker-network.yml, why: "Shows link shows — graph of episodes" }
+  - { path: ../repo-shows/INDEX.yml, why: "Find planted shows" }
+  - { path: ../kernel/moollm-plugin.yml, why: "Plugin wiring for this microworld" }
+  - { path: https://github.com/SimHacker/moollm/skills/INDEX.md, why: "Upstream skill narrative web — 130 skills" }
+  - { path: https://github.com/SimHacker/moollm/skills/cauldron, why: "HARVEST delegate" }

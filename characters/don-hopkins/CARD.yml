@@ -1,0 +1,194 @@
+# CARD — Don Hopkins (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: don-hopkins
+  name: Don Hopkins
+  type:
+  - self_sovereign
+  - host
+  - real_being
+  consent: self_sovereign
+layers:
+  wwsff_public: This directory — Repo Show host projection
+  career_backbone: career/
+  portrayal: portrayal/
+  moollm_adventure: examples/adventure-4/characters/real-people/don-hopkins/ — extend, do not merge blindly
+  donhopkins_private: DonHopkins/characters/don-hopkins/ — archive; export via sync manifest
+methods:
+  READ-BACKBONE:
+    signature: career/INDEX.yml → yaml facts
+  READ-PORTRAYAL:
+    signature: portrayal/ — voice, heroes, verified talks
+  SYNC-FROM-UPSTREAM:
+    signature: sync-sources.yml — dedupe rules before import
+compose_with:
+- SimHacker/moollm/skills/character
+- SimHacker/moollm/skills/representation-ethics
+- ../../skills/repo-show/
+see_also:
+- path: CHARACTER.yml
+  why: Host card
+- path: README.md
+  why: Human narrative + mermaid threads
+- path: sync-sources.yml
+  why: Normalization map from adventure-4
+- path: career/INDEX.yml
+  why: Career yaml index
+- path: portrayal/voice.yml
+  why: How Don sounds in docs and HN comments
+- path: portrayal/heroes.yml
+  why: Mentors — credit where due
+- path: ../don-philahue/
+  why: Orchestrator avatar on stream
+- path: ../slats/
+  why: Robot waiter Don programmed — now drag race judge
+- path: ../will-wright/
+  why: Flagship guest — shared SFC + Sims lineage
+- path: ../../process/live-repo.yml
+  why: WWSFF is live bud
+- path: ../../process/cross-links.yml#repo_show_spine
+  why: Show spine trail
+- path: ../../rigs/stick-shift-composer-moollm.rig.yml
+  why: Don host rig seed
+- path: invitation.md
+  why: Public invitation document
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: host_skills
+card:
+  name: Don Hopkins
+  title: Pie Menu Baker
+  rarity: flagship
+  signifier: 🌀
+  flavor: The best interface is no interface, but if you need one, it should be a pie menu.
+abilities:
+- id: PIE-MENU
+  name: Pie Menu
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: pieMenu
+    signature: pieMenu(actions, center) → Fitts-friendly radial UI
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Demonstrate radial menus with the data to back them up.
+  verifiable: CHI'88 paper; pie menu implementations
+  combos_with:
+  - BEN-DIRECT-MANIPULATION
+  - WILL-INCLUDE-MODS
+- id: PROGRAM-ROBOT-BRAIN
+  name: Program Robot Brain
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: programRobotBrain
+    signature: programRobotBrain(dialogueXml) → improvising street robot
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Give robots feelings they can perform in public.
+  verifiable: Stupid Fun Club — Slats/Dents brains
+  combos_with:
+  - WILL-STUPID-FUN-CLUB
+  - SLATS-RATE-PERFORMANCE
+- id: OPEN-SOURCE-MICROPOLIS
+  name: Open Source Micropolis
+  type: activated
+  mana: '{G}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: openSourceMicropolis
+    signature: openSourceMicropolis(ea, olpc) → GPL SimCity lineage
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Navigate corporate and educational politics to release source.
+  verifiable: Micropolis GPL 2008; OLPC
+  combos_with: []
+- id: VITABOY-PIPELINE
+  name: VitaBoy Pipeline
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: vitaboyPipeline
+    signature: vitaboyPipeline(mesh, anim) → Sims character on screen
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Explain deformable mesh animation pipelines without mystifying artists.
+  verifiable: The Sims VitaBoy system
+  combos_with:
+  - ERIC-WIGGLE-DEBUG
+- id: DEBUG-AS-FEATURE
+  name: Debug as Feature
+  type: static
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: debugAsFeature
+    signature: debugAsFeature(tool) → player-visible introspection
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Ship the frob panel; hide nothing that helps learning.
+  verifiable: Public talks; MOOLLM philosophy
+  combos_with: []
+- id: HOST-REPO-SHOW
+  name: Host Repo Show
+  type: activated
+  mana: '{W}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: hostRepoShow
+    signature: hostRepoShow(repo) → RTFR → harvest PRs
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Point at the repo; get out of the way of implementation.
+  verifiable: Repo Show format; WWSFF host
+  combos_with: []
+- id: YAML-GIRDER
+  name: YAML Girder
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: yamlGirder
+    signature: yamlGirder(spec) → generated markup + tools
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Keep machine truth in yaml; human views regenerate.
+  verifiable: WWSFF markup-facade pattern
+  combos_with: []
+- id: SAME-SEX-ROMANCE
+  name: Same-Sex Romance
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: sameSexRomanceAdvocacy
+    signature: sameSexRomanceAdvocacy(code) → remove arbitrary check
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Name the pattern; make the code match the philosophy.
+  verifiable: The Sims inclusion advocacy (documented)
+  combos_with: []
+invoke_rules:
+  consent: self_sovereign
+  simulation: true

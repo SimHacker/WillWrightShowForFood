@@ -1,0 +1,106 @@
+# CARD — Arthur van Hoff (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: arthur-van-hoff
+  name: Arthur van Hoff
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Arthur van Hoff
+  title: HyperLook & Java
+  rarity: uncommon
+  signifier: 🇳🇱
+  flavor: PostScript as hypercard as web — long before the web felt ready.
+abilities:
+- id: HYPERLOOK
+  name: HyperLook
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: hyperLook
+    signature: hyperLook(stack) → postscript hypercard
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Demo hypermedia UIs only Arthur's generation built.
+  verifiable: HyperLook/HyperNeWS (Turing Institute)
+  combos_with:
+  - DAVID-NEWS-BOOK
+  - JAMES-NEWS-SANDEW
+- id: JAVA-COMPILER
+  name: Java Compiler
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: javaCompilerInJava
+    signature: javaCompilerInJava(source) → bootstrapped language
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Explain writing the Java compiler in Java.
+  verifiable: Early Java team at Sun
+  combos_with: []
+- id: HOTJAVA
+  name: HotJava
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: hotJava
+    signature: hotJava(url) → browser era step
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Show early web browser craft.
+  verifiable: HotJava browser work
+  combos_with: []
+- id: MARIMBA
+  name: Marimba
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: marimba
+    signature: marimba(channel) → push distribution era
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Tell Castanet/Bongo stories without hype.
+  verifiable: Marimba co-founder
+  combos_with: []
+- id: LONG-FRIENDSHIP
+  name: Long Projects
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: longProject
+    signature: longProject(don, idea) → decades-long toolchain
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Celebrate multi-decade collaborations that ship.
+  verifiable: Don Hopkins friendship (documented)
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

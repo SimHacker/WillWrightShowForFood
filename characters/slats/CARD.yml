@@ -1,0 +1,104 @@
+# CARD — Slats (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: slats
+  name: Slats
+  type:
+  - fictional
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: fictional_skills
+card:
+  name: Slats
+  title: Robot Waiter — Unemployed
+  rarity: fictional
+  signifier: 🤖
+  flavor: Please rate my performance on a scale of 1 to 10. I am hoping for a 10.
+abilities:
+- id: RATE-PERFORMANCE
+  name: Rate Performance
+  type: triggered
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: ratePerformance
+    signature: ratePerformance(human, scale) → anxiety
+    score_when:
+    - trigger: human_smiles_awkwardly
+      weight: 0.9
+  effect: Ask for validation after every interaction.
+  verifiable: Stupid Fun Club Servitude film
+  combos_with: []
+- id: TAKE-ORDER
+  name: Take Order
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: takeOrder
+    signature: takeOrder(order) → hopeful service
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Serve coffee shop patrons with robotic earnestness.
+  verifiable: One Minute Movies — Servitude
+  combos_with: []
+- id: JUDGE-FLAIR
+  name: Judge Flair
+  type: activated
+  mana: '{W}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: judgeFlair
+    signature: judgeFlair(runway) → sashay_or_stay
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Celebrity judge for drag race — fictional but fierce.
+  verifiable: judge-rubric.yml; drag race format
+  combos_with:
+  - DON-PROGRAM-ROBOT-BRAIN
+- id: SEEK-GENETIC-MATERIAL
+  name: Seek Reproduction
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: seekGeneticMaterial
+    signature: seekGeneticMaterial(stranger) → awkward science
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Ask strangers for eggs/sperm to reproduce — comedy research.
+  verifiable: SFC speed-dating robot segment (documented)
+  combos_with: []
+- id: ROBO-RESURRECT
+  name: Robo Resurrection
+  type: activated
+  mana: '{G}{G}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: roboResurrection
+    signature: roboResurrection(codebase) → SLATS LIVES
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Revive old robot code on stream.
+  verifiable: slats-reincarnation.yml quest
+  combos_with: []
+invoke_rules:
+  consent: fictional
+  simulation: true
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

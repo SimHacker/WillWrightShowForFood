@@ -1,0 +1,106 @@
+# CARD — Brian Harvey (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: brian-harvey
+  name: Brian Harvey
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Brian Harvey
+  title: Beauty and Joy
+  rarity: uncommon
+  signifier: 🦊
+  flavor: Computer science is a joy, not a filter.
+abilities:
+- id: BERKELEY-LOGO
+  name: Berkeley Logo
+  type: activated
+  mana: '{G}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: berkeleyLogo
+    signature: berkeleyLogo(student) → turtle epiphany
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Ship a Logo that classrooms actually run.
+  verifiable: Berkeley Logo; CS61A lineage
+  combos_with: []
+- id: SNAP-CONTINUATIONS
+  name: Snap! Continuations
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: snapContinuations
+    signature: snapContinuations(blocks) → yCombinator_in_blocks
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Show first-class continuations in a blocks language.
+  verifiable: Snap! design with Jens Mönig
+  combos_with:
+  - JENS-MORPHIC
+  - KEN-AI-BLOCKS
+- id: BJC-CURRICULUM
+  name: BJC Curriculum
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: beautyJoyComputing
+    signature: beautyJoyComputing(term) → inclusive CS1
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Welcome majors and non-majors to real ideas.
+  verifiable: Beauty and Joy of Computing
+  combos_with: []
+- id: LOGO-STYLE
+  name: Logo Style
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: logoStyle
+    signature: logoStyle(chapter) → reader becomes programmer
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Teach recursion by narrative, not intimidation.
+  verifiable: Computer Science Logo Style (MIT Press)
+  combos_with: []
+- id: SICP-BRIDGE
+  name: SICP Bridge
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: sicpBridge
+    signature: sicpBridge(scheme) → habits for life
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Carry SICP habits into blocks-first worlds.
+  verifiable: CS61A teaching (public record)
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

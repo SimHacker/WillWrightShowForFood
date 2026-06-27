@@ -1,0 +1,58 @@
+# GUEST SKILLS CARD — MTG-style invokable abilities (Sims advertisement shape)
+# Instances: characters/<slug>/CARD.yml  (universal CARD surface)
+# Room registry: ../characters/CARD.yml (browse characters/ — INDEX.yml is machine sync only)
+
+meta:
+  id: guest-skills-card
+  version: 0.2
+  instance_file: CARD.yml
+  governed_by: portrayal-standards.yml
+  note: |
+    Public portrayal trading cards — essential verbs as mock methods + advertisements.
+    NOT the person. Do not impersonate. Invoke on show = celebrate documented skills.
+    Whimsical flavor OK; verifiable field required per ability.
+
+card_shape:
+  required: [room, meta, card, abilities]
+  optional: [methods, layers, compose_with, combos, invoke_rules]
+
+card:
+  fields:
+    name: string
+    title: string
+    rarity: [common, uncommon, rare, mythic, flagship, legacy, fictional]
+    flavor: string
+    signifier: string
+
+ability:
+  fields:
+    id: "SCREAMING-KEBAB — unique on card (MOOLLM: dashes not underscores)"
+    name: "Human-readable"
+    type: [activated, triggered, static, legacy, emote]
+    mana: "Optional whimsical cost e.g. {U}{G} or {☕}{☕}"
+    cost: "Optional Sims-style resource object"
+    conditions: "When this may fire — exact predicates"
+    advertisement:
+      method: "camelCase verb — the essential action"
+      signature: "method(args) → result"
+      score_when: "Array of { trigger, weight } — Sims ad scoring"
+    effect: "What happens on invoke (show context)"
+    verifiable: "Public source anchor — required for living guests"
+    combos_with: "Other ability ids on other cards"
+
+uniformity:
+  living_guest: "5–6 abilities — generous, nobody 'unskilled'"
+  flagship: "8–10 abilities (Will Wright, Don Hopkins)"
+  deceased: "4–5 legacy static abilities — reverence, no inner life"
+  fictional: "5 abilities — playful, labeled fictional"
+
+invoke_rules:
+  on_show: "Host names ability; guest demonstrates if present — never speak AS guest without consent"
+  in_repo: "LLM may suggest which ability fits a segment — cite verifiable field"
+  scoring: "score_when weights are humor + rubric hints, not judgment of the person"
+
+see_also:
+  - ../characters/_TEMPLATE/CARD.yml
+  - ../characters/CARD.yml
+  - portrayal-standards.yml
+  - https://github.com/SimHacker/moollm/skills/advertisement

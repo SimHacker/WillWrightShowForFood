@@ -39,7 +39,7 @@ data portability) and follow wherever you want to go.
 
 ### Browse — any order
 
-**Landing page:** [BROWSE.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright/BROWSE.md)
+**Landing page:** [`repo-shows/will-wright/BROWSE.md`](../../repo-shows/will-wright/BROWSE.md) · [**Guest playlist**](../../process/entryways/guest-will.md)
 
 | What | Link |
 |------|------|

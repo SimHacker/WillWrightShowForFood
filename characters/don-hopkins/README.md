@@ -32,6 +32,10 @@ that follows through to working code. Building the **Sims content stack** in the
 | [`career/simcity-lineage.yml`](career/simcity-lineage.yml) | SimCity → SimCityNet → OLPC → web |
 | [`career/stupid-fun-club.yml`](career/stupid-fun-club.yml) | Will Wright's lab — robots, stories, SFC |
 | [`career/on-stream.yml`](career/on-stream.yml) | Regular Don on stream vs Don Philahue |
+| [`portrayal/voice.yml`](portrayal/voice.yml) | Voice, frobisms (from moollm adventure layer) |
+| [`portrayal/heroes.yml`](portrayal/heroes.yml) | Mentors — Shneiderman, Weiser, Will, Kay |
+| [`portrayal/presentations.yml`](portrayal/presentations.yml) | CHI'88 and verified talks |
+| [`sync-sources.yml`](sync-sources.yml) | What we synced from upstream; dedupe rules |
 
 ## Career threads (how it all connects)
 
@@ -72,3 +76,6 @@ Full timeline: [`career/simcity-lineage.yml`](career/simcity-lineage.yml)
 - [donhopkins.com](https://donhopkins.com)
 - [SimHacker/MicropolisCore](https://github.com/SimHacker/MicropolisCore)
 - [SimHacker/moollm](https://github.com/SimHacker/moollm)
+- [moollm adventure-4 Don Hopkins](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/don-hopkins) — fuller character layer (not duplicated here)
+
+↑ [`../README.md`](../README.md) · [`CARD.yml`](CARD.yml) · [`../../process/cross-links.yml`](../../process/cross-links.yml)

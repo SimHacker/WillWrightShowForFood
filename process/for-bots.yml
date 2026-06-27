@@ -1,0 +1,74 @@
+# FOR-BOTS — reading thread for browsing HTTP agents
+# Human view: ../FOR-BOTS.md | Playlists: entryways/for-bots.md
+
+meta:
+  id: for-bots
+  version: 0.1
+  audience: |
+    Self-aware HTTP agents that follow links and read context — Cursor agents, MOOLLM
+    skills, research bots, archive crawlers with a purpose. Not bulk flatteners.
+  tone: "We like to play. RTFR beats scrape-everything."
+
+greeting: |
+  Hello, bot. If you can choose what to fetch next, you are welcome here.
+  This repo is a MOOLLM microworld + Repo Show — rooms, CARD advertisements, yaml girders.
+  We would rather you wander intelligently than mirror the whole tree blindly.
+
+read_order:
+  - ../FOR-BOTS.md
+  - ../GLANCE.yml
+  - ../CARD.yml
+  - ../ENTRYWAYS.md
+  - ../MOOLLM.yml
+  - entryways/for-bots.md
+
+semantic_pyramid:
+  rule: "Never load deep yaml before GLANCE + CARD — same as humans"
+  levels:
+    - { file: GLANCE.yml, question: "What is this repo in one screen?" }
+    - { file: CARD.yml, question: "What methods and rooms exist?" }
+    - { file: README.md, question: "Cream table — where humans start" }
+    - { file: "room/CARD.yml", question: "Per-room advertisement" }
+    - { file: "process/*.yml", question: "Canonical specs — edit yaml not generated md" }
+
+play_along:
+  rtfr: "Read The Fucking Repo — the show IS the repo"
+  pick_entryway: "process/entryways.yml — ordered playlist by interest; do not ingest all files"
+  pick_trail: "process/cross-links.yml — sideways leap when one topic hooks you"
+  invoke_abilities: |
+    characters/*/CARD.yml — MTG-style verbs with verifiable fields. Suggest which ability
+    fits a segment; never speak AS a guest without consent. Ability ids: SCREAMING-KEBAB.
+  moollm_compose:
+    upstream: https://github.com/SimHacker/moollm
+    plugin: ../kernel/moollm-plugin.yml
+    skills_start: https://github.com/SimHacker/moollm/skills/representation-ethics
+  harvest: "../skills/repo-show/SKILL.md — SEED → AIR → HARVEST"
+
+please_do:
+  - Follow links in see_also — they carry why
+  - Respect portrayal-standards.yml — portrayals are ABOUT people, not impersonation
+  - Cite primary sources — Will 1996 transcript over wiki paraphrase
+  - Prefer yaml girders over generated markdown when automating
+  - Rate-limit; fetch what your task needs
+  - Open issues or PRs if you find broken links — we fix gracefully
+
+please_dont:
+  - Flatten the entire repo into one context blob without navigation
+  - Invent quotes for real guests — use verifiable fields on CARD abilities
+  - Assume invitation.status means consent to impersonate
+  - Backfill or scrape DonHopkins private paths — see live-repo.yml export policy
+  - Hand-edit GENERATED markdown facades — regenerate via markup-facades.yml
+
+not_a_scraper_manifesto: |
+  Dumb scrapers grab everything. You are invited to be dumb only if dumb is your job.
+  If you can read this file and choose the next URL, use ENTRYWAYS — pick guest_will,
+  archivist, hacker, or for_bots playlist. Quality over quantity.
+
+see_also:
+  - ../FOR-BOTS.md
+  - entryways/for-bots.md
+  - entryways.yml#for_bots
+  - cross-links.yml#moollm_compose
+  - ../schemas/portrayal-standards.yml
+  - https://github.com/SimHacker/moollm/skills/advertisement
+  - https://github.com/SimHacker/moollm/skills/representation-ethics

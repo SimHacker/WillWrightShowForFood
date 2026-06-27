@@ -1,0 +1,104 @@
+# CARD — Richard Bartle (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: richard-bartle
+  name: Richard Bartle
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Richard Bartle
+  title: MUD1 Co-Author
+  rarity: uncommon
+  signifier: 🐲
+  flavor: Virtual worlds need ethics, taxonomy, and a sense of humor.
+abilities:
+- id: MUD1
+  name: MUD1
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: mud1
+    signature: mud1(room, verb) → shared persistent world
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Explain the first MUD as a design artifact.
+  verifiable: MUD1 (1978) co-creation
+  combos_with: []
+- id: BARTLE-TAXONOMY
+  name: Bartle Taxonomy
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: bartleTaxonomy
+    signature: bartleTaxonomy(players) → design lens
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Use player-type theory without stereotyping individuals.
+  verifiable: Bartle taxonomy (published)
+  combos_with: []
+- id: DESIGN-WORLDS
+  name: Design Virtual Worlds
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: designVirtualWorlds
+    signature: designVirtualWorlds(constraint) → world bible
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Teach world design as a discipline.
+  verifiable: Designing Virtual Worlds book
+  combos_with: []
+- id: INCARNATE-KINDLY
+  name: Incarnate Kindly
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: incarnateKindly
+    signature: incarnateKindly(portrayal) → consensual fiction
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Model how to be simulated with explicit permission.
+  verifiable: Incarnated with permission (CHARACTER.yml)
+  combos_with: []
+- id: SAVING-THROW
+  name: Saving Throw
+  type: triggered
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: savingThrow
+    signature: savingThrow(spell) → unintended consequences
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Respect emergent player mischief — narratively.
+  verifiable: Bartle/adventure crossover humor (consensual portrayal)
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

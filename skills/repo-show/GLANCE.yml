@@ -1,0 +1,38 @@
+# repo-show — GLANCE (public live instance)
+# WillWrightShowForFood — the show orchestrator lives HERE now.
+
+status: public_live
+home: https://github.com/SimHacker/WillWrightShowForFood
+
+what: |
+  The SHOW orchestrator for Micropolis Class. Git-native stage: seed → plant → RTFR →
+  air → harvest. "So you have a Repo to Show us?" This copy is the **public live**
+  instance — compose with SimHacker/moollm + this repo.
+
+term_of_art: "Repo Show (not GitHub Show) — artifact + stage IS a git repo. Show, don't tell."
+
+lifecycle: "SEED → PLANT → ELABORATE → INVITE → TEND → ANNOUNCE → AIR → HARVEST → RESEED"
+
+wwsff_anchors:
+  format: ../../process/repo-show-format.yml
+  format_md: ../../process/FORMAT.md  # generated markup — pnpm run facades
+  shows: ../../repo-shows/
+  characters: ../../characters/
+  harvest: ../
+  flagship: ../../repo-shows/will-wright/
+
+k_lines: [SHOW, REPO-SHOW, RTFR, HOMEFUN, REPO-MAN, SEED, PLANT, HARVEST]
+
+pyramid: "GLANCE.yml → CARD.yml → SKILL.md → README.md"
+
+see_also:
+  - { path: CARD.yml, why: "Interface — methods, lifecycle, compose_with" }
+  - { path: SKILL.md, why: "Protocol depth" }
+  - { path: ../../process/cross-links.yml#repo_show_spine, why: "Mind-expanding trail from here" }
+  - { path: ../../process/repo-show-format.yml, why: "Format girder" }
+  - { path: ../../process/FORMAT.md, why: "Generated markup" }
+  - { path: ../../repo-shows/, why: "Show collection" }
+  - { path: ../../repo-shows/will-wright/, why: "Flagship" }
+  - { path: ../../characters/don-hopkins/, why: "Host portrayal" }
+  - { path: ../../characters/don-philahue/, why: "Audience wrangler MC" }
+  - { path: ../INDEX.yml, why: "Skills harvest registry" }

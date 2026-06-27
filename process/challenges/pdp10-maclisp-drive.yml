@@ -1,0 +1,117 @@
+# PDP-10 MACLISP DRIVE — retrocomputing instance (ITS on emulated iron)
+# Family: retrocomputing-drive.yml — Write in MACLISP on a PDP-10 emulator running ITS!
+
+meta:
+  id: pdp10-maclisp-drive
+  status: seed
+  family: retrocomputing-drive
+  type: [drag_race_challenge, flair_class, emulated_runtime]
+  tagline: "Write in MACLISP on a PDP-10 emulator running ITS!"
+  class: flair
+  celebrity_judge: ../characters/slats/judge-rubric.yml
+  homage: [MIT_AI_Lab, ITS_Tourist_Policy, Kent_Pitman, Lars_Brinkhoff]
+
+pitch: |
+  Same spec CARD as the room — but your implementation runs in MACLISP on ITS,
+  on emulated PDP-10 iron (or real hardware if you have a basement mainframe).
+  Declare your rig: MACLISP dialect, DDT vs file compile path, emulator stack
+  (PDP-10/its + SIMH), host orchestration (Cursor + MOOLLM). Boot the AI Lab.
+  Slats judges werk; spreadsheet still gets the piss test.
+  **Invited:** [Lars Brinkhoff](../../characters/lars-brinkhoff/) — we challenge him to
+  **make it so** on air; paired with [Thomas Cherryhomes](../../characters/thomas-cherryhomes/)
+  for emulated AI Lab × FujiNet/IRATA tag-team.
+
+audience_chant: "CODE THAT SPEC!!!!! (on ITS)"
+
+rig_declaration:
+  required_in: rigs/<persona>.rig.yml
+  setup: rigs/<persona>.SETUP.md
+  components:
+    languages:
+      target: MACLISP
+      host: [MACLISP, artisanal_hand, Python_for_orchestration_only]
+      note: "Demo must evaluate on ITS — host helpers OK if spec runs on target"
+    tools: [DDT, TECO, MIDAS, Cursor, MOOLLM, SIMH]
+    platforms: pdp10_its
+    emulators:
+      primary: "PDP-10/its project (SIMH)"
+      alt: [KLH10, other_PDP10_ITS_images]
+
+challenge_lanes:
+  flair_showoff:
+    declare: flair_class
+    judges: [Slats, audience, brain_stream]
+    pick_one_or_more:
+      - "HELLO MICROPOLIS CLASS — (FORMAT T ...) at the ITS console"
+      - "Define a MACLISP function for the spec CARD — load via DDT, show it run"
+      - "Rescue or port a snippet from MIT-AI heritage (Logo, ANIMAL energy, your own)"
+      - "Tourist Policy moment — document how a high-school kid would have connected"
+      - "TECO victory lap — edit the source the old way, then MACLISP it (Slats loves chaos)"
+    slats: "MACLISP on ITS? AI Lab realness. Unbalanced parens — sashay with honor."
+
+  measurement_vertical:
+    declare: stick_shift_or_artisanal
+    judges: [spreadsheet, rubric, human]
+    spec_cards:
+      boot_its: "Emulator reaches ITS login or known idle state — screencast"
+      maclisp_eval: "One defun + one call that prints spec output"
+      file_roundtrip: "Source on disk image or tape — reload and re-run"
+    note: "Each card independently shippable — preservation + show segments"
+
+how_it_runs:
+  host_drops: "Spec CARD — e.g. 'MACLISP function that returns MICROPOLIS CLASS string'"
+  contestant:
+    - "Declare flair vs measurement + full rig (languages, tools, platform, emulator)"
+    - "rigs/<persona>.rig.yml — reproducible PDP-10/ITS + MACLISP toolchain"
+    - "rigs/<persona>.SETUP.md — boot ITS from clean machine; mod instructions"
+    - "Boot emulator; implement on branch — console capture or stream segment"
+    - "thoughtful-commitment — Thinking ref; homefun grading applies"
+  proof:
+    - "Recording of MACLISP eval on ITS (emulated or real)"
+    - "Source file — .LISP or era-appropriate — in PR"
+    - "Optional: Cursor spend CSV + cursor-mirror composer id"
+
+invited_guest:
+  character: ../../characters/lars-brinkhoff/
+  challenge: "Make it so — boot ITS, MACLISP spec CARD on stream"
+  paired_with: ../../characters/thomas-cherryhomes/
+  show: ../../repo-shows/lars-brinkhoff/SHOW.yml
+
+example_rig_persona:
+  file: ../../rigs/pdp10-maclisp-flair-lap.rig.yml
+  setup: ../../rigs/pdp10-maclisp-flair-lap.SETUP.md
+  costume: "Green-on-black teletype sash, unbalanced-paren earrings, Tourist badge"
+
+stack_background:
+  see: pdp10-its-stack.yml
+  emulator: PDP-10/its
+  collaborators:
+    - characters/lars-brinkhoff
+    - characters/thomas-cherryhomes
+  heritage: [Kent_Pitman, MIT_AI_Lab, LLogo_MACLISP, ANIMAL]
+
+ties_to:
+  - retrocomputing-drive.yml
+  - pdp10-its-stack.yml
+  - ../micropolis-ai-drag-race.yml
+  - ../stick-shift-protocol.yml
+  - ../homefun-grading.yml
+  - ../../characters/slats/judge-rubric.yml
+  - ../../characters/lars-brinkhoff/
+  - ../../characters/thomas-cherryhomes/
+  - ../../repo-shows/lars-brinkhoff/SHOW.yml
+
+see_also:
+  - { path: retrocomputing-drive.yml, why: "Family umbrella — declare your whole rig" }
+  - { path: ../pdp10-its-stack.yml, why: "SIMH, PDP-10/its, disk images — stack pointer" }
+  - { path: ../cross-links.yml#retro_guests_real_wire, why: "Lars × Thomas tag-team trail" }
+  - { path: ../../characters/lars-brinkhoff/, why: "Guest anchor — boot ITS on air" }
+  - { path: ../../characters/thomas-cherryhomes/, why: "Real retro net — paired segments" }
+  - { path: ../../repo-shows/lars-brinkhoff/SHOW.yml, why: "Planted show — make-it-so deliverable" }
+  - { path: ../../rigs/pdp10-maclisp-flair-lap.rig.yml, why: "Example rig yaml" }
+  - { path: ../../rigs/pdp10-maclisp-flair-lap.SETUP.md, why: "Gold-standard Rig DNA target" }
+  - { path: ../micropolis-ai-drag-race.yml#pdp10_maclisp_drive, why: "Drag race rotation slot" }
+  - { path: ../lisp-machine-stack.yml, why: "CADR → Symbolics/LMI — ancestor lap" }
+  - { path: https://github.com/PDP-10/its, why: "Upstream ITS restoration project" }
+  - { path: SimHacker/DonHopkins/characters/don-hopkins/correspondence/kent-pitman.yml, why: "MACLISP lineage — AI Lab oral history" }
+  - { path: https://github.com/SimHacker/moollm/skills/thoughtful-commitment, why: "Eval at ITS console — commit the Thinking ref" }

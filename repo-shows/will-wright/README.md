@@ -68,3 +68,16 @@ Consent per representation-ethics: this is an invitation, not an assumption.
 - `slats-reincarnation.yml` — **RoboResurrection** quest (optional show segment).
 - `episodes.yml` — the kickoff + the topical episodes that flow from it.
 - `assets/` — the Flower-Child icon.
+
+---
+
+## Museum map
+
+This show is stop #1–2 on the **guest_will** and **player** playlists. Full map: [**ENTRYWAYS.md**](../../ENTRYWAYS.md)
+
+| Doorway | → | Why |
+|---------|---|-----|
+| **Guest (Will)** | [playlist](../../process/entryways/guest-will.md) | invitation → here → 1996 → portrait → CARD |
+| **Player** | [playlist](../../process/entryways/player.md) | 1996 talk first — no git |
+| **constructionist_lineage** | [trail](../../process/trails/constructionist-lineage.md) | 1996 → this show → Micropolis open lineage |
+| **All doorways** | [ENTRYWAYS.md](../../ENTRYWAYS.md) · [TRAILS.md](../../TRAILS.md) | watcher · hacker · AI · retro · educator · producer · publisher |

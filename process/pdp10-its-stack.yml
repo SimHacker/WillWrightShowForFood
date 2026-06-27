@@ -1,0 +1,49 @@
+# PDP-10 / ITS stack — public pointer + show-challenge hook
+# Authoritative preservation: PDP-10/its (Lars Brinkhoff et al.) + DonHopkins heritage notes
+# WWSFF does not duplicate full install — see process/live-repo.yml
+
+meta:
+  id: pdp10-its-stack
+  status: pointer
+  public_challenge: challenges/pdp10-maclisp-drive.yml
+
+summary: |
+  Incompatible Timesharing System on PDP-10 — MIT AI Lab hacker culture, MACLISP,
+  DDT, TECO, MIDAS. Modern path: build/run ITS images via PDP-10/its project on SIMH.
+  Show challenge: write MACLISP on emulated ITS — retrocomputing AI drag race.
+
+show:
+  challenge_family: challenges/retrocomputing-drive.yml
+  instance: challenges/pdp10-maclisp-drive.yml
+  tagline: "Write in MACLISP on a PDP-10 emulator running ITS!"
+
+emulator:
+  primary:
+    repo: https://github.com/PDP-10/its
+    runs_on: SIMH
+  note: "Declare image version in rig components.emulators — demo must boot on stream"
+
+guest_challenge:
+  invited: characters/lars-brinkhoff/
+  challenge: "Make it so — boot ITS + MACLISP eval for pdp10-maclisp-drive on air"
+  paired_guest: characters/thomas-cherryhomes/
+  show_seed: repo-shows/lars-brinkhoff/SHOW.yml
+
+heritage:
+  lars_brinkhoff: "PDP-10/its lead — invited guest; make-it-so challenge"
+  maclisp: "MIT AI Lab dialect — Kent Pitman, Pitmanual, Logo/LLogo lineage"
+  don_hopkins: "Tourist Policy era — MACLISP tutoring on ITS over ARPANET"
+  see: SimHacker/DonHopkins/characters/don-hopkins/correspondence/kent-pitman.yml
+
+authoritative:
+  its_restoration: PDP-10/its
+  don_notes:
+    - SimHacker/DonHopkins/projects/micropolis-moollm/notes/history-of-logo.txt
+    - SimHacker/DonHopkins/characters/margaret-minsky/correspondence/memory-lane-2019.yml
+
+ties:
+  - challenges/retrocomputing-drive.yml
+  - challenges/pdp10-maclisp-drive.yml
+  - ../characters/lars-brinkhoff/
+  - ../characters/thomas-cherryhomes/
+  - ../repo-shows/lars-brinkhoff/SHOW.yml

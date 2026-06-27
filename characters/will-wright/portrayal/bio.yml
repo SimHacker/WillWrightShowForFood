@@ -1,7 +1,5 @@
-# Biographical girder — concise; narrative in README.md generated later
+# Biographical girder — see CHARACTER.yml (canonical)
 
 bio:
-  born: 1960
-  known_for: [SimCity, The Sims, Spore, Proxi, Dollhouse, microworlds, data portability]
-  relation_to_show: "First invited Repo Show guest — topic-less kickoff orbiting 1996 Stanford talk"
-  micropolis_class: "Credited co-design lineage; open-source Micropolis descendant"
+  canonical: ../CHARACTER.yml
+  note: "README.md is the human portrait; CHARACTER.yml holds sims flavor + sources"

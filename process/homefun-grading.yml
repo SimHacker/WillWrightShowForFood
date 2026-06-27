@@ -49,6 +49,7 @@ rubric_faces:
     - "Why that file? (context-sources vs commit claims)"
     - "Why that image — where did it come from?"
     - "Declared rig class vs spend CSV (piss test honesty)"
+    - "SETUP.md — can a stranger boot your rig without you?"
     - "Stick-shift commits match gear segments — stick-shift-protocol.yml"
     - "Constructionist generosity — did you credit sources?"
   tool: SimHacker/moollm/skills/rubric
@@ -82,6 +83,7 @@ student_artifact:
     - at least one thoughtful commit with Thinking: cursor-mirror:// ref
   optional:
     - rigs/*.rig.yml declared class
+    - rigs/*.SETUP.md — reproduce + mod guide
     - Cursor spend CSV for stick-shift class
     - homefun README in branch
 

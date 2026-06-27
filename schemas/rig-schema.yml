@@ -8,10 +8,19 @@ meta:
   purpose: |
     Rigs are first-class objects — not vibes in a README. Each rig is a yaml document
     with lifecycle instructions so anyone can download, install, configure, use, replicate,
-    and mash up your stack. Declare class for fair ai-offs comparison.
+    and mash up your stack. Ship colocated SETUP.md as viral Rig DNA — emailable, sniffable
+    markdown with canonical GitHub URLs and an LLM idempotent install/upgrade protocol that
+    preserves user data. Declare class for fair ai-offs comparison.
 
 rig_document:
   filename: "rigs/<slug>.rig.yml"
+  setup: "rigs/<slug>.SETUP.md"
+  setup_required: true
+  setup_template: _TEMPLATE.SETUP.md
+  setup_dna_schema: rig-setup-dna.yml
+  setup_dna: |
+    SETUP.md is standalone DNA: sniffable head (why/what/CTA), raw GitHub URLs for latest
+    rig yaml, LLM protocol (idempotent, preserve .rig/<slug>/state.yml), human detail below.
   required_top_level: [rig, lifecycle]
   optional_top_level: [extends, components, declare, proof, costume, mash_up_targets, see_also]
 
@@ -65,6 +74,19 @@ components:
     skills: { type: array, note: "Anthropic + MOOLLM paths" }
     repos: { type: array, note: "workspace compose-with" }
     moollm: { type: object, fields: [plugin_yml, hot_yml, skills_loaded] }
+    languages:
+      type: array
+      note: "Contestant choice — host language, target language, show-off lane (Rust cosplay on host OK if demo runs on declared platform)"
+    tools:
+      type: array
+      note: "Assembler, emulator front-end, disk utils, Cursor, MOOLLM — whatever you drive with"
+    platforms:
+      type: array
+      note: "Where the spec runs — real hardware id, native OS, or retro target name"
+    emulators:
+      type: array
+      optional: true
+      note: "When platform is retro via emulation — apple2js, MAME, VICE, Emularity; declare version"
 
 declare:
   optional: true
@@ -76,6 +98,7 @@ declare:
 proof:
   optional: true
   fields:
+    setup_md: { type: path, required_for_challenges: true, example: "rigs/<slug>.SETUP.md", note: "Viral Rig DNA — emailable; canonical raw URLs; LLM idempotent install; must match rig yaml" }
     cursor_spend_export: { type: string }
     cursor_mirror_composer: { type: string }
     thoughtful_commit_shas: { type: array }
@@ -93,11 +116,13 @@ extension:
 
 validation:
   tool: "pnpm run verify:yaml (syntax); future: scripts/verify-rig-schema.mjs"
-  pr: "New rigs via PR to rigs/ + entry in rigs/INDEX.yml"
+  pr: "New rigs via PR: rigs/<slug>.rig.yml + rigs/<slug>.SETUP.md + line in rigs/INDEX.yml"
 
 see_also:
+  - rig-setup-dna.yml
   - ../rigs/README.md
   - ../rigs/_TEMPLATE.rig.yml
+  - ../rigs/_TEMPLATE.SETUP.md
   - ../process/repo-show-format.yml
   - ../process/rig-feedback.yml
   - ../process/ai-offs.yml

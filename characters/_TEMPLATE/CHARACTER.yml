@@ -29,3 +29,7 @@ sources:
   web: []
   papers: []
   blogs: []
+
+see_also:
+  - { path: CARD.yml, why: "Universal CARD — MTG invokable abilities for show segments" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses — self or assisted contribution" }

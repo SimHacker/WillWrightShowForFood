@@ -1,0 +1,104 @@
+# CARD — Stone Librande (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: stone-librande
+  name: Stone Librande
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Stone Librande
+  title: One Page Design
+  rarity: uncommon
+  signifier: 📄
+  flavor: If it doesn't fit one page, you don't understand it yet.
+abilities:
+- id: ONE-PAGE
+  name: One Page Design
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: onePageDesign
+    signature: onePageDesign(system) → single dense sheet
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Compress a game system until the page sings.
+  verifiable: One-page design fame (public talks)
+  combos_with: []
+- id: DIABLO-CRAFT
+  name: Diablo Craft
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: diabloCraft
+    signature: diabloCraft(loop) → readable core loop
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Explain loot loops without losing the audience.
+  verifiable: Diablo III lead designer credit
+  combos_with: []
+- id: SIMS-TOWN
+  name: SimTown Memory
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: simTownMemory
+    signature: simTownMemory(constraint) → charming scope
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Recall designing small scopes that still feel big.
+  verifiable: Maxis design history
+  combos_with: []
+- id: LEGO-RITUAL
+  name: LEGO Ritual
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: legoRitual
+    signature: legoRitual(brick) → thinking with hands
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Use physical bricks to find the fun fast.
+  verifiable: Public GDC rituals
+  combos_with: []
+- id: READABLE-DENSITY
+  name: Readable Density
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: readableDensity
+    signature: readableDensity(page) → no empty space
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Teach information design for game systems.
+  verifiable: One-page method
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

@@ -1,12 +1,5 @@
-# Verifiable public sources — Will Wright portrayal
+# Verifiable sources — canonical list in ../CHARACTER.yml
 
 sources:
-  wikipedia: https://en.wikipedia.org/wiki/Will_Wright_(game_designer)
-  web:
-    - https://en.wikipedia.org/wiki/Will_Wright_(game_designer)
-  papers: []
-  blogs: []
-  archive:
-    - label: "1996 Winograd seminar talk (anchor artifact)"
-      url: ../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
-  note: "Expand with verified citations as episodes proceed — narrative generated later"
+  canonical: ../CHARACTER.yml
+  note: "Expand here when co-authoring with Will; CHARACTER.yml is self-contained for now"

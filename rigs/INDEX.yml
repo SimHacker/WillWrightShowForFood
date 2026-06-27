@@ -3,12 +3,21 @@
 meta:
   schema: ../schemas/rig-schema.yml
   template: _TEMPLATE.rig.yml
-  rule: "Declare class honestly; lifecycle must be replicable"
+  setup_template: _TEMPLATE.SETUP.md
+  setup_dna_schema: ../schemas/rig-setup-dna.yml
+  rule: "Declare class honestly; lifecycle + SETUP DNA must be emailable and LLM-installable"
 
 entries:
   _TEMPLATE.rig.yml: "Copy to <slug>.rig.yml and fill in"
+  _TEMPLATE.SETUP.md: "Copy to <slug>.SETUP.md — viral Rig DNA (sniffable head + LLM protocol)"
   artisanal-vscode.rig.yml: "Hand-only — VS Code, zero AI tokens"
   stick-shift-composer-moollm.rig.yml: "Don host rig seed — Composer execution + MOOLLM + stick shift"
+  apple2-flair-lap.rig.yml: "Retro example — languages/tools/platform/emulator for apple2-drive"
+  apple2-flair-lap.SETUP.md: "Rig DNA — apple2-flair-lap — emailable; fetch latest yaml from GitHub"
+  pdp10-maclisp-flair-lap.rig.yml: "MACLISP on ITS — PDP-10/its + SIMH for pdp10-maclisp-drive"
+  pdp10-maclisp-flair-lap.SETUP.md: "Rig DNA — Lars make-it-so anchor — idempotent ITS boot protocol"
+  lisp-machine-symbolics.rig.yml: "Hack-Off Symbolics camp — Genera on VLM"
+  lisp-machine-lmi.rig.yml: "Hack-Off LMI camp — Lambda on LambdaDelta"
 
 base:
   note: "Future: rigs/base/*.rig.yml partial rigs to extend"

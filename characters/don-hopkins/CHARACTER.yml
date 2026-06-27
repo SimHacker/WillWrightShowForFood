@@ -1,11 +1,13 @@
 # Don Hopkins — self-sovereign host character
 # Standards: ../../schemas/portrayal-standards.yml
+# Sync: sync-sources.yml (from moollm adventure-4 + DonHopkins export)
 
 character:
   id: don-hopkins
   name: Don Hopkins
   type: self_sovereign
   signifier: "🌀"
+  subtitle: "Programmer, Interface Designer, Pie Menu Baker"
   status: living
   field: "User-interface designer and programmer; Repo Show host; Micropolis Class"
   home: characters/don-hopkins/
@@ -15,7 +17,10 @@ representation:
   governed_by: ../../schemas/portrayal-standards.yml
   consent: self_sovereign
   authored_by: self
-  note: "Don controls this directory. Other characters reference portrayal-standards; Don does not repeat them here."
+  layers:
+    public_wwsff: "This directory — career/ + portrayal/"
+    moollm_adventure: "SimHacker/moollm/examples/adventure-4/characters/real-people/don-hopkins/"
+  note: "Don controls this directory. Adventure microworld state stays upstream."
 
 simulation:
   permitted: true
@@ -26,8 +31,12 @@ invitation:
   role: host
 
 bio:
-  summary: "Pie menus, The Sims, Micropolis, MOOLLM, Repo Show. YAML backbone + markdown facade."
+  summary: "Pie menus, The Sims, Micropolis, MOOLLM, Repo Show. YAML girder + generated markup."
   backbone: career/*.yml
+  portrayal: portrayal/*.yml
+  backstory_condensed: |
+    UMD HCIL (Shneiderman, Weiser) → NeWS/Sun → Kaleida ScriptX → Maxis/The Sims →
+    Stupid Fun Club robots → TomTom → Pantomime AR/VR → Leela AI → MOOLLM → Repo Show.
 
 sources:
   web:
@@ -37,8 +46,22 @@ sources:
     - https://github.com/SimHacker/MicropolisCore
     - https://github.com/SimHacker/moollm
     - https://github.com/SimHacker/WillWrightShowForFood
+  upstream_character:
+    - https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/don-hopkins
 
 see_also:
-  - career/INDEX.yml
-  - ../don-philahue/
-  - ../../process/live-repo.yml
+  - { path: sync-sources.yml, why: "Dedupe map from adventure-4 — what's here vs upstream" }
+  - { path: CARD.yml, why: "MOOLLM room interface" }
+  - { path: GLANCE.yml, why: "Sniff" }
+  - { path: career/INDEX.yml, why: "Career yaml index" }
+  - { path: portrayal/voice.yml, why: "How Don writes and speaks" }
+  - { path: portrayal/heroes.yml, why: "Mentors — Shneiderman, Weiser, Will, Kay" }
+  - { path: portrayal/presentations.yml, why: "CHI'88 and verified talks" }
+  - { path: career/stupid-fun-club.yml, why: "Slats + Dents — robot brains for Will" }
+  - { path: ../don-philahue/, why: "MC avatar on stream" }
+  - { path: ../slats/, why: "Slats — waiter robot → drag race judge" }
+  - { path: ../will-wright/, why: "Boss, collaborator, flagship guest" }
+  - { path: ../../skills/repo-show/SKILL.md, why: "Show orchestrator" }
+  - { path: ../../process/live-repo.yml, why: "WWSFF is live — edit here" }
+  - { path: ../../process/cross-links.yml#constructionist_lineage, why: "1996 microworlds → today" }
+  - { path: ../../rigs/stick-shift-composer-moollm.rig.yml, why: "Host rig seed" }

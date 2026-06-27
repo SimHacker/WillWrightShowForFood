@@ -1,0 +1,100 @@
+# Apple ][ Flair Lap — example retro rig persona (retrocomputing-drive / apple2-drive)
+# Rig = languages + tools + platform + emulators. Contestants fork and declare their own.
+
+rig:
+  id: apple2-flair-lap
+  name: "Apple ][ Flair Lap — retrocomputing drag race"
+  version: "0.2"
+  author: don-hopkins
+  rig_classes: [artisanal, intentional, flair]
+  description: |
+    Example retro rig for Micropolis AI Drag Race: declare languages, tools, platform,
+    and emulators in components — then ship the spec on the ][. Real iron or emulator.
+    See process/challenges/retrocomputing-drive.yml and apple2-drive.yml.
+
+lifecycle:
+  download:
+    steps:
+      - "Read process/challenges/retrocomputing-drive.yml — rig declaration rules"
+      - "Read process/challenges/apple2-drive.yml — pick flair or measurement lane"
+      - "Fetch your platform stack — apple2js, cc65, or real ][ setup"
+    urls:
+      - "https://github.com/Apple2-OSS/apple2js"
+      - "https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/challenges/retrocomputing-drive.yml"
+  install:
+    steps:
+      - "Node toolchain if driving apple2js locally; OR browser Emularity; OR verify real ][ boots"
+      - "Optional: cc65/xa if cross-assembling from host"
+    verify: "READY prompt on ][ (emulated or real)"
+  configure:
+    steps:
+      - "Cursor workspace: WWSFF + challenge spec CARD"
+      - "Fill components.languages, tools, platforms, emulators — your choices, declared honestly"
+      - "Declare flair_class + measurement emphasis if any"
+    files:
+      - process/challenges/apple2-drive.yml
+      - process/challenges/retrocomputing-drive.yml
+  use:
+    workflow: |
+      Retrocomputing AI drag race: same spec as the room, your rig drives how you ship.
+      Host may write on laptop; demo must run on declared platform. Record boot + werk;
+      thoughtful-commitment with Thinking ref. Slats roasts INTEGER BASIC crashes lovingly.
+    contexts: [retrocomputing_drive, apple2_drive, micropolis_ai_drag_race, homefun]
+  replicate:
+    checklist:
+      - "Copy rig yaml; swap components for your languages/tools/platform/emulator choices"
+      - "Boot declared platform; implement spec CARD"
+      - "PR with demo link + optional spend CSV"
+    estimated_time: "15–45 min flair segment; longer for L0/L1 measurement"
+  mash_up:
+    compose_with:
+      - rigs/stick-shift-composer-moollm.rig.yml
+    warnings:
+      - "Flair is how — spec must still ship on declared platform"
+      - "Emulator version must match demo — no cosplay without boot"
+
+components:
+  editor: { name: Cursor, version: latest }
+  languages:
+    target: [APPLESOFT_FP_BASIC, INTEGER_BASIC, "6502 asm", FORTH]
+    host: [TypeScript, Rust, Python, artisanal_hand]
+    note: "Pick target for on-][ code; host for cross-asm or AI orchestration"
+  tools:
+    - { name: apple2js, role: "browser/local ][ emulator" }
+    - { name: cc65, role: "6502 cross-assembler from host", optional: true }
+    - { name: Cursor, role: "AI orchestration" }
+    - { name: MOOLLM, role: "skills, thoughtful-commitment, cursor-mirror" }
+  platforms:
+    primary: apple2
+    mode: emulated
+    alt: { mode: real_hardware, note: "Apple ][+ with floppy — declare serial/disk if on stream" }
+  emulators:
+    - { name: apple2js, when: "local dev + stream browser demo" }
+    - { name: Emularity, when: "Internet Archive in-browser ][" }
+    - { name: MAME, when: "alternate ][ profile", optional: true }
+  skills:
+    - SimHacker/moollm/skills/thoughtful-commitment
+    - SimHacker/moollm/skills/cursor-mirror
+  repos:
+    - SimHacker/WillWrightShowForFood
+
+declare:
+  class: flair
+  platform_bid: "Apple ][ — emulated via apple2js unless real iron declared"
+  honesty: "Demo must boot on declared platform — Slats and the fans are watching"
+
+proof:
+  demo: "URL, screencast, or hardware capture on PR"
+  setup_md: apple2-flair-lap.SETUP.md
+  rig: "components block must list reproducible languages/tools/platform/emulator"
+  optional: "Cursor spend export + composer id"
+
+costume:
+  drag_race: "Disk ][ tiara, INTEGER BASIC sash, green phosphor gloves, Slats cape optional"
+
+see_also:
+  - ../process/challenges/retrocomputing-drive.yml
+  - ../process/challenges/apple2-drive.yml
+  - ../process/apple2-emulator-stack.yml
+  - ../process/micropolis-ai-drag-race.yml
+  - ../characters/slats/judge-rubric.yml

@@ -81,7 +81,25 @@ the_thread: |
   Apple II Forth → UMD HCI → NeWS → Kaleida → Maxis/Sims → Stupid Fun Club →
   TomTom → Pantomime → Leela/MOOLLM. Making complex systems understandable through play.
 
+key_inventions:
+  pie_menus:
+    paper: "CHI'88 — Callahan, Hopkins, Weiser, Shneiderman"
+    detail: ../portrayal/presentations.yml
+  vitaboy:
+    what: The Sims character animation system
+  transmogrifier:
+    what: Sims modding tool — kickstarted UGC community
+  unityjs:
+    url: https://github.com/SimHacker/UnityJS
+
+sync:
+  source: ../sync-sources.yml
+  upstream_full: moollm/examples/adventure-4/characters/real-people/don-hopkins/work-history.yml
+
 see_also:
-  - project-threads.yml
-  - stupid-fun-club.yml
-  - simcity-lineage.yml
+  - { path: project-threads.yml, why: "How threads merge" }
+  - { path: stupid-fun-club.yml, why: "SFC detail" }
+  - { path: simcity-lineage.yml, why: "Micropolis arc" }
+  - { path: ../portrayal/presentations.yml, why: "Verified papers" }
+  - { path: ../portrayal/heroes.yml, why: "Mentors" }
+  - { path: ../sync-sources.yml, why: "Dedupe from adventure-4" }

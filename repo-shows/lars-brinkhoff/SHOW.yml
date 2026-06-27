@@ -1,0 +1,53 @@
+# SHOW — Lars Brinkhoff (PDP-10/ITS — make it so!)
+# Paired with Thomas Cherryhomes — emulated AI Lab × real retro net
+
+show:
+  id: lars-brinkhoff
+  title: "A Repo Show with Lars Brinkhoff — ITS Lives, MACLISP on Emulated Iron"
+  type: solo_or_pair
+  host: Don Hopkins
+  guests: ["Lars Brinkhoff"]
+  paired_guest: thomas-cherryhomes
+  character: characters/lars-brinkhoff/
+  topic: "PDP-10/ITS preservation — challenge Lars to make it so on air for Retrocomputing Drive / pdp10-maclisp-drive"
+  status: seed
+
+why_him:
+  its_restoration: "Top contributor to PDP-10/its — ITS rebuilt from source, runs on KA10/KL10/KS10 emulators. The authority for 'boot the AI Lab on stream.'"
+  show_challenge: "pdp10-maclisp-drive names him — contestants declare rig; Lars is the dream guest to validate boot path or roast GOTO 20."
+  logo_history: "Don ↔ Lars ↔ Margaret Minsky thread on MIT AI films, Banks CA, programs preserved to run on PDP-10 emulator (ITS #1866)."
+  values_fit: "Preservation made runnable — same Micropolis Class ethos as repo-native harvest."
+
+why_pair_thomas:
+  complementary: "Lars — emulated ITS/MACLISP on SIMH. Thomas — FujiNet, IRATA.ONLINE, real retro on the network."
+  joint_segment: "Tag-team: boot ITS in one window; round-trip something over FujiNet in another. Preservation × playable infrastructure."
+  drag_race: "Retrocomputing AI Drag Race episode — two camps, one spec CARD, Slats judges werk."
+
+threads:
+  make_it_so: "Live: build/boot ITS from PDP-10/its — prove pdp10-maclisp-drive is not cosplay"
+  maclisp_spec_card: "Define + eval one Micropolis Class function in MACLISP on ITS — template for contestants"
+  simh_toolchain: "Which emulator, which image, reproducible rig yaml for rigs/pdp10-maclisp-flair-lap.rig.yml"
+  heritage_films: "What from MIT AI Lab films is runnable today — CA constructor arm, Logo lineage"
+  paired_with_ts: "Joint call or episode arc with Thomas Cherryhomes — emulated × networked retro"
+  lisp_machine_ladder: "ITS/MACLISP → CADR/usim → Symbolics vs LMI hack-off — Lars as heritage anchor"
+
+format:
+  live: true
+  audience_qa: true
+  challenge: "Make it so — on-air boot + MACLISP eval; contestants fork your rig"
+  homefun: "Boot ITS locally; ship spec CARD + rigs/<slug>.SETUP.md on branch"
+  deliverable: "Reference SETUP.md others can fork — Lars Brinkhoff make-it-so gold standard"
+  optional_pair_episode: "lars-brinkhoff × thomas-cherryhomes — two-window preservation demo"
+
+implements: "Working ITS boot path + rigs/pdp10-maclisp-flair-lap.SETUP.md (or guest-authored SETUP) on PR"
+
+ties_to:
+  - ../../characters/lars-brinkhoff/invitation.md
+  - ../../characters/thomas-cherryhomes/
+  - ../../process/pdp10-its-stack.yml
+  - ../../process/challenges/pdp10-maclisp-drive.yml
+  - ../../process/challenges/retrocomputing-drive.yml
+  - ../../process/micropolis-ai-drag-race.yml
+  - ../../rigs/pdp10-maclisp-flair-lap.rig.yml
+
+consent: not_yet_asked

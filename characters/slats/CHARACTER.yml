@@ -31,9 +31,10 @@ invitation:
   note: "Not a human guest — quest goal on Will Wright kickoff show"
 
 see_also:
-  - ../repo-shows/will-wright/slats-reincarnation.yml
-  - judge-rubric.yml
-  - ../../process/manual-transmission.yml
-  - ../../process/brain-stream.yml
-  - ../../process/micropolis-ai-drag-race.yml
-  - ../characters/don-hopkins/career/stupid-fun-club.yml
+  - { path: ../repo-shows/will-wright/slats-reincarnation.yml, why: "RoboResurrection quest" }
+  - { path: judge-rubric.yml, why: "Celebrity judge rubric" }
+  - { path: ../../process/micropolis-ai-drag-race.yml, why: "Drag race format" }
+  - { path: ../don-hopkins/career/stupid-fun-club.yml, why: "Origin — One Minute Movies, waiter brain" }
+  - { path: ../don-hopkins/CHARACTER.yml, why: "Don programmed Slats at SFC" }
+  - { path: ../../process/cross-links.yml#drag_race_and_ai_offs, why: "Slats judges on runway" }
+  - { path: "https://www.youtube.com/watch?v=NXsUetUzXlg", why: "Servitude — Slats waiter film (2003)" }

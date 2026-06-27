@@ -1,0 +1,96 @@
+# MARKUP FACADE — yaml girder → human markdown view
+# Registry: ../process/markup-facades.yml | Generator: ../scripts/generate-markup-facades.py
+
+meta:
+  id: markup-facade
+  version: 0.2
+
+purpose: |
+  Yaml is machine-readable compact data — possibly declaring includes and references,
+  updated when dependencies change like a dependency graph. Markdown is the human-readable
+  markup view: lazily generated and re-generated on demand. Do not hand-edit generated *.md
+  in the facade registry — edit yaml (or re-invoke the renderer).
+
+roles:
+  yaml:
+    what: "Source of truth — brutalist girder for tools, MOOLLM, automation"
+    edit: "Always edit yaml first"
+    may_include: [see, ties_to, includes, extends, compose_with]
+  markdown:
+    what: "Human-readable markup facade — browse, email, RTFR without flattening yaml"
+    edit: "Never by hand in registry outputs — regenerate via renderer"
+    banner: "<!-- GENERATED ... --> at file head"
+
+registry: ../process/markup-facades.yml
+
+rendering:
+  phase: instance_first
+  note: |
+    Target architecture: LLM reads yaml + facade map (depends_on, render profile) and writes
+    empathic markdown — tone, verbosity, merge rules, schema context. Constraint maintenance
+    (auto stale detection, CI, empathic templates in yaml) comes later.
+  modes:
+    llm:
+      what: "Primary for quality — agent considers source yaml, resolved dependencies, and per-facade render hints"
+      when: [new instances, flagship views, narrative merge of depends_on, empathic tone]
+      inputs: [source yaml, depends_on paths, render block from registry, schema if any]
+      output: "Registered *.md with GENERATED banner — same contract as deterministic mode"
+    deterministic:
+      what: "PyYAML tree walk — prose keys as headings, dicts as tables, see_also as Link|Why"
+      script: ../scripts/generate-markup-facades.py
+      invoke: "pnpm run facades"
+      check: "pnpm run facades:check"
+      when: [bulk refresh, CI staleness, cheap readable dump while instances mature]
+      limits: "No merge of depends_on content; no tone/verbosity; schema-blind except a few key names"
+  future:
+    hybrid: "Deterministic skeleton + LLM prose sections where render.profile says so"
+    small_model: "Script calls cheap/free model for repetitive blocks — glorified sprintf"
+    empathic_templates: "Yaml-declared tone/verbosity per schema and room context"
+    constraint_system: "Dependency graph + render profiles maintained automatically"
+
+render_profile:
+  optional_fields:
+    mode: [deterministic, llm, hybrid]
+    tone: [neutral, invitation, spec_card, retro_postcard, rig_dna]
+    verbosity: [glance, standard, longform]
+    merge_depends_on: "When true, LLM may fold depends_on sources into one narrative (not deterministic today)"
+    empathic_template: "Path to yaml/md template hints — future"
+
+generator:
+  script: ../scripts/generate-markup-facades.py
+  wrapper: ../scripts/generate-markup-facades.mjs
+  invoke: "pnpm run facades"
+  check: "pnpm run facades:check"
+  lazy: |
+    Regenerate when source yaml or any declared dependency is newer than output md,
+    or when content hash differs. CI may run facades:check.
+  what_it_does: |
+    Loads registry entry → reads source yaml only (depends_on used for staleness, not merge).
+    Walks top-level keys: pitch/what/tagline → ## sections; nested dicts → tables or ### headings;
+    challenges → table; see_also with {path,why} → Link|Why table. Prepends GENERATED banner + sha256
+    of body. Does not call an LLM. Good enough to skim; not a substitute for authored instances.
+
+exceptions:
+  rigs_setup_md:
+    what: "rigs/<slug>.SETUP.md is Rig DNA — emailable viral artifact; different lifecycle from process facades"
+    schema: rig-setup-dna.yml
+    generation: "May be LLM-authored initially from rig yaml + rig-setup-dna.yml; then maintained as DNA, not bulk-regenerated with pnpm facades"
+    rule: "Not in markup-facades.yml registry — forwardable standalone file"
+
+see_also_convention:
+  habit: |
+    Generous cross-references like moollm/skills/INDEX.md narrative connections.
+    Prefer { path, why } objects over bare strings — tell the reader why to wander.
+  hub: ../process/cross-links.yml
+  upstream_index: https://github.com/SimHacker/moollm/skills/INDEX.md
+
+dependency_graph:
+  rule: |
+    Each facade entry lists depends_on paths. When any node in the graph changes,
+    affected facades are stale and must regenerate. Transitive closure optional in v0.1.
+    LLM renderer should read depends_on; deterministic renderer only uses them for mtime.
+
+see_also:
+  - ../process/markup-facades.yml
+  - ../process/INDEX.yml
+  - rig-setup-dna.yml

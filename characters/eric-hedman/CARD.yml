@@ -1,0 +1,105 @@
+# CARD — Eric Hedman (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: eric-hedman
+  name: Eric Hedman
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Eric Hedman
+  title: Irk — Wiggle Master
+  rarity: uncommon
+  signifier: 🕺
+  flavor: Hand-tuned walk cycles beat procedural noise every time.
+abilities:
+- id: WIGGLE-DEBUG
+  name: Wiggle Debug
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: wiggleDebug
+    signature: wiggleDebug(canWiggle) → immortal walk cycle
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Tell the canWiggle story — animation as friendship.
+  verifiable: Sims animation pipeline (Don documented)
+  combos_with:
+  - DON-VITABOY-PIPELINE
+- id: HAND-TUNED
+  name: Hand Tuned
+  type: activated
+  mana: '{G}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: handTuned
+    signature: handTuned(cycle) → soul in locomotion
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Show how manual polish survives in shipped games.
+  verifiable: Sims 1 animator role
+  combos_with: []
+- id: GREAT-BUDDY
+  name: Great Buddy
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: greatBuddy
+    signature: greatBuddy(collaborator) → long-term craft respect
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Model healthy credit between engineer and animator.
+  verifiable: Don README — still great buddies
+  combos_with: []
+- id: YOUTUBE-PENDING
+  name: YouTube Channel
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: youtubeDemo
+    signature: youtubeDemo(url) → process visible
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Share animation craft on video when ready.
+  verifiable: YouTube channel pending (CHARACTER.yml)
+  combos_with: []
+- id: IDLE-POETRY
+  name: Idle Poetry
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: idlePoetry
+    signature: idlePoetry(idle) → character breathes
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Defend idle animations as character writing.
+  verifiable: Animation craft
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

@@ -1,0 +1,104 @@
+# CARD — Edd Coates (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: edd-coates
+  name: Edd Coates
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Edd Coates
+  title: Game UI Database
+  rarity: uncommon
+  signifier: 🎮
+  flavor: Every interface screen deserves a museum label.
+abilities:
+- id: UI-DATABASE
+  name: UI Database
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: uiDatabase
+    signature: uiDatabase(screenshot) → searchable pattern
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Browse game UI history like birdwatching.
+  verifiable: Game UI Database; Guinness record (CHARACTER bio)
+  combos_with: []
+- id: UI-BIBLE
+  name: UI Bible
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: uiBible
+    signature: uiBible(chapter) → teach layout literacy
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Train designers to read interfaces critically.
+  verifiable: The Game UI Bible book
+  combos_with: []
+- id: ETHICAL-LICENSING
+  name: Ethical Licensing
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: ethicalLicensing
+    signature: ethicalLicensing(dataset) → fair use path
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Discuss AI training data with UI archivists' ethics.
+  verifiable: Don collaboration note on licensing
+  combos_with: []
+- id: PRESERVE-SCREENSHOT
+  name: Preserve Screenshot
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: preserveScreenshot
+    signature: preserveScreenshot(ui) → provenance kept
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Treat pixels as cultural artifacts.
+  verifiable: Archivist mission
+  combos_with: []
+- id: KIND-COLLABORATOR
+  name: Kind Collaborator
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: kindCollaborator
+    signature: kindCollaborator(don) → cross-discipline jam
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Pair game UI history with pie menu archaeology.
+  verifiable: Friend of Don Hopkins
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

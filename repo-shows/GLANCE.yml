@@ -1,11 +1,10 @@
 # SHOWS — GLANCE
-# 🎬 The Repo Shows. ("So you have a Repo to Show us?")
-# up: ../INDEX.yml | map: INDEX.yml | collection meta: REPO-SHOWS.yml | engine: /skills/repo-show/
+# up: ../INDEX.yml | engine: ../skills/repo-show/
 
 what: "One file per Repo Show. Each is a collaborative, GitHub-native, live-streamed design conversation that FOLLOWS THROUGH to implementation. Show, don't tell."
 
 how_it_works:
-  inherit: "Every file/dir here inherits (implicitly) from the SHOW skill (/skills/repo-show). REPO-SHOWS.yml declares it. Self all the way down."
+  inherit: "Every file/dir here inherits (implicitly) from ../skills/repo-show/. REPO-SHOWS.yml declares it."
   seed_to_plant: "A show starts as a SEED (single <name>.yml), then PLANTS into a big-endian-named dir, then DISTILLs into its own Repo Show (private → public). See /skills/repo-show repo_stages."
   shape: "Per episode: explain WHY the design works → implement it live (MOOLLM + Cursor)."
 

@@ -1,0 +1,74 @@
+# Symbolics camp — Lisp Machine Hack-Off example rig (Genera / VLM)
+
+rig:
+  id: lisp-machine-symbolics
+  name: "Symbolics — Genera on VLM (Hack-Off camp)"
+  version: "0.1"
+  author: don-hopkins
+  rig_classes: [intentional, flair]
+  description: |
+    Symbolics lane for lisp-machine-hack-off: Genera via Portable Genera or community
+    Open Genera VLM. Declare license path. Zmacs + Dynamic Windows on stream.
+
+lifecycle:
+  download:
+    steps:
+      - "Read process/challenges/lisp-machine-hack-off.yml — Symbolics camp"
+      - "Read process/lisp-machine-stack.yml — emulator tiers + licensing notes"
+      - "Portable Genera: symbolics-dks.com OR community VLM/og2vlm per your compliance choice"
+    urls:
+      - "https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/lisp-machine-stack.yml"
+  install:
+    steps:
+      - "VLM: TAP/NFS host setup per og2vlm or Portable Genera docs"
+      - "World file + genera binary — declare source in rig proof block"
+    verify: "Genera cold load → listener; Zmacs opens"
+  configure:
+    steps:
+      - "components.vendor_lane: symbolics"
+      - "Document emulator tier (portable_genera | open_genera_vlm)"
+    files:
+      - process/challenges/lisp-machine-hack-off.yml
+  use:
+    workflow: |
+      Hack-Off: ship spec CARD in Zmacs on Genera. Dynamic Windows flair welcome.
+      Host Cursor orchestrates; demo is on the VLM. License compliance declared in PR.
+    contexts: [lisp_machine_hack_off, retrocomputing_drive, micropolis_ai_drag_race]
+  replicate:
+    checklist:
+      - "Emulator boots Genera"
+      - "Spec defun in PR with reload instructions"
+    estimated_time: "VLM setup 2–8 hours first time; hack-off segment 30–90 min"
+
+components:
+  vendor_lane: symbolics
+  languages:
+    target: [ZetaLisp, Flavors]
+    host: [Common_Lisp, Python_for_orchestration]
+  tools:
+    - { name: Zmacs, role: "editor on Genera" }
+    - { name: Dynamic_Windows, role: "multi-pane flair", optional: true }
+    - { name: genera_VLM, role: "Ivory emulator binary" }
+    - { name: Cursor, role: "host orchestration" }
+  platforms:
+    primary: symbolics_genera
+    mode: emulated
+  emulators:
+    - { name: Portable_Genera, license: proprietary, when: "commercial path" }
+    - { name: og2vlm, repo: "https://github.com/JMlisp/og2vlm", when: "community Debian path", license: "declare compliance" }
+
+declare:
+  class: flair
+  camp: symbolics
+  honesty: "Genera must boot — declare which emulator tier and license path"
+
+proof:
+  demo: "Genera listener + Zmacs screencast"
+  license: "State Portable Genera purchase or community path used"
+
+costume:
+  drag_race: "Ivory tiara, Genera sash, chaos-net earrings"
+
+see_also:
+  - ../process/challenges/lisp-machine-hack-off.yml
+  - ../process/lisp-machine-stack.yml

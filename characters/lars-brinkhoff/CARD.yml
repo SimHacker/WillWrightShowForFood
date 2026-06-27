@@ -1,0 +1,121 @@
+# CARD — Lars Brinkhoff (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: lars-brinkhoff
+  name: Lars Brinkhoff
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Lars Brinkhoff
+  title: Keeper of ITS
+  rarity: rare
+  signifier: 🖥️
+  flavor: Make it so — boot the AI Lab on emulated iron.
+abilities:
+- id: BOOT-ITS
+  name: Boot ITS
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: bootITS
+    signature: bootITS(PDP10, image) → login | MACLISP listener
+    score_when:
+    - trigger: third_party_reproduces_from_docs
+      weight: 0.95
+  effect: Restore Incompatible Timesharing from source on a clean machine.
+  verifiable: PDP-10/its project; lars.nocrew.org
+  combos_with:
+  - THOMAS-FUJINET-BRIDGE
+- id: PRESERVE-CPU
+  name: Preserve CPU
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: preserveCPU
+    signature: preserveCPU(arch) → emulator + docs bundle
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Keep weird machines runnable for the next generation.
+  verifiable: awesome-cpus; GCC on PDP-10
+  combos_with: []
+- id: LB-FORTH
+  name: lbForth
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: lbForth
+    signature: lbForth() → tiny understandable system
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Show a Forth you can hold in your head.
+  verifiable: lbForth project (nocrew)
+  combos_with: []
+- id: EMACS-HISTORY
+  name: Emacs History
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: emacsArchaeology
+    signature: emacsArchaeology(era) → curated thread
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Connect modern tools to AI Lab editor lineage.
+  verifiable: Emacs history work (public web)
+  combos_with: []
+- id: MAKE-IT-SO
+  name: Make It So
+  type: activated
+  mana: '{G}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: makeItSo
+    signature: makeItSo(challenge CARD) → demo on declared platform
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Accept retro challenge; pin versions; eval on air.
+  verifiable: pdp10-maclisp-drive invitation
+  combos_with:
+  - WILL-SIMULATE-CITY
+- id: FILM-LOGO-THREAD
+  name: Film Logo Thread
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: logoHistoryThread
+    signature: logoHistoryThread(artifact) → context for microworlds
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Place Logo/ITS in documentary-grade historical context.
+  verifiable: MIT AI Lab film collaboration (referenced in invitation)
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

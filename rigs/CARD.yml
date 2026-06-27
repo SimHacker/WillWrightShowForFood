@@ -1,0 +1,36 @@
+# CARD — rigs/ room
+
+room:
+  id: rigs
+  name: "Rig personas"
+  type: [reproducible_stack, drag_race_costume]
+
+lifecycle: "download → install → configure → use → replicate → mash up"
+
+required:
+  - "rigs/<slug>.rig.yml"
+  - "rigs/<slug>.SETUP.md  # viral Rig DNA — emailable; LLM idempotent install"
+
+methods:
+  SUBMIT-RIG:
+    signature: "PR rig yaml + SETUP DNA + INDEX.yml line"
+  EMAIL-DNA:
+    signature: "Forward SETUP.md alone — recipient fetches latest yaml from raw GitHub URL"
+  LLM-INSTALL:
+    signature: "User asks agent to run For LLMs section — idempotent, preserves .rig/<slug>/"
+  MASH-UP:
+    signature: "extends: parent + compose_with — document in SETUP Mod section"
+
+registry: INDEX.yml
+schema: ../schemas/rig-schema.yml
+setup_dna_schema: ../schemas/rig-setup-dna.yml
+
+see_also:
+  - { path: README.md, why: "Room overview — Rig DNA pattern" }
+  - { path: INDEX.yml, why: "Rig registry" }
+  - { path: GLANCE.yml, why: "One-screen sniff" }
+  - { path: ../process/DRAG-RACE.md, why: "Contestant packet — your rig is your persona" }
+  - { path: ../process/cross-links.yml#rig_personas, why: "Master trail" }
+  - { path: ../process/challenges/RETROCOMPUTING.md, why: "Retro challenges require SETUP DNA" }
+  - { path: ../skills/repo-show/CARD.yml, why: "Rig spectrum in show format" }
+  - { path: ../schemas/markup-facade.yml, why: "Yaml girder vs md — SETUP is Rig DNA, not facade-registry output" }

@@ -1,5 +1,5 @@
 # MICROPOLIS AI DRAG RACE — flagship game-show variety format
-# Micropolis Class × AI-offs × rig costumes × Repo Show harvest
+# Markup: DRAG-RACE.md (generated — pnpm run facades) | Show seed: ../repo-shows/micropolis-ai-drag-race.yml
 
 meta:
   id: micropolis-ai-drag-race
@@ -11,9 +11,10 @@ meta:
 
 pitch: |
   A Micropolis Class variety show: contestants bring RIG PERSONAS (Let's Make a Deal
-  costumes + rigs/*.rig.yml), compete in challenges, prove with Cursor spend logs,
-  lip-sync their thoughtful commits, and merge technique DNA back into the organism.
-  Declare class — don't exclude. It's just a game. Werk.
+  costumes + rigs/*.rig.yml). Your rig declares languages, tools, platforms — emulators
+  count as platforms. Retrocomputing AI drag races welcome. Prove with Cursor spend logs,
+  lip-sync thoughtful commits, merge technique DNA back into the organism. Declare class
+  — don't exclude. It's just a game. Werk.
 
 host:
   options: [Don_Philahue, Flower_Child_Don, guest_MC]
@@ -42,7 +43,24 @@ challenges:
     what: "Wrangle one cheap model through hallucination chaos — show the retries, werk anyway"
   artisanal_eleganza:
     what: "Zero tokens — hand-crafted yaml so fierce it doesn't need AI"
-    flair_variant: "Or rewrite the whole spec in Rust/FORTH/APPLESOFT just to show off — Slats judges"
+    flair_variant: "Or apple2-drive — APPLESOFT/INTEGER BASIC on the ][ — see challenges/apple2-drive.yml"
+  apple2_drive:
+    see: challenges/apple2-drive.yml
+    family: challenges/retrocomputing-drive.yml
+    tagline: "Apple ][ instance — declare languages, tools, platform, emulator"
+    example_rig: ../rigs/apple2-flair-lap.rig.yml
+  retrocomputing_drive:
+    see: challenges/retrocomputing-drive.yml
+    tagline: "Retrocomputing AI drag races — your rig picks language, tools, and platform"
+    note: "apple2-drive + pdp10-maclisp-drive are flagship instances"
+  pdp10_maclisp_drive:
+    see: challenges/pdp10-maclisp-drive.yml
+    tagline: "Write in MACLISP on a PDP-10 emulator running ITS!"
+    example_rig: ../rigs/pdp10-maclisp-flair-lap.rig.yml
+  lisp_machine_hack_off:
+    see: challenges/lisp-machine-hack-off.yml
+    tagline: "Symbolics vs LMI — Lisp Machine Hack-Off"
+    example_rigs: [../rigs/lisp-machine-symbolics.rig.yml, ../rigs/lisp-machine-lmi.rig.yml]
   lip_sync_for_your_commits:
     what: "thoughtful-commitment commits — narrate WHY on stream; cursor-mirror playback"
   harvest_runway:
@@ -56,13 +74,15 @@ judging:
     - "Taste — eleganza, clarity, humor, constructionist generosity"
     - "Cost to ship — tokens, spend, wall-clock vs bid"
     - "Commitment — did you werk the spec and merge back?"
-    - "Replication — can someone mash_up your rigs/*.rig.yml?"
+    - "Replication — forward SETUP.md alone; recipient LLM fetches latest yaml from GitHub and idempotently installs"
   scoreboard: showmaker-network.yml#competitions
   proof: ai-offs.yml
 
 contestant_packet:
   required:
     - "rigs/<persona>.rig.yml — full lifecycle + costume"
+    - "rigs/<persona>.SETUP.md — Rig DNA: emailable head, raw GitHub yaml URL, LLM idempotent install (template: rigs/_TEMPLATE.SETUP.md; schema: schemas/rig-setup-dna.yml)"
+    - "components: languages, tools, platforms, emulators (if retro) — your choices"
     - "Declare rig_classes honestly"
     - "PR branch — the runway"
   optional:
@@ -76,6 +96,11 @@ personas:
     artisanal_queen: "NO AI sash, pencil crown, yaml nails"
     bull_rider: "Retry-log chaps, hallucination hair"
     stick_shift: "Sequin shift map, tachometer earrings"
+    apple2_driver: "Disk ][ tiara, INTEGER BASIC sash — apple2-drive instance"
+    retro_driver: "Platform badge + emulator gloves — retrocomputing-drive family"
+    pdp10_maclisp: "Teletype sash, Tourist badge — MACLISP on ITS"
+    symbolics_camp: "Ivory tiara — Genera Dynamic Windows"
+    lmi_camp: "NuBus cape — Lambda SDU boot realness"
     orchestrated: "MCP tiara, MOOLLM cape, Composer scepter"
 
 episode_structure:
@@ -87,11 +112,29 @@ ties_to:
   - ai-offs.yml
   - manual-transmission.yml
   - brain-stream.yml
+  - challenges/apple2-drive.yml
+  - challenges/retrocomputing-drive.yml
+  - challenges/pdp10-maclisp-drive.yml
+  - apple2-emulator-stack.yml
+  - pdp10-its-stack.yml
+  - lisp-machine-stack.yml
   - showmaker-network.yml
   - ../schemas/rig-schema.yml
   - ../rigs/README.md
   - SimHacker/MicropolisCore
 
 see_also:
-  - ../repo-shows/micropolis-ai-drag-race.yml
-  - ../repo-shows/game-show-wigcercize.yml
+  - { path: DRAG-RACE.md, why: "Generated markup view" }
+  - { path: ../repo-shows/micropolis-ai-drag-race.yml, why: "Show seed" }
+  - { path: cross-links.yml#drag_race_and_ai_offs, why: "Full game-show trail" }
+  - { path: code-that-spec.yml, why: "CODE THAT SPEC!!!!! chant" }
+  - { path: manual-transmission.yml, why: "Smallest model challenge" }
+  - { path: ai-offs.yml, why: "Spend proof + rig classes" }
+  - { path: stick-shift-protocol.yml, why: "Shift = commit" }
+  - { path: homefun-grading.yml, why: "Commit vs thinking blocks" }
+  - { path: challenges/retrocomputing-drive.yml, why: "Retro rotation — apple2, ITS, LispM" }
+  - { path: challenges/RETROCOMPUTING.md, why: "Generated retro umbrella markup" }
+  - { path: ../characters/slats/judge-rubric.yml, why: "Celebrity judge" }
+  - { path: ../rigs/README.md, why: "Rig personas + SETUP DNA" }
+  - { path: ../skills/repo-show/SKILL.md, why: "Same skill wraps drag race beats" }
+  - { path: showmaker-network.yml, why: "Scoreboard + linked shows" }

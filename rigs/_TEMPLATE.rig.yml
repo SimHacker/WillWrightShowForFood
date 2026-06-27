@@ -63,6 +63,11 @@ components:
   moollm:
     plugin: kernel/moollm-plugin.yml
     skills_loaded: []
+  # Retrocomputing drag race — optional; declare when platform is retro (real or emulated)
+  languages: []   # e.g. [INTEGER_BASIC, "6502 asm"] target; [Rust] host cross-asm
+  tools: []       # e.g. [apple2js, cc65, Cursor]
+  platforms: []   # e.g. [apple2] with mode real | emulated
+  emulators: []   # e.g. [{ name: apple2js, version: "..." }] — emulator IS your platform
 
 declare:
   token_budget_bid: "honest bid for Code That Spec"
@@ -71,10 +76,17 @@ declare:
 proof:
   cursor_spend_export: "path or attach in PR"
   cursor_mirror_composer: "composer id from cursor_mirror.py tree"
+  setup_md: "rigs/<your-rig-slug>.SETUP.md"
+  setup_dna:
+    canonical_rig_yaml: "https://raw.githubusercontent.com/SimHacker/WillWrightShowForFood/main/rigs/<your-rig-slug>.rig.yml"
+    canonical_setup_md: "https://raw.githubusercontent.com/SimHacker/WillWrightShowForFood/main/rigs/<your-rig-slug>.SETUP.md"
+    state_dir: ".rig/<your-rig-slug>/"
 
 costume:
   lets_make_a_deal: "Describe your Let's Make a Deal rig costume for Code That Spec"
 
 see_also:
+  - ./_TEMPLATE.SETUP.md
   - ../schemas/rig-schema.yml
+  - ../schemas/rig-setup-dna.yml
   - ../process/rig-feedback.yml

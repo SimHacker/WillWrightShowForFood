@@ -97,8 +97,13 @@ class_rules_vs_driver_flair:
           - { lang: FORTH, slats: "Reverse Polish realness — stack depth is a runway walk" }
           - { lang: "Apple ][ APPLESOFT FP BASIC", slats: "Floating point on 6502 — werk or Woz help me" }
           - { lang: "Apple ][ INTEGER BASIC", slats: "If you dare — no floats, all nerve" }
+          - { lang: "MACLISP on ITS", slats: "PDP-10 emulator running ITS — AI Lab eleganza. DDT or sashay." }
           - { lang: artisanal_hand, slats: "Zero tokens pencil sash — oldest show-off" }
-        note: "Same spec CARD — different costume. Declare flair_class + language lane."
+      retrocomputing_drive:
+        pitch: "Retrocomputing AI drag races — rig declares languages, tools, platform, emulator"
+        rule: "Spec runs on declared platform; host language may differ if demo boots on target"
+        see: challenges/retrocomputing-drive.yml
+        note: "Same spec CARD — different costume. Declare flair_class + full rig components."
   declare: "Same track — declare measurement vs flair emphasis in rigs/*.rig.yml"
 
 orchestration_gold:

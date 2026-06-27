@@ -11,16 +11,23 @@ status:
 
 read_order:
   - README.md
-  - process/live-repo.yml
-  - process/ai-offs.yml
-  - characters/README.md
+  - FOR-BOTS.md
+  - ENTRYWAYS.md
+  - TRAILS.md
+  - process/entryways/README.md
+  - skills/repo-show/GLANCE.yml
+  - process/README.md
   - process/VISION.md
-  - SETUP.md
-  - process/vision-and-ambition.yml
-  - process/showmaker-network.yml
-  - process/repo-show-format.yml
   - repo-shows/will-wright/README.md
+  - characters/README.md
+  - SETUP.md
   - CARD.yml
+
+moollm_pyramid:
+  root: [GLANCE.yml, CARD.yml, README.md, MOOLLM.yml]
+  skills: "skills/<name>/ — GLANCE → CARD → SKILL → README"
+  process: "yaml girder + generated *.md markup — pnpm run facades — process/markup-facades.yml"
+  rooms: [repo-shows, characters, rigs, schemas, kernel, apps, packages]
 
 dev_quickstart: "nvm use && corepack enable && pnpm install && pnpm run verify"
 
@@ -31,6 +38,24 @@ cream_on_top:
 
 moollm:
   compose_with: https://github.com/SimHacker/moollm
+  cross_links: process/cross-links.yml
   plugin: kernel/moollm-plugin.yml
 
 chat: "PR or issue — github.com/SimHacker/WillWrightShowForFood/issues"
+
+see_also:
+  - { path: FOR-BOTS.md, why: "Hello bot — RTFR, pick one ENTRYWAY, don't flatten" }
+  - { path: ENTRYWAYS.md, why: "Museum map hub — doorways + trails index" }
+  - { path: TRAILS.md, why: "Sideways thematic trails" }
+  - { path: process/entryways/guest-will.md, why: "Will guest playlist" }
+  - { path: process/entryways/README.md, why: "Full doorway index with cross-links" }
+  - { path: CARD.yml, why: "Plugin interface — rooms and methods" }
+  - { path: process/entryways.yml, why: "Yaml girder for playlists" }
+  - { path: repo-shows/will-wright/BROWSE.md, why: "Will guest landing" }
+  - { path: process/cross-links.yml, why: "Thematic trails — leap sideways" }
+  - { path: skills/repo-show/GLANCE.yml, why: "Show orchestrator sniff" }
+  - { path: process/cross-links.yml, why: "Narrative trails — rabbit holes welcome" }
+  - { path: process/VISION.md, why: "Long arc — 1996 microworlds → living organism" }
+  - { path: repo-shows/will-wright/README.md, why: "Flagship human pitch" }
+  - { path: characters/don-hopkins/README.md, why: "Host deep context" }
+  - { path: SETUP.md, why: "Dev setup — monorepo verify" }

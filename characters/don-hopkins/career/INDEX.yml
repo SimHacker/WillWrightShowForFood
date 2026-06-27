@@ -2,6 +2,9 @@
 
 career_index:
   readme: ../README.md
+  sync: ../sync-sources.yml
+  portrayal: ../portrayal/
+
   files:
     - id: project-threads
       path: project-threads.yml
@@ -17,12 +20,32 @@ career_index:
 
     - id: stupid-fun-club
       path: stupid-fun-club.yml
-      summary: Will Wright's lab — robots, storytelling, MediaGraph
+      summary: Will Wright's lab — Slats, Dents, One Minute Movies, MediaGraph
 
     - id: on-stream
       path: on-stream.yml
       summary: Regular Don on stream; pairs with don-philahue
 
+  portrayal_files:
+    - id: voice
+      path: ../portrayal/voice.yml
+      summary: Writing style, frobisms — synced from moollm adventure-4
+
+    - id: heroes
+      path: ../portrayal/heroes.yml
+      summary: Direct mentors — condensed from HEROS.yml
+
+    - id: presentations
+      path: ../portrayal/presentations.yml
+      summary: Verified papers and talks — condensed
+
   related_characters:
     - ../don-philahue/
+    - ../slats/
     - ../../repo-shows/will-wright/
+
+see_also:
+  - { path: ../sync-sources.yml, why: "Upstream sync + dedupe rules" }
+  - { path: ../CARD.yml, why: "Room interface" }
+  - { path: ../../process/cross-links.yml#constructionist_lineage, why: "Microworld → Repo Show arc" }
+  - { path: https://github.com/SimHacker/moollm/examples/adventure-4/characters/real-people/don-hopkins, why: "Full adventure character upstream" }

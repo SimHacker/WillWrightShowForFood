@@ -1,0 +1,28 @@
+# process/ — GLANCE
+
+what: "Protocol girders — Repo Show format, drag race, retro challenges, ai-offs, vision"
+
+read_order:
+  - README.md
+  - INDEX.yml
+  - VISION.md
+  - FORMAT.md
+
+clusters:
+  show: [repo-show-format.yml, showmaker-network.yml, live-repo.yml]
+  competition: [micropolis-ai-drag-race.yml, ai-offs.yml, manual-transmission.yml, stick-shift-protocol.yml]
+  retro: [challenges/retrocomputing-drive.yml, apple2-emulator-stack.yml, pdp10-its-stack.yml, lisp-machine-stack.yml]
+  live: [brain-stream.yml, model-branching.yml]
+  education: [homefun-grading.yml, orchestration-gold.yml]
+
+facade_rule: "yaml girder canonical — *.md markup generated on demand — markup-facades.yml"
+
+see_also:
+  - { path: cross-links.yml, why: "Narrative trails hub" }
+  - markup-facades.yml
+  - INDEX.yml
+  - ../skills/repo-show/
+  - ../repo-shows/
+  - ../rigs/
+  - ../schemas/markup-facade.yml
+  - https://github.com/SimHacker/moollm/skills/INDEX.md

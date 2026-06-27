@@ -1,0 +1,105 @@
+# CARD — Seymour Papert (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: seymour-papert
+  name: Seymour Papert
+  type:
+  - legacy
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Seymour Papert
+  title: Constructionism
+  rarity: legacy
+  signifier: 🐢
+  flavor: 'Logo: children program the computer, not the other way around.'
+abilities:
+- id: LOGO-TURTLE
+  name: Logo Turtle
+  type: legacy
+  mana: ∞
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: logoTurtle
+    signature: logoTurtle(forward, right) → child owns geometry
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Invite learners to command space with a turtle.
+  verifiable: Logo co-creation (public legacy)
+  combos_with: []
+- id: CONSTRUCTIONISM
+  name: Constructionism
+  type: legacy
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: constructionism
+    signature: constructionism(project) → knowledge built by making
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Learn by building shareable things.
+  verifiable: Constructionism (published theory)
+  combos_with: []
+- id: MICROWORLD
+  name: Microworld
+  type: legacy
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: microworld
+    signature: microworld(rules) → safe place to think
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Design small worlds where mistakes are cheap.
+  verifiable: Educational microworlds legacy
+  combos_with:
+  - WILL-MICROWORLD-PITCH
+- id: MATERNAL-INSULT
+  name: Debug the Insult
+  type: legacy
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: debugTheInsult
+    signature: debugTheInsult(error) → learning moment
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Treat errors as interesting, not shameful.
+  verifiable: Pedagogical legacy (public writings)
+  combos_with: []
+- id: OLPC-SPIRIT
+  name: OLPC Spirit
+  type: legacy
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: olpcSpirit
+    signature: olpcSpirit(laptop) → child ownership
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Inspire one-laptop-per-child ethics in open source.
+  verifiable: OLPC educational lineage
+  combos_with: []
+invoke_rules:
+  consent: deceased_legacy
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

@@ -1,0 +1,106 @@
+# CARD — repo-show (public live instance · WillWrightShowForFood)
+# Full protocol: SKILL.md | Glance: GLANCE.yml
+# Lineage: SimHacker/DonHopkins/skills/repo-show — distilled + anchored here
+
+card:
+  id: repo-show
+  name: "Repo Show"
+  type: [skill, orchestrator, live, github, education]
+  emoji: "🎬"
+  tier: 2
+  status: public_live
+  home: https://github.com/SimHacker/WillWrightShowForFood
+  tagline: "Plant a seed, tend the repo, raise the barn live, harvest the crop."
+
+term_of_art:
+  name: "Repo Show"
+  etymology: "Like blog = web log — a show whose artifact + stage IS a git repo."
+  quintessentially: "RTFR, implement, harvest — show don't tell."
+  guest_honorifics: [Repo_Man, Repo_Woman]
+  orchestrator: Don_Philahue
+
+how_it_runs:
+  markup: ../../process/FORMAT.md
+  girder: ../../process/repo-show-format.yml
+  regenerate: "pnpm run facades"
+  elements: [HN_pointer, RTFR, audience_character_PRs, don_philahue, cauldron_melt, rig_spectrum, showmaker_network]
+
+join:
+  the_verb: "JOIN the repo — accept GitHub invite first; then stream, chat, collaborate."
+  invitation_pattern: characters/*/invitation.md
+
+homeplay:
+  line: "No homework — but as much homefun as you like!"
+  grading: ../../process/HOMEFUN.md
+
+lifecycle:
+  order: [SEED, PLANT, ELABORATE, PROPOSE, INVITE, TEND, ANNOUNCE, AIR, PRODUCE, HARVEST, RESEED]
+  maps_to_branded: [Brain_Storming, Barn_Raising, Seed_Planting, Crop_Harvesting]
+
+inheritance:
+  rule: "Every file under repo-shows/ inherits SHOW implicitly — see REPO-SHOWS.yml"
+  seed: "repo-shows/<name>.yml"
+  plant: "repo-shows/<name>/"
+
+methods:
+  ORIENT:
+    signature: "Read README.md → GLANCE.yml → active show"
+    wwsff: "../../README.md"
+  FIND-GUEST:
+    signature: "characters/INDEX.yml"
+  FIND-SHOW:
+    signature: "repo-shows/INDEX.yml"
+  SEED:
+    signature: "SEED (name) (topic) (guests) → repo-shows/<slug>.yml"
+  PLANT:
+    signature: "PLANT seed → repo-shows/<name>/ directory"
+  HARVEST:
+    signature: "HARVEST → skills/ + packages/"
+    delegate: SimHacker/moollm/skills/cauldron
+
+wwsff_rooms:
+  repo_shows: ../../repo-shows/
+  characters: ../../characters/
+  process: ../../process/
+  rigs: ../../rigs/
+  skills: ../
+  schemas: ../../schemas/
+  apps: ../../apps/
+
+intro_ritual:
+  catchphrase: ["So you have a Repo to Show us?", "You sure have a great Repo to Show us!"]
+  opener: "This episode's repos are:"
+
+close_ritual:
+  sign_offs: ["Have a big fun!", "Goodnight, until tomorrow."]
+
+k_lines:
+  activates: [SHOW, REPO-SHOW, RTFR, HOMEFUN, SEED, PLANT, HARVEST, CODE-THAT-SPEC]
+
+compose_with:
+  - SimHacker/moollm/skills/cauldron
+  - SimHacker/moollm/skills/character
+  - SimHacker/moollm/skills/thoughtful-commitment
+  - SimHacker/moollm/skills/cursor-mirror
+  - SimHacker/moollm/skills/play-learn-lift
+  - SimHacker/moollm/skills/representation-ethics
+
+see_also:
+  - { path: SKILL.md, why: "Full protocol — lifecycle, rituals, game-show formats" }
+  - { path: GLANCE.yml, why: "One-screen sniff" }
+  - { path: README.md, why: "Pitch + where things live in WWSFF" }
+  - { path: ../../process/repo-show-format.yml, why: "Canonical format girder" }
+  - { path: ../../process/FORMAT.md, why: "Generated markup view" }
+  - { path: ../../process/cross-links.yml#repo_show_spine, why: "Narrative trail — RTFR spine" }
+  - { path: ../../process/cross-links.yml#drag_race_and_ai_offs, why: "Game-show formats inside shows" }
+  - { path: ../../process/showmaker-network.yml, why: "Linked shows graph" }
+  - { path: ../../repo-shows/REPO-SHOWS.yml, why: "SHOW inheritance for collection" }
+  - { path: ../../repo-shows/will-wright/, why: "Flagship planted show" }
+  - { path: ../../characters/INDEX.yml, why: "Guests + invitations" }
+  - { path: ../../rigs/INDEX.yml, why: "Rig personas for drag race" }
+  - { path: ../../process/homefun-grading.yml, why: "Homefun not homework rubric" }
+  - { path: https://github.com/SimHacker/DonHopkins/tree/main/skills/repo-show, why: "Private lineage — sync via live-repo.yml" }
+
+credits:
+  lineage: SimHacker/DonHopkins/skills/repo-show
+  public_instance: SimHacker/WillWrightShowForFood

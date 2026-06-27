@@ -1,0 +1,5 @@
+# packages/ — GLANCE
+
+what: "@wwsff/* shared libraries — pnpm workspace"
+tooling: wwsff-tooling/
+see: README.md

@@ -1,0 +1,106 @@
+# CARD — Steve Wozniak (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: steve-wozniak
+  name: Steve Wozniak
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Steve Wozniak
+  title: Woz — Open Heart, Open Schematic
+  rarity: uncommon
+  signifier: 🍎
+  flavor: Never trust a computer you can't lift — unless it's a good emulator.
+abilities:
+- id: APPLE-II
+  name: Apple II
+  type: activated
+  mana: '{G}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: appleII
+    signature: appleII(schematic) → usable home computer
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Explain how elegant hardware begat a culture.
+  verifiable: Apple I/II design (public record)
+  combos_with: []
+- id: DISK-II
+  name: Disk II
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: diskII
+    signature: diskII(controller) → affordable storage revolution
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Walk through the floppy controller hack that mattered.
+  verifiable: Disk II (documented Woz history)
+  combos_with:
+  - THOMAS-FUJINET-BRIDGE
+- id: INTEGER-BASIC
+  name: Integer BASIC
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: integerBasic
+    signature: integerBasic(line) → READY.
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Drop one-line spec on original ][ BASIC.
+  verifiable: Apple II INTEGER BASIC
+  combos_with:
+  - APPLE2-DRIVE context
+- id: OPEN-ETHOS
+  name: Open Ethos
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: openEthos
+    signature: openEthos(design) → shareable learning
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Champion tinkering without gatekeepers.
+  verifiable: Public Woz messaging on open computing
+  combos_with: []
+- id: HANDS-ON-DEMO
+  name: Hands-On Demo
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: handsOnDemo
+    signature: handsOnDemo(hardware) → crowd believes it works
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Make the machine real in the room.
+  verifiable: Classic demo style (public appearances)
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

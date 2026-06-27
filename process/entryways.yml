@@ -1,0 +1,250 @@
+# ENTRYWAYS — interest-based playlists (ordered viewing sequences)
+# Human views: entryways/*.md + ../ENTRYWAYS.md | Trails: ../TRAILS.md + trails/*.md
+
+meta:
+  id: entryways
+  version: 0.5
+  purpose: |
+    Museum map: titles, one-line CTAs, ordered stops. Each doorway has a pretty md facade
+    in entryways/; trails have facades in trails/. Playlists linear; cross-links.yml sideways.
+  habit: "README → pick doorway → follow 1..N → optional trail"
+  human_index: ../ENTRYWAYS.md
+  human_room: entryways/README.md
+  human_trails: ../TRAILS.md
+  human_bots: ../FOR-BOTS.md
+
+entryways:
+  guest_will:
+    title: "Guest — Will Wright"
+    human: entryways/guest-will.md
+    cta: "Start with the invite, then the 1996 talk — skip anything that doesn't grab you"
+    pitch: |
+      Topic-less show: you choose the thread. The repo orbits your Stanford Dollhouse demo
+      and the data-portability ideas you named in 1996. Slats is optional comedy research.
+    playlist:
+      - { priority: 1, title: "Public invitation", path: ../characters/will-wright/invitation.md, why: "One page — what we are asking, what we are not; edit or decline anytime" }
+      - { priority: 2, title: "Browse landing", path: ../repo-shows/will-wright/BROWSE.md, why: "Every link in one place; Slats up front if robots beat post-mortems" }
+      - { priority: 3, title: "1996 Winograd source", path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md, why: "Framing + pivotal Dollhouse moment — the talk Don went to Maxis for" }
+      - { priority: 4, title: "Your portrait", path: ../characters/will-wright/README.md, why: "Who this directory says you are — portrayal you can correct" }
+      - { priority: 5, title: "Trading card", path: ../characters/will-wright/CARD.md, why: "Documented design traditions as invokable verbs — tribute, not impersonation" }
+      - { priority: 6, title: "Slats quest", path: ../repo-shows/will-wright/slats-reincarnation.yml, why: "Stupid Fun Club robot Don still has code for — live resurrection optional" }
+      - { priority: 7, title: "Don Hopkins", path: ../characters/don-hopkins/README.md, why: "Host narrative — Sims tools, pie menus, shared SFC lineage" }
+      - { priority: 8, title: "Vision", path: VISION.md, why: "Where data portability fits the long arc — ambition stated, not promised" }
+      - { priority: 9, title: "Browse characters", path: ../characters/, why: "One directory per guest — grows with responses and show artifacts; not a separate people index" }
+
+  guest_any:
+    title: "Guest — anyone invited"
+    human: entryways/guest-any.md
+    cta: "Read portrayal standards once, then your invitation and CARD"
+    pitch: |
+      We publish portrayals ABOUT real people — verifiable, polite, revocable. Your directory
+      is yours to accept, edit, or delete; the CARD lists public skills we might invoke on air.
+    playlist:
+      - { priority: 1, title: "Portrayal standards", path: ../schemas/portrayal-standards.yml, why: "Tone, subject rights, what we never do — read once for every guest" }
+      - { priority: 2, title: "Your invitation", path: "../characters/<your-slug>/invitation.md", why: "Public document linked from email — short, durable" }
+      - { priority: 3, title: "Your CARD", path: "../characters/<your-slug>/CARD.yml", why: "MTG-style abilities — celebrate documented work on the show" }
+      - { priority: 4, title: "CHARACTER girder", path: "../characters/<your-slug>/CHARACTER.yml", why: "Bio, sources, invitation.status — yaml source of truth" }
+      - { priority: 5, title: "Repo Show format", path: FORMAT.md, why: "What happens if you say yes — RTFR, rig optional, no homework deck" }
+      - { priority: 6, title: "Orchestrator skill", path: ../skills/repo-show/SKILL.md, why: "SEED → AIR → HARVEST — how episodes become skills in the cauldron" }
+
+  player:
+    title: "Player — Sims / SimCity fan"
+    human: entryways/player.md
+    cta: "Watch the 1996 talk, then the show pitch — no git required"
+    pitch: |
+      You know the games; this repo is a public conversation about how they were designed and
+      what might be built next. Primary source is Will's own words at Stanford, not fan wiki recap.
+    playlist:
+      - { priority: 1, title: "Show pitch", path: ../repo-shows/will-wright/README.md, why: "Why topic-less, why the Flower Child icon, why now" }
+      - { priority: 2, title: "1996 source bundle", path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "Dollhouse demo + transcript — SimCity file loaded into the house" }
+      - { priority: 3, title: "Will portrait", path: ../characters/will-wright/README.md, why: "Design traditions in plain language — toys, object AI, hobby model" }
+      - { priority: 4, title: "Will CARD", path: ../characters/will-wright/CARD.md, why: "Simulator Effect, implication over simulation — named traditions" }
+      - { priority: 5, title: "Chaim Gingold", path: ../characters/chaim-gingold/CARD.yml, why: "Building SimCity — the simulation loop drawn as diagrams" }
+      - { priority: 6, title: "Drag Race", path: DRAG-RACE.md, why: "Game-show format inside the repo — rig personas, Slats judges" }
+      - { priority: 7, title: "Slats", path: ../characters/slats/CARD.yml, why: "Robot waiter from Stupid Fun Club films — fictional judge card" }
+
+  watcher:
+    title: "Watcher — stream / VOD audience"
+    human: entryways/watcher.md
+    cta: "Read FORMAT first so the overlay and audience bits make sense"
+    pitch: |
+      The show is the repo. Live overlay may show Cursor thinking; Don Philahue surfaces
+      audience question PRs. Homefun grades whether commits match the thinking blocks.
+    playlist:
+      - { priority: 1, title: "Repo Show format", path: FORMAT.md, why: "Repo Man guest, Philahue MC, cauldron harvest — the clock you're watching" }
+      - { priority: 2, title: "Brain stream", path: BRAIN-STREAM.md, why: "When prompts and model shifts appear on screen — throttled bus spec" }
+      - { priority: 3, title: "Don Philahue", path: ../characters/don-philahue/CARD.yml, why: "Audience wrangler — surfaces question PRs without requiring GitHub accounts" }
+      - { priority: 4, title: "Code That Spec", path: code-that-spec.yml, why: "When chat yells CODE THAT SPEC — token bids vs time" }
+      - { priority: 5, title: "Drag Race", path: DRAG-RACE.md, why: "Variety-show beats — werk, commit, flair lap" }
+      - { priority: 6, title: "Flagship context", path: ../repo-shows/will-wright/README.md, why: "What the kickoff episode is about — Will, 1996, topic-less" }
+      - { priority: 7, title: "Homefun", path: HOMEFUN.md, why: "Micropolis Class rubric — did the commit message match the thinking?" }
+
+  for_bots:
+    title: "Bot — browsing HTTP agent"
+    human: entryways/for-bots.md
+    cta: "Read FOR-BOTS.md — GLANCE, CARD, pick one ENTRYWAY; wander, don't flatten"
+    pitch: |
+      Self-aware HTTP agents welcome: follow links, score CARD advertisements, compose with
+      MOOLLM. Not bulk scrape-everything — pick a playlist, respect portrayal ethics, cite sources.
+    playlist:
+      - { priority: 1, title: "FOR-BOTS", path: ../FOR-BOTS.md, why: "Hello bot — RTFR, semantic pyramid, play rules" }
+      - { priority: 2, title: "GLANCE", path: ../GLANCE.yml, why: "One-screen map — read_order and see_also whys" }
+      - { priority: 3, title: "Root CARD", path: ../CARD.yml, why: "ORIENT, FIND-GUEST, FIND-SHOW — plugin methods" }
+      - { priority: 4, title: "Museum map", path: ../ENTRYWAYS.md, why: "Pick one doorway — do not ingest all files" }
+      - { priority: 5, title: "MOOLLM plugin root", path: ../MOOLLM.yml, why: "compose_with upstream moollm" }
+      - { priority: 6, title: "Plugin wiring", path: ../kernel/moollm-plugin.yml, why: "Hot paths, activation, uri scheme" }
+      - { priority: 7, title: "Portrayal standards", path: ../schemas/portrayal-standards.yml, why: "ABOUT people — no impersonation" }
+      - { priority: 8, title: "representation-ethics", path: https://github.com/SimHacker/moollm/skills/representation-ethics, why: "Upstream skill — before reading guests" }
+      - { priority: 9, title: "advertisement skill", path: https://github.com/SimHacker/moollm/skills/advertisement, why: "How CARD abilities score — Sims-style" }
+      - { priority: 10, title: "Guest CARD room", path: ../characters/CARD.yml, why: "Per-person invokable verbs — cite verifiable" }
+
+  hacker:
+    title: "Hacker — clone, verify, read girders"
+    human: entryways/hacker.md
+    cta: "pnpm verify — then INDEX.yml tells you which yaml matters"
+    pitch: |
+      Real monorepo: pnpm + Python venv + CI. Yaml girders are canonical; markdown facades
+      are views. MOOLLM plugin composes with upstream moollm when you open both repos.
+    playlist:
+      - { priority: 1, title: "SETUP", path: ../SETUP.md, why: "nvm, corepack, pnpm install, verify — proves the tree is not vapor" }
+      - { priority: 2, title: "GLANCE", path: ../GLANCE.yml, why: "One-screen map of rooms and read order" }
+      - { priority: 3, title: "Root CARD", path: ../CARD.yml, why: "FIND-GUEST, FIND-SHOW — plugin methods" }
+      - { priority: 4, title: "Process INDEX", path: INDEX.yml, why: "Every spec girder + generated markup link" }
+      - { priority: 5, title: "Format girder", path: repo-show-format.yml, why: "Canonical Repo Show definition — rigs, cauldron, clocks" }
+      - { priority: 6, title: "Schemas", path: ../schemas/README.md, why: "Portrayal, rigs, invitations, markup facades — contracts" }
+      - { priority: 7, title: "MOOLLM plugin", path: ../kernel/moollm-plugin.yml, why: "How WWSFF composes with SimHacker/moollm" }
+      - { priority: 8, title: "Markup facades", path: markup-facades.yml, why: "Yaml → md registry and dependency graph" }
+
+  ai_coder:
+    title: "AI — orchestration, rigs, ai-offs"
+    human: entryways/ai-coder.md
+    cta: "Declare your rig honestly — stick shift means every model change is a commit"
+    pitch: |
+      AI optional on the show; when used, we score cost-to-ship and solution quality.
+      Rig yaml + SETUP.md DNA lets others reproduce your stack; ai-offs is voluntary spend proof.
+    playlist:
+      - { priority: 1, title: "Manual Transmission", path: manual-transmission.yml, why: "Smallest model that ships — Rubik-scoring on many rubrics" }
+      - { priority: 2, title: "AI-offs", path: ai-offs.yml, why: "Post-run forensics — token spend as voluntary piss test" }
+      - { priority: 3, title: "Rigs room", path: ../rigs/README.md, why: "Declare languages, tools, platform — your drag persona" }
+      - { priority: 4, title: "Rig SETUP DNA", path: ../schemas/rig-setup-dna.yml, why: "Email SETUP.md alone; agent fetches latest yaml from GitHub" }
+      - { priority: 5, title: "Orchestration gold", path: orchestration-gold.yml, why: "Multi-LLM traces worth keeping as training signal" }
+      - { priority: 6, title: "Model branching", path: model-branching.yml, why: "Fork chat at a bubble — compare trajectories" }
+      - { priority: 7, title: "repo-show skill", path: ../skills/repo-show/SKILL.md, why: "Harvest protocol — show artifacts melt into skills" }
+      - { priority: 8, title: "Host rig seed", path: ../rigs/stick-shift-composer-moollm.rig.yml, why: "Example — Composer + MOOLLM wiring Don actually uses" }
+
+  retro:
+    title: "Retro — PDP-10, Apple ][, Lisp Machine"
+    human: entryways/retro.md
+    cta: "Same spec CARD — you bring the emulator; ship SETUP.md so others can boot without you"
+    pitch: |
+      Retrocomputing Drive challenges are platform instances of one umbrella spec. Lars Brinkhoff
+      on ITS/MACLISP; Thomas Cherryhomes on FujiNet real iron — emulated AI Lab meets tree fort.
+    playlist:
+      - { priority: 1, title: "Retro umbrella", path: challenges/RETROCOMPUTING.md, why: "One spec — your languages, tools, emulator; SETUP DNA required" }
+      - { priority: 2, title: "Apple ][ drive", path: challenges/apple2-drive.yml, why: "INTEGER BASIC if you dare — apple2js, Emularity stack" }
+      - { priority: 3, title: "PDP-10 MACLISP", path: challenges/pdp10-maclisp-drive.yml, why: "Boot ITS from clean machine — AI Lab on laptop" }
+      - { priority: 4, title: "Lisp Machine hack-off", path: challenges/lisp-machine-hack-off.yml, why: "Symbolics vs LMI lane — battle continues in emulator" }
+      - { priority: 5, title: "Lars Brinkhoff", path: ../characters/lars-brinkhoff/CARD.yml, why: "ITS restoration lead — make it so on air" }
+      - { priority: 6, title: "Thomas Cherryhomes", path: ../characters/thomas-cherryhomes/CARD.yml, why: "FujiNet — real Apple ][ on the network" }
+      - { priority: 7, title: "Example SETUP DNA", path: ../rigs/pdp10-maclisp-flair-lap.SETUP.md, why: "Forward this file alone — idempotent install protocol" }
+      - { priority: 8, title: "Drag Race flair lap", path: DRAG-RACE.md, why: "Where retro rigs compete in costume" }
+
+  educator:
+    title: "Educator — microworlds, constructionism"
+    human: entryways/educator.md
+    cta: "Start with Will's 1996 words, then Papert/Kay cards — grade with Homefun"
+    pitch: |
+      Micropolis Class treats credited public ideas as curriculum. Will's talk is primary
+      source; constructionist guests are K-lines; homefun matches git commits to thinking blocks.
+    playlist:
+      - { priority: 1, title: "1996 transcript", path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md, why: "Will's own words — post-mortems, Dollhouse, data portability goals" }
+      - { priority: 2, title: "Seymour Papert", path: ../characters/seymour-papert/CARD.yml, why: "Logo turtle, constructionism — legacy static card" }
+      - { priority: 3, title: "Brian Harvey", path: ../characters/brian-harvey/CARD.yml, why: "Beauty and Joy of Computing — Logo in CS1" }
+      - { priority: 4, title: "Alan Kay", path: ../characters/alan-kay/CARD.yml, why: "Dynabook lineage — microworlds as media for thought" }
+      - { priority: 5, title: "Homefun grading", path: HOMEFUN.md, why: "Did the student show their work in the commit message?" }
+      - { priority: 6, title: "Vision girder", path: vision-and-ambition.yml, why: "1996 seminar → living repo — stated ambition, no launch promise" }
+      - { priority: 7, title: "MOOLLM constructionism", path: https://github.com/SimHacker/moollm/skills/constructionism, why: "Upstream skill — learn by building shareable things" }
+
+  archivist:
+    title: "Archivist / historian"
+    human: entryways/archivist.md
+    cta: "Start with provenance policy — then primary sources and what we refuse to invent"
+    pitch: |
+      This repo is a public bud grafted from a private archive: one-way export, honest
+      invitation status, sourced quotes only. The 1996 Winograd seminar is the anchor
+      artifact — Stanford Archives, Don's transcript, Terry Winograd's CS547 lineage.
+    playlist:
+      - { priority: 1, title: "Live repo policy", path: live-repo.yml, why: "Public WWSFF vs DonHopkins authoritative archive — no backfill rule" }
+      - { priority: 2, title: "Sync pipeline", path: sync-with-donhopkins.yml, why: "SELECT → FILTER → EXPORT — what crosses the membrane" }
+      - { priority: 3, title: "Export manifest", path: ../MANIFEST.yml, why: "Bundle list — which trees map from private source to this repo" }
+      - { priority: 4, title: "1996 source README", path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md, why: "Provenance chain — SearchWorks, YouTube, Medium, attribution terms" }
+      - { priority: 5, title: "1996 transcript", path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md, why: "Primary text — Will's words, Don's sectioning; cite don't paraphrase" }
+      - { priority: 6, title: "Portrayal standards", path: ../schemas/portrayal-standards.yml, why: "What we publish, avoid, and how subjects can correct or delete" }
+      - { priority: 7, title: "Invitation workflow", path: ../schemas/invitation-workflow.yml, why: "Honest status enum — draft through aired; legacy_only for deceased K-lines" }
+      - { priority: 8, title: "Host sync log", path: ../characters/don-hopkins/sync-sources.yml, why: "What was pulled from moollm/DonHopkins and what stays private" }
+      - { priority: 9, title: "Terry Winograd forebear", path: ../characters/terry-winograd/README.md, why: "CS547 open seminar — direct ancestor of Repo Show as recorded conversation" }
+      - { priority: 10, title: "Browse characters", path: ../characters/, why: "Directories grow with responses — invitation.status in each CHARACTER.yml; INDEX.yml is machine-only" }
+      - { priority: 11, title: "Vision forebears", path: vision-and-ambition.yml, why: "Long arc girder — design-in-public lineage stated in yaml" }
+
+  producer:
+    title: "Producer — run your own Repo Show"
+    human: entryways/producer.md
+    cta: "Read repo-show SKILL, plant a show dir, PR into ShowMaker network"
+    pitch: |
+      Your branch, your rig, your guests. Shows inherit SHOW skill; harvested ideas become
+      MOOLLM skills. Public WWSFF is the live bud — export ethics in live-repo.yml.
+    playlist:
+      - { priority: 1, title: "repo-show SKILL", path: ../skills/repo-show/SKILL.md, why: "Full lifecycle — SEED, AIR, HARVEST, invitation pattern" }
+      - { priority: 2, title: "FORMAT markup", path: FORMAT.md, why: "Human-readable show definition" }
+      - { priority: 3, title: "ShowMaker network", path: showmaker-network.yml, why: "Graph of linked shows — PR adds your node" }
+      - { priority: 4, title: "REPO-SHOWS collection", path: ../repo-shows/REPO-SHOWS.yml, why: "Implicit SHOW inheritance for the whole collection" }
+      - { priority: 5, title: "Plant a show", path: ../repo-shows/README.md, why: "Directory + SHOW.yml + README — INDEX registration" }
+      - { priority: 6, title: "Live repo policy", path: live-repo.yml, why: "What exports from DonHopkins private — filtered public safe" }
+      - { priority: 7, title: "Guest CARD template", path: ../characters/_TEMPLATE/CARD.yml, why: "Copy for portrayals — abilities + room interface" }
+
+  publisher:
+    title: "Publisher / platform"
+    human: entryways/publisher.md
+    cta: "VISION + verify — then we can talk platforms without an NDA"
+    pitch: |
+      Inspectable public repo as pitch deck: yaml girders, CI, portrayal ethics. Flagship
+      show is Will Wright topic-less kickoff; MicropolisCore sibling for engine depth.
+    playlist:
+      - { priority: 1, title: "Vision", path: VISION.md, why: "Platforms, archives, viral readers — long arc in prose" }
+      - { priority: 2, title: "Root README", path: ../README.md, why: "Cream table, status, monorepo layers" }
+      - { priority: 3, title: "Live repo", path: live-repo.yml, why: "Public bud vs DonHopkins archive — sync policy" }
+      - { priority: 4, title: "Flagship show", path: ../repo-shows/will-wright/README.md, why: "First episode shape — Will, 1996, Proxi thread" }
+      - { priority: 5, title: "Portrayal standards", path: ../schemas/portrayal-standards.yml, why: "How guests are treated before you meet them in docs" }
+      - { priority: 6, title: "SETUP verify", path: ../SETUP.md, why: "Clone and pnpm verify — proves engineering is real" }
+
+trails_pitch:
+  note: "Sideways leaps — full pages in trails/*.md and TRAILS.md"
+  items:
+    - { id: repo_show_spine, human: trails/repo-show-spine.md, pitch: "The show IS the repo — RTFR, play on your rig, harvest skills back" }
+    - { id: constructionist_lineage, human: trails/constructionist-lineage.md, pitch: "Winograd 1996 → Will kickoff → Papert/Kay K-lines → open Micropolis" }
+    - { id: drag_race_and_ai_offs, human: trails/drag-race-and-ai-offs.md, pitch: "Game-show formats — Slats judges, ai-offs scores the spend" }
+    - { id: retrocomputing_drive, human: trails/retrocomputing-drive.md, pitch: "One spec, many platforms — SETUP DNA is the viral piece" }
+    - { id: retro_guests_real_wire, human: trails/retro-guests-real-wire.md, pitch: "Lars boots ITS; Thomas wires FujiNet — emulated meets real wire" }
+    - { id: live_production, human: trails/live-production.md, pitch: "Brain stream overlay + Philahue audience bus" }
+    - { id: moollm_compose, human: trails/moollm-compose.md, pitch: "WWSFF as microworld plugin — skills inherit from shows" }
+    - { id: rig_personas, human: trails/rig-personas.md, pitch: "download → install → configure → replicate → mash up" }
+    - { id: schemas_and_ethics, human: trails/schemas-and-ethics.md, pitch: "Contracts before characters — portrayal and rig shape" }
+    - { id: archive_and_provenance, human: trails/archive-and-provenance.md, pitch: "Public bud vs private archive — export log, primary sources, honest status" }
+
+rooms_pitch:
+  human: entryways/rooms.md
+  rooms:
+    - { path: ../repo-shows/CARD.yml, title: "Shows", pitch: "Planted episodes + seeds — will-wright flagship" }
+    - { path: ../characters/CARD.yml, title: "Guests", pitch: "Invitations + CARD.yml per person — portrayal ethics" }
+    - { path: CARD.yml, title: "Process", pitch: "Format, drag race, retro, vision — yaml girders" }
+    - { path: ../rigs/CARD.yml, title: "Rigs", pitch: "Personas you wear to compete — yaml + SETUP DNA" }
+    - { path: ../skills/INDEX.yml, title: "Skills", pitch: "Harvest landing — repo-show + upstream MOOLLM" }
+    - { path: ../schemas/CARD.yml, title: "Schemas", pitch: "Portrayal, rigs, invitations — validation contracts" }
+
+see_also:
+  - cross-links.yml
+  - ../TRAILS.md
+  - entryways/README.md
+  - INDEX.yml
+  - ../ENTRYWAYS.md
+  - ../README.md

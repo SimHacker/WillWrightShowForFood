@@ -1,0 +1,105 @@
+# CARD — Walter Bender (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: walter-bender
+  name: Walter Bender
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Walter Bender
+  title: Stone Soup OLPC
+  rarity: uncommon
+  signifier: 🍲
+  flavor: Many contributors, one pot, children eat first.
+abilities:
+- id: STONE-SOUP
+  name: Stone Soup
+  type: activated
+  mana: '{G}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: stoneSoup
+    signature: stoneSoup(community) → OLPC learning bundle
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Orchestrate many hands into one deployable learning image.
+  verifiable: OLPC Stone Soup (public OLPC history)
+  combos_with: []
+- id: OPEN-SIMCITY
+  name: Open SimCity Push
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: openSimCityPush
+    signature: openSimCityPush(stakeholders) → GPL Micropolis path
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Help navigate open-sourcing a commercial simulation.
+  verifiable: OLPC / Micropolis GPL collaboration
+  combos_with:
+  - DON-OPEN-SOURCE-MICROPOLIS
+- id: SUGAR-ACTIVITY
+  name: Sugar Activity
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: sugarActivity
+    signature: sugarActivity(app) → child-owned laptop lesson
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Frame apps as activities in a constructionist OS.
+  verifiable: Sugar UI / OLPC
+  combos_with: []
+- id: SKILL-CREATION-SHOW
+  name: Skill Creation Show
+  type: activated
+  mana: '{W}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: skillCreationShow
+    signature: skillCreationShow(skill) → harvest to repo
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Propose episodes where skills are built live on air.
+  verifiable: WWSFF invitation note
+  combos_with: []
+- id: SHARE-ALIKE
+  name: Share Alike
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: shareAlike
+    signature: shareAlike(license) → remix culture
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Teach licenses as community agreements, not legalese trivia.
+  verifiable: Free software education work
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

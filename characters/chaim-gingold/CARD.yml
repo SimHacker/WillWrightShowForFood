@@ -1,0 +1,105 @@
+# CARD — Chaim Gingold (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: chaim-gingold
+  name: Chaim Gingold
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Chaim Gingold
+  title: Building SimCity
+  rarity: uncommon
+  signifier: 🏗️
+  flavor: Reverse diagrams that respect the original designers.
+abilities:
+- id: REVERSE-ENGINEER
+  name: Reverse Engineer
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: reverseEngineer
+    signature: reverseEngineer(simcity) → annotated diagram
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Document how SimCity actually worked — with care.
+  verifiable: Building SimCity (MIT Press 2024)
+  combos_with:
+  - WILL-SIMULATE-CITY
+- id: HISTORIAN-DESIGNER
+  name: Historian Designer
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: historianDesigner
+    signature: historianDesigner(artifact) → playable footnote
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Treat games as cultural artifacts worth curating.
+  verifiable: Design historian role
+  combos_with: []
+- id: MICROWORLD-READ
+  name: Microworld Read
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: microworldRead
+    signature: microworldRead(code) → teachable model
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Extract the lesson without flattening the magic.
+  verifiable: SimCity reverse engineering work
+  combos_with: []
+- id: CITE-SOURCES
+  name: Cite Sources
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: citeSources
+    signature: citeSources(claim) → bibliography
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Give credit to every invisible collaborator.
+  verifiable: Book methodology
+  combos_with: []
+- id: PLAYABLE-ARCHIVE
+  name: Playable Archive
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: playableArchive
+    signature: playableArchive(build) → runnable history
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Keep old simulations executable, not just screenshots.
+  verifiable: Public preservation ethic
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

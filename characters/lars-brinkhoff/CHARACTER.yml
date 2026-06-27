@@ -1,0 +1,51 @@
+# Lars Brinkhoff — invitation portrayal. NOT Lars Brinkhoff.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: lars-brinkhoff
+  name: "Lars Brinkhoff"
+  type: invitation
+  signifier: "🖥️"
+  status: living
+  field: "Software preservationist; PDP-10/ITS restoration lead; Emacs/Lisp/Forth hacker; nocrew.org"
+  home: characters/lars-brinkhoff/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/lars-brinkhoff/
+  paired_guest: thomas-cherryhomes
+  challenge: "Make it so — PDP-10/ITS + MACLISP on emulated iron for Micropolis AI Drag Race"
+
+bio:
+  summary: |
+    **Lars Brinkhoff** — preservationist and prolific hacker (Gothenburg, Sweden).
+    Lead contributor to [PDP-10/its](https://github.com/PDP-10/its): rebuilding the
+    Incompatible Timesharing System from source for KA10/KL10/KS10 emulators. nocrew.org
+    — Emacs history, lbForth, awesome-cpus, GCC/glibc on PDP-10. Collaborated with Don
+    on MIT AI Lab film / Logo history threads (Banks CA rule, ITS #1866). Natural pair
+    with **Thomas Cherryhomes** — Lars makes emulated ITS boot; Thomas wires retro machines
+    to the modern net (FujiNet, IRATA.ONLINE).
+
+sources:
+  wikipedia: null
+  web:
+    - http://lars.nocrew.org/
+    - http://pdp10.nocrew.org/
+    - https://github.com/larsbrinkhoff
+    - https://github.com/PDP-10/its
+    - https://github.com/PDP-10/its/issues/1866
+  papers: []
+  blogs: []
+
+ties_to:
+  - ../thomas-cherryhomes/CHARACTER.yml
+  - ../../process/pdp10-its-stack.yml
+  - ../../process/challenges/pdp10-maclisp-drive.yml
+  - ../../process/challenges/retrocomputing-drive.yml

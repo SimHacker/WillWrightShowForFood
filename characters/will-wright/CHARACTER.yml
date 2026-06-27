@@ -1,19 +1,23 @@
-# Will Wright — invitation + portrayal (flagship guest)
-# Standards: ../../schemas/portrayal-standards.yml — NOT Will Wright.
+# Will Wright — invitation portrayal (flagship guest)
+# NOT Will Wright. Standards: ../../schemas/portrayal-standards.yml
+# First full CHARACTER.yml in WWSFF — template for co-authored guest files later.
 
 character:
   id: will-wright
   name: Will Wright
   type: invitation
-  signifier: "👤"
+  signifier: "🌍"
   status: living
-  field: "Game designer — SimCity, The Sims, Spore, Proxi"
+  field: "Simulation game designer — SimCity, The Sims, Spore, Proxi"
   home: characters/will-wright/
+  aliases: ["Klapaucius"]
 
 representation:
   governed_by: ../../schemas/portrayal-standards.yml
   consent_level: 3
   authored_by: don-hopkins
+  primed_by: don-hopkins
+  note: "Host-authored best effort — Will may edit, reduce, or delete anytime"
   subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
@@ -22,26 +26,104 @@ invitation:
   document: invitation.md
   browse_landing: repo-shows/will-wright/BROWSE.md
   show_seed: repo-shows/will-wright/
-  segments:
-    - slats-reincarnation
-  note: "Phone 2026-06-24 — Slats quest in invitation.md; linkable when finished"
+  segments: [slats-reincarnation]
 
 simulation:
   permitted: false
   until: explicit_consent_from_will
 
 bio:
-  summary: "Visionary simulation game designer; microworlds; data portability; constructionist play."
-  detail: portrayal/bio.yml
-  sources: portrayal/sources.yml
+  born: 1960
+  summary: |
+    Co-founded Maxis; created SimCity and The Sims; pioneered microworlds, emergent
+    simulation, and player-as-storyteller design. Public figure — portrayal draws on
+    documented talks, games, and press; no impersonation.
+  known_for:
+    - SimCity
+    - The Sims
+    - Spore
+    - Proxi
+    - Dollhouse
+    - microworlds
+    - data portability
+    - Stupid Fun Club
+  relation_to_show: |
+    First invited Repo Show guest — topic-less kickoff orbiting the 1996 Stanford
+    Winograd talk (Dollhouse preview). Crown jewel thread: data portability.
+
+design_traditions:
+  - toys_not_games
+  - simulator_effect
+  - object_centric_ai
+  - hobby_model
+  - implication_over_simulation
+  - procedural_amplification
+  - constructionist_play
+
+sources:
+  wikipedia: https://en.wikipedia.org/wiki/Will_Wright_(game_designer)
+  web:
+    - https://en.wikipedia.org/wiki/Will_Wright_(game_designer)
+  archive:
+    - label: "1996 Winograd seminar (anchor artifact)"
+      path: ../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
+    - label: "YouTube — Stanford recording"
+      url: https://www.youtube.com/watch?v=nsxoZXaYJSk
+  note: "Quotes in README/CARD cite public sources only"
+
+sims:
+  meta: |
+    Representational flavor — best guesses from public career and talks.
+    NOT save-game data. No mind_mirror layer (invitation portrayal only).
+  traits:
+    neat: 7
+    outgoing: 8
+    active: 9
+    playful: 10
+    nice: 7
+    generous: 8
+  skills:
+    cooking: 3
+    mechanical: 9
+    charisma: 8
+    logic: 10
+    body: 4
+    creativity: 10
+    cleaning: 5
+  needs:
+    hunger: 40
+    comfort: 60
+    hygiene: 50
+    bladder: 50
+    energy: 55
+    fun: 85
+    social: 65
+    room: 70
+  identity:
+    age: adult
+    zodiac: aquarius
+    aspiration: fortune
+  career:
+    track: science
+    level: 10
+    note: "Flavor — 'Mad Scientist' energy; Maxis co-founder arc"
 
 content:
   readme: README.md
   glance: GLANCE.md
-  card: CARD.md
+  card: CARD.yml
+  card_md: CARD.md
+  description: DESCRIPTION.md
   show: ../../repo-shows/will-wright/
 
 see_also:
-  - portrayal/sources.yml
-  - invitation.md
-  - ../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
+  - { path: README.md, why: "Human portrait — start here" }
+  - { path: GLANCE.md, why: "One-screen sniff" }
+  - { path: CARD.yml, why: "Invokable abilities — show segments" }
+  - { path: invitation.md, why: "Public invitation" }
+  - { path: ../../process/entryways/guest-will.md, why: "Suggested playlist" }
+  - { path: ../../repo-shows/will-wright/BROWSE.md, why: "Pick-any-order landing" }
+  - { path: ../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "1996 centerpiece" }
+  - { path: ../don-hopkins/CHARACTER.yml, why: "Host — Sims + SFC shared lineage" }
+  - { path: ../chaim-gingold/CARD.yml, why: "Building SimCity — reverse diagrams" }
+  - { path: ../stone-librande/CARD.yml, why: "One-page design discipline" }

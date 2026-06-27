@@ -1,0 +1,105 @@
+# CARD — Jens Mönig (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: jens-monig
+  name: Jens Mönig
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Jens Mönig
+  title: Build Your Own Blocks
+  rarity: uncommon
+  signifier: 🧩
+  flavor: Procedures, lists, and continuations — in the browser, for everyone.
+abilities:
+- id: SNAP-BUILD
+  name: Snap!
+  type: activated
+  mana: '{G}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: snapBuild
+    signature: snapBuild(project) → runnable blocks project
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Extend Scratch-class power without losing accessibility.
+  verifiable: Snap! lead developer
+  combos_with: []
+- id: MORPHIC
+  name: Morphic.js
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: morphicJs
+    signature: morphicJs(canvas) → lively blocks IDE
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Keep the IDE itself malleable Morphic-style.
+  verifiable: Morphic.js framework
+  combos_with: []
+- id: CONTINUATIONS
+  name: Continuations
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: firstClassContinuations
+    signature: firstClassContinuations(script) → pause/resume story
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Teach control flow as a thing you can hold.
+  verifiable: Snap! continuations (documented)
+  combos_with:
+  - BRIAN-SNAP-CONTINUATIONS
+- id: GP-ALAN-KAY
+  name: GP Language
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: gpLanguage
+    signature: gpLanguage(experiment) → Kay-era blocks research
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Continue blocks languages inside Alan Kay's orbit.
+  verifiable: GP language work under Alan Kay
+  combos_with: []
+- id: RUNS-IN-BROWSER
+  name: Runs in Browser
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: runsInBrowser
+    signature: runsInBrowser(url) → no install friction
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Remove the IT department from the first hour of class.
+  verifiable: Snap! deployment model
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

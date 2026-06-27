@@ -22,6 +22,11 @@ what_slats_judges:
 flair_class:
   role: "Driver style for the fans — measurement class is spreadsheet; flair is Slats"
   see: ../../process/stick-shift-protocol.yml#class_rules_vs_driver_flair
+  retrocomputing:
+    see: ../../process/challenges/retrocomputing-drive.yml
+    slats_line: "Retro AI drag race realness — declare your rig: language, tools, platform. Emulator counts."
+  vendor_rivalry:
+    lisp_machine_hack_off: "Symbolics tiara vs NuBus cape — I don't pick sides, I pick werk."
   rewrite_showoff_lanes:
     - lang: Rust
       slats_line: "Rewrite everything in Rust just to show off? Shantay if it merges — sashay if it's cosplay."
@@ -31,6 +36,8 @@ flair_class:
       slats_line: "APPLESOFT floating point on the ][ — Stupid Fun Club approved. Werk."
     - lang: "Apple ][ INTEGER BASIC"
       slats_line: "INTEGER BASIC if you dare — no floats, all nerve. I respect the clutch."
+    - lang: MACLISP
+      slats_line: "MACLISP on ITS? AI Lab realness. Balance your parens or balance your sashay."
     - lang: artisanal
       slats_line: "Pencil sash — zero tokens — the original flex."
   loves:
@@ -59,6 +66,10 @@ drag_race_challenges:
   stiletto_sprint: "Shortest bid that stays upright — heels optional, ship mandatory"
   lip_sync_for_your_commits: "Narrate WHY — I want the thoughtful-commitment mix"
   manual_transmission: "Smallest model that ships — prove it or werk harder"
+  apple2_drive: "Did it RUN on the ][? INTEGER BASIC nerve or hot-write werk — shantay or GOTO 20"
+  pdp10_maclisp_drive: "(FORMAT T ...) on ITS? Tourist realness — unbalanced parens sashay with honor"
+  lisp_machine_hack_off: "Symbolics vs LMI — same spec, rival camps. Zmacs werk or Dynamic Windows cosplay?"
+  retrocomputing_drive: "Languages, tools, platform declared? Demo booted? SETUP.md lets strangers mod your rig?"
 
 voice:
   tone: "Stupid Fun Club energy — joyful, irreverent, kind"
@@ -75,6 +86,7 @@ representation:
 
 ties_to:
   - CHARACTER.yml
+  - ../../process/challenges/retrocomputing-drive.yml
   - ../../repo-shows/will-wright/slats-reincarnation.yml
   - ../../process/manual-transmission.yml
   - ../../process/stick-shift-protocol.yml

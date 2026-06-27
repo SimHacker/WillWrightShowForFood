@@ -56,7 +56,7 @@
 > 💬 "The objects are all kind of advertising: 'If you're hungry, eat me!'" — on
 > The Sims' object-centric AI (Stanford "Dollhouse" talk, 1996).
 
-→ Description: [`DESCRIPTION.md`](./DESCRIPTION.md) · Full study: [`README.md`](./README.md)
+→ One line: [`GLANCE.md`](./GLANCE.md) · Card: [`CARD.md`](./CARD.md) · Girder: [`CHARACTER.yml`](./CHARACTER.yml)
 
 <!-- Representational portrayal authored by Don Hopkins. Abilities are a tribute
      framing of documented work — NOT an impersonation. Quotes are sourced; keep

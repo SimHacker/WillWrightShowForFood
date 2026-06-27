@@ -1,5 +1,5 @@
 # REPO SHOW FORMAT — canonical definition
-# Facade: ../README.md | skill: SimHacker/moollm + DonHopkins skills/repo-show
+# Markup: FORMAT.md (generated — pnpm run facades) | skill: ../skills/repo-show/
 
 meta:
   id: repo-show-format
@@ -182,12 +182,21 @@ play_lift_learn:
   learn: "Fork, breed, nest — constructionist payoff across the network"
 
 see_also:
-  - vision-and-ambition.yml
-  - VISION.md
-  - rig-feedback.yml
-  - showmaker-network.yml
-  - manual-transmission.yml
-  - brain-stream.yml
-  - micropolis-ai-drag-race.yml
-  - ../repo-shows/will-wright/README.md
-  - ../skills/README.md
+  - { path: cross-links.yml, why: "Narrative web — trails between all rooms" }
+  - { path: vision-and-ambition.yml, why: "Long arc girder" }
+  - { path: VISION.md, why: "Generated markup" }
+  - { path: rig-feedback.yml, why: "Declare your real AI stack" }
+  - { path: showmaker-network.yml, why: "Shows breed shows" }
+  - { path: manual-transmission.yml, why: "Smallest model that ships" }
+  - { path: brain-stream.yml, why: "Live thinking overlay" }
+  - { path: micropolis-ai-drag-race.yml, why: "Flagship game-show format" }
+  - { path: challenges/retrocomputing-drive.yml, why: "Retro AI drag race family" }
+  - { path: ../repo-shows/will-wright/README.md, why: "Flagship show pitch" }
+  - { path: ../repo-shows/REPO-SHOWS.yml, why: "SHOW inheritance" }
+  - { path: ../skills/repo-show/SKILL.md, why: "Orchestrator protocol" }
+  - { path: ../skills/INDEX.yml, why: "Harvest + upstream moollm skills" }
+  - { path: ../characters/INDEX.yml, why: "Guests — portrayal-standards first" }
+  - { path: ../rigs/INDEX.yml, why: "Rig personas" }
+  - { path: ../schemas/portrayal-standards.yml, why: "Ethics contract" }
+  - { path: https://github.com/SimHacker/moollm/skills/cauldron, why: "HARVEST delegate" }
+  - { path: https://github.com/SimHacker/moollm/skills/play-learn-lift, why: "PLAY → LEARN → LIFT" }

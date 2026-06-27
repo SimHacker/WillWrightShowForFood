@@ -22,24 +22,31 @@ methods:
     returns: { cream: array, next: string }
 
   FIND-GUEST:
-    signature: "Scan characters/INDEX.yml by invitation_status or topic"
+    signature: "Browse characters/ — one dir per person; INDEX.yml optional for machines"
     returns: { guests: array }
 
   FIND-SHOW:
     signature: "Scan repo-shows/INDEX.yml"
     returns: { shows: array }
 
+  BOT-ORIENT:
+    signature: "FOR-BOTS.md → GLANCE.yml → CARD.yml → pick one ENTRYWAYS doorway"
+    human: FOR-BOTS.md
+    girder: process/for-bots.yml
+    note: "Browsing HTTP agents — wander, don't flatten; not bulk scrape-everything"
+
 rooms:
-  repo-shows/: "Show seeds and planted instances"
+  repo-shows/: "Show seeds and planted instances — README + CARD + skills/repo-show"
   characters/: "Guest + host portrayals (filtered, public-safe)"
-  process/: "Vision, format, ShowMaker network, export/sync"
-  schemas/: "Rig schema, guest invitation status"
-  rigs/: "Reproducible rig instances (*.rig.yml)"
-  apps/: "Future deployable apps (site, stream-gateway brain bus, adventure UI)"
+  process/: "Vision, format markup (FORMAT.md generated), drag race, challenges — yaml girders"
+  schemas/: "Rig schema, portrayal standards, invitation workflow"
+  rigs/: "Reproducible rig instances (*.rig.yml + *.SETUP.md)"
+  skills/: "repo-show skill (public live) + harvest landing"
+  apps/: "Future deployable apps (stream-gateway brain bus)"
   packages/: "@wwsff/* shared libraries"
-  skills/: "Show-harvested MOOLLM skills"
   examples/: "Runnable microworlds (future adventure-with-Will show)"
   scripts/: "verify-monorepo-structure, verify-yaml"
+  kernel/: "moollm-plugin.yml composition"
 
 k_lines:
   - "So you have a Repo to Show us?"
@@ -48,7 +55,22 @@ k_lines:
   - "Homefun not homework"
 
 see_also:
-  - kernel/moollm-plugin.yml
-  - process/homefun-grading.yml
-  - process/sync-with-donhopkins.yml
-  - ../DonHopkins/projects/micropolis-moollm/process/wwsff-export-sync.yml
+  - { path: skills/repo-show/SKILL.md, why: "Orchestrator — start here for show protocol" }
+  - { path: process/cross-links.yml, why: "Generous narrative trails between all rooms" }
+  - { path: process/README.md, why: "Process room — yaml girders + generated markup" }
+  - { path: process/INDEX.yml, why: "Spec registry" }
+  - { path: process/markup-facades.yml, why: "Yaml → md generation registry" }
+  - { path: FOR-BOTS.md, why: "Hello bot — browsing agents welcome" }
+  - { path: process/for-bots.yml, why: "Bot reading thread girder" }
+  - { path: ENTRYWAYS.md, why: "Front door playlists — pick your interest" }
+  - { path: process/entryways.yml, why: "Ordered sequences yaml girder" }
+  - { path: repo-shows/will-wright/BROWSE.md, why: "Will guest landing" }
+  - { path: process/cross-links.yml, why: "Thematic trails graph" }
+  - { path: repo-shows/INDEX.yml, why: "All show seeds and plants" }
+  - { path: characters/, why: "Guest directories — browse the tree; each slug is a room" }
+  - { path: characters/INDEX.yml, why: "Machine registry only — FIND-GUEST sync" }
+  - { path: rigs/INDEX.yml, why: "Rig personas — drag race costumes" }
+  - { path: schemas/portrayal-standards.yml, why: "Ethics before guest deep reads" }
+  - { path: kernel/moollm-plugin.yml, why: "MOOLLM plugin composition" }
+  - { path: https://github.com/SimHacker/moollm, why: "Compose-with upstream microworld OS" }
+  - { path: https://github.com/SimHacker/MicropolisCore, why: "Simulation core sibling repo" }

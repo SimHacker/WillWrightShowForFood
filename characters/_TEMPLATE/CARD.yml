@@ -1,0 +1,43 @@
+# CARD — guest-slug (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: guest-slug
+  name: "Full Name"
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+
+card:
+  name: "Full Name"
+  title: "Epithet — one line"
+  rarity: uncommon
+  signifier: "👤"
+  flavor: "Optional quote or vibe — sourced if quote"
+
+abilities:
+  - id: EXAMPLE-VERB
+    name: "Example Verb"
+    type: activated
+    mana: "{1}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: exampleVerb
+      signature: "exampleVerb(input) → documented outcome"
+      score_when:
+        - trigger: audience_learns_without_lecture
+          weight: 0.85
+    effect: "One sentence — what invoking this celebrates on a Repo Show."
+    verifiable: "Published work or public bio — cite here"
+    combos_with: []
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: CHARACTER.yml, why: "Bio girder — invitation status" }
+  - { path: invitation.md, why: "Public invitation document" }

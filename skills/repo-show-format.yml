@@ -1,7 +1,9 @@
-# ShowMaker network + Repo Show format — pointers
+# Repo Show format — pointer
+# Canonical: process/repo-show-format.yml + process/FORMAT.md
+# Orchestrator: skills/repo-show/
+
 see:
-  - ../process/VISION.md
-  - ../process/vision-and-ambition.yml
-  - ../process/showmaker-network.yml
+  - ../process/FORMAT.md
   - ../process/repo-show-format.yml
+  - repo-show/
 harvest_target: skills/

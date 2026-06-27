@@ -1,0 +1,105 @@
+# CARD — Jason Shankel (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: jason-shankel
+  name: Jason Shankel
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Jason Shankel
+  title: StoryMaker AI
+  rarity: uncommon
+  signifier: 🤖
+  flavor: Bar Karma community brains meet modern AI episode.
+abilities:
+- id: BAR-KARMA
+  name: Bar Karma
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: barKarma
+    signature: barKarma(episode) → community script
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Connect community TV experiments to today's AI tools.
+  verifiable: Bar Karma / StoryMaker community
+  combos_with: []
+- id: MAXIS-DNA
+  name: Maxis DNA
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: maxisDNA
+    signature: maxisDNA(system) → simulation thinking
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Carry Maxis/SFC habits into AI prototyping.
+  verifiable: Maxis / SFC alumni (CHARACTER bio)
+  combos_with: []
+- id: AI-SKILLS-EP
+  name: AI Skills Episode
+  type: activated
+  mana: '{W}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: aiSkillsEpisode
+    signature: aiSkillsEpisode(skill) → live build
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Guest star for AI + skills themed show.
+  verifiable: Proposed AI + skills episode
+  combos_with:
+  - WALTER-SKILL-CREATION-SHOW
+- id: COMMUNITY-WRITER
+  name: Community Writer
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: communityWriter
+    signature: communityWriter(branch) → merge good lines
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Moderate branching narratives without killing fun.
+  verifiable: StoryMaker community role
+  combos_with: []
+- id: PLAYFUL-RIGOR
+  name: Playful Rigor
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: playfulRigor
+    signature: playfulRigor(prototype) → testable toy
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Keep the toy testable while staying weird.
+  verifiable: Games-AI background
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

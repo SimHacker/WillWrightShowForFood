@@ -1,0 +1,55 @@
+# CARD — process/ room (WWSFF MOOLLM microworld)
+
+room:
+  id: process
+  name: "Process & protocols"
+  type: [yaml_girders, markup_facades, show_rules]
+
+purpose: |
+  Canonical specs for Repo Show format, game-show variants, retro challenges, ai-offs,
+  and vision. Yaml stays brutalist machine-readable girders; markdown markup facades
+  are generated on demand (pnpm run facades) — never hand-synced.
+
+methods:
+  FIND-SPEC:
+    signature: "INDEX.yml → yaml girder"
+  READ-MARKUP:
+    signature: "Generated *.md human view — regenerate, don't edit"
+  READ-GIRDER:
+    signature: "Raw yaml when implementing or automating"
+  REGENERATE-FACADES:
+    signature: "pnpm run facades"
+    registry: markup-facades.yml
+  PICK-ENTRYWAY:
+    signature: "entryways.yml → playlist by interest (guest, hacker, retro, …)"
+    human: ../ENTRYWAYS.md
+    human_dir: entryways/
+  PICK-TRAIL:
+    signature: "cross-links.yml → thematic sideways leap"
+    human: ../TRAILS.md
+    human_dir: trails/
+
+entries:
+  format: { yaml: repo-show-format.yml, markup: FORMAT.md }
+  drag_race: { yaml: micropolis-ai-drag-race.yml, markup: DRAG-RACE.md }
+  retro: { yaml: challenges/retrocomputing-drive.yml, markup: challenges/RETROCOMPUTING.md }
+  ai_offs: { yaml: ai-offs.yml, markup: AI-OFFS.md }
+  manual: { yaml: manual-transmission.yml, markup: MANUAL-TRANSMISSION.md }
+  homefun: { yaml: homefun-grading.yml, markup: HOMEFUN.md }
+  brain_stream: { yaml: brain-stream.yml, markup: BRAIN-STREAM.md }
+  orchestration: { yaml: orchestration-gold.yml, markup: ORCHESTRATION-GOLD.md }
+  vision: { yaml: vision-and-ambition.yml, markup: VISION.md }
+
+see_also:
+  - README.md
+  - INDEX.yml
+  - GLANCE.yml
+  - entryways.yml
+  - markup-facades.yml
+  - cross-links.yml
+  - entryways/README.md
+  - ../TRAILS.md
+  - ../ENTRYWAYS.md
+  - ../schemas/markup-facade.yml
+  - ../skills/repo-show/CARD.yml
+  - ../skills/INDEX.yml

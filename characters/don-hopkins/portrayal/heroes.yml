@@ -1,0 +1,40 @@
+# Don Hopkins — heroes (condensed direct mentors)
+# Source: moollm adventure-4 HEROS.yml — public-safe subset
+# Full roster stays upstream; WWSFF credits the spine.
+
+meta:
+  purpose: "Names in the README. Credit where credit is due."
+  ethics: "Real beings — respectful mention; fuller portrayal only with consent"
+
+direct_mentors:
+  ben_shneiderman:
+    relationship: "UMD HCIL mentor"
+    taught: "HCI is science AND art — measure, test, prove; humans before computers"
+    key_work: "CHI'88 pie menus paper; HyperTIES"
+    wwsff_link: ../will-wright/README.md
+
+  mark_weiser:
+    relationship: "UMD mentor; ubiquitous computing"
+    taught: "Calm technology; invisible computing in every interface"
+    note: "Gone too soon — ideas live in Don's work"
+
+  will_wright:
+    relationship: "Maxis boss; Stupid Fun Club founder; Gallium consultant"
+    taught: "Play as learning tool; player imagines more than we simulate"
+    wwsff_link: ../../repo-shows/will-wright/
+
+  alan_kay:
+    relationship: "Intellectual lineage — Dynabook, Smalltalk"
+    taught: "The real thing — everything good traces back"
+
+intellectual_lineage:
+  thread: "Papert constructionism → microworlds → Sims → MOOLLM → Repo Show"
+  moollm_skills:
+    - https://github.com/SimHacker/moollm/skills/constructionism
+    - https://github.com/SimHacker/moollm/skills/play-learn-lift
+
+see_also:
+  - voice.yml
+  - ../career/work-history.yml
+  - presentations.yml
+  - https://github.com/SimHacker/moollm/examples/adventure-4/characters/real-people/don-hopkins/HEROS.yml

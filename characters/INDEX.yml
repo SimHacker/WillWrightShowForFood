@@ -1,10 +1,15 @@
-# CHARACTER ROSTER — potential Repo Show guests
-# Filtered public projections. Source: DonHopkins/characters/ (private) → sync manifest.
+# CHARACTER REGISTRY — machine index for FIND-GUEST / sync (not the human people catalog)
+# Humans browse characters/ directly. Status + paths for automation; organic refs in prose elsewhere.
 
 meta:
   schema: ../schemas/invitation-workflow.yml
   portrayal: ../schemas/portrayal-standards.yml
-  rule: "OK to list dream guests before asking. Track invitation.status honestly. Subject may edit or delete anytime."
+  card_surface: CARD.yml
+  card_schema: ../schemas/guest-skills-card.yml
+  rule: |
+    OK to list dream guests before asking. Track invitation.status honestly in each directory.
+    Subject may edit or delete anytime. Directories grow with responses and show artifacts —
+    see portrayal-standards.yml guest_directory.
 
 flagship:
   will-wright:
@@ -22,7 +27,9 @@ host:
     role: "Host, author of portrayals"
     consent: self_sovereign
     path: characters/don-hopkins/
-    note: "master-of-ceremonies coalesced here — not a separate character; don-philahue is orchestrator avatar"
+    sync: characters/don-hopkins/sync-sources.yml
+    upstream: SimHacker/moollm/examples/adventure-4/characters/real-people/don-hopkins/
+    note: "master-of-ceremonies coalesced here — adventure layer extends upstream; don-philahue is orchestrator avatar"
 
 orchestrator:
   don-philahue:
@@ -58,6 +65,11 @@ guests:
   jean-piaget: { invitation_status: not_yet_asked, note: "historical K-line only" }
   ken-kahn: { invitation_status: not_yet_asked, show_seed: repo-shows/ken-kahn/ }
   ken-perlin: { invitation_status: not_yet_asked }
+  lars-brinkhoff:
+    invitation_status: not_yet_asked
+    show_seed: repo-shows/lars-brinkhoff/
+    paired_guest: thomas-cherryhomes
+    note: "PDP-10/ITS — challenge make it so for pdp10-maclisp-drive; pair with Thomas Cherryhomes"
   margaret-minsky: { invitation_status: not_yet_asked, show_seed: repo-shows/margaret-minsky/ }
   marvin-minsky: { invitation_status: not_yet_asked, note: "deceased — reverence; legacy only" }
   matthew-sibigtroth: { invitation_status: not_yet_asked, show_seed: repo-shows/matthew-sibigtroth/ }

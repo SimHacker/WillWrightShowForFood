@@ -1,0 +1,101 @@
+# PDP-10 MACLISP Flair Lap — example retro rig (ITS on emulated iron)
+# Write in MACLISP on a PDP-10 emulator running ITS!
+
+rig:
+  id: pdp10-maclisp-flair-lap
+  name: "PDP-10 MACLISP Flair Lap — ITS on emulated iron"
+  version: "0.1"
+  author: don-hopkins
+  rig_classes: [artisanal, intentional, flair]
+  description: |
+    Example retro rig: MACLISP on ITS via PDP-10/its + SIMH. Declare languages,
+    tools, platform, emulator in components; ship the spec at the AI Lab console.
+    See process/challenges/pdp10-maclisp-drive.yml.
+
+lifecycle:
+  download:
+    steps:
+      - "Read process/challenges/pdp10-maclisp-drive.yml — pick flair or measurement lane"
+      - "Clone https://github.com/PDP-10/its — follow README for SIMH + ITS image build"
+      - "Read process/pdp10-its-stack.yml — heritage + pointer links"
+    urls:
+      - "https://github.com/PDP-10/its"
+      - "https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/challenges/pdp10-maclisp-drive.yml"
+  install:
+    steps:
+      - "Install SIMH per PDP-10/its docs (platform-specific)"
+      - "Build or fetch ITS disk/tape images — verify boot to login or idle prompt"
+    verify: "ITS responds at console; MACLISP listener or load path confirmed"
+  configure:
+    steps:
+      - "Cursor workspace: WWSFF + challenge spec CARD"
+      - "Fill components.languages, tools, platforms, emulators — your choices"
+      - "Declare flair_class; note DDT vs compile-load path in rig description"
+    files:
+      - process/challenges/pdp10-maclisp-drive.yml
+      - process/pdp10-its-stack.yml
+  use:
+    workflow: |
+      Retrocomputing AI drag race on the AI Lab: boot PDP-10/ITS, define MACLISP for
+      the spec CARD, capture console eval on stream or screencast. thoughtful-commitment
+      with Thinking ref. Slats roasts unbalanced parens lovingly.
+    contexts: [retrocomputing_drive, pdp10_maclisp_drive, micropolis_ai_drag_race, homefun]
+  replicate:
+    checklist:
+      - "SIMH + ITS image boot on clean machine"
+      - "MACLISP source in PR; reload + eval matches demo"
+      - "Optional spend CSV + composer id"
+    estimated_time: "First boot 1–3 hours; flair segment 30–60 min once ITS is warm"
+  mash_up:
+    compose_with:
+      - rigs/stick-shift-composer-moollm.rig.yml
+    warnings:
+      - "Spec must run on ITS — Cursor is host orchestration, not the platform"
+      - "Declare ITS image hash or build date for reproducibility"
+
+components:
+  editor: { name: Cursor, version: latest }
+  languages:
+    target: MACLISP
+    host: [MACLISP, artisanal_hand]
+    note: "Kent Pitman era MIT-AI dialect — declare if using subset or Pitmanual conventions"
+  tools:
+    - { name: DDT, role: "debug/load at console" }
+    - { name: TECO, role: "source edit victory lap", optional: true }
+    - { name: MIDAS, role: "assembler if touching low-level", optional: true }
+    - { name: Cursor, role: "AI orchestration on host" }
+    - { name: MOOLLM, role: "thoughtful-commitment, cursor-mirror" }
+    - { name: SIMH, role: "PDP-10 CPU emulator" }
+  platforms:
+    primary: pdp10
+    os: ITS
+    mode: emulated
+  emulators:
+    - { name: "PDP-10/its", repo: "https://github.com/PDP-10/its", backend: SIMH }
+  skills:
+    - SimHacker/moollm/skills/thoughtful-commitment
+    - SimHacker/moollm/skills/cursor-mirror
+  repos:
+    - SimHacker/WillWrightShowForFood
+    - PDP-10/its
+
+declare:
+  class: flair
+  platform_bid: "PDP-10 running ITS — emulated via PDP-10/its + SIMH"
+  honesty: "MACLISP eval on ITS in demo — no cosplay without boot"
+
+proof:
+  demo: "Console capture — defun + call showing spec output"
+  setup_md: pdp10-maclisp-flair-lap.SETUP.md
+  rig: "components list reproducible SIMH + ITS image path"
+  optional: "Cursor spend export + composer id"
+
+costume:
+  drag_race: "Green phosphor sash, teletype gloves, Tourist Policy badge, unbalanced-paren earrings"
+
+see_also:
+  - ../process/challenges/retrocomputing-drive.yml
+  - ../process/challenges/pdp10-maclisp-drive.yml
+  - ../process/pdp10-its-stack.yml
+  - ../process/micropolis-ai-drag-race.yml
+  - ../characters/slats/judge-rubric.yml

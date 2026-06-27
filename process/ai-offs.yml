@@ -119,13 +119,18 @@ post_run_analysis:
   see: manual-transmission.yml#post_run_forensics
 
 see_also:
-  - ../schemas/rig-schema.yml
-  - ../rigs/README.md
-  - rig-feedback.yml
-  - showmaker-network.yml
-  - manual-transmission.yml
-  - brain-stream.yml
-  - model-branching.yml
-  - orchestration-gold.yml
-  - stick-shift-protocol.yml
-  - ../skills/README.md
+  - { path: cross-links.yml#drag_race_and_ai_offs, why: "Full game-show + proof trail" }
+  - { path: ../schemas/rig-schema.yml, why: "Declare rig_classes honestly" }
+  - { path: ../rigs/README.md, why: "Rig personas — spend log lives in proof block" }
+  - { path: rig-feedback.yml, why: "Tell us your real stack" }
+  - { path: showmaker-network.yml, why: "Competition scoreboard" }
+  - { path: manual-transmission.yml, why: "Smallest model — piss test required" }
+  - { path: brain-stream.yml, why: "Live overlay during ai-offs" }
+  - { path: model-branching.yml, why: "Fork trajectories — post-run compare" }
+  - { path: orchestration-gold.yml, why: "Training gold from real routing traces" }
+  - { path: stick-shift-protocol.yml, why: "Shift = commit — tachometer metaphor" }
+  - { path: micropolis-ai-drag-race.yml, why: "Drag race uses ai-offs proof" }
+  - { path: homefun-grading.yml, why: "thoughtful-commitment rubric" }
+  - { path: ../skills/INDEX.yml, why: "cursor-mirror, thoughtful-commitment upstream" }
+  - { path: https://github.com/SimHacker/moollm/skills/cursor-mirror, why: "Post-run forensics engine" }
+  - { path: https://github.com/SimHacker/moollm/skills/rubric, why: "Score forensics summaries" }

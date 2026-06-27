@@ -1,0 +1,105 @@
+# CARD — Ben Cerveny (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: ben-cerveny
+  name: Ben Cerveny
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Ben Cerveny
+  title: Public Code & Maps
+  rarity: uncommon
+  signifier: 🗺️
+  flavor: Games, maps, and civic infrastructure — executable history.
+abilities:
+- id: FLICKR-PATH
+  name: Game to Flickr
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: gameToPlatform
+    signature: gameToPlatform(GNE) → social photo culture
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Trace how playful prototypes become public infrastructure.
+  verifiable: Game Neverending → Flickr lineage (public)
+  combos_with: []
+- id: STAMEN-MAP
+  name: Stamen Map
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: stamenMap
+    signature: stamenMap(dataset) → legible city story
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Make data visualization feel like a walk.
+  verifiable: Stamen Design work
+  combos_with: []
+- id: PUBLIC-CODE
+  name: Public Code
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: publicCode
+    signature: publicCode(foundation) → accountable civic software
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Explain why government code belongs in the open.
+  verifiable: Foundation for Public Code presidency
+  combos_with: []
+- id: EXECUTABLE-HISTORY
+  name: Executable History
+  type: activated
+  mana: '{W}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: executableHistory
+    signature: executableHistory(repo) → time-travel demo
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Propose Repo Show segments as runnable archives.
+  verifiable: Repo Show invitation themes
+  combos_with:
+  - HOST-REPO-SHOW
+- id: PLANETARY
+  name: Planetary
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: planetary
+    signature: planetary(app) → museum-acquired interface
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Show interfaces lovely enough for museums.
+  verifiable: Bloom Studio Planetary
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

@@ -1,0 +1,118 @@
+# LISP MACHINE HACK-OFF — Symbolics vs LMI: the battle continues
+# Family: retrocomputing-drive.yml — same spec CARD, rival vendor lanes, Slats judges werk
+
+meta:
+  id: lisp-machine-hack-off
+  status: seed
+  family: retrocomputing-drive
+  type: [drag_race_challenge, flair_class, vendor_rivalry, emulated_runtime]
+  tagline: "Lisp Machine Hack-Off — Symbolics vs LMI: the battle continues"
+  class: flair
+  celebrity_judge: ../characters/slats/judge-rubric.yml
+  homage: [MIT_CADR, Genera, LMI_Lambda, Zmacs, Dynamic_Windows]
+
+pitch: |
+  Same spec CARD — two camps. Symbolics (Genera on VLM / Portable Genera) vs LMI
+  (Lambda on LambdaDelta). Declare your rig: vendor lane, emulator, Lisp dialect
+  (ZetaLisp / Flavors era), tools (Zmacs, Peek, SDU telnet). Boot the ivory tower
+  or the NuBus beast; ship the spec on stream. Cursor orchestrates on host; demo
+  runs on the Lisp Machine. The battle continues — Slats judges eleganza, not brand loyalty.
+
+audience_chant: "CODE THAT SPEC!!!!! (in Zmacs)"
+
+vendor_lanes:
+  symbolics:
+    camp: "Genera — Dynamic Windows realness"
+    emulators:
+      - Portable Genera (commercial — symbolics-dks.com)
+      - Open Genera VLM / og2vlm (community — declare license compliance)
+    tools: [Zmacs, Genera_listener, Dynamic_Windows, Flavors]
+    costume: "Ivory tiara, Genera sash, chaos-net earrings"
+    slats: "Symbolics camp — did Dynamic Windows werk or is it wallpaper cosplay?"
+
+  lmi:
+    camp: "Lambda — NuBus nerve"
+    emulators:
+      - LambdaDelta (https://github.com/salewski/ld-lambda-delta)
+    tools: [Zmacs, SDU_telnet, init, newboot, Peek_mode]
+    costume: "NuBus backplane cape, SDU telnet gloves, Release 5 badge"
+    slats: "LMI camp — SDU init or sashay. Peek Mode eleganza counts."
+
+  mit_cadr_heritage:
+    camp: "CADR ancestor lap — not the vendor battle, but honorable heritage heat"
+    emulators: [usim]
+    note: "Side quest — boot CADR, acknowledge both vendors' parent"
+
+rig_declaration:
+  required_in: rigs/<persona>.rig.yml
+  setup: rigs/<persona>.SETUP.md
+  components:
+    vendor_lane: symbolics | lmi | cadr_heritage
+    languages: [ZetaLisp, Flavors, Common_Lisp_subset_on_host]
+    tools: "Zmacs, emulator binary, NFS/TAP if Genera, telnet if Lambda"
+    platforms: lisp_machine_emulated | lisp_machine_real_iron
+    emulators: "Declare project + version — see lisp-machine-stack.yml"
+
+challenge_lanes:
+  hack_off_main:
+    declare: flair_class
+    format: "Head-to-head or tag-team — same spec CARD, rival vendor demos back-to-back"
+    judges: [Slats, audience, brain_stream]
+    pick_one_or_more:
+      - "Define spec function in Zmacs — compile, load, demo listener output"
+      - "Dynamic Windows / multi-pane Zmacs layout on stream (Symbolics flair)"
+      - "SDU init → newboot → Lisp boot capture (LMI flair)"
+      - "Peek Mode victory lap — show live system objects (LMI)"
+      - "Flavors or defstruct spec object — camp honest about era"
+    win_conditions: "Spec ships on declared vendor emulator — fans pick camp for werk, not license"
+
+  measurement_vertical:
+    declare: stick_shift_or_artisanal
+    spec_cards:
+      boot: "Vendor emulator to Lisp listener — screencast"
+      eval: "One defun + one call matching spec CARD output"
+      zmacs: "Source file in PR — reload path documented"
+
+how_it_runs:
+  host_drops: "Spec CARD + optional vendor constraint ('Symbolics only heat' or 'pick your camp')"
+  contestant:
+    - "Pick Symbolics or LMI lane — document in rig yaml + SETUP.md"
+    - "rigs/<persona>.SETUP.md — reproduce boot; mod vendor lane or emulator"
+    - "Boot emulator; implement; capture Zmacs + listener on PR"
+    - "thoughtful-commitment — Thinking ref; declare emulator license path"
+  proof:
+    - "Boot + eval recording"
+    - "Rig yaml + SETUP.md — reproducible; pin emulator + world/disk versions"
+    - "Optional: spend CSV if AI-assisted on host"
+
+example_rigs:
+  symbolics:
+    rig: ../../rigs/lisp-machine-symbolics.rig.yml
+    setup: ../../rigs/_TEMPLATE.SETUP.md
+  lmi:
+    rig: ../../rigs/lisp-machine-lmi.rig.yml
+    setup: ../../rigs/_TEMPLATE.SETUP.md
+
+stack_background:
+  see: lisp-machine-stack.yml
+
+ties_to:
+  - retrocomputing-drive.yml
+  - lisp-machine-stack.yml
+  - ../micropolis-ai-drag-race.yml
+  - ../pdp10-its-stack.yml
+  - ../../characters/slats/judge-rubric.yml
+
+see_also:
+  - { path: retrocomputing-drive.yml, why: "Family umbrella" }
+  - { path: lisp-machine-stack.yml, why: "Genera, LambdaDelta, usim — stack pointer" }
+  - { path: ../pdp10-its-stack.yml, why: "ITS/MACLISP ancestor — AI Lab before ivory" }
+  - { path: ../../rigs/lisp-machine-symbolics.rig.yml, why: "Symbolics camp rig" }
+  - { path: ../../rigs/lisp-machine-lmi.rig.yml, why: "LMI camp rig" }
+  - { path: ../micropolis-ai-drag-race.yml#lisp_machine_hack_off, why: "Drag race vendor battle slot" }
+  - { path: ../../characters/slats/judge-rubric.yml, why: "Slats judges Zmacs werk" }
+  - { path: ../cross-links.yml#retrocomputing_drive, why: "Full retro trail index" }
+  - { path: https://lisp-machine.org/, why: "Community hub — emulator links" }
+  - { path: https://github.com/salewski/ld-lambda-delta, why: "LambdaDelta — LMI lane emulator" }
+  - { path: https://github.com/unya/usim, why: "CADR heritage — MIT AI Lab ancestor" }
+  - { path: SimHacker/DonHopkins/characters/don-hopkins/correspondence/kent-pitman.yml, why: "ZetaLisp oral history" }

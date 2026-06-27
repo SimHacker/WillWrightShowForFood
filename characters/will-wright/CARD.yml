@@ -1,0 +1,202 @@
+# CARD — Will Wright (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: will-wright
+  name: Will Wright
+  type:
+  - invitation
+  - guest
+  - flagship
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Will Wright
+  title: Architect of Microworlds
+  rarity: flagship
+  signifier: 🌍
+  flavor: The player imagines more than we simulate. — attributed in Will Wright show materials
+abilities:
+- id: SIMULATE-CITY
+  name: Simulate City
+  type: activated
+  mana: '{G}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: simulateCity
+    signature: simulateCity(rules) → emergent town
+    score_when:
+    - trigger: causality_visible_without_manual
+      weight: 0.95
+  effect: Drop a spec CARD; build a toy where one knob reshapes the whole system.
+  verifiable: SimCity (1989); public interviews
+  combos_with: []
+- id: DOLLHOUSE-TO-SIMS
+  name: Dollhouse to Sims
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: dollhouseToSims
+    signature: dollhouseToSims(householdObjects) → social simulation
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Turn architectural dolls into people with needs, stories, and emergent drama.
+  verifiable: The Sims lineage; Dollhouse research
+  combos_with:
+  - CHAIM-REVERSE-ENGINEER
+- id: PROCEDURAL-CREATURE
+  name: Procedural Creature
+  type: activated
+  mana: '{G}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: proceduralCreature
+    signature: proceduralCreature(genome) → walkable mesh + behavior
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Compress player intent into a genome; let the computer infer anatomy.
+  verifiable: Spore; procedural design talks
+  combos_with: []
+- id: STUPID-FUN-CLUB
+  name: Stupid Fun Club
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: stupidFunClub
+    signature: stupidFunClub(robot, humans) → hidden-camera learning
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Put robots among people; study reactions as entertainment research.
+  verifiable: Stupid Fun Club era; One Minute Movies
+  combos_with:
+  - DON-PROGRAM-ROBOT-BRAIN
+  - MATT-STORYMAKER
+- id: DATA-PORTABILITY
+  name: Data Portability
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: dataPortability
+    signature: dataPortability(playerCreation) → exportable artifact
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Argue that player-made worlds should outlive any one platform.
+  verifiable: Proxi / portability themes in show invitation materials
+  combos_with: []
+- id: MICROWORLD-PITCH
+  name: Microworld Pitch
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: microworldPitch
+    signature: microworldPitch(topic) → 30min playable lesson
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Design bite-sized interdisciplinary microworlds teachers can actually schedule.
+  verifiable: 1996 Winograd interview; teacher edition lineage
+  combos_with:
+  - SEYMOUR-LOGO-TURTLE
+  - TERRY-SEMINAR-HOST
+- id: INCLUDE-MODS
+  name: Include Mods
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: includeModCommunity
+    signature: includeModCommunity(tools) → thriving UGC lane
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Champion tools and policies that let players teach each other.
+  verifiable: Sims modding community history in Don Hopkins README (sourced)
+  combos_with: []
+- id: ANT-BEHAVIOR
+  name: Ant Behavior
+  type: static
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: antBehaviorLesson
+    signature: antBehaviorLesson() → classroom hook
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Defend the ant colony as a legitimate lesson plan.
+  verifiable: 1996 Winograd transcript — ant behavior in SimAnt
+  combos_with: []
+- id: GALLIUM-VOXEL
+  name: Gallium Voxel
+  type: activated
+  mana: '{G}{G}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: voxelWorldRules
+    signature: voxelWorldRules(cellularAutomata) → shared online world
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Consult on procedural voxel worlds with readable local rules.
+  verifiable: Gallium Studios consultant credit in Don Hopkins work-history
+  combos_with: []
+- id: PROXI-THREAD
+  name: Proxi Thread
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: proxiThread
+    signature: proxiThread(ideas) → investor/player/media interest
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Fold current research into a show without promising a launch date.
+  verifiable: Repo Show invitation — Proxi as discussion thread
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document
+- path: CARD.md
+  why: Human-readable trading card
+- path: ../../repo-shows/will-wright/BROWSE.md
+  why: Wander landing — start anywhere
+- path: ../../repo-shows/will-wright/
+  why: Show hub — SHOW.yml, episodes, 1996 sources
+- path: ../../process/entryways/guest-will.md
+  why: Guest playlist — ordered 1..8
+- path: ../../process/cross-links.yml
+  why: Thematic trails — leap sideways
+- path: ../don-hopkins/CARD.yml
+  why: Host card — combos with STUPID-FUN-CLUB, PIE-MENU
+- path: ../slats/CARD.yml
+  why: Slats — RoboResurrection segment
+- path: ../chaim-gingold/CARD.yml
+  why: Building SimCity — DOLLHOUSE_TO_SIMS combo
+- path: ../terry-winograd/CARD.yml
+  why: 1996 seminar host — MICROWORLD_PITCH combo

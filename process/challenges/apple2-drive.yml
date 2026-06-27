@@ -1,0 +1,99 @@
+# APPLE ][ DRIVE — retrocomputing instance (Micropolis AI Drag Race / flair lap)
+# Family: retrocomputing-drive.yml — rig = languages + tools + platform (emulator counts)
+# Stack background: apple2-emulator-stack.yml (DonHopkins authoritative layers)
+
+meta:
+  id: apple2-drive
+  status: seed
+  family: retrocomputing-drive
+  type: [drag_race_challenge, flair_class, emulated_runtime, real_hardware_ok]
+  tagline: "Drive the Apple ][ — INTEGER BASIC if you dare"
+  class: flair
+  celebrity_judge: ../characters/slats/judge-rubric.yml
+
+pitch: |
+  Same spec CARD as everyone else — declare your full rig: languages (APPLESOFT, INTEGER,
+  6502, FORTH…), tools (apple2js, cc65, Cursor…), platform (real ][ iron or emulator).
+  Emulators are platforms. Cursor + MOOLLM drive whichever stack you pick. Hot-write a disk,
+  boot on Emularity, or bring real hardware to the runway. Slats judges werk.
+
+audience_chant: "CODE THAT SPEC!!!!! (on the ][)"
+
+challenge_lanes:
+  flair_showoff:
+    declare: flair_class
+    judges: [Slats, audience, brain_stream]
+    pick_one_or_more:
+      - "HELLO WORLD in APPLESOFT floating-point BASIC — boot in browser, photo for the runway"
+      - "INTEGER BASIC if you dare — no floats, all nerve"
+      - "FORTH or 6502 asm victory lap on real or emulated hardware"
+      - "Hot-write a character byte into live disk buffer — Don's signature move (see stack L0)"
+      - "Slats RoboResurrection tie-in — run legacy Slats binary in emulator on stream"
+    slats: "Werk the spec on the ][ — or sashay with honor and a GOTO 20 story"
+
+  measurement_vertical:
+    declare: stick_shift_or_artisanal
+    judges: [spreadsheet, rubric, human]
+    spec_cards:
+      L0_disk_io: "Read/write one sector on in-memory .dsk — demo + test"
+      L1_dos33: "Catalog a DOS 3.3 disk — list one file"
+      L2_driver_seed: "Parse one known game data block (Mind Mirror seed, etc.)"
+    note: "Each layer independently shippable — aligns with fundable stack goals"
+
+rig_declaration:
+  required_in: rigs/<persona>.rig.yml
+  setup: rigs/<persona>.SETUP.md
+  components:
+    languages: "Target + host — e.g. INTEGER_BASIC on ][, Rust on host cross-assembling 6502"
+    tools: "apple2js, cc65, xa, disk editors, Cursor, MOOLLM"
+    platforms: "apple2_real | apple2_emulated"
+    emulators: "apple2js, MAME, Emularity — declare version; optional if real iron"
+
+how_it_runs:
+  host_drops: "Spec CARD — e.g. 'Print MICROPOLIS CLASS on the ][' or 'Touch sector 0'"
+  contestant:
+    - "Declare flair vs measurement lane + full rig (languages, tools, platform, emulator)"
+    - "rigs/<persona>.rig.yml — reproducible toolchain in components"
+    - "rigs/<persona>.SETUP.md — others reproduce and mod without you in the room"
+    - "Implement on branch — screencast or browser link on PR"
+    - "thoughtful-commitment — Thinking ref; homefun grading applies"
+  proof:
+    - "Working demo URL or recording"
+    - "Optional: Cursor spend CSV if AI-assisted"
+    - "cursor-mirror composer id"
+
+example_rig_persona:
+  file: ../rigs/apple2-flair-lap.rig.yml
+  setup: ../rigs/apple2-flair-lap.SETUP.md
+  costume: "Disk ][ tiara, INTEGER BASIC sash, Slats resurrection cape optional"
+
+stack_background:
+  see: apple2-emulator-stack.yml
+  emulator: apple2js
+  collaborators: [Thomas Cherryhomes, Steve Wozniak dream guest, Internet Archive Emularity]
+
+ties_to:
+  - retrocomputing-drive.yml
+  - ../micropolis-ai-drag-race.yml
+  - ../stick-shift-protocol.yml
+  - ../manual-transmission.yml
+  - ../homefun-grading.yml
+  - ../../repo-shows/will-wright/slats-reincarnation.yml
+  - ../../characters/slats/judge-rubric.yml
+  - ../../characters/thomas-cherryhomes/
+  - ../../characters/steve-wozniak/
+
+see_also:
+  - { path: retrocomputing-drive.yml, why: "Umbrella family — same spec CARD, your platform" }
+  - { path: ../apple2-emulator-stack.yml, why: "Stack pointer — emulators, FujiNet, apple2js" }
+  - { path: ../micropolis-ai-drag-race.yml#apple2_drive, why: "Drag race challenge rotation" }
+  - { path: ../../rigs/apple2-flair-lap.rig.yml, why: "Example rig — flair lap on ][" }
+  - { path: ../../rigs/apple2-flair-lap.SETUP.md, why: "Rig DNA — forward to a friend" }
+  - { path: ../cross-links.yml#retro_guests_real_wire, why: "Thomas Cherryhomes — real iron on wire" }
+  - { path: ../../characters/thomas-cherryhomes/, why: "FujiNet / IRATA guest — network retro segments" }
+  - { path: ../../characters/steve-wozniak/, why: "][ lineage — INTEGER BASIC heritage" }
+  - { path: ../../repo-shows/will-wright/slats-reincarnation.yml, why: "Slats on ][ — show seed crossover" }
+  - { path: ../stick-shift-protocol.yml, why: "Host orchestration while target is ][" }
+  - { path: ../code-that-spec.yml, why: "Audience chant — spec on declared platform" }
+  - { path: https://github.com/Apple2-OSS/apple2js, why: "Reference emulator upstream" }
+  - { path: SimHacker/DonHopkins/projects/micropolis-moollm/process/apple2-emulator-stack.yml, why: "Private monorepo stack lineage" }

@@ -1,0 +1,106 @@
+# CARD — James Gosling (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: james-gosling
+  name: James Gosling
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: James Gosling
+  title: Many Little Languages
+  rarity: uncommon
+  signifier: ☕
+  flavor: Hold the record for cheesy little extension languages — proudly.
+abilities:
+- id: JAVA
+  name: Java
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: java
+    signature: java( bytecode) → portable network era
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Tell the Java origin story without mythology.
+  verifiable: Java creation (public record)
+  combos_with: []
+- id: NEWS-SANDEW
+  name: NeWS / SunDew
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: newsWindowSystem
+    signature: newsWindowSystem(postscript) → networked graphics
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Explain postscript-as-UI before the web ate everything.
+  verifiable: NeWS/SunDew at Sun
+  combos_with:
+  - DAVID-NEWS-BOOK
+  - ARTHUR-HYPERLOOK
+- id: ANDREW
+  name: Andrew
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: andrewToolkit
+    signature: andrewToolkit(cmu) → networked windows early
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Connect CMU Andrew to modern toolkit debates.
+  verifiable: Andrew window system with Gosling
+  combos_with: []
+- id: GOSMACS
+  name: Gosling Emacs
+  type: triggered
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: goslingEmacs
+    signature: goslingEmacs(extend) → extensible editor era
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Acknowledge Emacs wars with a grin.
+  verifiable: Gosling Emacs history
+  combos_with: []
+- id: CHEESY-LANGUAGES
+  name: Cheesy Languages
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: cheesyExtensionLanguage
+    signature: 'cheesyExtensionLanguage(domain) → DSL #47'
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Celebrate DSLs with self-aware humor.
+  verifiable: Self-described record (CHARACTER bio)
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

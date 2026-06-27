@@ -25,7 +25,16 @@ flows_into:
   - ../game-bridge-proxi-sims.yml   # the data-portability CROWN JEWEL payoff (+ Wig-O-Matic)
 
 across:
-  - ../../process/collaborators.yml#will_wright    # value offer + Proxi + consent
-  - ../../crystallized/CONSTELLATIONS.yml          # Will = brightest star, the_simulation_designers
-  - ../../crystallized/DESIGN-WISDOM.yml#data_portability_crown_jewel
-  - ../../process/design-in-public.yml#forebears   # the Winograd seminar lineage
+  - ../../characters/will-wright/CARD.yml
+  - ../../process/entryways/guest-will.md
+  - ../../process/entryways.yml
+  - ../../process/vision-and-ambition.yml
+  - ../../characters/terry-winograd/
+  - ../../repo-shows/will-wright/BROWSE.md
+
+see_also:
+  - { path: BROWSE.md, why: "Will's landing — any order" }
+  - { path: SHOW.yml, why: "Show instance girder" }
+  - { path: ../../process/entryways/guest-will.md, why: "Guest playlist" }
+  - { path: ../../process/entryways.yml, why: "All entryways yaml" }
+  - { path: ../../characters/will-wright/CARD.yml, why: "Guest CARD — abilities + combos" }

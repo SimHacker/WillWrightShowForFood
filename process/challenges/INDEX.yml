@@ -1,0 +1,22 @@
+# challenges/ — registry
+
+meta:
+  family: retrocomputing-drive.yml
+  markup: RETROCOMPUTING.md
+
+entries:
+  retrocomputing-drive.yml:
+    role: umbrella
+    markup: RETROCOMPUTING.md
+  apple2-drive.yml:
+    stack: ../apple2-emulator-stack.yml
+    rig: ../../rigs/apple2-flair-lap.rig.yml
+    setup: ../../rigs/apple2-flair-lap.SETUP.md
+  pdp10-maclisp-drive.yml:
+    stack: ../pdp10-its-stack.yml
+    rig: ../../rigs/pdp10-maclisp-flair-lap.rig.yml
+    setup: ../../rigs/pdp10-maclisp-flair-lap.SETUP.md
+    guest: ../../characters/lars-brinkhoff/
+  lisp-machine-hack-off.yml:
+    stack: ../lisp-machine-stack.yml
+    rigs: [../../rigs/lisp-machine-symbolics.rig.yml, ../../rigs/lisp-machine-lmi.rig.yml]

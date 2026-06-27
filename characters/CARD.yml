@@ -1,0 +1,35 @@
+# characters/ — CARD (room)
+
+room:
+  id: characters
+  name: "Guest portrayals & invitations"
+  registry: INDEX.yml
+  standards: ../schemas/portrayal-standards.yml
+
+flagship: will-wright/
+retro_pair: [lars-brinkhoff, thomas-cherryhomes]
+host_sync: don-hopkins/sync-sources.yml
+
+read_first:
+  - ../schemas/portrayal-standards.yml
+  - ../schemas/invitation-workflow.yml
+  - https://github.com/SimHacker/moollm/skills/representation-ethics
+
+see_also:
+  - { path: README.md, why: "Room overview — browse directories, contribution channels" }
+  - { path: INDEX.yml, why: "Machine registry — status sync; humans browse the tree" }
+  - { path: don-hopkins/sync-sources.yml, why: "Host sync from moollm adventure-4" }
+  - { path: _TEMPLATE/CARD.yml, why: "Universal CARD surface — MTG abilities + room interface" }
+  - { path: contact-queue.yml, why: "Outreach queue — draft invitations" }
+  - { path: will-wright/, why: "Flagship guest — BROWSE.md + CARD.yml" }
+  - { path: ../ENTRYWAYS.md, why: "Playlists by interest" }
+  - { path: entryways.yml, why: "Ordered viewing sequences" }
+  - { path: don-hopkins/, why: "Host — Sims, Micropolis, MOOLLM" }
+  - { path: don-philahue/, why: "MC — surfaces audience question PRs" }
+  - { path: slats/, why: "Celebrity judge — drag race rubric" }
+  - { path: lars-brinkhoff/, why: "PDP-10/ITS — make it so" }
+  - { path: thomas-cherryhomes/, why: "FujiNet — real retro on wire" }
+  - { path: ../repo-shows/INDEX.yml, why: "Shows pair with guest dirs" }
+  - { path: ../process/cross-links.yml#retro_guests_real_wire, why: "Lars × Thomas trail" }
+  - { path: ../process/cross-links.yml#constructionist_lineage, why: "1996 → Will show arc" }
+  - { path: ../skills/repo-show/SKILL.md, why: "INVITE phase — invitation.md pattern" }

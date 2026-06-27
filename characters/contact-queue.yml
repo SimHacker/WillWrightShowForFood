@@ -7,6 +7,10 @@ meta:
 next:
   - id: will-wright
     why: "Flagship kickoff — invitation.md draft ready for review → finished → sent"
+  - id: lars-brinkhoff
+    why: "PDP-10/ITS make-it-so challenge — pair with Thomas Cherryhomes for retro drag race"
+  - id: thomas-cherryhomes
+    why: "Joint with Lars — FujiNet/IRATA × emulated ITS; retrocomputing drive"
   - id: brian-harvey
     why: "Snap!/Logo headline with Jens — educators pillar"
   - id: jens-monig

@@ -1,0 +1,104 @@
+# RIG SETUP DNA — viral standalone SETUP.md spec
+# Companion: rig-schema.yml | Template: ../rigs/_TEMPLATE.SETUP.md
+
+meta:
+  id: rig-setup-dna
+  version: 0.1
+  filename: "rigs/<slug>.SETUP.md"
+  paired: "rigs/<slug>.rig.yml"
+
+purpose: |
+  SETUP.md is not just install notes — it is emailable, sniffable Rig DNA. A human reads
+  the head and decides. An LLM reads the protocol and idempotently installs/upgrades while
+  preserving user data. Always points to canonical GitHub for latest rig yaml.
+
+sniffable_head:
+  required:
+    - hook: "Why you want this rig — one breath, no jargon wall"
+    - what: "Languages, tools, platform — costume in plain language"
+    - cta: "Call to action — email this file, paste to your LLM, join the drag race"
+  optional:
+    - rig_classes: "artisanal | stick_shift | flair — declare honestly"
+    - challenge: "Which spec CARD this rig targets"
+  authoring: |
+    Instance-first: LLM may draft SETUP.md from rig yaml + this schema + _TEMPLATE.SETUP.md.
+    Not bulk-regenerated via process/markup-facades.yml — maintained as forwardable Rig DNA.
+
+canonical_source:
+  required:
+    repo: "SimHacker/WillWrightShowForFood"
+    branch: main
+    rig_yaml: "https://raw.githubusercontent.com/SimHacker/WillWrightShowForFood/main/rigs/<slug>.rig.yml"
+    setup_md: "https://raw.githubusercontent.com/SimHacker/WillWrightShowForFood/main/rigs/<slug>.SETUP.md"
+    browse: "https://github.com/SimHacker/WillWrightShowForFood/tree/main/rigs/"
+  rule: "Local copy may be stale — installer MUST fetch latest yaml from rig_yaml URL unless user pins"
+
+frontmatter:
+  optional_yaml_block: |
+    Optional --- rig_dna: block at top for machines (slug, version, urls).
+    Body remains human-first markdown for email/RTFR.
+
+llm_protocol:
+  audience: "Cursor, Claude, or any agent — only when user explicitly asks to install/upgrade"
+  principles:
+    idempotent: "Safe to re-run; detect already-done steps"
+    preserve_user_data: "Never clobber listed paths; backup before merge"
+    fetch_latest: "Pull canonical rig yaml from GitHub raw URL; diff against local"
+    user_decides: "Present plan; execute only after user confirms (or pre-authorized in prompt)"
+    thoughtful_commitment: "Log WHY in commit if installing into a repo"
+  state_file:
+    path: ".rig/<slug>/state.yml"
+    gitignore: true
+    fields: [installed_at, rig_yaml_sha, setup_md_sha, user_data_paths, pinned_version]
+  phases:
+    orient:
+      - "Read sniffable head — confirm slug matches user intent"
+      - "Fetch latest rig yaml + this SETUP from canonical URLs"
+      - "Load .rig/<slug>/state.yml if present"
+    plan:
+      - "Diff fetched yaml vs local rigs/<slug>.rig.yml if any"
+      - "List steps that will run vs skip (idempotent)"
+      - "List user_data paths that will be preserved untouched"
+    install:
+      - "Execute lifecycle.download → install → configure from rig yaml"
+      - "Skip phase if state says complete AND verify still passes"
+    upgrade:
+      - "On re-run: merge new lifecycle/components from upstream yaml"
+      - "Preserve user overrides in state.user_overrides"
+      - "Bump state.installed_at; record new rig_yaml_sha"
+    verify:
+      - "Run lifecycle.install.verify string from rig yaml"
+      - "Fail closed with troubleshooting section pointers"
+  user_data:
+    definition: "Paths the user owns — never delete on upgrade"
+    examples:
+      - ".rig/<slug>/"
+      - "local emulator disk images user built"
+      - ".cursor/rules user added beyond rig template"
+      - "env files, API keys, spend exports"
+    rule: "Declare per-rig in SETUP.md ## User data preserved"
+
+viral_replicate:
+  how: |
+    1. Fork or copy <slug>.SETUP.md + <slug>.rig.yml
+    2. Change slug; rewrite sniffable head
+    3. PR to SimHacker/WillWrightShowForFood rigs/ + INDEX.yml
+    4. Email SETUP.md standalone — recipient needs only this file + an LLM to bootstrap
+  self_replicating: |
+    SETUP.md instructs LLM to fetch latest yaml from GitHub — the yaml may update;
+    SETUP.md should too. DNA travels; canonical repo stays source of truth.
+
+human_sections:
+  after_protocol:
+    - Prerequisites
+    - Download / Install / Configure (detail)
+    - Run the spec CARD
+    - Mod this rig
+    - Troubleshooting
+    - Proof checklist
+
+see_also:
+  - rig-schema.yml
+  - ../rigs/_TEMPLATE.SETUP.md
+  - ../process/DRAG-RACE.md
+  - ../skills/repo-show/SKILL.md

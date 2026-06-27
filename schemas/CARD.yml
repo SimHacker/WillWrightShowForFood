@@ -1,0 +1,30 @@
+# CARD — schemas/ room
+
+room:
+  id: schemas
+  name: "Schemas & contracts"
+  type: [validation, ethics, rig_definition]
+
+entries:
+  portrayal: portrayal-standards.yml
+  invitation: invitation-workflow.yml
+  rig: rig-schema.yml
+  rig_setup_dna: rig-setup-dna.yml
+  markup_facade: markup-facade.yml
+  guest_card: guest-skills-card.yml
+
+rule: "Characters and rigs validate against these — PR review + future verify scripts"
+
+read_first:
+  - portrayal-standards.yml
+  - invitation-workflow.yml
+
+see_also:
+  - { path: README.md, why: "Schema index table" }
+  - { path: GLANCE.yml, why: "One-screen sniff" }
+  - { path: ../process/cross-links.yml#schemas_and_ethics, why: "Ethics + contracts trail" }
+  - { path: ../characters/INDEX.yml, why: "Guests validate against portrayal + invitation" }
+  - { path: ../rigs/INDEX.yml, why: "Rigs validate against rig-schema + SETUP DNA" }
+  - { path: ../process/markup-facades.yml, why: "Generated md registry" }
+  - { path: ../process/cross-links.yml, why: "Master narrative web" }
+  - { path: https://github.com/SimHacker/moollm/skills/representation-ethics, why: "Upstream ethics skill" }

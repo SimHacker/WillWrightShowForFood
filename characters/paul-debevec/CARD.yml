@@ -1,0 +1,105 @@
+# CARD — Paul Debevec (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: paul-debevec
+  name: Paul Debevec
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Paul Debevec
+  title: Light Stage
+  rarity: uncommon
+  signifier: 💡
+  flavor: Measure light; respect the face; free the pixel.
+abilities:
+- id: LIGHT-STAGE
+  name: Light Stage
+  type: activated
+  mana: '{U}{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: lightStage
+    signature: lightStage(face) → relightable capture
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Explain image-based lighting without sci-fi handwave.
+  verifiable: Light Stage research (USC/Netflix)
+  combos_with: []
+- id: PHOTOGRAMMETRY
+  name: Photogrammetry
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: photogrammetry
+    signature: photogrammetry(photos) → geometry
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Turn photos into geometry with known error bars.
+  verifiable: Published capture pipelines
+  combos_with: []
+- id: ROUEN
+  name: Rouen Revisited
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: rouenRevisited
+    signature: rouenRevisited(painting, capture) → art meets scan
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Pair art history with computational relighting.
+  verifiable: Interval project with Golan Levin
+  combos_with:
+  - GOLAN-INTERVAL-ROUEN
+- id: FILM-PIPELINE
+  name: Film Pipeline
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: filmPipeline
+    signature: filmPipeline(grace) → VFX that serves story
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Connect research to productions people actually saw.
+  verifiable: Film VFX credits (public)
+  combos_with: []
+- id: NETFLIX-RESEARCH
+  name: Netflix Research
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: netflixResearch
+    signature: netflixResearch(problem) → scalable algorithm
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Translate academic capture to streaming scale.
+  verifiable: Netflix Research role (CHARACTER bio)
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

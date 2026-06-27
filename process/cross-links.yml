@@ -1,0 +1,177 @@
+# CROSS-LINKS — generous see_also narrative web (WWSFF MOOLLM)
+# Like moollm/skills/INDEX narrative connections — yaml canonical; browse trails here.
+# Schema habit: see_also entries may be path strings OR { path, why } objects.
+
+meta:
+  id: cross-links
+  purpose: |
+    Thematic trails between rooms — graph edges for rabbit holes. For ordered viewing
+    sequences by interest (guest, hacker, retro, …), use entryways.yml / ENTRYWAYS.md.
+  entryways: entryways.yml
+  human_entryways: ../ENTRYWAYS.md
+  human_trails: ../TRAILS.md
+  human_trails_dir: trails/
+
+reading_habit: "Pick playlist in ENTRYWAYS.md → follow priority → leap via trails here when curious"
+
+trails:
+  repo_show_spine:
+    k_line: "So you have a Repo to Show us?"
+    human: trails/repo-show-spine.md
+    why: "The show IS the repo — RTFR, play on your rig, harvest back"
+    nodes:
+      - { path: ../skills/repo-show/SKILL.md, why: "Orchestrator protocol — SEED → AIR → HARVEST" }
+      - { path: repo-show-format.yml, why: "Canonical girder — rig spectrum, cauldron, clocks" }
+      - { path: FORMAT.md, why: "Generated human view — pnpm run facades" }
+      - { path: showmaker-network.yml, why: "Shows breed shows — graph of linked episodes" }
+      - { path: ../repo-shows/will-wright/, why: "Flagship planted show — Will kickoff arc" }
+      - { path: ../repo-shows/REPO-SHOWS.yml, why: "Implicit SHOW inheritance for whole collection" }
+      - { path: live-repo.yml, why: "Public WWSFF vs DonHopkins private — export ethics" }
+
+  drag_race_and_ai_offs:
+    k_line: "Start your engines — werk, commit, merge"
+    human: trails/drag-race-and-ai-offs.md
+    why: "Game-show formats inside Repo Show — declare class honestly"
+    nodes:
+      - { path: micropolis-ai-drag-race.yml, why: "Variety show — rig personas + Slats" }
+      - { path: DRAG-RACE.md, why: "Generated markup for drag race" }
+      - { path: ai-offs.yml, why: "Spend proof — voluntary piss test for stick shift" }
+      - { path: manual-transmission.yml, why: "Smallest model that ships — CODE THAT SPEC" }
+      - { path: stick-shift-protocol.yml, why: "Every model shift = commit in git" }
+      - { path: code-that-spec.yml, why: "Audience chant game — bid tokens or time" }
+      - { path: homefun-grading.yml, why: "Micropolis Class — commit message vs thinking blocks" }
+      - { path: ../characters/slats/judge-rubric.yml, why: "Celebrity judge — flair vs spreadsheet" }
+      - { path: ../repo-shows/micropolis-ai-drag-race.yml, why: "Show seed for drag race episodes" }
+
+  retrocomputing_drive:
+    k_line: "CODE THAT SPEC on your platform"
+    human: trails/retrocomputing-drive.md
+    why: "Same spec CARD — you declare languages, tools, platform, emulator"
+    nodes:
+      - { path: challenges/retrocomputing-drive.yml, why: "Umbrella family girder" }
+      - { path: challenges/RETROCOMPUTING.md, why: "Generated markup — SETUP DNA requirement" }
+      - { path: challenges/apple2-drive.yml, why: "][ instance — INTEGER BASIC if you dare" }
+      - { path: challenges/pdp10-maclisp-drive.yml, why: "MACLISP on ITS — AI Lab on laptop" }
+      - { path: challenges/lisp-machine-hack-off.yml, why: "Symbolics vs LMI — battle continues" }
+      - { path: apple2-emulator-stack.yml, why: "Stack pointer — apple2js, Emularity, FujiNet" }
+      - { path: pdp10-its-stack.yml, why: "PDP-10/its + SIMH — Lars Brinkhoff lineage" }
+      - { path: lisp-machine-stack.yml, why: "Genera, LambdaDelta, CADR heritage" }
+      - { path: ../rigs/README.md, why: "Rig yaml + SETUP DNA — reproduce without you in room" }
+      - { path: ../schemas/rig-setup-dna.yml, why: "Emailable viral install protocol for LLMs" }
+
+  retro_guests_real_wire:
+    k_line: "Make it so — real retro on the wire"
+    human: trails/retro-guests-real-wire.md
+    why: "Emulated AI Lab meets FujiNet tree fort"
+    nodes:
+      - { path: ../characters/lars-brinkhoff/, why: "ITS restoration — PDP-10 MACLISP on air" }
+      - { path: ../characters/thomas-cherryhomes/, why: "FujiNet / IRATA — real Apple ][ on network" }
+      - { path: ../repo-shows/lars-brinkhoff/SHOW.yml, why: "Guest show seed — gold-standard SETUP" }
+      - { path: ../rigs/pdp10-maclisp-flair-lap.rig.yml, why: "Example rig — flair lap on ITS" }
+      - { path: ../rigs/pdp10-maclisp-flair-lap.SETUP.md, why: "Rig DNA — email this file alone" }
+      - { path: ../rigs/apple2-flair-lap.rig.yml, why: "][ flair lap — pairs with FujiNet segments" }
+
+  live_production:
+    k_line: "Brain stream on overlay — show the thinking"
+    human: trails/live-production.md
+    why: "Live bus for prompts, shifts, GH doc links"
+    nodes:
+      - { path: brain-stream.yml, why: "Overlay + throttled chat bus spec" }
+      - { path: BRAIN-STREAM.md, why: "Generated markup" }
+      - { path: model-branching.yml, why: "Fork chat at bubble — compare trajectories" }
+      - { path: orchestration-gold.yml, why: "Multi-LLM traces as training gold" }
+      - { path: ../apps/stream-gateway/, why: "Future deployable brain bus app" }
+      - { path: ../characters/don-philahue/, why: "Audience wrangler — surfaces question PRs live" }
+
+  constructionist_lineage:
+    k_line: "1996 microworlds → living organism"
+    human: trails/constructionist-lineage.md
+    why: "Winograd interview → Will show → breed DNA back"
+    nodes:
+      - { path: ../characters/don-hopkins/, why: "Host — yaml girder + career backbone" }
+      - { path: ../characters/don-hopkins/sync-sources.yml, why: "Synced from moollm adventure-4 — deduped" }
+      - { path: ../characters/don-hopkins/portrayal/voice.yml, why: "Repo Show voice — not adventure rabbit plot" }
+      - { path: vision-and-ambition.yml, why: "Long arc girder — no promises, full ambition" }
+      - { path: VISION.md, why: "Generated markup — Flower Child energy" }
+      - { path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "Primary source — constructionist microworlds" }
+      - { path: ../characters/will-wright/, why: "Guest portrayal — Proxi, Spore, Sims lineage" }
+      - { path: ../characters/will-wright/CARD.yml, why: "Will's invokable abilities — MTG card surface" }
+      - { path: ../characters/don-hopkins/CARD.yml, why: "Host card — pie menus, MOOLLM, layers" }
+      - { path: https://github.com/SimHacker/moollm/skills/constructionism, why: "Papert — learn by building in microworlds" }
+      - { path: https://github.com/SimHacker/moollm/skills/play-learn-lift, why: "PLAY → LEARN → LIFT — show harvest pattern" }
+
+  moollm_compose:
+    k_line: "Compose with MOOLLM — skills are inheritable prototypes"
+    human: trails/moollm-compose.md
+    why: "WWSFF is a public microworld plugin"
+    nodes:
+      - { path: ../FOR-BOTS.md, why: "Hello bot — RTFR, pick one entryway, don't flatten" }
+      - { path: for-bots.yml, why: "Bot reading thread girder" }
+      - { path: ../MOOLLM.yml, why: "Plugin root — compose_with moollm + MicropolisCore" }
+      - { path: ../kernel/moollm-plugin.yml, why: "Driver wiring — hot paths, skills loaded" }
+      - { path: ../skills/INDEX.yml, why: "Harvest registry — repo-show + upstream pointers" }
+      - { path: https://github.com/SimHacker/moollm/skills/cauldron, why: "HARVEST — melt show artifacts into skills" }
+      - { path: https://github.com/SimHacker/moollm/skills/thoughtful-commitment, why: "Commits capture thinking — homefun rubric" }
+      - { path: https://github.com/SimHacker/moollm/skills/cursor-mirror, why: "Post-run forensics — ai-offs proof" }
+      - { path: https://github.com/SimHacker/moollm/skills/character, why: "Guest incarnations — consensual portrayals" }
+      - { path: https://github.com/SimHacker/moollm/skills/representation-ethics, why: "Portrayal ethics before reading guests" }
+
+  rig_personas:
+    k_line: "Your rig IS your drag persona"
+    human: trails/rig-personas.md
+    why: "download → install → configure → use → replicate → mash up"
+    nodes:
+      - { path: ../schemas/rig-schema.yml, why: "Extensible rig lifecycle schema" }
+      - { path: ../rigs/_TEMPLATE.rig.yml, why: "Copy me — declare languages/tools/platform" }
+      - { path: ../rigs/_TEMPLATE.SETUP.md, why: "Rig DNA template — viral emailable install" }
+      - { path: ../rigs/stick-shift-composer-moollm.rig.yml, why: "Host seed rig — Composer + MOOLLM" }
+      - { path: ../rigs/artisanal-vscode.rig.yml, why: "Zero tokens — hand-only respect" }
+      - { path: rig-feedback.yml, why: "Tell us your real stack — ai-offs honesty" }
+
+  schemas_and_ethics:
+    k_line: "Contracts before characters"
+    human: trails/schemas-and-ethics.md
+    why: "Portrayal standards, invitations, rig shape, markup facades"
+    nodes:
+      - { path: ../schemas/portrayal-standards.yml, why: "Public-safe guest tone — read once" }
+      - { path: ../schemas/invitation-workflow.yml, why: "draft → sent → replied → consent" }
+      - { path: ../schemas/markup-facade.yml, why: "Yaml girder → md — LLM instance-first; deterministic bulk refresh" }
+      - { path: markup-facades.yml, why: "Registry + dependency graph for facades" }
+
+  archive_and_provenance:
+    k_line: "Source, don't paraphrase — know what's public and what isn't"
+    human: trails/archive-and-provenance.md
+    why: "Historians and archivists — export policy, primary sources, honest invitation record"
+    nodes:
+      - { path: live-repo.yml, why: "Public bud vs DonHopkins archive — on hold when projected" }
+      - { path: sync-with-donhopkins.yml, why: "SELECT → FILTER → EXPORT pipeline" }
+      - { path: ../MANIFEST.yml, why: "Bundle manifest — what maps from private source" }
+      - { path: ../characters/don-hopkins/sync-sources.yml, why: "Inclusion/exclusion log for host portrayal" }
+      - { path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md, why: "Anchor artifact — Stanford, YouTube, Medium, attribution" }
+      - { path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md, why: "Primary text — cite Will's words" }
+      - { path: ../schemas/portrayal-standards.yml, why: "Sourced quotes only; subject correction rights" }
+      - { path: ../schemas/invitation-workflow.yml, why: "Status enum as corpus metadata" }
+      - { path: ../characters/terry-winograd/, why: "CS547 forebear — open seminar recorded for posterity" }
+      - { path: ../characters/, why: "Guest directories — organic discovery; grows with show prep" }
+      - { path: ../characters/README.md, why: "Contribution channels — self-edit or email assisted" }
+      - { path: vision-and-ambition.yml, why: "Forebears and long arc in yaml girder" }
+
+room_indexes:
+  process: INDEX.yml
+  characters: ../characters/INDEX.yml
+  repo_shows: ../repo-shows/INDEX.yml
+  rigs: ../rigs/INDEX.yml
+  skills: ../skills/INDEX.yml
+  schemas: ../schemas/README.md
+
+see_also:
+  - entryways.yml
+  - entryways/README.md
+  - ../TRAILS.md
+  - INDEX.yml
+  - markup-facades.yml
+  - ../ENTRYWAYS.md
+  - ../skills/INDEX.yml
+  - ../CARD.yml
+  - ../GLANCE.yml
+  - https://github.com/SimHacker/moollm/skills/INDEX.md

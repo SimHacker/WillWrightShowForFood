@@ -1,0 +1,9 @@
+# schemas/ — GLANCE
+
+what: "Contracts — portrayal, invitations, rig shape, markup facades"
+
+files: [portrayal-standards.yml, invitation-workflow.yml, guest-invitation-status.yml, rig-schema.yml, rig-setup-dna.yml, markup-facade.yml]
+
+see_also:
+  - ../characters/
+  - ../rigs/

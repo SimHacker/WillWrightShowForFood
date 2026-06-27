@@ -1,0 +1,106 @@
+# CARD — Ken Kahn (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: ken-kahn
+  name: Ken Kahn
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Ken Kahn
+  title: ToonTalk & AI Blocks
+  rarity: uncommon
+  signifier: 🎈
+  flavor: Make machine learning legible before the magic wears off.
+abilities:
+- id: TOONTALK
+  name: ToonTalk
+  type: activated
+  mana: '{G}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: toonTalk
+    signature: toonTalk(world) → kid-visible concurrent programming
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Program by playing in a visible concurrent world.
+  verifiable: ToonTalk creator
+  combos_with: []
+- id: AI-BLOCKS
+  name: AI Blocks
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: aiBlocks
+    signature: aiBlocks(snapProject) → speech/ML in browser
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Drop ML blocks kids can inspect and remix.
+  verifiable: eCraft2Learn AI blocks for Snap!
+  combos_with:
+  - JENS-SNAP-BUILD
+  - BRIAN-BJC
+- id: NICE-EXPLAINER
+  name: Nice Explainer
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: niceExplainer
+    signature: niceExplainer(topic) → patient demo
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Explain hard ideas without condescension.
+  verifiable: Community reputation in invitation materials
+  combos_with: []
+- id: CONSTRUCTIONIST-ML
+  name: Constructionist ML
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: constructionistML
+    signature: constructionistML(model) → student-owned training story
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Let learners see training data as a choice.
+  verifiable: AI blocks educational framing
+  combos_with: []
+- id: SNAP-ECOSYSTEM
+  name: Snap Ecosystem
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: snapEcosystem
+    signature: snapEcosystem(extension) → classroom adoption
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Extend blocks platforms teachers already trust.
+  verifiable: Snap! extension work
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

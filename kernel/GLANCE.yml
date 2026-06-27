@@ -1,0 +1,10 @@
+# kernel/ — GLANCE
+
+what: "MOOLLM plugin activation — compose with SimHacker/moollm"
+
+file: moollm-plugin.yml
+uri: "moollm://github/SimHacker/WillWrightShowForFood/"
+
+see_also:
+  - ../MOOLLM.yml
+  - ../GLANCE.yml

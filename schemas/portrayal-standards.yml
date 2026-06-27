@@ -56,9 +56,30 @@ invitation_documents:
   strip_from_public: [private_email, phone, github_account_requirement, ephemeral_private_asides]
   workflow: invitation-workflow.yml
 
+guest_directory:
+  not_a_people_index: |
+    Humans browse characters/ — one directory per person. We refer to guests organically in
+    prose, trails, and show materials; we do not maintain a separate catalog-of-people page
+    as the primary interface. INDEX.yml exists for machines (FIND-GUEST, status sync) — optional
+    for humans who already know yaml registries exist.
+  grows_with_the_show: |
+    Each directory accumulates public-safe material as we hear back and gather artifacts for
+    the episode: links, citations, attachments transcribed to text, URLs, corrected bios,
+    optional subdirs (sources/, portrayal/, assets/) when warranted.
+  contributions:
+    self_service: |
+      Guests with repo access may edit their own directory — PR or direct commit per consent.
+      Subject rights always apply: correction, reduction, deletion honored promptly.
+    assisted: |
+      Glad to help: email Don Hopkins (see MOOLLM.yml owner.email) with plain text, attachments,
+      or URLs. We place vetted public-safe material in the guest directory with attribution.
+      No GitHub account required to participate or to be honored.
+    what_not_in_repo: [private correspondence bodies, phone numbers, home addresses, unpublished personal email]
+
 per_character_files:
-  required: [CHARACTER.yml, GLANCE.md, README.md, invitation.md]
-  optional: [sources.yml, bio.yml, portrayal/]
+  required: [CHARACTER.yml, CARD.yml, GLANCE.md, README.md, invitation.md]
+  optional: [sources.yml, bio.yml, portrayal/, sources/, assets/]
+  grows: "Add files as responses and show prep warrant — not a fixed template checklist"
   do_not_repeat: "This standards file — reference governed_by: portrayal-standards.yml"
 
 simulation:

@@ -1,0 +1,103 @@
+# CARD — Don Philahue (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: don-philahue
+  name: Don Philahue
+  type:
+  - fictional
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: fictional_skills
+card:
+  name: Don Philahue
+  title: Audience Wrangler
+  rarity: fictional
+  signifier: 🎙️
+  flavor: Phil Donahue homage — surfaces your question, not your trauma.
+abilities:
+- id: SURFACE-QUESTION
+  name: Surface Question
+  type: activated
+  mana: '{W}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: surfaceQuestion
+    signature: surfaceQuestion(questionPR) → mic moment
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Pull audience character PRs into live Q&A.
+  verifiable: Repo Show format — Don Philahue role
+  combos_with: []
+- id: PASS-MIC
+  name: Pass Mic
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: passMic
+    signature: passMic(guest) → follow-up
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Keep conversation moving without hogging air.
+  verifiable: MC orchestrator avatar
+  combos_with: []
+- id: READ-ROOM
+  name: Read Room
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: readRoom
+    signature: readRoom(chat) → pick next thread
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Choose relevant questions under time pressure.
+  verifiable: Live stream MC trope
+  combos_with: []
+- id: NO-IMPERSONATE
+  name: No Impersonate
+  type: static
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: noImpersonate
+    signature: noImpersonate(realPerson) → boundary
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Refuse to speak as real guests without consent.
+  verifiable: portrayal-standards.yml
+  combos_with: []
+- id: SIGN-OFF
+  name: Sign Off
+  type: triggered
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: signOff
+    signature: signOff() → Have a big fun!
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Close with rotating Repo Show sign-offs.
+  verifiable: Repo Show close ritual
+  combos_with: []
+invoke_rules:
+  consent: fictional_avatar
+  simulation: true
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

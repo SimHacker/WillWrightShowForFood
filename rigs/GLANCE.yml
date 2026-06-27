@@ -1,0 +1,22 @@
+# rigs/ — GLANCE
+
+what: "Reproducible rig personas — yaml + SETUP DNA — emailable viral install"
+
+required_pair: "<slug>.rig.yml + <slug>.SETUP.md  # Rig DNA per rig-setup-dna.yml"
+
+template: [_TEMPLATE.rig.yml, _TEMPLATE.SETUP.md]
+
+examples: [apple2-flair-lap, pdp10-maclisp-flair-lap, stick-shift-composer-moollm, lisp-machine-symbolics, lisp-machine-lmi]
+
+see_also:
+  - { path: ../process/cross-links.yml#rig_personas, why: "Master trail — lifecycle, mash up, honesty" }
+  - { path: ../process/challenges/RETROCOMPUTING.md, why: "Retro rigs required for drive challenges" }
+  - { path: ../process/DRAG-RACE.md, why: "Your rig IS your drag persona" }
+  - { path: ../process/micropolis-ai-drag-race.yml, why: "Contestant packet — rig yaml + SETUP DNA" }
+  - { path: ../process/ai-offs.yml, why: "Declare rig_classes for fair comparison" }
+  - { path: ../process/rig-feedback.yml, why: "Tell us your real stack" }
+  - { path: ../schemas/rig-schema.yml, why: "Extensible lifecycle schema" }
+  - { path: ../schemas/rig-setup-dna.yml, why: "SETUP.md viral install protocol" }
+  - { path: INDEX.yml, why: "Rig registry" }
+  - { path: ../skills/repo-show/SKILL.md, why: "Rig spectrum in Repo Show format" }
+  - { path: https://github.com/SimHacker/moollm/skills/thoughtful-commitment, why: "Proof commits for homefun" }

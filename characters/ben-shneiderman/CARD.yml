@@ -1,0 +1,105 @@
+# CARD — Ben Shneiderman (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: ben-shneiderman
+  name: Ben Shneiderman
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Ben Shneiderman
+  title: Direct Manipulation
+  rarity: uncommon
+  signifier: 🖱️
+  flavor: Put the human before the computer in the name of the lab.
+abilities:
+- id: DIRECT-MANIPULATION
+  name: Direct Manipulation
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: directManipulation
+    signature: directManipulation(object) → object moves as if physical
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Let hands learn the interface before the manual.
+  verifiable: Coined term; HCIL research program
+  combos_with: []
+- id: EMBEDDED-LINK
+  name: Embedded Link
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: embeddedLink
+    signature: embeddedLink(text, target) → highlighted hop
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Show hypertext that lives inside the content.
+  verifiable: Embedded/highlighted hyperlinks invention (public bio)
+  combos_with: []
+- id: MEASURE-UI
+  name: Measure UI
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: measureUI
+    signature: measureUI(menuA, menuB) → empirical winner
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Run the study; publish the graph.
+  verifiable: CHI'88 pie menu study co-author
+  combos_with:
+  - DON-PIE-MENU
+- id: DYNAMIC-QUERIES
+  name: Dynamic Queries
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: dynamicQueries
+    signature: dynamicQueries(sliders, dataset) → instant insight
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Make databases answer by dragging.
+  verifiable: Dynamic Queries research
+  combos_with: []
+- id: HUMAN-CENTERED-AI
+  name: Human-Centered AI
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: humanCenteredAI
+    signature: humanCenteredAI(system) → oversight affordances
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Insist on human control in high-stakes automation.
+  verifiable: Recent HCIL/public writing themes
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

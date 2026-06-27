@@ -35,6 +35,18 @@ transitions:
     Any state may move to declined, delayed, or subject-requested deletion.
     Real people override workflow always.
 
+contributions:
+  principle: "The guest directory grows — not a frozen invitation snapshot"
+  channels:
+    self: "Edit characters/<slug>/ — PR or commit when guest has repo access and consent"
+    assisted: |
+      Email Don Hopkins — text, attachments, URLs. We curate into the public directory:
+      sources, bio corrections, show artifacts, links the guest wants cited.
+    public_issue: "GitHub issue on WillWrightShowForFood for corrections without email"
+  placement: |
+    CHARACTER.yml + invitation.md for status; README.md for human facade; optional
+    sources/, portrayal/, assets/ as material arrives. Never commit private email threads.
+
 legacy_mapping:
   not_yet_asked: draft
 

@@ -1,0 +1,34 @@
+# CARD — repo-shows/ room
+
+room:
+  id: repo-shows
+  name: "Show seeds & planted instances"
+  type: [repo_show_instances]
+  inherits: ../skills/repo-show/
+
+collection: REPO-SHOWS.yml
+registry: INDEX.yml
+
+flagship: will-wright/
+game_shows: [micropolis-ai-drag-race.yml, game-show-wigcercize.yml]
+
+methods:
+  LIST-SHOWS: INDEX.yml
+  PLANT: "SEED yml → directory — skills/repo-show PLANT"
+
+see_also:
+  - { path: README.md, why: "Room overview" }
+  - { path: GLANCE.yml, why: "Sniff" }
+  - { path: REPO-SHOWS.yml, why: "Implicit SHOW inheritance for collection" }
+  - { path: INDEX.yml, why: "Show registry" }
+  - { path: ../process/entryways/guest-will.md, why: "Will guest playlist" }
+  - { path: ../process/entryways.yml, why: "All entryways yaml" }
+  - { path: will-wright/, why: "Flagship planted show" }
+  - { path: micropolis-ai-drag-race.yml, why: "Drag race show seed" }
+  - { path: lars-brinkhoff/SHOW.yml, why: "Retro guest show — make it so" }
+  - { path: ../skills/repo-show/CARD.yml, why: "Orchestrator interface" }
+  - { path: ../skills/repo-show/SKILL.md, why: "SEED → HARVEST protocol" }
+  - { path: ../process/cross-links.yml#repo_show_spine, why: "Show spine trail" }
+  - { path: ../process/showmaker-network.yml, why: "Link your show into the graph" }
+  - { path: ../characters/INDEX.yml, why: "Guests pair with shows" }
+  - { path: ../process/live-repo.yml, why: "Public vs DonHopkins export policy" }

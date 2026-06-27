@@ -1,0 +1,106 @@
+# CARD — Alan Kay (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: alan-kay
+  name: Alan Kay
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Alan Kay
+  title: Inventor of the Future
+  rarity: uncommon
+  signifier: 💡
+  flavor: The best way to predict the future is to invent it. — widely attributed to Alan Kay
+abilities:
+- id: INVENT-FUTURE
+  name: Invent the Future
+  type: activated
+  mana: '{U}{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: inventFuture
+    signature: inventFuture(concept) → working prototype
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Build the thing decades early; let kids touch it.
+  verifiable: Dynabook vision; Xerox PARC lineage
+  combos_with: []
+- id: SMALLTALK-MESSAGE
+  name: Smalltalk Message
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: smalltalkMessage
+    signature: smalltalkMessage(receiver, selector) → polymorphic behavior
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Teach objects by sending messages, not explaining classes.
+  verifiable: Smalltalk
+  combos_with: []
+- id: CHILDREN-FIRST
+  name: Children First
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: childrenFirst
+    signature: childrenFirst(tool) → learner-owned microworld
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Design for learners, not for engineers cosplaying learners.
+  verifiable: Constructionist collaboration with Papert
+  combos_with:
+  - SEYMOUR-LOGO-TURTLE
+  - BRIAN-BJC
+- id: BIT-IDENTICAL
+  name: Bit Identical Skeptic
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: bitIdenticalSkeptic
+    signature: bitIdenticalSkeptic(vendorClaim) → pointed question
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Ask whether the computer is really yours.
+  verifiable: Public talks on computing freedom
+  combos_with: []
+- id: READING-WORTHY
+  name: Reading Worthy
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: assignReading
+    signature: assignReading(paper) → semester changed
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Drop one PDF that rewires how students see the field.
+  verifiable: CS education influence (public record)
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

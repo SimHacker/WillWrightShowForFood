@@ -1,0 +1,106 @@
+# CARD — David Rosenthal (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: david-rosenthal
+  name: David Rosenthal
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: David Rosenthal
+  title: Lots Of Copies
+  rarity: uncommon
+  signifier: 📚
+  flavor: NeWS author who also helped X11 win — preservationist ever after.
+abilities:
+- id: NEWS-BOOK
+  name: The NeWS Book
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: newsBook
+    signature: newsBook(chapter) → postscript UI clarity
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Teach NeWS as readable history, not lost arcana.
+  verifiable: The NeWS Book co-author
+  combos_with: []
+- id: ICCCM
+  name: ICCCM
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: icccm
+    signature: icccm(client, wm) → inter-client civility
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Explain why window manager protocols matter.
+  verifiable: X11 ICCCM authorship
+  combos_with: []
+- id: LOCKSS
+  name: LOCKSS
+  type: activated
+  mana: '{G}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: lockss
+    signature: lockss(copies) → stuff survives institutions
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Preserve digital journals by many copies, many places.
+  verifiable: LOCKSS at Stanford Libraries
+  combos_with:
+  - LARS-PRESERVE-CPU
+  - EDD-ARCHIVE-UI
+- id: NVIDIA-EARLY
+  name: Nvidia Early Days
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: nvidiaEarly
+    signature: nvidiaEarly(chip) → graphics scale story
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Connect GPU history to preservation ethics.
+  verifiable: 'Nvidia employee #4 (public bio)'
+  combos_with: []
+- id: PAUL-EVAN-PETERS
+  name: Paul Evan Peters Award
+  type: static
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: paulEvanPeters
+    signature: paulEvanPeters(work) → recognition for preservation
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Celebrate librarians who treat bits seriously.
+  verifiable: 2025 award (CHARACTER bio)
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

@@ -1,146 +1,263 @@
-# Vision — tip of the pyramid
+<!-- GENERATED from `process/vision-and-ambition.yml` — do not edit; run `pnpm run facades` -->
+<!-- content-sha256:002309a2e0fcdcd2 -->
 
-**If you stumbled here** — from Hacker News, a link, a search, or someone’s
-forward — this page is the short version of what you’re looking at and why it
-exists.
+# Vision and ambition
 
-**If you represent a platform, archive, publisher, or production shop** —
-Netflix-shaped, Brewster-shaped, Woz-shaped, or otherwise — same page applies.
-Read the repo. Run `pnpm run verify`. No meeting required to understand the shape.
+> **Girder:** [`vision-and-ambition.yml`](vision-and-ambition.yml) · **Regenerate:** `pnpm run facades` · **Registry:** [`markup-facades.yml`](markup-facades.yml)
 
----
+## Meta
 
-## What this is (one paragraph)
+| Key | Value |
+|-----|-------|
+| **id** | vision-and-ambition |
+| **status** | seed |
+| **disclaimer** | Nothing here is a commitment, contract, or production promise. This is documented long-term ambition — a direction Don Hopkins and Will Wright have been circling since Will's 1996 Stanford talk (and ideas before that). This repo is the first public point of origin: small, real, inspectable. |
 
-**Will Wright Show For Food** is a **public GitHub-native show format** called a
-**Repo Show**: the stage is the repository itself. People **RTFR** (read the
-repo), follow along on **whatever rig they bring** (AI optional), and watch a
-guest introduced as a **Repo Man** — first invited guest: **Will Wright**, in a
-topic-less kickoff orbiting his **1996 Stanford talk** on microworlds. Ideas
-from the conversation get **documented, built, and bred back** into a **graph
-of shows** (the ShowMaker network) and — critically — into **MOOLLM skills**
-(`skills/`: inheritable protocols harvested from each show via cauldron SCOOP).
-Pull requests carry technique DNA. It is **Micropolis Class**: real people,
-credited ideas, constructionist payoff.
+## Lineage
 
----
+- **before_1996:** Microworlds, constructionism, simulation as thoughtware, design-in-public —
+decades of practice before this repo existed.
+### anchor_1996
 
-## Long-term ambition — not a promise
+## Anchor 1996
 
-Don Hopkins and Will Wright have been circling this shape **since that 1996
-presentation — and before**. Microworlds, simulation as thoughtware, design in
-public: decades of practice. The Winograd seminar talk is the anchor artifact
-([1996 source bundle](../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/));
-**this repo is the first public point of origin** — the **tip of the pyramid**,
-small on purpose, inspectable today.
+- **event:** Will Wright — Interfacing to Microworlds (Winograd CS547, Stanford)
+### date
 
-**We are not promising:**
+- **artifact:** ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
+- **note:** Don was in the room. The talk sent him to Maxis. A proto–Repo Show.
 
-- A greenlit series, stream, or distribution deal  
-- Confirmed guest participation (Will’s invitation is drafted; consent not yet asked)  
-- Viral scale, revenue, or a ship date  
-- A finished product — this is **origin**, not launch day  
+- **long_arc:** Will and Don have talked for years about closing the loop: not just a talk about
+microworlds, but a *living* microworld — a repo you can enter, fork, breed, and
+show. WillWrightShowForFood is the public seed of that conversation.
+- **forebears:**
+  - Terry Winograd open seminar tradition (CS547 archive)
+  - Internet-scale permanent record (archival ethos)
+  - Hacker/builder culture — Woz energy: show the schematic, ship the board
 
-**We are documenting** a direction and building the **concrete** underneath it.
+## Pyramid
 
----
+- **metaphor:** Tip of the pyramid — apex — first point of origin
+- **this_repo:** What you see here is deliberately small at the top: one kickoff show seed,
+a graph scaffold, verify CI, yaml indexes. Curb appeal on the README;
+concrete underneath — CARD.yml, SHOW.yml, MANIFEST, pnpm, Python venv checks.
+- **expands_downward:**
+  - More show objects + edges (ShowMaker network)
+  - More MOOLLM skills — the big harvest (cauldron SCOOP → skills/ pyramid: GLANCE → CARD → SKILL → README)
+  - More characters, techniques, apps, packages — all feeding the skill library
+  - Live conversation → melt in cauldron → lift skills + code → breed back via git PRs
+- **skills_are_the_payoff:** Shows are the stage; skills are the durable artifact. Every Repo Show is meant to
+leave behind inheritable technique — MOOLLM skills you can compose with moollm,
+fork, nest, and breed. Not slide decks: protocols, CARDs, SKILL.md bodies that
+agents and humans can actually run. The pyramid grows downward mostly as skills.
+- **not_vapor:** Brutalist GitHub surface: rebar (schemas), i-beams (process/*.yml), poured slab
+(monorepo verify). Browse without an account. Clone and break it. PR or issue.
 
-## Skills — the big harvest
+## Rig Culture
 
-Shows are the stage. **Skills are the durable artifact.**
+- **teaching:** Repo Shows teach rig culture — not just tools. Declare your class honestly.
+Don't exclude — declare and have fun. It's just a game. (Same shape Don applies to
+sports categories: weight class not banishment — including the trans-in-sports mess
+that should be a no-brainer.) Extra respect for artisanal hand programming.
+Curiosity about real AI setups. Constructionist microworld pedagogy: show workflow, breed DNA.
+### artisanal_programmers
 
-Each Repo Show is meant to leave behind **MOOLLM skills** — not slide decks,
-but runnable protocols (`GLANCE.yml` → `CARD.yml` → `SKILL.md`) you compose
-with [SimHacker/moollm](https://github.com/SimHacker/moollm). Live conversation
-melts in the **cauldron**; **SCOOP** lifts finished technique into [`skills/`](../skills/).
-Fork them, nest them, breed them back via PR.
+## Artisanal Programmers
 
-**Hand programmers:** extra respect for **artisanal** work without AI — intentional and
-conscientious coders too. (See [David Ungar / Self × MOOLLM](repo-shows/david-ungar-self-moollm.yml)
-show seed — rig culture Don taught with Ungar at Kaleida.)
+- **also_called:**
+  - hand_programmers
+  - human_only
+  - bare_hands_rig
+- **definition:** Humans programming by hand — no AI. TextEdit to Emacs to VS Code and beyond.
+- **respect:** Extra respect here — we mean it. Honesty appreciated.
 
-**Vibe coders & orchestrated rigs:** declare your class. **AI users:** please share your rig (tools, models, MCP, skills, repos, MOOLLM wiring,
-contexts) via issue or PR — we want real feedback, not vendor answers.
+- **intentional_coders:**
+  - definition: Deliberate craft — every line chosen; anti-vibe in the best sense
+  - positive_term_for: Programmers who reject sloppy AI-first defaults without rejecting all tools
+- **conscientious_coders:**
+  - definition: Same family as intentional — care, attribution, show-your-work ethics
+- **vibe_coders:**
+  - definition: AI-forward, flow-state, prompt-and-ship — declare it; compete on taste and power
+  - note: Welcome if honest — man-vs-machine and dance-off optional
+- **budget_bull_riders:**
+  - definition: Tight token budget; wrangle smaller/faster models to better solutions
+  - metaphor: Like staying on a bull — thrash through hallucinations and retries; have fun; show the ride
+  - recognition: Real skill — compare within budget tier; can beat premium-tier slop on taste
+  - split_rig: Premium planning + budget execution (e.g. Composer 2.5 Fast) is a valid declared strategy
+- **stick_shift_switchers:**
+  - definition: Multi-model routing — shift models efficiently through phases of the work
+  - metaphor: Stick shift along a winding ocean cliff — read the road, shift at the right moment
+  - proof: Timestamped model switches in Cursor spend log; cursor-mirror timeline validates smooth shifts
+  - recognition: Elegant gear changes + great output beats one-model drag-race waste
+- **code_that_spec:**
+  - homage: Name That Tune → Code That Spec — bid tokens, audience chants, prove with spend log
+  - rig_costumes: Let's Make a Deal — your rig visualized as costume; camp + honest class declaration
+  - stiletto_sprint: Drag Queen Olympics Stiletto Sprint — sprint the spec in maximum flair under constraint
+  - see: code-that-spec.yml
+- **micropolis_ai_drag_race:**
+  - brand: Micropolis AI Drag Race — flagship variety game show
+  - werk: Rig personas, challenges, spend-log judges, merge or sashay
+  - see: micropolis-ai-drag-race.yml
+### history
 
-Over time this repo becomes a **skill forest** traced to guests, shows, and
-git history — how a 1996 microworlds talk becomes *runnable* decades later.
+## History
 
----
+- **consciencious_objectors:**
+  - coinage: Don Hopkins coined consciencious objectors at a meetup with David Ungar and Kaleida colleagues (ScriptX object-system era)
+  - meaning: Programmers who conscientiously object to replacing hand craft with opaque automation
+  - show_tie: david-ungar-self-moollm.yml — Self × MOOLLM + rig culture
 
-## Curb appeal, brutalist GitHub
+- **see:** repo-show-format.yml#rig_spectrum
 
-The README is the storefront. Under it:
+## Audiences If You Stumbled Here
 
-| Layer | What it is |
-|-------|------------|
-| **Facade** | Markdown — warm, readable, browse without a GitHub account |
-| **Girder** | YAML — `SHOW.yml`, `CARD.yml`, indexes, schemas, process definitions |
-| **Slab** | Monorepo — pnpm, Python venv, `pnpm run verify`, CI on PRs |
+### educators_and_constructionists
 
-We are not fooling around. If something is not built yet, the yaml says **seed**
-or **roadmap**. If it is built, you can clone it and break it.
+## Educators And Constructionists
 
----
+- **for:** The people we are inviting — and everyone who teaches with microworlds
+### invited_guests
 
-## Why different people might care
+## Invited Guests
 
-**Educators & constructionists** — *This is for the people we are inviting.*
-**Brian Harvey** (Logo, *Simply Scheme*, *CS Logo Style*, Snap!, BJC),
-**Jens Mönig** (Snap! architect — Micropolis × Snap!, blocks, distributed systems),
-**Walter Bender** (OLPC Stone Soup, open-sourcing SimCity, constructionist playgrounds).
-Repo Shows as **constructionist microworlds**: Winograd seminar lineage, Papert energy,
-live conversation → cauldron → **MOOLLM skills** your students can run. Skill authoring
-as programming-by-demonstration for the LLM era. RTFR with your class; fork a show seed;
-PR harvested skills back. Show seeds: [`repo-shows/INDEX.yml`](../repo-shows/INDEX.yml)
-(consent not yet asked for any guest).
+- {"name": "Brian Harvey", "note": "Logo, Simply Scheme, CS Logo Style, Snap!, BJC — lifelong CS education", "show_seeds": ["brian-harvey", "snap-logo-brian-jens"]}
+- {"name": "Jens Mönig", "note": "Snap! architect — Micropolis × Snap!, blocks, Morphic.js, distributed systems in Snap!", "show_seeds": ["jens-monig", "snap-logo-brian-jens"]}
+- {"name": "Walter Bender", "note": "OLPC Stone Soup, open-sourcing SimCity, constructionist playgrounds", "show_seeds": ["walter-bender-olpc", "skill-creation"]}
 
-**General audience / viral thread** — A show you can *enter*. Fork it. Run your
-own parallel show on your branch. Man-vs-machine taste contests welcome.
-Dance-off optional. No AI required.
+- **hook:** This is for you. Repo Shows as constructionist microworlds — Winograd seminar lineage,
+Papert energy, Logo/Snap!/BJC in the stack. Live conversation → cauldron → MOOLLM skills
+students and teachers can actually run. Skill authoring as PBD for the LLM era.
+- **participate:** RTFR with your class. Fork a show seed. Homeplay on your rig (Snap! blocks optional).
+PR questions in character. Host your own Repo Show; link harvested skills back.
+Grade homefun: Does the commit message match the thinking blocks? — see homefun-grading.yml
+We want Brian + Jens headline Snap!/Logo; Walter on OLPC + skill creation — consent not yet asked.
+- **see:** ../repo-shows/INDEX.yml
 
-**Archives & libraries** (Internet Archive ethos, university libraries, permanent
-record keepers) — Attributed, forkable lineage from **1996 forward**. Talk
-transcripts, show objects, technique DNA in git — meant to outlive any one
-platform. Mirror and cite; the graph is the publication.
+- **general_public:**
+  - hook: A Repo Show — the stage is GitHub. Will Wright is the first invited guest.
+  - participate: You don't need AI. Fork, homeplay, PR your show into the network.
+- **artisanal_programmers:**
+  - for: Artisanal programmers — humans programming by hand, no AI
+  - tools: TextEdit → Emacs → VS Code → whatever — just no AI in the loop
+  - respect: Extra respect here — honesty appreciated. Intentional and conscientious coders welcome.
+  - also: Don coined consciencious objectors at a Kaleida meetup with David Ungar — that culture is what we teach
+  - participate: Declare your rig class. Show editor + terminal + taste. Man-vs-machine competitions welcome.
+  - proposed_show: david-ungar-self-moollm.yml
+- **vibe_and_intentional:**
+  - vibe_coders: AI-forward flow — declare it; dance-off optional
+  - intentional_coders: Deliberate craft — the positive name for thoughtful anti-vibe
+  - conscientious_coders: Show-your-work ethics; care and attribution
+  - participate: Compare rigs honestly — coolest wins on taste, clarity, and constructionist generosity
+### ai_rig_reporters
 
-**Builders & hardware hackers** (Woz energy) — Schematics in the repo. Declare
-your rig class: bare hands to full orchestration. Show your workflow; breed
-winners back via merge.
+## Ai Rig Reporters
 
-**Publishers & editorial** — Not a flat playlist: a **graph** of show objects
-and typed links. Each node is a directory with `CARD.yml` + README + optional
-pitch. Anthologize branches; credit by git history.
+- **hook:** We want to learn from real AI setups — not vendor demos.
+- **tell_us:**
+  - Tools, models, MCP servers, skills, repos in workspace
+  - MOOLLM included or not — how wired (kernel/moollm-plugin.yml)
+  - How you actually use it; what contexts (show, harvest, homeplay, class, …)
+- **participate:** Issue or PR with rig-feedback — help the network breed technique DNA.
+- **see:** repo-show-format.yml#rig_spectrum
 
-**Platforms & production** (streaming, YouTube, Twitch, podcasts) — We are **not**
-pitching a deal. We are planting a **format** you can inspect: announce a
-pointer → audience RTFR on their rigs → live guest → harvest to code and skills
-→ network grows by PR. Production can wrap the same object graph if the shape
-fits.
+- **hacker_news_viral:**
+  - hook: RTFR. Man-vs-machine optional. Dance-off optional.
+  - participate: Questions as PRs. Rig class declared. Coolest implementation wins attention, not a prize we guarantee.
+- **streamers_and_makers:**
+  - hook: Run your parallel show on your branch; link in via PR.
+  - participate: Document techniques — yaml backbone, markdown facade — breed DNA back.
+### archive_and_library
 
----
+## Archive And Library
 
-## The ShowMaker network
+- **namesake_examples:**
+  - Brewster_Kahle
+  - Internet_Archive
+  - Stanford_Libraries
+- **hook:** Permanent, attributed, forkable record — talk lineage from 1996 forward.
+- **participate:** Mirror, cite, ingest show objects; we want the graph to outlive any one platform.
 
-Shows are **nodes**. Relationships are **edges**. You run a show on **your
-branch**; you **PR to link** your show object into our index. Over time:
-automation to scaffold CARDs and link PRs. Details:
-[`showmaker-network.yml`](showmaker-network.yml).
+### hardware_hacker_builder
 
----
+## Hardware Hacker Builder
 
-## Start here
+- **namesake_examples:**
+  - Steve_Wozniak
+- **hook:** Schematics in the repo. No gatekeeping. Bare-hands rig class welcome.
+- **participate:** Show your rig. Compare taste and power across automation levels.
 
-| Depth | File |
-|-------|------|
-| This page | `process/VISION.md` |
-| Yaml girder | [`vision-and-ambition.yml`](vision-and-ambition.yml) |
-| How a show runs | [`repo-show-format.yml`](repo-show-format.yml) |
-| Show graph | [`showmaker-network.yml`](showmaker-network.yml) |
-| Skills harvest | [`../skills/README.md`](../skills/README.md) |
-| 1996 anchor | [`../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/`](../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/) |
-| Repo front door | [`../README.md`](../README.md) |
+- **publishers_and_editorial:**
+  - hook: Publication network — graph of shows, not a flat feed. Each node is a CARD + README + optional pitch.
+  - participate: Link shows, anthologize branches, credit contributors by git history.
+### platforms_and_production
 
-**Talk to us:** [open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues) —
-inspect first, fork second, talk third.
+## Platforms And Production
 
-— Don Hopkins
+- **namesake_examples:**
+  - Netflix
+  - YouTube
+  - Twitch
+  - podcast_networks
+- **disclaimer:** We are not pitching a deal. We are planting a format others can inspect.
+- **hook:** Repo-native show: announce pointer → audience RTFR on their rigs → live guest as Repo Man →
+harvest to code and skills → graph grows by PR. Production layers can wrap the same object graph.
+- **participate:** If this format interests you, start with the yaml — process/repo-show-format.yml
+
+
+## What We Are Not Promising
+
+- A greenlit series, stream, or distribution deal
+- Will Wright's confirmed participation (invitation drafted; consent not yet asked)
+- Viral scale, revenue, or timeline
+- That AI is required — or forbidden
+- A finished product — this is origin point, not launch day
+
+## What We Are Building In Public
+
+- MOOLLM skills library (skills/) — harvested, credited, composable; the main long-term stack
+- Cauldron SCOOP pipeline — live jam → lift skills out of the melt (see repo-show-format.yml)
+- Repo Show format (process/repo-show-format.yml)
+- ShowMaker graph (process/showmaker-network.yml)
+- Micropolis Class — credited ideas from people who were there
+- Polyglot monorepo — MOOLLM microworld + pnpm packages + verify CI
+- Automation to scaffold show CARDs, skill CARDs, and link PRs (roadmap, not shipped)
+
+## Skills
+
+- **what:** Inheritable MOOLLM skills — protocols + CARD + SKILL.md — not one-off chat logs
+- **where:** ../skills/
+- **pyramid:** GLANCE.yml → CARD.yml → SKILL.md → README.md (same as SimHacker/moollm)
+- **harvest:** Cauldron SCOOP after each show — play → lift → learn; skills are the LIFT
+- **compose:** Compose with github.com/SimHacker/moollm — do not fork core; breed show-born skills here
+- **ambition:** Over time this repo becomes a thick skill forest: repo-show, pray-to-play, soul-bridge,
+hosted-content-cards, representation-ethics, … each traced to a guest, a show, a PR.
+Skills are how the 1996 microworlds talk becomes *runnable* thirty years later.
+
+## Curb Appeal Meets Brutalism
+
+- **facade:** README.md, show READMEs, VISION.md — human-readable, warm, Flower Child energy
+- **girder:** YAML indexes, schemas, SHOW.yml, CARD.yml, GLANCE pyramid, git history
+- **slab:** pnpm verify, GitHub Actions, SETUP.md — it either passes or it doesn't
+- **rule:** We don't dress up emptiness. If it's not in the repo yet, the yaml says seed or roadmap.
+
+## Invitation To Stakeholders
+
+- **tone:** Inspect first. Fork second. Talk third.
+- **contact:** https://github.com/SimHacker/WillWrightShowForFood/issues
+- **ask:** If you represent a platform, archive, publisher, or large audience channel:
+read the process yaml, clone the repo, run verify. If the format resonates,
+open an issue with who you are and what layer you might add — mirror, production,
+anthology, tooling, guest show. No NDAs required to understand the shape.
+
+## Related
+
+| Link |
+|------|
+| [`VISION.md`](VISION.md) |
+| [`rig-feedback.yml`](rig-feedback.yml) |
+| [`repo-show-format.yml`](repo-show-format.yml) |
+| [`showmaker-network.yml`](showmaker-network.yml) |
+| [`../skills/README.md`](../skills/README.md) |
+| [`https://github.com/SimHacker/moollm/tree/main/skills`](https://github.com/SimHacker/moollm/tree/main/skills) |
+| [`../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md`](../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) |
+| [`../README.md`](../README.md) |

@@ -1,5 +1,6 @@
 .moollm/
 .cursor/
+.rig/
 .venv/
 node_modules/
 dist/
