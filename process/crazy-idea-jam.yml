@@ -115,34 +115,91 @@ ideas:
   amsterdam_coffeeshops_app:
     emoji: "🍃"
     blurb: |
-      An iPhone app Don built in 2009 with photos and info about every coffeeshop in Amsterdam —
-      hacked at the Bluebird coffeeshop on the way home from his TomTom day job. Complex, never
-      released, decades out of date now — but a fun idea Don would love to REINCARNATE and
-      reinvent. It led directly to Urban Safari (GPS storytelling at the Stupid Fun Club). All
-      part of the tapestry: location-aware, place-as-story, the city as a playable map.
+      An iPhone app Don built in 2009 with photos and info about every coffeeshop in Amsterdam,
+      hacked at the Bluebird coffeeshop on the way home from his TomTom day job — solo, for fun,
+      to teach himself iPhone and web-server programming. Complex, never released, decades out of
+      date now — but a fun idea Don would love to REINCARNATE and reinvent. Behind it: a spreadsheet
+      database of every Amsterdam coffeeshop that drove the app.
+    became_bongo_bingo: "The same database powered BONGO BINGO (see below) — and together they were the PROGENITOR of StoryMaker / Bar Karma / Urban Safari."
     pivotal_moment: |
       Don showed this app and his iLoci (Memory Palace) talk at an Amsterdam meetup where Will
-      Wright was present. Will said: "Hey, by the way, I'm leaving EA — want to work together
-      again, remotely?" Don said yes, left his TomTom day job, and went back to Stupid Fun Club
-      projects, starting with StoryMaker. (This is how Don rejoined Will.)
+      Wright was present. Will looked at it and realized it was EXACTLY what he needed for what he
+      wanted to do with CurrentTV and other projects, and said: "Hey, by the way, I'm leaving EA —
+      want to work together again, remotely?" Don said yes, left TomTom, and went back to Stupid
+      Fun Club projects. They then built several client/server iterations together — including
+      MediaWiki plugins and a Unity app. (This is how Don rejoined Will.)
     video: "https://www.youtube.com/watch?v=nG90XG3STz8"
     vibe: "No words — look-and-feel + Amsterdam coffeeshop ASMR (chatter, distorted music)"
-    leads_to: urban_safari_gps_storytelling
+    leads_to: [bongo_bingo, creationtv_storymaker, urban_safari_gps_storytelling]
+    ties: [../characters/don-hopkins/career/stupid-fun-club.yml]
+
+  bongo_bingo:
+    emoji: "🚲🎯"
+    blurb: |
+      A web game wired to the **Foursquare API** on top of Don's all-Amsterdam-coffeeshops
+      database: you get a BONGO BINGO card of randomly chosen coffeeshops, then BIKE around town
+      checking in at each one — GPS-verified by your phone's coordinates. At each check-in you say
+      whatever you like about what you tried, feeding your notes back into the coffeeshop
+      spreadsheet metadata. Geolocated, social, generative — and the true PROGENITOR of StoryMaker
+      / Bar Karma / Urban Safari. Built solo at TomTom for fun; ripe to reincarnate.
+    progenitor_of: [creationtv_storymaker, urban_safari_gps_storytelling]
     ties: [../characters/don-hopkins/career/stupid-fun-club.yml]
 
   creationtv_storymaker:
     emoji: "📺"
     blurb: |
       CreationTV — an iPhone prototype Don built for Will Wright at the Stupid Fun Club — grew
-      into StoryMaker, the collaborative branching-storytelling app behind CurrentTV's Bar Karma:
-      the first online community-developed network television series. Branching narrative, voted
-      and built by the audience, aired on real TV. A direct ancestor of audience-as-cast and
+      into StoryMaker, the collaborative branching-storytelling system behind CurrentTV's Bar
+      Karma: the first online community-developed network television series. Branching narrative,
+      voted and built by the audience, aired on real TV. A direct ancestor of audience-as-cast and
       questions-as-PRs in the Repo Show.
+    full_stack: |
+      MediaWiki front-end server + Python back-end; Flash StoryMaker client embedded in the wiki;
+      geolocated scenes with Google Maps + KML overlays; admin CMS; iPad app (MapKit); Facebook
+      app with album import/export; voice-synth story reading; and a Unity3D 3D branching-story
+      visualizer. Same server, many clients.
     videos:
       creationtv: "https://www.youtube.com/watch?v=Nb_-J1lv-B8"
+      storymaker_comprehensive: "Stupid Fun Club StoryMaker Demo (Don Hopkins, 2016) — full client/server tour; URL to confirm"
     bar_karma: "https://en.wikipedia.org/wiki/Bar_Karma"
     vibe: "Abstract, mesmerizing interface play — no voice, just look-and-feel"
     ties: [../characters/don-hopkins/career/stupid-fun-club.yml, ../characters/matthew-sibigtroth/]
+
+  mediagraph:
+    emoji: "🎵🥧"
+    blurb: |
+      A Unity3D music-navigation prototype Don built for Will Wright at the Stupid Fun Club:
+      arrange all your songs on a map, connect them with ROADS, and flick down the roads to hop
+      the network. Each song has a pie menu (radius, biome) and its own cellular-automata "biome"
+      that grows and competes with its neighbors (CA at Will's request). It uses one kind of
+      nested hierarchical pie menu to build and edit another kind of geographic networked pie menu
+      — pies as a map/graph, not a tree.
+    video: "https://donhopkins.medium.com/mediagraph-demo-a7534add63e5"
+    ties: [../characters/don-hopkins/career/stupid-fun-club.yml]
+
+  iloci_memory_palace:
+    emoji: "🏛️"
+    blurb: |
+      iLoci — an iPhone app + server based on the **Method of Loci** (the ancient Memory Palace
+      technique): build a network of "locations" (rooms) instead of menus, edit by dragging and
+      "kissing" them together to connect/disconnect, attach images, notes, URLs, and a built-in
+      web browser. Really a **pie-menu network editor**. Don built it BEFORE the Stupid Fun Club,
+      at TomTom, at the Bluebird, then gave a talk at Mobile Dev Camp Amsterdam (Nov 28, 2008).
+      Part of the through-line DreamScape (1995) → iLoci → MediaGraph → Micropolis → MOOLLM.
+    video: "https://www.youtube.com/watch?v=03ddG3jWF98"
+    ties: [../characters/don-hopkins/career/work-history.yml]
+
+  dreamscape_scriptx:
+    emoji: "🌀"
+    blurb: |
+      The ancestor of it all: DreamScape, Don's Kaleida Labs ScriptX demo at the **1995 Apple
+      WWDC** — rooms + objects connected in an editable map (bump room icons together to link
+      them), parts you plug together like Mr. Potato Head, dynamic physics, and a Netscape bridge
+      that publishes the live world as interlinked web pages. Demoed live without crashing. Origin
+      of Don's mantra **"a nurturing environment, not a killer app."** Rooms-that-kiss-to-connect
+      reappears in iLoci, MediaGraph, and MOOLLM.
+    video: "https://www.youtube.com/watch?v=5NytloOy7WM"
+    ties: [../characters/don-hopkins/career/work-history.yml, vision-and-ambition.yml]
 
   simopolis_soul_bridge_afterlife:
     emoji: "👻"
