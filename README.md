@@ -70,12 +70,11 @@ proposed show: [Self × MOOLLM](repo-shows/david-ungar-self-moollm.yml)).
 **Vibe coders** — declare AI-forward flow; dance-off optional. **Orchestrated rigs** —
 tell us the stack (below).
 
-**Using AI?** We are super interested — not to sell you anything, but to learn and document
-real setups: which **tools and models**, **MCP servers**, **skills**, **repos**, whether you
-**include MOOLLM** and how it's wired, how it actually works day to day, and **what contexts**
-you've used it in (show jam, harvest, homeplay, classroom, …). **[Open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues)**
-or PR with `rig-feedback` — real setups beat polished answers. Details:
-[`process/repo-show-format.yml`](process/repo-show-format.yml) (`rig_spectrum`).
+**Using AI?** We want real setups — tools, models, MCP, skills, repos, MOOLLM wiring,
+contexts. Report **token usage and spending** too: we score **cost to ship** (efficiency
+vs extravagance) *and* **solution quality**, then merge winners back and abstract reusable
+parts into [`skills/`](skills/) and [`packages/`](packages/). **[Open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues)**
+or PR with `rig-feedback`. Details: [`process/repo-show-format.yml`](process/repo-show-format.yml).
 
 ## Polyglot monorepo
 

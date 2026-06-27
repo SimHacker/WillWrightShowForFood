@@ -24,6 +24,9 @@ ai_rig:
     tools: "IDE, agent, CLI — Cursor, Claude Code, Copilot, custom, …"
     models: "Which models, when, why — declare tier AND token budget"
     budget_bull_ride: "How you wrangled cheap/fast models — hallucinations, retries, recoveries, wins"
+    token_and_spend:
+      report: "Tokens used, dollars spent, wall-clock — efficiency vs extravagance"
+      compare: "We score cost-to-ship AND solution quality; declare class for fair comparison"
     usage: "How you actually use it — prompts, rules, hooks, multi-step workflows"
     mcp_servers: "Which MCP servers, how wired"
     skills: "Anthropic Agent Skills, MOOLLM skills, your CARD/SKILL.md"
@@ -33,6 +36,10 @@ ai_rig:
       wiring: "kernel/moollm-plugin.yml, hot.yml, skills loaded, …"
     contexts: "Show jam, cauldron harvest, homeplay, teaching, porting, …"
     feedback: "What worked, what broke, what you'd do differently"
+  after_you_ship:
+    solution_quality: "How good was the result? Taste, power, clarity"
+    merge: "PR back — integrate tissue into the evolving organism"
+    abstract: "Lift reusable parts into skills/ and packages/ for other shows and repos"
 
 submit:
   issue: "https://github.com/SimHacker/WillWrightShowForFood/issues — label or title rig-feedback"

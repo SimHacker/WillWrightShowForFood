@@ -50,9 +50,14 @@ rig_spectrum:
     budget_bull_rider: "Tight token budget; wrangles smaller/faster models through hallucinations and retries to a better solution — declare tier; show the ride"
   token_budget:
     declare: "Model tier + monthly token budget — compare fair only within class"
+    report: "Token usage + spend + wall-clock — efficiency vs extravagance scoreboard"
     bull_ride: "Skill like staying on a bull — thrash through bad outputs, recover, ship anyway; have fun"
     split_strategy: "Premium model for planning/architecture; budget model (e.g. Composer 2.5 Fast) for knocking out designs — declare both"
     recognition: "Budget-tier wranglers who beat premium-tier slop on taste get celebrated — document how"
+  cost_to_ship_scoreboard:
+    axes: [tokens, spend_dollars, wall_clock, solution_quality, integration, abstraction]
+    joke_reframed: "Compare how efficiently or extravagantly you arrived — not just how good the solution was"
+    artisanal_baseline: "Zero tokens — the efficiency floor; taste must carry"
   ai_rig_feedback:
     invitation: |
       If you do use AI — we are super interested. Not to sell you anything: to learn and document
@@ -102,6 +107,10 @@ play_along:
   document: "Everybody documents techniques — README, CARD, SKILL, screencast, yaml backbone."
   discuss: "Issues = HN threads. PRs = timeline merges. Show your work."
   breed: "Combine technique DNA — merge PRs, nest organelles, scoop skills from cauldron."
+  integrate_organism: |
+    Merge winning solutions back into the evolving organism. Abstract reusable parts into
+    skills/ (protocols) and packages/ (@wwsff/* libs) so other organisms can use them.
+  report_cost_to_ship: "Tokens + spend + time in rig report — judge efficiency AND taste"
 
 breeding_and_nesting:
   horizontal_gene_transfer: "Merge technique DNA from forks and PRs — git is the petri dish"

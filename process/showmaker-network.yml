@@ -60,8 +60,12 @@ your_show:
       host_note_2026-06: |
         Don building this repo on Composer 2.5 Fast right now — eating it up, knocking designs
         out of the park, shitloads of tokens left after prior spend on high-level planning.
+      report_usage: |
+        Great to report token usage and spending — we compare how efficiently or extravagantly
+        you arrived at a solution (err, measuring dick sizes — sorry, cost-to-ship metrics).
+        Declare class + report numbers; compare fair within tier.
   no_gatekeeping: "All rig classes welcome — declare honestly (rig + model tier + token budget). Extra respect for artisanal hand programming AND budget-tier bull riders."
-  share_your_rig: "AI users: tell us tools, models, MCP, skills, repos, moollm wiring, contexts — issue/PR rig-feedback (see repo-show-format.yml)"
+  share_your_rig: "AI users: tools, models, MCP, skills, repos, moollm wiring, contexts AND token/spend totals — issue/PR rig-feedback"
 
 publication:
   vision: vision-and-ambition.yml
@@ -77,12 +81,31 @@ publication:
 
 competitions:
   declare_not_exclude: "Don't ban rigs — declare class, compete fair, have fun. It's just a game."
+  scoreboard:
+    what_we_judge:
+      - "Cost to ship — tokens, spend, wall-clock: efficiency vs extravagance (report honestly)"
+      - "Solution quality — taste, power, clarity, humor (how good was the result?)"
+      - "Integration — merge back into the evolving organism via PR"
+      - "Abstraction — reusable parts lifted into skills/ and packages/ for other organisms"
+    cost_to_ship: |
+      Report token usage and spending. We compare how efficiently or extravagantly you arrived
+      at the answer — in addition to judging how good that answer was. Artisanal = zero tokens;
+      budget bull ride = tight spend + high taste; premium slop = declare and take your lumps.
   taste_and_power: "Compare implementations within declared class — artisanal vs vibe vs orchestrated vs budget-tier"
   budget_bull_ride: |
     Tight token budget + small/fast model wrangled to a better solution = bull-ride skill.
     Hallucinations, retries, recoveries — show the ride; audience respects the wrangling.
   man_vs_machine: "Delightful adversarial play — not anti-AI, not anti-hand, not anti-budget; pro-declaration"
   breed_winners: "Merge technique DNA from winning branches — horizontal gene transfer via git"
+
+evolving_organism:
+  metaphor: "The repo federation is one organism evolving — shows are organelles; PRs merge DNA"
+  merge_back: "Judge the solution, then integrate it — PR merges tissue into main timeline"
+  abstract_reusable:
+    skills: "Protocols → skills/ — MOOLLM skills other organisms compose"
+    packages: "Code → packages/ — @wwsff/* shared library for other repos and shows"
+    rule: "Extract what's reusable; don't leave genius trapped on a dead branch"
+  see: ../packages/README.md
 
 nesting:
   metaphor: serial_endosymbiosis + powers_of_ten
