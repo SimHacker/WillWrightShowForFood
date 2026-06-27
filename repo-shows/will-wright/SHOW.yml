@@ -46,6 +46,7 @@ why:
   for_project: "The anchor episode. High-credibility ignition for the audience (the funding mechanism). Seeds the whole Will Wright constellation."
 
 format:
+  canonical: ../../process/repo-show-format.yml
   live: true
   audience_qa: true
   the_repo_show: "A Repo Show: the artifact + stage is this repo. 'So you have a Repo to Show us?'"
