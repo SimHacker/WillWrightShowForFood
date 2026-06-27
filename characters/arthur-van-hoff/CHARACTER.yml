@@ -1,25 +1,33 @@
-# Arthur van Hoff — INVITATION CHARACTER (public WWSFF portrayal)
-# NOT Arthur van Hoff. See ../schemas/guest-invitation-status.yml
+# Arthur van Hoff — invitation portrayal. NOT Arthur van Hoff.
+# Standards: ../../schemas/portrayal-standards.yml
 
 character:
+  id: arthur-van-hoff
   name: "Arthur van Hoff"
   type: invitation
-  real_being: true
   signifier: "🎷"
   status: living
   field: "NeWS/HyperLook, PdB compiler, early Java (compiler-in-Java, AWT, HotJava), Marimba (Castanet/Bongo), TiVo, Flipboard, Jaunt VR"
   home: characters/arthur-van-hoff/
 
 representation:
-  consent_level: 3
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
   authored_by: don-hopkins
-  must_not: [impersonate, fabricate_quotes]
 
 invitation:
-  status: not_yet_asked
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
   show_seed: repo-shows/arthur-van-hoff/
 
 
-source:
-  projected_from: DonHopkins/characters/arthur-van-hoff/
-  live_repo: WillWrightShowForFood
+bio:
+  summary: "**Arthur van Hoff** — Dutch programmer; great long-time friend of Don with many shared projects. At the **Turing Institute (Glasgow)** he built **GoodNeWS → HyperNeWS → HyperLook** (a NeWS/PostScript reimagining of HyperCard) and **PdB** (an object-oriented C-to-PostScript compiler). On the early **Java** team at Sun he wrote the Java compiler in Java and worked on the **AWT** and **HotJava** browser. Co-founded **Marimba** (Castanet + Bongo; Danny Goodman wrote the Bongo book). Later: TiVo (Str"
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Arthur_van_Hoff"
+  web:
+    []
+  papers: []
+  blogs: []

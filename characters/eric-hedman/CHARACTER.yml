@@ -1,25 +1,33 @@
-# Eric Hedman — INVITATION CHARACTER (public WWSFF portrayal)
-# NOT Eric Hedman. See ../schemas/guest-invitation-status.yml
+# Eric Hedman — invitation portrayal. NOT Eric Hedman.
+# Standards: ../../schemas/portrayal-standards.yml
 
 character:
+  id: eric-hedman
   name: "Eric Hedman"
   type: invitation
-  real_being: true
   signifier: "👤"
   status: living
   field: "Character animation — The Sims 1"
   home: characters/eric-hedman/
 
 representation:
+  governed_by: ../../schemas/portrayal-standards.yml
   consent_level: 3
   authored_by: don-hopkins
-  must_not: [impersonate, fabricate_quotes]
 
 invitation:
-  status: not_yet_asked
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
   show_seed: repo-shows/eric-hedman/
 
 
-source:
-  projected_from: DonHopkins/characters/eric-hedman/
-  live_repo: WillWrightShowForFood
+bio:
+  summary: "**Eric Hedman (\"Irk\")** — Sims 1 character animator. Hand-tuned walk cycles, idles, gestures for the vitaboy pipeline. Famous wiggle incident (Don checked in canWiggle debug — they're still great buddies). Great interview subject; YouTube channel pending URL."
+
+sources:
+  wikipedia: null
+  web:
+    []
+  papers: []
+  blogs: []

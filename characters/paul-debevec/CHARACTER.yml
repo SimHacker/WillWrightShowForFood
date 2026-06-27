@@ -1,25 +1,33 @@
-# Paul Debevec — INVITATION CHARACTER (public WWSFF portrayal)
-# NOT Paul Debevec. See ../schemas/guest-invitation-status.yml
+# Paul Debevec — invitation portrayal. NOT Paul Debevec.
+# Standards: ../../schemas/portrayal-standards.yml
 
 character:
+  id: paul-debevec
   name: "Paul Debevec"
   type: invitation
-  real_being: true
   signifier: "👤"
   status: living
   field: "Light Stage, image-based lighting, photogrammetry, Rouen Revisited (with Golan Levin at Interval), now Director of Research, Creative Algorithms and Technology at Netflix"
   home: characters/paul-debevec/
 
 representation:
-  consent_level: 3
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 1
   authored_by: don-hopkins
-  must_not: [impersonate, fabricate_quotes]
 
 invitation:
-  status: not_yet_asked
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
   show_seed: repo-shows/paul-debevec/
 
 
-source:
-  projected_from: DonHopkins/characters/paul-debevec/
-  live_repo: WillWrightShowForFood
+bio:
+  summary: "Light Stage, image-based lighting, photogrammetry, Rouen Revisited (with Golan Levin at Interval), now Director of Research, Creative Algorithms and Technology at Netflix"
+
+sources:
+  wikipedia: null
+  web:
+    []
+  papers: []
+  blogs: []

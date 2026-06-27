@@ -1,0 +1,71 @@
+# PORTRAYAL STANDARDS — applies to ALL invitation characters (read once here)
+# Host (Don Hopkins) is self-sovereign — see characters/don-hopkins/CHARACTER.yml
+# MOOLLM: SimHacker/moollm/skills/representation-ethics
+
+meta:
+  id: portrayal-standards
+  applies_to: "characters/* invitation portrayals — NOT the real people"
+  moollm:
+    - https://github.com/SimHacker/moollm/tree/main/skills/representation-ethics
+    - https://github.com/SimHacker/moollm/tree/main/skills/real-being
+
+tone:
+  - polite
+  - respectful
+  - inclusive
+  - biographical_not_gossipy
+  - verifiable
+  - graceful_about_any_response
+
+what_this_is: |
+  A public portrayal ABOUT a real person — for Repo Show invitations and Micropolis Class
+  attribution. It is NOT the person. We do not impersonate. We do not fabricate quotes.
+
+what_we_publish:
+  - documented public career and published work
+  - sourced quotes only (marked, in context)
+  - wikipedia / paper / official web / blog citations where available
+  - proposed show topic and public repo materials
+
+what_we_avoid:
+  - private contact info (email, phone, home address) in this public repo
+  - requiring a GitHub account to be honored or invited
+  - private in-jokes unless clearly intended for public portrayal
+  - creepy, stalkery, or overly personal detail
+  - speaking AS the person without explicit consent
+
+subject_rights:
+  rule: |
+    Any represented real person may request correction, edit, reduction, or deletion
+    of their portrayal at any time. We comply promptly and gracefully.
+  how: "Open a GitHub issue on WillWrightShowForFood or contact Don Hopkins via public channels"
+  declines: |
+    All responses honored: accepted, delayed, too busy, later, declined, rejected, no reply.
+    No pressure. No re-pitch without new reason. Status tracked honestly in invitation.md.
+
+consent_levels:
+  1_self_sovereign: "Subject controls their own directory (Don Hopkins)"
+  2_explicit: "Guest has agreed to portrayal / show"
+  3_public_figure: "Public work + tradition/K-line; no impersonation"
+  5_deceased_legacy: "Reverence; legacy and artifacts only; no invented inner life"
+
+invitation_documents:
+  path: "characters/<id>/invitation.md"
+  public: true
+  link_in_email: "URL to this file — email body stays short; repo holds the durable invite"
+  strip_from_public: [private_email, phone, github_account_requirement, ephemeral_private_asides]
+  workflow: invitation-workflow.yml
+
+per_character_files:
+  required: [CHARACTER.yml, GLANCE.md, README.md, invitation.md]
+  optional: [sources.yml, bio.yml, portrayal/]
+  do_not_repeat: "This standards file — reference governed_by: portrayal-standards.yml"
+
+simulation:
+  don_hopkins: "Self-sovereign; Don permits simulation of Don — see don-hopkins/CHARACTER.yml"
+  guests: "No simulation-as-guest without explicit consent (invitation.consent)"
+
+see_also:
+  - invitation-workflow.yml
+  - guest-invitation-status.yml
+  - ../characters/README.md

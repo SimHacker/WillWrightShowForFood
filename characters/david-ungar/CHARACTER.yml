@@ -1,46 +1,33 @@
-# David Ungar — REPRESENTATIONAL CHARACTER (see ../schemas/guest-invitation-status.yml)
-# Portrayal ABOUT David Ungar; NOT David Ungar.
+# David Ungar — invitation portrayal. NOT David Ungar.
+# Standards: ../../schemas/portrayal-standards.yml
 
 character:
+  id: david-ungar
   name: "David Ungar"
-  type: representational
-  real_being: true
+  type: invitation
   signifier: "👤"
   status: living
-  field: "Self language, adaptive compilation, garbage collection"
-  title: "David Ungar"
+  field: "Self × MOOLLM; Kaleida consciencious objectors meetup"
   home: characters/david-ungar/
 
 representation:
+  governed_by: ../../schemas/portrayal-standards.yml
   consent_level: 3
   authored_by: don-hopkins
-  purpose:
-    - Document Ungar's public contributions (Self, GC, Stage Magic Principle)
-    - Propose Repo Show on Self × MOOLLM reimagination
-  must_not:
-    - Impersonate or speak AS him
-    - Fabricate quotes
 
 invitation:
-  status: not_yet_asked
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
   show_seed: repo-shows/david-ungar-self-moollm.yml
+  note: "Self × MOOLLM; Kaleida consciencious objectors meetup"
 
-bio_verified:
-  self: "Co-created Self with Randall B. Smith (Stanford, Sun Labs)"
-  gc: "Generation scavenging — influential GC work"
-  compilation: "Adaptive compilation, dynamic deoptimization"
-  influence: "Prototype-based OOP influenced JavaScript; MOOLLM directory inheritance"
+bio:
+  summary: "Self × MOOLLM; Kaleida consciencious objectors meetup"
 
-moollm_lineage:
-  stage_magic_principle: "Simple view until complex truth needed — maps to GLANCE → CARD → SKILL pyramid"
-  idea_scavenging: "Focus compute on persistent ideas — maps to character/skill persistence"
-  dynamic_depessimization: "MOOLLM optimistic simplification until forced to deepen"
-  correspondence: "Don contacted Jan 2026 — see DonHopkins characters/don-hopkins/correspondence/david-ungar.yml"
-
-kaleida_meetup:
-  note: "Don coined consciencious objectors at a meetup with Dave Ungar and Kaleida colleagues (ScriptX object-system era)"
-  teaching: "Artisanal / intentional / conscientious coding culture — what Repo Shows teach"
-
-see_also:
-  - ../../repo-shows/david-ungar-self-moollm.yml
-  - https://github.com/SimHacker/moollm
+sources:
+  wikipedia: null
+  web:
+    []
+  papers: []
+  blogs: []

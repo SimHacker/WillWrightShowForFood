@@ -1,25 +1,33 @@
-# Alan Kay — INVITATION CHARACTER (public WWSFF portrayal)
-# NOT Alan Kay. See ../schemas/guest-invitation-status.yml
+# Alan Kay — invitation portrayal. NOT Alan Kay.
+# Standards: ../../schemas/portrayal-standards.yml
 
 character:
+  id: alan-kay
   name: "Alan Kay"
   type: invitation
-  real_being: true
   signifier: "👤"
   status: living
   field: "Computer scientist — Smalltalk, Dynabook, constructionism"
   home: characters/alan-kay/
 
 representation:
+  governed_by: ../../schemas/portrayal-standards.yml
   consent_level: 3
   authored_by: don-hopkins
-  must_not: [impersonate, fabricate_quotes]
 
 invitation:
-  status: not_yet_asked
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
   show_seed: repo-shows/alan-kay-microworld.yml
 
 
-source:
-  projected_from: DonHopkins/characters/alan-kay/
-  live_repo: WillWrightShowForFood
+bio:
+  summary: "**Alan Kay** — computing visionary: Smalltalk, the Dynabook, true object-orientation, and \"the best way to predict the future is to invent it.\""
+
+sources:
+  wikipedia: null
+  web:
+    []
+  papers: []
+  blogs: []

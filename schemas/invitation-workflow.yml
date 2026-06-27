@@ -1,0 +1,43 @@
+# Invitation workflow — Zope/Plone/CMF nostalgia optional; states are honest tracking
+# Frontmatter in characters/<id>/invitation.md + invitation.status in CHARACTER.yml
+
+meta:
+  id: invitation-workflow
+  note: "CMF workflows days — moved on. Simple yaml states suffice."
+
+status:
+  enum:
+    draft: "Being written"
+    review: "Don reviewing before send"
+    finished: "Ready to send — public invitation.md complete"
+    sent: "Invitation delivered (track date in invitation_note, not private details here)"
+    replied: "They responded — see invitation_note"
+    accepted: "Yes — scheduling"
+    delayed: "Interested but later / too busy — honor it"
+    declined: "No — respect; do not re-pitch without new reason"
+    rejected: "Explicit no"
+    ghosted: "No reply after reasonable time — no blame; status only"
+    scheduled: "Date set"
+    aired: "Show happened"
+    n_a: "Not applicable (host, fictional, legacy-only)"
+    legacy_only: "Deceased / historical K-line — no invitation sent"
+
+fields:
+  status: { type: enum, required: true, default: draft }
+  consent: { enum: [not_yet_asked, granted, declined], default: not_yet_asked }
+  invitation_note: { type: string, optional: true, note: "Non-private summary only" }
+  show_seed: { type: path }
+  public_url: { type: path, default: invitation.md }
+  sent_at: { type: date, optional: true, note: "No private correspondence in repo" }
+
+transitions:
+  graceful: |
+    Any state may move to declined, delayed, or subject-requested deletion.
+    Real people override workflow always.
+
+legacy_mapping:
+  not_yet_asked: draft
+
+see_also:
+  - portrayal-standards.yml
+  - guest-invitation-status.yml

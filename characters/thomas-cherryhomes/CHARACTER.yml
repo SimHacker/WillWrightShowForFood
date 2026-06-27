@@ -1,25 +1,36 @@
-# Thomas Cherryhomes — INVITATION CHARACTER (public WWSFF portrayal)
-# NOT Thomas Cherryhomes. See ../schemas/guest-invitation-status.yml
+# Thomas Cherryhomes — invitation portrayal. NOT Thomas Cherryhomes.
+# Standards: ../../schemas/portrayal-standards.yml
 
 character:
+  id: thomas-cherryhomes
   name: "Thomas Cherryhomes"
   type: invitation
-  real_being: true
   signifier: "📡"
   status: living
   field: "Retrocomputing hacker/engineer; firmware developer + co-founder of FujiNet; IRATA.ONLINE (PLATO). Cross-platform C; community-builder; preservationist."
   home: characters/thomas-cherryhomes/
 
 representation:
-  consent_level: 3
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
   authored_by: don-hopkins
-  must_not: [impersonate, fabricate_quotes]
 
 invitation:
-  status: not_yet_asked
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
   show_seed: repo-shows/thomas-cherryhomes/
 
 
-source:
-  projected_from: DonHopkins/characters/thomas-cherryhomes/
-  live_repo: WillWrightShowForFood
+bio:
+  summary: "**Thomas Cherryhomes** (@tschak / tschak909) — Retrocomputing hacker/engineer; firmware developer and co-founder of **FujiNet**, the open-source software-defined network peripheral that puts the *internet* on retro machines (Atari 8-bit → Apple II, Coleco Adam, MS-DOS RS-232, Atari 2600, MSX, Intellivision, TRS-80 CoCo, and more). \"Bus over IP,\" an `N:` network device, a cross-platform **Game Lobby**, high-score servers, and a disk-less **NOS**. Also runs **IRATA.ONLINE** (a PLATO service) and"
+
+sources:
+  wikipedia: null
+  web:
+    - http://www.irata.online/
+    - https://x.com/tschak
+    - https://github.com/tschak909
+    - https://fujinet.online
+  papers: []
+  blogs: []

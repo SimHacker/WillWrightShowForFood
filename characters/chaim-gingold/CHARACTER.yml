@@ -1,25 +1,33 @@
-# Chaim Gingold — INVITATION CHARACTER (public WWSFF portrayal)
-# NOT Chaim Gingold. See ../schemas/guest-invitation-status.yml
+# Chaim Gingold — invitation portrayal. NOT Chaim Gingold.
+# Standards: ../../schemas/portrayal-standards.yml
 
 character:
+  id: chaim-gingold
   name: "Chaim Gingold"
   type: invitation
-  real_being: true
   signifier: "👤"
   status: living
   field: "Designer & historian — Building SimCity, reverse diagrams"
   home: characters/chaim-gingold/
 
 representation:
+  governed_by: ../../schemas/portrayal-standards.yml
   consent_level: 3
   authored_by: don-hopkins
-  must_not: [impersonate, fabricate_quotes]
 
 invitation:
-  status: not_yet_asked
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
   show_seed: repo-shows/chaim-gingold/
 
 
-source:
-  projected_from: DonHopkins/characters/chaim-gingold/
-  live_repo: WillWrightShowForFood
+bio:
+  summary: "**Chaim Gingold** — designer & historian who reverse-engineered SimCity and wrote *Building SimCity* (MIT Press, 2024), creator of the famous reverse diagrams."
+
+sources:
+  wikipedia: null
+  web:
+    []
+  papers: []
+  blogs: []

@@ -1,13 +1,26 @@
-# Invitation draft — David Ungar
+---
+status: draft
+character_id: david-ungar
+public: true
+consent: not_yet_asked
+show_seed: repo-shows/david-ungar-self-moollm.yml
+---
 
-*Not sent. Don to edit and send.*
+# Repo Show invitation — David Ungar
 
-We would love a **Repo Show** on **Self × MOOLLM** — how MOOLLM reimagines Self's
-prototype model, Stage Magic Principle, Idea Scavenging, and rig culture (artisanal /
-intentional / conscientious coding — the Kaleida meetup lineage).
+*Public draft — not sent. David Ungar may edit, decline, delay, or request removal at any time.*
+[Portrayal standards](../../schemas/portrayal-standards.yml)
 
-**Show seed:** `repo-shows/david-ungar-self-moollm.yml`
+We would respectfully invite **David Ungar** to a **Repo Show** — a Micropolis Class
+conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood),
+following through to working code and credited ideas in public.
 
-**Browse:** https://github.com/SimHacker/WillWrightShowForFood
+**Proposed focus:** Self × MOOLLM; Kaleida consciencious objectors meetup
 
-— Don Hopkins
+**Materials:** [`repo-shows/david-ungar-self-moollm.yml`](../../repo-shows/david-ungar-self-moollm.yml)
+
+Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
+
+**Your response:** Accepted, delayed, too busy, declined, or no reply — all honored gracefully.
+
+— Don Hopkins, Micropolis Class

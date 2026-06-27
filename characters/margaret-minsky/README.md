@@ -1,11 +1,9 @@
 # Margaret Minsky
 
-Invitation character — portrayal **about** Margaret Minsky, not Margaret Minsky.
+Invitation portrayal — **not** Margaret Minsky. [Standards](../../schemas/portrayal-standards.yml)
 
 **Field:** Haptics / force-feedback; Atari Cambridge Research Lab; MIT Media Lab
 
-Show seed: `repo-shows/margaret-minsky/`
+[Invitation](invitation.md) · [Show seed](../../repo-shows/margaret-minsky/)
 
-Draft invitation: [`invitation.md`](invitation.md) — *not sent* (`invitation_status: not_yet_asked`).
-
-Live repo: [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) — edit here, not DonHopkins backfill.
+Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

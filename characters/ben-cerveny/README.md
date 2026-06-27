@@ -1,11 +1,9 @@
 # Ben Cerveny
 
-Invitation character — portrayal **about** Ben Cerveny, not Ben Cerveny.
+Invitation portrayal — **not** Ben Cerveny. [Standards](../../schemas/portrayal-standards.yml)
 
 **Field:** Strategist, Designer, Public Code & Digital Public Infrastructure; Game Neverending / Flickr; Stamen map viz; speculative design, civic tech
 
-Show seed: `repo-shows/ben-cerveny/`
+[Invitation](invitation.md) · [Show seed](../../repo-shows/ben-cerveny/)
 
-Draft invitation: [`invitation.md`](invitation.md) — *not sent* (`invitation_status: not_yet_asked`).
-
-Live repo: [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) — edit here, not DonHopkins backfill.
+Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

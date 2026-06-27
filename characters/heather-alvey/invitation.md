@@ -1,13 +1,26 @@
-# Invitation draft — Heather Alvey
+---
+status: draft
+character_id: heather-alvey
+public: true
+consent: not_yet_asked
+show_seed: repo-shows/heather-steve-alvey/
+---
 
-*Not sent. Don to edit and send.*
+# Repo Show invitation — Heather Alvey
 
-We would love a **Repo Show** with you — the stage is this public GitHub repo; the audience RTFR on their own rigs; ideas follow through to code and MOOLLM skills.
+*Public draft — not sent. Heather Alvey may edit, decline, delay, or request removal at any time.*
+[Portrayal standards](../../schemas/portrayal-standards.yml)
 
-**Show seed:** `repo-shows/heather-steve-alvey/`
+We would respectfully invite **Heather Alvey** to a **Repo Show** — a Micropolis Class
+conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood),
+following through to working code and credited ideas in public.
 
-**Browse:** https://github.com/SimHacker/WillWrightShowForFood
+**Proposed focus:** SimFreaks + Steve Alvey SimSlice
 
-**Repo Show format:** [`process/repo-show-format.yml`](../../process/repo-show-format.yml)
+**Materials:** [`repo-shows/heather-steve-alvey/`](../../repo-shows/heather-steve-alvey/)
 
-— Don Hopkins
+Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
+
+**Your response:** Accepted, delayed, too busy, declined, or no reply — all honored gracefully.
+
+— Don Hopkins, Micropolis Class

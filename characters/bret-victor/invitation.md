@@ -1,13 +1,26 @@
-# Invitation draft — Bret Victor
+---
+status: draft
+character_id: bret-victor
+public: true
+consent: not_yet_asked
+show_seed: repo-shows/bret-victor/
+---
 
-*Not sent. Don to edit and send.*
+# Repo Show invitation — Bret Victor
 
-We would love a **Repo Show** with you — the stage is this public GitHub repo; the audience RTFR on their own rigs; ideas follow through to code and MOOLLM skills.
+*Public draft — not sent. Bret Victor may edit, decline, delay, or request removal at any time.*
+[Portrayal standards](../../schemas/portrayal-standards.yml)
 
-**Show seed:** `repo-shows/bret-victor/`
+We would respectfully invite **Bret Victor** to a **Repo Show** — a Micropolis Class
+conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood),
+following through to working code and credited ideas in public.
 
-**Browse:** https://github.com/SimHacker/WillWrightShowForFood
+**Proposed focus:** Interface researcher — explorable explanations, Dynamicland
 
-**Repo Show format:** [`process/repo-show-format.yml`](../../process/repo-show-format.yml)
+**Materials:** [`repo-shows/bret-victor/`](../../repo-shows/bret-victor/)
 
-— Don Hopkins
+Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
+
+**Your response:** Accepted, delayed, too busy, declined, or no reply — all honored gracefully.
+
+— Don Hopkins, Micropolis Class

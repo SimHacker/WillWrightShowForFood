@@ -1,0 +1,31 @@
+# CHARACTER.yml — copy to characters/<id>/CHARACTER.yml
+# Standards: ../../schemas/portrayal-standards.yml (read once — do not repeat per character)
+
+character:
+  id: guest-slug
+  name: "Full Name"
+  type: invitation
+  signifier: "👤"
+  status: living
+  field: "One-line public field — verifiable"
+  home: characters/guest-slug/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/guest-slug/
+
+bio:
+  summary: "Two sentences max — biographical, polite, verifiable"
+
+sources:
+  wikipedia: null
+  web: []
+  papers: []
+  blogs: []

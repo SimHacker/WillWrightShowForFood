@@ -1,25 +1,33 @@
-# Ken Perlin — INVITATION CHARACTER (public WWSFF portrayal)
-# NOT Ken Perlin. See ../schemas/guest-invitation-status.yml
+# Ken Perlin — invitation portrayal. NOT Ken Perlin.
+# Standards: ../../schemas/portrayal-standards.yml
 
 character:
+  id: ken-perlin
   name: "Ken Perlin"
   type: invitation
-  real_being: true
   signifier: "👤"
   status: living
   field: "Procedural graphics, Perlin noise, interactive Java demos, NYU, constructionist-adjacent teaching through runnable artifacts"
   home: characters/ken-perlin/
 
 representation:
-  consent_level: 3
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 1
   authored_by: don-hopkins
-  must_not: [impersonate, fabricate_quotes]
 
 invitation:
-  status: not_yet_asked
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
   show_seed: repo-shows/ken-perlin/
 
 
-source:
-  projected_from: DonHopkins/characters/ken-perlin/
-  live_repo: WillWrightShowForFood
+bio:
+  summary: "Procedural graphics, Perlin noise, interactive Java demos, NYU, constructionist-adjacent teaching through runnable artifacts"
+
+sources:
+  wikipedia: null
+  web:
+    - https://mrl.cs.nyu.edu/~perlin/
+  papers: []
+  blogs: []

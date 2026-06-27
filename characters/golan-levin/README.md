@@ -1,11 +1,9 @@
 # Golan Levin
 
-Invitation character — portrayal **about** Golan Levin, not Golan Levin.
+Invitation portrayal — **not** Golan Levin. [Standards](../../schemas/portrayal-standards.yml)
 
 **Field:** Interactive / computational media art, creative coding, gestural & audiovisual interfaces, generative systems, critical making, art-as-research education
 
-Show seed: `repo-shows/golan-levin/`
+[Invitation](invitation.md) · [Show seed](../../repo-shows/golan-levin/)
 
-Draft invitation: [`invitation.md`](invitation.md) — *not sent* (`invitation_status: not_yet_asked`).
-
-Live repo: [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) — edit here, not DonHopkins backfill.
+Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

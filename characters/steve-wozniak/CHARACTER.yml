@@ -1,25 +1,33 @@
-# Steve Wozniak — INVITATION CHARACTER (public WWSFF portrayal)
-# NOT Steve Wozniak. See ../schemas/guest-invitation-status.yml
+# Steve Wozniak — invitation portrayal. NOT Steve Wozniak.
+# Standards: ../../schemas/portrayal-standards.yml
 
 character:
+  id: steve-wozniak
   name: "Steve Wozniak"
   type: invitation
-  real_being: true
   signifier: "👤"
   status: living
   field: "Computer Engineer, Apple Co-founder, Creator of the Apple I and Apple II"
   home: characters/steve-wozniak/
 
 representation:
+  governed_by: ../../schemas/portrayal-standards.yml
   consent_level: 3
   authored_by: don-hopkins
-  must_not: [impersonate, fabricate_quotes]
 
 invitation:
-  status: not_yet_asked
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
   show_seed: repo-shows/steve-wozniak/
 
 
-source:
-  projected_from: DonHopkins/characters/steve-wozniak/
-  live_repo: WillWrightShowForFood
+bio:
+  summary: "**Steve Wozniak** — Apple co-founder, creator of the Apple I and Apple II, and embodiment of the classic hacker ethos. A dream guest for the Repo Show to discuss open computing, 6502 architecture, the Disk II, and bridging the Apple II into the modern web via TypeScript emulators and live floppy-buffer hacking."
+
+sources:
+  wikipedia: null
+  web:
+    - https://woz.org/
+  papers: []
+  blogs: []

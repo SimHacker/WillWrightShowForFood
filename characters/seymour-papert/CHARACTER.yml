@@ -1,25 +1,33 @@
-# Seymour Papert — INVITATION CHARACTER (public WWSFF portrayal)
-# NOT Seymour Papert. See ../schemas/guest-invitation-status.yml
+# Seymour Papert — invitation portrayal. NOT Seymour Papert.
+# Standards: ../../schemas/portrayal-standards.yml
 
 character:
+  id: seymour-papert
   name: "Seymour Papert"
   type: invitation
-  real_being: legacy
   signifier: "🕯️"
   status: deceased
   field: "Mathematician & educator — Constructionism, Logo"
   home: characters/seymour-papert/
 
 representation:
-  consent_level: legacy_kline
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 5
   authored_by: don-hopkins
-  must_not: [impersonate, fabricate_quotes]
 
 invitation:
-  status: not_yet_asked
+  status: legacy_only
+  consent: not_yet_asked
+  document: invitation.md
   show_seed: repo-shows/seymour-papert/
   note: "deceased — constructionist K-line"
 
-source:
-  projected_from: DonHopkins/characters/seymour-papert/
-  live_repo: WillWrightShowForFood
+bio:
+  summary: "**Seymour Papert** — mathematician & educator who founded **Constructionism** and co-created **Logo**: children programming the computer, not the other way around."
+
+sources:
+  wikipedia: null
+  web:
+    []
+  papers: []
+  blogs: []

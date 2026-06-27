@@ -1,25 +1,33 @@
-# Brad A. Myers — INVITATION CHARACTER (public WWSFF portrayal)
-# NOT Brad A. Myers. See ../schemas/guest-invitation-status.yml
+# Brad A. Myers — invitation portrayal. NOT Brad A. Myers.
+# Standards: ../../schemas/portrayal-standards.yml
 
 character:
+  id: brad-myers
   name: "Brad A. Myers"
   type: invitation
-  real_being: true
   signifier: "👤"
   status: living
   field: "CMU HCI — Garnet, PBD, visual programming taxonomies, UI software tools"
   home: characters/brad-myers/
 
 representation:
+  governed_by: ../../schemas/portrayal-standards.yml
   consent_level: 3
   authored_by: don-hopkins
-  must_not: [impersonate, fabricate_quotes]
 
 invitation:
-  status: not_yet_asked
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
   show_seed: repo-shows/brad-myers/
 
 
-source:
-  projected_from: DonHopkins/characters/brad-myers/
-  live_repo: WillWrightShowForFood
+bio:
+  summary: "**Brad A. Myers** — CMU HCI professor; Garnet, Peridot, C32; *All the Widgets*; VPL taxonomy; programming by demonstration. Don worked in his lab (~1992–93). Warm email contact (2023); show proposed, consent pending."
+
+sources:
+  wikipedia: null
+  web:
+    - http://www.cs.cmu.edu/~bam/
+  papers: []
+  blogs: []

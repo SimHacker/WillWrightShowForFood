@@ -1,25 +1,34 @@
-# Edd Coates — INVITATION CHARACTER (public WWSFF portrayal)
-# NOT Edd Coates. See ../schemas/guest-invitation-status.yml
+# Edd Coates — invitation portrayal. NOT Edd Coates.
+# Standards: ../../schemas/portrayal-standards.yml
 
 character:
+  id: edd-coates
   name: "Edd Coates"
   type: invitation
-  real_being: true
   signifier: "👤"
   status: living
   field: "UI Artist, Digital Designer, Creator of the Game UI Database"
   home: characters/edd-coates/
 
 representation:
-  consent_level: 3
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
   authored_by: don-hopkins
-  must_not: [impersonate, fabricate_quotes]
 
 invitation:
-  status: not_yet_asked
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
   show_seed: repo-shows/edd-coates/
 
 
-source:
-  projected_from: DonHopkins/characters/edd-coates/
-  live_repo: WillWrightShowForFood
+bio:
+  summary: "**Edd Coates** — UI Artist, Digital Designer, and creator of the Game UI Database. Guinness World Record holder for the largest digital archive of video game interfaces. Author of *The Game UI Bible*. Friend of Don Hopkins; potential collaborator on ethical AI data licensing and UI preservation strategies."
+
+sources:
+  wikipedia: null
+  web:
+    - https://www.gameuidatabase.com/
+    - https://www.eddcoatesdesign.com/
+  papers: []
+  blogs: []

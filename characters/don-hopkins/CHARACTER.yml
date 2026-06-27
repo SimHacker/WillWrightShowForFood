@@ -1,0 +1,44 @@
+# Don Hopkins — self-sovereign host character
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: don-hopkins
+  name: Don Hopkins
+  type: self_sovereign
+  signifier: "🌀"
+  status: living
+  field: "User-interface designer and programmer; Repo Show host; Micropolis Class"
+  home: characters/don-hopkins/
+  title: "Don Hopkins (the User Interface Flower Child)"
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent: self_sovereign
+  authored_by: self
+  note: "Don controls this directory. Other characters reference portrayal-standards; Don does not repeat them here."
+
+simulation:
+  permitted: true
+  by_don: "Don is OK if you simulate him — it doesn't hurt or matter."
+
+invitation:
+  status: n_a
+  role: host
+
+bio:
+  summary: "Pie menus, The Sims, Micropolis, MOOLLM, Repo Show. YAML backbone + markdown facade."
+  backbone: career/*.yml
+
+sources:
+  web:
+    - https://donhopkins.com
+    - https://github.com/SimHacker
+  repos:
+    - https://github.com/SimHacker/MicropolisCore
+    - https://github.com/SimHacker/moollm
+    - https://github.com/SimHacker/WillWrightShowForFood
+
+see_also:
+  - career/INDEX.yml
+  - ../don-philahue/
+  - ../../process/live-repo.yml

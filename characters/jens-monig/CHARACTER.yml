@@ -1,25 +1,34 @@
-# Jens Mönig — INVITATION CHARACTER (public WWSFF portrayal)
-# NOT Jens Mönig. See ../schemas/guest-invitation-status.yml
+# Jens Mönig — invitation portrayal. NOT Jens Mönig.
+# Standards: ../../schemas/portrayal-standards.yml
 
 character:
+  id: jens-monig
   name: "Jens Mönig"
   type: invitation
-  real_being: true
   signifier: "🧩"
   status: living
   field: "Visual/block programming languages; architect + lead programmer of Snap! (Build Your Own Blocks). Morphic.js. Research Expert at SAP; consultant at UC Berkeley."
   home: characters/jens-monig/
 
 representation:
-  consent_level: 3
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
   authored_by: don-hopkins
-  must_not: [impersonate, fabricate_quotes]
 
 invitation:
-  status: not_yet_asked
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
   show_seed: repo-shows/jens-monig/
 
 
-source:
-  projected_from: DonHopkins/characters/jens-monig/
-  live_repo: WillWrightShowForFood
+bio:
+  summary: "**Jens Mönig** — Architect and lead programmer of **Snap!** (formerly BYOB, \"Build Your Own Blocks\"), the block-based visual language used in UC Berkeley's *Beauty and Joy of Computing* curriculum, with design input + documentation by Brian Harvey. Built it on his own **Morphic.js** framework; Snap! has first-class lists, procedures, AND continuations (enough for the Y combinator). Previously on the MIT **Scratch** team and worked under **Alan Kay** on the GP language (with John Maloney + Yosh"
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Snap!_(programming_language)"
+  web:
+    - https://www.linkedin.com/in/moenig
+    - https://snap.berkeley.edu/about
+  papers: []
+  blogs: []

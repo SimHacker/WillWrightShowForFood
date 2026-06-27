@@ -1,11 +1,9 @@
 # Seymour Papert
 
-Invitation character — portrayal **about** Seymour Papert, not Seymour Papert.
+Invitation portrayal — **not** Seymour Papert. [Standards](../../schemas/portrayal-standards.yml)
 
 **Field:** Mathematician & educator — Constructionism, Logo
 
-Show seed: `repo-shows/seymour-papert/`
+[Invitation](invitation.md) · [Show seed](../../repo-shows/seymour-papert/)
 
-Draft invitation: [`invitation.md`](invitation.md) — *not sent* (`invitation_status: not_yet_asked`).
-
-Live repo: [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) — edit here, not DonHopkins backfill.
+Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

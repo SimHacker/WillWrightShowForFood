@@ -1,13 +1,26 @@
-# Invitation draft — Brian Harvey
+---
+status: draft
+character_id: brian-harvey
+public: true
+consent: not_yet_asked
+show_seed: repo-shows/brian-harvey/
+---
 
-*Not sent. Don to edit and send.*
+# Repo Show invitation — Brian Harvey
 
-We would love a **Repo Show** with you — the stage is this public GitHub repo; the audience RTFR on their own rigs; ideas follow through to code and MOOLLM skills.
+*Public draft — not sent. Brian Harvey may edit, decline, delay, or request removal at any time.*
+[Portrayal standards](../../schemas/portrayal-standards.yml)
 
-**Show seed:** `repo-shows/brian-harvey/`
+We would respectfully invite **Brian Harvey** to a **Repo Show** — a Micropolis Class
+conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood),
+following through to working code and credited ideas in public.
 
-**Browse:** https://github.com/SimHacker/WillWrightShowForFood
+**Proposed focus:** Computer science education; UC Berkeley (Teaching Professor Emeritus). Logo, Scheme, Snap!. Author; co-creator of The Beauty and Joy of Computing.
 
-**Repo Show format:** [`process/repo-show-format.yml`](../../process/repo-show-format.yml)
+**Materials:** [`repo-shows/brian-harvey/`](../../repo-shows/brian-harvey/)
 
-— Don Hopkins
+Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
+
+**Your response:** Accepted, delayed, too busy, declined, or no reply — all honored gracefully.
+
+— Don Hopkins, Micropolis Class

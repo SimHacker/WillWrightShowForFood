@@ -1,11 +1,9 @@
 # Ken Kahn
 
-Invitation character — portrayal **about** Ken Kahn, not Ken Kahn.
+Invitation portrayal — **not** Ken Kahn. [Standards](../../schemas/portrayal-standards.yml)
 
 **Field:** AI + visual programming for kids — ToonTalk; AI blocks for Snap! (eCraft2Learn)
 
-Show seed: `repo-shows/ken-kahn/`
+[Invitation](invitation.md) · [Show seed](../../repo-shows/ken-kahn/)
 
-Draft invitation: [`invitation.md`](invitation.md) — *not sent* (`invitation_status: not_yet_asked`).
-
-Live repo: [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) — edit here, not DonHopkins backfill.
+Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

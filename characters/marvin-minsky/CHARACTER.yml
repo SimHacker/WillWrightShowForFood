@@ -1,25 +1,33 @@
-# Marvin Minsky — INVITATION CHARACTER (public WWSFF portrayal)
-# NOT Marvin Minsky. See ../schemas/guest-invitation-status.yml
+# Marvin Minsky — invitation portrayal. NOT Marvin Minsky.
+# Standards: ../../schemas/portrayal-standards.yml
 
 character:
+  id: marvin-minsky
   name: "Marvin Minsky"
   type: invitation
-  real_being: legacy
   signifier: "🕯️"
   status: deceased
   field: "AI pioneer — Society of Mind, K-lines"
   home: characters/marvin-minsky/
 
 representation:
-  consent_level: legacy_kline
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 5
   authored_by: don-hopkins
-  must_not: [impersonate, fabricate_quotes]
 
 invitation:
-  status: not_yet_asked
+  status: legacy_only
+  consent: not_yet_asked
+  document: invitation.md
   show_seed: repo-shows/marvin-minsky/
   note: "deceased — reverence; legacy only"
 
-source:
-  projected_from: DonHopkins/characters/marvin-minsky/
-  live_repo: WillWrightShowForFood
+bio:
+  summary: "**Marvin Minsky** — AI pioneer, co-founder of the MIT AI Lab, author of *The Society of Mind*; originator of **K-lines** and **frames**."
+
+sources:
+  wikipedia: null
+  web:
+    []
+  papers: []
+  blogs: []

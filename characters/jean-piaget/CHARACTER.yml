@@ -1,25 +1,33 @@
-# Jean Piaget — INVITATION CHARACTER (public WWSFF portrayal)
-# NOT Jean Piaget. See ../schemas/guest-invitation-status.yml
+# Jean Piaget — invitation portrayal. NOT Jean Piaget.
+# Standards: ../../schemas/portrayal-standards.yml
 
 character:
+  id: jean-piaget
   name: "Jean Piaget"
   type: invitation
-  real_being: legacy
   signifier: "🕯️"
   status: deceased
   field: "Developmental psychologist — Constructivism"
   home: characters/jean-piaget/
 
 representation:
-  consent_level: legacy_kline
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 5
   authored_by: don-hopkins
-  must_not: [impersonate, fabricate_quotes]
 
 invitation:
-  status: not_yet_asked
+  status: legacy_only
+  consent: not_yet_asked
+  document: invitation.md
   show_seed: repo-shows/jean-piaget/
   note: "historical K-line only"
 
-source:
-  projected_from: DonHopkins/characters/jean-piaget/
-  live_repo: WillWrightShowForFood
+bio:
+  summary: "**Jean Piaget** — Swiss developmental psychologist whose **Constructivism** — children actively build knowledge through stages — underlies constructionist learning."
+
+sources:
+  wikipedia: null
+  web:
+    []
+  papers: []
+  blogs: []

@@ -2,15 +2,16 @@
 # Filtered public projections. Source: DonHopkins/characters/ (private) → sync manifest.
 
 meta:
-  schema: ../schemas/guest-invitation-status.yml
-  rule: "OK to say we'd love a show before asking. Track invitation_status honestly."
+  schema: ../schemas/invitation-workflow.yml
+  portrayal: ../schemas/portrayal-standards.yml
+  rule: "OK to list dream guests before asking. Track invitation.status honestly. Subject may edit or delete anytime."
 
 flagship:
   will-wright:
     name: Will Wright
     field: "SimCity, The Sims, Spore, Proxi"
-    invitation_status: not_yet_asked
-    invitation_note: "Draft invitation ready; phone 2026-06-24; repo link is THIS repo"
+    invitation_status: draft
+    invitation_note: "Public invitation.md in characters/will-wright/; phone 2026-06-24 — private details not in repo"
     show_seed: repo-shows/will-wright/
     consent: not_yet_asked
     path: characters/will-wright/

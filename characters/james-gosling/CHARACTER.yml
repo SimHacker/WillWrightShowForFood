@@ -1,25 +1,33 @@
-# James Gosling — INVITATION CHARACTER (public WWSFF portrayal)
-# NOT James Gosling. See ../schemas/guest-invitation-status.yml
+# James Gosling — invitation portrayal. NOT James Gosling.
+# Standards: ../../schemas/portrayal-standards.yml
 
 character:
+  id: james-gosling
   name: "James Gosling"
   type: invitation
-  real_being: true
   signifier: "☕"
   status: living
   field: "Window systems (Andrew, NeWS/SunDew), Gosling/UniPress Emacs, Java;"
   home: characters/james-gosling/
 
 representation:
-  consent_level: 3
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
   authored_by: don-hopkins
-  must_not: [impersonate, fabricate_quotes]
 
 invitation:
-  status: not_yet_asked
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
   show_seed: repo-shows/james-gosling/
 
 
-source:
-  projected_from: DonHopkins/characters/james-gosling/
-  live_repo: WillWrightShowForFood
+bio:
+  summary: "**James Gosling** — Father of Java; original designer/implementer of the **Andrew** window system (CMU, with David Rosenthal) and **NeWS/SunDew** (Sun), both network window systems that predated X11. Also wrote **Gosling Emacs** (sold by UniPress; RMS's \"Evil Software Hoarder Emacs\"). Self-described record-holder for \"the largest number of cheesy little extension languages.\""
+
+sources:
+  wikipedia: null
+  web:
+    []
+  papers: []
+  blogs: []

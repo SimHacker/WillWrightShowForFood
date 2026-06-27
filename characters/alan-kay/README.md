@@ -1,11 +1,9 @@
 # Alan Kay
 
-Invitation character — portrayal **about** Alan Kay, not Alan Kay.
+Invitation portrayal — **not** Alan Kay. [Standards](../../schemas/portrayal-standards.yml)
 
 **Field:** Computer scientist — Smalltalk, Dynabook, constructionism
 
-Show seed: `repo-shows/alan-kay-microworld.yml`
+[Invitation](invitation.md) · [Show seed](../../repo-shows/alan-kay-microworld.yml)
 
-Draft invitation: [`invitation.md`](invitation.md) — *not sent* (`invitation_status: not_yet_asked`).
-
-Live repo: [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) — edit here, not DonHopkins backfill.
+Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

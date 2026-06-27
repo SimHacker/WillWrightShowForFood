@@ -1,25 +1,35 @@
-# Brian Harvey — INVITATION CHARACTER (public WWSFF portrayal)
-# NOT Brian Harvey. See ../schemas/guest-invitation-status.yml
+# Brian Harvey — invitation portrayal. NOT Brian Harvey.
+# Standards: ../../schemas/portrayal-standards.yml
 
 character:
+  id: brian-harvey
   name: "Brian Harvey"
   type: invitation
-  real_being: true
   signifier: "🐢"
   status: living
   field: "Computer science education; UC Berkeley (Teaching Professor Emeritus). Logo, Scheme, Snap!. Author; co-creator of The Beauty and Joy of Computing."
   home: characters/brian-harvey/
 
 representation:
-  consent_level: 3
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
   authored_by: don-hopkins
-  must_not: [impersonate, fabricate_quotes]
 
 invitation:
-  status: not_yet_asked
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
   show_seed: repo-shows/brian-harvey/
 
 
-source:
-  projected_from: DonHopkins/characters/brian-harvey/
-  live_repo: WillWrightShowForFood
+bio:
+  summary: "**Brian Harvey** (he/him) — UC Berkeley CS educator (Teaching Professor Emeritus), a lifelong force in **computer science education**. Developed **Berkeley Logo**, co-developed **Snap!** (design + documentation) with Jens Mönig, and co-created **The Beauty and Joy of Computing (BJC)** curriculum with Dan Garcia. Author of *Computer Science Logo Style* (3 vols, MIT Press) and *Simply Scheme* (with Matthew Wright, foreword by Hal Abelson); taught the legendary SICP-based **CS 61A**. Karlstrom Outs"
+
+sources:
+  wikipedia: null
+  web:
+    - https://people.eecs.berkeley.edu/~bh/
+    - https://www2.eecs.berkeley.edu/Faculty/Homepages/harvey.html
+    - https://snap.berkeley.edu/about
+  papers: []
+  blogs: []

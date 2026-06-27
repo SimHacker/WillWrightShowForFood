@@ -1,25 +1,33 @@
-# Ken Kahn — INVITATION CHARACTER (public WWSFF portrayal)
-# NOT Ken Kahn. See ../schemas/guest-invitation-status.yml
+# Ken Kahn — invitation portrayal. NOT Ken Kahn.
+# Standards: ../../schemas/portrayal-standards.yml
 
 character:
+  id: ken-kahn
   name: "Ken Kahn"
   type: invitation
-  real_being: true
   signifier: "👤"
   status: living
   field: "AI + visual programming for kids — ToonTalk; AI blocks for Snap! (eCraft2Learn)"
   home: characters/ken-kahn/
 
 representation:
+  governed_by: ../../schemas/portrayal-standards.yml
   consent_level: 3
   authored_by: don-hopkins
-  must_not: [impersonate, fabricate_quotes]
 
 invitation:
-  status: not_yet_asked
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
   show_seed: repo-shows/ken-kahn/
 
 
-source:
-  projected_from: DonHopkins/characters/ken-kahn/
-  live_repo: WillWrightShowForFood
+bio:
+  summary: "**Ken Kahn** — creator of **ToonTalk** (a game-like visual programming world for kids) and the **eCraft2Learn AI blocks** for **Snap!** (speech recognition/synthesis, ML, pattern recognition — in the browser, kid-accessible). An all-around nice, interesting-to-talk-to guy."
+
+sources:
+  wikipedia: null
+  web:
+    - https://ecraft2learn.github.io/ai/):
+  papers: []
+  blogs: []

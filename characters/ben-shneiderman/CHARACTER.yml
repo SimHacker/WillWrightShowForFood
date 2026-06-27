@@ -1,25 +1,33 @@
-# Ben Shneiderman — INVITATION CHARACTER (public WWSFF portrayal)
-# NOT Ben Shneiderman. See ../schemas/guest-invitation-status.yml
+# Ben Shneiderman — invitation portrayal. NOT Ben Shneiderman.
+# Standards: ../../schemas/portrayal-standards.yml
 
 character:
+  id: ben-shneiderman
   name: "Ben Shneiderman"
   type: invitation
-  real_being: true
   signifier: "👤"
   status: living
   field: "HCI researcher — UMD HCIL, direct manipulation, embedded/highlighted hyperlinks"
   home: characters/ben-shneiderman/
 
 representation:
+  governed_by: ../../schemas/portrayal-standards.yml
   consent_level: 3
   authored_by: don-hopkins
-  must_not: [impersonate, fabricate_quotes]
 
 invitation:
-  status: not_yet_asked
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
   show_seed: repo-shows/ben-shneiderman/
 
 
-source:
-  projected_from: DonHopkins/characters/ben-shneiderman/
-  live_repo: WillWrightShowForFood
+bio:
+  summary: "**Ben Shneiderman** — HCI pioneer who coined \"**direct manipulation**,\" invented embedded/highlighted hyperlinks, and founded the University of Maryland HCIL."
+
+sources:
+  wikipedia: null
+  web:
+    []
+  papers: []
+  blogs: []

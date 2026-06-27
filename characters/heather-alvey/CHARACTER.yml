@@ -1,25 +1,33 @@
-# Heather Alvey — INVITATION CHARACTER (public WWSFF portrayal)
-# NOT Heather Alvey. See ../schemas/guest-invitation-status.yml
+# Heather Alvey — invitation portrayal. NOT Heather Alvey.
+# Standards: ../../schemas/portrayal-standards.yml
 
 character:
+  id: heather-alvey
   name: "Heather Alvey"
   type: invitation
-  real_being: true
   signifier: "👤"
   status: living
   field: "SimFreaks + Steve Alvey SimSlice"
   home: characters/heather-alvey/
 
 representation:
+  governed_by: ../../schemas/portrayal-standards.yml
   consent_level: 3
   authored_by: don-hopkins
-  must_not: [impersonate, fabricate_quotes]
 
 invitation:
-  status: not_yet_asked
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
   show_seed: repo-shows/heather-steve-alvey/
   note: "SimFreaks + Steve Alvey SimSlice"
 
-source:
-  projected_from: DonHopkins/characters/heather-alvey/
-  live_repo: WillWrightShowForFood
+bio:
+  summary: "SimFreaks + Steve Alvey SimSlice"
+
+sources:
+  wikipedia: null
+  web:
+    []
+  papers: []
+  blogs: []

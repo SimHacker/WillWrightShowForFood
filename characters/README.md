@@ -1,24 +1,49 @@
 # characters/
 
-**Invitation characters** — public portrayals of people we'd love on a Repo Show.
-Not impersonation; representation-ethics. `invitation_status: not_yet_asked` until Don sends.
+Public **invitation portrayals** — polite, verifiable, respectful. **Not** the real people.
 
-| Tier | Who |
-|------|-----|
-| **Flagship** | [`will-wright/`](will-wright/) |
-| **Host** | [`don-hopkins/`](don-hopkins/) |
-| **Orchestrator** | [`don-philahue/`](don-philahue/) (homage MC) |
-| **Sidekick** | [`slats/`](slats/) (fictional — RoboResurrection quest) |
-| **Guests** | See [`INDEX.yml`](INDEX.yml) |
+## Read once
 
-Each guest dir (when scaffolded):
+| Doc | Purpose |
+|-----|---------|
+| [**Portrayal standards**](../schemas/portrayal-standards.yml) | Tone, citations, subject rights, what we avoid — **not repeated in each character** |
+| [**Invitation workflow**](../schemas/invitation-workflow.yml) | `draft` → `review` → `finished` → `sent` → `replied` / `accepted` / `delayed` / `declined` / … |
+| [**Roster**](INDEX.yml) | All guests + invitation status |
 
-- `CHARACTER.yml` — yaml girder + invitation block
-- `GLANCE.md` — one-screen sniff
-- `README.md` — markdown facade
-- `invitation.md` — draft invitation (not sent until Don edits)
+## Host (self-sovereign)
 
-**Live repo:** edit here in WWSFF; DonHopkins is source archive on hold for projected content.
-See [`../process/live-repo.yml`](../process/live-repo.yml).
+**[Don Hopkins](don-hopkins/)** — `consent: self_sovereign`. Simulation of Don permitted by Don.
+Other metadata simplified; see [`don-hopkins/CHARACTER.yml`](don-hopkins/CHARACTER.yml).
 
-Scaffold missing guests: `node scripts/scaffold-invitation-characters.mjs`
+## Flagship guest
+
+**[Will Wright](will-wright/)** — richest portrayal (this show is about him). Subdirs: [`portrayal/`](will-wright/portrayal/), public [`invitation.md`](will-wright/invitation.md) (`status: draft`).
+
+## Everyone else
+
+Uniform baseline per directory:
+
+| File | Role |
+|------|------|
+| `CHARACTER.yml` | Yaml girder — bio, sources, invitation.status |
+| `GLANCE.md` | One-screen sniff |
+| `README.md` | Markdown facade |
+| `invitation.md` | **Public invitation** — link from email; no private email/phone/GitHub-account requirements |
+
+Template: [`_TEMPLATE/`](_TEMPLATE/)
+
+Normalize guests from DonHopkins sources: `pnpm run normalize:characters`
+
+## Fictional / orchestrator
+
+| Who | Role |
+|-----|------|
+| [don-philahue/](don-philahue/) | MC orchestrator (homage) |
+| [slats/](slats/) | RoboResurrection sidekick |
+
+## Subject rights
+
+Any portrayed person may request **correction, edit, or deletion** — we comply gracefully.
+Declines, delays, and silence are honored. See portrayal standards.
+
+Live repo: [process/live-repo.yml](../process/live-repo.yml)

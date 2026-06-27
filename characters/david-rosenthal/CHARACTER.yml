@@ -1,25 +1,33 @@
-# David S. H. Rosenthal — INVITATION CHARACTER (public WWSFF portrayal)
-# NOT David S. H. Rosenthal. See ../schemas/guest-invitation-status.yml
+# David S. H. Rosenthal — invitation portrayal. NOT David S. H. Rosenthal.
+# Standards: ../../schemas/portrayal-standards.yml
 
 character:
+  id: david-rosenthal
   name: "David S. H. Rosenthal"
   type: invitation
-  real_being: true
   signifier: "🗄️"
   status: living
   field: "NeWS (with Gosling), X11 ICCCM + X security, Andrew (CMU), Nvidia #4, LOCKSS digital preservation (Stanford Libraries)"
   home: characters/david-rosenthal/
 
 representation:
-  consent_level: 3
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
   authored_by: don-hopkins
-  must_not: [impersonate, fabricate_quotes]
 
 invitation:
-  status: not_yet_asked
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
   show_seed: repo-shows/david-rosenthal/
 
 
-source:
-  projected_from: DonHopkins/characters/david-rosenthal/
-  live_repo: WillWrightShowForFood
+bio:
+  summary: "**David S. H. Rosenthal (DSHR)** — Co-developer of **NeWS** with James Gosling at Sun (co-author of *The NeWS Book*), and — uniquely — also a key architect of its winning rival **X11** (he wrote the **ICCCM** and holds an X security patent). Worked on **Andrew** at CMU with Gosling; **employee #4 and chief scientist at Nvidia**; then **Chief Scientist of LOCKSS** (Lots Of Copies Keep Stuff Safe) at Stanford Libraries — long-term **digital preservation** (2025 Paul Evan Peters Award). Born 1948, "
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/David_S._H._Rosenthal"
+  web:
+    []
+  papers: []
+  blogs: []

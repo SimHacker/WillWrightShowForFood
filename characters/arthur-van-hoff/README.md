@@ -1,11 +1,9 @@
 # Arthur van Hoff
 
-Invitation character — portrayal **about** Arthur van Hoff, not Arthur van Hoff.
+Invitation portrayal — **not** Arthur van Hoff. [Standards](../../schemas/portrayal-standards.yml)
 
 **Field:** NeWS/HyperLook, PdB compiler, early Java (compiler-in-Java, AWT, HotJava), Marimba (Castanet/Bongo), TiVo, Flipboard, Jaunt VR
 
-Show seed: `repo-shows/arthur-van-hoff/`
+[Invitation](invitation.md) · [Show seed](../../repo-shows/arthur-van-hoff/)
 
-Draft invitation: [`invitation.md`](invitation.md) — *not sent* (`invitation_status: not_yet_asked`).
-
-Live repo: [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) — edit here, not DonHopkins backfill.
+Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

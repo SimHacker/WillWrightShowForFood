@@ -1,25 +1,33 @@
-# Yoot Saito — INVITATION CHARACTER (public WWSFF portrayal)
-# NOT Yoot Saito. See ../schemas/guest-invitation-status.yml
+# Yoot Saito — invitation portrayal. NOT Yoot Saito.
+# Standards: ../../schemas/portrayal-standards.yml
 
 character:
+  id: yoot-saito
   name: "Yoot Saito"
   type: invitation
-  real_being: true
   signifier: "👤"
   status: living
   field: "Game designer — The Tower / SimTower, Yoot Tower, Seaman, Odama; founder of OPeNBooK (1993) & Vivarium (1996)"
   home: characters/yoot-saito/
 
 representation:
+  governed_by: ../../schemas/portrayal-standards.yml
   consent_level: 3
   authored_by: don-hopkins
-  must_not: [impersonate, fabricate_quotes]
 
 invitation:
-  status: not_yet_asked
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
   show_seed: repo-shows/yoot-saito/
 
 
-source:
-  projected_from: DonHopkins/characters/yoot-saito/
-  live_repo: WillWrightShowForFood
+bio:
+  summary: "**Yoot Saito** — Japanese game designer behind **The Tower / SimTower**, **Seaman**, and **Odama**; interviewer of Alan Kay (1993)."
+
+sources:
+  wikipedia: null
+  web:
+    []
+  papers: []
+  blogs: []

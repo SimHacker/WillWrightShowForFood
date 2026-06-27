@@ -1,13 +1,6 @@
-# Invitation draft — Marvin Minsky
+# Marvin Minsky — legacy K-line
 
-*Not sent. Don to edit and send.*
+*Historical constructionist lineage — not a living invitation.*
+[Portrayal standards](../../schemas/portrayal-standards.yml)
 
-We would love a **Repo Show** with you — the stage is this public GitHub repo; the audience RTFR on their own rigs; ideas follow through to code and MOOLLM skills.
-
-**Show seed:** `repo-shows/marvin-minsky/`
-
-**Browse:** https://github.com/SimHacker/WillWrightShowForFood
-
-**Repo Show format:** [`process/repo-show-format.yml`](../../process/repo-show-format.yml)
-
-— Don Hopkins
+Respectful portrayal of public legacy and published work for Micropolis Class attribution.

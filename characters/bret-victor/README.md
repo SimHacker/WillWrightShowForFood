@@ -1,11 +1,9 @@
 # Bret Victor
 
-Invitation character — portrayal **about** Bret Victor, not Bret Victor.
+Invitation portrayal — **not** Bret Victor. [Standards](../../schemas/portrayal-standards.yml)
 
 **Field:** Interface researcher — explorable explanations, Dynamicland
 
-Show seed: `repo-shows/bret-victor/`
+[Invitation](invitation.md) · [Show seed](../../repo-shows/bret-victor/)
 
-Draft invitation: [`invitation.md`](invitation.md) — *not sent* (`invitation_status: not_yet_asked`).
-
-Live repo: [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) — edit here, not DonHopkins backfill.
+Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

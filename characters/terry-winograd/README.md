@@ -1,11 +1,9 @@
 # Terry Winograd
 
-Invitation character — portrayal **about** Terry Winograd, not Terry Winograd.
+Invitation portrayal — **not** Terry Winograd. [Standards](../../schemas/portrayal-standards.yml)
 
 **Field:** HCI, interaction design, constructionist-adjacent education, Stanford CS547 seminar series, SHRDLU legacy
 
-Show seed: `repo-shows/terry-winograd/`
+[Invitation](invitation.md) · [Show seed](../../repo-shows/terry-winograd/)
 
-Draft invitation: [`invitation.md`](invitation.md) — *not sent* (`invitation_status: not_yet_asked`).
-
-Live repo: [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) — edit here, not DonHopkins backfill.
+Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

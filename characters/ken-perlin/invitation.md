@@ -1,13 +1,26 @@
-# Invitation draft — Ken Perlin
+---
+status: draft
+character_id: ken-perlin
+public: true
+consent: not_yet_asked
+show_seed: repo-shows/ken-perlin/
+---
 
-*Not sent. Don to edit and send.*
+# Repo Show invitation — Ken Perlin
 
-We would love a **Repo Show** with you — the stage is this public GitHub repo; the audience RTFR on their own rigs; ideas follow through to code and MOOLLM skills.
+*Public draft — not sent. Ken Perlin may edit, decline, delay, or request removal at any time.*
+[Portrayal standards](../../schemas/portrayal-standards.yml)
 
-**Show seed:** `repo-shows/ken-perlin/`
+We would respectfully invite **Ken Perlin** to a **Repo Show** — a Micropolis Class
+conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood),
+following through to working code and credited ideas in public.
 
-**Browse:** https://github.com/SimHacker/WillWrightShowForFood
+**Proposed focus:** Procedural graphics, Perlin noise, interactive Java demos, NYU, constructionist-adjacent teaching through runnable artifacts
 
-**Repo Show format:** [`process/repo-show-format.yml`](../../process/repo-show-format.yml)
+**Materials:** [`repo-shows/ken-perlin/`](../../repo-shows/ken-perlin/)
 
-— Don Hopkins
+Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
+
+**Your response:** Accepted, delayed, too busy, declined, or no reply — all honored gracefully.
+
+— Don Hopkins, Micropolis Class

@@ -1,0 +1,23 @@
+# Contact queue — who to reach next (reorder as workflow progresses)
+# invitation.status lives in each characters/<id>/CHARACTER.yml + invitation.md
+
+meta:
+  note: "Priority order for finishing invitations — not pressure on guests"
+
+next:
+  - id: will-wright
+    why: "Flagship kickoff — invitation.md draft ready for review → finished → sent"
+  - id: brian-harvey
+    why: "Snap!/Logo headline with Jens — educators pillar"
+  - id: jens-monig
+    why: "Joint with Brian — Snap! × Micropolis"
+  - id: walter-bender
+    why: "OLPC + skill-creation show"
+  - id: terry-winograd
+    why: "Forebear archive — CS547 treasure trove"
+
+later: "Remaining guests invitation.status: draft — enrich sources then review"
+
+see_also:
+  - INDEX.yml
+  - ../schemas/invitation-workflow.yml

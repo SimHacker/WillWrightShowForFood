@@ -1,11 +1,9 @@
 # Jens Mönig
 
-Invitation character — portrayal **about** Jens Mönig, not Jens Mönig.
+Invitation portrayal — **not** Jens Mönig. [Standards](../../schemas/portrayal-standards.yml)
 
 **Field:** Visual/block programming languages; architect + lead programmer of Snap! (Build Your Own Blocks). Morphic.js. Research Expert at SAP; consultant at UC Berkeley.
 
-Show seed: `repo-shows/jens-monig/`
+[Invitation](invitation.md) · [Show seed](../../repo-shows/jens-monig/)
 
-Draft invitation: [`invitation.md`](invitation.md) — *not sent* (`invitation_status: not_yet_asked`).
-
-Live repo: [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) — edit here, not DonHopkins backfill.
+Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.
