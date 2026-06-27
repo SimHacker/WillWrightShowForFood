@@ -25,8 +25,8 @@ download → install → configure → use → replicate → mash up
 
 ## Doorways that use this trail
 
-[AI](entryways/ai-coder.md) · [Retro](entryways/retro.md)
+[AI](../entryways/ai-coder.md) · [Retro](../entryways/retro.md)
 
 ---
 
-← [All trails](../../TRAILS.md) · [Museum map](entryways/README.md)
+← [All trails](../../TRAILS.md) · [Museum map](../entryways/README.md)

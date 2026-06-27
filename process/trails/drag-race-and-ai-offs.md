@@ -28,8 +28,8 @@ Game-show formats inside Repo Show — declare class honestly; Slats judges; ai-
 
 ## Doorways that use this trail
 
-[Watcher](entryways/watcher.md) · [Player](entryways/player.md) · [AI](entryways/ai-coder.md) · [Guest — Will](entryways/guest-will.md)
+[Watcher](../entryways/watcher.md) · [Player](../entryways/player.md) · [AI](../entryways/ai-coder.md) · [Guest — Will](../entryways/guest-will.md)
 
 ---
 
-← [All trails](../../TRAILS.md) · [Museum map](entryways/README.md)
+← [All trails](../../TRAILS.md) · [Museum map](../entryways/README.md)

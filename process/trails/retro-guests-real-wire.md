@@ -23,8 +23,8 @@ Emulated AI Lab meets FujiNet tree fort — guests who boot real stacks on air.
 
 ## Doorways that use this trail
 
-[Retro doorway](entryways/retro.md) · [retrocomputing_drive](retrocomputing-drive.md)
+[Retro doorway](../entryways/retro.md) · [retrocomputing_drive](retrocomputing-drive.md)
 
 ---
 
-← [All trails](../../TRAILS.md) · [Museum map](entryways/README.md)
+← [All trails](../../TRAILS.md) · [Museum map](../entryways/README.md)

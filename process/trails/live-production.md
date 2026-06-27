@@ -23,8 +23,8 @@ Live bus for prompts, model shifts, and GitHub doc links — Philahue surfaces a
 
 ## Doorways that use this trail
 
-[Watcher](entryways/watcher.md) · [AI](entryways/ai-coder.md)
+[Watcher](../entryways/watcher.md) · [AI](../entryways/ai-coder.md)
 
 ---
 
-← [All trails](../../TRAILS.md) · [Museum map](entryways/README.md)
+← [All trails](../../TRAILS.md) · [Museum map](../entryways/README.md)

@@ -230,6 +230,17 @@ trails_pitch:
     - { id: rig_personas, human: trails/rig-personas.md, pitch: "download → install → configure → replicate → mash up" }
     - { id: schemas_and_ethics, human: trails/schemas-and-ethics.md, pitch: "Contracts before characters — portrayal and rig shape" }
     - { id: archive_and_provenance, human: trails/archive-and-provenance.md, pitch: "Public bud vs private archive — export log, primary sources, honest status" }
+    - { id: game_design_lineage, human: trails/game-design-lineage.md, pitch: "Toys, possibility space, player types — Wright, Yoot, Bartle, Librande, Gingold" }
+    - { id: direct_manipulation, human: trails/direct-manipulation.md, pitch: "See it, touch it, change it live — Shneiderman, Myers, Victor, Winograd" }
+    - { id: live_objects, human: trails/live-objects.md, pitch: "Smalltalk → Self → NeWS → Java — Kay, Ungar, Gosling, van Hoff, Rosenthal" }
+    - { id: procedural_beauty, human: trails/procedural-beauty.md, pitch: "Generative art + runnable artifacts — Perlin, Debevec, Levin, Cerveny" }
+    - { id: maxis_sims_lineage, human: trails/maxis-sims-lineage.md, pitch: "SimCity → Dollhouse → The Sims → Spore — the genealogy + 167 source images" }
+    - { id: the_card_game, human: trails/the-card-game.md, pitch: "Stack guest CARDs as MTG verbs — combos across guests; Slats judges" }
+
+trails_pitch_wacky:
+  note: "Get weird — put after the serious stuff. Reactor: crazy-idea-jam.yml / CRAZY-IDEA-JAM.md"
+  items:
+    - { id: stupid_fun_forward, human: trails/stupid-fun-forward.md, pitch: "RoboResurrection, soul bridges, cells that travel between games — Stupid Fun Club energy aimed at the future" }
 
 rooms_pitch:
   human: entryways/rooms.md

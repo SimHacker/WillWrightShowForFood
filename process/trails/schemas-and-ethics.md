@@ -23,8 +23,8 @@ Portrayal standards, invitations, rig shape, markup facades — read contracts b
 
 ## Doorways that use this trail
 
-[Guest — anyone](entryways/guest-any.md) · [Hacker](entryways/hacker.md) · [Publisher](entryways/publisher.md)
+[Guest — anyone](../entryways/guest-any.md) · [Hacker](../entryways/hacker.md) · [Publisher](../entryways/publisher.md)
 
 ---
 
-← [All trails](../../TRAILS.md) · [Museum map](entryways/README.md)
+← [All trails](../../TRAILS.md) · [Museum map](../entryways/README.md)

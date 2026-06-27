@@ -27,10 +27,10 @@ Same spec CARD — you declare languages, tools, platform, emulator. SETUP DNA i
 
 ## Doorways that use this trail
 
-[Retro doorway](entryways/retro.md)
+[Retro doorway](../entryways/retro.md)
 
 **Also:** [retro_guests_real_wire](retro-guests-real-wire.md) for Lars + Thomas guest arcs
 
 ---
 
-← [All trails](../../TRAILS.md) · [Museum map](entryways/README.md)
+← [All trails](../../TRAILS.md) · [Museum map](../entryways/README.md)

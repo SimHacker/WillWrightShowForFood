@@ -20,6 +20,22 @@ Playlists ([**entryways**](process/entryways/README.md)) are **ordered tours**. 
 | [rig_personas](process/trails/rig-personas.md) | *Your rig IS your drag persona* | download → install → configure → replicate → mash up |
 | [schemas_and_ethics](process/trails/schemas-and-ethics.md) | *Contracts before characters* | Portrayal, invitations, rig shape, markup facades |
 | [archive_and_provenance](process/trails/archive-and-provenance.md) | *Source, don't paraphrase* | Public bud vs private archive — export log, primary sources |
+| [game_design_lineage](process/trails/game-design-lineage.md) | *What is a game?* | Toys, possibility space, MUDs, one-page design, reverse-engineered history |
+| [direct_manipulation](process/trails/direct-manipulation.md) | *See it, touch it, change it live* | Shneiderman → Myers → Victor — the interface IS the idea |
+| [live_objects](process/trails/live-objects.md) | *The machine is alive* | Smalltalk → Self → NeWS → Java; the lineage behind HyperLook |
+| [procedural_beauty](process/trails/procedural-beauty.md) | *Generative art, runnable artifacts* | Perlin noise, Light Stage, audiovisual art, maps |
+| [maxis_sims_lineage](process/trails/maxis-sims-lineage.md) | *SimCity → Dollhouse → The Sims → Spore* | The genealogy this repo grew from — with primary-source images |
+| [the_card_game](process/trails/the-card-game.md) | *Build a segment deck* | Guest CARDs as MTG verbs; combos across guests; Slats judges |
+
+---
+
+## 🤯 ...and one for getting weird
+
+| Trail | K-line | One line |
+|-------|--------|----------|
+| [**stupid_fun_forward**](process/trails/stupid-fun-forward.md) | *Get weird — coolest, whackiest, most forward-thinking* | RoboResurrection, soul bridges, cells that travel between games |
+
+Reactor: [**Crazy Idea Jam**](process/CRAZY-IDEA-JAM.md) · [`process/crazy-idea-jam.yml`](process/crazy-idea-jam.yml)
 
 ---
 

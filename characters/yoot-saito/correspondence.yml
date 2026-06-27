@@ -1,0 +1,40 @@
+# Yoot Saito × Don Hopkins — correspondence summary (public-safe)
+# A tight, public-safe digest of a real exchange. NOT the full private thread.
+# Full text lives in the private archive (provenance below). Published with the same care
+# as the rest of this directory: factual, polite, revocable. Subject may correct or remove.
+# Standards: ../../schemas/portrayal-standards.yml | Exemplar format — see characters/README.md
+
+meta:
+  with: yoot-saito
+  curated_by: don-hopkins
+  consent: not_yet_asked            # summary is public-safe + factual; full thread stays private until consent
+  span: "2024–2025"
+  provenance_private: SimHacker/DonHopkins/characters/don-hopkins/correspondence/yoot-saito.yml
+
+gist: |
+  Don reached out to Yoot Saito about the Alan Kay interview Yoot conducted in Japan (1993) for
+  the 25th anniversary of Engelbart's 1968 "Mother of All Demos." Don helped clean up the OCR'd
+  transcript — fixing name errors (Metcalfe, Engelbart, Cheadle, PDP-10, Euler) and preparing an
+  annotated edition with a glossary of people, orgs, technologies, and a timeline. The thread also
+  turned toward a browser-based Yoot Tower edition (WASM / WebGL / Svelte) — Don eager to help.
+
+threads:
+  alan_kay_interview_1993:
+    what: "Yoot interviewed Alan Kay in Japan; the transcript covers Engelbart's demo, PARC, the Alto, Smalltalk, Ed Cheadle and the Flex Machine, Sutherland's Sketchpad, and Wes Clark's LINC."
+    don_contribution: "OCR cleanup, name corrections, annotated edition + glossary"
+    why_it_matters: "Primary-source computing history, lovingly restored — exactly the archivist spirit of this repo"
+  yoot_tower_browser:
+    what: "A browser edition of Yoot Tower on the modern web stack (WASM/WebGL/Svelte)"
+    connects_to: "Don's MicropolisCore WASM + SvelteKit work — same porting playbook"
+
+connects_in_repo:
+  - { path: CHARACTER.yml, why: "Bio + invitation status for Yoot" }
+  - { path: ../alan-kay/, why: "The interview subject — Smalltalk, Dynabook, late binding" }
+  - { path: ../../process/trails/live-objects.md, why: "Alan Kay → Self → NeWS lineage this interview anchors" }
+  - { path: ../../process/trails/game-design-lineage.md, why: "Yoot's sim toys among the designers" }
+  - { path: ../../process/crazy-idea-jam.yml#yoot_boot_and_seaman, why: "YOOT BOOT successor + Seaman energy" }
+
+show_hooks:
+  - "Decode the Alan Kay 1993 interview on air — primary-source history segment"
+  - "Port Yoot Tower to the browser live — the WASM/Svelte playbook in action"
+  - "Name the clean-room successor WITH Yoot, on air (working title: YOOT BOOT)"

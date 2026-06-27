@@ -70,6 +70,10 @@ live_and_training:
 vision:
   vision-and-ambition.yml:
     markup: VISION.md
+  crazy-idea-jam.yml:
+    markup: CRAZY-IDEA-JAM.md
+    topic: "Wacky + forward-thinking idea reactor — curated public-safe from Don's crystallized notes"
+    trail: cross-links.yml#stupid_fun_forward
 
 markup_facades:
   registry: markup-facades.yml

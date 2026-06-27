@@ -24,8 +24,8 @@ The show **is** the repo — RTFR, play on your rig, harvest skills back into th
 
 ## Doorways that use this trail
 
-[Producer](entryways/producer.md) · [Watcher](entryways/watcher.md) · [Guest — anyone](entryways/guest-any.md) · [Publisher](entryways/publisher.md)
+[Producer](../entryways/producer.md) · [Watcher](../entryways/watcher.md) · [Guest — anyone](../entryways/guest-any.md) · [Publisher](../entryways/publisher.md)
 
 ---
 
-← [All trails](../../TRAILS.md) · [Museum map](entryways/README.md)
+← [All trails](../../TRAILS.md) · [Museum map](../entryways/README.md)

@@ -156,6 +156,95 @@ trails:
       - { path: ../characters/README.md, why: "Contribution channels — self-edit or email assisted" }
       - { path: vision-and-ambition.yml, why: "Forebears and long arc in yaml girder" }
 
+  game_design_lineage:
+    k_line: "What is a game? Toys, possibility space, player types"
+    human: trails/game-design-lineage.md
+    why: "Designers across genres — simulation toys, MUDs, one-page systems, reverse-engineered history"
+    nodes:
+      - { path: ../characters/will-wright/, why: "Toys not games — possibility space, the Simulator Effect" }
+      - { path: ../characters/yoot-saito/, why: "The Tower/SimTower, Seaman, Odama — Japanese sim toys" }
+      - { path: ../characters/stone-librande/, why: "One-page designs — a whole system on one dense page" }
+      - { path: ../characters/richard-bartle/, why: "MUD1 (1978) + the Bartle taxonomy of player types (incarnated with permission)" }
+      - { path: ../characters/chaim-gingold/, why: "Building SimCity — the simulation loop drawn as diagrams" }
+      - { path: ../characters/jason-shankel/, why: "Maxis / Stupid Fun Club alumnus — games + AI" }
+      - { path: ../characters/slats/judge-rubric.yml, why: "Flair vs spreadsheet — how design gets judged on air" }
+
+  direct_manipulation:
+    k_line: "See it, touch it, change it live"
+    human: trails/direct-manipulation.md
+    why: "Direct manipulation, programming by demonstration, media for thought — the interface IS the idea"
+    nodes:
+      - { path: ../characters/ben-shneiderman/, why: "Coined 'direct manipulation'; embedded highlighted hyperlinks; UMD HCIL" }
+      - { path: ../characters/brad-myers/, why: "Garnet/Peridot/C32; programming by demonstration; VPL taxonomy (Don's lab ~1992)" }
+      - { path: ../characters/bret-victor/, why: "Explorable explanations; Inventing on Principle; Dynamicland" }
+      - { path: ../characters/terry-winograd/, why: "Stanford HCI; CS547 seminar host of the 1996 talk" }
+      - { path: ../characters/don-hopkins/CARD.yml, why: "Pie menus + PostScript UI — direct manipulation in practice" }
+
+  live_objects:
+    k_line: "The machine is alive — late binding, live objects, network windows"
+    human: trails/live-objects.md
+    why: "Smalltalk → Self → NeWS → Java; the live-object lineage behind HyperLook and SimCity"
+    nodes:
+      - { path: ../characters/alan-kay/, why: "Smalltalk, true object-orientation, late binding, the Dynabook" }
+      - { path: ../characters/david-ungar/, why: "Self — prototypes and mirrors; adaptive simplicity" }
+      - { path: ../repo-shows/david-ungar-self-moollm.yml, why: "Self × MOOLLM — directories as prototypes, Stage Magic Principle" }
+      - { path: ../characters/james-gosling/, why: "NeWS/SunDew, Gosling Emacs, Java — network window systems before X11" }
+      - { path: ../characters/arthur-van-hoff/, why: "GoodNeWS → HyperLook (a NeWS HyperCard), PdB compiler, early Java/HotJava" }
+      - { path: ../characters/david-rosenthal/, why: "NeWS with Gosling + X11 ICCCM; The NeWS Book; LOCKSS preservation" }
+      - { path: ../characters/don-hopkins/career/simcity-lineage.yml, why: "SimCity on NeWS/HyperLook with pie menus — the lineage in action" }
+
+  procedural_beauty:
+    k_line: "Procedural texture, generative art, runnable artifacts"
+    human: trails/procedural-beauty.md
+    why: "Noise, light, audiovisual art, maps — beauty you can run and remix"
+    nodes:
+      - { path: ../characters/ken-perlin/, why: "Perlin noise; interactive Java demos; teaching through runnable artifacts (NYU)" }
+      - { path: ../characters/paul-debevec/, why: "Light Stage; image-based lighting; photogrammetry; virtual production" }
+      - { path: ../characters/golan-levin/, why: "Computational media art; audiovisual interfaces; Interval colleague of Don & Debevec" }
+      - { path: ../characters/ben-cerveny/, why: "Game Neverending → Flickr; Stamen map viz; Planetary; public code" }
+
+  maxis_sims_lineage:
+    k_line: "SimCity → Dollhouse → The Sims → Spore"
+    human: trails/maxis-sims-lineage.md
+    why: "The specific genealogy this repo grew from — with its primary-source images"
+    nodes:
+      - { path: ../characters/don-hopkins/career/simcity-lineage.yml, why: "35-year arc — NeWS port → Sims tools → Micropolis → web" }
+      - { path: ../characters/will-wright/, why: "SimCity, the Dollhouse demo, The Sims, Spore" }
+      - { path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "Primary source — Dollhouse → Sims screenshots (167 images)" }
+      - { path: ../repo-shows/will-wright/slats-reincarnation.yml, why: "Stupid Fun Club robot resurrection — shared SFC lineage" }
+      - { path: ../characters/chaim-gingold/, why: "Building SimCity — history + reverse diagrams" }
+      - { path: ../characters/jason-shankel/, why: "Maxis / SFC alumnus — games + AI" }
+      - { path: ../characters/don-hopkins/career/stupid-fun-club.yml, why: "Robots among humans — the post-Maxis lab" }
+
+  the_card_game:
+    k_line: "Build a segment deck — stack guest abilities"
+    human: trails/the-card-game.md
+    why: "Every guest CARD is MTG-style invokable verbs; combos link cards across guests; Slats judges"
+    nodes:
+      - { path: ../schemas/guest-skills-card.yml, why: "SCREAMING-KEBAB ability schema — advertisement scoring" }
+      - { path: ../characters/_TEMPLATE/CARD.yml, why: "Copy-me ability card — declare your verbs" }
+      - { path: ../characters/will-wright/CARD.yml, why: "Flagship — DOLLHOUSE-TO-SIMS combos with CHAIM-REVERSE-ENGINEER" }
+      - { path: ../characters/don-hopkins/CARD.yml, why: "Host — DON-PROGRAM-ROBOT-BRAIN combos into STUPID-FUN-CLUB" }
+      - { path: ../characters/slats/CARD.yml, why: "Fictional but fierce — JUDGE-FLAIR, ROBO-RESURRECT" }
+      - { path: ../characters/slats/judge-rubric.yml, why: "Flair vs spreadsheet scoring" }
+      - { path: ../characters/CARD.yml, why: "Guest room interface — per-person verbs" }
+      - { path: https://github.com/SimHacker/moollm/skills/advertisement, why: "How abilities score, Sims-style" }
+
+  stupid_fun_forward:
+    k_line: "Get weird — the coolest, whackiest, most forward-thinking stuff"
+    human: trails/stupid-fun-forward.md
+    why: "The crazy idea reactor — robo-resurrection, soul bridges, cells that travel between games"
+    nodes:
+      - { path: crazy-idea-jam.yml, why: "The reactor — every wacky idea in one girder" }
+      - { path: CRAZY-IDEA-JAM.md, why: "Human view — tight blurbs, grouped" }
+      - { path: ../repo-shows/will-wright/slats-reincarnation.yml, why: "SLATS LIVES — RoboResurrection on Easter, robopoetry ceremony" }
+      - { path: ../characters/slats/CARD.yml, why: "Robot waiter abilities — SEEK-GENETIC-MATERIAL, ROBO-RESURRECT" }
+      - { path: ../characters/don-hopkins/career/stupid-fun-club.yml, why: "Robots among humans — One Minute Movies" }
+      - { path: ../repo-shows/heather-steve-alvey/afterlife-zombie-bridge.yml, why: "Drain Hell — artisanal ZombieSims, soul ledger" }
+      - { path: ../repo-shows/david-ungar-self-moollm.yml, why: "Self × MOOLLM — Stage Magic, Idea Scavenging" }
+      - { path: ../characters/will-wright/CARD.yml, why: "Procedural creatures, gallium voxel worlds" }
+      - { path: ../characters/yoot-saito/, why: "Seaman energy — a creature that insults you on purpose" }
+
 room_indexes:
   process: INDEX.yml
   characters: ../characters/INDEX.yml

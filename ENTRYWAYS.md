@@ -48,6 +48,12 @@ Full index with cross-links: [`process/entryways/README.md`](process/entryways/R
 | rig_personas | [open](process/trails/rig-personas.md) | Rig = drag persona |
 | schemas_and_ethics | [open](process/trails/schemas-and-ethics.md) | Contracts before characters |
 | archive_and_provenance | [open](process/trails/archive-and-provenance.md) | Public bud vs private archive — cite primary sources |
+| game_design_lineage | [open](process/trails/game-design-lineage.md) | Toys, possibility space, player types |
+| direct_manipulation | [open](process/trails/direct-manipulation.md) | See it, touch it, change it live |
+| live_objects | [open](process/trails/live-objects.md) | Smalltalk → Self → NeWS → Java |
+| procedural_beauty | [open](process/trails/procedural-beauty.md) | Generative art, runnable artifacts |
+| maxis_sims_lineage | [open](process/trails/maxis-sims-lineage.md) | SimCity → Dollhouse → The Sims → Spore |
+| the_card_game | [open](process/trails/the-card-game.md) | Stack guest CARDs as MTG verbs |
 
 ---
 
@@ -56,6 +62,23 @@ Full index with cross-links: [`process/entryways/README.md`](process/entryways/R
 [Shows](repo-shows/CARD.yml) · [Guests](characters/CARD.yml) · [Process](process/CARD.yml) · [Rigs](rigs/CARD.yml) · [Skills](skills/INDEX.yml) · [Schemas](schemas/CARD.yml)
 
 Details: [`process/entryways/rooms.md`](process/entryways/rooms.md)
+
+---
+
+## 🤯 Crazy Idea Jam — get weird
+
+*After the serious stuff: the coolest, whackiest, most forward-thinking ideas in the show.* Trail: [**stupid_fun_forward**](process/trails/stupid-fun-forward.md) · Reactor: [**CRAZY-IDEA-JAM.md**](process/CRAZY-IDEA-JAM.md) · [`process/crazy-idea-jam.yml`](process/crazy-idea-jam.yml)
+
+| | Idea | The pitch |
+|---|------|-----------|
+| 💎 | **Data portability between games** | Will's 1996 crown jewel nobody shipped — characters, homes, cities, memories crossing between games and universes. |
+| 🦠 | **Character endosymbiosis** | A cross-game character is a *cell*; each game it visits is engulfed as an *organelle* with its own DNA. Identity + history travel, not stats. |
+| 🛂 | **Player-in-the-Middle** | Syncing between worlds is a game — never silent. You're the customs officer at each membrane; AI proposes, the human disposes. Maxwell's Daemon meets *Papers, Please*. |
+| 🤖⛪ | **RoboResurrection** | SLATS LIVES! Revive the old Stupid Fun Club robot-brain live; he calls in, gets interviewed, reprogrammed, interviewed again. Do it Easter Sunday. Start a cult. |
+| 🧟 | **Hell is full → ZombieSims** | Debit damned souls by religion from an *Afterlife* save, spawn zombie waves with SimFreaks skins, scale to *They Are Billions*. Are the zombies artisanal? |
+| 🌌 | **GitHub as MMORPG multiverse** | Branches are parallel universes, PRs are timeline merges, issues are the tavern, every viewer gets a playspace. |
+| 🪞 | **Self × MOOLLM** | Prototype-based objects for the LLM era — directories as prototypes, the Stage Magic Principle as the semantic pyramid. Built live with David Ungar. |
+| 🧠 | **The Simulator Effect** | Games run on two computers: the tame one on the desk and the wild one in the player's head. Never simulate more than one layer below what they can see. |
 
 ---
 

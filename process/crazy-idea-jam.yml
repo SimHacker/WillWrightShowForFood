@@ -1,0 +1,167 @@
+# CRAZY IDEA JAM — the forward-thinking reactor (public, curated)
+# The wackiest, most imaginative, most forward-thinking ideas in the show — the stuff that
+# makes Will lean in. Curated public-safe from Don Hopkins' own crystallized design notes
+# (SimHacker/DonHopkins crystallized/DESIGN-WISDOM.yml + AI-MANIFESTO.yml) and the show seeds
+# that already live in this repo. Tight blurbs here; deeper girders linked per idea.
+#
+# Tone: joyful, irreverent, a little blasphemous — Stupid Fun Club energy. Keep it kind.
+# Human facade: CRAZY-IDEA-JAM.md | Trail: cross-links.yml#stupid_fun_forward
+
+meta:
+  id: crazy-idea-jam
+  status: jam (living seedbed — ideas graduate into shows, schemas, skills)
+  authored_by: don-hopkins
+  one_line: "AI proposes; the PLAYER disposes — now let's get weird with it."
+  human: CRAZY-IDEA-JAM.md
+  upstream_full: SimHacker/DonHopkins/projects/micropolis-moollm/crystallized/DESIGN-WISDOM.yml
+
+# ── THE CROWN JEWEL ──────────────────────────────────────────────────────────
+ideas:
+
+  data_portability_crown_jewel:
+    emoji: "💎"
+    blurb: |
+      The CROWN JEWEL of Will's 1996 Stanford talk — the goal he named and the one STILL
+      not shipped: characters, homes, cities, objects, ideas and MEMORIES moving between
+      games and universes. Every bridge we build (Stardew, Proxi, Spore, Shattered, …someday
+      Wizardry) is one implementation facet of this single jewel. That's why they're so cool.
+    non_destructive: "Bridging is non-destructive + regenerable: the soul-file is canonical, runtimes are ephemeral. Send a character to die in a dungeon, regenerate at will."
+    ties: [../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md]
+
+  character_endosymbiosis:
+    emoji: "🦠"
+    blurb: |
+      A cross-game character is a eukaryotic CELL. Each game it passes through gets engulfed
+      as a nested-membrane ORGANELLE — a sub-tree with its own "DNA" (that game's schema) —
+      gaining powers at every step, all in parallel. The über-character projects DOWN into a
+      game to play, syncs the diff back UP into only that game's organelle; the whole tree
+      keeps its SHAPE. Properties DIFFUSE between sibling organelles along semi-permeable
+      channels. Organelles can be EMULATED legacy binaries (Mind Mirror and Little Computer
+      People in an Apple ][ emulator). Lynn Margulis's serial endosymbiosis as the data model 
+      for the crown jewel.
+    progenitor: "SPORE prefigured this — pond→creature→tribe→civ→space — but lacked one identity TRAVELLING between layers with its history. The Spore bridge gets a per-LEVEL end: one self reincarnated cell→fish→gazelle→human→town→ship."
+    ties: [../characters/will-wright/CARD.yml]
+
+  identity_over_attributes:
+    emoji: "📖"
+    blurb: |
+      What travels between worlds is IDENTITY + HISTORY, not stats. A creature reincarnated
+      fish→gazelle→human→town→ship shares almost no attributes across forms — it's the same
+      SELF, and its lived story is the thread. The Sims FAMILY ALBUM is the canonical history
+      artifact: import a Stardew life into The Sims as a physical photo-album BOOK you shelve,
+      read on the couch, and leave out for guests.
+
+  player_in_the_middle:
+    emoji: "🛂"
+    blurb: |
+      Syncing between games is itself a GAME — never automate it silently. The PLAYER sits in
+      the middle: a benevolent, intentionally-not-gendered-in-the-middle, the customs officer at
+      each semi-permeable membrane, steering what flows where. AI proposes channels and
+      diffusions and transformations; the human disposes — approve / attenuate / block / remix. Curation of the
+      flow IS the character's evolution.
+    archetype_gallery: "The player as gatekeeper-transformer: Maxwell's Daemon, the 'Papers, Please' customs agent (a bridgeable game!), Saint Peter's Gates, Satan's Back Door, the psychopomps at the Bifröst — a person judging what crosses, made into gameplay."
+    constitutional: "PITM is our human↔AI manifesto: center PEOPLE, not the machine. Pairs with no-ai-slop (don't let AI hollow out the WORK) and no-ai-soul (don't let AI hollow out the AUTHOR — the soul stays with the people)."
+    upstream: SimHacker/DonHopkins/projects/micropolis-moollm/crystallized/AI-MANIFESTO.yml
+
+  import_the_virtue_filter_the_vice:
+    emoji: "🧪"
+    blurb: |
+      To learn from someone problematic, IMPORT them as a filtered persona-organelle: keep-
+      channels diffuse the virtues (re-aimed at our mission); a "bullshit + exploitation
+      filter" channel stays DISABLED so the vices stop at the membrane. We play the game we're
+      designing — endosymbiosis applied to OURSELVES, Don as player-in-the-middle. First test:
+      MrBeast TENACITY (kept) minus hype/exploitation (filtered), channeled into constructionism.
+
+  sync_config_is_gameplay:
+    emoji: "🔧"
+    blurb: |
+      Bring content-management and configuration INTO the world AS a game. Wiring the cross-game
+      sync constraint network is a green-field of casual mini-games — patch-building / automation
+      / tycoon play. Players build and SHARE bridge configs like Widget Workshop (Maxis 1995) or
+      Max/MSP patches. Includes cross-VERSION bridging: the WEDDING ALBUM round-tripping a couple
+      through Sims 1⇔2⇔3⇔4, each edition a clean non-destructive organelle.
+
+  robo_resurrection:
+    emoji: "🤖⛪"
+    blurb: |
+      SLATS LIVES! The first RoboResurrection. Read the old Stupid Fun Club robot-brain code on
+      the show, revive it live (AI-assisted), and Slats CALLS IN — his own face, his own voice —
+      says shit, gets interviewed, gets reprogrammed, gets interviewed AGAIN. The diff is the
+      drama. Do it on EASTER SUNDAY. Start a cult. "It seemed to be the thing to do at the time."
+    robopoetry_ceremony: "Interpret Slats' recorded voice-synth stream-of-thought as lyrical robopoetry and sing along — a seriously, respectfully presented religious ceremony with Stupid Fun Club irreverence."
+    ties: [../repo-shows/will-wright/slats-reincarnation.yml, ../characters/slats/CARD.yml]
+
+  simopolis_soul_bridge_afterlife:
+    emoji: "👻"
+    blurb: |
+      A two-way, round-trippable SOUL LEDGER between LucasArts' Afterlife and The Sims. Souls
+      are a portable resource that crosses the membrane (player-in-the-middle again) — heaven and
+      hell as upstream supply for downstream worlds. The bridge IS the gameplay.
+    ties: [../repo-shows/heather-steve-alvey/afterlife-zombie-bridge.yml]
+
+  hell_is_full_zombie_sims:
+    emoji: "🧟"
+    blurb: |
+      "Hell is full." Debit damned souls by religion from an Afterlife save and spawn matching
+      ZombieSims waves with interchangeable SimFreaks / SimSlice skins; round-trip the outcomes
+      back to the hell ledger. Scale toward They Are Billions horde pressure. Interview the
+      zombie suppliers: artisanal, farm-grown, soil-to-spike? SimFreaks = the artisan label on
+      the jar; the hell save = the industrial supply chain.
+    ties: [../repo-shows/heather-steve-alvey/afterlife-zombie-bridge.yml]
+
+  github_as_mmorpg_multiverse:
+    emoji: "🌌"
+    blurb: |
+      The show artifact IS a public repo, so treat GitHub as a multiplayer multiverse: branches
+      are parallel universes, PRs are timeline merges, issues are the HN-style tavern, and every
+      viewer gets their own playspace. Repossess "repo" from the tow-truck — Repo Man / Woman /
+      Bot honorifics; MMORPG quest levels onboard kids via web-editor PRs; badges via Actions.
+
+  self_times_moollm:
+    emoji: "🪞"
+    blurb: |
+      Self invented prototype-based objects and adaptive simplicity; MOOLLM reimagines that
+      lineage for the LLM era — directories as prototypes, skills as inheritable behavior, the
+      Stage Magic Principle as the semantic image pyramid, Idea Scavenging as persistent
+      characters. Build it live with David Ungar; artisanal hand-programming vs intentional AI.
+    ties: [../repo-shows/david-ungar-self-moollm.yml]
+
+  yoot_boot_and_seaman:
+    emoji: "🐟"
+    blurb: |
+      A clean-room successor to the Yoot lineage (working name YOOT BOOT — decided WITH Yoot, on
+      air) and the spirit of Seaman: a talking creature that remembers you, judges you, and
+      insults you between life lessons. The most forward-thinking thing about 1999 Seaman was
+      that it treated the player as someone worth being rude to.
+
+  simulator_effect:
+    emoji: "🧠"
+    blurb: |
+      Will Wright's Simulator Effect (apophenia): players imagine the sim is vastly deeper than
+      it is — a magical misunderstanding you must NOT talk them out of. Games run on two
+      computers: the shallow tame one on the desk and the deep wild one in the player's head.
+      The trick of optimizing games is offloading simulation into the player's brain. Rule of
+      thumb: never simulate more than one layer below what the player can observe.
+
+  full_nutrient_cycle:
+    emoji: "🌱"
+    blurb: |
+      Land → Seed → Crop → Ingredient → Food → Body → Shit → Land. We cover the WHOLE loop as
+      cellular automatists (rules on cells and objects). Water = donations; fertilizer = tokens.
+      A Nurturing Environment, not a Killer App — the Flower Child nurtures; the buyout extracts.
+
+graduation:
+  note: "Ideas leave the jam by becoming something runnable."
+  paths:
+    - "→ a show seed in ../repo-shows/"
+    - "→ a schema in ../schemas/"
+    - "→ a harvested skill in ../skills/ (cauldron)"
+    - "→ a trail node in cross-links.yml"
+
+see_also:
+  - { path: cross-links.yml#stupid_fun_forward, why: "The wacky trail that wanders these ideas" }
+  - { path: ../repo-shows/will-wright/slats-reincarnation.yml, why: "RoboResurrection quest in full" }
+  - { path: ../repo-shows/heather-steve-alvey/afterlife-zombie-bridge.yml, why: "Drain Hell soul/zombie bridge" }
+  - { path: ../repo-shows/david-ungar-self-moollm.yml, why: "Self × MOOLLM seed" }
+  - { path: vision-and-ambition.yml, why: "The serious long arc these ideas serve" }
+  - { path: SimHacker/DonHopkins/projects/micropolis-moollm/crystallized/DESIGN-WISDOM.yml, why: "Upstream full principle set (private archive)" }

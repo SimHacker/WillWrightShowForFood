@@ -28,8 +28,8 @@ Winograd interview → Will show → breed DNA back into open Micropolis and MOO
 
 ## Doorways that use this trail
 
-[Guest — Will Wright](entryways/guest-will.md) · [Player](entryways/player.md) · [Educator](entryways/educator.md) · [Publisher](entryways/publisher.md)
+[Guest — Will Wright](../entryways/guest-will.md) · [Player](../entryways/player.md) · [Educator](../entryways/educator.md) · [Publisher](../entryways/publisher.md)
 
 ---
 
-← [All trails](../../TRAILS.md) · [Museum map](entryways/README.md)
+← [All trails](../../TRAILS.md) · [Museum map](../entryways/README.md)

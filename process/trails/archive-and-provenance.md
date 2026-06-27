@@ -28,8 +28,8 @@ Historians and archivists: export policy, primary sources, sync logs, honest inv
 
 ## Doorways that use this trail
 
-[Archivist / historian](entryways/archivist.md) · [Publisher](entryways/publisher.md) · [Educator](entryways/educator.md)
+[Archivist / historian](../entryways/archivist.md) · [Publisher](../entryways/publisher.md) · [Educator](../entryways/educator.md)
 
 ---
 
-← [All trails](../../TRAILS.md) · [Museum map](entryways/README.md)
+← [All trails](../../TRAILS.md) · [Museum map](../entryways/README.md)

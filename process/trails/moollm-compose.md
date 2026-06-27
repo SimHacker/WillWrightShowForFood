@@ -26,8 +26,8 @@ WWSFF is a public microworld plugin — shows harvest into upstream MOOLLM skill
 
 ## Doorways that use this trail
 
-[Hacker](entryways/hacker.md) · [Bot reader](entryways/for-bots.md) · [Educator](entryways/educator.md) · [Producer](entryways/producer.md) · [Guest — anyone](entryways/guest-any.md)
+[Hacker](../entryways/hacker.md) · [Bot reader](../entryways/for-bots.md) · [Educator](../entryways/educator.md) · [Producer](../entryways/producer.md) · [Guest — anyone](../entryways/guest-any.md)
 
 ---
 
-← [All trails](../../TRAILS.md) · [Museum map](entryways/README.md)
+← [All trails](../../TRAILS.md) · [Museum map](../entryways/README.md)
