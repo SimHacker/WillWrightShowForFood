@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/repo-show-format.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:34efa70621a79cac -->
+<!-- content-sha256:405d3e3ef28973e5 -->
 
 # Repo Show format
 
@@ -186,7 +186,7 @@ Nested membranes — branches within branches — same shape, evolving subtrees
   - chat_branches: Parallel model trajectories — see model-branching.yml
   - see: moollm GitHub-as-MMORPG + character-endosymbiosis organelle model
 
-## Showmaker Network
+## ShowMaker Network
 
 - **what:** A graph and publication network of show objects — not a flat playlist
 - **your_show:** Run your own Repo Show on YOUR branch or YOUR repo

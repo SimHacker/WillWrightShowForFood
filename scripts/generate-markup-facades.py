@@ -55,8 +55,15 @@ def content_hash(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()[:16]
 
 
+# Brand casings that generic title-casing would otherwise mangle (display only).
+BRAND_CASING = {"Showmaker": "ShowMaker"}
+
+
 def slug_title(value: str) -> str:
-    return re.sub(r"\b\w", lambda m: m.group(0).upper(), value.replace("-", " ").replace("_", " "))
+    title = re.sub(r"\b\w", lambda m: m.group(0).upper(), value.replace("-", " ").replace("_", " "))
+    for wrong, right in BRAND_CASING.items():
+        title = re.sub(rf"\b{re.escape(wrong)}\b", right, title)
+    return title
 
 
 def rel_link(from_dir: Path, target: str) -> str:
