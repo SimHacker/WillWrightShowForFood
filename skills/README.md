@@ -13,12 +13,13 @@ Same pyramid as [moollm/skills/](https://github.com/SimHacker/moollm/tree/main/s
 (soul-bridge, pray-to-play, hosted-content-cards, repo-show slices, …).
 
 **Manual Transmission / ai-offs** compose with upstream:
+[`thoughtful-commitment`](https://github.com/SimHacker/moollm/tree/main/skills/thoughtful-commitment)
+(aka conscientious commits — WHY + thinking-ref),
 [`rubric`](https://github.com/SimHacker/moollm/tree/main/skills/rubric),
 [`experiment`](https://github.com/SimHacker/moollm/tree/main/skills/experiment),
 [`evaluator`](https://github.com/SimHacker/moollm/tree/main/skills/evaluator),
 [`cursor-mirror`](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror)
-— Mike Gallaher RUBRIC-BRIDGE + SIMULATE/EVALUATE/ITERATE/ANALYZE. See
-[`process/manual-transmission.yml`](../process/manual-transmission.yml).
+— see [`process/orchestration-gold.yml`](../process/orchestration-gold.yml) (Steve Kommrusch lineage).
 
 Vision: [`../process/vision-and-ambition.yml`](../process/vision-and-ambition.yml#skills)
 

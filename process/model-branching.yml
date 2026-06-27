@@ -86,10 +86,10 @@ analysis_dimensions:
     - "Divergence point — where trajectories meaningfully split"
 
 orchestration_gold:
-  extends: manual-transmission.yml#orchestration_gold
+  extends: orchestration-gold.yml
   extra_value: |
-    Labeled fork points + paired trajectories + outcomes = supervised signal for
-    when-to-switch-model. Real programmers, real specs, real costs — not synthetic bench.
+    Labeled fork points + paired trajectories + thoughtful commits with thinking-refs =
+    supervised when-to-switch-model plus auditable artifact provenance.
   artifact_bundle:
     - parent_composer_id
     - branch_manifest.yml per fork

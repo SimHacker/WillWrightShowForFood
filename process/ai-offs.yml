@@ -13,11 +13,12 @@ what: |
   Manual Transmission: the question IS the contest — multi-rubric orchestration gold.
 
 orchestration_lab:
-  see: manual-transmission.yml#orchestration_gold
+  see: orchestration-gold.yml
   pitch: |
     FUN competitive reason for real programmers to submit real multi-LLM routing traces.
-    Gold data for training orchestrators — spec in, model shifts, tools, merge out.
-  moollm: [rubric, experiment, evaluator, cursor-mirror]
+    GitHub logs trained bug-fix models (Steve Kommrusch); our logs + thoughtful commits
+    + cursor-mirror slices can train orchestrators.
+  moollm: [rubric, experiment, evaluator, cursor-mirror, thoughtful-commitment]
   model_branching: model-branching.yml
 
 spend_proof:
@@ -61,14 +62,16 @@ cursor_mirror:
     Stick-shift competitions: the spend log shows every model switch — smooth shifts vs grinding gears.
 
 thoughtful_commits:
-  also_called: [conscientious_commits]
+  also_called: [conscientious_commits, thoughtful_commitment]
   skill: https://github.com/SimHacker/moollm/tree/main/skills/thoughtful-commitment
   idea: |
     Live-code thought process into git commits — COMMIT with cursor-mirror-backed reasoning.
     Share WHY not just WHAT. Session linkage so others can archaeology your ai-off ride.
+    Since-last-commit: analyze mirror output across routing, cognition, context, artifacts.
+  since_last_commit: orchestration-gold.yml#since_last_commit
   workflow:
-    - "cursor-mirror timeline / thinking for the session"
-    - "thoughtful-commitment COMMIT — rich message + link to thinking blocks"
+    - "cursor-mirror timeline / thinking / tools / context-sources since last commit SHA"
+    - "thoughtful-commitment COMMIT — narrative + Thinking: cursor-mirror://composer/range"
     - "PR merges tissue + provenance back into the organism"
   moollm_spread: |
     MOOLLM spreads virally as enabling substrate — cursor-mirror + thoughtful-commitment +
@@ -123,4 +126,5 @@ see_also:
   - manual-transmission.yml
   - brain-stream.yml
   - model-branching.yml
+  - orchestration-gold.yml
   - ../skills/README.md

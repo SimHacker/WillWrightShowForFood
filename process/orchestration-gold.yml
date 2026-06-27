@@ -1,0 +1,110 @@
+# ORCHESTRATION GOLD — training signal from real rig runs
+# GitHub logs were gold for bug-fix models; our logs can be gold for orchestrators
+# Scooped: 2026-06-27 — Steve Kommrusch lineage + thoughtful-commitment layer
+
+meta:
+  id: orchestration-gold
+  status: seed
+  tagline: "Real programmers + real specs + real routing traces → multi-LLM orchestrator training"
+
+pitch: |
+  Manual Transmission and model-branching runs produce labeled trajectories: spec in,
+  model choices, tool calls, spend, merge out. Steve Kommrusch's PhD showed GitHub
+  commit histories are training data for repair models. We extend the idea: commits plus
+  cursor-mirror forensics since last commit — what the LLM thought, touched, and why.
+
+lineage:
+  steve_kommrusch:
+    role: "Leela AI colleague; PhD Colorado State 2022"
+    thesis: "Machine Learning for Computer Aided Programming — stochastic program repair to verifiable equivalence"
+    insight: "Mined GitHub repos — before/after bug-fix commits as supervised signal (VRepair, transfer learning)"
+    repos: [SteveKommrusch/VRepair, OpenNMT-py contributions]
+    see: https://github.com/SteveKommrusch/VRepair
+    note: "Bug-fix diffs + context lines — we add orchestration context + thinking blocks"
+  our_extension: |
+    Git log tells you WHAT changed. thoughtful-commitment + cursor-mirror tell you WHY,
+    WHICH MODEL, WHICH TOOLS, WHAT CONTEXT was assembled — and let you ask audit questions
+    across dimensions since the last commit.
+
+thoughtful_commitment:
+  skill: SimHacker/moollm/skills/thoughtful-commitment
+  also_called: [conscientious_commits, thoughtful_commits]
+  what: |
+    Intentional, reflective git commits — document what the LLM actually did and thought,
+    not just the diff. Links commit SHA ↔ cursor-mirror composer ↔ thinking event range.
+  message_shape:
+    - "type: summary (imperative)"
+    - narrative — intent, not mechanics only
+    - changes — bullet scan list
+    - "Thinking: cursor-mirror://<composer>/<event-range>"
+  composes: [cursor-mirror, git, trekify, deep-snitch]
+
+since_last_commit:
+  when: "Each thoughtful COMMIT — analyze cursor-mirror from previous commit SHA to now"
+  workflow:
+    - "git log -1 --format=%H — anchor"
+    - "cursor-mirror timeline / thinking / tools / context-sources since anchor"
+    - "cursor-mirror export-prompts — instruction tape for this slice"
+    - "Optional: deep-snitch on slice before public harvest"
+  analyze_dimensions:
+    routing:
+      - models_used_and_when
+      - shift_count_vs_declared_rig_class
+      - spend_csv_slice
+    cognition:
+      - thinking_blocks_summary
+      - user_prompts_vs_assistant_plan
+      - retries_and_recovery
+    context:
+      - files_read_grep_searched
+      - messageRequestContext_assembly
+      - terminal_commands_run
+    artifacts:
+      - images_added — provenance audit
+      - new_files_and_why
+      - deleted_or_renamed_and_why
+    quality:
+      - rubric SCORE on slice vs spec CARD
+      - spec_compliance_diff
+  audit_questions:
+    examples:
+      - "Why did you add that image — where did it come from?"
+      - "Which model wrote this yaml vs this prose?"
+      - "What file selections drove this tool call?"
+      - "Was this retry necessary or riding the clutch?"
+      - "Does the commit message match what thinking blocks show?"
+  output:
+    - enriched_commit_message
+    - optional orchestration-gold appendix in PR or experiment run
+    - anonymized aggregate for harvest
+
+bundle_per_run:
+  required:
+    - Cursor spend CSV
+    - composer id(s)
+    - thoughtful-commitment commit chain with thinking-ref links
+  recommended:
+    - cursor-mirror export-jsonl since last commit
+    - model-branch manifests — model-branching.yml
+    - rubric scores + experiment COMPARE report
+    - deep-snitch clean bill
+  harvest: "skills/ packages/ experiment runs — opt-in, redacted"
+
+ties_to:
+  - manual-transmission.yml
+  - model-branching.yml
+  - ai-offs.yml
+  - brain-stream.yml
+  - SimHacker/moollm/skills/thoughtful-commitment
+  - SimHacker/moollm/skills/cursor-mirror
+  - SimHacker/moollm/skills/rubric
+  - SimHacker/moollm/skills/experiment
+
+see_also:
+  - ai-offs.yml#post_run_analysis
+  - manual-transmission.yml#post_run_forensics
+  - repo-show-format.yml#cauldron_scoop
+
+credits:
+  steve_kommrusch: "GitHub commit logs as ML training signal — repair / equivalence research"
+  mike_gallaher: "RUBRIC-BRIDGE + experiment COMPARE for multi-axis scoring"

@@ -29,15 +29,16 @@ origin:
   note: "Don may mumble on purpose. Misunderstanding is a feature."
 
 orchestration_gold:
+  canonical: orchestration-gold.yml
   what: |
-    Competitive Manual Transmission runs produce labeled, real-world traces: spec in,
-    model routing decisions, tool calls, spend timestamps, merge out. Gold for learning
-    multi-LLM orchestration — not synthetic bench theater.
+    Competitive runs produce labeled trajectories. Steve Kommrusch (Leela, PhD CSU 2022)
+    showed GitHub bug-fix commits train repair models; we extend with thoughtful-commitment
+    + cursor-mirror since-last-commit — WHY, which model, which tools, audit questions.
   why_fun_matters: "People submit honest rig reports when the game is werk, not homework"
   artifacts:
     - Cursor spend CSV (required — the piss test)
-    - cursor-mirror composer timeline
-    - thoughtful-commitment commit chain
+    - cursor-mirror composer timeline + since-last-commit slice
+    - thoughtful-commitment commit chain (thinking-ref links)
     - rigs/*.rig.yml declared shift map
     - optional brain-stream event log
     - post_run deep-snitch clean bill (before public export)

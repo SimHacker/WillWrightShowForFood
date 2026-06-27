@@ -31,6 +31,7 @@ curb appeal up top, **brutalist GitHub underneath** (yaml girders, verify CI, re
 | **Rig schema** | [`schemas/rig-schema.yml`](schemas/rig-schema.yml) · [`rigs/`](rigs/) |
 | **Micropolis AI Drag Race** | [`process/micropolis-ai-drag-race.yml`](process/micropolis-ai-drag-race.yml) |
 | **Manual Transmission** (smallest model that ships) | [`process/manual-transmission.yml`](process/manual-transmission.yml) |
+| **Orchestration gold** (training traces + thoughtful commits) | [`process/orchestration-gold.yml`](process/orchestration-gold.yml) |
 | **Model branching** (fork chat, compare trajectories) | [`process/model-branching.yml`](process/model-branching.yml) |
 | **Brain stream** (live Cursor on overlay) | [`process/brain-stream.yml`](process/brain-stream.yml) · [`apps/stream-gateway/`](apps/stream-gateway/) |
 | **Slats** (judge + RoboResurrection) | [`characters/slats/`](characters/slats/) |
