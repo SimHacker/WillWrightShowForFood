@@ -163,6 +163,21 @@ ideas:
       storymaker_comprehensive: "Stupid Fun Club StoryMaker Demo (Don Hopkins, 2016) — full client/server tour; URL to confirm"
     bar_karma: "https://en.wikipedia.org/wiki/Bar_Karma"
     vibe: "Abstract, mesmerizing interface play — no voice, just look-and-feel"
+    archival_lead:
+      gold: |
+        The REAL Bar Karma production database — the StoryMaker corpus of community submissions,
+        producer-selected outlines, voted storyboards, and how they turned into shot episode
+        scripts — would be gold for a Repo Show segment. Probably locked up tight, but worth asking.
+      who_to_ask:
+        - { who: "Will Wright", why: "Co-creator; StoryMaker designer" }
+        - { who: "Peter Swearengen", why: "StoryMaker Producer (verified spelling)" }
+        - { who: "Albie Hecht / Worldwide Biggies", why: "Executive producer; production company" }
+        - { who: "Laura Knight", why: "Supervising Producer" }
+        - { who: "David Cohn", why: "Current TV Executive in Charge" }
+      facts:
+        run: "Current TV, 12 episodes, Feb 11 – Apr 29, 2011; produced by Worldwide Biggies; filmed at Ironbound Film Studios, Newark NJ"
+        community: "~2,000+ contributors recruited from Will's Facebook; 30+ credited on episode 1"
+      status: "lead — not yet asked; rights/ownership unknown (Current TV / Worldwide Biggies era)"
     ties: [../characters/don-hopkins/career/stupid-fun-club.yml, ../characters/matthew-sibigtroth/]
 
   mediagraph:
