@@ -1,0 +1,37 @@
+# Bill Atkinson — legacy portrayal (in memoriam). NOT Bill Atkinson.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: bill-atkinson
+  name: "Bill Atkinson"
+  type: invitation
+  signifier: "🕯️"
+  status: deceased
+  field: "Apple GUI pioneer — QuickDraw, MacPaint, HyperCard, Atkinson dithering, marching ants"
+  home: characters/bill-atkinson/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 5
+  authored_by: don-hopkins
+
+invitation:
+  status: legacy_only
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/bill-atkinson/
+  note: "deceased (1951–2025) — reverence; legacy only"
+
+bio:
+  summary: "**Bill Atkinson** (1951–2025) — Apple employee #51 and architect of the Mac's graphical soul: **QuickDraw**, **MacPaint** (FatBits, the selection lasso, marching ants), the menu bar, **Atkinson dithering**, and **HyperCard** — the hypermedia stack-of-cards that put programming in non-programmers' hands and prefigured the web. EFF Pioneer Award (1994); later a renowned nature photographer."
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Bill_Atkinson"
+  web:
+    - https://computerhistory.org/profile/bill-atkinson/
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: ../arthur-van-hoff/, why: "HyperLook = a NeWS reimagining of HyperCard — Atkinson's idea, carried forward" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Legacy directory — tribute, sourced quotes only" }

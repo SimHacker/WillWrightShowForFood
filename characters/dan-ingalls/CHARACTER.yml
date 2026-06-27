@@ -1,0 +1,36 @@
+# Dan Ingalls — invitation portrayal. NOT Dan Ingalls.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: dan-ingalls
+  name: "Dan Ingalls"
+  type: invitation
+  signifier: "🪟"
+  status: living
+  field: "Smalltalk architect — BitBlt, pop-up menus, Squeak, Fabrik, the Lively Kernel"
+  home: characters/dan-ingalls/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/dan-ingalls/
+
+bio:
+  summary: "**Dan Ingalls** (b. 1944) — principal architect and implementer of five generations of Smalltalk; designed the byte-coded virtual machine that made Smalltalk practical in 1976, **invented BitBlt and pop-up menus**, co-created **Squeak** (a Smalltalk written in itself), built **Fabrik** (visual dataflow programming) and the **Lively Kernel** (live coding in the browser), and hosts the **Smalltalk Zoo** at the Computer History Museum. ACM Grace Murray Hopper and Software System awards."
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Dan_Ingalls"
+  web:
+    - https://computerhistory.org/profile/dan-ingalls/
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: correspondence.yml, why: "Public-safe thread digest — pie menus, Fabrik, Lively/SqueakJS" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses — self or assisted contribution" }

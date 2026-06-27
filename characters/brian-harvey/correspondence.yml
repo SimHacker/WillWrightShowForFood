@@ -1,0 +1,35 @@
+# Brian Harvey × Don Hopkins — correspondence summary (public-safe)
+# Tight public-safe digest of a real exchange. NOT the full private thread.
+# Standards: ../../schemas/portrayal-standards.yml
+
+meta:
+  with: brian-harvey
+  also: [jens-monig]
+  curated_by: don-hopkins
+  consent: not_yet_asked
+  span: "2018"
+  provenance_private: SimHacker/DonHopkins/characters/don-hopkins/correspondence/brian-harvey-jens-moenig.yml
+
+gist: |
+  Don wrote to Brian Harvey (UC Berkeley) about wiring **SimCity / Micropolis** and **CAM6
+  cellular automata** into **Snap!**, the visual programming environment. Brian looped in Jens
+  Mönig (Snap! co-creator). Don demoed pie menus in an A-Frame 3D web scene and discussed
+  connecting Snap! blocks to live simulation parameters — Logo/Scheme/Smalltalk-Morphic heritage
+  meeting an open, modifiable city simulator for the classroom.
+
+threads:
+  micropolis_in_snap:
+    what: "Drive SimCity/Micropolis + CAM6 CA rules from Snap! blocks — constructionist, open, modifiable"
+  pie_menus_in_aframe:
+    what: "Pie menus in an A-Frame 3D web environment"
+
+connects_in_repo:
+  - { path: CHARACTER.yml, why: "Bio + invitation status" }
+  - { path: ../jens-monig/, why: "Snap! co-creator — same thread" }
+  - { path: ../will-wright/, why: "SimCity/Micropolis is the simulator being made teachable" }
+  - { path: ../../process/trails/constructionist-lineage.md, why: "Microworlds for the classroom" }
+  - { path: ../../process/trails/maxis-sims-lineage.md, why: "Micropolis = open SimCity" }
+
+show_hooks:
+  - "Wire Micropolis into Snap! live — a city sim you reprogram with blocks"
+  - "CAM6 cellular automata as a visual-programming lesson"

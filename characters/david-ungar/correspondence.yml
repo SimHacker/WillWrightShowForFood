@@ -1,0 +1,37 @@
+# David Ungar × Don Hopkins — correspondence summary (public-safe)
+# Tight public-safe digest of a real exchange. NOT the full private thread.
+# Standards: ../../schemas/portrayal-standards.yml
+
+meta:
+  with: david-ungar
+  curated_by: don-hopkins
+  consent: not_yet_asked
+  span: "2026"
+  provenance_private: SimHacker/DonHopkins/characters/don-hopkins/correspondence/david-ungar.yml
+
+gist: |
+  Don wrote to David Ungar (Jan 2026) about MOOLLM's use of Self's prototype model. Ungar
+  created **Self** (with Randall B. Smith) — prototype-based objects, generation scavenging,
+  adaptive compilation, dynamic deoptimization. His **Stage Magic Principle** (show the simple
+  view until the complex truth is needed) directly shaped MOOLLM's semantic-pyramid approach;
+  **Idea Scavenging** (focus compute on persistent ideas) maps to MOOLLM character persistence;
+  and "Dynamic Depessimization" names MOOLLM's optimistic simplification.
+
+threads:
+  self_to_moollm:
+    what: "Self prototype model → MOOLLM directories-as-prototypes, skills as inheritable behavior"
+  stage_magic:
+    what: "Stage Magic Principle → GLANCE / CARD / SKILL / README semantic image pyramid"
+  idea_scavenging:
+    what: "Focus compute on persistent ideas → character + skill persistence"
+
+connects_in_repo:
+  - { path: CHARACTER.yml, why: "Bio + invitation status" }
+  - { path: ../../repo-shows/david-ungar-self-moollm.yml, why: "The Self × MOOLLM show seed this feeds" }
+  - { path: ../alan-kay/, why: "Shared Smalltalk/Self lineage" }
+  - { path: ../../process/trails/live-objects.md, why: "Smalltalk → Self → live systems trail" }
+  - { path: ../../process/crazy-idea-jam.yml#self_times_moollm, why: "The wacky/forward framing" }
+
+show_hooks:
+  - "Build MOOLLM live with Self idioms — prototypes, mirrors, Stage Magic"
+  - "Artisanal hand-programming vs intentional AI use — the conscientious-coder culture"

@@ -54,6 +54,7 @@ Full index with cross-links: [`process/entryways/README.md`](process/entryways/R
 | procedural_beauty | [open](process/trails/procedural-beauty.md) | Generative art, runnable artifacts |
 | maxis_sims_lineage | [open](process/trails/maxis-sims-lineage.md) | SimCity → Dollhouse → The Sims → Spore |
 | the_card_game | [open](process/trails/the-card-game.md) | Stack guest CARDs as MTG verbs |
+| cs547_seminar_lineage | [open](process/trails/cs547-seminar-lineage.md) | Winograd's CS547 → Will's 1996 talk → Repo Show |
 
 ---
 

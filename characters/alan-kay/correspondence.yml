@@ -1,0 +1,36 @@
+# Alan Kay × Don Hopkins — correspondence summary (public-safe)
+# Tight public-safe digest of a real, long exchange. NOT the full private thread.
+# Standards: ../../schemas/portrayal-standards.yml
+
+meta:
+  with: alan-kay
+  curated_by: don-hopkins
+  consent: not_yet_asked
+  span: "2008–2026"
+  provenance_private: SimHacker/DonHopkins/characters/don-hopkins/correspondence/alan-kay.yml
+
+gist: |
+  Nearly two decades of wide-ranging exchange. Alan introduced Don to **Dan Ingalls** via the
+  **Fabrik** paper (2018), recalling "swiped pie menus" used at Apple in the Fabrik project (~1986).
+  Threads touched **PIXIE** light-pen menus, Smalltalk **halos** (Ted Kaehler, ~PARC), praise for
+  **NeWS** ("the right way to go — except it missed the live system underneath") and **HyperCard**
+  ("finished, smoothed, documented beautifully"), Alan's review of the **Yoot Saito 1993 interview**
+  transcript, and Don's **MOOLLM** announcement (Jan 2026). Don visited **Qwaq** (the Croquet
+  spinoff) with Randy Farmer and Chip Morningstar in 2008 at Alan's invitation.
+
+sourced_quotes:
+  on_news: "I thought NeWS was 'the right way to go' (except it missed the live system underneath)."
+  on_hypercard: "HyperCard is an especially good example of a system that was finished and smoothed and documented beautifully."
+  on_fabrik: "I recall 'swiped pie menus' being used at Apple in the mid-80s in the Fabrik visual language project."
+
+connects_in_repo:
+  - { path: CHARACTER.yml, why: "Bio + invitation status" }
+  - { path: ../dan-ingalls/, why: "Alan introduced Don to Dan via the Fabrik paper" }
+  - { path: ../yoot-saito/, why: "Alan reviewed the 1993 Yoot Saito interview transcript" }
+  - { path: ../david-ungar/, why: "Self lineage → MOOLLM prototypes" }
+  - { path: ../../process/trails/live-objects.md, why: "Smalltalk → NeWS → live systems" }
+  - { path: ../../process/crazy-idea-jam.yml#self_times_moollm, why: "MOOLLM as the Smalltalk-lineage idea" }
+
+show_hooks:
+  - "Pie menus ↔ Fabrik 'swiped pie menus' — direct-manipulation archaeology"
+  - "Why NeWS/HyperCard mattered — and what 'the live system underneath' means for MOOLLM"

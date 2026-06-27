@@ -152,9 +152,23 @@ trails:
       - { path: ../schemas/portrayal-standards.yml, why: "Sourced quotes only; subject correction rights" }
       - { path: ../schemas/invitation-workflow.yml, why: "Status enum as corpus metadata" }
       - { path: ../characters/terry-winograd/, why: "CS547 forebear — open seminar recorded for posterity" }
+      - { path: ../characters/terry-winograd/correspondence.yml, why: "Verified preservation record — Will 1996 + Gosling 1995 talks" }
       - { path: ../characters/, why: "Guest directories — organic discovery; grows with show prep" }
       - { path: ../characters/README.md, why: "Contribution channels — self-edit or email assisted" }
       - { path: vision-and-ambition.yml, why: "Forebears and long arc in yaml girder" }
+
+  cs547_seminar_lineage:
+    k_line: "One guest, open access, recorded for posterity"
+    human: trails/cs547-seminar-lineage.md
+    why: "Terry Winograd's Stanford CS547 → Will's 1996 talk → Gosling's 1995 talk → the Repo Show as its descendant"
+    nodes:
+      - { path: ../characters/terry-winograd/, why: "CS547 host — curator of the video trove (the forebear)" }
+      - { path: ../characters/terry-winograd/correspondence.yml, why: "Verified preservation record — Will 1996 + Gosling 1995" }
+      - { path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "Will's 1996 'Interfacing to Microworlds' — the anchor talk" }
+      - { path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md, why: "Primary text — cite Will's words" }
+      - { path: ../characters/james-gosling/, why: "1995 CS547 'Bringing Behavior to the Internet' (Java) — Don on camera" }
+      - { path: ../characters/will-wright/, why: "Flagship guest — the talk the repo orbits" }
+      - { path: repo-show-format.yml, why: "The Repo Show — CS547's recorded-conversation descendant" }
 
   game_design_lineage:
     k_line: "What is a game? Toys, possibility space, player types"
@@ -191,6 +205,10 @@ trails:
       - { path: ../characters/james-gosling/, why: "NeWS/SunDew, Gosling Emacs, Java — network window systems before X11" }
       - { path: ../characters/arthur-van-hoff/, why: "GoodNeWS → HyperLook (a NeWS HyperCard), PdB compiler, early Java/HotJava" }
       - { path: ../characters/david-rosenthal/, why: "NeWS with Gosling + X11 ICCCM; The NeWS Book; LOCKSS preservation" }
+      - { path: ../characters/dan-ingalls/, why: "BitBlt + pop-up menus + Squeak + Fabrik + Lively — the live-object substrate" }
+      - { path: ../characters/craig-latta/, why: "Caffeine — SqueakJS + WASM livecoding the web today" }
+      - { path: ../characters/vanessa-freudenberg/, why: "SqueakJS — Smalltalk VM in the browser (in memoriam)" }
+      - { path: ../characters/bill-atkinson/, why: "HyperCard → HyperLook (van Hoff's NeWS reimagining) → SimCity (in memoriam)" }
       - { path: ../characters/don-hopkins/career/simcity-lineage.yml, why: "SimCity on NeWS/HyperLook with pie menus — the lineage in action" }
 
   procedural_beauty:

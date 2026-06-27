@@ -76,7 +76,7 @@ ideas:
     emoji: "🔧"
     blurb: |
       Bring content-management and configuration INTO the world AS a game. Wiring the cross-game
-      sync constraint network is a green-field of casual mini-games — patch-building / automation
+      sync constraint network is a green-field of casual mini-games — patch-building / widget workshop / factory automation
       / tycoon play. Players build and SHARE bridge configs like Widget Workshop (Maxis 1995) or
       Max/MSP patches. Includes cross-VERSION bridging: the WEDDING ALBUM round-tripping a couple
       through Sims 1⇔2⇔3⇔4, each edition a clean non-destructive organelle.
@@ -90,6 +90,21 @@ ideas:
       drama. Do it on EASTER SUNDAY. Start a cult. "It seemed to be the thing to do at the time."
     robopoetry_ceremony: "Interpret Slats' recorded voice-synth stream-of-thought as lyrical robopoetry and sing along — a seriously, respectfully presented religious ceremony with Stupid Fun Club irreverence."
     ties: [../repo-shows/will-wright/slats-reincarnation.yml, ../characters/slats/CARD.yml]
+
+  phoneloper:
+    emoji: "🗣️"
+    blurb: |
+      Quintessential Stupid Fun Club prototyping: a toy/tool Don built in 2003 for Will Wright's
+      Stupid Fun Club to create and edit expressive speech "Phonelopes." It takes CMU's Flite
+      synthesizer, exports the diphone/pitch/timing as editable XML, and lets you DRAG the
+      diphones around, bend the pitch and amplitude tracks, stretch durations, and even load an
+      audio file to "rotoscope" (phonescope) a natural pitch curve onto synthetic speech. Hold
+      the spacebar and it SINGS — accidental granular-synthesis musical instrument. Python +
+      Tkinter + SWIG + Flite + Edinburgh Speech Tools. The expressive-speech ancestor of the
+      Slats robot voice — and exactly the toy-first, play-to-discover spirit Will loves.
+    video: "https://www.youtube.com/watch?v=qy5cqV8ypIs"
+    status: "Source releasable — Don will add it to this monorepo soon"
+    ties: [../characters/don-hopkins/career/stupid-fun-club.yml, ../repo-shows/will-wright/slats-reincarnation.yml]
 
   simopolis_soul_bridge_afterlife:
     emoji: "👻"
@@ -105,8 +120,9 @@ ideas:
       "Hell is full." Debit damned souls by religion from an Afterlife save and spawn matching
       ZombieSims waves with interchangeable SimFreaks / SimSlice skins; round-trip the outcomes
       back to the hell ledger. Scale toward They Are Billions horde pressure. Interview the
-      zombie suppliers: artisanal, farm-grown, soil-to-spike? SimFreaks = the artisan label on
-      the jar; the hell save = the industrial supply chain.
+      zombie suppliers: artisanal, farm-grown, soil-to-spike? SimFreaks & SimSlice spouses = 
+      original and renounded Sims 1 content creators from the very beginning, 
+      artisan label on the jar, SFC alumni; the hell save = the industrial supply chain.
     ties: [../repo-shows/heather-steve-alvey/afterlife-zombie-bridge.yml]
 
   github_as_mmorpg_multiverse:
@@ -132,7 +148,7 @@ ideas:
       A clean-room successor to the Yoot lineage (working name YOOT BOOT — decided WITH Yoot, on
       air) and the spirit of Seaman: a talking creature that remembers you, judges you, and
       insults you between life lessons. The most forward-thinking thing about 1999 Seaman was
-      that it treated the player as someone worth being rude to.
+      that it treated the player as someone worth being rude to. BOOT is BOAT in Dutch.
 
   simulator_effect:
     emoji: "🧠"
@@ -147,7 +163,9 @@ ideas:
     emoji: "🌱"
     blurb: |
       Land → Seed → Crop → Ingredient → Food → Body → Shit → Land. We cover the WHOLE loop as
-      cellular automatists (rules on cells and objects). Water = donations; fertilizer = tokens.
+      cellular automatists (rules on cells and objects, cycling through different phases like
+      Chaim Gingold's SimCity diagrams illustrate in his book Making SimCity). 
+      Water = donations; fertilizer = tokens.
       A Nurturing Environment, not a Killer App — the Flower Child nurtures; the buyout extracts.
 
 graduation:

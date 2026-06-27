@@ -236,6 +236,7 @@ trails_pitch:
     - { id: procedural_beauty, human: trails/procedural-beauty.md, pitch: "Generative art + runnable artifacts — Perlin, Debevec, Levin, Cerveny" }
     - { id: maxis_sims_lineage, human: trails/maxis-sims-lineage.md, pitch: "SimCity → Dollhouse → The Sims → Spore — the genealogy + 167 source images" }
     - { id: the_card_game, human: trails/the-card-game.md, pitch: "Stack guest CARDs as MTG verbs — combos across guests; Slats judges" }
+    - { id: cs547_seminar_lineage, human: trails/cs547-seminar-lineage.md, pitch: "Winograd's Stanford CS547 → Will's 1996 talk → Gosling's 1995 talk → the Repo Show" }
 
 trails_pitch_wacky:
   note: "Get weird — put after the serious stuff. Reactor: crazy-idea-jam.yml / CRAZY-IDEA-JAM.md"

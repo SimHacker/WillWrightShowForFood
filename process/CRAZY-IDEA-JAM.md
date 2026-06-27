@@ -35,6 +35,7 @@ The wackiest, most imaginative, most forward-thinking ideas in the show — the 
 | | Idea | The pitch |
 |---|------|-----------|
 | 🤖⛪ | **RoboResurrection** | SLATS LIVES! Revive the old robot-brain code live; Slats calls in with his own face and voice, gets interviewed, reprogrammed, interviewed again — the diff is the drama. Do it Easter Sunday. Start a cult. |
+| 🗣️ | **Phoneloper** | Drag diphones around, bend the pitch track, "rotoscope" a real voice onto synthetic speech — hold spacebar and it *sings*. Don's 2003 SFC expressive-speech toy (Python+Flite), ancestor of the Slats voice. [Demo video](https://www.youtube.com/watch?v=qy5cqV8ypIs) · source releasable soon. |
 | 👻 | **Afterlife soul bridge** | A two-way soul ledger between LucasArts' *Afterlife* and The Sims. Heaven and hell as upstream supply for downstream worlds. |
 | 🧟 | **Hell is full → ZombieSims** | Debit damned souls by religion, spawn matching zombie waves with SimFreaks/SimSlice skins, scale to *They Are Billions*. Are the zombies artisanal? Farm-grown? Soil to spike? |
 | 🐟 | **Yoot Boot & Seaman** | A clean-room Yoot successor (named *with* Yoot, on air) channeling Seaman: a creature that remembers you, judges you, and insults you between life lessons. |

@@ -18,6 +18,10 @@ Smalltalk → Self → NeWS → Java. The live-object lineage behind HyperLook a
 | [**James Gosling**](../../characters/james-gosling/) | NeWS/SunDew, Gosling Emacs, Java — network window systems before X11 |
 | [**Arthur van Hoff**](../../characters/arthur-van-hoff/) | GoodNeWS → HyperLook (a NeWS HyperCard), PdB compiler, early Java/HotJava |
 | [**David Rosenthal**](../../characters/david-rosenthal/) | NeWS with Gosling + X11 ICCCM; The NeWS Book; LOCKSS preservation |
+| [**Dan Ingalls**](../../characters/dan-ingalls/) | BitBlt + pop-up menus + Squeak + Fabrik + Lively — the live-object substrate |
+| [**Craig Latta**](../../characters/craig-latta/) | Caffeine — SqueakJS + WASM livecoding the web today |
+| [**Vanessa Freudenberg**](../../characters/vanessa-freudenberg/) 🕯️ | SqueakJS — Smalltalk VM in the browser (in memoriam) |
+| [**Bill Atkinson**](../../characters/bill-atkinson/) 🕯️ | HyperCard → HyperLook → SimCity (in memoriam) |
 | [**SimCity lineage**](../../characters/don-hopkins/career/simcity-lineage.yml) | SimCity on NeWS/HyperLook with pie menus — the lineage in action |
 
 ---

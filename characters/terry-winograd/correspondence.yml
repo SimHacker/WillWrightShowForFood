@@ -1,0 +1,46 @@
+# Terry Winograd × Don Hopkins — correspondence summary (public-safe, verified-only)
+# A tight, public-safe digest of a real exchange. NOT the full private thread.
+# Only VERIFIED facts included (the upstream summary carried a provenance warning about
+# AI-fabricated details, since removed). Standards: ../../schemas/portrayal-standards.yml
+
+meta:
+  with: terry-winograd
+  curated_by: don-hopkins
+  consent: not_yet_asked
+  span: "2019–2023"
+  provenance_private: SimHacker/DonHopkins/characters/don-hopkins/correspondence/terry-winograd.yml
+  note: "Verified facts only. Unverified specifics from the private draft are deliberately omitted."
+
+gist: |
+  Don corresponded with Terry Winograd about the Stanford **CS547 'People, Computers, and Design'**
+  seminar video archive — the open, recorded, one-guest-a-week public seminar that is the direct
+  forebear of the Repo Show. Two recordings are the anchors, and both are WILL-adjacent gold.
+
+verified_talks:
+  will_wright_1996:
+    date: "1996-04-26"
+    title: "Interfacing to Microworlds"
+    what: "Will's Dollhouse / The Sims preview — the talk Don credits with drawing him to Maxis"
+    don_role: "Preserved the Stanford video, uploaded to YouTube, made a clean transcript, wrote the Medium retrospective"
+    in_repo: ../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
+  james_gosling_1995:
+    date: "1995-12-01"
+    title: "Bringing Behavior to the Internet"
+    what: "Gosling's Java talk to the same class; Don attended and appears on camera (~1:00:30) asking Java-security questions"
+    don_role: "Found it in Stanford's archive, uploaded to YouTube to generate a transcript"
+    youtube: "https://www.youtube.com/watch?v=dgrNeyuwA8k"
+
+why_it_matters: |
+  CS547 IS the template: one luminary, open public access, recorded for posterity, real Q&A.
+  The Repo Show is its descendant — and Terry is the curator of the trove that holds Will's
+  own 1996 words.
+
+connects_in_repo:
+  - { path: CHARACTER.yml, why: "Forebear bio + invitation status" }
+  - { path: ../will-wright/, why: "The 1996 talk this archive preserved — flagship show" }
+  - { path: ../james-gosling/, why: "1995 CS547 Java talk — NeWS/Java lineage" }
+  - { path: ../../process/trails/archive-and-provenance.md, why: "Primary-source preservation trail" }
+
+show_hooks:
+  - "Screen the 1996 'Interfacing to Microworlds' talk and decode it live with Will"
+  - "CS547 as the forebear of the Repo Show — open seminar, recorded, real Q&A"

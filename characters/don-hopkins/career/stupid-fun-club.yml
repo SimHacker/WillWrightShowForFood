@@ -15,7 +15,7 @@ stupid_fun_club:
         - Slats — waiter personality, validation-seeking speech
         - Dents — broken robot, empathy probe
       speech:
-        - Phoneloper expressive speech editor
+        - Phoneloper expressive speech editor (Python+Tkinter+Flite; XML "Phonelopes" — drag diphones, bend pitch, rotoscope a real voice, hold space to sing). Demo https://www.youtube.com/watch?v=qy5cqV8ypIs — source releasable, coming to this monorepo soon. See ../../../process/crazy-idea-jam.yml#phoneloper
         - XML dialog scripting; Festival/Flite/ViaVoice stack
       storytelling:
         - Bar Karma Storymaker backend

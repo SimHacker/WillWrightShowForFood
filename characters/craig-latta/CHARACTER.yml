@@ -1,0 +1,39 @@
+# Craig Latta — invitation portrayal. NOT Craig Latta.
+# Standards: ../../schemas/portrayal-standards.yml
+# Name note: the Smalltalk "Caffeine" developer is Craig LATTA (Black Page Digital, Amsterdam/
+# Berkeley), not Craig Leres (the tcpdump/libpcap networking engineer) — two different people.
+
+character:
+  id: craig-latta
+  name: "Craig Latta"
+  type: invitation
+  signifier: "🎚️"
+  status: living
+  field: "Livecoding the web — Caffeine (SqueakJS + WebAssembly), Context Smalltalk, Catalyst; Black Page Digital, Amsterdam/Berkeley"
+  home: characters/craig-latta/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/craig-latta/
+
+bio:
+  summary: "**Craig Latta** — livecoding composer and research computer scientist (UC Berkeley, CS + Music), founder of **Black Page Digital**. Creator of **Caffeine** (livecode the web — the SqueakJS Smalltalk VM bridged into browsers/Deno with dynamically generated WebAssembly), the **Context** minimal Squeak distribution, and **Catalyst** (a self-hosted WASM-GC Smalltalk VM with LLM-assisted method translation). Squeak Foundation board member, Appsterdam volunteer; divides his time between Amsterdam and Berkeley."
+
+sources:
+  wikipedia: null
+  web:
+    - https://caffeine.js.org/
+    - https://thiscontext.com/
+    - https://github.com/ccrraaiigg
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses — self or assisted contribution" }

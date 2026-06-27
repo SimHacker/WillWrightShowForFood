@@ -4,6 +4,6 @@ Invitation portrayal — **not** Terry Winograd. [Standards](../../schemas/portr
 
 **Field:** HCI, interaction design, constructionist-adjacent education, Stanford CS547 seminar series, SHRDLU legacy
 
-[Invitation](invitation.md) · [Show seed](../../repo-shows/terry-winograd/)
+[Invitation](invitation.md) · [Correspondence](correspondence.yml) · [Show seed](../../repo-shows/terry-winograd/)
 
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.
