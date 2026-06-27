@@ -35,6 +35,11 @@ gear_commitment:
   no_grind: "Premium model for yaml indentation = riding the clutch — shift down or artisanal"
 
 driving_metaphor:
+  macro_gear:
+    what: "Syntactic rinse-repeat — Emacs keyboard macros over dired: one file, next file"
+    shift: "Upshift to cheap/fast or artisanal — batch transform, not premium reasoning"
+    task_class: macro_batch
+    see: orchestration-gold.yml#training_by_demonstration
   upshift: "Straightaway — cheap/fast model, bulk scaffold, known pattern"
   downshift: "Hairpin — premium model, nasty bug, architecture fork"
   hill: "Climb — more context, harder reasoning, may need premium torque"
@@ -89,9 +94,12 @@ class_rules_vs_driver_flair:
 orchestration_gold:
   each_shift_commit_adds:
     - labeled gear segment with spend slice
+    - task_class — macro_batch, design_recon, hairpin, runbook_exec
     - runbook id + prompt count in segment
     - design_mode scout artifacts linked to execution commits
-  trains: "When to shift, which model for which runbook phase — Steve Kommrusch logs × richer"
+  trains: |
+    Human taste for which model when — training BY demonstration. Valuable grounded
+    signal for Cursor-class orchestration routing. Steve Kommrusch logs × richer × PBD lineage.
   see: orchestration-gold.yml
 
 ties_to:

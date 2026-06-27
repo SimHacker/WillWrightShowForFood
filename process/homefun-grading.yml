@@ -69,7 +69,8 @@ educator_pillar:
   fit: |
     Logo/Snap!/BJC constructionism — microworlds, blocks, show your work.
     Homefun grading is PBD for the LLM era: the commit message is the student's
-    story; thinking blocks are the replay.
+    story; thinking blocks are the replay. Expert stick-shift laps are training BY
+    demonstration — see orchestration-gold.yml#training_by_demonstration
 
 ai_offs_as_lab:
   note: "Manual Transmission runs produce the same artifacts teachers grade — sport = assessment"

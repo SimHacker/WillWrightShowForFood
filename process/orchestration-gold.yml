@@ -10,8 +10,38 @@ meta:
 pitch: |
   Manual Transmission and model-branching runs produce labeled trajectories: spec in,
   model choices, tool calls, spend, merge out. Steve Kommrusch's PhD showed GitHub
-  commit histories are training data for repair models. We extend the idea: commits plus
-  cursor-mirror forensics since last commit — what the LLM thought, touched, and why.
+  commit histories are training data for repair models. We extend: commits plus
+  cursor-mirror forensics — and human stick-shift decisions as training BY demonstration.
+  As conventional and valuable to tool vendors (Cursor-class) as PBD was to UI research.
+
+human_taste_routing:
+  what: |
+    It takes human taste and experience to learn which models to shift between for
+    different tasks — not fully specifiable upfront. The sport captures expert routing
+    as labeled segments: task type, model chosen, outcome, spend — orchestration gold.
+  learned_by_doing: "Manual Transmission + Micropolis Class homefun — many drivers, many laps"
+  see: stick-shift-protocol.yml
+
+training_by_demonstration:
+  lineage:
+    pbd: "Programming by demonstration — Brad Myers, Watch What I Do, Garnet (Don ~1992–93)"
+    see: ../characters/brad-myers/ · ../repo-shows/INDEX.yml#brad-myers-garnet-vpl
+  tbd: "Training BY demonstration — harvest expert multi-model laps as supervised routing signal"
+  macro_tier:
+    what: |
+      Many steps are simple syntactic transformations — the kind Don used to do with
+      Emacs keyboard macros over dired buffers: transform one file, next file, rinse, repeat.
+    shift_rule: "Cheap/fast model or artisanal macro pass — do not burn premium on batch syntax"
+    examples: [normalize filenames, yaml header pass, import reorder, bulk rename, scaffold fill]
+    record_in_commit: "task_class: macro_batch — links thinking blocks to repetitive tool pattern"
+  vs_design_tier:
+    macro: "Syntactic rinse-repeat — upshift to mini/fast, or hand macro"
+    design: "Scout problem space — premium design_mode — stick-shift-protocol.yml"
+    hairpin: "Reasoning bug — downshift premium"
+  industry_value: |
+    Opt-in, consented, real-programmer traces with task labels + model choices + outcomes
+    is as grounded and best-practice as ML data gets — valuable to Cursor-class vendors
+    training orchestration and routing, not just base models. Fun competition → honest logs.
 
 lineage:
   steve_kommrusch:
@@ -100,6 +130,7 @@ ties_to:
   - ai-offs.yml
   - brain-stream.yml
   - homefun-grading.yml
+  - ../characters/brad-myers/
   - SimHacker/moollm/skills/thoughtful-commitment
   - SimHacker/moollm/skills/cursor-mirror
   - SimHacker/moollm/skills/rubric
@@ -113,3 +144,4 @@ see_also:
 credits:
   steve_kommrusch: "GitHub commit logs as ML training signal — repair / equivalence research"
   mike_gallaher: "RUBRIC-BRIDGE + experiment COMPARE for multi-axis scoring"
+  brad_myers: "Programming by demonstration — Watch What I Do, Garnet; TBD extends to model routing"
