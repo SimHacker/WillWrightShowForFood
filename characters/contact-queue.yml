@@ -26,11 +26,12 @@ later: "Remaining guests invitation.status: draft — enrich sources then review
 
 wanted_artifacts:
   note: "Archival leads worth chasing — ask gracefully; rights/ownership may block them"
-  - artifact: "Bar Karma / CreationTV production StoryMaker database"
-    why: "The real corpus of community submissions → producer outlines → voted storyboards → episode scripts. Gold for a show segment."
-    ask: ["Will Wright", "Peter Swearengen (StoryMaker Producer)", "Albie Hecht / Worldwide Biggies", "Laura Knight", "David Cohn (Current TV)"]
-    status: not_yet_asked
-    detail: ../process/crazy-idea-jam.yml#creationtv_storymaker
+  items:
+    - artifact: "Bar Karma / CreationTV production StoryMaker database"
+      why: "The real corpus of community submissions → producer outlines → voted storyboards → episode scripts. Gold for a show segment."
+      ask: ["Will Wright", "Peter Swearengen (StoryMaker Producer)", "Albie Hecht / Worldwide Biggies", "Laura Knight", "David Cohn (Current TV)"]
+      status: not_yet_asked
+      detail: ../process/crazy-idea-jam.yml#creationtv_storymaker
 
 see_also:
   - INDEX.yml
