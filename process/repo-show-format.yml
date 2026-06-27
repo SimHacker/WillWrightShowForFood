@@ -18,6 +18,10 @@ how_it_runs:
     - "Don Philahue surfaces relevant questions live (Phil-Donahue homage audience-wrangler)"
   implement: "Design ideas → cauldron → skills + code — however YOUR rig builds (see rig_spectrum)"
   clocks: [before_async_PRs, during_Twitch, after_harvest_PRs]
+  during_twitch:
+    brain_stream: brain-stream.yml
+    note: "Live bus — prompts, thinking, model shifts, GH doc links on overlay + throttled chat"
+    drag_race: "Manual Transmission + Micropolis AI Drag Race — Slats judges; spend log ref"
 
 canonical_prose: |
   Announced ahead of time (e.g. to Hacker News) as a pointer to this repo — people RTFR
@@ -101,6 +105,7 @@ rig_spectrum:
     - "Budget bull ride — tight tokens, small model, better output; show hallucinations and retries"
     - "Stick shift — efficient model switching through the task; Cursor spend log + cursor-mirror proof"
     - "Code That Spec — bid tokens/time; audience chants CODE THAT SPEC; rig costumes; see code-that-spec.yml"
+    - "Manual Transmission — smallest model that ships; same spec CARD; Slats + spreadsheet judge; see manual-transmission.yml"
     - "Stiletto Sprint — Drag Queen Olympics flair under constraint; shortest honest bid that ships"
     - "Man vs machine — artisanal vs vibe vs orchestrated vs budget-tier (declare; don't exclude — it's a game)"
     - "Dance-off — show your workflow live; audience votes with thumbs and PRs"
@@ -177,5 +182,8 @@ see_also:
   - VISION.md
   - rig-feedback.yml
   - showmaker-network.yml
+  - manual-transmission.yml
+  - brain-stream.yml
+  - micropolis-ai-drag-race.yml
   - ../repo-shows/will-wright/README.md
   - ../skills/README.md

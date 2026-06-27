@@ -19,9 +19,14 @@ rig_classes:
 game_shows:
   code_that_spec: code-that-spec.yml
   micropolis_ai_drag_race: micropolis-ai-drag-race.yml
+  manual_transmission: manual-transmission.yml
   chant: "CODE THAT SPEC!!!!!"
   drag_race: "Start your engines — may the best rig werk, commit, and merge"
-  stiletto_sprint: "Drag Queen Olympics Stiletto Sprint — flair + constraint + ship"
+  manual_transmission: "Smallest model that ships — declare, bid, prove with spend log"
+
+brain_stream:
+  see: brain-stream.yml
+  role: "Live overlay + chat bus for prompts, thinking, shifts — Manual Transmission tachometer"
 
 cursor_mirror:
   repo: https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror
@@ -73,4 +78,6 @@ see_also:
   - ../rigs/README.md
   - rig-feedback.yml
   - showmaker-network.yml
+  - manual-transmission.yml
+  - brain-stream.yml
   - ../skills/README.md

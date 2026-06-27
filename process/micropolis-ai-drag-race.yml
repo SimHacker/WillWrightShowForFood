@@ -33,6 +33,11 @@ challenges:
     what: "Shortest honest token/time bid that still ships — heels optional, constraint mandatory"
   stick_shift_slalom:
     what: "Model-switch course — spend log proves clean shifts through the cliff road"
+  manual_transmission:
+    see: manual-transmission.yml
+    tagline: "What's the lowest cost / smallest model you can solve the problem with?"
+    audience_chant: "CODE THAT SPEC!!!!!"
+    overlay: brain-stream.yml
   bull_ride_ball:
     what: "Wrangle one cheap model through hallucination chaos — show the retries, werk anyway"
   artisanal_eleganza:
@@ -43,6 +48,9 @@ challenges:
     what: "Final — merge PR, abstract to skills/ + packages/, present the organism graft"
 
 judging:
+  celebrity_judge:
+    slats: ../characters/slats/judge-rubric.yml
+  panel: [slats, ai_scorecard, human_taste, spreadsheet_ref]
   criteria:
     - "Taste — eleganza, clarity, humor, constructionist generosity"
     - "Cost to ship — tokens, spend, wall-clock vs bid"
@@ -76,6 +84,8 @@ episode_structure:
 ties_to:
   - code-that-spec.yml
   - ai-offs.yml
+  - manual-transmission.yml
+  - brain-stream.yml
   - showmaker-network.yml
   - ../schemas/rig-schema.yml
   - ../rigs/README.md

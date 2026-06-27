@@ -31,6 +31,11 @@ data portability) and follow wherever you want to go.
 - **The crown jewel:** **Data portability** — characters, homes, objects, memories moving
   between worlds. We want to build toward that with you, in public.
 - **No homework:** No prep deck. Warm conversation; ideas can become running code on stream.
+- **Reincarnate Slats (optional segment):** **Slats** — the robot brain Don programmed at your
+  **Stupid Fun Club**, who appeared in the One Minute Movies (*Servitude*, *Empathy*). Don still
+  has the code. If it sounds fun, we'd pursue it as a live **RoboResurrection** quest on the show:
+  read the old code together, revive him, call-in sidekick, reprogram, iterate. Stupid Fun Club
+  energy — not a required topic. Details: [`slats-reincarnation.yml`](../../repo-shows/will-wright/slats-reincarnation.yml).
 
 ### Materials
 
@@ -38,6 +43,7 @@ data portability) and follow wherever you want to go.
 |------|--------|
 | Show bundle | [`repo-shows/will-wright/`](../../repo-shows/will-wright/) |
 | 1996 talk (centerpiece) | [`sources/1996-04-26-winograd-interfacing-to-microworlds/`](../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/) |
+| Slats RoboResurrection quest | [`slats-reincarnation.yml`](../../repo-shows/will-wright/slats-reincarnation.yml) |
 | Browse (no account needed) | [github.com/SimHacker/WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |
 
 ### Your call

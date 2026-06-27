@@ -1,0 +1,20 @@
+# stream-gateway — Brain Bus app seed (not shipped)
+# Full spec: ../../process/brain-stream.yml
+
+app:
+  id: stream-gateway
+  status: seed
+  stack: SvelteKit
+  purpose: "SSE/WebSocket brain bus → OBS overlay, Twitch/YouTube chat, /brain page"
+
+routes:
+  - /overlay/brain
+  - /brain
+  - /api/events
+
+spec: ../../process/brain-stream.yml
+
+ties_to:
+  - ../../process/manual-transmission.yml
+  - ../../process/ai-offs.yml
+  - SimHacker/moollm/skills/cursor-mirror

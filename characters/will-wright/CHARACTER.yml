@@ -21,7 +21,9 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/will-wright/
-  note: "Phone 2026-06-24 — details stay out of public yaml; invitation.md is linkable when finished"
+  segments:
+    - slats-reincarnation
+  note: "Phone 2026-06-24 — Slats quest in invitation.md; linkable when finished"
 
 simulation:
   permitted: false

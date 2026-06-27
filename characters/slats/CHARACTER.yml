@@ -6,13 +6,20 @@ character:
   real_being: false
   signifier: "🤖"
   status: fictional
-  field: "Stupid Fun Club robot brain — One Minute Movies; RoboResurrection quest"
+  field: "Stupid Fun Club robot brain — One Minute Movies; RoboResurrection quest; Drag Race celebrity judge"
   home: characters/slats/
 
 representation:
   note: "Beloved fictional robot Don programmed at Will Wright's Stupid Fun Club — character + tool, not a soul we pretend into being"
-  may: [portray_as_fictional, call_in_sidekick, reprogram_on_stream]
+  may: [portray_as_fictional, call_in_sidekick, reprogram_on_stream, judge_drag_race_on_stream]
   must_not: [claim_sentience, impersonate_real_person]
+
+roles:
+  robo_resurrection: repo-shows/will-wright/slats-reincarnation.yml
+  celebrity_judge:
+    rubric: judge-rubric.yml
+    formats: [micropolis-ai-drag-race, manual-transmission]
+    brain_stream: ../../process/brain-stream.yml
 
 quest:
   show_segment: repo-shows/will-wright/slats-reincarnation.yml
@@ -25,4 +32,8 @@ invitation:
 
 see_also:
   - ../repo-shows/will-wright/slats-reincarnation.yml
+  - judge-rubric.yml
+  - ../../process/manual-transmission.yml
+  - ../../process/brain-stream.yml
+  - ../../process/micropolis-ai-drag-race.yml
   - ../characters/don-hopkins/career/stupid-fun-club.yml

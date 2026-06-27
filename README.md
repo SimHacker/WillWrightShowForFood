@@ -29,6 +29,9 @@ curb appeal up top, **brutalist GitHub underneath** (yaml girders, verify CI, re
 | **AI-offs** (spend proof + thoughtful commits) | [`process/ai-offs.yml`](process/ai-offs.yml) |
 | **Rig schema** | [`schemas/rig-schema.yml`](schemas/rig-schema.yml) · [`rigs/`](rigs/) |
 | **Micropolis AI Drag Race** | [`process/micropolis-ai-drag-race.yml`](process/micropolis-ai-drag-race.yml) |
+| **Manual Transmission** (smallest model that ships) | [`process/manual-transmission.yml`](process/manual-transmission.yml) |
+| **Brain stream** (live Cursor on overlay) | [`process/brain-stream.yml`](process/brain-stream.yml) · [`apps/stream-gateway/`](apps/stream-gateway/) |
+| **Slats** (judge + RoboResurrection) | [`characters/slats/`](characters/slats/) |
 | **Code That Spec** (game show) | [`process/code-that-spec.yml`](process/code-that-spec.yml) |
 | **Don Hopkins** (host bio) | [`characters/don-hopkins/README.md`](characters/don-hopkins/README.md) |
 | **All show seeds** | [`repo-shows/INDEX.yml`](repo-shows/INDEX.yml) |
@@ -58,6 +61,8 @@ Announced ahead of time (e.g. Hacker News) as a **pointer to this repo** — peo
 (read the repo) and follow along on **whatever rig they bring**: vim, Cursor, notebook, or
 *pencil. **AI optional.** Man-against-the-machine encouraged — *dance-off optional.*
 **[Code That Spec](process/code-that-spec.yml):** bid tokens — audience yells **CODE THAT SPEC!!!!!**
+**[Manual Transmission](process/manual-transmission.yml):** *what's the smallest model that ships?* — spend log is the tachometer; **[Slats](characters/slats/)** judges.
+**[Brain stream](process/brain-stream.yml):** prompts + thinking on the live overlay (Twitch/YouTube/OBS).
 Rig costumes welcome (*Let's Make a Deal* / Stiletto Sprint energy). Guest = **Repo Man**. Audience = consensual characters + question PRs;
 **Don Philahue** wrangles live. Ideas → cauldron → skills + code → **breed technique DNA**
 back via git (branches, merges, nested worlds).

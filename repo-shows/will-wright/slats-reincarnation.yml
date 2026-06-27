@@ -52,9 +52,19 @@ why_will_loves_it:
   - "It's constructionism as theater: read code → understand → modify → observe behavior change → repeat."
   - "A live, emergent, character-driven segment — exactly the toys-not-games, simulator-effect spirit."
 
+after_robo_resurrection:
+  celebrity_judge: |
+    Reincarnated Slats becomes celebrity robot judge for Micropolis AI Drag Race and
+    Manual Transmission — camp callouts on brain-stream overlay; robopoetry stingers.
+  judge_rubric: ../../characters/slats/judge-rubric.yml
+
 ties:
-  - ./SHOW.yml                                   # the Will Wright show this segments into
-  - ../PATTER.yml#slats_call_in_menu             # the canned say-menu + free-form voice format
-  - ../../../../characters/don-hopkins/stupid-fun-club/STORY.yml  # Slats origin + One Minute Movies
-  - ../../process/apple2-emulator-stack.yml      # emulation fallback / 'run the legacy binary' theme
-  - ../../crystallized/AI-MANIFESTO.yml          # no-ai-soul: Slats is a beloved CHARACTER + tool, not a soul we pretend into being
+  - ./SHOW.yml
+  - ../PATTER.yml#slats_call_in_menu
+  - ../../../../characters/don-hopkins/stupid-fun-club/STORY.yml
+  - ../../process/apple2-emulator-stack.yml
+  - ../../process/manual-transmission.yml
+  - ../../process/brain-stream.yml
+  - ../../process/micropolis-ai-drag-race.yml
+  - ../../characters/slats/judge-rubric.yml
+  - ../../crystallized/AI-MANIFESTO.yml

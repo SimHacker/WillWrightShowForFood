@@ -1,0 +1,98 @@
+# MANUAL TRANSMISSION — Smallest Model That Ships
+# Drag Race challenge + ai-off lane. The question IS the contest.
+# Scooped: 2026-06-27 jam (lowest cost / smallest model → stick-shift efficiency race)
+
+meta:
+  id: manual-transmission
+  also_called: [smallest_model_that_ships, sms_lane]
+  status: seed
+  type: [ai_off, drag_race_challenge, game_show]
+  tagline: "What's the lowest cost / smallest model you can solve the problem with?"
+  answer: "Declare class, prove with spend, let Slats and the spreadsheet fight about taste."
+
+pitch: |
+  Same spec CARD for every contestant. Everyone bids model tier + tokens/spend/wall-clock +
+  gear changes. Audience chants CODE THAT SPEC. Cursor spend log is the tachometer.
+  Brain-stream overlay shows prompts and shifts live. Misbid and the audience is the ref.
+
+origin:
+  scooped_from: "Repo Show jam — misread as meta-advice; reframed as on-air challenge"
+  cauldron: "play → lift → persist in process/ — see repo-show-format.yml#cauldron_scoop"
+
+how_it_works:
+  host_drops: "One spec CARD — yaml stub, issue, guest throw-down — identical for all lanes"
+  contestants:
+    declare:
+      - rig_class
+      - minimum_model_tier
+      - max_tokens_or_spend_bid
+      - shift_count_or_stick_shift_map
+    prove:
+      - Cursor spend export
+      - cursor-mirror composer id + timeline
+      - thoughtful-commitment commit SHAs
+      - merged PR branch
+  audience:
+    chant: "CODE THAT SPEC!!!!!"
+    ref: "Misbid vs spend log — thumbs, chat, PR comments"
+  overlay:
+    see: brain-stream.yml
+    shows: [current_prompt, model_badge, cost_ticker, shift_events, github_attachment_links]
+
+bid_examples:
+  - "I can code that spec on Composer Fast — 50k tokens, zero shifts."
+  - "GPT-5 Mini scaffold, one Opus hairpin for the schema — 120k total."
+  - "Zero tokens — artisanal only; my model is a mechanical pencil."
+  - "Bull ride: one mini, four retries, still under 80k — hold my chaps."
+
+rig_classes_same_track:
+  artisanal: "Zero tokens — smallest model is you"
+  single_gear_mini: "One cheap/fast model, no shifts — purity play"
+  stick_shift: "Mini for bulk, premium once for hairpin turns — proof in spend timestamps"
+  bull_ride: "One tier through hallucination hairpins — retries are costume"
+  orchestrated: "Many models + MCP — judged on efficiency per complexity, not raw spend"
+
+scoring:
+  measurable:
+    cost_to_ship: { proof: Cursor spend export, weight: high }
+    smallest_model_used: { proof: spend breakdown on merge commit, weight: high }
+    shift_smoothness: { proof: spend timestamps + cursor-mirror timeline, weight: medium }
+    bid_honesty: { proof: bid vs actual, weight: high }
+    wall_clock: { proof: stream clock vs bid, weight: medium }
+    spec_compliance: { proof: diff vs CARD + automated lint, weight: high }
+    merge_harvest: { proof: PR merged; skills/packages graft bonus, weight: high }
+  subjective:
+    eleganza: { judges: [slats, human], weight: medium }
+    shift_feel: { note: "Premium for yaml formatting = riding the clutch", weight: medium }
+    narration: { proof: thoughtful-commitment + lip_sync_for_your_commits, weight: low }
+    replication: { proof: rigs/*.rig.yml mash_up, weight: medium }
+    brain_stream_aesthetics: { proof: overlay readable; prompts interesting; GH links clean, weight: low }
+
+judges:
+  slats:
+    role: celebrity_robot_judge
+    rubric: ../characters/slats/judge-rubric.yml
+    note: "Fictional sidekick — camp, robopoetry, werk callouts; not sentience theater"
+  ai:
+    role: proof_package_lint + spec_diff_scorer + shift_efficiency_math
+  human:
+    role: taste, constructionist_generosity, merge_worthiness
+  spreadsheet:
+    role: "Cursor export — the ref that doesn't lie"
+
+episode_beat:
+  duration: "5–10 min mini or full Drag Race rotation slot"
+  steps: [drop_spec, declare_bids, start_engines, ship_branch, judges_runway, merge_or_sashay]
+
+ties_to:
+  - micropolis-ai-drag-race.yml
+  - ai-offs.yml
+  - code-that-spec.yml
+  - brain-stream.yml
+  - ../characters/slats/judge-rubric.yml
+  - ../rigs/stick-shift-composer-moollm.rig.yml
+  - SimHacker/moollm/skills/cursor-mirror
+
+see_also:
+  - showmaker-network.yml#competitions
+  - repo-show-format.yml#rig_spectrum

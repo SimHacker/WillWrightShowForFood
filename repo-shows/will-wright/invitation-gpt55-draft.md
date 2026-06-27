@@ -44,6 +44,11 @@ with you, even if it's just a toy prototype at first: Proxi ideas, Sims ideas,
 Micropolis/Simopolis ideas, all talking to each other instead of living in
 separate silos.
 
+One optional segment I'd love if it sounds fun: **reincarnating Slats** — the
+robot brain from Stupid Fun Club and the One Minute Movies. I still have the
+code. Read it together on the show, revive him, call-in sidekick, reprogram,
+iterate. RoboResurrection. Totally optional.
+
 The AI angle is practical. I use it as a fast pair programmer, archivist, and
 transcript-wrangler while we talk. The point is still the people and the ideas;
 the AI just helps turn them into artifacts before they evaporate.

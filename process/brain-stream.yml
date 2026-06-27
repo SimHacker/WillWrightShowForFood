@@ -1,0 +1,107 @@
+# BRAIN STREAM — live Cursor thought on the broadcast bus
+# Twitch overlay + YouTube chat + scrollable /brain page + GitHub doc links
+# Scooped: 2026-06-27 jam — spy on the brain; prompts are the show
+
+meta:
+  id: brain-stream
+  status: seed
+  type: [stream_infra, ai_off_proof, repo_show_clock]
+  tagline: "Spy on my brain thinking — prompts, shifts, attachments as repo URLs"
+  app_seed: ../apps/stream-gateway/
+
+pitch: |
+  Tail Cursor session events into one slippery event bus. OBS Browser Source overlay for
+  Twitch; throttled summaries to YouTube Live Chat; full scrollable page for RTFR crowd.
+  Collapsed = prompt + model badge + cost ticker; expand = thinking + tools + GH links.
+  Pairs with Manual Transmission — the tachometer the audience watches.
+
+repo_show_clock:
+  when: during_Twitch
+  see: repo-show-format.yml#how_it_runs
+  also: [before_async_PRs, after_harvest_PRs]
+
+architecture:
+  principle: "Tight integration, slippery coupling — one schema, many subscribers"
+  sources:
+    cursor_mirror_live:
+      status: designed
+      see: SimHacker/moollm/skills/cursor-mirror/designs/IMPROVEMENT-MAP.md#r5-live-daemon--watch-mode
+      what: "Poll state.vscdb + agent-transcripts JSONL → new bubbles, thinking, tools"
+    cursor_lens_proxy:
+      status: optional
+      note: "Network proxy for token/cost firehose — complementary, not sole brain feed"
+      see: SimHacker/moollm/skills/cursor-mirror/reference/assimilated/HAMEDMP-CURSORLENS.yml
+    github:
+      what: "Commit webhooks → thoughtful-commitment links on bus"
+  bus:
+    transport: [SSE, WebSocket]
+    implement_in: apps/stream-gateway/
+  sinks:
+    obs_overlay: "Transparent browser source — /overlay/brain"
+    twitch_chat: "EventSub bot — !prompt !thinking !cost !rig"
+    youtube_chat: "Throttled summaries only — API quotas"
+    web_full: "/brain — scrollable, expandable, resummarized"
+
+event_schema:
+  types: [prompt, thinking, tool_call, tool_result, assistant_chunk, commit, shift, summary]
+  fields:
+    composer_id: string
+    model: string
+    ts: iso8601
+    visibility: [overlay, chat, full, redacted]
+    payload:
+      text: string
+      summary: "optional rolling resummary for chat"
+      attachments:
+        - kind: github_file
+          path: repo-relative path
+          url: public blob URL
+      spend:
+        tokens_in: number
+        tokens_out: number
+        cost_usd: number
+
+overlay_ux:
+  collapsed: [latest_prompt, model_badge, cost_ticker, thinking_teaser]
+  expanded: [full_thinking, tool_names, github_links, shift_timeline]
+  resummary: "Mini model on interval OR on bubble close — chat gets paragraph, /brain keeps log"
+
+privacy:
+  before_bus: [deep_snitch, trekify, stream_mode_toggle]
+  stream_mode:
+    delay_thinking_seconds: optional
+    strip_private_paths: true
+    no_env_no_secrets: true
+  subject_rights: ../schemas/portrayal-standards.yml
+
+build_phases:
+  - id: 0
+    ship: "Tail agent-transcripts JSONL → local SSE → static HTML overlay"
+    model_cost: zero
+  - id: 1
+    ship: "cursor-mirror watch --live + redact filter"
+    model_cost: zero
+  - id: 2
+    ship: "apps/stream-gateway — /overlay/brain + /brain"
+    model_cost: zero
+  - id: 3
+    ship: "Twitch bot + GitHub permalink resolver"
+    model_cost: zero
+  - id: 4
+    ship: "Rolling resummary for chat"
+    model_cost: mini_on_interval
+  - id: 5
+    ship: "YouTube chat bot + ai-offs scoreboard tile"
+    model_cost: mini
+
+ties_to:
+  - manual-transmission.yml
+  - ai-offs.yml
+  - micropolis-ai-drag-race.yml
+  - ../apps/stream-gateway/GLANCE.yml
+  - SimHacker/moollm/skills/cursor-mirror
+  - SimHacker/moollm/skills/thoughtful-commitment
+
+see_also:
+  - repo-show-format.yml
+  - showmaker-network.yml#competitions

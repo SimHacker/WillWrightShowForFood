@@ -45,6 +45,15 @@ built is **data portability** — characters, homes, objects, memories moving
 between games and universes (your train-set hobby model). I want to actually
 build it with you, on the show: a little Proxi ↔ Sims bridge. Your idea,
 finally running.
+- **Reincarnate Slats.** Remember **Slats** — the robot brain I programmed at
+  your **Stupid Fun Club**, who showed up in the One Minute Movies (*Servitude*,
+  *Empathy*)? I'm pretty sure I still have all the code (and a Windows laptop
+  that might run it — emulation if not). I'd love to make **bringing Slats back**
+  a quest we work through on the show: read the old code together, figure out
+  how to revive him, have him **call into the chat**, interview him, reprogram
+  him, interview him again. **RoboResurrection** — Stupid Fun Club energy,
+  constructionism as theater. Totally optional, but I think you'd get a kick out
+  of it. Seed doc: `repo-shows/will-wright/slats-reincarnation.yml`.
 
 **The bigger picture (the stuff that whizzed by on the call).** None of this has
 to make it into the first show — it's just the mission the show is part of:

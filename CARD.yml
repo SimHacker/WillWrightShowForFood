@@ -35,7 +35,7 @@ rooms:
   process/: "Vision, format, ShowMaker network, export/sync"
   schemas/: "Rig schema, guest invitation status"
   rigs/: "Reproducible rig instances (*.rig.yml)"
-  apps/: "Future deployable apps (site, stream, adventure UI)"
+  apps/: "Future deployable apps (site, stream-gateway brain bus, adventure UI)"
   packages/: "@wwsff/* shared libraries"
   skills/: "Show-harvested MOOLLM skills"
   examples/: "Runnable microworlds (future adventure-with-Will show)"

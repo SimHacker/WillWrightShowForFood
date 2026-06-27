@@ -18,10 +18,15 @@ challenges_rotation:
   - code_that_spec_mini
   - stiletto_sprint
   - stick_shift_slalom
+  - manual_transmission
   - bull_ride_ball
   - artisanal_eleganza
   - lip_sync_for_your_commits
   - harvest_runway
+
+judging:
+  celebrity_judge: ../characters/slats/judge-rubric.yml
+  brain_stream: ../process/brain-stream.yml
 
 contestants:
   how: "Anyone with a rigs/*.rig.yml persona + declared class"
@@ -32,6 +37,9 @@ host: don-philahue
 ties_to:
   - ../process/code-that-spec.yml
   - ../process/ai-offs.yml
+  - ../process/manual-transmission.yml
+  - ../process/brain-stream.yml
+  - ../characters/slats/judge-rubric.yml
   - ../rigs/stick-shift-composer-moollm.rig.yml
   - game-show-wigcercize.yml
 

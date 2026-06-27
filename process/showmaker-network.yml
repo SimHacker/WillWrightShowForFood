@@ -121,7 +121,17 @@ competitions:
     see: micropolis-ai-drag-race.yml
     brand: "Micropolis AI Drag Race — flagship variety format"
     tagline: "Start your engines — rig personas werk specs; spend log judges; merge or sashay"
-    challenges: [design_challenge, code_that_spec_mini, stiletto_sprint, lip_sync_for_your_commits, harvest_runway]
+    celebrity_judge: ../characters/slats/judge-rubric.yml
+    challenges: [design_challenge, code_that_spec_mini, stiletto_sprint, manual_transmission, lip_sync_for_your_commits, harvest_runway]
+  manual_transmission:
+    see: manual-transmission.yml
+    tagline: "What's the lowest cost / smallest model you can solve the problem with?"
+    origin: "Scooped from jam — the question IS the contest, not meta-advice"
+    overlay: brain-stream.yml
+  brain_stream:
+    see: brain-stream.yml
+    tagline: "Spy on the brain — prompts, thinking, GH links on the broadcast bus"
+    app: ../apps/stream-gateway/
   man_vs_machine: "Delightful adversarial play — not anti-AI, not anti-hand, not anti-budget; pro-declaration"
   breed_winners: "Merge technique DNA from winning branches — horizontal gene transfer via git"
 
@@ -146,6 +156,8 @@ ties_to:
   - ai-offs.yml
   - code-that-spec.yml
   - micropolis-ai-drag-race.yml
+  - manual-transmission.yml
+  - brain-stream.yml
   - rig-feedback.yml
   - ../repo-shows/INDEX.yml
   - ../repo-shows/REPO-SHOWS.yml
