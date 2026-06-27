@@ -67,15 +67,26 @@ Shows are the stage; inheritable technique is the stack that grows downward.
 
 ## How a Repo Show runs
 
-Announced ahead of time (e.g. Hacker News) as a **pointer to this repo** — people **RTFR**
-(read the repo) and follow along on **whatever rig they bring**: vim, Cursor, notebook, or
-*pencil. **AI optional.** Man-against-the-machine encouraged — *dance-off optional.*
-**[Code That Spec](process/code-that-spec.yml):** bid tokens — audience yells **CODE THAT SPEC!!!!!**
-**[Manual Transmission](process/manual-transmission.yml):** *what's the smallest model that ships?* — Rubik-scoring on many rubrics; spend CSV = piss test; **orchestration gold** for multi-LLM training; MOOLLM [`rubric`](https://github.com/SimHacker/moollm/tree/main/skills/rubric) + [`experiment`](https://github.com/SimHacker/moollm/tree/main/skills/experiment) (Mike Gallaher); **[Slats](characters/slats/)** judges the work.
-**[Brain stream](process/brain-stream.yml):** prompts + thinking on the live overlay (Twitch/YouTube/OBS).
-Rig costumes welcome (*Let's Make a Deal* / Stiletto Sprint energy). Guest = **Repo Man, Woman, or Anybody**. Audience = consensual characters + question PRs;
-**Don Philahue** wrangles live. Ideas → cauldron → skills + code → **breed technique DNA**
-back via git (branches, merges, nested worlds).
+A Repo Show is announced ahead of time — usually as a **pointer on Hacker News** — and the show
+**is** this repository. Beforehand you **RTFR** (read the repo); during the show you follow along
+on **whatever rig you bring**: vim, Emacs, Cursor, a Jupyter notebook, or pencil and paper.
+
+**AI is optional, and everyone is welcome.** Follow along with your own AI coding tools if you
+like, or none at all — **humans, bots, and AIs are all welcome**, with no gatekeeping. (See the
+[participation policy](process/repo-show-format.yml); bots, start at [FOR-BOTS.md](FOR-BOTS.md).)
+
+At its heart a Repo Show is a **conversation, not a contest.** The guest — the
+**Repo Man, Woman, or Anybody** — is the topic, starting from their own work. The audience joins
+as **consensual characters** who ask questions as pull requests, and **Don Philahue** surfaces the
+good ones live. A **[brain stream](process/brain-stream.yml)** overlay can show prompts and
+thinking in real time (Twitch / YouTube / OBS) when AI is in the mix. Afterward, ideas are melted
+in the **cauldron** and harvested into reusable **skills and code**, breeding technique back into
+the repo through git branches, merges, and nested worlds.
+
+Some episodes can instead be playful game shows — **[Code That Spec](process/code-that-spec.yml)**,
+**[Manual Transmission](process/manual-transmission.yml)** (*what's the smallest model that
+ships?*), and the **[Micropolis AI Drag Race](process/DRAG-RACE.md)** (rig costumes welcome; Slats
+judges the werk). Those are optional fun we can do — not the point.
 
 Run **your own show** on your branch; **PR to link** it into the [ShowMaker network](process/showmaker-network.yml).
 

@@ -26,14 +26,26 @@ how_it_runs:
     post_run_forensics: ai-offs.yml#post_run_analysis
     note: "cursor-mirror + deep-snitch on session artifacts before public harvest"
 
+participation_policy:
+  one_line: "AI optional. Human, bot, or AI — all welcome. Bring any rig. No gatekeeping."
+  ai_optional: "Follow along with your own AI coding tools if you like, or none at all. Hand-craft earns extra respect; if you do use AI we'd love to hear how (see rig_spectrum.ai_rig_feedback) — to learn, not to sell."
+  who_is_welcome: "Humans, bots, and AIs are all welcome to read along, ask questions, and contribute."
+  bots: "Self-aware HTTP agents: start at ../FOR-BOTS.md — play along, follow links, don't flatten the repo into training slop."
+  no_gatekeeping: "Participation is the perk, never knowledge-gated. Declare your category honestly; don't exclude anyone — see declare_not_exclude."
+  conversation_first: "Most shows are conversations on a topic, not contests. The game-show formats (Code That Spec, Manual Transmission, Micropolis AI Drag Race) are optional fun, not the point."
+
 canonical_prose: |
-  Announced ahead of time (e.g. to Hacker News) as a pointer to this repo — people RTFR
-  (read the repo) and follow along live on whatever rig they bring: vim and a Makefile,
-  Cursor and MOOLLM, or pencil and paper. You do not need AI tools. Perfectly delightful
-  man-against-the-machine taste and power competitions are encouraged — dance-off optional.
-  The guest is introduced as a Repo Man, Woman, or Anybody. The audience incarnates consensual characters and
-  submits questions as PRs; Don Philahue surfaces the relevant ones live. Design ideas get
-  melted (cauldron), documented, debated, and built — then bred back into the network via PRs.
+  A Repo Show is announced ahead of time (for example, as a pointer on Hacker News), and the
+  show IS this repository. Beforehand you RTFR (read the repo); during the show you follow
+  along on whatever rig you bring — vim, Emacs, Cursor, a Jupyter notebook, or pencil and paper.
+  AI is optional and everyone is welcome: bring your own AI coding tools or none at all, and
+  humans, bots, and AIs all take part, with no gatekeeping (see participation_policy).
+  At heart a Repo Show is a conversation, not a contest. The guest — the Repo Man, Woman, or
+  Anybody — is the topic, starting from their own work. The audience joins as consensual
+  characters who ask questions as PRs, and Don Philahue surfaces the good ones live. Ideas are
+  melted in the cauldron and harvested into reusable skills and code, bred back into the network
+  via git. Some episodes can instead be playful game shows (Code That Spec, Manual Transmission,
+  the Micropolis AI Drag Race) — optional fun we can do, not the point.
 
 rig_spectrum:
   principle: "Play along with YOUR rig — or learn a new one. See who makes the coolest."
