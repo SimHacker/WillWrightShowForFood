@@ -26,6 +26,7 @@ curb appeal up top, **brutalist GitHub underneath** (yaml girders, verify CI, re
 | **Guest roster** | [`characters/INDEX.yml`](characters/INDEX.yml) · [`characters/README.md`](characters/README.md) |
 | **Live repo policy** | [`process/live-repo.yml`](process/live-repo.yml) |
 | **AI-offs** (spend proof + thoughtful commits) | [`process/ai-offs.yml`](process/ai-offs.yml) |
+| **Code That Spec** (game show) | [`process/code-that-spec.yml`](process/code-that-spec.yml) |
 | **Don Hopkins** (host bio) | [`characters/don-hopkins/README.md`](characters/don-hopkins/README.md) |
 | **All show seeds** | [`repo-shows/INDEX.yml`](repo-shows/INDEX.yml) |
 | **MOOLLM interface** | [`GLANCE.yml`](GLANCE.yml) · [`CARD.yml`](CARD.yml) |

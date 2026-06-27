@@ -14,6 +14,12 @@ what: |
 rig_classes:
   budget_bull_ride: "One tier, tight budget, wrangle through chaos"
   stick_shift: "Multi-model — shift efficiently; cliff-road metaphor; spend log is the tachometer"
+  code_that_spec: "Game-show bid — tokens or time; audience CODE THAT SPEC; rig as Let's Make a Deal costume"
+
+game_shows:
+  code_that_spec: code-that-spec.yml
+  chant: "CODE THAT SPEC!!!!!"
+  stiletto_sprint: "Drag Queen Olympics Stiletto Sprint — flair + constraint + ship"
 
 cursor_mirror:
   repo: https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror

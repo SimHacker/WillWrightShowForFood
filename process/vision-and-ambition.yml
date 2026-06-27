@@ -77,6 +77,11 @@ rig_culture:
     metaphor: "Stick shift along a winding ocean cliff — read the road, shift at the right moment"
     proof: "Timestamped model switches in Cursor spend log; cursor-mirror timeline validates smooth shifts"
     recognition: "Elegant gear changes + great output beats one-model drag-race waste"
+  code_that_spec:
+    homage: "Name That Tune → Code That Spec — bid tokens, audience chants, prove with spend log"
+    rig_costumes: "Let's Make a Deal — your rig visualized as costume; camp + honest class declaration"
+    stiletto_sprint: "Drag Queen Olympics Stiletto Sprint — sprint the spec in maximum flair under constraint"
+    see: code-that-spec.yml
   history:
     consciencious_objectors:
       coinage: "Don Hopkins coined consciencious objectors at a meetup with David Ungar and Kaleida colleagues (ScriptX object-system era)"

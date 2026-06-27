@@ -110,6 +110,13 @@ competitions:
     Premium for the hairpin, budget for the straightaway, artisanal for the final mile.
     Proof lives in the Cursor spend log (timestamped shifts); cursor-mirror shows whether you
     shifted smooth or ground gears. Declare multi-model routing; compete on elegance of shifts.
+  code_that_spec:
+    see: code-that-spec.yml
+    tagline: |
+      NAME THAT TUNE → CODE THAT SPEC. "I can code that spec in two million tokens!"
+      Audience: "CODE THAT SPEC!!!!!" Bid tokens or time; prove with spend log + PR.
+    rig_costumes: "Let's Make a Deal — visualize your rig as a costume; declare class"
+    stiletto_sprint: "Drag Queen Olympics energy — maximum flair under constraint; sprint the spec"
   man_vs_machine: "Delightful adversarial play — not anti-AI, not anti-hand, not anti-budget; pro-declaration"
   breed_winners: "Merge technique DNA from winning branches — horizontal gene transfer via git"
 
@@ -132,6 +139,7 @@ nesting:
 ties_to:
   - repo-show-format.yml
   - ai-offs.yml
+  - code-that-spec.yml
   - rig-feedback.yml
   - ../repo-shows/INDEX.yml
   - ../repo-shows/REPO-SHOWS.yml

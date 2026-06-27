@@ -1,0 +1,65 @@
+# CODE THAT SPEC — game-show competition format
+# Name That Tune → Code That Spec. Audience participation. Rig as costume.
+
+meta:
+  id: code-that-spec
+  status: seed
+  type: [game_show, ai_off, audience_ritual]
+  homage: [Name_That_Tune, Lets_Make_a_Deal, Drag_Queen_Olympics]
+
+pitch: |
+  Like NAME THAT TUNE: "I can name that tune in five notes!"
+  But CODE THAT SPEC: "I can code that spec in two million tokens!"
+  Audience, on cue: "CODE THAT SPEC!!!!!"
+
+how_it_works:
+  host: "Presents a spec — yaml CARD, README stub, issue, or live guest throw-down"
+  contestants:
+    - "Declare rig class (artisanal / bull ride / stick shift / orchestrated)"
+    - "Bid tokens OR wall-clock OR zero tokens — honest bids only"
+    - "Visualize your rig like a Let's Make a Deal costume — show the whole stack"
+  audience:
+    chant: "CODE THAT SPEC!!!!!"
+    vote: "Thumbs, PRs, issues — the ref"
+  prove:
+    - "Ship on your branch"
+    - "Cursor spend log + cursor-mirror timeline"
+    - "thoughtful-commitment commits — live thought process in git"
+  judge:
+    - "Did you code the spec?"
+    - "Cost to ship vs bid"
+    - "Taste and power of the solution"
+    - "Merge + abstract to skills/ and packages/"
+
+rig_costumes:
+  homage: "Let's Make a Deal — everybody brings their own rig, visualized as a costume"
+  examples:
+    artisanal: "Pencil behind the ear, paper tape on glasses, NO AI sash"
+    bull_rider: "Rodeo chaps made of retry logs, lasso of hallucination recovery"
+    stick_shift: "Racing gloves, cliff-map shift pattern, tachometer = Cursor spend export"
+    orchestrated: "Crown of MCP servers, cape of MOOLLM skills, scepter of Composer"
+  rule: "Declare class + wear the rig — camp welcome, honesty required"
+
+stiletto_sprint:
+  homage: "Drag Queen Olympics Stiletto Sprint — maximum flair under maximum constraint"
+  repo_show_version: |
+    Code That Spec at sprint distance: shortest honest bid wins the lane, but you must
+    STAY UP — ship working code, don't faceplant on the runway. Elegance under pressure.
+    Bull ride in heels. Stick shift in sequins. Artisanal bare-foot sprint counts too.
+
+bids:
+  examples:
+    - "I can code that spec in ZERO tokens — artisanal only!"
+    - "I can code that spec in 50k tokens — Composer 2.5 Fast, one pass!"
+    - "I can code that spec in 2 million tokens — stick shift through the cliff road!"
+    - "I can code that spec in one afternoon — wall-clock bid, any rig class"
+  misbid: "Audience votes — that's the ref. Spend log doesn't lie."
+
+ties_to:
+  - showmaker-network.yml
+  - ai-offs.yml
+  - repo-show-format.yml
+  - rig-feedback.yml
+
+see_also:
+  - ../repo-shows/game-show-wigcercize.yml
