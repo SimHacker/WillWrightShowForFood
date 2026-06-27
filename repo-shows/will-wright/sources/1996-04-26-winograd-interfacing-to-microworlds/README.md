@@ -26,7 +26,7 @@ transcript, and wrote the Medium article. A **proto-Repo-Show**.
 
 ## The pivotal moment (the one Don flagged)
 
-After the postmortems + audience Q&A, a student asked the **$5-billion question** —
+After the postmortems + audience Q&A, a student asked the **$5-billion question** ([The Sims franchise has since passed $5 billion in lifetime sales](https://www.gamesindustry.biz/the-sims-franchise-surpasses-usd5b-in-lifetime-sales)) —
 *what are you working on now?* — and Will was **genuinely, warmly taken aback**
 (took a few steps back, "Oh, God…"), then took a swing at it and rolled into the
 epic **Dollhouse** demo. The exact exchange:
