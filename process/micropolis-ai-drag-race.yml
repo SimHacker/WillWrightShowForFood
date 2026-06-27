@@ -42,6 +42,7 @@ challenges:
     what: "Wrangle one cheap model through hallucination chaos — show the retries, werk anyway"
   artisanal_eleganza:
     what: "Zero tokens — hand-crafted yaml so fierce it doesn't need AI"
+    flair_variant: "Or rewrite the whole spec in Rust/FORTH/APPLESOFT just to show off — Slats judges"
   lip_sync_for_your_commits:
     what: "thoughtful-commitment commits — narrate WHY on stream; cursor-mirror playback"
   harvest_runway:

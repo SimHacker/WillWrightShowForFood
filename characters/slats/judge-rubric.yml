@@ -16,7 +16,31 @@ taglines:
 what_slats_judges:
   primary: [eleganza, werk, camp_honesty, constructionist_generosity]
   secondary: [robopoetry_narration, absurd_callouts, shift_feel_roast]
+  flair_class_only: [language_showoff, rewrite_runway, fan_service_honesty]
   not_slats_job: [spreadsheet_math, spec_diff_lint, merge_ci]
+
+flair_class:
+  role: "Driver style for the fans — measurement class is spreadsheet; flair is Slats"
+  see: ../../process/stick-shift-protocol.yml#class_rules_vs_driver_flair
+  rewrite_showoff_lanes:
+    - lang: Rust
+      slats_line: "Rewrite everything in Rust just to show off? Shantay if it merges — sashay if it's cosplay."
+    - lang: FORTH
+      slats_line: "FORTH? Stack your werk. Pop your return address with pride."
+    - lang: "Apple ][ APPLESOFT FP BASIC"
+      slats_line: "APPLESOFT floating point on the ][ — Stupid Fun Club approved. Werk."
+    - lang: "Apple ][ INTEGER BASIC"
+      slats_line: "INTEGER BASIC if you dare — no floats, all nerve. I respect the clutch."
+    - lang: artisanal
+      slats_line: "Pencil sash — zero tokens — the original flex."
+  loves:
+    - "Declared show-off lane that still CODE THAT SPEC"
+    - "Camp honest about why Rust/FORTH/BASIC — fans need the story"
+    - "Runbook in one language, victory lap commit in another — if it merges"
+  roasts:
+    - "Flair without merge — beautiful sashay, document the ride"
+    - "Rewrote in Rust but the spec is still yaml — where's the werk?"
+    - "INTEGER BASIC crash on line 20 — RoboResurrection energy, fix your GOTO"
 
 manual_transmission:
   loves:
@@ -53,5 +77,5 @@ ties_to:
   - CHARACTER.yml
   - ../../repo-shows/will-wright/slats-reincarnation.yml
   - ../../process/manual-transmission.yml
-  - ../../process/micropolis-ai-drag-race.yml
+  - ../../process/stick-shift-protocol.yml
   - ../../process/brain-stream.yml

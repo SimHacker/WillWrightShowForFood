@@ -84,11 +84,21 @@ class_rules_vs_driver_flair:
     goal: "Clean signal — fewer shifts, tight envelopes, fair model capacity comparison"
     judges: spreadsheet, rubric, experiment COMPARE
   flair_class:
-    goal: "AI race driver style for the fans — flourish, camp, alma mater model pick"
+    goal: "AI race driver style for the fans — flourish, camp, show-off lane"
     judges: Slats, audience, brain-stream aesthetics
+    rule: "Spec still must ship — flair is how, not whether. Spreadsheet still gets piss test."
     examples:
-      - "Use the model from your alma mater — go Terps! (driver choice, declare it)"
-      - "Scenic GPS route with extra narrative commits"
+      alma_mater: "Use the model from your alma mater — go Terps! (declare it)"
+      scenic_gps: "Extra narrative commits — pleasurable route through the problem"
+      rewrite_showoff:
+        pitch: "Rewrite everything in X just to show off — Slats judges werk"
+        lanes:
+          - { lang: Rust, slats: "Memory safety eleganza — did you merge or just borrow checker cosplay?" }
+          - { lang: FORTH, slats: "Reverse Polish realness — stack depth is a runway walk" }
+          - { lang: "Apple ][ APPLESOFT FP BASIC", slats: "Floating point on 6502 — werk or Woz help me" }
+          - { lang: "Apple ][ INTEGER BASIC", slats: "If you dare — no floats, all nerve" }
+          - { lang: artisanal_hand, slats: "Zero tokens pencil sash — oldest show-off" }
+        note: "Same spec CARD — different costume. Declare flair_class + language lane."
   declare: "Same track — declare measurement vs flair emphasis in rigs/*.rig.yml"
 
 orchestration_gold:
