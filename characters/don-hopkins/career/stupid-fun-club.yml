@@ -18,10 +18,25 @@ stupid_fun_club:
         - Phoneloper expressive speech editor (Python+Tkinter+Flite; XML "Phonelopes" — drag diphones, bend pitch, rotoscope a real voice, hold space to sing). Demo https://www.youtube.com/watch?v=qy5cqV8ypIs — source releasable, coming to this monorepo soon. See ../../../process/crazy-idea-jam.yml#phoneloper
         - XML dialog scripting; Festival/Flite/ViaVoice stack
       storytelling:
+        - "CreationTV iPhone prototype → StoryMaker — collaborative branching storytelling for CurrentTV's Bar Karma (first online community-developed network TV series). Demo https://www.youtube.com/watch?v=Nb_-J1lv-B8 · https://en.wikipedia.org/wiki/Bar_Karma"
         - Bar Karma Storymaker backend
-        - Urban Safari GPS storytelling
+        - "Urban Safari GPS storytelling — grew out of the Amsterdam Coffeeshops app (place-as-story, city-as-map)"
         - MediaGraph music navigation (pie menus)
         - iPhone / Unity prototypes
+
+  how_don_rejoined_will:
+    what: |
+      In 2009 Don built an Amsterdam Coffeeshops iPhone app (photos + info on every coffeeshop in
+      town), hacked at the Bluebird coffeeshop on the way home from his TomTom day job. Complex,
+      never released — but it led to Urban Safari. Don showed it, plus his iLoci (Memory Palace)
+      talk, at an Amsterdam meetup where Will Wright was present.
+    the_moment: "Will said: 'Hey, by the way, I'm leaving EA — want to work together again, remotely?' Don said yes, left TomTom, and went back to Stupid Fun Club projects, starting with StoryMaker."
+    coffeeshops_app_video: "https://www.youtube.com/watch?v=nG90XG3STz8"
+    reincarnate: "Don would love to reincarnate + reinvent the Coffeeshops app — decades out of date, but a fun idea; all part of the tapestry."
+    ties:
+      - ../../../process/crazy-idea-jam.yml#amsterdam_coffeeshops_app
+      - ../../../process/crazy-idea-jam.yml#creationtv_storymaker
+      - work-history.yml      # TomTom 2007–2009 → SFC 2009–2014; iLoci Memory Palace
     one_minute_movies:
       films:
         - title: Servitude
