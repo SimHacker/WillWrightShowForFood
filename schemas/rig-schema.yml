@@ -1,0 +1,104 @@
+# RIG SCHEMA — extensible rig definitions (download → mash up)
+# Instances: ../rigs/<name>.rig.yml | template: ../rigs/_TEMPLATE.rig.yml
+
+meta:
+  id: rig-schema
+  version: 0.1
+  extensible: true
+  purpose: |
+    Rigs are first-class objects — not vibes in a README. Each rig is a yaml document
+    with lifecycle instructions so anyone can download, install, configure, use, replicate,
+    and mash up your stack. Declare class for fair ai-offs comparison.
+
+rig_document:
+  filename: "rigs/<slug>.rig.yml"
+  required_top_level: [rig, lifecycle]
+  optional_top_level: [extends, components, declare, proof, costume, mash_up_targets, see_also]
+
+rig:
+  fields:
+    id: { type: string, required: true, pattern: "kebab-case slug" }
+    name: { type: string, required: true, example: "Stick Shift Cursor + MOOLLM" }
+    version: { type: string, default: "0.1" }
+    author: { type: string, example: "github handle or character dir" }
+    extends: { type: path, optional: true, example: "rigs/base/cursor-orchestrated.rig.yml" }
+    rig_classes:
+      type: array
+      items: { enum: [artisanal, intentional, conscientious, vibe, orchestrated, budget_bull_ride, stick_shift] }
+      required: true
+    description: { type: string, required: true }
+
+lifecycle:
+  description: "Ordered instructions — shell commands, links, or numbered steps"
+  phases:
+    download:
+      required: true
+      what: "Get sources — clone repos, install apps, fetch models, export templates"
+      shape: { steps: array, scripts: array, urls: array }
+    install:
+      required: true
+      what: "Dependencies — pnpm, pip, brew, Cursor extensions, MCP packages"
+      shape: { steps: array, scripts: array, verify: string }
+    configure:
+      required: true
+      what: "Wire it — .cursor/rules, moollm hot.yml, MCP json, env vars, model defaults"
+      shape: { steps: array, files: array, env: object }
+    use:
+      required: true
+      what: "Day-to-day — how you actually work; when to switch models; which skills loaded"
+      shape: { steps: array, workflow: string, contexts: array }
+    replicate:
+      required: true
+      what: "Someone else reproduces your rig from scratch on a clean machine"
+      shape: { steps: array, checklist: array, estimated_time: string }
+    mash_up:
+      required: false
+      what: "Combine with other rigs — extends, compose-with, fork-and-graft instructions"
+      shape: { extends: array, compose_with: array, graft: array, warnings: array }
+
+components:
+  optional: true
+  fields:
+    editor: { type: object }
+    models: { type: array, note: "name, tier, when_to_use" }
+    mcp_servers: { type: array }
+    skills: { type: array, note: "Anthropic + MOOLLM paths" }
+    repos: { type: array, note: "workspace compose-with" }
+    moollm: { type: object, fields: [plugin_yml, hot_yml, skills_loaded] }
+
+declare:
+  optional: true
+  fields:
+    token_budget_bid: { type: string, example: "2M tokens for this spec" }
+    wall_clock_bid: { type: string }
+    honesty: { type: string, note: "Misdeclare and audience is the ref" }
+
+proof:
+  optional: true
+  fields:
+    cursor_spend_export: { type: string }
+    cursor_mirror_composer: { type: string }
+    thoughtful_commit_shas: { type: array }
+
+costume:
+  optional: true
+  lets_make_a_deal: { type: string, note: "Visual metaphor for Code That Spec" }
+
+extension:
+  how: |
+    - extends: path to parent rig — merge lifecycle (child overrides)
+    - mash_up.graft: list of rig ids to combine with instructions
+    - New rig_classes: add to enum + document in repo-show-format.yml (schema version bump)
+  registry: ../rigs/INDEX.yml
+
+validation:
+  tool: "pnpm run verify:yaml (syntax); future: scripts/verify-rig-schema.mjs"
+  pr: "New rigs via PR to rigs/ + entry in rigs/INDEX.yml"
+
+see_also:
+  - ../rigs/README.md
+  - ../rigs/_TEMPLATE.rig.yml
+  - ../process/repo-show-format.yml
+  - ../process/rig-feedback.yml
+  - ../process/ai-offs.yml
+  - ../process/code-that-spec.yml

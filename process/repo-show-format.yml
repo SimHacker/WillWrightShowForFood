@@ -30,6 +30,9 @@ canonical_prose: |
 
 rig_spectrum:
   principle: "Play along with YOUR rig — or learn a new one. See who makes the coolest."
+  rig_schema: |
+    Rigs are defined by extensible schemas — download, install, configure, use, replicate,
+    mash up. See schemas/rig-schema.yml; instances in rigs/*.rig.yml; PR yours + INDEX entry.
   no_ai_required: true
   hand_craft:
     respect: |

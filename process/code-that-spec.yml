@@ -23,6 +23,7 @@ how_it_works:
     vote: "Thumbs, PRs, issues — the ref"
   prove:
     - "Ship on your branch"
+    - "rigs/<slug>.rig.yml — full lifecycle or mash_up from template"
     - "Cursor spend log + cursor-mirror timeline"
     - "thoughtful-commitment commits — live thought process in git"
   judge:

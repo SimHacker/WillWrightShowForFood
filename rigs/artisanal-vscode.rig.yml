@@ -1,0 +1,58 @@
+rig:
+  id: artisanal-vscode
+  name: "Artisanal VS Code — zero AI"
+  version: "0.1"
+  author: don-hopkins
+  rig_classes: [artisanal, intentional, conscientious]
+  description: "Human hand only — VS Code or TextEdit to Emacs; yaml + markdown + git; zero tokens."
+
+lifecycle:
+  download:
+    steps:
+      - "git clone https://github.com/SimHacker/WillWrightShowForFood"
+      - "Install VS Code — https://code.visualstudio.com"
+  install:
+    steps:
+      - "cd WillWrightShowForFood && nvm use && corepack enable && pnpm install"
+    verify: "pnpm run verify"
+  configure:
+    steps:
+      - "Open repo in VS Code — no Copilot, no AI extensions"
+      - "Optional: YAML extension, EditorConfig (repo has .editorconfig)"
+  use:
+    workflow: |
+      Edit yaml girders + markdown facades by hand. git commit with human-written messages.
+      Declare artisanal class in PR. Cost to ship = zero tokens; taste must carry.
+    contexts: [homeplay, yaml_jazz, invitation_characters, code_that_spec_zero_bid]
+  replicate:
+    checklist:
+      - "Machine with Node 20+, git, VS Code — NO AI plugins"
+      - "Clone + pnpm install + verify"
+    estimated_time: "15 minutes"
+  mash_up:
+    graft:
+      - "Rare — artisanal final mile after stick-shift rig does bulk generation"
+    warnings:
+      - "If AI touched it, don't declare artisanal for that segment"
+
+components:
+  editor: { name: "VS Code", ai_disabled: true }
+  models: []
+  mcp_servers: []
+  skills: []
+  repos: [SimHacker/WillWrightShowForFood]
+
+declare:
+  token_budget_bid: "ZERO tokens"
+  honesty: "Artisanal baseline — efficiency floor"
+
+proof:
+  cursor_spend_export: "N/A — no Cursor required"
+  thoughtful_commit_shas: "human-written commit messages"
+
+costume:
+  lets_make_a_deal: "Pencil behind ear, NO AI sash, paper tape on glasses"
+
+see_also:
+  - ../schemas/rig-schema.yml
+  - ../process/code-that-spec.yml

@@ -67,6 +67,8 @@ scoreboard:
     - "Abstraction (skills/ + packages/)"
 
 see_also:
+  - ../schemas/rig-schema.yml
+  - ../rigs/README.md
   - rig-feedback.yml
   - showmaker-network.yml
   - ../skills/README.md

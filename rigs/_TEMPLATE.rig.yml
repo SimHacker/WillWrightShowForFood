@@ -1,0 +1,80 @@
+# Copy → rigs/<your-slug>.rig.yml — extensible rig definition
+# Schema: ../schemas/rig-schema.yml
+
+rig:
+  id: your-rig-slug
+  name: "Your Rig Name"
+  version: "0.1"
+  author: "you"
+  extends: null   # optional: rigs/base/example.rig.yml
+  rig_classes: [stick_shift, orchestrated]
+  description: "One paragraph — what this rig is for"
+
+lifecycle:
+  download:
+    steps:
+      - "git clone https://github.com/SimHacker/WillWrightShowForFood"
+      - "git clone https://github.com/SimHacker/moollm  # if using MOOLLM"
+    urls:
+      - "https://cursor.com — install Cursor"
+  install:
+    steps:
+      - "cd WillWrightShowForFood && nvm use && corepack enable && pnpm install"
+      - "pnpm run setup:python  # if needed"
+    verify: "pnpm run verify"
+  configure:
+    steps:
+      - "Open WWSFF + moollm in Cursor workspace"
+      - "Copy kernel/moollm-plugin.yml patterns; wire .cursor/rules if any"
+      - "Enable MCP servers — list each in components.mcp_servers"
+    files:
+      - "kernel/moollm-plugin.yml"
+  use:
+    workflow: |
+      Describe day-to-day: planning model vs execution model, when to stick-shift,
+      which MOOLLM skills loaded, how you homeplay on a show branch.
+    contexts: [show_jam, harvest, code_that_spec, homeplay]
+  replicate:
+    checklist:
+      - "Clean machine with Node 20+, git, Cursor"
+      - "Run download + install + configure steps above"
+      - "pnpm run verify passes"
+    estimated_time: "30–90 minutes"
+  mash_up:
+    compose_with:
+      - "Fork another contributor's rigs/their-rig.rig.yml — graft components.models"
+    graft:
+      - "Take components.mcp_servers from rigs/other.rig.yml; merge into configure steps"
+    warnings:
+      - "Declare merged rig_classes honestly after mash up"
+
+components:
+  editor: { name: Cursor, version: "latest" }
+  models:
+    - { name: "example-fast", tier: budget, when: implementation }
+    - { name: "example-smart", tier: premium, when: architecture }
+  mcp_servers: []
+  skills:
+    - "SimHacker/moollm/skills/cursor-mirror"
+    - "SimHacker/moollm/skills/thoughtful-commitment"
+  repos:
+    - "SimHacker/WillWrightShowForFood"
+    - "SimHacker/moollm"
+  moollm:
+    plugin: kernel/moollm-plugin.yml
+    skills_loaded: []
+
+declare:
+  token_budget_bid: "honest bid for Code That Spec"
+  honesty: "Spend log + cursor-mirror is the ref"
+
+proof:
+  cursor_spend_export: "path or attach in PR"
+  cursor_mirror_composer: "composer id from cursor_mirror.py tree"
+
+costume:
+  lets_make_a_deal: "Describe your Let's Make a Deal rig costume for Code That Spec"
+
+see_also:
+  - ../schemas/rig-schema.yml
+  - ../process/rig-feedback.yml

@@ -1,0 +1,87 @@
+rig:
+  id: stick-shift-composer-moollm
+  name: "Stick Shift — Cursor Composer + MOOLLM"
+  version: "0.1"
+  author: don-hopkins
+  rig_classes: [stick_shift, orchestrated, budget_bull_ride]
+  description: |
+    Host seed rig (2026-06): premium/high-level planning spend, Composer 2.5 Fast for
+    knocking out designs on budget; MOOLLM skills (cursor-mirror, thoughtful-commitment);
+    Cursor spend log proves gear changes.
+
+lifecycle:
+  download:
+    steps:
+      - "git clone https://github.com/SimHacker/WillWrightShowForFood"
+      - "git clone https://github.com/SimHacker/moollm"
+      - "Install Cursor — https://cursor.com"
+    urls:
+      - "https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror"
+  install:
+    steps:
+      - "cd WillWrightShowForFood && nvm use && corepack enable && pnpm install && pnpm run verify"
+      - "Optional: clone MicropolisCore sibling repos per SETUP.md"
+    verify: "pnpm run verify"
+  configure:
+    steps:
+      - "Cursor: open multi-root workspace — WWSFF + moollm (+ DonHopkins local if private)"
+      - "Wire MOOLLM via kernel/moollm-plugin.yml"
+      - "Enable MCP servers you use — document in components.mcp_servers"
+      - "Model defaults: fast/budget for implementation (e.g. Composer 2.5 Fast); premium for planning passes"
+    files:
+      - kernel/moollm-plugin.yml
+      - ../moollm/.moollm/hot.yml
+  use:
+    workflow: |
+      Stick shift: architecture/planning on premium tier; bulk yaml/markdown/scaffold on Composer fast.
+      Export Cursor spend log — timestamped model switches are the tachometer.
+      cursor-mirror for session timeline; thoughtful-commitment for conscientious commits.
+      Code That Spec bids reference actual spend totals.
+    contexts: [wwsff_priming, code_that_spec, ai_offs, show_harvest]
+  replicate:
+    checklist:
+      - "Node 20+, pnpm, Cursor with chosen models available on your plan"
+      - "Clone WWSFF + moollm; pnpm verify"
+      - "Reproduce model-switch pattern; attach spend export as proof"
+    estimated_time: "1–2 hours first time"
+  mash_up:
+    compose_with:
+      - "rigs/artisanal-vscode.rig.yml — artisanal polish pass on generated scaffold"
+    graft:
+      - "Import components.skills from another contributor's rig"
+      - "extends: future rigs/base/cursor-orchestrated.rig.yml"
+    warnings:
+      - "Re-declare rig_classes after mash up; audience compares within class"
+
+components:
+  editor: { name: Cursor }
+  models:
+    - { name: "Composer 2.5 Fast", tier: budget, when: "implementation, yaml, scaffold" }
+    - { name: "premium planning tier", tier: premium, when: "architecture, hard decisions" }
+  mcp_servers:
+    - "Document yours in PR — Svelte MCP, etc."
+  skills:
+    - SimHacker/moollm/skills/cursor-mirror
+    - SimHacker/moollm/skills/thoughtful-commitment
+    - SimHacker/moollm/skills/cauldron
+  repos:
+    - SimHacker/WillWrightShowForFood
+    - SimHacker/moollm
+  moollm:
+    plugin: kernel/moollm-plugin.yml
+    skills_loaded: [cursor-mirror, thoughtful-commitment, play-learn-lift]
+
+declare:
+  token_budget_bid: "Split — planning spend + Composer budget execution; report totals"
+  honesty: "Cursor spend export + cursor-mirror — misbid and audience votes"
+
+proof:
+  cursor_spend_export: "Cursor settings → usage / billing export (timestamped)"
+  cursor_mirror_composer: "python3 moollm/skills/cursor-mirror/scripts/cursor_mirror.py tree"
+
+costume:
+  lets_make_a_deal: "Racing gloves, tachometer printout of spend log, cape of MCP server icons"
+
+see_also:
+  - ../process/ai-offs.yml
+  - ../process/showmaker-network.yml

@@ -1,0 +1,14 @@
+# rigs/ — reproducible rig definitions (extensible schema)
+
+meta:
+  schema: ../schemas/rig-schema.yml
+  template: _TEMPLATE.rig.yml
+  rule: "Declare class honestly; lifecycle must be replicable"
+
+entries:
+  _TEMPLATE.rig.yml: "Copy to <slug>.rig.yml and fill in"
+  artisanal-vscode.rig.yml: "Hand-only — VS Code, zero AI tokens"
+  stick-shift-composer-moollm.rig.yml: "Don host rig seed — Composer execution + MOOLLM + stick shift"
+
+base:
+  note: "Future: rigs/base/*.rig.yml partial rigs to extend"

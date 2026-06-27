@@ -74,7 +74,7 @@ your_show:
           Export the spreadsheet; pair with cursor-mirror timeline. We score smooth shifts vs stalling.
         vs_bull_ride: "Bull ride = wrangle one tier through chaos; stick shift = orchestrate many tiers cleanly"
   no_gatekeeping: "All rig classes welcome — declare honestly. Extra respect for artisanal programmers, budget bull riders, AND stick-shift model switchers."
-  share_your_rig: "AI users: tools, models, MCP, skills, repos, moollm wiring, contexts AND token/spend totals + model-switch timeline — issue/PR rig-feedback"
+  share_your_rig: "PR rigs/<slug>.rig.yml — extensible schema: download/install/configure/use/replicate/mash_up (schemas/rig-schema.yml)"
 
 publication:
   vision: vision-and-ambition.yml

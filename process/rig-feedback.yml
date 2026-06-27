@@ -47,10 +47,12 @@ ai_rig:
 
 submit:
   issue: "https://github.com/SimHacker/WillWrightShowForFood/issues — label or title rig-feedback"
-  pr: "Branch + yaml or markdown rig report; link from your show if you have one"
+  pr: "Branch + rigs/<slug>.rig.yml (preferred) or markdown report — see schemas/rig-schema.yml"
+  template: ../rigs/_TEMPLATE.rig.yml
   tone: "Real setups beat polished vendor answers. Screencasts welcome."
 
 see_also:
   - repo-show-format.yml
-  - ../kernel/moollm-plugin.yml
+  - ../schemas/rig-schema.yml
+  - ../rigs/README.md
   - ../README.md
