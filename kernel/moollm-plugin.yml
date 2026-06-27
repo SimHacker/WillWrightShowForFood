@@ -26,11 +26,15 @@ activation:
 paths:
   characters: characters/
   shows: repo-shows/
-  skills: []                    # invent + share new skills here as the show harvests them
-  rooms: []                     # future: audience/, playspaces/
+  skills: skills/
+  examples: examples/
+  apps: apps/
+  packages: packages/
+  scripts: scripts/
 
 uri_scheme: "moollm://github/SimHacker/WillWrightShowForFood/"
 
 future:
   cursor_sponsor: "Maybe someday Cursor sponsors us"
   other_orchestrators: "Port plugin manifest; make our own orchestrator"
+  adventure_show: "Teach Will MOOLLM adventure rooms/skills — record live → examples/adventure-will/"

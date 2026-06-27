@@ -1,5 +1,5 @@
 # Don Hopkins — project threads (branch, merge, interrelate)
-# Public-safe career map — alternative to LinkedIn
+# Public career map — alternative to LinkedIn
 
 threads:
   pie_menus:
@@ -14,13 +14,25 @@ threads:
 
   simcity_micropolis:
     span: "1989–present"
-    artifacts: [SimCity Unix, SimCityNet, Micropolis GPL, MicropolisCore WASM]
+    artifacts: [SimCity Unix, SimCityNet, OLPC Micropolis GPL, MicropolisCore WASM]
     merges_with: [maxis_sims, repo_show, federation]
 
   maxis_sims:
     span: "1997–2000"
     artifacts: [Sims UI, mod tools, SimAntics/Edith advocacy, inclusive relationships]
-    merges_with: [simcity_micropolis, repo_show, browser_sims_stack]
+    merges_with: [simcity_micropolis, stupid_fun_club, repo_show, browser_sims_stack]
+
+  stupid_fun_club:
+    span: "2002–2003, 2009–2014"
+    artifacts:
+      - Slats and Dents robot brains
+      - Phoneloper / expressive speech
+      - Bar Karma Storymaker
+      - Urban Safari GPS stories
+      - MediaGraph pie-menu navigation
+      - One-minute robot movies
+    detail: stupid-fun-club.yml
+    merges_with: [maxis_sims, moollm_repo_show]
 
   browser_sims_stack:
     span: "2020s–"
@@ -34,9 +46,17 @@ threads:
 
   federation:
     span: "2025–"
-    repos: [MicropolisCore, moollm, DonHopkins private, WillWrightShowForFood public]
-    goal: "Open-border game + character federation; data portability crown jewel"
+    repos: [MicropolisCore, moollm, WillWrightShowForFood]
+    goal: "Open-border game + character federation; data portability"
 
 coalesce_note: |
-  master-of-ceremonies/ in private DonHopkins is a compartment of don-hopkins (on-stream Don),
-  NOT don-hopkins-mc (never created as separate character). don-philahue/ is the orchestrator avatar.
+  master-of-ceremonies/ in the full DonHopkins tree is a compartment of don-hopkins
+  (on-stream Don), NOT a separate public character. don-philahue/ is the orchestrator avatar.
+  See on-stream.yml.
+
+see_also:
+  - INDEX.yml
+  - work-history.yml
+  - simcity-lineage.yml
+  - stupid-fun-club.yml
+  - on-stream.yml

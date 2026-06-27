@@ -1,0 +1,28 @@
+# Don Hopkins career backbone — index for browse-friendly GitHub navigation
+
+career_index:
+  readme: ../README.md
+  files:
+    - id: project-threads
+      path: project-threads.yml
+      summary: Branch/merge map of pie menus → Sims → Micropolis → Repo Show
+
+    - id: work-history
+      path: work-history.yml
+      summary: Condensed employment timeline (public-safe)
+
+    - id: simcity-lineage
+      path: simcity-lineage.yml
+      summary: SimCityNet, OLPC Micropolis, WASM/web ports
+
+    - id: stupid-fun-club
+      path: stupid-fun-club.yml
+      summary: Will Wright's lab — robots, storytelling, MediaGraph
+
+    - id: on-stream
+      path: on-stream.yml
+      summary: Regular Don on stream; pairs with don-philahue
+
+  related_characters:
+    - ../don-philahue/
+    - ../../repo-shows/will-wright/

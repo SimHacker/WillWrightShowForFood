@@ -1,0 +1,27 @@
+# Don Hopkins on stream — regular me (not the Philahue costume)
+# Coalesced from master-of-ceremonies compartment in full character tree.
+
+on_stream:
+  who: "Regular old Don Hopkins — interviews, chat, implementation. His own voice."
+  not: "Not the flamboyant MC announcer — that is Don Philahue (AI voice + costume)."
+
+does:
+  - Interview guests — explain WHY designs work, push back, credit sources
+  - Participate in Twitch chat as himself
+  - Implement live in Cursor (show, don't tell)
+  - Collaborate with Philahue — Phil announces and orchestrates; Don speaks for Don
+
+visual_identity:
+  thesis: "Warm, real, countercultural — regular me, not Phil's flamboyant drag"
+  wardrobe: "Old tie-dye t-shirts; Grateful Dead album-cover tie-dye favorite"
+  set: "Yellow Submarine bong on shelf; Amsterdam natural"
+
+voice:
+  medium: "Don's real voice only on stream"
+  energy: "Hyperactive enthusiast, generous credit-giver — interviewer + implementer"
+
+pairs_with: ../../don-philahue/
+
+see_also:
+  - ../README.md
+  - project-threads.yml

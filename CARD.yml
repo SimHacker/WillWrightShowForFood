@@ -33,6 +33,11 @@ rooms:
   characters/: "Guest + host portrayals (filtered, public-safe)"
   process/: "Export/sync with DonHopkins private tree"
   schemas/: "Shared metadata (invitation status, etc.)"
+  apps/: "Future deployable apps (site, stream, adventure UI)"
+  packages/: "@wwsff/* shared libraries"
+  skills/: "Show-harvested MOOLLM skills"
+  examples/: "Runnable microworlds (future adventure-with-Will show)"
+  scripts/: "verify-monorepo-structure, verify-yaml"
 
 k_lines:
   - "So you have a Repo to Show us?"

@@ -3,13 +3,14 @@ title: Don Hopkins
 signifier: "👤"
 consent: self-sovereign
 resolution: readme
+backbone: career/*.yml
 ---
 
 # Don Hopkins
 
 👤 **Don Hopkins** — user-interface designer and programmer: pie menus, The Sims,
-Micropolis, Repo Show host. This is the **public projection** — filtered from the
-private DonHopkins working tree. LinkedIn/resume/biography/blog rolled into one place.
+Micropolis, Repo Show host. **YAML backbone, markdown facade:** the narrative lives
+here; facts and timelines live in [`career/`](career/INDEX.yml).
 
 **Wanna chat?** [Open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues)
 or submit a PR.
@@ -21,6 +22,17 @@ Porting **Micropolis** (open-source SimCity) to the web — WASM + SvelteKit. Ru
 that follows through to working code. Building the **Sims content stack** in the browser
 (Transmogrifier, RugOMatic, Wig-O-Matic lineage).
 
+## Career map (YAML)
+
+| File | What it covers |
+|------|----------------|
+| [`career/INDEX.yml`](career/INDEX.yml) | Index of all career backbone files |
+| [`career/project-threads.yml`](career/project-threads.yml) | How threads branch and merge |
+| [`career/work-history.yml`](career/work-history.yml) | Employment timeline (condensed) |
+| [`career/simcity-lineage.yml`](career/simcity-lineage.yml) | SimCity → SimCityNet → OLPC → web |
+| [`career/stupid-fun-club.yml`](career/stupid-fun-club.yml) | Will Wright's lab — robots, stories, SFC |
+| [`career/on-stream.yml`](career/on-stream.yml) | Regular Don on stream vs Don Philahue |
+
 ## Career threads (how it all connects)
 
 ```mermaid
@@ -28,31 +40,31 @@ flowchart LR
   PieMenus[Pie Menus CHI88] --> NeWS[NeWS / HyperTIES]
   NeWS --> SimCityUnix[SimCity Unix ports]
   SimCityUnix --> Maxis[Maxis / The Sims]
+  Maxis --> SFC[Stupid Fun Club]
   Maxis --> Micropolis[Micropolis GPL 2008]
   Micropolis --> MicropolisCore[MicropolisCore WASM]
-  Maxis --> RepoShow[Repo Show / MOOLLM]
+  SFC --> RepoShow[Repo Show / MOOLLM]
   RepoShow --> WWSFF[WillWrightShowForFood]
 ```
 
-Details: [`career/project-threads.yml`](career/project-threads.yml) ·
-[`career/simcity-lineage.yml`](career/simcity-lineage.yml)
+Details: [`career/project-threads.yml`](career/project-threads.yml)
 
 ## SimCity lineage (short)
 
 | Version | Don's role | Platform |
 |---------|------------|----------|
-| SimCity (original) | Unix/X11 port, cooperative multiplayer (SimCityNet) | NeWS, X11/TCL/Tk |
-| SimCity 2000 | Contributed to Mac port era / Maxis ecosystem | Mac, etc. |
-| SimCity (Micropolis) | Open-sourced with EA + OLPC (2008) | GPL → web port |
-| MicropolisCore | Modern engine — WASM, SvelteKit, federation | Browser, native |
+| SimCity (Unix) | NeWS/X11 ports, **SimCityNet** cooperative multiplayer | NeWS, X11/TCL/Tk |
+| SimCity 2000 | Maxis ecosystem / Mac port era | Mac, PC, … |
+| Micropolis (2008) | EA + **OLPC** GPL release | Linux, XO laptop, source |
+| Micropolis web | C++ cleanup, **WASM**, SvelteKit, federation | Browser, native |
 
-Full table: [`career/simcity-lineage.yml`](career/simcity-lineage.yml)
+Full timeline: [`career/simcity-lineage.yml`](career/simcity-lineage.yml)
 
 ## On stream vs on stage
 
 | Facet | Who |
 |-------|-----|
-| Regular Don — interview, implement, chat | **This character** (`master-of-ceremonies` coalesced here — not a separate character) |
+| Regular Don — interview, implement, chat | **This character** ([`career/on-stream.yml`](career/on-stream.yml)) |
 | Flamboyant AI announcer, Q&A DJ | [**Don Philahue**](../don-philahue/) |
 
 ## Deeper
@@ -60,9 +72,3 @@ Full table: [`career/simcity-lineage.yml`](career/simcity-lineage.yml)
 - [donhopkins.com](https://donhopkins.com)
 - [SimHacker/MicropolisCore](https://github.com/SimHacker/MicropolisCore)
 - [SimHacker/moollm](https://github.com/SimHacker/moollm)
-- Private working tree (filtered export source): sibling `DonHopkins/` repo locally
-
-## What we filter out (stays private)
-
-Home address, expat/tax, correspondence PII, home automation credentials, personal
-life-management YAML. Public gets career, public correspondence summaries, show-facing bio.

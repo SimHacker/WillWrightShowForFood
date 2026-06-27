@@ -9,7 +9,7 @@ plugin:
   visibility: public
   description: |
     Public Repo Show world — Will Wright kickoff + guest constellation.
-    Filtered export from DonHopkins private monorepo.
+    Polyglot monorepo: MOOLLM microworld content + MicropolisCore-style apps/packages.
   owner:
     github: SimHacker
     email: dhopkins@DonHopkins.com
@@ -20,4 +20,13 @@ plugin:
     glance: GLANCE.yml
     card: CARD.yml
     readme: README.md
+    setup: SETUP.md
     kernel: kernel/moollm-plugin.yml
+
+monorepo:
+  node: "pnpm workspace — apps/* packages/* (MicropolisCore pattern)"
+  python: requirements.txt + .venv
+  verify: "pnpm run verify"
+  layout:
+    content: [repo-shows, characters, skills, kernel, schemas, process, examples]
+    code: [apps, packages, scripts]

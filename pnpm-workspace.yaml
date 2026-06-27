@@ -1,0 +1,4 @@
+# WillWrightShowForFood polyglot monorepo — MicropolisCore-style layout + MOOLLM content tree.
+packages:
+  - 'apps/*'
+  - 'packages/*'

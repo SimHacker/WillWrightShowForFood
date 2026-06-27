@@ -1,0 +1,87 @@
+# Don Hopkins — work history (public condensed backbone)
+# Full resume detail lives at donhopkins.com; this file is browse-friendly YAML.
+
+identity:
+  name: Donald Edward Hopkins
+  tagline: "User interface flower child — pie menus, SimCity, The Sims, visual programming"
+
+employment_timeline:
+  - org: Leela AI
+    years: "2021–present"
+    role: Senior Software Engineer
+    note: Hybrid symbolic-connectionist AI; Henry Minsky et al.
+
+  - org: Gallium Studios (Will Wright)
+    years: "2022–present"
+    role: Consultant
+    note: Procedural voxel worlds, cellular automata
+
+  - org: Ground Up Software
+    years: "2017–present"
+    role: Owner (eenmanszaak, Amsterdam)
+    note: iLoci Memory Palace; PieCraft; Sims animation research
+
+  - org: Pantomime Corporation
+    years: "2014–2021"
+    role: Chief Architect
+    note: Networked AR/VR platform; UnityJS lineage
+
+  - org: Jaunt VR
+    years: "2016–2017"
+    role: Contractor
+    note: Unity3D/JavaScript VR player; UnityJS open-sourced
+
+  - org: Stupid Fun Club / Syntertainment
+    years: "2002–2003, 2009–2014"
+    role: Research Programmer
+    boss: Will Wright
+    see_also: stupid-fun-club.yml
+
+  - org: TomTom
+    years: "2007–2009"
+    role: Senior Developer
+    location: Amsterdam
+
+  - org: NutritionQuest / Block Dietary
+    years: "2005–2007, 2009+"
+    role: Chief Architect
+    note: Alive-PD diabetes prevention platform
+
+  - org: Electronic Arts / Maxis
+    years: "1997–2000 FT, 2000–2007 contractor"
+    role: Senior Developer
+    product: The Sims
+    note: Pie menus, VitaBoy, Transmogrifier, OLPC SimCity open source push
+
+  - org: Interval Research
+    years: "1996–1997"
+    note: Bounce/Body Electric visual programming port
+
+  - org: Kaleida Labs
+    years: "1993–1996"
+    note: ScriptX, DreamScape — Memory Palace precursor
+
+  - org: Carnegie Mellon (Garnet)
+    years: "1992–1993"
+    note: Opal graphics, pie menu window manager
+
+  - org: Turing Institute
+    years: "1992"
+    note: HyperLook; SimCity port; Arthur van Hoff
+
+  - org: Sun Microsystems
+    years: "1987 intern, 1990–1991"
+    note: NeWS Toolkit, PizzaTool, pie menus
+
+  - org: University of Maryland HCIL
+    years: "1985–1990"
+    note: CHI'88 pie menus, HyperTIES, PSIBER Space Deck
+
+the_thread: |
+  Apple II Forth → UMD HCI → NeWS → Kaleida → Maxis/Sims → Stupid Fun Club →
+  TomTom → Pantomime → Leela/MOOLLM. Making complex systems understandable through play.
+
+see_also:
+  - project-threads.yml
+  - stupid-fun-club.yml
+  - simcity-lineage.yml

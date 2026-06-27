@@ -1,4 +1,8 @@
 .moollm/
+.cursor/
+.venv/
+node_modules/
+dist/
 .DS_Store
 *.swp
 .work/

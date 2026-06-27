@@ -1,0 +1,5 @@
+# WillWrightShowForFood — Python tooling (sync, validation, future apps)
+# Install: python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
+
+PyYAML>=6.0.2
+jsonschema>=4.23.0
