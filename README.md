@@ -77,8 +77,8 @@ like, or none at all — **humans, bots, and AIs are all welcome**, with no gate
 
 At its heart a Repo Show is a **conversation, not a contest.** The guest — the
 **Repo Man, Woman, or Anybody** — is the topic, starting from their own work. The audience joins
-as **consensual characters** who ask questions as pull requests, and **Don Philahue** surfaces the
-good ones live. A **[brain stream](process/brain-stream.yml)** overlay can show prompts and
+as **consensual characters** who ask questions as **pull requests, issues, and comments** — and
+live in **Twitch and YouTube chat** — and **Don Philahue** surfaces the good ones live. A **[brain stream](process/brain-stream.yml)** overlay can show prompts and
 thinking in real time (Twitch / YouTube / OBS) when AI is in the mix. Afterward, ideas are melted
 in the **cauldron** and harvested into reusable **skills and code**, breeding technique back into
 the repo through git branches, merges, and nested worlds.

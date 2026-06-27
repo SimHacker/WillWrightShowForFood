@@ -14,7 +14,7 @@ how_it_runs:
   guest_intro: "Guest introduced as a Repo Man, Woman, or Anybody (Alex Cox homage — come on, let's go)"
   audience:
     - "Incarnate consensual characters (representation-ethics)"
-    - "Submit questions as PRs — pre-loaded question-advertisements in character dirs"
+    - "Ask questions as PRs, issues, and comments — plus live Twitch and YouTube chat (pre-loaded question-advertisements in character dirs)"
     - "Don Philahue surfaces relevant questions live (Phil-Donahue homage audience-wrangler)"
   implement: "Design ideas → cauldron → skills + code — however YOUR rig builds (see rig_spectrum)"
   clocks: [before_async_PRs, during_Twitch, after_harvest_PRs]
@@ -42,7 +42,8 @@ canonical_prose: |
   humans, bots, and AIs all take part, with no gatekeeping (see participation_policy).
   At heart a Repo Show is a conversation, not a contest. The guest — the Repo Man, Woman, or
   Anybody — is the topic, starting from their own work. The audience joins as consensual
-  characters who ask questions as PRs, and Don Philahue surfaces the good ones live. Ideas are
+  characters who ask questions as PRs, issues, and comments (plus live Twitch and YouTube chat),
+  and Don Philahue surfaces the good ones live. Ideas are
   melted in the cauldron and harvested into reusable skills and code, bred back into the network
   via git. Some episodes can instead be playful game shows (Code That Spec, Manual Transmission,
   the Micropolis AI Drag Race) — optional fun we can do, not the point.
