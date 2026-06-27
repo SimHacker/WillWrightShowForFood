@@ -53,8 +53,9 @@ Shows are the stage; inheritable technique is the stack that grows downward.
 
 Announced ahead of time (e.g. Hacker News) as a **pointer to this repo** — people **RTFR**
 (read the repo) and follow along on **whatever rig they bring**: vim, Cursor, notebook, or
-pencil. **AI optional.** Man-against-the-machine taste and power competitions encouraged —
-*dance-off optional.* Guest = **Repo Man**. Audience = consensual characters + question PRs;
+*pencil. **AI optional.** Man-against-the-machine encouraged — *dance-off optional.*
+**[Code That Spec](process/code-that-spec.yml):** bid tokens — audience yells **CODE THAT SPEC!!!!!**
+Rig costumes welcome (*Let's Make a Deal* / Stiletto Sprint energy). Guest = **Repo Man**. Audience = consensual characters + question PRs;
 **Don Philahue** wrangles live. Ideas → cauldron → skills + code → **breed technique DNA**
 back via git (branches, merges, nested worlds).
 
