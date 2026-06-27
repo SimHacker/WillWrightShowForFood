@@ -48,6 +48,15 @@ canonical_prose: |
   via git. Some episodes can instead be playful game shows (Code That Spec, Manual Transmission,
   the Micropolis AI Drag Race) — optional fun we can do, not the point.
 
+sign_offs:
+  note: "Rotate the closing line — warm, playful, a little retro."
+  rotating:
+    - line: "Have a big fun!"
+    - line: "Goodnight, until tomorrow."
+      kinship: "Thomas Cherryhomes"
+    - line: "Order before midnight tonight, or it will be tomorrow!"
+      homage: "1970s cheesy late-night TV commercial sign-off"
+
 rig_spectrum:
   principle: "Play along with YOUR rig — or learn a new one. See who makes the coolest."
   rig_schema: |
