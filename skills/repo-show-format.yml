@@ -1,6 +1,5 @@
-# Repo Show format — distilled pointer
-# Canonical copy: process/repo-show-format.yml (synced to DonHopkins skills/repo-show CARD)
-
-see: process/repo-show-format.yml
-
+# ShowMaker network + Repo Show format — pointers
+see:
+  - ../process/showmaker-network.yml
+  - ../process/repo-show-format.yml
 harvest_target: skills/

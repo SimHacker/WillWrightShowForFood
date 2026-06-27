@@ -1,5 +1,4 @@
 # REPO SHOW FORMAT — canonical definition
-# Synced from repo-shows/will-wright/README.md#how-it-runs (2026-06-27)
 # Facade: ../README.md | skill: SimHacker/moollm + DonHopkins skills/repo-show
 
 meta:
@@ -7,25 +6,75 @@ meta:
   canonical: true
   play_lift_learn: https://github.com/SimHacker/moollm/tree/main/skills/play-learn-lift
   cauldron: https://github.com/SimHacker/moollm/tree/main/skills/cauldron
+  showmaker_network: showmaker-network.yml
 
 how_it_runs:
   announce: "Ahead of time (e.g. Hacker News) — a pointer to THIS repo, not a wall of text"
-  rtfr: "Read The Fucking Repo — audience opens the repo in their own AI tools before and during air"
+  rtfr: "Read The Fucking Repo — follow along on your own rig (editor, browser, notebook, AI, or bare hands)"
   guest_intro: "Guest introduced as a Repo Man / Repo Woman (Alex Cox homage — come on, let's go)"
   audience:
     - "Incarnate consensual characters (representation-ethics)"
     - "Submit questions as PRs — pre-loaded question-advertisements in character dirs"
     - "Don Philahue surfaces relevant questions live (Phil-Donahue homage audience-wrangler)"
-  implement: "Design ideas → cauldron → MOOLLM skills + built in Cursor on stream"
+  implement: "Design ideas → cauldron → skills + code — however YOUR rig builds (see rig_spectrum)"
   clocks: [before_async_PRs, during_Twitch, after_harvest_PRs]
 
 canonical_prose: |
-  Announced ahead of time (e.g. to Hacker News) as a pointer to this repo — people
-  RTFR (read the repo), open it in their own AI tools, and follow along live.
-  Will is introduced as a Repo Man. The audience can incarnate their own
-  consensual characters and submit questions as PRs; Don Philahue (the
-  Phil-Donahue-homage audience-wrangler) surfaces the relevant ones live. Whatever
-  design ideas come up get melted (cauldron) into MOOLLM skills + built in Cursor.
+  Announced ahead of time (e.g. to Hacker News) as a pointer to this repo — people RTFR
+  (read the repo) and follow along live on whatever rig they bring: vim and a Makefile,
+  Cursor and MOOLLM, or pencil and paper. You do not need AI tools. Perfectly delightful
+  man-against-the-machine taste and power competitions are encouraged — dance-off optional.
+  The guest is introduced as a Repo Man. The audience incarnates consensual characters and
+  submits questions as PRs; Don Philahue surfaces the relevant ones live. Design ideas get
+  melted (cauldron), documented, debated, and built — then bred back into the network via PRs.
+
+rig_spectrum:
+  principle: "Play along with YOUR rig — or learn a new one. See who makes the coolest."
+  no_ai_required: true
+  levels:
+    - name: bare_hands
+      tools: [markdown, yaml, git cli, browser]
+      vibe: "Man against the machine — pure craft, maximum taste"
+    - name: classic_dev
+      tools: [editor, compiler, debugger, terminal]
+    - name: assisted
+      tools: [copilot, linters, formatters]
+    - name: orchestrated
+      tools: [Cursor, MOOLLM, moollm skills, multi-model routing]
+  competitions:
+    - "Taste — who ships the most elegant solution?"
+    - "Power — who implements the wildest idea in the time box?"
+    - "Man vs machine — human-only vs AI-assisted vs hybrid (declare your class)"
+    - "Dance-off — show your workflow live; audience votes with thumbs and PRs"
+  per_layer: "Automation level AND model tier AND tool choice at each layer — editor, build, test, deploy, doc — all fair game to declare and compare"
+
+play_along:
+  your_rig: "Bring what you have. Fork the repo. Branch. Homeplay on your schedule."
+  learn_new_rig: "RTFR to study how others work — then try their stack on your branch."
+  coolest_wins: "Not single metric — taste, power, clarity, humor, constructionist generosity."
+  document: "Everybody documents techniques — README, CARD, SKILL, screencast, yaml backbone."
+  discuss: "Issues = HN threads. PRs = timeline merges. Show your work."
+  breed: "Combine technique DNA — merge PRs, nest organelles, scoop skills from cauldron."
+
+breeding_and_nesting:
+  horizontal_gene_transfer: "Merge technique DNA from forks and PRs — git is the petri dish"
+  serial_endosymbiosis: "Characters and shows accrete organelles — each game/world keeps its own DNA in parallel"
+  powers_of_ten: |
+    home in city in world in galaxy in universe in PC in home …
+    Nested membranes — branches within branches — same shape, evolving subtrees
+  git_as_mmorpg:
+    branches: parallel universes / parallel rigs
+    prs: timeline merges / DNA exchange
+    issues: quests and pub debates
+    see: moollm GitHub-as-MMORPG + character-endosymbiosis organelle model
+
+showmaker_network:
+  what: "A graph and publication network of show objects — not a flat playlist"
+  your_show: "Run your own Repo Show on YOUR branch or YOUR repo"
+  link_in: "Open a PR — we add show CARDs + edges into this network from your contribution"
+  we_add: "Show objects + links from merged PRs (yaml-jazz indexes stay navigable)"
+  automation_goal: "Tooling to easily author show CARDs, pitch videos, and link PRs (hosted-content-cards pattern)"
+  see: showmaker-network.yml
 
 cauldron_scoop:
   insight: |
@@ -33,31 +82,30 @@ cauldron_scoop:
     MELT/STIR grows the soup; SCOOP selects what leaves the pot and in what form.
   operations:
     harvest:
-      what: "Lift finished artifacts out — skills, playbooks, design docs, sub-cauldrons"
+      what: "Lift finished artifacts — skills, playbooks, design docs, sub-cauldrons"
       play_lift_learn: LIFT
     filter:
-      what: "Remove redundancy, stale claims, noise — reduce soup toward concentrate"
+      what: "Remove redundancy — reduce soup toward concentrate"
     structure:
-      what: "Create and reinforce skeleton — indexes, CARD/GLANCE pyramids, cross-links"
+      what: "Indexes, CARD/GLANCE pyramids, cross-links"
     maintain:
-      what: "Invalidate/recalculate when code or facts drift; ANCHOR + SCRY loops"
+      what: "Invalidate/recalculate when code or facts drift"
     summarize:
-      what: "Semantic Image Pyramid — GLANCE → CARD → SKILL → README extractions"
+      what: "Pyramid extractions — GLANCE → CARD → SKILL → README"
     remove:
-      what: "Scoop out spent ingredients — walked-back ideas archived, not deleted silently"
+      what: "Archive spent ingredients with context"
   outputs:
-    - MOOLLM skills (moollm-enabled, publishable SKILL.md + CARD.yml)
+    - MOOLLM skills
     - design documents and playbooks
-    - sub-cauldrons (nested monoliths for a subtree of the plan)
-    - crystallized wisdom (DESIGN-WISDOM, RUNBOOKS, OPEN-QUESTIONS)
-    - working code (Cursor executors pick up ladled playbooks)
+    - sub-cauldrons
+    - working code (any rig — manual or automated)
 
 play_lift_learn:
-  play: "Live jam + audience homeplay + RTFR — the show and the repo"
-  lift: "Cauldron SCOOP — especially skills and reusable design docs out of the melt"
-  learn: "Community forks starting points; methodology spreads; constructionist payoff"
+  play: "Live jam + homeplay + RTFR + rig competitions + ShowMaker branches"
+  lift: "Cauldron SCOOP — skills and technique DNA out of the melt"
+  learn: "Fork, breed, nest — constructionist payoff across the network"
 
 see_also:
+  - showmaker-network.yml
   - ../repo-shows/will-wright/README.md
   - ../skills/README.md
-  - sync-with-donhopkins.yml

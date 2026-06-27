@@ -1,0 +1,66 @@
+# SHOWMAKER NETWORK — graph of shows, links, and publications
+#
+# Literally a network: nodes = show objects (CARD dirs), edges = typed links.
+# Audience runs shows on their branches; PRs link new nodes into our graph.
+
+meta:
+  id: showmaker-network
+  status: seed
+  type: [graph, publication_network, storymaker_for_shows]
+
+what: |
+  A ShowMaker network — interrelated show proposals and finished shows as first-class
+  objects. Not a linear playlist: a GRAPH you can browse, fork, and extend.
+
+nodes:
+  show_object:
+    shape: "repo-shows/<name>/ — SHOW.yml + GLANCE + README + optional pitch video CARD"
+    branch_as_object: "family-album-cards pattern — `<Type>_<id>` on branches"
+  character:
+    shape: "characters/<name>/ — portrayal + question-ads"
+  technique:
+    shape: "skills/ — bred MOOLLM skills from harvest"
+
+edges:
+  types: [flows_from, guest_of, implements, bridges_to, competes_with, nests_inside]
+  storage: "yaml links in INDEX.yml + REPO-SHOWS.yml + per-show ties_to"
+  pr_adds_edge: "Contributor PR adds node + one or more edges — we merge into index"
+
+your_show:
+  steps:
+    - "Fork or branch"
+    - "Plant a show seed (SHOW.yml + README)"
+    - "Run your Repo Show on your rig — any automation level"
+    - "Document techniques — yaml backbone + markdown facade"
+    - "PR back to link your show object + edges into the network"
+  no_gatekeeping: "Declare your rig class. Man-against-the-machine welcome. Dance-off optional."
+
+publication:
+  layers:
+    - "GitHub renders README — browse without account"
+    - "YouTube pitch cards — thumbs + donations as visible votes (show-proposal-network)"
+    - "Repo graph — INDEX.yml, CARD.yml, two-way navigation"
+  automation_roadmap:
+    - "Scaffold show CARD from template"
+    - "Generate link PR body from show metadata"
+    - "Validate yaml + representation-ethics on PR"
+
+competitions:
+  taste_and_power: "Compare implementations across rigs — human-only vs AI-assisted vs hybrid"
+  man_vs_machine: "Delightful adversarial play — not anti-AI, pro-choice"
+  breed_winners: "Merge technique DNA from winning branches — horizontal gene transfer via git"
+
+nesting:
+  metaphor: serial_endosymbiosis + powers_of_ten
+  examples:
+    - "home in city in world in galaxy in universe in PC in home"
+    - "character organelle in game organelle in show organelle in federation repo"
+  git: "Branches = nested timelines; PRs = merge DNA; issues = cross-world quests"
+
+ties_to:
+  - repo-show-format.yml
+  - ../repo-shows/INDEX.yml
+  - ../repo-shows/REPO-SHOWS.yml
+  - ../schemas/guest-invitation-status.yml
+  - SimHacker/DonHopkins/projects/micropolis-moollm/process/show-proposal-network.yml
+  - SimHacker/DonHopkins/projects/micropolis-moollm/process/character-endosymbiosis.yml

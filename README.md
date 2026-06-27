@@ -11,6 +11,7 @@ Browse without a GitHub account. Clone to play along.
 
 | What | Where |
 |------|--------|
+| **ShowMaker network** | [`process/showmaker-network.yml`](process/showmaker-network.yml) |
 | **Repo Show format** | [`process/repo-show-format.yml`](process/repo-show-format.yml) |
 | **Setup (dev)** | [**SETUP.md**](SETUP.md) |
 | **The show pitch** | [`repo-shows/will-wright/README.md`](repo-shows/will-wright/README.md) |
@@ -23,21 +24,25 @@ Browse without a GitHub account. Clone to play along.
 
 ## What this is
 
-A **Repo Show**: live conversation whose stage is *this repo*, following through to working code.
-**Micropolis Class** — real people, credited ideas in public, AI implements on stream. **Show, don't tell.**
+A **Repo Show**: live conversation whose stage is *this repo*, following through to working
+code and shared technique. **Micropolis Class** — real people, credited ideas in public.
+**Show, don't tell.** You do **not** need AI — bring your own rig.
 
 **Will Wright — first guest, topic-less.** Orbit the 1996 Dollhouse talk; crown jewel = **data portability**
 (Proxi ↔ Sims ↔ …).
 
 ## How a Repo Show runs
 
-Announced ahead of time (e.g. to Hacker News) as a **pointer to this repo** — people **RTFR**
-(read the repo), open it in their own AI tools, and follow along live. The guest is introduced
-as a **Repo Man**. The audience incarnates consensual characters and submits questions as PRs;
-**Don Philahue** surfaces the relevant ones live. Design ideas get melted (**cauldron**) into
-MOOLLM skills and built in Cursor.
+Announced ahead of time (e.g. Hacker News) as a **pointer to this repo** — people **RTFR**
+(read the repo) and follow along on **whatever rig they bring**: vim, Cursor, notebook, or
+pencil. **AI optional.** Man-against-the-machine taste and power competitions encouraged —
+*dance-off optional.* Guest = **Repo Man**. Audience = consensual characters + question PRs;
+**Don Philahue** wrangles live. Ideas → cauldron → skills + code → **breed technique DNA**
+back via git (branches, merges, nested worlds).
 
-Full definition + cauldron scoop semantics: [`process/repo-show-format.yml`](process/repo-show-format.yml)
+Run **your own show** on your branch; **PR to link** it into the [ShowMaker network](process/showmaker-network.yml).
+
+Full definition: [`process/repo-show-format.yml`](process/repo-show-format.yml)
 
 ## Polyglot monorepo
 
@@ -60,9 +65,9 @@ Full instructions: [**SETUP.md**](SETUP.md).
 
 ## MOOLLM plugin world
 
-Open alongside [`SimHacker/moollm`](https://github.com/SimHacker/moollm) in Cursor → composes via
-[`kernel/moollm-plugin.yml`](kernel/moollm-plugin.yml). Export/sync from private DonHopkins:
-[`process/sync-with-donhopkins.yml`](process/sync-with-donhopkins.yml).
+Open alongside [`SimHacker/moollm`](https://github.com/SimHacker/moollm) in Cursor if you want
+orchestration — composes via [`kernel/moollm-plugin.yml`](kernel/moollm-plugin.yml). Many
+participants won't; that's fine.
 
 ## Wanna chat?
 
@@ -83,6 +88,5 @@ Open alongside [`SimHacker/moollm`](https://github.com/SimHacker/moollm) in Curs
 |------|------|
 | [SimHacker/moollm](https://github.com/SimHacker/moollm) | Orchestrator + skills |
 | [SimHacker/MicropolisCore](https://github.com/SimHacker/MicropolisCore) | Engine + packages |
-| DonHopkins (private) | Filtered export source |
 
 — Don Hopkins *(the User Interface Flower Child)* 🌀

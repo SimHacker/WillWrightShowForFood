@@ -44,9 +44,9 @@ he pulls become the season — each one a future show. (See `episodes.yml`.)
 See **[`../../process/repo-show-format.yml`](../../process/repo-show-format.yml)** — canonical
 definition (HN → RTFR → Repo Man → audience character PRs → Don Philahue → cauldron → skills + Cursor).
 
-Short version: announced as a pointer to this repo; people RTFR and follow in their own AI tools;
-Will introduced as a **Repo Man**; audience questions via PRs; **Don Philahue** wrangles live;
-ideas melted into MOOLLM skills and built in Cursor.
+Short version: RTFR on **your rig** (AI optional). Man-vs-machine competitions welcome.
+Repo Man guest; audience PR questions; Philahue wrangles; cauldron → breed techniques via git.
+**Your show on your branch → PR into the ShowMaker network:** [`../../process/showmaker-network.yml`](../../process/showmaker-network.yml)
 
 ## Status
 
