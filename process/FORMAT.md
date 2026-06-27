@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/repo-show-format.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:4ba8415f8b4c707d -->
+<!-- content-sha256:2d533e33d5c030b3 -->
 
 # Repo Show format
 
@@ -66,7 +66,7 @@ the Micropolis AI Drag Race) — optional fun we can do, not the point.
 - **note:** Rotate the closing line — warm, playful, a little retro.
 ### Rotating
 
-- {"line": "Have a big fun!", "credit": "Mary Hoogeveen, Weaver"}
+- {"line": "Have a big fun!", "credit": "Mary Hoogeveen, Artisanal Weaver"}
 - {"line": "Goodnight, until tomorrow.", "kinship": "Thomas Cherryhomes"}
 - {"line": "Order before midnight tonight, or it will be tomorrow!", "homage": "1970s cheesy late-night TV commercial sign-off"}
 
