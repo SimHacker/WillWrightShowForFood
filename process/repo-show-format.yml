@@ -22,6 +22,9 @@ how_it_runs:
     brain_stream: brain-stream.yml
     note: "Live bus — prompts, thinking, model shifts, GH doc links on overlay + throttled chat"
     drag_race: "Manual Transmission + Micropolis AI Drag Race — Slats judges; spend log ref"
+  after_harvest_pr:
+    post_run_forensics: ai-offs.yml#post_run_analysis
+    note: "cursor-mirror + deep-snitch on session artifacts before public harvest"
 
 canonical_prose: |
   Announced ahead of time (e.g. to Hacker News) as a pointer to this repo — people RTFR

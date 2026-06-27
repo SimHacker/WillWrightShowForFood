@@ -40,6 +40,7 @@ orchestration_gold:
     - thoughtful-commitment commit chain
     - rigs/*.rig.yml declared shift map
     - optional brain-stream event log
+    - post_run deep-snitch clean bill (before public export)
   ethics: "Opt-in, public repo, redact secrets — see brain-stream.yml#privacy"
   harvest: "Anonymized aggregates → MOOLLM experiment runs + future skills/ packages"
 
@@ -145,7 +146,23 @@ credits:
 
 episode_beat:
   duration: "5–10 min mini or full Drag Race rotation slot"
-  steps: [drop_spec, declare_bids, start_engines, ship_branch, multi_rubric_score, merge_or_sashay]
+  steps: [drop_spec, declare_bids, start_engines, ship_branch, multi_rubric_score, merge_or_sashay, post_run_forensics]
+
+post_run_forensics:
+  when: "After the run — before publishing artifacts or harvesting to skills/"
+  see: ai-offs.yml#post_run_analysis
+  pitch: |
+    The chat generated artifacts (code, yaml, commits, transcripts). Run cursor-mirror to
+    archaeology the session; run deep-snitch to audit what left the building. Forensics
+    feed rubric SCORE, experiment COMPARE, and orchestration gold — with secrets stripped.
+  workflow:
+    - "cursor-mirror timeline <composer> — chronological ride"
+    - "cursor-mirror thinking <composer> — reasoning blocks"
+    - "cursor-mirror tools <composer> — what it actually touched"
+    - "cursor-mirror context-sources <composer> — files assembled into prompts"
+    - "cursor-mirror deep-snitch <composer> — gut-camera on transcripts; secrets, exfil patterns"
+    - "Attach forensics summary to PR / rig report / experiment run config"
+  public_artifacts: "Redact before bus or repo — deep-snitch first, then publish"
 
 ties_to:
   - micropolis-ai-drag-race.yml

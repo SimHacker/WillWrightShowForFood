@@ -68,6 +68,9 @@ overlay_ux:
 
 privacy:
   before_bus: [deep_snitch, trekify, stream_mode_toggle]
+  after_run: |
+    Post-stream: deep-snitch + cursor-mirror forensics on the session before replay,
+    harvest, or orchestration gold export. See ai-offs.yml#post_run_analysis.
   stream_mode:
     delay_thinking_seconds: optional
     strip_private_paths: true
@@ -93,6 +96,10 @@ build_phases:
   - id: 5
     ship: "YouTube chat bot + ai-offs scoreboard tile"
     model_cost: mini
+  - id: 6
+    ship: "Post-run forensics hook — deep-snitch gate before replay export"
+    model_cost: zero
+    see: ai-offs.yml#post_run_analysis
 
 ties_to:
   - manual-transmission.yml

@@ -52,6 +52,8 @@ cursor_mirror:
     - "python3 skills/cursor-mirror/scripts/cursor_mirror.py timeline <composer>"
     - "python3 skills/cursor-mirror/scripts/cursor_mirror.py thinking <composer>"
     - "python3 skills/cursor-mirror/scripts/cursor_mirror.py tools <composer>"
+    - "python3 skills/cursor-mirror/scripts/cursor_mirror.py context-sources <composer>"
+    - "python3 skills/cursor-mirror/scripts/cursor_mirror.py deep-snitch <composer>"
   spend_proof: |
     Export Cursor usage/spending (timestamped spreadsheet or billing export). Pair with
     cursor-mirror session IDs for ai-offs scoreboard — efficiency vs extravagance within class.
@@ -87,6 +89,29 @@ scoreboard:
     - "Solution quality"
     - "Integration (PR merge)"
     - "Abstraction (skills/ + packages/)"
+
+post_run_analysis:
+  when: "After Manual Transmission, Code That Spec, or any ai-off run"
+  what: |
+    Analyze artifacts the chat generated — not just the merge diff. cursor-mirror
+    reconstructs prompts, thinking, tool calls, context assembly; deep-snitch audits
+    transcripts for secrets and sketch before anything goes public or into orchestration gold.
+  workflow:
+    mirror:
+      - timeline
+      - thinking
+      - tools
+      - context-sources
+      - stream
+    snitch:
+      command: deep-snitch
+      note: "Gut-camera pass — mask secrets before harvest or brain-stream replay"
+    harvest:
+      - "rubric SCORE forensics summary"
+      - "experiment COMPARE vs bid and vs other contestants"
+      - "Optional: attach composer id + deep-snitch clean bill to PR"
+  skill_snitch: SimHacker/moollm/skills/skill-snitch
+  see: manual-transmission.yml#post_run_forensics
 
 see_also:
   - ../schemas/rig-schema.yml
