@@ -11,7 +11,7 @@ Announced ahead of time (e.g. to Hacker News) as a pointer to this repo — peop
 (read the repo) and follow along live on whatever rig they bring: vim and a Makefile,
 Cursor and MOOLLM, or pencil and paper. You do not need AI tools. Perfectly delightful
 man-against-the-machine taste and power competitions are encouraged — dance-off optional.
-The guest is introduced as a Repo Man. The audience incarnates consensual characters and
+The guest is introduced as a Repo Man, Woman, or Anybody. The audience incarnates consensual characters and
 submits questions as PRs; Don Philahue surfaces the relevant ones live. Design ideas get
 melted (cauldron), documented, debated, and built — then bred back into the network via PRs.
 
@@ -29,7 +29,7 @@ melted (cauldron), documented, debated, and built — then bred back into the ne
 
 - **announce:** Ahead of time (e.g. Hacker News) — a pointer to THIS repo, not a wall of text
 - **rtfr:** Read The Fucking Repo — follow along on your own rig (editor, browser, notebook, AI, or bare hands)
-- **guest_intro:** Guest introduced as a Repo Man / Repo Woman (Alex Cox homage — come on, let's go)
+- **guest_intro:** Guest introduced as a Repo Man, Woman, or Anybody (Alex Cox homage — come on, let's go)
 - **audience:**
   - Incarnate consensual characters (representation-ethics)
   - Submit questions as PRs — pre-loaded question-advertisements in character dirs

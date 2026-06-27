@@ -71,9 +71,9 @@ Announced ahead of time (e.g. Hacker News) as a **pointer to this repo** — peo
 (read the repo) and follow along on **whatever rig they bring**: vim, Cursor, notebook, or
 *pencil. **AI optional.** Man-against-the-machine encouraged — *dance-off optional.*
 **[Code That Spec](process/code-that-spec.yml):** bid tokens — audience yells **CODE THAT SPEC!!!!!**
-**[Manual Transmission](process/manual-transmission.yml):** *what's the smallest model that ships?* — Rubik-scoring on many rubrics; spend CSV = piss test; **orchestration gold** for multi-LLM training; MOOLLM [`rubric`](https://github.com/SimHacker/moollm/tree/main/skills/rubric) + [`experiment`](https://github.com/SimHacker/moollm/tree/main/skills/experiment) (Mike Gallaher); **[Slats](characters/slats/)** judges the werk.
+**[Manual Transmission](process/manual-transmission.yml):** *what's the smallest model that ships?* — Rubik-scoring on many rubrics; spend CSV = piss test; **orchestration gold** for multi-LLM training; MOOLLM [`rubric`](https://github.com/SimHacker/moollm/tree/main/skills/rubric) + [`experiment`](https://github.com/SimHacker/moollm/tree/main/skills/experiment) (Mike Gallaher); **[Slats](characters/slats/)** judges the work.
 **[Brain stream](process/brain-stream.yml):** prompts + thinking on the live overlay (Twitch/YouTube/OBS).
-Rig costumes welcome (*Let's Make a Deal* / Stiletto Sprint energy). Guest = **Repo Man**. Audience = consensual characters + question PRs;
+Rig costumes welcome (*Let's Make a Deal* / Stiletto Sprint energy). Guest = **Repo Man, Woman, or Anybody**. Audience = consensual characters + question PRs;
 **Don Philahue** wrangles live. Ideas → cauldron → skills + code → **breed technique DNA**
 back via git (branches, merges, nested worlds).
 

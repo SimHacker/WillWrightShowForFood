@@ -44,7 +44,7 @@ Miss live? Your character's pre-loaded question can still get asked; Q+A memoria
 
 1. *"So you have a Repo to Show us?"*
 2. *"This episode's repos are:"* — game-show intro per repo
-3. Guest as **Repo Man / Repo Woman**
+3. Guest as **Repo Man, Woman, or Anybody**
 4. License + credit beat
 5. Optional controlled AI-slop audience gag — then anti-slop for the rest
 
