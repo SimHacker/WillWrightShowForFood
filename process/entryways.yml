@@ -123,7 +123,7 @@ entryways:
       AI optional on the show; when used, we score cost-to-ship and solution quality.
       Rig yaml + SETUP.md DNA lets others reproduce your stack; ai-offs is voluntary spend proof.
     playlist:
-      - { priority: 1, title: "Manual Transmission", path: manual-transmission.yml, why: "Smallest model that ships — Rubik-scoring on many rubrics" }
+      - { priority: 1, title: "Manual Transmission", path: manual-transmission.yml, why: "Smallest model that works — Rubik-scoring on many rubrics" }
       - { priority: 2, title: "AI-offs", path: ai-offs.yml, why: "Post-run forensics — token spend as voluntary piss test" }
       - { priority: 3, title: "Rigs room", path: ../rigs/README.md, why: "Declare languages, tools, platform — your drag persona" }
       - { priority: 4, title: "Rig SETUP DNA", path: ../schemas/rig-setup-dna.yml, why: "Email SETUP.md alone; agent fetches latest yaml from GitHub" }

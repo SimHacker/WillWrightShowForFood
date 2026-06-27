@@ -12,7 +12,7 @@ AI optional on the show; when used, we score cost-to-ship and solution quality. 
 
 | # | Stop | Why |
 |---|------|-----|
-| 1 | [**Manual Transmission**](../manual-transmission.yml) | Smallest model that ships — Rubik-scoring on many rubrics |
+| 1 | [**Manual Transmission**](../manual-transmission.yml) | Smallest model that works — Rubik-scoring on many rubrics |
 | 2 | [**AI-offs**](../ai-offs.yml) | Post-run forensics — token spend as voluntary piss test |
 | 3 | [**Rigs room**](../../rigs/README.md) | Declare languages, tools, platform — your drag persona |
 | 4 | [**Rig SETUP DNA**](../../schemas/rig-setup-dna.yml) | Email SETUP.md alone; agent fetches latest yaml from GitHub |

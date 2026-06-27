@@ -221,7 +221,7 @@ MELT/STIR grows the soup; SCOOP selects what leaves the pot and in what form.
 | [`VISION.md`](VISION.md) | Generated markup |
 | [`rig-feedback.yml`](rig-feedback.yml) | Declare your real AI stack |
 | [`showmaker-network.yml`](showmaker-network.yml) | Shows breed shows |
-| [`manual-transmission.yml`](manual-transmission.yml) | Smallest model that ships |
+| [`manual-transmission.yml`](manual-transmission.yml) | Smallest model that works |
 | [`brain-stream.yml`](brain-stream.yml) | Live thinking overlay |
 | [`micropolis-ai-drag-race.yml`](micropolis-ai-drag-race.yml) | Flagship game-show format |
 | [`retrocomputing-drive.yml`](challenges/retrocomputing-drive.yml) | Retro AI drag race family |

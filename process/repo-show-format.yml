@@ -200,7 +200,7 @@ see_also:
   - { path: VISION.md, why: "Generated markup" }
   - { path: rig-feedback.yml, why: "Declare your real AI stack" }
   - { path: showmaker-network.yml, why: "Shows breed shows" }
-  - { path: manual-transmission.yml, why: "Smallest model that ships" }
+  - { path: manual-transmission.yml, why: "Smallest model that works" }
   - { path: brain-stream.yml, why: "Live thinking overlay" }
   - { path: micropolis-ai-drag-race.yml, why: "Flagship game-show format" }
   - { path: challenges/retrocomputing-drive.yml, why: "Retro AI drag race family" }

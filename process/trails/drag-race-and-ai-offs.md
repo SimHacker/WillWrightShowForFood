@@ -15,7 +15,7 @@ Game-show formats inside Repo Show — declare class honestly; Slats judges; ai-
 | [**micropolis-ai-drag-race.yml**](../micropolis-ai-drag-race.yml) | Variety show — rig personas + Slats |
 | [**DRAG-RACE.md**](../DRAG-RACE.md) | Human markup for drag race |
 | [**ai-offs.yml**](../ai-offs.yml) | Spend proof — voluntary piss test for stick shift |
-| [**manual-transmission.yml**](../manual-transmission.yml) | Smallest model that ships — CODE THAT SPEC |
+| [**manual-transmission.yml**](../manual-transmission.yml) | Smallest model that works — CODE THAT SPEC |
 | [**stick-shift-protocol.yml**](../stick-shift-protocol.yml) | Every model shift = commit in git |
 | [**code-that-spec.yml**](../code-that-spec.yml) | Audience chant game — bid tokens or time |
 | [**homefun-grading.yml**](../homefun-grading.yml) | Micropolis Class — commit message vs thinking blocks |

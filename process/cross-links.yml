@@ -36,7 +36,7 @@ trails:
       - { path: micropolis-ai-drag-race.yml, why: "Variety show — rig personas + Slats" }
       - { path: DRAG-RACE.md, why: "Generated markup for drag race" }
       - { path: ai-offs.yml, why: "Spend proof — voluntary piss test for stick shift" }
-      - { path: manual-transmission.yml, why: "Smallest model that ships — CODE THAT SPEC" }
+      - { path: manual-transmission.yml, why: "Smallest model that works — CODE THAT SPEC" }
       - { path: stick-shift-protocol.yml, why: "Every model shift = commit in git" }
       - { path: code-that-spec.yml, why: "Audience chant game — bid tokens or time" }
       - { path: homefun-grading.yml, why: "Micropolis Class — commit message vs thinking blocks" }
