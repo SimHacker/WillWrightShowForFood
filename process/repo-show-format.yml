@@ -76,10 +76,13 @@ rig_spectrum:
     - name: orchestrated
       tools: [Cursor, MOOLLM, moollm skills, multi-model routing]
   competitions:
-    - "Taste — who ships the most elegant solution?"
+    - "Taste — who ships the most elegant solution? (within declared class)"
     - "Power — who implements the wildest idea in the time box?"
-    - "Man vs machine — human-only vs AI-assisted vs hybrid (declare your class)"
+    - "Man vs machine — artisanal vs vibe vs orchestrated (declare your class; don't exclude — it's a game)"
     - "Dance-off — show your workflow live; audience votes with thumbs and PRs"
+  declare_not_exclude: |
+    Don't ban people from the game — declare category and compete fair. Sports figured this
+    out with weight classes; rig culture should too. Misdeclare and the audience is the ref.
   per_layer: "Automation level AND model tier AND tool choice at each layer — editor, build, test, deploy, doc — all fair game to declare and compare"
 
 play_along:

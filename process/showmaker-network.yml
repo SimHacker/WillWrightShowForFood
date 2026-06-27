@@ -33,7 +33,18 @@ your_show:
     - "Run your Repo Show on your rig — any automation level"
     - "Document techniques — yaml backbone + markdown facade"
     - "PR back to link your show object + edges into the network"
-  no_gatekeeping: "Declare your rig class. Man-against-the-machine welcome — extra respect for honest hand programming."
+  declare_your_class:
+    rule: "Don't exclude — declare and have fun. It's just a game."
+    parallel: |
+      Same shape as sports categories (weight class, age bracket, amateur vs pro): the answer
+      isn't blanket exclusion — it's honest declaration and fair comparison within class.
+      Rig wars shouldn't be culture-war exclusion either. Artisanal, intentional, vibe,
+      orchestrated — pick your lane, say so in your PR, compete on taste and power.
+    not_a_no_brainer_elsewhere: |
+      Don's view: the trans-in-sports fight is mostly a no-brainer misfire — declare category,
+      don't ban people from the game. We apply that here: every rig class welcome if declared.
+    honesty: "Misdeclare your class and the audience votes with thumbs — that's the ref"
+  no_gatekeeping: "All rig classes welcome — declare honestly. Extra respect for artisanal hand programming."
   share_your_rig: "AI users: tell us tools, models, MCP, skills, repos, moollm wiring, contexts — issue/PR rig-feedback (see repo-show-format.yml)"
 
 publication:
@@ -49,8 +60,9 @@ publication:
     - "Validate yaml + representation-ethics on PR"
 
 competitions:
-  taste_and_power: "Compare implementations across rigs — human-only vs AI-assisted vs hybrid"
-  man_vs_machine: "Delightful adversarial play — not anti-AI, pro-choice"
+  declare_not_exclude: "Don't ban rigs — declare class, compete fair, have fun. It's just a game."
+  taste_and_power: "Compare implementations within declared class — artisanal vs vibe vs orchestrated"
+  man_vs_machine: "Delightful adversarial play — not anti-AI, not anti-hand; pro-declaration"
   breed_winners: "Merge technique DNA from winning branches — horizontal gene transfer via git"
 
 nesting:

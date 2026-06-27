@@ -51,8 +51,10 @@ pyramid:
 rig_culture:
   teaching: |
     Repo Shows teach rig culture — not just tools. Declare your class honestly.
-    Extra respect for artisanal hand programming. Curiosity about real AI setups.
-    This is constructionist microworld pedagogy: show your workflow, breed technique DNA.
+    Don't exclude — declare and have fun. It's just a game. (Same shape Don applies to
+    sports categories: weight class not banishment — including the trans-in-sports mess
+    that should be a no-brainer.) Extra respect for artisanal hand programming.
+    Curiosity about real AI setups. Constructionist microworld pedagogy: show workflow, breed DNA.
   artisanal_programmers:
     also_called: [hand_programmers, human_only, bare_hands_rig]
     definition: "Humans programming by hand — no AI. TextEdit to Emacs to VS Code and beyond."
