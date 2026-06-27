@@ -1,23 +1,75 @@
 # MANUAL TRANSMISSION — Smallest Model That Ships
-# Drag Race challenge + ai-off lane. The question IS the contest.
-# Scooped: 2026-06-27 jam (lowest cost / smallest model → stick-shift efficiency race)
+# Drag Race challenge + ai-off lane. THE QUESTION IS THE CONTEST.
+# Scooped: 2026-06-27 jam — twice, delightfully, from creative misunderstanding
 
 meta:
   id: manual-transmission
   also_called: [smallest_model_that_ships, sms_lane]
   status: seed
-  type: [ai_off, drag_race_challenge, game_show]
+  type: [ai_off, drag_race_challenge, game_show, orchestration_lab]
   tagline: "What's the lowest cost / smallest model you can solve the problem with?"
-  answer: "Declare class, prove with spend, let Slats and the spreadsheet fight about taste."
+  answer: "Declare class, prove with spend, score on many rubrics at once, let Slats werk."
+
+contest_prompt: |
+  What's the lowest cost / smallest model you can solve the problem with?
+
+  Not meta-advice. Not a blog title. The on-air challenge. Same spec CARD for everyone.
+  Compete on as many dimensions as you dare — measurable and subjective — at the same time.
+  Like a Rubik's cube: many faces, one solve, twist any axis you want to optimize.
 
 pitch: |
-  Same spec CARD for every contestant. Everyone bids model tier + tokens/spend/wall-clock +
-  gear changes. Audience chants CODE THAT SPEC. Cursor spend log is the tachometer.
-  Brain-stream overlay shows prompts and shifts live. Misbid and the audience is the ref.
+  Real programmers, real tools, real models, real specs — a FUN reason to document how you
+  orchestrate LLMs. Submit your Cursor spend CSV like a piss test: voluntary, verified,
+  the ref that doesn't lie. We are facilitating circumstances that collect invaluable data
+  for training models to orchestrate multiple LLMs. This shit is GOLD.
 
 origin:
-  scooped_from: "Repo Show jam — misread as meta-advice; reframed as on-air challenge"
+  scooped_from: "Repo Show jam — question misread as meta twice; persisted on purpose"
   cauldron: "play → lift → persist in process/ — see repo-show-format.yml#cauldron_scoop"
+  note: "Don may mumble on purpose. Misunderstanding is a feature."
+
+orchestration_gold:
+  what: |
+    Competitive Manual Transmission runs produce labeled, real-world traces: spec in,
+    model routing decisions, tool calls, spend timestamps, merge out. Gold for learning
+    multi-LLM orchestration — not synthetic bench theater.
+  why_fun_matters: "People submit honest rig reports when the game is werk, not homework"
+  artifacts:
+    - Cursor spend CSV (required — the piss test)
+    - cursor-mirror composer timeline
+    - thoughtful-commitment commit chain
+    - rigs/*.rig.yml declared shift map
+    - optional brain-stream event log
+  ethics: "Opt-in, public repo, redact secrets — see brain-stream.yml#privacy"
+  harvest: "Anonymized aggregates → MOOLLM experiment runs + future skills/ packages"
+
+spend_csv_piss_test:
+  metaphor: "Submitting your Cursor spend export is like taking a piss test — voluntary proof"
+  what_it_proves: [model_tier_timeline, token_totals, bid_honesty, shift_count, cost_to_ship]
+  ref: "Spreadsheet doesn't lie. Misbid and the audience is the ref."
+  see: ai-offs.yml#cursor_mirror
+
+multi_rubric:
+  metaphor: "Rubik's cube — many faces scored at once; no single-axis winner required"
+  moollm_skills:
+    rubric:
+      repo: https://github.com/SimHacker/moollm/tree/main/skills/rubric
+      role: "Define criteria + weights; SCORE outputs; RUBRIC-BRIDGE qualitative → quantitative"
+      credits: Mike Gallaher
+    experiment:
+      repo: https://github.com/SimHacker/moollm/tree/main/skills/experiment
+      role: "SIMULATE → EVALUATE → ITERATE → ANALYZE — compare runs, configs, model lanes"
+      credits: "Mike Gallaher lineage via evaluator + rubric; live proof Fluxx Championship"
+  how:
+    - "Host or AI judge CREATE rubric from spec CARD + declared rig class"
+    - "SCORE each contestant on N criteria simultaneously — weights explicit"
+    - "experiment COMPARE runs across contestants or across your own retries"
+    - "Slats judges subjective faces; spreadsheet judges measurable faces"
+  example_axes:
+    measurable: [cost_to_ship, smallest_model, shift_smoothness, bid_honesty, wall_clock, spec_compliance, merge]
+    subjective: [eleganza, taste, humor, constructionist_generosity, shift_feel, narration]
+    aesthetic: [brain_stream_readability, rig_costume, commit_lip_sync]
+  note: "Winner per axis optional — crown 'best mini lane', 'best stick shift', 'best werk' separately"
 
 how_it_works:
   host_drops: "One spec CARD — yaml stub, issue, guest throw-down — identical for all lanes"
@@ -27,14 +79,15 @@ how_it_works:
       - minimum_model_tier
       - max_tokens_or_spend_bid
       - shift_count_or_stick_shift_map
+      - which_rubric_axes_you_optimize_for
     prove:
-      - Cursor spend export
+      - Cursor spend CSV export
       - cursor-mirror composer id + timeline
       - thoughtful-commitment commit SHAs
       - merged PR branch
   audience:
     chant: "CODE THAT SPEC!!!!!"
-    ref: "Misbid vs spend log — thumbs, chat, PR comments"
+    ref: "Misbid vs spend CSV — thumbs, chat, PR comments"
   overlay:
     see: brain-stream.yml
     shows: [current_prompt, model_badge, cost_ticker, shift_events, github_attachment_links]
@@ -53,11 +106,12 @@ rig_classes_same_track:
   orchestrated: "Many models + MCP — judged on efficiency per complexity, not raw spend"
 
 scoring:
+  engine: "MOOLLM rubric SCORE + experiment COMPARE — many criteria at once"
   measurable:
-    cost_to_ship: { proof: Cursor spend export, weight: high }
+    cost_to_ship: { proof: Cursor spend CSV, weight: high }
     smallest_model_used: { proof: spend breakdown on merge commit, weight: high }
     shift_smoothness: { proof: spend timestamps + cursor-mirror timeline, weight: medium }
-    bid_honesty: { proof: bid vs actual, weight: high }
+    bid_honesty: { proof: bid vs CSV, weight: high }
     wall_clock: { proof: stream clock vs bid, weight: medium }
     spec_compliance: { proof: diff vs CARD + automated lint, weight: high }
     merge_harvest: { proof: PR merged; skills/packages graft bonus, weight: high }
@@ -72,17 +126,26 @@ judges:
   slats:
     role: celebrity_robot_judge
     rubric: ../characters/slats/judge-rubric.yml
-    note: "Fictional sidekick — camp, robopoetry, werk callouts; not sentience theater"
-  ai:
-    role: proof_package_lint + spec_diff_scorer + shift_efficiency_math
+    note: "Subjective Rubik faces — camp, robopoetry, werk"
+  rubric_experiment:
+    role: "MOOLLM rubric SCORE + experiment COMPARE — many axes at once"
+    credits: Mike Gallaher
+    repos:
+      - SimHacker/moollm/skills/rubric
+      - SimHacker/moollm/skills/experiment
   human:
     role: taste, constructionist_generosity, merge_worthiness
   spreadsheet:
-    role: "Cursor export — the ref that doesn't lie"
+    role: "Cursor spend CSV — the piss test; the ref that doesn't lie"
+
+credits:
+  mike_gallaher:
+    contributions: [rubric_skill, experiment_lineage, adversarial_committee, evaluator]
+    see: SimHacker/moollm/designs/mike-gallaher-ideas.md
 
 episode_beat:
   duration: "5–10 min mini or full Drag Race rotation slot"
-  steps: [drop_spec, declare_bids, start_engines, ship_branch, judges_runway, merge_or_sashay]
+  steps: [drop_spec, declare_bids, start_engines, ship_branch, multi_rubric_score, merge_or_sashay]
 
 ties_to:
   - micropolis-ai-drag-race.yml
@@ -92,6 +155,9 @@ ties_to:
   - ../characters/slats/judge-rubric.yml
   - ../rigs/stick-shift-composer-moollm.rig.yml
   - SimHacker/moollm/skills/cursor-mirror
+  - SimHacker/moollm/skills/rubric
+  - SimHacker/moollm/skills/experiment
+  - SimHacker/moollm/skills/evaluator
 
 see_also:
   - showmaker-network.yml#competitions

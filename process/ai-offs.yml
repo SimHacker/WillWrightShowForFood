@@ -9,7 +9,22 @@ meta:
 what: |
   AI-offs are declared-class competitions — artisanal vs budget bull ride vs stick-shift
   model switching vs orchestrated. Score cost-to-ship AND solution quality. Prove with
-  Cursor spend log + cursor-mirror + thoughtful commits.
+  Cursor spend CSV + cursor-mirror + thoughtful commits.
+  Manual Transmission: the question IS the contest — multi-rubric orchestration gold.
+
+orchestration_lab:
+  see: manual-transmission.yml#orchestration_gold
+  pitch: |
+    FUN competitive reason for real programmers to submit real multi-LLM routing traces.
+    Gold data for training orchestrators — spec in, model shifts, tools, merge out.
+  moollm: [rubric, experiment, evaluator, cursor-mirror]
+
+spend_proof:
+  cursor_spend_csv:
+    required_for: [manual_transmission, stick_shift, code_that_spec]
+    metaphor: "Voluntary piss test — the ref that doesn't lie"
+    proves: [model_timeline, tokens, bid_honesty, shift_count]
+  see: manual-transmission.yml#spend_csv_piss_test
 
 rig_classes:
   budget_bull_ride: "One tier, tight budget, wrangle through chaos"
@@ -22,7 +37,7 @@ game_shows:
   manual_transmission: manual-transmission.yml
   chant: "CODE THAT SPEC!!!!!"
   drag_race: "Start your engines — may the best rig werk, commit, and merge"
-  manual_transmission: "Smallest model that ships — declare, bid, prove with spend log"
+  manual_transmission_prompt: "What's the lowest cost / smallest model you can solve the problem with?"
 
 brain_stream:
   see: brain-stream.yml

@@ -125,9 +125,12 @@ competitions:
     challenges: [design_challenge, code_that_spec_mini, stiletto_sprint, manual_transmission, lip_sync_for_your_commits, harvest_runway]
   manual_transmission:
     see: manual-transmission.yml
-    tagline: "What's the lowest cost / smallest model you can solve the problem with?"
-    origin: "Scooped from jam — the question IS the contest, not meta-advice"
+    contest_prompt: "What's the lowest cost / smallest model you can solve the problem with?"
+    tagline: "Rubik's-cube scoring — many rubrics at once; spend CSV = piss test"
+    origin: "Scooped twice from creative misunderstanding — Don may mumble on purpose"
     overlay: brain-stream.yml
+    moollm: [rubric, experiment]
+    credits: Mike Gallaher
   brain_stream:
     see: brain-stream.yml
     tagline: "Spy on the brain — prompts, thinking, GH links on the broadcast bus"

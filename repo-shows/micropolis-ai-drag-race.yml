@@ -10,8 +10,12 @@ show:
 
 pitch: |
   Flagship variety format: rig personas compete in design challenges, Code That Spec
-  minis, Stiletto Sprints, and lip-sync-for-your-commits finales. Cursor spend log
-  is the judge's spreadsheet. Winners merge to skills/ + packages/; werk.
+  minis, Stiletto Sprints, Manual Transmission (smallest model that ships), and
+  lip-sync-for-your-commits finales. Cursor spend CSV is the piss test. Multi-rubric
+  scoring via MOOLLM rubric + experiment. Winners merge to skills/ + packages/; werk.
+
+contest_prompt: "What's the lowest cost / smallest model you can solve the problem with?"
+see: ../process/manual-transmission.yml
 
 challenges_rotation:
   - design_challenge
