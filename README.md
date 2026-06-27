@@ -208,7 +208,7 @@ Playlists are ordered tours. [`cross-links.yml`](process/cross-links.yml) is for
 → Declare rig honestly. Stick shift = model change is a commit. ai-offs = voluntary spend proof.  
 *Stops: manual transmission → ai-offs → rigs → SETUP DNA → orchestration gold → branching → SKILL → host rig*
 
-**Retro — PDP-10, ][, LispM** · [playlist](process/entryways/retro.md)  
+**Retro — PDP-10, Apple ][, LispM** · [playlist](process/entryways/retro.md)  
 → Same spec, your emulator. Forward SETUP.md so others boot without you. Lars + Thomas orbit.  
 *Stops: RETROCOMPUTING → three drives → Lars → Thomas → example SETUP → Drag Race*
 

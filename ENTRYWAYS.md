@@ -24,7 +24,7 @@ Full index with cross-links: [`process/entryways/README.md`](process/entryways/R
 | 5 | **Bot — browsing HTTP agent** | [open](process/entryways/for-bots.md) | FOR-BOTS.md → GLANCE → one ENTRYWAY |
 | 6 | **Hacker — clone, verify** | [open](process/entryways/hacker.md) | `pnpm verify` then INDEX |
 | 7 | **AI — orchestration, rigs** | [open](process/entryways/ai-coder.md) | Declare rig — stick shift = commit per model shift |
-| 8 | **Retro — PDP-10, ][, LispM** | [open](process/entryways/retro.md) | One spec CARD — ship SETUP DNA |
+| 8 | **Retro — PDP-10, Apple ][, LispM** | [open](process/entryways/retro.md) | One spec CARD — ship SETUP DNA |
 | 9 | **Educator — microworlds** | [open](process/entryways/educator.md) | Will 1996 → Papert/Kay → Homefun |
 | 10 | **Archivist / historian** | [open](process/entryways/archivist.md) | Provenance policy → primary sources |
 | 11 | **Producer — Repo Show** | [open](process/entryways/producer.md) | SKILL → plant show → ShowMaker PR |

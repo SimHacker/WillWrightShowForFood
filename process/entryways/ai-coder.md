@@ -41,4 +41,4 @@ AI optional on the show; when used, we score cost-to-ship and solution quality. 
 |---|---|
 | ← | [Hacker — clone, verify](hacker.md) |
 | Map | [Museum map](README.md) |
-| Next | [Retro — PDP-10, &#93;&#91;, LispM](retro.md) |
+| Next | [Retro — PDP-10, Apple &#93;&#91;, LispM](retro.md) |
