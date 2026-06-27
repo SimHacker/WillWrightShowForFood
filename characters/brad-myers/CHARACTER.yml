@@ -1,0 +1,25 @@
+# Brad A. Myers — INVITATION CHARACTER (public WWSFF portrayal)
+# NOT Brad A. Myers. See ../schemas/guest-invitation-status.yml
+
+character:
+  name: "Brad A. Myers"
+  type: invitation
+  real_being: true
+  signifier: "👤"
+  status: living
+  field: "CMU HCI — Garnet, PBD, visual programming taxonomies, UI software tools"
+  home: characters/brad-myers/
+
+representation:
+  consent_level: 3
+  authored_by: don-hopkins
+  must_not: [impersonate, fabricate_quotes]
+
+invitation:
+  status: not_yet_asked
+  show_seed: repo-shows/brad-myers/
+
+
+source:
+  projected_from: DonHopkins/characters/brad-myers/
+  live_repo: WillWrightShowForFood

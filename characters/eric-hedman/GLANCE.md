@@ -1,0 +1,1 @@
+👤 **Eric Hedman ("Irk")** — Sims 1 character animator. Hand-tuned walk cycles, idles, gestures for the vitaboy pipeline. Famous wiggle incident (Don checked in canWiggle debug — they're still great buddies). Great interview subject; YouTube channel pending URL.

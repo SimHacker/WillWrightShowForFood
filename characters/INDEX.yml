@@ -29,6 +29,13 @@ orchestrator:
     role: "AI MC / Q&A agent (Phil Donahue homage)"
     path: characters/don-philahue/
 
+sidekick:
+  slats:
+    name: Slats
+    role: "Fictional Stupid Fun Club robot — RoboResurrection quest"
+    path: characters/slats/
+    show_segment: repo-shows/will-wright/slats-reincarnation.yml
+
 guests:
   alan-kay: { invitation_status: not_yet_asked, show_seed: repo-shows/alan-kay-microworld.yml }
   arthur-van-hoff: { invitation_status: not_yet_asked }
@@ -60,6 +67,7 @@ guests:
   stone-librande: { invitation_status: not_yet_asked }
   terry-winograd: { invitation_status: not_yet_asked, show_seed: repo-shows/terry-winograd/ }
   thomas-cherryhomes: { invitation_status: not_yet_asked, show_seed: repo-shows/thomas-cherryhomes/ }
+  walter-bender: { invitation_status: not_yet_asked, show_seed: repo-shows/walter-bender-olpc.yml, note: "OLPC Stone Soup, open-sourcing SimCity, skill-creation show" }
   yoot-saito: { invitation_status: not_yet_asked, show_seed: repo-shows/yoot-saito/ }
 
 bots:

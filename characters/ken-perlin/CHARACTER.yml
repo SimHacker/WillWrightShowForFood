@@ -1,0 +1,25 @@
+# Ken Perlin — INVITATION CHARACTER (public WWSFF portrayal)
+# NOT Ken Perlin. See ../schemas/guest-invitation-status.yml
+
+character:
+  name: "Ken Perlin"
+  type: invitation
+  real_being: true
+  signifier: "👤"
+  status: living
+  field: "Procedural graphics, Perlin noise, interactive Java demos, NYU, constructionist-adjacent teaching through runnable artifacts"
+  home: characters/ken-perlin/
+
+representation:
+  consent_level: 3
+  authored_by: don-hopkins
+  must_not: [impersonate, fabricate_quotes]
+
+invitation:
+  status: not_yet_asked
+  show_seed: repo-shows/ken-perlin/
+
+
+source:
+  projected_from: DonHopkins/characters/ken-perlin/
+  live_repo: WillWrightShowForFood

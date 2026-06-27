@@ -1,0 +1,25 @@
+# Richard Bartle — INVITATION CHARACTER (public WWSFF portrayal)
+# NOT Richard Bartle. See ../schemas/guest-invitation-status.yml
+
+character:
+  name: "Richard Bartle"
+  type: invitation
+  real_being: true
+  signifier: "👤"
+  status: living
+  field: "Virtual worlds — MUD1 (1978, with Roy Trubshaw), Bartle taxonomy of player types,"
+  home: characters/richard-bartle/
+
+representation:
+  consent_level: 3
+  authored_by: don-hopkins
+  must_not: [impersonate, fabricate_quotes]
+
+invitation:
+  status: not_yet_asked
+  show_seed: repo-shows/richard-bartle/
+
+
+source:
+  projected_from: DonHopkins/characters/richard-bartle/
+  live_repo: WillWrightShowForFood

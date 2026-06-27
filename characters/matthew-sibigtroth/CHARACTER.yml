@@ -1,0 +1,25 @@
+# Matthew Sibigtroth — INVITATION CHARACTER (public WWSFF portrayal)
+# NOT Matthew Sibigtroth. See ../schemas/guest-invitation-status.yml
+
+character:
+  name: "Matthew Sibigtroth"
+  type: invitation
+  real_being: true
+  signifier: "👤"
+  status: living
+  field: "Creative prototyping — speech/AI; original StoryMaker Flash app; ex-Stupid Fun Club, ex-Google X"
+  home: characters/matthew-sibigtroth/
+
+representation:
+  consent_level: 3
+  authored_by: don-hopkins
+  must_not: [impersonate, fabricate_quotes]
+
+invitation:
+  status: not_yet_asked
+  show_seed: repo-shows/matthew-sibigtroth/
+
+
+source:
+  projected_from: DonHopkins/characters/matthew-sibigtroth/
+  live_repo: WillWrightShowForFood

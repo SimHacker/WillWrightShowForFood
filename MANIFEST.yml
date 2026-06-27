@@ -4,6 +4,8 @@
 meta:
   source_repo: ../DonHopkins
   target_repo: .
+  live: true
+  note: "WWSFF is the live bud — see process/live-repo.yml"
   last_sync: null
   public_url: https://github.com/SimHacker/WillWrightShowForFood
 

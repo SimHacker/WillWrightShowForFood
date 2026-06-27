@@ -1,0 +1,25 @@
+# Arthur van Hoff — INVITATION CHARACTER (public WWSFF portrayal)
+# NOT Arthur van Hoff. See ../schemas/guest-invitation-status.yml
+
+character:
+  name: "Arthur van Hoff"
+  type: invitation
+  real_being: true
+  signifier: "🎷"
+  status: living
+  field: "NeWS/HyperLook, PdB compiler, early Java (compiler-in-Java, AWT, HotJava), Marimba (Castanet/Bongo), TiVo, Flipboard, Jaunt VR"
+  home: characters/arthur-van-hoff/
+
+representation:
+  consent_level: 3
+  authored_by: don-hopkins
+  must_not: [impersonate, fabricate_quotes]
+
+invitation:
+  status: not_yet_asked
+  show_seed: repo-shows/arthur-van-hoff/
+
+
+source:
+  projected_from: DonHopkins/characters/arthur-van-hoff/
+  live_repo: WillWrightShowForFood

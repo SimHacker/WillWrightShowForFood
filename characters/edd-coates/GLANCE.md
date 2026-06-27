@@ -1,0 +1,1 @@
+👤 **Edd Coates** — UI Artist, Digital Designer, and creator of the Game UI Database. Guinness World Record holder for the largest digital archive of video game interfaces. Author of *The Game UI Bible*. Friend of Don Hopkins; potential collaborator on ethical AI data licensing and UI preservation strategies.

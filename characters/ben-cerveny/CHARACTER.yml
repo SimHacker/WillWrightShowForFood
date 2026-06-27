@@ -1,0 +1,25 @@
+# Ben Cerveny — INVITATION CHARACTER (public WWSFF portrayal)
+# NOT Ben Cerveny. See ../schemas/guest-invitation-status.yml
+
+character:
+  name: "Ben Cerveny"
+  type: invitation
+  real_being: true
+  signifier: "👤"
+  status: living
+  field: "Strategist, Designer, Public Code & Digital Public Infrastructure; Game Neverending / Flickr; Stamen map viz; speculative design, civic tech"
+  home: characters/ben-cerveny/
+
+representation:
+  consent_level: 3
+  authored_by: don-hopkins
+  must_not: [impersonate, fabricate_quotes]
+
+invitation:
+  status: not_yet_asked
+  show_seed: repo-shows/ben-cerveny/
+
+
+source:
+  projected_from: DonHopkins/characters/ben-cerveny/
+  live_repo: WillWrightShowForFood

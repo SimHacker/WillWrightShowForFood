@@ -1,0 +1,25 @@
+# Edd Coates — INVITATION CHARACTER (public WWSFF portrayal)
+# NOT Edd Coates. See ../schemas/guest-invitation-status.yml
+
+character:
+  name: "Edd Coates"
+  type: invitation
+  real_being: true
+  signifier: "👤"
+  status: living
+  field: "UI Artist, Digital Designer, Creator of the Game UI Database"
+  home: characters/edd-coates/
+
+representation:
+  consent_level: 3
+  authored_by: don-hopkins
+  must_not: [impersonate, fabricate_quotes]
+
+invitation:
+  status: not_yet_asked
+  show_seed: repo-shows/edd-coates/
+
+
+source:
+  projected_from: DonHopkins/characters/edd-coates/
+  live_repo: WillWrightShowForFood

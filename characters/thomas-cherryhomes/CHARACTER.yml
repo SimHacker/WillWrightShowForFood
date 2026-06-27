@@ -1,0 +1,25 @@
+# Thomas Cherryhomes — INVITATION CHARACTER (public WWSFF portrayal)
+# NOT Thomas Cherryhomes. See ../schemas/guest-invitation-status.yml
+
+character:
+  name: "Thomas Cherryhomes"
+  type: invitation
+  real_being: true
+  signifier: "📡"
+  status: living
+  field: "Retrocomputing hacker/engineer; firmware developer + co-founder of FujiNet; IRATA.ONLINE (PLATO). Cross-platform C; community-builder; preservationist."
+  home: characters/thomas-cherryhomes/
+
+representation:
+  consent_level: 3
+  authored_by: don-hopkins
+  must_not: [impersonate, fabricate_quotes]
+
+invitation:
+  status: not_yet_asked
+  show_seed: repo-shows/thomas-cherryhomes/
+
+
+source:
+  projected_from: DonHopkins/characters/thomas-cherryhomes/
+  live_repo: WillWrightShowForFood

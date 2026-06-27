@@ -1,0 +1,25 @@
+# Seymour Papert — INVITATION CHARACTER (public WWSFF portrayal)
+# NOT Seymour Papert. See ../schemas/guest-invitation-status.yml
+
+character:
+  name: "Seymour Papert"
+  type: invitation
+  real_being: legacy
+  signifier: "🕯️"
+  status: deceased
+  field: "Mathematician & educator — Constructionism, Logo"
+  home: characters/seymour-papert/
+
+representation:
+  consent_level: legacy_kline
+  authored_by: don-hopkins
+  must_not: [impersonate, fabricate_quotes]
+
+invitation:
+  status: not_yet_asked
+  show_seed: repo-shows/seymour-papert/
+  note: "deceased — constructionist K-line"
+
+source:
+  projected_from: DonHopkins/characters/seymour-papert/
+  live_repo: WillWrightShowForFood

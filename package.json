@@ -9,6 +9,7 @@
 		"test": "pnpm -r --stream --if-present run test",
 		"verify:structure": "node scripts/verify-monorepo-structure.mjs",
 		"verify:yaml": "node scripts/verify-yaml.mjs",
+		"scaffold:characters": "node scripts/scaffold-invitation-characters.mjs",
 		"verify": "pnpm run verify:structure && pnpm run verify:yaml",
 		"setup:python": "python3 -m venv .venv && .venv/bin/pip install -r requirements.txt"
 	},

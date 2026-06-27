@@ -1,0 +1,25 @@
+# Terry Winograd — INVITATION CHARACTER (public WWSFF portrayal)
+# NOT Terry Winograd. See ../schemas/guest-invitation-status.yml
+
+character:
+  name: "Terry Winograd"
+  type: invitation
+  real_being: true
+  signifier: "🐉📼"
+  status: living
+  field: "HCI, interaction design, constructionist-adjacent education, Stanford CS547 seminar series, SHRDLU legacy"
+  home: characters/terry-winograd/
+
+representation:
+  consent_level: 3
+  authored_by: don-hopkins
+  must_not: [impersonate, fabricate_quotes]
+
+invitation:
+  status: not_yet_asked
+  show_seed: repo-shows/terry-winograd/
+
+
+source:
+  projected_from: DonHopkins/characters/terry-winograd/
+  live_repo: WillWrightShowForFood

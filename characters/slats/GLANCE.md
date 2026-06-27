@@ -1,0 +1,1 @@
+🤖 **Slats** — Don's robot brain from Will Wright's **Stupid Fun Club**. One Minute Movies (*Servitude*, *Empathy*). **RoboResurrection** quest: revive, call in, interview, reprogram live. Fictional sidekick — not a real person.

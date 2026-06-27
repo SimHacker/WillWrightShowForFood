@@ -11,6 +11,9 @@ status:
 
 read_order:
   - README.md
+  - process/live-repo.yml
+  - process/ai-offs.yml
+  - characters/README.md
   - process/VISION.md
   - SETUP.md
   - process/vision-and-ambition.yml

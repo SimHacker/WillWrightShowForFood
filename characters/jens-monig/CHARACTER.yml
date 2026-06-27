@@ -1,0 +1,25 @@
+# Jens Mönig — INVITATION CHARACTER (public WWSFF portrayal)
+# NOT Jens Mönig. See ../schemas/guest-invitation-status.yml
+
+character:
+  name: "Jens Mönig"
+  type: invitation
+  real_being: true
+  signifier: "🧩"
+  status: living
+  field: "Visual/block programming languages; architect + lead programmer of Snap! (Build Your Own Blocks). Morphic.js. Research Expert at SAP; consultant at UC Berkeley."
+  home: characters/jens-monig/
+
+representation:
+  consent_level: 3
+  authored_by: don-hopkins
+  must_not: [impersonate, fabricate_quotes]
+
+invitation:
+  status: not_yet_asked
+  show_seed: repo-shows/jens-monig/
+
+
+source:
+  projected_from: DonHopkins/characters/jens-monig/
+  live_repo: WillWrightShowForFood

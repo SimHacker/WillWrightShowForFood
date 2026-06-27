@@ -5,8 +5,10 @@
 
 sync:
   direction: primarily one_way_export
+  live_repo: live-repo.yml
   source: ../DonHopkins/
   target: .
+  rule: "WWSFF is live; DonHopkins on hold for projected content — edit WWSFF, do not backfill source"
   reintegrate: "PRs/issues on this public repo → cherry-pick/review into DonHopkins"
 
 pipeline: [SELECT, FILTER, AUGMENT, EXPORT, SYNC]

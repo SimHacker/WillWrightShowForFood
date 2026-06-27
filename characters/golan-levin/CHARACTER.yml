@@ -1,0 +1,25 @@
+# Golan Levin — INVITATION CHARACTER (public WWSFF portrayal)
+# NOT Golan Levin. See ../schemas/guest-invitation-status.yml
+
+character:
+  name: "Golan Levin"
+  type: invitation
+  real_being: true
+  signifier: "🎛️"
+  status: living
+  field: "Interactive / computational media art, creative coding, gestural & audiovisual interfaces, generative systems, critical making, art-as-research education"
+  home: characters/golan-levin/
+
+representation:
+  consent_level: 3
+  authored_by: don-hopkins
+  must_not: [impersonate, fabricate_quotes]
+
+invitation:
+  status: not_yet_asked
+  show_seed: repo-shows/golan-levin/
+
+
+source:
+  projected_from: DonHopkins/characters/golan-levin/
+  live_repo: WillWrightShowForFood

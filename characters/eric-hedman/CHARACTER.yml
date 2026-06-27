@@ -1,0 +1,25 @@
+# Eric Hedman — INVITATION CHARACTER (public WWSFF portrayal)
+# NOT Eric Hedman. See ../schemas/guest-invitation-status.yml
+
+character:
+  name: "Eric Hedman"
+  type: invitation
+  real_being: true
+  signifier: "👤"
+  status: living
+  field: "Character animation — The Sims 1"
+  home: characters/eric-hedman/
+
+representation:
+  consent_level: 3
+  authored_by: don-hopkins
+  must_not: [impersonate, fabricate_quotes]
+
+invitation:
+  status: not_yet_asked
+  show_seed: repo-shows/eric-hedman/
+
+
+source:
+  projected_from: DonHopkins/characters/eric-hedman/
+  live_repo: WillWrightShowForFood

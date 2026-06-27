@@ -1,0 +1,25 @@
+# Alan Kay — INVITATION CHARACTER (public WWSFF portrayal)
+# NOT Alan Kay. See ../schemas/guest-invitation-status.yml
+
+character:
+  name: "Alan Kay"
+  type: invitation
+  real_being: true
+  signifier: "👤"
+  status: living
+  field: "Computer scientist — Smalltalk, Dynabook, constructionism"
+  home: characters/alan-kay/
+
+representation:
+  consent_level: 3
+  authored_by: don-hopkins
+  must_not: [impersonate, fabricate_quotes]
+
+invitation:
+  status: not_yet_asked
+  show_seed: repo-shows/alan-kay-microworld.yml
+
+
+source:
+  projected_from: DonHopkins/characters/alan-kay/
+  live_repo: WillWrightShowForFood

@@ -1,0 +1,1 @@
+👤 **Steve Wozniak** — Apple co-founder, creator of the Apple I and Apple II, and embodiment of the classic hacker ethos. A dream guest for the Repo Show to discuss open computing, 6502 architecture, the Disk II, and bridging the Apple II into the modern web via TypeScript emulators and live floppy-buffer hacking.

@@ -1,0 +1,1 @@
+👤 **Margaret Minsky** — Atari Cambridge / MIT Media Lab (force-feedback haptics); Marvin Minsky's daughter-in-law (Oliver Steele). Warm "Memory Lane" correspondence with Don (2019); Logo history thread (2020). Flagged Ken Kahn's Snap! AI blocks. Artifact pending: **White Board Graphs** memorabilia scan.

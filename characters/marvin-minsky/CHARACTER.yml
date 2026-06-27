@@ -1,0 +1,25 @@
+# Marvin Minsky — INVITATION CHARACTER (public WWSFF portrayal)
+# NOT Marvin Minsky. See ../schemas/guest-invitation-status.yml
+
+character:
+  name: "Marvin Minsky"
+  type: invitation
+  real_being: legacy
+  signifier: "🕯️"
+  status: deceased
+  field: "AI pioneer — Society of Mind, K-lines"
+  home: characters/marvin-minsky/
+
+representation:
+  consent_level: legacy_kline
+  authored_by: don-hopkins
+  must_not: [impersonate, fabricate_quotes]
+
+invitation:
+  status: not_yet_asked
+  show_seed: repo-shows/marvin-minsky/
+  note: "deceased — reverence; legacy only"
+
+source:
+  projected_from: DonHopkins/characters/marvin-minsky/
+  live_repo: WillWrightShowForFood

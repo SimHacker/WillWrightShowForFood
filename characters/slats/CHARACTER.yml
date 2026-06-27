@@ -1,0 +1,28 @@
+# Slats — fictional sidekick character (NOT a real person)
+
+character:
+  name: Slats
+  type: fictional_sidekick
+  real_being: false
+  signifier: "🤖"
+  status: fictional
+  field: "Stupid Fun Club robot brain — One Minute Movies; RoboResurrection quest"
+  home: characters/slats/
+
+representation:
+  note: "Beloved fictional robot Don programmed at Will Wright's Stupid Fun Club — character + tool, not a soul we pretend into being"
+  may: [portray_as_fictional, call_in_sidekick, reprogram_on_stream]
+  must_not: [claim_sentience, impersonate_real_person]
+
+quest:
+  show_segment: repo-shows/will-wright/slats-reincarnation.yml
+  tagline: "SLATS LIVES! The first RoboResurrection."
+  arc: "Read old code → revive → call-in sidekick → interview → reprogram → iterate"
+
+invitation:
+  status: n_a
+  note: "Not a human guest — quest goal on Will Wright kickoff show"
+
+see_also:
+  - ../repo-shows/will-wright/slats-reincarnation.yml
+  - ../characters/don-hopkins/career/stupid-fun-club.yml

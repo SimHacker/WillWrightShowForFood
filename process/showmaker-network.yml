@@ -87,6 +87,7 @@ competitions:
       - "Solution quality — taste, power, clarity, humor (how good was the result?)"
       - "Integration — merge back into the evolving organism via PR"
       - "Abstraction — reusable parts lifted into skills/ and packages/ for other organisms"
+    ai_offs_proof: "cursor-mirror session + Cursor spend export + thoughtful-commitment commits — see ai-offs.yml"
     cost_to_ship: |
       Report token usage and spending. We compare how efficiently or extravagantly you arrived
       at the answer — in addition to judging how good that answer was. Artisanal = zero tokens;
@@ -116,6 +117,8 @@ nesting:
 
 ties_to:
   - repo-show-format.yml
+  - ai-offs.yml
+  - rig-feedback.yml
   - ../repo-shows/INDEX.yml
   - ../repo-shows/REPO-SHOWS.yml
   - ../schemas/guest-invitation-status.yml

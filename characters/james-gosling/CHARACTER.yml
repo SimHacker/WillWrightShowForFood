@@ -1,0 +1,25 @@
+# James Gosling — INVITATION CHARACTER (public WWSFF portrayal)
+# NOT James Gosling. See ../schemas/guest-invitation-status.yml
+
+character:
+  name: "James Gosling"
+  type: invitation
+  real_being: true
+  signifier: "☕"
+  status: living
+  field: "Window systems (Andrew, NeWS/SunDew), Gosling/UniPress Emacs, Java;"
+  home: characters/james-gosling/
+
+representation:
+  consent_level: 3
+  authored_by: don-hopkins
+  must_not: [impersonate, fabricate_quotes]
+
+invitation:
+  status: not_yet_asked
+  show_seed: repo-shows/james-gosling/
+
+
+source:
+  projected_from: DonHopkins/characters/james-gosling/
+  live_repo: WillWrightShowForFood

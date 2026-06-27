@@ -1,0 +1,1 @@
+👤 **Ken Kahn** — creator of **ToonTalk** (a game-like visual programming world for kids) and the **eCraft2Learn AI blocks** for **Snap!** (speech recognition/synthesis, ML, pattern recognition — in the browser, kid-accessible). An all-around nice, interesting-to-talk-to guy.

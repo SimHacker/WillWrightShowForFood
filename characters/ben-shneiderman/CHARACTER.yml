@@ -1,0 +1,25 @@
+# Ben Shneiderman — INVITATION CHARACTER (public WWSFF portrayal)
+# NOT Ben Shneiderman. See ../schemas/guest-invitation-status.yml
+
+character:
+  name: "Ben Shneiderman"
+  type: invitation
+  real_being: true
+  signifier: "👤"
+  status: living
+  field: "HCI researcher — UMD HCIL, direct manipulation, embedded/highlighted hyperlinks"
+  home: characters/ben-shneiderman/
+
+representation:
+  consent_level: 3
+  authored_by: don-hopkins
+  must_not: [impersonate, fabricate_quotes]
+
+invitation:
+  status: not_yet_asked
+  show_seed: repo-shows/ben-shneiderman/
+
+
+source:
+  projected_from: DonHopkins/characters/ben-shneiderman/
+  live_repo: WillWrightShowForFood

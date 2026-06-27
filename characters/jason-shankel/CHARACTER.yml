@@ -1,0 +1,25 @@
+# Jason Shankel — INVITATION CHARACTER (public WWSFF portrayal)
+# NOT Jason Shankel. See ../schemas/guest-invitation-status.yml
+
+character:
+  name: "Jason Shankel"
+  type: invitation
+  real_being: true
+  signifier: "👤"
+  status: living
+  field: "Games + AI — Maxis / Stupid Fun Club alumnus; procedural/AI in games"
+  home: characters/jason-shankel/
+
+representation:
+  consent_level: 3
+  authored_by: don-hopkins
+  must_not: [impersonate, fabricate_quotes]
+
+invitation:
+  status: not_yet_asked
+  show_seed: repo-shows/jason-shankel/
+
+
+source:
+  projected_from: DonHopkins/characters/jason-shankel/
+  live_repo: WillWrightShowForFood

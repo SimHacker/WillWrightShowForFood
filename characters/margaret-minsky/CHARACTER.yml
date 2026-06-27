@@ -1,0 +1,25 @@
+# Margaret Minsky — INVITATION CHARACTER (public WWSFF portrayal)
+# NOT Margaret Minsky. See ../schemas/guest-invitation-status.yml
+
+character:
+  name: "Margaret Minsky"
+  type: invitation
+  real_being: true
+  signifier: "👤"
+  status: living
+  field: "Haptics / force-feedback; Atari Cambridge Research Lab; MIT Media Lab"
+  home: characters/margaret-minsky/
+
+representation:
+  consent_level: 3
+  authored_by: don-hopkins
+  must_not: [impersonate, fabricate_quotes]
+
+invitation:
+  status: not_yet_asked
+  show_seed: repo-shows/margaret-minsky/
+
+
+source:
+  projected_from: DonHopkins/characters/margaret-minsky/
+  live_repo: WillWrightShowForFood

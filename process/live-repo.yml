@@ -1,0 +1,42 @@
+# LIVE REPO — WillWrightShowForFood is the bud; DonHopkins source on hold
+
+meta:
+  id: live-repo
+  status: active
+  public_url: https://github.com/SimHacker/WillWrightShowForFood
+
+rule: |
+  Default workspace: SimHacker/WillWrightShowForFood. This is live — preparing for Will,
+  priming with correspondences, friends, show seeds, invitation characters. DonHopkins
+  private monorepo is authoritative archive but ON HOLD for anything already projected here.
+
+donhopkins:
+  role: private_source_archive
+  status: on_hold_when_projected
+  rule: |
+    If content has been exported or re-authored in WWSFF, edit WWSFF only.
+    Do not backfill DonHopkins to mirror WWSFF. One-way cream export when needed;
+    day-to-day work happens in the public bud.
+  sync_plan: DonHopkins/projects/micropolis-moollm/process/wwsff-export-sync.yml
+  manifest: ../MANIFEST.yml
+
+wwsff:
+  role: live_public_bud
+  priorities:
+    - "Will Wright kickoff — repo browsable without GitHub account"
+    - "Invitation characters for dream guests (characters/*/invitation.md)"
+    - "Show seeds + ShowMaker graph"
+    - "Skills harvest + packages abstraction"
+    - "Correspondence-derived content (filtered, public-safe)"
+  not_promised: "Everything in DonHopkins — only filtered, representation-ethics-safe projections"
+
+workflow:
+  edit_here: [repo-shows/, characters/, process/, skills/, packages/, README.md]
+  pull_from_donhopkins: "SELECT → FILTER → EXPORT per MANIFEST.yml — not continuous dual-edit"
+  prs: "Public PRs welcome; may cherry-pick back to DonHopkins later if needed"
+
+see_also:
+  - sync-with-donhopkins.yml
+  - vision-and-ambition.yml
+  - ../characters/INDEX.yml
+  - ../characters/README.md

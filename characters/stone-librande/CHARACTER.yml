@@ -1,0 +1,25 @@
+# Stone Librande — INVITATION CHARACTER (public WWSFF portrayal)
+# NOT Stone Librande. See ../schemas/guest-invitation-status.yml
+
+character:
+  name: "Stone Librande"
+  type: invitation
+  real_being: true
+  signifier: "👤"
+  status: living
+  field: "Game designer — one-page designs"
+  home: characters/stone-librande/
+
+representation:
+  consent_level: 3
+  authored_by: don-hopkins
+  must_not: [impersonate, fabricate_quotes]
+
+invitation:
+  status: not_yet_asked
+  show_seed: repo-shows/stone-librande/
+
+
+source:
+  projected_from: DonHopkins/characters/stone-librande/
+  live_repo: WillWrightShowForFood

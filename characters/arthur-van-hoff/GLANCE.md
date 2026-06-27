@@ -1,0 +1,5 @@
+🎷 **Arthur van Hoff** — Dutch programmer; great long-time friend of Don with many shared projects. At the **Turing Institute (Glasgow)** he built **GoodNeWS → HyperNeWS → HyperLook** (a NeWS/PostScript reimagining of HyperCard) and **PdB** (an object-oriented C-to-PostScript compiler). On the early **Java** team at Sun he wrote the Java compiler in Java and worked on the **AWT** and **HotJava** browser. Co-founded **Marimba** (Castanet + Bongo; Danny Goodman wrote the Bongo book). Later: TiVo (Strangeberry), **Flipboard** (CTO), Jaunt VR, Apple.
+
+HyperLook is the jewel for this project: PostScript for **code, graphics, AND data** ("the Axis of Eval"), HyperCard-style message delegation extended over the network (it front-ended SimCity, a cellular-automata machine, Lisp/Prolog), and revolutionary shaped windows (the button sticking out of the frame).
+
+Existing correspondence: `correspondence/arthur-van-hoff.yml` (HyperLook review 2018, IFC-vs-Bongo 2019). Proposed Repo Show guest — strongest as part of a **NeWS reunion** group show with James Gosling, David Rosenthal, Owen Densmore, and Duncan Mak. `contact: arthur.van.hoff@gmail.com`.

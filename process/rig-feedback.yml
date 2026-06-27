@@ -40,6 +40,9 @@ ai_rig:
     solution_quality: "How good was the result? Taste, power, clarity"
     merge: "PR back — integrate tissue into the evolving organism"
     abstract: "Lift reusable parts into skills/ and packages/ for other shows and repos"
+  ai_offs:
+    see: ai-offs.yml
+    proof: "cursor-mirror timeline + Cursor spend export + thoughtful-commitment (conscientious) commits"
 
 submit:
   issue: "https://github.com/SimHacker/WillWrightShowForFood/issues — label or title rig-feedback"

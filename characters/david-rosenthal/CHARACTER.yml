@@ -1,0 +1,25 @@
+# David S. H. Rosenthal — INVITATION CHARACTER (public WWSFF portrayal)
+# NOT David S. H. Rosenthal. See ../schemas/guest-invitation-status.yml
+
+character:
+  name: "David S. H. Rosenthal"
+  type: invitation
+  real_being: true
+  signifier: "🗄️"
+  status: living
+  field: "NeWS (with Gosling), X11 ICCCM + X security, Andrew (CMU), Nvidia #4, LOCKSS digital preservation (Stanford Libraries)"
+  home: characters/david-rosenthal/
+
+representation:
+  consent_level: 3
+  authored_by: don-hopkins
+  must_not: [impersonate, fabricate_quotes]
+
+invitation:
+  status: not_yet_asked
+  show_seed: repo-shows/david-rosenthal/
+
+
+source:
+  projected_from: DonHopkins/characters/david-rosenthal/
+  live_repo: WillWrightShowForFood

@@ -1,0 +1,25 @@
+# Steve Wozniak — INVITATION CHARACTER (public WWSFF portrayal)
+# NOT Steve Wozniak. See ../schemas/guest-invitation-status.yml
+
+character:
+  name: "Steve Wozniak"
+  type: invitation
+  real_being: true
+  signifier: "👤"
+  status: living
+  field: "Computer Engineer, Apple Co-founder, Creator of the Apple I and Apple II"
+  home: characters/steve-wozniak/
+
+representation:
+  consent_level: 3
+  authored_by: don-hopkins
+  must_not: [impersonate, fabricate_quotes]
+
+invitation:
+  status: not_yet_asked
+  show_seed: repo-shows/steve-wozniak/
+
+
+source:
+  projected_from: DonHopkins/characters/steve-wozniak/
+  live_repo: WillWrightShowForFood

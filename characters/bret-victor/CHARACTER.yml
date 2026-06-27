@@ -1,0 +1,25 @@
+# Bret Victor — INVITATION CHARACTER (public WWSFF portrayal)
+# NOT Bret Victor. See ../schemas/guest-invitation-status.yml
+
+character:
+  name: "Bret Victor"
+  type: invitation
+  real_being: true
+  signifier: "👤"
+  status: living
+  field: "Interface researcher — explorable explanations, Dynamicland"
+  home: characters/bret-victor/
+
+representation:
+  consent_level: 3
+  authored_by: don-hopkins
+  must_not: [impersonate, fabricate_quotes]
+
+invitation:
+  status: not_yet_asked
+  show_seed: repo-shows/bret-victor/
+
+
+source:
+  projected_from: DonHopkins/characters/bret-victor/
+  live_repo: WillWrightShowForFood

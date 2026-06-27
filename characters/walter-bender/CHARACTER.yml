@@ -1,0 +1,25 @@
+# Walter Bender — INVITATION CHARACTER (public WWSFF portrayal)
+# NOT Walter Bender. See ../schemas/guest-invitation-status.yml
+
+character:
+  name: "Walter Bender"
+  type: invitation
+  real_being: true
+  signifier: "👤"
+  status: living
+  field: "OLPC Stone Soup, open-sourcing SimCity, skill-creation show"
+  home: characters/walter-bender/
+
+representation:
+  consent_level: 3
+  authored_by: don-hopkins
+  must_not: [impersonate, fabricate_quotes]
+
+invitation:
+  status: not_yet_asked
+  show_seed: repo-shows/walter-bender-olpc.yml
+  note: "OLPC Stone Soup, open-sourcing SimCity, skill-creation show"
+
+source:
+  projected_from: DonHopkins/characters/walter-bender/
+  live_repo: WillWrightShowForFood

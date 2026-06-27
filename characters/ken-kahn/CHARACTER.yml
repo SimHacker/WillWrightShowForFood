@@ -1,0 +1,25 @@
+# Ken Kahn — INVITATION CHARACTER (public WWSFF portrayal)
+# NOT Ken Kahn. See ../schemas/guest-invitation-status.yml
+
+character:
+  name: "Ken Kahn"
+  type: invitation
+  real_being: true
+  signifier: "👤"
+  status: living
+  field: "AI + visual programming for kids — ToonTalk; AI blocks for Snap! (eCraft2Learn)"
+  home: characters/ken-kahn/
+
+representation:
+  consent_level: 3
+  authored_by: don-hopkins
+  must_not: [impersonate, fabricate_quotes]
+
+invitation:
+  status: not_yet_asked
+  show_seed: repo-shows/ken-kahn/
+
+
+source:
+  projected_from: DonHopkins/characters/ken-kahn/
+  live_repo: WillWrightShowForFood

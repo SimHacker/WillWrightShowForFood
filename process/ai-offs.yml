@@ -1,0 +1,56 @@
+# AI-OFFS — rig competitions, spend proof, thought process in git
+# Facade: rig-feedback.yml + repo-show-format.yml scoreboard
+
+meta:
+  id: ai-offs
+  status: seed
+  tagline: "Declare class, report spend, live-code your thinking into git"
+
+what: |
+  AI-offs are declared-class competitions — artisanal vs budget bull ride vs orchestrated.
+  Score cost-to-ship AND solution quality. Prove it with data and commits, not vibes alone.
+
+cursor_mirror:
+  repo: https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror
+  role: |
+    Introspect Cursor sessions — timeline, thinking blocks, tool calls, model routing.
+    Download your timestamped Cursor spending spreadsheet; analyze tokens and models per session.
+  commands:
+    - "python3 skills/cursor-mirror/scripts/cursor_mirror.py timeline <composer>"
+    - "python3 skills/cursor-mirror/scripts/cursor_mirror.py thinking <composer>"
+    - "python3 skills/cursor-mirror/scripts/cursor_mirror.py tools <composer>"
+  spend_proof: |
+    Export Cursor usage/spending (timestamped spreadsheet or billing export). Pair with
+    cursor-mirror session IDs for ai-offs scoreboard — efficiency vs extravagance within class.
+
+thoughtful_commits:
+  also_called: [conscientious_commits]
+  skill: https://github.com/SimHacker/moollm/tree/main/skills/thoughtful-commitment
+  idea: |
+    Live-code thought process into git commits — COMMIT with cursor-mirror-backed reasoning.
+    Share WHY not just WHAT. Session linkage so others can archaeology your ai-off ride.
+  workflow:
+    - "cursor-mirror timeline / thinking for the session"
+    - "thoughtful-commitment COMMIT — rich message + link to thinking blocks"
+    - "PR merges tissue + provenance back into the organism"
+  moollm_spread: |
+    MOOLLM spreads virally as enabling substrate — cursor-mirror + thoughtful-commitment +
+    cauldron SCOOP + skills/ harvest. Floor wax AND dessert topping. (It's a dessert topping.
+    No — it's a floor wax!)
+
+scoreboard:
+  report:
+    - "Cursor spend export + token totals"
+    - "cursor-mirror session/composer ID"
+    - "thoughtful-commitment commit SHAs"
+    - "Rig class declared (artisanal / budget / orchestrated)"
+  judge:
+    - "Cost to ship"
+    - "Solution quality"
+    - "Integration (PR merge)"
+    - "Abstraction (skills/ + packages/)"
+
+see_also:
+  - rig-feedback.yml
+  - showmaker-network.yml
+  - ../skills/README.md

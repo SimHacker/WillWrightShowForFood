@@ -1,0 +1,1 @@
+👤 **Brad A. Myers** — CMU HCI professor; Garnet, Peridot, C32; *All the Widgets*; VPL taxonomy; programming by demonstration. Don worked in his lab (~1992–93). Warm email contact (2023); show proposed, consent pending.

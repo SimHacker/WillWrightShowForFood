@@ -1,0 +1,25 @@
+# Brian Harvey — INVITATION CHARACTER (public WWSFF portrayal)
+# NOT Brian Harvey. See ../schemas/guest-invitation-status.yml
+
+character:
+  name: "Brian Harvey"
+  type: invitation
+  real_being: true
+  signifier: "🐢"
+  status: living
+  field: "Computer science education; UC Berkeley (Teaching Professor Emeritus). Logo, Scheme, Snap!. Author; co-creator of The Beauty and Joy of Computing."
+  home: characters/brian-harvey/
+
+representation:
+  consent_level: 3
+  authored_by: don-hopkins
+  must_not: [impersonate, fabricate_quotes]
+
+invitation:
+  status: not_yet_asked
+  show_seed: repo-shows/brian-harvey/
+
+
+source:
+  projected_from: DonHopkins/characters/brian-harvey/
+  live_repo: WillWrightShowForFood

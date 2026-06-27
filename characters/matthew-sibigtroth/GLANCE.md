@@ -1,0 +1,1 @@
+👤 **Matthew Sibigtroth** — Don's friend + colleague from Will Wright's **Stupid Fun Club**; built the **original StoryMaker Flash app** (+ other prototypes for Will), later speech/AI prototyping at **Google X**. Brilliant, articulate, playful. Deserves huge credit — definitely invite.
