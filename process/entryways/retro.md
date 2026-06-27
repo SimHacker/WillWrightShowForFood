@@ -13,7 +13,7 @@ Retrocomputing Drive challenges are platform instances of one umbrella spec. Lar
 | # | Stop | Why |
 |---|------|-----|
 | 1 | [**Retro umbrella**](../challenges/RETROCOMPUTING.md) | One spec — your languages, tools, emulator; SETUP DNA required |
-| 2 | [**Apple ][ drive**](../challenges/apple2-drive.yml) | INTEGER BASIC if you dare — apple2js, Emularity stack |
+| 2 | [**Apple \]\[ drive**](../challenges/apple2-drive.yml) | INTEGER BASIC if you dare — apple2js, Emularity stack |
 | 3 | [**PDP-10 MACLISP**](../challenges/pdp10-maclisp-drive.yml) | Boot ITS from clean machine — AI Lab on laptop |
 | 4 | [**Lisp Machine hack-off**](../challenges/lisp-machine-hack-off.yml) | Symbolics vs LMI lane — battle continues in emulator |
 | 5 | [**Lars Brinkhoff**](../../characters/lars-brinkhoff/CARD.yml) | ITS restoration lead — make it so on air |

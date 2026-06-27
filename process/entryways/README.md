@@ -21,7 +21,7 @@ Pick a **doorway** (ordered playlist) or leap **sideways** on a trail when one t
 | 5 | [**Bot — browsing HTTP agent**](for-bots.md) | FOR-BOTS.md → GLANCE → pick one ENTRYWAY |
 | 6 | [**Hacker — clone, verify**](hacker.md) | `pnpm verify` — then INDEX.yml tells you which yaml matters |
 | 7 | [**AI — orchestration, rigs**](ai-coder.md) | Declare your rig — stick shift means every model change is a commit |
-| 8 | [**Retro — PDP-10, ][, LispM**](retro.md) | Same spec CARD — ship SETUP.md so others boot without you |
+| 8 | [**Retro — PDP-10, \]\[, LispM**](retro.md) | Same spec CARD — ship SETUP.md so others boot without you |
 | 9 | [**Educator — microworlds**](educator.md) | Will's 1996 words, then Papert/Kay — grade with Homefun |
 | 10 | [**Archivist / historian**](archivist.md) | Provenance policy first — then primary sources |
 | 11 | [**Producer — your Repo Show**](producer.md) | repo-show SKILL → plant show → PR ShowMaker network |
