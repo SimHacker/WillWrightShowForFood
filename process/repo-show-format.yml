@@ -48,12 +48,16 @@ rig_spectrum:
     vibe: "AI-forward flow-state — declare class; compete on taste and power"
     orchestrated: "Full agent stack — tell us how (see ai_rig_feedback)"
     budget_bull_rider: "Tight token budget; wrangles smaller/faster models through hallucinations and retries to a better solution — declare tier; show the ride"
+    stick_shift_switcher: "Multi-model routing — shift efficiently through the task like stick on a cliff road; proof in Cursor spend log"
   token_budget:
     declare: "Model tier + monthly token budget — compare fair only within class"
     report: "Token usage + spend + wall-clock — efficiency vs extravagance scoreboard"
     bull_ride: "Skill like staying on a bull — thrash through bad outputs, recover, ship anyway; have fun"
     split_strategy: "Premium model for planning/architecture; budget model (e.g. Composer 2.5 Fast) for knocking out designs — declare both"
     recognition: "Budget-tier wranglers who beat premium-tier slop on taste get celebrated — document how"
+    stick_shift: |
+      Model switching as stick shift on a winding ocean cliff — read the road, shift at the right
+      moment, arrive with taste and tokens to spare. Cursor spend log timestamps every gear change.
   cost_to_ship_scoreboard:
     axes: [tokens, spend_dollars, wall_clock, solution_quality, integration, abstraction]
     joke_reframed: "Compare how efficiently or extravagantly you arrived — not just how good the solution was"
@@ -66,6 +70,7 @@ rig_spectrum:
       - "Tools and IDEs (Cursor, Claude Code, Copilot, custom, …)"
       - "Models — which, when, why (declare your tier AND token budget)"
       - "Budget bull ride — retries, hallucination recovery, how you wrangled cheap/fast models"
+      - "Stick shift — model-switch timeline; which model when; smooth vs grinding gears (Cursor spend log)"
       - "How you use it — prompts, agents, rules, hooks, workflows"
       - "MCP servers — which, wired how"
       - "Skills — Anthropic Agent Skills, MOOLLM skills, your own CARD/SKILL.md"
@@ -91,6 +96,7 @@ rig_spectrum:
     - "Taste — who ships the most elegant solution? (within declared class + model tier)"
     - "Power — who implements the wildest idea in the time box?"
     - "Budget bull ride — tight tokens, small model, better output; show hallucinations and retries"
+    - "Stick shift — efficient model switching through the task; Cursor spend log + cursor-mirror proof"
     - "Man vs machine — artisanal vs vibe vs orchestrated vs budget-tier (declare; don't exclude — it's a game)"
     - "Dance-off — show your workflow live; audience votes with thumbs and PRs"
   declare_not_exclude: |

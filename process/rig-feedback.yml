@@ -24,6 +24,7 @@ ai_rig:
     tools: "IDE, agent, CLI — Cursor, Claude Code, Copilot, custom, …"
     models: "Which models, when, why — declare tier AND token budget"
     budget_bull_ride: "How you wrangled cheap/fast models — hallucinations, retries, recoveries, wins"
+    stick_shift: "Model-switch timeline — which model when; export Cursor spend log"
     token_and_spend:
       report: "Tokens used, dollars spent, wall-clock — efficiency vs extravagance"
       compare: "We score cost-to-ship AND solution quality; declare class for fair comparison"

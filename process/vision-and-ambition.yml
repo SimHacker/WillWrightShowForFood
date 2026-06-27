@@ -72,6 +72,11 @@ rig_culture:
     metaphor: "Like staying on a bull — thrash through hallucinations and retries; have fun; show the ride"
     recognition: "Real skill — compare within budget tier; can beat premium-tier slop on taste"
     split_rig: "Premium planning + budget execution (e.g. Composer 2.5 Fast) is a valid declared strategy"
+  stick_shift_switchers:
+    definition: "Multi-model routing — shift models efficiently through phases of the work"
+    metaphor: "Stick shift along a winding ocean cliff — read the road, shift at the right moment"
+    proof: "Timestamped model switches in Cursor spend log; cursor-mirror timeline validates smooth shifts"
+    recognition: "Elegant gear changes + great output beats one-model drag-race waste"
   history:
     consciencious_objectors:
       coinage: "Don Hopkins coined consciencious objectors at a meetup with David Ungar and Kaleida colleagues (ScriptX object-system era)"

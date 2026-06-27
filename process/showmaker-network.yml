@@ -64,8 +64,17 @@ your_show:
         Great to report token usage and spending — we compare how efficiently or extravagantly
         you arrived at a solution (err, measuring dick sizes — sorry, cost-to-ship metrics).
         Declare class + report numbers; compare fair within tier.
-  no_gatekeeping: "All rig classes welcome — declare honestly (rig + model tier + token budget). Extra respect for artisanal hand programming AND budget-tier bull riders."
-  share_your_rig: "AI users: tools, models, MCP, skills, repos, moollm wiring, contexts AND token/spend totals — issue/PR rig-feedback"
+      stick_shift_model_switching:
+        also_called: [model_clutch, stick_shift_rig]
+        metaphor: |
+          Driving stick shift along a winding ocean cliff — read the road, shift models at the
+          right moment, don't grind gears or ride the clutch. Efficient multi-model routing is skill.
+        proof: |
+          All of it shows up in the Cursor spend log — timestamped model switches per phase.
+          Export the spreadsheet; pair with cursor-mirror timeline. We score smooth shifts vs stalling.
+        vs_bull_ride: "Bull ride = wrangle one tier through chaos; stick shift = orchestrate many tiers cleanly"
+  no_gatekeeping: "All rig classes welcome — declare honestly. Extra respect for artisanal programmers, budget bull riders, AND stick-shift model switchers."
+  share_your_rig: "AI users: tools, models, MCP, skills, repos, moollm wiring, contexts AND token/spend totals + model-switch timeline — issue/PR rig-feedback"
 
 publication:
   vision: vision-and-ambition.yml
@@ -96,6 +105,11 @@ competitions:
   budget_bull_ride: |
     Tight token budget + small/fast model wrangled to a better solution = bull-ride skill.
     Hallucinations, retries, recoveries — show the ride; audience respects the wrangling.
+  stick_shift: |
+    Stick shift on a winding ocean cliff — switch models efficiently through the curves.
+    Premium for the hairpin, budget for the straightaway, artisanal for the final mile.
+    Proof lives in the Cursor spend log (timestamped shifts); cursor-mirror shows whether you
+    shifted smooth or ground gears. Declare multi-model routing; compete on elegance of shifts.
   man_vs_machine: "Delightful adversarial play — not anti-AI, not anti-hand, not anti-budget; pro-declaration"
   breed_winners: "Merge technique DNA from winning branches — horizontal gene transfer via git"
 

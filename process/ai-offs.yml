@@ -7,8 +7,13 @@ meta:
   tagline: "Declare class, report spend, live-code your thinking into git"
 
 what: |
-  AI-offs are declared-class competitions — artisanal vs budget bull ride vs orchestrated.
-  Score cost-to-ship AND solution quality. Prove it with data and commits, not vibes alone.
+  AI-offs are declared-class competitions — artisanal vs budget bull ride vs stick-shift
+  model switching vs orchestrated. Score cost-to-ship AND solution quality. Prove with
+  Cursor spend log + cursor-mirror + thoughtful commits.
+
+rig_classes:
+  budget_bull_ride: "One tier, tight budget, wrangle through chaos"
+  stick_shift: "Multi-model — shift efficiently; cliff-road metaphor; spend log is the tachometer"
 
 cursor_mirror:
   repo: https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror
@@ -22,6 +27,7 @@ cursor_mirror:
   spend_proof: |
     Export Cursor usage/spending (timestamped spreadsheet or billing export). Pair with
     cursor-mirror session IDs for ai-offs scoreboard — efficiency vs extravagance within class.
+    Stick-shift competitions: the spend log shows every model switch — smooth shifts vs grinding gears.
 
 thoughtful_commits:
   also_called: [conscientious_commits]
@@ -43,7 +49,11 @@ scoreboard:
     - "Cursor spend export + token totals"
     - "cursor-mirror session/composer ID"
     - "thoughtful-commitment commit SHAs"
-    - "Rig class declared (artisanal / budget / orchestrated)"
+    - "Rig class declared (artisanal / budget bull ride / stick shift / orchestrated)"
+  stick_shift_judging:
+    smooth: "Right model for the curve — planning vs implementation vs polish"
+    proof: "Cursor spend log timestamps + cursor-mirror timeline alignment"
+    fail: "Premium model for yaml formatting — that's riding the clutch"
   judge:
     - "Cost to ship"
     - "Solution quality"
