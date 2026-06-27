@@ -61,7 +61,7 @@ without your consent. **Accepted, delayed, declined, or no reply — all honored
 
 When you're ready, browse the repo. We'll find a time.
 
-— Don Hopkins *(the User Interface Flower Child)* 🌀
+— Don Hopkins *(the User Interface Flower Child)* 🌸🌼🌻🌺🌷💐🌈✨🌀🍄🦋☮️💫🌿🪷🌞
 
-*P.S. — So you have a Repo to Show us? Now you do!*
+*P.S. — So you have a Repo to Show us? Now you do!* 🌻✨🌈🍄☮️🦋💐🌀🌸
 
