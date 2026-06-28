@@ -27,9 +27,9 @@ The **original EA promo photo**: Will Wright holding a tiny Sim in his palm.
 
 Don Hopkins's **photoshop**: the tiny Sim picking Will's nose.
 
-![Will Wright pretending to eat a tiny Sim — Don Hopkins photoshop](will-wright-eating-sim.png)
+![Will Wright eating a tiny Sim — Don Hopkins photoshop](will-wright-eating-sim.png)
 
-And the payoff — another Don **photoshop**: Will eating the Sim.
+And the payoff — another Don **photoshop**: Will eating the Sim. (Not *pretending* — eating.)
 
 ## The Sims — development art & tools
 
