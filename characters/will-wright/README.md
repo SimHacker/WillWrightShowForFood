@@ -17,6 +17,8 @@ and we do not speak as him without consent.
 | **Suggested sequence** | [`guest-will playlist`](../../process/entryways/guest-will.md) |
 | **Trading card / abilities** | [`CARD.md`](CARD.md) · [`CARD.yml`](CARD.yml) |
 | **Photos & media** (SimCity/Sims history, BattleBots) | [`media/`](media/) |
+| **Russian Space Junk** (Soviet spaceflight hardware, photos by Don) | [`media/russian-space-junk.md`](media/russian-space-junk.md) |
+| **Artwork** (mixed-media relief constructions) | [`media/artwork.md`](media/artwork.md) |
 | **1996 Stanford talk** (centerpiece) | [source bundle](../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/) · [YouTube](https://www.youtube.com/watch?v=nsxoZXaYJSk) |
 | **Yaml girder** | [`CHARACTER.yml`](CHARACTER.yml) |
 

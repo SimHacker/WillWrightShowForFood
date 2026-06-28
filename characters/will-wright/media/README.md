@@ -17,16 +17,19 @@ Nintendo.
 A box-cover mockup from when The Sims was still **"Home Tactics: The Experimental Domestic
 Simulator"** (TDS) — one of its working names before launch.
 
-## The Sims — promo
+## The Sims — promo (a sequence)
 
-![Will Wright holding a tiny Sim in his palm](will-wright-holding-sim.png)
+![Will Wright holding a tiny Sim in his palm — original EA promo photo](will-wright-holding-sim.png)
 
-![Will Wright picking up a tiny Sim](will-wright-picking-up-sim.png)
+The **original EA promo photo**: Will Wright holding a tiny Sim in his palm.
 
-![Will Wright pretending to eat a tiny Sim](will-wright-eating-sim.png)
+![A tiny Sim picking Will Wright's nose — Don Hopkins photoshop](sim-picking-wills-nose.png)
 
-Promo photos: Will Wright with a tiny Sim — holding, picking up, and (of course) pretending to eat
-it.
+Don Hopkins's **photoshop**: the tiny Sim picking Will's nose.
+
+![Will Wright pretending to eat a tiny Sim — Don Hopkins photoshop](will-wright-eating-sim.png)
+
+And the payoff — another Don **photoshop**: Will eating the Sim.
 
 ## The Sims — development art & tools
 
@@ -64,6 +67,14 @@ machines. (Will competed in BattleBots, famously with his daughter Cassidy and t
 ![BattleBots LA — a robot wheel and tire](battlebots-la-7-wheel.png)
 
 ![BattleBots LA — the radio control transmitter](battlebots-la-8-controller.png)
+
+## More galleries
+
+- [**Russian Space Junk**](russian-space-junk.md) — Will's collection of real Soviet/Russian
+  spaceflight hardware (Globus IMP navigation globes, Cyrillic control panels, hand controllers,
+  hatch, ejection seat). Photos by Don Hopkins.
+- [**Artwork**](artwork.md) — Will's mixed-media relief constructions: an evolution/systems piece,
+  a cell-division piece, and contour terrain/city maps.
 
 ---
 
