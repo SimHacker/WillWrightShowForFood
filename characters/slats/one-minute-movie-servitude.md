@@ -4,7 +4,7 @@
 The transcript below is the video's complete YouTube auto-caption track (the whole 1:16 film),
 lightly punctuated for readability — the auto-captions carry no speaker labels.*
 
-![Servitude title-card master — Minute Movies Productions, Inc. / 1MMs / "Servitude" :60 / Series Created by Paris Barclay / Executive Producers Paris Barclay, John Wells / RIOT / Titled Master 08/06/03](one-minute-movie-servitude-titlecard.png)
+![Servitude title-card master — Minute Movies Productions, Inc. / 1MMs / "Servitude" :60 / Series Created by Paris Barclay / Executive Producers Paris Barclay, John Wells / RIOT / Titled Master 08/06/03](one-minute-movie-servitude-titlecard.jpg)
 
 ## Metadata
 

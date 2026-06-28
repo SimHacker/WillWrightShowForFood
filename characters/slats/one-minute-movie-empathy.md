@@ -4,7 +4,7 @@
 auto-caption track (the whole 1:17 film), lightly punctuated for readability — the auto-captions
 carry no speaker labels.*
 
-![Empathy title-card master — Minute Movies Productions, Inc. / 1MMs / "Empathy" :60 / Series Created by Paris Barclay / Executive Producers Paris Barclay, John Wells / RIOT / Titled Master 08/06/03](one-minute-movie-empathy-titlecard.png)
+![Empathy title-card master — Minute Movies Productions, Inc. / 1MMs / "Empathy" :60 / Series Created by Paris Barclay / Executive Producers Paris Barclay, John Wells / RIOT / Titled Master 08/06/03](one-minute-movie-empathy-titlecard.jpg)
 
 ## Metadata
 

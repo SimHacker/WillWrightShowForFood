@@ -46,8 +46,8 @@ media:
     - { file: stupid-fun-club-seal-matte.png, caption: "Stupid Fun Club globe seal (matte)" }
     - { file: stupid-fun-club-seal-gloss.png, caption: "Stupid Fun Club globe seal (glossy)" }
   films:
-    - { file: one-minute-movie-empathy-titlecard.png, caption: "Empathy — 1MMs title-card master" }
-    - { file: one-minute-movie-servitude-titlecard.png, caption: "Servitude — 1MMs title-card master" }
+    - { file: one-minute-movie-empathy-titlecard.jpg, caption: "Empathy — 1MMs title-card master" }
+    - { file: one-minute-movie-servitude-titlecard.jpg, caption: "Servitude — 1MMs title-card master" }
   gallery: photos.md
 
 see_also:
