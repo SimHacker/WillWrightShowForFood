@@ -50,6 +50,27 @@ through the shaded windows. *(These photos were taken in Berkeley, not at the Oa
 
 ![Inside the FMC Motorcoach — galley and side door](fmc-motorcoach-interior-galley.png)
 
+## The Oakland shoot (One Minute Movies)
+
+The actual hidden-camera shoots happened in **Oakland**, with the FMC Motorcoach as the **mobile
+control room** parked across the street.
+
+![Will Wright operating Slats from a laptop in the back of the FMC Motorcoach during the Oakland shoot, with a colleague and a cameraman](slats-oakland-fmc-control-room.png)
+
+Will Wright running the rig — the "man behind the curtain" — from the back of the FMC Motorcoach
+during the Oakland shoot.
+
+![A cameraman films Slats on location in Oakland](slats-oakland-location-filming.png)
+
+![The One Minute Movies production crew posing by the white camera van](slats-oakland-crew-group.png)
+
+The production crew on the Oakland shoot.
+
+![Setting up Slats the robot waiter inside the Oakland restaurant, with the camera crew and diners at a table](slats-oakland-restaurant-setup.png)
+
+Setting up Slats the robot waiter inside the **BBQ-and-pies family restaurant in Oakland** for
+*Servitude* ("Restaurant").
+
 ## Setting up at the Stupid Fun Club (Emeryville)
 
 ![Will Wright and Slats setting up for the robot-waiter shoot at the Stupid Fun Club in Emeryville, with a cameraman](slats-sfc-setup-robot-waiter.png)

@@ -88,6 +88,17 @@ the same trick evolution used to put a world inside a cell.
 > the shortcuts: direct fast paths and mutual schema recognition between compatible games — the way
 > symbionts, over time, evolve dedicated channels to the partners they trade with most.
 
+## Kindred vision — Lem's Trurl, building worlds in boxes
+
+Stanisław Lem got here first, in fiction. In a passage of *The Cyberiad* (left out of the English
+translation), the constructor **Trurl** tries to build happy worlds — first whole cultures, then a
+civilization in a small box, then **hundreds of miniature worlds on microscope slides** he has to
+watch through a lens. The slide-worlds even achieve **inter-slide travel** (spokes between
+organelles!), and eventually Trurl builds a computer to do the research, which instead **expands
+itself** and spawns sub-Trurls. Microworlds in boxes, traffic between them, a self-replicating
+medium — the same shapes, told as a cautionary fable. (Don's summary of the untranslated passage:
+[HN](https://news.ycombinator.com/item?id=12634472).)
+
 ---
 
 See also: [`character-endosymbiosis.yml`](character-endosymbiosis.yml) ·
