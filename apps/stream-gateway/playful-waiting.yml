@@ -1,0 +1,74 @@
+# playful-waiting — entertain (and empower) while Cursor is thinking
+# Part of: SPEC.yml  |  "Dead air is a design failure." Latency becomes PLAY.
+# The game platform isn't decoration — it literally comes into PLAY as the overlay.
+
+meta:
+  id: playful-waiting
+  status: spec
+  one_liner: "While Cursor grinds, the audience and host EXPLORE the brain stream, play, and dogfood the live app — no dead air, ever."
+  principle: "Conscientiously design the wait. The interface should be FUN: exploring, analyzing, visualizing, chatting, composing, and playing the very thing we're building."
+
+# --- WHY -----------------------------------------------------------------
+why: |
+  LLM turns have latency. Passive 'spinner' time is wasted attention and lost donations.
+  Turn the wait into the most engaging part: a playground over the brain stream + the live
+  game platform itself. The overlay IS a Micropolis-GUI app, so 'waiting' = playing in it.
+
+# --- ACTIVITIES (always something to do) ----------------------------------
+activities:
+  explore_analyze_visualize:
+    basis: "Shneiderman's Visual Information-Seeking Mantra: OVERVIEW first, ZOOM & FILTER, then DETAILS-ON-DEMAND."
+    on: "the brain stream + our derived DB (cursor-tap.yml#our_derived_db)"
+    views:
+      - "Tree outliner (overlay-viewer.yml) — the spine"
+      - "Timeline (events over time; spend over time; tool-call rhythm)"
+      - "Cost ticker / spend sparkline (spend_tracking) — donation nudge"
+      - "Tool histogram, model-shift ribbon, file-touch heatmap"
+      - "Search + dynamic filters (Shneiderman dynamic queries) → importance zoom"
+  converse:
+    - "Chat ABOUT the brain stream — ask the derived DB questions ('what did it edit?', 'why that tool?')."
+    - "Audience Q&A routed from Twitch/YouTube chat into the overlay."
+  compose:
+    - "Draft/queue the NEXT prompt collaboratively while the current turn runs (prompt composer panel)."
+    - "Save prompt snippets to a shelf (bubble-wrangler.yml shelves)."
+  play_the_platform:
+    note: "The overlay runs the real Micropolis GUI — so waiting = playing the game/city/home and the Bubble Wrangler itself (bubble-wrangler.yml: bouncy windows, piecraft)."
+    examples: ["mess with Micropolis", "rearrange/throw windows", "build with piecraft", "mini-games keyed to stream events"]
+
+# --- DOGFOODING THE LIVE APP (eat our own dogfood, on air) ----------------
+dogfooding:
+  what: "Play AND debug the live-running stream-gateway app we're developing, with hot loading — on stream."
+  hot_reload_problem:
+    issue: "Cursor editing files repeatedly triggers hot reloads — yanking the running app out from under you mid-play/mid-read. Man vs machine fighting over the same app."
+    principle: "MAN-MACHINE NON-COMPETITION — the human's running session is sacred; the agent's edits must not interrupt it without consent."
+  controls:
+    push_to_reload:
+      default: true
+      what: "Hot reload is HELD. Edits accumulate; a 'Reload available (N changes) ▶' affordance lets the HUMAN reload at a safe breakpoint."
+      why: "Predictable, like the overlay's no-auto-scroll rule — the app never reloads under you unbidden."
+    manual_always: "Option: never auto-reload at all; human reloads on demand for max control."
+    safe_breakpoints: "Mark points where reload is safe; optionally auto-reload only there."
+    state_preservation: "On reload, preserve view state / read-state / open windows (HMR state, or rehydrate from derived DB) so play isn't lost."
+    visual_cue: "Show pending-change count + what changed (which files) before reload — informed consent."
+  ties: "Same family as overlay-viewer prime_directive: STABLE, user-controlled, never jerk the user."
+
+# --- GAMES AS OVERLAY -----------------------------------------------------
+games_overlay:
+  idea: "Game platform as overlay literally comes into PLAY — segments, mini-games, and the city/home sim run over/around the brain stream."
+  hooks: "Stream events drive game events (a tool_call spawns something; a commit triggers a flourish; cost milestones unlock bits)."
+  audience: "Interactive for the companion-app / Twitch-extension viewers (SPEC.yml#delivery_surfaces); ambient for OBS-baked viewers."
+
+build_phases:
+  - { id: a, ship: "Spinner → live timeline + cost ticker (overview)", cost: zero }
+  - { id: b, ship: "Dynamic filters + search over derived DB (zoom/filter/details)", cost: zero }
+  - { id: c, ship: "Prompt composer + chat-about-stream", cost: zero }
+  - { id: d, ship: "push-to-reload hot-load control (dogfooding)", cost: zero }
+  - { id: e, ship: "game-overlay hooks (stream events → game events)", cost: zero }
+
+ties_to:
+  - SPEC.yml
+  - overlay-viewer.yml
+  - bubble-wrangler.yml
+  - cursor-tap.yml
+  - ../../process/brain-stream.yml
+  - ../../process/manual-transmission.yml

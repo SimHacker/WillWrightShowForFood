@@ -1,0 +1,189 @@
+# cursor-tap — intercept the Cursor prompt / thinking / response stream
+# Part of: SPEC.yml  |  Implemented as a cursor-mirror extension (watch --live)
+# cursor-mirror already reads every store batch-mode; this adds the LIVE tail.
+
+meta:
+  id: cursor-tap
+  status: spec
+  home_skill: SimHacker/moollm/skills/cursor-mirror
+  builds_on: "cursor-mirror designs/IMPROVEMENT-MAP.md#R5 (Live Daemon / Watch Mode — designed, not built)"
+  goal: "Emit normalized brain events the instant Cursor produces them, with privacy redaction, onto the stream-gateway bus."
+
+# --- WHERE THE DATA LIVES (already reverse-engineered by cursor-mirror) ----
+# Two tiers: a cheap plaintext tail (ship today) and the rich structured DB.
+sources:
+  tier_a_transcript_tail:
+    why: "Easiest, zero-risk, real-time. Ship phase 0 on this alone."
+    path: "~/.cursor/projects/<workspace-dashed>/agent-transcripts/<composer-uuid>.{jsonl,txt}"
+    note: "Updated AS YOU CHAT. JSONL = one structured event per line (newer); .txt = plaintext blocks."
+    method: "tail -f semantics: seek to EOF, poll size/mtime, parse appended lines."
+    gives: [user_prompt, assistant_text, thinking_blocks, tool_call_markers, tool_result_blocks]
+    limits: "No token/cost numbers; thinking may be summarized depending on Cursor version."
+  tier_b_state_vscdb:
+    why: "Rich + authoritative: bubbles, tool args/results, context assembly, spend."
+    global_db: "~/Library/Application Support/Cursor/User/globalStorage/state.vscdb"
+    workspace_db: "~/Library/Application Support/Cursor/User/workspaceStorage/<hash>/state.vscdb"
+    keys:
+      bubbles: "cursorDiskKV  bubbleId:<composerId>:<messageId>"
+      tools:   "cursorDiskKV  agentKv:<composerId>:<toolCallId>"
+      context: "cursorDiskKV  messageRequestContext:<composerId>:<messageId>"
+    method: "Poll for new keys since last-seen rowid/max-key; SQLite WAL read-only (do NOT lock; Cursor owns the writer)."
+    gives: [prompt, thinking, tool_call(args), tool_result, model, spend(tokens/cost), context_sources]
+    caution: "~9GB DB. Query by composerId + a high-water mark; never full scans on the hot path."
+  tier_c_cursorlens_proxy:
+    why: "Optional token/cost firehose if you want exact spend live."
+    what: "Network proxy in front of the model endpoint (see cursor-mirror HAMEDMP-CURSORLENS reference)."
+    status: optional
+
+# --- SQLITE CROSS-REFERENCE (the transcript is NOT the whole story) --------
+# cursor-mirror's universal model (reference/universal/CURSOR-SQLITE-MODEL.yml,
+# assembled from ~25 sources) is fluent in Cursor's file formats/schemas. Use it:
+# the transcript .txt is the real-time spine, but MUCH more lives in SQLite.
+sqlite_cross_reference:
+  why: |
+    Known cursor-mirror issues we exploit, not fight:
+      - I8: Cursor's own transcript EXPORT is buggy (summaries, not full) since Jan 2026;
+            the local agent-transcripts/<uuid>.txt is the real-time truth — tail THAT.
+      - TOOL-ARGS-MISSING: tool ARGS are often absent from the transcript; they live in
+            SQLite (toolFormerData / agentKv). Parse the tool-call ID from the transcript,
+            then look it up in state.vscdb to enrich the event.
+      - I2: a cross-store MERGED TIMELINE interleaves bubbles (cursorDiskKV), transcript
+            sections, and AI code hashes. We build that.
+  model: "SimHacker/moollm/skills/cursor-mirror/reference/universal/CURSOR-SQLITE-MODEL.yml (paths, tables, keys, bubble/composer/tool schemas, legacy_vs_new)."
+  enrichment_flow:
+    - "Tail transcript → get a fragment + any IDs (bubbleId, toolCallId, composerId)."
+    - "Look those IDs up in state.vscdb (cursorDiskKV: bubbleId:*, agentKv:* tool args/results, messageRequestContext:* context sources)."
+    - "Merge → a COMPLETE event (prompt+thinking+tool args+result+context+model+spend)."
+    - "Write to OUR OWN derived SQLite (below) AND emit to the bus."
+  our_derived_db:
+    path: ".moollm/stream-gateway/session-<id>.sqlite   (gitignored)"
+    why: "A clean, queryable, cross-referenced store for the overlay (infovis queries, search, replay) — independent of Cursor's 9GB DB and its churn."
+    tables: [events, prompts, thinking, tools, shell_commands, gear_shifts, context_sources, spend, mips, read_state, bookmarks]
+    powers: ["overlay search/filter/score", "Shneiderman infovis queries", "post-run forensics", "replay"]
+  read_only_to_cursor: "We only READ Cursor's DBs (WAL read-only). All writes go to OUR derived DB."
+
+# --- SESSION CAPTURE (the performance as a portable artifact) --------------
+# Start EMPTY at showtime → fill live → seal → analyze / upload / replay.
+session_capture:
+  one_liner: "Each screencast performance is ONE self-contained SQLite file: born empty, filled live, sealed at the end."
+  lifecycle:
+    init: "At performance start (clean room, empty chat), create a FRESH empty session-<id>.sqlite. Nothing inherited — the run starts from zero."
+    fill_live: |
+      Tail the transcript AND cross-ref SQLite, writing everything interesting:
+      user prompts, thinking bubbles, tool calls + parameters, shell commands (+output),
+      model switches (gear shifts), context sources, token counts.
+    spend: "Periodic ASYNC download of the Cursor usage CSV from the website → reconcile cost rows by timestamp (spend_tracking). Best-effort; the run doesn't block on it."
+    seal: "At end: finalize, compute totals, checksum/sign the file. Immutable performance record."
+  portable: "Single self-contained file — easy to archive, share, replay, or upload."
+  uses:
+    local_analysis: "Run queries/infovis on your own run; Datasette over it (SPEC.yml#analytics_backend.tier_local_sqlite)."
+    competition_proof:
+      what: "For 'professional' competitions (ai-offs / Code That Spec / Micropolis AI Drag Race), UPLOAD the sealed DB as proof + analytics."
+      proves: ["who won (objective metrics)", "played fair (auditable: every tool call, shell command, spend — cross-check with deep-snitch)"]
+      ties: ["../../process/ai-offs.yml", "../../process/code-that-spec.yml", "rigs proof.cursor_mirror_composer / cursor_spend_export"]
+    spectator_delight: "Drive cool data visualizations + animations from the sealed run — and data-driven AI videos/images of the performance."
+  privacy: "Capture passes the same redaction gate; a sealed 'public' variant can be exported separately from a full private one."
+
+  becomes_cli: "cursor-mirror watch --live --session new   # init empty + fill;  --seal to finalize"
+  validated_2026_06_28:
+    transcript_has: "user text, assistant text, tool_use (+ tool name). NO thinking, NO tool_result."
+    sqlite_bubble_has: "cursorDiskKV bubbleId:* rows carry: thinking (the sidebar reasoning text!), toolFormerData (tool call + args/results), timingInfo, tokenCount{inputTokens,outputTokens}."
+    conclusion: "THINKING + tool results + token counts come from SQLite, not the transcript. SQLite tap is REQUIRED for the brain's thinking and is the primary source; transcript is the fast first-light proof."
+    composer_index: "composerData:* has fullConversationHeadersOnly [{bubbleId,type}] → ordered walk; latestConversationSummary for summaries."
+
+# --- MITM PROXY (optional; when wire-level data is worth the pain) ---------
+mitm_proxy:
+  verdict: "NOT needed for v1. The SQLite tap already yields thinking, tool args/results, and token counts. Treat MITM as a later, optional enhancement."
+  what_it_adds_over_sqlite:
+    - "The EXACT composed request actually sent (full system prompt + assembled context) — SQLite stores bubbles, not the precise wire request."
+    - "Provider-agnostic capture independent of Cursor's storage format changes."
+    - "Precise live cost/timing at the network layer (though SQLite tokenCount + the spend CSV usually suffice)."
+  why_its_painful:
+    - "Cursor agent traffic = Connect-RPC over HTTP/2 with BINARY PROTOBUF (endpoints agentn.api5.cursor.sh / agent.api5.cursor.sh in privacy mode) — opaque to plain JSON proxies; must decode protobuf frames, gunzip, and SCORE-extract assistant text."
+    - "Needs a local CA cert trusted by Cursor; Cursor blocks 127.0.0.1 (SSRF) so a public tunnel is required."
+    - "Privacy mode changes endpoints; brittle to Cursor updates."
+  prior_art: "CursorLens (base-URL override, gpt- models), llm-interceptor, re-cursor (mitmproxy scripts), CursorBridge/factory-cursor-bridge (BYOK), eisbaw/cursor_api_demo (protobuf decode)."
+  when_it_makes_sense: "If you specifically need the exact system prompt / full sent context on stream, or provider-agnostic spend, AND can absorb the protobuf brittleness. Otherwise: SQLite tap."
+
+# --- SPEND TRACKING (show the cost to the audience) -----------------------
+spend_tracking:
+  why: "A live cost ticker is honest AND a donation nudge — 'this thought cost $0.12'."
+  sources:
+    derived_from_db: "Per-bubble token/cost from state.vscdb generations (model spend) cross-ref by timestamp (cursor-mirror I7 billing↔chat)."
+    spend_csv_poll: "Poll/download the Cursor usage CSV (the export Don analyzes) on interval; reconcile dashboard total."
+    cursorlens_optional: "Exact live token/cost if the proxy is in place."
+  emits:
+    - { type: spend, payload: { spend: { tokens_in: n, tokens_out: n, cost_usd: n }, rollup: "session_total" } }
+  overlay_uses: ["cost ticker (collapsed badge)", "per-node cost in importance scoring", "donation call-to-action tie-in"]
+  caution: "Spend numbers pass the same privacy gate; round/aggregate if exact figures feel too revealing."
+
+# --- THE DAEMON -----------------------------------------------------------
+daemon:
+  command: "cursor-mirror watch --live [--composer <id|current>] [--source transcript|db|both] [--sink sse|stdout|file]"
+  loop:
+    - "Resolve target composer (default: current session via ide_state.json MRU)."
+    - "Establish high-water mark (transcript byte offset AND/OR db max key)."
+    - "Poll on interval (default 250ms transcript, 500ms db) for appended content."
+    - "Parse new content into raw fragments."
+    - "Normalize → canonical event (brain-stream.yml#event_schema)."
+    - "Run privacy redaction (below). Drop or mask as needed."
+    - "Emit to sink(s): POST to gateway /api/ingest, or write JSONL, or stdout."
+  incremental_parsing:
+    streaming_text: "Assistant + thinking arrive in chunks; emit assistant_chunk deltas with a stable bubble_id so the overlay updates one node in place (NOT append-new-line-each-tick)."
+    coalescing: "Debounce chunk floods (e.g. 100ms) into delta events to keep the bus calm."
+  resilience:
+    - "Read-only everywhere; if DB is busy, back off and retry (robust-first: degrade, don't crash)."
+    - "If transcript rotates / composer switches, re-resolve and continue."
+    - "Survive Cursor restart; resume from persisted high-water mark."
+
+# --- NORMALIZED OUTPUT ----------------------------------------------------
+emits:
+  schema: ../../process/brain-stream.yml#event_schema
+  event_examples:
+    - { type: prompt, payload: { text: "<redacted user prompt>" } }
+    - { type: thinking, bubble_id: b123, payload: { text: "...", delta: true } }
+    - { type: tool_call, payload: { text: "Grep", args_summary: "pattern=…" } }
+    - { type: tool_result, payload: { summary: "12 matches" } }
+    - { type: assistant_chunk, bubble_id: b124, payload: { text: "…", delta: true } }
+    - { type: shift, payload: { text: "switched model / gear" } }
+    - { type: summary, payload: { summary: "rolling paragraph for chat" } }
+
+# --- PRIVACY (gate BEFORE the bus — non-negotiable) -----------------------
+privacy:
+  pipeline: [path_strip, secret_scan, private_repo_filter, llm_redact_and_mipmap, optional_delay, visibility_tag]
+  llm_redact_and_mipmap:
+    what: "The mandatory LLM redaction pass ALSO emits the full semantic-mip ladder in the SAME call (summarizers.yml#fused_call)."
+    why: "We pay for the completion anyway — get redaction + all LODs in one amortized round-trip."
+    per_channel: "Redaction strength + style vary by channel/content-type (summarizers.yml#channels)."
+  path_strip: "Rewrite absolute paths → repo-relative or public GitHub blob URLs; drop home dir, usernames."
+  secret_scan: "deep-snitch / skill-snitch patterns: API keys, tokens, .env, credentials → REDACT."
+  private_repo_filter: "NEVER emit private repo names or contents (e.g. the lloooomm policy). Drop matching events."
+  optional_delay: "stream_mode.delay_thinking_seconds — buffer thinking N seconds so you can kill-switch before air."
+  visibility_tag: "Tag each event overlay|chat|full|redacted (brain-stream.yml#fields.visibility)."
+  kill_switch: "Hotkey/CLI `cursor-mirror watch --pause` — instantly stop emitting (panic button)."
+
+# --- CONTROL SURFACE ------------------------------------------------------
+control:
+  cli:
+    - "cursor-mirror watch --live --sink sse        # feed the gateway"
+    - "cursor-mirror watch --live --sink stdout     # debug in terminal"
+    - "cursor-mirror watch --pause / --resume       # kill switch"
+    - "cursor-mirror watch --redact-test <file>     # dry-run the privacy filter"
+  becomes_skill: "cursor-mirror-live (SPEC.yml#skills) — sister-script CLI, MOOLLM-invokable."
+
+open_questions:
+  - "Cleanest high-water mark for cursorDiskKV bubbleId:* (rowid? key ordering? composer header walk?) without full scans on the 1-2GB DB."
+  - "Write latency: how soon after a thinking/tool delta does Cursor flush the bubble to SQLite (WAL)? Tune poll interval to that."
+  - "tool_result freshest source: cursorDiskKV toolFormerData vs agent-tools/<uuid> cache — which lands first."
+  # RESOLVED 2026-06-28: thinking + tool args/results + tokenCount live in SQLite bubbleId:* (see validated_2026_06_28). Transcript lacks thinking.
+
+ties_to:
+  - SPEC.yml
+  - overlay-viewer.yml
+  - summarizers.yml
+  - ../../process/brain-stream.yml
+  - ../../process/ai-offs.yml
+  - ../../process/code-that-spec.yml
+  - SimHacker/moollm/skills/cursor-mirror
+  - "SimHacker/moollm/skills/cursor-mirror/reference/universal/CURSOR-SQLITE-MODEL.yml"
+  - SimHacker/moollm/skills/skill-snitch

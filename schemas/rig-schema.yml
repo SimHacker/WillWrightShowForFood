@@ -3,7 +3,7 @@
 
 meta:
   id: rig-schema
-  version: 0.1
+  version: 0.2   # 0.2 adds optional `stage` block — multi-computer screencasting/streaming rigs
   extensible: true
   purpose: |
     Rigs are first-class objects — not vibes in a README. Each rig is a yaml document
@@ -22,7 +22,7 @@ rig_document:
     SETUP.md is standalone DNA: sniffable head (why/what/CTA), raw GitHub URLs for latest
     rig yaml, LLM protocol (idempotent, preserve .rig/<slug>/state.yml), human detail below.
   required_top_level: [rig, lifecycle]
-  optional_top_level: [extends, components, declare, proof, costume, mash_up_targets, see_also]
+  optional_top_level: [extends, components, stage, declare, proof, costume, mash_up_targets, see_also]
 
 rig:
   fields:
@@ -88,6 +88,82 @@ components:
       optional: true
       note: "When platform is retro via emulation — apple2js, MAME, VICE, Emularity; declare version"
 
+stage:
+  optional: true
+  added: 0.2
+  purpose: |
+    Describe the PHYSICAL screencasting/streaming setup: one or many computers, their
+    displays, what gets captured, how feeds move between machines (NDI/capture card),
+    the OBS compositing, overlay layout (incl. partial overlays over an app), and stream
+    targets. Flexible enough for a solo single-machine rig OR a multi-computer rig.
+  fields:
+    machines:
+      type: array
+      note: "One entry per computer. Single-machine rigs have one."
+      item:
+        id: { type: string, example: "mac-main | legion-encoder" }
+        role: { type: array, items: { enum: [source, capture, encoder, streamer, control, playback, guest] } }
+        os: { type: string, example: "macOS 15 | Windows 11" }
+        cpu: { type: string }
+        gpu: { type: string, example: "Apple M-series | NVIDIA RTX (NVENC)" }
+        displays:
+          type: array
+          item: { id: string, resolution: string, scaled: string, shows: "what app runs full-screen here" }
+        runs: { type: array, note: "apps/services on this machine (Cursor, OBS, gateway, GUI, summarizer)" }
+    capture_sources:
+      type: array
+      note: "What pixels/audio are captured and how."
+      item:
+        id: string
+        kind: { enum: [display_capture, window_capture, browser_source, ndi, capture_card, audio, virtual_cam] }
+        on_machine: { type: string, note: "machine id" }
+        target: { type: string, example: "Cursor screen | GUI URL | game window" }
+        alpha: { type: string, enum: [native, chroma_key, none], note: "browser_source=native; screen/window=none→chroma_key for transparency" }
+        notes: { type: string }
+    transport:
+      type: array
+      note: "How feeds move between machines."
+      item:
+        kind: { enum: [ndi, srt, rtmp, capture_card, usb, virtual_cam, lan_http] }
+        from: { type: string, note: "machine id / source id" }
+        to: { type: string, note: "machine id" }
+        link: { type: string, example: "wired gigabit ethernet" }
+        bitrate_note: { type: string, example: "full NDI 1080p60 ~100-150 Mbps" }
+    obs:
+      type: object
+      fields:
+        on_machine: { type: string }
+        encoder: { type: string, example: "NVENC | Apple VT | x264" }
+        canvas: { type: string, example: "1920x1080", note: "downscale retina to canvas — perf lever" }
+        websocket: { type: object, fields: [enabled, port, controlled_by], note: "obs-websocket for scripted VJ control" }
+        scenes: { type: array, item: { name: string, sources: array, layout: string } }
+        plugins: { type: array, example: "[DistroAV, Move Transition, Advanced Scene Switcher, StreamFX]" }
+    overlay_layout:
+      type: array
+      note: "How overlays are composed — incl. PARTIAL overlays that cover only part of an app."
+      item:
+        id: string
+        source: { type: string, note: "browser_source / capture id" }
+        covers: { type: string, example: "Cursor chat history pane (NOT the input bar)" }
+        leaves_exposed: { type: string, example: "Cursor input box (native model switcher/attach)" }
+        scale_zoom: { type: string, example: "docked | fullscreen-on-demand" }
+        mode_ref: "apps/stream-gateway/overlay-viewer.yml#rendering.modes"
+    stream_targets:
+      type: array
+      item:
+        platform: { enum: [twitch, youtube, kick, restream, local_record, none] }
+        protocol: { enum: [rtmp, rtmps, srt, whip, file] }
+        surfaces: { type: array, note: "obs_baked | companion_web_app | twitch_extension (apps/stream-gateway/SPEC.yml#delivery_surfaces)" }
+    brain_stream:
+      type: object
+      optional: true
+      note: "If this rig taps Cursor for a brain stream."
+      fields:
+        gateway: { type: string, example: "apps/stream-gateway" }
+        tap: { type: string, example: "cursor-mirror watch --live (apps/stream-gateway/cursor-tap.yml)" }
+        summarizer: { type: string, example: "local Ollama model (free) — semantic mips" }
+        privacy_gate: { type: string, example: "deep-snitch + path-strip before bus" }
+
 declare:
   optional: true
   fields:
@@ -123,6 +199,8 @@ see_also:
   - ../rigs/README.md
   - ../rigs/_TEMPLATE.rig.yml
   - ../rigs/_TEMPLATE.SETUP.md
+  - ../rigs/brain-stream-dual-laptop.rig.yml   # first `stage` rig — Mac+Legion Cursor/OBS overlay
+  - ../apps/stream-gateway/SPEC.yml            # delivery surfaces + capture/compositing
   - ../process/repo-show-format.yml
   - ../process/rig-feedback.yml
   - ../process/ai-offs.yml

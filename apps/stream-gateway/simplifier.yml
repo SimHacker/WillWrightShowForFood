@@ -1,0 +1,73 @@
+# simplifier — screen-scrape / OCR / object-catalog + input injection, reborn in the server
+# Part of: SPEC.yml  |  The stream-gateway SvelteKit SERVER does this — driving client + bus too.
+# Lineage: "Simplifier" — Don's old Sims Online bot (scraped TWO accounts on one screen,
+#          read text+images, catalogued objects, sent keys+clicks to both).
+
+meta:
+  id: simplifier
+  status: spec
+  one_liner: "Read text/images off the screen, catalog app objects, and inject keys/clicks — one or many apps at once — from the gateway server."
+  lineage: |
+    Reimplement Simplifier: it ran two Sims Online clients (different accounts) side by side on
+    one screen, scraped both, solved money/maze tasks, and drove both with keys+clicks. Now the
+    SvelteKit server hosts this — same place that serves the client and runs the bus. All in one.
+
+# --- WHY IT LIVES IN THE SERVER -------------------------------------------
+why_server:
+  - "The gateway server already serves the client, runs the event bus, and holds the derived DB."
+  - "Screen-scrape results + object catalogs become BUS EVENTS → overlay views, like the brain stream."
+  - "Input injection (keys/clicks) is server-driven automation the client can command via the bus."
+  - "One brain: scrape → understand → act → visualize, in a single place."
+
+# --- CAPABILITIES ---------------------------------------------------------
+capabilities:
+  capture:
+    what: "Grab pixels from a display/window/region (one or many apps at once)."
+    backends: ["macOS ScreenCaptureKit", "Windows capture", "existing OBS/NDI frames (reuse)"]
+  read:
+    text: "OCR text off the screen (per region)."
+    images: "Recognize sprites/icons/objects (template match / small vision model)."
+    catalog: "Build an object catalog (e.g. Sims objects) → structured records in the derived DB."
+  inject:
+    keys: "Send keystrokes to a target app/window."
+    clicks: "Send mouse clicks/drags to coordinates in a target app/window."
+    multi_app: "Drive MULTIPLE apps simultaneously (the original two-accounts trick)."
+  understand:
+    what: "Optional model pass: interpret the scraped state, plan actions (maze/money/task logic)."
+    reuse: "Can route through summarizers.yml providers (local/remote)."
+
+# --- TARGETS --------------------------------------------------------------
+targets:
+  the_sims_1:
+    platform: "Windows only — run Steam Sims 1 performances on the PC (Legion)."
+    note: "Mac can't run it; PC handles Sims segments; gateway drives over LAN."
+  generic:
+    - "Any on-screen app: a game, a tool, a website."
+    - "Cursor itself (read its screen as a fallback signal alongside the file/DB tap)."
+
+# --- DRIVES CLIENT + BUS --------------------------------------------------
+integration:
+  emits: "scrape/catalog/automation events onto the bus (brain-stream.yml#event_schema, extended types)."
+  controlled_by: "the client (overlay) can command scrapes/injections via the bus (operator UI)."
+  visualized_in: "overlay-viewer.yml smart views (object catalog as a structured outliner/table)."
+  privacy: "Scraped screen content passes the same redaction gate before bus/stream."
+
+# --- SAFETY ---------------------------------------------------------------
+safety:
+  - "Input injection is powerful — gate behind explicit operator enable; never auto-act on stream without consent."
+  - "Respect each target app's ToS; performances/demos, not abuse."
+  - "Sandbox/whitelist target windows so injection can't wander."
+
+build_phases:
+  - { id: a, ship: "region capture + OCR → bus events (read-only)", cost: zero }
+  - { id: b, ship: "object catalog → derived DB → overlay table view", cost: zero }
+  - { id: c, ship: "key/click injection to ONE target (operator-gated)", cost: zero }
+  - { id: d, ship: "multi-app drive (the two-client trick)", cost: zero }
+  - { id: e, ship: "understand/plan pass via summarizer provider", cost: "mini/local" }
+
+ties_to:
+  - SPEC.yml
+  - cursor-tap.yml
+  - summarizers.yml
+  - overlay-viewer.yml
+  - ../../process/brain-stream.yml

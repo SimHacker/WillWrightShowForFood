@@ -1,9 +1,10 @@
 # stream-gateway — Brain Bus app seed (not shipped)
-# Full spec: ../../process/brain-stream.yml
+# Parent spec: ../../process/brain-stream.yml
+# App specs (this dir): README.md (overview+research) → SPEC.yml → cursor-tap.yml → overlay-viewer.yml
 
 app:
   id: stream-gateway
-  status: seed
+  status: spec     # was seed; specs now drafted (see this dir)
   stack: SvelteKit
   purpose: "SSE/WebSocket brain bus → OBS overlay, Twitch/YouTube chat, /brain page"
 
@@ -12,7 +13,17 @@ routes:
   - /brain
   - /api/events
 
-spec: ../../process/brain-stream.yml
+specs:
+  overview: README.md          # hardware decision + OBS/Twitch/YouTube/CLI research
+  roadmap: ROADMAP.md          # operationalize: validated findings, decisions, milestones M0–M7
+  architecture: SPEC.yml       # two-machine topology, bus, sinks, build phases, skills, delivery surfaces, capture/compositing
+  cursor_tap: cursor-tap.yml   # intercept Cursor prompt/thinking/response + SQLite cross-ref + spend ticker
+  summarizers: summarizers.yml # pluggable summarizer backends (remote→local, off the Mac)
+  overlay_viewer: overlay-viewer.yml  # stable zoomable Psiber-Deck outliner (anti-scrolljack) + semantic mips + read-tracking
+  bubble_wrangler: bubble-wrangler.yml  # nested reified bubble wrangler: pop-out/link, stacks, typed containers, user-editable piecraft, bouncy windows
+  playful_waiting: playful-waiting.yml # entertain/empower while Cursor thinks; infovis; dogfood hot-reload control
+  simplifier: simplifier.yml   # server-side screen-scrape/OCR/object-catalog + key/click injection (drive apps + bus)
+parent_spec: ../../process/brain-stream.yml
 
 ties_to:
   - ../../process/manual-transmission.yml

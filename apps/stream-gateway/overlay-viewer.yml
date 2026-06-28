@@ -1,0 +1,268 @@
+# overlay-viewer — the stable, zoomable brain outliner (Psiber Space Deck)
+# Part of: SPEC.yml  |  The antidote to Cursor's scroll-jacking chat UI.
+# Runs inside the Micropolis GUI shell (pie menus, tabbed windows) as a browser overlay.
+
+meta:
+  id: overlay-viewer
+  status: spec
+  one_liner: "A bubble/outliner tree of the brain stream you can read in peace: stable scroll, per-node zoom, bookmarks, search-driven importance zoom."
+  lineage: "Psiber Space Deck (interactive PostScript structure browser) → HyperTIES → pie menus → this."
+
+# =========================================================================
+# PRIME DIRECTIVE — what this fixes about Cursor's UI
+# =========================================================================
+prime_directive:
+  the_ui_must_be: [STABLE, CONTROLLABLE, PREDICTABLE]
+  the_ui_must_never:
+    - "Auto-scroll / steal scroll position to jerk you to the bottom when new content arrives."
+    - "Flap nodes open or closed on its own — ever — least of all WHILE you are reading them."
+    - "Re-collapse a node you opened, or re-open one you closed, without your action."
+    - "Move content under your cursor/eyes mid-read."
+    - "Refuse to open thinking bubbles by default, always make you open them manually."
+  invariant: |
+    User intent is SACRED and STICKY. Every view-state change is either (a) caused by a direct
+    user action, or (b) explicitly opted into (e.g. follow-tail ON) and opt-outable (e.g. follow-tail OFF). 
+    The stream NEVER overrides the user's reading position, open/close state, or zoom. 
+    Incoming data updates node CONTENT in place and may flag nodes as "new/changed" — 
+    it does not move the viewport.
+
+# =========================================================================
+# SCROLL & VIEWPORT
+# =========================================================================
+scroll:
+  default: "Frozen to user position. New events do NOT move the viewport."
+  follow_tail:
+    state: "Opt-in toggle (off by default while reading; on for 'just watch the firehose')."
+    auto_disengage: "The INSTANT the user scrolls, wheels, drags, or focuses a node, follow-tail turns OFF and stays off until re-enabled."
+    indicator: "A non-intrusive 'N new below ▼' pill (click to jump). Never auto-jumps."
+  new_content_cue: "New/changed nodes get a subtle edge highlight + a counter; no motion, no reflow that shifts what you're reading."
+  anchor_preservation: "On content growth/resummary, keep the node under the viewport top pinned (scroll-anchor); never let layout shifts above push your read position."
+
+# =========================================================================
+# BOOKMARKS — multiple, named reading positions
+# =========================================================================
+bookmarks:
+  why: "So the stream can never 'steal you away' from what matters — you mark it and return."
+  model:
+    - "N independent bookmarks, each = { node_id, scroll_offset_within_node, label, color }"
+    - "Set/clear via pie menu, hotkey, or click the gutter."
+    - "Jump list (1..9) + prev/next. Bookmarks survive resummary, collapse of ancestors (jump re-expands path)."
+  reading_marker: "A distinct 'you are here' marker separate from bookmarks; persists across reflows."
+  read_tracking:
+    why: "Make it EASY + DEFAULT to read ALL LLM output, mark what you've read, find what you haven't, and pick up where you left off."
+    state: "per-node unread|seen|read (full model in bubble-wrangler.yml#reading_progress)"
+    find_unread: "jump-to-next/prev-unread; unread count + gutter ticks; filter to unread-only."
+    stacks_of_bookmarks: "bookmarks can be grouped into tangible stacks (bubble-wrangler.yml#stacks)."
+  pop_out_and_link:
+    what: "Pop any node/subtree into its own window; link back-and-forth between popped-out subtrees in different windows."
+    substrate: "bubble-wrangler.yml#panes_and_windows (Smalltalk-browser-and-better; first-class visible links)."
+
+# =========================================================================
+# THE TREE — nodes
+# =========================================================================
+tree:
+  node_kinds: [session, turn, prompt, thinking, tool_call, tool_result, assistant, summary, commit, chat_in, shift]
+  node:
+    id: stable_bubble_id           # from cursor-tap; deltas update the SAME node
+    parent: id
+    content: "text/markdown; grows via assistant_chunk/thinking deltas IN PLACE"
+    state:                         # ALL user-owned, persistent, never auto-changed
+      open: bool                   # collapsed/expanded
+      view_scale: see scale model  # this node's own render scale
+      child_scale_multiplier: float
+      pinned_scale: float|null     # absolute override (ignores inherited scale)
+      bookmarked: bool
+      flags: [new, changed, important, muted]   # 'new/changed' set by stream; never moves view
+  open_close:
+    rule: "Open/close is ONLY ever a user action. Stream may set the 'new' flag; it may NOT open or close."
+    defaults: "New nodes inherit the open/closed default of their TYPE (configurable), set ONCE at creation, then user-owned forever."
+    persistence: "Open/close + all view annotations persist per session (and optionally replay)."
+
+# =========================================================================
+# ZOOM & SCALE MODEL — the heart of it
+# =========================================================================
+# Not a single global zoom. Every node carries a child-scale multiplier so zoom
+# COMPOUNDS down the tree, plus an absolute pin to break inheritance anywhere.
+scale_model:
+  effective_scale:
+    formula: "effective(node) = pinned_scale(node)  if set,  else  effective(parent) * child_scale_multiplier(parent) * local_nudge(node)"
+    root: "effective(root) = base_zoom (the one global knob)"
+  child_scale_multiplier:
+    meaning: "How children render relative to this node, applied multiplicatively as you descend."
+    values:
+      "1.0": "children same size as here (flat)"
+      ">1.0": "children GROW as you go deeper (fisheye into detail)"
+      "0<m<1": "children SHRINK as you go deeper (suppress detail, keep overview)"
+    per_node: "Set on ANY node; inherited multiplicatively by its subtree until overridden."
+  pinned_scale:
+    meaning: "Absolute scale for this node — ignores inherited scale entirely."
+    use_case: "Reach deep into a small/dense subtree, grab one interesting node, PIN it big — it pops out at your chosen size regardless of ancestors shrinking everything."
+    unpin: "Returns the node to inherited (computed) scale."
+  local_nudge: "Optional small per-node bump (+/-) layered on top of inheritance; for fine taste."
+  composition_principle: |
+    View annotations are LAYERS over the tree, independent of content:
+      layer 1: open/close      (structure visibility)
+      layer 2: child_scale     (inherited geometric zoom field)
+      layer 3: pinned_scale    (absolute geometric overrides)
+      layer 4: search/score    (automatic zoom, below)
+      layer 5: semantic_zoom   (LOD / meaning density — "token mipmaps", below)
+    You can scatter zoom: blow up the 3 things you care about, shrink everything else,
+    all at once — manually or driven by scoring. Geometric scale and semantic LOD are
+    independent knobs that can be coupled or decoupled.
+
+# =========================================================================
+# SEMANTIC ZOOM — "token mipmaps" (the other half of zoom)
+# =========================================================================
+# Geometric zoom scales POINT SIZE. Semantic zoom scales MEANING DENSITY.
+# Each node carries a ladder of representations at increasing detail, pre-summarized
+# by a small/free LOCAL LLM. As you zoom, font size scales continuously AND the
+# representation "pops" between rungs — exactly like texture mipmaps for text.
+semantic_zoom:
+  idea: |
+    Zooming out must NOT just shrink text into unreadable specks. It collapses each node
+    down its semantic ladder: full → paragraph → one-line → few words → k-line symbol → icon.
+    Zoom in and it climbs back up. Continuous font scaling BETWEEN rungs; discrete semantic
+    "pops" AT thresholds. Navigate the token mipmaps.
+  ladder:                         # coarsest → finest (a "semantic mip chain" per node)
+    - { lod: 0, name: icon,       form: "single emoji/glyph or node-type icon" }
+    - { lod: 1, name: kline,      form: "k-line symbol / signifier (MOOLLM)" }
+    - { lod: 2, name: acronym,    form: "2–4 char tag or acronym" }
+    - { lod: 3, name: few_words,  form: "3–6 word gist" }
+    - { lod: 4, name: one_line,   form: "single sentence" }
+    - { lod: 5, name: summary,    form: "short paragraph" }
+    - { lod: 6, name: full,       form: "verbatim content" }
+  selection:
+    continuous_param: "semantic_zoom ∈ [0..6] (real number), derived from effective_scale by default."
+    font_scale: "Within a rung, font size scales continuously with effective_scale (the geometric part)."
+    pops: "Crossing a rung threshold swaps the representation to the next LOD."
+    crossfade: "Optional trilinear-style crossfade between adjacent rungs during a pop (smoothness, no jarring swap)."
+  stability:                      # prime_directive applies — no flicker
+    hysteresis: "Separate up/down thresholds per rung so a node near a boundary does NOT flicker between LODs while idle or on tiny zoom jitter."
+    settle: "LOD changes only on actual zoom/scroll intent or debounced settle — never twitchy under the reader."
+  coupling_modes:
+    by_scale: "default — coarser as you zoom out (the field)."
+    independent: "a separate 'detail' knob; zoom geometry and detail decoupled."
+    importance_boosted: "score/importance RAISES the LOD of important nodes even when zoomed out — the signal stays readable (one-line) while noise collapses to icons."
+  per_node_override:
+    pin_lod: "Pin a node to a specific rung regardless of zoom (like pinned_scale, but for detail). e.g. keep ONE thinking block at 'full' while everything else is icons."
+  generation:
+    engine: "small/free LOCAL LLM (e.g. Ollama / llama.cpp) — $0, offline-capable. (Ties to the cost lesson: route grunt summarization to free models.)"
+    pipeline: "On node create/settle, generate the ladder rungs not already present (cheap → progressively). Stream deltas re-dirty only changed nodes."
+    cache:
+      key: "content_hash + lod"
+      store: ".moollm/stream-gateway/mips/<composer>/<node>.json"
+      note: "Precomputed 'token mipmaps'; regenerate only on content change (debounced)."
+    fallbacks: "If summarizer is down/slow: show finest available rung; truncate-with-ellipsis as LOD stand-in (robust-first — degrade, don't block)."
+  relation_to_resummary: "This is brain-stream.yml#overlay_ux.resummary generalized into a full LOD ladder, done locally for free."
+
+# =========================================================================
+# SEARCH / SCORE-DRIVEN ZOOM (automatic, manual always wins)
+# =========================================================================
+importance_zoom:
+  idea: "Like the Psiber Space Deck surfacing interesting PostScript structure — score nodes, let score drive size/visibility."
+  scoring_inputs: [text_match, node_type_weight, recency, cost, tool_danger, user_pins, regex_filters]
+  mapping:
+    score_to_scale: "Higher score → larger effective scale (configurable curve)."
+    threshold_collapse: "Below threshold → auto-muted/shrunk (NOT closed if user opened it)."
+  filters:
+    - "Live regex/text filter: matching nodes grow + path auto-expands to reveal them."
+    - "Type filters: e.g. show only prompts+commits; mute tool spam."
+  override_rule: "Any MANUAL annotation (pin, open, bookmark) overrides automatic scoring. Manual is law; auto fills the rest."
+  stability: "Score updates re-rank size GENTLY and only on explicit refresh or debounced settle — never a twitchy live reflow under the reader."
+
+# =========================================================================
+# INTERACTION — pie menus + Micropolis GUI shell
+# =========================================================================
+interaction:
+  host: "Runs inside the shared bubble-wrangler.yml fabric (Micropolis SvelteKit GUI): nested windows, stacks, containers, pie menus."
+  bubble_wrangler: "bubble-wrangler.yml — pop-out/link, tangible stacks (no invisible clipboard), typed shelves/bags, reified snap-tiling, bouncy windows, user-editable piecraft."
+  pie_menu:
+    component: "Don's in-development SvelteKit pie-menu component (Micropolis)"
+    node_menu: [open_close, pin_scale, set_child_multiplier, bookmark, mute, important, copy, open_github_link, focus_subtree]
+    canvas_menu: [follow_tail_toggle, base_zoom, reset_view, save_view, load_view, jump_bookmark]
+  gestures:
+    wheel: "scroll (never hijacked)"
+    ctrl_wheel: "GEOMETRIC zoom — point size of the item under the mouse (plain wheel still scrolls)"
+    shift_wheel: "SEMANTIC zoom — level of detail (LOD) of the item under the mouse"
+    ctrl_shift_wheel: "both at once — fast zoom in/out (geometry + meaning together)"
+    zoom_limits: "soft fixed limits both ways (user-changeable if they really want); smooth, focused on item under cursor"
+    drag: "pan in zoom space"
+    double_click_node: "focus_subtree (pin it big, shrink siblings) — reversible"
+  hiding_question:
+    open: "Keep everything big enough to POINT at; anything smaller must 'hide' (collapse to a dot/edge tick?). Unresolved — IMPLEMENT and PLAY to feel it, then iterate."
+  views:
+    save_load: "Named view presets = a snapshot of all annotation layers. Switch instantly."
+    examples: [overview, deep_thinking_focus, tools_only, cost_watch, audience_safe]
+
+# =========================================================================
+# SMART CONTENT-TYPE VIEWS (pluggable per node content type)
+# =========================================================================
+# Recognize/parse structured text and render it with the right BROWSER.
+# Start simple; make it EASY to plug in smart views per content type.
+content_views:
+  principle: "Detect content type → pick a view. Pluggable registry; fall back to plain text."
+  registry: "viewType(contentType) → component; per-type defaults, per-node override (pie menu)."
+  built_in:
+    terminal:
+      for: [shell, command_output]
+      look: "green-on-black fixed-width (Courier/nicer mono) terminal panes."
+      pretty_print: "the redactor can also pretty-print/indent shell for readability (summarizers.yml#channels.shell)."
+    code:
+      for: [code_block]
+      look: "syntax-highlighted mono; never paraphrased; LOD collapses to signature/skeleton."
+    structured_outliner:
+      for: [json, yaml]
+      look: "show JSON AS json in an outliner (NOT prose). Open to tiny point size → skeletal tree: see depth/width at a glance."
+      fisheye: "fisheye layout so any width/depth fits a fixed area (pseudo scientific-viz). Expand-on-point."
+      pretty_print: "auto pretty-print/indent (beautiful for JSON/YAML)."
+    markdown:
+      for: [markdown]
+      look: "render text; honor per-fence language modes (route fenced blocks to their own view)."
+    prose:
+      for: [natural_language]
+      look: "the semantic-mip outliner node (default)."
+  extensibility: "New types (diff, table, image, mermaid, behavior-tree, sim-object) plug in as we need them."
+  ties: "summarizers.yml#channels (per-channel rules) chooses BOTH redaction style AND default view."
+
+# =========================================================================
+# RENDERING / TRANSPORT
+# =========================================================================
+rendering:
+  framework: SvelteKit
+  modes:
+    overlay: "route /overlay/brain — transparent bg, OBS Browser Source (CEF). Crisp at canvas res."
+    full: "route /brain — opaque, same viewer, for the RTFR web crowd."
+    cursor_chat_replacement:
+      what: "Local always-on-top TRANSPARENT browser window docked over Cursor's chat HISTORY pane — replaces the scrollback 'bloody mess' with this stable viewer."
+      keep_native: "Do NOT cover Cursor's input bar — leave it exposed so you keep typing into Cursor (model switcher, attach, etc. all native). Overlay covers only the history rectangle above it."
+      mechanics:
+        - "Full-screen TRANSPARENT Electron overlay browser window, always-on-top over Cursor."
+        - "ALPHA-BASED HIT DETECTION (Kandu-style): clicks on transparent pixels PASS THROUGH to Cursor beneath; clicks on opaque UI hit the overlay."
+        - "So you drag overlay windows/bubbles around over Cursor, iconify them, manage piles of tabs (tabs substitute for icons; carry icon+label) via pie-menu gestures — and still type into Cursor through the gaps."
+        - "Leave Cursor's input bar region transparent so it stays usable; cover the history with the viewer."
+        - "Resize / zoom-to-fullscreen on demand (browse dirs + code while chatting); snap back to docked."
+      feeds_from: "Same bus + same SvelteKit client as the OBS overlay — it IS the brain-stream viewer, docked locally over Cursor."
+      host_window: "Electron transparent click-through window (Kandu approach — alpha hit testing). Loads the SvelteKit client URL."
+      prior_art: "Don's Kandu pie menus — Electron full-screen transparent overlay with alpha-based hit detection / click-through."
+      why: "Don reads/scrolls/zooms/bookmarks his OWN session in a stable UI while typing into real Cursor underneath. Fixes scroll-jacking at the source, for the operator, not just the audience."
+  transport: "subscribe to gateway bus (SSE default, WS for control/bookmarks). Apply deltas to nodes in place."
+  performance:
+    - "Virtualize off-screen nodes BUT preserve their state + scroll anchors (no surprise reflow)."
+    - "Deltas coalesced (cursor-tap debounces) so the tree updates smoothly, not twitchily."
+  obs_bridge: "Optional: obs-websocket vendor 'obs-browser' emit_event → page (scene-aware overlay states)."
+
+acceptance_criteria:
+  - "While reading a mid-tree node with live events streaming, the viewport NEVER moves and the node NEVER collapses."
+  - "Set 3 bookmarks; jump among them; they survive ancestor collapse + resummary."
+  - "Set child_scale_multiplier=0.5 on root → tree shrinks with depth; pin one deep node big → it pops out."
+  - "Type a filter → matching nodes grow and reveal; clear it → returns to prior manual view exactly."
+  - "Toggle follow-tail on → rides the firehose; touch the scrollwheel → it disengages and stays put."
+  - "Zoom out → nodes pop down the semantic ladder (paragraph→one-line→few-words→k-line→icon) with continuous font scaling between pops; no LOD flicker when idle near a threshold (hysteresis)."
+  - "Pin one thinking node to LOD=full while zoomed way out → it stays fully readable while siblings are icons."
+  - "Summaries generated by the local model at $0; if the summarizer is offline, nodes degrade to truncated text, never block."
+
+ties_to:
+  - SPEC.yml
+  - cursor-tap.yml
+  - ../../process/manual-transmission.yml
+  - "Micropolis SvelteKit GUI (pie menu, window manager) — Don"

@@ -1,0 +1,188 @@
+# bubble-wrangler — a playful, reified, nested bubble/window WRANGLER apps use inside AND out
+# Part of: SPEC.yml  |  The substrate the overlay-viewer, Micropolis GUI, and games share.
+# Prior art done right: Smalltalk browser, Psiber Space Deck, HyperCard, Symbolics, ARK.
+
+meta:
+  id: bubble-wrangler
+  name: "Bubble Wrangler"
+  status: spec
+  one_liner: "Wrangle bubbles/windows/objects as PLAY — under the USER's control, not 'the algorithm's'."
+  naming: |
+    NOT a 'manager'. We invert the chore (like homework → homefun): you WRANGLE bubbles —
+    herd, rope, stack, throw, pen them — joyfully. 'Bubble Wrangler' over 'window manager'.
+  what_it_is: |
+    It's like a window manager — but it won't shatter, slice you to hamburger, and defenestrate
+    you when you make the wrong move. It's a UNIFORM GENERALIZATION: a navigable, accessible,
+    customizable, top-to-bottom integrated, embedded app + HyperCard/HyperLook-like user
+    environment. Bubble Wrangler is our alternative to the window manager — but much more, much
+    deeper, much more useful. It is RECURSIVE SCAFFOLDING that lets users build, customize, and
+    navigate their OWN interface — providing accessibility, customizability, scriptability,
+    persistence, integration, and mash-up of apps and interfaces ACROSS and WITHIN apps
+    (cf. Morgan Dixon's Prefab — reverse-engineering/augmenting GUIs from pixels, for everyone).
+  thesis: |
+    Decades of good ideas got brushed under the rug and reinvented as fractured shards missing
+    the original insight. Reunify them, in harmony: tangible objects, visible structure, direct
+    manipulation, user-owned layout, and fun. Apps embed it internally and compose through it
+    externally — one coherent fabric.
+
+# --- READING PROGRESS (make reading EVERYTHING easy + default) ------------
+# Honors overlay-viewer.yml prime_directive. The point: never lose your place, never
+# re-read by accident, always find what you haven't seen.
+reading_progress:
+  default: "EASY + DEFAULT to read ALL LLM output. The system tracks what you've seen."
+  read_state:
+    per_node: [unread, seen, read]   # auto 'seen' when scrolled into view long enough; 'read' on explicit mark or dwell
+    persistence: "our derived DB (cursor-tap.yml table: read_state); survives reload + replay"
+  find_unread:
+    - "Jump-to-next-unread (and prev) — never hunt manually."
+    - "Unread count + 'N unread ▼' affordance (no auto-scroll — see prime_directive)."
+    - "Unread minimap/gutter ticks; filter view to unread-only."
+  pick_up_where_left_off: "Persistent reading marker (overlay-viewer.yml#bookmarks.reading_marker) restores on open."
+  bookmarks: "Any number, named OR numbered (overlay-viewer.yml#bookmarks). Stacks of bookmarks (below)."
+
+# --- POP-OUT + CROSS-WINDOW LINKING (Smalltalk browser, and better) -------
+panes_and_windows:
+  pop_out_subtree: "Detach any node/subtree into its own window (or pane); it stays live (same bus + read-state)."
+  reparent: "Drag a subtree between windows; promote/demote; merge back."
+  cross_window_links:
+    what: "Tangible links BETWEEN popped-out subtrees in different windows — click to navigate, hover to highlight the far end."
+    bidirectional: "Link back and forth; a link knows both ends; breaking is explicit."
+    inspiration: "Smalltalk object browser multi-pane navigation — but links are first-class, visible objects, not implicit selection."
+  better_than_smalltalk: "Multiple independent browsers, live cross-links, persistent layout, and the zoom/LOD model layered on top."
+
+# --- TABS (piles substitute for icons; labels shrink intelligently) -------
+tabs:
+  what: "Tabs carry icon + label and stand in for icons; manage piles of them via pie-menu gestures."
+  squish_labels:
+    what: "As a tab gets squished (less width), the LOCAL LLM ABBREVIATES its label progressively — not a dumb middle-ellipsis."
+    ladder: "Reuse the semantic-mip ladder + stylization (summarizers.yml#stylization): full title → few words → preferred acronym → k-line/icon."
+    width_driven: "Available px → target LOD; pin names/identifiers verbatim as long as they fit (summarizers.yml stylization.pin_important)."
+    cached: "Abbreviations cached per (label, width-bucket) in the mip cache; recompute only when the title changes."
+    fallback: "If summarizer unavailable: smart truncation (stemming/initials), upgrade when it returns (robust-first)."
+  tie: "Same fused redact+mipmap call already produces these rungs — tab labels are just another consumer."
+
+# --- TANGIBLE STACKS (NO invisible clipboard) -----------------------------
+stacks:
+  principle: "Reject the single invisible clipboard. Everything you 'cut/copy/hold' goes onto a VISIBLE, TANGIBLE, MULTIPLE stack."
+  kinds:
+    spike: "Psiber Space Deck-style PostScript stack — a literal spike of items you push/pop/drag/drop."
+    groove: "A 'groove' of stacked window TABS you riffle through (tabbed stack)."
+    hypercard: "A 'stack' of cards you flip — each card a node/snapshot."
+    flex: "A standard, flexible, dynamic html/css flex layout."
+  operations: [push, pop, peek, clear, riffle, dup, swap, drop, roll, drag_out, drop_in, merge]
+  visibility: "Always on-screen; you can SEE what's held and reorder it by hand."
+
+# --- SHELVES, BAGS, TYPED/POLYMORPHIC NESTED CONTAINERS -------------------
+containers:
+  principle: "Seamless, NON-invisible drag and drop into tangible containers you can open, nest, and rummage."
+  kinds:
+    shelf: "A persistent rail you park things on (prompts, subtrees, snippets, views)."
+    bag:   "A container you carry/stash things in — nestable."
+    chest: "A bigger anchored store."
+    inspiration: ["Ultima Online bags", "Glitch bags", "piecraft containers"]
+  polymorphic: "Containers hold many item TYPES (nodes, prompts, views, links, game items)."
+  typed_filters:
+    what: "A container can RESTRICT what it admits (typed arrays) — the constraint is the fun."
+    examples: ["foods", "reagents", "ammo", "currency", "maps", "blueprints", "prompts", "spells", "code", "urls"]
+    games: "Typed containers are what make piecraft interesting — game inventories fall out for free."
+  limits: "Optional caps: item count, slice/slot layout, structure of items inside."
+  nesting: "Containers nest arbitrarily; contents are live references or snapshots (your choice)."
+  drag_and_drop: "Visible, physical, reversible. No content silently vanishing into a void."
+
+# --- PIECRAFT (built in) — USER-EDITABLE pies on EVERY object -------------
+piecraft:
+  built_in: true
+  user_editable: true
+  what: "User-editable pie menus on EVERY object — radial action menus on windows, nodes, bubbles, stacks, containers, links."
+  lineage: "Don's pie-menu work (NeWS/HyperTIES → the Micropolis SvelteKit pie-menu component)."
+  editing: "Add/remove/reorder slices; bind actions; nest pre-configured submenus; per-object-type defaults + per-instance overrides."
+  drag_drop_endpoints: "Pies double as drag SOURCES and DESTINATIONS (flick an item into a slice → into a bag/chest)."
+  crafting:
+    what: "CRAFT new container/pie types — needs skills + materials (game-economy of UI itself)."
+    craftables: ["typed containers (food/reagent/ammo/...)", "custom pies", "item limits", "slice layouts", "submenu trees"]
+  memory_palace:
+    what: "Pie/menu NETWORKS laid out as a memory palace — rooms connected by links."
+    metaphors: [adventure_maps, mediagraph, iloci, dreamscape]
+    note: "Menu networks are navigable places, two-way Nelsonian links, not flat lists — the layout direction IS the mnemonic."
+  use: "Every object has a pie; gestures flick to actions; the network of pies is a place you learn."
+
+# --- REIFIED TILING / SNAP-TOGETHER LAYOUT (user-controlled) --------------
+# Lego-like plug-together slices. CONSTRAINTS ARE OBJECTS you can add/remove/redo.
+reified_layout:
+  principle: "Layout constraints are REIFIED, tangible, user-controlled — NOT an opaque auto-tiler deciding for you."
+  snap_drag: "Windows snap together like Lego; edges plug into shared seams."
+  coordinated_resize:
+    what: "A shared seam coordinates resizing of multiple adjacent windows (drag one edge → neighbors adjust by the constraint)."
+    slices: "Reified resizing 'slices' that distribute space by rules you set."
+  constrainable_unconstrainable_reconstrainable:
+    constrain: "Snap/lock a relationship (align, equal-size, shared-seam)."
+    unconstrain: "Pop a constraint off — windows float free again."
+    reconstrain: "Re-apply / re-route constraints anytime; constraints are editable objects."
+  user_not_algorithm: "The USER composes the layout. Auto-arrange is an OPTIONAL tool you invoke, never an ambient force that rearranges your stuff."
+
+# --- BUBBLE WRANGLING AS PLAY (bouncy, throwable) -------------------------
+play:
+  thesis: "Wrangling bubbles is PLAY. Direct, physical, joyful — herd/rope/throw, not a chore."
+  bouncy_throwable:
+    what: "Throw icons and windows; they fly and BOUNCE with momentum."
+    lineage:
+      - "NeWS 'bearth' — a spinning Earth bouncing inside a window that IMPARTED FORCE: hitting an edge nudged the WINDOW in that direction; you could grab the Earth and fling it like a pool ball to bounce around and lurch in all directions"
+      - "Symbolics/Flavors bouncy-pushy-window-mixin (mix in behavior)"
+      - "Unipress Emacs throwable bouncing icons"
+      - "Alternate Reality Kit (Randall Smith, Xerox PARC) — physics as direct manipulation"
+    bearth_model: "Contents can impart force to their container; grab-and-throw a contained object to fling its window; windows bump neighbors. Our own bearth."
+    mixins: "Behaviors are MIXINS (Flavors-style): add bouncy/pushy/sticky/magnetic to any window or icon."
+  physics_optional: "Physics is expressive, not chaotic — toggleable; never moves things without input (respects prime_directive)."
+
+# --- VIRTUAL CURSOR + PLATFORM MODEL (cursor relativization) --------------
+# The cursor is an OBJECT in the environment too — it can be carried by what it stands on.
+virtual_cursor:
+  idea: "A virtual cursor affected by the environment, just like windows. 'Cursor relativization' — your pointer rides a moving platform."
+  platform_model:
+    - "Over a window that gets bumped (bearth force) → your cursor moves WITH it (it's standing on it)."
+    - "Point at a conveyor belt → you move with it, just like Factorio."
+    - "Mario-cannon objects can AIM and SHOOT the cursor to a different (LINKED) window."
+  relativization: "Cursor position is expressed RELATIVE to the platform it's on; platform motion carries it. Detach by lifting off."
+  consent: "Carrying only happens via opted-in physics zones; never yanks the pointer unbidden (prime_directive)."
+  ties: "Links between windows (panes_and_windows.cross_window_links) are the cannon destinations."
+
+# --- DESIGN JAMS / INFLUENCES ---------------------------------------------
+jams:
+  ted_nelson:
+    who: ../../characters/ted-nelson/   # jam with Ted about these
+    topics:
+      - "ZigZag — zig-zag structure / windows"
+      - "transclusion — the same content live in many places"
+      - "correspondence lines drawn BETWEEN windows (visible links)"
+      - "synchronized scrolling of related views"
+      - "his INVISIBLE-CLIPBOARD rant — and the better alternatives (→ our tangible stacks)"
+    why: "Bubble Wrangler's visible links, transcluded subtrees, and no-invisible-clipboard stacks are kin to Ted's ideas — get his steer."
+  morgan_dixon_prefab: "Pixel-based GUI reverse-engineering/augmentation — enhance ANY app's interface from the outside; kin to our across-and-within-apps integration."
+
+# --- EMBEDDABILITY (apps use it inside and out) ---------------------------
+embeddability:
+  internal: "An app uses the WM to manage its OWN sub-panes (overlay-viewer panes, Micropolis tool windows)."
+  external: "The WM composes whole apps together — seamless integration across app boundaries."
+  one_fabric: "Same nesting, stacks, containers, links, and pie menus at every level — fractal, uniform, harmonious."
+  component: "SvelteKit; reuses Don's Micropolis pie-menu + window components."
+
+honored_prior_art:
+  why: "Reunify the insights into one harmonious, synergistic whole instead of fractured reinventions."
+  sources:
+    - "Smalltalk-80 object browser (multi-pane navigation)"
+    - "Psiber Space Deck (NeWS PostScript structure browser + stacks) — Don Hopkins"
+    - "NeWS / HyperTIES pie menus — Don Hopkins"
+    - "NeWS 'bearth' bouncing-Earth force-imparting window demo"
+    - "HyperCard stacks (Bill Atkinson); HyperLook (NeWS) — Don Hopkins"
+    - "Symbolics Genera / Flavors bouncy-pushy-window-mixin"
+    - "Unipress Emacs throwable bouncing icons"
+    - "Alternate Reality Kit (Randall Smith, Xerox PARC)"
+    - "Ted Nelson — ZigZag, transclusion, correspondence lines, synchronized scrolling, invisible-clipboard critique"
+    - "Morgan Dixon — Prefab (pixel-based GUI augmentation)"
+    - "Ultima Online / Glitch bags; piecraft containers"
+
+ties_to:
+  - SPEC.yml
+  - overlay-viewer.yml
+  - playful-waiting.yml
+  - "Micropolis SvelteKit GUI (pie menu, window manager) — Don"

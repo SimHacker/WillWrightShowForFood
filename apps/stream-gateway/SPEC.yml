@@ -1,0 +1,262 @@
+# stream-gateway — architecture spec (girder)
+# Facade: README.md  |  Parent spec: ../../process/brain-stream.yml
+# Expands the GLANCE seed into a buildable two-machine architecture.
+
+meta:
+  id: stream-gateway
+  status: spec            # seed -> spec -> building -> shipped
+  stack: SvelteKit
+  parent: ../../process/brain-stream.yml
+  one_liner: "Cursor brain tap → event bus → zoomable browser overlay (Micropolis GUI) → OBS → Twitch/YouTube"
+
+# --- TOPOLOGY -------------------------------------------------------------
+# Two machines, one LAN. The overlay is a WEB PAGE, not a captured window,
+# so OBS renders it natively at full resolution.
+topology:
+  one_client_many_hosts:
+    what: "ONE SvelteKit server on the Mac serves ONE client (pie menus, tab frames, brain-stream viewer, Micropolis city/home app). Multiple hosts load the same URL."
+    hosts:
+      - "OBS Browser Source (Legion) — for the stream (native alpha)."
+      - "Electron transparent click-through overlay (Mac) — docked over Cursor, alpha hit-test, Kandu-style (overlay-viewer.yml#cursor_chat_replacement)."
+      - "Companion web app (public) — viewers' browsers (SPEC#delivery_surfaces)."
+  source_machine:
+    name: "Mac (main dev box)"
+    runs:
+      - "Cursor (the brain we tap), full-screen on the streamed display"
+      - "stream-gateway server (SvelteKit) — serves bus + the one client + Micropolis GUI; also DRIVES client + bus (simplifier.yml)"
+      - "Electron transparent overlay (the client) docked over Cursor — drag/iconify windows, pie-menu tab piles"
+      - "cursor-mirror watch --live (the tap daemon)"
+      - "OBS (browser overlay on the Mac screen) — full-screen Cursor / game / Sims behind it"
+      - "optional: DistroAV/NDI out (game video as pixels)"
+    serves_on_lan: "http://<mac>.local:5371  (bus + /overlay/* + /brain)"
+  private_offstream_screen:
+    on: mac-main
+    invisible_to_obs: true
+    holds: ["email", "private web browser", "script / plans", "chat apps (coordinate + take questions from assistants/bots)", "Finder windows to drag-drop across screens into Cursor"]
+    why: "A backstage screen OBS never captures — operator cockpit separate from the on-air screen."
+  encoder_machine:
+    name: "Lenovo Legion (NVIDIA)"
+    runs:
+      - "OBS Studio + NVENC"
+      - "Browser Source → http://<mac>.local:5371/overlay/brain"
+      - "optional: NDI Source ← Mac (Micropolis video)"
+      - "obs-websocket client (the `obs` skill) for scene/source control"
+    pushes: "RTMP/RTMPS (or WHIP) → Twitch + YouTube ingest"
+  single_machine_fallback:
+    note: "Run everything on the Legion if you prefer; NVENC local, no NDI hop. Mac-only also works (Apple VT encode) but weaker for high-bitrate."
+  network:
+    requirement: "Wired Ethernet between machines for NDI HD stability"
+    discovery: "mDNS/Bonjour (<mac>.local) or static IP"
+
+# --- THE BUS --------------------------------------------------------------
+# One canonical schema, many subscribers (brain-stream.yml#event_schema).
+bus:
+  server: "apps/stream-gateway (SvelteKit, Node adapter)"
+  transports:
+    sse: "/api/events  — default; simplest for overlay + /brain page"
+    websocket: "/ws     — for bidirectional (overlay control, bookmarks, OBS bridge)"
+  schema: ../../process/brain-stream.yml#event_schema
+  ingestion_boundary:
+    rule: "Normalize ALL inputs (cursor tap, twitch, youtube, github) to the canonical event schema HERE, before anything subscribes."
+    privacy_gate: "Every event passes the redaction filter (privacy.before_bus) before publish. No exceptions."
+  ring_buffer:
+    keep_last: 5000        # events retained in memory for late-joining overlays / scrollback
+    persist: ".moollm/stream-gateway/session-<id>.jsonl"   # gitignored; replay + post-run forensics
+
+# --- INPUTS (sources) -----------------------------------------------------
+inputs:
+  cursor_tap:
+    spec: cursor-tap.yml
+    produces: [prompt, thinking, tool_call, tool_result, assistant_chunk, shift, summary]
+  twitch:
+    via: "twitch skill — EventSub WebSocket (channel.chat.message + lifecycle)"
+    produces: [chat_in, follow, sub, cheer, raid]
+  youtube:
+    via: "youtube skill — liveChat/messages polling (throttled, quota-aware)"
+    produces: [chat_in, superchat, member]
+  github:
+    via: "commit webhook / thoughtful-commitment"
+    produces: [commit]
+  manual_transmission:
+    via: ../../process/manual-transmission.yml
+    produces: [gear_shift, runbook_start, design_mode]
+  local_summarizer:
+    what: "Small/free LOCAL LLM (Ollama / llama.cpp) — generates the semantic-zoom LOD ladder per node."
+    cost: zero
+    produces: [semantic_mips]   # cached 'token mipmaps' per node (overlay-viewer.yml#semantic_zoom)
+    note: "Also powers chat resummary (brain-stream.yml#overlay_ux.resummary) for free."
+
+# --- OUTPUTS (sinks) ------------------------------------------------------
+outputs:
+  obs_overlay:
+    route: /overlay/brain
+    how: "OBS Browser Source (CEF). Transparent bg. Receives bus via SSE/WS."
+    render: "The zoomable outliner — see overlay-viewer.yml"
+  obs_control:
+    via: "obs skill → obs-websocket v5 (ws://<legion>:4455)"
+    does: [scene_switch, source_toggle, stream_start_stop, emit_custom_event_to_browser]
+  twitch_chat:
+    via: "twitch skill — Helix Send Chat Message"
+    policy: "Commands (!prompt !thinking !cost !rig) + event-driven posts"
+  youtube_chat:
+    via: "youtube skill — liveChatMessages.insert"
+    policy: "Throttled rolling summaries only (quota)"
+  web_full:
+    route: /brain
+    how: "Full scrollable/zoomable page for the RTFR crowd — same viewer, no transparency"
+
+# --- DELIVERY SURFACES (how viewers receive the brain stream) -------------
+# One Svelte viewer (overlay-viewer.yml), shipped THREE ways from one codebase.
+delivery_surfaces:
+  one_codebase: "overlay-viewer renders in all three; differ only by host chrome + transport endpoint."
+  surfaces:
+    obs_baked:
+      platforms: [twitch, youtube]
+      interactive: false
+      how: "OBS Browser Source renders /overlay/brain → burned into video. Ambient 'everyone sees it' layer."
+    companion_web_app:
+      platforms: [twitch, youtube, anywhere]
+      interactive: true
+      recommended_first: true
+      how: "Public /brain URL. Viewers open as a SECOND SCREEN; scroll/browse/bookmark at their own pace."
+      per_viewer_state: "client-side (localStorage) — each viewer independent; no server fan-out needed for view state."
+      drive_traffic: ["Twitch panel link", "!brain chat command", "on-video QR / lower-third"]
+      note: "This IS 'roll my own wrapper GUI' — least effort, most power, both platforms, no gatekeeper."
+    twitch_extension:
+      platforms: [twitch]
+      interactive: true
+      how: "Sandboxed iframe web app (Extension Helper postMessage bridge). Load the same Svelte app inside Twitch."
+      best_type: "Panel — sits below video (even offline), pops out to a full resizable browser window; per-viewer interactive."
+      other_types: { component: "collapsible, anchored in player", overlay: "full transparent over video (1 per channel)" }
+      overhead: ["EBS backend service", "Extension Helper", "Twitch review/approval"]
+      ceiling: "1 overlay / 2 components / 3 panels per channel (Twitch-enforced)."
+  hard_limits:
+    youtube_no_extensions: "YouTube has NO in-player interactive app SDK. YouTube viewers get OBS-baked video OR link-out to the companion app. Nothing embedded in the watch page."
+    no_rich_chat_objects: "Neither Twitch nor YouTube chat supports interactive/collapsible outline widgets. Chat is text (+emotes/SuperChat/Bits). 'On the side' = Twitch panel, NOT the chat pane."
+  public_feed_requirement:
+    what: "For viewers' browsers, expose a PUBLIC read-only SSE/WS relay (hosted), distinct from the LAN bus OBS uses."
+    privacy: "Same redaction gate (cursor-tap.yml#privacy) applies to the public feed — it is the most exposed surface."
+    scale: "Read-only fan-out; consider a CDN/edge relay or hosted pub/sub if audience grows."
+  twitch_panel_vs_chat:
+    can: "A Twitch panel/component (iframe) can POST messages/deep-links to chat via the extension chat API (broadcaster/bits)."
+    cannot: "No drag-drop BETWEEN the panel iframe and the chat pane; chat links open a URL (your companion app), not back into the panel."
+    pattern: "Panel = embedded entry point; deliver rich self-paced browsing in the companion app; panel posts deep-links to chat that open the app."
+  youtube_embed:
+    what: "No extensions → embed the YouTube IFrame Player in YOUR app and build your own overlay + side panels around it; show chat via the live_chat iframe embed OR poll the chat API."
+    worth_it: "Yes for a rich YouTube experience; tradeoff is you host the surrounding UX. Otherwise OBS-baked + companion-app link."
+
+# --- ANALYTICS BACKEND (queryable history for the audience) ----------------
+# Two tiers, each with the tool that FITS its store. Datasette is SQLite-only;
+# Grafana is the right fit for the cloud Postgres/TimescaleDB.
+analytics_backend:
+  why: "Beyond a live feed: let audience dynamically QUERY historical + analytic info — browse any part of the stream, any depth, pull just what they need."
+  pipeline: "gateway → privacy gate → (a) live relay (SSE/WS) AND (b) a store for query/analytics."
+  tier_local_sqlite:
+    store: "our derived SQLite (cursor-tap.yml#our_derived_db), per-session."
+    tool: "Datasette — instant read-only JSON API + UI over SQLite. Great for LOCAL ad-hoc querying, forensics, replay."
+    note: "Datasette is SQLite-ONLY — keep it on the local DB, not the cloud Postgres."
+  tier_cloud_timescale:
+    store: "central SvelteKit app + Postgres/TimescaleDB (hypertables, continuous aggregates for per-minute rollups, retention/compression)."
+    bespoke_ui: "Your SvelteKit app queries Postgres via your own read-only API for the INTERACTIVE brain-stream browser (outliner/zoom/pop-out) — the tree UX Grafana can't do."
+    grafana:
+      role: "Time-series DASHBOARDS over Postgres/TimescaleDB — spend-over-time, token rate, tool histograms, model-shift ribbons, alerting."
+      datasource: "native Postgres/TimescaleDB datasource."
+      live: "Grafana Live (push) or interval queries; EMBED panels via iframe / public dashboards / snapshots into the companion app or a Twitch panel."
+      good_for: "the cost ticker + analytic charts; NOT the outliner/tree browsing (that's your SvelteKit UI)."
+      surfacing_in_show:
+        live_in_video_mix:
+          how: "OBS Browser Source → Grafana dashboard in KIOSK mode (?kiosk) → composite into the scene as a live panel."
+          when: "Always-on charts in the video; simplest, no renderer."
+        image_renderer:
+          how: "grafana-image-renderer (headless-Chromium service) renders panels/dashboards → PNG on a schedule."
+          uses:
+            - "OBS Image Source refreshed on interval (lighter than a live browser source for static frames)."
+            - "Periodic 'interesting dashboard' stings injected into the scene."
+            - "Snapshot link posted to chat (Twitch/YouTube chat can't inline images → post a LINK to the hosted PNG / Grafana public snapshot; companion-app chat CAN show the image)."
+          note: "Pick a cadence; pair with Advanced Scene Switcher / obs skill to flip to a dashboard sting at milestones (e.g. cost crosses $X)."
+  division_of_labor:
+    grafana: "charts, dashboards, alerts, embeds (the numbers)."
+    sveltekit: "the bespoke interactive outliner/brain browser (the structure)."
+    datasette: "local SQLite ad-hoc + forensics."
+  cloud_server:
+    what: "Host Postgres/Timescale + a read-only query API audience apps hit (companion app / Twitch panel) + Grafana."
+    safety: ["read-only", "parameterized/whitelisted queries", "rate-limited", "post-redaction data only"]
+  audience_uses: ["scrub to any past moment", "filter by tool/model/cost", "pull a subtree on demand", "deep-link a node into chat for others to open", "watch live Grafana spend/usage panels"]
+
+# --- CAPTURE & COMPOSITING (VJ-style live layout) -------------------------
+# Goal: full-screen Cursor on one Mac display + the GUI, both into OBS, composed/
+# scaled/animated live like a VJ. Verdict: yes, in real time, with two knobs.
+capture_compositing:
+  sources:
+    cursor_screen:
+      capture: "macOS ScreenCaptureKit (OBS 'macOS Screen Capture' / Display Capture). Native app → must be captured as pixels."
+      permission: "Grant OBS Screen Recording (System Settings → Privacy & Security)."
+    gui:
+      preferred: "OBS Browser Source (CEF) pointed at the local GUI URL → TRUE ALPHA (CSS transparent bg), crisp at canvas res, NO chroma key."
+      caveat: "Browser Source renders OBS's OWN page instance; it shows the HOST's interactions only if view-state is shared over the bus (overlay-viewer supports this)."
+      alt_literal_interactions: "To show your ACTUAL on-screen mouse/pie-menu pops: Window Capture the real browser window + Chroma Key a solid bg (screen/window capture is opaque — no free alpha)."
+  transparency_gotcha: "A screen/display capture is OPAQUE — capturing a 'transparent' browser screen grabs the desktop behind it. Use Browser Source for alpha, or chroma-key a solid bg."
+  machine_layout:
+    two_machine_recommended:
+      mac: "ScreenCaptureKit (Cursor screen) → NDI out (DistroAV)"
+      legion: "OBS: NDI source (Cursor) + Browser Source (GUI, native alpha) → NVENC encode → Twitch/YouTube"
+      why: "Mac stays responsive; Legion does heavy encode."
+    one_machine_mac: "Two Display Captures + Browser Source directly in OBS; Apple VT encode. Fine; watch retina res + thermals."
+  vj_controls:
+    native: "OBS scenes + source transforms (position/scale/crop/rotate/opacity/filters), live scene switch."
+    smooth: "Move Transition plugin (animated reposition/scale); Stream Deck / hotkeys."
+    scripted: "obs skill via obs-websocket — programmatic transforms driven by bus events (PiP swaps, 'zoom GUI up / shrink Cursor')."
+  performance:
+    verdict: "Hardware is fast enough, especially two-machine. OS cooperation = one-time Screen Recording permission."
+    knobs:
+      - "Downscale retina to a 1080p/1440p OBS CANVAS — biggest lever (don't composite native 5K)."
+      - "Wired gigabit for NDI (full NDI 1080p60 ~100–150 Mbps; NDI HX for lower bitrate)."
+      - "Heavy WebGL GUI = local GPU cost only (fine on either box)."
+
+# --- THE OVERLAY APP ------------------------------------------------------
+overlay_app:
+  principle: "Run the real Micropolis GUI environment in overlay mode; brain stream is just another panel/tree inside it."
+  reuses_from_micropolis:
+    - "SvelteKit pie-menu component (Don's, in-development)"
+    - "tabbed windows / window manager"
+    - "the underlying GUI environment + components"
+  brain_panel:
+    is: "A zoomable outliner tree fed by the bus — see overlay-viewer.yml"
+    not: "A dumb auto-scrolling chat log (explicitly NOT Cursor's UI)"
+  sub_specs:
+    overlay_viewer: "overlay-viewer.yml — stable zoomable outliner, semantic mips, read-tracking"
+    bubble_wrangler: "bubble-wrangler.yml — nested reified bubble wrangler: pop-out/link, stacks, typed containers, user-editable piecraft, bouncy windows"
+    playful_waiting: "playful-waiting.yml — entertain/empower while Cursor thinks; infovis; dogfood hot-reload control"
+    summarizers: "summarizers.yml — pluggable summarizer backends (remote→local, off the Mac)"
+    simplifier: "simplifier.yml — server-side screen-scrape/OCR/object-catalog + input injection (drive apps + bus)"
+
+# --- BUILD PHASES (zero model cost until phase 4) -------------------------
+build_phases:
+  - { id: 0, ship: "cursor-tap tails transcript JSONL → local SSE → static HTML proof", cost: zero }
+  - { id: 1, ship: "cursor-mirror watch --live + redact filter (cursor-tap.yml)", cost: zero }
+  - { id: 2, ship: "SvelteKit gateway: /api/events + /overlay/brain + /brain (overlay-viewer.yml)", cost: zero }
+  - { id: 3, ship: "obs skill (obs-websocket) + OBS Browser Source wired", cost: zero }
+  - { id: 4, ship: "Micropolis GUI shell hosts the brain panel (pie menus, tabs)", cost: zero }
+  - { id: 5, ship: "local_summarizer: semantic-zoom LOD ladder (token mipmaps) + chat resummary", cost: zero, note: "local model — free; see overlay-viewer.yml#semantic_zoom" }
+  - { id: 6, ship: "twitch skill: EventSub in + chat commands out", cost: zero }
+  - { id: 7, ship: "youtube skill: polling in + throttled summaries out", cost: mini }
+
+# --- SKILLS TO BUILD (sister-script CLIs) ---------------------------------
+skills:
+  - { id: obs, cli: "obs <scene|source|stream|emit> ...", wraps: "obs-websocket-js / simpleobsws" }
+  - { id: twitch, cli: "twitch <chat|eventsub> ...", wraps: "Twurple / TwitchIO; twitch-cli for testing" }
+  - { id: youtube, cli: "youtube <chat> ...", wraps: "googleapis / google-api-python-client" }
+  - { id: cursor-mirror-live, cli: "cursor-mirror watch --live", wraps: "cursor-mirror (extend)" }
+
+ties_to:
+  - cursor-tap.yml
+  - overlay-viewer.yml
+  - bubble-wrangler.yml
+  - playful-waiting.yml
+  - summarizers.yml
+  - simplifier.yml
+  - ../../process/brain-stream.yml
+  - ../../process/manual-transmission.yml
+  - ../../process/ai-offs.yml
+  - SimHacker/moollm/skills/cursor-mirror
+  - "SimHacker/moollm/skills/cursor-mirror/reference/universal/CURSOR-SQLITE-MODEL.yml"

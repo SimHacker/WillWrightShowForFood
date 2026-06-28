@@ -8,6 +8,11 @@ meta:
   type: [stream_infra, ai_off_proof, repo_show_clock]
   tagline: "Spy on my brain thinking — prompts, shifts, attachments as repo URLs"
   app_seed: ../apps/stream-gateway/
+  app_specs:                       # detailed buildout drafted 2026-06-28
+    architecture: ../apps/stream-gateway/SPEC.yml
+    cursor_tap: ../apps/stream-gateway/cursor-tap.yml
+    overlay_viewer: ../apps/stream-gateway/overlay-viewer.yml
+    overview: ../apps/stream-gateway/README.md
 
 pitch: |
   Tail Cursor session events into one slippery event bus. OBS Browser Source overlay for

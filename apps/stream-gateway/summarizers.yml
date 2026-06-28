@@ -1,0 +1,111 @@
+# summarizers — pluggable summarizer backends for semantic mips + chat resummary
+# Part of: SPEC.yml  |  Feeds: overlay-viewer.yml#semantic_zoom, brain-stream.yml#overlay_ux.resummary
+# One interface, many backends. Start remote (fast to wire), move local (free).
+
+meta:
+  id: summarizers
+  status: spec
+  one_liner: "Swappable summarizer providers behind one interface — remote first, local later, off the Mac if it helps."
+
+# --- KEY INSIGHT: REDACT + MIPMAP IN ONE CALL -----------------------------
+# We ALREADY have to LLM-redact every string before the bus. So the SAME completion
+# also emits the whole mip ladder. One call → redacted text + all LODs. Amortize the
+# ping-pong: one round-trip per node (batched), not one per LOD.
+fused_call:
+  why: "Redaction is mandatory (cursor-tap.yml#privacy). Summarizing is nearly free if the same model does both in one shot."
+  call: "process(text, channel, scope) -> { redacted_full, mips: {0..6}, flags }"
+  emits_all_lods: "icon, kline, acronym, few_words, one_line, summary, redacted_full — in a single completion."
+  amortize: "Batch dirty nodes per settle tick → one request carries many nodes × all LODs; LAN/Remote RTT paid once."
+  cache: "Store the whole ladder at once (cursor-tap.yml#our_derived_db table mips)."
+
+# --- STYLIZED SUMMARIZATION DICTIONARY (coarse LODs) ----------------------
+# Supplied to the model as instructions + a dictionary so coarse rungs are glanceable.
+stylization:
+  symbols:
+    status: { yes: "👍", no: "👎", go: "🟢", caution: "🟡", stop: "🔴" }
+    flow: ["→", "⇄", "↑", "↓", "⤴", "⟳"]
+    note: "Use emoji/unicode for GENERAL concepts; app-specific symbols + k-lines for domain concepts."
+  pin_important: "Names, identifiers, key terms are PINNED — kept verbatim and big enough to read, never abbreviated away."
+  scope_aware: "Given the current scope/focus, omit OUT-OF-SCOPE material FIRST; keep in-focus detail longest."
+  techniques: [intelligent_stemming, preferred_acronyms, k_line_symbols, app_specific_glyphs, focus_sensitive_ellipsis]
+  dictionary: "A pluggable dictionary maps concepts → symbols/acronyms; per-app + per-channel overrides."
+
+# --- PER-CHANNEL RULES (content type drives summarization + redaction) -----
+# Different channels get different rules + dictionaries, like a language mode per block.
+channels:
+  user_prompt:   { redact: "light", style: "keep intent verbatim; pin asks", note: "what Don typed" }
+  thinking:      { redact: "heavy (private half-thoughts)", style: "gist + k-lines; collapse ramble" }
+  code_block:    { redact: "secrets/keys only", style: "keep code; pretty-print/indent; never paraphrase logic", view: "terminal/code view" }
+  natural_language: { redact: "medium", style: "paragraph→one-line→few-words ladder" }
+  shell:         { redact: "strip paths/secrets", style: "pretty-print + indent for readability", view: "green-on-black terminal" }
+  json_yaml:     { redact: "values w/ secrets", style: "abbreviate SYNTACTICALLY (keep structure), not prose", view: "structured outliner" }
+  markdown:      { redact: "medium", style: "respect block language modes; ignore html tags/attrs but KEEP text" }
+  per_block_language: "Treat typed markdown fenced blocks by their language mode (json/yaml/bash/...) — each its own rule + view."
+
+# --- THE INTERFACE (all providers implement this) -------------------------
+interface:
+  call: "process(text, channel, scope) -> { redacted_full, mips, flags }   # fused redact+mipmap"
+  legacy: "summarize(text, lod) still available for single-LOD top-ups"
+  batch: "processMany([{id, text, channel, scope}]) -> [{id, redacted_full, mips}]  # amortize round-trips"
+  contract:
+    - "Pure-ish: same (text, channel, scope) → cacheable by content_hash+channel+scope (the mip cache)."
+    - "Bounded latency: provider declares typical ms; slow providers run async, never block the overlay."
+    - "Degrade: on error/timeout, return truncation fallback (robust-first), mark mips 'provisional'."
+
+# --- PROVIDERS (registry; pick per-deployment or per-LOD) ------------------
+providers:
+  remote_openai:
+    kind: remote
+    when: "Phase 1 — fastest to wire; no local setup."
+    models: ["small/cheap chat model for short LODs"]
+    cost: per_token
+    pros: "zero infra; good quality"
+    cons: "costs money; network latency; data leaves the box (privacy gate FIRST)"
+  remote_anthropic:
+    kind: remote
+    when: "alt remote; same tradeoffs"
+  local_mac_ollama:
+    kind: local
+    host: mac
+    engine: "Ollama / llama.cpp (small instruct model)"
+    cost: zero
+    pros: "free; offline; private"
+    cons: "competes with Cursor for Mac CPU/GPU/RAM — can slow the dev box"
+  local_pc_ollama:
+    kind: local
+    host: legion
+    engine: "Ollama (NVIDIA GPU)"
+    cost: zero
+    transport: "ping-pong over LAN — gateway POSTs text to the PC, gets summary back"
+    pros: "free; FAST on NVENC-class GPU; KEEPS LOAD OFF THE MAC (preferred local option)"
+    cons: "needs the PC up + a tiny HTTP summarizer service; LAN round-trip (fine, debounced)"
+
+# --- PLACEMENT GUIDANCE ---------------------------------------------------
+placement:
+  default_path: "remote_openai (phase 1) → local_pc_ollama (phase 5, free + off the Mac)."
+  rule: "Prefer getting the summarizer OFF the Mac so it never slows Cursor. PC GPU is the natural home."
+  ping_pong:
+    flow: "gateway (Mac) → HTTP POST {text,lod} → summarizer svc (PC) → {out} → gateway → mip cache → bus"
+    batching: "coalesce dirty nodes into one batched request per settle tick; LAN RTT amortized."
+    acceptable: "Yes — summaries are async + cached; a few-hundred-ms hop never blocks reading."
+
+# --- ROUTING (mix providers) ----------------------------------------------
+routing:
+  by_lod: "Cheap LODs (icon/kline/few_words) → tiny local model; rich LODs (summary) → bigger model if desired."
+  by_load: "Fall back remote→local or local→remote on outage/queue depth."
+  by_privacy: "Sensitive content → local-only (never send to a remote provider), even if remote is default."
+  config: "Per-rig in stage.brain_stream.summarizer (rig-schema 0.2)."
+
+# --- CACHE (shared with semantic mips) ------------------------------------
+cache:
+  store: "our derived DB (cursor-tap.yml#our_derived_db, table: mips) + .moollm/stream-gateway/mips/"
+  key: "content_hash + lod + provider_profile"
+  invalidation: "content change re-dirties only changed nodes (debounced)."
+
+privacy: "ALL text passes the cursor-tap privacy gate BEFORE any remote provider. Remote providers see only redacted text; sensitive nodes pin to local-only."
+
+ties_to:
+  - SPEC.yml
+  - cursor-tap.yml
+  - overlay-viewer.yml
+  - ../../process/brain-stream.yml

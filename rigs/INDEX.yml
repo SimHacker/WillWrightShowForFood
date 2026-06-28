@@ -18,6 +18,8 @@ entries:
   pdp10-maclisp-flair-lap.SETUP.md: "Rig DNA — Lars make-it-so anchor — idempotent ITS boot protocol"
   lisp-machine-symbolics.rig.yml: "Hack-Off Symbolics camp — Genera on VLM"
   lisp-machine-lmi.rig.yml: "Hack-Off LMI camp — Lambda on LambdaDelta"
+  brain-stream-dual-laptop.rig.yml: "Screencast rig — Mac source + Legion NVENC encoder; Cursor brain tap + OBS overlay (first multi-computer `stage` rig, schema 0.2)"
+  brain-stream-dual-laptop.SETUP.md: "Rig DNA — dual-laptop streaming; emailable; LLM idempotent install"
 
 base:
   note: "Future: rigs/base/*.rig.yml partial rigs to extend"

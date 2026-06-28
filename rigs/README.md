@@ -19,6 +19,7 @@ Schema: [`../schemas/rig-schema.yml`](../schemas/rig-schema.yml) · Challenge fa
 | [`pdp10-maclisp-flair-lap.rig.yml`](pdp10-maclisp-flair-lap.rig.yml) + [`.SETUP.md`](pdp10-maclisp-flair-lap.SETUP.md) | MACLISP on ITS |
 | [`lisp-machine-symbolics.rig.yml`](lisp-machine-symbolics.rig.yml) | Hack-Off — Symbolics camp |
 | [`lisp-machine-lmi.rig.yml`](lisp-machine-lmi.rig.yml) | Hack-Off — LMI camp |
+| [`brain-stream-dual-laptop.rig.yml`](brain-stream-dual-laptop.rig.yml) + [`.SETUP.md`](brain-stream-dual-laptop.SETUP.md) | Screencast — Mac source + Legion NVENC; Cursor brain tap + OBS overlay (multi-computer `stage`) |
 
 **Submit yours:** PR `rigs/<slug>.rig.yml` + `rigs/<slug>.SETUP.md` + line in [`INDEX.yml`](INDEX.yml). Compete on [**Micropolis AI Drag Race**](../process/micropolis-ai-drag-race.yml).
 

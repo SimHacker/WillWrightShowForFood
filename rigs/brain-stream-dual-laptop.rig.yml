@@ -1,0 +1,171 @@
+# Brain-Stream Dual-Laptop — Mac (source) + Legion (encoder) Cursor/OBS overlay rig
+# Schema: ../schemas/rig-schema.yml (>= 0.2, uses `stage`)
+# Specs: ../apps/stream-gateway/{SPEC,cursor-tap,overlay-viewer}.yml
+
+rig:
+  id: brain-stream-dual-laptop
+  name: "Brain-Stream Dual-Laptop (Mac source + Legion encoder)"
+  version: "0.1"
+  author: don-hopkins
+  extends: stick-shift-composer-moollm.rig.yml
+  rig_classes: [stick_shift, orchestrated]
+  description: |
+    Don's screencasting rig: a Mac runs Cursor (the brain we tap) + the Micropolis-GUI
+    brain-stream viewer; a Lenovo Legion runs OBS + NVENC and composes it all VJ-style to
+    Twitch/YouTube. A stable, zoomable overlay replaces Cursor's scroll-jacking chat — both
+    locally (docked over Cursor's history, input shows through) and on-stream.
+
+lifecycle:
+  download:
+    steps:
+      - "git clone https://github.com/SimHacker/WillWrightShowForFood"
+      - "git clone https://github.com/SimHacker/moollm"
+    urls:
+      - "https://cursor.com — Cursor (Mac)"
+      - "https://obsproject.com — OBS Studio (Legion; optional on Mac)"
+      - "https://distroav.org — DistroAV (NDI) plugin for OBS"
+      - "https://ollama.com — local summarizer (free semantic mips)"
+  install:
+    steps:
+      - "Mac: cd WillWrightShowForFood && nvm use && corepack enable && pnpm install"
+      - "Mac: grant OBS/the capturer Screen Recording (System Settings → Privacy & Security)"
+      - "Legion: install OBS + DistroAV; confirm NVENC under Settings → Output"
+      - "Mac: install Ollama + pull a small model (e.g. a 3-8B instruct) for summaries"
+      - "Wire Mac ⇄ Legion on WIRED gigabit ethernet (NDI hates Wi-Fi)"
+    verify: "pnpm run verify  &&  obs-websocket reachable from the obs skill"
+  configure:
+    steps:
+      - "Mac: run stream-gateway (SvelteKit) — serves bus + /overlay/brain + /brain on LAN"
+      - "Mac: start the tap — `cursor-mirror watch --live --sink sse` (privacy gate ON)"
+      - "Mac: dock the viewer in cursor_chat_replacement mode over Cursor's history pane"
+      - "Legion OBS: add NDI source (Cursor screen from Mac) + Browser Source (GUI URL, native alpha)"
+      - "Legion OBS: enable obs-websocket (port 4455) for the `obs` skill"
+      - "Legion OBS: build scenes (see stage.obs.scenes); set canvas 1920x1080"
+    files:
+      - "apps/stream-gateway/SPEC.yml"
+      - "apps/stream-gateway/overlay-viewer.yml"
+    env:
+      STREAM_GATEWAY_URL: "http://<mac>.local:5371"
+      OBS_WS: "ws://<legion>.local:4455"
+  use:
+    workflow: |
+      Type into REAL Cursor (native input bar — model switcher, attach). The bloody scrollback
+      above is replaced by the docked viewer: stable scroll, bookmarks, per-node + semantic zoom.
+      Zoom the viewer to fullscreen to browse dirs/code; snap back to docked to chat. On-stream,
+      VJ the Cursor capture + GUI browser-source live (Move Transition / Stream Deck / obs skill).
+    contexts: [show_jam, design_in_public, harvest, homeplay]
+  replicate:
+    checklist:
+      - "Two machines: Mac (macOS) + a Windows/NVIDIA laptop; wired gigabit between them"
+      - "Run download + install + configure"
+      - "pnpm run verify passes; OBS shows NDI + Browser sources; stream test to a private target"
+    estimated_time: "2–4 hours first time (OBS scenes + permissions are the slow part)"
+  mash_up:
+    compose_with:
+      - "Fork to single-machine: drop the Legion; OBS on Mac with Apple VT (see stage.machines)"
+      - "Graft a retro rig's components.emulators to screencast an emulator alongside Cursor"
+    graft:
+      - "Take stage.obs.scenes from another streamer's rig; merge plugins"
+    warnings:
+      - "Single-machine loses NVENC headroom — watch retina res + thermals"
+
+components:
+  editor: { name: Cursor, version: "latest" }
+  models:
+    - { name: "composer-2.5-fast", tier: budget, when: "grunt + execution (Included/free)" }
+    - { name: "opus-tier", tier: premium, when: "architecture + lore judgment" }
+    - { name: "local-summarizer (Ollama)", tier: free, when: "semantic-zoom mips + chat resummary" }
+  mcp_servers: []
+  skills:
+    - "SimHacker/moollm/skills/cursor-mirror"        # the tap (watch --live)
+    - "SimHacker/moollm/skills/thoughtful-commitment"
+    - "apps/stream-gateway skills: obs, twitch, youtube, cursor-mirror-live (to build)"
+  repos:
+    - "SimHacker/WillWrightShowForFood"
+    - "SimHacker/moollm"
+  moollm:
+    plugin: kernel/moollm-plugin.yml
+    skills_loaded: [cursor-mirror]
+
+# --- THE PHYSICAL SETUP (schema 0.2 `stage`) ------------------------------
+stage:
+  machines:
+    - id: mac-main
+      role: [source, capture, control]
+      os: "macOS"
+      gpu: "Apple silicon (VideoToolbox)"
+      displays:
+        - { id: d1, resolution: "retina", scaled: "to 1080p canvas", shows: "Cursor (full screen) + Electron transparent click-through overlay (the SvelteKit client) docked over the history pane; ON AIR" }
+        - { id: d2, resolution: "retina", scaled: "to 1080p canvas", shows: "PRIVATE off-stream screen (invisible to OBS): email, private browser, script/plans, chat to coordinate w/ bots, Finder for drag-drop into Cursor" }
+      runs: ["Cursor", "stream-gateway (SvelteKit: bus + client + simplifier)", "Electron overlay (alpha hit-test, Kandu-style)", "cursor-mirror watch --live", "OBS (browser overlay on Mac screen)", "ScreenCaptureKit", "DistroAV NDI out"]
+    - id: legion-encoder
+      role: [encoder, streamer, source]
+      os: "Windows"
+      gpu: "NVIDIA (NVENC)"
+      displays:
+        - { id: e1, resolution: "1080p+", scaled: "native", shows: "OBS control; Steam Sims 1 (Windows-only) for Sims performances" }
+      runs: ["OBS Studio", "DistroAV", "obs-websocket", "obs skill client", "Steam Sims 1", "local Ollama summarizer (off-loads Mac)"]
+  capture_sources:
+    - { id: cap-cursor, kind: display_capture, on_machine: mac-main, target: "Cursor full-screen (display d1)", alpha: none, notes: "native app → pixels; downscale to canvas" }
+    - { id: src-gui, kind: browser_source, on_machine: legion-encoder, target: "http://<mac>.local:5371/overlay/brain", alpha: native, notes: "rendered in OBS CEF — true alpha, no key, crisp" }
+    - { id: src-game, kind: ndi, on_machine: mac-main, target: "Micropolis game window (optional)", alpha: none, notes: "send as NDI if you want it as pixels" }
+  transport:
+    - { kind: ndi, from: "mac-main/cap-cursor", to: legion-encoder, link: "wired gigabit ethernet", bitrate_note: "full NDI 1080p60 ~100-150 Mbps; NDI HX to reduce" }
+    - { kind: lan_http, from: "mac-main/stream-gateway", to: "legion-encoder (OBS Browser Source) + viewers", link: "LAN (public relay for remote viewers)" }
+  obs:
+    on_machine: legion-encoder
+    encoder: "NVENC"
+    canvas: "1920x1080"
+    websocket: { enabled: true, port: 4455, controlled_by: "obs skill (obs-websocket)" }
+    scenes:
+      - { name: "Brain Focus", sources: ["src-gui (full)"], layout: "viewer fullscreen" }
+      - { name: "Code + Brain", sources: ["cap-cursor (left)", "src-gui (right rail, alpha)"], layout: "split — Cursor + overlay" }
+      - { name: "PiP", sources: ["cap-cursor (full)", "src-gui (corner)"], layout: "picture-in-picture" }
+      - { name: "Game + Brain", sources: ["src-game (full)", "src-gui (overlay)"], layout: "Micropolis + brain HUD" }
+    plugins: [DistroAV, "Move Transition", "Advanced Scene Switcher"]
+  overlay_layout:
+    - id: local-cursor-replace
+      source: "stream-gateway viewer (local window)"
+      covers: "Cursor chat HISTORY pane on display d1"
+      leaves_exposed: "Cursor input bar (native model switcher / attach / type-through)"
+      scale_zoom: "docked | fullscreen-on-demand"
+      mode_ref: "apps/stream-gateway/overlay-viewer.yml#rendering.modes.cursor_chat_replacement"
+    - id: stream-brain-rail
+      source: src-gui
+      covers: "right rail of the program canvas"
+      leaves_exposed: "Cursor capture on the left"
+      scale_zoom: "VJ — scale/animate via Move Transition / obs skill"
+      mode_ref: "apps/stream-gateway/overlay-viewer.yml#rendering.modes.overlay"
+  stream_targets:
+    - { platform: twitch, protocol: rtmps, surfaces: [obs_baked, companion_web_app, twitch_extension] }
+    - { platform: youtube, protocol: rtmps, surfaces: [obs_baked, companion_web_app] }
+    - { platform: local_record, protocol: file, surfaces: [obs_baked] }
+  brain_stream:
+    gateway: apps/stream-gateway
+    tap: "cursor-mirror watch --live + SQLite cross-ref (apps/stream-gateway/cursor-tap.yml)"
+    summarizer: "local Ollama on the PC (free, off the Mac) — fused redact+mipmap (apps/stream-gateway/summarizers.yml)"
+    privacy_gate: "deep-snitch + path-strip + LLM redact (fused w/ mipmap) before bus"
+    simplifier: "apps/stream-gateway/simplifier.yml — screen-scrape/OCR/object-catalog + key/click injection (Sims on PC)"
+    bubble_wrangler: "apps/stream-gateway/bubble-wrangler.yml — the playful overlay UI substrate"
+
+declare:
+  token_budget_bid: "n/a (infra rig, not a Code That Spec entry)"
+  honesty: "cursor-mirror spend export is the ref if run as a challenge"
+
+proof:
+  setup_md: rigs/brain-stream-dual-laptop.SETUP.md
+  setup_dna:
+    canonical_rig_yaml: "https://raw.githubusercontent.com/SimHacker/WillWrightShowForFood/main/rigs/brain-stream-dual-laptop.rig.yml"
+    canonical_setup_md: "https://raw.githubusercontent.com/SimHacker/WillWrightShowForFood/main/rigs/brain-stream-dual-laptop.SETUP.md"
+    state_dir: ".rig/brain-stream-dual-laptop/"
+
+costume:
+  lets_make_a_deal: "Two laptops in a flight case — the Mac cockpit and the NVIDIA encode engine; a VJ mixer between them."
+
+see_also:
+  - ./_TEMPLATE.SETUP.md
+  - ../schemas/rig-schema.yml
+  - ../apps/stream-gateway/SPEC.yml
+  - ../apps/stream-gateway/cursor-tap.yml
+  - ../apps/stream-gateway/overlay-viewer.yml
+  - ../process/brain-stream.yml
