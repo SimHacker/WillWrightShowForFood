@@ -71,6 +71,17 @@ shows:
       game-show-wigcercize.yml: "Wigcercize! — a wig GAME SHOW (MC: Boogaloo Stu). Competitive wigcercizes in outlandish wigs from the Wig-O-Matic."
       micropolis-ai-drag-race.yml: "★ MICROPOLIS AI DRAG RACE — rig personas werk specs; Code That Spec minis; Stiletto Sprint; lip-sync your commits; harvest runway. Variety game show."
 
+# SIMOPOLIS HUB — the architecture under every bridge (hub-and-spoke; "fly through Atlanta")
+bridges_architecture:
+  hub: "Simopolis is the HUB that all bridges lead to — a git-checked-in store holding many facets of each character in high-fidelity, round-trippable data."
+  spokes: "Each game bridges to/from Simopolis (a spoke). 'Proxi <-> Sims' really means Proxi <-> Simopolis <-> Sims; any game-to-game path routes THROUGH the hub. Hub-and-spoke — like flying through Atlanta."
+  player_layer: "At a higher level, players define syncing workflows, constraints, and transformations between games and the hub (and onward to other games)."
+  decoupling: "In principle a game need not know about any other game — only how to round-trip its own facets with Simopolis. In practice a game MAY look for specific data it recognizes from a compatible game and special-case importing it."
+  phasing:
+    - "1. Generic hub/spoke first — every game round-trips cleanly with Simopolis."
+    - "2. Then shortcut optimizations + mutual schema recognition between compatible games (direct fast paths, special-cased imports)."
+  note: "So the bridge seeds below are all spokes on this hub; the ⇔ in each is shorthand for ⇔ Simopolis ⇔."
+
 axes_note: "A person appears in multiple shows (solo + group + bridge). Will especially anchors several. The collection holds multiple FORMATS: design-interview, series, group, bridge, game-show."
 
 backlog_ideas:
