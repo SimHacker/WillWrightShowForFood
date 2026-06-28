@@ -73,10 +73,12 @@ These were **hidden-camera** pieces with **real, unsuspecting people**, not acto
 tele-robotic "wizard-of-Oz" performance. **Servitude** ("Restaurant") put a fully functional 6-foot
 robot waiter into a **BBQ-and-pies family restaurant in Oakland** (a food-oriented spot — hence the
 pies on the menu), surrounded by hired extras, to serve an unknowing customer.
-**Empathy** planted a broken-down, "damaged" robot by a dumpster on a side street in **Berkeley,
-California**; as people passed, it pleaded "Help me," and hidden cameras caught reactions from apathy
-to empathy. (Don has noted, deadpan, that the robot's injuries and Professor Johnson's phone number
-were fake, and the robot waiter was fired.) Beyond NBC's goal of keeping viewers through ad breaks,
+**Empathy** planted a broken-down, "damaged" robot on a side street in **Oakland**; as people passed,
+it pleaded "Help me." The crew worked with a **street-filming permit** (shown to curious police who
+stopped to ask what was going on), hiding across the street inside Don's **FMC Motorcoach** — remote-
+controlling Slats and filming through its shaded windows — to catch reactions from apathy to empathy.
+(Don has noted, deadpan, that the robot's injuries and Professor Johnson's phone number were fake,
+and the robot waiter was fired.) Beyond NBC's goal of keeping viewers through ad breaks,
 Will's real interest was probing how people interact with, empathize with, and can be convinced to
 play along with robots.
 
