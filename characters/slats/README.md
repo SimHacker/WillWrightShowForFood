@@ -9,6 +9,7 @@ reprogram, iterate.
 **Primary sources** — the real Stupid Fun Club **One Minute Movies** (written by Will Wright, robot
 brain by Don Hopkins), with transcripts: [`one-minute-movies.md`](one-minute-movies.md) — including
 [*Servitude*](one-minute-movie-servitude.md), where the robot says *"hello, my name is Slats."*
+**Photos:** [`photos.md`](photos.md) — including the slatted face that gives him his name.
 
 See [`../../repo-shows/will-wright/slats-reincarnation.yml`](../../repo-shows/will-wright/slats-reincarnation.yml) · [Browse for Will](../../repo-shows/will-wright/BROWSE.md)
 
