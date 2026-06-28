@@ -22,6 +22,10 @@ The films' title-card masters credit the series itself: **Minute Movies Producti
 In this repo, **Slats** is our portrayal of that Stupid Fun Club robot brain — and "Servitude" is the
 film where the robot literally introduces itself: *"hello, my name is Slats."*
 
+![Slats on a Berkeley street corner with the Stupid Fun Club crew during a hidden-camera shoot](slats-street-corner.png)
+
+More photos: [`photos.md`](photos.md).
+
 ## The films
 
 | Film | About | Transcript |

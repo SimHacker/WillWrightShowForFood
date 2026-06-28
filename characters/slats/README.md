@@ -1,10 +1,13 @@
-# Slats
+# Slats 🤖
 
 **Fictional sidekick** — not a human guest invitation.
 
-Slats is the robot Don programmed at Will Wright's **Stupid Fun Club**. The **RoboResurrection**
-quest on the Will Wright kickoff show: find the code, revive him, call-in sidekick, interview,
-reprogram, iterate.
+![Slats's face — a stack of horizontal metal slats with cut-out eyes and a mouth slot (the source of the name)](slats-face.png)
+
+Slats is the robot Don programmed at Will Wright's **Stupid Fun Club**. The name says it all: his
+face is a stack of metal **slats** with cut-out eyes and a mouth. The **RoboResurrection** quest on
+the Will Wright kickoff show: find the code, revive him, call-in sidekick, interview, reprogram,
+iterate.
 
 **Primary sources** — the real Stupid Fun Club **One Minute Movies** (written by Will Wright, robot
 brain by Don Hopkins), with transcripts: [`one-minute-movies.md`](one-minute-movies.md) — including

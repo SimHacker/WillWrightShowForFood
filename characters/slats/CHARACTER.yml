@@ -36,6 +36,20 @@ invitation:
   status: n_a
   note: "Not a human guest — quest goal on Will Wright kickoff show"
 
+media:
+  photos:
+    - { file: slats-face.png, caption: "The slatted face (cut-out eyes + mouth) that gives Slats his name" }
+    - { file: slats-with-sfc-emblem.png, caption: "At the Stupid Fun Club workshop with the cast SFC globe emblem" }
+    - { file: slats-street-corner.png, caption: "On a Berkeley street corner; a passerby watches as crew operate nearby" }
+    - { file: slats-crew-closeup.png, caption: "Closer crop of the crew operating Slats" }
+    - { file: slats-berkeley-street-dusk.png, caption: "On a Berkeley street at dusk, beside a crew member" }
+    - { file: stupid-fun-club-seal-matte.png, caption: "Stupid Fun Club globe seal (matte)" }
+    - { file: stupid-fun-club-seal-gloss.png, caption: "Stupid Fun Club globe seal (glossy)" }
+  films:
+    - { file: one-minute-movie-empathy-titlecard.png, caption: "Empathy — 1MMs title-card master" }
+    - { file: one-minute-movie-servitude-titlecard.png, caption: "Servitude — 1MMs title-card master" }
+  gallery: photos.md
+
 see_also:
   - { path: one-minute-movies.md, why: "Primary sources — the SFC One Minute Movies + transcripts (Slats's voice)" }
   - { path: one-minute-movie-servitude.md, why: "'hello, my name is Slats' — the canonical waiter film + transcript" }
