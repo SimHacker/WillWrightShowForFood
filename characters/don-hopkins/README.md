@@ -15,6 +15,8 @@ here; facts and timelines live in [`career/`](career/INDEX.yml).
 **Wanna chat?** [Open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues)
 or submit a PR.
 
+**Photos:** [`media.md`](media.md) — incl. the orange *LISP CHINE NUAL* t-shirt on Queen's Day, Amsterdam.
+
 ## Now
 
 Porting **Micropolis** (open-source SimCity) to the web — WASM + SvelteKit. Running

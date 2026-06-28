@@ -37,6 +37,7 @@ show_suggestions:
   - "Voting technology & ballot design — HCI where usability is democracy-critical"
 
 see_also:
+  - { path: media.md, why: "The TrackPoint 'So hot, we had to make it red' IBM ThinkPad ad" }
   - { path: CARD.yml, why: "Universal CARD — invokable abilities for show segments" }
   - { path: invitation.md, why: "Public invitation draft" }
   - { path: ../ted-nelson/, why: "Friend; the 'Têd-à-Têd Talk' pairing — see repo-shows/ted-nelson/" }

@@ -16,6 +16,7 @@ and we do not speak as him without consent.
 | **Browse any order** | [`repo-shows/will-wright/BROWSE.md`](../../repo-shows/will-wright/BROWSE.md) |
 | **Suggested sequence** | [`guest-will playlist`](../../process/entryways/guest-will.md) |
 | **Trading card / abilities** | [`CARD.md`](CARD.md) · [`CARD.yml`](CARD.yml) |
+| **Photos & media** (SimCity/Sims history, BattleBots) | [`media/`](media/) |
 | **1996 Stanford talk** (centerpiece) | [source bundle](../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/) · [YouTube](https://www.youtube.com/watch?v=nsxoZXaYJSk) |
 | **Yaml girder** | [`CHARACTER.yml`](CHARACTER.yml) |
 
