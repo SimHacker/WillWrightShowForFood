@@ -71,7 +71,8 @@ playground the **RoboResurrection** wants to rebuild and play with again
 
 These were **hidden-camera** pieces with **real, unsuspecting people**, not actors — a real-time
 tele-robotic "wizard-of-Oz" performance. **Servitude** ("Restaurant") put a fully functional 6-foot
-robot waiter into a coffee shop, surrounded by hired extras, to serve an unknowing customer.
+robot waiter into a **BBQ-and-pies family restaurant in Oakland** (a food-oriented spot — hence the
+pies on the menu), surrounded by hired extras, to serve an unknowing customer.
 **Empathy** planted a broken-down, "damaged" robot by a dumpster on a side street in **Berkeley,
 California**; as people passed, it pleaded "Help me," and hidden cameras caught reactions from apathy
 to empathy. (Don has noted, deadpan, that the robot's injuries and Professor Johnson's phone number

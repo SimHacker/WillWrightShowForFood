@@ -31,9 +31,9 @@ service goes comically wrong ("there's no soup in the bowl"), Slats negotiates i
 down from a hopeful 10 — the punchline being a robot far more anxious about its performance score
 than about the meal.
 
-This was a **hidden-camera** piece ("Restaurant"): a real, unsuspecting coffee-shop customer was
-served by a fully functional 6-foot robot waiter (designed and built by Will Wright), surrounded by
-hired extras.
+This was a **hidden-camera** piece ("Restaurant"): a real, unsuspecting customer at a
+**BBQ-and-pies family restaurant in Oakland** was served by a fully functional 6-foot robot waiter
+(designed and built by Will Wright), surrounded by hired extras.
 
 ## Transcript
 
