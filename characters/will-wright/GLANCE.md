@@ -7,5 +7,6 @@
 | **Invitation** | [`invitation.md`](invitation.md) · [`BROWSE.md`](../../repo-shows/will-wright/BROWSE.md) |
 | **Card** | [`CARD.yml`](CARD.yml) · [`CARD.md`](CARD.md) |
 | **Playlist** | [`guest-will`](../../process/entryways/guest-will.md) |
+| **Galleries** | [`media/`](media/README.md) · [Russian Space Junk](media/russian-space-junk.md) · [Artwork](media/artwork.md) |
 
 *Public portrayal — not Will. He may edit or delete anytime. [`CHARACTER.yml`](CHARACTER.yml)*

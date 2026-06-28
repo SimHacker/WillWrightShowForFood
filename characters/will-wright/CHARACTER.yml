@@ -124,6 +124,13 @@ content:
   description: DESCRIPTION.md
   show: ../../repo-shows/will-wright/
 
+media:
+  gallery: media/README.md
+  galleries:
+    - { path: media/README.md, what: "SimCity/Sims history, Rug-O-Matic, programmer art, robot-combat meetup (LA)" }
+    - { path: media/russian-space-junk.md, what: "Will's Soviet/Russian spaceflight-hardware collection — Globus IMP navigation globes, Cyrillic control panels, hand controllers, hatch, ejection seat (photos by Don Hopkins)" }
+    - { path: media/artwork.md, what: "Will's mixed-media relief constructions — evolution/systems piece, cell-division piece, terrain & city reliefs" }
+
 see_also:
   - { path: README.md, why: "Human portrait — start here" }
   - { path: GLANCE.md, why: "One-screen sniff" }
@@ -132,6 +139,8 @@ see_also:
   - { path: ../../process/entryways/guest-will.md, why: "Suggested playlist" }
   - { path: ../../repo-shows/will-wright/BROWSE.md, why: "Pick-any-order landing" }
   - { path: ../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "1996 centerpiece" }
+  - { path: media/russian-space-junk.md, why: "Will's Soviet space-hardware collection (photos by Don)" }
+  - { path: media/artwork.md, why: "Will's mixed-media relief artwork" }
   - { path: ../don-hopkins/CHARACTER.yml, why: "Host — Sims + SFC shared lineage" }
   - { path: ../chaim-gingold/CARD.yml, why: "Building SimCity — reverse diagrams" }
   - { path: ../stone-librande/CARD.yml, why: "One-page design discipline" }
