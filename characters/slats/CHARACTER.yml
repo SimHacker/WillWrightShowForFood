@@ -39,10 +39,10 @@ invitation:
 media:
   photos:
     - { file: slats-face.png, caption: "The slatted face (cut-out eyes + mouth) that gives Slats his name" }
-    - { file: slats-with-sfc-emblem.png, caption: "At the Stupid Fun Club workshop with the cast SFC globe emblem" }
-    - { file: slats-street-corner.png, caption: "On a Berkeley street corner; a passerby watches as crew operate nearby" }
-    - { file: slats-crew-closeup.png, caption: "Closer crop of the crew operating Slats" }
-    - { file: slats-berkeley-street-dusk.png, caption: "On a Berkeley street at dusk, beside a crew member" }
+    - { file: slats-with-sfc-emblem.png, caption: "At the Stupid Fun Club workshop in Emeryville, with the cast SFC globe emblem" }
+    - { file: slats-street-corner.png, caption: "Street corner across from Au Coquelet Cafe (Berkeley); a passerby watches as crew operate Slats" }
+    - { file: slats-crew-closeup.png, caption: "Closer crop of the crew operating Slats across from Au Coquelet Cafe" }
+    - { file: slats-berkeley-street-dusk.png, caption: "Don with a coffee + muffin in front of Au Coquelet Cafe Restaurant (Berkeley), Slats beside him at dusk" }
     - { file: stupid-fun-club-seal-matte.png, caption: "Stupid Fun Club globe seal (matte)" }
     - { file: stupid-fun-club-seal-gloss.png, caption: "Stupid Fun Club globe seal (glossy)" }
   films:
