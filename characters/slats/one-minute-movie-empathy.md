@@ -37,17 +37,17 @@ captured how real passersby reacted — from apathy to empathy.
 ## Transcript
 
 ```
-0:07  help me — I require Human Assistance. Will you please help me?
-0:14  can you hear me?
-0:22  hello? excuse me, excuse me — I have fallen over. There has been an accident.
-0:30  what's the matter? — I require Human Assistance.
-0:41  can you describe the damage? — no, I can't really describe the damage. I... I need
-      Professor Johnson. — you need Professor Johnson? what's the phone number? — 555-12-1 —
-0:48  I'm scared. — you scared? we scared of you. — I can't get that, you wait a minute — they
-      said your car can't be complete. you sure that's the right number?
-1:04  we look him up in the yellow Pages. — yes. — thank you. — you're welcome. — thank you. —
-      you're welcome.
-1:12  come on, so just hang in there, okay.
+0:07  Help me — I require Human Assistance. Will you please help me?
+0:14  Can you hear me?
+0:22  Hello? Excuse me, excuse me — I have fallen over. There has been an accident.
+0:30  What's the matter? — I require Human Assistance.
+0:41  Can you describe the damage? — No, I can't really describe the damage. I... I need
+      Professor Johnson. — You need Professor Johnson? What's the phone number? — 555-12-1 —
+0:48  I'm scared. — You scared? We scared of you. — I can't get that, you wait a minute — they
+      said your call can't be completed. You sure that's the right number?
+1:04  We look him up in the Yellow Pages. — Yes. — Thank you. — You're welcome. — Thank you. —
+      You're welcome.
+1:12  Come on, so just hang in there, okay.
 ```
 
 — Source: [YouTube](https://www.youtube.com/watch?v=KXrbqXPnHvE). See the
