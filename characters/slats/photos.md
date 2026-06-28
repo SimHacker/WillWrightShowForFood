@@ -80,10 +80,15 @@ Will Wright and Slats setting up for the *Servitude* robot-waiter shoot at the *
 
 ## Stupid Fun Club emblem
 
+![The cast Stupid Fun Club globe emblem mounted on the wall at the Stupid Fun Club in Emeryville](stupid-fun-club-seal-emeryville.png)
+
+The cast **Stupid Fun Club** globe emblem on the wall at the SFC in **Emeryville** (photo by Don
+Hopkins).
+
 ![Stupid Fun Club globe seal — matte](stupid-fun-club-seal-matte.png)
 ![Stupid Fun Club globe seal — glossy](stupid-fun-club-seal-gloss.png)
 
-The Stupid Fun Club globe seal.
+The Stupid Fun Club globe seal (renders).
 
 ---
 
