@@ -1,0 +1,43 @@
+# Character Endosymbiosis — the biology of moving content between games
+# Girder for CHARACTER-ENDOSYMBIOSIS.md (instance-first article).
+# The frame under the Simopolis hub-and-spoke bridges (repo-shows/INDEX.yml#bridges_architecture).
+
+meta:
+  id: character-endosymbiosis
+  one_line: "Games are cells, content lives in organelles (directories), and Simopolis is the shared cytoplasm through which characters, rooms, objects, and stories diffuse, trade, and round-trip."
+  article: CHARACTER-ENDOSYMBIOSIS.md
+  inspiration: "Lynn Margulis's endosymbiotic theory — complex cells arose when free-living microbes merged and became organelles (mitochondria, chloroplasts). Evolution by cooperation and merger, not only competition."
+
+biology:
+  endosymbiosis: "A bigger cell takes in a smaller living thing; instead of digesting it, they cooperate. Over time the guest becomes a permanent organelle that keeps its own DNA and metabolism."
+  cells_are_communities: "A eukaryotic cell is a confederation of once-independent lineages living behind shared membranes."
+  membranes: "Membranes are selectively permeable — they decide what crosses, in which direction, under what conditions."
+  diffusion: "Molecules spread across membranes down gradients; concentration in one compartment bleeds into its neighbors."
+  currency: "ATP is the cell's energy currency; trade between compartments is mediated by carriers and exchangers."
+
+the_mapping:
+  game_is_cell: "Each game is a cell/organelle with its own internal metabolism (rules, formats, behaviors)."
+  simopolis_is_cytoplasm: "Simopolis is the host cytoplasm / hub: the shared medium (git-checked-in, hi-fidelity, round-trippable) through which organelles trade. Every bridge is a spoke; cross-game paths route through it."
+  organelles_are_directories: "Organelles ⇔ sub-directories — in PARALLEL (sibling organelles) and NESTED (organelles within organelles). The filesystem IS the cell; directory boundaries are membranes."
+  content_is_molecules: "Characters, rooms, environments, objects, stories, and other content are the molecules/genes that move between organelles."
+  membranes_are_io: "Each game's import/export boundary is its membrane — selectively permeable. It decides what it accepts and emits."
+  diffusion_is_property_flow: "A trait, mood, relationship, or story beat can DIFFUSE from one organelle into siblings (e.g., a Mind Mirror personality reading diffusing into sibling characters)."
+  constraints_are_permeability: "Player-defined syncing workflows, constraints, and transformations ARE the selective permeability — the channels and pumps that gate and reshape what crosses."
+  import_export_is_transport: "Round-tripping through Simopolis is active transport across membranes: export out of one organelle, into the hub, then import into another."
+  currency_exchange_is_schema: "Crossing between games with different 'economies' (schemas/units) is currency exchange: a transform maps values across the border. Schema recognition = the exchange rate; lossless round-trips = a fair, reversible rate."
+  emulated_organelles: "An emulated runtime (e.g., a real Apple ][ binary in a web emulator) is an organelle still running its own ancient metabolism — a living mitochondrion with its own genome."
+
+evolution:
+  by_merger: "Worlds grow richer not only by building from scratch but by ABSORBING others' content as organelles — symbiosis over pure competition."
+  horizontal_transfer: "Content (like genes) can jump between lineages, recombining into new forms."
+  transclusion_kinship: "A character expressed in many organelles at once echoes Ted Nelson's transclusion — one thing, many membranes, changes propagating."
+
+why_it_matters:
+  - "It unifies three vocabularies — filesystem (directories/data), biology (cells/organelles/membranes), and economics (currency/exchange) — into one intuition."
+  - "It explains the architecture without a spec: permeable membranes + diffusion + selective transport + exchange rates."
+  - "It reframes data portability as LIFE: modular, compositional, cooperative, round-trippable — the same trick that built complex cells."
+
+see_also:
+  - { path: ../repo-shows/INDEX.yml, why: "Simopolis hub-and-spoke bridges — the spokes this membrane biology runs on" }
+  - { path: crazy-idea-jam.yml, why: "Bridge ideas (Mind Mirror diffusion, hell-is-full ZombieSims, emulated runtimes)" }
+  - { path: CHARACTER-ENDOSYMBIOSIS.md, why: "The readable article" }

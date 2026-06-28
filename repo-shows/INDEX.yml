@@ -81,6 +81,7 @@ bridges_architecture:
     - "1. Generic hub/spoke first — every game round-trips cleanly with Simopolis."
     - "2. Then shortcut optimizations + mutual schema recognition between compatible games (direct fast paths, special-cased imports)."
   note: "So the bridge seeds below are all spokes on this hub; the ⇔ in each is shorthand for ⇔ Simopolis ⇔."
+  the_frame: "The deep frame for all of this is biological: ../process/character-endosymbiosis.yml (games as cells, content as organelles in permeable membranes, Simopolis as the shared cytoplasm, schema mapping as currency exchange). Life builds complexity by merger — so do we."
 
 axes_note: "A person appears in multiple shows (solo + group + bridge). Will especially anchors several. The collection holds multiple FORMATS: design-interview, series, group, bridge, game-show."
 
