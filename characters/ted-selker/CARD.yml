@@ -1,0 +1,91 @@
+# CARD — Ted Selker (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: ted-selker
+  name: Ted Selker
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Ted Selker
+  title: The Pointing Stick
+  rarity: uncommon
+  signifier: 🔴
+  flavor: Keep your hands on the keys; let the machine be considerate.
+abilities:
+- id: TRACKPOINT
+  name: TrackPoint
+  type: activated
+  mana: '{R}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: trackPoint
+    signature: trackPoint(hands) → cursor without leaving home row
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Move the pointer without moving your hands off the keyboard.
+  verifiable: Inventor of the TrackPoint pointing stick (IBM)
+  combos_with:
+  - DON-PIE-MENU
+- id: CONSIDERATE-COMPUTING
+  name: Considerate Computing
+  type: activated
+  mana: '{W}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: considerateComputing
+    signature: considerateComputing(system) → respects your attention
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Build systems that help without interrupting.
+  verifiable: MIT Media Lab Context-Aware Computing / 'considerate computing'
+  combos_with:
+  - WEISER-CALM-TECH
+- id: NEW-PARADIGM
+  name: New Paradigm
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: newParadigm
+    signature: newParadigm(researchers) → a room full of next ideas
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Convene the people inventing the next way to use computers.
+  verifiable: Ran IBM Almaden's NPUC workshops
+  combos_with: []
+- id: BALLOT-USABILITY
+  name: Ballot Usability
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: ballotUsability
+    signature: ballotUsability(election) → votes that count as intended
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Treat usability as democracy-critical.
+  verifiable: Caltech/MIT Voting Technology Project
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

@@ -1,0 +1,41 @@
+# SHOW SEED — Alan Kay (build a microworld; remember Doug)
+# Standalone seed file (referenced by characters/alan-kay/CHARACTER.yml).
+
+show:
+  id: alan-kay-microworld
+  title: "A Repo Show with Alan Kay — Building a Microworld"
+  type: solo
+  host: Don Hopkins
+  guests: ["Alan Kay"]
+  character: characters/alan-kay/
+  topic: "Smalltalk, the Dynabook, real object-orientation, constructionism — and building a microworld kids (and Will) can learn inside"
+  status: seed
+  consent: not_yet_asked
+
+why_him:
+  smalltalk: "True object-orientation and late binding — the live-object lineage behind NeWS, HyperLook, Squeak."
+  dynabook: "The Dynabook vision and constructionist learning — Papert-adjacent, the spine of this show's educational arc."
+  invent_the_future: "'The best way to predict the future is to invent it.'"
+
+remember_engelbart:
+  mode: "Memorial — represent + discuss, never interview the deceased."
+  why: "Alan recalled the 1968 demo's impact; Yoot Saito interviewed Alan (1993) for the demo's 25th anniversary."
+  pair_with_yoot: "Pair Alan WITH Yoot Saito to revisit that interview on air."
+  see:
+    - ../characters/douglas-engelbart/eulogy-ted-nelson.md
+    - ../characters/yoot-saito/yoot-tower-discussion.yml
+
+threads:
+  - "Build a microworld live — teach Will to make a MOOLLM adventure world"
+  - "What real object-orientation meant (and what got lost)"
+  - "Constructionism — learning by building, motivated by play"
+
+format:
+  live: true
+  audience_qa: true
+
+ties_to:
+  - ../characters/alan-kay/invitation.md
+  - ../characters/yoot-saito/
+  - ../characters/douglas-engelbart/
+  - ../process/trails/live-objects.md

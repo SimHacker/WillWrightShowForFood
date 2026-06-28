@@ -1,0 +1,46 @@
+# Ted Selker — invitation portrayal. NOT Ted Selker.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: ted-selker
+  name: "Ted Selker"
+  type: invitation
+  signifier: "🔴"
+  status: living
+  field: "HCI inventor — the TrackPoint pointing stick; considerate / context-aware computing; voting technology"
+  home: characters/ted-selker/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/ted-selker/
+
+bio:
+  summary: "**Ted Selker** — HCI researcher and inventor best known for the **TrackPoint** pointing stick (the red nub on IBM ThinkPad keyboards). He led IBM Almaden's User Systems Ergonomics Research group and its **New Paradigms for Using Computers (NPUC)** workshops, taught at the **MIT Media Lab** (Context-Aware Computing; 'considerate computing'), and co-directed the **Caltech/MIT Voting Technology Project**."
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Ted_Selker"
+  web: []
+  papers: []
+  blogs: []
+
+show_suggestions:
+  - "The TrackPoint story — designing input that keeps your hands on the home row; input efficiency (kin to pie menus + mouse-ahead gestures)"
+  - "Considerate computing — systems that respect human attention rather than interrupt it (calm-tech / ubicomp lineage)"
+  - "NPUC at IBM Almaden — the 'new paradigms' workshops where Don demoed Multiplayer SimCity; a reunion of the new-paradigms crowd"
+  - "Voting technology & ballot design — HCI where usability is democracy-critical"
+
+see_also:
+  - { path: CARD.yml, why: "Universal CARD — invokable abilities for show segments" }
+  - { path: invitation.md, why: "Public invitation draft" }
+  - { path: ../ted-nelson/, why: "Friend; the 'Têd-à-Têd Talk' pairing — see repo-shows/ted-nelson/" }
+  - { path: ../don-hopkins/, why: "Don demoed Multiplayer SimCity at IBM Almaden's NPUC workshop" }
+  - { path: ../mark-weiser/, why: "Calm / context-aware computing kinship (memorial)" }
+  - { path: ../ben-shneiderman/, why: "HCI lineage — input + interface research" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses — self or assisted contribution" }

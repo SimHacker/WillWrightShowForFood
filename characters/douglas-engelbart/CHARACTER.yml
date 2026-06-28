@@ -34,6 +34,7 @@ memorial:
     - "'Augmenting Human Intellect: A Conceptual Framework' (1962) — bootstrapping, the augmentation thesis"
     - "Augmentation NOT automation — the spine of the Crazy Idea Jam's Player-in-the-Middle"
     - "The 1968 demo's 25th anniversary → Yoot Saito's Alan Kay interview (in this repo)"
+    - "Ted Nelson's eulogy (CHM, Dec 9, 2013) — the love and the lament; see eulogy-ted-nelson.md"
 
 bio:
   summary: "**Douglas Engelbart** (1925–2013) — visionary of **augmenting human intellect**. At SRI's Augmentation Research Center he invented the **computer mouse** (with Bill English), pioneered **hypertext**, on-screen windows, and real-time collaborative editing, and unveiled them all in the 1968 **'Mother of All Demos.'** His 1962 framework 'Augmenting Human Intellect' and his idea of **bootstrapping** still frame how humans and machines should work together. ACM Turing Award (1997)."
@@ -42,10 +43,16 @@ sources:
   wikipedia: "https://en.wikipedia.org/wiki/Douglas_Engelbart"
   web:
     - https://dougengelbart.org/
+    - { title: "Ted Nelson's Eulogy for Douglas Engelbart (Computer History Museum, Dec 9, 2013)", url: "https://www.youtube.com/watch?v=gqqbfRjoISc" }
+    - { title: "John Markoff, 'An Homage to Douglas Engelbart and a Critique of the State of Tech' (NYT Bits, Dec 16, 2013)", url: "https://archive.nytimes.com/bits.blogs.nytimes.com/2013/12/16/an-homage-to-douglas-engelbart-and-a-critique-of-the-state-of-tech/" }
+    - { title: "Doug & Karen Engelbart officiate Ted & Marlene Nelson's wedding", url: "https://www.youtube.com/watch?v=TsKFbwLeS1k" }
   papers: []
   blogs: []
+  in_repo:
+    - { path: eulogy-ted-nelson.md, why: "Ted Nelson's eulogy — beautifully formatted primary source (NYT text + video + apparatus)" }
 
 see_also:
   - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
-  - { path: ../ted-nelson/, why: "Hypertext peer who can discuss him on air" }
+  - { path: eulogy-ted-nelson.md, why: "Ted Nelson's eulogy — primary source for the memorial segment" }
+  - { path: ../ted-nelson/, why: "Hypertext peer + best friend who can discuss him on air" }
   - { path: ../../schemas/portrayal-standards.yml#memorial_mode, why: "How memorial guests are handled" }

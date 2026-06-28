@@ -82,9 +82,11 @@ guests:
   paul-debevec: { invitation_status: not_yet_asked }
   richard-bartle: { invitation_status: not_yet_asked, show_seed: repo-shows/richard-bartle/ }
   seymour-papert: { invitation_status: not_yet_asked, note: "deceased — constructionist K-line" }
+  scott-kim: { invitation_status: draft, show_seed: repo-shows/scott-kim/, note: "Ambigrams/inversions, puzzle design, playful math; friend of Will — pair them" }
   steve-wozniak: { invitation_status: not_yet_asked, show_seed: repo-shows/steve-wozniak/ }
   stone-librande: { invitation_status: not_yet_asked }
-  ted-nelson: { invitation_status: draft, show_seed: repo-shows/ted-nelson/, note: "Hypertext/Xanadu; warm interview lead (2021); discussant for Engelbart + Hugh Daniel memorials" }
+  ted-nelson: { invitation_status: finished, show_seed: repo-shows/ted-nelson/, note: "Têd-à-Têd Talk — public invitation ready to send, tag-team with Ted Selker; Hypertext/Xanadu; discussant for Engelbart + Hugh Daniel memorials" }
+  ted-selker: { invitation_status: draft, show_seed: repo-shows/ted-selker/, note: "TrackPoint, considerate computing; ran IBM Almaden NPUC workshops where Don demoed Multiplayer SimCity" }
   terry-winograd: { invitation_status: not_yet_asked, show_seed: repo-shows/terry-winograd/ }
   thomas-cherryhomes: { invitation_status: not_yet_asked, show_seed: repo-shows/thomas-cherryhomes/ }
   vanessa-freudenberg: { invitation_status: memorial, note: "deceased (2025) — MEMORIAL MODE: SqueakJS/Croquet; sharp WASM insights → Caffeine; discussants: Craig Latta, Dan Ingalls" }

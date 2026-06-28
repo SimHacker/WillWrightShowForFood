@@ -1,0 +1,40 @@
+# SHOW — Scott Kim (inversions, puzzle craft, playful math)
+# Will's friend; pairs beautifully with a Will design conversation.
+
+show:
+  id: scott-kim
+  title: "A Repo Show with Scott Kim — Inversions, Puzzles, and the Designed Aha"
+  type: solo
+  host: Don Hopkins
+  guests: ["Scott Kim"]
+  character: characters/scott-kim/
+  topic: "Ambigrams / inversions; the craft of puzzle design; symmetry, visual thinking, and math as play"
+  status: seed
+  consent: not_yet_asked
+
+why_him:
+  inversions: "Ambigram pioneer — words that read the same upside down or mirrored (Inversions, 1981)."
+  puzzles: "Decades of puzzle design — columns in Games, Discover, Scientific American; puzzles for video games."
+  visual_thinking: "Stanford PhD in Computers and Graphic Design; symmetry as a way of seeing."
+  gardner_orbit: "Part of the Martin Gardner recreational-math community — shared ground with Will."
+
+dream_segments:
+  - "Design an inversion live — letter a guest's name so it reads upside down"
+  - "The craft of the 'aha' — difficulty as a designed curve (kin to Will's possibility space)"
+  - "Puzzles as education — math you learn by playing (Gardner lineage)"
+  - "Scott × Will — two friends on play, puzzles, and designing for discovery"
+
+pairing:
+  with: will-wright
+  why: "Friends and fellow designers; a play/puzzle/possibility-space conversation"
+
+format:
+  live: true
+  audience_qa: true
+
+ties_to:
+  - ../../characters/scott-kim/invitation.md
+  - ../../characters/will-wright/
+  - ../../characters/ken-perlin/
+  - ../../characters/stone-librande/
+  - ../../process/trails/game-design-lineage.md

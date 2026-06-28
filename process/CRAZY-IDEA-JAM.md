@@ -28,7 +28,7 @@ room still has to *run* one day.
 |---|------|-----------|
 | 💎 | **Data portability between games** | Characters, homes, cities, and *memories* moving between games and universes. Will said it out loud in 1996; nobody shipped it. Every bridge we build is one cut of this jewel — which is exactly why they're cool. |
 | 🦠 | **Character endosymbiosis** | A cross-game character is a *cell*; each game it visits gets engulfed as an *organelle* with its own DNA. Powers accrete in parallel; the soul-file stays canonical, the runtimes are disposable. Lynn Margulis as a save format. Yes, really. |
-| 📖 | **Identity over attributes** | What crosses between worlds is *story*, not stats. Import a Stardew life into The Sims as a physical photo-album book you shelve, read on the couch, and leave out for guests. |
+| 📖 | **Identity threads through** | We sure do *stats* — attributes cross between worlds too. But the magic is that **identity** threads through every game: the same self across wildly different forms, with story as the thread the stats hang on. Import a Stardew life into The Sims as a physical photo-album book you shelve, read on the couch, and leave out for guests. |
 
 ---
 

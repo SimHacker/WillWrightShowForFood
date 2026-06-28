@@ -1,0 +1,106 @@
+# CARD — Scott Kim (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: scott-kim
+  name: Scott Kim
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Scott Kim
+  title: The Inversion
+  rarity: uncommon
+  signifier: 🔄
+  flavor: Read it again — upside down, it still says your name.
+abilities:
+- id: INVERSION
+  name: Inversion
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: inversion
+    signature: inversion(word) → reads the same flipped or mirrored
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Letter a word so symmetry hides a second reading.
+  verifiable: Inversions (1981); ambigram pioneer
+  combos_with: []
+- id: PUZZLE-CRAFT
+  name: Puzzle Craft
+  type: activated
+  mana: '{U}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: puzzleCraft
+    signature: puzzleCraft(idea) → a designed 'aha'
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Shape difficulty into a satisfying curve toward insight.
+  verifiable: Puzzle columns + video-game puzzle design
+  combos_with:
+  - WILL-POSSIBILITY-SPACE
+- id: SYMMETRY-EYE
+  name: Symmetry Eye
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: symmetryEye
+    signature: symmetryEye(form) → the hidden structure
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: See the structure others miss; make the invisible legible.
+  verifiable: Visual-thinking work; Stanford graphic-design PhD
+  combos_with: []
+- id: PLAYFUL-MATH
+  name: Playful Math
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: playfulMath
+    signature: playfulMath(concept) → a game you learn by playing
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Turn a math idea into recreational play (Gardner lineage).
+  verifiable: Martin Gardner recreational-math community
+  combos_with: []
+- id: VISIBILITY
+  name: Visibility
+  type: activated
+  mana: '{U}{W}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: visibility
+    signature: visibility(system) → the screen IS the state
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Make the screen's pixels the complete, editable program state — no hidden variables.
+  verifiable: 'Viewpoint: Toward a Computer for Visual Thinkers (Stanford PhD, 1987)'
+  combos_with:
+  - DON-PIE-MENU
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

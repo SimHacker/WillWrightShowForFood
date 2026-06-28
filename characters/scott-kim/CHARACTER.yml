@@ -1,0 +1,50 @@
+# Scott Kim — invitation portrayal. NOT Scott Kim.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: scott-kim
+  name: "Scott Kim"
+  type: invitation
+  signifier: "🔄"
+  status: living
+  field: "Puzzle designer & visual artist — ambigrams ('inversions'), puzzle design, symmetry & visual thinking"
+  home: characters/scott-kim/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/scott-kim/
+
+bio:
+  summary: "**Scott Kim** (b. 1955) — puzzle designer, visual artist, and computer scientist. A co-discoverer of **ambigrams** (with John Langdon; the term was coined by his friend Douglas Hofstadter), famous for his 1981 book ***Inversions*** — words lettered to read the same upside down or mirrored. His Stanford PhD (Computers and Graphic Design, 1987, advised by **Donald Knuth**) was ***Viewpoint: Toward a Computer for Visual Thinkers*** — a pixel-based text/graphics editor built on a UI principle he called **'visibility'** (the screen's visual state IS the complete record). He designed the **Silicon Graphics logo**, was puzzlemaster for the game **Heaven & Earth** (1992, ~576 'Illusions' puzzles), and is a longtime puzzle columnist (*Games*, *Discover*, *Scientific American*) in the **Martin Gardner** recreational-math community."
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Scott_Kim"
+  web:
+    - { title: "Scott Kim — personal site (puzzles, ambigrams, Heaven & Earth)", url: "https://scottkim.com" }
+  papers:
+    - { title: "Viewpoint: Toward a Computer for Visual Thinkers (Stanford PhD, 1987; advisor Donald Knuth)", url: "https://mathgenealogy.org/id.php?id=47204" }
+  blogs: []
+
+show_suggestions:
+  - "Viewpoint & 'visibility' — his thesis that the screen's pixels ARE the program state; making the invisible visible (deep kin to Don's pie menus, Bret Victor's explorable interfaces, and Shneiderman's direct manipulation)"
+  - "Inversions live — design an ambigram on air; the term Hofstadter coined, the craft Scott + John Langdon pioneered"
+  - "The art & craft of puzzle design — Heaven & Earth's ~576 illusion puzzles and the designed difficulty curve (kin to Will's possibility space)"
+  - "Visual thinking & math as play — the Gardner / Celebration of Mind lineage; designing the SGI logo and typography that thinks"
+  - "Pair with Will Wright — two friends on play, puzzles, and designing for discovery"
+
+see_also:
+  - { path: CARD.yml, why: "Universal CARD — invokable abilities for show segments" }
+  - { path: invitation.md, why: "Public invitation draft" }
+  - { path: ../will-wright/, why: "Friend and fellow designer; shared puzzle / play / Gardner orbit" }
+  - { path: ../bret-victor/, why: "Visibility / explorable explanations — making state visible (Viewpoint kinship)" }
+  - { path: ../ben-shneiderman/, why: "Direct manipulation — seeing and touching state directly" }
+  - { path: ../ken-perlin/, why: "Playful math + visual/procedural thinking kinship" }
+  - { path: ../stone-librande/, why: "Dense, legible design — one-page systems / puzzle clarity" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses — self or assisted contribution" }

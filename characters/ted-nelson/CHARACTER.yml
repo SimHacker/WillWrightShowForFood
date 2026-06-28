@@ -16,11 +16,11 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: draft
+  status: finished
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/ted-nelson/
-  note: "Warm lead (2021): ordinarily declines interviews, but might be interested. Hero + north star for the guest list."
+  note: "Public 'Têd-à-Têd Talk' invitation ready to formally send — tag-team with Ted Selker. Ordinarily declines email conversations; respect his time. Hero + north star for the guest list."
 
 bio:
   summary: "**Ted Nelson** (b. 1937) — coined **hypertext** and **hypermedia**, founded **Project Xanadu**, and wrote **Computer Lib / Dream Machines** (1974). Champion of **transclusion**, visible parallel connections (Xanalinks vs jump-only weblinks), and **intertwingularity** — 'everything is deeply intertwingled.' A direct inspiration for Don's HyperTIES work at Maryland and a north star for the Repo Show."
@@ -30,11 +30,26 @@ sources:
   web:
     - https://en.wikipedia.org/wiki/Project_Xanadu
     - http://xanadu.com/demo
+    - { title: "Ted Nelson's home page", url: "https://ted.hyperland.com/" }
+    - { title: "Ted's YouTube channel (~80 videos)", url: "https://www.youtube.com/thetednelson" }
+    - { title: "Eulogy for Douglas Engelbart (CHM, Dec 9, 2013) — Ted's 'best writing ever'", url: "https://www.youtube.com/watch?v=gqqbfRjoISc" }
+    - { title: "Xanadu Basics 1a — Visible Connection (Ted's current Xanadu work)", url: "https://www.youtube.com/watch?v=hMKy52Intac" }
+    - { title: "Here I Stand, at Age 80 — a summary of his life and work", url: "https://www.youtube.com/watch?v=mmfjM-SGlGs" }
   papers: []
   blogs: []
+  in_repo:
+    - { path: ../douglas-engelbart/eulogy-ted-nelson.md, why: "Ted's eulogy for Doug — formatted primary source he calls his best writing" }
+
+eulogy_note: |
+  Ted calls his 7-minute eulogy for Doug Engelbart 'my best writing ever' — a love letter, an
+  indictment of the industry that cast Doug aside, and a lament for the world. ('I feel like I've
+  lost my best planet.') On his home page he asks viewers to ignore the audience's mystifying
+  laughter, and notes his emotion was real: 'at the end, I could hardly speak.'
 
 see_also:
   - { path: correspondence.yml, why: "Public-safe thread digest — Xanadu, hypertext, Repo Show outreach" }
   - { path: ../douglas-engelbart/, why: "Engelbart officiated Ted's wedding; Ted can discuss him" }
+  - { path: ../douglas-engelbart/eulogy-ted-nelson.md, why: "Ted's eulogy for Doug — primary source" }
+  - { path: ../ted-selker/, why: "Friend; the 'Têd-à-Têd Talk' pairing (two hyperactive Teds)" }
   - { path: ../hugh-daniel/, why: "Hugh worked with Ted on Xanadu" }
   - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

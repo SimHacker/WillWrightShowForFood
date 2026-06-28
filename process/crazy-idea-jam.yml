@@ -43,14 +43,15 @@ ideas:
     progenitor: "SPORE prefigured this — pond→creature→tribe→civ→space — but lacked one identity TRAVELLING between layers with its history. The Spore bridge gets a per-LEVEL end: one self reincarnated cell→fish→gazelle→human→town→ship."
     ties: [../characters/will-wright/CARD.yml]
 
-  identity_over_attributes:
+  identity_threads_through:
     emoji: "📖"
     blurb: |
-      What travels between worlds is IDENTITY + HISTORY, not stats. A creature reincarnated
-      fish→gazelle→human→town→ship shares almost no attributes across forms — it's the same
-      SELF, and its lived story is the thread. The Sims FAMILY ALBUM is the canonical history
-      artifact: import a Stardew life into The Sims as a physical photo-album BOOK you shelve,
-      read on the couch, and leave out for guests.
+      We sure do STATS — attributes cross between worlds too. But the magic is that IDENTITY
+      threads through every game: a creature reincarnated fish→gazelle→human→town→ship shares
+      almost no attributes across forms, yet it's the same SELF, and its lived story is the thread
+      the stats hang on. The Sims FAMILY ALBUM is the canonical history artifact: import a Stardew
+      life into The Sims as a physical photo-album BOOK you shelve, read on the couch, and leave
+      out for guests.
 
   player_in_the_middle:
     emoji: "🛂"

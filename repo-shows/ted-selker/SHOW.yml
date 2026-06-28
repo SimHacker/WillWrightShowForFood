@@ -1,0 +1,38 @@
+# SHOW — Ted Selker (input efficiency + considerate computing)
+
+show:
+  id: ted-selker
+  title: "A Repo Show with Ted Selker — Hands on the Keys, Mind on the Task"
+  type: solo
+  host: Don Hopkins
+  guests: ["Ted Selker"]
+  character: characters/ted-selker/
+  topic: "The TrackPoint and input efficiency; considerate / context-aware computing; the NPUC new-paradigms workshops"
+  status: seed
+  consent: not_yet_asked
+
+why_him:
+  trackpoint: "Invented the TrackPoint pointing stick — cursor control without leaving the home row."
+  considerate: "Coined 'considerate computing' at the MIT Media Lab — systems that respect attention."
+  npuc: "Ran IBM Almaden's NPUC (New Paradigms for Using Computers) workshops — where Don demoed Multiplayer SimCity."
+  voting: "Co-directed the Caltech/MIT Voting Technology Project — usability as a democratic stake."
+
+dream_segments:
+  - "The TrackPoint story — designing input that keeps your hands home; mouse-ahead efficiency next to Don's pie menus"
+  - "Considerate computing — when should a system stay quiet? (calm-tech lineage with Mark Weiser)"
+  - "NPUC reunion — the new-paradigms crowd; replay Don's Multiplayer SimCity demo"
+  - "Ballot design — HCI where a confusing layout changes history"
+
+format:
+  live: true
+  audience_qa: true
+
+also_appears_in:
+  ted_a_ted_talk: "The 'Têd-à-Têd Talk' — paired with his friend Ted Nelson; see ../ted-nelson/SHOW.yml"
+
+ties_to:
+  - ../../characters/ted-selker/invitation.md
+  - ../../characters/ted-nelson/
+  - ../../characters/don-hopkins/
+  - ../../characters/mark-weiser/
+  - ../../characters/ben-shneiderman/

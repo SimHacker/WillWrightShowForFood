@@ -24,4 +24,8 @@ anniversary of the 1968 demo. Pairing Yoot and Alan to revisit that trip is a na
 
 We celebrate his documented public work; we do not speak as him.
 
+**Read:** [Ted Nelson's eulogy](eulogy-ted-nelson.md) — delivered at the Computer History Museum on
+December 9, 2013, and the thing Ted calls the best writing he ever did. *"I feel like I've lost my
+best planet."*
+
 — Don Hopkins, Micropolis Class

@@ -1,0 +1,53 @@
+# SHOW — A "Têd-à-Têd Talk": Ted Nelson × Ted Selker
+# Invitation to Ted Nelson sent June 2026; awaiting reply. Can also run as Ted Nelson solo.
+
+show:
+  id: ted-nelson
+  title: "A Têd-à-Têd Talk — Ted Nelson × Ted Selker"
+  type: pair
+  host: Don Hopkins
+  guests: ["Ted Nelson", "Ted Selker"]
+  character: characters/ted-nelson/
+  topic: "Two hyperactive Teds, free-ranging: Xanadu/transclusion/visible connections + considerate computing — and remembering Doug Engelbart and Hugh Daniel"
+  status: seed
+  consent: not_yet_asked
+  note: "Invitation sent June 2026 (Têd-à-Têd framing). Can also run as Ted Nelson solo. Hero + north star for the guest list; respect his time."
+
+the_two_teds:
+  ted_nelson: "Coined hypertext; Project Xanadu; Computer Lib / Dream Machines."
+  ted_selker: "TrackPoint; considerate computing; ran IBM Almaden's NPUC workshops — Ted Nelson's friend."
+  why_pair: "Two hyperactive Teds and old friends; Don once caught them mid video-reading. A natural duo."
+  selker: ../../characters/ted-selker/
+
+why_him:
+  named_it: "Coined hypertext and hypermedia; wrote Computer Lib / Dream Machines (1974)."
+  xanadu: "Visible parallel connections (Xanalinks) over jump-only weblinks — the spirit behind this repo's cross-links and transcluded artifacts."
+  inspiration: "A direct inspiration for Don's HyperTIES work at Maryland."
+
+remember_friends:
+  engelbart:
+    mode: "Memorial — represent + discuss, never interview the deceased."
+    why: "Engelbart officiated Ted's wedding to Marlene; Ted's eulogy is the best writing he says he ever did."
+    see: ../../characters/douglas-engelbart/eulogy-ted-nelson.md
+  hugh_daniel:
+    mode: "Memorial — represent + discuss."
+    why: "Hugh worked closely with Ted on Xanadu — the Hugh + Ted + Don triangle."
+    see: ../../characters/hugh-daniel/memorial.md
+
+threads:
+  - "Hypertext as Ted meant it — transclusion, visible connections, documents over deceptive UI"
+  - "Transcribe video into durable text — the irony of a hypertext pioneer on video-only threads"
+  - "The copy/paste-to-an-invisible-clipboard rant — a candidate segment"
+
+format:
+  live: true
+  audience_qa: true
+  homeplay: "Read Computer Lib / Dream Machines; try the Xanadu demo; bring questions as PRs/issues"
+
+ties_to:
+  - ../../characters/ted-nelson/invitation.md
+  - ../../characters/ted-nelson/correspondence.yml
+  - ../../characters/ted-selker/
+  - ../../characters/douglas-engelbart/eulogy-ted-nelson.md
+  - ../../characters/hugh-daniel/
+  - ../../process/trails/augmentation-and-hypertext.md

@@ -179,6 +179,7 @@ trails:
     why: "Engelbart's augmentation + Nelson's hypertext + Weiser's calm tech — the forebears behind Player-in-the-Middle (memorial mode: represent + discuss)"
     nodes:
       - { path: ../characters/douglas-engelbart/, why: "🕯️ Augmenting human intellect — NLS, the mouse, the Mother of All Demos (memorial)" }
+      - { path: ../characters/douglas-engelbart/eulogy-ted-nelson.md, why: "Ted Nelson's eulogy for Doug (CHM, 2013) — primary source, 'I feel like I've lost my best planet'" }
       - { path: ../characters/ted-nelson/, why: "Coined hypertext; Xanadu; transclusion — living discussant for the memorials" }
       - { path: ../characters/hugh-daniel/, why: "🕯️ Xanadu + NeWS — the Hugh + Ted + Don triangle (memorial)" }
       - { path: ../characters/mark-weiser/, why: "🕯️ Ubiquitous + calm computing; CHI'88 pie-menu co-author with Don (memorial)" }
@@ -249,6 +250,7 @@ trails:
       - { path: ../characters/don-hopkins/career/simcity-lineage.yml, why: "35-year arc — NeWS port → Sims tools → Micropolis → web" }
       - { path: ../characters/will-wright/, why: "SimCity, the Dollhouse demo, The Sims, Spore" }
       - { path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "Primary source — Dollhouse → Sims screenshots (167 images)" }
+      - { path: ../repo-shows/will-wright/sources/1998-06-04-sims-steering-committee-demo/, why: "Primary source — pre-release Sims build (Edith/SimAntics live, pie menus, scenario system) demoed to EA, June 4 1998" }
       - { path: ../repo-shows/will-wright/slats-reincarnation.yml, why: "Stupid Fun Club robot resurrection — shared SFC lineage" }
       - { path: ../characters/chaim-gingold/, why: "Building SimCity — history + reverse diagrams" }
       - { path: ../characters/jason-shankel/, why: "Maxis / SFC alumnus — games + AI" }

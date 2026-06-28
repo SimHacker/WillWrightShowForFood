@@ -31,3 +31,13 @@ sources:
     []
   papers: []
   blogs: []
+
+can_discuss:
+  - { who: douglas-engelbart, why: "Recalled the 1968 demo's impact; memorial mode — represent + discuss, never speak as Doug" }
+
+see_also:
+  - { path: ../douglas-engelbart/, why: "Memorial — Alan is a discussant of Doug's work (two-way with Doug's who_can_discuss)" }
+  - { path: ../douglas-engelbart/eulogy-ted-nelson.md, why: "Ted's eulogy for Doug — the memorial segment Alan can join" }
+  - { path: ../yoot-saito/, why: "Yoot interviewed Alan (1993) for the 25th anniversary of Engelbart's demo" }
+  - { path: ../yoot-saito/yoot-tower-discussion.yml, why: "Pair Alan WITH Yoot to revisit that interview on air" }
+  - { path: ../../process/trails/live-objects.md, why: "Smalltalk → live-object lineage" }
