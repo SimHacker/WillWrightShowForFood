@@ -20,7 +20,7 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/ted-nelson/
-  note: "Public 'Têd-à-Têd Talk' invitation ready to formally send — tag-team with Ted Selker. Ordinarily declines email conversations; respect his time. Hero + north star for the guest list."
+  note: "Public invitation ready to formally send. Two offered shapes (his pick): a 'Têd-à-Têd Talk' tag-team with Ted Selker, OR a Doug Engelbart memorial tribute joined by Yoot Saito + Alan Kay (seed: repo-shows/remembering-douglas-engelbart.yml). Ordinarily declines email conversations; respect his time. Hero + north star for the guest list."
 
 bio:
   summary: "**Ted Nelson** (b. 1937) — coined **hypertext** and **hypermedia**, founded **Project Xanadu**, and wrote **Computer Lib / Dream Machines** (1974). Champion of **transclusion**, visible parallel connections (Xanalinks vs jump-only weblinks), and **intertwingularity** — 'everything is deeply intertwingled.' A direct inspiration for Don's HyperTIES work at Maryland and a north star for the Repo Show."

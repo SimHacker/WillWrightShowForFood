@@ -1,0 +1,1 @@
+🧩 **Patrick J. Barrett III** — engineer on **The Sims** (Maxis): Sim behavior / SimAntics, and lead engineer on expansions including *Hot Date* and *Vacation*. Don's colleague on the original Sims team.

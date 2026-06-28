@@ -1,0 +1,1 @@
+🧭 **Jim Mackraz** — Core Technology Group (CTG) team leader on **The Sims** (Maxis); the leadership that helped turn Will Wright's open-ended vision into a shipped product. Don's team lead on The Sims.

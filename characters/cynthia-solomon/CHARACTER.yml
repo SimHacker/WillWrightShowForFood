@@ -1,0 +1,56 @@
+# Cynthia Solomon — invitation portrayal. NOT Cynthia Solomon.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: cynthia-solomon
+  name: "Cynthia Solomon"
+  type: invitation
+  signifier: "📼"
+  status: living
+  field: "Logo co-creator; pioneer of computing for children; constructionist educator; keeper of a video treasure trove of early Logo / AI Lab / Atari Cambridge history"
+  home: characters/cynthia-solomon/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/cynthia-solomon/
+
+bio:
+  summary: "**Cynthia Solomon** — one of the original designers of **Logo** (1967, at Bolt, Beranek & Newman, with Wally Feurzeig, Seymour Papert, Daniel G. Bobrow and Richard Grant; NSF-sponsored) and a lifelong pioneer of **computing for children**. She helped build the MIT Logo culture through the 1970s and worked at **Atari Cambridge Research** in the early 1980s on a children's computer (object-oriented Logo, gestural input, force feedback, music) alongside Alan Kay, Margaret Minsky, David Levitt and others. Author of *Computer Environments for Children: A Reflection on Theories of Learning and Education* (MIT Press, 1986) and co-author of the *History of Logo* (Proc. ACM HOPL, 2020). Honored with the Constructionism 2016 and FabLearn 2019 Lifetime Achievement Awards, and gave the inaugural **Seymour Papert Memorial Lecture** (CrossRoads 2018). On her YouTube channel she has shared a rare **treasure trove** of historical videos — Papert, Marvin and Margaret Minsky, kids programming turtles, and the Atari Cambridge lab."
+
+connections:
+  logo_origin: "A founding designer of Logo (BBN, 1967) and a central figure in the MIT Logo Group that Papert started in 1969 — the source of turtle graphics and constructionist learning."
+  atari_cambridge: "Worked at Atari Cambridge Research (early 1980s); her uploaded videos document that lab — Alan Kay, Margaret Minsky, David Levitt, Ed Hardebeck, Gary Drescher's object-oriented Logo, and more."
+  video_trove: "Her YouTube channel preserves footage that exists almost nowhere else: Seymour Papert describing the turtle, Marvin Minsky on his 1951 learning machine, Talking Turtle, children at the turtle — primary-source history."
+  snap_logo: "A friend of the Snap!/Logo continuation; Don met her by video conference at the Snap! conference (Snap!Con) in Barcelona."
+
+show_suggestions:
+  - { seed: ../../repo-shows/cynthia-solomon/, what: "A guided screening + conversation through her video treasure trove — the origin of Logo and turtle geometry, the MIT Logo culture, and the Atari Cambridge children's-computer research — told by someone who was there." }
+  - { seed: ../../repo-shows/remembering-the-constructionists.yml, what: "A natural discussant for the Piaget → Papert → Minsky memorial — she co-created Logo and can speak to the intent: children as builders of their own understanding." }
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Cynthia_Solomon"
+  web:
+    - "https://www.youtube.com/@cynthiaso"
+    - "https://dl.acm.org/doi/10.1145/3386329"   # History of Logo (HOPL, 2020)
+    - "https://escholarship.org/uc/item/1623m1p3" # History of Logo (open copy)
+  books:
+    - "Computer Environments for Children: A Reflection on Theories of Learning and Education (MIT Press, 1986)"
+  papers:
+    - "History of Logo (Proc. ACM Program. Lang. 4, HOPL, Article 79, 2020) — co-author"
+  blogs: []
+
+see_also:
+  - { path: ../seymour-papert/, why: "🕯️ Logo + the turtle; her closest collaborator (memorial)" }
+  - { path: ../marvin-minsky/, why: "🕯️ MIT AI Lab; subject of several of her historical videos (memorial)" }
+  - { path: ../margaret-minsky/, why: "Atari Cambridge colleague; appears in her video trove" }
+  - { path: ../brian-harvey/, why: "Co-author of the History of Logo; Logo → Snap! continuity" }
+  - { path: ../jens-monig/, why: "Snap! — the living continuation of Logo" }
+  - { path: ../alan-kay/, why: "Atari Cambridge / shared microworld milieu" }
+  - { path: ../../process/trails/constructionist-lineage.md, why: "Piaget → Papert → Logo → today" }

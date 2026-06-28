@@ -1,0 +1,39 @@
+# SHOW — Cynthia Solomon (the Logo treasure trove, narrated)
+# Planted seed. Inherits from the SHOW skill (/skills/repo-show).
+
+show:
+  id: cynthia-solomon
+  title: "A Repo Show with Cynthia Solomon — The Turtle's Treasure Trove"
+  type: solo
+  host: Don Hopkins
+  guests: ["Cynthia Solomon"]
+  character: characters/cynthia-solomon/
+  topic: "A guided screening + conversation through Cynthia Solomon's rare video archive — the birth of Logo, the MIT Logo culture, and the Atari Cambridge children's-computer research — narrated by one of Logo's original designers."
+  status: seed
+  consent: not_yet_asked
+
+why_her:
+  logo_origin: "A founding designer of Logo (BBN, 1967, with Feurzeig, Papert, Bobrow, Grant) and central to the MIT Logo Group from 1969 — the source of turtle graphics and constructionist learning."
+  atari_cambridge: "Atari Cambridge Research (early 1980s): a children's computer with object-oriented Logo, gesture, force feedback, and music."
+  the_trove: "Her YouTube channel preserves footage that exists almost nowhere else — Papert, the Minskys, kids at the turtle, the Atari lab. Primary-source history."
+
+dream_segments:
+  - "Guided screening: clips from her channel, narrated live — who's in the room, what was really happening."
+  - "The birth of Logo: BBN 1967 → MIT Logo Group → the turtle → children as builders of their own understanding."
+  - "Atari Cambridge: the children's computer that almost was."
+  - "Logo → today: the through-line to Snap!, optionally with Brian Harvey and Jens Mönig."
+
+format:
+  live: true
+  screening: true
+  audience_qa: true
+
+ties_to:
+  - ../../characters/cynthia-solomon/
+  - ../../characters/cynthia-solomon/invitation.md
+  - ../../characters/seymour-papert/
+  - ../../characters/marvin-minsky/
+  - ../../characters/margaret-minsky/
+  - ../../characters/brian-harvey/
+  - ../../characters/jens-monig/
+  - ../../process/trails/constructionist-lineage.md

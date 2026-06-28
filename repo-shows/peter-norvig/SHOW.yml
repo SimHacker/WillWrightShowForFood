@@ -1,0 +1,46 @@
+# SHOW — Peter Norvig (open topic: MOOLLM, skills, AI in general)
+# Planted seed. Inherits from the SHOW skill (/skills/repo-show).
+
+show:
+  id: peter-norvig
+  title: "A Repo Show with Peter Norvig — Teach Yourself AI in Ten Years"
+  type: group           # Peter + Don + Leela colleagues (Peter's pick)
+  host: Don Hopkins
+  guests: ["Peter Norvig", "Henry Minsky"]
+  character: characters/peter-norvig/
+  topic: "An open-topic conversation, Peter's choice — MOOLLM, skills, or AI in general — with Don and Leela colleagues. May double as research for the AI-book chapter Peter offered to write about Don's work."
+  status: seed
+  consent: warm_lead
+
+why_him:
+  textbook: "Co-author (with Stuart Russell) of Artificial Intelligence: A Modern Approach — the standard AI textbook — and PAIP (1992)."
+  educator: "Director of Research at Google; co-taught the 2011 Stanford online AI course (~160k students); essayist behind 'Teach Yourself Programming in Ten Years'."
+  the_offer: "A friend of Don's who is writing an AI book and offered to include a chapter on Don's work — a natural two-way show."
+
+dream_segments:
+  - "MOOLLM & skills: filesystem-as-microworld, YAML-jazz, skills as constructionist artifacts for authoring/teaching AI behavior."
+  - "AI in general: wherever Peter's book is pulling him; Don as sounding board / case study."
+  - "'Ten Years', revisited: AI raised the ceiling, didn't kill the rule. From 'how to write' to 'what to build'; the 10,000 hours move from syntax to architecture and judgment."
+  - "The 'vibe coding' trap: the LLM as a fast-but-mediocre grad student — and why you still can't debug what you don't understand. Are skills the thing we practice deliberately with?"
+  - "Optimizing for intent: 1950s hardware → 2010s programmer time (Python) → 2020s+ intent, with the machine supplying formal correctness and tests."
+  - "Society of Mind in modern AI, with Henry Minsky and other Leela colleagues."
+
+possible_guests:
+  - { name: "Henry Minsky", character: ../../characters/henry-minsky/, why: "Leela AI; Society of Mind in modern AI" }
+  - { name: "Steve Kommrusch", character: ../../characters/steve-kommrusch/, why: "Leela AI; ML for program repair / verifiable equivalence" }
+  - { name: "Isabella Struckman", character: ../../characters/isabella-struckman/, why: "Leela AI; model eval/training + AI policy" }
+  - { name: "Milan Singh Minsky", character: ../../characters/milan-singh-minsky/, why: "Leela AI; product" }
+
+format:
+  live: true
+  audience_qa: true
+  doubles_as: "Source material for Peter's AI-book chapter (with consent)."
+
+ties_to:
+  - ../../characters/peter-norvig/
+  - ../../characters/peter-norvig/invitation.md
+  - ../../characters/henry-minsky/
+  - ../../characters/steve-kommrusch/
+  - ../../characters/isabella-struckman/
+  - ../../characters/milan-singh-minsky/
+  - ../REPO-SHOWS.yml   # skill-creation seed (Peter is a named candidate)

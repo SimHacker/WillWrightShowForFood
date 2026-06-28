@@ -19,15 +19,30 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  show_seed: repo-shows/bret-victor/
-
+  show_seed: repo-shows/bret-victor-explorable.yml
 
 bio:
   summary: "**Bret Victor** — interface researcher inventing better *media for thought*: \"explorable explanations,\" \"Inventing on Principle,\" and Dynamicland. (Note: \"Bret,\" one t.)"
 
+engelbart:
+  tribute: "Wrote 'A few words on Doug Engelbart' (2013-07-03) — the widely-cited plea to understand Engelbart's INTENT (augmenting collective human intellect) rather than reduce him to a feature list (mouse, hypertext)."
+  url: "https://worrydream.com/Engelbart/"
+  note: "Documented connection is this written tribute + his reading of the vision; a personal acquaintance with Engelbart is not established here."
+  joins_memorial: ../../repo-shows/remembering-douglas-engelbart.yml
+
+show_suggestions:
+  - { seed: ../../repo-shows/bret-victor-explorable.yml, what: "Solo — explorable explanations applied to Micropolis legibility + honest patronage-vs-shipping (Dynamicland)" }
+  - { seed: ../../repo-shows/remembering-douglas-engelbart.yml, what: "Group tribute to Doug Engelbart with Ted Nelson, Alan Kay, Yoot Saito" }
+
 sources:
-  wikipedia: null
+  wikipedia: null              # not verified to exist; left null rather than guessed
   web:
-    []
+    - { title: "worrydream.com — Bret Victor's site", url: "https://worrydream.com/" }
+    - { title: "A few words on Doug Engelbart (2013)", url: "https://worrydream.com/Engelbart/" }
+    - { title: "Dynamicland", url: "https://dynamicland.org/" }
   papers: []
   blogs: []
+
+see_also:
+  - { path: ../douglas-engelbart/, why: "🕯️ Engelbart — the vision Bret reads + defends (memorial)" }
+  - { path: ../douglas-engelbart/memorial.md, why: "Group tribute home" }

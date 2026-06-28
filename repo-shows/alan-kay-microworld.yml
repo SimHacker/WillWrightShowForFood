@@ -19,8 +19,8 @@ why_him:
 
 remember_engelbart:
   mode: "Memorial — represent + discuss, never interview the deceased."
-  why: "Alan recalled the 1968 demo's impact; Yoot Saito interviewed Alan (1993) for the demo's 25th anniversary."
-  pair_with_yoot: "Pair Alan WITH Yoot Saito to revisit that interview on air."
+  why: "Alan recalled the 1968 demo's impact; Yoot Saito personally interviewed BOTH Engelbart and Alan in Japan in the early 1990s (companion Alan Kay transcript OCR-restored in the YootTower repo)."
+  pair_with_yoot: "Pair Alan WITH Yoot Saito to revisit that interview on air — and Yoot's own Engelbart interview."
   see:
     - ../characters/douglas-engelbart/eulogy-ted-nelson.md
     - ../characters/yoot-saito/yoot-tower-discussion.yml

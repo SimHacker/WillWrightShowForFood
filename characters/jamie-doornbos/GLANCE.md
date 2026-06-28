@@ -1,0 +1,1 @@
+🧠 **Jamie Doornbos** — lead programmer on **The Sims** (Maxis) and a principal architect of the Sims' behavior/AI: the SimAntics engine, smart objects, and the motive system that made autonomous Sims feel alive. Don's Sims teammate. Has spoken publicly about how the simulation worked. A natural voice for the Sims team reunion.

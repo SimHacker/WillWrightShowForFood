@@ -1,13 +1,14 @@
-# Jean Piaget — invitation portrayal. NOT Jean Piaget.
-# Standards: ../../schemas/portrayal-standards.yml
+# Jean Piaget — memorial portrayal (in memoriam). NOT Jean Piaget.
+# Memorial mode: represent + discuss, never interview. No invented quotes or inner life.
+# Standards: ../../schemas/portrayal-standards.yml#memorial_mode
 
 character:
   id: jean-piaget
   name: "Jean Piaget"
-  type: invitation
+  type: memorial
   signifier: "🕯️"
   status: deceased
-  field: "Developmental psychologist — Constructivism"
+  field: "Developmental psychologist & genetic epistemologist — constructivism, stages of cognitive development"
   home: characters/jean-piaget/
 
 representation:
@@ -16,18 +17,46 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: legacy_only
+  status: memorial
   consent: not_yet_asked
-  document: invitation.md
-  show_seed: repo-shows/jean-piaget/
-  note: "historical K-line only"
+  document: memorial.md
+  note: "deceased (1896–1980) — represent + discuss; the developmental root of constructionist learning"
+
+memorial:
+  mode: represent_and_discuss
+  rule: "Represent and discuss his documented work and stories. Do not interview, do not speak as him, invent no inner life, dialogue, or quotes."
+  who_can_discuss:
+    - { who: alan-kay, why: "Built personal computing on a Piaget/Papert/Bruner developmental foundation" }
+    - { who: walter-bender, why: "OLPC — constructionist learning grounded in Piaget" }
+    - { who: brian-harvey, why: "Logo/CS education descends from Piaget via Papert" }
+    - { who: ken-kahn, why: "Programming environments for children — the Piaget→Papert line" }
+    - { who: don-hopkins, why: "Constructionist-educational Micropolis — Piaget's active learner, in a microworld" }
+  draw_on_for_shows:
+    - "Genetic epistemology — studying knowledge by studying how it DEVELOPS in children"
+    - "The four stages: sensorimotor, preoperational, concrete operational, formal operational"
+    - "Schemas, assimilation, accommodation, equilibration; object permanence and conservation"
+    - "Constructivism — the child as an active builder of knowledge, not a passive vessel"
+    - "Founding the International Centre for Genetic Epistemology, Geneva (1955)"
+    - "His direct influence on Seymour Papert (who worked with him) — and thus on Logo + constructionism"
 
 bio:
-  summary: "**Jean Piaget** — Swiss developmental psychologist whose **Constructivism** — children actively build knowledge through stages — underlies constructionist learning."
+  summary: "**Jean Piaget** (1896–1980) — Swiss psychologist and **genetic epistemologist** whose work transformed our understanding of how children think. By observing children closely (including his own), he described cognitive development as a sequence of **stages** (sensorimotor → preoperational → concrete operational → formal operational) and introduced **schemas**, **assimilation**, **accommodation**, and **equilibration**. His **constructivism** — the child as an active *builder* of knowledge — is the developmental bedrock beneath **Seymour Papert's** constructionism, and therefore beneath Logo, Scratch, OLPC, and this project's own learning mission. He founded the **International Centre for Genetic Epistemology** in Geneva (1955)."
 
 sources:
-  wikipedia: null
+  wikipedia: "https://en.wikipedia.org/wiki/Jean_Piaget"
   web:
-    []
+    - { title: "The Jean Piaget Society", url: "https://www.piaget.org/" }
+    - { title: "Stanford Encyclopedia of Philosophy — Jean Piaget", url: "https://plato.stanford.edu/entries/piaget/" }
+  books:
+    - "The Origins of Intelligence in Children (1936/1952)"
+    - "The Construction of Reality in the Child (1937/1954)"
+    - "Genetic Epistemology (1970)"
   papers: []
   blogs: []
+
+see_also:
+  - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
+  - { path: ../seymour-papert/, why: "🕯️ His student in Geneva — turned constructivism into constructionism + Logo" }
+  - { path: ../marvin-minsky/, why: "🕯️ AI Lab — the developmental view met machine intelligence" }
+  - { path: ../../process/trails/constructionist-lineage.md, why: "Piaget → Papert → the show's learning spine" }
+  - { path: ../../schemas/portrayal-standards.yml#memorial_mode, why: "How memorial guests are handled" }

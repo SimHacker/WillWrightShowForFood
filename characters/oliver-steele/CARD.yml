@@ -1,0 +1,60 @@
+# CARD — Oliver Steele (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: oliver-steele
+  name: Oliver Steele
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Oliver Steele
+  title: Instance-First
+  rarity: rare
+  signifier: 🧩
+  flavor: Reactive, declarative — the ideas the web kept reinventing.
+abilities:
+- id: LZX-ARCHITECTURE
+  name: LZX Architecture
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: lzxArchitecture
+    signature: lzxArchitecture(xml+js) → compiler, runtime, data binding
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Open up LZX's design — compilers, runtime, constraints, animation, data binding.
+  verifiable: Chief Software Architect, Laszlo Systems (osteele.com)
+  combos_with:
+  - OPENLASZLO
+- id: INSTANCE-FIRST
+  name: Instance-First & Reactive
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: instanceFirst
+    signature: instanceFirst(design) → prototypes over classes, reactive state
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Discuss instance-first development + reactive programming, and what the web reinvented.
+  verifiable: Documented in his writing (osteele.com)
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

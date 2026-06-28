@@ -1,0 +1,44 @@
+# Patrick J. Barrett III — invitation portrayal. NOT Patrick Barrett.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: patrick-barrett
+  name: "Patrick J. Barrett III"
+  type: invitation
+  signifier: "🧩"
+  status: living
+  field: "Engineer on The Sims (Maxis) — Sim behavior / SimAntics; lead engineer on several Sims expansions"
+  home: characters/patrick-barrett/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml
+
+bio:
+  summary: "**Patrick J. Barrett III** is a programmer on **The Sims** (Maxis), credited on programming for the 2000 original and as **lead engineer** on expansions including *The Sims: Hot Date* and *The Sims: Vacation*, and engineering across *House Party*, *Unleashed*, and *The Sims Online*. He worked on the Sims' behavior systems (SimAntics). Don's colleague on the original Sims team."
+
+connections:
+  the_sims: "Programmer on The Sims; lead engineer on Hot Date and Vacation; SimAntics / Sim behavior."
+  don: "Don Hopkins's colleague on the original Sims team."
+
+show_suggestions:
+  - { seed: ../../repo-shows/REPO-SHOWS.yml#building-the-sims.yml, what: "The Sims team reunion — Sim behavior / SimAntics." }
+
+sources:
+  wikipedia: null
+  web:
+    - "https://www.mobygames.com/person/70265/patrick-j-barrett-iii/"
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: ../jamie-doornbos/, why: "Sims behavior / SimAntics" }
+  - { path: ../don-hopkins/, why: "Sims teammate; host" }
+  - { path: ../will-wright/, why: "Created The Sims" }

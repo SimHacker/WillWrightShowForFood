@@ -7,7 +7,7 @@ character:
   type: invitation
   signifier: "👤"
   status: living
-  field: "Self × MOOLLM; Kaleida consciencious objectors meetup"
+  field: "Self — prototype-based programming, adaptive JIT, generation-scavenging GC; Self × MOOLLM"
   home: characters/david-ungar/
 
 representation:
@@ -23,11 +23,18 @@ invitation:
   note: "Self × MOOLLM; Kaleida consciencious objectors meetup"
 
 bio:
-  summary: "Self × MOOLLM; Kaleida consciencious objectors meetup"
+  summary: "**David Ungar** — co-creator (with Randall Smith) of **Self**, the prototype-based object language that dropped classes entirely (objects are unique individuals that inherit from other objects). His work pioneered **generation-scavenging** garbage collection (UC Berkeley PhD) and the **adaptive/dynamic JIT compilation** that directly influenced Java's HotSpot VM; he also explored reflection via **mirrors**. Stanford faculty, then Sun Microsystems Labs (Self), then IBM Research. Known for the wry 'Self: The Movie' and the Dahl–Nygaard Prize. In this show: **Self × MOOLLM** — directories as prototypes — with the 'conscientious objectors' framing he and Don coined at a Kaleida meetup."
 
 sources:
-  wikipedia: null
-  web:
-    []
-  papers: []
+  wikipedia: "https://en.wikipedia.org/wiki/David_Ungar"
+  web: []
+  papers:
+    - { title: "Self: The Power of Simplicity (Ungar & Smith, OOPSLA 1987)", url: "https://en.wikipedia.org/wiki/Self_(programming_language)" }
   blogs: []
+
+see_also:
+  - { path: ../../repo-shows/david-ungar-self-moollm.yml, why: "Self × MOOLLM show seed — directories as prototypes, Stage Magic Principle" }
+  - { path: ../alan-kay/, why: "Smalltalk → Self lineage (true OO, late binding)" }
+  - { path: ../dan-ingalls/, why: "Smalltalk/Squeak — the live-object substrate Self grew from" }
+  - { path: ../../process/trails/live-objects.md, why: "Self in the live-object lineage" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

@@ -1,0 +1,64 @@
+# Peter Norvig — invitation portrayal. NOT Peter Norvig.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: peter-norvig
+  name: "Peter Norvig"
+  type: invitation
+  signifier: "📖"
+  status: living
+  field: "AI researcher, educator, author; Director of Research at Google + education fellow at Stanford; co-author of the standard AI textbook (AIMA); author of the essay 'Teach Yourself Programming in Ten Years'"
+  home: characters/peter-norvig/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: warm_lead          # friend; has offered to write a chapter about Don's work
+  document: invitation.md
+  show_seed: repo-shows/peter-norvig/
+
+bio:
+  summary: "**Peter Norvig** — Director of Research at Google and one of the most widely read teachers in AI. With Stuart Russell he wrote *Artificial Intelligence: A Modern Approach* (AIMA), the standard AI textbook used by thousands of universities; he also wrote *Paradigms of Artificial Intelligence Programming* (PAIP, 1992), a deep tour of AI techniques in Common Lisp. Earlier he led the Computational Sciences Division at NASA Ames. In 2011 he and Sebastian Thrun taught a free online AI course to ~160,000 students — an early spark of the modern MOOC wave. He is a Fellow of the AAAI and the ACM, and an essayist whose pieces — *Teach Yourself Programming in Ten Years*, *How to Write a Spelling Corrector*, the *Gettysburg PowerPoint* parody — are programming-culture touchstones."
+
+connections:
+  friendship: "A friend of Don's. Peter is writing a book about AI and has offered to include a chapter about Don's work."
+  leela_orbit: "Open to a show with Don's Leela AI colleagues — Henry Minsky and others — on Society-of-Mind ideas in modern AI."
+  twenty_one_days: "His essay 'Teach Yourself Programming in Ten Years' (deliberate practice over hype) is a touchstone Don loves — and a natural frame for a constructionist conversation about LLMs and skills."
+  moollm_skills: "Curious about MOOLLM and skills as a way to author and teach AI behavior — the topic he can take in whatever direction he wants."
+
+# Paraphrased from his recent public talks/interviews (2025) on how LLMs reshape programming.
+# Themes only — no invented quotations; confirm exact wording with Peter before airing.
+recent_thinking:
+  ten_years_still_holds: "His view (per recent talks): generative AI hasn't killed the 10-year / deliberate-practice rule — it raised the ceiling. The hours shift from memorizing syntax/APIs to system design, architecture, and judgment."
+  how_to_write_to_what_to_build: "Programming moves from 'how to write it' (syntax, loops, memory — now largely handled by AI) to 'what to build' — defining goals, constraints, and intent."
+  vibe_coding_caution: "He's flagged the risk of 'vibe coding' / illusion of competence: an LLM is like a fast but mediocre grad student; if you don't understand the mechanism, you can't debug the subtle architectural flaw it buries."
+  optimizing_for_intent: "His arc of CS history: 1950s optimized for hardware, 2010s for programmer time (Python), 2020s+ for intent — humans supply high-level logic, machines supply formal correctness and tests."
+
+show_suggestions:
+  - { seed: ../../repo-shows/peter-norvig/, what: "An open-topic conversation — Peter's pick: MOOLLM, skills, or AI in general — with Don and Leela colleagues (Henry Minsky et al.). Could double as research/interviews for his AI book chapter." }
+  - { seed: ../../repo-shows/REPO-SHOWS.yml#skill-creation.yml, what: "Skills as constructionism / programming-by-demonstration for the LLM era — Peter is a strong candidate discussant." }
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Peter_Norvig"
+  web:
+    - "https://norvig.com/"
+    - "https://norvig.com/21-days.html"   # Teach Yourself Programming in Ten Years
+    - "https://norvig.com/spell-correct.html"
+  books:
+    - "Artificial Intelligence: A Modern Approach (with Stuart Russell) — the standard AI textbook"
+    - "Paradigms of Artificial Intelligence Programming: Case Studies in Common Lisp (1992)"
+  essays:
+    - "Teach Yourself Programming in Ten Years (https://norvig.com/21-days.html)"
+
+see_also:
+  - { path: ../henry-minsky/, why: "Leela AI — Society of Mind in modern AI; co-guest for the show" }
+  - { path: ../steve-kommrusch/, why: "Leela AI — ML for program repair; AI discussant" }
+  - { path: ../isabella-struckman/, why: "Leela AI — model eval/training, AI policy; possible co-guest" }
+  - { path: ../milan-singh-minsky/, why: "Leela AI — product; possible co-guest" }
+  - { path: ../gary-drescher/, why: "AI + learning — constructivist AI thread" }
+  - { path: ../alan-kay/, why: "Computing-as-literacy kinship; deliberate practice / learning" }
+  - { path: ../../repo-shows/REPO-SHOWS.yml, why: "skill-creation seed — skills as constructionism for the LLM era (Peter a candidate)" }

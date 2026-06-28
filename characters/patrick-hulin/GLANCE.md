@@ -1,0 +1,1 @@
+👤 **Patrick Hulin** (@phulin) — reverse-engineered **SimTower** with an LLM (Claude Code) and reimplemented it **tick-for-tick in TypeScript** ([tower-together](https://github.com/phulin/tower-together) / [towers.world](https://towers.world)), byte-identical via trace tests + multiplayer. A warm lead for Don's **Yoot Tower** revival; kin to Temkin's OpenLaszlo AI revival.

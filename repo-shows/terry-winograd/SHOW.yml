@@ -1,0 +1,85 @@
+# SHOW — Terry Winograd (the FOREBEAR show)
+# Planted from the seed ../REPO-SHOWS.yml#terry-winograd. Inherits from the SHOW skill (/skills/repo-show).
+# Terry Winograd is the dragon with the treasure trove: the Stanford CS547 seminar archive,
+# the open, recorded, one-guest-a-week public seminar that is the DIRECT FOREBEAR of the Repo Show.
+
+show:
+  id: terry-winograd
+  title: "A Repo Show with Terry Winograd — The Forebear"
+  type: solo
+  host: Don Hopkins                # incarnations: User Interface Flower Child / Don Philahue
+  guests: ["Terry Winograd"]
+  character: ../../characters/terry-winograd/   # represented, living, consent not_yet_asked
+  topic: "CS547 as the forebear of the Repo Show — the archive as curriculum"
+  status: planted                  # seed → PLANTED → DISTILL → public repo LIVE → INVITE
+  consent: not_yet_asked           # see ../../characters/terry-winograd/invitation.md
+
+the_forebear_thesis:
+  one_line: "CS547 IS the template: one luminary a week, open public access, recorded for posterity, real Q&A. The Repo Show is its descendant."
+  standing_on_shoulders: "This whole project stands on Terry's shoulders — and on the shoulders of all his great guests (Will Wright 1996, James Gosling 1995, Joy Mountford, Jef Raskin, Don Norman, Alan Kay, Ted Selker, Scott Kim, Ken Kahn, Adele Goldberg, and ~200 more)."
+  the_dragon_and_the_trove: "Terry is the curator of the trove that holds Will's own 1996 words — and 597 other recordings. The full catalog is the archive.yml girder beside this file."
+
+the_treasure_trove:
+  what: "Stanford University, Computer Science Department, HCI Group, CS547 seminar videorecordings, 1990–2012 (collection SC1217)."
+  catalog: archive.yml             # full machine-readable catalog (girder)
+  catalog_markup: ARCHIVE.md       # human-readable facade (generated)
+  raw_mirror: catalog.tsv          # faithful mirror of the source spreadsheet (provenance)
+  finding_aid: "https://oac.cdlib.org/findaid/ark:/13030/c82b926h"
+  searchworks_collection: "https://searchworks.stanford.edu/catalog?f%5Bcollection%5D%5B%5D=a10637698"
+  extent: "18 linear feet · 598 videorecording components · Boxes 1–12"
+  provenance: "Catalog supplied by Don Hopkins (SimHacker), cross-referenced against his 2024 Hacker News inventory (item 39252103) and Stanford SearchWorks / OAC finding aid."
+
+why_this_show:
+  for_terry: "Reify the seminar's legacy as living curriculum — not 18 feet of VHS in cold storage, but runnable seeds and a continuing series."
+  for_audience: "A guided tour of one of the richest HCI oral-history troves in existence, decoded by the person who convened it."
+  for_project: "The forebear episode. Establishes the lineage and unlocks dozens of guest threads — many catalog speakers are already WWSFF characters or dream guests."
+
+show_hooks:
+  - "Screen the 1996 'Interfacing to Microworlds' talk (Will Wright) and decode it live — the throughline that sent Don to Maxis."
+  - "The 1995 Gosling Java talk — Don on camera asking Java-security questions; NeWS→Java lineage."
+  - "Walk the catalog: which talks predicted the present? (Larry Page 2002 on Google before it was an anomaly; Pattie Maes 1994 interface agents; Hiroshi Ishii 1997 tangible bits.)"
+  - "Archive-as-curriculum: pick a talk, build a modern runnable seed from its idea (Micropolis Class continuation)."
+  - "The Connections-series spine: thread the catalog into a narrative of how the ideas beget each other."
+
+archive_recovery:
+  note: "Many CS547 recordings exist only as VHS/DVD inventory (Box 1–12) with no online scan yet. A standing project is to help Stanford digitize + caption the historically important ones (Don already did this for Will 1996 and Gosling 1995)."
+  already_online: "A subset has SearchWorks digital scans — see archive.yml entries with a searchworks: id."
+  scans_are_a_floor: "The 15 marked scans are only the ones Don cross-referenced from his 2024 HN post — a FLOOR, not a ceiling. Many more are likely already scanned or easily scannable; dig them up and catalog them later, after contacting Terry."
+
+format:
+  canonical: ../../process/repo-show-format.yml
+  live: true
+  audience_qa: true
+  shape: "No rigid agenda. Orbit the catalog. Pick talks, explain WHY they mattered, build a little live."
+
+wwsff_guests_in_the_catalog:
+  note: "Catalog speakers who already have WWSFF character dirs — catalogued in archive.yml with a wwsff_character flag (25 talks across these 11). Wire each into their CHARACTER.yml sources.archive as shows are scheduled."
+  people:
+    - will-wright          # 1996-04-26 Interfacing to Microworlds + 2003-05-02 Games and Simulation
+    - james-gosling        # 1995-12-01 Bringing Behavior to the Internet (Java)
+    - alan-kay             # 2003-04-25 Croquet: A Collaboration Architecture
+    - ted-selker           # 1993/1994/1997/2000/2005 — five CS547 talks
+    - scott-kim            # 1996-02-16 VizAbility + 2004-10-08 Paper, Plastic, or Playstation?
+    - ken-kahn             # 1993-12-03 Toon Talk / Animated Programs
+    - ben-shneiderman      # 1998-02-20 The Eyes Have It + 2000-10-20 Leonardo's Laptop
+    - terry-winograd       # host + his own ~10 CS547 talks
+
+dream_guests_in_the_catalog:
+  note: "Catalog speakers worth their own future show (no character dir yet)."
+  people: ["Adele Goldberg", "Brenda Laurel", "Larry Tesler + David Canfield Smith (StageCast)", "Andy Hertzfeld", "Jaron Lanier", "Don Norman", "Jef Raskin", "Hiroshi Ishii", "Pattie Maes", "Bill Buxton", "Larry Page", "Marissa Mayer", "Joy Mountford"]
+
+ties_to:
+  - { path: ../../characters/terry-winograd/CHARACTER.yml, why: "Forebear portrayal girder" }
+  - { path: ../../characters/terry-winograd/correspondence.yml, why: "Verified talks + Don's preservation roles" }
+  - { path: ../will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "The centerpiece talk this archive preserved" }
+  - { path: ../../process/trails/cs547-seminar-lineage.md, why: "CS547 lineage trail" }
+  - { path: ../../process/trails/archive-and-provenance.md, why: "Primary-source preservation trail" }
+  - { path: ../../process/cross-links.yml, why: "Thematic web" }
+
+files:
+  SHOW.yml:     "This manifest."
+  README.md:    "Forebear-show pitch + framing."
+  archive.yml:  "Full CS547 catalog girder (deduped talks; SearchWorks ids; WWSFF flags)."
+  ARCHIVE.md:   "Human-readable catalog facade (generated from archive.yml)."
+  catalog.tsv:  "Faithful raw mirror of the source spreadsheet (provenance)."
+  build-archive.py: "Generator: catalog.tsv → archive.yml + ARCHIVE.md."

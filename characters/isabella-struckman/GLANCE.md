@@ -1,0 +1,1 @@
+👤 **Isabella Struckman** (she/her) — AI/ML researcher; **computer-vision model evaluation & training at Leela AI**, **ML explainability + AI policy** at **MIT CSAIL (Mądry Lab)**. Co-author of "AI Supply Chains"; lead author of "Why They're Worried" (the 2023 pause-letter study). Don's colleague at Leela.

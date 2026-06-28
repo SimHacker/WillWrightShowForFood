@@ -4,8 +4,8 @@ The single most important seed document for the Will Wright Repo Show — and a
 direct artifact of a **forebear** (Terry Winograd's open public Stanford UI
 seminar; see `../../../../process/design-in-public.yml#forebears`).
 
-This episode is the preserved centerpiece of the larger **Terry Winograd / CS547 archive** ("the treasure trove"). See the dedicated forebear show:
-`../../../terry-winograd/` (and `archive.yml` inside it) for the full catalog of shoulders we stand on: Terry as dragon + Will + James Gosling (Java, 1995) + S. Joy Mountford (HCI design leadership, 1994) + Jef Raskin + Donald Norman + all the other guests.
+This episode is the preserved centerpiece of the larger **Terry Winograd / CS547 archive** ("the treasure trove"). See the dedicated forebear show
+`../../../terry-winograd/` — its [`ARCHIVE.md`](../../../terry-winograd/ARCHIVE.md) / [`archive.yml`](../../../terry-winograd/archive.yml) hold the **full catalog of 339 talks** (15 with online scans, 25 by people who are WWSFF characters): the shoulders we stand on — Terry as dragon + Will + James Gosling (Java, 1995) + S. Joy Mountford (1994) + Jef Raskin + Donald Norman + Alan Kay + Ted Selker + Scott Kim + ~290 others.
 
 ## What this is
 
@@ -15,6 +15,11 @@ early public preview of **Dollhouse** (which became **The Sims**, 2000). Don was
 the audience, asked Will questions on camera, and **later preserved the record**:
 uploaded the video to YouTube (Jan 2023, from Stanford Archives), cleaned the
 transcript, and wrote the Medium article. A **proto-Repo-Show**.
+
+This was the **first** of Will's CS547 talks, not his only one — he returned on **2003-05-02**
+with **"Games and Simulation"** (CS547 Winograd 5). Both are catalogued in the
+[CS547 archive](../../../terry-winograd/ARCHIVE.md); this 1996 talk remains the show's single
+centerpiece by design (see `../../SHOW.yml#topic_less_by_design`).
 
 - `transcript.md` — Don's hand-perfected transcript with table of contents and section headers.
 - `transcript-summary.md` — same text, plain layout (no navigation).

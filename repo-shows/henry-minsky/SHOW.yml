@@ -1,0 +1,42 @@
+# SHOW — Henry Minsky (Society of Mind, running)
+# Planted seed. Inherits from the SHOW skill (/skills/repo-show).
+
+show:
+  id: henry-minsky
+  title: "A Repo Show with Henry Minsky — Society of Mind, Running"
+  type: solo
+  host: Don Hopkins
+  guests: ["Henry Minsky"]
+  character: characters/henry-minsky/
+  topic: "Society-of-Mind ideas in modern AI (Leela AI's visual intelligence), declarative UI (OpenLaszlo), and authoring agent skills as constructionism / programming-by-demonstration."
+  status: seed
+  consent: not_yet_asked
+
+why_him:
+  leela_ai: "Co-founder & CTO of Leela AI — visual intelligence that reads activity in video; its principles trace back to the MIT AI Lab his father co-founded."
+  society_of_mind: "Living proximity to Society of Mind — many small agents making a mind — discussed as HIS perspective, never as Marvin's voice (Marvin is memorial)."
+  openlaszlo: "Software architect at Laszlo Systems — OpenLaszlo, declarative rich-internet apps. A road-not-taken for web UI, relevant to browser-native content tools."
+  first_wired_family: "Grew up in the AI Lab's children's computer lab (twin Juliana, sister Margaret), observed by grad students studying how children learn."
+
+dream_segments:
+  - "Build a tiny 'society of agents' live — small behaviors composing into something mind-like."
+  - "Skill-authoring as constructionism — Agent Skills / MOOLLM skills as PBD for the LLM era (pairs with the skill-creation show)."
+  - "OpenLaszlo lessons for declarative, web-native content tools."
+  - "A Minsky-sibling session with Margaret — two kids of the first wired family."
+
+pairings:
+  - { with: margaret-minsky, why: "Sibling session — growing up in the AI Lab" }
+  - { with: walter-bender, why: "skill-creation episode — constructionism + skill authoring" }
+
+relevance_note: "Already named as a candidate for the skill-creation group show (see ../REPO-SHOWS.yml#skill-creation.yml)."
+
+format:
+  live: true
+  audience_qa: true
+
+ties_to:
+  - ../../characters/henry-minsky/
+  - ../../characters/henry-minsky/invitation.md
+  - ../../characters/marvin-minsky/
+  - ../../characters/margaret-minsky/
+  - ../../repo-shows/REPO-SHOWS.yml   # skill-creation seed (Henry is a named candidate)

@@ -20,11 +20,25 @@ conversation, then use AI coding tools to actually *implement* the designs we ta
 Twitch. Everything ends up free on GitHub: transcripts, design documents, papers, and runnable,
 shareable code. **Show, don't tell.**
 
+The deliverable isn't just an audio podcast or a video interview — it's all of that **plus a whole
+repo**. That's the whole point: reinventing blogging, YouTube, Twitch, and GitHub as **Repo Shows**.
+The conversation is the seed; the repo is the living thing that grows from it.
+
 I'd be honored to have you on, and there's no assigned topic — **you are the topic.** We can
 *teleintertwingle* our audio/video streams whenever you like; my virtual time zone is adjustable.
 
 **A "Têd-à-Têd Talk."** I'd love to make this a tag-team with your friend **[Ted Selker](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/ted-selker)** —
 two hyperactive Teds and me. It would be a joy to get you both on at once.
+*(A **tête-à-tête** — head to head — except it's **Têd-à-Têd**, and that circumflex `^` over each
+**Tê**d is a little **beret**: two Teds in berets, leaning in for an intimate French chat.)* 🎩🇫🇷
+
+**Or — a tribute to Doug.** If you'd rather, we could make the whole show a memorial to **Doug
+Engelbart**: his work, his vision, his philosophy, told by the people who knew him. I'd invite
+**[Yoot Saito](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/yoot-saito)**
+and **[Alan Kay](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/alan-kay)**
+to join us, and your eulogy would be its heart. (Seed:
+[Remembering Douglas Engelbart](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/remembering-douglas-engelbart.yml).)
+Either shape — or both, or neither — works. **You pick.**
 
 **What we could get into — your pick:**
 
@@ -52,6 +66,7 @@ primary source, with care:
 - Augmentation & hypertext trail (Engelbart · you · Weiser): https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/trails/augmentation-and-hypertext.md
 - Your guest page: https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/ted-nelson
 - The show seed (segment ideas): https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/ted-nelson
+- The Doug Engelbart memorial seed (you · Yoot · Alan): https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/remembering-douglas-engelbart.yml
 - Start anywhere: https://github.com/SimHacker/WillWrightShowForFood
 
 We *represent and discuss* the people we've lost — Doug, Hugh — and never speak as them; we invite

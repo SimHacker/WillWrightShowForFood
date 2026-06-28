@@ -1,0 +1,49 @@
+# Isabella Struckman — invitation portrayal. NOT Isabella Struckman.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: isabella-struckman
+  name: "Isabella Struckman"
+  type: invitation
+  signifier: "👤"
+  status: living
+  pronouns: "she/her"
+  field: "AI/ML researcher — computer-vision model evaluation & training (Leela AI); ML explainability & AI policy (MIT CSAIL, Mądry Lab)"
+  home: characters/isabella-struckman/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+  note: "Host-authored from public profiles + colleague knowledge (Don and Isabella are colleagues at Leela AI). She may edit, reduce, or delete anytime."
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/isabella-struckman/
+
+bio:
+  summary: "**Isabella Struckman** — AI/ML researcher. At **Leela AI** she works on **computer-vision model evaluation and training** (she built a fine-tuning technique for an object-detection pipeline that cut the resources needed to hold performance after camera movements by ~25%). MEng at **MIT CSAIL in the Mądry Lab**, researching **ML explainability** and **AI policy**; co-author of the **\"AI Supply Chains\"** work and lead author of **\"Why They're Worried\"** (a study of experts who signed the 2023 'pause letter'). MIT AI & Decision Making grad; has taught intro-AI to high-schoolers and facilitated MIT's Women's Technology Program."
+
+leela_colleagues:
+  note: "Don's colleagues at Leela AI — relevant for a Leela / vision-AI episode."
+  with: ["henry-minsky (co-founder/CTO)", "Milan Singh Minsky (VP Product)", "Steve Kommrusch", "don-hopkins"]
+
+show_suggestions:
+  - { seed: ../../repo-shows/isabella-struckman/, what: "Solo — vision-model evaluation & training at Leela AI, ML explainability, AI policy / AI supply chains, AI skills, and whatever she's passionate about" }
+
+sources:
+  wikipedia: null
+  web:
+    - { title: "Isabella Struckman on X (@imstruckman)", url: "https://x.com/imstruckman" }
+    - { title: "On AI Deployment — MIT AI policy blog series (co-author)", url: "https://aipolicy.substack.com/p/supply-chains-1" }
+    - { title: "Why They're Worried: experts' motivations for signing the 'Pause Letter' (Struckman & Kupiec, 2023)", url: "https://datascienceincontext.com/why-theyre-worried/" }
+  papers:
+    - { title: "AI Supply Chains: An Emerging Ecosystem of AI Actors, Products, and Services (AAAI/ACM AIES 2025)", authors: "Hopkins, Cen, Struckman, Ilyas, Videgaray, Madry" }
+  blogs: []
+
+see_also:
+  - { path: CARD.yml, why: "Invokable abilities for show segments" }
+  - { path: ../henry-minsky/, why: "Leela AI co-founder/CTO — colleague" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

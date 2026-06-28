@@ -1,0 +1,52 @@
+# SHOW — Yoot Tower Revival (group): reverse engineering, emulation, clean-room reimplementation
+# Planted seed. Inherits from the SHOW skill (/skills/repo-show).
+# No promises, no pressure: Yoot Tower's licensing is unresolved; discussed in the abstract + via
+# clean-room / emulation / community paths, with permissions + authorship respected throughout.
+
+show:
+  id: yoot-tower-revival
+  title: "A Repo Show: Yoot Tower Revival — Reverse Engineers, Emulator Hackers & the Creator"
+  type: group
+  host: Don Hopkins
+  guests: ["Yoot Saito", "Patrick Hulin", "Thomas Cherryhomes", "Lars Brinkhoff"]
+  open_invite: "Decompiler / reverse-engineering / retro-emulation hackers welcome — come build in the open."
+  characters:
+    - characters/yoot-saito/
+    - characters/patrick-hulin/
+    - characters/thomas-cherryhomes/
+    - characters/lars-brinkhoff/
+  topic: "How you bring a beloved old game back to life — reverse engineering, emulation, and clean-room reimplementation — with the creator (Yoot), the person who already did it for SimTower (Patrick), and master retro/emulation preservationists in the room."
+  status: seed
+  consent: not_yet_asked
+
+the_cast:
+  yoot_saito: "Creator of The Tower / SimTower / Yoot Tower; sent Don a code drop for archival + open-source study. → characters/yoot-saito/"
+  patrick_hulin: "Reverse-engineered SimTower with an LLM into a tick-for-tick TypeScript reimplementation (towers.world). → characters/patrick-hulin/"
+  thomas_cherryhomes: "Retrocomputing engineer; FujiNet, IRATA.ONLINE/PLATO; putting the internet on retro machines. → characters/thomas-cherryhomes/"
+  lars_brinkhoff: "Software preservationist; PDP-10/ITS restoration; emulation + historic-system recovery. → characters/lars-brinkhoff/"
+  don_hopkins: "Host; has the Yoot Tower code drop + the MicropolisCore WASM/Emscripten playbook."
+
+threads:
+  - "Binary → spec → reimplementation — Patrick's AI-assisted method, and how it generalizes."
+  - "Emulation as preservation — running originals faithfully (Win 3.1, Mac System 7, consoles) vs. clean-room reimplementation."
+  - "The Tower II 'Tower Kit' plug-in system — reverse-engineer it, or build a modern JS/HTML plug-in adaptor (a Yoot Tower SDK)."
+  - "Doing it RIGHT — clean-room, permissions, authorship, and trademark care; what's safe to build while licensing is unresolved."
+  - "Where it plugs in — MicropolisCore (WASM/Emscripten/embind/SvelteKit); multiple Yoot Towers inside a Micropolis city."
+
+no_promises:
+  licensing: "Yoot Tower's release is delayed/unresolved (Nintendo + licensing). Everything here is exploratory and abstract; nothing committed; no pressure on Yoot."
+  see: ../../characters/yoot-saito/yoot-tower-discussion.yml
+
+format:
+  live: true
+  audience_qa: true
+  vibe: "A friendly preservation + reverse-engineering summit — makers swapping techniques, the creator in the room."
+
+ties_to:
+  - ../../characters/yoot-saito/
+  - ../../characters/yoot-saito/yoot-tower-discussion.yml
+  - ../../characters/patrick-hulin/
+  - ../../characters/thomas-cherryhomes/
+  - ../../characters/lars-brinkhoff/
+  - ../../repo-shows/patrick-hulin/SHOW.yml
+  - ../../repo-shows/openlaszlo/      # kindred AI-retrocomputing-revival show

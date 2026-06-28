@@ -1,13 +1,14 @@
-# Marvin Minsky — invitation portrayal. NOT Marvin Minsky.
-# Standards: ../../schemas/portrayal-standards.yml
+# Marvin Minsky — memorial portrayal (in memoriam). NOT Marvin Minsky.
+# Memorial mode: represent + discuss, never interview. No invented quotes or inner life.
+# Standards: ../../schemas/portrayal-standards.yml#memorial_mode
 
 character:
   id: marvin-minsky
   name: "Marvin Minsky"
-  type: invitation
+  type: memorial
   signifier: "🕯️"
   status: deceased
-  field: "AI pioneer — Society of Mind, K-lines"
+  field: "AI pioneer — co-founder of the MIT AI Lab; Society of Mind, frames, K-lines, Perceptrons"
   home: characters/marvin-minsky/
 
 representation:
@@ -16,18 +17,59 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: legacy_only
+  status: memorial
   consent: not_yet_asked
-  document: invitation.md
-  show_seed: repo-shows/marvin-minsky/
-  note: "deceased — reverence; legacy only"
+  document: memorial.md
+  note: "deceased (1927–2016) — represent + discuss; invite people who knew him (incl. his children Margaret & Henry)"
+
+memorial:
+  mode: represent_and_discuss
+  rule: "Represent and discuss his documented work and stories. Do not interview, do not speak as him, invent no inner life, dialogue, or quotes."
+  who_can_discuss:
+    - { who: henry-minsky, why: "His son — grew up in the AI Lab's children's computer lab; carries Society-of-Mind ideas into Leela AI" }
+    - { who: margaret-minsky, why: "His daughter — MIT Media Lab; the first wired family" }
+    - { who: alan-kay, why: "AI/personal-computing peer shaped by the same MIT/ARPA milieu" }
+    - { who: ken-kahn, why: "MIT AI Lab lineage; Logo/ToonTalk constructionism" }
+    - { who: walter-bender, why: "MIT Media Lab; OLPC — carried the lab's learning mission forward" }
+    - { who: don-hopkins, why: "K-lines are a load-bearing concept in MOOLLM/this repo" }
+  draw_on_for_shows:
+    - "Co-founding the MIT AI Lab (1959, with John McCarthy) — and co-directing it with Seymour Papert"
+    - "SNARC (1951, with Dean Edmonds) — one of the first randomly-wired neural-network learning machines"
+    - "Perceptrons (1969, with Papert) — the analysis that reshaped neural-network research"
+    - "Frames (1974) and K-lines (1980) — knowledge representation + a theory of memory (K-lines anchor MOOLLM)"
+    - "The Society of Mind (1986) — mind as a society of small, mindless agents; and The Emotion Machine (2006)"
+    - "Invented the confocal scanning microscope (1957); built early robotic arms; advised on HAL in 2001: A Space Odyssey"
+    - "The 'Ultimate Machine' (1952, Bell Labs) — a box whose only function is to switch itself off (Claude Shannon built the first; Arthur C. Clarke called it 'unspeakably sinister'); and the Triadex Muse, an early algorithmic music sequencer (the repo's Ultimate Machine bot mascot grows from this)"
+    - "ACM Turing Award (1969); founding member of the MIT Media Lab (1985)"
 
 bio:
-  summary: "**Marvin Minsky** — AI pioneer, co-founder of the MIT AI Lab, author of *The Society of Mind*; originator of **K-lines** and **frames**."
+  summary: "**Marvin Minsky** (1927–2016) — one of the founding figures of **artificial intelligence**. With John McCarthy he co-founded the **MIT AI Lab** (1959), which he later co-directed with **Seymour Papert**. As a Princeton graduate student he built **SNARC** (1951), among the first neural-network learning machines. He developed **frames** (1974) and **K-lines** (1980) for representing knowledge and memory, and synthesized a lifetime of ideas in **The Society of Mind** (1986) and **The Emotion Machine** (2006). With Papert he wrote **Perceptrons** (1969). He invented the **confocal scanning microscope**, built early robotic arms, and advised Stanley Kubrick on **2001: A Space Odyssey**. **Turing Award**, 1969; founding member of the **MIT Media Lab**. Husband of Gloria Rudisch; father of Margaret, Henry, and Juliana."
+
+family:
+  spouse: "Gloria Rudisch Minsky, MD"
+  children: ["margaret-minsky (haptics; MIT Media Lab)", "henry-minsky (Leela AI / OpenLaszlo; his twin sister Juliana)", "Juliana 'Julie' Minsky"]
 
 sources:
-  wikipedia: null
+  wikipedia: "https://en.wikipedia.org/wiki/Marvin_Minsky"
   web:
-    []
-  papers: []
+    - { title: "Marvin Minsky's MIT home page", url: "https://web.media.mit.edu/~minsky/" }
+    - { title: "MIT News — Marvin Minsky obituary (2016)", url: "https://news.mit.edu/2016/marvin-minsky-obituary-0125" }
+    - { title: "A.M. Turing Award — Marvin Minsky", url: "https://amturing.acm.org/award_winners/minsky_7440781.cfm" }
+  books:
+    - "The Society of Mind (1986)"
+    - "Perceptrons (1969, with Seymour Papert)"
+    - "The Emotion Machine (2006)"
+  papers:
+    - "K-lines: A Theory of Memory (1980)"
+    - "A Framework for Representing Knowledge (1974) — frames"
   blogs: []
+
+see_also:
+  - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
+  - { path: ../ultimate-machine/, why: "His 1952 'Ultimate Machine,' now a fictional bot mascot here (never speaks as him)" }
+  - { path: ../henry-minsky/, why: "His son — can discuss him on air" }
+  - { path: ../margaret-minsky/, why: "His daughter — can discuss him on air" }
+  - { path: ../seymour-papert/, why: "🕯️ Co-director of the AI Lab; Perceptrons co-author; constructionism" }
+  - { path: ../jean-piaget/, why: "🕯️ Constructivism — the developmental root of the lab's learning work" }
+  - { path: ../../process/trails/constructionist-lineage.md, why: "Piaget → Papert → Minsky → the show's learning spine" }
+  - { path: ../../schemas/portrayal-standards.yml#memorial_mode, why: "How memorial guests are handled" }

@@ -101,5 +101,5 @@ invoke_rules:
 see_also:
 - path: CHARACTER.yml
   why: Bio girder — invitation status
-- path: invitation.md
-  why: Public invitation document
+- path: memorial.md
+  why: Tribute — represent + discuss (memorial mode)

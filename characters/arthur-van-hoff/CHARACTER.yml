@@ -31,3 +31,10 @@ sources:
     []
   papers: []
   blogs: []
+
+see_also:
+  - { path: ../james-gosling/, why: "Old NeWS + early-Java friend — the 'NeWS to Java' pairing (repo-shows/james-gosling/)" }
+  - { path: ../don-hopkins/, why: "HyperLook (where Don built SimCity's UI), NeWS, PdB — longtime collaborator" }
+  - { path: ../bill-atkinson/, why: "HyperCard → HyperLook lineage (van Hoff's NeWS reimagining) — memorial" }
+  - { path: ../../process/trails/live-objects.md, why: "NeWS / HyperLook in the live-object lineage" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

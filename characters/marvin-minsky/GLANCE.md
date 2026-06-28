@@ -1,1 +1,1 @@
-🕯️ **Marvin Minsky** — AI pioneer, co-founder of the MIT AI Lab, author of *The Society of Mind*; originator of **K-lines** and **frames**.
+🕯️ **Marvin Minsky** (1927–2016) — *memorial.* Co-founder of the **MIT AI Lab**; **Society of Mind**, **frames**, **K-lines**, **Perceptrons** (with Papert). SNARC, the confocal microscope, HAL's advisor, Turing Award 1969. Father of Margaret & Henry. Represent + discuss; never speak as him. → [memorial.md](memorial.md)

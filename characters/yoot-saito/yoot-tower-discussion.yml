@@ -22,9 +22,19 @@ yoot_tower_status:
     conjunction with Yoot and with his permission. No leaking of code, docs, or proprietary content.
 
 community_reimplementation:
-  what: "Someone has already AI-reverse-engineered the Yoot Tower binary and reimplemented an engine + UI in TypeScript; there was a Hacker News discussion about it."
-  idea: "A possible integration path — collaborate with / build on that clean-room TS effort rather than touching proprietary binaries. Permissions and authorship respected throughout."
-  status: "lead — find the HN thread + repo and reach out; nothing committed."
+  what: "Patrick Hulin (GitHub @phulin) used an LLM (Claude Code) to reverse-engineer the original SimTower Windows binary into a complete spec, then reimplement the simulation tick-for-tick in TypeScript — byte-identical to the original on every tick, verified by trace tests. Added multiplayer + a build-a-grid-of-rooms UI."
+  clarification: "It's SimTower (Yoot's original, Maxis 1993) — NOT the Yoot Tower sequel. Same elevator-sim core; a natural foundation to build Yoot Tower's additions on."
+  refs:
+    repo: "https://github.com/phulin/tower-together"   # MIT-licensed, pure-TS sim core + specs/
+    live: "https://towers.world"
+    blog: "https://phulin.me/blog/simtower"             # 'Reverse Engineering SimTower' — the AI-RE writeup
+    hn_thread: "https://news.ycombinator.com/item?id=47937814"   # Don + Patrick already conversed here
+    don_2024_announce: "https://news.ycombinator.com/item?id=40050799"   # Don's Yoot Tower open-source announcement
+  warm_lead: "On the HN thread Patrick said he'd love to see Yoot Tower recreated, and was intrigued by The Tower II's 'Tower Kit' plug-in system (→ a JS/HTML plugin adaptor). Don replied. A real, friendly collaboration opening."
+  idea: "Possible integration path — collaborate with / build on Patrick's clean-room TS sim (or its trace-test methodology) rather than touching proprietary binaries. Permissions + authorship respected throughout."
+  kin_to: "Retrocomputing-by-AI, same spirit as David Temkin reviving OpenLaszlo (repo-shows/openlaszlo/) — candidate Crazy Idea Jam / show thread."
+  group_show: ../../repo-shows/yoot-tower-revival/   # Yoot + Patrick + Cherryhomes + Brinkhoff + RE/emulator hackers
+  status: "lead FOUND + cited; planted as the Yoot Tower Revival group show. Reaching out is Don's call. Nothing committed; Yoot Tower licensing still unresolved (see yoot_tower_status)."
 
 possibilities_no_promises:
   - emulate: "Emulate the original code as-is, for preservation and study."

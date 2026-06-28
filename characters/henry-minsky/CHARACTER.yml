@@ -1,0 +1,53 @@
+# Henry Minsky — invitation portrayal. NOT Henry Minsky.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: henry-minsky
+  name: "Henry Minsky"
+  type: invitation
+  signifier: "👤"
+  status: living
+  field: "Software architect / AI engineer — Leela AI (co-founder, CTO), Laszlo Systems (OpenLaszlo), MIT AI Lab"
+  home: characters/henry-minsky/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/henry-minsky/
+
+bio:
+  summary: "**Henry Minsky** — software architect and AI engineer. Co-founder and CTO of **Leela AI** (visual intelligence for manufacturing, carrying MIT-AI-Lab ideas forward); earlier a software architect at **Laszlo Systems** (the OpenLaszlo declarative rich-internet-app framework) and co-founder of Universal Access. Studied at MIT and was a research assistant at the MIT AI Lab. Son of **Marvin Minsky** + Gloria Rudisch and twin of Juliana — he and his siblings grew up in the AI Lab's children's computer lab, playing games and solving puzzles while grad students took notes."
+
+family:
+  father: marvin-minsky        # AI pioneer; Society of Mind (memorial)
+  siblings: ["Margaret Minsky (haptics; MIT Media Lab)", "Juliana 'Julie' Minsky (his twin)"]
+  spouse: "Milan Singh Minsky — VP Product at Leela AI (Marvin's daughter-in-law)"
+  in_laws: ["Oliver Steele — Marvin's son-in-law (Laszlo Systems chief architect; Henry's brother-in-law)"]
+
+leela_colleagues:
+  note: "Don's colleagues at Leela AI."
+  with: ["Milan Singh Minsky (VP Product; Henry's wife)", "isabella-struckman (vision-model eval/training)", "Steve Kommrusch", "don-hopkins"]
+
+show_suggestions:
+  - { seed: ../../repo-shows/henry-minsky/, what: "Solo — Society of Mind ideas in modern AI (Leela AI), declarative UI (OpenLaszlo), and authoring agent skills as constructionism / PBD" }
+  - { seed: ../../repo-shows/openlaszlo/, what: "Group — OpenLaszlo reunion with David Temkin + Oliver Steele + Don; Henry was a Laszlo software architect and relayed David's AI-revival news" }
+
+sources:
+  wikipedia: null
+  web:
+    - { title: "Son of Marvin Minsky launches Leela AI startup (Boston Globe, 2024)", url: "https://www.bostonglobe.com/2024/12/03/business/minsky-leela-ai-company-mit/" }
+    - { title: "Marvin Minsky and the First Wired Family (NYT, 1997)", url: "https://archive.nytimes.com/www.nytimes.com/library/cyber/week/010397minsky.html" }
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: CARD.yml, why: "Invokable abilities for show segments" }
+  - { path: ../marvin-minsky/, why: "🕯️ His father — Society of Mind, MIT AI Lab (memorial)" }
+  - { path: ../margaret-minsky/, why: "His sister — haptics / MIT Media Lab" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

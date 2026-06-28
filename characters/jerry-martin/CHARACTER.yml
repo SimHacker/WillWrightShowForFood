@@ -1,0 +1,47 @@
+# Jerry Martin — invitation portrayal. NOT Jerry Martin.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: jerry-martin
+  name: "Jerry Martin"
+  type: invitation
+  signifier: "🎵"
+  status: living
+  field: "Composer — music for The Sims and SimCity 3000 (Maxis)"
+  home: characters/jerry-martin/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/REPO-SHOWS.yml#music-and-theory.yml
+
+bio:
+  summary: "**Jerry Martin** is a composer best known for writing the music for **The Sims** and **SimCity 3000** at Maxis — scores that gave those digital worlds their warm, lived-in feel. (Don's colleague on the Maxis games.)"
+
+connections:
+  the_sims: "Composed music for The Sims; the score that made digital houses feel like homes."
+  simcity: "Composed the SimCity 3000 soundtrack."
+  don: "Don Hopkins's colleague at Maxis."
+  david_levitt: "Paired with David Levitt for a music + theory Repo Show."
+
+show_suggestions:
+  - { seed: ../../repo-shows/REPO-SHOWS.yml#music-and-theory.yml, what: "Music + theory — with David Levitt. How game music is composed, scored, and made to feel alive." }
+  - { seed: ../../repo-shows/REPO-SHOWS.yml#building-the-sims.yml, what: "The Sims team reunion — the audio side." }
+
+sources:
+  wikipedia: null
+  web:
+    - "https://www.mobygames.com/search/?q=Jerry+Martin"
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: ../david-levitt/, why: "Music + theory show partner" }
+  - { path: ../will-wright/, why: "Maxis games" }
+  - { path: ../don-hopkins/, why: "Maxis colleague; host" }

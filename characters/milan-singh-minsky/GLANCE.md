@@ -1,0 +1,1 @@
+👤 **Milan Singh Minsky** — **VP of Product at Leela AI**; co-author on Leela's grid-world learning paper. Married to Henry Minsky (Marvin's daughter-in-law). Don's Leela colleague — product side of visual-intelligence AI.

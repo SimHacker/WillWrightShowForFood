@@ -1,0 +1,83 @@
+# SHOW SEED — Remembering Douglas Engelbart (group memorial / tribute)
+# Standalone seed file. Memorial mode for Doug; living guests, consent not_yet_asked.
+# Standards: ../schemas/portrayal-standards.yml#memorial_mode
+
+show:
+  id: remembering-douglas-engelbart
+  title: "Remembering Douglas Engelbart"
+  type: group
+  host: Don Hopkins
+  topic: "A tribute to Doug Engelbart (1925-2013) — memories, eulogies, and above all his INTENT: augmenting collective human intellect, not a laundry list of inventions."
+  status: seed
+  consent: not_yet_asked          # every living guest invited + consents per representation-ethics
+
+memorial_mode:
+  subject: douglas-engelbart
+  rule: "We represent and discuss Doug's documented work and invite those shaped by him to share memories. We do NOT interview him or speak as him."
+  standards: ../schemas/portrayal-standards.yml#memorial_mode
+  memorial: ../characters/douglas-engelbart/memorial.md
+
+the_frame:
+  bret_victors_question: >
+    Bret Victor's 2013 tribute reframes the whole show: "The least important question you can ask
+    about Engelbart is, 'What did he build?' ... The most important question you can ask is,
+    'What world was he trying to create?'" This show asks the important question — together.
+  not_a_feature_list: "Resist the mouse/hypertext/video-conferencing laundry list. Center the intent: collective intelligence, bootstrapping, knowledge workers thinking in powerful new ways to solve urgent global problems."
+  ties_to_this_project: "Engelbart's augment-don't-replace thesis IS the show's Player-in-the-Middle principle (see memorial.md)."
+
+guests:
+  # Each connection is documented in-repo or via a cited public source. Personal-acquaintance
+  # claims are only made where verified; others are framed by their work and flagged to_verify.
+  - name: "Ted Nelson"
+    character: characters/ted-nelson/
+    connection: "Engelbart officiated Ted's wedding; Ted delivered the eulogy at the Computer History Museum, 2013-12-09 — the writing he calls his best. 'I feel like I've lost my best planet.'"
+    verified: true
+    in_repo: ../characters/douglas-engelbart/eulogy-ted-nelson.md
+  - name: "Alan Kay"
+    character: characters/alan-kay/
+    connection: "Shaped by the 1968 'Mother of All Demos'; the PARC lineage that carried Engelbart's vision forward. Recalled the demo's impact."
+    verified: true
+    in_repo: ../repo-shows/alan-kay-microworld.yml   # has its own remember_engelbart section
+  - name: "Yoot Saito"
+    character: characters/yoot-saito/
+    connection: "PERSONALLY INTERVIEWED Doug Engelbart (and Alan Kay) in Japan in the early 1990s, when Engelbart and Kay were visiting together for a Japanese computer-magazine special issue. Not adjacent to this history — a primary interviewer of it. His own Engelbart interview is a centerpiece."
+    verified: true
+    provenance: "Per Yoot, directly to Don; corroborated by the Alan Kay companion transcript ('we would like to put Mr. Engelbart's interviews for a special issue')."
+    source: "https://github.com/YootTowerManagement/YootTower/tree/main/Yoot_Saito_Alan_Kay_Interview"
+    in_repo: ../characters/yoot-saito/correspondence.yml
+  - name: "Bret Victor"
+    character: characters/bret-victor/
+    connection: "Wrote 'A few words on Doug Engelbart' (2013) — the definitive plea to read Engelbart's INTENT, not his feature list. The conscience of this tribute's framing."
+    verified: true                # the essay is verified; see source
+    source: "https://worrydream.com/Engelbart/"
+    to_verify: "Whether Bret personally knew/worked with Engelbart is NOT established here. Invite him on the strength of his tribute + his reading of the vision, not a personal-acquaintance claim."
+
+centerpieces:
+  ted_eulogy: "Screen / read from Ted Nelson's CHM eulogy (in repo) — joy and tears at once."
+  yoot_engelbart_and_alan: "Yoot interviewed BOTH Doug and Alan in Japan in the early '90s. Revisit his own Engelbart interview on air, and pair Yoot + Alan to revisit the companion Alan Kay interview (also the spine of alan-kay-microworld.yml)."
+  bret_reframe: "Open and close on Bret's question — what world was Doug trying to create, and how do WE build it?"
+
+threads:
+  - "Augmenting intellect vs. automating it — the through-line to Player-in-the-Middle and the AI manifesto."
+  - "Bootstrapping — improving the means of improvement (NLS, the ARC, the unfinished agenda)."
+  - "Collective intelligence as the actual goal — what the web got right, what it degraded (cf. the 'LOLCats' critique)."
+  - "From NLS to the Dynabook to Dynamicland — Bret's lineage as continuation, not nostalgia."
+  - "Show the mouse + chord keyset on air — and the 'democratize the keyset' preservation idea: 3D-scan it, publish free printable + working-replica files (see ../process/crazy-idea-jam.yml#engelbart_keyset_3d_replica)."
+
+format:
+  live: true
+  audience_qa: true
+  tone: "Warm, celebratory, honest. A wake that builds something — harvest a 'what world was he trying to create' design note in the cauldron."
+
+ties_to:
+  - ../characters/douglas-engelbart/
+  - ../characters/douglas-engelbart/memorial.md
+  - ../characters/douglas-engelbart/eulogy-ted-nelson.md
+  - ../characters/ted-nelson/
+  - ../characters/alan-kay/
+  - ../characters/yoot-saito/
+  - ../characters/bret-victor/
+  - ../repo-shows/alan-kay-microworld.yml
+  - ../repo-shows/bret-victor-explorable.yml   # Bret's solo seed (explorable explanations + Dynamicland)
+  - ../process/crazy-idea-jam.yml              # the 'democratize the keyset' 3D-replica preservation idea
+  - ../process/crystallized/AI-MANIFESTO.yml

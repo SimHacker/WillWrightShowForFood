@@ -1,0 +1,33 @@
+# SHOW — Scott McCloud (Understanding Comics → Understanding Simulations)
+# Planted seed. Inherits from the SHOW skill (/skills/repo-show).
+
+show:
+  id: scott-mccloud
+  title: "A Repo Show with Scott McCloud — Understanding Simulations"
+  type: solo
+  host: Don Hopkins
+  guests: ["Scott McCloud"]
+  character: characters/scott-mccloud/
+  topic: "Scott McCloud's ideas from Understanding Comics — closure, masking, amplification through simplification — and how they shaped The Sims and apply to simulation games and microworlds."
+  status: seed
+  consent: not_yet_asked
+
+why_him:
+  understanding_comics: "Understanding Comics (1993) reframed the reader as an active participant — closure, the gutter, masking, amplification through simplification."
+  the_sims_bible: "Those ideas were a design bible for The Sims: abstract Sims in detailed worlds, identification, empathy, and the imagination filling the gaps. Don credits McCloud in the Transmogrifier docs."
+
+dream_segments:
+  - "Closure and the gutter — the imagination between the panels, and between the simulation's ticks."
+  - "Masking — abstract characters in detailed worlds; how it powers identification in The Sims."
+  - "Amplification through simplification — why sparse models invite rich imagination."
+  - "Understanding Simulations — applying the comics lens to games and Micropolis."
+
+format:
+  live: true
+  audience_qa: true
+
+ties_to:
+  - ../../characters/scott-mccloud/
+  - ../../characters/scott-mccloud/invitation.md
+  - ../../characters/will-wright/
+  - ../../characters/don-hopkins/

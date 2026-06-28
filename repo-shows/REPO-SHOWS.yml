@@ -46,10 +46,10 @@ templates:
 
 # CURRENT SEEDS (single files; plant when ready)
 seeds:
-  building-the-sims.yml:        "Group: The Sims team reunion."
+  building-the-sims.yml:        "Group: The Sims team reunion — Will Wright + Jamie Doornbos (lead/SimAntics) + Chris Trottier & Claire Curtin (design) + Eric Bowman + Jim Mackraz + Patrick J. Barrett III + Eric Hedman (animation) + Jerry Martin (music) + Don. How the simulation actually worked."
   david-ungar-self-moollm.yml: "Solo: David Ungar — Self × MOOLLM reimagination; prototype inheritance; Stage Magic + Idea Scavenging; artisanal/intentional/conscientious rig culture."
   design-by-accretion.yml:      "Solo: Chris Trottier — design by accretion ↔ cauldron. FLAGSHIP."
-  music-and-theory.yml:         "Group: David Levitt + Jerry Martin — music + theory."
+  music-and-theory.yml:         "Group: David Levitt (MIT PhD on AI music/jazz improvisation under Minsky; Atari Cambridge) + Jerry Martin (The Sims/SimCity 3000 composer) — music + theory."
   will-and-yoot.yml:            "Group: Will Wright + Yoot Saito — open-ended."
   will-wright-series.yml:       "Series: Will Wright — multiple topics. PLANTED → will-wright/ (first show = topic-less kickoff)."
   ben-shneiderman-series.yml:   "Series: Ben Shneiderman — HyperTIES, direct manipulation, etc."
@@ -71,6 +71,7 @@ seeds:
   game-bridge-afterlife-soul.yml: "Simopolis Soul Bridge ⇔ LucasArts Afterlife (1996) — rescue souls FROM hell, send characters TO hell; hell-is-full → ZombieSims waves; They Are Billions scale."
   heather-steve-alvey/afterlife-zombie-bridge.yml: "Heather Alvey (SimFreaks) + Steve Alvey (SimSlice) — drain hell into ZombieSims; catalog + tool integration show."
   game-show-wigcercize.yml:     "Wigcercize! — a wig GAME SHOW (MC: Boogaloo Stu). A VARIETY format, not an interview — the collection holds multiple show TYPES."
+  game-show-gong.yml:           "The Gong Show — a VARIETY game-show format: oddball acts, hook-yanked when they bomb. The Ultimate Machine IS the gong (its one function, switch off, ends an act — then gongs itself first). Pairs with Wigcercize as the game-show lineup; Slats can host/heckle."
   micropolis-ai-drag-race.yml:  "★ MICROPOLIS AI DRAG RACE — rig personas, ai-offs challenges, spend-log judges, merge or sashay. See process/micropolis-ai-drag-race.yml"
   alan-kay-microworld.yml:      "Solo: Micropolis Class with Alan Kay — DREAM GUEST."
   ben-and-heinz-pie-menus.yml:  "Group: Ben Shneiderman + Heinz U. Lemke — pie menus + HCI history."
@@ -83,7 +84,20 @@ seeds:
   brian-harvey: "Solo: Brian Harvey — Logo + his books (CS Logo Style, Simply Scheme), BJC, and a lifetime of joyful CS education."
   thomas-cherryhomes: "Solo: Thomas Cherryhomes (@tschak) — FujiNet, Bus-over-IP, IRATA.ONLINE/PLATO, the Game Lobby. Repo-native retro infrastructure; a real-hardware/network path for the Apple ][ stack + bridges."
   snap-logo-brian-jens.yml: "Group/headline: Brian Harvey + Jens Mönig — Snap! & Logo together, centering Brian's book + lifelong Logo work and the Snap! they built."
-  skill-creation.yml: "Group: Skill Creation — authoring Anthropic + MOOLLM skills as constructionism/PBD for the LLM era. Candidates: Walter Bender, Henry Minsky, + people into Claude skills + constructionism (to vet)."
+  skill-creation.yml: "Group: Skill Creation — authoring Anthropic + MOOLLM skills as constructionism/PBD for the LLM era. Candidates: Walter Bender, Henry Minsky, Peter Norvig, + people into Claude skills + constructionism (to vet)."
+  remembering-douglas-engelbart.yml: "★ Group/memorial: Remembering Doug Engelbart — Ted Nelson + Alan Kay + Yoot Saito + Bret Victor. Read the INTENT, not the feature list. Memorial mode. PLANTED."
+  remembering-the-constructionists.yml: "★ Group/memorial: Remembering the Constructionists — Piaget → Papert → Minsky (memorial mode); discussants Alan Kay, Walter Bender, Brian Harvey, Cynthia Solomon, Ken Kahn, Jens Mönig, Henry & Margaret Minsky, David Levitt, Gary Drescher, Steve Kommrusch. Minds are built, not filled. PLANTED."
+  margaret-minsky/: "Solo: Margaret Minsky — haptics (the Sandpaper force-feedback system), Atari Cambridge / MIT Media Lab, the first wired family. Daughter of Marvin. PLANTED."
+  henry-minsky/: "Solo: Henry Minsky — Society of Mind in modern AI (Leela AI), OpenLaszlo declarative UI, skill-authoring as constructionism. Son of Marvin; skill-creation candidate. PLANTED."
+  isabella-struckman/: "Solo: Isabella Struckman — computer-vision model evaluation & training (Leela AI), ML explainability + AI policy / AI supply chains (MIT CSAIL Mądry Lab), AI skills + teaching. Don's Leela colleague. PLANTED."
+  openlaszlo/: "★ Group: OpenLaszlo Reunion — David Temkin + Oliver Steele + Henry Minsky + Don. The RIA-before-its-time (LZX), revived with AI (Temkin got the Java compiling again) and run live. PLANTED."
+  patrick-hulin/: "Solo: Patrick Hulin — AI-assisted reverse engineering; SimTower → tick-for-tick TypeScript (towers.world); the warm Yoot Tower reimplementation lead. PLANTED."
+  steve-kommrusch/: "Solo: Steve Kommrusch — ML for program repair + verifiable program equivalence; CPU-architect-to-ML arc; Leela's Piaget-schema learning (Drescher bridge). PLANTED."
+  gary-drescher/: "Solo: Gary Drescher — Made-Up Minds, remade. The schema mechanism (constructivist AI) given an LLM for grounding, built live on Henry Minsky's Python schema factory. Piaget → schema mechanism → Leela. PLANTED."
+  cynthia-solomon/: "Solo: Cynthia Solomon — the turtle's treasure trove. Logo co-creator (BBN 1967) narrates a guided screening of her rare video archive: birth of Logo, MIT Logo culture, Atari Cambridge children's computer. Logo → Snap!. PLANTED."
+  peter-norvig/: "Group/open-topic: Peter Norvig — 'Teach Yourself AI in Ten Years.' Peter's pick (MOOLLM, skills, or AI in general) with Don + Leela colleagues (Henry Minsky et al.). Doubles as research for the AI-book chapter Peter offered to write about Don's work. Warm lead. PLANTED."
+  scott-mccloud/: "Solo: Scott McCloud — Understanding Comics → Understanding Simulations. Closure, masking, amplification through simplification; the design bible behind The Sims, applied to games and microworlds. PLANTED."
+  yoot-tower-revival/: "★ Group: Yoot Tower Revival — Yoot Saito + Patrick Hulin + Thomas Cherryhomes + Lars Brinkhoff + open invite to RE/decompiler/emulator hackers. Reverse engineering, emulation, clean-room reimplementation; no-promises licensing. PLANTED."
 
 producer_role: "Each aired show needs a PRODUCER: pest control (moderation/good-faith) + surfacing good chat/issues to the hosts. See ../process/design-in-public.yml github_native.producer."
 

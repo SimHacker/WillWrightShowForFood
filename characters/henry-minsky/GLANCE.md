@@ -1,0 +1,1 @@
+👤 **Henry Minsky** — software architect / AI engineer; co-founder & CTO of **Leela AI** (visual intelligence), formerly **Laszlo Systems** (OpenLaszlo) and the MIT AI Lab. **Son of Marvin Minsky**, twin of Juliana, brother of Margaret — grew up in the AI Lab's children's computer lab. Society of Mind in modern AI; declarative UI; skill-authoring as constructionism.

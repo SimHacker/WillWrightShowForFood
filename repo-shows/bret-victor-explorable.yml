@@ -1,0 +1,50 @@
+# SHOW SEED — Bret Victor (explorable explanations; remember Doug)
+# Standalone seed file (referenced by characters/bret-victor/CHARACTER.yml).
+# Standards: ../schemas/portrayal-standards.yml
+
+show:
+  id: bret-victor-explorable
+  title: "A Repo Show with Bret Victor — Media for Thinking"
+  type: solo
+  host: Don Hopkins
+  guests: ["Bret Victor"]
+  character: characters/bret-victor/
+  topic: "Explorable explanations and media for thought — applied LIVE to Micropolis legibility — plus an honest patronage-vs-shipping conversation."
+  status: seed
+  consent: not_yet_asked
+
+why_him:
+  explorable_explanations: "Reactive documents you think INSIDE of — the natural medium for explaining (and debugging) a simulation like Micropolis."
+  inventing_on_principle: "Immediate connection between creation and result — 'Inventing on Principle' (CUSEC 2012); direct-manipulation gospel."
+  dynamicland: "Computing as physical, communal, humane medium — the boldest living attempt at Engelbart's collective-intelligence vision."
+  conscience: "Bret reads the FIELD's intent, not its features (see his Engelbart tribute). A clarifying voice for what this project is really for."
+
+remember_engelbart:
+  mode: "Memorial — represent + discuss Doug's work; never interview the deceased."
+  bret_role: "Author of 'A few words on Doug Engelbart' (2013) — the plea to understand Engelbart's INTENT (augmenting collective intellect) over his invention list."
+  source: "https://worrydream.com/Engelbart/"
+  joins: "Bret is a natural participant in the group tribute with Ted Nelson, Alan Kay, and Yoot Saito."
+  see:
+    - ../repo-shows/remembering-douglas-engelbart.yml
+    - ../characters/douglas-engelbart/memorial.md
+
+threads:
+  - "Make Micropolis LEGIBLE — explorable-explanation overlays for the simulation's hidden state (RCI demand, land value, pollution, traffic)."
+  - "Media for thinking the unthinkable — what a city simulator could teach if you could see inside it."
+  - "Patronage vs. shipping — Dynamicland as the cautionary tale: design counsel AND a hard funding conversation (honest, not hero-worship)."
+  - "Direct manipulation done right — pie menus, immediate feedback, no modes."
+
+cautionary_tale:
+  honest_beat: "Hold an honest patronage-vs-shipping conversation. Dynamicland's brilliance and its distribution problem are BOTH the lesson — admire the vision without ignoring that it has to reach people."
+  not_hero_worship: "Per Bret's own Engelbart point: don't worship the achievement; ask what world it was trying to create, and how to actually build it for people."
+
+format:
+  live: true
+  audience_qa: true
+
+ties_to:
+  - ../characters/bret-victor/
+  - ../characters/bret-victor/invitation.md
+  - ../characters/douglas-engelbart/
+  - ../repo-shows/remembering-douglas-engelbart.yml
+  - ../process/trails/augmentation-and-hypertext.md

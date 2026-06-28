@@ -1,0 +1,35 @@
+# SHOW — Steve Kommrusch (ML for code; Piaget schemas)
+# Planted seed. Inherits from the SHOW skill (/skills/repo-show).
+
+show:
+  id: steve-kommrusch
+  title: "A Repo Show with Steve Kommrusch — Machines That Fix (and Prove) Code"
+  type: solo
+  host: Don Hopkins
+  guests: ["Steve Kommrusch"]
+  character: characters/steve-kommrusch/
+  topic: "ML for automatic program repair and verifiable program equivalence; the arc from CPU architecture to deep learning; and Leela AI's Piaget-schema learning."
+  status: seed
+  consent: not_yet_asked
+
+why_him:
+  program_repair: "Deep learning that repairs code (VRepair) and proves program equivalence with deterministically checkable output (graph2axiom, S4Eq) — his CSU PhD; OpenNMT-py contributor."
+  silicon_to_ml: "A former CPU/chip-design architect (HP, National Semiconductor, AMD; MIT MSc) who moved into ML research."
+  piaget_schemas: "At Leela, a learning approach inspired by Piaget's schemas — a live bridge to Gary Drescher's schema mechanism and the constructionist lineage."
+
+dream_segments:
+  - "Repair a bug live with a model that can also PROVE the fix preserves behavior."
+  - "Chip-architecture discipline applied to ML systems."
+  - "Leela's Piaget schemas ↔ Drescher's Made-Up Minds ↔ LLM grounding (with Gary Drescher / Henry Minsky)."
+  - "A Leela team episode (Henry, Milan, Isabella)."
+
+format:
+  live: true
+  audience_qa: true
+
+ties_to:
+  - ../../characters/steve-kommrusch/
+  - ../../characters/steve-kommrusch/invitation.md
+  - ../../characters/gary-drescher/
+  - ../../characters/henry-minsky/
+  - ../../characters/jean-piaget/

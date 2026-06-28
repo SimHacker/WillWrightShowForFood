@@ -1,0 +1,48 @@
+# SHOW — OpenLaszlo Reunion (group)
+# Planted seed. Inherits from the SHOW skill (/skills/repo-show).
+# Sparked by David Temkin using AI to get the old OpenLaszlo Java toolchain compiling again.
+
+show:
+  id: openlaszlo
+  title: "A Repo Show: OpenLaszlo Reunion — The RIA Before Its Time, Revived"
+  type: group
+  host: Don Hopkins
+  guests: ["David Temkin", "Oliver Steele", "Henry Minsky"]
+  characters:
+    - characters/david-temkin/
+    - characters/oliver-steele/
+    - characters/henry-minsky/
+  topic: "OpenLaszlo / LZX — declarative, reactive rich-internet apps that compiled to Flash OR Ajax, years early — and David Temkin's AI-powered revival of the toolchain, used live to bring old LZX apps back to life."
+  status: seed
+  consent: not_yet_asked
+
+the_spark:
+  what: "David Temkin recently used AI to rewrite the OpenLaszlo Java code so it compiles and runs again."
+  provenance: "Per Don, relayed from an email David sent Henry Minsky (June 2026) — confirm details with David."
+  why_a_show: "A retrocomputing feat that's pure Repo Show: revive a real toolchain with AI, then run Don's old LZX apps + demos on it, live."
+
+the_cast:
+  david_temkin: "Founder/CEO/CTO of Laszlo Systems; created OpenLaszlo; did the AI revival. → characters/david-temkin/"
+  oliver_steele: "Chief Software Architect; designed LZX, wrote the compilers/runtime, launched the open-source project; Marvin Minsky's son-in-law. → characters/oliver-steele/"
+  henry_minsky: "Laszlo software architect; relayed the revival news; son of Marvin Minsky. → characters/henry-minsky/"
+  don_hopkins: "Worked on OpenLaszlo with all three; has old LZX apps + demos to resurrect."
+
+threads:
+  - "OpenLaszlo / LZX, the road not taken — declarative XML+JS, reactive, multi-runtime (Flash OR Ajax) years before the web reinvented it."
+  - "Instance-first development & reactivity (Oliver's design ideas) — what modern frameworks rediscovered."
+  - "The AI revival — how David got the legacy Java toolchain building + running again with AI; the making-of as content."
+  - "Bring the apps back — run Don's old LZX apps + demos live on the revived toolchain."
+  - "Open-sourcing a commercial platform — the 2004 Laszlo → OpenLaszlo story."
+
+dream_outcome: "A working, modern-runnable OpenLaszlo toolchain in the repo, with revived demo apps — preservation by getting it to RUN again."
+
+format:
+  live: true
+  audience_qa: true
+
+ties_to:
+  - ../../characters/david-temkin/
+  - ../../characters/oliver-steele/
+  - ../../characters/henry-minsky/
+  - ../../characters/don-hopkins/
+  - ../../process/crazy-idea-jam.yml   # retrocomputing-revival kinship (Yoot Tower TS engine, etc.)

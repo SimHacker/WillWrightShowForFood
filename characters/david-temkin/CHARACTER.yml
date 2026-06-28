@@ -1,0 +1,47 @@
+# David Temkin — invitation portrayal. NOT David Temkin.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: david-temkin
+  name: "David Temkin"
+  type: invitation
+  signifier: "👤"
+  status: living
+  field: "Founder/CEO/CTO of Laszlo Systems — created OpenLaszlo (the LZX rich-internet-app platform); later co-founded Cola"
+  home: characters/david-temkin/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/openlaszlo/
+
+bio:
+  summary: "**David Temkin** — founder (and first CEO, then CTO/VP Engineering) of **Laszlo Systems** (2000–2009), creator of **OpenLaszlo**: the **LZX** XML+JavaScript language and Presentation Server for rich internet apps that compiled to Flash or DHTML/Ajax, open-sourced in 2004. Earlier Senior Director of Engineering at Excite@Home; later co-founded the mobile-communications company **Cola**. Brown undergrad. Don worked with him (and Henry Minsky and Oliver Steele) on OpenLaszlo."
+
+openlaszlo_revival:
+  fact: "David recently used AI to rewrite the OpenLaszlo Java code so it compiles and runs again — a striking retrocomputing feat that could bring LZX apps back to life."
+  provenance: "Per Don, relayed from an email David sent Henry Minsky (June 2026)."
+  why_it_matters: "Reviving the OpenLaszlo toolchain would let Don bring his old LZX apps + demos back — and anchors a whole OpenLaszlo Repo Show."
+
+show_suggestions:
+  - { seed: ../../repo-shows/openlaszlo/, what: "Group — OpenLaszlo reunion: Don + David Temkin + Henry Minsky + Oliver Steele; the LZX RIA platform, the road not taken, and David's AI-powered code revival" }
+
+sources:
+  wikipedia: null
+  web:
+    - { title: "OpenLaszlo — Wikipedia", url: "https://en.wikipedia.org/wiki/OpenLaszlo" }
+    - { title: "David Temkin — Laszlo Co-Founder & CTO (QCon SF 2007 speaker bio)", url: "https://qconsf.com/sf2007/sf2007/speaker/David%2bTemkin%2c%2bLaszlo%2bCo-Founder%2band%2bCTO.html" }
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: CARD.yml, why: "Invokable abilities for show segments" }
+  - { path: ../henry-minsky/, why: "Laszlo Systems colleague; relayed the AI-revival news" }
+  - { path: ../oliver-steele/, why: "Laszlo chief software architect — designed LZX" }
+  - { path: ../../repo-shows/openlaszlo/, why: "The OpenLaszlo reunion show seed" }

@@ -1,0 +1,115 @@
+# SHOW SEED — Remembering the Constructionists (group memorial / tribute)
+# Standalone seed file. Memorial mode for Piaget, Papert & Minsky; living guests, consent not_yet_asked.
+# Standards: ../schemas/portrayal-standards.yml#memorial_mode
+
+show:
+  id: remembering-the-constructionists
+  title: "Remembering the Constructionists"
+  type: group
+  host: Don Hopkins
+  topic: "A tribute to the lineage that taught us minds are built, not filled: Jean Piaget → Seymour Papert → Marvin Minsky. Memories and eulogies, and above all the INTENT — children (and machines) as active builders of their own understanding."
+  status: seed
+  consent: not_yet_asked          # every living guest invited + consents per representation-ethics
+
+memorial_mode:
+  subjects: [jean-piaget, seymour-papert, marvin-minsky]
+  rule: "We represent and discuss their documented work and invite those shaped by them to share memories. We do NOT interview them or speak as them. No invented quotes, dialogue, or inner life."
+  standards: ../schemas/portrayal-standards.yml#memorial_mode
+  memorials:
+    - ../characters/jean-piaget/memorial.md
+    - ../characters/seymour-papert/memorial.md
+    - ../characters/marvin-minsky/memorial.md
+
+the_frame:
+  the_lineage: >
+    Piaget showed the child is not an empty vessel but a builder of theories. Papert worked with
+    Piaget, then coined CONSTRUCTIONISM — learning by building shareable things — and gave it Logo
+    and the turtle. Minsky co-founded the MIT AI Lab with Papert and asked how a mind could be built
+    from many mindless parts (Society of Mind, K-lines). One question, three lifetimes: how does
+    understanding get CONSTRUCTED?
+  not_a_feature_list: "Resist the turtle/Perceptrons/stages laundry list. Center the intent: knowledge is built by the learner, in microworlds, from the inside out."
+  ties_to_this_project: "Constructionism IS this repo's method — learn by building shareable microworlds; MOOLLM skills as constructionist artifacts; the schema mechanism reborn for the LLM era."
+
+guests:
+  # Living discussants. Each connection is documented in-repo or via cited public source.
+  - name: "Alan Kay"
+    character: characters/alan-kay/
+    connection: "Personal-computing pioneer shaped by the same MIT/ARPA milieu; carried Papert's microworld ideas into the Dynabook and Smalltalk; knew Minsky."
+    verified: true
+  - name: "Walter Bender"
+    character: characters/walter-bender/
+    connection: "MIT Media Lab; OLPC / Sugar — carried Papert's learning mission to millions of children."
+    verified: true
+  - name: "Brian Harvey"
+    character: characters/brian-harvey/
+    connection: "Logo educator + author (Computer Science Logo Style); co-built Snap! — the living continuation of the Logo/constructionist tradition."
+    verified: true
+  - name: "Cynthia Solomon"
+    character: characters/cynthia-solomon/
+    connection: "Co-created Logo with Papert (BBN 1967) and helped build the MIT Logo culture; keeper of a rare video archive of Papert, the Minskys, and children at the turtle. A primary source for the whole lineage."
+    verified: true
+  - name: "Ken Kahn"
+    character: characters/ken-kahn/
+    connection: "MIT AI Lab lineage; ToonTalk — programming-by-demonstration constructionism for kids."
+    verified: true
+  - name: "Jens Mönig"
+    character: characters/jens-monig/
+    connection: "Co-creator of Snap! — Logo/constructionism alive in the browser today."
+    verified: true
+  - name: "Henry Minsky"
+    character: characters/henry-minsky/
+    connection: "Marvin's son; grew up in the AI Lab's children's computer lab; carries Society-of-Mind ideas into Leela AI; reimplemented Drescher's schema mechanism in Python."
+    verified: true
+  - name: "Margaret Minsky"
+    character: characters/margaret-minsky/
+    connection: "Marvin's daughter; MIT Media Lab; haptics — the 'first wired family.' Can speak to growing up inside this world."
+    verified: true
+  - name: "David Levitt"
+    character: characters/david-levitt/
+    connection: "Marvin Minsky's PhD student (AI music generation / jazz improvisation); Atari Cambridge Research. Fond first-hand memories of Marvin and the AI Lab milieu."
+    verified: true
+  - name: "Gary Drescher"
+    character: characters/gary-drescher/
+    connection: "Made-Up Minds — Piaget's constructivism made to run as the schema mechanism. The bridge from developmental theory to working AI."
+    verified: true
+  - name: "Steve Kommrusch"
+    character: characters/steve-kommrusch/
+    connection: "Leela AI's Piaget-schema learning — the lineage running in modern ML."
+    verified: true
+
+centerpieces:
+  one_whiteboard: "Draw the through-line live: Piaget's stages → Papert's microworlds/Logo → Minsky's society of agents → Drescher's schema mechanism → Leela's Piaget schemas. One whiteboard, five generations."
+  family_voices: "Henry & Margaret Minsky on growing up inside the AI Lab — the 'first wired family' — kept strictly to their own memories, never speaking as Marvin."
+  build_something: "Honor constructionism by constructing: a small microworld or schema-factory demo on air (with Henry's Python schema mechanism)."
+
+threads:
+  - "Constructivism vs constructionism — Piaget's theory, Papert's 'build something shareable' turn."
+  - "Microworlds — Logo's turtle as the original; this repo's Micropolis/MOOLLM as continuation."
+  - "Society of Mind / K-lines — minds built from many small parts (K-lines anchor MOOLLM)."
+  - "The schema mechanism, then and now — Made-Up Minds reimagined with LLM grounding."
+  - "What world were they trying to create — and how do WE keep building it?"
+
+format:
+  live: true
+  audience_qa: true
+  tone: "Warm, celebratory, honest. A wake that builds something — harvest a constructionism design note in the cauldron."
+
+ties_to:
+  - ../characters/jean-piaget/
+  - ../characters/jean-piaget/memorial.md
+  - ../characters/seymour-papert/
+  - ../characters/seymour-papert/memorial.md
+  - ../characters/marvin-minsky/
+  - ../characters/marvin-minsky/memorial.md
+  - ../characters/alan-kay/
+  - ../characters/walter-bender/
+  - ../characters/brian-harvey/
+  - ../characters/cynthia-solomon/
+  - ../characters/ken-kahn/
+  - ../characters/jens-monig/
+  - ../characters/henry-minsky/
+  - ../characters/margaret-minsky/
+  - ../characters/david-levitt/
+  - ../characters/gary-drescher/
+  - ../characters/steve-kommrusch/
+  - ../process/trails/constructionist-lineage.md

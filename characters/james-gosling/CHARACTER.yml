@@ -23,11 +23,26 @@ invitation:
 
 
 bio:
-  summary: "**James Gosling** — Father of Java; original designer/implementer of the **Andrew** window system (CMU, with David Rosenthal) and **NeWS/SunDew** (Sun), both network window systems that predated X11. Also wrote **Gosling Emacs** (sold by UniPress; RMS's \"Evil Software Hoarder Emacs\"). Self-described record-holder for \"the largest number of cheesy little extension languages.\""
+  summary: "**James Gosling** (b. 1955, Calgary; CMU PhD 1983) — the **father of Java**. Before Java he wrote **Gosling Emacs** (the first Unix Emacs, sold by UniPress — RMS's \"Evil Software Hoarder Emacs\", which spurred GNU Emacs), co-designed the **Andrew** window system (CMU, with David Rosenthal), and architected **NeWS/SunDew** at Sun — a PostScript-programmable network window system years ahead of its time (an AJAX architecture avant la lettre). Self-described record-holder for \"the largest number of cheesy little extension languages.\" Later Chief Software Architect at **Liquid Robotics** (Wave Glider ocean robots). Order of Canada; ACM Fellow; IEEE John von Neumann Medal."
 
 sources:
-  wikipedia: null
-  web:
-    []
+  wikipedia: "https://en.wikipedia.org/wiki/James_Gosling"
+  web: []
   papers: []
   blogs: []
+
+show_suggestions:
+  - "Pair with Arthur van Hoff — old NeWS/Emacs/HyperLook friends and early-Java teammates (van Hoff wrote the Java compiler in Java)"
+  - "NeWS revisited — the PostScript-programmable network window system that predated AJAX; with Don's pie menus and the UniPress Emacs NeWS display driver, the lunar-lander-in-PostScript"
+  - "Gosling Emacs → UniPress → GNU Emacs — the extension-language lineage"
+  - "His mid-1990s CS547 talk at Stanford (Java / bringing behavior to the internet) — preserved in Winograd's CS547 archive; Don was in the audience"
+  - "Checked exceptions, reliability over rapid prototyping — and what he'd change"
+
+see_also:
+  - { path: CARD.yml, why: "Universal CARD — invokable abilities for show segments" }
+  - { path: invitation.md, why: "Public invitation draft" }
+  - { path: ../arthur-van-hoff/, why: "The pairing — NeWS → HyperLook → early Java, two old Sun friends" }
+  - { path: ../don-hopkins/, why: "NeWS, UniPress Emacs NeWS driver, pie menus, lunar lander in PostScript" }
+  - { path: ../david-rosenthal/, why: "Andrew window system co-designer; NeWS / ICCCM" }
+  - { path: ../../process/trails/live-objects.md, why: "NeWS in the live-object / network-window lineage" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses — self or assisted contribution" }

@@ -1,0 +1,1 @@
+👤 **Steve Kommrusch** — Senior AI Scientist at **Leela AI**; ML for **program repair** + **verifiable program equivalence** (CSU PhD); former **CPU/chip architect** (HP, National Semiconductor, AMD); MIT MSc. Works on Leela's **Piaget-schema** learning — a bridge to Gary Drescher. Don's Leela colleague.

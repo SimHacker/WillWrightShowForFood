@@ -1,1 +1,1 @@
-🕯️ **Jean Piaget** — Swiss developmental psychologist whose **Constructivism** — children actively build knowledge through stages — underlies constructionist learning.
+🕯️ **Jean Piaget** (1896–1980) — *memorial.* Swiss **genetic epistemologist**; **constructivism** and the **stages of cognitive development** (schemas, assimilation, accommodation). The developmental root beneath Papert's constructionism → Logo, Scratch, OLPC. Represent + discuss; never speak as him. → [memorial.md](memorial.md)

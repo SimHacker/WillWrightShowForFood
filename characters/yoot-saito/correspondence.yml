@@ -23,6 +23,11 @@ threads:
     what: "Yoot interviewed Alan Kay in Japan; the transcript covers Engelbart's demo, PARC, the Alto, Smalltalk, Ed Cheadle and the Flex Machine, Sutherland's Sketchpad, and Wes Clark's LINC."
     don_contribution: "OCR cleanup, name corrections, annotated edition + glossary"
     why_it_matters: "Primary-source computing history, lovingly restored — exactly the archivist spirit of this repo"
+  engelbart_interview:
+    what: "Yoot ALSO personally interviewed Doug Engelbart on that same Japan visit — Engelbart and Alan Kay were in Japan together for a computer-magazine special issue (Don recalls possibly MacWorld Japan). Yoot told Don this directly."
+    corroboration: "The Alan Kay companion transcript references it: 'Next year January, we would like to put Mr. Engelbart's interviews for a special issue.'"
+    status: "Engelbart interview text not yet located/published; Alan Kay companion interview is OCR-restored in the YootTower repo."
+    published_companion: "https://github.com/YootTowerManagement/YootTower/tree/main/Yoot_Saito_Alan_Kay_Interview"
   yoot_tower_browser:
     what: "A browser edition of Yoot Tower on the modern web stack (WASM/WebGL/Svelte)"
     connects_to: "Don's MicropolisCore WASM + SvelteKit work — same porting playbook"

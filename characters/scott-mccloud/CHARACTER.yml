@@ -1,0 +1,50 @@
+# Scott McCloud — invitation portrayal. NOT Scott McCloud.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: scott-mccloud
+  name: "Scott McCloud"
+  type: invitation
+  signifier: "💭"
+  status: living
+  field: "Cartoonist & comics theorist — Understanding Comics; closure, masking, the space between the panels"
+  home: characters/scott-mccloud/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/scott-mccloud/
+
+bio:
+  summary: "**Scott McCloud** is a cartoonist and comics theorist best known for **_Understanding Comics: The Invisible Art_** (1993), followed by **_Reinventing Comics_** (2000) and **_Making Comics_** (2006), and the graphic novel **_The Sculptor_** (2015). His ideas — **closure** (the imagination filling the gap between panels), **masking** (abstract characters in detailed worlds), and **amplification through simplification** — reshaped how creators think about reader participation and identification."
+
+connections:
+  the_sims: "Understanding Comics was a 'bible' for The Sims team. Masking (photorealistic environments + abstract Sims), identification, empathy, and engaging the player's imagination to fill the gaps were lessons woven directly into the game — Don credits McCloud in the Transmogrifier documentation."
+  micropolis: "The same idea drives simulation games: the sparse model on screen, the rich model the player's imagination builds to fill it in."
+  don: "A patron saint of Don's design thinking on The Sims and Micropolis."
+
+show_suggestions:
+  - { seed: ../../repo-shows/scott-mccloud/, what: "Understanding Comics → Understanding Simulations: closure, masking, and the imagination's role in games and microworlds." }
+  - { seed: ../../repo-shows/REPO-SHOWS.yml#building-the-sims.yml, what: "Patron-saint guest for the Sims team reunion — the Understanding Comics influence." }
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Scott_McCloud"
+  web:
+    - "https://scottmccloud.com/"
+    - "https://www.thesimstransmogrifier.com/TransmogrifierDocumentation/TransmogrifierDocumentation.htm"   # credits McCloud
+  books:
+    - "Understanding Comics: The Invisible Art (1993)"
+    - "Reinventing Comics (2000)"
+    - "Making Comics (2006)"
+    - "The Sculptor (2015)"
+
+see_also:
+  - { path: ../will-wright/, why: "The Sims — Understanding Comics influence" }
+  - { path: ../don-hopkins/, why: "Host; cites McCloud as a design patron saint" }
+  - { path: ../ken-perlin/, why: "Fellow 'patron saint' of the Sims design milieu" }

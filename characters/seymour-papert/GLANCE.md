@@ -1,1 +1,1 @@
-🕯️ **Seymour Papert** — mathematician & educator who founded **Constructionism** and co-created **Logo**: children programming the computer, not the other way around.
+🕯️ **Seymour Papert** (1928–2016) — *memorial.* Worked with **Piaget**; co-founded the **MIT AI Lab** with Minsky; co-created **Logo** (the turtle); coined **constructionism**; wrote **Mindstorms** (1980). Line to Scratch, OLPC, LEGO Mindstorms. Represent + discuss; never speak as him. → [memorial.md](memorial.md)

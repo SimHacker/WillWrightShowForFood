@@ -1,0 +1,1 @@
+🎵 **Jerry Martin** — composer best known for the music of **The Sims** and **SimCity 3000** (Maxis): the warm, lived-in scores that made those digital worlds feel like home. Don's Maxis colleague. Paired with David Levitt for a music + theory Repo Show.

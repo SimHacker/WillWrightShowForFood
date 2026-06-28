@@ -1,0 +1,50 @@
+# Danielle Bunten Berry — legacy portrayal (in memoriam). NOT Danielle Bunten Berry.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: danielle-bunten-berry
+  name: "Danielle Bunten Berry"
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  field: "Game designer — M.U.L.E., The Seven Cities of Gold; pioneer of multiplayer social games"
+  home: characters/danielle-bunten-berry/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 5
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  consent: not_yet_asked
+  document: memorial.md
+  note: "deceased (1949–1998) — represent + discuss; invite people who knew her, above all Will Wright"
+
+memorial:
+  mode: represent_and_discuss
+  rule: "Represent and discuss her documented work and the stories friends tell. Do not interview, do not speak as her, invent no inner life. Only her real, documented words, with attribution."
+  who_can_discuss:
+    - { who: will-wright, why: "Good friend and admirer; The Sims was dedicated to her, and her social-multiplayer philosophy shaped his work" }
+    - { who: don-hopkins, why: "EA/Maxis lineage; multiplayer SimCity shares her people-first, play-together values" }
+  draw_on_for_shows:
+    - "**M.U.L.E.** (1983) — a four-player economic/strategy game (Ozark Softscape, one of Electronic Arts' first titles); a landmark of cooperative-competitive multiplayer design"
+    - "**The Seven Cities of Gold** (1984) — open-world exploration, also for EA"
+    - "Her lifelong conviction that games should bring people **together in the same room** — social, multiplayer, human"
+    - "**The Sims (2000) was dedicated to her** — Will Wright's tribute to a friend and a guiding influence"
+
+bio:
+  summary: "**Danielle Bunten Berry** (1949–1998) — game designer and a founding voice of **multiplayer social gaming**. At Ozark Softscape she created **M.U.L.E.** (1983), a four-player economic strategy game that became one of Electronic Arts' first and most beloved titles, and **The Seven Cities of Gold** (1984). She believed games were at their best when they brought people together in person, and she championed that idea for her whole career. Published as Dan Bunten before coming out as a trans woman in 1992. **The Sims was dedicated to her.**"
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Dani_Bunten_Berry"
+  web:
+    - "https://www.donhopkins.com/home/TheSimsDesignDocuments/"   # "The Sims is dedicated to Dani Berry"
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
+  - { path: ../will-wright/, why: "Dedicated The Sims to her; close friend and admirer" }
+  - { path: ../don-hopkins/, why: "EA/Maxis lineage; multiplayer, play-together values" }
+  - { path: ../../schemas/portrayal-standards.yml#memorial_mode, why: "How memorial guests are handled" }

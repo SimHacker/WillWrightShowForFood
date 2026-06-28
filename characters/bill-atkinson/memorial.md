@@ -18,4 +18,4 @@ the web. That idea carried directly into this repo's lineage: Arthur van Hoff bu
 We remember him through the people his work shaped — **Arthur van Hoff** and **Don** — and we
 celebrate his documented public work; we do not speak as him.
 
-— Don Hopkins, Micropolis Class
+*This is a collaborative memorial, not a signed work. Those who knew Bill — family, friends, and colleagues — are warmly invited to edit, correct, and add their own memories, documents, and stories whenever they're ready.*

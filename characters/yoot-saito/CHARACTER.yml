@@ -23,12 +23,19 @@ invitation:
 
 
 bio:
-  summary: "**Yoot Saito** — Japanese game designer behind **The Tower / SimTower**, **Seaman**, and **Odama**; interviewer of Alan Kay (1993)."
+  summary: "**Yoot Saito** — Japanese game designer behind **The Tower / SimTower**, **Seaman**, and **Odama**; founder of OPeNBooK & Vivarium. In the early 1990s he **personally interviewed both Douglas Engelbart and Alan Kay** in Japan (the two visiting together for a Japanese computer-magazine special issue) — a primary interviewer of computing history, not just adjacent to it."
+
+engelbart_interview:
+  fact: "Yoot personally interviewed Doug Engelbart in Japan in the early 1990s, around the same visit as his Alan Kay interview, when Engelbart and Kay were in Japan together (likely for a computer-magazine special issue; Don recalls possibly MacWorld Japan)."
+  provenance: "Per Yoot, directly to Don. Corroborated by the Alan Kay companion transcript, where Yoot says they 'would like to put Mr. Engelbart's interviews for a special issue.'"
+  companion_published: "https://github.com/YootTowerManagement/YootTower/tree/main/Yoot_Saito_Alan_Kay_Interview"
+  engelbart_text_status: "Engelbart interview text not yet located/published; the Alan Kay companion interview is OCR-restored by Don in the YootTower repo."
 
 sources:
   wikipedia: https://en.wikipedia.org/wiki/Yoot_Saito
   web:
     - { title: "The Verge — Yoot Saito interview (Seaman, Odama, The Tower)", url: https://www.theverge.com/2019/9/6/20850674/yoot-saito-interview-seaman-sega-dreamcast-odama }
     - { title: "My Mac — interview with Mr. Yoot Saito (1999, Mac-first dev)", url: https://www.mymac.com/1999/02/the-my-mac-interview-mr-yoot-saito/ }
+    - { title: "Yoot Saito × Alan Kay interview (OCR-restored by Don) — companion to his Engelbart interview", url: "https://github.com/YootTowerManagement/YootTower/tree/main/Yoot_Saito_Alan_Kay_Interview" }
   papers: []
   blogs: []

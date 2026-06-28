@@ -18,9 +18,20 @@ this show's **Player-in-the-Middle** principle.
 
 We remember him by inviting people who knew and were shaped by him to share **eulogies and
 memories**: **Ted Nelson** (whose wedding Engelbart officiated — Ted's eulogy on YouTube is deeply
-moving, joy and tears at once), **Alan Kay**, and **Yoot Saito**, whose 1993 interview with Alan
-Kay in Japan — alongside Engelbart and other luminaries (Apple ATG and beyond) — marked the 25th
-anniversary of the 1968 demo. Pairing Yoot and Alan to revisit that trip is a natural centerpiece.
+moving, joy and tears at once), **Alan Kay**, and **Yoot Saito**, who **personally interviewed both Doug Engelbart and Alan Kay
+in Japan** in the early 1990s — the two visiting together for a Japanese computer-magazine special
+issue, around the 25th anniversary of the 1968 demo (per Yoot, directly to Don; the companion Alan
+Kay interview is [published, OCR-restored, in the YootTower repo](https://github.com/YootTowerManagement/YootTower/tree/main/Yoot_Saito_Alan_Kay_Interview)).
+Revisiting Yoot's own Engelbart interview — and pairing Yoot and Alan on the companion one — is a natural centerpiece.
+**Bret Victor** rounds out the tribute — not from personal acquaintance, but as the author of
+[*"A few words on Doug Engelbart"*](https://worrydream.com/Engelbart/) (2013), the clearest plea to
+understand Engelbart's **intent** (augmenting collective intellect) instead of his feature list. His
+question frames the whole show: *"The most important question you can ask about Engelbart is, 'What
+world was he trying to create?' By asking that question, you put yourself in a position to create
+that world yourself."*
+
+The group tribute is seeded here: [**Remembering Douglas Engelbart**](../../repo-shows/remembering-douglas-engelbart.yml)
+(Ted Nelson · Alan Kay · Yoot Saito · Bret Victor).
 
 We celebrate his documented public work; we do not speak as him.
 
@@ -28,4 +39,4 @@ We celebrate his documented public work; we do not speak as him.
 December 9, 2013, and the thing Ted calls the best writing he ever did. *"I feel like I've lost my
 best planet."*
 
-— Don Hopkins, Micropolis Class
+*This is a collaborative memorial, not a signed work. Those who knew Doug — family, friends, and colleagues — are warmly invited to edit, correct, and add their own memories, documents, and stories whenever they're ready.*

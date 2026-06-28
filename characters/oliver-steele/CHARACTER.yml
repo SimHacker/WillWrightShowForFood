@@ -1,0 +1,48 @@
+# Oliver Steele — invitation portrayal. NOT Oliver Steele.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: oliver-steele
+  name: "Oliver Steele"
+  type: invitation
+  signifier: "👤"
+  status: living
+  field: "Chief Software Architect of Laszlo Systems (designed LZX / OpenLaszlo); instance-first & reactive programming; tools for creativity & learning"
+  home: characters/oliver-steele/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/openlaszlo/
+
+bio:
+  summary: "**Oliver Steele** — **Chief Software Architect at Laszlo Systems** (2002–2007): designed the **LZX** XML interface language, implemented the XML + JavaScript compilers and runtime, and launched the **OpenLaszlo** open-source project (founding its Boston office). Known for **instance-first development** and reactive-programming ideas, and open-source work like Functional JavaScript and PyWordNet. Later at **Apple** (QuickDraw GX), **Nest** (Learning Thermostat backend), and teaching at NYU Shanghai and Olin College. Don worked with him on OpenLaszlo."
+
+family:
+  relation: "Marvin Minsky's son-in-law (married into the Minsky family) — brother-in-law to Margaret & Henry Minsky."
+  provenance: "Per Don. Which Minsky daughter he married is not stated here."
+
+show_suggestions:
+  - { seed: ../../repo-shows/openlaszlo/, what: "Group — OpenLaszlo reunion with Don + David Temkin + Henry Minsky; LZX architecture, instance-first/reactive design, the road not taken" }
+
+sources:
+  wikipedia: null
+  web:
+    - { title: "Oliver Steele — personal site", url: "https://osteele.com/" }
+    - { title: "Laszlo Presentation Server (role: Chief Software Architect)", url: "https://osteele.com/products/laszlo-presentation-server/" }
+    - { title: "GitHub — osteele", url: "https://github.com/osteele" }
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: CARD.yml, why: "Invokable abilities for show segments" }
+  - { path: ../david-temkin/, why: "Laszlo founder — OpenLaszlo reunion" }
+  - { path: ../henry-minsky/, why: "Laszlo colleague; brother-in-law" }
+  - { path: ../marvin-minsky/, why: "🕯️ Father-in-law (memorial)" }
+  - { path: ../../repo-shows/openlaszlo/, why: "The OpenLaszlo reunion show seed" }

@@ -1,13 +1,14 @@
-# Seymour Papert — invitation portrayal. NOT Seymour Papert.
-# Standards: ../../schemas/portrayal-standards.yml
+# Seymour Papert — memorial portrayal (in memoriam). NOT Seymour Papert.
+# Memorial mode: represent + discuss, never interview. No invented quotes or inner life.
+# Standards: ../../schemas/portrayal-standards.yml#memorial_mode
 
 character:
   id: seymour-papert
   name: "Seymour Papert"
-  type: invitation
+  type: memorial
   signifier: "🕯️"
   status: deceased
-  field: "Mathematician & educator — Constructionism, Logo"
+  field: "Mathematician & educator — Constructionism, Logo and the turtle; co-founder of the MIT AI Lab"
   home: characters/seymour-papert/
 
 representation:
@@ -16,18 +17,50 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: legacy_only
+  status: memorial
   consent: not_yet_asked
-  document: invitation.md
-  show_seed: repo-shows/seymour-papert/
-  note: "deceased — constructionist K-line"
+  document: memorial.md
+  note: "deceased (1928–2016) — represent + discuss; invite people who carry his constructionism forward"
+
+memorial:
+  mode: represent_and_discuss
+  rule: "Represent and discuss his documented work and stories. Do not interview, do not speak as him, invent no inner life, dialogue, or quotes."
+  who_can_discuss:
+    - { who: alan-kay, why: "Fellow constructionist; Dynabook ↔ Mindstorms kinship" }
+    - { who: walter-bender, why: "OLPC — Papert was its intellectual father; one-laptop-per-child constructionism" }
+    - { who: brian-harvey, why: "Logo educator + author; carried Logo into UCB/BJC/Snap!" }
+    - { who: ken-kahn, why: "Logo lineage → ToonTalk; programming for children" }
+    - { who: jens-monig, why: "Snap! — the Logo/Scratch constructionist lineage in a modern language" }
+    - { who: don-hopkins, why: "Constructionist-educational open-source SimCity/Micropolis (HAR 2009)" }
+  draw_on_for_shows:
+    - "Working with Jean Piaget in Geneva (~1958–1963) — the single largest influence on his thinking"
+    - "Co-founding/co-directing the MIT AI Lab with Marvin Minsky"
+    - "Logo (1967, with Wally Feurzeig & Cynthia Solomon) — the turtle; children program the computer, not the reverse"
+    - "Coining CONSTRUCTIONISM — learning by building shareable, personally-meaningful artifacts (his extension of Piaget's constructivism)"
+    - "Mindstorms: Children, Computers, and Powerful Ideas (1980); The Children's Machine (1993); The Connected Family (1996)"
+    - "LEGO Mindstorms (named for his book); the Epistemology & Learning Group at the MIT Media Lab"
+    - "Direct line to Scratch (Resnick / Lifelong Kindergarten) and One Laptop Per Child"
 
 bio:
-  summary: "**Seymour Papert** — mathematician & educator who founded **Constructionism** and co-created **Logo**: children programming the computer, not the other way around."
+  summary: "**Seymour Papert** (1928–2016) — South-African-born mathematician, computer scientist, and educator who reshaped how we think about **children and computers**. After working with **Jean Piaget** in Geneva, he came to MIT and **co-founded the AI Lab with Marvin Minsky**. He co-created **Logo** (1967, with Wally Feurzeig and Cynthia Solomon) — the language of the **turtle** — and coined **constructionism**: the idea that people learn best by *building* things they care about and can share. His **Mindstorms** (1980) is a foundational text of educational computing; **LEGO Mindstorms** is named after it. His influence runs straight through **Scratch**, **One Laptop Per Child**, and this project's own constructionist mission."
 
 sources:
-  wikipedia: null
+  wikipedia: "https://en.wikipedia.org/wiki/Seymour_Papert"
   web:
-    []
+    - { title: "The Daily Papert — archive of his writing & talks (Gary Stager)", url: "https://dailypapert.com/" }
+    - { title: "MIT Media Lab — Seymour Papert", url: "https://www.media.mit.edu/people/papert/overview/" }
+  books:
+    - "Mindstorms: Children, Computers, and Powerful Ideas (1980)"
+    - "The Children's Machine: Rethinking School in the Age of the Computer (1993)"
+    - "Perceptrons (1969, with Marvin Minsky)"
   papers: []
   blogs: []
+
+see_also:
+  - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
+  - { path: ../jean-piaget/, why: "🕯️ His teacher in Geneva — constructivism, the root of constructionism" }
+  - { path: ../marvin-minsky/, why: "🕯️ AI Lab co-founder; Perceptrons co-author" }
+  - { path: ../walter-bender/, why: "OLPC — carries his constructionism forward (can discuss him)" }
+  - { path: ../brian-harvey/, why: "Logo educator who can discuss him on air" }
+  - { path: ../../process/trails/constructionist-lineage.md, why: "Piaget → Papert → the show's learning spine" }
+  - { path: ../../schemas/portrayal-standards.yml#memorial_mode, why: "How memorial guests are handled" }

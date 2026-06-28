@@ -1,0 +1,46 @@
+# Chris Trottier — invitation portrayal. NOT Chris Trottier.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: chris-trottier
+  name: "Chris Trottier"
+  type: invitation
+  signifier: "🪶"
+  status: living
+  field: "Lead Designer at Maxis (1997–2008) on The Sims; known for 'design by accretion'"
+  home: characters/chris-trottier/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/REPO-SHOWS.yml#design-by-accretion.yml
+
+bio:
+  summary: "**Chris Trottier** was **Lead Designer at Maxis (1997–2008)**, a key designer on **The Sims** and later Sims titles, and a central voice in the game's content and systems design. Don associates him with **'design by accretion'** — building a design up layer by layer, detail by detail, until it comes alive."
+
+connections:
+  the_sims: "Senior designer on The Sims; content and systems design across the franchise."
+  design_by_accretion: "The throughline for his Repo Show — design built up by accretion, in dialogue with the 'cauldron'."
+  don: "Don Hopkins's colleague on The Sims team."
+
+show_suggestions:
+  - { seed: ../../repo-shows/REPO-SHOWS.yml#design-by-accretion.yml, what: "Design by accretion ↔ cauldron — how a Sims-scale design grows detail by detail. (Flagship seed.)" }
+  - { seed: ../../repo-shows/REPO-SHOWS.yml#building-the-sims.yml, what: "The Sims team reunion." }
+
+sources:
+  wikipedia: null
+  web:
+    - "https://www.mobygames.com/search/?q=Chris+Trottier"
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: ../will-wright/, why: "Created The Sims" }
+  - { path: ../don-hopkins/, why: "Sims teammate; host" }
+  - { path: ../jamie-doornbos/, why: "Sims engineering" }

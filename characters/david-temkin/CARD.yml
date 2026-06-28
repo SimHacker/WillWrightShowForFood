@@ -1,0 +1,60 @@
+# CARD — David Temkin (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: david-temkin
+  name: David Temkin
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: David Temkin
+  title: The RIA Before Its Time
+  rarity: rare
+  signifier: 🟦
+  flavor: Declarative apps that compiled to Flash or Ajax — in 2002.
+abilities:
+- id: OPENLASZLO
+  name: OpenLaszlo / LZX
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: openLaszlo
+    signature: openLaszlo(lzx) → one source, Flash or Ajax
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Tell the OpenLaszlo story — declarative RIAs, multi-runtime, open-sourced 2004.
+  verifiable: Founder/CEO/CTO, Laszlo Systems; OpenLaszlo (Wikipedia)
+  combos_with:
+  - LZX-ARCHITECTURE
+- id: AI-RETROCOMPUTING
+  name: AI Retrocomputing Revival
+  type: activated
+  mana: '{1}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: aiRevival
+    signature: aiRevival(legacyJava) → it compiles and runs again
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Walk through using AI to get the old OpenLaszlo Java toolchain building again.
+  verifiable: Per Don via Henry Minsky (June 2026) — confirm with David
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

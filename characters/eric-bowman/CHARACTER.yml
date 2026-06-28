@@ -1,0 +1,44 @@
+# Eric Bowman — invitation portrayal. NOT Eric Bowman.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: eric-bowman
+  name: "Eric Bowman"
+  type: invitation
+  signifier: "⚙️"
+  status: living
+  field: "Programmer on the original The Sims team (Maxis) — core/systems engineering"
+  home: characters/eric-bowman/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml
+
+bio:
+  summary: "**Eric Bowman** is a programmer on the original **The Sims** team at Maxis, working on core/systems engineering. He and Don later worked together again at **TomTom** in Amsterdam."
+
+connections:
+  the_sims: "Programmer on the original The Sims team (Maxis) — core systems."
+  tomtom: "Reunited with Don at TomTom in Amsterdam."
+  don: "Don Hopkins's colleague on The Sims and later at TomTom."
+
+show_suggestions:
+  - { seed: ../../repo-shows/REPO-SHOWS.yml#building-the-sims.yml, what: "The Sims team reunion — the engineering side." }
+
+sources:
+  wikipedia: null
+  web: []
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: ../jamie-doornbos/, why: "Sims engineering" }
+  - { path: ../don-hopkins/, why: "Sims + TomTom colleague; host" }
+  - { path: ../will-wright/, why: "Created The Sims" }

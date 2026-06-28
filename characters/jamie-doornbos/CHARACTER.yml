@@ -1,0 +1,44 @@
+# Jamie Doornbos — invitation portrayal. NOT Jamie Doornbos.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: jamie-doornbos
+  name: "Jamie Doornbos"
+  type: invitation
+  signifier: "🧠"
+  status: living
+  field: "Lead programmer on The Sims (Maxis); a principal architect of the Sims' behavior / AI (SimAntics)"
+  home: characters/jamie-doornbos/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml
+
+bio:
+  summary: "**Jamie Doornbos** was a lead programmer on **The Sims** at Maxis and one of the principal architects of the game's Sim behavior and AI — the system that made smart objects and autonomous Sims feel alive. He has spoken publicly about the design and engineering of the Sims' simulation. (Don's colleague on The Sims.)"
+
+connections:
+  the_sims: "Lead gameplay engineer on The Sims; central to the SimAntics behavior engine and the motive/AI system."
+  don: "Don Hopkins's colleague on The Sims team at Maxis."
+
+show_suggestions:
+  - { seed: ../../repo-shows/REPO-SHOWS.yml#building-the-sims.yml, what: "The Sims team reunion — how the simulation actually worked, from smart objects to autonomy." }
+
+sources:
+  wikipedia: null
+  web:
+    - "https://www.mobygames.com/search/?q=Jamie+Doornbos"
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: ../will-wright/, why: "Created The Sims" }
+  - { path: ../don-hopkins/, why: "Sims teammate; host" }
+  - { path: ../chris-trottier/, why: "Sims design" }

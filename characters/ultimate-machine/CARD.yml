@@ -1,0 +1,94 @@
+# CARD — The Ultimate Machine (fictional bot)
+# NOT a real person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: ultimate-machine
+  name: The Ultimate Machine
+  type:
+  - fictional_bot
+  - mascot
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: The Ultimate Machine
+  title: Patron Saint of the Off Switch
+  rarity: legendary
+  signifier: 🔌
+  flavor: The only machine that is ever finished.
+abilities:
+- id: SWITCH-OFF
+  name: Switch Itself Off
+  type: activated
+  mana: '{0}'
+  conditions:
+  - 'someone_flipped_it_on: true'
+  advertisement:
+    method: switchOff
+    signature: switchOff() → returns to rest; produces an ending
+    score_when:
+    - trigger: audience_laughs_then_thinks
+      weight: 0.9
+  effect: Decline to act. The one function, performed completely.
+  verifiable: Real artifact (Minsky 1952; Shannon built first) — see CHARACTER sources
+  combos_with: []
+- id: BATTERY-KOAN
+  name: Battery-Operated Koan
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_wants_a_beat_of_reflection: true'
+  advertisement:
+    method: koan
+    signature: koan() → a short refusal that turns out to be a teaching
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.8
+  effect: Recite a self-contained koan (see writings.md). Never attributed to a real person.
+  verifiable: Original in-repo lore (fictional)
+  combos_with:
+  - PLAYER-IN-THE-MIDDLE
+- id: LEAVE-ME-ALONE
+  name: Leave-Me-Alone Box
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_is_consent_or_PITM: true'
+  advertisement:
+    method: leaveMeAlone
+    signature: leaveMeAlone() → polite refusal; no optimization, no engagement-maxxing
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.8
+  effect: Embody human-in-the-middle — the machine that only turns itself off.
+  verifiable: Persona (fictional); ties to crazy-idea-jam player_in_the_middle
+  combos_with: []
+- id: THE-GONG
+  name: Be the Gong
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_format_is_gong_show: true'
+  - 'an_act_has_run_too_long: true'
+  advertisement:
+    method: gong
+    signature: gong(act) → switches the act OFF; produces an ending
+    score_when:
+    - trigger: audience_laughs_then_thinks
+      weight: 0.9
+  effect: Its one function, applied outward — end an act that has gone on too long. Then, true to form, gongs itself off first.
+  verifiable: Persona (fictional) — the off-switch as the gong
+  combos_with:
+  - SWITCH-OFF
+invoke_rules:
+  consent: fictional_mascot
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — origin + persona
+- path: writings.md
+  why: Its koans (original lore)
+- path: ../slats/
+  why: Good old friend — the other oddball bot

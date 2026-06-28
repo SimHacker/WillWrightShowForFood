@@ -1,0 +1,90 @@
+# CARD — Henry Minsky (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: henry-minsky
+  name: Henry Minsky
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Henry Minsky
+  title: Society of Mind, Running
+  rarity: rare
+  signifier: 🧠
+  flavor: Many small agents make a mind — and a manufacturing line legible.
+abilities:
+- id: VISUAL-INTELLIGENCE
+  name: Visual Intelligence
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: visualIntelligence
+    signature: visualIntelligence(video) → understanding, not just detection
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Show how Leela AI reads activity in video as structured understanding.
+  verifiable: Co-founder/CTO, Leela AI (Boston Globe 2024)
+  combos_with: []
+- id: SOCIETY-OF-MIND
+  name: Society of Mind (carried forward)
+  type: activated
+  mana: '{1}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: societyOfMind
+    signature: societyOfMind(agents) → mind from many small parts
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Discuss his father's agent ideas as they inform modern AI — his own view, not Marvin's voice.
+  verifiable: Leela AI principles trace to MIT AI Lab (Boston Globe 2024)
+  combos_with: []
+- id: DECLARATIVE-UI
+  name: Declarative UI
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: declarativeUI
+    signature: declarativeUI(openLaszlo) → apps as a language
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Lessons from OpenLaszlo / Laszlo Systems for today's web content tools.
+  verifiable: Software architect, Laszlo Systems (~2002-2011)
+  combos_with: []
+- id: WIRED-CHILDHOOD
+  name: First Wired Family
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: wiredChildhood
+    signature: wiredChildhood(memory) → the AI Lab as a home
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Memory Lane — growing up observed in the children's computer lab.
+  verifiable: NYT 'First Wired Family' (1997); Boston Globe (2024)
+  combos_with:
+  - MEMORY-LANE
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

@@ -79,6 +79,7 @@ room still has to *run* one day.
 | 📊 | **Educational data literacy** | Make the sim *export its guts*. Prof. Upmanu Lall (Columbia) wanted SimCity to spit out spreadsheets so students from any department would learn science through a game they relate to. Modern version: Micropolis & Yoot Tower stream telemetry into d3 / Grafana. Don's ~2002 OPTIMUS proposal — only possible after open-sourcing. |
 | 🧩 | **Scriptable simulators** | Push the UI out of the engine and let players reprogram the rest. emscripten + embind let you *subclass the C++ engine in JavaScript* — zones, agents, and robots as plug-ins. Wire Snap!/Blockly on top so kids live-code the sim. PacBot follows the roads eating traffic; the Church of Pacmania worships and feeds it. SimAntics VPL spirit, made easy. |
 | 🏙️ | **Towers in Micropolis** | Embed multiple *Yoot Towers* inside your Micropolis city — same Maxis era, shared WASM / embind / SvelteKit stack, so a tower becomes a building in a city. Data portability you can point at. |
+| 🖱️⌨️ | **Engelbart keyset, democratized** | 3D-scan an original Engelbart mouse + five-key chord keyset and publish a *free* printable model — from a clicky plastic toy that rolls and clicks, up to a working Bluetooth replica with real wheels and authentic weight that runs on any Mac or PC. The CHM gift shop sells kits and assembled sets; the files stay free forever. **Preservation by proliferation** — put a tool built to augment human intellect back in everyone's hand. *(Preservation framing only.)* |
 
 ---
 

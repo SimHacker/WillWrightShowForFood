@@ -1,0 +1,40 @@
+# SHOW — Isabella Struckman (vision models, explainability, AI policy)
+# Planted seed. Inherits from the SHOW skill (/skills/repo-show).
+
+show:
+  id: isabella-struckman
+  title: "A Repo Show with Isabella Struckman — Making the Model Actually Work"
+  type: solo
+  host: Don Hopkins
+  guests: ["Isabella Struckman"]
+  character: characters/isabella-struckman/
+  topic: "Computer-vision model evaluation & training at Leela AI; ML explainability; AI policy / AI supply chains; AI skills + teaching; and whatever she's passionate about in ML/vision."
+  status: seed
+  consent: not_yet_asked
+
+why_her:
+  vision_eval: "Real-world CV model evaluation + fine-tuning in a production pipeline at Leela AI — including a technique that held detection performance after camera movements while cutting resource cost ~25%."
+  explainability: "MIT CSAIL (Mądry Lab) research on ML explainability — what explanations actually buy you, and where they break."
+  ai_policy: "Co-author of the 'AI Supply Chains' work and lead author of 'Why They're Worried' (the 2023 pause-letter study) — the ecosystem-level view of models, data, tooling, risk, and leverage."
+  teaching: "Has taught intro-AI to high-schoolers and helped run MIT's Women's Technology Program — making AI legible to newcomers."
+  representation: "Great women belong on this guest list on the merits — Isabella's work spans the practical (production vision) and the structural (policy/explainability)."
+
+dream_segments:
+  - "Evaluate + fine-tune a vision model live — honest metrics, frugal training, robustness to camera movement."
+  - "Explainability stress-test — take an explanation method and probe where it misleads."
+  - "Draw the AI supply chain for our own stack — who provides what, and where harm concentrates."
+  - "Author an AI skill together — teaching-by-doing for the LLM era."
+
+leela_connection:
+  note: "Isabella and Don are colleagues at Leela AI (with Henry Minsky + Milan Singh Minsky + Steve Kommrusch). A Leela / vision-AI episode could pair them."
+  pair_with: [henry-minsky]
+
+format:
+  live: true
+  audience_qa: true
+
+ties_to:
+  - ../../characters/isabella-struckman/
+  - ../../characters/isabella-struckman/invitation.md
+  - ../../characters/henry-minsky/
+  - ../../repo-shows/REPO-SHOWS.yml

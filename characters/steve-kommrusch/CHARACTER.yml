@@ -1,0 +1,48 @@
+# Steve Kommrusch — invitation portrayal. NOT Steve Kommrusch.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: steve-kommrusch
+  name: "Steve Kommrusch"
+  type: invitation
+  signifier: "👤"
+  status: living
+  field: "Senior AI Scientist at Leela AI — ML for program repair & verifiable program equivalence; former CPU/chip architect (HP, National Semiconductor, AMD)"
+  home: characters/steve-kommrusch/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/steve-kommrusch/
+
+bio:
+  summary: "**Steve Kommrusch** — Senior AI Scientist at **Leela AI**, applying deep learning to hard problems including **automatic program repair** and **verifiable program equivalence** (his CSU PhD, 2022: VRepair, graph-to-sequence proofs, S4Eq; contributor to OpenNMT-py). A former silicon/CPU/chip-design architect at **HP, National Semiconductor, and AMD**. BSc (U Illinois), **MSc (MIT, 1989)**, PhD (Colorado State). At Leela he works on a learning approach inspired by **Piaget's schemas** — a direct bridge to Gary Drescher's schema-mechanism lineage. Don's colleague at Leela."
+
+leela_colleagues:
+  with: ["henry-minsky", "milan-singh-minsky", "isabella-struckman", "don-hopkins"]
+  schema_link: "Leela's Piaget-schema approach connects to gary-drescher (Made-Up Minds) and the constructionist lineage (Piaget → Papert → Minsky)."
+
+show_suggestions:
+  - { seed: ../../repo-shows/steve-kommrusch/, what: "Solo — ML for program repair + verifiable program equivalence; from CPU architecture to deep learning; Leela's Piaget-schema learning" }
+
+sources:
+  wikipedia: null
+  web:
+    - { title: "Steve Kommrusch on GitHub (@SteveKommrusch)", url: "https://github.com/SteveKommrusch" }
+    - { title: "Steve Kommrusch — Senior AI Research Scientist, Leela AI (The Org)", url: "https://theorg.com/org/leela-ai/org-chart/steve-kommrusch" }
+  papers:
+    - { title: "Machine Learning for Computer Aided Programming: From Stochastic Program Repair to Verifiable Program Equivalence (PhD thesis, Colorado State, 2022)" }
+    - { title: "Self-Supervised Learning for Multi-Goal Grid World: Comparing Leela and Deep Q Network (PMLR 131, 2020)", authors: "Kommrusch, H. Minsky, M. Minsky, Shaoul" }
+  blogs: []
+
+see_also:
+  - { path: ../henry-minsky/, why: "Leela co-founder/CTO — colleague + co-author" }
+  - { path: ../gary-drescher/, why: "Schema-mechanism lineage — Leela's Piaget-schema learning" }
+  - { path: ../jean-piaget/, why: "🕯️ The schema concept's developmental root" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

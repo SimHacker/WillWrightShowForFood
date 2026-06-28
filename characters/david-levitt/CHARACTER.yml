@@ -1,0 +1,51 @@
+# David Levitt — invitation portrayal. NOT David Levitt.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: david-levitt
+  name: "David Levitt"
+  type: invitation
+  signifier: "🎼"
+  status: living
+  field: "Music + interactive media; MIT PhD on AI music/jazz improvisation (advised by Marvin Minsky); Atari Cambridge Research; Don's longtime friend"
+  home: characters/david-levitt/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/REPO-SHOWS.yml#music-and-theory.yml
+
+bio:
+  summary: "**David Levitt** is a good friend of Don's who works at the intersection of **music, AI, and interactive media**. He earned his **MIT PhD advised by Marvin Minsky**, with a thesis on **AI music generation and jazz improvisation**; worked at **Atari Cambridge Research**; and was part of **Lynn Conway's** pioneering **VLSI design course** alongside James Clark, Guy L. Steele, and other now-legendary names. Don has paired him with composer **Jerry Martin** for a *music + theory* Repo Show."
+
+connections:
+  minsky: "PhD advised by Marvin Minsky at MIT — a thesis on AI music generation and jazz improvisation."
+  atari_cambridge: "Worked at Atari Cambridge Research — the same lab that appears in Cynthia Solomon's video trove."
+  vlsi_class: "Took Lynn Conway's landmark VLSI design course, alongside James Clark and Guy L. Steele, among others."
+  cynthia_trove: "A young, wild-haired David appears demoing his AI music-improvisation system in Cynthia Solomon's YouTube archive."
+  jerry_martin: "Paired with Jerry Martin for the music + theory Repo Show."
+  don: "A longtime good friend of Don Hopkins."
+
+show_suggestions:
+  - { seed: ../../repo-shows/REPO-SHOWS.yml#music-and-theory.yml, what: "Music + theory — with Jerry Martin. AI music generation, jazz improvisation, and the ideas underneath." }
+  - { seed: ../../repo-shows/remembering-the-constructionists.yml, what: "Discussant — fond first-hand memories of his PhD advisor Marvin Minsky and the AI Lab milieu." }
+
+sources:
+  wikipedia: null
+  web:
+    - "https://www.youtube.com/@cynthiaso"   # Cynthia Solomon's archive — young David demoing his music system
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: ../jerry-martin/, why: "Music + theory show partner (composer)" }
+  - { path: ../marvin-minsky/, why: "🕯️ PhD advisor; AI music thesis" }
+  - { path: ../../repo-shows/remembering-the-constructionists.yml, why: "Discussant — fond memories of Marvin" }
+  - { path: ../cynthia-solomon/, why: "Her video trove has young David demoing his music system; shared Atari Cambridge milieu" }
+  - { path: ../don-hopkins/, why: "Longtime friend; host" }

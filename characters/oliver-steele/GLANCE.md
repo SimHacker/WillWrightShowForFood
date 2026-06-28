@@ -1,0 +1,1 @@
+👤 **Oliver Steele** — **Chief Software Architect of Laszlo Systems**: designed the **LZX** language and launched the **OpenLaszlo** open-source project; known for **instance-first / reactive** programming, Functional JavaScript, PyWordNet. Later Apple (QuickDraw GX), Nest, NYU Shanghai, Olin. **Marvin Minsky's son-in-law**; Don's OpenLaszlo colleague.

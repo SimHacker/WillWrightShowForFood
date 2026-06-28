@@ -1,0 +1,49 @@
+# Gary Drescher — invitation portrayal. NOT Gary Drescher.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: gary-drescher
+  name: "Gary Drescher"
+  type: invitation
+  signifier: "👤"
+  status: living
+  field: "AI researcher & philosopher — the schema mechanism (Made-Up Minds); constructivist AI; decision theory & ethics (Good and Real)"
+  home: characters/gary-drescher/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/gary-drescher/
+
+bio:
+  summary: "**Gary Drescher** — AI researcher and philosopher. In **Made-Up Minds: A Constructivist Approach to Artificial Intelligence** (MIT Press, 1991) he built the **schema mechanism**: an agent that, like a Piagetian infant, learns from raw sensorimotor experience by discovering **schemas** (context → action → result), using **marginal attribution** to find reliable regularities and **synthetic items** to invent new concepts — constructivism, made to run. His later **Good and Real** (MIT Press, 2006) takes the same rigor to determinism, choice, and ethics (including acausal/subjunctive cooperation). An MIT AI Lab alumnus in the Minsky orbit."
+
+connections:
+  leela: "An adviser to Leela AI and a longtime friend of Henry Minsky."
+  henry_python: "Henry Minsky has built a Python implementation of Drescher's schema mechanism (a 'schema factory') — a living substrate to build on."
+  schema_lineage: "The through-line: Piaget's constructivism → Drescher's schema mechanism → Leela's Piaget-schema learning (Steve Kommrusch, Henry Minsky)."
+
+show_suggestions:
+  - { seed: ../../repo-shows/gary-drescher/, what: "Made-Up Minds, remade: the schema mechanism reimagined for the LLM era — using language models for the grounding/world-knowledge the original had to learn from scratch; build live on Henry's Python schema factory" }
+
+sources:
+  wikipedia: null
+  web: []
+  books:
+    - "Made-Up Minds: A Constructivist Approach to Artificial Intelligence (MIT Press, 1991)"
+    - "Good and Real: Demystifying Paradoxes from Physics to Ethics (MIT Press, 2006)"
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: ../jean-piaget/, why: "🕯️ Constructivism — the developmental root of the schema mechanism" }
+  - { path: ../marvin-minsky/, why: "🕯️ MIT AI Lab orbit" }
+  - { path: ../henry-minsky/, why: "Friend; built the Python schema-factory reimplementation; Leela" }
+  - { path: ../steve-kommrusch/, why: "Leela's Piaget-schema learning — the modern bridge" }
+  - { path: ../../process/trails/constructionist-lineage.md, why: "Piaget → schema mechanism → Leela" }

@@ -1,0 +1,37 @@
+# SHOW — James Gosling × Arthur van Hoff (NeWS, Emacs, HyperLook, early Java)
+# Two old Sun friends; Don's longtime colleagues. Can also run as Gosling solo.
+
+show:
+  id: james-gosling
+  title: "A Repo Show with James Gosling × Arthur van Hoff — From NeWS to Java"
+  type: pair
+  host: Don Hopkins
+  guests: ["James Gosling", "Arthur van Hoff"]
+  character: characters/james-gosling/
+  topic: "NeWS/SunDew, Gosling Emacs, HyperLook, and the road to Java — the network-window and extension-language lineage"
+  status: seed
+  consent: not_yet_asked
+  note: "Pairing requested. Can also run as Gosling solo or van Hoff solo."
+
+why_pair:
+  gosling: "Architected NeWS/SunDew and Gosling Emacs; created Java."
+  van_hoff: "Built GoodNeWS → HyperLook (a NeWS HyperCard) and PdB at the Turing Institute; on the early Java team he wrote the compiler in Java (javac) + AWT + HotJava."
+  shared: "NeWS and PostScript programmability → HyperLook → early Java. Don worked alongside both (the UniPress Emacs NeWS driver, pie menus, the lunar-lander-in-PostScript)."
+
+dream_segments:
+  - "NeWS as a lost future — PostScript-programmable, network-transparent windows (AJAX before AJAX); why it lost to X11 and what we'd revive"
+  - "HyperLook — van Hoff's NeWS reimagining of HyperCard, where Don built SimCity's UI"
+  - "Gosling Emacs → UniPress → GNU Emacs; 'the largest number of cheesy little extension languages'"
+  - "From NeWS to Java — what carried over (and the AWT/HotJava early days)"
+  - "Checked exceptions and reliability — Gosling's design philosophy, debated live"
+
+format:
+  live: true
+  audience_qa: true
+
+ties_to:
+  - ../../characters/james-gosling/invitation.md
+  - ../../characters/arthur-van-hoff/
+  - ../../characters/don-hopkins/
+  - ../../characters/david-rosenthal/
+  - ../../process/trails/live-objects.md

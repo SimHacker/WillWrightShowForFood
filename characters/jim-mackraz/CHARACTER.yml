@@ -1,0 +1,43 @@
+# Jim Mackraz — invitation portrayal. NOT Jim Mackraz.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: jim-mackraz
+  name: "Jim Mackraz"
+  type: invitation
+  signifier: "🧭"
+  status: living
+  field: "CTG (Core Technology Group) team leader on The Sims (Maxis)"
+  home: characters/jim-mackraz/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml
+
+bio:
+  summary: "**Jim Mackraz** led the **Core Technology Group (CTG)** on **The Sims** at Maxis — the team leadership that helped turn Will Wright's open-ended vision into a shipped product. Don credits him with keeping the team (and Don) focused enough to finish and ship."
+
+connections:
+  the_sims: "CTG team leader on The Sims; shipping discipline and team leadership."
+  don: "Don Hopkins's team lead on The Sims."
+
+show_suggestions:
+  - { seed: ../../repo-shows/REPO-SHOWS.yml#building-the-sims.yml, what: "The Sims team reunion — leadership / how it actually shipped." }
+
+sources:
+  wikipedia: null
+  web: []
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: ../jamie-doornbos/, why: "Sims engineering" }
+  - { path: ../don-hopkins/, why: "Sims teammate; host" }
+  - { path: ../will-wright/, why: "Created The Sims" }

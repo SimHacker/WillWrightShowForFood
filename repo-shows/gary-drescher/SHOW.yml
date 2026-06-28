@@ -1,0 +1,37 @@
+# SHOW — Gary Drescher (schema mechanism, remade for the LLM era)
+# Planted seed. Inherits from the SHOW skill (/skills/repo-show).
+
+show:
+  id: gary-drescher
+  title: "A Repo Show with Gary Drescher — Made-Up Minds, Remade"
+  type: solo
+  host: Don Hopkins
+  guests: ["Gary Drescher"]
+  character: characters/gary-drescher/
+  topic: "The schema mechanism (Made-Up Minds) as constructivist AI — and what happens when you give it a language model for grounding. Built live on Henry Minsky's Python schema factory."
+  status: seed
+  consent: not_yet_asked
+
+why_him:
+  schema_mechanism: "Made-Up Minds (1991): a Piagetian agent that learns schemas (context → action → result) from raw experience, via marginal attribution and synthetic items — constructivism made to run."
+  philosophy: "Good and Real (2006): determinism, choice, ethics, acausal cooperation — the same rigor applied to hard problems."
+  lineage: "MIT AI Lab / Minsky orbit; Leela adviser; friend of Henry Minsky, who reimplemented the schema mechanism in Python."
+
+dream_segments:
+  - "The schema mechanism from first principles — schemas, marginal attribution, synthetic items."
+  - "Made-Up Minds, remade: an LLM supplies grounding/world-knowledge the original learned from scratch — built live on Henry's Python schema factory."
+  - "The lineage on one whiteboard: Piaget → schema mechanism → Leela's Piaget-schema learning (with Henry Minsky, Steve Kommrusch)."
+  - "Optional philosophy turn: choice and cooperation from Good and Real."
+
+format:
+  live: true
+  audience_qa: true
+
+ties_to:
+  - ../../characters/gary-drescher/
+  - ../../characters/gary-drescher/invitation.md
+  - ../../characters/jean-piaget/
+  - ../../characters/marvin-minsky/
+  - ../../characters/henry-minsky/
+  - ../../characters/steve-kommrusch/
+  - ../../process/trails/constructionist-lineage.md

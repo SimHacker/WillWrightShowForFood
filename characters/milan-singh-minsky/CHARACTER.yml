@@ -1,0 +1,46 @@
+# Milan Singh Minsky — invitation portrayal. NOT Milan Singh Minsky.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: milan-singh-minsky
+  name: "Milan Singh Minsky"
+  type: invitation
+  signifier: "👤"
+  status: living
+  field: "Product leadership in AI — VP of Product at Leela AI"
+  home: characters/milan-singh-minsky/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+  note: "Host-authored from public sources + colleague knowledge (Don's Leela colleague). She may edit, reduce, or delete anytime."
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/isabella-struckman/   # shares the Leela / vision-AI episode space
+
+bio:
+  summary: "**Milan Singh Minsky** — **VP of Product at Leela AI**, where she helps turn its visual-intelligence research into a real product. A co-author on Leela's grid-world learning paper (Kommrusch, H. Minsky, M. Minsky, Shaoul, 2020). Married to Henry Minsky (Marvin Minsky's daughter-in-law); a colleague of Don's at Leela."
+
+family:
+  spouse: "henry-minsky (Leela AI co-founder/CTO; son of Marvin Minsky)"
+  relation: "Marvin Minsky's daughter-in-law"
+
+leela_colleagues:
+  with: ["henry-minsky", "isabella-struckman", "Steve Kommrusch", "don-hopkins"]
+
+sources:
+  wikipedia: null
+  web:
+    - { title: "Son of Marvin Minsky launches Leela AI startup (Boston Globe, 2024) — names Milan Singh Minsky as VP of Product", url: "https://www.bostonglobe.com/2024/12/03/business/minsky-leela-ai-company-mit/" }
+  papers:
+    - { title: "Self-Supervised Learning for Multi-Goal Grid World: Comparing Leela and Deep Q Network (PMLR 131, 2020)", authors: "Kommrusch, H. Minsky, M. Minsky, Shaoul" }
+  blogs: []
+
+see_also:
+  - { path: ../henry-minsky/, why: "Her husband; Leela co-founder/CTO" }
+  - { path: ../isabella-struckman/, why: "Leela colleague — vision-AI episode space" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

@@ -1,8 +1,8 @@
 # Trail — constructionist_lineage
 
-> *1996 microworlds → living organism*
+> *Piaget → Papert → Minsky → 1996 microworlds → living organism*
 
-Winograd interview → Will show → breed DNA back into open Micropolis and MOOLLM skills.
+The developmental + AI roots → Winograd interview → Will show → breed DNA back into open Micropolis and MOOLLM skills.
 
 **Girder:** [`cross-links.yml`](../cross-links.yml#constructionist_lineage) · **Index:** [TRAILS.md](../../TRAILS.md)
 
@@ -12,6 +12,12 @@ Winograd interview → Will show → breed DNA back into open Micropolis and MOO
 
 | Stop | Why wander here |
 |------|-----------------|
+| 🕯️ [**Jean Piaget**](../../characters/jean-piaget/) | The developmental root — constructivism; the child as active builder (memorial) |
+| 🕯️ [**Seymour Papert**](../../characters/seymour-papert/) | Worked with Piaget; coined constructionism; Logo + the turtle; *Mindstorms* (memorial) |
+| 📼 [**Cynthia Solomon**](../../characters/cynthia-solomon/) | Co-created Logo with Papert (BBN 1967); built the MIT Logo culture; keeper of the video treasure trove |
+| 🕯️ [**Marvin Minsky**](../../characters/marvin-minsky/) | AI Lab co-founder with Papert; Society of Mind / K-lines (memorial) |
+| [**Gary Drescher**](../../characters/gary-drescher/) | *Made-Up Minds* — Piaget's constructivism made to run (the schema mechanism); remade for the LLM era |
+| [**Steve Kommrusch**](../../characters/steve-kommrusch/) | Leela AI's Piaget-schema learning — the modern bridge from the schema mechanism |
 | [**Don Hopkins**](../../characters/don-hopkins/) | Host — yaml girder + career backbone |
 | [**sync-sources.yml**](../../characters/don-hopkins/sync-sources.yml) | Synced from moollm adventure-4 — deduped |
 | [**voice.yml**](../../characters/don-hopkins/portrayal/voice.yml) | Repo Show voice — not adventure rabbit plot |

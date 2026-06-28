@@ -1,0 +1,1 @@
+👤 **David Temkin** — founder/CEO/CTO of **Laszlo Systems**; creator of **OpenLaszlo** (the LZX rich-internet-app platform, open-sourced 2004), later co-founded **Cola**. Recently **used AI to rewrite the OpenLaszlo Java so it compiles and runs again** (per Don via Henry Minsky) — a retrocomputing feat that anchors a whole OpenLaszlo show. Don's old Laszlo colleague.

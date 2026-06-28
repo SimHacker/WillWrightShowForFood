@@ -1,0 +1,39 @@
+# SHOW — Patrick Hulin (AI-assisted reverse engineering)
+# Planted seed. Inherits from the SHOW skill (/skills/repo-show).
+
+show:
+  id: patrick-hulin
+  title: "A Repo Show with Patrick Hulin — Binary to Spec to Tick-for-Tick"
+  type: solo
+  host: Don Hopkins
+  guests: ["Patrick Hulin"]
+  character: characters/patrick-hulin/
+  topic: "AI-assisted reverse engineering: how an LLM turned the SimTower binary into a spec, then a byte-identical TypeScript reimplementation — and where that could meet Yoot Tower and Micropolis."
+  status: seed
+  consent: not_yet_asked
+
+why_him:
+  ai_re: "Used Claude Code + a Unicorn-based emulator (mocking ~195 Win 3.1 APIs) to reverse-engineer SimTower's simulation into a complete spec."
+  tick_for_tick: "Reimplemented it in pure TypeScript, byte-identical to the original on every tick, proven by replaying captured gameplay traces."
+  multiplayer: "Put the sim behind a Cloudflare Worker for real-time collaborative building (towers.world); MIT-licensed (tower-together)."
+
+dream_segments:
+  - "Live walk-through: binary → spec → TS, with trace tests as ground truth."
+  - "How much was the model vs. the human — the honest division of labor."
+  - "Yoot Tower path — the Tower II 'Tower Kit' plug-in system as a JS/HTML modding target."
+  - "Retrocomputing-revival summit — pair with David Temkin (OpenLaszlo) on AI-reviving old code."
+
+yoot_tower_lead:
+  note: "This is the community-reimplementation lead in yoot-saito/yoot-tower-discussion.yml. Collaboration is Don's call; nothing committed; Yoot Tower licensing unresolved."
+  see: ../../characters/yoot-saito/yoot-tower-discussion.yml
+
+format:
+  live: true
+  audience_qa: true
+
+ties_to:
+  - ../../characters/patrick-hulin/
+  - ../../characters/patrick-hulin/invitation.md
+  - ../../characters/yoot-saito/
+  - ../../characters/david-temkin/
+  - ../../repo-shows/openlaszlo/

@@ -21,4 +21,4 @@ to play live over the Internet — calm technology, loud music.)
 
 We celebrate his documented public work; we do not speak as him.
 
-— Don Hopkins, Micropolis Class
+*This is a collaborative memorial, not a signed work. Those who knew Mark — family, friends, and colleagues — are warmly invited to edit, correct, and add their own memories, documents, and stories whenever they're ready.*

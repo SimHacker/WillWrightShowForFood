@@ -7,7 +7,7 @@ character:
   type: invitation
   signifier: "👤"
   status: living
-  field: "Haptics / force-feedback; Atari Cambridge Research Lab; MIT Media Lab"
+  field: "Haptics / force-feedback (the Sandpaper system); Atari Cambridge Research Lab; MIT Media Lab"
   home: characters/margaret-minsky/
 
 representation:
@@ -21,13 +21,30 @@ invitation:
   document: invitation.md
   show_seed: repo-shows/margaret-minsky/
 
-
 bio:
-  summary: "**Margaret Minsky** — Atari Cambridge / MIT Media Lab (force-feedback haptics); Marvin Minsky's daughter-in-law (Oliver Steele). Warm \"Memory Lane\" correspondence with Don (2019); Logo history thread (2020). Flagged Ken Kahn's Snap! AI blocks. Artifact pending: **White Board Graphs** memorabilia scan."
+  summary: "**Margaret Minsky** — haptics / force-feedback researcher (MIT Media Lab PhD; the **Sandpaper** texture-synthesis force-feedback system); Atari Cambridge Research Lab. Daughter of Marvin Minsky + Gloria Rudisch, she grew up in the MIT-AI-Lab 'first wired family' (her own net address at 14, in 1971). Gave the 1993 CS547 talk *Putting 'Feel' into 'Look and Feel'*. Warm \"Memory Lane\" correspondence with Don (2019); Logo history thread (2020); flagged Ken Kahn's Snap! AI blocks. Artifact pending: **White Board Graphs** memorabilia scan."
+
+family:
+  father: marvin-minsky        # AI pioneer; Society of Mind (memorial)
+  siblings: ["Henry Minsky (twin of Juliana; Laszlo Systems / Leela AI)", "Juliana 'Julie' Minsky"]
+  in_laws:
+    - "Oliver Steele — Marvin's son-in-law (Laszlo Systems chief architect)"
+    - "Milan Singh Minsky — Marvin's daughter-in-law (Henry's wife; VP Product, Leela AI)"
+  note: "Daughter of Marvin Minsky — corrected from an earlier 'daughter-in-law' error (verified: MIT News 2016 obituary; NYT 'First Wired Family,' 1997). Marvin + Gloria Rudisch's three kids: Margaret, and twins Henry & Juliana."
+
+show_suggestions:
+  - { seed: ../../repo-shows/margaret-minsky/, what: "Solo — haptics as real HCI (the Sandpaper system), Atari Cambridge / Media Lab, and growing up in the first wired family" }
 
 sources:
   wikipedia: null
   web:
-    []
+    - { title: "CS547 — Putting 'Feel' into 'Look and Feel' (1993, Stanford SC1217)", url: "https://searchworks.stanford.edu/view/kk938rh3332" }
+    - { title: "Marvin Minsky and the First Wired Family (NYT, 1997)", url: "https://archive.nytimes.com/www.nytimes.com/library/cyber/week/010397minsky.html" }
   papers: []
   blogs: []
+
+see_also:
+  - { path: ../marvin-minsky/, why: "🕯️ Her father — Society of Mind, MIT AI Lab (memorial)" }
+  - { path: ../henry-minsky/, why: "Her brother — Laszlo Systems / Leela AI" }
+  - { path: ../ken-kahn/, why: "She flagged his Snap! AI blocks" }
+  - { path: ../../repo-shows/terry-winograd/ARCHIVE.md, why: "Her 1993 CS547 talk in the archive" }

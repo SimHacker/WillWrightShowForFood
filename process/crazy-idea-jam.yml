@@ -315,6 +315,21 @@ ideas:
       city. Data portability you can point at.
     ties: [crazy-idea-jam.yml#data_portability_crown_jewel, ../characters/yoot-saito/]
 
+  engelbart_keyset_3d_replica:
+    emoji: "🖱️⌨️"
+    blurb: |
+      Democratize a sacred artifact instead of sealing it in a vitrine. 3D-scan an original Engelbart
+      mouse + five-key chord keyset (the SRI-era set Don was gifted by Mark Lottor, who kept the PDP-10
+      running Doug's demos) and publish a FREE, printable model so anyone can make their own. A whole
+      spectrum: a clicky NON-functional plastic toy that actually rolls and clicks, all the way up to a
+      high-end WORKING Bluetooth replica — real wheels, real buttons, authentic weight, sourced
+      fiberboard and case — that works on any Mac or PC. The Computer History Museum gift shop could
+      sell DIY kits, assembled replicas, and cheap clicky toy mice/keysets as historical swag; the 3D
+      files stay free for everyone, forever. Preservation by PROLIFERATION: the best way to honor a tool
+      built to augment human intellect is to put it back in everyone's hand.
+    preservation_framing: "Strictly a preservation + education + maker idea — open files, hands-on history, a museum-shop kit. NOT about the sale of any individual artifact."
+    ties: [../characters/douglas-engelbart/memorial.md, ../repo-shows/remembering-douglas-engelbart.yml]
+
   cellular_automata_as_drm:
     emoji: "🫠"
     blurb: |

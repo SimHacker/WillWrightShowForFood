@@ -1,0 +1,44 @@
+# Claire Curtin — invitation portrayal. NOT Claire Curtin.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: claire-curtin
+  name: "Claire Curtin"
+  type: invitation
+  signifier: "🏡"
+  status: living
+  field: "Game designer & producer at Maxis; a designer on The Sims"
+  home: characters/claire-curtin/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml
+
+bio:
+  summary: "**Claire Curtin** is a longtime game designer and producer at Maxis and a designer on **The Sims**, with credits across many Sim/Sims titles. Don's colleague on the team."
+
+connections:
+  the_sims: "Designer on The Sims (Maxis); long Maxis design/production career."
+  don: "Don Hopkins's colleague on The Sims team."
+
+show_suggestions:
+  - { seed: ../../repo-shows/REPO-SHOWS.yml#building-the-sims.yml, what: "The Sims team reunion — design and the everyday life of building the game." }
+
+sources:
+  wikipedia: null
+  web:
+    - "https://www.mobygames.com/search/?q=Claire+Curtin"
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: ../chris-trottier/, why: "Sims design" }
+  - { path: ../don-hopkins/, why: "Sims teammate; host" }
+  - { path: ../will-wright/, why: "Created The Sims" }

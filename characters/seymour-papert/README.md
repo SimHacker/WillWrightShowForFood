@@ -1,9 +1,15 @@
-# Seymour Papert
+# Seymour Papert 🕯️
 
-Invitation portrayal — **not** Seymour Papert. [Standards](../../schemas/portrayal-standards.yml)
+Memorial portrayal — **not** Seymour Papert. We *represent and discuss*; we never speak as him.
+[Memorial standards](../../schemas/portrayal-standards.yml#memorial_mode)
 
-**Field:** Mathematician & educator — Constructionism, Logo
+**Field:** Mathematician & educator — constructionism, Logo and the turtle; co-founder of the MIT AI Lab
 
-[Invitation](invitation.md) · [Show seed](../../repo-shows/seymour-papert/)
+[In memoriam → memorial.md](memorial.md) · [Constructionist lineage](../../process/trails/constructionist-lineage.md)
 
-Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.
+Worked with [Jean Piaget](../jean-piaget/) in Geneva; co-founded the **MIT AI Lab** with
+[Marvin Minsky](../marvin-minsky/); co-created **Logo** (the turtle); coined **constructionism**;
+wrote **Mindstorms** (1980). His line runs through **Scratch**, **OLPC**, and **LEGO Mindstorms**
+(named for his book) — and this project's build-to-learn mission.
+
+Verifiable sources in `CHARACTER.yml`. Estate may request correction or removal anytime.

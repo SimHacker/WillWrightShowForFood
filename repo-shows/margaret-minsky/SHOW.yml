@@ -1,0 +1,41 @@
+# SHOW — Margaret Minsky (haptics; the first wired family)
+# Planted seed. Inherits from the SHOW skill (/skills/repo-show).
+
+show:
+  id: margaret-minsky
+  title: "A Repo Show with Margaret Minsky — Putting 'Feel' into 'Look and Feel'"
+  type: solo
+  host: Don Hopkins
+  guests: ["Margaret Minsky"]
+  character: characters/margaret-minsky/
+  topic: "Haptics / force-feedback as real HCI (the Sandpaper texture-synthesis system); Atari Cambridge & MIT Media Lab; and growing up in the MIT-AI-Lab 'first wired family.'"
+  status: seed
+  consent: not_yet_asked
+
+why_her:
+  haptics: "MIT Media Lab PhD on the Sandpaper system — synthesizing texture for a force-feedback display. Touch you can program, as HCI rather than gimmick."
+  cs547: "Gave the 1993 CS547 talk 'Putting Feel into Look and Feel: Interaction with the Sense of Touch' — in the Winograd archive (../terry-winograd/ARCHIVE.md)."
+  first_wired_family: "Daughter of Marvin Minsky; had her own net address at 14 (1971), a terminal at home before video displays existed. Living memory of the AI Lab as a household."
+  logo_and_education: "Atari Cambridge Research / education + Logo history; a warm 'Memory Lane' correspondence with Don."
+
+dream_segments:
+  - "Demo / decode force-feedback as real interaction design — what touch adds that pixels can't."
+  - "Memory Lane — the MIT AI Lab as a childhood home; the first wired family on the ARPANET."
+  - "Logo history thread — generations of constructionist learning (Papert orbit)."
+  - "Pair with Ken Kahn (she flagged his Snap! AI blocks) and/or her brother Henry — a Minsky-sibling session."
+
+pairings:
+  - { with: ken-kahn, why: "She pointed colleagues to his Snap! AI blocks" }
+  - { with: henry-minsky, why: "Sibling session — two Minsky kids on growing up in the AI Lab" }
+
+format:
+  live: true
+  audience_qa: true
+
+ties_to:
+  - ../../characters/margaret-minsky/
+  - ../../characters/margaret-minsky/invitation.md
+  - ../../characters/marvin-minsky/
+  - ../../characters/henry-minsky/
+  - ../../characters/ken-kahn/
+  - ../../repo-shows/terry-winograd/ARCHIVE.md

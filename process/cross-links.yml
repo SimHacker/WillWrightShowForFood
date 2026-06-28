@@ -84,10 +84,13 @@ trails:
       - { path: ../characters/don-philahue/, why: "Audience wrangler — surfaces question PRs live" }
 
   constructionist_lineage:
-    k_line: "1996 microworlds → living organism"
+    k_line: "Piaget → Papert → Minsky → 1996 microworlds → living organism"
     human: trails/constructionist-lineage.md
-    why: "Winograd interview → Will show → breed DNA back"
+    why: "The developmental + AI roots → Winograd interview → Will show → breed DNA back"
     nodes:
+      - { path: ../characters/jean-piaget/, why: "🕯️ Constructivism — the developmental root (memorial)" }
+      - { path: ../characters/seymour-papert/, why: "🕯️ Constructionism + Logo — learn by building; worked with Piaget (memorial)" }
+      - { path: ../characters/marvin-minsky/, why: "🕯️ Society of Mind / K-lines — AI Lab co-founder with Papert (memorial)" }
       - { path: ../characters/don-hopkins/, why: "Host — yaml girder + career backbone" }
       - { path: ../characters/don-hopkins/sync-sources.yml, why: "Synced from moollm adventure-4 — deduped" }
       - { path: ../characters/don-hopkins/portrayal/voice.yml, why: "Repo Show voice — not adventure rabbit plot" }
@@ -167,6 +170,8 @@ trails:
     nodes:
       - { path: ../characters/terry-winograd/, why: "CS547 host — curator of the video trove (the forebear)" }
       - { path: ../characters/terry-winograd/correspondence.yml, why: "Verified preservation record — Will 1996 + Gosling 1995" }
+      - { path: ../repo-shows/terry-winograd/, why: "★ The forebear show — the dragon's treasure trove planted" }
+      - { path: ../repo-shows/terry-winograd/ARCHIVE.md, why: "The full CS547 catalog — 339 talks, 15 online scans, 25 by WWSFF characters" }
       - { path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "Will's 1996 'Interfacing to Microworlds' — the anchor talk" }
       - { path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md, why: "Primary text — cite Will's words" }
       - { path: ../characters/james-gosling/, why: "1995 CS547 'Bringing Behavior to the Internet' (Java) — Don on camera" }
