@@ -47,26 +47,27 @@ Programmer-art / scrapbook screenshots from development.
 
 Will's gag **warning sticker**.
 
-## BattleBots (Los Angeles)
+## Robot-combat meetup (Los Angeles)
 
-Don's photos from a **BattleBots** fight in Los Angeles — **Will Wright's** robot and competitors'
-machines. (Will competed in BattleBots, famously with his daughter Cassidy and their "Super Chiabot.")
+Don's photos from a **robot-combat meetup in Los Angeles** that Don went to with **Will Wright**
+and family. (Will had earlier involvement with combat robotics; this was a separate, informal
+event — the name isn't recalled, and it was **not** the BattleBots™ TV show.)
 
-![BattleBots LA — competitors' aluminum wedge robots (reprop.com)](battlebots-la-1.png)
+![Robot-combat meetup LA — competitors' aluminum wedge robots](robot-fight-la-1.png)
 
-![BattleBots LA — wedge robots](battlebots-la-2.png)
+![Robot-combat meetup LA — wedge robots](robot-fight-la-2.png)
 
-![BattleBots LA — a robot chassis on the pit table](battlebots-la-3-chassis.png)
+![Robot-combat meetup LA — a robot chassis on the pit table](robot-fight-la-3-chassis.png)
 
-![BattleBots LA — robot internals](battlebots-la-4-internals.png)
+![Robot-combat meetup LA — robot internals](robot-fight-la-4-internals.png)
 
-![BattleBots LA — pit crew working on a robot](battlebots-la-5-pit.png)
+![Robot-combat meetup LA — pit crew working on a robot](robot-fight-la-5-pit.png)
 
-![BattleBots LA — the arena / pit tables](battlebots-la-6-arena.png)
+![Robot-combat meetup LA — the arena / pit tables](robot-fight-la-6-arena.png)
 
-![BattleBots LA — a robot wheel and tire](battlebots-la-7-wheel.png)
+![Robot-combat meetup LA — a robot wheel and tire](robot-fight-la-7-wheel.png)
 
-![BattleBots LA — the radio control transmitter](battlebots-la-8-controller.png)
+![Robot-combat meetup LA — the radio control transmitter](robot-fight-la-8-controller.png)
 
 ## More galleries
 
