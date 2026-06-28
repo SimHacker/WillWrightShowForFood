@@ -63,6 +63,10 @@ seeds:
   walter-bender-olpc.yml:       "Solo: Walter Bender — OLPC Stone Soup + open-sourcing SimCity."
   bret-victor-explorable.yml:   "Solo: Bret Victor — explorable explanations + Micropolis legibility; patronage-vs-shipping cautionary tale (Dynamicland). Design counsel."
   yoot-saito-series.yml:        "Series: Yoot Saito — clean-room successor (YOOT BOOT / Building / Seaman)."
+  # SIMOPOLIS HUB: every bridge below is a SPOKE — "A ⇔ B" is shorthand for A ⇔ Simopolis ⇔ B.
+  # Simopolis is the git-checked-in hub of hi-fidelity, round-trippable character facets; game-to-game
+  # paths route THROUGH it ("fly through Atlanta"). Generic hub/spoke first; later, shortcut
+  # optimizations + mutual schema recognition for compatible games. Full note: INDEX.yml#bridges_architecture
   game-bridge-sims-stardew.yml: "Group: Eric Barone — Sims ⇔ Simopolis ⇔ Stardew two-way bridge."
   game-bridge-proxi-sims.yml:   "Will — Proxi ⇔ Simopolis ⇔ Sims bridge (data-portability payoff + Mind Mirror layer)."
   game-bridge-sims-shattered.yml: "Evan Debenham — Sims ⇔ Simopolis ⇔ Shattered Pixel Dungeon (GPLv3 repo; roguelike contrast; funding exemplar)."
