@@ -1,19 +1,19 @@
 # Slats — The Stupid Fun Club "One Minute Movies"
 
 *Primary-source documentation. Slats is a fictional robot character, but these films are **real**:
-short reactive-robot sketches whose robot brain and personality were programmed by Don Hopkins at
-Will Wright's **Stupid Fun Club** (Will Wright wrote the robot pieces). They were produced in **2003**
-as part of the **One Minute Movies (1MMs)** series and are posted publicly on Don Hopkins's YouTube
-channel.*
+short hidden-camera robot sketches performed **"man behind the curtain"** (Wizard of Oz) through a
+**web + pie-menu teleoperation rig** Don Hopkins built at Will Wright's **Stupid Fun Club** (Will
+Wright wrote the robot pieces). They were produced in **2003** as part of the **One Minute Movies
+(1MMs)** series and are posted publicly on Don Hopkins's YouTube channel.*
 
 ## What they are
 
-The **One Minute Movies** are sixty-second (`:60`) sketches in which a real, reactive robot improvises
-a scene with people. The comedy comes from the gap between the robot's eager, literal brain and the
+The **One Minute Movies** are sixty-second (`:60`) sketches in which a real robot plays a scene with
+unsuspecting people. The comedy comes from the gap between the robot's eager, literal patter and the
 messy human situation it's dropped into — a robot earnestly asking for help, or taking a lunch order
-and then begging to be rated a 10. The "actor" is a live personality simulation, not a script read
-aloud: Will Wright wrote the premises and characters; Don Hopkins programmed the brain that performs
-them.
+and then begging to be rated a 10. The robot isn't autonomous: Will Wright wrote the premises and
+characters, and a human **operator performs Slats live** through Don's teleoperation rig (see *How
+Slats was driven*, below).
 
 The films' title-card masters credit the series itself: **Minute Movies Productions, Inc.** — *1MMs*,
 **Series Created by Paris Barclay**, **Executive Producers Paris Barclay & John Wells**, post/VFX by
@@ -25,6 +25,23 @@ film where the robot literally introduces itself: *"hello, my name is Slats."*
 ![Slats on a Berkeley street corner with the Stupid Fun Club crew during a hidden-camera shoot](slats-street-corner.png)
 
 More photos: [`photos.md`](photos.md).
+
+## How Slats was driven (the man behind the curtain)
+
+Slats wasn't an autonomous AI — he was **partially automatic, "man behind the curtain"** (classic
+Wizard of Oz). Don built a **web-based, pie-menu-driven teleoperation interface** so an operator
+could perform the robot live, in real time:
+
+- **Canned, prefab phrases** triggered instantly from the web page and **pie menus** — the reliable
+  comic beats, on tap.
+- **The whole restaurant menu** memorized and recitable on cue — including literal **Pie Menus** of
+  edible pies you can order (yes: pie menus *of pies* — yummy 🥧).
+- **A live text field** to **improvise and type in real time**, spoken aloud by the robot, for
+  whatever the unsuspecting humans threw at him.
+
+That hybrid — fast canned reactions on radial menus *plus* real-time improv typing — is exactly the
+playground the **RoboResurrection** wants to rebuild and play with again
+([`slats-reincarnation`](../../repo-shows/will-wright/slats-reincarnation.yml)).
 
 ## The films
 
@@ -38,7 +55,7 @@ More photos: [`photos.md`](photos.md).
 **Robot content (Stupid Fun Club):**
 - **Concept / writing:** Will Wright
 - **Robots designed & built by:** Will Wright
-- **Robot brain & personality simulation:** Don Hopkins
+- **Web + pie-menu teleoperation rig (the "man behind the curtain"):** Don Hopkins
 - **Robot segments directed by:** James Moll
 - **Studio:** Stupid Fun Club
 

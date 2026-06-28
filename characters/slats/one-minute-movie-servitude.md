@@ -11,7 +11,7 @@ lightly punctuated for readability — the auto-captions carry no speaker labels
 - **Title:** Servitude (a "1MMs" — One Minute Movie, :60 spot)
 - **Premise:** Stupid Fun Club's "Servitude" One Minute Movie about **robot servitude**
 - **Robot content — written by:** Will Wright
-- **Robot brain & personality simulation:** Don Hopkins
+- **Web + pie-menu teleoperation rig (man behind the curtain):** Don Hopkins
 - **Robot studio:** Stupid Fun Club
 - **Series:** *One Minute Movies* (1MMs), Minute Movies Productions, Inc.
 - **Series created by:** Paris Barclay
