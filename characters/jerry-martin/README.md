@@ -14,9 +14,9 @@ and *Be Tonal*).
 
 ## "Chill Resolve" — perfect for Micropolis
 
-Jerry recently gave Don permission to use a piece of his music for **Micropolis**, and it's a perfect
-match: Don performed the Space-Inventory cellular automata live, with SimCity tile sets, to Jerry's
-**"Chill Resolve"** (from *Be Tonal*). Mesmerizing even without watching the CA.
+Jerry's **"Chill Resolve"** (from *Be Tonal*) is the music in Don's **Micropolis** cellular-automata
+video — Don performed the Space-Inventory CA live, with SimCity tile sets, and it's a perfect match.
+Mesmerizing even without watching the CA. Hear more — and support Jerry — at his site.
 
 ▶️ **Watch:** [SimCity Micropolis Tile Sets — Space Inventory Cellular Automata to Jerry Martin's "Chill Resolve"](https://www.youtube.com/watch?v=319i7slXcbI)
 
