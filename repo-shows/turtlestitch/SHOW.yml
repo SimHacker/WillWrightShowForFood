@@ -1,0 +1,57 @@
+# SHOW — TurtleStitch: coding + embroidery, the real thing
+# Planted seed. Inherits from the SHOW skill (/skills/repo-show).
+
+show:
+  id: turtlestitch
+  title: "A Repo Show on TurtleStitch — Coded Embroidery, and Constructionism for Real"
+  type: project + group
+  host: Don Hopkins
+  topic: "TurtleStitch — the Snap!-based platform that turns turtle-geometry code into real machine embroidery — as both a beautiful maker tool and a living example of constructionist education done right."
+  status: seed
+  consent: not_yet_asked
+
+the_project:
+  what: "TurtleStitch (turtlestitch.org) — a fork of Snap! whose turtle is the needle of a programmable embroidery machine; code on screen becomes thread on fabric. 'Low threshold, high ceiling' (Papert)."
+  creators: "Andrea Mayr-Stalder (project leader) + Michael Aschauer (lead developer); built on Snap! (Jens Mönig, Brian Harvey, UC Berkeley); community site on Bernat Romagosa's Beetle Cloud."
+  facts:
+    - "Open source (AGPL); exports Melco/EXP + Tajima/DST embroidery formats and SVG"
+    - "Derived from Logo / Scratch / Snap! lineage; turtle geometry per Papert's Mindstorms (ch. 3)"
+    - "2017 award for best Open Educational Resource in German-speaking countries"
+  links: ["https://www.turtlestitch.org/", "https://en.wikipedia.org/wiki/Turtlestitch", "https://github.com/backface/turtlestitch"]
+
+dons_connection: |
+  At Snap!Con (Barcelona) Don used TurtleStitch to program an embroidery machine with turtle
+  graphics — multi-color thread stitched into felt, a circular pattern of zigzag stitches going
+  from wide to narrow. "It FELT SEW GOOD." He's wanted to celebrate it ever since.
+
+why_it_matters: |
+  At Snap!Con, Don watched kids of every background light up making physical things from code —
+  including a young Black boy, visibly proud of the sewing-machine project he'd programmed in Snap!.
+  Boys and girls combined what tired stereotypes file under "boy programming" and "girl sewing" with
+  zero self-consciousness — no embarrassment, no gatekeeping, no thought to gender, race, or
+  orientation. We promote this NOT as a diversity slogan and NOT as a token gesture — exactly the
+  hollow, performative thing that (rightly) makes people's eyes roll — but because it is the genuine
+  article: constructionism doing precisely what Papert meant — children building things that matter
+  to them, across every line, because the work is real and fun. The concrete moment carries it; no
+  sermon required. That's why it deserves a Repo Show.
+
+candidate_guests:
+  - "Andrea Mayr-Stalder — TurtleStitch project leader (the project's creator)"
+  - "Michael Aschauer — TurtleStitch lead developer"
+  - "The Snap!Con (Barcelona) presenter whose sewing-machine + Snap! teaching project moved Don — name to credit (with her consent)"
+  - "Jens Mönig + Brian Harvey — Snap! (the foundation)"
+  - "Bernat Romagosa — Snap!/Beetle Cloud (SAP)"
+
+dream_segments:
+  - "Program a pattern live in TurtleStitch and stitch it on a real machine on stream."
+  - "The Logo → Scratch → Snap! → TurtleStitch lineage; turtle geometry as 'a mathematics made for learning'."
+  - "Constructionism for real: physical making + code, inclusive by nature — the Barcelona classroom moment."
+  - "Homefun: viewers code + stitch their own designs and PR them into the repo."
+
+ties_to:
+  - ../../process/old-band-back-together.yml   # the Snap! community band
+  - ../../characters/jens-monig/
+  - ../../characters/brian-harvey/
+  - ../../characters/cynthia-solomon/
+  - ../../characters/alan-kay/
+  - ../REPO-SHOWS.yml#snap-logo-brian-jens.yml

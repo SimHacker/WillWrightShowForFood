@@ -67,6 +67,19 @@ bands:
     characters: [../characters/henry-minsky/, ../characters/steve-kommrusch/, ../characters/isabella-struckman/, ../characters/milan-singh-minsky/]
     don_role: "Leela colleague"
 
+  snap_community:
+    what: "The Snap! community — deeply intertwingled with Scratch, Logo, and Lisp; an inclusive, cross-supporting, NON-competitive scene. Don met many at Snap!Con (Barcelona)."
+    roll_call: "Jens Mönig, Brian Harvey, Alan Kay, Cynthia Solomon, Bernat Romagosa, Jadga Hügle, and many more"
+    spotlight: |
+      TurtleStitch — the Snap!-based coded-embroidery platform (Andrea Mayr-Stalder + Michael
+      Aschauer) — and the inclusive constructionism Don saw at Snap!Con Barcelona: kids of every
+      background making physical things from code (a young Black boy proud of his sewing-machine
+      Snap! project; boys and girls mixing 'programming' and 'sewing' with zero self-consciousness).
+      The real thing, not a slogan. Promote the project AND Snap! itself.
+    shows: [../repo-shows/turtlestitch/, ../repo-shows/REPO-SHOWS.yml#snap-logo-brian-jens.yml, ../repo-shows/jens-monig/, ../repo-shows/brian-harvey/]
+    characters: [../characters/jens-monig/, ../characters/brian-harvey/, ../characters/alan-kay/, ../characters/cynthia-solomon/]
+    don_role: "Snap!Con attendee; embroidered felt live with TurtleStitch ('it FELT SEW GOOD')"
+
   also_in_this_spirit:
     - "Electric Sheep crew — Scott Draves + Joshua Goldberg + Anton Marini (Syphon); see ../characters/scott-draves/correspondence.yml"
     - "Constructionists / Logo — Cynthia Solomon, Brian Harvey, Jens Mönig + memorials; see ../repo-shows/remembering-the-constructionists.yml"
