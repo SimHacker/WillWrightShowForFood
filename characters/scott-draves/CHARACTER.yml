@@ -1,0 +1,83 @@
+# Scott Draves ("Spot") — invitation portrayal. NOT Scott Draves.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: scott-draves
+  name: "Scott Draves"
+  type: invitation
+  signifier: "🐑"
+  status: living
+  field: "Software artist; creator of Electric Sheep; inventor of the Fractal Flame algorithm; generative / evolutionary art"
+  home: characters/scott-draves/
+  aliases: ["Spot", "spot"]
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+  note: "Old friend of Don's — likely to say yes. Portrayal drawn from public work + Don's own correspondence; Scott may edit, reduce, or delete anytime."
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: ../../repo-shows/scott-draves/invitation.md   # invites live in the repo-show dir, not the character dir
+  show_seed: repo-shows/scott-draves/
+  likelihood: "high — long-time friend; collaborated with Don on the Electric Sheep Unity client (2020–2023)"
+
+bio:
+  summary: |
+    **Scott Draves** (a.k.a. **Spot**) is a software artist best known for **Electric Sheep**
+    (1999– ), a distributed, evolving screensaver in which thousands of computers worldwide
+    collaboratively render and a genetic algorithm + human votes breed abstract animations
+    called "sheep" — a "collective dream of a cyborg mind." He invented and open-sourced the
+    **Fractal Flame algorithm** (1992; flam3), whose images have appeared on a Paul Simon
+    album cover and on Stephen Hawking's *The Grand Design*, and which supplied the SIGGRAPH
+    2008 "Evolve" graphic identity. His evolving-painting work **Dreams in High Fidelity** has
+    shown at MoMA (Design and the Elastic Mind), Google, the Adler Planetarium and elsewhere.
+    With his wife Isabel Walcott Draves he founded **Leaders in Software and Art (LSA)**. He
+    later built the open-source **Beaker Notebook** (polyglot data-science notebook), and in
+    2026 relaunched the Sheep as **Infinidream** (Generation 248, 1080p/60fps, phone remote,
+    open source). He studied at **Carnegie Mellon University** (PhD, School of Computer
+    Science; worked with Andy Witkin on graphics).
+  known_for:
+    - Electric Sheep (distributed evolutionary screensaver)
+    - Fractal Flame algorithm / flam3 (open-sourced 1992)
+    - Dreams in High Fidelity (evolving painting)
+    - Leaders in Software and Art (LSA)
+    - Beaker Notebook
+    - Infinidream (2026 reboot of Electric Sheep)
+
+connections:
+  don_cmu: "Don and Scott hung out at **Carnegie Mellon** in the mid-1990s — Scott working with Andy Witkin on graphics, Don working with Brad Myers on Lisp UI (and learning X11 well enough to write the unix-haters X-Windows chapter while porting SimCity from NeWS to Tcl/Tk)."
+  brian_eno_intro: "In June 2006, after the **Long Now Foundation** talk *Playing with Time* by **Brian Eno and Will Wright**, Don introduced Brian Eno to Scott; the three met at Scott's San Francisco apartment and bounced ideas around. Brian saw Electric Sheep and the HiFiDreams HD work (an hour per frame to render)."
+  electric_sheep_unity: "Scott and Don reconnected to work on a new cross-platform **Electric Sheep / Unity** client (c.2020–2023), with Joshua Goldberg and Anton Marini (Syphon) in the mix — real-time playback, music-reactivity, WebGPU/Metal."
+  generative_kinship: "Deep shared interests: cellular automata, the Moveable Feast Machine, Sandspiel, video feedback, music-reactive visuals, distributed/evolutionary systems, and AI image generation — the through-line from Flame to Infinidream."
+
+show_suggestions:
+  - { seed: ../../repo-shows/scott-draves/, what: "A generative-art Repo Show: Flame → Electric Sheep → Dreams in High Fidelity → Infinidream — evolution, collective intelligence, open source, and where AI image-gen fits. Read old Flame papers, run the Sheep live, riff on what's next." }
+  - { seed: ../../repo-shows/will-wright/, what: "A reunion thread: Don, Scott and (ideally) Brian Eno + Will, recalling the 2006 Long Now evening and talking generative systems, simulation, and AI." }
+
+sources:
+  web:
+    - "https://electricsheep.org/"
+    - "https://scottdraves.com/"
+    - "https://draves.ai/"
+    - "https://infinidream.ai/"
+    - "https://flam3.com/"
+    - "https://github.com/scottdraves/electricsheep"
+    - "https://softwareandart.com/"
+  papers:
+    - "The Fractal Flame Algorithm — https://flam3.com/flame.pdf"
+    - "The Electric Sheep and their Dreams in High Fidelity (NPAR 2006) — http://draves.org/npar06/npar06draves.pdf"
+    - "Evolution and Collective Intelligence of the Electric Sheep (AOAE 2007) — http://draves.org/aoae07/draves-aoae07.pdf"
+  press:
+    - "Discover Magazine (Feb 2008): 'If Darwin returned as an artist with a knack for computer science, he might be Scott \"Spot\" Draves'"
+    - "Arthur I. Miller, Colliding Worlds (2014) — seven-page profile"
+  correspondence: "Don's personal email archive with Scott (2006–2026) — Brian Eno intro, BitTorrent/libtorrent at TomTom, CAM6/cellular automata, Electric Sheep Unity, Infinidream beta testing. Personal source; quote only with Scott's OK."
+
+see_also:
+  - { path: ../will-wright/, why: "Will did the 2006 Long Now talk with Brian Eno; possible reunion host + Eno contact" }
+  - { path: ../brian-eno/, why: "Dream guest — Don introduced Brian to Scott in 2006; generative-art kinship" }
+  - { path: ../don-hopkins/, why: "Host — CMU friend, Electric Sheep Unity collaborator" }
+  - { path: ../../repo-shows/scott-draves/, why: "Generative-art show seed" }

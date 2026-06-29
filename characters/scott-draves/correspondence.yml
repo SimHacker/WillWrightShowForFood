@@ -1,0 +1,60 @@
+# Scott Draves ("Spot") × Don Hopkins — correspondence summary (public-safe)
+# A tight, public-safe digest of a long real friendship + email thread. NOT the full private thread.
+# Standards: ../../schemas/portrayal-standards.yml
+
+meta:
+  with: scott-draves
+  curated_by: don-hopkins
+  consent: not_yet_asked
+  span: "1990s (CMU) → 2006 → 2026"
+  provenance: "Don's personal email archive with Scott (2006–2026). Personal source — quote only with Scott's OK."
+
+gist: |
+  Don and Scott met at Carnegie Mellon in the mid-1990s — Scott working with Andy Witkin on
+  graphics, Don with Brad Myers on Lisp UI. Over two decades the thread runs through generative
+  and evolutionary art, distributed systems, cellular automata, and AI: Don introduced Brian Eno
+  to Scott in 2006, traded BitTorrent/libtorrent notes while at TomTom, swapped cellular-automata
+  and Sandspiel rabbit holes, and recently reconnected to help build the Electric Sheep / Unity
+  client. In 2026 Scott relaunched the Sheep as Infinidream and Don beta-tested it.
+
+threads:
+  cmu_origins:
+    when: "mid-1990s"
+    what: "Hung out at Carnegie Mellon — Scott with Andy Witkin (graphics), Don with Brad Myers (Lisp UI), Don porting SimCity NeWS→Tcl/Tk and writing the unix-haters X-Windows chapter."
+  brian_eno_2006:
+    when: "June 2006, San Francisco"
+    what: "After Brian Eno + Will Wright's Long Now talk 'Playing with Time', Don introduced Brian Eno to Scott; the three met at Scott's apartment and bounced ideas around. Brian saw Electric Sheep and the hour-per-frame Dreams in High Fidelity. Scott photographed the evening (Brian with Electric Sheep 'on his head')."
+  bittorrent_tomtom:
+    when: "2007"
+    what: "Don, newly at TomTom, asked Scott about libtorrent (used by the Electric Sheep client) for distributing big maps; integrated it into xulrunner as an XPCOM plug-in with HTTP fallback; demoed to TomTom founder Pieter Geelen."
+  cellular_automata:
+    when: "2013–2023"
+    what: "Long-running exchange on cellular automata (Don's CAM6 simulator, Norman Margolus/Toffoli), the Moveable Feast Machine (Dave Ackley), Sandspiel / Sandspiel Studio, video feedback, and music-reactive visuals."
+  electric_sheep_unity:
+    when: "c.2020–2023"
+    what: "Reconnected to build a cross-platform Electric Sheep / Unity client (seamless video playback, music sync, WebGPU/Metal). With Joshua Goldberg and Anton Marini (Syphon)."
+  infinidream:
+    when: "2026"
+    what: "Scott relaunched Electric Sheep as Infinidream (Generation 248, 1080p/60fps, phone remote, generative-AI platform, open source). Don beta-tested, filed UI/auth bug reports, and shared his self-aware image pipeline work."
+
+public_anchors:
+  - "Electric Sheep — distributed evolutionary screensaver: https://electricsheep.org/"
+  - "Fractal Flame algorithm (open-sourced 1992): https://flam3.com/ ; paper https://flam3.com/flame.pdf"
+  - "Dreams in High Fidelity at MoMA / Google / Adler Planetarium"
+  - "Flame imagery on a Paul Simon album cover and Hawking's The Grand Design; SIGGRAPH 2008 'Evolve' identity"
+  - "Leaders in Software and Art (with Isabel Walcott Draves): https://softwareandart.com/"
+  - "Beaker Notebook (open-source polyglot notebook)"
+  - "Infinidream (2026): https://infinidream.ai/ ; https://draves.ai/"
+
+connects_in_repo:
+  - { path: CHARACTER.yml, why: "Bio + invitation status" }
+  - { path: ../brian-eno/, why: "Don introduced Brian to Scott in 2006 — dream co-guest" }
+  - { path: ../will-wright/, why: "Long Now co-speaker with Brian; possible reunion host + Eno contact" }
+  - { path: ../don-hopkins/, why: "Host — CMU friend, Electric Sheep Unity collaborator" }
+  - { path: ../../repo-shows/scott-draves/, why: "Generative-art show seed" }
+
+show_hooks:
+  - "Flame → Electric Sheep → Dreams in High Fidelity → Infinidream: the evolution of generative art"
+  - "Collective intelligence: voting + genetics + distributed rendering — the cyborg mind"
+  - "Iterated graphical systems + feedback: CAM6, Sandspiel, video feedback, self-aware image pipelines"
+  - "Reunion: the 2006 Long Now evening with Brian Eno and Will Wright"

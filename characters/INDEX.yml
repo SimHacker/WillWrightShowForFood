@@ -56,6 +56,7 @@ guests:
   ben-shneiderman: { invitation_status: not_yet_asked, show_seed: repo-shows/ben-shneiderman/ }
   bret-victor: { invitation_status: not_yet_asked }
   brian-harvey: { invitation_status: not_yet_asked, show_seed: repo-shows/brian-harvey/ }
+  brian-eno: { invitation_status: dream_guest, show_seed: repo-shows/brian-eno/, note: "DREAM GUEST: musician/producer/visual artist; ambient + generative music/art (Music for Airports, Bloom, 77 Million Paintings); coined 'The Long Now'; 2006 Long Now 'Playing with Time' with Will Wright; Don introduced him to Scott Draves in 2006. Contact via Will + Scott." }
   brad-myers: { invitation_status: not_yet_asked }
   bill-atkinson: { invitation_status: memorial, note: "deceased (1951–2025) — MEMORIAL MODE: HyperCard/MacPaint/QuickDraw; HyperCard → HyperLook lineage; discussants: Arthur van Hoff, Don" }
   chaim-gingold: { invitation_status: not_yet_asked, show_seed: repo-shows/chaim-gingold/ }
@@ -106,6 +107,7 @@ guests:
   peter-norvig: { invitation_status: draft, show_seed: repo-shows/peter-norvig/, note: "Director of Research @ Google; AIMA (w/ Stuart Russell) + PAIP; 'Teach Yourself Programming in Ten Years'; Don's friend, writing an AI book + offered a chapter on Don's work; open-topic show (MOOLLM/skills/AI) with Henry + Leela colleagues" }
   richard-bartle: { invitation_status: not_yet_asked, show_seed: repo-shows/richard-bartle/ }
   seymour-papert: { invitation_status: memorial, note: "MEMORIAL MODE (1928–2016): worked with Piaget; MIT AI Lab co-founder; Logo + the turtle; coined constructionism; Mindstorms (1980) → Scratch/OLPC/LEGO Mindstorms. Discussants: Walter Bender, Brian Harvey, Ken Kahn, Jens Mönig, Alan Kay, Don" }
+  scott-draves: { invitation_status: draft, show_seed: repo-shows/scott-draves/, note: "Software artist 'Spot' — Electric Sheep (distributed evolutionary screensaver), Fractal Flame (open-sourced 1992), Dreams in High Fidelity, Infinidream (2026); CMU (Andy Witkin); Don's old friend + Electric Sheep Unity collaborator. Don introduced him to Brian Eno in 2006. Generative-art show + Eno/Will reunion variant." }
   scott-kim: { invitation_status: draft, show_seed: repo-shows/scott-kim/, note: "Ambigrams/inversions, puzzle design, playful math; friend of Will — pair them" }
   scott-mccloud: { invitation_status: draft, show_seed: repo-shows/scott-mccloud/, note: "Cartoonist/comics theorist — Understanding Comics (closure, masking, amplification through simplification); design bible for The Sims; patron-saint guest + Sims reunion" }
   steve-wozniak: { invitation_status: not_yet_asked, show_seed: repo-shows/steve-wozniak/ }

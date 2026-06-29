@@ -181,7 +181,9 @@ see_also:
 - path: CHARACTER.yml
   why: Bio girder — invitation status
 - path: invitation.md
-  why: Public invitation document
+  why: Public invitation document (short)
+- path: ../../repo-shows/will-wright/
+  why: Long invitation drafts (sent skyscraper + opus + gpt55)
 - path: CARD.md
   why: Human-readable trading card
 - path: ../../repo-shows/will-wright/BROWSE.md

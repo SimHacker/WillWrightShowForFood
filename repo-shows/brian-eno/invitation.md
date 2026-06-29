@@ -1,0 +1,67 @@
+---
+status: dream_guest
+character_id: brian-eno
+public: true
+consent: not_yet_asked
+show_seed: repo-shows/brian-eno/
+contact_path: "via Will Wright + Scott Draves"
+---
+
+# Repo Show invitation — Brian Eno *(dream guest)*
+
+*Public draft — a dream invitation, not yet sent, no presumption. Brian may shape, decline, delay,
+or request removal at any time.* [Portrayal standards](../../schemas/portrayal-standards.yml)
+
+Dear Brian,
+
+We met once, twenty years ago — in 2006, after your Long Now talk *Playing with Time* with Will
+Wright, I brought you over to my friend **Scott Draves**' apartment in San Francisco, and the three
+of us spent an evening bouncing ideas around with **Electric Sheep** glowing on every surface. It's
+stuck with me ever since.
+
+I run a thing now called a **Repo Show** — a live, friendly conversation whose stage is a public
+repository people can browse and build on. Instead of letting AI flatten and regurgitate people's
+work, I sit down with the people who actually made it, we talk in public, and the tools turn ideas
+into something real while we go. **Show, don't tell.**
+
+I'd be honored if you'd join one — and there's no set topic; you'd be the topic. The thread I keep
+coming back to is **generative systems across media**. Your ambient and generative music — *Music
+for Airports*, *Thursday Afternoon*, *Bloom*, *77 Million Paintings* — is the same deep idea as
+Scott's vote-and-genetics **Electric Sheep** and Will's **possibility-space** simulations: grow
+something vast and surprising from a few simple rules, then let it run. Now that AI image and music
+generation has finally caught up to where the three of you were each pointing, a reunion
+conversation almost writes itself: **rules, time, surrender — and what AI actually changes.**
+
+A few things I'd genuinely love to build or riff on, live (no homework — just if they spark
+something):
+
+- **Oblique Strategies as prompts.** Treat your deck as a *prompt protocol* for a generative
+  pipeline — draw "Honor thy error as a hidden intention" and watch it bend an image or a phrase
+  in real time. The card is the rule; the system fills in the rest.
+- **Scenius, made literal.** Your idea that genius belongs to a *scene* is exactly the engine of
+  Scott's Electric Sheep — thousands of people and machines breeding beauty by vote. Worth running
+  side by side.
+- **The 77 Million Paintings move, as a tiny build** — layered, slowly shifting elements whose
+  blend never repeats; a toy anyone watching can fork.
+- **A gestural, musical pie menu** (my old obsession): eight directions as eight timbres, the
+  *curve and speed of the gesture between them* shaping the sound. Constraints making freedom.
+- **Taking Tiger Mountain, by transformation** — Doug Hilsinger & Caroleen Beatty re-recorded the
+  whole album in 2004; honoring a work by transforming it, not copying it, is the exact move a
+  Repo Show makes with old code. (I actually crossed paths with that cover in SF — long story.)
+- **The Long Now lens** on all of it: what's worth *seeding* now for a 10,000-year audience?
+
+(More in the show seed's [`ideas.md`](../../characters/brian-eno/ideas.md) — all offered as my
+topics to explore *with* you, grounded in your own work.)
+
+If a four-way is fun, I'd love **you, Scott, and Will** together; if not, any shape you like. It's
+all open to discussion — what's recorded, what's public, all your call. Zero homework; I do the
+setup.
+
+I'm sending this gently through **Will** and **Scott**, who know you far better than I do. No
+pressure, no presumption — accepted, delayed, declined, or no reply, all honored gracefully.
+
+With great respect,
+
+— Don Hopkins *(the User Interface Flower Child)* 🌀
+
+*P.S. — The Long Now could use a Repo to Show.*

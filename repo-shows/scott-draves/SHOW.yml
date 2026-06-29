@@ -1,0 +1,40 @@
+# SHOW — Scott Draves ("Spot") — generative & evolutionary art
+# Planted seed. Inherits from the SHOW skill (/skills/repo-show).
+
+show:
+  id: scott-draves
+  title: "A Repo Show with Scott Draves — Do Androids Dream of Electric Sheep?"
+  type: solo                     # with a dream Brian-Eno + Will-Wright reunion variant
+  host: Don Hopkins
+  guests: ["Scott Draves"]
+  dream_guests: ["Brian Eno", "Will Wright"]
+  character: characters/scott-draves/
+  topic: "Generative and evolutionary art, end to end: the Fractal Flame algorithm → Electric Sheep (distributed render farm bred by a genetic algorithm + human votes) → Dreams in High Fidelity → Infinidream. Open source, collective intelligence, and where AI image generation fits."
+  status: seed
+  consent: not_yet_asked
+  likelihood: "high — old friend; recent Electric Sheep / Unity collaboration with Don"
+
+why_him:
+  electric_sheep: "Electric Sheep (1999– ): thousands of computers worldwide collaboratively render; humans vote; a genetic algorithm breeds the favorites. 'The collective dream of a cyborg mind.'"
+  flame: "Invented + open-sourced the Fractal Flame algorithm (1992; flam3). On a Paul Simon cover and Hawking's The Grand Design; SIGGRAPH 2008 'Evolve' identity."
+  hifi_dreams: "Dreams in High Fidelity — an evolving painting; MoMA, Google, Adler Planetarium."
+  infinidream: "2026 reboot: Generation 248, 1080p/60fps, phone remote, generative-AI platform, open source."
+
+dream_segments:
+  - "Read the original Flame papers together; run flam3 / Electric Sheep live and watch the flock evolve."
+  - "Collective intelligence: voting, genetics, distributed rendering — the cyborg mind, then and now."
+  - "From hand-authored math to AI image generation: what Infinidream changes, and what it keeps."
+  - "Iterated graphical systems + feedback: cellular automata (CAM6), Sandspiel, video feedback, music-reactive visuals."
+  - "Reunion variant: the 2006 Long Now evening — Don, Scott, Brian Eno (and Will) on generative systems."
+
+format:
+  live: true
+  run_code: true
+  audience_qa: true
+
+ties_to:
+  - ../../characters/scott-draves/
+  - ../../characters/scott-draves/correspondence.yml
+  - ../../characters/brian-eno/
+  - ../../characters/will-wright/
+  - ../../characters/don-hopkins/

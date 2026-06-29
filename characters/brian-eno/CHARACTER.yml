@@ -1,0 +1,66 @@
+# Brian Eno — DREAM-GUEST invitation portrayal. NOT Brian Eno.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: brian-eno
+  name: "Brian Eno"
+  type: invitation
+  signifier: "🎛️"
+  status: living
+  field: "Musician, composer, producer, visual artist — pioneer of ambient and generative music/art"
+  home: characters/brian-eno/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 1                  # dream guest, public-figure sketch — no relationship beyond a 2006 meeting
+  authored_by: don-hopkins
+  note: "DREAM GUEST. Public-figure portrayal only. Brian may shape, delay, decline, or delete anytime."
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: dream_guest
+  consent: not_yet_asked
+  document: ../../repo-shows/brian-eno/invitation.md   # invite lives in the show dir
+  show_seed: repo-shows/brian-eno/
+  contact_path: "Reach via Will Wright (Long Now co-speaker) and Scott Draves (hosted Brian in 2006). Don has no current direct line."
+
+bio:
+  born: 1948
+  summary: |
+    **Brian Eno** is a musician, composer, record producer, and visual artist who pioneered
+    **ambient music** (*Ambient 1: Music for Airports*, 1978) and has long championed
+    **generative music and art** — systems that grow, never repeating, from simple rules (the
+    "Bloom" app with Peter Chilvers; the *77 Million Paintings* generative visual work). As a
+    producer he shaped landmark records by Roxy Music, David Bowie (the Berlin trilogy),
+    Talking Heads, Devo, and U2. With Peter Schmidt he created the *Oblique Strategies* deck.
+    He coined the phrase **"The Long Now"** and is a founding board member of the **Long Now
+    Foundation**, where in 2006 he and **Will Wright** gave the talk *Playing with Time*.
+  known_for:
+    - Ambient music (Music for Airports)
+    - Generative music & art (Bloom, 77 Million Paintings)
+    - Producing Bowie, Talking Heads, U2, Roxy Music, Devo
+    - Oblique Strategies (with Peter Schmidt)
+    - The Long Now Foundation ("The Long Now")
+    - Taking Tiger Mountain (By Strategy) (1974)
+
+connections:
+  long_now_2006: "Gave the Long Now talk *Playing with Time* with **Will Wright** (2006) — the through-line between generative music and generative simulation."
+  the_2006_evening: "In June 2006, after that talk, Don introduced Brian to **Scott Draves**; the three met at Scott's San Francisco apartment and bounced ideas around. Brian saw Electric Sheep and the hour-per-frame Dreams in High Fidelity."
+  generative_kinship: "The natural fourth voice in a generative-systems conversation: Eno (music/art), Draves (evolutionary visual art), Wright (simulation/possibility space), Hopkins (interactive systems)."
+
+show_suggestions:
+  - { seed: ../../repo-shows/brian-eno/, what: "A dream conversation on generative systems — ambient/generative music meeting generative visual art and simulation; rules, time, surrender, and what AI changes. Reachable via Will + Scott." }
+  - { seed: ../../repo-shows/scott-draves/, what: "Reunion variant of the 2006 evening: Don + Scott + Brian (+ Will)." }
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Brian_Eno"
+  web:
+    - "https://longnow.org/"          # founding board member; 'The Long Now'
+    - "https://www.youtube.com/watch?v=Dfc-DQorohc"  # Long Now: Playing with Time — Brian Eno & Will Wright (2006)
+  note: "Public figure — portrayal draws on widely documented work and the 2006 Long Now talk. No impersonation."
+
+see_also:
+  - { path: ideas.md, why: "Conversation hooks for the show — grounded in Brian's real public work" }
+  - { path: ../will-wright/, why: "Long Now co-speaker; best contact path" }
+  - { path: ../scott-draves/, why: "Hosted Brian in 2006; generative-art kinship; co-contact" }
+  - { path: ../don-hopkins/, why: "Host — made the 2006 introduction" }

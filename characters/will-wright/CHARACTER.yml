@@ -24,6 +24,7 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
+  long_drafts_in: repo-shows/will-wright/   # invitation.md (sent), invitation-opus-draft.md, invitation-gpt55-draft.md
   browse_landing: repo-shows/will-wright/BROWSE.md
   show_seed: repo-shows/will-wright/
   segments: [slats-reincarnation]
@@ -135,7 +136,8 @@ see_also:
   - { path: README.md, why: "Human portrait — start here" }
   - { path: GLANCE.md, why: "One-screen sniff" }
   - { path: CARD.yml, why: "Invokable abilities — show segments" }
-  - { path: invitation.md, why: "Public invitation" }
+  - { path: invitation.md, why: "Public invitation (short elevator pitch)" }
+  - { path: ../../repo-shows/will-wright/, why: "Long invitation drafts live here (sent skyscraper + opus + gpt55)" }
   - { path: ../../process/entryways/guest-will.md, why: "Suggested playlist" }
   - { path: ../../repo-shows/will-wright/BROWSE.md, why: "Pick-any-order landing" }
   - { path: ../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "1996 centerpiece" }

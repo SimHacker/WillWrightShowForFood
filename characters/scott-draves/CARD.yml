@@ -1,0 +1,93 @@
+# CARD — Scott Draves (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: scott-draves
+  name: Scott Draves
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Scott Draves
+  title: The Shepherd of Electric Dreams
+  rarity: rare
+  signifier: 🐑
+  flavor: Thousands of computers, one dream — vote, breed, repeat.
+abilities:
+- id: ELECTRIC-SHEEP
+  name: Electric Sheep
+  type: activated
+  mana: '{U}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: electricSheep
+    signature: electricSheep(flock) → a collective dream bred by votes + genetics
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Turn idle machines into one render farm; let the crowd vote and a genetic algorithm breed the favorites.
+  verifiable: Electric Sheep (1999– ), distributed evolutionary screensaver
+  combos_with:
+  - WILL-POSSIBILITY-SPACE
+- id: FRACTAL-FLAME
+  name: Fractal Flame
+  type: activated
+  mana: '{R}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: fractalFlame
+    signature: fractalFlame(genome) → an image grown from a string of numbers
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Grow images from a genetic code; open-source it so it spreads everywhere.
+  verifiable: Invented + open-sourced the Fractal Flame algorithm (1992; flam3); Paul Simon + Hawking covers; SIGGRAPH 2008 identity
+  combos_with: []
+- id: EVOLVING-PAINTING
+  name: Evolving Painting
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: evolvingPainting
+    signature: evolvingPainting(wall) → art that never repeats
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Hang a painting that keeps evolving, never the same frame twice.
+  verifiable: Dreams in High Fidelity (MoMA, Google, Adler Planetarium)
+  combos_with: []
+- id: COLLECTIVE-INTELLIGENCE
+  name: Collective Intelligence
+  type: activated
+  mana: '{U}{W}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: collectiveIntelligence
+    signature: collectiveIntelligence(crowd, machines) → emergent taste
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Fuse human preference and machine computation into one cyborg mind.
+  verifiable: 'Evolution and Collective Intelligence of the Electric Sheep (AOAE 2007)'
+  combos_with:
+  - DON-CELLULAR-AUTOMATA
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: correspondence.yml
+  why: Friendship timeline from the archive
+- path: ../../repo-shows/scott-draves/invitation.md
+  why: Public invitation document (in the show dir)

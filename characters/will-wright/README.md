@@ -13,6 +13,7 @@ and we do not speak as him without consent.
 | If you want… | Go |
 |--------------|-----|
 | **The invitation** (short) | [`invitation.md`](invitation.md) |
+| **Long drafts** (email follow-ups) | [`repo-shows/will-wright/`](../../repo-shows/will-wright/) — [sent](../../repo-shows/will-wright/invitation.md) · [opus](../../repo-shows/will-wright/invitation-opus-draft.md) · [gpt55](../../repo-shows/will-wright/invitation-gpt55-draft.md) |
 | **Browse any order** | [`repo-shows/will-wright/BROWSE.md`](../../repo-shows/will-wright/BROWSE.md) |
 | **Suggested sequence** | [`guest-will playlist`](../../process/entryways/guest-will.md) |
 | **Trading card / abilities** | [`CARD.md`](CARD.md) · [`CARD.yml`](CARD.yml) |
