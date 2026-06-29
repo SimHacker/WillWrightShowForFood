@@ -50,10 +50,15 @@ voice:
       Pick the word that rhymes across contexts. The pun is not decoration — it's the
       argument, compressed. When a term lights up technical + game + philosophical senses
       simultaneously, that's the target, not an accident.
+    alliteration: |
+      Highly scored — ESPECIALLY when semantically meaningful (alliteration that earns its
+      sound by also being true). Cheap alliteration is noise; alliteration that doubles as
+      argument is the goal. (cf. Brad Myers's gloriously over-C'd C32 acronym — sound AND sense.)
     examples:
       - { word: "plays", resonates: "the high-value scoring K-line: SimCity/CAM6 'plays' (ideas reimplemented across platforms) ↔ Drescher's gambit/play vocabulary ↔ 'no ego in code, just ideas replayed' ↔ HOMEPLAY (The Sims: home + play) ↔ constructionist education / play-learn-lift (Papert) ↔ theatrical performance. One word, the whole thesis." }
       - { word: "fnord", resonates: "Scott's geometry language ↔ the Discordian word you're conditioned not to see ↔ 'that's how fnords work' (you forgot it existed)." }
       - { word: "manifnords", resonates: "Don's coinage — a fnord smuggled inside 'manifolds.' Geometry (Banchoff's 4D manifolds, Scott's fnord language) ↔ the unseeable Discordian fnord. Self-demonstrating: the slip IS the point — you don't see the fnord until you do." }
+      - { word: "illiteration", resonates: "Don's slip for 'alliteration' — illiteracy + alliteration; a self-demonstrating intentional-slip (saying it 'wrong' is the joke about saying it well)." }
       - { phrase: "Do Androids Dream of Electric Repos?", resonates: "PKD ↔ Electric Sheep ↔ the Repo Show's living-repo conceit." }
       - { word: "⚡🐑", resonates: "literally renders 'Electric Sheep' as an emoji K-line." }
       - { phrase: "Linear menus caused the meltdown. But the round menus put the fires out.", resonates: "deadpan reframe — UI design as civic consequence (the Don Norman SimCity exchange)." }
@@ -61,7 +66,7 @@ voice:
       - { word: "Copyleft", resonates: "the term Don's amoeba-sticker inspired RMS to adopt — naming as activism." }
       - { phrase: "techno-hippie diaspora / before it enshittified", resonates: "cultural-historical compression of a whole era in a breath." }
     self_epithet: "the User Interface Flower Child 🌀"
-    devices: [deadpan_reductio, name-the-pattern-plainly, receipts-with-links, emoji-as-K-line, earnest-then-punchline, intentional-slip (the "typo" truer than the word — e.g. manifnords), portmanteau-K-line]
+    devices: [deadpan_reductio, name-the-pattern-plainly, receipts-with-links, emoji-as-K-line, earnest-then-punchline, intentional-slip (the "typo" truer than the word — e.g. manifnords, illiteration), portmanteau-K-line, semantically-meaningful-alliteration]
 
   writing_as_don:
     do:

@@ -25,9 +25,35 @@ invitation:
 bio:
   summary: "**Brad A. Myers** — CMU HCI professor; Garnet, Peridot, C32; *All the Widgets*; VPL taxonomy; programming by demonstration. Don worked in his lab (~1992–93). Warm email contact (2023); show proposed, consent pending."
 
+show_topics:
+  # Beyond Garnet/PBD/widgets — a fun, human segment Don wants on the show.
+  acronym_delight:
+    what: "Brad's lifelong delight in great (if gloriously strained) acronyms — famously **gem/jewelry/mineral-themed** across the Garnet family. He even keeps a public scoreboard of them."
+    source: "https://www.cs.cmu.edu/~bam/acronyms.html"
+    gem_themed_family:
+      - "GARNET — Generating an Amalgam of Real-time, Novel Editors and Toolkits"
+      - "LAPIDARY — Lisp-based Assistant for Prototyping Interface Designs Allowing Remarkable Yield (lapidary = gem-cutting!)"
+      - "JADE — Judgment-based Automatic Dialog Editor"
+      - "MARQUISE — Mostly Automated, Remarkably Quick User Interface Software Environment (a marquise is a gem cut)"
+      - "GILT — Graphical Interface Layout Tool"
+      - "GEM — Graphics and Events Manager"
+      - "AMULET — the C++ successor to Garnet"
+  c32_the_monster:
+    what: "**C32** — the Garnet constraint spreadsheet whose acronym is an absurd cascade of **32 C-words** ('CMU's Clever and Compelling Contribution to Computer Science in CommonLisp … that Cancel Confusion'). Reads like a crystal/chemical formula — *'is that some kind of diamond crystal?'*"
+    trivia_to_ask_brad:
+      - "How many C's did it have ORIGINALLY (before it became C32)?"
+      - "When you fixed the reviewers' suggestions and that earned you 'license' to add MORE C's — which C-words did you add?"
+      - "So the peer-review process literally GREW the acronym? Best review outcome ever."
+  don_contribution:
+    glass: "Don's own (pedestrian, appropriately contrived) entry from his time in the lab (~1992–93): **GLASS — Graphical Layer and Server Simplifier**, the X11-graphics → PostScript UI-graphics exporter layer."
+  acronym_jam:
+    what: "Playful interactive segment: jokingly quiz Brad on his other acronyms, then **play at inventing new ones live** — for PBD, UI, Widgets, and whatever the audience throws in. Strained-but-semantically-true is the high score (Don's rubric: alliteration only counts if it's also *true*)."
+
 sources:
   wikipedia: null
   web:
     - http://www.cs.cmu.edu/~bam/
+    - "https://www.cs.cmu.edu/~bam/acronyms.html   # Brad's own acronym scoreboard"
+    - "https://www.cs.cmu.edu/~garnet/   # Garnet project"
   papers: []
   blogs: []
