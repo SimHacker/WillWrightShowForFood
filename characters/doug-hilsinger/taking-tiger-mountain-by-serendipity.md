@@ -113,7 +113,8 @@ regularly in the SF Bay Area — and **Scott**, with whom he still collaborates.
 ## Don's wish
 
 Don and Doug met just that once, in 2006, and haven't been in touch since; Don has **reached out and
-not yet heard back** (as of 2026). The hope is simple: **sing Doug's praises**, play the work, tell
+not yet heard back** (as of 2026). The **stretch goal** is simple: **track Doug down**, sing his
+praises, play the work, tell
 this story on the show, and — if Doug's up for it — have him join **Don, Scott (Spot), Brian, and
 Will** for a reunion about honoring music by transforming it. Doug, if you ever read this: thank
 you. The door is wide open. 🐅
