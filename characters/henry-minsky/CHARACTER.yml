@@ -31,8 +31,12 @@ family:
   in_laws: ["Oliver Steele — Marvin's son-in-law (Laszlo Systems chief architect; Henry's brother-in-law)"]
 
 leela_colleagues:
-  note: "Don's colleagues at Leela AI."
+  note: "Don's CURRENT colleagues at Leela AI (showcase present work — not a reunion)."
   with: ["Milan Singh Minsky (VP Product; Henry's wife)", "isabella-struckman (vision-model eval/training)", "Steve Kommrusch", "don-hopkins"]
+
+connector:
+  role: "A superhero-nexus connector. Henry grew up in and around the MIT AI Lab (Marvin's son) and knows an extraordinary number of brilliant people from that world — a natural bridge both to great Repo Show guests and to opportunities. He's on it."
+  see: ../../process/vision-and-ambition.yml   # connectors_and_legacy#brokering (henry_minsky_as_hub)
 
 show_suggestions:
   - { seed: ../../repo-shows/henry-minsky/, what: "Solo — Society of Mind ideas in modern AI (Leela AI), declarative UI (OpenLaszlo), and authoring agent skills as constructionism / PBD" }
@@ -50,4 +54,5 @@ see_also:
   - { path: CARD.yml, why: "Invokable abilities for show segments" }
   - { path: ../marvin-minsky/, why: "🕯️ His father — Society of Mind, MIT AI Lab (memorial)" }
   - { path: ../margaret-minsky/, why: "His sister — haptics / MIT Media Lab" }
+  - { path: ../../process/vision-and-ambition.yml, why: "Connector hub (connectors_and_legacy#brokering) — MIT-AI-Lab nexus" }
   - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }
