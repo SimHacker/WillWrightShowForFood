@@ -40,14 +40,19 @@ The card becomes an executable rule. (This one is genuinely easy to ship and dem
 
 ## 3. The Collaborative Web — multiple spiders, one silk 🎭
 
-*Speculative casting (imagined, not booked):* a trio where each performer holds their own web/
+*Speculative casting (imagined, not booked):* an ensemble where each performer holds their own web/
 quadrant and **their gestures perturb the others'**:
 
 - an **ambient/generative** voice (the Eno register),
 - an **explosive/transformative** voice (a Nina-Hagen-ish register — rage→joy→screech),
-- a **narrative/technological** voice (a Laurie-Anderson-ish register — spoken word, vocoder, tech↔human).
+- a **narrative/technological** voice (a Laurie-Anderson-ish register — spoken word, vocoder, tech↔human),
+- a **rapping/explaining/brainstorming** voice (a Will-Wright-ish register — rapid-fire patter,
+  storytelling, free-associating connections, "and what if…" idea-cascades; the *narrator-engine*
+  that turns the web's emergent sounds into a live-spun story and keeps proposing the next move).
 
 The fun mechanic: **propagated influence** — when one spider plucks the web, the others feel it.
+The Will-register is special: it can **call out** what's emerging (naming patterns, riffing
+possibilities) so the audience hears the *system thinking out loud* — brainstorm as instrument.
 Pseudocode sketch to prototype against:
 
 ```
