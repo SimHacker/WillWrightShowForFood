@@ -7,7 +7,7 @@ character:
   type: invitation
   signifier: "🎚️"
   status: living
-  field: "Livecoding the web — Caffeine (SqueakJS + WebAssembly), Context Smalltalk, Catalyst; Black Page Digital, Amsterdam/Berkeley"
+  field: "Livecoding the web — Caffeine (SqueakJS + WebAssembly), Context Smalltalk, Catalyst; Keep whiteroom port to Smalltalk (agentic graph memory); Black Page Digital, Amsterdam/Berkeley"
   home: characters/craig-latta/
 
 representation:
@@ -30,8 +30,14 @@ sources:
     - https://caffeine.js.org/
     - https://thiscontext.com/
     - https://github.com/ccrraaiigg
+    - https://github.com/generalbusiness-ai/keep
   papers: []
   blogs: []
+  craig_notes:
+    - topic: keep_smalltalk_port
+      quote: "I had Opus 4.8 do a whiteroom port of Keep to Smalltalk, and it's been a lovely graph database for agentic memory. Much better than a pile of Markdown files…"
+      doc: keep.md
 
 see_also:
+  - { path: keep.md, why: "Keep — reflective agent memory; Craig's Smalltalk whiteroom port" }
   - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses — self or assisted contribution" }

@@ -26,6 +26,10 @@ Live, persistent changes to a running page; the bi-directional JS bridge; Cataly
 LLM-assisted method translation. Bring your laptop — let's livecode something on air.
 - How this meets the **MicropolisCore** WASM + SvelteKit stack — Smalltalk-grade liveness applied
 to a city simulator and to MOOLLM's AI tutors.
+- **Keep** — Hugh Pyle's [reflective memory for agents](https://github.com/generalbusiness-ai/keep).
+You had Opus 4.8 whiteroom-port it to **Smalltalk** as a graph database for agentic memory.
+I'd love to hear what's *lovely* about that vs a pile of Markdown — and whether live memory
+belongs in the same conversation as livecoding the page. See [`keep.md`](keep.md).
 
 **And Vanessa.**
 
@@ -39,7 +43,7 @@ people we've lost — we never speak as them — and invite the people who knew 
 real stories. A live Smalltalk-in-the-browser session is exactly the right way to celebrate what
 she built, honor her thinking, and keep it running.
 
-**Materials:** `[repo-shows/craig-latta/](https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/craig-latta)` · live-object lineage:
+**Materials:** `[repo-shows/craig-latta/](https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/craig-latta)` · [Keep notes](keep.md) · live-object lineage:
 [live_objects trail](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/trails/live-objects.md) (you, Dan Ingalls, Vanessa)
 
 Browse without a GitHub account — start at the [README](https://github.com/SimHacker/WillWrightShowForFood).

@@ -8,12 +8,13 @@ show:
   host: Don Hopkins
   guests: ["Craig Latta"]
   character: characters/craig-latta/
-  topic: "Caffeine (SqueakJS + dynamically generated WebAssembly) livecoding the web; meeting the MicropolisCore WASM/SvelteKit stack; remembering Vanessa Freudenberg and her WebAssembly insights"
+  topic: "Caffeine (SqueakJS + dynamically generated WebAssembly) livecoding the web; Keep as agentic graph memory (Craig's Smalltalk whiteroom port); meeting the MicropolisCore WASM/SvelteKit stack; remembering Vanessa Freudenberg and her WebAssembly insights"
   status: seed
   format: in_person_amsterdam_on_camera
 
 why_him:
   caffeine: "Caffeine — live, persistent changes to a running web page via SqueakJS + WASM; the JS bridge; Catalyst's LLM-assisted Smalltalk→WASM translation."
+  keep_smalltalk: "Craig had Opus 4.8 whiteroom-port Keep (generalbusiness-ai/keep) to Smalltalk — a graph database for agentic memory he prefers to a pile of Markdown files."
   amsterdam_now: "Craig divides time between Amsterdam and Berkeley — an in-person, on-camera session while both are in town (heat-wave timing)."
   live_object_lineage: "Sits on the live_objects trail with Dan Ingalls and Vanessa Freudenberg."
 
@@ -25,7 +26,8 @@ remember_vanessa:
 threads:
   livecode_on_air: "Bring a laptop — make live persistent changes to a running page on stream"
   wasm_translation: "How (and when) to translate a VM and individual methods to WASM"
-  micropolis_meet: "Smalltalk-grade liveness applied to MicropolisCore + MOOLLM AI tutors"
+  keep_graph_memory: "Keep — reflective agent memory as a graph (semantic search, edges, commitments); Craig's Smalltalk whiteroom port vs upstream Python/MCP; live memory meets live UI"
+  micropolis_meet: "Smalltalk-grade liveness applied to MicropolisCore + MOOLLM AI tutors — including tutor memory backed by Keep or Smalltalk graph"
 
 format:
   live: true
@@ -34,8 +36,10 @@ format:
 
 ties_to:
   - ../../characters/craig-latta/invitation.md
+  - ../../characters/craig-latta/keep.md
   - ../../characters/vanessa-freudenberg/
   - ../../characters/dan-ingalls/
   - ../../process/trails/live-objects.md
+  - https://github.com/generalbusiness-ai/keep
 
 consent: not_yet_asked

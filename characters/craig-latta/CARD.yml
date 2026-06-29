@@ -52,6 +52,22 @@ abilities:
   verifiable: Catalyst; "Dynamic translation of Smalltalk to WebAssembly"
   combos_with:
   - VANESSA-WASM-INSIGHT
+- id: KEEP-GRAPH-MEMORY
+  name: Keep in Smalltalk
+  type: activated
+  mana: '{U}{B}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: keepGraphMemory
+    signature: keepGraphMemory(agent) → reflective graph memory, not markdown piles
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Whiteroom-port Keep to Smalltalk — semantic search, edges, commitments as live objects.
+  verifiable: generalbusiness-ai/keep; Craig's Smalltalk port (see keep.md)
+  combos_with:
+  - CAFFEINE-LIVECODE
 - id: LIVE-IMPROV
   name: Live Improv
   type: activated
@@ -71,6 +87,8 @@ invoke_rules:
   consent: not_yet_asked
   simulation: false
 see_also:
+- path: keep.md
+  why: Keep — agentic graph memory; Smalltalk whiteroom port
 - path: CHARACTER.yml
   why: Bio girder — invitation status
 - path: invitation.md
