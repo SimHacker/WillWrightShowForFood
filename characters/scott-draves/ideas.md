@@ -19,10 +19,11 @@ Sheep as **Infinidream**. Perfect timing for a generative-art show with running 
 ### 1. The whole arc, end to end
 
 **fnord** (Brown, 1990 — the functional geometry language he co-wrote with Nick Thompson) →
-**Fractal Flame** (the math, open-sourced 1992) → **Electric Sheep** (distributed, vote-bred) →
-**Dreams in High Fidelity** (an evolving painting) → **Infinidream** (2026, AI-native). Read the
-old Flame papers, run the Sheep live, and trace how the idea mutated across 35 years. The constant:
-**describe generative form as data, then render and evolve it.**
+**Fractal Flame** (1991; the form Don first saw it in was a **screen saver** — the `flame` hack in
+xlock and Jamie Zawinski's **xscreensaver**; open-sourced 1992) → **Electric Sheep** (distributed,
+vote-bred) → **Dreams in High Fidelity** (an evolving painting) → **Infinidream** (2026, AI-native).
+Read the old Flame papers, run the Sheep live, and trace how the idea mutated across 35 years. The
+constant: **describe generative form as data, then render and evolve it.**
 
 ### 2. Collective intelligence, made literal
 
@@ -51,9 +52,13 @@ aren't — what's gained, what's lost, what's the hybrid?
 
 ### 6. The screensaver as a planet-scale render farm
 
-Electric Sheep turned idle machines into distributed compute decades before "cloud GPU" was a
-phrase. Revisit the idea now: crowd compute, fair attribution, and the **derived-DB / proof**
-angle from the brain-stream work (who contributed which cycles).
+It started humble: Scott's flame was a **screen hack** — first in **xlock**, then ported into
+**Jamie Zawinski's xscreensaver** (the man page still credits *"Scott Graves [sic]
+&lt;spot@cs.cmu.edu&gt;, 06-Jun-91"* and *"xscreensaver port by jwz, 18-Oct-93"*). That same
+"pretty idle-screen toy" idea grew up into **Electric Sheep** (1999) — idle machines turned into
+distributed compute decades before "cloud GPU" was a phrase. Revisit it now: crowd compute, fair
+attribution, and the **derived-DB / proof** angle from the brain-stream work (who contributed which
+cycles). *(Don knew **jwz** from that era too — see the 6Heads note.)*
 
 ### 7. Music-reactive / VJ performance
 
@@ -117,10 +122,17 @@ brought Spot by) and **Steve Zellers** (Sun, then Dave Winer's *More*/**Frontier
 door to Joy Mountford** (Apple Human Interface Group; Don later knew her at Interval). Don, Nick, and
 Steve were fresh out of college in their first Silicon Valley jobs; **Scott was the visiting
 friend** — about to head to **CMU for his PhD** (so he's the grad-school-bound one, not a
-first-jobber). All of it in the 1990 Silicon Valley zeitgeist — *before it enshittified and scattered
-the techno-hippies to Amsterdam and beyond.* **Ask Spot to tell HIS post-graduation story** — what he
-did, where he landed, how we converged in that scene (was it the summer of 1990, between Brown and
-CMU?). We'll fill each other in on all the stuff we never asked about back then.
+first-jobber). When they met, Spot's **Flame** already ran as a screen saver (the `flame` hack that
+went into xlock and then jwz's xscreensaver) — very likely how Don first laid eyes on it. All of it
+in the 1990 Silicon Valley zeitgeist — *before it enshittified and scattered the techno-hippies to
+Amsterdam and beyond.* **Ask Spot to tell HIS post-graduation story** — what he did, where he landed,
+how we converged in that scene (was it the summer of 1990, between Brown and CMU?). We'll fill each
+other in on all the stuff we never asked about back then.
+
+*Same scene, same wire:* Don also knew **Jamie Zawinski ("jwz")** from that era — the CMU/Lucid
+**Lisp** world, the **UNIX-HATERS** mailing list and book (Don wrote the *X-Windows Disaster*
+chapter; jwz was a contributor), and **xscreensaver** itself, which carried Scott's flame to the
+world. (He'd make a great guest someday — xscreensaver, Mozilla, the DNA Lounge.)
 
 ## Sources (real, public)
 
