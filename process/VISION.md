@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/vision-and-ambition.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:a005c0ed8527d0cf -->
+<!-- content-sha256:ba361153a05a6c46 -->
 
 # Vision and ambition
 
@@ -285,6 +285,10 @@ and to "take to the stars long after we're all gone."
 the SF Bay Area), and Will is the bridge to many mutual friends and heroes — the most likely
 path to the busy, hard-to-reach Brian Eno, among others.
   - cross_pollinate: Weave and share friendship networks; reconnect people; and memorialize those we've lost with others who knew them.
+- **reunions_are_a_format:** 'Get the old band back together' recurs across every era Don worked in — the NeWS gang
+(Gosling, Densmore, Rosenthal), the Sims team (Will, Jim, Jamie, Eric, Irk, Chris), the David
+Levitt crew (Bounce, Body Electric, Interval, MediaFlow, ConnectedMedia/Connected TV,
+Pantomime), OpenLaszlo, and the 2006 Eno circle. See ../process/old-band-back-together.yml.
 - **warm_ties_examples:**
   - Yoot Saito — warm, ongoing friendship; Don is highly motivated to help preserve his legacy. Don OCR'd, proofread, formatted, linked, researched, and published Yoot's interview with Douglas Engelbart. See ../characters/yoot-saito/, ../repo-shows/remembering-douglas-engelbart.yml
   - Scott McCloud — Understanding Comics as a Sims design bible; spoke at GDC (incl. a talk with Will). See ../characters/scott-mccloud/

@@ -67,6 +67,10 @@ live_and_training:
   orchestration-gold.yml:
     markup: ORCHESTRATION-GOLD.md
 
+themes:
+  old-band-back-together.yml:
+    topic: "Reunions as a recurring show FORMAT — NeWS gang, Sims team, David Levitt crew, OpenLaszlo, the 2006 Eno circle, …"
+
 vision:
   vision-and-ambition.yml:
     markup: VISION.md

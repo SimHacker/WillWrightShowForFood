@@ -1,0 +1,67 @@
+# Get the Old Band Back Together — a recurring Repo Show theme
+# A reunion is a first-class show FORMAT: gather a crew who once built something great,
+# revive the work in public, and let the conversation + artifacts continue.
+
+meta:
+  id: old-band-back-together
+  status: theme
+  one_liner: "Reunions are a recurring format here — gather the people who made something, revive it live, carry it forward."
+  disclaimer: |
+    Relationships are described from Don's perspective. No claim that any named person has agreed to
+    participate; busy people are hard to reach, and every reply (or none) is honored gracefully.
+  facilitation: "Many of these connections trace back to events like the Long Now Foundation's 2006 'Playing with Time' talk — see vision-and-ambition.yml#long_now_and_later."
+
+why_it_works: |
+  Don has, over decades, been part of many tight crews that did fun, important work together. A
+  Repo Show is the perfect excuse to reconvene one: revive the old code/ideas in public, tell the
+  stories with the people who were there, and leave behind a living repo others can join. The same
+  shape recurs across every era — so 'get the band back together' is a format, not a one-off.
+
+bands:
+  news_gang:
+    what: "NeWS / PostScript window system — 'send a program, not a data structure'."
+    roll_call: "James Gosling, Owen Densmore, David Rosenthal (+ Arthur van Hoff, Duncan Mak)"
+    show: ../repo-shows/REPO-SHOWS.yml#news-postscript-window-system.yml
+    characters: [../characters/james-gosling/, ../characters/david-rosenthal/, ../characters/arthur-van-hoff/]
+    don_role: "participant-historian (pie menus, HyperTIES, the X-Windows Disaster)"
+
+  sims_team:
+    what: "Building The Sims at Maxis — behavior/AI (SimAntics), tools, content."
+    roll_call: "Will, Jim, Jamie, Eric, Irk, Chris"   # Don's own roll-call
+    documented_crew: "Will Wright, Jim Mackraz, Jamie Doornbos, Eric Bowman, Patrick Barrett, Chris Trottier, Claire Curtin"
+    show: ../repo-shows/REPO-SHOWS.yml#building-the-sims.yml
+    also: ../repo-shows/REPO-SHOWS.yml#design-by-accretion.yml   # Chris Trottier
+    characters: [../characters/will-wright/, ../characters/jim-mackraz/, ../characters/jamie-doornbos/, ../characters/eric-bowman/, ../characters/patrick-barrett/, ../characters/chris-trottier/, ../characters/claire-curtin/]
+    don_role: "Sims programmer + teammate"
+
+  david_levitt_crew:
+    what: "Decades of fun work with David Levitt — music, AI, and interactive media ventures."
+    roll_call: "Don + David Levitt (great close friends)"
+    shared_ventures: ["Bounce", "Body Electric", "Interval", "MediaFlow", "ConnectedMedia / Connected TV", "Pantomime"]
+    show: ../repo-shows/REPO-SHOWS.yml#music-and-theory.yml   # David Levitt + Jerry Martin
+    characters: [../characters/david-levitt/, ../characters/jerry-martin/]
+    don_role: "longtime collaborator + close friend"
+
+  openlaszlo_team:
+    what: "OpenLaszlo / LZX reunion — AI-revived so the toolchain compiles again."
+    roll_call: "David Temkin, Oliver Steele"
+    show: ../repo-shows/openlaszlo/
+    characters: [../characters/david-temkin/, ../characters/oliver-steele/]
+
+  eno_2006_circle:
+    what: "The 2006 Long Now circle — generative systems across media."
+    roll_call: "Don, Scott Draves (Spot), Brian Eno, Will Wright (+ stretch goal: Doug Hilsinger)"
+    shows: [../repo-shows/scott-draves/, ../repo-shows/brian-eno/]
+    characters: [../characters/scott-draves/, ../characters/brian-eno/, ../characters/will-wright/, ../characters/doug-hilsinger/]
+    facilitated_by: "Long Now Foundation (Playing with Time, 2006)"
+
+  also_in_this_spirit:
+    - "Electric Sheep crew — Scott Draves + Joshua Goldberg + Anton Marini (Syphon); see ../characters/scott-draves/correspondence.yml"
+    - "Constructionists / Logo — Cynthia Solomon, Brian Harvey, Jens Mönig + memorials; see ../repo-shows/remembering-the-constructionists.yml"
+    - "Leela AI colleagues — Henry Minsky, Isabella Struckman, Milan Singh Minsky, Steve Kommrusch; see ../characters/INDEX.yml"
+    - "Engelbart memorial — reconvene those who knew him; see ../repo-shows/remembering-douglas-engelbart.yml"
+
+see_also:
+  - vision-and-ambition.yml          # connectors_and_legacy + long_now_and_later
+  - ../repo-shows/INDEX.yml          # group + reunion shows
+  - showmaker-network.yml            # the growing graph of linked shows

@@ -30,7 +30,8 @@ connections:
   vlsi_class: "Took Lynn Conway's landmark VLSI design course, alongside James Clark and Guy L. Steele, among others."
   cynthia_trove: "A young, wild-haired David appears demoing his AI music-improvisation system in Cynthia Solomon's YouTube archive."
   jerry_martin: "Paired with Jerry Martin for the music + theory Repo Show."
-  don: "A longtime good friend of Don Hopkins."
+  don: "A longtime good friend of Don Hopkins — they've done LOTS of fun stuff together and are great close friends."
+  shared_ventures_with_don: "Per Don, the two worked together across a string of music/interactive-media ventures: Bounce, Body Electric, Interval, MediaFlow, ConnectedMedia / Connected TV, and Pantomime — a prime 'get the old band back together' reunion candidate (see ../../process/old-band-back-together.yml)."
 
 show_suggestions:
   - { seed: ../../repo-shows/REPO-SHOWS.yml#music-and-theory.yml, what: "Music + theory — with Jerry Martin. AI music generation, jazz improvisation, and the ideas underneath." }
@@ -48,4 +49,5 @@ see_also:
   - { path: ../marvin-minsky/, why: "🕯️ PhD advisor; AI music thesis" }
   - { path: ../../repo-shows/remembering-the-constructionists.yml, why: "Discussant — fond memories of Marvin" }
   - { path: ../cynthia-solomon/, why: "Her video trove has young David demoing his music system; shared Atari Cambridge milieu" }
-  - { path: ../don-hopkins/, why: "Longtime friend; host" }
+  - { path: ../don-hopkins/, why: "Longtime close friend; host; many shared ventures (Bounce, Body Electric, Interval, MediaFlow, ConnectedMedia/Connected TV, Pantomime)" }
+  - { path: ../../process/old-band-back-together.yml, why: "Reunion theme — the David Levitt crew is one of the bands" }
