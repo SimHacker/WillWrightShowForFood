@@ -27,8 +27,18 @@ bio:
   summary: "**Isabella Struckman** — AI/ML researcher. At **Leela AI** she works on **computer-vision model evaluation and training** (she built a fine-tuning technique for an object-detection pipeline that cut the resources needed to hold performance after camera movements by ~25%). MEng at **MIT CSAIL in the Mądry Lab**, researching **ML explainability** and **AI policy**; co-author of the **\"AI Supply Chains\"** work and lead author of **\"Why They're Worried\"** (a study of experts who signed the 2023 'pause letter'). MIT AI & Decision Making grad; has taught intro-AI to high-schoolers and facilitated MIT's Women's Technology Program."
 
 leela_colleagues:
-  note: "Don's colleagues at Leela AI — relevant for a Leela / vision-AI episode."
+  note: "Don's colleagues at Leela AI — relevant for a Leela / vision-AI episode and reunion."
   with: ["henry-minsky (co-founder/CTO)", "Milan Singh Minsky (VP Product)", "Steve Kommrusch", "don-hopkins"]
+  reunion: ../../process/old-band-back-together.yml   # the Leela AI team is one of the 'bands'
+
+boost:
+  why: |
+    Don especially wants to **lift Isabella up and give her real exposure**. She's awesome and
+    amazing — early in her career, and (like Don) suddenly out of work. Showcasing the brilliant
+    things she did at **Leela AI** (computer-vision model evaluation & training, ML explainability,
+    the AI-supply-chains research) on a Repo Show will help her far more than any LinkedIn
+    recommendation.
+  intent: "Genuine, generous amplification — not extractive. Her call on what's shared; edit or remove anytime."
 
 show_suggestions:
   - { seed: ../../repo-shows/isabella-struckman/, what: "Solo — vision-model evaluation & training at Leela AI, ML explainability, AI policy / AI supply chains, AI skills, and whatever she's passionate about" }
@@ -46,4 +56,6 @@ sources:
 see_also:
   - { path: CARD.yml, why: "Invokable abilities for show segments" }
   - { path: ../henry-minsky/, why: "Leela AI co-founder/CTO — colleague" }
+  - { path: ../steve-kommrusch/, why: "Leela AI colleague — reunion bandmate" }
+  - { path: ../../process/old-band-back-together.yml, why: "Reunion theme — the Leela AI team is one of the bands" }
   - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

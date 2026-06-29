@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/vision-and-ambition.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:ba361153a05a6c46 -->
+<!-- content-sha256:94c371738bc49ce1 -->
 
 # Vision and ambition
 
@@ -288,7 +288,8 @@ path to the busy, hard-to-reach Brian Eno, among others.
 - **reunions_are_a_format:** 'Get the old band back together' recurs across every era Don worked in — the NeWS gang
 (Gosling, Densmore, Rosenthal), the Sims team (Will, Jim, Jamie, Eric, Irk, Chris), the David
 Levitt crew (Bounce, Body Electric, Interval, MediaFlow, ConnectedMedia/Connected TV,
-Pantomime), OpenLaszlo, and the 2006 Eno circle. See ../process/old-band-back-together.yml.
+Pantomime), OpenLaszlo, the 2006 Eno circle, and the Leela AI team (Henry Minsky, Steve
+Kommrusch, Isabella Struckman, Milan Singh Minsky). See ../process/old-band-back-together.yml.
 - **warm_ties_examples:**
   - Yoot Saito — warm, ongoing friendship; Don is highly motivated to help preserve his legacy. Don OCR'd, proofread, formatted, linked, researched, and published Yoot's interview with Douglas Engelbart. See ../characters/yoot-saito/, ../repo-shows/remembering-douglas-engelbart.yml
   - Scott McCloud — Understanding Comics as a Sims design bible; spoke at GDC (incl. a talk with Will). See ../characters/scott-mccloud/

@@ -55,10 +55,21 @@ bands:
     characters: [../characters/scott-draves/, ../characters/brian-eno/, ../characters/will-wright/, ../characters/doug-hilsinger/]
     facilitated_by: "Long Now Foundation (Playing with Time, 2006)"
 
+  leela_ai_team:
+    what: "Leela AI — computer vision + cognition; the crew Don worked with most recently (and was laid off alongside)."
+    roll_call: "Henry Minsky, Steve Kommrusch, Isabella Struckman, Milan Singh Minsky, Don"
+    spotlight: |
+      Isabella Struckman especially — awesome, amazing, early in her career, and suddenly out of
+      work like Don. A Repo Show that showcases her real Leela work (vision-model eval/training, ML
+      explainability, AI-supply-chains research) lifts her far better than any LinkedIn rec. Genuine,
+      generous amplification — see ../characters/isabella-struckman/ (boost).
+    shows: [../repo-shows/isabella-struckman/]
+    characters: [../characters/henry-minsky/, ../characters/steve-kommrusch/, ../characters/isabella-struckman/, ../characters/milan-singh-minsky/]
+    don_role: "Leela colleague"
+
   also_in_this_spirit:
     - "Electric Sheep crew — Scott Draves + Joshua Goldberg + Anton Marini (Syphon); see ../characters/scott-draves/correspondence.yml"
     - "Constructionists / Logo — Cynthia Solomon, Brian Harvey, Jens Mönig + memorials; see ../repo-shows/remembering-the-constructionists.yml"
-    - "Leela AI colleagues — Henry Minsky, Isabella Struckman, Milan Singh Minsky, Steve Kommrusch; see ../characters/INDEX.yml"
     - "Engelbart memorial — reconvene those who knew him; see ../repo-shows/remembering-douglas-engelbart.yml"
 
 see_also:
