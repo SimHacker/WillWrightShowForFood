@@ -1,4 +1,4 @@
-# Make Personalized Halloween Tombstones for The Sims
+# The Soul of The Sims, by Will Wright
 
 Drupal blog post (node/79), cleaned for the Will Wright Repo Show.
 

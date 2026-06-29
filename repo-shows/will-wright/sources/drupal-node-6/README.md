@@ -1,4 +1,4 @@
-# The Bunny Wuffles School of Sims Transmogrification
+# From Barbie to Mortal Kombat: Further Reflections, By Henry Jenkins
 
 Drupal blog post (node/6), cleaned for the Will Wright Repo Show.
 

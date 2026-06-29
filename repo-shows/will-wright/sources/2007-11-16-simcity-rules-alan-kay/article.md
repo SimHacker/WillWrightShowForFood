@@ -1,100 +1,63 @@
-# Designing User Interfaces to Simulation Games
+# SimCity Rules
 
-*Submitted by Don Hopkins · Mon, 2004-01-12 12:07*
-*Tags: SimAntics Game Design*
+*Submitted by Don Hopkins · Fri, 2007-11-16 05:40*
+*Tags: OLPC · Python · SimCity*
 *Source: <http://www.donhopkins.com/drupal/node/9>*
-*Extracted from Don Hopkins archival prompts (2026-06-29). Cleaned for republishing in [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood).*
+*Email thread with Alan Kay (OLPC / Sugar era).*
 
 ---
 
-Designing User Interfaces to Simulation Games.
-A summary of Will Wright's talk to Terry Winnograd's User Interface Class at Stanford, in 1996.
-Written by Don Hopkins.
+**From: Alan Kay**  
+Subject: Just curious …
 
-Will Wright, the designer of SimCity, SimEarth, SimAnt, and other popular games from Maxis, gave a talk at Terry Winnograd's user interface class at Stanford, in 1996 (before the release of The Sims in 2000). At the end of the talk, he demonstrated an early version of The Sims, called Dollhouse at the time. I attended the talk and took notes, on which this article elaborates. I was fascinated by Dollhouse, and subsequently went to work with Will Wright at Maxis for three years. We finally released it as The Sims in 2000, after several name changes: TDS (Tactical Domestic Simulator), Project-X (everybody has one of those), Jefferson (after the president, not the sitcom), happy fun house (or some other forgetable Japanese placism).
+Has anyone tried to articulate the SimCity rules (e.g. in English sentences)?
 
-At the talk, he reflected on the design of simulators and user interfaces in SimCity, SimEarth, and SimAnt. He demonstrated several of his games, including his current project, Dollhouse.
+**From: Don Hopkins**
 
-Here are some important points Will Wright made, at this and other talks. I've elaborated on some of his ideas with my own comments, based on my experiences playing lots of SimCity, talking with Will, studying the source code and porting it to Unix, reworking the user interface, and adding multi player support.
-
-The anatomy of a simulation game:
-
-There are several tightly coupled parts of a simulation game that must be designed closely together: the simulation model, the game play, the user interface, and the user's model.
-
-In order for a game to be realizable, all of those different parts must be tractable. There are games that might have a great user interface, be fun to play, easy to understand, but involve processes that are currently impossible to simulate on a computer. There are also games that are possible to simulate, fun to play, easy to understand, but that don't afford a useable interface: Will has designed a great game called "Sim Thunder Storm", but he hasn't been able to think of a user interface that would make any sense.
-
-On the user model:
-
-The digital models running on a computer are only compilers for the mental models users construct in their heads. The actual end product of SimCity is not the shallow model of the city running in the computer. More importantly, it's the deeper model of the real world, and the intuitive understanding of complex dynamic systems, that people learn from playing it, in the context of everything else about a city that they already know. In that sense, SimCity, SimEarth, and SimAnt are quite educational, since they implant useful models in their users minds.
-
-On the simulation model:
-
-Many geeks have spent their time trying to reverse engineer the simulator by performing experiments to determine how it works, just for fun. This would be a great exercise for a programming class. When I first started playing SimCity, I constructed elaborate fantasies about how it was implemented, which turned out to be quite inaccurate. But the exercise of coming up with elaborate fantasies about how to simulate a city was very educational, because it's a hard problem!
-
-The actual simulation is much less idealisticly general purpose that I would have thought, epitomizing the Nike "just do it" slogan. In SimCity classic, the representation of the city is low level and distilled down compactly enough that a small home computer can push it around. The city is represented by tiles, indexed by numbers that are literally scattered throughout the code, which is hardly general purpose or modular, but runs fast. It sacrifices expandability and modularity for speed and size, just the right trade-off for the wonderful game that it is.
-
-Some educators have asked Maxis to make SimCity expose more about the actual simulation itself, instead of hiding its inner workings from the user. They want to see how it works and what it depends on, so it is less of a game, and more educational. But what's really going on inside is not as realistic as they would want to believe: because of its nature as a game, and the constraint that it must run on low end home computers, it tries to fool people into thinking it's doing more than it really is, by taking advantage of the knowledge and expectations people already have about how a city is supposed to work. Implication is more efficient than simulation.
-
-People naturally attribute cause and effect relationships to events in SimCity that Will as the programmer knows are not actually related. Perhaps it is more educational for SimCity players to integrate what they already know to fill in the gaps, than letting them in on the secret of how simple and discrete it really is. As an educational game, SimCity stimulates students to learn more about the real world, without revealing the internals of its artificial simulation. The implementation details of SimCity are quite interesting for a programmer or game designer to study, but not your average high school social studies class.
-
-Educators who want to expose the internals of SimCity to students may not realize how brittle and shallow it really is. I don't mean that as criticism of Will, SimCity, or the educators who are seeking open, realistic, general purpose simulators for use in teaching. SimCity does what it was designed to and much more, but it's not that. Their goals are noble, but the software's not there yet. Once kids master SimCity, they could learn Logo, or some high level visual programming language like KidSim, and write their own simulations and games!
-
-Other people wanted to use SimCity for the less noble goal of teaching people what to think, instead of just teaching them to think.
-
-Everyone notices the obvious built-in political bias, whatever that is. But everyone sees it from a different perspective, so nobody agrees what its real political agenda actually is. I don't think it's all that important, since SimCity's political agenda pales in comparison to the political agenda in the eye of the beholder.
+I'm interested in writing some English documentation about how it works. But it would make sense to write a high level overview, more like a tour than a reference manual, and describe the behaviors and interactions of the different kinds of tiles and agents and layers and global computations. There is certainly a lot of ad-hockery involved!
 
 Some muckety-muck architecture magazine was interviewing Will Wright about SimCity, and they asked him a question something like "which ontological urban paridigm most influenced your design of the simulator, the Exo-Hamiltonian Pattern Language Movement, or the Intra-Urban Deconstructionist Sub-Culture Hypothesis?" He replied, "I just kind of optimized for game play."
 
-Then there was the oil company who wanted "Sim Refinery", so you could use it to lay out oil tanker ports and petrolium storage and piping systems, because they thought that it would give their employees useful experience in toxic waste disaster management, in the same way SimCity gives kids useful experience in being the mayor of a city. They didn't realize that the real lessons of SimCity are much more subtle than teaching people how to be good mayors. But the oil company hoped they could use it to teach any other lessons on their agenda just by plugging in a new set of graphics, a few rules, and a bunch of disasters.
+There are also a lot of smarts in the SimCity editing tools, which maintain the integrity of the tile patterns on the map. Like the way roads and railroads combine into intersections when they cross, turn into bridges over water, and tiles are combined into bigger 3x3, 4x4 and 5x5 zones, and stuff like that. Those behaviors are similar to cellular automata rules, but less structured and regular. Kind of like what you could do in KidSim.
 
-And there was the X-Terminal vendor who wanted to adapt the simulator in SimCity into a game called "Sim MIS", that they would distribute for free to Managers of Information Systems, whose job it is to decide what hardware to buy! The idea was that the poor overworked MIS would have fun playing this game in which they could build networks with PCs, X-Terminals, and servers (instead of roads with residential, commercial, and industrial buildings), that had disasters like "viruses" infecting the network of PC's, and "upgrades" forcing you to reinstall Windows on every PC, and business charts that would graphically highlight the high maintanence cost of PCs versus X-Terminals. Their idea was to use a fun game to subtly influence people into buying their product, by making them lose if they didn't. Unlike the oil company, they certainly realized the potential to exploit the indirect ways in which a game like SimCity can influence the user's mind, but they had no grip on the concept of subtlety or game design.
+KidSim / Cocoa / StageCraft Creator let kids define visual cellular automata rules by example, based on tile patterns and rules. Show it a pattern that you want to match by selecting an instance of that pattern in the world, then abstract it with wildcards if necessary, then demonstrate the result you want it to change the cell to in the next generation.
 
-On the game play:
+One of the plug-in interfaces that SimCity should support is plug-in editing tools.
 
-Usually the game is separate from the simulation. Games can be based on conflicts and goals, that are external to the simulation itself. The simulation goes on doing its thing, and the user can play different games with their own sets of goals. The simulation does not consider fires spreading between buildings to be an error condition or a source of conflict -- that's just the way the simulator's supposed to behave. But the user might, unless the game they're playing is pyromaniacal.
+Another interface is plug-in agents like the monster, tornado, helicopter, etc.
 
-The design of the game play has a lot to do with the user's model of the system, and SimCity elegently supports a number of different user models, games, and toys in one program. You can use the terraforming tools and natural features to play with it like a sandbox or landscaping toy, without even starting the city simulation phase of the game. You can even use it as a painting tool, drawing colorful designs and cartoons with land, water, roads and buildings. SimCity comes with several scenarios with different conflicts and goals, and has a menu of disasters you can invoke to destroy your city, or challenge yourself to recover. You can start your own city from scratch, and develop it in any direction you want. A satisfying feature of SimCity 2000 is the ability to put signs in your city, to name roads and buildings and parts of town. How else could you personalize a simulated city?
+And for user interface and ease of use purposes, I'd like to combine the notion of an agent and an editing tool, instead of using a traditional "cursor" metaphore.
 
-There was some interesting discussion about using SimCity as a medium for story telling: encouraging people to imagine far beyond the bounds of what the computer is able to simulate. You can build cities to empathise with, and tell stories about them, about their people, culture, buildings, and history. A class of students could label different parts of a city, and each person could tell a story about a different part, that interacted with the stories going on in neighboring parts of the city. Then they could make a web site with the downloadable city, and an image map of the whole city, linking to all the stories on web pages, with screen snapshots of their neighborhoods, and lots of hypertext links between each story. This way each student could colaborate with several others to write a web of interconnected stories, all about the same city!
+The agent could be controlled by the touchpad or the gamepad, and it would have a cursor-like footprint showing the area of the map it would effect.
 
-On the user interface:
+That would make it much easier for small kids to use simple tools, and make it possible to use SimCity in book mode with the gamepad.
 
-Will demonstrated the close up and overall views in SimEarth, and showed how SimCity 2000 integrated these with zooming in one window. He talked about information density and screen size.
+The multi player mode would enable a bunch of kids to pick up different tools and perform complementary functions together.
 
-Post Morta:
+Once you have a rich library of interesting tools, there could even be a meta-game like Magic the Gathering or Pokeman cards that let kids trade and use tools and special effects (disasters, miracles, magic spells, special buildings, bribes, cheats, etc).
 
-After designing SimCity Classic, then SimEarth, then SimAnt, then SimCity 2000, here's one way Will compares them: With SimCity Classic as the standard against which to measure, SimEarth was too complex, SimAnt was too simple, and SimCity 2000 was just right.
+You could navigate the tool around the map in various ways appropriate to the tool's function.
 
-SimEarth:
+So you could drive a bulldozer around, or drive a road building machine around, or drive a residential zone stamp-pad that had a programmed gap between houses for lower density housing, or was smart about finding a place to plop down the house, based on a set of constraints and search algorithms.
 
-SimEarth and SimAnt did not support the same level of creativity and personal imprinting that SimCity does. With SimEarth, anything you do is quickly wiped out by continental drift, erosion, and evolution; you can walk away from it for a while, come back later, and it will have evolved life or shriveled up and died without you, looking pretty much the same as if you had slaved over it for hours. It was too complex a simulation for people to grasp or effect in a satisfying way.
+Then you could take a generic house plopping tool, and go inside of it like a Robot Odyssey robot, and rewire its behavior to make it smarter about finding a location to plop the house (or dumber), or moving around until it found a good place.
 
-The time scale slows down as the game progresses, from geological time, to when life appears, to when intelligence appears, to when technology is developed. There was some trouble conveying this to the users. One thing that supported the notion of time scale is how the view controls along the bottom of the global map were ordered in a temporal progression, in the order you'd need to use them, from the continental drift display, to the technology display.
+It could call on other tools like the bulldozer tool to smash stuff underneath if it wanted to (this behavior is already built into the zoning tool to a limited extent, called "auto bulldoze mode", which automatically bulldozes "soft" tiles like grass and dirt whenever you try to build something.
 
-SimAnt:
+It could even measure properties of the map like the pollution, traffic, population density, etc, and base its navigation and decisions on any function of any parameter imaginable.
 
-SimAnt had just the opposite problem -- it was too simple, but that made it popular with younger kids. Like SimEarth, it didn't support creative personal imprinting as well as SimCity, since one ant farm looks pretty much like any other, and ants are quite disposable and devoid of personality... The educational point of SimAnt is to teach about the emergent behavior of multi-cellular organisms like ant colonies. I think SimAnt would make a fascinating large scale multi player game.
+An interesting exercise would be to program a bulldozer to stop a fire from spreading, by bulldozing around the edge of the fire to create a fire block.
 
-SimCity Classic:
+As we open up SimCity, we can put in user defined layers for the tools to use as storage and control, and let the user edit the numeric values in those layers, or specify rules to define their value. Like a mask layer that computes if a zone is on fire, or adjacent to a zone that's on fire, for the bulldozer to follow.
 
-I haven't typed this in yet. It's been endlessly rehashed elsewhere and deserves a whole article in itself.
+Of course that would be for advanced kids, but it would be great for making games like KidSim could do, but with the full power of Python underneath and easily accessible!
 
-SimCity 2000:
+— Don
 
-I haven't typed this in yet, either. When I wrote this in 1996, I skipped over SimCity because wanted to get on to writing the following while it was fresh in my mind:
+**PS:** Here's a summary of one of Will Wright's talk to Terry Winnograd's user interface class. It covers a lot of interesting stuff, but unfortunately I *still* haven't typed in the stuff about SimCity yet. :( The funny part is the description of "Dollhouse", which I wrote less than a year before going to Maxis and working on it!
 
-Dollhouse:
+## Related
 
-Imagine zooming into SimCity 2000, all the way down to the street level, and seeing little people walking around, waving at each other, asking for spare change, jumping up and down, gesturing, interacting with each other, living and playing in rooms with furniture and active objects, and you're one of them!
-
-Will showed me Dollhouse several years ago, and it was amazing then, and even more so now. It's not a product yet, but he's been working on solving some very hard problems. He's trying to give the people who walk around the world seemingly rational behavior.
-
-Dollhouse takes the third person view (looking down on your character), instead of the first person view (looking out of the eyes of your characters). You view your character from above, with a 45 degree orthographic view like SimCity 2000 uses to display buildings. Will has found that it works quite well, since you can see yourself as others see you, as well as seeing other people around you. If there are a bunch of people gathering around some interesting person or place, it's easy to tell what's going on, and navigation is simple and direct. It doesn't suffer from the disorienting navigational problems that a first-person view like Doom imposes. Being able to see yourself as others see you seems to make interpersonal interactions involving body gestures much easier.
-
-PostScript:
-
-%!
-
-Since I originally wrote this in 1996, Maxis released Dollhouse as The Sims in 2000, and it quickly became much more popular than anyone expected. But in the context in which this was written in 1996, Dollhouse was so drastically different than the first-person-shooters that dominated the market, that it wasn't obvious it would ever be successful. It questioned and reformulated many of the widely-held assumptions about virtual reality games: the audience (both sexes and all ages), the person and perspective (overhead god view instead of first person), direct navigation control (routing and action queue instead of forward/back/turn), mapping of players to characters (player switches between many characters instead of one-to-one), the overall approach to AI (object centric, extensible plug-ins, interacting with autonomous agents), programming tools (SimAntics visual programming language, instead of text script), and the style and motivation of game play (creative sandbox and social dynamics).
-
-showpage
+- [Winograd UI talk (Drupal, 2004)](../2004-01-12-winograd-ui-simulation-games-drupal/article.md)
+- [Winograd UI talk (Medium, illustrated)](../1996-04-26-winograd-interfacing-to-microworlds/medium-article.md)
+- [Micropolis / OLPC Micropolis fork](../../../characters/don-hopkins/)

@@ -1,10 +1,13 @@
 # The Sims 1 Crowd Sitter
 
-*By Don Hopkins · 5 min read · Apr 23, 2018*
+*By Don Hopkins · 5 min read · 2018-04-23*
 *Source: <https://donhopkins.medium.com/the-sims-1-crowd-sitter-1f478b645148>*
-*Text extracted from archival capture; figures marked for local image wiring.*
+*Illustrated — 10 images in [`images/INDEX.md`](images/INDEX.md).*
 
 ---
+
+
+![Figure](images/001-0-6jth5sstyqzxnmzi-jpg.jpeg)
 
 It turns out you can get a whole lot of The Sims 1 characters on the screen at once! But then you need some crowd control and coordination.
 
@@ -24,33 +27,18 @@ In the following scene, I’m cheating by using the faith based initiative “pl
 
 But what happens when we deprive all these people of the placebo field? Let’s find out! Now I’ll turn off the placebo field and make them stand around for a long time.
 
+![Figure](images/002-0-qvdrysktrcihy8s-jpg.jpeg)
 
 Now it’s night, and everyone has fallen asleep on the floor or standing in their own blue urine.
 
+![Figure](images/003-0-ieba6blghiexkox-jpg.jpeg)
 
 Now that so many people are unhappy, Satan arrives!
 
+![Figure](images/004-0-ue9cmaqnuypgec9a-jpg.jpeg)
 
 There’s a bumper crop of lost souls to harvest!
 
+![Figure](images/005-0-d0mfyjfmlk0x9goj-jpg.jpeg)
 
 I’ve been playing around with crowd control, and I increased the range of the people magnets and added more routing slot options (sitting, standing, sitting or standing)! This is much more fun now! Kinda like magnets and iron filings! The fan of my laptop turns on and whines since it takes so long to draw each frame and the cpu starts sweating, and it gets sluggish, but it still works perfectly! Just wait for the evil hedge mazes…
-
-I increased the effective range of the routing slot, so now it has a much bigger footprint, and can gather a lot more people together.
-
-Now one crowd sitter can gather quite a big crowd and cover a large area!
-
-
-Here are two competing crowd sitters, making people stand, facing in different directions, overlapping like magnetic fields!
-
-
-Here’s a crowd of people on couches and standing in the back, with only two Crowd Sitters. I made it so you can switch each Crowd Sitter between different modes: “Sitting”, “Standing”, or “Sitting or Standing”. Each mode corresponds to a different custom routing slot, which searches for appropriate locations for the people to sit or stand. The sitter in front is sitting only, and there’s one overlapping the middle seat of the second row (it will later be invisible in play mode) that’s set for “sitting or standing” so the overflow people who don’t fit in chairs will stand up in the back. Anybody care to guess how many people are on the screen? I lost count! Where’s waldo? I can’t wait to see them cleaned up and dressed nicely.
-
-
-Here’s an example of 8 sitters facing outwards set on “Standing”, so people gather around like iron filings around a magnet! This first picture shows them milling around randomly like a grateful dead concert, just before I trigger all 8 outward-facing crowd magnets at once, to form a circle around an (invisible) bonfire!
-
-
-Now turn on the magnetic field!
-
-
-It’s considered inhumane to use the Crowd Sitter without a placebo field generator, or lots and lots of porta-potties and refreshments.

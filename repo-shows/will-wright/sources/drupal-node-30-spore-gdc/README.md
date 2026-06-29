@@ -1,6 +1,7 @@
-# Automating The Sims Character Animation Pipeline with MaxScript
+# Deprecated slug
 
-Drupal blog post (node/30), cleaned for the Will Wright Repo Show.
+This directory duplicated **node/30** (MaxScript animation pipeline). Use the canonical slug instead:
 
-- [`article.md`](article.md) — republishable body
-- Original: <http://www.donhopkins.com/drupal/node/30>
+→ [2004-02-19-maxscript-animation-pipeline](../2004-02-19-maxscript-animation-pipeline/article.md)
+
+The old name `drupal-node-30-spore-gdc` was a mis-label — node/30 is not the Spore GDC post.
