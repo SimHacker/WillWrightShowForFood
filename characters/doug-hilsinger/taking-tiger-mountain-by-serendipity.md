@@ -66,19 +66,22 @@ and [saucefaucet](http://www.saucefaucet.com/tiger.html)).
 
 ## The serendipity — Don meets Doug
 
-This was **San Francisco, 2006**, the same evening Don had **just met Brian Eno** at **Scott
-Draves'** apartment (Don knew Eno's music well and had introduced Brian to Scott that night). Don
-had also been in the audience at the **Long Now talk where Eno and Will Wright spoke about
-generative art** — where he'd asked the pair a question from the floor. **Doug had been in that same
-audience.** Don didn't know Doug at all.
+This was **San Francisco, 2006**. A few days earlier, Don had been at the **Long Now talk where
+Brian Eno and Will Wright spoke about generative art** — asking the pair a question from the floor —
+and afterward joined **Will and Brian for dinner**, where he told Brian he wanted to introduce him
+to his good friend **Scott Draves ("Spot")**, who hadn't been at the talk. They agreed to meet up a
+few days later, while Brian was still in town. So that evening's gathering at **Scott's apartment**
+(Don already knew Eno's music well; this was about bringing **Brian and Spot** together) was the
+**introduction of Brian to Scott** — *not* Don's first meeting with Brian.
 
-Then pure coincidence took over. Driving home from Scott's place in SF back to Berkeley, Don
-thought: *the night is young, I've got nothing to do — why not finally explore a renowned San
-Francisco bar I've never been to, right on my route toward the highway?* So he stopped at **The
-Eagle** — the famous, historic SF gay **bear** bar, an inclusive, community-foundational
-institution. It was practically empty, and the friendly bartender was **Doug**. They got to talking,
-hit it off, and ended up on **Eno** and that very **Long Now talk** (Doug, it seems, recognized Don
-as the guy who'd asked a question).
+Then, **minutes after leaving Scott's place**, pure coincidence took over. Driving home from SF back
+to Berkeley, Don thought: *the night is young, I've got nothing to do — why not finally explore a
+renowned San Francisco bar I've never been to, right on my route toward the highway?* So he stopped
+at **The Eagle** — the famous, historic SF gay **bear** bar, an inclusive, community-foundational
+institution. It was practically empty, and the friendly bartender was **Doug** — whom Don was
+**meeting in person for the first time**, though they'd unknowingly shared the audience at that very
+**Long Now talk** a few days before (Doug, it seems, recognized Don as the guy who'd asked a
+question). They got to talking, hit it off, and landed on **Eno** and the talk.
 
 At some point Doug put on some music — **his own**, though he didn't say so. It *entranced* Don:
 Eno's songs he knew by heart, in a warm, rocking version he'd **never** heard. He told Doug how much
