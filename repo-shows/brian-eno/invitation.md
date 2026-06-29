@@ -63,7 +63,8 @@ If a four-way is fun, I'd love **you, Scott, and Will** together; if not, any sh
 all open to discussion — what's recorded, what's public, all your call. Zero homework; I do the
 setup.
 
-I'm sending this gently through **Will** and **Scott**, who know you far better than I do. No
+I'm sending this gently through **Will** — who I keep in touch with regularly, and who's my likely
+bridge to you — and **Scott**, who hosted us back in 2006. No
 pressure, no presumption — accepted, delayed, declined, or no reply, all honored gracefully.
 
 With great respect,

@@ -93,12 +93,10 @@ the compliment.
 > *transformed* by Doug; Don loved Doug's work without knowing Doug had made it. Sincerity all the
 > way down. 🐅
 
-Doug gave Don a copy of the CD that night. Don has treasured it — and the story — ever since. That
-**one night in 2006 was the only time Don and Doug have met**; they haven't been in touch since.
-(Don met **Brian** in that same 2006 stretch and hasn't seen him since either. The one relationship
-that **kept going** is **Don ↔ Spot** — decades of correspondence and recent collaboration — which
-is exactly why a **reunion** is the dream: Don and Scott would love to get the old crew back
-together and invite **Brian**, **Will**, and **Doug**.)
+Doug gave Don a copy of the CD that night. That **one night in 2006 was the only time Don and Doug
+have met.** (Don's reliable line back into this circle is **Will** — whom he keeps in touch with
+regularly in the SF Bay Area — and **Scott**, with whom he still collaborates. That's why a
+**reunion** inviting **Brian**, **Will**, and **Doug** is the dream.)
 
 ## Why it belongs in the show
 

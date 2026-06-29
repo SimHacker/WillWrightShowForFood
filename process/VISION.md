@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/vision-and-ambition.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:888395514597469e -->
+<!-- content-sha256:2ef0dfb4c411708f -->
 
 # Vision and ambition
 
@@ -267,6 +267,24 @@ exactly the kind of work an archive wants to preserve.
 - **not_promising:**
   - Any Long Now or Internet Archive partnership, funding, or endorsement.
   - That these institutions know this exists. This is alignment, offered for inspection.
+
+## Connectors And Legacy
+
+- **the_product:** The deliverable is not an episode that evaporates — it's a growing SERIES of Repo Shows others
+can pick up and continue: a live, ongoing conversation PLUS tangible assets and artifacts
+(repos, transcripts, revived code, MOOLLM skills) that outlive any single show — built to last,
+and to "take to the stars long after we're all gone."
+- **brokering:**
+  - will_wright_as_hub: Will Wright is a key connector. Don keeps in touch with Will regularly (and meets him when in
+the SF Bay Area), and Will is the bridge to many mutual friends and heroes — the most likely
+path to the busy, hard-to-reach Brian Eno, among others.
+  - cross_pollinate: Weave and share friendship networks; reconnect people; and memorialize those we've lost with others who knew them.
+- **warm_ties_examples:**
+  - Yoot Saito — warm, ongoing friendship; Don is highly motivated to help preserve his legacy. Don OCR'd, proofread, formatted, linked, researched, and published Yoot's interview with Douglas Engelbart. See ../characters/yoot-saito/, ../repo-shows/remembering-douglas-engelbart.yml
+  - Scott McCloud — Understanding Comics as a Sims design bible; spoke at GDC (incl. a talk with Will). See ../characters/scott-mccloud/
+  - Douglas Engelbart (memorial) — Don met him once at a Palo Alto pub meetup; they shared the frustration of getting people to accept new ideas (the mouse, pie menus). See ../characters/douglas-engelbart/
+  - Scott Draves — the still-active throughline (correspondence + collaboration to today). See ../characters/scott-draves/
+- **disclaimer:** Relationships described from Don's perspective. No claim that any named person has committed to participate; busy people are hard to reach, and every reply (or none) is honored gracefully.
 
 ## Invitation To Stakeholders
 
