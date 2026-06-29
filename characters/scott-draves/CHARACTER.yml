@@ -38,14 +38,18 @@ bio:
     With his wife Isabel Walcott Draves he founded **Leaders in Software and Art (LSA)**. He
     later built the open-source **Beaker Notebook** (polyglot data-science notebook), and in
     2026 relaunched the Sheep as **Infinidream** (Generation 248, 1080p/60fps, phone remote,
-    open source). He studied at **Brown University** (BS Mathematics, 1990; Andy van Dam's graphics
-    lab) and **Carnegie Mellon University** (PhD, School of Computer Science, 1997; thesis
-    *Automatic Program Specialization for Interactive Media* — advised by Andy Witkin & Dana Scott
-    early on, then Peter Lee). Alongside the art he's had a deep engineering career (Transmeta,
-    Google, DreamWorks, Two Sigma, CTRL-labs/Meta neuromotor interfaces, Stability AI).
+    open source). He studied under **two legendary Andys**: at **Brown University** (BS Mathematics,
+    1990) in **Andy van Dam's** graphics lab — where his thesis *fnord*, a functional language for
+    describing higher-dimensional geometry (co-written with **Nick Thompson**), became the workhorse
+    for **Thomas Banchoff's** 4D artwork — and at **Carnegie Mellon University** (PhD, School of
+    Computer Science, 1997; thesis *Automatic Program Specialization for Interactive Media* — advised
+    by **Andy Witkin** & Dana Scott early on, then Peter Lee). Alongside the art he's had a deep
+    engineering career (Transmeta, Google, DreamWorks, Two Sigma, CTRL-labs/Meta neuromotor
+    interfaces, Stability AI).
   known_for:
     - Electric Sheep (distributed evolutionary screensaver)
     - Fractal Flame algorithm / flam3 (open-sourced 1992)
+    - "fnord — Brown BS thesis; functional language for higher-D geometry (with Nick Thompson) behind Banchoff's 4D art"
     - Bomb (1994) — one of the first interactive software artworks + first open-source artwork
     - Fuse algorithm (1991) — early procedural texture work he notes "presaged texture synthesis and Stable Diffusion"
     - Dreams in High Fidelity (evolving painting)
@@ -64,7 +68,8 @@ career_arc:   # public (LinkedIn + scottdraves.com/about) — the engineering ca
   - "Infinidream (2023– ) — solo founder, open-source ambient AI visuals."
 
 connections:
-  don_first_met: "Don and Scott **first met in Silicon Valley in the early 1990s** — Don at Sun, running Scott's early Fractal Flame screensaver on his SparcStation II and talking interactive performance-art graphics, while Don built his CAM6 cellular-automata performance platform (NeWS PostScript UI + C engine + Mitch Bradley's FORTH orchestrator). Scott was possibly at SGI then. *(Exact dates/SGI to confirm with Scott — his LinkedIn doesn't reach back that far.)*"
+  don_first_met: "Don and Scott **first met in the Bay Area in the early 1990s**, most likely through Don's housemate **Nick Thompson** — who knew Spot from Brown (they co-wrote *fnord*) and was then at **SGI** (1990–92). Don, at Sun, ran Scott's early Fractal Flame work on his SparcStation II and talked interactive performance-art graphics while building his CAM6 cellular-automata platform. *(Scott himself used SGI machines as an intern in Tokyo in 1991 and at NTT-Data in 1993 — but Nick was the SGI employee; the housemate bridge + exact dates to confirm with Scott.)*"
+  nick_thompson_fnord: "**Nick Thompson** (Brown '90) — Don's housemate c.1990–92 and the likely bridge to Scott — worked in **Andy van Dam's** Brown Graphics Group and for **Thomas Banchoff**, **co-wrote `fnord` with Scott**, then built **Open Inventor** at SGI. ('fnord' is Scott's Brown thesis title; it ran Banchoff's 4D-geometry artwork — even an animation on *Star Trek: TNG*.) Verified: math.brown.edu/tbanchof."
   don_cmu: "They reconnected at **Carnegie Mellon** (early–mid 1990s) — Scott in his CS PhD (Andy Witkin & Dana Scott early, then Peter Lee; thesis *Automatic Program Specialization for Interactive Media*, 1997), Don working with Brad Myers on Lisp UI (and learning X11 well enough to write the unix-haters X-Windows chapter while porting SimCity from NeWS to Tcl/Tk)."
   brian_eno_intro: "In June 2006, after the **Long Now Foundation** talk *Playing with Time* by **Brian Eno and Will Wright**, Don introduced Brian Eno to Scott; the three met at Scott's San Francisco apartment and bounced ideas around. Brian saw Electric Sheep and the HiFiDreams HD work (an hour per frame to render)."
   electric_sheep_unity: "Scott and Don reconnected to work on a new cross-platform **Electric Sheep / Unity** client (c.2020–2023), with Joshua Goldberg and Anton Marini (Syphon) in the mix — real-time playback, music-reactivity, WebGPU/Metal."

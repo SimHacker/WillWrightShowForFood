@@ -29,21 +29,25 @@ Notebook** (a polyglot notebook for data science and visualization). In **2026**
 Sheep as **Infinidream** — Generation 248, 1080p/60fps, with a phone remote and a generative-AI
 platform, still open source.
 
-He studied at **Brown University** (BS Mathematics, 1990, in Andy van Dam's graphics lab) and
-**Carnegie Mellon University** (PhD, 1997; thesis *Automatic Program Specialization for Interactive
-Media* — advised by **Andy Witkin** & Dana Scott early on, then **Peter Lee**). Alongside the art
-runs a deep engineering career — Transmeta, DreamWorks (*Shrek 2*), Google, Two Sigma (Beaker
-Notebook), CTRL-labs/Meta (neuromotor interfaces), and Stability AI.
+He studied under **two legendary Andys**: at **Brown University** (BS Mathematics, 1990) in **Andy
+van Dam's** graphics lab — where his thesis, **`fnord`** (a functional language for higher-dimensional
+geometry, co-written with **Nick Thompson**), became the workhorse for **Thomas Banchoff's** 4D
+artwork — and at **Carnegie Mellon University** (PhD, 1997; thesis *Automatic Program Specialization
+for Interactive Media* — advised by **Andy Witkin** & Dana Scott early on, then **Peter Lee**).
+Alongside the art runs a deep engineering career — Transmeta, DreamWorks (*Shrek 2*), Google, Two
+Sigma (Beaker Notebook), CTRL-labs/Meta (neuromotor interfaces), and Stability AI.
 
 ## Why a Repo Show
 
-Don and Scott go back to **Silicon Valley in the early 1990s** — Don at Sun, running Scott's early
-Fractal Flame screensaver on his SparcStation II and talking interactive performance-art graphics
-while Don built his CAM6 cellular-automata performance platform. They reconnected at **Carnegie
-Mellon** (Scott in his CS PhD, Don with Brad Myers doing Lisp UI and porting SimCity from NeWS to
-Tcl/Tk), and have stayed friends ever since — recently teaming up again on a cross-platform
-**Electric Sheep / Unity** client. *(The earliest dates are Don's recollection, to confirm with
-Scott when he reviews this page.)*
+Don and Scott go back to **the Bay Area in the early 1990s** — most likely through Don's housemate
+**Nick Thompson**, who knew Spot from Brown (they co-wrote `fnord`) and was then at **SGI** building
+Open Inventor. Don, at Sun, ran Scott's early Fractal Flame work on his SparcStation II and talked
+interactive performance-art graphics while building his CAM6 cellular-automata platform. They
+reconnected at **Carnegie Mellon** (Scott in his CS PhD, Don with Brad Myers doing Lisp UI and
+porting SimCity from NeWS to Tcl/Tk), and have stayed friends ever since — recently teaming up again
+on a cross-platform **Electric Sheep / Unity** client. *(The Nick-Thompson bridge and earliest dates
+are Don's recollection, to confirm with Scott when he reviews this page. Scott himself used SGI
+machines as an intern in Tokyo in 1991 and at NTT-Data in 1993 — Nick was the SGI employee.)*
 
 There's a perfect thread here: **generative and evolutionary art** — from the **Fractal Flame**
 math, through the distributed, vote-bred **Electric Sheep**, to today's **AI image generation** in

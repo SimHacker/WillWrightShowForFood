@@ -10,13 +10,15 @@ meta:
   provenance: "Don's own recollection + personal email archive with Scott (2006–2026). Personal source — quote only with Scott's OK."
   to_verify_with_scott:
     - "Earliest meeting date in Silicon Valley (Don recalls c. 1990–1992; Scott's LinkedIn doesn't reach back that far)."
-    - "Whether Scott was at SGI then (Don thinks so, not certain)."
+    - "The Nick Thompson bridge — Don's housemate (1990–92) who knew Spot from Brown — as how Don & Scott met."
+    - "Exact credit on Banchoff's *Beyond the Third Dimension* (Nick's SGI software/fnord generated key torus imagery; published line-art credit is Davide Cervone + Banchoff)."
 
 gist: |
-  Don and Scott **first crossed paths in Silicon Valley in the early 1990s** — Don at Sun, running
-  Scott's early Fractal Flame screensaver on his SparcStation II while building his CAM6
-  cellular-automata performance platform, the two bonding over interactive performance-art graphics.
-  (Scott may have been at SGI then; dates to confirm.) Don then went to the **Turing Institute**
+  Don and Scott **first crossed paths in the Bay Area in the early 1990s**, most likely through Don's
+  housemate **Nick Thompson** (Brown '90), who knew Spot from the Brown Graphics Group and was then
+  at **SGI** (1990–92). Don ran Scott's early Fractal Flame work on his SparcStation II while building
+  his CAM6 cellular-automata performance platform, the two bonding over interactive performance-art
+  graphics. Don then went to the **Turing Institute**
   in Glasgow and on to **CMU**, where Scott was deep in his CS PhD (Andy Witkin early on, then
   Peter Lee). Over the next three decades the thread runs through generative and evolutionary art,
   distributed systems, cellular automata, and AI: Don introduced Brian Eno to Scott in 2006, traded
@@ -27,7 +29,10 @@ gist: |
 threads:
   silicon_valley_origins:
     when: "early 1990s (c. 1990–1992) — Don's recollection, to confirm"
-    what: "Met in Silicon Valley while Don was at Sun Microsystems. Don ran Scott's early Fractal Flame screensaver on his SparcStation II (Sun employee discount) and they bonded over interactive performance-art graphics — while Don built his CAM6 cellular-automata emulator on the Sun: NeWS PostScript UI + HyperLook Control Stack + LavaLamp Shaped Window + C simulator engine + Mitch Bradley's FORTH as a CAM6-software-compatible (per the CAM6 book) FORTH-programmable CAM orchestrator and lookup-table rule compiler (later ported to many platforms and used as SimCity DRM and Micropolis Space Inventory). Scott was possibly at SGI at the time. Dates/SGI to confirm with Scott."
+    what: "Met in Silicon Valley while Don was at Sun Microsystems. Don ran Scott's early Fractal Flame screensaver on his SparcStation II (Sun employee discount) and they bonded over interactive performance-art graphics — while Don built his CAM6 cellular-automata emulator on the Sun: NeWS PostScript UI + HyperLook Control Stack + LavaLamp Shaped Window + C simulator engine + Mitch Bradley's FORTH as a CAM6-software-compatible (per the CAM6 book) FORTH-programmable CAM orchestrator and lookup-table rule compiler (later ported to many platforms and used as SimCity DRM and Micropolis Space Inventory). (Scott himself used SGI supercomputers as an intern in Tokyo in 1991 and at NTT-Data in 1993 — where he finished the Fractal Flame — but Nick was the SGI employee; dates to confirm with Scott.)"
+  nick_thompson_bridge:
+    when: "Brown (1980s) → SGI (Jun 1990–Jun 1992)"
+    what: "Nick Thompson (Brown '90) worked in Andy van Dam's Brown Graphics Group and for Thomas Banchoff, and **co-wrote `fnord` with Scott Draves** — a functional language for describing mathematical objects that became the workhorse for Banchoff's higher-dimensional-geometry artwork (and an animation in an episode of Star Trek: The Next Generation). 'fnord' is literally the title of Scott's Brown BS thesis. Nick then joined SGI (SF Bay Area, Jun 1990–Jun 1992) and helped build Open Inventor. He was Don's housemate c.1990–92 — the likely bridge between Don and Scott. Verified: math.brown.edu/tbanchof/TFBCON2003/students/NickThompson.html"
   cmu_origins:
     when: "early–mid 1990s"
     what: "Reconnected at Carnegie Mellon — Scott in his CS PhD (advised by Andy Witkin & Dana Scott 1990–92, then Peter Lee through 1997; thesis 'Automatic Program Specialization for Interactive Media'), Don with Brad Myers (Lisp UI), porting SimCity from NeWS→X11/Tcl/Tk, making it multi player, and writing the Unix-Haters X-Windows chapter."
