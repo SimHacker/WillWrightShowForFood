@@ -34,12 +34,13 @@ family: your sheep, my CAM6 cellular-automata machine, Sandspiel, video feedback
 visuals, the self-aware image pipeline I've been building. We've been circling the same ideas for
 thirty years from different angles.
 
-**The 2006 reunion thread (optional, but oh man).** Remember the night after Brian Eno and Will's
+**The 2006 reunion thread (optional, but oh man).** Remember a few days after Brian Eno and Will's
 Long Now talk, when I brought Brian over to your apartment and we bounced ideas around until late,
 Electric Sheep glowing on every surface? I'd love to **invite Brian Eno as a dream guest** and do
 a proper reunion — generative art, generative/ambient music, simulation, AI — and I figure
 between you and **Will** we can actually reach him. No pressure; even just you and me would be a
-great show.
+great show. (I'd send Brian's invite **through Will, after running it by you first** — your call all
+the way.)
 
 **Format:** live (thinking Twitch), announced ahead, audience participates and can contribute to
 the repo. Warm and earnest, not gotcha-podcast. I run it all in Cursor, screen-shared, so people
@@ -47,7 +48,9 @@ watch the ideas become real. **Zero homework** — I do the setup. Everything's 
 what we record, what's public, all your call.
 
 Got up-to-date versions of your portfolio, papers, and the latest Sheep/Infinidream builds we
-could drop into the repo and talk through? Send them over and I'll wire them up.
+could drop into the repo and talk through? Send them over and I'll wire them up. (I've jotted some
+starting-point threads in [`ideas.md`](../../characters/scott-draves/ideas.md) and the
+[show seed](README.md) — none of it homework, all of it yours to redirect.)
 
 It'd mean a lot to do one with you.
 

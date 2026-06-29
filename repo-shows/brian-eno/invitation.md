@@ -14,8 +14,9 @@ or request removal at any time.* [Portrayal standards](../../schemas/portrayal-s
 
 Dear Brian,
 
-We met once, twenty years ago — in 2006, after your Long Now talk *Playing with Time* with Will
-Wright, I brought you over to my friend **Scott Draves**' apartment in San Francisco, and the three
+We crossed paths twenty years ago, in 2006, around your Long Now talk *Playing with Time* with Will
+Wright. I had dinner with you and Will after the talk, and a few days later — while you were still in
+town — I brought you over to my friend **Scott Draves**' apartment in San Francisco, where the three
 of us spent an evening bouncing ideas around with **Electric Sheep** glowing on every surface. It's
 stuck with me ever since.
 
