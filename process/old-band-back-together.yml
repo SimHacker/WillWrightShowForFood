@@ -26,12 +26,17 @@ bands:
     don_role: "participant-historian (pie menus, HyperTIES, the X-Windows Disaster)"
 
   sims_team:
-    what: "Building The Sims at Maxis — behavior/AI (SimAntics), tools, content."
-    roll_call: "Will, Jim, Jamie, Eric, Irk, Chris"   # Don's own roll-call
-    documented_crew: "Will Wright, Jim Mackraz, Jamie Doornbos, Eric Bowman, Patrick Barrett, Chris Trottier, Claire Curtin"
+    what: "The original Sims team at Maxis — behavior/AI (SimAntics), tools, content, animation, music."
+    roll_call: "Will, Jim, Jamie, Eric, Irk, Chris, Jerry … and more"   # Don's roll-call; 'Irk' = Eric Hedman (vs Eric 'Bobo' Bowman)
+    crew_not_exclusive: |
+      First names are fine — the point is 'the original Sims team', not a closed list. Includes (among
+      others) Will, Jim Mackraz, Jamie Doornbos, Eric 'Bobo' Bowman, Eric 'Irk' Hedman, Patrick
+      Barrett, Chris Trottier, Claire Curtin, and composer Jerry Martin — and more.
+    intent: "Get the band back together: learn about each other's work, interests, and imagination — and help each other collaborate and reach our goals."
+    spotlight: "Jerry Martin especially — the Sims / SimCity 3000 composer promotes his own EXCELLENT music on his website; he'll benefit from real exposure, sincere praise, and appreciation. See ../characters/jerry-martin/ (boost)."
     show: ../repo-shows/REPO-SHOWS.yml#building-the-sims.yml
-    also: ../repo-shows/REPO-SHOWS.yml#design-by-accretion.yml   # Chris Trottier
-    characters: [../characters/will-wright/, ../characters/jim-mackraz/, ../characters/jamie-doornbos/, ../characters/eric-bowman/, ../characters/patrick-barrett/, ../characters/chris-trottier/, ../characters/claire-curtin/]
+    also: [../repo-shows/REPO-SHOWS.yml#design-by-accretion.yml, ../repo-shows/REPO-SHOWS.yml#music-and-theory.yml]
+    characters: [../characters/will-wright/, ../characters/jim-mackraz/, ../characters/jamie-doornbos/, ../characters/eric-bowman/, ../characters/eric-hedman/, ../characters/patrick-barrett/, ../characters/chris-trottier/, ../characters/claire-curtin/, ../characters/jerry-martin/]
     don_role: "Sims programmer + teammate"
 
   david_levitt_crew:
