@@ -88,6 +88,17 @@ Silicon Valley in the early '90s (Flame on a SparcStation II, Don's CAM6 platfor
 graphics lab at CMU, Don's Lisp-UI/SimCity-porting era — and the long arc from there to generative
 AI. The friendship as a through-line for the whole field.
 
+### 11. The 6Heads house — 1990 Mountain View (banter + storytelling)
+
+The *how-we-met* story, told properly for once. Don's Mountain View household — **"6Heads,"** named
+for six plastic anatomical human heads with removable skull panels (pharma swag branded *"Elevil"*)
+abandoned in the garage — was Don plus **Nick Thompson** (SGI; who brought Spot by) and **Steve
+Zellers** (Sun, then Dave Winer's *More*/**Frontier**), living **next door to Joy Mountford** (Apple
+Human Interface Group; Don later knew her at Interval). Everyone fresh out of college, first jobs, the
+1990 Silicon Valley zeitgeist — *before it enshittified and scattered the techno-hippies to Amsterdam
+and beyond.* **Ask Spot to tell HIS post-graduation story** — what he did, where he landed, how we
+converged in that scene. We'll fill each other in on all the stuff we never asked about back then.
+
 ## Sources (real, public)
 
 - Electric Sheep: [https://electricsheep.org/](https://electricsheep.org/) · code: [https://github.com/scottdraves/electricsheep](https://github.com/scottdraves/electricsheep)
