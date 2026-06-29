@@ -31,14 +31,13 @@ leela_colleagues:
   with: ["henry-minsky (co-founder/CTO)", "Milan Singh Minsky (VP Product)", "Steve Kommrusch", "don-hopkins"]
   showcase: ../../process/vision-and-ambition.yml   # connectors_and_legacy#current_colleagues_showcase
 
-boost:
-  why: |
-    Don especially wants to **lift Isabella up and give her real exposure**. She's awesome and
-    amazing — early in her career and doing brilliant work. Showcasing what she's doing at
-    **Leela AI** (computer-vision model evaluation & training, ML explainability, the AI-supply-
-    chains research) on a Repo Show will help her far more than any LinkedIn recommendation — honest,
-    present-tense exposure that can open doors.
-  intent: "Genuine, generous amplification — not extractive. Her call on what's shared; edit or remove anytime."
+why_invite: |
+  Don is genuinely enthusiastic about having Isabella on a Repo Show — for the substance of it. She
+  has a wealth of fascinating work and ideas to talk about and contribute: computer-vision model
+  evaluation & training, ML explainability, and the AI-supply-chains research, plus a sharp,
+  thoughtful take on where AI is going. That makes for a rich, original conversation — which is the
+  whole reason to invite anyone. Plain respect for the work. Her call on what's shared; edit or
+  remove anytime.
 
 show_suggestions:
   - { seed: ../../repo-shows/isabella-struckman/, what: "Solo — vision-model evaluation & training at Leela AI, ML explainability, AI policy / AI supply chains, AI skills, and whatever she's passionate about" }

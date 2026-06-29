@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/vision-and-ambition.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:7f38b269daef08cb -->
+<!-- content-sha256:ef545603102ddadf -->
 
 # Vision and ambition
 
@@ -292,8 +292,9 @@ a natural bridge both to great Repo Show guests and to opportunities. He's on it
   - leela_ai: Leela AI is a CURRENT team of working colleagues — a present-tense feature, not a reunion. The
 aim is to showcase the brilliant work they're doing NOW, and have been doing since BEFORE the
 AI craze: Society-of-Mind-rooted visual intelligence, vision-model eval/training, ML
-explainability, AI supply chains. Honest, present-tense exposure of real, ongoing work.
-Isabella Struckman especially deserves amplification (see ../characters/isabella-struckman/).
+explainability, AI supply chains. Honest, present-tense conversations about real, ongoing work.
+Isabella Struckman especially has a wealth of fascinating work and ideas to talk about
+(see ../characters/isabella-struckman/) — invited for the substance, like anyone.
 Crew incl. Henry Minsky, Milan Singh Minsky, Steve Kommrusch, Isabella Struckman, Don — and more.
 - **reunions_are_a_format:** 'Get the old band back together' recurs across every era Don worked in — the NeWS gang
 (Gosling, Densmore, Rosenthal), the Sims team (Will, Jim, Jamie, Eric, Irk, Chris), the David
