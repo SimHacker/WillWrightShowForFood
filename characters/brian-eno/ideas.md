@@ -58,10 +58,14 @@ to prototype together live. (Offered as a Don idea, not attributed to Brian.)
 
 ### 7. Taking Tiger Mountain, by transformation
 Brian's *Taking Tiger Mountain (By Strategy)* (1974) was lovingly **re-recorded in full** by
-**Doug Hilsinger & Caroleen Beatty** as *Taking Tiger Mountain Revisited* (2004) — cold experiment
-reborn as warm rock. (Don actually crossed paths with that cover in San Francisco.) A lovely live
-theme: honoring a work by **transforming** it, not copying it — the same move the Repo Show makes
-with old code.
+**Doug Hilsinger & Caroleen Beatty** (2004, DBK Works) — Hilsinger playing *every* instrument by
+hand, with a deliberate **ban on keyboards/synths/drum machines**, so the cold experiment came back
+warm and aggressively alive. They slipped Brian a CD-R at his Long Now lecture and he said *"I am
+deeply moved… I like it very, very much."* Don crossed paths with that cover (and with Doug) in San
+Francisco. A lovely live theme — **honoring a work by transforming it**, the same move the Repo Show
+makes with old code. Full story + the wish to bring Doug on:
+[`../doug-hilsinger/taking-tiger-mountain-by-serendipity.md`](../doug-hilsinger/taking-tiger-mountain-by-serendipity.md)
+· [Doug's home](../doug-hilsinger/).
 
 ### 8. The Long Now lens
 Brian coined **"The Long Now"** and helped found the Long Now Foundation. A grounding question for

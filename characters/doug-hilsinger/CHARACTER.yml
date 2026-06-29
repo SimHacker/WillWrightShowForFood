@@ -1,0 +1,69 @@
+# Doug Hilsinger — invitation portrayal. NOT Doug Hilsinger.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: doug-hilsinger
+  name: "Doug Hilsinger"
+  type: invitation
+  signifier: "🐅"
+  status: living
+  field: "Bay Area multi-instrumentalist; maker of the all-acoustic-instruments track-for-track cover of Brian Eno's Taking Tiger Mountain (By Strategy)"
+  home: characters/doug-hilsinger/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 1
+  authored_by: don-hopkins
+  note: "Don has tried to reach Doug and not yet gotten a reply. A celebrated subject + hoped-for guest; portrayal is public-record + Don's own account. Doug may shape, decline, or delete anytime."
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: dream_guest
+  consent: not_yet_asked
+  outreach: "Don has reached out — no reply yet (as of 2026)."
+  document: ../../repo-shows/brian-eno/invitation.md   # would join the Eno / generative-systems show
+  show_seed: repo-shows/brian-eno/
+  contact_path: "Outreach attempted directly; also reachable through the SF music scene (Waycross / ENORCHESTRA) and via Brian Eno's circle."
+
+bio:
+  summary: |
+    **Doug Hilsinger** is a San Francisco Bay Area multi-instrumentalist who, in Fall 2003,
+    recorded a complete, track-for-track cover of **Brian Eno's *Taking Tiger Mountain (By
+    Strategy)*** (1974) with vocalist **Caroleen Beatty** — released in 2004 on **DBK Works**
+    (CD #111) for the album's 30th anniversary. Hilsinger played **every instrument** (drums,
+    bass, guitar, pedal steel, sitar guitar, glockenspiel, melodica, autoharp, percussion,
+    treatments) with a deliberate **ban on keyboards, synths, and drum machines**; Beatty sang.
+    Made privately, for love, the duo slipped Eno a CD-R at his Long Now Foundation lecture in
+    San Francisco — and **Eno himself** responded: *"I am deeply moved by your versions of my
+    songs. I like it very, very much,"* later quipping to Pitchfork, *"They aren't bad songs
+    after all."* That blessing brought the labor-of-love tribute out into the world.
+  known_for:
+    - "Brian Eno's Taking Tiger Mountain (By Strategy) — all-acoustic-instruments cover (2004)"
+    - "Multi-instrumentalist (no keyboards/synths/drum machines)"
+    - "SF bands incl. Waycross; the ENORCHESTRA live project"
+
+connections:
+  brian_eno: "The cover earned Eno's personal praise; the perfect living example of honoring a work by transforming it."
+  don_serendipity: "Don crossed paths with Doug in San Francisco (2006) and was given a copy of the CD — see the serendipity story."
+  generative_thread: "A bridge guest between the Eno / Scott Draves / Will Wright generative-systems conversation: transformation as homage."
+
+story: taking-tiger-mountain-by-serendipity.md
+
+sources:
+  web:
+    - "https://musicbrainz.org/release-group/b56d145e-05fb-3740-8ae2-e8e7ef29b8ed"  # MusicBrainz release group
+    - "https://pitchfork.com/reviews/albums/3988-taking-tiger-mountain-by-strategy-with-caroleen-beatty/"  # Pitchfork review
+    - "http://www.saucefaucet.com/tiger.html"     # artist page (personnel, tracklist)
+    - "http://www.saucefaucet.com/tigerbio.html"  # DBK #111 press bio
+  facts:
+    - "Released 2004 on DBK Works (CD #111); recorded Fall 2003 at Saucefaucet Int'l"
+    - "Doug Hilsinger: all instruments, no keyboards/synths/drum machines. Caroleen Beatty: lead vocals, handclaps"
+    - "30th-anniversary track-for-track cover of Eno's 1974 album"
+    - "Eno heard it via a CD-R handed over at his Long Now Foundation lecture; praised it; that led to release"
+
+see_also:
+  - { path: taking-tiger-mountain-by-serendipity.md, why: "The full story — verified album facts + Don's serendipity account" }
+  - { path: ../brian-eno/, why: "Whose album it covers; Eno praised it — discussion subject for the Eno show" }
+  - { path: ../scott-draves/, why: "Generative-systems show; transformation-as-homage thread" }
+  - { path: ../will-wright/, why: "Eno's Long Now co-speaker; would enjoy this thread" }
+  - { path: ../don-hopkins/, why: "Host — received the CD in SF; wants to sing Doug's praises" }
