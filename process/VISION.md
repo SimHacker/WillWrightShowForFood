@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/vision-and-ambition.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:ef545603102ddadf -->
+<!-- content-sha256:89c0b6cd9114cd09 -->
 
 # Vision and ambition
 
@@ -296,6 +296,12 @@ explainability, AI supply chains. Honest, present-tense conversations about real
 Isabella Struckman especially has a wealth of fascinating work and ideas to talk about
 (see ../characters/isabella-struckman/) — invited for the substance, like anyone.
 Crew incl. Henry Minsky, Milan Singh Minsky, Steve Kommrusch, Isabella Struckman, Don — and more.
+  - leela_and_moollm: Real credit + thanks: Leela AI has effectively **sponsored, stimulated, driven, and
+dog-fooded** much of **MOOLLM's** development and many of its ideas and philosophies —
+especially through its deep **MIT AI Lab** lineage (Society of Mind, frames/K-lines,
+constructionism, the Minsky tradition Henry carries forward). Building real
+visual-intelligence / cognition systems at Leela shaped MOOLLM's design, and MOOLLM ideas
+were exercised and tested against Leela's actual needs. The connection runs both ways.
 - **reunions_are_a_format:** 'Get the old band back together' recurs across every era Don worked in — the NeWS gang
 (Gosling, Densmore, Rosenthal), the Sims team (Will, Jim, Jamie, Eric, Irk, Chris), the David
 Levitt crew (Bounce, Body Electric, Interval, MediaFlow, ConnectedMedia/Connected TV,
