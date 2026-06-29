@@ -7,7 +7,7 @@ character:
   type: invitation
   signifier: "👤"
   status: living
-  field: "Character animation — The Sims 1"
+  field: "Animator, artist & game designer — original The Sims (character animation); design lead on Sims expansion packs; later Disney/Henson/Nickelodeon; now indie creator (irkinteraction — Aether HeXXen)"
   home: characters/eric-hedman/
 
 representation:
@@ -23,19 +23,45 @@ invitation:
 
 
 bio:
-  summary: "**Eric Hedman (\"Irk\")** — Sims 1 character animator. Hand-tuned walk cycles, idles, gestures for the vitaboy pipeline. Famous wiggle incident (Don checked in canWiggle debug — they're still great buddies). Great interview subject; YouTube channel pending URL."
+  summary: "**Eric Hedman (\"Irk\")** — animator, artist, and game designer. A **character animator on the original The Sims** (hand-tuned walk cycles, idles, and gestures for the vitaboy pipeline; the legendary canWiggle incident — Don checked in the debug; they're still great buddies), he went on to **lead design on Sims expansion packs** (House Party — where he animated vignettes and a laser blaster for the Drew Carey Show tie-in — plus Livin' Large, Unleashed), then worked at **Disney, Jim Henson, Nickelodeon**, and others. Today he's an **independent creator** making adventures, visual novels, games, and VR/AR/MR — including **Aether HeXXen** (a 'space witch' visual novel) — mostly hand-crafted 2D/3D art and animation. His YouTube channel **@irkinteraction** is full of warm, funny, detailed Sims-development stories."
 
 why_invite: |
-  Don would love to have Eric on a Repo Show for the substance of it: hand-crafted character
-  animation is a huge part of what gives The Sims its soul, and Eric's stories about tuning walk
-  cycles, idles, and gestures for the vitaboy pipeline (plus the legendary canWiggle incident) are
-  gold — funny, specific, and full of craft. A great, original conversation, and a chance for more
-  people to see the artistry behind those little Sims. Plain respect for the work; his call on
-  what's shared.
+  Eric is an **independent contractor artist** (project- and hourly-based; not looking for 9-to-5
+  work), so exposure is welcome — Don wants to **drive people to his YouTube channel
+  (@irkinteraction)** and his indie projects. And the substance is gold: hand-crafted character
+  animation is a huge part of what gives The Sims its soul, and Eric's stories — the vitaboy
+  pipeline, the canWiggle incident, the expansion packs, the Drew Carey Show tie-in, his years at
+  Disney / Henson / Nickelodeon — are funny, specific, and full of craft. There are **easily
+  several Repo Shows' worth** here, and he'd likely love it. His call on what's shared.
+
+indie_work:
+  current: "Aether HeXXen — a 'space witch' visual novel / game (Act 1: Death Space Requiem); plus adventures, games, and VR/AR/MR experiences. Hand-made 2D/3D art + animation."
+  support: "Patreon + Ko-fi (also open for commissions)."
+
+links:
+  youtube: "https://www.youtube.com/@irkinteraction"
+  steam: "https://steamcommunity.com/app/4033750/"        # Aether HeXXen
+  itch: "https://irkinteraction.itch.io/aether-hexxen-death-space-requiem-act-1"
+  patreon: "https://www.patreon.com/c/irkinteraction"
+  kofi: "https://ko-fi.com/irkinteraction"
+
+show_suggestions:
+  - { seed: ../../repo-shows/eric-hedman/, what: "The Sims animation up close — vitaboy walk cycles/idles/gestures, broad 'pantomime' animation under frame-budget constraints, the canWiggle incident; the craft behind the little Sims." }
+  - { seed: ../../repo-shows/eric-hedman/, what: "Designing the Sims expansion packs — House Party (incl. the Drew Carey Show tie-in: vignette animations + laser blaster), Livin' Large, Unleashed — plus the years at Disney/Henson/Nick." }
+  - { seed: ../../repo-shows/eric-hedman/, what: "Indie creator spotlight — Aether HeXXen visual novel + his hand-made 2D/3D art/animation pipeline. (Several shows' worth of stories.)" }
 
 sources:
   wikipedia: null
   web:
-    []
+    - { title: "irkinteraction (YouTube)", url: "https://www.youtube.com/@irkinteraction" }
+    - { title: "Aether HeXXen (Steam)", url: "https://steamcommunity.com/app/4033750/" }
+    - { title: "Aether HeXXen (itch.io)", url: "https://irkinteraction.itch.io/aether-hexxen-death-space-requiem-act-1" }
+    - { title: "Patreon", url: "https://www.patreon.com/c/irkinteraction" }
+    - { title: "Ko-fi (commissions)", url: "https://ko-fi.com/irkinteraction" }
   papers: []
   blogs: []
+
+see_also:
+  - { path: ../will-wright/, why: "The Sims — Will's game; Eric on the original team" }
+  - { path: ../jerry-martin/, why: "Fellow Sims-era indie creator who welcomes exposure" }
+  - { path: ../../process/old-band-back-together.yml, why: "The original Sims team reunion" }
