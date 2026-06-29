@@ -22,9 +22,9 @@ you, **James Gosling**, **David Rosenthal**, **Arthur van Hoff**, me — to tell
 **"send a program, not a data structure."** Your **`class.ps`** is the heart of it: Smalltalk-style
 classes in *pure* PostScript, no interpreter changes — the proof that NeWS's bet was right. The web
 eventually reinvented "interact locally, link globally" as AJAX… the long way around, as a dog's
-breakfast of overlapping technologies (each, per Greenspun, an ad-hoc reimplementation of half of
-something we already had clean) — instead of **PostScript for code, PostScript for data, PostScript
-for graphics**.
+breakfast of overlapping technologies — Greenspun's Tenth Rule writ large (that old Lisp joke about
+complex systems reinventing, badly, what a clean substrate already gave you) — instead of
+**PostScript for code, PostScript for data, PostScript for graphics**.
 
 And there's a thread I especially want to pull with you: **John Warnock's** idea of PostScript as a
 **linguistic motherboard** — a graphics card and a networking card realized in software, with more

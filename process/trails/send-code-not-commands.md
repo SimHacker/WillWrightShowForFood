@@ -16,12 +16,16 @@ display, you **send a program** — PostScript — that runs *in the server*, ne
 
 Don made the case (and the critique of the alternative) in the **["X Windows Disaster" chapter of
 *The UNIX-HATERS Handbook*](http://www.art.net/~hopkins/Don/unix-haters/x-windows-disaster.html)** —
-which doesn't just complain, it points at the **constructive alternative**. And history agreed: the
-web eventually reinvented "send code, interact locally, link globally" as **AJAX** — but as a **dog's
-breakfast of overlapping technologies** (HTML/CSS/JS/DOM/WASM/…), each, per **Greenspun's Tenth
-Rule**, an *ad-hoc, informally-specified, bug-ridden, slow* reimplementation of half of something we
-already had clean — instead of **PostScript for code, PostScript for data, and PostScript for
-graphics.**
+which doesn't just complain, it points at the **constructive alternative**. And history agreed —
+though it arrived as a **dog's breakfast of overlapping technologies** (HTML/CSS/JS/DOM/WASM/…)
+instead of **PostScript for code, data, and graphics.** This is the *spirit* of
+**[Greenspun's Tenth Rule](https://en.wikipedia.org/wiki/Greenspun%27s_tenth_rule)** — really a
+**Lisp joke**, stated generally: *"Any sufficiently complicated C or Fortran program contains an ad
+hoc, informally-specified, bug-ridden, slow implementation of half of Common Lisp."* Generalize it
+and you get our case: a complex system, lacking the clean substrate, **reinvents it badly.**
+PostScript is itself Lisp-flavored (code *is* data, sent to run where it lands), so "the web
+reinventing NeWS" is a Greenspun special case. (See also **Zawinski's Law of Software Envelopment** —
+jwz again: *"every program attempts to expand until it can read mail."*)
 
 - 📁 [`characters/james-gosling/`](../../characters/james-gosling/) — NeWS (and Emacs → NeWS → Java: "cheesy little extension languages")
 - 📁 [`characters/david-rosenthal/`](../../characters/david-rosenthal/) — NeWS gang
