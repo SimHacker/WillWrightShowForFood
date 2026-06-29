@@ -1,0 +1,78 @@
+# CARD — Steve Alvey (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: steve-alvey
+  name: Steve Alvey
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Steve Alvey
+  title: The Builder of the City in the Back Yard
+  rarity: rare
+  signifier: 🏙️
+  flavor: A whole SimCity, running inside your Sims' back yard.
+abilities:
+- id: SLICE-CITY
+  name: SliceCity
+  type: activated
+  mana: '{R}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: sliceCity
+    signature: sliceCity() → a real SimCity nested deep inside The Sims
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Run one game fully inside another — the Lilliputian city, deeply integrated, not cosmetic.
+  verifiable: SimSlice / SliceCity (SimCity inside The Sims)
+  combos_with:
+  - WILL-POSSIBILITY-SPACE
+- id: NESTED-SIMULATION
+  name: Nested Simulation
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: nestGame
+    signature: nestGame(inner, host) → games portable into games (the Simopolis precedent)
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Make Will's 1996 data-portability dream real — years before it had a name.
+  verifiable: SliceCity as the shipped precedent for Simopolis bridges
+  combos_with: []
+- id: ARTISANAL-CATALOG
+  name: Artisanal Catalog
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: shipContent
+    signature: shipContent() → 26 years of object suites + expansion packs
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Keep an independent content brand alive and shipping for decades.
+  verifiable: SimSlice (with SimFreaks); Zombie Sims
+  combos_with:
+  - HEATHER-SIMFREAKS
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: ../heather-alvey/CARD.yml
+  why: Partner — SimFreaks
+- path: invitation.md
+  why: Public invitation document

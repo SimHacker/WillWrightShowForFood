@@ -1,0 +1,67 @@
+# Steve Alvey — invitation portrayal. NOT Steve Alvey.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: steve-alvey
+  name: "Steve Alvey"
+  type: invitation
+  signifier: "🏙️"
+  status: living
+  field: "SimSlice / SliceCity founder — SimCity inside The Sims; Sims content programmer, publisher, community leader (26-year brand); worked with Will Wright at Gallium Studios"
+  home: characters/steve-alvey/
+  aliases: ["SimSlice", "SliceCity"]
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+  note: "Don's longtime friend + collaborator. Independent creator — promote his work, drive fans to his subscriptions/content (non-extractively)."
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/heather-steve-alvey/
+  likelihood: "warm — longtime friend + collaborator (SimProv; Micropolis publishing)"
+
+bio:
+  summary: |
+    **Steve Alvey** — founder of **SimSlice** and creator of **SliceCity**: a **Lilliputian SimCity
+    that runs *inside* The Sims**, deeply integrated, not cosmetic. It's the **shipped precedent** for
+    Will Wright's long-aspired **data-portability / games-nested-in-games** vision (which Will
+    articulated in his 1996 Winograd talk) — years before anyone called it that. A **~26-year**
+    respected Sims-content brand: programmer, artist, publisher, and community leader. With his wife
+    **Heather Alvey** (née Castello — **SimFreaks**) he still ships **tour-de-force magnum-opus
+    expansion packs** like **Zombie Sims** for The Sims 1. He also worked with **Will Wright at
+    Gallium Studios** (Will & Lauren Elliott's studio behind **Proxi**).
+  known_for:
+    - "SimSlice / SliceCity — SimCity running inside The Sims (the Lilliputian city in your back yard)"
+    - "Object suites + deep SimAntics programming; ~26-year Sims-content brand"
+    - "Zombie Sims (with Heather) — current magnum-opus expansion-pack work"
+    - "Worked with Will Wright at Gallium Studios (Proxi)"
+
+connections:
+  heather_alvey: "Married to **Heather Alvey** (née Castello — **SimFreaks**). Two partner ~26-year Sims-content brands; co-author of Zombie Sims."
+  slice_city_precedent: "SliceCity is the **shipped precedent** for Simopolis data portability — real nested simulation, not a cosmetic prop. See repo-shows/INDEX.yml#bridges_architecture + process/trails/send-code-not-commands.md."
+  will_gallium: "Worked with **Will Wright** at **Gallium Studios** (the indie studio Will founded with Lauren Elliott; AI life-sim **Proxi**, built in Unity)."
+  don_collab: "Don's longtime friend/collaborator — **SimProv Wedding Playset** (with Heather, SimBabes, others) and the first user of Don's **Micropolis content-management & publishing system** for his back-catalog + new content."
+
+support:
+  why_it_matters: "Steve & Heather are **independent creators** who have paid the mortgage for years via **subscriptions + content sales + side jobs**. A Repo Show should drive **real fans and subscribers** to them — non-extractive lift, like sincere praise that sends people to buy."
+  how: "Feature SliceCity + the catalog live; link their sites/stores as storefronts; spotlight subscriptions so the audience can directly support the work."
+
+show_suggestions:
+  - { seed: ../../repo-shows/heather-steve-alvey/, what: "The Alveys' whole-career show — SimSlice/SliceCity, SimFreaks, Zombie Sims, 26 years of artisanal UCC — and how to keep it thriving (Micropolis publishing; subscriptions). Flagship episode: Afterlife × ZombieSims." }
+
+sources:
+  web:
+    - "https://www.simfreaks.com/   # SimFreaks (shared brand storefront)"
+  papers: []
+
+see_also:
+  - { path: ../heather-alvey/, why: "Partner; SimFreaks; co-author of Zombie Sims" }
+  - { path: ../will-wright/, why: "Worked with Will at Gallium Studios (Proxi)" }
+  - { path: ../don-hopkins/, why: "Host — SimProv + Micropolis publishing collaborator" }
+  - { path: ../../repo-shows/heather-steve-alvey/, why: "Their show" }
+  - { path: ../../process/trails/send-code-not-commands.md, why: "SliceCity = send code as content; Simopolis precedent" }

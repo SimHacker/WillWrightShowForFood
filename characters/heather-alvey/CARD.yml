@@ -14,10 +14,10 @@ meta:
   card_type: guest_skills
 card:
   name: Heather Alvey
-  title: SimFreaks Teacher
-  rarity: uncommon
-  signifier: ✨
-  flavor: Grandmother who'd rather mod Sims objects than knit — community as classroom.
+  title: Founder of SimFreaks
+  rarity: rare
+  signifier: 🧟
+  flavor: 26 years of artisanal Sims content — objects that carry their own story.
 abilities:
 - id: SIMFREAKS
   name: SimFreaks

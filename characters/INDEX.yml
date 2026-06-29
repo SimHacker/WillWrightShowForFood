@@ -76,7 +76,8 @@ guests:
   eric-hedman: { invitation_status: not_yet_asked, show_seed: repo-shows/eric-hedman/ }
   gary-drescher: { invitation_status: draft, show_seed: repo-shows/gary-drescher/, note: "Made-Up Minds — the schema mechanism (constructivist AI); Good and Real; MIT AI Lab/Minsky orbit; Leela adviser + Henry's friend (Python schema-factory reimpl); remake it for the LLM era" }
   golan-levin: { invitation_status: not_yet_asked }
-  heather-alvey: { invitation_status: not_yet_asked, show_seed: repo-shows/heather-steve-alvey/, note: "SimFreaks + Steve Alvey SimSlice" }
+  heather-alvey: { invitation_status: draft, show_seed: repo-shows/heather-steve-alvey/, note: "SimFreaks founder (née Castello) — ~26-year Sims content brand; w/ Steve Alvey (SimSlice/SliceCity); Zombie Sims; worked with Will at Gallium (Proxi); Don's SimProv + Micropolis-publishing collaborator. Independent creator — drive fans/subscriptions." }
+  steve-alvey: { invitation_status: draft, show_seed: repo-shows/heather-steve-alvey/, note: "SimSlice / SliceCity — SimCity running INSIDE The Sims (the shipped precedent for Will's data-portability/nested-games vision); ~26-year Sims content brand; Zombie Sims w/ Heather; worked with Will at Gallium (Proxi); Don's SimProv + Micropolis-publishing collaborator. Independent creator — drive fans/subscriptions." }
   hugh-daniel: { invitation_status: memorial, note: "deceased (1962–2013) — MEMORIAL MODE: early WELL sysop; Xanadu; GoodNeWS→HyperNeWS→HyperLook; NeWS; FreeS/WAN; discussants: Ted Nelson, Don" }
   james-gosling: { invitation_status: not_yet_asked }
   jamie-doornbos: { invitation_status: draft, show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml, note: "Lead programmer on The Sims (Maxis); principal architect of Sim behavior/AI (SimAntics); Don's Sims teammate" }

@@ -20,13 +20,22 @@ development to fans + devs, and **reincarnating** the classic Sims tools (SimSho
 RugOMatic, body/head/wig editors…) as living, open, optionally **AI-orchestrated** apps. Their sites
 become storefronts; the community keeps making and selling new work.
 
+## Support independent creators (the point)
+
+Heather and Steve are **independent creators** who've paid the mortgage for years on **subscriptions,
+content sales, and side jobs**. This show is a **non-extractive lift** — celebrate the work and send
+real **fans and subscribers** their way ([simfreaks.com](https://www.simfreaks.com/)). Both also
+worked with **Will Wright at Gallium Studios** (Proxi).
+
 ## In this directory
 
-- [`afterlife-zombie-bridge.yml`](afterlife-zombie-bridge.yml) — the show seed: concept, guests,
-  the two-way soul ledger, *They Are Billions*-style horde pressure, the Micropolis publishing
-  system, and how it lifts their sites/tools.
+- [`SHOW.yml`](SHOW.yml) — the **whole-career show** about both Alveys and all their projects
+  (SimFreaks, SimSlice/SliceCity, Zombie Sims, the Gallium chapter), framed to drive fans + the
+  Micropolis publishing system. Episodes listed inside.
+- [`afterlife-zombie-bridge.yml`](afterlife-zombie-bridge.yml) — the **flagship episode**: the
+  two-way soul ledger, *They Are Billions* horde pressure, and the Micropolis publishing angle.
 
-Consent **not yet asked**; guest character dirs (`characters/heather-alvey/`, `characters/steve-alvey/`)
-will follow only with consent.
+Guests: [`characters/heather-alvey/`](../../characters/heather-alvey/) ·
+[`characters/steve-alvey/`](../../characters/steve-alvey/). Consent **not yet asked**.
 
 — Don Hopkins, Micropolis Class

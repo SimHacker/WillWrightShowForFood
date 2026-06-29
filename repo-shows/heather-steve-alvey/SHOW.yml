@@ -1,0 +1,49 @@
+# SHOW — Heather & Steve Alvey — 26 Years of Sims Magic (SimFreaks × SimSlice)
+# Whole-career show about BOTH and ALL their projects. The Afterlife × ZombieSims bridge is one
+# (flagship) episode — see afterlife-zombie-bridge.yml. Inherits from the SHOW skill (/skills/repo-show).
+
+show:
+  id: heather-steve-alvey
+  title: "A Repo Show with Heather & Steve Alvey — 26 Years of Sims Magic"
+  type: group
+  host: Don Hopkins
+  guests: ["Heather Alvey (SimFreaks)", "Steve Alvey (SimSlice / SliceCity)"]
+  character: [characters/heather-alvey/, characters/steve-alvey/]
+  topic: "The full Alvey story — two partner ~26-year Sims-content brands (SimFreaks + SimSlice/SliceCity), all their projects, and how to keep independent creators thriving. Non-extractive lift: drive real fans + subscribers."
+  status: seed
+  consent: not_yet_asked
+  likelihood: "warm — longtime friends + collaborators (SimProv; Micropolis publishing)"
+
+why_them:
+  simslice_slicecity: "Steve's **SliceCity** — a Lilliputian **SimCity running inside The Sims**, deeply integrated: the shipped precedent for Will Wright's data-portability / games-nested-in-games vision (1996)."
+  simfreaks: "Heather's **SimFreaks** (née Castello) — one of the longest-running, most respected Sims custom-content houses: object suites, deep SimAntics, community leadership."
+  still_shipping: "Still making tour-de-force magnum-opus expansion packs — e.g. **Zombie Sims** for The Sims 1."
+  gallium: "Both worked with **Will Wright at Gallium Studios** (Will & Lauren Elliott's studio; AI life-sim **Proxi**, in Unity)."
+  don_history: "Don's longtime friends/collaborators — **SimProv Wedding Playset** (with SimBabes + others); first users of Don's **Micropolis content-management & publishing system**."
+
+# THE POINT (say it plainly): these are independent creators who've paid the mortgage for years on
+# subscriptions + content + side jobs. The show is a NON-EXTRACTIVE LIFT — celebrate the work and
+# send real fans/subscribers their way.
+support_them:
+  drive_fans: "Spotlight their sites as **storefronts**; point the audience to **subscriptions + content** they can buy to directly support the work."
+  micropolis_publishing: "Don's **Micropolis content-management & publishing system** — built for their enormous artisanal back-catalogs + new streams (and Don's own): republish, reopen development to fans/devs, reincarnate the classic tools (SimShow, Sim Transmogrifier, RugOMatic, body/head/wig editors), optionally AI-orchestrated."
+  ethos: "Sincere praise that sends people to buy. No extraction, no exploitation — lift."
+
+episodes:
+  - { id: whole-career, what: "The retrospective + showcase: SliceCity live, the SimFreaks catalog, Zombie Sims, the Gallium/Will chapter, 26 years of craft — and where it goes next." }
+  - { id: afterlife-zombie-bridge, doc: afterlife-zombie-bridge.yml, what: "★ FLAGSHIP playful episode — Afterlife 'hell is full' × ZombieSims horde, drain souls by religion into SimFreaks/SimSlice zombie skins; They Are Billions scale." }
+  - { id: data-portability, what: "SliceCity → Simopolis: widen nested games to real save files + emulators across many games (repo-shows/INDEX.yml bridges_architecture)." }
+
+format:
+  live: true
+  run_code: true
+  audience_qa: true
+
+ties_to:
+  - ../../characters/heather-alvey/
+  - ../../characters/steve-alvey/
+  - ../../characters/will-wright/
+  - ../../characters/don-hopkins/
+  - ../../process/trails/send-code-not-commands.md
+  - ../INDEX.yml          # bridges_architecture (Simopolis; SliceCity precedent)
+  - afterlife-zombie-bridge.yml
