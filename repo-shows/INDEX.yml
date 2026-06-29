@@ -87,6 +87,8 @@ bridges_architecture:
     - "2. Then shortcut optimizations + mutual schema recognition between compatible games (direct fast paths, special-cased imports)."
   note: "So the bridge seeds below are all spokes on this hub; the ⇔ in each is shorthand for ⇔ Simopolis ⇔."
   the_frame: "The deep frame for all of this is biological: ../process/character-endosymbiosis.yml (games as cells, content as organelles in permeable membranes, Simopolis as the shared cytoplasm, schema mapping as currency exchange). Life builds complexity by merger — so do we."
+  precedent: "NOT hypothetical — **Steve Alvey's SimSlice / SliceCity** already shipped the deep version years ago: **SimCity running *inside* The Sims**, fully integrated. That's Will Wright's long-aspired data-portability / games-nested-in-games idea (stated in his 1996 Winograd 'Interfacing to Microworlds' talk) made real. See characters/heather-alvey/ + repo-shows/heather-steve-alvey/."
+  shallow_vs_deep: "SHALLOW = a cosmetic 'computer in The Sims plays a toy SimCity' (decorative; done before). DEEP = real nested simulations with data flowing between games — link actual SAVE FILES, run EMULATORS, edit save files to round-trip state. Simopolis is the deep version, generalized across as many games as possible (cf. game-bridge-mind-mirror.yml's emulated Apple ][ runtime)."
 
 axes_note: "A person appears in multiple shows (solo + group + bridge). Will especially anchors several. The collection holds multiple FORMATS: design-interview, series, group, bridge, game-show, and REUNION ('get the old band back together' — see ../process/old-band-back-together.yml: NeWS gang, Sims team, David Levitt crew, OpenLaszlo, the 2006 Eno circle)."
 

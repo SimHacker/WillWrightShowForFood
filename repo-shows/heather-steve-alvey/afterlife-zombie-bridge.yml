@@ -50,6 +50,15 @@ micropolis_publishing_system:
   reincarnate_tools: "Bring back the classic Sims content tools as living, open, optionally **AI-orchestrated** apps: SimShow, Sim Transmogrifier, RugOMatic, and body / head / wig editors — and more."
   principle: "Honor 26 years of artisanal UCC: preserve + republish the back catalog, AND give them (and the community) better tools to keep making + selling new work. Sites as storefronts; federation publishing."
 
+slice_city_precedent:
+  # Steve Alvey already SHIPPED the deep version of Will Wright's dream — credit it loudly.
+  claim: "**SimSlice / SliceCity** is the existing proof: years ago Steve Alvey built a **beautiful, fully functional, genuinely entertaining** implementation of **Will Wright's long-aspired data-portability / games-nested-in-games idea** (which Will articulated in his 1996 Winograd 'Interfacing to Microworlds' talk) — running **SimCity *inside* The Sims**, deeply integrated, not cosmetic."
+  shallow_vs_deep:
+    shallow: "A computer object in The Sims that 'plays' a toy SimCity/Sims — surface-level, decorative (it's been done)."
+    deep: "What SliceCity did and what Simopolis proposes: real simulations nested and **data flowing between games** — link **actual save files**, run **game emulators**, and **edit save files** to round-trip characters/state."
+  ambition: "Generalize beyond SimCity ⇔ The Sims to **as many games as possible** — the Simopolis hub-and-spoke (see ../repo-shows/INDEX.yml bridges_architecture; game-bridge-*.yml, incl. the Mind Mirror emulated-runtime bridge)."
+  on_show: "Have Steve walk through how SliceCity actually nests the sim; then design live how to widen it to save-file + emulator bridges across the catalog."
+
 interview_heather:
   segment: "Zombie provenance — artisanal vs industrial"
   ask: |
