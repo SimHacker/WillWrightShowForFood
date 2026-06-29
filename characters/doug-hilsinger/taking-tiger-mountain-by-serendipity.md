@@ -76,11 +76,17 @@ few days later, while Brian was still in town. So that evening's gathering at **
 
 Then, **minutes after leaving Scott's place**, pure coincidence took over. Driving home from SF back
 to Berkeley, Don thought: *the night is young, I've got nothing to do — why not finally explore a
-renowned San Francisco bar I've never been to, right on my route toward the highway?* So he stopped
-at **The Eagle** — the famous, historic SF gay **bear** bar, an inclusive, community-foundational
-institution. It was practically empty, and the friendly bartender was **Doug** — whom Don was
-**meeting in person for the first time**, though they'd unknowingly shared the audience at that very
-**Long Now talk** a few days before (Doug, it seems, recognized Don as the guy who'd asked a
+renowned San Francisco spot I've never been to, right on my route toward the highway?* So, on a
+whim, he stopped at **The Eagle** — the historic SF gay **bear** bar. It can look intimidating to
+the uninitiated (plenty of leather daddies and fetish gear on a crowded night), but it's actually
+**warm, inclusive, and completely non-threatening** — an open, diverse community with friendly,
+creative bartenders who welcome anyone in off the street, of any stripe. Warmly recommended. That
+night it happened to be nearly **empty** — which is exactly what gave Don and the bartender,
+**Doug**, the room and the quiet to actually meet and talk. *(Wandering into The Eagle, unprompted,
+as the interesting new place to check out is also about the most low-key, no-big-deal way to be out
+and at ease in the world — earnest, unashamed, matter-of-fact; read into it what you like.)* Don was
+**meeting Doug in person for the first time**, though they'd unknowingly shared the audience at that
+very **Long Now talk** a few days before (Doug, it seems, recognized Don as the guy who'd asked a
 question). They got to talking, hit it off, and landed on **Eno** and the talk.
 
 At some point Doug put on some music — **his own**, though he didn't say so. It *entranced* Don:
@@ -97,6 +103,12 @@ Doug gave Don a copy of the CD that night. That **one night in 2006 was the only
 have met.** (Don's reliable line back into this circle is **Will** — whom he keeps in touch with
 regularly in the SF Bay Area — and **Scott**, with whom he still collaborates. That's why a
 **reunion** inviting **Brian**, **Will**, and **Doug** is the dream.)
+
+*A small what-if Don likes:* Brian has long been refreshingly open and fluid about orientation, and
+Don suspects he'd have been game to tag along — if only Don had had the psychic foresight to suggest
+the three of them (Don, Brian, Spot) head to The Eagle together after Scott's, instead of driving
+off alone. Maybe, if this reunion ever lands everyone in the same city, they'll finally go out
+nightlifing together — London, Amsterdam, or San Francisco, who knows? A girl can always dream. 🌈
 
 ## Credit where it's due
 
