@@ -9,7 +9,7 @@ show:
   guests: ["Scott Draves"]
   dream_guests: ["Brian Eno", "Will Wright"]
   character: characters/scott-draves/
-  topic: "Generative and evolutionary art, end to end: the Fractal Flame algorithm → Electric Sheep (distributed render farm bred by a genetic algorithm + human votes) → Dreams in High Fidelity → Infinidream. Open source, collective intelligence, and where AI image generation fits."
+  topic: "Generative and evolutionary art, end to end — from his Brown thesis language **fnord** (functional description of higher-D form) → the Fractal Flame algorithm → Electric Sheep (distributed render farm bred by a genetic algorithm + human votes) → Dreams in High Fidelity → Infinidream. Open source, collective intelligence, and where AI image generation fits."
   status: seed
   consent: not_yet_asked
   likelihood: "high — old friend; recent Electric Sheep / Unity collaboration with Don"
@@ -17,12 +17,14 @@ show:
 stretch_goal: "🐅 Track down Doug Hilsinger and invite him to the Spot / Brian / Will reunion Repo Show — honoring music by transforming it, with the man whose Tiger Mountain cover Eno himself loved. Outreach sent, no reply yet. See ../../characters/doug-hilsinger/"
 
 why_him:
+  fnord_origin: "It started with **fnord** — Scott's 1990 Brown thesis, a functional language for describing higher-dimensional geometry (co-written with Nick Thompson; the workhorse for Thomas Banchoff's 4D art). The deep root of describing generative form as data — and a perfect Discordian in-joke (the word you're conditioned not to see)."
   electric_sheep: "Electric Sheep (1999– ): thousands of computers worldwide collaboratively render; humans vote; a genetic algorithm breeds the favorites. 'The collective dream of a cyborg mind.'"
   flame: "Invented + open-sourced the Fractal Flame algorithm (1992; flam3). On a Paul Simon cover and Hawking's The Grand Design; SIGGRAPH 2008 'Evolve' identity."
   hifi_dreams: "Dreams in High Fidelity — an evolving painting; MoMA, Google, Adler Planetarium."
   infinidream: "2026 reboot: Generation 248, 1080p/60fps, phone remote, generative-AI platform, open source."
 
 dream_segments:
+  - "fnord — the origin: resurface Scott's 1990 functional geometry language (with Nick Thompson, behind Banchoff's 4D art) and trace the through-line fnord → Flame → Sheep → Infinidream (describe form as data, then render + evolve it). Plus the Discordian joke: the language named after the word you can't see."
   - "Read the original Flame papers together; run flam3 / Electric Sheep live and watch the flock evolve."
   - "Collective intelligence: voting, genetics, distributed rendering — the cyborg mind, then and now."
   - "From hand-authored math to AI image generation: what Infinidream changes, and what it keeps."

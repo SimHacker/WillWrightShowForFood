@@ -14,11 +14,15 @@ introduced Brian to Scott, and three minds that all think in **generative system
 bouncing ideas around an apartment full of evolving sheep. This show picks that thread back up —
 twenty years later, with AI image generation finally catching up to what Scott was doing by hand.
 
-The arc is the whole point: **Fractal Flame** (the math, open-sourced in 1992) → **Electric Sheep**
-(a planet-sized render farm bred by a genetic algorithm and human votes) → **Dreams in High
+The arc is the whole point, and it starts deeper than the Flame: **`fnord`** (Scott's 1990 Brown
+thesis — a functional language for describing higher-dimensional geometry, co-written with Nick
+Thompson, the workhorse behind Thomas Banchoff's 4D art; named, Discordian-style, after the word
+you're conditioned not to see) → **Fractal Flame** (the math, open-sourced in 1992) → **Electric
+Sheep** (a planet-sized render farm bred by a genetic algorithm and human votes) → **Dreams in High
 Fidelity** (an evolving painting in MoMA and Google) → **Infinidream** (2026, AI-native, still open
-source). Read the old papers, run the Sheep live, and ask the real question: how do you grow beauty
-from simple rules, a crowd of minds, and a lot of machines?
+source). One idea throughout: *describe generative form as data, then render and evolve it.* Read the
+old papers, maybe resurrect fnord, run the Sheep live, and ask the real question: how do you grow
+beauty from simple rules, a crowd of minds, and a lot of machines?
 
 ## Start anywhere
 

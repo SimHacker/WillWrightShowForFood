@@ -21,13 +21,16 @@ talk in public, and the AI does what it's good at: turning ideas into running co
 
 You're an easy yes in my head, so let me just sketch what I'd love to do.
 
-**The arc is your life's work, end to end.** The **Fractal Flame** algorithm you open-sourced in
-1992 → **Electric Sheep**, that planet-sized render farm bred by a genetic algorithm and human
-votes ("the collective dream of a cyborg mind") → **Dreams in High Fidelity** → and now
-**Infinidream**. We read the old Flame papers, run the Sheep live on stream, and ask the real
-question: how do you grow beauty from simple rules, a crowd of minds, and a lot of machines? And
-where does today's AI image generation actually fit — what does Infinidream change, and what does
-it keep?
+**The arc is your life's work, end to end.** It goes all the way back to **`fnord`** — yes, *that*
+fnord, your Brown thesis language for describing geometry with Nick — which I'd totally forgotten you
+named after the word you're not supposed to see (that's how fnords work). From there: the **Fractal
+Flame** algorithm you open-sourced in 1992 → **Electric Sheep**, that planet-sized render farm bred
+by a genetic algorithm and human votes ("the collective dream of a cyborg mind") → **Dreams in High
+Fidelity** → and now **Infinidream**. One idea the whole way: *describe generative form as data, then
+let it render and evolve.* We read the old Flame papers, maybe resurrect fnord, run the Sheep live on
+stream, and ask the real question: how do you grow beauty from simple rules, a crowd of minds, and a
+lot of machines? And where does today's AI image generation actually fit — what does Infinidream
+change, and what does it keep?
 
 **Iterated graphical systems + feedback.** It's always the feedback. I'd love to jam on the whole
 family: your sheep, my CAM6 cellular-automata machine, Sandspiel, video feedback, music-reactive

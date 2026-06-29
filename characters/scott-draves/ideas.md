@@ -18,9 +18,11 @@ Sheep as **Infinidream**. Perfect timing for a generative-art show with running 
 
 ### 1. The whole arc, end to end
 
+**fnord** (Brown, 1990 — the functional geometry language he co-wrote with Nick Thompson) →
 **Fractal Flame** (the math, open-sourced 1992) → **Electric Sheep** (distributed, vote-bred) →
 **Dreams in High Fidelity** (an evolving painting) → **Infinidream** (2026, AI-native). Read the
-old Flame papers, run the Sheep live, and trace how the idea mutated across 30 years.
+old Flame papers, run the Sheep live, and trace how the idea mutated across 35 years. The constant:
+**describe generative form as data, then render and evolve it.**
 
 ### 2. Collective intelligence, made literal
 
@@ -68,9 +70,21 @@ decode-vs-playback speed, WebGPU/Metal, Syphon (with Anton Marini). Show the gut
 The night Don brought **Brian Eno** to Scott's apartment after the Long Now talk. Generative across
 media — Sheep, ambient music, simulation — with **Brian** and **Will** as dream co-guests.
 
-### 10. Origins → now
+### 10. fnord — the origin (and the joke)
 
-Silicon Valley in the early '90s (Flame on a SparcStation II, Don's CAM6 platform), Andy Witkin's
+Before the Sheep there was **`fnord`** — Scott's 1990 Brown BS thesis, *"fnord (visualization of
+mathematics and geometry),"* a **functional language for describing form** he co-wrote with **Nick
+Thompson** (Don's housemate, the guy who introduced them) and that became the **workhorse for Thomas
+Banchoff's** higher-dimensional-geometry art — even an animation on *Star Trek: TNG*. It's the deep
+root of everything after: *describe generative form as data, then render and evolve it.* And the
+name is the perfect hacker koan — a **fnord** (Shea & Wilson's *Illuminatus!*) is the word you're
+conditioned **not to perceive**. Fittingly, Don had completely forgotten Scott named it that until it
+resurfaced. *That's how fnords work.* Worth resurrecting/reimagining live.
+
+### 10b. Origins → now
+
+Silicon Valley in the early '90s (Flame on a SparcStation II, Don's CAM6 platform — the Bay Area
+*before* it enshittified and scattered the techno-hippies to Amsterdam and beyond), Andy Witkin's
 graphics lab at CMU, Don's Lisp-UI/SimCity-porting era — and the long arc from there to generative
 AI. The friendship as a through-line for the whole field.
 
