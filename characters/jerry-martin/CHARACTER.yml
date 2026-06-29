@@ -7,7 +7,7 @@ character:
   type: invitation
   signifier: "🎵"
   status: living
-  field: "Composer — music for The Sims and SimCity 3000 (Maxis)"
+  field: "Composer, producer & sound designer — The Sims, SimCity 3000 & SimCity 4 (Maxis Studio Audio Director / Lead Composer); now Jerry Martin Music / BoomBamBoom"
   home: characters/jerry-martin/
 
 representation:
@@ -22,20 +22,24 @@ invitation:
   show_seed: repo-shows/REPO-SHOWS.yml#music-and-theory.yml
 
 bio:
-  summary: "**Jerry Martin** is a composer best known for writing the music for **The Sims** and **SimCity 3000** at Maxis — scores that gave those digital worlds their warm, lived-in feel. (Don's colleague on the Maxis games.)"
+  summary: "**Jerry Martin** is a composer, producer, and sound designer best known for the music of **The Sims**, **SimCity 3000**, and **SimCity 4** — scores that gave those worlds their warm, lived-in feel. At the **Maxis** division of EA he was **Studio Audio Director and Lead Composer**. He founded **Musicontrol** (original music + sound for 200+ national TV/radio commercials — AT&T, Toyota, NBA, Honda), holds a BA from **CSU Hayward** and an MFA from the **Center for Contemporary Music at Mills College**, and now releases his own work as **Jerry Martin Music** and via his **BoomBamBoom** outlet (recent albums *The House Always Wins* and *Be Tonal*). Don's Maxis colleague on The Sims."
 
 connections:
   the_sims: "Composed music for The Sims; the score that made digital houses feel like homes."
-  simcity: "Composed the SimCity 3000 soundtrack."
-  don: "Don Hopkins's colleague at Maxis; part of the original Sims team reunion (see ../../process/old-band-back-together.yml)."
+  simcity: "Composed the SimCity 3000 + SimCity 4 soundtracks (his own Maxis credits)."
+  don: "Don's Maxis colleague — they worked together on **The Sims** (Jerry on music, Don on gameplay). Part of the original Sims team reunion (see ../../process/old-band-back-together.yml)."
   david_levitt: "Paired with David Levitt for a music + theory Repo Show."
+  micropolis_music_use: "Recently Jerry gave Don permission to use a piece of his music — 'Chill Resolve' (from *Be Tonal*) — for **Micropolis**. Don performed live cellular automata with SimCity tile sets to it, and it fits PERFECTLY (https://www.youtube.com/watch?v=319i7slXcbI). A recent music-use permission, not a Maxis collaboration."
+  yoot_tower_music_use: "Jerry also granted Don rights to use 'Tinker Toy Joy' as an exclusive Yoot Tower Kickstarter reward (and shared SimCity 4 cuts like 'Re-Development') — likewise music-use permissions, not collaborations."
 
 boost:
   why: |
-    Don especially wants to lift Jerry up. Jerry promotes his own **EXCELLENT** music on his website,
-    and a Repo Show — with sincere praise and genuine appreciation — gives that work real exposure.
-    The Sims and SimCity 3000 scores are the warm, lived-in soul of those worlds.
-  intent: "Genuine, generous amplification — not extractive; his call on what's shared. (Add his music-site URL when handy.)"
+    Don is genuinely enthusiastic about Jerry — and Jerry **actively promotes his own EXCELLENT
+    music**, so real exposure plus sincere praise and appreciation is exactly what he wants. Site:
+    **jerrymartinmusic.com**; his **BoomBamBoom** outlet (boombamboom.com) even gives away the
+    *Sims 1 Build Mode Music Pak* (320kbps MP3s + sheet music); recent albums *The House Always
+    Wins* and *Be Tonal*. His Sims / SimCity scores are the warm, lived-in soul of those worlds.
+  intent: "Genuine, generous amplification — welcomed; he markets his own work. His call on what's shared."
 
 show_suggestions:
   - { seed: ../../repo-shows/REPO-SHOWS.yml#music-and-theory.yml, what: "Music + theory — with David Levitt. How game music is composed, scored, and made to feel alive." }
@@ -44,7 +48,11 @@ show_suggestions:
 sources:
   wikipedia: null
   web:
-    - "https://www.mobygames.com/search/?q=Jerry+Martin"
+    - { title: "Jerry Martin Music (official)", url: "https://jerrymartinmusic.com/" }
+    - { title: "BoomBamBoom (his music outlet; free Sims 1 Build Mode Music Pak)", url: "https://boombamboom.com/" }
+    - { title: "Micropolis CA performance to 'Chill Resolve' (Be Tonal)", url: "https://www.youtube.com/watch?v=319i7slXcbI" }
+    - { title: "MobyGames credits", url: "https://www.mobygames.com/search/?q=Jerry+Martin" }
+  albums: ["The House Always Wins", "Be Tonal"]
   papers: []
   blogs: []
 
