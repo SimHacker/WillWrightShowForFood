@@ -93,7 +93,12 @@ the compliment.
 > *transformed* by Doug; Don loved Doug's work without knowing Doug had made it. Sincerity all the
 > way down. 🐅
 
-Doug gave Don a copy of the CD that night. Don has treasured it — and the story — ever since.
+Doug gave Don a copy of the CD that night. Don has treasured it — and the story — ever since. That
+**one night in 2006 was the only time Don and Doug have met**; they haven't been in touch since.
+(Don met **Brian** in that same 2006 stretch and hasn't seen him since either. The one relationship
+that **kept going** is **Don ↔ Spot** — decades of correspondence and recent collaboration — which
+is exactly why a **reunion** is the dream: Don and Scott would love to get the old crew back
+together and invite **Brian**, **Will**, and **Doug**.)
 
 ## Why it belongs in the show
 
@@ -109,10 +114,11 @@ Doug gave Don a copy of the CD that night. Don has treasured it — and the stor
 
 ## Don's wish
 
-Don has **reached out to Doug and not yet heard back** (as of 2026). The hope is simple: **sing
-Doug's praises**, play the work, tell this story on the show, and — if Doug's up for it — have him
-join Brian, Scott, and Will to talk about honoring music by transforming it. Doug, if you ever read
-this: thank you. The door is wide open. 🐅
+Don and Doug met just that once, in 2006, and haven't been in touch since; Don has **reached out and
+not yet heard back** (as of 2026). The hope is simple: **sing Doug's praises**, play the work, tell
+this story on the show, and — if Doug's up for it — have him join **Don, Scott (Spot), Brian, and
+Will** for a reunion about honoring music by transforming it. Doug, if you ever read this: thank
+you. The door is wide open. 🐅
 
 ## Listen + sources
 
