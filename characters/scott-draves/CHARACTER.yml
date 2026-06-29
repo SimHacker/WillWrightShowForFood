@@ -96,6 +96,8 @@ sources:
 
 see_also:
   - { path: ideas.md, why: "Conversation hooks for the show — grounded in Scott's real work" }
+  - { path: ../jim-crutchfield/, why: "Video feedback + edge of chaos — dream CA/feedback co-guest" }
+  - { path: ../norman-margolus/, why: "CAM-6 / cellular-automata machines — dream CA co-guest" }
   - { path: ../will-wright/, why: "Will did the 2006 Long Now talk with Brian Eno; possible reunion host + Eno contact" }
   - { path: ../brian-eno/, why: "Dream guest — Don introduced Brian to Scott in 2006; generative-art kinship" }
   - { path: ../don-hopkins/, why: "Host — CMU friend, Electric Sheep Unity collaborator" }

@@ -1,0 +1,91 @@
+# CARD — James P. Crutchfield (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: jim-crutchfield
+  name: James P. Crutchfield
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: James P. Crutchfield
+  title: The Cartographer of Chaos
+  rarity: rare
+  signifier: 🦋
+  flavor: Point the camera at its own screen — and read the geometry of what blooms.
+abilities:
+- id: VIDEO-FEEDBACK
+  name: Video Feedback
+  type: activated
+  mana: '{U}{R}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: videoFeedback
+    signature: videoFeedback(camera, screen) → spatiotemporal chaos you can steer
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Close the loop camera→screen→camera and let order, chaos, and pattern fight it out live.
+  verifiable: "'Space-time dynamics in video feedback' (Physica D, 1984)"
+  combos_with:
+  - DON-CELLULAR-AUTOMATA
+- id: EDGE-OF-CHAOS
+  name: Edge of Chaos
+  type: activated
+  mana: '{G}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: edgeOfChaos
+    signature: edgeOfChaos(rules) → computation living between order and randomness
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Evolve cellular automata until they actually compute — find the sweet spot between frozen and random.
+  verifiable: "Crutchfield & Mitchell, 'The evolution of emergent computation' (PNAS, 1995)"
+  combos_with:
+  - FRACTAL-FLAME
+- id: GEOMETRY-FROM-TIME
+  name: Geometry from a Time Series
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: reconstructAttractor
+    signature: reconstructAttractor(signal) → the hidden shape of the dynamics
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Rebuild a system's hidden attractor from a single stream of measurements.
+  verifiable: "Packard, Crutchfield, Farmer, Shaw, 'Geometry from a Time Series' (PRL, 1980)"
+  combos_with: []
+- id: COMPUTATIONAL-MECHANICS
+  name: Computational Mechanics
+  type: activated
+  mana: '{U}{B}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: epsilonMachine
+    signature: epsilonMachine(process) → the minimal model of its intrinsic computation
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Discover the smallest machine that captures a process's structure and stored information.
+  verifiable: "Computational mechanics / ε-machines / statistical complexity"
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: ../../repo-shows/jim-crutchfield/invitation.md
+  why: Public invitation document (in the show dir)

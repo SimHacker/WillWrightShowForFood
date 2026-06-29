@@ -1,0 +1,77 @@
+# Norman Margolus — invitation portrayal. NOT Norman Margolus.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: norman-margolus
+  name: "Norman Margolus"
+  type: invitation
+  signifier: "🔲"
+  status: living
+  field: "Physicist & computer scientist — cellular automata, reversible computing, CAM-6; co-author of *Cellular Automata Machines*"
+  home: characters/norman-margolus/
+  aliases: ["Norm Margolus"]
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+  note: "Public-source portrayal. Friend of Henry Minsky; Don met him in Boston (visiting Henry) and talked CA. Consent not yet asked."
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: ../../repo-shows/norman-margolus/invitation.md
+  show_seed: repo-shows/norman-margolus/
+  contact_path: "Via Henry Minsky (good friend, MIT)."
+  likelihood: "good — friend of Henry's; Don already met him in Boston and discussed exactly this"
+
+bio:
+  summary: |
+    **Norman Margolus** is a Canadian-American physicist and computer scientist (MIT PhD in physics,
+    1987, under **Edward Fredkin**), a research affiliate at **MIT CSAIL**, known for foundational
+    work on **cellular automata** and **reversible computing**. With **Tommaso Toffoli** he built
+    the **CAM-6** cellular-automata machine and co-wrote ***Cellular Automata Machines: A New
+    Environment for Modeling*** (MIT Press, 1987) — the book and hardware that taught a generation
+    (including Don) to *do* CA. He invented the **block cellular automaton** and the **Margolus
+    neighborhood**, built reversible, universal CA simulations of **billiard-ball computers**
+    (the **Critters** rule), and — with **Lev Levitin** — proved the **Margolus–Levitin theorem**,
+    a fundamental physical speed limit on computation. He helped organize the seminal 1982
+    **Physics & Computation** meeting, worked with **Tom Knight** on the "Flattop" billiard-ball
+    chip, contributed to early **reversible quantum gate** logic, and founded the storage company
+    **Permabit**. Recurring themes: **computronium** and **programmable matter** — computing as
+    physics, physics as computing.
+  known_for:
+    - "CAM-6 cellular-automata machine + *Cellular Automata Machines* (with Tommaso Toffoli, 1987)"
+    - "Block cellular automata + the Margolus neighborhood; the Critters rule"
+    - "Reversible & universal cellular automata; billiard-ball computers"
+    - "Margolus–Levitin theorem (physical speed limit of computation, with Lev Levitin)"
+    - "Reversible computing; computronium / programmable matter; Permabit"
+
+connections:
+  cam6_kinship: "The direct link: Don built a **CAM6 emulator** — a CAM6-software-compatible (per the *Cellular Automata Machines* book) FORTH-programmable CAM orchestrator + lookup-table rule compiler on the Sun (NeWS + C), later ported widely. Norman & Toffoli's CAM-6 and book are literally the source Don's work follows."
+  henry_minsky: "A good friend of **Henry Minsky** (MIT). Don met Norman a few years ago while visiting Henry in **Boston**, and they talked through exactly this web of ideas — cellular automata, reversible computing, the physics of computation. Henry is the natural bridge."
+  mit_nexus: "MIT CSAIL; the Fredkin–Toffoli–Knight reversible-computing lineage — part of the broader MIT AI/CS nexus Henry connects into."
+  generative_kinship: "Cellular automata as a shared language with Scott Draves (generative art) and Jim Crutchfield (edge of chaos, evolving CA)."
+
+show_suggestions:
+  - { seed: ../../repo-shows/norman-margolus/, what: "Cellular Automata Machines, live: CAM-6 and the book, block CA / Margolus neighborhood / Critters, reversible & billiard-ball computing, and the Margolus–Levitin limit — with Don's CAM6 emulator running on stream." }
+  - { seed: ../../repo-shows/jim-crutchfield/, what: "Joint CA show with Jim Crutchfield — reversible cellular-automata machines meet the edge of chaos." }
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Norman_Margolus"
+  web:
+    - "https://people.csail.mit.edu/nhm/   # MIT CSAIL page"
+  books:
+    - "Toffoli, T. & Margolus, N. (1987). *Cellular Automata Machines: A New Environment for Modeling*. MIT Press."
+  papers:
+    - "Margolus, N. (1984). 'Physics-like models of computation.' Physica D 10:81–95."
+    - "Margolus, N. & Levitin, L.B. (1998). 'The maximum speed of dynamical evolution.' Physica D 120:188–195."
+    - "Margolus, N. (1987). *Physics and Computation* (MIT PhD thesis)."
+
+see_also:
+  - { path: ../jim-crutchfield/, why: "Cellular automata / edge of chaos — joint CA show" }
+  - { path: ../scott-draves/, why: "Generative art + cellular automata kinship" }
+  - { path: ../henry-minsky/, why: "Norman's friend; the bridge to invite him; MIT nexus" }
+  - { path: ../don-hopkins/, why: "Host — built a CAM6 emulator from the Margolus/Toffoli book" }
+  - { path: ../../repo-shows/norman-margolus/, why: "Show seed" }

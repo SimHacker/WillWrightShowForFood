@@ -1,0 +1,41 @@
+# SHOW — Jim Crutchfield — Edge of Chaos (video feedback, CA, computational mechanics)
+# Planted seed. Inherits from the SHOW skill (/skills/repo-show).
+
+show:
+  id: jim-crutchfield
+  title: "A Repo Show with Jim Crutchfield — Edge of Chaos"
+  type: solo
+  host: Don Hopkins
+  guests: ["James P. Crutchfield"]
+  with: ["Scott Draves", "Norman Margolus"]   # dream co-guests for the CA/feedback jam
+  character: characters/jim-crutchfield/
+  topic: "Video feedback, evolving cellular automata, and the edge of chaos — iterated systems that compute. Recurse, digress, iterate. Built live alongside Don's CAM6 platform."
+  status: seed
+  consent: not_yet_asked
+
+why_him:
+  video_feedback: "Pioneered video feedback as a spatiotemporal dynamical system ('Space-time dynamics in video feedback', 1984) — the literal camera→screen→camera loop."
+  edge_of_chaos: "Edge of chaos + evolving cellular automata to perform computation (with Melanie Mitchell) — complexity living between order and randomness."
+  computational_mechanics: "Founded computational mechanics — the ε-machine: discover the intrinsic structure and hidden computation inside a process."
+  chaos_lineage: "UC Santa Cruz Dynamical Systems Collective (Farmer, Packard, Shaw); 'Geometry from a Time Series' (1980); the Eudaemonic Pie roulette story; a centerpiece of Gleick's *Chaos*."
+
+dream_segments:
+  - "Video feedback, live: close the camera→screen loop and steer spatiotemporal chaos in real time."
+  - "Edge of chaos: evolve cellular automata until they actually compute — frozen vs. random vs. the sweet spot."
+  - "Geometry from a time series: reconstruct a hidden attractor from one stream of measurements."
+  - "Computational mechanics: ε-machines — the minimal model of a process's intrinsic computation."
+  - "CA jam with Don's CAM6 + (dream) Scott Draves's generative art + Norman Margolus's CAM-6 / reversible CA."
+  - "Story turn: the Santa Cruz Chaos Cabal and the Eudaemonic Pie."
+
+format:
+  live: true
+  audience_qa: true
+  note: "Aspirational; shared turf (feedback, CA, edge of chaos) is the in. Consent not yet asked."
+
+ties_to:
+  - ../../characters/jim-crutchfield/
+  - ../../characters/jim-crutchfield/invitation.md
+  - ../../characters/norman-margolus/
+  - ../../characters/scott-draves/
+  - ../../characters/don-hopkins/
+  - ../norman-margolus/

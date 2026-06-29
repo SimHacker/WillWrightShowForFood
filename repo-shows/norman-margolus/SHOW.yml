@@ -1,0 +1,43 @@
+# SHOW — Norman Margolus — Cellular Automata Machines (reversible computing, CAM-6)
+# Planted seed. Inherits from the SHOW skill (/skills/repo-show).
+
+show:
+  id: norman-margolus
+  title: "A Repo Show with Norman Margolus — Cellular Automata Machines"
+  type: solo
+  host: Don Hopkins
+  guests: ["Norman Margolus"]
+  with: ["Jim Crutchfield", "Scott Draves"]   # dream co-guests for a CA summit
+  character: characters/norman-margolus/
+  topic: "Cellular automata machines, reversible computing, and the physics of computation — CAM-6, the Margolus neighborhood, billiard-ball computers, and the Margolus–Levitin limit. Don's CAM6 emulator (built from Norman's book) running live."
+  status: seed
+  consent: not_yet_asked
+  contact_path: "Via Henry Minsky (Norman's friend, MIT)."
+
+why_him:
+  cam6: "With Tommaso Toffoli, built the CAM-6 machine and wrote *Cellular Automata Machines* (MIT Press, 1987) — the book Don's CAM6 emulator follows."
+  reversible: "Invented the block cellular automaton + Margolus neighborhood; built reversible, universal CA (billiard-ball computers, the Critters rule)."
+  physics_of_computation: "Margolus–Levitin theorem (physical speed limit of computation); computronium / programmable matter; the Fredkin–Toffoli–Knight reversible-computing lineage."
+  personal: "Friend of Henry Minsky; Don met him in Boston (visiting Henry) and talked through all of this."
+
+dream_segments:
+  - "CAM-6, live: bring up Don's CAM6 emulator (a CAM6-software-compatible FORTH orchestrator + LUT rule compiler) and run classic rules from the book."
+  - "Block CA + the Margolus neighborhood: how partitioning makes a rule reversible."
+  - "Run it backward: reversible, universal CA and the Critters rule — no information lost."
+  - "Billiard-ball computers: universal computation from elastic collisions; the 'Flattop' chip with Tom Knight."
+  - "The Margolus–Levitin limit: how fast can anything compute? Energy as the bound."
+  - "Computronium & programmable matter — and a CA summit with Jim Crutchfield (edge of chaos) + Scott Draves (generative art)."
+
+format:
+  live: true
+  audience_qa: true
+  note: "Good odds via Henry. Consent not yet asked."
+
+ties_to:
+  - ../../characters/norman-margolus/
+  - ../../characters/norman-margolus/invitation.md
+  - ../../characters/jim-crutchfield/
+  - ../../characters/scott-draves/
+  - ../../characters/henry-minsky/
+  - ../../characters/don-hopkins/
+  - ../jim-crutchfield/

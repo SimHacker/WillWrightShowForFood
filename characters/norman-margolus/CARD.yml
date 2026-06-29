@@ -1,0 +1,91 @@
+# CARD — Norman Margolus (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: norman-margolus
+  name: Norman Margolus
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Norman Margolus
+  title: The Machinist of Cellular Worlds
+  rarity: rare
+  signifier: 🔲
+  flavor: Run the universe forward. Now run it backward — no information lost.
+abilities:
+- id: CAM-6
+  name: Cellular Automata Machine
+  type: activated
+  mana: '{R}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: cam6
+    signature: cam6(rule) → real-time cellular automata you can watch and steer
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Make cellular automata a live instrument — the hardware + book a generation learned CA from.
+  verifiable: "CAM-6 + *Cellular Automata Machines* (Toffoli & Margolus, MIT Press, 1987)"
+  combos_with:
+  - DON-CELLULAR-AUTOMATA
+- id: REVERSIBLE-CA
+  name: Reversible Cellular Automata
+  type: activated
+  mana: '{U}{B}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: blockCA
+    signature: blockCA(margolusNeighborhood) → a world you can run backward
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Partition the grid (the Margolus neighborhood) so the rule is invertible — time runs both ways.
+  verifiable: "Block cellular automaton + Margolus neighborhood; reversible/universal CA; Critters"
+  combos_with:
+  - EDGE-OF-CHAOS
+- id: BILLIARD-BALL-COMPUTER
+  name: Billiard-Ball Computer
+  type: activated
+  mana: '{R}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: billiardBall
+    signature: billiardBall(collisions) → universal computation from bouncing balls
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Compute with elastic collisions — reversible, universal, and physical.
+  verifiable: "CA simulations of billiard-ball computers; 'Flattop' chip with Tom Knight"
+  combos_with: []
+- id: MARGOLUS-LEVITIN
+  name: Margolus–Levitin Limit
+  type: activated
+  mana: '{B}{B}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: speedLimit
+    signature: speedLimit(energy) → the maximum operations per second physics allows
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Bound any computer's speed by its energy — a law of physics, not engineering.
+  verifiable: "Margolus & Levitin, 'The maximum speed of dynamical evolution' (1998)"
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: ../../repo-shows/norman-margolus/invitation.md
+  why: Public invitation document (in the show dir)

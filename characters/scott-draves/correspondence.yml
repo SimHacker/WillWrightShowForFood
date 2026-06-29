@@ -27,10 +27,10 @@ gist: |
 threads:
   silicon_valley_origins:
     when: "early 1990s (c. 1990–1992) — Don's recollection, to confirm"
-    what: "Met in Silicon Valley while Don was at Sun Microsystems. Don ran Scott's early Fractal Flame screensaver on his SparcStation II (Sun employee discount) and they bonded over interactive performance-art graphics — while Don built his CAM6 cellular-automata emulator on the Sun: NeWS PostScript UI + C simulator engine + Mitch Bradley's FORTH as a CAM6-software-compatible (per the CAM6 book) FORTH-programmable CAM orchestrator and lookup-table rule compiler (later ported to many platforms). Scott was possibly at SGI at the time. Dates/SGI to confirm with Scott."
+    what: "Met in Silicon Valley while Don was at Sun Microsystems. Don ran Scott's early Fractal Flame screensaver on his SparcStation II (Sun employee discount) and they bonded over interactive performance-art graphics — while Don built his CAM6 cellular-automata emulator on the Sun: NeWS PostScript UI + HyperLook Control Stack + LavaLamp Shaped Window + C simulator engine + Mitch Bradley's FORTH as a CAM6-software-compatible (per the CAM6 book) FORTH-programmable CAM orchestrator and lookup-table rule compiler (later ported to many platforms and used as SimCity DRM and Micropolis Space Inventory). Scott was possibly at SGI at the time. Dates/SGI to confirm with Scott."
   cmu_origins:
     when: "early–mid 1990s"
-    what: "Reconnected at Carnegie Mellon — Scott in his CS PhD (advised by Andy Witkin & Dana Scott 1990–92, then Peter Lee through 1997; thesis 'Automatic Program Specialization for Interactive Media'), Don with Brad Myers (Lisp UI), porting SimCity NeWS→Tcl/Tk and writing the unix-haters X-Windows chapter."
+    what: "Reconnected at Carnegie Mellon — Scott in his CS PhD (advised by Andy Witkin & Dana Scott 1990–92, then Peter Lee through 1997; thesis 'Automatic Program Specialization for Interactive Media'), Don with Brad Myers (Lisp UI), porting SimCity from NeWS→X11/Tcl/Tk, making it multi player, and writing the Unix-Haters X-Windows chapter."
   brian_eno_2006:
     when: "June 2006, San Francisco"
     what: "After Brian Eno + Will Wright's Long Now talk 'Playing with Time', Don introduced Brian Eno to Scott; the three met at Scott's apartment and bounced ideas around. Brian saw Electric Sheep and the hour-per-frame Dreams in High Fidelity. Scott photographed the evening (Brian with Electric Sheep 'on his head')."

@@ -82,6 +82,7 @@ guests:
   jamie-doornbos: { invitation_status: draft, show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml, note: "Lead programmer on The Sims (Maxis); principal architect of Sim behavior/AI (SimAntics); Don's Sims teammate" }
   jerry-martin: { invitation_status: draft, show_seed: repo-shows/REPO-SHOWS.yml#music-and-theory.yml, note: "Composer — The Sims + SimCity 3000 music (Maxis); music-and-theory show with David Levitt; Don's Maxis colleague" }
   jim-mackraz: { invitation_status: draft, show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml, note: "CTG (Core Technology Group) team leader on The Sims (Maxis); Don's team lead" }
+  jim-crutchfield: { invitation_status: draft, show_seed: repo-shows/jim-crutchfield/, note: "James P. Crutchfield ('Chaos') — UC Davis physicist of complexity; video feedback, edge of chaos + evolving cellular automata, computational mechanics (ε-machines); Santa Cruz Dynamical Systems Collective (Eudaemonic Pie). The 'in': video feedback + CA jam with Don's CAM6 + Scott Draves + Norman Margolus." }
   jens-monig: { invitation_status: not_yet_asked, show_seed: repo-shows/jens-monig/ }
   jason-shankel: { invitation_status: not_yet_asked, show_seed: repo-shows/jason-shankel/ }
   jean-piaget: { invitation_status: memorial, note: "MEMORIAL MODE (1896–1980): genetic epistemology; constructivism + stages of cognitive development; the developmental root of Papert's constructionism. Discussants: Alan Kay, Walter Bender, Brian Harvey, Ken Kahn, Don" }
@@ -104,6 +105,7 @@ guests:
   steve-kommrusch: { invitation_status: draft, show_seed: repo-shows/steve-kommrusch/, note: "Sr AI Scientist at Leela AI; ML for program repair + verifiable equivalence (CSU PhD); ex-CPU architect HP/AMD; MIT MSc; Piaget-schema learning (Drescher bridge); Don's Leela colleague" }
   mark-weiser: { invitation_status: memorial, note: "deceased (1952–1999) — MEMORIAL MODE: ubicomp/calm tech; CHI'88 pie-menu co-author with Don; discussants: Don, Ben Shneiderman" }
   matthew-sibigtroth: { invitation_status: not_yet_asked, show_seed: repo-shows/matthew-sibigtroth/ }
+  norman-margolus: { invitation_status: draft, show_seed: repo-shows/norman-margolus/, note: "Physicist/CS, MIT CSAIL — CAM-6 + *Cellular Automata Machines* (with Toffoli, 1987; the book Don's CAM6 emulator follows); block CA / Margolus neighborhood; reversible & billiard-ball computing; Margolus–Levitin limit. Friend of Henry Minsky; Don met him in Boston. Contact via Henry." }
   paul-debevec: { invitation_status: not_yet_asked }
   peter-norvig: { invitation_status: draft, show_seed: repo-shows/peter-norvig/, note: "Director of Research @ Google; AIMA (w/ Stuart Russell) + PAIP; 'Teach Yourself Programming in Ten Years'; Don's friend, writing an AI book + offered a chapter on Don's work; open-topic show (MOOLLM/skills/AI) with Henry + Leela colleagues" }
   richard-bartle: { invitation_status: not_yet_asked, show_seed: repo-shows/richard-bartle/ }

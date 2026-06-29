@@ -1,0 +1,79 @@
+# Jim Crutchfield — invitation portrayal. NOT Jim Crutchfield.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: jim-crutchfield
+  name: "James P. Crutchfield"
+  type: invitation
+  signifier: "🦋"
+  status: living
+  field: "Physicist of complexity — chaos, video feedback, the 'edge of chaos', evolving cellular automata, and computational mechanics (ε-machines)"
+  home: characters/jim-crutchfield/
+  aliases: ["Jim Crutchfield", "Chaos", "J. P. Crutchfield"]
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+  note: "Public-source portrayal. Don would love to invite him to jam on video feedback & cellular automata; consent not yet asked."
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: ../../repo-shows/jim-crutchfield/invitation.md
+  show_seed: repo-shows/jim-crutchfield/
+  likelihood: "open — aspirational; shared turf (video feedback, CA, edge of chaos) is the in"
+
+bio:
+  summary: |
+    **James P. Crutchfield** ("Chaos") is a physicist and mathematician of complex systems —
+    **Distinguished Professor of Physics at UC Davis**, director of its **Complexity Sciences
+    Center**, external faculty at the **Santa Fe Institute**, and president of the **Art & Science
+    Laboratory** (Santa Fe). As a UC Santa Cruz grad student he was part of the legendary
+    **Dynamical Systems Collective** ("the Chaos Cabal") with **Doyne Farmer, Norman Packard, and
+    Rob Shaw** — whose **"Geometry from a Time Series"** (1980) showed how to reconstruct a
+    system's hidden dynamics (attractors) from a single stream of measurements, and who famously
+    built wearable computers to beat **roulette** (the *Eudaemonic Pie* story). He did foundational
+    work on **video feedback** as a spatiotemporal dynamical system, on the **"edge of chaos"** and
+    **evolving cellular automata to perform computation** (with Melanie Mitchell), and founded
+    **computational mechanics** — the **ε-machine**, a way to discover the intrinsic structure and
+    information processing hidden inside a process. The Santa Cruz group is a centerpiece of James
+    Gleick's *Chaos: Making a New Science*.
+  known_for:
+    - "Video feedback as a dynamical system ('Space-time dynamics in video feedback', 1984)"
+    - "'Geometry from a Time Series' (1980) — attractor reconstruction"
+    - "Edge of chaos + evolving cellular automata to compute (with Melanie Mitchell)"
+    - "Computational mechanics / ε-machines / statistical complexity"
+    - "The Santa Cruz Dynamical Systems Collective (Eudaemonic Pie / roulette)"
+    - "Art & Science Laboratory (Santa Fe)"
+
+connections:
+  feedback_kinship: "The reason for the invite: **video feedback** and **iterated graphical systems** — point a camera at its own screen and you get spatiotemporal chaos. It's the same family Don plays in with his **CAM6** cellular-automata performance platform and Scott Draves's generative work. A natural 'digress, recurse, and iterate' jam."
+  cellular_automata: "Crutchfield's edge-of-chaos / evolving-CA work sits right next to Don's CAM6 and Norman Margolus's CAM-6 hardware — complexity living between order and randomness."
+  complexity_lineage: "Santa Fe Institute complexity science; the Santa Cruz chaos lineage (Farmer, Packard, Shaw) that James Gleick popularized."
+
+show_suggestions:
+  - { seed: ../../repo-shows/jim-crutchfield/, what: "Edge of Chaos: video feedback live, evolving cellular automata that compute, and computational mechanics — with Don's CAM6 and (dream) Scott Draves + Norman Margolus." }
+  - { seed: ../../repo-shows/norman-margolus/, what: "Joint CA show with Norman Margolus — edge of chaos meets reversible cellular-automata machines." }
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/James_P._Crutchfield"
+  web:
+    - "https://csc.ucdavis.edu/~chaos/   # UC Davis Complexity Sciences Center"
+    - "https://artscilab.com/   # Art & Science Laboratory, Santa Fe"
+    - "https://scholar.google.com/citations?user=D37XAbIAAAAJ"
+  papers:
+    - "Crutchfield, J.P. (1984). 'Space-time dynamics in video feedback.' Physica D 10:229–245."
+    - "Packard, Crutchfield, Farmer, Shaw (1980). 'Geometry from a Time Series.' Phys. Rev. Lett. 45:712."
+    - "Crutchfield & Mitchell (1995). 'The evolution of emergent computation.' PNAS 92:10742."
+    - "Mitchell, Hraber, Crutchfield (1993). 'Revisiting the Edge of Chaos: Evolving Cellular Automata to Perform Computations.' SFI / arXiv:adap-org/9303003."
+  books:
+    - "Featured in James Gleick, *Chaos: Making a New Science* (1987)."
+    - "Thomas A. Bass, *The Eudaemonic Pie* (1985) — the roulette project."
+
+see_also:
+  - { path: ../norman-margolus/, why: "Cellular-automata machines / reversible CA — joint CA show" }
+  - { path: ../scott-draves/, why: "Generative art, feedback, edge of chaos — dream co-guest" }
+  - { path: ../don-hopkins/, why: "Host — CAM6 cellular-automata performance platform; video feedback" }
+  - { path: ../../repo-shows/jim-crutchfield/, why: "Show seed" }
