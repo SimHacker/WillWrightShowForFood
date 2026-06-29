@@ -15,7 +15,7 @@ Gary —
 
 I'd love to have you on a **Repo Show**. *Made-Up Minds* has been quietly load-bearing in how a lot
 of us think about learning agents — the schema mechanism is Piaget you can actually run — and it
-feels newly urgent in the LLM era.
+feels newly urgent and practical in the LLM era.
 
 **Threads — your pick:**
 

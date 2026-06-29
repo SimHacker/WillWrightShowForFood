@@ -19,7 +19,9 @@ why_him:
 
 dream_segments:
   - "The schema mechanism from first principles — schemas, marginal attribution, synthetic items."
+  - "The 200-foot car wash, live: LLMs returning the common case instead of planning (and CatAttack distractibility) — see characters/gary-drescher/schemas-vectors-and-llms.md."
   - "Made-Up Minds, remade: an LLM supplies grounding/world-knowledge the original learned from scratch — built live on Henry's Python schema factory."
+  - "Vectors & emergence detour: hypervector/Schema-Network encodings and neural cellular automata, next to learned schemas."
   - "The lineage on one whiteboard: Piaget → schema mechanism → Leela's Piaget-schema learning (with Henry Minsky, Steve Kommrusch)."
   - "Optional philosophy turn: choice and cooperation from Good and Real."
 
@@ -30,6 +32,7 @@ format:
 ties_to:
   - ../../characters/gary-drescher/
   - ../../characters/gary-drescher/invitation.md
+  - ../../characters/gary-drescher/schemas-vectors-and-llms.md   # curated thread digest — the live material
   - ../../characters/jean-piaget/
   - ../../characters/marvin-minsky/
   - ../../characters/henry-minsky/

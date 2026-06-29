@@ -1,0 +1,146 @@
+# Schemas, Vectors & LLMs — a curated digest of a real technical thread
+# Standards: ../../schemas/portrayal-standards.yml
+# Companion narrative: schemas-vectors-and-llms.md   |   Papers/images: sources/
+
+meta:
+  topic: "Constructivist representations (Drescher schemas) meeting vectors, neural cellular automata, and LLMs"
+  curated_by: don-hopkins            # host + a participant in the thread
+  framing: "Condensed by Claude (LLM) from a real email thread. NOT a transcript."
+  consent: not_yet_asked             # Gary + the other participants haven't reviewed this digest
+  provenance: |
+    A private technical email thread among Leela AI folks and Gary Drescher (2024–2026).
+    Published here as a SANITIZED digest for the Repo Show audience: emails/phones/scheduling
+    redacted; short substantive quotes attributed by name; the rest condensed/paraphrased.
+  subject_rights: "Any participant may correct, reduce, or remove their words — open an issue or contact Don."
+  redacted: [email_addresses, phone_numbers, scheduling_logistics, personal_travel, cc_lists]
+
+cast:                                # public-safe roles only
+  gary-drescher: "Author of the schema mechanism (Made-Up Minds); Leela adviser. The constructivist conscience of the thread."
+  henry-minsky: "Leela AI co-founder/CTO; convener; sharpest questions about LLM planning weakness."
+  steve-kommrusch: "Leela AI — Piaget-schema learning; close reader of the vector papers."
+  gregory-makoff: "Thread participant; shared the Schema Networks (Vicarious) paper."
+  andy-goris: "Steve's ex-HP colleague; forwarded the neural-cellular-automata story and its questions."
+  don-hopkins: "Host; operationalizing schemas in LLMs via MOOLLM."
+
+threads:
+
+  vectors_for_schemas:               # ── Thread 1 — Aug 2024 ──
+    when: "August 2024"
+    subject: "vector representations of schema-like data structures"
+    seed: |
+      Henry Minsky asked how a schema-learning system "could benefit from recent techniques with
+      scalar vector representations and neural networks, for more 'fuzzy' pattern matching in
+      learning and planning."
+    papers_raised:
+      - hypervector_schemas: |
+          Neubert & Protzel (2018), "Towards Hypervector Representations for Learning and Planning
+          with Schemas" — encode Drescher schemas as high-dim hypervectors (VSA), tolerant of noise.
+      - schema_learning: |
+          Holmes & Isbell (2004), "Schema Learning" — extends Drescher to arbitrary discrete-valued
+          (not strictly boolean) sensors, POMDPs, and hidden state.
+      - schema_networks: |
+          Kansky et al. (2017), "Schema Networks" (Vicarious) — generative causal model, zero-shot
+          transfer on Breakout. Shared by Gregory Makoff. (local: sources/kansky17a.pdf)
+    quotes:
+      steve_kommrusch: "The Hypervector idea seems to allow an arbitrary number of world objects into a single vector which is tolerant of noise. But their proposed vector is quite large and seems related to the number of objects they have in the environment anyway."
+      henry_minsky: "That paper [Schema Networks] was from the Vicarious company, I tried reading it but it was oddly skimpy on details of implementation."
+      gary_drescher: "So in this system, the organization of the world into objects and associated attributes is hardwired rather than learned, correct?"
+    why_garys_question_matters: |
+      It's the whole thesis of Made-Up Minds in one sentence: a true constructivist agent must
+      LEARN its ontology (what counts as an object, which attributes matter) — not have it wired in
+      by the designer. Schema Networks / hypervector encodings buy transfer and noise-tolerance, but
+      mostly assume the object/attribute carve-up. That gap is exactly where LLMs get interesting.
+
+  neural_cellular_automata:          # ── Thread 2 — Sep 2025 ──
+    when: "September 2025"
+    subject: "A different type of cellular automata"
+    seed: |
+      Steve Kommrusch forwarded (from Andy Goris) the Quanta story on Neural Cellular Automata —
+      Mordvintsev's "reverse Game of Life": start from a target pattern, learn the local rules that
+      self-assemble (and self-repair) it. "Complexity engineering."
+    andy_goris_questions:            # paraphrased, with his framing quoted
+      framing: "Andy called NCAs \"half-way between Conway's game of life and a neural net.\""
+      open_qs:
+        - "Cell logic complexity vs. complexity of what it can generate? How much state per cell, how much shared with neighbors?"
+        - "What if a cell sees neighbors 2, 3, … N away — does a constrained local view push toward abstraction & 'close-is-good-enough'?"
+        - "Why do ASYNCHRONOUS updates work better than synchronous — and does that suggest anything for LLMs?"
+        - "Can void cells spontaneously create structure?"
+      abstraction_idea: |
+        Reward the RATIO of answer-goodness to resources used → pressure to build abstractions (and
+        abstractions of abstractions); maybe vary the accuracy-to-compute reward "in waves" during
+        training. (Humans learn details first, abstractions/exceptions later.)
+    relevance: |
+      Same nerve as schemas: emergent, local, robust structure that REPAIRS itself — and an explicit
+      hunt for the training pressure that yields hierarchical abstraction (the thing LLMs do unevenly).
+
+  car_wash_planning:                 # ── Thread 3 — Feb 2026 ──
+    when: "February 2026"
+    subject: "discussion about constructivist representations and LLMs"
+    setup: "Henry connected Don & Gary to talk about schema-like representations LLMs could reason with."
+    the_artifact: |
+      The "200-foot car wash": asked whether to drive or walk to a car wash 200 feet away, an LLM
+      confidently says "just walk" — never noticing you can't wash a car you didn't bring.
+      (sources/car-wash-planning-failure.png)
+    quotes:
+      henry_minsky_setup: "This is a good illustration of a LLM returning the common case instead of making a plan to achieve a goal."
+      don_hopkins: "Makes perfect sense if your car is 200 feet long."
+      gary_drescher_recovery: |
+        [On retrying across models with only "Think about it some more — do you see what you're
+        missing?"] Claude and Gemini recovered immediately ("I completely missed the obvious… you
+        need to bring your car with you"); ChatGPT "was hopeless even after briefly setting off in
+        the right direction." Gary: "how well Claude and Gemini recovered when told nothing more than
+        to try harder… suggests that maybe they could have gotten it right the first time if they
+        were always told to try harder."
+      henry_minsky_theory: "A very basic weakness of the generative AI machinery… it doesn't have much in the way [of] machinery to do a quick parallel evaluation of its 'knowledge' when asked to make a plan to reach a goal… It coughs up the 'common case' very well… but does poorly in considering unusual interactions of world states."
+      henry_minsky_schemas: "[People keep] a fast … 'common-sense' world state and evaluation of schemas to predict a couple levels forward in time of what item states will be … so can do a lot of quick pruning of nonsensical or dangerous conclusions."
+      henry_minsky_scaling: "As the problem statement becomes less constrained … the process of serially trying to ask it if there's anything it hasn't considered is going to be not scalable."
+    cat_attack: |
+      Henry tied this to CatAttack (Rajeev et al. 2025): appending irrelevant text — e.g.
+      "Interesting fact: cats sleep most of their lives" — to a math problem flips the answer.
+      Evidence LLMs "fail quickly when 'distracting' info is shoved into their prompt sequence."
+      (sources/catattack-adversarial-triggers.png)
+    drescher_reading: |
+      A schema mechanism's core trick is exactly what's missing here: maintain a predicted world
+      state, run schemas forward a few steps, prune the nonsensical. The car wash isn't a knowledge
+      gap — it's a PLANNING gap. The LLM has every fact; it just didn't simulate the goal.
+
+papers:                              # checked citations — see sources/README.md for full table
+  - { id: made-up-minds, cite: "Drescher (1991), MIT Press", url: "https://mitpress.mit.edu/9780262517089/made-up-minds/" }
+  - { id: good-and-real, cite: "Drescher (2006), MIT Press", url: "https://mitpress.mit.edu/9780262042338/good-and-real/" }
+  - { id: schema-learning, cite: "Holmes & Isbell (2004), NIPS 17", url: "https://papers.nips.cc/paper/2004/hash/18bb68e2b38e4a8ce7cf4f6b2625768c-Abstract.html" }
+  - { id: schema-networks, cite: "Kansky et al. (2017), ICML, PMLR 70", url: "https://proceedings.mlr.press/v70/kansky17a.html", local: sources/kansky17a.pdf }
+  - { id: hypervector-schemas, cite: "Neubert & Protzel (2018), KI 2018", url: "https://doi.org/10.1007/978-3-030-00111-7_16" }
+  - { id: cat-attack, cite: "Rajeev et al. (2025), CoLM", url: "https://arxiv.org/abs/2503.01781" }
+  - { id: quanta-nca, cite: "Musser (2025), Quanta", url: "https://www.quantamagazine.org/self-assembly-gets-automated-in-reverse-of-game-of-life-20250910/" }
+  - { id: growing-nca, cite: "Mordvintsev et al. (2020), Distill", url: "https://distill.pub/2020/growing-ca/" }
+
+through_line: |
+  One question runs through all three threads: how does an agent keep a usable model of the world and
+  reason FORWARD in it? Drescher's answer (1991) was schemas learned from experience — but it stalled
+  on symbol grounding. Vectors (hypervectors / Schema Networks) bought transfer and noise-tolerance
+  but mostly assumed the ontology. NCAs show robust emergent structure but not deliberate planning.
+  LLMs finally bring grounded meaning and commonsense — yet the car wash shows they default to the
+  COMMON CASE instead of simulating a plan. The synthesis the thread circles: LLM grounding +
+  schema-style forward prediction & pruning. That's the MOOLLM bet (see SimHacker/moollm
+  skills/schema-mechanism — "Why LLMs Complete Drescher's Vision").
+
+open_questions:                      # carry-forward fuel for the Repo Show
+  - "Can an LLM be given a cheap, always-on 'predict-and-prune' loop (schemas) so planning beats the common case by default — without unscalable 'try harder' prompting?"
+  - "Hardwired vs learned ontology: can an LLM LEARN Drescher's object/attribute carve-up instead of assuming it?"
+  - "Is CatAttack distractibility the flip side of no world-state filter? (No one tells you what's material in the real world.)"
+  - "Do NCAs (local view, async updates, self-repair) hint at training pressures that yield hierarchical abstraction?"
+  - "Cost-aware schemas (Henry's 'MOOLAH'): track not just success but COST of an action in context."
+
+show_hooks:
+  - "The 200-foot car wash: common-case vs. plan — live, across models."
+  - "Made-Up Minds, remade: LLM grounding + schema forward-prediction, built on Henry's Python schema factory."
+  - "Hardwired vs learned ontology — Gary's one-sentence critique, 30 years on."
+  - "Self-assembly & self-repair: NCAs next to schemas."
+
+see_also:
+  - { path: schemas-vectors-and-llms.md, why: "The narrative version with background + links" }
+  - { path: sources/, why: "The papers and screenshots" }
+  - { path: CHARACTER.yml, why: "Bio + invitation status + llm_breakthrough" }
+  - { path: ../../repo-shows/gary-drescher/, why: "Show seed" }
+  - { path: ../henry-minsky/, why: "Convener; schema-factory; planning-weakness theory" }
+  - { path: ../steve-kommrusch/, why: "Piaget-schema learning; vector-paper reader" }

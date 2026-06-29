@@ -22,3 +22,8 @@ has built a **Python implementation** of the schema mechanism — a working subs
 learn its whole world from scratch. What happens if you give it a **language model** for grounding
 and world-knowledge — and build it live on Henry's Python schema factory? Constructivist AI, then and
 now. → [`invitation.md`](invitation.md) · [show seed](../../repo-shows/gary-drescher/)
+
+**Want the deep end?** [`schemas-vectors-and-llms.md`](schemas-vectors-and-llms.md) is a curated digest
+of a real 2024–2026 thread between Gary and the Leela crew — vector/hypervector schemas, Schema
+Networks, neural cellular automata, and the *"200-foot car wash"* planning failure — with the papers
+and screenshots in [`sources/`](sources/). It's the live material the show would build on.

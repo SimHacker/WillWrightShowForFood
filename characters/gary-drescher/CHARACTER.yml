@@ -35,6 +35,13 @@ show_suggestions:
   - { seed: ../../repo-shows/gary-drescher/, what: "Made-Up Minds, remade: the schema mechanism reimagined for the LLM era — using language models for the grounding/world-knowledge the original had to learn from scratch; build live on Henry's Python schema factory" }
   - { seed: ../../repo-shows/gary-drescher/, what: "Neuro-symbolic AI with the Leela crew — scruffy/symbolic + neat/neural, schemas/frames/reversible inference that answer 'why' alongside black-box neural vision; Drescher's constructivism meeting deep learning. With Henry Minsky + Steve Kommrusch." }
 
+discussion:
+  schemas_vectors_and_llms:
+    digest: schemas-vectors-and-llms.md       # narrative (Claude-curated) — start here
+    data: schemas-vectors-and-llms.yml        # machine-readable digest
+    sources: sources/                          # papers + screenshots + checked reading list
+    what: "Curated digest of a real 2024–2026 thread (Gary + Leela folks): vector/hypervector schemas, Schema Networks (Vicarious), neural cellular automata, and the '200-foot car wash' planning failure — the live ground for a show."
+
 sources:
   wikipedia: "https://en.wikipedia.org/wiki/Gary_Drescher"
   web:
@@ -46,6 +53,7 @@ sources:
   blogs: []
 
 see_also:
+  - { path: schemas-vectors-and-llms.md, why: "Curated thread digest: vectors, NCAs, the 200-foot car wash" }
   - { path: ../jean-piaget/, why: "🕯️ Constructivism — the developmental root of the schema mechanism" }
   - { path: ../marvin-minsky/, why: "🕯️ MIT AI Lab orbit" }
   - { path: ../henry-minsky/, why: "Friend; built the Python schema-factory reimplementation; Leela" }
