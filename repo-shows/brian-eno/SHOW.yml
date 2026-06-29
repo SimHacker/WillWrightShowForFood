@@ -31,6 +31,11 @@ dream_segments:
   - "Reunion of the 2006 evening: Eno + Draves + Wright + Hopkins on where generative goes with AI."
 
 ideas: ../../characters/brian-eno/ideas.md   # harvested hooks, grounded in Brian's real public work
+speculative_jams: ../../characters/brian-eno/speculative-jams.md   # SPECULATIVE/aspirational provocations to jam on + build (musical pie menu, Oblique-Strategy pie menu, venue-as-web). Flagged fiction.
+
+buildable_seeds:   # the easiest live wins to actually prototype on stream
+  - "Oblique-Strategy pie menu — slices are Oblique Strategy cards; a gesture applies the rule to image/sound/prompt in real time."
+  - "Gestural musical pie menu — 8 directions = 8 timbres; the curve/speed between nodes shapes the sound; center = silence."
 
 format:
   live: true

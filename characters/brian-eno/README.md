@@ -42,5 +42,10 @@ pie menu**, *Taking Tiger Mountain* honored *by transformation*, and the **Long 
 collected in [`ideas.md`](ideas.md). Each is grounded in Brian's own public work and offered as a
 topic to explore *with* him, not as a claim about what he thinks.
 
+For the wilder end — **speculative, aspirational** design provocations to jam on and even build
+(the **musical spider-web pie menu**, the **Oblique-Strategy pie menu**, the **venue-as-web**, and
+imagined dream collaborators) — see [`speculative-jams.md`](speculative-jams.md). It's clearly
+flagged as creative fiction: fuel for "homefun," not claims of fact.
+
 See the show seed: [`repo-shows/brian-eno/`](../../repo-shows/brian-eno/), and the reunion variant
 in [`repo-shows/scott-draves/`](../../repo-shows/scott-draves/).

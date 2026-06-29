@@ -50,8 +50,12 @@ something):
   Repo Show makes with old code. (I actually crossed paths with that cover in SF — long story.)
 - **The Long Now lens** on all of it: what's worth *seeding* now for a 10,000-year audience?
 
-(More in the show seed's [`ideas.md`](../../characters/brian-eno/ideas.md) — all offered as my
-topics to explore *with* you, grounded in your own work.)
+(More grounded hooks in [`ideas.md`](../../characters/brian-eno/ideas.md) — all offered as my
+topics to explore *with* you, rooted in your own work. And for the deliberately wild,
+**speculative** end — a musical spider-web pie menu, an Oblique-Strategy pie menu you *play*, a
+venue that's itself a web — I've got a flagged playground of provocations in
+[`speculative-jams.md`](../../characters/brian-eno/speculative-jams.md): not promises, just fuel to
+jam on, build a toy of live, and turn loose for others to remix.)
 
 If a four-way is fun, I'd love **you, Scott, and Will** together; if not, any shape you like. It's
 all open to discussion — what's recorded, what's public, all your call. Zero homework; I do the

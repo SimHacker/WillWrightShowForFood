@@ -5,6 +5,11 @@ own publicly documented work. These are things Don would love to riff on **with*
 **not** quotes from Brian and not claims about what he thinks.*
 [Portrayal standards](../../schemas/portrayal-standards.yml) · dream guest · consent not yet asked
 
+> Want the wild, **speculative/aspirational** what-ifs (the musical spider-web pie menu, the
+> Oblique-Strategy pie menu, the venue-as-web, imagined dream collaborators)? Those live in
+> [`speculative-jams.md`](speculative-jams.md) — clearly flagged as creative provocations to jam
+> on and prototype. **This** file stays grounded.
+
 ## Why these ideas fit
 
 The 2006 Long Now talk *Playing with Time* (Eno + Will Wright) and the evening afterward (Don,
