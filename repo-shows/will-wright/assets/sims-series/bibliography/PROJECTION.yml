@@ -1,0 +1,746 @@
+title: Sims bibliography — Repo Show projection
+status: curated_not_complete
+projection_of: DonHopkins/projects/willwrightshowforfood/research/bibliography/INDEX.yml
+policy: Tailored for Will Wright Show audience; full index stays private
+stats:
+  canonical_total: 369
+  projected_here: 80
+  topic_counts_all:
+    uncategorized: 112
+    press-news: 77
+    inclusivity-lgbtq: 74
+    maxis-studio-history: 61
+    will-wright-sims-design: 43
+    reference-books: 39
+    academic-research: 35
+    community-modding: 29
+    design-theory: 27
+    don-hopkins-writing: 16
+    legal-censorship: 15
+    simantics-edith: 10
+entries:
+- id: ref-002
+  title_hint: Lynn Conway
+  url: https://www.pinknews.co.uk/2016/06/02/the-sims-adds-cross-dressing-as-male-and-female-limits-are-scrapped/
+  domain: pinknews.co.uk
+  topics:
+  - uncategorized
+  needs_wayback: false
+  summary_status: pending
+- id: ref-003
+  title_hint: The Sims 4 is going further with its inclusive gender system
+  url: https://www.gamerevolution.com/news/587087-the-sims-4-inclusive-gender-system-going-further
+  domain: gamerevolution.com
+  topics:
+  - inclusivity-lgbtq
+  needs_wayback: false
+  summary_status: pending
+- id: ref-004
+  title_hint: Maxis is trying to make every player feel at home when they play THE SIMS 4. The studio has strived
+    for diversity in the past and is now including several character customization options that will all
+  url: https://www.linkedin.com/in/michael-duke-b009a06/
+  domain: linkedin.com
+  topics:
+  - inclusivity-lgbtq
+  - maxis-studio-history
+  needs_wayback: false
+  summary_status: pending
+- id: ref-005
+  title_hint: Maxis is trying to make every player feel at home when they play THE SIMS 4. The studio has strived
+    for diversity in the past and is now including several character customization options that will all
+  url: https://twitter.com/simguruduke
+  domain: twitter.com
+  topics:
+  - inclusivity-lgbtq
+  - maxis-studio-history
+  needs_wayback: false
+  summary_status: pending
+- id: ref-008
+  title_hint: Multiple Sims developers have been let go
+  url: https://www.pcgamesn.com/the-sims-4/sims-developers-laid-off
+  domain: pcgamesn.com
+  topics:
+  - press-news
+  needs_wayback: false
+  summary_status: pending
+- id: ref-009
+  title_hint: 'The Sims: SimGuruDaniel Leaves Maxis'
+  url: https://simsvip.com/2018/04/18/the-sims-simgurudaniel-leaves-maxis/
+  domain: simsvip.com
+  topics:
+  - maxis-studio-history
+  - community-modding
+  needs_wayback: false
+  summary_status: pending
+- id: ref-011
+  title_hint: null
+  url: https://www.gameinformer.com/b/features/archive/2015/03/04/25-years-of-maxis-living-the-simulated-dream.aspx
+  domain: gameinformer.com
+  topics:
+  - maxis-studio-history
+  - community-modding
+  - press-news
+  needs_wayback: false
+  summary_status: pending
+- id: ref-012
+  title_hint: null
+  url: https://www.polygon.com/2015/3/4/8149791/ea-closes-maxis-simcity-the-sims
+  domain: polygon.com
+  topics:
+  - maxis-studio-history
+  - will-wright-sims-design
+  - press-news
+  needs_wayback: false
+  summary_status: pending
+- id: ref-014
+  title_hint: Barrie Tingle, who worked as a live producer on SimCity, also tweeted about Maxis' shutdown. "Maxis
+    Emeryville closes as of today," he said. In a later tweet, Tingle posted a photo of the refrigerator
+  url: https://forums.thesims.com/en_US/discussion/comment/15263254#Comment_15263254
+  domain: forums.thesims.com
+  topics:
+  - maxis-studio-history
+  - will-wright-sims-design
+  needs_wayback: true
+  summary_status: pending
+- id: ref-015
+  title_hint: Will Wright (TS1) Lucy Bradshaw (TS2) Ben Bell (TS3) Rachel Kennedy (TS4) all gone.
+  url: https://forums.thesims.com/en_US/discussion/comment/15190764#Comment_15190764
+  domain: forums.thesims.com
+  topics:
+  - maxis-studio-history
+  - will-wright-sims-design
+  needs_wayback: true
+  summary_status: pending
+- id: ref-016
+  title_hint: '@SimGuruDrake stated several times that Rachel 100% left of her own volition. I don''t think Drake
+    would protest so much if Rachel had been fired. We need to stop assuming this decision was made by the'
+  url: https://forums.thesims.com/en_US/discussion/comment/15067372#Comment_15067372
+  domain: forums.thesims.com
+  topics:
+  - maxis-studio-history
+  - will-wright-sims-design
+  needs_wayback: true
+  summary_status: pending
+- id: ref-017
+  title_hint: Honestly sometimes I wonder if it wasn't for the name, the Sims 4 would even be considered a sequel.
+    It's just not a sequel and I still don't think it deserves the 4 in its title. If anything for it b
+  url: http://venturebeat.com/2014/09/19/how-entertainment-and-life-gives-life-to-the-sims/
+  domain: venturebeat.com
+  topics:
+  - maxis-studio-history
+  - press-news
+  needs_wayback: true
+  summary_status: pending
+- id: ref-018
+  title_hint: So I'm sorry @SimGuruDrake, but even two years later Simmers aren't getting the direction of this
+    iteration other than it being a game that has put everything we loved about the Sims in the garbage ca
+  url: https://forums.thesims.com/en_US/discussion/comment/14873266#Comment_14873266
+  domain: forums.thesims.com
+  topics:
+  - maxis-studio-history
+  - press-news
+  needs_wayback: true
+  summary_status: pending
+- id: ref-019
+  title_hint: Don't let the transgendered sims hit you on the way out! ;)
+  url: https://forums.thesims.com/en_US/discussion/comment/14812063#Comment_14812063
+  domain: forums.thesims.com
+  topics:
+  - inclusivity-lgbtq
+  needs_wayback: true
+  summary_status: pending
+- id: ref-020
+  title_hint: I would guess Lucy Bradshaw and Rachel Franklin presented their idea of an online game to EA. I don't
+    think EA tells Maxis what type of game to build. EA claims Lucy Bradshaw's SC this last time was t
+  url: https://kotaku.com/ea-sues-zynga-says-the-ville-rips-off-the-sims-5931661
+  domain: kotaku.com
+  topics:
+  - maxis-studio-history
+  - community-modding
+  - legal-censorship
+  - press-news
+  needs_wayback: false
+  summary_status: pending
+- id: ref-022
+  title_hint: '"Games Are Not The Place To Tell Stories, Games Are Meant To Let People Tell Their Own Stories"...Will
+    Wright.'
+  url: https://forums.thesims.com/en_US/discussion/comment/16354063#Comment_16354063
+  domain: forums.thesims.com
+  topics:
+  - maxis-studio-history
+  - will-wright-sims-design
+  needs_wayback: true
+  summary_status: pending
+- id: ref-023
+  title_hint: Is it only SimGuruGraham who still appears to be active with TS4?
+  url: https://forums.thesims.com/en_US/discussion/comment/16310484#Comment_16310484
+  domain: forums.thesims.com
+  topics:
+  - maxis-studio-history
+  needs_wayback: true
+  summary_status: pending
+- id: ref-024
+  title_hint: But a new Maxis VP & GM was just hired not too long ago (sometime last year iirc).
+  url: https://twitter.com/nickolls
+  domain: twitter.com
+  topics:
+  - maxis-studio-history
+  needs_wayback: false
+  summary_status: pending
+- id: ref-025
+  title_hint: May 2017 – Present (10 months)San Francisco Bay Area
+  url: https://forums.thesims.com/en_US/discussion/comment/16245618#Comment_16245618
+  domain: forums.thesims.com
+  topics:
+  - maxis-studio-history
+  needs_wayback: true
+  summary_status: pending
+- id: ref-026
+  title_hint: Lucy Bradshaw was also a Vice President for Maxis.
+  url: https://forums.thesims.com/en_US/discussion/comment/15915627#Comment_15915627
+  domain: forums.thesims.com
+  topics:
+  - maxis-studio-history
+  needs_wayback: true
+  summary_status: pending
+- id: ref-027
+  title_hint: After Lucy Bradshaw in 2015 (18 years in Maxis), Rachel Franklin in 2016, now Aaryn Flynn leaves BioWare
+    after 17 years in this studio.
+  url: https://forums.thesims.com/en_US/discussion/comment/15469086#Comment_15469086
+  domain: forums.thesims.com
+  topics:
+  - maxis-studio-history
+  needs_wayback: true
+  summary_status: pending
+- id: ref-028
+  title_hint: 'It is a little more complicated than this because RF was only the leader of the Sims Studio until
+    October 2015 and she was also the executive producer of TS4 until that time. But in October 2015 Lucy '
+  url: https://www.polygon.com/2015/9/24/9392697/ea-maxis-lucy-bradshaw-departs-mobile
+  domain: polygon.com
+  topics:
+  - maxis-studio-history
+  - press-news
+  needs_wayback: false
+  summary_status: pending
+- id: ref-029
+  title_hint: 'It is a little more complicated than this because RF was only the leader of the Sims Studio until
+    October 2015 and she was also the executive producer of TS4 until that time. But in October 2015 Lucy '
+  url: https://simsvip.com/2016/09/09/rachel-franklin-leave-ea/
+  domain: simsvip.com
+  topics:
+  - maxis-studio-history
+  - community-modding
+  - press-news
+  needs_wayback: false
+  summary_status: pending
+- id: ref-031
+  title_hint: Plus, individuals who have worked on The Sims since TS2 like Lucy Bradshaw, Rachel Franklin, Lauren
+    and Britt (don't remember their last names) have all resigned to take on other roles at other compan
+  url: https://forums.thesims.com/en_US/discussion/comment/15274523#Comment_15274523
+  domain: forums.thesims.com
+  topics:
+  - maxis-studio-history
+  - press-news
+  needs_wayback: true
+  summary_status: pending
+- id: ref-032
+  title_hint: Plus, individuals who have worked on The Sims since TS2 like Lucy Bradshaw, Rachel Franklin, Lauren
+    and Britt (don't remember their last names) have all resigned to take on other roles at other compan
+  url: http://www.haroldkasperink.com/index.php/facebook-hires-the-sims-rachel-rubin-franklin-to-lead-social-vr-team/
+  domain: haroldkasperink.com
+  topics:
+  - maxis-studio-history
+  - press-news
+  needs_wayback: true
+  summary_status: pending
+- id: ref-037
+  title_hint: P. K.'s information also didn't seem likely. But I didn't care much about it at the time. I just knew
+    that EA would have to sue him to avoid other employees to ever dare to do something similar. But E
+  url: http://modthesims.info/t/505149
+  domain: modthesims.info
+  topics:
+  - community-modding
+  - legal-censorship
+  needs_wayback: false
+  summary_status: pending
+- id: ref-038
+  title_hint: (This was done to rerail the E3 thread hopefully, sincere apologies to those who wanted actual information)
+  url: https://www.linkedin.com/in/patrick-kelly-b2a92952/
+  domain: linkedin.com
+  topics:
+  - uncategorized
+  needs_wayback: false
+  summary_status: pending
+- id: ref-039
+  title_hint: (This was done to rerail the E3 thread hopefully, sincere apologies to those who wanted actual information)
+  url: https://sims.fandom.com/pt-br/wiki/Patrick_Kelly
+  domain: sims.fandom.com
+  topics:
+  - community-modding
+  needs_wayback: false
+  summary_status: pending
+- id: ref-040
+  title_hint: 'And by the way, EA [ Electronic Arts ] is not “the evil empire” or anything like that. The Sims team
+    is full of really talented people who will most likely deliver a great TS4 [ The Sims 4 ] in 2014. '
+  url: https://honeywellsims4news.tumblr.com/post/63437610043/more-corroboration-for-patrick-kelly-the-sims-4
+  domain: honeywellsims4news.tumblr.com
+  topics:
+  - press-news
+  needs_wayback: false
+  summary_status: pending
+- id: ref-041
+  title_hint: Object Editor Annotated for Implementation
+  url: http://pkellysf.com/
+  domain: pkellysf.com
+  topics:
+  - press-news
+  needs_wayback: true
+  summary_status: pending
+- id: ref-042
+  title_hint: Object Editor Annotated for Implementation
+  url: https://web.archive.org/web/20130521024111/http://pkellysf.com/
+  domain: web.archive.org
+  topics:
+  - press-news
+  needs_wayback: true
+  summary_status: pending
+- id: ref-043
+  title_hint: 'Q: And how many hits has that site had in the last month or so? XD I’d love to know. Must’ve been
+    a bit of a shock :P'
+  url: http://www.pkellysf.com
+  domain: pkellysf.com
+  topics:
+  - uncategorized
+  needs_wayback: true
+  summary_status: pending
+- id: ref-044
+  title_hint: And BTW, I liked SimSoc and SimCitySoc … didn’t mind the online aspect … but the bugs in both games
+    proved to be dreadful. One reason why many people left, and perhaps one reason why The Sims isn’t qu
+  url: http://www.27bslash6.com/missy.html
+  domain: 27bslash6.com
+  topics:
+  - maxis-studio-history
+  - will-wright-sims-design
+  - press-news
+  needs_wayback: false
+  summary_status: pending
+- id: ref-045
+  title_hint: Honeywell’s Sims 4 News | Behind the Scenes
+  url: https://docs.google.com/document/d/13u-kNaWC2AAd-L0_5OoLc_-x0sxs6dFfeJr28DIxufU/edit?tab=t.0
+  domain: docs.google.com
+  topics:
+  - uncategorized
+  needs_wayback: false
+  summary_status: pending
+- id: ref-047
+  title_hint: Avery Alder and micha cárdenas are giving the keynote address.
+  url: https://qgcon.com/qgcon-2020-keynotes/
+  domain: qgcon.com
+  topics:
+  - uncategorized
+  needs_wayback: false
+  summary_status: pending
+- id: ref-048
+  title_hint: Avery Alder is a queer designer hailing from Sinixt territory, nestled amidst the Selkirk Mountains.
+    Her work over the past thirteen years has been in tabletop roleplaying games, and her portfolio inc
+  url: https://boardgamegeek.com/boardgamedesigner/18557/avery-alder
+  domain: boardgamegeek.com
+  topics:
+  - inclusivity-lgbtq
+  - academic-research
+  - press-news
+  needs_wayback: false
+  summary_status: pending
+- id: ref-049
+  title_hint: 'The Sims: Grandmothers are cooler than trolls'
+  url: http://www.gamestudies.org/0101/frasca/
+  domain: gamestudies.org
+  topics:
+  - design-theory
+  needs_wayback: false
+  summary_status: pending
+- id: ref-050
+  title_hint: 'The Sims: Grandmothers are cooler than trolls'
+  url: https://mediasubjectivity.wordpress.com/2011/11/26/simulation-versus-narrative-introduction-to-ludology-gonzalo-frasca/
+  domain: mediasubjectivity.wordpress.com
+  topics:
+  - design-theory
+  needs_wayback: false
+  summary_status: pending
+- id: ref-051
+  title_hint: 'The Sims: Grandmothers are cooler than trolls'
+  url: https://nmrs13.wordpress.com/2013/04/07/simulation-versus-narrative-introduction-to-ludology-•-traditional/
+  domain: nmrs13.wordpress.com
+  topics:
+  - design-theory
+  needs_wayback: false
+  summary_status: pending
+- id: ref-052
+  title_hint: Procedural rhetoric.
+  url: https://en.wikipedia.org/wiki/Procedural_rhetoric
+  domain: en.wikipedia.org
+  topics:
+  - design-theory
+  - reference-books
+  needs_wayback: false
+  summary_status: pending
+- id: ref-053
+  title_hint: Hamlet on the Holodeck. Janet Murray.
+  url: https://mitpress.mit.edu/books/hamlet-holodeck-updated-edition
+  domain: mitpress.mit.edu
+  topics:
+  - academic-research
+  - reference-books
+  needs_wayback: false
+  summary_status: pending
+- id: ref-054
+  title_hint: Hamlet on the Holodeck. Janet Murray.
+  url: https://www.newyorker.com/books/second-read/hamlet-on-the-holodeck-twenty-years-later
+  domain: newyorker.com
+  topics:
+  - academic-research
+  - reference-books
+  needs_wayback: false
+  summary_status: pending
+- id: ref-055
+  title_hint: Perky Pat Layouts. Can-D. Chew-Z. Virtual Reality. Shared Hallucinations. Stigmata. Transubstantiation.
+  url: http://mxmossman.blogspot.com/2013/01/the-three-stigmata-of-palmer-eldritch.html
+  domain: mxmossman.blogspot.com
+  topics:
+  - inclusivity-lgbtq
+  needs_wayback: false
+  summary_status: pending
+- id: ref-056
+  title_hint: Another character says “when we chew Can-D and leave our bodies we die. And by dying we lose the weight
+    of -- ... Sin.”
+  url: https://books.google.nl/books?id=S0pxC7PEXFkC&pg=PA41&lpg=PA41&dq=%22when+we+chew+Can-D+and+leave+our+bodies+we+die.%22&source=bl&ots=mcQ7P5_J-e&sig=ACfU3U0kBYgtDQ4Y08b36cPlSEZBvPzMfg&hl=en&sa=X&ved=2ahUKEwik4OSNzOnlAhXOZVAKHdEyCloQ6AEwAHoECAgQAQ#v=onepage&q=%22when%20we%20chew%20Can-D%20and%20leave%20our%20bodies%20we%20die.%22&f=false
+  domain: books.google.nl
+  topics:
+  - inclusivity-lgbtq
+  - community-modding
+  - legal-censorship
+  - reference-books
+  needs_wayback: false
+  summary_status: pending
+- id: ref-057
+  title_hint: Some notes on programming objects in The Sims
+  url: http://www.qrg.northwestern.edu/papers/Files/Programming_Objects_in_The_Sims.pdf
+  domain: qrg.northwestern.edu
+  topics:
+  - simantics-edith
+  - academic-research
+  needs_wayback: false
+  summary_status: pending
+- id: ref-058
+  title_hint: SimCopter Himbo Easter Egg was a SimAntics Programming Bug
+  url: https://web.archive.org/web/19991109030656/http://www.gamespot.com/features/maxis/page6.html
+  domain: web.archive.org
+  topics:
+  - maxis-studio-history
+  - simantics-edith
+  needs_wayback: true
+  summary_status: pending
+- id: ref-059
+  title_hint: 'Reinventing Comics:'
+  url: https://www.nextchapterbooksellers.com/book/9780060953508
+  domain: nextchapterbooksellers.com
+  topics:
+  - design-theory
+  needs_wayback: false
+  summary_status: pending
+- id: ref-060
+  title_hint: Understanding Comics
+  url: https://en.wikipedia.org/wiki/Understanding_Comics
+  domain: en.wikipedia.org
+  topics:
+  - inclusivity-lgbtq
+  - design-theory
+  - will-wright-sims-design
+  - legal-censorship
+  - reference-books
+  needs_wayback: false
+  summary_status: pending
+- id: ref-061
+  title_hint: Abstract vs. Realistic
+  url: https://understandingcomics177.wordpress.com/
+  domain: understandingcomics177.wordpress.com
+  topics:
+  - inclusivity-lgbtq
+  needs_wayback: false
+  summary_status: pending
+- id: ref-062
+  title_hint: Abstract vs. Realistic
+  url: https://understandingcomics177.wordpress.com/understanding-scott-mccloud/
+  domain: understandingcomics177.wordpress.com
+  topics:
+  - inclusivity-lgbtq
+  - design-theory
+  needs_wayback: false
+  summary_status: pending
+- id: ref-063
+  title_hint: Scott McCloud’s work all share a theme. They all look to take the best elements that can be found
+    across the wide medium of comics, and use elements from each possible and available source to better h
+  url: https://en.wikipedia.org/wiki/Masking_(illustration
+  domain: en.wikipedia.org
+  topics:
+  - design-theory
+  - reference-books
+  needs_wayback: false
+  summary_status: pending
+- id: ref-064
+  title_hint: One of the book's key concepts is that of "masking," a visual style, dramatic convention, and literary
+    technique described in the chapter on realism. It is the use of simplistic, archetypal, narrative
+  url: https://remnantsofwit.wordpress.com/2017/07/06/the-masking-effect-what-a-boring-main-character-can-do-for-a-story/
+  domain: remnantsofwit.wordpress.com
+  topics:
+  - design-theory
+  needs_wayback: false
+  summary_status: pending
+- id: ref-066
+  title_hint: The Sims encourages players to get their mind into the gutter.
+  url: https://understandingcomics177.wordpress.com/about/1-2/2-2/
+  domain: understandingcomics177.wordpress.com
+  topics:
+  - inclusivity-lgbtq
+  needs_wayback: false
+  summary_status: pending
+- id: ref-067
+  title_hint: Gutters act as an invisible messenger within comics in that they pass information but are simply an
+    empty space. Comic artists need gutters as well as the reader’s participation in drawing conclusions
+  url: https://understandingcomics177.wordpress.com/about/1-2/2-2/3-2/
+  domain: understandingcomics177.wordpress.com
+  topics:
+  - inclusivity-lgbtq
+  needs_wayback: false
+  summary_status: pending
+- id: ref-068
+  title_hint: Tension Between Realistic Models and Fun Game Play
+  url: https://medium.com/@donhopkins/designing-user-interfaces-to-simulation-games-bd7a9d81e62d
+  domain: medium.com
+  topics:
+  - don-hopkins-writing
+  - press-news
+  needs_wayback: false
+  summary_status: pending
+- id: ref-069
+  title_hint: The Sims getting banned in Russia for that reason is a badge of honor. It’s funny how The Sims “flew
+    under the radar” for so long that it took Russia’s Memetic Defense League 14 years until The Sims 4
+  url: https://www.huffingtonpost.co.uk/2014/05/12/the-sims-russia-gay-ban_n_5309847.html
+  domain: huffingtonpost.co.uk
+  topics:
+  - inclusivity-lgbtq
+  - legal-censorship
+  needs_wayback: false
+  summary_status: pending
+- id: ref-071
+  title_hint: 'The create-a-sim user interface hid the corresponding astrological sign for the initial all-zero
+    personality you first see before you''ve spent any points, because that would be insulting to 1/12th of '
+  url: https://www.youtube.com/watch?v=ffzt12tEGpY
+  domain: youtube.com
+  topics:
+  - press-news
+  needs_wayback: false
+  summary_status: pending
+- id: ref-072
+  title_hint: The Sims made its debut days before the shooting at Columbine, which triggered a moral panic over
+    video games.
+  url: https://en.wikipedia.org/wiki/Columbine_High_School_massacre#Video_games
+  domain: en.wikipedia.org
+  topics:
+  - reference-books
+  needs_wayback: false
+  summary_status: pending
+- id: ref-073
+  title_hint: The Kiss that Changed Video Games
+  url: https://www.newyorker.com/tech/annals-of-technology/the-kiss-that-changed-video-games
+  domain: newyorker.com
+  topics:
+  - inclusivity-lgbtq
+  needs_wayback: false
+  summary_status: pending
+- id: ref-075
+  title_hint: MacPlaymate (VideoWorks / Director).
+  url: https://www.macintoshrepository.org/5652-macplaymate
+  domain: macintoshrepository.org
+  topics:
+  - uncategorized
+  needs_wayback: false
+  summary_status: pending
+- id: ref-076
+  title_hint: MacPlaymate (VideoWorks / Director).
+  url: https://melmagazine.com/en-us/story/long-before-internet-porn-there-was-macplaymate
+  domain: melmagazine.com
+  topics:
+  - uncategorized
+  needs_wayback: false
+  summary_status: pending
+- id: ref-077
+  title_hint: Mike Saenz. (MacPlaymate, Shatter, ComicWorks)
+  url: https://en.wikipedia.org/wiki/Mike_Saenz
+  domain: en.wikipedia.org
+  topics:
+  - reference-books
+  needs_wayback: false
+  summary_status: pending
+- id: ref-078
+  title_hint: Museum of Modern Art Video Game Collection
+  url: https://www.moma.org/explore/inside_out/2012/11/29/video-games-14-in-the-collection-for-starters/
+  domain: moma.org
+  topics:
+  - reference-books
+  needs_wayback: false
+  summary_status: pending
+- id: ref-079
+  title_hint: Museum of Modern Art Video Game Collection
+  url: https://www.moma.org/collection/works/162461
+  domain: moma.org
+  topics:
+  - reference-books
+  needs_wayback: false
+  summary_status: pending
+- id: ref-080
+  title_hint: The Sims was dedicated to Dani Berry.
+  url: https://en.wikipedia.org/wiki/Danielle_Bunten_Berry
+  domain: en.wikipedia.org
+  topics:
+  - reference-books
+  needs_wayback: false
+  summary_status: pending
+- id: ref-081
+  title_hint: 'Players Unleashed!: Modding the Sims and the Culture of Gaming. Tanja Sihvonen.'
+  url: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.921.4343&rep=rep1&type=pdf
+  domain: citeseerx.ist.psu.edu
+  topics:
+  - simantics-edith
+  - academic-research
+  needs_wayback: false
+  summary_status: pending
+- id: ref-082
+  title_hint: Modding scenes. Introduction to user-created content in computer gaming. Tero Laukkanen.
+  url: https://trepo.tuni.fi/bitstream/handle/10024/65431/951-44-6448-6.pdf?sequence=1&isAllowed=y
+  domain: trepo.tuni.fi
+  topics:
+  - simantics-edith
+  - academic-research
+  needs_wayback: false
+  summary_status: pending
+- id: ref-083
+  title_hint: 'X: Initial Proposal / Happy-Friends-Home / Revision 3 (1996-10-02)'
+  url: https://donhopkins.com/home/TheSims/HappyFriendsHome-1996-10-02.pdf
+  domain: donhopkins.com
+  topics:
+  - will-wright-sims-design
+  - academic-research
+  - don-hopkins-writing
+  needs_wayback: false
+  summary_status: pending
+- id: ref-084
+  title_hint: The Sims Design Document Draft 3 (1998-08-07)
+  url: https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft3-1998-08-07-DonsReview.pdf
+  domain: donhopkins.com
+  topics:
+  - academic-research
+  - don-hopkins-writing
+  - press-news
+  needs_wayback: false
+  summary_status: pending
+- id: ref-085
+  title_hint: The Sims Design Document Draft 5 (1998-08-31)
+  url: https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft5-1998-08-31-DonsReview-Handwritten.pdf
+  domain: donhopkins.com
+  topics:
+  - academic-research
+  - don-hopkins-writing
+  - press-news
+  needs_wayback: false
+  summary_status: pending
+- id: ref-086
+  title_hint: The Sims Design Document Draft 5 (1998-08-31)
+  url: https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft5-1998-08-31-DonsReview.pdf
+  domain: donhopkins.com
+  topics:
+  - academic-research
+  - don-hopkins-writing
+  - press-news
+  needs_wayback: false
+  summary_status: pending
+- id: ref-087
+  title_hint: The Sims Design Document Draft 7 (1998-10-02)
+  url: https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft7-1998-10-02-DonsReview.pdf
+  domain: donhopkins.com
+  topics:
+  - academic-research
+  - don-hopkins-writing
+  - press-news
+  needs_wayback: false
+  summary_status: pending
+- id: ref-088
+  title_hint: Patrick J Barrett III
+  url: https://donhopkins.com/home/TheSims/
+  domain: donhopkins.com
+  topics:
+  - don-hopkins-writing
+  needs_wayback: false
+  summary_status: pending
+- id: ref-089
+  title_hint: 'Sex in Videogames, Part 1: Seduction'
+  url: https://www.gamasutra.com/view/feature/131540/sex_in_videogames_part_1_.php
+  domain: gamasutra.com
+  topics:
+  - uncategorized
+  needs_wayback: false
+  summary_status: pending
+- id: ref-090
+  title_hint: 'Sex in Videogames, Part 2: Explicit Sex'
+  url: http://www.designersnotebook.com/Columns/034_Sex_Part_2/body_034_sex_part_2.htm
+  domain: designersnotebook.com
+  topics:
+  - press-news
+  needs_wayback: false
+  summary_status: pending
+- id: ref-091
+  title_hint: 'Sex in Videogames, Part 3: Dramatic Significance'
+  url: https://www.gamasutra.com/view/feature/131528/sex_in_videogames_part_3_.php
+  domain: gamasutra.com
+  topics:
+  - press-news
+  needs_wayback: false
+  summary_status: pending
+- id: ref-092
+  title_hint: Interfacing to Microworlds
+  url: https://hci.stanford.edu/courses/cs547/abstracts/95-96/960426-wright.html
+  domain: hci.stanford.edu
+  topics:
+  - will-wright-sims-design
+  - academic-research
+  - don-hopkins-writing
+  - press-news
+  needs_wayback: false
+  summary_status: pending
+- id: ref-093
+  title_hint: The Soul of The Sims
+  url: https://medium.com/@donhopkins/the-soul-of-the-sims-by-will-wright-8afdc225c936?source=search_post---------0
+  domain: medium.com
+  topics:
+  - will-wright-sims-design
+  - don-hopkins-writing
+  needs_wayback: false
+  summary_status: pending
+- id: ref-094
+  title_hint: The Soul of The Sims
+  url: https://www.rockpapershotgun.com/2008/02/20/the-soul-of-the-sims/
+  domain: rockpapershotgun.com
+  topics:
+  - will-wright-sims-design
+  - don-hopkins-writing
+  needs_wayback: false
+  summary_status: pending
+- id: ref-095
+  title_hint: Same-Sex Relationships in The Sims
+  url: https://sims.fandom.com/wiki/Same-sex_relationship
+  domain: sims.fandom.com
+  topics:
+  - inclusivity-lgbtq
+  - community-modding
+  needs_wayback: false
+  summary_status: pending
