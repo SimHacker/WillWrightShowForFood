@@ -22,19 +22,22 @@ invitation:
   show_seed: repo-shows/gary-drescher/
 
 bio:
-  summary: "**Gary Drescher** — AI researcher and philosopher. In **Made-Up Minds: A Constructivist Approach to Artificial Intelligence** (MIT Press, 1991) he built the **schema mechanism**: an agent that, like a Piagetian infant, learns from raw sensorimotor experience by discovering **schemas** (context → action → result), using **marginal attribution** to find reliable regularities and **synthetic items** to invent new concepts — constructivism, made to run. His later **Good and Real** (MIT Press, 2006) takes the same rigor to determinism, choice, and ethics (including acausal/subjunctive cooperation). An MIT AI Lab alumnus in the Minsky orbit."
+  summary: "**Gary Drescher** — AI researcher and philosopher. In **Made-Up Minds: A Constructivist Approach to Artificial Intelligence** (MIT Press, 1991) he built the **schema mechanism**: an agent that, like a Piagetian infant, learns from raw sensorimotor experience by discovering **schemas** (context → action → result), using **marginal attribution** to find reliable regularities and **synthetic items** to invent new concepts — constructivism, made to run. Developed as his **MIT PhD** work in Marvin Minsky's orbit — Minsky hailed it as a landmark in the foundations of theories of learning. His later **Good and Real** (MIT Press, 2006) takes the same rigor to determinism, choice, and ethics (including acausal/subjunctive cooperation)."
 
 connections:
-  leela: "An adviser to Leela AI and a longtime friend of Henry Minsky."
+  leela: "Adviser to Leela AI and a longtime friend of Henry Minsky. Leela is one of the original old-school **constructivist / constructionist** AI companies — its approach is deeply rooted in Drescher's *Made-Up Minds*."
   henry_python: "Henry Minsky has built a Python implementation of Drescher's schema mechanism (a 'schema factory') — a living substrate to build on."
   schema_lineage: "The through-line: Piaget's constructivism → Drescher's schema mechanism → Leela's Piaget-schema learning (Steve Kommrusch, Henry Minsky)."
+  neuro_symbolic: "The frame for a show together: Leela does **neuro-symbolic AI** — conscientiously combining 'scruffy'/symbolic and 'neat'/neural approaches (two independent-but-correlated axes). Neural vision models are powerful but **black boxes**; symbolic reasoning (schemas, frames, reversible inference) can answer **'why'**. Layered and synthesized, each reinforces the other and mitigates the other's weaknesses — Drescher's constructivist schema mechanism meeting modern deep learning. Deep hands-on experience; lots to talk about."
 
 show_suggestions:
   - { seed: ../../repo-shows/gary-drescher/, what: "Made-Up Minds, remade: the schema mechanism reimagined for the LLM era — using language models for the grounding/world-knowledge the original had to learn from scratch; build live on Henry's Python schema factory" }
+  - { seed: ../../repo-shows/gary-drescher/, what: "Neuro-symbolic AI with the Leela crew — scruffy/symbolic + neat/neural, schemas/frames/reversible inference that answer 'why' alongside black-box neural vision; Drescher's constructivism meeting deep learning. With Henry Minsky + Steve Kommrusch." }
 
 sources:
-  wikipedia: null
-  web: []
+  wikipedia: "https://en.wikipedia.org/wiki/Gary_Drescher"
+  web:
+    - { title: "Made-Up Minds (MIT Press)", url: "https://mitpress.mit.edu/9780262517089/made-up-minds/" }
   books:
     - "Made-Up Minds: A Constructivist Approach to Artificial Intelligence (MIT Press, 1991)"
     - "Good and Real: Demystifying Paradoxes from Physics to Ethics (MIT Press, 2006)"

@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/vision-and-ambition.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:89c0b6cd9114cd09 -->
+<!-- content-sha256:98e6b965d3ab3f24 -->
 
 # Vision and ambition
 
@@ -291,8 +291,12 @@ a natural bridge both to great Repo Show guests and to opportunities. He's on it
 - **current_colleagues_showcase:**
   - leela_ai: Leela AI is a CURRENT team of working colleagues — a present-tense feature, not a reunion. The
 aim is to showcase the brilliant work they're doing NOW, and have been doing since BEFORE the
-AI craze: Society-of-Mind-rooted visual intelligence, vision-model eval/training, ML
-explainability, AI supply chains. Honest, present-tense conversations about real, ongoing work.
+AI craze: one of the original old-school **constructivist / constructionist** AI shops, rooted
+in Society of Mind and **Gary Drescher's *Made-Up Minds*** schema mechanism. They do genuine
+**neuro-symbolic** AI — conscientiously combining 'scruffy'/symbolic reasoning (schemas,
+frames, reversible inference that can answer *why*) with 'neat'/neural vision (powerful but
+black-box), each mitigating the other's weaknesses — plus vision-model eval/training, ML
+explainability, and AI supply chains. Honest, present-tense conversations about real, ongoing work.
 Isabella Struckman especially has a wealth of fascinating work and ideas to talk about
 (see ../characters/isabella-struckman/) — invited for the substance, like anyone.
 Crew incl. Henry Minsky, Milan Singh Minsky, Steve Kommrusch, Isabella Struckman, Don — and more.
