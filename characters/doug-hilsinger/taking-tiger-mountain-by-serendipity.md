@@ -104,11 +104,8 @@ have met.** (Don's reliable line back into this circle is **Will** — whom he k
 regularly in the SF Bay Area — and **Scott**, with whom he still collaborates. That's why a
 **reunion** inviting **Brian**, **Will**, and **Doug** is the dream.)
 
-*A small what-if Don likes:* Brian has long been refreshingly open and fluid about orientation, and
-Don suspects he'd have been game to tag along — if only Don had had the psychic foresight to suggest
-the three of them (Don, Brian, Spot) head to The Eagle together after Scott's, instead of driving
-off alone. Maybe, if this reunion ever lands everyone in the same city, they'll finally go out
-nightlifing together — London, Amsterdam, or San Francisco, who knows? A girl can always dream. 🌈
+*(Don's personal note about that night — a warm, no-big-deal aside and a hopeful what-if — is
+written directly to Brian in the invitation: [`repo-shows/brian-eno/invitation.md`](../../repo-shows/brian-eno/invitation.md).)*
 
 ## Credit where it's due
 

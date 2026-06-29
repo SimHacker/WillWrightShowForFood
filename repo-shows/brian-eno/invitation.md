@@ -45,11 +45,8 @@ something):
   blend never repeats; a toy anyone watching can fork.
 - **A gestural, musical pie menu** (my old obsession): eight directions as eight timbres, the
   *curve and speed of the gesture between them* shaping the sound. Constraints making freedom.
-- **Taking Tiger Mountain, by transformation** — Doug Hilsinger & Caroleen Beatty re-recorded the
-  whole album by hand in 2004 (you loved it — *"deeply moved… I like it very, very much"* — and
-  wrote the liner notes). I'd love to use it as a tangible example of *honoring by transforming*,
-  and a chance to hear your own work through fresh ears. (I crossed paths with Doug at the SF Eagle
-  in 2006 — and loved the record before I knew he'd made it. I'd love to bring Doug on too.)
+- **Taking Tiger Mountain, by transformation** — Doug Hilsinger & Caroleen Beatty's hand-played
+  cover, the one that moved you. More on that just below — it's close to the heart of why I'm writing.
 - **The Long Now lens** on all of it: what's worth *seeding* now for a 10,000-year audience?
 
 (More grounded hooks in [`ideas.md`](../../characters/brian-eno/ideas.md) — all offered as my
@@ -59,9 +56,41 @@ venue that's itself a web — I've got a flagged playground of provocations in
 [`speculative-jams.md`](../../characters/brian-eno/speculative-jams.md): not promises, just fuel to
 jam on, build a toy of live, and turn loose for others to remix.)
 
+## The heart of it
+
+I'm listening to **Doug Hilsinger & Caroleen Beatty's *Taking Tiger Mountain*** as I write this, and
+I want to tell you why it matters to me — because I think it might matter to you. Doug's voice is
+*so beautiful*; I still remember being struck by it the very first time, before I had any idea it was
+his own record. He and Caroleen took one of your early experimental art-albums and reinterpreted it
+**by hand** — almost a heavy-metal reading, no synths, all warmth and muscle — and yet it carries
+the **exquisite composition and fine-art bones of your album** completely intact. That's the strange
+gift of it: it let you hear your *own* work through **someone else's ears** — the very thing an
+artist can take for granted in their own. And it genuinely **moved** you — you said so, earnestly,
+in your own voice.
+
+*That* is what I keep coming back to, and honestly it's the real reason for this letter. A reunion —
+you, Scott, Will, me, and (if I can track him down) Doug — is just an invitation to do that on
+purpose: to hear and honor each other's work through fresh ears, and make new things out of the
+gladness of it. Not nostalgia. Generosity.
+
 If a four-way is fun, I'd love **you, Scott, and Will** together; if not, any shape you like. It's
 all open to discussion — what's recorded, what's public, all your call. Zero homework; I do the
 setup.
+
+## A personal note — for you, Brian
+
+*(I'm leaving this in the open repo because I'd rather be honest than coy — but it's written to you,
+not to an audience. No angle, nothing to extract; just me telling you who I am and that I'd enjoy
+your company.)*
+
+The night I met Doug, I'd left Scott's place and, on a whim, finally wandered into **The Eagle** —
+the old San Francisco bear bar — somewhere I'd never been, just to see it. It can look intimidating
+from the street; inside it's warm, easy, and welcoming to anyone who walks in. *(Read into that what
+you like — I'm comfortable either way; it's genuinely no big deal.)* It happened to be a quiet night,
+which is the only reason Doug and I had the room to really talk. I sometimes think about the version
+where I'd had the foresight to pull you and Spot along after Scott's. Maybe, if this ever lands us in
+the same city again, we'll finally go see the night together — London, Amsterdam, San Francisco,
+wherever. A girl can dream. 🌈
 
 I'm sending this gently through **Will** — who I keep in touch with regularly, and who's my likely
 bridge to you — and **Scott**, who hosted us back in 2006. No
