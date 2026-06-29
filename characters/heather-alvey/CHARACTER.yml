@@ -5,10 +5,11 @@ character:
   id: heather-alvey
   name: "Heather Alvey"
   type: invitation
-  signifier: "👤"
+  signifier: "🧟"
   status: living
-  field: "SimFreaks + Steve Alvey SimSlice"
+  field: "SimFreaks founder — Sims content publisher, artist, programmer, community leader (26-year brand)"
   home: characters/heather-alvey/
+  aliases: ["SimFreaks", "Heather Castello"]
 
 representation:
   governed_by: ../../schemas/portrayal-standards.yml
@@ -20,14 +21,22 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/heather-steve-alvey/
-  note: "SimFreaks + Steve Alvey SimSlice"
 
 bio:
-  summary: "SimFreaks + Steve Alvey SimSlice"
+  summary: "**Heather Alvey** (née **Castello**) — founder of **SimFreaks**, one of the longest-running, most respected Sims custom-content houses (a **~26-year** brand): original object suites, sophisticated SimAntics programming, and community leadership. With her husband **Steve Alvey** (**SimSlice** / **SliceCity** — SimCity running *inside* The Sims) she still ships **tour-de-force magnum-opus expansion packs** like **Zombie Sims** for The Sims 1. Don's longtime friend and collaborator."
+
+connections:
+  steve_alvey: "Married to **Steve Alvey** (**SimSlice / SliceCity** — fan-coded SimCity inside The Sims). The two have run active, respected ~26-year Sims-content brands as publishers, artists, programmers, and community leaders."
+  don_collab: "Don worked with Heather, Steve, **SimBabes**, and other artists on the **SimProv Wedding Playset** (unreleased back then; Don has recently released it and is reorganizing/republishing it). They're the first customers for Don's **Micropolis content-management & publishing system** (for their huge artisanal back-catalogs + new streams)."
+  zombie_sims: "Current magnum-opus expansion-pack work (Zombie Sims) feeds the Afterlife × ZombieSims show seed."
 
 sources:
   wikipedia: null
   web:
-    []
+    - "https://www.simfreaks.com/   # SimFreaks catalog"
   papers: []
   blogs: []
+
+see_also:
+  - { path: ../../repo-shows/heather-steve-alvey/, why: "Afterlife × ZombieSims show + the Micropolis publishing collaboration" }
+  - { path: ../don-hopkins/, why: "Host — longtime friend/collaborator (SimProv Wedding Playset)" }

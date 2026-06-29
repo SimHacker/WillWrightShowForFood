@@ -104,10 +104,10 @@ voice:
     composable_objects: |
       **The Sims** model, applied to ideas: downloadable **Sims objects carry their own SimAntics
       code** and ADVERTISE what they do, so they plug into the simulation and run alongside other
-      scripted objects (the way **SimSlice**'s modular component objects plug deep into the
-      home-building game). Don builds prose the same way — ideas as self-describing, composable
-      objects that snap into the reader's running model and interoperate. (cf. advertisements +
-      empathic-templates in MOOLLM.)
+      scripted objects — the tour-de-force example being **Steve Alvey's SimSlice / SliceCity**, fan
+      code that runs **SimCity *inside* The Sims**, deeply integrated into the host simulation. Don
+      builds prose the same way — ideas as self-describing, composable objects that snap into the
+      reader's running model and interoperate. (cf. advertisements + empathic-templates in MOOLLM.)
     the_ben_simulator: |
       Don runs **a little Ben Shneiderman simulator** in his head, and asks it before he writes:
       *"How would you write this — with empathy and respect for the reader, to communicate your
