@@ -41,6 +41,10 @@ boost:
     Wins* and *Be Tonal*. His Sims / SimCity scores are the warm, lived-in soul of those worlds.
   intent: "Genuine, generous amplification — welcomed; he markets his own work. His call on what's shared."
 
+media:
+  chill_resolve_video: "https://www.youtube.com/watch?v=319i7slXcbI"   # Micropolis Space-Inventory CA performed live to Jerry's 'Chill Resolve' (Be Tonal) — mesmerizing on its own
+  chill_resolve_still: media/chill-resolve-micropolis-ca.png            # SimCity/Micropolis tile-set CA frame from that performance
+
 show_suggestions:
   - { seed: ../../repo-shows/REPO-SHOWS.yml#music-and-theory.yml, what: "Music + theory — with David Levitt. How game music is composed, scored, and made to feel alive." }
   - { seed: ../../repo-shows/REPO-SHOWS.yml#building-the-sims.yml, what: "The Sims team reunion — the audio side." }

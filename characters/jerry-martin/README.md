@@ -5,9 +5,22 @@
 
 ## Who
 
-**Jerry Martin** is a composer best known for writing the music for **The Sims** and **SimCity 3000**
-at Maxis. His scores gave those digital worlds their warm, lived-in character — the sound of a place
-that feels like home.
+**Jerry Martin** is a composer, producer, and sound designer best known for the music of **The Sims**,
+**SimCity 3000**, and **SimCity 4** at Maxis (where he was Studio Audio Director and Lead Composer).
+His scores gave those digital worlds their warm, lived-in character — the sound of a place that feels
+like home. He now releases his own work as **Jerry Martin Music** ([jerrymartinmusic.com](https://jerrymartinmusic.com/))
+and via **BoomBamBoom** ([boombamboom.com](https://boombamboom.com/); albums *The House Always Wins*
+and *Be Tonal*).
+
+## "Chill Resolve" — perfect for Micropolis
+
+Jerry recently gave Don permission to use a piece of his music for **Micropolis**, and it's a perfect
+match: Don performed the Space-Inventory cellular automata live, with SimCity tile sets, to Jerry's
+**"Chill Resolve"** (from *Be Tonal*). Mesmerizing even without watching the CA.
+
+▶️ **Watch:** [SimCity Micropolis Tile Sets — Space Inventory Cellular Automata to Jerry Martin's "Chill Resolve"](https://www.youtube.com/watch?v=319i7slXcbI)
+
+![SimCity/Micropolis tile-set cellular automata performed to Jerry Martin's "Chill Resolve"](media/chill-resolve-micropolis-ca.png)
 
 ## Why a Repo Show
 
