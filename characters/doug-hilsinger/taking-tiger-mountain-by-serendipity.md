@@ -66,20 +66,29 @@ and [saucefaucet](http://www.saucefaucet.com/tiger.html)).
 
 ## The serendipity — Don meets Doug
 
-Don's path crossed Doug's by pure coincidence, in **San Francisco in 2006**, around the time of the
-**Long Now talk where Eno and Will Wright shared a stage**. Don dropped into the **Eagle** on a
-quiet night and — not knowing him at all — got to talking with the bartender, who happened to be
-**Doug**. They hit it off; it came up that they'd both been at the recent Long Now talk with Brian
-and Will, and that Don had *just* come from **Scott Draves' apartment**, where he'd introduced
-Brian to Scott.
+This was **San Francisco, 2006**, the same evening Don had **just met Brian Eno** at **Scott
+Draves'** apartment (Don knew Eno's music well and had introduced Brian to Scott that night). Don
+had also been in the audience at the **Long Now talk where Eno and Will Wright spoke about
+generative art** — where he'd asked the pair a question from the floor. **Doug had been in that same
+audience.** Don didn't know Doug at all.
 
-Doug said he'd go put some music on — but didn't say what it was. Don, hearing something
-**strangely familiar yet completely new** — like *Taking Tiger Mountain* heard through someone
-else's ears — said he really liked it. *Then* Doug explained: **it was his own record.**
+Then pure coincidence took over. Driving home from Scott's place in SF back to Berkeley, Don
+thought: *the night is young, I've got nothing to do — why not finally explore a renowned San
+Francisco bar I've never been to, right on my route toward the highway?* So he stopped at **The
+Eagle** — the famous, historic SF gay **bear** bar, an inclusive, community-foundational
+institution. It was practically empty, and the friendly bartender was **Doug**. They got to talking,
+hit it off, and ended up on **Eno** and that very **Long Now talk** (Doug, it seems, recognized Don
+as the guy who'd asked a question).
+
+At some point Doug put on some music — **his own**, though he didn't say so. It *entranced* Don:
+Eno's songs he knew by heart, in a warm, rocking version he'd **never** heard. He told Doug how much
+he loved it. **Only then** did Doug reveal it was his own record — and he was **deeply moved** by
+the compliment.
 
 > Telling an artist you love a piece of music — when you don't even know **they** made it — is the
-> sincerest form of tribute. That's the whole spirit of the album, mirrored back: Eno loved Doug's
-> version; Don loved it without knowing it was Doug's. Sincerity all the way down. 🐅
+> sincerest form of tribute. The whole spirit of the album, mirrored back: Eno loved his own work
+> *transformed* by Doug; Don loved Doug's work without knowing Doug had made it. Sincerity all the
+> way down. 🐅
 
 Doug gave Don a copy of the CD that night. Don has treasured it — and the story — ever since.
 
