@@ -6,21 +6,31 @@ meta:
   with: scott-draves
   curated_by: don-hopkins
   consent: not_yet_asked
-  span: "1990s (CMU) → 2006 → 2026"
-  provenance: "Don's personal email archive with Scott (2006–2026). Personal source — quote only with Scott's OK."
+  span: "early 1990s (Silicon Valley) → early–mid 1990s (CMU) → 2006 → 2026"
+  provenance: "Don's own recollection + personal email archive with Scott (2006–2026). Personal source — quote only with Scott's OK."
+  to_verify_with_scott:
+    - "Earliest meeting date in Silicon Valley (Don recalls c. 1990–1992; Scott's LinkedIn doesn't reach back that far)."
+    - "Whether Scott was at SGI then (Don thinks so, not certain)."
 
 gist: |
-  Don and Scott met at Carnegie Mellon in the mid-1990s — Scott working with Andy Witkin on
-  graphics, Don with Brad Myers on Lisp UI. Over two decades the thread runs through generative
-  and evolutionary art, distributed systems, cellular automata, and AI: Don introduced Brian Eno
-  to Scott in 2006, traded BitTorrent/libtorrent notes while at TomTom, swapped cellular-automata
-  and Sandspiel rabbit holes, and recently reconnected to help build the Electric Sheep / Unity
-  client. In 2026 Scott relaunched the Sheep as Infinidream and Don beta-tested it.
+  Don and Scott **first crossed paths in Silicon Valley in the early 1990s** — Don at Sun, running
+  Scott's early Fractal Flame screensaver on his SparcStation II while building his CAM6
+  cellular-automata performance platform, the two bonding over interactive performance-art graphics.
+  (Scott may have been at SGI then; dates to confirm.) Don then went to the **Turing Institute**
+  in Glasgow and on to **CMU**, where Scott was deep in his CS PhD (Andy Witkin early on, then
+  Peter Lee). Over the next three decades the thread runs through generative and evolutionary art,
+  distributed systems, cellular automata, and AI: Don introduced Brian Eno to Scott in 2006, traded
+  BitTorrent/libtorrent notes while at TomTom, swapped cellular-automata and Sandspiel rabbit holes,
+  and reconnected to help build the Electric Sheep / Unity client. In 2026 Scott relaunched the
+  Sheep as Infinidream and Don beta-tested it.
 
 threads:
+  silicon_valley_origins:
+    when: "early 1990s (c. 1990–1992) — Don's recollection, to confirm"
+    what: "Met in Silicon Valley while Don was at Sun Microsystems. Don ran Scott's early Fractal Flame screensaver on his SparcStation II (Sun employee discount) and they bonded over interactive performance-art graphics — while Don built his CAM6 cellular-automata emulator on the Sun: NeWS PostScript UI + C simulator engine + Mitch Bradley's FORTH as a CAM6-software-compatible (per the CAM6 book) FORTH-programmable CAM orchestrator and lookup-table rule compiler (later ported to many platforms). Scott was possibly at SGI at the time. Dates/SGI to confirm with Scott."
   cmu_origins:
-    when: "mid-1990s"
-    what: "Hung out at Carnegie Mellon — Scott with Andy Witkin (graphics), Don with Brad Myers (Lisp UI), Don porting SimCity NeWS→Tcl/Tk and writing the unix-haters X-Windows chapter."
+    when: "early–mid 1990s"
+    what: "Reconnected at Carnegie Mellon — Scott in his CS PhD (advised by Andy Witkin & Dana Scott 1990–92, then Peter Lee through 1997; thesis 'Automatic Program Specialization for Interactive Media'), Don with Brad Myers (Lisp UI), porting SimCity NeWS→Tcl/Tk and writing the unix-haters X-Windows chapter."
   brian_eno_2006:
     when: "June 2006, San Francisco"
     what: "After Brian Eno + Will Wright's Long Now talk 'Playing with Time', Don introduced Brian Eno to Scott; the three met at Scott's apartment and bounced ideas around. Brian saw Electric Sheep and the hour-per-frame Dreams in High Fidelity. Scott photographed the evening (Brian with Electric Sheep 'on his head')."

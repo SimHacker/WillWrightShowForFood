@@ -7,11 +7,12 @@ not quotes, not claims about what he thinks.*
 
 ## Why these ideas fit
 
-Don and Scott have been circling the same questions since **Carnegie Mellon** in the mid-90s
-(Scott with Andy Witkin on graphics, Don with Brad Myers on UI) — beauty from simple rules,
-distributed systems, feedback. They recently teamed up again on the **Electric Sheep / Unity**
-client, and Scott just relaunched the Sheep as **Infinidream**. Perfect timing for a generative-art
-show with running code.
+Don and Scott have been circling the same questions since **Silicon Valley in the early '90s** —
+Don running Scott's early Flame screensaver on his SparcStation II while building his CAM6
+cellular-automata platform — and on through **Carnegie Mellon** (Scott's CS PhD with Andy Witkin then
+Peter Lee; Don with Brad Myers on UI): beauty from simple rules, distributed systems, feedback. They
+recently teamed up again on the **Electric Sheep / Unity** client, and Scott just relaunched the
+Sheep as **Infinidream**. Perfect timing for a generative-art show with running code.
 
 ## The hooks
 
@@ -58,9 +59,10 @@ decode-vs-playback speed, WebGPU/Metal, Syphon (with Anton Marini). Show the gut
 The night Don brought **Brian Eno** to Scott's apartment after the Long Now talk. Generative across
 media — Sheep, ambient music, simulation — with **Brian** and **Will** as dream co-guests.
 
-### 10. CMU origins → now
-Andy Witkin's graphics lab, Don's Lisp-UI/SimCity-porting era, and the long arc from there to
-generative AI. The friendship as a through-line for the whole field.
+### 10. Origins → now
+Silicon Valley in the early '90s (Flame on a SparcStation II, Don's CAM6 platform), Andy Witkin's
+graphics lab at CMU, Don's Lisp-UI/SimCity-porting era — and the long arc from there to generative
+AI. The friendship as a through-line for the whole field.
 
 ## Sources (real, public)
 - Electric Sheep: https://electricsheep.org/ · code: https://github.com/scottdraves/electricsheep

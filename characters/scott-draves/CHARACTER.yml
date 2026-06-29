@@ -38,18 +38,34 @@ bio:
     With his wife Isabel Walcott Draves he founded **Leaders in Software and Art (LSA)**. He
     later built the open-source **Beaker Notebook** (polyglot data-science notebook), and in
     2026 relaunched the Sheep as **Infinidream** (Generation 248, 1080p/60fps, phone remote,
-    open source). He studied at **Carnegie Mellon University** (PhD, School of Computer
-    Science; worked with Andy Witkin on graphics).
+    open source). He studied at **Brown University** (BS Mathematics, 1990; Andy van Dam's graphics
+    lab) and **Carnegie Mellon University** (PhD, School of Computer Science, 1997; thesis
+    *Automatic Program Specialization for Interactive Media* — advised by Andy Witkin & Dana Scott
+    early on, then Peter Lee). Alongside the art he's had a deep engineering career (Transmeta,
+    Google, DreamWorks, Two Sigma, CTRL-labs/Meta neuromotor interfaces, Stability AI).
   known_for:
     - Electric Sheep (distributed evolutionary screensaver)
     - Fractal Flame algorithm / flam3 (open-sourced 1992)
+    - Bomb (1994) — one of the first interactive software artworks + first open-source artwork
+    - Fuse algorithm (1991) — early procedural texture work he notes "presaged texture synthesis and Stable Diffusion"
     - Dreams in High Fidelity (evolving painting)
     - Leaders in Software and Art (LSA)
     - Beaker Notebook
     - Infinidream (2026 reboot of Electric Sheep)
 
+career_arc:   # public (LinkedIn + scottdraves.com/about) — the engineering career alongside the art
+  - "Transmeta (1997–1999) — simulation & debugging at the fabless VLSI startup."
+  - "FastForward Networks / Inktomi (1999–2001) — streaming-media network management UI."
+  - "DreamWorks (2003–2004) — R&D on proprietary 3D animation; credit on *Shrek 2*."
+  - "Google (2008–2013) — Maps data-quality tools, viz; the 'Paikilizer' WebGL/YouTube Chrome Experiment."
+  - "Two Sigma (2013–2018) — Beaker Notebook / BeakerX (polyglot notebook with autotranslation)."
+  - "CTRL-labs → Meta Reality Labs (2018–2023) — Director/Eng leader on the neuromotor wristband interface (patent)."
+  - "Stability AI (2023) — VP of Engineering; DreamStudio, enterprise API."
+  - "Infinidream (2023– ) — solo founder, open-source ambient AI visuals."
+
 connections:
-  don_cmu: "Don and Scott hung out at **Carnegie Mellon** in the mid-1990s — Scott working with Andy Witkin on graphics, Don working with Brad Myers on Lisp UI (and learning X11 well enough to write the unix-haters X-Windows chapter while porting SimCity from NeWS to Tcl/Tk)."
+  don_first_met: "Don and Scott **first met in Silicon Valley in the early 1990s** — Don at Sun, running Scott's early Fractal Flame screensaver on his SparcStation II and talking interactive performance-art graphics, while Don built his CAM6 cellular-automata performance platform (NeWS PostScript UI + C engine + Mitch Bradley's FORTH orchestrator). Scott was possibly at SGI then. *(Exact dates/SGI to confirm with Scott — his LinkedIn doesn't reach back that far.)*"
+  don_cmu: "They reconnected at **Carnegie Mellon** (early–mid 1990s) — Scott in his CS PhD (Andy Witkin & Dana Scott early, then Peter Lee; thesis *Automatic Program Specialization for Interactive Media*, 1997), Don working with Brad Myers on Lisp UI (and learning X11 well enough to write the unix-haters X-Windows chapter while porting SimCity from NeWS to Tcl/Tk)."
   brian_eno_intro: "In June 2006, after the **Long Now Foundation** talk *Playing with Time* by **Brian Eno and Will Wright**, Don introduced Brian Eno to Scott; the three met at Scott's San Francisco apartment and bounced ideas around. Brian saw Electric Sheep and the HiFiDreams HD work (an hour per frame to render)."
   electric_sheep_unity: "Scott and Don reconnected to work on a new cross-platform **Electric Sheep / Unity** client (c.2020–2023), with Joshua Goldberg and Anton Marini (Syphon) in the mix — real-time playback, music-reactivity, WebGPU/Metal."
   generative_kinship: "Deep shared interests: cellular automata, the Moveable Feast Machine, Sandspiel, video feedback, music-reactive visuals, distributed/evolutionary systems, and AI image generation — the through-line from Flame to Infinidream."
@@ -62,11 +78,13 @@ sources:
   web:
     - "https://electricsheep.org/"
     - "https://scottdraves.com/"
+    - "https://scottdraves.com/about"
     - "https://draves.ai/"
     - "https://infinidream.ai/"
     - "https://flam3.com/"
     - "https://github.com/scottdraves/electricsheep"
     - "https://softwareandart.com/"
+    - "https://www.linkedin.com/in/scottdraves/   # career arc + education dates"
   papers:
     - "The Fractal Flame Algorithm — https://flam3.com/flame.pdf"
     - "The Electric Sheep and their Dreams in High Fidelity (NPAR 2006) — http://draves.org/npar06/npar06draves.pdf"

@@ -29,15 +29,21 @@ Notebook** (a polyglot notebook for data science and visualization). In **2026**
 Sheep as **Infinidream** — Generation 248, 1080p/60fps, with a phone remote and a generative-AI
 platform, still open source.
 
-He studied at **Carnegie Mellon University** (PhD, School of Computer Science), where he worked
-with **Andy Witkin** on graphics.
+He studied at **Brown University** (BS Mathematics, 1990, in Andy van Dam's graphics lab) and
+**Carnegie Mellon University** (PhD, 1997; thesis *Automatic Program Specialization for Interactive
+Media* — advised by **Andy Witkin** & Dana Scott early on, then **Peter Lee**). Alongside the art
+runs a deep engineering career — Transmeta, DreamWorks (*Shrek 2*), Google, Two Sigma (Beaker
+Notebook), CTRL-labs/Meta (neuromotor interfaces), and Stability AI.
 
 ## Why a Repo Show
 
-Don and Scott go back to **Carnegie Mellon** in the mid-1990s — Scott with Andy Witkin doing
-graphics, Don with Brad Myers doing Lisp user-interface work (and porting SimCity from NeWS to
-Tcl/Tk on the side). They've stayed friends ever since, and recently teamed up again on a
-cross-platform **Electric Sheep / Unity** client.
+Don and Scott go back to **Silicon Valley in the early 1990s** — Don at Sun, running Scott's early
+Fractal Flame screensaver on his SparcStation II and talking interactive performance-art graphics
+while Don built his CAM6 cellular-automata performance platform. They reconnected at **Carnegie
+Mellon** (Scott in his CS PhD, Don with Brad Myers doing Lisp UI and porting SimCity from NeWS to
+Tcl/Tk), and have stayed friends ever since — recently teaming up again on a cross-platform
+**Electric Sheep / Unity** client. *(The earliest dates are Don's recollection, to confirm with
+Scott when he reviews this page.)*
 
 There's a perfect thread here: **generative and evolutionary art** — from the **Fractal Flame**
 math, through the distributed, vote-bred **Electric Sheep**, to today's **AI image generation** in
