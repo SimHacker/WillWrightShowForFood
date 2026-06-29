@@ -77,6 +77,7 @@ sources:
   correspondence: "Don's personal email archive with Scott (2006–2026) — Brian Eno intro, BitTorrent/libtorrent at TomTom, CAM6/cellular automata, Electric Sheep Unity, Infinidream beta testing. Personal source; quote only with Scott's OK."
 
 see_also:
+  - { path: ideas.md, why: "Conversation hooks for the show — grounded in Scott's real work" }
   - { path: ../will-wright/, why: "Will did the 2006 Long Now talk with Brian Eno; possible reunion host + Eno contact" }
   - { path: ../brian-eno/, why: "Dream guest — Don introduced Brian to Scott in 2006; generative-art kinship" }
   - { path: ../don-hopkins/, why: "Host — CMU friend, Electric Sheep Unity collaborator" }

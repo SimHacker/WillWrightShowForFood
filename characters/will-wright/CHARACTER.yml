@@ -137,6 +137,7 @@ see_also:
   - { path: GLANCE.md, why: "One-screen sniff" }
   - { path: CARD.yml, why: "Invokable abilities — show segments" }
   - { path: invitation.md, why: "Public invitation (short elevator pitch)" }
+  - { path: ideas.md, why: "Conversation hooks — grounded topic menu for the show" }
   - { path: ../../repo-shows/will-wright/, why: "Long invitation drafts live here (sent skyscraper + opus + gpt55)" }
   - { path: ../../process/entryways/guest-will.md, why: "Suggested playlist" }
   - { path: ../../repo-shows/will-wright/BROWSE.md, why: "Pick-any-order landing" }

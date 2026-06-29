@@ -32,8 +32,11 @@ format:
   run_code: true
   audience_qa: true
 
+ideas: ../../characters/scott-draves/ideas.md   # grounded conversation hooks
+
 ties_to:
   - ../../characters/scott-draves/
+  - ../../characters/scott-draves/ideas.md
   - ../../characters/scott-draves/correspondence.yml
   - ../../characters/brian-eno/
   - ../../characters/will-wright/

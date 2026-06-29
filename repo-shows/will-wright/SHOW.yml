@@ -19,6 +19,8 @@ public_repo:
   browse_without_account: "README.md + raw file URLs on github.com"
   sync_plan: ../../process/wwsff-export-sync.yml
 
+ideas: ../../characters/will-wright/ideas.md   # grounded conversation hooks — a topic MENU, not an agenda (topic-less by design)
+
 topic_less_by_design:
   why: "The first show has NO assigned topic. Will Wright is the topic. We talk about whatever he wants — and the topical shows (the simulation effect, Proxi, original SimCity intent, post-mortems...) FLOW FROM it as follow-ups."
   the_move: "Open the door wide first; let the threads he pulls become the season. Show, don't tell."
