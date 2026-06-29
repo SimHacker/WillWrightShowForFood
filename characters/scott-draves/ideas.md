@@ -90,14 +90,30 @@ AI. The friendship as a through-line for the whole field.
 
 ### 11. The 6Heads house — 1990 Mountain View (banter + storytelling)
 
+<p align="center">
+  <img src="media/6heads/elavil-5-front-booklet.png" width="160" alt="ELAVIL anatomical head — front, with 'the human brain' booklet">
+  <img src="media/6heads/elavil-6-back-base.png" width="160" alt="ELAVIL head — back; base reads ELAVIL (amitriptyline HCl) MSD 10/25/50 mg">
+  <img src="media/6heads/elavil-1-open-with-brain.png" width="160" alt="Skull panel open, brain removed and set beside the head">
+  <img src="media/6heads/elavil-4-cross-section.png" width="160" alt="Sagittal cross-section view inside the head, brain beside it">
+  <img src="media/6heads/elavil-3-side-open.png" width="160" alt="Side view, skull panel open, brain in place">
+  <img src="media/6heads/elavil-2-brain-closeup.png" width="160" alt="Close-up of the removable plastic brain">
+</p>
+
+*The actual model — an **ELAVIL** (amitriptyline HCl) anatomical head, a 1974 **MSD / Merck** pharma
+gift to doctors, with a removable skull panel and lift-out brain. **We had six**, lined up along the
+mantelpiece. (Photos found online of the same model.)*
+
 The *how-we-met* story, told properly for once. Don's Mountain View household — **"6Heads,"** named
-for six plastic anatomical human heads with removable skull panels (pharma swag branded *"Elevil"*)
-abandoned in the garage — was Don plus **Nick Thompson** (SGI; who brought Spot by) and **Steve
-Zellers** (Sun, then Dave Winer's *More*/**Frontier**), living **next door to Joy Mountford** (Apple
-Human Interface Group; Don later knew her at Interval). Everyone fresh out of college, first jobs, the
-1990 Silicon Valley zeitgeist — *before it enshittified and scattered the techno-hippies to Amsterdam
-and beyond.* **Ask Spot to tell HIS post-graduation story** — what he did, where he landed, how we
-converged in that scene. We'll fill each other in on all the stuff we never asked about back then.
+for those six plastic anatomical heads with removable skull panels (drug-rep swag for **ELAVIL** /
+amitriptyline) abandoned in the garage when they moved in — was Don plus **Nick Thompson** (SGI; who
+brought Spot by) and **Steve Zellers** (Sun, then Dave Winer's *More*/**Frontier**), living **next
+door to Joy Mountford** (Apple Human Interface Group; Don later knew her at Interval). Don, Nick, and
+Steve were fresh out of college in their first Silicon Valley jobs; **Scott was the visiting
+friend** — about to head to **CMU for his PhD** (so he's the grad-school-bound one, not a
+first-jobber). All of it in the 1990 Silicon Valley zeitgeist — *before it enshittified and scattered
+the techno-hippies to Amsterdam and beyond.* **Ask Spot to tell HIS post-graduation story** — what he
+did, where he landed, how we converged in that scene (was it the summer of 1990, between Brown and
+CMU?). We'll fill each other in on all the stuff we never asked about back then.
 
 ## Sources (real, public)
 
