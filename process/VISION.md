@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/vision-and-ambition.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:29aa74723402e7be -->
+<!-- content-sha256:888395514597469e -->
 
 # Vision and ambition
 
@@ -30,7 +30,8 @@ microworlds, but a *living* microworld — a repo you can enter, fork, breed, an
 show. WillWrightShowForFood is the public seed of that conversation.
 - **forebears:**
   - Terry Winograd open seminar tradition (CS547 archive)
-  - Internet-scale permanent record (archival ethos)
+  - Internet-scale permanent record (archival ethos — Internet Archive / Brewster Kahle)
+  - The Long Now (Brian Eno's coinage; Long Now Foundation) — 10,000-year thinking; see long_now_and_later
   - Hacker/builder culture — Woz energy: show the schematic, ship the board
 
 ## Pyramid
@@ -221,6 +222,51 @@ Skills are how the 1996 microworlds talk becomes *runnable* thirty years later.
 - **girder:** YAML indexes, schemas, SHOW.yml, CARD.yml, GLANCE pyramid, git history
 - **slab:** pnpm verify, GitHub Actions, SETUP.md — it either passes or it doesn't
 - **rule:** We don't dress up emptiness. If it's not in the repo yet, the yaml says seed or roadmap.
+
+## Long Now And Later
+
+- **disclaimer:** No relationship, endorsement, or support from any institution named here is claimed or
+promised. This is documented strategic ALIGNMENT and long-term aspiration — why this work
+should naturally appeal to long-horizon, preservation-minded allies *over time*.
+- **the_game:** Play for the long horizon, not the quarter. Build a durable, attributed, forkable record of
+how this stuff was actually made — primary sources, old code revived, lineage from 1996
+forward — so it's worth mirroring and stewarding decades from now. Patience as strategy;
+non-extractive by design. "The Long Now and Later."
+### Why It Aligns
+
+### Long Now Foundation
+
+- **what:** 10,000-year thinking; long-term responsibility; The Long Now.
+- **resonance:** Brian Eno coined the phrase 'The Long Now' and is a Long Now Foundation founding board
+member; Stewart Brand co-founded it. The 2006 Long Now talk 'Playing with Time' (Eno +
+Will Wright) is literally an anchor of this repo. A Repo Show whose durable artifact is a
+public, inspectable, forkable lineage is Long-Now-shaped by construction.
+- **in_repo:**
+  - ../characters/brian-eno/
+  - ../repo-shows/brian-eno/
+
+### Internet Archive
+
+- **what:** Permanent, open, mirrorable record of culture and software.
+- **resonance:** The repo's stated goal is a graph that outlives any one platform — mirror, cite, ingest
+(see audiences_if_you_stumbled_here.archive_and_library, namesake Brewster Kahle). Reviving
+SimCity/old code, archiving the 1996 Stanford talk, and primary-source provenance are
+exactly the kind of work an archive wants to preserve.
+- **in_repo:**
+  - ../process/trails/archive-and-provenance.md
+
+- **preservation_expertise_in_network:**
+  - david_rosenthal: LOCKSS founder — digital preservation; already an invited guest (../characters/david-rosenthal/).
+  - terry_winograd: CS547 archive recovery — saving the seminar videos that include Will's 1996 talk (../repo-shows/terry-winograd/).
+
+- **how_we_earn_it:**
+  - Keep the record honest, attributed, and forkable — git history as provenance.
+  - Revive and preserve real software + primary sources, not just talk about them.
+  - Stay non-extractive: audiences and elders as allies, credited, never strip-mined.
+  - Make everything mirrorable and account-free to read — outlive any single host.
+- **not_promising:**
+  - Any Long Now or Internet Archive partnership, funding, or endorsement.
+  - That these institutions know this exists. This is alignment, offered for inspection.
 
 ## Invitation To Stakeholders
 
