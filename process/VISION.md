@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/vision-and-ambition.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:98e6b965d3ab3f24 -->
+<!-- content-sha256:f87cbfc5eda1aa64 -->
 
 # Vision and ambition
 
@@ -303,7 +303,8 @@ Crew incl. Henry Minsky, Milan Singh Minsky, Steve Kommrusch, Isabella Struckman
   - leela_and_moollm: Real credit + thanks: Leela AI has effectively **sponsored, stimulated, driven, and
 dog-fooded** much of **MOOLLM's** development and many of its ideas and philosophies —
 especially through its deep **MIT AI Lab** lineage (Society of Mind, frames/K-lines,
-constructionism, the Minsky tradition Henry carries forward). Building real
+constructionism, **Gary Drescher's constructivist schema mechanism — *Made-Up Minds***, and
+the Minsky tradition Henry carries forward). Building real
 visual-intelligence / cognition systems at Leela shaped MOOLLM's design, and MOOLLM ideas
 were exercised and tested against Leela's actual needs. The connection runs both ways.
 - **reunions_are_a_format:** 'Get the old band back together' recurs across every era Don worked in — the NeWS gang
