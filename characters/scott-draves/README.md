@@ -39,15 +39,15 @@ Sigma (Beaker Notebook), CTRL-labs/Meta (neuromotor interfaces), and Stability A
 
 ## Why a Repo Show
 
-Don and Scott go back to **the Bay Area in the early 1990s** — most likely through Don's housemate
-**Nick Thompson**, who knew Spot from Brown (they co-wrote `fnord`) and was then at **SGI** building
-Open Inventor. Don, at Sun, ran Scott's early Fractal Flame work on his SparcStation II and talked
-interactive performance-art graphics while building his CAM6 cellular-automata platform. They
-reconnected at **Carnegie Mellon** (Scott in his CS PhD, Don with Brad Myers doing Lisp UI and
-porting SimCity from NeWS to Tcl/Tk), and have stayed friends ever since — recently teaming up again
-on a cross-platform **Electric Sheep / Unity** client. *(The Nick-Thompson bridge and earliest dates
-are Don's recollection, to confirm with Scott when he reviews this page. Scott himself used SGI
-machines as an intern in Tokyo in 1991 and at NTT-Data in 1993 — Nick was the SGI employee.)*
+Don and Scott go back to **the Bay Area in the early 1990s** — through Don's housemate **Nick
+Thompson**, who knew Spot from Brown (they co-wrote `fnord`) and was then at **SGI** building Open
+Inventor. Nick brought Scott home and introduced him to Don, and the three hung out regularly. Don,
+at Sun, ran Scott's early Fractal Flame work on his SparcStation II and talked interactive
+performance-art graphics while building his CAM6 cellular-automata platform. They reconnected at
+**Carnegie Mellon** (Scott in his CS PhD, Don with Brad Myers doing Lisp UI and porting SimCity from
+NeWS to Tcl/Tk), and have stayed friends ever since — recently teaming up again on a cross-platform
+**Electric Sheep / Unity** client. *(Exact earliest dates are Don's recollection, to confirm with
+Scott; Scott also used SGI machines as an intern in Tokyo in 1991 and at NTT-Data in 1993.)*
 
 There's a perfect thread here: **generative and evolutionary art** — from the **Fractal Flame**
 math, through the distributed, vote-bred **Electric Sheep**, to today's **AI image generation** in
