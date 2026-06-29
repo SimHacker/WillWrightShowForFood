@@ -46,8 +46,10 @@ something):
 - **A gestural, musical pie menu** (my old obsession): eight directions as eight timbres, the
   *curve and speed of the gesture between them* shaping the sound. Constraints making freedom.
 - **Taking Tiger Mountain, by transformation** — Doug Hilsinger & Caroleen Beatty re-recorded the
-  whole album in 2004; honoring a work by transforming it, not copying it, is the exact move a
-  Repo Show makes with old code. (I actually crossed paths with that cover in SF — long story.)
+  whole album by hand in 2004 (you loved it — *"deeply moved… I like it very, very much"* — and
+  wrote the liner notes). I'd love to use it as a tangible example of *honoring by transforming*,
+  and a chance to hear your own work through fresh ears. (I crossed paths with Doug at the SF Eagle
+  in 2006 — and loved the record before I knew he'd made it. I'd love to bring Doug on too.)
 - **The Long Now lens** on all of it: what's worth *seeding* now for a 10,000-year audience?
 
 (More grounded hooks in [`ideas.md`](../../characters/brian-eno/ideas.md) — all offered as my

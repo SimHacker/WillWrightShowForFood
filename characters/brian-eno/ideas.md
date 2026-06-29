@@ -56,16 +56,20 @@ the **gesture between nodes** (speed, curve) shapes the sound — a constraint-d
 gestural instrument? Brian's whole career is "constraints create freedom," so this is a fun thing
 to prototype together live. (Offered as a Don idea, not attributed to Brian.)
 
-### 7. Taking Tiger Mountain, by transformation
+### 7. Taking Tiger Mountain, by transformation (fresh ears for the maker)
 Brian's *Taking Tiger Mountain (By Strategy)* (1974) was lovingly **re-recorded in full** by
 **Doug Hilsinger & Caroleen Beatty** (2004, DBK Works) — Hilsinger playing *every* instrument by
-hand, with a deliberate **ban on keyboards/synths/drum machines**, so the cold experiment came back
-warm and aggressively alive. They slipped Brian a CD-R at his Long Now lecture and he said *"I am
-deeply moved… I like it very, very much."* Don crossed paths with that cover (and with Doug) in San
-Francisco. A lovely live theme — **honoring a work by transforming it**, the same move the Repo Show
-makes with old code. Full story + the wish to bring Doug on:
+hand, with a deliberate **ban on keyboards/synths/samplers**, so the cold experiment came back warm
+and aggressively alive. Doug handed Brian a CD-R at his SF lecture; Brian phoned back — *"I am deeply
+moved… I like it very, very much"* — thanked him for making *"beautiful music"* from his *"old
+experiments,"* and **wrote the liner notes**. (There's even a recording of that phone message.)
+The gift here is rare: a chance to let Brian hear his **own** decades-old work through **fresh
+ears**, with the blessing already given — a tangible example of *honoring a work by transforming
+it*, which is the exact move a Repo Show makes with old code. Don crossed paths with that cover (and
+with Doug) at the SF Eagle in 2006 — and *loved it before he knew Doug had made it*, the sincerest
+tribute of all. Full story, Doug's words, the phone message, and the wish to bring Doug on:
 [`../doug-hilsinger/taking-tiger-mountain-by-serendipity.md`](../doug-hilsinger/taking-tiger-mountain-by-serendipity.md)
-· [Doug's home](../doug-hilsinger/).
+· [Doug's home](../doug-hilsinger/) · [Eno's phone message](audio/TakingTigerMountainBrianEnoPhoneMessageToDougHilsinger.mp3).
 
 ### 8. The Long Now lens
 Brian coined **"The Long Now"** and helped found the Long Now Foundation. A grounding question for

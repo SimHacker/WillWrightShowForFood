@@ -27,20 +27,25 @@ invitation:
 
 bio:
   summary: |
-    **Doug Hilsinger** is a San Francisco Bay Area multi-instrumentalist who, in Fall 2003,
+    **Doug Hilsinger** is a San Francisco Bay Area multi-instrumentalist who, in **Fall 2003**,
     recorded a complete, track-for-track cover of **Brian Eno's *Taking Tiger Mountain (By
-    Strategy)*** (1974) with vocalist **Caroleen Beatty** — released in 2004 on **DBK Works**
-    (CD #111) for the album's 30th anniversary. Hilsinger played **every instrument** (drums,
-    bass, guitar, pedal steel, sitar guitar, glockenspiel, melodica, autoharp, percussion,
-    treatments) with a deliberate **ban on keyboards, synths, and drum machines**; Beatty sang.
-    Made privately, for love, the duo slipped Eno a CD-R at his Long Now Foundation lecture in
-    San Francisco — and **Eno himself** responded: *"I am deeply moved by your versions of my
-    songs. I like it very, very much,"* later quipping to Pitchfork, *"They aren't bad songs
-    after all."* That blessing brought the labor-of-love tribute out into the world.
+    Strategy)*** (1974) with vocalist **Caroleen Beatty** — released **May 18, 2004** on **DBK
+    Works** (CD #111), subtitled *"A Modern Revolutionary Peking Opera"*; effectively a 30th-
+    anniversary tribute. Hilsinger played **every instrument** (drums, bass, guitar, pedal steel,
+    sitar guitar, glockenspiel, melodica, autoharp, percussion, background vox, treatments) with a
+    deliberate **ban on keyboards, synths, samplers, and drum machines**; Beatty sang and clapped.
+    Recorded at Saucefaucet Int'l (his practice space + bedroom), for love, never meant for retail.
+    The duo handed **Eno** a CD-R at his San Francisco lecture (Nov 2003) — and Eno phoned back:
+    *"I am deeply moved by your versions of my songs… I like it very, very much,"* thanked Doug for
+    making *"beautiful music"* from his *"old experiments,"* **wrote the liner notes**, and later
+    quipped to Pitchfork, *"They aren't bad songs after all."* That blessing brought the labor-of-
+    love tribute out into the world. Doug & Caroleen are SF scene veterans (both in **Waycross**;
+    Doug in BOMB + The Hall Flowers; Caroleen in The Bedlam Rovers, with Jon Langford of the
+    Mekons), and performed the album live as the **ENORCHESTRA**.
   known_for:
-    - "Brian Eno's Taking Tiger Mountain (By Strategy) — all-acoustic-instruments cover (2004)"
-    - "Multi-instrumentalist (no keyboards/synths/drum machines)"
-    - "SF bands incl. Waycross; the ENORCHESTRA live project"
+    - "Brian Eno's Taking Tiger Mountain (By Strategy) — all-by-hand cover, no keyboards (2004, DBK Works #111)"
+    - "Multi-instrumentalist (no keyboards/synths/samplers/drum machines)"
+    - "SF bands: Waycross, BOMB, The Hall Flowers; the ENORCHESTRA live project"
 
 connections:
   brian_eno: "The cover earned Eno's personal praise; the perfect living example of honoring a work by transforming it."
@@ -52,17 +57,31 @@ story: taking-tiger-mountain-by-serendipity.md
 sources:
   web:
     - "https://musicbrainz.org/release-group/b56d145e-05fb-3740-8ae2-e8e7ef29b8ed"  # MusicBrainz release group
-    - "https://pitchfork.com/reviews/albums/3988-taking-tiger-mountain-by-strategy-with-caroleen-beatty/"  # Pitchfork review
-    - "http://www.saucefaucet.com/tiger.html"     # artist page (personnel, tracklist)
-    - "http://www.saucefaucet.com/tigerbio.html"  # DBK #111 press bio
+    - "https://www.discogs.com/release/1949546"   # Discogs — DBK #111, 'A Modern Revolutionary Peking Opera', 18 May 2004
+    - "https://pitchfork.com/reviews/albums/3988-taking-tiger-mountain-by-strategy-with-caroleen-beatty/"  # Pitchfork review (8.6)
+    - "https://www.allmusic.com/album/brian-enos-taking-tiger-mountain-by-strategy-mw0000469810"  # AllMusic (Dave Thompson)
+    - "http://www.saucefaucet.com/tiger.html"      # artist page (personnel, tracklist, Eno phone call)
+    - "http://www.saucefaucet.com/tigerbio.html"   # DBK #111 press bio
+    - "http://www.saucefaucet.com/dug_notes.html"  # Doug's first-person story
+    - "http://yourmusiclawyer.com/queues/2004/brian_eno/index.html"  # Eno's phone call audio
+    - "https://soundcloud.com/doug-hilsinger/sets/brian-enos-taking-tiger"  # full album, Doug's own upload
+    - "https://www.youtube.com/watch?v=kZ5szyqkAHQ&list=PLED572AC3412407F4"  # full album playlist (YouTube)
   facts:
-    - "Released 2004 on DBK Works (CD #111); recorded Fall 2003 at Saucefaucet Int'l"
-    - "Doug Hilsinger: all instruments, no keyboards/synths/drum machines. Caroleen Beatty: lead vocals, handclaps"
-    - "30th-anniversary track-for-track cover of Eno's 1974 album"
-    - "Eno heard it via a CD-R handed over at his Long Now Foundation lecture; praised it; that led to release"
+    - "Recorded Fall 2003 at Saucefaucet Int'l (practice space + bedroom); released 18 May 2004 on DBK Works (CD #111), subtitled 'A Modern Revolutionary Peking Opera'"
+    - "Doug Hilsinger: ALL instruments (no keyboards/synths/samplers/drum machines). Caroleen Beatty: lead vocals, handclaps"
+    - "Track-for-track cover of Eno's 1974 album; ~30th-anniversary, alongside Virgin's remastered reissue"
+    - "CD-R handed to Eno at his SF lecture (Nov 2003; Pitchfork: a Long Now Foundation appearance); Eno phoned back, praised it, and WROTE THE LINER NOTES"
+    - "Cover uses the same Chairman Mao-era postcard Eno bought in SF Chinatown (1972) that inspired the original"
+    - "Doug: Waycross, BOMB (Bill Laswell), The Hall Flowers. Caroleen: Waycross, Bedlam Rovers, Jon Langford/Mekons. Live as the ENORCHESTRA"
+
+media:
+  story_image: media/doug-story-saucefaucet.png   # Doug's own story page (saucefaucet.com)
+  eno_phone_message: ../brian-eno/audio/TakingTigerMountainBrianEnoPhoneMessageToDougHilsinger.mp3
 
 see_also:
-  - { path: taking-tiger-mountain-by-serendipity.md, why: "The full story — verified album facts + Don's serendipity account" }
+  - { path: taking-tiger-mountain-by-serendipity.md, why: "The full story — verified album facts, Doug's words, Eno's phone message, Don's serendipity account" }
+  - { path: media/doug-story-saucefaucet.png, why: "Doug's own first-person story (saucefaucet.com)" }
+  - { path: ../brian-eno/audio/TakingTigerMountainBrianEnoPhoneMessageToDougHilsinger.mp3, why: "Eno's actual phone message praising the cover" }
   - { path: ../brian-eno/, why: "Whose album it covers; Eno praised it — discussion subject for the Eno show" }
   - { path: ../scott-draves/, why: "Generative-systems show; transformation-as-homage thread" }
   - { path: ../will-wright/, why: "Eno's Long Now co-speaker; would enjoy this thread" }
