@@ -39,6 +39,7 @@ bio:
   known_for:
     - "NeWS object-oriented PostScript — class.ps (Smalltalk-style classes in pure PostScript)"
     - "'Object Oriented Programming in NeWS' (1986); 'A User-Interface Toolkit in Object-Oriented PostScript' (with David Rosenthal, 1987)"
+    - "US Patent 5,187,786 (with David Rosenthal, 1993) — a Smalltalk/NeWS-style class hierarchy in a plain hierarchical file system (directories = classes/instances; shell PATH = dictionary stack; supports Self & Super)"
     - "Apple Macintosh Printing Architecture; Sun Chief Scientist; Java Car"
     - "Redfish Group / Santa Fe Institute — agent-based modeling, complexity science"
 
@@ -47,6 +48,8 @@ connections:
   news_gang: "Core of the **NeWS gang** with James Gosling, David Rosenthal, Arthur van Hoff (and Don) — the 'send code, not commands' window system. Natural co-guest for the NeWS reunion."
   send_code_philosophy: "His class.ps is the proof of NeWS's bet: ship **programs**, not command streams — PostScript for code, data, AND graphics. See ../../process/trails/send-code-not-commands.md."
   warnock_lineage: "PostScript runs from **John Warnock** (Adobe; d. 2023) → NeWS (Gosling) → Owen's object PostScript. The thread to discuss: Warnock's idea of PostScript as a **linguistic motherboard** (graphics card + networking card in software, more cards to come)."
+  filesystem_oo_patent: "With **David Rosenthal**, Owen patented **US 5,187,786** (1993, Sun): a full OO class hierarchy in a plain **hierarchical file system** — classes & instances as **directories**, **path files** doing inheritance/method lookup (the shell PATH as a dictionary stack), even supporting **Self** and **Super**. Filesystem-as-object-system."
+  moollm_repo_object_model: "**MOOLLM draws on this directly:** it maps **Self's prototype object model onto GitHub repos** — the filesystem (with **history + branching**) as the object store; **skills / shell scripts / LLM calls (Anthropic + MOOLLM extended skills) as methods**; full **Self-style multiple-inheritance delegation** — including inheriting **by name (a well-known K-line)** from classes, schemas, APIs, protocols, and even people's published bodies of work (`from densmore.owen import humor, empathy, postscript-wizardry, chaos`) — *inheriting ideas/skills, never impersonating* (representation-ethics). See ../../process/trails/send-code-not-commands.md."
   don_primary_source: "Don hosts Owen's 1986 NeWS OOP paper at donhopkins.com/home/monterey86.pdf."
 
 show_suggestions:

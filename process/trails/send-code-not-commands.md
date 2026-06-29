@@ -41,6 +41,29 @@ the OO-PostScript toolkit paper with Rosenthal, 1987). Objects are dictionaries;
 pushing the object and its class chain on the dict stack. *The code you send is itself
 object-oriented.*
 
+### From class.ps to the filesystem — and to MOOLLM's repos
+
+Owen and **David Rosenthal** then patented the deep version: **[US Patent 5,187,786](https://patents.google.com/patent/US5187786A/en)**
+(1993, Sun) — *"implementing a class hierarchy of objects in a hierarchical file system."* Classes and
+instances are **directories**; **path files** drive inheritance and method lookup (the **shell PATH as
+a dictionary stack**); it even supports **Self** and **Super**. Object orientation, in plain Unix
+directories and shell scripts.
+
+**MOOLLM runs on exactly this idea.** It maps **Self's prototype object model onto GitHub repos**: the
+filesystem (with **history and branching**) is the object store; **skills, shell scripts, and LLM
+calls** (Anthropic + MOOLLM extended skills) are the **methods**; and you get full **Self-style
+multiple-inheritance delegation**. What LLMs add: you can **inherit by name** — a well-known
+**K-line** — from classes, schemas, APIs, protocols… and even **people's published bodies of work**:
+
+```text
+from densmore.owen import humor, empathy, postscript-wizardry, chaos
+```
+
+You *declare* the traits a character mixes in (multiple inheritance earns its keep), and the model —
+which already has all of it in the training data — delegates to them. **Crucial guardrail:** this is
+**inheriting ideas, skills, and style — never impersonating the person** (representation-ethics; the
+SimShneiderman rule — build models *with respect*).
+
 ## 3. Warnock's "linguistic motherboard"
 
 PostScript runs from the late **John Warnock** (1940–2023; Adobe co-founder, PostScript & PDF) →
