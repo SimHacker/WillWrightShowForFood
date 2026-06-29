@@ -15,6 +15,7 @@ and [`repo-shows/`](../../repo-shows/).
 | [`augmentation-and-hypertext.md`](augmentation-and-hypertext.md) | 🕯️ Engelbart & Nelson — augmenting intellect, hypertext. |
 | [`direct-manipulation.md`](direct-manipulation.md) | Shneiderman, pie menus, the feel of interfaces. |
 | [`live-objects.md`](live-objects.md) | Live, late-bound object systems — Smalltalk, Self, NeWS. |
+| [`send-code-not-commands.md`](send-code-not-commands.md) | 🌻 The throughline: NeWS/PostScript (Gosling, Owen Densmore, Warnock) → Will's "download into the head" (K-lines) → Sims/SliceCity → Drescher schemas → executable character models. |
 | [`maxis-sims-lineage.md`](maxis-sims-lineage.md) | Maxis / The Sims team and its diaspora. |
 | [`game-design-lineage.md`](game-design-lineage.md) | The game-design through-line. |
 | [`procedural-beauty.md`](procedural-beauty.md) | Generative/procedural art — Flame, Electric Sheep, NCAs. |

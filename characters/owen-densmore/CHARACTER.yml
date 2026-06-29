@@ -1,0 +1,69 @@
+# Owen Densmore — invitation portrayal. NOT Owen Densmore.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: owen-densmore
+  name: "Owen Densmore"
+  type: invitation
+  signifier: "🌻"
+  status: living
+  field: "Object-oriented PostScript (NeWS class.ps); Xerox/Apple/Sun; complexity science (Redfish, Santa Fe Institute) — the OG 'User Interface Flower Child'"
+  home: characters/owen-densmore/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+  note: "NeWS gang; Don's friend. Don's own epithet 'the User Interface Flower Child' is an homage to Owen — the OG."
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/REPO-SHOWS.yml#news-postscript-window-system.yml
+  likelihood: "warm — NeWS gang, longtime friend; natural co-guest with Gosling + Rosenthal"
+
+bio:
+  summary: |
+    **Owen Densmore** — 30+ years across **Xerox, Apple, and Sun Microsystems**. At Sun he created the
+    **object-oriented PostScript class system (`class.ps`)** for **NeWS** (the Network/extensible Window
+    System) — showing that **PostScript dictionaries alone** could implement a Smalltalk-style class
+    mechanism (inheritance, methods, instances) with **no changes to the interpreter** ("Object
+    Oriented Programming in NeWS," 1986; "A User-Interface Toolkit in Object-Oriented PostScript," with
+    David Rosenthal, 1987 — one of the toolkits earned a **patent in language design**). Earlier, at
+    **Apple**, he worked on Mac/Lisa hardware+software and the **Macintosh Printing Architecture**;
+    later he was a **Chief Scientist at Sun** and led the **Java Car** concept work. After the
+    **Santa Fe Institute** Complex Systems Summer School (2000) he moved into **complexity science** and
+    co-founded the **Redfish Group** (agent-based modeling; a pillar of the NetLogo community).
+  known_for:
+    - "NeWS object-oriented PostScript — class.ps (Smalltalk-style classes in pure PostScript)"
+    - "'Object Oriented Programming in NeWS' (1986); 'A User-Interface Toolkit in Object-Oriented PostScript' (with David Rosenthal, 1987)"
+    - "Apple Macintosh Printing Architecture; Sun Chief Scientist; Java Car"
+    - "Redfish Group / Santa Fe Institute — agent-based modeling, complexity science"
+
+connections:
+  the_og_flower_child: "**Owen is the original 'User Interface Flower Child'** — Don shamelessly took his own title as an homage. One of the great, kind elders of the **Silicon Valley Hippie Mafia**."
+  news_gang: "Core of the **NeWS gang** with James Gosling, David Rosenthal, Arthur van Hoff (and Don) — the 'send code, not commands' window system. Natural co-guest for the NeWS reunion."
+  send_code_philosophy: "His class.ps is the proof of NeWS's bet: ship **programs**, not command streams — PostScript for code, data, AND graphics. See ../../process/trails/send-code-not-commands.md."
+  warnock_lineage: "PostScript runs from **John Warnock** (Adobe; d. 2023) → NeWS (Gosling) → Owen's object PostScript. The thread to discuss: Warnock's idea of PostScript as a **linguistic motherboard** (graphics card + networking card in software, more cards to come)."
+  don_primary_source: "Don hosts Owen's 1986 NeWS OOP paper at donhopkins.com/home/monterey86.pdf."
+
+show_suggestions:
+  - { seed: ../../repo-shows/REPO-SHOWS.yml#news-postscript-window-system.yml, what: "★ NeWS reunion — Gosling + Rosenthal + van Hoff + Owen (+ Don): 'send a program, not a data structure'; the road not taken, made runnable in the browser." }
+  - { what: "Solo: object-oriented PostScript & PostScript as a 'linguistic motherboard' (Warnock's vision via Owen + the late John Warnock) — and complexity science / agent-based modeling (Redfish, NetLogo)." }
+
+sources:
+  web:
+    - "http://redfish.com/owenDensmore.htm   # bio"
+    - "https://donhopkins.com/home/monterey86.pdf   # 'Object Oriented Programming in NeWS' (1986)"
+  papers:
+    - "Densmore, O. (1986). 'Object Oriented Programming in NeWS.' (Monterey)"
+    - "Densmore, O. & Rosenthal, D.S.H. (1987). 'A User-Interface Toolkit in Object-Oriented PostScript.' Computer Graphics Forum 6(2)."
+
+see_also:
+  - { path: ../../process/trails/send-code-not-commands.md, why: "The philosophy his class.ps embodies" }
+  - { path: ../james-gosling/, why: "NeWS co-creator — send code, not commands" }
+  - { path: ../david-rosenthal/, why: "NeWS gang; co-author of the OO-PostScript toolkit paper" }
+  - { path: ../arthur-van-hoff/, why: "NeWS gang (HyperLook); NeWS reunion" }
+  - { path: ../don-hopkins/, why: "Host — NeWS/HyperLook SimCity; 'User Interface Flower Child' is an homage to Owen" }
