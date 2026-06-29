@@ -98,6 +98,14 @@ have met.** (Don's reliable line back into this circle is **Will** — whom he k
 regularly in the SF Bay Area — and **Scott**, with whom he still collaborates. That's why a
 **reunion** inviting **Brian**, **Will**, and **Doug** is the dream.)
 
+## Credit where it's due
+
+None of this chain would have happened without the **Long Now Foundation**. Its 2006 talk
+*Playing with Time* (Brian Eno + Will Wright) is what put everyone in the same room — Don in the
+audience asking a question, Doug in that same audience, the dinner with Will and Brian afterward,
+the introduction of Brian to Scott a few days later, and then the Eagle. The Long Now **facilitated
+the whole serendipity.** Thank you. 🕰️
+
 ## Why it belongs in the show
 
 - **Constraints create freedom** — the "no keyboards" rule is the most Eno-ish, most

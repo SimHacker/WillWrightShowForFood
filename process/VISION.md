@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/vision-and-ambition.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:2ef0dfb4c411708f -->
+<!-- content-sha256:a005c0ed8527d0cf -->
 
 # Vision and ambition
 
@@ -232,6 +232,12 @@ should naturally appeal to long-horizon, preservation-minded allies *over time*.
 how this stuff was actually made — primary sources, old code revived, lineage from 1996
 forward — so it's worth mirroring and stewarding decades from now. Patience as strategy;
 non-extractive by design. "The Long Now and Later."
+- **facilitation_credit:** Real credit and thanks to the **Long Now Foundation** for facilitating much of this in the
+first place. Its 2006 talk *Playing with Time* (Brian Eno + Will Wright) is the seed event that
+put this whole circle in one room: Don met Brian there (and at the dinner after), Doug Hilsinger
+was in the same audience, and that week led to introducing Brian to Scott Draves — the
+relationships this repo now tries to honor and reconvene. The Long Now didn't just inspire the
+long-horizon ETHOS; it literally hosted the encounters.
 ### Why It Aligns
 
 ### Long Now Foundation
