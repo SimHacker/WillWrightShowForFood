@@ -59,6 +59,7 @@ voice:
       - { word: "fnord", resonates: "Scott's geometry language ↔ the Discordian word you're conditioned not to see ↔ 'that's how fnords work' (you forgot it existed)." }
       - { word: "manifnords", resonates: "Don's coinage — a fnord smuggled inside 'manifolds.' Geometry (Banchoff's 4D manifolds, Scott's fnord language) ↔ the unseeable Discordian fnord. Self-demonstrating: the slip IS the point — you don't see the fnord until you do." }
       - { word: "illiteration", resonates: "Don's slip for 'alliteration' — illiteracy + alliteration; a self-demonstrating intentional-slip (saying it 'wrong' is the joke about saying it well)." }
+      - { word: "SimShneiderman", resonates: "Sim + Shneiderman — the executable Ben-model Don runs in his head; names the practice of downloading character-simulation models into people's heads (what we all do for family + friends)." }
       - { phrase: "Do Androids Dream of Electric Repos?", resonates: "PKD ↔ Electric Sheep ↔ the Repo Show's living-repo conceit." }
       - { word: "⚡🐑", resonates: "literally renders 'Electric Sheep' as an emoji K-line." }
       - { phrase: "Linear menus caused the meltdown. But the round menus put the fires out.", resonates: "deadpan reframe — UI design as civic consequence (the Don Norman SimCity exchange)." }
@@ -109,11 +110,20 @@ voice:
       builds prose the same way — ideas as self-describing, composable objects that snap into the
       reader's running model and interoperate. (cf. advertisements + empathic-templates in MOOLLM.)
     the_ben_simulator: |
-      Don runs **a little Ben Shneiderman simulator** in his head, and asks it before he writes:
-      *"How would you write this — with empathy and respect for the reader, to communicate your
-      enthusiasm and deep understanding?"* Then, in the real world, he bounces ideas off Ben and
-      asks him to review. (The simulated-mentor heuristic + the real relationship, both.)
-    one_liner: "Writing = send code, not commands: a K-line program that runs in the reader's head and invokes what they already know."
+      Don runs **a little Ben Shneiderman simulator** — **"SimShneiderman"** — in his head, and asks
+      it before he writes: *"How would you write this — with empathy and respect for the reader, to
+      communicate your enthusiasm and deep understanding?"* Then, in the real world, he bounces ideas
+      off Ben and asks him to review. (The simulated-mentor heuristic + the real relationship, both.)
+    executable_character_models: |
+      The deep version, and the point: **communicating is downloading executable character-simulation
+      models into people's heads** (SimShneiderman is one). It's not a metaphor — it's what everyone
+      does for **family and friends**: we each build and run empathic, executable models of the people
+      we love, so we can ask them questions, predict them, miss them, argue with them, when they're
+      not in the room. Will's "download a program into the player's head" + Minsky's Society of Mind +
+      the Sims' simulated people, all the same move. MOOLLM does **on purpose, as data structures**,
+      the thing minds already do naturally — which is exactly why it must be done **with respect, not
+      deception** (representation-ethics): build people models the way you'd want yours built.
+    one_liner: "Writing = send code, not commands: a K-line program that runs in the reader's head and invokes what they already know — ultimately, an executable character-simulation model, the kind we already build for the people we love."
 
 see_also:
   - heroes.yml
