@@ -6,11 +6,14 @@ meta:
   topic: "Constructivist representations (Drescher schemas) meeting vectors, neural cellular automata, and LLMs"
   curated_by: don-hopkins            # host + a participant in the thread
   framing: "Condensed by Claude (LLM) from a real email thread. NOT a transcript."
-  consent: not_yet_asked             # Gary + the other participants haven't reviewed this digest
+  consent: assumed_pending_confirmation   # Don is confirming with Henry & Gary; both expected to welcome it
+  authorship: "Real quotes attributed by name; narration + all AI-speculation blocks are Claude's (the LLM)."
+  ai_speculation: "The narrative (schemas-vectors-and-llms.md) includes clearly-fenced 🤖 'Claude (AI speculation)' blocks — informed guesses from the AI, with confidence flags. Invited by the host; not anyone else's claim."
   provenance: |
     A private technical email thread among Leela AI folks and Gary Drescher (2024–2026).
-    Published here as a SANITIZED digest for the Repo Show audience: emails/phones/scheduling
-    redacted; short substantive quotes attributed by name; the rest condensed/paraphrased.
+    Published here as a SANITIZED play-by-play for the Repo Show audience: email chrome,
+    salutations, and private details stripped; short substantive quotes attributed by name; the
+    rest condensed/paraphrased.
   subject_rights: "Any participant may correct, reduce, or remove their words — open an issue or contact Don."
   redacted: [email_addresses, phone_numbers, scheduling_logistics, personal_travel, cc_lists]
 
