@@ -55,7 +55,7 @@ threads:
     what: "Long-running exchange on cellular automata (Don's CAM6 simulator, Norman Margolus/Toffoli), the Moveable Feast Machine (Dave Ackley), Sandspiel / Sandspiel Studio, video feedback, and music-reactive visuals."
   electric_sheep_unity:
     when: "c.2020–2023"
-    what: "Reconnected to build a cross-platform Electric Sheep / Unity client (seamless video playback, music sync, WebGPU/Metal). With Joshua Goldberg and Anton Marini (Syphon)."
+    what: "Reconnected to design a cross-platform Electric Sheep / Unity client (seamless video playback, music sync, WebGPU/Metal; with Joshua Goldberg and Anton Marini/Syphon). They brainstormed the architecture and Unity implementation; Don did research + built a prototype, then turned back to Leela; Scott and others carried it forward. Don's prototype may or may not have shipped; some ideas may have been reimplemented. 'No ego in code' — it's about the ideas/designs being reimplemented across platforms (cf. Don's SimCity + CAM6). Scott can give the current state on the show."
   infinidream:
     when: "2026"
     what: "Scott relaunched Electric Sheep as Infinidream (Generation 248, 1080p/60fps, phone remote, generative-AI platform, open source). Don beta-tested, filed UI/auth bug reports, and shared his self-aware image pipeline work."

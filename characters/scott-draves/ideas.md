@@ -62,8 +62,15 @@ EchoNest-style analysis). A live segment: drive the flock from sound — the She
 
 ### 8. The Electric Sheep / Unity engine
 
-The thing they actually built together: seamless cross-platform video playback, fade-not-cut,
-decode-vs-playback speed, WebGPU/Metal, Syphon (with Anton Marini). Show the guts; talk shop.
+The thing they **designed together** (c.2020–2023): seamless cross-platform video playback,
+fade-not-cut, decode-vs-playback speed, WebGPU/Metal, Syphon (with Anton Marini). They brainstormed
+the architecture and how to do it in Unity; **Don did research and built a prototype**, then had to
+turn back to **Leela** work, and **Scott and others carried it forward** (developing or
+re-developing it — Scott can fill in the current state on the show; Don's prototype may or may not
+have landed in the shipping product, and some ideas may have been reimplemented since). That's the
+honest, fun version — *no ego in code.* The point isn't whose lines shipped; it's the **ideas and
+designs getting reimplemented again and again** across situations and platforms — exactly like Don's
+SimCity and CAM6 *plays*. Show the guts, compare notes, talk shop.
 
 ### 9. The 2006 reunion thread
 
