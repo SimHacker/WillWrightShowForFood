@@ -23,7 +23,7 @@ invitation:
 
 
 bio:
-  summary: "**Eric Hedman (\"Irk\")** — animator, artist, and game designer. A **character animator on the original The Sims** (hand-tuned walk cycles, idles, and gestures for the vitaboy pipeline; the legendary canWiggle incident — Don checked in the debug; they're still great buddies), he went on to **lead design on Sims expansion packs** (House Party — where he animated vignettes and a laser blaster for the Drew Carey Show tie-in — plus Livin' Large, Unleashed), then worked at **Disney, Jim Henson, Nickelodeon**, and others. Today he's an **independent creator** making adventures, visual novels, games, and VR/AR/MR — including **Aether HeXXen** (a 'space witch' visual novel) — mostly hand-crafted 2D/3D art and animation. His YouTube channel **@irkinteraction** is full of warm, funny, detailed Sims-development stories."
+  summary: "**Eric Hedman (\"Irk\")** — animator, artist, and game designer. A **character animator on the original The Sims** (hand-tuned walk cycles, idles, and gestures for the vitaboy pipeline; the legendary canWiggle incident — Don checked in the debug; they're still great buddies), he went on to **design Sims expansion packs** (House Party, Livin' Large, Hot Date, Unleashed, and more) — building objects like the **mechanical bull** ('my baby'), the love bed, and the hot tub, and helping develop the cross-discipline **object-prototyping pipeline** (simplified 3D-Studio-Max objects rendered as stand-ins, then handed off and refined across artist → animator → programmer, iterated daily in the sandbox build). He animated vignettes and a laser blaster for the **Drew Carey Show** tie-in. Later he worked at **Disney, Jim Henson, Nickelodeon**, and others. Today he's an **independent creator** making adventures, visual novels, games, and VR/AR/MR — including **Aether HeXXen** (a 'space witch' visual novel) — mostly hand-crafted 2D/3D art and animation. His YouTube channel **@irkinteraction** is full of warm, funny, detailed Sims-development stories."
 
 why_invite: |
   Eric is an **independent contractor artist** (project- and hourly-based; not looking for 9-to-5
@@ -44,6 +44,20 @@ links:
   itch: "https://irkinteraction.itch.io/aether-hexxen-death-space-requiem-act-1"
   patreon: "https://www.patreon.com/c/irkinteraction"
   kofi: "https://ko-fi.com/irkinteraction"
+
+retrospective_videos:
+  - { title: "The Sims: House Party retrospective (vid 1) — design, the crew, the object pipeline", url: "https://www.youtube.com/watch?v=rdzrdjHyFB8" }
+  - { title: "House Party 2 — the Drew Carey Show tie-in (Marion Ross dance-floor story)", url: "https://www.youtube.com/watch?v=bLh0i7kerw8" }
+  - { title: "irk Micropolis CA cellular-automata performance", url: "https://www.youtube.com/watch?v=319i7slXcbI" }   # (Jerry Martin's Chill Resolve — separate, but in the family)
+
+story_seeds:
+  # Rich, first-hand anecdotes from his retrospectives — easily several Repo Shows' worth.
+  - "The mechanical bull ('my baby'): designing a big 'magic' party object (start → loop → thrown-off variations → recover), informed by his years as a nightclub bouncer at raves/themed nights."
+  - "The cross-discipline object-prototyping template (developed on The Sims): build a simplified 3D object, render it as a full stand-in with all needed states, hand off to specialist artist/animator/programmer; iterate same-day in the sandbox."
+  - "Broad 'pantomime' animation under a frame budget — you'd lose half your frames to unknown CPU speed, so motions had to read big."
+  - "Tim LeTourneau's open, buy-in design process; the happy little 'fishbowl' crew vs. SimCity-side resource tension; the Maxis → EA 'electronic-artsification'."
+  - "The Drew Carey Show tie-in: animating Sims vignettes + a laser blaster; nearly dancing Marion Ross into the floor at a TV-moms ball."
+  - "Aether HeXXen: a 'space witch' visual novel — a Night-Witches homage with strong capable women, ancient XX-keyed alien tech, a fish-out-of-water lead."
 
 show_suggestions:
   - { seed: ../../repo-shows/eric-hedman/, what: "The Sims animation up close — vitaboy walk cycles/idles/gestures, broad 'pantomime' animation under frame-budget constraints, the canWiggle incident; the craft behind the little Sims." }
