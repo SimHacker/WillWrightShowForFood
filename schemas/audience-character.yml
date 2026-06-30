@@ -165,7 +165,7 @@ simulation:
     - question-advertisements fire by relevance (moollm advertisement skill)
     - Don Philahue surfaces merged TicketPR + CARD abilities on stream
     - MSPO RPG — async audience characters ask when author is offline
-    - question-tree grows — guest answers append as children under asker's questions.yml
+    - question-tree grows — guest answers on GitHub issues (preferred) or YAML children
     - time_shift — append timestamped reactions while pausing; guest may answer long after air
   after_show:
     - homefun branches link from CHARACTER.yml / questions.yml

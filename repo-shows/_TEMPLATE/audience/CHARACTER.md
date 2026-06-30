@@ -78,46 +78,50 @@ Add your own abilities — keep `verifiable` pointing at your repo artifacts.
 
 ---
 
-## Question tree — output queue + growing thread
+## Question tree — sparse orchestration + optional GitHub refs
 
-Each character has **queues** (see [`../../../schemas/question-tree.yml`](../../../schemas/question-tree.yml)):
+Each character's **`questions.yml` is the show-orchestration SSOT** — Don Philahue reads merged
+sparse trees, not every GitHub issue. See [`../../../schemas/question-tree.yml`](../../../schemas/question-tree.yml).
 
-| Queue | Where | What |
+| Layer | Where | What |
 |-------|-------|------|
-| **Output** | `questions.yml` root list | Questions you want asked — `to: will-wright` or `to: any` |
-| **Thread** | `children:` under each question | Answers, me-too, quorum, discussion — nested like HN |
+| **Orchestration** | `questions.yml` tree | What this character wants on air — **authoritative for the show** |
+| **Discussion** | GitHub (any repo) | Durable thread — opt-in via `ref` on a node |
+| **Sub-questions** | `children:` | Same schema, recursive — may each have their own `ref` (e.g. one comment) |
 
-**Owner rule:** the character who **asked** owns the tree. When Will answers your question on air,
-the answer is appended as a child node — `kind: answer`, `by: will-wright`, `on_air: true`.
-Other audience members pile on with `me_too`, `quorum`, or `discussion` — always attributed with `by:`.
+**Unreferenced nodes are valid** — pure YAML drives the queue with no GitHub lookup.
 
-Autonomous audience sims (MSPO) may ask while you are offline; when the guest answers during the
-show, Don Philahue or the sim protocol **writes the answer into your question tree** in git.
-
-Example after air:
+**One `ref` per node** (optional) — cross-repo issue or specific comment:
 
 ```yaml
-questions:
-  - id: 1
-    to: will-wright
-    status: answered
-    text: "Did your Sims feel their motive bars filling?"
-    asked_at: 2026-07-01T20:12:00Z
-    children:
-      - kind: answer
-        by: will-wright
-        on_air: true
-        text: "We talked about implication over simulation…"
-        children:
-          - kind: me_too
-            by: palm
-            text: "That's exactly the navigation I mean."
-          - kind: follow_up
-            by: palm
-            text: "What about deletion — sleep or death?"
+# Pure orchestration — no GitHub
+- question: "Did your Sims feel their motive bars filling?"
+  to: will-wright
+
+# Shared issue — your framing in your voice; others may attach the same ref
+- question: "From a simulated person who reads his own YAML…"
+  to: will-wright
+  ref:
+    repo: SimHacker/WillWrightShowForFood
+    issue: 42
+  children:
+    - question: "This comment nailed the follow-up"
+      to: will-wright
+      ref:
+        repo: SimHacker/moollm
+        issue: 7
+        comment: 9876543210
 ```
 
-Statuses: `open` → `asked` → `answered` (thread may keep growing). Schema: [`question-tree.yml`](../../../schemas/question-tree.yml).
+Shorthand: `issue: https://github.com/owner/repo/issues/N` still works (legacy).
+
+**Shared refs:** many characters may point at the same issue/comment — each keeps their own tree
+node and local `question` text. 👍 / "+1" on GitHub counts globally; YAML records who curated it.
+
+**Producer workflow:** good issues enter the show only when merged into someone's `questions.yml`
+(via TicketPR or producer push) — sparse mirror of the issue thread, not the whole firehose.
+
+Statuses: `open` → `asked` → `answered`. Schema: [`question-tree.yml`](../../../schemas/question-tree.yml).
 
 ---
 

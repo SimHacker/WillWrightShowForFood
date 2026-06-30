@@ -1,121 +1,181 @@
-# Question tree — audience character I/O queues and graphtal discussion
-# questions.yml is primarily an OUTPUT queue (what this character asks).
-# Answers and thread growth append as children under the question node that was asked.
+# Question tree — sparse show-orchestration trees with optional GitHub refs
+# questions.yml is each character's curated queue — SSOT for what the orchestrator focuses on.
+# GitHub issues/comments hold durable discussion; refs are opt-in pointers (any repo, one per node).
 # Girder: ../process/ticket-pr.yml#character_queues · Template: ../repo-shows/_TEMPLATE/audience/questions.yml
 
 meta:
   id: question-tree
-  version: 0.1
+  version: 0.3
   one_line: |
-    Each audience character owns a question tree in questions.yml — flat list at root,
-    nested children for answers, me-too, quorum, and branching discussion (HN-shaped).
+    Recursive question trees in questions.yml — orchestration SSOT. Nodes may attach one GitHub
+    ref (cross-repo issue or comment). Shared issues; sparse mirrors of issue threads for air.
+
+orchestration:
+  ssot: |
+    Each character's questions.yml tree is first-class and authoritative for SHOW ORCHESTRATION.
+    Don Philahue, CARD ASK-QUESTION, and producers read merged sparse trees — not every GitHub
+    issue in the wild. Unreferenced nodes are valid: pure YAML text drives the queue with no
+    external lookup.
+  sparse_mirror: |
+    A questions.yml tree may cherry-pick parts of a sprawling issue thread: root question points
+    at the issue; sub-questions (children) point at specific comments worth air time. The full
+    GitHub discussion stays on GitHub; the repo holds only what passed review or a producer pushed
+    into a character's queue.
+  curation:
+    - audience TicketPR adds nodes + optional refs
+    - show producer promotes good refs into featured character queues
+    - PR review gates what the orchestrator sees
+  shared_issues: |
+    Multiple audience members may attach the SAME ref (same repo/issue/comment). Each character
+    keeps their own tree node — local `question` text, `stance`, segment priority — while the
+    GitHub thread is shared. Votes (👍, +1) on the issue count globally; YAML records who curated
+    that ref for this show.
+
+persistence_policy:
+  ephemeral:
+    channels: [twitch_chat, youtube_chat, hacker_news_comments]
+    note: "Not in orchestration trees unless curated into questions.yml."
+  persistent:
+    medium: github_issues
+    rule: |
+      Durable public discussion lives on GitHub Issues (any repo). Bind with `ref` on a question
+      node when this character wants the orchestrator to follow that thread.
+    note: |
+      Opening an issue does NOT auto-enter the show queue — something must point at it from a
+      questions.yml tree (or producer merge).
+
+github_ref:
+  one_per_node: true
+  optional: true
+  cross_repo: true
+  what: |
+    At most one GitHub attachment per question node — issue with optional comment anchor.
+    Repo may differ from WillWrightShowForFood (moollm, MicropolisCore, guest repos, …).
+  forms:
+    structured:
+      repo: "owner/name — e.g. SimHacker/WillWrightShowForFood"
+      issue: 42
+      comment: 1234567890
+      note: "comment is the issuecomment- id from the URL fragment; omit for whole-issue focus"
+    url:
+      - "https://github.com/owner/repo/issues/N"
+      - "https://github.com/owner/repo/issues/N#issuecomment-1234567890"
+    shorthand:
+      issue: "legacy — same-repo issue number or full issue URL (no comment)"
+  resolution: |
+    When `ref` is present, orchestrator MAY fetch GitHub for display — but the YAML node still
+    defines this character's curated framing (`question`, `to`, `status`, children). Local
+    `question` text is the character's voice/elaboration; it does not have to match issue title.
+    `answer` is optional local summary — not a substitute for reading the ref when bound.
 
 character_queues:
   output:
     file: questions.yml
-    what: |
-      Questions this character wants posed — to a named guest, a specific audience member,
-      or the open floor (`to: any`). Root-level `questions:` entries are the output queue.
+    shape: |
+      Root `questions:` array. Each entry is a question node; nodes may nest `children` as
+      sub-questions (same schema, recursive). Sub-questions may each carry their own `ref`.
     fired_by:
       - question-advertisements (CARD ASK-QUESTION, relevance scoring)
       - Don Philahue on stream
+      - show producer push into character queue
       - autonomous audience sim (MSPO — character asks while author offline)
   input:
     what: |
-      Inbound attention — other characters' questions addressed TO you appear as refs or
-      get mirrored under THEIR tree with `to: <your-id>`. Your replies belong as `children`
-      on their question node (preferred) or as `kind: answer` with cross-ref.
+      Replies to you belong on the asker's GitHub ref (comment there) and/or as a sub-question
+      node in their tree with `to: <your-id>`. Optional inbound.yml for @mention inbox.
     optional_file: inbound.yml
-    note: |
-      Most threads stay in the ASKER's questions.yml. Input queue is optional — for
-      characters who want a personal inbox of @mentions without duplicating full trees.
 
 tree_shape:
   model: graphtal
+  node_type: question
+  recursion: |
+    questions → [question_node, …]
+    question_node.children → [question_node, …]   # sub-questions, same schema
   analogy: |
-    Like Hacker News or a forum thread: one top-level question, replies nested underneath,
-    arbitrary depth. Git commits append nodes — history is the audit trail.
-  owner: asker
-  rule: |
-    The character who asked owns the canonical thread file. Everyone else's contributions
-    are `children` nodes with `by:` attribution — never orphan answers in a third file
-    without a cross-link.
+    Sparse show-orchestration tree. May mirror a slice of a GitHub issue thread: parent ref →
+    issue; child refs → specific comments. Or entirely YAML with no GitHub attachment.
+  owner: |
+    Each character owns their questions.yml — their curated view. Shared refs do not merge files;
+    orchestrator merges at read time.
 
 question_node:
-  required: [id, text]
+  required_for_orchestration: [question, to]
+  required_alt: [text, to]
   optional:
-    to: "guest or character id — will-wright, don-hopkins, any, richard-bartle, …"
-    theme: "short tag for CARD scoring / show segments"
+    ref: "github_ref — repo + issue + optional comment; one per node; any repo"
+    issue: "legacy shorthand — normalizes to ref (this repo unless URL includes owner/repo)"
+    answer: "Optional local summary — orchestration hint, not canonical over GitHub"
+    id: "Stable anchor for cross-refs within this character's tree"
+    to: "will-wright, don-hopkins, any, richard-bartle, …"
+    theme: "CARD scoring / show segment tag"
     status: "open | asked | answered | deferred | withdrawn"
-    asked_at: "ISO8601 — when surfaced on air or in sim"
-    segment: "show segment id or timestamp anchor for time-shift playback"
-    spirit_source: "citation when draft question — not a quote (see richard-bartle)"
-    prior_reading: "urls or repo paths guest should read before answering"
-  children: "array of thread nodes — answers, discussion, follow-ups"
+    asked_at: "ISO8601 — surfaced on air or in sim"
+    segment: "episode segment slug or VOD anchor"
+    spirit_source: "draft citation — not a quote (richard-bartle menus)"
+    prior_reading: "urls or repo paths guest should read first"
+    stance: "me_too | amplify | dissent — when sharing someone else's ref"
+    by: "who curated this node — character id or @github handle"
+    children: "array of question_node — sub-questions, each with optional ref"
+  bare_bones: |
+    Minimum useful node — no ref, no children:
+    { question: "…", to: will-wright, status: open }
+  with_ref: |
+    { question: "My framing in this character's voice", to: will-wright,
+      ref: { repo: SimHacker/WillWrightShowForFood, issue: 42 },
+      children: [
+        { question: "This follow-up comment was gold", to: will-wright,
+          ref: { repo: SimHacker/WillWrightShowForFood, issue: 42, comment: 9876543210 } }
+      ] }
 
 thread_node:
-  kinds:
-    answer:
-      what: "Response from the addressee (guest) or designated answerer"
-      required: [kind, by, text]
-      recommended: [at, on_air, segment]
-      show_protocol: |
-        When an autonomous audience character asks on air and the guest answers, append
-        an `answer` child under that question in the ASKER's questions.yml — attribute
-        `by:` to the speaker (will-wright, don-hopkins, …). Commit during or immediately
-        after the segment; PR optional for guest-authored merges.
-    follow_up:
-      what: "A new question in the same thread — same speaker or another"
-      required: [kind, by, text]
-      note: "May nest its own children (sub-thread)"
-    me_too:
-      what: "+1 / amen / same question from another character — lightweight pile-on"
-      required: [kind, by]
-      optional: [text]
-    quorum:
-      what: "Explicit group sentiment — several voices agreeing without separate me_too spam"
-      required: [kind, by, text]
-      optional: [members]
-      members: "list of character ids in the quorum"
-    discussion:
-      what: "Side comment, tangent, or cross-talk — not necessarily answering the question"
-      required: [kind, by, text]
-    answer_draft:
-      what: "Curator or sim draft pending guest review — label clearly, not a quote"
-      required: [kind, by, text, draft: true]
-
+  note: |
+    Legacy YAML-only reply archive under a question — use when mirroring on-air dialogue into git
+    without a GitHub ref, or for VOD sync. Prefer sub-question nodes + refs for new work.
+  kinds: [answer, follow_up, me_too, quorum, discussion, answer_draft]
   common_fields:
-    by: "character id — palm, will-wright, richard-bartle, fictional-bella-goth, …"
-    at: "ISO8601 timestamp"
-    on_air: "boolean — true if spoken on live stream"
-    segment: "episode segment slug or VOD timestamp"
-    sim: "boolean — true if generated by autonomous audience sim without human author online"
-    children: "nested thread nodes — arbitrary depth"
-
-status_lifecycle:
-  open: "Queued — not yet asked on air"
-  asked: "Surfaced — awaiting answer"
-  answered: "At least one answer child present — thread may still grow"
-  deferred: "Guest asked to return later"
-  withdrawn: "Asker retracted — keep node for history, hide from ads"
+    kind: required
+    by: "character id or @github-handle"
+    text: "reply text when not using sub-question shape"
+    ref: "optional — same github_ref shape if archiving a specific comment"
+    at: ISO8601
+    on_air: boolean
+    segment: slug
+    sim: boolean
+    children: nested thread_node or question_node
 
 cross_character:
-  rule: |
-    Character B may append to Character A's question tree via PR (preferred) or sim protocol.
-    Set `by: B` on the child node. B may ALSO note the thread in B's own questions.yml:
-  optional_mirror:
-    - id: ref-7
-      ref: "../palm/questions.yml#1"
-      my_stance: me_too
-      text: "Optional one-liner in B's voice"
+  same_ref: |
+    Character A and Character B both may set ref.issue: 42 (same or different comment). Each
+    file records that character's orchestration entry. Global vote weight from GitHub reactions;
+    per-character priority from their YAML status/segment/theme.
+  example:
+    palm:
+      - question: "From a simulated person's motive bars…"
+        ref: { repo: SimHacker/WillWrightShowForFood, issue: 42 }
+    fictional-bella-goth:
+      - question: "Mortimer keeps asking this at load screens"
+        stance: me_too
+        ref: { repo: SimHacker/WillWrightShowForFood, issue: 42, comment: 111 }
+
+github_discussion:
+  votes:
+    how: [issue_reactions, "+1 / me too comments"]
+    scope: global on the shared ref target
+    orchestrator: may boost nodes whose refs have high vote counts when merging trees
+  answers: "Guest replies on the issue; optionally mirrored as sub-question with ref.comment"
+
+status_lifecycle:
+  open: "In queue — not yet asked on air"
+  asked: "Surfaced — awaiting answer"
+  answered: "Guest replied (on ref and/or local answer field)"
+  deferred: "Return later"
+  withdrawn: "Retracted — keep node for history"
 
 playback:
   mspo: |
-    Time-shift viewers expand question nodes to read answers and discussion that grew after
-    live air — the tree is a replay layer on the episode.
+    Time-shift viewers walk sparse YAML trees; refs link out to full GitHub threads.
   don_philahue: |
-    Orchestrator prefers unanswered `status: open` questions for call-on; after answer,
-    CARD ads may fire on `follow_up` children.
+    Reads merged questions.yml forests only — refs tell him where to look on GitHub when needed.
 
 examples:
   worked: ../repo-shows/will-wright/audience/palm/questions.yml

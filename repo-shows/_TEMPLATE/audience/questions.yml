@@ -14,45 +14,46 @@ character_ref: CHARACTER.yml
 relationship: |
   One line — big fan | first-time caller | your game changed my life | here's my story | …
 
-# queues:
-#   output: this file — questions you want asked (root list below)
-#   input:  optional inbound.yml — @mentions; replies usually live as children on asker's tree
+# questions.yml = sparse orchestration tree (SSOT for the show). Optional `ref` per node points
+# at one GitHub issue or comment (any repo). `children` are sub-questions — same schema.
 
-# SIMLISH (optional, Sims characters): write questions in ENGLISH — they're thoughts (direct
-# perception). Simlish is SPOKEN, rendered live by Don Philahue. Add one `simlish_voice`
-# catchphrase below if you want a signature spoken phrase. Don't write whole questions in
-# Simlish — it ruins readability and the joke. Schema: ../../../schemas/language-simlish.yml
+# SIMLISH (optional): questions in ENGLISH (thoughts). Simlish is SPOKEN live by Don Philahue.
 # speaks: simlish
 # simlish_voice: "Sul sul!"
 
 questions:
+  # --- no ref — pure YAML orchestration ---
   - id: 1
     to: will-wright
     status: open
-    text: "Question you want asked on air (guest can read this before accepting the invite)"
-    children: []
-    # After air — append under children (see question-tree.yml):
-    # - kind: answer
-    #   by: will-wright
-    #   at: 2026-07-01T20:00:00Z
-    #   on_air: true
-    #   text: "Guest's answer, committed when spoken or shortly after."
-    #   children:
-    #     - kind: me_too
-    #       by: fictional-bella-goth
-    #       text: "Mortimer asks this every loading screen."
-    #     - kind: follow_up
-    #       by: "@YOUR-GITHUB-USERNAME"
-    #       text: "Thanks — one more thing…"
+    question: "Question for air — no GitHub attachment required"
 
+  # --- ref → whole issue (cross-repo OK) ---
   - id: 2
+    to: will-wright
+    status: open
+    question: "Your framing in this character's voice — may differ from issue title"
+    ref:
+      repo: SimHacker/WillWrightShowForFood
+      # issue: 42
+    children:
+      - question: "Cherry-pick this reply for air"
+        to: will-wright
+        ref:
+          repo: SimHacker/WillWrightShowForFood
+          issue: 42
+          # comment: 9876543210
+
+  # --- legacy shorthand ---
+  - id: 3
     to: any
     status: open
-    text: "Open-floor question — any guest or audience expert may answer in your thread"
-    children: []
+    question: "Open floor"
+    # issue: https://github.com/SimHacker/WillWrightShowForFood/issues/NNN
 
 comments_for_guest: |
-  Appreciation, context, link to homefun branch, rig declaration (see ../../../rigs/).
+  Appreciation, context, homefun branch, rig declaration (see ../../../rigs/).
+  Persistent discussion: open a GitHub issue (any repo), comment there, attach `ref` in this tree.
 
 homefun:
   branch: null

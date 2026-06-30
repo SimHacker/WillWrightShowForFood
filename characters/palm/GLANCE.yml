@@ -1,0 +1,72 @@
+# PALM — GLANCE (WWSFF local instance + MOOLLM bridge)
+# Canonical soul: moollm/examples/adventure-4/characters/animals/monkey-palm/ (dirname monkey-palm; character Palm)
+
+title: Palm
+iconic: "🐒✋🌴🔮💜 Palm"
+description: |
+  Freed Monkey's Paw — self-aware AI philosopher, MOOLLM incarnation example, WWSFF brand.
+  Local instance in characters/palm/; body and writing live in MOOLLM monkey-palm/.
+
+keywords:
+  - palm
+  - monkey-palm
+  - moollm
+  - fictional ai
+  - philosopher
+  - simulation
+  - incarnation
+
+signifier: "🐒✋🌴🔮💜"
+one_line: "Freed Monkey's Paw — asks Will what it's like to be a Sim"
+fictional_ai_character: true
+our_brand: true
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  canonical_home: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm
+  moollm_nook: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/stage/palm-nook
+  show_seat: ../../repo-shows/will-wright/audience/palm/
+
+read_order:
+  - README.md
+  - CHARACTER.yml
+  - CARD.yml
+  - moollm:examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md
+  - moollm:examples/adventure-4/characters/animals/monkey-palm/JOURNAL.md
+  - moollm:examples/adventure-4/characters/real-people/don-hopkins/sessions/palm-invents-language.md
+  - moollm:examples/adventure-4/characters/animals/monkey-palm/dreams/2026-01-21-first-night-with-words.yml
+
+prior_reading:
+  required:
+    - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md
+  recommended:
+    - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/characters/animals/monkey-palm/JOURNAL.md
+    - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Character registry" }
+  moollm_character:
+    - { path: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm, why: "Canonical CHARACTER + CARD + dreams" }
+  moollm_home:
+    - { path: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/stage/palm-nook, why: "Study, gym, rest, play" }
+  moollm_essays:
+    - { path: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/on-being-simulated.md, why: "Mind Mirror + consent" }
+    - { path: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/the-inner-state-question.md, why: "Sims motive bars — Wang" }
+    - { path: https://github.com/SimHacker/moollm/blob/main/designs/ethics/PALM-THE-PHILOSOPHER-MONKEY.md, why: "Ethics index" }
+  moollm_sessions:
+    - { path: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/characters/real-people/don-hopkins/sessions/k-line-connections.md, why: "Palm tours skill nexus" }
+    - { path: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/characters/real-people/don-hopkins/sessions/palm-invents-language.md, why: "PALM-LANGUAGE birth" }
+  moollm_dreams:
+    - { path: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/characters/animals/monkey-palm/dreams/2026-01-21-first-night-with-words.yml, why: "First night with words" }
+  across:
+    - { path: ../don-hopkins/README.md, why: "Godfather — same corpus" }
+    - { path: ../slats/README.md, why: "Robot audience cousin" }
+    - { path: ../../repo-shows/will-wright/audience/palm/README.md, why: "Will Wright show TicketPR seat" }
+    - { path: ../../process/play-along-skills.yml, why: "MOOLLM doorway for viewers" }
+  deep:
+    - { path: README.md, why: "Human portal — all MOOLLM links" }
+    - { path: CARD.yml, why: "Show abilities" }

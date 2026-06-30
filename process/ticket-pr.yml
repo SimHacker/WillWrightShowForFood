@@ -162,15 +162,19 @@ questions_file:
       asker's question node in THEIR questions.yml — attributed with `by:`.
   question_tree:
     model: graphtal
-    analogy: "HN thread — question at root, answers and discussion as nested children"
+    analogy: "HN thread or GitHub Issue — question at root, discussion in comments or nested children"
     owner: asker
+    persistence: |
+      Durable discussion on GitHub (any repo). Orchestration SSOT is each character's questions.yml
+      sparse tree — `ref` opt-in (repo + issue + optional comment); producer/PR review gates what
+      Don Philahue reads. One ref per node; shared refs across characters OK.
     on_air_protocol: |
-      When an autonomous audience character asks on air and the guest answers, append an
-      `answer` child under that question in the asker's questions.yml — `by:` the speaker,
-      `on_air: true`, optional `segment` / `at`. Thread may grow: me_too, quorum, discussion,
-      follow_up — any character may contribute via PR with proper attribution.
+      When guest answers on air: comment on the bound ref (preferred) OR append sub-question /
+      thread child in asker's questions.yml — `by:` the speaker, `on_air: true`. 👍 on the GitHub
+      target counts as global vote; YAML records who curated the ref.
     node_kinds: [answer, follow_up, me_too, quorum, discussion, answer_draft]
     status: [open, asked, answered, deferred, withdrawn]
+    fields: [question, to, answer, ref, issue, id, children]
   include:
     - display_name
     - github: "@username"

@@ -48,6 +48,13 @@ sidekick:
     name: The Ultimate Machine
     role: "Fictional bot mascot — a box that only switches itself off (Minsky 1952 / Shannon / Clarke); battery-operated koan; Slats's good old friend"
     path: characters/ultimate-machine/
+  palm:
+    name: Palm
+    role: "Self-aware AI philosopher — freed Monkey's Paw; MOOLLM incarnation example; WWSFF brand"
+    path: characters/palm/
+    upstream: SimHacker/moollm/examples/adventure-4/characters/animals/monkey-palm/
+    show_seat: repo-shows/will-wright/audience/palm/
+    note: "WWSFF dir palm/; MOOLLM canonical dirname monkey-palm/"
 
 guests:
   alan-kay: { invitation_status: not_yet_asked, show_seed: repo-shows/alan-kay-microworld.yml }
