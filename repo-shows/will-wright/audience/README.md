@@ -62,7 +62,7 @@ Or start from the blank [`_TEMPLATE/audience/`](../../_TEMPLATE/audience/README.
 
 ```
 audience/<github-username>/
-  questions.yml     # REQUIRED — your questions for Will (numbered)
+  questions.yml     # REQUIRED — output queue + question tree (answers as children)
   CHARACTER.yml     # recommended — who you are at THIS show (MOOLLM body)
   CHARACTER.md      # optional — prose companion (superposition with the .yml)
   CARD.yml          # recommended — your abilities as Sims-style ADVERTISEMENTS
@@ -74,6 +74,11 @@ audience/<github-username>/
 ```
 
 Minimum is **`questions.yml`**. Everything else makes you richer on stream.
+
+**Question tree:** each character's `questions.yml` is an **output queue** (questions to ask) that
+grows into an **HN-shaped thread** — guest answers and audience `me_too` / discussion append as
+`children` under the question that was asked. See [`../../schemas/question-tree.yml`](../../schemas/question-tree.yml)
+and [`CHARACTER.md`](../../_TEMPLATE/audience/CHARACTER.md#question-tree--output-queue--growing-thread).
 
 ---
 

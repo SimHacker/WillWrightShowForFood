@@ -152,6 +152,25 @@ questions_file:
   character_ref: CHARACTER.yml
   moollm_stack: [CHARACTER.yml, CARD.yml, GLANCE.yml, SIMULATION.yml]
   template: repo-shows/_TEMPLATE/audience/
+  schema: ../schemas/question-tree.yml
+  character_queues:
+    output: |
+      Root `questions:` list — what THIS character wants asked (to guest, named person, or `any`).
+      The file is primarily an output queue; CARD question-advertisements read from here.
+    input: |
+      Optional `inbound.yml` for @mentions. Canonical replies live as `children` under the
+      asker's question node in THEIR questions.yml — attributed with `by:`.
+  question_tree:
+    model: graphtal
+    analogy: "HN thread — question at root, answers and discussion as nested children"
+    owner: asker
+    on_air_protocol: |
+      When an autonomous audience character asks on air and the guest answers, append an
+      `answer` child under that question in the asker's questions.yml — `by:` the speaker,
+      `on_air: true`, optional `segment` / `at`. Thread may grow: me_too, quorum, discussion,
+      follow_up — any character may contribute via PR with proper attribution.
+    node_kinds: [answer, follow_up, me_too, quorum, discussion, answer_draft]
+    status: [open, asked, answered, deferred, withdrawn]
   include:
     - display_name
     - github: "@username"

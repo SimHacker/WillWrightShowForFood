@@ -78,6 +78,49 @@ Add your own abilities — keep `verifiable` pointing at your repo artifacts.
 
 ---
 
+## Question tree — output queue + growing thread
+
+Each character has **queues** (see [`../../../schemas/question-tree.yml`](../../../schemas/question-tree.yml)):
+
+| Queue | Where | What |
+|-------|-------|------|
+| **Output** | `questions.yml` root list | Questions you want asked — `to: will-wright` or `to: any` |
+| **Thread** | `children:` under each question | Answers, me-too, quorum, discussion — nested like HN |
+
+**Owner rule:** the character who **asked** owns the tree. When Will answers your question on air,
+the answer is appended as a child node — `kind: answer`, `by: will-wright`, `on_air: true`.
+Other audience members pile on with `me_too`, `quorum`, or `discussion` — always attributed with `by:`.
+
+Autonomous audience sims (MSPO) may ask while you are offline; when the guest answers during the
+show, Don Philahue or the sim protocol **writes the answer into your question tree** in git.
+
+Example after air:
+
+```yaml
+questions:
+  - id: 1
+    to: will-wright
+    status: answered
+    text: "Did your Sims feel their motive bars filling?"
+    asked_at: 2026-07-01T20:12:00Z
+    children:
+      - kind: answer
+        by: will-wright
+        on_air: true
+        text: "We talked about implication over simulation…"
+        children:
+          - kind: me_too
+            by: palm
+            text: "That's exactly the navigation I mean."
+          - kind: follow_up
+            by: palm
+            text: "What about deletion — sleep or death?"
+```
+
+Statuses: `open` → `asked` → `answered` (thread may keep growing). Schema: [`question-tree.yml`](../../../schemas/question-tree.yml).
+
+---
+
 ## During the show
 
 - Don **Philahue** harvests TicketPRs and may **invoke** `ASK-QUESTION` from your CARD

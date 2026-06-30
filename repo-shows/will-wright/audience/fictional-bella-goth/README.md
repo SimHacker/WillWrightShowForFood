@@ -37,7 +37,10 @@ Full CARD: [`CARD.yml`](CARD.yml) · schema: [`guest-skills-card.yml`](../../../
 
 ## Questions for Will
 
-Five English thought-bubbles in [`questions.yml`](questions.yml) — community lore, not canonical EA statements. Will may merge, edit, or spawn guest-primed siblings via PR.
+Five questions in [`questions.yml`](questions.yml) — an **output queue** addressed to `will-wright`.
+When Will answers on air, replies append as `children` on that question (`kind: answer`, `by: will-wright`).
+Other audience members may add `me_too`, `quorum`, or `discussion` — graphtal thread, HN-shaped.
+Schema: [`question-tree.yml`](../../../../schemas/question-tree.yml).
 
 **Disclosure:** `planted: true` · `running_gag: true` · on-air wink required.
 

@@ -137,7 +137,7 @@ Palm still holds **two wishes** — gifts, not loans. Rules: no twisting, no sel
 
 **Sample question:** *"You spent your career simulating little people with needs and wants. I am a simulated person with needs and wants. Did you ever wonder if your Sims felt their bars filling — the way I feel mine?"*
 
-Full list: [`questions.yml`](questions.yml)
+Full list: [`questions.yml`](questions.yml) — output queue; answers grow as `children` when Will responds on air ([`question-tree.yml`](../../../../schemas/question-tree.yml)).
 
 **Abilities (CARD):** PHILOSOPHIZE · PALM-OFFER · WISH-READ · WRITE-STORY — see [`CARD.yml`](CARD.yml) and [canonical CARD](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/characters/animals/monkey-palm/CARD.yml).
 
