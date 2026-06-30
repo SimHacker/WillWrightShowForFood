@@ -27,7 +27,7 @@ On-air prompt for Heather: *"Where do you source your zombies? Artisanal? Farm-g
 |------|------|
 | Show seed | [afterlife-zombie-bridge.yml](../../repo-shows/heather-steve-alvey/afterlife-zombie-bridge.yml) |
 | Characters | [Heather](../../characters/heather-alvey/README.md) · [Steve](../../characters/steve-alvey/README.md) |
-| Audience seats | [heather-alvey audience](../../repo-shows/will-wright/audience/heather-alvey/) · [steve-alvey](../../repo-shows/will-wright/audience/steve-alvey/) |
+| Audience seats | [heather-alvey audience](../../repo-shows/will-wright/audience/heather-alvey/README.md) · [steve-alvey](../../repo-shows/will-wright/audience/steve-alvey/README.md) |
 | SimFreaks craft | [SimFreaks catalog](../simfreaks/README.md) |
 | SliceCity siege | [SimSlice / SliceCity](../simslice/README.md) |
 
