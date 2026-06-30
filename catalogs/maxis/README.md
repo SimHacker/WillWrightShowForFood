@@ -1,5 +1,7 @@
 # Maxis catalog (metadata only)
 
+*Sniff:* [`CATALOG.yml`](CATALOG.yml) · [`../GLANCE.yml`](../GLANCE.yml) · [`../README.md`](../README.md)
+
 A **Card catalog** for Maxis / The Sims ecosystem objects and downloads — not a warez shelf.
 
 ## Get the game first
@@ -28,7 +30,14 @@ This catalog points at objects and downloads; it does not replace EA's store.
 ## Start
 
 - Schema: [`CATALOG.yml`](CATALOG.yml)
-- SimRefinery / business sims: [`../characters/will-wright/sources/simrefinery-recovery/`](../characters/will-wright/sources/simrefinery-recovery/README.md)
-- ShowNTell source: [`../characters/will-wright/sources/2004-01-08-showntell-activex-preview/`](../characters/will-wright/sources/2004-01-08-showntell-activex-preview/README.md)
+- SimRefinery / business sims: [`simrefinery-recovery`](../../characters/will-wright/sources/simrefinery-recovery/README.md)
+- ShowNTell source: [`showntell-activex-preview`](../../characters/will-wright/sources/2004-01-08-showntell-activex-preview/README.md)
+- Design docs manifest: [`the-sims-design-documents-zip`](../../characters/will-wright/sources/the-sims-design-documents-zip/README.md)
 
 First article stub: **Killer Hamster** — TODO.
+
+---
+
+↑ [catalogs](../README.md) · [Micropolis Home](../micropolis-home/README.md)
+
+*Raw directory:* [browse files in this folder](./)

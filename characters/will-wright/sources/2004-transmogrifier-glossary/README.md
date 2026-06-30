@@ -5,3 +5,10 @@ Object IDs, Magic Cookies, sprites, XML export format, and SimAntics-related ter
 **Source:** [Wayback Glossary](https://web.archive.org/web/20050301052550/http://www.thesimstransmogrifier.com/TransmogrifierDocumentation/TransmogrifierGlossary.htm) · `DonHopkins/temp/big-prompts.txt`
 
 **Related:** [Tutorial 1](../2004-transmogrifier-tutorial-green-flamingo/README.md) · [Magic Cookie registry](../2004-transmogrifier-magic-cookie-registry/README.md)
+
+---
+
+↑ [sources](../README.md) · [show](../../../repo-shows/will-wright/README.md) · [portrayal](../../README.md)
+
+*Raw directory:* [browse files in this folder](./)
+

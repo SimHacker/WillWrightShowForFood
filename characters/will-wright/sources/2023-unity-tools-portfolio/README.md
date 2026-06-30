@@ -35,3 +35,10 @@ Pantomime AR/VR (Vimeo), UnityJS, AI Foundation animation pipeline, JauntVR — 
 - [2013-tale-of-two-simcities](../2013-tale-of-two-simcities/README.md) — JR / Charles Normann signing
 
 *Resume:* https://donhopkins.medium.com/don-hopkins-resume-93defe4842ac (Don notes out of date)
+
+---
+
+↑ [sources](../README.md) · [show](../../../repo-shows/will-wright/README.md) · [portrayal](../../README.md)
+
+*Raw directory:* [browse files in this folder](./)
+

@@ -15,3 +15,10 @@ Primary source for the EA ↔ OLPC ↔ Sugar negotiation after Will and Rod said
 - [`../sugar-centralized-multiplayer-laszlo/`](../sugar-centralized-multiplayer-laszlo/README.md)
 
 *Harvested 2026-06-29 from old-email split.*
+
+---
+
+↑ [sources](../README.md) · [show](../../../repo-shows/will-wright/README.md) · [portrayal](../../README.md)
+
+*Raw directory:* [browse files in this folder](./)
+

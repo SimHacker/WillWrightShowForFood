@@ -29,3 +29,10 @@ Interesting diffs when comparing this essay ↔ Medium:
 3. Cross-link from [1996 README](../1996-04-26-winograd-interfacing-to-microworlds/README.md) provenance section
 
 Until then, this essay is the oldest **published** version in the repo.
+
+---
+
+↑ [sources](../README.md) · [show](../../../repo-shows/will-wright/README.md) · [portrayal](../../README.md)
+
+*Raw directory:* [browse files in this folder](./)
+

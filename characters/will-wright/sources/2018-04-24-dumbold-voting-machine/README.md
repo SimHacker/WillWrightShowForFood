@@ -17,3 +17,10 @@ Institutional farce agitprop — Diebold/EFF dialogs, pie menus, crowds. Opposit
 | 16–20 | [16](images/016-0-3stvt4i0otz-cejz-jpg.jpeg) · [17](images/017-0-c3pxcvf56sg-odip-jpg.jpeg) · [18](images/018-0-u1lfugs2fpmxjpas-jpg.jpeg) · [19](images/019-0-efqzjtbzhgoovnjc-jpg.jpeg) · [20](images/020-1-3ednmb6oz5i0yvtbnd1r5q-png.png) |
 
 Also in [1996 Medium gallery](../1996-04-26-winograd-interfacing-to-microworlds/README.md#image-gallery) · [Crowd Sitter](../2018-04-23-sims-crowd-sitter/README.md)
+
+---
+
+↑ [sources](../README.md) · [show](../../../repo-shows/will-wright/README.md) · [portrayal](../../README.md)
+
+*Raw directory:* [browse files in this folder](./)
+

@@ -5,3 +5,10 @@ Wayback harvest of Don Hopkins' walkthrough: clone the Pink Flamingo, export BMP
 **Source:** [Wayback Tutorial 1](https://web.archive.org/web/20050301054832/http://www.thesimstransmogrifier.com/TransmogrifierDocumentation/TransmogrifierTutorial1.htm) · `DonHopkins/temp/big-prompts.txt`
 
 **Related:** [RugOMatic tutorial](../2004-01-21-rugomatic-tutorial/README.md) · [naming saga](../2000-05-17-transmogrifier-naming-saga/README.md)
+
+---
+
+↑ [sources](../README.md) · [show](../../../repo-shows/will-wright/README.md) · [portrayal](../../README.md)
+
+*Raw directory:* [browse files in this folder](./)
+

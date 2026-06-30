@@ -1,5 +1,7 @@
 # Micropolis Home
 
+*Sniff:* [`CATALOG.yml`](CATALOG.yml) · [`../GLANCE.yml`](../GLANCE.yml) · [`../README.md`](../README.md)
+
 **Create · publish · share** — the platform, not just another catalog shelf.
 
 ## What it is
@@ -12,31 +14,37 @@ Micropolis Home rebuilds the Sims 1 content-creation stack as a **web-native pla
 | **Publish** | Hosted CARD dirs, git repos, branching dialog objects, round-trippable saves |
 | **Share** | Exchange revival, family albums, federated storefronts, Repo Show homefun |
 
-## What it hosts
+## Federated catalogs
 
-Federated catalogs — each keeps its brand and storefront; Micropolis Home is the shared rails:
+Each keeps its brand and storefront; Micropolis Home is the shared rails:
 
-- [SimFreaks](../simfreaks/README.md) — Heather Alvey
-- [SimSlice](../simslice/README.md) — Steve Alvey / SliceCity
-- [SimProv](../simprov/README.md) — wedding playset + composable orchestration
-- [Zombie Sims](../zombie-sims/README.md) — current magnum-opus pack
+| Catalog | → |
+|---------|---|
+| **SimFreaks** | [simfreaks/README.md](../simfreaks/README.md) — Heather Alvey |
+| **SimSlice** | [simslice/README.md](../simslice/README.md) — Steve Alvey / SliceCity |
+| **SimProv** | [simprov/README.md](../simprov/README.md) — wedding playset |
+| **Zombie Sims** | [zombie-sims/README.md](../zombie-sims/README.md) — current magnum opus |
 
 ## Why now
 
-Don's OpenLaszlo SimFreaks CMS was built for love, not rent — life interrupted before it shipped. The Steam Sims 1 window, federation tooling, and the Alveys' permission to republish make **now** the moment to finish the job: preserve ~26-year back catalogs **and** give creators better tools to keep making.
+Don's OpenLaszlo SimFreaks CMS was built for love, not rent — life interrupted before it shipped. The Steam Sims 1 window, federation tooling, and the Alveys' permission to republish make **now** the moment to finish the job.
 
-See [INTRO-NARRATIVE.md](../../repo-shows/will-wright/INTRO-NARRATIVE.md) and [family manifesto](../characters/will-wright/media/sims-series-family-manifesto.md).
+See [INTRO-NARRATIVE.md](../../repo-shows/will-wright/INTRO-NARRATIVE.md) and [family manifesto](../../characters/will-wright/media/sims-series-family-manifesto.md).
 
 ## Proof it already worked
 
-- [SimFreaks Laszlo CMS essay](../characters/will-wright/sources/2005-09-18-simfreaks-content-catalog-laszlo/article.md)
-- [Sims Exchange](../characters/will-wright/sources/2004-01-12-sims-exchange/article.md)
-- [ShowNTell ActiveX preview](../characters/will-wright/sources/2004-01-08-showntell-activex-preview/article.md)
-- [SliceCity](../../media/sims-simslice-README.md) — nested SimCity shipped
-- [Crowd Sitter](../characters/will-wright/sources/2018-04-23-sims-crowd-sitter/medium-article.md) · [Dumbold](../characters/will-wright/sources/2018-04-24-dumbold-voting-machine/medium-article.md)
+- [SimFreaks Laszlo CMS essay](../../characters/will-wright/sources/2005-09-18-simfreaks-content-catalog-laszlo/README.md)
+- [Sims Exchange](../../characters/will-wright/sources/2004-01-12-sims-exchange/README.md)
+- [ShowNTell ActiveX preview](../../characters/will-wright/sources/2004-01-08-showntell-activex-preview/README.md)
+- [SliceCity](../../characters/will-wright/media/sims-simslice-README.md) — nested SimCity shipped
+- [Crowd Sitter](../../characters/will-wright/sources/2018-04-23-sims-crowd-sitter/README.md) · [Dumbold](../../characters/will-wright/sources/2018-04-24-dumbold-voting-machine/README.md)
 
 ## Status
 
 **Planted** — design + catalog federation indexed here; playable modules track MicropolisCore releases.
 
-Machine-readable: [CATALOG.yml](CATALOG.yml)
+---
+
+↑ [catalogs](../README.md) · [sources](../../characters/will-wright/sources/README.md)
+
+*Raw directory:* [browse files in this folder](./)

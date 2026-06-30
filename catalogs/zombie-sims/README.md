@@ -1,5 +1,7 @@
 # Zombie Sims
 
+*Sniff:* [`CATALOG.yml`](CATALOG.yml) · [`../GLANCE.yml`](../GLANCE.yml) · [`../README.md`](../README.md)
+
 **Heather Alvey + Steve Alvey** — current magnum-opus expansion pack for The Sims 1.
 
 ## What
@@ -24,8 +26,13 @@ On-air prompt for Heather: *"Where do you source your zombies? Artisanal? Farm-g
 | Kind | Link |
 |------|------|
 | Show seed | [afterlife-zombie-bridge.yml](../../repo-shows/heather-steve-alvey/afterlife-zombie-bridge.yml) |
-| Characters | [Heather](../characters/heather-alvey/README.md) · [Steve](../characters/steve-alvey/README.md) |
+| Characters | [Heather](../../characters/heather-alvey/README.md) · [Steve](../../characters/steve-alvey/README.md) |
+| Audience seats | [heather-alvey audience](../../repo-shows/will-wright/audience/heather-alvey/) · [steve-alvey](../../repo-shows/will-wright/audience/steve-alvey/) |
 | SimFreaks craft | [SimFreaks catalog](../simfreaks/README.md) |
 | SliceCity siege | [SimSlice / SliceCity](../simslice/README.md) |
 
-Machine-readable: [CATALOG.yml](CATALOG.yml)
+---
+
+↑ [catalogs](../README.md) · [Alvey show](../../repo-shows/heather-steve-alvey/README.md)
+
+*Raw directory:* [browse files in this folder](./)

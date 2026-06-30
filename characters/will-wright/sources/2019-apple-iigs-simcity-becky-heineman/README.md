@@ -7,3 +7,10 @@ Rebecca Heineman (Interplay founder) holds near-complete **Apple IIgs SimCity** 
 **Binary (released):** https://www.callapple.org/software/the-long-fabled-simcity-for-the-apple-iigs-exists/
 
 **Not covered by OLPC Unix open-source agreement** — separate Interplay/Maxis contract path.
+
+---
+
+↑ [sources](../README.md) · [show](../../../repo-shows/will-wright/README.md) · [portrayal](../../README.md)
+
+*Raw directory:* [browse files in this folder](./)
+

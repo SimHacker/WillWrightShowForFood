@@ -29,3 +29,9 @@ Released **October 2025** — thrift-store find (Seattle area). Includes Edith +
 
 Live compare on [steering committee playthrough](../../../../repo-shows/will-wright/sims-team-steering-committee-playthrough/SHOW.yml) reunion segment.
 
+---
+
+↑ [sources](../README.md) · [show](../../../repo-shows/will-wright/README.md) · [portrayal](../../README.md)
+
+*Raw directory:* [browse files in this folder](./)
+

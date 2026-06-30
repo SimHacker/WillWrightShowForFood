@@ -1,5 +1,7 @@
 # SimFreaks
 
+*Sniff:* [`CATALOG.yml`](CATALOG.yml) · [`../GLANCE.yml`](../GLANCE.yml) · [`../README.md`](../README.md)
+
 **Heather Alvey** (née Castello) — ~26-year Sims custom-content brand.
 
 ## What
@@ -21,15 +23,20 @@ One of the deepest artisanal catalogs in Sims 1 history.
 
 | Kind | Link |
 |------|------|
-| CMS essay | [SimFreaks catalog in Laszlo + Python](../characters/will-wright/sources/2005-09-18-simfreaks-content-catalog-laszlo/article.md) |
-| Laszlo DB component | [Laszlo database interface](../characters/will-wright/sources/2005-09-18-laszlo-database-interface/article.md) |
-| OpenLaszlo mockups | [Gallery](../../media/sims-simfreaks-openlaszlo-catalog-README.md) |
-| Gameplay shots | [SimFreaks / SimProv in-game](../../media/sims-simfreaks-content-gameplay-README.md) |
-| Character | [Heather Alvey](../characters/heather-alvey/README.md) |
+| CMS essay | [SimFreaks catalog in Laszlo + Python](../../characters/will-wright/sources/2005-09-18-simfreaks-content-catalog-laszlo/README.md) |
+| Laszlo DB component | [Laszlo database interface](../../characters/will-wright/sources/2005-09-18-laszlo-database-interface/README.md) |
+| OpenLaszlo mockups | [Gallery](../../characters/will-wright/media/sims-simfreaks-openlaszlo-catalog-README.md) |
+| Gameplay shots | [SimFreaks / SimProv in-game](../../characters/will-wright/media/sims-simfreaks-content-gameplay-README.md) |
+| Character | [Heather Alvey](../../characters/heather-alvey/README.md) |
 | Show | [Heather & Steve Alvey](../../repo-shows/heather-steve-alvey/README.md) |
+| Buy base game | [Get The Sims on Steam](../get-the-sims-on-steam.md) |
 
 ## Related catalogs
 
-[SimProv](../simprov/README.md) (shared playset work) · [Zombie Sims](../zombie-sims/README.md) (current pack) · [SimSlice](../simslice/README.md) (Steve's brand — partners in life and content)
+[SimProv](../simprov/README.md) · [Zombie Sims](../zombie-sims/README.md) · [SimSlice](../simslice/README.md) · [Micropolis Home](../micropolis-home/README.md)
 
-Machine-readable: [CATALOG.yml](CATALOG.yml)
+---
+
+↑ [catalogs](../README.md) · [show](../../repo-shows/will-wright/README.md)
+
+*Raw directory:* [browse files in this folder](./)

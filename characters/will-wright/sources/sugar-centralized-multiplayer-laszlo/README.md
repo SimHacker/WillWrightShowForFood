@@ -47,3 +47,9 @@
 - [ ] Clarify "centralized multiplayer" scope with Don (TSO? catalog CMS? both?)
 - [ ] Link OpenLaszlo revival or historical runtime notes if any
 
+---
+
+↑ [sources](../README.md) · [show](../../../repo-shows/will-wright/README.md) · [portrayal](../../README.md)
+
+*Raw directory:* [browse files in this folder](./)
+

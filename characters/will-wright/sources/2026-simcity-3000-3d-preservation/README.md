@@ -37,3 +37,9 @@ Full list in [`article.md`](article.md).
 - [`../simcity-open-source-saga/`](../simcity-open-source-saga/README.md) — EA deal enabled Sims + 2D SC3K
 - [`../../../../luc-barthelet/`](../../../../luc-barthelet/README.md) — announced 2D pivot to press
 
+---
+
+↑ [sources](../README.md) · [show](../../../repo-shows/will-wright/README.md) · [portrayal](../../README.md)
+
+*Raw directory:* [browse files in this folder](./)
+

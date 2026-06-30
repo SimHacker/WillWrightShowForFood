@@ -1,12 +1,14 @@
 # SimSlice
 
+*Sniff:* [`CATALOG.yml`](CATALOG.yml) · [`../GLANCE.yml`](../GLANCE.yml) · [`../README.md`](../README.md)
+
 **Steve Alvey** — ~26-year Sims content brand; creator of **SliceCity**.
 
 ## What
 
 SimSlice ships object suites and deep integrations. The headline proof:
 
-**SliceCity** — a fully functional SimCity nested inside a Sims lot. Will Wright described games-in-games and data portability in his [1996 Winograd talk](../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/medium-article.md); Steve **shipped it**.
+**SliceCity** — a fully functional SimCity nested inside a Sims lot. Will Wright described games-in-games and data portability in his [1996 Winograd talk](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md); Steve **shipped it**.
 
 - Hosted on: [Micropolis Home](../micropolis-home/README.md)
 
@@ -14,14 +16,19 @@ SimSlice ships object suites and deep integrations. The headline proof:
 
 | Kind | Link |
 |------|------|
-| Gallery | [SliceCity screenshot](../../media/sims-simslice-README.md) |
-| Winograd lineage | [1996 talk + Medium](../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) |
-| Character | [Steve Alvey](../characters/steve-alvey/README.md) |
+| Gallery | [SliceCity screenshots](../../characters/will-wright/media/sims-simslice-README.md) |
+| Winograd lineage | [1996 talk + Medium](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) |
+| Character | [Steve Alvey](../../characters/steve-alvey/README.md) |
 | Show | [Heather & Steve — whole career](../../repo-shows/heather-steve-alvey/README.md) |
 | Flagship episode | [Afterlife × Zombie Sims](../../repo-shows/heather-steve-alvey/afterlife-zombie-bridge.yml) |
+| Buy base game | [Get The Sims on Steam](../get-the-sims-on-steam.md) |
 
 ## Related catalogs
 
-[SimFreaks](../simfreaks/README.md) (Heather — partner) · [Zombie Sims](../zombie-sims/README.md) · [SimProv](../simprov/README.md)
+[SimFreaks](../simfreaks/README.md) · [Zombie Sims](../zombie-sims/README.md) · [SimProv](../simprov/README.md)
 
-Machine-readable: [CATALOG.yml](CATALOG.yml)
+---
+
+↑ [catalogs](../README.md) · [show](../../repo-shows/will-wright/README.md)
+
+*Raw directory:* [browse files in this folder](./)

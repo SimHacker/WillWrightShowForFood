@@ -39,3 +39,9 @@ Don Hopkins worked on cooperative multiplayer SimCity from the early 1990s throu
 - [ ] Interview clip: Don + Walter Bender on mesh / Stone Soup
 - [ ] Compare to modern city-builder multiplayer (Cities: Skylines, etc.) — one paragraph, not a survey
 
+---
+
+↑ [sources](../README.md) · [show](../../../repo-shows/will-wright/README.md) · [portrayal](../../README.md)
+
+*Raw directory:* [browse files in this folder](./)
+

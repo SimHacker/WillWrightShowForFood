@@ -23,3 +23,9 @@ python3 DonHopkins/projects/willwrightshowforfood/tools/extract_youtube_index.py
 - [ ] yt-dlp pass to fill `(verify title)` entries
 - [ ] One WWSFF article per tier-1 demo video
 
+---
+
+↑ [sources](../README.md) · [show](../../../repo-shows/will-wright/README.md) · [portrayal](../../README.md)
+
+*Raw directory:* [browse files in this folder](./)
+

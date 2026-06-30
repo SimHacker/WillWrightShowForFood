@@ -35,3 +35,9 @@ Phil Salvador (The Obscuritory / VGHF) researched **Maxis Business Simulations**
 
 Phil named in DonHopkins `research/../../characters/will-wright/sources/jess-bird-bbc-email-2025.yml` as SimRefinery archivist — cross-link when publishing that thread.
 
+---
+
+↑ [sources](../README.md) · [show](../../../repo-shows/will-wright/README.md) · [portrayal](../../README.md)
+
+*Raw directory:* [browse files in this folder](./)
+

@@ -5,3 +5,10 @@ Henry Lowood, Terry Winograd, Josh Schneider, Chaim Gingold — rights review fo
 **Raw:** [`DonHopkins/temp/old-email/re-httpartnethopkinsdonsimcitywillwrighthtml.txt`](../../../../DonHopkins/temp/old-email/re-httpartnethopkinsdonsimcitywillwrighthtml.txt)
 
 **WWSFF:** [1996-04-26-winograd-interfacing-to-microworlds](../1996-04-26-winograd-interfacing-to-microworlds/README.md) · [2004-01-12-winograd-ui-simulation-games](../2004-01-12-winograd-ui-simulation-games/README.md)
+
+---
+
+↑ [sources](../README.md) · [show](../../../repo-shows/will-wright/README.md) · [portrayal](../../README.md)
+
+*Raw directory:* [browse files in this folder](./)
+

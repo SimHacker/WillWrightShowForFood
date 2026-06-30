@@ -6,3 +6,10 @@ ACM Books (~700 pp, 300+ illustrations). Don guest-lectured Brad's Interaction T
 **Raw mail:** [`DonHopkins/temp/old-email/book-on-interaction-techniques.txt`](../../../../DonHopkins/temp/old-email/book-on-interaction-techniques.txt)
 
 **Do not host draft PDF** — Brad requested no sharing until published.
+
+---
+
+↑ [sources](../README.md) · [show](../../../repo-shows/will-wright/README.md) · [portrayal](../../README.md)
+
+*Raw directory:* [browse files in this folder](./)
+
