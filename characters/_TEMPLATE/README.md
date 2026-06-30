@@ -1,8 +1,13 @@
 # `_TEMPLATE` — guest character scaffold
 
 The starting point for a new guest/character directory under [`characters/`](../). Copy these files
-into `characters/<new-id>/`, fill them in, and add the rest (`GLANCE.md`, `README.md`, etc.) as the
-portrayal grows.
+into `characters/<new-id>/`, fill them in, and add the rest (`GLANCE.md`, `README.md`, `media/`, …)
+as the portrayal grows.
+
+## Layout
+
+- **`media/`** — flat room for PDFs, photos, catalogs (see [`will-wright/media/`](../will-wright/media/) and [`../process/character-colocation.yml`](../../process/character-colocation.yml))
+- Person stuff stays here even if the guest appears on many shows under `repo-shows/`
 
 ## Files
 

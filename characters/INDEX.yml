@@ -107,21 +107,21 @@ guests:
   steve-kommrusch: { invitation_status: draft, show_seed: repo-shows/steve-kommrusch/, note: "Sr AI Scientist at Leela AI; ML for program repair + verifiable equivalence (CSU PhD); ex-CPU architect HP/AMD; MIT MSc; Piaget-schema learning (Drescher bridge); Don's Leela colleague" }
   mark-weiser: { invitation_status: memorial, note: "deceased (1952–1999) — MEMORIAL MODE: ubicomp/calm tech; CHI'88 pie-menu co-author with Don; discussants: Don, Ben Shneiderman" }
   luc-barthelet: { invitation_status: draft, show_seed: repo-shows/luc-barthelet-sims-online/, note: "GM Maxis; SimShow pre-launch; The Sims Online; interview — TSO → Micropolis Home" }
-  phil-salvador: { invitation_status: draft, show_seed: repo-shows/phil-salvador-simrefinery/, note: "Obscuritory/VGHF; SimRefinery + MBS archivist; preservation interview" }
+  phil-salvador: { invitation_status: draft, show_seed: repo-shows/phil-salvador-simrefinery/, note: "Obscuritory/VGHF; SimRefinery + MBS archivist; characters/phil-salvador/media/ + README" }
   matthew-sibigtroth: { invitation_status: not_yet_asked, show_seed: repo-shows/matthew-sibigtroth/ }
   norman-margolus: { invitation_status: draft, show_seed: repo-shows/norman-margolus/, note: "Physicist/CS, MIT CSAIL — CAM-6 + *Cellular Automata Machines* (with Toffoli, 1987; the book Don's CAM6 emulator follows); block CA / Margolus neighborhood; reversible & billiard-ball computing; Margolus–Levitin limit. Friend of Henry Minsky; Don met him in Boston." }
   paul-debevec: { invitation_status: not_yet_asked }
   peter-norvig: { invitation_status: draft, show_seed: repo-shows/peter-norvig/, note: "Director of Research @ Google; AIMA (w/ Stuart Russell) + PAIP; 'Teach Yourself Programming in Ten Years'; Don's friend, writing an AI book + offered a chapter on Don's work; open-topic show (MOOLLM/skills/AI) with Henry + Leela colleagues" }
   richard-bartle: { invitation_status: not_yet_asked, show_seed: repo-shows/richard-bartle/ }
   seymour-papert: { invitation_status: memorial, note: "MEMORIAL MODE (1928–2016): worked with Piaget; MIT AI Lab co-founder; Logo + the turtle; coined constructionism; Mindstorms (1980) → Scratch/OLPC/LEGO Mindstorms. Discussants: Walter Bender, Brian Harvey, Ken Kahn, Jens Mönig, Alan Kay, Don" }
-  scott-draves: { invitation_status: draft, show_seed: repo-shows/scott-draves/, note: "Software artist 'Spot' — Electric Sheep (distributed evolutionary screensaver), Fractal Flame (open-sourced 1992), Dreams in High Fidelity, Infinidream (2026); CMU (Andy Witkin); Don's old friend + Electric Sheep Unity collaborator. Don introduced him to Brian Eno in 2006. Generative-art show + Eno/Will reunion variant." }
+  scott-draves: { invitation_status: draft, show_seed: repo-shows/scott-draves/, note: "Electric Sheep, Fractal Flame (1992); media/ — 6Heads photos + flam3 paper TODO (Don has PDF)" }
   scott-kim: { invitation_status: draft, show_seed: repo-shows/scott-kim/, note: "Ambigrams/inversions, puzzle design, playful math; friend of Will — pair them" }
   scott-mccloud: { invitation_status: draft, show_seed: repo-shows/scott-mccloud/, note: "Cartoonist/comics theorist — Understanding Comics (closure, masking, amplification through simplification); design bible for The Sims; patron-saint guest + Sims reunion" }
   steve-wozniak: { invitation_status: not_yet_asked, show_seed: repo-shows/steve-wozniak/ }
   stone-librande: { invitation_status: not_yet_asked }
   ted-nelson: { invitation_status: finished, show_seed: repo-shows/ted-nelson/, note: "Têd-à-Têd Talk — public invitation ready to send, tag-team with Ted Selker; Hypertext/Xanadu; discussant for Engelbart + Hugh Daniel memorials" }
   ted-selker: { invitation_status: draft, show_seed: repo-shows/ted-selker/, note: "TrackPoint, considerate computing; ran IBM Almaden NPUC workshops where Don demoed Multiplayer SimCity" }
-  terry-winograd: { invitation_status: not_yet_asked, show_seed: repo-shows/terry-winograd/ }
+  terry-winograd: { invitation_status: not_yet_asked, show_seed: repo-shows/terry-winograd/, media: "characters/terry-winograd/media/ — CS547 339-talk catalog (cs547-ARCHIVE.md)" }
   thomas-cherryhomes: { invitation_status: not_yet_asked, show_seed: repo-shows/thomas-cherryhomes/ }
   vanessa-freudenberg: { invitation_status: memorial, note: "deceased (2025) — MEMORIAL MODE: SqueakJS/Croquet; sharp WASM insights → Caffeine; discussants: Craig Latta, Dan Ingalls" }
   sam-arbesman: { invitation_status: draft, note: "Chaim intro 2024; Maxis 2.0 fan; complexity scientist Lux Capital" }

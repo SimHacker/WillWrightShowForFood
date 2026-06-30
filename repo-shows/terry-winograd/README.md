@@ -16,91 +16,54 @@ One of those guests, on **April 26, 1996**, was Will Wright — the talk that dr
 Hopkins to Maxis and seeded the flagship [Will Wright show](../will-wright/). That
 talk is one recording in a catalog of **339**.
 
-## The treasure trove
+## The treasure trove — lives in Terry's character dir
 
-The full catalog lives here, planted from the source spreadsheet Don supplied:
+The full catalog is a **pleasant surprise** in [`../../characters/terry-winograd/media/`](../../characters/terry-winograd/media/):
 
-- **[`ARCHIVE.md`](ARCHIVE.md)** — human-readable catalog, grouped by year, with the
-  watchable-now scans up top and every WWSFF guest flagged.
-- **[`archive.yml`](archive.yml)** — machine-readable girder (VHS/DVD inventory rows
-  collapsed to one entry per talk; SearchWorks scan ids, YouTube uploads, and WWSFF
-  character flags merged in).
-- **[`catalog.tsv`](catalog.tsv)** — faithful tab-separated mirror of the source.
-- **[`build-archive.py`](build-archive.py)** — the generator (`catalog.psv` →
-  `catalog.tsv` + `archive.yml` + `ARCHIVE.md`). Edit the data, not the outputs.
+| File | What |
+|------|------|
+| **[`cs547-ARCHIVE.md`](../../characters/terry-winograd/media/cs547-ARCHIVE.md)** | Human-readable catalog, grouped by year |
+| [`cs547-archive.yml`](../../characters/terry-winograd/media/cs547-archive.yml) | Machine girder — SearchWorks, YouTube, WWSFF flags |
+| [`cs547-catalog.tsv`](../../characters/terry-winograd/media/cs547-catalog.tsv) | Faithful tab-separated mirror |
+| [`cs547-build-archive.py`](../../characters/terry-winograd/media/cs547-build-archive.py) | Regenerator |
 
-**Collection:** Stanford University, CS Dept., HCI Group, CS547 seminar
-videorecordings, 1990–2012 — [SC1217](https://oac.cdlib.org/findaid/ark:/13030/c82b926h),
-18 linear feet, 598 components, Boxes 1–12.
-**Browse:** [SearchWorks](https://searchworks.stanford.edu/catalog?f%5Bcollection%5D%5B%5D=a10637698).
+**Collection:** Stanford SC1217 — [OAC](https://oac.cdlib.org/findaid/ark:/13030/c82b926h) · [SearchWorks](https://searchworks.stanford.edu/catalog?f%5Bcollection%5D%5B%5D=a10637698) · 18 linear feet, 598 components.
 
 ### By the numbers
 
 - **339 talks** catalogued
-- **15+** with a known online scan (Stanford SearchWorks) — watchable now. This is a **floor, not a
-  ceiling**: only the scans Don cross-referenced from his 2024 HN post are marked. Many more are
-  likely already scanned (or easily scannable) — to be dug up and catalogued later, after contacting Terry.
+- **15+** with a known online scan (floor, not ceiling — see catalog notes)
 - **25 talks** by people who are already WillWrightShowForFood characters
 
 ## WWSFF guests already in the trove
-
-Eleven existing characters gave CS547 talks — the lineage is not abstract, it's a
-guest list:
 
 | Character | CS547 talk(s) |
 |---|---|
 | [will-wright](../../characters/will-wright/) | Interfacing to Microworlds (1996) · Games and Simulation (2003) |
 | [james-gosling](../../characters/james-gosling/) | Bringing Behavior to the Internet — Java (1995) |
-| [alan-kay](../../characters/alan-kay/) | Croquet: A Collaboration Architecture (2003) |
-| [ted-selker](../../characters/ted-selker/) | five talks (1993–2005): TrackPoint, agents, context-aware computing |
+| [alan-kay](../../characters/alan-kay/) | Croquet (2003) |
+| [ted-selker](../../characters/ted-selker/) | five talks (1993–2005) |
 | [scott-kim](../../characters/scott-kim/) | VizAbility (1996) · Paper, Plastic, or Playstation? (2004) |
-| [ken-kahn](../../characters/ken-kahn/) | Toon Talk / Animated Programs (1993) |
+| [ken-kahn](../../characters/ken-kahn/) | Toon Talk (1993) |
 | [ben-shneiderman](../../characters/ben-shneiderman/) | The Eyes Have It (1998) · Leonardo's Laptop (2000) |
 | [margaret-minsky](../../characters/margaret-minsky/) | Putting 'Feel' into 'Look and Feel' (1993) |
 | [brad-myers](../../characters/brad-myers/) | Mobile Devices for Control (2002) |
-| [ken-perlin](../../characters/ken-perlin/) | Recent Research at the NYU Media Research Lab (1999) |
-| [terry-winograd](../../characters/terry-winograd/) | host + ~8 of his own talks (1992–2003) |
-
-## Dream guests hiding in the catalog
-
-The trove is also a guest wishlist: Adele Goldberg (Learning Works, 1996), Brenda
-Laurel (Gender and Technology; Utopian Entrepreneur), Larry Tesler + David Canfield
-Smith (StageCast — Visual Interactive Simulations, 1999), Andy Hertzfeld (Magic Cap),
-Jaron Lanier, Don Norman, Jef Raskin, Hiroshi Ishii (Tangible Bits, 1997), Pattie Maes
-(Learning Interface Agents, 1994), Bill Buxton, Larry Page ("Google Is Not an
-Anomaly," 2002), Marissa Mayer, Joy Mountford.
+| [ken-perlin](../../characters/ken-perlin/) | NYU Media Research Lab (1999) |
+| [terry-winograd](../../characters/terry-winograd/) | host + ~8 of his own talks |
 
 ## Show hooks
 
-- **Decode the 1996 Will Wright talk live** — the throughline that sent Don to Maxis
-  ([the centerpiece](../will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/)).
-- **The 1995 Gosling Java talk** — Don on camera asking Java-security questions; the
-  NeWS→Java lineage.
-- **Walk the catalog for predictions** — which talks called the present? (Larry Page on
-  Google before Google; Maes on interface agents; Ishii on tangible bits.)
-- **Archive-as-curriculum** — pick a talk, build a modern runnable seed from its idea
-  (Micropolis Class continuation).
-- **A standing preservation project** — most recordings are VHS/DVD inventory with no
-  online scan; help Stanford digitize + caption the historically important ones (Don
-  already did this for Will 1996 and Gosling 1995).
-
-## Provenance + ethics
-
-Catalog metadata only is mirrored here (not the recordings). Stanford Special
-Collections (SC1217): research/educational use; reproduction requires written
-permission from the Head of Special Collections and the copyright owner. The catalog
-was supplied by Don Hopkins and cross-referenced against his 2024 Hacker News
-inventory ([item 39252103](https://news.ycombinator.com/item?id=39252103)) and the
-[OAC finding aid](https://oac.cdlib.org/findaid/ark:/13030/c82b926h). Terry's
-portrayal follows [`../../schemas/portrayal-standards.yml`](../../schemas/portrayal-standards.yml);
-consent **not yet asked** (see [`invitation`](../../characters/terry-winograd/invitation.md)).
+- **Decode the 1996 Will Wright talk live** — [centerpiece](../will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/)
+- **The 1995 Gosling Java talk** — Don on camera asking Java-security questions
+- **Walk the catalog for predictions** — Larry Page, Pattie Maes, Ishii tangible bits
+- **Archive-as-curriculum** — pick a talk, build a modern runnable seed
 
 ## See also
 
-- [`../../characters/terry-winograd/correspondence.yml`](../../characters/terry-winograd/correspondence.yml) — verified talks + Don's preservation roles
-- [`../../process/trails/cs547-seminar-lineage.md`](../../process/trails/cs547-seminar-lineage.md) — the lineage trail
-- [`../../process/trails/archive-and-provenance.md`](../../process/trails/archive-and-provenance.md) — primary-source preservation trail
-- [`../will-wright/`](../will-wright/) — the flagship show this archive preserved
+- [`../../characters/terry-winograd/`](../../characters/terry-winograd/) — portrait + **media/**
+- [`../../characters/terry-winograd/correspondence.yml`](../../characters/terry-winograd/correspondence.yml)
+- [`../../process/trails/cs547-seminar-lineage.md`](../../process/trails/cs547-seminar-lineage.md)
+- [`../will-wright/`](../will-wright/)
 
 ---
 

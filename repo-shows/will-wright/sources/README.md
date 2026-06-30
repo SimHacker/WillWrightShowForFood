@@ -4,6 +4,10 @@ Republishable markdown harvested from Don Hopkins's archives — essays, transcr
 threads, Wayback captures. This is the **story we tell in public**: SimCity open source,
 OLPC, Transmogrifier, The Sims birth, procedural rhetoric, preservation.
 
+**Placement:** Episode-scoped source bundles live here for now; person-owned artifacts prefer
+[`characters/<guest>/media/`](../../../characters/) per [`character-colocation.yml`](../../../process/character-colocation.yml).
+Cross-link freely — e.g. Terry's full CS547 catalog is in [`terry-winograd/media/cs547-ARCHIVE.md`](../../../characters/terry-winograd/media/cs547-ARCHIVE.md).
+
 *Sniff:* [`GLANCE.yml`](GLANCE.yml) · *Complete slug index:* [below § Complete slug index](#complete-slug-index)
 
 Scroll down for bite-sized entry points — each folder has its own README with files listed.

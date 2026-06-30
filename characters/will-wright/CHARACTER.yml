@@ -71,13 +71,13 @@ sources:
     - label: "YouTube — Stanford recording of the 1996 talk"
       url: https://www.youtube.com/watch?v=nsxoZXaYJSk
     - label: "2003-05-02 Winograd CS547 — 'Games and Simulation' (Will's SECOND catalogued CS547 talk)"
-      path: ../../repo-shows/terry-winograd/ARCHIVE.md
+      path: ../../characters/terry-winograd/media/cs547-ARCHIVE.md
   stanford_talks:
     note: "Will spoke at Stanford more than once — the 1996 Dollhouse talk was the FIRST, not the only one. Two are in the CS547 archive (SC1217); there may be others (d.school, ETL, etc.) — add as verified."
     cs547_catalogued:
       - { date: "1996-04-26", title: "Interfacing to Microworlds", session: "CS547 Winograd 4", note: "the first; SimEarth/SimAnt/SimCity 2000 post-mortems + Dollhouse preview" }
       - { date: "2003-05-02", title: "Games and Simulation", session: "CS547 Winograd 5" }
-    catalog: ../../repo-shows/terry-winograd/archive.yml
+    catalog: ../../characters/terry-winograd/media/cs547-archive.yml
   note: "Quotes in README/CARD cite public sources only"
 
 sims:

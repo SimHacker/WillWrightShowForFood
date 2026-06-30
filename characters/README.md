@@ -3,9 +3,14 @@
 Public portrayals **about** real people — polite, verifiable, respectful. These are **not** the
 real people, and we never impersonate them or speak as them.
 
-*Sniff:* [`GLANCE.yml`](GLANCE.yml) · *Facade:* [`README.md`](README.md) · *Machine sync:* [`INDEX.yml`](INDEX.yml)
+*Sniff:* [`GLANCE.yml`](GLANCE.yml) · *Placement rule:* [`../process/character-colocation.yml`](../process/character-colocation.yml)
 
-**Browse the tree.** One directory per person — that is the interface, not a separate people index.
+**One person, one directory.** Papers, photos, catalogs, and correspondence live here — especially
+[`media/`](will-wright/media/) flat rooms — not duplicated per episode under `repo-shows/`. Shows
+mix and match guest artifacts **by reference** (even guests not on the bill). Reusable **code** from
+harvests graduates to [`packages/`](../packages/).
+
+*Machine sync:* [`INDEX.yml`](INDEX.yml)
 
 ---
 
@@ -23,8 +28,7 @@ venue arbitration. The show's constitution lives here.
 **[slats/](slats/)** — Sidekick bot. One Minute Movies waiter brain; robopoetry feedback-loop instrument;
 ROBORESURRECTION Easter Sunday bit.
 
-**[terry-winograd/](terry-winograd/)** — Forebear. CS547 archive — 339 talks; the seminar tradition the
-1996 centerpiece inherits.
+**[terry-winograd/](terry-winograd/)** — Forebear. **[`media/cs547-ARCHIVE.md`](terry-winograd/media/cs547-ARCHIVE.md)** — 339 CS547 talks in Terry's character dir; the seminar tradition the 1996 centerpiece inherits.
 
 **[richard-bartle/](richard-bartle/)** — Consented self-author example. MUD co-inventor; spirit-of-work
 questions he may curate.

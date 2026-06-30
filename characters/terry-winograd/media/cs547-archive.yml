@@ -1,6 +1,6 @@
 # CS547 ARCHIVE — Stanford HCI Seminar videorecording catalog (GENERATED)
-# Source of truth: catalog.psv (raw mirror: catalog.tsv). Regenerate: python3 build-archive.py
-# Do not hand-edit; edit catalog.psv + the maps in build-archive.py instead.
+# Source of truth: cs547-catalog.psv (raw mirror: cs547-catalog.tsv). Regenerate: python3 cs547-build-archive.py
+# Do not hand-edit; edit cs547-catalog.psv + the maps in cs547-build-archive.py instead.
 
 meta:
   collection: "Stanford University, Computer Science Department, HCI Group, CS547 seminar videorecordings, 1990-2012"

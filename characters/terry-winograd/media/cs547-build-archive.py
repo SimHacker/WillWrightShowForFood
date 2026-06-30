@@ -2,30 +2,30 @@
 """Generate the CS547 archive girder + facade from the raw catalog.
 
 Inputs:
-  catalog.psv  -- pipe-delimited raw catalog, one row per recording:
+  cs547-catalog.psv  -- pipe-delimited raw catalog, one row per recording:
                   speaker | org | title | session | date | format | box
                   (faithful transcription of the Stanford SC1217 spreadsheet
                    supplied by Don Hopkins; pipe-delimited so titles may keep
                    their commas, colons, and quotes verbatim).
 
 Outputs:
-  catalog.tsv  -- faithful TAB-separated mirror (same rows, real tabs).
-  archive.yml  -- machine-readable catalog: VHS/DVD inventory rows collapsed to
+  cs547-catalog.tsv  -- faithful TAB-separated mirror (same rows, real tabs).
+  cs547-archive.yml  -- machine-readable catalog: VHS/DVD inventory rows collapsed to
                   one entry per talk (speaker+title+date), enriched with known
                   SearchWorks scan ids, YouTube uploads, and WWSFF character flags.
-  ARCHIVE.md   -- human-readable facade grouped by year.
+  cs547-ARCHIVE.md   -- human-readable facade grouped by year.
 
-Run:  python3 build-archive.py
+Run:  python3 cs547-build-archive.py
 """
 import csv
 import os
 from collections import OrderedDict
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-PSV = os.path.join(HERE, "catalog.psv")
-TSV = os.path.join(HERE, "catalog.tsv")
-YML = os.path.join(HERE, "archive.yml")
-MD = os.path.join(HERE, "ARCHIVE.md")
+PSV = os.path.join(HERE, "cs547-catalog.psv")
+TSV = os.path.join(HERE, "cs547-catalog.tsv")
+YML = os.path.join(HERE, "cs547-archive.yml")
+MD = os.path.join(HERE, "cs547-ARCHIVE.md")
 
 # --- known online scans (Stanford SearchWorks view ids), from Don Hopkins's
 # --- 2024 Hacker News inventory (news.ycombinator.com/item?id=39252103).
@@ -186,8 +186,8 @@ def write_yaml(talks):
     wwsff = [t for t in talks_sorted if match_wwsff(t)]
     with open(YML, "w", encoding="utf-8") as f:
         f.write("# CS547 ARCHIVE — Stanford HCI Seminar videorecording catalog (GENERATED)\n")
-        f.write("# Source of truth: catalog.psv (raw mirror: catalog.tsv). Regenerate: python3 build-archive.py\n")
-        f.write("# Do not hand-edit; edit catalog.psv + the maps in build-archive.py instead.\n\n")
+        f.write("# Source of truth: cs547-catalog.psv (raw mirror: cs547-catalog.tsv). Regenerate: python3 cs547-build-archive.py\n")
+        f.write("# Do not hand-edit; edit cs547-catalog.psv + the maps in cs547-build-archive.py instead.\n\n")
         f.write("meta:\n")
         f.write("  collection: \"Stanford University, Computer Science Department, HCI Group, CS547 seminar videorecordings, 1990-2012\"\n")
         f.write("  collection_id: SC1217\n")
@@ -239,15 +239,15 @@ def write_md(talks):
     wwsff = [t for t in talks_sorted if match_wwsff(t)]
     with open(MD, "w", encoding="utf-8") as f:
         f.write("# CS547 Archive — The Treasure Trove\n\n")
-        f.write("> GENERATED from `archive.yml` / `catalog.psv` — do not hand-edit. "
-                "Run `python3 build-archive.py`.\n\n")
+        f.write("> GENERATED from `cs547-archive.yml` / `cs547-catalog.psv` — do not hand-edit. "
+                "Run `python3 cs547-build-archive.py`.\n\n")
         f.write("**Stanford University, CS Dept., HCI Group, CS547 seminar videorecordings, 1990–2012** "
                 "(collection [SC1217](https://oac.cdlib.org/findaid/ark:/13030/c82b926h)). "
                 "Terry Winograd's open, recorded, one-guest-a-week public seminar — the direct forebear of the Repo Show.\n\n")
         f.write("- **%d talks** catalogued (VHS/DVD inventory rows collapsed to one per talk)\n" % len(talks_sorted))
         f.write("- **%d+** have a known online scan (Stanford SearchWorks) — a *floor*, not a ceiling: only the ones cross-referenced from Don's 2024 HN post. Many more are likely already scanned; to be dug up after contacting Terry.\n" % len(online))
         f.write("- **%d** were given by people who are WillWrightShowForFood characters\n\n" % len(wwsff))
-        f.write("Raw mirror: [`catalog.tsv`](catalog.tsv) · machine girder: [`archive.yml`](archive.yml) · "
+        f.write("Raw mirror: [`cs547-catalog.tsv`](cs547-catalog.tsv) · machine girder: [`cs547-archive.yml`](cs547-archive.yml) · "
                 "finding aid: [OAC](https://oac.cdlib.org/findaid/ark:/13030/c82b926h) · "
                 "[SearchWorks collection](https://searchworks.stanford.edu/catalog?f%5Bcollection%5D%5B%5D=a10637698)\n\n")
 
@@ -256,7 +256,7 @@ def write_md(talks):
         for t in wwsff:
             seen.setdefault(match_wwsff(t), []).append(t)
         for slug, ts in seen.items():
-            f.write("- **[%s](../../characters/%s/)** — %s\n" % (
+            f.write("- **[%s](../../%s/)** — %s\n" % (
                 slug, slug,
                 "; ".join("%s (%s)" % (x["title"], x["date"] or "?") for x in ts)))
         f.write("\n")
@@ -296,7 +296,7 @@ def main():
     write_yaml(talks)
     write_md(talks)
     print("rows: %d  talks: %d" % (len(rows), len(talks)))
-    print("wrote: catalog.tsv, archive.yml, ARCHIVE.md")
+    print("wrote: cs547-catalog.tsv, cs547-archive.yml, cs547-ARCHIVE.md")
 
 
 if __name__ == "__main__":

@@ -173,7 +173,7 @@ trails:
       - { path: ../characters/terry-winograd/, why: "CS547 host — curator of the video trove (the forebear)" }
       - { path: ../characters/terry-winograd/correspondence.yml, why: "Verified preservation record — Will 1996 + Gosling 1995" }
       - { path: ../repo-shows/terry-winograd/, why: "★ The forebear show — the dragon's treasure trove planted" }
-      - { path: ../repo-shows/terry-winograd/ARCHIVE.md, why: "The full CS547 catalog — 339 talks, 15 online scans, 25 by WWSFF characters" }
+      - { path: ../characters/terry-winograd/media/cs547-ARCHIVE.md, why: "The full CS547 catalog — 339 talks, 15 online scans, 25 by WWSFF characters" }
       - { path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "Will's 1996 'Interfacing to Microworlds' — the anchor talk" }
       - { path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md, why: "Primary text — cite Will's words" }
       - { path: ../characters/james-gosling/, why: "1995 CS547 'Bringing Behavior to the Internet' (Java) — Don on camera" }

@@ -17,13 +17,15 @@ show:
 the_forebear_thesis:
   one_line: "CS547 IS the template: one luminary a week, open public access, recorded for posterity, real Q&A. The Repo Show is its descendant."
   standing_on_shoulders: "This whole project stands on Terry's shoulders — and on the shoulders of all his great guests (Will Wright 1996, James Gosling 1995, Joy Mountford, Jef Raskin, Don Norman, Alan Kay, Ted Selker, Scott Kim, Ken Kahn, Adele Goldberg, and ~200 more)."
-  the_dragon_and_the_trove: "Terry is the curator of the trove that holds Will's own 1996 words — and 597 other recordings. The full catalog is the archive.yml girder beside this file."
+  the_dragon_and_the_trove: "Terry is the curator of the trove that holds Will's own 1996 words — and 338 more talks. Full catalog: characters/terry-winograd/media/."
 
 the_treasure_trove:
   what: "Stanford University, Computer Science Department, HCI Group, CS547 seminar videorecordings, 1990–2012 (collection SC1217)."
-  catalog: archive.yml             # full machine-readable catalog (girder)
-  catalog_markup: ARCHIVE.md       # human-readable facade (generated)
-  raw_mirror: catalog.tsv          # faithful mirror of the source spreadsheet (provenance)
+  home: ../../characters/terry-winograd/media/   # catalog lives with Terry — pleasant surprise
+  catalog: ../../characters/terry-winograd/media/cs547-archive.yml
+  catalog_markup: ../../characters/terry-winograd/media/cs547-ARCHIVE.md
+  raw_mirror: ../../characters/terry-winograd/media/cs547-catalog.tsv
+  build: ../../characters/terry-winograd/media/cs547-build-archive.py
   finding_aid: "https://oac.cdlib.org/findaid/ark:/13030/c82b926h"
   searchworks_collection: "https://searchworks.stanford.edu/catalog?f%5Bcollection%5D%5B%5D=a10637698"
   extent: "18 linear feet · 598 videorecording components · Boxes 1–12"
@@ -43,7 +45,7 @@ show_hooks:
 
 archive_recovery:
   note: "Many CS547 recordings exist only as VHS/DVD inventory (Box 1–12) with no online scan yet. A standing project is to help Stanford digitize + caption the historically important ones (Don already did this for Will 1996 and Gosling 1995)."
-  already_online: "A subset has SearchWorks digital scans — see archive.yml entries with a searchworks: id."
+  already_online: "A subset has SearchWorks digital scans — see cs547-archive.yml entries with a searchworks: id."
   scans_are_a_floor: "The 15 marked scans are only the ones Don cross-referenced from his 2024 HN post — a FLOOR, not a ceiling. Many more are likely already scanned or easily scannable; dig them up and catalog them later, after contacting Terry."
 
 format:
@@ -53,7 +55,7 @@ format:
   shape: "No rigid agenda. Orbit the catalog. Pick talks, explain WHY they mattered, build a little live."
 
 wwsff_guests_in_the_catalog:
-  note: "Catalog speakers who already have WWSFF character dirs — catalogued in archive.yml with a wwsff_character flag (25 talks across these 11). Wire each into their CHARACTER.yml sources.archive as shows are scheduled."
+  note: "Catalog speakers who already have WWSFF character dirs — catalogued in cs547-archive.yml with a wwsff_character flag (25 talks across these 11). Wire each into their CHARACTER.yml sources.archive as shows are scheduled."
   people:
     - will-wright          # 1996-04-26 Interfacing to Microworlds + 2003-05-02 Games and Simulation
     - james-gosling        # 1995-12-01 Bringing Behavior to the Internet (Java)
@@ -79,7 +81,4 @@ ties_to:
 files:
   SHOW.yml:     "This manifest."
   README.md:    "Forebear-show pitch + framing."
-  archive.yml:  "Full CS547 catalog girder (deduped talks; SearchWorks ids; WWSFF flags)."
-  ARCHIVE.md:   "Human-readable catalog facade (generated from archive.yml)."
-  catalog.tsv:  "Faithful raw mirror of the source spreadsheet (provenance)."
-  build-archive.py: "Generator: catalog.tsv → archive.yml + ARCHIVE.md."
+  catalog_home: "../../characters/terry-winograd/media/ — cs547-catalog.tsv, cs547-archive.yml, cs547-ARCHIVE.md, cs547-build-archive.py"

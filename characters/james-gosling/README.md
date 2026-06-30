@@ -4,6 +4,6 @@ Invitation portrayal — **not** James Gosling. [Standards](../../schemas/portra
 
 **Field:** Window systems (Andrew, NeWS/SunDew), Gosling/UniPress Emacs, Java;
 
-[Invitation](invitation.md) · [Show seed](../../repo-shows/james-gosling/)
+[Invitation](invitation.md) · [**Media**](media/) · [Show seed](../../repo-shows/james-gosling/) · [1995 CS547 Java talk](../terry-winograd/media/cs547-ARCHIVE.md)
 
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

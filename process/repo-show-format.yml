@@ -49,6 +49,13 @@ ticket_pr:
     Independent shows spin off to their own repos. TicketPR characters migrate between episodes within a repo.
   mspo: "Massively Single-Player Online — your timestamped layer on a shared artifact; others replay with your journal visible"
   where: "SHOW directory audience/ — NOT characters/ (guests have many shows; audience is per-episode)"
+  character_colocation:
+    spec: character-colocation.yml
+    rule: |
+      Person-specific artifacts (papers, photos, catalogs, correspondence) live in
+      characters/<slug>/ — especially media/. Shows reference by path; multi-guest episodes
+      mix and match any character's stuff even if they are not on the bill. Reusable code
+      from harvests factors out to packages/.
   files: [questions.yml, CHARACTER.yml, CARD.yml, GLANCE.yml, SIMULATION.yml, costume.yml]
   moollm: "Copy _TEMPLATE/audience/ — learn character creation; participate in simulation protocols during/after show"
   ladder:
@@ -267,6 +274,7 @@ play_lift_learn:
   learn: "Fork, breed, nest — constructionist payoff across the network"
 
 see_also:
+  - { path: character-colocation.yml, why: "Person artifacts in characters/; shows reference; code → packages/" }
   - { path: ticket-pr.yml, why: "TicketPR — TicketMaster reframed: Master ⇒ PR" }
   - { path: cross-links.yml, why: "Narrative web — trails between all rooms" }
   - { path: vision-and-ambition.yml, why: "Long arc girder" }

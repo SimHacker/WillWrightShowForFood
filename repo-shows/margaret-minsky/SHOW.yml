@@ -14,7 +14,7 @@ show:
 
 why_her:
   haptics: "MIT Media Lab PhD on the Sandpaper system — synthesizing texture for a force-feedback display. Touch you can program, as HCI rather than gimmick."
-  cs547: "Gave the 1993 CS547 talk 'Putting Feel into Look and Feel: Interaction with the Sense of Touch' — in the Winograd archive (../terry-winograd/ARCHIVE.md)."
+  cs547: "Gave the 1993 CS547 talk 'Putting Feel into Look and Feel: Interaction with the Sense of Touch' — in Terry's catalog (../../characters/terry-winograd/media/cs547-ARCHIVE.md)."
   first_wired_family: "Daughter of Marvin Minsky; had her own net address at 14 (1971), a terminal at home before video displays existed. Living memory of the AI Lab as a household."
   logo_and_education: "Atari Cambridge Research / education + Logo history; a warm 'Memory Lane' correspondence with Don."
 
@@ -38,4 +38,4 @@ ties_to:
   - ../../characters/marvin-minsky/
   - ../../characters/henry-minsky/
   - ../../characters/ken-kahn/
-  - ../../repo-shows/terry-winograd/ARCHIVE.md
+  - ../../characters/terry-winograd/media/cs547-ARCHIVE.md

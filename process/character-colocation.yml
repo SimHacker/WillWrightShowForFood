@@ -1,0 +1,91 @@
+# Character colocation — person stuff lives in characters/, shows reference by path
+# Complements ticket-pr.yml (audience stays per-show) and character-endosymbiosis.yml (cross-game bridges).
+
+meta:
+  id: character-colocation
+  one_line: |
+    One person, one home directory — papers, media, catalogs, correspondence. Shows are episodes
+    that mix and match guest artifacts by reference; reusable code graduates to packages/.
+  tagline: "Person in characters/. Episode in repo-shows/. Library in packages/."
+
+# THE RULE — where things live
+placement:
+  characters:
+    path: characters/<slug>/
+    owns:
+      - "Portrait girder — CHARACTER.yml, CARD.yml, README.md, invitation.md"
+      - "Person-specific artifacts — PDFs, photos, scans, catalogs, correspondence summaries"
+      - "Flat media/ room (preferred) — big-endian names; mixed types side by side (see will-wright/media/)"
+      - "sources/ or sources.yml when a guest has many primary-source bundles"
+    why: |
+      A guest may appear on several shows (Will Wright kickoff, building-the-sims reunion,
+      terry-winograd forebear, drew-carey improv). Their treasure trove should not be duplicated
+      per episode. When they open characters/<their-name>/, they should be pleasantly surprised.
+
+  repo_shows:
+    path: repo-shows/<episode-slug>/
+    owns:
+      - "Episode manifest — SHOW.yml, SEGMENTS.yml, venue/, audience/ (TicketPR per episode)"
+      - "Show-topic glue — segment order, cross-guest lineup, episode-specific framing"
+      - "Artifacts with no better home — a one-off bit that only makes sense in this episode"
+    does_not_own: |
+      Long-lived person artifacts (papers, photo galleries, seminar catalogs, career timelines).
+      Those belong under characters/<slug>/ even if discovered while prepping this episode.
+    reference_pattern: |
+      Link across: ../../characters/<slug>/media/... — cite other guests' material even when
+      they are NOT on the bill. Multi-guest shows are mixtapes by reference, not by copy-paste.
+
+  packages:
+    path: packages/
+    owns:
+      - "Reusable code extracted from show harvests — TypeScript, Python, WASM (@wwsff/*)"
+      - "Libraries any show, character bridge, or fork can import without dragging episode yaml"
+    when: |
+      After homefun/PR merge: if the artifact is code (not prose/media), factor the general
+      part into packages/; leave person-specific narrative in characters/ and episode notes
+      in repo-shows/.
+
+  audience_per_episode:
+    rule: "TicketPR audience/ stays under repo-shows/<show>/audience/ — NOT characters/"
+    why: "MSPO journal is per-episode attendance; guests have many shows but one portrayal home"
+    spec: ticket-pr.yml
+
+# MEDIA ROOM CONVENTION (follow will-wright)
+media_room:
+  path: characters/<slug>/media/
+  pattern: |
+    One flat directory when possible — README.md scroll + co-located files. Sub-galleries as
+    markdown indexes (russian-space-junk.md) when a theme has many PNGs. Big-endian related names
+    so catalog.tsv sits next to ARCHIVE.md next to build script (cs547-* for Terry).
+  examples:
+    - characters/will-wright/media/
+    - characters/terry-winograd/media/   # CS547 339-talk catalog (moved from repo-shows/terry-winograd/)
+    - characters/scott-draves/media/
+
+# CROSS-SHOW REFERENCES — mix and match
+cross_reference:
+  allowed: |
+    Any SHOW.yml, segment, or source README may link to ANY character's media — guest on the
+    episode or not. Example: Will Wright show cites Terry's CS547 catalog + Gosling's Java talk
+    without requiring a terry-winograd episode that week.
+  prefer: "Path links over duplication — one canonical file, many referrers"
+  anti_pattern: "Copying the same PDF into two show directories"
+
+# MIGRATION (incremental — do not block episodes)
+migration:
+  done:
+    - "CS547 catalog → characters/terry-winograd/media/cs547-*"
+    - "Media room stubs for Gosling, Shneiderman, Myers, Kay, Gingold, Phil Salvador"
+  candidates:
+    - path: repo-shows/will-wright/sources/
+      note: "Many bundles are Will-person or team-person primary sources — consider characters/will-wright/sources/ with show README links (large move; do when prepping)"
+    - path: repo-shows/will-wright/assets/sims-series/
+      note: "Don-authored essays + screenshots — split: person-neutral in show, guest-specific → character media"
+
+see_also:
+  - repo-show-format.yml
+  - ticket-pr.yml
+  - character-endosymbiosis.yml
+  - ../schemas/portrayal-standards.yml#guest_directory
+  - ../packages/README.md
+  - ../characters/will-wright/media/README.md

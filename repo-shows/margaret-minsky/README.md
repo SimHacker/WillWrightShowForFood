@@ -4,7 +4,7 @@
 
 **Margaret Minsky** did her MIT Media Lab PhD on the **Sandpaper** system: synthesizing texture for
 a force-feedback display — *touch you can program*. She worked at Atari's Cambridge Research Lab,
-and gave the 1993 CS547 talk [*"Putting 'Feel' into 'Look and Feel'"*](../terry-winograd/ARCHIVE.md).
+and gave the 1993 CS547 talk [*"Putting 'Feel' into 'Look and Feel'"*](../../characters/terry-winograd/media/cs547-ARCHIVE.md).
 Daughter of **Marvin Minsky** and Gloria Rudisch, she grew up in the "first wired family" — her own
 net address at 14, in 1971.
 

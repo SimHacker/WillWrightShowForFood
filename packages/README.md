@@ -3,6 +3,9 @@
 Shared libraries for the **evolving organism** — abstract reusable parts from show harvests
 so other organisms (repos, shows, forks) can compose them.
 
+**Person prose and media** stay in [`characters/`](../characters/) ([`character-colocation.yml`](../process/character-colocation.yml)).
+**Code** that generalizes across shows lands here.
+
 | Layer | Path | What gets abstracted |
 |-------|------|----------------------|
 | **Skills** | [`../skills/`](../skills/) | MOOLLM protocols, CARD/SKILL.md — agent + human runnable |

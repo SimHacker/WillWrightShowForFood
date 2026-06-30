@@ -36,9 +36,11 @@ verified_talks:
 
 full_archive:
   what: "The complete CS547 videorecording catalog (Stanford SC1217, 1990-2012) — 339 talks, the two anchors above among them."
-  planted: ../../repo-shows/terry-winograd/        # the forebear show + catalog
-  catalog_girder: ../../repo-shows/terry-winograd/archive.yml
-  catalog_markup: ../../repo-shows/terry-winograd/ARCHIVE.md
+  home: media/                    # catalog lives with Terry's character — pleasant surprise
+  catalog_girder: media/cs547-archive.yml
+  catalog_markup: media/cs547-ARCHIVE.md
+  catalog_tsv: media/cs547-catalog.tsv
+  show_seed: ../../repo-shows/terry-winograd/
   finding_aid: "https://oac.cdlib.org/findaid/ark:/13030/c82b926h"
   wwsff_guests_in_catalog: 11   # will-wright, james-gosling, alan-kay, ted-selker, scott-kim, ken-kahn, ben-shneiderman, margaret-minsky, brad-myers, ken-perlin, terry-winograd
   online_scans_known: 15        # SearchWorks digitizations cross-referenced from Don's HN inventory
@@ -46,10 +48,11 @@ full_archive:
 why_it_matters: |
   CS547 IS the template: one luminary, open public access, recorded for posterity, real Q&A.
   The Repo Show is its descendant — and Terry is the curator of the trove that holds Will's
-  own 1996 words, and 338 more talks (full catalog: ../../repo-shows/terry-winograd/archive.yml).
+  own 1996 words, and 338 more talks (full catalog: media/cs547-archive.yml).
 
 connects_in_repo:
-  - { path: ../../repo-shows/terry-winograd/, why: "The forebear show + the full CS547 catalog (archive.yml / ARCHIVE.md)" }
+  - { path: media/, why: "The full CS547 catalog — cs547-ARCHIVE.md + cs547-archive.yml + cs547-catalog.tsv" }
+  - { path: ../../repo-shows/terry-winograd/, why: "Forebear show seed" }
   - { path: CHARACTER.yml, why: "Forebear bio + invitation status" }
   - { path: ../will-wright/, why: "The 1996 talk this archive preserved — flagship show" }
   - { path: ../james-gosling/, why: "1995 CS547 Java talk — NeWS/Java lineage" }

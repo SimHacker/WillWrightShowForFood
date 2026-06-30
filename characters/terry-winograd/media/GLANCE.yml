@@ -1,0 +1,6 @@
+# Terry Winograd media — CS547 archive room
+what: "339-talk CS547 catalog — Terry's treasure trove, flat cs547-* files"
+scroll: README.md
+catalog: cs547-ARCHIVE.md
+girder: cs547-archive.yml
+regenerate: cs547-build-archive.py

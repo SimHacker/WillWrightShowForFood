@@ -86,8 +86,14 @@ guest_directory:
     for humans who already know yaml registries exist.
   grows_with_the_show: |
     Each directory accumulates public-safe material as we hear back and gather artifacts for
-    the episode: links, citations, attachments transcribed to text, URLs, corrected bios,
-    optional subdirs (sources/, portrayal/, assets/) when warranted.
+    episodes they appear on (or that cite their work): links, citations, PDFs, media, catalogs,
+    corrected bios. One person, one home — even across many repo-shows/<episode>/ appearances.
+  media_room:
+    path: "characters/<id>/media/"
+    convention: |
+      Flat general media room (see will-wright/media/) — README scroll + co-located files;
+      big-endian names for related artifacts. Prefer media/ over scattering person files in
+      repo-shows/. Spec: ../../process/character-colocation.yml
   contributions:
     self_service: |
       Guests with repo access may edit their own directory — PR or direct commit per consent.
@@ -100,7 +106,7 @@ guest_directory:
 
 per_character_files:
   required: [CHARACTER.yml, CARD.yml, GLANCE.md, README.md, invitation.md]
-  optional: [sources.yml, bio.yml, portrayal/, sources/, assets/]
+  optional: [sources.yml, bio.yml, portrayal/, sources/, media/, assets/]
   grows: "Add files as responses and show prep warrant — not a fixed template checklist"
   do_not_repeat: "This standards file — reference governed_by: portrayal-standards.yml"
 

@@ -27,7 +27,11 @@ bio:
 
 sources:
   wikipedia: null
-  web:
-    []
+  web: []
   papers: []
   blogs: []
+  archive:
+    cs547_catalog: media/cs547-ARCHIVE.md
+    cs547_girder: media/cs547-archive.yml
+    cs547_tsv: media/cs547-catalog.tsv
+    stanford_sc1217: "https://oac.cdlib.org/findaid/ark:/13030/c82b926h"

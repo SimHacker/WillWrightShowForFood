@@ -67,6 +67,7 @@ is why **Brian Eno** is a [dream guest](../brian-eno/) here, ideally reachable t
 ## Browse
 
 - Ideas to explore: [`ideas.md`](ideas.md)
+- **Media:** [`media/`](media/) — 6Heads ELAVIL photos · [**Fractal Flame paper (TODO)**](media/flam3-original-paper-TODO.md) — Don has the PDF
 - Show seed: [`repo-shows/scott-draves/`](../../repo-shows/scott-draves/)
 - Timeline from the archive: [`correspondence.yml`](correspondence.yml)
 - Dream co-guest: [Brian Eno](../brian-eno/) · Reunion host: [Will Wright](../will-wright/)
