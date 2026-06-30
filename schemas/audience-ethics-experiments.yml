@@ -27,7 +27,7 @@ spectrum:
       - authorship.by: self OR curator_draft_for_subject_review (with consent)
       - drafts_labeled_not_quotes
       - cite_public_spirit_source_per_drafted_question
-      - heed_subject_warnings (e.g. Bartle: "quotes can be taken out of context")
+      - 'heed_subject_warnings (e.g. Bartle: "quotes can be taken out of context")'
       - subject_has_final_voice (edit / approve / replace)
     consent_levels:
       simulate_only: "Be in audience; no questions drafted in their voice"

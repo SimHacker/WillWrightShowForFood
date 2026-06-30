@@ -16,8 +16,12 @@ const script = join(repoRoot, 'scripts/verify-yaml.py');
 
 const probe = spawnSync(python, ['-c', 'import yaml'], { encoding: 'utf8' });
 if (probe.status !== 0) {
-	console.warn('verify-yaml SKIPPED: PyYAML not installed. Run: pnpm run setup:python');
-	process.exit(0);
+	console.error(
+		'verify-yaml FAILED: PyYAML not installed.\n' +
+			'  Run: pnpm run setup:python\n' +
+			'  Or: pip install -r requirements.txt',
+	);
+	process.exit(1);
 }
 
 const result = spawnSync(python, [script], { stdio: 'inherit', cwd: repoRoot });

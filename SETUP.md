@@ -55,6 +55,7 @@ nvm install && nvm use          # .nvmrc → 22
 corepack enable
 pnpm install
 pnpm run verify                 # structure + YAML parse check
+pnpm run setup:hooks            # pre-push hook → runs verify before every push
 ```
 
 ### 2. Python venv

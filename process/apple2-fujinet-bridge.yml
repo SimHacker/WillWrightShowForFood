@@ -47,10 +47,10 @@ phases:
     rig: ../rigs/apple2-fujinet-flair-lap.rig.yml
     stack:
       - fujinet-vm OVA OR Linux build from FujiNetWIFI/AppleWin linux branch
-      - "./build.sh -p APPLE" FujiNet-PC from fujinet-firmware
+      - './build.sh -p APPLE FujiNet-PC from fujinet-firmware'
       - SPoverSLIP in slot (card type 25); web admin localhost:8000
     proves: "Virtual FujiNet joins same TNFS/lobby as real hardware"
-    ask_thomas: P1 — bless as reference rig for Repo Show + contributors?
+    ask_thomas: "P1 — bless as reference rig for Repo Show + contributors?"
     ties:
       - ../characters/thomas-cherryhomes/ideas.md
       - ../repo-shows/thomas-cherryhomes/SHOW.yml
@@ -68,7 +68,7 @@ phases:
         WebSocket relay ↔ SPoverSLIP/TCP (Apple) or NetSIO/UDP (Atari template)
         Browser emu stays sandboxed; network identity lives in FujiNet-PC process
     proves: "Character round-trip + optional live TNFS mount from browser session"
-    ask_thomas: [P4, P6, P8] — parallel track or integrated FujiNet Apple client?
+    ask_thomas: "[P4, P6, P8] — parallel track or integrated FujiNet Apple client?"
     sequence: "Thomas before Brewster/IA (per apple2-emulator-stack fundable.collaborators)"
     ties:
       - apple2-emulator-stack.yml
@@ -86,7 +86,7 @@ phases:
     explicitly_not:
       - "Full AppleWin Emscripten port as critical path"
       - "FujiNet-PC compiled to WASM (POSIX network stack in browser tab)"
-    ask_thomas: [P2, P3, P5] — protocol ownership, merge maintainer, IA complement framing
+    ask_thomas: "[P2, P3, P5] — protocol ownership, merge maintainer, IA complement framing"
 
 emulator_roles:
   applewin_fujinet_fork:

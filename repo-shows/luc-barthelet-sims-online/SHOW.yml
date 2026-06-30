@@ -1,21 +1,40 @@
 # Luc Barthelet — Sims Online & shipping The Sims
+# Show seed — interview Don has wanted for years.
 
-*Show seed — interview Don has wanted for years.*
+show:
+  id: luc-barthelet-sims-online
+  title: "Luc Barthelet — Shipping The Sims & The Sims Online"
+  kind: interview
+  status: seed
+  host: don-hopkins
+  guest: luc-barthelet
+  character: characters/luc-barthelet/
 
-## Why Luc
+logline: |
+  GM Maxis through EA acquisition — the human story of shipping The Sims, seeding SimShow and
+  fan content before launch, and The Sims Online as the graphic MUD Will mused about in 1996.
+  Apple ][ old school; Unity era; now sailing — great Repo Show guest energy.
 
-- GM Maxis through EA acquisition — human story of **shipping The Sims**
-- Seeded **SimShow** and fan content **before launch** ([proposals hub](../../will-wright/sources/2004-02-05-sims-proposals-and-documentation/article.md))
-- **The Sims Online** — graphic MUD Will mused about in 1996, made real; reincarnations matter for Micropolis Home
-- Apple ][ old school; Unity era; now sailing — great Repo Show guest energy
+segments:
+  - id: pre_launch_fan_tools
+    topic: "Pre-launch fan tools vs retail Exchange — what Luc deliberately enabled"
+    links:
+      - repo-shows/will-wright/sources/2004-02-05-sims-proposals-and-documentation/article.md
 
-## Discuss on air
+  - id: tso_architecture
+    topic: "TSO architecture and community — lessons for federation and Exchange revival"
 
-1. Pre-launch fan tools vs retail Exchange — what Luc deliberately enabled  
-2. TSO architecture & community — lessons for federation / Exchange revival  
-3. EA ↔ open content — contrast with Micropolis open lineage (with Walter Bender episode)  
-4. Sims team reunion cross-over ([steering committee playthrough](../../will-wright/sims-team-steering-committee-playthrough/SHOW.yml))
+  - id: ea_vs_open
+    topic: "EA commercial content vs open lineage — contrast with Walter Bender OLPC episode"
+    ties:
+      - repo-shows/walter-bender-olpc/SHOW.yml
 
-## Character
+  - id: steering_committee_crossover
+    topic: "Sims team reunion cross-over — play the 1998 steering committee build"
+    ties:
+      - repo-shows/will-wright/sims-team-steering-committee-playthrough/SHOW.yml
 
-[Luc Barthelet](../../../characters/luc-barthelet/)
+related:
+  - characters/luc-barthelet/
+  - repo-shows/walter-bender-olpc/SHOW.yml
+  - repo-shows/phil-salvador-simrefinery/SHOW.yml

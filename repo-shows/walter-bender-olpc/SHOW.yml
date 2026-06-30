@@ -1,36 +1,49 @@
 # Walter Bender — OLPC Stone Soup + open-sourcing SimCity
+# Show seed — constructionist education, Sugar, EA GPL negotiation.
 
-*Show seed — constructionist education, Sugar, EA GPL negotiation.*
+show:
+  id: walter-bender-olpc
+  title: "Walter Bender — OLPC, Sugar, and the SimCity GPL"
+  kind: interview
+  status: seed
+  host: don-hopkins
+  guest: walter-bender
+  character: characters/walter-bender/
 
-## Why Walter
+logline: |
+  OLPC President (Software & Content) when SimCity became Micropolis — Stone Soup /
+  constructionist learning, the Sugar stack, and Eben Moglen helping EA relicense under GPL.
 
-- OLPC President (Software & Content) when **SimCity → Micropolis** was negotiated  
-- Offered **Eben Moglen** to help EA relicense under GPL  
-- Sugar stack (Python, Cairo, Pango, mesh, journaling) — Don's Dec 2006 roadmap partner  
-- Stone Soup / Constructionist learning — bridge to Papert memorial shows
+segments:
+  - id: introducing_the_players
+    topic: "Dec 2006 introducing-the-players — Walter from Dubai; Christmas call"
+    links:
+      - repo-shows/will-wright/sources/2006-12-simcity-olpc-introducing-the-players/article.md
 
-## Primary sources
+  - id: sugar_roadmap
+    topic: "Trivial to blue sky — Don's Sugar roadmap; Walter mulls on flight home"
 
-- [`will-wright/sources/2006-12-simcity-olpc-introducing-the-players/`](../../will-wright/sources/2006-12-simcity-olpc-introducing-the-players/article.md)
-- [`will-wright/sources/simcity-open-source-saga/`](../../will-wright/sources/simcity-open-source-saga/article.md)
-- [`characters/walter-bender/`](../../characters/walter-bender/)
+  - id: eben_moglen_gpl
+    topic: "Eben Moglen — GPL relicensing; Chuck Normann at EA"
+    links:
+      - repo-shows/will-wright/sources/simcity-open-source-saga/
 
-## Segments
+  - id: jim_gettys_cairo
+    topic: "Jim Gettys / Cairo — why Micropolis ended up on Cairo/GTK path"
 
-1. **Introducing the players** (Dec 2006) — Walter from Dubai: " slipped through the cracks"; Christmas call  
-2. **Trivial → blue sky** — Don's Sugar roadmap; Walter mulls on flight home  
-3. **Eben Moglen** — GPL relicensing; Chuck Normann at EA  
-4. **Jim Gettys / Cairo** — why Micropolis ended up on Cairo/GTK path  
-5. **Doreen Nelson** — curriculum guides + Design-Based Learning  
-6. **View Source** — scripting SimCity; Robot Odyssey / EToys vision → Micropolis Home 2026  
-7. **Cross-over:** Luc Barthelet (EA commercial) vs Walter (open education) — same year, different bets
+  - id: doreen_nelson
+    topic: "Doreen Nelson — curriculum guides and Design-Based Learning"
 
-## Character
+  - id: view_source
+    topic: "View Source — scripting SimCity; Robot Odyssey / EToys vision to Micropolis Home"
 
-[Walter Bender](../../characters/walter-bender/)
+  - id: luc_crossover
+    topic: "Luc Barthelet (EA commercial) vs Walter (open education) — same year, different bets"
+    ties:
+      - repo-shows/luc-barthelet-sims-online/SHOW.yml
 
-## Related shows
-
-- [`remembering-the-constructionists.yml`](../remembering-the-constructionists.yml)
-- [`luc-barthelet-sims-online/`](../../luc-barthelet-sims-online/SHOW.yml)
-- [`walter-bender-olpc`](../REPO-SHOWS.yml) — seed registry
+related:
+  - characters/walter-bender/
+  - repo-shows/remembering-the-constructionists.yml
+  - repo-shows/luc-barthelet-sims-online/SHOW.yml
+  - repo-shows/will-wright/sources/simcity-open-source-saga/

@@ -1,0 +1,7 @@
+#!/bin/sh
+# Run before every git push. Install: pnpm run setup:hooks
+set -e
+root="$(git rev-parse --show-toplevel)"
+cd "$root"
+echo "pre-push: pnpm run verify"
+pnpm run verify
