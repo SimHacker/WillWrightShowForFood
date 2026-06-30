@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** Procedural graphics, Perlin noise, interactive Java demos, NYU, constructionist-adjacent teaching through runnable artifacts
 
-**Materials:** [`repo-shows/ken-perlin/`](../../repo-shows/ken-perlin/)
+**Materials:** [`repo-shows/ken-perlin/`](../../repo-shows/ken-perlin/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

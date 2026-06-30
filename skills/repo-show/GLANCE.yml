@@ -23,7 +23,7 @@ wwsff_anchors:
 
 k_lines: [SHOW, REPO-SHOW, RTFR, HOMEFUN, REPO-MAN, SEED, PLANT, HARVEST]
 
-pyramid: "GLANCE.yml → CARD.yml → SKILL.md → README.md"
+pyramid: "GLANCE.yml (nav SSOT) + CARD.yml (interface) → SKILL.md → README.md"
 
 see_also:
   - { path: CARD.yml, why: "Interface — methods, lifecycle, compose_with" }
@@ -31,8 +31,8 @@ see_also:
   - { path: ../../process/cross-links.yml#repo_show_spine, why: "Mind-expanding trail from here" }
   - { path: ../../process/repo-show-format.yml, why: "Format girder" }
   - { path: ../../process/FORMAT.md, why: "Generated markup" }
-  - { path: ../../repo-shows/, why: "Show collection" }
-  - { path: ../../repo-shows/will-wright/, why: "Flagship" }
-  - { path: ../../characters/don-hopkins/, why: "Host portrayal" }
-  - { path: ../../characters/don-philahue/, why: "Audience wrangler MC" }
+  - { path: ../../repo-shows/README.md, why: "Show collection" }
+  - { path: ../../repo-shows/will-wright/README.md, why: "Flagship" }
+  - { path: ../../characters/don-hopkins/README.md, why: "Host portrayal" }
+  - { path: ../../characters/don-philahue/README.md, why: "Audience wrangler MC" }
   - { path: ../INDEX.yml, why: "Skills harvest registry" }

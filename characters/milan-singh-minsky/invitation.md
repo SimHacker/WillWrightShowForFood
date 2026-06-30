@@ -20,7 +20,7 @@ taking Leela's visual-intelligence research and turning it into something people
 
 - **Research → product** — how Leela's schema/visual-intelligence work becomes a shipping product, and what that translation actually demands.
 - **Product leadership for applied AI** — deciding what to build, for whom, and how to evaluate it honestly.
-- **A Leela episode** — alongside [Henry](../henry-minsky/), [Isabella](../isabella-struckman/), and Steve Kommrusch, the team view of the work.
+- **A Leela episode** — alongside [Henry](../henry-minsky/README.md), [Isabella](../isabella-struckman/README.md), and Steve Kommrusch, the team view of the work.
 
 No pressure, no homework. Accepted, delayed, declined, or no reply — all honored gracefully.
 

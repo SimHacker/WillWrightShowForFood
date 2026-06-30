@@ -1,0 +1,44 @@
+# DON PHILAHUE — GLANCE (nav + metadata SSOT)
+# Interface: CARD.yml · fictional MC — Phil Donahue homage.
+
+title: Don Philahue
+iconic: "🎙️ Phil"
+description: |
+  AI audience wrangler — surfaces TicketPR questions live, arbitrates scored advertisements,
+  Come On Down ritual. Orchestrator avatar; not Don Hopkins the person.
+
+keywords:
+  - don philahue
+  - mc
+  - audience wrangler
+  - ticketpr
+  - orchestrator
+  - phil donahue homage
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  siblings:
+    - ../don-hopkins/
+    - ../slats/
+
+read_order:
+  - README.md
+  - CARD.yml
+  - judge-rubric.yml
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Character registry" }
+  siblings:
+    - { path: ../don-hopkins/GLANCE.yml, why: "Human host" }
+    - { path: ../slats/GLANCE.yml, why: "Orchestra pit sidekick" }
+  across:
+    - { path: ../../repo-shows/will-wright/audience/GLANCE.yml, why: "TicketPR roster he serves" }
+    - { path: ../../repo-shows/will-wright/venue/GLANCE.yml, why: "Seat map + mic line" }
+    - { path: ../../process/ticket-pr.yml, why: "TicketPR constitution" }
+    - { path: ../../repo-shows/will-wright/SIMULATION.yml, why: "Show runtime orchestrator" }
+  deep:
+    - { path: CARD.yml, why: "SURFACE-QUESTION interface" }

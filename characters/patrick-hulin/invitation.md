@@ -26,10 +26,10 @@ made it multiplayer. I'd love to have you on.
 - **Where it meets Yoot Tower** — you mentioned you'd love to see Yoot Tower recreated, and the
   Tower II "Tower Kit" plug-in system. Yoot sent Don a code drop; there's a real path here
   (permissions + authorship respected throughout — Yoot Tower's licensing is still unresolved).
-- **Same spirit as [David Temkin](../david-temkin/)** reviving OpenLaszlo with AI — a little
+- **Same spirit as [David Temkin](../david-temkin/README.md)** reviving OpenLaszlo with AI — a little
   retrocomputing-revival summit.
 
-**Materials:** [`repo-shows/patrick-hulin/`](../../repo-shows/patrick-hulin/) ·
+**Materials:** [`repo-shows/patrick-hulin/`](../../repo-shows/patrick-hulin/README.md) ·
 [your guest page](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/patrick-hulin)
 
 No pressure, no homework. Accepted, delayed, declined, or no reply — all honored gracefully.

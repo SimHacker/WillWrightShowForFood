@@ -4,6 +4,6 @@ Invitation portrayal — **not** Matthew Sibigtroth. [Standards](../../schemas/p
 
 **Field:** Creative prototyping — speech/AI; original StoryMaker Flash app; ex-Stupid Fun Club, ex-Google X
 
-[Invitation](invitation.md) · [Show seed](../../repo-shows/matthew-sibigtroth/)
+[Invitation](invitation.md) · [Show seed](../../repo-shows/matthew-sibigtroth/README.md)
 
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

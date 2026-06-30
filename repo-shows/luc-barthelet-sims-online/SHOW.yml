@@ -19,7 +19,7 @@ segments:
   - id: pre_launch_fan_tools
     topic: "Pre-launch fan tools vs retail Exchange — what Luc deliberately enabled"
     links:
-      - repo-shows/will-wright/sources/2004-02-05-sims-proposals-and-documentation/article.md
+      - characters/will-wright/sources/2004-02-05-sims-proposals-and-documentation/article.md
 
   - id: tso_architecture
     topic: "TSO architecture and community — lessons for federation and Exchange revival"

@@ -24,6 +24,6 @@ Mesmerizing even without watching the CA. Hear more — and support Jerry — at
 
 ## Why a Repo Show
 
-Paired with [David Levitt](../david-levitt/) for a **music + theory** show: how game music is
+Paired with [David Levitt](../david-levitt/README.md) for a **music + theory** show: how game music is
 composed, scored, and made to respond to a living simulation. Also a natural for the audio side of a
 Sims team reunion.

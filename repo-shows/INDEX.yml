@@ -19,7 +19,7 @@ meta:
 #        SEED    = a single <name>.yml file (plant when ready).
 shows:
   planted:
-    will-wright/:              "★ FIRST PLANTED SHOW. Topic-less kickoff (Will IS the topic), centered on the 1996 Winograd video. Holds SHOW.yml + README + invitation.md (draft email) + episodes.yml + suggested-questions.yml + sources/ + the Flower-Child icon. Topical shows flow from it. (Seed: will-wright-series.yml.)"
+    will-wright/:              "★ FIRST PLANTED SHOW. Topic-less kickoff (Will IS the topic), centered on the 1996 Winograd video. Holds SHOW.yml + README + invitation.md (draft email) + episodes.yml + suggested-questions.yml + ../../characters/will-wright/sources/ + the Flower-Child icon. Topical shows flow from it. (Seed: will-wright-series.yml.)"
     will-wright/sims-team-steering-committee-playthrough/: "★ PLAY the Jun 1998 steering committee build live with Jamie/Bobo/Irk/Patrick/Don (+ Will?) — Edith + SimAntics reunion. Link IA; do not host binary."
     luc-barthelet-sims-online/SHOW.yml: "Luc Barthelet — shipping The Sims, SimShow, The Sims Online → Micropolis Home / Exchange revival."
     phil-salvador-simrefinery/SHOW.yml: "Phil Salvador — SimRefinery archivist; MBS history; finding + playing the lost refinery sim."

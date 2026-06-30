@@ -39,7 +39,7 @@ discussion:
   schemas_vectors_and_llms:
     digest: schemas-vectors-and-llms.md       # narrative (Claude-curated) — start here
     data: schemas-vectors-and-llms.yml        # machine-readable digest
-    sources: sources/                          # papers + screenshots + checked reading list
+    sources: ../../characters/will-wright/sources/                          # papers + screenshots + checked reading list
     what: "Curated digest of a real 2024–2026 thread (Gary + Leela folks): vector/hypervector schemas, Schema Networks (Vicarious), neural cellular automata, and the '200-foot car wash' planning failure — the live ground for a show."
 
 sources:

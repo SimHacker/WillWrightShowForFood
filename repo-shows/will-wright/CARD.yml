@@ -1,0 +1,89 @@
+# CARD — Will Wright flagship Repo Show (interface only)
+# Nav + metadata: GLANCE.yml — read GLANCE + CARD together.
+
+glance: GLANCE.yml
+
+room:
+  id: will-wright-show
+  name: "A Repo Show with Will Wright"
+  type: [show, room, flagship, topic_less]
+  home: repo-shows/will-wright/
+
+methods:
+  RTFR:
+    signature: "rtfr() → read README.md then follow read_order in GLANCE.yml"
+    advertisement: "The show IS the repo — browse before Twitch, implement after."
+  ORBIT-1996:
+    signature: "orbit1996() → ../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/"
+    advertisement: "Single video discipline — ask Will about his OWN words from 1996."
+  JOIN-AUDIENCE:
+    signature: "joinAudience() → audience/_TEMPLATE/ or copy example TicketPR"
+    advertisement: "Master ⇒ PR — your folder under audience/ is your ticket + MSPO journal."
+  ENTER-VENUE:
+    signature: "enterVenue() → venue/VENUE.yml — scarce seats, balcony 🤡💀"
+    advertisement: "Theater as MOOLLM rooms — mic line, orchestra pit, Slats in the pit."
+  BROWSE-SOURCES:
+    signature: "browseSources() → ../../characters/will-wright/sources/ — essays, mail, OLPC saga, prototypes"
+    advertisement: "Evidence room — SimCity open source, Transmogrifier, Sims birth strata."
+  SHOP-CATALOGS:
+    signature: "shopCatalogs() → ../../catalogs/ — get-the-sims-on-steam.md first, then SimFreaks, SimProv, Micropolis Home"
+    advertisement: "Repo-level feeds we syndicate — buy The Sims on Steam, then install our UCC."
+  PLAY-ALONG-NARRATE:
+    signature: "playAlongNarrate() → sims-play-along-narration.yml"
+    advertisement: "Send Sims screen recordings; guests improvise voice-over live."
+
+abilities:
+  - id: COMPLETE-THE-LOOP
+    name: Complete the Loop
+    type: activated
+    advertisement:
+      method: completeTheLoop
+      signature: "completeTheLoop(1996Talk, sims1Shipped) → post-mortem conversation"
+      score_when:
+        - trigger: guest_is_will_wright
+          weight: 1.0
+        - trigger: topic_data_portability
+          weight: 0.95
+    effect: "1996 looked forward to Dollhouse; ~26 years later ask what landed — Simlish, UCC, portability."
+    combos_with:
+      - ../../characters/will-wright/CARD.yml#DATA-PORTABILITY
+      - ../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
+
+  - id: HARVEST-IDEA
+    name: Harvest Idea
+    type: triggered
+    advertisement:
+      method: harvestIdea
+      signature: "harvestIdea(spark) → cauldron → skills + packages/"
+      score_when:
+        - trigger: will_says_buildable_idea
+          weight: 0.9
+    effect: "Live implementation path — show don't tell; homefun PRs graded later."
+    combos_with:
+      - ../../process/homefun-grading.yml
+      - ../../skills/repo-show/
+
+  - id: SURFACE-TICKETPR
+    name: Surface TicketPR
+    type: triggered
+    advertisement:
+      method: surfaceTicketPR
+      signature: "surfaceTicketPR(questionId) → Don Philahue reads on air"
+      score_when:
+        - trigger: merged_audience_pr
+          weight: 0.85
+    effect: "Async audience questions become live or MSPO replay fuel."
+    combos_with:
+      - audience/
+      - ../../characters/don-philahue/
+
+compose_with:
+  - ../../characters/will-wright/CARD.yml
+  - ../../characters/don-hopkins/
+  - ../../characters/don-philahue/
+  - ../../characters/terry-winograd/
+  - ../../skills/repo-show/
+  - SimHacker/moollm/skills/advertisement
+  - SimHacker/moollm/skills/room
+
+simulation: SIMULATION.yml

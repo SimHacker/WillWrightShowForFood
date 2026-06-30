@@ -14,8 +14,8 @@ scholar who turned **SimRefinery** from an Ars comment into a global preservatio
 ## Browse
 
 - [`CHARACTER.yml`](CHARACTER.yml) — portrayal + show suggestions
-- [`media/`](media/) — artifacts room (IA links, paper stubs)
-- Show seed: [`repo-shows/phil-salvador-simrefinery/`](../../repo-shows/phil-salvador-simrefinery/)
-- Sources: [`repo-shows/will-wright/sources/simrefinery-recovery/`](../../repo-shows/will-wright/sources/simrefinery-recovery/)
+- [`media/`](media/README.md) — artifacts room (IA links, paper stubs)
+- Show seed: [`repo-shows/phil-salvador-simrefinery/`](../../repo-shows/phil-salvador-simrefinery/README.md)
+- Sources: [`characters/will-wright/sources/simrefinery-recovery/`](../../characters/will-wright/sources/simrefinery-recovery/README.md)
 
 Verifiable sources only; subject may request correction or removal anytime.

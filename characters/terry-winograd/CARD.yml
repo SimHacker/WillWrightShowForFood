@@ -1,5 +1,8 @@
 # CARD — Terry Winograd (public portrayal)
 # NOT the person. Schema: ../../schemas/guest-skills-card.yml
+# Nav + metadata: GLANCE.yml
+
+glance: GLANCE.yml
 
 room:
   id: terry-winograd

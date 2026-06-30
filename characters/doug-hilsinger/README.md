@@ -35,6 +35,6 @@ by transforming it.
 ## Links
 
 - The story: [`taking-tiger-mountain-by-serendipity.md`](taking-tiger-mountain-by-serendipity.md)
-- Show seed: [`repo-shows/brian-eno/`](../../repo-shows/brian-eno/)
-- Related: [Brian Eno](../brian-eno/) · [Scott Draves](../scott-draves/) · [Will Wright](../will-wright/)
+- Show seed: [`repo-shows/brian-eno/`](../../repo-shows/brian-eno/README.md)
+- Related: [Brian Eno](../brian-eno/README.md) · [Scott Draves](../scott-draves/README.md) · [Will Wright](../will-wright/README.md)
 - Album: [MusicBrainz](https://musicbrainz.org/release-group/b56d145e-05fb-3740-8ae2-e8e7ef29b8ed) · [Pitchfork](https://pitchfork.com/reviews/albums/3988-taking-tiger-mountain-by-strategy-with-caroleen-beatty/)

@@ -73,7 +73,7 @@ dream_guests_in_the_catalog:
 ties_to:
   - { path: ../../characters/terry-winograd/CHARACTER.yml, why: "Forebear portrayal girder" }
   - { path: ../../characters/terry-winograd/correspondence.yml, why: "Verified talks + Don's preservation roles" }
-  - { path: ../will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "The centerpiece talk this archive preserved" }
+  - { path: ../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "The centerpiece talk this archive preserved" }
   - { path: ../../process/trails/cs547-seminar-lineage.md, why: "CS547 lineage trail" }
   - { path: ../../process/trails/archive-and-provenance.md, why: "Primary-source preservation trail" }
   - { path: ../../process/cross-links.yml, why: "Thematic web" }

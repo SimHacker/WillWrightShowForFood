@@ -13,8 +13,8 @@ net address at 14, in 1971.
 - **Force-feedback as interaction design** — what the sense of touch adds that pixels can't.
 - **Memory Lane** — the AI Lab as a household; the first wired family on the ARPANET.
 - **Logo + constructionist learning** — generations of it (the Papert orbit).
-- **A Minsky-sibling session** — pair with her brother [Henry](../../characters/henry-minsky/), or
-  with [Ken Kahn](../../characters/ken-kahn/) (whose Snap! AI blocks she flagged).
+- **A Minsky-sibling session** — pair with her brother [Henry](../../characters/henry-minsky/README.md), or
+  with [Ken Kahn](../../characters/ken-kahn/README.md) (whose Snap! AI blocks she flagged).
 
 See [`SHOW.yml`](SHOW.yml) for the seed. Consent **not yet asked** —
 [`invitation`](../../characters/margaret-minsky/invitation.md).

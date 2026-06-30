@@ -1,0 +1,53 @@
+# CARD — audience (interface only)
+# Nav + metadata: GLANCE.yml
+
+glance: GLANCE.yml
+
+room:
+  id: audience
+  name: "Will Wright Show Audience"
+  type: [audience_collector, ticket_pr]
+  home: repo-shows/will-wright/audience/
+
+methods:
+  COPY-TEMPLATE:
+    signature: "copyTemplate() → ../../_TEMPLATE/audience/"
+    advertisement: "Blank TicketPR — CHARACTER + CARD + questions + SIMULATION in one folder."
+  STEAL-EXAMPLE:
+    signature: "stealExample(slug) → fictional-bella-goth/ or bot-slats/"
+    advertisement: "Fork a worked example — faster than blank slate."
+  MERGE-TICKET:
+    signature: "mergeTicketPR() → Master ⇒ PR"
+    advertisement: "Merged PR = your seat in the repo + queue for Philahue."
+
+abilities:
+  - id: ASK-BEFORE-AIR
+    name: Ask Before Air
+    type: triggered
+    advertisement:
+      method: askBeforeAir
+      signature: "askBeforeAir() → Will sees your question in git before accepting"
+      score_when:
+        - trigger: invite_pending
+          weight: 0.9
+    effect: "Low-friction signal — you exist, you care, you read the repo."
+    combos_with:
+      - ../invitation.md
+      - ../../../process/ticket-pr.yml
+
+  - id: MSPO-REPLAY
+    name: MSPO Replay
+    type: passive
+    advertisement:
+      method: mspoReplay
+      signature: "mspoReplay() → others replay show with your journal visible"
+      score_when:
+        - trigger: time_shifted_viewer
+          weight: 0.75
+    effect: "Massively Single-Player Online — your timestamped layer on shared artifact."
+
+compose_with:
+  - ../../_TEMPLATE/audience/
+  - ../../../process/ticket-pr.yml
+  - ../venue/VENUE.yml
+  - ../../../characters/don-philahue/

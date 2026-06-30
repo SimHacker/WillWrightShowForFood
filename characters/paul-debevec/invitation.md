@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** Light Stage, image-based lighting, photogrammetry, Rouen Revisited (with Golan Levin at Interval), now Director of Research, Creative Algorithms and Technology at Netflix
 
-**Materials:** [`repo-shows/paul-debevec/`](../../repo-shows/paul-debevec/)
+**Materials:** [`repo-shows/paul-debevec/`](../../repo-shows/paul-debevec/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

@@ -15,8 +15,8 @@ useful as source material.
 - **AI in general** — wherever the book is pulling him; Don as sounding board / case study.
 - **"Ten Years," revisited** — deliberate practice in the LLM era; are *skills* the thing we
   practice with?
-- **Society of Mind in modern AI** — with [Henry Minsky](../../characters/henry-minsky/) and other
-  [Leela](../../characters/steve-kommrusch/) colleagues.
+- **Society of Mind in modern AI** — with [Henry Minsky](../../characters/henry-minsky/README.md) and other
+  [Leela](../../characters/steve-kommrusch/README.md) colleagues.
 
 See [`SHOW.yml`](SHOW.yml). Consent **warm lead** —
 [`invitation`](../../characters/peter-norvig/invitation.md).

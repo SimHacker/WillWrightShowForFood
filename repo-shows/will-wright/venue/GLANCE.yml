@@ -1,22 +1,59 @@
-# VENUE — GLANCE (Repo Show theater as MOOLLM rooms)
-# up: ../GLANCE.yml | map: VENUE.yml | culture: ../performance-and-culture.yml
+# VENUE — GLANCE (nav + metadata SSOT)
+# Interface: CARD.yml
 
-what: |
-  Navigable room graph — lobby, house, mezzanine balconies (Tragic Clown 🤡 left, Death 💀 right),
-  mic line, orchestra pit, stage wings. Seats are scarce; characters point location: at rooms.
+title: "The Repo Show Theater"
+iconic: "🎭🤡💀"
+description: |
+  Navigable MOOLLM theater — seats are scarce places, not labels. Lobby → house → mic line →
+  stage; balconies (Tragic Clown left, Death right); Slats in the orchestra pit. Rearrange
+  proscenium ↔ in-the-round by rewiring VENUE.yml.
+
+keywords:
+  - venue
+  - theater
+  - balcony
+  - tragic clown
+  - grim reaper
+  - orchestra pit
+  - slats
+  - mic line
+  - ticketpr seating
+  - moollm rooms
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  children:
+    - VENUE.yml
+    - ROOM.yml
+  siblings:
+    - ../audience/
+    - ../performance-and-culture.yml
 
 read_order:
   - README.md
   - VENUE.yml
   - ../audience/README.md
 
-balcony_seats:
-  left: ../audience/fictional-tragic-clown/
-  right: ../audience/fictional-grim-reaper/
-  emoji_pair: "🤡💀"
+structure:
+  balcony_left: ../audience/fictional-tragic-clown/
+  balcony_right: ../audience/fictional-grim-reaper/
+  orchestra_pit: ../audience/bot-slats/
 
 see_also:
-  - { path: ../performance-and-culture.yml, why: "Pre-show red carpet tour" }
-  - { path: ../../../process/repo-show-regulars.yml, why: "Balcony duo spec" }
-  - { path: ../../../characters/don-philahue/, why: "MC who surfaces seats" }
-  - { path: ../audience/bot-slats/, why: "Orchestra pit / call-in sidekick" }
+  parent:
+    - { path: ../GLANCE.yml, why: "Show root" }
+  siblings:
+    - { path: ../audience/GLANCE.yml, why: "Who sits where" }
+    - { path: ../performance-and-culture.yml, why: "Red carpet culture" }
+  children:
+    - { path: VENUE.yml, why: "Full room graph + assignments" }
+    - { path: ROOM.yml, why: "Venue root node" }
+  across:
+    - { path: ../../../process/repo-show-regulars.yml, why: "Balcony duo spec" }
+    - { path: ../../../characters/don-philahue/README.md, why: "MC surfaces seats" }
+  deep:
+    - { path: README.md, why: "ASCII theater map" }
+    - { path: CARD.yml, why: "Venue interface — seats, mic, balcony" }

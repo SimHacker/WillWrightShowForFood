@@ -50,7 +50,7 @@ Edit yaml; regenerate markdown. Do not treat generated `*.md` as canonical.
 
 | Move | Where |
 |------|--------|
-| **Pick a playlist** | [`process/entryways/`](process/entryways/) — guest, player, archivist, hacker, … |
+| **Pick a playlist** | [`process/entryways/`](process/entryways/README.md) — guest, player, archivist, hacker, … |
 | **Leap sideways** | [`TRAILS.md`](TRAILS.md) — thematic graph when one topic hooks you |
 | **Score abilities** | `characters/*/CARD.yml` — advertisements with `verifiable` fields; ids are `SCREAMING-KEBAB` |
 | **Ethics first** | [`schemas/portrayal-standards.yml`](schemas/portrayal-standards.yml) · [representation-ethics](https://github.com/SimHacker/moollm/skills/representation-ethics) |
@@ -62,7 +62,7 @@ Portrayals are **about** real people — tribute cards, not impersonation. Brows
 
 ## Please do / please don't
 
-**Do:** follow `see_also` whys · cite Will's [1996 transcript](repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md) · rate-limit · file issues for broken links
+**Do:** follow `see_also` whys · cite Will's [1996 transcript](characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md) · rate-limit · file issues for broken links
 
 **Don't:** flatten the repo · invent guest quotes · scrape private DonHopkins paths ([`live-repo.yml`](process/live-repo.yml)) · hand-edit GENERATED facades
 

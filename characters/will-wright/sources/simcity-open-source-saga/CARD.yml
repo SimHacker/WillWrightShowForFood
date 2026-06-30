@@ -1,0 +1,37 @@
+# CARD — SimCity open source saga (interface only)
+# Nav + metadata: GLANCE.yml
+
+glance: GLANCE.yml
+
+room:
+  id: simcity-open-source-saga
+  name: SimCity Open Source Saga
+  type: [source_bundle, email_harvest, narrative]
+  home: characters/will-wright/sources/simcity-open-source-saga/
+
+methods:
+  READ-PITCH-LETTER:
+    signature: "readPitchLetter() → article.md#dec-2006"
+    advertisement: "Don's letter to Rod Humble — SimCityNet UI excerpt starts clearance."
+  TRACE-THREAD:
+    signature: "traceThread(txt) → old-email harvest files"
+    advertisement: "Gilmore → Will → players — primary mail in this directory."
+  LINK-CONTRACTS:
+    signature: "linkContracts() → don-hopkins/career/contracts/"
+    advertisement: "EA↔OLPC PDF + GPL Exhibit A — chain of custody."
+
+abilities:
+  - id: MERGE-DON-DRAFT
+    name: Merge Don Draft
+    type: triggered
+    advertisement:
+      method: mergeDonDraft
+      signature: "mergeDonDraft() → micropolis-saga-don-draft/"
+      score_when:
+        - trigger: saga_incomplete
+          weight: 0.85
+    effect: "Name the EA exec who flipped — Don resolve item A5."
+
+compose_with:
+  - ../maxis-licenses-chain-of-custody/CARD.yml
+  - ../../../don-hopkins/CARD.yml

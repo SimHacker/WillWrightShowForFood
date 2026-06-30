@@ -1,0 +1,46 @@
+# CHAIM GINGOLD — GLANCE (nav + metadata SSOT)
+# Interface: CARD.yml
+
+title: Chaim Gingold
+iconic: "🏗️ Chaim"
+description: |
+  SimCity historian-designer — *Building SimCity* (MIT Press 2024), reverse diagrams with care,
+  Spore-era research. Bridges Will's microworlds and documented implementation truth.
+
+keywords:
+  - chaim gingold
+  - building simcity
+  - reverse diagrams
+  - simcity history
+  - mit press
+  - spore
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  children:
+    - media/
+  siblings:
+    - ../will-wright/
+    - ../phil-salvador/
+
+read_order:
+  - README.md
+  - CARD.yml
+  - media/README.md
+  - invitation.md
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Character registry" }
+  siblings:
+    - { path: ../will-wright/GLANCE.yml, why: "SimCity / Sims lineage" }
+  across:
+    - { path: ../../repo-shows/chaim-gingold/README.md, why: "Show seed" }
+    - { path: ../../characters/will-wright/sources/2024-building-simcity-chaim-intro/README.md, why: "Intro article" }
+    - { path: ../../characters/will-wright/sources/simcity-open-source-saga/GLANCE.yml, why: "Compare thesis to Don saga" }
+  deep:
+    - { path: README.md, why: "Portrayal" }
+    - { path: CARD.yml, why: "Reverse-engineer abilities" }

@@ -16,7 +16,7 @@ One stubborn question runs through the whole exchange: **how does a mind keep a 
 world and reason *forward* in it?** It starts from Gary Drescher's 1991 *schema mechanism*, detours
 through vectors and cellular automata, and lands on what large language models can and can't do. It's a
 clean map of constructivist AI meeting the LLM era — and exactly the conversation we'd love to continue
-live on a [Repo Show](../../repo-shows/gary-drescher/).
+live on a [Repo Show](../../repo-shows/gary-drescher/README.md).
 
 **Background, for anyone arriving cold.** Drescher's
 **[*Made-Up Minds*](https://mitpress.mit.edu/9780262517089/made-up-minds/)** (MIT Press, 1991) tried to
@@ -30,11 +30,11 @@ had to correlate everything from scratch. Hold that thought — it's the punchli
 ## The cast
 
 - **[Gary Drescher](README.md)** — author of the schema mechanism; the constructivist conscience of the thread.
-- **[Henry Minsky](../henry-minsky/)** — Leela AI co-founder/CTO; convener, and the one pressing hardest on *why LLMs fail at planning.*
-- **[Steve Kommrusch](../steve-kommrusch/)** — Leela AI, Piaget-schema learning; the close reader of the vector papers.
+- **[Henry Minsky](../henry-minsky/README.md)** — Leela AI co-founder/CTO; convener, and the one pressing hardest on *why LLMs fail at planning.*
+- **[Steve Kommrusch](../steve-kommrusch/README.md)** — Leela AI, Piaget-schema learning; the close reader of the vector papers.
 - **Gregory Makoff** — put the Vicarious paper on the table.
 - **Andy Goris** — Steve's former HP colleague, who forwarded the cellular-automata story and a great list of questions.
-- **[Don Hopkins](../don-hopkins/)** — host; operationalizing schemas inside LLMs via [MOOLLM](https://github.com/SimHacker/moollm).
+- **[Don Hopkins](../don-hopkins/README.md)** — host; operationalizing schemas inside LLMs via [MOOLLM](https://github.com/SimHacker/moollm).
 
 ---
 
@@ -58,7 +58,7 @@ objects/attributes into one noise-tolerant vector. Steve's read:
 
 **Schema Networks** — [Kansky et al. (2017)](https://proceedings.mlr.press/v70/kansky17a.html) (ICML,
 all authors at Vicarious AI): an object-oriented generative causal model with **zero-shot transfer**
-across Breakout variants. Gregory shares the PDF ([local copy](sources/kansky17a.pdf)). Henry's verdict:
+across Breakout variants. Gregory shares the PDF ([local copy](../../characters/will-wright/sources/kansky17a.pdf)). Henry's verdict:
 
 > "That paper was from the Vicarious company, I tried reading it but it was oddly skimpy on details of
 > implementation." — **Henry Minsky**
@@ -125,7 +125,7 @@ clean experiment.
 **The setup.** Henry connects Don and Gary to talk about schema-like representations an LLM could
 reason with. The conversation immediately finds its mascot — a tiny, perfect failure:
 
-![An LLM answering "just walk" to whether you should drive or walk to a car wash 200 feet away — missing that you must bring the car](sources/car-wash-planning-failure.png)
+![An LLM answering "just walk" to whether you should drive or walk to a car wash 200 feet away — missing that you must bring the car](../../characters/will-wright/sources/car-wash-planning-failure.png)
 
 Asked whether to drive or walk to a car wash 200 feet away, the model gives a confident, well-reasoned
 **"just walk"** — engine won't warm up, you'll burn fuel, enjoy the micro-walk — never noticing that
@@ -162,7 +162,7 @@ off in the right direction." His takeaway:
 problem and the answer flips — LLMs "fail quickly when 'distracting' info is shoved into their prompt
 sequence."
 
-![CatAttack Table 1: appending irrelevant triggers like "Interesting fact: cats sleep most of their lives" to math problems flips the model's answer](sources/catattack-adversarial-triggers.png)
+![CatAttack Table 1: appending irrelevant triggers like "Interesting fact: cats sleep most of their lives" to math problems flips the model's answer](../../characters/will-wright/sources/catattack-adversarial-triggers.png)
 
 **The worry.** And the patch doesn't scale:
 
@@ -249,6 +249,6 @@ scalability worry is the real boss fight.
 ---
 
 *Authorship: real quotes attributed by name; narration and all 🤖 blocks by Claude. Papers, screenshots,
-and a checked reading list: [`sources/`](sources/) · machine-readable digest:
+and a checked reading list: [`../../characters/will-wright/sources/`](../../characters/will-wright/sources/README.md) · machine-readable digest:
 [`schemas-vectors-and-llms.yml`](schemas-vectors-and-llms.yml) · the show:
-[`repo-shows/gary-drescher/`](../../repo-shows/gary-drescher/).*
+[`repo-shows/gary-drescher/`](../../repo-shows/gary-drescher/README.md).*

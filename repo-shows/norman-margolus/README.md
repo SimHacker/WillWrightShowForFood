@@ -16,15 +16,15 @@ on computation.
 - **Run it backward** — reversible, universal CA; the Critters rule; no information lost.
 - **Billiard-ball computers** — universal computation from elastic collisions; the "Flattop" chip.
 - **The Margolus–Levitin limit** — how fast can anything compute? Energy as the bound.
-- **A CA summit** — with [Jim Crutchfield](../../characters/jim-crutchfield/) (edge of chaos) and
-  [Scott Draves](../../characters/scott-draves/) (generative art).
+- **A CA summit** — with [Jim Crutchfield](../../characters/jim-crutchfield/README.md) (edge of chaos) and
+  [Scott Draves](../../characters/scott-draves/README.md) (generative art).
 
 ## In this directory
 
 - [`SHOW.yml`](SHOW.yml) — the show seed.
 - [`invitation.md`](invitation.md) — the draft invitation (reached via Henry Minsky).
 
-Guest: [`characters/norman-margolus/`](../../characters/norman-margolus/). Consent **not yet asked** —
-the natural bridge is [Henry Minsky](../../characters/henry-minsky/).
+Guest: [`characters/norman-margolus/`](../../characters/norman-margolus/README.md). Consent **not yet asked** —
+the natural bridge is [Henry Minsky](../../characters/henry-minsky/README.md).
 
 — Don Hopkins, Micropolis Class

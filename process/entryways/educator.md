@@ -12,7 +12,7 @@ Micropolis Class treats credited public ideas as curriculum. Will's talk is prim
 
 | # | Stop | Why |
 |---|------|-----|
-| 1 | [**1996 transcript**](../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md) | Will's own words — post-mortems, Dollhouse, data portability goals |
+| 1 | [**1996 transcript**](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md) | Will's own words — post-mortems, Dollhouse, data portability goals |
 | 2 | [**Seymour Papert**](../../characters/seymour-papert/CARD.yml) | Logo turtle, constructionism — legacy static card |
 | 3 | [**Brian Harvey**](../../characters/brian-harvey/CARD.yml) | Beauty and Joy of Computing — Logo in CS1 |
 | 4 | [**Alan Kay**](../../characters/alan-kay/CARD.yml) | Dynabook lineage — microworlds as media for thought |

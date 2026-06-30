@@ -1,9 +1,36 @@
-# CHARACTERS — GLANCE (guest portrayals + host)
-# up: ../GLANCE.yml | facade: README.md | machine: INDEX.yml | standards: ../schemas/portrayal-standards.yml
+# CHARACTERS — GLANCE (nav + metadata SSOT)
+# One directory per person — invitation or memorial portrayals. Interface: CARD.yml
 
-what: |
-  One directory per person — invitation or memorial portrayals, CARD abilities, sources.
-  Browse the tree; INDEX.yml syncs invitation status for machines.
+title: Character Registry
+iconic: "🎭 Guests"
+description: |
+  One directory per person — CARD abilities, sources, portrayal ethics. Browse the tree;
+  INDEX.yml syncs invitation status for machines. Featured: Will (flagship), Don (host),
+  Terry (forebear), Slats (sidekick), Philahue (orchestrator).
+
+keywords:
+  - characters
+  - guest portrayals
+  - invitation
+  - portrayal standards
+  - will wright
+  - don hopkins
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  children:
+    - will-wright/
+    - don-hopkins/
+    - terry-winograd/
+    - slats/
+    - don-philahue/
+    - chaim-gingold/
+    - james-gosling/
+    - scott-draves/
+    - _TEMPLATE/
 
 read_order:
   - README.md
@@ -21,11 +48,28 @@ featured:
   orchestrator: don-philahue
   sidekick: slats
   forebear: terry-winograd
+  historians: [chaim-gingold]
   retro_pair: [lars-brinkhoff, thomas-cherryhomes]
+  procedural_art: [scott-draves, ken-perlin, golan-levin]
+  sun_era: [james-gosling, arthur-van-hoff]
 
 see_also:
-  - { path: will-wright/GLANCE.yml, why: "Flagship guest pyramid" }
-  - { path: will-wright/media/GLANCE.yml, why: "Photo galleries" }
-  - { path: ../schemas/portrayal-standards.yml, why: "Ethics + subject rights" }
-  - { path: ../repo-shows/will-wright/audience/, why: "Per-show audience (TicketPR)" }
-  - { path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "Centerpiece source" }
+  parent:
+    - { path: ../GLANCE.yml, why: "Repo root" }
+  children:
+    - { path: will-wright/GLANCE.yml, why: "Flagship guest pyramid" }
+    - { path: will-wright/media/GLANCE.yml, why: "Photo galleries" }
+    - { path: don-hopkins/GLANCE.yml, why: "Host + career backbone" }
+    - { path: terry-winograd/GLANCE.yml, why: "CS547 dragon + treasure trove" }
+    - { path: slats/GLANCE.yml, why: "Sidekick — SFC origin" }
+    - { path: chaim-gingold/GLANCE.yml, why: "Building SimCity historian" }
+    - { path: james-gosling/GLANCE.yml, why: "Java + NeWS" }
+    - { path: scott-draves/GLANCE.yml, why: "Electric Sheep" }
+  across:
+    - { path: ../schemas/portrayal-standards.yml, why: "Ethics + subject rights" }
+    - { path: ../repo-shows/will-wright/audience/README.md, why: "Per-show audience" }
+    - { path: ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/GLANCE.yml, why: "Centerpiece source" }
+  deep:
+    - { path: README.md, why: "Human facade article" }
+    - { path: INDEX.yml, why: "Machine invitation index" }
+    - { path: CARD.yml, why: "Registry interface" }

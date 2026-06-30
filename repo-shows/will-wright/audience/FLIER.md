@@ -25,11 +25,11 @@ pointer to your own work. Will reads merged TicketPRs **before** he answers.
 the show itself work.
 
 **Copy a favorite and make it yours:**
-[a real person](richard-bartle/) ·
-[a bot](bot-slats/) ·
-[a Sims character](fictional-bella-goth/) ·
-[a philosopher](palm/) ·
-or the blank [template](../../_TEMPLATE/audience/).
+[a real person](richard-bartle/README.md) ·
+[a bot](bot-slats/README.md) ·
+[a Sims character](fictional-bella-goth/README.md) ·
+[a philosopher](palm/README.md) ·
+or the blank [template](../../_TEMPLATE/audience/README.md).
 
 ---
 

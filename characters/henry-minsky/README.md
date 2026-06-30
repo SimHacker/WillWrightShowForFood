@@ -4,7 +4,7 @@ Invitation portrayal — **not** Henry Minsky. [Standards](../../schemas/portray
 
 **Field:** Software architect / AI engineer — Leela AI (co-founder, CTO), Laszlo Systems (OpenLaszlo), MIT AI Lab
 
-[Invitation](invitation.md) · [Show seed](../../repo-shows/henry-minsky/) · [CARD](CARD.yml)
+[Invitation](invitation.md) · [Show seed](../../repo-shows/henry-minsky/README.md) · [CARD](CARD.yml)
 
 Co-founder and CTO of **Leela AI**, carrying MIT-AI-Lab ideas into modern visual intelligence;
 earlier a software architect at **Laszlo Systems** (the **OpenLaszlo** declarative rich-internet-app

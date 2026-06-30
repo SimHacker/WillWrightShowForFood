@@ -38,7 +38,7 @@ visuals, the self-aware image pipeline I've been building. We've been circling t
 thirty years from different angles. (Wild idea: pull in **Jim Crutchfield** — *Chaos* — to digress,
 recurse, and iterate about **video feedback** and the edge of chaos, and maybe **Norman Margolus**
 of **CAM-6** fame for a proper cellular-automata summit. Their dirs:
-[`jim-crutchfield`](../../characters/jim-crutchfield/) · [`norman-margolus`](../../characters/norman-margolus/).)
+[`jim-crutchfield`](../../characters/jim-crutchfield/README.md) · [`norman-margolus`](../../characters/norman-margolus/README.md).)
 
 **The 2006 reunion thread (optional, but oh man).** Remember a few days after Brian Eno and Will's
 Long Now talk, when I brought Brian over to your apartment and we bounced ideas around until late,

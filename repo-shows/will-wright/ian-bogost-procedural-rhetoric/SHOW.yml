@@ -17,13 +17,13 @@ show:
 
 artifacts:
   motive_c:
-    path: ../sources/2008-02-10-soul-of-the-sims/Motive.c
+    path: ../../../characters/will-wright/sources/2008-02-10-soul-of-the-sims/Motive.c
     hook: "Starvation, mandatory bath, wet bed — argument in alert strings and curves"
   wedding_playset:
-    path: ../catalogs/simprov/
+    path: ../../../catalogs/simprov/
     hook: "Built when marriage equality was contested; republishing for Steam Sims 1 families"
   dumbold:
-    path: ../sources/2018-04-24-dumbold-voting-machine/medium-article.md
+    path: ../../../characters/will-wright/sources/2018-04-24-dumbold-voting-machine/medium-article.md
     hook: "Dated e-voting satire — preserve honestly, don't repurpose as election denial"
 
 discussion_prompts:
@@ -33,8 +33,8 @@ discussion_prompts:
   - "Federation publishing (Micropolis Home) — procedural rhetoric as infrastructure, not one object at a time"
 
 ties_to:
-  - ../assets/sims-series/procedural-rhetoric-inclusion-agitprop.md
+  - ../../characters/will-wright/media/sims-series-procedural-rhetoric-inclusion-agitprop.md
   - ../INTRO-NARRATIVE.md
-  - ../catalogs/micropolis-home/
-  - ../sources/2008-02-10-soul-of-the-sims/
+  - ../../../catalogs/micropolis-home/
+  - ../../../characters/will-wright/sources/2008-02-10-soul-of-the-sims/
   - ../../process/cross-links.yml

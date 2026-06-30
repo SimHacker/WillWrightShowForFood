@@ -45,6 +45,6 @@ ties_to:
   - ../../characters/will-wright/
   - ../../characters/don-hopkins/
   - ../../process/trails/send-code-not-commands.md
-  - ../will-wright/assets/sims-series/
+  - ../../characters/will-wright/media/
   - ../INDEX.yml          # bridges_architecture (Simopolis; SliceCity precedent)
   - afterlife-zombie-bridge.yml

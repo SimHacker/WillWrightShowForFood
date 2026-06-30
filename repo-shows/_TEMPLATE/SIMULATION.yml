@@ -1,0 +1,27 @@
+# SIMULATION — YOUR-SLUG show runtime (replace placeholders)
+# Labels: CARD.yml
+
+simulation:
+  kind: show_instance
+  character_home: .
+  source_of_truth: SHOW.yml
+  composes:
+    - SimHacker/moollm/skills/simulation
+    - SimHacker/moollm/skills/advertisement
+    - ../../skills/repo-show/
+    - ../../process/ticket-pr.yml
+
+runbook:
+  during_show:
+    philahue:
+      pulls_from: [audience/*/questions.yml]
+  after_show:
+    homefun: ../../process/homefun-grading.yml
+
+see_also:
+  - CARD.yml
+  - audience/
+
+meta:
+  enabled: false
+  updated: YYYY-MM-DD

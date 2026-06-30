@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** NeWS (with Gosling), X11 ICCCM + X security, Andrew (CMU), Nvidia #4, LOCKSS digital preservation (Stanford Libraries)
 
-**Materials:** [`repo-shows/david-rosenthal/`](../../repo-shows/david-rosenthal/)
+**Materials:** [`repo-shows/david-rosenthal/`](../../repo-shows/david-rosenthal/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

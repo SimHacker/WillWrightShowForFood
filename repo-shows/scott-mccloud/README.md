@@ -12,7 +12,7 @@ ideas were a design bible for **The Sims**.
 - **Closure & the gutter** — the imagination between the panels, and between the simulation's ticks.
 - **Masking** — abstract Sims in detailed worlds; identification and empathy.
 - **Amplification through simplification** — why sparse models invite rich imagination.
-- **Understanding Simulations** — the comics lens applied to [The Sims](../../characters/will-wright/)
+- **Understanding Simulations** — the comics lens applied to [The Sims](../../characters/will-wright/README.md)
   and Micropolis.
 
 See [`SHOW.yml`](SHOW.yml). Consent **not yet asked** —

@@ -9,6 +9,6 @@ trails, and show pitches draw on.
 - [`simcity-lineage.yml`](simcity-lineage.yml) — the SimCity → Micropolis line (NeWS, Unix, OLPC, web).
 - [`stupid-fun-club.yml`](stupid-fun-club.yml) — the Stupid Fun Club / Will Wright connection.
 - [`on-stream.yml`](on-stream.yml) — streaming / live-production notes.
-- [`contracts/`](contracts/) — archived contracts (DUX, Maxis, OLPC↔EA) — see its own README.
+- [`contracts/`](contracts/README.md) — archived contracts (DUX, Maxis, OLPC↔EA) — see its own README.
 
 See [`../README.md`](../README.md) and [`../CHARACTER.yml`](../CHARACTER.yml).

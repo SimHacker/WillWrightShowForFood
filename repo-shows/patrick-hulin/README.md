@@ -14,7 +14,7 @@ made it real-time multiplayer. Live at **[towers.world](https://towers.world)**;
 - **AI-assisted reverse engineering** — the binary → spec → reimplementation pipeline; trace tests as ground truth; human vs. model.
 - **Fidelity** — what "byte-identical on every tick" actually demands.
 - **The Yoot Tower path** — Patrick's interest in recreating Yoot Tower + the Tower II "Tower Kit" plug-in system (see [yoot-tower-discussion](../../characters/yoot-saito/yoot-tower-discussion.yml)).
-- **Retrocomputing-revival summit** — with [David Temkin](../../characters/david-temkin/) (OpenLaszlo).
+- **Retrocomputing-revival summit** — with [David Temkin](../../characters/david-temkin/README.md) (OpenLaszlo).
 
 See [`SHOW.yml`](SHOW.yml). Consent **not yet asked** — [`invitation`](../../characters/patrick-hulin/invitation.md).
 

@@ -98,7 +98,7 @@ trails:
       - { path: ../characters/don-hopkins/portrayal/voice.yml, why: "Repo Show voice — not adventure rabbit plot" }
       - { path: vision-and-ambition.yml, why: "Long arc girder — no promises, full ambition" }
       - { path: VISION.md, why: "Generated markup — Flower Child energy" }
-      - { path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "Primary source — constructionist microworlds" }
+      - { path: ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "Primary source — constructionist microworlds" }
       - { path: ../characters/will-wright/, why: "Guest portrayal — Proxi, Spore, Sims lineage" }
       - { path: ../characters/will-wright/CARD.yml, why: "Will's invokable abilities — MTG card surface" }
       - { path: ../characters/don-hopkins/CARD.yml, why: "Host card — pie menus, MOOLLM, layers" }
@@ -152,8 +152,8 @@ trails:
       - { path: sync-with-donhopkins.yml, why: "SELECT → FILTER → EXPORT pipeline" }
       - { path: ../MANIFEST.yml, why: "Bundle manifest — what maps from private source" }
       - { path: ../characters/don-hopkins/sync-sources.yml, why: "Inclusion/exclusion log for host portrayal" }
-      - { path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md, why: "Anchor artifact — Stanford, YouTube, Medium, attribution" }
-      - { path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md, why: "Primary text — cite Will's words" }
+      - { path: ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md, why: "Anchor artifact — Stanford, YouTube, Medium, attribution" }
+      - { path: ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md, why: "Primary text — cite Will's words" }
       - { path: ../schemas/portrayal-standards.yml, why: "Sourced quotes only; subject correction rights" }
       - { path: ../schemas/invitation-workflow.yml, why: "Status enum as corpus metadata" }
       - { path: ../characters/terry-winograd/, why: "CS547 forebear — open seminar recorded for posterity" }
@@ -174,8 +174,8 @@ trails:
       - { path: ../characters/terry-winograd/correspondence.yml, why: "Verified preservation record — Will 1996 + Gosling 1995" }
       - { path: ../repo-shows/terry-winograd/, why: "★ The forebear show — the dragon's treasure trove planted" }
       - { path: ../characters/terry-winograd/media/cs547-ARCHIVE.md, why: "The full CS547 catalog — 339 talks, 15 online scans, 25 by WWSFF characters" }
-      - { path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "Will's 1996 'Interfacing to Microworlds' — the anchor talk" }
-      - { path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md, why: "Primary text — cite Will's words" }
+      - { path: ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "Will's 1996 'Interfacing to Microworlds' — the anchor talk" }
+      - { path: ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md, why: "Primary text — cite Will's words" }
       - { path: ../characters/james-gosling/, why: "1995 CS547 'Bringing Behavior to the Internet' (Java) — Don on camera" }
       - { path: ../characters/will-wright/, why: "Flagship guest — the talk the repo orbits" }
       - { path: repo-show-format.yml, why: "The Repo Show — CS547's recorded-conversation descendant" }
@@ -256,8 +256,8 @@ trails:
     nodes:
       - { path: ../characters/don-hopkins/career/simcity-lineage.yml, why: "35-year arc — NeWS port → Sims tools → Micropolis → web" }
       - { path: ../characters/will-wright/, why: "SimCity, the Dollhouse demo, The Sims, Spore" }
-      - { path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "Primary source — Dollhouse → Sims screenshots (167 images)" }
-      - { path: ../repo-shows/will-wright/sources/1998-06-04-sims-steering-committee-demo/, why: "Primary source — pre-release Sims build (Edith/SimAntics live, pie menus, scenario system) demoed to EA, June 4 1998" }
+      - { path: ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "Primary source — Dollhouse → Sims screenshots (167 images)" }
+      - { path: ../characters/will-wright/sources/1998-06-04-sims-steering-committee-demo/, why: "Primary source — pre-release Sims build (Edith/SimAntics live, pie menus, scenario system) demoed to EA, June 4 1998" }
       - { path: ../repo-shows/will-wright/slats-reincarnation.yml, why: "Stupid Fun Club robot resurrection — shared SFC lineage" }
       - { path: ../characters/chaim-gingold/, why: "Building SimCity — history + reverse diagrams" }
       - { path: ../characters/jason-shankel/, why: "Maxis / SFC alumnus — games + AI" }
@@ -267,14 +267,14 @@ trails:
     k_line: "SimFreaks · SimSlice · SimProv · Zombie Sims · Micropolis Home"
     why: "Legacy artisanal catalogs + the create/publish/share platform that hosts them"
     nodes:
-      - { path: ../repo-shows/will-wright/catalogs/, why: "Catalog hub — CATALOGS.yml + five entries" }
+      - { path: ../catalogs/, why: "Catalog hub — CATALOGS.yml + five entries" }
       - { path: ../repo-shows/will-wright/ian-bogost-procedural-rhetoric/SHOW.yml, why: "Bogost — inclusion agitprop vs Dumbold farce" }
-      - { path: ../repo-shows/will-wright/assets/sims-series/procedural-rhetoric-inclusion-agitprop.md, why: "Wedding playset phoenix + Motive.c lineage" }
-      - { path: ../repo-shows/will-wright/catalogs/micropolis-home/, why: "Platform — not just a shelf" }
-      - { path: ../repo-shows/will-wright/catalogs/simfreaks/, why: "Heather Alvey — ~26-year brand" }
-      - { path: ../repo-shows/will-wright/catalogs/simslice/, why: "Steve Alvey — SliceCity shipped data portability" }
-      - { path: ../repo-shows/will-wright/catalogs/simprov/, why: "Wedding playset + composable orchestration" }
-      - { path: ../repo-shows/will-wright/catalogs/zombie-sims/, why: "Current magnum-opus pack — Afterlife bridge" }
+      - { path: ../characters/will-wright/media/sims-series-procedural-rhetoric-inclusion-agitprop.md, why: "Wedding playset phoenix + Motive.c lineage" }
+      - { path: ../catalogs/micropolis-home/, why: "Platform — not just a shelf" }
+      - { path: ../catalogs/simfreaks/, why: "Heather Alvey — ~26-year brand" }
+      - { path: ../catalogs/simslice/, why: "Steve Alvey — SliceCity shipped data portability" }
+      - { path: ../catalogs/simprov/, why: "Wedding playset + composable orchestration" }
+      - { path: ../catalogs/zombie-sims/, why: "Current magnum-opus pack — Afterlife bridge" }
       - { path: ../repo-shows/will-wright/INTRO-NARRATIVE.md, why: "Mission + proof" }
       - { path: ../repo-shows/heather-steve-alvey/, why: "First platform users" }
 

@@ -26,7 +26,7 @@ You designed **LZX** and built the compilers and runtime — so I'd especially l
 
 No agenda, no pressure — war stories and design philosophy equally welcome.
 
-**Materials:** [`repo-shows/openlaszlo/`](../../repo-shows/openlaszlo/) ·
+**Materials:** [`repo-shows/openlaszlo/`](../../repo-shows/openlaszlo/README.md) ·
 [your guest page](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/oliver-steele)
 
 Accepted, delayed, declined, or no reply — all honored gracefully.

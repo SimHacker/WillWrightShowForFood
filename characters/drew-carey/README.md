@@ -23,6 +23,6 @@ about the craft of improv, and about how a live audience becomes part of a show.
 a great conversation.
 
 - Show seed: [`../../repo-shows/drew-carey/SHOW.yml`](../../repo-shows/drew-carey/SHOW.yml)
-- The House Party tie-in he's part of: [`../eric-hedman/`](../eric-hedman/) (animator on it)
+- The House Party tie-in he's part of: [`../eric-hedman/`](../eric-hedman/README.md) (animator on it)
 - **Sims Play-Along Narration** — audience sends gameplay recordings; guests improvise voice-over
   live (Foreign Poet × Drew Show energy): [`../../process/sims-play-along-narration.yml`](../../process/sims-play-along-narration.yml)

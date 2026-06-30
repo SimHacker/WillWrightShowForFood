@@ -1,0 +1,43 @@
+# STUPID FUN CLUB — GLANCE (nav + metadata SSOT)
+# Interface: CARD.yml
+
+title: "Stupid Fun Club — One Minute Movies"
+iconic: "🤖 Slats"
+description: |
+  SFC robot waiter demos — servitude & empathy experiments. Origin of Slats and the
+  ROBORESURRECTION show segment. Don's write-up of the One Minute Movies.
+
+keywords:
+  - stupid fun club
+  - one minute movies
+  - slats origin
+  - robot waiter
+  - roboresurrection
+  - servitude empathy
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  siblings:
+    - ../1996-04-26-winograd-interfacing-to-microworlds/
+    - ../2008-02-10-soul-of-the-sims/
+    - ../../../../repo-shows/will-wright/slats-reincarnation.yml
+
+read_order:
+  - README.md
+  - article.md
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Sources room" }
+    - { path: ../../../../repo-shows/will-wright/GLANCE.yml, why: "Show root — Slats segment" }
+  across:
+    - { path: ../../../slats/GLANCE.yml, why: "Sidekick born here" }
+    - { path: ../../../../repo-shows/will-wright/slats-reincarnation.yml, why: "Show segment YAML" }
+    - { path: ../../../../repo-shows/will-wright/audience/bot-slats/README.md, why: "Audience bot example" }
+    - { path: ../../../will-wright/media/README.md, why: "Robot-combat meetup photos" }
+  deep:
+    - { path: article.md, why: "Don's experiment write-up" }
+    - { path: CARD.yml, why: "Link-slats interface" }

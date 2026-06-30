@@ -27,7 +27,7 @@ flows_from_it:                 # candidate follow-up shows (from will-wright-ser
     topic: "THE data-portability payoff: design a Proxi ⇔ Simopolis ⇔ Sims bridge — the thing Will NAILED in 1996 (moving characters/homes/cities/objects/ideas/memories between universes), finally built, connecting his own games, with a Timothy Leary Mind Mirror personality layer. See ../game-bridge-proxi-sims.yml."
 
 seeded_by_the_1996_video:
-  source: sources/1996-04-26-winograd-interfacing-to-microworlds/
+  source: ../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
   note: "Will's 1996 Winograd talk could anchor a WHOLE show — maybe several. Candidate episodes drawn straight from it:"
   candidates:
     - id: the-taken-aback-moment

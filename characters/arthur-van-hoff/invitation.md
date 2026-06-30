@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** NeWS/HyperLook, PdB compiler, early Java (compiler-in-Java, AWT, HotJava), Marimba (Castanet/Bongo), TiVo, Flipboard, Jaunt VR
 
-**Materials:** [`repo-shows/arthur-van-hoff/`](../../repo-shows/arthur-van-hoff/)
+**Materials:** [`repo-shows/arthur-van-hoff/`](../../repo-shows/arthur-van-hoff/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

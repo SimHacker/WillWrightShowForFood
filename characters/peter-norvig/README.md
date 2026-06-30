@@ -25,8 +25,8 @@ that's fun on its own and useful as source material for his chapter.
 
 The topic is **his to choose** — [MOOLLM](https://github.com/SimHacker/moollm), skills, or AI in
 general — and Don would love to bring in **Leela colleagues** like
-[Henry Minsky](../henry-minsky/) and others. The *Ten Years* essay is a natural frame: what does
+[Henry Minsky](../henry-minsky/README.md) and others. The *Ten Years* essay is a natural frame: what does
 **deliberate practice** mean in an age of LLMs, and can *skills* be the constructionist artifacts we
 practice with?
 
-See the show dream: [`repo-shows/peter-norvig/`](../../repo-shows/peter-norvig/).
+See the show dream: [`repo-shows/peter-norvig/`](../../repo-shows/peter-norvig/README.md).

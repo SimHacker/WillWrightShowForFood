@@ -18,7 +18,7 @@ segments:
   - id: introducing_the_players
     topic: "Dec 2006 introducing-the-players — Walter from Dubai; Christmas call"
     links:
-      - repo-shows/will-wright/sources/2006-12-simcity-olpc-introducing-the-players/article.md
+      - characters/will-wright/sources/2006-12-simcity-olpc-introducing-the-players/article.md
 
   - id: sugar_roadmap
     topic: "Trivial to blue sky — Don's Sugar roadmap; Walter mulls on flight home"
@@ -26,7 +26,7 @@ segments:
   - id: eben_moglen_gpl
     topic: "Eben Moglen — GPL relicensing; Chuck Normann at EA"
     links:
-      - repo-shows/will-wright/sources/simcity-open-source-saga/
+      - characters/will-wright/sources/simcity-open-source-saga/
 
   - id: jim_gettys_cairo
     topic: "Jim Gettys / Cairo — why Micropolis ended up on Cairo/GTK path"
@@ -46,4 +46,4 @@ related:
   - characters/walter-bender/
   - repo-shows/remembering-the-constructionists.yml
   - repo-shows/luc-barthelet-sims-online/SHOW.yml
-  - repo-shows/will-wright/sources/simcity-open-source-saga/
+  - characters/will-wright/sources/simcity-open-source-saga/

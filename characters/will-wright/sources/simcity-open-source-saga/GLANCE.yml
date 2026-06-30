@@ -1,0 +1,47 @@
+# SIMCITY OPEN SOURCE SAGA — GLANCE (nav + metadata SSOT)
+# Interface: CARD.yml
+
+title: SimCity Open Source Saga
+iconic: "📜🔓 OLPC"
+description: |
+  How SimCity became Micropolis — Don's Dec 2006 pitch letter, email threads, SimCityNet UI,
+  Walter/Eben/Will cast, EA clearance. Public craft; contracts in don-hopkins/career/contracts/.
+
+keywords:
+  - simcity open source
+  - micropolis
+  - olpc
+  - ea clearance
+  - pitch letter
+  - simcitynet
+  - walter bender
+  - charles normann
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  siblings:
+    - ../maxis-licenses-chain-of-custody/
+    - ../simcity-unix-rights-history/
+    - ../2013-tale-of-two-simcities/
+    - ../multiplayer-simcity-ui-network/
+
+read_order:
+  - README.md
+  - article.md
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Sources room" }
+  siblings:
+    - { path: ../maxis-licenses-chain-of-custody/GLANCE.yml, why: "Paper trail PDFs" }
+    - { path: ../micropolis-saga-don-draft/GLANCE.yml, why: "Don draft merge target" }
+  across:
+    - { path: ../../../don-hopkins/career/simcity-lineage.yml, why: "Timeline girder" }
+    - { path: ../../../walter-bender/README.md, why: "OLPC Stone Soup" }
+    - { path: ../../../chaim-gingold/GLANCE.yml, why: "Building SimCity POV" }
+  deep:
+    - { path: article.md, why: "Timeline + pitch letter" }
+    - { path: CARD.yml, why: "Trace-saga interface" }

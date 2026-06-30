@@ -1,0 +1,37 @@
+# CARD — Soul of The Sims / Motive.c (interface only)
+# Nav + metadata: GLANCE.yml
+
+glance: GLANCE.yml
+
+room:
+  id: soul-of-the-sims
+  name: "The Soul of The Sims (Motive.c)"
+  type: [source_bundle, primary_source, code_artifact]
+  home: characters/will-wright/sources/2008-02-10-soul-of-the-sims/
+
+methods:
+  READ-MOTIVE-C:
+    signature: "readMotiveC() → Motive.c"
+    advertisement: "Earliest published Sims motive loop — compiles with -DMOTIVE_STANDALONE."
+  BROWSE-SCANS:
+    signature: "browseScans() → images/MotivePage*.png"
+    advertisement: "Five scan pages — Will's handwriting era."
+  LINK-AGITPROP:
+    signature: "linkAgitprop() → dumbold + crowd-sitter sources"
+    advertisement: "Later objects sit on this same motive machinery."
+
+abilities:
+  - id: PROCEDURAL-RHETORIC
+    name: Procedural Rhetoric
+    type: activated
+    advertisement:
+      method: proceduralRhetoric
+      signature: "proceduralRhetoric(motive) → teachable moment"
+      score_when:
+        - trigger: educator_entryway
+          weight: 0.9
+    effect: "Needs as rhetoric — Ian Bogost thread cousin."
+
+compose_with:
+  - ../1996-04-26-winograd-interfacing-to-microworlds/CARD.yml
+  - ../2018-04-24-dumbold-voting-machine/CARD.yml

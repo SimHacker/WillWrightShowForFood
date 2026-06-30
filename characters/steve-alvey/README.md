@@ -27,13 +27,13 @@ sincere praise that sends real **fans and subscribers** their way.
 
 ## The show
 
-[`repo-shows/heather-steve-alvey/`](../../repo-shows/heather-steve-alvey/) — a whole-career show with
+[`repo-shows/heather-steve-alvey/`](../../repo-shows/heather-steve-alvey/README.md) — a whole-career show with
 **Heather**: SimSlice/SliceCity, SimFreaks, Zombie Sims, 26 years of artisanal content, and how to
 keep it thriving (the Micropolis publishing system; subscriptions). Flagship episode: the playful
 **Afterlife × ZombieSims** bridge.
 
 ## Browse
 
-- Partner: [Heather Alvey (SimFreaks)](../heather-alvey/) · Host: [Don Hopkins](../don-hopkins/)
+- Partner: [Heather Alvey (SimFreaks)](../heather-alvey/README.md) · Host: [Don Hopkins](../don-hopkins/README.md)
 - Store / support: [simfreaks.com](https://www.simfreaks.com/)
-- Will's studio: [Gallium Studios / Proxi](../will-wright/)
+- Will's studio: [Gallium Studios / Proxi](../will-wright/README.md)

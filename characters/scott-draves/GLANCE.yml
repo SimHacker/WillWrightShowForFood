@@ -1,0 +1,45 @@
+# SCOTT DRAVES — GLANCE (nav + metadata SSOT)
+# Interface: CARD.yml
+
+title: Scott Draves
+iconic: "🐑 Draves"
+description: |
+  Electric Sheep distributed screensaver, Fractal Flame algorithm, evolving paintings —
+  collective intelligence bred by votes and genetics. Don friendship timeline in correspondence.yml.
+
+keywords:
+  - scott draves
+  - electric sheep
+  - fractal flame
+  - flam3
+  - collective intelligence
+  - dreams in high fidelity
+  - genetic art
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  siblings:
+    - ../ken-perlin/
+    - ../golan-levin/
+    - ../don-hopkins/
+
+read_order:
+  - README.md
+  - CARD.yml
+  - correspondence.yml
+  - invitation.md
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Character registry" }
+  siblings:
+    - { path: ../ken-perlin/CARD.yml, why: "Noise + procedural cousins" }
+    - { path: ../don-hopkins/GLANCE.yml, why: "Cellular automata combos" }
+  across:
+    - { path: ../../repo-shows/scott-draves/README.md, why: "Show seed" }
+  deep:
+    - { path: CARD.yml, why: "Electric Sheep + Fractal Flame abilities" }
+    - { path: correspondence.yml, why: "Friendship archive timeline" }

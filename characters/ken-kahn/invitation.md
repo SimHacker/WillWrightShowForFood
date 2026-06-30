@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** AI + visual programming for kids — ToonTalk; AI blocks for Snap! (eCraft2Learn)
 
-**Materials:** [`repo-shows/ken-kahn/`](../../repo-shows/ken-kahn/)
+**Materials:** [`repo-shows/ken-kahn/`](../../repo-shows/ken-kahn/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

@@ -16,12 +16,12 @@ Historians and archivists: export policy, primary sources, sync logs, honest inv
 | [**sync-with-donhopkins.yml**](../sync-with-donhopkins.yml) | SELECT → FILTER → EXPORT pipeline |
 | [**MANIFEST.yml**](../../MANIFEST.yml) | Bundle manifest — what maps from private source |
 | [**sync-sources.yml**](../../characters/don-hopkins/sync-sources.yml) | Inclusion/exclusion log for host portrayal |
-| [**1996 source README**](../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) | Anchor artifact — Stanford, YouTube, Medium, attribution |
-| [**1996 transcript**](../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md) | Primary text — cite Will's words |
+| [**1996 source README**](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) | Anchor artifact — Stanford, YouTube, Medium, attribution |
+| [**1996 transcript**](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md) | Primary text — cite Will's words |
 | [**portrayal-standards.yml**](../../schemas/portrayal-standards.yml) | Sourced quotes only; subject correction rights |
 | [**invitation-workflow.yml**](../../schemas/invitation-workflow.yml) | Status enum as corpus metadata |
-| [**Terry Winograd**](../../characters/terry-winograd/) | CS547 forebear — open seminar recorded for posterity |
-| [**characters/**](../../characters/) | Guest directories — browse the tree; grow with responses |
+| [**Terry Winograd**](../../characters/terry-winograd/README.md) | CS547 forebear — open seminar recorded for posterity |
+| [**characters/**](../../characters/README.md) | Guest directories — browse the tree; grow with responses |
 | [**vision-and-ambition.yml**](../vision-and-ambition.yml) | Forebears and long arc in yaml girder |
 
 ---

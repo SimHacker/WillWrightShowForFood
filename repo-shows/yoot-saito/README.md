@@ -2,7 +2,7 @@
 
 *Seed — consent not yet asked. No pressure, no promises.*
 
-**Guest:** [Yoot Saito](../../characters/yoot-saito/) — The Tower / SimTower, Yoot Tower, Seaman, Odama; interviewer of Alan Kay (1993)
+**Guest:** [Yoot Saito](../../characters/yoot-saito/README.md) — The Tower / SimTower, Yoot Tower, Seaman, Odama; interviewer of Alan Kay (1993)
 **Invitation:** [`characters/yoot-saito/invitation.md`](../../characters/yoot-saito/invitation.md)
 
 ## The show
@@ -12,9 +12,9 @@ designing a world. No agenda required.
 
 ## Dream segments
 
-- **Pair Yoot with [Alan Kay](../../characters/alan-kay/)** to revisit the interview Yoot conducted in 1993 — two voices on the same memory.
+- **Pair Yoot with [Alan Kay](../../characters/alan-kay/README.md)** to revisit the interview Yoot conducted in 1993 — two voices on the same memory.
 - **The trip to Japan** where Yoot interviewed Alan Kay, Doug Engelbart, and other luminaries (Apple ATG and beyond), marking the 25th anniversary of Engelbart's 1968 "Mother of All Demos."
-- **Engelbart memorial** (represent + discuss, never interview the deceased): eulogies and memories from **Alan Kay**, **Yoot Saito**, and **[Ted Nelson](../../characters/ted-nelson/)** — Ted's YouTube eulogy is a moving centerpiece. See [`douglas-engelbart/memorial.md`](../../characters/douglas-engelbart/memorial.md).
+- **Engelbart memorial** (represent + discuss, never interview the deceased): eulogies and memories from **Alan Kay**, **Yoot Saito**, and **[Ted Nelson](../../characters/ted-nelson/README.md)** — Ted's YouTube eulogy is a moving centerpiece. See [`douglas-engelbart/memorial.md`](../../characters/douglas-engelbart/memorial.md).
 - **Reincarnate Seaman** for the LLM era — a creature that remembers, judges, and insults you.
 
 ## Yoot Tower — abstract only

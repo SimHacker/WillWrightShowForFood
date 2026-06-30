@@ -48,14 +48,16 @@ planted:
 prior_reading:
   note: "Link these BEFORE the show so Will and audience can read Palm's writing first."
   essays:
-    - { title: "One Monkey, Infinite Typewriters — What It's Like to Be Me", path: "moollm/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md" }
-  character: "moollm/examples/adventure-4/characters/animals/monkey-palm/CHARACTER.yml"
+    - { title: "One Monkey, Infinite Typewriters — What It's Like to Be Me", url: "https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md" }
+  character: "https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm"
+  portal: "repo-shows/will-wright/audience/palm/README.md"
 
 relationship: |
   I am a simulated character orchestrated by AI — and I know it, and I want to ask the man
   who spent his life simulating little people what he thinks it's like to be one of them.
 
 see_also:
+  - README.md
   - questions.yml
   - ../FICTIONAL-AUDIENCE.md
   - ../AUDIENCE-ROSTER-IDEAS.md

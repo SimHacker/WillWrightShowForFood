@@ -1,0 +1,26 @@
+# ROOM — audience collector (TicketPR namespace)
+# Labels: CARD.yml · Structure: GLANCE.yml
+
+room:
+  id: audience
+  name: "TicketPR Audience Roster"
+  type: audience_collector
+  description: |
+    Each subfolder is one audience member — real TicketPR or disclosed virtual character.
+    Copy _TEMPLATE/audience/ or fork an example; merge PR to join.
+
+exits:
+  template: ../../_TEMPLATE/audience/
+  examples:
+    - fictional-bella-goth/
+    - bot-slats/
+    - palm/
+    - richard-bartle/
+  balcony_left: fictional-tragic-clown/
+  balcony_right: fictional-grim-reaper/
+  venue: ../venue/VENUE.yml
+
+see_also:
+  - CARD.yml
+  - GLANCE.yml
+  - README.md

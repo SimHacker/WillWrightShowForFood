@@ -1,9 +1,39 @@
-# AUDIENCE — GLANCE (TicketPR roster for Will Wright show)
-# up: ../GLANCE.yml | welcome: README.md | one-screen: FLIER.md | machine: INDEX.yml
+# AUDIENCE — GLANCE (nav + metadata SSOT)
+# Interface: CARD.yml
 
-what: |
-  Pre-primed virtual audience + real TicketPR characters — questions, costumes, seats.
-  Copy _TEMPLATE/audience/ or steal an example; merge a PR to join before air.
+title: "Will Wright Show Audience"
+iconic: "🎟️👥"
+description: |
+  TicketPR roster — real consented audience + disclosed virtual characters. Copy _TEMPLATE or
+  fork an example; merge PR to join before air. Questions in questions.yml; MSPO journal persists.
+
+keywords:
+  - ticketpr
+  - audience
+  - mspo
+  - questions
+  - costume
+  - come on down
+  - bella goth
+  - slats
+  - palm
+  - richard bartle
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  children:
+    - fictional-bella-goth/
+    - bot-slats/
+    - palm/
+    - richard-bartle/
+    - fictional-tragic-clown/
+    - fictional-grim-reaper/
+  siblings:
+    - ../venue/
+    - ../../_TEMPLATE/audience/
 
 read_order:
   - FLIER.md
@@ -14,17 +44,26 @@ read_order:
   - richard-bartle/
   - INDEX.yml
 
-examples:
+structure:
+  template: ../../_TEMPLATE/audience/
   real_consented: richard-bartle
   bot_full_stack: bot-slats
   sims_character: fictional-bella-goth
-  philosopher: palm
-  blank: ../../_TEMPLATE/audience/
 
 see_also:
-  - { path: ../../../process/ticket-pr.yml, why: "TicketPR constitution" }
-  - { path: ../venue/README.md, why: "Seat map + balcony 🤡💀" }
-  - { path: fictional-tragic-clown/, why: "Balcony left" }
-  - { path: fictional-grim-reaper/, why: "Balcony right" }
-  - { path: ../../../characters/slats/, why: "Orchestra pit / call-in sidekick" }
-  - { path: FICTIONAL-AUDIENCE.md, why: "Virtual children disclosure" }
+  parent:
+    - { path: ../GLANCE.yml, why: "Show root" }
+  siblings:
+    - { path: ../venue/GLANCE.yml, why: "Seat map" }
+  children:
+    - { path: fictional-bella-goth/CARD.yml, why: "Sims character example" }
+    - { path: bot-slats/CARD.yml, why: "Bot + full SIMULATION stack" }
+    - { path: ../../_TEMPLATE/audience/GLANCE.yml, why: "Blank TicketPR" }
+  across:
+    - { path: ../../../process/ticket-pr.yml, why: "TicketPR constitution" }
+    - { path: ../../../characters/don-philahue/README.md, why: "Surfaces questions live" }
+  deep:
+    - { path: README.md, why: "Welcome packet" }
+    - { path: FLIER.md, why: "One-screen version" }
+    - { path: CARD.yml, why: "Audience interface — copy, merge, ask" }
+    - { path: ROOM.yml, why: "Collector room" }

@@ -1,17 +1,27 @@
 # Will Wright — media
 
-*Sniff:* [`GLANCE.yml`](GLANCE.yml) · *Guest hub:* [`../README.md`](../README.md)
+*Sniff:* [`GLANCE.yml`](GLANCE.yml) · [`CARD.yml`](CARD.yml) · *Guest hub:* [`../README.md`](../README.md)
 
-General **media room** for this portrayal — primary-source photos, sub-galleries, and loose
-files in one flat directory (no nested `images/` tree). Captions are factual; corrections welcome.
+## Navigation
+
+*(Skeleton: [`GLANCE.yml`](GLANCE.yml))*
+
+| Room | → | Why |
+|------|---|-----|
+| **Up** | [will-wright](../README.md) | Guest portrayal |
+| **Sources** | [sources](../sources/README.md) | Primary articles + 1996 gallery |
+| **Show** | [flagship show](../../repo-shows/will-wright/README.md) | Flower Child mascot lives here |
+| **Catalogs** | [catalogs](../../catalogs/README.md) | Syndicated UCC brands |
+| **Sims series** | [sims-series-README.md](sims-series-README.md) | Themed screenshot index |
+| **Sub-galleries** | [russian-space-junk.md](russian-space-junk.md) · [artwork.md](artwork.md) | Long-scroll galleries |
 
 | Start here | What |
 |------------|------|
 | **This page** | SimCity / Sims / robots — scroll below |
 | [**Russian Space Junk**](russian-space-junk.md) | Soviet spaceflight hardware (17 photos) |
 | [**Artwork**](artwork.md) | Mixed-media relief constructions (10 photos) |
-| [1996 Winograd gallery](../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/#image-gallery) | 167 figures from Don's Medium article |
-| [Show assets / sims-series](../../repo-shows/will-wright/assets/sims-series/) | Screenshot themes + agitprop |
+| [1996 Winograd gallery](../sources/1996-04-26-winograd-interfacing-to-microworlds/#image-gallery) | 167 figures from Don's Medium article |
+| [Sims series gallery](sims-series-README.md) | Screenshot themes + agitprop (flat filenames) |
 
 ---
 
@@ -109,3 +119,7 @@ Longer scrolls with many figures — files sit alongside this README:
 ---
 
 See also: [`../CHARACTER.yml`](../CHARACTER.yml) · [`../../repo-shows/will-wright/README.md`](../../repo-shows/will-wright/README.md)
+
+---
+
+*Raw directory:* [browse files in this folder](./)

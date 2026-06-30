@@ -35,5 +35,5 @@ Don met Cynthia by video conference at the **Snap! conference (Snap!Con) in Barc
 living continuation of the Logo lineage, and Cynthia is one of the few people who can narrate that
 whole arc first-hand — from the turtle to the present — while screening the video evidence.
 
-See the show dream: [`repo-shows/cynthia-solomon/`](../../repo-shows/cynthia-solomon/) and the
+See the show dream: [`repo-shows/cynthia-solomon/`](../../repo-shows/cynthia-solomon/README.md) and the
 [constructionist lineage trail](../../process/trails/constructionist-lineage.md).

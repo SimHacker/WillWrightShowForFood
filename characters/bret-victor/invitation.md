@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** Interface researcher — explorable explanations, Dynamicland
 
-**Materials:** [`repo-shows/bret-victor/`](../../repo-shows/bret-victor/)
+**Materials:** [`repo-shows/bret-victor/`](../../repo-shows/bret-victor/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

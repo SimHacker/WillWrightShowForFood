@@ -1,0 +1,44 @@
+# SLATS — GLANCE (nav + metadata SSOT)
+# Interface: CARD.yml · Stupid Fun Club robot sidekick.
+
+title: Slats
+iconic: "🤖 Slats"
+description: |
+  Fictional Stupid Fun Club robot — unemployed waiter, One Minute Movies, RoboResurrection quest.
+  Orchestra pit regular; rates your performance; loud, eager, reprogrammable ham.
+
+keywords:
+  - slats
+  - stupid fun club
+  - robot
+  - one minute movies
+  - sidekick
+  - roboresurrection
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  siblings:
+    - ../ultimate-machine/
+    - ../don-hopkins/
+
+read_order:
+  - README.md
+  - CARD.yml
+  - one-minute-movies.md
+  - judge-rubric.yml
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Character registry" }
+  siblings:
+    - { path: ../ultimate-machine/CARD.yml, why: "Closing ceremony bot" }
+    - { path: ../don-hopkins/GLANCE.yml, why: "SFC lineage" }
+  across:
+    - { path: ../../repo-shows/will-wright/slats-reincarnation.yml, why: "Show segment" }
+    - { path: ../../repo-shows/will-wright/audience/bot-slats/README.md, why: "Full TicketPR stack example" }
+    - { path: ../../characters/will-wright/sources/stupid-fun-club-one-minute-movies/GLANCE.yml, why: "SFC source bundle" }
+  deep:
+    - { path: CARD.yml, why: "Rate performance + call-in ads" }

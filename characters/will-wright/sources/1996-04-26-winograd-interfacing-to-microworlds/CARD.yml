@@ -1,0 +1,54 @@
+# CARD — 1996 Winograd centerpiece (interface only)
+# Nav + metadata: GLANCE.yml
+
+glance: GLANCE.yml
+
+room:
+  id: winograd-1996-centerpiece
+  name: "Interfacing to Microworlds (1996-04-26)"
+  type: [source_bundle, centerpiece, primary_source]
+  home: characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
+
+methods:
+  WATCH-ONE-VIDEO:
+    signature: "watchOneVideo() → YouTube nsxoZXaYJSk"
+    advertisement: "Single video discipline — the ONLY show video; enough is here."
+  READ-TRANSCRIPT:
+    signature: "readTranscript() → transcript.md"
+    advertisement: "Don's hand-perfected transcript — quote Will's OWN words on air."
+  ASK-ABOUT-1996:
+    signature: "askAbout1996(claim) → compare Will then vs now"
+    advertisement: "Post-mortem the post-mortems — Simlish, portability, simulator effect."
+  FIND-DOLLHOUSE-MOMENT:
+    signature: "findDollhouseMoment() → transcript#pivotal"
+    advertisement: "The $5B student question — Oh God… data portability… Dollhouse."
+
+abilities:
+  - id: COMPLETE-THE-LOOP
+    name: Complete the Loop
+    type: activated
+    advertisement:
+      method: completeTheLoop
+      signature: "completeTheLoop(1996, sims2000) → flagship conversation"
+      score_when:
+        - trigger: guest_is_will_wright
+          weight: 1.0
+    effect: "1996 previewed Dollhouse; ask what landed ~26 years later."
+    combos_with:
+      - ../../../will-wright/CARD.yml
+      - ../2008-02-10-soul-of-the-sims/CARD.yml
+
+  - id: CITE-FIGURE
+    name: Cite Figure
+    type: triggered
+    advertisement:
+      method: citeFigure
+      signature: "citeFigure(n) → images/ gallery slide n"
+      score_when:
+        - trigger: on_air_discussion
+          weight: 0.9
+    effect: "167 figures — show don't tell during stream."
+
+compose_with:
+  - ../../../terry-winograd/CARD.yml
+  - ../../../will-wright/CARD.yml

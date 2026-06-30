@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** *(topic from show seed — verifiable public work)*
 
-**Materials:** [`repo-shows/...`](../../repo-shows/)
+**Materials:** [`repo-shows/...`](../../repo-shows/README.md)
 
 Browse without a GitHub account — start at the [README](https://github.com/SimHacker/WillWrightShowForFood).
 

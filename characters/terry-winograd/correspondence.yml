@@ -26,7 +26,7 @@ verified_talks:
     title: "Interfacing to Microworlds"
     what: "Will's Dollhouse / The Sims preview — the talk Don credits with drawing him to Maxis"
     don_role: "Preserved the Stanford video, uploaded to YouTube, made a clean transcript, wrote the Medium retrospective"
-    in_repo: ../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
+    in_repo: ../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
   james_gosling_1995:
     date: "1995-12-01"
     title: "Bringing Behavior to the Internet"

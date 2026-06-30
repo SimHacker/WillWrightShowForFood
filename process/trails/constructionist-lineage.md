@@ -12,19 +12,19 @@ The developmental + AI roots → Winograd interview → Will show → breed DNA 
 
 | Stop | Why wander here |
 |------|-----------------|
-| 🕯️ [**Jean Piaget**](../../characters/jean-piaget/) | The developmental root — constructivism; the child as active builder (memorial) |
-| 🕯️ [**Seymour Papert**](../../characters/seymour-papert/) | Worked with Piaget; coined constructionism; Logo + the turtle; *Mindstorms* (memorial) |
-| 📼 [**Cynthia Solomon**](../../characters/cynthia-solomon/) | Co-created Logo with Papert (BBN 1967); built the MIT Logo culture; keeper of the video treasure trove |
-| 🕯️ [**Marvin Minsky**](../../characters/marvin-minsky/) | AI Lab co-founder with Papert; Society of Mind / K-lines (memorial) |
-| [**Gary Drescher**](../../characters/gary-drescher/) | *Made-Up Minds* — Piaget's constructivism made to run (the schema mechanism); remade for the LLM era |
-| [**Steve Kommrusch**](../../characters/steve-kommrusch/) | Leela AI's Piaget-schema learning — the modern bridge from the schema mechanism |
-| [**Don Hopkins**](../../characters/don-hopkins/) | Host — yaml girder + career backbone |
+| 🕯️ [**Jean Piaget**](../../characters/jean-piaget/README.md) | The developmental root — constructivism; the child as active builder (memorial) |
+| 🕯️ [**Seymour Papert**](../../characters/seymour-papert/README.md) | Worked with Piaget; coined constructionism; Logo + the turtle; *Mindstorms* (memorial) |
+| 📼 [**Cynthia Solomon**](../../characters/cynthia-solomon/README.md) | Co-created Logo with Papert (BBN 1967); built the MIT Logo culture; keeper of the video treasure trove |
+| 🕯️ [**Marvin Minsky**](../../characters/marvin-minsky/README.md) | AI Lab co-founder with Papert; Society of Mind / K-lines (memorial) |
+| [**Gary Drescher**](../../characters/gary-drescher/README.md) | *Made-Up Minds* — Piaget's constructivism made to run (the schema mechanism); remade for the LLM era |
+| [**Steve Kommrusch**](../../characters/steve-kommrusch/README.md) | Leela AI's Piaget-schema learning — the modern bridge from the schema mechanism |
+| [**Don Hopkins**](../../characters/don-hopkins/README.md) | Host — yaml girder + career backbone |
 | [**sync-sources.yml**](../../characters/don-hopkins/sync-sources.yml) | Synced from moollm adventure-4 — deduped |
 | [**voice.yml**](../../characters/don-hopkins/portrayal/voice.yml) | Repo Show voice — not adventure rabbit plot |
 | [**vision-and-ambition.yml**](../vision-and-ambition.yml) | Long arc girder — no promises, full ambition |
 | [**VISION.md**](../VISION.md) | Generated markup — Flower Child energy |
-| [**1996 Winograd source**](../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/) | Primary source — constructionist microworlds |
-| [**Will Wright**](../../characters/will-wright/) | Guest portrayal — Proxi, Spore, Sims lineage |
+| [**1996 Winograd source**](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) | Primary source — constructionist microworlds |
+| [**Will Wright**](../../characters/will-wright/README.md) | Guest portrayal — Proxi, Spore, Sims lineage |
 | [**Will CARD.yml**](../../characters/will-wright/CARD.yml) | Invokable abilities — MTG card surface |
 | [**Don CARD.yml**](../../characters/don-hopkins/CARD.yml) | Host card — pie menus, MOOLLM, layers |
 | [**MOOLLM constructionism**](https://github.com/SimHacker/moollm/skills/constructionism) | Papert — learn by building in microworlds |

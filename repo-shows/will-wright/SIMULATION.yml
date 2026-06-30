@@ -1,0 +1,56 @@
+# SIMULATION — Will Wright flagship show (episode runtime)
+# Labels: CARD.yml · Structure: GLANCE.yml
+
+simulation:
+  kind: show_instance
+  character_home: .
+  source_of_truth: SHOW.yml
+  composes:
+    - SimHacker/moollm/skills/simulation
+    - SimHacker/moollm/skills/advertisement
+    - ../../skills/repo-show/
+    - ../../process/ticket-pr.yml
+    - sims-play-along-narration.yml
+
+brain:
+  perceive:
+    - "current segment from SEGMENTS.yml / live transcript"
+    - "guest utterance + topic tags"
+    - "merged TicketPR advertisements from audience/*/CARD.yml"
+  orchestrator: don-philahue
+  choose: |
+    Score all audience + balcony CARD advertisements against topic context.
+    Don Philahue invokes winners — mesh heckle/cheer pairs, surface ASK-QUESTION from questions.yml.
+
+runbook:
+  before_air:
+    - "Audience merges TicketPRs — audience/ grows"
+    - "RTFR — README + ../../characters/will-wright/sources/1996 centerpiece"
+  during_show:
+    clocks: [before_async_PRs, before_TicketPRs, during_Twitch]
+    brain_stream: ../../process/brain-stream.yml
+    venue_tour: venue/README.md
+    play_along: sims-play-along-narration.yml
+    philahue:
+      pulls_from: [audience/*/questions.yml, github_issues, hn_comments]
+      invokes: [ASK-QUESTION, SURFACE-TICKETPR]
+    closing: ../../process/repo-show-format.yml#closing_ceremony
+  after_show:
+    homefun: ../../process/homefun-grading.yml
+    harvest: "../../skills/repo-show/ — cauldron → packages/"
+    mspo_replay: "TicketPR SIMULATION.yml stacks remain visible on re-read"
+
+locations:
+  default: venue/lobby
+  on_air: venue/stage
+  archive: ../../characters/will-wright/sources/
+
+see_also:
+  - CARD.yml
+  - audience/README.md
+  - ../../characters/don-philahue/
+  - ../../process/sims-play-along-narration.yml
+
+meta:
+  enabled: true
+  updated: 2026-06-30

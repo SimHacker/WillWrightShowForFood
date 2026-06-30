@@ -5,10 +5,10 @@
 
 A reverse-engineering + preservation summit around **The Tower / SimTower / Yoot Tower**:
 
-- **[Yoot Saito](../../characters/yoot-saito/)** — the creator; sent Don a code drop for archival + open-source study.
-- **[Patrick Hulin](../../characters/patrick-hulin/)** — already did it for SimTower: LLM-assisted reverse engineering → a **tick-for-tick TypeScript** reimplementation ([towers.world](https://towers.world)).
-- **[Thomas Cherryhomes](../../characters/thomas-cherryhomes/)** — retrocomputing engineer (FujiNet, IRATA.ONLINE/PLATO); putting the internet on retro machines.
-- **[Lars Brinkhoff](../../characters/lars-brinkhoff/)** — software preservationist (PDP-10/ITS restoration); emulation + historic-system recovery.
+- **[Yoot Saito](../../characters/yoot-saito/README.md)** — the creator; sent Don a code drop for archival + open-source study.
+- **[Patrick Hulin](../../characters/patrick-hulin/README.md)** — already did it for SimTower: LLM-assisted reverse engineering → a **tick-for-tick TypeScript** reimplementation ([towers.world](https://towers.world)).
+- **[Thomas Cherryhomes](../../characters/thomas-cherryhomes/README.md)** — retrocomputing engineer (FujiNet, IRATA.ONLINE/PLATO); putting the internet on retro machines.
+- **[Lars Brinkhoff](../../characters/lars-brinkhoff/README.md)** — software preservationist (PDP-10/ITS restoration); emulation + historic-system recovery.
 - **Don Hopkins** — host; has the code drop + the MicropolisCore WASM/Emscripten playbook.
 
 **Open invite:** decompiler / reverse-engineering / retro-emulation hackers — come build in the open.

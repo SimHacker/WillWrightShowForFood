@@ -2,7 +2,7 @@
 
 *Seed — consent not yet asked. A pairing of two old Sun friends; can also run solo.*
 
-**Guests:** [James Gosling](../../characters/james-gosling/) (NeWS, Gosling Emacs, Java) · [Arthur van Hoff](../../characters/arthur-van-hoff/) (HyperLook, early Java)
+**Guests:** [James Gosling](../../characters/james-gosling/README.md) (NeWS, Gosling Emacs, Java) · [Arthur van Hoff](../../characters/arthur-van-hoff/README.md) (HyperLook, early Java)
 **Invitation:** [`characters/james-gosling/invitation.md`](../../characters/james-gosling/invitation.md)
 
 ## The show

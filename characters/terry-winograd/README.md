@@ -1,10 +1,12 @@
 # Terry Winograd
 
+*Sniff:* [`CARD.yml`](CARD.yml) · [`GLANCE.yml`](GLANCE.yml) · [`GLANCE.md`](GLANCE.md)
+
 Invitation portrayal — **not** Terry Winograd. [Standards](../../schemas/portrayal-standards.yml)
 
 **Field:** HCI, interaction design, constructionist-adjacent education, Stanford CS547 seminar series, SHRDLU legacy, Interval Research alum
 
-[Invitation](invitation.md) · [Correspondence](correspondence.yml) · [**Media / CS547 catalog**](media/) · [Show seed](../../repo-shows/terry-winograd/)
+[Invitation](invitation.md) · [Correspondence](correspondence.yml) · [**Media / CS547 catalog**](media/README.md) · [Show seed](../../repo-shows/terry-winograd/README.md)
 
 ## A forebear of the whole quest
 
@@ -16,7 +18,7 @@ Don to Maxis to work on The Sims.
 
 ## The treasure trove (start here)
 
-**[`media/`](media/)** holds the full **339-talk CS547 catalog** — spreadsheet mirror, machine
+**[`media/`](media/README.md)** holds the full **339-talk CS547 catalog** — spreadsheet mirror, machine
 girder, and human-readable scroll grouped by year. This is the pleasant surprise: Terry's life's
 work as a public seminar, catalogued and cross-linked to every WWSFF guest who spoke there.
 
@@ -25,6 +27,6 @@ work as a public seminar, catalogued and cross-linked to every WWSFF guest who s
 
 Decades later, Don emailed Terry at the start of COVID; archivists scanned the Will Wright DVD;
 Don uploaded, transcribed, and wrote the Medium retrospective
-([1996 source bundle](../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/)).
+([1996 source bundle](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md)).
 
 Verifiable sources in `CHARACTER.yml` · [`correspondence.yml`](correspondence.yml). Subject may request correction or removal anytime.

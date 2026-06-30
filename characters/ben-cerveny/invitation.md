@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** Strategist, Designer, Public Code & Digital Public Infrastructure; Game Neverending / Flickr; Stamen map viz; speculative design, civic tech
 
-**Materials:** [`repo-shows/ben-cerveny/`](../../repo-shows/ben-cerveny/)
+**Materials:** [`repo-shows/ben-cerveny/`](../../repo-shows/ben-cerveny/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

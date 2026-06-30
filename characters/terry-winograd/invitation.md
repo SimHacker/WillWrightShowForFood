@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** HCI, interaction design, constructionist-adjacent education, Stanford CS547 seminar series, SHRDLU legacy
 
-**Materials:** [`repo-shows/terry-winograd/`](../../repo-shows/terry-winograd/)
+**Materials:** [`repo-shows/terry-winograd/`](../../repo-shows/terry-winograd/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

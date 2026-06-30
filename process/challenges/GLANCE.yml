@@ -14,12 +14,12 @@ see_also:
   - { path: ../cross-links.yml#retrocomputing_drive, why: "Master trail — all retro nodes with why" }
   - { path: RETROCOMPUTING.md, why: "Generated markup — pnpm run facades" }
   - { path: ../DRAG-RACE.md, why: "Retro challenges rotate on drag race runway" }
-  - { path: ../../rigs/, why: "Rig yaml + SETUP DNA per contestant" }
+  - { path: ../../rigs/README.md, why: "Rig yaml + SETUP DNA per contestant" }
   - { path: ../../schemas/rig-setup-dna.yml, why: "Emailable install protocol" }
   - { path: ../apple2-emulator-stack.yml, why: "][ stack pointer" }
   - { path: ../pdp10-its-stack.yml, why: "ITS stack pointer" }
   - { path: ../lisp-machine-stack.yml, why: "LispM stack pointer" }
-  - { path: ../../characters/lars-brinkhoff/, why: "Make it so — ITS on air" }
-  - { path: ../../characters/thomas-cherryhomes/, why: "FujiNet — real wire" }
+  - { path: ../../characters/lars-brinkhoff/README.md, why: "Make it so — ITS on air" }
+  - { path: ../../characters/thomas-cherryhomes/README.md, why: "FujiNet — real wire" }
   - { path: ../../skills/repo-show/SKILL.md, why: "Show format wraps retro laps" }
   - { path: INDEX.yml, why: "Challenge registry" }

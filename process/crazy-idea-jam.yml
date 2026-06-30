@@ -27,7 +27,7 @@ ideas:
       games and universes. Every bridge we build (Stardew, Proxi, Spore, Shattered, …someday
       Wizardry) is one implementation facet of this single jewel. That's why they're so cool.
     non_destructive: "Bridging is non-destructive + regenerable: the soul-file is canonical, runtimes are ephemeral. Send a character to die in a dungeon, regenerate at will."
-    ties: [../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md]
+    ties: [../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md]
 
   character_endosymbiosis:
     emoji: "🦠"

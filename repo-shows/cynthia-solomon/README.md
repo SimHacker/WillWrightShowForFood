@@ -11,11 +11,11 @@ screening of that trove, narrated by someone who was there.
 ## What we'd get into
 
 - **Guided screening** — clips from her channel, narrated live.
-- **The birth of Logo** — BBN 1967 → the [MIT Logo Group](../../characters/seymour-papert/) → the
+- **The birth of Logo** — BBN 1967 → the [MIT Logo Group](../../characters/seymour-papert/README.md) → the
   turtle → children as builders of their own understanding.
 - **Atari Cambridge** — the children's computer that almost was.
 - **Logo → today** — the through-line to **Snap!**, optionally with
-  [Brian Harvey](../../characters/brian-harvey/) and [Jens Mönig](../../characters/jens-monig/).
+  [Brian Harvey](../../characters/brian-harvey/README.md) and [Jens Mönig](../../characters/jens-monig/README.md).
 
 See [`SHOW.yml`](SHOW.yml). Consent **not yet asked** —
 [`invitation`](../../characters/cynthia-solomon/invitation.md).

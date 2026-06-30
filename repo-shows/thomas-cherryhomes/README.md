@@ -2,11 +2,11 @@
 
 *Show seed. Topic-flexible, source-grounded. Thomas may shape, delay, or decline anything.*
 
-**Guest:** [Thomas Cherryhomes (@tschak)](../../characters/thomas-cherryhomes/) — FujiNet
+**Guest:** [Thomas Cherryhomes (@tschak)](../../characters/thomas-cherryhomes/README.md) — FujiNet
 co-founder/firmware developer; IRATA.ONLINE (PLATO); PLATOTerm; *Compute's Gazette*
 "FujiNet Report" columnist.
 
-**Host:** Don Hopkins. **Paired guest:** [Lars Brinkhoff](../../characters/lars-brinkhoff/) —
+**Host:** Don Hopkins. **Paired guest:** [Lars Brinkhoff](../../characters/lars-brinkhoff/README.md) —
 PDP-10/ITS restoration; emulated AI Lab × real retro net.
 
 ## The pitch
@@ -31,8 +31,8 @@ with **FujiNet-PC** (Fujisan, AppleWin+SPoverSLIP, MAME Becker port).
 |------|------|
 | **The invitation** | [`../../characters/thomas-cherryhomes/invitation.md`](../../characters/thomas-cherryhomes/invitation.md) |
 | **Conversation hooks** | [`../../characters/thomas-cherryhomes/ideas.md`](../../characters/thomas-cherryhomes/ideas.md) |
-| **Character** | [`../../characters/thomas-cherryhomes/`](../../characters/thomas-cherryhomes/) |
-| **Paired show** | [`../lars-brinkhoff/`](../lars-brinkhoff/) |
+| **Character** | [`../../characters/thomas-cherryhomes/`](../../characters/thomas-cherryhomes/README.md) |
+| **Paired show** | [`../lars-brinkhoff/`](../lars-brinkhoff/README.md) |
 | **FujiNet** | https://fujinet.online · https://github.com/FujiNetWIFI/fujinet-firmware |
 | **Docs** | https://fujinetwifi.github.io/fujinet-docs/ |
 | **Fujisan emulator** | https://github.com/pedgarcia/fujisan |

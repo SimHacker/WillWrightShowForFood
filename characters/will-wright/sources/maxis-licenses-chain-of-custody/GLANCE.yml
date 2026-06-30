@@ -1,0 +1,43 @@
+# MAXIS LICENSES — GLANCE (nav + metadata SSOT)
+# Interface: CARD.yml
+
+title: Maxis / EA Licenses — Chain of Custody
+iconic: "📜🔗 EA"
+description: |
+  Paper trail for SimCity Classic → Micropolis and Sims fan-tool distribution. EA↔OLPC contracts,
+  GPL Exhibit A, Transmogrifier click-through terms. Canonical PDFs mirror in don-hopkins/career/contracts/.
+
+keywords:
+  - maxis licenses
+  - ea contracts
+  - chain of custody
+  - olpc gpl
+  - transmogrifier license
+  - simcity classic
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  siblings:
+    - ../simcity-open-source-saga/
+    - ../simcity-unix-rights-history/
+    - ../2013-tale-of-two-simcities/
+
+read_order:
+  - README.md
+  - article.md
+  - LICENSES-INDEX.yml
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Sources room" }
+  siblings:
+    - { path: ../simcity-open-source-saga/GLANCE.yml, why: "Narrative email harvest" }
+  across:
+    - { path: ../../../don-hopkins/career/contracts/README.md, why: "Canonical PDF mirror" }
+    - { path: ../../../don-hopkins/career/simcity-lineage.yml, why: "Timeline girder" }
+  deep:
+    - { path: article.md, why: "Indexed table + show angles" }
+    - { path: CARD.yml, why: "Trace-paper-trail interface" }

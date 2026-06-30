@@ -1,0 +1,279 @@
+# Maxis & The Sims — people (verified public roster)
+#
+# Curated, respectfully attributed. NOT the full private personnel list.
+# Spelling verified via MobyGames, interviews, Wikipedia, Gamasutra/PCGamesN, etc.
+
+meta:
+  status: verified_public_projection
+  updated: 2026-06-29
+  epithets_source: "Don Hopkins to Jess Bird (BBC documentary research), Apr 2025 — private canonical in DonHopkins/research/../sources/"
+  policy: |
+    Generous about "important" — founders, Sims core team, key designers, voices, studio leadership.
+    Nicknames and Don's team epithets when documented (Jess Bird email, interviews, primary sources).
+    Full raw roster stays private.
+
+groups:
+  founders_and_studio:
+    label: Founders & studio leadership
+    people:
+      - id: will-wright
+        name: Will Wright
+        role: Co-founder, Maxis; designer of SimCity and The Sims
+        verify: https://www.mobygames.com/person/925/will-wright/
+        character: ../../../will-wright/
+
+      - id: jeff-braun
+        name: Jeff Braun
+        role: CEO & Chairman, Maxis (1987–1997); later EA SVP
+        verify: https://www.mobygames.com/person/924/jeff-braun/
+
+      - id: lucy-bradshaw
+        name: Lucy Bradshaw
+        role: VP / Executive Producer, Maxis (The Sims era through 2015)
+        verify: https://www.mobygames.com/person/923/lucy-bradshaw/
+
+      - id: luc-barthelet
+        name: Luc Barthelet
+        epithet: "The Mathamaticagician"
+        role: General Manager, Maxis (1997–2004)
+        verify: https://www.mobygames.com/person/922/luc-barthelet/
+
+      - id: bing-gordon
+        name: Bing Gordon
+        role: EA Chief Creative Officer; long-time Maxis champion
+        verify: https://www.mobygames.com/person/921/bing-gordon/
+
+  the_sims_core_team:
+    label: The Sims core team (1998–2002)
+    note: "Building-the-Sims reunion band — see ../../../process/old-band-back-together.yml"
+    people:
+      - id: jamie-doornbos
+        name: Jamie Doornbos
+        epithet: "Soul of the Sims"
+        role: Lead programmer; SimAntics & Edith architect
+        verify: https://www.mobygames.com/person/606489/jamie-doornbos/
+        character: ../../../jamie-doornbos/
+
+      - id: don-hopkins
+        name: Don Hopkins
+        role: Programmer; UI, pie menus, SimAntics tools, Transmogrifier, inclusivity advocacy
+        verify: https://donhopkins.com/home/resume.html
+        character: ../../../don-hopkins/
+
+      - id: patrick-barrett
+        name: Patrick J. Barrett III
+        also: Patrick Barrett
+        epithet: "Sim Brains"
+        role: SimAntics engineer; vast majority of object & Sim behavior code
+        verify: https://www.mobygames.com/person/70265/patrick-j-barrett-iii/
+        character: ../../../patrick-barrett/
+
+      - id: eric-bowman
+        name: Eric Bowman
+        nickname: Bobo
+        role: Programmer ("one of the three amigos" on Sims 1.0)
+        verify: https://www.mobygames.com/person/8357/eric-bowman/
+        character: ../../../eric-bowman/
+
+      - id: eric-hedman
+        name: Eric Hedman
+        nickname: Irk
+        role: Lead character animator (vitaboy pipeline)
+        verify: https://www.pcgamesn.com/the-sims/the-sims-gender-sexuality
+        character: ../../../eric-hedman/
+
+      - id: jim-mackraz
+        name: Jim Mackraz
+        epithet: "Tricky Bit"
+        role: CTG Team Leader; Will Whisperer; shipped The Sims
+        verify: https://www.mobygames.com/person/8363/jim-mackraz/
+        character: ../../../jim-mackraz/
+
+      - id: chris-trottier
+        name: Chris Trottier
+        epithet: "Design by Accretion"
+        role: Lead Designer, The Sims
+        verify: https://www.mobygames.com/person/8377/chris-trottier/
+        character: ../../../chris-trottier/
+
+      - id: claire-curtin
+        name: Claire Curtin
+        epithet: "Second Sims Mom"
+        role: Designer; Simlish co-creator; voiceover direction
+        verify: https://www.polygon.com/22891664/the-sims-similish-maxis-studios-electronic-arts-ea/
+        character: ../../../claire-curtin/
+
+      - id: roxy-wolosenko
+        name: Roxana Wolosenko
+        nickname: Roxy
+        epithet: "First Sims Mom"
+        role: Lead designer, The Sims; gender-neutral gameplay champion
+        verify: https://blog.23andme.com/articles/two-women-tech-pioneers-look-back
+        note: "Legal first name Roxana; universally known as Roxy"
+
+      - id: kana-ryan
+        name: Kana Ryan
+        epithet: "Big Cat Herder"
+        role: Producer / Executive Producer, Maxis Studio
+        verify: https://www.pcgamesn.com/the-sims/the-sims-gender-sexuality
+
+      - id: jami-becker
+        name: Jami Becker
+        epithet: "Cornicopious Creativity"
+        role: Object wrangler; assets & skins; connected BBC documentary research
+        verify: https://www.mobygames.com/search/?q=Jami+Becker
+
+      - id: chris-baena
+        name: Chris Baena
+        role: Associate Producer, The Sims & Livin' Large
+        verify: https://www.mobygames.com/person/8376/chris-baena/
+
+      - id: jason-shankel
+        name: Jason Shankel
+        role: Senior Software Engineer, Maxis (1994–2009)
+        verify: https://www.mobygames.com/person/8375/jason-shankel/
+        character: ../../../jason-shankel/
+
+  design_art_audio:
+    label: Design, art & audio
+    people:
+      - id: ocean-quigley
+        name: Ocean Quigley
+        epithet: Holodeck
+        role: Art Director; hybrid 2D+Z/3D rendering; The Sims visual identity
+        verify: https://www.mobygames.com/person/166/ocean-quigley/
+
+      - id: jenny-martin
+        name: Jenny Martin
+        role: Art Director, Maxis; Sims character look
+        verify: https://www.will-wright.com/willshistory11.php
+
+      - id: charles-london
+        name: Charles London
+        epithet: "Make It Blue"
+        role: Lead artist; early Sims characters (Edith & Archie Bunker)
+        verify: https://www.will-wright.com/willshistory11.php
+
+      - id: bob-king
+        name: Bob King
+        role: Lead Artist, The Sims; later Spore art/animation director
+        verify: https://www.mobygames.com/person/8370/bob-king/
+
+      - id: jenna-chalmers
+        name: Jenna Chalmers
+        role: Game Designer, Maxis (The Sims era)
+        verify: https://www.mobygames.com/person/8371/jenna-chalmers/
+
+      - id: michael-perry
+        name: Michael Perry
+        role: Design Director / Creative Director, Maxis
+        verify: https://www.mobygames.com/person/8372/michael-perry/
+
+      - id: robin-hunicke
+        name: Robin Hunicke
+        role: Designer, The Sims 2 Open for Business; later MySims lead
+        verify: https://www.mobygames.com/person/8373/robin-hunicke/
+
+      - id: chaim-gingold
+        name: Chaim Gingold
+        role: Designer, Spore; SimCity historian (Building SimCity, MIT Press)
+        verify: https://www.mobygames.com/person/8374/chaim-gingold/
+        character: ../../../chaim-gingold/
+
+      - id: jerry-martin
+        name: Jerry Martin
+        epithet: "Boom Bam Boom"
+        role: Studio Audio Director; composer, The Sims & SimCity 3000
+        verify: https://www.jerrymartinmusic.com/
+        character: ../../../jerry-martin/
+
+      - id: rob-kauker
+        name: Robi Kauker
+        role: Audio Lead; Simlish production (with Claire Curtin)
+        verify: https://www.simsnetwork.com/news/2004/07/29/a-quick-bit-of-simlish-history
+
+  simlish_voices:
+    label: Simlish — original voice actors
+    people:
+      - id: gerri-lawlor
+        name: Gerri Lawlor
+        role: Female Sim voices; Simlish co-creator (with Stephen Kearin)
+        verify: https://en.wikipedia.org/wiki/Gerri_Lawlor
+
+      - id: stephen-kearin
+        name: Stephen Kearin
+        role: Male Sim voices; Simlish co-creator
+        verify: https://www.thesimswiki.com/wiki/Voice
+
+  tools_and_content:
+    label: Tools, content & community bridge
+    people:
+      - id: andrew-willmott
+        name: Andrew Willmott
+        role: Sims 2 animation pipeline; vitaboy lineage; SimCity (2013) engineer
+        verify: https://www.andrewwillmott.com/main
+        note: "Praised Don's code comments in vitaboy inheritance chain"
+
+      - id: sean-baity
+        name: Sean Baity
+        epithet: "Social Commentary"
+        role: Object names & descriptions; thanked in Transmogrifier docs
+        verify: https://thesimstransmogrifier.com/TransmogrifierDocumentation/
+
+  later_sims_leadership:
+    label: Later Sims studio leadership
+    people:
+      - id: rachel-franklin
+        name: Rachel Rubin Franklin
+        also: Rachel Franklin
+        nickname: SimGuruRachel
+        role: VP/GM, The Sims Studio & Maxis (2011–2016)
+        verify: https://techcrunch.com/2016/10/11/facebook-social-virtual-reality/
+
+      - id: lyndsay-pearson
+        name: Lyndsay Pearson
+        role: GM & Executive Producer, The Sims (2016–present)
+        verify: https://www.ea.com/teams/maxis
+
+      - id: tim-letourneau
+        name: Tim LeTourneau
+        role: VP/GM, The Sims Studio (2008–2011)
+        verify: https://www.pcgamesn.com/the-sims/the-sims-developers-family-maxis
+
+      - id: rod-humble
+        name: Rod Humble
+        role: Studio head / EVP context (The Sims 2 era)
+        verify: https://www.thesimswiki.com/wiki/Voice
+
+  influences:
+    label: Influences & legends (not all Maxis staff)
+    people:
+      - id: scott-mccloud
+        name: Scott McCloud
+        epithet: "Empathy Engine"
+        role: Understanding Comics; masking & empathy in The Sims art direction
+        verify: https://en.wikipedia.org/wiki/Scott_McCloud
+        character: ../../../scott-mccloud/
+
+      - id: ken-perlin
+        name: Ken Perlin
+        epithet: "Doctor Improv"
+        role: Procedural character animation & noise; Sims consultant
+        verify: https://en.wikipedia.org/wiki/Ken_Perlin
+        character: ../../../ken-perlin/
+
+      - id: danielle-bunten-berry
+        name: Danielle Bunten Berry
+        role: Designer of M.U.L.E.; profound influence on Will Wright & multiplayer sims
+        verify: https://en.wikipedia.org/wiki/Dani_Bunten_Terry
+        character: ../../../danielle-bunten-berry/
+
+      - id: nicole-lazzaro
+        name: Nicole Lazzaro
+        role: Player-experience researcher; consulted on The Sims emotion design
+        verify: https://www.nicolelazzaro.com/
+
+see_also:
+  - ../../../process/old-band-back-together.yml
+  - ../bibliography/HIGHLIGHTS.md
+  - building-the-sims show seed in ../../../repo-shows/REPO-SHOWS.yml

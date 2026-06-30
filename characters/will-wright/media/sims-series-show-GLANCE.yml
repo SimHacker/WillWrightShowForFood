@@ -1,0 +1,54 @@
+# ASSETS — GLANCE (nav + metadata SSOT)
+# Interface: CARD.yml
+
+title: "Show Assets & Gallery"
+iconic: "🌸🖼️"
+description: |
+  Flower-Child credits icon (show mascot) plus sims-series gallery — screenshots, visual essays,
+  agitprop tied to sources and catalogs.
+
+keywords:
+  - flower child
+  - credits icon
+  - sims-series
+  - screenshots
+  - transmogrifier story
+  - agitprop
+  - gallery
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  children:
+    - sims-series-README.md
+  siblings:
+    - ../sources/
+    - ../../../catalogs/
+    - ./
+
+read_order:
+  - README.md
+  - sims-series-README.md
+  - sims-series-procedural-rhetoric-inclusion-agitprop.md
+  - sims-series-transmogrifier-story.md
+
+structure:
+  mascot: DonHopkinsSimsCreditsIcon.jpg
+  hub: sims-series-README.md
+  themes: [agitprop, catalogs, simantics, people-and-events]
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Show root" }
+  siblings:
+    - { path: ../sources/GLANCE.yml, why: "Republishable articles" }
+    - { path: ../../../catalogs/GLANCE.yml, why: "Catalog doors" }
+  children:
+    - { path: sims-series-GLANCE.yml, why: "Deep gallery sniff" }
+  across:
+    - { path: ./README.md, why: "Will portraits (character scope)" }
+  deep:
+    - { path: README.md, why: "Where images live" }
+    - { path: CARD.yml, why: "Overlay / gallery interface" }

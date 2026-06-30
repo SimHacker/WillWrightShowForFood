@@ -28,7 +28,7 @@ Pair with Thomas Cherryhomes' FujiNet tree fort for emulated AI Lab × real retr
 | **This SETUP DNA** | https://raw.githubusercontent.com/SimHacker/WillWrightShowForFood/main/rigs/pdp10-maclisp-flair-lap.SETUP.md |
 | **Challenge** | [`pdp10-maclisp-drive`](../process/challenges/pdp10-maclisp-drive.yml) |
 | **Stack pointer** | [`pdp10-its-stack.yml`](../process/pdp10-its-stack.yml) |
-| **Lars Brinkhoff** | [`characters/lars-brinkhoff/`](../characters/lars-brinkhoff/) |
+| **Lars Brinkhoff** | [`characters/lars-brinkhoff/`](../characters/lars-brinkhoff/README.md) |
 
 ---
 

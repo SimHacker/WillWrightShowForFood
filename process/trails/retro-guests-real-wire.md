@@ -12,8 +12,8 @@ Emulated AI Lab meets FujiNet tree fort — guests who boot real stacks on air.
 
 | Stop | Why wander here |
 |------|-----------------|
-| [**Lars Brinkhoff**](../../characters/lars-brinkhoff/) | ITS restoration — PDP-10 MACLISP on air |
-| [**Thomas Cherryhomes**](../../characters/thomas-cherryhomes/) | FujiNet / IRATA — real Apple ][ on network |
+| [**Lars Brinkhoff**](../../characters/lars-brinkhoff/README.md) | ITS restoration — PDP-10 MACLISP on air |
+| [**Thomas Cherryhomes**](../../characters/thomas-cherryhomes/README.md) | FujiNet / IRATA — real Apple ][ on network |
 | [**lars-brinkhoff SHOW.yml**](../../repo-shows/lars-brinkhoff/SHOW.yml) | Guest show seed — gold-standard SETUP |
 | [**pdp10-maclisp-flair-lap.rig.yml**](../../rigs/pdp10-maclisp-flair-lap.rig.yml) | Example rig — flair lap on ITS |
 | [**pdp10-maclisp-flair-lap.SETUP.md**](../../rigs/pdp10-maclisp-flair-lap.SETUP.md) | Rig DNA — email this file alone |

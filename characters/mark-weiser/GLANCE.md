@@ -5,6 +5,6 @@
 - Xerox PARC **CTO**; tabs / pads / boards
 - **CHI'88 pie-menu paper** co-author with Don, Callahan, Shneiderman
 - Drummer, **Severe Tire Damage** — first band live on the Internet (1993)
-- Discussants: [Don Hopkins](../don-hopkins/), [Ben Shneiderman](../ben-shneiderman/), [Brad Myers](../brad-myers/)
+- Discussants: [Don Hopkins](../don-hopkins/README.md), [Ben Shneiderman](../ben-shneiderman/README.md), [Brad Myers](../brad-myers/README.md)
 
 Read next: [README](README.md) · [memorial](memorial.md) · [CHARACTER.yml](CHARACTER.yml)

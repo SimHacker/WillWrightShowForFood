@@ -22,7 +22,7 @@ decades of practice before this repo existed.
 - **event:** Will Wright — Interfacing to Microworlds (Winograd CS547, Stanford)
 ### Date
 
-- **artifact:** ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
+- **artifact:** ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
 - **note:** Don was in the room. The talk sent him to Maxis. A proto–Repo Show.
 
 - **long_arc:** Will and Don have talked for years about closing the loop: not just a talk about
@@ -339,5 +339,5 @@ anthology, tooling, guest show. No NDAs required to understand the shape.
 | [`showmaker-network.yml`](showmaker-network.yml) |
 | [`../skills/README.md`](../skills/README.md) |
 | [`https://github.com/SimHacker/moollm/tree/main/skills`](https://github.com/SimHacker/moollm/tree/main/skills) |
-| [`../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md`](../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) |
+| [`../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md`](../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) |
 | [`../README.md`](../README.md) |

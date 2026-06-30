@@ -20,18 +20,18 @@ conservation. His **constructivism** held that a child is not an empty vessel to
 active *builder* of understanding.
 
 That single idea is the bedrock beneath everything downstream in this repo. **[Seymour
-Papert](../seymour-papert/)** worked with Piaget in Geneva and turned constructiv*ism* into
+Papert](../seymour-papert/README.md)** worked with Piaget in Geneva and turned constructiv*ism* into
 construction*ism* — learning by making — which became **Logo**, **Scratch**, **OLPC**, and the
 build-to-learn spirit of open Micropolis. Piaget founded the **International Centre for Genetic
 Epistemology** in Geneva (1955) and wrote prolifically across psychology, philosophy, and education.
 
 We remember him by inviting the people who build on his developmental foundation:
-**[Alan Kay](../alan-kay/)**, **[Walter Bender](../walter-bender/)**, **[Brian Harvey](../brian-harvey/)**,
-**[Ken Kahn](../ken-kahn/)**.
+**[Alan Kay](../alan-kay/README.md)**, **[Walter Bender](../walter-bender/README.md)**, **[Brian Harvey](../brian-harvey/README.md)**,
+**[Ken Kahn](../ken-kahn/README.md)**.
 
 We celebrate his documented public work; we do not speak as him.
 
-**Lineage:** Piaget → [Seymour Papert](../seymour-papert/) → [Marvin Minsky](../marvin-minsky/)'s AI
+**Lineage:** Piaget → [Seymour Papert](../seymour-papert/README.md) → [Marvin Minsky](../marvin-minsky/README.md)'s AI
 Lab → the show's constructionist spine. See the
 [constructionist-lineage trail](../../process/trails/constructionist-lineage.md).
 

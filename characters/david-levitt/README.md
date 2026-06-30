@@ -12,9 +12,9 @@ Conway's** pioneering **VLSI design course** — the Mead–Conway moment — al
 Steele, and other names that would become legends.
 
 A young, wild-haired David demoing his AI music-improvisation system survives in
-[Cynthia Solomon](../cynthia-solomon/)'s YouTube treasure trove.
+[Cynthia Solomon](../cynthia-solomon/README.md)'s YouTube treasure trove.
 
 ## Why a Repo Show
 
 A conversation about music and the systems behind it — improvisation, generation, and the ideas
-underneath — paired with composer [Jerry Martin](../jerry-martin/) for **music + theory**.
+underneath — paired with composer [Jerry Martin](../jerry-martin/README.md) for **music + theory**.

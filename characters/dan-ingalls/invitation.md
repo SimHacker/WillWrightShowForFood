@@ -19,7 +19,7 @@ following through to working code and credited ideas in public.
 Fabrik, and the Lively Kernel — and how "the system you can change while it runs" connects to
 today's browser-native Smalltalk (SqueakJS, Caffeine) and AI-assisted live coding.
 
-**Materials:** [`repo-shows/dan-ingalls/`](../../repo-shows/dan-ingalls/) · [Correspondence digest](correspondence.yml)
+**Materials:** [`repo-shows/dan-ingalls/`](../../repo-shows/dan-ingalls/README.md) · [Correspondence digest](correspondence.yml)
 
 Browse without a GitHub account — start at the [README](https://github.com/SimHacker/WillWrightShowForFood).
 

@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** Designer & historian — Building SimCity, reverse diagrams
 
-**Materials:** [`repo-shows/chaim-gingold/`](../../repo-shows/chaim-gingold/)
+**Materials:** [`repo-shows/chaim-gingold/`](../../repo-shows/chaim-gingold/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

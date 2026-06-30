@@ -2,10 +2,10 @@
 
 *Show seed. Topic-flexible, source-grounded. Scott may shape, delay, or decline anything.*
 
-**Guest:** [Scott Draves ("Spot")](../../characters/scott-draves/) — software artist; Electric
+**Guest:** [Scott Draves ("Spot")](../../characters/scott-draves/README.md) — software artist; Electric
 Sheep; Fractal Flame; Dreams in High Fidelity; Infinidream.
-**Host:** Don Hopkins. **Dream co-guests:** [Brian Eno](../../characters/brian-eno/),
-[Will Wright](../../characters/will-wright/).
+**Host:** Don Hopkins. **Dream co-guests:** [Brian Eno](../../characters/brian-eno/README.md),
+[Will Wright](../../characters/will-wright/README.md).
 
 ## The pitch
 
@@ -29,7 +29,7 @@ beauty from simple rules, a crowd of minds, and a lot of machines?
 | What | Link |
 |------|------|
 | **The invitation** | [`invitation.md`](invitation.md) |
-| **Scott (character)** | [`characters/scott-draves/`](../../characters/scott-draves/) |
+| **Scott (character)** | [`characters/scott-draves/`](../../characters/scott-draves/README.md) |
 | **Timeline from the archive** | [`correspondence.yml`](../../characters/scott-draves/correspondence.yml) |
 | **Electric Sheep** | https://electricsheep.org/ |
 | **Infinidream** (2026) | https://infinidream.ai/ |
@@ -41,4 +41,4 @@ beauty from simple rules, a crowd of minds, and a lot of machines?
 If schedules align, a four-way reunion — **Don + Scott + Brian Eno + Will Wright** — on generative
 art, ambient/generative music, simulation, and AI. Brian is best reached through **Will** (his
 Long Now co-speaker) and **Scott** (who hosted him in 2006). See
-[`characters/brian-eno/`](../../characters/brian-eno/).
+[`characters/brian-eno/`](../../characters/brian-eno/README.md).

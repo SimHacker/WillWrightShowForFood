@@ -16,6 +16,6 @@ Eric is an independent artist — go subscribe and follow:
 
 There are easily several Repo Shows' worth of stories here.
 
-[Invitation](invitation.md) · [Show seed](../../repo-shows/eric-hedman/) · more in [`CHARACTER.yml`](CHARACTER.yml)
+[Invitation](invitation.md) · [Show seed](../../repo-shows/eric-hedman/README.md) · more in [`CHARACTER.yml`](CHARACTER.yml)
 
 Subject may request correction or removal anytime.

@@ -8,7 +8,7 @@
 |-------|------|
 | Sniff | [`GLANCE.yml`](GLANCE.yml) |
 | Registry | [`INDEX.yml`](INDEX.yml) |
-| **Repo Show (live)** | [`repo-show/`](repo-show/) — GLANCE → CARD → SKILL → README |
+| **Repo Show (live)** | [`repo-show/`](repo-show/README.md) — GLANCE → CARD → SKILL → README |
 
 ## Pipeline
 

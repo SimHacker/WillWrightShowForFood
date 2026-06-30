@@ -7,7 +7,7 @@
 | [`CHARACTER.yml`](CHARACTER.yml) | MOOLLM body + `media:` paths |
 | [`questions.yml`](questions.yml) | TicketPR questions |
 | [`CARD.yml`](CARD.yml) | Stream abilities |
-| [`images/`](images/) | headshot, avatar (128²), with-guest |
+| [`images/`](images/README.md) | headshot, avatar (128²), with-guest |
 
 ## Images
 
@@ -18,4 +18,4 @@
 | `images/with-guest.png` | Will + Slats at SFC workshop |
 | `images/with-guest-crew.png` | Oakland crew + Will (balcony group shot) |
 
-Canonical bot: [`../../../../characters/slats/`](../../../../characters/slats/)
+Canonical bot: [`../../../../characters/slats/`](../../../../characters/slats/README.md)

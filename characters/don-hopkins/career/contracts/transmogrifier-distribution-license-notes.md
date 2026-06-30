@@ -5,9 +5,9 @@ Two distinct legal layers:
 1. **EA Tools End User License** — click-through shown to downloaders. ✅ In repo: [`transmogrifier-ea-tools-eula.txt`](transmogrifier-ea-tools-eula.txt) (Wayback Dec 2004, harvested from Don's `big-prompts.txt` IA cache).
 2. **Don's distributor agreement** — Maxis grant to Don Hopkins to host the installer on donhopkins.com only. **Not yet in repo** — summary below from renovation plan + Don memory.
 
-Summarized from Don's [Transmogrifier Renovation Plan](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright/sources/2004-02-05-transmogrifier-renovation-plan/article.md) (2004) and Drupal node-17 harvest.
+Summarized from Don's [Transmogrifier Renovation Plan](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/will-wright/sources/2004-02-05-transmogrifier-renovation-plan/article.md) (2004) and Drupal node-17 harvest.
 
-Wayback index: `DonHopkins/projects/willwrightshowforfood/research/sources/transmogrifier-wayback-INDEX.yml`
+Wayback index: `DonHopkins/projects/willwrightshowforfood/research/../../characters/will-wright/sources/transmogrifier-wayback-INDEX.yml`
 
 ---
 
@@ -64,4 +64,4 @@ Installer that **requires** agreement before install/run — so even unofficial 
 - [ ] Separate licenses for SimShow, RugOMatic, Simplifier, ShowNTell if distinct
 - [ ] RugOMatic $10 registration — revenue share or standalone product terms?
 
-**WWSFF:** [maxis-licenses-chain-of-custody](../../../repo-shows/will-wright/sources/maxis-licenses-chain-of-custody/)
+**WWSFF:** [maxis-licenses-chain-of-custody](../../../characters/will-wright/sources/maxis-licenses-chain-of-custody/README.md)

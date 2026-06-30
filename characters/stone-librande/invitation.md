@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** Game designer — one-page designs
 
-**Materials:** [`repo-shows/stone-librande/`](../../repo-shows/stone-librande/)
+**Materials:** [`repo-shows/stone-librande/`](../../repo-shows/stone-librande/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

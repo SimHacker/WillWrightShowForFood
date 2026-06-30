@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** Game designer — The Tower / SimTower, Yoot Tower, Seaman, Odama; founder of OPeNBooK (1993) & Vivarium (1996)
 
-**Materials:** [`repo-shows/yoot-saito/`](../../repo-shows/yoot-saito/)
+**Materials:** [`repo-shows/yoot-saito/`](../../repo-shows/yoot-saito/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** HCI researcher — UMD HCIL, direct manipulation, embedded/highlighted hyperlinks
 
-**Materials:** [`repo-shows/ben-shneiderman/`](../../repo-shows/ben-shneiderman/)
+**Materials:** [`repo-shows/ben-shneiderman/`](../../repo-shows/ben-shneiderman/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

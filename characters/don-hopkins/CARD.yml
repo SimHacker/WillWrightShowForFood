@@ -1,5 +1,8 @@
 # CARD — Don Hopkins (public portrayal)
 # NOT the person. Schema: ../../schemas/guest-skills-card.yml
+# Nav + metadata: GLANCE.yml
+
+glance: GLANCE.yml
 
 room:
   id: don-hopkins
@@ -39,11 +42,11 @@ see_also:
   why: How Don sounds in docs and HN comments
 - path: portrayal/heroes.yml
   why: Mentors — credit where due
-- path: ../don-philahue/
+- path: ../don-philahue/README.md
   why: Orchestrator avatar on stream
-- path: ../slats/
+- path: ../slats/README.md
   why: Robot waiter Don programmed — now drag race judge
-- path: ../will-wright/
+- path: ../will-wright/README.md
   why: Flagship guest — shared SFC + Sims lineage
 - path: ../../process/live-repo.yml
   why: WWSFF is live bud

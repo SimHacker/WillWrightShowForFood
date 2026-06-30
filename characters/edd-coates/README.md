@@ -4,6 +4,6 @@ Invitation portrayal — **not** Edd Coates. [Standards](../../schemas/portrayal
 
 **Field:** UI Artist, Digital Designer, Creator of the Game UI Database
 
-[Invitation](invitation.md) · [Show seed](../../repo-shows/edd-coates/)
+[Invitation](invitation.md) · [Show seed](../../repo-shows/edd-coates/README.md)
 
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

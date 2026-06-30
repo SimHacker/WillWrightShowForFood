@@ -1,5 +1,7 @@
 # A Repo Show with Will Wright
 
+*Sniff:* [`CARD.yml`](CARD.yml) · [`GLANCE.yml`](GLANCE.yml) · [`ROOM.yml`](ROOM.yml) · [`SIMULATION.yml`](SIMULATION.yml)
+
 *The kickoff. Topic-less by design — **Will Wright is the topic.** The other
 shows (the simulation effect, Proxi, original SimCity intent, post-mortems…)
 flow out of this one.*
@@ -8,11 +10,29 @@ flow out of this one.*
 
 **Browse in any order → [`BROWSE.md`](BROWSE.md)** *(Slats first if you feel like it)* 🤖⛪
 
-![The User Interface Flower Child — Don's Sims credits icon](assets/DonHopkinsSimsCreditsIcon.jpg)
+![The User Interface Flower Child — Don's Sims credits icon](../../characters/will-wright/media/DonHopkinsSimsCreditsIcon.jpg)
 
 *(The hosting spirit: the "User Interface Flower Child" — Don's actual Sims
 credits icon. A robed hacker-wizard reading by a lava lamp, under a wall of
 stars, flowers at his feet. Cozy, psychedelic, generous. Not a suit.)*
+
+## Navigation
+
+*(Skeleton: [`GLANCE.yml`](GLANCE.yml) — human links target README overlay)*
+
+| Room | → | Why |
+|------|---|-----|
+| **Up** | [repo-shows](../README.md) | All planted shows |
+| **Evidence** | [sources](../../characters/will-wright/sources/README.md) | Essays, mail, prototypes |
+| **Centerpiece** | [1996 Winograd](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) | THE seed artifact |
+| **Catalogs** | [catalogs](../../catalogs/README.md) | UCC brands · [Steam first](../../catalogs/get-the-sims-on-steam.md) |
+| **Audience** | [audience](audience/README.md) | TicketPR roster — join before air |
+| **Media** | [media](../../characters/will-wright/media/README.md) | Flower Child + sims-series gallery |
+| **Venue** | [venue](venue/README.md) | Theater map · balconies 🤡💀 |
+| **Guest** | [portrayal](../../characters/will-wright/README.md) | Will's invitation + CARD |
+| **Siblings** | [terry-winograd](../terry-winograd/README.md) · [drew-carey](../drew-carey/README.md) · [game-bridge](../game-bridge-proxi-sims.yml) | Related shows |
+
+**Suggested read order:** README → BROWSE → 1996 → sources → catalogs → audience → sims-series gallery → venue → invitation *(full list in GLANCE)*
 
 ## What this is
 
@@ -26,26 +46,8 @@ knowledge; the game is the proof. *Show, don't tell.*
 **Intro narration** (Micropolis + this repo + wedding playset + proof it worked):
 [**INTRO-NARRATIVE.md**](INTRO-NARRATIVE.md)
 
-**Content catalogs** (SimFreaks, SimSlice, SimProv, Zombie Sims + Micropolis Home platform):
-[**catalogs/**](catalogs/) · [`catalogs/README.md`](catalogs/README.md) · [`catalogs/GLANCE.yml`](catalogs/GLANCE.yml)
-
-**Primary sources** (1996 talk, open-source saga, Transmogrifier, prototypes):
-[**sources/**](sources/) · [`sources/README.md`](sources/README.md) · [`sources/GLANCE.yml`](sources/GLANCE.yml)
-
-**Audience & TicketPRs** (copy examples, join before air):
-[**audience/**](audience/) · [`audience/README.md`](audience/README.md) · [`audience/GLANCE.yml`](audience/GLANCE.yml)
-
-**Assets & screenshots** (Flower-Child icon, sims-series gallery):
-[**assets/**](assets/) · [`assets/README.md`](assets/README.md) · [`assets/sims-series/`](assets/sims-series/)
-
-**Will's photo galleries:** [`../../characters/will-wright/media/`](../../characters/will-wright/media/)
-
-**Venue map** (MOOLLM rooms, balcony seats):
-[`venue/README.md`](venue/README.md) · [`venue/GLANCE.yml`](venue/GLANCE.yml)
-
-**Guest portrayal:** [`../../characters/will-wright/`](../../characters/will-wright/) · [`GLANCE.yml`](../../characters/will-wright/GLANCE.yml) Will's 1996 Stanford talk is the anchor; Don and Will have discussed
-a living microworld repo since then. This kickoff is the **public apex seed** —
-see [`../../process/VISION.md`](../../process/VISION.md) (ambition, not a production promise).
+Will's 1996 Stanford talk is the anchor; Don and Will have discussed a living microworld repo since then.
+This kickoff is the **public apex seed** — see [`../../process/VISION.md`](../../process/VISION.md) (ambition, not a production promise).
 
 ## Why topic-less
 
@@ -70,7 +72,7 @@ he pulls become the season — each one a future show. (See `episodes.yml`.)
 See **[`../../process/repo-show-format.yml`](../../process/repo-show-format.yml)** — canonical
 definition (HN → RTFR → Repo Man → **TicketPR** → Don Philahue → cauldron → skills + Cursor).
 
-**Audience:** submit a [**TicketPR**](audience/README.md) — copy [`../../_TEMPLATE/audience/`](../../_TEMPLATE/audience/) for MOOLLM character stack + [`CHARACTER.md`](../../_TEMPLATE/audience/CHARACTER.md). Minimum: `questions.yml`.
+**Audience:** submit a [**TicketPR**](audience/README.md) — copy [`../../_TEMPLATE/audience/`](../../_TEMPLATE/audience/README.md) for MOOLLM character stack + [`CHARACTER.md`](../../_TEMPLATE/audience/CHARACTER.md). Minimum: `questions.yml`.
 
 Short version: RTFR on **your rig** (AI optional). Man-vs-machine competitions welcome.
 Repo Man guest; audience TicketPRs + issues; Philahue harvests and wrangles live; cauldron → breed techniques via git.
@@ -86,16 +88,16 @@ Consent per representation-ethics: this is an invitation, not an assumption.
 
 - **`BROWSE.md`** — Will's landing page: click anything in any order (Slats up top).
 - **`INTRO-NARRATIVE.md`** — Micropolis + Repo Show mapping, wedding playset, proof-of-prior-art, agitprop framing.
-- **`catalogs/`** — [`catalogs/README.md`](catalogs/README.md) · [`GLANCE.yml`](catalogs/GLANCE.yml)
-- **`sources/`** — [`sources/README.md`](sources/README.md) · [`GLANCE.yml`](sources/GLANCE.yml) · [complete slug index](sources/README.md#complete-slug-index)
+- **`../../catalogs/`** — [`../../catalogs/README.md`](../../catalogs/README.md) · [`get-the-sims-on-steam.md`](../../catalogs/get-the-sims-on-steam.md) · [`GLANCE.yml`](../../catalogs/GLANCE.yml)
+- **`../../characters/will-wright/sources/`** — [`../../characters/will-wright/sources/README.md`](../../characters/will-wright/sources/README.md) · [`GLANCE.yml`](../../characters/will-wright/sources/GLANCE.yml) · [complete slug index](../../characters/will-wright/sources/README.md#complete-slug-index)
 - `SHOW.yml` — the show instance (inherits from the SHOW skill).
 - **`audience/`** — [`audience/README.md`](audience/README.md) · [`GLANCE.yml`](audience/GLANCE.yml)
-- **`assets/`** — [`assets/README.md`](assets/README.md) · [`sims-series/`](assets/sims-series/)
+- **`../../characters/will-wright/media/`** — [`../../characters/will-wright/media/README.md`](../../characters/will-wright/media/README.md) · [`sims-series-README.md`](../../characters/will-wright/media/sims-series-README.md)
 - **`venue/`** — [`venue/README.md`](venue/README.md) · [`GLANCE.yml`](venue/GLANCE.yml)
 - `invitation.md` — the markdown invitation email (draft).
 - `slats-reincarnation.yml` — **RoboResurrection** quest (optional show segment).
 - `episodes.yml` — the kickoff + the topical episodes that flow from it.
-- `assets/` — the Flower-Child icon.
+- `../../characters/will-wright/media/` — the Flower-Child icon.
 
 ---
 
@@ -109,3 +111,7 @@ This show is stop #1–2 on the **guest_will** and **player** playlists. Full ma
 | **Player** | [playlist](../../process/entryways/player.md) | 1996 talk first — no git |
 | **constructionist_lineage** | [trail](../../process/trails/constructionist-lineage.md) | 1996 → this show → Micropolis open lineage |
 | **All doorways** | [ENTRYWAYS.md](../../ENTRYWAYS.md) · [TRAILS.md](../../TRAILS.md) | watcher · hacker · AI · retro · educator · producer · publisher |
+
+---
+
+*Raw directory:* [browse files in this folder](./)

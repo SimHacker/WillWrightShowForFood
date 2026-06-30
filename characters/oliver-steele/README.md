@@ -4,7 +4,7 @@ Invitation portrayal — **not** Oliver Steele. [Standards](../../schemas/portra
 
 **Field:** Chief Software Architect of Laszlo Systems (designed LZX / OpenLaszlo); instance-first & reactive programming; tools for creativity & learning
 
-[Invitation](invitation.md) · [Show seed](../../repo-shows/openlaszlo/) · [CARD](CARD.yml)
+[Invitation](invitation.md) · [Show seed](../../repo-shows/openlaszlo/README.md) · [CARD](CARD.yml)
 
 As **Chief Software Architect at Laszlo Systems** (2002–2007), Oliver designed the **LZX** XML
 interface language, implemented its XML + JavaScript compilers and runtime, and launched the

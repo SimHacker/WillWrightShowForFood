@@ -1,5 +1,8 @@
 # CARD — Will Wright (public portrayal)
 # NOT the person. Schema: ../../schemas/guest-skills-card.yml
+# Nav + metadata: GLANCE.yml
+
+glance: GLANCE.yml
 
 room:
   id: will-wright
@@ -182,13 +185,13 @@ see_also:
   why: Bio girder — invitation status
 - path: invitation.md
   why: Public invitation document (short)
-- path: ../../repo-shows/will-wright/
+- path: ../../repo-shows/will-wright/README.md
   why: Long invitation drafts (sent skyscraper + opus + gpt55)
 - path: CARD.md
   why: Human-readable trading card
 - path: ../../repo-shows/will-wright/BROWSE.md
   why: Wander landing — start anywhere
-- path: ../../repo-shows/will-wright/
+- path: ../../repo-shows/will-wright/README.md
   why: Show hub — SHOW.yml, episodes, 1996 sources
 - path: ../../process/entryways/guest-will.md
   why: Guest playlist — ordered 1..8

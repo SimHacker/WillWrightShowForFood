@@ -1,0 +1,34 @@
+# ROOM — Will Wright flagship show (episode root). MOOLLM room node.
+# Labels: CARD.yml · Structural sniff: GLANCE.yml
+
+room:
+  id: will-wright-show
+  name: "A Repo Show with Will Wright"
+  type: show_root
+  description: |
+    Flagship planted Repo Show — topic-less by design. Subdirectories are rooms you can cd into;
+    each carries its own CARD/GLANCE advertisements. The 1996 Winograd source is the gravitational center.
+
+exits:
+  north: ../../characters/will-wright/sources/              # evidence — essays, mail, prototypes
+  east: audience/              # TicketPR roster — join before air
+  south: venue/                # theater map — seats, balcony, mic
+  west: ../../catalogs/              # UCC brands + Micropolis Home
+  up: ../../characters/will-wright/   # guest portrayal + media galleries
+  down: ../../characters/will-wright/media/                # Flower-Child icon + sims-series gallery
+  meta: ../../process/         # Repo Show constitution + protocols
+  invite: invitation.md
+
+contains:
+  - SHOW.yml
+  - SEGMENTS.yml
+  - episodes.yml
+  - sims-play-along-narration.yml
+  - slats-reincarnation.yml
+
+see_also:
+  - CARD.yml
+  - GLANCE.yml
+  - SIMULATION.yml
+  - venue/VENUE.yml
+  - ../../process/repo-show-format.yml#placement_constitution

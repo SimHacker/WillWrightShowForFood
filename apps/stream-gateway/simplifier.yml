@@ -44,8 +44,8 @@ targets:
   iff_pipeline:
     platform: "Future — native .iff read + sprite render replaces scrape for object previews."
     ties:
-      - "repo-shows/will-wright/catalogs/maxis/CATALOG.yml#pipeline"
-      - "repo-shows/will-wright/sources/2004-01-08-showntell-activex-preview/"
+      - "catalogs/maxis/CATALOG.yml#pipeline"
+      - "characters/will-wright/sources/2004-01-08-showntell-activex-preview/"
     note: "Simplifier remains accessibility + live-game fallback; not just TSO maze/money bot."
   generic:
     - "Any on-screen app: a game, a tool, a website."

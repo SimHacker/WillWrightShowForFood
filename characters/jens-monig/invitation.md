@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** Visual/block programming languages; architect + lead programmer of Snap! (Build Your Own Blocks). Morphic.js. Research Expert at SAP; consultant at UC Berkeley.
 
-**Materials:** [`repo-shows/jens-monig/`](../../repo-shows/jens-monig/)
+**Materials:** [`repo-shows/jens-monig/`](../../repo-shows/jens-monig/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

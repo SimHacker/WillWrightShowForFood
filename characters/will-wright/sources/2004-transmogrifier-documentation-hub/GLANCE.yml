@@ -1,0 +1,49 @@
+# TRANSMOGRIFIER HUB — GLANCE (nav + metadata SSOT)
+# Interface: CARD.yml
+
+title: Transmogrifier Documentation Hub
+iconic: "🔧 TMog"
+description: |
+  What Transmogrifier is and is not — scope limits, Edith/SimAntics boundary, unsupported-by-EA
+  policy. Wayback hub plus cluster of naming saga, Green Flamingo tutorial, glossary, magic cookies.
+
+keywords:
+  - transmogrifier
+  - simantics
+  - edith
+  - fan tools
+  - simfreaks
+  - green flamingo
+  - magic cookie
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  children:
+    - ../2000-05-17-transmogrifier-naming-saga/
+    - ../2004-transmogrifier-tutorial-green-flamingo/
+    - ../2004-transmogrifier-glossary/
+    - ../2004-transmogrifier-magic-cookie-registry/
+  siblings:
+    - ../1998-06-04-sims-steering-committee-demo/
+    - ../../../catalogs/simfreaks/
+
+read_order:
+  - README.md
+  - article.md
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Sources room" }
+  children:
+    - { path: ../2000-05-17-transmogrifier-naming-saga/README.md, why: "EA legal + Will/Chris emails" }
+    - { path: ../2004-transmogrifier-tutorial-green-flamingo/README.md, why: "Green Flamingo tutorial" }
+  across:
+    - { path: ../../media/sims-series-transmogrifier-story.md, why: "Show essay" }
+    - { path: ../../../catalogs/simfreaks/README.md, why: "Live UCC brands" }
+    - { path: ../1996-04-26-winograd-interfacing-to-microworlds/images/133-the-sims-transmogrifier-turial-making-a-green-flamingo.jpeg, why: "1996 gallery slide" }
+  deep:
+    - { path: article.md, why: "Wayback hub capture" }
+    - { path: CARD.yml, why: "Browse-cluster interface" }

@@ -2,8 +2,8 @@
 
 **Trails** are themed reading-paths through the repo — each one threads together the guests, shows,
 and ideas that share a lineage, so you can follow a single story across many characters instead of
-browsing person-by-person. They're the connective tissue between [`characters/`](../../characters/)
-and [`repo-shows/`](../../repo-shows/).
+browsing person-by-person. They're the connective tissue between [`characters/`](../../characters/README.md)
+and [`repo-shows/`](../../repo-shows/README.md).
 
 ## The trails
 
@@ -30,4 +30,4 @@ and [`repo-shows/`](../../repo-shows/).
 | [`the-card-game.md`](the-card-game.md) | The FLUXX / card-game thread. |
 | [`stupid-fun-forward.md`](stupid-fun-forward.md) | 🤯 Stupid Fun Club energy, carried forward. |
 
-See also [`../`](../) (process overview) and the [`INDEX.yml`](../INDEX.yml) registry.
+See also [`../`](../README.md) (process overview) and the [`INDEX.yml`](../INDEX.yml) registry.

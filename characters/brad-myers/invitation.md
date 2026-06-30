@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** CMU HCI — Garnet, PBD, visual programming taxonomies, UI software tools
 
-**Materials:** [`repo-shows/brad-myers/`](../../repo-shows/brad-myers/)
+**Materials:** [`repo-shows/brad-myers/`](../../repo-shows/brad-myers/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

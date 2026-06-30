@@ -35,8 +35,8 @@ connections:
 
 show_suggestions:
   - { seed: repo-shows/phil-salvador-simrefinery/SHOW.yml, what: "Finding SimRefinery + MBS deep dive" }
-  - { seed: repo-shows/will-wright/catalogs/maxis/, what: "Metadata catalog — business sims section" }
-  - { seed: repo-shows/will-wright/sources/2024-yoot-tower-open-source/, what: "VGHF formal source release for Yoot Tower" }
+  - { seed: catalogs/maxis/, what: "Metadata catalog — business sims section" }
+  - { seed: characters/will-wright/sources/2024-yoot-tower-open-source/, what: "VGHF formal source release for Yoot Tower" }
 
 sources:
   web:
@@ -44,6 +44,6 @@ sources:
     - https://obscuritory.com/sim/maxis-business-simulations/
     - https://arstechnica.com/gaming/2020/06/a-lost-maxis-sim-game-has-been-discovered-by-an-ars-reader-uploaded-for-all/
   wwsff:
-    - repo-shows/will-wright/sources/simrefinery-recovery/
-    - repo-shows/will-wright/sources/2024-yoot-tower-open-source/
-    - DonHopkins/research/sources/jess-bird-bbc-email-2025.yml
+    - characters/will-wright/sources/simrefinery-recovery/
+    - characters/will-wright/sources/2024-yoot-tower-open-source/
+    - DonHopkins/research/../../characters/will-wright/sources/jess-bird-bbc-email-2025.yml

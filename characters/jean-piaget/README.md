@@ -10,7 +10,7 @@ Memorial portrayal — **not** Jean Piaget. We *represent and discuss*; we never
 Swiss **genetic epistemologist** who described how children actively *build* knowledge through
 **stages** (sensorimotor → preoperational → concrete operational → formal operational), with
 **schemas**, **assimilation**, and **accommodation**. His **constructivism** is the developmental
-root beneath [Seymour Papert](../seymour-papert/)'s constructionism — and thus Logo, Scratch, OLPC,
+root beneath [Seymour Papert](../seymour-papert/README.md)'s constructionism — and thus Logo, Scratch, OLPC,
 and open Micropolis.
 
 Verifiable sources in `CHARACTER.yml`. Estate may request correction or removal anytime.

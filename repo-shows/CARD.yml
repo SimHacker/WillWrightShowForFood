@@ -23,7 +23,7 @@ see_also:
   - { path: INDEX.yml, why: "Show registry" }
   - { path: ../process/entryways/guest-will.md, why: "Will guest playlist" }
   - { path: ../process/entryways.yml, why: "All entryways yaml" }
-  - { path: will-wright/, why: "Flagship planted show" }
+  - { path: will-wright/README.md, why: "Flagship planted show" }
   - { path: micropolis-ai-drag-race.yml, why: "Drag race show seed" }
   - { path: lars-brinkhoff/SHOW.yml, why: "Retro guest show — make it so" }
   - { path: ../skills/repo-show/CARD.yml, why: "Orchestrator interface" }

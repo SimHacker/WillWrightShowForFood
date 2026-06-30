@@ -1,6 +1,6 @@
 # 🎭 The Venue
 
-*Sniff:* [`GLANCE.yml`](GLANCE.yml) · *Machine map:* [`VENUE.yml`](VENUE.yml) · *Balcony duo 🤡💀:* [`../audience/fictional-tragic-clown/`](../audience/fictional-tragic-clown/) · [`../audience/fictional-grim-reaper/`](../audience/fictional-grim-reaper/)
+*Sniff:* [`CARD.yml`](CARD.yml) · [`GLANCE.yml`](GLANCE.yml) · *Machine map:* [`VENUE.yml`](VENUE.yml) · *Balcony duo 🤡💀:* [`../audience/fictional-tragic-clown/`](../audience/fictional-tragic-clown/README.md) · [`../audience/fictional-grim-reaper/`](../audience/fictional-grim-reaper/README.md)
 
 The Repo Show theater, modeled as **navigable MOOLLM rooms** — because seats are a **scarce,
 tangible resource**, not just labels. Characters are *placed* by pointing their `location:` at a
@@ -33,3 +33,22 @@ celebrity audience members as they arrive — then we make real-time edits to th
 commit with a narrative message, and announce what just happened to the chat.
 
 See [`../performance-and-culture.yml`](../performance-and-culture.yml) · [`../../process/ticket-pr.yml`](../../process/ticket-pr.yml) · [`../audience/README.md`](../audience/README.md)
+
+---
+
+## Navigation
+
+*(Skeleton: [`GLANCE.yml`](GLANCE.yml))*
+
+| Room | → | Why |
+|------|---|-----|
+| **Up** | [show](../README.md) | Flagship episode root |
+| **Audience** | [audience](../audience/README.md) | Who sits where |
+| **Balcony 🤡** | [tragic clown](../audience/fictional-tragic-clown/README.md) | Left balcony |
+| **Balcony 💀** | [grim reaper](../audience/fictional-grim-reaper/README.md) | Right balcony |
+| **Orchestra pit** | [bot-slats](../audience/bot-slats/README.md) | Slats + Transmogrifier |
+| **Machine map** | [VENUE.yml](VENUE.yml) | Full room graph |
+
+↑ [show](../README.md) · [`GLANCE.yml`](GLANCE.yml) · [audience](../audience/README.md)
+
+*Raw directory:* [browse files in this folder](./)

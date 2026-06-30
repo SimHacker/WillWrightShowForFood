@@ -110,7 +110,7 @@ Transparency **is** the ethics. The joke works because everyone can RTFR.
 
 | Goal | Start from |
 |------|------------|
-| Virtual sim/object | [`../../will-wright/audience/fictional-bob-newbie/`](../../will-wright/audience/fictional-bob-newbie/) |
-| Bot + Will photos | [`../../will-wright/audience/bot-slats/`](../../will-wright/audience/bot-slats/) |
-| Cross-show heckler | [`../../will-wright/audience/fictional-tragic-clown/`](../../will-wright/audience/fictional-tragic-clown/) |
+| Virtual sim/object | [`../../will-wright/audience/fictional-bob-newbie/`](../../will-wright/audience/fictional-bob-newbie/README.md) |
+| Bot + Will photos | [`../../will-wright/audience/bot-slats/`](../../will-wright/audience/bot-slats/README.md) |
+| Cross-show heckler | [`../../will-wright/audience/fictional-tragic-clown/`](../../will-wright/audience/fictional-tragic-clown/README.md) |
 | Minimal fan TicketPR | [`questions.yml`](questions.yml) only |

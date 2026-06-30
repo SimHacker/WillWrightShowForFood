@@ -1,6 +1,6 @@
 # EXAMPLE TicketPR — Bob Newbie (presumed)
 
-Copy this directory to learn MOOLLM + images. See [`../../../_TEMPLATE/audience/`](../../../_TEMPLATE/audience/).
+Copy this directory to learn MOOLLM + images. See [`../../../_TEMPLATE/audience/`](../../../_TEMPLATE/audience/README.md).
 
 **With-guest trilogy** (Don Hopkins photoshops on EA promo):
 
@@ -10,4 +10,4 @@ Copy this directory to learn MOOLLM + images. See [`../../../_TEMPLATE/audience/
 | `images/with-guest-nose.png` | Sim picks Will's nose |
 | `images/with-guest-eating.png` | Will eats the sim |
 
-Sources: [`../../../../characters/will-wright/media/`](../../../../characters/will-wright/media/)
+Sources: [`../../../../characters/will-wright/media/`](../../../../characters/will-wright/media/README.md)

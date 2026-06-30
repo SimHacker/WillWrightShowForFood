@@ -1,25 +1,68 @@
-# WILL WRIGHT — GLANCE (flagship guest portrayal)
-# up: ../GLANCE.yml | facade: README.md | machine: CHARACTER.yml · CARD.yml
+# WILL WRIGHT — GLANCE (nav + metadata SSOT)
+# Interface: CARD.yml — guest skills card · NOT the person.
 
-what: |
-  Public invitation portrayal — not Will Wright. Richest CARD in WWSFF; alias Klapaucius;
-  1996 centerpiece orbit; media galleries; subject may edit anytime.
+title: Will Wright
+iconic: "🌍 Will"
+description: |
+  Public invitation portrayal — architect of microworlds (SimCity, The Sims, Spore, Proxi).
+  Richest guest CARD in WWSFF; 1996 CS547 centerpiece orbit; media galleries in media/.
+  Subject may edit or delete anytime.
+
+keywords:
+  - will wright
+  - simcity
+  - the sims
+  - spore
+  - proxi
+  - microworlds
+  - data portability
+  - simlish
+  - flagship guest
+  - klapaucius
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  children:
+    - sources/
+    - media/
+    - invitation.md
+    - ideas.md
+  siblings:
+    - ../terry-winograd/
+    - ../chaim-gingold/
+    - ../don-hopkins/
 
 read_order:
   - README.md
   - invitation.md
-  - CARD.md
+  - CARD.yml
+  - sources/README.md
   - media/README.md
   - ideas.md
 
-anchors:
-  centerpiece: ../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
+structure:
+  centerpiece: sources/1996-04-26-winograd-interfacing-to-microworlds/
   show: ../../repo-shows/will-wright/
-  browse: ../../repo-shows/will-wright/BROWSE.md
-  sidekick: ../slats/
+  consent: not_yet_asked
 
 see_also:
-  - { path: ../../process/entryways/guest-will.md, why: "Ordered guest playlist" }
-  - { path: ../../repo-shows/will-wright/catalogs/, why: "UCC brands fed by his lineage" }
-  - { path: ../terry-winograd/, why: "CS547 forebear archive" }
-  - { path: ../chaim-gingold/CARD.yml, why: "SimCity reverse diagrams" }
+  parent:
+    - { path: ../GLANCE.yml, why: "Character registry" }
+  siblings:
+    - { path: ../terry-winograd/GLANCE.yml, why: "CS547 forebear — seminar host" }
+    - { path: ../chaim-gingold/GLANCE.yml, why: "Building SimCity historian" }
+    - { path: ../don-hopkins/GLANCE.yml, why: "Host — was in the 1996 room" }
+  children:
+    - { path: sources/GLANCE.yml, why: "Evidence room — treasure trove" }
+    - { path: media/GLANCE.yml, why: "Flat media — Flower Child + sims-series" }
+  across:
+    - { path: ../../repo-shows/will-wright/GLANCE.yml, why: "Flagship show room" }
+    - { path: sources/1996-04-26-winograd-interfacing-to-microworlds/GLANCE.yml, why: "THE seed artifact" }
+    - { path: ../../process/entryways/guest-will.md, why: "Guest playlist" }
+  deep:
+    - { path: README.md, why: "Full portrayal article" }
+    - { path: CHARACTER.yml, why: "Machine portrait" }
+    - { path: invitation.md, why: "Public invite" }

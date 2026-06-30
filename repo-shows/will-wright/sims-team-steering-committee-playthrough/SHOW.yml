@@ -26,8 +26,8 @@ parent_show: ../../REPO-SHOWS.yml#building-the-sims.yml
 
 sources:
   don_narrated_video: https://www.youtube.com/watch?v=zC52jE60KjY
-  readme: ../sources/1998-06-04-sims-steering-committee-demo/README.md
-  winograd_centerpiece: ../sources/1996-04-26-winograd-interfacing-to-microworlds/
+  readme: ../../../characters/will-wright/sources/1998-06-04-sims-steering-committee-demo/README.md
+  winograd_centerpiece: ../../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
 
 find_build_do_not_host:
   internet_archive: https://archive.org/details/the-sims-steering-committee
@@ -54,8 +54,8 @@ segments:
     beat: "Optional: cut to Jan 1999 proto — plumb bob arrives?"
 
 ties_to:
-  - ../sources/1998-06-04-sims-steering-committee-demo/
-  - ../catalogs/simprov/
+  - ../../../characters/will-wright/sources/1998-06-04-sims-steering-committee-demo/
+  - ../../../catalogs/simprov/
   - ../../characters/jamie-doornbos/
   - ../../characters/eric-bowman/
   - ../../characters/patrick-barrett/

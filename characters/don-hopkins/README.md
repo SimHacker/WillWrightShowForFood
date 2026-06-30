@@ -8,6 +8,8 @@ backbone: career/*.yml
 
 # Don Hopkins
 
+*Sniff:* [`CARD.yml`](CARD.yml) · [`GLANCE.yml`](GLANCE.yml)
+
 👤 **Don Hopkins** — user-interface designer and programmer: pie menus, The Sims,
 Micropolis, Repo Show host. **YAML backbone, markdown facade:** the narrative lives
 here; facts and timelines live in [`career/`](career/INDEX.yml).
@@ -71,7 +73,7 @@ Full timeline: [`career/simcity-lineage.yml`](career/simcity-lineage.yml)
 | Facet | Who |
 |-------|-----|
 | Regular Don — interview, implement, chat | **This character** ([`career/on-stream.yml`](career/on-stream.yml)) |
-| Flamboyant AI announcer, Q&A DJ | [**Don Philahue**](../don-philahue/) |
+| Flamboyant AI announcer, Q&A DJ | [**Don Philahue**](../don-philahue/README.md) |
 
 ## Deeper
 

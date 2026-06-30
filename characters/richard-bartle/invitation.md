@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** Virtual worlds — MUD1 (1978, with Roy Trubshaw), Bartle taxonomy of player types,
 
-**Materials:** [`repo-shows/richard-bartle/`](../../repo-shows/richard-bartle/)
+**Materials:** [`repo-shows/richard-bartle/`](../../repo-shows/richard-bartle/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

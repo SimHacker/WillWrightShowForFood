@@ -3,9 +3,19 @@
 The **show orchestrator** for Micropolis Class. Protocol for what you do *with* a show,
 *in* a show, and *during* a live show — in **WillWrightShowForFood**, the public live repo.
 
-**Interface:** [`CARD.yml`](CARD.yml) · **Sniff:** [`GLANCE.yml`](GLANCE.yml)  
+**Interface:** [`CARD.yml`](CARD.yml) · **Nav/metadata:** [`GLANCE.yml`](GLANCE.yml) — **read both** before README  
 **Human markup:** [`../../process/FORMAT.md`](../../process/FORMAT.md) (generated — `pnpm run facades`)  
-**Girder:** [`../../process/repo-show-format.yml`](../../process/repo-show-format.yml)
+**Girder:** [`../../process/repo-show-format.yml`](../../process/repo-show-format.yml#description_scaffolding)
+
+### CARD + GLANCE split (WWSFF experiment → moollm upstream)
+
+| File | Owns |
+|------|------|
+| **GLANCE.yml** | Title, iconic (tab label), description, keywords, **navigation SSOT** (parent/siblings/children, see_also, read_order) — smaller, no ads |
+| **CARD.yml** | Interface only — methods, abilities, protocols, `compose_with`; points at `glance:` |
+| **README.md** | Human article; teaser from GLANCE; nav links rendered at bottom for humans |
+
+Do not maintain navigation in two places. When this split proves out here, promote into MOOLLM `skills/card` and `skills/glance` — extend upstream, don't permanently override.
 
 ---
 
@@ -64,7 +74,7 @@ Don **Philahue** harvests HN + issues + TicketPRs into the show directory as air
 
 Live ritual: *YOUR NAME HERE: COME ON DOWN to the QUESTION IS RIGHT!*
 
-Template: [`repo-shows/_TEMPLATE/audience/`](../../repo-shows/_TEMPLATE/audience/) · Flagship: [`repo-shows/will-wright/audience/`](../../repo-shows/will-wright/audience/)
+Template: [`repo-shows/_TEMPLATE/audience/`](../../repo-shows/_TEMPLATE/audience/README.md) · Flagship: [`repo-shows/will-wright/audience/`](../../repo-shows/will-wright/audience/README.md)
 
 Miss live? Your merged TicketPR question can still get asked; Q+A memorialized in repo + YouTube.
 
@@ -90,7 +100,7 @@ Submit PRs; best work discussed on later episodes. Graded by [`process/homefun-g
 
 ## Rig spectrum
 
-Declare honestly in [`rigs/<slug>.rig.yml`](../../rigs/) + [`SETUP.md`](../../rigs/_TEMPLATE.SETUP.md):
+Declare honestly in [`rigs/<slug>.rig.yml`](../../rigs/README.md) + [`SETUP.md`](../../rigs/_TEMPLATE.SETUP.md):
 
 | Class | Meaning |
 |-------|---------|
@@ -128,8 +138,8 @@ Governed by [`schemas/portrayal-standards.yml`](../../schemas/portrayal-standard
 After AIR:
 
 1. Melt via moollm **cauldron**
-2. SCOOP skills into [`skills/`](../)
-3. Implement in [`packages/`](../../packages/) / [`apps/`](../../apps/)
+2. SCOOP skills into [`skills/`](../README.md)
+3. Implement in [`packages/`](../../packages/README.md) / [`apps/`](../../apps/README.md)
 4. RESEED portable show yaml for other lands
 
 ## WWSFF-specific anchors
@@ -139,8 +149,8 @@ After AIR:
 | Vision | [`process/VISION.md`](../../process/VISION.md) |
 | ShowMaker network | [`process/showmaker-network.yml`](../../process/showmaker-network.yml) |
 | Live repo policy | [`process/live-repo.yml`](../../process/live-repo.yml) |
-| Will kickoff | [`repo-shows/will-wright/`](../../repo-shows/will-wright/) |
-| Lars + Thomas retro | [`characters/lars-brinkhoff/`](../../characters/lars-brinkhoff/) · [`characters/thomas-cherryhomes/`](../../characters/thomas-cherryhomes/) |
+| Will kickoff | [`repo-shows/will-wright/`](../../repo-shows/will-wright/README.md) |
+| Lars + Thomas retro | [`characters/lars-brinkhoff/`](../../characters/lars-brinkhoff/README.md) · [`characters/thomas-cherryhomes/`](../../characters/thomas-cherryhomes/README.md) |
 
 ## Methods (invoke)
 
@@ -165,7 +175,7 @@ After AIR:
 | Format girder | [`process/repo-show-format.yml`](../../process/repo-show-format.yml) |
 | Generated markup | [`process/FORMAT.md`](../../process/FORMAT.md) — `pnpm run facades` |
 | Harvest registry | [`skills/INDEX.yml`](../INDEX.yml) |
-| Upstream skills | [moollm/skills/INDEX.md](https://github.com/SimHacker/moollm/skills/INDEX.md) |
+| Upstream skills | [moollm/skills/README.md](https://github.com/SimHacker/moollm/skills/README.md) |
 
 ---
 

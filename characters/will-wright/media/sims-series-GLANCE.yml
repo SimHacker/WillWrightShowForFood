@@ -1,0 +1,31 @@
+# SIMS-SERIES ASSETS — GLANCE (nav slice)
+# Parent: media/GLANCE.yml — flat filenames, no theme subdirs.
+
+title: Sims series gallery + essays
+iconic: "🎨 Sims UCC"
+description: |
+  Themed screenshot galleries (sims-*-README.md) and long-read essays (sims-series-*.md).
+  Visual companions to ../sources/ and ../../../catalogs/.
+
+read_order:
+  - sims-series-README.md
+  - sims-series-procedural-rhetoric-inclusion-agitprop.md
+  - sims-series-transmogrifier-story.md
+  - sims-series-micropolis-publishing-vision.md
+  - sims-dumbold-voting-machine-README.md
+  - sims-simfreaks-openlaszlo-catalog-README.md
+  - sims-simslice-README.md
+  - sims-simantics-objects-README.md
+  - sims-people-and-events-README.md
+
+see_also:
+  parent:
+    - { path: GLANCE.yml, why: "Media room root" }
+    - { path: README.md, why: "Will portraits + Flower Child" }
+  across:
+    - { path: ../../../catalogs/README.md, why: "Brand catalogs these assets illustrate" }
+    - { path: ../sources/2018-04-24-dumbold-voting-machine/README.md, why: "Dumbold Medium source" }
+    - { path: ../sources/1996-04-26-winograd-interfacing-to-microworlds/README.md#image-gallery, why: "167-figure centerpiece gallery" }
+    - { path: ../../../repo-shows/will-wright/venue/README.md, why: "Orchestra pit — Slats + Transmogrifier" }
+  deep:
+    - { path: sims-series-README.md, why: "Human theme index" }

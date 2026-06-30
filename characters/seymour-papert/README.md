@@ -7,8 +7,8 @@ Memorial portrayal — **not** Seymour Papert. We *represent and discuss*; we ne
 
 [In memoriam → memorial.md](memorial.md) · [Constructionist lineage](../../process/trails/constructionist-lineage.md)
 
-Worked with [Jean Piaget](../jean-piaget/) in Geneva; co-founded the **MIT AI Lab** with
-[Marvin Minsky](../marvin-minsky/); co-created **Logo** (the turtle); coined **constructionism**;
+Worked with [Jean Piaget](../jean-piaget/README.md) in Geneva; co-founded the **MIT AI Lab** with
+[Marvin Minsky](../marvin-minsky/README.md); co-created **Logo** (the turtle); coined **constructionism**;
 wrote **Mindstorms** (1980). His line runs through **Scratch**, **OLPC**, and **LEGO Mindstorms**
 (named for his book) — and this project's build-to-learn mission.
 

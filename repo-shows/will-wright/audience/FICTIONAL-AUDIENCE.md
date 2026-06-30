@@ -30,13 +30,13 @@ Guide: [PLANTED-AUDIENCE.md](../../_TEMPLATE/audience/PLANTED-AUDIENCE.md).
 | Kind | Example | Ethics |
 |------|---------|--------|
 | **Sims game characters / objects** | Bella Goth, Tragic Clown, Cow Plant | Labeled `fictional_game_character`; fan voice; not official EA dialogue |
-| **Repo bots** | [Slats](../../../characters/slats/), [Ultimate Machine](../../../characters/ultimate-machine/) | `character_ref` to `characters/`; fictional; may quote documented transcripts |
+| **Repo bots** | [Slats](../../../characters/slats/README.md), [Ultimate Machine](../../../characters/ultimate-machine/README.md) | `character_ref` to `characters/`; fictional; may quote documented transcripts |
 | **Tool personae** | Edith (SimAntics), Transmogrifier (UGC) | Personify the TOOL, not a human |
 | **Guest-primed plants** | Will adds a running gag or virtual child via PR | `authorship.by: guest`, `planted.disclosure: true` |
 | **Running gags** | Broken Robot, Slats robopoetry, Ultimate Machine gong | `running_gag: true`; recurring CARD / SIMULATION hooks |
-| **Self-aware AI character** | [Palm](palm/) — freed Monkey's Paw philosopher | `fictional_ai_character`; knows it's simulated; **our brand** |
-| **Consented real self-author** | [Richard Bartle](richard-bartle/) — MUD1 co-creator | Real person, explicit consent, **writes his own questions** |
-| **Honored real guests** | [Heather Alvey](heather-alvey/), [Steve Alvey](steve-alvey/), [Phil Salvador](phil-salvador/) | Real, invited, front-row/box; write their own |
+| **Self-aware AI character** | [Palm](palm/README.md) — freed Monkey's Paw philosopher | `fictional_ai_character`; knows it's simulated; **our brand** |
+| **Consented real self-author** | [Richard Bartle](richard-bartle/README.md) — MUD1 co-creator | Real person, explicit consent, **writes his own questions** |
+| **Honored real guests** | [Heather Alvey](heather-alvey/README.md), [Steve Alvey](steve-alvey/README.md), [Phil Salvador](phil-salvador/README.md) | Real, invited, front-row/box; write their own |
 
 ---
 
@@ -58,35 +58,35 @@ Same for living humans: no impersonating guests or fans without consent.
 
 | Directory | Who | Tone |
 |-----------|-----|------|
-| [bot-slats/](bot-slats/) ⭐ | Slats + Will photos | **Example** — copy this |
-| [fictional-bob-newbie/](fictional-bob-newbie/) ⭐ | Bob in Will's hand | **Example** — promo trilogy |
-| [palm/](palm/) | Palm 🐒✋ (self-aware AI) | What's it like to be a Sim? |
-| [fictional-bella-goth/](fictional-bella-goth/) | Bella Goth | Missing-poster energy |
-| [fictional-tragic-clown/](fictional-tragic-clown/) | Tragic Clown 🤡 | Balcony left — weeping heckler |
-| [fictional-killer-hamster/](fictional-killer-hamster/) | Killer Hamster | Wheel of doom |
-| [fictional-grim-reaper/](fictional-grim-reaper/) | Death 💀 | Balcony right — 🤡💀 duo |
-| [fictional-social-bunny/](fictional-social-bunny/) | Social Bunny | Loneliness hallucination |
-| [fictional-edith-ghost/](fictional-edith-ghost/) | Edith tool ghost | SimAntics |
-| [fictional-transmogrifier/](fictional-transmogrifier/) | The Transmogrifier 🧪 | User-created content incarnate |
-| [fictional-simant-black-ant/](fictional-simant-black-ant/) | Black ant (SimAnt) | "Too easy" post-mortem |
-| [fictional-simant-red-spider/](fictional-simant-red-spider/) | Red spider (SimAnt) | Misunderstood hero |
-| [fictional-spore-creature/](fictional-spore-creature/) | Spore creature | Cell → space |
-| [fictional-cow-plant/](fictional-cow-plant/) | Cow Plant 🐮🌱 | Feed-me-Seymour + Chain Chomp |
-| [fictional-some-sneaky-sim/](fictional-some-sneaky-sim/) | Some Sneaky Sim | Canonical burglar; sympathetic |
-| [fictional-little-computer-person/](fictional-little-computer-person/) | Pixel + dog 🧍💾🐕 | The 1985 Sims ancestor |
-| [fictional-seaman/](fictional-seaman/) | Seaman 🐟 | Asks Will's embarrassing Qs for Yoot |
-| [fictional-broken-robot/](fictional-broken-robot/) | Broken Robot 🤖🔧 | Running gag — crashes, begs, dragged off |
-| [fictional-zombie-sim/](fictional-zombie-sim/) | ZombieSim 🧟 | The crew's +1 |
-| [fictional-gaia/](fictional-gaia/) | Gaia 🌍 (SimEarth) | "even though the earth is our mother, we sure treat her like dirt"; Pee-wee's Globey |
-| [fictional-simcity-advisor/](fictional-simcity-advisor/) | SimCity Advisor | The nag you clicked away |
-| [fictional-llama/](fictional-llama/) | The Llama 🦙 | Maxis absurdist running gag |
-| [fictional-museum-curator/](fictional-museum-curator/) | Museum Curator 🏛️ | Archivist tribute (box w/ Phil) |
-| [bot-ultimate-machine/](bot-ultimate-machine/) | Ultimate Machine 🔌 | Refusal koans; gong; closes the stream |
+| [bot-slats/](bot-slats/README.md) ⭐ | Slats + Will photos | **Example** — copy this |
+| [fictional-bob-newbie/](fictional-bob-newbie/README.md) ⭐ | Bob in Will's hand | **Example** — promo trilogy |
+| [palm/](palm/README.md) | Palm 🐒✋ (self-aware AI) | What's it like to be a Sim? |
+| [fictional-bella-goth/](fictional-bella-goth/README.md) | Bella Goth | Missing-poster energy |
+| [fictional-tragic-clown/](fictional-tragic-clown/README.md) | Tragic Clown 🤡 | Balcony left — weeping heckler |
+| [fictional-killer-hamster/](fictional-killer-hamster/README.md) | Killer Hamster | Wheel of doom |
+| [fictional-grim-reaper/](fictional-grim-reaper/README.md) | Death 💀 | Balcony right — 🤡💀 duo |
+| [fictional-social-bunny/](fictional-social-bunny/README.md) | Social Bunny | Loneliness hallucination |
+| [fictional-edith-ghost/](fictional-edith-ghost/README.md) | Edith tool ghost | SimAntics |
+| [fictional-transmogrifier/](fictional-transmogrifier/README.md) | The Transmogrifier 🧪 | User-created content incarnate |
+| [fictional-simant-black-ant/](fictional-simant-black-ant/README.md) | Black ant (SimAnt) | "Too easy" post-mortem |
+| [fictional-simant-red-spider/](fictional-simant-red-spider/README.md) | Red spider (SimAnt) | Misunderstood hero |
+| [fictional-spore-creature/](fictional-spore-creature/README.md) | Spore creature | Cell → space |
+| [fictional-cow-plant/](fictional-cow-plant/README.md) | Cow Plant 🐮🌱 | Feed-me-Seymour + Chain Chomp |
+| [fictional-some-sneaky-sim/](fictional-some-sneaky-sim/README.md) | Some Sneaky Sim | Canonical burglar; sympathetic |
+| [fictional-little-computer-person/](fictional-little-computer-person/README.md) | Pixel + dog 🧍💾🐕 | The 1985 Sims ancestor |
+| [fictional-seaman/](fictional-seaman/README.md) | Seaman 🐟 | Asks Will's embarrassing Qs for Yoot |
+| [fictional-broken-robot/](fictional-broken-robot/README.md) | Broken Robot 🤖🔧 | Running gag — crashes, begs, dragged off |
+| [fictional-zombie-sim/](fictional-zombie-sim/README.md) | ZombieSim 🧟 | The crew's +1 |
+| [fictional-gaia/](fictional-gaia/README.md) | Gaia 🌍 (SimEarth) | "even though the earth is our mother, we sure treat her like dirt"; Pee-wee's Globey |
+| [fictional-simcity-advisor/](fictional-simcity-advisor/README.md) | SimCity Advisor | The nag you clicked away |
+| [fictional-llama/](fictional-llama/README.md) | The Llama 🦙 | Maxis absurdist running gag |
+| [fictional-museum-curator/](fictional-museum-curator/README.md) | Museum Curator 🏛️ | Archivist tribute (box w/ Phil) |
+| [bot-ultimate-machine/](bot-ultimate-machine/README.md) | Ultimate Machine 🔌 | Refusal koans; gong; closes the stream |
 
 **Real guests (seated by invitation/donation):**
-[richard-bartle/](richard-bartle/) (consented, self-authoring) ·
-[phil-salvador/](phil-salvador/) (box seat w/ Curator) ·
-[heather-alvey/](heather-alvey/) + [steve-alvey/](steve-alvey/) (front-row SimFreaks/SimSlice crew).
+[richard-bartle/](richard-bartle/README.md) (consented, self-authoring) ·
+[phil-salvador/](phil-salvador/README.md) (box seat w/ Curator) ·
+[heather-alvey/](heather-alvey/README.md) + [steve-alvey/](steve-alvey/README.md) (front-row SimFreaks/SimSlice crew).
 
 **More games & ideas:** [AUDIENCE-ROSTER-IDEAS.md](AUDIENCE-ROSTER-IDEAS.md) · **Machine index:** [INDEX.yml](INDEX.yml) · **Regulars spec:** [../../../process/repo-show-regulars.yml](../../../process/repo-show-regulars.yml)
 
@@ -111,7 +111,7 @@ declarations (see [INDEX.yml](INDEX.yml)).
 
 ## Add your own fictional audience
 
-Fork → `audience/fictional-<slug>/` → copy the MOOLLM stack from [`../../_TEMPLATE/audience/`](../../_TEMPLATE/audience/) → set:
+Fork → `audience/fictional-<slug>/` → copy the MOOLLM stack from [`../../_TEMPLATE/audience/`](../../_TEMPLATE/audience/README.md) → set:
 
 ```yaml
 character:

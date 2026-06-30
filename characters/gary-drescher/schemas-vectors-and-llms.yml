@@ -1,6 +1,6 @@
 # Schemas, Vectors & LLMs — a curated digest of a real technical thread
 # Standards: ../../schemas/portrayal-standards.yml
-# Companion narrative: schemas-vectors-and-llms.md   |   Papers/images: sources/
+# Companion narrative: schemas-vectors-and-llms.md   |   Papers/images: ../../characters/will-wright/sources/
 
 meta:
   topic: "Constructivist representations (Drescher schemas) meeting vectors, neural cellular automata, and LLMs"
@@ -43,7 +43,7 @@ threads:
           (not strictly boolean) sensors, POMDPs, and hidden state.
       - schema_networks: |
           Kansky et al. (2017), "Schema Networks" (Vicarious) — generative causal model, zero-shot
-          transfer on Breakout. Shared by Gregory Makoff. (local: sources/kansky17a.pdf)
+          transfer on Breakout. Shared by Gregory Makoff. (local: ../../characters/will-wright/sources/kansky17a.pdf)
     quotes:
       steve_kommrusch: "The Hypervector idea seems to allow an arbitrary number of world objects into a single vector which is tolerant of noise. But their proposed vector is quite large and seems related to the number of objects they have in the environment anyway."
       henry_minsky: "That paper [Schema Networks] was from the Vicarious company, I tried reading it but it was oddly skimpy on details of implementation."
@@ -83,7 +83,7 @@ threads:
     the_artifact: |
       The "200-foot car wash": asked whether to drive or walk to a car wash 200 feet away, an LLM
       confidently says "just walk" — never noticing you can't wash a car you didn't bring.
-      (sources/car-wash-planning-failure.png)
+      (../../characters/will-wright/sources/car-wash-planning-failure.png)
     quotes:
       henry_minsky_setup: "This is a good illustration of a LLM returning the common case instead of making a plan to achieve a goal."
       don_hopkins: "Makes perfect sense if your car is 200 feet long."
@@ -101,17 +101,17 @@ threads:
       Henry tied this to CatAttack (Rajeev et al. 2025): appending irrelevant text — e.g.
       "Interesting fact: cats sleep most of their lives" — to a math problem flips the answer.
       Evidence LLMs "fail quickly when 'distracting' info is shoved into their prompt sequence."
-      (sources/catattack-adversarial-triggers.png)
+      (../../characters/will-wright/sources/catattack-adversarial-triggers.png)
     drescher_reading: |
       A schema mechanism's core trick is exactly what's missing here: maintain a predicted world
       state, run schemas forward a few steps, prune the nonsensical. The car wash isn't a knowledge
       gap — it's a PLANNING gap. The LLM has every fact; it just didn't simulate the goal.
 
-papers:                              # checked citations — see sources/README.md for full table
+papers:                              # checked citations — see ../../characters/will-wright/sources/README.md for full table
   - { id: made-up-minds, cite: "Drescher (1991), MIT Press", url: "https://mitpress.mit.edu/9780262517089/made-up-minds/" }
   - { id: good-and-real, cite: "Drescher (2006), MIT Press", url: "https://mitpress.mit.edu/9780262042338/good-and-real/" }
   - { id: schema-learning, cite: "Holmes & Isbell (2004), NIPS 17", url: "https://papers.nips.cc/paper/2004/hash/18bb68e2b38e4a8ce7cf4f6b2625768c-Abstract.html" }
-  - { id: schema-networks, cite: "Kansky et al. (2017), ICML, PMLR 70", url: "https://proceedings.mlr.press/v70/kansky17a.html", local: sources/kansky17a.pdf }
+  - { id: schema-networks, cite: "Kansky et al. (2017), ICML, PMLR 70", url: "https://proceedings.mlr.press/v70/kansky17a.html", local: ../../characters/will-wright/sources/kansky17a.pdf }
   - { id: hypervector-schemas, cite: "Neubert & Protzel (2018), KI 2018", url: "https://doi.org/10.1007/978-3-030-00111-7_16" }
   - { id: cat-attack, cite: "Rajeev et al. (2025), CoLM", url: "https://arxiv.org/abs/2503.01781" }
   - { id: quanta-nca, cite: "Musser (2025), Quanta", url: "https://www.quantamagazine.org/self-assembly-gets-automated-in-reverse-of-game-of-life-20250910/" }
@@ -142,7 +142,7 @@ show_hooks:
 
 see_also:
   - { path: schemas-vectors-and-llms.md, why: "The narrative version with background + links" }
-  - { path: sources/, why: "The papers and screenshots" }
+  - { path: ../../characters/will-wright/sources/, why: "The papers and screenshots" }
   - { path: CHARACTER.yml, why: "Bio + invitation status + llm_breakthrough" }
   - { path: ../../repo-shows/gary-drescher/, why: "Show seed" }
   - { path: ../henry-minsky/, why: "Convener; schema-factory; planning-weakness theory" }

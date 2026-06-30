@@ -30,7 +30,7 @@ real work and then build on it in the open (transcripts, notes, and runnable cod
   (you've taught intro-AI to high-schoolers and helped run MIT's Women's Technology Program).
 - **Anything you're passionate about** — machine learning, vision, and wherever your curiosity is.
 
-**Materials:** [`repo-shows/isabella-struckman/`](../../repo-shows/isabella-struckman/) ·
+**Materials:** [`repo-shows/isabella-struckman/`](../../repo-shows/isabella-struckman/README.md) ·
 [your guest page](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/isabella-struckman)
 
 No pressure, no homework. Accepted, delayed, declined, or no reply — all honored gracefully.

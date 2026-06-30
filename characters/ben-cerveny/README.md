@@ -4,6 +4,6 @@ Invitation portrayal — **not** Ben Cerveny. [Standards](../../schemas/portraya
 
 **Field:** Strategist, Designer, Public Code & Digital Public Infrastructure; Game Neverending / Flickr; Stamen map viz; speculative design, civic tech
 
-[Invitation](invitation.md) · [Show seed](../../repo-shows/ben-cerveny/)
+[Invitation](invitation.md) · [Show seed](../../repo-shows/ben-cerveny/README.md)
 
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

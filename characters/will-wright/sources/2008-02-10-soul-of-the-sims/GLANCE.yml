@@ -1,0 +1,46 @@
+# SOUL OF THE SIMS — GLANCE (nav + metadata SSOT)
+# Interface: CARD.yml
+
+title: "The Soul of The Sims (Motive.c)"
+iconic: "💗 Motive.c"
+description: |
+  Will Wright's January 1997 Motive.c — hunger, bladder, stress at the substrate. Don's scans,
+  OCR, Medium repost. Procedural rhetoric before the objects — wedding playset and Dumbold run on
+  this machinery.
+
+keywords:
+  - motive.c
+  - soul of the sims
+  - procedural rhetoric
+  - needs loop
+  - will wright 1997
+  - jamie doornbos
+  - simantics
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  siblings:
+    - ../1996-04-26-winograd-interfacing-to-microworlds/
+    - ../1998-06-04-sims-steering-committee-demo/
+    - ../2018-04-24-dumbold-voting-machine/
+
+read_order:
+  - README.md
+  - article.md
+  - Motive.c
+  - images/
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Sources room" }
+  siblings:
+    - { path: ../1996-04-26-winograd-interfacing-to-microworlds/GLANCE.yml, why: "Dollhouse preview → this substrate" }
+  across:
+    - { path: ../../../will-wright/GLANCE.yml, why: "Author" }
+    - { path: ../../../../repo-shows/will-wright/sims-team-steering-committee-playthrough/SHOW.yml, why: "Reunion with Jamie" }
+  deep:
+    - { path: Motive.c, why: "Compilable OCR transcription" }
+    - { path: CARD.yml, why: "Run-standalone interface" }

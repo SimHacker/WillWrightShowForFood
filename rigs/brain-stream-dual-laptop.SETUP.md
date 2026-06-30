@@ -33,7 +33,7 @@ single- or multi-machine screencasting setup.
 |----------|-----|
 | **Rig yaml (canonical)** | https://raw.githubusercontent.com/SimHacker/WillWrightShowForFood/main/rigs/brain-stream-dual-laptop.rig.yml |
 | **This SETUP DNA** | https://raw.githubusercontent.com/SimHacker/WillWrightShowForFood/main/rigs/brain-stream-dual-laptop.SETUP.md |
-| **App specs** | [`apps/stream-gateway/`](../apps/stream-gateway/) — SPEC · cursor-tap · overlay-viewer |
+| **App specs** | [`apps/stream-gateway/`](../apps/stream-gateway/README.md) — SPEC · cursor-tap · overlay-viewer |
 | **Browse rigs/** | https://github.com/SimHacker/WillWrightShowForFood/tree/main/rigs/ |
 
 Local copies go stale. Install/upgrade pulls **latest yaml** from the raw URL unless you pin in
@@ -79,7 +79,7 @@ ORIENT   → Read head; fetch latest rig yaml + SETUP from raw URLs
 PLAN     → Load state.yml; diff upstream vs local; list skip/run/preserve
 DOWNLOAD → lifecycle.download (clone repos; install Cursor/OBS/DistroAV/Ollama)
 INSTALL  → lifecycle.install (pnpm; screen-recording permission; NVENC check; wired LAN)
-CONFIGURE→ lifecycle.configure (run gateway; start tap; dock viewer; OBS sources/scenes; obs-websocket)
+CONFIGURE→ lifecycle.configure (run gateway; start tap; dock viewer; OBS ../../characters/will-wright/sources/scenes; obs-websocket)
 VERIFY   → pnpm run verify; obs-websocket reachable; NDI + Browser sources live
 RECORD   → Update state.yml; thoughtful-commitment if committing
 UPGRADE  → On re-run: merge upstream yaml; reapply user_overrides; re-verify changed phases
@@ -125,4 +125,4 @@ map of machines, capture sources, transport, OBS scenes, overlay layout, and str
 
 ---
 
-Schema: [`rig-setup-dna.yml`](../schemas/rig-setup-dna.yml) · Rig: [`brain-stream-dual-laptop.rig.yml`](./brain-stream-dual-laptop.rig.yml) · App: [`apps/stream-gateway/`](../apps/stream-gateway/)
+Schema: [`rig-setup-dna.yml`](../schemas/rig-setup-dna.yml) · Rig: [`brain-stream-dual-laptop.rig.yml`](./brain-stream-dual-laptop.rig.yml) · App: [`apps/stream-gateway/`](../apps/stream-gateway/README.md)

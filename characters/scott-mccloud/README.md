@@ -19,4 +19,4 @@ gaps invited the imagination to do the rest. Don credits McCloud directly in the
 documentation. The same principle runs through Micropolis: the sparse model on screen, and the rich
 model the player builds in their head.
 
-See the show dream: [`repo-shows/scott-mccloud/`](../../repo-shows/scott-mccloud/).
+See the show dream: [`repo-shows/scott-mccloud/`](../../repo-shows/scott-mccloud/README.md).

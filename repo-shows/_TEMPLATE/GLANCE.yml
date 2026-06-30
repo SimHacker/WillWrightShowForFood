@@ -1,0 +1,37 @@
+# GLANCE — YOUR-SLUG show (nav + metadata SSOT)
+# Interface: CARD.yml
+
+title: "A Repo Show with YOUR GUEST"
+iconic: "🎬✨ Guest"
+description: |
+  2–4 sentences — why open this show, what you'll find, where it flows. Enough to decide
+  relevance without README or CARD interface details.
+
+keywords: [repo show, YOUR-SLUG, guest-name]
+
+card: CARD.yml
+
+navigation:
+  up: ../INDEX.yml
+  parent: ../
+  children:
+    - audience/
+
+status: seed
+
+read_order:
+  - README.md
+  - SHOW.yml
+  - audience/README.md
+
+see_also:
+  parent:
+    - { path: ../INDEX.yml, why: "All repo-shows" }
+  children:
+    - { path: audience/GLANCE.yml, why: "TicketPR template" }
+  across:
+    - { path: ../will-wright/GLANCE.yml, why: "Flagship example" }
+    - { path: ../../process/repo-show-format.yml#description_scaffolding, why: "CARD + GLANCE constitution" }
+  deep:
+    - { path: README.md, why: "Human article" }
+    - { path: CARD.yml, why: "Show interface" }

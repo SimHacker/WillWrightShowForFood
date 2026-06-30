@@ -2,7 +2,7 @@
 
 *Seed — consent not yet asked. Warm lead; he ordinarily declines interviews but signaled he "might be interested."*
 
-**Guest:** [Ted Nelson](../../characters/ted-nelson/) — coined hypertext & hypermedia, Project Xanadu, *Computer Lib / Dream Machines*
+**Guest:** [Ted Nelson](../../characters/ted-nelson/README.md) — coined hypertext & hypermedia, Project Xanadu, *Computer Lib / Dream Machines*
 **Invitation:** [`characters/ted-nelson/invitation.md`](../../characters/ted-nelson/invitation.md) · **Correspondence:** [`correspondence.yml`](../../characters/ted-nelson/correspondence.yml)
 
 ## The show
@@ -13,8 +13,8 @@ Hypertext as Ted *meant* it — Xanadu, transclusion, visible parallel connectio
 
 A chance to remember the friends, in memorial mode (represent + discuss, never interview):
 
-- **[Douglas Engelbart](../../characters/douglas-engelbart/)** — who officiated Ted's wedding. Ted's [**eulogy**](../../characters/douglas-engelbart/eulogy-ted-nelson.md) is the best writing he says he ever did. *"I feel like I've lost my best planet."*
-- **[Hugh Daniel](../../characters/hugh-daniel/)** — Ted's Xanadu collaborator; the Hugh + Ted + Don triangle.
+- **[Douglas Engelbart](../../characters/douglas-engelbart/README.md)** — who officiated Ted's wedding. Ted's [**eulogy**](../../characters/douglas-engelbart/eulogy-ted-nelson.md) is the best writing he says he ever did. *"I feel like I've lost my best planet."*
+- **[Hugh Daniel](../../characters/hugh-daniel/README.md)** — Ted's Xanadu collaborator; the Hugh + Ted + Don triangle.
 
 ## Trail
 

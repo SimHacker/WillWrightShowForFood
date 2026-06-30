@@ -43,13 +43,13 @@ nurture_simfreaks_simslice:
   not_just_archive: "EXTENSIVE EPIC catalog PLUS new objects, skins, zombie suites, authoring pipeline"
 
 micropolis_publishing_system:
-  # The real 'why' under the show — Micropolis Home platform (see will-wright/catalogs/)
-  platform: ../will-wright/catalogs/micropolis-home/
+  # The real 'why' under the show — Micropolis Home platform (see catalogs/)
+  platform: ../catalogs/micropolis-home/
   catalogs:
-    - ../will-wright/catalogs/simfreaks/
-    - ../will-wright/catalogs/simslice/
-    - ../will-wright/catalogs/simprov/
-    - ../will-wright/catalogs/zombie-sims/
+    - ../catalogs/simfreaks/
+    - ../catalogs/simslice/
+    - ../catalogs/simprov/
+    - ../catalogs/zombie-sims/
   what: "Don's **Micropolis Home** — create · publish · share — built to host and publish the Alveys' enormous, rich **artisanal back-catalogs** AND their current content streams, plus Don's own. Open to fans and other devs to contribute."
   who_its_for: "Steve Alvey (SimSlice/SliceCity) + Heather Alvey née Castello (SimFreaks) — ~26-year respected Sims-content brands, still shipping magnum-opus packs (Zombie Sims) — and Don."
   simprov_wedding_playset: "Don's **SimProv Wedding Playset** (made with the Alveys, **SimBabes**, and other artists; unreleased back then) — recently released; now being reorganized/republished and restarting development, opened up to fans + devs."
@@ -111,6 +111,6 @@ ties_to:
   - ../process/crazy-idea-jam.yml#hell_is_full_zombie_sims
   - game-bridge-afterlife-soul.yml
   - ../process/hosted-content-cards.yml
-  - ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/medium-article.md
+  - ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/medium-article.md
 
 parent_bridge: game-bridge-afterlife-soul.yml

@@ -9,7 +9,7 @@ Memorial portrayal — **not** Marvin Minsky. We *represent and discuss*; we nev
 
 Co-founded the **MIT AI Lab** (1959) with John McCarthy; co-directed it with Seymour Papert. Gave
 AI **frames**, **K-lines**, and **The Society of Mind**; built **SNARC** and the **confocal
-microscope**; advised on HAL in *2001*. Turing Award, 1969. Father of [Margaret](../margaret-minsky/)
-and [Henry](../henry-minsky/) Minsky.
+microscope**; advised on HAL in *2001*. Turing Award, 1969. Father of [Margaret](../margaret-minsky/README.md)
+and [Henry](../henry-minsky/README.md) Minsky.
 
 Verifiable sources in `CHARACTER.yml`. Family may request correction or removal anytime.

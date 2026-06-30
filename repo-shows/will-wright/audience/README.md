@@ -1,6 +1,6 @@
 # 🎟️ Welcome Packet — Audience of *A Repo Show with Will Wright*
 
-*Sniff:* [`GLANCE.yml`](GLANCE.yml) · *One-screen:* [FLIER.md](FLIER.md) · *Roster tables:* [INDEX.yml](INDEX.yml) · *Venue:* [`../venue/README.md`](../venue/README.md)
+*Sniff:* [`CARD.yml`](CARD.yml) · [`GLANCE.yml`](GLANCE.yml) · *One-screen:* [FLIER.md](FLIER.md) · *Roster tables:* [INDEX.yml](INDEX.yml) · *Venue:* [`../venue/README.md`](../venue/README.md)
 
 *You found your ticket. Here's everything you can do with it.*
 
@@ -34,7 +34,7 @@ Full constitution: [`../../process/ticket-pr.yml`](../../process/ticket-pr.yml) 
 |-------|-----|-----------|
 | Easiest | Comment on the **Hacker News** thread when we announce | ephemeral |
 | Easy | **[Open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues)** | in repo |
-| **TicketPR** | Fork → copy [`_TEMPLATE/audience/`](../../_TEMPLATE/audience/) → `audience/<you>/` → PR | **on the record** |
+| **TicketPR** | Fork → copy [`_TEMPLATE/audience/`](../../_TEMPLATE/audience/README.md) → `audience/<you>/` → PR | **on the record** |
 
 A TicketPR is harder than a comment — and that's the point. The guest can see real people, real
 questions, real stories building *before the show is even scheduled*.
@@ -47,14 +47,14 @@ The fastest way in is to **copy a character you like** and make it yours:
 
 | Want to be… | Copy this | Why it's a good model |
 |-------------|-----------|------------------------|
-| A person with a great question | [richard-bartle/](richard-bartle/) | Real, consented, self-authored |
-| A bot with real photos | [bot-slats/](bot-slats/) ⭐ | Full MOOLLM stack + `images/` |
-| A Sims character | [fictional-bella-goth/](fictional-bella-goth/) | CARD advertisements + Simlish |
-| A philosopher | [palm/](palm/) | Self-aware AI; links home to MOOLLM |
-| A running gag | [fictional-broken-robot/](fictional-broken-robot/) | Crashes, begs, dragged off |
-| Honored creator, front row | [heather-alvey/](heather-alvey/) | Real guest, reserved seat, plugs |
+| A person with a great question | [richard-bartle/](richard-bartle/README.md) | Real, consented, self-authored |
+| A bot with real photos | [bot-slats/](bot-slats/README.md) ⭐ | Full MOOLLM stack + `images/` |
+| A Sims character | [fictional-bella-goth/](fictional-bella-goth/README.md) | CARD advertisements + Simlish |
+| A philosopher | [palm/](palm/README.md) | Self-aware AI; links home to MOOLLM |
+| A running gag | [fictional-broken-robot/](fictional-broken-robot/README.md) | Crashes, begs, dragged off |
+| Honored creator, front row | [heather-alvey/](heather-alvey/README.md) | Real guest, reserved seat, plugs |
 
-Or start from the blank [`_TEMPLATE/audience/`](../../_TEMPLATE/audience/). Tutorial: [`CHARACTER.md`](../../_TEMPLATE/audience/CHARACTER.md).
+Or start from the blank [`_TEMPLATE/audience/`](../../_TEMPLATE/audience/README.md). Tutorial: [`CHARACTER.md`](../../_TEMPLATE/audience/CHARACTER.md).
 
 ---
 
@@ -138,7 +138,7 @@ audience member" gags are the late-night tradition, kept honest in git.
 
 - **Policy:** [`FICTIONAL-AUDIENCE.md`](FICTIONAL-AUDIENCE.md)
 - **Planted / running gags / guest-primed:** [`PLANTED-AUDIENCE.md`](../../_TEMPLATE/audience/PLANTED-AUDIENCE.md)
-- **Cross-show regulars:** [`../../../process/repo-show-regulars.yml`](../../../process/repo-show-regulars.yml) · Balcony 🤡💀: [`fictional-tragic-clown/`](fictional-tragic-clown/) · [`fictional-grim-reaper/`](fictional-grim-reaper/)
+- **Cross-show regulars:** [`../../../process/repo-show-regulars.yml`](../../../process/repo-show-regulars.yml) · Balcony 🤡💀: [`fictional-tragic-clown/`](fictional-tragic-clown/README.md) · [`fictional-grim-reaper/`](fictional-grim-reaper/README.md)
 - **Roster + ideas:** [`AUDIENCE-ROSTER-IDEAS.md`](AUDIENCE-ROSTER-IDEAS.md) · **Index:** [`INDEX.yml`](INDEX.yml)
 
 ---
@@ -154,3 +154,21 @@ audience member" gags are the late-night tradition, kept honest in git.
 ---
 
 *COME ON DOWN to the QUESTION IS RIGHT — you're the next contestant on the REPO SHOW!*
+
+---
+
+## Navigation
+
+*(Skeleton: [`GLANCE.yml`](GLANCE.yml))*
+
+| Room | → | Why |
+|------|---|-----|
+| **Up** | [show](../README.md) | Flagship episode root |
+| **Venue** | [venue](../venue/README.md) | Seat map · mic line |
+| **Quick start** | [FLIER.md](FLIER.md) | One-screen version |
+| **Template** | [_TEMPLATE/audience/](../../_TEMPLATE/audience/README.md) | Blank TicketPR |
+| **Examples** | [bot-slats](bot-slats/README.md) · [bella-goth](fictional-bella-goth/README.md) · [palm](palm/README.md) | Copy what you like |
+
+↑ [show](../README.md) · [venue](../venue/README.md) · [`GLANCE.yml`](GLANCE.yml) · [INDEX.yml](INDEX.yml)
+
+*Raw directory:* [browse files in this folder](./)

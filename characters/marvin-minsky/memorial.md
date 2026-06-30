@@ -25,18 +25,18 @@ early robotic arms, advised Stanley Kubrick on **HAL** for *2001: A Space Odysse
 **Triadex Muse** music sequencer — and, as a Bell Labs grad student in 1952, dreamed up the
 **"Ultimate Machine,"** a box whose only function is to switch itself off (Claude Shannon built the
 first; Arthur C. Clarke called it "unspeakably sinister"). It lives on here as a fictional bot
-mascot, [The Ultimate Machine](../ultimate-machine/). With Papert he wrote **Perceptrons** (1969). He
+mascot, [The Ultimate Machine](../ultimate-machine/README.md). With Papert he wrote **Perceptrons** (1969). He
 won the **Turing Award** in 1969 and was a founding member of the **MIT Media Lab**.
 
 We remember him by inviting the people who knew him to tell the real stories — including his
-children, **[Henry](../henry-minsky/)** (who grew up in the AI Lab's children's computer lab and now
-carries Society-of-Mind ideas into Leela AI) and **[Margaret](../margaret-minsky/)** (MIT Media Lab)
-— and colleagues shaped by the same milieu: **[Alan Kay](../alan-kay/)**,
-**[Ken Kahn](../ken-kahn/)**, **[Walter Bender](../walter-bender/)**.
+children, **[Henry](../henry-minsky/README.md)** (who grew up in the AI Lab's children's computer lab and now
+carries Society-of-Mind ideas into Leela AI) and **[Margaret](../margaret-minsky/README.md)** (MIT Media Lab)
+— and colleagues shaped by the same milieu: **[Alan Kay](../alan-kay/README.md)**,
+**[Ken Kahn](../ken-kahn/README.md)**, **[Walter Bender](../walter-bender/README.md)**.
 
 We celebrate his documented public work; we do not speak as him.
 
-**Lineage:** [Jean Piaget](../jean-piaget/) → [Seymour Papert](../seymour-papert/) → Minsky's AI Lab →
+**Lineage:** [Jean Piaget](../jean-piaget/README.md) → [Seymour Papert](../seymour-papert/README.md) → Minsky's AI Lab →
 the show's constructionist spine. See the [constructionist-lineage trail](../../process/trails/constructionist-lineage.md).
 
 *This is a collaborative memorial, not a signed work. Those who knew Marvin — family, friends, and colleagues — are warmly invited to edit, correct, and add their own memories, documents, and stories whenever they're ready.*

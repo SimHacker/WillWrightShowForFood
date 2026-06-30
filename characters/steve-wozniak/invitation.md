@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** Computer Engineer, Apple Co-founder, Creator of the Apple I and Apple II
 
-**Materials:** [`repo-shows/steve-wozniak/`](../../repo-shows/steve-wozniak/)
+**Materials:** [`repo-shows/steve-wozniak/`](../../repo-shows/steve-wozniak/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

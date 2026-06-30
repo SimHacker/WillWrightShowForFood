@@ -1,5 +1,7 @@
 # Slats 🤖
 
+*Sniff:* [`CARD.yml`](CARD.yml) · [`GLANCE.yml`](GLANCE.yml)
+
 **Fictional sidekick** — not a human guest invitation.
 
 ![Slats's face — a stack of horizontal metal slats with cut-out eyes and a mouth slot (the source of the name)](slats-face.png)

@@ -14,8 +14,23 @@ bundles:
     priority: 1
     source: projects/micropolis-moollm/repo-shows/will-wright/
     target: repo-shows/will-wright/
-    include: [README.md, SHOW.yml, GLANCE.yml, invitation.md, invitation-opus-draft.md, episodes.yml, suggested-questions.yml, slats-reincarnation.yml, sources/, assets/]
-    exclude: [.work/]
+    include: [README.md, SHOW.yml, GLANCE.yml, invitation.md, invitation-opus-draft.md, episodes.yml, suggested-questions.yml, slats-reincarnation.yml, venue/, audience/]
+    exclude: [.work/, sources/, assets/, catalogs/]
+    note: "sources + media on characters/will-wright/; catalogs at repo root — show links only"
+
+  catalogs_syndication:
+    priority: 1
+    source: projects/micropolis-moollm/repo-shows/will-wright/catalogs/
+    target: catalogs/
+    include: ["**/*"]
+    note: "Repo-level UCC feeds — syndicated across shows; get-the-sims-on-steam.md"
+
+  will_wright_character_artifacts:
+    priority: 1
+    source: projects/micropolis-moollm/
+    target: characters/will-wright/
+    include: [sources/, media/]
+    note: "Person-owned treasure trove — flat media/, date-stacked sources/"
 
   repo_shows_index:
     priority: 2

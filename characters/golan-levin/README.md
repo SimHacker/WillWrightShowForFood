@@ -4,6 +4,6 @@ Invitation portrayal — **not** Golan Levin. [Standards](../../schemas/portraya
 
 **Field:** Interactive / computational media art, creative coding, gestural & audiovisual interfaces, generative systems, critical making, art-as-research education
 
-[Invitation](invitation.md) · [Show seed](../../repo-shows/golan-levin/)
+[Invitation](invitation.md) · [Show seed](../../repo-shows/golan-levin/README.md)
 
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

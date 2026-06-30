@@ -30,8 +30,8 @@ Threads — your pick:
 - **The Margolus–Levitin limit** — the physics of how fast anything can compute.
 - **Computronium & programmable matter** — computing as physics, physics as computing.
 
-If a **cellular-automata summit** sounds fun, I'd love to add **[Jim Crutchfield](../jim-crutchfield/)**
-(edge of chaos, evolving CA) and my friend **[Scott Draves](../scott-draves/)** (Electric Sheep) —
+If a **cellular-automata summit** sounds fun, I'd love to add **[Jim Crutchfield](../jim-crutchfield/README.md)**
+(edge of chaos, evolving CA) and my friend **[Scott Draves](../scott-draves/README.md)** (Electric Sheep) —
 but just you and a grid running forwards and backwards is already a great show.
 
 **Format:** live (thinking Twitch), announced ahead, audience follows along in the repo and can

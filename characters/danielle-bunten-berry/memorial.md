@@ -25,7 +25,7 @@ philosophy, and it still reads as a challenge to everyone who builds games and t
 
 **The Sims was dedicated to her** — Will Wright's tribute to a friend whose people-first, play-
 together values run straight through The Sims, multiplayer SimCity, and this whole project. We
-remember her best by inviting the people who knew her — above all **[Will Wright](../will-wright/)**
+remember her best by inviting the people who knew her — above all **[Will Wright](../will-wright/README.md)**
 — to tell the real stories.
 
 We celebrate her documented public work; we do not speak as her.

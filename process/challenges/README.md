@@ -23,7 +23,7 @@ Same spec CARD — your **rig** declares languages, tools, platform, emulator. S
 
 ## Example rigs + SETUP
 
-[`../../rigs/`](../../rigs/) — template: [`_TEMPLATE.SETUP.md`](../../rigs/_TEMPLATE.SETUP.md)
+[`../../rigs/`](../../rigs/README.md) — template: [`_TEMPLATE.SETUP.md`](../../rigs/_TEMPLATE.SETUP.md)
 
 ## MOOLLM
 
@@ -31,4 +31,4 @@ Same spec CARD — your **rig** declares languages, tools, platform, emulator. S
 
 ## Related
 
-↑ [`../DRAG-RACE.md`](../DRAG-RACE.md) · [`../README.md`](../README.md) · [`../cross-links.yml`](../cross-links.yml) · [`../../characters/lars-brinkhoff/`](../../characters/lars-brinkhoff/)
+↑ [`../DRAG-RACE.md`](../DRAG-RACE.md) · [`../README.md`](../README.md) · [`../cross-links.yml`](../cross-links.yml) · [`../../characters/lars-brinkhoff/`](../../characters/lars-brinkhoff/README.md)

@@ -11,9 +11,9 @@ using **marginal attribution** and **synthetic items** — Piagetian constructiv
 
 - **The schema mechanism from first principles** — what it did, and what held up.
 - **Made-Up Minds, remade** — give it an **LLM** for the grounding it once learned from scratch, and
-  build it live on [Henry Minsky](../../characters/henry-minsky/)'s **Python schema factory**.
-- **The lineage** — [Piaget](../../characters/jean-piaget/) → schema mechanism →
-  [Leela's](../../characters/steve-kommrusch/) Piaget-schema learning.
+  build it live on [Henry Minsky](../../characters/henry-minsky/README.md)'s **Python schema factory**.
+- **The lineage** — [Piaget](../../characters/jean-piaget/README.md) → schema mechanism →
+  [Leela's](../../characters/steve-kommrusch/README.md) Piaget-schema learning.
 - Optional philosophy turn from **Good and Real**.
 
 See [`SHOW.yml`](SHOW.yml). Consent **not yet asked** —

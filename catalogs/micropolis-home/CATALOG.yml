@@ -1,0 +1,60 @@
+catalog:
+  id: micropolis-home
+  title: Micropolis Home
+  tagline: "Create · publish · share"
+  kind: platform
+  status: planted
+
+what: |
+  Web-browser platform for Sims-family user-created content — the whole stack
+  Don and the community built for The Sims 1 (render, read, write, edit, generate)
+  reborn on Micropolis Federation rails. Hosts legacy catalogs AND new creator work.
+
+not_just_a_catalog: |
+  Catalogs list what exists. Micropolis Home is where you make it, ship it, and
+  play it together — tools + publishing + sharing in one place.
+
+layers:
+  create:
+    - "Transmogrifier / SafeTMog — web-native object authoring"
+    - "RugOMatic, WigOMatic, body/head editors"
+    - "SimShow — preview objects in-browser (ShowNTell lineage)"
+    - "MOOLLM-assisted authoring — optional, human-reviewed"
+  publish:
+    - "Hosted content CARD.yml dirs per catalog + per creator"
+    - "Federation repos — git-native, attributable, forkable"
+    - "Branching dialog cards — Family Album / agitprop / playset objects"
+    - "Round-trippable saves — PITM ledger, game bridges"
+  share:
+    - "Sims Exchange revival — stories + downloadable lots/objects"
+    - "Storefront syndication — simfreaks.com, simslice.com as federated nodes"
+    - "Repo Show artifacts — audience homefun merges back into catalogs"
+    - "Micropolis Class streams — show, don't tell"
+
+hosts:
+  federated_catalogs:
+    - ../simfreaks/
+    - ../simslice/
+    - ../simprov/
+    - ../zombie-sims/
+  first_users:
+    - "Heather Alvey (SimFreaks)"
+    - "Steve Alvey (SimSlice)"
+    - "Don Hopkins (SimProv, composable objects, Dumbold, Crowd Sitter)"
+
+lineage:
+  - "../characters/will-wright/sources/2005-09-18-simfreaks-content-catalog-laszlo/article.md"
+  - "../characters/will-wright/sources/2004-01-12-sims-exchange/article.md"
+  - "../characters/will-wright/sources/2004-01-08-showntell-activex-preview/article.md"
+  - "../characters/will-wright/media/sims-series-micropolis-publishing-vision.md"
+
+sibling_repo:
+  micropolis_core: "apps/micropolis/website/pages/about/hosted-content/README.md"
+  engine: "MicropolisCore — WASM/SvelteKit playable + publishing projection"
+
+implements_from:
+  show: "../SHOW.yml#the_mission_grounded_in_the_invite.web_tools_platform"
+  modules:
+    - "sims_exchange_revival"
+    - "hosted_content_cards"
+    - "pie_menus_piecrafter"

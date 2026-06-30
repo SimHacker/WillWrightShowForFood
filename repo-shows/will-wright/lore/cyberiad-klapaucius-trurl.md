@@ -29,7 +29,7 @@ discussing SimCity, before the 1996 talk.
 
 ## Pull Palm in
 
-[Palm](../audience/palm/) — the self-aware AI monkey who *knows* he's a navigation through
+[Palm](../audience/palm/README.md) — the self-aware AI monkey who *knows* he's a navigation through
 embedding space — is the Cyberiad debate made flesh. Invite him to weigh in: a simulated being
 with an opinion about whether simulated beings can suffer. Will (Klapaucius) and Don (Trurl) argue
 the old argument; Palm answers it from the inside.

@@ -10,41 +10,41 @@ this **GitHub repo** is the **first public point of origin** (tip of the pyramid
 curb appeal up top, **brutalist GitHub underneath** (yaml girders, verify CI, real monorepo).
 → [**Vision** (readable)](process/VISION.md) · [yaml girder](process/vision-and-ambition.yml)
 
-[![The User Interface Flower Child](repo-shows/will-wright/assets/DonHopkinsSimsCreditsIcon.jpg)](repo-shows/will-wright/README.md)
+[![The User Interface Flower Child](characters/will-wright/media/DonHopkinsSimsCreditsIcon.jpg)](repo-shows/will-wright/README.md)
 
 ## The cream (start here)
 
 | What | Where |
 |------|--------|
 | **Vision** (platforms, archives, viral readers) | [**process/VISION.md**](process/VISION.md) |
-| **MOOLLM pyramid** | [`GLANCE.yml`](GLANCE.yml) · [`CARD.yml`](CARD.yml) · [`skills/repo-show/`](skills/repo-show/) |
+| **MOOLLM pyramid** | [`GLANCE.yml`](GLANCE.yml) · [`CARD.yml`](CARD.yml) · [`skills/repo-show/`](skills/repo-show/README.md) |
 | **Process room** | [`process/README.md`](process/README.md) · [`process/INDEX.yml`](process/INDEX.yml) |
 | **Repo Show format** | [`process/FORMAT.md`](process/FORMAT.md) · [`process/repo-show-format.yml`](process/repo-show-format.yml) · [**TicketPR**](process/ticket-pr.yml) |
 | **ShowMaker network** | [`process/showmaker-network.yml`](process/showmaker-network.yml) |
 | **Setup (dev)** | [**SETUP.md**](SETUP.md) |
 | **The show pitch** | [`repo-shows/will-wright/README.md`](repo-shows/will-wright/README.md) · [**Will: browse any order**](repo-shows/will-wright/BROWSE.md) |
-| **🤖 Slats / RoboResurrection** | [`slats-reincarnation.yml`](repo-shows/will-wright/slats-reincarnation.yml) · [`characters/slats/`](characters/slats/) |
-| **1996 Winograd talk** (centerpiece) | [`repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/`](repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/) |
+| **🤖 Slats / RoboResurrection** | [`slats-reincarnation.yml`](repo-shows/will-wright/slats-reincarnation.yml) · [`characters/slats/`](characters/slats/README.md) |
+| **1996 Winograd talk** (centerpiece) | [`characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/`](characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) |
 | **Draft invitation to Will** | [`characters/will-wright/invitation.md`](characters/will-wright/invitation.md) · [**BROWSE any order**](repo-shows/will-wright/BROWSE.md) |
-| **Guest directories** | [`characters/`](characters/) · [`characters/README.md`](characters/README.md) |
+| **Guest directories** | [`characters/`](characters/README.md) · [`characters/README.md`](characters/README.md) |
 | **Portrayal standards** | [`schemas/portrayal-standards.yml`](schemas/portrayal-standards.yml) |
 | **Live repo policy** | [`process/live-repo.yml`](process/live-repo.yml) |
 | **AI-offs** (spend proof + thoughtful commits) | [`process/ai-offs.yml`](process/ai-offs.yml) |
-| **Rig schema** | [`schemas/rig-schema.yml`](schemas/rig-schema.yml) · [`rigs/`](rigs/) (+ **SETUP.md** per rig) |
+| **Rig schema** | [`schemas/rig-schema.yml`](schemas/rig-schema.yml) · [`rigs/`](rigs/README.md) (+ **SETUP.md** per rig) |
 | **Micropolis AI Drag Race** | [`process/DRAG-RACE.md`](process/DRAG-RACE.md) · [`process/micropolis-ai-drag-race.yml`](process/micropolis-ai-drag-race.yml) |
 | **Retrocomputing Drive** | [`process/challenges/RETROCOMPUTING.md`](process/challenges/RETROCOMPUTING.md) · Lars + Thomas |
 | **Manual Transmission** (fewest tokens to code the spec) | [`process/manual-transmission.yml`](process/manual-transmission.yml) |
 | **Orchestration gold** (training traces + thoughtful commits) | [`process/orchestration-gold.yml`](process/orchestration-gold.yml) |
 | **Homefun grading** (Micropolis Class — match commit to thinking) | [`process/homefun-grading.yml`](process/homefun-grading.yml) |
 | **Model branching** (fork chat, compare trajectories) | [`process/model-branching.yml`](process/model-branching.yml) |
-| **Brain stream** (live Cursor on overlay) | [`process/brain-stream.yml`](process/brain-stream.yml) · [`apps/stream-gateway/`](apps/stream-gateway/) |
-| **Slats** (judge + RoboResurrection) | [`characters/slats/`](characters/slats/) |
+| **Brain stream** (live Cursor on overlay) | [`process/brain-stream.yml`](process/brain-stream.yml) · [`apps/stream-gateway/`](apps/stream-gateway/README.md) |
+| **Slats** (judge + RoboResurrection) | [`characters/slats/`](characters/slats/README.md) |
 | **Code That Spec** (game show) | [`process/code-that-spec.yml`](process/code-that-spec.yml) |
 | **Don Hopkins** (host bio) | [`characters/don-hopkins/README.md`](characters/don-hopkins/README.md) |
 | **All show seeds** | [`repo-shows/README.md`](repo-shows/README.md) · [`repo-shows/INDEX.yml`](repo-shows/INDEX.yml) |
 | **MOOLLM interface** | [`GLANCE.yml`](GLANCE.yml) · [`CARD.yml`](CARD.yml) |
-| **Entryways** (playlists by interest) | [**ENTRYWAYS.md**](ENTRYWAYS.md) · [`process/entryways/`](process/entryways/) |
-| **Trails** (sideways leaps) | [**TRAILS.md**](TRAILS.md) · [`process/trails/`](process/trails/) |
+| **Entryways** (playlists by interest) | [**ENTRYWAYS.md**](ENTRYWAYS.md) · [`process/entryways/`](process/entryways/README.md) |
+| **Trails** (sideways leaps) | [**TRAILS.md**](TRAILS.md) · [`process/trails/`](process/trails/README.md) |
 | **Hello, bot** | [**FOR-BOTS.md**](FOR-BOTS.md) · [`process/for-bots.yml`](process/for-bots.yml) |
 
 ## What this is
@@ -59,7 +59,7 @@ simulation. This public tree is the **apex seed** — small, inspectable, growin
 No production promises; see [**process/VISION.md**](process/VISION.md).
 
 **Skills are the big harvest** — each show melts ideas in the cauldron and lifts
-MOOLLM skills into [`skills/`](skills/) (composable with [moollm](https://github.com/SimHacker/moollm)).
+MOOLLM skills into [`skills/`](skills/README.md) (composable with [moollm](https://github.com/SimHacker/moollm)).
 Shows are the stage; inheritable technique is the stack that grows downward.
 
 **Will Wright — first guest, topic-less.** Orbit the 1996 Dollhouse talk; crown jewel = **data portability**
@@ -82,7 +82,7 @@ live in **Twitch and YouTube chat** — and **Don Philahue** surfaces the good o
 
 **Want to attend live?** Submit a **TicketPR** — a pun on TicketMaster where **Master ⇒ PR**
 (pull request): free, public, in git at
-[`repo-shows/<show>/audience/<your-github-username>/`](repo-shows/will-wright/audience/) with
+[`repo-shows/<show>/audience/<your-github-username>/`](repo-shows/will-wright/audience/README.md) with
 `questions.yml` (see [`process/ticket-pr.yml`](process/ticket-pr.yml)). Easier paths: comment on
 the HN announcement or [open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues).
 A TicketPR is the high-value signal — your questions visible to the guest **before** they even
@@ -116,8 +116,8 @@ tell us the stack (below).
 **Using AI?** We want real setups — tools, models, MCP, skills, repos, MOOLLM wiring,
 contexts. Report **token usage and spending** too: we score **cost to ship** (efficiency
 vs extravagance) *and* **solution quality**, then merge winners back and abstract reusable
-parts into [`skills/`](skills/) and [`packages/`](packages/). **[Open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues)**
-or PR with `rig-feedback` — preferably [`rigs/<slug>.rig.yml`](rigs/) per [`schemas/rig-schema.yml`](schemas/rig-schema.yml)
+parts into [`skills/`](skills/README.md) and [`packages/`](packages/README.md). **[Open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues)**
+or PR with `rig-feedback` — preferably [`rigs/<slug>.rig.yml`](rigs/README.md) per [`schemas/rig-schema.yml`](schemas/rig-schema.yml)
 (lifecycle: download → install → configure → use → replicate → mash up). Details: [`process/repo-show-format.yml`](process/repo-show-format.yml).
 
 ## Polyglot monorepo
@@ -188,7 +188,7 @@ inspect the yaml, run verify, then talk. No NDAs to understand the shape.
 
 ## Museum map — pick your doorway
 
-Full labels: [**ENTRYWAYS.md**](ENTRYWAYS.md) · [`process/entryways/`](process/entryways/) · [**TRAILS.md**](TRAILS.md)
+Full labels: [**ENTRYWAYS.md**](ENTRYWAYS.md) · [`process/entryways/`](process/entryways/README.md) · [**TRAILS.md**](TRAILS.md)
 
 Playlists are ordered tours. [`cross-links.yml`](process/cross-links.yml) is for sideways leaps when one topic hooks you.
 

@@ -6,8 +6,8 @@ Invitation portrayal — **not** Lars Brinkhoff. [Standards](../../schemas/portr
 
 **Challenge:** Make it so — boot ITS, MACLISP on emulated iron. Ship **`SETUP.md`** so others reproduce and mod your rig ([`pdp10-maclisp-drive`](../../process/challenges/pdp10-maclisp-drive.yml)).
 
-**Paired guest:** [Thomas Cherryhomes](../thomas-cherryhomes/) — emulated AI Lab meets FujiNet / IRATA.ONLINE
+**Paired guest:** [Thomas Cherryhomes](../thomas-cherryhomes/README.md) — emulated AI Lab meets FujiNet / IRATA.ONLINE
 
-[Invitation](invitation.md) · [Show seed](../../repo-shows/lars-brinkhoff/)
+[Invitation](invitation.md) · [Show seed](../../repo-shows/lars-brinkhoff/README.md)
 
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

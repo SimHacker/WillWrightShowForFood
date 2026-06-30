@@ -16,27 +16,29 @@ This document is the bridge between **proof** (the archived sources in this repo
 
 ## Proof it worked before
 
-We are not pitching vapor. The evidence lives in [`sources/`](sources/INDEX.md), [`assets/sims-series/`](assets/sims-series/), and the [**content catalogs**](catalogs/):
+We are not pitching vapor. The evidence lives in [`../../characters/will-wright/sources/`](../../characters/will-wright/sources/README.md), [`../../characters/will-wright/media/`](../../characters/will-wright/media/README.md), and the [**content catalogs**](../../catalogs/README.md):
 
 | Catalog | What |
 |---------|------|
-| [SimFreaks](catalogs/simfreaks/) | Heather Alvey — object suites, SimAntics depth |
-| [SimSlice](catalogs/simslice/) | Steve Alvey — SliceCity, nested SimCity |
-| [SimProv](catalogs/simprov/) | Wedding playset + composable orchestration |
-| [Zombie Sims](catalogs/zombie-sims/) | Current magnum-opus pack — still shipping |
-| [**Micropolis Home**](catalogs/micropolis-home/) | **Create · publish · share** platform hosting all of the above |
+| [SimFreaks](../../catalogs/simfreaks/README.md) | Heather Alvey — object suites, SimAntics depth |
+| [SimSlice](../../catalogs/simslice/README.md) | Steve Alvey — SliceCity, nested SimCity |
+| [SimProv](../../catalogs/simprov/README.md) | Wedding playset + composable orchestration |
+| [Zombie Sims](../../catalogs/zombie-sims/README.md) | Current magnum-opus pack — still shipping |
+| [**Micropolis Home**](../../catalogs/micropolis-home/README.md) | **Create · publish · share** platform hosting all of the above |
+
+**Before any of that:** [**get The Sims on Steam**](../../catalogs/get-the-sims-on-steam.md). We made this game; we want EA to see Steam sales and documented fan culture — not another 26-year hostility cycle.
 
 | What | Proof in this repo |
 |------|-------------------|
-| **Deep UCC tools** | [Transmogrifier story](assets/sims-series/transmogrifier-story.md), [SimFreaks content catalog](sources/2005-09-18-simfreaks-content-catalog-laszlo/article.md) |
-| **Web-native content CMS** | [SimFreaks catalog in OpenLaszlo + Python](sources/2005-09-18-simfreaks-content-catalog-laszlo/article.md) — thousands of objects, collections, Hypercard-like composition |
-| **Games nested in games** | [Steve Alvey's SliceCity](assets/sims-series/simslice/) — Will's 1996 data-portability dream, **actually shipped** |
-| **Composable SimAntics objects** | [Crowd Sitter](sources/2018-04-23-sims-crowd-sitter/medium-article.md) (10 figures), [Dumbold Voting Machine](sources/2018-04-24-dumbold-voting-machine/medium-article.md) (20 figures) |
-| **Original Sims public site** | [Halloween tombstones](sources/2005-09-22-halloween-tombstones-original-sims/article.md), Dumbold, cemetery — families making and sharing personalized objects |
-| **Design lineage** | [1996 Winograd talk](sources/1996-04-26-winograd-interfacing-to-microworlds/medium-article.md) (167 figures), [Soul of The Sims / Motive.c](sources/2008-02-10-soul-of-the-sims/article.md) |
-| **Procedural vs hand-authored** | [Chris Trottier — tuned emergence](sources/2004-02-21-chris-trottier-tuned-emergence/article.md); [Spore GDC stub](sources/2005-03-11-spore-gdc-future-of-content/article.md) — Will's pivot toward procedural content |
+| **Deep UCC tools** | [Transmogrifier story](../../characters/will-wright/media/sims-series-transmogrifier-story.md), [SimFreaks content catalog](../../characters/will-wright/sources/2005-09-18-simfreaks-content-catalog-laszlo/article.md) |
+| **Web-native content CMS** | [SimFreaks catalog in OpenLaszlo + Python](../../characters/will-wright/sources/2005-09-18-simfreaks-content-catalog-laszlo/article.md) — thousands of objects, collections, Hypercard-like composition |
+| **Games nested in games** | [Steve Alvey's SliceCity](../../characters/will-wright/media/sims-simslice-README.md) — Will's 1996 data-portability dream, **actually shipped** |
+| **Composable SimAntics objects** | [Crowd Sitter](../../characters/will-wright/sources/2018-04-23-sims-crowd-sitter/medium-article.md) (10 figures), [Dumbold Voting Machine](../../characters/will-wright/sources/2018-04-24-dumbold-voting-machine/medium-article.md) (20 figures) |
+| **Original Sims public site** | [Halloween tombstones](../../characters/will-wright/sources/2005-09-22-halloween-tombstones-original-sims/article.md), Dumbold, cemetery — families making and sharing personalized objects |
+| **Design lineage** | [1996 Winograd talk](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/medium-article.md) (167 figures), [Soul of The Sims / Motive.c](../../characters/will-wright/sources/2008-02-10-soul-of-the-sims/article.md) |
+| **Procedural vs hand-authored** | [Chris Trottier — tuned emergence](../../characters/will-wright/sources/2004-02-21-chris-trottier-tuned-emergence/article.md); [Spore GDC stub](../../characters/will-wright/sources/2005-03-11-spore-gdc-future-of-content/article.md) — Will's pivot toward procedural content |
 
-The grandmother who learned Photoshop and XML for her grandkids is not a marketing fable — it is the stated motivation in Don's archival notes ([family manifesto](assets/sims-series/family-manifesto.md)). Miyamoto's GDC photo of a grandfather watching his granddaughter's face, not the screen, is the register we mean: **the player is the spectacle** (DDR, Wii Sports, a wedding you stage together).
+The grandmother who learned Photoshop and XML for her grandkids is not a marketing fable — it is the stated motivation in Don's archival notes ([family manifesto](../../characters/will-wright/media/sims-series-family-manifesto.md)). Miyamoto's GDC photo of a grandfather watching his granddaughter's face, not the screen, is the register we mean: **the player is the spectacle** (DDR, Wii Sports, a wedding you stage together).
 
 ---
 
@@ -49,12 +51,12 @@ Two repos, one arc:
 Open-source descendant of SimCity — Don's lineage from the NeWS port through OLPC to today's WASM/SvelteKit stack. Micropolis is where **simulation meets publishing**:
 
 - Branching pop-up dialogs (title, picture, text, pie-menu buttons) — the same machinery as family album readers and the Dumbold's illustrated agitprop
-- Federation-friendly content cards, hosted catalogs, round-trippable saves (see [Micropolis Home](catalogs/micropolis-home/) · [publishing vision](assets/sims-series/micropolis-publishing-vision.md))
+- Federation-friendly content cards, hosted catalogs, round-trippable saves (see [Micropolis Home](../../catalogs/micropolis-home/README.md) · [publishing vision](../../characters/will-wright/media/sims-series-micropolis-publishing-vision.md))
 - **Micropolis Class**: go to the people who invented the ideas, capture them in public, implement on stream — the product is methodology + knowledge; the game is the proof
 
 ### WillWrightShowForFood (the show + corpus)
 
-Public monorepo for **Repo Shows**: GitHub-native, live conversations whose artifact and stage is the repo itself. The Will Wright kickoff is the anchor; sibling shows ([Heather & Steve Alvey](../heather-steve-alvey/), Eric Bowman, Jamie Doornbos, …) carry specific threads.
+Public monorepo for **Repo Shows**: GitHub-native, live conversations whose artifact and stage is the repo itself. The Will Wright kickoff is the anchor; sibling shows ([Heather & Steve Alvey](../heather-steve-alvey/README.md), Eric Bowman, Jamie Doornbos, …) carry specific threads.
 
 **WWSFF is credibility packaging** for funders and fans:
 
@@ -75,17 +77,17 @@ Built with **SimFreaks**, **SimSlice**, **SimBabes**, and Don: not one object bu
 
 | Object | Job |
 |--------|-----|
-| [Crowd Sitter](sources/2018-04-23-sims-crowd-sitter/medium-article.md) | Gather guests, seat them, manage overflow standing |
+| [Crowd Sitter](../../characters/will-wright/sources/2018-04-23-sims-crowd-sitter/medium-article.md) | Gather guests, seat them, manage overflow standing |
 | Cupid | Speed-dating cheat — prerequisite romance for marriage |
 | Buddha statue | Suppress hunger/bladder/mood so large crowds don't collapse |
 | Hope Chest + wedding consultant | Onboarding, catalogs, narrative scaffolding |
 | Donna's premium set pieces | Beds, buffet, tables, dolls — the craft layer |
 
-Heather gave permission to share the archive: classic SimFreaks objects, unreleased playset pieces, Transmogrifier, Crowd Sitter, Cupid, and the rest ([big-prompts capture](assets/sims-series/micropolis-publishing-vision.md)).
+Heather gave permission to share the archive: classic SimFreaks objects, unreleased playset pieces, Transmogrifier, Crowd Sitter, Cupid, and the rest ([big-prompts capture](../../characters/will-wright/media/sims-series-micropolis-publishing-vision.md)).
 
 **Why it matters in 2026:** When this playset was conceived, same-sex marriage was not yet legal across the United States. The playset was always about **who gets to stand up in front of friends and family and be recognized**. Republishing it now is not nostalgia — it is a deliberate act in an ongoing culture war: *here is a toy world that takes your relationships seriously; here are tools to stage joy together.*
 
-That is agitprop too — but of inclusion and family play, not exclusion. **Intentional inclusion procedural rhetoric** — politics in orchestration rules (Cupid, Crowd Sitter, Buddha), not a manifesto dialog. Pair with the [Dumbold](#the-dumbold-voting-machine--dated-agitprop-preserved-honestly) (institutional farce, same engine). Discuss with **Ian Bogost** on a future show: [procedural-rhetoric-inclusion-agitprop.md](assets/sims-series/procedural-rhetoric-inclusion-agitprop.md) · [show seed](ian-bogost-procedural-rhetoric/SHOW.yml).
+That is agitprop too — but of inclusion and family play, not exclusion. **Intentional inclusion procedural rhetoric** — politics in orchestration rules (Cupid, Crowd Sitter, Buddha), not a manifesto dialog. Pair with the [Dumbold](#the-dumbold-voting-machine--dated-agitprop-preserved-honestly) (institutional farce, same engine). Discuss with **Ian Bogost** on a future show: [procedural-rhetoric-inclusion-agitprop.md](../../characters/will-wright/media/sims-series-procedural-rhetoric-inclusion-agitprop.md) · [show seed](ian-bogost-procedural-rhetoric/SHOW.yml).
 
 See also: [Heather & Steve show seed](../heather-steve-alvey/afterlife-zombie-bridge.yml) (`micropolis_publishing_system`, `simprov_wedding_playset`).
 
@@ -93,7 +95,7 @@ See also: [Heather & Steve show seed](../heather-steve-alvey/afterlife-zombie-br
 
 ## The Dumbold Voting Machine — dated agitprop, preserved honestly
 
-The [Dumbold Voting Machine](sources/2018-04-24-dumbold-voting-machine/medium-article.md) is a **2004 election-cycle** Sims object: procedural rhetoric (Ian Bogost's term) — argument encoded in rules, failure modes, and branching dialogs, not a essay on a page.
+The [Dumbold Voting Machine](../../characters/will-wright/sources/2018-04-24-dumbold-voting-machine/medium-article.md) is a **2004 election-cycle** Sims object: procedural rhetoric (Ian Bogost's term) — argument encoded in rules, failure modes, and branching dialogs, not a essay on a page.
 
 It satirizes **e-voting UX and auditability** (Diebold headlines, EFF, DMCA §512(f), "Monkey" debug mode, factory reset). The "accidentally vote for Pat Buchanan" gag is **interface farce**, not an endorsement of any candidate or faction.
 
@@ -117,7 +119,7 @@ Valid issues remain (vendor lock-in, transparency, accessibility). The Dumbold i
 
 ## The Spore thread (hand-authored → procedural)
 
-Will's [2005 GDC Spore demo](sources/2005-03-11-spore-gdc-future-of-content/article.md) (article stub — Medium removed) marks the industry pivot toward **procedural content**. Our project holds **both** truths:
+Will's [2005 GDC Spore demo](../../characters/will-wright/sources/2005-03-11-spore-gdc-future-of-content/article.md) (article stub — Medium removed) marks the industry pivot toward **procedural content**. Our project holds **both** truths:
 
 - **Hand-authored artisanal UCC** (SimFreaks, SimProv, Heather and Steve's 26-year catalogs) — love, craft, family objects
 - **Procedural and AI-assisted creation** (Spore lineage, MOOLLM, Micropolis Class homefun) — scale, remix, new generations
@@ -130,10 +132,10 @@ The wedding playset is the human magnum opus; Micropolis + federation publishing
 
 | Audience | Start here |
 |----------|------------|
-| Funder / producer | This file → [family manifesto](assets/sims-series/family-manifesto.md) → [Crowd Sitter + Dumbold sources](sources/INDEX.md) |
-| Will / design peer | [1996 Winograd medium article](sources/1996-04-26-winograd-interfacing-to-microworlds/medium-article.md) → [SHOW.yml](SHOW.yml) |
-| Heather / Steve / UCC veterans | [Catalogs hub](catalogs/) → [SimFreaks](catalogs/simfreaks/) → [afterlife-zombie-bridge](../heather-steve-alvey/afterlife-zombie-bridge.yml) |
-| Player / Steam Sims 1 fan | [Content catalogs](catalogs/) → [assets/sims-series/](assets/sims-series/) galleries → download via [Micropolis Home](catalogs/micropolis-home/) |
+| Funder / producer | This file → [family manifesto](../../characters/will-wright/media/sims-series-family-manifesto.md) → [Crowd Sitter + Dumbold sources](../../characters/will-wright/sources/README.md) |
+| Will / design peer | [1996 Winograd medium article](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/medium-article.md) → [SHOW.yml](SHOW.yml) |
+| Heather / Steve / UCC veterans | [Catalogs hub](../../catalogs/README.md) → [SimFreaks](../../catalogs/simfreaks/README.md) → [afterlife-zombie-bridge](../heather-steve-alvey/afterlife-zombie-bridge.yml) |
+| Player / Steam Sims 1 fan | [Content catalogs](../../catalogs/README.md) → [../../characters/will-wright/media/](../../characters/will-wright/media/README.md) galleries → download via [Micropolis Home](../../catalogs/micropolis-home/README.md) |
 
 ---
 

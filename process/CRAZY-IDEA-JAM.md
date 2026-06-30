@@ -85,8 +85,8 @@ room still has to *run* one day.
 
 ## 🌶️ How an idea graduates
 
-An idea earns its way *out* of the jam by becoming runnable — a [show seed](../repo-shows/), a
-[schema](../schemas/), a harvested [skill](../skills/) in the cauldron, or a [trail node](cross-links.yml).
+An idea earns its way *out* of the jam by becoming runnable — a [show seed](../repo-shows/README.md), a
+[schema](../schemas/README.md), a harvested [skill](../skills/README.md) in the cauldron, or a [trail node](cross-links.yml).
 Until then, it lives here, simmering, occasionally singing when you hold the spacebar.
 
 ---

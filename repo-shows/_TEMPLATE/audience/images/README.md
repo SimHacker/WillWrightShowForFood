@@ -54,9 +54,9 @@ Copy structure from these — they are **templates you can steal**:
 
 | Example | Path |
 |---------|------|
-| Bot + real photo with Will | [`../../../will-wright/audience/bot-slats/`](../../../will-wright/audience/bot-slats/) |
-| Sim in Will's hand (Bob Newbie bit) | [`../../../will-wright/audience/fictional-bob-newbie/`](../../../will-wright/audience/fictional-bob-newbie/) |
-| Fictional game character | [`../../../will-wright/audience/fictional-bella-goth/`](../../../will-wright/audience/fictional-bella-goth/) |
-| Balcony regular (🤡💀) | [`../../../will-wright/audience/fictional-tragic-clown/`](../../../will-wright/audience/fictional-tragic-clown/) |
+| Bot + real photo with Will | [`../../../will-wright/audience/bot-slats/`](../../../will-wright/audience/bot-slats/README.md) |
+| Sim in Will's hand (Bob Newbie bit) | [`../../../will-wright/audience/fictional-bob-newbie/`](../../../will-wright/audience/fictional-bob-newbie/README.md) |
+| Fictional game character | [`../../../will-wright/audience/fictional-bella-goth/`](../../../will-wright/audience/fictional-bella-goth/README.md) |
+| Balcony regular (🤡💀) | [`../../../will-wright/audience/fictional-tragic-clown/`](../../../will-wright/audience/fictional-tragic-clown/README.md) |
 
 Replace placeholder headshots with catalog captures or your own photo when you have them.

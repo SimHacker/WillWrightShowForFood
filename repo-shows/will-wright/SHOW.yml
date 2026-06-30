@@ -25,7 +25,7 @@ topic_less_by_design:
   why: "The first show has NO assigned topic. Will Wright is the topic. We talk about whatever he wants — and the topical shows (the simulation effect, Proxi, original SimCity intent, post-mortems...) FLOW FROM it as follow-ups."
   the_move: "Open the door wide first; let the threads he pulls become the season. Show, don't tell."
   but_with_a_centerpiece:
-    centerpiece: "Anything goes — BUT we start with, and orbit, ONE artifact: the 1996 Winograd video + Don's Medium article (sources/1996-04-26-winograd-interfacing-to-microworlds/). It's the seed for asking Will questions + making comments."
+    centerpiece: "Anything goes — BUT we start with, and orbit, ONE artifact: the 1996 Winograd video + Don's Medium article (../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/). It's the seed for asking Will questions + making comments."
     focus_discipline: "NO more videos. Just that one. Keep focused — there's more than enough in it already."
 
 the_arc:
@@ -153,15 +153,15 @@ consent: not_yet_asked              # invitation WRITTEN (near-sendable draft): 
 files:
   README.md:     "Overview + framing + the Flower-Child icon."
   INTRO-NARRATIVE.md: "Micropolis + WWSFF mapping, wedding playset phoenix, agitprop framing — proof it worked."
-  catalogs/: "SimFreaks, SimSlice, SimProv, Zombie Sims + Micropolis Home platform (create · publish · share)."
+  ../../catalogs/: "SimFreaks, SimSlice, SimProv, Zombie Sims + Micropolis Home platform (create · publish · share)."
   invitation.md: "The markdown invitation email to Will (DRAFT — Don to edit/send)."
   episodes.yml:  "The kickoff + the topical episodes that flow from it."
-  assets/:       "DonHopkinsSimsCreditsIcon.jpg — the User Interface Flower Child."
-  sources/:      "Captured source material (Will's own words = the seeds)."
+  ../../characters/will-wright/media/:       "DonHopkinsSimsCreditsIcon.jpg — the User Interface Flower Child."
+  ../../characters/will-wright/sources/:      "Captured source material (Will's own words = the seeds)."
 
 sources:
   winograd_1996:
-    dir: sources/1996-04-26-winograd-interfacing-to-microworlds/
+    dir: ../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
     what: "Will's 1996 Winograd-seminar talk (postmortems + the first public Dollhouse demo). README (framing + the 'taken aback → Dollhouse' moment + threads it seeds) + transcript.md + medium-article.md."
     use: "The kickoff can OPEN by replaying the pivotal moment — the student's question that unspooled The Sims. Could anchor a whole show, maybe several (see episodes.yml)."
     note: "Faithful capture of Will's own words (heartbeat: source, don't paraphrase). Stanford Archives: non-commercial use with attribution + Don's transcript."

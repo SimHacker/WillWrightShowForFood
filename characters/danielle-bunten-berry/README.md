@@ -10,6 +10,6 @@
 Softscape she made **M.U.L.E.** (1983) and **The Seven Cities of Gold** (1984) for Electronic Arts,
 and spent her career insisting that games are at their best when they bring people together in the
 same room. **The Sims was dedicated to her.** The right way to remember her is *with* the people who
-knew her — above all [Will Wright](../will-wright/), who dedicated The Sims to his friend.
+knew her — above all [Will Wright](../will-wright/README.md), who dedicated The Sims to his friend.
 
 Verifiable sources in `CHARACTER.yml`.

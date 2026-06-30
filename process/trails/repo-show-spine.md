@@ -16,7 +16,7 @@ The show **is** the repo — RTFR, play on your rig, harvest skills back into th
 | [**Format girder**](../repo-show-format.yml) | Canonical yaml — rig spectrum, cauldron, clocks |
 | [**FORMAT.md**](../FORMAT.md) | Human-readable view — `pnpm run facades` |
 | [**ShowMaker network**](../showmaker-network.yml) | Shows breed shows — graph of linked episodes |
-| [**will-wright show**](../../repo-shows/will-wright/) | Flagship planted show — Will kickoff arc |
+| [**will-wright show**](../../repo-shows/will-wright/README.md) | Flagship planted show — Will kickoff arc |
 | [**REPO-SHOWS.yml**](../../repo-shows/REPO-SHOWS.yml) | Implicit SHOW inheritance for whole collection |
 | [**Live repo**](../live-repo.yml) | Public WWSFF vs DonHopkins private — export ethics |
 

@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** Haptics / force-feedback; Atari Cambridge Research Lab; MIT Media Lab
 
-**Materials:** [`repo-shows/margaret-minsky/`](../../repo-shows/margaret-minsky/)
+**Materials:** [`repo-shows/margaret-minsky/`](../../repo-shows/margaret-minsky/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

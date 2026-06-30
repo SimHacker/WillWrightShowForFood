@@ -24,7 +24,7 @@ entryways:
     playlist:
       - { priority: 1, title: "Public invitation", path: ../characters/will-wright/invitation.md, why: "One page — what we are asking, what we are not; edit or decline anytime" }
       - { priority: 2, title: "Browse landing", path: ../repo-shows/will-wright/BROWSE.md, why: "Every link in one place; Slats up front if robots beat post-mortems" }
-      - { priority: 3, title: "1996 Winograd source", path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md, why: "Framing + pivotal Dollhouse moment — the talk Don went to Maxis for" }
+      - { priority: 3, title: "1996 Winograd source", path: ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md, why: "Framing + pivotal Dollhouse moment — the talk Don went to Maxis for" }
       - { priority: 4, title: "Your portrait", path: ../characters/will-wright/README.md, why: "Who this directory says you are — portrayal you can correct" }
       - { priority: 5, title: "Trading card", path: ../characters/will-wright/CARD.md, why: "Documented design traditions as invokable verbs — tribute, not impersonation" }
       - { priority: 6, title: "Slats quest", path: ../repo-shows/will-wright/slats-reincarnation.yml, why: "Stupid Fun Club robot Don still has code for — live resurrection optional" }
@@ -56,7 +56,7 @@ entryways:
       what might be built next. Primary source is Will's own words at Stanford, not fan wiki recap.
     playlist:
       - { priority: 1, title: "Show pitch", path: ../repo-shows/will-wright/README.md, why: "Why topic-less, why the Flower Child icon, why now" }
-      - { priority: 2, title: "1996 source bundle", path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "Dollhouse demo + transcript — SimCity file loaded into the house" }
+      - { priority: 2, title: "1996 source bundle", path: ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "Dollhouse demo + transcript — SimCity file loaded into the house" }
       - { priority: 3, title: "Will portrait", path: ../characters/will-wright/README.md, why: "Design traditions in plain language — toys, object AI, hobby model" }
       - { priority: 4, title: "Will CARD", path: ../characters/will-wright/CARD.md, why: "Simulator Effect, implication over simulation — named traditions" }
       - { priority: 5, title: "Chaim Gingold", path: ../characters/chaim-gingold/CARD.yml, why: "Building SimCity — the simulation loop drawn as diagrams" }
@@ -157,7 +157,7 @@ entryways:
       Micropolis Class treats credited public ideas as curriculum. Will's talk is primary
       source; constructionist guests are K-lines; homefun matches git commits to thinking blocks.
     playlist:
-      - { priority: 1, title: "1996 transcript", path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md, why: "Will's own words — post-mortems, Dollhouse, data portability goals" }
+      - { priority: 1, title: "1996 transcript", path: ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md, why: "Will's own words — post-mortems, Dollhouse, data portability goals" }
       - { priority: 2, title: "Seymour Papert", path: ../characters/seymour-papert/CARD.yml, why: "Logo turtle, constructionism — legacy static card" }
       - { priority: 3, title: "Brian Harvey", path: ../characters/brian-harvey/CARD.yml, why: "Beauty and Joy of Computing — Logo in CS1" }
       - { priority: 4, title: "Alan Kay", path: ../characters/alan-kay/CARD.yml, why: "Dynabook lineage — microworlds as media for thought" }
@@ -177,8 +177,8 @@ entryways:
       - { priority: 1, title: "Live repo policy", path: live-repo.yml, why: "Public WWSFF vs DonHopkins authoritative archive — no backfill rule" }
       - { priority: 2, title: "Sync pipeline", path: sync-with-donhopkins.yml, why: "SELECT → FILTER → EXPORT — what crosses the membrane" }
       - { priority: 3, title: "Export manifest", path: ../MANIFEST.yml, why: "Bundle list — which trees map from private source to this repo" }
-      - { priority: 4, title: "1996 source README", path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md, why: "Provenance chain — SearchWorks, YouTube, Medium, attribution terms" }
-      - { priority: 5, title: "1996 transcript", path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md, why: "Primary text — Will's words, Don's sectioning; cite don't paraphrase" }
+      - { priority: 4, title: "1996 source README", path: ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md, why: "Provenance chain — SearchWorks, YouTube, Medium, attribution terms" }
+      - { priority: 5, title: "1996 transcript", path: ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md, why: "Primary text — Will's words, Don's sectioning; cite don't paraphrase" }
       - { priority: 6, title: "Portrayal standards", path: ../schemas/portrayal-standards.yml, why: "What we publish, avoid, and how subjects can correct or delete" }
       - { priority: 7, title: "Invitation workflow", path: ../schemas/invitation-workflow.yml, why: "Honest status enum — draft through aired; legacy_only for deceased K-lines" }
       - { priority: 8, title: "Host sync log", path: ../characters/don-hopkins/sync-sources.yml, why: "What was pulled from moollm/DonHopkins and what stays private" }

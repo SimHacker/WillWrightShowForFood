@@ -77,7 +77,7 @@ Full docs: [QUICKSTART](https://github.com/generalbusiness-ai/keep/blob/main/doc
 ## See also
 
 - [invitation.md](invitation.md) — Amsterdam on-camera show seed
-- [../../repo-shows/craig-latta/](../../repo-shows/craig-latta/) — show YAML + README
-- [../vanessa-freudenberg/](../vanessa-freudenberg/) — SqueakJS foundation
+- [../../repo-shows/craig-latta/](../../repo-shows/craig-latta/README.md) — show YAML + README
+- [../vanessa-freudenberg/](../vanessa-freudenberg/README.md) — SqueakJS foundation
 - [../../process/trails/live-objects.md](../../process/trails/live-objects.md) — live object lineage
 - [MOOLLM](https://github.com/SimHacker/moollm) — microworld OS / skills (parallel memory architecture)

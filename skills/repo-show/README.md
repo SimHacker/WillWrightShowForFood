@@ -21,11 +21,11 @@ A **Repo Show** is a collaborative, GitHub-native, live-streamed design conversa
 |---------|------|
 | Canonical format (generated markup) | [`process/FORMAT.md`](../../process/FORMAT.md) — `pnpm run facades` |
 | Format yaml girder | [`process/repo-show-format.yml`](../../process/repo-show-format.yml) |
-| Show collection | [`repo-shows/`](../../repo-shows/) |
-| Guests + invitations | [`characters/`](../../characters/) |
-| Harvest landing | [`skills/`](../) |
-| Rig personas | [`rigs/`](../../rigs/) |
-| Flagship planted show | [`repo-shows/will-wright/`](../../repo-shows/will-wright/) |
+| Show collection | [`repo-shows/`](../../repo-shows/README.md) |
+| Guests + invitations | [`characters/`](../../characters/README.md) |
+| Harvest landing | [`skills/`](../README.md) |
+| Rig personas | [`rigs/`](../../rigs/README.md) |
+| Flagship planted show | [`repo-shows/will-wright/`](../../repo-shows/will-wright/README.md) |
 
 ## Lifecycle (short)
 
@@ -35,7 +35,7 @@ A **Repo Show** is a collaborative, GitHub-native, live-streamed design conversa
 - **Plant** — directory with room to grow (`repo-shows/foo/`)
 - **RTFR** — audience reads + PRs before air
 - **Air** — live stream; Cursor screencast; Don Philahue wrangles Q&A
-- **Harvest** — cauldron → skills land in [`skills/`](../)
+- **Harvest** — cauldron → skills land in [`skills/`](../README.md)
 
 ## Lineage
 
@@ -45,6 +45,6 @@ Compose with [`SimHacker/moollm`](https://github.com/SimHacker/moollm).
 
 ## Run your own
 
-Fork a show seed, plant it, link into [`process/showmaker-network.yml`](../../process/showmaker-network.yml). Declare your rig in [`rigs/`](../../rigs/) + [`SETUP.md`](../../rigs/_TEMPLATE.SETUP.md).
+Fork a show seed, plant it, link into [`process/showmaker-network.yml`](../../process/showmaker-network.yml). Declare your rig in [`rigs/`](../../rigs/README.md) + [`SETUP.md`](../../rigs/_TEMPLATE.SETUP.md).
 
 — Don Hopkins, Micropolis Class

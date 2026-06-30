@@ -9,12 +9,12 @@
 # (long-form but finite) time. See ../../../skills/repo-show/CARD.yml question_voting.
 #
 # The centerpiece is the 1996 Winograd video + Medium article
-# (sources/1996-04-26-winograd-interfacing-to-microworlds/). Most seeds ask Will
+# (../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/). Most seeds ask Will
 # about HIS OWN 1996 WORDS — what he got right, what he got wrong.
 
 meta:
   status: seed-list
-  centerpiece: sources/1996-04-26-winograd-interfacing-to-microworlds/
+  centerpiece: ../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
   voting: "Copy a question into your character = a vote + a fork you can edit. See SHOW skill question_voting."
 
 # WHAT HE GOT RIGHT (a lot!) — play the 1996 clip, then ask

@@ -21,14 +21,14 @@ see_also:
   - { path: don-hopkins/sync-sources.yml, why: "Host sync from moollm adventure-4" }
   - { path: _TEMPLATE/CARD.yml, why: "Universal CARD surface — MTG abilities + room interface" }
   - { path: contact-queue.yml, why: "Outreach queue — draft invitations" }
-  - { path: will-wright/, why: "Flagship guest — BROWSE.md + CARD.yml" }
+  - { path: will-wright/README.md, why: "Flagship guest — BROWSE.md + CARD.yml" }
   - { path: ../ENTRYWAYS.md, why: "Playlists by interest" }
   - { path: entryways.yml, why: "Ordered viewing sequences" }
-  - { path: don-hopkins/, why: "Host — Sims, Micropolis, MOOLLM" }
-  - { path: don-philahue/, why: "MC — surfaces audience question PRs" }
-  - { path: slats/, why: "Celebrity judge — drag race rubric" }
-  - { path: lars-brinkhoff/, why: "PDP-10/ITS — make it so" }
-  - { path: thomas-cherryhomes/, why: "FujiNet — real retro on wire" }
+  - { path: don-hopkins/README.md, why: "Host — Sims, Micropolis, MOOLLM" }
+  - { path: don-philahue/README.md, why: "MC — surfaces audience question PRs" }
+  - { path: slats/README.md, why: "Celebrity judge — drag race rubric" }
+  - { path: lars-brinkhoff/README.md, why: "PDP-10/ITS — make it so" }
+  - { path: thomas-cherryhomes/README.md, why: "FujiNet — real retro on wire" }
   - { path: ../repo-shows/INDEX.yml, why: "Shows pair with guest dirs" }
   - { path: ../process/cross-links.yml#retro_guests_real_wire, why: "Lars × Thomas trail" }
   - { path: ../process/cross-links.yml#constructionist_lineage, why: "1996 → Will show arc" }

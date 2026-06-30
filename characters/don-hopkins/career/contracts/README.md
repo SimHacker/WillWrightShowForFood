@@ -5,7 +5,7 @@ SimCity as free open source software (GPL-v3) for the One Laptop Per Child proje
 **Micropolis**. Don Hopkins is a party to these contracts, published them on his web server, and
 has linked them from Hacker News; they are mirrored here as primary evidence.
 
-**Policy (Don, Jun 2026):** Document the full chain — DUX is long gone. Include DUX↔Don, DUX↔Maxis, EA↔OLPC, GPL/name licenses, and **Transmogrifier** distribution terms. See also [`transmogrifier-distribution-license-notes.md`](transmogrifier-distribution-license-notes.md) and [`../../../repo-shows/will-wright/sources/maxis-licenses-chain-of-custody/`](../../../repo-shows/will-wright/sources/maxis-licenses-chain-of-custody/).
+**Policy (Don, Jun 2026):** Document the full chain — DUX is long gone. Include DUX↔Don, DUX↔Maxis, EA↔OLPC, GPL/name licenses, and **Transmogrifier** distribution terms. See also [`transmogrifier-distribution-license-notes.md`](transmogrifier-distribution-license-notes.md) and [`../../../characters/will-wright/sources/maxis-licenses-chain-of-custody/`](../../../characters/will-wright/sources/maxis-licenses-chain-of-custody/README.md).
 
 | File | Parties | Date | What it establishes |
 |------|---------|------|---------------------|

@@ -1,0 +1,37 @@
+# CARD — Stupid Fun Club One Minute Movies (interface only)
+# Nav + metadata: GLANCE.yml
+
+glance: GLANCE.yml
+
+room:
+  id: stupid-fun-club-one-minute-movies
+  name: "Stupid Fun Club — One Minute Movies"
+  type: [source_bundle, origin_story, robotics]
+  home: characters/will-wright/sources/stupid-fun-club-one-minute-movies/
+
+methods:
+  READ-ARTICLE:
+    signature: "readArticle() → article.md"
+    advertisement: "Servitude & empathy — how robot waiter demos became Slats."
+  LINK-SLATS:
+    signature: "linkSlats() → characters/slats/"
+    advertisement: "Sidekick CARD + ROBORESURRECTION segment wiring."
+
+abilities:
+  - id: ROBORESURRECTION
+    name: Roboresurrection
+    type: activated
+    advertisement:
+      method: roboresurrection
+      signature: "roboresurrection() → slats-reincarnation.yml"
+      score_when:
+        - trigger: slats_on_stage
+          weight: 1.0
+    effect: "SFC demos → Slats sidekick → audience bot-slats."
+    combos_with:
+      - ../../../slats/CARD.yml
+      - ../../../../repo-shows/will-wright/slats-reincarnation.yml
+
+compose_with:
+  - ../../../slats/CARD.yml
+  - ../1996-04-26-winograd-interfacing-to-microworlds/CARD.yml

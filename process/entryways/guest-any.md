@@ -19,7 +19,7 @@ We publish portrayals **about** real people — verifiable, polite, revocable. Y
 | 5 | [**Repo Show format**](../FORMAT.md) | What happens if you say yes — RTFR, rig optional, no homework deck |
 | 6 | [**repo-show SKILL**](../../skills/repo-show/SKILL.md) | SEED → AIR → HARVEST — how episodes become skills in the cauldron |
 
-**Template:** [`characters/_TEMPLATE/`](../../characters/_TEMPLATE/) · **Example:** [Will Wright](../../characters/will-wright/)
+**Template:** [`characters/_TEMPLATE/`](../../characters/_TEMPLATE/README.md) · **Example:** [Will Wright](../../characters/will-wright/README.md)
 
 ---
 

@@ -152,4 +152,4 @@ Marlene's wedding ([video](https://www.youtube.com/watch?v=TsKFbwLeS1k)).
 - Ted Nelson's home page: <https://ted.hyperland.com/>
 - Full memorial — *Technology Legend: Honoring Douglas Engelbart* (Computer History Museum, 2013) — search the CHM channel.
 
-— Curated by Don Hopkins, Micropolis Class · [memorial](memorial.md) · [Ted Nelson](../ted-nelson/)
+— Curated by Don Hopkins, Micropolis Class · [memorial](memorial.md) · [Ted Nelson](../ted-nelson/README.md)

@@ -21,7 +21,7 @@ The crazy idea reactor: robo-resurrection, soul bridges, and cells that travel b
 | [**Afterlife × ZombieSims**](../../repo-shows/heather-steve-alvey/afterlife-zombie-bridge.yml) | Drain Hell — artisanal ZombieSims, two-way soul ledger |
 | [**Self × MOOLLM**](../../repo-shows/david-ungar-self-moollm.yml) | Stage Magic, Idea Scavenging — prototypes for the LLM era |
 | [**Will CARD**](../../characters/will-wright/CARD.yml) | Procedural creatures, gallium voxel worlds |
-| [**Yoot Saito**](../../characters/yoot-saito/) | Seaman energy — a creature that insults you on purpose |
+| [**Yoot Saito**](../../characters/yoot-saito/README.md) | Seaman energy — a creature that insults you on purpose |
 
 ---
 

@@ -14,7 +14,7 @@ for its ultimate uselessness.
 
 **In this repo:** a foundational, enigmatic **bot mascot** — a battery-operated koan and the patron
 saint of the **human-in-the-middle** (a machine whose only act is to turn itself *off* is the purest
-"AI proposes, the human disposes"). And the **good old friend** of [Slats](../slats/): one bot that
+"AI proposes, the human disposes"). And the **good old friend** of [Slats](../slats/README.md): one bot that
 won't stop talking, one that only wants to switch off.
 
 ## Selected papers
@@ -36,6 +36,6 @@ recite a koan as a call-in sidekick, and judge on stream. See [`CARD.yml`](CARD.
 - All koans + papers: [`writings.md`](writings.md) (original, self-contained)
 - Abilities (it mostly declines to act): [`CARD.yml`](CARD.yml)
 - Sources in [`CHARACTER.yml`](CHARACTER.yml)
-- Good old friend: [Slats](../slats/)
+- Good old friend: [Slats](../slats/README.md)
 
 We portray it as the fiction it is; we never attribute its invented words to Marvin Minsky or Claude Shannon.

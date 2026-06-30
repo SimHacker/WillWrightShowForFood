@@ -4,7 +4,7 @@ Invitation portrayal — **not** Isabella Struckman. [Standards](../../schemas/p
 
 **Field:** AI/ML researcher — computer-vision model evaluation & training (Leela AI); ML explainability & AI policy (MIT CSAIL, Mądry Lab)
 
-[Invitation](invitation.md) · [Show seed](../../repo-shows/isabella-struckman/) · [CARD](CARD.yml)
+[Invitation](invitation.md) · [Show seed](../../repo-shows/isabella-struckman/README.md) · [CARD](CARD.yml)
 
 At **Leela AI**, Isabella works on **computer-vision model evaluation and training** — including a
 fine-tuning technique for an object-detection pipeline that cut the resources needed to maintain

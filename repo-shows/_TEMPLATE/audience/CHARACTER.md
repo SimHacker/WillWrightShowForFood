@@ -61,7 +61,7 @@ audience/<you>/
   images/            # recommended — headshot, avatar (128²), with-guest
 ```
 
-See [`images/README.md`](images/README.md). **Examples:** [`../../will-wright/audience/bot-slats/`](../../will-wright/audience/bot-slats/), [`../../will-wright/audience/fictional-bob-newbie/`](../../will-wright/audience/fictional-bob-newbie/).
+See [`images/README.md`](images/README.md). **Examples:** [`../../will-wright/audience/bot-slats/`](../../will-wright/audience/bot-slats/README.md), [`../../will-wright/audience/fictional-bob-newbie/`](../../will-wright/audience/fictional-bob-newbie/README.md).
 
 Open PR. Guest and curators review. **Master ⇒ PR.**
 
@@ -113,6 +113,6 @@ Graduated? Later you may add a long-lived persona under `characters/` — audien
 ## Links
 
 - [`../../../process/ticket-pr.yml`](../../../process/ticket-pr.yml) — TicketPR constitution
-- [`../../../characters/_TEMPLATE/`](../../../characters/_TEMPLATE/) — guest portrayal template (different job)
+- [`../../../characters/_TEMPLATE/`](../../../characters/_TEMPLATE/README.md) — guest portrayal template (different job)
 - [MOOLLM character CARD](https://github.com/SimHacker/moollm/skills/character/CARD.yml)
 - [Repo Show SKILL](../../../skills/repo-show/SKILL.md)

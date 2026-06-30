@@ -96,4 +96,4 @@ audience activity.
   things Brian said or agreed to.
 
 *See also:* [`ideas.md`](ideas.md) (the grounded, real-Eno hooks) · [`README.md`](README.md) ·
-[`../../repo-shows/brian-eno/`](../../repo-shows/brian-eno/)
+[`../../repo-shows/brian-eno/`](../../repo-shows/brian-eno/README.md)

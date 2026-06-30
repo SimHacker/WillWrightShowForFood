@@ -39,6 +39,6 @@ into felt, a circle of zigzag stitches tapering wide-to-narrow. *"It FELT SEW GO
 |------|------|
 | **Show seed** | [`SHOW.yml`](SHOW.yml) |
 | **TurtleStitch** | https://www.turtlestitch.org/ · [Wikipedia](https://en.wikipedia.org/wiki/Turtlestitch) · [GitHub](https://github.com/backface/turtlestitch) |
-| **Snap!** (the foundation) | [Jens Mönig](../../characters/jens-monig/) · [Brian Harvey](../../characters/brian-harvey/) · [`snap-logo-brian-jens.yml`](../REPO-SHOWS.yml) |
+| **Snap!** (the foundation) | [Jens Mönig](../../characters/jens-monig/README.md) · [Brian Harvey](../../characters/brian-harvey/README.md) · [`snap-logo-brian-jens.yml`](../REPO-SHOWS.yml) |
 | **Reunion theme** | [`old-band-back-together.yml`](../../process/old-band-back-together.yml) — the Snap! community band |
 | **Constructionist lineage** | [`constructionist-lineage.md`](../../process/trails/constructionist-lineage.md) |

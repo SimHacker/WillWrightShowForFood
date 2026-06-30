@@ -1,6 +1,6 @@
 # Will Wright
 
-*Sniff:* [`GLANCE.yml`](GLANCE.yml) · [`GLANCE.md`](GLANCE.md)
+*Sniff:* [`GLANCE.yml`](GLANCE.yml) · [`CARD.yml`](CARD.yml) · [`CHARACTER.yml`](CHARACTER.yml)
 
 **Simulation game designer** — co-founded **Maxis**, created **SimCity** (1989) and **The Sims**
 (2000), and spent a career treating games as **toys and microworlds** rather than contests
@@ -10,20 +10,35 @@ and we do not speak as him without consent.
 
 > *"The player imagines more than we simulate."* — design tradition widely attributed to Will Wright (Simulator Effect)
 
+## Navigation
+
+*(Skeleton: [`GLANCE.yml`](GLANCE.yml))*
+
+| Room | → | Why |
+|------|---|-----|
+| **Up** | [characters](../README.md) | Guest registry |
+| **Show** | [will-wright show](../../repo-shows/will-wright/README.md) | Flagship Repo Show room |
+| **Sources** | [sources](sources/README.md) | Evidence — 1996 centerpiece lives here |
+| **Media** | [media](media/README.md) | Flower Child + flat galleries |
+| **Invitation** | [invitation.md](invitation.md) | Public ask — edit or decline anytime |
+| **Siblings** | [don-hopkins](../don-hopkins/README.md) · [terry-winograd](../terry-winograd/README.md) · [chaim-gingold](../chaim-gingold/README.md) | Host + forebears |
+
+**Suggested read order:** README → invitation → CARD → sources → media → ideas *(GLANCE `read_order`)*
+
 ## Start here
 
 | If you want… | Go |
 |--------------|-----|
 | **The invitation** (short) | [`invitation.md`](invitation.md) |
-| **Long drafts** (email follow-ups) | [`repo-shows/will-wright/`](../../repo-shows/will-wright/) — [sent](../../repo-shows/will-wright/invitation.md) · [opus](../../repo-shows/will-wright/invitation-opus-draft.md) · [gpt55](../../repo-shows/will-wright/invitation-gpt55-draft.md) |
+| **Long drafts** (email follow-ups) | [`repo-shows/will-wright/`](../../repo-shows/will-wright/README.md) — [sent](../../repo-shows/will-wright/invitation.md) · [opus](../../repo-shows/will-wright/invitation-opus-draft.md) · [gpt55](../../repo-shows/will-wright/invitation-gpt55-draft.md) |
 | **Ideas to explore** (conversation hooks) | [`ideas.md`](ideas.md) |
 | **Browse any order** | [`repo-shows/will-wright/BROWSE.md`](../../repo-shows/will-wright/BROWSE.md) |
 | **Suggested sequence** | [`guest-will playlist`](../../process/entryways/guest-will.md) |
 | **Trading card / abilities** | [`CARD.md`](CARD.md) · [`CARD.yml`](CARD.yml) |
-| **Photos & media** (SimCity/Sims history, robots) | [`media/`](media/) · [`media/GLANCE.yml`](media/GLANCE.yml) |
+| **Photos & media** (SimCity/Sims history, robots) | [`media/`](media/README.md) · [`media/GLANCE.yml`](media/GLANCE.yml) |
 | **Russian Space Junk** (Soviet spaceflight hardware, photos by Don) | [`media/russian-space-junk.md`](media/russian-space-junk.md) |
 | **Artwork** (mixed-media relief constructions) | [`media/artwork.md`](media/artwork.md) |
-| **1996 Stanford talk** (centerpiece) | [source bundle](../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/) · [YouTube](https://www.youtube.com/watch?v=nsxoZXaYJSk) |
+| **1996 Stanford talk** (centerpiece) | [source bundle](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) · [YouTube](https://www.youtube.com/watch?v=nsxoZXaYJSk) |
 | **Yaml girder** | [`CHARACTER.yml`](CHARACTER.yml) |
 
 ## Why this repo exists around him
@@ -66,7 +81,7 @@ These are **about his published work**, not claims about private beliefs:
 
 | Who | Link | Why |
 |-----|------|-----|
-| **Don Hopkins** | [`../don-hopkins/`](../don-hopkins/) | Host; Sims tools, pie menus, modding pipeline |
+| **Don Hopkins** | [`../don-hopkins/`](../don-hopkins/README.md) | Host; Sims tools, pie menus, modding pipeline |
 | **Chaim Gingold** | [`../chaim-gingold/CARD.yml`](../chaim-gingold/CARD.yml) | *Building SimCity* — simulation loop diagrams |
 | **Stone Librande** | [`../stone-librande/CARD.yml`](../stone-librande/CARD.yml) | One-page design at Maxis |
 | **Terry Winograd** | [`../terry-winograd/CARD.yml`](../terry-winograd/CARD.yml) | 1996 seminar host |
@@ -104,4 +119,8 @@ This directory is the **guest_will** playlist stop #4. Full museum map: [**ENTRY
 | **Producer** | [playlist](../../process/entryways/producer.md) | Run your own Repo Show — fork the format |
 | **constructionist_lineage** | [trail](../../process/trails/constructionist-lineage.md) | 1996 → this show → Micropolis open lineage |
 
-Your ordered tour: [**guest_will**](../../process/entryways/guest-will.md) — invitation → BROWSE → 1996 → here → CARD → Slats → Don → Vision → browse [`characters/`](../)
+Your ordered tour: [**guest_will**](../../process/entryways/guest-will.md) — invitation → BROWSE → 1996 → here → CARD → Slats → Don → Vision → browse [`characters/`](../README.md)
+
+---
+
+*Raw directory:* [browse files in this folder](./)

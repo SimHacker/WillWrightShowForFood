@@ -30,8 +30,8 @@ surrender, and what AI changes** — across music, visual art, and simulation.
 
 ## How to reach him
 
-Don has no current direct line. The contact path runs through **[Will Wright](../will-wright/)**
-(his Long Now co-speaker) and **[Scott Draves](../scott-draves/)** (who hosted him in 2006). This
+Don has no current direct line. The contact path runs through **[Will Wright](../will-wright/README.md)**
+(his Long Now co-speaker) and **[Scott Draves](../scott-draves/README.md)** (who hosted him in 2006). This
 is a dream invitation — offered with no presumption.
 
 ## Ideas to explore
@@ -47,5 +47,5 @@ For the wilder end — **speculative, aspirational** design provocations to jam 
 imagined dream collaborators) — see [`speculative-jams.md`](speculative-jams.md). It's clearly
 flagged as creative fiction: fuel for "homefun," not claims of fact.
 
-See the show seed: [`repo-shows/brian-eno/`](../../repo-shows/brian-eno/), and the reunion variant
-in [`repo-shows/scott-draves/`](../../repo-shows/scott-draves/).
+See the show seed: [`repo-shows/brian-eno/`](../../repo-shows/brian-eno/README.md), and the reunion variant
+in [`repo-shows/scott-draves/`](../../repo-shows/scott-draves/README.md).

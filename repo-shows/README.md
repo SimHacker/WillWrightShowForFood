@@ -1,6 +1,6 @@
 # repo-shows/
 
-**One planted show + seeds** — each inherits [`skills/repo-show/`](../skills/repo-show/).
+**One planted show + seeds** — each inherits [`skills/repo-show/`](../skills/repo-show/README.md).
 
 > *"So you have a Repo to Show us?"*
 
@@ -28,7 +28,7 @@
 
 ## Lifecycle
 
-`SEED` (`.yml` file) → `PLANT` (directory) → `AIR` → `HARVEST` → [`skills/`](../skills/)
+`SEED` (`.yml` file) → `PLANT` (directory) → `AIR` → `HARVEST` → [`skills/`](../skills/README.md)
 
 Full protocol: [`skills/repo-show/SKILL.md`](../skills/repo-show/SKILL.md)
 
@@ -37,6 +37,6 @@ Full protocol: [`skills/repo-show/SKILL.md`](../skills/repo-show/SKILL.md)
 | Direction | Link |
 |-----------|------|
 | Up | [`../README.md`](../README.md) |
-| Guests | [`../characters/`](../characters/) |
+| Guests | [`../characters/`](../characters/README.md) |
 | Process | [`../process/FORMAT.md`](../process/FORMAT.md) |
 | Network | [`../process/showmaker-network.yml`](../process/showmaker-network.yml) |

@@ -5,7 +5,7 @@ Pick a **doorway** (ordered playlist) or leap **sideways** on a trail when one t
 | Kind | Yaml girder | Human views |
 |------|-------------|-------------|
 | Playlists | [`entryways.yml`](../entryways.yml) | This directory |
-| Trails | [`cross-links.yml`](../cross-links.yml) | [`TRAILS.md`](../../TRAILS.md) · [`trails/`](../trails/) |
+| Trails | [`cross-links.yml`](../cross-links.yml) | [`TRAILS.md`](../../TRAILS.md) · [`trails/`](../trails/README.md) |
 | Rooms | [`entryways.yml`](../entryways.yml#rooms_pitch) | [`rooms.md`](rooms.md) |
 
 ---

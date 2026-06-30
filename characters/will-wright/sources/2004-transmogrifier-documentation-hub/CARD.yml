@@ -1,0 +1,38 @@
+# CARD — Transmogrifier documentation hub (interface only)
+# Nav + metadata: GLANCE.yml
+
+glance: GLANCE.yml
+
+room:
+  id: transmogrifier-documentation-hub
+  name: Transmogrifier Documentation Hub
+  type: [source_bundle, documentation_cluster, wayback]
+  home: characters/will-wright/sources/2004-transmogrifier-documentation-hub/
+
+methods:
+  BROWSE-CLUSTER:
+    signature: "browseCluster() → naming → tutorial → glossary → cookies"
+    advertisement: "Six slugs — read in order from GLANCE children."
+  DRAW-BOUNDARY:
+    signature: "drawBoundary() → article.md#scope"
+    advertisement: "What TMog is NOT — Edith/SimAntics line EA drew."
+  LINK-SIMFREAKS:
+    signature: "linkSimFreaks() → catalogs/simfreaks/"
+    advertisement: "Live UCC brands that grew from fan tooling culture."
+
+abilities:
+  - id: FAN-TOOL-ORIGIN
+    name: Fan Tool Origin
+    type: triggered
+    advertisement:
+      method: fanToolOrigin
+      signature: "fanToolOrigin() → 1996 ad-driven objects → TMog"
+      score_when:
+        - trigger: modding_discussion
+          weight: 0.9
+    effect: "Complete arc from Winograd talk preview to distributed editor."
+
+compose_with:
+  - ../1998-06-04-sims-steering-committee-demo/CARD.yml
+  - ../maxis-licenses-chain-of-custody/CARD.yml
+  - ../../../catalogs/simfreaks/CATALOG.yml

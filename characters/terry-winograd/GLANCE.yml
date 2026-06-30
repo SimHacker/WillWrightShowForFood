@@ -1,0 +1,64 @@
+# TERRY WINOGRAD — GLANCE (nav + metadata SSOT)
+# Interface: CARD.yml · Human prose: GLANCE.md
+
+title: Terry Winograd
+iconic: "🐉📼 Terry"
+description: |
+  Stanford HCI professor; host of CS547 "People, Computers, and Design" — the open public seminar
+  that is the direct forebear of Repo Show. Dragon with the treasure trove: 339 talks, VHS era,
+  shoulders we stand on. Will's 1996 "Interfacing to Microworlds" lives here.
+
+keywords:
+  - terry winograd
+  - cs547
+  - stanford
+  - hci
+  - treasure trove
+  - forebear
+  - seminar archive
+  - will wright 1996
+  - james gosling
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  children:
+    - media/
+    - correspondence.yml
+  siblings:
+    - ../will-wright/
+    - ../james-gosling/
+    - ../ben-shneiderman/
+
+read_order:
+  - README.md
+  - GLANCE.md
+  - media/README.md
+  - media/cs547-ARCHIVE.md
+  - invitation.md
+
+structure:
+  catalog: media/cs547-ARCHIVE.md
+  catalog_machine: media/cs547-archive.yml
+  talks_total: 339
+  centerpiece_guest: will-wright
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Character registry" }
+  siblings:
+    - { path: ../will-wright/GLANCE.yml, why: "Star guest — 1996 + 2003 talks" }
+    - { path: ../james-gosling/GLANCE.yml, why: "CS547 Java talk 1995" }
+  children:
+    - { path: media/GLANCE.yml, why: "CS547 catalog + flat media" }
+    - { path: media/cs547-ARCHIVE.md, why: "339-talk human scroll" }
+  across:
+    - { path: ../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/GLANCE.yml, why: "Show centerpiece from Terry's seminar" }
+    - { path: ../../repo-shows/terry-winograd/README.md, why: "Forebear show seed" }
+    - { path: ../../process/design-in-public.yml, why: "Forebears doctrine" }
+  deep:
+    - { path: README.md, why: "Portrayal article" }
+    - { path: GLANCE.md, why: "Human dragon + treasure trove essay" }
+    - { path: CARD.yml, why: "Guest interface" }

@@ -1,5 +1,8 @@
 # CARD — Chaim Gingold (public portrayal)
 # NOT the person. Schema: ../../schemas/guest-skills-card.yml
+# Nav + metadata: GLANCE.yml
+
+glance: GLANCE.yml
 
 room:
   id: chaim-gingold

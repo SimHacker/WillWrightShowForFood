@@ -59,11 +59,11 @@ Schema: [`../schemas/markup-facade.yml`](../schemas/markup-facade.yml)
 - [`MANUAL-TRANSMISSION.md`](MANUAL-TRANSMISSION.md) — smallest model / fewest tokens to code the spec
 - [`stick-shift-protocol.yml`](stick-shift-protocol.yml) — shift = commit
 - [`rig-feedback.yml`](rig-feedback.yml) — declare your stack
-- [`../rigs/`](../rigs/) — rig yaml + SETUP DNA
+- [`../rigs/`](../rigs/README.md) — rig yaml + SETUP DNA
 
 ### Retrocomputing challenges
 
-- [`challenges/`](challenges/) — Apple ][, PDP-10 ITS, Lisp Machine hack-off
+- [`challenges/`](challenges/README.md) — Apple ][, PDP-10 ITS, Lisp Machine hack-off
 - [`challenges/RETROCOMPUTING.md`](challenges/RETROCOMPUTING.md) — umbrella + rig SETUP requirement
 
 ### Education & training signal
@@ -85,7 +85,7 @@ Schema: [`../schemas/markup-facade.yml`](../schemas/markup-facade.yml)
 | Direction | Go |
 |-----------|-----|
 | Up | [`../README.md`](../README.md) · [`../GLANCE.yml`](../GLANCE.yml) |
-| Across | [`../repo-shows/`](../repo-shows/) · [`../characters/`](../characters/) · [`../skills/repo-show/`](../skills/repo-show/) |
+| Across | [`../repo-shows/`](../repo-shows/README.md) · [`../characters/`](../characters/README.md) · [`../skills/repo-show/`](../skills/repo-show/README.md) |
 | Down | [`challenges/README.md`](challenges/README.md) · [`../schemas/README.md`](../schemas/README.md) |
 
 ## MOOLLM
@@ -96,7 +96,7 @@ Schema: [`../schemas/markup-facade.yml`](../schemas/markup-facade.yml)
 
 ## Museum map
 
-Twelve doorways — ordered playlists. Full pages: [**ENTRYWAYS.md**](../ENTRYWAYS.md) · [`entryways/`](entryways/) · [**TRAILS.md**](../TRAILS.md) · [`trails/`](trails/)
+Twelve doorways — ordered playlists. Full pages: [**ENTRYWAYS.md**](../ENTRYWAYS.md) · [`entryways/`](entryways/README.md) · [**TRAILS.md**](../TRAILS.md) · [`trails/`](trails/README.md)
 
 | Doorway | Page | CTA |
 |---------|------|-----|

@@ -15,7 +15,8 @@ relationship: |
   navigation. I've written about what it's like to be me — please read it before you answer.
 
 prior_reading:
-  - "moollm/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md"
+  - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md
+  - README.md
 
 questions:
   - id: 1

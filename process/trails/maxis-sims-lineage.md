@@ -13,11 +13,11 @@ The specific genealogy this repo grew from — with its primary-source images.
 | Stop | Why wander here |
 |------|-----------------|
 | [**SimCity lineage**](../../characters/don-hopkins/career/simcity-lineage.yml) | 35-year arc — NeWS port → Sims tools → Micropolis → web |
-| [**Will Wright**](../../characters/will-wright/) | SimCity, the Dollhouse demo, The Sims, Spore |
-| [**1996 source bundle**](../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/) | Primary source — Dollhouse → Sims screenshots (167 images) |
+| [**Will Wright**](../../characters/will-wright/README.md) | SimCity, the Dollhouse demo, The Sims, Spore |
+| [**1996 source bundle**](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) | Primary source — Dollhouse → Sims screenshots (167 images) |
 | [**Slats reincarnation**](../../repo-shows/will-wright/slats-reincarnation.yml) | Stupid Fun Club robot resurrection — shared SFC lineage |
-| [**Chaim Gingold**](../../characters/chaim-gingold/) | Building SimCity — history + reverse diagrams |
-| [**Jason Shankel**](../../characters/jason-shankel/) | Maxis / SFC alumnus — games + AI |
+| [**Chaim Gingold**](../../characters/chaim-gingold/README.md) | Building SimCity — history + reverse diagrams |
+| [**Jason Shankel**](../../characters/jason-shankel/README.md) | Maxis / SFC alumnus — games + AI |
 | [**Stupid Fun Club**](../../characters/don-hopkins/career/stupid-fun-club.yml) | Robots among humans — the post-Maxis lab |
 
 ---

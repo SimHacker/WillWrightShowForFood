@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** Games + AI — Maxis / Stupid Fun Club alumnus; procedural/AI in games
 
-**Materials:** [`repo-shows/jason-shankel/`](../../repo-shows/jason-shankel/)
+**Materials:** [`repo-shows/jason-shankel/`](../../repo-shows/jason-shankel/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

@@ -1,0 +1,46 @@
+# JAMES GOSLING — GLANCE (nav + metadata SSOT)
+# Interface: CARD.yml
+
+title: James Gosling
+iconic: "☕ Gosling"
+description: |
+  Java creator, NeWS/SunDew networked graphics, Gosling Emacs, Andrew toolkit — many little
+  languages with self-aware humor. Don's Sun-era colleague; invitation portrayal.
+
+keywords:
+  - james gosling
+  - java
+  - news
+  - sundew
+  - gosling emacs
+  - andrew toolkit
+  - sun microsystems
+  - cheesy languages
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  siblings:
+    - ../arthur-van-hoff/
+    - ../david-temkin/
+    - ../don-hopkins/
+
+read_order:
+  - README.md
+  - CARD.yml
+  - invitation.md
+  - CHARACTER.yml
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Character registry" }
+  siblings:
+    - { path: ../arthur-van-hoff/CARD.yml, why: "HyperLook / Java3D neighbor" }
+    - { path: ../don-hopkins/GLANCE.yml, why: "Sun-era host overlap" }
+  across:
+    - { path: ../../repo-shows/james-gosling/README.md, why: "Show seed when live" }
+  deep:
+    - { path: CARD.yml, why: "Java + NeWS abilities" }
+    - { path: invitation.md, why: "Public invite" }

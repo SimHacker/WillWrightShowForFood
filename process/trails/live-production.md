@@ -16,8 +16,8 @@ Live bus for prompts, model shifts, and GitHub doc links — Philahue surfaces a
 | [**BRAIN-STREAM.md**](../BRAIN-STREAM.md) | Human markup |
 | [**model-branching.yml**](../model-branching.yml) | Fork chat at bubble — compare trajectories |
 | [**orchestration-gold.yml**](../orchestration-gold.yml) | Multi-LLM traces as training gold |
-| [**stream-gateway app**](../../apps/stream-gateway/) | Future deployable brain bus app |
-| [**Don Philahue**](../../characters/don-philahue/) | Audience wrangler — surfaces question PRs live |
+| [**stream-gateway app**](../../apps/stream-gateway/README.md) | Future deployable brain bus app |
+| [**Don Philahue**](../../characters/don-philahue/README.md) | Audience wrangler — surfaces question PRs live |
 
 ---
 

@@ -27,7 +27,7 @@ emulated AI Lab meets real retro on the wire (FujiNet, IRATA.ONLINE, PLATO). Joi
 or tag-team episode: Lars boots ITS; Thomas connects the tree fort. Same preservation ethos,
 different buses.
 
-**Materials:** [`repo-shows/lars-brinkhoff/`](../../repo-shows/lars-brinkhoff/)
+**Materials:** [`repo-shows/lars-brinkhoff/`](../../repo-shows/lars-brinkhoff/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

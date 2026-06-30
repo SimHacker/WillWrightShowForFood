@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** Character animation — The Sims 1
 
-**Materials:** [`repo-shows/eric-hedman/`](../../repo-shows/eric-hedman/)
+**Materials:** [`repo-shows/eric-hedman/`](../../repo-shows/eric-hedman/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

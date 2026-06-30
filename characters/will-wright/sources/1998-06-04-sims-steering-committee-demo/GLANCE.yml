@@ -1,0 +1,49 @@
+# SIMS STEERING COMMITTEE — GLANCE (nav + metadata SSOT)
+# Interface: CARD.yml
+
+title: "The Sims Steering Committee Demo (1998-06-04)"
+iconic: "🎮 Edith"
+description: |
+  Pre-release Sims build demoed to EA steering committee — Edith + SimAntics live on screen.
+  Don's 2019 YouTube narration; aquarium feed-fish traced node-by-node. Does NOT displace 1996
+  centerpiece — shows Dollhouse ideas *running* two years before launch.
+
+keywords:
+  - sims steering committee
+  - edith
+  - simantics
+  - 1998 prototype
+  - ea demo
+  - jamie doornbos
+  - advertisement-driven objects
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  siblings:
+    - ../1996-04-26-winograd-interfacing-to-microworlds/
+    - ../1999-01-06-sims-alpha-prototype/
+    - ../2008-02-10-soul-of-the-sims/
+
+read_order:
+  - README.md
+
+structure:
+  video: https://www.youtube.com/watch?v=zC52jE60KjY
+  archive: https://archive.org/details/the-sims-steering-committee
+  playthrough: ../../../../repo-shows/will-wright/sims-team-steering-committee-playthrough/SHOW.yml
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Sources room" }
+  siblings:
+    - { path: ../1996-04-26-winograd-interfacing-to-microworlds/GLANCE.yml, why: "Previewed Dollhouse — this runs it" }
+    - { path: ../2008-02-10-soul-of-the-sims/GLANCE.yml, why: "Motive substrate beneath Edith" }
+  across:
+    - { path: ../../../../repo-shows/will-wright/sims-team-steering-committee-playthrough/SHOW.yml, why: "Live reunion playthrough" }
+    - { path: ../../../will-wright/GLANCE.yml, why: "Author on mic" }
+  deep:
+    - { path: README.md, why: "Transcript highlights + IA links" }
+    - { path: CARD.yml, why: "Trace-edith interface" }

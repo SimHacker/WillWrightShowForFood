@@ -5,7 +5,7 @@
 **Steve Kommrusch** (Senior AI Scientist at Leela AI) applies deep learning to **automatic program
 repair** and **verifiable program equivalence** (his CSU PhD: VRepair, graph-to-sequence proofs,
 S4Eq), after a career as a **CPU/chip-design architect** at HP, National Semiconductor, and AMD (MIT
-MSc). At Leela he works on **Piaget-schema** learning — a bridge to [Gary Drescher](../../characters/gary-drescher/)'s
+MSc). At Leela he works on **Piaget-schema** learning — a bridge to [Gary Drescher](../../characters/gary-drescher/README.md)'s
 schema mechanism and the [constructionist lineage](../../process/trails/constructionist-lineage.md).
 
 ## What we'd get into

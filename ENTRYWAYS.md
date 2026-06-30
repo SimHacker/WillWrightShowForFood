@@ -5,7 +5,7 @@ Pick a **doorway** (ordered playlist). Follow the numbers. Leap **sideways** on 
 | Kind | Yaml | Human views |
 |------|------|-------------|
 | **Bots** | [`process/for-bots.yml`](process/for-bots.yml) | [**FOR-BOTS.md**](FOR-BOTS.md) |
-| Playlists | [`process/entryways.yml`](process/entryways.yml) | [`process/entryways/`](process/entryways/) |
+| Playlists | [`process/entryways.yml`](process/entryways.yml) | [`process/entryways/`](process/entryways/README.md) |
 | Trails | [`process/cross-links.yml`](process/cross-links.yml) | [**TRAILS.md**](TRAILS.md) |
 | Rooms | [`entryways.yml#rooms_pitch`](process/entryways.yml) | [`process/entryways/rooms.md`](process/entryways/rooms.md) |
 
@@ -34,7 +34,7 @@ Full index with cross-links: [`process/entryways/README.md`](process/entryways/R
 
 ## Trails — sideways
 
-[**TRAILS.md**](TRAILS.md) · [`process/trails/`](process/trails/)
+[**TRAILS.md**](TRAILS.md) · [`process/trails/`](process/trails/README.md)
 
 | Trail | → | One line |
 |-------|---|----------|

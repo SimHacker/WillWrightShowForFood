@@ -1,0 +1,26 @@
+# CARD — YOUR-SLUG show (interface only)
+# Nav + metadata: GLANCE.yml — read GLANCE + CARD together.
+
+glance: GLANCE.yml
+
+room:
+  id: YOUR-SLUG
+  name: "A Repo Show with YOUR GUEST"
+  type: [show, room]
+  home: repo-shows/YOUR-SLUG/
+
+methods:
+  RTFR:
+    signature: "rtfr() → README.md"
+    advertisement: "The show IS the repo — read before air."
+  JOIN-AUDIENCE:
+    signature: "joinAudience() → audience/_TEMPLATE/"
+    advertisement: "TicketPR — Master ⇒ PR under audience/<you>/."
+
+abilities: []
+
+compose_with:
+  - ../../skills/repo-show/
+  - SimHacker/moollm/skills/advertisement
+
+simulation: SIMULATION.yml

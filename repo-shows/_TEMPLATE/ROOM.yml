@@ -1,0 +1,19 @@
+# ROOM — YOUR-SLUG show root (replace placeholders)
+# Labels: CARD.yml
+
+room:
+  id: YOUR-SLUG
+  name: "A Repo Show with YOUR GUEST"
+  type: show_root
+  description: "Episode root — wire exits to your sub-rooms."
+
+exits:
+  east: audience/
+  meta: ../../process/
+  # north: ../../characters/will-wright/sources/
+  # south: venue/
+
+see_also:
+  - CARD.yml
+  - GLANCE.yml
+  - README.md

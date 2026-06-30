@@ -1,0 +1,39 @@
+# CARD — catalogs (interface only)
+# Nav + metadata: GLANCE.yml
+
+glance: GLANCE.yml
+
+room:
+  id: catalogs
+  name: "Sims Content Catalogs"
+  type: [catalog, platform, ucc]
+  home: catalogs/
+
+methods:
+  GET-THE-SIMS:
+    signature: "getTheSims() → get-the-sims-on-steam.md"
+    advertisement: "Buy The Sims on Steam first — we made it; EA should see revenue not hostility."
+  BROWSE-SIMFREAKS:
+    signature: "browseSimFreaks() → simfreaks/"
+    advertisement: "Heather's deep SimAntics suites — one of the richest Sims 1 catalogs."
+  BROWSE-SIMPROV:
+    signature: "browseSimProv() → simprov/"
+    advertisement: "Wedding playset lineage — SimProv CMS + Micropolis Home bridge."
+  OPEN-MICROPOLIS-HOME:
+    signature: "openMicropolisHome() → micropolis-home/"
+    advertisement: "Federation rails — where new catalogs plug in after the show harvests."
+
+abilities:
+  - id: PORT-CONTENT
+    name: Port Content
+    type: activated
+    advertisement:
+      method: portContent
+      signature: "portContent(legacyCatalog) → micropolis-home/"
+      score_when:
+        - trigger: data_portability_topic
+          weight: 0.95
+    effect: "Will's 1996 sharing vision — implement exchange for real."
+    combos_with:
+      - ../characters/will-wright/sources/2004-01-12-sims-exchange/
+      - ../characters/will-wright/sources/2005-09-18-simfreaks-content-catalog-laszlo/

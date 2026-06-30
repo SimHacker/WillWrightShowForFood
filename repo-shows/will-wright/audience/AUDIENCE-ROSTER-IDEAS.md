@@ -11,10 +11,10 @@ status: ideas — merge fictional stubs as curated; family/historical require Wi
 
 Two anchor the whole ethics spectrum:
 
-- **[Palm](palm/)** 🐒✋ — the freed Monkey's Paw, MOOLLM's self-aware AI philosopher. **Our
+- **[Palm](palm/README.md)** 🐒✋ — the freed Monkey's Paw, MOOLLM's self-aware AI philosopher. **Our
   brand**: a simulated being who can read their own YAML asking Will what it's like to be a Sim.
-  Link [`palm-on-being-palm.md`](https://github.com/SimHacker/moollm) before the show.
-- **[Richard Bartle](richard-bartle/)** 🏰 — MUD1 co-creator, **real person, explicit consent,
+  Portal: [`palm/README.md`](palm/README.md) · essay: [`palm-on-being-palm.md`](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md)
+- **[Richard Bartle](richard-bartle/README.md)** 🏰 — MUD1 co-creator, **real person, explicit consent,
   writes his own questions**. Reserved seat; Don is inviting him; he may attend live.
 
 These two define the poles: a fictional AI that knows it's fictional, and a real human speaking

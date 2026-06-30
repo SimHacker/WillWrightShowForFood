@@ -62,7 +62,7 @@ link opens in a browser. Start wherever grabs you:
 |--------------------------|------|
 | **🤖 Slats / RoboResurrection** | https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright/slats-reincarnation.yml |
 | **This show** (you're the topic) | https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright/BROWSE.md |
-| **Your 1996 talk** (+ transcript) | https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds |
+| **Your 1996 talk** (+ transcript) | https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds |
 | **Watch the video** | https://www.youtube.com/watch?v=nsxoZXaYJSk |
 | **The whole repo** | https://github.com/SimHacker/WillWrightShowForFood#readme |
 

@@ -17,37 +17,37 @@ in `repo-shows/`, shared context in `process/`, `skills/`. Constitution:
 
 ## Featured portraits — scroll in
 
-**[will-wright/](will-wright/)** — Flagship guest. [`GLANCE.yml`](will-wright/GLANCE.yml) · Richest CARD + invitation drafts; alias Klapaucius;
-[`media/`](will-wright/media/) photo galleries. Start at [`invitation.md`](will-wright/invitation.md).
+**[will-wright/](will-wright/README.md)** — Flagship guest. [`GLANCE.yml`](will-wright/GLANCE.yml) · Richest CARD + invitation drafts; alias Klapaucius;
+[`media/`](will-wright/media/README.md) photo galleries. Start at [`invitation.md`](will-wright/invitation.md).
 
-**[don-hopkins/](don-hopkins/)** — Host. Career timeline, SimCity lineage, Stupid Fun Club, correspondence
+**[don-hopkins/](don-hopkins/README.md)** — Host. Career timeline, SimCity lineage, Stupid Fun Club, correspondence
 index. Self-sovereign portrayal.
 
-**[don-philahue/](don-philahue/)** — Orchestrator MC (fictional). C-3PO translator, TicketPR harvest,
+**[don-philahue/](don-philahue/README.md)** — Orchestrator MC (fictional). C-3PO translator, TicketPR harvest,
 venue arbitration. The show's constitution lives here.
 
-**[slats/](slats/)** — Sidekick bot. One Minute Movies waiter brain; robopoetry feedback-loop instrument;
+**[slats/](slats/README.md)** — Sidekick bot. One Minute Movies waiter brain; robopoetry feedback-loop instrument;
 ROBORESURRECTION Easter Sunday bit.
 
-**[terry-winograd/](terry-winograd/)** — Forebear. **[`media/cs547-ARCHIVE.md`](terry-winograd/media/cs547-ARCHIVE.md)** — 339 CS547 talks in Terry's character dir; the seminar tradition the 1996 centerpiece inherits.
+**[terry-winograd/](terry-winograd/README.md)** — Forebear. **[`media/cs547-ARCHIVE.md`](terry-winograd/media/cs547-ARCHIVE.md)** — 339 CS547 talks in Terry's character dir; the seminar tradition the 1996 centerpiece inherits.
 
-**[richard-bartle/](richard-bartle/)** — Consented self-author example. MUD co-inventor; spirit-of-work
+**[richard-bartle/](richard-bartle/README.md)** — Consented self-author example. MUD co-inventor; spirit-of-work
 questions he may curate.
 
-**[brian-eno/](brian-eno/)** · **[scott-draves/](scott-draves/)** — Generative-systems dream cluster;
+**[brian-eno/](brian-eno/README.md)** · **[scott-draves/](scott-draves/README.md)** — Generative-systems dream cluster;
 2006 Long Now evening; Electric Sheep on every surface.
 
-**[drew-carey/](drew-carey/)** — Dream guest invitation portrayal (Whose Line + Price Is Right + Sims NPC).
+**[drew-carey/](drew-carey/README.md)** — Dream guest invitation portrayal (Whose Line + Price Is Right + Sims NPC).
 
-**[heather-alvey/](heather-alvey/)** · **[steve-alvey/](steve-alvey/)** — SimFreaks / SimSlice honored
+**[heather-alvey/](heather-alvey/README.md)** · **[steve-alvey/](steve-alvey/README.md)** — SimFreaks / SimSlice honored
 creators; front-row audience + catalog cross-links.
 
-**[phil-salvador/](phil-salvador/)** — VGHF / Obscuritory; SimRefinery recovery; librarian box seat.
+**[phil-salvador/](phil-salvador/README.md)** — VGHF / Obscuritory; SimRefinery recovery; librarian box seat.
 
-**[douglas-engelbart/](douglas-engelbart/)** · **[mark-weiser/](mark-weiser/)** · **[hugh-daniel/](hugh-daniel/)** —
+**[douglas-engelbart/](douglas-engelbart/README.md)** · **[mark-weiser/](mark-weiser/README.md)** · **[hugh-daniel/](hugh-daniel/README.md)** —
 Memorial mode examples — represent and discuss; never voice the deceased.
 
-*Every other name:* list this folder or follow links from [`../repo-shows/`](../repo-shows/).
+*Every other name:* list this folder or follow links from [`../repo-shows/`](../repo-shows/README.md).
 
 ---
 
@@ -80,24 +80,24 @@ Each `characters/<slug>/` folder fills in as we prepare the show and hear back:
 |-------|----------------------------|
 | Invite | `invitation.md`, baseline `CHARACTER.yml`, `CARD.yml`, `README.md`, `GLANCE.md` |
 | Response | Status update, corrected bio, links they want cited |
-| Show prep | `sources/`, URLs, transcribed attachments, public artifacts, optional `portrayal/` |
+| Show prep | `../../characters/will-wright/sources/`, URLs, transcribed attachments, public artifacts, optional `portrayal/` |
 
 **Contributions:** guests may edit their own directory (PR or commit, per consent). We are also glad to assist — email Don Hopkins with text, attachments, or URLs; we place public-safe material with attribution. No GitHub account required.
 
-**Memorial mode** 🕯️ — deceased forebears get full directories too, but we *represent and discuss* them; we never interview or speak as them. Each carries a `memorial:` block (who can discuss them, what shows can draw on) and a `memorial.md` tribute. See [memorial mode](../schemas/portrayal-standards.yml#memorial_mode). Examples: [douglas-engelbart/](douglas-engelbart/), [mark-weiser/](mark-weiser/), [hugh-daniel/](hugh-daniel/).
+**Memorial mode** 🕯️ — deceased forebears get full directories too, but we *represent and discuss* them; we never interview or speak as them. Each carries a `memorial:` block (who can discuss them, what shows can draw on) and a `memorial.md` tribute. See [memorial mode](../schemas/portrayal-standards.yml#memorial_mode). Examples: [douglas-engelbart/](douglas-engelbart/README.md), [mark-weiser/](mark-weiser/README.md), [hugh-daniel/](hugh-daniel/README.md).
 
-Template: [`_TEMPLATE/`](_TEMPLATE/) · Schema: [`../schemas/guest-skills-card.yml`](../schemas/guest-skills-card.yml)
+Template: [`_TEMPLATE/`](_TEMPLATE/README.md) · Schema: [`../schemas/guest-skills-card.yml`](../schemas/guest-skills-card.yml)
 
 ## Organic pointers (not a roster page)
 
 | Who | Directory |
 |-----|-----------|
-| Host | [don-hopkins/](don-hopkins/) — self-sovereign |
-| Flagship guest | [will-wright/](will-wright/) — richest portrayal; [`invitation.md`](will-wright/invitation.md) |
-| Retro pair | [lars-brinkhoff/](lars-brinkhoff/) · [thomas-cherryhomes/](thomas-cherryhomes/) |
-| MC / sidekick | [don-philahue/](don-philahue/) · [slats/](slats/) |
+| Host | [don-hopkins/](don-hopkins/README.md) — self-sovereign |
+| Flagship guest | [will-wright/](will-wright/README.md) — richest portrayal; [`invitation.md`](will-wright/invitation.md) |
+| Retro pair | [lars-brinkhoff/](lars-brinkhoff/README.md) · [thomas-cherryhomes/](thomas-cherryhomes/README.md) |
+| MC / sidekick | [don-philahue/](don-philahue/README.md) · [slats/](slats/README.md) |
 
-More names appear as you list this folder — or follow links from [`../repo-shows/`](../repo-shows/) and [`../process/cross-links.yml`](../process/cross-links.yml).
+More names appear as you list this folder — or follow links from [`../repo-shows/`](../repo-shows/README.md) and [`../process/cross-links.yml`](../process/cross-links.yml).
 
 ## Uniform baseline per guest
 

@@ -15,7 +15,7 @@ of the experts who signed the 2023 'pause letter.'
 - **AI policy / AI supply chains** — mapping the model/data/tooling ecosystem and where risk concentrates.
 - **AI skills & teaching** — authoring agent skills; making AI legible to newcomers.
 
-A Leela AI colleague of Don's (with [Henry Minsky](../../characters/henry-minsky/) and others) — a
+A Leela AI colleague of Don's (with [Henry Minsky](../../characters/henry-minsky/README.md) and others) — a
 natural pairing for a Leela / vision-AI episode.
 
 See [`SHOW.yml`](SHOW.yml). Consent **not yet asked** —

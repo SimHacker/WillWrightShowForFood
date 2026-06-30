@@ -13,7 +13,7 @@ You know the games; this repo is a public conversation about how they were desig
 | # | Stop | Why |
 |---|------|-----|
 | 1 | [**Show pitch**](../../repo-shows/will-wright/README.md) | Why topic-less, why the Flower Child icon, why now |
-| 2 | [**1996 source bundle**](../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/) | Dollhouse demo + transcript — SimCity file loaded into the house |
+| 2 | [**1996 source bundle**](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) | Dollhouse demo + transcript — SimCity file loaded into the house |
 | 3 | [**Will portrait**](../../characters/will-wright/README.md) | Design traditions in plain language — toys, object AI, hobby model |
 | 4 | [**Will CARD**](../../characters/will-wright/CARD.md) | Simulator Effect, implication over simulation — named traditions |
 | 5 | [**Chaim Gingold**](../../characters/chaim-gingold/CARD.yml) | Building SimCity — the simulation loop drawn as diagrams |

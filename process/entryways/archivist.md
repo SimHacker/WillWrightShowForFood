@@ -15,13 +15,13 @@ This repo is a **public bud** grafted from a private archive: one-way export, ho
 | 1 | [**Live repo policy**](../live-repo.yml) | Public WWSFF vs DonHopkins authoritative archive — edit here, no backfill |
 | 2 | [**Sync pipeline**](../sync-with-donhopkins.yml) | SELECT → FILTER → EXPORT — what crosses the membrane and what stays private |
 | 3 | [**Export manifest**](../../MANIFEST.yml) | Bundle list — which trees map from DonHopkins to this repo |
-| 4 | [**1996 source README**](../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) | Provenance chain — SearchWorks, YouTube, Medium, non-commercial attribution terms |
-| 5 | [**1996 transcript**](../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md) | Primary text — Will's words, Don's sectioning; cite, don't paraphrase |
+| 4 | [**1996 source README**](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) | Provenance chain — SearchWorks, YouTube, Medium, non-commercial attribution terms |
+| 5 | [**1996 transcript**](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md) | Primary text — Will's words, Don's sectioning; cite, don't paraphrase |
 | 6 | [**Portrayal standards**](../../schemas/portrayal-standards.yml) | What we publish, avoid, and how subjects can correct or delete |
 | 7 | [**Invitation workflow**](../../schemas/invitation-workflow.yml) | Honest status enum — draft through aired; `legacy_only` for deceased K-lines |
 | 8 | [**Host sync log**](../../characters/don-hopkins/sync-sources.yml) | What was pulled from moollm/DonHopkins; adventure fiction and correspondence excluded |
 | 9 | [**Terry Winograd forebear**](../../characters/terry-winograd/README.md) | CS547 open seminar — recorded conversation as public curriculum |
-| 10 | [**Browse characters**](../../characters/) | Directories accumulate artifacts — self-edit or email Don with text, attachments, URLs |
+| 10 | [**Browse characters**](../../characters/README.md) | Directories accumulate artifacts — self-edit or email Don with text, attachments, URLs |
 | 11 | [**Vision forebears**](../vision-and-ambition.yml) | Long arc girder — design-in-public lineage in yaml |
 
 **Markup view:** [VISION.md](../VISION.md) · **Show context:** [will-wright SHOW.yml](../../repo-shows/will-wright/SHOW.yml) (provenance notes in yaml)

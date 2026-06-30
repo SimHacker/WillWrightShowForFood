@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** Window systems (Andrew, NeWS/SunDew), Gosling/UniPress Emacs, Java;
 
-**Materials:** [`repo-shows/james-gosling/`](../../repo-shows/james-gosling/)
+**Materials:** [`repo-shows/james-gosling/`](../../repo-shows/james-gosling/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

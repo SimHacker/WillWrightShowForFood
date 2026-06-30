@@ -69,7 +69,7 @@ it*, which is the exact move a Repo Show makes with old code. Don crossed paths 
 with Doug) at the SF Eagle in 2006 — and *loved it before he knew Doug had made it*, the sincerest
 tribute of all. Full story, Doug's words, the phone message, and the wish to bring Doug on:
 [`../doug-hilsinger/taking-tiger-mountain-by-serendipity.md`](../doug-hilsinger/taking-tiger-mountain-by-serendipity.md)
-· [Doug's home](../doug-hilsinger/) · [Eno's phone message](audio/TakingTigerMountainBrianEnoPhoneMessageToDougHilsinger.mp3).
+· [Doug's home](../doug-hilsinger/README.md) · [Eno's phone message](audio/TakingTigerMountainBrianEnoPhoneMessageToDougHilsinger.mp3).
 
 ### 8. The Long Now lens
 Brian coined **"The Long Now"** and helped found the Long Now Foundation. A grounding question for

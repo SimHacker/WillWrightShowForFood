@@ -34,10 +34,10 @@ bridge_to_will:
   why: |
     Phil's SimRefinery recovery and VGHF preservation work directly resonate with this show:
     Micropolis is the open-source afterlife of SimCity. Preservation is the through-line.
-  ties_to: ../../sources/simrefinery-recovery/
+  ties_to: ../../../../characters/will-wright/sources/simrefinery-recovery/
 
 awaiting_author: true
 see_also:
   - questions.yml
   - ../fictional-museum-curator/
-  - ../../sources/simrefinery-recovery/
+  - ../../../../characters/will-wright/sources/simrefinery-recovery/

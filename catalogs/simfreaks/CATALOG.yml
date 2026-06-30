@@ -1,0 +1,43 @@
+catalog:
+  id: simfreaks
+  title: SimFreaks
+  kind: legacy_brand
+  status: active
+
+creators:
+  - name: Heather Alvey
+    handle: SimFreaks
+    character: ../characters/heather-alvey/
+
+storefront: https://www.simfreaks.com/
+since: ~1999
+
+what: |
+  One of the longest-running Sims custom-content houses: original object suites,
+  deep SimAntics programming, themed collections, community leadership.
+  Thousands of objects — browse, examine, collect, compose.
+
+flagship_themes:
+  - "Gothic / themed room sets"
+  - "Sophisticated SimAntics behaviors"
+  - "SimFreaks CMS collections (Cool Blue Stuff, etc.)"
+
+assets:
+  - path: ../../media/sims-simfreaks-openlaszlo-catalog-README.md
+    what: "OpenLaszlo CMS mockups — Browse/Examine/Collect"
+  - path: ../../media/sims-simfreaks-content-gameplay-README.md
+    what: "In-game screenshots — SimFreaks + SimProv sets"
+
+sources:
+  - ../characters/will-wright/sources/2005-09-18-simfreaks-content-catalog-laszlo/
+  - ../characters/will-wright/sources/2005-09-18-laszlo-database-interface/
+  - ../characters/will-wright/sources/2005-09-18-player-created-content-index/
+
+platform:
+  hosted_on: ../micropolis-home/
+  note: "First intended CMS customer — Don's Laszlo prototype was built for Heather"
+
+related_catalogs:
+  - ../simprov/
+  - ../zombie-sims/
+  - ../simslice/

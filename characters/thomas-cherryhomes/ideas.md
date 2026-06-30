@@ -147,8 +147,8 @@ fully browser-native FujiNet demo?
 
 ## Pairings already in repo
 
-- [**Lars Brinkhoff**](../lars-brinkhoff/) — emulated ITS × real retro net
-- [**Yoot Tower revival**](../../repo-shows/yoot-tower-revival/) — RE/emulator summit
+- [**Lars Brinkhoff**](../lars-brinkhoff/README.md) — emulated ITS × real retro net
+- [**Yoot Tower revival**](../../repo-shows/yoot-tower-revival/README.md) — RE/emulator summit
 - [**apple2-drive**](../../process/challenges/apple2-drive.yml) — FujiNet real iron path
 
 ### 13. NetSIO — what it is and how hard is browser WASM?

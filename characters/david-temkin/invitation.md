@@ -29,7 +29,7 @@ on the repo as the stage:
 
 No agenda, no pressure — and if you'd rather just tell OpenLaszlo war stories, that's a great show too.
 
-**Materials:** [`repo-shows/openlaszlo/`](../../repo-shows/openlaszlo/) ·
+**Materials:** [`repo-shows/openlaszlo/`](../../repo-shows/openlaszlo/README.md) ·
 [your guest page](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/david-temkin)
 
 Accepted, delayed, declined, or no reply — all honored gracefully.

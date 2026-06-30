@@ -16,14 +16,14 @@ mechanics** (ε-machines). He was one of the UC Santa Cruz **Dynamical Systems C
 - **Edge of chaos** — evolve cellular automata until they actually *compute*.
 - **Geometry from a time series** — reconstruct a hidden attractor from one signal.
 - **Computational mechanics** — ε-machines: the minimal model of a process's intrinsic computation.
-- **A CA jam** with Don's **CAM6** platform, and (dream) [Scott Draves](../../characters/scott-draves/)'s
-  generative art + [Norman Margolus](../../characters/norman-margolus/)'s **CAM-6** / reversible CA.
+- **A CA jam** with Don's **CAM6** platform, and (dream) [Scott Draves](../../characters/scott-draves/README.md)'s
+  generative art + [Norman Margolus](../../characters/norman-margolus/README.md)'s **CAM-6** / reversible CA.
 
 ## In this directory
 
 - [`SHOW.yml`](SHOW.yml) — the show seed.
 - [`invitation.md`](invitation.md) — the draft invitation.
 
-Guest: [`characters/jim-crutchfield/`](../../characters/jim-crutchfield/). Consent **not yet asked**.
+Guest: [`characters/jim-crutchfield/`](../../characters/jim-crutchfield/README.md). Consent **not yet asked**.
 
 — Don Hopkins, Micropolis Class

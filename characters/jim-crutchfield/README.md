@@ -25,15 +25,15 @@ and hidden computation inside any process.
 
 ## Why a Repo Show
 
-Because of one word in Don's pitch to [Scott Draves](../scott-draves/): *feedback.* **"It's always
+Because of one word in Don's pitch to [Scott Draves](../scott-draves/README.md): *feedback.* **"It's always
 the feedback."** Video feedback, cellular automata, iterated graphical systems — the family Don
 plays in with his **CAM6** live CA platform and Scott explores in generative art. A show with Jim
 is a chance to **digress, recurse, and iterate** on video feedback live, evolve cellular automata
 that actually compute, and trace the edge of chaos — ideally with **Scott Draves** and
-[**Norman Margolus**](../norman-margolus/) (CAM-6) in the room.
+[**Norman Margolus**](../norman-margolus/README.md) (CAM-6) in the room.
 
 ## Browse
 
-- Show seed: [`repo-shows/jim-crutchfield/`](../../repo-shows/jim-crutchfield/)
-- Joint CA show: [Norman Margolus](../norman-margolus/) · Dream co-guest: [Scott Draves](../scott-draves/)
+- Show seed: [`repo-shows/jim-crutchfield/`](../../repo-shows/jim-crutchfield/README.md)
+- Joint CA show: [Norman Margolus](../norman-margolus/README.md) · Dream co-guest: [Scott Draves](../scott-draves/README.md)
 - Live work / sources: [UC Davis CSC](https://csc.ucdavis.edu/~chaos/) · [Art & Science Laboratory](https://artscilab.com/) · [Wikipedia](https://en.wikipedia.org/wiki/James_P._Crutchfield)

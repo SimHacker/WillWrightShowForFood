@@ -27,10 +27,10 @@ PostScript is itself Lisp-flavored (code *is* data, sent to run where it lands),
 reinventing NeWS" is a Greenspun special case. (See also **Zawinski's Law of Software Envelopment** —
 jwz again: *"every program attempts to expand until it can read mail."*)
 
-- 📁 [`characters/james-gosling/`](../../characters/james-gosling/) — NeWS (and Emacs → NeWS → Java: "cheesy little extension languages")
-- 📁 [`characters/david-rosenthal/`](../../characters/david-rosenthal/) — NeWS gang
-- 📁 [`characters/arthur-van-hoff/`](../../characters/arthur-van-hoff/) — HyperLook (NeWS HyperCard)
-- 📁 [`characters/owen-densmore/`](../../characters/owen-densmore/) — `class.ps`
+- 📁 [`characters/james-gosling/`](../../characters/james-gosling/README.md) — NeWS (and Emacs → NeWS → Java: "cheesy little extension languages")
+- 📁 [`characters/david-rosenthal/`](../../characters/david-rosenthal/README.md) — NeWS gang
+- 📁 [`characters/arthur-van-hoff/`](../../characters/arthur-van-hoff/README.md) — HyperLook (NeWS HyperCard)
+- 📁 [`characters/owen-densmore/`](../../characters/owen-densmore/README.md) — `class.ps`
 
 ## 2. Owen Densmore — classes in pure PostScript
 
@@ -83,7 +83,7 @@ into the player's head** — by far the more powerful computer — via an **appl
 that invokes what they already know** (cities, families, love, hunger, stories). You don't rebuild
 their world model; you **activate** it. That's a Minsky **K-line**.
 
-- 📁 [`characters/will-wright/`](../../characters/will-wright/) · 📁 [`characters/marvin-minsky/`](../../characters/marvin-minsky/) (K-lines / Society of Mind)
+- 📁 [`characters/will-wright/`](../../characters/will-wright/README.md) · 📁 [`characters/marvin-minsky/`](../../characters/marvin-minsky/README.md) (K-lines / Society of Mind)
 
 ## 5. The Sims & SliceCity — send code as *content*
 
@@ -93,7 +93,7 @@ Alvey's SimSlice / SliceCity** — a **Lilliputian SimCity that fits in your Sim
 SimCity running *inside* The Sims. That's the **shipped precedent** for **Simopolis** data portability
 (link actual save files, run emulators, round-trip state across many games).
 
-- 📁 [`characters/heather-alvey/`](../../characters/heather-alvey/) · 📁 [`repo-shows/heather-steve-alvey/`](../../repo-shows/heather-steve-alvey/)
+- 📁 [`characters/heather-alvey/`](../../characters/heather-alvey/README.md) · 📁 [`repo-shows/heather-steve-alvey/`](../../repo-shows/heather-steve-alvey/README.md)
 - 📁 [`process/character-endosymbiosis.yml`](../character-endosymbiosis.yml) · [`repo-shows/INDEX.yml`](../../repo-shows/INDEX.yml) (`bridges_architecture`)
 
 ## 6. Drescher — schemas are little programs you can run
@@ -102,7 +102,7 @@ SimCity running *inside* The Sims. That's the **shipped precedent** for **Simopo
 *context → action → result* unit — a tiny program that predicts and runs — now **grounded by LLMs**.
 Send a schema, not a command.
 
-- 📁 [`characters/gary-drescher/`](../../characters/gary-drescher/) · [`schemas-vectors-and-llms.md`](../../characters/gary-drescher/schemas-vectors-and-llms.md)
+- 📁 [`characters/gary-drescher/`](../../characters/gary-drescher/README.md) · [`schemas-vectors-and-llms.md`](../../characters/gary-drescher/schemas-vectors-and-llms.md)
 
 ## 7. Ben Shneiderman & executable character models
 
@@ -113,7 +113,7 @@ everyone does for family and friends: we build and run empathic models of the pe
 does on purpose, as data structures, what minds do naturally** — which is exactly why it must be done
 **with respect, not deception** ([representation-ethics](https://github.com/SimHacker/moollm/tree/main/skills/representation-ethics)).
 
-- 📁 [`characters/ben-shneiderman/`](../../characters/ben-shneiderman/) · [`characters/don-hopkins/portrayal/voice.yml`](../../characters/don-hopkins/portrayal/voice.yml)
+- 📁 [`characters/ben-shneiderman/`](../../characters/ben-shneiderman/README.md) · [`characters/don-hopkins/portrayal/voice.yml`](../../characters/don-hopkins/portrayal/voice.yml)
 
 ## The synthesis
 
@@ -130,4 +130,4 @@ does on purpose, as data structures, what minds do naturally** — which is exac
 It's all one move: **don't describe — deliver something that runs, where it lands, in terms it already
 understands.**
 
-— Part of [`process/`](../) · see also [`repo-show-spine.md`](repo-show-spine.md), [`live-objects.md`](live-objects.md), [`augmentation-and-hypertext.md`](augmentation-and-hypertext.md), [`constructionist-lineage.md`](constructionist-lineage.md)
+— Part of [`process/`](../README.md) · see also [`repo-show-spine.md`](repo-show-spine.md), [`live-objects.md`](live-objects.md), [`augmentation-and-hypertext.md`](augmentation-and-hypertext.md), [`constructionist-lineage.md`](constructionist-lineage.md)

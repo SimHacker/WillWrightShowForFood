@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** Creative prototyping — speech/AI; original StoryMaker Flash app; ex-Stupid Fun Club, ex-Google X
 
-**Materials:** [`repo-shows/matthew-sibigtroth/`](../../repo-shows/matthew-sibigtroth/)
+**Materials:** [`repo-shows/matthew-sibigtroth/`](../../repo-shows/matthew-sibigtroth/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

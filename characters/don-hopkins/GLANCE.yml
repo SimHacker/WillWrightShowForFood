@@ -1,26 +1,62 @@
-# don-hopkins — GLANCE
+# DON HOPKINS — GLANCE (nav + metadata SSOT)
+# Interface: CARD.yml · self-sovereign host portrayal.
 
-what: "Self-sovereign host — pie menus, Sims, Micropolis, Repo Show, MOOLLM"
+title: Don Hopkins
+iconic: "🌸 Don"
+description: |
+  Self-sovereign host — pie menus, Sims lineage, Micropolis, Repo Show, MOOLLM microworld.
+  User Interface Flower Child; archive keeper; contracts and career yaml under career/.
 
-consent: self_sovereign
-backbone: career/*.yml
-portrayal: portrayal/*.yml
+keywords:
+  - don hopkins
+  - host
+  - pie menus
+  - micropolis
+  - transmogrifier
+  - simcity lineage
+  - stupid fun club
+  - repo show
+  - flower child
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  children:
+    - career/
+    - portrayal/
+  siblings:
+    - ../don-philahue/
+    - ../slats/
+    - ../will-wright/
 
 read_order:
   - README.md
   - CHARACTER.yml
+  - CARD.yml
   - career/INDEX.yml
   - sync-sources.yml
 
-related_characters:
-  - ../don-philahue/
-  - ../slats/
-  - ../will-wright/
+structure:
+  consent: self_sovereign
+  backbone: career/
+  upstream: SimHacker/moollm/examples/adventure-4/characters/real-people/don-hopkins/
 
 see_also:
-  - { path: CARD.yml, why: "Room interface" }
-  - { path: sync-sources.yml, why: "What we synced from moollm adventure-4 vs excluded" }
-  - { path: career/stupid-fun-club.yml, why: "Slats origin — links to drag race" }
-  - { path: ../../skills/repo-show/SKILL.md, why: "Host protocol" }
-  - { path: ../../repo-shows/will-wright/, why: "Flagship show guest context" }
-  - { path: https://github.com/SimHacker/moollm/examples/adventure-4/characters/real-people/don-hopkins, why: "Adventure layer — deeper, not duplicated here" }
+  parent:
+    - { path: ../GLANCE.yml, why: "Character registry" }
+  siblings:
+    - { path: ../don-philahue/GLANCE.yml, why: "Orchestrator MC avatar" }
+    - { path: ../slats/GLANCE.yml, why: "SFC robot sidekick" }
+    - { path: ../will-wright/GLANCE.yml, why: "Flagship guest" }
+  children:
+    - { path: career/simcity-lineage.yml, why: "Open-source saga timeline" }
+    - { path: career/contracts/README.md, why: "DUX/Maxis/EA/OLPC papers" }
+  across:
+    - { path: ../../repo-shows/will-wright/GLANCE.yml, why: "Flagship show" }
+    - { path: ../../skills/repo-show/SKILL.md, why: "Host protocol" }
+    - { path: ../../characters/will-wright/sources/simcity-open-source-saga/GLANCE.yml, why: "Micropolis origin mail" }
+  deep:
+    - { path: README.md, why: "Host article" }
+    - { path: sync-sources.yml, why: "Moollm adventure sync policy" }

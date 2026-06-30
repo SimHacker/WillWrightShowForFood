@@ -1,34 +1,71 @@
-# WILL WRIGHT MEDIA — GLANCE (photos + galleries)
-# up: ../GLANCE.md | feed: README.md | deep: russian-space-junk.md · artwork.md
+# WILL WRIGHT MEDIA — GLANCE (nav + metadata SSOT)
+# Flat catch-all — McLuhan invoked. Interface: CARD.yml (optional); read with character GLANCE.
 
-what: |
-  General media room — primary-source photos (flat PNGs), markdown sub-galleries
-  (Soviet spaceflight hardware, relief artwork), cross-links to show sources/assets.
+title: Will Wright — Media
+iconic: "🖼️ Flower Child"
+description: |
+  Flat media room — portraits, Soviet hardware, relief artwork, Sims series screenshots and essays.
+  No type-specific subdirs; big-endian filenames (sims-dumbold-voting-machine-*, sims-series-*).
+  DonHopkinsSimsCreditsIcon.jpg is the Flower-Child show mascot.
+
+keywords:
+  - will wright media
+  - flower child
+  - sims series
+  - dumbold
+  - simfreaks
+  - transmogrifier
+  - flat gallery
+  - big-endian
+
+card: sims-series-show-CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  siblings:
+    - ../sources/
 
 read_order:
   - README.md
+  - DonHopkinsSimsCreditsIcon.jpg
+  - sims-series-README.md
   - russian-space-junk.md
   - artwork.md
+  - sims-series-procedural-rhetoric-inclusion-agitprop.md
+  - sims-series-transmogrifier-story.md
 
 clusters:
+  mascot:
+    - DonHopkinsSimsCreditsIcon.jpg
   simcity_nintendo:
     - will-wright-and-miyamoto-simcity-snes.png
   sims_promo:
     - will-wright-holding-sim.png
     - sim-picking-wills-nose.png
     - will-wright-eating-sim.png
-    - home-tactics-box-cover-mockup.png
-  development:
-    - sims-programmer-art-1.png
-    - sims-programmer-art-2.png
-    - rug-o-matic-samples.png
-  events:
-    - will-wright-conference-photo.png
-  robots:
-    - robot-fight-la-1.png
+  sims_series_galleries:
+    - sims-dumbold-voting-machine-README.md
+    - sims-simfreaks-content-gameplay-README.md
+    - sims-simslice-README.md
+    - sims-simantics-objects-README.md
+    - sims-people-and-events-README.md
+  sims_series_essays:
+    - sims-series-procedural-rhetoric-inclusion-agitprop.md
+    - sims-series-family-manifesto.md
+    - sims-series-micropolis-publishing-vision.md
+    - sims-series-maxis-people.md
 
 see_also:
-  - { path: ../README.md, why: "Guest portrayal hub" }
-  - { path: ../../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "167-figure Medium gallery" }
-  - { path: ../../../repo-shows/will-wright/assets/sims-series/, why: "Screenshot themes" }
-  - { path: ../../../repo-shows/will-wright/catalogs/, why: "Live content brands" }
+  parent:
+    - { path: ../GLANCE.yml, why: "Guest portrayal hub" }
+  siblings:
+    - { path: ../sources/GLANCE.yml, why: "Primary sources treasure trove" }
+  across:
+    - { path: ../../../repo-shows/will-wright/GLANCE.yml, why: "Flagship show references here" }
+    - { path: ../../../catalogs/README.md, why: "Live UCC brands" }
+    - { path: ../sources/1996-04-26-winograd-interfacing-to-microworlds/README.md, why: "167-figure Medium gallery" }
+  deep:
+    - { path: README.md, why: "Human scroll index" }
+    - { path: sims-series-README.md, why: "Sims series theme index" }
+    - { path: sims-series-GLANCE.yml, why: "Sims series nav slice" }

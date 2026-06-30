@@ -96,7 +96,7 @@ see_also:
   - { path: ../../process/cross-links.yml#drag_race_and_ai_offs, why: "Game-show formats inside shows" }
   - { path: ../../process/showmaker-network.yml, why: "Linked shows graph" }
   - { path: ../../repo-shows/REPO-SHOWS.yml, why: "SHOW inheritance for collection" }
-  - { path: ../../repo-shows/will-wright/, why: "Flagship planted show" }
+  - { path: ../../repo-shows/will-wright/README.md, why: "Flagship planted show" }
   - { path: ../../characters/INDEX.yml, why: "Guests + invitations" }
   - { path: ../../rigs/INDEX.yml, why: "Rig personas for drag race" }
   - { path: ../../process/homefun-grading.yml, why: "Homefun not homework rubric" }

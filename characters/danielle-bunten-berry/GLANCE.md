@@ -5,6 +5,6 @@
 - **The Seven Cities of Gold** (1984) — open-world exploration (EA)
 - Pioneer of **multiplayer, social, in-the-same-room** game design
 - **The Sims was dedicated to her** — Will Wright's tribute to a friend and influence
-- Discussant: [Will Wright](../will-wright/) (good friend), [Don Hopkins](../don-hopkins/)
+- Discussant: [Will Wright](../will-wright/README.md) (good friend), [Don Hopkins](../don-hopkins/README.md)
 
 Read next: [README](README.md) · [memorial](memorial.md) · [CHARACTER.yml](CHARACTER.yml)

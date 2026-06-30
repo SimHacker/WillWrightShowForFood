@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** The TrackPoint and input efficiency; **considerate computing**; and the IBM
 Almaden **NPUC** workshops (where Don demoed Multiplayer SimCity). See the
-[show seed](../../repo-shows/ted-selker/) for segment ideas.
+[show seed](../../repo-shows/ted-selker/README.md) for segment ideas.
 
 Browse without a GitHub account — start at the [README](https://github.com/SimHacker/WillWrightShowForFood).
 

@@ -36,4 +36,4 @@ code, data, *and* graphics. (See the trail: [`send-code-not-commands`](../../pro
 ## Browse
 
 - Sources: [Redfish bio](http://redfish.com/owenDensmore.htm) · ["Object Oriented Programming in NeWS" (1986)](https://donhopkins.com/home/monterey86.pdf)
-- NeWS gang: [James Gosling](../james-gosling/) · [David Rosenthal](../david-rosenthal/) · [Arthur van Hoff](../arthur-van-hoff/)
+- NeWS gang: [James Gosling](../james-gosling/README.md) · [David Rosenthal](../david-rosenthal/README.md) · [Arthur van Hoff](../arthur-van-hoff/README.md)

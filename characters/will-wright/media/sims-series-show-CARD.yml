@@ -1,0 +1,33 @@
+# CARD — assets (interface only)
+# Nav + metadata: GLANCE.yml
+
+glance: GLANCE.yml
+
+room:
+  id: assets
+  name: "Will Wright Show Assets"
+  type: [media, gallery]
+  home: characters/will-wright/media/
+
+methods:
+  MEET-FLOWER-CHILD:
+    signature: "meetFlowerChild() → DonHopkinsSimsCreditsIcon.jpg"
+    advertisement: "Cozy psychedelic host — not a suit; the show's face in README."
+  BROWSE-SIMS-SERIES:
+    signature: "browseSimsSeries() → sims-series-README.md"
+    advertisement: "Curated visual essays — people, events, SimAntics objects, catalog echoes."
+
+abilities:
+  - id: SHOW-DONT-TELL
+    name: Show Don't Tell
+    type: triggered
+    advertisement:
+      method: showDontTell
+      signature: "showDontTell(imagePath) → overlay during stream"
+      score_when:
+        - trigger: guest_mentions_visual_artifact
+          weight: 0.85
+    effect: "Pull gallery image while talking — brain stream + overlay viewer."
+    combos_with:
+      - ../../../apps/stream-gateway/
+      - ../sources/

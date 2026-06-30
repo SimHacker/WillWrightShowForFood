@@ -1,0 +1,46 @@
+# CARD — venue (interface only)
+# Nav + metadata: GLANCE.yml
+
+glance: GLANCE.yml
+
+room:
+  id: venue
+  name: "The Repo Show Theater"
+  type: [venue, room_graph]
+  home: repo-shows/will-wright/venue/
+
+methods:
+  ENTER-LOBBY:
+    signature: "enterLobby() → red carpet arrivals + venue tour"
+    advertisement: "Pre-show Philahue broadcast — greet celebrity audience as they arrive."
+  CLAIM-SEAT:
+    signature: "claimSeat(roomId) → VENUE.yml assignment"
+    advertisement: "Scarce tangible seats — front row earned, balcony for hecklers."
+  JOIN-MIC-LINE:
+    signature: "joinMicLine() → queue at the-mic"
+    advertisement: "Wait in line to ask live — called from front row or mic queue."
+  HECKLE-FROM-BALCONY:
+    signature: "heckleFromBalcony(left|right) → 🤡 or 💀 regulars"
+    advertisement: "Balcony duo — comedy left, memento mori right; see repo-show-regulars.yml."
+
+abilities:
+  - id: REWIRE-LAYOUT
+    name: Rewire Layout
+    type: activated
+    advertisement:
+      method: rewireLayout
+      signature: "rewireLayout(exits) → proscenium | in-the-round | cabaret"
+      score_when:
+        - trigger: producer_wants_new_geometry
+          weight: 0.8
+    effect: "MOOLLM flexibility — change exits in VENUE.yml, commit with narrative message."
+    combos_with:
+      - VENUE.yml
+      - ../performance-and-culture.yml
+
+compose_with:
+  - ../audience/fictional-tragic-clown/CARD.yml
+  - ../audience/fictional-grim-reaper/CARD.yml
+  - ../audience/bot-slats/CARD.yml
+  - ../../../process/repo-show-regulars.yml
+  - ../../../characters/don-philahue/

@@ -1,44 +1,90 @@
-# WILL WRIGHT — GLANCE (the first planted Repo Show)
-# 🎬 "So you have a Repo to Show us?" — the flagship kickoff.
-# up: ../INDEX.yml | deeper: SHOW.yml → README.md → sources/ | engine: /skills/repo-show/
+# WILL WRIGHT — GLANCE (nav + metadata SSOT)
+# Interface/ads: CARD.yml — read GLANCE + CARD together before README.
 
-what: "The FIRST planted Repo Show. TOPIC-LESS — Will Wright IS the topic — but centered on ONE artifact: his 1996 Winograd talk. The topical shows flow from it."
+title: "A Repo Show with Will Wright"
+iconic: "🎬🌍 Will"
+description: |
+  The first planted Repo Show — topic-less by design. Will Wright IS the topic; we orbit one
+  artifact, his 1996 Stanford seminar with Terry Winograd. RTFR before air; TicketPR in git;
+  harvest ideas to code. Completes the ~26-year loop: 1996 previewed The Sims — this is the
+  post-mortem with Don and Will in the room.
 
-status: planted   # seed → PLANTED (here) → next: elaborate → DISTILL to its own repo → INVITE Will
+keywords:
+  - repo show
+  - will wright
+  - topic-less
+  - 1996 winograd
+  - simcity
+  - the sims
+  - micropolis
+  - data portability
+  - ticketpr
+  - flagship
+  - post-mortem
+  - terry winograd
+  - open source
+  - transmogrifier
+
+card: CARD.yml
+
+navigation:
+  up: ../INDEX.yml
+  parent: ../
+  children:
+    - ../../characters/will-wright/sources/
+    - audience/
+    - venue/
+    - ../../catalogs/
+    - ../../characters/will-wright/media/
+  siblings:
+    - ../terry-winograd/
+    - ../drew-carey/
+    - ../game-bridge-proxi-sims.yml
+
+status: planted
 
 read_order:
   - README.md
   - BROWSE.md
-  - sources/README.md
-  - sources/1996-04-26-winograd-interfacing-to-microworlds/
-  - catalogs/README.md
+  - ../../characters/will-wright/sources/README.md
+  - ../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
+  - ../../catalogs/README.md
   - audience/README.md
-  - assets/sims-series/README.md
-  - characters/will-wright/media/README.md
+  - ../../characters/will-wright/media/sims-series-README.md
+  - ../../characters/will-wright/media/README.md
   - venue/README.md
   - invitation.md
 
-the_essence:
-  topic_less: "Anything goes; Will is the topic."
-  centerpiece: "The 1996 video + Medium article (the ONLY video — keep focused)."
-  the_arc: "1996 looked back (3 post-mortems: easy/hard/just-right) then pivoted time FORWARD to preview The Sims. This show completes the loop: the ~26-year POST-MORTEM on The Sims 1."
-  the_angle: "Ask Will about his OWN 1996 words — what he got RIGHT (Simlish, advertising objects, content sharing, DATA PORTABILITY = the crown jewel + this project's goals) and WRONG."
-  full_circle: "That 1996 talk (a Terry-Winograd seminar — a project forebear) sent Don to Maxis. First Repo Show with Will = closing the loop ~30 yrs on."
-
-flows_into:
-  - ../game-bridge-proxi-sims.yml   # the data-portability CROWN JEWEL payoff (+ Wig-O-Matic)
-
-across:
-  - ../../characters/will-wright/CARD.yml
-  - ../../process/entryways/guest-will.md
-  - ../../process/entryways.yml
-  - ../../process/vision-and-ambition.yml
-  - ../../characters/terry-winograd/
-  - ../../repo-shows/will-wright/BROWSE.md
+structure:
+  topic_less: true
+  centerpiece: ../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
+  the_arc: "1996 post-mortems + forward preview → this show = ~26yr Sims 1 post-mortem"
+  flows_into:
+    - ../game-bridge-proxi-sims.yml
 
 see_also:
-  - { path: BROWSE.md, why: "Will's landing — any order" }
-  - { path: SHOW.yml, why: "Show instance girder" }
-  - { path: ../../process/entryways/guest-will.md, why: "Guest playlist" }
-  - { path: ../../process/entryways.yml, why: "All entryways yaml" }
-  - { path: ../../characters/will-wright/CARD.yml, why: "Guest CARD — abilities + combos" }
+  parent:
+    - { path: ../INDEX.yml, why: "All repo-shows" }
+    - { path: ../REPO-SHOWS.yml, why: "Collection inheritance" }
+  siblings:
+    - { path: ../terry-winograd/README.md, why: "Forebear — CS547 seminar host" }
+    - { path: ../drew-carey/README.md, why: "Play-along narration cousin show" }
+    - { path: ../game-bridge-proxi-sims.yml, why: "Next — data portability payoff" }
+  children:
+    - { path: ../../characters/will-wright/sources/GLANCE.yml, why: "Evidence room" }
+    - { path: audience/GLANCE.yml, why: "TicketPR roster" }
+    - { path: venue/GLANCE.yml, why: "Theater map 🤡💀" }
+    - { path: ../../catalogs/GLANCE.yml, why: "UCC + Micropolis Home" }
+    - { path: ../../characters/will-wright/media/GLANCE.yml, why: "Flower-Child + gallery" }
+  across:
+    - { path: ../../characters/will-wright/GLANCE.yml, why: "Guest portrayal" }
+    - { path: ../../characters/terry-winograd/README.md, why: "1996 seminar lineage" }
+    - { path: ../../process/entryways/guest-will.md, why: "Guest playlist" }
+    - { path: ../../process/repo-show-format.yml#description_scaffolding, why: "CARD + GLANCE constitution" }
+  deep:
+    - { path: README.md, why: "Full human article" }
+    - { path: CARD.yml, why: "Invokable show interface" }
+    - { path: SHOW.yml, why: "Episode girder" }
+    - { path: ROOM.yml, why: "Compass exits" }
+    - { path: SIMULATION.yml, why: "Live runtime hooks" }
+    - { path: BROWSE.md, why: "Any-order landing" }

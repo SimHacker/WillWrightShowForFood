@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** Interactive / computational media art, creative coding, gestural & audiovisual interfaces, generative systems, critical making, art-as-research education
 
-**Materials:** [`repo-shows/golan-levin/`](../../repo-shows/golan-levin/)
+**Materials:** [`repo-shows/golan-levin/`](../../repo-shows/golan-levin/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

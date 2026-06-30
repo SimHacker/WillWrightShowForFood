@@ -1,0 +1,62 @@
+# 1996 WINOGRAD — GLANCE (nav + metadata SSOT)
+# THE seed artifact. Interface: CARD.yml
+
+title: "Interfacing to Microworlds (1996-04-26)"
+iconic: "🎬💎 1996"
+description: |
+  Will Wright's CS547 Stanford talk — postmortems then Dollhouse demo. Don in the room;
+  preserved transcript, Medium article, 167 figures, YouTube from Stanford Archives. The student
+  question that unspooled The Sims. Single video discipline for the flagship show.
+
+keywords:
+  - 1996 winograd
+  - interfacing to microworlds
+  - dollhouse
+  - data portability
+  - simulator effect
+  - cs547
+  - terry winograd
+  - centerpiece
+  - transcript
+  - post-mortem
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  children:
+    - images/
+    - transcript.md
+    - medium-article.md
+  siblings:
+    - ../2008-02-10-soul-of-the-sims/
+    - ../simcity-open-source-saga/
+
+read_order:
+  - README.md
+  - medium-article.md
+  - transcript.md
+  - README.md#image-gallery
+
+structure:
+  video: https://www.youtube.com/watch?v=nsxoZXaYJSk
+  medium: https://donhopkins.medium.com/designing-user-interfaces-to-simulation-games-bd7a9d81e62d
+  figures: 167
+  forebear: ../../../terry-winograd/media/cs547-ARCHIVE.md
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Sources evidence room" }
+    - { path: ../../../../repo-shows/will-wright/GLANCE.yml, why: "Show root — orbits here" }
+  siblings:
+    - { path: ../2008-02-10-soul-of-the-sims/GLANCE.yml, why: "Motive.c — Sims substrate" }
+    - { path: ../1998-06-04-sims-steering-committee-demo/GLANCE.yml, why: "Steering committee proto" }
+  across:
+    - { path: ../../../will-wright/GLANCE.yml, why: "Guest portrayal" }
+    - { path: ../../../terry-winograd/GLANCE.yml, why: "Dragon + treasure trove" }
+    - { path: ../../../don-hopkins/GLANCE.yml, why: "Preserved the record" }
+  deep:
+    - { path: README.md, why: "Full seed essay + pivotal moment quote" }
+    - { path: transcript.md, why: "Hand-perfected transcript" }
+    - { path: CARD.yml, why: "Ask-Will-about-1996 interface" }

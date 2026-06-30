@@ -26,17 +26,17 @@ This one's personal to the toolset. Don built a **CAM6 emulator** — a CAM6-sof
 (per the *Cellular Automata Machines* book) **FORTH-programmable CAM orchestrator** and
 **lookup-table rule compiler** on the Sun (NeWS + C), later ported all over. Norman and Toffoli's
 **CAM-6** and book are literally the source that work follows. And it's not abstract: Norman is a
-good friend of [**Henry Minsky**](../henry-minsky/), and Don **met Norman in Boston** (visiting
+good friend of [**Henry Minsky**](../henry-minsky/README.md), and Don **met Norman in Boston** (visiting
 Henry) and talked through this whole web — cellular automata, reversible computing, the physics of
 computation. Henry is the natural bridge to invite him.
 
 A show with Norman is a **cellular-automata summit**: run Don's CAM6 live, dig into block CA and the
 Margolus neighborhood, play reversible rules forwards *and backwards*, and follow it all the way to
-the physical limits of computation — ideally next to [Jim Crutchfield](../jim-crutchfield/)'s edge
-of chaos and [Scott Draves](../scott-draves/)'s generative art.
+the physical limits of computation — ideally next to [Jim Crutchfield](../jim-crutchfield/README.md)'s edge
+of chaos and [Scott Draves](../scott-draves/README.md)'s generative art.
 
 ## Browse
 
-- Show seed: [`repo-shows/norman-margolus/`](../../repo-shows/norman-margolus/)
-- Joint CA show: [Jim Crutchfield](../jim-crutchfield/) · Bridge: [Henry Minsky](../henry-minsky/)
+- Show seed: [`repo-shows/norman-margolus/`](../../repo-shows/norman-margolus/README.md)
+- Joint CA show: [Jim Crutchfield](../jim-crutchfield/README.md) · Bridge: [Henry Minsky](../henry-minsky/README.md)
 - Sources: [MIT CSAIL page](https://people.csail.mit.edu/nhm/) · [Wikipedia](https://en.wikipedia.org/wiki/Norman_Margolus) · *Cellular Automata Machines* (MIT Press, 1987)

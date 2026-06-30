@@ -26,10 +26,10 @@ was the open, recorded, one-guest-a-week public seminar — the direct forebear 
 
 | Date | Speaker | Title | In repo |
 |------|---------|-------|---------|
-| 1996-04-26 | [Will Wright](../../will-wright/) | Interfacing to Microworlds | [source bundle](../../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/) · [YouTube](https://www.youtube.com/watch?v=nsxoZXaYJSk) |
-| 1995-12-01 | [James Gosling](../../james-gosling/) | Bringing Behavior to the Internet (Java) | [YouTube](https://www.youtube.com/watch?v=dgrNeyuwA8k) · [Gosling media](../../james-gosling/media/) |
+| 1996-04-26 | [Will Wright](../../will-wright/README.md) | Interfacing to Microworlds | [source bundle](../../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) · [YouTube](https://www.youtube.com/watch?v=nsxoZXaYJSk) |
+| 1995-12-01 | [James Gosling](../../james-gosling/README.md) | Bringing Behavior to the Internet (Java) | [YouTube](https://www.youtube.com/watch?v=dgrNeyuwA8k) · [Gosling media](../../james-gosling/media/README.md) |
 
-**25** catalogued talks are by people already in [`characters/`](../../) — see [WWSFF guests](cs547-ARCHIVE.md#wwsff-guests-in-the-catalog).
+**25** catalogued talks are by people already in [`characters/`](../../README.md) — see [WWSFF guests](cs547-ARCHIVE.md#wwsff-guests-in-the-catalog).
 
 ## Terry's own talks in the catalog
 
@@ -39,4 +39,4 @@ Eight entries — host practicing what he preached. Listed in [cs547-ARCHIVE.md]
 
 Catalog metadata only (not the VHS/DVD recordings). Supplied by Don Hopkins; cross-referenced with his [2024 HN inventory](https://news.ycombinator.com/item?id=39252103). Research/educational use per Stanford Special Collections.
 
-See also: [`../correspondence.yml`](../correspondence.yml) · [`../../../repo-shows/terry-winograd/`](../../../repo-shows/terry-winograd/) (show seed)
+See also: [`../correspondence.yml`](../correspondence.yml) · [`../../../repo-shows/terry-winograd/`](../../../repo-shows/terry-winograd/README.md) (show seed)

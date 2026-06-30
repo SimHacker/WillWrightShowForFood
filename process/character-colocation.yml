@@ -49,7 +49,7 @@ placement:
   shared_rooms:
     what: |
       Navigable context shared by many shows — independent of any one episode.
-      Examples: process/, skills/, schemas/, repo-shows/will-wright/catalogs/, venue/VENUE.yml graphs.
+      Examples: process/, skills/, schemas/, catalogs/, venue/VENUE.yml graphs.
     role: "Frequent destinations; shows link through; not copies of character-owned media"
 
   audience_per_episode:
@@ -60,13 +60,46 @@ placement:
 
 # CARDIFY — MOOLLM interfaces on directories
 cardify:
-  what: "CARD.yml advertises abilities; GLANCE sniffs; ROOM.yml places; SIMULATION runs protocols"
+  what: "GLANCE = nav/metadata SSOT · CARD = interface/ads · read both · README for humans"
+  description_scaffolding: repo-show-format.yml#description_scaffolding
+  upstream: "Experiment here; promote to moollm skills/card + skills/glance when proven"
   applies_to: [characters, repo-shows, audience_ticketpr, venue_subdirs, shared_rooms]
   show_directory_minimum: [SHOW.yml]
   show_directory_recommended: [README.md, CARD.yml, GLANCE.yml]
   show_directory_optional: [ROOM.yml, SIMULATION.yml, SEGMENTS.yml, venue/, audience/]
+  glance_ssot: [title, iconic, description, keywords, navigation, read_order, see_also_categorized]
+  glance_omit: [methods, abilities, advertisement_blocks, simulation_runbooks]
+  card_interface: [room, methods, abilities, compose_with]
+  card_omit: [see_also_nav, read_order, keywords, title, description]
+  card_must_point: glance.yml
+  readme_should_include: [teaser_from_glance_description, sniff_card_glance, nav_from_glance_at_bottom]
   audience_template: repo-shows/_TEMPLATE/audience/
+  show_template: repo-shows/_TEMPLATE/
   moollm_room_skill: https://github.com/SimHacker/moollm/tree/main/skills/room/SKILL.md
+
+readme_index_policy:
+  decision: "No human INDEX.md. Index in README (or linked sub-scroll .md for very long galleries)."
+  heavenly_links:
+    rule: "Human-facing markdown links target README.md — GitHub renders formatted article without raw dir listing above."
+    not: "Do not link humans to bare directory URLs unless explicitly popping out to raw listing."
+    pop_out_footer: "*Raw directory:* [browse files in this folder](./)* — optional one-liner at README foot"
+    yaml_exception: "ROOM.yml exits and MOOLLM navigation children may keep directory paths — filesystem rooms, not GitHub URLs."
+  glance_readme_nav:
+    rule: "GLANCE.yml owns navigation, read_order, see_also — agent SSOT. README renders the same skeleton as human nav chrome (table + ↑ footers)."
+    readme_must: "Sniff line (CARD · GLANCE); Navigation table mirroring GLANCE children/siblings; ↑ back-links to parent README; pop-out footer on hubs"
+    two_way: "Child README ↑ links to parent; parent README Navigation table links to child README.md; GLANCE see_also stays yaml paths for agents"
+  github_ux: |
+    Directory URL = brutalist listing + README below. README-only URL = heavenly layer (curated index, prose).
+    Link humans to README.md; offer ./ pop-out when they need the raw file listing.
+  roles:
+    README.md: "Human article — what this pile is, curated tables, sub-scroll links"
+    GLANCE.yml: "Agent nav SSOT — read_order, see_also"
+    INDEX.yml: "Machine registries ONLY — verify scripts, invitation status, show graphs"
+    INDEX.md: "Do not create; migrate into README sections; delete redirect stubs"
+  when_readme_indexes:
+    object_pile_only: "Short prose + sample table or pop-out to ./ for exhaustive listing"
+    group_has_story: "Prose first; curated table — not a 167-row manifest"
+    very_long_gallery: "README themed section + sibling sub-scroll (.md) — still no INDEX.md"
 
 # TOPOLOGIES — shows arranged as maps, not flat lists
 topologies:
@@ -82,8 +115,8 @@ topologies:
       what: "Quadrant grids — ne/nw/sw/se cells, sparse OK"
       spec: https://github.com/SimHacker/moollm/tree/main/skills/room/TOPOLOGY.yml
     vertical_stack:
-      what: "Time strata — sources/<YYYY-MM-DD-slug>/ stacked by era"
-      examples: [repo-shows/will-wright/sources/]
+      what: "Time strata — ../../characters/will-wright/sources/<YYYY-MM-DD-slug>/ stacked by era"
+      examples: [characters/will-wright/sources/]
   simulation_in_show: |
     SIMULATION.yml at show or audience level — games, MSPO RPG, inter-character protocols,
     running gags during/after air. Don Philahue hot-loads audience SIMULATION.yml stacks live.
@@ -105,10 +138,17 @@ cross_reference:
 migration:
   done:
     - "CS547 catalog → characters/terry-winograd/media/cs547-*"
+    - "Will Wright sources/ → characters/will-wright/sources/ (from repo-shows/will-wright/)"
+    - "Will Wright assets/ → characters/will-wright/media/ (flattened; big-endian; no type subdirs)"
+    - "Will Wright catalogs/ → top-level catalogs/ (syndicated feeds; get-the-sims-on-steam.md)"
     - "Media stubs — Gosling, Shneiderman, Myers, Kay, Gingold, Phil Salvador, Scott flam3 TODO"
-  candidates:
-    - path: repo-shows/will-wright/sources/
-      note: "Person-owned bundles → characters/will-wright/sources/ over time; show README links"
+  candidates: []
+
+catalogs_room:
+  path: catalogs/
+  owns: "Syndicated UCC feeds — SimFreaks, SimSlice, SimProv, Micropolis Home, Maxis metadata"
+  rule: "Repo-level; shows and characters link through — not owned by will-wright show or character"
+  steam: get-the-sims-on-steam.md
 
 see_also:
   - repo-show-format.yml#placement_constitution

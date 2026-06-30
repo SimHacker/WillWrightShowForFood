@@ -12,10 +12,10 @@ Noise, light, audiovisual art, maps — beauty you can run and remix.
 
 | Stop | Why wander here |
 |------|-----------------|
-| [**Ken Perlin**](../../characters/ken-perlin/) | Perlin noise; interactive Java demos; teaching through runnable artifacts (NYU) |
-| [**Paul Debevec**](../../characters/paul-debevec/) | Light Stage; image-based lighting; photogrammetry; virtual production |
-| [**Golan Levin**](../../characters/golan-levin/) | Computational media art; audiovisual interfaces; Interval colleague of Don & Debevec |
-| [**Ben Cerveny**](../../characters/ben-cerveny/) | Game Neverending → Flickr; Stamen map viz; Planetary; public code |
+| [**Ken Perlin**](../../characters/ken-perlin/README.md) | Perlin noise; interactive Java demos; teaching through runnable artifacts (NYU) |
+| [**Paul Debevec**](../../characters/paul-debevec/README.md) | Light Stage; image-based lighting; photogrammetry; virtual production |
+| [**Golan Levin**](../../characters/golan-levin/README.md) | Computational media art; audiovisual interfaces; Interval colleague of Don & Debevec |
+| [**Ben Cerveny**](../../characters/ben-cerveny/README.md) | Game Neverending → Flickr; Stamen map viz; Planetary; public code |
 
 ---
 

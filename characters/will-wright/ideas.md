@@ -10,7 +10,7 @@ topic** — so treat this as a menu, not an agenda.*
 
 The **1996 talk to Terry Winograd's Stanford class** — the "Oh, God…" moment where Will loads a
 SimCity file into **Dollhouse** and previews what becomes The Sims. Everything below can start
-there. ([source bundle](../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/) ·
+there. ([source bundle](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) ·
 [invitation](../../repo-shows/will-wright/invitation.md))
 
 ## The hooks
@@ -63,6 +63,6 @@ Rebuilding Transmogrifier / RugOMatic / WigOMatic as browser-native tools, and b
 *medium*.
 
 ## Sources (real, public)
-- 1996 Winograd talk: [source bundle](../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/) · video https://www.youtube.com/watch?v=nsxoZXaYJSk
+- 1996 Winograd talk: [source bundle](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) · video https://www.youtube.com/watch?v=nsxoZXaYJSk
 - Long Now "Playing with Time" (Eno + Wright): https://www.youtube.com/watch?v=Dfc-DQorohc
-- Show hub: [`repo-shows/will-wright/`](../../repo-shows/will-wright/) · galleries: [`media/`](media/README.md)
+- Show hub: [`repo-shows/will-wright/`](../../repo-shows/will-wright/README.md) · galleries: [`media/`](media/README.md)

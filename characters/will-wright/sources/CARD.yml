@@ -1,0 +1,41 @@
+# CARD — sources (interface only)
+# Nav + metadata: GLANCE.yml
+
+glance: GLANCE.yml
+
+room:
+  id: sources
+  name: "Will Wright Show Primary Sources"
+  type: [archive, evidence, vertical_stack]
+  home: characters/will-wright/sources/
+
+methods:
+  READ-CENTERPIECE:
+    signature: "readCenterpiece() → 1996-04-26-winograd-interfacing-to-microworlds/"
+    advertisement: "ONE video discipline — simulator effect, data portability seed, Dollhouse preview."
+  TRACE-OPEN-SOURCE:
+    signature: "traceOpenSource() → simcity-open-source-saga/"
+    advertisement: "Don's Dec 2006 pitch → OLPC → Micropolis — contracts in don-hopkins/career/"
+  CLIMB-STACK:
+    signature: "climbStack(year) → ../../characters/will-wright/sources/<YYYY-MM-DD-slug>/"
+    advertisement: "Time strata — compare 1996, 2007 OLPC, 2018 agitprop, 2024 preservation."
+
+abilities:
+  - id: CITE-ON-AIR
+    name: Cite On Air
+    type: triggered
+    advertisement:
+      method: citeOnAir
+      signature: "citeOnAir(slug) → link article.md during conversation"
+      score_when:
+        - trigger: guest_mentions_topic_in_sources
+          weight: 0.95
+    effect: "RTFR receipts — show the paragraph, not vibes."
+    combos_with:
+      - ../../../characters/chaim-gingold/
+      - ../../../characters/walter-bender/
+
+compose_with:
+  - ../../../../../catalogs/
+  - ../../../characters/don-hopkins/career/simcity-lineage.yml
+  - ../../../characters/terry-winograd/media/cs547-ARCHIVE.md

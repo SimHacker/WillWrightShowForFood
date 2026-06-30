@@ -1,5 +1,7 @@
 # Scott Draves 🐑
 
+*Sniff:* [`CARD.yml`](CARD.yml) · [`GLANCE.yml`](GLANCE.yml)
+
 *Invitation portrayal. A respectful, source-grounded sketch — not Scott Draves, and not his
 words.* [Portrayal standards](../../schemas/portrayal-standards.yml) · consent level 2 · authored
 by Don Hopkins
@@ -61,14 +63,14 @@ In June 2006, after the **Long Now Foundation** talk *Playing with Time* by **Br
 Wright**, Don introduced **Brian Eno** to Scott. The three met at Scott's San Francisco apartment
 and bounced ideas around; Brian saw Electric Sheep and the hour-per-frame HD *Dreams in High
 Fidelity*. (Scott photographed the evening — Brian with Electric Sheep "on his head.") That night
-is why **Brian Eno** is a [dream guest](../brian-eno/) here, ideally reachable through **Will** and
+is why **Brian Eno** is a [dream guest](../brian-eno/README.md) here, ideally reachable through **Will** and
 **Scott**.
 
 ## Browse
 
 - Ideas to explore: [`ideas.md`](ideas.md)
-- **Media:** [`media/`](media/) — 6Heads ELAVIL photos · [**Fractal Flame paper (TODO)**](media/flam3-original-paper-TODO.md) — Don has the PDF
-- Show seed: [`repo-shows/scott-draves/`](../../repo-shows/scott-draves/)
+- **Media:** [`media/`](media/README.md) — 6Heads ELAVIL photos · [**Fractal Flame paper (TODO)**](media/flam3-original-paper-TODO.md) — Don has the PDF
+- Show seed: [`repo-shows/scott-draves/`](../../repo-shows/scott-draves/README.md)
 - Timeline from the archive: [`correspondence.yml`](correspondence.yml)
-- Dream co-guest: [Brian Eno](../brian-eno/) · Reunion host: [Will Wright](../will-wright/)
+- Dream co-guest: [Brian Eno](../brian-eno/README.md) · Reunion host: [Will Wright](../will-wright/README.md)
 - Live work: [electricsheep.org](https://electricsheep.org/) · [infinidream.ai](https://infinidream.ai/) · [scottdraves.com](https://scottdraves.com/) · [flam3.com](https://flam3.com/)

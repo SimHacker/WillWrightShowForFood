@@ -12,17 +12,17 @@ Raw mirror: [`cs547-catalog.tsv`](cs547-catalog.tsv) · machine girder: [`cs547-
 
 ## WWSFF guests in the catalog
 
-- **[terry-winograd](../../terry-winograd/)** — Introduction to the Seminar on Human-Computer Interaction (1992-09-30); From Virtual Reality to Real Virtualities: Designing the Worlds in Which We Live (1993-10-29); Interfacing the Information History (1994-03-04); DigLab: Interacting with the Digital Library (1995-11-03); The Interacting Design Awards (1996-05-31); A Human-Centered Architecture for an Interactive Workspace (1998-10-02); Experiments in Interaction with Wall Displays (2000-11-17); Where do HCI Theory and Practice Meet? (2003-02-07)
-- **[ted-selker](../../ted-selker/)** — Trackpoint II: Making a better mouse (1993-05-12); Proactive and Reactive Agents in User Interface (1994-05-06); Test as You Build: An Approach To Creating New Interfaces (1997-01-31); Context-Aware Computing; Can Implicit Communication with Computers Be More Useful Than Explicit Communication? (2000-11-03); Context-Aware Computing: A World That Knows What To Do For You (2005-05-20)
-- **[margaret-minsky](../../margaret-minsky/)** — Putting 'Feel' into 'Look and Feel': Interaction with the Sense of Touch (1993-10-01)
-- **[ken-kahn](../../ken-kahn/)** — Toon Talk (1993-12-03)
-- **[james-gosling](../../james-gosling/)** — Bringing Behavior to the Internet (1995-12-01)
-- **[scott-kim](../../scott-kim/)** — VizAbility (1996-02-16); Paper, Plastic, or Playstation? Adapting a Game to Wide Range of Technologies (2004-10-08)
-- **[will-wright](../../will-wright/)** — Interfacing to Microworlds (1996-04-26); Games and Simulation (2003-05-02)
-- **[ben-shneiderman](../../ben-shneiderman/)** — The Eyes Have It: User Interfaces for Information Visualization (1998-02-20); Leonardo's Laptop: Human Needs and the new Computing (2000-10-20)
-- **[ken-perlin](../../ken-perlin/)** — Recent Research at the NYU Media Research Lab (1999-11-05)
-- **[brad-myers](../../brad-myers/)** — Mobile Devices for Control (2002-11-22)
-- **[alan-kay](../../alan-kay/)** — Croquet: A Collaboration Architecture (2003-04-25)
+- **[terry-winograd](../../terry-winograd/README.md)** — Introduction to the Seminar on Human-Computer Interaction (1992-09-30); From Virtual Reality to Real Virtualities: Designing the Worlds in Which We Live (1993-10-29); Interfacing the Information History (1994-03-04); DigLab: Interacting with the Digital Library (1995-11-03); The Interacting Design Awards (1996-05-31); A Human-Centered Architecture for an Interactive Workspace (1998-10-02); Experiments in Interaction with Wall Displays (2000-11-17); Where do HCI Theory and Practice Meet? (2003-02-07)
+- **[ted-selker](../../ted-selker/README.md)** — Trackpoint II: Making a better mouse (1993-05-12); Proactive and Reactive Agents in User Interface (1994-05-06); Test as You Build: An Approach To Creating New Interfaces (1997-01-31); Context-Aware Computing; Can Implicit Communication with Computers Be More Useful Than Explicit Communication? (2000-11-03); Context-Aware Computing: A World That Knows What To Do For You (2005-05-20)
+- **[margaret-minsky](../../margaret-minsky/README.md)** — Putting 'Feel' into 'Look and Feel': Interaction with the Sense of Touch (1993-10-01)
+- **[ken-kahn](../../ken-kahn/README.md)** — Toon Talk (1993-12-03)
+- **[james-gosling](../../james-gosling/README.md)** — Bringing Behavior to the Internet (1995-12-01)
+- **[scott-kim](../../scott-kim/README.md)** — VizAbility (1996-02-16); Paper, Plastic, or Playstation? Adapting a Game to Wide Range of Technologies (2004-10-08)
+- **[will-wright](../../will-wright/README.md)** — Interfacing to Microworlds (1996-04-26); Games and Simulation (2003-05-02)
+- **[ben-shneiderman](../../ben-shneiderman/README.md)** — The Eyes Have It: User Interfaces for Information Visualization (1998-02-20); Leonardo's Laptop: Human Needs and the new Computing (2000-10-20)
+- **[ken-perlin](../../ken-perlin/README.md)** — Recent Research at the NYU Media Research Lab (1999-11-05)
+- **[brad-myers](../../brad-myers/README.md)** — Mobile Devices for Control (2002-11-22)
+- **[alan-kay](../../alan-kay/README.md)** — Croquet: A Collaboration Architecture (2003-04-25)
 
 ## Online scans (watchable now)
 

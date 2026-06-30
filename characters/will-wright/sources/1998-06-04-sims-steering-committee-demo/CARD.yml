@@ -1,0 +1,40 @@
+# CARD — Sims steering committee demo (interface only)
+# Nav + metadata: GLANCE.yml
+
+glance: GLANCE.yml
+
+room:
+  id: sims-steering-committee-demo
+  name: "The Sims Steering Committee Demo (1998-06-04)"
+  type: [source_bundle, prototype, video_primary]
+  home: characters/will-wright/sources/1998-06-04-sims-steering-committee-demo/
+
+methods:
+  WATCH-DEMO:
+    signature: "watchDemo() → YouTube zC52jE60KjY"
+    advertisement: "Don narrates the 1998 build — Edith debugger visible throughout."
+  TRACE-SIMANTICS:
+    signature: "traceSimAntics(object) → feed-fish walkthrough"
+    advertisement: "Route → hungry check → sound → state — advertisement-driven objects live."
+  FETCH-BUILD:
+    signature: "fetchBuild() → archive.org steering committee"
+    advertisement: "Run locally — not compatible with retail Sims 1."
+
+abilities:
+  - id: EDITH-DEEP-DIVE
+    name: Edith Deep Dive
+    type: activated
+    advertisement:
+      method: edithDeepDive
+      signature: "edithDeepDive() → sims post-mortem segment"
+      score_when:
+        - trigger: sims_team_reunion
+          weight: 1.0
+    effect: "Best segment for Jamie/Bobo/Irk/Patrick reunion — not the kickoff video."
+    combos_with:
+      - ../../../../repo-shows/will-wright/sims-team-steering-committee-playthrough/SHOW.yml
+      - ../1996-04-26-winograd-interfacing-to-microworlds/CARD.yml
+
+compose_with:
+  - ../2004-transmogrifier-documentation-hub/CARD.yml
+  - ../../../will-wright/CARD.yml

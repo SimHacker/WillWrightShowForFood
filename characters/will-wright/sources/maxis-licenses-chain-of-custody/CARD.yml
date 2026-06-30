@@ -1,0 +1,37 @@
+# CARD — Maxis licenses chain of custody (interface only)
+# Nav + metadata: GLANCE.yml
+
+glance: GLANCE.yml
+
+room:
+  id: maxis-licenses-chain-of-custody
+  name: Maxis / EA Licenses — Chain of Custody
+  type: [source_bundle, legal_evidence, paper_trail]
+  home: characters/will-wright/sources/maxis-licenses-chain-of-custody/
+
+methods:
+  READ-INDEX:
+    signature: "readIndex() → LICENSES-INDEX.yml"
+    advertisement: "Machine table of every contract PDF and status."
+  TRACE-GPL:
+    signature: "traceGPL() → article.md#exhibit-a"
+    advertisement: "EA↔OLPC GPL grant — the moment SimCity could fork."
+  LINK-TRANSMOGRIFIER:
+    signature: "linkTransmogrifier() → click-through terms"
+    advertisement: "Don distributed fan tools under EA click-through — document it."
+
+abilities:
+  - id: CHAIN-OF-CUSTODY
+    name: Chain of Custody
+    type: activated
+    advertisement:
+      method: chainOfCustody
+      signature: "chainOfCustody(artifact) → who signed what when"
+      score_when:
+        - trigger: licensing_dispute_on_air
+          weight: 0.95
+    effect: "DUX is gone — this directory is the public paper trail."
+
+compose_with:
+  - ../simcity-open-source-saga/CARD.yml
+  - ../../../don-hopkins/CARD.yml

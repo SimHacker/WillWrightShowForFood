@@ -67,7 +67,7 @@ sources:
     - https://en.wikipedia.org/wiki/Will_Wright_(game_designer)
   archive:
     - label: "1996-04-26 Winograd CS547 — 'Interfacing to Microworlds' (the FIRST + the show's anchor artifact; Dollhouse preview)"
-      path: ../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
+      path: ../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
     - label: "YouTube — Stanford recording of the 1996 talk"
       url: https://www.youtube.com/watch?v=nsxoZXaYJSk
     - label: "2003-05-02 Winograd CS547 — 'Games and Simulation' (Will's SECOND catalogued CS547 talk)"
@@ -141,7 +141,7 @@ see_also:
   - { path: ../../repo-shows/will-wright/, why: "Long invitation drafts live here (sent skyscraper + opus + gpt55)" }
   - { path: ../../process/entryways/guest-will.md, why: "Suggested playlist" }
   - { path: ../../repo-shows/will-wright/BROWSE.md, why: "Pick-any-order landing" }
-  - { path: ../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "1996 centerpiece" }
+  - { path: ../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "1996 centerpiece" }
   - { path: media/russian-space-junk.md, why: "Will's Soviet space-hardware collection (photos by Don)" }
   - { path: media/artwork.md, why: "Will's mixed-media relief artwork" }
   - { path: ../don-hopkins/CHARACTER.yml, why: "Host — Sims + SFC shared lineage" }

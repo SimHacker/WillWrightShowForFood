@@ -67,7 +67,7 @@ see_also:
   - { path: repo-shows/will-wright/BROWSE.md, why: "Will guest landing" }
   - { path: process/cross-links.yml, why: "Thematic trails graph" }
   - { path: repo-shows/INDEX.yml, why: "All show seeds and plants" }
-  - { path: characters/, why: "Guest directories — browse the tree; each slug is a room" }
+  - { path: characters/README.md, why: "Guest directories — browse the tree; each slug is a room" }
   - { path: characters/INDEX.yml, why: "Machine registry only — FIND-GUEST sync" }
   - { path: rigs/INDEX.yml, why: "Rig personas — drag race costumes" }
   - { path: schemas/portrayal-standards.yml, why: "Ethics before guest deep reads" }

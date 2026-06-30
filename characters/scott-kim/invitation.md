@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** Ambigrams / **inversions** and symmetry as a design tool; the **craft of puzzle
 design** (designing the "aha"); puzzles as math play. Possibly **paired with Will Wright**, his
-friend. See the [show seed](../../repo-shows/scott-kim/) for segment ideas.
+friend. See the [show seed](../../repo-shows/scott-kim/README.md) for segment ideas.
 
 Browse without a GitHub account — start at the [README](https://github.com/SimHacker/WillWrightShowForFood).
 

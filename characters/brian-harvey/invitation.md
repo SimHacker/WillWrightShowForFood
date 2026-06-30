@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** Computer science education; UC Berkeley (Teaching Professor Emeritus). Logo, Scheme, Snap!. Author; co-creator of The Beauty and Joy of Computing.
 
-**Materials:** [`repo-shows/brian-harvey/`](../../repo-shows/brian-harvey/)
+**Materials:** [`repo-shows/brian-harvey/`](../../repo-shows/brian-harvey/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

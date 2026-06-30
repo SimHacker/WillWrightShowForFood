@@ -1,0 +1,75 @@
+# CATALOGS — GLANCE (nav + metadata SSOT)
+# Repo-level feeds — syndicated across shows. Interface: CARD.yml
+
+title: "Sims Content Catalogs"
+iconic: "🏪🎨"
+description: |
+  Repo-level catalog hub — feeds we sponsor, syndicate, and promote. SimFreaks, SimSlice,
+  SimProv, Zombie Sims, Maxis metadata, Micropolis Home platform. Not owned by any one show
+  or character; shows link here. Explicit Steam recommendation — buy the game we helped make.
+
+keywords:
+  - simfreaks
+  - simslice
+  - simprov
+  - zombie sims
+  - micropolis home
+  - ucc
+  - exchange
+  - steam
+  - syndication
+  - get the sims
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  children:
+    - get-the-sims-on-steam.md
+    - simfreaks/
+    - simslice/
+    - simprov/
+    - zombie-sims/
+    - micropolis-home/
+    - maxis/
+  siblings:
+    - ../characters/will-wright/sources/
+    - ../characters/will-wright/media/
+    - ../repo-shows/
+
+read_order:
+  - README.md
+  - get-the-sims-on-steam.md
+  - simfreaks/
+  - simslice/
+  - simprov/
+  - zombie-sims/
+  - micropolis-home/
+  - maxis/
+
+structure:
+  legacy_brands: [simfreaks, simslice, simprov, zombie-sims]
+  platform: micropolis-home
+  metadata: maxis
+  steam_recommendation: get-the-sims-on-steam.md
+
+machine_index: CATALOGS.yml
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Repo root" }
+  siblings:
+    - { path: ../characters/will-wright/sources/GLANCE.yml, why: "Primary sources" }
+    - { path: ../repo-shows/will-wright/GLANCE.yml, why: "Flagship show — links here" }
+  children:
+    - { path: get-the-sims-on-steam.md, why: "Buy The Sims on Steam — EA-facing stance" }
+    - { path: micropolis-home/README.md, why: "Federation platform" }
+    - { path: simfreaks/README.md, why: "Heather's deep catalog" }
+  across:
+    - { path: ../characters/heather-alvey/README.md, why: "SimFreaks founder" }
+    - { path: ../characters/steve-alvey/README.md, why: "SimSlice founder" }
+    - { path: ../process/licensing-micropolis-enterprise.yml, why: "Enterprise + trademark posture" }
+  deep:
+    - { path: README.md, why: "Six-door human article" }
+    - { path: CARD.yml, why: "Catalog browse interface" }

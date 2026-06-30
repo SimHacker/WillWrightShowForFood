@@ -1,0 +1,67 @@
+# Content catalogs — Micropolis Home federation
+# Legacy artisanal brands + platform. Repo-level — not show-owned.
+
+steam_recommendation:
+  path: get-the-sims-on-steam.md
+  url: https://store.steampowered.com/app/3314070/The_Sims/
+  stance: |
+    Recommend legal purchase before UCC install. Creators who shipped The Sims want EA to see
+    Steam revenue + documented fan culture — not the same hostility fans have weathered for 26 years.
+
+platform:
+  id: micropolis-home
+  path: micropolis-home/
+  role: create_publish_share
+  summary: "Web-native content stack — author, publish, and share Sims-family UCC on federation rails."
+
+catalogs:
+  - id: simfreaks
+    path: simfreaks/
+    kind: legacy_brand
+    creators: ["Heather Alvey (née Castello)"]
+    storefront: https://www.simfreaks.com/
+    since: ~1999
+
+  - id: simslice
+    path: simslice/
+    kind: legacy_brand
+    creators: ["Steve Alvey"]
+    flagship: SliceCity
+    since: ~1999
+
+  - id: simprov
+    path: simprov/
+    kind: legacy_playset
+    creators: ["Don Hopkins", "Heather Alvey", "Steve Alvey", "SimBabes", "Donna / SimBabes artists"]
+    flagship: SimProv Wedding Playset
+
+  - id: zombie-sims
+    path: zombie-sims/
+    kind: legacy_brand
+    creators: ["Heather Alvey", "Steve Alvey"]
+    status: actively_shipping
+    note: "Magnum-opus expansion pack; Afterlife soul-bridge show hook"
+
+  - id: maxis
+    path: maxis/
+    kind: metadata_catalog
+    summary: "Maxis objects + killer downloads — metadata and pointers only (Steam, IA, donhopkins.com)"
+    note: "IFF preview pipeline + killer hamster backstory articles; not a binary mirror"
+
+relationship: |
+  Micropolis Home is not another shelf — it is the platform.
+  SimFreaks, SimSlice, SimProv, and Zombie Sims are federated catalogs
+  (storefronts + git CARD dirs + download paths) hosted on the same
+  create → publish → share rails. Start here; grow from there.
+
+ties_to:
+  - path: ../repo-shows/will-wright/INTRO-NARRATIVE.md
+    why: "Proof + mission — family UCC, wedding playset, federation"
+  - path: ../characters/will-wright/media/sims-series-micropolis-publishing-vision.md
+    why: "OpenLaszlo CMS lineage → Micropolis Federation"
+  - path: ../repo-shows/heather-steve-alvey/
+    why: "First platform users — SimFreaks + SimSlice + Zombie Sims"
+  - path: ../characters/will-wright/sources/2005-09-18-simfreaks-content-catalog-laszlo/
+    why: "Don's CMS prototype essay"
+  - path: ../../../../MicropolisCore/apps/micropolis/website/pages/about/hosted-content/README.md
+    why: "Micropolis product projection (sibling repo)"

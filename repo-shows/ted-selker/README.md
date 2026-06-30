@@ -2,7 +2,7 @@
 
 *Seed — consent not yet asked.*
 
-**Guest:** [Ted Selker](../../characters/ted-selker/) — the TrackPoint; considerate / context-aware computing; voting technology
+**Guest:** [Ted Selker](../../characters/ted-selker/README.md) — the TrackPoint; considerate / context-aware computing; voting technology
 **Invitation:** [`characters/ted-selker/invitation.md`](../../characters/ted-selker/invitation.md)
 
 ## The show

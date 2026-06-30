@@ -2,7 +2,7 @@
 
 *Seed — consent not yet asked.* In-person, on camera, in Amsterdam.
 
-**Guest:** [Craig Latta](../../characters/craig-latta/) — Caffeine (SqueakJS + WebAssembly livecoding), Black Page Digital
+**Guest:** [Craig Latta](../../characters/craig-latta/README.md) — Caffeine (SqueakJS + WebAssembly livecoding), Black Page Digital
 **Invitation:** [`characters/craig-latta/invitation.md`](../../characters/craig-latta/invitation.md)
 
 ## The show
@@ -17,7 +17,7 @@ Details: [`characters/craig-latta/keep.md`](../../characters/craig-latta/keep.md
 
 ## Remembering Vanessa
 
-A chance to remember **[Vanessa Freudenberg](../../characters/vanessa-freudenberg/)** (memorial mode — represent + discuss, never speak as her): her **SqueakJS** is the foundation Caffeine stands on, and her sharp **WebAssembly** insights are the thread Craig carried forward.
+A chance to remember **[Vanessa Freudenberg](../../characters/vanessa-freudenberg/README.md)** (memorial mode — represent + discuss, never speak as her): her **SqueakJS** is the foundation Caffeine stands on, and her sharp **WebAssembly** insights are the thread Craig carried forward.
 
 ## Trail
 

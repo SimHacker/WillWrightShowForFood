@@ -23,7 +23,7 @@ segments:
   - id: discovery_arc
     topic: "Ars comment → floppy → Internet Archive — who did what"
     links:
-      - repo-shows/will-wright/sources/simrefinery-recovery/
+      - characters/will-wright/sources/simrefinery-recovery/
 
   - id: playthrough
     topic: "Live IA/DOSBox — intro vs simref, what works, Tour Book vs in-game tutorial"
@@ -32,18 +32,18 @@ segments:
   - id: preservation_ethics
     topic: "Deleted from official archive vs out in the world — link don't host"
     ties:
-      - repo-shows/will-wright/sources/simrefinery-recovery/
+      - characters/will-wright/sources/simrefinery-recovery/
       - process/licensing-micropolis-enterprise.yml
 
   - id: yoot_tower_vghf
     topic: "Video Game Source Project — SimTower/Yoot Tower open source (2024 mail)"
-    path: repo-shows/will-wright/sources/2024-yoot-tower-open-source/
+    path: characters/will-wright/sources/2024-yoot-tower-open-source/
 
   - id: maxis_catalog
     topic: "Metadata-only Maxis catalog — business sims row"
-    path: repo-shows/will-wright/catalogs/maxis/
+    path: catalogs/maxis/
 
 related:
-  - repo-shows/will-wright/sources/simrefinery-recovery/
+  - characters/will-wright/sources/simrefinery-recovery/
   - characters/phil-salvador/
   - repo-shows/luc-barthelet-sims-online/SHOW.yml

@@ -46,7 +46,7 @@ contributions:
     public_issue: "GitHub issue on WillWrightShowForFood for corrections without email"
   placement: |
     CHARACTER.yml + invitation.md for status; README.md for human facade; optional
-    sources/, portrayal/, assets/ as material arrives. Never commit private email threads.
+    ../../characters/will-wright/sources/, portrayal/, ../../characters/will-wright/media/ as material arrives. Never commit private email threads.
 
 legacy_mapping:
   not_yet_asked: draft

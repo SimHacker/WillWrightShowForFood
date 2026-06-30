@@ -4,7 +4,7 @@ Invitation portrayal — **not** Patrick Hulin. [Standards](../../schemas/portra
 
 **Field:** Software engineer — AI-assisted reverse engineering; tower-together / towers.world (a tick-for-tick TypeScript SimTower)
 
-[Invitation](invitation.md) · [Show seed](../../repo-shows/patrick-hulin/)
+[Invitation](invitation.md) · [Show seed](../../repo-shows/patrick-hulin/README.md)
 
 Patrick (**@phulin**) used an LLM (**Claude Code**, plus a Unicorn-based emulator that mocked ~195
 Windows 3.1 API calls) to reverse-engineer the original **SimTower** binary into a complete
@@ -16,6 +16,6 @@ multiplayer and a build-a-grid UI. Live at **[towers.world](https://towers.world
 He's a **warm lead** for Don's [Yoot Tower work](../yoot-saito/yoot-tower-discussion.yml): on the
 [HN thread](https://news.ycombinator.com/item?id=47937814) he said he'd love to see Yoot Tower
 recreated and was intrigued by The Tower II's "Tower Kit" plug-in system. Same AI-retrocomputing
-spirit as [David Temkin](../david-temkin/) reviving OpenLaszlo.
+spirit as [David Temkin](../david-temkin/README.md) reviving OpenLaszlo.
 
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

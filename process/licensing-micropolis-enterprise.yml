@@ -1,5 +1,5 @@
 # Micropolis — future commercial / hosted tiers (placeholder)
-# The open-source SimCity → Micropolis story lives in repo-shows/will-wright/sources/
+# The open-source SimCity → Micropolis story lives in characters/will-wright/sources/
 # (simcity-open-source-saga, micropolis-saga, OLPC threads, license chain-of-custody).
 # That history is public craft and stays here.
 
@@ -13,6 +13,6 @@ meta:
     additive only; nothing relicenses existing open releases.
 
 see_also:
-  - ../repo-shows/will-wright/sources/simcity-open-source-saga/
-  - ../repo-shows/will-wright/sources/maxis-licenses-chain-of-custody/
-  - ../repo-shows/will-wright/catalogs/micropolis-home/
+  - ../characters/will-wright/sources/simcity-open-source-saga/
+  - ../characters/will-wright/sources/maxis-licenses-chain-of-custody/
+  - ../catalogs/micropolis-home/

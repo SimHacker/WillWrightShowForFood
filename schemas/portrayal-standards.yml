@@ -106,7 +106,7 @@ guest_directory:
 
 per_character_files:
   required: [CHARACTER.yml, CARD.yml, GLANCE.md, README.md, invitation.md]
-  optional: [sources.yml, bio.yml, portrayal/, sources/, media/, assets/]
+  optional: [sources.yml, bio.yml, portrayal/, sources/, media/]
   grows: "Add files as responses and show prep warrant — not a fixed template checklist"
   do_not_repeat: "This standards file — reference governed_by: portrayal-standards.yml"
 

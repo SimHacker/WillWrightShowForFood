@@ -27,10 +27,10 @@ working code and credited ideas in public.
 - **The first wired family.** Growing up *inside* the AI Lab — playing in the children's computer
   lab while grad students took notes — with your sister Margaret and twin Juliana.
 
-**Materials:** [`repo-shows/henry-minsky/`](../../repo-shows/henry-minsky/) ·
+**Materials:** [`repo-shows/henry-minsky/`](../../repo-shows/henry-minsky/README.md) ·
 [your guest page](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/henry-minsky)
 
-A **Minsky-sibling session** with [Margaret](../margaret-minsky/) is on the table too, if you'd both enjoy it.
+A **Minsky-sibling session** with [Margaret](../margaret-minsky/README.md) is on the table too, if you'd both enjoy it.
 
 **Your response:** Accepted, delayed, too busy, declined, or no reply — all honored gracefully.
 
