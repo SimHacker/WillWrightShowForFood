@@ -1,0 +1,8 @@
+simulation:
+  during_show:
+    - fire: ASK-DIGESTION
+      when: "Will or Don discusses promo photos"
+  after_show:
+    - protocol: GREET
+      target: fictional-bella-goth
+      line: "You got the poster. I got eaten. Trade?"

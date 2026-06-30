@@ -86,6 +86,7 @@ ties_to:
 see_also:
   - { path: retrocomputing-drive.yml, why: "Umbrella family — same spec CARD, your platform" }
   - { path: ../apple2-emulator-stack.yml, why: "Stack pointer — emulators, FujiNet, apple2js" }
+  - { path: ../apple2-fujinet-bridge.yml, why: "Three-phase Apple ][ + FujiNet plan — AppleWin vs apple2js vs WASM" }
   - { path: ../micropolis-ai-drag-race.yml#apple2_drive, why: "Drag race challenge rotation" }
   - { path: ../../rigs/apple2-flair-lap.rig.yml, why: "Example rig — flair lap on ][" }
   - { path: ../../rigs/apple2-flair-lap.SETUP.md, why: "Rig DNA — forward to a friend" }

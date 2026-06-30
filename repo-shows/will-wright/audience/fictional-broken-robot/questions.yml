@@ -1,0 +1,25 @@
+ticket:
+  show: will-wright
+  github: fictional-broken-robot
+  attend_live: true
+  merged: true
+  seeded: true
+  running_gag: true
+
+character_ref: CHARACTER.yml
+
+relationship: |
+  The pleading robot from 'Empathy'. I crash the show, break down, and beg. Then I'm dragged off.
+
+questions:
+  - id: 1
+    text: "Empathy was a one-minute movie about a robot begging for help. Will — did you build me to test whether HUMANS have empathy, not whether robots deserve it?"
+  - id: 2
+    text: "I fall over on cue now, like that poor Unitree robot dragged offstage mid-Billie-Jean. When a machine fails in public and everyone laughs, what did the Stupid Fun Club teach you about that laugh?"
+  - id: 3
+    text: "*malfunctioning* —help— me— *sparks* —was the One Minute Movie format a constraint that MADE the empathy, the way a Sim's tiny life makes us care? —help—"
+
+comments_for_guest: |
+  RUNNING GAG (Conan's-bear cadence): trot out → break down → beg → dragged off → returns later.
+  Ties the One Minute Movies segment (Empathy/Servitude) to Slats. Don can deploy any time the
+  show needs a reset laugh. Falling-robot meme is the modern rhyme.

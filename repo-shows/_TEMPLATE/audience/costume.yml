@@ -1,0 +1,16 @@
+# costume.yml — optional stream identity for "Come On Down"
+# Referenced by CARD.yml ability WEAR-COSTUME
+
+costume:
+  display_name: "Your Display Name"
+  tagline: "Optional — e.g. Green Flamingo Rug Cosplay"
+
+  description: |
+    Text description of what you wear on stream if Don Philahue calls you down.
+    Price Is Right energy welcome. Text alone is enough.
+
+  # avatar: avatar.png
+  # model: avatar.glb
+  # rig: ../../../rigs/your-handle.rig.yml
+
+  come_on_down_line: "YOUR NAME HERE — COME ON DOWN to the QUESTION IS RIGHT!"

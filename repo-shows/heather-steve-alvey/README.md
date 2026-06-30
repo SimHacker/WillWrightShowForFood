@@ -13,9 +13,11 @@ SimFreaks/SimSlice skins, scale toward *They Are Billions* pressure — and play
 
 ## The bigger why — Micropolis publishing
 
-Underneath the fun: Don is building a **Micropolis content-management & publishing system** for the
-Alveys' enormous **artisanal back-catalogs** and current streams (and his own) — republishing the
-**SimProv Wedding Playset** (made with the Alveys, **SimBabes**, and other artists), reopening its
+Underneath the fun: Don is building [**Micropolis Home**](../will-wright/catalogs/micropolis-home/) — create · publish · share — for the
+Alveys' enormous **artisanal back-catalogs** and current streams (and his own). Federated catalogs:
+[SimFreaks](../will-wright/catalogs/simfreaks/), [SimSlice](../will-wright/catalogs/simslice/),
+[SimProv](../will-wright/catalogs/simprov/), [Zombie Sims](../will-wright/catalogs/zombie-sims/).
+Republishing the **SimProv Wedding Playset** (made with the Alveys, **SimBabes**, and other artists), reopening its
 development to fans + devs, and **reincarnating** the classic Sims tools (SimShow, Sim Transmogrifier,
 RugOMatic, body/head/wig editors…) as living, open, optionally **AI-orchestrated** apps. Their sites
 become storefronts; the community keeps making and selling new work.

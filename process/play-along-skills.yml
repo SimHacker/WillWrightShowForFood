@@ -1,0 +1,86 @@
+# Play Along — Repo Shows come with AI Skills you plug into your tools
+# Cross-cuts every show.
+
+meta:
+  id: play-along-skills
+  one_line: |
+    Every Repo Show ships AI Skills you plug into Cursor (or another AI tool) to PLAY ALONG —
+    before, during, and after — by participating in the GitHub repo the way software teams do:
+    clone, branch, commit, push, PR, review, merge, issues, discussions. MOOLLM is the core.
+  tagline: "Repo Shows come with AI Skills for you to Play Along."
+
+# MOOLLM AT THE CORE — the show is a distribution hook for MOOLLM
+moollm_at_the_core:
+  thesis: |
+    MOOLLM isn't a footnote here — it's the engine. The Repo Show is a DISTRIBUTION HOOK for
+    MOOLLM: a real, practical, delightful thing that proves what MOOLLM is FOR, and carries it out
+    into the world. Anthropic-format Agent Skills (and other providers') are portable DELIVERY
+    WRAPPERS — the way people get MOOLLM into their tool of choice — but the substance is MOOLLM.
+  how_moollm_earns_it: |
+    This is how MOOLLM earns getting out there: not by manifesto, but by being useful at something
+    concrete and fun. Play a show, and you've already used MOOLLM for real.
+
+embrace_extend_share:
+  ethos: "Embrace, Extend, and Share."
+  contrast: |
+    The ethical inversion of Microsoft's 'Embrace, Extend, EXTINGUISH' (EEE) — the old playbook for
+    capturing an open standard and then strangling it. We EMBRACE open standards and tools (git,
+    GitHub, Anthropic skills, the web), EXTEND them with MOOLLM, and SHARE the result openly so
+    others can fork, run, and extend in turn. No lock-in, no extinguish. Extend outward, give back.
+
+# WHAT WE PUBLISH
+skills_we_ship:
+  core: "MOOLLM skills — composable yaml-jazz (character, advertisement, simulation, cauldron, …) from github.com/SimHacker/moollm. THE substance."
+  delivery_wrappers:
+    - { kind: "Anthropic Agent Skills", what: "SKILL.md-style wrappers so MOOLLM drops into Cursor/Claude-style tools" }
+    - { kind: "other providers", what: "same MOOLLM core, wrapped for whatever AI tool you bring" }
+  where:
+    public_live: skills/                      # this repo's harvested skills (skills/repo-show/, …)
+    upstream: https://github.com/SimHacker/moollm
+  note: "Skills are the same ones the show itself runs on — you get the real engine, not a toy demo."
+
+# THE PRELOADED RUNTIME — a safe, focused MOOLLM subset for the show
+preloaded_runtime:
+  analogy: "Like the way Don's HyperLook applications ran on the HyperLook runtime — the app ships with exactly the runtime it needs."
+  what: |
+    We ship a SAFE, FOCUSED, PRELOADED MOOLLM SUBSET tuned for THIS show: just the skills + context
+    a participant needs to join the repo, the community, and the show — to play along, contribute,
+    and develop — with nothing extraneous and nothing unsafe loaded.
+  generated: "MOO generates these optimized per-repo runtimes — a curated slice of MOOLLM, compiled for the job, not the whole kitchen sink."
+  why:
+    - "Safety + focus: load only what's needed; smaller attack/confusion surface; easier to trust."
+    - "Onboarding: a newcomer gets a working, scoped toolkit, not 130 skills to wade through."
+    - "Performance: an optimized subset is faster and cheaper to run than the full kernel."
+  boundary: "The subset is a doorway INTO full MOOLLM — start scoped, expand when you want the whole microworld."
+
+# HOW YOU PLAY ALONG — GitHub's industrial-strength workflow IS the medium
+how_to_play_along:
+  setup: "Clone the GitHub repo; plug the show's Skills into your AI tool (Cursor, etc.)."
+  before_show:
+    - "Branch + author your TicketPR character (questions, CARD, costume); open a PR to be reviewed and merged."
+    - "Open or reply to Issues and Discussions; ask questions; propose segments."
+  during_show:
+    - "Commit + push in real time; the GitHub-activity feed surfaces it into the live chat."
+    - "Your merged character participates live (Don Philahue surfaces it); make follow-up PRs on the fly."
+  after_show:
+    - "Submit homefun: implement a show idea on a branch, open a PR for a later episode."
+    - "Keep the conversation async via Issues/Discussions/PR threads — time-shifted, on the record."
+  the_git_verbs: [clone, branch, stage, commit, push, pull-request, review, merge, issue, discussion]
+  the_main_timeline: "Reviewed + merged PRs land on `main` — the canonical show timeline. Master ⇒ PR, master branch ⇒ main."
+
+# WHY GITHUB
+why_github:
+  industrial_strength: |
+    This is GitHub's ENTIRE PURPOSE — battle-tested, stress-tested, programmable collaboration:
+    forks, branches, review, merge, CI, issues, discussions, permissions, history. We didn't invent
+    a fragile new platform; we use the one the whole software industry already trusts.
+  curation_and_moderation: "PR review + maintainer merge gives us real, scalable curation and moderation for free (family-friendly, on the record)."
+  durable_and_forkable: "Everything is inspectable, forkable, and permanent — come for the show, fork the repo, run your own."
+
+see_also:
+  - ../repo-shows/will-wright/audience/README.md   # the welcome packet introduces Play Along
+  - ../skills/README.md
+  - ../skills/repo-show/SKILL.md
+  - ticket-pr.yml
+  - repo-show-format.yml
+  - https://github.com/SimHacker/moollm

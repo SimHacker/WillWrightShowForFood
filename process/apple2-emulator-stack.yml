@@ -10,6 +10,7 @@ meta:
 summary: |
   Layered stack: L0 raw disk I/O → L1 DOS/ProDOS/UCSD → L2 per-game drivers.
   apple2js (hackable TS) for live hot-write. Emularity/MAME complementary.
+  FujiNet bridge: apple2-fujinet-bridge.yml — three phases (native / browser / optional WASM hub).
   Show: retrocomputing-drive family — rig declares languages, tools, platform, emulator.
 
 show:
@@ -24,5 +25,6 @@ authoritative:
 ties:
   - challenges/retrocomputing-drive.yml
   - challenges/apple2-drive.yml
+  - apple2-fujinet-bridge.yml
   - ../repo-shows/will-wright/slats-reincarnation.yml
   - ../characters/thomas-cherryhomes/

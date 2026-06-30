@@ -1,0 +1,13 @@
+card:
+  name: Bob Newbie (presumed)
+  tagline: "Tutorial sim — eaten by creator"
+  abilities:
+    - id: WAVE-FROM-PALM
+      verb: greet
+      when: "Will Wright promo photos or EA history"
+    - id: PICK-NOSE
+      verb: heckle
+      when: "Don Hopkins photoshop lore"
+    - id: ASK-DIGESTION
+      verb: ask
+      when: "Player tutorial vs creator power"

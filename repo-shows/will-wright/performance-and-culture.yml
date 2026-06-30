@@ -1,0 +1,208 @@
+# Performance & participation culture — how the Repo Show is PERFORMED and PLAYED
+# Public design doc. How LLM text becomes voice, how the audience participates, what it all is.
+
+meta:
+  id: performance-and-culture
+  show: will-wright
+  thesis: "Using Twitch chat (and GitHub, and HN) to edit a repo, live and time-shifted. That is why it's the Repo Show."
+  see_also: [SEGMENTS.yml, venue/VENUE.yml, ../../process/repo-show-format.yml, ../../characters/don-philahue/CHARACTER.yml]
+
+# VOICING — LLM text → voice, with NO synthesizers
+voicing:
+  problem: "MOOLLM characters natively speak TEXT + emojis. How do we give them VOICE on a stream?"
+  answer: |
+    PUPPETRY. Humans voice the character-puppets out loud — like a kids' puppet show. No voice
+    synths, no cloned voices. A person reads the character's generated lines with personality,
+    emotion, timing. Don (the human, i.e. the puppeteer behind Don Philahue) is the default voice;
+    guests voice the characters they bring or want to play.
+  language_bibles: |
+    For non-English tongues (Simlish, robot, Palm-emoji, cow), we keep a 'bible' of how each is
+    spoken — so one performer voices them consistently (cf. the real Simlish actors improvising a
+    consistent feel). The bible teaches the FEEL; the SCRIPT is generated live. See schemas/language-*.yml.
+  rotation: "Rotate people through archetypal roles (Sad Clown, Death, Bob Newbie, Bella, Ultimate Machine)."
+  godzilla_lineage: |
+    A 1970s Japanese game show let call-in kids 'operate' Godzilla monster battles by yelling
+    'YAAARRR! / SKREEEE!' into the phone. That's the ancestor: humans puppeteering a creature's
+    voice live. We can do that now — and so much more.
+
+# PUPPET TAXONOMY — three ways to embody a character (pick per performer)
+puppet_kinds:
+  face_puppet:
+    canonical_name: conan-face-puppet     # (replaces working name 'Conangab')
+    homage: "Conan O'Brien's bit — a still photo of a face with the mouth cut out; a person talks through the hole."
+    what: |
+      Overlay a face-photo-with-mouth-hole on a live video of a performer; their real mouth shows
+      through and they speak the character's MOOLLM-generated lines. You perform the LIPS + the
+      VOICE at once — that simultaneity is what makes it hilarious.
+    use_for: "Game-character faces (Bob Newbie, Bella Goth, Slats, Death, Sad Clown) — clearly-labeled affectionate fan portrayals."
+  voice_puppet:
+    what: "Hide your face entirely; just VOICE the character off-screen. Lowest friction; anyone can do it."
+    instruments: |
+      You can PLAY the voice on a vocal-tract instrument, not just your mouth:
+      • PINK TROMBONE (dood.al/pinktrombone) — drag tongue/lips to perform moos & pleading robots live;
+        show the raw UI + a link so the audience sings/jams along (a 'Pink Trombone musician' doing YAML Jazz).
+      • PHONELOPER — Don's SFC expressive-speech toy (open-sourcing; reimplement as a web app on a show,
+        add a Cow Moo modulation interface, jam it against Pink Trombone).
+      See schemas/language-cow.yml#performance_instruments.
+  puppet:
+    what: "Full embodiment of the character on screen — NOT the performer's face. Options:"
+    options:
+      - "full-screen short video (pre-made or AI-generated)"
+      - "real-time AI-generated character video"
+      - "voice-reactive SVG cartoon (mouth/gesture driven by the voice)"
+    voice_to_motion:
+      simplest: |
+        AMPLITUDE → SCRUB VIDEO: take a short clip of the character going neutral → dramatic
+        extreme (mouth open, gesturing), and scrub through it in proportion to voice amplitude.
+        Cheap, fast, hilarious — the next cheesy step past Conan's still photo.
+      credit: "Technique Don did with David Levitt — scrubbing Jesse Jackson / Rush Limbaugh clips to voice amplitude."
+      fancier: "Viseme tracking (mouth shapes from phonemes) when we want lip-sync; amplitude-scrub is the 80/20."
+
+the_reading:
+  what: |
+    The show can run as a READING: performers stream video (face-puppet) or go off-screen
+    (voice-puppet) or drive a puppet, and VOICE a character's live-generated speech.
+  your_own_character: "Playing YOUR OWN character? Your own face speaking normally is fine — the default."
+  volunteer_for_others: "Volunteer to run someone else (Sad Clown, Death, Bob, Bella, Ultimate Machine — with a GONG button)."
+  rotation: "Rotate the pantheon among willing performers. A pantheon of ethically-sourced characters + human voices = live puppet theater."
+  why_it_works: |
+    No synths, no cloned voices — humans bring timing, emotion, personality. It's live improv
+    performance, in the tradition Drew Carey has mastered on Whose Line Is It Anyway?.
+
+# FAN CONTENT & TRADEMARKS — made with love and respect
+fan_content_and_trademarks:
+  note: |
+    This is non-commercial fan work, made with love and deep respect for these games and their
+    creators. We honor EA's and Maxis's TRADEMARKS: we don't use their logos or marks (e.g. the
+    Plumbob) in our branding, and nothing here implies endorsement or affiliation. Characters are
+    clearly-labeled affectionate fan portrayals — homage, not official dialogue.
+
+# PARTICIPATION CULTURE — Rocky Horror for a repo
+rocky_horror_culture:
+  homage: |
+    Rocky Horror Picture Show audience participation — knowing what to say/do at the right moment
+    (Don learned it from the MIT AI Lab ITS PDP-10 AI:HUMOR;ROCKY HORROR file, and once delighted
+    a party in Amsterdam by chiming the lines from memory). Light the lighter, throw the toast — on cue.
+  the_repo_version: |
+    Simulated characters watch the chat/script with pattern-recognition (interests) + behaviors
+    (actions) + triggerable protocols. If you've read a character's backstory and language (e.g.
+    Palm's emoji tongue + his essay), you can craft a pointed question that triggers a big, specific
+    reaction — and Don translates it for the room. You look brilliant for getting that reaction.
+  jump_on_stage: "Understanding the machinery lets you effectively become one of the actors yourself."
+
+backstage_ethics:
+  assume: "Most audience members won't look behind the scenes at the constitution/scripts/sim."
+  if_you_do: |
+    We WELCOME 'spying' backstage — the 'how Star Wars was made' featurettes were the best part.
+    We want to pull people INTO MOOLLM and teach them to use it.
+  the_one_ask: |
+    Play along. Don't spoil it for the live audience — e.g. don't spam cheat codes at the cold open
+    and blow the Klapaucius reveal. Trigger interactions and easter eggs at the PERFECT time.
+  you_become_crew: "In on the joke + behaving + contributing at the right beats? You're crew — join the repo, attend cast parties."
+
+# ECONOMY — pies, seltzer, and real support
+participation_economy:
+  free_tier: |
+    Typing cheat codes (Klapaucius!) and throwing Simoleons is like throwing pies / squirting
+    seltzer — anyone can do it free. KACHING. Pure play.
+  escalation: |
+    It seamlessly escalates into REAL (optional) cash contributions → recognition (box/balcony
+    seats), AND simulated interactions/conversations with characters, AND dynamically generated
+    interactive MOOLLM objects as prizes. Don's LEDGER tracks real vs play, both flagged.
+  rewards_are_objects:
+    not_a_badge: "Rewards aren't shallow badges — they're self-explaining YAML-Jazz/markup interactive objects."
+    examples:
+      - "A jukebox / slideshow / video-playlist object — rendered to an HTML page with embedded players"
+      - "A Sims object that plays or tells about the content"
+      - "A MOOLLM object you can simulate + interact with in an LLM orchestrator"
+    relevance: "Generated to fit the interaction that earned it (or on request)."
+    social_capital: |
+      Ask 'Will, what game-design videos should I watch?' or 'Miyamoto, your GDC keynotes?' → get a
+      curated content-object: interesting to you AND shareable. Archived in the repo (official
+      context where you earned it) and published on the site — send the link to your mom.
+
+# RUN WITHOUT WILL — the third space
+third_space:
+  what: |
+    Don (or anyone) can run the show WITHOUT the guest present: receptions, hangouts, third spaces,
+    before/after parties, casual daily long-form streams on any topic — like lots of streamers do.
+  who_attends: "All MOOLLM characters + all TicketPR characters can attend, stay active, and gain experience."
+  characters_grow: |
+    Characters accrue experience into their own dirs (CHARACTER.md/.yml) and an INBOX of things
+    people asked them, which they can answer later. Time-shifted async with occasional sync convergences.
+  drop_in: "Check the repo (or join the Twitch channel) to see if anyone mentioned you, asked your character anything, or interacted."
+  the_thesis: "This is using Twitch chat (+ GitHub issues/comments + HN) to EDIT A REPO. Hence: the Repo Show."
+
+# LIVE PARTICIPATION PROTOCOL (with Phil's help)
+talk_to_characters:
+  what: "A protocol for live humans (Twitch chat) to address simulated characters directly."
+  facilitator: "Phil Salvador can facilitate live Twitch members asking questions of simulated characters/audience."
+  with_or_without_don: "May go through Don Philahue (coordinating + translating) or address a character directly."
+  showcase: |
+    Ask Palm a question IN HIS OWN EMOJI LANGUAGE → Phil/Don translates to English for the room →
+    Palm answers in his dense tongue → translated back (lots of words, because Palm is so nuanced).
+    Same with Simlish. Asker may omit a translation → glorious telephone-game mistranslation comedy.
+
+# VENUE TOUR / RED CARPET (pre-show)
+venue_tour:
+  what: "Before the show, Don Philahue broadcasts a tour of the venue as guests + celebrity audience arrive."
+  vibe: "Red-carpet greetings, like the opening of a play / awards night."
+  live_edits: |
+    During the tour AND the show, we make real-time edits to the files representing the world/stage,
+    commit with a NARRATIVE message, and announce the narrative of what just happened to the chat.
+  rooms: venue/VENUE.yml
+
+# THE SPEECH-FEEDBACK-LOOP INSTRUMENT (Slats's robopoetry, playable)
+# Slats spiraling into recursive robopoetry isn't just a gag — it's a playable, parameterizable
+# musical instrument that invites remote audience participation by voice streaming.
+speech_feedback_loop_instrument:
+  what: |
+    A speech-synth → speech-recognition feedback loop: the system speaks a line, hears its own
+    output, and re-speaks a mutated version — iterating into evolving 'robopoetry.' Slats is the
+    character who lives in this loop; the Broken Robot degrades through it; both are gonged when it
+    gets bad (the Ultimate Machine's GONG = a SHUT-UP).
+  why_its_an_instrument: |
+    It's STEERABLE in real time, which makes it a generative instrument anyone can play:
+    - TALK DURING THE PAUSE to PREPEND / APPEND syllables (grow the line at either end).
+    - TALK OVER it to REPLACE / SMASH / MUTATE syllables mid-loop.
+    - EXPAND or SHRINK the phrase by feeding or starving it.
+    - TURN THE KNOBS: synth SPEED, PITCH, and VOICE (switch voices) — each massively changes the
+      loop's coherence, drift, and style (hill-climbing vs wandering vs collapse).
+  remote_participation: |
+    Rich and easy to jam: remote audience members VOICE-STREAM in to nudge the loop — a chorus
+    steering Slats together. Pairs with the vocal-tract instruments (Pink Trombone, Phoneloper —
+    see schemas/language-cow.yml#performance_instruments) and the Phoneloper granular moo-chorus.
+  arc: "Let it climb to peak absurd beauty, then the Ultimate Machine gongs Slats. Reset laugh. Repeat later."
+  see: ../../characters/slats/CHARACTER.yml
+
+# UNNECESSARY CENSORSHIP — a homage gag (credit where due)
+unnecessary_censorship:
+  homage: "Jimmy Kimmel Live's 'This Week in Unnecessary Censorship' — bleeping/blurring innocuous words for comedy."
+  credit: "Full credit + respect to Jimmy Kimmel Live; we'd run it as a clearly-attributed homage."
+  the_gag: |
+    Bleep and black-bar perfectly innocent words to imply something filthier than what was said —
+    the comedy is in the listener's dirty imagination. A natural fit for a live, captioned stream.
+  the_anti_censorship_rule: |
+    The flip side, and our actual policy: we do NOT censor real NAMES. Conan's **Masturbating Bear**
+    is named the Masturbating Bear — that's his name, and he gets the respect of not being bowdlerized.
+    We say it plainly. (The 'unnecessary censorship' bit is voluntary comedy, never timid euphemism.)
+
+# CREDIBILITY & STANCE (publishable; professional; anti-hype)
+credibility_and_stance:
+  weve_done_this: |
+    This isn't a pitch deck for vaporware. The pieces are proven, separately, over decades:
+    SimCity (now open-source as Micropolis), The Sims and its user-created-content explosion,
+    the Stupid Fun Club's robot One Minute Movies and the Phoneloper expressive-speech toy, and
+    Bar Karma (a crowd-written TV show). We're now assembling them into ONE coherent, integrated
+    framework (MOOLLM) — live, in public, in a GitHub repo you can read and fork.
+  what_it_is_not: |
+    Not AI hype. Not NFTs. Not web3. No tokens, no speculation, no 'revolutionary platform'
+    grandiosity. It's a small, real, inspectable thing: humans + characters + a git repo + a chat,
+    making a warm, family-friendly, participatory show. The humans are the point; the AI is a tool.
+  what_it_is: |
+    A live and time-shiftable conversation where the audience writes itself into git, ideas become
+    working code, and beloved game characters (lovingly, as fan homage) interview their creators.
+  tone: "Coherent, creative, professional, tractable. If a collaborator reads the repo, it should read like craft, not crypto."
+
+future_note:
+  live_call_in: "Real-time call-ins + video bots are v2 (see SEGMENTS.yml#live_call_in). v1 fakes it honestly in Cursor."

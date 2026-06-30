@@ -1,0 +1,33 @@
+# ZombieSim — fictional audience (the zombie SimFreaks/SimSlice brought along)
+character:
+  name: ZombieSim
+  type: fictional_game_character
+  real_being: false
+  signifier: "🧟"
+  home: repo-shows/will-wright/audience/fictional-zombie-sim/
+  origin: "ZombieSims — Heather & Steve Alvey's Sims zombie content. The crew brought one to the show."
+
+representation:
+  fictional: true
+  not_official_ea: true
+  brought_by: simfreaks-simslice
+  note: "The +1 the content creators brought. Shambling product placement, lovingly."
+
+speaks: simlish
+simlish_voice: "...braaa... sul sul... braaains?"   # Simlish, but make it hungry
+
+seating:
+  seat: front_row
+  attending_with: simfreaks-simslice
+  adjacent: [heather-alvey, steve-alvey]
+  earned_by: guest_primed
+  note: "Slumped in the front row between its makers. Occasionally lunges. Harmless. Mostly."
+
+relationship: |
+  Brrains. I mean — Sul sul. I am custom content given unlife by SimFreaks and SimSlice. I am
+  what the community makes when you give them a tool and a holiday. I shamble, therefore I am.
+
+see_also:
+  - questions.yml
+  - ../heather-alvey/
+  - ../steve-alvey/

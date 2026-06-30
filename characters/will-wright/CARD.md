@@ -9,7 +9,7 @@
 │ 👤 WILL WRIGHT                  ✦ LEGENDARY  │
 │ The Simulator · Toymaker of Microworlds      │
 │ Set: Micropolis Founders   ·   Living        │
-│ Alias: "Klapaucius" (also a Sims cheat code) │
+│ Alias: "Klapaucius" (Will's longtime handle; Lem's *Cyberiad*) │
 └──────────────────────────────────────────────┘
 ```
 

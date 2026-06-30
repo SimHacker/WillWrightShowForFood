@@ -1,0 +1,102 @@
+# Fictional & autonomous audience members — ethics for TicketPR
+# Seeded examples: repo-shows/will-wright/audience/fictional-*/
+# Policy prose: repo-shows/will-wright/audience/FICTIONAL-AUDIENCE.md
+
+meta:
+  id: fictional-audience
+  version: 0.1
+  extends: audience-character.yml
+
+allowed:
+  game_characters:
+    type: fictional_game_character
+    rule: |
+      EA/Maxis game characters (Sims, objects, NPCs) — clearly labeled fiction. Voice is
+      parody/fan in-character interrogation of the creator at a Repo Show, not canonical lore.
+    must:
+      - label_fictional_in_CHARACTER_yml
+      - no_claim_to_be_official_ea_dialogue
+      - cite_game_origin_in_sources
+    examples: [bella-goth, tragic-clown, killer-hamster, grim-reaper, social-bunny]
+
+  repo_bots:
+    type: fictional_bot_audience
+    rule: |
+      Bots we already portray as fictional (Slats, Ultimate Machine) — audience TicketPR extends
+      characters/<bot>/ with show-specific questions. Real hardware/software history cited;
+      dialogue original or from documented transcripts (Slats films).
+    must:
+      - character_ref to characters/<bot>/
+      - must_not claim_sentience
+    examples: [slats, ultimate-machine]
+
+  tools_as_personae:
+    type: fictional_tool_persona
+    rule: |
+      Unreleased or internal tools (Edith, SimAntics debugger) — personify the TOOL, not a human.
+      Clearly labeled; questions about design intent, not fake employee quotes.
+    examples: [edith-simantics-ghost]
+
+  guest_primed:
+    type: guest_primed_audience
+    rule: |
+      Guest (or guest-approved curator) authors audience/ TicketPRs — including virtual plants
+      and running gags. Same ethics as fictional characters plus **disclosure**: planted,
+      fictional, or guest-authored must be visible in yaml and show README.
+    must:
+      - authorship.by in [guest, curator_with_guest_ok]
+      - planted.disclosure true for virtual and costume plants
+      - running_gag tagged when recurring across segments or shows
+    may_be:
+      - fictional_game_character
+      - fictional_bot_audience
+      - fictional_tool_persona
+      - consented_human_in_costume
+    examples:
+      - "Will seeds Bella Goth + Tragic Clown — virtual children interrogating creator"
+      - "Guest adds running balcony heckle bank for Don to fire between segments"
+      - "Costume plant — Come On Down with rig in costume.yml"
+
+planted_audience:
+  late_night_ethics: |
+    Talk-show tradition: planted celebrities, audience in costume, recurring comedy characters.
+    Ethical when **transparent** — repo labels, on-air wink, no fake humans without consent.
+    Virtual Sims in a Will Wright Repo Show = entertainment + priming, not astroturfing.
+  running_gags:
+    what: "Recurring bit — same character, catchphrase, or CARD ability across segments/shows"
+    examples:
+      - "Balcony duo — Row Twelve Left & Right"
+      - "Slats call-in during RoboResurrection"
+      - "Ultimate Machine gongs long segments"
+      - "Costume callback — same rig every 'Come On Down'"
+    config: "running_gag: true in CHARACTER.yml; hooks in SIMULATION.yml"
+
+forbidden:
+  deceased_humans_as_audience:
+    rule: |
+      Do NOT create audience/ TicketPRs that speak AS deceased real people (Dani Berry, Marvin
+      Minsky, etc.) **without guest/family consent**. Default: memorial mode = discuss ABOUT
+      them with living guests — see portrayal-standards.yml#memorial_mode.
+    exception:
+      when: guest_authored_family_memorial
+      spec: audience-ethics-experiments.yml#yellow_guest_authored
+      rule: |
+        Will (guest) may author family memorial audience voices he controls — disclosed plants,
+        questions he approved. Not curator-invented private stories.
+
+  living_humans_without_consent:
+    rule: Do not create audience personas impersonating living guests or fans without consent.
+
+heckling:
+  default: curated — merge good-faith sharp questions; filter slurs and bad faith
+  guest_may_welcome: true
+  fictional_characters_may_be_harsh: |
+    Loving, warm, sometimes critical — Sims fan in-jokes OK. Label as fictional audience voice.
+
+see_also:
+  - portrayal-standards.yml
+  - audience-character.yml
+  - ../repo-shows/will-wright/audience/FICTIONAL-AUDIENCE.md
+  - ../repo-shows/_TEMPLATE/audience/PLANTED-AUDIENCE.md
+  - audience-ethics-experiments.yml
+  - ../repo-shows/will-wright/audience/AUDIENCE-ROSTER-IDEAS.md

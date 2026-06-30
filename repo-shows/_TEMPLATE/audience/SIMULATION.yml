@@ -1,0 +1,87 @@
+# SIMULATION.yml — this character's simulation instance (brain · algorithm · runbook)
+# A MOOLLM `simulation` skill instance, SCOPED TO ONE CHARACTER.
+# Composes: skills/simulation (runtime state) + skills/advertisement (Sims-style behaviors)
+#           + skills/character (identity). The character IS a tiny simulation: state that
+#           reacts, advertises, and meshes with other characters like Sims objects + gears.
+# Docs: https://github.com/SimHacker/moollm/skills/simulation/SKILL.md
+#       https://github.com/SimHacker/moollm/skills/advertisement/SKILL.md
+
+simulation:
+  kind: character_instance        # concrete instance of the abstract `simulation` base
+  character_home: "."             # this directory IS the save game (filesystem = state)
+  source_of_truth: CHARACTER.yml  # who I am; this file = how I RUN
+  composes:
+    - SimHacker/moollm/skills/simulation        # turns, state, git time machine
+    - SimHacker/moollm/skills/advertisement     # The Sims object-advertisement model
+    - SimHacker/moollm/skills/character         # identity
+    - SimHacker/moollm/skills/thoughtful-commitment
+
+# THE BRAIN ── what I perceive, want, and how I pick an action each turn.
+# (Sims-object model: I advertise behaviors scored by context; the orchestrator/other
+# characters invoke the highest-scoring one. Plug-together, distributed, gear-meshed.)
+brain:
+  perceive:
+    - "current show topic / segment (from the live transcript)"
+    - "what the guest just said"
+    - "what other characters just did (their fired advertisements)"
+  wants:
+    # Drives that bias which of my CARD advertisements score highest right now.
+    - { drive: be_asked_on_air, satisfied_by: ASK-QUESTION }
+    - { drive: react_in_character, satisfied_by: "[heckle/cheer/greet ads]" }
+  choose: |
+    Each turn: score my CARD.yml advertisements against perceive+wants+context.
+    Highest score is eligible to fire. Don Philahue (orchestrator) arbitrates across all
+    characters so we mesh instead of talking over each other.
+
+# THE ALGORITHM ── the per-turn loop (deterministic, git-backed via the simulation skill).
+algorithm:
+  tick: |
+    1. PERCEIVE context (topic, last utterance, other characters' fired ads).
+    2. SCORE my advertisements (CARD.yml) — see skills/advertisement scoring.
+    3. OFFER my top ad(s) to the orchestrator (Don Philahue) with my score.
+    4. If invoked → ACT (speak my line; Sims speech renders to Simlish when voiced).
+    5. UPDATE state (mood, simoleons, asked? ) and optionally commit (git time machine).
+  invocation: "self (autonomous), or by Don Philahue / guest / Don Hopkins / another character"
+  meshing: |
+    Advertisements dovetail like gears: my CHEER can be the setup another character's HECKLE
+    scores against; a balcony partner's line raises the score of my reply. Distributed,
+    plug-together behavior — no central script, just scored ads + an arbiter.
+
+# THE RUNBOOK ── concrete hooks for THIS show.
+runbook:
+  during_show:
+    mspo_rpg: |
+      Massively Single-Player Online RPG — I can ask/react when my author is OFFLINE.
+      Async audience participation via question-advertisements.
+    philahue_queue:
+      source: questions.yml
+      fires: ASK-QUESTION         # CARD advertisement Don can invoke
+    live_chat:
+      link_ticket_pr: true
+      display_name_from: CHARACTER.yml
+  after_show:
+    homefun:
+      submit_via: SUBMIT-HOMEFUN
+      grading: ../../../process/homefun-grading.yml
+    inter_character:
+      protocols: [GREET, ASK, CHEER, CUDDLE]
+      note: "Audience members GREET each other in adventure microworld layers"
+    harvest:
+      note: "Show skills scooped from cauldron — compose_with new skills"
+
+locations:
+  default: "audience/lobby"       # box/balcony if you donated (see ticket-pr seating)
+  on_air: "stream/stage"
+  homefun: "repo/your-branch"
+
+relationships: []
+  # { to: "@other-audience-member", as: "fellow_ticket_holder" }
+  # { to: "will-wright", as: "big_fan" }
+
+meta:
+  enabled: true
+  updated: YYYY-MM-DD
+  see_also:
+    - CARD.yml          # my advertisements (the behaviors this brain scores + fires)
+    - CHARACTER.yml     # who I am
+    - CHARACTER.md      # prose companion (superposition)

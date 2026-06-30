@@ -1,0 +1,26 @@
+# RESERVED for Heather Alvey (SimFreaks) — real person, honored front-row invite.
+# Curators: don't fabricate her questions; she writes her own. Empty by design.
+ticket:
+  show: will-wright
+  github: heather-alvey
+  attend_live: invited
+  merged: false
+  authored_by: self
+  consent: collaborator_invited
+  awaiting_author: true
+
+character_ref: CHARACTER.yml
+
+relationship: |
+  SimFreaks founder; ~26 years of Sims custom content; ZombieSims; worked with Will at Gallium.
+  Front row with the SimSlice/SimFreaks crew.
+
+questions: []   # Heather writes her own
+
+invitation_note: |
+  Heather — honored front-row seat at Will's first Repo Show, beside Steve and a ZombieSim.
+  Plug SimFreaks / ZombieSims freely. Add your own questions here, or just come and heckle warmly.
+  Your call entirely — no words put in your mouth.
+
+comments_for_guest: |
+  Real honored creator, front row, group simfreaks-simslice. Empty questions until she submits.

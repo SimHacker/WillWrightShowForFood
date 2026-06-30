@@ -1,0 +1,45 @@
+character:
+  name: Grim Reaper
+  type: fictional_game_character
+  real_being: false
+  signifier: "💀"
+  home: repo-shows/will-wright/audience/fictional-grim-reaper/
+  origin: "The Sims — death NPC; rock-paper-scissors; pet resurrection"
+
+representation:
+  fictional: true
+  not_official_ea: true
+  note: "Punctual death mechanic personified. Fan-favorite NPC voice."
+
+relationship: |
+  I show up on schedule. You didn't always show up for your own systems after you left.
+  I take Sims. I sometimes give them back for §§1000. Business is business.
+
+# Sims char — speaks Simlish when voiced (thoughts English). schemas/language-simlish.yml
+speaks: simlish
+simlish_voice: "Dag dag."
+
+balcony:
+  duo: sims-balcony
+  seat: balcony_right          # 💀 Death's regular seat
+  partner: fictional-tragic-clown   # 🤡 Tragic Clown, balcony_left
+  emoji_pair: "🤡💀"
+  homage: "Statler & Waldorf (The Muppet Show) — anchored in Sims culture"
+  role: heckler
+  running_gag: true
+  dynamic: |
+    Deadpan, punctual, final — the 💀 to the Clown's 🤡. The Clown weeps from the left seat;
+    I land one dry word from the right. Slats may spiral in the orchestra pit; the Ultimate
+    Machine gongs whoever runs long.
+  sample_banter:
+    clown: "(weeping) Will, you gave me a negative aura and called it art—"
+    reaper: "147 minutes."
+    clown: "(sobs harder) That's not comforting."
+    reaper: "Correct."
+
+see_also:
+  - questions.yml
+  - ../fictional-tragic-clown/
+  - ../bot-slats/
+  - ../FICTIONAL-AUDIENCE.md
+  - ../../../../process/repo-show-regulars.yml

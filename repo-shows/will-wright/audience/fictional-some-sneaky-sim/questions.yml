@@ -1,0 +1,24 @@
+ticket:
+  show: will-wright
+  github: fictional-some-sneaky-sim
+  attend_live: false
+  merged: true
+  seeded: true
+
+character_ref: CHARACTER.yml
+speaks: simlish
+simlish_voice: "...sul sul?"
+
+questions:
+  - id: 1
+    text: "You named me 'Some Sneaky Sim' — barely a name at all. The Goths got a saga; I got an adjective. Why do villains get less personhood in your worlds?"
+  - id: 2
+    text: "I always steal the most expensive item first — perfect economic rationality. Did you make me a thief, or a critique of what players value?"
+  - id: 3
+    text: "I surrender peacefully every time. No chase, no violence. Was that mercy in your design, or did you just not want to simulate the ugly part?"
+  - id: 4
+    text: "Later games let players befriend and marry burglars. Did you ever intend redemption for me, or did the modders have to imagine it themselves?"
+
+comments_for_guest: |
+  Canonical name verified ('Some Sneaky Sim', not Nancy). Sympathetic-villain angle.
+  SIMLISH (live): English thoughts; Don can voice his guilty '...sul sul?' on entrance. Sparingly.

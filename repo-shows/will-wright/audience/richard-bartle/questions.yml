@@ -1,0 +1,132 @@
+# Richard Bartle — TicketPR (consented real person; SIMULATED DRAFT for his curation)
+#
+# Permission: Richard has consented to be simulated AND to have example questions drafted
+# in the spirit of his documented work — as a STARTING POINT he can edit, reorder, rewrite,
+# delete, or replace entirely. He may also attend the live stream, and is invited to be 
+# a future guest of his own shows and topics. Founding MOOLLM personality as well as the
+# creator of MUD1 at Essex University.
+#
+# LABELING (heeding his own warning, "quotes can be taken out of context"):
+# These are QUESTIONS in the SPIRIT of his documented public work — NOT quotes.
+# NOT his actual words. NOT claims about his private opinions.
+# Grounded in: MUD1 (1978), the player taxonomy (1996/2003), "Designing Virtual Worlds"
+#     (2003), "MMOs from the Inside Out" (2015), and his documented "worlds are about people"
+#     philosophy. Sources are public.
+# Richard: this is YOUR field day. Cross out, correct, replace. The drafts are scaffolding.
+
+ticket:
+  show: will-wright
+  github: richard-bartle
+  attend_live: optional
+  merged: false                 # merges when Richard reviews / approves / rewrites
+  authored_by: curator_draft_for_subject_review
+  consent: explicit
+  consent_scope: |
+    Simulate in audience + draft example questions in the spirit of his work for him to
+    curate. Final voice is HIS — he edits, approves, or replaces.
+  subject_review: invited
+
+character_ref: CHARACTER.yml
+
+relationship: |
+  Co-creator of MUD1 (1978) — the first multi-user virtual world, grandfather of every MMO,
+  MOO, and shared online space. Player taxonomist (♠️♥️♦️♣️). Author of Designing Virtual
+  Worlds. Here to talk worlds with Will Wright — players-in-a-world meets a-world-of-players.
+
+# SIMULATED DRAFT QUESTIONS — in the spirit of Bartle's documented work.
+# NOT quotes. Richard: edit / reorder / rewrite / delete freely. This is a menu, not a script.
+questions:
+  - id: 1
+    theme: worlds-vs-dollhouses
+    text: |
+      Will, MUD was a world players lived INSIDE — they were the inhabitants. The Sims is a
+      world players look DOWN into — they're the puppeteer, not the resident. Do you think of
+      The Sims as a virtual world at all, or as something else entirely — a dollhouse, a terrarium?
+    spirit_source: "Bartle's distinction between virtual worlds and other designed spaces (Designing Virtual Worlds, 2003)"
+
+  - id: 2
+    theme: player-taxonomy-meets-sims-motives
+    text: |
+      My taxonomy maps why PLAYERS play — Achiever, Explorer, Socializer, Killer. Your Sims
+      have motives too — hunger, social, fun, room. One is about the human at the keyboard,
+      the other about the character on screen. When you designed Sim motives, were you modeling
+      the Sim, or quietly modeling the player watching them?
+    spirit_source: "Bartle player-type axes (1996/2003) vs The Sims motive system"
+
+  - id: 3
+    theme: freedom-and-meritocracy
+    text: |
+      Roy and I built MUD partly as a political act — a world where you could be who you really
+      are, not what the world told you to be. The Sims lets players build any household, any
+      life, free of the social rules outside. Did you see The Sims as a freedom machine the way
+      we saw MUD — or as a mirror that shows people the rules they're already living under?
+    spirit_source: "Bartle's documented account of MUD as freedom/meritocracy (interviews, DVW)"
+
+  - id: 4
+    theme: single-vs-multiplayer
+    text: |
+      Everything I built was multiplayer — worlds are about PEOPLE, the technology only enables.
+      You made the most successful SINGLE-player social simulator ever, then went multiplayer
+      with Spore's shared creature universe. What did you learn about people from watching them
+      play alone that you couldn't have learned from watching them play together?
+    spirit_source: "Bartle's 'virtual worlds are about people' thesis vs The Sims (single) / Spore (shared)"
+
+  - id: 5
+    theme: giving-it-away
+    text: |
+      We never copyrighted MUD. We gave it away, and it became everything. Micropolis — the
+      open-source SimCity — is launching alongside this very show. Knowing what free distribution
+      did for MUD, what do you think open-sourcing your own work does to a design's afterlife?
+    spirit_source: "Bartle: MUD shared freely, never copyrighted (documented); Micropolis open-source context"
+
+  - id: 6
+    theme: reinvention-cycle
+    text: |
+      I've watched designers spend forty years reinventing things we solved in 1985, because
+      they never read the history. You're a famous reader — biology, anthropology, cybernetics.
+      What's the oldest idea you ever 'discovered' that turned out to be ancient, and did finding
+      the prior art make your version better or just humbler?
+    spirit_source: "Bartle's documented frustration with the reinvention cycle (DVW, talks)"
+
+  - id: 7
+    theme: persistence-and-death
+    text: |
+      In a persistent world, a character's death MEANS something because the world goes on
+      without them. In The Sims, death is a mechanic the player can undo, cheat, or invite.
+      When you made death optional and reversible, were you being kind to players — or were you
+      admitting your world wasn't persistent enough for death to matter?
+    spirit_source: "Bartle on persistence as defining property of virtual worlds (DVW)"
+
+  - id: 8
+    theme: emergence-vs-authorship
+    text: |
+      My players wrote stories I never authored — that emergence was the whole point. Your Sims
+      generate soap operas no designer scripted. But you've also talked about giving players
+      'narrative scaffolding.' Where's the line, for you, between a designer who builds a stage
+      and a designer who writes the play?
+    spirit_source: "Bartle on emergent player stories; Wright on possibility space / narrative"
+
+note_to_richard: |
+  Richard — this is yours now. Everything above is a curator DRAFT written in the spirit of
+  your public work to give you a running start, NOT your words. Please:
+    • rewrite any question in your real voice (or bin it),
+    • reorder by what you'd actually want to ask Will first,
+    • add the questions only YOU would think of,
+    • set attend_live to your preference,
+    • flip authored_by to `self` and merged to true when you're happy.
+  You can also bring your familiars (Consequence, Chorus, Tally, Delve) or Heuristic the dragon
+  from your adventure-4 study if you want them in the audience. Field day. Have at it.
+
+comments_for_guest: |
+  For Will: these are SIMULATED drafts in Bartle's documented spirit, pending his own edits —
+  not his quotes. For Don Philahue: surface only after Richard reviews, OR clearly frame on air
+  as 'questions drafted in the spirit of Bartle, awaiting his curation.'
+
+meta:
+  ethics_tier: green_plus_consented_real   # schemas/audience-ethics-experiments.yml
+  labeling: simulated_draft_for_subject_curation
+  not_quotes: true
+  sources_public: true
+  moollm_stack:
+    - CHARACTER.yml
+    - "moollm/examples/adventure-4/characters/real-people/richard-bartle/ (canonical avatar)"

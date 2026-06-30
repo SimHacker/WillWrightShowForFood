@@ -3,10 +3,48 @@
 Public portrayals **about** real people — polite, verifiable, respectful. These are **not** the
 real people, and we never impersonate them or speak as them.
 
-**Browse the tree.** One directory per person — that is the interface, not a separate people index.
-Refer to people organically in show copy and trails; [`INDEX.yml`](INDEX.yml) is for machines syncing status.
+*Sniff:* [`GLANCE.yml`](GLANCE.yml) · *Facade:* [`README.md`](README.md) · *Machine sync:* [`INDEX.yml`](INDEX.yml)
 
-## What's here — two kinds of directory
+**Browse the tree.** One directory per person — that is the interface, not a separate people index.
+
+---
+
+## Featured portraits — scroll in
+
+**[will-wright/](will-wright/)** — Flagship guest. [`GLANCE.yml`](will-wright/GLANCE.yml) · Richest CARD + invitation drafts; alias Klapaucius;
+[`media/`](will-wright/media/) photo galleries. Start at [`invitation.md`](will-wright/invitation.md).
+
+**[don-hopkins/](don-hopkins/)** — Host. Career timeline, SimCity lineage, Stupid Fun Club, correspondence
+index. Self-sovereign portrayal.
+
+**[don-philahue/](don-philahue/)** — Orchestrator MC (fictional). C-3PO translator, TicketPR harvest,
+venue arbitration. The show's constitution lives here.
+
+**[slats/](slats/)** — Sidekick bot. One Minute Movies waiter brain; robopoetry feedback-loop instrument;
+ROBORESURRECTION Easter Sunday bit.
+
+**[terry-winograd/](terry-winograd/)** — Forebear. CS547 archive — 339 talks; the seminar tradition the
+1996 centerpiece inherits.
+
+**[richard-bartle/](richard-bartle/)** — Consented self-author example. MUD co-inventor; spirit-of-work
+questions he may curate.
+
+**[brian-eno/](brian-eno/)** · **[scott-draves/](scott-draves/)** — Generative-systems dream cluster;
+2006 Long Now evening; Electric Sheep on every surface.
+
+**[drew-carey/](drew-carey/)** — Dream guest invitation portrayal (Whose Line + Price Is Right + Sims NPC).
+
+**[heather-alvey/](heather-alvey/)** · **[steve-alvey/](steve-alvey/)** — SimFreaks / SimSlice honored
+creators; front-row audience + catalog cross-links.
+
+**[phil-salvador/](phil-salvador/)** — VGHF / Obscuritory; SimRefinery recovery; librarian box seat.
+
+**[douglas-engelbart/](douglas-engelbart/)** · **[mark-weiser/](mark-weiser/)** · **[hugh-daniel/](hugh-daniel/)** —
+Memorial mode examples — represent and discuss; never voice the deceased.
+
+*Every other name:* list this folder or follow links from [`../repo-shows/`](../repo-shows/).
+
+---
 
 | Kind | Who | What it is |
 |------|-----|------------|

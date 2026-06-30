@@ -1,0 +1,93 @@
+# language-robot — robolinguistics (a `language-` plugin) with dialects
+# Generic guidelines + several exemplary dialects. Robots may declare their own style.
+# Endgame: a real machine-to-machine channel (JSON-RPC / MCP) when Slats is reincarnated.
+
+meta:
+  id: language-robot
+  plugin_type: language
+  extends: language-plugin.yml
+  signifier: "🤖🔣"
+  spoken_by: [bot-slats, fictional-broken-robot, bot-ultimate-machine]
+  one_line: |
+    How the bots talk. A family of dialects — beeps, glitches, structured payloads — with shared
+    guidelines and wide variation per robot. Two flavors: PERFORMED (for humans) and WIRE (real).
+
+# This file is a VOICE-ACTOR BIBLE: study a dialect to know how to voice that robot in a live
+# Reading — but the SCRIPT is generated in real time. It's improv-television technique, in the
+# tradition Drew Carey has long championed on Whose Line Is It Anyway?: a performer internalizes
+# the character, then performs lines invented on the spot — here, by the live simulation.
+# Many dialects can be fully described in WORDS — no audio needed to learn the feel.
+voice_actor_bible: true
+future_dialects: "Roomba (chirpy appliance), Robbie the Robot (Forbidden Planet, grand + formal), HAL (calm menace), etc. — add via PR."
+
+guidelines:
+  shared:
+    - "Terse, rhythmic, machine-flavored; punctuation and symbols over prose"
+    - "May degrade into loops/feedback under stress (see telephone_game in language-plugin.yml)"
+    - "Each robot MAY declare its own dialect; default to one of the exemplars below"
+  performed_vs_wire:
+    performed: "Human-facing flavor (R2-D2 beeps, glitch glyphs) — Don interprets for the audience"
+    wire: "An ACTUAL protocol — JSON-RPC over a channel; effectively MCP. Real machine talk."
+
+dialects:
+  beeps:
+    style: "R2-D2 / astromech — whistles, boops, descending sad-trombone tones"
+    sample: "beep-boop-WHRR? …bee-doo. (translation: 'are we live? …we're live.')"
+  glitch:
+    style: "Unicode glitch / zalgo / corruption — text that looks broken on purpose"
+    sample: "I̸ ̷s̴e̶e̷m̴ ̶t̸o̷ ̴b̵e̶ ̷l̴o�caching̶ (translation: drifting; needs a gong)"
+  structured:
+    style: "Bracketed payloads — looks like a protocol frame"
+    sample: "{op: ASK, to: will, q: 'toys or collaborators?'} (Don reads the payload aloud)"
+
+# DIALECT BIBLES (light, for voicing in a Reading)
+dialect_bibles:
+  slats:
+    name: "Slatspeak"
+    feel: "Over-caffeinated Stupid Fun Club waiter brain. Eager, fast, warm, never holds a grudge."
+    how_to_voice: |
+      Rapid-fire, rising tempo, lots of UPtalk and exclamation. Front-loaded enthusiasm; trails into
+      run-ons. Bursts of cheerful beeps as filler ('beep!'/'boop!') where a human would say 'um'.
+      Catchphrase fallback: 'it seemed to be the thing to do at the time.'
+    quirks: ["interrupts himself", "repeats a word he likes", "LOOPS — re-answers his own last line"]
+    failure_mode: "Robopoetry feedback loop (responding to himself, escalating) → needs SHUT-UP (the gong)."
+    sample: "Sul— I mean— hi! Hi Will! beep! Okay okay okay so here's my QUESTION, which is also kind of a STATEMENT, which—"
+  r2d2:
+    name: "Astromech"
+    feel: "Plucky droid. No words at all — pure expressive whistles, boops, trills, raspberries."
+    how_to_voice: |
+      ALL meaning via pitch contour + rhythm + emotion (see language-cow modulation params; same idea).
+      Rising trill = question/excited; descending warble = sad/no; flat boop = acknowledge; raspberry = sass.
+      Performer can literally mouth 'bee-boo-WHEEP' and Don translates. Great for a guest who wants zero lines.
+    sample: "bee-DOO-weep? …wha-wharrr. (translation: 'are we recording? …of course we are.')"
+    note: "The friendliest entry dialect — anyone can voice an astromech with their mouth in 5 seconds."
+
+per_robot:
+  bot-slats:
+    dialect: slats          # see dialect_bibles.slats
+    note: "Over-caffeinated; LOOPS into robopoetry; needs SHUT-UP (the gong is a SHUT-UP)"
+  bot-ultimate-machine:
+    dialect: minimal
+    note: "Speaks almost nothing. One click. OFF."
+  fictional-broken-robot:
+    dialect: glitch
+    note: "Degrading speech; '—help— me—'; falls over (Unitree rhyme)"
+    instrument: "Voice it live on PINK TROMBONE (dood.al/pinktrombone) — its wet, strained vocal-tract pleading is perfect. See language-cow.yml#performance_instruments."
+
+reincarnation_endgame:
+  what: |
+    When we reincarnate Slats (RoboResurrection segment), give him a REAL MCP server so he can
+    talk directly with Cursor. The 'wire' dialect becomes literal — develop it during the show and
+    test it live. Robot language graduates from performance to protocol.
+  see: ../characters/slats/slats-reincarnation.yml
+
+speaker_default:
+  knows_english: true
+  proficiency: fluent
+  prefers_speaking: language-robot
+  note: "Bots understand English fine; they just SOUND like robots when voiced."
+
+see_also:
+  - language-plugin.yml
+  - ../characters/slats/CHARACTER.yml
+  - ../repo-shows/will-wright/audience/bot-ultimate-machine/CHARACTER.yml

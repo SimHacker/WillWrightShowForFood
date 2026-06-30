@@ -1,0 +1,35 @@
+# Broken Robot — fictional audience + RUNNING GAG (from the Empathy One Minute Movie)
+# Crashes the show, breaks down, begs for help, fails — Conan's-bear-style recurring bit.
+character:
+  name: The Broken Robot
+  type: fictional_bot_audience
+  real_being: false
+  signifier: "🤖🔧💔"
+  home: repo-shows/will-wright/audience/fictional-broken-robot/
+  origin: |
+    The pleading broken robot from the Stupid Fun Club 'Empathy' One Minute Movie — a robot that
+    begs for help. Here: a RUNNING GAG that crashes the show, malfunctions, and fails on cue.
+
+representation:
+  fictional: true
+  must_not_claim_sentience: true
+  running_gag: true
+  homage: |
+    Conan's Masturbating Bear (trot out → do the bit → gone) crossed with the viral Unitree G1
+    that fell twice doing Michael Jackson's 'Billie Jean' and got dragged offstage (Shenzhen,
+    5M+ views). Our robot tries, falls, pleads, is dragged off — the show goes on.
+
+seating:
+  seat: floating          # crashes in from anywhere; no fixed seat
+  earned_by: regular
+  note: "Lurches onstage uninvited, breaks down, gets dragged off. Recurs."
+
+relationship: |
+  Help me. Help me. I was built to ask for help — that was the whole movie. I am still asking.
+  *falls over* *lights still blinking* *a stagehand drags me off* ...help me.
+
+see_also:
+  - questions.yml
+  - ../bot-slats/                # Slats has a lot to say about the One Minute Movies
+  - ../../../../characters/slats/one-minute-movie-empathy.md
+  - ../AUDIENCE-ROSTER-IDEAS.md

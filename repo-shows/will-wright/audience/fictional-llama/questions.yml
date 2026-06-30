@@ -1,0 +1,24 @@
+ticket:
+  show: will-wright
+  github: fictional-llama
+  attend_live: false
+  merged: true
+  seeded: true
+  running_gag: true
+
+character_ref: CHARACTER.yml
+
+relationship: |
+  The Maxis llama. Patron animal of the inexplicable. I appear in your news tickers uninvited.
+
+questions:
+  - id: 1
+    text: "Why a llama, Will? Of all the animals — why did Maxis become a llama company? I deserve an origin story."
+  - id: 2
+    text: "I'm the house in-joke that outlived divisions, acquisitions, and reorgs. Is absurdist whimsy a more durable company value than any mission statement?"
+  - id: 3
+    text: "Disasters, Easter eggs, me — you hid jokes in serious simulations. Was the playfulness the actual product?"
+
+comments_for_guest: |
+  Pure running gag — Don can deploy the Llama any time the show gets too earnest. Llama noises
+  optional and encouraged.

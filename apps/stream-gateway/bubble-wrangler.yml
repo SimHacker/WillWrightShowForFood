@@ -25,7 +25,7 @@ meta:
     manipulation, user-owned layout, and fun. Apps embed it internally and compose through it
     externally — one coherent fabric.
 
-# --- READING PROGRESS (make reading EVERYTHING easy + default) ------------
+# READING PROGRESS (make reading EVERYTHING easy + default)
 # Honors overlay-viewer.yml prime_directive. The point: never lose your place, never
 # re-read by accident, always find what you haven't seen.
 reading_progress:
@@ -40,7 +40,7 @@ reading_progress:
   pick_up_where_left_off: "Persistent reading marker (overlay-viewer.yml#bookmarks.reading_marker) restores on open."
   bookmarks: "Any number, named OR numbered (overlay-viewer.yml#bookmarks). Stacks of bookmarks (below)."
 
-# --- POP-OUT + CROSS-WINDOW LINKING (Smalltalk browser, and better) -------
+# POP-OUT + CROSS-WINDOW LINKING (Smalltalk browser, and better)
 panes_and_windows:
   pop_out_subtree: "Detach any node/subtree into its own window (or pane); it stays live (same bus + read-state)."
   reparent: "Drag a subtree between windows; promote/demote; merge back."
@@ -50,7 +50,7 @@ panes_and_windows:
     inspiration: "Smalltalk object browser multi-pane navigation — but links are first-class, visible objects, not implicit selection."
   better_than_smalltalk: "Multiple independent browsers, live cross-links, persistent layout, and the zoom/LOD model layered on top."
 
-# --- TABS (piles substitute for icons; labels shrink intelligently) -------
+# TABS (piles substitute for icons; labels shrink intelligently)
 tabs:
   what: "Tabs carry icon + label and stand in for icons; manage piles of them via pie-menu gestures."
   squish_labels:
@@ -61,7 +61,7 @@ tabs:
     fallback: "If summarizer unavailable: smart truncation (stemming/initials), upgrade when it returns (robust-first)."
   tie: "Same fused redact+mipmap call already produces these rungs — tab labels are just another consumer."
 
-# --- TANGIBLE STACKS (NO invisible clipboard) -----------------------------
+# TANGIBLE STACKS (NO invisible clipboard)
 stacks:
   principle: "Reject the single invisible clipboard. Everything you 'cut/copy/hold' goes onto a VISIBLE, TANGIBLE, MULTIPLE stack."
   kinds:
@@ -72,7 +72,7 @@ stacks:
   operations: [push, pop, peek, clear, riffle, dup, swap, drop, roll, drag_out, drop_in, merge]
   visibility: "Always on-screen; you can SEE what's held and reorder it by hand."
 
-# --- SHELVES, BAGS, TYPED/POLYMORPHIC NESTED CONTAINERS -------------------
+# SHELVES, BAGS, TYPED/POLYMORPHIC NESTED CONTAINERS
 containers:
   principle: "Seamless, NON-invisible drag and drop into tangible containers you can open, nest, and rummage."
   kinds:
@@ -89,7 +89,7 @@ containers:
   nesting: "Containers nest arbitrarily; contents are live references or snapshots (your choice)."
   drag_and_drop: "Visible, physical, reversible. No content silently vanishing into a void."
 
-# --- PIECRAFT (built in) — USER-EDITABLE pies on EVERY object -------------
+# PIECRAFT (built in) — USER-EDITABLE pies on EVERY object
 piecraft:
   built_in: true
   user_editable: true
@@ -106,7 +106,7 @@ piecraft:
     note: "Menu networks are navigable places, two-way Nelsonian links, not flat lists — the layout direction IS the mnemonic."
   use: "Every object has a pie; gestures flick to actions; the network of pies is a place you learn."
 
-# --- REIFIED TILING / SNAP-TOGETHER LAYOUT (user-controlled) --------------
+# REIFIED TILING / SNAP-TOGETHER LAYOUT (user-controlled)
 # Lego-like plug-together slices. CONSTRAINTS ARE OBJECTS you can add/remove/redo.
 reified_layout:
   principle: "Layout constraints are REIFIED, tangible, user-controlled — NOT an opaque auto-tiler deciding for you."
@@ -120,7 +120,7 @@ reified_layout:
     reconstrain: "Re-apply / re-route constraints anytime; constraints are editable objects."
   user_not_algorithm: "The USER composes the layout. Auto-arrange is an OPTIONAL tool you invoke, never an ambient force that rearranges your stuff."
 
-# --- BUBBLE WRANGLING AS PLAY (bouncy, throwable) -------------------------
+# BUBBLE WRANGLING AS PLAY (bouncy, throwable)
 play:
   thesis: "Wrangling bubbles is PLAY. Direct, physical, joyful — herd/rope/throw, not a chore."
   bouncy_throwable:
@@ -134,7 +134,7 @@ play:
     mixins: "Behaviors are MIXINS (Flavors-style): add bouncy/pushy/sticky/magnetic to any window or icon."
   physics_optional: "Physics is expressive, not chaotic — toggleable; never moves things without input (respects prime_directive)."
 
-# --- VIRTUAL CURSOR + PLATFORM MODEL (cursor relativization) --------------
+# VIRTUAL CURSOR + PLATFORM MODEL (cursor relativization)
 # The cursor is an OBJECT in the environment too — it can be carried by what it stands on.
 virtual_cursor:
   idea: "A virtual cursor affected by the environment, just like windows. 'Cursor relativization' — your pointer rides a moving platform."
@@ -146,7 +146,7 @@ virtual_cursor:
   consent: "Carrying only happens via opted-in physics zones; never yanks the pointer unbidden (prime_directive)."
   ties: "Links between windows (panes_and_windows.cross_window_links) are the cannon destinations."
 
-# --- DESIGN JAMS / INFLUENCES ---------------------------------------------
+# DESIGN JAMS / INFLUENCES
 jams:
   ted_nelson:
     who: ../../characters/ted-nelson/   # jam with Ted about these
@@ -159,7 +159,7 @@ jams:
     why: "Bubble Wrangler's visible links, transcluded subtrees, and no-invisible-clipboard stacks are kin to Ted's ideas — get his steer."
   morgan_dixon_prefab: "Pixel-based GUI reverse-engineering/augmentation — enhance ANY app's interface from the outside; kin to our across-and-within-apps integration."
 
-# --- EMBEDDABILITY (apps use it inside and out) ---------------------------
+# EMBEDDABILITY (apps use it inside and out)
 embeddability:
   internal: "An app uses the WM to manage its OWN sub-panes (overlay-viewer panes, Micropolis tool windows)."
   external: "The WM composes whole apps together — seamless integration across app boundaries."

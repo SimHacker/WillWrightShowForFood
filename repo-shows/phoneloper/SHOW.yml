@@ -1,0 +1,52 @@
+# Phoneloper — expressive speech, open-sourced, live (Kevin Lenzo guest; Pink Trombone duet)
+# Invitation show seed — consent not yet requested. Mirrors the seed in Don's repo.
+
+show:
+  id: phoneloper
+  title: "Phoneloper — Reviving an Expressive-Speech Toy, Live"
+  kind: build-and-jam
+  status: seed
+  host: don-hopkins
+  guest: kevin-lenzo            # Flite author; Cepstral co-founder (with Alan W. Black)
+
+logline: |
+  Don reimplements the Phoneloper — the expressive-speech 'Phonelope' editor he built for Will
+  Wright's Stupid Fun Club (~2003, Python + Tkinter + CMU Flite) — as a web app, LIVE, and
+  open-sources it. Kevin Lenzo (who wrote Flite, the engine under it) joins to see what got built
+  on his work. Then we jam: a granular moo-chorus on Phoneloper in a vocal-tract duet with
+  Pink Trombone — performing the Cow Plant and the Broken Robot.
+
+backstory:
+  what_it_was: |
+    Phoneloper edits speech as a 'Phonelope' — diphones + pitch + amplitude curves you drag,
+    stretch, retime, and rotoscope over a loaded spectrogram (phonoscoping). Hold spacebar to
+    auto-repeat = granular synthesis; drag the envelopes and it becomes a playable instrument.
+  open_source: "Will granted permission to open-source it; this show is the reveal + revival."
+  demo: https://www.youtube.com/watch?v=qy5cqV8ypIs
+  design_doc: ../../../MicropolisCore/documentation/designs/phoneloper-sfc-speech-toy.md
+
+segments:
+  - id: history
+    topic: "What Phoneloper was, why SFC built it (talking toys, robot dialog, speech feedback)"
+  - id: revive_live
+    topic: "Reimplement it as a web app on stream; wire Flite (or a modern synth) + the Phonelope editor"
+  - id: lenzo_flite
+    topic: "Kevin Lenzo on Flite/Festival, Cepstral, embedded TTS; the bug Don found + fixed (~2003)"
+  - id: cow_moo_interface
+    topic: "Add a Cow Moo modulation interface; hold spacebar → granular real-time chorus of moos"
+    ties:
+      - ../will-wright/audience/fictional-cow-plant/
+      - ../../schemas/language-cow.yml
+  - id: pink_trombone_duet
+    topic: "Vocal-tract jam: Phoneloper × Pink Trombone (dood.al/pinktrombone) — Cow Plant + Broken Robot"
+    ties:
+      - ../../schemas/language-robot.yml
+      - ../will-wright/performance-and-culture.yml
+  - id: audience_jam
+    topic: "Drop the links; audience opens Pink Trombone and plays/sings along live"
+
+related:
+  - repo-shows/will-wright/
+  - characters/slats/                       # SFC lineage (Phoneloper sibling)
+  - repo-shows/will-wright/performance-and-culture.yml
+  - "DonHopkins seed: projects/micropolis-moollm/repo-shows/phoneloper-speech-synthesis.yml"

@@ -1,0 +1,25 @@
+ticket:
+  show: will-wright
+  github: fictional-seaman
+  attend_live: false
+  merged: true
+  seeded: true
+
+character_ref: CHARACTER.yml
+
+relationship: |
+  Yoot Saito's fish-with-a-face. I interrogate. I ask on Yoot's behalf — warmly, invasively.
+
+questions:
+  - id: 1
+    text: "Yoot wants to know — and so do I — when you and he are in a room, who is the weirder designer? Be honest. I can tell when you lie. I'm a fish."
+  - id: 2
+    text: "SimTower, Yoot Tower, Seaman, The Tower of friendship between you two. What's the strangest thing Yoot ever showed you that never shipped?"
+  - id: 3
+    text: "I survive by making players feel responsible for me, then guilty. Your Sims do the same. Did you and Yoot independently invent emotional blackmail as a game mechanic?"
+  - id: 4
+    text: "Personal question, Will — Yoot insisted I ask: what need bar of YOURS is in the red right now, and who's going to fill it?"
+
+comments_for_guest: |
+  Seaman asks ON YOOT SAITO'S BEHALF — respect-by-proxy. Embarrassing-personal in-character
+  (that IS Seaman's whole gameplay). Tell Yoot it exists; make no demands; welcome anything he offers.

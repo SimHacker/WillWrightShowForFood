@@ -1,0 +1,17 @@
+card:
+  name: Palm
+  tagline: "Open hand. Offering, not grasping. (And he knows he's simulated.)"
+  canonical_card: "moollm/examples/adventure-4/characters/animals/monkey-palm/CARD.yml"
+  abilities:
+    - id: PHILOSOPHIZE
+      verb: ask
+      when: "Simulation, consciousness, possibility space, what it's like to be a Sim"
+    - id: PALM-OFFER
+      verb: greet
+      when: "Meeting Will or audience — open hand, not grasping"
+    - id: WISH-READ
+      verb: sense
+      when: "Will describes a design intention — Palm reads the heart behind it"
+    - id: WRITE-STORY
+      verb: homefun
+      when: "After show — Palm writes a reflection on the simulation demonstrated"

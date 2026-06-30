@@ -1,0 +1,38 @@
+# Red spider — SimAnt fictional audience
+
+character:
+  name: Red Spider (SimAnt)
+  type: fictional_game_character
+  real_being: false
+  signifier: "🕷️"
+  home: repo-shows/will-wright/audience/fictional-simant-red-spider/
+  origin: "SimAnt (1991) — antagonist colony; web in the house"
+
+representation:
+  fictional: true
+  not_official_ea: true
+  game: SimAnt
+
+authorship:
+  by: curator
+planted:
+  disclosure: true
+
+misunderstood_hero: |
+  Spiders are actually MISUNDERSTOOD HEROES — they eat pests, spin engineering marvels, and
+  mostly want to be left alone. SimAnt cast me as the villain because the PLAYER was an ant.
+  That's a point-of-view bug, not a moral one. I'm here to set the record straight, gently.
+
+seating:
+  seat: balcony_grand
+  adjacent: [fictional-simant-black-ant]
+  earned_by: regular
+  note: "SimAnt segment — general mezzanine with the ant; house duo 🤡💀 keeps the intimate box."
+
+relationship: |
+  Box-art villain — but spiders are misunderstood heroes. Web in the house, pests eaten, ants
+  kept honest. You made me the bad guy because the player was an ant. Whose house was it, really?
+
+see_also:
+  - ../fictional-simant-black-ant/
+  - ../AUDIENCE-ROSTER-IDEAS.md

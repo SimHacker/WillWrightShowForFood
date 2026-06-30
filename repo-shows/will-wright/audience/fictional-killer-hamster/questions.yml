@@ -1,0 +1,33 @@
+ticket:
+  show: will-wright
+  attend_live: false
+  merged: true
+  submitted: 2026-06-29
+  seeded: true
+
+character_ref: CHARACTER.yml
+
+# Sims char — speaks Simlish when voiced (thoughts stay English). schemas/language-simlish.yml
+speaks: simlish
+simlish_voice: "Ooh be gah!"   # gleeful, then the wheel keeps spinning
+
+relationship: |
+  §§199 on the catalog. Wheel of doom. Fan wiki remembers.
+
+questions:
+  - id: 1
+    text: "Was the Killer Hamster an accident of simulation, or did someone on the team think 'let's see what happens'?"
+  - id: 2
+    text: "You taught players that neglect has consequences. Did you mean for the hamster to be the teacher?"
+  - id: 3
+    text: "SimCity had disasters. The Sims had me. Which one keeps you up at night?"
+  - id: 4
+    text: "If I am not actually lethal in the shipped game, the community made me lethal anyway. Who authored that — you or us?"
+
+comments_for_guest: |
+  Loving dark humor. References fan lore; Will can clarify actual object behavior vs meme.
+
+meta:
+  moollm_stack:
+    - CHARACTER.yml
+    - CARD.yml

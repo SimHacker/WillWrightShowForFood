@@ -1,0 +1,92 @@
+# language-cow — what the Cow Plant (and cows) speak (a `language-` plugin)
+# Pure MOOLLM tie-in comedy: one long MOO unpacks into a hilariously detailed translation.
+
+meta:
+  id: language-cow
+  plugin_type: language
+  extends: language-plugin.yml
+  signifier: "🐮"
+  spoken_by: [fictional-cow-plant]
+  one_line: "Moo. But, like, a really specific moo. Don translates the nuance at length."
+
+# A "mooanced" language: ONE phoneme (moo), INFINITE meaning, all carried by vocal modulation.
+# This section is a VOICE-ACTOR INSTRUCTION SHEET — read it to know how to voice a cow / Cow Plant
+# in a live Reading. The performer generates meaning by MODULATING a single sustained "moo".
+how_to_voice_it:
+  one_phoneme: "Everything is /muː/. You never say a word. You modulate the moo."
+  modulation_parameters:
+    pitch: "Fundamental frequency (high/low) + register (chest vs head). Rising = question; falling = statement/finality."
+    pitch_contour: "The melodic shape over the moo — rise, fall, rise-fall, scoop, plateau. This is your 'grammar'."
+    duration: "Length. A clipped 'moo.' is a word; a 14-second 'MOOoooOO' is a paragraph."
+    intensity: "Loudness / dynamics — pp (musing) → ff (alarm). Crescendo/decrescendo within one moo carries arc."
+    timbre: "Tone color — warm/round vs nasal/buzzy vs breathy. Sets mood and 'who's talking'."
+    vibrato: "Pitch waver — none = flat/deadpan; slow wide = emotional/plaintive; fast tight = anxious/excited."
+    timing: "Onset, sustain, release, and pauses. Hesitation ('...moo?') and stutter ('m-m-moo') are punctuation."
+    vowel_quality: "Subtle vowel shading (moo→maw→meh) at the edges — the only 'consonant-ish' nuance allowed."
+    glottal: "Creak/fry, breaks, and onset attacks (hard vs soft) — emphasis and emotional grit."
+  rule: |
+    Decode/encode meaning ONLY from these parameters — pitch, contour, duration, intensity, timbre,
+    vibrato, timing, vowel-shading, glottal attack. Notate a line as a contour if it helps the read.
+  notation_example: "moo↗?  (short, rising, soft) = a tentative question;  MOO↘‖ (long, loud, falling, full-stop) = a verdict."
+
+dense_to_verbose_example:
+  utterance: "MOOOoooOOoOOOooooOooOoOOoOoooOO!"   # long · loud · undulating · falling-to-rising tail
+  read_as: "long duration + high intensity + undulating contour + plaintive vibrato + unresolved rising tail"
+  don_translates_to: |
+    "The Cow Plant says: 'I lure with cake and swallow whole — I am the appetite at the bottom of
+     every simulation, the system that eats whatever you feed it, and I would like to gently point
+     out that you, Will, built hunger into your worlds on purpose, so really, who is feeding whom?'"
+  joke: "Four seconds of moo, four sentences of Don. The asymmetry is the bit."
+
+reading_framing: |
+  In a live Reading, a guest or audience member VOICES the cow — through a video face-hole or
+  off-screen as a vocal puppet. They perform the modulated moo; Don performs the English unpacking.
+  (See performance-and-culture.yml#voice_puppetry — also the Godzilla-call-in 'YAAARR!' lineage.)
+
+# PERFORMANCE INSTRUMENTS — don't just moo with your mouth; PLAY the moo
+# A moo is all vocal-tract modulation, so vocal-tract INSTRUMENTS are the perfect way to perform it.
+performance_instruments:
+  pink_trombone:
+    what: "Neil Thapen's interactive vocal-tract synth — drag tongue/lips/constrictions to shape live speech-like sound."
+    url: https://dood.al/pinktrombone/
+    why_perfect: |
+      A moo is pure vocal-tract modulation (pitch, constriction, vowel shading) — exactly Pink
+      Trombone's controls. Play the Cow Plant's moo on it live: a GREAT GAG. Invite people on to
+      'play Cow Plant' on Pink Trombone, or just show the raw Pink Trombone UI with a link so the
+      audience can SING ALONG / jam themselves — watch a master 'Pink Trombone musician' perform
+      YAML Jazz with their mouth-on-a-slider.
+    cross_use:
+      broken_robot: "Pink Trombone also voices the Broken Robot's pleading '—help— me—' beautifully (see language-robot.yml)."
+      sing_along: "Drop the link in chat: anyone can open Pink Trombone and jam along with the Cow Plant live."
+  phoneloper:
+    what: "Don's Stupid Fun Club expressive-speech toy (~2003, Python+Tkinter+CMU Flite): edit speech as a 'Phonelope' — diphones + pitch + amplitude curves; drag/stretch/retime; add/remove control points; rotoscope pitch over a loaded spectrogram (phonoscoping)."
+    musical_instrument: |
+      The key move (in the demo): HOLD SPACEBAR to auto-repeat playback — granular synthesis. As it
+      loops, you DRAG the pitch and timing envelopes around in real time and it becomes an
+      instrument — a live 'chorus of demons.' In the demo Don plays the words 'dude' and 'fuck'
+      (and 'what's up duck', a Herbie Hancock lick on vowels) exactly this way.
+    moo_is_perfect: |
+      MOO is the ideal payload for this: a single sustained vowel-y phoneme is pure pitch/timing/
+      amplitude — so hold spacebar and drag to conjure a real-time CHORUS OF MOOS, granular-synth
+      style. The Cow Plant performs as a herd. This is the first Cow Moo modulation interface.
+    status: "Will granted permission to open-source it; Don plans to REIMPLEMENT it as a web app on a show, then add the Cow Moo modulation interface."
+    why_perfect: "Drag the pitch/amplitude/timing envelopes of a moo directly, spacebar-looping — articulatory YAML Jazz as a playable instrument."
+    refs:
+      - "https://www.youtube.com/watch?v=qy5cqV8ypIs — Phoneloper Demo (Don Hopkins, 2021): spacebar granular synthesis, pitch/timing dragging, phonoscoping ('dude'/'fuck'/'what's up duck')"
+      - "MicropolisCore/documentation/designs/phoneloper-sfc-speech-toy.md"
+      - "Repo Show seed: invite Kevin Lenzo (Flite author) — browser vocal-jam duet: Phoneloper × Pink Trombone"
+  the_bit: |
+    Build it ON a show: reimplement Phoneloper as a web app live, wire up the Cow Moo modulation
+    interface, hold spacebar for a granular real-time chorus of moos, then jam it against Pink
+    Trombone — a two-instrument vocal-tract duet performing the Cow Plant (and the Broken Robot).
+    Audience clicks a link and plays along.
+
+speaker_default:
+  speaks: language-cow
+  knows_english: false        # the Cow Plant only moos — forces Don to interpret (great comedy)
+  proficiency: none
+  note: "Edge case: a non-English speaker. Don MUST translate. Telephone-game risk if paired with Simlish."
+
+see_also:
+  - language-plugin.yml
+  - ../repo-shows/will-wright/audience/fictional-cow-plant/CHARACTER.yml

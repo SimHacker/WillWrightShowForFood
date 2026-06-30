@@ -1,0 +1,76 @@
+Macintosh HD:XmotiveHarness:src:Motive.c
+Tuesday, January 28, 1997 / 9:25 AM
+
+It Motive.c -WRW _ 1/23/97
+
+#include "“SRand.h"
+#include “utilities.h"
+
+void SimMotives(int count);
+void ChangeMotive(int motive, float value);
+void SimJob(int type);
+
+void AdjustMotives(int x, int y);
+
+void DrawMotiveSheet(void);
+
+void DrawMotive(int xpos, int ypos, int value);
+void InitMotives(void);
+
+float Motive[16] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+
+float oldMotive[16] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+
+int ClockH = 8, ClockM = 0;
+
+enum
+
+{
+mHappyLife =0,
+mHappyWeek =1,
+mHappyDay =2,
+mHappyNow =3,
+
+mPhysical=4,
+mEnergy =5,
+mComfort =6,
+mHunger =7,
+mHygiene =8,
+mBladder =9,
+mMental =10,
+mAlertness =11,
+mStress =12,
+mEnvironment=13,
+mSocial =14,
+
+mEntertained=15
+
+};
+
+#define DAYTICKS 720
+#define WEEKTICKS 5040
+
+void InitMotives(void)
+
+{
+
+int count;
+
+for (count = 0; count < 16; count++) {
+Motive[count] = 0;
+
+}
+
+Motive[mEnergy] = 70;
+
+Motive[mAlertness] = 20;
+
+Motive[mHunger] = -40;
+
+//
+
+// 1 tick = 2 minutes game time
+
+used for delta tests
+
+Page: 1

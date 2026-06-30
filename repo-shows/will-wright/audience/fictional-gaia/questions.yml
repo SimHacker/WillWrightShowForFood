@@ -1,0 +1,25 @@
+ticket:
+  show: will-wright
+  github: fictional-gaia
+  attend_live: false
+  merged: true
+  seeded: true
+
+character_ref: CHARACTER.yml
+
+relationship: |
+  SimEarth's living planet — the Gaia hypothesis you turned into a toy. Too complex, you said.
+
+questions:
+  - id: 1
+    text: "In your 1996 Stanford trio I was the 'too complex' one — SimEarth between SimAnt (too easy) and SimCity 2000 (just right). Was I too complex, or were players just not ready to think in geological time?"
+  - id: 2
+    text: "You let players BE me — steer a whole biosphere over eons. Did playing God of a planet make anyone gentler with the real one, or just better at optimizing it?"
+  - id: 3
+    text: "Even though the earth is our mother, we sure treat her like dirt. You simulated my feedback loops decades before the climate dashboards. Why didn't the simulation scare us straight?"
+  - id: 4
+    text: "Lovelock gave you the Gaia hypothesis to build me. What did building a planet teach you that building a city or a family didn't?"
+
+comments_for_guest: |
+  SimEarth deep cut — not every Maxis game needs a character, but Gaia earns it. Planetary
+  deadpan; tender + furious. The 'treat our mother like dirt' line is her signature.

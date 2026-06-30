@@ -1,0 +1,36 @@
+# Walter Bender — OLPC Stone Soup + open-sourcing SimCity
+
+*Show seed — constructionist education, Sugar, EA GPL negotiation.*
+
+## Why Walter
+
+- OLPC President (Software & Content) when **SimCity → Micropolis** was negotiated  
+- Offered **Eben Moglen** to help EA relicense under GPL  
+- Sugar stack (Python, Cairo, Pango, mesh, journaling) — Don's Dec 2006 roadmap partner  
+- Stone Soup / Constructionist learning — bridge to Papert memorial shows
+
+## Primary sources
+
+- [`will-wright/sources/2006-12-simcity-olpc-introducing-the-players/`](../../will-wright/sources/2006-12-simcity-olpc-introducing-the-players/article.md)
+- [`will-wright/sources/simcity-open-source-saga/`](../../will-wright/sources/simcity-open-source-saga/article.md)
+- [`characters/walter-bender/`](../../characters/walter-bender/)
+
+## Segments
+
+1. **Introducing the players** (Dec 2006) — Walter from Dubai: " slipped through the cracks"; Christmas call  
+2. **Trivial → blue sky** — Don's Sugar roadmap; Walter mulls on flight home  
+3. **Eben Moglen** — GPL relicensing; Chuck Normann at EA  
+4. **Jim Gettys / Cairo** — why Micropolis ended up on Cairo/GTK path  
+5. **Doreen Nelson** — curriculum guides + Design-Based Learning  
+6. **View Source** — scripting SimCity; Robot Odyssey / EToys vision → Micropolis Home 2026  
+7. **Cross-over:** Luc Barthelet (EA commercial) vs Walter (open education) — same year, different bets
+
+## Character
+
+[Walter Bender](../../characters/walter-bender/)
+
+## Related shows
+
+- [`remembering-the-constructionists.yml`](../remembering-the-constructionists.yml)
+- [`luc-barthelet-sims-online/`](../../luc-barthelet-sims-online/SHOW.yml)
+- [`walter-bender-olpc`](../REPO-SHOWS.yml) — seed registry

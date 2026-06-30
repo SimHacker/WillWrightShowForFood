@@ -32,13 +32,41 @@ The **show orchestrator** for Micropolis Class. Protocol for what you do *with* 
 
 ## Time-shifted participation
 
-All three clocks write into **one GitHub repo**:
+All clocks write into **one GitHub repo**:
 
-- **Before** — audience character PRs, question-ads, homefun branches
+- **Before announce** — show planted; sources gathered
+- **From announce** — HN pointer, issues, **TicketPRs** under `repo-shows/<show>/audience/<you>/` ([`process/ticket-pr.yml`](../../process/ticket-pr.yml))
+- **Before guest accepts** — TicketPRs still welcome; seed interest so invitees see real questions
 - **During** — Twitch chat; Don Philahue passes mic; brain-stream overlay ([`process/brain-stream.yml`](../../process/brain-stream.yml))
 - **After** — implementation PRs; transcript; harvest
 
-Miss live? Your character's pre-loaded question can still get asked; Q+A memorialized in repo + YouTube.
+### TicketPR — Master ⇒ PR
+
+**TicketPR** is a pun on **TicketMaster**: the toxic **Master** (monopoly gatekeeper) becomes **PR** (pull request — constructive, collaborative, reviewable, **free**). Same joke, opposite ethics.
+
+Your **free public ticket** to attend live — a PR in the **show's** `audience/` directory (not `characters/`):
+
+```
+repo-shows/<show>/audience/<github-username>/
+  questions.yml      # required — TicketPR
+  CHARACTER.yml      # recommended — MOOLLM body
+  CARD.yml           # recommended — ASK-QUESTION, WEAR-COSTUME, …
+  GLANCE.yml
+  SIMULATION.yml     # during/after show protocols
+  costume.yml        # optional
+```
+
+**MOOLLM tutorial:** [`repo-shows/_TEMPLATE/audience/CHARACTER.md`](../../repo-shows/_TEMPLATE/audience/CHARACTER.md) — learn character creation; participate in simulation during/after the show.
+
+**Low friction:** HN comments and GitHub issues. **High signal:** merged TicketPR + MOOLLM stack.
+
+Don **Philahue** harvests HN + issues + TicketPRs into the show directory as air approaches. Guests may review and merge PRs. Optional donations → recognition + call-on priority (never required).
+
+Live ritual: *YOUR NAME HERE: COME ON DOWN to the QUESTION IS RIGHT!*
+
+Template: [`repo-shows/_TEMPLATE/audience/`](../../repo-shows/_TEMPLATE/audience/) · Flagship: [`repo-shows/will-wright/audience/`](../../repo-shows/will-wright/audience/)
+
+Miss live? Your merged TicketPR question can still get asked; Q+A memorialized in repo + YouTube.
 
 ## Intro ritual
 
@@ -91,7 +119,7 @@ Slats judges flair; spreadsheet runs the piss test.
 - **Guests** — `characters/<id>/` — portrayal standards, public invitation
 - **Don Philahue** — MC orchestrator avatar
 - **Slats** — fictional judge + RoboResurrection quest
-- **Audience** — PR your own character; question-advertisements fire by relevance
+- **Audience** — TicketPR per show (`audience/<github-user>/questions.yml`); long-lived characters in `characters/`; question-advertisements fire by relevance
 
 Governed by [`schemas/portrayal-standards.yml`](../../schemas/portrayal-standards.yml).
 

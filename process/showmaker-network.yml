@@ -12,6 +12,23 @@ what: |
   A ShowMaker network — interrelated show proposals and finished shows as first-class
   objects. Not a linear playlist: a GRAPH you can browse, fork, and extend.
 
+show_repos:
+  model: |
+    A show repo owns a fan base and collaboration space — not one episode. Episodes live as
+    repo-shows/<slug>/ subdirectories (WillWrightShowForFood is the first example: will-wright,
+    drew-carey, phoneloper, …). When a guest wants their own show, spin off a **franchise**:
+    independent public repo + matching <Show>Private — DrewCareyRepoShow, BrianEnoRepoShow, etc.
+  franchises:
+    pattern: "<ShowName> (public) + <ShowName>Private (that show's guests)"
+    platform_lounge: "RepoShowPrivate — franchise holders coordinate across shows"
+    spin_off: |
+      Start as episode in an existing repo; migrate to own franchise when guest hosts their orbit.
+      Shared RepoShow infrastructure; owned fan base and private green room per franchise.
+  audience: |
+    TicketPR characters are per-episode under audience/<you>/; optional but encouraged as
+    subscribe + memorialize. Prototype in characters/; migrate between episodes by forking dirs.
+    MSPO layers — timestamped journals — enrich time-shifted playback for everyone.
+
 nodes:
   show_object:
     shape: "repo-shows/<name>/ — SHOW.yml + GLANCE + README + optional pitch video CARD"

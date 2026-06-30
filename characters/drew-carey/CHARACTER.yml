@@ -1,0 +1,66 @@
+# Drew Carey — DREAM-GUEST invitation portrayal. NOT Drew Carey.
+# Standards: ../../schemas/portrayal-standards.yml
+# Public-figure sketch, consent not yet requested. Represent + discuss only; no invented quotes.
+
+character:
+  id: drew-carey
+  name: "Drew Carey"
+  type: invitation
+  signifier: "🎟️"
+  status: living
+  field: "Comedian, improviser, game-show host — and a genuine part of The Sims' own mythology"
+  home: characters/drew-carey/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 1                  # dream guest, public-figure sketch
+  authored_by: don-hopkins
+  note: |
+    DREAM GUEST. Public-figure portrayal only — built from public record, no invented quotes.
+    Drew may shape, delay, decline, or delete anytime. We'd invite him simply as a guest with a
+    lot to say: someone woven into The Sims' story who also happens to be a master of exactly the
+    kind of live improvisation and audience participation this show is built on.
+  subject_rights: correction_edit_or_deletion_anytime
+  fan_content: "Affectionate, non-commercial fan portrayal; we respect all trademarks; no implied endorsement."
+
+invitation:
+  status: dream_guest
+  consent: not_yet_asked
+  show_seed: repo-shows/drew-carey/
+bio:
+  born: 1958
+  summary: |
+    **Drew Carey** is a comedian, actor, and game-show host. He starred in *The Drew Carey Show*,
+    hosts the U.S. version of the improv series **Whose Line Is It Anyway?**, and has hosted
+    **The Price Is Right** since 2007. He's a founder of the **Improv All-Stars** and has built
+    much of his career around **live improvisation and audience participation** — the same
+    instincts this show runs on.
+  part_of_sims_mythology: |
+    Drew is genuinely part of The Sims' story: he appeared as a special guest in **The Sims:
+    House Party** (2000) — arriving by limo when a party is going well — and a *Drew Carey Show*
+    episode famously played out inside The Sims (with Sims development by the original team; see
+    characters/eric-hedman/ for the House Party tie-in he animated). He's a real fan, and a
+    real fixture of Sims lore — which makes him a dream voice in an audience of Sims characters.
+  known_for:
+    - "Whose Line Is It Anyway? (US host) — improvisation"
+    - "The Price Is Right (host, 2007–) — audience participation, 'Come On Down'"
+    - "The Drew Carey Show — incl. an episode set inside The Sims"
+    - "Improv All-Stars; Green Screen Show; Improv-A-Ganza"
+    - "Cameo guest in The Sims: House Party (2000)"
+    - "Devoted supporter of public libraries"
+
+why_a_dream_guest:
+  sims_mythology: "He's literally in the game and the lore — the audience of Sims characters would light up."
+  improv: "He has spent decades hosting the best live improv on television — this show IS improvisation."
+  audience_participation: "The Price Is Right is the cathedral of audience participation; our TicketPR / 'Question Is Right' homage flows straight from that tradition."
+  libraries: "His long support of libraries rhymes with the show's preservation/open-source heart (Micropolis, the Video Game History Foundation)."
+  what_wed_talk_about: "Everything he's done with The Sims; the craft of improv; how live audiences become part of a show. We'd just love to hear him."
+
+sources:
+  wikipedia: https://en.wikipedia.org/wiki/Drew_Carey
+  notes: "House Party cameo + Drew Carey Show / Sims episode are documented; see Eric Hedman's recollections."
+
+see_also:
+  - ../../repo-shows/drew-carey/SHOW.yml
+  - ../eric-hedman/      # animated the House Party Drew Carey Show tie-in
+  - ../will-wright/

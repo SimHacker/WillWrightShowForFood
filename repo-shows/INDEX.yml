@@ -20,11 +20,15 @@ meta:
 shows:
   planted:
     will-wright/:              "★ FIRST PLANTED SHOW. Topic-less kickoff (Will IS the topic), centered on the 1996 Winograd video. Holds SHOW.yml + README + invitation.md (draft email) + episodes.yml + suggested-questions.yml + sources/ + the Flower-Child icon. Topical shows flow from it. (Seed: will-wright-series.yml.)"
+      will-wright/sims-team-steering-committee-playthrough/: "★ PLAY the Jun 1998 steering committee build live with Jamie/Bobo/Irk/Patrick/Don (+ Will?) — Edith + SimAntics reunion. Link IA; do not host binary."
+      luc-barthelet-sims-online/SHOW.yml: "Luc Barthelet — shipping The Sims, SimShow, The Sims Online → Micropolis Home / Exchange revival."
+      phil-salvador-simrefinery/SHOW.yml: "Phil Salvador — SimRefinery archivist; MBS history; finding + playing the lost refinery sim."
+      walter-bender-olpc/SHOW.yml: "Walter Bender — OLPC introducing-the-players; Sugar roadmap; Eben Moglen GPL; View Source."
     steve-wozniak/:            "Topic-less kickoff with Steve Wozniak. Apple II, 6502, open hardware, and browser-based emulators."
     terry-winograd/:           "★ FOREBEAR SHOW. Terry Winograd as the dragon with the treasure trove of videos (CS547 archive). Stands explicitly on Terry's shoulders + the shoulders of all his great guests (Will 1996, Gosling Java 1995, Joy Mountford 1994, Raskin, Norman, etc.). Archive recovery, modern runnable seeds, Micropolis Class continuation, Connections series spine. (Pie menus = Don's own thread, not Joy Mountford's — corrected.)"
   seeds:
     group:
-      building-the-sims.yml:    "The Sims team reunion: Jamie Doornbos, Eric Bowman, Patrick Barrett, Don (programmers) + Jim Mackraz (manager) + Will. Designers Chris/Claire may join."
+      building-the-sims.yml:    "The Sims team reunion: Jamie Doornbos, Eric Bowman, Patrick Barrett, Don (programmers) + Jim Mackraz (manager) + Will. Designers Chris/Claire may join. Flagship episode: will-wright/sims-team-steering-committee-playthrough/ (PLAY the 1998 build)."
       music-and-theory.yml:     "David Levitt + Jerry Martin — music and theory."
       will-and-yoot.yml:        "Will Wright + Yoot Saito — whatever they want."
       ben-and-heinz-pie-menus.yml:  "Ben Shneiderman + Heinz U. Lemke — pie menus, HCI, history (1969 PIXIE → CHI '88 → now)."
@@ -59,7 +63,7 @@ shows:
       ben-cerveny: "Ben Cerveny — Game Neverending/Flickr, Stamen maps, Public Code, civic DPI, speculative design. Early interview; public code meets Repo Show / PBD / MOOLLM play-lift-learn."
       jens-monig: "Jens Mönig — Snap! (BYOB) architect. Solo on integrating Micropolis City with Snap!, Snap! internals + the Y combinator, schemas for Snap! (Don's Barcelona talk), and distributed messaging/dataflow/actor systems in Snap!. (Joint headline: snap-logo-brian-jens.yml.)"
       brian-harvey: "Brian Harvey — UC Berkeley CS educator; Logo, Simply Scheme, CS Logo Style, Snap!, BJC. Solo on his books + lifelong Logo work; joint headline with Jens (snap-logo-brian-jens.yml)."
-      thomas-cherryhomes: "Thomas Cherryhomes (@tschak) — FujiNet (putting the internet on retro machines), IRATA.ONLINE/PLATO, 'Bus-over-IP', the Game Lobby. Repo-native + a real-hardware/network path for the Apple ][ stack + character bridges. 'Argue to gain insight.'"
+      thomas-cherryhomes/: "Thomas Cherryhomes (@tschak) — FujiNet (putting the internet on retro machines), IRATA.ONLINE/PLATO, 'Bus-over-IP', fish/TNFS, Fujisan+FujiNet-PC, the Game Lobby. Repo-native + real-hardware/network path for Apple ][ stack + Lars Brinkhoff pair. Holds SHOW.yml + README + ideas.md. 'Argue to gain insight.'"
       terry-winograd: "Terry Winograd — The forebear. The dragon with the treasure trove (CS547 archive). Standing on his shoulders + the shoulders of Will Wright, James Gosling, Joy Mountford, and all the other guests. Archive as curriculum and series material."
       ted-selker-input-languages.yml: "Ted Selker — TrackPoint, gesture languages, NPUC (+ the IBM-Burger/SunBurger story). Input as little languages."
       brad-myers-garnet-vpl.yml: "Brad Myers — Garnet lab, All the Widgets, Pick Click Flick, Watch What I Do/PBD in the LLM era, VPL taxonomy, C32, 05-640 guest-lecture series. Don worked there ~1992–93 (GLASS). Includes Micropolis Class exercises for students/builders."

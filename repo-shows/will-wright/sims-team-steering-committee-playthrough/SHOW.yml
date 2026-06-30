@@ -1,0 +1,63 @@
+# SHOW SEED — Sims team reunion: PLAY the steering committee
+#
+# Don's 2019 YouTube narration + live run of the Jun 4 1998 build with engine/tools team.
+# Do NOT host the binary — link archive.org; play on-air from legally obtained copy.
+
+show:
+  id: sims-team-steering-committee-playthrough
+  title: "WOW — The Sims Steering Committee, Live with the Team"
+  type: group
+  host: Don Hopkins
+  guests:
+    - Jamie Doornbos
+    - Eric Bowman
+    - Patrick Barrett
+    - Eric Hedman
+    - Jim Mackraz
+    - Will Wright
+  topic: |
+    Play the June 4 1998 steering committee build on stream — Edith, SimAntics, pie menus,
+    scenario system, Bobo's undo — while the people who built it react. Compare to the
+    Jan 1999 alpha when available. The Sims post-mortem the 1996 Winograd talk seeded.
+  status: seed
+  consent: not_yet_asked
+
+parent_show: ../../REPO-SHOWS.yml#building-the-sims.yml
+
+sources:
+  don_narrated_video: https://www.youtube.com/watch?v=zC52jE60KjY
+  readme: ../sources/1998-06-04-sims-steering-committee-demo/README.md
+  winograd_centerpiece: ../sources/1996-04-26-winograd-interfacing-to-microworlds/
+
+find_build_do_not_host:
+  internet_archive: https://archive.org/details/the-sims-steering-committee
+  tcrf: https://tcrf.net/Proto:The_Sims_(Windows)/The_Sims_Steering_Committee
+  run_notes: |
+    Extract locally; shortcut to DATA/Sims.exe with -w, 16-bit color, admin.
+
+compare_build:
+  jan_1999_alpha: https://hiddenpalace.org/The_Sims_(Jan_6,_1999_prototype)
+  note: "Public Oct 2025 — scenario vestiges vs sandbox pivot"
+
+segments:
+  - id: cold_open
+    beat: "Replay 30s of Don's YouTube — then 'let's run it live'"
+  - id: edith_aquarium
+    beat: "Trace feed-fish SimAntics — Jamie narrates"
+  - id: scenario_vs_sandbox
+    beat: "Level 0-4 scenarios — Will on what shipped vs dropped"
+  - id: pie_menus_bobo_undo
+    beat: "Don on pie menus; Bobo on infinite undo"
+  - id: archie_bunker_moment
+    beat: "Content sensibilities — tie to wedding playset inclusion thread"
+  - id: alpha_compare
+    beat: "Optional: cut to Jan 1999 proto — plumb bob arrives?"
+
+ties_to:
+  - ../sources/1998-06-04-sims-steering-committee-demo/
+  - ../catalogs/simprov/
+  - ../../characters/jamie-doornbos/
+  - ../../characters/eric-bowman/
+  - ../../characters/patrick-barrett/
+  - ../../characters/eric-hedman/
+  - ../../characters/jim-mackraz/

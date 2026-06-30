@@ -1,0 +1,64 @@
+Macintosh HD:XmotiveHarness:src:Motive.c
+Tuesday, January 28, 1997 / 9:25 AM
+
+}
+
+// hygiene
+if (Motive[mAlertness] > 0) Motive[mHygiene] -= .3;
+else Motive[mHygiene] -= .1;
+if (Motive[mHygiene] < -97) { // hit limit, bath
+
+AlertCancel("\pYou smell very bad, mandatory bath");
+Motive[mHygiene] = 80;
+
+}
+// bladder
+if (Motive[mAlertness] > 0) Motive[mBladder] -= .4; // bladder fills faster while awake
+else Motive[mBladder] -= .2;
+if (Motive[mHunger] > oldMotive[mHunger]) { /! food eaten goes into bladder
+tem = Motive[mHunger] - oldMotive[mHunger];
+Motive[mBladder] -= tem / 4;
+}
+if (Motive[mBladder] < -97) { // hit limit, gotta go
+
+if (Motive[mAlertness] < 0)
+AlertCancel("\pYou have wet your bed");
+
+else
+AlertCancel("\pYou have soiled the carpet");
+
+Motive[mBladder] = 90;
+}
+
+// alertness
+if (Motive[mAlertness] > 0) tem = (100 - Motive[mAlertness]) / 50; // max delta at zero
+
+else tem = (Motive[mAlertness] + 100) / 50;
+
+if (Motive[mEnergy] > 0)
+if (Motive[mAlertness] > 0)
+Motive[mAlertness] += (Motive[mEnergy] / 100) * tem;
+else
+Motive[mAlertness] += (Motive{mEnergy] / 100);
+else
+if (Motive[mAlertness] > 0)
+Motive[mAlertness] += (Motive[mEnergy] / 100);
+else
+Motive[mAlertness] += (Motive[mEnergy] / 100) * tem;
+
+Motive[mAlertness] += (Motive[mEntertained] / 300) * tem;
+
+if (Motive[mBladder] < -50)
+Motive[mAlertness] -= (Motive[mBladder] / 100) * tem;
+
+// stress
+
+Motive[mStress] += Motive[mComfort] / 10; /} max -10
+Motive[mStress] += Motive[mEntertained] / 10; // max -10
+Motive[mStress] += Motive[mEnvironment] / 15; // max -7
+Motive[mStress] += Motive[mSocial] / 20; /} max -5
+
+if (Motive[mAlertness] < 0) // cut stress while asleep
+Motive[mStress] = Motive[mStress] / 3;
+
+Page: 3

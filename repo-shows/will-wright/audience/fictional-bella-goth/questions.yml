@@ -1,0 +1,45 @@
+ticket:
+  show: will-wright
+  github: fictional-bella-goth
+  attend_live: false
+  merged: true
+  submitted: 2026-06-29
+  seeded: true
+
+character_ref: CHARACTER.yml
+
+relationship: |
+  Missing wife on the community loading screen. Mortimer's mac and cheese gets cold.
+  Cassandra can't get a prom date because everyone's asking where I went.
+
+# Questions are ENGLISH — Bella's thoughts / direct perception (readable thought bubbles).
+# She SPEAKS Simlish: Don Philahue renders her words aloud in Simlish + English on the show.
+# simlish_voice = one signature spoken phrase for Don to introduce her with. See schemas/language-simlish.yml.
+speaks: simlish
+simlish_voice: "Sul sul... ooh be gah."   # warm hello that curdles into something ominous
+
+questions:
+  - id: 1
+    text: "You put a MISSING poster of me on the box art. Was that a promise or a threat?"
+  - id: 2
+    text: "Strangetown, aliens, the cow plant — pick one and tell Mortimer where I am. He's in Pleasantview making grilled cheese."
+  - id: 3
+    text: "Cassandra rolled want: 'Find out what happened to Mom.' You gave her the want. Where's the object?"
+  - id: 4
+    text: "Did you design families to feel real, or did we just become real enough to notice when you abandoned the plot?"
+
+comments_for_guest: |
+  Loving but pointed. Bella speaks as community lore — not EA canon. Will may answer
+  design intent, not resolve fan mysteries.
+  SIMLISH (live): questions stay English (her thoughts); when DON PHILAHUE — the AI orchestrator
+  host (NOT Don Hopkins) — VOICES them, render into Simlish + English. Don Philahue may open in
+  Simlish ("Sul sul, Bella!"); Will may reply in Simlish and Don Philahue translates. Use
+  sparingly — greeting + one exclamation, not whole questions. schemas/language-simlish.yml.
+  NOTE: every "Don Philahue ..." line in audience files is a behavioral instruction that gets
+  aggregated INTO his character constitution (characters/don-philahue/) — programming how he
+  orchestrates us live. "Don" here = Don Philahue (🎙️ orchestrator), never Don Hopkins (🙋).
+
+meta:
+  moollm_stack:
+    - CHARACTER.yml
+    - CARD.yml

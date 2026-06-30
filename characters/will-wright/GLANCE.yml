@@ -1,0 +1,25 @@
+# WILL WRIGHT — GLANCE (flagship guest portrayal)
+# up: ../GLANCE.yml | facade: README.md | machine: CHARACTER.yml · CARD.yml
+
+what: |
+  Public invitation portrayal — not Will Wright. Richest CARD in WWSFF; alias Klapaucius;
+  1996 centerpiece orbit; media galleries; subject may edit anytime.
+
+read_order:
+  - README.md
+  - invitation.md
+  - CARD.md
+  - media/README.md
+  - ideas.md
+
+anchors:
+  centerpiece: ../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
+  show: ../../repo-shows/will-wright/
+  browse: ../../repo-shows/will-wright/BROWSE.md
+  sidekick: ../slats/
+
+see_also:
+  - { path: ../../process/entryways/guest-will.md, why: "Ordered guest playlist" }
+  - { path: ../../repo-shows/will-wright/catalogs/, why: "UCC brands fed by his lineage" }
+  - { path: ../terry-winograd/, why: "CS547 forebear archive" }
+  - { path: ../chaim-gingold/CARD.yml, why: "SimCity reverse diagrams" }

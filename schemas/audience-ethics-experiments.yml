@@ -1,0 +1,131 @@
+# Audience ethics — experimental zones (open discussion)
+# Default rules: fictional-audience.yml · Memorial: portrayal-standards.yml
+# Will Wright kickoff — cross-game virtual children + optional family/historical tiers
+
+meta:
+  id: audience-ethics-experiments
+  version: 0.1
+  status: open_for_discussion
+  guest_veto: "Will or host may forbid any tier or character — always"
+
+spectrum:
+  green:
+    label: "Clearly fictional game characters"
+    types: [fictional_game_character, fictional_bot_audience, fictional_tool_persona]
+    examples: [bella-goth, simant-ant, spore-creature, simcity-mayor]
+    rule: Labeled fiction; fan/creator voice; not official EA dialogue
+
+  green_plus_consented_real:
+    label: "Real person, explicit consent, SELF-AUTHORED (gold standard)"
+    type: real_being
+    rule: |
+      A living person who has consented to be in the audience and writes their OWN questions.
+      The safest, richest case — no impersonation, the actual human speaks for themselves.
+      Curators scaffold and link only; never fabricate the person's questions.
+    must:
+      - consent.explicit: true
+      - authorship.by: self OR curator_draft_for_subject_review (with consent)
+      - drafts_labeled_not_quotes
+      - cite_public_spirit_source_per_drafted_question
+      - heed_subject_warnings (e.g. Bartle: "quotes can be taken out of context")
+      - subject_has_final_voice (edit / approve / replace)
+    consent_levels:
+      simulate_only: "Be in audience; no questions drafted in their voice"
+      draft_for_curation: |
+        Subject permits curator to draft example questions IN THEIR SPIRIT (not quotes) as
+        templates they will edit/approve. Each draft cites a public spirit_source. Default to
+        the most conservative level the subject actually granted.
+      self_authored: "Subject writes their own"
+    examples: [richard-bartle]
+    note: |
+      Richard Bartle — MUD1 co-creator — consented to simulation AND to spirit-of-his-work
+      DRAFT questions for him to curate (his explicit "field day"). questions.yml is labeled
+      as curator drafts pending his review; he may attend live, optionally.
+
+  green_self_aware_ai:
+    label: "Self-aware fictional AI character (our brand)"
+    type: fictional_ai_character
+    rule: |
+      A fictional character, orchestrated by an LLM, who KNOWS they are simulated and reflects
+      on it. Not claiming biological sentience — claiming navigational consciousness, openly.
+      ON BRAND for a Will Wright show: a simulated being asking the simulator about simulation.
+    must:
+      - representation.self_aware_ai: true
+      - representation.fictional: true
+      - link_prior_writing_before_show
+      - source_consent (creator's character, used with blessing)
+    examples: [palm]
+    note: |
+      Palm — the freed Monkey's Paw — is MOOLLM's canonical incarnation example. Philosopher
+      and writer, not a mascot. Link palm-on-being-palm.md before the show so Will can read it.
+
+  yellow_guest_authored:
+    label: "Guest-primed personal / family memorial voice"
+    type: family_memorial_audience
+    rule: |
+      ONLY when the **guest** (Will) or explicit family consent authors the TicketPR.
+      Framed as memorial family voice — not biography, not impersonation of strangers.
+      Deceased **family** may ask personal childhood questions Will chose to surface.
+      Living family requires their consent.
+    must:
+      - authorship.by: guest
+      - memorial.family_framing: true
+      - consent.documented: guest_approval_or_family_ok
+      - planted.disclosure: true
+      - no_invented_private_facts — guest supplies or approves every question
+    must_not:
+      - curator_invents_family_stories_without_guest
+      - present_as_real_audience_member_in_chat — always disclosed plant
+    directory: audience/guest-primed-family-<slug>/
+    note: |
+      Differs from characters/<id>/memorial.md (portrayal ABOUT someone) — this is
+      Will optionally writing a **respectful fictional family voice** he controls,
+      like planting a eulogy speaker he scripted himself.
+
+  orange_documented_historical:
+    label: "Historical figures — documented beliefs only (gray area)"
+    type: historical_figure_audience
+    status: experimental
+    rule: |
+      Person may speak ONLY via **cited primary/secondary sources** — actual quotes or
+      paraphrase clearly tied to documented beliefs. Questions relevant to guest's work.
+      Not invented inner life. Guest + host approve before merge.
+    must:
+      - sources.cited per question
+      - authorship.by: guest or curator_with_guest_ok
+      - representation.historical: true
+      - representation.not_claiming_to_be_them_live: true
+    gray_because: |
+      Easy to slip into fabrication or anachronism. Use sparingly — e.g. Jane Jacobs
+      asking Will about cities, Wright brothers about flight sims — only with citations.
+    forbidden_without_guest: true
+
+  red_religious_experimental:
+    label: "Religious / theological figures (highly experimental)"
+    type: theological_figure_audience
+    status: experimental_discouraged_by_default
+    rule: |
+      **Guest veto required.** If Will ever wanted it: primary-text quotes only (scripture,
+      documented theology) — never invented divine dialogue, never mockery, never claiming
+      supernatural presence. Framed as literary/historical question voice, not revelation.
+    must:
+      - guest_explicit_approval: true
+      - sources.primary_text_cited
+      - representation.theological_figure: true
+      - representation.not_claiming_divine_authority: true
+    discuss: |
+      "Jesus and God even?" — open topic for Will to reject, reshape, or limit to e.g.
+      documented historical Jesus scholarship vs. faith claims — host must not default-merge.
+    default: do_not_seed_without_guest_pr
+
+hard_forbidden:
+  - deceased_colleagues_as_audience (Dani Berry, etc.) — memorial discuss only
+  - living_humans_without_consent
+  - unlabeled_plants
+  - invented_quotes_for_real_people
+
+see_also:
+  - fictional-audience.yml
+  - portrayal-standards.yml
+  - ../repo-shows/will-wright/audience/AUDIENCE-ROSTER-IDEAS.md
+  - ../repo-shows/_TEMPLATE/audience/PLANTED-AUDIENCE.md

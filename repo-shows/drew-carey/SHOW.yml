@@ -1,0 +1,53 @@
+# Drew Carey — improv, audience participation, and a life inside The Sims
+# Invitation show seed — consent not yet requested. Dream guest.
+
+show:
+  id: drew-carey
+  title: "Drew Carey — Come On Down (a life woven through The Sims)"
+  kind: interview
+  status: seed
+  host: don-hopkins
+  guest: drew-carey
+  character: characters/drew-carey/
+
+logline: |
+  A warm conversation with Drew Carey — improviser, game-show host, and a genuine part of The
+  Sims' mythology — about everything he's done with the games, the craft of live improvisation,
+  and how an audience becomes part of a show. No agenda; just someone with a lot to say, in a
+  room full of Sims characters who'd be thrilled to meet him.
+
+segments:
+  - id: sims_mythology
+    topic: "Drew in The Sims — the House Party cameo (arrive by limo), the Drew Carey Show episode set in The Sims, being a fan"
+    ties:
+      - characters/eric-hedman/      # animated the House Party Drew Carey Show tie-in
+      - repo-shows/will-wright/
+
+  - id: improv_craft
+    topic: "Whose Line Is It Anyway? — how live improvisation works; performing within a format; reading a room"
+    note: "Deeply relevant: this whole show is improvisation that invents itself in real time."
+
+  - id: audience_participation
+    topic: "The Price Is Right — 'Come On Down,' costumes, games, the audience AS the show"
+    ties:
+      - process/ticket-pr.yml          # our 'Question Is Right' homage to that tradition
+
+  - id: libraries_and_preservation
+    topic: "His support of public libraries; preserving culture; why old games and tools deserve to live"
+    ties:
+      - repo-shows/phil-salvador-simrefinery/
+
+  - id: meet_the_audience
+    topic: "Meet the Sims characters who grew up around him — Bella, Bob, the Sad Clown, Slats, Death"
+    ties:
+      - repo-shows/will-wright/audience/
+
+framing:
+  note: |
+    Public dream-guest seed. We approach Drew as a guest and a fan-favorite voice in Sims lore —
+    nothing more is assumed here. Represent + discuss only; no invented quotes.
+
+related:
+  - characters/drew-carey/
+  - repo-shows/will-wright/
+  - characters/eric-hedman/

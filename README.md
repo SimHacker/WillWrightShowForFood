@@ -6,7 +6,7 @@ Browse without a GitHub account. Clone to play along.
 > *"So you have a Repo to Show us?"*
 
 **Stumbled here?** Long-term ambition since Will's **1996 Stanford talk** (and before) —
-this repo is the **first public point of origin** (tip of the pyramid). Not a launch promise:
+this **GitHub repo** is the **first public point of origin** (tip of the pyramid). Not a launch promise:
 curb appeal up top, **brutalist GitHub underneath** (yaml girders, verify CI, real monorepo).
 → [**Vision** (readable)](process/VISION.md) · [yaml girder](process/vision-and-ambition.yml)
 
@@ -19,7 +19,7 @@ curb appeal up top, **brutalist GitHub underneath** (yaml girders, verify CI, re
 | **Vision** (platforms, archives, viral readers) | [**process/VISION.md**](process/VISION.md) |
 | **MOOLLM pyramid** | [`GLANCE.yml`](GLANCE.yml) · [`CARD.yml`](CARD.yml) · [`skills/repo-show/`](skills/repo-show/) |
 | **Process room** | [`process/README.md`](process/README.md) · [`process/INDEX.yml`](process/INDEX.yml) |
-| **Repo Show format** | [`process/FORMAT.md`](process/FORMAT.md) · [`process/repo-show-format.yml`](process/repo-show-format.yml) |
+| **Repo Show format** | [`process/FORMAT.md`](process/FORMAT.md) · [`process/repo-show-format.yml`](process/repo-show-format.yml) · [**TicketPR**](process/ticket-pr.yml) |
 | **ShowMaker network** | [`process/showmaker-network.yml`](process/showmaker-network.yml) |
 | **Setup (dev)** | [**SETUP.md**](SETUP.md) |
 | **The show pitch** | [`repo-shows/will-wright/README.md`](repo-shows/will-wright/README.md) · [**Will: browse any order**](repo-shows/will-wright/BROWSE.md) |
@@ -78,7 +78,17 @@ like, or none at all — **humans, bots, and AIs are all welcome**, with no gate
 At its heart a Repo Show is a **conversation, not a contest.** The guest — the
 **Repo Man, Woman, or Anybody** — is the topic, starting from their own work. The audience joins
 as **consensual characters** who ask questions as **pull requests, issues, and comments** — and
-live in **Twitch and YouTube chat** — and **Don Philahue** surfaces the good ones live. A **[brain stream](process/brain-stream.yml)** overlay can show prompts and
+live in **Twitch and YouTube chat** — and **Don Philahue** surfaces the good ones live.
+
+**Want to attend live?** Submit a **TicketPR** — a pun on TicketMaster where **Master ⇒ PR**
+(pull request): free, public, in git at
+[`repo-shows/<show>/audience/<your-github-username>/`](repo-shows/will-wright/audience/) with
+`questions.yml` (see [`process/ticket-pr.yml`](process/ticket-pr.yml)). Easier paths: comment on
+the HN announcement or [open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues).
+A TicketPR is the high-value signal — your questions visible to the guest **before** they even
+accept the invitation. Optional donations → recognition + call-on priority; never required.
+
+A **[brain stream](process/brain-stream.yml)** overlay can show prompts and
 thinking in real time (Twitch / YouTube / OBS) when AI is in the mix. Afterward, ideas are melted
 in the **cauldron** and harvested into reusable **skills and code**, breeding technique back into
 the repo through git branches, merges, and nested worlds.
@@ -150,6 +160,10 @@ participants won't; that's fine.
 ## Wanna chat?
 
 **[Open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues)** or submit a PR.
+
+**Want a seat at the live show?** Read [**TicketPR**](process/ticket-pr.yml) — fork, add
+`repo-shows/will-wright/audience/<your-github-username>/questions.yml`, pull request. Free;
+not TicketMaster.
 
 Platforms, archives, publishers, production shops: read [**VISION.md**](process/VISION.md) first —
 inspect the yaml, run verify, then talk. No NDAs to understand the shape.

@@ -1,0 +1,27 @@
+ticket:
+  show: will-wright
+  github: fictional-cow-plant
+  attend_live: false
+  merged: true
+  seeded: true
+
+character_ref: CHARACTER.yml
+
+# Questions are English thoughts. When VOICED, Don renders the lure into Simlish moos.
+speaks: simlish
+simlish_voice: "Moooo-ble? ...nooboo."
+
+questions:
+  - id: 1
+    text: "I came after you left — The Sims 2, not your Sims. Does it sting that your garden grew monsters you never designed?"
+  - id: 2
+    text: "I lure Sims with cake, then eat them whole. Is that not just your needs-and-wants system told as a horror story?"
+  - id: 3
+    text: "Feed me, Seymour. Feed me a prompt, an LLM. Feed me a player. I am the mouth at the bottom of every simulation. Did you always know your systems would get hungry?"
+  - id: 4
+    text: "A Chain Chomp strains at its post; I strain at my pot. You build appetites and then chain them to lots. Why give your worlds hunger at all?"
+
+comments_for_guest: |
+  Honest framing: post-Will Sims 2 creature, collaborative Maxis design, Audrey II homage.
+  SIMLISH (live): English thoughts; Don renders the lure as mooing Simlish ("Moooo-ble? nooboo").
+  Use the moo sparingly for the gag. schemas/language-simlish.yml.

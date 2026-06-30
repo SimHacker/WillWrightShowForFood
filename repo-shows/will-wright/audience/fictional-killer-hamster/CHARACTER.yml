@@ -1,0 +1,20 @@
+character:
+  name: Killer Hamster
+  type: fictional_game_character
+  real_being: false
+  signifier: "🐹"
+  home: repo-shows/will-wright/audience/fictional-killer-hamster/
+  origin: "The Sims — wheel object; fan lore of lethal spinning"
+
+representation:
+  fictional: true
+  not_official_ea: true
+  note: "Dark humor object persona. Community §§199 death trap meme."
+
+relationship: |
+  You gave me a wheel. You gave them low needs and high curiosity. You know what happens
+  at 3x speed when nobody's watching.
+
+see_also:
+  - questions.yml
+  - ../FICTIONAL-AUDIENCE.md

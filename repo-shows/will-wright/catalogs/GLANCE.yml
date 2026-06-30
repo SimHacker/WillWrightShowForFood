@@ -1,0 +1,25 @@
+# CATALOGS — GLANCE (Sims UCC brands + Micropolis Home platform)
+# up: ../GLANCE.yml | feed: README.md | machine: CATALOGS.yml
+
+what: |
+  Six doors, one house — ~26 years of artisanal Sims custom content (SimFreaks, SimSlice,
+  SimProv, Zombie Sims) plus Maxis metadata and Micropolis Home (create · publish · share).
+
+read_order:
+  - README.md
+  - simfreaks/
+  - simslice/
+  - simprov/
+  - zombie-sims/
+  - micropolis-home/
+  - maxis/
+
+legacy_vs_platform: |
+  SimFreaks / SimSlice / SimProv / Zombie Sims = curated catalogs with their own fan bases.
+  Micropolis Home = federation platform underneath — tools, git artifacts, new releases.
+
+see_also:
+  - { path: ../INTRO-NARRATIVE.md, why: "Mission + proof narrative" }
+  - { path: ../sources/2005-09-18-simfreaks-content-catalog-laszlo/, why: "CMS essay origin" }
+  - { path: ../../../characters/heather-alvey/, why: "SimFreaks founder" }
+  - { path: ../../../characters/steve-alvey/, why: "SimSlice founder" }

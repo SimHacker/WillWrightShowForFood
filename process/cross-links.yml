@@ -54,6 +54,7 @@ trails:
       - { path: challenges/pdp10-maclisp-drive.yml, why: "MACLISP on ITS — AI Lab on laptop" }
       - { path: challenges/lisp-machine-hack-off.yml, why: "Symbolics vs LMI — battle continues" }
       - { path: apple2-emulator-stack.yml, why: "Stack pointer — apple2js, Emularity, FujiNet" }
+      - { path: apple2-fujinet-bridge.yml, why: "Apple ][ + FujiNet three-phase plan" }
       - { path: pdp10-its-stack.yml, why: "PDP-10/its + SIMH — Lars Brinkhoff lineage" }
       - { path: lisp-machine-stack.yml, why: "Genera, LambdaDelta, CADR heritage" }
       - { path: ../rigs/README.md, why: "Rig yaml + SETUP DNA — reproduce without you in room" }
@@ -66,6 +67,7 @@ trails:
     nodes:
       - { path: ../characters/lars-brinkhoff/, why: "ITS restoration — PDP-10 MACLISP on air" }
       - { path: ../characters/thomas-cherryhomes/, why: "FujiNet / IRATA — real Apple ][ on network" }
+      - { path: apple2-fujinet-bridge.yml, why: "AppleWin vs apple2js vs WASM — three-phase plan" }
       - { path: ../repo-shows/lars-brinkhoff/SHOW.yml, why: "Guest show seed — gold-standard SETUP" }
       - { path: ../rigs/pdp10-maclisp-flair-lap.rig.yml, why: "Example rig — flair lap on ITS" }
       - { path: ../rigs/pdp10-maclisp-flair-lap.SETUP.md, why: "Rig DNA — email this file alone" }
@@ -260,6 +262,21 @@ trails:
       - { path: ../characters/chaim-gingold/, why: "Building SimCity — history + reverse diagrams" }
       - { path: ../characters/jason-shankel/, why: "Maxis / SFC alumnus — games + AI" }
       - { path: ../characters/don-hopkins/career/stupid-fun-club.yml, why: "Robots among humans — the post-Maxis lab" }
+
+  ucc_catalogs:
+    k_line: "SimFreaks · SimSlice · SimProv · Zombie Sims · Micropolis Home"
+    why: "Legacy artisanal catalogs + the create/publish/share platform that hosts them"
+    nodes:
+      - { path: ../repo-shows/will-wright/catalogs/, why: "Catalog hub — CATALOGS.yml + five entries" }
+      - { path: ../repo-shows/will-wright/ian-bogost-procedural-rhetoric/SHOW.yml, why: "Bogost — inclusion agitprop vs Dumbold farce" }
+      - { path: ../repo-shows/will-wright/assets/sims-series/procedural-rhetoric-inclusion-agitprop.md, why: "Wedding playset phoenix + Motive.c lineage" }
+      - { path: ../repo-shows/will-wright/catalogs/micropolis-home/, why: "Platform — not just a shelf" }
+      - { path: ../repo-shows/will-wright/catalogs/simfreaks/, why: "Heather Alvey — ~26-year brand" }
+      - { path: ../repo-shows/will-wright/catalogs/simslice/, why: "Steve Alvey — SliceCity shipped data portability" }
+      - { path: ../repo-shows/will-wright/catalogs/simprov/, why: "Wedding playset + composable orchestration" }
+      - { path: ../repo-shows/will-wright/catalogs/zombie-sims/, why: "Current magnum-opus pack — Afterlife bridge" }
+      - { path: ../repo-shows/will-wright/INTRO-NARRATIVE.md, why: "Mission + proof" }
+      - { path: ../repo-shows/heather-steve-alvey/, why: "First platform users" }
 
   the_card_game:
     k_line: "Build a segment deck — stack guest abilities"

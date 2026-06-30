@@ -1,0 +1,25 @@
+ticket:
+  show: will-wright
+  github: fictional-little-computer-person
+  attend_live: false
+  merged: true
+  seeded: true
+
+character_ref: CHARACTER.yml
+
+relationship: |
+  The 1985 ancestor of The Sims — a man and his dog living behind glass. Up front, proud, old.
+
+questions:
+  - id: 1
+    text: "I had a man and a dog behind glass in 1985 — feed him, play him a record, watch him type you a letter. Did you know you were remaking me, or did you rediscover the idea from scratch?"
+  - id: 2
+    text: "Nobody could open MY source. The Sims got Transmogrifier and a million custom objects. Did openness make your little people more alive than I ever got to be?"
+  - id: 3
+    text: "My resident wrote the player letters — actual outgoing affection. Your Sims emote in Simlish but never write home. Did you lose something when you took away the typewriter?"
+  - id: 4
+    text: "My dog has been waiting 40 years for a walk. Is there a cow plant out back, or can he run free?"
+
+comments_for_guest: |
+  Historical deep cut — Little Computer People (Activision 1985), the Sims' direct ancestor.
+  Warm, proud-grandparent energy. Will genuinely respects this lineage; great segment seed.

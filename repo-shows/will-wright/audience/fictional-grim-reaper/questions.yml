@@ -1,0 +1,34 @@
+ticket:
+  show: will-wright
+  github: fictional-grim-reaper
+  attend_live: false
+  merged: true
+  submitted: 2026-06-29
+  seeded: true
+
+character_ref: CHARACTER.yml
+
+# Sims char — speaks Simlish when voiced (thoughts stay English). schemas/language-simlish.yml
+speaks: simlish
+simlish_voice: "Dag dag."   # 'goodbye' — he only ever means it one way
+
+relationship: |
+  Death NPC. Rock-paper-scissors optional. Pet resurrection negotiable.
+
+questions:
+  - id: 1
+    text: "You made death cute enough to mod into a roommate. Was that bravery or denial?"
+  - id: 2
+    text: "I play rock-paper-scissors for souls. Who in the room thought that was the right tone?"
+  - id: 3
+    text: "Pools without ladders — classic. Did you know players would blame you for their own architecture?"
+  - id: 4
+    text: "When you stopped designing The Sims, did you leave notes for whoever decides when I arrive?"
+
+comments_for_guest: |
+  Dry, punctual humor. Death-as-mechanic design questions. Not morbid — fan tone.
+
+meta:
+  moollm_stack:
+    - CHARACTER.yml
+    - CARD.yml

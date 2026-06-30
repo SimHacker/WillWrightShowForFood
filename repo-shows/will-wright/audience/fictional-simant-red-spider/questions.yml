@@ -1,0 +1,29 @@
+ticket:
+  show: will-wright
+  github: fictional-simant-red-spider
+  attend_live: false
+  merged: true
+  seeded: true
+
+character_ref: CHARACTER.yml
+
+relationship: |
+  SimAnt red spider. I lose on the back of the box. I have eight legs and one grievance.
+
+questions:
+  - id: 1
+    text: "Spiders are misunderstood heroes — we eat the pests, we spin the engineering, we keep the ants honest. You cast me as the villain only because the player was an ant. Did point-of-view design make me evil, or did you?"
+  - id: 2
+    text: "You gave ants pheromone trails and gave me a web. Which metaphor did you believe?"
+  - id: 3
+    text: "SimAnt was too easy for you. Was beating me the easy part?"
+  - id: 4
+    text: "If I win, the player fails. Did you design me to be hated or respected?"
+
+comments_for_guest: |
+  Running bit with black ant — call both during SimAnt / microworld segment.
+
+meta:
+  moollm_stack:
+    - CHARACTER.yml
+    - CARD.yml

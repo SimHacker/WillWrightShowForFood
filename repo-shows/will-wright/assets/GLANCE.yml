@@ -1,0 +1,24 @@
+# ASSETS — GLANCE (show misc + sims-series hub)
+# up: ../GLANCE.yml | hub: sims-series/ | icon: DonHopkinsSimsCreditsIcon.jpg
+
+what: |
+  Flower-Child credits icon plus the sims-series gallery — 50+ screenshots, essays,
+  procedural-rhetoric artifacts tied to catalogs and sources.
+
+read_order:
+  - README.md
+  - sims-series/README.md
+  - sims-series/procedural-rhetoric-inclusion-agitprop.md
+  - sims-series/transmogrifier-story.md
+
+themes:
+  agitprop: sims-series/dumbold-voting-machine/
+  catalogs: sims-series/simfreaks-openlaszlo-catalog/
+  simantics: sims-series/simantics-objects/
+  people: sims-series/people-and-events/
+
+see_also:
+  - { path: ../catalogs/README.md, why: "Six catalog doors" }
+  - { path: ../sources/README.md, why: "Republishable articles" }
+  - { path: ../../../characters/will-wright/media/, why: "Will portrait galleries" }
+  - { path: ../INTRO-NARRATIVE.md, why: "Why these assets exist" }

@@ -1,0 +1,43 @@
+# Phil Salvador — RESERVED real-person audience seat (to be invited; consent pending)
+# Real person. NOT yet asked. NO fabricated questions in his voice until he consents.
+character:
+  name: Phil Salvador
+  type: real_being
+  real_being: true
+  signifier: "🗄️"
+  home: repo-shows/will-wright/audience/phil-salvador/
+  field: "Library Director, Video Game History Foundation; The Obscuritory; game preservationist"
+
+representation:
+  real_being: true
+  consent: not_yet_asked
+  status: |
+    Don intends to invite Phil to the audience. Until he consents, this directory holds NO
+    invented questions in his voice — only a public-fact bio and an invitation scaffold he can
+    fill himself (like Richard Bartle's reserved seat, but consent is still pending).
+  public_facts:
+    - "Library Director at the Video Game History Foundation (since 2022), Oakland CA"
+    - "Runs The Obscuritory — blog reappreciating obscure/older games"
+    - "Bay Area librarian/archivist; built toward a world-class game-history research library"
+    - "Wrote a well-known deep essay recovering the story of SimRefinery (a Maxis training sim)"
+  sources:
+    - "https://gamehistory.org/library-director-phil-salvador/"
+    - "https://obscuritory.com/about/"
+    - "https://en.wikipedia.org/wiki/Video_Game_History_Foundation"
+
+box_seat:
+  with: fictional-museum-curator
+  where: front_box_left
+  note: "Real archivist beside the fictional Curator — the tribute made literal."
+
+bridge_to_will:
+  why: |
+    Phil's SimRefinery recovery and VGHF preservation work directly resonate with this show:
+    Micropolis is the open-source afterlife of SimCity. Preservation is the through-line.
+  ties_to: ../../sources/simrefinery-recovery/
+
+awaiting_author: true
+see_also:
+  - questions.yml
+  - ../fictional-museum-curator/
+  - ../../sources/simrefinery-recovery/

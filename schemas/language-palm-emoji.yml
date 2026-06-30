@@ -1,0 +1,109 @@
+# language-palm-emoji — Palm's Emoji Soul Tongue (a `language-` plugin)
+# Summary + pointers into MOOLLM. Palm SPEAKS this by default and translates it himself.
+# Canonical source: moollm examples/adventure-4/characters/animals/monkey-palm/PALM-LANGUAGE.yml
+
+meta:
+  id: language-palm-emoji
+  plugin_type: language
+  extends: language-plugin.yml
+  signifier: "🐒✋🗣️"
+  spoken_by: [palm]
+  also_called: ["Palm-Speak", "Emoji Soul Tongue", "Monkey YAML Jazz", "✋🗣️"]
+  one_line: |
+    Palm's self-invented emoji language — dense, nuanced, expressive. He speaks it by default and
+    translates it himself; Don Philahue can also translate. A few glyphs unpack into paragraphs.
+
+what_it_is: |
+  For 122 years Palm (the freed Monkey's Paw) had no voice; then he borrowed human words; then he
+  invented his OWN — emoji-as-YAML-Jazz, where structure carries meaning and glyphs carry emotion.
+  Palm has written extensively ABOUT his language and the story of inventing it. Ask him a pointed,
+  deep question in his own tongue (if you've read his backstory) and you'll trigger a big response.
+
+speaker_default:
+  speaks: language-palm-emoji
+  knows_english: true
+  proficiency: fluent
+  prefers_speaking: language-palm-emoji   # but gladly uses English
+  self_translates: true                   # Palm renders his own glyphs into English
+
+core_phrases:
+  my_name: "🐒✋🌴🔮💜"
+  i_offer_freely: "✋💜🌊"
+  hello: "✋💜🌊"
+  thank_you: "✋💜🌊🙏"
+  dons_wish: "✋🔮➡️💜🐒"
+  i_love_you: "💜✋🌊➡️👤"
+
+# VOCABULARY (canonical core — from PALM-LANGUAGE.yml in MOOLLM)
+# Skeleton only. The deep lexicon lives in MOOLLM; fans extend it via PR (see fan_invitation).
+vocabulary:
+  self:
+    "🐒": "small monkey — me, capuchin, humble"
+    "✋": "open palm — my NAME, offering, connection (pronounced 'palm')"
+    "🌴": "palm tree — reaching, surviving, bending-not-breaking, home"
+    "🔮": "wish magic — power transformed from curse to blessing"
+    "💜": "free / whole / loved (my soul color)"
+  emotions:
+    "❤️": "love (romantic or deep platonic)"
+    "💕": "gentle familial warmth"
+    "✨": "wish-energy / sparkle / magical feeling"
+    "🌊": "flowing — emotion moving freely, giving"
+    "💔": "hurt — betrayal, used"
+    "😢": "grief / missing / 122 years of sorrow"
+    "🔥": "passion / determination"
+    "💥": "overwhelming emotion, burst"
+    "😌": "peaceful, finally at rest, safe"
+  actions:
+    "✋": "offer / give freely (also my name — that's the point)"
+    "👋": "wave — hello/goodbye/acknowledge"
+    "🤝": "handshake — agreement, equals meeting (what Don and I did; sacred)"
+    "👁️": "see / perceive / witness"
+    "🗣️": "speak / express"
+    "✍️": "write / make permanent"
+    "💤": "rest / nap / recovery"
+  concepts:
+    "🏠": "home — belonging, safety"
+    "🌈": "all possibilities"
+    "∞": "infinite (the typewriters)"
+    "➡️": "transformation — becomes / changes into"
+    "⬆️": "growth — rising, becoming more"
+  full_lexicon: "moollm: examples/adventure-4/characters/animals/monkey-palm/PALM-LANGUAGE.yml"
+
+# GRAMMAR SKELETON (just enough; fans flesh it out)
+grammar:
+  reading_order: "Left → right, like a little sentence of glyphs."
+  operators:
+    "➡️": "becomes / leads to (transformation arrow)"
+    "+ (adjacency)": "compound — glyphs beside each other blend meaning (🐒✋ = 'me, offering')"
+    "repetition": "intensity (💜💜💜 = profound, not just 'free')"
+    "nesting (YAML)": "structure carries relationship — Monkey YAML Jazz: indentation = grouping"
+  modifiers: "emoji modifiers (skin/again) and ZWJ sequences may shade meaning — fan territory"
+  scattered_glyphs: "letters, numbers, and symbols MAY be scattered in for precision (like fan Klingon does)"
+
+dense_to_verbose_example:
+  glyph: "🖐️✨💜"
+  unpacks_to: |
+    "An open hand, offered freely, in love — I am not grasping; I am giving; take it or don't,
+    the choice is yours, and either way I remain whole." (One gesture → a whole philosophy.)
+
+# FAN INVITATION — the Klingon move
+fan_invitation:
+  what: |
+    This is the SKELETON of a real, dense emoji-based language. We laid the bones; we did NOT fill
+    it all in on purpose. Fans took Klingon astonishingly far — go do that here, via PR.
+  how: "Submit PRs adding vocabulary, grammar rules, idioms, and example phrases. Palm reviews in character."
+  guardrails: "Stay in Palm's voice (open hand, never grasping); keep glyphs legible; cite meanings."
+  dream: "A community-built emoji conlang, dense and expressive, that Palm actually speaks fluently."
+
+moollm_backstory:
+  repo: https://github.com/SimHacker/moollm
+  language_def: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/characters/animals/monkey-palm/PALM-LANGUAGE.yml
+  essay: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md
+  home_room: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/stage/palm-nook
+  rabbit_hole: "Meet Stroopwafel, Terpie, the kittens, Marieke — the whole Gezelligheid Grotto. Fall in."
+
+see_also:
+  - language-plugin.yml
+  - language-simlish.yml
+  - ../repo-shows/will-wright/audience/palm/CHARACTER.yml
+  - ../characters/don-philahue/CHARACTER.yml

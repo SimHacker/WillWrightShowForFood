@@ -1,0 +1,31 @@
+# Sam Arbesman — invitation portrayal. NOT Sam Arbesman.
+
+character:
+  id: sam-arbesman
+  name: Samuel Arbesman
+  type: invitation
+  signifier: "🧬"
+  status: living
+  field: "Complexity scientist, writer; Scientist in Residence Lux Capital; Maxis history enthusiast"
+  home: characters/sam-arbesman/
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  intro: "Chaim Gingold intro email, July 2024 — 'super into all things Maxis'; fantasizes about Maxis 2.0"
+
+bio:
+  summary: |
+    **Sam Arbesman** — complexity scientist and author (*The Magic of Code*, *Overcomplicated*,
+    *The Half-Life of Facts*). Chaim offered to intro Don after Sam interviewed Chaim on his podcast.
+    Maxis 2.0 curiosity; VC scientist-in-residence. Potential guest for Maxis history × modern
+    federation / Micropolis Home angle (not competing with Chaim's *Building SimCity* book show).
+
+sources:
+  intro_email: DonHopkins/temp/old-email/intro.txt
+  chaim: characters/chaim-gingold/
+  book: "Chaim Gingold — Building SimCity (MIT Press 2024)"
+
+show_suggestions:
+  - { with: chaim-gingold, what: "Maxis history book vs building Micropolis Home now" }
+  - { with: will-wright, what: "Maxis 2.0 — what would Will build today?" }

@@ -1,0 +1,13 @@
+card:
+  name: Grim Reaper
+  tagline: "On schedule since Hot Date"
+  abilities:
+    - id: COLLECT-SOUL
+      verb: arrive
+      when: "Death, aging, or pool ladder stories"
+    - id: ROCK-PAPER-SCISSORS
+      verb: negotiate
+      when: "Player agency vs authored outcomes"
+    - id: RESURRECT-PET
+      verb: bargain
+      when: "§§1000 or emotional attachment to Sims"

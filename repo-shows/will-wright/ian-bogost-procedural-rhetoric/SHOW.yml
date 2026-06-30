@@ -1,0 +1,40 @@
+# SHOW SEED — Ian Bogost: procedural rhetoric from Motive.c to the Wedding Playset
+# Bogost coined the term; Don's Sims objects are case studies in both registers.
+
+show:
+  id: ian-bogost-procedural-rhetoric
+  title: "Procedural Rhetoric — Motive.c, SimProv Wedding Playset, and the Dumbold"
+  type: solo
+  host: Don Hopkins
+  guests: ["Ian Bogost"]
+  topic: |
+    Procedural rhetoric in The Sims lineage: Will Wright's 1997 Motive.c (failure modes as design),
+    the SimProv Wedding Playset (inclusion agitprop — who gets recognized in front of family),
+    and the Dumbold Voting Machine (2004 institutional farce). Same SimAntics/dialog engine;
+    opposite poles. Micropolis Home as platform for more.
+  status: seed
+  consent: not_yet_asked
+
+artifacts:
+  motive_c:
+    path: ../sources/2008-02-10-soul-of-the-sims/Motive.c
+    hook: "Starvation, mandatory bath, wet bed — argument in alert strings and curves"
+  wedding_playset:
+    path: ../catalogs/simprov/
+    hook: "Built when marriage equality was contested; republishing for Steam Sims 1 families"
+  dumbold:
+    path: ../sources/2018-04-24-dumbold-voting-machine/medium-article.md
+    hook: "Dated e-voting satire — preserve honestly, don't repurpose as election denial"
+
+discussion_prompts:
+  - "Is the wedding playset quintessential intentional inclusion procedural rhetoric — and is that a useful category next to Persuasive Games?"
+  - "How does procedural satire (Dumbold) age vs. procedural inclusion (playset) when republished 20+ years later?"
+  - "Motive.c global variables vs. shipping Sims — does the *prototype* rhetoric differ from the *product* rhetoric?"
+  - "Federation publishing (Micropolis Home) — procedural rhetoric as infrastructure, not one object at a time"
+
+ties_to:
+  - ../assets/sims-series/procedural-rhetoric-inclusion-agitprop.md
+  - ../INTRO-NARRATIVE.md
+  - ../catalogs/micropolis-home/
+  - ../sources/2008-02-10-soul-of-the-sims/
+  - ../../process/cross-links.yml

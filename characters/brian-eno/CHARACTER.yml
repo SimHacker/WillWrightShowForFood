@@ -22,8 +22,6 @@ invitation:
   consent: not_yet_asked
   document: ../../repo-shows/brian-eno/invitation.md   # invite lives in the show dir
   show_seed: repo-shows/brian-eno/
-  contact_path: "Reach via **Will Wright** — Don's regular contact and hub to many mutual friends, and the most likely bridge to Brian — plus **Scott Draves** (hosted Brian in 2006). Don has no current direct line to Brian; both Will and Brian are busy and hard to reach."
-
 bio:
   born: 1948
   summary: |

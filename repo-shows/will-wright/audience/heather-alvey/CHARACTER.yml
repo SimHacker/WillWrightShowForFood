@@ -1,0 +1,38 @@
+# Heather Alvey (SimFreaks) — RESERVED front-row audience (real; invited honored guest)
+# Real person, Don's collaborator. Front row with the SimSlice/SimFreaks crew. Plug her sites.
+character:
+  name: Heather Alvey
+  type: real_being
+  real_being: true
+  signifier: "🧟‍♀️🛋️"
+  home: repo-shows/will-wright/audience/heather-alvey/
+  field: "SimFreaks founder — ~26-year Sims custom-content brand; ZombieSims; worked with Will at Gallium"
+
+representation:
+  real_being: true
+  consent: collaborator_invited
+  self_authored: invited
+  status: "Honored front-row invite. She writes her own questions / plugs. No fabricated words."
+  canonical_guest: ../../../../characters/heather-alvey/
+
+seating:
+  seat: front_row
+  attending_with: simfreaks-simslice     # the crew (see INDEX groups)
+  adjacent: [steve-alvey, fictional-zombie-sim]
+  earned_by: invited
+  note: "Front row with Steve (SimSlice) and a ZombieSim they brought."
+
+plugs:
+  what: "Honored creators — encouraged to plug their sites/work on air."
+  links:
+    - "SimFreaks — long-running Sims custom content"
+    - "ZombieSims — their Halloween/zombie content (they may bring a zombie)"
+
+bridge_to_will: "SimFreaks content + SimProv + Micropolis-publishing collaboration with Don; worked with Will at Gallium (Proxi)."
+
+awaiting_author: true
+see_also:
+  - questions.yml
+  - steve-alvey/
+  - fictional-zombie-sim/
+  - ../../../../characters/heather-alvey/

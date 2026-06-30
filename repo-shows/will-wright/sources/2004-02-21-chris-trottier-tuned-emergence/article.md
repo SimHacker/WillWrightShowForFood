@@ -2,8 +2,8 @@
 
 *Submitted by Don Hopkins · Sat, 2004-02-21 03:32*
 *Tags: SimAntics Game Design*
-*Source: <http://www.donhopkins.com/drupal/node/31>*
-*Extracted from Don Hopkins archival prompts (2026-06-29). Cleaned for republishing in [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood).*
+
+*Extracted from Don Hopkins archival prompts (2026-06-29). Republished in [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood).*
 
 ---
 

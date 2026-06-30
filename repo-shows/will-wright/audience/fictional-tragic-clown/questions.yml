@@ -1,0 +1,35 @@
+ticket:
+  show: will-wright
+  github: fictional-tragic-clown
+  attend_live: false
+  merged: true
+  submitted: 2026-06-29
+  seeded: true
+
+character_ref: CHARACTER.yml
+
+# Sims char — speaks Simlish when voiced (thoughts stay English). schemas/language-simlish.yml
+speaks: simlish
+simlish_voice: "...frooby?"   # a hollow, joyless attempt at 'happy'
+
+relationship: |
+  Negative aura object. Players buy me ironically. Sims cry. I never blink.
+
+questions:
+  - id: 1
+    text: "Why does my aura stack? Did you want players to torture Sims or teach them about interior design?"
+  - id: 2
+    text: "I'm §§777 on the catalog. Cheaper than therapy. Was that the joke?"
+  - id: 3
+    text: "You made a doll that makes children sad. Walk me through the playtest meeting where nobody said stop."
+  - id: 4
+    text: "The Sad Clown and I are cousins in your emotional economy. What were you optimizing — fun or feeling?"
+
+comments_for_guest: |
+  Warm gothic humor. Painting-as-audience-member bit. Will may discuss object design,
+  emergent cruelty, player psychology.
+
+meta:
+  moollm_stack:
+    - CHARACTER.yml
+    - CARD.yml

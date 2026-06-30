@@ -1,0 +1,34 @@
+# WILL WRIGHT MEDIA — GLANCE (photos + galleries)
+# up: ../GLANCE.md | feed: README.md | deep: russian-space-junk.md · artwork.md
+
+what: |
+  General media room — primary-source photos (flat PNGs), markdown sub-galleries
+  (Soviet spaceflight hardware, relief artwork), cross-links to show sources/assets.
+
+read_order:
+  - README.md
+  - russian-space-junk.md
+  - artwork.md
+
+clusters:
+  simcity_nintendo:
+    - will-wright-and-miyamoto-simcity-snes.png
+  sims_promo:
+    - will-wright-holding-sim.png
+    - sim-picking-wills-nose.png
+    - will-wright-eating-sim.png
+    - home-tactics-box-cover-mockup.png
+  development:
+    - sims-programmer-art-1.png
+    - sims-programmer-art-2.png
+    - rug-o-matic-samples.png
+  events:
+    - will-wright-conference-photo.png
+  robots:
+    - robot-fight-la-1.png
+
+see_also:
+  - { path: ../README.md, why: "Guest portrayal hub" }
+  - { path: ../../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "167-figure Medium gallery" }
+  - { path: ../../../repo-shows/will-wright/assets/sims-series/, why: "Screenshot themes" }
+  - { path: ../../../repo-shows/will-wright/catalogs/, why: "Live content brands" }

@@ -1,0 +1,77 @@
+# CHARACTER.yml — audience member (self-authored) for ONE Repo Show
+# Copy to: repo-shows/<show>/audience/<your-github-username>/CHARACTER.yml
+# Schema: ../../../schemas/audience-character.yml
+# NOT a guest portrayal — you write yourself. See CHARACTER.md
+
+character:
+  id: YOUR-GITHUB-USERNAME
+  name: "Your Display Name"
+  type: audience_member
+  signifier: "🎟️"
+  subtitle: "TicketPR audience — this show"
+  status: living
+  field: "One line — SimCity kid | rug maker | first-time caller | …"
+  home: "repo-shows/<show-slug>/audience/YOUR-GITHUB-USERNAME/"
+  github: "@YOUR-GITHUB-USERNAME"
+
+show:
+  slug: "<show-slug>"
+  path: "../.."
+  ticket_pr: questions.yml
+
+representation:
+  schema: ../../../schemas/audience-character.yml
+  authored_by: self
+  consent: self_sovereign
+  note: |
+    You portray YOURSELF for this episode. Do not impersonate the guest.
+    Guest characters live in characters/ — audience characters live here, per show.
+
+simulation:
+  enabled: true
+  during_show:
+    - "Question-advertisements from CARD.yml fire when topics match"
+    - "Don Philahue may invoke ASK-QUESTION from your merged TicketPR"
+    - "MSPO RPG — your character can ask/async when you are offline"
+  after_show:
+    - "HOMEPLAY links from questions.yml → your branch"
+    - "Inter-character GREET/ASK with other audience members in adventure layers"
+    - "Compose with harvested repo-show + cauldron skills"
+  config: SIMULATION.yml
+
+bio:
+  summary: |
+    Two sentences — who you are to this show's guest and topic. Verifiable if you cite
+    public work (your repo, your game, your story).
+
+relationship_to_guest: |
+    big fan | grew up on Micropolis | your Transmogrifier rugs changed my life | …
+
+sources:
+  web: []
+  repos: []
+  homefun_branch: null
+
+# Drop in artifacts to SHOW Will (within reason). Pointer to your own repo is best; small
+# programs / code examples / images welcome. Link big things — don't dump large binaries.
+seating:
+  seat: general          # general | front_row | box_left | balcony_left | orchestra_pit | floating
+  adjacent: []           # [<character-id>, ...] who you sit by
+  attending_with: null   # group id, e.g. simfreaks-simslice
+  earned_by: self        # self | donation | regular | invited | guest_primed
+
+artifacts:
+  # Show-and-tell for the guest. Keep it small + yours-to-share.
+  repo: null             # https://github.com/you/your-project  (best!)
+  demos: []              # e.g. [{ file: demo.py, what: "20-line cellular automaton" }]
+  links: []              # [{ url: ..., what: ... }]
+  note: "Put small files right in this folder; link anything large."
+
+see_also:
+  - { path: CARD.yml, why: "Your abilities as Sims-style ADVERTISEMENTS (invokable_by)" }
+  - { path: GLANCE.yml, why: "One-screen sniff" }
+  - { path: questions.yml, why: "TicketPR — numbered questions for air" }
+  - { path: SIMULATION.yml, why: "Your brain/algorithm/runbook (during + after show)" }
+  - { path: CHARACTER.md, why: "Prose companion (superposition) + how to fill this in" }
+  - { path: images/README.md, why: "headshot / 128² avatar / with-guest — any image style" }
+  - { path: ../../../process/ticket-pr.yml, why: "TicketPR spec — Master ⇒ PR" }

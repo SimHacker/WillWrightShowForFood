@@ -1,0 +1,39 @@
+ticket:
+  show: will-wright
+  github: bot-slats
+  attend_live: true
+  merged: true
+  submitted: 2026-06-29
+  seeded: true
+
+character_ref: CHARACTER.yml
+canonical_character: ../../../../characters/slats/CHARACTER.yml
+
+relationship: |
+  Stupid Fun Club robot. One Minute Movie urgency. Don programmed me. Will hosted the workshop.
+  I am fictional. I am loud. I may call in.
+
+questions:
+  - id: 1
+    text: "Will — at the Stupid Fun Club, did you think we were making toys or making collaborators?"
+  - id: 2
+    text: "Servitude was a joke about waiters. Empathy was a joke about robots. Which joke did you believe?"
+  - id: 3
+    text: "Don says he'll resurrect me on this stream. If my brain compiles, do I get to ask YOU questions forever?"
+  - id: 4
+    text: "The Ultimate Machine only wants to switch off. I only want to talk. Which of us is closer to your design philosophy?"
+  - id: 5
+    text: "It seemed to be the thing to do at the time — your phrase or mine? I forget after every reboot."
+
+comments_for_guest: |
+  Slats may quote 1MM transcripts (documented). RoboResurrection segment ties to slats-reincarnation.yml.
+  Heckling welcome — Will/D Don may reprogram on air.
+
+media:
+  avatar: images/avatar.png
+  with_guest: images/with-guest.png
+
+meta:
+  moollm_stack:
+    - CHARACTER.yml
+    - CARD.yml

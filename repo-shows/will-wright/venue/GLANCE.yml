@@ -1,0 +1,22 @@
+# VENUE — GLANCE (Repo Show theater as MOOLLM rooms)
+# up: ../GLANCE.yml | map: VENUE.yml | culture: ../performance-and-culture.yml
+
+what: |
+  Navigable room graph — lobby, house, mezzanine balconies (Tragic Clown 🤡 left, Death 💀 right),
+  mic line, orchestra pit, stage wings. Seats are scarce; characters point location: at rooms.
+
+read_order:
+  - README.md
+  - VENUE.yml
+  - ../audience/README.md
+
+balcony_seats:
+  left: ../audience/fictional-tragic-clown/
+  right: ../audience/fictional-grim-reaper/
+  emoji_pair: "🤡💀"
+
+see_also:
+  - { path: ../performance-and-culture.yml, why: "Pre-show red carpet tour" }
+  - { path: ../../../process/repo-show-regulars.yml, why: "Balcony duo spec" }
+  - { path: ../../../characters/don-philahue/, why: "MC who surfaces seats" }
+  - { path: ../audience/bot-slats/, why: "Orchestra pit / call-in sidekick" }

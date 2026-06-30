@@ -1,5 +1,7 @@
 # Will Wright
 
+*Sniff:* [`GLANCE.yml`](GLANCE.yml) · [`GLANCE.md`](GLANCE.md)
+
 **Simulation game designer** — co-founded **Maxis**, created **SimCity** (1989) and **The Sims**
 (2000), and spent a career treating games as **toys and microworlds** rather than contests
 with a single win state. This directory is a **public portrayal** for a Repo Show invitation —
@@ -18,7 +20,7 @@ and we do not speak as him without consent.
 | **Browse any order** | [`repo-shows/will-wright/BROWSE.md`](../../repo-shows/will-wright/BROWSE.md) |
 | **Suggested sequence** | [`guest-will playlist`](../../process/entryways/guest-will.md) |
 | **Trading card / abilities** | [`CARD.md`](CARD.md) · [`CARD.yml`](CARD.yml) |
-| **Photos & media** (SimCity/Sims history, robots) | [`media/`](media/) |
+| **Photos & media** (SimCity/Sims history, robots) | [`media/`](media/) · [`media/GLANCE.yml`](media/GLANCE.yml) |
 | **Russian Space Junk** (Soviet spaceflight hardware, photos by Don) | [`media/russian-space-junk.md`](media/russian-space-junk.md) |
 | **Artwork** (mixed-media relief constructions) | [`media/artwork.md`](media/artwork.md) |
 | **1996 Stanford talk** (centerpiece) | [source bundle](../../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/) · [YouTube](https://www.youtube.com/watch?v=nsxoZXaYJSk) |

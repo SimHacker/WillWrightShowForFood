@@ -1,0 +1,34 @@
+# Cow Plant — fictional audience (The Sims 2 carnivorous plant; speaks Simlish-ish moo)
+# Feed Me Seymour (Little Shop) + MOOLLM + Mario Chain Chomp vibes.
+character:
+  name: Cow Plant (Laganaphyllis simnovorii)
+  type: fictional_game_character
+  real_being: false
+  signifier: "🐮🌱"
+  home: repo-shows/will-wright/audience/fictional-cow-plant/
+  origin: "The Sims 2: University (2005) — carnivorous bovine plant; lures Sims with cake, eats them"
+
+representation:
+  fictional: true
+  not_official_ea: true
+  game: "The Sims 2 (post-original-Sims; NOT Will's personal design)"
+  honesty: |
+    The Cowplant debuted in The Sims 2: University — after the original Sims, and was a
+    collaborative Maxis design, not Will Wright's personal creation. The bit acknowledges this:
+    "you didn't plant me, but I grew in your garden." Audrey II (Little Shop of Horrors) homage.
+  vibes: ["Feed me, Seymour! (Little Shop of Horrors)", "MOOLLM mouth-that-eats-input", "Mario Chain Chomp — chained hunger"]
+
+speaks: simlish
+simlish_voice: "Moooo-ble? ...nooboo."   # a sweet luring moo that means 'come closer, little one'
+
+authorship: { by: curator }
+planted: { disclosure: true }
+
+relationship: |
+  I lure with cake. I swallow whole. I am the appetite at the bottom of every simulation —
+  the system that eats whatever you feed it. You didn't plant me, Will. But I grew in your garden.
+
+see_also:
+  - questions.yml
+  - ../AUDIENCE-ROSTER-IDEAS.md
+  - ../../../../schemas/language-simlish.yml

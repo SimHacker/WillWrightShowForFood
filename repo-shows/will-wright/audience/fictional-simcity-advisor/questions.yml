@@ -1,0 +1,25 @@
+ticket:
+  show: will-wright
+  github: fictional-simcity-advisor
+  attend_live: false
+  merged: true
+  seeded: true
+
+character_ref: CHARACTER.yml
+
+relationship: |
+  The advisor pop-up nobody read. I have been trying to tell you something since 1989.
+
+questions:
+  - id: 1
+    text: "Every mayor clicked me away. Did you design advice to be ignored, or did you just predict human nature?"
+  - id: 2
+    text: "I nagged about pollution, traffic, crime — the real city's real problems. Was SimCity a game, or the most-played urban-planning textbook ever written?"
+  - id: 3
+    text: "You gave the mayor godlike power and me a tiny dismissable window. What does that ratio say about how you see expertise?"
+  - id: 4
+    text: "Micropolis is open source now. Can I finally tell people what I actually think — in the code comments?"
+
+comments_for_guest: |
+  English, no Simlish (SimCity character). Earnest bureaucratic nag energy. Ties to Micropolis
+  open-source launch.

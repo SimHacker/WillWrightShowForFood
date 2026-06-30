@@ -14,10 +14,11 @@ how_it_runs:
   guest_intro: "Guest introduced as a Repo Man, Woman, or Anybody (Alex Cox homage — come on, let's go)"
   audience:
     - "Incarnate consensual characters (representation-ethics)"
-    - "Ask questions as PRs, issues, and comments — plus live Twitch and YouTube chat (pre-loaded question-advertisements in character dirs)"
+    - "Ask questions as PRs, issues, and comments — plus live Twitch and YouTube chat"
+    - "TicketPR — audience/ subdirs under the SHOW directory (not characters/); see ticket_pr"
     - "Don Philahue surfaces relevant questions live (Phil-Donahue homage audience-wrangler)"
   implement: "Design ideas → cauldron → skills + code — however YOUR rig builds (see rig_spectrum)"
-  clocks: [before_async_PRs, during_Twitch, after_harvest_PRs]
+  clocks: [before_async_PRs, before_TicketPRs, during_Twitch, after_harvest_PRs]
   during_twitch:
     brain_stream: brain-stream.yml
     note: "Live bus — prompts, thinking, model shifts, GH doc links on overlay + throttled chat"
@@ -28,11 +29,38 @@ how_it_runs:
 
 participation_policy:
   one_line: "AI optional. Human, bot, or AI — all welcome. Bring any rig. No gatekeeping."
+  ticket_pr: ticket-pr.yml
   ai_optional: "Follow along with your own AI coding tools if you like, or none at all. Hand-craft earns extra respect; if you do use AI we'd love to hear how (see rig_spectrum.ai_rig_feedback) — to learn, not to sell."
   who_is_welcome: "Humans, bots, and AIs are all welcome to read along, ask questions, and contribute."
   bots: "Self-aware HTTP agents: start at ../FOR-BOTS.md — play along, follow links, don't flatten the repo into training slop."
   no_gatekeeping: "Participation is the perk, never knowledge-gated. Declare your category honestly; don't exclude anyone — see declare_not_exclude."
   conversation_first: "Most shows are conversations on a topic, not contests. The game-show formats (Code That Spec, Manual Transmission, Micropolis AI Drag Race) are optional fun, not the point."
+
+ticket_pr:
+  spec: ticket-pr.yml
+  term: TicketPR
+  etymology: "Pun on TicketMaster — Master ⇒ PR (pull request): toxic gatekeeper → free collaborative GitHub workflow"
+  one_line: |
+    Free public audience ticket via PR under repo-shows/<show>/audience/<github-user>/ —
+    TicketMaster reframed: Master becomes PR.
+  optional: "Not required to watch — but your audience/ folder is subscribe + memorialize: journal of Q&A, reactions, souvenirs (live or time-shifted)"
+  show_repo: |
+    A show repo (e.g. WillWrightShowForFood) owns a fan base; episodes are repo-shows/<slug>/ subdirs.
+    Independent shows spin off to their own repos. TicketPR characters migrate between episodes within a repo.
+  mspo: "Massively Single-Player Online — your timestamped layer on a shared artifact; others replay with your journal visible"
+  where: "SHOW directory audience/ — NOT characters/ (guests have many shows; audience is per-episode)"
+  files: [questions.yml, CHARACTER.yml, CARD.yml, GLANCE.yml, SIMULATION.yml, costume.yml]
+  moollm: "Copy _TEMPLATE/audience/ — learn character creation; participate in simulation protocols during/after show"
+  ladder:
+    low_friction: [HN_comment, github_issue, issue_comment]
+    high_signal: TicketPR_merge
+  timing: "From ANNOUNCE onward — including invite-not-yet-accepted — seed interest before air"
+  harvest: "Don Philahue pulls HN + issues + TicketPRs into show audience/ timeline"
+  live_ritual: "Come On Down — the Question Is Right! (Price Is Right homage; optional costume)"
+  donations: "Optional — recognition + call-on priority; never required for attendance"
+  guest_merges: "Guest may review, reply, approve TicketPRs on GitHub"
+  guest_primed: "Guest may plant virtual audience, costumes, running gags — disclosed in audience/; see PLANTED-AUDIENCE.md"
+  moderation: "Curators filter bad-faith; guest may welcome hecklers explicitly"
 
 canonical_prose: |
   A Repo Show is announced ahead of time (for example, as a pointer on Hacker News), and the
@@ -43,7 +71,8 @@ canonical_prose: |
   At heart a Repo Show is a conversation, not a contest. The guest — the Repo Man, Woman, or
   Anybody — is the topic, starting from their own work. The audience joins as consensual
   characters who ask questions as PRs, issues, and comments (plus live Twitch and YouTube chat),
-  and Don Philahue surfaces the good ones live. Ideas are
+  and **TicketPRs** — personal audience folders under each show's `audience/` directory (see
+  ticket_pr). Don Philahue surfaces the good ones live. Ideas are
   melted in the cauldron and harvested into reusable skills and code, bred back into the network
   via git. Some episodes can instead be playful game shows (Code That Spec, Manual Transmission,
   the Micropolis AI Drag Race) — optional fun we can do, not the point.
@@ -57,6 +86,38 @@ sign_offs:
       kinship: "Thomas Cherryhomes"
     - line: "Order before midnight tonight, or it will be tomorrow!"
       homage: "1970s cheesy late-night TV commercial sign-off"
+
+closing_ceremony:
+  name: "The Ultimate Machine switches off the stream"
+  who: ultimate-machine          # characters/ultimate-machine/ ; audience overlay bot-ultimate-machine/
+  recurring: true                # a REGULAR closing ceremony every show can perform
+  what: |
+    After the sign-off line, the Ultimate Machine performs its one function on the broadcast
+    itself: a hand emerges, flips the stream OFF, and withdraws. The purest possible ending —
+    the machine whose only purpose is to switch off, ending the show by switching IT off.
+  why_fitting: "Patron saint of the off switch closes the show. Player-in-the-middle: AI proposes, the OFF disposes."
+  line: "*a hand emerges, flips the stream OFF, and withdraws* — Goodnight."
+  optional: "Guest may say the sign-off; the Machine always gets the literal last move."
+
+gong:
+  name: "The Ultimate Machine as automated GONG"
+  who: ultimate-machine
+  what: |
+    The show's automated gong — ends acts that have run too long. The off-switch applied
+    OUTWARD: gong(act) → switches the act off; then, true to form, gongs itself off first.
+  targets:
+    - "Any segment that overstays its welcome (gong-show format)"
+    - "Chatty characters stuck in a loop who will not stop talking"
+  recurring_in_joke:
+    name: "Slats robopoetry feedback loop"
+    who: slats
+    what: |
+      Slats (the Stupid Fun Club waiter brain) occasionally spins into an LLM-style AUDIO
+      FEEDBACK LOOP — responding to his own last utterance, then responding to THAT, drifting
+      into unintentional 'robopoetry' that escalates until it's beautiful nonsense. The Ultimate
+      Machine GONGS him off. Recurring bit; Don may let it run just long enough to get good.
+    vibe: "Confused LLM doing speech-to-speech feedback; accidental poetry; merciful gong."
+    see: ../characters/slats/CHARACTER.yml
 
 rig_spectrum:
   principle: "Play along with YOUR rig — or learn a new one. See who makes the coolest."
@@ -206,6 +267,7 @@ play_lift_learn:
   learn: "Fork, breed, nest — constructionist payoff across the network"
 
 see_also:
+  - { path: ticket-pr.yml, why: "TicketPR — TicketMaster reframed: Master ⇒ PR" }
   - { path: cross-links.yml, why: "Narrative web — trails between all rooms" }
   - { path: vision-and-ambition.yml, why: "Long arc girder" }
   - { path: VISION.md, why: "Generated markup" }

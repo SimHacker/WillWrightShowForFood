@@ -78,6 +78,26 @@ backward post-mortem, same two people in the room. (See `../../SHOW.yml#the_arc`
 - **"One vision, not committee"** — Will: "I've never seen a product design through a committee that came out well." (Resonates with the solo-dev + auteur themes.)
 - **Data portability / hobby model** — games as train sets; persistent data moving between games. → directly the bridge / MSPO-RPG / universal-character thesis.
 
+## Image gallery (167 figures)
+
+*Sniff:* [`../GLANCE.yml`](../GLANCE.yml) · Don's Medium:
+[designing-user-interfaces-to-simulation-games](https://donhopkins.medium.com/designing-user-interfaces-to-simulation-games-bd7a9d81e62d)
+
+Curated entry points — every figure in [`images/`](images/) (article order):
+
+| Theme | Start here | Also |
+|-------|------------|------|
+| **Opening** | [Will + Terry at Stanford](images/003-will-wright-and-terry-winograd-at-stanford.png) | [monkey mocap suit](images/004-will-wright-wearing-a-monkey-motion-capture-suit.jpeg) |
+| **Chaim reverse diagrams** | [Simulate](images/016-chaim-gingold-s-simcity-reverse-diagrams-simulate.png) | [maps](images/018-chaim-gingold-s-simcity-reverse-diagrams-maps.png) · [Chaim CARD](../../../../characters/chaim-gingold/CARD.yml) |
+| **Post-mortems** | [SimEarth / SimAnt / SC2K](images/044-simearth-simant-and-simcity-2000.gif) | [SC2K snapshots](images/076-lots-of-cool-simcity-2000-screen-snapshots.png) |
+| **Dollhouse → Sims** | [Loading a world](images/078-loading-a-world-into-dollhouse.png) | [zoom levels](images/084-dollhouse-zoom-levels.png) · [puppet control](images/088-you-can-control-a-little-puppet.png) · [closing frame](images/167-maxis-released-dollhouse-as-the-sims-in-2000.jpeg) |
+| **UCC tools** | [Transmogrifier tutorial](images/133-the-sims-transmogrifier-turial-making-a-green-flamingo.jpeg) | [RugOMatic](images/137-the-sims-rugomatic-creating-picture-storytelling-rugs.jpeg) · [SimFreaks Laszlo mockup](images/138-unreleased-simfreaks-web-app-prototype-by-don-hopkins-using.jpeg) |
+| **Procedural rhetoric** | [Crowd Sitter](images/164-the-sims-crowd-sitter.jpeg) | [Dumbold machine](images/160-dumbold-voting-machine-for-the-sims-1.jpeg) · [wedding playset](images/147-simprov-wedding-playset-skins-and-objects-created-by-simbabe.jpeg) |
+| **TSO lore** | [Will's secret home](images/153-casual-nudity-at-will-wright-s-secret-home-in-the-sims-onlin.jpeg) | [UFO lab](images/156-ufological-research-labs-in-the-sims-online.jpeg) |
+| **Steering committee** | [Kissing behavior tree](images/157-early-simantics-behavior-tree-for-kissing-from-the-sims-stee.png) | [1998 demo source](../1998-06-04-sims-steering-committee-demo/) |
+
+**Portrait overlap:** [`../../../../characters/will-wright/media/`](../../../../characters/will-wright/media/) · Soviet hardware → [`russian-space-junk.md`](../../../../characters/will-wright/media/russian-space-junk.md)
+
 ## Provenance + ethics
 
 Faithful capture of Will's own words (the heartbeat: source, don't paraphrase).
@@ -91,3 +111,5 @@ Don found it. He mirrored it to YouTube with attributions, proofread the machine
 and transcluded the transcript + screen snapshots here. The `medium-article.md` layers Don's real-time
 notes from the talk (one layer written just after The Sims shipped) — elaborated over the years into the
 published article.
+
+**Earlier published stratum:** [2004 Winograd essay](../2004-01-12-winograd-ui-simulation-games/) — pre-Medium, no figures; compare to see how the write-up evolved. **Missing earliest stratum:** raw `.txt` notes from ~1996 (emailed to Will for review) — see that README TODO.

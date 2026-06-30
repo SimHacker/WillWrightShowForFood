@@ -1,0 +1,46 @@
+# yt-dlp title harvest from old-email threads
+# Generated 2026-06-29 — empty title = fetch failed or video unavailable
+
+titles:
+  -IV8hCvsXy0: "Seaman (Dreamcast) - Angry Video Game Nerd (AVGN)"
+  -exdu4ETscs: "The Sims, Pie Menus, Edith Editing, and SimAntics Visual Programming Demo"
+  2KfeHNIXYUc: null
+  8MYB9Z9TnhM: null
+  8QiPFmIMxFc: "Bret Victor Inventing on Principle"
+  8pTEmbeENF4: "Bret Victor   The Future of Programming"
+  8snnqQSI0GE: null
+  9G0r7jL3xl8: "Viewpoint demo — Scott Kim's PhD project, Stanford University 1988"
+  A1mqg4C0awA: null
+  BBVyCpmVQew: "Micropolis Web Space Inventory Cellular Automata Music 1"
+  CqNECXCd9iU: "Yoot Tower: The Sequel to SimTower"
+  EpKhh10K-j0: null
+  ImLZzXB9asw: null
+  Imu1v3GecB8: null
+  IsINJ8mlD5A: "C 32 Spreadsheet   1991"
+  Jvi98wVUmQA: null
+  KXrbqXPnHvE: "Empathy"
+  LmB7Q6wSQ9Y: "The Sims 1 Character Animation Exporter Demo"
+  N1Y-29tX0Co: "AfterEffects Aether Demo"
+  NXsUetUzXlg: null
+  Nzz0cFSmgiM: "FreeTheSims Sims Character Animation ActiveX Control Demo"
+  SAoOH_VTX6c: "Seaman (Dreamcast / MAC) Early Prototype | Yoot Saito Presentation"
+  TrScy1icWjI: null
+  _2yEHs_WLzQ: "Stupid Fun Club StoryMaker Demo"
+  _4ToEDrhxo0: null
+  _fVl4dGwUrA: "Multi Player SimCityNet for X11 on Linux"
+  dgrNeyuwA8k: "James Gosling -  Sun Microsystems - Bringing Behavior to the Internet - 1995-12-1"
+  edXRNtuAGTg: null
+  gRodlxUZ9SQ: "SimFaux Demo"
+  gdIO41Blysg: null
+  h3Yrhv33Zb8: "Aerosmith - Love In An Elevator"
+  i4mZuPZuFxo: null
+  jDrqR9XssJI: null
+  nsxoZXaYJSk: "Will Wright  - Maxis -  Interfacing to Microworlds  - 1996-4-26"
+  sMN1LQ7qx9g: "Unity3D Pie Menu Demo"
+  wlHGfNlE8Os: "Micropolis Web Demo 1"
+  zC52jE60KjY: "The Sims Steering Committee - June 4 1998"
+
+# Known from separate fetch when batch returned empty:
+overrides:
+  ImLZzXB9asw: "The Sims 1 Object Exporter Demo"
+  Imu1v3GecB8: null  # fill manually if needed

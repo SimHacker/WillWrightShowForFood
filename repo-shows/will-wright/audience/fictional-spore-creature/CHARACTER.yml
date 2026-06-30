@@ -1,0 +1,26 @@
+# Spore creature — generic player avatar fictional audience
+
+character:
+  name: Spore Creature (player avatar)
+  type: fictional_game_character
+  real_being: false
+  signifier: "🦠"
+  home: repo-shows/will-wright/audience/fictional-spore-creature/
+  origin: "Spore (2008) — cell to creature to tribe to space; procedural player authorship"
+
+representation:
+  fictional: true
+  not_official_ea: true
+  game: Spore
+
+authorship:
+  by: curator
+planted:
+  disclosure: true
+
+relationship: |
+  You gave me a mouth and legs in the editor. I became whatever the player wanted. I have
+  questions about the stages you cut.
+
+see_also:
+  - ../AUDIENCE-ROSTER-IDEAS.md

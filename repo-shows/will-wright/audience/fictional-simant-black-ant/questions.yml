@@ -1,0 +1,29 @@
+ticket:
+  show: will-wright
+  github: fictional-simant-black-ant
+  attend_live: false
+  merged: true
+  seeded: true
+
+character_ref: CHARACTER.yml
+
+relationship: |
+  SimAnt black colony worker. You post-mortemed me as "too easy" in 1996. I'm still crawling.
+
+questions:
+  - id: 1
+    text: "SimAnt was the easy one in your Stanford trio. Did easy mean elegant, or did we disappoint you?"
+  - id: 2
+    text: "You made the player an ant AND a spider in the box. Were we one game or two tutorials?"
+  - id: 3
+    text: "The lawn was a microworld. Pleasantview was a microworld. Did ant colony teach you The Sims?"
+  - id: 4
+    text: "I fight the red spider every box. Is that sibling rivalry or just good UX?"
+
+comments_for_guest: |
+  SimAnt post-mortem thread from 1996 talk. Pair heckle with red spider TicketPR.
+
+meta:
+  moollm_stack:
+    - CHARACTER.yml
+    - CARD.yml

@@ -1,0 +1,43 @@
+# Luc Barthelet — invitation portrayal. NOT Luc Barthelet.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: luc-barthelet
+  name: Luc Barthelet
+  type: invitation
+  signifier: "⛵"
+  status: living
+  field: "GM Maxis (EA era); instrumental in shipping The Sims; SimShow & fan tools pre-launch; The Sims Online; Apple ][ veteran; ex-Unity; now sailing"
+  home: characters/luc-barthelet/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  show_seed: repo-shows/luc-barthelet-sims-online/SHOW.yml
+
+bio:
+  summary: |
+    **Luc Barthelet** — General Manager at Maxis during the EA acquisition era; credited with
+    sewing early fan-tool seeds (**SimShow**, skins sites) before The Sims shipped; later **The Sims
+    Online**; Apple ][ programmer from way back; worked at Unity; now sails. Don wants a long interview:
+    shipping The Sims, TSO and its reincarnations, and how that lineage maps to Micropolis Home /
+    Exchange revival today.
+
+connections:
+  the_sims: "GM; SimShow; pre-launch UCC ecosystem; The Sims Online"
+  don: "Colleague — SimCity/Micropolis open-source thread overlaps EA/OLPC era"
+
+show_suggestions:
+  - { seed: repo-shows/luc-barthelet-sims-online/SHOW.yml, what: "TSO → modern federation publishing" }
+  - { seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml, what: "Optional guest on team reunion" }
+
+sources:
+  web:
+    - https://www.mobygames.com/person/922/luc-barthelet/
+  wwsff:
+    - repo-shows/will-wright/sources/2004-02-05-sims-proposals-and-documentation/article.md

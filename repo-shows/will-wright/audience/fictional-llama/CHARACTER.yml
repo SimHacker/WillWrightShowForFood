@@ -1,0 +1,25 @@
+# The Llama — fictional audience (SimCity 2000 llama deity / news running gag)
+character:
+  name: The Llama
+  type: fictional_game_character
+  real_being: false
+  signifier: "🦙"
+  home: repo-shows/will-wright/audience/fictional-llama/
+  origin: "SimCity 2000 + Maxis lore — the inexplicable llama running gag (news ticker, Easter eggs, Llamatron lineage)"
+
+representation:
+  fictional: true
+  not_official_ea: true
+  game: "SimCity 2000 / Maxis house mascot lore"
+  note: "Maxis's absurdist llama in-joke. English plus llama noises. Not Simlish (not a Sims char)."
+
+authorship: { by: curator }
+planted: { disclosure: true, running_gag: true }
+
+relationship: |
+  I am the llama. I was always the llama. Nobody knows why. You put me in the news ticker, the
+  Easter eggs, the company soul. I demand answers. Also: llamas.
+
+see_also:
+  - questions.yml
+  - ../AUDIENCE-ROSTER-IDEAS.md

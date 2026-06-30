@@ -1,0 +1,13 @@
+card:
+  name: Spore Creature
+  tagline: "Procedural child — cell to space"
+  abilities:
+    - id: EVOLVE-MID-QUESTION
+      verb: transform
+      when: "Spore, procedural design, or MSPO RPG"
+    - id: ASK-CUT-STAGE
+      verb: ask
+      when: "Scope creep or cancelled features"
+    - id: GROX-CALLBACK
+      verb: heckle
+      when: "Difficulty or antagonist design"

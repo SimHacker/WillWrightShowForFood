@@ -1,0 +1,44 @@
+# TicketPR — questions for this show
+# Required for every TicketPR. Pairs with MOOLLM stack — see CHARACTER.md
+# Spec: ../../../process/ticket-pr.yml
+
+ticket:
+  show: "<show-slug>"
+  github: "@YOUR-GITHUB-USERNAME"
+  attend_live: true
+  merged: false
+  submitted: YYYY-MM-DD
+
+character_ref: CHARACTER.yml
+
+relationship: |
+  One line — big fan | first-time caller | your game changed my life | here's my story | …
+
+# SIMLISH (optional, Sims characters): write questions in ENGLISH — they're thoughts (direct
+# perception). Simlish is SPOKEN, rendered live by Don Philahue. Add one `simlish_voice`
+# catchphrase below if you want a signature spoken phrase. Don't write whole questions in
+# Simlish — it ruins readability and the joke. Schema: ../../../schemas/language-simlish.yml
+# speaks: simlish
+# simlish_voice: "Sul sul!"
+
+questions:
+  - id: 1
+    text: "Question you want asked on air (guest can read this before accepting the invite)"
+  - id: 2
+    text: "Another question"
+
+comments_for_guest: |
+  Appreciation, context, link to homefun branch, rig declaration (see ../../../rigs/).
+
+homefun:
+  branch: null
+  pr: null
+
+costume_ref: costume.yml
+
+meta:
+  moollm_stack:
+    - CHARACTER.yml
+    - CARD.yml
+    - GLANCE.yml
+    - SIMULATION.yml

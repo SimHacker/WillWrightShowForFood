@@ -2,8 +2,8 @@
 
 *Submitted by Don Hopkins · Thu, 2004-02-19 04:33*
 *Tags: C++ MaxScript Character Animation*
-*Source: <http://www.donhopkins.com/drupal/node/30>*
-*Extracted from Don Hopkins archival prompts (2026-06-29). Cleaned for republishing in [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood).*
+
+*Extracted from Don Hopkins archival prompts (2026-06-29). Republished in [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood).*
 
 ---
 

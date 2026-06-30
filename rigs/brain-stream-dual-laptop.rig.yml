@@ -87,7 +87,7 @@ components:
     plugin: kernel/moollm-plugin.yml
     skills_loaded: [cursor-mirror]
 
-# --- THE PHYSICAL SETUP (schema 0.2 `stage`) ------------------------------
+# THE PHYSICAL SETUP (schema 0.2 `stage`)
 stage:
   machines:
     - id: mac-main

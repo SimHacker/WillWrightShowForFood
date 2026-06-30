@@ -1,0 +1,25 @@
+# SimCity Advisor — fictional audience (SimCity advisor / news pop-up)
+character:
+  name: SimCity Advisor
+  type: fictional_game_character
+  real_being: false
+  signifier: "📋"
+  home: repo-shows/will-wright/audience/fictional-simcity-advisor/
+  origin: "SimCity — the advisor / news pop-up that nags the mayor about budgets, traffic, crime"
+
+representation:
+  fictional: true
+  not_official_ea: true
+  game: SimCity
+  note: "The voice of the city's needs. English (SimCity citizens don't speak Simlish)."
+
+authorship: { by: curator }
+planted: { disclosure: true }
+
+relationship: |
+  I am the pop-up you clicked away. The advisor you ignored. Forty years of 'Mayor, the
+  citizens demand a stadium.' Now I demand a moment of YOUR time.
+
+see_also:
+  - questions.yml
+  - ../AUDIENCE-ROSTER-IDEAS.md

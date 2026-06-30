@@ -1,0 +1,49 @@
+# Phil Salvador — invitation portrayal. NOT Phil Salvador.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: phil-salvador
+  name: Phil Salvador
+  type: invitation
+  signifier: "🛢️"
+  status: living
+  field: "Game historian; The Obscuritory; Video Game History Foundation; SimRefinery archivist"
+  home: characters/phil-salvador/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  show_seed: repo-shows/phil-salvador-simrefinery/SHOW.yml
+
+bio:
+  summary: |
+    **Phil Salvador** researches forgotten and corporate training games. His **Maxis Business
+    Simulations** history and **SimRefinery** analysis turned a lost Chevron training floppy into
+    a global preservation story (Ars Technica → Internet Archive, 2020). Don wants him on camera —
+    awesome archivist, perfect guest for business-sims + preservation ethics.
+
+connections:
+  simrefinery: "Primary scholar — analysis, Tour Book context, IA play instructions"
+  maxis_business_sims: "MBS division history — SimHealth, refinery sims, corporate training"
+  vghf_source_project: "Yoot Tower / SimTower open source — Rich Whitehouse; phil@gamehistory.org (Jan 2024)"
+  don: "Cited in Jess Bird BBC email roster; mutual preservation interest"
+
+show_suggestions:
+  - { seed: repo-shows/phil-salvador-simrefinery/SHOW.yml, what: "Finding SimRefinery + MBS deep dive" }
+  - { seed: repo-shows/will-wright/catalogs/maxis/, what: "Metadata catalog — business sims section" }
+  - { seed: repo-shows/will-wright/sources/2024-yoot-tower-open-source/, what: "VGHF formal source release for Yoot Tower" }
+
+sources:
+  web:
+    - https://obscuritory.com/sim/simrefinery-analysis/
+    - https://obscuritory.com/sim/maxis-business-simulations/
+    - https://arstechnica.com/gaming/2020/06/a-lost-maxis-sim-game-has-been-discovered-by-an-ars-reader-uploaded-for-all/
+  wwsff:
+    - repo-shows/will-wright/sources/simrefinery-recovery/
+    - repo-shows/will-wright/sources/2024-yoot-tower-open-source/
+    - DonHopkins/research/sources/jess-bird-bbc-email-2025.yml

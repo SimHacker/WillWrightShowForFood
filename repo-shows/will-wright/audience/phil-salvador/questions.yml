@@ -1,0 +1,33 @@
+# RESERVED for Phil Salvador. Real person, consent NOT yet asked.
+# Curators: do NOT fabricate his questions. This awaits his own submission after invitation.
+ticket:
+  show: will-wright
+  github: phil-salvador        # his own handle if/when he accepts
+  attend_live: invited
+  merged: false
+  authored_by: self
+  consent: not_yet_asked
+  awaiting_author: true
+
+character_ref: CHARACTER.yml
+
+relationship: |
+  Library Director at the Video Game History Foundation; The Obscuritory; the archivist who
+  recovered SimRefinery. Invited to sit up front beside the fictional Museum Curator.
+
+questions: []   # intentionally empty — Phil writes his own once he consents
+
+invitation_note: |
+  Phil — you're invited to Will Wright's first Repo Show, in a front box seat next to the
+  (fictional) Museum Curator who honors archivists like you. Your SimRefinery recovery ties
+  right into Micropolis (the open-source SimCity). If you'd like a TicketPR, this seat is yours:
+  add your own questions here, attend the live stream if you wish, or just say hello. No words
+  will be put in your mouth — this is reserved, blank, and yours.
+
+topics_you_might_enjoy_curator_notes: |
+  NOT Phil's questions — curator notes only, for context: game preservation, source-code
+  archiving, SimRefinery, the ethics of freeing dead games, what survives of emergent play.
+
+comments_for_guest: |
+  Reserved real guest, consent pending. Box seat with fictional-museum-curator. Empty questions
+  by design until Phil submits.

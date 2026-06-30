@@ -1,0 +1,34 @@
+# GLANCE — audience MOOLLM character (TicketPR)
+# Copy with CHARACTER.yml + CARD.yml into audience/<your-github-username>/
+# Full guide: CHARACTER.md | Schema: ../../../schemas/audience-character.yml
+
+what: |
+  Your self-authored MOOLLM character for ONE Repo Show — not a guest portrayal.
+  TicketPR questions + CARD abilities + simulation hooks for during/after the show.
+
+why:
+  - Learn MOOLLM character creation by doing (pyramid: GLANCE → CARD → CHARACTER → moollm SKILL)
+  - Guest sees you as a character, not only a GitHub handle
+  - Participate in MSPO RPG async audience + inter-character protocols post-show
+
+when:
+  - '"Get a TicketPR" → copy this folder, fill CHARACTER + questions.yml, open PR'
+  - '"Ask on air" → ASK-QUESTION ability + questions.yml list'
+  - '"Come On Down" → WEAR-COSTUME + costume.yml'
+
+read_order:
+  - CHARACTER.md
+  - GLANCE.yml
+  - CARD.yml
+  - CHARACTER.yml
+  - questions.yml
+
+compose_with:
+  - SimHacker/moollm/skills/character
+  - SimHacker/moollm/skills/advertisement
+  - ../../../skills/repo-show/
+
+related:
+  - ../../../process/ticket-pr.yml
+  - ../../../characters/_TEMPLATE/
+  - https://github.com/SimHacker/moollm/skills/character/GLANCE.yml

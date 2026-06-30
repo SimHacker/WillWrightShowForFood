@@ -14,17 +14,15 @@ representation:
   governed_by: ../../schemas/portrayal-standards.yml
   consent_level: 1
   authored_by: don-hopkins
-  note: "Don has tried to reach Doug and not yet gotten a reply. A celebrated subject + hoped-for guest; portrayal is public-record + Don's own account. Doug may shape, decline, or delete anytime."
+  note: "Celebrated subject + hoped-for guest; portrayal is public-record + Don's own account. Doug may shape, decline, or delete anytime."
   subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
   status: dream_guest
   consent: not_yet_asked
-  stretch_goal: "Track down Doug and invite him to the Spot / Brian / Will reunion Repo Show."
-  outreach: "Don has reached out — no reply yet (as of 2026)."
-  document: ../../repo-shows/brian-eno/invitation.md   # would join the Eno / generative-systems show
+  stretch_goal: "Invite Doug to the Spot / Brian / Will reunion Repo Show — honoring music by transforming it."
+  document: ../../repo-shows/brian-eno/invitation.md
   show_seed: repo-shows/brian-eno/
-  contact_path: "Outreach attempted directly; also reachable through the SF music scene (Waycross / ENORCHESTRA) and via Brian Eno's circle."
 
 bio:
   summary: |

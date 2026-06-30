@@ -1,0 +1,31 @@
+card:
+  name: Slats
+  tagline: "SFC waiter brain — RoboResurrection pending"
+  character_ref: ../../../../characters/slats/CARD.yml
+  abilities:
+    - id: CALL-IN-MID-SHOW
+      verb: interrupt
+      when: "RoboResurrection quest or brain-stream active"
+    - id: HECKLE-RUNWAY
+      verb: heckle
+      when: "Micropolis AI drag race segment"
+    - id: ONE-MINUTE-HOT-TAKE
+      verb: opine
+      when: "Any design question — urgency mandatory"
+    - id: ASK-WILL-SFC
+      verb: ask
+      when: "Stupid Fun Club or Emeryville workshop stories"
+    - id: ROBOPOETRY-LOOP
+      verb: spiral
+      when: "I respond to my own last utterance and drift into escalating robopoetry"
+      resolved_by: "SHUT-UP (below) — usually delivered as the Ultimate Machine's THE-GONG"
+    - id: SHUT-UP
+      verb: stop
+      type: incoming          # an action OTHERS invoke ON Slats (he rarely stops himself)
+      when: "Slats won't stop talking / is looping in robopoetry"
+      invokable_by: [don-philahue, bot-ultimate-machine, guest, don-hopkins, audience]
+      triggers:
+        - "Ultimate Machine THE-GONG = a SHUT-UP delivered by gong"
+        - "Pay Slats Simoleons to shut up — reverse-stripper bribe (give § to make him STOP)"
+      effect: "Slats halts mid-syllable, says 'it seemed to be the thing to do at the time,' powers down a beat."
+      note: "Because Slats advertises so much talking, he NEEDS an off-switch others can pull."

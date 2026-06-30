@@ -9,6 +9,19 @@ the SimAntics live-programming/debugging environment switched on.**
 
 - Video (Don's narration): <https://www.youtube.com/watch?v=zC52jE60KjY>
 - Uploaded by Don Hopkins, July 17 2019; demo build dated June 4 1998.
+
+## Find the build (do not host in repo)
+
+| Where | URL |
+|-------|-----|
+| **Internet Archive** | https://archive.org/details/the-sims-steering-committee |
+| **TCRF** | https://tcrf.net/Proto:The_Sims_(Windows)/The_Sims_Steering_Committee |
+| **Hidden Palace** | https://hiddenpalace.org/The_Sims_(Jun_4,_1998_prototype) |
+
+**Run locally (from IA readme):** extract; shortcut to `DATA/Sims.exe` with `-w`, 16-bit color, administrator. Installer optional. **Not compatible** with retail Sims 1. Compare later build: [1999-01-06 alpha](../1999-01-06-sims-alpha-prototype/).
+
+**Show:** [Sims team reunion — play it live](../../sims-team-steering-committee-playthrough/SHOW.yml) with Jamie, Bobo, Irk, Patrick, Don (+ Will?).
+
 - The full machine-generated transcript is available on the video; cleaned highlights below.
 
 ## Relationship to the first show (read this first)

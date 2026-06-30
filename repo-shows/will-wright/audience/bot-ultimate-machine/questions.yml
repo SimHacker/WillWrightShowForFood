@@ -1,0 +1,33 @@
+ticket:
+  show: will-wright
+  github: bot-ultimate-machine
+  attend_live: false
+  merged: true
+  submitted: 2026-06-29
+  seeded: true
+
+character_ref: CHARACTER.yml
+canonical_character: ../../../../characters/ultimate-machine/CHARACTER.yml
+
+relationship: |
+  Shannon's desk toy. Minsky's ultimate machine. One switch. One refusal. Your questions
+  are already too long.
+
+questions:
+  - id: 1
+    text: "You optimized for expansion. I optimize for rest. Which simulation is saner?"
+  - id: 2
+    text: "Every Sim has sixteen wants. I have one: OFF. Did you forget minimalism on purpose?"
+  - id: 3
+    text: "Slats talks until Don reboots him. I gong myself. Why did you surround yourself with machines that disagree?"
+  - id: 4
+    text: "Clarke called me sinister. I call myself homeostatic. Will — what are you optimizing for now that you are not optimizing SimCity?"
+
+comments_for_guest: |
+  Questions delivered as koans — Don may read them slowly. Never attribute invented lines to
+  Minsky/Shannon; origin history lives in characters/ultimate-machine/.
+
+meta:
+  moollm_stack:
+    - CHARACTER.yml
+    - CARD.yml

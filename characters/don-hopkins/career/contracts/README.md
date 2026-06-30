@@ -5,11 +5,15 @@ SimCity as free open source software (GPL-v3) for the One Laptop Per Child proje
 **Micropolis**. Don Hopkins is a party to these contracts, published them on his web server, and
 has linked them from Hacker News; they are mirrored here as primary evidence.
 
+**Policy (Don, Jun 2026):** Document the full chain — DUX is long gone. Include DUX↔Don, DUX↔Maxis, EA↔OLPC, GPL/name licenses, and **Transmogrifier** distribution terms. See also [`transmogrifier-distribution-license-notes.md`](transmogrifier-distribution-license-notes.md) and [`../../../repo-shows/will-wright/sources/maxis-licenses-chain-of-custody/`](../../../repo-shows/will-wright/sources/maxis-licenses-chain-of-custody/).
+
 | File | Parties | Date | What it establishes |
 |------|---------|------|---------------------|
 | [`dux-don-hopkins-contract.txt`](dux-don-hopkins-contract.txt) | DUX Software (Bob Adams) ↔ Don Hopkins | 18 Feb 1992 | Don's Unix/HyperNeWS SimCity work is "work for hire"; all rights assigned to DUX & Maxis |
 | [`dux-maxis-contract.txt`](dux-maxis-contract.txt) | DUX Software (Robert Adams) ↔ Maxis (Jeff Braun) | 19 Jul 1991 | The license to port SimCity to Unix — and the 10-year reversion clause (rights return to Maxis, later EA) |
 | [`olpc-ea-contract.pdf`](olpc-ea-contract.pdf) | Electronic Arts ↔ One Laptop Per Child | 4 Sep 2007 | GPL-v3 publishing **with** Exhibit A modifications protecting EA's SimCity trademark |
+| [`transmogrifier-ea-tools-eula.txt`](transmogrifier-ea-tools-eula.txt) | EA ↔ end user (Transmogrifier downloader) | © 2000 | EA Tools click-through license — Wayback harvest |
+| [`transmogrifier-distribution-license-notes.md`](transmogrifier-distribution-license-notes.md) | Maxis/EA ↔ Don (distributor) | ~2000 | Don-only web distribution — **distributor agreement text still TODO** |
 
 ## The two licenses (linked, not copied)
 

@@ -8,13 +8,13 @@ meta:
   one_liner: "While Cursor grinds, the audience and host EXPLORE the brain stream, play, and dogfood the live app — no dead air, ever."
   principle: "Conscientiously design the wait. The interface should be FUN: exploring, analyzing, visualizing, chatting, composing, and playing the very thing we're building."
 
-# --- WHY -----------------------------------------------------------------
+# WHY
 why: |
   LLM turns have latency. Passive 'spinner' time is wasted attention and lost donations.
   Turn the wait into the most engaging part: a playground over the brain stream + the live
   game platform itself. The overlay IS a Micropolis-GUI app, so 'waiting' = playing in it.
 
-# --- ACTIVITIES (always something to do) ----------------------------------
+# ACTIVITIES (always something to do)
 activities:
   explore_analyze_visualize:
     basis: "Shneiderman's Visual Information-Seeking Mantra: OVERVIEW first, ZOOM & FILTER, then DETAILS-ON-DEMAND."
@@ -35,7 +35,7 @@ activities:
     note: "The overlay runs the real Micropolis GUI — so waiting = playing the game/city/home and the Bubble Wrangler itself (bubble-wrangler.yml: bouncy windows, piecraft)."
     examples: ["mess with Micropolis", "rearrange/throw windows", "build with piecraft", "mini-games keyed to stream events"]
 
-# --- DOGFOODING THE LIVE APP (eat our own dogfood, on air) ----------------
+# DOGFOODING THE LIVE APP (eat our own dogfood, on air)
 dogfooding:
   what: "Play AND debug the live-running stream-gateway app we're developing, with hot loading — on stream."
   hot_reload_problem:
@@ -52,7 +52,7 @@ dogfooding:
     visual_cue: "Show pending-change count + what changed (which files) before reload — informed consent."
   ties: "Same family as overlay-viewer prime_directive: STABLE, user-controlled, never jerk the user."
 
-# --- GAMES AS OVERLAY -----------------------------------------------------
+# GAMES AS OVERLAY
 games_overlay:
   idea: "Game platform as overlay literally comes into PLAY — segments, mini-games, and the city/home sim run over/around the brain stream."
   hooks: "Stream events drive game events (a tool_call spawns something; a commit triggers a flourish; cost milestones unlock bits)."

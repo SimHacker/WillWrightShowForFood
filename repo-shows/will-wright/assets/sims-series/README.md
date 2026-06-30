@@ -1,28 +1,65 @@
 # Sims series assets
 
-Global gallery and text artifacts for the **Will Wright Repo Show** and the broader Sims content-creation story (Transmogrifier, SimFreaks, SimSlice, SimProv, procedural rhetoric).
+Global gallery and text artifacts for the **Will Wright Repo Show** and the broader Sims
+content-creation story (Transmogrifier, SimFreaks, SimSlice, SimProv, procedural rhetoric).
 
-Audience-facing material lives here; the raw prompt dump and staging copies remain in the private `DonHopkins` repo.
+*Sniff:* [`GLANCE.yml`](GLANCE.yml) · **Catalogs:** [`../catalogs/`](../catalogs/)
 
-## Themes
+Scroll for themes and essays — each subfolder has its own README where images live.
 
-| Folder | What | Show tie-in |
-|--------|------|-------------|
-| [dumbold-voting-machine/](dumbold-voting-machine/) | Interactive agitprop object — crowds, pie menus, EFF/Diebold dialogs | Will Wright, Ian Bogost (procedural rhetoric) |
-| [simfreaks-openlaszlo-catalog/](simfreaks-openlaszlo-catalog/) | Don's OpenLaszlo reimagination of SimFreaks CMS | Heather & Steve Alvey show |
-| [simfreaks-content-gameplay/](simfreaks-content-gameplay/) | SimFreaks / SimProv custom content in-game | Heather & Steve Alvey show |
-| [simslice/](simslice/) | SliceCity and simslice.com objects | Steve Alvey, data portability |
-| [simantics-objects/](simantics-objects/) | Pie menus, master controllers, composable SimAntics objects | Will Wright, send-code-not-commands |
-| [people-and-events/](people-and-events/) | Conference / community photos | Various guests |
+---
 
-## Text artifacts
+## Gallery themes
 
-- [micropolis-publishing-vision.md](micropolis-publishing-vision.md) — CMS vision (SimFreaks → Micropolis publishing)
-- [inclusivity-paper-draft.md](inclusivity-paper-draft.md) — QGCon paper seed ("How Inclusivity Saved The Sims")
-- [transmogrifier-story.md](transmogrifier-story.md) — name origin, docs, Will/Chris emails
-- [dumbold-voting-machine.md](dumbold-voting-machine.md) — Medium article summary + links
-- [maxis-people.md](maxis-people.md) — verified public roster (nicknames, spelling)
-- [bibliography/](bibliography/) — curated article projection
+**[dumbold-voting-machine/](dumbold-voting-machine/)**  
+Interactive agitprop — crowds, pie menus, EFF/Diebold dialogs. Institutional farce register;
+pair with SimProv wedding playset.
+
+**[simfreaks-openlaszlo-catalog/](simfreaks-openlaszlo-catalog/)**  
+Don's OpenLaszlo reimagination of the SimFreaks CMS — mockups behind the 2005 Laszlo essay.
+
+**[simfreaks-content-gameplay/](simfreaks-content-gameplay/)**  
+SimFreaks / SimProv custom content in-game — proof the catalogs aren't vapor.
+
+**[simslice/](simslice/)**  
+SliceCity and simslice.com objects — SimCity nested inside The Sims.
+
+**[simantics-objects/](simantics-objects/)**  
+Pie menus, master controllers, composable SimAntics objects — send-code-not-commands trail.
+
+**[people-and-events/](people-and-events/)**  
+Conference and community photos — faces behind the nicknames in [`maxis-people.md`](maxis-people.md).
+
+---
+
+## Essays & long reads
+
+**[procedural-rhetoric-inclusion-agitprop.md](procedural-rhetoric-inclusion-agitprop.md)**  
+Wedding playset vs Dumbold — two registers of woke procedural rhetoric on the same engine.
+Ian Bogost episode seed.
+
+**[transmogrifier-story.md](transmogrifier-story.md)**  
+Name origin, EA legal stand-down, Will/Chris emails — the modder toolchain story.
+
+**[micropolis-publishing-vision.md](micropolis-publishing-vision.md)**  
+From SimFreaks CMS to Micropolis Home federation — publishing vision essay.
+
+**[inclusivity-paper-draft.md](inclusivity-paper-draft.md)**  
+QGCon paper seed — "How Inclusivity Saved The Sims."
+
+**[family-manifesto.md](family-manifesto.md)**  
+Archival motivation for family-play content and republishing the wedding kit.
+
+**[dumbold-voting-machine.md](dumbold-voting-machine.md)**  
+Medium article summary + links to the full source article in `sources/`.
+
+**[maxis-people.md](maxis-people.md)** · **[maxis-people.yml](maxis-people.yml)**  
+Verified public roster — nicknames, spelling, show cross-links.
+
+**[bibliography/](bibliography/)**  
+Curated article projection — [`HIGHLIGHTS.md`](bibliography/HIGHLIGHTS.md) for the best hits.
+
+---
 
 ## Provenance
 

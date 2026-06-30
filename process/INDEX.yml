@@ -17,6 +17,12 @@ show_and_network:
   repo-show-format.yml:
     markup: FORMAT.md
     topic: "Canonical Repo Show definition — RTFR, rigs, cauldron harvest"
+  ticket-pr.yml:
+    topic: "TicketPR — Master ⇒ PR; MOOLLM audience character templates in _TEMPLATE/audience/"
+  play-along-skills.yml:
+    topic: "MOOLLM-core Play Along skills (Anthropic-format wrappers) + preloaded per-show runtime — the show as MOOLLM's distribution hook; Embrace/Extend/Share"
+  repo-show-regulars.yml:
+    topic: "Cross-show audience mascots — balcony hecklers, recurring bots and Sims regulars"
   showmaker-network.yml:
     topic: "Graph of linked shows — PR adds nodes"
   live-repo.yml:
@@ -46,6 +52,10 @@ competition_and_rigs:
 retro_stacks:
   apple2-emulator-stack.yml:
     challenge: challenges/apple2-drive.yml
+  apple2-fujinet-bridge.yml:
+    challenge: challenges/apple2-drive.yml
+    guest: ../characters/thomas-cherryhomes/
+    note: "Three-phase FujiNet bridge — native / browser / optional WASM hub"
   pdp10-its-stack.yml:
     challenge: challenges/pdp10-maclisp-drive.yml
     guest: ../characters/lars-brinkhoff/

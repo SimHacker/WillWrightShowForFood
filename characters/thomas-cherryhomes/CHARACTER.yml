@@ -22,8 +22,10 @@ invitation:
   show_seed: repo-shows/thomas-cherryhomes/
   paired_guest: lars-brinkhoff
 
+ideas: ideas.md
+
 bio:
-  summary: "**Thomas Cherryhomes** (@tschak / tschak909) — Retrocomputing hacker/engineer; firmware developer and co-founder of **FujiNet**, the open-source software-defined network peripheral that puts the *internet* on retro machines (Atari 8-bit → Apple II, Coleco Adam, MS-DOS RS-232, Atari 2600, MSX, Intellivision, TRS-80 CoCo, and more). \"Bus over IP,\" an `N:` network device, a cross-platform **Game Lobby**, high-score servers, and a disk-less **NOS**. Also runs **IRATA.ONLINE** (a PLATO service) and"
+  summary: "**Thomas Cherryhomes** (@tschak / tschak909) — Retrocomputing hacker/engineer; firmware developer and co-founder of **FujiNet**, the open-source ESP32 network peripheral that puts the *internet* on retro machines (Atari 8-bit, Apple II, Coleco Adam, MS-DOS RS-232, Atari 2600, TRS-80 CoCo, MSX/Intellivision in bringup — 5,000+ users, ~dozen vendors). \"Bus over IP,\" an `N:` network device, TNFS/SMB mounts, **fish** (TNFS search shell), **Netstream** (Midi Maze over UDP), cross-platform **FujiNet Battleship** + **Game Lobby**, disk-less **NOS**, **FujiNet-PC** + **Fujisan** emulator integration. Also runs **IRATA.ONLINE** (PLATO), **PLATOTerm**, and writes \"The FujiNet Report\" in revived *Compute's Gazette*. VCF SoCal Feb 2026 state-of-the-union."
 
 sources:
   wikipedia: null

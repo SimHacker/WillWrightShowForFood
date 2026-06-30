@@ -9,7 +9,7 @@ meta:
   builds_on: "cursor-mirror designs/IMPROVEMENT-MAP.md#R5 (Live Daemon / Watch Mode — designed, not built)"
   goal: "Emit normalized brain events the instant Cursor produces them, with privacy redaction, onto the stream-gateway bus."
 
-# --- WHERE THE DATA LIVES (already reverse-engineered by cursor-mirror) ----
+# WHERE THE DATA LIVES (already reverse-engineered by cursor-mirror)
 # Two tiers: a cheap plaintext tail (ship today) and the rich structured DB.
 sources:
   tier_a_transcript_tail:
@@ -35,7 +35,7 @@ sources:
     what: "Network proxy in front of the model endpoint (see cursor-mirror HAMEDMP-CURSORLENS reference)."
     status: optional
 
-# --- SQLITE CROSS-REFERENCE (the transcript is NOT the whole story) --------
+# SQLITE CROSS-REFERENCE (the transcript is NOT the whole story)
 # cursor-mirror's universal model (reference/universal/CURSOR-SQLITE-MODEL.yml,
 # assembled from ~25 sources) is fluent in Cursor's file formats/schemas. Use it:
 # the transcript .txt is the real-time spine, but MUCH more lives in SQLite.
@@ -62,7 +62,7 @@ sqlite_cross_reference:
     powers: ["overlay search/filter/score", "Shneiderman infovis queries", "post-run forensics", "replay"]
   read_only_to_cursor: "We only READ Cursor's DBs (WAL read-only). All writes go to OUR derived DB."
 
-# --- SESSION CAPTURE (the performance as a portable artifact) --------------
+# SESSION CAPTURE (the performance as a portable artifact)
 # Start EMPTY at showtime → fill live → seal → analyze / upload / replay.
 session_capture:
   one_liner: "Each screencast performance is ONE self-contained SQLite file: born empty, filled live, sealed at the end."
@@ -91,7 +91,7 @@ session_capture:
     conclusion: "THINKING + tool results + token counts come from SQLite, not the transcript. SQLite tap is REQUIRED for the brain's thinking and is the primary source; transcript is the fast first-light proof."
     composer_index: "composerData:* has fullConversationHeadersOnly [{bubbleId,type}] → ordered walk; latestConversationSummary for summaries."
 
-# --- MITM PROXY (optional; when wire-level data is worth the pain) ---------
+# MITM PROXY (optional; when wire-level data is worth the pain)
 mitm_proxy:
   verdict: "NOT needed for v1. The SQLite tap already yields thinking, tool args/results, and token counts. Treat MITM as a later, optional enhancement."
   what_it_adds_over_sqlite:
@@ -105,7 +105,7 @@ mitm_proxy:
   prior_art: "CursorLens (base-URL override, gpt- models), llm-interceptor, re-cursor (mitmproxy scripts), CursorBridge/factory-cursor-bridge (BYOK), eisbaw/cursor_api_demo (protobuf decode)."
   when_it_makes_sense: "If you specifically need the exact system prompt / full sent context on stream, or provider-agnostic spend, AND can absorb the protobuf brittleness. Otherwise: SQLite tap."
 
-# --- SPEND TRACKING (show the cost to the audience) -----------------------
+# SPEND TRACKING (show the cost to the audience)
 spend_tracking:
   why: "A live cost ticker is honest AND a donation nudge — 'this thought cost $0.12'."
   sources:
@@ -117,7 +117,7 @@ spend_tracking:
   overlay_uses: ["cost ticker (collapsed badge)", "per-node cost in importance scoring", "donation call-to-action tie-in"]
   caution: "Spend numbers pass the same privacy gate; round/aggregate if exact figures feel too revealing."
 
-# --- THE DAEMON -----------------------------------------------------------
+# THE DAEMON
 daemon:
   command: "cursor-mirror watch --live [--composer <id|current>] [--source transcript|db|both] [--sink sse|stdout|file]"
   loop:
@@ -136,7 +136,7 @@ daemon:
     - "If transcript rotates / composer switches, re-resolve and continue."
     - "Survive Cursor restart; resume from persisted high-water mark."
 
-# --- NORMALIZED OUTPUT ----------------------------------------------------
+# NORMALIZED OUTPUT
 emits:
   schema: ../../process/brain-stream.yml#event_schema
   event_examples:
@@ -148,7 +148,7 @@ emits:
     - { type: shift, payload: { text: "switched model / gear" } }
     - { type: summary, payload: { summary: "rolling paragraph for chat" } }
 
-# --- PRIVACY (gate BEFORE the bus — non-negotiable) -----------------------
+# PRIVACY (gate BEFORE the bus — non-negotiable)
 privacy:
   pipeline: [path_strip, secret_scan, private_repo_filter, llm_redact_and_mipmap, optional_delay, visibility_tag]
   llm_redact_and_mipmap:
@@ -162,7 +162,7 @@ privacy:
   visibility_tag: "Tag each event overlay|chat|full|redacted (brain-stream.yml#fields.visibility)."
   kill_switch: "Hotkey/CLI `cursor-mirror watch --pause` — instantly stop emitting (panic button)."
 
-# --- CONTROL SURFACE ------------------------------------------------------
+# CONTROL SURFACE
 control:
   cli:
     - "cursor-mirror watch --live --sink sse        # feed the gateway"

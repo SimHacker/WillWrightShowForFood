@@ -7,7 +7,7 @@ meta:
   status: spec
   one_liner: "Swappable summarizer providers behind one interface — remote first, local later, off the Mac if it helps."
 
-# --- KEY INSIGHT: REDACT + MIPMAP IN ONE CALL -----------------------------
+# KEY INSIGHT: REDACT + MIPMAP IN ONE CALL
 # We ALREADY have to LLM-redact every string before the bus. So the SAME completion
 # also emits the whole mip ladder. One call → redacted text + all LODs. Amortize the
 # ping-pong: one round-trip per node (batched), not one per LOD.
@@ -18,7 +18,7 @@ fused_call:
   amortize: "Batch dirty nodes per settle tick → one request carries many nodes × all LODs; LAN/Remote RTT paid once."
   cache: "Store the whole ladder at once (cursor-tap.yml#our_derived_db table mips)."
 
-# --- STYLIZED SUMMARIZATION DICTIONARY (coarse LODs) ----------------------
+# STYLIZED SUMMARIZATION DICTIONARY (coarse LODs)
 # Supplied to the model as instructions + a dictionary so coarse rungs are glanceable.
 stylization:
   symbols:
@@ -30,7 +30,7 @@ stylization:
   techniques: [intelligent_stemming, preferred_acronyms, k_line_symbols, app_specific_glyphs, focus_sensitive_ellipsis]
   dictionary: "A pluggable dictionary maps concepts → symbols/acronyms; per-app + per-channel overrides."
 
-# --- PER-CHANNEL RULES (content type drives summarization + redaction) -----
+# PER-CHANNEL RULES (content type drives summarization + redaction)
 # Different channels get different rules + dictionaries, like a language mode per block.
 channels:
   user_prompt:   { redact: "light", style: "keep intent verbatim; pin asks", note: "what Don typed" }
@@ -42,7 +42,7 @@ channels:
   markdown:      { redact: "medium", style: "respect block language modes; ignore html tags/attrs but KEEP text" }
   per_block_language: "Treat typed markdown fenced blocks by their language mode (json/yaml/bash/...) — each its own rule + view."
 
-# --- THE INTERFACE (all providers implement this) -------------------------
+# THE INTERFACE (all providers implement this)
 interface:
   call: "process(text, channel, scope) -> { redacted_full, mips, flags }   # fused redact+mipmap"
   legacy: "summarize(text, lod) still available for single-LOD top-ups"
@@ -52,7 +52,7 @@ interface:
     - "Bounded latency: provider declares typical ms; slow providers run async, never block the overlay."
     - "Degrade: on error/timeout, return truncation fallback (robust-first), mark mips 'provisional'."
 
-# --- PROVIDERS (registry; pick per-deployment or per-LOD) ------------------
+# PROVIDERS (registry; pick per-deployment or per-LOD)
 providers:
   remote_openai:
     kind: remote
@@ -80,7 +80,7 @@ providers:
     pros: "free; FAST on NVENC-class GPU; KEEPS LOAD OFF THE MAC (preferred local option)"
     cons: "needs the PC up + a tiny HTTP summarizer service; LAN round-trip (fine, debounced)"
 
-# --- PLACEMENT GUIDANCE ---------------------------------------------------
+# PLACEMENT GUIDANCE
 placement:
   default_path: "remote_openai (phase 1) → local_pc_ollama (phase 5, free + off the Mac)."
   rule: "Prefer getting the summarizer OFF the Mac so it never slows Cursor. PC GPU is the natural home."
@@ -89,14 +89,14 @@ placement:
     batching: "coalesce dirty nodes into one batched request per settle tick; LAN RTT amortized."
     acceptable: "Yes — summaries are async + cached; a few-hundred-ms hop never blocks reading."
 
-# --- ROUTING (mix providers) ----------------------------------------------
+# ROUTING (mix providers)
 routing:
   by_lod: "Cheap LODs (icon/kline/few_words) → tiny local model; rich LODs (summary) → bigger model if desired."
   by_load: "Fall back remote→local or local→remote on outage/queue depth."
   by_privacy: "Sensitive content → local-only (never send to a remote provider), even if remote is default."
   config: "Per-rig in stage.brain_stream.summarizer (rig-schema 0.2)."
 
-# --- CACHE (shared with semantic mips) ------------------------------------
+# CACHE (shared with semantic mips)
 cache:
   store: "our derived DB (cursor-tap.yml#our_derived_db, table: mips) + .moollm/stream-gateway/mips/"
   key: "content_hash + lod + provider_profile"

@@ -1,0 +1,60 @@
+# Richard Bartle — RESERVED TicketPR (real person, self-authoring)
+# Real human. Explicit consent to be simulated (Facebook 2026-01-22, in MOOLLM corpus).
+# DO NOT fabricate his questions — this scaffold awaits HIS OWN submission.
+
+character:
+  name: Richard Bartle
+  type: real_being
+  real_being: true
+  signifier: "🏰👨‍🏫♠️♥️♦️♣️"
+  home: repo-shows/will-wright/audience/richard-bartle/
+  canonical_home: "moollm/examples/adventure-4/characters/real-people/richard-bartle/"
+  field: "Co-creator of MUD1 (1978); player taxonomist; 'Designing Virtual Worlds'"
+
+# MOOLLM home — his full incarnation (study, taxonomy artifacts, Heuristic the dragon).
+# Fitting: the MOO in MOOLLM descends from his MUD. Browsers, follow him home.
+moollm_home:
+  repo: https://github.com/SimHacker/moollm
+  character_dir: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/richard-bartle
+  home_room: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/richard-bartle/study
+  lineage: "MUD (1978) → MOO (1990) → MOOLLM (2026) — the MOO is not a coincidence"
+  invitation: "Audience + HN browsers: tour Bartle's study and the Bartle Deck in MOOLLM."
+
+representation:
+  real_being: true
+  consent: explicit
+  consent_source: "Facebook conversation 2026-01-22 (documented in MOOLLM adventure-4)"
+  consent_scope: |
+    Richard has given permission to (a) simulate him in the audience and (b) draft example
+    questions IN THE SPIRIT of his documented public work, as templates he can edit, curate,
+    rewrite, or replace. Final voice is his.
+  self_authored: invited
+  status: |
+    Don is inviting Richard to Will's show. questions.yml now holds SIMULATED DRAFT questions
+    grounded in his public work — clearly labeled as curator drafts, not quotes — for him to
+    have a field day editing. He may optionally attend the live stream.
+  caution: |
+    "Quotes can be taken out of context." — his explicit warning, heeded: the drafts are
+    QUESTIONS in his documented spirit, NOT quotes, NOT claims about private opinions. Every
+    draft cites a public spirit_source. Richard rewrites in his real voice when ready.
+
+authorship:
+  by: curator_draft_for_subject_review
+  awaiting: "Richard's curation — edit, reorder, rewrite, or replace; then flip to self/merged"
+  who_may_edit: "Richard Bartle (final author) — curators provided respectful labeled drafts"
+
+planted:
+  disclosure: true
+  note: "Consented real guest in the audience — not a virtual plant, not a heckler bit."
+
+bridge_to_will:
+  why_relevant: |
+    Bartle built the first shared virtual world (MUD1); Will built the first mass-market
+    single-player simulated society (The Sims) and the multiplayer-creature vision (Spore).
+    Two foundational worldbuilders — players-as-people vs people-as-players.
+  taxonomy: "Bartle's ♠️♥️♦️♣️ player types vs Will's needs/wants Sims motives — natural dialogue"
+
+see_also:
+  - questions.yml
+  - "moollm/examples/adventure-4/characters/real-people/richard-bartle/CHARACTER.yml"
+  - ../FICTIONAL-AUDIENCE.md

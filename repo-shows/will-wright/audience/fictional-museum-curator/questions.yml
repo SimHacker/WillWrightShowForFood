@@ -1,0 +1,23 @@
+ticket:
+  show: will-wright
+  github: fictional-museum-curator
+  attend_live: false
+  merged: true
+  seeded: true
+
+character_ref: CHARACTER.yml
+
+questions:
+  - id: 1
+    text: "Micropolis exists because someone saved and freed the SimCity source. How much of your life's work would survive if no one had bothered to archive it?"
+  - id: 2
+    text: "SimRefinery was a corporate training sim almost lost forever until an archivist dug it up. What other Maxis work is one dead hard drive away from gone?"
+  - id: 3
+    text: "You design systems that generate infinite ephemeral stories. As a curator, I have to ask: what do you preserve when the whole point is that it's different every time?"
+  - id: 4
+    text: "Open-sourcing Micropolis is preservation as a gift. Should every studio be required to free its dead games, or is that just an archivist's fantasy?"
+
+comments_for_guest: |
+  Fictional archivist persona honoring real preservationists. Box-seated next to the REAL
+  Phil Salvador (audience/phil-salvador/) — fiction beside fact, by design. Ties to
+  sources/simrefinery-recovery/. English, no Simlish.

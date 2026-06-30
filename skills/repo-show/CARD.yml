@@ -15,6 +15,7 @@ card:
 term_of_art:
   name: "Repo Show"
   etymology: "Like blog = web log — a show whose artifact + stage IS a git repo."
+  ticket_pr: "TicketMaster reframed — Master ⇒ PR (pull request); free audience ticket via merge request"
   quintessentially: "RTFR, implement, harvest — show don't tell."
   guest_honorifics: [Repo_Man, Repo_Woman]
   orchestrator: Don_Philahue
@@ -23,7 +24,7 @@ how_it_runs:
   markup: ../../process/FORMAT.md
   girder: ../../process/repo-show-format.yml
   regenerate: "pnpm run facades"
-  elements: [HN_pointer, RTFR, audience_character_PRs, don_philahue, cauldron_melt, rig_spectrum, showmaker_network]
+  elements: [HN_pointer, RTFR, TicketPR, audience_character_PRs, don_philahue, cauldron_melt, rig_spectrum, showmaker_network]
 
 join:
   the_verb: "JOIN the repo — accept GitHub invite first; then stream, chat, collaborate."

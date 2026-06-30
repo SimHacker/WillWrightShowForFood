@@ -7,7 +7,7 @@ character:
   type: invitation
   signifier: "🧭"
   status: living
-  field: "CTG (Core Technology Group) team leader on The Sims (Maxis)"
+  field: "Jim \"Tricky Bit\" Mackraz — CTG team leader on The Sims (Maxis); Will Whisperer"
   home: characters/jim-mackraz/
 
 representation:
@@ -22,7 +22,7 @@ invitation:
   show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml
 
 bio:
-  summary: "**Jim Mackraz** led the **Core Technology Group (CTG)** on **The Sims** at Maxis — the team leadership that helped turn Will Wright's open-ended vision into a shipped product. Don credits him with keeping the team (and Don) focused enough to finish and ship."
+  summary: "**Jim \"Tricky Bit\" Mackraz** led the **Core Technology Group (CTG)** on **The Sims** at Maxis — the team leadership Don credits with cat-herding chaos into a shipped product. Will Whisperer; managed Don and kept the team focused enough to finish and ship."
 
 connections:
   the_sims: "CTG team leader on The Sims; shipping discipline and team leadership."

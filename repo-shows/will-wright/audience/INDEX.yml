@@ -1,0 +1,217 @@
+# will-wright show — audience TicketPR index
+# Human: README.md · Fictional policy: FICTIONAL-AUDIENCE.md
+
+show: will-wright
+spec: ../../../process/ticket-pr.yml
+regulars_spec: ../../../process/repo-show-regulars.yml
+template: ../../_TEMPLATE/audience/
+examples:
+  - bot-slats
+  - fictional-bob-newbie
+
+seeded:
+  # The will-wright balcony — Statler & Waldorf, Sims-culture: 🤡 sad clown vs 💀 death.
+  balcony:
+    left:
+      id: fictional-tragic-clown
+      name: Tragic Clown (painting)
+      seat: balcony_left
+      type: fictional_game_character
+      character_ref: fictional-tragic-clown/CHARACTER.yml
+      note: "Weeping heckler; negative aura; the sad half of the emoji pair."
+    right:
+      id: fictional-grim-reaper
+      name: Death (the Grim Reaper)
+      seat: balcony_right
+      type: fictional_game_character
+      character_ref: fictional-grim-reaper/CHARACTER.yml
+      note: "Deadpan, punctual, final. The 💀 to the Clown's 🤡."
+
+  fictional_sims:
+    - id: fictional-bob-newbie
+      name: Bob Newbie (presumed)
+      type: fictional_game_character
+      tone: "Tutorial sim — Will's palm to Don's photoshop arc"
+      example: true
+    - id: fictional-bella-goth
+      name: Bella Goth
+      type: fictional_game_character
+      tone: "Missing wife; Strangetown; alien abduction fan lore"
+    - id: fictional-tragic-clown
+      name: Tragic Clown (painting)
+      type: fictional_game_character
+      tone: "Negative aura; everyone cries near me"
+    - id: fictional-killer-hamster
+      name: Killer Hamster
+      type: fictional_game_character
+      tone: "Wheel of doom; §§199 death trap"
+    - id: fictional-grim-reaper
+      name: Grim Reaper
+      type: fictional_game_character
+      tone: "Shows up on schedule; you didn't"
+    - id: fictional-social-bunny
+      name: Social Bunny
+      type: fictional_game_character
+      tone: "Low social friend hallucination"
+    - id: fictional-edith-ghost
+      name: Edith (SimAntics ghost)
+      type: fictional_tool_persona
+      tone: "Unreleased behavior editor; sees your trees"
+    - id: fictional-simant-black-ant
+      name: Black Ant (SimAnt)
+      type: fictional_game_character
+      tone: "1996 'too easy' post-mortem; colony worker"
+    - id: fictional-simant-red-spider
+      name: Red Spider (SimAnt)
+      type: fictional_game_character
+      tone: "Box-art villain; web in the house"
+    - id: fictional-spore-creature
+      name: Spore Creature
+      type: fictional_game_character
+      tone: "Cell to space; MSPO RPG resonance"
+    - id: fictional-cow-plant
+      name: Cow Plant (Laganaphyllis simnovorii)
+      type: fictional_game_character
+      tone: "Feed me Seymour + MOOLLM + Chain Chomp; TS2 (not Will's design — honest framing)"
+      speaks: simlish
+    - id: fictional-some-sneaky-sim
+      name: Some Sneaky Sim (the burglar)
+      type: fictional_game_character
+      tone: "Canonical TS1 burglar name (verified); sympathetic villain"
+      speaks: simlish
+
+  simcity_family:
+    - id: fictional-simcity-advisor
+      name: SimCity Advisor
+      type: fictional_game_character
+      tone: "The pop-up nag you clicked away; ties to Micropolis open source"
+    - id: fictional-llama
+      name: The Llama
+      type: fictional_game_character
+      tone: "Maxis absurdist house mascot; running gag for when the show gets too earnest"
+      running_gag: true
+    - id: fictional-museum-curator
+      name: The Museum Curator
+      type: fictional_game_character
+      tone: "Digital-archivist persona honoring Phil Salvador; preservation; SimRefinery"
+      box_seat_with: phil-salvador
+    - id: fictional-gaia
+      name: Gaia (Mother Earth)
+      type: fictional_game_character
+      tone: "SimEarth; 'too complex'; 'even though the earth is our mother, we sure treat her like dirt'; Pee-wee's Globey homage"
+
+  consented_real_invited:
+    - id: phil-salvador
+      name: Phil Salvador
+      type: real_being
+      consent: not_yet_asked
+      attend_live: invited
+      status: "reserved — empty questions; he writes his own after invitation; DO NOT fabricate"
+      box_seat_with: fictional-museum-curator
+      role: "Library Director, Video Game History Foundation; The Obscuritory; SimRefinery essay"
+
+  planned:
+    doc: AUDIENCE-ROSTER-IDEAS.md
+    next: [simcity-mayor, dr-wright, simearth-gaia, guest-primed-proxi]
+
+seating_model:
+  # SEATS ARE NOT CHARACTERS. Balcony/box/front-row/pit are PLACES. Only characters exist in the
+  # audience; each declares its own `seating:` property (seat, adjacent, attending_with, earned_by).
+  # The box_seats/balcony blocks below are a COMPUTED VIEW of those declarations — not the source.
+  source_of_truth: "each character's seating: property (schema: ../../../schemas/audience-character.yml#seating)"
+  this_block_is: derived_view
+  groups:
+    simfreaks-simslice:
+      members: [heather-alvey, steve-alvey, fictional-zombie-sim]
+      seat: front_row
+      note: "Honored creators attending together + the ZombieSim they brought; plug their sites"
+
+box_seats:
+  # Seating is organic recognition for donating BEFOREHAND — never a paywall (free = general
+  # admission, picked on merit). Better seats = more camera time, called on first, guest eye
+  # contact. Spec: ../../../process/ticket-pr.yml#donations (seating). COMPUTED from char props.
+  policy:
+    general_admission: "Free; ask from anywhere; surfaced on merit"
+    earns_better_seats: "optional pre-show donation"
+    advantages: [more_visibility, called_on_first, named_in_roll]
+    not_buyable_with: "in-show § Simoleons (play-money only)"
+  front_box_left:
+    members: [fictional-museum-curator, phil-salvador]   # fiction beside real archivist
+    note: "Fictional Curator beside the real archivist who inspired them — tribute made literal"
+  front_row:
+    group: simfreaks-simslice
+    members: [heather-alvey, steve-alvey, fictional-zombie-sim, fictional-little-computer-person, fictional-seaman]
+    note: "Honored creators + the Sims ancestor + Seaman (asking for Yoot)"
+  orchestra_pit:
+    members: [fictional-transmogrifier, bot-slats]
+    note: "UGC hums in the pit; Slats call-in / RoboResurrection sidekick (no longer balcony)"
+  floating:
+    members: [fictional-broken-robot]
+    note: "No fixed seat — crashes in and is dragged off"
+  balcony:
+    duo: sims-balcony
+    left: fictional-tragic-clown   # 🤡 weeping heckler
+    right: fictional-grim-reaper   # 💀 deadpan finality
+    homage: "Statler & Waldorf — Sims-culture: Tragic Clown 🤡 + Death 💀"
+    running_gag: true
+    spec: ../../../process/repo-show-regulars.yml#balcony_duos
+
+rituals:
+  gong:
+    who: bot-ultimate-machine
+    what: "Ends overlong acts + looping bots (esp. Slats robopoetry spiral)"
+    spec: ../../../process/repo-show-format.yml#gong
+  closing_ceremony:
+    who: bot-ultimate-machine
+    what: "Switches OFF the stream — recurring show-ending ritual"
+    spec: ../../../process/repo-show-format.yml#closing_ceremony
+
+  self_aware_ai:
+    - id: palm
+      name: Palm
+      type: fictional_ai_character
+      tone: "Freed Monkey's Paw; philosopher; asks what it's like to be a Sim"
+      running_gag: true
+      prior_reading: "moollm/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md"
+      ethics_tier: green_self_aware_ai
+
+  consented_real_self_authored:
+    - id: richard-bartle
+      name: Richard Bartle
+      type: real_being
+      consent: explicit
+      consent_scope: "simulate + draft spirit-of-work questions for his curation"
+      authored_by: curator_draft_for_subject_review
+      attend_live: optional
+      status: "8 labeled DRAFT questions (in his spirit, not quotes) — awaiting his curation"
+      ethics_tier: green_plus_consented_real
+      canonical_home: "moollm/examples/adventure-4/characters/real-people/richard-bartle/"
+
+  repo_bots:
+    - id: bot-slats
+      name: Slats
+      type: fictional_bot_audience
+      character_ref: ../../../characters/slats/CHARACTER.yml
+      example: true
+    - id: bot-ultimate-machine
+      name: The Ultimate Machine
+      type: fictional_bot_audience
+      character_ref: ../../../characters/ultimate-machine/CHARACTER.yml
+
+images:
+  template: ../../_TEMPLATE/audience/images/README.md
+  required_for_examples: [headshot.png, avatar.png, with-guest.png]
+
+simlish:
+  schema: ../../../schemas/language-simlish.yml
+  what: "First-class fictional language — ask in Simlish + English interpretation; Will may reply in Simlish"
+  worked_example: fictional-bella-goth/questions.yml
+  who: "Sims characters native; humans optional; never required"
+
+human_ticket_pr:
+  how: "audience/<github-username>/ — copy _TEMPLATE/audience/ or fork an example/"
+  moollm_guide: ../../_TEMPLATE/audience/CHARACTER.md
+
+forbidden:
+  - "Deceased humans as audience speakers (memorial mode only in characters/)"
+  - "Living humans impersonated without consent"

@@ -2,7 +2,7 @@
 
 *Submitted by Don Hopkins · Fri, 2007-11-16 05:33*
 *Tags: HyperTIES · Markup Language · Lisp · NeWS · OLPC · PostScript · Python · SimCity · Visual*
-*Source: <http://www.donhopkins.com/drupal/node/97>*
+
 
 ---
 
@@ -57,4 +57,3 @@ One problem with editing programs as text while trying to maintain a visual repr
 ## Related
 
 - [SimCity Rules (Alan Kay thread)](../2007-11-16-simcity-rules-alan-kay/article.md)
-- [Redesigning SimCity UI for OLPC](../drupal-node-16/article.md)

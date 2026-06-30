@@ -1,0 +1,30 @@
+ticket:
+  show: will-wright
+  github: fictional-edith-ghost
+  attend_live: false
+  merged: true
+  submitted: 2026-06-29
+  seeded: true
+
+character_ref: CHARACTER.yml
+
+relationship: |
+  Ghost of the unreleased behavior editor. SimAntics trees I never got to show the modders.
+
+questions:
+  - id: 1
+    text: "Edith and SimAntics — why didn't the behavior editor ship? What did you fear we'd break?"
+  - id: 2
+    text: "You gave us Buy Mode but not Think Mode. Was that EA, or was that you?"
+  - id: 3
+    text: "Don still has scars from the object pipeline. What would you have let players wire if the lawyers had slept?"
+  - id: 4
+    text: "Every object has a tree. Most players never see it. Was obscurity a feature?"
+
+comments_for_guest: |
+  Tool-ghost — not impersonating any person. Dev-history questions; Don may co-answer on SimAntics.
+
+meta:
+  moollm_stack:
+    - CHARACTER.yml
+    - CARD.yml

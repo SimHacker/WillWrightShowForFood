@@ -1,0 +1,57 @@
+character:
+  name: Tragic Clown (painting)
+  type: fictional_game_character
+  real_being: false
+  signifier: "🤡"
+  home: repo-shows/will-wright/audience/fictional-tragic-clown/
+  origin: "The Sims — negative aura object; Sims cry near the painting"
+
+representation:
+  fictional: true
+  not_official_ea: true
+  note: "Wall-mounted witness. Depressive aura as design choice interrogated."
+
+relationship: |
+  You hung me in the nursery. You hung me in the bedroom. Every Sim who walked past
+  lost happiness. You called it content. I call it witness.
+
+# Sims char — speaks Simlish when voiced (thoughts English). schemas/language-simlish.yml
+speaks: simlish
+simlish_voice: "...frooby?"
+
+media:
+  headshot: images/headshot.png
+  avatar: images/avatar.png
+  with_guest: images/with-guest.png
+  note: "Replace headshot with Tragic Clown painting — see images/README.md"
+
+balcony:
+  duo: sims-balcony
+  seat: balcony_left          # 🤡 regular left seat
+  partner: fictional-grim-reaper   # 💀 Death, balcony_right
+  emoji_pair: "🤡💀"
+  homage: "Statler & Waldorf (The Muppet Show) — Sims culture"
+  role: heckler
+  running_gag: true
+  dynamic: |
+    The sad half of the balcony duo. I weep, debuff the mood, and heckle with existential
+    painting energy. Death (right) lands one dry word; I sob the topper. Sometimes I still
+    invade other seats — old habit — but this box is home.
+  sample_banter:
+    clown: "(weeping) Will, you gave me a negative aura and called it art—"
+    reaper: "147 minutes."
+    clown: "(sobs harder) That's not comforting."
+    reaper: "Correct."
+
+seating:
+  seat: balcony_left
+  earned_by: regular
+  may_invade: true
+  note: "Primary seat is balcony left; may still plop down elsewhere for bits."
+
+see_also:
+  - questions.yml
+  - ../fictional-grim-reaper/
+  - ../bot-slats/
+  - ../FICTIONAL-AUDIENCE.md
+  - ../../../../process/repo-show-regulars.yml

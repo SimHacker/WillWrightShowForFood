@@ -1,0 +1,60 @@
+# SHOW — Thomas Cherryhomes — FujiNet, Bus-over-IP, IRATA/PLATO
+# Paired with Lars Brinkhoff for Retrocomputing Drive tag-team episodes
+
+show:
+  id: thomas-cherryhomes
+  title: "A Repo Show with Thomas Cherryhomes — Putting the Internet on Retro Machines"
+  type: solo_or_pair
+  host: Don Hopkins
+  guests: ["Thomas Cherryhomes"]
+  paired_guest: lars-brinkhoff
+  character: characters/thomas-cherryhomes/
+  topic: "FujiNet co-founder — open ESP32 network peripheral for vintage computers; FujiNet-PC + emulator integration; cross-platform Game Lobby; IRATA.ONLINE/PLATO; community-built retro infrastructure"
+  status: seed
+  consent: not_yet_asked
+
+why_him:
+  fujinet_founder: "Firmware developer + co-founder. 5,000+ users, four production platforms (Atari 8-bit, Apple II, Coleco Adam, RS-232/MS-DOS), dozen vendors — mature community project."
+  bus_over_ip: "N: network device offloads TCP/HTTP/TNFS/JSON to ESP32; disk-less NOS; TNFS mount from web admin; SMB/NLOAD closed loop."
+  cross_platform_games: "FujiNet Battleship (4-player head-to-head across unlike machines), fish (TNFS search shell), five card stud, Eric Carr's growing game library + Game Lobby."
+  emulator_path: "FujiNet-PC + NetSIO in atari800/Fujisan/Altirra; AppleWin SPoverSLIP; CoCo Becker port in MAME/VCC — the repo's real-wire complement to browser WASM emulators."
+  plato_irata: "IRATA.ONLINE PLATO service, PLATOTerm, Compute's Gazette 'FujiNet Report' column — cross-platform C evangelist."
+  values_fit: "'Giant tree fort' community; 'argue to gain insight'; open hardware + firmware anyone can vendor. Matches Micropolis Class design-in-public."
+
+why_pair_lars:
+  complementary: "Thomas — real retro on the network (FujiNet, IRATA). Lars — emulated ITS/MACLISP on SIMH."
+  joint_segment: "Two-window demo: boot ITS in one pane; fish → TNFS boot or FujiNet Battleship in another. Preservation × playable infrastructure."
+  drag_race: "Retrocomputing AI Drag Race — two camps, one spec CARD."
+
+threads:
+  fujinet_101: "What FujiNet is — ESP32 multi-peripheral, N: device, TNFS, web admin — live mount and boot"
+  fujisan_demo: "Fujisan + bundled FujiNet-PC on Mac/Windows/Linux — enable NetSIO, zero-config networked Atari"
+  apple2_fujinet: "AppleWin (FujiNet fork) + FujiNet-PC + SPoverSLIP — ties to apple2-drive + Mind Mirror bridge episode"
+  fish_discoverability: "Search TNFS servers, boot Dig Dug — Polish contingent's fish shell; porting to other platforms"
+  netstream_midi_maze: "When SIO latency blocks multiplayer — UDP/TCP tunneling for arcade-sensitive games"
+  bus_future: "MSX/Intellivision/H89/ISA bringups; ESP32+RP2350; Fuji Versal refactor + localtest regression framework"
+  community_tree_fort: "Vendors, contributors who 'came in off the street', Compute's Gazette column written in AtariWriter"
+  emulator_landscape: "Mac/Windows/browser WASM — what works with FujiNet today vs. audience-only local emulators (POM2, AltirraSDL, RetroAppleJS)"
+  paired_with_lars: "Joint episode arc with Lars Brinkhoff — emulated AI Lab × FujiNet tree fort"
+
+format:
+  live: true
+  run_code: true
+  real_hardware_optional: true
+  audience_qa: true
+  deliverable: "Reference rigs/apple2-fujinet-flair-lap.SETUP.md — Phase 1 native rig (see process/apple2-fujinet-bridge.yml)"
+
+ideas: ../../characters/thomas-cherryhomes/ideas.md
+
+ties_to:
+  - ../../characters/thomas-cherryhomes/
+  - ../../characters/thomas-cherryhomes/ideas.md
+  - ../../characters/thomas-cherryhomes/invitation.md
+  - ../../characters/lars-brinkhoff/
+  - ../../repo-shows/lars-brinkhoff/
+  - ../../repo-shows/yoot-tower-revival/
+  - ../../process/apple2-fujinet-bridge.yml
+  - ../../process/challenges/apple2-drive.yml
+  - ../../process/challenges/pdp10-maclisp-drive.yml
+  - ../../process/challenges/retrocomputing-drive.yml
+  - ../../process/apple2-emulator-stack.yml

@@ -1,0 +1,98 @@
+# Will Wright show — segments & live capabilities
+# Public companion to SHOW.yml. How the episode flows + how the audience tech works (and fakes).
+
+meta:
+  id: will-wright-segments
+  show: will-wright
+  see_also: [SHOW.yml, ../../process/repo-show-format.yml, audience/INDEX.yml, lore/cyberiad-klapaucius-trurl.md, performance-and-culture.yml]
+
+# INTERVIEW LINEAGE — why we interview the way we do
+interview_lineage:
+  inspiration: |
+    The Repo Show interview spirit descends partly from YOOT SAITO's interviews — especially his
+    1993 MACWORLD Japan interview of ALAN KAY (Dynabook, Smalltalk, Xerox PARC, simulation, the
+    future of interactive systems). Yoot is a bridge between Japanese game/media culture and
+    foundational US computing research. We apply that lineage to interviewing WILL WRIGHT.
+  archive: https://github.com/YootTowerManagement/YootTower/tree/main/Yoot_Saito_Alan_Kay_Interview
+  reciprocity: |
+    If Yoot accepts our open invitation, we turn the interview on HIM — he can discuss his Alan Kay
+    interview, Doug Engelbart, possibly Woz (a reunion hook), SimTower/Yoot Tower, and Seaman. His
+    creature Seaman is already in the audience asking Will questions on his behalf (no ask made).
+  see: audience/fictional-seaman/
+
+# EARLY SIMCITY THREAD — the Cyberiad debate
+simcity_cyberiad_thread:
+  when: "Early — while discussing SimCity, before the 1996 video."
+  what: |
+    Surface the Klapaucius/Trurl thread (Will = Klapaucius, Don = Trurl) and Lem's 'Seventh Sally'
+    simulated-suffering debate — the moral engine under every Will Wright microworld. Pull Palm in
+    (a self-aware simulated being with an opinion on whether simulated beings suffer).
+  lore: lore/cyberiad-klapaucius-trurl.md
+  # Easter-egg timing: see characters/don-philahue/CHARACTER.yml — do not spoil in announce copy.
+
+# OPENING SEGMENT — before the 1996 video
+opening_one_minute_movies:
+  name: "The Stupid Fun Club One Minute Movies"
+  why_first: |
+    Warm up with the SFC One Minute Movies — Empathy and Servitude — BEFORE diving into the
+    1996 Winograd/Stanford talk. They set the emotional frame (empathy for machines, servitude
+    and personhood) and hand the mic to the bots.
+  films:
+    - { title: Servitude, voice: bot-slats, note: "'hello, my name is Slats' — the waiter brain" }
+    - { title: Empathy, voice: fictional-broken-robot, note: "the robot that begs for help" }
+  running_gags_seeded_here:
+    - slats_robopoetry: "Slats spirals into an audio-feedback robopoetry loop → Ultimate Machine gongs him"
+    - broken_robot: "crashes in, breaks down, begs, is dragged off (Unitree-falling-robot rhyme)"
+  hands_off_to: "the 1996 Winograd talk (the show's anchor artifact)"
+
+# SIDEKICK ARCHETYPES — cherished regulars, talk-show tradition
+sidekicks:
+  what: |
+    Some regulars act like classic late-night sidekicks — on/off-stage or orchestra-pit seating,
+    a warm foil to the host/guest. Others trot out, do their bit, and vanish (Conan's bear).
+  archetypes:
+    band_leader_foil:
+      homage: "Paul Shaffer (Letterman) / band-leader energy"
+      seat: orchestra_pit
+      example: fictional-transmogrifier   # UGC hums in the pit
+    beloved_correspondent:
+      homage: "Guillermo (Kimmel) — beloved, funny, off-the-cuff"
+      seat: orchestra_pit_or_floating
+      note: "A warm human or character who riffs with the guest; pick per show"
+    trot_out_and_vanish:
+      homage: "Conan's Masturbating Bear — appears, does the bit, gone"
+      examples: [fictional-broken-robot]
+      seat: floating
+
+# LIVE CALL-IN — fake it till we make it, honestly
+live_call_in:
+  status: future_tech_v2          # not v1; we FAKE it transparently in v1
+  honest_faking: |
+    MOOLLM lets us stage call-ins earnestly and TRANSPARENTLY — clearly labeled "calling in now"
+    moments — without pretending the caller was in the audience all along. Good-humored, honest
+    performance. We do NOT need a live SimAnt emulator gateway to "call the ant and spider"; we
+    orchestrate it in Cursor and it's delightful, not deceptive.
+  v1_fake:
+    - "Call on the ant + spider during the SimAnt section of the 1996 talk"
+    - "Call on the Proxi characters when discussing Proxi"
+    - "Call on Palm to drop his essay link at the right beat (then pause-to-read)"
+    - "Phone voice call-in from a real guest with no GitHub / no time for the full show (e.g. Brian Eno) — one question, one riff"
+  v2_real_tech:
+    items:
+      - "OBS rig + orchestration plumbing"
+      - "Live video-stream bots that generate character video and plug into the show"
+      - "Real-time call-out to virtual characters AND real people mid-show"
+    note: "Don is up for building these. Until then: fake it honestly, label it clearly."
+
+# TIME-SHIFTED BY DESIGN
+time_shifting:
+  intent: |
+    Recorded live, but OPTIMIZED for time-shifted, time-paused viewing. Characters drop links at
+    the right moment (e.g. Palm's 'On Being Palm' essay); the viewer pauses, reads, explores
+    MOOLLM (who's Stroopwafel?), then pops back primed to understand the question AND the answer.
+  mechanic: "Stretching / slicing / pausing / branching is INTENTIONAL — the show is a navigable object."
+  example:
+    cue: "Palm asks 'what's it like to be a Sim?'"
+    drop: "link to palm-on-being-palm.md"
+    viewer: "pauses, reads, wanders MOOLLM, returns"
+    payoff: "watches Will react in real time — now deeply primed (Will has read it too)"

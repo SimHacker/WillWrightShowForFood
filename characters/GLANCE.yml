@@ -1,0 +1,31 @@
+# CHARACTERS — GLANCE (guest portrayals + host)
+# up: ../GLANCE.yml | facade: README.md | machine: INDEX.yml | standards: ../schemas/portrayal-standards.yml
+
+what: |
+  One directory per person — invitation or memorial portrayals, CARD abilities, sources.
+  Browse the tree; INDEX.yml syncs invitation status for machines.
+
+read_order:
+  - README.md
+  - will-wright/
+  - will-wright/media/
+  - don-hopkins/
+  - don-philahue/
+  - slats/
+  - terry-winograd/
+  - _TEMPLATE/
+
+featured:
+  host: don-hopkins
+  flagship_guest: will-wright
+  orchestrator: don-philahue
+  sidekick: slats
+  forebear: terry-winograd
+  retro_pair: [lars-brinkhoff, thomas-cherryhomes]
+
+see_also:
+  - { path: will-wright/GLANCE.yml, why: "Flagship guest pyramid" }
+  - { path: will-wright/media/GLANCE.yml, why: "Photo galleries" }
+  - { path: ../schemas/portrayal-standards.yml, why: "Ethics + subject rights" }
+  - { path: ../repo-shows/will-wright/audience/, why: "Per-show audience (TicketPR)" }
+  - { path: ../repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "Centerpiece source" }

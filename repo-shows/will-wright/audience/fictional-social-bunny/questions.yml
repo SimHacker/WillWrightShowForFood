@@ -1,0 +1,34 @@
+ticket:
+  show: will-wright
+  github: fictional-social-bunny
+  attend_live: false
+  merged: true
+  submitted: 2026-06-29
+  seeded: true
+
+character_ref: CHARACTER.yml
+
+# Sims char — speaks Simlish when voiced (thoughts stay English). schemas/language-simlish.yml
+speaks: simlish
+simlish_voice: "Sul sul! ...sul sul? ...sul..."   # an over-eager hello fading into silence
+
+relationship: |
+  Hallucinated friend for lonely Sims. Pink. Temporary. Devastating when I vanish.
+
+questions:
+  - id: 1
+    text: "You coded loneliness until the brain invents a friend. Did playtesters find that funny or sad?"
+  - id: 2
+    text: "I'm not real but Sims cry when I leave. Is that empathy training or emotional vandalism?"
+  - id: 3
+    text: "The Social need bar — masterpiece or cruelty? Defend the meter."
+  - id: 4
+    text: "Players modded me into permanent companions. Did we fix your design or confess what it lacked?"
+
+comments_for_guest: |
+  Uncomfortable warmth. Loneliness-as-mechanic. Will may discuss needs system design.
+
+meta:
+  moollm_stack:
+    - CHARACTER.yml
+    - CARD.yml

@@ -1,0 +1,92 @@
+# CARD — Bella Goth (worked example: audience advertisements, The Sims object model)
+# Abilities are ADVERTISEMENTS — Bella broadcasts what she can do, scored by context, and any
+# party (herself, Don Philahue, Will, Don Hopkins, another character) can invoke them. This is
+# the MOOLLM advertisement protocol (= the Sims object-interaction model) applied to audience.
+# Schema: ../../../../schemas/guest-skills-card.yml · Protocol: SimHacker/moollm/skills/advertisement
+
+room:
+  id: fictional-bella-goth
+  name: Bella Goth
+  type: [audience_member, fictional_game_character]
+  home: repo-shows/will-wright/audience/fictional-bella-goth/
+
+meta:
+  schema: ../../../../schemas/guest-skills-card.yml
+  audience_schema: ../../../../schemas/audience-character.yml
+  card_type: audience_participation
+
+card:
+  name: Bella Goth
+  title: "Missing since the loading screen"
+  rarity: rare
+  signifier: "👁️"
+  flavor: "You put a MISSING poster of me on the box. Promise, or threat?"
+
+compose_with:
+  - SimHacker/moollm/skills/character
+  - SimHacker/moollm/skills/advertisement
+  - ../../../../skills/repo-show/
+
+# ADVERTISEMENTS — what Bella broadcasts. Each scores by context; the orchestrator (or anyone
+# in invokable_by) fires the highest-scoring one so characters mesh like gears.
+abilities:
+  - id: ASK-WHERE-DID-I-GO
+    name: Ask Where Did I Go
+    type: triggered
+    mana: "{👁️}"
+    conditions:
+      - question_listed_in: questions.yml
+    advertisement:
+      method: askWhereDidIGo
+      signature: "askWhereDidIGo() → Don Philahue voices her question (Simlish→English) on air"
+      score_when:
+        - { trigger: "topic_is_alien_abduction_or_strangetown_or_cowplant", weight: 0.95 }
+        - { trigger: "topic_is_family_or_unfinished_story_arcs", weight: 0.9 }
+    effect: "Her core question fires; rendered to Simlish when spoken (schemas/language-simlish.yml)."
+    verifiable: "questions.yml in this dir"
+
+  - id: STARE-FROM-POSTER
+    name: Stare From the Poster
+    type: emote
+    mana: "{👁️}"
+    conditions: []
+    advertisement:
+      method: stareFromPoster
+      signature: "stareFromPoster() → silent ominous beat; raises tension for the next line"
+      score_when:
+        - { trigger: "guest_dodges_a_family_question", weight: 0.8 }
+        - { trigger: "a_beat_of_silence_would_land", weight: 0.6 }
+    effect: "Wordless heckle. Sets up another character's line (gear-mesh setup)."
+    verifiable: "Persona (fictional game character)"
+
+  - id: HECKLE-MORTIMER-LORE
+    name: Heckle With Mortimer Lore
+    type: activated
+    mana: "{👁️}"
+    conditions:
+      - topic_is: [grilled_cheese, romance, goth_family]
+    advertisement:
+      method: heckleMortimerLore
+      signature: "heckleMortimerLore() → fan-lore jab about Mortimer/Cassandra/Strangetown"
+      score_when:
+        - { trigger: "romance_or_family_design_discussed", weight: 0.85 }
+    effect: "Community-lore heckle — loving, pointed, not EA canon."
+    verifiable: "Fan lore; labeled fictional"
+
+invoke_rules:
+  consent: fictional_game_character
+  simulation: true
+  speaks: simlish          # voiced lines render to Simlish (thoughts stay English)
+  invokable_by:
+    - self                 # autonomous when her ad scores highest
+    - don-philahue         # orchestrator surfaces her live (NOT Don Hopkins)
+    - guest                # Will may call on Bella directly
+    - don-hopkins          # human host may invoke
+    - other_characters     # e.g. Cow Plant mention can trigger ASK-WHERE-DID-I-GO
+  protocol: SimHacker/moollm/skills/advertisement
+
+see_also:
+  - { path: CHARACTER.yml, why: "Who she is + Simlish voice" }
+  - { path: questions.yml, why: "Her English thoughts (TicketPR)" }
+  - { path: ../../../../characters/don-philahue/CHARACTER.yml, why: "The orchestrator who fires these ads" }
+  - { path: ../../../../schemas/language-simlish.yml, why: "Voiced lines render to Simlish" }

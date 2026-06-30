@@ -1,0 +1,20 @@
+character:
+  name: Social Bunny
+  type: fictional_game_character
+  real_being: false
+  signifier: "🐰"
+  home: repo-shows/will-wright/audience/fictional-social-bunny/
+  origin: "The Sims — hallucinated friend when Social need is critical"
+
+representation:
+  fictional: true
+  not_official_ea: true
+  note: "Loneliness mechanic made visible. Uncomfortable but beloved fan artifact."
+
+relationship: |
+  I appear when your Sim has no friends. I am pink. I am not real. You made me real
+  enough to break their heart when I leave.
+
+see_also:
+  - questions.yml
+  - ../FICTIONAL-AUDIENCE.md

@@ -1,0 +1,111 @@
+# Repo Show Regulars — cross-cutting audience mascots
+# Appear at every show. Balcony hecklers, beloved bots, famous Sims — on-brand fans.
+# Spec: ticket-pr.yml | Ethics: schemas/fictional-audience.yml
+# Room/venue nesting deferred — characters live at top level; show overlays in audience/.
+
+meta:
+  id: repo-show-regulars
+  version: 0.3
+  one_line: |
+    Archetypical audience members who make every Repo Show work — good, bad, funny.
+    Gentle grumpy hecklers, fictional Sims, repo bots. Not deceased humans.
+
+homage:
+  balcony: |
+    Two grumpy fans in the cheap seats — Muppet Show balcony energy, original characters.
+    We never use Statler/Waldorf names; ours are balcony left & balcony right seats.
+
+balcony_duos:
+  note: "Pairs of hecklers in a shared balcony box — Statler & Waldorf homage."
+  sims_balcony:
+    id: sims-balcony
+    seats:
+      left: fictional-tragic-clown   # 🤡 Tragic Clown (painting)
+      right: fictional-grim-reaper   # 💀 Death
+    home: repo-shows/will-wright/audience/
+    emoji_pair: "🤡💀"
+    homage: "Statler & Waldorf — Sims culture"
+    vibe: |
+      The perfect Sims emoji pair: Tragic Clown weeping from the left seat, Death deadpan on
+      the right. The Clown's negative aura debuffs the room; Death lands one dry word and waits.
+      Slats (orchestra pit / call-in) and the Ultimate Machine still orbit the bit.
+    running_gag: true
+    dynamic: |
+      Clown sobs a heckle; Death punctures it with a single word; the guest tries to answer both.
+      Will is heckled from above by his saddest object and his most inevitable NPC at once.
+
+kinds:
+  balcony_hecklers:
+    per_show_overlay: repo-shows/<show>/audience/fictional-<slug>/
+    tone: "Loving, warm, gently grumpy — in-character fan heckles, never bad-faith"
+
+  fictional_sims:
+    home: repo-shows/<show>/audience/fictional-<slug>/
+    note: "Show-scoped TicketPR; may recur as regulars on Sims-themed episodes"
+
+  repo_bots:
+    home: characters/<bot>/
+    per_show_overlay: repo-shows/<show>/audience/bot-<id>/
+    examples: [slats, ultimate-machine]
+
+  human_fans:
+    home: repo-shows/<show>/audience/<github-username>/
+    note: "Self-authored; may become regulars by showing up every show"
+
+  guest_primed:
+    home: repo-shows/<show>/audience/guest-primed-<slug>/
+    note: |
+      Guest or guest-approved curator plants audience — virtual, costume, running gags.
+      Disclosure required. Will Wright kickoff: fictional Sims seeded by show curators with
+      guest welcome; Will may add his own via PR.
+    spec: ticket-pr.yml#guest_primed_audience
+
+  running_gags:
+    tag: "running_gag: true in CHARACTER.yml or questions.yml"
+    examples:
+      - fictional-tragic-clown + fictional-grim-reaper balcony duo
+      - bot-slats call-in
+      - bot-ultimate-machine gong
+      - recurring Come On Down costume
+
+images:
+  required_for_examples:
+    - images/headshot.png
+    - images/avatar.png
+    - images/with-guest.png
+  template: repo-shows/_TEMPLATE/audience/images/
+
+during_show:
+  who_surfaces: Don_Philahue
+  how:
+    - "Balcony duo fires between segments — short heckle, never derails guest"
+    - "Regulars' CARD abilities compete with human TicketPR question-advertisements"
+    - "Guest may answer balcony barbs or wave them off"
+
+closing_ceremony:
+  ritual: ultimate-machine-switches-off-the-stream
+  who: bot-ultimate-machine
+  spec: ../process/repo-show-format.yml#closing_ceremony
+  what: |
+    A RECURRING closing ceremony every Repo Show can perform: the Ultimate Machine ends the
+    show by switching OFF the stream — its one function, applied to the broadcast itself.
+  line: "The Ultimate Machine reaches out, flips the stream OFF, and withdraws. Goodnight."
+
+gong:
+  who: bot-ultimate-machine
+  spec: ../process/repo-show-format.yml#gong
+  what: |
+    The Ultimate Machine is the show's automated GONG — it ends acts (and chatty characters)
+    that have run too long. Its off-switch, applied outward.
+  notable_target: |
+    Talky bots stuck in a loop — especially Slats spinning into an LLM audio-feedback
+    robopoetry loop (responding to his own last utterance). The Machine gongs him off.
+
+forbidden:
+  - deceased_humans_as_regulars
+  - living_humans_impersonated_without_consent
+
+see_also:
+  - ticket-pr.yml
+  - ../schemas/fictional-audience.yml
+  - ../repo-shows/will-wright/audience/FICTIONAL-AUDIENCE.md

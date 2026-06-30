@@ -4,13 +4,9 @@ character_id: brian-eno
 public: true
 consent: not_yet_asked
 show_seed: repo-shows/brian-eno/
-contact_path: "via Will Wright + Scott Draves"
 ---
 
 # Repo Show invitation — Brian Eno *(dream guest)*
-
-*Public draft — a dream invitation, not yet sent, no presumption. Brian may shape, decline, delay,
-or request removal at any time.* [Portrayal standards](../../schemas/portrayal-standards.yml)
 
 Dear Brian,
 

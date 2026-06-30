@@ -1,0 +1,23 @@
+# ROOM — venue root (the theater). MOOLLM room node.
+# Human overview: README.md · Full map: VENUE.yml
+room:
+  id: venue
+  name: "The Repo Show Theater"
+  type: venue_root
+  description: |
+    A theater modeled as navigable MOOLLM rooms. Seats are scarce, tangible places. Characters are
+    placed by a `location:` property (we re-point location to move them, never move their files).
+  rearrangeable: "proscenium today; circle/in-the-round/cabaret tomorrow — rewire exits"
+
+exits:
+  in: lobby                    # enter through the lobby / red carpet
+  map: VENUE.yml               # the full room graph + seat assignments
+
+contains:
+  note: "Characters appear here by location reference; see VENUE.yml#assignments_seed"
+
+see_also:
+  - VENUE.yml
+  - README.md
+  - ../performance-and-culture.yml
+  - ../audience/INDEX.yml

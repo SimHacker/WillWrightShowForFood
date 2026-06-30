@@ -53,8 +53,12 @@ format:
   audience_qa: true
   the_repo_show: "A Repo Show: the artifact + stage is this repo. 'So you have a Repo to Show us?'"
   production_style: "Live Twitch Event. Will is a huge draw. We can avoid the 'ghost town' by priming the repo with his 1996 talk PLUS a 1-on-1 teaser."
-  pump_priming: "Announce the repo a week in advance. Harvest PRs, issues, questions, and audience avatars. Use this time-shifted participation to drive the actual interview."
-  intro_ritual: "Per /skills/repo-show: 'this episode's repos are:', AI announcer (superposition of acronyms for MOOLLM), license+credit beat, Will introduced as a Repo Man. Audience characters can ask their pre-loaded question-advertisements (Don Philahue wrangles)."
+  pump_priming: |
+    Announce the repo ahead of time. Audience submits HN comments, issues, and TicketPRs
+    (repo-shows/<show>/audience/<github-user>/) — including before the guest accepts.
+    Harvest builds interest the guest can see. See ../../process/ticket-pr.yml.
+  ticket_pr: ../../process/ticket-pr.yml
+  intro_ritual: "Per /skills/repo-show: 'this episode's repos are:', AI announcer (superposition of acronyms for MOOLLM), license+credit beat, Will introduced as a Repo Man. Don Philahue wrangles TicketPRs + live chat; optional 'Come On Down' for costumed audience members."
   mspo_rpg_resonance: "The async audience (characters ask even when their author is offline; MSPO RPG = Massively Single-Player Online RPG) is WILL'S OWN Spore frame. Especially apt that he's the first guest — invite him to riff on it."
   shape: "No agenda. Explain WHY when a design idea comes up → implement a little of it live (MOOLLM + Cursor). Whatever threads open become future shows."
 
@@ -68,7 +72,7 @@ the_big_ask:
   make_them_wild:
     directive: "Will should make the slides REALLY WILD. The point isn't a clean corporate deck — it's an originator playing HARD with a new instrument, on camera. Maximal Will-Wright weirdness encouraged."
     reference_glee: "Don's reaction to source material like the beautiful yellow slime mold (Physarum) image in the HN/Medium thread — THAT register of delight. Generative, organic, powers-of-ten, emergent-system imagery is exactly Will's vocabulary (cf. SimAnt, Spore, the Wired 'Evolve!' diagram)."
-    asset: ../../../../characters/will-wright/images/spore-wired-diagram-2004.jpeg  # Will's own 'grand unified theory' visual — the energy to match
+    asset: ../../../../characters/will-wright/media/spore-wired-diagram-2004.jpeg  # TODO: add file — Will's 'grand unified theory' Wired diagram
   defense_against_ai_slop:
     # Pre-emptive rebuttal to the reflexive HN/social "That's AI slop → won't read/discuss" dismissal.
     context: "Some people post zero-value 'that's ai slop' to refuse to engage the moment AI is involved. We answer it head-on, with charm, and keep moving."
@@ -147,9 +151,9 @@ segments:
 consent: not_yet_asked              # invitation WRITTEN (near-sendable draft): ./invitation.md — built on the 1996 centerpiece + arc + crown jewel. Per representation-ethics; Don personalizes + sends.
 files:
   README.md:     "Overview + framing + the Flower-Child icon."
+  INTRO-NARRATIVE.md: "Micropolis + WWSFF mapping, wedding playset phoenix, agitprop framing — proof it worked."
+  catalogs/: "SimFreaks, SimSlice, SimProv, Zombie Sims + Micropolis Home platform (create · publish · share)."
   invitation.md: "The markdown invitation email to Will (DRAFT — Don to edit/send)."
-  invitation-gpt55-draft.md: "Alternate concise-weird friend-to-friend draft after the whirlwind call."
-  invitation-opus-draft.md: "THE BIG-PICTURE draft (deliberately not single-page): Proxi ⇔ Simopolis ⇔ Sims bridge → serial-endosymbiosis über-character; the powers-of-ten → his-own-games map (Home/Sims=content+LLM-dreaming, City/SimCity, Earth/SimEarth-Gaia, Space/Spore, Proxi=the character/AI layer; + Sims 1-4 versions & Spore's own levels); the Streets-of-SimCity continuation + 'we should federate'; the shared-situation / raise-funs-in-parallel pitch; and the JOIN ask (WillWrightShowForFood repo gag). Margulis↔Lovelock↔SimEarth loop."
   episodes.yml:  "The kickoff + the topical episodes that flow from it."
   assets/:       "DonHopkinsSimsCreditsIcon.jpg — the User Interface Flower Child."
   sources/:      "Captured source material (Will's own words = the seeds)."
@@ -170,6 +174,8 @@ the_angle:
   seeds: suggested-questions.yml   # the seed question list audience votes on by copying into their characters
 
 audience_contributions:
+  ticket_pr_dir: audience/
+  ticket_pr_spec: ../../process/ticket-pr.yml
   modama:
     contact: characters/don-hopkins/people/contacts/modama.yml
     correspondence: characters/don-hopkins/correspondence/modama.yml

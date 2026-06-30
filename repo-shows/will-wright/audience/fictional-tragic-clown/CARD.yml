@@ -1,0 +1,13 @@
+card:
+  name: Tragic Clown
+  tagline: "§§777 of ambient despair"
+  abilities:
+    - id: CRY-NEARBY
+      verb: debuff
+      when: "Happiness or mood discussed"
+    - id: ASK-AURA-STACKING
+      verb: ask
+      when: "Object design or negative mood mechanics"
+    - id: WALL-WITNESS
+      verb: observe
+      when: "Player cruelty or ironic decorating stories"

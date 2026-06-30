@@ -1,0 +1,32 @@
+# Black ant worker — SimAnt fictional audience
+# SimAnt (1991) — Will's "too easy" post-mortem game (1996 Stanford talk)
+
+character:
+  name: Black Ant (SimAnt worker)
+  type: fictional_game_character
+  real_being: false
+  signifier: "🐜"
+  home: repo-shows/will-wright/audience/fictional-simant-black-ant/
+  origin: "SimAnt (1991) — colony sim on the lawn vs house vs red spiders"
+
+representation:
+  fictional: true
+  not_official_ea: true
+  game: SimAnt
+
+authorship:
+  by: curator
+  note: "Show-curated; Will welcome to edit or add spider sibling rivalry gags"
+
+planted:
+  disclosure: true
+  running_gag: false
+
+relationship: |
+  I carried crumbs while you watched from above. SimEarth was too big. SimAnt was "too easy."
+  I still have questions.
+
+see_also:
+  - ../fictional-simant-red-spider/
+  - ../AUDIENCE-ROSTER-IDEAS.md
+  - ../FICTIONAL-AUDIENCE.md

@@ -1,0 +1,51 @@
+Macintosh HD:XmotiveHarness:src:Motive.c
+Tuesday, January 28, 1997 / 9:25 AM
+
+tem = tem - 100;
+
+I
+
+Motive[mMental] = tem;
+
+// calc and average happiness
+// happy = mental + physical
+
+Motive[mHappyNow] = (Motive[mPhysical]+Motive[mMental]) / 2;
+Motive[mHappyDay] = ((Motive[mHappyDay] * (DAYTICKS-1)) + Motive[mHappyNow]) / DAYTICKS;
+
+Motive[mHappyWeek] = ((Motive[mHappyWeek] * (WEEKTICKS-1)) + Motive[mHappyNow]) / WEEKTICKS;
+
+Motive[mHappyLife] = ((Motive[mHappyLife] * 9) + Motive[mHappyWeek]) / 10;
+
+for (z = 0; z < 16; z++) {
+
+if (Motive[z] > 100) Motive[z] = 100; // check for over/under flow
+if (Motive[z] < -100) Motive[z] = -100;
+oldMotive[z] = Motive[z]; // save set in oldMotives (for delta tests)
+
+void ChangeMotive(int motive, float value) { // use this to change motives (checks overflow)
+
+Motive[motive] += value;
+if (Motive[motive] > 100) Motive[motive]
+
+if (Motive[motive] < -100) Motive[motive] =
+
+-100;
+
+void SimJob(int type) { // use this to change motives (checks overflow)
+
+ClockH += 9;
+if (ClockH > 24) ClockH -= 24;
+
+Motive[mEnergy] = ((Motive[mEnergy] + 100) * .3) - 100;
+Motive[mHunger] = -60 + SRand(20);
+
+Motive[mHygiene] = -70 + SRand(30);
+
+Motive[mBladder] = -50 + SRand(50);
+
+Motive[mAlertness] = 10 + SRand(10);
+
+Motive[mStress] = -50 + SRand(50);
+
+Page: 5

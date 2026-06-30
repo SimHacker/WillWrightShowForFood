@@ -1,0 +1,123 @@
+Macintosh HD:XmotiveHarness:src:Motive.c
+
+Tuesday, January 28, 1997 / 9:25 AM
+
+// dec a max 100/cycle in a cubed curve (seek zero)
+Motive[mStress] -= (Motive[mStress] * Motive[mStress] * Motive[mStress]) / 10000;
+
+if (Motive[mStress] < 0)
+if ((SRand(30) - 100) > Motive[mStress])
+
+if ((SRand(30) - 100) > Motive[mStress]) {
+AlertCancel("\pYou have lost your temper");
+ChangeMotive(mStress, 20);
+
+// environment
+
+// social
+
+// entertained
+if (Motive[mAlertness] < 0)
+Motive[mEntertained] = Motive[mEntertained] / 2;
+
+// calc physical
+tem =
+
+tem
+tem
+tem
+tem
+
++=
++
++
+
+Motive[mEnergy];
+
++= Motive[mComfort];
+Motive[mHunger];
+Motive[mHygiene];
+Motive[mBladder];
+tem = tem / 5;
+
+if (tem > 0)
+tem =
+
+}
+
+tem
+
+tem =
+
+else {
+
+}
+
+tem
+tem
+tem
+
+{
+
+100 - tem;
+
+(tem * tem) / 100;
+100 - tem;
+
+100 + tem;
+
+(tem * tem) / 100;
+tem - 100;
+
+Motive[mPhysical] = tem;
+
+// calc mental
++= Motive[mStress];
+Motive[mStress];
+Motive[mEnvironment];
+Motive[mSocial];
+Motive[mEntertained];
+tem = tem / 5;
+
+tem
+tem
+tem
+tem
+tem
+
++
++
++=
++
+
+if (tem > 0)
+tem =
+
+}
+
+tem
+tem
+
+else {
+
+tem
+tem
+
+{
+
+100 - tem;
+(tem * tem) / 100;
+100 - tem;
+100 + tem;
+
+(tem * tem) / 100;
+
+// cut entertained while asleep
+
+// map the linear average into squared curve
+
+// stress counts *2
+
+// map the linear average into squared curve
+
+Page: 4

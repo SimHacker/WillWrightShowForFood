@@ -43,8 +43,14 @@ nurture_simfreaks_simslice:
   not_just_archive: "EXTENSIVE EPIC catalog PLUS new objects, skins, zombie suites, authoring pipeline"
 
 micropolis_publishing_system:
-  # The real 'why' under the show — the platform Don is building, with the Alveys as first users.
-  what: "Don's **Micropolis content-management & publishing system** — built to host and publish the Alveys' enormous, rich **artisanal back-catalogs** AND their current content streams, plus Don's own. Open to fans and other devs to contribute."
+  # The real 'why' under the show — Micropolis Home platform (see will-wright/catalogs/)
+  platform: ../will-wright/catalogs/micropolis-home/
+  catalogs:
+    - ../will-wright/catalogs/simfreaks/
+    - ../will-wright/catalogs/simslice/
+    - ../will-wright/catalogs/simprov/
+    - ../will-wright/catalogs/zombie-sims/
+  what: "Don's **Micropolis Home** — create · publish · share — built to host and publish the Alveys' enormous, rich **artisanal back-catalogs** AND their current content streams, plus Don's own. Open to fans and other devs to contribute."
   who_its_for: "Steve Alvey (SimSlice/SliceCity) + Heather Alvey née Castello (SimFreaks) — ~26-year respected Sims-content brands, still shipping magnum-opus packs (Zombie Sims) — and Don."
   simprov_wedding_playset: "Don's **SimProv Wedding Playset** (made with the Alveys, **SimBabes**, and other artists; unreleased back then) — recently released; now being reorganized/republished and restarting development, opened up to fans + devs."
   reincarnate_tools: "Bring back the classic Sims content tools as living, open, optionally **AI-orchestrated** apps: SimShow, Sim Transmogrifier, RugOMatic, and body / head / wig editors — and more."

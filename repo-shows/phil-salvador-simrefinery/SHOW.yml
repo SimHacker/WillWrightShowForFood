@@ -1,0 +1,49 @@
+# Phil Salvador — SimRefinery, MBS, and the archivist's craft
+# Invitation show seed — consent not yet requested.
+
+show:
+  id: phil-salvador-simrefinery
+  title: "Phil Salvador — Finding SimRefinery"
+  kind: interview
+  status: seed
+  host: don-hopkins
+  guest: phil-salvador
+
+logline: |
+  The historian who wrote the book on Maxis Business Simulations walks through how SimRefinery
+  was lost, found on a floppy, and what the incomplete prototype teaches about corporate sims,
+  Chevron training, and community archives when official collections fail.
+
+segments:
+  - id: mbs_history
+    topic: "Maxis Business Simulations — SimHealth, refinery sims, why MBS mattered"
+    links:
+      - https://obscuritory.com/sim/maxis-business-simulations/
+
+  - id: discovery_arc
+    topic: "Ars comment → floppy → Internet Archive — who did what"
+    links:
+      - repo-shows/will-wright/sources/simrefinery-recovery/
+
+  - id: playthrough
+    topic: "Live IA/DOSBox — intro vs simref, what works, Tour Book vs in-game tutorial"
+    note: "Check IA availability day-of; have local DOSBox backup"
+
+  - id: preservation_ethics
+    topic: "Deleted from official archive vs out in the world — link don't host"
+    ties:
+      - repo-shows/will-wright/sources/simrefinery-recovery/
+      - process/licensing-micropolis-enterprise.yml
+
+  - id: yoot_tower_vghf
+    topic: "Video Game Source Project — SimTower/Yoot Tower open source (2024 mail)"
+    path: repo-shows/will-wright/sources/2024-yoot-tower-open-source/
+
+  - id: maxis_catalog
+    topic: "Metadata-only Maxis catalog — business sims row"
+    path: repo-shows/will-wright/catalogs/maxis/
+
+related:
+  - repo-shows/will-wright/sources/simrefinery-recovery/
+  - characters/phil-salvador/
+  - repo-shows/luc-barthelet-sims-online/SHOW.yml

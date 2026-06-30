@@ -1,0 +1,21 @@
+# SIMS-SERIES ASSETS — GLANCE
+# up: ../../GLANCE.yml | catalogs: ../catalogs/ | sources: ../sources/
+
+what: |
+  Global gallery + text artifacts — Transmogrifier story, SimFreaks/SimSlice gameplay shots,
+  Dumbold agitprop, procedural rhetoric essays. Visual companions to sources/ and catalogs/.
+
+read_order:
+  - README.md
+  - procedural-rhetoric-inclusion-agitprop.md
+  - transmogrifier-story.md
+  - micropolis-publishing-vision.md
+  - dumbold-voting-machine/
+  - simfreaks-openlaszlo-catalog/
+
+see_also:
+  - { path: ../catalogs/, why: "Brand catalogs these assets illustrate" }
+  - { path: ../sources/2018-04-24-dumbold-voting-machine/, why: "Medium article source" }
+  - { path: ../sources/1996-04-26-winograd-interfacing-to-microworlds/README.md#image-gallery, why: "167-figure centerpiece gallery" }
+  - { path: ../../../characters/will-wright/media/, why: "Will portrait photos" }
+  - { path: ../venue/README.md, why: "Where the orchestra pit lives" }

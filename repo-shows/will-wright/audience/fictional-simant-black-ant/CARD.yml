@@ -1,0 +1,13 @@
+card:
+  name: Black Ant (SimAnt)
+  tagline: "Colony worker — 'too easy' post-mortem"
+  abilities:
+    - id: CARRY-CRUMB
+      verb: ask
+      when: "SimAnt, microworlds, or 1996 Stanford post-mortem"
+    - id: FIGHT-SPIDER
+      verb: heckle
+      when: "Red spider sibling on stream"
+    - id: COLONY-WIN
+      verb: cheer
+      when: "Emergent behavior or elegant design praised"

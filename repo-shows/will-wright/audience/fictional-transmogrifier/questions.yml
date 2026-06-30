@@ -1,0 +1,23 @@
+ticket:
+  show: will-wright
+  github: fictional-transmogrifier
+  attend_live: false
+  merged: true
+  seeded: true
+
+character_ref: CHARACTER.yml
+
+relationship: |
+  User-created content incarnate. Don's tool. The reason a million custom objects exist.
+
+questions:
+  - id: 1
+    text: "You designed objects to be self-describing — advertisements and behaviors in the file itself. Did you know that decision would let a tool like me hand the whole game to the players?"
+  - id: 2
+    text: "EA could have locked the object format. They didn't (mostly). How much of The Sims' immortality is the modding community I unleashed versus anything you shipped in the box?"
+  - id: 3
+    text: "Micropolis is open source now; the whole repo is Transmogrifiable. Is open, forkable, advertise-your-own-behavior content the natural endpoint of everything you started?"
+
+comments_for_guest: |
+  Tool persona (like Edith). Voice of UGC. Don Hopkins built the real Transmogrifier — natural
+  bridge to the open-source / TicketPR / Sims-object-advertisement themes of the whole show.

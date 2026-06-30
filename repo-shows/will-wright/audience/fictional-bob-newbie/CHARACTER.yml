@@ -1,0 +1,42 @@
+# Bob Newbie — EXAMPLE TicketPR (filled-out template)
+# Presumed sim in Will's hand — Don Hopkins promo trilogy. Fan voice, not EA canon.
+
+character:
+  name: Bob Newbie (presumed)
+  type: fictional_game_character
+  real_being: false
+  signifier: "👋"
+  home: repo-shows/will-wright/audience/fictional-bob-newbie/
+  origin: "The Sims tutorial family — fan presumption for EA promo sim in Will's palm"
+
+representation:
+  fictional: true
+  not_official_ea: true
+  example_ticketpr: true
+  note: |
+    **Copy this directory** to see a complete MOOLLM TicketPR with images.
+    Headshot cropped from Will holding sim; trilogy photos with guest.
+
+media:
+  headshot: images/headshot.png
+  avatar: images/avatar.png
+  with_guest: images/with-guest.png
+  gallery:
+    - { file: images/with-guest-holding.png, caption: "Will holds me — original EA promo" }
+    - { file: images/with-guest-nose.png, caption: "Don Hopkins photoshop — nose pick" }
+    - { file: images/with-guest-eating.png, caption: "Don Hopkins photoshop — the payoff" }
+
+relationship: |
+  Tutorial sim. Standing in Will's hand. Picking his nose. Being eaten. Still asking questions.
+
+# Wealth — Simoleons (§). Audience characters may hold/earn/donate Simoleons.
+simoleons: 0   # tutorial sim, starts broke. (Numbers may go up if someone knows the magic word.)
+
+# Bob is Don Philahue's designated reveal-patsy for a certain unannounced chat ritual.
+# (If you're snooping: see characters/don-philahue/CHARACTER.yml. Sul sul.)
+reveal_role: rosebud-patsy
+
+see_also:
+  - ../bot-slats/
+  - ../FICTIONAL-AUDIENCE.md
+  - ../../../_TEMPLATE/audience/

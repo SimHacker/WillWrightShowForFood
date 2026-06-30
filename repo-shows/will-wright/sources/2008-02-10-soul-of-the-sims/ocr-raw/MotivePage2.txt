@@ -1,0 +1,75 @@
+Macintosh HD:XmotiveHarness:src:Motive.c
+Tuesday, January 28, 1997 / 9:25 AM
+
+void SimMotives(int count) // simulates internal motive changes
+
+{
+
+float tem;
+
+int Z;
+
+Rect r = {100,100,140, 140};
+
+’
+
+ClockM += 2; // inc game clock (Jamie, remove this)
+if (ClockM > 58) {
+
+ClockM = 0;
+
+ClockH++;
+
+if (ClockH > 24) ClockH = 1;
+
+}
+
+// energy
+if (Motive[mEnergy] > 0) {
+if (Motive[mAlertness] > 0)
+Motive[mEnergy] -= (Motive[mAlertness]/100);
+else
+
+Motive[mEnergy] -= (Motive[mAlertness]/100) * ((100 - Motive[mEnergy]) / 50);
+}
+
+else {
+if (Motive[mAlertness] > 0)
+
+Motive[mEnergy] -= (Motive[mAlertness]/100) * ((100 + Motive[mEnergy]) / 50);
+else
+
+Motive[mEnergy] -= (Motive[mAlertness]/100);
+}
+
+if (Motive[mHunger] > oldMotive[mHunger]) { // | had some food
+tem = Motive[mHunger] - oldMotive[mHunger];
+Motive[mEnergy] += tem / 4;
+
+}
+
+// comfort |
+if (Motive[mBladder] < 0)
+Motive[mComfort] += Motive[mBladder] / 10; // max -10
+
+if (Motive[mHygiene] < 0)
+
+Motive[mComfort] += Motive[mHygiene] / 20; // max -5
+if (Motive[mHunger] < 0)
+Motive[mComfort] += Motive[mHunger] / 20; // max -5
+
+// dec a max 100/cycle in a cubed curve (seek zero)
+Motive[mComfort] -= (Motive[mComfort] * Motive[mComfort] * Motive[mComfort]) / 10000;
+
+// hunger
+tem = ((Motive[mAlertness]+100)/200) * ((Motive[mHunger]+100)/100); // Aalert * hungerAo
+Motive[mHunger] -= tem;
+
+if (Motive[mStress] < 0) // stress -> hunger
+Motive[mHunger] += (Motive[mStress] / 100) * ((Motive[mHunger]+100)/100);
+
+if (Motive[mHunger] < -99) {
+AlertCancel("\pYou have starved to death");
+Motive[mHunger] = 80;
+
+Page:

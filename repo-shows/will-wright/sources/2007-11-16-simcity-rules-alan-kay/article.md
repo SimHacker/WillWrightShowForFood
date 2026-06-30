@@ -2,7 +2,7 @@
 
 *Submitted by Don Hopkins · Fri, 2007-11-16 05:40*
 *Tags: OLPC · Python · SimCity*
-*Source: <http://www.donhopkins.com/drupal/node/9>*
+
 *Email thread with Alan Kay (OLPC / Sugar era).*
 
 ---
@@ -58,6 +58,6 @@ Of course that would be for advanced kids, but it would be great for making game
 
 ## Related
 
-- [Winograd UI talk (Drupal, 2004)](../2004-01-12-winograd-ui-simulation-games-drupal/article.md)
+- [Winograd UI talk (2004 essay)](../2004-01-12-winograd-ui-simulation-games/article.md)
 - [Winograd UI talk (Medium, illustrated)](../1996-04-26-winograd-interfacing-to-microworlds/medium-article.md)
 - [Micropolis / OLPC Micropolis fork](../../../characters/don-hopkins/)

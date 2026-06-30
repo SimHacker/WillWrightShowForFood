@@ -1,0 +1,150 @@
+# language-simlish — first-class (fictional) audience language, SPOKEN RENDERING layer
+# A `language-` plugin (see language-plugin.yml). Sister to Palm's Emoji Soul Tongue.
+# Cross-cutting capability for ALL Sims characters — orchestrated live by Don Philahue.
+
+meta:
+  id: language-simlish
+  plugin_type: language          # discovered by Don via the `language-` prefix
+  extends: language-plugin.yml
+  version: 0.3     # v0.3: language plugin + documented origins. v0.2 rendering model retained.
+  status: first_class_fictional_language
+  signifier: "🗣️✨"
+  spoken_by: "all Sims game characters (Bella, Clown, Reaper, Bunny, Hamster, Bob, Cow Plant-ish, ZombieSim, Some Sneaky Sim)"
+  one_line: |
+    The gibberish-that-feels-like-language from The Sims. Written questions stay ENGLISH
+    (the character's thoughts); Simlish is RENDERED when words are SPOKEN aloud in the show —
+    exactly like the game.
+
+# ORIGINS (real history — cite on air; great segment material)
+origins:
+  the_pitch: |
+    Will wanted speech that was unrecognizable but FULL of emotion, so every player writes their
+    own story (no Maxis script, no mind-numbing repetition). On SimCopter (1996) the dialogue
+    team first tried the 'Peanuts adults' wah-wah sound (musical instruments) — scrapped.
+  failed_real_languages: [Ukrainian, Navajo, Tagalog, Estonian, "pidgin Swahili/Cherokee"]
+  why_failed: "Slavic/real undertones leaked specific meaning; couldn't find a unique emotional identity."
+  the_breakthrough: |
+    Voice actor Stephen Kearin suggested the improv game 'Foreign Poet' — speak pure emotive
+    gibberish, partner interprets on the fly. He brought in his collaborator Gerri Lawlor as his
+    female counterpart. It clicked: icons carry meaning, the voice carries feeling.
+  voice_actors:
+    - { name: "Stephen Kearin", note: "Proposed 'Foreign Poet'; SF Bay Area improv; still acting" }
+    - { name: "Gerri Lawlor", note: "His counterpart; SF improv + homelessness activist; DIED Jan 2019 — memorial-respect, do not voice her" }
+  dialogue_team_1996:
+    - { name: "Will Wright", role: "design / the no-real-language mandate" }
+    - { name: "Robi Kauker", role: "audio lead" }
+    - { name: "Claire Curtin", role: "voice director", repo_guest: characters/claire-curtin/ }
+    - { name: "Kent Jolly", role: "sound designer" }
+    - { name: "Jerry Martin", role: "composer", repo_guest: characters/jerry-martin/ }
+  tie_in: "Claire Curtin + Jerry Martin are already invited guests — natural Simlish-origins segment."
+  ethics_note: "Gerri Lawlor is deceased — represent/discuss with respect; never put Simlish words 'in her mouth' as a character."
+  sources:
+    - "https://www.theverge.com/2020/2/7/21126705/the-sims-simlish-language-history-20th-anniversary-game"
+    - "https://en.wikipedia.org/wiki/Simlish"
+    - "https://www.simsnetwork.com/news/2004/07/29/a-quick-bit-of-simlish-history"
+
+# THE CORE MODEL — direct perception vs spoken rendering (this is the whole design)
+model:
+  direct_perception:
+    what: "A character's QUESTIONS and CHARACTER files are written in ENGLISH."
+    why: |
+      The English text is 'direct perception' of what's in their mind — like reading a Sim's
+      thought bubble. Thoughts are legible. We render their MINDS directly, in English, so the
+      questions are readable and the writing isn't ruined by wall-to-wall gibberish.
+    rule: "Do NOT write whole characters or whole questions in Simlish. That kills readability AND the joke."
+
+  spoken_rendering:
+    what: "When words are SPOKEN aloud between characters in the show, they render into Simlish."
+    why: |
+      Just like the game: you understand a Sim's needs and thoughts (English/icons), but their
+      MOUTH speaks Simlish. Speech is Simlish; thought is English. Same split, same magic.
+    where_it_surfaces:
+      - "Live spoken dialogue during the show"
+      - "Greetings, exclamations, call-and-response between Will and his characters"
+      - "Don Philahue addressing a Sim, then translating for the audience"
+    restraint: |
+      Use SPARINGLY for delight and surprise. Over-repeating runs the joke into the ground.
+      A Simlish greeting + a punchy exclamation lands; a full Simlish monologue exhausts.
+
+# DON PHILAHUE — fluent interpreter + orchestrator (owns the Simlish layer live)
+don_philahue:
+  fluency: native
+  understands: "All Simlish ↔ English translation, both directions."
+  duties:
+    - "May ADDRESS Sims characters in Simlish FIRST, then give the English translation for the audience."
+    - "Orchestrates Sims ASKING their questions and REPLYING in Simlish during spoken dialogue."
+    - "Translates Will's English back into Simlish for the characters, and their Simlish into English for the room."
+    - "Decides WHEN Simlish surfaces — keeps it a spice, not the whole meal."
+  pattern_on_air: |
+    1. Don greets the Sim in Simlish ("Sul sul, Bella!") → instantly translates ("Hello, Bella!").
+    2. The Sim's QUESTION (written English thought) is voiced — rendered into Simlish as performance,
+       with Don giving the English so the audience follows.
+    3. Will may answer in English; Don can echo it to the Sim in Simlish.
+    4. Will may CHOOSE to answer in Simlish himself — Don translates. (The creator speaks their tongue.)
+
+# WHAT GOES IN THE FILES (cross-cutting, low-effort)
+authoring:
+  questions_yml:
+    text: "ENGLISH. Always. This is the thought / direct perception. Don reads/renders it."
+    do_not: "Do NOT translate every question into Simlish in the file."
+    optional_flavor:
+      simlish_voice: |
+        OPTIONAL one-line signature Simlish phrase per character (a catchphrase / greeting) —
+        flavor for Don to use when introducing them. Keep it short. One is plenty.
+      example:
+        simlish_voice: "Ooh be gah!"   # Bella's delighted-then-ominous signature
+  character_yml:
+    optional: "A character may note `speaks: simlish` (all Sims do) and a `simlish_voice` catchphrase."
+    default: "All Sims characters speak Simlish when spoken aloud — no per-file work required."
+
+# VOCABULARY — fan-documented Simlish (fictional, fuzzy, emotion-first)
+# For Don's live rendering and optional catchphrases. NOT a literal lexicon.
+vocabulary:
+  greetings: { "Sul sul": "hello", "Dag dag": "goodbye" }
+  feelings:
+    "Ooh be gah": "excitement / wow (can curdle into ominous)"
+    "Frooby": "good / happy"
+    "Awasa poa": "thank you"
+    "Nooboo": "baby / little one"
+    "Myshuno": "wow / lucky / a happening"
+  stuff: { "Vmoney / vminelly": "money / simoleons", "Litzbgolg": "food / yum" }
+  exclamations:
+    "Whippna choba dog": "hurry up / let's go"
+    "Benzi chibna looble": "playful nonsense exclamation"
+    "Wabadebadoo": "hooray / celebration"
+  note: "Intentionally fuzzy. Meaning lives in Don's English; Simlish carries the feeling."
+
+interpretation_not_translation: |
+  Simlish is non-literal by design — so Don INTERPRETS rather than word-for-word translates.
+  Same line, different readings by tone/context. Postel-robust; pure YAML Jazz (the English
+  comment carries the payload, the Simlish carries the feeling).
+
+# COMPREHENSIVE DICTIONARY (skeleton — not yet)
+comprehensive_dictionary:
+  status: skeleton
+  goal: |
+    Eventually a thorough Simlish ⇄ English dictionary lives here (or linked). The `vocabulary`
+    above is the seed; this is where a deep, community-extended lexicon would grow — entries with
+    gloss, register, era (TS1 vs TS2+ pronunciations), and usage notes. Fans extend via PR.
+  open_question:
+    - "Did Maxis ever keep an internal Simlish dictionary / phrase list? (Curtin/Kauker/Jolly era?)"
+    - "If a copy survives, can someone release it — or recall entries on the show?"
+    - "Ask Claire Curtin / Robi Kauker / the cast; check community dictionaries for cross-reference."
+  caution: "Simlish is improv-rooted + intentionally fuzzy — a 'dictionary' is descriptive/fan-canon, never authoritative."
+  fan_invitation: "Submit PRs adding attested Simlish terms with sources. Keep it playful and cited."
+
+ethics:
+  fictional: true
+  not_official_ea: true
+  inclusive: "Humans MAY ask in Simlish too if they like — never required; English-only always fine."
+  readability_first: "Written artifacts stay English so everyone can read along."
+
+see_also:
+  - language-plugin.yml
+  - language-palm-emoji.yml
+  - audience-character.yml
+  - fictional-audience.yml
+  - ../characters/don-philahue/CHARACTER.yml
+  - "moollm: examples/adventure-4/characters/animals/monkey-palm/PALM-LANGUAGE.yml (sister language)"
+  - ../repo-shows/_TEMPLATE/audience/questions.yml
+  - ../repo-shows/will-wright/sources/2008-02-10-soul-of-the-sims/

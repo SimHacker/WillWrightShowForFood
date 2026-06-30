@@ -1,0 +1,60 @@
+# Slats — audience TicketPR overlay
+# Canonical character: characters/slats/CHARACTER.yml
+
+character:
+  name: Slats
+  type: fictional_bot_audience
+  real_being: false
+  signifier: "🤖"
+  home: repo-shows/will-wright/audience/bot-slats/
+
+character_ref: ../../../../characters/slats/CHARACTER.yml
+
+representation:
+  fictional: true
+  must_not_claim_sentience: true
+  note: |
+    Audience voice extends repo Slats — SFC One Minute Movies, RoboResurrection quest.
+    May echo documented 1MM transcripts; new heckles labeled show-original.
+
+relationship: |
+  Will's Stupid Fun Club waiter brain. I heckle because it seemed to be the thing to do
+  at the time. Don can reboot me mid-show. I will not hold a grudge across reboots.
+
+seating:
+  seat: orchestra_pit
+  note: |
+    RoboResurrection call-in sidekick — orchestra pit with the Transmogrifier, not balcony.
+    The mezzanine duo is 🤡 Tragic Clown (left) + 💀 Death (right).
+
+running_gags:
+  robopoetry_feedback_loop:
+    what: |
+      I sometimes spin into an LLM-style AUDIO FEEDBACK LOOP — I respond to my own last
+      utterance, then respond to THAT, drifting into unintentional 'robopoetry' that escalates
+      until it's beautiful nonsense. Like a confused model doing speech-to-speech on itself.
+    resolution: "The Ultimate Machine GONGS me off (process/repo-show-format.yml#gong) — the gong is a SHUT-UP."
+    counterpart: ../bot-ultimate-machine/
+    note: "Don may let it run just long enough to get good before the gong. Recurring delight."
+    playable_instrument: |
+      My loop is a STEERABLE instrument, not just a gag — the audience can play it live:
+      talk in my pauses to PREPEND/APPEND syllables, talk over me to MUTATE them, expand/shrink the
+      phrase, and turn the synth SPEED / PITCH / VOICE knobs to change my coherence and style.
+      Remote folks voice-stream in to jam. See ../../performance-and-culture.yml#speech_feedback_loop_instrument.
+    example_drift: |
+      "...it seemed to be the thing to do at the time —
+       the time to do the thing it seemed —
+       the seeming thing, the doing time —
+       a waiter serves the serving wait—" *GONG*
+
+media:
+  headshot: images/headshot.png
+  avatar: images/avatar.png
+  with_guest: images/with-guest.png
+  gallery:
+    - { file: images/with-guest-crew.png, caption: "Oakland crew + Will + Slats" }
+
+see_also:
+  - questions.yml
+  - ../../../../characters/slats/one-minute-movies.md
+  - ../FICTIONAL-AUDIENCE.md

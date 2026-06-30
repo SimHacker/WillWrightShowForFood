@@ -1,0 +1,70 @@
+# language-plugin — base convention for Repo Show audience languages
+# Drop a `language-<name>.yml` in schemas/ and Don Philahue auto-discovers it by prefix.
+# Sister of MOOLLM yaml-jazz + Palm's Emoji Soul Tongue. The Sims object-plugin model, for speech.
+
+meta:
+  id: language-plugin
+  is: abstract_base
+  one_line: |
+    A pluggable (fictional) language Don Philahue can translate to/from live. Bigendian-prefixed
+    `language-*` so they sort together; drop one in and it just works — like a Sims object whose
+    file declares its own behavior. No code changes; the orchestrator discovers it.
+
+discovery:
+  who: don-philahue
+  how: "Scan schemas/ for files prefixed `language-` → load each as a supported language plugin."
+  prefix: "language-"
+  add_a_language: "Create schemas/language-<name>.yml following this base. That's it. Don knows it."
+  examples: [language-simlish, language-palm-emoji, language-robot, language-cow]
+
+# Every language plugin SHOULD declare these:
+plugin_contract:
+  plugin_type: language
+  id: "language-<name>"
+  spoken_by: "[character ids or types that speak it natively]"
+  signifier: "emoji"
+  vocabulary: "fuzzy/representative — meaning lives in the interpretation, not a literal lexicon"
+  interpretation_not_translation: |
+    Most of these are non-literal by design. Don INTERPRETS (tone + context), he does not do
+    word-for-word translation. Same utterance → different readings. Postel-robust; pure YAML Jazz.
+  rendering: "thoughts/questions stay ENGLISH in files; the language is RENDERED when SPOKEN live"
+
+# Per-SPEAKER declarations (on a character). Defaults assume fluent English both ways.
+speaker_declares:
+  speaks: "language-<name>   # the character's native/spoken tongue when voiced"
+  english:
+    knows_english: true        # DEFAULT true — everyone understands English unless they say otherwise
+    proficiency: fluent         # fluent | partial | none
+    prefers_listening: english  # what they'd rather hear
+    prefers_speaking: english   # what they'd rather speak (Sims speak Simlish when voiced, think English)
+  note: |
+    Default: yes, knows English, fluent, happily speaks/listens. Special cases modulate — e.g. a
+    character who knows_english: none forces Don to repeat questions in their language.
+
+# The fun: dense ↔ verbose asymmetry
+expressiveness:
+  dense_to_verbose: |
+    A single dense, powerful glyph can unpack into a paragraph of English. The 💩 emoji isn't
+    "bad" — it's an *extremely nuanced* critique: "I don't merely dislike this; here, precisely,
+    is why it is shit, in loving detail." Don performs the full unpacking. Great comedy.
+  verbose_to_dense: "A long English question may collapse to one perfect Simlish exclamation."
+
+# The edge case Don loves
+telephone_game:
+  when: "Don translates between two characters who share NO common language (and not English)."
+  effect: |
+    Distortion accrues each hop — a telephone game with feedback. Slats hears the wobble and
+    JUMPS IN, looping into robopoetry. The Ultimate Machine gongs him (a SHUT-UP action). The
+    drift is the joke; let it climb a little before the gong.
+
+ethics:
+  fictional: true
+  inclusive: "Humans may speak any plugin language; English-only is always fine; never required."
+  readability_first: "Written files stay English so everyone reads along."
+
+see_also:
+  - language-simlish.yml
+  - language-palm-emoji.yml
+  - language-robot.yml
+  - language-cow.yml
+  - ../characters/don-philahue/CHARACTER.yml   # the C-3PO translator who runs these

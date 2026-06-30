@@ -1,0 +1,266 @@
+# Don Hopkins YouTube — index from old-email harvest
+# 37 unique watch URLs in DonHopkins/temp/old-email/ (2026-06-29)
+# Regenerate: python3 DonHopkins/projects/willwrightshowforfood/tools/extract_youtube_index.py
+
+meta:
+  source: DonHopkins/temp/old-email/
+  count: 37
+  status: partial
+  note: "Titles: TITLES.yml (yt-dlp 2026-06-29) + manual overrides"
+
+videos:
+  - id: nsxoZXaYJSk
+    url: https://www.youtube.com/watch?v=nsxoZXaYJSk
+    title: "Will Wright - Maxis - Interfacing to Microworlds - 1996-4-26"
+    topics: [will-wright, sims, dollhouse, winograd]
+    wwsff: repo-shows/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
+    status: published
+
+  - id: zC52jE60KjY
+    url: https://www.youtube.com/watch?v=zC52jE60KjY
+    title: "The Sims Steering Committee - June 4 1998"
+    topics: [sims, prototype, edith]
+    wwsff: repo-shows/will-wright/sources/1998-06-04-sims-steering-committee-demo/
+    status: published
+
+  - id: -exdu4ETscs
+    url: https://www.youtube.com/watch?v=-exdu4ETscs
+    title: "The Sims, Pie Menus, Edith Editing, and SimAntics Visual Programming Demo"
+    topics: [sims, edith, simantics, pie-menus]
+    wwsff: repo-shows/will-wright/sources/don-youtube-exdu4ETscs-edith-simantics-demo/
+    status: published
+
+  - id: Imu1v3GecB8
+    url: https://www.youtube.com/watch?v=Imu1v3GecB8
+    title: "Transmogrifier, RugOMatic, ShowNTell, Simplifier, SliceCity"
+    topics: [sims, tools, simplifier, simslice, ucc]
+    wwsff: repo-shows/will-wright/sources/don-youtube-imu1v3GecB8-simplifier-tools-demo/
+    status: published
+
+  - id: ImLZzXB9asw
+    url: https://www.youtube.com/watch?v=ImLZzXB9asw
+    title: "The Sims 1 Object Exporter Demo"
+    topics: [sims, transmogrifier, maxscript]
+    wwsff: repo-shows/will-wright/sources/don-youtube-ImLZzXB9asw-object-exporter/
+    status: published
+
+  - id: LmB7Q6wSQ9Y
+    url: https://www.youtube.com/watch?v=LmB7Q6wSQ9Y
+    title: "The Sims 1 Character Animation Exporter Demo"
+    topics: [sims, maxscript, ocean-quigley]
+    wwsff: repo-shows/will-wright/sources/don-youtube-LmB7Q6wSQ9Y-character-animation-exporter/
+    status: published
+
+  - id: Nzz0cFSmgiM
+    url: https://www.youtube.com/watch?v=Nzz0cFSmgiM
+    title: "FreeTheSims Sims Character Animation ActiveX Control Demo"
+    topics: [sims, activex, shownTell]
+    wwsff: repo-shows/will-wright/sources/don-youtube-Nzz0cFSmgiM-freethesims-activex/
+    status: published
+
+  - id: 8MYB9Z9TnhM
+    url: https://www.youtube.com/watch?v=8MYB9Z9TnhM
+    title: "MAGFest 2025 — The Sims: Breaking it Down"
+    topics: [sims, community]
+    referred_by: phil-salvador
+    status: todo_article
+
+  - id: 8snnqQSI0GE
+    url: https://www.youtube.com/watch?v=8snnqQSI0GE
+    title: "Micropolis — Python/TurboGears/Flash (OpenLaszlo) web demo"
+    topics: [micropolis, simcity, openlaszlo, python]
+    wwsff: repo-shows/will-wright/sources/multiplayer-simcity-ui-network/
+    status: linked
+
+  - id: gRodlxUZ9SQ
+    url: https://www.youtube.com/watch?v=gRodlxUZ9SQ
+    title: "SimFaux Demo"
+    topics: [openlaszlo, pie-menus, stupid-fun-club]
+    wwsff: repo-shows/will-wright/sources/don-youtube-gRodlxUZ9SQ-simfaux/
+    status: published
+
+  - id: NXsUetUzXlg
+    url: https://www.youtube.com/watch?v=NXsUetUzXlg
+    title: "(unavailable — yt-dlp empty; Stupid Fun Club Servitude)"
+    topics: [stupid-fun-club, will-wright, python]
+    status: unavailable
+
+  - id: KXrbqXPnHvE
+    url: https://www.youtube.com/watch?v=KXrbqXPnHvE
+    title: "Empathy"
+    topics: [stupid-fun-club, will-wright, python]
+    wwsff: repo-shows/will-wright/sources/stupid-fun-club-one-minute-movies/
+    status: published
+
+  - id: _2yEHs_WLzQ
+    url: https://www.youtube.com/watch?v=_2yEHs_WLzQ
+    title: "Stupid Fun Club StoryMaker Demo"
+    topics: [stupid-fun-club, storymaker]
+    wwsff: repo-shows/will-wright/sources/don-youtube-storymaker-demo/
+    status: published
+
+  - id: N1Y-29tX0Co
+    url: https://www.youtube.com/watch?v=N1Y-29tX0Co
+    title: "AfterEffects Aether plug-in demo"
+    topics: [aftereffects, cellular-automata]
+    wwsff: repo-shows/will-wright/sources/don-youtube-N1Y-29tX0Co-aether/
+    status: published
+
+  - id: jDrqR9XssJI
+    url: https://www.youtube.com/watch?v=jDrqR9XssJI
+    title: "Flight of the PIXIE — Yuja Wang (CAD PDP-7/Titan + AE)"
+    topics: [pie-menus, history, aftereffects]
+    wwsff: repo-shows/will-wright/sources/don-youtube-jDrqR9XssJI-flight-of-pixie/
+    status: published
+
+  - id: A1mqg4C0awA
+    url: https://www.youtube.com/watch?v=A1mqg4C0awA
+    title: "Interval Bounce — Rush/Jesse TV puppets"
+    topics: [pie-menus, bounce, interval]
+    wwsff: repo-shows/will-wright/sources/2022-cam-6-pie-menus-visual-programming/
+    status: linked
+
+  - id: TrScy1icWjI
+    url: https://www.youtube.com/watch?v=TrScy1icWjI
+    title: "CAM-6 cellular automata demo"
+    topics: [cam-6, cellular-automata]
+    wwsff: repo-shows/will-wright/sources/2022-cam-6-pie-menus-visual-programming/
+    status: linked
+
+  - id: edXRNtuAGTg
+    url: https://www.youtube.com/watch?v=edXRNtuAGTg
+    title: "CAM-6 demo (alternate)"
+    topics: [cam-6]
+    status: todo
+
+  - id: i4mZuPZuFxo
+    url: https://www.youtube.com/watch?v=i4mZuPZuFxo
+    title: "CAM-6 / Tommaso Toffoli related (verify)"
+    topics: [cam-6]
+    status: todo
+
+  - id: 8pTEmbeENF4
+    url: https://www.youtube.com/watch?v=8pTEmbeENF4
+    title: "(NeWS / HyperLook era — verify)"
+    topics: [news, hyperlook]
+    status: todo
+
+  - id: 8QiPFmIMxFc
+    url: https://www.youtube.com/watch?v=8QiPFmIMxFc
+    title: "(NeWS demo — verify)"
+    topics: [news]
+    status: todo
+
+  - id: 9G0r7jL3xl8
+    url: https://www.youtube.com/watch?v=9G0r7jL3xl8
+    title: "Viewpoint demo — Scott Kim's PhD project, Stanford 1988"
+    topics: [hci, scott-kim]
+    status: todo_article
+
+  - id: IsINJ8mlD5A
+    url: https://www.youtube.com/watch?v=IsINJ8mlD5A
+    title: "C32 Spreadsheet 1991"
+    topics: [hci, history]
+    status: todo
+
+  - id: wlHGfNlE8Os
+    url: https://www.youtube.com/watch?v=wlHGfNlE8Os
+    title: "Micropolis Web Demo 1"
+    topics: [micropolis, simcity, openlaszlo]
+    wwsff: repo-shows/will-wright/sources/multiplayer-simcity-ui-network/
+    status: linked
+
+  - id: BBVyCpmVQew
+    url: https://www.youtube.com/watch?v=BBVyCpmVQew
+    title: "Micropolis Web Space Inventory Cellular Automata Music 1"
+    topics: [micropolis, cellular-automata]
+    status: todo_article
+
+  - id: gdIO41Blysg
+    url: https://www.youtube.com/watch?v=gdIO41Blysg
+    title: "(Yoot Tower — verify)"
+    topics: [yoot-tower]
+    status: todo
+
+  - id: h3Yrhv33Zb8
+    url: https://www.youtube.com/watch?v=h3Yrhv33Zb8
+    title: "Aerosmith - Love In An Elevator"
+    topics: [unrelated]
+    note: "Linked in SimTower email thread — not Don video"
+    status: skip
+
+  - id: CqNECXCd9iU
+    url: https://www.youtube.com/watch?v=CqNECXCd9iU
+    title: "Yoot Tower: The Sequel to SimTower"
+    topics: [yoot-tower]
+    wwsff: repo-shows/will-wright/sources/2024-yoot-tower-open-source/
+    status: linked
+
+  - id: sMN1LQ7qx9g
+    url: https://www.youtube.com/watch?v=sMN1LQ7qx9g
+    title: "Unity3D Pie Menu Demo"
+    topics: [pie-menus, unity]
+    wwsff: repo-shows/will-wright/sources/don-youtube-sMN1LQ7qx9g-unity-pie-menus/
+    status: published
+
+  - id: 2KfeHNIXYUc
+    url: https://www.youtube.com/watch?v=2KfeHNIXYUc
+    title: "(unavailable — yt-dlp empty)"
+    topics: [tools]
+    status: unavailable
+
+  - id: Jvi98wVUmQA
+    url: https://www.youtube.com/watch?v=Jvi98wVUmQA
+    title: "(unavailable — yt-dlp empty)"
+    topics: [tools]
+    status: unavailable
+
+  - id: _fVl4dGwUrA
+    url: https://www.youtube.com/watch?v=_fVl4dGwUrA
+    title: "Multi Player SimCityNet for X11 on Linux"
+    topics: [simcity, simcitynet, multiplayer]
+    wwsff: repo-shows/will-wright/sources/multiplayer-simcity-ui-network/
+    status: linked
+
+  - id: EpKhh10K-j0
+    url: https://www.youtube.com/watch?v=EpKhh10K-j0
+    title: "(unavailable — yt-dlp empty)"
+    topics: [tools]
+    status: unavailable
+
+  - id: dgrNeyuwA8k
+    url: https://www.youtube.com/watch?v=dgrNeyuwA8k
+    title: "James Gosling - Sun Microsystems - Bringing Behavior to the Internet (1995)"
+    topics: [news, java, gosling]
+    status: todo_article
+
+  - id: -IV8hCvsXy0
+    url: https://www.youtube.com/watch?v=-IV8hCvsXy0
+    title: "Seaman (Dreamcast) - AVGN"
+    topics: [yoot-saito, seaman]
+    note: "Yoot Saito thread context"
+    status: todo
+
+  - id: _4ToEDrhxo0
+    url: https://www.youtube.com/watch?v=_4ToEDrhxo0
+    title: "(SimTower — verify)"
+    topics: [simtower]
+    status: todo
+
+  - id: SAoOH_VTX6c
+    url: https://www.youtube.com/watch?v=SAoOH_VTX6c
+    title: "(SimTower — verify)"
+    topics: [simtower]
+    status: todo
+
+playlists_todo:
+  - "Don channel export — Sims/SimCity playlist URLs"
+  - "Match remaining verify titles via yt-dlp or manual pass"
+
+by_status:
+  published: 13
+  linked: 4
+  todo_article: 3
+  unavailable: 4
+  skip: 1
+  todo: 12

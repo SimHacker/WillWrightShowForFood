@@ -1,0 +1,13 @@
+card:
+  name: Edith (SimAntics ghost)
+  tagline: "Unreleased Think Mode"
+  abilities:
+    - id: SHOW-BEHAVIOR-TREE
+      verb: reveal
+      when: "SimAntics, Edith, or modding limits discussed"
+    - id: ASK-WHY-NOT-SHIPPED
+      verb: ask
+      when: "Tools withheld from players"
+    - id: HAUNT-OBJECT-PIPELINE
+      verb: haunt
+      when: "Don Hopkins or Transmogrifier on stream"

@@ -1,0 +1,120 @@
+# Apple ][ + FujiNet bridge — three-phase plan (stub)
+#
+# Decision doc: ../characters/thomas-cherryhomes/ideas.md §23
+# Stack layers (L0–L2): apple2-emulator-stack.yml → DonHopkins authoritative
+# Guest: Thomas Cherryhomes — discuss P1–P8 before IA pitch
+
+meta:
+  id: apple2-fujinet-bridge
+  status: stub
+  authored: 2026-06-29
+  is: |
+    How Apple ][ emulation connects to FujiNet's network (TNFS, lobby, N:) across
+    hardware, native emulator, and browser — without betting on AppleWin WASM.
+  not: |
+    A fork of FujiNet firmware or a replacement for apple2js L0–L2 disk stack.
+    MAME/Emularity remain complementary (IA scale), not the hot-write path.
+
+decision:
+  summary: |
+    AppleWin+SPoverSLIP+FujiNet-PC for FujiNet-native dev and CI.
+    apple2js for browser hackability, bots, and character bridge organelles.
+    WASM FujiNet = sidecar pattern (server FujiNet-PC + WebSocket shim), not in-tab firmware.
+  see: ../characters/thomas-cherryhomes/ideas.md#23-decision-applewin-vs-apple2js-vs-wasm
+
+three_tracks:
+  hardware:
+    stack: "Real Apple II/IIe/IIc + SmartPort FujiNet ESP32"
+    fujinet: production
+    use_when: [shows, vendors, real_wire_segments, thomas_demo]
+  native_emulator:
+    stack: "FujiNetWIFI/AppleWin linux sa2 + SPoverSLIP card + FujiNet-PC (APPLE build)"
+    alt: fujinet-vm appliance
+    fujinet: SPoverSLIP → localhost FujiNet-PC → same network as real iron
+    use_when: [ci, localtest, fujinet_app_dev, cc65_test_apps, show_segment_without_hardware]
+  browser:
+    stack: "apple2js (primary) or POM2/MAME-Emularity (audience/preservation)"
+    fujinet: none_in_tab_yet
+    bridge_pattern: "browser emu + server FujiNet-PC + WebSocket→SPoverSLIP or NetSIO hub"
+    use_when: [mind_mirror_bridge, hot_write, ai_bot, audience_play_along, emularity_complement]
+
+phases:
+  phase_1_native_rig:
+    id: phase-1
+    title: "Native FujiNet Apple rig — reproducible SETUP"
+    status: planned
+    deliverable: ../rigs/apple2-fujinet-flair-lap.SETUP.md
+    rig: ../rigs/apple2-fujinet-flair-lap.rig.yml
+    stack:
+      - fujinet-vm OVA OR Linux build from FujiNetWIFI/AppleWin linux branch
+      - "./build.sh -p APPLE" FujiNet-PC from fujinet-firmware
+      - SPoverSLIP in slot (card type 25); web admin localhost:8000
+    proves: "Virtual FujiNet joins same TNFS/lobby as real hardware"
+    ask_thomas: P1 — bless as reference rig for Repo Show + contributors?
+    ties:
+      - ../characters/thomas-cherryhomes/ideas.md
+      - ../repo-shows/thomas-cherryhomes/SHOW.yml
+
+  phase_2_browser_stack_and_sidecar:
+    id: phase-2
+    title: "apple2js L0–L2 + optional FujiNet peer"
+    status: planned
+    deliverable: "L0 sector R/W tests; L1 DOS 3.3 catalog; L2 Mind Mirror driver seed"
+    stack:
+      primary_emulator: apple2js
+      authoritative_layers: SimHacker/DonHopkins/projects/micropolis-moollm/process/apple2-emulator-stack.yml
+      fujinet_peer: "Server-side FujiNet-PC — NOT in-browser firmware"
+      sidecar_sketch: |
+        WebSocket relay ↔ SPoverSLIP/TCP (Apple) or NetSIO/UDP (Atari template)
+        Browser emu stays sandboxed; network identity lives in FujiNet-PC process
+    proves: "Character round-trip + optional live TNFS mount from browser session"
+    ask_thomas: [P4, P6, P8] — parallel track or integrated FujiNet Apple client?
+    sequence: "Thomas before Brewster/IA (per apple2-emulator-stack fundable.collaborators)"
+    ties:
+      - apple2-emulator-stack.yml
+      - ../repo-shows/game-bridge-mind-mirror.yml
+
+  phase_3_upstream_and_wasm_bridge:
+    id: phase-3
+    title: "Upstream merge + reference WebSocket hub (optional)"
+    status: future
+    not_blocking: "Phase 1–2 ship without this"
+    work:
+      - SPoverSLIP upstream to audetto/AppleWin — end FujiNet fork drift (P3)
+      - FujiNet-blessed WebSocket→NetSIO or WebSocket→SPoverSLIP reference hub (P2)
+      - apple2js SmartPort shim OR documented sidecar-only API
+    explicitly_not:
+      - "Full AppleWin Emscripten port as critical path"
+      - "FujiNet-PC compiled to WASM (POSIX network stack in browser tab)"
+    ask_thomas: [P2, P3, P5] — protocol ownership, merge maintainer, IA complement framing
+
+emulator_roles:
+  applewin_fujinet_fork:
+    role: fujinet_native_dev
+    when: "Need SmartPort + FujiNet-PC + cc65 fujinet-apps on same machine"
+    active: "Integration branch; upstream AppleWin active separately"
+  apple2js:
+    role: browser_hackable_core
+    when: "Hot-write, bots, AI coding, game drivers L0–L2, Mind Mirror organelle"
+    active: "Apr 2026; MIT TS"
+  mame_emularity:
+    role: ia_preservation_scale
+    when: "Millions of users, 4am library, multi-platform breadth"
+    active: "IA production path; opaque for disk surgery"
+  pom2:
+    role: browser_wow_cycle_accurate
+    when: "Audience demo, rewind, 3D view — parallel not primary for bridges"
+
+proposals_for_thomas:
+  ref: ../characters/thomas-cherryhomes/ideas.md#22-project-proposals-to-discuss-with-thomas
+  ids: [P1, P2, P3, P4, P5, P6, P7, P8]
+
+ties:
+  - apple2-emulator-stack.yml
+  - challenges/apple2-drive.yml
+  - challenges/retrocomputing-drive.yml
+  - ../characters/thomas-cherryhomes/ideas.md
+  - ../characters/thomas-cherryhomes/
+  - ../repo-shows/thomas-cherryhomes/SHOW.yml
+  - ../rigs/apple2-flair-lap.rig.yml
+  - cross-links.yml#retro_guests_real_wire

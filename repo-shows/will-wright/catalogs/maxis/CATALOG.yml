@@ -1,0 +1,68 @@
+# Maxis catalog — metadata only, pointers to content everywhere
+# NOT a mirror of EA retail assets. CARDs + backstories + object IDs + where to find binaries.
+
+meta:
+  id: maxis-catalog
+  kind: metadata_catalog
+  policy: |
+    Record titles, dates, object IDs, expansion pack membership, killer-download backstories,
+    and canonical URLs (Steam, Internet Archive, donhopkins.com, Hidden Palace, TCRF).
+    Do not commit retail installers or leaked dumps to git.
+
+sections:
+  - id: official_releases
+    summary: "Base game + expansion packs — store pages, Steam app IDs, IA items when legal"
+    examples:
+      - "The Sims (2000) — Steam"
+      - "Livin' Large, House Party, … — expansion metadata grid"
+
+  - id: killer_downloads
+    summary: "Memorable Maxis.com / originalsims.com downloads — one article per interesting object"
+    examples:
+      - "Killer Hamster — backstory article TODO"
+      - "Halloween tombstones / dumbold waiter — tie to originalsims Wayback"
+
+  - id: base_objects
+    summary: "Every base-game object — metadata + preview source pointer"
+    preview_sources:
+      - "Native IFF parse + sprite render (planned — replaces ShowNTell scrape)"
+      - "ShowNTell ActiveX era — [`../../sources/2004-01-08-showntell-activex-preview/`](../../sources/2004-01-08-showntell-activex-preview/)"
+      - "Live game scrape (legacy Simplifier path until IFF pipeline proven)"
+
+  - id: expansion_objects
+    summary: "Per-pack object tables — same schema as base_objects + pack_id"
+
+  - id: prototypes
+    summary: "Link-only — steering committee, alpha, SimRefinery, Spore protos"
+    hub: "../../sources/1999-01-06-sims-alpha-prototype/"
+
+  - id: business_sims
+    summary: "SimRefinery, SimHealth, MBS lineage"
+    hub: "../../sources/simrefinery-recovery/"
+
+object_record_schema:
+  fields:
+    - object_id
+    - name
+    - pack
+    - category
+    - iff_resource_refs
+    - preview_url
+    - content_location  # steam_install | ia | donhopkins | wayback | local_don_archive
+    - article_slug
+    - backstory
+
+pipeline:
+  iff_reader:
+    status: planned
+    note: "Read .iff directly; render rotations, zooms, state compositions — Transmogrifier / ShowNTell parity without ActiveX"
+  simplifier:
+    status: spec
+    path: "../../../../apps/stream-gateway/simplifier.yml"
+    note: "Reformed accessibility bot — screen scrape until IFF previews ship; useful beyond TSO maze/money"
+
+ties_to:
+  - path: ../CATALOGS.yml
+  - path: ../../sources/2004-01-08-showntell-activex-preview/
+  - path: ../../assets/sims-series/micropolis-publishing-vision.md
+  - path: ../../../../process/licensing-micropolis-enterprise.yml

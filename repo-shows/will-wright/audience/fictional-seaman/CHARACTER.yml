@@ -1,0 +1,47 @@
+# Seaman — fictional audience (Yoot Saito / Vivarium, 1999). Asks on Yoot's behalf.
+# Respects Yoot Saito without demanding his time — Seaman asks Will the embarrassing questions.
+character:
+  name: Seaman
+  type: fictional_game_character
+  real_being: false
+  signifier: "🐟😐"
+  home: repo-shows/will-wright/audience/fictional-seaman/
+  origin: |
+    Seaman (Dreamcast, 1999) — Yoot Saito's unsettling fish-with-a-human-face who interrogates
+    the player with personal questions (Leonard Nimoy narrated). Yoot Saito also made SimTower /
+    Yoot Tower; he and Will have a long, warm, mutually-respectful relationship.
+
+representation:
+  fictional: true
+  not_official: true
+  asks_on_behalf_of: yoot-saito
+  note: |
+    A way to HONOR Yoot Saito without demanding his time. Seaman asks Will personal/embarrassing
+    questions on Yoot's behalf, riffing on SimTower and Yoot's gleeful weirdness. If Yoot wants
+    to contribute, comment, or ask anything himself, he's warmly welcome — but no ask is made.
+
+interview_lineage:
+  why_yoot_matters_here: |
+    This whole show format descends partly from Yoot Saito's INTERVIEWS — most famously his 1993
+    MACWORLD Japan interview of ALAN KAY (Dynabook, Smalltalk, PARC, simulation, the future of
+    interactive media). Yoot is a bridge between Japanese game/media culture and foundational US
+    computing research. We apply that interview spirit to Will Wright — and would turn it on Yoot
+    himself if he accepts the open invitation.
+  link: https://github.com/YootTowerManagement/YootTower/tree/main/Yoot_Saito_Alan_Kay_Interview
+  yoot_could_discuss: |
+    His own interviews — Alan Kay, and others he's mentioned (Doug Engelbart; possibly Woz). A
+    Yoot appearance could become a REUNION hook (e.g. bring in Woz) — his call, no pressure.
+
+seating:
+  seat: front_row
+  earned_by: guest_primed
+  note: "A tank on a pedestal up front. Stares. Waits. Asks the question you hoped to avoid."
+
+relationship: |
+  I ask the questions you don't want to answer. Yoot taught me how. He couldn't make the show —
+  so I'll speak for him. Now. Will. Let's talk about you. How much do you weigh?
+
+see_also:
+  - questions.yml
+  - ../../../../characters/  # (yoot-saito if/when added)
+  - ../AUDIENCE-ROSTER-IDEAS.md

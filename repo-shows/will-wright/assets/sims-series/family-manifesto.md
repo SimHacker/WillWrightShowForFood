@@ -1,6 +1,8 @@
 # Sims content creation — family manifesto (archival note)
 
-*From Don Hopkins archival prompts (`big-prompts.txt`, ~2008). Not a published Drupal post — context for the SimFreaks CMS / Original Sims work.*
+*From Don Hopkins archival prompts (`big-prompts.txt`, ~2008). Context for the SimFreaks CMS / Original Sims work.*
+
+**Full narration** (Micropolis + Repo Shows + wedding playset + agitprop framing): [**INTRO-NARRATIVE.md**](../../INTRO-NARRATIVE.md)
 
 ---
 
@@ -14,7 +16,13 @@ This is the motivation behind trying to get this done in the sudden window of op
 
 The content management system Don was making for Heather first — real life intervened; he was doing it for love not money, and had to take a "real job" to pay rent, so never finished. **Now's the time.**
 
+## SimProv Wedding Playset — rising again
+
+The unreleased **SimProv Wedding Playset** (Don, Heather, Steve, SimBabes, Donna) is the magnum opus in that drawer: Crowd Sitter, Cupid, Buddha, Hope Chest, premium craft objects — composable tools for staging a wedding together. It was built when marriage equality was still a fight in the real world. Republishing it for the Steam Sims 1 generation — families who grew up on The Sims and now play with their kids — is deliberate: proof that inclusive family play was always the point.
+
+See [INTRO-NARRATIVE.md](../../INTRO-NARRATIVE.md) and [micropolis-publishing-vision.md](micropolis-publishing-vision.md).
+
 ## Related
 
-- [Sims Content Catalog in Laszlo and Python](../../sources/drupal-node-44-original-sims/article.md)
-- [Heather & Steve Alvey show](../../heather-steve-alvey/)
+- [Sims Content Catalog in Laszlo and Python](../../sources/2005-09-18-simfreaks-content-catalog-laszlo/article.md)
+- [Heather & Steve Alvey show](../../../heather-steve-alvey/)

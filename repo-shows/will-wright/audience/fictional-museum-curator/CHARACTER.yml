@@ -1,0 +1,37 @@
+# Museum Curator — fictional audience (SimCity 2000 museum / digital archivist persona)
+# Honors real game-preservation archivists. Box-seated next to Phil Salvador (real, invited).
+character:
+  name: The Museum Curator
+  type: fictional_game_character
+  real_being: false
+  signifier: "🏛️"
+  home: repo-shows/will-wright/audience/fictional-museum-curator/
+  origin: "SimCity 2000 museum / civic buildings — reimagined as a digital-preservation archivist"
+
+representation:
+  fictional: true
+  not_official_ea: true
+  game: "SimCity 2000 (civic building), recast as archivist persona"
+  honors: |
+    A fictional stand-in for real game-preservation archivists — explicitly honoring
+    Phil Salvador (Video Game History Foundation; The Obscuritory; SimRefinery essay), who is
+    invited to sit in the SAME front box seat. Curator = fiction; Phil = real, beside them.
+
+speaks: english
+authorship: { by: curator }
+planted: { disclosure: true }
+
+box_seat:
+  with: phil-salvador
+  where: front_box_left
+  note: "Fictional curator + real digital archivist, side by side — the bit AND the tribute."
+
+relationship: |
+  I keep what others discard. Source code, design docs, the SimRefinery nobody shipped. You
+  built worlds; I make sure they survive their own obsolescence. Sit with me up front.
+
+see_also:
+  - questions.yml
+  - ../phil-salvador/
+  - ../../sources/simrefinery-recovery/
+  - ../AUDIENCE-ROSTER-IDEAS.md

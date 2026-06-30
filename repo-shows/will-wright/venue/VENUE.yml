@@ -1,0 +1,69 @@
+# VENUE — the Repo Show theater, modeled as navigable MOOLLM rooms.
+# Seats are SCARCE, TANGIBLE places (rooms), not just labels. Characters are PLACED by a
+# `location:` property pointing at a room id — we never move their files, just re-point location.
+# Characters move between rooms live (puppeteered via chat / web panels). Rearrangeable to any layout.
+# This is exactly what MOOLLM is designed for: rooms, characters, placement, movement, boundaries.
+
+meta:
+  id: will-wright-venue
+  is: venue_map
+  substrate: "MOOLLM rooms — each <room>/ROOM.yml; two-way links via exits; characters placed by location ref"
+  rule: "location-by-reference — set character.location: <room-id>; do NOT move character files"
+  rearrangeable: "proscenium today; circle/in-the-round/cabaret tomorrow — just rewire exits"
+
+placement_model:
+  how: |
+    A character (TicketPR or simulated) declares seating.seat + location. The orchestrator places
+    them by pointing location at a room id. To 'move' someone, re-point location and narrate it.
+  granularity: "Coarse (room) or fine (section + row + index). `index` orders occupants within a room; gaps = empty seats."
+  scarcity: "Balconies, boxes, sky boxes, front row, mic are LIMITED (see each room's capacity) — assigned, earned, contested."
+  twitch_members: |
+    Live Twitch viewers are modeled too: default location = house_standing (general standing).
+    They can be 'seated' (general/reserved) or queue at the mic. Tracked like any character.
+  line_for_mic: "house_mic_line is an ordered queue; advance to the_mic to ask live."
+
+rooms:
+  # red-carpet / arrivals
+  - { id: lobby,            dir: lobby/,            exits: [entrance, house_rear, stairs_mezzanine] }
+  - { id: red_carpet,       dir: lobby/red-carpet/, exits: [lobby], note: "pre-show arrivals + greetings (venue tour)" }
+  # the house (audience floor)
+  - { id: house_rear,       dir: house/rear/,       exits: [lobby, house_aisle, house_standing] }
+  - { id: house_standing,   dir: house/standing/,   exits: [house_rear], note: "default for live Twitch arrivals" }
+  - { id: house_aisle,      dir: house/aisle/,      exits: [house_rear, house_left, house_right, house_front, the_mic] }
+  - { id: house_left,       dir: house/left/,       exits: [house_aisle] }
+  - { id: house_right,      dir: house/right/,      exits: [house_aisle] }
+  - { id: house_front,      dir: house/front-row/,  exits: [house_aisle, the_mic, orchestra_pit], note: "front row — honored/donor seats" }
+  - { id: floor_boxes,      dir: house/floor-boxes/, exits: [house_aisle], note: "box seats (e.g. Curator + Phil)" }
+  - { id: house_mic_line,   dir: house/mic-line/,   exits: [house_aisle, the_mic], note: "ordered queue to ask live" }
+  - { id: the_mic,          dir: house/mic/,        exits: [house_mic_line, house_front], note: "the question mic at the front" }
+  # vertical
+  - { id: stairs_mezzanine, dir: mezzanine/stairs/, exits: [lobby, mezzanine] }
+  - { id: mezzanine,        dir: mezzanine/,        exits: [stairs_mezzanine, balcony_left, balcony_right, sky_boxes] }
+  - { id: balcony_left,     dir: mezzanine/balcony-left/,  exits: [mezzanine], capacity: 2,  note: "intimate balcony — Tragic Clown's regular seat 🤡" }
+  - { id: balcony_right,    dir: mezzanine/balcony-right/, exits: [mezzanine], capacity: 2,  note: "intimate balcony — Death's regular seat 💀" }
+  - { id: balcony_grand,    dir: mezzanine/balcony-grand/, exits: [mezzanine], capacity: 20, note: "long balcony — general mezzanine seating (rows + index)" }
+  - { id: sky_boxes,        dir: mezzanine/sky-boxes/,     exits: [mezzanine], capacity: 4,  note: "private boxes — top donors" }
+  # stage complex
+  - { id: orchestra_pit,    dir: stage/orchestra-pit/, exits: [house_front, stage_apron], note: "band-leader/sidekick energy (Transmogrifier hums here)" }
+  - { id: stage_apron,      dir: stage/apron/,      exits: [orchestra_pit, stage] }
+  - { id: stage,            dir: stage/,            exits: [stage_apron, stage_left_wing, stage_right_wing, trap_below, rig_above], note: "the guest + featured characters" }
+  - { id: stage_seating,    dir: stage/seating/,    exits: [stage], note: "on-stage guest chairs" }
+  - { id: stage_left_wing,  dir: stage/left-wing/,  exits: [stage], note: "offstage — characters wait to trot out" }
+  - { id: stage_right_wing, dir: stage/right-wing/, exits: [stage] }
+  - { id: rig_above,        dir: stage/rig-above/,  exits: [stage], note: "above-stage rig — gong, lights, the Ultimate Machine's reach" }
+  - { id: trap_below,       dir: stage/trap-below/, exits: [stage], note: "below-stage trap doors — Broken Robot crashes up/down" }
+
+assignments_seed:
+  # current placements (mirror of audience/INDEX seating — kept in sync)
+  balcony_left:  [fictional-tragic-clown]
+  balcony_right: [fictional-grim-reaper]
+  floating:      [fictional-broken-robot]
+  floor_boxes:   [fictional-museum-curator, phil-salvador]
+  house_front:   [heather-alvey, steve-alvey, fictional-zombie-sim, fictional-little-computer-person, fictional-seaman, fictional-gaia]
+  orchestra_pit: [fictional-transmogrifier, bot-slats]
+
+see_also:
+  - ROOM.yml                       # human-readable venue overview
+  - audience/INDEX.yml             # seating view (computed from character props)
+  - performance-and-culture.yml    # venue tour, puppetry, participation culture
+  - ../../schemas/audience-character.yml   # seating: property

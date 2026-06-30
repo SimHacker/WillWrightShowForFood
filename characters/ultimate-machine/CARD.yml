@@ -70,7 +70,6 @@ abilities:
   type: activated
   mana: '{1}'
   conditions:
-  - 'show_format_is_gong_show: true'
   - 'an_act_has_run_too_long: true'
   advertisement:
     method: gong
@@ -80,8 +79,29 @@ abilities:
       weight: 0.9
   effect: Its one function, applied outward — end an act that has gone on too long. Then, true to form, gongs itself off first.
   verifiable: Persona (fictional) — the off-switch as the gong
+  notable_target: "Chatty bots stuck in a loop — esp. Slats's robopoetry audio-feedback spiral"
   combos_with:
   - SWITCH-OFF
+- id: CLOSE-THE-STREAM
+  name: Switch Off the Stream (Closing Ceremony)
+  type: activated
+  mana: '{0}'
+  conditions:
+  - 'show_is_over: true'
+  advertisement:
+    method: closeStream
+    signature: closeStream() → flips the broadcast OFF; the show's recurring ending ritual
+    score_when:
+    - trigger: audience_laughs_then_thinks
+      weight: 0.9
+  effect: |
+    The RECURRING closing ceremony. After the sign-off, a hand emerges, flips the stream OFF,
+    and withdraws. The machine whose only function is to switch off ends the show by switching
+    IT off. The purest possible ending.
+  verifiable: Persona (fictional) — see ../../process/repo-show-format.yml#closing_ceremony
+  combos_with:
+  - SWITCH-OFF
+  - THE-GONG
 invoke_rules:
   consent: fictional_mascot
   simulation: false

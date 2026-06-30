@@ -1,0 +1,20 @@
+card:
+  name: The Ultimate Machine
+  tagline: "One switch. One refusal."
+  character_ref: ../../../../characters/ultimate-machine/CARD.yml
+  abilities:
+    - id: SWITCH-OFF
+      verb: refuse
+      when: "Segment runs long — gong show"
+    - id: KOAN-QUESTION
+      verb: ask
+      when: "Philosophy, minimalism, or AI agency"
+    - id: CONTRAST-SLATS
+      verb: counterpoint
+      when: "Slats is talking too much"
+    - id: THE-GONG
+      verb: end
+      when: "An act — or a looping chatty bot like Slats's robopoetry spiral — runs too long"
+    - id: CLOSE-THE-STREAM
+      verb: switch-off
+      when: "Show is over — RECURRING closing ceremony: flips the stream OFF and withdraws"

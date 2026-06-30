@@ -9,7 +9,7 @@ meta:
   parent: ../../process/brain-stream.yml
   one_liner: "Cursor brain tap → event bus → zoomable browser overlay (Micropolis GUI) → OBS → Twitch/YouTube"
 
-# --- TOPOLOGY -------------------------------------------------------------
+# TOPOLOGY
 # Two machines, one LAN. The overlay is a WEB PAGE, not a captured window,
 # so OBS renders it natively at full resolution.
 topology:
@@ -48,7 +48,7 @@ topology:
     requirement: "Wired Ethernet between machines for NDI HD stability"
     discovery: "mDNS/Bonjour (<mac>.local) or static IP"
 
-# --- THE BUS --------------------------------------------------------------
+# THE BUS
 # One canonical schema, many subscribers (brain-stream.yml#event_schema).
 bus:
   server: "apps/stream-gateway (SvelteKit, Node adapter)"
@@ -63,7 +63,7 @@ bus:
     keep_last: 5000        # events retained in memory for late-joining overlays / scrollback
     persist: ".moollm/stream-gateway/session-<id>.jsonl"   # gitignored; replay + post-run forensics
 
-# --- INPUTS (sources) -----------------------------------------------------
+# INPUTS (sources)
 inputs:
   cursor_tap:
     spec: cursor-tap.yml
@@ -86,7 +86,7 @@ inputs:
     produces: [semantic_mips]   # cached 'token mipmaps' per node (overlay-viewer.yml#semantic_zoom)
     note: "Also powers chat resummary (brain-stream.yml#overlay_ux.resummary) for free."
 
-# --- OUTPUTS (sinks) ------------------------------------------------------
+# OUTPUTS (sinks)
 outputs:
   obs_overlay:
     route: /overlay/brain
@@ -105,7 +105,7 @@ outputs:
     route: /brain
     how: "Full scrollable/zoomable page for the RTFR crowd — same viewer, no transparency"
 
-# --- DELIVERY SURFACES (how viewers receive the brain stream) -------------
+# DELIVERY SURFACES (how viewers receive the brain stream)
 # One Svelte viewer (overlay-viewer.yml), shipped THREE ways from one codebase.
 delivery_surfaces:
   one_codebase: "overlay-viewer renders in all three; differ only by host chrome + transport endpoint."
@@ -145,7 +145,7 @@ delivery_surfaces:
     what: "No extensions → embed the YouTube IFrame Player in YOUR app and build your own overlay + side panels around it; show chat via the live_chat iframe embed OR poll the chat API."
     worth_it: "Yes for a rich YouTube experience; tradeoff is you host the surrounding UX. Otherwise OBS-baked + companion-app link."
 
-# --- ANALYTICS BACKEND (queryable history for the audience) ----------------
+# ANALYTICS BACKEND (queryable history for the audience)
 # Two tiers, each with the tool that FITS its store. Datasette is SQLite-only;
 # Grafana is the right fit for the cloud Postgres/TimescaleDB.
 analytics_backend:
@@ -183,7 +183,7 @@ analytics_backend:
     safety: ["read-only", "parameterized/whitelisted queries", "rate-limited", "post-redaction data only"]
   audience_uses: ["scrub to any past moment", "filter by tool/model/cost", "pull a subtree on demand", "deep-link a node into chat for others to open", "watch live Grafana spend/usage panels"]
 
-# --- CAPTURE & COMPOSITING (VJ-style live layout) -------------------------
+# CAPTURE & COMPOSITING (VJ-style live layout)
 # Goal: full-screen Cursor on one Mac display + the GUI, both into OBS, composed/
 # scaled/animated live like a VJ. Verdict: yes, in real time, with two knobs.
 capture_compositing:
@@ -213,7 +213,7 @@ capture_compositing:
       - "Wired gigabit for NDI (full NDI 1080p60 ~100–150 Mbps; NDI HX for lower bitrate)."
       - "Heavy WebGL GUI = local GPU cost only (fine on either box)."
 
-# --- THE OVERLAY APP ------------------------------------------------------
+# THE OVERLAY APP
 overlay_app:
   principle: "Run the real Micropolis GUI environment in overlay mode; brain stream is just another panel/tree inside it."
   reuses_from_micropolis:
@@ -230,7 +230,7 @@ overlay_app:
     summarizers: "summarizers.yml — pluggable summarizer backends (remote→local, off the Mac)"
     simplifier: "simplifier.yml — server-side screen-scrape/OCR/object-catalog + input injection (drive apps + bus)"
 
-# --- BUILD PHASES (zero model cost until phase 4) -------------------------
+# BUILD PHASES (zero model cost until phase 4)
 build_phases:
   - { id: 0, ship: "cursor-tap tails transcript JSONL → local SSE → static HTML proof", cost: zero }
   - { id: 1, ship: "cursor-mirror watch --live + redact filter (cursor-tap.yml)", cost: zero }
@@ -241,7 +241,7 @@ build_phases:
   - { id: 6, ship: "twitch skill: EventSub in + chat commands out", cost: zero }
   - { id: 7, ship: "youtube skill: polling in + throttled summaries out", cost: mini }
 
-# --- SKILLS TO BUILD (sister-script CLIs) ---------------------------------
+# SKILLS TO BUILD (sister-script CLIs)
 skills:
   - { id: obs, cli: "obs <scene|source|stream|emit> ...", wraps: "obs-websocket-js / simpleobsws" }
   - { id: twitch, cli: "twitch <chat|eventsub> ...", wraps: "Twurple / TwitchIO; twitch-cli for testing" }

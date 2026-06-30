@@ -2,7 +2,7 @@
 
 *Submitted by Don Hopkins · Thu, 2005-09-22 02:08*
 *Tags: Original Sims · SimAntics · SimSlice · Transmogrifier · Edith · Live Demos · Downloadable Software · Funny*
-*Source: Original Sims / donhopkins.com Drupal (Player Created Content)*
+*Original Sims site · Wayback capture*
 
 ---
 
@@ -14,6 +14,6 @@ Original Sims was a collaboration of **SimSlice**, **SimFreaks**, **SimBabes**, 
 
 ## Related
 
-- [Dumbold Voting Machine](../../2018-04-24-dumbold-voting-machine/medium-article.md)
-- [Transmogrifier renovation plan](../../drupal-node-18/article.md)
-- [SimFreaks / content catalog](../../drupal-node-44-original-sims/article.md)
+- [Dumbold Voting Machine](../2018-04-24-dumbold-voting-machine/medium-article.md)
+- [Transmogrifier renovation plan](../2004-02-05-transmogrifier-renovation-plan/article.md)
+- [SimFreaks content catalog](../2005-09-18-simfreaks-content-catalog-laszlo/article.md)

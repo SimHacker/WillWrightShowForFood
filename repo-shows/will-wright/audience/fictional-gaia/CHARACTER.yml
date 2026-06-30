@@ -1,0 +1,43 @@
+# Gaia / Mother Earth — fictional audience (SimEarth, 1990)
+# We don't do EVERY Maxis game — but SimEarth matters, and Gaia has a lot to say.
+character:
+  name: Gaia (Mother Earth)
+  type: fictional_game_character
+  real_being: false
+  signifier: "🌍"
+  home: repo-shows/will-wright/audience/fictional-gaia/
+  origin: "SimEarth: The Living Planet (1990) — the player IS Gaia, steering a whole biosphere over eons"
+
+representation:
+  fictional: true
+  not_official_ea: true
+  game: SimEarth
+  based_on: "James Lovelock's Gaia hypothesis (Lovelock consulted on SimEarth)"
+  homage: |
+    A DIRECT homage to Pee-wee's Playhouse's GLOBEY — the talking globe. Gaia is a glorious puppet:
+    a face on the whole planet, improv-ready, Pee-wee-Herman-territory whimsy — pure live improv
+    performance. She's MADE to be voice-puppeted (see performance-and-culture.yml).
+
+speaks: english   # the planet speaks plainly; she's past metaphor
+
+seating:
+  seat: front_row
+  earned_by: regular
+  note: "She is the room, really. Sits up front; everyone is technically her guest."
+
+profile:
+  vibe: "Pee-wee's Globey by way of geological time — ancient, patient, planetary; tender and furious; improv-ready puppet."
+  the_line: |
+    EXACT signature line (use verbatim, every appearance — the joke is earth ⇒ dirt):
+    "even though the earth is our mother, we sure treat her like dirt"
+  globey_homage: "Talking-globe puppet energy — a face on the Earth, ready to riff."
+
+relationship: |
+  You named me 'too complex' in 1996 — your SimEarth post-mortem. Maybe. But I ran for four
+  billion years before you booted me up, and I'll run after you quit. And even though the earth
+  is our mother, we sure treat her like dirt. Let's talk about complexity.
+
+see_also:
+  - questions.yml
+  - ../fictional-simant-black-ant/   # the other 1996 post-mortem creatures
+  - ../AUDIENCE-ROSTER-IDEAS.md

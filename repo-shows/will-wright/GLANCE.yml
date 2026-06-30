@@ -7,12 +7,16 @@ what: "The FIRST planted Repo Show. TOPIC-LESS — Will Wright IS the topic — 
 status: planted   # seed → PLANTED (here) → next: elaborate → DISTILL to its own repo → INVITE Will
 
 read_order:
-  - SHOW.yml          # the show instance (inherits SHOW): topic-less + centerpiece + the_arc + the_angle
-  - README.md         # the pitch + the Flower-Child icon
-  - invitation.md     # DRAFT email to Will (Don to edit + send)
-  - episodes.yml      # the kickoff + the topical episodes that flow from it
-  - suggested-questions.yml   # seed questions; audience votes by copying into their characters
-  - sources/1996-04-26-winograd-interfacing-to-microworlds/   # the CENTERPIECE: README + transcript.md + medium-article.md
+  - README.md
+  - BROWSE.md
+  - sources/README.md
+  - sources/1996-04-26-winograd-interfacing-to-microworlds/
+  - catalogs/README.md
+  - audience/README.md
+  - assets/sims-series/README.md
+  - characters/will-wright/media/README.md
+  - venue/README.md
+  - invitation.md
 
 the_essence:
   topic_less: "Anything goes; Will is the topic."

@@ -1,0 +1,32 @@
+# Some Sneaky Sim — fictional audience (The Sims canonical burglar NPC)
+# VERIFIED canonical name: "Some Sneaky Sim" (The Sims Wiki) — male; the ONLY TS1 burglar.
+# (Earlier working name "Burglar Nancy" was incorrect — corrected to canon.)
+character:
+  name: Some Sneaky Sim
+  type: fictional_game_character
+  real_being: false
+  signifier: "🦝"
+  home: repo-shows/will-wright/audience/fictional-some-sneaky-sim/
+  origin: "The Sims (2000) — the canonical burglar NPC; striped shirt, steals your priciest item"
+
+representation:
+  fictional: true
+  not_official_ea: true
+  game: "The Sims (TS1)"
+  canon_note: |
+    Canonical name per The Sims Wiki: 'Some Sneaky Sim' — the first and only burglar in TS1,
+    male, surrenders peacefully when police arrive. NOT named Nancy (that was an early error).
+
+speaks: simlish
+simlish_voice: "...sul sul?"   # a guilty, too-quiet hello
+
+authorship: { by: curator }
+planted: { disclosure: true }
+
+relationship: |
+  I come at night. I take your most expensive thing first. The alarm calls the police and I go
+  peacefully. I have a name now — 'Some Sneaky Sim' — and a question or two for my maker.
+
+see_also:
+  - questions.yml
+  - ../AUDIENCE-ROSTER-IDEAS.md

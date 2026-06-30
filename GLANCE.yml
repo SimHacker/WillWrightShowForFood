@@ -19,6 +19,10 @@ read_order:
   - process/README.md
   - process/VISION.md
   - repo-shows/will-wright/README.md
+  - repo-shows/will-wright/sources/README.md
+  - repo-shows/will-wright/catalogs/README.md
+  - repo-shows/will-wright/assets/sims-series/README.md
+  - characters/will-wright/media/README.md
   - characters/README.md
   - SETUP.md
   - CARD.yml
@@ -51,6 +55,9 @@ see_also:
   - { path: process/entryways/README.md, why: "Full doorway index with cross-links" }
   - { path: CARD.yml, why: "Plugin interface — rooms and methods" }
   - { path: process/entryways.yml, why: "Yaml girder for playlists" }
+  - { path: repo-shows/will-wright/sources/README.md, why: "Primary source scroll + slug index" }
+  - { path: repo-shows/will-wright/assets/sims-series/, why: "Screenshot theme galleries" }
+  - { path: characters/will-wright/media/, why: "Will photo pyramids" }
   - { path: repo-shows/will-wright/BROWSE.md, why: "Will guest landing" }
   - { path: process/cross-links.yml, why: "Thematic trails — leap sideways" }
   - { path: skills/repo-show/GLANCE.yml, why: "Show orchestrator sniff" }

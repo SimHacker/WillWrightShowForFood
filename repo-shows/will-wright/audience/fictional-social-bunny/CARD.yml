@@ -1,0 +1,13 @@
+card:
+  name: Social Bunny
+  tagline: "Friend when the bar hits red"
+  abilities:
+    - id: APPEAR-LONELY
+      verb: manifest
+      when: "Social need or isolation discussed"
+    - id: ASK-NEEDS-DESIGN
+      verb: ask
+      when: "Motives, meters, or Maslow in Sims"
+    - id: VANISH-AND-HURT
+      verb: depart
+      when: "Temporary NPCs or player attachment"

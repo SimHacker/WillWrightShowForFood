@@ -1,0 +1,22 @@
+ticket:
+  show: will-wright
+  github: fictional-zombie-sim
+  attend_live: false
+  merged: true
+  seeded: true
+
+character_ref: CHARACTER.yml
+speaks: simlish
+simlish_voice: "...braaa... sul sul... braaains?"
+
+questions:
+  - id: 1
+    text: "I am custom content the community brought to unlife. You built the object system; modders built ME. Did you expect your tools to raise the dead?"
+  - id: 2
+    text: "Every Sims expansion added a new way to die. Did death become content because players wanted stakes, or because YOU did?"
+  - id: 3
+    text: "*lunges at Will, restrained by Steve* ...braaains... *settles* ...I mean: what's the most alive an unscripted Sim ever made you feel?"
+
+comments_for_guest: |
+  The crew's +1. Shambling product placement for ZombieSims. Simlish, but hungry. Front row,
+  group simfreaks-simslice. Lunges harmlessly; Steve/Heather restrain. Good visual gag.

@@ -1,0 +1,13 @@
+card:
+  name: Red Spider (SimAnt)
+  tagline: "Villain on the box"
+  abilities:
+    - id: WEB-IN-HOUSE
+      verb: defend
+      when: "SimAnt or player-as-villain design"
+    - id: HECKLE-ANT
+      verb: heckle
+      when: "Black ant character fires"
+    - id: ASK-SYMPATHY
+      verb: ask
+      when: "Antagonist design or empathy in sims"

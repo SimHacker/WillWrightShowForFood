@@ -1,0 +1,36 @@
+# Steve Alvey (SimSlice / SliceCity) — RESERVED front-row audience (real; invited honored guest)
+character:
+  name: Steve Alvey
+  type: real_being
+  real_being: true
+  signifier: "🏙️🛋️"
+  home: repo-shows/will-wright/audience/steve-alvey/
+  field: "SimSlice / SliceCity — SimCity running INSIDE The Sims; ~26-year Sims content brand; ZombieSims"
+
+representation:
+  real_being: true
+  consent: collaborator_invited
+  self_authored: invited
+  status: "Honored front-row invite. Writes his own questions / plugs. No fabricated words."
+  canonical_guest: ../../../../characters/steve-alvey/
+
+seating:
+  seat: front_row
+  attending_with: simfreaks-simslice
+  adjacent: [heather-alvey, fictional-zombie-sim]
+  earned_by: invited
+  note: "Front row with Heather (SimFreaks) and a ZombieSim."
+
+plugs:
+  links:
+    - "SimSlice / SliceCity — SimCity inside The Sims (the shipped precedent for nested games / data portability)"
+    - "ZombieSims — bring a zombie"
+
+bridge_to_will: "SliceCity = SimCity inside The Sims — the shipped precedent for Will's nested-games / data-portability vision (the show's crown-jewel thread)."
+
+awaiting_author: true
+see_also:
+  - questions.yml
+  - heather-alvey/
+  - fictional-zombie-sim/
+  - ../../../../characters/steve-alvey/

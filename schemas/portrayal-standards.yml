@@ -61,6 +61,9 @@ memorial_mode:
     Memorial CHARACTER.yml carries plenty for shows to draw on (work, stories, connections,
     artifacts) — but no episode is an interview OF them; the show is a remembrance ABOUT them.
   doc: "characters/<id>/memorial.md (a tribute, not an invitation)"
+  audience_ticketpr: |
+    Do NOT create repo-shows/<show>/audience/<id>/ personas that speak AS deceased people.
+    Memorial = discuss ABOUT them with living guests. See fictional-audience.yml#forbidden.
   fields:
     status: deceased
     invitation_status: memorial      # invitation-workflow.yml

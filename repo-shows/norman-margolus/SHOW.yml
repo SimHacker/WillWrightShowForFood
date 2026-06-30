@@ -12,8 +12,6 @@ show:
   topic: "Cellular automata machines, reversible computing, and the physics of computation — CAM-6, the Margolus neighborhood, billiard-ball computers, and the Margolus–Levitin limit. Don's CAM6 emulator (built from Norman's book) running live."
   status: seed
   consent: not_yet_asked
-  contact_path: "Via Henry Minsky (Norman's friend, MIT)."
-
 why_him:
   cam6: "With Tommaso Toffoli, built the CAM-6 machine and wrote *Cellular Automata Machines* (MIT Press, 1987) — the book Don's CAM6 emulator follows."
   reversible: "Invented the block cellular automaton + Margolus neighborhood; built reversible, universal CA (billiard-ball computers, the Critters rule)."

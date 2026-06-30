@@ -8,9 +8,7 @@ meta:
   one_liner: "A bubble/outliner tree of the brain stream you can read in peace: stable scroll, per-node zoom, bookmarks, search-driven importance zoom."
   lineage: "Psiber Space Deck (interactive PostScript structure browser) → HyperTIES → pie menus → this."
 
-# =========================================================================
 # PRIME DIRECTIVE — what this fixes about Cursor's UI
-# =========================================================================
 prime_directive:
   the_ui_must_be: [STABLE, CONTROLLABLE, PREDICTABLE]
   the_ui_must_never:
@@ -26,9 +24,7 @@ prime_directive:
     Incoming data updates node CONTENT in place and may flag nodes as "new/changed" — 
     it does not move the viewport.
 
-# =========================================================================
 # SCROLL & VIEWPORT
-# =========================================================================
 scroll:
   default: "Frozen to user position. New events do NOT move the viewport."
   follow_tail:
@@ -38,9 +34,7 @@ scroll:
   new_content_cue: "New/changed nodes get a subtle edge highlight + a counter; no motion, no reflow that shifts what you're reading."
   anchor_preservation: "On content growth/resummary, keep the node under the viewport top pinned (scroll-anchor); never let layout shifts above push your read position."
 
-# =========================================================================
 # BOOKMARKS — multiple, named reading positions
-# =========================================================================
 bookmarks:
   why: "So the stream can never 'steal you away' from what matters — you mark it and return."
   model:
@@ -57,9 +51,7 @@ bookmarks:
     what: "Pop any node/subtree into its own window; link back-and-forth between popped-out subtrees in different windows."
     substrate: "bubble-wrangler.yml#panes_and_windows (Smalltalk-browser-and-better; first-class visible links)."
 
-# =========================================================================
 # THE TREE — nodes
-# =========================================================================
 tree:
   node_kinds: [session, turn, prompt, thinking, tool_call, tool_result, assistant, summary, commit, chat_in, shift]
   node:
@@ -78,9 +70,7 @@ tree:
     defaults: "New nodes inherit the open/closed default of their TYPE (configurable), set ONCE at creation, then user-owned forever."
     persistence: "Open/close + all view annotations persist per session (and optionally replay)."
 
-# =========================================================================
 # ZOOM & SCALE MODEL — the heart of it
-# =========================================================================
 # Not a single global zoom. Every node carries a child-scale multiplier so zoom
 # COMPOUNDS down the tree, plus an absolute pin to break inheritance anywhere.
 scale_model:
@@ -110,9 +100,7 @@ scale_model:
     all at once — manually or driven by scoring. Geometric scale and semantic LOD are
     independent knobs that can be coupled or decoupled.
 
-# =========================================================================
 # SEMANTIC ZOOM — "token mipmaps" (the other half of zoom)
-# =========================================================================
 # Geometric zoom scales POINT SIZE. Semantic zoom scales MEANING DENSITY.
 # Each node carries a ladder of representations at increasing detail, pre-summarized
 # by a small/free LOCAL LLM. As you zoom, font size scales continuously AND the
@@ -155,9 +143,7 @@ semantic_zoom:
     fallbacks: "If summarizer is down/slow: show finest available rung; truncate-with-ellipsis as LOD stand-in (robust-first — degrade, don't block)."
   relation_to_resummary: "This is brain-stream.yml#overlay_ux.resummary generalized into a full LOD ladder, done locally for free."
 
-# =========================================================================
 # SEARCH / SCORE-DRIVEN ZOOM (automatic, manual always wins)
-# =========================================================================
 importance_zoom:
   idea: "Like the Psiber Space Deck surfacing interesting PostScript structure — score nodes, let score drive size/visibility."
   scoring_inputs: [text_match, node_type_weight, recency, cost, tool_danger, user_pins, regex_filters]
@@ -170,9 +156,7 @@ importance_zoom:
   override_rule: "Any MANUAL annotation (pin, open, bookmark) overrides automatic scoring. Manual is law; auto fills the rest."
   stability: "Score updates re-rank size GENTLY and only on explicit refresh or debounced settle — never a twitchy live reflow under the reader."
 
-# =========================================================================
 # INTERACTION — pie menus + Micropolis GUI shell
-# =========================================================================
 interaction:
   host: "Runs inside the shared bubble-wrangler.yml fabric (Micropolis SvelteKit GUI): nested windows, stacks, containers, pie menus."
   bubble_wrangler: "bubble-wrangler.yml — pop-out/link, tangible stacks (no invisible clipboard), typed shelves/bags, reified snap-tiling, bouncy windows, user-editable piecraft."
@@ -194,9 +178,7 @@ interaction:
     save_load: "Named view presets = a snapshot of all annotation layers. Switch instantly."
     examples: [overview, deep_thinking_focus, tools_only, cost_watch, audience_safe]
 
-# =========================================================================
 # SMART CONTENT-TYPE VIEWS (pluggable per node content type)
-# =========================================================================
 # Recognize/parse structured text and render it with the right BROWSER.
 # Start simple; make it EASY to plug in smart views per content type.
 content_views:
@@ -224,9 +206,7 @@ content_views:
   extensibility: "New types (diff, table, image, mermaid, behavior-tree, sim-object) plug in as we need them."
   ties: "summarizers.yml#channels (per-channel rules) chooses BOTH redaction style AND default view."
 
-# =========================================================================
 # RENDERING / TRANSPORT
-# =========================================================================
 rendering:
   framework: SvelteKit
   modes:

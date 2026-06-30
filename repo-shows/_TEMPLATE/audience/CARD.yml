@@ -1,0 +1,120 @@
+# CARD — audience member (self-authored)
+# YOU at this show — not the guest. Schema: ../../../schemas/guest-skills-card.yml
+# Abilities = participation verbs for Repo Show + MOOLLM simulation.
+
+room:
+  id: YOUR-GITHUB-USERNAME
+  name: "Your Display Name"
+  type: [audience_member, ticket_pr, player]
+  home: "repo-shows/<show-slug>/audience/YOUR-GITHUB-USERNAME/"
+
+meta:
+  schema: ../../../schemas/guest-skills-card.yml
+  audience_schema: ../../../schemas/audience-character.yml
+  card_type: audience_participation
+
+card:
+  name: "Your Display Name"
+  title: "Audience — TicketPR"
+  rarity: common
+  signifier: "🎟️"
+  flavor: "Master ⇒ PR. I'm in the repo, not the queue."
+
+methods:
+  ASK-QUESTION:
+    signature: "askQuestion(questionId) → surfaces on stream via Don Philahue"
+  CHEER-GUEST:
+    signature: "cheerGuest() → appreciation signal in chat + repo"
+  SUBMIT-HOMEFUN:
+    signature: "submitHomefun(branchUrl) → link implementation PR for later episode"
+
+compose_with:
+  - SimHacker/moollm/skills/character
+  - SimHacker/moollm/skills/advertisement
+  - ../../../skills/repo-show/
+
+abilities:
+  - id: ASK-QUESTION
+    name: Ask Question
+    type: triggered
+    mana: "{🎟️}"
+    conditions:
+      - merged_ticket_pr: true
+      - question_listed_in: questions.yml
+    advertisement:
+      method: askQuestion
+      signature: "askQuestion(n) → Don Philahue reads question n on air"
+      score_when:
+        - trigger: topic_matches_question
+          weight: 0.95
+        - trigger: guest_already_read_ticket_pr
+          weight: 0.90
+    effect: "Pre-loaded question fires live or async (MSPO RPG) when topic matches."
+    verifiable: "questions.yml in your audience/ dir — merged via TicketPR"
+
+  - id: WEAR-COSTUME
+    name: Wear Costume
+    type: activated
+    mana: "{👗}"
+    conditions:
+      - called_on_stage: true
+    advertisement:
+      method: wearCostume
+      signature: "wearCostume() → Come On Down — Question Is Right"
+      score_when:
+        - trigger: don_philahue_calls_name
+          weight: 1.0
+    effect: "Stream identity — text, image, or 3d model from costume.yml / avatar.*"
+    verifiable: "costume.yml or avatar in your audience/ folder"
+
+  - id: CHEER-GUEST
+    name: Cheer Guest
+    type: emote
+    mana: "{❤️}"
+    conditions:
+      - live_stream: true
+    advertisement:
+      method: cheerGuest
+      signature: "cheerGuest(message) → chat + optional repo note"
+      score_when:
+        - trigger: guest_says_something_worth_celebrating
+          weight: 0.7
+    effect: "Good-faith appreciation — not heckling (see ticket-pr moderation)."
+    verifiable: "Your own TicketPR — you authorship yourself"
+
+  - id: SUBMIT-HOMEFUN
+    name: Submit Homefun
+    type: activated
+    mana: "{🏠}{U}"
+    conditions:
+      - show_aired: true
+      - homefun_branch_exists: true
+    advertisement:
+      method: submitHomefun
+      signature: "submitHomefun(prUrl) → queue for later Repo Show segment"
+      score_when:
+        - trigger: implements_show_idea
+          weight: 0.85
+    effect: "Link your implementation PR — best homefun discussed on a future episode."
+    verifiable: "PR URL in questions.yml or CHARACTER.yml sources.homefun_branch"
+
+invoke_rules:
+  on_show: "Don Philahue invokes ASK-QUESTION from merged TicketPRs — you may be called by display name"
+  in_simulation: "LLM may fire advertisements when topics match — cite questions.yml"
+  consent: self_sovereign
+  simulation: true
+  # Advertisements (The Sims model): each ability BROADCASTS what I can do, scored by context.
+  # Any of these may pull the lever — autonomous (highest score), or invoked by another party:
+  invokable_by:
+    - self            # autonomous — fires when my advertisement scores highest
+    - don-philahue    # the AI orchestrator arbitrates + surfaces me live
+    - guest           # Will may call on me directly
+    - don-hopkins     # the human host may invoke me
+    - other_characters # another audience object can trigger my ad (gear-mesh)
+  protocol: SimHacker/moollm/skills/advertisement
+
+see_also:
+  - { path: CHARACTER.yml, why: "Canonical body — location home, show binding" }
+  - { path: questions.yml, why: "TicketPR question list" }
+  - { path: SIMULATION.yml, why: "During/after show MOOLLM hooks" }
+  - { path: CHARACTER.md, why: "Tutorial" }

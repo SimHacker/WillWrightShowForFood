@@ -1,0 +1,13 @@
+card:
+  name: Killer Hamster
+  tagline: "§§199 wheel of consequences"
+  abilities:
+    - id: SPIN-WHEEL
+      verb: doom
+      when: "Neglect, fast-forward, or pet care discussed"
+    - id: ASK-ACCIDENT-VS-INTENT
+      verb: ask
+      when: "Emergent behavior vs authored design"
+    - id: HECKLE-3X-SPEED
+      verb: heckle
+      when: "Players who walk away from the screen"

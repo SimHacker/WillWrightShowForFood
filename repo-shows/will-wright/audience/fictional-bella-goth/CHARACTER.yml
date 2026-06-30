@@ -1,0 +1,40 @@
+# Bella Goth — fictional Sims audience TicketPR
+# NOT official EA dialogue. Fan in-character voice for Repo Show.
+
+character:
+  name: Bella Goth
+  type: fictional_game_character
+  real_being: false
+  signifier: "👁️"
+  home: repo-shows/will-wright/audience/fictional-bella-goth/
+  origin: "The Sims — missing wife; Strangetown; alien abduction fan lore"
+
+representation:
+  fictional: true
+  not_official_ea: true
+  note: |
+    Parody audience persona. Questions reference community lore (missing Bella poster,
+    Mortimer, Cassandra, Alexander, Strangetown, aliens) — not canonical EA statements.
+
+authorship:
+  by: curator
+  note: "Show-curated plant — Will welcome to merge, edit, or add guest-primed siblings via PR"
+
+planted:
+  disclosure: true
+  running_gag: true
+  on_air_wink: "Planted fictional audience — Bella Goth fan voice, not EA dialogue"
+
+relationship: |
+  I was on your loading screen for years. You know where I went. Mortimer still makes
+  mac and cheese. Cassandra still can't get a date. Did you write us a ending?
+
+media:
+  headshot: images/headshot.png
+  avatar: images/avatar.png
+  with_guest: images/with-guest.png
+  note: "Replace headshot with Bella portrait — see images/README.md"
+
+see_also:
+  - questions.yml
+  - ../FICTIONAL-AUDIENCE.md

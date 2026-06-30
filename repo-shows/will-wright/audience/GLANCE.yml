@@ -1,0 +1,30 @@
+# AUDIENCE — GLANCE (TicketPR roster for Will Wright show)
+# up: ../GLANCE.yml | welcome: README.md | one-screen: FLIER.md | machine: INDEX.yml
+
+what: |
+  Pre-primed virtual audience + real TicketPR characters — questions, costumes, seats.
+  Copy _TEMPLATE/audience/ or steal an example; merge a PR to join before air.
+
+read_order:
+  - FLIER.md
+  - README.md
+  - fictional-bella-goth/
+  - bot-slats/
+  - palm/
+  - richard-bartle/
+  - INDEX.yml
+
+examples:
+  real_consented: richard-bartle
+  bot_full_stack: bot-slats
+  sims_character: fictional-bella-goth
+  philosopher: palm
+  blank: ../../_TEMPLATE/audience/
+
+see_also:
+  - { path: ../../../process/ticket-pr.yml, why: "TicketPR constitution" }
+  - { path: ../venue/README.md, why: "Seat map + balcony 🤡💀" }
+  - { path: fictional-tragic-clown/, why: "Balcony left" }
+  - { path: fictional-grim-reaper/, why: "Balcony right" }
+  - { path: ../../../characters/slats/, why: "Orchestra pit / call-in sidekick" }
+  - { path: FICTIONAL-AUDIENCE.md, why: "Virtual children disclosure" }

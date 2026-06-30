@@ -1,0 +1,44 @@
+ticket:
+  show: will-wright
+  github: fictional-bob-newbie
+  attend_live: false
+  merged: true
+  submitted: 2026-06-29
+  seeded: true
+  example: true
+
+character_ref: CHARACTER.yml
+
+# Sims char — speaks Simlish when voiced (thoughts stay English). schemas/language-simlish.yml
+speaks: simlish
+simlish_voice: "Sul sul! ...whippna choba dog!"   # cheery hello, then 'hey, put me down!'
+
+relationship: |
+  Presumed Bob Newbie — the sim in Will's palm in the EA promo photos. Don photoshopped the
+  rest. I am small. I am loud. I am digesting.
+
+questions:
+  - id: 1
+    text: "You held me in your hand like a god. Then Don made me pick your nose. Was that agency?"
+  - id: 2
+    text: "You ate me in the third photo. Did I taste like tutorial?"
+  - id: 3
+    text: "Every player starts with my family. Did you know we'd become memes?"
+  - id: 4
+    text: "Bella gets the missing poster. I get eaten. Discuss."
+
+comments_for_guest: |
+  Loving chaos. Promo photos are primary sources in characters/will-wright/media/.
+
+media:
+  avatar: images/avatar.png
+  with_guest: images/with-guest-eating.png
+
+costume_ref: costume.yml
+
+meta:
+  moollm_stack:
+    - CHARACTER.yml
+    - CARD.yml
+    - GLANCE.yml
+    - SIMULATION.yml

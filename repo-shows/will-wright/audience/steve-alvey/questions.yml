@@ -1,0 +1,23 @@
+ticket:
+  show: will-wright
+  github: steve-alvey
+  attend_live: invited
+  merged: false
+  authored_by: self
+  consent: collaborator_invited
+  awaiting_author: true
+
+character_ref: CHARACTER.yml
+
+relationship: |
+  SimSlice / SliceCity — SimCity running inside The Sims. The shipped precedent for nested games
+  and data portability. Front row with the crew.
+
+questions: []   # Steve writes his own
+
+invitation_note: |
+  Steve — honored front-row seat beside Heather and a ZombieSim. SliceCity is THE precedent for
+  Will's data-portability thread — plug it, demo it, ask him anything. Your words, your call.
+
+comments_for_guest: |
+  Real honored creator, front row, group simfreaks-simslice. Empty questions until he submits.

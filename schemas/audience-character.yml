@@ -1,0 +1,180 @@
+# Audience MOOLLM character — schema for TicketPR audience/ subdirs
+# Templates: repo-shows/_TEMPLATE/audience/
+# NOT guest portrayal — you author YOURSELF for one show episode.
+
+meta:
+  id: audience-character
+  version: 0.1
+  differs_from: portrayal-standards.yml
+  note: |
+    Guest characters/ portray real invitees (public-safe, consent-gated).
+    Audience characters/ are personas for a single Repo Show — TicketPR + MOOLLM.
+    Usually self-authored; guests and curators may also plant virtual audience (see PLANTED-AUDIENCE.md).
+
+authorship:
+  by: self
+  # self | guest | curator
+  values:
+    self: "Fan TicketPR — self-sovereign"
+    guest: "Guest-primed — guest opens or approves PR"
+    curator: "Show curator — guest welcome; disclose planted"
+
+planted:
+  disclosure: false
+  # true required for virtual plants and costume bits — see PLANTED-AUDIENCE.md
+  running_gag: false
+  # true when bit recurs across segments or shows
+
+directory:
+  path: "repo-shows/<show-slug>/audience/<github-username>/"
+  guest_primed_path: "repo-shows/<show-slug>/audience/guest-primed-<slug>/"
+  fictional_path: "repo-shows/<show-slug>/audience/fictional-<slug>/"
+  required:
+    - questions.yml
+    # or questions.md
+  recommended_moollm_stack:
+    - CHARACTER.yml
+    - CARD.yml
+    - GLANCE.yml
+  optional:
+    - costume.yml
+    - SIMULATION.yml
+    - README.md
+    - images/
+  images:
+    recommended:
+      - images/headshot.png
+      - images/avatar.png
+      - images/with-guest.png
+    avatar_size: "128x128"
+    template: repo-shows/_TEMPLATE/audience/images/README.md
+
+character:
+  type: audience_member
+  authored_by: self
+  consent: self_sovereign
+  home: "this directory — one instance per episode attended"
+  show: "parent episode slug under repo-shows/<slug>/"
+  optional: |
+    TicketPR audience character is not required to participate. Making one is subscribe +
+    memorialize — your journal of that episode (Q&A, notes, awards, timestamped reactions).
+  prototype:
+    optional: true
+    what: "Long-lived self elsewhere — characters/<you>/ or your first audience/ dir"
+    ref_field: "prototype_ref in CHARACTER.yml — path or id of the canonical you"
+  migration:
+    within_repo: "Copy/fork this dir to repo-shows/<other-episode>/audience/<you>/ to attend another episode"
+    across_repos: "Same pattern when a show spins off to its own repo — fork + PR"
+
+journal:
+  what: |
+    Your audience folder accumulates a timestamped record of your watch — questions, answers,
+    props thrown, Simoleons, notes — live, time-shifted, or long after air. Others replay the
+    episode with your layer for a richer experience (MSPO: Massively Single-Player Online).
+  when: [before_air, during_live, during_time_shift, after_air]
+  watch_order: "Episodes may be watched in any order; your per-episode dirs are souvenirs of each"
+  suggested_files:
+    - questions.yml
+    # primary Q&A — append follow-ups anytime
+    - reactions.yml
+    # optional — timestamped throws, cheers, notes while time-shifting
+    - homefun/
+    # optional — branches linking implementations inspired by the episode
+
+card:
+  schema: guest-skills-card.yml
+  note: "Reuse CARD shape — abilities celebrate YOUR participation verbs, not guest skills"
+  ability_count: "3–5 for audience members"
+  abilities_are_advertisements:
+    protocol: SimHacker/moollm/skills/advertisement
+    model: |
+      Each ability is a Sims-style ADVERTISEMENT — the character broadcasts what it can do,
+      scored by context (score_when). Characters are autonomous objects that mesh like gears:
+      the orchestrator fires the highest-scoring ad so they dovetail instead of colliding.
+    fields: [advertisement.method, advertisement.signature, advertisement.score_when, conditions, effect, verifiable]
+    invokable_by:
+      values: [self, don-philahue, guest, don-hopkins, other_characters]
+      note: "Autonomous (self) OR pulled by the orchestrator / guest / host / another character."
+    worked_example: ../repo-shows/will-wright/audience/fictional-bella-goth/CARD.yml
+
+seating:
+  principle: |
+    Seats are NOT characters. The balcony, box seats, front row, and orchestra pit are PLACES
+    (seats). Only CHARACTERS exist in the audience; each character DECLARES its own seating as
+    a property. The INDEX 'box_seats' view is COMPUTED from these declarations, not the source.
+  field: "seating"
+  shape:
+    seat: "front_row | box_left | box_right | balcony_left | balcony_right | orchestra_pit | general | floating"
+    section: "<room/section id>   # optional finer grain — a section of the house or a specific balcony"
+    row: "<row label>             # optional — model by row when you want that grain"
+    index: "<int>                 # order WITHIN the section/row: lower = closer to aisle/front. Declares adjacency + leaves gaps for empty seats"
+    adjacent: "[<character-id>, ...]   # who I sit next to (derivable from section+index, or stated)"
+    attending_with: "<group-id>        # e.g. simfreaks-simslice — the crew I came with"
+    earned_by: "donation | regular | guest_primed | invited | self   # how I got the good seat"
+  granularity: |
+    Model as coarse (seat) or as fine as section + row + index. `index` gives explicit ORDER within
+    a section so adjacency is unambiguous and EMPTY seats are possible (gaps in the index sequence).
+  capacity: |
+    Sections/rooms have a capacity (venue ROOM.yml) — an intimate balcony seats ~2, a long balcony
+    ~20. Seats are SCARCE: assignment respects capacity. Venue: repo-shows/<show>/venue/VENUE.yml.
+  notes:
+    - "general = free general admission (default; picked on merit)"
+    - "floating = no fixed seat; roams/invades (e.g. the Tragic Clown)"
+    - "orchestra_pit = sidekick/band-leader energy (Paul Shaffer / Guillermo); on/off-stage"
+    - "Donating beforehand earns front/box/balcony seats — organic visibility, not a paywall."
+  groups:
+    what: "A crew attending together declares a shared attending_with id; INDEX defines the group."
+    example: "simfreaks-simslice — Heather (SimFreaks) + Steve (SimSlice) + the ZombieSim they bring"
+
+moollm_home:
+  what: |
+    If a character comes FROM the MOOLLM repo (Palm, Richard Bartle, the cats, …), link its
+    canonical MOOLLM directory AND its home room — so audience and HN browsers reading this
+    repo before the show fall down the rabbit hole INTO MOOLLM. Cross-promotion by hyperlink.
+  fields: [repo, character_dir, home_room]
+  examples: [palm, richard-bartle]
+  principle: "Every MOOLLM character points home. Come for the show, stay for the microworld."
+
+simoleons:
+  field: "simoleons"
+  type: integer
+  default: 0
+  symbol: "§"
+  what: |
+    Optional play-value virtual wealth (§) an audience character may hold, earn, or donate.
+    Fictional currency — never real money. Persistent characters can accrue it on the record;
+    they may donate it to the show, the guest, or each other.
+  note: "Some characters discover their § rising unexpectedly. The repo rewards snoopers."
+
+simlish:
+  schema: language-simlish.yml
+  what: "First-class fictional language — a SPOKEN rendering layer, not written into questions"
+  model:
+    questions_text: "ENGLISH — the character's thoughts (direct perception). Always readable."
+    spoken: "Rendered into Simlish live by Don Philahue when voiced — like the game."
+  optional_fields:
+    speaks: "simlish (all Sims do; flavor flag)"
+    simlish_voice: "optional one-line signature spoken catchphrase for Don to introduce them"
+  who: "Sims characters speak it when voiced; humans may opt in; never required"
+  do_not: "Do NOT write whole questions/characters in Simlish — ruins readability and the joke"
+  principle: "Thought = English; speech = Simlish. Interpretation, not literal translation."
+
+simulation:
+  during_show:
+    - question-advertisements fire by relevance (moollm advertisement skill)
+    - Don Philahue surfaces merged TicketPR + CARD abilities on stream
+    - MSPO RPG — async audience characters ask when author is offline
+    - time_shift — append timestamped reactions while pausing; guest may answer long after air
+  after_show:
+    - homefun branches link from CHARACTER.yml / questions.yml
+    - adventure microworld inter-character protocols (GREET, ASK, CHEER)
+    - compose with repo-show harvest skills
+    - playback_layers — later viewers read your journal entries alongside the episode
+
+see_also:
+  - ../process/ticket-pr.yml
+  - ../repo-shows/_TEMPLATE/audience/CHARACTER.md
+  - fictional-audience.yml
+  - language-simlish.yml
+  - ../repo-shows/_TEMPLATE/audience/PLANTED-AUDIENCE.md
+  - https://github.com/SimHacker/moollm/skills/character/SKILL.md

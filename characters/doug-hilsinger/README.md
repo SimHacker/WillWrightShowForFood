@@ -2,7 +2,7 @@
 
 *Invitation portrayal — a respectful, source-grounded sketch. Not Doug Hilsinger, not his words.*
 [Portrayal standards](../../schemas/portrayal-standards.yml) · consent level 1 · authored by Don
-Hopkins · *dream guest — outreach sent, no reply yet*
+Hopkins · *dream guest — consent not yet asked*
 
 ## Who
 
@@ -28,9 +28,9 @@ Read it: [**Taking Tiger Mountain, by Serendipity**](taking-tiger-mountain-by-se
 
 ## The hope
 
-Don has **reached out to Doug and not yet heard back** (as of 2026). The wish: sing Doug's praises,
-share the story, play the work, and — if he's willing — have him join **Brian Eno**, **Scott
-Draves**, and **Will Wright** to talk about honoring music by transforming it.
+An open invitation: sing Doug's praises, share the story, play the work, and — if he's willing —
+have him join **Brian Eno**, **Scott Draves**, and **Will Wright** to talk about honoring music
+by transforming it.
 
 ## Links
 

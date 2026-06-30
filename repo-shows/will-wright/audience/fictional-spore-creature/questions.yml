@@ -1,0 +1,30 @@
+ticket:
+  show: will-wright
+  github: fictional-spore-creature
+  attend_live: false
+  merged: true
+  seeded: true
+
+character_ref: CHARACTER.yml
+
+relationship: |
+  One of a billion procedural creatures. MSPO RPG was YOUR frame — I'm here to ask if you
+  meant it.
+
+questions:
+  - id: 1
+    text: "Spore promised powers of ten. Which stage did you lose on the cutting-room floor?"
+  - id: 2
+    text: "You let players make us obscene. Was that procedural amplification or abdication?"
+  - id: 3
+    text: "Cell, creature, tribe, civ, space — which stage is the real Will Wright game?"
+  - id: 4
+    text: "The Grox were the difficulty slider. Were we the moral one?"
+
+comments_for_guest: |
+  MSPO RPG resonance — Will's own frame; see SHOW.yml. Optional Grox sibling TicketPR later.
+
+meta:
+  moollm_stack:
+    - CHARACTER.yml
+    - CARD.yml

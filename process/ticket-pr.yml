@@ -1,0 +1,274 @@
+# TicketPR — Master → PR (the pun is the point)
+# Constitutional layer for Repo Show audience participation.
+# Girder: repo-show-format.yml#ticket_pr | Skill: ../skills/repo-show/SKILL.md
+
+meta:
+  id: ticket-pr
+  term: TicketPR
+  coined: 2026-06-29
+  one_line: |
+    Your free, public, merge-request ticket to attend — questions and costume in the SHOW
+    directory, not a monopoly gate. High-value signal to the guest before they even accept.
+
+etymology:
+  pun: "TicketMaster → TicketPR"
+  transform: "Master ⇒ PR"
+  meaning: |
+    TicketPR is a deliberate pun on TicketMaster — not merely "not TicketMaster," but a
+    reframing of the toxic word. **Master** (monopoly gatekeeper, exploitive middleman,
+    terrible name, terrible business model) becomes **PR** (pull request — constructive,
+    collaborative, reviewable, mergeable, **free** GitHub workflow).
+  the_joke_is_the_design: |
+    Same syllable shape, opposite ethics. You don't buy a seat from a master; you **propose**
+    your presence to the repo. The guest and community review. Git history is the queue.
+    Ownership stays with the audience and the show — not a ticketing cartel.
+  say_it: "Ticket-P-R — like TicketMaster, but the Master is a Pull Request."
+  branch_note: |
+    And yes — the default branch is `main`, not `master`. The Master became a PR; the master
+    branch became main. Nobody here misses either. We don't argue about it; we just build the
+    whole warm, open, welcoming ecosystem that makes the point for us. The door is wide; walk in
+    or don't. (Passing mention only — the design is the statement, not a lecture.)
+
+anti_pattern:
+  name: TicketMaster
+  reframed_by: TicketPR
+  why: |
+    Exploitive monopoly ticketing — gatekeeping attendance, dynamic pricing, extracting rent.
+    TicketPR inverts the model: attendance is free; interest is expressed in git (HN, issues,
+    merge requests). Money is optional recognition, never a gate.
+
+where_not:
+  character_dir: |
+    characters/<name>/ is for PORTRAYED guests and long-lived personas — a person may appear
+    on many shows. TicketPRs live under the SHOW because each episode has its own audience.
+  show_dir: |
+    repo-shows/<show-slug>/audience/<github-username>/
+
+show_repo_model:
+  what: |
+    A show repo is a home for ownership, audience, collaboration, and a fan base — not a single
+    episode. WillWrightShowForFood is the first instantiated example: Will's orbit, with episodic
+    shows as subdirectories (will-wright/, drew-carey/, phoneloper/, …). Independent Repo Shows
+    spin off into their own repos when the community or guest deserves a separate home.
+  episodes_in_repo: "repo-shows/<episode-slug>/ — each episode has its own audience/, venue/, SHOW.yml"
+  spin_off: "New guest/topic/fan-base → new repo; same patterns, linked via ShowMaker graph"
+
+optional:
+  rule: "TicketPR is NOT required to watch or participate lightly (HN, issues, chat)."
+  why_bother: |
+    Subscribing + memorializing: your audience/ folder is the program stub with your notes —
+    questions, answers, awards, Simoleons, timestamped reactions (live or time-shifted). A journal
+    of every show you attended in this repo, playable back by others for a richer experience.
+
+timing:
+  before_air: "Seed questions; guest reads merged TicketPRs before scheduling"
+  during_live: "Chat + PR threads; Don Philahue surfaces on stream"
+  during_time_shift: |
+    Pause, explore links, append timestamped reactions — toilet paper at 01:14:22, follow-up Q in PR.
+    Often easier and more fun than live.
+  after_air: "Guest may answer long after; homefun branches; journal grows"
+  watch_order: "Any order — episodes link; your character is your thread through them"
+
+prototype_and_migration:
+  prototype: |
+    Optional long-lived self in characters/<you>/ or your first audience/ dir — reference from each
+    episode's audience/<you>/ as the prototype you instantiate per show.
+  per_episode: "One audience/<you>/ per episode — self-like object for THAT show"
+  migrate_within_repo: |
+    Copy/fork audience dir to repo-shows/<other-episode>/audience/<you>/ — attend multiple
+    episodes in the same repo; git history is the trail.
+  migrate_across_repos: "Same pattern when independent show repos spin off — fork + PR"
+
+mspo_journal:
+  term: MSPO
+  expands: "Massively Single-Player Online RPG (Will's Spore frame)"
+  thesis: |
+    Your audience character is YOUR single-player layer on a shared artifact. You add timestamped
+    reactions; others replay with your layer visible. Async when offline; dense when time-shifted.
+  journal_fields: [questions, answers, reactions, props_thrown, simoleons, notes, homefun_links]
+  playback: "Later viewers enable audience layers — the repo is a navigable, pausable, explorable object"
+
+participation_ladder:
+  lowest_friction:
+    - "Comment on the HN announcement thread for the repo / show"
+    - "Open or comment on GitHub issues in this repo (show-tagged when possible)"
+  high_value_signal:
+    name: TicketPR
+    what: |
+      A pull request adding YOUR subdirectory under the show's audience/ folder — a personal,
+      public declaration of interest, appreciation, questions, and who you are to the invited guest.
+    why_high_value: |
+      Issues and HN are easy (good!). A TicketPR is harder — and that is the point: the guest
+      (even a not-yet-confirmed invitee) can see real people, real questions, real stories,
+      building before the show is scheduled.
+
+lifecycle:
+  when_starts: "As soon as a show is ANNOUNCED — including PROPOSED / INVITE / not_yet_scheduled"
+  before_guest_accepts: true
+  purpose:
+    - "Seed and water the show before it is confirmed"
+    - "Show potential guests there is genuine interest"
+    - "Let guests read questions and audience stories in advance"
+    - "Let guests reply with their own PRs to the audience (GitHub is for this)"
+    - "Prime live recognition — guest meets pre-primed audience members on stream"
+  harvest:
+    who: Don_Philahue
+    what: |
+      Harvest HN posts, issues, and comments into the nascent show directory as the air date
+      approaches — so guests and committed audience see one curated timeline.
+    tools: [cursor-mirror, manual_curation, issue_links]
+
+directory_layout:
+  root: "repo-shows/<show-slug>/audience/"
+  per_member: "repo-shows/<show-slug>/audience/<github-username>/"
+  required:
+    - questions.yml
+    # or questions.md
+  recommended_moollm_stack:
+    template: "repo-shows/_TEMPLATE/audience/"
+    guide: "repo-shows/_TEMPLATE/audience/CHARACTER.md"
+    schema: "schemas/audience-character.yml"
+    files:
+      - CHARACTER.yml
+      - CARD.yml
+      - GLANCE.yml
+      - questions.yml
+    optional:
+      - SIMULATION.yml
+      - costume.yml
+      - images/
+    images:
+      recommended: [images/headshot.png, images/avatar.png, images/with-guest.png]
+      avatar_size: "128x128"
+  why_moollm: |
+    Teaches audience members MOOLLM character creation by doing. Self-authored characters
+    participate in simulation + interaction protocols (question-advertisements, MSPO RPG,
+    inter-character GREET/ASK, homefun) during and after the show — not guest portrayals.
+
+questions_file:
+  formats: [questions.md, questions.yml]
+  character_ref: CHARACTER.yml
+  moollm_stack: [CHARACTER.yml, CARD.yml, GLANCE.yml, SIMULATION.yml]
+  template: repo-shows/_TEMPLATE/audience/
+  include:
+    - display_name
+    - github: "@username"
+    - relationship_to_guest
+    # big fan | first time caller | your game ruined my life | here's my story | …
+    - questions_for_live
+    # numbered; Don Philahue may surface these on air
+    - comments_for_guest
+    - attend_live_stream: true
+    # want to be seen in chat / called on
+    - costume_ref
+    # optional — text, image path, or 3d model path under your audience/ dir
+
+guest_participation:
+  rule: "Guests MAY review, comment on, approve, and merge TicketPRs — that is what GitHub is for."
+  guest_prs: |
+    Invited guests may open PRs under audience/ or reply in PR threads — e.g. answer a question
+    early, welcome a fan, post their own 'see you there' note.
+  guest_primed_audience:
+    what: |
+      Guests may also **pre-prime audience members** — including clearly marked **virtual**
+      characters, costumed plants, and **running gags** — by opening PRs under the show's
+      audience/ folder before or during the episode.
+    ethical: |
+      Late-night show energy, transparently labeled. Like planted celebrities in costume or
+      recurring comedy bits (Price Is Right "Come On Down," talk-show balcony, Conan-style
+      running characters) — **fun and entertainment**, not deception. Virtual Sims and bots
+      in a Will Wright talk are ON BRAND when marked fiction.
+    must:
+      - disclosure in CHARACTER.yml and show README — planted / fictional / guest-authored
+      - never impersonate living humans without consent
+      - never speak as deceased humans (memorial mode only)
+    directory:
+      human_self: "audience/<github-username>/ — fan-authored"
+      guest_planted: "audience/guest-primed-<slug>/ — guest or guest-approved curator"
+      fictional: "audience/fictional-<slug>/ — virtual; may be guest-, curator-, or fan-authored"
+      running_gag: "same dirs — set running_gag: true in CHARACTER.yml or questions.yml"
+    guest_may:
+      - seed virtual children (Sims, objects, tools) with pointed questions
+      - add running gags that return each segment (balcony, bots, costume plants)
+      - merge fan TicketPRs and reply in character as themselves — not as fans
+      - call out planted audience on air ("that's our Tragic Clown — he's fiction, we planted him")
+  planted_audience:
+    homage: |
+      Talk-show and late-night tradition — staged audience for rhythm and comedy, disclosed or
+      obviously fictional. Repo Show puts the plants **in git** so the priming is honest.
+    types:
+      virtual_character: "Sims, bots, tool-ghosts — fictional_game_character / fictional_bot_audience"
+      costume_plant: "Come On Down rig — human or puppet; guest knows the bit"
+      running_gag: "Recurring heckle, catchphrase, or callback — CARD ability + simulation hook"
+      celebrity_plant: "Real guest-approved friend in costume — consent required; not virtual"
+    on_air:
+      - "Don or guest may wink — 'planted audience, labeled in the repo'"
+      - "Overlay may show avatar from audience/<id>/images/avatar.png"
+      - "Running gags fire on schedule or topic match — never ambush the guest without prep"
+  hecklers:
+    default: "Curators filter disrespectful TicketPRs — no obligation to merge heckles."
+    guest_override: |
+      Guest may explicitly welcome hecklers and answer them directly, or ignore — guest's call.
+
+moderation:
+  curators: [Don_Philahue, show_producer, guest_when_engaged]
+  merge_policy: "Good-faith questions and stories merge; spam and bad-faith heckles close without merge."
+  guest_veto: "Guest may request removal of a merged TicketPR if misrepresentation — rare, documented."
+
+live_show:
+  ritual:
+    name: "Come On Down — the Question Is Right!"
+    homage: "The Price Is Right — costumed contestant called from the audience"
+    line: "YOUR NAME HERE: COME ON DOWN to the QUESTION IS RIGHT! You're the next contestant on the REPO SHOW!"
+  on_stage:
+    - "Guest recognizes pre-primed TicketPR authors in chat"
+    - "Guest may call out guest-primed / planted virtual audience — running gags welcome"
+    - "Don Philahue calls questions from harvested TicketPRs + live chat"
+    - "Follow-up questions welcome — async PR + sync stream"
+  costume:
+    what: |
+      Optional rig / personal 'costume' — text description, image, or 3d model in your audience/
+      subdirectory. Worn on stream when called — your visual identity for this show.
+
+donations:
+  principle: "Attendance is FREE. Donation is OPTIONAL recognition — never a gate."
+  benefits:
+    - "Public recognition in show credits / audience roll"
+    - "Priority in call-on queue when Don Philahue selects live questions"
+    - "Eligible for 'Come On Down' stage moment with costume"
+  note: "Funding mechanics live in funding/ — TicketPR does not require payment."
+  seating:
+    what: |
+      Donating BEFOREHAND earns better seats — front box seats or balcony seats. Not a paywall:
+      free attendance is always general admission. Seating is organic recognition — better seats
+      naturally get more camera time, get called on first, and are more visible to the guest.
+    tiers:
+      general_admission: "Free. Always. Ask questions, get surfaced on merit."
+      box_seat_front: "Donors — up front, high visibility, early call-on. (e.g. Museum Curator + Phil Salvador)"
+      balcony_seat: "Donors / regulars — the heckler's perch. (Tragic Clown 🤡 left, Death 💀 right are the house regulars)"
+    organic_advantages: [more_camera_time, called_on_first, guest_eye_contact, named_in_roll]
+    not_a_gate: "You can ask the best question from the back row for free and still get picked."
+    simoleons_note: "In-show § (Simoleons) are play-money only — NOT a way to buy seats. Real seating nods to real (optional) donations."
+    spec: ../repo-shows/will-wright/audience/INDEX.yml#box_seats
+
+relation_to_character_prs:
+  characters: |
+    characters/<id>/ may hold your long-lived prototype — portrayal, question-ads, identity that
+    persists across episodes and repos. TicketPR is per-EPISODE audience identity under
+    repo-shows/<episode>/audience/<you>/ — one folder per show you attend, referencing your
+    prototype if you like.
+  both_ok: "Same person may have a characters/ prototype AND TicketPRs per episode — migrate between episodes by forking audience dirs."
+  show_repo: |
+    WillWrightShowForFood is an instantiated show repo (Will's fan base); episodes live as
+    repo-shows/* subdirs. Other shows get their own repos when ready. See show_repo_model.
+
+see_also:
+  - repo-show-format.yml
+  - ../skills/repo-show/SKILL.md
+  - ../repo-shows/_TEMPLATE/audience/
+  - ../repo-shows/_TEMPLATE/audience/CHARACTER.md
+  - ../schemas/audience-character.yml
+  - ../schemas/fictional-audience.yml
+  - ../repo-shows/_TEMPLATE/audience/PLANTED-AUDIENCE.md
+  - brain-stream.yml
+  - showmaker-network.yml
