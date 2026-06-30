@@ -19,7 +19,7 @@ representation:
   authored_by: self
   layers:
     public_wwsff: "This directory — career/ + portrayal/"
-    moollm_adventure: "SimHacker/moollm/examples/adventure-4/characters/real-people/don-hopkins/"
+    moollm_adventure: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/don-hopkins
   note: "Don controls this directory. Adventure microworld state stays upstream."
 
 simulation:

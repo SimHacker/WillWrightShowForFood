@@ -100,6 +100,19 @@ readme_index_policy:
     object_pile_only: "Short prose + sample table or pop-out to ./ for exhaustive listing"
     group_has_story: "Prose first; curated table — not a 167-row manifest"
     very_long_gallery: "README themed section + sibling sub-scroll (.md) — still no INDEX.md"
+  character_profile:
+    what: |
+      Character README = the person's profile page (MySpace/LinkedIn for agents and guests).
+      Index categorized life across repos — not only artifacts in this directory.
+    recommended_sections:
+      - about: "Canon intro + tagline + voice quote"
+      - ticketpr_seats: "Table — show, audience/seat path, questions.yml, notes"
+      - shows: "Guest invitations vs audience attendance vs home-world (MOOLLM)"
+      - dreams: "Cross-repo dream index — repo, path, link (Palm pattern)"
+      - likes_and_joins: "Shows, topics, characters, repos they follow"
+      - artifacts: "Writing, media, sources — grouped by theme"
+    machine_mirror: "CHARACTER.yml ticketpr_seats, shows, dreams, likes_and_joins — sync with README tables"
+    worked_example: characters/palm/README.md
 
 # TOPOLOGIES — shows arranged as maps, not flat lists
 topologies:

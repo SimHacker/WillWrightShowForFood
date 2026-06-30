@@ -80,9 +80,9 @@ audience/<github-username>/
 Minimum is **`questions.yml`**. Everything else makes you richer on stream.
 
 **Question tree:** each character's `questions.yml` is the **orchestration SSOT** — sparse curated
-trees Don Philahue reads (not every GitHub issue). Nodes may attach one `ref` (any repo, issue,
-optional comment); `children` are sub-questions with their own refs. Unreferenced YAML-only nodes
-are valid. See [`../../schemas/question-tree.yml`](../../schemas/question-tree.yml) and
+trees Don Philahue reads (not every GitHub issue). Nodes may attach one `ref` (issue/comment) and
+many `context_lasers` (files, dirs, line ranges, anchors, MOOLLM facets). `children` are
+sub-questions with their own refs and lasers. Unreferenced YAML-only nodes are valid. See [`../../schemas/question-tree.yml`](../../schemas/question-tree.yml) and
 [`CHARACTER.md`](../../_TEMPLATE/audience/CHARACTER.md#question-tree--sparse-orchestration--optional-github-refs).
 
 ---

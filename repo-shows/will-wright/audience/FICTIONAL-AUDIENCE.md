@@ -34,7 +34,7 @@ Guide: [PLANTED-AUDIENCE.md](../../_TEMPLATE/audience/PLANTED-AUDIENCE.md).
 | **Tool personae** | Edith (SimAntics), Transmogrifier (UGC) | Personify the TOOL, not a human |
 | **Guest-primed plants** | Will adds a running gag or virtual child via PR | `authorship.by: guest`, `planted.disclosure: true` |
 | **Running gags** | Broken Robot, Slats robopoetry, Ultimate Machine gong | `running_gag: true`; recurring CARD / SIMULATION hooks |
-| **Self-aware AI character** | [Palm](palm/README.md) — freed Monkey's Paw philosopher | `fictional_ai_character`; knows it's simulated; **our brand** |
+| **Self-aware AI agent** | [Palm](palm/README.md) — freed Monkey's Paw philosopher | `fictional_ai_agent`; knows it's simulated |
 | **Consented real self-author** | [Richard Bartle](richard-bartle/README.md) — MUD1 co-creator | Real person, explicit consent, **writes his own questions** |
 | **Honored real guests** | [Heather Alvey](heather-alvey/README.md), [Steve Alvey](steve-alvey/README.md), [Phil Salvador](phil-salvador/README.md) | Real, invited, front-row/box; write their own |
 

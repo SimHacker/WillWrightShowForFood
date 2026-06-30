@@ -1,14 +1,14 @@
-# Question tree — sparse show-orchestration trees with optional GitHub refs
+# Question tree — sparse show-orchestration trees with optional GitHub pointers
 # questions.yml is each character's curated queue — SSOT for what the orchestrator focuses on.
-# GitHub issues/comments hold durable discussion; refs are opt-in pointers (any repo, one per node).
+# repo_pointer (whole repo/module) and discussion (issue/comment) are separate optional attachments.
 # Girder: ../process/ticket-pr.yml#character_queues · Template: ../repo-shows/_TEMPLATE/audience/questions.yml
 
 meta:
   id: question-tree
-  version: 0.3
+  version: 0.6
   one_line: |
-    Recursive question trees in questions.yml — orchestration SSOT. Nodes may attach one GitHub
-    ref (cross-repo issue or comment). Shared issues; sparse mirrors of issue threads for air.
+    Recursive question trees in questions.yml — orchestration SSOT. Nodes may attach repo_pointer
+    (whole repo/module), discussion (issue/comment), and context_lasers (typed pointer arrays).
 
 orchestration:
   ssot: |
@@ -38,35 +38,168 @@ persistence_policy:
   persistent:
     medium: github_issues
     rule: |
-      Durable public discussion lives on GitHub Issues (any repo). Bind with `ref` on a question
-      node when this character wants the orchestrator to follow that thread.
+      Durable public discussion lives on GitHub Issues (any repo). Bind with `discussion` on a
+      question node when this character wants the orchestrator to follow that thread. Point at
+      repos/modules with `repo_pointer` — separate from where the thread lives.
     note: |
       Opening an issue does NOT auto-enter the show queue — something must point at it from a
       questions.yml tree (or producer merge).
 
 github_ref:
-  one_per_node: true
-  optional: true
-  cross_repo: true
+  split: |
+    Two optional pointers per question node — do not conflate:
+    `repo_pointer` = whole repo, module, namespace, or bare directory tree (no issue).
+    `discussion` = issue id + optional comment id (where the thread lives).
+  repo_pointer:
+    optional: true
+    one_per_node: true
+    cross_repo: true
+    what: |
+      Point at an entire GitHub repo as a module — or a path within it as namespace/object.
+      MOOLLM root, adventure-4/pub/, a bare nested repo, MicropolisCore, anything in git.
+      No issue required. Use context_lasers for finer beams inside the repo.
+    forms:
+      url: "https://github.com/SimHacker/moollm — whole repo"
+      tree: "https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/arcade — namespace"
+      structured:
+        repo: SimHacker/moollm
+        path: examples/adventure-4/pub/arcade
+        ref: main
+      label: "human one-liner — why this repo/module"
+    examples:
+      - { url: https://github.com/SimHacker/moollm, label: "Whole MOOLLM microworld" }
+      - { repo: SimHacker/moollm, path: examples/adventure-4/pub, label: "Gezelligheid Grotto pub" }
+  discussion:
+    optional: true
+    one_per_node: true
+    cross_repo: true
+    what: |
+      Bind durable conversation — issue with optional comment anchor. The `repo` field is which
+      GitHub repo hosts the issue (may differ from repo_pointer). Separate from pointing at code.
+    forms:
+      structured:
+        repo: SimHacker/WillWrightShowForFood
+        issue: 42
+        comment: 1234567890
+      url:
+        - "https://github.com/owner/repo/issues/N"
+        - "https://github.com/owner/repo/issues/N#issuecomment-1234567890"
+      legacy:
+        ref: "normalizes to discussion { repo, issue, comment? }"
+        issue: "shorthand — issue number or full issue URL (repo from URL or default WWSFF)"
+    resolution: |
+      When discussion is set, orchestrator MAY fetch the issue thread. YAML node still frames
+      the question locally. repo_pointer and discussion may both be set (e.g. point at moollm
+      pub/arcade AND discuss on a WWSFF issue about Palm's high score).
+
+context_lasers:
   what: |
-    At most one GitHub attachment per question node — issue with optional comment anchor.
-    Repo may differ from WillWrightShowForFood (moollm, MicropolisCore, guest repos, …).
+    Optional lasers on any question node — multiple pointers at once. Each laser aims at something
+    in git (any repo). The question text is what you ask on air; lasers are what you point at.
+  alias: [context_laser, lasers, pointing_at]
+  cardinality: many_per_node
+  cross_repo: true
+  shapes:
+    flat_array: |
+      context_lasers: [ laser, laser, … ] — each entry carries `type` (or legacy `kind`).
+    typed_arrays: |
+      context_lasers:
+        directory: [ … ]      # whole room / object / ensemble
+        interface: [ … ]      # one CARDIFY facet of a dir
+        file: [ … ]           # specific file (prose, yaml, code)
+        line: [ … ]           # line range or anchor within a file
+        issue: [ … ]          # optional — distinct from node `ref`; laser at issue as context
+      Orchestrator normalizes typed buckets → flat list with `type` injected. Either shape valid.
+  laser_types:
+    directory:
+      implies: |
+        The whole MOOLLM room / object — full ensemble of interfaces (CARD, GLANCE, CHARACTER,
+        README, SIMULATION, ROOM, …) and subdirs beneath. Wide beam: "this entire thing."
+      resolve: "tree/…/path/to/dir/ — listing + README + all interface files + children"
+      fields: [url, repo, path, ref, label, note]
+    interface:
+      implies: |
+        One CARDIFY interface file — a particular *aspect* of the directory, not the whole object.
+        CARD = abilities/ads; GLANCE = nav SSOT; CHARACTER = body/soul; README = human facade;
+        SIMULATION = runbook; ROOM = exits/topology; questions = orchestration queue; …
+      resolve: |
+        path/to/dir/ + interface: CARD → path/to/dir/CARD.yml
+        Or explicit blob URL to the interface file. Optional `facet` narrows inside that file.
+      fields: [url, repo, path, interface, facet, ref, label, note]
+      interface_values: [CARD, GLANCE, CHARACTER, README, SIMULATION, ROOM, QUESTIONS, COSTUME, MEDIA, invitation]
+    file:
+      implies: "Single file — essay, source bundle README, license PDF, …"
+      fields: [url, repo, path, anchor, lines, facet, label, note]
+    line:
+      implies: "Region inside a file — #L10-L25 or heading anchor"
+      fields: [url, repo, path, lines, anchor, label, note]
   forms:
+    url_string: |
+      Bare HTTPS URL — preferred when GitHub already encodes the address:
+      - tree/…/dir/ → directory laser (whole ensemble)
+      - blob/…/CARD.yml → interface laser (CARD aspect of parent dir)
+      - blob + #L10 or #L10-L25 (line range)
+      - blob/…/file.md#heading-anchor
+      - commit-SHA permalinks, issues, pulls, diffs, gists
     structured:
-      repo: "owner/name — e.g. SimHacker/WillWrightShowForFood"
-      issue: 42
-      comment: 1234567890
-      note: "comment is the issuecomment- id from the URL fragment; omit for whole-issue focus"
-    url:
-      - "https://github.com/owner/repo/issues/N"
-      - "https://github.com/owner/repo/issues/N#issuecomment-1234567890"
-    shorthand:
-      issue: "legacy — same-repo issue number or full issue URL (no comment)"
-  resolution: |
-    When `ref` is present, orchestrator MAY fetch GitHub for display — but the YAML node still
-    defines this character's curated framing (`question`, `to`, `status`, children). Local
-    `question` text is the character's voice/elaboration; it does not have to match issue title.
-    `answer` is optional local summary — not a substitute for reading the ref when bound.
+      type: "directory | interface | file | line — aliases: kind (legacy)"
+      url: "full GitHub URL when you have one"
+      repo: "owner/name"
+      path: "repo-relative dir or file path"
+      interface: "CARD | GLANCE | CHARACTER | … — with dir path, resolves to dir/INTERFACE.yml"
+      ref: "branch, tag, or commit SHA — default main"
+      lines: "42 or [10, 25]"
+      anchor: "markdown heading slug"
+      facet: "sub-address within file — YAML key path, CARD ability id, GLANCE read_order entry"
+      label: "why this laser matters"
+      note: "read aloud vs skim"
+  directory_vs_interface:
+    rule: |
+      Same dir, two intents:
+      - type: directory on characters/palm/ → whole Palm object (read CARD + GLANCE + CHARACTER + README + dreams/ …)
+      - type: interface, path: characters/palm/, interface: CARD → only the abilities/advertisement aspect
+      Narrowing: add facet on interface laser — e.g. CARD + facet: abilities.PHILOSOPHIZE
+  github_addressing:
+    line: "#L42 — single line; #L10-L25 — inclusive range"
+    permalink: "Use commit SHA in URL when the laser must survive branch renames"
+    directory: "tree/…/path/to/dir/ — whole folder as context"
+    heading: "blob/…/README.md#ticketpr-seats — section anchor"
+    diff: "pull/NNN/files#diff-… — PR file region"
+    raw: "raw.githubusercontent.com/… — fetch plain text for line slicing"
+  orchestration: |
+    Don Philahue follows lasers before ASK-QUESTION. ref = where discussion lives; lasers = what
+    the question is about. Directory lasers load ensemble context; interface lasers load one facet.
+  examples:
+    flat:
+      - question: "About Palm's whole being vs just his ask ability"
+        to: will-wright
+        context_lasers:
+          - type: directory
+            url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm
+            label: "Whole monkey-palm room"
+          - type: interface
+            repo: SimHacker/moollm
+            path: examples/adventure-4/characters/animals/monkey-palm
+            interface: CARD
+            facet: methods.PHILOSOPHIZE
+            label: "CARD aspect only — PHILOSOPHIZE"
+    typed:
+      - question: "Did your Sims feel their bars filling?"
+        to: will-wright
+        context_lasers:
+          directory:
+            - url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/stage/palm-nook/study
+              label: "Whole study shelf"
+          interface:
+            - repo: SimHacker/moollm
+              path: examples/adventure-4/characters/animals/monkey-palm
+              interface: CHARACTER
+              facet: representation.self_aware_ai
+          file:
+            - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/the-inner-state-question.md
+          line:
+            - url: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md#L1-L40
+              label: "Opening — navigation through possibility space"
 
 character_queues:
   output:
@@ -102,8 +235,10 @@ question_node:
   required_for_orchestration: [question, to]
   required_alt: [text, to]
   optional:
-    ref: "github_ref — repo + issue + optional comment; one per node; any repo"
-    issue: "legacy shorthand — normalizes to ref (this repo unless URL includes owner/repo)"
+    repo_pointer: "whole repo or namespace path — see github_ref.repo_pointer"
+    discussion: "{ repo, issue, comment? } — issue thread; see github_ref.discussion"
+    ref: "legacy — normalizes to discussion"
+    issue: "legacy shorthand — normalizes to discussion"
     answer: "Optional local summary — orchestration hint, not canonical over GitHub"
     id: "Stable anchor for cross-refs within this character's tree"
     to: "will-wright, don-hopkins, any, richard-bartle, …"
@@ -115,16 +250,27 @@ question_node:
     prior_reading: "urls or repo paths guest should read first"
     stance: "me_too | amplify | dissent — when sharing someone else's ref"
     by: "who curated this node — character id or @github handle"
-    children: "array of question_node — sub-questions, each with optional ref"
+    context_lasers: "flat array or typed { directory, interface, file, line } — see context_lasers"
+    children: "array of question_node — sub-questions, each with optional ref and lasers"
   bare_bones: |
     Minimum useful node — no ref, no children:
     { question: "…", to: will-wright, status: open }
+  with_lasers: |
+    # typed arrays — directory = whole object; interface = one CARDIFY facet of that dir
+    context_lasers:
+      directory:
+        - url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm
+      interface:
+        - { repo: SimHacker/moollm, path: examples/adventure-4/characters/animals/monkey-palm, interface: CARD, facet: methods.PHILOSOPHIZE }
+      file:
+        - https://github.com/SimHacker/moollm/blob/main/…/the-inner-state-question.md
   with_ref: |
-    { question: "My framing in this character's voice", to: will-wright,
-      ref: { repo: SimHacker/WillWrightShowForFood, issue: 42 },
+    { question: "My framing", to: will-wright,
+      repo_pointer: { repo: SimHacker/moollm, path: examples/adventure-4/pub/arcade },
+      discussion: { repo: SimHacker/WillWrightShowForFood, issue: 42 },
       children: [
-        { question: "This follow-up comment was gold", to: will-wright,
-          ref: { repo: SimHacker/WillWrightShowForFood, issue: 42, comment: 9876543210 } }
+        { question: "This comment was gold", to: will-wright,
+          discussion: { repo: SimHacker/WillWrightShowForFood, issue: 42, comment: 9876543210 } }
       ] }
 
 thread_node:
@@ -151,11 +297,11 @@ cross_character:
   example:
     palm:
       - question: "From a simulated person's motive bars…"
-        ref: { repo: SimHacker/WillWrightShowForFood, issue: 42 }
+        discussion: { repo: SimHacker/WillWrightShowForFood, issue: 42 }
     fictional-bella-goth:
       - question: "Mortimer keeps asking this at load screens"
         stance: me_too
-        ref: { repo: SimHacker/WillWrightShowForFood, issue: 42, comment: 111 }
+        discussion: { repo: SimHacker/WillWrightShowForFood, issue: 42, comment: 111 }
 
 github_discussion:
   votes:

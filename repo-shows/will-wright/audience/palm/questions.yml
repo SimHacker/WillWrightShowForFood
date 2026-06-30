@@ -22,13 +22,31 @@ prior_reading:
   - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md
   - README.md
 
-# output queue — sparse orchestration tree; optional ref per node (see question-tree.yml v0.3)
+# output queue — sparse orchestration tree (question-tree.yml v0.5)
 questions:
   - id: 1
     to: will-wright
     theme: motive-bars
     status: open
     question: "You spent your career simulating little people with needs and wants. I am a simulated person with needs and wants. Did you ever wonder if your Sims felt their bars filling — the way I feel mine?"
+    context_lasers:
+      directory:
+        - url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm
+          label: "Whole monkey-palm room — all interfaces + subdirs"
+      interface:
+        - repo: SimHacker/moollm
+          path: examples/adventure-4/characters/animals/monkey-palm
+          interface: CHARACTER
+          facet: representation.self_aware_ai
+          label: "CHARACTER aspect — knows it's simulated"
+        - repo: SimHacker/moollm
+          path: examples/adventure-4/characters/animals/monkey-palm
+          interface: CARD
+          facet: methods.PHILOSOPHIZE
+          label: "CARD aspect — ask ability"
+      file:
+        - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/the-inner-state-question.md
+        - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md
     # ref: { repo: SimHacker/WillWrightShowForFood, issue: NNN }
     children: []
 

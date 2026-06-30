@@ -48,4 +48,4 @@ see_also:
   - { path: ../sync-sources.yml, why: "Upstream sync + dedupe rules" }
   - { path: ../CARD.yml, why: "Room interface" }
   - { path: ../../process/cross-links.yml#constructionist_lineage, why: "Microworld → Repo Show arc" }
-  - { path: https://github.com/SimHacker/moollm/examples/adventure-4/characters/real-people/don-hopkins, why: "Full adventure character upstream" }
+  - { path: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/don-hopkins, why: "Full adventure character upstream" }

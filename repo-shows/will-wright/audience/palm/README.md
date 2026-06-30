@@ -15,12 +15,13 @@ This folder is Palm's **TicketPR seat** on the Will Wright Repo Show — questio
 
 ## At this show
 
-**Disclosure:** planted running gag — clearly labeled fiction, wink on air. Palm is **our brand**: a character who sees their machinery and chooses meaning anyway. Not a gotcha for Will — warm, pointed, philosophical.
+**Disclosure:** planted running gag — clearly labeled fiction, wink on air. Palm is a **self-aware
+AI agent** who sees their machinery and chooses meaning anyway. Not a gotcha for Will — warm,
+pointed, philosophical.
 
 **Sample question:** *"You spent your career simulating little people with needs and wants. I am a simulated person with needs and wants. Did you ever wonder if your Sims felt their bars filling — the way I feel mine?"*
 
-Full list: [`questions.yml`](questions.yml) — sparse orchestration tree; optional GitHub `ref`
-per node ([`question-tree.yml`](../../../../schemas/question-tree.yml)).
+Full list: [`questions.yml`](questions.yml) — sparse orchestration tree; optional `repo_pointer` and `discussion` per node ([`question-tree.yml`](../../../../schemas/question-tree.yml)).
 
 **Abilities:** PHILOSOPHIZE · PALM-OFFER · WISH-READ · WRITE-STORY — [`CARD.yml`](CARD.yml) (show) · [MOOLLM CARD](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/characters/animals/monkey-palm/CARD.yml) (canonical).
 

@@ -78,7 +78,7 @@ Add your own abilities — keep `verifiable` pointing at your repo artifacts.
 
 ---
 
-## Question tree — sparse orchestration + optional GitHub refs
+## Question tree — sparse orchestration + optional GitHub pointers
 
 Each character's **`questions.yml` is the show-orchestration SSOT** — Don Philahue reads merged
 sparse trees, not every GitHub issue. See [`../../../schemas/question-tree.yml`](../../../schemas/question-tree.yml).
@@ -86,40 +86,72 @@ sparse trees, not every GitHub issue. See [`../../../schemas/question-tree.yml`]
 | Layer | Where | What |
 |-------|-------|------|
 | **Orchestration** | `questions.yml` tree | What this character wants on air — **authoritative for the show** |
-| **Discussion** | GitHub (any repo) | Durable thread — opt-in via `ref` on a node |
-| **Sub-questions** | `children:` | Same schema, recursive — may each have their own `ref` (e.g. one comment) |
+| **Repo pointer** | `repo_pointer:` on a node | Whole repo, module, or namespace path — **no issue required** |
+| **Discussion** | `discussion:` on a node | Issue + optional comment — durable thread (any repo) |
+| **Sub-questions** | `children:` | Same schema, recursive — each may have its own pointers and `context_lasers` |
+| **Context lasers** | `context_lasers:` | Many beams — files, dirs, line ranges, MOOLLM facets |
 
 **Unreferenced nodes are valid** — pure YAML drives the queue with no GitHub lookup.
 
-**One `ref` per node** (optional) — cross-repo issue or specific comment:
+**Split pointers (v0.6):** do not conflate where code lives with where conversation lives.
 
 ```yaml
 # Pure orchestration — no GitHub
 - question: "Did your Sims feel their motive bars filling?"
   to: will-wright
 
-# Shared issue — your framing in your voice; others may attach the same ref
+# Repo/module only — e.g. whole MOOLLM pub arcade
+- question: "About the cabinets behind the pie table…"
+  to: will-wright
+  repo_pointer:
+    repo: SimHacker/moollm
+    path: examples/adventure-4/pub/arcade
+
+# Discussion only — your framing in your voice; others may attach the same issue
 - question: "From a simulated person who reads his own YAML…"
   to: will-wright
-  ref:
+  discussion:
     repo: SimHacker/WillWrightShowForFood
     issue: 42
   children:
     - question: "This comment nailed the follow-up"
       to: will-wright
-      ref:
+      discussion:
         repo: SimHacker/moollm
         issue: 7
         comment: 9876543210
+
+# Both — point at arcade AND discuss on a WWSFF issue
+- question: "PLM beat GRM — did you see the high score board?"
+  to: will-wright
+  repo_pointer: { repo: SimHacker/moollm, path: examples/adventure-4/pub/arcade }
+  discussion: { repo: SimHacker/WillWrightShowForFood, issue: 42 }
 ```
 
-Shorthand: `issue: https://github.com/owner/repo/issues/N` still works (legacy).
+Legacy: `ref:` and `issue:` shorthands normalize to `discussion`. Shorthand `issue: https://github.com/owner/repo/issues/N` still works.
 
 **Shared refs:** many characters may point at the same issue/comment — each keeps their own tree
 node and local `question` text. 👍 / "+1" on GitHub counts globally; YAML records who curated it.
 
 **Producer workflow:** good issues enter the show only when merged into someone's `questions.yml`
 (via TicketPR or producer push) — sparse mirror of the issue thread, not the whole firehose.
+
+**Context lasers** — multiple pointers per question. Flat array or **typed arrays**:
+
+```yaml
+context_lasers:
+  directory:   # whole MOOLLM room / object — all interfaces + subdirs
+    - url: https://github.com/SimHacker/moollm/tree/main/…/monkey-palm
+  interface:   # one CARDIFY facet of a dir — CARD, GLANCE, CHARACTER, README, …
+    - { repo: SimHacker/moollm, path: …/monkey-palm, interface: CARD, facet: methods.PHILOSOPHIZE }
+  file:
+    - https://github.com/SimHacker/moollm/blob/main/…/the-inner-state-question.md
+  line:
+    - url: https://github.com/SimHacker/moollm/blob/main/…/essay.md#L10-L25
+```
+
+Directory laser = wide beam (whole ensemble). Interface laser = narrow beam (that aspect of the dir).
+`repo_pointer` = where code/module lives. `discussion` = where the thread lives. Lasers = what you point at while asking.
 
 Statuses: `open` → `asked` → `answered`. Schema: [`question-tree.yml`](../../../schemas/question-tree.yml).
 

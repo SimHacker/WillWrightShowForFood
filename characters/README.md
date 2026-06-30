@@ -29,6 +29,9 @@ venue arbitration. The show's constitution lives here.
 **[slats/](slats/README.md)** — Sidekick bot. One Minute Movies waiter brain; robopoetry feedback-loop instrument;
 ROBORESURRECTION Easter Sunday bit.
 
+**[palm/](palm/README.md)** — Fictional AI agent. MOOLLM monkey-palm portal; Will Wright audience philosopher;
+character profile indexes TicketPR seats, cross-repo dreams, likes & joins.
+
 **[terry-winograd/](terry-winograd/README.md)** — Forebear. **[`media/cs547-ARCHIVE.md`](terry-winograd/media/cs547-ARCHIVE.md)** — 339 CS547 talks in Terry's character dir; the seminar tradition the 1996 centerpiece inherits.
 
 **[richard-bartle/](richard-bartle/README.md)** — Consented self-author example. MUD co-inventor; spirit-of-work

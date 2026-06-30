@@ -6,7 +6,7 @@ iconic: "🎭 Guests"
 description: |
   One directory per person — CARD abilities, sources, portrayal ethics. Browse the tree;
   INDEX.yml syncs invitation status for machines. Featured: Will (flagship), Don (host),
-  Terry (forebear), Slats (sidekick), Palm (philosopher brand), Philahue (orchestrator).
+  Terry (forebear), Slats (sidekick), Palm (philosopher agent), Philahue (orchestrator).
 
 keywords:
   - characters
@@ -48,7 +48,7 @@ featured:
   flagship_guest: will-wright
   orchestrator: don-philahue
   sidekick: slats
-  philosopher_brand: palm
+  philosopher_agent: palm
   forebear: terry-winograd
   historians: [chaim-gingold]
   retro_pair: [lars-brinkhoff, thomas-cherryhomes]
@@ -64,7 +64,7 @@ see_also:
     - { path: don-hopkins/GLANCE.yml, why: "Host + career backbone" }
     - { path: terry-winograd/GLANCE.yml, why: "CS547 dragon + treasure trove" }
     - { path: slats/GLANCE.yml, why: "Sidekick — SFC origin" }
-    - { path: palm/GLANCE.yml, why: "Philosopher brand — MOOLLM monkey-palm portal" }
+    - { path: palm/GLANCE.yml, why: "Philosopher agent — MOOLLM monkey-palm portal" }
     - { path: chaim-gingold/GLANCE.yml, why: "Building SimCity historian" }
     - { path: james-gosling/GLANCE.yml, why: "Java + NeWS" }
     - { path: scott-draves/GLANCE.yml, why: "Electric Sheep" }

@@ -129,4 +129,4 @@ meta:
   sources_public: true
   moollm_stack:
     - CHARACTER.yml
-    - "moollm/examples/adventure-4/characters/real-people/richard-bartle/ (canonical avatar)"
+    - https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/richard-bartle

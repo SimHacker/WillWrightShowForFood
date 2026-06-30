@@ -29,7 +29,7 @@ questions** on his avatar's behalf. He may optionally attend the live stream.
 ## Canonical avatar
 
 Richard's full MOOLLM incarnation (with consent, study, taxonomy artifacts):
-`moollm/examples/adventure-4/characters/real-people/richard-bartle/`
+[richard-bartle/](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/richard-bartle)
 
 ## Ethics tier
 

@@ -95,7 +95,7 @@ key_inventions:
 
 sync:
   source: ../sync-sources.yml
-  upstream_full: moollm/examples/adventure-4/characters/real-people/don-hopkins/work-history.yml
+  upstream_full: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/characters/real-people/don-hopkins/work-history.yml
 
 see_also:
   - { path: project-threads.yml, why: "How threads merge" }

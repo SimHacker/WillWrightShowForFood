@@ -14,8 +14,9 @@ character_ref: CHARACTER.yml
 relationship: |
   One line — big fan | first-time caller | your game changed my life | here's my story | …
 
-# questions.yml = sparse orchestration tree (SSOT for the show). Optional `ref` per node points
-# at one GitHub issue or comment (any repo). `children` are sub-questions — same schema.
+# questions.yml = sparse orchestration tree (SSOT).
+# Optional `repo_pointer` (whole repo/namespace) and `discussion` (issue + comment) — separate.
+# Optional `context_lasers:` — many pointers at files, dirs, lines, anchors, MOOLLM facets.
 
 # SIMLISH (optional): questions in ENGLISH (thoughts). Simlish is SPOKEN live by Don Philahue.
 # speaks: simlish
@@ -28,21 +29,51 @@ questions:
     status: open
     question: "Question for air — no GitHub attachment required"
 
-  # --- ref → whole issue (cross-repo OK) ---
+  # --- discussion → issue thread (cross-repo OK); legacy `ref` normalizes here ---
   - id: 2
     to: will-wright
     status: open
     question: "Your framing in this character's voice — may differ from issue title"
-    ref:
+    discussion:
       repo: SimHacker/WillWrightShowForFood
       # issue: 42
     children:
       - question: "Cherry-pick this reply for air"
         to: will-wright
-        ref:
+        discussion:
           repo: SimHacker/WillWrightShowForFood
           issue: 42
           # comment: 9876543210
+
+  # --- repo_pointer → whole repo or namespace (no issue required) ---
+  - id: 5
+    to: will-wright
+    status: open
+    question: "About the pub arcade — module pointer, no issue yet"
+    repo_pointer:
+      repo: SimHacker/moollm
+      path: examples/adventure-4/pub/arcade
+      label: "Gezelligheid Grotto arcade alcove"
+
+  # --- context_lasers — typed arrays (directory = whole object; interface = one facet) ---
+  - id: 4
+    to: will-wright
+    status: open
+    question: "About the whole room vs one interface facet"
+    context_lasers:
+      directory:
+        - url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm
+          label: "Whole character object"
+      interface:
+        - repo: SimHacker/moollm
+          path: examples/adventure-4/characters/animals/monkey-palm
+          interface: CARD
+          facet: methods.PHILOSOPHIZE
+      file:
+        - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md
+      line:
+        - url: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md#L1-L40
+          label: "Opening lines only"
 
   # --- legacy shorthand ---
   - id: 3
@@ -53,7 +84,8 @@ questions:
 
 comments_for_guest: |
   Appreciation, context, homefun branch, rig declaration (see ../../../rigs/).
-  Persistent discussion: open a GitHub issue (any repo), comment there, attach `ref` in this tree.
+  Persistent discussion: open a GitHub issue (any repo), comment there, attach `discussion` on a node.
+  Point at whole repos with `repo_pointer` — separate from where the thread lives.
 
 homefun:
   branch: null

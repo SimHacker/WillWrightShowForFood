@@ -1,8 +1,8 @@
 card:
   name: Palm
   tagline: "Open hand. Offering, not grasping. (And he knows he's simulated.)"
-  character_card: ../../../../characters/palm/CARD.yml
-  canonical_card: "moollm/examples/adventure-4/characters/animals/monkey-palm/CARD.yml"
+  character_card: https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/palm/CARD.yml
+  canonical_card: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/characters/animals/monkey-palm/CARD.yml
   abilities:
     - id: PHILOSOPHIZE
       verb: ask

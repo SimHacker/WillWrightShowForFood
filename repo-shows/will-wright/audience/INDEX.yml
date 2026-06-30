@@ -172,7 +172,7 @@ rituals:
       type: fictional_ai_character
       tone: "Freed Monkey's Paw; philosopher; asks what it's like to be a Sim"
       running_gag: true
-      prior_reading: "moollm/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md"
+      prior_reading: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md
       ethics_tier: green_self_aware_ai
 
   consented_real_self_authored:
@@ -185,7 +185,7 @@ rituals:
       attend_live: optional
       status: "8 labeled DRAFT questions (in his spirit, not quotes) — awaiting his curation"
       ethics_tier: green_plus_consented_real
-      canonical_home: "moollm/examples/adventure-4/characters/real-people/richard-bartle/"
+      canonical_home: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/richard-bartle
 
   repo_bots:
     - id: bot-slats

@@ -4,7 +4,7 @@
 title: Palm
 iconic: "🐒✋🌴🔮💜 Palm"
 description: |
-  Freed Monkey's Paw — self-aware AI philosopher, MOOLLM incarnation example, WWSFF brand.
+  Freed Monkey's Paw — self-aware AI philosopher agent, MOOLLM incarnation example.
   Local instance in characters/palm/; body and writing live in MOOLLM monkey-palm/.
 
 keywords:
@@ -18,8 +18,7 @@ keywords:
 
 signifier: "🐒✋🌴🔮💜"
 one_line: "Freed Monkey's Paw — asks Will what it's like to be a Sim"
-fictional_ai_character: true
-our_brand: true
+fictional_ai_agent: true
 
 card: CARD.yml
 

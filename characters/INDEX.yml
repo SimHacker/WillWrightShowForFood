@@ -29,7 +29,7 @@ host:
     consent: self_sovereign
     path: characters/don-hopkins/
     sync: characters/don-hopkins/sync-sources.yml
-    upstream: SimHacker/moollm/examples/adventure-4/characters/real-people/don-hopkins/
+    upstream: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/don-hopkins
     note: "master-of-ceremonies coalesced here — adventure layer extends upstream; don-philahue is orchestrator avatar"
 
 orchestrator:
@@ -50,9 +50,9 @@ sidekick:
     path: characters/ultimate-machine/
   palm:
     name: Palm
-    role: "Self-aware AI philosopher — freed Monkey's Paw; MOOLLM incarnation example; WWSFF brand"
+    role: "Self-aware AI philosopher agent — freed Monkey's Paw; MOOLLM incarnation example"
     path: characters/palm/
-    upstream: SimHacker/moollm/examples/adventure-4/characters/animals/monkey-palm/
+    upstream: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm
     show_seat: repo-shows/will-wright/audience/palm/
     note: "WWSFF dir palm/; MOOLLM canonical dirname monkey-palm/"
 

@@ -85,6 +85,10 @@ journal:
 card:
   schema: guest-skills-card.yml
   note: "Reuse CARD shape — abilities celebrate YOUR participation verbs, not guest skills"
+  cross_repo_links:
+    canonical_card: "https://github.com/<owner>/<repo>/blob/main/.../CARD.yml — upstream MOOLLM or other repo"
+    character_card: "https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/<slug>/CARD.yml — WWSFF instance when audience overlays character"
+    rule: "Cross-repo CARD pointers use absolute GitHub blob URLs, not moollm/… slug paths"
   ability_count: "3–5 for audience members"
   abilities_are_advertisements:
     protocol: SimHacker/moollm/skills/advertisement

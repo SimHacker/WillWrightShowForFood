@@ -8,7 +8,7 @@ character:
   real_being: true
   signifier: "🏰👨‍🏫♠️♥️♦️♣️"
   home: repo-shows/will-wright/audience/richard-bartle/
-  canonical_home: "moollm/examples/adventure-4/characters/real-people/richard-bartle/"
+  canonical_home: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/richard-bartle
   field: "Co-creator of MUD1 (1978); player taxonomist; 'Designing Virtual Worlds'"
 
 # MOOLLM home — his full incarnation (study, taxonomy artifacts, Heuristic the dragon).
@@ -56,5 +56,5 @@ bridge_to_will:
 
 see_also:
   - questions.yml
-  - "moollm/examples/adventure-4/characters/real-people/richard-bartle/CHARACTER.yml"
+  - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/characters/real-people/richard-bartle/CHARACTER.yml
   - ../FICTIONAL-AUDIENCE.md

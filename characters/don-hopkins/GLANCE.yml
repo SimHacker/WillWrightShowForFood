@@ -41,7 +41,7 @@ read_order:
 structure:
   consent: self_sovereign
   backbone: career/
-  upstream: SimHacker/moollm/examples/adventure-4/characters/real-people/don-hopkins/
+  upstream: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/don-hopkins
 
 see_also:
   parent:

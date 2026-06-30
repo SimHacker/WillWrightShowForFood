@@ -174,7 +174,7 @@ questions_file:
       target counts as global vote; YAML records who curated the ref.
     node_kinds: [answer, follow_up, me_too, quorum, discussion, answer_draft]
     status: [open, asked, answered, deferred, withdrawn]
-    fields: [question, to, answer, ref, issue, id, children]
+    fields: [question, to, answer, ref, issue, id, context_lasers, children]
   include:
     - display_name
     - github: "@username"
