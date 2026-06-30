@@ -1,91 +1,119 @@
-# Character colocation — person stuff lives in characters/, shows reference by path
-# Complements ticket-pr.yml (audience stays per-show) and character-endosymbiosis.yml (cross-game bridges).
+# Artifact scoping — colocate by reusable scope (placement constitution girder)
+# Canonical summary: repo-show-format.yml#placement_constitution
+# Audience exception: ticket-pr.yml#where_not
 
 meta:
   id: character-colocation
+  also_called: [artifact-scoping, placement-constitution]
   one_line: |
-    One person, one home directory — papers, media, catalogs, correspondence. Shows are episodes
-    that mix and match guest artifacts by reference; reusable code graduates to packages/.
-  tagline: "Person in characters/. Episode in repo-shows/. Library in packages/."
+    Characters own person stuff. Shows reference. Packages hold code. Rooms are navigable maps —
+    shows are rooms too. CARD + ROOM + SIMULATION cardify interfaces. Postel: flexible layout, clean links.
+  tagline: "Scope → directory. Reference → don't duplicate."
 
-# THE RULE — where things live
+postel: |
+  MOOLLM accepts messy human layout; emit conservative yaml and stable paths. LLMs navigate
+  by directory listing, names, and links — lean into that. No single mandatory rooms/ tree;
+  repo-shows/, characters/, process/, packages/ are all valid room hosts.
+
+# SCOPES — who owns what
 placement:
   characters:
     path: characters/<slug>/
     owns:
-      - "Portrait girder — CHARACTER.yml, CARD.yml, README.md, invitation.md"
-      - "Person-specific artifacts — PDFs, photos, scans, catalogs, correspondence summaries"
-      - "Flat media/ room (preferred) — big-endian names; mixed types side by side (see will-wright/media/)"
-      - "sources/ or sources.yml when a guest has many primary-source bundles"
+      - "Portrait — CHARACTER.yml, CARD.yml, README.md, invitation.md, GLANCE.yml/md"
+      - "Person artifacts — PDFs, photos, catalogs, correspondence (prefer flat media/)"
+      - "sources/ when many primary-source bundles belong to one person"
     why: |
-      A guest may appear on several shows (Will Wright kickoff, building-the-sims reunion,
-      terry-winograd forebear, drew-carey improv). Their treasure trove should not be duplicated
-      per episode. When they open characters/<their-name>/, they should be pleasantly surprised.
+      One guest, many shows. Opening characters/<name>/ should pleasantly surprise them —
+      their README, their media, their papers — not an empty stub pointing elsewhere.
+    on_show: "SHOW.yml lists guests; segments link ../../characters/<slug>/media/..."
 
   repo_shows:
     path: repo-shows/<episode-slug>/
     owns:
-      - "Episode manifest — SHOW.yml, SEGMENTS.yml, venue/, audience/ (TicketPR per episode)"
-      - "Show-topic glue — segment order, cross-guest lineup, episode-specific framing"
-      - "Artifacts with no better home — a one-off bit that only makes sense in this episode"
+      - "Episode — SHOW.yml, README.md, segments, venue/, audience/ (TicketPR)"
+      - "Episode-only framing — lineup, segment order, one-off bits with no reusable home"
+      - "Show-as-room files — CARD.yml, GLANCE.yml, ROOM.yml, SIMULATION.yml (cardify the episode)"
     does_not_own: |
-      Long-lived person artifacts (papers, photo galleries, seminar catalogs, career timelines).
-      Those belong under characters/<slug>/ even if discovered while prepping this episode.
-    reference_pattern: |
-      Link across: ../../characters/<slug>/media/... — cite other guests' material even when
-      they are NOT on the bill. Multi-guest shows are mixtapes by reference, not by copy-paste.
+      Long-lived person artifacts. Do not colocate guest PDFs/catalogs/galleries with the show
+      when characters/<slug>/ is the reusable scope — even if prep started in the show dir.
+    show_room_note: |
+      Show-rooms are collected under repo-shows/, not required to live in a top-level rooms/ dir.
+      A planted show is a directory you cd into — MOOLLM room skill applies directly.
 
   packages:
     path: packages/
-    owns:
-      - "Reusable code extracted from show harvests — TypeScript, Python, WASM (@wwsff/*)"
-      - "Libraries any show, character bridge, or fork can import without dragging episode yaml"
-    when: |
-      After homefun/PR merge: if the artifact is code (not prose/media), factor the general
-      part into packages/; leave person-specific narrative in characters/ and episode notes
-      in repo-shows/.
+    owns: "Reusable code (@wwsff/*) — TypeScript, Python, WASM from harvests"
+    when: "Homefun PR merges; extract general library; leave narrative in characters/"
+
+  shared_rooms:
+    what: |
+      Navigable context shared by many shows — independent of any one episode.
+      Examples: process/, skills/, schemas/, repo-shows/will-wright/catalogs/, venue/VENUE.yml graphs.
+    role: "Frequent destinations; shows link through; not copies of character-owned media"
 
   audience_per_episode:
-    rule: "TicketPR audience/ stays under repo-shows/<show>/audience/ — NOT characters/"
-    why: "MSPO journal is per-episode attendance; guests have many shows but one portrayal home"
+    path: repo-shows/<show>/audience/<you>/
+    rule: "TicketPR journal is per attendance — NOT characters/"
+    files: [CHARACTER.yml, CARD.yml, GLANCE.yml, SIMULATION.yml, questions.yml, costume.yml]
     spec: ticket-pr.yml
 
-# MEDIA ROOM CONVENTION (follow will-wright)
+# CARDIFY — MOOLLM interfaces on directories
+cardify:
+  what: "CARD.yml advertises abilities; GLANCE sniffs; ROOM.yml places; SIMULATION runs protocols"
+  applies_to: [characters, repo-shows, audience_ticketpr, venue_subdirs, shared_rooms]
+  show_directory_minimum: [SHOW.yml]
+  show_directory_recommended: [README.md, CARD.yml, GLANCE.yml]
+  show_directory_optional: [ROOM.yml, SIMULATION.yml, SEGMENTS.yml, venue/, audience/]
+  audience_template: repo-shows/_TEMPLATE/audience/
+  moollm_room_skill: https://github.com/SimHacker/moollm/tree/main/skills/room/SKILL.md
+
+# TOPOLOGIES — shows arranged as maps, not flat lists
+topologies:
+  note: "ShowMaker network + room exits + source date stacks — any layout that helps navigation"
+  patterns:
+    sequence:
+      what: "Ordered episodes — forebear → flagship → topical"
+      examples: [repo-shows/INDEX.yml, showmaker-network.yml, episodes.yml]
+    map:
+      what: "Room graph with exits — venue, lobby, balconies"
+      examples: [repo-shows/will-wright/venue/VENUE.yml, venue/ROOM.yml]
+    grid:
+      what: "Quadrant grids — ne/nw/sw/se cells, sparse OK"
+      spec: https://github.com/SimHacker/moollm/tree/main/skills/room/TOPOLOGY.yml
+    vertical_stack:
+      what: "Time strata — sources/<YYYY-MM-DD-slug>/ stacked by era"
+      examples: [repo-shows/will-wright/sources/]
+  simulation_in_show: |
+    SIMULATION.yml at show or audience level — games, MSPO RPG, inter-character protocols,
+    running gags during/after air. Don Philahue hot-loads audience SIMULATION.yml stacks live.
+
+# MEDIA ROOM (characters)
 media_room:
   path: characters/<slug>/media/
-  pattern: |
-    One flat directory when possible — README.md scroll + co-located files. Sub-galleries as
-    markdown indexes (russian-space-junk.md) when a theme has many PNGs. Big-endian related names
-    so catalog.tsv sits next to ARCHIVE.md next to build script (cs547-* for Terry).
+  pattern: "Flat README scroll + co-located files; big-endian related names (cs547-* for Terry)"
   examples:
     - characters/will-wright/media/
-    - characters/terry-winograd/media/   # CS547 339-talk catalog (moved from repo-shows/terry-winograd/)
-    - characters/scott-draves/media/
+    - characters/terry-winograd/media/
 
-# CROSS-SHOW REFERENCES — mix and match
+# CROSS-REFERENCE
 cross_reference:
-  allowed: |
-    Any SHOW.yml, segment, or source README may link to ANY character's media — guest on the
-    episode or not. Example: Will Wright show cites Terry's CS547 catalog + Gosling's Java talk
-    without requiring a terry-winograd episode that week.
-  prefer: "Path links over duplication — one canonical file, many referrers"
-  anti_pattern: "Copying the same PDF into two show directories"
+  allowed: "Any show links any character media — guest on bill or not"
+  prefer: "One canonical path, many referrers"
+  anti_pattern: "Duplicate person PDFs under repo-shows/"
 
-# MIGRATION (incremental — do not block episodes)
 migration:
   done:
     - "CS547 catalog → characters/terry-winograd/media/cs547-*"
-    - "Media room stubs for Gosling, Shneiderman, Myers, Kay, Gingold, Phil Salvador"
+    - "Media stubs — Gosling, Shneiderman, Myers, Kay, Gingold, Phil Salvador, Scott flam3 TODO"
   candidates:
     - path: repo-shows/will-wright/sources/
-      note: "Many bundles are Will-person or team-person primary sources — consider characters/will-wright/sources/ with show README links (large move; do when prepping)"
-    - path: repo-shows/will-wright/assets/sims-series/
-      note: "Don-authored essays + screenshots — split: person-neutral in show, guest-specific → character media"
+      note: "Person-owned bundles → characters/will-wright/sources/ over time; show README links"
 
 see_also:
-  - repo-show-format.yml
+  - repo-show-format.yml#placement_constitution
   - ticket-pr.yml
   - character-endosymbiosis.yml
+  - showmaker-network.yml
   - ../schemas/portrayal-standards.yml#guest_directory
   - ../packages/README.md
-  - ../characters/will-wright/media/README.md

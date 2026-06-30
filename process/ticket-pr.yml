@@ -40,9 +40,11 @@ anti_pattern:
 where_not:
   character_dir: |
     characters/<name>/ is for PORTRAYED guests and long-lived personas — a person may appear
-    on many shows. TicketPRs live under the SHOW because each episode has its own audience.
+    on many shows. Person artifacts (media/, papers, catalogs) live here; see
+    repo-show-format.yml#placement_constitution.
   show_dir: |
-    repo-shows/<show-slug>/audience/<github-username>/
+    repo-shows/<show-slug>/audience/<github-username>/ — episodic TicketPR only; show yaml
+    REFERENCES character dirs, does not duplicate guest-owned files.
 
 show_repo_model:
   what: |

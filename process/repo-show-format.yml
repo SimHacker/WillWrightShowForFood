@@ -8,6 +8,81 @@ meta:
   cauldron: https://github.com/SimHacker/moollm/tree/main/skills/cauldron
   showmaker_network: showmaker-network.yml
 
+# PLACEMENT CONSTITUTION — colocate artifacts by reusable scope (Postel: accept messy layout, emit clean links)
+placement_constitution:
+  spec: character-colocation.yml
+  one_line: |
+    Put each artifact where its scope makes it most reusable. Characters own person stuff.
+    Shows reference — they do not hoard guest treasure. Code graduates to packages/. Rooms
+    are navigable context maps; shows are rooms too. CARD + ROOM + SIMULATION cardify interfaces.
+  principle: |
+    Colocate by **scope**, not by "where we happened to prep the episode." A guest on three
+    shows still has one home. A library used by many shows lives in packages/ or a shared room.
+    MOOLLM is flexible about directory layout — lean into what filesystems and LLMs are great at:
+    paths, names, links, rooms, cards. Postel's law: be liberal in what you accept, conservative
+    in what you emit (well-formed yaml, stable links, one canonical copy).
+
+  scopes:
+    characters:
+      path: characters/<slug>/
+      owns: "Person portrayal + their artifacts (media/, sources/, correspondence)"
+      rule: "One person, one directory — pleasant surprise when they open it"
+      show_relation: "Shows list one or more guests; episode yaml LINKS to character paths"
+
+    repo_shows:
+      path: repo-shows/<episode-slug>/
+      owns: "Episode manifest, segments, venue/, audience/ (TicketPR), episode-only glue"
+      rule: "Refer to ../../characters/<slug>/ — do not duplicate person PDFs, catalogs, galleries"
+      is_also_a_room: |
+        A show directory IS a MOOLLM room. Drop SHOW.yml, CARD.yml, GLANCE.yml, optional ROOM.yml,
+        optional SIMULATION.yml at the show root — same cardify pattern as characters and audience.
+        Show-rooms live in repo-shows/; they need not live under a top-level rooms/ collector.
+
+    packages:
+      path: packages/
+      owns: "Public reusable code (@wwsff/*) factored from homefun harvests"
+      rule: "Prose and person media stay in characters/; generalized libraries land here"
+
+    shared_rooms:
+      what: |
+        Directories that are activation context for many shows — not owned by one episode.
+        process/, skills/, schemas/, catalogs under repo-shows/will-wright/catalogs/, venue graphs.
+      navigation: "Shows and characters link through them; frequent destinations, not duplicates"
+      moollm: "https://github.com/SimHacker/moollm/tree/main/skills/room/ — ROOM.yml, exits, regions"
+
+  shows_as_rooms:
+    cardify: |
+      CARD.yml advertises invokable abilities; GLANCE.yml sniffs quickly; ROOM.yml places the show
+      in a navigable map; SIMULATION.yml runs games, audience protocols, MSPO layers during/after air.
+    typical_files:
+      required: [SHOW.yml]
+      recommended: [README.md, CARD.yml, GLANCE.yml]
+      optional: [ROOM.yml, SIMULATION.yml, SEGMENTS.yml, venue/, audience/]
+    template: repo-shows/_TEMPLATE/audience/   # audience chars; show-level CARD/SIMULATION mirror pattern
+    example: repo-shows/will-wright/venue/ROOM.yml
+
+  topologies:
+    note: |
+      Show networks are not flat lists. Arrange episodes as maps, sequences, version stacks,
+      grids — whatever helps humans and agents navigate. MOOLLM room skill supports pie-menu
+      compass exits, grid quadrants, sparse cells, vertical stacking of versions.
+    patterns:
+      - sequence: "episodes.yml, showmaker-network edges, forebear → flagship → topical"
+      - map: "VENUE.yml room graph; cardinal exits between show-rooms"
+      - grid: "catalog indexes; ne/nw/sw/se quadrants per room/TOPOLOGY.yml"
+      - vertical_stack: "sources/<date-slug>/ — time strata; compare eras by scrolling up/down"
+    moollm_refs:
+      - "https://github.com/SimHacker/moollm/tree/main/skills/room/SKILL.md"
+      - "https://github.com/SimHacker/moollm/tree/main/skills/room/TOPOLOGY.yml"
+
+  cross_reference:
+    allowed: "Any show may link any character's media — guest on bill or not (mixtape by reference)"
+    anti_pattern: "Copying the same PDF into repo-shows/ when characters/<slug>/media/ is the home"
+
+  audience_exception:
+    rule: "TicketPR audience/ stays per-show under repo-shows/<show>/audience/ — MSPO journal is episodic"
+    spec: ticket-pr.yml#where_not
+
 how_it_runs:
   announce: "Ahead of time (e.g. Hacker News) — a pointer to THIS repo, not a wall of text"
   rtfr: "Read The Fucking Repo — follow along on your own rig (editor, browser, notebook, AI, or bare hands)"
@@ -49,13 +124,7 @@ ticket_pr:
     Independent shows spin off to their own repos. TicketPR characters migrate between episodes within a repo.
   mspo: "Massively Single-Player Online — your timestamped layer on a shared artifact; others replay with your journal visible"
   where: "SHOW directory audience/ — NOT characters/ (guests have many shows; audience is per-episode)"
-  character_colocation:
-    spec: character-colocation.yml
-    rule: |
-      Person-specific artifacts (papers, photos, catalogs, correspondence) live in
-      characters/<slug>/ — especially media/. Shows reference by path; multi-guest episodes
-      mix and match any character's stuff even if they are not on the bill. Reusable code
-      from harvests factors out to packages/.
+  placement: "See repo-show-format.yml#placement_constitution and character-colocation.yml"
   files: [questions.yml, CHARACTER.yml, CARD.yml, GLANCE.yml, SIMULATION.yml, costume.yml]
   moollm: "Copy _TEMPLATE/audience/ — learn character creation; participate in simulation protocols during/after show"
   ladder:
@@ -274,7 +343,7 @@ play_lift_learn:
   learn: "Fork, breed, nest — constructionist payoff across the network"
 
 see_also:
-  - { path: character-colocation.yml, why: "Person artifacts in characters/; shows reference; code → packages/" }
+  - { path: character-colocation.yml, why: "Placement constitution girder — scopes, rooms, topologies, cardify" }
   - { path: ticket-pr.yml, why: "TicketPR — TicketMaster reframed: Master ⇒ PR" }
   - { path: cross-links.yml, why: "Narrative web — trails between all rooms" }
   - { path: vision-and-ambition.yml, why: "Long arc girder" }

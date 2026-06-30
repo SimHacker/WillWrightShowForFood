@@ -24,7 +24,7 @@ show_and_network:
   sims-play-along-narration.yml:
     topic: "Sims Play-Along Narration — audience screen recordings + live guest voice-over improv (Drew Carey Show × Foreign Poet × TicketPR)"
   character-colocation.yml:
-    topic: "Person artifacts in characters/ (media/); shows reference by path; reusable code → packages/"
+    topic: "Placement constitution girder — characters/packages/rooms/show-as-room; CARD+SIMULATION; topologies"
   repo-show-regulars.yml:
     topic: "Cross-show audience mascots — balcony hecklers, recurring bots and Sims regulars"
   showmaker-network.yml:

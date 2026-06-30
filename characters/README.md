@@ -5,10 +5,11 @@ real people, and we never impersonate them or speak as them.
 
 *Sniff:* [`GLANCE.yml`](GLANCE.yml) · *Placement rule:* [`../process/character-colocation.yml`](../process/character-colocation.yml)
 
-**One person, one directory.** Papers, photos, catalogs, and correspondence live here — especially
-[`media/`](will-wright/media/) flat rooms — not duplicated per episode under `repo-shows/`. Shows
-mix and match guest artifacts **by reference** (even guests not on the bill). Reusable **code** from
-harvests graduates to [`packages/`](../packages/).
+**One person, one directory.** Papers, photos, catalogs live in `characters/<slug>/media/`.
+**Shows** in `repo-shows/` reference guest stuff — they don't duplicate it. **Packages/** hold
+reusable code. **Rooms** (MOOLLM `ROOM.yml`, CARD, SIMULATION) can live anywhere — show-rooms
+in `repo-shows/`, shared context in `process/`, `skills/`. Constitution:
+[`../process/repo-show-format.yml#placement_constitution`](../process/repo-show-format.yml#placement_constitution).
 
 *Machine sync:* [`INDEX.yml`](INDEX.yml)
 
