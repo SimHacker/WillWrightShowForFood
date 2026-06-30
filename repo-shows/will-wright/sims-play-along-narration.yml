@@ -1,0 +1,45 @@
+# Sims Play-Along Narration — Will Wright show segment
+# Audience sends gameplay recordings; guests improvise voice-over live (Foreign Poet energy).
+
+status: seed
+emoji: "🎬🗣️"
+tagline: "Your lot. Our lies."
+
+format_spec: ../../process/sims-play-along-narration.yml
+
+what:
+  one_line: |
+    Community screen recordings of The Sims + live guest narration with zero script — pure
+    improvisation, making shit up the way Stephen Kearin and Gerri Lawlor did for Simlish's
+    Foreign Poet origins, the way Drew Carey riffed over Sims on network TV.
+
+when_on_show:
+  - "After or beside the Simlish-origins beat (Claire Curtin / Jerry Martin / language-simlish.yml)"
+  - "Palette cleanser between heavy archive segments"
+  - "Live call-in guest narrates a submitted clip (v1: honest staging per SEGMENTS.yml#live_call_in)"
+  - "Drew Carey episode — he hosts, judges, or duets on narration if he accepts"
+
+how_it_works:
+  loop:
+    - "Audience submits clips (TicketPR, issue, or PR — see format spec#submission)"
+    - "Don queues 2–3; introduces submitter credit"
+    - "Guest watches muted gameplay; narrates relationships, drama, Simlish subtitles-as-English"
+    - "Balcony 🤡💀 heckle from scripted audience layer; Slats in orchestra pit optional stinger"
+  tone: "Whose Line × MST3K × House Party crowd energy — kind, chaotic, never mean to submitters"
+
+reference_footage:
+  drew_house_party_still: assets/sims-series/people-and-events/drew-carey-house-party-crowd-fraps.png
+  note: "The Fraps-era crowd shot is the vibe — real players, real UI, guest voice supplies the plot"
+
+lineage_links:
+  drew_carey_show: repo-shows/drew-carey/SHOW.yml#sims_play_along_narration
+  simlish_origins: ../../schemas/language-simlish.yml#origins
+  eric_hedman: ../../characters/eric-hedman/
+
+ties:
+  - ./SHOW.yml
+  - ./SEGMENTS.yml
+  - ../../process/sims-play-along-narration.yml
+  - ../../process/ticket-pr.yml
+  - ../../schemas/language-simlish.yml
+  - ../drew-carey/SHOW.yml

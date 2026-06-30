@@ -21,6 +21,8 @@ show_and_network:
     topic: "TicketPR — Master ⇒ PR; MOOLLM audience character templates in _TEMPLATE/audience/"
   play-along-skills.yml:
     topic: "MOOLLM-core Play Along skills (Anthropic-format wrappers) + preloaded per-show runtime — the show as MOOLLM's distribution hook; Embrace/Extend/Share"
+  sims-play-along-narration.yml:
+    topic: "Sims Play-Along Narration — audience screen recordings + live guest voice-over improv (Drew Carey Show × Foreign Poet × TicketPR)"
   repo-show-regulars.yml:
     topic: "Cross-show audience mascots — balcony hecklers, recurring bots and Sims regulars"
   showmaker-network.yml:

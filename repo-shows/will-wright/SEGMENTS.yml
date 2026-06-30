@@ -84,6 +84,18 @@ live_call_in:
       - "Real-time call-out to virtual characters AND real people mid-show"
     note: "Don is up for building these. Until then: fake it honestly, label it clearly."
 
+# SIMS PLAY-ALONG NARRATION — community footage + live guest voice-over
+sims_play_along_narration:
+  name: "Sims Play-Along Narration (Foreign Poet Theatre)"
+  spec: ../../process/sims-play-along-narration.yml
+  segment: sims-play-along-narration.yml
+  what: |
+    Audience submits screen recordings of Sims play; guests narrate live with zero script — pure
+    improv inventing dialogue and plot. Lineage: Drew Carey Show in-game segment (Maxis custom
+    build), House Party cameo crowd energy, and Kearin/Lawlor Foreign Poet → Simlish origins.
+  submit: "TicketPR, issue, or PR tagged sims-play-along — see format spec#submission"
+  drew_carey_episode: repo-shows/drew-carey/SHOW.yml#sims_play_along_narration
+
 # TIME-SHIFTED BY DESIGN
 time_shifting:
   intent: |

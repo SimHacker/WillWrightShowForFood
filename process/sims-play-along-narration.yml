@@ -1,0 +1,95 @@
+# SIMS PLAY-ALONG NARRATION — audience footage, guest voice-over improv
+# Cross-show segment format. Drew Carey Show × House Party × Foreign Poet × TicketPR.
+
+meta:
+  id: sims-play-along-narration
+  also_called: [foreign_poet_playback, sims_mystery_theater]
+  status: seed
+  tagline: "Send us your Sims. We'll make shit up over it."
+  emoji: "🎬🗣️"
+  one_line: |
+    Audience submits screen recordings of Sims gameplay; guests narrate live by voice — pure
+    improvisation, inventing dialogue and story on the fly. No script. The game is the prompt.
+
+# THE BIT — what we're replicating
+lineage:
+  drew_carey_show:
+    what: |
+      *The Drew Carey Show* ran Sims bits twice in spirit: a live-action Sims *parody* cold open
+      (S6E01 — speech bubbles, "blah blah blah," thought balloons) AND a segment built in the
+      actual game (custom Maxis assets; Drew-as-Sim in a crowd). Drew was a real fan; Maxis built
+      for the show; House Party later shipped the Drew cameo to everyone.
+    sources:
+      - { label: "Gameplay segment (Maxis-built scene)", url: "https://www.youtube.com/watch?v=5wr04-WmWkg" }
+      - { label: "S6E01 Sims parody cold open", url: "https://www.youtube.com/watch?v=X6wQxEWkh6U" }
+      - { label: "House Party Drew limo cameo (in-game)", url: "https://www.youtube.com/watch?v=Stgk80dcnH8" }
+    tie_in: characters/drew-carey/ · characters/eric-hedman/ · repo-shows/drew-carey/
+  foreign_poet:
+    what: |
+      Before Simlish was Simlish, voice actor Stephen Kearin pitched the improv game **Foreign
+      Poet**: speak pure emotive gibberish; your partner interprets on the fly. Gerri Lawlor was
+      his counterpart. Icons carry meaning; the voice carries feeling — exactly what this segment
+      does over mute gameplay footage.
+    schema: schemas/language-simlish.yml#origins
+    ethics: |
+      Gerri Lawlor died January 2019 — discuss and honor her memory; do not voice or impersonate
+      her as a character. Stephen Kearin may be invited to explain the game on air.
+  repo_show_spin: |
+    We invert the production stack: no Maxis custom build required. Anyone sends a recording;
+    our guests supply the Foreign Poet layer live. Community footage + improv hosts = recurring
+    bit on Will Wright, Drew Carey, and cross-show episodes.
+
+format:
+  inputs:
+    from_audience:
+      - "Screen recording of Sims play — any era (Sims 1 aesthetic is the spiritual home)"
+      - "House parties, chaos, bull rides, fight clouds, weird mods, serene boredom — all valid"
+      - "Submit via TicketPR note, GitHub issue, or PR linking the file (see submission)"
+    from_show:
+      - "Guest(s) with improv chops — Drew Carey archetype, Whose Line energy, or Foreign Poet veterans"
+      - "Host (Don) picks clip, sets context in one sentence, hands off"
+  live_mechanics:
+    playback: "Gameplay audio low or muted — Simlish optional flavor, not the script"
+    narration: "Guest(s) voice-over LIVE — invent names, relationships, interior monologue, lies"
+    rules:
+      - "No prep on the specific clip — first watch is on air (or honest 'I've seen this one' label)"
+      - "Commit to the bit — wronger is funnier"
+      - "Picture-in-picture guest face optional; full-screen gameplay + disembodied voice also works"
+      - "Cutaway to audience reactions (balcony 🤡💀, orchestra pit Slats) between clips"
+  duration: "3–8 minutes per clip; stack 2–3 per segment block"
+  recurring_title_ideas:
+    - "Foreign Poet Theatre"
+    - "Sims Mystery Science Theater"
+    - "Come On Down (to this lot)"
+
+submission:
+  spec: ticket-pr.yml
+  paths:
+    preferred: "Open a PR or issue with subject sims-play-along — link file or attach under your audience/ dir"
+    large_files: "YouTube unlisted link, Internet Archive, or file host — URL in PR/issue; we mirror with credit"
+  release:
+    rule: "Submitter confirms they recorded it and grants on-air use in this repo/show context"
+    credit: "On-screen + PR merge — @github handle or chosen name"
+  curation: "Don + guest pick from queue before/during show; backlog becomes content library"
+
+shows:
+  will_wright:
+    segment: repo-shows/will-wright/sims-play-along-narration.yml
+    when: "Simlish origins segment; Claire Curtin / Jerry Martin beat; general chaos interlude"
+  drew_carey:
+    segment: repo-shows/drew-carey/SHOW.yml#sims_play_along_narration
+    when: "Dream guest hosts or judges the narration; compares to S6E01 and House Party lore"
+  cross_show: "Reusable format — any Repo Show with Sims audience regulars"
+
+assets:
+  reference_still: repo-shows/will-wright/assets/sims-series/people-and-events/drew-carey-house-party-crowd-fraps.png
+  caption: "Sims 1 House Party — Drew Carey Sim in crowd (Fraps capture; community footage aesthetic we want)"
+
+see_also:
+  - ticket-pr.yml
+  - schemas/language-simlish.yml
+  - repo-shows/drew-carey/SHOW.yml
+  - repo-shows/will-wright/sims-play-along-narration.yml
+  - characters/drew-carey/
+  - characters/eric-hedman/
+  - play-along-skills.yml

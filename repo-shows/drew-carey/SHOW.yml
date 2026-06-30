@@ -42,6 +42,21 @@ segments:
     ties:
       - repo-shows/will-wright/audience/
 
+  - id: sims_play_along_narration
+    topic: |
+      Sims Play-Along Narration — audience sends screen recordings; Drew (or guest improvisers)
+      narrates live, making shit up. Replicates the Maxis-built Drew Carey Show in-game segment
+      and the Foreign Poet improv game that became Simlish — without needing a custom Maxis build.
+    format: process/sims-play-along-narration.yml
+    ties:
+      - repo-shows/will-wright/sims-play-along-narration.yml
+      - schemas/language-simlish.yml
+      - characters/eric-hedman/
+    sources:
+      - { label: "Drew Carey Show — Sims gameplay segment", url: "https://www.youtube.com/watch?v=5wr04-WmWkg" }
+      - { label: "S6E01 Sims parody cold open", url: "https://www.youtube.com/watch?v=X6wQxEWkh6U" }
+      - { label: "House Party Drew limo cameo", url: "https://www.youtube.com/watch?v=Stgk80dcnH8" }
+
 framing:
   note: |
     Public dream-guest seed. We approach Drew as a guest and a fan-favorite voice in Sims lore —

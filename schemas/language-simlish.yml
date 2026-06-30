@@ -37,6 +37,10 @@ origins:
     - { name: "Kent Jolly", role: "sound designer" }
     - { name: "Jerry Martin", role: "composer", repo_guest: characters/jerry-martin/ }
   tie_in: "Claire Curtin + Jerry Martin are already invited guests — natural Simlish-origins segment."
+  on_air_segment: |
+    **Sims Play-Along Narration** — audience sends gameplay screen recordings; guests narrate live
+    (Foreign Poet in reverse: video is gibberish, voice supplies meaning). See
+    process/sims-play-along-narration.yml and repo-shows/will-wright/sims-play-along-narration.yml.
   ethics_note: "Gerri Lawlor is deceased — represent/discuss with respect; never put Simlish words 'in her mouth' as a character."
   sources:
     - "https://www.theverge.com/2020/2/7/21126705/the-sims-simlish-language-history-20th-anniversary-game"
