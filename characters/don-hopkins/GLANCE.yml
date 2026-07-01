@@ -32,14 +32,15 @@ card: CARD.yml
 serves_as:   # design intent (internal breadcrumb) -- this dir is ALL of these at once, but we
              # NEVER label it as such in the visible prose. Show, don't tell; it's obvious.
              # A living MOOLLM object IS your demo/resume/portfolio -- announcing it would break the spell.
-  - MOOLLM demo (the point: this is what a MOOLLM object/character looks like)
-  - self-model (Don as a navigable, inheritable prototype)
-  - home page / personal site
-  - LinkedIn-page supplement (what you can't fit on LinkedIn)
-  - resume (career/work-history.yml, contracts/ -- the receipts)
-  - portfolio (lineage.yml + range.yml + project-threads.yml)
-  - Repo Show series scripts (each facet -> an episode/talk)
-  - family album of a 40-year career
+  roles:
+    - MOOLLM demo (the point: this is what a MOOLLM object/character looks like)
+    - self-model (Don as a navigable, inheritable prototype)
+    - home page / personal site
+    - LinkedIn-page supplement (what you can't fit on LinkedIn)
+    - resume (career/work-history.yml, contracts/ -- the receipts)
+    - portfolio (lineage.yml + range.yml + project-threads.yml)
+    - Repo Show series scripts (each facet -> an episode/talk)
+    - family album of a 40-year career
   rule: "All implicit. No 'this is my resume' text. The medium is the message."
 
 future:   # the roadmap form of serves_as -- where this dir wants to grow

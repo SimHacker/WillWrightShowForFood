@@ -51,10 +51,11 @@ rollout:
 capabilities:
   while_you_play:
     what: "Watches over you playing — fair assistant, not cheat bot"
-    - "Screen reader + accessibility bridge for legacy Sims UI"
-    - "Catalog capture from live game window (Simplifier lineage)"
-    - "Install helpers — find objects online, download, install, UserData paths"
-    - "Personal catalog — favorites, notes, tips, object guides"
+    features:
+      - "Screen reader + accessibility bridge for legacy Sims UI"
+      - "Catalog capture from live game window (Simplifier lineage)"
+      - "Install helpers — find objects online, download, install, UserData paths"
+      - "Personal catalog — favorites, notes, tips, object guides"
 
   simplifier_showcase:
     lineage: ../../apps/stream-gateway/simplifier.yml
@@ -64,15 +65,17 @@ capabilities:
       browses the catalog, selects objects for you to view, reads descriptions, then places in game.
 
   catalogs_and_sharing:
-    - "Search, browse, favorite, share favorites lists online"
-    - "Share personal catalogs, curated lists, and save files via Micropolis Home federation"
-    - "Playback shared lists — guided tour through someone else's picks"
+    items:
+      - "Search, browse, favorite, share favorites lists online"
+      - "Share personal catalogs, curated lists, and save files via Micropolis Home federation"
+      - "Playback shared lists — guided tour through someone else's picks"
     web_sync: "Micropolis Home is source of truth for published lists; Angel is the in-game client"
 
   storytelling:
-    - "Picture + text Family Albums (Exchange revival lineage)"
-    - "2D playset composer — room snapshot backgrounds + objects + Sims like removable vinyl stickers"
-    - "Publish a collection of objects others download and install together"
+    items:
+      - "Picture + text Family Albums (Exchange revival lineage)"
+      - "2D playset composer — room snapshot backgrounds + objects + Sims like removable vinyl stickers"
+      - "Publish a collection of objects others download and install together"
     prototype: |
       Much of this already implemented in the SimFreaks catalog prototype (Laszlo CMS): compose scenes
       with screen-capture room backgrounds, place objects and people, publish as installable sets.
@@ -82,10 +85,11 @@ capabilities:
       - ../simfreaks/
 
   machinima_and_streaming:
-    - "Machinima video storytelling tools (impractical in 2000; practical now)"
-    - "Real-time capture, compression, screencasting"
-    - "OBS, YouTube, Twitch integration"
-    - "Repo Show / Micropolis Class stream rig shares DNA with stream-gateway (broadcast tier)"
+    items:
+      - "Machinima video storytelling tools (impractical in 2000; practical now)"
+      - "Real-time capture, compression, screencasting"
+      - "OBS, YouTube, Twitch integration"
+      - "Repo Show / Micropolis Class stream rig shares DNA with stream-gateway (broadcast tier)"
 
   chat_with_god:
     playful_name: "Chatting with God"

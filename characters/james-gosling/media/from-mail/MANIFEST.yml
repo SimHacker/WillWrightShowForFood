@@ -10,11 +10,11 @@ artifacts:
     kind: thread
     title: "232014.232028"
     source_export: DonHopkins/temp/AlanKay/attachments/msg-242-Re_ Is this you asking James Gosling a question about Java?--232014.232028.pdf
-    message_subject: "Re: Is this you asking James Gosling a question about Java?"
+    message_subject: 'Re: Is this you asking James Gosling a question about Java?'
     message_date: "Wednesday, 1 February 2023 at 19:35:06"
   - file: from-mail/artifact-9780262547482.jpg
     kind: thread
     title: "9780262547482"
     source_export: DonHopkins/temp/AlanKay/attachments/msg-11-Fwd_ Exciting News_ My New Book "Building SimCity" Launches Soon!--9780262547482.jpg
-    message_subject: "Fwd: Exciting News: My New Book "Building SimCity" Launches Soon!"
+    message_subject: 'Fwd: Exciting News: My New Book "Building SimCity" Launches Soon!'
     message_date: "Monday, 29 June 2026 at 16:41:28"

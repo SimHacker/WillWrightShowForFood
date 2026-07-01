@@ -27,11 +27,11 @@ legal_layers:
       Steve, SimBabes, Donna, community). Copyright in the objects; game is the runtime players must
       own. Free distribution with EA disclaimer matches decades of community practice.
   do_not_assume:
-    - "Nobody remembers the license" — EA legal still exists; status quo ≠ permission
-    - "26 years later" auto-expires EA tool grants — it does not
-    - Selling EA assets or implying endorsement — high short-term C&D risk
+    - 'Nobody remembers the license — EA legal still exists; status quo ≠ permission'
+    - '26 years later auto-expires EA tool grants — it does not'
+    - 'Selling EA assets or implying endorsement — high short-term C&D risk'
   do_assume:
-    - Free fan UCC + required disclaimer + "buy Sims on Steam" = aligned with Transmogrifier EULA fan-posting clause and MTS/TSR norms
+    - 'Free fan UCC + required disclaimer + buy Sims on Steam = aligned with Transmogrifier EULA fan-posting clause and MTS/TSR norms'
     - Companion app that **requires** owned game and **drives Steam sales** = long-run EA-friendly story (see get-the-sims-on-steam.md)
 
 # ACTIVE SIMS 1 SITES (2025–2026 snapshot — verify before linking)
@@ -81,7 +81,7 @@ sites:
   tools_and_wikis:
     - { name: IFF Pencil 2, role: SimAntics editing }
     - { name: SimPose, role: posing }
-    - { url: https://modthesims.info/wiki.php?title=SimAntics, name: MTS SimAntics wiki }
+    - { url: "https://modthesims.info/wiki.php?title=SimAntics", name: MTS SimAntics wiki }
 
   legacy_directories:
     note: "SimFreaks Cool Sites; The Sims Depot 'Additional Sims 1 Sites' — Dincer Hepguler, Seven Deadly Sims, Simlogical, Around the Sims, etc."
