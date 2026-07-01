@@ -8,6 +8,8 @@
 #
 # Add a show: copy _TEMPLATE.yml → <slug>.yml, fill it in, list it here.
 # Roster + consent: ../process/collaborators.yml. Method: ../process/design-in-public.yml.
+#
+# Creative inventory (gags, themes, traditions): ideas/ — see ideas/README.md
 
 meta:
   status: proposals
@@ -51,6 +53,9 @@ shows:
       jim-crutchfield/: "Jim Crutchfield ('Chaos') — edge of chaos: video feedback, evolving cellular automata that compute, computational mechanics (ε-machines). UC Davis / SFI; Santa Cruz Dynamical Systems Collective (Eudaemonic Pie). The 'feedback' jam alongside Don's CAM6; dream co-guests Scott Draves + Norman Margolus. Holds SHOW.yml + README + invitation.md."
       norman-margolus/: "Norman Margolus — Cellular Automata Machines: CAM-6 + the MIT-Press book Don's CAM6 emulator follows; block CA / Margolus neighborhood; reversible & billiard-ball computing; Margolus–Levitin limit. MIT CSAIL; reached via Henry Minsky. CA summit with Crutchfield + Scott Draves. Holds SHOW.yml + README + invitation.md."
       heather-steve-alvey/: "★ Heather Alvey (SimFreaks, née Castello) + Steve Alvey (SimSlice/SliceCity = SimCity inside The Sims; the shipped precedent for Will's data-portability vision). Whole-career group show about both + ALL their projects (26-year brands; Zombie Sims; Gallium/Will/Proxi), framed as a NON-EXTRACTIVE LIFT to drive fans + subscriptions, plus the Micropolis publishing system. Holds SHOW.yml + README + the afterlife-zombie-bridge flagship episode. Independent creators — support them."
+      craig-latta/: "Craig Latta — Caffeine (SqueakJS + WASM livecoding); Keep graph memory in Smalltalk; in-person Amsterdam option; remember Vanessa. Holds SHOW.yml + README + invitation.md."
+      dan-ingalls/: "Dan Ingalls — BitBlt, pop-up menus, Squeak, Fabrik, Lively, Smalltalk Zoo; pop-up ↔ pie retrospective; Alan Kay intro + 2021 correspondence. Holds SHOW.yml + README + invitation.md."
+      scott-adams/: "★ Scott Adams (the ADVENTURE pioneer — Adventureland / Adventure International, NOT the Dilbert cartoonist). The data-driven adventure engine as the original 'adventure compiler' → Don's Logo Adventure → adventure compiler → MOOLLM; a world in 16K; two-word parser vs. LLMs; adventure + AI (Scott is diving into AI now). Payoff: Don builds adventure-compiler tooling LIVE that Scott can use — mutual seed exchange. Holds SHOW.yml + README + invitation.md."
       david-ungar-self-moollm.yml: "David Ungar — Self × MOOLLM reimagination; Stage Magic Principle; Idea Scavenging; rig culture (consciencious objectors / artisanal vs vibe). Kaleida lineage."
       design-by-accretion.yml:  "Chris Trottier — 'Design by Accretion' ↔ the cauldron method. FLAGSHIP."
       alan-kay-microworld.yml:  "Micropolis Class with Alan Kay — microworld-as-medium, objects+classes. DREAM GUEST."
@@ -107,7 +112,7 @@ backlog_ideas:
   - "Edd Coates — Game UI Database and ethical AI licensing (seed exists: edd-coates-game-ui-database.yml)."
   - "Edd Coates — Pie menus in games, editable pie design, and PieCraft (seed exists: edd-coates/pie-menus-piecraft.yml)."
   - "Brad Myers — Garnet constraints, All the Widgets, VPL taxonomy (seed exists: brad-myers-garnet-vpl.yml; warm CMU history)."
-  - "Scott Adams — interactive fiction; mutual seed exchange."
+  - "Scott Adams — interactive fiction; mutual seed exchange. PLANTED → repo-shows/scott-adams/ + characters/scott-adams/ (adventure engine → adventure compiler → MOOLLM; adventure + AI)."
   - "Eric Barone (ConcernedApe) — Stardew Valley; solo-dev success + farming-game resonance."
   - "Steve Wozniak — Apple II, 6502, open hardware, and live floppy-buffer hacking."
   - "More designers of games that resonate with SimCity / The Sims / MOO (open wishlist)."

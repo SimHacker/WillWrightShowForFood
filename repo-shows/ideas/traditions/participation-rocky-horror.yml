@@ -1,0 +1,15 @@
+# Rocky Horror participation — Repo Show edition
+
+id: participation-rocky-horror
+type: tradition
+status: ready
+canonical: ../../will-wright/performance-and-culture.yml#rocky_horror_culture
+
+homage: "Rocky Horror Picture Show audience cues — ITS PDP-10 AI:HUMOR;ROCKY HORROR file."
+
+repo_version: |
+  Characters watch chat with interests + behaviors + triggerable protocols.
+  Craft a pointed question from a character bible → big specific reaction.
+  Jump on stage when you understand the machinery.
+
+ethics: ../../will-wright/performance-and-culture.yml#backstage_ethics

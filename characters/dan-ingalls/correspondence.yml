@@ -6,21 +6,25 @@ meta:
   with: dan-ingalls
   curated_by: don-hopkins
   consent: not_yet_asked
-  span: "2018, 2021"
+  span: "2008, 2018, 2021, 2023, 2026"
   provenance_private: SimHacker/DonHopkins/characters/don-hopkins/correspondence/daniel-ingalls.yml
 
 gist: |
-  Alan Kay introduced Don to Dan via the Fabrik paper (2018). The thread later (2021) circled
-  the "Pie Menus: A 30-Year Retrospective" write-up and Don's UnityJS JSON bridge — path
-  expressions, event query templates, and JSONic APIs for cutting round-trips between a live
-  scripting layer and a runtime — compared against High Fidelity's ad-hoc JS messaging and
-  Croquet. Don visited Croquet and Alan Kay; the same technical notes went to Vanessa
-  Freudenberg for Lively / SqueakJS / Unity integration.
+  Alan Kay introduced Don to Dan via the Fabrik paper (2018) — pop-up menus and gesture menus
+  as cousins of pie menus. The thread deepened through the Pie Menus retrospective, Fabrik's
+  modular-time dataflow, and (2021) Dan's reflection on the missed leap from Squeak to a
+  web-borne live system — the lineage that became Lively, SqueakJS, and today's browser
+  livecoding. Don shared UnityJS bridge notes (path expressions, query templates) with Dan and
+  Vanessa Freudenberg. Dan hosts the Smalltalk Zoo at CHM and continues the live-object thread
+  at Ink & Switch on **Livelymerge** (with Alex Warth) — Smalltalk-like liveness on Automerge.
 
 threads:
   fabrik_and_pie_menus:
     what: "Fabrik visual dataflow (Ingalls et al.) and pie menus — kindred direct-manipulation ideas; pop-up menus (Dan) and pie menus (Don) as cousins"
     via: "Introduced by Alan Kay, 2018"
+  livelymerge:
+    what: "Ink & Switch project — live Smalltalk / Lively Kernel-like system on Automerge; local-first mergeable live objects"
+    note: "Public newsletter reference only; collaboration not yet proposed on air"
   live_web_bridges:
     what: "UnityJS JSON bridge (path expressions, query templates) vs High Fidelity vs Croquet; Lively Kernel / SqueakJS as the live-in-browser endpoint"
 
@@ -33,4 +37,7 @@ connects_in_repo:
 
 show_hooks:
   - "Pie menus ↔ pop-up menus retrospective — direct-manipulation history segment"
-  - "Live-in-the-browser Smalltalk: Lively/SqueakJS → Caffeine → AI-assisted live coding"
+  - "Smalltalk Zoo walkthrough on air — edit a historical Smalltalk live in the browser"
+  - "Live-in-the-browser Smalltalk: Lively → SqueakJS → Caffeine → AI-assisted live coding"
+  - "Fabrik visual dataflow — Alan Kay introduction thread"
+  - "Bridge APIs — path expressions and query templates (2021 notes)"

@@ -14,6 +14,26 @@ Micropolis Home rebuilds the Sims 1 content-creation stack as a **web-native pla
 | **Publish** | Hosted CARD dirs, git repos, branching dialog objects, round-trippable saves |
 | **Share** | Exchange revival, family albums, federated storefronts, Repo Show homefun |
 
+## Steam Community Guides
+
+**Not a separate Steam app** — official player guides on [The Sims Legacy Collection](https://store.steampowered.com/app/3314070/The_Sims/) Community Hub. Informational playbooks that link out to Micropolis Home (web) and Repo Shows. No install for readers.
+
+Four jobs the guides cover:
+
+1. **Create · publish · share** — web tools + federated UCC (above)
+2. **Repo Shows channel** — discover and promote Micropolis Class episodes ([Will Wright flagship](../../repo-shows/will-wright/), guest network, live/VOD, GitHub, TicketPR)
+3. **Sims & bridges** — show archive for The Sims history + Simopolis bridge episodes (other games)
+4. **Requires Sims on Steam** — drives Legacy Collection sales; EA-friendly fan-guide disclaimer
+
+**Distribution (web first, then native companion):**
+
+| Phase | Surface |
+|-------|---------|
+| **Now** | [Micropolis Home](CATALOG.yml) web hub + [Steam Community Guides](steam-community-guide.yml) |
+| **Later** | [**MicropolisAngel**](micropolis-angel.yml) — Windows Steam Software companion (Simplifier + catalog + machinima + streaming). Announced after web audience bootstraps. |
+
+Spec: [`steam-community-guide.yml`](steam-community-guide.yml) · [`micropolis-angel.yml`](micropolis-angel.yml) · landscape: [`../sims1-community-landscape.md`](../sims1-community-landscape.md)
+
 ## Federated catalogs
 
 Each keeps its brand and storefront; Micropolis Home is the shared rails:

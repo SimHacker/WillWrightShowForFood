@@ -1,0 +1,143 @@
+# One GitHub issue (and branch) per Sims object GUID — bugs, collisions, telemetry
+# Maps ObjectError reports + collision cases + user uploads into a durable artifact tree.
+# Parent: CATALOG-DB-SCHEMA.yml  |  OBJECT-ERROR-TELEMETRY.yml
+
+meta:
+  id: guid-issue-hub
+  status: spec
+  one_liner: |
+    Crash reports and GUID collisions become GitHub issues keyed by object GUID;
+    branch issue_<n> holds iff fingerprints, optional full files, AI analysis, creator PRs.
+
+# NAMING — do not confuse GitHub issue number with Sims GUID
+identifiers:
+  sims_guid:
+    what: "32-bit object definition GUID (OBJD) — primary key for object identity in-game"
+    example: "0xCC364832"
+  github_issue_number:
+    what: "GitHub's auto-increment id — stored as metadata only"
+  branch_name:
+    pattern: "issue_<github_issue_number>"
+    holds: "Artifacts for that GitHub issue — may cover one GUID or a collision cluster"
+  guid_issue_link:
+    what: "Many-to-one: several GUIDs can reference one GitHub issue when collision cluster"
+
+# REPO TARGET
+repository:
+  default: "WillWrightShowForFood or dedicated micropolis-object-health repo (TBD)"
+  visibility: "Public metadata branches; blob storage for consented iff uploads"
+  labels:
+    - guid-collision
+    - object-error
+    - bhav-crash
+    - needs-creator
+    - resolved
+
+# ISSUE LIFECYCLE
+lifecycle:
+  create_triggers:
+    - "First ObjectError report for a GUID with no open issue"
+    - "guid_collision_cases.classification != unique AND no issue linked"
+    - "Human files issue from Angel graveyard / catalog UI"
+  title_template: "[GUID 0xXXXXXXXX] {catalog_name} — {primary_symptom}"
+  body_seed:
+    - "GUID, fingerprint groups, install path hints (no PII)"
+    - "Link to Micropolis Home CARD if federated"
+    - "Creator notify contact from creator_claims"
+  branch_bootstrap:
+    - "Create issue_<n> from main"
+    - "Commit META.yml (see schema below)"
+    - "Optional: artifacts/iff-fingerprints/, artifacts/object-errors/"
+
+# META.yml (committed at branch root)
+meta_yml_schema:
+  sims_guid: integer
+  github_issue_number: integer
+  catalog_name: string
+  collision_guids: "array of integer — sibling GUIDs in same case"
+  creator_ids: "array — links to creators table / CARD urls"
+  status: open | investigating | waiting-on-author | resolved | wontfix
+  quality_score: "0–100 rolling from telemetry"
+  fingerprints:
+    - { sha256: string, fingerprint_algo: string, object_id: string, source: scan|upload }
+  linked_reports: "array of object_error_reports.id"
+
+# ARTIFACT TREE (on issue_<n> branch)
+artifacts:
+  object-errors:
+    what: "Redacted ObjectError parse JSON + optional raw txt"
+    naming: "{house}_{tick}_{report_id}.json"
+  iff-fingerprints:
+    what: "Canonical hash sidecar — no binary unless user opted in"
+    naming: "0x{guid}.fingerprint.json"
+  iff-uploads:
+    what: "Full .iff/.far bytes — ONLY when upload_consent=full_file"
+    naming: "0x{guid}/{sha256}.iff"
+    license: "User asserts rights; separate from EA retail"
+  collision-siblings:
+    what: "Copies or fingerprints of every GUID in guid_collision_cases cluster"
+  ai-analysis:
+    what: "Bot-generated BHAV summary, suspected tree, suggested fix — human review required"
+    naming: "analysis/{timestamp}-{model_id}.md"
+  resolution:
+    what: "PR that updates disposition, re-GUID patch notes, or catalog CARD fix"
+
+# UPLOAD CONSENT (not Cambridge Analytica — explicit opt-in)
+upload_consent:
+  default: fingerprint_only
+  tiers:
+    fingerprint_only:
+      sends: "sha256, fingerprint_algo, guid, chunk manifest summary"
+      never: "Mesh bytes, STR# full text from others' packs without license"
+    metadata_plus:
+      sends: "catalog_name, catalog_desc, price, BHAV tree names from error file"
+    full_file:
+      checkbox: "Share this object file with Micropolis Home maintainers and listed creator"
+      sends: "iff/far bytes to federation blob or GitHub LFS on issue branch"
+      requires: "Typed confirmation; show SHA256 before upload"
+  ui_joke_ack: "We are not building Cambridge Analytica for bar stools — consent is per upload."
+
+# CREATOR NOTIFICATION
+creator_notify:
+  routing:
+    - "creator_claims.verified → email/github from CARD"
+    - "ZombieSims / SimSlice federated CARD → notify_contact field"
+    - "Unknown → issue comment @ community; no cold spam"
+  template: |
+    Object GUID 0x… triggered {n} error reports in Micropolis Home (user-consented telemetry).
+    Issue: {github_url}. Fingerprints attached; full iff only if uploader opted in.
+
+# AI + HUMAN WORKFLOW
+workflow:
+  bot_on_issue_open:
+    - "Fetch linked fingerprints from Micropolis Home API"
+    - "Post analysis comment — BHAV risk, collision summary"
+    - "Suggest disposition action (keep | re-guid | merge | disable)"
+  human_author:
+    - "Comment, attach fixed iff, open PR to artifacts/"
+  resolve:
+    - "Merge PR → update dispositions table via sync"
+    - "Close issue; quality_score updated on catalog row"
+
+# CLIENT API (Angel / Micropolis Home)
+client_api:
+  endpoints:
+    - "POST /api/v1/object-errors — ingest parsed report"
+    - "POST /api/v1/guid/{guid}/fingerprint — fingerprint-only upload"
+    - "POST /api/v1/guid/{guid}/artifact — full file with consent token"
+  idempotency: "sha256 + guid + error_kind — dedupe repeats"
+  github_sync: "Server opens/updates issue via GitHub App; client never needs PAT"
+
+# SQLITE LINKAGE
+sqlite:
+  tables:
+    - object_error_reports
+    - github_guid_issues
+    - upload_consents
+  see: CATALOG-DB-SCHEMA.yml
+
+see_also:
+  - OBJECT-ERROR-TELEMETRY.yml
+  - CATALOG-DB-SCHEMA.yml
+  - CATALOG-SCREEN-MATCH.yml
+  - ../../catalogs/zombie-sims/

@@ -1,0 +1,5 @@
+🗺️ **Scott Adams** — the adventure-game pioneer (**not** the Dilbert cartoonist). Wrote **Adventureland** (1978), the first text adventure for a microcomputer, and founded **Adventure International**, one of the first game companies. His genius was a tiny **data-driven adventure engine**: each game was a *database* (rooms, items, verb/noun actions) run by a small portable *interpreter*, so a single adventure could ship across the TRS-80, Apple ][, Atari, VIC-20, C64, and more. Two-word parser; a whole adventure squeezed into ~16K. Later did the **Questprobe** Marvel superhero adventures.
+
+The reason he belongs here: his "compile the adventure to portable data + a little VM" idea is the **direct ancestor of Don's adventure compiler** — and of Terrapin **Logo Adventure**. Per Don, Scott wants to build this *now*, is diving deeply into **AI**, and Don wants to develop the tooling for Scott to use as well as himself. A perfect Repo Show guest: adventure, engines, and AI — anything and everything.
+
+*Invitation portrayal — consent not yet asked. Subject may correct, delay, decline, or request removal anytime.*

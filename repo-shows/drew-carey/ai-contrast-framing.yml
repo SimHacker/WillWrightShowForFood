@@ -1,0 +1,174 @@
+# Drew Carey — AI contrast framing (invitation pitch)
+# NOT Drew Carey. Public-record contrast for a dream-guest conversation — no invented quotes.
+# Standards: ../../schemas/portrayal-standards.yml
+
+meta:
+  id: drew-ai-contrast
+  purpose: invitation_pitch
+  consent: not_yet_asked
+  show: SHOW.yml
+  rendered_for_drew: ai-contrast-framing.md
+  invitation: invitation.md
+
+# WHAT HAPPENED (public record — April 2023)
+reference_experiment:
+  name: "Friday Night Freakout (SiriXM) — AI DJ experiment"
+  when: 2023-04
+  what: |
+    Drew used ElevenLabs AI voice clone + ChatGPT-written script to host much of an episode —
+    an intentional weekend experiment to see how far the tech could go.
+  audience_reaction: |
+    Fans noticed immediately — choppy, robotic, "soulless," missing the real Drew's inflection.
+    They wanted the personality back.
+  drews_lesson_public:
+    - "I violated a rule from Radio 101."
+    - "People like the personality of the DJs… You can just talk. That's what listeners like."
+    - Fans' message: don't do it again (he agreed).
+  still_interested_in_ai: |
+    Per Engadget (2023): not afraid of AI — experimenting, ad-copy use cases, curious what
+    tools can do — but learned that replacing the host personality on air was the wrong move.
+    "People want that interaction."
+  sources:
+    - { label: "Engadget — Drew Carey made a radio show with AI", url: "https://www.engadget.com/drew-carey-made-a-radio-show-with-ai-fans-werent-pleased-143014038.html" }
+    - { label: "Inside Radio — People Like Personality", url: "https://www.insideradio.com/free/drew-careys-ai-lesson-people-like-personality/article_eea79b00-d1b2-11ed-a3c2-bb3ffc7002f9.html" }
+
+# OUR OFFER — the other side of the same lesson
+our_frame:
+  headline: "Human control & authorship — AI as instrument and orchestrator, not replacement"
+
+  lineage:
+    from: douglas-engelbart
+    note: |
+      This frame is Engelbart's augmentation thesis applied to AI on air — not a Repo Show invention.
+      Computers (and LLMs) as instruments that extend human capability; the human stays in control
+      of authorship, judgment, and personality. Augmentation, not automation or replacement.
+    thesis: "Augmenting human intellect — augmentation NOT automation"
+    source: "'Augmenting Human Intellect: A Conceptual Framework' (1962); NLS / Mother of All Demos (1968)"
+    character: ../../characters/douglas-engelbart/
+    trail: ../../../process/trails/augmentation-and-hypertext.md
+    pitm: ../../../process/crazy-idea-jam.yml#player_in_the_middle
+
+  television_lineage:
+    from: [will-wright, don-hopkins]
+    note: |
+      This frame is not greenfield — Will and Don already **made a TV show** and applied what
+      they learned across several iterations and tools. Repo Show is the next generation of
+      audience-authored broadcast, with git + MOOLLM + honest orchestration instead of opaque
+      pipelines.
+    chain: |
+      Sims Family Album → **CreationTV** (iPhone prototype) → **StoryMaker** (branching
+      collaborative storytelling) → **Bar Karma** (CurrentTV — first online community-developed
+      network TV series, audience votes + real broadcast) → **Urban Safari** (GPS field capture;
+      lessons from playtesting StoryMaker on real users via the show).
+    what_we_already_did:
+      - "Bar Karma aired on real TV — community wrote and voted story branches into episodes"
+      - "StoryMaker full stack — MediaWiki + Python + Flash + iPad + Facebook + Unity visualizer"
+      - "CreationTV — Don's iPhone prototype from Will's slide symbols at Coffeeshop Bluebird"
+      - "Urban Safari — geolocated cards; field capture while following others' story paths"
+      - "Playtested branching narrative on **real users via a TV show** — folded learnings into Urban Safari"
+    repo_show_is: |
+      Bar Karma's grandchildren — same audience-as-author ethic; TicketPR instead of wiki votes;
+      LLM orchestrates code and cues while people voice and improvise (not ChatGPT-as-host).
+    demos:
+      - { label: "CreationTV / Bar Karma", url: "https://www.youtube.com/watch?v=Nb_-J1lv-B8" }
+      - { label: "StoryMaker demo (Stupid Fun Club)", url: "https://www.youtube.com/watch?v=_2yEHs_WLzQ" }
+      - { label: "Urban Safari GPS storytelling demo", url: "https://www.youtube.com/watch?v=Db8KGNoeKHE" }
+    canonical:
+      - ../ideas/traditions/make-play-tools-show.yml#television_lineage
+      - ../../../process/crazy-idea-jam.yml#creationtv_storymaker
+    career: ../../characters/don-hopkins/career/stupid-fun-club.yml
+
+  not_this:
+    - "AI voice clone of the guest hosting the show"
+    - "ChatGPT writing the guest's script or DJ patter"
+    - "Synthetic personality substituting for improv timing"
+    - "Opaque 'is that really them?' experiments"
+    - "Handing your voice and identity to AI to impersonate you on air"
+
+  simulation_not_impersonation:
+    canonical: ../ideas/themes/simulating-people.yml
+    schema: ../../schemas/portrayal-standards.yml#simulation
+    distinction: |
+      Different from impersonation: models of game characters, fictional and historic people, and
+      even yourself — but only with consent, direct authorship, and control — that AI can animate
+      and give autonomy to play with each other and real people, always clearly framed as
+      simulations.
+    sims_precedent: |
+      Players have made Sims of partners, siblings, friends, bullies and run experiments on them
+      for 26+ years. That ship has sailed. AI simulation opens Pandora's box — we have thought
+      long and hard about consent, labeling, and human control (PITM).
+
+  this_instead:
+    orchestration: |
+      LLM writes CODE and ORCHESTRATES live streams — scene cues, TicketPR queue, character
+      triggers, repo edits — while PEOPLE talk, improvise, and perform.
+    puppetry: |
+      MOOLLM generates TEXT for fictional Sims characters; HUMANS voice them (face-puppet,
+      voice-puppet, Pink Trombone as instrument). Whose Line energy — the performer's timing IS
+      the joke.
+    play_along: |
+      Sims Play-Along Narration: audience footage, Drew (or guest) invents dialogue LIVE —
+      the anti-ChatGPT-script. Foreign Poet × his own Maxis-built in-game segment.
+    ethical_cast: |
+      Will's menagerie + our audience characters + contributors' — labeled fan portrayals,
+      portrayal-standards.yml, no TTS clones of living people.
+    transparency: |
+      Staged call-ins labeled honestly; homages credited; git history is the queue — the
+      opposite of sneaking AI voice past the audience.
+
+  why_drew_might_care:
+    - "He already ran the control experiment — his audience told him the answer."
+    - "Will and Don already shipped audience-authored TV (Bar Karma) — this is the next iteration, not a pitch deck."
+    - "Urban Safari demo on YouTube proves the tools exist; Repo Show applies decades of learnings."
+    - "This show is built on the craft he mastered: live improv + audience participation."
+    - "AI here is backstage crew + repo editor — not the on-air personality."
+    - "Price Is Right / Whose Line proved people want to BE in the show; TicketPR + puppet rotation extend that."
+    - "Drew's own Sims TV segment is part of the same lineage — TV met games met improv."
+
+  invitation_tone: |
+    Warm, not preachy. "You proved the rule; we built on it" — offer a format where AI helps
+    people collaborate instead of replacing them. Let him riff on what honest AI use looks like
+    from someone who's tried both sides.
+
+  whos_voice_is_it_anyway:
+    joke: |
+      Gentle ribbing — Whose Line host; when the clone hosted Freakout the audience played the
+      fastest game of "Whose Voice Is It Anyway?" and voted Drew. See ai-contrast-framing.md.
+
+  bar_karma_sympathy:
+    note: |
+      Bar Karma aired on real TV; did not win Emmys. Hard lessons from audience-authored broadcast —
+      same rule Drew learned on radio. Sympathize, don't preach.
+
+  micropolis_angel_advice:
+    spec: ../../catalogs/micropolis-home/micropolis-angel.yml#chat_with_god
+    one_line: |
+      Screen + telemetry → ChatGPT advice → read aloud. "Chatting with God" — playful Sim Religion;
+      not a host voice clone. Cross-game Angel; character models as souls. Optional token subscription.
+
+conversation_hooks:
+  - "Radio 101 vs Repo Show 101 — personality on mic vs personality in the puppet pit"
+  - "ChatGPT DJ scripts vs zero-script play-along narration"
+  - "Whose Voice Is It Anyway? — when the audience always picks the human"
+  - "Bar Karma already did audience-authored TV — what would Drew add in the AI age?"
+  - "StoryMaker → Urban Safari → Repo Show — three iterations of the same idea"
+  - "Impersonation vs simulation — when is a doll of someone OK? (Sims did it for 26 years)"
+  - "What would 'AI that enables the audience' look like to Drew?"
+  - "Phoneloper / Pink Trombone as toys you PLAY — not a voice that replaces you"
+
+see_also:
+  - SHOW.yml#sims_play_along_narration
+  - ../../process/sims-play-along-narration.yml
+  - ../../will-wright/performance-and-culture.yml
+  - ../ideas/themes/human-control-and-authorship.yml
+  - ../ideas/themes/simulating-people.yml
+  - ../../schemas/portrayal-standards.yml#simulation
+  - ../../process/crazy-idea-jam.yml#player_in_the_middle
+  - ../../characters/douglas-engelbart/
+  - ../../process/trails/augmentation-and-hypertext.md
+  - ../ideas/traditions/make-play-tools-show.yml
+  - ../../characters/don-hopkins/career/stupid-fun-club.yml
+  - ../../characters/will-wright/sources/don-youtube-storymaker-demo/
+  - ../../catalogs/micropolis-home/micropolis-angel.yml
+  - ai-contrast-framing.md
+  - invitation.md

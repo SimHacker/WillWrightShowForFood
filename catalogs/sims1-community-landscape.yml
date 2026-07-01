@@ -1,0 +1,193 @@
+# Sims 1 community landscape & distribution strategy
+# Companion to Micropolis Home federation. Not legal advice — document facts + posture.
+
+meta:
+  id: sims1-community-landscape
+  scope: sims_1_only
+  last_reviewed: 2026-06-30
+  steam_game: https://store.steampowered.com/app/3314070/The_Sims/
+  buy_first: get-the-sims-on-steam.md
+
+# EA / LICENSE — what actually constrains you
+legal_layers:
+  transmogrifier_eula:
+    summary: |
+      EA Tools EULA (2000): personal **noncommercial** use; fan materials on personal noncommercial
+      sites with required EA disclaimer; no redistribution of the Tool; EA may revoke anytime.
+    repo: ../../characters/don-hopkins/career/contracts/transmogrifier-ea-tools-eula.txt
+    notes: ../../characters/don-hopkins/career/contracts/transmogrifier-distribution-license-notes.md
+  clean_room_tools:
+    summary: |
+      **Micropolis Home** reimplements SimShow / Transmogrifier / RugOMatic **clean-room in the
+      browser** — not redistribution of EA's Windows binary. Different legal object than mirroring
+      the 2000 installer.
+  ucc_objects:
+    summary: |
+      SimProv, SimFreaks, SimSlice, Zombie Sims objects are **fan-created content** (Don, Heather,
+      Steve, SimBabes, Donna, community). Copyright in the objects; game is the runtime players must
+      own. Free distribution with EA disclaimer matches decades of community practice.
+  do_not_assume:
+    - "Nobody remembers the license" — EA legal still exists; status quo ≠ permission
+    - "26 years later" auto-expires EA tool grants — it does not
+    - Selling EA assets or implying endorsement — high short-term C&D risk
+  do_assume:
+    - Free fan UCC + required disclaimer + "buy Sims on Steam" = aligned with Transmogrifier EULA fan-posting clause and MTS/TSR norms
+    - Companion app that **requires** owned game and **drives Steam sales** = long-run EA-friendly story (see get-the-sims-on-steam.md)
+
+# ACTIVE SIMS 1 SITES (2025–2026 snapshot — verify before linking)
+sites:
+  subscription_and_tips:
+    - id: zombiesims
+      url: https://zombiesims.com/
+      model: "Free newbie tier + **$9.99 lifetime** unlocks Zombie Sims + SimSlice archive"
+      creators: [Heather Alvey, Steve Alvey]
+      note: "SimFreaks migration in progress (2025–2026); SimSlice files temporarily centralized here"
+      federated: ../zombie-sims/
+
+    - id: simfreaks
+      url: https://www.simfreaks.com/
+      model: "Long-running creator storefront; server migration; Discord for site requests"
+      creators: [Heather Alvey]
+      federated: ../simfreaks/
+      note: "Cool Sites list — directory of legacy Sims 1 URLs"
+
+    - id: simslice
+      url: http://www.simslice.com/
+      model: "Creator site; SliceCity flagship; downloads often via ZombieSims during migration"
+      creators: [Steve Alvey]
+      federated: ../simslice/
+
+  free_community_hubs:
+    - id: modthesims
+      url: https://www.modthesims.info/f/662/
+      model: "Free downloads; ads; forum. **Sims 1 section alive** but site center of gravity is Sims 2–4"
+      scale: "~462M posts site-wide; Sims 1 is a legacy forum branch"
+
+    - id: thesimsresource
+      url: https://www.thesimsresource.com/downloads/browse/category/sims1/
+      model: "All content free; **VIP ~$3/mo or ~$24/yr** for ad-free, fast/basket downloads, CC Manager"
+      sims1: "Legacy category maintained; business is Sims 4-first"
+
+    - id: sneakysims
+      url: https://sneakysims.net/
+      model: "Free hub; no account required; CC archive DB + SneakyLib modding tools; aggregates dead sites"
+      note: "2025 EA Legacy Collection spike; preservation-focused — parallel mission to Micropolis Home"
+
+    - id: thesimsdepot
+      url: http://www.thesimsdepot.com/sims-1/downloads/
+      model: "Free; archives EA **Get Cool Stuff** + ts1depot creations + tool directory"
+      tie: "Killer downloads / official Maxis web objects — see ../maxis/"
+
+  tools_and_wikis:
+    - { name: IFF Pencil 2, role: SimAntics editing }
+    - { name: SimPose, role: posing }
+    - { url: https://modthesims.info/wiki.php?title=SimAntics, name: MTS SimAntics wiki }
+
+  legacy_directories:
+    note: "SimFreaks Cool Sites; The Sims Depot 'Additional Sims 1 Sites' — Dincer Hepguler, Seven Deadly Sims, Simlogical, Around the Sims, etc."
+    yahoo_groups: "Mostly offline; recover via Internet Archive + Saving The Sims / CTO Sims preservation efforts"
+
+# REVENUE MODEL COMPARISON (Sims 1 relevant)
+revenue_models:
+  lifetime_subscription:
+    example: zombiesims
+    price: "$9.99 lifetime (2026 checkout page)"
+    for: "Original fan labor — expansion-scale packs + SimSlice back-catalog"
+  vip_convenience:
+    example: thesimsresource
+    price: "~$24/yr or ~$3/mo (VIP — verify shop page)"
+    for: "Ad-free, speed, basket, CC Manager — content still free without VIP"
+  ads_and_free:
+    example: modthesims
+    for: "Free files; site funded by ads + community labor"
+  creator_storefront:
+    example: [simfreaks, simslice]
+    for: "Direct support of named artists; prices vary by product"
+  donation_hobby:
+    example: donhopkins_hn_giveaway
+    for: "Free SimProv archive; tip via ZombieSims / Patreon / show lift — non-extractive"
+
+# VIRTUAL / ARCHIVE CATALOGS (to build)
+virtual_catalogs:
+  maxis_metadata:
+    path: ../maxis/
+    what: "Steam built-in + expansion objects; killer downloads; Get Cool Stuff — metadata + IA pointers, not binary mirror"
+
+  ea_exchange_history:
+    what: "originalsims.com / Exchange saves, family albums, characters — Internet Archive + Simopolis hub"
+    source: ../../characters/will-wright/sources/2004-01-12-sims-exchange/
+    status: seed
+
+  internet_archive_import:
+    working_name: tornado_importer  # IA harvest → Simopolis catalog entries
+    what: |
+      Pipeline: Wayback / IA collections → normalized CARD records (title, creator, date, IA URL,
+      install notes). **Virtual catalog** — pointers and metadata, not unauthorized re-hosting of
+      entire dead sites without creator contact.
+    status: planned
+    sibling: SimObliterator / VitaMoo archive mining notes
+
+  simopolis_hub:
+    what: "Git-checked-in + web hub for round-trippable saves, albums, cross-game facets"
+    architecture: ../../repo-shows/INDEX.yml#bridges_architecture
+
+# STEAM COMMUNITY GUIDES — Micropolis Home discovery (web hub + Repo Shows)
+steam_community_guides:
+  spec: micropolis-home/steam-community-guide.yml
+  model: valve_community_guide
+  requires: "Legal copy of The Sims 1 (Steam Legacy Collection recommended); must own game to publish"
+
+  one_line: |
+    Player-authored Steam Guides on The Sims hub — informational playbooks linking to Micropolis Home
+    (browser) and Repo Shows. Not a separate store app.
+
+  what_it_is:
+    catalogs_and_tools:
+      - "Micropolis Home web URL — create · publish · share (primary product, no install)"
+      - "Federated UCC pointers: SimFreaks, SimSlice, SimProv, Zombie Sims, MTS, TSR, SneakySims, Maxis metadata, IA archives"
+      - "Clean-room web tools: SimShow preview, Transmogrifier, install helpers, Exchange revival"
+    repo_shows_channel:
+      - "Discover + promote Micropolis Class Repo Shows — flagship Will Wright kickoff + guest network"
+      - "Live/VOD, GitHub repo browse, TicketPR audience ingress, episode harvest (skills, code, homefun)"
+      - "Sims history + bridge episodes (Simopolis hub → Stardew, Proxi, Spore, Mind Mirror, …)"
+    not: "A game; a warez bundle; implied EA endorsement; a replacement for creator storefronts; an Electron wrapper"
+
+  what_to_avoid:
+    - "Implied EA endorsement or Plumbob branding in guide art"
+    - "Re-hosting paid creator content without agreement"
+    - "Bundling EA game files or expansion IFF packs"
+
+  ea_alignment_pitch:
+    short: |
+      Fan guides for players who own Sims on Steam → drives Legacy Collection discovery → documents
+      26-year fan culture → revives Exchange → promotes making/playing games the right way.
+    long: get-the-sims-on-steam.md
+
+  native_tools_later:
+    product: micropolis-home/micropolis-angel.yml
+    name: MicropolisAngel
+    note: |
+      Windows Steam Software companion — Simplifier showcase, catalog capture, machinima, OBS/Twitch,
+      Exchange revival gateway. NOT a web wrapper. Announce after Micropolis Home bootstraps audience.
+
+  rollout_order:
+    1: "Web Micropolis Home + public Will Repo Show + catalog CARD dirs"
+    2: "ModTheSims + Steam Community Guide + YouTube (UCC installs + show clips)"
+    3: "MicropolisAngel on Steam Software (Windows) — Simplifier + catalog + streaming stack"
+    4: "EA conversation only after traction + Heather/Steve/MTS relationships warm"
+
+  simprov_on_steam:
+    sell: "Risky as paid SKU — fan objects, unclear EA tooling lineage for some assets"
+    free: "Aligned — HN giveaway pattern; link from guide; disclaimer; buy-game-first"
+    wrap: "Guide + web hub list SimProv as federated catalog — downloads from Micropolis Home or creator CDN"
+
+# FEDERATION PRINCIPLE (Heather & Steve show)
+non_extractive_lift:
+  rule: "Send fans to SimFreaks / ZombieSims subscriptions — Micropolis Home is rails, not a loot box"
+  show: ../../repo-shows/heather-steve-alvey/SHOW.yml#support_them
+
+see_also:
+  - micropolis-home/README.md
+  - CATALOGS.yml
+  - ../characters/will-wright/sources/maxis-licenses-chain-of-custody/
+  - ../../process/trails/send-code-not-commands.md

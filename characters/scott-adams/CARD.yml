@@ -1,0 +1,132 @@
+# CARD — Scott Adams (public portrayal)
+# NOT the person. NOT the Dilbert cartoonist. Schema: ../../schemas/guest-skills-card.yml
+# Nav + metadata: GLANCE.yml
+
+glance: GLANCE.yml
+
+room:
+  id: scott-adams
+  name: Scott Adams
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Scott Adams
+  title: The Adventure Compiler (before it had a name)
+  rarity: rare
+  signifier: 🗺️
+  flavor: A whole world in 16K -- because the world was data, and the engine was small.
+abilities:
+- id: ADVENTURELAND
+  name: Adventureland
+  type: activated
+  mana: '{1}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: adventureland
+    signature: adventureland(1978) → the first microcomputer text adventure
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Tell the origin of the microcomputer text adventure without mythology.
+  verifiable: Adventureland (1978), TRS-80 (public record)
+  combos_with:
+  - DATA-DRIVEN-ENGINE
+- id: DATA-DRIVEN-ENGINE
+  name: Data-Driven Adventure Engine
+  type: activated
+  mana: '{U}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: adventureEngine
+    signature: adventureEngine(database, interpreter) → one game, every machine
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.9
+  effect: Explain adventure-as-database + a tiny portable interpreter -- the compiler idea before it had a name.
+  verifiable: Adventure International engine ported across TRS-80/Apple/Atari/VIC/C64
+  combos_with:
+  - DON-ADVENTURE-COMPILER
+  - DON-LOGO-ADVENTURE
+- id: SIXTEEN-K-WORLD
+  name: A World in 16K
+  type: static
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: constraintCraft
+    signature: constraintCraft(16K) → design discipline
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Show how brutal memory constraints became a design tool.
+  verifiable: Classic Adventure International games fit ~16K
+  combos_with: []
+- id: TWO-WORD-PARSER
+  name: Two-Word Parser
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: verbNounParser
+    signature: verbNounParser("take lamp") → the classic IF grammar
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.8
+  effect: Contrast the verb-noun parser with modern LLM natural language -- what's gained and lost.
+  verifiable: Adventure International two-word parser
+  combos_with:
+  - DIVING-INTO-AI
+- id: QUESTPROBE
+  name: Questprobe (Marvel)
+  type: triggered
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: questprobe
+    signature: questprobe(marvel) → licensed superhero adventures
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.8
+  effect: The Marvel superhero adventure license and the 1980s IF business.
+  verifiable: Questprobe series (Hulk, Spider-Man)
+  combos_with: []
+- id: DIVING-INTO-AI
+  name: Diving Into AI
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  - 'subject_confirms: true'   # AI-interest is Don-sourced; confirm with Scott before broadcast
+  advertisement:
+    method: adventureMeetsAI
+    signature: adventureMeetsAI(llms) → the next adventure engine
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.9
+  effect: Where a founding adventure author takes LLMs, world models, and authoring -- live.
+  verifiable: Per Don (consent not yet asked) -- confirm before airing.
+  combos_with:
+  - DATA-DRIVEN-ENGINE
+  - DON-ADVENTURE-COMPILER
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+  disambiguation: "Adventure-game pioneer. NOT the Dilbert cartoonist."
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status + Don connection
+- path: invitation.md
+  why: Public invitation document
+- path: ../don-hopkins/career/lineage.yml
+  why: Don's adventure compiler + Logo Adventure (the combo targets)

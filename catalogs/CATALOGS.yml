@@ -48,6 +48,12 @@ catalogs:
     summary: "Maxis objects + killer downloads — metadata and pointers only (Steam, IA, donhopkins.com)"
     note: "IFF preview pipeline + killer hamster backstory articles; not a binary mirror"
 
+  - id: archive_index
+    path: sims1-community-landscape.yml
+    kind: community_index
+    summary: "Sims 1 sites, revenue models, IA virtual catalogs, Steam companion strategy"
+    human: sims1-community-landscape.md
+
 relationship: |
   Micropolis Home is not another shelf — it is the platform.
   SimFreaks, SimSlice, SimProv, and Zombie Sims are federated catalogs

@@ -1,0 +1,11 @@
+# Stupid Fun Club robots — empathy & servitude
+
+id: stupid-fun-club-robots
+type: theme
+status: ready
+shows: [will-wright]
+
+films: [Servitude, Empathy]
+opening: ../../will-wright/SEGMENTS.yml#opening_one_minute_movies
+gags: [../gags/slats-robopoetry-gong.yml, ../gags/broken-robot-servitude.yml]
+slats_show: ../../will-wright/slats-reincarnation.yml

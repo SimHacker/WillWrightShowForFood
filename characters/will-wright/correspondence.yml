@@ -1,0 +1,45 @@
+# Will Wright × Don Hopkins — correspondence summary (public-safe)
+# Tight public-safe digest. NOT the full private thread.
+# Standards: ../../schemas/portrayal-standards.yml
+
+meta:
+  with: will-wright
+  curated_by: don-hopkins
+  consent: not_yet_asked
+  span: "Maxis era–2026"
+  provenance_private: SimHacker/DonHopkins/characters/don-hopkins/correspondence/will-wright.yml
+  export_status: in_progress
+
+gist: |
+  Colleagues from **Maxis** (SimCity, The Sims, CTG) with a long shared interest in
+  **microworlds**, **player-extensible toys**, and **data portability** across games.
+  Don preserved Will's **1996 CS547 talk** (*Interfacing to Microworlds*). Threads span
+  **OLPC/Micropolis**, **Stupid Fun Club** robotics, **Gallium/Proxi**, Sims team
+  reunions, and today's **Micropolis Home** / Repo Show work. Dedicated mail export
+  underway (2026-07-01) — this file updates as clusters are deep-read.
+
+threads:
+  cs547_1996:
+    what: "Stanford talk preserved by Don — Dollhouse preview, data portability train-set model"
+    public: characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
+  olpc_micropolis:
+    what: "Open SimCity for children; EA licensing; Micropolis activity on OLPC Sugar"
+  proxi_gallium:
+    what: "Character-as-AI across games; Gallium Studios; Proxi as über-character"
+  stupid_fun_club:
+    what: "Robotics, Slats, One Minute Movies — constructionism as theater"
+  sims_reunion:
+    what: "Original Sims team — SimAntics, Exchange, design-by-accretion"
+
+connects_in_repo:
+  - { path: ideas.md, why: "Flagship topic menu" }
+  - { path: sources/, why: "Dated source bundles from mail + CS547" }
+  - { path: ../chaim-gingold/, why: "Maxis history book vs building now" }
+  - { path: ../heather-alvey/, why: "SliceCity / SimFreaks / Gallium" }
+  - { path: ../../repo-shows/will-wright/, why: "Flagship show seed" }
+
+show_hooks:
+  - "1996 talk decode live — Will reads his own prediction of The Sims"
+  - "Data portability demo — Proxi ⇔ Sims ⇔ SimCity federation"
+  - "Slats RoboResurrection — Stupid Fun Club code on air"
+  - "Sims 1 post-mortem from Will's 1996 words"

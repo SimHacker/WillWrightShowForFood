@@ -26,11 +26,35 @@ Porting **Micropolis** (open-source SimCity) to the web — WASM + SvelteKit. Ru
 that follows through to working code. Building the **Sims content stack** in the browser
 (Transmogrifier, RugOMatic, Wig-O-Matic lineage).
 
+## The lineage (a bundle of ideas, culminating in MOOLLM)
+
+Not one idea — a **growing bundle of great ideas** Don keeps collecting, building, and
+braiding together, all circling the same joy: **worlds (or minds) you can navigate, edit,
+and directly manipulate, made legible and fun.** Mirror worlds, mind maps, method of loci,
+adventure-map editors, pie menus, gestural UIs. He learned many by studying others' work
+and invented some himself — but the through-skill is surveying and comparing the whole
+design space, writing up what works *and* what fails, and offering a better path (the way
+Gosling designed NeWS). Don's *X-Windows Disaster* chapter (UNIX-HATERS Handbook) is the
+critique; NeWS — "send code, not commands" — was his generous alternative, a bet that
+quietly came true as AJAX / JavaScript / the web (his *Axis of Eval* manifesto). It starts with **6502
+assembly** on the Apple ][ — the unlocker he used to hand-write his own **Forth** (and, in
+Forth's RPN assembler, its terminal emulator, graphics, and drivers) — which got him onto
+the **ARPANET** and into the **MIT-AI Lab**, and thus into **Zork**, Emacs, Lisp, and email
+— then runs through **MUD1**, **LambdaMOO** (the *MOO* in
+**MOOLLM**), **Logo Adventure**, Kaleida's **DreamScape**, **SimCity/Micropolis**, **The
+Sims**, **iLoci**, and **LayAR** — each adding ideas to the pile — until they all come
+together in **MOOLLM**, a live digital twin built out of the filesystem. Two axes:
+
+- [`career/lineage.yml`](career/lineage.yml) — **the bundle of ideas across platforms**, culminating in MOOLLM
+- [`career/range.yml`](career/range.yml) — **every layer of the stack** (6502 Forth to Rust/WASM/LLM; robots, computer vision, DevOps)
+
 ## Career map (YAML)
 
 | File | What it covers |
 |------|----------------|
 | [`career/INDEX.yml`](career/INDEX.yml) | Index of all career backbone files |
+| [`career/lineage.yml`](career/lineage.yml) | **The lineage** — a bundle of ideas (navigable, editable modeled worlds) from MUD1/Zork/LambdaMOO, culminating in MOOLLM |
+| [`career/range.yml`](career/range.yml) | **The range** — bare metal (6502 Forth) to browser (Rust/WASM/LLM); robots, computer vision, DevOps |
 | [`career/project-threads.yml`](career/project-threads.yml) | How threads branch and merge |
 | [`career/work-history.yml`](career/work-history.yml) | Employment timeline (condensed) |
 | [`career/simcity-lineage.yml`](career/simcity-lineage.yml) | SimCity → SimCityNet → OLPC → web |

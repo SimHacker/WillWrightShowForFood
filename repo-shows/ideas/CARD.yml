@@ -1,0 +1,31 @@
+# CARD — repo-shows/ideas/
+
+room:
+  id: ideas
+  name: "Show ideas, gags, themes & traditions"
+  type: [creative_inventory]
+  parent: ../
+
+registry: INDEX.yml
+
+buckets:
+  - traditions/
+  - gags/
+  - themes/
+  - shows/
+
+methods:
+  LIST-ALL: INDEX.yml
+  ADD: "New .yml in bucket + register in bucket INDEX + root INDEX"
+
+relationships:
+  show_proposals: ../INDEX.yml
+  will_episodes: ../will-wright/episodes.yml
+  will_segments: ../will-wright/SEGMENTS.yml
+  live_rigs: ../../process/performance-space/
+  forward_reactor: ../../process/crazy-idea-jam.yml
+
+see_also:
+  - README.md
+  - GLANCE.yml
+  - shows/will-wright/README.md

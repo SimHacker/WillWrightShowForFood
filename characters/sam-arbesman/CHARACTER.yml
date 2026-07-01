@@ -29,3 +29,7 @@ sources:
 show_suggestions:
   - { with: chaim-gingold, what: "Maxis history book vs building Micropolis Home now" }
   - { with: will-wright, what: "Maxis 2.0 — what would Will build today?" }
+
+see_also:
+  - { path: ideas.md, why: "Conversation hooks — Maxis 2.0, complexity, federation" }
+  - { path: ../chaim-gingold/, why: "Intro source; complementary book show" }

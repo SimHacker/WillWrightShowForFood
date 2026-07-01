@@ -4,8 +4,9 @@
 meta:
   id: performance-and-culture
   show: will-wright
+  umbrella: ../../process/performance-space.yml
   thesis: "Using Twitch chat (and GitHub, and HN) to edit a repo, live and time-shifted. That is why it's the Repo Show."
-  see_also: [SEGMENTS.yml, venue/VENUE.yml, ../../process/repo-show-format.yml, ../../characters/don-philahue/CHARACTER.yml]
+  see_also: [SEGMENTS.yml, venue/VENUE.yml, ../../process/repo-show-format.yml, ../../process/performance-space.yml, ../../characters/don-philahue/CHARACTER.yml]
 
 # VOICING — LLM text → voice, with NO synthesizers
 voicing:
@@ -182,6 +183,12 @@ unnecessary_censorship:
   the_gag: |
     Bleep and black-bar perfectly innocent words to imply something filthier than what was said —
     the comedy is in the listener's dirty imagination. A natural fit for a live, captioned stream.
+  sims_gameplay_variant: |
+    Record Sims machinima and censor *in-engine*: bone-mesh pixelization (hand while passing a
+    joint — never see the prop; head after inhale for ~1 hour). SimProv wedding bit: bride's and
+    groom's friends each pre-game separately; both arrive pixel-headed at the altar. See
+    ../../repo-shows/ideas/gags/pixelized-joint-wedding.yml — support implemented at Maxis,
+    gag never shipped on air.
   the_anti_censorship_rule: |
     The flip side, and our actual policy: we do NOT censor real NAMES. Conan's **Masturbating Bear**
     is named the Masturbating Bear — that's his name, and he gets the respect of not being bowdlerized.
@@ -202,6 +209,10 @@ credibility_and_stance:
   what_it_is: |
     A live and time-shiftable conversation where the audience writes itself into git, ideas become
     working code, and beloved game characters (lovingly, as fan homage) interview their creators.
+  television_frame: |
+    Elevator pitch for platforms: a TV show about **developing and playing** games and tools — using
+    AI the best way (orchestrate + implement; humans author and perform). Develop · Play · Discuss.
+    See ../../repo-shows/ideas/traditions/make-play-tools-show.yml — Bar Karma lineage, Micropolis Class.
   tone: "Coherent, creative, professional, tractable. If a collaborator reads the repo, it should read like craft, not crypto."
 
 future_note:

@@ -57,6 +57,21 @@ segments:
       - { label: "S6E01 Sims parody cold open", url: "https://www.youtube.com/watch?v=X6wQxEWkh6U" }
       - { label: "House Party Drew limo cameo", url: "https://www.youtube.com/watch?v=Stgk80dcnH8" }
 
+  - id: human_control_and_authorship
+    topic: |
+      AI done honestly — not AI-DJ Drew. Drew's 2023 Freakout experiment (public record) proved
+      audiences want personality, not voice clones. We offer Engelbart's other axis: augmentation,
+      not replacement — LLM writes code and orchestrates; PEOPLE improvise, voice puppets, and
+      author the show. Will and Don already shipped audience-authored TV (Bar Karma / StoryMaker /
+      Urban Safari) — Repo Show is the next iteration. Conversation, not a lecture.
+    framing: ai-contrast-framing.yml
+    ties:
+      - repo-shows/ideas/themes/human-control-and-authorship.yml
+      - repo-shows/ideas/traditions/make-play-tools-show.yml#television_lineage
+      - repo-shows/will-wright/performance-and-culture.yml
+      - process/crazy-idea-jam.yml#player_in_the_middle
+      - process/crazy-idea-jam.yml#creationtv_storymaker
+
 framing:
   note: |
     Public dream-guest seed. We approach Drew as a guest and a fan-favorite voice in Sims lore —
@@ -64,5 +79,7 @@ framing:
 
 related:
   - characters/drew-carey/
+  - repo-shows/drew-carey/invitation.md
+  - repo-shows/drew-carey/ai-contrast-framing.md
   - repo-shows/will-wright/
   - characters/eric-hedman/

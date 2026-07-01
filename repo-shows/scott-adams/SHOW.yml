@@ -1,0 +1,48 @@
+# SHOW — Scott Adams (adventure engines, interactive fiction, and AI)
+# The adventure-game pioneer (Adventureland / Adventure International) -- NOT the Dilbert cartoonist.
+# Follow the adventure-as-data lineage to working code in public.
+
+show:
+  id: scott-adams
+  title: "A Repo Show with Scott Adams — Adventure Engines, Interactive Fiction, and AI"
+  type: solo            # can also pair with Don as builder/host-expert
+  host: Don Hopkins
+  guests: ["Scott Adams"]
+  character: characters/scott-adams/
+  topic: "The data-driven adventure engine (Adventureland → Adventure International) as the original 'adventure compiler'; a world in 16K; two-word parser vs. LLMs; and where a founding adventure author takes AI — with Don building adventure-compiler tooling live that Scott can actually use."
+  status: warm_contact   # Scott engaged Jan 2026; "sucked me in" on MOOLLM; perfect guest
+  format: remote_or_in_person
+
+why_him:
+  first_mover: "Adventureland (1978) -- the first text adventure sold for a microcomputer; founded Adventure International."
+  the_engine: "A compact DATA-DRIVEN engine: adventure = database of rooms/items/verb-noun actions; a small portable interpreter per machine. Compile once, run everywhere -- the adventure compiler before it had a name."
+  constraint_craft: "A whole world in ~16K with a two-word parser -- constraints as a design tool."
+  diving_into_ai: "NotebookLM + Gemini biography; mini-adventures on webpages to unlock narrative; MOOLLM interest (Jan 2026 email)."
+  don_thread: "HN 29330901 reconnect; MOOLLM 'tremendous potential'; mutual adventure-compiler tooling; biography-as-playable-web parallels Don's career memory palace."
+
+threads:
+  engine_as_compiler: "Adventure-as-data + tiny interpreter → Logo Adventure (REPL-as-parser) → adventure compiler → MOOLLM (rooms=dirs, objects=YAML behavior). Same idea, four decades; make it runnable in the browser."
+  world_in_16k: "How memory limits shaped map, grammar, and puzzles -- and what authoring tools should learn from it."
+  parser_vs_llm: "Verb-noun parser (deterministic, legible) vs. LLM natural language (flexible, fuzzy). What's gained, what's lost, how to get both."
+  adventure_plus_ai: "LLMs that help AUTHOR adventures, not just play them; world models; procedural interactive fiction."
+  build_live: "The payoff: Don develops adventure-compiler tooling on air that Scott can actually use -- real code, public repo."
+  biography_adventures: "Scott's NotebookLM corpus -> mini-adventures on the web; compile with MOOLLM adventure skill; HN thread as a room."
+
+format:
+  live: true
+  audience_qa: true
+  homeplay: "Author a tiny adventure as data; compile it; share the self-contained web page or a PR."
+
+ties_to:
+  - invitation.md
+  - ideas.md
+  - IDEAS.yml
+  - ../../characters/scott-adams/invitation.md
+  - ../../characters/scott-adams/ideas.md
+  - ../../characters/scott-adams/CHARACTER.yml
+  - ../../characters/don-hopkins/career/lineage.yml
+  - ../../characters/don-hopkins/GLANCE.yml   # the career memory palace -> adventure compiler (future)
+  - https://en.wikipedia.org/wiki/Scott_Adams_(game_designer)
+
+disambiguation: "Scott Adams the adventure-game pioneer. NOT the Dilbert cartoonist."
+consent: correspondence_verified

@@ -87,6 +87,8 @@ assets:
 
 see_also:
   - ticket-pr.yml
+  - performance-space.yml
+  - performance-space/README.md
   - schemas/language-simlish.yml
   - repo-shows/drew-carey/SHOW.yml
   - repo-shows/will-wright/sims-play-along-narration.yml

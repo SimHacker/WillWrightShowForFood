@@ -1,0 +1,79 @@
+# Scott Adams show — machine-readable segment index
+# Human-readable catalog: ideas.md
+
+meta:
+  id: scott-adams-ideas
+  show: scott-adams
+  updated: 2026-07-01
+  human: ideas.md
+  consent: correspondence_verified
+
+episode_shapes:
+  one_shot_90min: [A1, A3, A4, G1, B2]
+  two_parter:
+    ep1_history: [A3, H1, H2, H3, H4, H5, P1, L1]
+    ep2_future: [A2, B1, B2, B3, B4, B5, P2, P3, P4, G5]
+  mini_series:
+    - { ep: 1, title_seed: "Sixteen K", core: [A3, H4, P1, G2] }
+    - { ep: 2, title_seed: "The Compiler", core: [A4, L1, L2, G1] }
+    - { ep: 3, title_seed: "Parser vs LLM", core: [P1, P2, P3, P4, P5, G4] }
+    - { ep: 4, title_seed: "Biography Rooms", core: [B1, B2, B3, B4, G5] }
+    - { ep: 5, title_seed: "Palace Buddies", core: [B5, L3, X1, G4] }
+
+segments:
+  anchors:
+    A1: { title: "HN reunion 29330901", tags: [talk, primary_source], artifact: "https://news.ycombinator.com/item?id=29330901" }
+    A2: { title: "MOOLLM first impressions", tags: [talk], artifact: "https://github.com/SimHacker/moollm" }
+    A3: { title: "Adventureland in 16K", tags: [talk] }
+    A4: { title: "Engine was always a compiler", tags: [talk, live_build], artifact: "characters/don-hopkins/career/lineage.yml" }
+
+  lineage:
+    L1: { title: "Logo Adventure missing link", tags: [talk, primary_source] }
+    L2: { title: "Cave to MOOLLM lineage", tags: [talk] }
+    L3: { title: "DreamScape to biography rooms", tags: [talk] }
+    L4: { title: "Pie menus as room exits", tags: [talk, live_build] }
+
+  biography:
+    B1: { title: "NotebookLM vs navigable palace", tags: [mutual, talk] }
+    B2: { title: "Mini-adventures unlock narrative", tags: [mutual, live_build, play] }
+    B3: { title: "HN thread as Room One", tags: [mutual, live_build] }
+    B4: { title: "Verb-noun gates for chapters", tags: [mutual, talk] }
+    B5: { title: "Parallel palaces swap seeds", tags: [mutual, live_build] }
+
+  parser_vs_llm:
+    P1: { title: "Two words that fit", tags: [talk] }
+    P2: { title: "What LLMs buy authors", tags: [talk] }
+    P3: { title: "What LLMs cost", tags: [talk] }
+    P4: { title: "Hybrid parser demo", tags: [live_build] }
+    P5: { title: "DM is not the author", tags: [talk] }
+
+  history:
+    H1: { title: "Founding Adventure International", tags: [talk] }
+    H2: { title: "Pirate Adventure / Alexis Adams", tags: [talk] }
+    H3: { title: "Questprobe Marvel", tags: [talk] }
+    H4: { title: "Porting war stories", tags: [talk] }
+    H5: { title: "Classic map tour", tags: [talk] }
+
+  live_build:
+    G1: { title: "YAML in webpage out", tags: [live_build] }
+    G2: { title: "Homage toy world compile", tags: [live_build, play] }
+    G3: { title: "MOOLLM room walk compile", tags: [live_build] }
+    G4: { title: "Audience PR adventure", tags: [live_build, play] }
+    G5: { title: "Biography room zero", tags: [live_build, mutual] }
+
+  crossover:
+    X1: { title: "Nested MOOLLM talk segment", tags: [talk], artifact: "DonHopkins/talks/moollm-microworld-os/TALK.yml" }
+    X2: { title: "Empathy and Servitude bridge", tags: [talk] }
+    X3: { title: "Microworld morality", tags: [talk] }
+    X4: { title: "MUD1 / Bartle thread", tags: [talk] }
+
+audience:
+  - vote_the_verb
+  - speedrun_toy_world
+  - noun_submission_live
+  - transclude_not_clipboard
+
+see_also:
+  - SHOW.yml
+  - invitation.md
+  - ../../characters/scott-adams/CHARACTER.yml

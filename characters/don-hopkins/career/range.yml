@@ -1,0 +1,72 @@
+# Don Hopkins -- range: bare metal to browser (the "I do anything" axis)
+# Public career artifact. The other axis to lineage.yml:
+#   lineage.yml = one idea across platforms; range.yml = every layer of the stack.
+
+thesis: |
+  The point is range. Don follows a problem to whatever layer it lives at -- from
+  hand-written 6502 assembly and Forth on bare metal, up through C/C++, NeWS/PostScript,
+  Lisp, ScriptX, Python, JavaScript/TypeScript, Rust toolchains, WASM, and LLM
+  orchestration. Pick the right layer and the right tool; don't over-engineer.
+
+forth_and_bare_metal:
+  roots: |
+    Old-school Forth, Lisp, and Emacs hacker. Wrote his own Apple ][ ProDOS Forth (from
+    FIG-FORTH 83) for RPN 6502 assembly graphics, hardware drivers, terminal emulators,
+    and text adventure games. Ported Z-80 FIG-Forth to the ZMob parallel processor at UMD.
+  assembly: [6502, 6809, 68k, SPARC, x86, PowerPC AltiVec, StrongARM]
+  mentors:
+    - "Mitch Bradley -- CForth / Forthmacs; OpenFirmware Forth boot ROMs (OLPC / Mac / Sun). Don's Sun-internship mentor: they embedded CForth into the CADroid circuit-capture/schematic editor as a friendly programming-by-demonstration scripting language"
+    - "Mark Weiser -- ubiquitous computing (UMD, Xerox PARC CSL)"
+    - "Ben Shneiderman -- direct manipulation, HCIL (UMD)"
+  instinct: "Treat any machine as a computer all the way down to the microcontroller."
+
+shipped_for_pay_in:   # paid to ship, not just dabbled
+  languages: [Logo, Lisp, PostScript, ScriptX, Python, JavaScript, TypeScript, C, "C++", "C#", Objective-C, Java, PHP, MaxScript, Lua, shaders]
+  note: "Learns new languages fast; 28+ yrs JavaScript, 13+ yrs Unity3D. Picks the layer, not the buzzword."
+
+modern_stack:   # the last decade or so, condensed
+  web_and_sim:
+    - "C++ -> WASM (emscripten / embind), WebGL / WebGPU in the browser (Micropolis)"
+    - "Unity WebGL + UnityJS (JS scripting & live debugging of Unity across web / mobile / desktop)"
+    - "SvelteKit + React, client and server"
+  robots_as_distributed_computers:
+    - "Robot brains + tele-operation + expressive speech/personality (Stupid Fun Club: Slats, Dents)"
+    - "Real-time web tele-op UI driving robots over live cameras -- one human, many machines"
+    - "Edge GPU boxes, cameras (RTSP), streaming, cloud + on-site storage"
+  perception_and_ml:
+    - "Leela AI: object / pose detection (Detectron2), live-video computer vision, model train/test/deploy"
+    - "Built a CV model to recognize characters & objects in The Sims 4 for scenario generation"
+    - "Sim-to-train / synthetic data: use rendered worlds to generate labeled training data"
+    - "Blender synthetic-data pipelines: scan/model a camera-covered workplace + the objects to recognize, then render synthetic people, animation, and occlusion with pixel-perfect ground-truth masks (segmentation/alpha) -- procedural, parameterized geometry + image-processing node graphs"
+    - "Synchronized synthetic ground truth for two parallel models -- mix-and-match Detectron2/YOLO for object + pose (any combo, framework-agnostic): one render feeds both with aligned labels on the same frames (masks/boxes + pose keypoints, zero drift)"
+    - "Plus extra aligned render passes (depth, normals, optical flow, amodal masks, instance IDs/cryptomatte) for further image-processing passes and future models -- all registered to the same frame"
+  infra_and_devops:
+    - "Monorepo migration, own machine images built with Packer, GitHub Actions CI/CD, PubSub, Grafana dashboards, systemd"
+    - "A homegrown 'self-ish' universal configuration system -- prototype-based (in the spirit of the Self language): mix-ins, multiple inheritance, prototype objects. Philosophy is not just DRY ('don't repeat yourself') but 'express yourself modularly.' The most important thing borrowed from Self is SIMPLICITY (per its first paper, 'Self: The Power of Simplicity,' Ungar & Smith, OOPSLA 1987). (Same prototype-inheritance shape as MOOLLM skills and LambdaMOO objects -- Don's been building this idea for decades.)"
+    - "Industrial-strength Python: drivers, versioning, optimization, debugging, security"
+  mlops:   # the full model lifecycle as CI/CD -- 'all up in the cloud spider web'
+    - "Training / validation / performance-testing pipelines wired as CI (MLOps / CI-CD-for-ML, continuous training)"
+    - "GitHub Actions workflows on self-hosted GPU runners (ephemeral) -- GPU CI"
+    - "Internal tools + web interfaces for dataset curation, launching runs, eval dashboards, and performance-regression testing"
+
+  ops_philosophy: |
+    Decades of his own Unix admin / sysop -- comfortable all the way down. Pragmatic, not
+    religious, about infra: reaches for the simplest thing that gives the flexibility and
+    customizability a job needs, and takes on orchestration complexity (k8s, etc.) only when
+    it earns its keep or it's the team's standard -- happy to run it then. Has watched (and
+    learned) each new fad rise and fade for 40 years, so he adopts what lasts and isn't
+    spooked by what's new.
+  agentic_coding:
+    - "Design-first LLM workflow in Cursor -- reads and reviews docs & code, not vibe-coding"
+    - "LLM chat orchestrators and tools; MOOLLM as an LLM microworld operating system"
+
+why_range_matters: |
+  A problem rarely stays on one layer. Bare-metal-to-browser range means Don can chase it
+  across firmware, control, simulation, perception, and UI without handing it off -- and
+  can pick up a new industry or toolchain fast, because he's already done that a dozen times.
+
+see_also:
+  - { path: lineage.yml,  why: "The other axis: one idea across platforms" }
+  - { path: work-history.yml, why: "Where each of these was shipped" }
+  - { path: ../portrayal/heroes.yml, why: "Mentors -- Bradley, Weiser, Shneiderman, Kay, Will" }
+  - { path: https://github.com/SimHacker, why: "Code" }

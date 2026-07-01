@@ -8,6 +8,10 @@ meta:
   stack: SvelteKit
   parent: ../../process/brain-stream.yml
   one_liner: "Cursor brain tap → event bus → zoomable browser overlay (Micropolis GUI) → OBS → Twitch/YouTube"
+  windows_product: "../micropolis-angel/ARCHITECTURE.yml"
+  note: |
+    On Windows (Legion + Sims), stream-gateway ships inside MicropolisAngel (WinUI 3 + WebView2).
+    Mac/Electron path remains for Repo Show / Cursor dev stream until Windows host reaches parity.
 
 # TOPOLOGY
 # Two machines, one LAN. The overlay is a WEB PAGE, not a captured window,

@@ -95,6 +95,10 @@ reunion show seed. *Play it on air with the team.*
 **[1999-01-06-sims-alpha-prototype/](1999-01-06-sims-alpha-prototype/README.md)**  
 "SimEstates" January 1999 alpha — Hidden Palace release (Oct 2025). Compare to steering committee.
 
+**[steve-and-gerri-simlish-adlib/](steve-and-gerri-simlish-adlib/README.md)**  
+Stephen Kearin & Gerri Lawlor improvising **English narration** over an early Sims build — the
+Foreign Poet session that foreshadowed **Simlish**. Don Hopkins catalog WAV + [`TRANSCRIPT-DRAFT.md`](steve-and-gerri-simlish-adlib/TRANSCRIPT-DRAFT.md) for proofreading.
+
 **[2026-e3-1999-prototype-preservation/](2026-e3-1999-prototype-preservation/README.md)**  
 E3 1999 music hunt — Jerry Martin, Phil Ramsey, VitaMoo/SimObliterator preservation thread.
 
@@ -335,6 +339,7 @@ CAM-6 pie menus as visual programming — YouTube + essay cross-link.
 |------|-------|
 | [1998-06-04-sims-steering-committee-demo](1998-06-04-sims-steering-committee-demo/README.md) | Steering committee demo (1998) — Don's YouTube + [IA build links](1998-06-04-sims-steering-committee-demo/README.md#find-the-build-do-not-host-in-repo) |
 | [1999-01-06-sims-alpha-prototype](1999-01-06-sims-alpha-prototype/README.md) | Jan 1999 alpha — Hidden Palace (Oct 2025) |
+| [steve-and-gerri-simlish-adlib](steve-and-gerri-simlish-adlib/README.md) | Kearin & Lawlor — English ad-lib over early Sims (Simlish origins) |
 | [2026-e3-1999-prototype-preservation](2026-e3-1999-prototype-preservation/README.md) | E3 1999 music hunt · Jerry Martin · VitaMoo/SimObliterator |
 | [simcity-open-source-saga](simcity-open-source-saga/README.md) | OLPC open source timeline |
 | [simcity-unix-rights-history](simcity-unix-rights-history/README.md) | DUX/Maxis contracts |

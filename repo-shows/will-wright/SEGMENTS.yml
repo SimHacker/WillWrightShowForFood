@@ -4,7 +4,7 @@
 meta:
   id: will-wright-segments
   show: will-wright
-  see_also: [SHOW.yml, ../../process/repo-show-format.yml, audience/INDEX.yml, lore/cyberiad-klapaucius-trurl.md, performance-and-culture.yml]
+  see_also: [SHOW.yml, ../../process/repo-show-format.yml, audience/INDEX.yml, lore/cyberiad-klapaucius-trurl.md, performance-and-culture.yml, ../ideas/shows/will-wright/content-map.yml]
 
 # INTERVIEW LINEAGE — why we interview the way we do
 interview_lineage:

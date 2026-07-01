@@ -35,13 +35,13 @@ questions:
     status: open
     question: "Your framing in this character's voice — may differ from issue title"
     discussion:
-      repo: SimHacker/WillWrightShowForFood
+      repo: https://github.com/SimHacker/WillWrightShowForFood
       # issue: 42
     children:
       - question: "Cherry-pick this reply for air"
         to: will-wright
         discussion:
-          repo: SimHacker/WillWrightShowForFood
+          repo: https://github.com/SimHacker/WillWrightShowForFood
           issue: 42
           # comment: 9876543210
 
@@ -51,7 +51,7 @@ questions:
     status: open
     question: "About the pub arcade — module pointer, no issue yet"
     repo_pointer:
-      repo: SimHacker/moollm
+      repo: https://github.com/SimHacker/moollm
       path: examples/adventure-4/pub/arcade
       label: "Gezelligheid Grotto arcade alcove"
 
@@ -65,7 +65,7 @@ questions:
         - url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm
           label: "Whole character object"
       interface:
-        - repo: SimHacker/moollm
+        - repo: https://github.com/SimHacker/moollm
           path: examples/adventure-4/characters/animals/monkey-palm
           interface: CARD
           facet: methods.PHILOSOPHIZE

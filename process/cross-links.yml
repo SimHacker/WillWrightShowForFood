@@ -307,6 +307,24 @@ trails:
       - { path: ../characters/will-wright/CARD.yml, why: "Procedural creatures, gallium voxel worlds" }
       - { path: ../characters/yoot-saito/, why: "Seaman energy — a creature that insults you on purpose" }
 
+  performance_space:
+    k_line: "Icons carry meaning; the voice carries feeling"
+    human: trails/performance-space.md
+    why: "Play-along Sims narration, script readings, Conan face-puppet, OBS/webcam toys — one design"
+    nodes:
+      - { path: performance-space/README.md, why: "Top-level human design doc" }
+      - { path: performance-space.yml, why: "Canonical girder — modes, lineage, POC roadmap" }
+      - { path: sims-play-along-narration.yml, why: "Drew Carey × Foreign Poet format" }
+      - { path: ../repo-shows/will-wright/performance-and-culture.yml, why: "Will show puppetry + participation culture" }
+      - { path: ../characters/will-wright/sources/steve-and-gerri-simlish-adlib/, why: "Kearin/Lawlor ad-lib — origin tape" }
+      - { path: ../repo-shows/drew-carey/SHOW.yml, why: "Drew in The Sims — TV lineage" }
+      - { path: ../apps/performance-space/, why: "Web toys — Conan face-puppet P0" }
+      - { path: ../apps/stream-gateway/, why: "Overlay bus + OBS integration" }
+      - { path: ticket-pr.yml, why: "Audience clip + question ingress" }
+      - { path: ../repo-shows/ideas/, why: "Gags, themes, traditions, show content catalog" }
+      - { path: ../catalogs/micropolis-home/steam-community-guide.yml, why: "Steam Community Guides — channel web hub + Repo Shows" }
+      - { path: ../catalogs/micropolis-home/micropolis-angel.yml, why: "MicropolisAngel — Windows Steam companion (Simplifier + catalog + machinima; after web bootstrap)" }
+
 room_indexes:
   process: INDEX.yml
   characters: ../characters/INDEX.yml

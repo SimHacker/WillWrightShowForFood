@@ -1,0 +1,130 @@
+# SimsKit lineage — what to port into MicropolisAngel / Micropolis Home
+# Source tree: TheSims/SimsKit/ (Don's Windows tooling, 2000–2004 era)
+# Target: TypeScript content platform in embedded WebView2 + native file bridge + SQLite catalog
+
+meta:
+  id: simskit-lineage
+  status: spec
+  source_root: ../../../../Code/TheSims/SimsKit
+  note: |
+    Legacy C++ bots proved the workflows. Micropolis Home reimplements the DATA paths in TypeScript.
+    Screen scrape becomes a bootstrap shortcut, not the primary catalog reader.
+
+# ── SIMPLIFIER (Sims 1 catalog showcase) ────────────────────────────────────
+simplifier:
+  path: Simplifier/
+  era: "Sims 1 buy-mode catalog — read object descriptions aloud, drive UI"
+  also: SimplifierMaze/ and SimplifierBand/ — TSO maze/money variants (SendClick maze solver)
+  core_classes:
+    SimsClient: "Per-game-window agent — title, description, price, notes strings"
+    GlyphPattern: "Compiled font atlas — pixel-color OCR without Tesseract"
+    CSimplifierDoc: "Multi-client (two windows side by side), Tick loop, FindWindowEx"
+  what_it_did:
+    capture:
+      - "BitBlt from root DC → DIB buffer (GrabClientWindow)"
+      - "Detect catalog description panel by corner pixel RGB signatures (hardcoded 800×600 coords)"
+    read:
+      - "Glyph matching OCR on description panel text (UpdateView)"
+      - "title / description / price / notes member fields on SimsClient"
+    speak:
+      - "SAPI ISpVoice when description changes + left mouse held (MakeVoiceSynth)"
+    inject:
+      - "SendClick, SendPieClick, SendPie, SendText — navigate buy catalog"
+      - "DismissOkDialog / ClickOkButton — modal handling"
+    multi_window:
+      - "InitClientWindows — attach multiple HWNDs by class + title"
+  port_to:
+    primary: |
+      **Do NOT port glyph OCR as the long-term catalog reader.**
+      Micropolis Home TypeScript reads .iff / .far / save files directly (catalogs/maxis pipeline).
+    bootstrap_crawler: |
+      Port **navigation state machine** + **SendClick inject** to walk every buy-mode category:
+      objects, wallpapers, floor tiles, terrain paint — capture preview bitmap when item selected.
+      Store rows in **SQLite** (local Angel cache, sync to central Micropolis Home federation).
+      Stop using scrape for title/description once IFF metadata + SimsObjects.xml seed merge.
+    files:
+      - SimplifierDoc.cpp — UpdateView panel OCR, GrabClientWindow, InitClientWindows
+      - SimplifierDoc.h — SimsClient fields, inject methods
+      - SimplifierView.cpp — timer Tick → pDoc->Tick()
+
+# ── TRANSMOGRIFIER (object tooling) ───────────────────────────────────────────
+transmogrifier:
+  path: Transmogrifier/
+  era: "Sims 1 object editor — clone, export XML, preview sprites"
+  key_assets:
+    SimsObjects.xml: "7000+ object name/description/GUID records — seed the SQLite catalog NOW"
+    Objectifier.py: "COM automation of Transmogrifier.Application — batch export previews"
+  core_modules:
+    Cloner.cpp: "Clone objects, renumber GUIDs"
+    XMLExporter.cpp / XMLImporter.cpp: "Object XML round-trip"
+    PreviewSprite.cpp: "Render object preview rotations"
+    BitmapUtilities.cpp: "BMP parse, quantize, sprite compress"
+    DlgProxy.cpp: "ActiveX/OLE automation — ExportObject, ExportThumbnail, ExportObjectPreview"
+  port_to:
+    - "TypeScript/WASM iff reader replaces ActiveX preview (catalogs/maxis/CATALOG.yml#iff_reader)"
+    - "Import SimsObjects.xml → SQLite object_records table (one-time + diff on new packs)"
+    - "Cloner GUID logic informs Micropolis Home 'publish collection' installer helpers"
+    - "Objectifier batch-export pattern → headless preview render job queue"
+
+# ── SIMSHOW (character / animation showcase) ──────────────────────────────────
+simshow:
+  path: SimShow/
+  era: "Cycle vitaboy suits/skills on screen — machinima precursor"
+  key_files:
+    SimShowDlg.cpp: "gCharacterTable, CTGFile, TimeBase — animation loop"
+  port_to:
+    - "Micropolis Home vitaboy preview panel (WebGPU path)"
+    - "Stream-gateway machinima segment tooling"
+
+# ── RUGOMATIC + ShowNTell (web + ActiveX preview) ───────────────────────────
+rugomatic:
+  path: RugOMatic/
+  era: "Rug/carpet editor + embedded browser + Transmogrifier COM"
+  showntell: ShowNTell/ShowNTellCtl.cpp — ActiveX control for object preview in IE
+  port_to:
+    - "Replace ShowNTell ActiveX with WebView2 + WebGPU iff renderer"
+    - "See characters/will-wright/sources/2004-01-08-showntell-activex-preview/"
+
+# ── VITABOY (runtime animation) ───────────────────────────────────────────────
+vitaboy:
+  path: ../Sims/SimsBuild/Code/vitaboy/  # sibling under TheSims repo
+  era: "Skeleton, BCF/CFP, suits, skills — Sims 1 character runtime"
+  port_to:
+    - "Micropolis Home character preview + album cards"
+    - "Already documented in WWSFF vitaboy / VitaMoo lineage"
+
+# ── SQLITE CATALOG SCHEMA (target) ──────────────────────────────────────────
+sqlite_catalog:
+  why_sqlite_not_server_sql: |
+    Local embedded DB on the player's PC — catalog cache, crawl progress, graveyard index,
+    downloaded-object inventory. Syncs UP to central Micropolis Home (SvelteKit + Postgres)
+    via federation API; Angel does not need a local SvelteKit server for v1.
+  tables_sketch:
+    objects:
+      columns: [guid, name, description, price, category, pack_id, preview_blob_path, source]
+      sources: [iff_parse, sims_objects_xml, simplifier_crawl, user_download]
+    wallpapers: { columns: [guid, name, pack_id, preview_blob_path] }
+    floors: { columns: [guid, name, pack_id, preview_blob_path] }
+    graveyard:
+      columns: [save_id, lot_id, sim_name, death_cause, object_guid, tile_x, tile_y, urn_type, album_card_id]
+      source: save_file_parse  # primary — NOT screen scrape
+    saves:
+      columns: [path, neighborhood, lot, household, mtime, hash]
+    crawl_state:
+      columns: [category, last_index, last_guid, completed_at]
+      source: simplifier_navigation_port
+
+# ── PORT PRIORITY ─────────────────────────────────────────────────────────────
+port_priority:
+  1: "Register scan_root → parse owned Legacy Collection install → objects + fingerprints"
+  2: "Micropolis Home TS save/.iff reader → graveyard + save_object_refs + missing GUID workflow"
+  3: "Optional validation diff vs SimsObjects.xml (never import as truth)"
+  4: "Simplifier inject port — catalog crawl for preview images only (bootstrap)"
+  5: "Transmogrifier preview render → WebGPU iff pipeline (replaces scrape entirely)"
+  6: "GUID collision + save bundle + creditcasting — CATALOG-DB-SCHEMA.yml"
+
+see_also:
+  - ARCHITECTURE.yml
+  - ../../catalogs/maxis/CATALOG.yml
+  - ../stream-gateway/simplifier.yml
+  - ../../characters/will-wright/sources/don-youtube-imu1v3GecB8-simplifier-tools-demo/

@@ -1,0 +1,189 @@
+# PERFORMANCE SPACE — live participation, puppetry, play-along, and web/OBS toys
+# Top-level design girder. Unifies Foreign Poet × Drew Carey × Conan face-puppet × script readings.
+# Human view: performance-space/README.md
+
+meta:
+  id: performance-space
+  status: active_design
+  tagline: "The game is the prompt. Your mouth is the puppet. The chat is the crew."
+  thesis: |
+    One performance space where mute gameplay, generated scripts, celebrity face-cutouts, and
+    vocal-tract instruments all share the same stack: human voice + optional video + OBS/Twitch
+    audience participation — no voice clones, no synth impersonation of living people.
+  room: process/performance-space/README.md
+  show_culture: ../repo-shows/will-wright/performance-and-culture.yml
+
+convergence:
+  one_liner: "Icons carry meaning; the voice carries feeling — whether the icons are Sims pixels, a script, or a photo with a mouth hole."
+  threads:
+    foreign_poet_on_tape:
+      what: "Stephen Kearin & Gerri Lawlor ad-lib English over early Sims — thought bubbles, fires, motives as improv prompts."
+      artifact: ../characters/will-wright/sources/steve-and-gerri-simlish-adlib/
+      audio: ../characters/will-wright/media/steve-and-gerri-simlish-adlib.wav
+      transcript: ../characters/will-wright/sources/steve-and-gerri-simlish-adlib/TRANSCRIPT-DRAFT.md
+    drew_carey_sims:
+      what: "Network TV ran The Sims twice — parody cold open + Maxis-built in-game segment; House Party shipped the limo cameo."
+      format: sims-play-along-narration.yml
+      show: ../repo-shows/drew-carey/SHOW.yml#sims_play_along_narration
+    script_reading:
+      what: "Repo Show as live reading — performers voice MOOLLM-generated character lines (face visible, hidden, or puppet)."
+      spec: ../repo-shows/will-wright/performance-and-culture.yml#the_reading
+    conan_face_puppet:
+      what: "Late-night homage — still photo of a face with mouth cut out; performer speaks through the hole (Arnold, etc.)."
+      canonical_name: conan-face-puppet
+      spec: ../repo-shows/will-wright/performance-and-culture.yml#puppet_kinds.face_puppet
+      ethics: "Affectionate fan portrayals of game characters OK; living celebrities need consent; deceased = memorial mode only."
+
+performance_modes:
+  play_along_narration:
+    id: play-along-narration
+    emoji: "🎬🗣️"
+    prompt: "Mute gameplay footage — guest supplies plot, names, interior monologue."
+    inputs: [audience_screen_recording, live_guest_voice, optional_simlish_flavor]
+    lineage: [foreign_poet_on_tape, drew_carey_sims]
+    spec: sims-play-along-narration.yml
+    segment: ../repo-shows/will-wright/sims-play-along-narration.yml
+
+  live_script_reading:
+    id: live-script-reading
+    emoji: "📜🎭"
+    prompt: "Generated character text read aloud — table-read energy, no prep on exact lines."
+    inputs: [moollm_character_output, performer_rotation, don_philahue_facilitation]
+    spec: ../repo-shows/will-wright/performance-and-culture.yml#the_reading
+
+  face_puppet:
+    id: conan-face-puppet
+    emoji: "🕳️👄"
+    prompt: "Webcam mouth through a face-hole overlay — perform lips + voice simultaneously."
+    inputs: [webcam, png_mask_with_mouth_hole, optional_amplitude_scrub_video]
+    spec: ../repo-shows/will-wright/performance-and-culture.yml#puppet_kinds.face_puppet
+    web_toy: ../apps/performance-space/conan-face-puppet.yml
+
+  voice_puppet:
+    id: voice-puppet
+    emoji: "🎤👻"
+    prompt: "Off-screen voice only — lowest friction; Pink Trombone / Phoneloper as instruments."
+    spec: ../repo-shows/will-wright/performance-and-culture.yml#puppet_kinds.voice_puppet
+    instruments: ../schemas/language-cow.yml#performance_instruments
+
+  amplitude_puppet:
+    id: amplitude-scrub-puppet
+    emoji: "📈🤡"
+    prompt: "Short character clip scrubbed by mic amplitude — cheesy step past the still photo."
+    credit: "Don Hopkins + David Levitt — Jesse Jackson / Rush Limbaugh clip scrub technique."
+    spec: ../repo-shows/will-wright/performance-and-culture.yml#puppet_kinds.puppet.voice_to_motion
+
+  audience_chorus:
+    id: audience-chorus
+    emoji: "🎛️👥"
+    prompt: "Remote voice streams steer Slats robopoetry loop or jam Pink Trombone together."
+    spec: ../repo-shows/will-wright/performance-and-culture.yml#speech_feedback_loop_instrument
+
+lineage_index:
+  primary_sources:
+    - label: "Kearin & Lawlor — Simlish ad-lib session (Don Hopkins WAV)"
+      path: ../characters/will-wright/sources/steve-and-gerri-simlish-adlib/README.md
+    - label: "TRANSCRIPT-DRAFT (proofread pending)"
+      path: ../characters/will-wright/sources/steve-and-gerri-simlish-adlib/TRANSCRIPT-DRAFT.md
+  drew_carey_youtube:
+    - { label: "Drew Carey Show — Sims gameplay segment (Maxis-built)", url: "https://www.youtube.com/watch?v=5wr04-WmWkg" }
+    - { label: "S6E01 — Sims parody cold open (speech/thought bubbles)", url: "https://www.youtube.com/watch?v=X6wQxEWkh6U" }
+    - { label: "House Party — Drew limo cameo", url: "https://www.youtube.com/watch?v=Stgk80dcnH8" }
+  simlish_history:
+    - { label: "Simlish inventors — Kearin & Lawlor (YouTube)", url: "https://www.youtube.com/watch?v=Y_E6026i9tA" }
+    - { label: "How Simlish was created", url: "https://www.youtube.com/watch?v=FGsbeTV76YI" }
+    - { label: "Verge — Simlish 20th anniversary", url: "https://www.theverge.com/2020/2/7/21126705/the-sims-simlish-language-history-20th-anniversary-game" }
+  conan_homage:
+    note: "Face-hole celebrity impression is late-night homage — cite Conan O'Brien show tradition; link specific clips as we curate proof episodes."
+    search:
+      - { label: "Conan celebrity face cutout (curate canonical clip)", url: "https://www.youtube.com/results?search_query=conan+face+cutout+impression" }
+      - { label: "Conan Arnold impression (reference)", url: "https://www.youtube.com/results?search_query=conan+arnold+schwarzenegger+impression" }
+    in_repo:
+      - ../repo-shows/will-wright/performance-and-culture.yml#puppet_kinds.face_puppet
+      - ../repo-shows/will-wright/SEGMENTS.yml  # Masturbating Bear cadence — separate running-gag lineage
+  hn_citation:
+    - { label: "Don Hopkins — NaturalSpeech thread (Simlish / DECTalk / Simlish links)", url: "https://news.ycombinator.com/item?id=31430802" }
+
+stack:
+  live_broadcast:
+    obs: "Browser Source overlays (transparent alpha) + NDI from Mac; NVENC on Legion — see rigs/brain-stream-dual-laptop.SETUP.md"
+    twitch: "Chat commands, voice streams, TicketPR queue — process/ticket-pr.yml"
+    stream_gateway: ../apps/stream-gateway/
+  performer_capture:
+    webcam: "Face-puppet mouth tracking — browser getUserMedia → canvas mask composite"
+    mic: "Amplitude for scrub-puppet; optional viseme v2"
+  audience_ingress:
+    ticket_pr: process/ticket-pr.yml
+    submissions: [github_pr, issue_link, youtube_unlisted, internet_archive]
+  output_sinks:
+    - twitch_overlay
+    - youtube_live
+    - repo_artifact  # transcript, sealed session sqlite — apps/stream-gateway/cursor-tap.yml
+
+proof_of_concept_roadmap:
+  p0_on_air:
+    - id: steve-gerri-clip
+      what: "Play 60–90s of Kearin/Lawlor WAV with transcript on screen — Simlish origins cold open."
+      assets: [../characters/will-wright/media/steve-and-gerri-simlish-adlib.wav, ../characters/will-wright/sources/steve-and-gerri-simlish-adlib/TRANSCRIPT-DRAFT.md]
+    - id: drew-play-along
+      what: "One audience Sims clip + guest narration live — format spec already written."
+      assets: [sims-play-along-narration.yml, ../characters/will-wright/media/sims-people-and-events-drew-carey-house-party-crowd-fraps.png]
+    - id: conan-face-browser
+      what: "Browser toy: pick face PNG, cutout mouth, webcam composite — OBS Browser Source URL."
+      assets: [../apps/performance-space/conan-face-puppet.yml]
+    - id: script-reading-block
+      what: "10-minute table read — two performers rotate face-puppet / voice-puppet on MOOLLM lines."
+      assets: [../repo-shows/will-wright/performance-and-culture.yml#the_reading]
+    - id: unnecessary-censorship-sims
+      what: "Recorded Sims gameplay — mesh pixelization gag (hand on joint pass, head after hit); SimProv wedding double pre-game."
+      assets: [../repo-shows/ideas/gags/pixelized-joint-wedding.yml, ../catalogs/simprov/README.md]
+  p1_web_toys:
+    - amplitude-scrub-puppet demo page
+    - play-along clip submit + queue UI (TicketPR helper)
+    - Pink Trombone side-by-side jam URL for chat
+  p2_obs_plugin:
+    note: "Native OBS filter optional — v1 is Browser Source + obs-websocket scene cues from stream-gateway."
+    see: ../apps/stream-gateway/overlay-viewer.yml
+
+episode_ideas:
+  - title: "Foreign Poet Theatre"
+    modes: [play_along_narration, live_script_reading]
+    guests: [claire-curtin, jerry-martin, stephen-kearin]
+  - title: "Come On Down to This Lot"
+    modes: [play_along_narration]
+    guest: drew-carey
+  - title: "Hole in the Guest"
+    modes: [face_puppet, live_script_reading]
+    note: "Game-character faces only on air unless guest consents to celebrity cutout."
+  - title: "Phoneloper vs Pink Trombone"
+    modes: [voice_puppet, audience_chorus]
+    show: ../repo-shows/phoneloper/SHOW.yml
+  - title: "SimProv Wedding — Double Pre-Game"
+    modes: [play_along_narration, machinima_bumper]
+    segment: ../repo-shows/ideas/gags/pixelized-joint-wedding.yml
+    note: "Unnecessary Censorship homage + bone-mesh pixelize joint pass; bride & groom heads pixelized at altar."
+  - title: "Speed Dating with Cupid"
+    modes: [audience_orchestrated_gameplay, play_along_narration]
+    segment: ../repo-shows/ideas/gags/speed-dating-with-cupid.yml
+    note: "Audience votes who Cupid hits first; live Sims 1 + long-form YouTube prior art."
+
+ethics:
+  rules:
+    - "Human puppetry only — no TTS clones of guests or audience."
+    - "AI orchestrates code + stream flow; PEOPLE voice, improvise, and author on air (see ../repo-shows/ideas/themes/human-control-and-authorship.yml)."
+    - "Living public figures: discuss and portray; do not impersonate without consent (portrayal-standards.yml)."
+    - "Gerri Lawlor (d. 2019): cite and honor; never voice her as a character."
+    - "Conan / Drew / Kimmel bits: clearly labeled homage; credit the source tradition."
+    - "Planted audience and virtual Sims: disclosed in git (ticket-pr.yml#planted_audience)."
+  schema: ../schemas/portrayal-standards.yml
+
+see_also:
+  - sims-play-along-narration.yml
+  - ../repo-shows/will-wright/performance-and-culture.yml
+  - ../repo-shows/will-wright/sims-play-along-narration.yml
+  - ../repo-shows/drew-carey/SHOW.yml
+  - ../schemas/language-simlish.yml
+  - ../apps/performance-space/
+  - ../apps/stream-gateway/
+  - ticket-pr.yml
+  - brain-stream.yml

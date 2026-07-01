@@ -1,0 +1,11 @@
+# Microworld morality — Cyberiad thread
+
+id: microworld-morality
+type: theme
+status: ready
+shows: [will-wright]
+
+when: "Early SimCity section — before or during 1996 video orbit."
+what: "Klapaucius/Trurl; Seventh Sally simulated suffering; Palm as self-aware witness."
+lore: ../../will-wright/lore/cyberiad-klapaucius-trurl.md
+segment: ../../will-wright/SEGMENTS.yml#simcity_cyberiad_thread

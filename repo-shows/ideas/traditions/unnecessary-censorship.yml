@@ -1,0 +1,25 @@
+# Unnecessary Censorship — cross-show tradition
+# Policy: ../../will-wright/performance-and-culture.yml#unnecessary_censorship
+
+id: unnecessary-censorship
+type: tradition
+status: seed
+
+homage: "Jimmy Kimmel Live — 'This Week in Unnecessary Censorship'"
+credit: "Full credit on air; voluntary comedy, never timid euphemism."
+
+variants:
+  broadcast:
+    what: "Bleep/black-bar innocent words — comedy is the listener's dirty imagination."
+    fits: [live_stream, captioned_clips]
+  sims_gameplay:
+    what: "In-engine bone-mesh pixelization over recorded machinima."
+    gag: ../gags/pixelized-joint-wedding.yml
+
+anti_rule: |
+  We do NOT censor real names. Conan's Masturbating Bear stays Masturbating Bear.
+  Unnecessary censorship is opt-in comedy; plain speech elsewhere.
+
+see_also:
+  - ../../will-wright/performance-and-culture.yml#unnecessary_censorship
+  - ../gags/pixelized-joint-wedding.yml

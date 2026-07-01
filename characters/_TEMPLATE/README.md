@@ -21,6 +21,7 @@ Mirror key tables in **`CHARACTER.yml`** (`ticketpr_seats`, `shows`, `dreams`, `
 - [`CHARACTER.yml`](CHARACTER.yml) — canonical data (id, bio, connections, invitation status).
 - [`CARD.yml`](CARD.yml) — the compact capabilities/interface card.
 - [`invitation.md`](invitation.md) — the draft Repo Show invitation.
+- [`ideas.md`](ideas.md) — conversation hooks (public work + abstracted shared ground + show segments).
 
 All portrayals follow [`schemas/portrayal-standards.yml`](../../schemas/portrayal-standards.yml):
 public sources only, no impersonation, no fabricated quotes, subject rights honored. Scaffolding is

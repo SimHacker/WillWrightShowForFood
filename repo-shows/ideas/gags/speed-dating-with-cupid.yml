@@ -1,0 +1,71 @@
+# Speed Dating with Cupid — interactive segment
+# SimProv Wedding Playset object + long-form YouTube prior art → live audience orchestration
+
+id: speed-dating-with-cupid
+type: interactive_segment
+status: recorded_prior_art
+shows: [will-wright, heather-steve-alvey]
+
+title: "Speed Dating with Cupid"
+
+object:
+  name: Cupid
+  playset: SimProv Wedding Playset
+  role: "Instant romance / speed-dating cheat — prerequisite for marriage"
+  mechanic: |
+    Pie-menu object: pick anyone in the neighborhood (including pets post-Pets expansion —
+    romance yes, marriage animations no). Skips the grind; comedy + orchestration tool.
+  catalog: ../../../catalogs/simprov/CATALOG.yml
+  graphics: SimBabes · SimFreaks
+  programming: Don Hopkins
+
+published:
+  format: long_form_screen_recording
+  status: on_youtube
+  youtube_url: null  # paste canonical URL from Don's channel when indexed
+  documented_on: https://news.ycombinator.com/item?id=34492255
+  note: "User confirms long-form gameplay video already published — link TBD in repo index."
+
+live_show:
+  elevator: |
+    Replay or clip the published run as cold open, then **perform it live** with audience driving
+    the match order — same object, new neighborhood chaos each time.
+  audience_prompt: |
+    "Who should fall in love first?" — chat / TicketPR / GitHub issue queue suggests pairs or
+    rotation order before each Cupid strike. Host executes in-game; everyone watches consequences.
+  ingress:
+    - Twitch chat vote (fast)
+    - TicketPR issue tagged `cupid-match`
+    - performance-space play-along queue (see ../../../process/ticket-pr.yml)
+  host_riff: |
+    MST3K / play-along narration optional — guest or Don voices the Sims as hearts fly.
+    Procedural rhetoric on display: inclusion agitprop object used for farce and matchmaking.
+
+flow:
+  1_setup: "Neighborhood of singles (or messy existing relationships) — introduce the cast."
+  2_suggest: "Audience proposes who Cupid should hit first (names, pairs, or priority list)."
+  3_execute: "Live Cupid pie menu — screen capture + reaction."
+  4_repeat: "Speed-date round robin until chat satisfied or disaster achieved."
+  5_payoff: "Optional handoff to wedding playset (Crowd Sitter, Buddha, pixelized wedding gag)."
+
+modes:
+  - audience_orchestrated_gameplay
+  - machinima_bumper
+  - play_along_narration
+  - live_riff
+
+pairs_with:
+  - ../gags/pixelized-joint-wedding.yml
+  - ../themes/inclusion-agitprop.yml
+  - ../../../catalogs/simprov/README.md
+
+poc:
+  - Index YouTube URL in this file + simprov README
+  - One live stream: 3 audience-suggested matches + 60s clip from published video
+  - TicketPR template for `cupid-match` suggestions
+
+see_also:
+  - ../../../process/performance-space.yml
+  - ../../../characters/will-wright/media/sims-series-micropolis-publishing-vision.md
+  - ../../will-wright/INTRO-NARRATIVE.md
+  - ../traditions/participation-rocky-horror.yml

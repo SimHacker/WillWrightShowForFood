@@ -1,0 +1,126 @@
+# Don Hopkins -- the lineage: a bundle of ideas he keeps adding to, culminating in MOOLLM
+# Public career artifact -- the story under the resume.
+# Not one idea -- a growing repertoire of great ideas Don has been collecting, building,
+# and cross-pollinating since the 1980s, all circling the same joy:
+#   navigable, editable, directly-manipulable worlds (or minds) -- mirror worlds, mind
+#   maps, method of loci, adventure-map editors, pie menus, gestural UIs -- made legible
+#   and fun. Each project adds ideas to the bundle; MOOLLM is where they all come together.
+# Two braids: `bundle` (the navigable worlds) + `tools_lineage` (the editors + constraint/
+#   reactive UI he built them WITH -- Emacs/TECO -> Garnet -> OpenLaszlo -> Svelte).
+
+thesis: |
+  Not a series of unrelated jobs, and not just one idea either -- a growing bundle of great
+  ideas Don keeps learning, adding to, and braiding together: navigable/editable models of
+  a world (or a mind), mirror worlds, mind maps, method of loci, adventure-map editors, pie
+  menus, gestural navigation, direct manipulation. He learned many of these studying other
+  people's work, and invented some himself -- but the real through-skill is the one Gosling
+  brought to designing NeWS: step back, survey the whole range of approaches, and compare
+  them honestly -- naming the failures as clearly as the successes, and always offering a
+  better path. His X-Windows Disaster chapter (UNIX-HATERS Handbook) is the critique; NeWS,
+  which he championed, was the generous alternative -- "send code, not commands" -- a bet
+  that quietly came true as AJAX / JavaScript / the web (the thesis of his "Axis of Eval"
+  manifesto). Each project adds to the pile; they compound; MOOLLM is the culmination where
+  the whole bundle finally runs at once.
+
+roots:   # the gateway, and the worlds that seeded the ideas -- roughly in order
+  gateway: |
+    It started with 6502 assembly on the Apple ][ -- the essential unlocker. Don hand-wrote
+    his own ProDOS Forth in it, then used Forth's RPN 6502 assembler to build the terminal
+    emulator,     graphics, and device drivers. That Forth + terminal got him onto the ARPANET
+    and into the MIT-AI Lab -- and through that door came Zork, Emacs, Lisp, Logo, and email.
+    Assembly unlocked Forth; Forth unlocked the whole networked world of text adventures and
+    hacker culture; every idea in the bundle grew from there.
+  played:   # in the order Don met them
+    - { world: "Apple ][ 6502 assembly -> his own Forth", where: "home -- hand-written 6502 assembly first, then a ProDOS Forth (FIG-FORTH 83)", got: "assembly was the essential unlocker: he wrote the Forth in 6502, then used its RPN 6502 assembler for the terminal emulator, graphics, and device drivers -- and his first text adventures" }
+    - { world: Zork,               where: "MIT-DM ITS PDP-10 (reached via ARPANET)", got: "rooms + objects + verbs -- the adventure-map grammar" }
+    - { world: "Emacs / Lisp / Logo", where: "MIT-AI Lab",                           got: "programmable everything; Logo (LLogo in MACLISP) + Papert constructionism set his taste -- and led straight to his Terrapin Logo Adventure" }
+    - { world: MUD1,               where: "Essex PDP-10 (Bartle & Trubshaw)",        got: "the original multi-user navigable world" }
+    - { world: TinyMUD,            where: "the early internet",                      got: "build-the-world-while-you-play" }
+    - { world: LambdaMOO,          where: "Xerox PARC",                              got: "user-PROGRAMMABLE objects; MOO = MUD Object-Oriented" }
+  name_echo: "MOOLLM = MOO (from LambdaMOO) + LLM. The name carries the whole lineage."
+
+bundle:   # each entry adds its own ideas to the pile; they cross-pollinate and compound
+  - { project: "Logo Adventure",               era: "Terrapin Logo / C64",        thread: "adventure-map world editor using the Logo REPL as the text-adventure parser (the same trick MOOLLM now plays with the LLM chat REPL); PAID, shipped on the C64 Terrapin Logo Examples floppy; Papert constructionism, MIT-AI (LLogo) lineage", todo: "link the Medium article (or our cleaned-up recreation of it)" }
+  - { project: "Pie menus",                    era: "UMD HCIL CHI'88 -> NeWS -> X11 -> The Sims -> OLPC -> web -> Unity", thread: "direct manipulation: fast, reliable gestural selection -- the verb-picker for a modeled world" }
+  - { project: "HyperTIES / PSIBER Space Deck",era: "NeWS, late 1980s",           thread: "hypermedia as navigable space; live objects you can open, inspect, and edit" }
+  - { project: "DreamScape",                   era: "Kaleida Labs (ScriptX)",     thread: "mirror-world / mind-map media environment -- a memory-palace precursor" }
+  - { project: "SimCity / Micropolis",         era: "1989 -> GPL 2008 -> WASM/web",thread: "an editable simulated world; tile/parametric editing; one human steering a whole living system. Built the MULTIPLAYER X11 version in TCL/Tk (Tcl as the embedded extension language) -- shared-world city editing over the network" }
+  - { project: "The Sims",                     era: "Maxis/EA (core team)",       thread: "characters + objects-that-carry-their-own-behavior + architectural editing; author a world by placing and wiring objects" }
+  - { project: "SFC MediaGraph",               era: "Stupid Fun Club (Will Wright)",thread: "zoomable, editable graph/map of media as navigable space" }
+  - { project: "StoryMaker / Bar Karma / Urban Safari", era: "SFC / interactive TV", thread: "branching story maps; geocoded storytelling on a real-world map" }
+  - { project: "iLoci",                        era: "iPhone",                     thread: "a method-of-loci memory palace, literally -- put ideas in places, walk back to them" }
+  - { project: "Amsterdam Coffeeshops + LayAR + BONGO BINGO", era: "iPhone / AR", thread: "the real city as the map: content DB, AR overlay (a mirror world), check-in game layered on top" }
+  - { project: "MOOLLM",                       era: "now: filesystem + YAML + LLMs + home automation", thread: "ALL of it at once -- rooms = directories, objects = YAML with live state, characters, inheritable skills, gestural editing, wired to the real world" }
+
+tools_lineage:   # the OTHER throughline -- the tools he built worlds WITH: extensible editors +
+                 # constraint/reactive UI, across generations of GUI and web tech. "Everything old
+                 # is new again" -- the same declarative-constraint idea keeps getting reinvented,
+                 # and Don has ridden every generation of it. (Twin to the NeWS/Axis-of-Eval point.)
+  arc:
+    - { tech: "ITS Emacs (TECO macros)",                    era: "MIT-AI Lab",              idea: "the editor as a programmable environment -- extend it in its own macro language" }
+    - { tech: "Gosling / UniPress Unix Emacs (MockLisp)",   era: "1980s",                   idea: "Gosling's Emacs; extension language was MockLisp -- a Lisp-ish macro language" }
+    - { tech: "GNU Emacs (Emacs Lisp)",                     era: "1980s -> now",            idea: "a REAL Lisp as the extension language; a fully self-reprogrammable editor" }
+    - { tech: "CForth embedded in CADroid (Sun internship, mentor Mitch Bradley)", era: "late 1980s", idea: "embedded CForth as a friendly macro/scripting language INTO a CAD circuit-capture-and-schematic editor -- programming-by-demonstration: capture user edits as replayable, editable Forth. Extensibility, applied by Don's own hand" }
+    - { tech: "Garnet (KR constraints, CLX / X11, Common Lisp)", era: "CMU (Brad Myers)",   idea: "constraint-based GUI toolkit: DECLARE the relationships, the system keeps them true" }
+    - { tech: "TCL/Tk on X11 (multiplayer SimCity)",        era: "1990s",                   idea: "Tcl as an embedded extension language; a shared-world, network-multiplayer SimCity" }
+    - { tech: "SFC MediaGraph (Macintosh Common Lisp + QuickTime)", era: "Stupid Fun Club", idea: "constraint/graph media environment in MCL, driving QuickTime -- a navigable media map" }
+    - { tech: "Zope (Python)",                              era: "web app server",          idea: "object-oriented through-the-web: objects addressable + editable over HTTP" }
+    - { tech: "OpenLaszlo (constraints)",                   era: "declarative web UI -> Flash/DHTML", idea: "declarative XML UI with a REAL constraint system -- write relationships, not update code" }
+    - { tech: "SvelteKit (fine-grained reactivity)",        era: "now",                     idea: "$state / $derived -- the same declarative-constraint idea, modern web" }
+  point: |
+    Two braids run through it. Editors: from TECO macros to Emacs Lisp -- the tool should be
+    reprogrammable in itself. UI: from Garnet through OpenLaszlo to Svelte -- you DECLARE the
+    relationships and let the system keep them true, instead of hand-writing update code.
+    Constraints and reactivity get reinvented every GUI generation; Don rode every one, which
+    is exactly why MOOLLM's reactive YAML objects (declare state + relationships, let it settle)
+    feel obvious to him. Everything old is new again -- the twin of the NeWS -> AJAX story.
+  accuracy_note: |
+    MockLisp was Gosling/UniPress Emacs's extension language; GNU Emacs uses real Emacs Lisp
+    (not "MLisp"). The arc is deliberately "toy Lisp -> real Lisp -> constraint systems ->
+    reactive web." Flag if you meant something more specific by GNU-Emacs "MLisp."
+  extensibility_theme: |
+    The deepest braid of all -- EXTENSIBILITY: extend a running system by shipping it code.
+    Emacs (extend the editor in its own Lisp) -> NeWS (download PostScript INTO the window
+    server) -> Tcl/Tk (embed a scripting language to extend the app) -> the web (download
+    JavaScript INTO the page/browser; AJAX). "Send code, not commands" and "extend it in its
+    own language" are the same instinct -- and it's exactly what MOOLLM does: LLM-scriptable
+    objects and skills you extend from inside the world. NeWS got there first; the web proved
+    it right. (Twin to the Axis-of-Eval thesis.)
+    Don has applied this by his own hand since the start: as a Sun intern (mentor Mitch
+    Bradley) he embedded CForth into the CADroid circuit editor as a friendly, macro-driven,
+    programming-by-demonstration scripting language -- the earliest link in his own chain.
+
+culmination_moollm:
+  what: |
+    MOOLLM is where the whole bundle finally comes together: an AI-orchestration microworld
+    simulation OS built out of the filesystem itself. Directories are rooms you cd into; YAML
+    files are objects and devices with live state; characters move through the space; skills
+    are inheritable prototypes (Sims-style). Every idea above shows up here at once.
+  live_digital_twin: |
+    Don runs it as a live digital twin of a real place -- rooms as directories, devices as
+    YAML objects, wired to home automation (solar, heat pumps, cameras). Simulation-as-a-
+    service: triggers, alerts, scheduled summaries, monitoring. Robots and personal
+    organization get modeled inside the same world.
+  the_move: "The Sims for your filesystem; a MUD/MOO where the rooms are real and the LLM plays."
+  power_of_simplicity: |
+    MOOLLM's core value comes straight from the Self language's first paper -- "Self: The
+    Power of Simplicity" (Ungar & Smith, OOPSLA 1987). Self's deepest lesson isn't prototypes,
+    it's SIMPLICITY. JavaScript inherited Self's prototypes but neglected the simplicity and
+    dropped multiple inheritance (oops). MOOLLM reintroduces multiple inheritance and mix-ins,
+    keeps Self's radical simplicity, and empowers it with LLMs -- simple prototype objects a
+    language model can read, extend, and reason about. Simplicity as a feature, not a sacrifice.
+
+why_it_matters: |
+  These ideas share DNA and keep feeding each other: the RIGHT interface for a human to
+  navigate, edit, and directly drive a system modeled in code -- and to make it legible and
+  fun. Pie menus, method of loci, adventure-map editing, god-game single-operator-many-agents
+  UIs, live digital twins. Forty years of collecting and combining great ideas; MOOLLM is
+  the culmination. Don didn't stumble into it -- he's been building the bundle his whole career.
+
+see_also:
+  - { path: project-threads.yml, why: "How the threads branch and merge" }
+  - { path: work-history.yml,    why: "The same span as an employment timeline" }
+  - { path: simcity-lineage.yml, why: "The SimCity -> Micropolis -> web arc in depth" }
+  - { path: stupid-fun-club.yml, why: "MediaGraph, StoryMaker, robot brains" }
+  - { path: range.yml,           why: "The other axis: bare-metal-to-browser generalist range" }
+  - { path: https://github.com/SimHacker/moollm, why: "MOOLLM upstream" }

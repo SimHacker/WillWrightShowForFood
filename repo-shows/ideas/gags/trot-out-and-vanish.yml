@@ -1,0 +1,15 @@
+# Trot out and vanish — Conan's bear pattern
+
+id: trot-out-and-vanish
+type: gag
+status: seed
+shows: [will-wright]
+
+homage: "Conan's Masturbating Bear — appears, does the bit, gone."
+tradition: ../traditions/sidekick-archetypes.yml
+
+candidates:
+  - fictional-broken-robot
+  - "Future: one-off celebrity cutout with consent only"
+
+policy: "Name characters plainly; no bowdlerizing in unnecessary-censorship policy."

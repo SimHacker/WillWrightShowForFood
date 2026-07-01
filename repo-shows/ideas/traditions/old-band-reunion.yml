@@ -1,0 +1,15 @@
+# Old band back together — reunion format
+
+id: old-band-reunion
+type: tradition
+status: ready
+canonical: ../../../process/old-band-back-together.yml
+
+examples:
+  - NeWS gang (Gosling, Rosenthal, van Hoff)
+  - Sims steering committee (Jamie, Bobo, Irk, Patrick, Don)
+  - David Levitt crew
+  - OpenLaszlo
+  - "2006 Long Now — Eno + Will + Scott Draves"
+
+note: "Reunion is a FORMAT axis in ../../INDEX.yml — not just a one-off episode."

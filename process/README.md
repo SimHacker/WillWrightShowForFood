@@ -48,6 +48,7 @@ Schema: [`../schemas/markup-facade.yml`](../schemas/markup-facade.yml)
 ### Show format & network
 
 - [`FORMAT.md`](FORMAT.md) — how a Repo Show runs
+- [**Performance Space**](performance-space/README.md) — play-along, puppetry, OBS/webcam toys (top-level design)
 - [`showmaker-network.yml`](showmaker-network.yml) — linked shows graph
 - [`live-repo.yml`](live-repo.yml) — public vs DonHopkins private
 - [`sync-with-donhopkins.yml`](sync-with-donhopkins.yml) — export policy

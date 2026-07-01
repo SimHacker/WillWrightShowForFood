@@ -20,6 +20,7 @@ any show can recommend, not Will Wright's personal archive. **Get the base game 
 | **Zombie Sims** | [zombie-sims/README.md](zombie-sims/README.md) | Alvey magnum opus |
 | **Micropolis Home** | [micropolis-home/README.md](micropolis-home/README.md) | Federation platform |
 | **Maxis metadata** | [maxis/README.md](maxis/README.md) | Archivist layer |
+| **Community index** | [sims1-community-landscape.md](sims1-community-landscape.md) | Sites, subscriptions, Steam companion strategy |
 | **Across** | [sources](../characters/will-wright/sources/README.md) · [show](../repo-shows/will-wright/README.md) | Primary evidence + flagship show |
 
 ---

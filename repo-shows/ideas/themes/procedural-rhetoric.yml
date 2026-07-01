@@ -1,0 +1,12 @@
+# Procedural rhetoric — objects argue
+
+id: procedural-rhetoric
+type: theme
+status: ready
+shows: [will-wright, heather-steve-alvey]
+
+poles:
+  inclusion: SimProv wedding playset — who gets recognized
+  farce: Dumbold Voting Machine — institutional ridicule
+substrate: ../../../characters/will-wright/sources/2008-02-10-soul-of-the-sims/
+guest_show: ../../will-wright/ian-bogost-procedural-rhetoric/SHOW.yml

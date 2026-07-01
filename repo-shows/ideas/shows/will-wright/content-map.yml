@@ -1,0 +1,38 @@
+# Will Wright show — content map (ideas → when to use)
+
+opening:
+  films: [Servitude, Empathy]
+  gags: [../../gags/slats-robopoetry-gong.yml, ../../gags/broken-robot-servitude.yml]
+  then: "1996 Winograd video"
+
+early_simcity:
+  theme: ../../themes/microworld-morality.yml
+  audience: Palm call-in
+
+sims_section:
+  traditions: [../../traditions/foreign-poet-play-along.yml]
+  source: steve-and-gerri-simlish-adlib
+  play_along: drew-carey episode seed
+
+procedural_rhetoric_block:
+  themes: [../../themes/procedural-rhetoric.yml, ../../themes/inclusion-agitprop.yml]
+  catalogs: [../../../../catalogs/simprov/, dumbold-voting-machine]
+  segments: [../../gags/speed-dating-with-cupid.yml]
+
+crown_jewel_block:
+  theme: ../../themes/data-portability-crown-jewel.yml
+  bridges: ../../../INDEX.yml
+
+stupid_fun_club:
+  theme: ../../themes/stupid-fun-club-robots.yml
+  slats: ../../../will-wright/slats-reincarnation.yml
+
+bumper_gags:
+  - ../../gags/pixelized-joint-wedding.yml
+  - ../../traditions/unnecessary-censorship.yml
+
+participation:
+  traditions:
+    - ../../traditions/participation-rocky-horror.yml
+    - ../../traditions/time-shifted-viewing.yml
+    - ../../traditions/honest-fake-call-in.yml

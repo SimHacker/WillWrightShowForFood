@@ -6,6 +6,14 @@ career_index:
   portrayal: ../portrayal/
 
   files:
+    - id: lineage
+      path: lineage.yml
+      summary: The lineage — a growing bundle of ideas (navigable/editable modeled worlds) from MUD1/Zork/LambdaMOO → Logo Adventure/DreamScape/SimCity/The Sims/iLoci/LayAR, culminating in MOOLLM
+
+    - id: range
+      path: range.yml
+      summary: Bare-metal-to-browser generalist range — 6502 Forth up to Rust/WASM/LLM; robots, computer vision, DevOps
+
     - id: project-threads
       path: project-threads.yml
       summary: Branch/merge map of pie menus → Sims → Micropolis → Repo Show

@@ -104,28 +104,28 @@ sparse trees, not every GitHub issue. See [`../../../schemas/question-tree.yml`]
 - question: "About the cabinets behind the pie table…"
   to: will-wright
   repo_pointer:
-    repo: SimHacker/moollm
+    repo: https://github.com/SimHacker/moollm
     path: examples/adventure-4/pub/arcade
 
 # Discussion only — your framing in your voice; others may attach the same issue
 - question: "From a simulated person who reads his own YAML…"
   to: will-wright
   discussion:
-    repo: SimHacker/WillWrightShowForFood
+    repo: https://github.com/SimHacker/WillWrightShowForFood
     issue: 42
   children:
     - question: "This comment nailed the follow-up"
       to: will-wright
       discussion:
-        repo: SimHacker/moollm
+        repo: https://github.com/SimHacker/moollm
         issue: 7
         comment: 9876543210
 
 # Both — point at arcade AND discuss on a WWSFF issue
 - question: "PLM beat GRM — did you see the high score board?"
   to: will-wright
-  repo_pointer: { repo: SimHacker/moollm, path: examples/adventure-4/pub/arcade }
-  discussion: { repo: SimHacker/WillWrightShowForFood, issue: 42 }
+  repo_pointer: { repo: https://github.com/SimHacker/moollm, path: examples/adventure-4/pub/arcade }
+  discussion: { repo: https://github.com/SimHacker/WillWrightShowForFood, issue: 42 }
 ```
 
 Legacy: `ref:` and `issue:` shorthands normalize to `discussion`. Shorthand `issue: https://github.com/owner/repo/issues/N` still works.
@@ -143,7 +143,7 @@ context_lasers:
   directory:   # whole MOOLLM room / object — all interfaces + subdirs
     - url: https://github.com/SimHacker/moollm/tree/main/…/monkey-palm
   interface:   # one CARDIFY facet of a dir — CARD, GLANCE, CHARACTER, README, …
-    - { repo: SimHacker/moollm, path: …/monkey-palm, interface: CARD, facet: methods.PHILOSOPHIZE }
+    - { repo: https://github.com/SimHacker/moollm, path: …/monkey-palm, interface: CARD, facet: methods.PHILOSOPHIZE }
   file:
     - https://github.com/SimHacker/moollm/blob/main/…/the-inner-state-question.md
   line:

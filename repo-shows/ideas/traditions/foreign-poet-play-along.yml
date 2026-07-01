@@ -1,0 +1,23 @@
+# Foreign Poet / Foreign Film / Play-Along Narration
+
+id: foreign-poet-play-along
+type: tradition
+status: ready
+
+names:
+  foreign_poet: "Real improv exercise — Kearin/Lawlor invented Simlish doing this."
+  foreign_film: "Whose Line — mute footage, guest narrates (best term for reverse play-along)."
+  play_along_narration: "Repo Show format name — audience submits Sims clips, guest voices live."
+
+lineage:
+  steve_gerri: ../../../characters/will-wright/sources/steve-and-gerri-simlish-adlib/
+  drew: ../../drew-carey/SHOW.yml
+  spec: ../../../process/sims-play-along-narration.yml
+
+episode_seeds:
+  - "Foreign Poet Theatre"
+  - "Come On Down to This Lot"
+
+see_also:
+  - ../../will-wright/sims-play-along-narration.yml
+  - ../../../process/performance-space.yml

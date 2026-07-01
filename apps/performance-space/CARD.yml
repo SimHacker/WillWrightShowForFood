@@ -1,0 +1,18 @@
+# CARD — performance-space apps
+
+glance: GLANCE.yml
+
+room:
+  id: apps-performance-space
+  name: "Performance Space Web Toys"
+  type: [apps, web_toys, obs_helpers]
+  home: apps/performance-space/
+
+methods:
+  CONAN-FACE:
+    signature: "conanFace(png, webcam) → obsBrowserSource"
+    advertisement: "Face-hole puppet overlay — P0 web toy."
+
+compose_with:
+  - ../../process/performance-space/CARD.yml
+  - ../stream-gateway/CARD.yml

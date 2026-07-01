@@ -1,0 +1,10 @@
+# Broken robot — Servitude film + trot-out bit
+
+id: broken-robot-servitude
+type: gag
+status: ready
+shows: [will-wright]
+
+film: "Stupid Fun Club One Minute Movie — Empathy (robot begs for help)"
+opening: ../../will-wright/SEGMENTS.yml#opening_one_minute_movies
+rhyme: "Unitree falling-robot energy — crashes in, breaks down, begs, dragged off"

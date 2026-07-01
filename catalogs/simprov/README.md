@@ -11,12 +11,14 @@ The emotional center of the Micropolis Home mission. An orchestration kit — no
 | Object | Job |
 |--------|-----|
 | [Crowd Sitter](../../characters/will-wright/sources/2018-04-23-sims-crowd-sitter/README.md) | Gather and seat guests |
-| Cupid | Prerequisite romance |
+| Cupid | Prerequisite romance — [Speed Dating segment](../../repo-shows/ideas/gags/speed-dating-with-cupid.yml) |
 | Buddha statue | Crowd need management |
 | Hope Chest + consultant | Onboarding and catalogs |
 | Donna's set pieces | Premium craft layer |
 
 Built when marriage equality was still a fight in the real world. Republishing for the Steam Sims 1 generation is deliberate **inclusion procedural rhetoric** — see [procedural-rhetoric-inclusion-agitprop.md](../../characters/will-wright/media/sims-series-procedural-rhetoric-inclusion-agitprop.md) and [Ian Bogost show seed](../../repo-shows/will-wright/ian-bogost-procedural-rhetoric/SHOW.yml).
+
+**Performance gag (show seed):** [SimProv Wedding — Double Pre-Game](../../repo-shows/ideas/gags/pixelized-joint-wedding.yml) — bride's friends and groom's friends each sneak off to calm nerves before the ceremony; neither knows the other is doing it; aisle reveal with both heads pixelized (original Sims mesh censorship: hand on pass, head after hit). Kimmel *Unnecessary Censorship* homage; Steve & Gerri ad-lib already jokes about hot-tub pixelation on the same engine.
 
 Also in the SimProv lineage (different register): [Dumbold Voting Machine](../../characters/will-wright/sources/2018-04-24-dumbold-voting-machine/README.md) — procedural rhetoric, 2004 time capsule.
 

@@ -72,6 +72,9 @@ journal:
     props thrown, Simoleons, notes — live, time-shifted, or long after air. Others replay the
     episode with your layer for a richer experience (MSPO: Massively Single-Player Online).
   question_tree: ../schemas/question-tree.yml
+  repo_urls: |
+    `repo` fields in questions.yml (discussion, repo_pointer, context_lasers) use absolute
+    HTTPS GitHub repo-root URLs — https://github.com/owner/repo — not owner/name slugs.
   when: [before_air, during_live, during_time_shift, after_air]
   watch_order: "Episodes may be watched in any order; your per-episode dirs are souvenirs of each"
   suggested_files:

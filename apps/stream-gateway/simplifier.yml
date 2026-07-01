@@ -7,6 +7,10 @@ meta:
   id: simplifier
   status: spec
   one_liner: "Read text/images off the screen, catalog app objects, and inject keys/clicks — one or many apps at once — from the gateway server."
+  product_home: ../../catalogs/micropolis-home/micropolis-angel.yml
+  note: |
+    Consumer-facing reincarnation ships as MicropolisAngel (Windows Steam companion).
+    Stream-gateway server variant powers Repo Show broadcast rig — same lineage, different packaging.
   lineage: |
     Reimplement Simplifier: it ran two Sims Online clients (different accounts) side by side on
     one screen, scraped both, solved money/maze tasks, and drove both with keys+clicks. Now the
@@ -23,17 +27,28 @@ why_server:
 capabilities:
   capture:
     what: "Grab pixels from a display/window/region (one or many apps at once)."
-    backends: ["macOS ScreenCaptureKit", "Windows capture", "existing OBS/NDI frames (reuse)"]
+    backends:
+      windows: "Windows.Graphics.Capture (MicropolisAngel native host — primary on Legion)"
+      macos: "ScreenCaptureKit (stream-gateway Mac tier)"
+      reuse: "OBS/NDI frames when OBS owns the graph"
+    impl: ../micropolis-angel/ARCHITECTURE.yml#native_apis
   read:
-    text: "OCR text off the screen (per region)."
-    images: "Recognize sprites/icons/objects (template match / small vision model)."
-    catalog: "Build an object catalog (e.g. Sims objects) → structured records in the derived DB."
+    text: "Primary: Micropolis Home TS reads .iff / save files — NOT screen OCR for metadata."
+    catalog_panel: |
+      **Buy/build mode — GUID unknown:** OCR title, price, description from catalog panel;
+      fuzzy-match against installed objects; represent ambiguous candidate sets honestly.
+      See CATALOG-SCREEN-MATCH.yml.
+    images: "Bootstrap: scrape catalog preview bitmap when item selected (Simplifier crawl port)."
+    catalog: "SQLite local cache (objects, wallpapers, floors) — sync to central federation."
+    legacy_ocr: "Simplifier glyph matcher on description panel — optional crawl fallback only."
   inject:
-    keys: "Send keystrokes to a target app/window."
-    clicks: "Send mouse clicks/drags to coordinates in a target app/window."
+    keys: "SendInput keystrokes to a whitelisted target window (Windows); CGEvent (macOS)."
+    clicks: "SendInput mouse; UI Automation InvokePattern when coords fragile."
     multi_app: "Drive MULTIPLE apps simultaneously (the original two-accounts trick)."
+    lifecycle: "Save game, main menu, reload lot, restart process — MicropolisAngel game state machine"
   understand:
     what: "Optional model pass: interpret the scraped state, plan actions (maze/money/task logic)."
+    catalog_match: "Fuzzy rank installed objects from OCR text; emit ambiguous sets — never silent GUID pick."
     reuse: "Can route through summarizers.yml providers (local/remote)."
 
 # TARGETS
@@ -42,11 +57,12 @@ targets:
     platform: "Windows only — run Steam Sims 1 performances on the PC (Legion)."
     note: "Mac can't run it; PC handles Sims segments; gateway drives over LAN."
   iff_pipeline:
-    platform: "Future — native .iff read + sprite render replaces scrape for object previews."
+    platform: "Micropolis Home TypeScript — read .iff/.far, WebGPU render (replaces scrape for metadata)"
     ties:
       - "catalogs/maxis/CATALOG.yml#pipeline"
+      - "apps/micropolis-angel/SIMSKIT-LINEAGE.yml"
       - "characters/will-wright/sources/2004-01-08-showntell-activex-preview/"
-    note: "Simplifier remains accessibility + live-game fallback; not just TSO maze/money bot."
+    note: "Inject+crawl remains for preview images until WebGPU renderer ships."
   generic:
     - "Any on-screen app: a game, a tool, a website."
     - "Cursor itself (read its screen as a fallback signal alongside the file/DB tap)."
@@ -66,6 +82,7 @@ safety:
 
 build_phases:
   - { id: a, ship: "region capture + OCR → bus events (read-only)", cost: zero }
+  - { id: a2, ship: "catalog panel OCR → fuzzy match + ambiguous candidate UI", cost: zero }
   - { id: b, ship: "object catalog → derived DB → overlay table view", cost: zero }
   - { id: c, ship: "key/click injection to ONE target (operator-gated)", cost: zero }
   - { id: d, ship: "multi-app drive (the two-client trick)", cost: zero }
@@ -76,4 +93,6 @@ ties_to:
   - cursor-tap.yml
   - summarizers.yml
   - overlay-viewer.yml
+  - ../micropolis-angel/CATALOG-SCREEN-MATCH.yml
   - ../../process/brain-stream.yml
+  - ../../catalogs/micropolis-home/micropolis-angel.yml

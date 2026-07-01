@@ -1,0 +1,14 @@
+# Slats robopoetry → Ultimate Machine gong
+
+id: slats-robopoetry-gong
+type: gag
+status: ready
+shows: [will-wright]
+
+setup: "Opening One Minute Movies — Servitude + Empathy before 1996 video."
+beat: |
+  Slats spirals into audio-feedback robopoetry loop. Ultimate Machine gongs him. Reset laugh.
+  Repeat later in show.
+
+canonical: ../../will-wright/SEGMENTS.yml#opening_one_minute_movies
+character: ../../../characters/slats/CHARACTER.yml

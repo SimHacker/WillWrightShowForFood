@@ -22,6 +22,18 @@ upstream:
     role: authoritative_archive
     rule: "One-way cream export per sync-with-donhopkins.yml — do not dual-edit"
 
+public_projection_rules:   # HARD rules for anything projected public (WWSFF + DonHopkins public exports)
+  never:
+    - '"open to work" / "looking for a job" / availability signals — this is a portfolio, not a job hunt'
+    - "any mention of Juho Hietala — the housemate/co-hire angle is PRIVATE (Marconistraat only)"
+    - "financial pressure, reduced pay, mortgage, needing money"
+  leela_is_positive:
+    say: "Leela AI is an ongoing concern Don is proud of and excited to share what he's learned; on great terms."
+    never: "framing Leela as a problem, escape, or something he's leaving"
+  henry_minsky:
+    ok_public: "Henry as AI/robotics peer + MIT-AI-Lab lineage (Marvin's son; COG / stuffed-bear story) — a great Repo Show guest / talk collaborator"
+    private_only: "Henry as a job reference for Monumental"
+
 sync_policy:
   include_in_wwsff:
     - career timeline (condensed)

@@ -5,7 +5,7 @@
 
 meta:
   id: question-tree
-  version: 0.6
+  version: 0.7
   one_line: |
     Recursive question trees in questions.yml — orchestration SSOT. Nodes may attach repo_pointer
     (whole repo/module), discussion (issue/comment), and context_lasers (typed pointer arrays).
@@ -46,6 +46,17 @@ persistence_policy:
       questions.yml tree (or producer merge).
 
 github_ref:
+  repo_url:
+    rule: |
+      Every `repo` field is an absolute HTTPS GitHub repo-root URL — clickable for humans,
+      parseable for tools. Not `owner/name` slugs, not `moollm/…` paths.
+    canonical_form: "https://github.com/SimHacker/moollm"
+    with_path: |
+      Structured pointers pair repo URL + repo-relative `path`:
+      { repo: https://github.com/SimHacker/moollm, path: examples/adventure-4/pub/arcade }
+    tool_parse: |
+      Orchestrator extracts owner/name from URL for GitHub API; builds tree/blob URLs from
+      repo + path + ref. Legacy `owner/name` slug normalizes to https://github.com/owner/name.
   split: |
     Two optional pointers per question node — do not conflate:
     `repo_pointer` = whole repo, module, namespace, or bare directory tree (no issue).
@@ -62,13 +73,13 @@ github_ref:
       url: "https://github.com/SimHacker/moollm — whole repo"
       tree: "https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/arcade — namespace"
       structured:
-        repo: SimHacker/moollm
+        repo: https://github.com/SimHacker/moollm
         path: examples/adventure-4/pub/arcade
         ref: main
       label: "human one-liner — why this repo/module"
     examples:
       - { url: https://github.com/SimHacker/moollm, label: "Whole MOOLLM microworld" }
-      - { repo: SimHacker/moollm, path: examples/adventure-4/pub, label: "Gezelligheid Grotto pub" }
+      - { repo: https://github.com/SimHacker/moollm, path: examples/adventure-4/pub, label: "Gezelligheid Grotto pub" }
   discussion:
     optional: true
     one_per_node: true
@@ -78,15 +89,15 @@ github_ref:
       GitHub repo hosts the issue (may differ from repo_pointer). Separate from pointing at code.
     forms:
       structured:
-        repo: SimHacker/WillWrightShowForFood
+        repo: https://github.com/SimHacker/WillWrightShowForFood
         issue: 42
         comment: 1234567890
       url:
         - "https://github.com/owner/repo/issues/N"
         - "https://github.com/owner/repo/issues/N#issuecomment-1234567890"
       legacy:
-        ref: "normalizes to discussion { repo, issue, comment? }"
-        issue: "shorthand — issue number or full issue URL (repo from URL or default WWSFF)"
+        ref: "normalizes to discussion { repo, issue, comment? } — repo must be HTTPS URL when structured"
+        issue: "shorthand — issue number or full issue URL (repo from URL or default WWSFF root URL)"
     resolution: |
       When discussion is set, orchestrator MAY fetch the issue thread. YAML node still frames
       the question locally. repo_pointer and discussion may both be set (e.g. point at moollm
@@ -144,7 +155,7 @@ context_lasers:
     structured:
       type: "directory | interface | file | line — aliases: kind (legacy)"
       url: "full GitHub URL when you have one"
-      repo: "owner/name"
+      repo: "https://github.com/owner/repo — repo root; required in structured lasers when not using url alone"
       path: "repo-relative dir or file path"
       interface: "CARD | GLANCE | CHARACTER | … — with dir path, resolves to dir/INTERFACE.yml"
       ref: "branch, tag, or commit SHA — default main"
@@ -167,8 +178,9 @@ context_lasers:
     diff: "pull/NNN/files#diff-… — PR file region"
     raw: "raw.githubusercontent.com/… — fetch plain text for line slicing"
   orchestration: |
-    Don Philahue follows lasers before ASK-QUESTION. ref = where discussion lives; lasers = what
-    the question is about. Directory lasers load ensemble context; interface lasers load one facet.
+    Don Philahue follows lasers before ASK-QUESTION. discussion = where the thread lives;
+    lasers = what the question is about. Directory lasers load ensemble context; interface
+    lasers load one facet.
   examples:
     flat:
       - question: "About Palm's whole being vs just his ask ability"
@@ -178,7 +190,7 @@ context_lasers:
             url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm
             label: "Whole monkey-palm room"
           - type: interface
-            repo: SimHacker/moollm
+            repo: https://github.com/SimHacker/moollm
             path: examples/adventure-4/characters/animals/monkey-palm
             interface: CARD
             facet: methods.PHILOSOPHIZE
@@ -191,7 +203,7 @@ context_lasers:
             - url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/stage/palm-nook/study
               label: "Whole study shelf"
           interface:
-            - repo: SimHacker/moollm
+            - repo: https://github.com/SimHacker/moollm
               path: examples/adventure-4/characters/animals/monkey-palm
               interface: CHARACTER
               facet: representation.self_aware_ai
@@ -235,8 +247,8 @@ question_node:
   required_for_orchestration: [question, to]
   required_alt: [text, to]
   optional:
-    repo_pointer: "whole repo or namespace path — see github_ref.repo_pointer"
-    discussion: "{ repo, issue, comment? } — issue thread; see github_ref.discussion"
+    repo_pointer: "whole repo or namespace — repo field is https://github.com/owner/repo URL"
+    discussion: "{ repo: https://github.com/owner/repo, issue, comment? } — issue thread; see github_ref.discussion"
     ref: "legacy — normalizes to discussion"
     issue: "legacy shorthand — normalizes to discussion"
     answer: "Optional local summary — orchestration hint, not canonical over GitHub"
@@ -261,16 +273,16 @@ question_node:
       directory:
         - url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm
       interface:
-        - { repo: SimHacker/moollm, path: examples/adventure-4/characters/animals/monkey-palm, interface: CARD, facet: methods.PHILOSOPHIZE }
+        - { repo: https://github.com/SimHacker/moollm, path: examples/adventure-4/characters/animals/monkey-palm, interface: CARD, facet: methods.PHILOSOPHIZE }
       file:
         - https://github.com/SimHacker/moollm/blob/main/…/the-inner-state-question.md
   with_ref: |
     { question: "My framing", to: will-wright,
-      repo_pointer: { repo: SimHacker/moollm, path: examples/adventure-4/pub/arcade },
-      discussion: { repo: SimHacker/WillWrightShowForFood, issue: 42 },
+      repo_pointer: { repo: https://github.com/SimHacker/moollm, path: examples/adventure-4/pub/arcade },
+      discussion: { repo: https://github.com/SimHacker/WillWrightShowForFood, issue: 42 },
       children: [
         { question: "This comment was gold", to: will-wright,
-          discussion: { repo: SimHacker/WillWrightShowForFood, issue: 42, comment: 9876543210 } }
+          discussion: { repo: https://github.com/SimHacker/WillWrightShowForFood, issue: 42, comment: 9876543210 } }
       ] }
 
 thread_node:
@@ -297,11 +309,11 @@ cross_character:
   example:
     palm:
       - question: "From a simulated person's motive bars…"
-        discussion: { repo: SimHacker/WillWrightShowForFood, issue: 42 }
+        discussion: { repo: https://github.com/SimHacker/WillWrightShowForFood, issue: 42 }
     fictional-bella-goth:
       - question: "Mortimer keeps asking this at load screens"
         stance: me_too
-        discussion: { repo: SimHacker/WillWrightShowForFood, issue: 42, comment: 111 }
+        discussion: { repo: https://github.com/SimHacker/WillWrightShowForFood, issue: 42, comment: 111 }
 
 github_discussion:
   votes:

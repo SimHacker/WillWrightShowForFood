@@ -16,6 +16,7 @@ the_shows:
   bridges:  [game-bridge-sims-stardew, game-bridge-proxi-sims]   # the data-portability CROWN JEWEL
   solo:     [pie-menus-retrospective, ted-selker-input-languages, pixie-pie-menus-pdp6, lambdamoo-pavel-curtis, walter-bender-olpc]
   game_show: [game-show-wigcercize, micropolis-ai-drag-race]   # VARIETY formats
+  ideas: ideas/   # gags, themes, traditions, show content packs
   add_more: "Copy _TEMPLATE.yml → <slug>.yml; list in INDEX.yml + REPO-SHOWS.yml."
 
 formats: "design-interview · series · group · bridge · game-show. (Same SHOW skill; different TYPE.)"

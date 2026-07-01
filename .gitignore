@@ -6,4 +6,12 @@ node_modules/
 dist/
 .DS_Store
 *.swp
-.work/
+# Build / IDE
+**/bin/
+**/obj/
+**/.vs/
+*.user
+*.suo
+LaunchSettings.json.user
+appsettings.local.json
+**/catalog.sqlite

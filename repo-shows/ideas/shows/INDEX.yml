@@ -1,0 +1,6 @@
+# shows/ — INDEX
+
+packs:
+  will-wright:
+    dir: will-wright/
+    show: ../../will-wright/SHOW.yml

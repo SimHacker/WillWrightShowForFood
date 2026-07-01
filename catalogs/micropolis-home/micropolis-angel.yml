@@ -1,0 +1,162 @@
+# MicropolisAngel — Windows Steam companion for The Sims Legacy Collection
+# Working title was SimAngel — use MicropolisAngel (no "Sim" in product name; EA trademark respect)
+# NOT a web wrapper — native helper while you play. Web hub (Micropolis Home) ships FIRST.
+
+id: micropolis-angel
+status: planted
+announce: after_web_hub_audience
+parent: CATALOG.yml
+platform: windows
+requires:
+  game: https://store.steampowered.com/app/3314070/The_Sims/
+  doc: ../get-the-sims-on-steam.md
+  note: |
+    The Sims 1 runs on Windows only in Legacy Collection — not on Mac. MicropolisAngel targets
+    the PC where the game actually runs. Mac users browse catalogs and albums on Micropolis Home (web).
+
+one_line: |
+  Steam Software companion that watches over you playing Sims 1 — catalog, accessibility, machinima,
+  streaming, and Exchange revival — supercharging storytelling without replacing the game.
+
+not:
+  - "Electron shell around Micropolis Home website"
+  - "Implied EA endorsement or Plumbob branding"
+  - "Cheat bot or TSO economy exploit suite"
+  - "Mac app (game does not run there)"
+
+# WHY NOW (2000 vs 2026)
+why_now:
+  then: |
+    In 2000 machinima storytelling, real-time video compression, screencasting, OBS/YouTube/Twitch
+    integration, and community catalog federation were not practical at consumer scale.
+  now: |
+    Same vision Don prototyped in the SimFreaks catalog (Laszlo + Python) — compose 2D playset
+    scenes, share object collections, revive Exchange-style publishing — plus Simplifier lineage
+    (screen read, TTS, guided browse) and modern streaming stack.
+  gateway: |
+    MicropolisAngel is the desktop gateway to Micropolis Home and the resurrection of EA's historic
+    but expired web services (Sims Exchange storytelling + downloadable content culture).
+
+# ROLLOUT — web first, Angel second
+rollout:
+  order:
+    1: "Micropolis Home web hub — create · publish · share; bootstrap audience (no install)"
+    2: "Steam Community Guides + MTS + YouTube + Repo Shows — promote web URL"
+    3: "Announce MicropolisAngel on Steam Software when web hub + catalog sync are live"
+  rule: |
+    Do not lead with the Steam app. Get the web hub working, promote elsewhere, build audience,
+    then announce the tangible Windows companion as the power-user / creator / streamer upgrade.
+
+# WHAT IT DOES (grouped)
+capabilities:
+  while_you_play:
+    what: "Watches over you playing — fair assistant, not cheat bot"
+    - "Screen reader + accessibility bridge for legacy Sims UI"
+    - "Catalog capture from live game window (Simplifier lineage)"
+    - "Install helpers — find objects online, download, install, UserData paths"
+    - "Personal catalog — favorites, notes, tips, object guides"
+
+  simplifier_showcase:
+    lineage: ../../apps/stream-gateway/simplifier.yml
+    what: |
+      Pioneered speech synthesis: read object titles and descriptions aloud; click through the UI to
+      browse and showcase objects. Build a favorites list; share it; others play it back — the app
+      browses the catalog, selects objects for you to view, reads descriptions, then places in game.
+
+  catalogs_and_sharing:
+    - "Search, browse, favorite, share favorites lists online"
+    - "Share personal catalogs, curated lists, and save files via Micropolis Home federation"
+    - "Playback shared lists — guided tour through someone else's picks"
+    web_sync: "Micropolis Home is source of truth for published lists; Angel is the in-game client"
+
+  storytelling:
+    - "Picture + text Family Albums (Exchange revival lineage)"
+    - "2D playset composer — room snapshot backgrounds + objects + Sims like removable vinyl stickers"
+    - "Publish a collection of objects others download and install together"
+    prototype: |
+      Much of this already implemented in the SimFreaks catalog prototype (Laszlo CMS): compose scenes
+      with screen-capture room backgrounds, place objects and people, publish as installable sets.
+    sources:
+      - ../../characters/will-wright/sources/2005-09-18-simfreaks-content-catalog-laszlo/
+      - ../../characters/will-wright/sources/2004-01-12-sims-exchange/
+      - ../simfreaks/
+
+  machinima_and_streaming:
+    - "Machinima video storytelling tools (impractical in 2000; practical now)"
+    - "Real-time capture, compression, screencasting"
+    - "OBS, YouTube, Twitch integration"
+    - "Repo Show / Micropolis Class stream rig shares DNA with stream-gateway (broadcast tier)"
+
+  chat_with_god:
+    playful_name: "Chatting with God"
+    what: |
+      Capture screen + game telemetry, send to ChatGPT (or chosen model), get advice, read it aloud
+      via TTS — the thing players already do manually with screenshots, made easy while you play.
+    framing: |
+      Playful Sim Religion — reclaim Angel, Soul, and a little God for gameplay (like Queer was
+      reclaimed): character models are souls; the Angel knows them across games. Earnest for people
+      who use AI helpers seriously; funny for realists. Not theology; not a host voice clone.
+    not: "AI impersonating Drew Carey or any living person on a broadcast"
+    business: "Optional subscription pays for API tokens — scales to cross-game Angel SKUs"
+    cross_game: |
+      Souls (character models) can live in multiple games; Angel follows the player — not Sims-only
+      forever. Same assist pattern: advise YOUR play, don't replace YOUR personality on air.
+
+  graveyard_manager:
+    playful_name: "Graveyard manager — Death, Satan, and the bodies"
+    what: |
+      Integrates with Sims 1 Death (Grim Reaper) and Satan NPCs; enumerates urns and tombstones
+      from **save-file parse** (Micropolis Home TS in embedded WebView2); guides resurrection,
+      deliberate story kills, and cloning.
+    data_path: |
+      Primary: read neighborhood/lot saves via FileBridge — not screen scrape.
+      Angel runs full Micropolis Home content platform in WebView2; talks to central SvelteKit
+      for publish/sync; local SQLite catalog cache; no local Svelte server required v1.
+    sims1_objects: ["The Grim Reaper", "Satan", "Urn/Tombstone", Victorian and Cloisonne urns]
+    requires_lifecycle: |
+      Some flows need save game → main menu → reload lot → or restart Sims — Angel orchestrates
+      inject when needed, always save-before-mutate.
+    ethics: "Operator consent for kill/resurrect/clone; accessibility + storytelling, not grief bot"
+    lineage: ../../apps/micropolis-angel/SIMSKIT-LINEAGE.yml
+
+  unified_stream_gateway:
+    what: |
+      MicropolisAngel IS the Windows ship target for stream-gateway + Simplifier — one app:
+      embedded Micropolis Home TS platform, Twitch/YouTube/OBS, cursor-mirror, catalog crawl.
+    shell: "WinUI 3 + WebView2 → central Micropolis Home site + FileBridge (NOT local Svelte v1)"
+    impl: ../../apps/micropolis-angel/ARCHITECTURE.yml
+    simskit: ../../apps/micropolis-angel/SIMSKIT-LINEAGE.yml
+    dev_setup: ../../apps/micropolis-angel/WINDOWS-DEV-SETUP.md
+
+# STEAM LISTING SHAPE
+steam:
+  category: software
+  model: companion_requires_owned_game
+  platform: [windows]
+  framing: |
+    Fair assistant and creator tool for Legacy Collection players — catalog, accessibility,
+    machinima, streaming. Links to Micropolis Home and federated creator storefronts (SimFreaks,
+    SimSlice, …). Fan-made; not EA-endorsed.
+  disclaimer: |
+    Not endorsed by or affiliated with Electronic Arts, or its licensors. Trademarks are the
+    property of their respective owners.
+
+# RELATION TO MICROPOLIS HOME
+relationship:
+  web_hub: micropolis-home (this directory)
+  guides: steam-community-guide.yml
+  division: |
+    Browser = create · publish · share · discover · Repo Shows · zero install.
+    MicropolisAngel = Windows-native while-you-play: scrape, install, TTS showcase, stream, playset publish.
+  sync: "Favorites lists, catalogs, albums, saves round-trip through Micropolis Home federation APIs"
+
+see_also:
+  - README.md
+  - steam-community-guide.yml
+  - ../../apps/micropolis-angel/ARCHITECTURE.yml
+  - ../../apps/micropolis-angel/WINDOWS-DEV-SETUP.md
+  - ../../apps/stream-gateway/simplifier.yml
+  - ../../apps/stream-gateway/SPEC.yml
+  - ../sims1-community-landscape.yml
+  - ../simfreaks/CATALOG.yml
+  - ../../characters/heather-steve-alvey/

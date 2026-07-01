@@ -17,8 +17,46 @@ keywords:
   - stupid fun club
   - repo show
   - flower child
+  - direct manipulation
+  - method of loci
+  - digital twin
+  - moollm
+  - forth
+  - generalist
+  - bare metal to browser
+  - robots
+  - computer vision
 
 card: CARD.yml
+
+serves_as:   # design intent (internal breadcrumb) -- this dir is ALL of these at once, but we
+             # NEVER label it as such in the visible prose. Show, don't tell; it's obvious.
+             # A living MOOLLM object IS your demo/resume/portfolio -- announcing it would break the spell.
+  - MOOLLM demo (the point: this is what a MOOLLM object/character looks like)
+  - self-model (Don as a navigable, inheritable prototype)
+  - home page / personal site
+  - LinkedIn-page supplement (what you can't fit on LinkedIn)
+  - resume (career/work-history.yml, contracts/ -- the receipts)
+  - portfolio (lineage.yml + range.yml + project-threads.yml)
+  - Repo Show series scripts (each facet -> an episode/talk)
+  - family album of a 40-year career
+  rule: "All implicit. No 'this is my resume' text. The medium is the message."
+
+future:   # the roadmap form of serves_as -- where this dir wants to grow
+  navigable_memory_palace: |
+    Turn all of this into a MOOLLM room-navigable MEMORY PALACE of Don's projects: rooms you
+    walk through, with the interconnecting threads and IDEAS as OBJECTS in those rooms that a
+    visitor can pick up, carry around, and apply to their own designs. It's self-demonstrating:
+    method of loci (from his own lineage) presenting the lineage; ideas as Sims-style objects
+    that carry their own behavior (also from his lineage). The flat dir is v1; the walkable
+    palace is the payoff -- and a natural Repo Show.
+  compiled_artifact: |
+    Then run it through the ADVENTURE COMPILER to compile the palace into a self-contained,
+    interactive, browser-based artifact: text + multimedia, with time-based content
+    SYNCHRONIZED TO VIDEO, navigated by a pie-menu map. One shippable file that IS the demo --
+    and it braids the whole bundle at once: adventure compiler (Logo Adventure), pie-menu map
+    navigation (pie menus), video-synced time-based media (DreamScape / MediaGraph / QuickTime),
+    self-contained in the browser (WASM/web). The medium is the message, compiled.
 
 navigation:
   up: ../GLANCE.yml
@@ -51,6 +89,8 @@ see_also:
     - { path: ../slats/GLANCE.yml, why: "SFC robot sidekick" }
     - { path: ../will-wright/GLANCE.yml, why: "Flagship guest" }
   children:
+    - { path: career/lineage.yml, why: "The lineage — a bundle of ideas, MUD1/Zork to MOOLLM" }
+    - { path: career/range.yml, why: "Bare-metal-to-browser generalist range" }
     - { path: career/simcity-lineage.yml, why: "Open-source saga timeline" }
     - { path: career/contracts/README.md, why: "DUX/Maxis/EA/OLPC papers" }
   across:

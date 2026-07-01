@@ -8,6 +8,7 @@ room:
 
 collection: REPO-SHOWS.yml
 registry: INDEX.yml
+ideas: ideas/
 
 flagship: will-wright/
 game_shows: [micropolis-ai-drag-race.yml, game-show-wigcercize.yml]
@@ -23,6 +24,7 @@ see_also:
   - { path: INDEX.yml, why: "Show registry" }
   - { path: ../process/entryways/guest-will.md, why: "Will guest playlist" }
   - { path: ../process/entryways.yml, why: "All entryways yaml" }
+  - { path: ideas/README.md, why: "Gags, themes, traditions, show content catalog" }
   - { path: will-wright/README.md, why: "Flagship planted show" }
   - { path: micropolis-ai-drag-race.yml, why: "Drag race show seed" }
   - { path: lars-brinkhoff/SHOW.yml, why: "Retro guest show — make it so" }

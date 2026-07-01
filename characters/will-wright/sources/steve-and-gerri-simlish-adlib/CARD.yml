@@ -1,0 +1,37 @@
+# CARD — Stephen Kearin & Gerri Lawlor Simlish ad-lib (interface only)
+# Nav + metadata: GLANCE.yml
+
+glance: GLANCE.yml
+
+room:
+  id: steve-and-gerri-simlish-adlib
+  name: "Stephen Kearin & Gerri Lawlor — Simlish ad-lib session"
+  type: [source_bundle, primary_source, audio_artifact]
+  home: characters/will-wright/sources/steve-and-gerri-simlish-adlib/
+
+methods:
+  LISTEN:
+    signature: "listen() → steve-and-gerri-simlish-adlib.wav"
+    advertisement: "~2.5 min — English improv over early Sims; Simlish birth energy."
+  PROOFREAD-TRANSCRIPT:
+    signature: "proofreadTranscript() → TRANSCRIPT-DRAFT.md"
+    advertisement: "Whisper draft + timestamps — fix Sim names and speaker labels."
+  CITE-ORIGINS:
+    signature: "citeOrigins() → language-simlish.yml#origins"
+    advertisement: "Foreign Poet → Simlish — cite on air with ethics note for Lawlor."
+
+abilities:
+  - id: FOREIGN-POET-ON-TAPE
+    name: Foreign Poet on Tape
+    type: activated
+    advertisement:
+      method: foreignPoetOnTape
+      signature: "foreignPoetOnTape(session) → simlish_origins_segment"
+      score_when:
+        - trigger: sims_voice_origins
+          weight: 0.95
+    effect: "Icons carry meaning; voice carries feeling — heard live before Simlish."
+
+compose_with:
+  - ../1998-06-04-sims-steering-committee-demo/CARD.yml
+  - ../../../../schemas/language-simlish.yml

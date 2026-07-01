@@ -27,6 +27,8 @@ invitation:
   status: dream_guest
   consent: not_yet_asked
   show_seed: repo-shows/drew-carey/
+  document: ../../repo-shows/drew-carey/invitation.md
+  ai_framing_md: ../../repo-shows/drew-carey/ai-contrast-framing.md
 bio:
   born: 1958
   summary: |

@@ -19,6 +19,8 @@ following through to working code and credited ideas in public.
 
 **Materials:** [`repo-shows/alan-kay-microworld.yml`](../../repo-shows/alan-kay-microworld.yml)
 
+**Ideas to explore:** [`ideas.md`](ideas.md) · [`correspondence.yml`](correspondence.yml) · [`media/from-mail/`](media/from-mail/)
+
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 
 **Your response:** Accepted, delayed, too busy, declined, or no reply — all honored gracefully.

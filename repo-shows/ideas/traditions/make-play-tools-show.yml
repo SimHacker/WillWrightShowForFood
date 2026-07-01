@@ -1,0 +1,110 @@
+# Make · Play · Tools — the TV show format
+# Umbrella pitch: a show ABOUT developing and playing games & tools, using AI the best way.
+
+id: make-play-tools-show
+type: tradition
+status: ready
+shows: [all]
+
+elevator: |
+  A TV/streaming show about **making** games and tools, **playing** them on camera, and **showing**
+  how to use AI honestly — as orchestrator and instrument for human authorship, not as synthetic
+  replacement for personality on air.
+
+one_line: "Develop it live. Play it live. People stay in the middle."
+
+# THREE BEATS — every episode cycles these
+beats:
+  develop:
+    what: |
+      Design conversation + implementation in public. Explain WHY a mechanic works, then make it
+      real in the repo (MOOLLM + Cursor). Micropolis, Sims objects, web tools, skills — the git
+      history IS the making-of featurette.
+    lineage: Micropolis Class · design-in-public · repo-show-format
+  play:
+    what: |
+      Actually run the thing — Sims wedding with Cupid, play-along narration, SliceCity, Micropolis,
+      Pink Trombone jam, speed-dating segment. Games and tools are performed, not slideware.
+    examples:
+      - ../gags/speed-dating-with-cupid.yml
+      - ../gags/pixelized-joint-wedding.yml
+      - ../../process/sims-play-along-narration.yml
+  discuss:
+    what: |
+      Conversation between PEOPLE — guests, audience via TicketPR, host — plus ethical simulated
+      characters (fan portrayals, human-voiced puppets). The talk is the show; the code is proof.
+    lineage: Terry Winograd CS547 · Yoot→Alan Kay interview tradition
+
+# AI — the BEST way (constitutional)
+ai:
+  thesis: ../themes/human-control-and-authorship.yml
+  does:
+    - "Writes and edits code in the open repo"
+    - "Orchestrates stream segments, queues, character triggers"
+    - "Proposes text for fictional roles — humans perform"
+    - "Harvests show artifacts into reusable MOOLLM skills (cauldron)"
+  does_not:
+    - "Voice-clone living guests or replace DJ/host personality"
+    - "Auto-script the improviser (contrast: Drew Carey Freakout experiment — public record)"
+  pitch_contrast: ../../drew-carey/ai-contrast-framing.yml
+
+# TELEVISION LINEAGE — we've shipped this shape before
+television_lineage:
+  will_and_don:
+    note: |
+      Will Wright and Don Hopkins did not invent audience participation on paper — they **made a TV
+      show** (Bar Karma), playtested branching narrative on real users, and iterated through
+      CreationTV, StoryMaker, and Urban Safari. Repo Show applies those learnings with git +
+      MOOLLM + honest AI orchestration.
+    chain: "Sims Family Album → CreationTV → StoryMaker → Bar Karma (broadcast) → Urban Safari"
+    playtest: "StoryMaker branching was playtested on real users via the TV show; learnings shaped Urban Safari"
+  bar_karma:
+    what: |
+      **Bar Karma** (CurrentTV) — first online community-developed network TV series. StoryMaker +
+      audience votes + branching narrative → real broadcast. Repo Show is Bar Karma's grandchildren:
+      git instead of MediaWiki flash, MOOLLM instead of opaque pipeline, same audience-as-author.
+    demo: https://www.youtube.com/watch?v=Nb_-J1lv-B8
+    wiki: https://en.wikipedia.org/wiki/Bar_Karma
+    ties: ../../../process/crazy-idea-jam.yml · characters/don-hopkins/career/stupid-fun-club.yml
+  storymaker:
+    what: |
+      **StoryMaker** — collaborative branching storytelling stack (Flash client, MediaWiki + Python,
+      iPad, Facebook, Unity visualizer). Matthew Sibigtroth built the original Flash app; Don built
+      CreationTV iPhone prototype and the full server stack with Will at Stupid Fun Club.
+    demo: https://www.youtube.com/watch?v=_2yEHs_WLzQ
+    article: ../../../characters/will-wright/sources/don-youtube-storymaker-demo/
+  creationtv:
+    what: |
+      **CreationTV** — iPhone prototype Don built for Will at Coffeeshop Bluebird (Amsterdam),
+      from Will's abstract slide symbols. Grew into StoryMaker for CurrentTV / Bar Karma.
+    demo: https://www.youtube.com/watch?v=Nb_-J1lv-B8
+  urban_safari:
+    what: |
+      **Urban Safari** — geolocated GPS storytelling; capture cards in the field, follow others'
+      paths through a shared graph. Lessons from playtesting StoryMaker on real TV-show users.
+    demo: https://www.youtube.com/watch?v=Db8KGNoeKHE
+  drew_carey_show_in_sims:
+    what: "TV met games met improv — Maxis built a lot; Drew narrated live inside The Sims."
+    url: https://www.youtube.com/watch?v=5wr04-WmWkg
+  whose_line_price_is_right:
+    what: "Audience participation cathedral — TicketPR / Question Is Right homage."
+
+# WHAT VIEWERS GET
+viewer_promise:
+  - "Watch games and tools get built for real — then watch them get played"
+  - "Learn rig culture: declare your stack, show your work, fork the repo"
+  - "Participate: TicketPR, play-along clips, puppet rotation, honest staged call-ins"
+  - "Take home skills + code — not a hype deck"
+
+# DISTRIBUTION SHAPE (not a commitment)
+distribution:
+  now: "Live stream + time-shifted repo (Twitch/YouTube + GitHub issues/PRs)"
+  later: "Anthology episodes for streaming/TV — Bar Karma proved broadcast; this proves the repo"
+  note: "Nothing here is a production promise — inspectable seed first."
+
+see_also:
+  - ../../../process/repo-show-format.yml
+  - ../../../process/vision-and-ambition.yml
+  - ../../will-wright/performance-and-culture.yml#credibility_and_stance
+  - ../themes/human-control-and-authorship.yml
+  - ../../../process/performance-space.yml

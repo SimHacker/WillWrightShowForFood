@@ -1,0 +1,79 @@
+# Human control & authorship — AI on the Repo Show
+# Cross-show constitutional theme. Pitch contrast for guests who've seen AI done badly.
+# Lineage: Douglas Engelbart — augmenting human intellect, not replacing it.
+
+id: human-control-and-authorship
+type: theme
+status: ready
+shows: [will-wright, drew-carey, all]
+
+lineage:
+  from: douglas-engelbart
+  thesis: |
+    Engelbart (1962): computers as instruments that augment human intellect — orchestrate and
+    accelerate at machine speed while human control, judgment, and authorship stay central.
+    Augmentation NOT automation; not replacement.
+  character: ../../characters/douglas-engelbart/
+  trail: ../../process/trails/augmentation-and-hypertext.md
+  pitm: ../../process/crazy-idea-jam.yml#player_in_the_middle
+
+thesis: |
+  AI proposes; PEOPLE dispose. The LLM writes CODE, orchestrates live streams, and stages
+  discussion between HUMANS — it does not replace human voice, personality, or authorship on air.
+
+player_in_the_middle:
+  canonical: ../../../process/crazy-idea-jam.yml#player_in_the_middle
+  one_line: "Center people, not the machine. Curation of the flow IS the show."
+
+what_ai_does:
+  - "Writes and edits repo code live (MOOLLM + Cursor) — visible, reviewable, mergeable"
+  - "Orchestrates stream segments, TicketPR queue, character triggers, scene cues"
+  - "Generates TEXT for fictional characters — performed by human puppeteers"
+  - "Proposes questions, links, harvest paths — humans approve on air"
+
+what_ai_does_not_do:
+  - "Voice-clone living guests or audience members"
+  - "TTS-replace the host or guest personality"
+  - "Auto-generate the guest's script or impersonate their timing"
+  - "Pass simulated characters off as real people without labeling"
+
+voicing:
+  canonical: ../../will-wright/performance-and-culture.yml#voicing
+  rule: "PUPPETRY — humans voice character-puppets. No synths, no cloned voices."
+  instruments: |
+    Pink Trombone, Phoneloper = vocal-tract INSTRUMENTS a person plays live — not a
+    replacement for the performer.
+
+characters:
+  rule: |
+    Will's beloved menagerie of game characters + our own + contributors' — ETHICALLY and
+    RESPECTFULLY. Clearly-labeled affectionate fan portrayals; portrayal-standards.yml;
+    no invented quotes from living public figures.
+  schema: ../../../schemas/portrayal-standards.yml
+
+drew_carey_contrast:
+  pitch_doc: ../../drew-carey/ai-contrast-framing.yml
+  note: |
+    Drew's own 2023 experiment proved the audience rule we build on. Not an attack — a shared
+    lesson from someone who already said "don't do it again" to replacing personality with AI.
+
+umbrella_format:
+  canonical: ../traditions/make-play-tools-show.yml
+  elevator: "TV show about developing and playing games & tools — AI as best-practice instrument."
+
+simulation_vs_impersonation:
+  canonical: simulating-people.yml
+  schema: ../../../schemas/portrayal-standards.yml#simulation
+  one_line: |
+    Impersonation (ChatGPT-as-you) ≠ simulation (labeled dolls, fictional characters, consented
+    self-models with human authorship). Sims players have simulated people for 26 years; AI raises
+    the stakes — we govern with consent, labeling, and PITM.
+
+see_also:
+  - simulating-people.yml
+  - ../traditions/puppet-taxonomy.yml
+  - ../traditions/honest-fake-call-in.yml
+  - ../../will-wright/SHOW.yml#defense_against_ai_slop
+  - ../../../process/performance-space.yml#ethics
+  - ../../../characters/douglas-engelbart/
+  - ../../../process/trails/augmentation-and-hypertext.md

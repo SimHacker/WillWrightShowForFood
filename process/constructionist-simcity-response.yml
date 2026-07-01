@@ -1,0 +1,38 @@
+# Constructionist microworlds — responding to the SimCity black-box critique
+# Public strategy. Private ops: DonHopkins/characters/don-hopkins/outreach/constructionist-simcity-response.yml
+
+meta:
+  north_star: "Same dreams Alan Kay has been voicing since OLPC — live, inspectable, modifiable microworlds. Ship working runbooks, not another proposal."
+  critique_source: "Alan Kay — SimCity as black box; Will Wright acknowledged educator desire for explicit models (1996 Winograd talk)"
+
+problem:
+  black_box: "Players learn city-feel without seeing mechanisms — crime, traffic, pollution algorithms stay hidden"
+  educator_need: "Classrooms need exportable data, scriptable rules, reproducible sessions"
+
+response_pillars:
+  glass_box:
+    what: "Reverse diagrams → live views into the running sim (Chaim Gingold lineage)"
+    trail: trails/constructionist-lineage.md
+  export_guts:
+    what: "Telemetry and spreadsheets from gameplay — data literacy through a game students already relate to"
+    educator_anchor: "Prof. Upmanu Lall — Columbia Civil & Environmental Engineering; OPTIMUS / SimCity.edu lineage since ~2002"
+    source: characters/will-wright/sources/2004-02-07-educational-multiplayer-simcity-linux/
+  live_scripting:
+    what: "Snap! + Micropolis — Scheme-level live programming in the browser"
+  moollm_tutors:
+    what: "Constructionist microworlds for LLM sessions — rooms, hero-story cards, play-learn-lift"
+    repo: https://github.com/SimHacker/moollm
+
+runbooks_to_ship:
+  - id: educator-glass-box-session
+    steps: ["Play city", "Export metrics", "Analyze in spreadsheet", "Modify rule in Snap!", "Replay and compare"]
+  - id: constructionist-microworld-checklist
+    steps: ["Low floor / high ceiling / wide walls audit", "Transparency checklist", "Data export path", "Live inspect", "No opaque scoring"]
+
+connects:
+  - characters/alan-kay/
+  - characters/dan-ingalls/
+  - characters/chaim-gingold/
+  - characters/walter-bender/
+  - process/crazy-idea-jam.yml#educational_data_literacy
+  - process/trails/constructionist-lineage.md

@@ -1,0 +1,53 @@
+# SCOTT ADAMS — GLANCE (nav + metadata SSOT)
+# Interface: CARD.yml · self-sovereign invitation portrayal.
+# NOTE: Scott Adams the ADVENTURE-GAME PIONEER (Adventureland, Adventure International) --
+#       NOT the Dilbert cartoonist. Different person entirely.
+
+title: Scott Adams
+iconic: "🗺️ Scott Adams"
+description: |
+  Pioneer of the microcomputer text adventure -- Adventureland (1978), Adventure International,
+  and a tiny DATA-DRIVEN adventure engine (a portable adventure "database + interpreter")
+  that ran everywhere. Direct ancestor of Don's adventure compiler. Now diving into AI.
+
+keywords:
+  - scott adams
+  - adventure games
+  - adventureland
+  - adventure international
+  - interactive fiction
+  - text adventure
+  - two-word parser
+  - adventure engine
+  - questprobe
+  - ai
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  siblings:
+    - ../don-hopkins/
+    - ../will-wright/
+    - ../dan-ingalls/
+
+read_order:
+  - README.md
+  - CARD.yml
+  - invitation.md
+  - ideas.md
+  - CHARACTER.yml
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Character registry" }
+  siblings:
+    - { path: ../don-hopkins/GLANCE.yml, why: "Host; Logo Adventure + the adventure compiler he wants to build with/for Scott" }
+  across:
+    - { path: ../../repo-shows/scott-adams/README.md, why: "Show seed" }
+    - { path: ../../schemas/portrayal-standards.yml, why: "Portrayal ethics + subject rights" }
+  deep:
+    - { path: CARD.yml, why: "Adventure-engine abilities" }
+    - { path: invitation.md, why: "Public invitation draft" }
+    - { path: ideas.md, why: "Conversation hooks -- adventure + AI" }

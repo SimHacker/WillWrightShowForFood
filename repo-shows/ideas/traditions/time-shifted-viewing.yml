@@ -1,0 +1,15 @@
+# Time-shifted viewing by design
+
+id: time-shifted-viewing
+type: tradition
+status: ready
+canonical: ../../will-wright/SEGMENTS.yml#time_shifting
+
+intent: |
+  Recorded live, optimized for pause/branch. Characters drop links at beats; viewer reads,
+  explores MOOLLM, returns primed. The show is a navigable object — not appointment TV.
+
+example:
+  cue: "Palm asks what it's like to be a Sim"
+  drop: palm-on-being-palm essay link
+  payoff: "Will reacts — viewer and guest both read first"

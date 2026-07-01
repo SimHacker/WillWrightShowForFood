@@ -1,0 +1,66 @@
+# douglas-engelbart — media from mail exports
+# Private mail: see DonHopkins/characters/don-hopkins/email-archive/INDEX.yml
+
+character: douglas-engelbart
+consent_note: Public respectful portrayal for invitation browsing; subject may request removal
+artifact_count: 10
+
+artifacts:
+  - file: from-mail/artifact-sketch-sketch-today-at-32058-pm.png
+    kind: thread
+    title: "Sketch Sketch, Today at 3.20.58 PM"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-576-Re_ All I want is a NLS and Sketchpad mashup--Sketch Sketch, Today at 3.20.58 PM.png
+    message_subject: "Re: All I want is a NLS and Sketchpad mashup"
+    message_date: "Sunday, 30 April 2017 at 16:46:35"
+  - file: from-mail/paper-1582019912933blob.jpg
+    kind: paper
+    title: "1582019912933blob"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-1070-Fwd_ Film of Wiseman's "PIXIE_ A New Approach to Graphical Man-Machine Communica--1582019912933blob.jpg
+    message_subject: "Fwd: Film of Wiseman's "PIXIE: A New Approach to Graphical Man-Machine Communication""
+    message_date: "Tuesday, 18 February 2020 at 16:34:27"
+  - file: from-mail/paper-datastructuresforanetworkdesignsystem.pdf
+    kind: paper
+    title: "DataStructuresForANetworkDesignSystem"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-943-Film of Wiseman's "PIXIE_ A New Approach to Graphical Man-Machine Communication"--DataStructuresForANetworkDesignSystem.pdf
+    message_subject: "Film of Wiseman's "PIXIE: A New Approach to Graphical Man-Machine Communication""
+    message_date: "Friday, 21 February 2020 at 11:18:57"
+  - file: from-mail/paper-designprinciplesofhandgestureinterfacesformicrointeractions.pdf
+    kind: paper
+    title: "DesignPrinciplesofHandGestureInterfacesForMicrointeractions"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-232-Re_ Film of Wiseman's "PIXIE_ A New Approach to Graphical Man-Machine Communicat--DesignPrinciplesofHandGestureInterfacesForMicrointeractions.pdf
+    message_subject: "Re: Film of Wiseman's "PIXIE: A New Approach to Graphical Man-Machine Communication""
+    message_date: "Tuesday, 18 February 2020 at 13:02:58"
+  - file: from-mail/paper-pixie-a-new-approach-to-man-machine-communication.pdf
+    kind: paper
+    title: "PIXIE a new approach to man-machine communication"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-1082-Fwd_ [reference #91692] Film of Wiseman's "PIXIE_ A New Approach to Graphical Ma--PIXIE a new approach to man-machine communication.pdf
+    message_subject: "Fwd  [reference #91692] Film of Wiseman's "PIXIE  A New Approach to Graphical Ma"
+  - file: from-mail/paper-screen-shot-2018-05-17-at-95245-pm.png
+    kind: paper
+    title: "Screen-Shot-2018-05-17-at-9.52.45-PM"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-430-Re_ Flight of the PIXIE with Yuja Wang--Screen-Shot-2018-05-17-at-9.52.45-PM.png
+    message_subject: "Re: Flight of the PIXIE with Yuja Wang"
+    message_date: "Monday, 9 March 2020 at 23:18:50"
+  - file: from-mail/paper-screenshot-2020-03-19-at-052154.png
+    kind: paper
+    title: "Screenshot 2020-03-19 at 05.21.54"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-1206-Re_ [reference #94718] Final version of Flight of the PIXIE with Yuja Wang--Screenshot 2020-03-19 at 05.21.54.png
+    message_subject: "Re  [reference #94718] Final version of Flight of the PIXIE with Yuja Wang"
+  - file: from-mail/paper-univcambridge-colloquia-29th-june-1967-hulemke.pdf
+    kind: paper
+    title: "UnivCambridge - Colloquia 29th June 1967-HULemke"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-858-AW_ PIXIE History - Back to the Roots (Part 1, 1967)--UnivCambridge - Colloquia 29th June 1967-HULemke.pdf
+    message_subject: "AW: PIXIE History - Back to the Roots (Part 1, 1967)"
+    message_date: "Monday, 2 March 2020 at 15:20:20"
+  - file: from-mail/paper-univcambridge-seminar_2nd-dec-1970-hulemke.pdf
+    kind: paper
+    title: "UnivCambridge - Seminar 2nd Dec 1970-HULemke"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-858-AW_ PIXIE History - Back to the Roots (Part 1, 1967)--UnivCambridge - Seminar_2nd Dec 1970-HULemke.pdf
+    message_subject: "AW: PIXIE History - Back to the Roots (Part 1, 1967)"
+    message_date: "Monday, 2 March 2020 at 15:20:20"
+  - file: from-mail/paper-wiseman-notes-on-radial-menus-in-pixie.pdf
+    kind: paper
+    title: "Wiseman Notes on Radial Menus in PIXIE"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-1111-Re_ Book on Interaction Techniques--Wiseman Notes on Radial Menus in PIXIE.pdf
+    message_subject: "Re: Book on Interaction Techniques"
+    message_date: "Sunday, 16 July 2023 at 17:58:44"

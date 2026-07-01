@@ -1,0 +1,119 @@
+# Buy-mode / build-mode screen read → fuzzy catalog match
+# When GUID is unknown (user browsing in-game), OCR/UIA yields title, price, description.
+# Parent: ARCHITECTURE.yml#catalog_crawler  |  simplifier.yml#read
+
+meta:
+  id: catalog-screen-match
+  status: spec
+  one_liner: |
+    Read catalog panel from screen; fuzzy-match against installed objects; represent
+    ambiguity honestly; user or AI picks the GUID when several clones collide.
+
+# WHY OCR HERE (and not for graveyard / save parse)
+problem:
+  known: "Local scan knows every installed GUID + STR# title/description/price + fingerprint"
+  unknown: "Which GUID is the player looking at right now in buy mode or wallpaper/floor picker?"
+  why_not_iff_yet: "WebGPU iff renderer not ready; game already rendered the panel — scrape it"
+  retire_when: "In-game selection events from save parse or future hooks — OCR becomes fallback only"
+
+# PANEL REGIONS (Sims 1 buy / build — 800×600 lineage, scale for LC window)
+capture_regions:
+  catalog_title:
+    what: "Object or swatch name — larger font; Simplifier skipped this (TODO in lineage)"
+    ocr: "Windows.Media.Ocr primary; Simplifier glyph matcher fallback for Comic Sans quirks"
+  catalog_price:
+    what: "Simoleons line when present (objects); may be absent for free / build swatches"
+    parse: "Strip §, commas; integer simoleons"
+  catalog_description:
+    what: "Multi-line body text in description panel"
+    lineage: "SimplifierDoc.cpp CompileGlyphs + fontBitmap — port as optional native path"
+  preview_bitmap:
+    what: "Catalog icon / 3D preview thumbnail in panel"
+    use: "Perceptual hash vs previews table — disambiguate title collisions"
+  mode_context:
+    what: "Buy vs build, category tab, wall vs floor vs object — from UIA + title bar heuristics"
+
+# MATCH PIPELINE
+pipeline:
+  steps:
+    - capture: "Window-scoped Graphics.Capture on Sims catalog panel"
+    - ocr: "Title, price, description → normalized strings"
+    - optional_hash: "Preview crop → pHash or dHash"
+    - query: "Candidate set from objects WHERE installed_in_active_profile"
+    - score: "Weighted fuzzy match (see scoring)"
+    - emit: "screen_match_event on bus — never silently pick one GUID if ambiguous"
+
+scoring:
+  signals:
+    title:
+      weight: 0.45
+      method: "token-set ratio + strip punctuation; case fold"
+    description:
+      weight: 0.30
+      method: "longest common substring + line overlap; OCR noise tolerant"
+    price:
+      weight: 0.15
+      method: "exact match boosts; mismatch penalizes but does not eliminate (recolors reprice)"
+    preview_hash:
+      weight: 0.10
+      method: "Hamming distance on 64-bit hash; missing preview → weight redistributed"
+  thresholds:
+    single_match: "score ≥ 0.92 AND margin ≥ 0.08 over second place → status=resolved"
+    ambiguous: "top two within margin OR score in [0.75, 0.92) → status=ambiguous"
+    no_match: "score < 0.75 → status=unknown — ask server / user"
+
+# COLLISION EDGE CASE — same title, different GUIDs
+duplicate_titles:
+  reality: |
+    Clones, repaints, site re-uploads, and GUID collisions produce multiple installed rows
+    with similar or identical catalog strings but different GUID, mesh, price, or description.
+  represent:
+    status: ambiguous | resolved | unknown
+    candidate_set: "ordered list of { object_id, guid, score, signals_json }"
+    never: "Pick a GUID silently when |candidates| > 1 and scores overlap"
+  disambiguation_order:
+    - preview_hash closest
+    - price exact
+    - description longest match
+    - fingerprint group from scan (exact-only collision case)
+    - user tap in Angel UI
+    - AI suggestion with confidence + rationale (logged to dispositions)
+  ui_copy: |
+    "We see 3 installed objects matching 'Victorian Lamp'. Pick one, or let AI suggest."
+  store: "screen_catalog_matches + screen_match_candidates tables (CATALOG-DB-SCHEMA.yml)"
+
+# WHAT WE CAN KNOW (epistemic hygiene)
+knowledge_layers:
+  observed:
+    - "OCR text at timestamp T"
+    - "Preview hash at T"
+    - "Active profile id + scan root set"
+  derived:
+    - "Candidate GUID set with scores"
+    - "Collision case link if guid_collision_cases exists"
+  resolved:
+    - "User or AI picked object_id — logged with operator_kind"
+  unknown:
+    - "Server has no row — offer tornado install CARD search"
+
+# INTEGRATION
+integration:
+  bus_event: screen.catalog_match
+  simplifier: "../stream-gateway/simplifier.yml#read"
+  sqlite: "CATALOG-DB-SCHEMA.yml#screen_catalog_matches"
+  tts: "SpeechService reads title+description when selection changes (Simplifier showcase)"
+  crawl: |
+    Catalog crawler walks buy mode: each selection → OCR match → store preview_blob +
+    link screen_match to object_id when resolved — bootstrap until WebGPU previews
+
+# BUILD PHASE
+build_phases:
+  - { id: m1, ship: "Capture + OCR title/description → bus event (read-only)", cost: zero }
+  - { id: m2, ship: "Fuzzy query against local objects table + ambiguous UI", cost: zero }
+  - { id: m3, ship: "Preview hash disambiguation + crawl loop integration", cost: zero }
+
+see_also:
+  - ARCHITECTURE.yml
+  - CATALOG-DB-SCHEMA.yml
+  - ../stream-gateway/simplifier.yml
+  - SIMSKIT-LINEAGE.yml

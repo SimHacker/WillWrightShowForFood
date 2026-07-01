@@ -1,0 +1,22 @@
+# apps/performance-space — GLANCE
+
+title: "Performance Space Web Toys"
+iconic: "🕳️🌐"
+description: "Browser OBS overlays — Conan face-puppet, play-along queue, amplitude scrub."
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+
+read_order:
+  - README.md
+  - conan-face-puppet.yml
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Apps room" }
+  across:
+    - { path: ../../process/performance-space/README.md, why: "Top-level design" }
+    - { path: ../stream-gateway/GLANCE.yml, why: "Overlay bus" }

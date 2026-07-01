@@ -1,0 +1,20 @@
+# Audience-orchestrated Sims gameplay
+# Chat / TicketPR drives in-engine actions; host executes on screen.
+
+id: audience-orchestrated-gameplay
+type: tradition
+status: ready
+
+pattern: |
+  Audience suggests the next move; host performs it live in The Sims (or related microworld).
+  Transparent, labeled, Rocky-Horror-adjacent — understanding the machinery lets you steer.
+
+examples:
+  - ../gags/speed-dating-with-cupid.yml
+  - ../traditions/foreign-poet-play-along.yml  # reverse: host narrates, game is mute footage
+
+ingress: ../../../process/ticket-pr.yml
+
+see_also:
+  - ../traditions/participation-rocky-horror.yml
+  - ../../will-wright/performance-and-culture.yml#rocky_horror_culture

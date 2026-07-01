@@ -9,10 +9,10 @@ read_order:
   - FORMAT.md
 
 clusters:
-  show: [repo-show-format.yml, showmaker-network.yml, live-repo.yml]
+  show: [repo-show-format.yml, showmaker-network.yml, live-repo.yml, performance-space.yml]
   competition: [micropolis-ai-drag-race.yml, ai-offs.yml, manual-transmission.yml, stick-shift-protocol.yml]
   retro: [challenges/retrocomputing-drive.yml, apple2-emulator-stack.yml, pdp10-its-stack.yml, lisp-machine-stack.yml]
-  live: [brain-stream.yml, model-branching.yml]
+  live: [brain-stream.yml, model-branching.yml, performance-space.yml]
   education: [homefun-grading.yml, orchestration-gold.yml]
 
 facade_rule: "yaml girder canonical — *.md markup generated on demand — markup-facades.yml"

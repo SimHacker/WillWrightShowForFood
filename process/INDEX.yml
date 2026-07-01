@@ -23,6 +23,15 @@ show_and_network:
     topic: "MOOLLM-core Play Along skills (Anthropic-format wrappers) + preloaded per-show runtime — the show as MOOLLM's distribution hook; Embrace/Extend/Share"
   sims-play-along-narration.yml:
     topic: "Sims Play-Along Narration — audience screen recordings + live guest voice-over improv (Drew Carey Show × Foreign Poet × TicketPR)"
+  performance-space.yml:
+    topic: "Performance Space — top-level live participation design (play-along, script reading, Conan face-puppet, OBS/webcam toys)"
+    room: performance-space/README.md
+  micropolis-home-steam-guides:
+    topic: "Micropolis Home — Steam Community Guides (web hub + Repo Shows discovery)"
+    path: ../catalogs/micropolis-home/steam-community-guide.yml
+  micropolis-angel:
+    topic: "MicropolisAngel — Windows Steam companion (Simplifier + catalog + machinima; announce after web)"
+    path: ../catalogs/micropolis-home/micropolis-angel.yml
   character-colocation.yml:
     topic: "Placement + cardify pyramid — characters/packages/rooms; CARD+GLANCE+SIMULATION"
   repo-show-regulars.yml:

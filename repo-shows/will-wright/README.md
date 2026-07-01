@@ -27,6 +27,7 @@ stars, flowers at his feet. Cozy, psychedelic, generous. Not a suit.)*
 | **Centerpiece** | [1996 Winograd](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) | THE seed artifact |
 | **Catalogs** | [catalogs](../../catalogs/README.md) | UCC brands · [Steam first](../../catalogs/get-the-sims-on-steam.md) |
 | **Audience** | [audience](audience/README.md) | TicketPR roster — join before air |
+| **Ideas** | [ideas pack](../ideas/shows/will-wright/README.md) | Gags, themes, episode seeds |
 | **Media** | [media](../../characters/will-wright/media/README.md) | Flower Child + sims-series gallery |
 | **Venue** | [venue](venue/README.md) | Theater map · balconies 🤡💀 |
 | **Guest** | [portrayal](../../characters/will-wright/README.md) | Will's invitation + CARD |

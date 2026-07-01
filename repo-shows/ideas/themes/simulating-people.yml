@@ -1,0 +1,63 @@
+# Simulating people — impersonation vs simulation
+# Cross-show ethics theme. Constitutional detail: schemas/portrayal-standards.yml#simulation
+
+id: simulating-people
+type: theme
+status: ready
+shows: [will-wright, drew-carey, all]
+
+question: "Is it ethical to simulate people?"
+
+thesis: |
+  There is a sharp line between impersonation (handing your voice and identity to ChatGPT to perform
+  AS you) and simulation (models of characters and people — fictional, historic, or yourself with
+  consent — clearly framed, author-controlled, playing with each other and with real humans).
+
+impersonation:
+  what: "Machine replaces your authorship — voice clone, ChatGPT script, opaque 'is that really them?'"
+  rule: forbidden_without_explicit_consent
+  drew_2023: |
+    Drew's AI DJ experiment is the public-record case: audience wanted personality back, not a
+    synthetic host. See drew-carey/ai-contrast-framing.yml
+
+simulation:
+  what: |
+    Game characters, fictional audience, historic figures, and living people who consent and
+    co-author their model. AI may animate dialogue and give agents autonomy — within human
+    approval and always labeled as simulation.
+  rule: allowed_when_labeled_and_governed
+
+sims_precedent:
+  note: |
+    For 26+ years players have made Sims of girlfriends, boyfriends, spouses, siblings, friends,
+    bullies — and run experiments on them (remove pool ladders, set them on fire). Kids and adults
+    both. That ship has sailed.
+  cultural_fact: "Simulating people in dollhouses is core Sims play — not a Repo Show invention"
+  will_1996: |
+    "Really no hope" simulating people — prop up a convincing illusion instead. The illusion worked
+    way better than Will predicted. AI makes illusions cheap; consent and labeling matter more.
+
+ai_opens_pandoras_box:
+  note: |
+    LLM agents can converse, decide, and be mistaken for real people at scale. We have thought long
+    and hard about this — not to ban simulation, but to govern it: Engelbart augmentation, PITM,
+    portrayal-standards, memorial mode, no living voice clones on air.
+  governance:
+    - "SIMULATION label always visible"
+    - "Consent + repo authorship for living models"
+    - "Human approves what agents say and do (Player-in-the-Middle)"
+    - "Deceased: discuss ABOUT; never speak AS"
+
+most_interesting_case: |
+  Simulating **yourself** — with your consent, direct authorship, and control — so an AI model of
+  you can play with other simulated characters and real people on air, clearly framed. TicketPR,
+  co-edited repo characters, self-sovereign Don. The opposite of ChatGPT impersonating you while
+  you sleep.
+
+see_also:
+  - ../../../schemas/portrayal-standards.yml#simulation
+  - human-control-and-authorship.yml
+  - ../traditions/puppet-taxonomy.yml
+  - ../../drew-carey/ai-contrast-framing.yml
+  - ../../../process/crazy-idea-jam.yml#player_in_the_middle
+  - ../../will-wright/suggested-questions.yml

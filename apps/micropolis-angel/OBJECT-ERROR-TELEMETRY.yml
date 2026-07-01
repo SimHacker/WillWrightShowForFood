@@ -1,0 +1,104 @@
+# ObjectError file ingest — user-consented crash reports for catalog quality
+# Parent: GUID-ISSUE-HUB.yml  |  launcher -debug_objects in ARCHITECTURE.yml
+
+meta:
+  id: object-error-telemetry
+  status: spec
+  one_liner: |
+    Parse ObjectError_h##_t#####.txt from Sims working dir; redact; upload with consent;
+    route to GitHub issue-per-GUID hub and creator CARD contacts.
+
+# ENABLEMENT
+enablement:
+  launch_flag: "-debug_objects"
+  note: "Observed on Legacy Collection builds — pass through Angel launcher; no binary patch required for v1"
+  cwd_policy: "Angel sets working directory to known folder so FileWatcher path is stable"
+  watcher: "Native FileBridge watches for ObjectError_h*.txt creation"
+
+# PARSE SCHEMA (from observed error file format)
+parsed_fields:
+  header:
+    object_name: string
+    object_instance_id: integer
+    error_message: string
+    build_stamp: string
+  stack:
+    frames:
+      - object_instance_id: integer
+        node: integer
+        tree_id: integer
+        tree_name: string
+        tree_version: integer
+        source_path: string   # e.g. .\downloads\packname
+        prim_state: integer
+  dumps:
+    person_data: "optional object[]"
+    data_slots: "optional object[]"
+    attributes: "optional object[]"
+    neighborhood: "redact by default"
+
+# GUID RESOLUTION (instance id ≠ definition GUID)
+guid_resolution:
+  steps:
+    - "Map instance id → selector at crash tick if save parse available"
+    - "Else match object_name + source_path against objects.catalog_name + file rel_path"
+    - "Else screen_catalog_match fuzzy if user was in buy mode recently"
+    - "Else status=unresolved_guid — still file issue under unknown bucket"
+  store: "object_error_reports.resolved_guid nullable"
+
+# REDACTION
+redaction:
+  always_strip:
+    - sim_names
+    - household_names
+    - free_text neighborhood fields with proper nouns
+  opt_in_full:
+    - "Full neighborhood dump for repro — separate checkbox"
+
+# CONSENT UI (Angel settings)
+consent:
+  master_toggle: "Share anonymous object error reports"
+  sub_options:
+    fingerprint_only: { default: true }
+    include_stack_paths: { default: true }
+    include_neighborhood_dump: { default: false }
+    upload_matching_iff: { default: false, requires: "full_file tier from GUID-ISSUE-HUB.yml" }
+  retention: "User can delete all uploads from Micropolis Home account"
+
+# QUALITY SCORE (catalog row)
+quality_score:
+  inputs:
+    - error_count_30d weighted by severity
+    - collision class from guid_collision_cases
+    - resolution status on linked github issue
+  output: "0–100 on objects.quality_score — Datasette + CARD badge"
+  public: "Aggregate only unless creator verified"
+
+# SERVER → GITHUB
+github:
+  on_ingest:
+    - "Resolve or create github_guid_issues row for sims_guid"
+    - "Append artifact to issue_<n> branch via GitHub App"
+    - "Comment with summary + link to Datasette view"
+  see: GUID-ISSUE-HUB.yml
+
+# EXAMPLE PARSED JSON (storage shape)
+storage_example:
+  id: "err_01HY..."
+  captured_at: "2026-06-30T12:00:00Z"
+  house_number: 7
+  sim_tick: 193065
+  object_name: "Bed Double Expensive - top left"
+  object_instance_id: 186
+  resolved_guid: null
+  error_kind: too_many_iterations
+  stack_summary_json: "{...}"
+  source_download_hint: "badbed"
+  upload_consent: fingerprint_only
+  raw_file_sha256: "abc..."
+  github_issue_number: 42
+
+see_also:
+  - GUID-ISSUE-HUB.yml
+  - ARCHITECTURE.yml
+  - CATALOG-DB-SCHEMA.yml

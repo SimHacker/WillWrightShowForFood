@@ -81,7 +81,7 @@ Each `characters/<slug>/` folder fills in as we prepare the show and hear back:
 
 | Phase | What lands in the directory |
 |-------|----------------------------|
-| Invite | `invitation.md`, baseline `CHARACTER.yml`, `CARD.yml`, `README.md`, `GLANCE.md` |
+| Invite | `invitation.md`, `ideas.md`, baseline `CHARACTER.yml`, `CARD.yml`, `README.md`, `GLANCE.md` |
 | Response | Status update, corrected bio, links they want cited |
 | Show prep | `../../characters/will-wright/sources/`, URLs, transcribed attachments, public artifacts, optional `portrayal/` |
 
@@ -111,8 +111,10 @@ More names appear as you list this folder — or follow links from [`../repo-sho
 | `GLANCE.md` | One-screen sniff |
 | `README.md` | Markdown facade |
 | `invitation.md` | Public invitation — link from email |
+| `ideas.md` | Topic menu for browsing guests — career, shared ground, show hooks |
+| `correspondence.yml` | Optional public-safe thread digest (no private email bodies) |
 
-Normalize from DonHopkins sources: `pnpm run normalize:characters` · Scaffold cards: `pnpm run scaffold:cards`
+Normalize from DonHopkins sources: `pnpm run normalize:characters` · Scaffold cards: `pnpm run scaffold:cards` · Scaffold ideas: `python3 scripts/scaffold-guest-ideas.py`
 
 ## Subject rights
 

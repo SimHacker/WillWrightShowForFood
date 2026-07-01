@@ -1,0 +1,555 @@
+# Micropolis Home — local catalog SQLite schema (v1)
+# Regenerate from owned Sims install + user roots — NOT third-party XML catalogs as truth.
+# Browser TypeScript (sql.js / wa-sqlite) + MicropolisAngel FileBridge; Node scan on server for heavy jobs.
+# Publish read-only snapshots via Datasette; federation sync → Postgres on central Micropolis Home.
+
+meta:
+  id: micropolis-catalog-db
+  schema_version: 1
+  status: spec
+  format: sqlite
+  server_mirror: postgres
+  datasette: true
+  parent: ARCHITECTURE.yml
+  one_liner: |
+    One big provenance-aware catalog of everything you point at — install, dragon hoard, IA saves —
+    GUID collision triage, creditcasting, self-contained save bundles that actually work.
+
+# ── LINEAGE & CREDIT ─────────────────────────────────────────────────────────
+lineage:
+  sim_obliterators:
+    what: |
+      IFF/FAR parsing, scan roots, GUID collision analysis, and catalog inventory patterns
+      originate in the Sim Obliterator / vitamoo TypeScript port and Python `src/formats/iff/`.
+    credit: |
+      Micropolis Home catalog tooling builds on ideas and code from the Sim Obliterator project.
+      Full credit in CREDITS.yml and package READMEs. We reimplement in WWSFF-owned TypeScript
+      under our IP hygiene rules — we do not ship Obliterator as a dependency without license review.
+    read_first:
+      - ../../../../Leela/git/SimObliterator_Suite/vitamoo/docs/OBLITERATOR-TYPESCRIPT.md
+      - ../../../../Leela/git/SimObliterator_Suite/vitamoo/docs/guid-collision-analysis-plan.md
+      - ../../../../Leela/git/SimObliterator_Suite/vitamoo/vitamoo/io/guid-collision.ts
+      - ../../../../Leela/git/SimObliterator_Suite/vitamoo/vitamoospace/src/lib/server/files-inventory.ts
+      - ../../../../Leela/git/SimObliterator_Suite/src/formats/iff/chunks/objd.py
+  not_source_of_truth:
+    - "Transmogrifier/SimsObjects.xml — third-party export; useful for diff/comparison only"
+    - "Any precomputed JSON catalog from unknown provenance"
+  authoritative_intake: "Raw .iff / .far / save bytes from user-granted roots (owned install, Downloads, IA snapshot)"
+
+# ── IP & CONTENT HYGIENE ─────────────────────────────────────────────────────
+ip_hygiene:
+  default: metadata_only
+  rules:
+    ea_retail:
+      store: "GUID, names (from STR# in owned install), chunk fingerprints, source paths — NOT redistributable .far bytes"
+      anchor: "base-game and expansion objects are immutable GUID anchors in collision analysis"
+    user_upload:
+      store: "Full object interchange when creator consents; separate content_ref with license field"
+    save_bundles:
+      publish: "Self-contained package only after missing-GUID resolution + attribution manifest"
+      include_ea: "User must own game; bundle ships custom content + manifest, not EA installer"
+    llm_disposition:
+      phase: "Analysis suggests; human confirms before re-GUID, merge, or publish"
+      log: "Every disposition row records model_id, prompt_hash, operator_id, timestamp"
+  creditcasting:
+    goal: "Artists get name, site, Patreon/Ko-fi, Wayback link — even when creator site is dead"
+    anti_goal: "Training slurp without attribution; publishing others' meshes without credit"
+
+# ── RUNTIME TOPOLOGY ─────────────────────────────────────────────────────────
+runtime:
+  local:
+    host: "MicropolisAngel FileBridge OR browser File System Access API"
+    engine: "sql.js / wa-sqlite — single .sqlite file per user machine"
+    path_default: "%APPDATA%/MicropolisHome/catalog.sqlite"
+  server:
+    engine: postgres
+    role: "Federated merge of uploaded metadata batches; public catalog CARD dirs; search"
+    never: "Require local SvelteKit — Angel WebView2 talks to central site API"
+  datasette:
+    role: "Read-only publish of local or CI scan snapshots for forensics + Simonw-friendly exploration"
+    tables: [scan_roots, objects, guid_collision_cases, save_bundles, creators, creator_claims]
+
+# ── PACKAGE LAYOUT (TypeScript) ──────────────────────────────────────────────
+typescript:
+  packages:
+    - id: "@micropolis/sims-io"
+      layer: "L0–L2 — path io, FAR, IFF, OBJD/STR# decode (browser + node)"
+      note: "Port patterns from vitamoo/io/* and Python chunk parsers; WWSFF-owned API surface"
+    - id: "@micropolis/catalog-db"
+      layer: "Schema migrations, typed queries, batch upsert"
+    - id: "@micropolis/catalog-scan"
+      layer: "Classifier, recursive walk, container expansion, parse_issues"
+    - id: "@micropolis/guid-triage"
+      layer: "Wrap guid-collision.ts patterns; persist to guid_collision_cases"
+    - id: "@micropolis/save-bundle"
+      layer: "Missing GUID resolver, bundle manifest, IA Exchange revival workflow"
+  browser_first: true
+  node_heavy: "Initial full-library scan of 500GB hoard may run on Legion via Angel native or server upload"
+
+# ── SCHEMA v1 — CORE INVENTORY (scan) ────────────────────────────────────────
+# Aligns with Sim Obliterator Phase A1; WWSFF names stable for federation sync.
+
+tables:
+  schema_migrations:
+    columns:
+      - { name: version, type: INTEGER, pk: true }
+      - { name: applied_at, type: TEXT }
+
+  scan_roots:
+    purpose: "User-pointed dragon hoards — install dir, Downloads, single .far, IA extract, future remote catalog"
+    columns:
+      - { name: id, type: TEXT, pk: true }
+      - { name: root_type, type: TEXT }           # local-path | remote-feed | manifest-package
+      - { name: name, type: TEXT }
+      - { name: description, type: TEXT }
+      - { name: path, type: TEXT }
+      - { name: enabled, type: INTEGER }
+      - { name: content_selection_json, type: TEXT }
+      - { name: discovery_buckets_json, type: TEXT }
+      - { name: permission_json, type: TEXT }
+      - { name: added_at, type: TEXT }
+      - { name: last_scanned_at, type: TEXT }
+    indexes:
+      - [path]
+
+  scan_runs:
+    columns:
+      - { name: id, type: TEXT, pk: true }
+      - { name: status, type: TEXT }
+      - { name: started_at, type: TEXT }
+      - { name: finished_at, type: TEXT }
+      - { name: summary_json, type: TEXT }
+      - { name: error_message, type: TEXT }
+
+  scan_run_roots:
+    columns:
+      - { name: run_id, type: TEXT, fk: scan_runs.id }
+      - { name: root_id, type: TEXT, fk: scan_roots.id }
+    pk: [run_id, root_id]
+
+  files:
+    purpose: "Every file discovered under a root"
+    columns:
+      - { name: id, type: TEXT, pk: true }
+      - { name: root_id, type: TEXT, fk: scan_roots.id }
+      - { name: rel_path, type: TEXT }
+      - { name: file_kind, type: TEXT }           # iff | far | package | image | unknown
+      - { name: size, type: INTEGER }
+      - { name: mtime_ms, type: INTEGER }
+      - { name: sha256, type: TEXT, nullable: true }
+      - { name: skipped_reason, type: TEXT, nullable: true }
+    indexes:
+      - [root_id, rel_path]
+      - [sha256]
+    unique: [root_id, rel_path]
+
+  containers:
+    purpose: "FAR archives or IFF as container"
+    columns:
+      - { name: id, type: TEXT, pk: true }
+      - { name: file_id, type: TEXT, fk: files.id }
+      - { name: container_kind, type: TEXT }      # far | iff-root
+      - { name: member_name, type: TEXT, nullable: true }
+      - { name: member_index, type: INTEGER, nullable: true }
+
+  objects:
+    purpose: "Normalized Sims object — one row per OBJD (or equivalent) occurrence"
+    columns:
+      - { name: id, type: TEXT, pk: true }
+      - { name: file_id, type: TEXT, fk: files.id }
+      - { name: container_id, type: TEXT, fk: containers.id, nullable: true }
+      - { name: guid, type: INTEGER, nullable: true }
+      - { name: resource_id, type: INTEGER, nullable: true }
+      - { name: object_kind, type: TEXT }         # OBJD | wallpaper | floor | npc | unknown
+      - { name: catalog_name, type: TEXT, nullable: true }
+      - { name: catalog_desc, type: TEXT, nullable: true }
+      - { name: price, type: INTEGER, nullable: true }
+      - { name: pack_hint, type: TEXT, nullable: true }
+      - { name: source_kind, type: TEXT }         # base-game | expansion | download | user-created | unknown
+      - { name: immutable, type: INTEGER, default: 0 }
+      - { name: fingerprint, type: TEXT }         # canonical payload hash for exact-match groups
+      - { name: fingerprint_algo, type: TEXT }    # v1-objd-canonical
+      - { name: parsed_at, type: TEXT }
+    indexes:
+      - [guid]
+      - [fingerprint]
+      - [file_id]
+      - [source_kind]
+
+  chunks:
+    purpose: "IFF chunks for deep diff and BHAV reference graph"
+    columns:
+      - { name: id, type: TEXT, pk: true }
+      - { name: object_id, type: TEXT, fk: objects.id, nullable: true }
+      - { name: file_id, type: TEXT, fk: files.id }
+      - { name: chunk_type, type: TEXT }
+      - { name: chunk_id, type: INTEGER }
+      - { name: size, type: INTEGER }
+      - { name: offset, type: INTEGER, nullable: true }
+    indexes:
+      - [chunk_type, chunk_id]
+      - [object_id]
+
+  guid_references:
+    purpose: "Simantics / chunk graph — what references what (Phase 5 preflight)"
+    columns:
+      - { name: id, type: TEXT, pk: true }
+      - { name: from_object_id, type: TEXT, fk: objects.id }
+      - { name: to_guid, type: INTEGER }
+      - { name: source_chunk_id, type: TEXT, fk: chunks.id, nullable: true }
+      - { name: evidence, type: TEXT }
+    indexes:
+      - [to_guid]
+      - [from_object_id]
+
+  parse_issues:
+    columns:
+      - { name: id, type: TEXT, pk: true }
+      - { name: file_id, type: TEXT, fk: files.id }
+      - { name: severity, type: TEXT }
+      - { name: code, type: TEXT }
+      - { name: message, type: TEXT }
+      - { name: context_json, type: TEXT }
+
+# ── PREVIEWS & MEDIA (optional blobs) ────────────────────────────────────────
+
+  previews:
+    purpose: "Thumbnail path or inline blob ref — from WebGPU render OR bootstrap scrape"
+    columns:
+      - { name: id, type: TEXT, pk: true }
+      - { name: object_id, type: TEXT, fk: objects.id }
+      - { name: preview_kind, type: TEXT }        # catalog-icon | rotation | scrape-bootstrap
+      - { name: width, type: INTEGER }
+      - { name: height, type: INTEGER }
+      - { name: mime, type: TEXT }
+      - { name: storage_ref, type: TEXT }         # local path or content_refs.id
+      - { name: captured_at, type: TEXT }
+
+  content_refs:
+    purpose: "Optional binary storage — non-EA user content, consented uploads only"
+    columns:
+      - { name: id, type: TEXT, pk: true }
+      - { name: sha256, type: TEXT }
+      - { name: size, type: INTEGER }
+      - { name: license, type: TEXT }
+      - { name: storage_backend, type: TEXT }     # local-file | federation-blob | ipfs-placeholder
+      - { name: uri, type: TEXT, nullable: true }
+
+# ── FEDERATED CATALOGS (classification) ──────────────────────────────────────
+
+  federated_catalogs:
+    purpose: "Logical shelves — SimFreaks-shaped, unknown-origin catch-all, EA base, your install"
+    columns:
+      - { name: id, type: TEXT, pk: true }
+      - { name: slug, type: TEXT, unique: true }
+      - { name: title, type: TEXT }
+      - { name: description, type: TEXT }
+      - { name: card_url, type: TEXT, nullable: true }
+      - { name: is_catch_all, type: INTEGER, default: 0 }
+
+  catalog_membership:
+    purpose: "Many-to-many — one object can appear in multiple federated views"
+    columns:
+      - { name: catalog_id, type: TEXT, fk: federated_catalogs.id }
+      - { name: object_id, type: TEXT, fk: objects.id }
+      - { name: assigned_by, type: TEXT }         # scan-rule | human | llm-suggest | sync
+      - { name: confidence, type: REAL }
+      - { name: assigned_at, type: TEXT }
+    pk: [catalog_id, object_id]
+
+# ── CREATORS & CREDITCASTING ─────────────────────────────────────────────────
+
+  creators:
+    purpose: "Artists, sites, studios — alive, dead, Wayback-only"
+    columns:
+      - { name: id, type: TEXT, pk: true }
+      - { name: display_name, type: TEXT }
+      - { name: sort_name, type: TEXT, nullable: true }
+      - { name: website_url, type: TEXT, nullable: true }
+      - { name: wayback_url, type: TEXT, nullable: true }
+      - { name: patreon_url, type: TEXT, nullable: true }
+      - { name: ko_fi_url, type: TEXT, nullable: true }
+      - { name: notes, type: TEXT, nullable: true }
+      - { name: memorial, type: INTEGER, default: 0 }
+
+  creator_claims:
+    purpose: "Link object → creator with evidence and confidence"
+    columns:
+      - { name: id, type: TEXT, pk: true }
+      - { name: object_id, type: TEXT, fk: objects.id }
+      - { name: creator_id, type: TEXT, fk: creators.id }
+      - { name: claim_kind, type: TEXT }          # embedded-str | filename | site-page | llm-infer | human
+      - { name: evidence_json, type: TEXT }
+      - { name: confidence, type: REAL }
+      - { name: verified, type: INTEGER, default: 0 }
+
+# ── GUID COLLISION & DISPOSITION (analysis-only → separate mutate phase) ───
+
+  guid_collision_cases:
+    purpose: "One row per colliding GUID — packaged warning for UI / LLM / Datasette"
+    columns:
+      - { name: guid, type: INTEGER, pk: true }
+      - { name: classification, type: TEXT }      # unique | exact-only | near-match | conflict
+      - { name: object_count, type: INTEGER }
+      - { name: analysis_json, type: TEXT }       # exact groups, similarity matrix, immutable ids
+      - { name: recommended_next_step, type: TEXT }
+      - { name: updated_at, type: TEXT }
+
+  dispositions:
+    purpose: "Human or LLM-assisted resolution record — never silent auto-mutate"
+    columns:
+      - { name: id, type: TEXT, pk: true }
+      - { name: guid, type: INTEGER, fk: guid_collision_cases.guid, nullable: true }
+      - { name: action, type: TEXT }              # keep | re-guid | merge | disable | defer
+      - { name: rationale, type: TEXT }
+      - { name: operator_kind, type: TEXT }       # human | llm | rule
+      - { name: operator_id, type: TEXT }
+      - { name: model_id, type: TEXT, nullable: true }
+      - { name: created_at, type: TEXT }
+
+# ── SAVE FILES, MISSING GUIDs, BUNDLES (Exchange revival) ───────────────────
+
+  saves:
+    purpose: "Neighborhood / lot / household saves discovered or imported"
+    columns:
+      - { name: id, type: TEXT, pk: true }
+      - { name: root_id, type: TEXT, fk: scan_roots.id }
+      - { name: save_kind, type: TEXT }           # neighborhood | house | user | family-album
+      - { name: rel_path, type: TEXT }
+      - { name: label, type: TEXT, nullable: true }
+      - { name: ia_source_url, type: TEXT, nullable: true }
+      - { name: scanned_at, type: TEXT }
+
+  save_object_refs:
+    purpose: "GUIDs placed on lots or referenced by save — including unresolved"
+    columns:
+      - { name: id, type: TEXT, pk: true }
+      - { name: save_id, type: TEXT, fk: saves.id }
+      - { name: guid, type: INTEGER }
+      - { name: resolved_object_id, type: TEXT, fk: objects.id, nullable: true }
+      - { name: resolution_status, type: TEXT }   # resolved | missing | ambiguous | ea-base
+      - { name: tile_x, type: INTEGER, nullable: true }
+      - { name: tile_y, type: INTEGER, nullable: true }
+      - { name: context_json, type: TEXT }
+
+  save_resolutions:
+    purpose: "Research trail — what we think a missing GUID was and where to get it"
+    columns:
+      - { name: id, type: TEXT, pk: true }
+      - { name: save_object_ref_id, type: TEXT, fk: save_object_refs.id }
+      - { name: candidate_object_id, type: TEXT, fk: objects.id, nullable: true }
+      - { name: candidate_url, type: TEXT, nullable: true }
+      - { name: method, type: TEXT }              # catalog-lookup | fuzzy-fingerprint | llm | archive-search
+      - { name: confidence, type: REAL }
+      - { name: notes, type: TEXT }
+      - { name: researched_at, type: TEXT }
+
+  save_bundles:
+    purpose: "Self-contained downloadable save + custom content + attribution manifest"
+    columns:
+      - { name: id, type: TEXT, pk: true }
+      - { name: source_save_id, type: TEXT, fk: saves.id }
+      - { name: title, type: TEXT }
+      - { name: manifest_json, type: TEXT }       # objects included, creators, licenses, install notes
+      - { name: bundle_sha256, type: TEXT, nullable: true }
+      - { name: published_url, type: TEXT, nullable: true }
+      - { name: status, type: TEXT }              # draft | ready | published
+      - { name: created_at, type: TEXT }
+
+  graveyard_entries:
+    purpose: "Urn/tombstone index from save parse — Angel graveyard manager"
+    columns:
+      - { name: id, type: TEXT, pk: true }
+      - { name: save_id, type: TEXT, fk: saves.id }
+      - { name: sim_name, type: TEXT }
+      - { name: object_id, type: TEXT, fk: objects.id, nullable: true }
+      - { name: guid, type: INTEGER, nullable: true }
+      - { name: tile_x, type: INTEGER }
+      - { name: tile_y, type: INTEGER }
+      - { name: urn_kind, type: TEXT, nullable: true }
+      - { name: album_card_id, type: TEXT, nullable: true }
+
+# ── SCREEN OCR MATCH (buy/build catalog — GUID unknown until resolved) ───────
+
+  screen_catalog_matches:
+    purpose: "One row per in-game catalog selection observation"
+    columns:
+      - { name: id, type: TEXT, pk: true }
+      - { name: profile_id, type: TEXT, nullable: true }
+      - { name: mode, type: TEXT }                 # buy-object | buy-wallpaper | buy-floor | build
+      - { name: ocr_title, type: TEXT }
+      - { name: ocr_price, type: INTEGER, nullable: true }
+      - { name: ocr_description, type: TEXT, nullable: true }
+      - { name: preview_phash, type: TEXT, nullable: true }
+      - { name: status, type: TEXT }               # resolved | ambiguous | unknown
+      - { name: resolved_object_id, type: TEXT, fk: objects.id, nullable: true }
+      - { name: resolved_guid, type: INTEGER, nullable: true }
+      - { name: top_score, type: REAL, nullable: true }
+      - { name: operator_kind, type: TEXT, nullable: true }  # auto | human | llm
+      - { name: captured_at, type: TEXT }
+    indexes:
+      - [status]
+      - [resolved_guid]
+      - [captured_at]
+
+  screen_match_candidates:
+    purpose: "Ordered candidate set when title/GUID ambiguous — never silent pick"
+    columns:
+      - { name: id, type: TEXT, pk: true }
+      - { name: match_id, type: TEXT, fk: screen_catalog_matches.id }
+      - { name: object_id, type: TEXT, fk: objects.id }
+      - { name: guid, type: INTEGER }
+      - { name: rank, type: INTEGER }
+      - { name: score, type: REAL }
+      - { name: signals_json, type: TEXT }         # title, desc, price, preview contributions
+    indexes:
+      - [match_id, rank]
+
+# ── OBJECT ERROR TELEMETRY + GITHUB ISSUE HUB ───────────────────────────────
+
+  object_error_reports:
+    purpose: "Parsed ObjectError file — user-consented crash telemetry"
+    columns:
+      - { name: id, type: TEXT, pk: true }
+      - { name: resolved_guid, type: INTEGER, nullable: true }
+      - { name: object_name, type: TEXT }
+      - { name: object_instance_id, type: INTEGER, nullable: true }
+      - { name: error_kind, type: TEXT }
+      - { name: house_number, type: INTEGER, nullable: true }
+      - { name: sim_tick, type: INTEGER, nullable: true }
+      - { name: source_download_hint, type: TEXT, nullable: true }
+      - { name: stack_summary_json, type: TEXT }
+      - { name: raw_file_sha256, type: TEXT }
+      - { name: upload_consent, type: TEXT }       # fingerprint_only | metadata_plus | full_file
+      - { name: redaction_level, type: TEXT }
+      - { name: captured_at, type: TEXT }
+    indexes:
+      - [resolved_guid]
+      - [error_kind]
+      - [captured_at]
+
+  github_guid_issues:
+    purpose: "Link Sims GUID ↔ GitHub issue + issue_<n> branch artifact tree"
+    columns:
+      - { name: guid, type: INTEGER, pk: true }
+      - { name: github_issue_number, type: INTEGER }
+      - { name: branch_name, type: TEXT }           # issue_<github_issue_number>
+      - { name: repo, type: TEXT }
+      - { name: status, type: TEXT }
+      - { name: quality_score, type: REAL, nullable: true }
+      - { name: meta_yml_sha256, type: TEXT, nullable: true }
+      - { name: updated_at, type: TEXT }
+
+  upload_consents:
+    purpose: "Audit trail — what user agreed to send for each artifact"
+    columns:
+      - { name: id, type: TEXT, pk: true }
+      - { name: report_id, type: TEXT, fk: object_error_reports.id, nullable: true }
+      - { name: object_id, type: TEXT, fk: objects.id, nullable: true }
+      - { name: guid, type: INTEGER, nullable: true }
+      - { name: consent_tier, type: TEXT }
+      - { name: sha256, type: TEXT }
+      - { name: destination, type: TEXT }           # github-lfs | federation-blob | local-only
+      - { name: consented_at, type: TEXT }
+
+  objects_quality:
+    purpose: "Rolling quality score extension — optional view or materialized on objects"
+    note: "May add objects.quality_score column in migration v2; v1 use join table"
+    columns:
+      - { name: object_id, type: TEXT, pk: true, fk: objects.id }
+      - { name: quality_score, type: REAL }
+      - { name: error_count_30d, type: INTEGER }
+      - { name: collision_class, type: TEXT, nullable: true }
+      - { name: updated_at, type: TEXT }
+
+# ── SYNC TO SERVER (Postgres federation) ─────────────────────────────────────
+
+  sync_batches:
+    purpose: "Upload metadata snapshot — not necessarily blobs"
+    columns:
+      - { name: id, type: TEXT, pk: true }
+      - { name: direction, type: TEXT }           # push | pull
+      - { name: table_set, type: TEXT }           # json array of table names
+      - { name: row_count, type: INTEGER }
+      - { name: server_batch_id, type: TEXT, nullable: true }
+      - { name: status, type: TEXT }
+      - { name: started_at, type: TEXT }
+      - { name: finished_at, type: TEXT, nullable: true }
+
+# ── WORKFLOWS ────────────────────────────────────────────────────────────────
+
+workflows:
+  regenerate_from_install:
+    steps:
+      - "Register scan_root → Steam Legacy Collection UserData + ExpansionPaths"
+      - "scan_run — classify FAR/IFF, parse OBJD/STR#, set source_kind=base-game|expansion"
+      - "Compute fingerprint per object — populate objects table"
+      - "Optional: compare against SimsObjects.xml as validation report only (parse_issues)"
+    never: "INSERT from SimsObjects.xml as primary catalog"
+
+  dragon_hoard:
+    steps:
+      - "User adds multiple roots (Downloads, old CD rips, MTS folders)"
+      - "Streaming scan — batch upsert, one bad file → parse_issues, continue"
+      - "guid_collision_cases populated after scan"
+      - "LLM disposition phase — suggestions → dispositions table → human confirm"
+
+  ia_exchange_save:
+    steps:
+      - "Import save root from Internet Archive snapshot"
+      - "save_object_refs — flag resolution_status=missing for unknown GUIDs"
+      - "For each missing: save_resolutions via catalog lookup + fuzzy fingerprint + archive search"
+      - "LLM compares candidates — disposition logged, not silent"
+      - "save_bundles — package custom .far + manifest + creator_claims + Patreon links"
+      - "Publish to Micropolis Home federation; credit artists in manifest"
+
+  creditcasting:
+    steps:
+      - "Extract creator hints from STR#, paths, README in zip, site scrape metadata"
+      - "creator_claims with confidence; human verify before publish"
+      - "Surface Patreon/Ko-fi/Wayback in bundle manifest and public CARD"
+
+  catalog_screen_match:
+    steps:
+      - "OCR buy/build panel → screen_catalog_matches"
+      - "Fuzzy query installed objects → screen_match_candidates"
+      - "If ambiguous: UI pick or LLM suggest → update resolved_object_id + operator_kind"
+    spec: CATALOG-SCREEN-MATCH.yml
+
+  object_error_to_github:
+    steps:
+      - "FileWatcher ObjectError_h*.txt → parse → object_error_reports"
+      - "Resolve GUID → github_guid_issues open or append"
+      - "Push artifacts to issue_<n> branch; notify creator CARD if verified"
+    spec: GUID-ISSUE-HUB.yml
+
+# ── POSTGRES MIRROR (server) ─────────────────────────────────────────────────
+postgres:
+  note: "Same logical tables + federation keys; add tenant_id, public_slug, search vectors"
+  extra_columns:
+    objects: [tenant_id, public_slug, search_vector]
+    save_bundles: [tenant_id, public_url, download_count]
+  catch_all_catalog: "federated_catalogs slug unknown-origin — default bucket for unclassified uploads"
+
+# ── DATASETTE ────────────────────────────────────────────────────────────────
+datasette:
+  publish:
+    - "Attach catalog.sqlite — enable foreign keys"
+    - "Custom metadata: lineage credit, schema_version, scan_run summary"
+  suggested_views:
+    - name: guid_conflicts
+      sql: "SELECT * FROM guid_collision_cases WHERE classification != 'unique'"
+    - name: missing_in_save
+      sql: "SELECT * FROM save_object_refs WHERE resolution_status = 'missing'"
+    - name: unverified_credits
+      sql: "SELECT * FROM creator_claims WHERE verified = 0"
+
+see_also:
+  - SIMSKIT-LINEAGE.yml
+  - ARCHITECTURE.yml
+  - CATALOG-SCREEN-MATCH.yml
+  - GUID-ISSUE-HUB.yml
+  - OBJECT-ERROR-TELEMETRY.yml
+  - ../../catalogs/maxis/CATALOG.yml
+  - ../../process/trails/archive-and-provenance.md
+  - ../../schemas/portrayal-standards.yml

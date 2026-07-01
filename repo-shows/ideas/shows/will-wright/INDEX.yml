@@ -1,0 +1,27 @@
+# will-wright content pack — INDEX
+
+show: ../../../will-wright/SHOW.yml
+
+local:
+  - episode-seeds.yml
+  - content-map.yml
+
+shared_gags:
+  - ../../gags/pixelized-joint-wedding.yml
+  - ../../gags/speed-dating-with-cupid.yml
+  - ../../gags/slats-robopoetry-gong.yml
+  - ../../gags/broken-robot-servitude.yml
+  - ../../gags/trot-out-and-vanish.yml
+
+shared_themes:
+  - ../../themes/simulation-effect.yml
+  - ../../themes/procedural-rhetoric.yml
+  - ../../themes/microworld-morality.yml
+  - ../../themes/data-portability-crown-jewel.yml
+  - ../../themes/stupid-fun-club-robots.yml
+  - ../../themes/inclusion-agitprop.yml
+
+shared_traditions:
+  - ../../traditions/foreign-poet-play-along.yml
+  - ../../traditions/unnecessary-censorship.yml
+  - ../../traditions/puppet-taxonomy.yml

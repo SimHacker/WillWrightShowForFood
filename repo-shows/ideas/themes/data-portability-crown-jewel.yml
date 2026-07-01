@@ -1,0 +1,14 @@
+# Data portability — crown jewel
+
+id: data-portability-crown-jewel
+type: theme
+status: ready
+shows: [will-wright]
+
+blurb: |
+  Will's 1996 named goal still unshipped: characters, homes, cities, objects, ideas, memories
+  moving between universes. Every bridge seed is one facet.
+
+canonical: ../../../process/crazy-idea-jam.yml#data_portability_crown_jewel
+precedent: "Steve Alvey SimSlice — SimCity inside The Sims (shipped deep bridge)"
+bridges: ../../INDEX.yml#crown_jewel_hub

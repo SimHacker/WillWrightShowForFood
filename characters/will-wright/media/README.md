@@ -76,6 +76,17 @@ Programmer-art / scrapbook screenshots. [`sims-programmer-art-1.png`](sims-progr
 
 Gag **warning sticker**. [`sims-warning-sticker.png`](sims-warning-sticker.png)
 
+## Simlish origins — audio
+
+**Stephen Kearin & Gerri Lawlor** improvising English narration over an early Sims build (~2:31).
+Foreign Poet session that foreshadowed Simlish. Source bundle:
+[`../sources/steve-and-gerri-simlish-adlib/`](../sources/steve-and-gerri-simlish-adlib/README.md) ·
+[`TRANSCRIPT-DRAFT.md`](../sources/steve-and-gerri-simlish-adlib/TRANSCRIPT-DRAFT.md) (proofread pending)
+
+| File | Notes |
+|------|-------|
+| [`steve-and-gerri-simlish-adlib.wav`](steve-and-gerri-simlish-adlib.wav) | From [Don Hopkins catalog](https://donhopkins.com/home/catalog/sounds/Steve_And_Gerri.wav); mono 22050 Hz |
+
 ## Robot-combat meetup (Los Angeles)
 
 Don's photos from an informal **robot-combat meetup in Los Angeles** with **Will Wright** and
@@ -112,6 +123,7 @@ Longer scrolls with many figures — files sit alongside this README:
 | Pre-Sims naming | `home-tactics-box-cover-mockup.png` |
 | Promo sequence | `will-wright-holding-sim.png` · `sim-picking-wills-nose.png` · `will-wright-eating-sim.png` |
 | Dev art / tools | `sims-programmer-art-1.png` · `sims-programmer-art-2.png` · `rug-o-matic-samples.png` · `sims-warning-sticker.png` |
+| Simlish origins audio | `steve-and-gerri-simlish-adlib.wav` → [source bundle](../sources/steve-and-gerri-simlish-adlib/README.md) |
 | Robot meetup | `robot-fight-la-1.png` … `robot-fight-la-8-controller.png` |
 | Space junk | → [`russian-space-junk.md`](russian-space-junk.md) |
 | Physical art | → [`artwork.md`](artwork.md) |

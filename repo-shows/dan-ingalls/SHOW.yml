@@ -1,0 +1,50 @@
+# SHOW — Dan Ingalls (live objects, pop-up menus, Smalltalk Zoo)
+# Remote or in-person — follow the live-object lineage to working code in public.
+
+show:
+  id: dan-ingalls
+  title: "A Repo Show with Dan Ingalls — Live Objects, Pop-Up Menus, and the Smalltalk Zoo"
+  type: solo
+  host: Don Hopkins
+  guests: ["Dan Ingalls"]
+  character: characters/dan-ingalls/
+  topic: "BitBlt and pop-up menus; Fabrik; Squeak-in-itself; Lively Kernel; Smalltalk Zoo at CHM — and how the live-web lineage (SqueakJS, Caffeine) continues the work"
+  status: seed
+  format: remote_or_in_person
+
+why_him:
+  smalltalk_substrate: "Five generations of Smalltalk — the byte-coded VM (1976), BitBlt, pop-up menus, Squeak written in itself."
+  lively_lineage: "Lively Kernel / Lively Web — a universal live object system in any browser; precursor to today's SqueakJS + WASM livecoding."
+  smalltalk_zoo: "Smalltalk Zoo at CHM — in-browser emulations from Smalltalk-72 through Squeak; companion to the HOPL paper."
+  don_thread: "Alan Kay introduced Don via the Fabrik paper (2018); 2021 thread on pie menus retrospective + live-web bridges (UnityJS JSON vs Croquet)."
+
+threads:
+  pop_up_vs_pie: "Pop-up menus (Dan) ↔ pie menus (Don) — cousins on the direct_manipulation trail; CHI'88 lineage; live demo segment"
+  fabrik_dataflow: "Fabrik visual programming — kindred to Don's pie-menu / visual UI work; Alan Kay introduction"
+  smalltalk_zoo_live: "Walk the Zoo on air — Smalltalk-72 → Squeak; what 'liveness' means when the artifact runs in the browser"
+  live_web_today: "SqueakJS (Vanessa) → Caffeine (Craig) → MicropolisCore WASM + MOOLLM tutors — same problem, new decade"
+  bridges_and_round_trips: "Path expressions, query templates, JSONic APIs — minimizing round trips between a live scripting layer and a runtime (2021 notes)"
+
+remember_vanessa:
+  why: "Dan credits Vanessa Freudenberg for SqueakJS on the Smalltalk Zoo welcome page."
+  memorial_mode: "Represent + discuss — never speak as her. See characters/vanessa-freudenberg/"
+  show_angle: "Smalltalk Zoo as the right stage to honor what she built — with Craig if schedules align"
+
+format:
+  live: true
+  audience_qa: true
+  homeplay: "Pick one Zoo exhibit; change it live; share the saved web page or PR"
+
+ties_to:
+  - ../../characters/dan-ingalls/invitation.md
+  - ../../characters/dan-ingalls/pie-menus-and-pop-ups.md
+  - ../../characters/dan-ingalls/correspondence.yml
+  - ../../characters/alan-kay/
+  - ../../characters/craig-latta/
+  - ../../characters/vanessa-freudenberg/
+  - ../../process/trails/live-objects.md
+  - ../../process/trails/direct-manipulation.md
+  - https://smalltalkzoo.thechm.org/
+  - https://computerhistory.org/profile/dan-ingalls/
+
+consent: not_yet_asked

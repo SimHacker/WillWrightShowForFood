@@ -28,9 +28,15 @@ sources:
   wikipedia: "https://en.wikipedia.org/wiki/Dan_Ingalls"
   web:
     - https://computerhistory.org/profile/dan-ingalls/
-  papers: []
+    - https://smalltalkzoo.thechm.org/
+    - https://computerhistory.org/blog/introducing-the-smalltalk-zoo-48-years-of-smalltalk-history-at-chm/
+  papers:
+    - title: "The Evolution of Smalltalk (HOPL)"
+      url: https://smalltalkzoo.thechm.org/papers/EvolutionOfSmalltalk.pdf
   blogs: []
 
 see_also:
+  - { path: ideas.md, why: "Conversation hooks — topic menu for invitation browsing" }
+  - { path: pie-menus-and-pop-ups.md, why: "Show prep — pop-up ↔ pie retrospective" }
   - { path: correspondence.yml, why: "Public-safe thread digest — pie menus, Fabrik, Lively/SqueakJS" }
   - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses — self or assisted contribution" }

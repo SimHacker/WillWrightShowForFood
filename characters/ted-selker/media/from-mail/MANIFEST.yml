@@ -1,0 +1,14 @@
+# ted-selker — media from mail exports
+# Private mail: see DonHopkins/characters/don-hopkins/email-archive/INDEX.yml
+
+character: ted-selker
+consent_note: Public respectful portrayal for invitation browsing; subject may request removal
+artifact_count: 1
+
+artifacts:
+  - file: from-mail/artifact-468334116_10162878918194925_5113901735070955427_n.jpg
+    kind: correspondence
+    title: "468334116 10162878918194925 5113901735070955427 n"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-1054-Vanessa Freudenberg & Using Kando pie menus in web apps like Micropolis!--468334116_10162878918194925_5113901735070955427_n.jpg
+    message_subject: "Vanessa Freudenberg & Using Kando pie menus in web apps like Micropolis!"
+    message_date: "Thursday, 13 November 2025 at 05:41:03"

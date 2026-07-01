@@ -13,6 +13,14 @@ SimCity file into **Dollhouse** and previews what becomes The Sims. Everything b
 there. ([source bundle](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) ·
 [invitation](../../repo-shows/will-wright/invitation.md))
 
+## Shared ground
+
+Don and Will go back to **Maxis** — SimCity, The Sims, Core Technology Group — and a long mutual
+interest in **microworlds**, **data portability**, and tools players can extend. Don preserved and
+transcribed Will's **1996 CS547 talk**; the through-line continues in OLPC SimCity, Spore-era
+tooling conversations, and today's **Micropolis Home** / Repo Show work. Not score-keeping — a
+steady respect for toys-as-systems and federation across games.
+
 ## The hooks
 
 ### 1. The long-overdue Sims 1 post-mortem

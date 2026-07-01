@@ -1,0 +1,14 @@
+# Honest fake call-in
+
+id: honest-fake-call-in
+type: tradition
+status: ready
+canonical: ../../will-wright/SEGMENTS.yml#live_call_in
+
+lineage: "1970s Japanese game show — kids yelled into phone to puppet Godzilla battles."
+
+v1: |
+  Stage call-ins earnestly and TRANSPARENTLY — labeled moments, not hidden plants.
+  MOOLLM orchestrates ant/spider, Proxi characters, Palm essay drop, one-question phone guest.
+
+v2_future: "OBS rig, live video bots, real mid-show call-out."

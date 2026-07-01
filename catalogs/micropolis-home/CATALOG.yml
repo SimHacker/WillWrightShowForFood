@@ -31,6 +31,21 @@ layers:
     - "Repo Show artifacts — audience homefun merges back into catalogs"
     - "Micropolis Class streams — show, don't tell"
 
+steam_community_guides:
+  spec: steam-community-guide.yml
+  summary: |
+    Steam Community Guide(s) on Legacy Collection hub — link-rich fan guides channeling players to
+    Micropolis Home (web) and Repo Shows. Not a wrapper app; no install required.
+  requires: ../get-the-sims-on-steam.md
+
+micropolis_angel:
+  spec: micropolis-angel.yml
+  summary: |
+    Windows Steam Software companion (planted — announce after web hub audience). Watches over you
+    playing: Simplifier showcase, catalog/install, machinima, OBS/Twitch, Exchange revival gateway.
+  not: "Web wrapper; Mac app; Sim* trademark in product name"
+  requires: ../get-the-sims-on-steam.md
+
 hosts:
   federated_catalogs:
     - ../simfreaks/

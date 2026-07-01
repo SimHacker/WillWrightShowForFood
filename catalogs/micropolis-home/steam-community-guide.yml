@@ -1,0 +1,78 @@
+# Micropolis Home — Steam Community Guide strategy
+# NOT a separate Steam store app — player-authored guides on The Sims Legacy Collection hub
+# Requires: legal The Sims 1 (Steam Legacy Collection)
+
+id: micropolis-home-steam-guide
+status: planted
+parent: CATALOG.yml
+private_strategy: |
+  Full distribution decisions in DonHopkins/projects/willwrightshowforfood/strategy/distribution-and-steam.md
+  (private — not exported in bulk)
+
+one_line: |
+  Steam Community Guide(s) on The Sims hub — informational playbook that channels players to
+  Micropolis Home (web) and Repo Shows. Not a game; not EA-endorsed; no install required.
+
+requires:
+  game: https://store.steampowered.com/app/3314070/The_Sims/
+  doc: ../get-the-sims-on-steam.md
+  valve_feature: |
+    Community Hub → Guides → Create a Guide. Must own the game on Steam.
+    Free, sectioned, embeds images/YouTube, links out to web.
+
+# FOUR JOBS (same intent — different delivery surface)
+jobs:
+  catalogs_and_tools:
+    - Federated UCC pointers: SimFreaks, SimSlice, SimProv, Zombie Sims, MTS, TSR, SneakySims, Maxis metadata
+    - Link to web tools: SimShow, Transmogrifier, RugOMatic, install helpers (Micropolis Home URL)
+    - Virtual catalogs: Exchange history, Internet Archive index → Simopolis
+    - create · publish · share rails — primary CTA is the browser, not a downloaded app
+
+  repo_shows_channel:
+    what: |
+      Guide sections promote Micropolis Class Repo Shows — where Legacy Collection buyers find
+      the living conversation, archives, and follow-through code.
+    flagship: ../../repo-shows/will-wright/
+    network: ../../repo-shows/INDEX.yml
+    surfaces:
+      - "Episode hub — Will kickoff, topical shows, guest index"
+      - "Live / VOD links — stream schedule, replay with time-shift pauses"
+      - "Git entry — github.com/SimHacker/WillWrightShowForFood"
+      - "Harvest artifacts — skills, packages, homefun from aired episodes"
+      - "Audience ingress — TicketPR, play-along clips"
+
+  sims_and_bridges:
+    what: Shows and playable demos about The Sims lineage AND Simopolis bridge games.
+    themes:
+      - Sims 1 UCC, SimProv, procedural rhetoric, Exchange revival
+      - Data portability — Simopolis spokes (Stardew, Proxi, Spore, Mind Mirror, …)
+
+  ea_alignment:
+    pitch: |
+      Guide requires owned Sims → drives Steam sales → documents fan culture respectfully.
+      Promotes making and playing honestly (not AI voice clones). Fan guide disclaimer required.
+    disclaimer: |
+      This guide is not endorsed by or affiliated with Electronic Arts, or its licensors.
+      Trademarks are the property of their respective owners.
+    avoid: [bundling EA assets, plumbob branding, implied endorsement, vacuuming creator subscriptions]
+
+implementation:
+  v1_web: "Micropolis Home SvelteKit site — primary product; any browser, no install"
+  v2_steam_guides: "One or more Community Guides on Legacy Collection hub — link-rich sections"
+  v3_micropolis_angel: |
+    MicropolisAngel — Windows Steam Software companion (see micropolis-angel.yml). Native while-you-play
+    helper: Simplifier, catalog/install, machinima, streaming. Announced AFTER web hub bootstraps audience.
+  not_planned: "Electron or Steam app shell wrapping Micropolis Home — rejected June 2026"
+
+rollout:
+  1: Web Micropolis Home + WWSFF public repo + catalog CARD dirs
+  2: Steam Community Guide + MTS cross-links + YouTube (content + show clips)
+  3: MicropolisAngel on Steam Software (Windows) — when web federation + catalog sync are live
+  4: EA / platform conversations after traction
+
+see_also:
+  - micropolis-angel.yml
+  - ../sims1-community-landscape.yml
+  - README.md
+  - ../../process/repo-show-format.yml
+  - ../../repo-shows/ideas/traditions/make-play-tools-show.yml

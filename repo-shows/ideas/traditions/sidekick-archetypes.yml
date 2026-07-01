@@ -1,0 +1,19 @@
+# Sidekick archetypes — talk-show tradition
+
+id: sidekick-archetypes
+type: tradition
+status: ready
+canonical: ../../will-wright/SEGMENTS.yml#sidekicks
+
+archetypes:
+  band_leader_foil:
+    homage: "Paul Shaffer / band-leader energy"
+    seat: orchestra_pit
+    example: fictional-transmogrifier
+  beloved_correspondent:
+    homage: "Guillermo (Kimmel)"
+    seat: orchestra_pit_or_floating
+  trot_out_and_vanish:
+    homage: "Conan's Masturbating Bear"
+    examples: [fictional-broken-robot]
+    gag: ../gags/trot-out-and-vanish.yml

@@ -148,6 +148,7 @@ invite_sfc_alumni:
 segments:
   slats_reincarnation: ./slats-reincarnation.yml   # ROBORESURRECTION: revive Slats live as a call-in robot sidekick (Easter Sunday). Will will LOVE it.
   sims_play_along_narration: ./sims-play-along-narration.yml   # Audience Sims footage + live guest voice-over improv (Foreign Poet × Drew Carey Show).
+  performance_space: ../../process/performance-space.yml   # Umbrella — play-along, script reading, Conan face-puppet, OBS/webcam toys.
 
 consent: not_yet_asked              # invitation WRITTEN (near-sendable draft): ./invitation.md — built on the 1996 centerpiece + arc + crown jewel. Per representation-ethics; Don personalizes + sends.
 files:

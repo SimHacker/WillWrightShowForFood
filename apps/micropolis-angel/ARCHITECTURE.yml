@@ -1,0 +1,316 @@
+# MicropolisAngel — unified Windows native host + stream-gateway
+# One product: Sims companion, graveyard manager, Simplifier, Twitch/YouTube/OBS rig.
+# Replaces Electron/CEF shell on Windows with WebView2 + WinUI 3 native services.
+
+meta:
+  id: micropolis-angel-app
+  status: spec
+  platform: windows
+  parent_spec: ../../catalogs/micropolis-home/micropolis-angel.yml
+  stream_gateway: ../stream-gateway/SPEC.yml
+  simplifier: ../stream-gateway/simplifier.yml
+  one_liner: |
+    Swiss-army Windows companion: WebView2 UI shell, native capture/inject/accessibility,
+    Sims lifecycle control, Death/Satan graveyard manager, OBS/Twitch/YouTube/cursor-tap streaming.
+
+# UNIFICATION THESIS
+unification:
+  before: |
+    stream-gateway = Mac SvelteKit server + Electron overlay + Legion OBS (two-machine).
+    micropolis-angel.yml = planted Steam companion spec (catalog, TTS, machinima).
+  after: |
+    MicropolisAngel IS the Windows implementation of stream-gateway + Simplifier + Sims tools.
+    Same SvelteKit client (overlay-viewer, catalogs, brain stream). Different native host per OS:
+    - Windows (Legion, Sims PC): WinUI 3 + WebView2 + native services — PRIMARY SHIP TARGET
+    - macOS (dev stream): Electron overlay + stream-gateway server — Repo Show / Cursor tier
+  shared:
+    - SvelteKit apps/stream-gateway routes (/overlay/brain, /brain, bus SSE/WS)
+    - simplifier.yml capability model (capture, read, inject, catalog)
+    - brain-stream.yml event schema + privacy gate
+    - cursor-tap.yml SQLite tap (when Cursor runs on same machine or LAN relay)
+  not_duplicated:
+    - Native capture/inject: one implementation per OS (Windows.Graphics.Capture vs ScreenCaptureKit)
+    - Steam listing / Sims-specific graveyard + save tooling: Angel-only
+
+# NATIVE SHELL — NOT Electron, NOT raw CEF
+shell:
+  choice: "WinUI 3 (Windows App SDK) + WebView2"
+  why_not_electron: "Chromium bundle bloat; Steam Software wants lean Windows-native; WebView2 uses system Edge."
+  why_not_cef: "Same bloat; Microsoft maintains WebView2; better OS integration."
+  layout:
+    main_webview: "Full Micropolis Home TypeScript platform — catalog, graveyard, albums, stream panels"
+    dock_panels: "Optional secondary WebView2 regions — operator overlay, stream chat"
+    native_chrome: "WinUI title bar, system tray, filesystem bridge, capture/inject services, TTS host"
+  embed_micropolis_home:
+    v1_default: |
+      WebView2 navigates the **central Micropolis Home SvelteKit site** (hosted server).
+      Angel does NOT bundle or require a local SvelteKit server initially.
+      Native host exposes FileBridge host object so in-browser TypeScript reads/writes local
+      UserData, save files, Downloads, and the local SQLite catalog cache.
+    optional_later:
+      - "localhost sidecar for offline dev or LAN Repo Show without internet"
+      - "bundled adapter-node for air-gapped catalog editing"
+    dev: "pnpm dev Micropolis Home OR stream-gateway → WebView2 for local iteration"
+
+# MICROPOLIS HOME CONTENT PLATFORM (inside WebView2)
+content_platform:
+  what: |
+    Angel runs the **entire TypeScript Micropolis Home Sims content reading/writing platform**
+    in the embedded browser. That UI talks to the central SvelteKit server for federation,
+    publish, share, Repo Shows — while **local save/.iff/.far parsing happens in-browser**
+    with native filesystem access via WebView2 bridge (no second Svelte server required).
+  reads_locally:
+    - "Neighborhood + lot save files — households, sims, skills, relationships"
+    - "Graveyard index — urns, tombstones, deceased sim metadata (primary path, NOT OCR)"
+    - "Downloaded objects inventory — UserData/Downloads, installed .far packages"
+    - "Local SQLite catalog cache — objects, wallpapers, floors (see SIMSKIT-LINEAGE.yml)"
+  writes_locally:
+    - "Curated favorites lists, album cards, install helpers (with PITM consent)"
+    - "Catalog crawl results → SQLite; sync up to federation when online"
+  central_server:
+    role: "Source of truth for **published** catalogs, albums, guides, federation CARD dirs"
+    not_required_for: "Reading local saves, enumerating graveyard, offline catalog browse"
+  renderer_roadmap:
+    now: "Simplifier-style catalog crawl — scrape preview bitmap when item selected in-game (bootstrap)"
+    next: "WebGPU iff object renderer (Transmogrifier/ShowNTell parity in TS/WASM)"
+    then: "Retire scrape for object names/descriptions — IFF + SimsObjects.xml + save parse only"
+
+# WINDOWS DEV STACK (Don's PC refresh)
+dev_stack:
+  install:
+    required:
+      - "Visual Studio 2022 Community — Desktop development with C++ + Windows App SDK workload"
+      - "Windows App SDK 1.6+ (WinUI 3)"
+      - "WebView2 SDK (Evergreen runtime — preinstalled Win11; bootstrapper for Win10)"
+      - "VS Code — SvelteKit/TypeScript/Node (keep VS for native; VS Code for web tier)"
+      - "Node 22 LTS + pnpm — stream-gateway, Micropolis Home frontend"
+      - "Windows 11 SDK (latest) — Graphics Capture, OCR, WinRT APIs"
+    recommended:
+      - "Git for Windows"
+      - "OBS Studio + obs-websocket plugin"
+      - "FFmpeg (PATH) — fallback encode/transmux"
+      - "Windows SDK Debugging Tools — UI Automation spy"
+      - "Optional: Rust toolchain if we port hot capture paths later"
+  vs_community_yes: |
+    Yes — Community is enough. Install: MSVC v143, Windows SDK, C++ CMake, Windows App SDK,
+    .NET desktop (if any C# tooling scripts). No paid license needed for this product class.
+  vscode_yes: |
+    Yes — use for Svelte/TS/Node. Native C++/WinUI can live in VS proper or VS Code with C++ extension;
+    WinUI XAML designer still smoother in Visual Studio.
+
+# NATIVE API MAP (modern Windows — prefer WinRT over legacy)
+native_apis:
+  ui_shell:
+    primary: "WinUI 3 (Microsoft.UI.Xaml) — app window, navigation, settings, tray"
+    alt: "WPF only if WinUI blocker; WinUI 3 is the current Microsoft default for new desktop apps"
+  embedded_web:
+    primary: "Microsoft.Web.WebView2 — host SvelteKit; AddHostObjectToScript for native bridge"
+  window_tracking:
+    - "UI Automation (IUIAutomation) — tree, names, control patterns"
+    - "SetWinEventHook — focus/move/show events"
+    - "EnumWindows + GetWindowThreadProcessId — target Sims.exe / Legacy Collection launcher"
+  screen_capture:
+    primary: "Windows.Graphics.Capture — per-window or region; D3D11 texture path"
+    fallback: "BitBlt / PrintWindow — legacy Sims UI edge cases"
+    obs_path: "OBS WebSocket + optional NDI — when OBS owns the encode graph"
+  ocr:
+    role: "Buy/build catalog panel — title, price, description when GUID unknown (CATALOG-SCREEN-MATCH.yml)"
+    primary_metadata: "Micropolis Home TS reads .iff STR# from owned install — not OCR"
+    bootstrap: "Windows.Media.Ocr OR port Simplifier glyph matcher for in-game panel during catalog crawl"
+    supplement: "Preview pHash vs previews table — disambiguate duplicate titles"
+  input_injection:
+    primary: "SendInput — keys, mouse (operator-gated)"
+    precision: "UI Automation InvokePattern / LegacyIAccessible — when pixel coords fragile"
+    note: "Requires foreground focus policy — whitelist Sims + Angel windows only"
+    catalog_crawl: "Port Simplifier SendClick/SendPie navigation — enumerate every buy-mode category"
+  video_encode:
+    primary: "Media Foundation + NVENC (H.264/HEVC) on Legion"
+    fallback: "FFmpeg libx264 / nvenc CLI"
+    stream_out: "RTMP via FFmpeg or OBS; WHIP experimental"
+  accessibility_out:
+    - "UI Automation → structured tree → TTS (Windows.Media.SpeechSynthesis)"
+    - "Simplifier lineage: read object titles/descriptions aloud while browsing catalog"
+  save_and_files:
+    bridge: "FileBridge host object — WebView2 exposes read/write UserData paths to TS (with consent UI)"
+    parse_in_ts: "Neighborhood, lot, character, object placement — Micropolis Home iff/save reader"
+    sqlite_local: "Embedded catalog DB on disk — objects, wallpapers, floors, graveyard, crawl_state"
+    seed: "Regenerate from owned install scan — SimsObjects.xml diff report only, not authoritative import"
+    watch: "Folder watcher on save dirs + ObjectError_h*.txt when launcher enables debug_objects"
+
+# GRAVEYARD MANAGER — Death, Satan, urns, tombstones
+graveyard_manager:
+  playful_framing: |
+    Sim Religion reclaimed — Angel tends the dead. Death (Grim Reaper) and Satan are Sims 1 NPC
+    objects; Angel is graveyard manager: knows where every body is buried, enumerates urns and
+    tombstones, can resurrect, kill, or clone — with human consent and save-game safety rails.
+  sims1_anchors:
+    npcs: ["The Grim Reaper", "Satan"]
+    objects: ["Urn/Tombstone", "Trajicklowna Cloisonne Urn", "Victorian Flower Urn", "Spoooky Tombstone Puzzle"]
+    sources:
+      - "TheSims/SimsKit/Transmogrifier/SimsObjects.xml"
+      - "Runtime ObjectError logs (NPC Satan, NPC Satan Generator)"
+  capabilities:
+    enumerate:
+      primary: |
+        **Save-file parse** — Micropolis Home TS reads lot/neighborhood files; lists every urn/tombstone,
+        deceased sim, tile position, linked household. No screen scrape required for graveyard index.
+      also:
+        - "Cross-reference local SQLite graveyard table + Family Album cards"
+        - "Screen scrape / UIA — fallback when save format unknown or Legacy Collection path differs"
+      sync: "Published graveyard albums sync UP to central Micropolis Home when online"
+    resurrect:
+      - "Guide player through in-game resurrection flows (Grim Reaper, genie, etc.) via inject + TTS"
+      - "Some paths require save → main menu → reload — Angel orchestrates and confirms each step"
+    kill:
+      - "Accessibility assistant for deliberate story kills — NOT griefing random saves"
+      - "Operator enable + typed confirmation; log action to session forensics"
+    clone:
+      - "Character clone via in-game flows + Transmogrifier/cloner lineage for objects"
+      - "Export clone metadata to catalog / playset composer"
+  game_lifecycle:
+    states: [launcher, main_menu, neighborhood, loading, live_play, paused, dialog_modal, crashed]
+    actions:
+      - save_game
+      - return_to_main_menu
+      - reload_lot
+      - restart_sims_process
+      - wait_for_load_spinner
+    detection: "Save mtime + window title + optional UIA for live-play inject flows (menu navigation)"
+    safety: |
+      Always offer save-before-mutate. Never auto-kill/resurrect on stream without on-air consent.
+      Some operations impossible without menu navigation — Angel narrates why and walks the clicks.
+
+# STREAMING CLUSTERFUCK — unified rig on Legion
+streaming:
+  inherits: ../stream-gateway/SPEC.yml
+  windows_topology:
+    single_machine_primary: |
+      Legion runs: Sims (full screen or windowed) + MicropolisAngel (WebView2 panels) +
+      OBS (NVENC) + optional cursor-tap if Cursor also on Legion.
+    obs:
+      browser_source: "WebView2/OBS Browser → same /overlay/brain URL (localhost)"
+      game_capture: "Window capture Sims OR Graphics.Capture texture → OBS source"
+      nvenc: "Primary encode path"
+    integrations:
+      twitch: "EventSub WebSocket in + Helix chat out (stream-gateway twitch skill)"
+      youtube: "liveChat poll + insert (throttled)"
+      obs_ws: "obs-websocket v5 — scenes, sources, stream start/stop"
+      cursor_mirror: "When Cursor on same box or LAN — SQLite tap → bus (cursor-tap.yml)"
+  angel_as_gateway:
+    - "One app toggles: stream mode / catalog mode / graveyard mode / chat-with-god"
+    - "Screen scrape + compress + push — no separate Simplifier.exe"
+    - "Operator overlay: pie menus from shared SvelteKit (bubble-wrangler lineage)"
+
+# LAUNCHER — profiles, flags, pre-flight (Unity Hub that doesn't suck)
+launcher:
+  role: "Detect LC install; manage download profiles; launch Sims with flags; watch telemetry dir"
+  profiles:
+    what: "Junction/symlink sets on UserData/Downloads — stock maxis, maxis+curated, full hoard"
+    switch: "One click before Play; SQLite scan runs against active profile roots"
+  launch:
+    flags:
+      - "-debug_objects  # ObjectError_h*.txt in known CWD — see OBJECT-ERROR-TELEMETRY.yml"
+    cwd: "Per-profile folder under %APPDATA%/MicropolisHome/sims-cwd/"
+  preflight:
+    - "GUID collision warnings from guid_collision_cases"
+    - "Missing-object prediction from save parse (before generic in-game dialog)"
+  tornado_install:
+    what: "CARD install blocks — fetch any URL (IA, creator site), extract, rescan"
+    spec: "../../catalogs/sims1-community-landscape.yml#internet_archive_import"
+  binary_fingerprint_track:
+    status: research_only
+    note: "SHA256 Sims.exe per LC patch; patch recipes private until legal posture clear"
+
+# CATALOG CRAWLER — Simplifier port (bootstrap until WebGPU renderer)
+catalog_crawler:
+  lineage: SIMSKIT-LINEAGE.yml#simplifier
+  goal: "Enumerate every object, wallpaper, floor tile in buy-mode; SQLite catalog with preview images"
+  screen_match: CATALOG-SCREEN-MATCH.yml
+  phases:
+    seed:
+      what: "scan_root IFF ingest from owned install — names, descriptions, GUIDs from STR#"
+      no_scrape: true
+    crawl:
+      what: |
+        Port Simplifier navigation + inject: walk categories, select each item,
+        OCR title/price/description + scrape preview bitmap when WebGPU iff renderer not ready.
+      store: "screen_catalog_matches + previews + crawl_state; sync metadata to federation"
+      retire_when: "WebGPU iff renderer produces previews from .far without running the game"
+    read_text:
+      primary: "OCR catalog panel → fuzzy match installed objects; ambiguous sets for user/AI"
+      target: "Zero OCR for static metadata — iff resource strings from install scan"
+  simskit_sources:
+    - "TheSims/SimsKit/Simplifier/SimplifierDoc.cpp — UpdateView OCR, GrabClientWindow, inject"
+    - "TheSims/SimsKit/Transmogrifier/SimsObjects.xml — catalog seed"
+    - "TheSims/SimsKit/Transmogrifier/Objectifier.py — batch preview export pattern"
+    - "TheSims/SimsKit/RugOMatic/ShowNTell — ActiveX preview replaced by WebGPU"
+
+# NATIVE ↔ WEB BRIDGE
+bridge:
+  host_objects:
+    - FileBridge — read/write UserData, save paths, Downloads; stream files to TS parser
+    - CatalogDB — SQLite open/query from native OR sql.js in TS with bridge persistence
+    - CaptureService — start/stop window capture (catalog crawl preview, stream)
+    - InjectService — SendInput + UIA (catalog crawl navigation, lifecycle, gated gameplay assist)
+    - WindowService — enumerate, focus, track Sims process lifecycle
+    - StreamService — OBS WS, RTMP state, NVENC stats
+    - SpeechService — TTS for accessibility showcase (Simplifier lineage)
+  protocol: "JSON messages WebView2 ↔ C++/WinRT; same shapes as stream-gateway bus events"
+  privacy: "Redaction gate BEFORE any bus publish or stream frame (cursor-tap.yml#privacy)"
+
+# TELEMETRY — ObjectError → GitHub issue-per-GUID
+telemetry:
+  object_errors: OBJECT-ERROR-TELEMETRY.yml
+  github_hub: GUID-ISSUE-HUB.yml
+  consent: "Fingerprint default; full iff upload explicit checkbox — not opt-out dark patterns"
+  creator_notify: "Route via creator_claims + federated CARD (ZombieSims, etc.)"
+
+# BUILD PHASES
+build_phases:
+  - id: w0
+    ship: "WinUI 3 + WebView2 → dev URL or placeholder — native/MicropolisAngel.sln"
+    cost: zero
+  - id: w1
+    ship: "TS save/.iff reader — household list + graveyard urn index from local files"
+    cost: zero
+  - id: w2
+    ship: "scan_root + IFF ingest → objects table + fingerprints from owned install"
+    cost: zero
+  - id: w3
+    ship: "GUID collision cases + Datasette snapshot; catalog screen OCR fuzzy match (ambiguous UI)"
+    cost: zero
+  - id: w3b
+    ship: "Launcher profiles + -debug_objects + ObjectError ingest → GitHub issue hub"
+    cost: zero
+  - id: w4
+    ship: "Game lifecycle state machine — save, menu, reload, restart (inject when needed)"
+    cost: zero
+  - id: w5
+    ship: "OBS WebSocket + stream panels in same WebView2 shell"
+    cost: zero
+  - id: w6
+    ship: "Federation sync — local SQLite ↔ central Micropolis Home; Twitch/cursor-tap bus"
+    cost: mini
+  - id: w7
+    ship: "WebGPU iff previews replace scrape; Death/Satan guided flows; Steam packaging"
+    cost: zero
+
+# ETHICS (inherits distribution strategy)
+ethics:
+  frame: "Fair assistant, accessibility, creator tool — not cheat bot or grief suite"
+  graveyard: "Kill/resurrect/clone require explicit operator consent; narrated on stream"
+  steam: "Fan-made disclaimer; requires owned Legacy Collection; links Micropolis Home web hub"
+
+see_also:
+  - WINDOWS-DEV-SETUP.md
+  - SIMSKIT-LINEAGE.yml
+  - CATALOG-DB-SCHEMA.yml
+  - CATALOG-SCREEN-MATCH.yml
+  - GUID-ISSUE-HUB.yml
+  - OBJECT-ERROR-TELEMETRY.yml
+  - ../../catalogs/micropolis-home/micropolis-angel.yml
+  - ../../catalogs/maxis/CATALOG.yml
+  - ../stream-gateway/SPEC.yml
+  - ../stream-gateway/simplifier.yml
+  - ../stream-gateway/ROADMAP.md
+  - ../../process/brain-stream.yml

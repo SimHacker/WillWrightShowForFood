@@ -1,0 +1,62 @@
+# Scott Adams — invitation portrayal. NOT Scott Adams.
+# The ADVENTURE-GAME PIONEER (Adventureland, Adventure International), NOT the Dilbert cartoonist.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: scott-adams
+  name: "Scott Adams"
+  disambiguation: "Adventure-game pioneer (Adventure International). NOT the Dilbert cartoonist of the same name."
+  type: invitation
+  signifier: "🗺️"
+  status: living
+  field: "Text adventures / interactive fiction; the data-driven adventure engine; retro IF; now AI"
+  home: characters/scott-adams/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: warm_contact   # HN reconnect + Jan 2026 email; likes MOOLLM; biography/adventure parallel
+  consent: correspondence_verified   # confirm before long on-air quotes; msadams@msadams.com
+  document: ../../repo-shows/scott-adams/invitation.md
+  show_seed: repo-shows/scott-adams/
+  correspondence: DonHopkins/characters/don-hopkins/correspondence/scott-adams.yml
+
+bio:
+  summary: "**Scott Adams** (b. 1952) pioneered the **microcomputer text adventure**. In 1978 he wrote **Adventureland** on a TRS-80 -- the first commercially sold text adventure for a home computer -- and founded **Adventure International**, one of the earliest game companies. His key invention was engineering, not just design: a compact, portable **data-driven adventure engine** -- each game stored as a *database* of rooms, items, and verb/noun *actions*, executed by a small interpreter/'driver' that was re-implemented per machine. That let one adventure ship across the TRS-80, Apple ][, Atari 8-bit, VIC-20, Commodore 64, and more, with a whole game squeezed into ~16K and a two-word (verb-noun) parser. Classic titles include **Pirate Adventure** (co-written with Alexis Adams), Secret Mission, Voodoo Castle, The Count, Strange Odyssey, Mystery Fun House, Pyramid of Doom, Ghost Town, and the licensed Marvel **Questprobe** series (Hulk, Spider-Man). His engine and games shaped the entire adventure genre."
+
+  don_connection: |
+    Scott Adams' "compile the adventure to portable DATA + a tiny VM" architecture is the direct
+    ancestor of Don's ADVENTURE COMPILER idea and of Don's Terrapin **Logo Adventure** (Logo REPL
+    as parser). Reconnected via HN (thread 29330901); Jan 2026 Scott on MOOLLM: "sucked me in,"
+    "tremendous potential." Parallel projects: Scott's biography (NotebookLM + Gemini over
+    thousands of emails/interviews) structured as **mini-adventures on webpages** — play to unlock
+    narrative — and he is "also thinking about MOOLLM." Don builds adventure-compiler tooling
+    Scott can use; ideal Repo Show guest.
+    provenance: VERIFIED via Don correspondence (Jan-Feb 2026). Confirm before broadcast quotes.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Scott_Adams_(game_designer)"
+  note: "Public, well-documented figure. Verify specific dates/titles against sources before broadcast. Do not conflate with the Dilbert cartoonist."
+  web: []
+  papers: []
+  blogs: []
+
+show_suggestions:
+  - "The adventure engine as a COMPILER: adventure-as-database + a tiny portable interpreter -- then Don's adventure compiler + MOOLLM as the modern continuation"
+  - "How you fit a whole world in 16K -- constraints as a design tool"
+  - "The two-word parser vs. modern LLM natural-language parsing -- what's gained and lost"
+  - "Adventure + AI: what LLMs mean for interactive fiction, world models, and adventure authoring (Scott is diving into AI now)"
+  - "Building the tools TOGETHER, live: a Repo Show where Don develops adventure-compiler tooling Scott can actually use"
+  - "Adventure International origin story; Questprobe and the Marvel license; the 1980s IF business"
+
+see_also:
+  - { path: CARD.yml, why: "Invokable abilities for show segments" }
+  - { path: invitation.md, why: "Public invitation draft" }
+  - { path: ../../repo-shows/scott-adams/ideas.md, why: "Full segment catalog for the show" }
+  - { path: ideas.md, why: "Quick hooks (points to show catalog)" }
+  - { path: ../don-hopkins/career/lineage.yml, why: "Logo Adventure + adventure-map grammar + the adventure compiler" }
+  - { path: ../don-hopkins/GLANCE.yml, why: "The career memory palace -> compiled by the adventure compiler (future)" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with the subject's own responses" }

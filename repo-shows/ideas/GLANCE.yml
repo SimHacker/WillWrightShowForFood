@@ -1,0 +1,21 @@
+# ideas/ — GLANCE
+# Creative inventory: gags, themes, traditions, show content
+
+what: "Catalog room for performable Repo Show content — not guest proposals (see ../INDEX.yml), not production rigs (see ../../process/performance-space/)."
+
+buckets:
+  traditions/: "Reusable formats + homages across shows"
+  gags/: "Specific bits to record or rehearse"
+  themes/: "Substantive threads spanning episodes"
+  shows/: "Per-show content packs (will-wright/ flagship)"
+
+flagship: shows/will-wright/
+
+graduation: "idea → segment in SEGMENTS.yml → POC in performance-space → aired clip / harvested episode"
+
+see_also:
+  - INDEX.yml
+  - ../will-wright/SEGMENTS.yml
+  - ../will-wright/performance-and-culture.yml
+  - ../../process/crazy-idea-jam.yml
+  - ../../process/performance-space.yml

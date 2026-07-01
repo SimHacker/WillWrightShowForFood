@@ -1,0 +1,44 @@
+# SimProv Wedding — Double Pre-Game (pixelized joint pass)
+# Tradition: ../traditions/unnecessary-censorship.yml
+# Production POC: ../../../process/performance-space.yml (p0_proofs)
+
+id: pixelized-joint-wedding
+type: gag
+status: seed
+shows: [will-wright]
+
+homage:
+  tradition: unnecessary-censorship
+  credit: "Jimmy Kimmel Live — clearly attributed on air"
+
+engine:
+  pixelization: |
+    Original Sims censorship pixelization (Don Hopkins, Maxis 1997–2000) — mesh-targeted.
+    Pixelize bone meshes: hand while passing, head after inhale.
+  joint_pass:
+    status: implemented_support_never_used
+    mechanic: |
+      Pass a joint among a group: pixelize the hand bone on each pass — prop never visible.
+      On raise-to-face / hit: pixelize the head mesh for ~1 in-game hour.
+  recording: "Sims gameplay capture (FRAPS/OBS); optional broadcast bleeps on innocent dialogue."
+
+scenario: |
+  Bride's friends and groom's friends each sneak off separately before the ceremony — same idea,
+  neither knows the other — to calm nerves. Aisle reveal: both heads pixelized. Wedding proceeds.
+  Crowd Sitter + Buddha for real orchestration; censorship sells the comedy.
+
+lineage:
+  steve_gerri: ../../../characters/will-wright/sources/steve-and-gerri-simlish-adlib/TRANSCRIPT-DRAFT.md
+  simprov: ../../../catalogs/simprov/README.md
+
+modes: [play_along_narration, machinima_bumper, live_riff]
+
+poc:
+  - 60–90s hand-pixelize pass loop
+  - Altar head-pixelize reveal on wedding playset lot
+  - Lower third homage credit
+
+see_also:
+  - ../traditions/unnecessary-censorship.yml
+  - ../../will-wright/performance-and-culture.yml#unnecessary_censorship
+  - ../../../process/performance-space/episode_ideas

@@ -4,6 +4,9 @@
 
 > *"So you have a Repo to Show us?"*
 
+**Format pitch:** A TV/streaming show about **developing and playing** games & tools — using AI the
+best way (people author; AI orchestrates and writes code). [`ideas/traditions/make-play-tools-show.yml`](ideas/traditions/make-play-tools-show.yml)
+
 ## Read order
 
 1. [`GLANCE.yml`](GLANCE.yml)
@@ -18,6 +21,12 @@
 | **will-wright/** ★ | 1996 Winograd talk + draft invitation |
 | lars-brinkhoff/ | PDP-10 ITS *make it so* |
 | heather-steve-alvey/ | Afterlife zombie bridge |
+
+## Ideas catalog
+
+| Room | Start |
+|------|-------|
+| [**ideas/**](ideas/README.md) | Gags, themes, traditions, per-show content — [`will-wright/` pack](ideas/shows/will-wright/README.md) |
 
 ## Game-show seeds (single files)
 

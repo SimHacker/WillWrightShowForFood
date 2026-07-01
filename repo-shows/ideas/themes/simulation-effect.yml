@@ -1,0 +1,12 @@
+# Simulation effect — simple rules → complex behavior
+
+id: simulation-effect
+type: theme
+status: ready
+shows: [will-wright]
+
+topic: "Player-as-author; local rules → global patterns; story as medium."
+anchor: ../../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
+episode: ../../will-wright/episodes.yml#simulation-effect
+
+quote: "Players narrate causal chains Will knows don't exist."

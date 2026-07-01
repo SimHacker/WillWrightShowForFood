@@ -106,13 +106,88 @@ guest_directory:
 
 per_character_files:
   required: [CHARACTER.yml, CARD.yml, GLANCE.md, README.md, invitation.md]
-  optional: [sources.yml, bio.yml, portrayal/, sources/, media/]
+  recommended: [ideas.md]
+  optional: [correspondence.yml, sources.yml, bio.yml, portrayal/, sources/, media/]
+  ideas_file: |
+    ideas.md — conversation hooks for the guest browsing their invitation: what they've done
+    (public career), shared ground with the repo (abstracted — no private email bodies), and
+    numbered show segments. For long-documented relationships (e.g. Will Wright, Alan Kay),
+    a factual Shared ground section is OK if it adds value without boastfulness.
   grows: "Add files as responses and show prep warrant — not a fixed template checklist"
   do_not_repeat: "This standards file — reference governed_by: portrayal-standards.yml"
 
 simulation:
+  # Constitutional distinction — impersonation vs simulation. See also human-control-and-authorship theme.
+
+  question: "Is it ethical to simulate people?"
+  short_answer: |
+    Impersonation without consent is not OK. Labeled simulation — with authorship, control, and
+    clear framing — is what The Sims has been doing for 26+ years. AI raises the stakes; we have
+    rules.
+
+  impersonation:
+    what: |
+      Handing your voice and identity to ChatGPT (or ElevenLabs, etc.) to perform AS you — scripted,
+      cloned, opaque. The machine replaces your authorship and timing; the audience cannot tell
+      simulation from the real person.
+    examples:
+      - "AI DJ Drew — ChatGPT script + voice clone hosting the show"
+      - "TTS clone of a living guest without consent"
+      - "Passing a bot off as the real person in chat or on air"
+    rule: forbidden_without_explicit_consent
+
+  simulation:
+    what: |
+      Models of game characters, fictional people, historic figures — and even yourself, but only
+      with your consent and direct authorship and control. AI may animate or dialogue these models;
+      they may play with each other and with real people — always clearly framed as simulations.
+    examples:
+      - "Sims of girlfriend/boyfriend/spouse/sibling/friend/bully — perform experiments (pool ladders, fires) since 1996"
+      - "Will's menagerie, audience mascots, SimProv characters — labeled fan portrayals"
+      - "Guest who consents to a repo character model they co-author and can edit"
+      - "Memorial mode — discuss ABOUT deceased; never speak AS them"
+    rule: allowed_when_labeled_and_governed
+
+  sims_precedent:
+    note: |
+      For 26+ years kids and adults have used The Sims to model people they know and run experiments
+      on them. That cultural ship has sailed — the question is not whether people simulate people,
+      but how we frame it when AI can speak, decide, and impersonate at scale.
+    will_1996: |
+      Will told Winograd simulating people was "really no hope" — best you can do is prop up a
+      convincing illusion. The illusion worked far better than he predicted. AI makes the illusion
+      cheap — which is why labeling, consent, and human control matter more, not less.
+
+  ai_pandoras_box:
+    note: |
+      LLMs open a new layer: simulated people who can autonomously converse, act, and be mistaken
+      for the real thing. We have thought long and hard about this — Engelbart augmentation +
+      Player-in-the-Middle + portrayal-standards + memorial mode.
+    requires:
+      - "Clear SIMULATION framing — never opaque 'is that really them?'"
+      - "Consent + authorship for any living person modeled"
+      - "Human control of what agents say and do on air (PITM — approve / block / remix)"
+      - "No voice clones of living people on the show"
+      - "Deceased: memorial mode — represent and discuss, not interview or speak as"
+
+  tiers:
+    game_and_fictional:
+      rule: "Always OK when labeled — Sims dolls, game NPCs, fictional audience, historic figures in memorial/discuss mode"
+    living_with_consent:
+      rule: "Guest models themselves (or a character they author); repo-editable; invitation.consent required"
+      self_sovereign: "Don Hopkins — see don-hopkins/CHARACTER.yml"
+    living_without_consent:
+      rule: "Portray ABOUT in invitation docs; discuss on air; never simulate-as-guest, never voice clone"
+    deceased:
+      rule: "Memorial mode — draw on documented work; invite living discussants; no speak-as"
+
   don_hopkins: "Self-sovereign; Don permits simulation of Don — see don-hopkins/CHARACTER.yml"
   guests: "No simulation-as-guest without explicit consent (invitation.consent)"
+
+  see_also:
+    - ../repo-shows/ideas/themes/human-control-and-authorship.yml
+    - ../repo-shows/ideas/themes/simulating-people.yml
+    - ../process/crazy-idea-jam.yml#player_in_the_middle
 
 see_also:
   - invitation-workflow.yml

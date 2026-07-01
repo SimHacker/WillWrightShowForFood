@@ -1,0 +1,45 @@
+# STEVE & GERRI SIMLISH AD-LIB — GLANCE (nav + metadata SSOT)
+# Interface: CARD.yml
+
+title: "Stephen Kearin & Gerri Lawlor — Simlish ad-lib session"
+iconic: "🗣️🎮"
+description: |
+  Pre-release Sims VO session — Kearin and Lawlor narrate in English over early gameplay.
+  Foreign Poet energy that became Simlish. Don Hopkins catalog WAV; transcript draft for proofread.
+
+keywords:
+  - simlish origins
+  - stephen kearin
+  - gerri lawlor
+  - foreign poet
+  - voice over session
+  - early sims build
+  - thought bubbles
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  siblings:
+    - ../1998-06-04-sims-steering-committee-demo/
+    - ../1999-01-06-sims-alpha-prototype/
+    - ../2008-02-10-soul-of-the-sims/
+
+read_order:
+  - README.md
+  - TRANSCRIPT-DRAFT.md
+  - ../../media/steve-and-gerri-simlish-adlib.wav
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Sources room" }
+  siblings:
+    - { path: ../1998-06-04-sims-steering-committee-demo/GLANCE.yml, why: "Same era — Edith demo" }
+  across:
+    - { path: ../../../../schemas/language-simlish.yml, why: "Simlish origins schema" }
+    - { path: ../../../../repo-shows/will-wright/sims-play-along-narration.yml, why: "Foreign Poet segment" }
+    - { path: ../../media/steve-and-gerri-simlish-adlib.wav, why: "Audio artifact" }
+  deep:
+    - { path: TRANSCRIPT-DRAFT.md, why: "Proofread target" }
+    - { path: CARD.yml, why: "Run-standalone interface" }

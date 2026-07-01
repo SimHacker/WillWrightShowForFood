@@ -1,0 +1,50 @@
+# PERFORMANCE SPACE — GLANCE
+# Interface: CARD.yml | Girder: ../performance-space.yml
+
+title: "Performance Space"
+iconic: "🎭📡"
+description: |
+  Top-level design for live participation — play-along Sims narration, script readings,
+  Conan face-puppet, OBS/webcam toys, Twitch audience ingress. Converges Foreign Poet,
+  Drew Carey Show, and Repo Show puppetry.
+
+keywords:
+  - performance space
+  - play-along narration
+  - face puppet
+  - conan-face-puppet
+  - script reading
+  - obs overlay
+  - twitch participation
+  - foreign poet
+
+card: CARD.yml
+girder: ../performance-space.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+
+read_order:
+  - README.md
+  - ../performance-space.yml
+  - ../sims-play-along-narration.yml
+  - ../../repo-shows/will-wright/performance-and-culture.yml
+  - ../../apps/performance-space/
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Process room" }
+  siblings:
+    - { path: ../sims-play-along-narration.yml, why: "Play-along format girder" }
+    - { path: ../ticket-pr.yml, why: "Audience ingress" }
+    - { path: ../brain-stream.yml, why: "Live overlay bus" }
+  children:
+    - { path: ../../apps/performance-space/GLANCE.yml, why: "Web toys + OBS helpers" }
+  across:
+    - { path: ../../characters/will-wright/sources/steve-and-gerri-simlish-adlib/GLANCE.yml, why: "Foreign Poet on tape" }
+    - { path: ../../repo-shows/drew-carey/SHOW.yml, why: "Drew Sims episode seed" }
+    - { path: ../../schemas/language-simlish.yml, why: "Simlish origins" }
+  deep:
+    - { path: README.md, why: "Human design doc" }
+    - { path: CARD.yml, why: "Interface" }

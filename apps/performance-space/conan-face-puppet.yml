@@ -1,0 +1,48 @@
+# Conan face-puppet — browser OBS overlay (P0 web toy)
+# Homage: still photo with mouth cut out; webcam mouth shows through.
+
+meta:
+  id: conan-face-puppet
+  status: spec
+  type: [web_toy, obs_browser_source]
+  design: ../../process/performance-space.yml#performance_modes.face_puppet
+
+what: |
+  Single-page web app: load a face PNG (with alpha mouth hole), capture webcam, composite
+  performer's mouth in the hole, mirror for performer comfort. Transparent background for OBS
+  Browser Source at 1920×1080.
+
+obs:
+  url_pattern: "/performance/conan-face?face=bob-newbie.png"
+  background: transparent
+  recommended_size: "1920x1080"
+  websocket_cues: "Optional — stream-gateway switches face preset via obs-websocket"
+
+ui:
+  controls:
+    - face_picker  # bundled game-character faces + upload
+    - mouth_hole_adjust  # drag corners if PNG isn't pre-cut
+    - mirror_toggle
+    - scale_and_position
+  bundled_faces:
+    note: "Affectionate fan portrayals — clearly labeled; no EA logos."
+    examples: [bob-newbie, bella-goth, sad-clown, slats]
+
+tech:
+  v0:
+    - getUserMedia webcam
+    - canvas 2d composite (face layer + video layer clipped to mouth polygon)
+    - no ML — performer aligns physically (authentic Conan energy)
+  v1:
+    - optional face landmark hint for mouth alignment
+    - amplitude meter export for amplitude-scrub-puppet sibling toy
+
+ethics:
+  - "Default faces = game characters from show pantheon."
+  - "Celebrity photos = performer-supplied; living people need consent for broadcast."
+  - "Label as homage to late-night face-cutout tradition."
+
+see_also:
+  - ../../process/performance-space/README.md
+  - ../../repo-shows/will-wright/performance-and-culture.yml#puppet_kinds.face_puppet
+  - ../stream-gateway/overlay-viewer.yml

@@ -1,0 +1,40 @@
+# Will Wright show — episode & title seeds
+# Harvest-driven: kickoff transcript may supersede. See ../../../will-wright/episodes.yml.
+
+kickoff:
+  id: will-wright-00-anything
+  title: "A Repo Show with Will Wright (anything goes)"
+  canonical: ../../../will-wright/episodes.yml#kickoff
+
+from_1996_video:
+  canonical: ../../../will-wright/episodes.yml#seeded_by_the_1996_video
+  highlights:
+    - taken-aback-moment
+    - anatomy-of-a-simulation-game
+    - objects-that-advertise
+    - story-as-medium
+    - reverse-over-engineering-simcity
+    - failure-modes-and-calvin-syndrome
+
+performance_episodes:
+  - title: "Foreign Poet Theatre"
+    modes: [foreign_poet, play_along_narration]
+    guests: [claire-curtin, jerry-martin, stephen-kearin]
+    source: ../../../process/performance-space.yml
+  - title: "Come On Down to This Lot"
+    modes: [play_along_narration]
+    guest: drew-carey
+  - title: "Hole in the Guest"
+    modes: [face_puppet, live_script_reading]
+  - title: "Phoneloper vs Pink Trombone"
+    modes: [voice_puppet, audience_chorus]
+  - title: "SimProv Wedding — Double Pre-Game"
+    modes: [machinima, play_along_narration]
+    gag: ../../gags/pixelized-joint-wedding.yml
+  - title: "Speed Dating with Cupid"
+    modes: [audience_orchestrated_gameplay, play_along_narration, live_riff]
+    segment: ../../gags/speed-dating-with-cupid.yml
+    note: "Audience suggests who falls in love first; live Cupid object — prior art on YouTube."
+
+topical_flows:
+  canonical: ../../../will-wright/episodes.yml#flows_from_it

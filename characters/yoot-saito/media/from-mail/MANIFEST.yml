@@ -1,0 +1,356 @@
+# yoot-saito — media from mail exports
+# Private mail: see DonHopkins/characters/don-hopkins/email-archive/INDEX.yml
+
+character: yoot-saito
+consent_note: Public respectful portrayal for invitation browsing; subject may request removal
+artifact_count: 58
+
+artifacts:
+  - file: from-mail/artifact-1697545281871.jpeg
+    kind: thread
+    title: "1697545281871"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-1038-Re_ Sim Tower--1697545281871.jpeg
+    message_subject: "Re: Sim Tower"
+    message_date: "Monday, 10 June 2024 at 10:17:26"
+  - file: from-mail/artifact-ef0682ce85c90b3ec12642426b46d478_200x200.png
+    kind: thread
+    title: "ef0682ce85c90b3ec12642426b46d478 200x200"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-1179-"Common Cause" license for Yoot Tower--ef0682ce85c90b3ec12642426b46d478_200x200.png
+    message_subject: ""Common Cause" license for Yoot Tower"
+    message_date: "Monday, 10 June 2024 at 12:04:47"
+  - file: from-mail/artifact-eit1ae9ai3q5mahvhhdj.jpeg
+    kind: thread
+    title: "eit1ae9ai3q5mahvhhdj"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-1179-"Common Cause" license for Yoot Tower--eit1ae9ai3q5mahvhhdj.jpeg
+    message_subject: ""Common Cause" license for Yoot Tower"
+    message_date: "Monday, 10 June 2024 at 12:04:47"
+  - file: from-mail/artifact-image2.jpeg
+    kind: thread
+    title: "image2"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-284-Re_ Open source Yoot Tower! ;)--image2.jpeg
+    message_subject: "Re: Open source Yoot Tower! ;)"
+    message_date: "Saturday, 23 March 2024 at 13:08:42"
+  - file: from-mail/artifact-img_5294.jpeg
+    kind: thread
+    title: "IMG 5294"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-476-Re_ Open source Yoot Tower! ;)--IMG_5294.jpeg
+    message_subject: "Re: Open source Yoot Tower! ;)"
+    message_date: "Saturday, 23 March 2024 at 14:46:58"
+  - file: from-mail/artifact-linkedin.png
+    kind: thread
+    title: "LinkedIn"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-1038-Re_ Sim Tower--LinkedIn.png
+    message_subject: "Re: Sim Tower"
+    message_date: "Monday, 10 June 2024 at 10:17:26"
+  - file: from-mail/artifact-profile-icon.png
+    kind: thread
+    title: "profile icon"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-1038-Re_ Sim Tower--profile icon.png
+    message_subject: "Re: Sim Tower"
+    message_date: "Monday, 10 June 2024 at 10:17:26"
+  - file: from-mail/screenshot-img_5657.jpeg
+    kind: screenshot
+    title: "IMG 5657"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-966-Re_ Yoot Saito interview with Alan Kay--IMG_5657.jpeg
+    message_subject: "Re: Yoot Saito interview with Alan Kay"
+    message_date: "Monday, 6 May 2024 at 19:51:31"
+  - file: from-mail/screenshot-maxresdefault.jpeg
+    kind: screenshot
+    title: "maxresdefault"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-1031-Re_ Transcript of Yoot Saito's interview with Alan Kay!--maxresdefault.jpeg
+    message_subject: "Re: Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 13:00:28"
+  - file: from-mail/screenshot-page01-2.jpeg
+    kind: screenshot
+    title: "page01"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-841-Fwd_ Transcript of Yoot Saito's interview with Alan Kay!--page01.jpeg
+    message_subject: "Fwd: Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:27:39"
+  - file: from-mail/screenshot-page01.jpeg
+    kind: screenshot
+    title: "page01"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-775-Transcript of Yoot Saito's interview with Alan Kay!--page01.jpeg
+    message_subject: "Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:25:28"
+  - file: from-mail/screenshot-page02-2.jpeg
+    kind: screenshot
+    title: "page02"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-841-Fwd_ Transcript of Yoot Saito's interview with Alan Kay!--page02.jpeg
+    message_subject: "Fwd: Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:27:39"
+  - file: from-mail/screenshot-page02.jpeg
+    kind: screenshot
+    title: "page02"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-775-Transcript of Yoot Saito's interview with Alan Kay!--page02.jpeg
+    message_subject: "Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:25:28"
+  - file: from-mail/screenshot-page03-2.jpeg
+    kind: screenshot
+    title: "page03"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-841-Fwd_ Transcript of Yoot Saito's interview with Alan Kay!--page03.jpeg
+    message_subject: "Fwd: Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:27:39"
+  - file: from-mail/screenshot-page03.jpeg
+    kind: screenshot
+    title: "page03"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-775-Transcript of Yoot Saito's interview with Alan Kay!--page03.jpeg
+    message_subject: "Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:25:28"
+  - file: from-mail/screenshot-page04-2.jpeg
+    kind: screenshot
+    title: "page04"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-841-Fwd_ Transcript of Yoot Saito's interview with Alan Kay!--page04.jpeg
+    message_subject: "Fwd: Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:27:39"
+  - file: from-mail/screenshot-page04.jpeg
+    kind: screenshot
+    title: "page04"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-775-Transcript of Yoot Saito's interview with Alan Kay!--page04.jpeg
+    message_subject: "Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:25:28"
+  - file: from-mail/screenshot-page05-2.jpeg
+    kind: screenshot
+    title: "page05"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-841-Fwd_ Transcript of Yoot Saito's interview with Alan Kay!--page05.jpeg
+    message_subject: "Fwd: Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:27:39"
+  - file: from-mail/screenshot-page05.jpeg
+    kind: screenshot
+    title: "page05"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-775-Transcript of Yoot Saito's interview with Alan Kay!--page05.jpeg
+    message_subject: "Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:25:28"
+  - file: from-mail/screenshot-page06-2.jpeg
+    kind: screenshot
+    title: "page06"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-841-Fwd_ Transcript of Yoot Saito's interview with Alan Kay!--page06.jpeg
+    message_subject: "Fwd: Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:27:39"
+  - file: from-mail/screenshot-page06.jpeg
+    kind: screenshot
+    title: "page06"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-775-Transcript of Yoot Saito's interview with Alan Kay!--page06.jpeg
+    message_subject: "Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:25:28"
+  - file: from-mail/screenshot-page07-2.jpeg
+    kind: screenshot
+    title: "page07"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-841-Fwd_ Transcript of Yoot Saito's interview with Alan Kay!--page07.jpeg
+    message_subject: "Fwd: Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:27:39"
+  - file: from-mail/screenshot-page07.jpeg
+    kind: screenshot
+    title: "page07"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-775-Transcript of Yoot Saito's interview with Alan Kay!--page07.jpeg
+    message_subject: "Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:25:28"
+  - file: from-mail/screenshot-page08-2.jpeg
+    kind: screenshot
+    title: "page08"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-841-Fwd_ Transcript of Yoot Saito's interview with Alan Kay!--page08.jpeg
+    message_subject: "Fwd: Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:27:39"
+  - file: from-mail/screenshot-page08.jpeg
+    kind: screenshot
+    title: "page08"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-775-Transcript of Yoot Saito's interview with Alan Kay!--page08.jpeg
+    message_subject: "Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:25:28"
+  - file: from-mail/screenshot-page09-2.jpeg
+    kind: screenshot
+    title: "page09"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-841-Fwd_ Transcript of Yoot Saito's interview with Alan Kay!--page09.jpeg
+    message_subject: "Fwd: Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:27:39"
+  - file: from-mail/screenshot-page09.jpeg
+    kind: screenshot
+    title: "page09"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-775-Transcript of Yoot Saito's interview with Alan Kay!--page09.jpeg
+    message_subject: "Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:25:28"
+  - file: from-mail/screenshot-page10-2.jpeg
+    kind: screenshot
+    title: "page10"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-841-Fwd_ Transcript of Yoot Saito's interview with Alan Kay!--page10.jpeg
+    message_subject: "Fwd: Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:27:39"
+  - file: from-mail/screenshot-page10.jpeg
+    kind: screenshot
+    title: "page10"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-775-Transcript of Yoot Saito's interview with Alan Kay!--page10.jpeg
+    message_subject: "Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:25:28"
+  - file: from-mail/screenshot-page11-2.jpeg
+    kind: screenshot
+    title: "page11"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-841-Fwd_ Transcript of Yoot Saito's interview with Alan Kay!--page11.jpeg
+    message_subject: "Fwd: Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:27:39"
+  - file: from-mail/screenshot-page11.jpeg
+    kind: screenshot
+    title: "page11"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-775-Transcript of Yoot Saito's interview with Alan Kay!--page11.jpeg
+    message_subject: "Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:25:28"
+  - file: from-mail/screenshot-page12-2.jpeg
+    kind: screenshot
+    title: "page12"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-841-Fwd_ Transcript of Yoot Saito's interview with Alan Kay!--page12.jpeg
+    message_subject: "Fwd: Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:27:39"
+  - file: from-mail/screenshot-page12.jpeg
+    kind: screenshot
+    title: "page12"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-775-Transcript of Yoot Saito's interview with Alan Kay!--page12.jpeg
+    message_subject: "Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:25:28"
+  - file: from-mail/screenshot-page13-2.jpeg
+    kind: screenshot
+    title: "page13"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-841-Fwd_ Transcript of Yoot Saito's interview with Alan Kay!--page13.jpeg
+    message_subject: "Fwd: Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:27:39"
+  - file: from-mail/screenshot-page13.jpeg
+    kind: screenshot
+    title: "page13"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-775-Transcript of Yoot Saito's interview with Alan Kay!--page13.jpeg
+    message_subject: "Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:25:28"
+  - file: from-mail/screenshot-page14-2.jpeg
+    kind: screenshot
+    title: "page14"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-841-Fwd_ Transcript of Yoot Saito's interview with Alan Kay!--page14.jpeg
+    message_subject: "Fwd: Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:27:39"
+  - file: from-mail/screenshot-page14.jpeg
+    kind: screenshot
+    title: "page14"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-775-Transcript of Yoot Saito's interview with Alan Kay!--page14.jpeg
+    message_subject: "Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:25:28"
+  - file: from-mail/screenshot-page15-2.jpeg
+    kind: screenshot
+    title: "page15"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-841-Fwd_ Transcript of Yoot Saito's interview with Alan Kay!--page15.jpeg
+    message_subject: "Fwd: Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:27:39"
+  - file: from-mail/screenshot-page15.jpeg
+    kind: screenshot
+    title: "page15"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-775-Transcript of Yoot Saito's interview with Alan Kay!--page15.jpeg
+    message_subject: "Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:25:28"
+  - file: from-mail/screenshot-page16-2.jpeg
+    kind: screenshot
+    title: "page16"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-841-Fwd_ Transcript of Yoot Saito's interview with Alan Kay!--page16.jpeg
+    message_subject: "Fwd: Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:27:39"
+  - file: from-mail/screenshot-page16.jpeg
+    kind: screenshot
+    title: "page16"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-775-Transcript of Yoot Saito's interview with Alan Kay!--page16.jpeg
+    message_subject: "Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:25:28"
+  - file: from-mail/screenshot-page17-2.jpeg
+    kind: screenshot
+    title: "page17"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-841-Fwd_ Transcript of Yoot Saito's interview with Alan Kay!--page17.jpeg
+    message_subject: "Fwd: Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:27:39"
+  - file: from-mail/screenshot-page17.jpeg
+    kind: screenshot
+    title: "page17"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-775-Transcript of Yoot Saito's interview with Alan Kay!--page17.jpeg
+    message_subject: "Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:25:28"
+  - file: from-mail/screenshot-page18-2.jpeg
+    kind: screenshot
+    title: "page18"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-841-Fwd_ Transcript of Yoot Saito's interview with Alan Kay!--page18.jpeg
+    message_subject: "Fwd: Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:27:39"
+  - file: from-mail/screenshot-page18.jpeg
+    kind: screenshot
+    title: "page18"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-775-Transcript of Yoot Saito's interview with Alan Kay!--page18.jpeg
+    message_subject: "Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:25:28"
+  - file: from-mail/screenshot-page19-2.jpeg
+    kind: screenshot
+    title: "page19"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-841-Fwd_ Transcript of Yoot Saito's interview with Alan Kay!--page19.jpeg
+    message_subject: "Fwd: Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:27:39"
+  - file: from-mail/screenshot-page19.jpeg
+    kind: screenshot
+    title: "page19"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-775-Transcript of Yoot Saito's interview with Alan Kay!--page19.jpeg
+    message_subject: "Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:25:28"
+  - file: from-mail/screenshot-page20-2.jpeg
+    kind: screenshot
+    title: "page20"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-841-Fwd_ Transcript of Yoot Saito's interview with Alan Kay!--page20.jpeg
+    message_subject: "Fwd: Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:27:39"
+  - file: from-mail/screenshot-page20.jpeg
+    kind: screenshot
+    title: "page20"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-775-Transcript of Yoot Saito's interview with Alan Kay!--page20.jpeg
+    message_subject: "Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:25:28"
+  - file: from-mail/screenshot-page21-2.jpeg
+    kind: screenshot
+    title: "page21"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-841-Fwd_ Transcript of Yoot Saito's interview with Alan Kay!--page21.jpeg
+    message_subject: "Fwd: Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:27:39"
+  - file: from-mail/screenshot-page21.jpeg
+    kind: screenshot
+    title: "page21"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-775-Transcript of Yoot Saito's interview with Alan Kay!--page21.jpeg
+    message_subject: "Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 11:25:28"
+  - file: from-mail/screenshot-photo-on-5-3-24-at-1241-pm-2.jpeg
+    kind: screenshot
+    title: "Photo on 5-3-24 at 12.41 PM #2"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-216-Re_ Transcript of Yoot Saito's interview with Alan Kay!--Photo on 5-3-24 at 12.41 PM #2.jpeg
+    message_subject: "Re: Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 21:43:45"
+  - file: from-mail/screenshot-photo-on-5-3-24-at-1241-pm.jpeg
+    kind: screenshot
+    title: "Photo on 5-3-24 at 12.41 PM"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-216-Re_ Transcript of Yoot Saito's interview with Alan Kay!--Photo on 5-3-24 at 12.41 PM.jpeg
+    message_subject: "Re: Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 21:43:45"
+  - file: from-mail/screenshot-seaman_coverart.png
+    kind: screenshot
+    title: "Seaman Coverart"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-1031-Re_ Transcript of Yoot Saito's interview with Alan Kay!--Seaman_Coverart.png
+    message_subject: "Re: Transcript of Yoot Saito's interview with Alan Kay!"
+    message_date: "Friday, 3 May 2024 at 13:00:28"
+  - file: from-mail/screenshot-yoottower-2.png
+    kind: screenshot
+    title: "YootTower"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-227-Would you and Yoot interview each other?--YootTower.png
+    message_subject: "Would you and Yoot interview each other?"
+    message_date: "Wednesday, 22 May 2024 at 14:19:13"
+  - file: from-mail/screenshot-yoottower-3.png
+    kind: screenshot
+    title: "YootTower"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-314-Chaim Gingold's book on SimCity is out!--YootTower.png
+    message_subject: "Chaim Gingold's book on SimCity is out!"
+    message_date: "Monday, 22 April 2024 at 14:18:03"
+  - file: from-mail/screenshot-yoottower-4.png
+    kind: screenshot
+    title: "YootTower"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-528-Fwd_ Chaim Gingold's book on SimCity is out!--YootTower.png
+    message_subject: "Fwd: Chaim Gingold's book on SimCity is out!"
+    message_date: "Monday, 24 June 2024 at 08:37:04"
+  - file: from-mail/screenshot-yoottower.png
+    kind: screenshot
+    title: "YootTower"
+    source_export: DonHopkins/temp/AlanKay/attachments/msg-1042-Re_ Inquiry re_ Simulation Technology Documentary--YootTower.png
+    message_subject: "Re: Inquiry re: Simulation Technology Documentary"
+    message_date: "Tuesday, 7 May 2024 at 04:52:03"

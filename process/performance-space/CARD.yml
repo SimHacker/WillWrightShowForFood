@@ -1,0 +1,38 @@
+# CARD — Performance Space (interface)
+# Nav: GLANCE.yml | Girder: ../performance-space.yml
+
+glance: GLANCE.yml
+
+room:
+  id: performance-space
+  name: "Performance Space"
+  type: [process_room, design_doc, live_format]
+  home: process/performance-space/
+
+methods:
+  PICK-MODE:
+    signature: "pickMode(segment) → play_along | script_reading | face_puppet | voice_puppet"
+    advertisement: "Choose performance mode for a segment block."
+  LINK-LINEAGE:
+    signature: "linkLineage() → steve-gerri + drew + conan + simlish schema"
+    advertisement: "All canonical examples in one index."
+  PLAN-POC:
+    signature: "planPoc() → performance-space.yml#proof_of_concept_roadmap"
+    advertisement: "Four P0 demos to prove the space on air."
+
+abilities:
+  - id: CONVERGENCE-MAP
+    name: Convergence Map
+    type: activated
+    advertisement:
+      method: convergenceMap
+      signature: "convergenceMap() → one performance space"
+      score_when:
+        - trigger: segment_planning
+          weight: 0.9
+    effect: "Icons carry meaning; voice carries feeling — any prompt."
+
+compose_with:
+  - ../sims-play-along-narration.yml
+  - ../../repo-shows/will-wright/performance-and-culture.yml
+  - ../../apps/performance-space/CARD.yml

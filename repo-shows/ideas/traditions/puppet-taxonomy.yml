@@ -1,0 +1,18 @@
+# Puppet taxonomy — face / voice / full puppet
+
+id: puppet-taxonomy
+type: tradition
+status: ready
+canonical: ../../will-wright/performance-and-culture.yml#puppet_kinds
+
+kinds:
+  face_puppet:
+    name: conan-face-puppet
+    homage: "Conan — photo with mouth hole; performer speaks through"
+    spec: ../../../apps/performance-space/conan-face-puppet.yml
+  voice_puppet:
+    instruments: [pink_trombone, phoneloper]
+  puppet:
+    amplitude_scrub: "David Levitt technique — voice drives video scrub"
+
+reading: ../../will-wright/performance-and-culture.yml#the_reading

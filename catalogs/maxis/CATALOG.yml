@@ -60,11 +60,24 @@ object_record_schema:
 pipeline:
   iff_reader:
     status: planned
-    note: "Read .iff directly; render rotations, zooms, state compositions — Transmogrifier / ShowNTell parity without ActiveX"
+    host: "Micropolis Home TypeScript in Angel WebView2 + FileBridge to local .far"
+    note: "Read .iff directly; WebGPU render — Transmogrifier / ShowNTell parity without ActiveX"
+  sqlite_catalog:
+    status: spec
+    path: "../../apps/micropolis-angel/CATALOG-DB-SCHEMA.yml"
+    regenerate: "Scan owned install + user roots via TypeScript IFF parser — NOT SimsObjects.xml import"
+    compare_only: "TheSims/SimsKit/Transmogrifier/SimsObjects.xml — validation diff, unknown quality"
+    lineage: "Sim Obliterator / vitamoo — full credit in schema doc"
+  simplifier_crawl:
+    status: spec
+    path: "../../apps/micropolis-angel/SIMSKIT-LINEAGE.yml#simplifier"
+    note: |
+      Port navigation+inject from Simplifier C++; scrape **preview images only** during catalog crawl.
+      Names/descriptions from XML+iff — NOT glyph OCR. Retire crawl when WebGPU previews ship.
   simplifier:
     status: spec
     path: "../../apps/stream-gateway/simplifier.yml"
-    note: "Reformed accessibility bot — screen scrape until IFF previews ship; useful beyond TSO maze/money"
+    note: "Inject for crawl + lifecycle + stream; OCR demoted to bootstrap fallback"
 
 ties_to:
   - path: ../CATALOGS.yml

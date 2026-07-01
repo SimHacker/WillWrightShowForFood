@@ -1,0 +1,12 @@
+# Inclusion agitprop — SimProv wedding
+
+id: inclusion-agitprop
+type: theme
+status: ready
+shows: [will-wright]
+
+magnum_opus: ../../../catalogs/simprov/README.md
+narration: ../../will-wright/INTRO-NARRATIVE.md
+built_when: "Marriage equality still a fight in the real world"
+gag_crossover: ../gags/pixelized-joint-wedding.yml
+segment: ../gags/speed-dating-with-cupid.yml

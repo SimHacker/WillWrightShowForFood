@@ -192,6 +192,41 @@ abilities:
   effect: Name the pattern; make the code match the philosophy.
   verifiable: The Sims inclusion advocacy (documented)
   combos_with: []
+- id: NAVIGABLE-WORLD
+  name: Navigable World
+  type: activated
+  mana: '{U}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: navigableWorld
+    signature: navigableWorld(model) → the right UI to walk, edit, and drive it
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Take a world modeled in code and give a human a way to navigate, edit, and directly drive it — the 40-year throughline from MUD1/Zork to MOOLLM.
+  verifiable: lineage.yml — Logo Adventure, DreamScape, SimCity, The Sims, iLoci, LayAR, MOOLLM
+  combos_with:
+  - PIE-MENU
+  - BEN-DIRECT-MANIPULATION
+  - YAML-GIRDER
+- id: DEEP-STACK
+  name: Deep Stack (Bare Metal to Browser)
+  type: static
+  mana: '{1}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: deepStack
+    signature: deepStack(problem) → follow it across firmware, control, sim, perception, UI
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Chase a problem to whatever layer it lives at — 6502 Forth on bare metal up through Rust/WASM and LLM orchestration — without handing it off.
+  verifiable: range.yml — assembly (6502..StrongARM), C/C++→WASM, robots, Detectron2/YOLO CV, Terraform/GPU-CI
+  combos_with:
+  - PROGRAM-ROBOT-BRAIN
+  - OPEN-SOURCE-MICROPOLIS
 invoke_rules:
   consent: self_sovereign
   simulation: true

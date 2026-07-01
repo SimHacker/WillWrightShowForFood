@@ -1,0 +1,21 @@
+# Dan Ingalls — GLANCE (invitation portrayal; NOT the person)
+
+glance:
+  id: dan-ingalls
+  signifier: "🪟"
+  one_line: "Smalltalk architect — BitBlt, pop-up menus, Squeak, Fabrik, Lively, Smalltalk Zoo"
+  status: invitation_draft
+  consent: not_yet_asked
+
+read_order:
+  - README.md
+  - invitation.md
+  - pie-menus-and-pop-ups.md
+  - correspondence.yml
+  - CARD.yml
+  - ../../repo-shows/dan-ingalls/README.md
+
+anchors:
+  smalltalk_zoo: https://smalltalkzoo.thechm.org/
+  chm_profile: https://computerhistory.org/profile/dan-ingalls/
+  live_objects: ../../process/trails/live-objects.md

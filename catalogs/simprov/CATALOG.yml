@@ -24,6 +24,7 @@ objects:
     role: "Gather guests, seat them, manage overflow"
   - name: Cupid
     role: "Speed-dating cheat — prerequisite romance for marriage"
+    demo: ../../repo-shows/ideas/gags/speed-dating-with-cupid.yml
   - name: Buddha statue
     role: "Suppress needs for large wedding crowds"
   - name: Hope Chest + wedding consultant
