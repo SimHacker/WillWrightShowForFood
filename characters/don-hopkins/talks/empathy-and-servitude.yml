@@ -1,0 +1,26 @@
+# TALK distill — Empathy and Servitude
+# Source: DonHopkins/talks/empathy-and-servitude/TALK.yml (public_safe)
+
+talk:
+  id: empathy-and-servitude
+  title: "Empathy and Servitude"
+  subtitle: "Robots, humans, and the microworlds we build to rehearse the future"
+  by: Don Hopkins
+
+one_liner: |
+  Two one-minute films about robots open a talk about how people really treat machines —
+  and about the microworld simulation OS built to model robots, homes, and the future.
+
+films:
+  - Servitude  # robot begging for a good review
+  - Empathy    # robot broken down on the street
+
+alt_titles:
+  - "Ariel and Caliban"
+  - "Robota"
+  - "Mr. Roboto"
+
+formats: ["20 min lightning", "45 min conf", "60 min keynote", "Repo Show live"]
+
+wwsff_entry: ../stupid-fun-club-empathy-and-servitude.md
+upstream: SimHacker/DonHopkins/talks/empathy-and-servitude/TALK.yml

@@ -20,10 +20,10 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/david-ungar-self-moollm.yml
-  note: "Self × MOOLLM; Kaleida consciencious objectors meetup"
+  note: "DREAM GUEST — episode: Reflecting on Self: Narcissa's Mirror; Self × MOOLLM; self-interest!; Kaleida consciencious objectors"
 
 bio:
-  summary: "**David Ungar** — co-creator (with Randall Smith) of **Self**, the prototype-based object language that dropped classes entirely (objects are unique individuals that inherit from other objects). His work pioneered **generation-scavenging** garbage collection (UC Berkeley PhD) and the **adaptive/dynamic JIT compilation** that directly influenced Java's HotSpot VM; he also explored reflection via **mirrors**. Stanford faculty, then Sun Microsystems Labs (Self), then IBM Research. Known for the wry 'Self: The Movie' and the Dahl–Nygaard Prize. In this show: **Self × MOOLLM** — directories as prototypes — with the 'conscientious objectors' framing he and Don coined at a Kaleida meetup."
+  summary: "**David Ungar** — co-creator (with Randall Smith) of **Self**, the prototype-based object language that dropped classes entirely (objects are unique individuals that inherit from other objects). His work pioneered **generation-scavenging** garbage collection (UC Berkeley PhD) and the **adaptive/dynamic JIT compilation** that directly influenced Java's HotSpot VM; he also explored reflection via **mirrors**. Stanford faculty, then Sun Microsystems Labs (Self), then IBM Research. Known for the wry 'Self: The Movie' and the Dahl–Nygaard Prize; the early community mailing list was **self-interest!** (Don Hopkins was on it). In this show: **Self × MOOLLM** — directories as prototypes — with the 'conscientious objectors' framing he and Don coined at a Kaleida meetup."
 
 sources:
   wikipedia: "https://en.wikipedia.org/wiki/David_Ungar"

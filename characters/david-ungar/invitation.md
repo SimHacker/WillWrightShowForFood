@@ -15,7 +15,9 @@ We would respectfully invite **David Ungar** to a **Repo Show** — a Micropolis
 conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood),
 following through to working code and credited ideas in public.
 
-**Proposed focus:** Self × MOOLLM; Kaleida consciencious objectors meetup
+**Proposed episode:** *Reflecting on Self: Narcissa's Mirror* — Self × MOOLLM; mirrors,
+prototypes, `# import self from self`, the **self-interest!** mailing list, Kaleida
+**consciencious objectors** meetup. (Dream guest — Don to confirm title spelling with David.)
 
 **Materials:** [`repo-shows/david-ungar-self-moollm.yml`](../../repo-shows/david-ungar-self-moollm.yml)
 

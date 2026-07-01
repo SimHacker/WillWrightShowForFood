@@ -7,6 +7,8 @@
 #   and fun. Each project adds ideas to the bundle; MOOLLM is where they all come together.
 # Two braids: `bundle` (the navigable worlds) + `tools_lineage` (the editors + constraint/
 #   reactive UI he built them WITH -- Emacs/TECO -> Garnet -> OpenLaszlo -> Svelte).
+# Third braid: `imaging_model_lineage` (Porter/Duff stencil-paint: PostScript -> Cairo/Pango
+#   -> SVG/Canvas -- Illustrator not PhotoShop).
 
 thesis: |
   Not a series of unrelated jobs, and not just one idea either -- a growing bundle of great
@@ -44,13 +46,13 @@ bundle:   # each entry adds its own ideas to the pile; they cross-pollinate and 
   - { project: "Pie menus",                    era: "UMD HCIL CHI'88 -> NeWS -> X11 -> The Sims -> OLPC -> web -> Unity", thread: "direct manipulation: fast, reliable gestural selection -- the verb-picker for a modeled world" }
   - { project: "HyperTIES / PSIBER Space Deck",era: "NeWS, late 1980s",           thread: "hypermedia as navigable space; live objects you can open, inspect, and edit" }
   - { project: "DreamScape",                   era: "Kaleida Labs (ScriptX)",     thread: "mirror-world / mind-map media environment -- a memory-palace precursor" }
-  - { project: "SimCity / Micropolis",         era: "1989 -> GPL 2008 -> WASM/web",thread: "an editable simulated world; tile/parametric editing; one human steering a whole living system. Built the MULTIPLAYER X11 version in TCL/Tk (Tcl as the embedded extension language) -- shared-world city editing over the network" }
+  - { project: "SimCity / Micropolis",         era: "1989 -> GPL 2008 -> WASM/web",thread: "an editable simulated world; tile/parametric editing; multiplayer X11/Tcl/Tk shared-world city editing. Imaging: Porter/Duff stencil-paint (PostScript -> Cairo/Pango -> HTML/CSS/SVG/Canvas 2D -> WebGPU/WebGL holodeck, GPU preferred, nested compositing) -- Illustrator not PhotoShop. Weeks before Ben Shneiderman (UMD HCIL) visited Don and Brad Myers at CMU, Don implemented a Dynamic HomeFinder-style filter in multiplayer SimCity -- homage to Ben's HCIL demo (dynamic queries: sliders + map, instant feedback). https://www.cs.umd.edu/hcil/trs/92-01/92-01.html" }
   - { project: "The Sims",                     era: "Maxis/EA (core team)",       thread: "characters + objects-that-carry-their-own-behavior + architectural editing; author a world by placing and wiring objects" }
   - { project: "SFC MediaGraph",               era: "Stupid Fun Club (Will Wright)",thread: "zoomable, editable graph/map of media as navigable space" }
   - { project: "StoryMaker / Bar Karma / Urban Safari", era: "SFC / interactive TV", thread: "branching story maps; geocoded storytelling on a real-world map" }
   - { project: "iLoci",                        era: "iPhone",                     thread: "a method-of-loci memory palace, literally -- put ideas in places, walk back to them" }
   - { project: "Amsterdam Coffeeshops + LayAR + BONGO BINGO", era: "iPhone / AR", thread: "the real city as the map: content DB, AR overlay (a mirror world), check-in game layered on top" }
-  - { project: "MOOLLM",                       era: "now: filesystem + YAML + LLMs + home automation", thread: "ALL of it at once -- rooms = directories, objects = YAML with live state, characters, inheritable skills, gestural editing, wired to the real world" }
+  - { project: "MOOLLM",                       era: "now: filesystem + YAML + LLMs + home automation", thread: "ALL of it at once -- rooms = directories, objects = YAML with live state, characters, inheritable skills, gestural editing, wired to the real world. It works; the way it works is fun" }
 
 tools_lineage:   # the OTHER throughline -- the tools he built worlds WITH: extensible editors +
                  # constraint/reactive UI, across generations of GUI and web tech. "Everything old
@@ -61,11 +63,15 @@ tools_lineage:   # the OTHER throughline -- the tools he built worlds WITH: exte
     - { tech: "Gosling / UniPress Unix Emacs (MockLisp)",   era: "1980s",                   idea: "Gosling's Emacs; extension language was MockLisp -- a Lisp-ish macro language" }
     - { tech: "GNU Emacs (Emacs Lisp)",                     era: "1980s -> now",            idea: "a REAL Lisp as the extension language; a fully self-reprogrammable editor" }
     - { tech: "CForth embedded in CADroid (Sun internship, mentor Mitch Bradley)", era: "late 1980s", idea: "embedded CForth as a friendly macro/scripting language INTO a CAD circuit-capture-and-schematic editor -- programming-by-demonstration: capture user edits as replayable, editable Forth. Extensibility, applied by Don's own hand" }
-    - { tech: "Garnet (KR constraints, CLX / X11, Common Lisp)", era: "CMU (Brad Myers)",   idea: "constraint-based GUI toolkit: DECLARE the relationships, the system keeps them true" }
+    - { tech: "Garnet (KR constraints, CLX / X11, Common Lisp)", era: "CMU CSD ~1992 (Brad Myers)",   idea: "early reactive Lisp UI: prototype-based objects + KR constraints -- DECLARE relationships, system keeps them true. Don worked in Brad's lab (Opal graphics layer). Same declarative shape he later loved in OpenLaszlo and now in Svelte/MOOLLM" }
     - { tech: "TCL/Tk on X11 (multiplayer SimCity)",        era: "1990s",                   idea: "Tcl as an embedded extension language; a shared-world, network-multiplayer SimCity" }
+    - { tech: "Python / PyGTK / Cairo / Pango / Sugar (OLPC Micropolis)", era: "2006–2008", idea: "Don dove into Python adapting SimCity for OLPC -- Python was the lifeblood of the platform (Sugar itself written in Python), built on PyGTK, gobject, Cairo, Pango. Wrapped TCL/Tk/X11 SimCity in a Python Sugar adaptor, then PyGTK desktop UI: Cairo for scalable printable graphics, Pango for beautiful scalable printable text -- natural migration from HyperLook PostScript tiles (same Porter/Duff stencil-paint model, better implemented). TODO: revive PyGTK shell around MicropolisCore C++ engine (PyGTK may still be viable; Don has not tracked GTK lately)" }
+    - { tech: "SVG + HTML Canvas + CSS (web 2D)",           era: "Micropolis web -> MicropolisCore", idea: "Porter/Duff stencil-paint on the web -- vector illustration semantics (Illustrator), not (or not only) Photoshop bitmap paint; DOM/CSS/SVG/Canvas as the document and 2D layer" }
+    - { tech: "WebGPU / WebGL (holodeck compositor)",       era: "MicropolisCore now",      idea: "GPU rendering on top of, underneath, or nested inside the HTML/CSS/SVG/Canvas/2D stack -- preferably GPU; @micropolis/render-core HolodeckStage layers simulation truth + tile overlays + pie menus + agents. Same stencil/paint compositing idea, hardware-accelerated" }
     - { tech: "SFC MediaGraph (Macintosh Common Lisp + QuickTime)", era: "Stupid Fun Club", idea: "constraint/graph media environment in MCL, driving QuickTime -- a navigable media map" }
-    - { tech: "Zope (Python)",                              era: "web app server",          idea: "object-oriented through-the-web: objects addressable + editable over HTTP" }
-    - { tech: "OpenLaszlo (constraints)",                   era: "declarative web UI -> Flash/DHTML", idea: "declarative XML UI with a REAL constraint system -- write relationships, not update code" }
+    - { tech: "Zope / Plone / CMF (Python)",                  era: "2000s web CMS",           idea: "object publishing -- URL traversal to Python objects; CMF content types, workflows, permissions, through-the-web editing. Don did a lot of this (SimProv CMS, originalsims.com lineage). Same shape as MOOLLM rooms/skills -- without the Zopieness (no ZODB/acquisition maze)" }
+    - { tech: "TurboGears / SQLObject / Genshi",               era: "2005+ NutritionQuest (decade+ romance)", idea: "abandoned Zope's mind-numbing complexity for a lean Python stack; Don developed, extended, and maintained Genshi templates and the Alive-PD platform for Torin Block / Block Dietary. Still running -- live demo; TODO: record walkthrough for YouTube (Torin would love it). Micropolis web used same TurboGears + OpenLaszlo thread" }
+    - { tech: "OpenLaszlo (constraints)",                   era: "2000s (with Henry Minsky, pre-Leela)", idea: "declarative XML UI with a REAL constraint system -- Garnet's idea on the web (Flash/DHTML). Don enjoyed working on it; Henry connection predates Leela AI; band back together at Leela now" }
     - { tech: "SvelteKit (fine-grained reactivity)",        era: "now",                     idea: "$state / $derived -- the same declarative-constraint idea, modern web" }
   point: |
     Two braids run through it. Editors: from TECO macros to Emacs Lisp -- the tool should be
@@ -80,15 +86,44 @@ tools_lineage:   # the OTHER throughline -- the tools he built worlds WITH: exte
     reactive web." Flag if you meant something more specific by GNU-Emacs "MLisp."
   extensibility_theme: |
     The deepest braid of all -- EXTENSIBILITY: extend a running system by shipping it code.
-    Emacs (extend the editor in its own Lisp) -> NeWS (download PostScript INTO the window
-    server) -> Tcl/Tk (embed a scripting language to extend the app) -> the web (download
+    Emacs (extend the editor in its own TECO then Lisp) -> NeWS (download PostScript INTO the
+    window server) -> Tcl/Tk (embed a scripting language to extend the app) -> the web (download
     JavaScript INTO the page/browser; AJAX). "Send code, not commands" and "extend it in its
     own language" are the same instinct -- and it's exactly what MOOLLM does: LLM-scriptable
     objects and skills you extend from inside the world. NeWS got there first; the web proved
-    it right. (Twin to the Axis-of-Eval thesis.)
+    it right. (Twin to the Axis-of-Eval thesis.) "Link Globally, Interact Locally"
     Don has applied this by his own hand since the start: as a Sun intern (mentor Mitch
     Bradley) he embedded CForth into the CADroid circuit editor as a friendly, macro-driven,
     programming-by-demonstration scripting language -- the earliest link in his own chain.
+    The filesystem braid: Owen Densmore's class.ps (Smalltalk in PostScript) -> Owen + David
+    Rosenthal's patent (Unix dirs + shell PATH as class hierarchy) -> Zope/Plone/CMF (object
+    publishing + CMS workflows through the web) -> TurboGears/SQLObject/Genshi (lean Python
+    stack after abandoning Zopieness; NutritionQuest decade+ platform, still live) -> MOOLLM
+    (YAML + git, sans framework tax) -> GitHub social layer -> Repo Shows.
+
+imaging_model_lineage:   # third braid -- Porter/Duff stencil/paint; Illustrator not PhotoShop
+  thesis: |
+    The imaging model Don keeps returning to is Porter/Duff stencil-and-paint compositing --
+    the same model PostScript used, Cairo implements (same idea, better), and SVG + HTML
+    Canvas carry forward on the web. MicropolisCore now layers **WebGPU/WebGL** (preferably
+    GPU) on top of, underneath, or nested inside the HTML/CSS/SVG/Canvas/2D stack -- holodeck
+    compositing, not either/or. Scalable, printable vector graphics and text -- the
+    Illustrator world, not (or not only) the Photoshop pixel-pushing, filtering, compositing world.
+  arc:
+    - { tech: "NeWS / PostScript (HyperLook SimCity)", era: "1991–1992 DUX", idea: "PostScript tile renderer and UI -- stencil/paint imaging in the window server" }
+    - { tech: "Cairo + Pango",                         era: "2006–2008 OLPC", idea: "natural migration: Cairo = scalable printable graphics; Pango = beautiful scalable printable text; same Porter/Duff model as PostScript, better library" }
+    - { tech: "HTML / CSS / SVG / Canvas 2D",          era: "Micropolis web -> MicropolisCore shell", idea: "document + 2D illustration layer in the browser; Porter/Duff on the web" }
+    - { tech: "WebGPU / WebGL holodeck",               era: "MicropolisCore now", idea: "GPU compositor nested with the 2D/DOM stack -- tile renderer plugins, overlay planes, pie menus; see unified-webgpu-renderer.md, @micropolis/render-core" }
+  web_stack_layering: |
+    Not a replacement stack -- a **nested** one: SvelteKit shell (HTML/CSS), SVG/Canvas 2D
+    where software rendering or DOM chrome fits, WebGL/WebGPU where throughput matters (city
+    tiles, agents, pie holodeck). GPU preferred; 2D stack still there for chrome, text, and
+    illustration semantics, and most importantly accessibility.
+  illustrator_not_photoshop: |
+    Editing and rendering a simulated world as scalable geometry and type you can zoom, pan,
+    and print -- not painting opaque pixels in a bitmap editor. Tiles, pie menus, and city
+    maps belong to the illustration stack. 
+    Don loves Blender's geometry and material nodes, and the Blender Render Pipeline, as expressions of the same ideas.
 
 culmination_moollm:
   what: |
@@ -102,6 +137,10 @@ culmination_moollm:
     service: triggers, alerts, scheduled summaries, monitoring. Robots and personal
     organization get modeled inside the same world.
   the_move: "The Sims for your filesystem; a MUD/MOO where the rooms are real and the LLM plays."
+  works_and_fun: |
+    It works — Don runs it daily. And the way it works is fun: navigate into rooms, read objects,
+    inherit skills, wire the real house. Microworld OS only survives if operators want to
+    live in the palace; fun is a feature, not frosting.
   power_of_simplicity: |
     MOOLLM's core value comes straight from the Self language's first paper -- "Self: The
     Power of Simplicity" (Ungar & Smith, OOPSLA 1987). Self's deepest lesson isn't prototypes,
@@ -109,6 +148,73 @@ culmination_moollm:
     dropped multiple inheritance (oops). MOOLLM reintroduces multiple inheritance and mix-ins,
     keeps Self's radical simplicity, and empowers it with LLMs -- simple prototype objects a
     language model can read, extend, and reason about. Simplicity as a feature, not a sacrifice.
+    See import_self_from_self below -- the constitution's `# import self from self`.
+  import_self_from_self: |
+    `# import self from self` -- the MOOLLM constitution effectively declares this: we import
+    Self's prototype-based object model **from Self itself**, not from JavaScript's castrated
+    projection of it.
+    LLMs are excellent at pretending to be -- or being (jury out) -- JIT VMs that efficiently
+    implement the Self object model as a **superset** of its bastardized projections into Java
+    and JavaScript.
+    That works in a filesystem directory tree with YAML files and artifacts following MOOLLM
+    naming conventions and protocols: import and multiply-inherit from tangible, well-defined
+    files you can bring into context -- at the cost of their level of detail in the **token mipmap
+    pyramid** (GLANCE -> CARD -> SKILL -> README).
+    But the **most efficient** multiple inheritance is naming well-known APIs, protocols, concepts,
+    even people -- or describing and parameterizing them (generics, macro-metaprogramming) in
+    natural language or whatever language or IDE is native and convenient. LLMs are universal
+    language translators, intention compilers, and optimizers. So we can **verbally describe** the
+    ideal LLM VM to simulate: as simple and powerful as Self, but with syntactic and natural-language
+    pointers directly into training data -- drastically **decreasing prompt token count** by leaning
+    on what the model already knows instead of inventing new arbitrary stories.
+    Guardrail: inherit ideas, skills, and style -- never impersonate the person (representation-ethics).
+    Don was on the **original Self mailing list**, **self-interest!** -- such a great pun (and there
+    are more in the Self/MOO/MOOLLM stack). See self_pun_stack below.
+    See: kernel/constitution-core.md, semantic image pyramid (GLANCE/CARD/SKILL), send-code-not-commands.md
+  self_pun_stack: |
+    Self wordplay Don has lived inside for decades -- load-bearing, not decoration:
+    - **self-interest!** -- original Self language mailing list; Don was on it from the early days.
+    - **self-ish** -- Don's prototype-based config systems (Leela, MOOLLM shape); not selfish, Self-ish.
+    - **`# import self from self`** -- MOOLLM constitution (see import_self_from_self above).
+    - **(oops)** -- triple pun in power_of_simplicity (JS mistake; Owen's OOPS; oops 2u2).
+    - **consciencious objectors** -- coined with David Ungar at a Kaleida meetup (rig culture, not Self-only).
+    - **Reflecting on Self: Narcissa's Mirror** -- proposed Repo Show episode title with David Ungar (dream guest); Self **mirrors** + narcissus wordplay (confirm spelling with David).
+    - **Self: The Movie** -- Ungar & Smith's wry demo film; the community had a sense of humor about itself.
+    TODO: Don to enumerate more puns on the Ungar Repo Show -- the stack runs deep.
+  oops_pun: |
+    KEEP "(oops)" in power_of_simplicity — intentional triple pun, not a typo:
+    (1) JS dropped multiple inheritance — oops, mistake.
+    (2) OOPS = Object Oriented PostScript (Owen Densmore's class.ps for NeWS): as simple as a
+        PostScript dict stack, and it HAS multiple inheritance. Owen Densmore smiles quietly
+        to himself.
+    (3) oops 2u2.
+    See characters/owen-densmore/, process/trails/send-code-not-commands.md
+  filesystem_oop_thread: |
+    The deeper thread behind MOOLLM's "directories are rooms, files are objects":
+    Owen Densmore wrote NeWS's object system class.ps -- Smalltalk-style classes in pure
+    PostScript (dict stack simplicity, multiple inheritance). Smalltalk (which Self later
+    perfected, and which fed Java, JavaScript, Lua, CLR VMs) is the ancestry.
+    Owen and David Rosenthal (NeWS co-architect; X11 ICCCM architect) patented using the
+    Unix filesystem and shell PATH as an object/class programming system -- classes and
+    instances as directories, path lookup as inheritance/method dispatch
+    (US Patent 5,187,786). MOOLLM approaches the filesystem the SAME way -- and that
+    filesystem is itself a projection of a point in git repo space (history, branches,
+    blame). Layer on GitHub-as-MMO-RPG-and-social-network (fork, PR, issues, stars) and
+    Repo Shows (conversation whose stage IS the repo) -- the stack Owen and David sketched,
+    now with LLMs reading YAML skills off the dict stack.
+    See: characters/owen-densmore/, characters/david-rosenthal/,
+    process/trails/send-code-not-commands.md, repo-shows/
+  zope_to_moollm: |
+    Don spent years in Zope object publishing, Plone, CMF content management, Python
+    workflows, and through-the-web editing -- navigable content trees, types, state
+    machines, publish/submit/review. Then abandoned the mind-numbing complexity of Zope for
+    a long romance with **TurboGears, SQLObject, and Genshi Templates** -- developed,
+    extended, and maintained for **NutritionQuest / Block Dietary** (Torin Block) for more
+    than a decade; **still running** (live demo available). Reference: Torin Block (contact
+    on request). TODO: record demo walkthrough for YouTube -- Torin would love it.
+    All of that applies to MOOLLM: rooms, YAML object types, skills as behaviors, git as
+    the object store, LLM as the traversal engine. The IDEAS were right; Zopieness was the tax;
+    TurboGears was the sane middle; MOOLLM is the lean end state.
 
 why_it_matters: |
   These ideas share DNA and keep feeding each other: the RIGHT interface for a human to
@@ -120,7 +226,12 @@ why_it_matters: |
 see_also:
   - { path: project-threads.yml, why: "How the threads branch and merge" }
   - { path: work-history.yml,    why: "The same span as an employment timeline" }
-  - { path: simcity-lineage.yml, why: "The SimCity -> Micropolis -> web arc in depth" }
+  - { path: simcity-lineage.yml, why: "SimCity -> Micropolis -> web arc; Porter/Duff imaging thread" }
   - { path: stupid-fun-club.yml, why: "MediaGraph, StoryMaker, robot brains" }
   - { path: range.yml,           why: "The other axis: bare-metal-to-browser generalist range" }
-  - { path: https://github.com/SimHacker/moollm, why: "MOOLLM upstream" }
+  - { path: ../../owen-densmore/CHARACTER.yml, why: "class.ps OOPS; filesystem-OOP patent with Rosenthal" }
+  - { path: ../../david-rosenthal/CHARACTER.yml, why: "NeWS + X11 ICCCM; co-inventor filesystem-as-OOP patent" }
+  - { path: ../../../process/trails/send-code-not-commands.md, why: "NeWS/OOPS/patent -> MOOLLM -> GitHub -> Repo Shows" }
+  - { path: ../../../repo-shows/README.md, why: "Repo Show = conversation whose stage is the git repo" }
+  - { path: https://github.com/SimHacker/moollm/blob/main/kernel/constitution-core.md, why: "MOOLLM constitution -- import self from self; skills anywhere; YAML Jazz" }
+  - { path: ../../david-ungar/CHARACTER.yml, why: "Self -- Power of Simplicity; prototype VM lineage" }

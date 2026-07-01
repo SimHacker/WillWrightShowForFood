@@ -1,0 +1,53 @@
+# Writing — essays and primary sources (index)
+# Curated public links; full recreations in Will Wright sources + donhopkins.com
+
+writing_index:
+  canonical_site: https://donhopkins.com
+  medium: https://donhopkins.medium.com
+
+featured_essays:
+  - title: "Open Sourcing SimCity"
+    url: https://donhopkins.medium.com/open-sourcing-simcity-58470a275446
+    wwsff: ../open-sourcing-simcity-for-olpc.md
+  - title: "The X Windows Disaster"
+    note: "UNIX-HATERS Handbook chapter — Don's critique; pairs with Axis of Eval"
+    wwsff: ../axis-of-eval-send-code-not-commands.md
+  - title: "The Shape of PSIBER Space"
+    note: "NeWS hypermedia navigable space"
+  - title: "Designing Pie Menus (Dr. Dobb's)"
+    wwsff: ../pie-menus-chi-88-and-beyond.md
+
+evidence_room_hub:
+  path: ../will-wright-primary-sources-evidence-room.md
+  canonical: ../../characters/will-wright/sources/README.md
+  note: "Curated map from Don's bouquet to every major Will Wright sources cluster"
+
+wwsff_primary_sources:
+  centerpiece:
+    - path: ../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
+      topic: Dollhouse → The Sims (1996 CS547)
+    - path: ../../characters/will-wright/sources/2008-02-10-soul-of-the-sims/
+      topic: Motive.c — soul of The Sims
+  simcity_micropolis:
+    - path: ../../characters/will-wright/sources/simcity-open-source-saga/
+      topic: OLPC negotiation mail
+    - path: ../../characters/will-wright/sources/maxis-licenses-chain-of-custody/
+      topic: DUX / Maxis / EA / OLPC contracts
+    - path: ../../characters/will-wright/sources/multiplayer-simcity-ui-network/
+      topic: SimCityNet → Micropolis multiplayer lineage
+  sims_mod_tools:
+    - path: ../../characters/will-wright/sources/2004-transmogrifier-documentation-hub/
+      topic: Transmogrifier What Is / Is Not
+    - path: ../../characters/will-wright/sources/2004-01-21-rugomatic-tutorial/
+      topic: RugOMatic drag-and-drop objects
+  demos:
+    - path: ../../characters/will-wright/sources/don-youtube-playlist-index/
+      topic: Don Hopkins YouTube demos
+
+donhopkins_research_mirror:
+  note: "Full article recreations live in DonHopkins projects/willwrightshowforfood/research/ — distill on demand per sync-sources.yml"
+  exclude: private personnel rosters, raw correspondence
+
+see_also:
+  - { path: ../career/contracts/README.md, why: "Legal primary sources for SimCity OSS" }
+  - { path: ../will-wright-primary-sources-evidence-room.md, why: "Complete cross-link hub to Will sources" }

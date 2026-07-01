@@ -18,6 +18,240 @@ layers:
   portrayal: portrayal/
   moollm_adventure: examples/adventure-4/characters/real-people/don-hopkins/ — extend, do not merge blindly
   donhopkins_private: DonHopkins/characters/don-hopkins/ — archive; export via sync manifest
+
+# Connections index — James Burke thread (human mirror: README.md)
+# Uniform ~24-word blurbs; each entry opens the next. Read clusters in order.
+connections_index:
+  narrator: |
+    Forth on a 6502 opens ARPANET and Zork; pie menus pick verbs for modeled worlds;
+    PostScript and NeWS send code to glass; SimCity and The Sims become editable microworlds;
+    OLPC GPL-forks Micropolis; imaging walks to WebGPU; robots perform feeling at SFC;
+    constraint solvers keep declarative UI honest; MOOLLM makes the filesystem the game board.
+  human_mirror: README.md
+  machine_mirror: browse-the-bouquet.yml
+  blurb_words: 24
+
+  clusters:
+    - id: identity
+      title: Identity — enter the room
+      era: meta
+      bridge: Before the lineage runs, meet the host and the rules for what may be published.
+      opens: gestural_verbs
+      entries:
+        - path: about-host.md
+          blurb: Resume reimagined as a repo room — portfolio not pitch; one-screen map of the whole career arc.
+          opens: media.md
+        - path: media.md
+          blurb: Photos and screenshots — Queen's Day LISP shirt, Sims era, Micropolis demos; face behind the frob panel.
+          opens: career/lineage.yml
+        - path: GLANCE.md
+          blurb: Sniff card — five-line orientation; metadata SSOT paired with CARD.yml and CHARACTER.yml registry.
+          opens: pie-menus-chi-88-and-beyond.md
+        - path: CARD.md
+          blurb: Trading-card view of abilities — documented work as collectible powers, not bragging; self-sovereign deck.
+          opens: CARD.yml
+        - path: CARD.yml
+          blurb: Machine schema for this room — methods, abilities, and this connections_index; yaml girder under markdown.
+          opens: browse-the-bouquet.yml
+        - path: CHARACTER.yml
+          blurb: Host registry entry — consent, signifier, cross-links to Repo Show and sibling characters in the deck.
+          opens: pie-menus-chi-88-and-beyond.md
+        - path: browse-the-bouquet.yml
+          blurb: Filename advertisement index — semantic clusters for machines; narrative order lives in README and here.
+          opens: gestural_verbs
+        - path: sync-sources.yml
+          blurb: Upstream sync manifest — dedupe rules, public-safe exports from adventure-4 and DonHopkins private archive.
+          opens: career/INDEX.yml
+
+    - id: gestural_verbs
+      title: Gestural verbs — CHI'88 verb-picker
+      era: "1988"
+      bridge: Fitts's law meets a modeled world — pick a direction, not a distance; menus become verbs.
+      opens: send_code
+      entries:
+        - path: pie-menus-chi-88-and-beyond.md
+          blurb: CHI'88 radial menus with Shneiderman and Weiser — gestural verb-picker steering SimCity, Sims, and MOOLLM.
+          opens: axis-of-eval-send-code-not-commands.md
+        - path: portrayal/presentations.yml
+          blurb: Verified papers and talks — CHI'88 links, BayCHI, DreamScape WWDC; receipts for every public claim above.
+          opens: axis-of-eval-send-code-not-commands.md
+
+    - id: send_code
+      title: Send code, not commands — NeWS motherboard
+      era: 1988–1995
+      bridge: If menus are verbs, the window server must speak a language — not grind X11 command chatter.
+      opens: interval_detour
+      entries:
+        - path: axis-of-eval-send-code-not-commands.md
+          blurb: NeWS manifesto — X-Windows Disaster critique, Owen Densmore OOPS, the bet the web later cashed in.
+          opens: hyperlook-news-postscript-simcity.md
+        - path: hyperlook-news-postscript-simcity.md
+          blurb: HyperLook NeWS SimCity — PostScript UI, pie menus, tile renderer; first Unix face of the city at DUX.
+          opens: porter-duff-postscript-to-webgpu.md
+        - path: porter-duff-postscript-to-webgpu.md
+          blurb: Porter/Duff imaging braid — stencil-paint in the server through Cairo, Canvas 2D, nested WebGPU compositing.
+          opens: interval-research-pluggers-and-mediaflow.md
+
+    - id: interval_detour
+      title: Interval detour — patterns before names
+      era: 1992–1999
+      bridge: Paul Allen's lab asks what people do with media — Pluggers, flows, Camelot echo NeWS and prefigure MOOLLM rooms.
+      opens: microworld_franchise
+      entries:
+        - path: interval-research-pluggers-and-mediaflow.md
+          blurb: Interval Research — Pluggers survey, MediaFlow, Camelot; hypermedia patterns echoing NeWS and MOOLLM rooms.
+          opens: history/interval-research.yml
+        - path: history/interval-research.yml
+          blurb: Distilled era yaml — same Interval thread in machine-readable backbone form for cross-repo grep and sync.
+          opens: history/README.md
+        - path: history/README.md
+          blurb: History subdir index — public-safe era distills; one room per research epoch, not raw correspondence dumps.
+          opens: open-sourcing-simcity-for-olpc.md
+
+    - id: microworld_franchise
+      title: Microworld franchise — SimCity to Sims
+      era: 1991–2007
+      bridge: The city teaches cooperation; the dollhouse teaches motives; Transmogrifier hands authorship back to players.
+      opens: robots_that_feel
+      entries:
+        - path: career/simcity-lineage.yml
+          blurb: SimCityNet to OLPC to WASM timeline — yaml spine every SimCity topic file in this room telescopes from.
+          opens: open-sourcing-simcity-for-olpc.md
+        - path: open-sourcing-simcity-for-olpc.md
+          blurb: December 2006 pitch to Rod Humble — mail arc clearing SimCity for OLPC and GPL Micropolis release.
+          opens: career/contracts/README.md
+        - path: career/contracts/README.md
+          blurb: DUX Maxis EA OLPC paper trail — contracts making open source legally possible, not merely wished for.
+          opens: will-wright-primary-sources-evidence-room.md
+        - path: will-wright-primary-sources-evidence-room.md
+          blurb: Curated map to Will Wright evidence room — Winograd centerpiece, Motive.c, Transmogrifier hub, OLPC mail arc.
+          opens: the-sims-transmogrifier-mod-tools.md
+        - path: the-sims-transmogrifier-mod-tools.md
+          blurb: Maxis mod stack — Transmogrifier, RugOMatic, SimShow, VitaBoy; objects carrying behavior for community authors.
+          opens: olpc-micropolis-python-pygtk.md
+        - path: olpc-micropolis-python-pygtk.md
+          blurb: Python Sugar adaptor — PyGTK Cairo Pango shell wrapping Tcl/Tk SimCity for the XO laptop classroom.
+          opens: writing/INDEX.yml
+        - path: writing/README.md
+          blurb: Writing subdir readme — essays, Medium recreations, primary-source pointers; human face of writing/INDEX.yml.
+          opens: writing/INDEX.yml
+        - path: writing/INDEX.yml
+          blurb: Essay and primary-source index — Will sources clusters, donhopkins.com links, evidence-room hub cross-refs.
+          opens: career/stupid-fun-club.yml
+
+    - id: robots_that_feel
+      title: Robots that feel — Stupid Fun Club
+      era: 2009–2014
+      bridge: Will's lab asks how humans treat machines — waiter brains, broken robots, one-minute films as procedural argument.
+      opens: constraint_platforms
+      entries:
+        - path: career/stupid-fun-club.yml
+          blurb: SFC yaml backbone — Slats, Dents, MediaGraph, networked AR; employment thread behind the robot films above.
+          opens: stupid-fun-club-empathy-and-servitude.md
+        - path: stupid-fun-club-empathy-and-servitude.md
+          blurb: Servitude and Empathy one-minute movies — procedural argument about reviews, breakdowns, and performed feeling.
+          opens: talks/empathy-and-servitude.yml
+        - path: talks/empathy-and-servitude.yml
+          blurb: Talk package distill — public-safe Empathy Servitude show spine; links Will sources and Slats sidekick character.
+          opens: ../slats/README.md
+
+    - id: constraint_platforms
+      title: Constraint solvers and living platforms
+      era: 1992–2020s
+      bridge: Every GUI generation reinvents the same idea — declare relationships in data; let the system keep them true.
+      opens: micropolis_today
+      entries:
+        - path: garnet-to-svelte-constraint-ui-lineage.md
+          blurb: Garnet to OpenLaszlo to Svelte braid — Brad Myers KR constraints to derived state; why MOOLLM YAML feels obvious.
+          opens: nutritionquest-turbogears-genshi-alive-pd.md
+        - path: nutritionquest-turbogears-genshi-alive-pd.md
+          blurb: TurboGears decade at NutritionQuest — Zope romance distilled to SQLObject Genshi; still running in production.
+          opens: yoot-tower-open-source-and-alan-kay-interview.md
+        - path: yoot-tower-open-source-and-alan-kay-interview.md
+          blurb: Yoot Tower OSS thread plus 1993 Alan Kay interview tree — tower preservation meets constructionist microworld history.
+          opens: micropoliscore-design-docs-packages-code-content.md
+
+    - id: micropolis_today
+      title: Micropolis today — OSS, docs, WebGPU
+      era: 2006–now
+      bridge: The GPL release was the fork — everything after is browser-native, federation-minded, and design-doc driven.
+      opens: import_self
+      entries:
+        - path: micropoliscore-design-docs-packages-code-content.md
+          blurb: MicropolisCore map — design docs, packages, WASM engine, PieCraft, content pipelines; living implementation repository.
+          opens: career/project-threads.yml
+        - path: career/project-threads.yml
+          blurb: Branch merge map — pie menus through Sims Micropolis Repo Show; how threads knot in one yaml diagram.
+          opens: import-self-from-self.md
+
+    - id: import_self
+      title: import self from self — MOOLLM and Repo Show
+      era: now
+      bridge: The filesystem becomes the dollhouse; skills inherit like Self objects; GitHub is the MMORPG stage.
+      opens: yaml_backbone
+      entries:
+        - path: import-self-from-self.md
+          blurb: MOOLLM constitution — import self from self; directories as rooms, skills as prototypes, k-line naming inheritance.
+          opens: self-interest-narcissas-mirror-david-ungar.md
+        - path: self-interest-narcissas-mirror-david-ungar.md
+          blurb: Dream Repo Show with David Ungar — Self pun stack, Narcissa's Mirror, representation ethics guardrails spelled out.
+          opens: moollm-microworld-os-talk.md
+        - path: moollm-microworld-os-talk.md
+          blurb: Flagship talk — The Sims for your filesystem; microworld OS thesis distilled for stage and README visitors.
+          opens: talks/moollm-microworld-os.yml
+        - path: talks/moollm-microworld-os.yml
+          blurb: Talk package yaml — slides spine, demo hooks, cross-links to lineage and MOOLLM repo; export-safe archive distill.
+          opens: repo-show-host-facet.md
+        - path: repo-show-host-facet.md
+          blurb: Repo Show host facet — Micropolis Class, RTFR, GitHub as MMORPG; design in public without job-hunt signaling.
+          opens: ideas.md
+        - path: ideas.md
+          blurb: Dream guests and show hooks — Will, Ungar, Bender, Adams, Yoot; episodes Don would build on air next.
+          opens: talks/INDEX.yml
+        - path: talks/README.md
+          blurb: Talks subdir readme — portfolio of export-safe packages distilled from DonHopkins talks archive.
+          opens: talks/INDEX.yml
+        - path: talks/INDEX.yml
+          blurb: Talk portfolio index — flagships, verified past talks, seeds to develop; pairs with portrayal presentations.
+          opens: career/lineage.yml
+
+    - id: yaml_backbone
+      title: YAML backbone and portrayal — facts under narrative
+      era: meta
+      bridge: Markdown tells the Connections story; yaml holds receipts — lineage, range, voice, heroes, contracts.
+      opens: identity
+      entries:
+        - path: career/INDEX.yml
+          blurb: Career backbone index — entry point for all yaml facts; browse-friendly hub for GitHub navigation below.
+          opens: career/lineage.yml
+        - path: career/lineage.yml
+          blurb: Bundle of ideas — MUD1 LambdaMOO DreamScape SimCity Sims iLoci LayAR culminating in MOOLLM filesystem microworld.
+          opens: career/range.yml
+        - path: career/range.yml
+          blurb: Bare-metal-to-browser range — 6502 Forth through Rust WASM LLM; robots, computer vision, DevOps every layer.
+          opens: career/work-history.yml
+        - path: career/work-history.yml
+          blurb: Condensed employment timeline — public-safe dates and roles; pairs with contracts for SimCity OSS claims.
+          opens: career/on-stream.yml
+        - path: career/on-stream.yml
+          blurb: Regular Don on stream versus Don Philahue orchestrator — which facet speaks in docs versus on-air banter.
+          opens: ../don-philahue/README.md
+        - path: career/README.md
+          blurb: Career subdir readme — short pointer into INDEX and contracts; yaml girder supporting the whole character room.
+          opens: career/contracts/transmogrifier-distribution-license-notes.md
+        - path: career/contracts/transmogrifier-distribution-license-notes.md
+          blurb: Transmogrifier EA distribution terms — legal notes from renovation plan and Wayback harvest for mod tools.
+          opens: portrayal/voice.yml
+        - path: portrayal/README.md
+          blurb: Portrayal subdir — voice, heroes, presentations; how Don sounds and who he credits in public docs.
+          opens: portrayal/voice.yml
+        - path: portrayal/voice.yml
+          blurb: Writing style and frobisms — synced from moollm adventure-4; keeps public voice consistent with upstream layer.
+          opens: portrayal/heroes.yml
+        - path: portrayal/heroes.yml
+          blurb: Mentors credited — Shneiderman, Weiser, Will Wright, Alan Kay; people behind the borrowed ideas above.
+          opens: about-host.md
+
 methods:
   READ-BACKBONE:
     signature: career/INDEX.yml → yaml facts
@@ -30,6 +264,8 @@ compose_with:
 - SimHacker/moollm/skills/representation-ethics
 - ../../skills/repo-show/
 see_also:
+- path: README.md
+  why: Connections narrative index — human mirror of connections_index below
 - path: CHARACTER.yml
   why: Host card
 - path: README.md
@@ -54,8 +290,8 @@ see_also:
   why: Show spine trail
 - path: ../../rigs/stick-shift-composer-moollm.rig.yml
   why: Don host rig seed
-- path: invitation.md
-  why: Public invitation document
+- path: repo-show-host-facet.md
+  why: Host facet — Micropolis Class (invitation N/A for self-sovereign host)
 meta:
   schema: ../../schemas/guest-skills-card.yml
   governed_by: ../../schemas/portrayal-standards.yml

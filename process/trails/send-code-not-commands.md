@@ -49,20 +49,48 @@ instances are **directories**; **path files** drive inheritance and method looku
 a dictionary stack**); it even supports **Self** and **Super**. Object orientation, in plain Unix
 directories and shell scripts.
 
-**MOOLLM runs on exactly this idea.** It maps **Self's prototype object model onto GitHub repos**: the
-filesystem (with **history and branching**) is the object store; **skills, shell scripts, and LLM
-calls** (Anthropic + MOOLLM extended skills) are the **methods**; and you get full **Self-style
-multiple-inheritance delegation**. What LLMs add: you can **inherit by name** — a well-known
-**K-line** — from classes, schemas, APIs, protocols… and even **people's published bodies of work**:
+**MOOLLM runs on exactly this idea.** It maps **Self's prototype object model onto GitHub repos** — the
+constitution's effective declaration is **`# import self from self`**: import Self's object model
+**from Self itself**, not from JavaScript's castrated projection. The filesystem (with **history and
+branching**) is the object store; **skills, shell scripts, and LLM calls** (Anthropic + MOOLLM extended
+skills) are the **methods**; and you get full **Self-style multiple-inheritance delegation**. What LLMs
+add: you can **inherit by name** — a well-known **K-line** — from classes, schemas, APIs, protocols…
+and even **people's published bodies of work** (ideas and style, never impersonation):
 
 ```text
 from densmore.owen import humor, empathy, postscript-wizardry, chaos
 ```
 
+**Two inheritance modes, one object model.** (1) **Files on disk** — tangible YAML/skills following
+MOOLLM naming and protocols; load them at the cost of token budget across the semantic pyramid
+(GLANCE → CARD → SKILL → README). (2) **Names in language** — the **most token-efficient** mix-in:
+point at well-known APIs, protocols, concepts, or people (or parameterize them like generics/macros)
+in natural language or any convenient syntax; the LLM JITs a Self-simple VM whose slots are
+**pointers into training data**, not freshly invented lore. LLMs as universal translators, intention
+compilers, optimizers — describe the ideal VM verbally; lean on what the model already knows.
+
 You *declare* the traits a character mixes in (multiple inheritance earns its keep), and the model —
 which already has all of it in the training data — delegates to them. **Crucial guardrail:** this is
 **inheriting ideas, skills, and style — never impersonating the person** (representation-ethics; the
 SimShneiderman rule — build models *with respect*).
+
+### Git, GitHub, Repo Shows — the next layers
+
+The working filesystem MOOLLM walks is a **projection of a point in git repo space** (commits,
+branches, blame — the object store has history). **GitHub** adds the MMO/RPG social layer: fork,
+pull request, issues, stars, collaborators — multiplayer on the same microworld. **Repo Shows**
+(WWSFF) are the show format built on top: a conversation whose stage *is* the public repo, following
+through to working code.
+
+**Zope/Plone/CMF** (2000s): Don did extensive **object publishing**, content management, Python
+workflows, and through-the-web editing — URL traversal to objects, content types, publish/review
+state machines (SimProv CMS lineage). Then abandoned Zope's mind-numbing complexity for a **decade+
+romance with TurboGears, SQLObject, and Genshi** at **NutritionQuest** (Torin Block) — still
+running, live demo available. MOOLLM keeps that shape (rooms, YAML types, skills, git) **without
+the Zopieness**.
+
+Owen's `class.ps` → the Rosenthal/Densmore filesystem patent → Zope CMS era → TurboGears/NQ →
+MOOLLM → GitHub → Repo Shows is one continuous thread, not a metaphor stretched for effect.
 
 ## 3. Warnock's "linguistic motherboard"
 
@@ -122,6 +150,7 @@ does on purpose, as data structures, what minds do naturally** — which is exac
 | Window system | NeWS ships PostScript programs to the display (not X11 command chatter) |
 | Language | Owen's `class.ps` — objects in pure PostScript |
 | Platform | Warnock's PostScript as a *linguistic motherboard* |
+| Filesystem OOP | Owen/Densmore `class.ps` → patent → Zope CMS/workflows → TurboGears/NQ (still live) → MOOLLM → GitHub MMO → Repo Shows |
 | Games | The Sims objects (SimAntics) + SliceCity nested sims + Simopolis bridges |
 | Cognition | Drescher schemas (C→A→R), grounded by LLMs |
 | Writing | a sentence that **runs** in the reader's head and invokes what they know |

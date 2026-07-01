@@ -63,7 +63,7 @@ see_also:
   children:
     - { path: will-wright/GLANCE.yml, why: "Flagship guest pyramid" }
     - { path: will-wright/media/GLANCE.yml, why: "Photo galleries" }
-    - { path: don-hopkins/GLANCE.yml, why: "Host + career backbone" }
+    - { path: don-hopkins/GLANCE.yml, why: "Host + career backbone + topic bouquet" }
     - { path: terry-winograd/GLANCE.yml, why: "CS547 dragon + treasure trove" }
     - { path: slats/GLANCE.yml, why: "Sidekick — SFC origin" }
     - { path: palm/GLANCE.yml, why: "Philosopher agent — MOOLLM monkey-palm portal" }

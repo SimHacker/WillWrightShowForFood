@@ -65,6 +65,9 @@ navigation:
   children:
     - career/
     - portrayal/
+    - talks/
+    - writing/
+    - history/
   siblings:
     - ../don-philahue/
     - ../slats/
@@ -72,6 +75,8 @@ navigation:
 
 read_order:
   - README.md
+  - GLANCE.md
+  - browse-the-bouquet.yml
   - CHARACTER.yml
   - CARD.yml
   - career/INDEX.yml
@@ -97,7 +102,10 @@ see_also:
   across:
     - { path: ../../repo-shows/will-wright/GLANCE.yml, why: "Flagship show" }
     - { path: ../../skills/repo-show/SKILL.md, why: "Host protocol" }
+    - { path: will-wright-primary-sources-evidence-room.md, why: "Curated map to all Will Wright primary sources" }
+    - { path: ../../characters/will-wright/sources/README.md, why: "Evidence room spine + complete slug index" }
     - { path: ../../characters/will-wright/sources/simcity-open-source-saga/GLANCE.yml, why: "Micropolis origin mail" }
   deep:
-    - { path: README.md, why: "Host article" }
+    - { path: README.md, why: "Connections narrative index — Burke thread through every file" }
+    - { path: CARD.yml, why: "connections_index — machine mirror of README narrative" }
     - { path: sync-sources.yml, why: "Moollm adventure sync policy" }

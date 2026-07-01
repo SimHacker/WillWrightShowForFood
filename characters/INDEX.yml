@@ -77,7 +77,7 @@ guests:
   douglas-engelbart: { invitation_status: memorial, note: "deceased (1925–2013) — MEMORIAL MODE: represent + discuss; NLS/mouse/hypertext/Mother of All Demos; discussants: Ted Nelson, Alan Kay, Yoot Saito" }
   david-levitt: { invitation_status: draft, show_seed: repo-shows/REPO-SHOWS.yml#music-and-theory.yml, note: "Don's good friend; music + interactive media; MIT PhD on AI music/jazz improvisation (advised by Marvin Minsky); Atari Cambridge Research; Lynn Conway VLSI class (w/ James Clark, Guy L. Steele); in Cynthia Solomon's video trove; music-and-theory show with Jerry Martin" }
   david-rosenthal: { invitation_status: not_yet_asked }
-  david-ungar: { invitation_status: not_yet_asked, show_seed: repo-shows/david-ungar-self-moollm.yml, note: "Self × MOOLLM; Kaleida consciencious objectors meetup" }
+  david-ungar: { invitation_status: dream_guest, show_seed: repo-shows/david-ungar-self-moollm.yml, note: "DREAM GUEST — Reflecting on Self: Narcissa's Mirror; Self × MOOLLM; self-interest!; Kaleida consciencious objectors" }
   edd-coates: { invitation_status: not_yet_asked, show_seed: repo-shows/edd-coates/ }
   eric-bowman: { invitation_status: draft, show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml, note: "Programmer on the original The Sims team (Maxis), core systems; later reunited with Don at TomTom" }
   eric-hedman: { invitation_status: not_yet_asked, show_seed: repo-shows/eric-hedman/ }

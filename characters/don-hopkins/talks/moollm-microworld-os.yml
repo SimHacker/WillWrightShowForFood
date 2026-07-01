@@ -1,0 +1,27 @@
+# TALK distill — MOOLLM: The Sims for your filesystem
+# Source: DonHopkins/talks/moollm-microworld-os/TALK.yml (public_safe)
+
+talk:
+  id: moollm-microworld-os
+  title: "MOOLLM: The Sims for your filesystem"
+  subtitle: "A microworld OS where directories are rooms, YAML is objects, and LLMs are players"
+  by: Don Hopkins
+
+one_liner: |
+  MOOLLM is a MUD/MOO where the rooms are real directories, files are objects with state and
+  behavior, skills are inheritable prototypes, and an LLM navigates the world with you.
+
+hook: |
+  Open a repo. `ls` is walking into a room. Skills are spells you inherit. The LLM reads
+  GLANCE, then CARD, then SKILL — like a human learning a microworld.
+
+nested_rooms:
+  - dreamscape-wwdc-1995
+  - iloci-memory-palace-2008
+  - open-sourcing-simcity
+  - pie-menus-at-40
+
+formats: ["45 min conf", "60 min keynote", "90 min deep dive", "Repo Show live"]
+
+wwsff_entry: ../moollm-microworld-os-talk.md
+upstream: SimHacker/DonHopkins/talks/moollm-microworld-os/TALK.yml

@@ -1,0 +1,33 @@
+# Talks — public portfolio index (distilled from DonHopkins/talks/)
+# Full packages live in private archive; these are export-safe summaries + links.
+
+talks_portfolio:
+  source_archive: SimHacker/DonHopkins/talks/
+  public_safe: true
+  last_distill: "2026-07-01"
+
+flagships:
+  - id: moollm-microworld-os
+    title: "MOOLLM: The Sims for your filesystem"
+    wwsff: ../moollm-microworld-os-talk.md
+    package: moollm-microworld-os.yml
+  - id: empathy-and-servitude
+    title: "Empathy and Servitude"
+    wwsff: ../stupid-fun-club-empathy-and-servitude.md
+    package: empathy-and-servitude.yml
+
+past_verified:
+  - { id: pie-menus-chi88, title: "Pie Menus — CHI 1988", era: "1988" }
+  - { id: dreamscape-wwdc-1995, title: "DreamScape @ WWDC 1995", era: "1995" }
+  - { id: iloci-memory-palace, title: "iLoci — Mobile Dev Camp 2008", era: "2008" }
+  - { id: baychi-1998, title: "BayCHI 1998", era: "1998" }
+
+seeds_to_develop:
+  - "Career memory palace — walk the lineage live"
+  - "Open-sourcing SimCity — contracts + Chaim Gingold"
+  - "Pie menus at 40"
+  - "How inclusivity saved The Sims (redacted public edition)"
+
+see_also:
+  - { path: ../portrayal/presentations.yml, why: "Verified links + YouTube" }
+  - { path: ../../talks/, why: "DonHopkins/talks/ when browsing private repo" }

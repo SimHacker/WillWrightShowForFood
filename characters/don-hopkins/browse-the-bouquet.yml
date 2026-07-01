@@ -1,0 +1,64 @@
+# Browse the bouquet — top-level topic files (machine index)
+# Filenames ARE the advertisement. Human sniff: GLANCE.md
+
+bouquet:
+  identity:
+    - GLANCE.md
+    - CARD.md
+    - CARD.yml
+    - CHARACTER.yml
+    - README.md
+    - about-host.md
+    - ideas.md
+    - media.md
+  moollm_self:
+    - import-self-from-self.md
+    - moollm-microworld-os-talk.md
+    - repo-show-host-facet.md
+    - self-interest-narcissas-mirror-david-ungar.md
+  ui_and_imaging:
+    - pie-menus-chi-88-and-beyond.md
+    - garnet-to-svelte-constraint-ui-lineage.md
+    - porter-duff-postscript-to-webgpu.md
+    - axis-of-eval-send-code-not-commands.md
+  simcity_micropolis:
+    - hyperlook-news-postscript-simcity.md
+    - open-sourcing-simcity-for-olpc.md
+    - olpc-micropolis-python-pygtk.md
+  maxis_sims_sfc:
+    - the-sims-transmogrifier-mod-tools.md
+    - stupid-fun-club-empathy-and-servitude.md
+    - will-wright-primary-sources-evidence-room.md
+  career_eras:
+    - interval-research-pluggers-and-mediaflow.md
+    - nutritionquest-turbogears-genshi-alive-pd.md
+  related_repos:
+    - micropoliscore-design-docs-packages-code-content.md
+    - yoot-tower-open-source-and-alan-kay-interview.md
+  subdirs:
+    career: "YAML backbone — lineage, range, contracts, simcity-lineage"
+    portrayal: "voice, heroes, presentations"
+    talks: "Talk packages (INDEX.yml)"
+    writing: "Essay index (INDEX.yml)"
+    history: "Distilled era yaml (interval-research.yml)"
+  policy:
+    - sync-sources.yml
+
+# Narrative read order (Connections thread) — human prose: README.md · machine: CARD.yml connections_index
+narrative_order:
+  - identity
+  - gestural_verbs
+  - send_code
+  - interval_detour
+  - microworld_franchise
+  - maxis_sims_sfc
+  - career_eras
+  - related_repos
+  - moollm_self
+  - subdirs
+
+read_order:
+  - GLANCE.md
+  - browse-the-bouquet.yml
+  - README.md
+  - career/lineage.yml

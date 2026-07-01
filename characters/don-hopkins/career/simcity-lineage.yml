@@ -6,11 +6,11 @@ simcity_lineage:
     don_role: "Played SimCity on Mac; posted to comp.theory.cellular-automata same day"
     note: "Started 35+ year arc — cities as visual programming"
 
-  - name: SimCity on NeWS (Sun)
+  - name: SimCity on NeWS (Sun / DUX)
     era: "1991–1992"
-    don_role: "NeWS/HyperLook port with pie menus, PostScript UI, showcase package"
+    don_role: "NeWS/HyperLook port with pie menus, PostScript UI and tile renderer, showcase package"
     runs_on: [NeWS, HyperLook]
-    note: "Parallel to official Sun X11 port; Carol Adams 'SimCity NeWS' opportunity"
+    note: "Parallel to official Sun X11 port; Carol Adams 'SimCity NeWS' opportunity. HyperLook NeWS PostScript UI + tile renderer for DUX -- the ancestor of later PyGTK/Pango Micropolis rendering"
 
   - name: SimCity on X11 / TCL/Tk
     era: "1992–1993"
@@ -53,6 +53,32 @@ simcity_lineage:
       - EA donated source; Jim Gettys / Sugar integration
       - Pie menus on XO; constructionist education alignment
       - CellEngine CA bridge; Python scripting layer
+    implementation:
+      python_olpc: |
+        Don dove into Python adapting SimCity for OLPC. Python was the lifeblood of the
+        platform -- Sugar itself was written in Python, built on solid modules: PyGTK,
+        gobject, Cairo, Pango, and the rest of the GNOME stack.
+      sugar_adaptor: |
+        First step: wrap the existing TCL/Tk/X11 SimCity app in a Python Sugar activity
+        adaptor for the XO laptop.
+      pygtk_desktop: |
+        Then: a fully playable PyGTK desktop interface -- Cairo for scalable printable
+        graphics, Pango for beautiful scalable printable text. The perfect medium for
+        SimCity's UI after HyperLook's PostScript tile renderer at DUX.
+      porter_duff_imaging: |
+        Cairo uses the same (and better) stencil/paint imaging model as PostScript --
+        Porter/Duff compositing. Natural migration from HyperLook's PostScript tiles.
+        SVG and HTML Canvas are the web evolution of that model -- which is why Don likes
+        those APIs so much. MicropolisCore now adds WebGPU/WebGL (preferably GPU) composited
+        on top of, underneath, or nested inside that HTML/CSS/SVG/Canvas/2D stack -- holodeck
+        layers, not a clean break. The taste is Illustrator (vector, scalable, printable), not
+        (or not only) Photoshop (bitmap paint).
+      ui_renderer_lineage: "PostScript (DUX) -> Cairo/Pango (OLPC) -> HTML/CSS/SVG/Canvas 2D -> WebGPU/WebGL holodeck (MicropolisCore)"
+      pygtk_revival: |
+        PyGTK may still be a viable platform (Don has not kept up with GTK3/GTK4 churn) -- but
+        bringing the OLPC PyGTK/Cairo/Pango desktop UI back to life looks feasible, preferably
+        wired to the latest MicropolisCore C++ engine (Embind/pybind or similar) instead of the
+        legacy GPL C/Python stack. TODO: assess GTK/PyGObject status; sketch MicropolisCore binding.
     chain_of_custody:
       why_it_mattered: "Open-sourcing SimCity hinged on a clean contractual chain of custody — without it, EA's lawyers could not have said yes."
       what_don_preserved:
@@ -111,9 +137,15 @@ simcity_lineage:
     repos:
       - https://github.com/SimHacker/MicropolisCore
     web_stack:
-      - WASM engine + TypeScript/SvelteKit shell
+      - WASM C++ engine + TypeScript/SvelteKit shell (HTML/CSS/DOM)
+      - SVG / HTML Canvas 2D -- Porter/Duff stencil-paint; software path and DOM chrome
+      - WebGPU / WebGL holodeck -- GPU compositor nested with the 2D stack (@micropolis/render-core, tile-renderer plugins; WebGPU preferred)
       - Live debugging and Repo Show integration
       - Multiplayer/federation experiments with moollm
+    native_ui_forward: |
+      Preferred revival path for the OLPC PyGTK desktop: bind MicropolisCore's C++ engine to the
+      existing Cairo/Pango UI shell (PyGTK still possibly viable -- ecosystem status TBD).
+      Same imaging braid as web (stencil/paint), different shell -- desktop native alongside WASM.
 
 related_sims_tools:
   - Transmogrifier

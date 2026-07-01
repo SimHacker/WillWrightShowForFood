@@ -5,7 +5,7 @@ meta:
   id: don-hopkins-sync
   live_repo: ../../process/live-repo.yml
   normalized_for: WillWrightShowForFood
-  last_sync_pass: "2026-06-27"
+  last_sync_pass: "2026-07-01"
 
 upstream:
   moollm_adventure_4:
@@ -42,6 +42,11 @@ sync_policy:
     - verified presentations (titles + links only)
     - voice + frobisms (portrayal layer — no adventure plot)
     - heroes roster (direct mentors — condensed)
+    - talks portfolio distills (DonHopkins/talks public_safe)
+    - interval-research public distill
+    - top-level topic markdown bouquet (self-declaring filenames)
+    - micropoliscore-design-docs-packages-code-content.md (MicropolisCore hub)
+    - yoot-tower-open-source-and-alan-kay-interview.md (YootTower + Alan Kay)
   exclude_from_wwsff:
     items:
       - adventure transformation (Bunny Backfire, rabbit form sessions)
@@ -53,10 +58,19 @@ sync_policy:
 wwsff_layout:
   CHARACTER.yml: self_sovereign host card
   CARD.yml: MOOLLM room interface
-  GLANCE.yml: one-screen sniff
+  CARD.md: human-readable trading card
+  GLANCE.yml: machine nav SSOT
+  GLANCE.md: human one-screen sniff
+  browse-the-bouquet.yml: top-level topic index (filenames as ads)
   README.md: human narrative (hand-authored)
+  ideas.md: Repo Show + dream guest hooks
+  about-host.md: resume reimagined (from DonHopkins master-of-ceremonies)
+  "*.md topic files": self-declaring entry points (distilled from DonHopkins public_safe)
   career/: yaml backbone (condensed from upstream)
-  portrayal/: public-safe voice, heroes, presentations (normalized subset)
+  portrayal/: public-safe voice, heroes, presentations
+  talks/: talk package distills (from DonHopkins/talks/)
+  writing/: essay + primary source index
+  history/: era distills (interval-research.yml)
   sync-sources.yml: this file
 
 dedupe_rules:

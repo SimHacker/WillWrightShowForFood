@@ -7,6 +7,12 @@ show:
   type: solo
   guest: david-ungar
   character: characters/david-ungar/
+  dream_guest: true
+
+episode:
+  working_title: "Reflecting on Self: Narcissa's Mirror"
+  title_spelling_note: "Don recalled 'Narcisca's Mirror' -- confirm spelling with David on air if needed"
+  subtitle: "Self × MOOLLM — mirrors, prototypes, import self from self, self-interest!"
 
 pitch: |
   Self invented prototype-based objects and adaptive simplicity. MOOLLM reimagines that
@@ -17,6 +23,8 @@ pitch: |
   the ScriptX team.
 
 topics:
+  - "Episode title riff: Reflecting on Self — Narcissa's Mirror (Self mirrors + pun stack)"
+  - "Self pun stack: self-interest!, self-ish, import self from self, (oops), Self: The Movie"
   - "Self prototype model → MOOLLM directory inheritance"
   - "Stage Magic Principle → GLANCE / CARD / SKILL / README pyramid"
   - "Idea Scavenging → character and skill persistence"

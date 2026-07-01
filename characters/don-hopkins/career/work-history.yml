@@ -44,15 +44,26 @@ employment_timeline:
     note: "Day job. On the side at the Bluebird coffeeshop: iLoci Memory Palace app + Mobile Dev Camp talk (2008), then the Amsterdam Coffeeshops app + BONGO BINGO (2009) — which led Will Wright to invite Don back to Stupid Fun Club. See stupid-fun-club.yml#how_don_rejoined_will"
 
   - org: NutritionQuest / Block Dietary
-    years: "2005–2007, 2009+"
-    role: Chief Architect
-    note: Alive-PD diabetes prevention platform
+    years: "2005–present (decade+ ongoing)"
+    role: Chief Architect / lead developer
+    client: Torin Block
+    stack: "TurboGears, SQLObject, Genshi Templates (Don developed & extended Genshi), Python web services, Alive-PD / Turnaround Health diabetes prevention platform"
+    note: |
+      Long romance after abandoning Zope complexity. Don developed, extended, and maintained
+      the stack for more than a decade. Still running — live demo available.
+      Reference: Torin Block (contact info on request).
+      TODO: record live demo walkthrough for YouTube (Torin would love it).
+    see_also: lineage.yml#zope_to_moollm
 
   - org: Electronic Arts / Maxis
     years: "1997–2000 FT, 2000–2007 contractor"
     role: Senior Developer
     product: The Sims
-    note: Pie menus, VitaBoy, Transmogrifier, OLPC SimCity open source push
+    note: |
+      Pie menus, VitaBoy, Transmogrifier, OLPC SimCity open source push.
+      OLPC/Micropolis: Python Sugar adaptor around TCL/Tk SimCity; PyGTK/Pango/Cairo desktop UI
+      (see simcity-lineage.yml#implementation).
+    see_also: simcity-lineage.yml
 
   - org: Interval Research
     years: "1996–1997"

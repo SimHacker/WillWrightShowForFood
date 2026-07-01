@@ -14,6 +14,7 @@ David Ungar — co-creator (with Randall Smith) of Self, the prototype-based obj
 *Topics that connect David Ungar's work to this repo — public themes only.*
 
 - Self language: prototype-based OOP; influenced JavaScript
+- **self-interest!** — original Self mailing list (Don was on it); pun stack: self-ish, import self from self, (oops), Self: The Movie
 - Generation scavenging: GC innovation; Ungar's thesis
 - Dynamic deoptimization: undo optimizations when assumptions break
 - Stage Magic Principle: show simple view, reveal complexity on demand
@@ -21,21 +22,24 @@ David Ungar — co-creator (with Randall Smith) of Self, the prototype-based obj
 ## The hooks
 
 ### 1. Show seed: `repo-shows/david-ungar-self-moollm.yml`
-walk the repo on air and build from the seed.
+Working episode title: **Reflecting on Self: Narcissa's Mirror** (dream guest). Walk the repo on air and build from the seed.
 
-### 2. Self × MOOLLM; Kaleida consciencious objectors meetup
+### 2. Self pun stack — self-interest!, and more
+Don was on the original **self-interest!** mailing list. Live enumeration: self-ish, `# import self from self`, (oops)/OOPS, consciencious objectors, MOOLLM name echo.
 
-### 3. Self language: prototype-based OOP; influenced JavaScript
+### 3. Self × MOOLLM; Kaleida consciencious objectors meetup
 
-### 4. Generation scavenging: GC innovation; Ungar's thesis
+### 4. Self language: prototype-based OOP; influenced JavaScript
 
-### 5. Dynamic deoptimization: undo optimizations when assumptions break
+### 5. Generation scavenging: GC innovation; Ungar's thesis
 
-### 6. Stage Magic Principle: show simple view, reveal complexity on demand
+### 6. Dynamic deoptimization: undo optimizations when assumptions break
 
-### 7. Idea Scavenging: focus compute on persistent ideas
+### 7. Stage Magic Principle: show simple view, reveal complexity on demand
 
-### 8. Dynamic Depessimization: MOOLLM's optimistic simplification
+### 8. Idea Scavenging: focus compute on persistent ideas
+
+### 9. Dynamic Depessimization: MOOLLM's optimistic simplification
 
 ## Sources (public)
 

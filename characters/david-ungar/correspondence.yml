@@ -18,6 +18,8 @@ gist: |
   and "Dynamic Depessimization" names MOOLLM's optimistic simplification.
 
 threads:
+  self_interest_mailing_list:
+    what: "Original Self language mailing list **self-interest!** -- Don was on it from the early days; pun stack runs through self-ish, import self from self, (oops), MOOLLM"
   self_to_moollm:
     what: "Self prototype model → MOOLLM directories-as-prototypes, skills as inheritable behavior"
   stage_magic:
@@ -33,5 +35,7 @@ connects_in_repo:
   - { path: ../../process/crazy-idea-jam.yml#self_times_moollm, why: "The wacky/forward framing" }
 
 show_hooks:
+  - "Episode: **Reflecting on Self: Narcissa's Mirror** — mirrors, prototypes, pun stack (confirm title spelling live)"
+  - "Self pun stack: self-interest!, self-ish, import self from self, (oops), Self: The Movie -- Don enumerates more live"
   - "Build MOOLLM live with Self idioms — prototypes, mirrors, Stage Magic"
   - "Artisanal hand-programming vs intentional AI use — the conscientious-coder culture"

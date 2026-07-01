@@ -1,0 +1,36 @@
+# Interval Research — public distill
+# Source: DonHopkins/characters/don-hopkins/history/interval-research.yml
+# Paul Allen's lab; Don's oompa-loompa year before Maxis.
+
+interval_research:
+  name: Interval Research Corporation
+  period: "1992–2000 (Don: mid-1990s staff)"
+  founder: "Paul Allen"
+  ceo: "David Liddle"
+  don_reflection: |
+    "Interval was an amazing place — like working as an oompa loompa in Willy Wonka's
+    chocolate factory… Camelot." — Don Hopkins
+
+don_projects:
+  pluggers_survey:
+    title: "An Overview of Plug-In Technology circa March 1996"
+    url: https://donhopkins.com/home/interval/pluggers
+    note: "COM, OLE, CORBA, OpenDoc, Java — component chaos captured on paper"
+  ifc_vs_bongo:
+    url: https://donhopkins.com/home/interval/ifc-vs-bongo.html
+    note: "Java component frameworks; Arthur van Hoff / Marimba Bongo"
+  mediaflow:
+    url: https://donhopkins.com/home/interval/mediaflow-design.html
+    note: "Marc Davis — visual video dataflow; Don reimplemented in Mac Common Lisp + QuickTime"
+  bounce_body_electric:
+    note: "David Levitt visual programming port — music and animation dataflow"
+
+colleagues_public:
+  - Terry Winograd
+  - David Levitt
+  - Marc Davis
+  - Golan Levin
+
+wwsff_entry: ../interval-research-pluggers-and-mediaflow.md
+see_also:
+  - { path: ../career/work-history.yml, why: "Timeline before/after Interval" }
