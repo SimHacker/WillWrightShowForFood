@@ -10,12 +10,14 @@ meta:
   provenance_private: SimHacker/DonHopkins/characters/don-hopkins/correspondence/heinz-lemke.yml
 
 gist: |
-  Don found Heinz through Bill Buxton's research trail. Warm, long-running exchange: PIXIE paper
-  and 1969 film (Cambridge Univ Library digitization via David Chapman), Don's *Flight of the PIXIE*
-  homage edit (Bumblebee score; pie menus as rapid flight — not Don's paper or original film), CARS congress and model-guided medicine, Will Wright modelling talk, YouTube captioning
-  workflow for Heinz's conferences, Black Forest farmhouse (Bechtersbohl), Mario Cypko patient-
-  modelling video in the barn. CARS 2025 Berlin workshop proposal on game thinking for healthcare
-  interfaces. Don wants CHM oral history for Heinz while first-hand memory remains.
+  Don found Heinz through Bill Buxton's research trail. Warm, long-running exchange:
+  PIXIE paper and 1969 film (Cambridge Univ Library digitization via David Chapman);
+  Don's *Flight of the PIXIE* homage edit (Bumblebee score; pie menus as rapid flight —
+  not Don's paper or original film); CARS congress and model-guided medicine; Will Wright
+  modelling talk; YouTube captioning workflow for Heinz's conferences; Black Forest farmhouse
+  (Bechtersbohl); Mario Cypko patient-modelling video in the barn. CARS 2025 Berlin workshop
+  proposal on game thinking for healthcare interfaces. Don wants CHM oral history for Heinz
+  while first-hand memory remains.
 
 threads:
   chapman_cambridge_films:
@@ -46,13 +48,27 @@ threads:
     pull_in: pull-in-gaps.yml#electronics_magazine_1969_pdf
   cars_medicine:
     what: "IFCARS, CARS congress, patient-specific modelling, model-guided medicine"
+  cars_2025_berlin:
+    what: |
+      Workshop proposal — game thinking for healthcare interfaces (CARS 2025 Berlin).
+      PIXIE-era interaction design → model-guided medicine continuity.
+  will_wright_modelling:
+    what: "Modelling / simulation talk thread with Will Wright — games thinking meets medicine"
+  youtube_captioning:
+    what: "Don's captioning workflow for Heinz's conference videos"
+  bechtersbohl:
+    what: "Black Forest farmhouse visits — Bechtersbohl; in-person continuity with correspondence"
+  mario_cypko_barn:
+    what: "Mario Cypko patient-modelling video filmed in the barn"
   preservation:
-    what: "Digitized Cambridge films; ASAP interview to record Neil Wiseman + Cambridge zeitgeist"
+    what: |
+      Digitized Cambridge films; CHM oral history for Heinz while first-hand PIXIE + Cambridge
+      memory remains — honor Wiseman and Hiles through Heinz's voice
 
 connects_in_repo:
   - { path: CHARACTER.yml, why: "Bio + invitation status" }
   - { path: cambridge-films-flight-of-the-bumblebee.md, why: "Chapman + Rosenthal + production + HN index" }
-  - { path: pull-in-gaps.yml, why: "Assets to pull in (Gosling PDP-8 photo, magazine PDFs, etc.)" }
+  - { path: pull-in-gaps.yml, why: "Heinz assets to pull in (magazine PDFs, Cambridge doc, Wiseman notes)" }
   - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "PIXIE show — Heinz + Lars Brinkhoff PDP-7/340 emulation" }
   - { path: ../don-hopkins/pie-menus-chi-88-and-beyond.md, why: "PIXIE credited; Don does not claim invention" }
   - { path: ../lars-brinkhoff/, why: "Co-guest — PDP-7/340 emulation segment" }
@@ -64,4 +80,6 @@ show_hooks:
   - "David Rosenthal — same Cambridge PDP-7/Titan ~1970; PIXIE → NeWS/X11; CHM oral history"
   - "Cambridge late 1960s + US research-lab trip"
   - "PIXIE → CARS continuity — graphical interaction to model-guided medicine"
+  - "CARS 2025 Berlin — game thinking for healthcare interfaces"
+  - "Bechtersbohl + Mario Cypko barn video — medicine modelling in the Black Forest"
   - "CHM oral history — if Heinz is willing"

@@ -7,14 +7,6 @@ meta:
   consent: not_yet_asked
 
 gaps:
-  james_gosling_young_pdp8_photo:
-    what: "Very young James Gosling in front of his PDP-8 hotrod — satisfied expression"
-    status: pulled_in
-    path: ../james-gosling/media/gosling-young-pdp8-hotrod.png
-    sidecar: ../james-gosling/media/gosling-young-pdp8-hotrod.yml
-    show_use: "NeWS reunion / PIXIE prehistory — contrast PDP-8 student machine vs Cambridge PDP-7/Titan"
-    note: "Pulled in from Don's archive (2026-07); not in HeinzLemke Gmail export"
-
   electronics_magazine_1969_pdf:
     what: "McGraw-Hill Electronics (Apr 28 1969) PIXIE article; Gilmore scan"
     status: gap
