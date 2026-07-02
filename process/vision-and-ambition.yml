@@ -151,8 +151,9 @@ audiences_if_you_stumbled_here:
     hook: "Permanent, attributed, forkable record — talk lineage from 1996 forward."
     participate: "Mirror, cite, ingest show objects; we want the graph to outlive any one platform."
   hardware_hacker_builder:
-    namesake_examples: [Steve_Wozniak]
+    namesake_examples: [Steve_Wozniak, James_Gosling]
     hook: "Schematics in the repo. No gatekeeping. Bare-hands rig class welcome."
+    exemplar: characters/james-gosling/media/gosling-young-pdp8-hotrod.yml
     participate: "Show your rig. Compare taste and power across automation levels."
   publishers_and_editorial:
     hook: "Publication network — graph of shows, not a flat feed. Each node is a CARD + README + optional pitch."

@@ -170,10 +170,13 @@ artifacts:
     message_date: "Friday, 3 May 2024 at 11:27:39"
   - file: from-mail/paper-232014232028.pdf
     kind: paper
-    title: "232014.232028"
+    title: "Drawings on napkins, video-game animation, and other ways to program computers"
+    author: Ken Kahn
+    publication: "Commun. ACM 1996;39:49-59"
     source_export: DonHopkins/temp/AlanKay/attachments/msg-242-Re_ Is this you asking James Gosling a question about Java?--232014.232028.pdf
     message_subject: 'Re: Is this you asking James Gosling a question about Java?'
     message_date: "Wednesday, 1 February 2023 at 19:35:06"
+    note: Attached to Gosling/Java thread; artifact is Kahn's ACM paper, not Gosling material
   - file: from-mail/paper-sobalvarro1982.pdf
     kind: paper
     title: "sobalvarro1982"

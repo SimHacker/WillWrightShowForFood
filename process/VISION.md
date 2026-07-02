@@ -168,6 +168,8 @@ We want Brian + Jens headline Snap!/Logo; Walter on OLPC + skill creation — co
 
 - **namesake_examples:**
   - Steve_Wozniak
+  - James_Gosling
+- **exemplar:** [`characters/james-gosling/media/gosling-young-pdp8-hotrod.yml`](../characters/james-gosling/media/gosling-young-pdp8-hotrod.yml) — young Gosling, satisfied, PDP-8 hotrod muscle car
 - **hook:** Schematics in the repo. No gatekeeping. Bare-hands rig class welcome.
 - **participate:** Show your rig. Compare taste and power across automation levels.
 

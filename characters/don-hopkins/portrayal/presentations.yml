@@ -63,6 +63,23 @@ talks:
     title: "Natural Selection: The Evolution of Pie Menus"
     venue: BayCHI
 
+demos:
+  nouveau_art_pipeline_ai_foundation:
+    title: "Nouveau Art Pipeline Demo"
+    client: AI Foundation
+    period: "~2020 (COVID era)"
+    collaborators: [Rayon, Don Hopkins]
+    youtube: https://www.youtube.com/watch?v=phM8Wnzs_-g
+    youtube_upload: "2026-02-27"
+    platform: "Unity3D, iOS (Perception Unity SDK)"
+    significance: |
+      Mind Twins / Plugs animation pipeline — open blend-shape workflow (Blender,
+      Face It, ARKit 52 shapes), data-driven artist tools, WYSIWYG editor bake.
+      Performance: ~33 FPS → 60 FPS on iPhone 12; iPhone 7 thermal fix.
+      Live end-to-end demo with Deepo (speech → Unity → plugs).
+    related:
+      - https://medium.com/@donhopkins/automating-the-sims-character-animation-pipeline-with-maxscript-bc490787d7a2
+
 intellectual_lineage_note: |
   PIXIE (1969) → CHI'88 → DreamScape (Kaleida ScriptX — OO multimedia Lisp machine) → iLoci (2008) → MediaGraph (SFC) → PieCraft → MOOLLM (now).
   See career/project-threads.yml.

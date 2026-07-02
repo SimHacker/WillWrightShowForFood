@@ -36,6 +36,7 @@ sources:
       venue: "Same Alvey workshop (1985)"
 
 show_suggestions:
+  - "PDP-8 hotrod photo on air — Don asks whose rig, what ran, what had just worked (bare-hands rig class)"
   - "Alvey 1985 — SunDew + Andrew papers; workshop discussions with Rosenthal and Teitelman retrospective"
   - "Pair with Arthur van Hoff — old NeWS/Emacs/HyperLook friends and early-Java teammates"
   - "NeWS revisited — PostScript-programmable network window system; Don's pie menus, UniPress Emacs NeWS driver"

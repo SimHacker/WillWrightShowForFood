@@ -41,8 +41,19 @@ Warren invented **DWIM** (*Do What I Mean*) in Interlisp.
 ### 2. Show seed: `repo-shows/james-gosling/`
 NeWS → Java; walk the repo on air and build from the seed.
 
-### 3. PDP-8 hotrod → cheesy extension languages → NeWS → Java
-The kid at the switches becomes the person who ships network window systems and Java.
+### 3. PDP-8 hotrod — bare-hands rig class
+Don loves the photo — young James, arms crossed, **satisfied**, in front of his **PDP-8 hotrod
+muscle car**: fully loaded DEC rack (front panel, DECtape 0 and 7, patch bays). Not gatekept
+glass-room timeshare — *his* iron. **On-air ask**, not a lecture:
+
+- Whose rig? What was running? What had just worked?
+- From toggling switches → Gosling Emacs → NeWS → Java — what carried?
+
+Sidecar + questions: [`media/gosling-young-pdp8-hotrod.yml`](media/gosling-young-pdp8-hotrod.yml)
+
+Repo ethos (Hardware Hacker Builder audience): *Schematics in the repo. No gatekeeping.
+Bare-hands rig class welcome.* — [`../../process/vision-and-ambition.yml`](../../process/vision-and-ambition.yml)
+Contrast: [`../heinz-lemke/`](../heinz-lemke/README.md) PDP-7/Titan PIXIE satellite graphics.
 
 ### 4. NeWS reunion (optional group)
 Rosenthal (Andrew + ICCCM), van Hoff (HyperLook), Densmore — Alvey papers as shared origin story.

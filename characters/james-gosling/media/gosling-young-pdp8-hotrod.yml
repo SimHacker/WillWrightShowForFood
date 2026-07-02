@@ -46,6 +46,19 @@ repo_show:
     - "Cheesy little extension languages — constraints breed languages"
     - "Contrast with Cambridge PDP-7/Titan (Heinz PIXIE) — personal 8-bit hotrod vs distributed graphics satellite"
     - "Gosling Emacs lineage — the kid at the switches becomes the person who ships NeWS then Java"
+  repo_ethos:
+    hook: "Schematics in the repo. No gatekeeping. Bare-hands rig class welcome."
+    vision: ../../../process/vision-and-ambition.yml#hardware_hacker_builder
+  on_air:
+    don_loves_this_photo: |
+      Young James posing satisfied in front of his **PDP-8 hotrod muscle car** — fully loaded DEC
+      rack, not a glass-room terminal. Don wants to ask on air, not lecture.
+    ask_james:
+      - "Whose rig — yours, lab, borrowed? Where was this?"
+      - "What was on the PDP-8 + DECtape stack (reels 0 and 7)?"
+      - "What had you just gotten working when that photo was taken?"
+      - "Arms crossed, satisfied — what does that expression mean to you now?"
+      - "From toggling switches here to SunDew/NeWS/Java — what carried?"
   show_seed: ../../repo-shows/james-gosling/README.md
   character_readme: ../README.md
 

@@ -38,8 +38,12 @@ Arthur van Hoff, David Rosenthal, Owen Densmore — your pick.
 - **NeWS as a lost future** — PostScript for code, graphics, and data; *send a program, not a data
   structure*; why it felt like AJAX before AJAX; what you'd revive in a browser today.
 - **Gosling Emacs → UniPress → GNU Emacs** — MockLisp and the *"largest number of cheesy little
-  extension languages"* lineage; constraints at the console (I have a photo of very young you,
-  arms crossed, **satisfied**, in front of your **PDP-8 hotrod** — [`media/gosling-young-pdp8-hotrod.yml`](media/gosling-young-pdp8-hotrod.yml)).
+  extension languages"* lineage; constraints at the console.
+- **PDP-8 hotrod muscle car** — I love this photo. Young you, arms crossed, **satisfied**, in front
+  of a fully loaded DEC rig — switches, dual DECtape, patch bays. Not a glass-room terminal; *your*
+  iron. **I'd love to ask you about it on air:** whose rig, what you were running, what had just
+  worked. [`media/gosling-young-pdp8-hotrod.yml`](media/gosling-young-pdp8-hotrod.yml) · Repo ethos:
+  *Schematics in the repo. No gatekeeping. Bare-hands rig class welcome.*
 - **Andrew + Rosenthal** — CMU window system before Sun; bridge to NeWS and later X11/ICCCM world.
 - **Alvey 1985 — Methodology of Window Management** — you and Rosenthal **published and
   participated** (Andrew window manager + **SunDew** papers; **Teitelman's** ten-year

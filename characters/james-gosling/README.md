@@ -2,7 +2,7 @@
 
 ![Very young James Gosling, arms crossed, satisfied, in front of his PDP-8 hotrod — DEC front panel, DECtape drives, rack-mounted iron (mid-1970s, Don Hopkins archive)](media/gosling-young-pdp8-hotrod.png)
 
-*Mid-1970s — Don Hopkins archive.* A very young **James Gosling**: handsome fellow, arms crossed,
+*Mid-1970s — Don Hopkins archive.* A young **James Gosling**: handsome fellow, arms crossed,
 direct eye contact, thick rectangular glasses, wide-collar pink shirt — and that **satisfied**
 look. He sits in front of his **PDP-8 hotrod muscle car**, not a glass-room timeshare terminal but
 *racks he can touch*: DEC front-panel switches and indicator lamps, dual **DECtape** drives (reels
@@ -19,7 +19,7 @@ contrast with Cambridge **PDP-7/Titan** PIXIE: [`../heinz-lemke/cambridge-films-
     │       │              │                │              │          │
     │   MockLisp      PostScript         network         behavior     │
     │   extension     code+graphics      windows         on the       │
-    │   languages     + data             (SunDew)         internet     │
+    │   languages     + data             (SunDew)         internet    │
     └─────────────────────────────────────────────────────────────────┘
 ```
 
