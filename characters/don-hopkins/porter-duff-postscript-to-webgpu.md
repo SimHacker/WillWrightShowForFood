@@ -3,7 +3,7 @@
 Don keeps returning to **stencil-and-paint** compositing (Illustrator, not PhotoShop):
 
 ```
-PostScript tiles (HyperLook/DUX)
+PostScript tiles (HyperLook/DUX — HyperCard-inspired integrated sim + UI + graphics editors)
   → Cairo + Pango (OLPC)
   → HTML / CSS / SVG / Canvas 2D (browser document layer)
   → WebGPU / WebGL holodeck (GPU compositor, nested — not either/or)

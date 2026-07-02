@@ -21,7 +21,10 @@ individual methods) to WASM. That's exactly the thread **Craig Latta** carried f
 Caffeine and Catalyst — so the right way to remember her is *with Craig*, livecoding the web she
 helped make possible.
 
-We remember her through the people who loved her — and we celebrate her documented public work;
-we do not speak as her.
+We remember her through the people who loved her — **Craig Latta** (anchor episode — Caffeine live),
+**Dan Ingalls** (Smalltalk Zoo, SqueakJS credit), **Alan Kay** (constructionist microworld lineage),
+and **Don Hopkins** (host). Warm invitations are going out; linked episodes or one arc — guests choose.
+
+Show arc: [`../../repo-shows/remembering-vanessa-freudenberg.yml`](../../repo-shows/remembering-vanessa-freudenberg.yml)
 
 *This is a collaborative memorial, not a signed work. Those who knew Vanessa — family, friends, and colleagues — are warmly invited to edit, correct, and add their own memories, documents, and stories whenever they're ready.*

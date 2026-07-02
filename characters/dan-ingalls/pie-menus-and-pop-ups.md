@@ -23,7 +23,9 @@ Alan Kay introduced Don to Dan via the **Fabrik** paper (2018) — visual datafl
 From the 2021 thread ([DonHopkins private digest](https://github.com/SimHacker/DonHopkins/blob/main/characters/don-hopkins/correspondence/daniel-ingalls.yml)):
 
 - **Pie Menus: A 30-Year Retrospective** — timing for HN / publication
-- **Live-web bridges** — Don's UnityJS JSON layer (path expressions, query templates) vs High Fidelity ad-hoc JS vs **Croquet** / **Lively** / **SqueakJS**
+- **Live-web bridges** — Don's UnityJS JSON layer (path expressions, query templates) vs **High
+  Fidelity** distributed JavaScript plugins (JSON message passing — voting box, text chat on the
+  worklist) vs **Croquet** / **Lively** / **SqueakJS**
 - Same technical notes forwarded to **Vanessa Freudenberg** for Lively / Unity integration
 
 Show segment: not a debate — a *retrospective* with live demos of both menu styles on the same task.

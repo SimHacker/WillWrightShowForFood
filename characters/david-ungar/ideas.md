@@ -7,7 +7,7 @@ public work and documented connections to this repository. Things Don would love
 
 ## What David has done
 
-David Ungar — co-creator (with Randall Smith) of Self, the prototype-based object language that dropped classes entirely (objects are unique individuals that inherit from other objects). His work pioneered generation-scavenging garbage collection (UC Berkeley PhD) and the adaptive/dynamic JIT compilation that directly influenced Java's HotSpot VM; he also explored reflection via mirrors. Stanford faculty, then Sun Microsystems Labs (Self), then IBM Research. Known for the wry 'Self: The Movie' and the Dahl–Nygaard Prize. In this show: Self × MOOLLM — directories as prototypes — with the 'conscientious objectors' framing he and Don coined at a Kaleida meetup.
+David Ungar — co-creator (with Randall Smith) of Self, the prototype-based object language that dropped classes entirely (objects are unique individuals that inherit from other objects). His work pioneered generation-scavenging garbage collection (UC Berkeley PhD) and the adaptive/dynamic JIT compilation that directly influenced Java's HotSpot VM; he also explored reflection via mirrors. Stanford faculty, then Sun Microsystems Labs (Self), then IBM Research. Known for the wry 'Self: The Movie' and the Dahl–Nygaard Prize. In this show: Self × MOOLLM — directories as prototypes — and the Kaleida **Conscientious Objectors** meetup where the **ScriptX object-system design team** and the **Self team** bounced ideas off each other.
 
 ## Shared ground
 
@@ -25,11 +25,15 @@ David Ungar — co-creator (with Randall Smith) of Self, the prototype-based obj
 Working episode title: **Reflecting on Self: Narcissa's Mirror** (dream guest). Walk the repo on air and build from the seed.
 
 ### 2. Self pun stack — self-interest!, and more
-Don was on the original **self-interest!** mailing list. Live enumeration: self-ish, `# import self from self`, (oops)/OOPS, consciencious objectors, MOOLLM name echo.
+Don was on the original **self-interest!** mailing list. Live enumeration: self-ish, `# import self from self`, (oops)/OOPS, Conscientious Objectors (Kaleida), MOOLLM name echo.
 
-### 3. Self × MOOLLM; Kaleida consciencious objectors meetup
+### 3. Conscientious Objectors — Kaleida meetup (ScriptX × Self)
 
-### 4. Self language: prototype-based OOP; influenced JavaScript
+The **ScriptX object-system design team** and the **Self team** held a meetup called **Conscientious Objectors** — prototype OO from two directions, ideas bounced both ways. On air: what stuck? What would they build now?
+
+### 4. Self × MOOLLM
+
+### 5. Self language: prototype-based OOP; influenced JavaScript
 
 ### 5. Generation scavenging: GC innovation; Ungar's thesis
 

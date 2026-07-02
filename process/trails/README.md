@@ -29,5 +29,6 @@ and [`repo-shows/`](../../repo-shows/README.md).
 | [`drag-race-and-ai-offs.md`](drag-race-and-ai-offs.md) | The DRAG-RACE / AI-OFFS show formats. |
 | [`the-card-game.md`](the-card-game.md) | The FLUXX / card-game thread. |
 | [`stupid-fun-forward.md`](stupid-fun-forward.md) | 🤯 Stupid Fun Club energy, carried forward. |
+| [`yaml-jazz-collaboration-stack.md`](yaml-jazz-collaboration-stack.md) | YAML Jazz data representation + GitHub-as-MMORPG + Twitch/Git workflows in the LLM age. |
 
 See also [`../`](../README.md) (process overview) and the [`INDEX.yml`](../INDEX.yml) registry.

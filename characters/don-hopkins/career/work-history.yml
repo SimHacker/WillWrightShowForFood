@@ -71,7 +71,9 @@ employment_timeline:
 
   - org: Kaleida Labs
     years: "1993–1996"
-    note: ScriptX, DreamScape — Memory Palace precursor
+    note: |
+      ScriptX — object-oriented multimedia Lisp machine; DreamScape (WWDC 1995).
+      Memory-palace / mirror-world precursor. Don's verdict: so fucking fun.
 
   - org: Carnegie Mellon (Garnet)
     years: "1992–1993"
@@ -93,10 +95,14 @@ the_thread: |
   Apple II Forth → UMD HCI → NeWS → Kaleida → Maxis/Sims → Stupid Fun Club →
   TomTom → Pantomime → Leela/MOOLLM. Making complex systems understandable through play.
 
-key_inventions:
+key_contributions:
   pie_menus:
     paper: "CHI'88 — Callahan, Hopkins, Weiser, Shneiderman"
+    prehistory: "PIXIE 1969 (Wiseman, Heinz U. Lemke, Hiles) — Don does not claim invention"
+    role: "Study, implement, evaluate, ship across platforms"
     detail: ../portrayal/presentations.yml
+    topic: ../pie-menus-chi-88-and-beyond.md
+    repo_show_asap: "Heinz U. Lemke — PIXIE → CHI'88 → now (see repo-shows/INDEX.yml)"
   vitaboy:
     what: The Sims character animation system
   transmogrifier:

@@ -18,14 +18,19 @@ at the Computer History Museum. ACM Grace Murray Hopper and Software System awar
 cousins of pie menus. The thread deepened through Fabrik's modular-time dataflow, the Pie Menus
 retrospective, and Dan's reflection on the missed leap from Squeak to a web-borne live system
 (the lineage: Lively → SqueakJS → **Livelymerge** at Ink & Switch with Alex Warth). Don shared
-UnityJS bridge notes (path expressions, query templates) in the same orbit as **Vanessa
-Freudenberg**'s SqueakJS work. See [`correspondence.yml`](correspondence.yml).
+UnityJS bridge notes (path expressions, query templates) and **High Fidelity distributed JavaScript
+plugins** (voting box, text chat, diffusion-limited aggregation — JSON message passing, script
+everywhere) in the same orbit as **Vanessa Freudenberg**'s SqueakJS work. Don's collaboration stack:
+**YAML Jazz** repos + **GitHub-as-MMORPG** + stream — see
+[`yaml-jazz-collaboration-stack.md`](../../process/trails/yaml-jazz-collaboration-stack.md). See
+[`correspondence.yml`](correspondence.yml).
 
 ## The hooks
 
 ### 1. Pop-up menus ↔ pie menus — direct-manipulation cousins
-Not a debate — a **family portrait**. Dan invented pop-ups in Smalltalk; Don invented pie menus
-at UMD. [`pie-menus-and-pop-ups.md`](pie-menus-and-pop-ups.md) as the show handout.
+Not a debate — a **family portrait**. Dan invented pop-ups in Smalltalk; Don **cooked up and
+studied** pie menus at UMD CHI'88 (after **PIXIE**, 1969 — see Heinz U. Lemke episode).
+[`pie-menus-and-pop-ups.md`](pie-menus-and-pop-ups.md) as the show handout.
 
 ### 2. Smalltalk Zoo walkthrough — edit history live in the browser
 Dan hosts 48 years of Smalltalk at CHM. On-air: pick a historical image, change it, feel the
@@ -35,9 +40,30 @@ Dan hosts 48 years of Smalltalk at CHM. On-air: pick a historical image, change 
 The Fabrik paper Alan forwarded is the anchor. How visual languages teach **time** and **dataflow**
 — relevant to Snap!, SimCity rules, and MOOLLM skill graphs.
 
-### 4. Livelymerge — Smalltalk-like liveness on Automerge
-Dan's current Ink & Switch project: local-first, mergeable **live objects**. Compare to Croquet,
-High Fidelity, UnityJS bridges — what did each stack get right?
+### 4. Ink & Switch — Livelymerge, YAML Jazz, and collaboration in the LLM age ★
+**The topic Don most wants to explore with Dan** — what you're building at **Ink & Switch** with
+Alex Warth: **Livelymerge** (Smalltalk-like liveness on **Automerge**, local-first mergeable live
+objects).
+
+How should **data representation**, **organization**, **workflows**, and **collaboration** work when
+humans, LLMs, **GitHub**, and **Twitch** share one microworld? Don's YAML Jazz bet: **comments** as
+a semantically meaningful overlay of intent and annotations — accessible and generatable by humans
+and LLMs — on top of mergeable structure.
+
+| Layer | Don's stack | Dan's stack (to compare on air) |
+|-------|-------------|----------------------------------|
+| **In-session** | MOOLLM microworld liveness | **Automerge / Livelymerge** |
+| **Published** | **YAML Jazz** — comment overlay of intent + annotations (human + LLM) | ? — can a Lively page export cleanly? |
+| **Durable** | **GitHub-as-MMORPG** — branches, PRs, issues | Ink & Switch publish model |
+| **Live** | Repo Show + stream | Ink & Switch + classroom? |
+
+Compare historical stacks (**Croquet**, **[Philip Rosedale](philip-rosedale/)**'s HiFi JSON plugins,
+**UnityJS**, Pantomime VR JSON) for what each got right — but the **center of gravity** is Dan's
+current Ink & Switch work, not a metaverse retrospective.
+
+Show question: which state belongs **in Automerge** vs **in-repo** (yaml-jazz + git)? Can collaborators
+(including LLM agents) merge live *and* publish inspectable artifacts? Trail:
+[`yaml-jazz-collaboration-stack.md`](../../process/trails/yaml-jazz-collaboration-stack.md).
 
 ### 5. Live-in-the-browser: Lively → SqueakJS → Caffeine
 The arc from Dan's Lively Kernel to **Craig Latta**'s Caffeine (WASM livecoding). **Vanessa
@@ -56,4 +82,5 @@ as engineering discipline, not pedagogy only.
 - [`correspondence.yml`](correspondence.yml) · [`pie-menus-and-pop-ups.md`](pie-menus-and-pop-ups.md)
 - [`invitation.md`](invitation.md) · Show seed: [`repo-shows/dan-ingalls/`](../../repo-shows/dan-ingalls/)
 - [`media/from-mail/MANIFEST.yml`](media/from-mail/MANIFEST.yml) — Fabrik paper, thread pages
+- [`yaml-jazz-collaboration-stack.md`](../../process/trails/yaml-jazz-collaboration-stack.md) — **Ink & Switch flagship topic**
 - CHM Smalltalk Zoo: https://smalltalkzoo.thechm.org/

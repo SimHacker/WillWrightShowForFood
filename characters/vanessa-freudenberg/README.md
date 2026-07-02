@@ -6,6 +6,9 @@
 
 [Tribute](memorial.md)
 
-**Memorial mode:** we represent and *discuss* her — never interview or speak as her. **SqueakJS** put a live Smalltalk VM in the browser — the foundation Craig Latta's **Caffeine** builds on. After it she had sharp, insightful things to say about **WebAssembly** that Craig deeply resonates with — so the right way to remember her is *with Craig*, livecoding the web. Discussants: [Craig Latta](../craig-latta/README.md), [Dan Ingalls](../dan-ingalls/README.md).
+**Memorial mode:** we represent and *discuss* her — never interview or speak as her. **Warmly invited
+discussants:** [Craig Latta](../craig-latta/README.md) (anchor — Caffeine live), [Dan Ingalls](../dan-ingalls/README.md),
+[Alan Kay](../alan-kay/README.md), and Don. Show arc:
+[`remembering-vanessa-freudenberg.yml`](../../repo-shows/remembering-vanessa-freudenberg.yml).
 
 Verifiable sources in `CHARACTER.yml`.

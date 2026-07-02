@@ -15,7 +15,8 @@ thesis: |
   ideas Don keeps learning, adding to, and braiding together: navigable/editable models of
   a world (or a mind), mirror worlds, mind maps, method of loci, adventure-map editors, pie
   menus, gestural navigation, direct manipulation. He learned many of these studying other
-  people's work, and invented some himself -- but the real through-skill is the one Gosling
+  people's work, and built on them honestly -- radial menus trace to **PIXIE (1969)**; Don does
+  not claim to have invented pie menus (see `pie_menus_prehistory`). His through-skill is the one Gosling
   brought to designing NeWS: step back, survey the whole range of approaches, and compare
   them honestly -- naming the failures as clearly as the successes, and always offering a
   better path. His X-Windows Disaster chapter (UNIX-HATERS Handbook) is the critique; NeWS,
@@ -43,9 +44,9 @@ roots:   # the gateway, and the worlds that seeded the ideas -- roughly in order
 
 bundle:   # each entry adds its own ideas to the pile; they cross-pollinate and compound
   - { project: "Logo Adventure",               era: "Terrapin Logo / C64",        thread: "adventure-map world editor using the Logo REPL as the text-adventure parser (the same trick MOOLLM now plays with the LLM chat REPL); PAID, shipped on the C64 Terrapin Logo Examples floppy; Papert constructionism, MIT-AI (LLogo) lineage", todo: "link the Medium article (or our cleaned-up recreation of it)" }
-  - { project: "Pie menus",                    era: "UMD HCIL CHI'88 -> NeWS -> X11 -> The Sims -> OLPC -> web -> Unity", thread: "direct manipulation: fast, reliable gestural selection -- the verb-picker for a modeled world" }
+  - { project: "Pie menus",                    era: "PIXIE 1969 (Wiseman/Lemke) -> UMD HCIL CHI'88 -> NeWS -> X11 -> The Sims -> OLPC -> web -> Unity", thread: "direct manipulation: fast, reliable gestural selection -- the verb-picker for a modeled world. Don studied, implemented, evaluated, and shipped; does NOT claim invention (see pie_menus_prehistory)" }
   - { project: "HyperTIES / PSIBER Space Deck",era: "NeWS, late 1980s",           thread: "hypermedia as navigable space; live objects you can open, inspect, and edit" }
-  - { project: "DreamScape",                   era: "Kaleida Labs (ScriptX)",     thread: "mirror-world / mind-map media environment -- a memory-palace precursor" }
+  - { project: "DreamScape",                   era: "Kaleida Labs (ScriptX, 1993–1996)", thread: "ScriptX = object-oriented multimedia Lisp machine (live OO Lisp + time-based media). DreamScape = mirror-world / mind-map media environment -- memory-palace precursor to iLoci, MediaGraph, MOOLLM. Don: 'so fucking fun.'" }
   - { project: "SimCity / Micropolis",         era: "1989 -> GPL 2008 -> WASM/web",thread: "an editable simulated world; tile/parametric editing; multiplayer X11/Tcl/Tk shared-world city editing. Imaging: Porter/Duff stencil-paint (PostScript -> Cairo/Pango -> HTML/CSS/SVG/Canvas 2D -> WebGPU/WebGL holodeck, GPU preferred, nested compositing) -- Illustrator not PhotoShop. Weeks before Ben Shneiderman (UMD HCIL) visited Don and Brad Myers at CMU, Don implemented a Dynamic HomeFinder-style filter in multiplayer SimCity -- homage to Ben's HCIL demo (dynamic queries: sliders + map, instant feedback). https://www.cs.umd.edu/hcil/trs/92-01/92-01.html" }
   - { project: "The Sims",                     era: "Maxis/EA (core team)",       thread: "characters + objects-that-carry-their-own-behavior + architectural editing; author a world by placing and wiring objects" }
   - { project: "SFC MediaGraph",               era: "Stupid Fun Club (Will Wright)",thread: "zoomable, editable graph/map of media as navigable space" }
@@ -68,6 +69,7 @@ tools_lineage:   # the OTHER throughline -- the tools he built worlds WITH: exte
     - { tech: "Python / PyGTK / Cairo / Pango / Sugar (OLPC Micropolis)", era: "2006–2008", idea: "Don dove into Python adapting SimCity for OLPC -- Python was the lifeblood of the platform (Sugar itself written in Python), built on PyGTK, gobject, Cairo, Pango. Wrapped TCL/Tk/X11 SimCity in a Python Sugar adaptor, then PyGTK desktop UI: Cairo for scalable printable graphics, Pango for beautiful scalable printable text -- natural migration from HyperLook PostScript tiles (same Porter/Duff stencil-paint model, better implemented). TODO: revive PyGTK shell around MicropolisCore C++ engine (PyGTK may still be viable; Don has not tracked GTK lately)" }
     - { tech: "SVG + HTML Canvas + CSS (web 2D)",           era: "Micropolis web -> MicropolisCore", idea: "Porter/Duff stencil-paint on the web -- vector illustration semantics (Illustrator), not (or not only) Photoshop bitmap paint; DOM/CSS/SVG/Canvas as the document and 2D layer" }
     - { tech: "WebGPU / WebGL (holodeck compositor)",       era: "MicropolisCore now",      idea: "GPU rendering on top of, underneath, or nested inside the HTML/CSS/SVG/Canvas/2D stack -- preferably GPU; @micropolis/render-core HolodeckStage layers simulation truth + tile overlays + pie menus + agents. Same stencil/paint compositing idea, hardware-accelerated" }
+    - { tech: "ScriptX (Kaleida Labs)",                    era: "1993–1996",               idea: "object-oriented multimedia Lisp machine -- live OO Lisp + time-based media graphs; DreamScape mirror-world authoring. Absurdly fun; direct precursor to navigable MOOLLM rooms" }
     - { tech: "SFC MediaGraph (Macintosh Common Lisp + QuickTime)", era: "Stupid Fun Club", idea: "constraint/graph media environment in MCL, driving QuickTime -- a navigable media map" }
     - { tech: "Zope / Plone / CMF (Python)",                  era: "2000s web CMS",           idea: "object publishing -- URL traversal to Python objects; CMF content types, workflows, permissions, through-the-web editing. Don did a lot of this (SimProv CMS, originalsims.com lineage). Same shape as MOOLLM rooms/skills -- without the Zopieness (no ZODB/acquisition maze)" }
     - { tech: "TurboGears / SQLObject / Genshi",               era: "2005+ NutritionQuest (decade+ romance)", idea: "abandoned Zope's mind-numbing complexity for a lean Python stack; Don developed, extended, and maintained Genshi templates and the Alive-PD platform for Torin Block / Block Dietary. Still running -- live demo; TODO: record walkthrough for YouTube (Torin would love it). Micropolis web used same TurboGears + OpenLaszlo thread" }
@@ -110,7 +112,7 @@ imaging_model_lineage:   # third braid -- Porter/Duff stencil/paint; Illustrator
     compositing, not either/or. Scalable, printable vector graphics and text -- the
     Illustrator world, not (or not only) the Photoshop pixel-pushing, filtering, compositing world.
   arc:
-    - { tech: "NeWS / PostScript (HyperLook SimCity)", era: "1991–1992 DUX", idea: "PostScript tile renderer and UI -- stencil/paint imaging in the window server" }
+    - { tech: "NeWS / PostScript (HyperLook SimCity)", era: "1991–1992 DUX", idea: "HyperCard-inspired HyperLook -- simulation microworld with integrated scalable PostScript visualizations, UI editor, graphics editors, and tile renderer; stencil/paint imaging in the window server" }
     - { tech: "Cairo + Pango",                         era: "2006–2008 OLPC", idea: "natural migration: Cairo = scalable printable graphics; Pango = beautiful scalable printable text; same Porter/Duff model as PostScript, better library" }
     - { tech: "HTML / CSS / SVG / Canvas 2D",          era: "Micropolis web -> MicropolisCore shell", idea: "document + 2D illustration layer in the browser; Porter/Duff on the web" }
     - { tech: "WebGPU / WebGL holodeck",               era: "MicropolisCore now", idea: "GPU compositor nested with the 2D/DOM stack -- tile renderer plugins, overlay planes, pie menus; see unified-webgpu-renderer.md, @micropolis/render-core" }
@@ -168,6 +170,8 @@ culmination_moollm:
     pointers directly into training data -- drastically **decreasing prompt token count** by leaning
     on what the model already knows instead of inventing new arbitrary stories.
     Guardrail: inherit ideas, skills, and style -- never impersonate the person (representation-ethics).
+    Credit **David Ungar** (with Randall Smith): very open and influential; Don assigns huge credit
+    for where we are. Self doesn't run on everybody's phone -- in spirit it does (JS, HotSpot, MOOLLM).
     Don was on the **original Self mailing list**, **self-interest!** -- such a great pun (and there
     are more in the Self/MOO/MOOLLM stack). See self_pun_stack below.
     See: kernel/constitution-core.md, semantic image pyramid (GLANCE/CARD/SKILL), send-code-not-commands.md
@@ -177,10 +181,18 @@ culmination_moollm:
     - **self-ish** -- Don's prototype-based config systems (Leela, MOOLLM shape); not selfish, Self-ish.
     - **`# import self from self`** -- MOOLLM constitution (see import_self_from_self above).
     - **(oops)** -- triple pun in power_of_simplicity (JS mistake; Owen's OOPS; oops 2u2).
-    - **consciencious objectors** -- coined with David Ungar at a Kaleida meetup (rig culture, not Self-only).
+    - **Conscientious Objectors** -- Kaleida meetup: ScriptX object-system design team × Self team (David Ungar et al.); bounced prototype OO ideas off each other; named meetup, load-bearing ethic.
     - **Reflecting on Self: Narcissa's Mirror** -- proposed Repo Show episode title with David Ungar (dream guest); Self **mirrors** + narcissus wordplay (confirm spelling with David).
     - **Self: The Movie** -- Ungar & Smith's wry demo film; the community had a sense of humor about itself.
     TODO: Don to enumerate more puns on the Ungar Repo Show -- the stack runs deep.
+  conscientious_objectors_meetup:
+    name: Conscientious Objectors
+    era: Kaleida Labs (ScriptX era)
+    teams: [ScriptX object-system design, Self (David Ungar and colleagues)]
+    what: "Great meetup where both teams bounced prototype-based object-system ideas off each other."
+    lineage: "ScriptX OO multimedia Lisp × Self power-of-simplicity — mirrors, inheritance, live objects."
+    wwsff: ../kaleida-scriptx-dreamscape-multimedia-lisp-machine.md
+    dream_show: ../self-interest-narcissas-mirror-david-ungar.md
   oops_pun: |
     KEEP "(oops)" in power_of_simplicity — intentional triple pun, not a typo:
     (1) JS dropped multiple inheritance — oops, mistake.
@@ -222,6 +234,24 @@ why_it_matters: |
   fun. Pie menus, method of loci, adventure-map editing, god-game single-operator-many-agents
   UIs, live digital twins. Forty years of collecting and combining great ideas; MOOLLM is
   the culmination. Don didn't stumble into it -- he's been building the bundle his whole career.
+
+pie_menus_prehistory:
+  claim: |
+    Don does NOT claim to have invented pie/radial menus. Credit the deep prehistory; tell the
+    CHI'88 study/implement/ship story; point at forty years of baking them into modeled worlds.
+  pixie_1969:
+    citation: "PIXIE: A New Approach to Graphical Man-Machine Communication. 1969 CAD Conference, Southampton. IEEE Conference Publication 51, pp. 463–471."
+    pioneers: [Neil E. Wiseman, Heinz U. Lemke, John O. Hiles]
+    platform: "PDP-6; light-pen radial menus"
+  don_role: "Study, implement, evaluate (CHI'88 with Callahan, Weiser, Shneiderman), ship across NeWS, X11, Sims, OLPC, web, Unity, MicropolisCore."
+  repo_show_asap:
+    guest: Heinz U. Lemke
+    priority: high
+    seeds:
+      - ../../../repo-shows/INDEX.yml#pixie-pie-menus-pdp6.yml
+      - ../../../repo-shows/INDEX.yml#ben-and-heinz-pie-menus.yml
+    wwsff_topic: ../pie-menus-chi-88-and-beyond.md
+    ideas: ../ideas.md
 
 see_also:
   - { path: project-threads.yml, why: "How the threads branch and merge" }

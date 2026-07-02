@@ -23,10 +23,11 @@ layers:
 # Uniform ~24-word blurbs; each entry opens the next. Read clusters in order.
 connections_index:
   narrator: |
-    Forth on a 6502 opens ARPANET and Zork; pie menus pick verbs for modeled worlds;
-    PostScript and NeWS send code to glass; SimCity and The Sims become editable microworlds;
-    OLPC GPL-forks Micropolis; imaging walks to WebGPU; robots perform feeling at SFC;
-    constraint solvers keep declarative UI honest; MOOLLM makes the filesystem the game board.
+    Forth on a 6502 opens ARPANET and Zork; PIXIE (1969) predates the pie menus Don cooked up
+    PostScript and NeWS send code to glass; HyperLook SimCity (HyperCard-inspired) integrates
+    scalable PostScript visualizations, UI editor, and graphics editors in one microworld; OLPC GPL-forks Micropolis; imaging walks to WebGPU; robots perform feeling at SFC;
+    constraint solvers keep declarative UI honest; Kaleida ScriptX multimedia Lisp machine;
+    MOOLLM makes the filesystem the game board.
   human_mirror: README.md
   machine_mirror: browse-the-bouquet.yml
   blurb_words: 24
@@ -66,11 +67,11 @@ connections_index:
     - id: gestural_verbs
       title: Gestural verbs — CHI'88 verb-picker
       era: "1988"
-      bridge: Fitts's law meets a modeled world — pick a direction, not a distance; menus become verbs.
+      bridge: PIXIE radial menus (1969, Heinz U. Lemke) predate CHI'88 — Don studied, implemented, evaluated, and shipped; pick a direction, not a distance.
       opens: send_code
       entries:
         - path: pie-menus-chi-88-and-beyond.md
-          blurb: CHI'88 radial menus with Shneiderman and Weiser — gestural verb-picker steering SimCity, Sims, and MOOLLM.
+          blurb: PIXIE 1969 prehistory — Don does not claim invention; CHI'88 empirical study and implementations steering SimCity, Sims, MOOLLM.
           opens: axis-of-eval-send-code-not-commands.md
         - path: portrayal/presentations.yml
           blurb: Verified papers and talks — CHI'88 links, BayCHI, DreamScape WWDC; receipts for every public claim above.
@@ -79,17 +80,20 @@ connections_index:
     - id: send_code
       title: Send code, not commands — NeWS motherboard
       era: 1988–1995
-      bridge: If menus are verbs, the window server must speak a language — not grind X11 command chatter.
+      bridge: If menus are verbs, the window server must speak a language — HyperCard's stack model meets PostScript on NeWS.
       opens: interval_detour
       entries:
         - path: axis-of-eval-send-code-not-commands.md
           blurb: NeWS manifesto — X-Windows Disaster critique, Owen Densmore OOPS, the bet the web later cashed in.
           opens: hyperlook-news-postscript-simcity.md
         - path: hyperlook-news-postscript-simcity.md
-          blurb: HyperLook NeWS SimCity — PostScript UI, pie menus, tile renderer; first Unix face of the city at DUX.
+          blurb: HyperCard-inspired HyperLook SimCity — integrated PostScript viz, UI editor, graphics editors; scalable microworld at DUX.
           opens: porter-duff-postscript-to-webgpu.md
         - path: porter-duff-postscript-to-webgpu.md
           blurb: Porter/Duff imaging braid — stencil-paint in the server through Cairo, Canvas 2D, nested WebGPU compositing.
+          opens: kaleida-scriptx-dreamscape-multimedia-lisp-machine.md
+        - path: kaleida-scriptx-dreamscape-multimedia-lisp-machine.md
+          blurb: Kaleida ScriptX — object-oriented multimedia Lisp machine; DreamScape mirror-world; live authoring, absurdly fun.
           opens: interval-research-pluggers-and-mediaflow.md
 
     - id: interval_detour
@@ -315,8 +319,8 @@ abilities:
     score_when:
     - trigger: audience_learns_something_true
       weight: 0.85
-  effect: Demonstrate radial menus with the data to back them up.
-  verifiable: CHI'88 paper; pie menu implementations
+  effect: Demonstrate radial menus with the data to back them up — PIXIE lineage credited.
+  verifiable: PIXIE 1969 (Wiseman/Lemke); CHI'88 empirical paper; shipped implementations
   combos_with:
   - BEN-DIRECT-MANIPULATION
   - WILL-INCLUDE-MODS

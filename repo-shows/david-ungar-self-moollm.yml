@@ -15,14 +15,16 @@ episode:
   subtitle: "Self × MOOLLM — mirrors, prototypes, import self from self, self-interest!"
 
 pitch: |
-  Self invented prototype-based objects and adaptive simplicity. MOOLLM reimagines that
-  lineage for the LLM era — directories as prototypes, skills as inheritable behavior,
-  Stage Magic Principle as the semantic image pyramid, Idea Scavenging as persistent
-  characters. Build it live. Compare artisanal hand programming vs intentional AI use —
-  the culture Don taught as consciencious objectors at Kaleida meetups with Ungar and
-  the ScriptX team.
+  David Ungar co-created Self — prototype objects, adaptive JIT, generation scavenging, mirrors.
+  He was very open and influential; Don says he deserves huge credit for where we are. Self
+  doesn't run on everybody's phone — in spirit it does (JavaScript, HotSpot, MOOLLM). Build
+  Self × MOOLLM live: directories as prototypes, Stage Magic as GLANCE/CARD/SKILL, Idea
+  Scavenging as persistent characters. Honor the **Conscientious Objectors** Kaleida meetup
+  (ScriptX object-system team × Self team) and artisanal vs intentional AI craft.
 
 topics:
+  - "Self doesn't run on every phone — in spirit it does: JS, HotSpot, MOOLLM (trace on air)"
+  - "Conscientious Objectors — Kaleida meetup: ScriptX object-system design × Self team"
   - "Episode title riff: Reflecting on Self — Narcissa's Mirror (Self mirrors + pun stack)"
   - "Self pun stack: self-interest!, self-ish, import self from self, (oops), Self: The Movie"
   - "Self prototype model → MOOLLM directory inheritance"

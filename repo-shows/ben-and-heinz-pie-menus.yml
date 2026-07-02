@@ -1,0 +1,29 @@
+# SHOW SEED — Ben Shneiderman + Heinz U. Lemke: pie menus, HCI & history
+# Seed. A great PAIR.
+
+show:
+  id: ben-and-heinz-pie-menus
+  title: "Pie Menus, HCI & History — Ben Shneiderman + Heinz U. Lemke"
+  type: group
+  host: Don Hopkins
+  guests: ["Ben Shneiderman", "Heinz U. Lemke"]
+  topic: "Pie menus, HCI, and the deep history — from the 1969 PIXIE prehistory (Lemke) to direct manipulation + the CHI '88 pie menu study (Shneiderman)."
+  status: seed
+
+why_a_great_pair:
+  - "Heinz U. Lemke — co-author of the 1969 PIXIE paper (radial menus on the PDP-6): the deep prehistory."
+  - "Ben Shneiderman — direct manipulation + co-author of the CHI '88 pie menu study: the lineage that followed."
+  - "Together they span ~20 years of the pie-menu / HCI story, with Don (also a CHI '88 co-author) bridging them."
+
+format:
+  live: true
+  audience_qa: true
+  notes: "Explain WHY pie menus + direct manipulation work → implement command-bus pie-menu slices live."
+
+ties_to:
+  - characters/heinz-lemke/
+  - repo-shows/pixie-pie-menus-pdp6.yml
+  - repo-shows/ben-shneiderman-series.yml
+  - repo-shows/pie-menus-retrospective.yml
+
+consent: not_yet_asked

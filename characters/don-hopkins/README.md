@@ -23,12 +23,15 @@ or submit a PR. **Photos:** [`media.md`](media.md)
 ## The thread
 
 A kid hand-writes **Forth** on a 6502 — and suddenly he is on the **ARPANET**, inside
-**Zork**, inventing **pie menus** for modeled worlds. **PostScript** gives those menus a
-language; **NeWS** ships code to the glass; **SimCity** becomes a Unix microworld you can
-paint and play across the network. **Maxis** turns the dollhouse into **The Sims**;
+**Zork**, **cooking up pie menus** for modeled worlds (after **PIXIE**, 1969 — see Heinz U.
+Lemke episode ASAP). **PostScript** gives those menus a language; **NeWS** ships code to the
+glass; **HyperLook SimCity** — inspired by **HyperCard** — reimagines a simulation microworld
+with integrated scalable PostScript visualizations, UI editor, and graphics editors; paint and
+play across the network. **Maxis** turns the dollhouse into **The Sims**;
 **Transmogrifier** hands the city back to players. **OLPC** forces the source open —
 **Micropolis** — and the same imaging braid walks forward through **Cairo**, **Canvas**,
-**WebGPU**. **Robots** beg for empathy at **Stupid Fun Club**; **constraint solvers**
+**WebGPU**. **Kaleida ScriptX** — an object-oriented multimedia Lisp machine (*so much fun*) —
+**DreamScape** as memory-palace precursor. **Robots** beg for empathy at **Stupid Fun Club**; **constraint solvers**
 (Garnet → Laszlo → Svelte) keep declarative UI honest across decades. Today the filesystem
 itself is the game board: **`import self from self`**, **MOOLLM**, **Repo Show** — the
 bundle finally compiles. Machine mirror: [`CARD.yml`](CARD.yml) → `connections_index`.
@@ -55,7 +58,7 @@ Each blurb below is **one beat long** (~24 words). Read in order; each line **op
 
 | File | What it is | Opens → |
 |------|------------|---------|
-| [`pie-menus-chi-88-and-beyond.md`](pie-menus-chi-88-and-beyond.md) | CHI'88 radial menus with Shneiderman and Weiser — the gestural verb-picker that would steer SimCity, Sims, and MOOLLM. | [`axis-of-eval-send-code-not-commands.md`](axis-of-eval-send-code-not-commands.md) |
+| [`pie-menus-chi-88-and-beyond.md`](pie-menus-chi-88-and-beyond.md) | PIXIE 1969 prehistory — Don studied, evaluated, and shipped at CHI'88; gestural verb-picker for SimCity, Sims, MOOLLM. | [`axis-of-eval-send-code-not-commands.md`](axis-of-eval-send-code-not-commands.md) |
 | [`portrayal/presentations.yml`](portrayal/presentations.yml) | Verified papers and talks — CHI'88 links, BayCHI, DreamScape WWDC; receipts for everything claimed above. | [`axis-of-eval-send-code-not-commands.md`](axis-of-eval-send-code-not-commands.md) |
 
 ---
@@ -67,8 +70,9 @@ Each blurb below is **one beat long** (~24 words). Read in order; each line **op
 | File | What it is | Opens → |
 |------|------------|---------|
 | [`axis-of-eval-send-code-not-commands.md`](axis-of-eval-send-code-not-commands.md) | NeWS manifesto thread — *X-Windows Disaster* critique, Owen Densmore's OOPS, the bet the web later cashed. | [`hyperlook-news-postscript-simcity.md`](hyperlook-news-postscript-simcity.md) |
-| [`hyperlook-news-postscript-simcity.md`](hyperlook-news-postscript-simcity.md) | HyperLook / NeWS SimCity — PostScript UI, pie menus, tile renderer; SimCity's first Unix face at DUX. | [`porter-duff-postscript-to-webgpu.md`](porter-duff-postscript-to-webgpu.md) |
-| [`porter-duff-postscript-to-webgpu.md`](porter-duff-postscript-to-webgpu.md) | Porter/Duff imaging braid — stencil-paint in the window server through Cairo, Canvas 2D, nested WebGPU compositing. | [`interval-research-pluggers-and-mediaflow.md`](interval-research-pluggers-and-mediaflow.md) |
+| [`hyperlook-news-postscript-simcity.md`](hyperlook-news-postscript-simcity.md) | HyperCard-inspired HyperLook SimCity — integrated PostScript viz, UI editor, graphics editors; scalable microworld at DUX. | [`porter-duff-postscript-to-webgpu.md`](porter-duff-postscript-to-webgpu.md) |
+| [`porter-duff-postscript-to-webgpu.md`](porter-duff-postscript-to-webgpu.md) | Porter/Duff imaging braid — stencil-paint in the window server through Cairo, Canvas 2D, nested WebGPU compositing. | [`kaleida-scriptx-dreamscape-multimedia-lisp-machine.md`](kaleida-scriptx-dreamscape-multimedia-lisp-machine.md) |
+| [`kaleida-scriptx-dreamscape-multimedia-lisp-machine.md`](kaleida-scriptx-dreamscape-multimedia-lisp-machine.md) | Kaleida **ScriptX** — OO multimedia Lisp machine; **DreamScape** mirror-world; WWDC 1995; absurdly fun live authoring. | [`interval-research-pluggers-and-mediaflow.md`](interval-research-pluggers-and-mediaflow.md) |
 
 ---
 

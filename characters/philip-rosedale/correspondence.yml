@@ -1,0 +1,53 @@
+# Philip Rosedale × Don Hopkins — correspondence summary (public-safe)
+# Full private digest: SimHacker/DonHopkins/characters/don-hopkins/correspondence/high-fidelity-rosedale.yml
+
+meta:
+  with: philip-rosedale
+  curated_by: don-hopkins
+  consent: not_yet_asked
+  span: "2016–2020"
+  provenance_private: SimHacker/DonHopkins/characters/don-hopkins/correspondence/high-fidelity-rosedale.yml
+
+gist: |
+  Caitlyn Meeks-Ferragallo introduced Don to Philip Rosedale and Ryan Downe Karpf (High Fidelity /
+  Second Life founders) for a C++ generalist role (Jan 2016). Don pitched Pantomime, Sims demos,
+  Micropolis, StoryMaker, MediaGraph; recruiting replied US-only. Don became a **worklist.net**
+  contractor (2017): **voting box** (#21257), **range-based text chat** (#21280) — Philip QA'd and
+  approved; **Fancy Voting Box** was his favorite. Additional bids: doppleganger mirror, text
+  entities, laser pointer, dodge ball, coin flip. Don compared HiFi's **JavaScript-everywhere /
+  JSON message-passing** plugin model to UnityJS and Croquet in the Dan Ingalls thread (2021). Don and
+  Philip **design-jammed** on Don's **VR diffusion-limited aggregation** simulation in HiFi (CAM6
+  lineage). **High Fidelity** later wound down; Philip's focus returned to **Second Life**.
+
+threads:
+  worklist_plugins:
+    what: "Distributed JavaScript apps in HiFi — JSON message passing; voting box + text chat shipped"
+    dates: "2017"
+    public_artifact: "http://donhopkins.com/home/hifi/VotingBox.js"
+  worlds_and_moollm:
+    what: "Second Life / HiFi / user-created worlds ↔ MOOLLM (MOO heritage, GitHub-as-MMORPG, Sims character layer)"
+    note: "MOOLLM outreach drafted in DonHopkins email/email-to-philip-rosedale.md — not yet sent as Repo Show invite"
+  live_web_comparison:
+    what: "HiFi plugin architecture vs UnityJS vs Croquet vs Livelymerge — named in Dan Ingalls correspondence"
+  cellular_automata_vr:
+    what: "VR DLA simulation design jam in HiFi; Philip's CA interest (Dave Ackley thread — Philip + Wolfram on HiFi board)"
+  yaml_jazz_collaboration:
+    what: "Comments = semantically meaningful overlay of intent and annotations (humans + LLMs); GitHub-as-MMORPG + stream workflows"
+    trail: process/trails/yaml-jazz-collaboration-stack.md
+  avatar_import_export:
+    what: "Second Life avatar/identity import-export ↔ MOOLLM character souls — parallel to SimObliterator for Sims saves"
+
+connects_in_repo:
+  - { path: CHARACTER.yml, why: "Bio + invitation status" }
+  - { path: ../dan-ingalls/, why: "Live-web bridges comparison thread" }
+  - { path: ../will-wright/, why: "Sims / character simulation lineage" }
+  - { path: ../../repo-shows/philip-rosedale-hifi-moollm.yml, why: "Show seed" }
+
+show_hooks:
+  - "Worklist era — how distributed JS plugins actually shipped in a virtual world"
+  - "Worlds as address space — Second Life, LambdaMOO, MOOLLM paths-not-#42"
+  - "YAML Jazz + GitHub-as-MMORPG — how to organize and collaborate with LLMs, GitHub, Twitch"
+  - "The code that creates a world vs the code that creates consciousness (Philip's thread × MOOLLM)"
+  - "Sims character simulation — SimObliterator bridge; what avatars would say if they could talk"
+  - "VR DLA / CAM6 design jam — cellular automata as world substrate in HiFi"
+  - "Second Life avatar import-export ↔ MOOLLM souls — user-created identity portability"

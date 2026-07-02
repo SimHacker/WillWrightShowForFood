@@ -8,7 +8,7 @@ show:
   host: Don Hopkins
   guests: ["Dan Ingalls"]
   character: characters/dan-ingalls/
-  topic: "BitBlt and pop-up menus; Fabrik; Squeak-in-itself; Lively Kernel; Smalltalk Zoo at CHM — and how the live-web lineage (SqueakJS, Caffeine) continues the work"
+  topic: "BitBlt and pop-up menus; Fabrik; Squeak-in-itself; Lively Kernel; Smalltalk Zoo at CHM — plus ★ Ink & Switch Livelymerge: data representation, YAML Jazz, GitHub-as-MMORPG vs Automerge"
   status: seed
   format: remote_or_in_person
 
@@ -19,6 +19,11 @@ why_him:
   don_thread: "Alan Kay introduced Don via the Fabrik paper (2018); 2021 thread on pie menus retrospective + live-web bridges (UnityJS JSON vs Croquet)."
 
 threads:
+  livelymerge_ink_and_switch:
+    flagship: true
+    what: "Livelymerge at Ink & Switch — explore data representation, workflows, collaboration with Dan: Automerge in-session vs YAML Jazz + GitHub-as-MMORPG publish vs stream"
+    trail: ../../process/trails/yaml-jazz-collaboration-stack.md
+    open_question: "Can a saved Lively page become a yaml-jazz repo commit without losing liveness? Comments = overlay of intent + annotations (humans + LLMs)."
   pop_up_vs_pie: "Pop-up menus (Dan) ↔ pie menus (Don) — cousins on the direct_manipulation trail; CHI'88 lineage; live demo segment"
   fabrik_dataflow: "Fabrik visual programming — kindred to Don's pie-menu / visual UI work; Alan Kay introduction"
   smalltalk_zoo_live: "Walk the Zoo on air — Smalltalk-72 → Squeak; what 'liveness' means when the artifact runs in the browser"
@@ -45,6 +50,8 @@ ties_to:
   - ../../process/trails/live-objects.md
   - ../../process/trails/direct-manipulation.md
   - https://smalltalkzoo.thechm.org/
+  - ../../process/trails/yaml-jazz-collaboration-stack.md
+  - SimHacker/DonHopkins/characters/don-hopkins/outreach/dan-ingalls-ink-and-switch.yml
   - https://computerhistory.org/profile/dan-ingalls/
 
 consent: not_yet_asked

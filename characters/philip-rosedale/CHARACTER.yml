@@ -1,0 +1,55 @@
+# Philip Rosedale — invitation portrayal. NOT Philip Rosedale.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: philip-rosedale
+  name: "Philip Rosedale"
+  type: invitation
+  signifier: "🌐"
+  status: living
+  field: "Second Life, High Fidelity, virtual worlds — user-created worlds × MOOLLM"
+  home: characters/philip-rosedale/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/philip-rosedale-hifi-moollm.yml
+  note: "Warm prior contact — Caitlyn intro 2016; worklist contractor 2017 (voting box, text chat); Philip QA'd and approved. MOOLLM follow-up drafted in DonHopkins email/ — now Repo Show invitation."
+
+bio:
+  summary: |
+    **Philip Rosedale** — co-founder of **Linden Lab** and creator of **Second Life**; co-founder of
+    **High Fidelity** (open, distributed VR — historical chapter; platform later wound down). Built
+    **worklist.net** — contractors shipping in-world JavaScript apps via **JSON message passing**.
+    Don shipped voting box and text chat there (2017); Philip QA'd. Design-jammed with Don on **VR
+    diffusion-limited aggregation** (CAM6 / DLA lineage) — Philip keen on **cellular automata** in
+    worlds. Natural Repo Show partner for **MOOLLM**: **YAML Jazz** representation, **GitHub-as-MMORPG**
+    workflows, LambdaMOO heritage, **Second Life avatar import/export** as character souls, and the
+    **Dan Ingalls** live-object comparison arc.
+  don_credit: |
+    Philip ran a serious distributed-scripting platform and paid attention — QA on Don's voting box,
+    "Fancy one is my favorite." Don never forgot the worklist era or the JSON plugin joy. They
+    design-jammed on Don's **VR diffusion-limited aggregation** simulation in HiFi — Philip is
+    genuinely into **cellular automata** as world substrate (Dave Ackley thread, 2017). **High
+    Fidelity** later wound down; Philip's public focus returned to **Second Life** — where the
+    user-created economy still lives.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Philip_Rosedale"
+  web:
+    - { title: "VotingBox.js (Don's HiFi worklist deliverable)", url: "http://donhopkins.com/home/hifi/VotingBox.js" }
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: ../../repo-shows/philip-rosedale-hifi-moollm.yml, why: "HiFi distributed JS × MOOLLM × worlds-as-code" }
+  - { path: ../dan-ingalls/, why: "2021 thread comparing HiFi plugins vs Croquet vs Livelymerge" }
+  - { path: ../will-wright/, why: "Sims lineage — Don + Will; character simulation in MOOLLM" }
+  - { path: ../../process/trails/live-objects.md, why: "Virtual worlds in the live-object lineage" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

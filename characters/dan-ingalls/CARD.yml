@@ -46,7 +46,7 @@ abilities:
     score_when:
     - trigger: audience_learns_something_true
       weight: 0.85
-  effect: Invent the pop-up menu — the cousin Don turned into pie menus.
+  effect: Invent the pop-up menu — the cousin Don studied and shipped as pie menus at CHI'88.
   verifiable: Pop-up menus (Smalltalk)
   combos_with:
   - DON-PIE-MENU

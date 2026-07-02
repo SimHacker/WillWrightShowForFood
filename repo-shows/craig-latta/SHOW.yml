@@ -7,10 +7,12 @@ show:
   type: solo
   host: Don Hopkins
   guests: ["Craig Latta"]
+  memorial_arc: remembering-vanessa-freudenberg
+  warmly_invited_memorial: [Dan Ingalls, Alan Kay]
   character: characters/craig-latta/
   topic: "Caffeine (SqueakJS + dynamically generated WebAssembly) livecoding the web; Keep as agentic graph memory (Craig's Smalltalk whiteroom port); meeting the MicropolisCore WASM/SvelteKit stack; remembering Vanessa Freudenberg and her WebAssembly insights"
   status: seed
-  format: in_person_amsterdam_on_camera
+  format: remote_or_in_person_screencast
 
 why_him:
   caffeine: "Caffeine — live, persistent changes to a running web page via SqueakJS + WASM; the JS bridge; Catalyst's LLM-assisted Smalltalk→WASM translation."

@@ -15,7 +15,8 @@ gist: |
   modular-time dataflow, and (2021) Dan's reflection on the missed leap from Squeak to a
   web-borne live system — the lineage that became Lively, SqueakJS, and today's browser
   livecoding. Don shared UnityJS bridge notes (path expressions, query templates) with Dan and
-  Vanessa Freudenberg. Dan hosts the Smalltalk Zoo at CHM and continues the live-object thread
+  Vanessa Freudenberg, and compared **High Fidelity**'s distributed JavaScript plugin model (JSON
+  message passing — Don shipped voting box and text chat there) to Croquet and Lively. Dan hosts the Smalltalk Zoo at CHM and continues the live-object thread
   at Ink & Switch on **Livelymerge** (with Alex Warth) — Smalltalk-like liveness on Automerge.
 
 threads:
@@ -23,19 +24,28 @@ threads:
     what: "Fabrik visual dataflow (Ingalls et al.) and pie menus — kindred direct-manipulation ideas; pop-up menus (Dan) and pie menus (Don) as cousins"
     via: "Introduced by Alan Kay, 2018"
   livelymerge:
-    what: "Ink & Switch project — live Smalltalk / Lively Kernel-like system on Automerge; local-first mergeable live objects"
-    note: "Public newsletter reference only; collaboration not yet proposed on air"
+    what: "Ink & Switch — Livelymerge with Alex Warth; Automerge live objects + Smalltalk-like liveness"
+    flagship_topic: |
+      Data representation, organization, workflows, collaboration in the LLM/GitHub/stream age —
+      explored WITH Dan (not generic). YAML Jazz: comments as semantically meaningful overlay of
+      intent and annotations (accessible/generatable by humans and LLMs). GitHub-as-MMORPG for durable
+      async vs Automerge in-session. Can a Lively page become a yaml-jazz repo commit?
+    trail: process/trails/yaml-jazz-collaboration-stack.md
+    note: "Don applied to Ink & Switch Muse (2020); separate thread; Livelymerge is current Dan project"
   live_web_bridges:
-    what: "UnityJS JSON bridge (path expressions, query templates) vs High Fidelity vs Croquet; Lively Kernel / SqueakJS as the live-in-browser endpoint"
+    what: "UnityJS JSON bridge (path expressions, query templates) vs High Fidelity distributed JS plugins (JSON message passing — voting box, text chat) vs Croquet; Lively Kernel / SqueakJS as the live-in-browser endpoint"
 
 connects_in_repo:
   - { path: CHARACTER.yml, why: "Bio + invitation status" }
   - { path: ../alan-kay/, why: "Made the introduction; shared Smalltalk lineage" }
   - { path: ../vanessa-freudenberg/, why: "SqueakJS — same notes forwarded for Lively/Unity" }
+  - { path: ../../process/trails/yaml-jazz-collaboration-stack.md, why: "YAML Jazz + GitHub-as-MMORPG + stream workflows" }
+  - { path: ../philip-rosedale/, why: "HiFi worklist — Don's JSON plugins; worlds × MOOLLM show" }
   - { path: ../../process/trails/live-objects.md, why: "Smalltalk → Self → NeWS → live web trail" }
   - { path: ../../process/trails/direct-manipulation.md, why: "Pop-up menus ↔ pie menus" }
 
 show_hooks:
+  - "★ Ink & Switch / Livelymerge — YAML Jazz + GitHub-as-MMORPG vs Automerge (flagship collaboration topic)"
   - "Pie menus ↔ pop-up menus retrospective — direct-manipulation history segment"
   - "Smalltalk Zoo walkthrough on air — edit a historical Smalltalk live in the browser"
   - "Live-in-the-browser Smalltalk: Lively → SqueakJS → Caffeine → AI-assisted live coding"

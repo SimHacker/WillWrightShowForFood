@@ -23,6 +23,10 @@ past_verified:
   - { id: baychi-1998, title: "BayCHI 1998", era: "1998" }
 
 seeds_to_develop:
+  - priority: asap
+    guest: Heinz U. Lemke
+    topic: "PIXIE 1969 → CHI'88 → now — Don does not claim invention"
+    repo_shows: [pixie-pie-menus-pdp6.yml, ben-and-heinz-pie-menus.yml]
   - "Career memory palace — walk the lineage live"
   - "Open-sourcing SimCity — contracts + Chaim Gingold"
   - "Pie menus at 40"

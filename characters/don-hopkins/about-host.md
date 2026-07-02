@@ -6,10 +6,11 @@ Factual, playful, linkable. Not a job hunt — a **portfolio** and Repo Show sta
 
 ## Highlights
 
-- **Pie menus** — UMD HCIL CHI'88 through NeWS, X11, The Sims, OLPC, web, Unity
+- **Pie menus** — PIXIE 1969 (Wiseman/Lemke) → UMD HCIL CHI'88 study & ship → NeWS, X11, The Sims, OLPC, web, Unity
 - **SimCity / Micropolis** — DUX Unix ports; cooperative multiplayer; OLPC GPL release; WASM + WebGPU today
 - **The Sims** — UI, VitaBoy, architectural editing, Transmogrifier / RugOMatic mod stack
 - **HyperTIES / PSIBER / NeWS** — hypermedia as navigable space; send code not commands
+- **Kaleida ScriptX** — object-oriented multimedia Lisp machine; DreamScape @ WWDC 1995 ([`kaleida-scriptx-dreamscape-multimedia-lisp-machine.md`](kaleida-scriptx-dreamscape-multimedia-lisp-machine.md))
 - **Interval Research** — Pluggers survey, MediaFlow, Bounce/Body Electric port ([`interval-research-pluggers-and-mediaflow.md`](interval-research-pluggers-and-mediaflow.md))
 - **MOOLLM** — live digital twin; `# import self from self`; filesystem = object store ([`import-self-from-self.md`](import-self-from-self.md))
 - **Repo Show / Micropolis Class** — design in public; GitHub as MMORPG; show don't tell ([`repo-show-host-facet.md`](repo-show-host-facet.md))

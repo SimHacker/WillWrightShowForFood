@@ -56,6 +56,7 @@ featured:
   procedural_art: [scott-draves, ken-perlin, golan-levin]
   sun_era: [james-gosling, arthur-van-hoff]
   adventure_pioneers: [scott-adams]
+  metaverse_worlds: [philip-rosedale]
 
 see_also:
   parent:
@@ -71,6 +72,7 @@ see_also:
     - { path: james-gosling/GLANCE.yml, why: "Java + NeWS" }
     - { path: scott-draves/GLANCE.yml, why: "Electric Sheep" }
     - { path: scott-adams/GLANCE.yml, why: "Adventure pioneer — the data-driven adventure engine (the adventure compiler before it had a name)" }
+    - { path: philip-rosedale/GLANCE.yml, why: "Second Life / HiFi — worklist JSON plugins × MOOLLM" }
   across:
     - { path: ../schemas/portrayal-standards.yml, why: "Ethics + subject rights" }
     - { path: ../repo-shows/will-wright/audience/README.md, why: "Per-show audience" }

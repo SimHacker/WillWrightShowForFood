@@ -1,0 +1,45 @@
+# SHOW PROPOSAL — PIXIE Pie Menus on the PDP-6 (Don interviews Heinz U. Lemke)
+# The deep prehistory of pie/radial menus.
+
+show:
+  id: pixie-pie-menus-pdp6
+  title: "PIXIE: Pie Menus on the PDP-6 (1969)"
+  type: solo
+  host: Don Hopkins
+  guests: ["Heinz U. Lemke"]
+  character: characters/heinz-lemke/
+  topic: "PIXIE — early graphical man-machine communication + radial/pie menus on the PDP-6, with co-author Heinz U. Lemke."
+  status: proposed
+  urgency: "Preserve first-hand history while we can; warm correspondence with Heinz."
+
+history:
+  paper: "PIXIE: A New Approach to Graphical Man-Machine Communication. Proc. 1969 CAD Conference, Southampton. IEEE Conf. Pub. 51, pp. 463–471."
+  authors: ["Neil E. Wiseman", "Heinz U. Lemke", "John O. Hiles"]
+  film: "1969 film demonstrating an early GUI, made to accompany the PIXIE paper."
+  archive: "David Chapman, Cambridge University Library."
+  youtube: "https://www.youtube.com/watch?v=jDrqR9XssJI"
+
+interview_center:
+  neil_wiseman:
+    ask: "What was Neil E. Wiseman like to work with — technically, personally, and as a research leader?"
+  cambridge_zeitgeist:
+    ask: "What was the Cambridge computer graphics / CAD / HCI zeitgeist in the late 1960s?"
+  us_research_labs_trip:
+    ask: "What was Heinz's trip to the US research labs like, and what did he see there?"
+  medical_automation_today:
+    ask: "How does Heinz see the line from early graphical interaction/CAD to his later medical-computing work?"
+    bridge: "PIXIE was graphical man-machine communication for design; CARS is model-guided human-computer assistance in medicine."
+
+format:
+  live: true
+  audience_qa: true
+  production_style: "Relaxed Studio Session (recorded video call) or Live Twitch Event."
+  notes: "Interview Lemke about PIXIE; intercut with the 1969 film + retrospective. Honor Neil Wiseman and John Hiles."
+
+ties_to:
+  - characters/heinz-lemke/
+  - characters/heinz-lemke/invitation.md
+  - repo-shows/ben-and-heinz-pie-menus.yml
+  - ../characters/don-hopkins/pie-menus-chi-88-and-beyond.md
+
+consent: not_yet_asked

@@ -2,6 +2,12 @@
 
 *Hooks Don would love to build on air. Not quotes from guests — Don's proposed topics.*
 
+## ASAP — credit where due (pie menus)
+
+| Guest | Episode / topic |
+|-------|-----------------|
+| **Heinz U. Lemke** | **PIXIE** (1969 PDP-6 radial menus) → CHI'88 empirical study → forty years of shipping — **book this first**. Show seeds: [`../../repo-shows/INDEX.yml`](../../repo-shows/INDEX.yml) → `pixie-pie-menus-pdp6.yml`, `ben-and-heinz-pie-menus.yml`. Topic file: [`pie-menus-chi-88-and-beyond.md`](pie-menus-chi-88-and-beyond.md). Don does **not** claim to have invented pie menus. |
+
 ## Host shows (Don runs the repo)
 
 | Show | Hook |
@@ -14,7 +20,7 @@
 
 | Guest | Episode / topic |
 |-------|-----------------|
-| **David Ungar** | *Reflecting on Self: Narcissa's Mirror* — [`../david-ungar/`](../david-ungar/invitation.md) |
+| **David Ungar** | *Reflecting on Self: Narcissa's Mirror* — Conscientious Objectors (ScriptX × Self at Kaleida) — [`../david-ungar/`](../david-ungar/invitation.md) |
 | **Walter Bender** | OLPC introducing-the-players thread |
 | **Brian Eno** | Generative art + Long Now + Will Wright 2006 |
 | **Scott Adams** | Warm contact — adventure compiler + MOOLLM ([`correspondence verified`](../scott-adams/)) |

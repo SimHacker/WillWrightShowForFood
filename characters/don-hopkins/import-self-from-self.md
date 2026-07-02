@@ -2,6 +2,8 @@
 
 The MOOLLM constitution effectively declares:`import self from self`-- import Self's prototype-based object model **from Self itself**, not from Java's or JavaScript's castrated projections.
 
+**Credit:** **David Ungar** (with Randall Smith) was very open and influential — Don says he deserves a huge amount of credit for where we are. Self doesn't run on everybody's phone; **in spirit it does** — prototype objects, adaptive JIT, mirrors, and simplicity live in JS, HotSpot, MOOLLM, and the stacks we actually ship.
+
 ## What that means
 
 - **Directories are rooms; YAML files are objects; skills are inheritable prototypes** (Sims-style, LambdaMOO-style).

@@ -6,7 +6,9 @@ moollm_lineage:
   dynamic_depessimization: "MOOLLM optimistic simplification until forced to deepen"
 
 kaleida_meetup:
-  note: "Don coined consciencious objectors at meetup with Ungar + Kaleida colleagues (ScriptX era)"
+  name: Conscientious Objectors
+  note: "Kaleida meetup — ScriptX object-system design team × Self team (David Ungar et al.); bounced prototype OO ideas both ways"
+  wwsff: ../../don-hopkins/kaleida-scriptx-dreamscape-multimedia-lisp-machine.md
 
 show:
   seed: repo-shows/david-ungar-self-moollm.yml

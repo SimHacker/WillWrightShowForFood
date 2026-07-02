@@ -1,0 +1,102 @@
+# CARD — Philip Rosedale (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: philip-rosedale
+  name: Philip Rosedale
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Philip Rosedale
+  title: Worlds as Code
+  rarity: rare
+  signifier: 🌐
+  flavor: User-created worlds with a worklist — ship plugins, not slide decks.
+abilities:
+- id: SECOND-LIFE
+  name: Second Life
+  type: activated
+  mana: '{2}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: secondLife
+    signature: secondLife(world) → user-created economy
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Teach user-created virtual worlds without hype-cycle amnesia.
+  verifiable: Linden Lab / Second Life (public record)
+  combos_with: []
+- id: WORKLIST-PLUGINS
+  name: Worklist Plugins
+  type: activated
+  mana: '{1}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: worklistPlugins
+    signature: worklistPlugins(json) → distributed JS in-world
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Demo JSON message-passing apps that actually shipped in HiFi.
+  verifiable: Don's VotingBox.js + worklist #21257 / #21280
+  combos_with: []
+- id: WORLDS-MOOLLM
+  name: Worlds × MOOLLM
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: worldsMoollm
+    signature: worldsMoollm(repo) → persistent souls + live channels
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Connect virtual-world heritage to MOOLLM microworlds on air.
+  verifiable: repo-shows/philip-rosedale-hifi-moollm.yml
+  combos_with: []
+- id: YAML-JAZZ
+  name: YAML Jazz
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: yamlJazz
+    signature: yamlJazz(comment) → semantic overlay of intent
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Teach representation where comments are a semantic overlay of intent — human and LLM legible.
+  verifiable: moollm/skills/yaml-jazz + WWSFF process trail
+  combos_with: [WORLDS-MOOLLM]
+- id: VR-DLA
+  name: VR DLA Design Jam
+  type: activated
+  mana: '{G}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: vrDla
+    signature: vrDla(cam6) → diffusion-limited aggregation in-world
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Demo CA/DLA world substrate from the HiFi design jam.
+  verifiable: Don CAM6 + correspondence digest
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: invitation.md
+  why: Public invitation document

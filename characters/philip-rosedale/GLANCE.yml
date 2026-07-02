@@ -1,0 +1,38 @@
+# PHILIP ROSEDALE — GLANCE
+# Second Life / High Fidelity / worklist — distributed JS plugins × MOOLLM
+
+title: Philip Rosedale
+iconic: "🌐 Philip Rosedale"
+description: |
+  Creator of Second Life; HiFi/worklist history. Repo Show thread: YAML Jazz + GitHub-as-MMORPG
+  collaboration stack, SL avatar souls, VR DLA jam, JSON plugins × MOOLLM.
+
+keywords:
+  - philip rosedale
+  - second life
+  - high fidelity
+  - worklist
+  - virtual worlds
+  - metaverse
+  - javascript plugins
+  - moollm
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  siblings:
+    - ../dan-ingalls/
+    - ../will-wright/
+    - ../don-hopkins/
+
+read_order:
+  - README.md
+  - invitation.md
+  - ideas.md
+  - CHARACTER.yml
+
+see_also:
+  - { path: ../../repo-shows/philip-rosedale-hifi-moollm.yml, why: "Show seed" }
+  - { path: ../dan-ingalls/ideas.md, why: "HiFi named in Livelymerge comparison hook" }

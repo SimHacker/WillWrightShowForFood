@@ -1,0 +1,39 @@
+# Heinz U. Lemke × Don Hopkins — correspondence summary (public-safe)
+# Tight public-safe digest. NOT the full private thread.
+# Standards: ../../schemas/portrayal-standards.yml
+
+meta:
+  with: heinz-lemke
+  curated_by: don-hopkins
+  consent: not_yet_asked
+  span: "~2020–present"
+  provenance_private: SimHacker/DonHopkins/characters/don-hopkins/correspondence/heinz-lemke.yml
+
+gist: |
+  Don found Heinz through Bill Buxton's research trail. Warm, long-running exchange: PIXIE paper
+  and 1969 film (Cambridge Univ Library digitization via David Chapman), Don's *Flight of the PIXIE*
+  homage edit (Bumblebee score; pie menus as rapid flight — not Don's paper or original film), CARS congress and model-guided medicine, Will Wright modelling talk, YouTube captioning
+  workflow for Heinz's conferences, Black Forest farmhouse (Bechtersbohl), Mario Cypko patient-
+  modelling video in the barn. CARS 2025 Berlin workshop proposal on game thinking for healthcare
+  interfaces. Don wants CHM oral history for Heinz while first-hand memory remains.
+
+threads:
+  pixie_history:
+    what: "1969 PIXIE paper + film; Wiseman/Hiles co-authors; radial menus on PDP-6"
+  flight_of_pixie:
+    what: "Don's Yuja Wang score edit — shared on YouTube"
+  cars_medicine:
+    what: "IFCARS, CARS congress, patient-specific modelling, model-guided medicine"
+  preservation:
+    what: "Digitized Cambridge films; ASAP interview to record Neil Wiseman + Cambridge zeitgeist"
+
+connects_in_repo:
+  - { path: CHARACTER.yml, why: "Bio + invitation status" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp6.yml, why: "Solo PIXIE show seed" }
+  - { path: ../don-hopkins/pie-menus-chi-88-and-beyond.md, why: "PIXIE credited; Don does not claim invention" }
+
+show_hooks:
+  - "Neil Wiseman — lab culture, design judgment, personal memory"
+  - "Cambridge late 1960s + US research-lab trip"
+  - "PIXIE → CARS continuity — graphical interaction to model-guided medicine"
+  - "CHM oral history — if Heinz is willing"

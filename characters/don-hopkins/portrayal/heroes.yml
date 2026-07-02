@@ -27,11 +27,29 @@ direct_mentors:
     relationship: "Intellectual lineage — Dynabook, Smalltalk"
     taught: "The real thing — everything good traces back"
 
+  david_ungar:
+    relationship: "Self co-creator; Kaleida Conscientious Objectors; self-interest!"
+    taught: "Prototype objects without classes; Stage Magic; open cross-pollination"
+    credit: "Don: huge credit for where we are — Self doesn't run on every phone; in spirit it does"
+    wwsff_link: ../../david-ungar/README.md
+
 intellectual_lineage:
   thread: "Papert constructionism → microworlds → Sims → MOOLLM → Repo Show"
   moollm_skills:
     - https://github.com/SimHacker/moollm/skills/constructionism
     - https://github.com/SimHacker/moollm/skills/play-learn-lift
+
+pie_menus_prehistory:
+  note: "Don does not claim to have invented radial/pie menus"
+  heinz_u_lemke:
+    role: "PIXIE 1969 co-author — radial menus on the PDP-6"
+    repo_show: "ASAP — pixie-pie-menus-pdp6.yml, ben-and-heinz-pie-menus.yml"
+  neil_e_wiseman:
+    role: "PIXIE lead — Wiseman notes on radial menus in PIXIE (see Engelbart/Kay mail manifests)"
+  john_o_hiles:
+    role: "PIXIE 1969 co-author"
+  david_chapman:
+    role: "Cambridge Univ Library — digitized the 1969 PIXIE film from archives (credited on YouTube)"
 
 see_also:
   - voice.yml

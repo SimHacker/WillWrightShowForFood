@@ -1,0 +1,50 @@
+# SHOW — Remembering Vanessa Freudenberg (memorial arc)
+# Represent + discuss — never speak as her. Warm invitations to those who knew her.
+
+show:
+  id: remembering-vanessa-freudenberg
+  title: "Remembering Vanessa Freudenberg — SqueakJS, WASM, and Live Objects in the Browser"
+  type: memorial_arc
+  host: Don Hopkins
+  anchor_guest: Craig Latta
+  memorial_discussants: [Craig Latta, Dan Ingalls, Alan Kay]
+  character: characters/vanessa-freudenberg/
+  topic: |
+    Honor Vanessa Freudenberg (d. 2025) — SqueakJS, Etoys, Croquet/Multisynq, her WASM insights after
+    SqueakJS — with the people who knew her and carry the lineage forward. Craig's Caffeine builds on
+    her VM; Dan's Smalltalk Zoo credits SqueakJS; Alan's constructionist microworld arc runs through
+    the same live-object thread.
+  status: seed
+  consent: not_yet_asked
+
+memorial_mode:
+  rule: "Represent and discuss documented work + stories friends tell. Do not interview Vanessa; do not speak as her."
+  directory: characters/vanessa-freudenberg/
+
+episode_shape:
+  anchor:
+    guest: Craig Latta
+    show: repo-shows/craig-latta/SHOW.yml
+    what: "Live Caffeine demo + Craig's memories + WASM thread Vanessa started"
+    format: "Remote screencast or in-person Amsterdam — Craig + Don"
+  warmly_invited:
+    - guest: Dan Ingalls
+      why: "Smalltalk Zoo credits SqueakJS; Lively/SqueakJS collaboration; pop-up menus ↔ pie menus cousin show"
+      format: "Remote or CHM — memorial segment + Zoo walk optional same arc"
+    - guest: Alan Kay
+      why: "Constructionist microworld lineage; Qwaq/Croquet orbit; NeWS 'live system underneath' thread"
+      format: "Remote — memorial segment + microworld show can share the arc"
+
+threads:
+  - "SqueakJS — live Smalltalk in the browser (Vanessa's documented public work)"
+  - "JS vs WASM for live VMs — her insights; Craig's Caffeine/Catalyst continuation"
+  - "Etoys, Plopp, Croquet/Multisynq — playful objects that stay live"
+  - "Smalltalk Zoo welcome page credit — Dan names SqueakJS; say it on air"
+  - "Cursor / IDE chrome vs live systems — Don + Craig (and friends) compare notes"
+
+ties_to:
+  - ../../characters/vanessa-freudenberg/memorial.md
+  - ../../characters/craig-latta/invitation.md
+  - ../../characters/dan-ingalls/invitation.md
+  - ../../characters/alan-kay/invitation.md
+  - ../../process/trails/live-objects.md

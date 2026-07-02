@@ -1,0 +1,47 @@
+# Heinz U. Lemke — invitation portrayal. NOT Heinz U. Lemke.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: heinz-lemke
+  name: "Heinz U. Lemke"
+  type: invitation
+  signifier: "🥧"
+  status: living
+  field: "PIXIE (1969) co-author — radial menus, CAD/HCI; CARS / model-guided medicine"
+  home: characters/heinz-lemke/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/pixie-pie-menus-pdp6.yml
+  note: "ASAP priority — preserve first-hand PIXIE + Cambridge + CARS history"
+
+bio:
+  summary: |
+    **Heinz U. Lemke** — co-author of **PIXIE: A New Approach to Graphical Man-Machine
+    Communication** (1969 CAD Conference; with Neil E. Wiseman and John O. Hiles). PhD on the
+    PIXIE user interface. Retired Professor of Computer Graphics and Computer Assisted Medicine,
+    TU Berlin. Founder/chair of **CARS** (Computer Assisted Radiology and Surgery); model-guided
+    medicine and patient-specific modelling. Lives in the Black Forest (Bechtersbohl). Don's warm
+    correspondence since ~2020; Flight of the PIXIE film edit; CARS workshop proposals.
+
+sources:
+  wikipedia: null
+  web:
+    - https://www.donhopkins.com/home/documents/PIXIE%20a%20new%20approach%20to%20man-machine%20communication.pdf
+    - https://www.youtube.com/watch?v=jDrqR9XssJI
+  papers:
+    - title: "PIXIE: A New Approach to Graphical Man-Machine Communication (1969)"
+      url: "https://www.donhopkins.com/home/documents/PIXIE%20a%20new%20approach%20to%20man-machine%20communication.pdf"
+
+see_also:
+  - { path: ../../repo-shows/pixie-pie-menus-pdp6.yml, why: "Solo PIXIE interview show seed" }
+  - { path: ../../repo-shows/INDEX.yml, why: "ben-and-heinz-pie-menus.yml group seed" }
+  - { path: ../don-hopkins/pie-menus-chi-88-and-beyond.md, why: "Don credits PIXIE; does not claim invention" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

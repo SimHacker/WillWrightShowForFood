@@ -12,7 +12,7 @@ Set: Micropolis Founders  ·  Living · dealer of this deck
 
 ## ⚡ Abilities
 
-- 🥧 **Pie Menus** — radial gestural selection; CHI'88 → NeWS → X11 → The Sims → OLPC → web → Unity
+- 🥧 **Pie Menus** — PIXIE 1969 → CHI'88 study & ship → NeWS → X11 → The Sims → OLPC → web → Unity
 - 🏙️ **Open-Sourced SimCity** — EA + OLPC → **Micropolis** GPL (2008); WASM + WebGPU web port now
 - 🧑‍💻 **The Sims UI & Mod Tools** — pie menus, architectural editing, Transmogrifier / RugOMatic / SimShow
 - 🔧 **Debug-Tools-Are-Features** — ship the inspector, not just the toy
@@ -24,7 +24,7 @@ Set: Micropolis Founders  ·  Living · dealer of this deck
 
 - **+ Will Wright** → SimCity Unix, The Sims, Stupid Fun Club robots, Gallium consult
 - **+ Ben Shneiderman** → pie menus, HyperTIES, Dynamic HomeFinder homage in multiplayer SimCity
-- **+ David Ungar** → Self lineage, Kaleida **consciencious objectors**, dream episode *Narcissa's Mirror*
+- **+ David Ungar** → Self lineage; open, influential; huge credit — Self in spirit on every phone; Conscientious Objectors; *Narcissa's Mirror*
 - **+ this whole deck** → he dealt it 🃏
 
 ## 💬 Flavor

@@ -10,7 +10,11 @@ simcity_lineage:
     era: "1991–1992"
     don_role: "NeWS/HyperLook port with pie menus, PostScript UI and tile renderer, showcase package"
     runs_on: [NeWS, HyperLook]
-    note: "Parallel to official Sun X11 port; Carol Adams 'SimCity NeWS' opportunity. HyperLook NeWS PostScript UI + tile renderer for DUX -- the ancestor of later PyGTK/Pango Micropolis rendering"
+    note: |
+      Parallel to official Sun X11 port; Carol Adams 'SimCity NeWS' opportunity. HyperLook
+      (HyperCard on NeWS) — reimagined simulation environment: integrated scalable PostScript
+      visualizations, UI editor, graphics editors, and PostScript tile renderer for DUX.
+      Ancestor of later PyGTK/Pango Micropolis rendering.
 
   - name: SimCity on X11 / TCL/Tk
     era: "1992–1993"

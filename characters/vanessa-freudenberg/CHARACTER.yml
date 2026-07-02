@@ -25,8 +25,10 @@ memorial:
   mode: represent_and_discuss
   rule: "Represent and discuss her documented work and the stories friends tell. Do not interview, do not speak as her, invent no inner life or quotes."
   who_can_discuss:
-    - { who: craig-latta, why: "Great friend and Smalltalk collaborator; Caffeine builds directly on her SqueakJS" }
-    - { who: dan-ingalls, why: "Squeak lineage; Lively / SqueakJS collaboration" }
+    - { who: craig-latta, why: "Great friend and Smalltalk collaborator; Caffeine builds directly on her SqueakJS — anchor memorial episode" }
+    - { who: dan-ingalls, why: "Squeak lineage; Smalltalk Zoo credits SqueakJS; warmly invited to memorial arc with Craig and Don" }
+    - { who: alan-kay, why: "Constructionist microworld lineage (Etoys, Croquet); warmly invited to memorial arc with Craig and Don" }
+  memorial_show: repo-shows/remembering-vanessa-freudenberg.yml
   draw_on_for_shows:
     - "**SqueakJS** — a JavaScript implementation of the Squeak Smalltalk VM; live Smalltalk in the browser"
     - "Squeak/Etoys; the playful **Plopp/Plop** projects; **Croquet / Multisynq** synchronized objects"
@@ -47,5 +49,7 @@ sources:
 see_also:
   - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
   - { path: ../craig-latta/, why: "Caffeine builds on SqueakJS — her VM + her WASM thinking, carried forward" }
-  - { path: ../dan-ingalls/, why: "Squeak lineage; Lively/SqueakJS collaboration" }
+  - { path: ../dan-ingalls/, why: "Squeak lineage; Smalltalk Zoo; warmly invited memorial discussant" }
+  - { path: ../alan-kay/, why: "Constructionist microworld lineage; warmly invited memorial discussant" }
+  - { path: ../../repo-shows/remembering-vanessa-freudenberg.yml, why: "Memorial show arc — Craig anchor, Dan + Alan warmly invited" }
   - { path: ../../schemas/portrayal-standards.yml#memorial_mode, why: "How memorial guests are handled" }

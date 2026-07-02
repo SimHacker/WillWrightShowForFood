@@ -1,0 +1,50 @@
+# SEED — Philip Rosedale: HiFi distributed JS × MOOLLM × worlds-as-code
+# Warm prior contact (worklist 2017). Consent not yet asked.
+
+show:
+  id: philip-rosedale-hifi-moollm
+  status: seed
+  type: solo
+  guest: philip-rosedale
+  character: characters/philip-rosedale/
+  dream_guest: false
+  warm_contact: true
+
+episode:
+  working_title: "Worlds as Code — Second Life souls × MOOLLM"
+  subtitle: "HiFi worklist JSON apps · VR DLA design jam · SL avatar import/export · LambdaMOO × GitHub-as-MMORPG"
+
+pitch: |
+  Philip Rosedale built Second Life — still the canonical user-created virtual world economy. High
+  Fidelity (open distributed VR + worklist.net) is a historical chapter; Philip returned focus to SL.
+  Don shipped voting box and text chat on the worklist (2017); Philip QA'd. They design-jammed Don's
+  VR diffusion-limited aggregation simulation (CAM6/CA lineage). Repo Show: demo the plugin era,
+  run CA/DLA live, and prototype SL avatar import/export into MOOLLM character souls (cousin of
+  SimObliterator for Sims), plus GitHub-as-MMORPG and the Dan Ingalls HiFi-vs-Livelymerge comparison.
+
+topics:
+  - "Worklist era — distributed JS plugins (voting box, text chat) — HiFi as history, SL as now"
+  - "JSON message passing — JavaScript everywhere; compare UnityJS"
+  - "VR DLA design jam — diffusion-limited aggregation + CAM6 in virtual worlds"
+  - "Cellular automata as world substrate — Philip's documented CA interest"
+  - "YAML Jazz — comment overlay of intent + annotations (humans + LLMs read/write)"
+  - "GitHub-as-MMORPG — durable async world state (branches, PRs, issues)"
+  - "Twitch + GitHub two-layer workflow — stream = now, repo = score"
+  - "Second Life avatar import/export ↔ MOOLLM yaml-jazz soul directories"
+  - "Worlds as address space — Second Life, LambdaMOO, MOOLLM paths-not-#42"
+  - "GitHub-as-MMORPG + OpenClaw channels as realms"
+  - "World-code and consciousness thread × MOOLLM stage = context window"
+  - "Sims lineage — SimObliterator; persistent characters across worlds"
+  - "Cross-reference Dan Ingalls episode — Livelymerge vs HiFi plugin model"
+
+ties_to:
+  - ../characters/philip-rosedale/
+  - ../characters/dan-ingalls/
+  - ../characters/will-wright/
+  - ../process/repo-show-format.yml
+  - ../process/trails/yaml-jazz-collaboration-stack.md
+  - SimHacker/moollm/skills/yaml-jazz
+  - SimHacker/moollm/designs/MOO-HERITAGE.md
+  - SimHacker/DonHopkins/characters/don-hopkins/correspondence/high-fidelity-rosedale.yml
+
+invitation_status: not_yet_asked
