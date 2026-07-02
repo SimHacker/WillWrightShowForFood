@@ -111,6 +111,8 @@ interview_center:
     doc: characters/douglas-engelbart/GLANCE.md
     memorial: "Discuss Engelbart in memorial mode — never interview"
     sponsor_gag: repo-shows/ideas/gags/cambridge-gag-credits.yml#light_pen_bureau_sponsor
+    open_models: repo-shows/ideas/gags/lightpenisland-net.yml#engelbart_division
+    on_air: "Mother of All Demos zeitgeist; demo Bluetooth kits and free STL — not private reference hardware"
   us_research_labs_trip:
     ask: "What was Heinz's trip to the US research labs like, and what did he see there?"
   medical_automation_today:
@@ -132,6 +134,9 @@ format:
   audience_qa: true
   production_style: "Relaxed Studio Session (recorded video call) or Live Twitch Event."
   notes: "Open with buds introductions (telecine slates). Heinz bud leads history; DSHR bud holds Cambridge ~1970 + lineage; Lars bud leads emulation. Intercut 1969 film + live emulator. Honor Wiseman and Hiles."
+  on_stream_wardrobe:
+    host: "Don wears one of Lars Brinkhoff's retrocomputing tees — github.com/larsbrinkhoff/t-shirts (e.g. LISP MACHINE MANUAL; see characters/don-hopkins/media.md)"
+    buds: "Lars or co-buds may wear their own from the same emporium if they like"
   segment_order_suggestion: [introductions, heinz_history, rosenthal_same_machine, lars_emulation, heinz_cars, open_qa]
   post_production:
     look: cambridge_telecine_jiggle

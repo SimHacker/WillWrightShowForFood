@@ -1,1 +1,1 @@
-🖥️ **Lars Brinkhoff** — PDP-10/ITS restoration lead. **Co-guest on Heinz Lemke's PIXIE show** with **David Rosenthal** — PDP-7 + Type 340 emulation; Heinz holds memory, DSHR same Cambridge stack ~1970.
+🖥️ **Lars Brinkhoff** — PDP-10/ITS restoration lead. **Co-guest on Heinz Lemke's PIXIE show** with **David Rosenthal** — PDP-7 + Type 340 emulation; Heinz holds memory, DSHR same Cambridge stack ~1970. **T-shirt emporium:** [larsbrinkhoff/t-shirts](https://github.com/larsbrinkhoff/t-shirts) — wear one of Don's on air.

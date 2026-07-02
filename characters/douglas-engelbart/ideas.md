@@ -38,6 +38,10 @@ understanding.
 [`../douglas-engelbart/eulogy-ted-nelson.md`](../douglas-engelbart/eulogy-ted-nelson.md) as a
 memorial reading + discussion with Ted.
 
+### 6. Engelbart mouse + keyset — free models + SWAG
+Open **STL/STEP** downloads; clicky toys; working **Bluetooth mouse + chord keyset kits** (resin,
+metal, PCBs, arm mount). [`../../repo-shows/ideas/gags/lightpenisland-net.yml`](../../repo-shows/ideas/gags/lightpenisland-net.yml#engelbart_division)
+
 ## Sources (public)
 
 - [`memorial.md`](memorial.md) · [`CHARACTER.yml`](CHARACTER.yml)

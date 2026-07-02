@@ -179,6 +179,7 @@ optional solo shows later).
 | **Conversation hooks** | [`ideas.md`](ideas.md) |
 | **Portrait / sources** | [`CHARACTER.yml`](CHARACTER.yml) · [`GLANCE.md`](GLANCE.md) |
 | **Card** | [`CARD.yml`](CARD.yml) |
+| **T-shirt emporium** | [github.com/larsbrinkhoff/t-shirts](https://github.com/larsbrinkhoff/t-shirts) — PDP-10, Lisp Machine, Interlisp, … (Don already wears one of yours on stream) |
 | **ITS show seed** (optional later) | [`repo-shows/lars-brinkhoff/`](../../repo-shows/lars-brinkhoff/README.md) · [`SHOW.yml`](../../repo-shows/lars-brinkhoff/SHOW.yml) |
 
 ---

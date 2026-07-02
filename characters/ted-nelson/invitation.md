@@ -50,10 +50,10 @@ Either shape — or both, or neither — works. **You pick.**
 - **Computers for Cynics** — live, with whatever updates you'd add.
 - **Remembering Doug.** I only met Doug Engelbart once, and we commiserated about how hard it is to
   get society to accept new ideas — that conversation gave me the resolve to never give up on my
-  own, and it's carried me through life. One of my most cherished possessions is an original
-  Engelbart **mouse + chord keyset**, given to me by Mark Lottor (who kept a PDP-10 running Doug's
-  demos at SRI). I'd love to **show it on air** — and maybe even 3D-scan it and publish a free
-  printable model so anyone could build their own.
+  own, and it's carried me through life. I'd love to talk **Mother of All Demos** hardware — we're
+  publishing **free Engelbart mouse + chord keyset models** (STL/STEP) plus SWAG and working
+  **Bluetooth kits** via lightpenisland.net Augment Division
+  ([Augment Division catalog](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/ideas/gags/lightpenisland-net.yml#engelbart_division)).
 - **Remembering Hugh Daniel.** I first met Hugh at MIT's 545 Tech Square — at your Xanadu demo, him
   in his winged Xanadu cap, waving his arms. After he passed, John Gilmore brought some of his ashes
   to Amsterdam and we scattered them in the canal at Brouwersgracht and Lijnbaansgracht; friends are

@@ -54,7 +54,7 @@ television_lineage:
     note: |
       Will Wright and Don Hopkins did not invent audience participation on paper — they **made a TV
       show** (Bar Karma), playtested branching narrative on real users, and iterated through
-      CreationTV, StoryMaker, and Urban Safari. Repo Show applies those learnings with git +
+      CreationTV, StoryMaker, Bar Karma, and Urban Safari. Repo Show applies those learnings with git +
       MOOLLM + honest AI orchestration.
     chain: "Sims Family Album → CreationTV → StoryMaker → Bar Karma (broadcast) → Urban Safari"
     playtest: "StoryMaker branching was playtested on real users via the TV show; learnings shaped Urban Safari"
@@ -62,7 +62,7 @@ television_lineage:
     what: |
       **Bar Karma** (CurrentTV) — first online community-developed network TV series. StoryMaker +
       audience votes + branching narrative → real broadcast. Repo Show is Bar Karma's grandchildren:
-      git instead of MediaWiki flash, MOOLLM instead of opaque pipeline, same audience-as-author.
+      git instead of MediaWiki & Flash, MOOLLM instead of opaque pipeline, same audience-as-author.
     demo: https://www.youtube.com/watch?v=Nb_-J1lv-B8
     wiki: https://en.wikipedia.org/wiki/Bar_Karma
     ties: ../../../process/crazy-idea-jam.yml · characters/don-hopkins/career/stupid-fun-club.yml
@@ -70,7 +70,8 @@ television_lineage:
     what: |
       **StoryMaker** — collaborative branching storytelling stack (Flash client, MediaWiki + Python,
       iPad, Facebook, Unity visualizer). Matthew Sibigtroth built the original Flash app; Don built
-      CreationTV iPhone prototype and the full server stack with Will at Stupid Fun Club.
+      CreationTV iPhone prototype and the full server stack and multiple clients and Facebook integration 
+      with Will at Stupid Fun Club.
     demo: https://www.youtube.com/watch?v=_2yEHs_WLzQ
     article: ../../../characters/will-wright/sources/don-youtube-storymaker-demo/
   creationtv:
@@ -91,15 +92,16 @@ television_lineage:
 
 # WHAT VIEWERS GET
 viewer_promise:
-  - "Watch games and tools get built for real — then watch them get played"
-  - "Learn rig culture: declare your stack, show your work, fork the repo"
+  - "Watch games and tools get designed and built for real — then watch them get played"
+  - "Learn AI rig culture: declare your stack, show your work, fork the repo"
   - "Participate: TicketPR, play-along clips, puppet rotation, honest staged call-ins"
   - "Take home skills + code — not a hype deck"
+  - "Funwork instead of homework: make, play, show"
 
 # DISTRIBUTION SHAPE (not a commitment)
 distribution:
   now: "Live stream + time-shifted repo (Twitch/YouTube + GitHub issues/PRs)"
-  later: "Anthology episodes for streaming/TV — Bar Karma proved broadcast; this proves the repo"
+  later: "Anthology episodes for streaming/TV — Bar Karma proved broadcast; this proves the GitHub repo and community plus Twitch/YouTube streams"
   note: "Nothing here is a production promise — inspectable seed first."
 
 see_also:

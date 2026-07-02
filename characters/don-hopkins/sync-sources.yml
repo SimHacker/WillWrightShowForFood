@@ -27,6 +27,7 @@ public_projection_rules:   # HARD rules for anything projected public (WWSFF + D
     - '"open to work" / "looking for a job" / availability signals — this is a portfolio, not a job hunt'
     - "any mention of Juho Hietala — the housemate/co-hire angle is PRIVATE (Marconistraat only)"
     - "financial pressure, reduced pay, mortgage, needing money"
+    - "Engelbart keyset ownership, Gilmore auction backstory, auction/sale strategy — DonHopkins characters/don-hopkins/artifacts/ only"
   leela_is_positive:
     say: "Leela AI is an ongoing concern Don is proud of and excited to share what he's learned; on great terms."
     never: "framing Leela as a problem, escape, or something he's leaving"

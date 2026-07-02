@@ -103,7 +103,7 @@ guests:
     invitation_status: not_yet_asked
     show_seed: repo-shows/lars-brinkhoff/
     paired_guest: thomas-cherryhomes
-    note: "PDP-10/ITS — challenge make it so for pdp10-maclisp-drive; pair with Thomas Cherryhomes"
+    note: "PDP-10/ITS — challenge make it so for pdp10-maclisp-drive; pair with Thomas Cherryhomes; PIXIE trio co-bud; retrocomputing t-shirt emporium github.com/larsbrinkhoff/t-shirts — Don wears one on stream"
   margaret-minsky: { invitation_status: draft, show_seed: repo-shows/margaret-minsky/, note: "Haptics (Sandpaper force-feedback), Atari Cambridge / MIT Media Lab; daughter of Marvin, sister of Henry; 1993 CS547 talk" }
   marvin-minsky: { invitation_status: memorial, note: "MEMORIAL MODE (1927–2016): MIT AI Lab co-founder; Society of Mind / frames / K-lines / Perceptrons; SNARC, confocal microscope, HAL advisor, Turing 1969; father of Margaret & Henry. Discussants: Henry & Margaret Minsky, Alan Kay, Ken Kahn, Walter Bender, Don" }
   henry-minsky: { invitation_status: draft, show_seed: repo-shows/henry-minsky/, note: "Leela AI (co-founder/CTO), OpenLaszlo/Laszlo Systems, MIT AI Lab; son of Marvin, twin of Juliana; Society of Mind in modern AI + skill-creation candidate" }

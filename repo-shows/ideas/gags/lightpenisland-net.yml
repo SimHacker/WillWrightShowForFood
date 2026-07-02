@@ -19,6 +19,7 @@ regular_sponsor:
   read: |
     And now, a word from our **regular sponsor** — **lightpenisland.net**.
     Finest quality custom light pens. Laser cat toys. Toy sabers. Presentation pointers.
+    Engelbart mouse and keyset replicas, kits, and maker guides.
     **Repo Show SWAG.** Lightpenisland dot net. I repeat, lightpenisland.net. Surf carefully.
   telecine: "Optional Cambridge jiggle slate on PIXIE episodes; plain retro card on other shows"
   swag_url: https://lightpenisland.net/swag
@@ -27,31 +28,81 @@ regular_sponsor:
 tagline: "Your light pen is our business."
 url_repeat: "Lightpenisland dot net. I repeat, lightpenisland.net. Surf carefully."
 
+comic_register:
+  surface: |
+    **Straight-faced normalcy** — deadpan late-web custom pen shop, serif caps, wood specialty,
+    real products, brother site to penisland.net. Every line defensible as literal *light pen* copy.
+    Played like a genuine sponsor film insert or family catalog. Never break character on air.
+  under_the_surface: |
+    Just below the surface: a **running penis gag** (infamous domain parsing) — *lightpenisland.net*
+    spoken as one word invites the ear to hear another famous pen-shop domain. Same energy as the
+    opening of *Austin Powers: The Spy Who Shagged Me* — ostensibly respectable credits and copy,
+    absurd subtext for anyone listening with one ear tuned to parsing. The joke runs; the face stays straight.
+  delivery_references:
+    - "Austin Powers: The Spy Who Shagged Me — opening credits; respectable surface, running subtext"
+    - "Half-Life propaganda videos — Breencasts / Combine civic announcements; earnest institutional film, flicker, zero irony in the voice, wrongness underneath"
+  how_it_plays:
+    - "Read the URL twice, deadpan — *surf carefully* is the only permitted wink"
+    - "Cambridge telecine jiggle sells it as 1969 bureaucracy, not comedy — or Half-Life propaganda earnestness"
+    - "Brother site link is sincere respect; the penis gag is ours, not at their expense"
+    - "Audience who get it, get it; audience who don't, still get light pens"
+  not: "Not crass on-page copy — the gag lives in spoken URL + domain, not product descriptions"
+
 family_site:
   tone: "Clean deadpan retro family web shop — **light** + **pen**, literally."
-  not: "Not adult merchandise. Not penisland.net. Not that parsing. Surf carefully anyway."
-  copy_rule: "Every product must be defensible as a *light pen* or *light* + *pen-shaped thing* in plain English."
+  not: "Not adult merchandise — family-safe light pens, styluses, and pointer toys."
+  copy_rule: |
+    Every product must be defensible as a *light pen*, *light* + *pen-shaped thing*, or
+    **1968 demo-desk pointing & chording** (Engelbart mouse / keyset replicas, kits, maker guides).
 
 disclaimer: |
-  Parody emporium for Micropolis Class / PIXIE Repo Show comedy. Family-friendly catalog:
+  Repo Show sponsor emporium for Micropolis Class / PIXIE comedy. Family-friendly catalog:
   styluses, pen lights, laser cat toys, toy sabers, presentation pointers — things that emit light
-  and/or are pen-shaped. Not affiliated with penisland.net, Cambridge University, or Disney.
+  and/or are pen-shaped. Not affiliated with Cambridge University or Disney.
   Not PDP-7 Type 340 CRT light pens unless Lars boots one.
 
+brother_site:
+  url: https://penisland.net/
+  relationship: brother_site
+  their_tagline: "Your Pen Is Our Business."
+  our_tagline: "Your light pen is our business."
+  do_not_cross_beams: |
+    We do **not** compete with, punch down on, or parody at the expense of penisland.net. Same deadpan
+    custom-pen-shop lineage; **aligned goals**; **both looking ahead**. Cross-link with respect —
+    they are our **brother site**.
+  placement:
+    - footer_every_page
+    - faq
+    - optional_about_blurb
+  footer_label: "Brother site — penisland.net"
+  link_text: "Brother site — penisland.net"
+  footer_line: |
+    Brother site to [penisland.net](https://penisland.net/) — *Your Pen Is Our Business.*
+    We are **lightpenisland.net** — *Your light pen is our business.* Looking ahead together.
+  faq_answer: |
+    Are you related to penisland.net? **Brother site** — same deadpan pen-shop energy, different
+    product line. They sell pens; we sell **light pens**. Aligned goals; we do not cross beams.
+
 inspiration:
+  spec: "#brother_site"
   site: https://penisland.net/
-  note: "Deadpancustom-pen shop *layout* only — our products are light pens, not that joke"
+  note: "Brother site — shared deadpan custom-pen-shop spirit; light pens, not competition"
 
 site_plan:
-  vibe: "Late-90s / early-web custom pen shop — serif caps, wood specialty, deadpan copy"
+  vibe: |
+    Late-90s / early-web custom pen shop — serif caps, wood specialty, deadpan copy.
+    **Plus:** Apple II **Beagle Bros** manual joy — whimsical borders, hand-lettered callouts,
+    historic line-art from dead-iron docs (played straight on a family site).
   nav:
     - home
     - swag
     - wood
     - plastic
     - samples
+    - manuals
     - cat_division
     - saber_division
+    - augment_division
     - presentation
     - amazon_picks
     - testimonials
@@ -63,15 +114,57 @@ site_plan:
     wood: "We Specialize In Wood — yellowheart, mahogany, EZ-Grip"
     plastic: "Bluetooth indicator-light models"
     samples: "Type 340 EZ-Grip · Titan Link edition"
+    manuals: "Historic illustrations from old manuals — PDF downloads (bitsavers)"
     cat_division: "Laser Pointer Cat Toys — Red Dot Bureau"
     saber_division: "Light Sabers & LED Sword Pens — Graphics Satellite Division"
+    augment_division: "Engelbart Mouse & Keyset Replicas — Kits & Maker Guides"
     presentation: "Conference pointers · pen lights · wireless presenters"
     amazon_picks: "Light Pen Bureau curated lists — shop our Amazon storefront"
     testimonials: "Heinz U. Lemke would like a high-res scan"
     faq: "Is this a real light pen? Define real. (Also: we are a family site.)"
     contact: "sales@lightpenisland.net"
   hero_gif: "your-light-pen-is-our-business.gif — Cambridge telecine jiggle optional"
-  footer: "Copyright Light Pen Bureau · Regular Repo Show Sponsor · Ground Up Software"
+  footer:
+    copyright: "Copyright Light Pen Bureau · Regular Repo Show Sponsor · Ground Up Software"
+    brother_site:
+      url: https://penisland.net/
+      label: "Brother site — penisland.net"
+      visible: true
+      opens_in_new_tab: true
+
+partner_emporiums:
+  lars_brinkhoff_t_shirts:
+    url: https://github.com/larsbrinkhoff/t-shirts
+    guest: ../../../characters/lars-brinkhoff/
+    what: |
+      Lars Brinkhoff's **real** retrocomputing t-shirt design repo — PDP-10, Lisp Machine Inc.,
+      Interlisp, IMP, DEC, Zork (1978), and other vintage logotypes. Not sold on lightpenisland.net;
+      cross-link on PIXIE / Lars segments. Don wears one on stream (LISP MACHINE MANUAL — see
+      characters/don-hopkins/media.md).
+    on_air: "Wear one of mine — host wardrobe nod during lars_emulation or introductions"
+
+manual_library:
+  vibe: "Apple II **Beagle Bros** manual pages — friendly borders, hand-lettered jokes that read as technical footnotes"
+  on_site: lightpenisland.net/manuals
+  each_entry: "Historic illustration plate + caption + **Download PDF** link (bitsavers or CHM mirror)"
+  sponsor_spot: "Intercut plates during light_pen_bureau_sponsor read — telecine jiggle per figure"
+  woz: "../../../characters/steve-wozniak/"
+  woz_note: "][ hacker-doc aesthetic — Woz will love it"
+  pdfs:
+    - id: type-340-display
+      title: "DEC Type 340 Display Programming Manual"
+      url: http://bitsavers.trailing-edge.com/pdf/dec/graphics/7-13_340_Display_Programming_Manual.pdf
+      use: "Light pen hits, display list, vector refresh — Lars segment cross-link"
+    - id: pdp7-handbook
+      title: "PDP-7 Peripherals Handbook (excerpt)"
+      url: http://bitsavers.trailing-edge.com/pdf/dec/pdp7/
+      use: "Graphics satellite context — link to handbook index until exact plate chosen"
+  illustrations:
+    style: "Line art from above PDFs — cropped figures, Beagle Bros border treatment, deadpan captions"
+    captions_examples:
+      - "FIG. 7 — Light pen proximity detector (not a cat laser)"
+      - "APPENDIX B — Titan link nightly batch etiquette"
+      - "WARRANTY VOID IF PARSED INCORRECTLY"
 
 swag:
   tagline: "Where you can get SWAG ;)"
@@ -86,6 +179,9 @@ swag:
     pixie_pie_menus_pdp7:
       - "PIXIE 1969 bud pin set — Heinz · Lars · DSHR"
       - "Type 340 EZ-Grip mini (Bluetooth stylus SWAG box)"
+      - "Engelbart mouse replica mini (desk ornament) · chord keyset sticker sheet"
+      - "Engelbart keyset clicky toy · Engelbart mouse cat toy (Augment × Red Dot Bureau)"
+      - "Mother of All Demos maker zine — Build Your Own Engelbart Mouse (abbrev)"
       - "Flight of the Bumblebee sticker"
       - "Cambridge telecine jiggle poster (meta)"
   channels: [lightpenisland.net/swag, amazon_picks, direct_dropship]
@@ -129,6 +225,39 @@ catalog:
     - "Fiber-optic novelty pens"
     - "Flashlight pens (multi-tool)"
     - "Neon sign desk accessory: LIGHT PEN BUREAU"
+  engelbart_division:
+    dept: "Augment — Human Intellect Bootstrap Division"
+    character: ../../../characters/douglas-engelbart/
+    maker_program: "#engelbart_division"
+    memorial: "Douglas Engelbart (1925–2013) — open tribute models & maker education; not SRI endorsement"
+    zeitgeist: "Mother of All Demos (1968-12-09) — same pointing-device era as PIXIE (1969)"
+    gag_line: "Augment your light pen — bootstrap sold separately"
+    open_models:
+      free: true
+      url: lightpenisland.net/augment/models
+      formats: [STL, STEP, 3MF]
+      anyone_can: "3D-print FDM, cast resin, CNC metal inserts — remix OK with attribution"
+    product_tiers:
+      free_download: "STL/STEP — clicky toys, display shells, full maker geometry"
+      swag: "Printed clicky toys, cat mouse, mini ornament, stickers, MOAD bundle"
+      working_bluetooth:
+        mouse: "Resin/metal shell, wheels, encoder PCB, Bluetooth HID — real mouse"
+        keyset: "Switches, PCB, arm mount, Bluetooth HID chord keyboard"
+        kit: "Full BOM — fiberboard palm rest, hardware, firmware, assembly guide"
+    replicas:
+      - "Engelbart mouse — free STL; SWAG clicky toy; working Bluetooth kit"
+      - "Five-finger chord keyset — free STL; SWAG clicky toy; working Bluetooth kit + arm mount"
+      - "Engelbart mouse cat toy — wooden-mouse silhouette; Red Dot Bureau crossover"
+      - "Mother of All Demos desk set — mouse + keyset + light pen stylus (SWAG bundle)"
+    kits:
+      - "Mouse kit — shell STLs + metal wheels + encoder PCB + Bluetooth firmware"
+      - "Keyset kit — switches, PCB, arm mount, RP2040 chord firmware"
+      - "Demo desk bundle — mouse + keyset + Type 340 EZ-Grip stylus tray"
+    maker_guides:
+      - "Build Your Own Engelbart Mouse — free models + BOM + Bluetooth option"
+      - "Chord Keyset for Beginners — five keys, arm mount, Augment notation primer"
+      - "Demo Desk 1968 — layout guide: light pen, mouse, keyset"
+    cross_sell: [core_light_pens, presentation, drawing_tablet]
 
 amazon_storefront:
   why: "Curate light-pen-adjacent SKUs without inventory; family-safe listings only"
@@ -147,10 +276,14 @@ amazon_storefront:
     - pen_lights_led_medical
     - laser_pointers_presentation
     - book_lights_pen_shape
+    - engelbart_mouse_replica_kits
+    - chord_keyset_maker_parts
   caution: "Apply for storefront with clean category copy; domain name may need manual review — keep site PG"
 
 product:
-  what_we_sell: "Anything remotely related to **light pens** — literally light, literally pen-shaped, or both"
+  what_we_sell: |
+    Anything remotely related to **light pens** — literally light, literally pen-shaped, or both —
+    plus **1968 demo-desk** open models: free Engelbart mouse & keyset STLs; SWAG; working Bluetooth kits.
   what_we_do_not_sell: "Adult products; anatomical gags; CRT Type 340 until Lars ships"
   skus:
     - id: type-340-ez-grip
@@ -164,6 +297,51 @@ product:
     - id: graphics-satellite-saber-pen
       name: "Graphics Satellite LED Saber Pen"
       division: saber_division
+    - id: engelbart-open-models-free
+      name: "Engelbart Mouse + Keyset — Free STL/STEP Download"
+      division: engelbart_division
+      channel: [free_download]
+      price: free
+    - id: engelbart-mouse-replica-bluetooth
+      name: "Engelbart Mouse — Working Bluetooth Kit"
+      division: engelbart_division
+      channel: [direct, amazon]
+    - id: engelbart-keyset-replica-bluetooth
+      name: "Five-Finger Chord Keyset — Working Bluetooth Kit (arm mount optional)"
+      division: engelbart_division
+      channel: [direct]
+    - id: engelbart-mouse-replica-display
+      name: "Engelbart Mouse — Resin Display / SWAG"
+      division: engelbart_division
+    - id: engelbart-keyset-clicky-toy
+      name: "Engelbart Keyset Clicky Toy — Non-Functional Desk Toy"
+      division: engelbart_division
+      channel: [direct]
+    - id: engelbart-mouse-cat-toy
+      name: "Engelbart Mouse Cat Toy"
+      division: engelbart_division
+      cross_division: cat_division
+    - id: engelbart-keyset-mini-ornament
+      name: "Mini Chord Keyset Desk Ornament"
+      division: engelbart_division
+      channel: [direct, swag]
+    - id: engelbart-mouse-kit
+      name: "Engelbart Mouse Replica Kit"
+      division: engelbart_division
+    - id: engelbart-keyset-kit
+      name: "Chord Keyset Kit — RP2040 Firmware"
+      division: engelbart_division
+    - id: moad-desk-bundle
+      name: "Mother of All Demos Desk Bundle — Mouse + Keyset + Light Pen"
+      division: engelbart_division
+    - id: maker-guide-engelbart-mouse
+      name: "Build Your Own Engelbart Mouse — Maker Guide (PDF + BOM)"
+      division: engelbart_division
+      channel: [direct]
+    - id: maker-guide-chord-keyset
+      name: "Chord Keyset for Beginners — Maker Guide"
+      division: engelbart_division
+      channel: [direct]
   fulfillment:
     direct:
       - "Dropship OEM stylus — AliExpress / CJ / WFY MOQ ~100 custom box"
@@ -180,5 +358,8 @@ see_also:
   - ../../../process/repo-show-regulars.yml#regular_sponsors
   - cambridge-gag-credits.yml
   - ../../pixie-pie-menus-pdp7.yml
+  - ../../../characters/lars-brinkhoff/CHARACTER.yml#t_shirts
+  - ../../../repo-shows/ideas/gags/lightpenisland-net.yml#engelbart_division
+  - ../../../characters/don-hopkins/media.md
   - ../../../characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md
   - ../../../characters/douglas-engelbart/GLANCE.md

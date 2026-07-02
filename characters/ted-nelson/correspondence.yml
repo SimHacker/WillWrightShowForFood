@@ -35,6 +35,7 @@ sourced_quotes:
 
 connects_in_repo:
   - { path: CHARACTER.yml, why: "Bio + invitation status (warm lead)" }
+  - { path: ../../repo-shows/ideas/gags/lightpenisland-net.yml#engelbart_division, why: "Public Engelbart open models + SWAG — Augment Division" }
   - { path: ../douglas-engelbart/, why: "Memorial — Ted is a discussant (Engelbart officiated his wedding)" }
   - { path: ../hugh-daniel/, why: "Memorial — Xanadu collaborator" }
   - { path: ../../process/trails/cs547-seminar-lineage.md, why: "Recorded-conversation / archive lineage" }
@@ -43,4 +44,5 @@ connects_in_repo:
 show_hooks:
   - "Hypertext as Ted meant it — Xanadu, transclusion, visible connections"
   - "Remember Engelbart and Hugh Daniel with the people who knew them"
+  - "Mother of All Demos open models — free STL + Bluetooth kits (lightpenisland Augment Division)"
   - "Copy/paste-to-an-invisible-clipboard rant — a candidate segment"

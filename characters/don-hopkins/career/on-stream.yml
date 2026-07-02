@@ -14,6 +14,11 @@ does:
 visual_identity:
   thesis: "Warm, real, countercultural — regular me, not Phil's flamboyant drag"
   wardrobe: "Old tie-dye t-shirts; Grateful Dead album-cover tie-dye favorite"
+  retrocomputing_tees:
+    source: https://github.com/larsbrinkhoff/t-shirts
+    guest: characters/lars-brinkhoff/
+    on_air: "PIXIE / ITS / preservation episodes — wear one of Lars's (e.g. LISP MACHINE MANUAL)"
+    photo: ../media.md
   set: "Yellow Submarine bong on shelf; Amsterdam natural"
 
 voice:

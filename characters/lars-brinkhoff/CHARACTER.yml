@@ -33,12 +33,22 @@ bio:
     with **Thomas Cherryhomes** — Lars makes emulated ITS boot; Thomas wires retro machines
     to the modern net (FujiNet, IRATA.ONLINE).
 
+t_shirts:
+  url: https://github.com/larsbrinkhoff/t-shirts
+  what: |
+    Vintage computing t-shirt design emporium — PDP-10, Lisp Machine Inc., Interlisp, IMP,
+    DEC, Foonly, Zork (1978), and other dead-iron logotypes. Lars makes shirts for friends;
+    Don wears his (e.g. orange **LISP MACHINE MANUAL** / *LISP CHINE NUAL* — see
+    characters/don-hopkins/media.md).
+  on_stream: "Host or buds may wear Lars's retrocomputing tees on PIXIE / ITS episodes"
+
 sources:
   wikipedia: null
   web:
     - http://lars.nocrew.org/
     - http://pdp10.nocrew.org/
     - https://github.com/larsbrinkhoff
+    - https://github.com/larsbrinkhoff/t-shirts
     - https://github.com/PDP-10/its
     - https://github.com/PDP-10/its/issues/1866
   papers: []
