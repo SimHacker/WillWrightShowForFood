@@ -13,41 +13,130 @@ sponsor_gag: cambridge-gag-credits.yml#light_pen_bureau_sponsor
 tagline: "Your light pen is our business."
 url_repeat: "Lightpenisland dot net. I repeat, lightpenisland.net. Surf carefully."
 
+family_site:
+  tone: "Clean deadpan retro family web shop — **light** + **pen**, literally."
+  not: "Not adult merchandise. Not penisland.net. Not that parsing. Surf carefully anyway."
+  copy_rule: "Every product must be defensible as a *light pen* or *light* + *pen-shaped thing* in plain English."
+
 disclaimer: |
-  Parody light-pen emporium for Micropolis Class / PIXIE Repo Show comedy.
-  Not affiliated with penisland.net or Cambridge University. Bluetooth styluses
-  with indicator lights — not PDP-7 Type 340 CRT light pens.
+  Parody emporium for Micropolis Class / PIXIE Repo Show comedy. Family-friendly catalog:
+  styluses, pen lights, laser cat toys, toy sabers, presentation pointers — things that emit light
+  and/or are pen-shaped. Not affiliated with penisland.net, Cambridge University, or Disney.
+  Not PDP-7 Type 340 CRT light pens unless Lars boots one.
 
 inspiration:
   site: https://penisland.net/
-  note: "Deadpancustom-pen shop structure — we swap pen → light pen; same telecine sponsor voice"
+  note: "Deadpancustom-pen shop *layout* only — our products are light pens, not that joke"
 
 site_plan:
   vibe: "Late-90s / early-web custom pen shop — serif caps, wood specialty, deadpan copy"
+  nav:
+    - home
+    - wood
+    - plastic
+    - samples
+    - cat_division
+    - saber_division
+    - presentation
+    - amazon_picks
+    - testimonials
+    - faq
+    - contact
   pages:
-    - home: "Finest Quality Custom Light Pens"
-    - wood: "We Specialize In Wood — yellowheart, mahogany, EZ-Grip"
-    - plastic: "Bluetooth indicator-light models"
-    - samples: "Type 340 EZ-Grip · Titan Link edition"
-    - testimonials: "Heinz U. Lemke would like a high-res scan"
-    - faq: "Is this a real light pen? Define real."
-    - contact: "sales@lightpenisland.net"
+    home: "Finest Quality Custom Light Pens"
+    wood: "We Specialize In Wood — yellowheart, mahogany, EZ-Grip"
+    plastic: "Bluetooth indicator-light models"
+    samples: "Type 340 EZ-Grip · Titan Link edition"
+    cat_division: "Laser Pointer Cat Toys — Red Dot Bureau"
+    saber_division: "Light Sabers & LED Sword Pens — Graphics Satellite Division"
+    presentation: "Conference pointers · pen lights · wireless presenters"
+    amazon_picks: "Light Pen Bureau curated lists — shop our Amazon storefront"
+    testimonials: "Heinz U. Lemke would like a high-res scan"
+    faq: "Is this a real light pen? Define real. (Also: we are a family site.)"
+    contact: "sales@lightpenisland.net"
   hero_gif: "your-light-pen-is-our-business.gif — Cambridge telecine jiggle optional"
   footer: "Copyright Light Pen Bureau · Computing Laboratory · Ground Up Software"
 
+catalog:
+  core_light_pens:
+    - "Type 340 EZ-Grip — Bluetooth stylus, indicator LEDs (OEM dropship)"
+    - "Petite yellowheart wood barrel + capacitive nib"
+    - "Thick dark mahogany presentation stylus"
+    - "Medical pen light — LED inspection (real pen light)"
+    - "UV currency-check pen light"
+    - "Glow / LED writing pens"
+  cat_division:
+    dept: "Red Dot Bureau"
+    products:
+      - "Handheld laser pointer cat toys (automatic random mode)"
+      - "USB-rechargeable pet chase lasers"
+      - "Wall-mount laser pet exercisers"
+    gag_line: "Distributed CAD for cats — interactive pointing here, chaos there"
+  saber_division:
+    dept: "Graphics Satellite Division"
+    products:
+      - "Toy light sabers (LED, foam, kids)"
+      - "Mini saber keychain pen lights"
+      - "Collapsible LED sword pens (novelty)"
+    note: "Unlicensed generic 'light saber' wording on site; licensed SKUs only in Amazon picks if needed"
+  presentation:
+    - "Wireless presenter pens with laser dot"
+    - "Classic red laser pointers (conference safe)"
+    - "Green laser astronomy pens (with safety copy)"
+  drawing_tablet:
+    - "Light boxes / tracing pads — draw like it's 1969"
+    - "Artist stylus pens with eraser end"
+  reading_nightly:
+    pun: "Titan Link — Nightly Batch Division"
+    products:
+      - "Clip-on book lights"
+      - "Rechargeable pen-shaped reading lights"
+  fiber_and_novelty:
+    - "Fiber-optic novelty pens"
+    - "Flashlight pens (multi-tool)"
+    - "Neon sign desk accessory: LIGHT PEN BUREAU"
+
+amazon_storefront:
+  why: "Curate light-pen-adjacent SKUs without inventory; family-safe listings only"
+  options:
+    - "Amazon Influencer / Creator storefront — amazon.com/shop/<handle>"
+    - "Amazon Associates affiliate links per category page"
+    - "Hybrid: own Type 340 EZ-Grip via FBA or dropship + Amazon picks for rest"
+  site_integration:
+    - "Nav: **Amazon Picks** — deadpan curated lists per division"
+    - "Footer: Also available on Amazon — Light Pen Bureau storefront"
+    - "Disclosure: As an Amazon Associate we earn from qualifying purchases"
+  categories_on_amazon:
+    - cat_laser_toys
+    - toy_lightsabers_led
+    - stylus_bluetooth_indicator
+    - pen_lights_led_medical
+    - laser_pointers_presentation
+    - book_lights_pen_shape
+  caution: "Apply for storefront with clean category copy; domain name may need manual review — keep site PG"
+
 product:
-  what_we_sell: "Bluetooth active stylus — indicator lights on nib/housing (OEM China)"
-  what_we_do_not_sell: "CRT vector display light pens; Titan batch links"
+  what_we_sell: "Anything remotely related to **light pens** — literally light, literally pen-shaped, or both"
+  what_we_do_not_sell: "Adult products; anatomical gags; CRT Type 340 until Lars ships"
   skus:
     - id: type-340-ez-grip
       name: "Type 340 EZ-Grip Bluetooth Light Pen"
-      note: "Capacitive stylus + battery LED — the joke is the name"
+      channel: [direct, amazon]
     - id: yellowheart-wood
       name: "Petite Yellowheart Wood Light Pen"
-      parody: penisland.net wood page
+    - id: red-dot-bureau-cat-laser
+      name: "Red Dot Bureau Automatic Cat Laser"
+      division: cat_division
+    - id: graphics-satellite-saber-pen
+      name: "Graphics Satellite LED Saber Pen"
+      division: saber_division
   fulfillment:
-    - "Dropship — AliExpress / CJ / OEM MOQ ~100 for custom box (WFY Tech, TVCMALL class)"
-    - "Checkout may live on shop.groundupsoftware.nl if payment processors balk at domain parse"
+    direct:
+      - "Dropship OEM stylus — AliExpress / CJ / WFY MOQ ~100 custom box"
+      - "Amazon FBA for fast movers (cat lasers, toy sabers)"
+    amazon:
+      - "Affiliate + Influencer storefront for long tail"
+    checkout_fallback: "shop.groundupsoftware.nl if domain triggers payment processor"
 
 post_production:
   spec: ../../process/post-production/cambridge-telecine-jiggle.yml

@@ -113,7 +113,9 @@ light_pen_bureau_sponsor:
       the world what a demo could be, Heinz was drawing radial menus on Titan's graphics satellite.
       Not claiming PIXIE copied Augment — claiming the **light pen zeitgeist** was everywhere.
   telecine: "Same AE motion track + blur/glow as gag credits — fake 1969 sponsor film insert"
-  disclaimer: "Parody sponsor spot for Repo Show comedy — not an endorsement of any third-party site"
+  disclaimer: "Parody sponsor spot for Repo Show comedy — family-friendly light-pen catalog only; not an endorsement of any third-party site"
+  catalog: repo-shows/ideas/gags/lightpenisland-net.yml#catalog
+  amazon_storefront: repo-shows/ideas/gags/lightpenisland-net.yml#amazon_storefront
 
 pixie_pie_menus_pdp7:
   show_seed: ../../pixie-pie-menus-pdp7.yml
