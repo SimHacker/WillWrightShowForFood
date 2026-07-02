@@ -1,0 +1,60 @@
+# lightpenisland.net — retro parody emporium (Repo Show sponsor gag → real site)
+# Operator: Ground Up Software · Registrar: Hover · PIXIE show sponsor read
+
+id: lightpenisland-net
+type: gag
+status: domain_registered
+shows: [pixie-pie-menus-pdp7]
+domain: lightpenisland.net
+registrar: hover
+operator: Ground Up Software
+sponsor_gag: cambridge-gag-credits.yml#light_pen_bureau_sponsor
+
+tagline: "Your light pen is our business."
+url_repeat: "Lightpenisland dot net. I repeat, lightpenisland.net. Surf carefully."
+
+disclaimer: |
+  Parody light-pen emporium for Micropolis Class / PIXIE Repo Show comedy.
+  Not affiliated with penisland.net or Cambridge University. Bluetooth styluses
+  with indicator lights — not PDP-7 Type 340 CRT light pens.
+
+inspiration:
+  site: https://penisland.net/
+  note: "Deadpancustom-pen shop structure — we swap pen → light pen; same telecine sponsor voice"
+
+site_plan:
+  vibe: "Late-90s / early-web custom pen shop — serif caps, wood specialty, deadpan copy"
+  pages:
+    - home: "Finest Quality Custom Light Pens"
+    - wood: "We Specialize In Wood — yellowheart, mahogany, EZ-Grip"
+    - plastic: "Bluetooth indicator-light models"
+    - samples: "Type 340 EZ-Grip · Titan Link edition"
+    - testimonials: "Heinz U. Lemke would like a high-res scan"
+    - faq: "Is this a real light pen? Define real."
+    - contact: "sales@lightpenisland.net"
+  hero_gif: "your-light-pen-is-our-business.gif — Cambridge telecine jiggle optional"
+  footer: "Copyright Light Pen Bureau · Computing Laboratory · Ground Up Software"
+
+product:
+  what_we_sell: "Bluetooth active stylus — indicator lights on nib/housing (OEM China)"
+  what_we_do_not_sell: "CRT vector display light pens; Titan batch links"
+  skus:
+    - id: type-340-ez-grip
+      name: "Type 340 EZ-Grip Bluetooth Light Pen"
+      note: "Capacitive stylus + battery LED — the joke is the name"
+    - id: yellowheart-wood
+      name: "Petite Yellowheart Wood Light Pen"
+      parody: penisland.net wood page
+  fulfillment:
+    - "Dropship — AliExpress / CJ / OEM MOQ ~100 for custom box (WFY Tech, TVCMALL class)"
+    - "Checkout may live on shop.groundupsoftware.nl if payment processors balk at domain parse"
+
+post_production:
+  spec: ../../process/post-production/cambridge-telecine-jiggle.yml
+  sponsor_read: cambridge-gag-credits.yml#light_pen_bureau_sponsor
+
+see_also:
+  - cambridge-gag-credits.yml
+  - ../../pixie-pie-menus-pdp7.yml
+  - ../../../characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md
+  - ../../../characters/douglas-engelbart/GLANCE.md

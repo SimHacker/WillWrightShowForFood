@@ -76,6 +76,10 @@ light_pen_bureau_sponsor:
   url: https://lightpenisland.net/
   url_spoken: "lightpenisland dot net"
   url_repeat: "I repeat, lightpenisland.net. Surf carefully."
+  site_spec: lightpenisland-net.yml
+  domain_status: registered
+  registrar: hover
+  operator: Ground Up Software
   url_note: |
     Gag domain — *light pen island* emporium (Type 340 / PIXIE). One word: lightpenisland.net.
     Parody spirit of penisland.net; not affiliated. Read URL twice, deadpan; *surf carefully* is the punchline.
