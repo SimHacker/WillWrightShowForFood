@@ -21,6 +21,7 @@ when:
   - after_emulator_boot_fail
   - dedication_after_chm_hook
   - ground_up_consulting_stinger
+  - light_pen_bureau_sponsor_spot
 
 format:
   typography: "Serif caps — Cambridge Univ Library telecine feel"
@@ -67,6 +68,45 @@ ground_up_software:
       optional: true
       placement: end_roll_only
 
+light_pen_bureau_sponsor:
+  id: light-pen-bureau-sponsor
+  pairs_with: "Computing Laboratory — Light Pen Bureau"
+  segment: heinz_history
+  opener: "And now, a word from our sponsors."
+  url: https://light.penisland.net/
+  url_note: "Gag subdomain — deadpan *light pen* emporium; not affiliated with penisland.net"
+  inspiration: https://penisland.net/
+  inspiration_note: |
+    Real deadpan custom-pen shop (infamous domain parsing). Tagline on site: *Your Pen Is Our Business*.
+    We swap **light pen** for pen — Type 340 / PIXIE context. Play the ad completely straight on
+    Cambridge telecine jiggle; let the audience catch the rhyme.
+  ad_read: |
+    Finest quality custom **light pens** for the PDP-7 graphics satellite. Thin white EZ-Grip;
+    petite yellowheart wood; thick dark mahogany — we specialize in wood. Hand-crafted nearly
+    three decades. Bulk orders or just one for that special Titan link. Computing Laboratory —
+    **Light Pen Bureau**. Visit **light.penisland.net** — your light pen is our business.
+  engelbart:
+    why: |
+      **Mother of All Demos** (Dec 9, 1968 — Douglas Engelbart, SRI) and **PIXIE** (1969,
+      Cambridge) — same zeitgeist: light pen, direct manipulation, film to prove it happened.
+      Deadpan sponsor read can nod without interviewing Doug (memorial mode).
+    character: characters/douglas-engelbart/
+    mother_of_all_demos: "1968-12-09 — mouse, chord keyboard, hypertext, collaborative editing; demo as genre"
+    pixie_parallel: "1969 — radial menus on PDP-7/340; Cambridge film; Heinz in the footage"
+    sponsor_tags:
+      - "Also compatible with Mother-of-All-Demos-style proof films"
+      - "Augment your light pen — bootstrap sold separately"
+    gag_credit_lines:
+      - "Mother of All Demos — Licensed Light Pen Accessories"
+      - "Stanford Research Institute — Demo Envy Division (1968)"
+      - "Augment — Human Intellect Bootstrap Liaison"
+    on_air_beat: |
+      After sponsor read — optional one-liner from Don: *Beautiful.* Same year Engelbart showed
+      the world what a demo could be, Heinz was drawing radial menus on Titan's graphics satellite.
+      Not claiming PIXIE copied Augment — claiming the **light pen zeitgeist** was everywhere.
+  telecine: "Same AE motion track + blur/glow as gag credits — fake 1969 sponsor film insert"
+  disclaimer: "Parody sponsor spot for Repo Show comedy — not an endorsement of any third-party site"
+
 pixie_pie_menus_pdp7:
   show_seed: ../../pixie-pie-menus-pdp7.yml
   roll:
@@ -77,6 +117,11 @@ pixie_pie_menus_pdp7:
     - line: "Rainbow Group — Distributed CAD"
       note: "Real group; deadpan credit"
     - line: "Computing Laboratory — Light Pen Bureau"
+      sponsor_spot: light_pen_bureau_sponsor
+    - line: "Mother of All Demos — Licensed Light Pen Accessories"
+      engelbart: douglas-engelbart
+    - line: "Stanford Research Institute — Demo Envy Division (1968)"
+      engelbart: mother_of_all_demos
     - line: "Type 340 Display Programming — Manual Compliance Office"
       segment: lars_emulation
     - line: "Ground Up Software — Emulator Boot Support"
@@ -124,6 +169,7 @@ repo_show_generic:
     - "FROM THE GROUND UP — A CONSULTING ENGAGEMENT"
 
 see_also:
+  - ../../../characters/douglas-engelbart/README.md
   - ../../process/post-production/cambridge-telecine-jiggle.yml
   - ../../../characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md
   - ../../../characters/don-hopkins/career/work-history.yml

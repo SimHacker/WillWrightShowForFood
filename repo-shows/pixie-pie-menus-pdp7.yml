@@ -106,6 +106,11 @@ interview_center:
     ask: "What was Neil E. Wiseman like to work with — technically, personally, and as a research leader?"
   cambridge_zeitgeist:
     ask: "What was the Cambridge computer graphics / CAD / HCI zeitgeist in the late 1960s?"
+  engelbart_demo_zeitgeist:
+    ask: "1968 Mother of All Demos ↔ 1969 PIXIE film — same light-pen era, different labs. What did Heinz see on the US trip? Demo culture vs distributed CAD?"
+    doc: characters/douglas-engelbart/GLANCE.md
+    memorial: "Discuss Engelbart in memorial mode — never interview"
+    sponsor_gag: repo-shows/ideas/gags/cambridge-gag-credits.yml#light_pen_bureau_sponsor
   us_research_labs_trip:
     ask: "What was Heinz's trip to the US research labs like, and what did he see there?"
   medical_automation_today:
@@ -141,6 +146,12 @@ format:
     gag_credits: repo-shows/ideas/gags/cambridge-gag-credits.yml
     gag_credits_anchor: "Department of Research Simulation"
     consulting: Ground Up Software
+    sponsor_spot:
+      id: light_pen_bureau_sponsor
+      after: "Computing Laboratory — Light Pen Bureau"
+      opener: "And now, a word from our sponsors."
+      url: https://light.penisland.net/
+      spec: repo-shows/ideas/gags/cambridge-gag-credits.yml#light_pen_bureau_sponsor
 
 ties_to:
   - characters/heinz-lemke/
@@ -152,6 +163,7 @@ ties_to:
   - repo-shows/lars-brinkhoff/SHOW.yml
   - repo-shows/ben-and-heinz-pie-menus.yml
   - ../characters/don-hopkins/pie-menus-chi-88-and-beyond.md
+  - ../characters/douglas-engelbart/
   - ../process/challenges/retrocomputing-drive.yml
   - ../process/trails/live-objects.md
 
