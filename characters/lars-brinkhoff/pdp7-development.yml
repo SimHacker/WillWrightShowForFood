@@ -1,0 +1,124 @@
+# PDP-7 development — manuals, toolchain, Lars Brinkhoff repos
+# For PIXIE emulation segment. Standards: ../../schemas/portrayal-standards.yml
+
+meta:
+  character: lars-brinkhoff
+  show: repo-shows/pixie-pie-menus-pdp7.yml
+  updated: "2026-07-03"
+
+manuals:
+  hardware_stack: media/reference/cambridge-pixie-hardware-stack.yml
+  manifest: media/reference/MANIFEST.yml
+  cpu_and_system:
+    index: http://bitsavers.trailing-edge.com/pdf/dec/pdp7/
+    local:
+      - media/reference/pdp7-f-75p-reference-manual-dec64.pdf
+      - media/reference/pdp7-f-75-users-handbook-jun65.pdf
+      - media/reference/pdp7-decsys-7-operating-manual.pdf
+      - media/reference/pdp7-assembly-language-manual.pdf
+      - media/reference/pdp7-instruction-list.pdf
+      - media/reference/pdp7-interface-manual.pdf
+      - media/reference/pdp7-rim-loader-jul65.pdf
+      - media/reference/pdp7-ddt-reference.pdf
+  display_type_340:
+    local:
+      - media/reference/dec-7-13-type-340-display-programming-manual.pdf
+      - media/reference/dec-h-340-type-340-system-nov64.pdf
+      - media/reference/dec-pdp4-340-experimental-display-system.pdf
+    bitsavers: http://bitsavers.trailing-edge.com/pdf/dec/graphics/
+  light_pen_and_options:
+    local:
+      - media/reference/pdp7-370-light-pen-diagnostic-apr64.pdf
+    missing_on_bitsavers:
+      - "H-342 Symbol Generator manual"
+      - "F-03(370) Light Pen manual"
+      - "341 Interface + 347 Subroutine memo (Bill Long 1964)"
+
+cross_assemblers_and_tools:
+  macro7:
+    repo: https://github.com/open-simh/simtools
+    path: crossassemblers/macro7
+    what: Bob Supnik SIMH **macro7** — canonical PDP-7 cross-assembler (host builds .lst / binary)
+    also: https://github.com/simh/simtools (legacy upstream)
+  as7:
+    repo: https://github.com/DoctorWkt/pdp7-unix
+    path: tools/as7
+    what: Perl assembler for resurrected **PDP-7 Unix v0** source (Ken Thompson format from scans)
+  pdp7_unix_toolchain:
+    repo: https://github.com/DoctorWkt/pdp7-unix
+    build: "make  # builds tools + kernel + userland for SIMH"
+    run: "make run  # or: cd build && pdp7 unixv0.simh"
+    note: Includes user-mode simulator, filesystem tools, kernel — not PIXIE/Cambridge software
+
+how_lars_develops:
+  summary: |
+    Lars works in the **SIMH emulator layer** (Type 340 / Graphics-II device code, display.c
+    integration, light pen) and builds **PDP-7 test programs** with macro7 or hand-assembled
+    display lists. For runnable Unix on PDP-7 he uses DoctorWkt/pdp7-unix + his SIMH forks.
+    Munching Squares on PDP-7/340 is a **planned port** from his revised PDP-10 Type 340 and
+    Knight TV code (correspondence 2026-07-02) — not yet a standalone public repo at clone time.
+  workflow:
+    - "Fork/branch SIMH (old-simh or open-simh) with 340 or graphics2 device support"
+    - "Build pdp7 emulator: make pdp7 (often needs libsdl2-dev for display window)"
+    - "Assemble PDP-7 code with macro7 on host, load RIM/binary into SIMH script (.simh)"
+    - "Or: build pdp7-unix tree, run under Lars's graphics-enabled pdp7 binary"
+    - "Iterate display list + light pen in Type 340 manual format; compare to ITS 340 code paths"
+
+lars_repos_to_clone:
+  priority_for_pixie:
+    - repo: https://github.com/larsbrinkhoff/old-simh
+      clone: git clone https://github.com/larsbrinkhoff/old-simh.git
+      branches:
+        - name: lars/340
+          what: Type 340 display work (PDP-7/10 family)
+        - name: lars/graphics2
+          what: PDP-7 Graphics-II simulation (Space Travel, pdp7-unix games)
+      build: "git checkout lars/340  # or lars/graphics2; make pdp7"
+    - repo: https://github.com/larsbrinkhoff/open-simh
+      clone: git clone https://github.com/larsbrinkhoff/open-simh.git
+      branches:
+        - name: lars/pdp7-type34
+          what: PDP-7 Type 34 display experiments on Open SIMH
+      note: Active fork of open-simh/simh; check SIMH-SG contribution policy
+    - repo: https://github.com/larsbrinkhoff/ka10-simh
+      clone: git clone https://github.com/larsbrinkhoff/ka10-simh.git
+      what: KA10 simulator with **Type 340** — Lars's PDP-10 munching squares / ITS display path
+    - repo: https://github.com/larsbrinkhoff/pdp7-unix
+      clone: git clone https://github.com/larsbrinkhoff/pdp7-unix.git
+      what: Lars fork of DoctorWkt/pdp7-unix; wiki HOWTO for graphics2 SIMH branch
+      upstream: https://github.com/DoctorWkt/pdp7-unix
+    - repo: https://github.com/larsbrinkhoff/Vector-Display-Simulation
+      clone: git clone https://github.com/larsbrinkhoff/Vector-Display-Simulation.git
+      what: Vector display simulation research (related display physics)
+  supporting:
+    - repo: https://github.com/open-simh/simtools
+      clone: git clone https://github.com/open-simh/simtools.git
+      path: crossassemblers/macro7
+    - repo: https://github.com/PDP-10/its
+      clone: git clone https://github.com/PDP-10/its.git
+      what: ITS with Type 340 support — Lars drove issue #644 (340 display on KA10)
+    - repo: https://github.com/larsbrinkhoff/munching-squares.el
+      what: Emacs port — documents formula, not PDP-7 iron
+    - repo: https://github.com/larsbrinkhoff/vt220-munching-squares
+      what: MACLISP / VT220 — algorithm reference
+
+upstream_simh:
+  mainline: https://github.com/simh/simh
+  display_library: simh/display/display.c  # DIS_TYPE340 entry for PDP-7/10
+  pdp7_issue: https://github.com/simh/simh/issues/754  # Lars Graphics-II proposal (open)
+
+suggested_workspace_clone_set: |
+  mkdir -p ~/GroundUp/git/pdp7-pixie && cd ~/GroundUp/git/pdp7-pixie
+  git clone https://github.com/larsbrinkhoff/old-simh.git
+  git clone https://github.com/DoctorWkt/pdp7-unix.git
+  git clone https://github.com/open-simh/simtools.git
+  git clone https://github.com/larsbrinkhoff/ka10-simh.git
+  cd old-simh && git checkout lars/340
+
+connects_in_repo:
+  - media/reference/MANIFEST.yml
+  - media/reference/cambridge-pixie-hardware-stack.yml
+  - media/reference/dec-7-13-type-340-display-programming-manual.pdf
+  - correspondence.yml
+  - ideas.md
+  - ../../repo-shows/pixie-pie-menus-pdp7.yml

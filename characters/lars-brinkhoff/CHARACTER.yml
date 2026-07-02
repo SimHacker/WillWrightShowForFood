@@ -16,9 +16,11 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: draft
+  status: yes_later
   consent: not_yet_asked
+  responded: "2026-07-02"
   document: invitation.md
+  correspondence: correspondence.yml
   show_seed: repo-shows/lars-brinkhoff/
   paired_guest: thomas-cherryhomes
   challenge: "Make it so — PDP-10/ITS + MACLISP on emulated iron for Micropolis AI Drag Race"
@@ -55,6 +57,7 @@ sources:
   blogs: []
 
 ties_to:
+  - { path: pdp7-development.yml, why: "PDP-7 manuals, macro7/as7, Lars SIMH forks to clone for PIXIE segment" }
   - { path: ../heinz-lemke/, why: "PIXIE show co-guest — PDP-7 + Type 340 emulation segment on pixie-pie-menus-pdp7.yml" }
   - ../thomas-cherryhomes/CHARACTER.yml
   - ../../process/pdp10-its-stack.yml

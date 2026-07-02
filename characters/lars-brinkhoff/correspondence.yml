@@ -1,0 +1,60 @@
+# Lars Brinkhoff × Don Hopkins — correspondence summary (public-safe)
+# Tight public-safe digest. NOT the full private thread.
+# Standards: ../../schemas/portrayal-standards.yml
+
+meta:
+  with: lars-brinkhoff
+  curated_by: don-hopkins
+  consent: not_yet_asked
+  span: "2026-07 — PIXIE Repo Show invitation response"
+  provenance_private: DonHopkins email (lars@nocrew.org)
+
+gist: |
+  Lars replied **yes/later** to the PIXIE trio invitation — interesting, but heading into Swedish
+  July vacation (much of Sweden offline for the month). Not sure what he can contribute; prefers
+  unprepared/rambling format with someone prodding him. SIMH PDP-7 **340 device is ok**; light pen
+  may not be available yet — thinks it would be an **easy addition**. Can make **PDP-7 munching
+  squares** — he recently revised his PDP-10 Type 340 and Knight TV versions; linked YouTube
+  munching-squares video is gone but survives on web archive.
+
+  Don pivoted production to **async 1-on-1 recordings** interlinked in post — rich intertwingled
+  tapestry instead of one live group call across time zones.
+
+threads:
+  pixie_invitation_response:
+    date: "2026-07-02"
+    response: yes_later
+    constraints:
+      - "Swedish July vacation — much of Sweden offline for the month"
+    format_preference: "Unprepared/rambling — not naturally talkative; needs prodding on air"
+    technical:
+      simh_pdp7_340: "340 device for SIMH PDP-7 is ok"
+      light_pen: "May not be available yet — likely an easy addition"
+      munching_squares: |
+        PDP-7 munching squares video link dead; web archive still has it. Lars revised PDP-10
+        Type 340 + Knight TV munching squares; can port to PDP-7.
+    don_async_pivot:
+      date: "2026-07-03"
+      what: |
+        Async 1-on-1 videos whenever convenient; Don interlinks directories, artifacts, and cuts in
+        post. Presumes most Cambridge PDP-7 software lost (separate preservation project if found).
+        Segment hooks: light pen + networking hardware research; implement/test PDP-7 code;
+        label-target light-pen pie menus even without float trig; Engelbart mouse/keyset on PDP-10;
+        emulator mouse→light-pen interpolation; discuss designs on air, ship code later or demo if done.
+      outbound_draft: characters/lars-brinkhoff/outbound-2026-07-03-async-pivot.md
+
+show_hooks:
+  - "SIMH PDP-7/340 boot path — 340 ok, light pen as easy add-on"
+  - "PDP-7 munching squares — Lars can build from revised PDP-10/Knight TV code"
+  - "Mouse → light pen interpolation in emulator — design interview, optional deliverable"
+  - "Label-target light-pen pie menus without float trig libraries"
+  - "Engelbart mouse + keyset on PDP-10 — how did the hardware attach?"
+  - "Unprepared/rambling segment — Don prods, Lars demonstrates"
+
+connects_in_repo:
+  - { path: invitation.md, why: "PIXIE trio invitation (group format superseded by async pivot)" }
+  - { path: ideas.md, why: "Emulation + interview hooks" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Show seed — async production model" }
+  - { path: ../heinz-lemke/correspondence.yml, why: "Trio invitation thread" }
+  - { path: ../david-rosenthal/correspondence.yml, why: "Trio logistics + scope" }
+  - { path: ../douglas-engelbart/, why: "Mouse + keyset PDP-10 hook" }

@@ -1,0 +1,114 @@
+# lars-brinkhoff — reference media (PDP-7 + Type 340 / Cambridge PIXIE stack)
+# Standards: ../../../../schemas/portrayal-standards.yml
+
+character: lars-brinkhoff
+purpose: "PIXIE emulation segment — local DEC manuals + Cambridge hardware map"
+acquired: "2026-07-03"
+artifact_count: 14
+hardware_stack: cambridge-pixie-hardware-stack.yml
+
+artifacts:
+  - file: dec-7-13-type-340-display-programming-manual.pdf
+    kind: manual
+    title: "7-13 Type 340 Display Programming Manual"
+    pages: 30
+    priority: essential
+    source_url: http://bitsavers.trailing-edge.com/pdf/dec/graphics/7-13_340_Display_Programming_Manual.pdf
+    sidecar: dec-7-13-type-340-display-programming-manual.yml
+
+  - file: dec-h-340-type-340-system-nov64.pdf
+    kind: manual
+    title: "H-340 Type 340 Precision Incremental CRT System"
+    pages: 139
+    priority: essential
+    source_url: http://bitsavers.trailing-edge.com/pdf/dec/graphics/H-340_Type_340_Precision_Incremental_CRT_System_Nov64.pdf
+    topics: [vector_display, light_pen, character_mode, 342_option, dma]
+
+  - file: pdp7-f-75p-reference-manual-dec64.pdf
+    kind: manual
+    title: "F-75P PDP-7 Reference Manual"
+    pages: 154
+    priority: essential
+    source_url: http://bitsavers.trailing-edge.com/pdf/dec/pdp7/F-75P_PDP7prelimUM_Dec64.pdf
+
+  - file: pdp7-f-75-users-handbook-jun65.pdf
+    kind: manual
+    title: "F-75 PDP-7 Users Handbook"
+    pages: 220
+    priority: essential
+    source_url: http://bitsavers.trailing-edge.com/pdf/dec/pdp7/F-75_PDP-7userHbk_Jun65.pdf
+
+  - file: pdp7-decsys-7-operating-manual.pdf
+    kind: manual
+    title: "DECSYS-7 Operating Manual"
+    pages: 43
+    priority: high
+    source_url: http://bitsavers.trailing-edge.com/pdf/dec/pdp7/DECSYS-7_OperMan.pdf
+
+  - file: pdp7-assembly-language-manual.pdf
+    kind: manual
+    title: "PDP-7 Assembly Language Manual"
+    pages: 55
+    priority: essential
+    source_url: http://bitsavers.trailing-edge.com/pdf/dec/pdp7/PDP-7_AsmMan.pdf
+
+  - file: pdp7-instruction-list.pdf
+    kind: reference
+    title: "PDP-7 Instruction List"
+    priority: high
+    source_url: http://bitsavers.trailing-edge.com/pdf/dec/pdp7/PDP7_Instruction_list.pdf
+
+  - file: pdp7-interface-manual.pdf
+    kind: manual
+    title: "PDP-7 Interface Manual"
+    pages: 100
+    priority: essential
+    source_url: http://bitsavers.trailing-edge.com/pdf/dec/pdp7/PDP-7_InterfMan.pdf
+    topics: [device_io, display_interface, pdp7_to_340]
+
+  - file: pdp7-rim-loader-jul65.pdf
+    kind: manual
+    title: "DIGITAL 7-13-I RIM Loader"
+    pages: 3
+    priority: high
+    source_url: http://bitsavers.trailing-edge.com/pdf/dec/pdp7/DIGITAL-7-13-I_RIM_Loader_Jul65.pdf
+
+  - file: pdp7-ddt-reference.pdf
+    kind: manual
+    title: "PDP-7 DDT Reference"
+    pages: 24
+    priority: medium
+    source_url: http://bitsavers.trailing-edge.com/pdf/dec/pdp7/PDP-7_DDT_Ref.pdf
+
+  - file: pdp7-type-34-display-test-apr65.pdf
+    kind: diagnostic
+    title: "MAINDEC 7-60N Type 34 Display Test"
+    pages: 25
+    priority: medium
+    source_url: http://bitsavers.trailing-edge.com/pdf/dec/pdp7/DIGITAL-7-60-N_Type34DisplayTest_Apr65.pdf
+    note: Type 34 ≠ Type 340; related display lineage
+
+  - file: pdp7-370-light-pen-diagnostic-apr64.pdf
+    kind: diagnostic
+    title: "MAINDEC 7-78M Type 370 Light Pen Diagnostic"
+    pages: 19
+    priority: high
+    source_url: http://bitsavers.trailing-edge.com/pdf/dec/pdp7/DIGITAL-7-78-M_370LightPenDiag_Apr64.pdf
+
+  - file: dec-348-display-manual-1964.pdf
+    kind: manual
+    title: "Type 348 Display Manual (1964)"
+    pages: 25
+    priority: low
+    source_url: http://bitsavers.trailing-edge.com/pdf/dec/graphics/348_Manual_1964.pdf
+    note: Related DEC display family; scanned
+
+  - file: dec-pdp4-340-experimental-display-system.pdf
+    kind: manual
+    title: "PDP-4 Type 340 Experimental Display System"
+    pages: 98
+    priority: medium
+    source_url: http://bitsavers.trailing-edge.com/pdf/dec/graphics/PDP4-340_Experimental_Display_System.pdf
+
+missing_from_bitsavers:
+  see: cambridge-pixie-hardware-stack.yml#dec_manuals_not_on_bitsavers

@@ -1,0 +1,11 @@
+# lars-brinkhoff — media manifest
+
+character: lars-brinkhoff
+artifact_count: 14
+
+artifacts:
+  - path: reference/
+    manifest: reference/MANIFEST.yml
+    hardware_stack: reference/cambridge-pixie-hardware-stack.yml
+    count: 14
+    what: "PDP-7 CPU + Type 340 display stack manuals (Cambridge PIXIE emulation shelf)"

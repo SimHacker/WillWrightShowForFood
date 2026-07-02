@@ -16,9 +16,11 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: draft
+  status: interested_async
   consent: not_yet_asked
+  responded: "2026-07-02"
   document: invitation.md
+  correspondence: correspondence.yml
   show_seed: repo-shows/david-rosenthal/
   also_invited: repo-shows/pixie-pie-menus-pdp7.yml
 

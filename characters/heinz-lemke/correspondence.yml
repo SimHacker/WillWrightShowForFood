@@ -64,6 +64,15 @@ threads:
     what: |
       Digitized Cambridge films; CHM oral history for Heinz while first-hand PIXIE + Cambridge
       memory remains — honor Wiseman and Hiles through Heinz's voice
+  pixie_trio_invitation_2026:
+    what: |
+      July 2026 — Don sent matching PIXIE trio invitations (Heinz, Lars, David). David flagged
+      timezone/grandparent-duty logistics; Lars yes/later (Swedish July offline). Don pivoted to
+      async 1-on-1 recordings interlinked in post — intertwingled tapestry, not one live group call.
+    docs:
+      - ../lars-brinkhoff/correspondence.yml
+      - ../david-rosenthal/correspondence.yml
+      - ../../repo-shows/pixie-pie-menus-pdp7.yml#format
 
 connects_in_repo:
   - { path: CHARACTER.yml, why: "Bio + invitation status" }

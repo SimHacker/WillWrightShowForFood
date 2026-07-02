@@ -1,14 +1,17 @@
 ---
-status: draft
+status: yes_later
 character_id: lars-brinkhoff
 public: true
 consent: not_yet_asked
 show_seed: repo-shows/pixie-pie-menus-pdp7.yml
 also_invited: repo-shows/lars-brinkhoff/
 paired_guest: thomas-cherryhomes
-format: remote_or_in_person
+format: async_one_on_one
 co_guests: [heinz-lemke, david-rosenthal]
 send_batch: pixie-trio-2026
+production_note: |
+  Original invitation described one group call. July 2026 responses → async 1-on-1 recordings
+  intercut in post. See correspondence.yml and repo-shows/pixie-pie-menus-pdp7.yml#format.
 ---
 
 # Repo Show invitation — Lars Brinkhoff

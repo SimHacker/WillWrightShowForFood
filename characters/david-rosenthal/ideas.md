@@ -21,6 +21,10 @@ Same **PDP-7/340 + Titan** stack ~1970; met Wiseman; saw PIXIE-era demos. Trio w
 Brinkhoff** (emulation) — Cambridge memory + runnable iron + LOCKSS preservation arc.
 [`../../repo-shows/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7.yml)
 
+**July 2026:** David flagged timezone/grandparent-duty constraints; prefers **PDP-7/340 scope**
+on PIXIE, later history on solo show. Production pivoted to **async 1-on-1** clips — see
+[`correspondence.yml`](correspondence.yml).
+
 ### 2. Cambridge PDP-7/Titan — same stack as PIXIE
 Undergrad ~1970 on **PDP-7/340 + Titan**; met Neil Wiseman; saw early demos. Don links this to
 PIXIE's distributed CAD and proposed DSHR interview Heinz for CHM
@@ -51,6 +55,7 @@ Walk the repo on air and build from the seed.
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
+- [`correspondence.yml`](correspondence.yml)
 - [`window-systems-lineage.yml`](window-systems-lineage.yml)
 - Show seed: [`repo-shows/david-rosenthal/`](../../repo-shows/david-rosenthal/)
 - [`CHARACTER.yml`](CHARACTER.yml)

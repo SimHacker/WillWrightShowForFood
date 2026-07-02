@@ -1,0 +1,36 @@
+# Sidecar — DEC Type 340 Display Programming Manual (local copy)
+# Linked from Lars Brinkhoff PIXIE emulation segment.
+
+artifact:
+  file: dec-7-13-type-340-display-programming-manual.pdf
+  title: "7-13 Type 340 Display Programming Manual"
+  kind: manual
+
+provenance:
+  source_url: http://bitsavers.trailing-edge.com/pdf/dec/graphics/7-13_340_Display_Programming_Manual.pdf
+  mirror: bitsavers.trailing-edge.com
+  local_path: characters/lars-brinkhoff/media/reference/dec-7-13-type-340-display-programming-manual.pdf
+  acquired: "2026-07-03"
+
+what_it_is: |
+  Programming manual for the DEC Type 340 precision incremental CRT display — vector graphics,
+  display lists, light pen interface. Used with PDP-7 (and other hosts) as graphics satellite for
+  PIXIE-era Cambridge work. This is **display device** programming, not the PDP-7 CPU instruction set.
+
+pixie_hooks:
+  - "Display list — vector refresh model PIXIE ran on"
+  - "Light pen hits — ancestor of radial menu targeting"
+  - "Titan link — host/satellite split; manual covers the 340 side"
+  - "SIMH PDP-7/340 — Lars segment make-it-so reference"
+
+related_manuals:
+  pdp7_cpu:
+    note: "PDP-7 processor assembly lives in separate DEC handbooks on bitsavers (dec/pdp7/)"
+    bitsavers_index: http://bitsavers.trailing-edge.com/pdf/dec/pdp7/
+  pixie_paper:
+    url: https://www.donhopkins.com/home/documents/PIXIE%20a%20new%20approach%20to%20man-machine%20communication.pdf
+
+repo_links:
+  show: ../../../repo-shows/pixie-pie-menus-pdp7.yml
+  correspondence: ../../correspondence.yml
+  ideas: ../../ideas.md

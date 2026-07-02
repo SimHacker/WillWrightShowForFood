@@ -1,13 +1,16 @@
 ---
-status: draft
+status: interested_async
 character_id: david-rosenthal
 public: true
 consent: not_yet_asked
 show_seed: repo-shows/pixie-pie-menus-pdp7.yml
 also_invited: repo-shows/david-rosenthal/
-format: remote_or_in_person
+format: async_one_on_one
 co_guests: [heinz-lemke, lars-brinkhoff]
 send_batch: pixie-trio-2026
+production_note: |
+  Original invitation described one group call. July 2026 logistics → async 1-on-1 recordings;
+  DSHR Cambridge ~1970 on PIXIE; NeWS/X11/LOCKSS depth deferred to solo show. See correspondence.yml.
 ---
 
 # Repo Show invitation — David S. H. Rosenthal
@@ -15,9 +18,9 @@ send_batch: pixie-trio-2026
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │ REPO SHOW · MICROPOLIS CLASS · PUBLIC GITHUB STAGE                          │
-│ episode: PIXIE — Pie Menus on the PDP-7 (1969)  ·  type: group            │
+│ episode: PIXIE — Pie Menus on the PDP-7 (1969)  ·  type: group              │
 │ guest: David S. H. Rosenthal 🗄️                                             │
-│ co-guests: Heinz U. Lemke 🥧  ·  Lars Brinkhoff 🖥️                          │
+│ co-guests: Heinz U. Lemke 🥧  ·  Lars Brinkhoff 🖥️                           │
 │ host: Don Hopkins                                                           │
 │ show:  repo-shows/pixie-pie-menus-pdp7.yml                                  │
 │ room:  characters/david-rosenthal/  (+ heinz-lemke evidence room)           │

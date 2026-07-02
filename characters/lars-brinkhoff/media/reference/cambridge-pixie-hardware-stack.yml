@@ -1,0 +1,101 @@
+# Cambridge PIXIE hardware stack (~1969) + DEC reference shelf
+# PDP-7 graphics satellite ↔ Titan. Local PDFs in this directory where noted.
+
+stack:
+  host_graphics:
+    cpu: PDP-7
+    display: Type 340 Precision Incremental CRT (vector, 1024×1024, P7 phosphor)
+    options:
+      - Type 342 Symbol Generator (first 64 characters — labels/text on display)
+      - Type 370 High Speed Light Pen
+      - Type 347 Subroutine Option (display controller; RFI / "munching tunes" on living iron)
+      - Type 341 Interface (340 ↔ host; cited in 340 programming manual bibliography)
+    role: |
+      Interactive drawing on PDP-7/340 + light pen; PIXIE radial menus ("lightbuttons").
+      User at graphics console; application logic often on Titan over high-speed link.
+  remote_compute:
+    system: Titan (Cambridge Multiple Access System — Atlas-class successor)
+    role: Application programs, analysis, batch work; PDP-7 as distributed graphics terminal
+    link: Wiseman high-speed data link (Rainbow group; Lang's link software)
+    software_note: |
+      Cambridge link code and PIXIE sources largely lost — separate preservation project.
+      See ../../../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md · cucps Titan docs (web).
+
+dec_manuals_local:
+  programming_340:
+    file: dec-7-13-type-340-display-programming-manual.pdf
+    title: "7-13 Type 340 Display Programming Manual (DECUS)"
+    pages: 30
+    priority: essential
+  hardware_340:
+    file: dec-h-340-type-340-system-nov64.pdf
+    title: "H-340 Type 340 Precision Incremental CRT System"
+    pages: 139
+    priority: essential
+  pdp7_cpu:
+    - file: pdp7-f-75p-reference-manual-dec64.pdf
+      title: "F-75P PDP-7 Reference Manual"
+    - file: pdp7-f-75-users-handbook-jun65.pdf
+      title: "F-75 PDP-7 Users Handbook"
+    - file: pdp7-decsys-7-operating-manual.pdf
+      title: "DECSYS-7 Operating Manual"
+    - file: pdp7-assembly-language-manual.pdf
+      title: "PDP-7 Assembly Language Manual"
+    - file: pdp7-instruction-list.pdf
+      title: "PDP-7 Instruction List (quick reference)"
+  pdp7_io:
+    - file: pdp7-interface-manual.pdf
+      title: "PDP-7 Interface Manual (device I/O, display attachment)"
+    - file: pdp7-rim-loader-jul65.pdf
+      title: "RIM Loader (load assembled programs into SIMH)"
+    - file: pdp7-ddt-reference.pdf
+      title: "PDP-7 DDT Debugger Reference"
+  display_related:
+    - file: pdp7-type-34-display-test-apr65.pdf
+      title: "MAINDEC 7-60N Type 34 Display Test (earlier display family)"
+      note: Lars open-simh branch lars/pdp7-type34; not the same as Type 340
+    - file: pdp7-370-light-pen-diagnostic-apr64.pdf
+      title: "MAINDEC 7-78M Type 370 Light Pen Diagnostic"
+    - file: dec-348-display-manual-1964.pdf
+      title: "Type 348 Manual (1964)"
+      note: Related DEC display family; scanned images
+    - file: dec-pdp4-340-experimental-display-system.pdf
+      title: "PDP-4 / Type 340 Experimental Display System"
+      note: Context for 340 architecture evolution
+
+dec_manuals_not_on_bitsavers:
+  cited_by_340_programming_manual:
+    - id: H-342
+      title: "342 Symbol Generator Technical Manual"
+      status: not_found_on_bitsavers_trailing_edge_2026-07
+      pixie_relevance: Character labels on radial menus
+    - id: F-03-370
+      title: "370 High Speed Light Pen (Computer Options)"
+      status: not_found_on_bitsavers_trailing_edge_2026-07
+      partial: pdp7-370-light-pen-diagnostic-apr64.pdf
+    - id: memo-341-347
+      title: "Type 341 Interface and Type 347 Subroutine Options (Bill Long, 1964-08-18)"
+      status: not_found_on_bitsavers_trailing_edge_2026-07
+    - id: drawing-A342
+      title: "342 Shift-In First 64 Character Generator drawing #A342-0-9"
+      status: not_found_on_bitsavers_trailing_edge_2026-07
+
+cambridge_software_and_papers:
+  - title: "PIXIE paper (1969 CAD Conference)"
+    url: https://www.donhopkins.com/home/documents/PIXIE%20a%20new%20approach%20to%20man-machine%20communication.pdf
+    local: false
+  - title: "Titan / PDP-7 link software notes"
+    url: https://cucps.soc.srcf.net/titan/supplan/pd10.htm
+    local: false
+  - title: "Cambridge Lab EDSAC99 history (PDP-7/Titan CAD)"
+    url: https://www.cl.cam.ac.uk/events/EDSAC99/history.html
+    local: false
+  - title: "1969 PIXIE films (Chapman digitization)"
+    url: https://www.cl.cam.ac.uk/library/archives.html
+    local: false
+
+bitsavers_indexes:
+  pdp7: http://bitsavers.trailing-edge.com/pdf/dec/pdp7/
+  graphics: http://bitsavers.trailing-edge.com/pdf/dec/graphics/
+
+show: repo-shows/pixie-pie-menus-pdp7.yml

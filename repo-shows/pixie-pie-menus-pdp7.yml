@@ -77,19 +77,27 @@ history:
   flight_of_pixie: "Don's Bumblebee edit — only possible after Chapman published the digitized films."
   youtube: "https://www.youtube.com/watch?v=jDrqR9XssJI"
   evidence_room: characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md
-  type_340_manual: "http://bitsavers.trailing-edge.com/pdf/dec/graphics/7-13_340_Display_Programming_Manual.pdf"
+  type_340_manual: "characters/lars-brinkhoff/media/reference/dec-7-13-type-340-display-programming-manual.pdf"
+  type_340_manual_bitsavers: "http://bitsavers.trailing-edge.com/pdf/dec/graphics/7-13_340_Display_Programming_Manual.pdf"
+  type_340_manual_sidecar: "characters/lars-brinkhoff/media/reference/dec-7-13-type-340-display-programming-manual.yml"
+  pdp7_handbooks_index: "http://bitsavers.trailing-edge.com/pdf/dec/pdp7/"
   living_pdp7_340: "https://www.youtube.com/watch?v=V4oRHv-Svwc"
+  living_pdp7_340_archive: "Web archive copy if YouTube link dead — see lars-brinkhoff/correspondence.yml"
 
 why_these_buds:
   lars_brinkhoff:
     preservation: "PDP-10/ITS restoration lead; SIMH toolchain hacker; make-it-so on stream."
     pixie_fit: "Maps Type 340 vector display + light pen to emulators we can ship in the repo."
     segment_goal: "Boot PDP-7/340 (or closest faithful rig); demo radial menus runnable today."
+    invitation_status: "yes_later (2026-07 — Swedish July vacation)"
+    correspondence: characters/lars-brinkhoff/correspondence.yml
   david_rosenthal:
     cambridge: "Undergrad ~1970 on same PDP-7/340 + Titan; met Wiseman; saw PIXIE-era demos."
     lineage: "PIXIE distributed GUI → Andrew → NeWS → X11/ICCCM — rare witness to both sides of the window-system wars."
     preservation: "LOCKSS chief scientist — films, papers, and runnable emulators as one preservation story."
     chm_hook: "Don proposed DSHR interview Heinz for Computer History Museum oral history."
+    invitation_status: "interested — async; PDP-7/340 scope only; later history → solo show"
+    correspondence: characters/david-rosenthal/correspondence.yml
 
 interview_center:
   chapman_films_bumblebee:
@@ -127,13 +135,33 @@ interview_center:
       - "Living hardware vs emulator — Munching Squares on PDP-7/340; what transfers to PIXIE"
       - "Titan link as distributed CAD — emulate graphics satellite first, batch link later?"
       - "Make-it-so deliverable: rig yaml + SETUP.md forkable from repo-shows/lars-brinkhoff/"
+      - "Cambridge PDP-7 software likely lost — research hardware (light pen, networking) and implement test code"
+      - "Label-target light-pen pie menus without float trig — vs mouse slice targeting"
+      - "Mouse → light pen interpolation in emulator — design on air, code later or demo if done"
+      - "Engelbart mouse + keyset on PDP-10 — how did the hardware attach?"
     homefun: "Boot closest faithful stack; one radial-menu interaction captured on stream"
 
 format:
-  live: true
+  live: false
+  async_one_on_one: true
+  production_model: |
+    Record separate 1-on-1 video calls whenever each bud is available (no synchronized group
+    session required). Don interlinks character directories, artifacts, and clips; post-production
+    cuts an intertwingled tapestry — each bud shares, watches what others shared, responds on their
+    own recording. Supersedes original "same call" invitation wording (July 2026 logistics pivot).
   audience_qa: true
-  production_style: "Relaxed Studio Session (recorded video call) or Live Twitch Event."
-  notes: "Open with buds introductions (telecine slates). Heinz bud leads history; DSHR bud holds Cambridge ~1970 + lineage; Lars bud leads emulation. Intercut 1969 film + live emulator. Honor Wiseman and Hiles."
+  production_style: "Async Studio Sessions (recorded 1-on-1) → intercut in post; optional live Twitch for segments."
+  notes: |
+    Open with bud introductions (telecine slates). Heinz bud leads history; DSHR bud holds Cambridge
+    ~1970 + lineage (short segment — defer NeWS/X11 depth to david-rosenthal solo show); Lars bud
+    leads emulation. Intercut 1969 film + live emulator + cross-references between async clips.
+    Honor Wiseman and Hiles.
+  logistics_2026:
+    lars_brinkhoff: "Yes/later — Swedish July vacation; unprepared/rambling format OK"
+    david_rosenthal: "Grandparent duty through 2026-08-17; 9h from Amsterdam; PDP-7/340 only on PIXIE"
+    correspondence:
+      - characters/lars-brinkhoff/correspondence.yml
+      - characters/david-rosenthal/correspondence.yml
   on_stream_wardrobe:
     host: "Don wears one of Lars Brinkhoff's retrocomputing tees — github.com/larsbrinkhoff/t-shirts (e.g. LISP MACHINE MANUAL; see characters/don-hopkins/media.md)"
     buds: "Lars or co-buds may wear their own from the same emporium if they like"
