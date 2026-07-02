@@ -20,10 +20,22 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/david-rosenthal/
-
+  also_invited: repo-shows/pixie-pie-menus-pdp7.yml
 
 bio:
-  summary: "**David S. H. Rosenthal (DSHR)** — Co-developer of **NeWS** with James Gosling at Sun (co-author of *The NeWS Book*), and — uniquely — also a key architect of its winning rival **X11** (he wrote the **ICCCM** and holds an X security patent). Worked on **Andrew** at CMU with Gosling; **employee #4 and chief scientist at Nvidia**; then **Chief Scientist of LOCKSS** (Lots Of Copies Keep Stuff Safe) at Stanford Libraries — long-term **digital preservation** (2025 Paul Evan Peters Award). Born 1948, "
+  summary: |
+    **David S. H. Rosenthal (DSHR)** — Co-developer of **NeWS** with James Gosling at Sun
+    (co-author of *The NeWS Book*), and — uniquely — also a key architect of its winning rival
+    **X11** (he wrote the **ICCCM** and holds an X security patent). Worked on **Andrew** at CMU
+    with Gosling; **employee #4 and chief scientist at Nvidia**; then **Chief Scientist of LOCKSS**
+    at Stanford Libraries — long-term **digital preservation** (2025 Paul Evan Peters Award).
+    Cambridge undergrad ~1970 on **PDP-7/340 + Titan** — same stack as PIXIE.
+
+see_also:
+  - { path: ../heinz-lemke/invitation.md, why: "Co-guest on PIXIE show — same Cambridge PDP-7/Titan ~1970" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Group show with Heinz + Lars Brinkhoff" }
+  - { path: ../lars-brinkhoff/, why: "Co-guest — emulation segment on same show" }
+  - { path: ../james-gosling/, why: "NeWS reunion lineage" }
 
 sources:
   wikipedia: "https://en.wikipedia.org/wiki/David_S._H._Rosenthal"

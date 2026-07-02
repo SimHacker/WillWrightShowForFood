@@ -20,6 +20,7 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/pixie-pie-menus-pdp7.yml
+  co_guests: [lars-brinkhoff, david-rosenthal]
   note: "ASAP priority — preserve first-hand PIXIE + Cambridge + CARS history"
 
 bio:
@@ -41,7 +42,9 @@ sources:
       url: "https://www.donhopkins.com/home/documents/PIXIE%20a%20new%20approach%20to%20man-machine%20communication.pdf"
 
 see_also:
-  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Solo PIXIE interview show seed" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Group show — Heinz + Lars + David Rosenthal" }
+  - { path: ../lars-brinkhoff/, why: "Co-guest — Type 340 display, SIMH, make PIXIE runnable today" }
+  - { path: ../david-rosenthal/, why: "Co-guest — same Cambridge PDP-7/Titan ~1970; NeWS/X11 lineage" }
   - { path: ../../repo-shows/INDEX.yml, why: "ben-and-heinz-pie-menus.yml group seed" }
   - { path: ../don-hopkins/pie-menus-chi-88-and-beyond.md, why: "Don credits PIXIE; does not claim invention" }
   - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

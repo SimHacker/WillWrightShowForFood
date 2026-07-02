@@ -11,6 +11,11 @@ David S. H. Rosenthal (DSHR) — Co-developer of NeWS with James Gosling at Sun 
 
 ## The hooks
 
+### 1. Co-guest on Heinz Lemke's PIXIE show
+Same **PDP-7/340 + Titan** stack ~1970; met Wiseman; saw PIXIE-era demos. Trio with **Lars
+Brinkhoff** (emulation) — Cambridge memory + runnable iron + LOCKSS preservation arc.
+[`../../repo-shows/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7.yml)
+
 ### 2. Cambridge PDP-7/Titan — same stack as PIXIE
 Undergrad ~1970 on **PDP-7/340 + Titan**; met Neil Wiseman; saw early demos. Don links this to
 PIXIE's distributed CAD and proposed DSHR interview Heinz for CHM ([`../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md`](../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md)).

@@ -5,74 +5,166 @@ public: true
 consent: not_yet_asked
 show_seed: repo-shows/pixie-pie-menus-pdp7.yml
 format: remote_or_in_person
+co_guests: [lars-brinkhoff, david-rosenthal]
 ---
 
 # Repo Show invitation — Heinz U. Lemke
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ REPO SHOW · MICROPOLIS CLASS · PUBLIC GITHUB STAGE                          │
+│ guest: Heinz U. Lemke 🥧                                                    │
+│ co-guests: Lars Brinkhoff 🖥️  ·  David S. H. Rosenthal 🗄️                   │
+│ host: Don Hopkins                                                           │
+│ show:  repo-shows/pixie-pie-menus-pdp7.yml                                  │
+│ room:  characters/heinz-lemke/  (+ cambridge-films-flight-of-the-bumblebee) │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
 
 *Send-ready draft — not yet sent. Heinz U. Lemke may edit, decline, delay, or request removal at any time.*  
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.yml)
 
 Heinz —
 
-We've been writing back and forth for years now — PIXIE history, the Cambridge films (digitized
-by **David Chapman** at Cambridge Univ Library), my *Flight of the PIXIE* homage to you and your
-co-authors — Yuja Wang's *Flight of the Bumblebee* over clips from the 1969 film, telling how
-pie-menu interaction is like rapid bumblebee flight — the Black Forest farmhouse and church bells
-Mario's patient-modelling video, CARS and **model-guided medicine**, Will Wright's modelling
-talk, the Berlin workshop ideas. I treasure that correspondence. I also know how much first-hand
-history still lives only in your memory — and I don't want it to stay there.
+We've been writing back and forth for years now, and I still feel we have only scratched the
+surface. **David Chapman** at Cambridge University Library finally got the 1969 PIXIE films
+online — after more than a decade of dead ends — and that made my [*Flight of the PIXIE*](https://www.youtube.com/watch?v=jDrqR9XssJI)
+edit possible: Yuja Wang's *Flight of the Bumblebee* over your radial menus, because pie-menu
+interaction really is that fast. You are *in* that footage. We've also traded notes on the Black
+Forest farmhouse, Mario's patient-modelling video, **CARS** and model-guided medicine, Will
+Wright's modelling talk, Berlin workshop ideas, the line from graphical man-machine
+communication at Cambridge to the work you lead today, and your historic tour of American labs.
+
+I treasure that correspondence. I also know how much first-hand history still lives only in your
+memory — Neil Wiseman, John Hiles, the lab culture, the US trip, what the light pen actually
+felt like — and I don't want it to stay there.
 
 I'd like to invite you to a **Repo Show** — a Micropolis Class conversation whose stage is a
 public GitHub repo, recorded as a relaxed video call. Not a lecture from me: an interview where
 **you** tell the story, with the 1969 film and paper on screen when they help. **Show, don't tell**
 — but the show is *your* PIXIE, Cambridge, and CARS arc, told by the person who was there.
 
-**Proposed episode:** *PIXIE: Pie Menus on the PDP-7 (1969)* — from graphical man-machine
-communication at Cambridge through your medical-computing career to today.
+**Proposed episode:** *PIXIE: Pie Menus on the PDP-7 (1969)* — from distributed CAD on
+**PDP-7 + Type 340** ↔ **Titan** through your medical-computing career to today.
 
 I do **not** claim to have invented pie menus. I studied them, implemented them, evaluated them
-at CHI'88, and shipped them for decades — always knowing **PIXIE** came first, with you, Neil
-Wiseman, and John Hiles. This show is about honoring that root honestly.
+at CHI'88 with Ben Shneiderman, and shipped them for decades — always knowing **PIXIE** came
+first, with you, Neil Wiseman, and John Hiles. This show is about honoring that root honestly.
 
-**What I'd love to hear from you — your pick, any order, skip whatever tires you:**
+---
 
-- **Neil Wiseman** — what he was like to work with, technically and personally; the lab culture
-  behind PIXIE.
-- **Cambridge in the late 1960s** — the CAD/HCI zeitgeist, PDP-7/Titan distributed graphics, light pen workflow,
-  why you made a *film* to accompany the paper.
-- **Your US research-lab trip** — who you met, what you saw, what traveled back to Cambridge.
-- **From PIXIE to CARS** — graphical man-machine communication for design → model-guided medicine;
-  patient-specific modelling; how you see the continuity.
-- **Preserving the record** — the digitized Cambridge films, [*Flight of the PIXIE*](https://www.youtube.com/watch?v=jDrqR9XssJI),
-  and (if you're willing) planting seeds for a **Computer History Museum** oral history — Neil
-  and John deserve to be remembered through your voice.
+## What I'd love to explore with you — your pick, any order, skip whatever tires you
 
-**Format:** Remote is perfect — Bechtersbohl and Amsterdam are both real places on the internet.
-In-person if I ever get to visit the farmhouse properly. **Zero homework.** Warm room, not
-gotcha-journalism. We can do English or German as you prefer; captions either way.
+### The films came back
 
-**Materials already waiting for you:**
+- **David Chapman** — his detective work through the Rainbow group, St John's, the lab librarian;
+  what it meant when the 1969 films finally went online in July 2019.
+- ***Flight of the PIXIE*** — my Bumblebee edit on Chapman's digitized telecine; who is in the
+  footage; how fast the radial menus really were; production craft (motion tracking to match
+  telecine jiggle — the [HN thread](https://news.ycombinator.com/item?id=22718422) if you're curious).
+- **Preservation** — digitized archive, YouTube homage, and (if you're willing) planting seeds for
+  a **Computer History Museum** oral history — Wiseman and Hiles remembered through your voice.
+
+### The people behind the paper
+
+- **Neil E. Wiseman** — what he was like to work with, technically and personally; lab culture;
+  design judgment; don't let him collapse into a citation header.
+- **John O. Hiles** — same; the co-authors deserve names and stories, not just IEEE Conf. Pub. 51.
+
+### Cambridge, late 1960s — the iron and the zeitgeist
+
+- **PDP-7 + Type 340 display + light pen** — graphics satellite to **Titan**; you drew on the
+  PDP-7, applications ran on Titan over Wiseman's high-speed link; nightly workflow in your own words.
+- **Rainbow group / distributed CAD** — interactive drawing here, analysis there; one of the first
+  distributed CAD architectures; who else made it possible?
+- **Why a film?** — graphical man-machine communication before PowerPoint; demonstrating radial
+  menus to people who had never seen anything like it.
+
+### Across the Atlantic
+
+- **Your US research-lab trip** — who you met, what systems you saw, what traveled back to Cambridge.
+- ***Electronics* magazine (April 28, 1969)** — John Gilmore sent me a scan of the McGraw-Hill
+  article with a photo of young you at the PDP-7; you wanted a high-res copy. **I'd love you to
+  tell that story on air** — the trip, the magazine, the photo.
+
+### Same machine, different years — with David Rosenthal
+
+**David S. H. Rosenthal (DSHR)** was an undergraduate at Cambridge ~1970 on the **same PDP-7/340 +
+Titan** stack you used for PIXIE. He met **Neil Wiseman**, saw demos from that era, and later
+co-built **NeWS** with Gosling *and* architected **X11** (ICCCM) — so he carries both the
+Cambridge memory and the networked-window-system lineage PIXIE foreshadowed. I'd like him on the
+call with us:
+
+- What did the lab feel like from your side vs his — same iron, different moment in time?
+- Wiseman from two perspectives.
+- **PIXIE → Andrew → NeWS → X11** — distributed graphics as through-line (not a lecture from me).
+- **LOCKSS** meets film archive meets runnable emulator — one preservation conversation.
+
+(Don once suggested David interview you for a **Computer History Museum** oral history — still a
+good idea if you're both willing.)
+
+### Runnable iron today — with Lars Brinkhoff
+
+**Lars Brinkhoff** (PDP-10/ITS restoration, SIMH, preservation hacker) would join for a co-segment:
+you hold the lived memory; he maps **Type 340 vector display programming** and the light pen to
+emulators we can boot on stream. Goal: not just film archaeology — **radial menus demonstrably
+runnable again**. Lars walks the [Type 340 manual](http://bitsavers.trailing-edge.com/pdf/dec/graphics/7-13_340_Display_Programming_Manual.pdf);
+you correct our mental model from the console.
+
+### PIXIE → CARS — one life arc
+
+- From graphical man-machine communication for **design** → model-guided **medicine** today.
+- Patient-specific modelling, CARS congress, ICCAS — how *you* see the continuity (not my summary).
+
+### Later (optional second episode)
+
+- Group show with **Ben Shneiderman** — 1969 PIXIE → 1988 CHI empirical study → forty years of
+  shipping pie menus. Seed: `ben-and-heinz-pie-menus.yml`. No pressure; solo with you is plenty.
+
+---
+
+## Format
+
+Remote is perfect — Bechtersbohl, Gothenburg, Menlo Park, and Amsterdam are all real places on
+the internet. **David** and **Lars** join as co-guests (same call, or short follow-ups if that's
+easier — your call). In-person if I ever get to visit the farmhouse properly.
+
+**Zero homework.** Warm room, not gotcha-journalism. English or German as you prefer; captions either way.
+We can intercut the 1969 film, the Bumblebee edit, Cambridge memories from David, and a live
+emulator window if Lars gets iron booting.
+
+---
+
+## Materials already waiting for you
 
 | If you're curious about… | Link |
 | --- | --- |
-| **Show seed** (interview outline) | [`repo-shows/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7.yml) |
-| **Your guest page** | [`characters/heinz-lemke/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/heinz-lemke) |
-| **Conversation hooks** | [`ideas.md`](ideas.md) |
+| **Show seed** (full interview outline) | [`repo-shows/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7.yml) |
+| **Your guest README** | [`characters/heinz-lemke/README.md`](README.md) |
+| **Evidence room** — Chapman → films → Bumblebee | [`cambridge-films-flight-of-the-bumblebee.md`](cambridge-films-flight-of-the-bumblebee.md) |
+| **Conversation hooks** (same topics, shorter) | [`ideas.md`](ideas.md) |
+| **Correspondence digest** | [`correspondence.yml`](correspondence.yml) |
+| **Co-guest David** (same PDP-7/Titan ~1970) | [`../david-rosenthal/README.md`](../david-rosenthal/README.md) |
+| **Co-guest Lars** (PDP-7/340 emulation) | [`../lars-brinkhoff/README.md`](../lars-brinkhoff/README.md) |
 | **Don's pie-menu thread** (PIXIE credited) | [`../don-hopkins/pie-menus-chi-88-and-beyond.md`](../don-hopkins/pie-menus-chi-88-and-beyond.md) |
+| ***Flight of the PIXIE*** (YouTube) | [youtube.com/watch?v=jDrqR9XssJI](https://www.youtube.com/watch?v=jDrqR9XssJI) |
 | **PIXIE paper** (PDF) | [donhopkins.com — PIXIE](https://www.donhopkins.com/home/documents/PIXIE%20a%20new%20approach%20to%20man-machine%20communication.pdf) |
+| **Cambridge film archive** | [cl.cam.ac.uk/library/archives.html](https://www.cl.cam.ac.uk/library/archives.html) |
 | **The whole Repo Show project** | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |
 
 Browse without a GitHub account — start at the [README](https://github.com/SimHacker/WillWrightShowForFood).
+
+---
 
 **Your response:** yes, later, too busy, or no — all honored gracefully. You've already given me
 more history than I had any right to hope for in email; there's no pressure, only an open door if
 recording your memories while we still can sounds worthwhile.
 
 It would be an honor to help your story reach the people building interfaces today — most of whom
-have never heard that radial menus were already on a PDP-7 in 1969.
+have never heard that radial menus were already on a **PDP-7** in 1969.
 
 — Don Hopkins *(the User Interface Flower Child)* 🥧🌀
 
-`🥧 PIXIE 1969` · `📽️ Flight of the PIXIE` · `🏥 PIXIE → CARS` · `🌲 Black Forest → the record`
+`🥧 PIXIE 1969` · `📽️ Chapman → Bumblebee` · `🖥️ Lars: emulate it` · `🗄️ DSHR: same machine` · `🏥 PIXIE → CARS`
 
-*P.S. — If a shorter phone call first is easier, say the word. We can schedule the show after you're comfortable.*
+*P.S. — If a shorter phone call first is easier, say the word. David and Lars can join only for their segments if that's less overwhelming.*

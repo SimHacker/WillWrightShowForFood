@@ -53,13 +53,15 @@ connects_in_repo:
   - { path: CHARACTER.yml, why: "Bio + invitation status" }
   - { path: cambridge-films-flight-of-the-bumblebee.md, why: "Chapman + Rosenthal + production + HN index" }
   - { path: pull-in-gaps.yml, why: "Assets to pull in (Gosling PDP-8 photo, magazine PDFs, etc.)" }
-  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Solo PIXIE show seed" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "PIXIE show — Heinz + Lars Brinkhoff PDP-7/340 emulation" }
   - { path: ../don-hopkins/pie-menus-chi-88-and-beyond.md, why: "PIXIE credited; Don does not claim invention" }
+  - { path: ../lars-brinkhoff/, why: "Co-guest — PDP-7/340 emulation segment" }
   - { path: ../david-rosenthal/, why: "Same Cambridge PDP-7/Titan; possible CHM interviewer" }
 
 show_hooks:
   - "Neil Wiseman — lab culture, design judgment, personal memory"
-  - "David Rosenthal — same Cambridge PDP-7/Titan; DSHR interview Heinz?"
+  - "Lars Brinkhoff — PDP-7 + Type 340 + light pen; emulate PIXIE on stream"
+  - "David Rosenthal — same Cambridge PDP-7/Titan ~1970; PIXIE → NeWS/X11; CHM oral history"
   - "Cambridge late 1960s + US research-lab trip"
   - "PIXIE → CARS continuity — graphical interaction to model-guided medicine"
   - "CHM oral history — if Heinz is willing"

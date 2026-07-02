@@ -23,6 +23,17 @@ DSHR was at Cambridge ~1970 on the **same PDP-7/340 + Titan** stack; met Wiseman
 demos. Don wanted DSHR to interview Heinz for CHM. Tie to NeWS reunion + networked-UI lineage.
 [`../david-rosenthal/`](../david-rosenthal/)
 
+### 0d. David Rosenthal — co-guest on the show
+**David S. H. Rosenthal** joins as co-guest (not optional): same **PDP-7/340 + Titan** ~1970,
+met Wiseman, **PIXIE → NeWS/X11** lineage, **LOCKSS** preservation. Trio with Lars.
+[`../david-rosenthal/`](../david-rosenthal/)
+
+### 0c. Lars Brinkhoff — emulate the PDP-7 + Type 340 today
+**Lars Brinkhoff** joins for the hardware segment: Type 340 vector display, light pen, SIMH /
+preservation toolchain — *make PIXIE runnable again on stream*. Heinz remembers what it felt like;
+Lars maps the manual to emulators. [`../lars-brinkhoff/`](../lars-brinkhoff/) ·
+[Type 340 manual](http://bitsavers.trailing-edge.com/pdf/dec/graphics/7-13_340_Display_Programming_Manual.pdf)
+
 ### 1. Neil Wiseman — the person behind the citation
 Lab culture, leadership, design judgment. Don't let Wiseman collapse into a paper header.
 

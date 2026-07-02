@@ -27,6 +27,10 @@ emulated AI Lab meets real retro on the wire (FujiNet, IRATA.ONLINE, PLATO). Joi
 or tag-team episode: Lars boots ITS; Thomas connects the tree fort. Same preservation ethos,
 different buses.
 
+**Also invited for:** [**Heinz U. Lemke's PIXIE show**](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/pixie-pie-menus-pdp7.yml) —
+you join as co-guest with **David Rosenthal** (same Cambridge PDP-7/Titan ~1970; NeWS/X11 lineage).
+Heinz holds lived PIXIE memory; David holds the ~1970 stack; you map **Type 340** to emulators.
+
 **Materials:** [`repo-shows/lars-brinkhoff/`](../../repo-shows/lars-brinkhoff/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).

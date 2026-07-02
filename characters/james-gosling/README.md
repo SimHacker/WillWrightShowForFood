@@ -1,5 +1,18 @@
 # James Gosling ☕
 
+![Very young James Gosling, arms crossed, satisfied, in front of his PDP-8 hotrod — DEC front panel, DECtape drives, rack-mounted iron (mid-1970s, Don Hopkins archive)](media/gosling-young-pdp8-hotrod.png)
+
+*Mid-1970s — Don Hopkins archive.* A very young **James Gosling**: handsome fellow, arms crossed,
+direct eye contact, thick rectangular glasses, wide-collar pink shirt — and that **satisfied**
+look. He sits in front of his **PDP-8 hotrod muscle car**, not a glass-room timeshare terminal but
+*racks he can touch*: DEC front-panel switches and indicator lamps, dual **DECtape** drives (reels
+labeled 0 and 7), patch bays and modules stacked behind him. Warm faded print grain; interior lab
+light. The expression of someone who already knows what the iron can do — the same through-line as
+**Gosling Emacs**, **NeWS**, and **Java**: sit at the console, write the language, ship the system.
+
+Metadata: [`media/gosling-young-pdp8-hotrod.yml`](media/gosling-young-pdp8-hotrod.yml) ·
+contrast with Cambridge **PDP-7/Titan** PIXIE: [`../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md`](../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md)
+
 ```
     ┌─────────────────────────────────────────────────────────────────┐
     │  G O S L I N G   E M A C S  ──►  N e W S  ──►  J a v a          │
@@ -22,35 +35,6 @@ Invitation portrayal — **not** James Gosling. [Standards](../../schemas/portra
 | **Show prep** | [ideas.md](ideas.md) |
 | **Media** | [media/README.md](media/README.md) |
 | **Show seed** | [repo-shows/james-gosling/](../../repo-shows/james-gosling/README.md) |
-
----
-
-## The satisfied kid at the switches
-
-```
-         DECtape ○7          DECtape ○0
-              ┌───┐            ┌───┐
-    ┌─────────┴───┴────────────┴───┴─────────┐
-    │ ░░▓▓░░▓▓░░  PDP-8 front panel  ░░▓▓░░ │
-    │  toggle · lamp · toggle · lamp · ...   │
-    │                                        │
-    │            ☕  J A M E S               │
-    │         arms crossed · glasses         │
-    │         expression: SATISFIED          │
-    │    (he knows what this hotrod does)    │
-    └────────────────────────────────────────┘
-```
-
-Don's archive photo — very young James Gosling in front of his **PDP-8 hotrod muscle car**: racks,
-DECtape, the switch panel he could actually reach. Not a glass-room timeshare terminal — *his*
-machine. Sidecar analysis: [`media/gosling-young-pdp8-hotrod.yml`](media/gosling-young-pdp8-hotrod.yml)
-· image: [`media/gosling-young-pdp8-hotrod.png`](media/gosling-young-pdp8-hotrod.png)
-
-Same through-line as NeWS and Java: **sit at the iron, write the language, ship the system.**
-
-Contrast (PIXIE thread): Cambridge **PDP-7 + Type 340** as graphics satellite to **Titan** —
-[`../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md`](../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md).
-Personal 8-bit hotrod vs distributed CAD man-machine link. Both invented the future at the console.
 
 ---
 

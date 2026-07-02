@@ -2,4 +2,6 @@
 
 Warm, mutually-respectful long-term friend of Don since the X10/X11/NeWS window-system wars. His 2024 "X at 40" / "Why X beat NeWS" posts (and his "History of Window Systems," "Pie Menus," and "Recreational Bugs" pieces on blog.dshr.org) repeatedly surface and amplify Don's NeWS/pie-menu history.
 
+**Co-guest on Heinz Lemke's PIXIE show** — same Cambridge **PDP-7/340 + Titan** ~1970; trio with **Lars Brinkhoff** (emulation). [`../heinz-lemke/invitation.md`](../heinz-lemke/invitation.md)
+
 He's a **double-perfect** Repo Show guest: (1) the NeWS reunion (he can tell the honest story of why X beat NeWS), and (2) a **digital-preservation** show — his LOCKSS work and his "we're losing the battle to archive the web" warning are the dark twin of this project's "recover the treasure trove" mission. Bonus: his sharp, un-hyped blogging on AI's affordability crisis and AI slop is exactly the register this project wants. With Owen Densmore he even patented **OO in the Unix shell** — the lineage that runs straight into MOOLLM's directory-as-object. `contact: dshr@abitare.org`.

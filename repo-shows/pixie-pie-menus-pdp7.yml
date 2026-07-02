@@ -4,11 +4,18 @@
 show:
   id: pixie-pie-menus-pdp7
   title: "PIXIE: Pie Menus on the PDP-7 (1969)"
-  type: solo
+  type: group
   host: Don Hopkins
-  guests: ["Heinz U. Lemke"]
+  guests: ["Heinz U. Lemke", "Lars Brinkhoff", "David S. H. Rosenthal"]
+  guest_roles:
+    heinz_u_lemke: "First-hand PIXIE history — Cambridge lab, 1969 film, light pen, Titan link, CARS arc"
+    lars_brinkhoff: "PDP-7 + Type 340 display hardware; preservation and emulation — make PIXIE runnable again today"
+    david_s_h_rosenthal: "Same Cambridge PDP-7/340 + Titan stack ~1970; met Wiseman; distributed GUI → NeWS/X11 lineage; LOCKSS preservation"
   character: characters/heinz-lemke/
-  topic: "PIXIE — early graphical man-machine communication + radial/pie menus on PDP-7/Titan, with co-author Heinz U. Lemke."
+  co_characters:
+    - characters/lars-brinkhoff/
+    - characters/david-rosenthal/
+  topic: "PIXIE — radial/pie menus on PDP-7/Titan (Heinz) + same-machine memory (Rosenthal) + emulating the iron (Lars)."
   status: proposed
   urgency: "Preserve first-hand history while we can; warm correspondence with Heinz."
 
@@ -22,14 +29,31 @@ history:
   flight_of_pixie: "Don's Bumblebee edit — only possible after Chapman published the digitized films."
   youtube: "https://www.youtube.com/watch?v=jDrqR9XssJI"
   evidence_room: characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md
+  type_340_manual: "http://bitsavers.trailing-edge.com/pdf/dec/graphics/7-13_340_Display_Programming_Manual.pdf"
+  living_pdp7_340: "https://www.youtube.com/watch?v=V4oRHv-Svwc"
+
+why_co_guests:
+  lars_brinkhoff:
+    preservation: "PDP-10/ITS restoration lead; SIMH toolchain hacker; make-it-so on stream."
+    pixie_fit: "Maps Type 340 vector display + light pen to emulators we can ship in the repo."
+    segment_goal: "Boot PDP-7/340 (or closest faithful rig); demo radial menus runnable today."
+  david_rosenthal:
+    cambridge: "Undergrad ~1970 on same PDP-7/340 + Titan; met Wiseman; saw PIXIE-era demos."
+    lineage: "PIXIE distributed GUI → Andrew → NeWS → X11/ICCCM — rare witness to both sides of the window-system wars."
+    preservation: "LOCKSS chief scientist — films, papers, and runnable emulators as one preservation story."
+    chm_hook: "Don proposed DSHR interview Heinz for Computer History Museum oral history."
 
 interview_center:
   chapman_films_bumblebee:
     ask: "What was it like when the 1969 films surfaced again? Who is in the footage? How did the light pen + radial menus feel?"
     doc: characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md
   rosenthal_cambridge_pdp7:
-    ask: "Heinz + David Rosenthal — same machine, different years. What did the lab feel like?"
-    tie: characters/david-rosenthal/
+    ask: "Heinz + David Rosenthal — same machine, different years. What did the lab feel like? What carried into NeWS and X11?"
+    with: characters/david-rosenthal/
+    prompts:
+      - "Heinz programmed PIXIE; DSHR arrived ~1970 — overlap in hardware, different projects"
+      - "Wiseman from two perspectives"
+      - "Distributed graphics satellite + Titan link as ancestor of networked window systems"
   neil_wiseman:
     ask: "What was Neil E. Wiseman like to work with — technically, personally, and as a research leader?"
   cambridge_zeitgeist:
@@ -39,17 +63,35 @@ interview_center:
   medical_automation_today:
     ask: "How does Heinz see the line from early graphical interaction/CAD to his later medical-computing work?"
     bridge: "PIXIE was graphical man-machine communication for design; CARS is model-guided human-computer assistance in medicine."
+  lars_pdp7_type340_emulation:
+    ask: "What did the PDP-7 + Type 340 + light pen actually do — and how do we emulate it faithfully today?"
+    with: characters/lars-brinkhoff/
+    prompts:
+      - "Walk the Type 340 Display Programming Manual — vector refresh, display list, pen hits"
+      - "SIMH / simh.org / community paths to a bootable PDP-7 with 340 option"
+      - "Living hardware vs emulator — Munching Squares on PDP-7/340; what transfers to PIXIE"
+      - "Titan link as distributed CAD — emulate graphics satellite first, batch link later?"
+      - "Make-it-so deliverable: rig yaml + SETUP.md forkable from repo-shows/lars-brinkhoff/"
+    homefun: "Boot closest faithful stack; one radial-menu interaction captured on stream"
 
 format:
   live: true
   audience_qa: true
   production_style: "Relaxed Studio Session (recorded video call) or Live Twitch Event."
-  notes: "Interview Lemke about PIXIE; intercut with the 1969 film + retrospective. Honor Neil Wiseman and John Hiles."
+  notes: "Heinz leads history; Rosenthal holds Cambridge ~1970 + lineage thread; Lars leads emulation. Intercut 1969 film + live emulator. Honor Wiseman and Hiles."
+  segment_order_suggestion: [heinz_history, rosenthal_same_machine, lars_emulation, heinz_cars, open_qa]
 
 ties_to:
   - characters/heinz-lemke/
   - characters/heinz-lemke/invitation.md
+  - characters/lars-brinkhoff/
+  - characters/lars-brinkhoff/invitation.md
+  - characters/david-rosenthal/
+  - characters/david-rosenthal/invitation.md
+  - repo-shows/lars-brinkhoff/SHOW.yml
   - repo-shows/ben-and-heinz-pie-menus.yml
   - ../characters/don-hopkins/pie-menus-chi-88-and-beyond.md
+  - ../process/challenges/retrocomputing-drive.yml
+  - ../process/trails/live-objects.md
 
 consent: not_yet_asked

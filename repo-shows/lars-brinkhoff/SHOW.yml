@@ -25,6 +25,7 @@ why_pair_thomas:
 
 threads:
   make_it_so: "Live: build/boot ITS from PDP-10/its — prove pdp10-maclisp-drive is not cosplay"
+  pixie_pdp7_340: "Co-guest on heinz-lemke pixie-pie-menus-pdp7 — Type 340 vector display + light pen emulation; boot path + SETUP.md"
   maclisp_spec_card: "Define + eval one Micropolis Class function in MACLISP on ITS — template for contestants"
   simh_toolchain: "Which emulator, which image, reproducible rig yaml for rigs/pdp10-maclisp-flair-lap.rig.yml"
   heritage_films: "What from MIT AI Lab films is runnable today — CA constructor arm, Logo lineage"
@@ -43,6 +44,8 @@ implements: "Working ITS boot path + rigs/pdp10-maclisp-flair-lap.SETUP.md (or g
 
 ties_to:
   - ../../characters/lars-brinkhoff/invitation.md
+  - ../../characters/heinz-lemke/
+  - ../../repo-shows/pixie-pie-menus-pdp7.yml
   - ../../characters/thomas-cherryhomes/
   - ../../process/pdp10-its-stack.yml
   - ../../process/challenges/pdp10-maclisp-drive.yml

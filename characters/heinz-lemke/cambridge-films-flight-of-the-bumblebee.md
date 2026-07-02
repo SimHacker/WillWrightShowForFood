@@ -78,6 +78,14 @@ Pull-in gaps (assets not yet in repo): [`pull-in-gaps.yml`](pull-in-gaps.yml)
 | John O. Hiles   | PIXIE co-author                                                         |
 | Bill Buxton     | Promised PIXIE refs/film digitization; did not deliver to Don           |
 | David S. H. Rosenthal | Cambridge undergrad ~1970 on same PDP-7/340 + Titan; met Wiseman; later NeWS/X11/LOCKSS |
+| Lars Brinkhoff | Co-guest — PDP-7 + Type 340 emulation; SIMH; make PIXIE runnable today |
+| David S. H. Rosenthal | Co-guest — same Cambridge PDP-7/340 + Titan ~1970; PIXIE → NeWS/X11; LOCKSS |
+
+## Runnable iron (show segment)
+
+**Lars Brinkhoff** maps Type 340 + light pen to emulators; **David Rosenthal** holds Cambridge
+~1970 memory on the same stack. Goal: radial menus demonstrably runnable on stream — not just
+film archaeology. See [`../lars-brinkhoff/`](../lars-brinkhoff/) · [`../david-rosenthal/`](../david-rosenthal/).
 
 
 
