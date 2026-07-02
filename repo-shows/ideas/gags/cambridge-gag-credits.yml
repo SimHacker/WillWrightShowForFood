@@ -73,18 +73,22 @@ light_pen_bureau_sponsor:
   pairs_with: "Computing Laboratory — Light Pen Bureau"
   segment: heinz_history
   opener: "And now, a word from our sponsors."
-  url: https://light.penisland.net/
-  url_note: "Gag subdomain — deadpan *light pen* emporium; not affiliated with penisland.net"
+  url: https://lightpenisland.net/
+  url_spoken: "lightpenisland dot net"
+  url_repeat: "I repeat, lightpenisland.net. Surf carefully."
+  url_note: |
+    Gag domain — *light pen island* emporium (Type 340 / PIXIE). One word: lightpenisland.net.
+    Parody spirit of penisland.net; not affiliated. Read URL twice, deadpan; *surf carefully* is the punchline.
   inspiration: https://penisland.net/
   inspiration_note: |
-    Real deadpan custom-pen shop (infamous domain parsing). Tagline on site: *Your Pen Is Our Business*.
-    We swap **light pen** for pen — Type 340 / PIXIE context. Play the ad completely straight on
-    Cambridge telecine jiggle; let the audience catch the rhyme.
+    Real deadpan custom-pen shop (infamous domain parsing). Tagline: *Your Pen Is Our Business*.
+    **Light Pen Bureau** swaps pen → light pen. Play the ad completely straight on Cambridge telecine jiggle.
   ad_read: |
     Finest quality custom **light pens** for the PDP-7 graphics satellite. Thin white EZ-Grip;
     petite yellowheart wood; thick dark mahogany — we specialize in wood. Hand-crafted nearly
     three decades. Bulk orders or just one for that special Titan link. Computing Laboratory —
-    **Light Pen Bureau**. Visit **light.penisland.net** — your light pen is our business.
+    **Light Pen Bureau**. Visit **lightpenisland.net** — your light pen is our business.
+    **Lightpenisland dot net.** I repeat, **lightpenisland.net**. Surf carefully.
   engelbart:
     why: |
       **Mother of All Demos** (Dec 9, 1968 — Douglas Engelbart, SRI) and **PIXIE** (1969,

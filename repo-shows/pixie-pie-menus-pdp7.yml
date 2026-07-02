@@ -150,7 +150,8 @@ format:
       id: light_pen_bureau_sponsor
       after: "Computing Laboratory — Light Pen Bureau"
       opener: "And now, a word from our sponsors."
-      url: https://light.penisland.net/
+      url: https://lightpenisland.net/
+      url_repeat: "I repeat, lightpenisland.net. Surf carefully."
       spec: repo-shows/ideas/gags/cambridge-gag-credits.yml#light_pen_bureau_sponsor
 
 ties_to:
