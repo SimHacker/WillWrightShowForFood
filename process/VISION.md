@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/vision-and-ambition.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:f87cbfc5eda1aa64 -->
+<!-- content-sha256:d4c1f7ae83035dda -->
 
 # Vision and ambition
 
@@ -328,6 +328,9 @@ See ../process/old-band-back-together.yml.
 read the process yaml, clone the repo, run verify. If the format resonates,
 open an issue with who you are and what layer you might add — mirror, production,
 anthology, tooling, guest show. No NDAs required to understand the shape.
+- **television_pitch:** A show about developing and playing games and tools — using AI honestly (code + orchestration;
+people voice and author). Bar Karma proved community-authored TV; Repo Show proves the repo.
+Format spec: ../repo-shows/ideas/traditions/make-play-tools-show.yml
 
 ## Related
 

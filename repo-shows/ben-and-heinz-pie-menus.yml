@@ -11,7 +11,7 @@ show:
   status: seed
 
 why_a_great_pair:
-  - "Heinz U. Lemke — co-author of the 1969 PIXIE paper (radial menus on the PDP-6): the deep prehistory."
+  - "Heinz U. Lemke — co-author of the 1969 PIXIE paper (radial menus on PDP-7/Titan): the deep prehistory."
   - "Ben Shneiderman — direct manipulation + co-author of the CHI '88 pie menu study: the lineage that followed."
   - "Together they span ~20 years of the pie-menu / HCI story, with Don (also a CHI '88 co-author) bridging them."
 
@@ -22,7 +22,7 @@ format:
 
 ties_to:
   - characters/heinz-lemke/
-  - repo-shows/pixie-pie-menus-pdp6.yml
+  - repo-shows/pixie-pie-menus-pdp7.yml
   - repo-shows/ben-shneiderman-series.yml
   - repo-shows/pie-menus-retrospective.yml
 

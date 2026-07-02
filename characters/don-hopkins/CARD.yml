@@ -103,7 +103,19 @@ connections_index:
       opens: microworld_franchise
       entries:
         - path: interval-research-pluggers-and-mediaflow.md
-          blurb: Interval Research — Pluggers survey, MediaFlow, Camelot; hypermedia patterns echoing NeWS and MOOLLM rooms.
+          blurb: Interval Camelot — MediaFlow, Bounce TV bots, Director plug-ins, ECG; pie menus talk before hire.
+          opens: tom-ngo-embedded-constraint-graphics-at-interval.md
+        - path: tom-ngo-embedded-constraint-graphics-at-interval.md
+          blurb: Tom Ngo ECG — simplicial complexes, Mouther, patent expired 2016; Don's G9.js HN prior-art comment.
+          opens: breakfast-simplex-barycentric-direct-manipulation.md
+        - path: breakfast-simplex-barycentric-direct-manipulation.md
+          blurb: Breakfast simplex — Dark Breakfast abyss as barycentric UI; pie menus; ARKit blend shapes echo ECG.
+          opens: mediaflow-design-comments.md
+        - path: mediaflow-design-comments.md
+          blurb: MediaFlow Design Comments — streams, sessions, clay types; Bongo persistence points to IFC vs Bongo essay.
+          opens: ifc-vs-bongo-comparison.md
+        - path: ifc-vs-bongo-comparison.md
+          blurb: IFC vs Bongo — Netscape vs Marimba Java; getProperties metadata; Arthur van Hoff; component wars.
           opens: history/interval-research.yml
         - path: history/interval-research.yml
           blurb: Distilled era yaml — same Interval thread in machine-readable backbone form for cross-repo grep and sync.

@@ -242,13 +242,13 @@ pie_menus_prehistory:
   pixie_1969:
     citation: "PIXIE: A New Approach to Graphical Man-Machine Communication. 1969 CAD Conference, Southampton. IEEE Conference Publication 51, pp. 463–471."
     pioneers: [Neil E. Wiseman, Heinz U. Lemke, John O. Hiles]
-    platform: "PDP-6; light-pen radial menus"
+    platform: "PDP-7 + Type 340; light-pen radial menus"
   don_role: "Study, implement, evaluate (CHI'88 with Callahan, Weiser, Shneiderman), ship across NeWS, X11, Sims, OLPC, web, Unity, MicropolisCore."
   repo_show_asap:
     guest: Heinz U. Lemke
     priority: high
     seeds:
-      - ../../../repo-shows/INDEX.yml#pixie-pie-menus-pdp6.yml
+      - ../../../repo-shows/INDEX.yml#pixie-pie-menus-pdp7.yml
       - ../../../repo-shows/INDEX.yml#ben-and-heinz-pie-menus.yml
     wwsff_topic: ../pie-menus-chi-88-and-beyond.md
     ideas: ../ideas.md

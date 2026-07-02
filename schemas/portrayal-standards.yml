@@ -55,8 +55,10 @@ memorial_mode:
     We REPRESENT and DISCUSS them — their documented work, ideas, and stories. We do NOT
     interview them, do NOT speak AS them, and invent no inner life, dialogue, or quotes.
   invite_those_who_knew_them: |
-    Episodes invite LIVING people who knew or worked with them to discuss and remember
-    (see each CHARACTER.yml memorial.who_can_discuss).
+    Episodes *may* bring LIVING people who knew or were shaped by the deceased — with their
+    consent first. See each CHARACTER.yml memorial.who_can_discuss for **documented connections
+    only** — listing someone there is NOT an invitation and must not be read as one until they
+    accept (invitation-workflow.yml).
   rich_for_shows: |
     Memorial CHARACTER.yml carries plenty for shows to draw on (work, stories, connections,
     artifacts) — but no episode is an interview OF them; the show is a remembrance ABOUT them.

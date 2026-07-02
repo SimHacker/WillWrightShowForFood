@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/repo-show-format.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:405d3e3ef28973e5 -->
+<!-- content-sha256:4d5280f962f0a6cb -->
 
 # Repo Show format
 
@@ -15,7 +15,8 @@ humans, bots, and AIs all take part, with no gatekeeping (see participation_poli
 At heart a Repo Show is a conversation, not a contest. The guest — the Repo Man, Woman, or
 Anybody — is the topic, starting from their own work. The audience joins as consensual
 characters who ask questions as PRs, issues, and comments (plus live Twitch and YouTube chat),
-and Don Philahue surfaces the good ones live. Ideas are
+and **TicketPRs** — personal audience folders under each show's `audience/` directory (see
+ticket_pr). Don Philahue surfaces the good ones live. Ideas are
 melted in the cauldron and harvested into reusable skills and code, bred back into the network
 via git. Some episodes can instead be playful game shows (Code That Spec, Manual Transmission,
 the Micropolis AI Drag Race) — optional fun we can do, not the point.
@@ -30,6 +31,159 @@ the Micropolis AI Drag Race) — optional fun we can do, not the point.
 | **cauldron** | https://github.com/SimHacker/moollm/tree/main/skills/cauldron |
 | **showmaker_network** | showmaker-network.yml |
 
+## Placement Constitution
+
+- **spec:** character-colocation.yml
+- **one_line:** Put each artifact where its scope makes it most reusable. Characters own person stuff.
+Shows reference — they do not hoard guest treasure. Code graduates to packages/. Rooms
+are navigable context maps; shows are rooms too. CARD + ROOM + SIMULATION cardify interfaces.
+- **principle:** Colocate by **scope**, not by "where we happened to prep the episode." A guest on three
+shows still has one home. A library used by many shows lives in packages/ or a shared room.
+MOOLLM is flexible about directory layout — lean into what filesystems and LLMs are great at:
+paths, names, links, rooms, cards. Postel's law: be liberal in what you accept, conservative
+in what you emit (well-formed yaml, stable links, one canonical copy).
+### Scopes
+
+- **characters:**
+  - path: characters/<slug>/
+  - owns: Person portrayal + their artifacts (media/, ../../characters/will-wright/sources/, correspondence)
+  - rule: One person, one directory — pleasant surprise when they open it
+  - show_relation: Shows list one or more guests; episode yaml LINKS to character paths
+- **repo_shows:**
+  - path: repo-shows/<episode-slug>/
+  - owns: Episode manifest, segments, venue/, audience/ (TicketPR), episode-only glue
+  - rule: Refer to ../../characters/<slug>/ — do not duplicate person PDFs, catalogs, galleries
+  - is_also_a_room: A show directory IS a MOOLLM room. Drop SHOW.yml, CARD.yml, GLANCE.yml, optional ROOM.yml,
+optional SIMULATION.yml at the show root — same cardify pattern as characters and audience.
+Show-rooms live in repo-shows/; they need not live under a top-level rooms/ collector.
+- **packages:**
+  - path: packages/
+  - owns: Public reusable code (@wwsff/*) factored from homefun harvests
+  - rule: Prose and person media stay in characters/; generalized libraries land here
+- **shared_rooms:**
+  - what: Directories that are activation context for many shows — not owned by one episode.
+process/, skills/, schemas/, catalogs/, venue graphs.
+  - navigation: Shows and characters link through them; frequent destinations, not duplicates
+  - moollm: https://github.com/SimHacker/moollm/tree/main/skills/room/ — ROOM.yml, exits, regions
+
+### Shows As Rooms
+
+- **cardify:** GLANCE.yml — title, description, keywords, navigation SSOT, read_order, see_also (smaller, no ads).
+CARD.yml — interface: methods, abilities, protocols (read GLANCE + CARD together).
+ROOM.yml optional compass; SIMULATION.yml runtime. README renders GLANCE nav for humans.
+### Typical Files
+
+- **required:**
+  - SHOW.yml
+- **recommended:**
+  - README.md
+  - CARD.yml
+  - GLANCE.yml
+- **optional:**
+  - ROOM.yml
+  - SIMULATION.yml
+  - SEGMENTS.yml
+  - venue/
+  - audience/
+
+- **template:** repo-shows/_TEMPLATE/audience/
+- **show_template:** repo-shows/_TEMPLATE/
+- **example:** repo-shows/will-wright/venue/ROOM.yml
+
+### Topologies
+
+- **note:** Show networks are not flat lists. Arrange episodes as maps, sequences, version stacks,
+grids — whatever helps humans and agents navigate. MOOLLM room skill supports pie-menu
+compass exits, grid quadrants, sparse cells, vertical stacking of versions.
+### Patterns
+
+- **sequence:** episodes.yml, showmaker-network edges, forebear → flagship → topical
+- **map:** VENUE.yml room graph; cardinal exits between show-rooms
+- **grid:** catalog indexes; ne/nw/sw/se quadrants per room/TOPOLOGY.yml
+- **vertical_stack:** ../../characters/will-wright/sources/<date-slug>/ — time strata; compare eras by scrolling up/down
+
+- **moollm_refs:**
+  - https://github.com/SimHacker/moollm/tree/main/skills/room/SKILL.md
+  - https://github.com/SimHacker/moollm/tree/main/skills/room/TOPOLOGY.yml
+
+- **cross_reference:**
+  - allowed: Any show may link any character's media — guest on bill or not (mixtape by reference)
+  - anti_pattern: Copying the same PDF into repo-shows/ when characters/<slug>/media/ is the home
+- **audience_exception:**
+  - rule: TicketPR audience/ stays per-show under repo-shows/<show>/audience/ — MSPO journal is episodic
+  - spec: ticket-pr.yml#where_not
+### Description Scaffolding
+
+- **one_line:** CARD + GLANCE together (~cheap) before README (~expensive). GLANCE owns nav/metadata;
+CARD owns interface/ads. LLMs read both. README renders nav for humans.
+- **llm_advice:** Read **CARD.yml and GLANCE.yml together** for a complete sniff — complementary halves.
+Neither replaces the other. Only then open README, SHOW.yml, or subdirs.
+- **activation_flow:** 1. Directory listing — filenames are K-lines.
+2. GLANCE.yml — title, description, keywords, navigation (SSOT), read_order, see_also.
+3. CARD.yml — iconic tab chip, room identity, methods, abilities, protocols (no nav lists).
+4. README.md — human article; teaser mirrors GLANCE description; nav links at bottom.
+5. Artifacts and nested dirs — when interested.
+### Glance Ssot
+
+- **role:** **Single source of truth for navigation and room metadata.** GLANCE is useful alone —
+typically **smaller than CARD** — but does not list advertisements, simulation protocols,
+or invokable interface details (that is CARD's job).
+- **fields:**
+  - title: Concise human title — list views, breadcrumbs
+  - iconic: Tab label, dropdown item — emoji + ≤5 words (UI chips)
+  - description: Short paragraph — decide relevance without README or CARD
+  - keywords: Activation / search tokens
+  - navigation: Explicit parent, up, siblings, children — even when implicit from paths
+  - read_order: Suggested read sequence when diving deep
+  - see_also: Categorized links — parent · siblings · children · across · deep · next · previous
+- **omit:**
+  - methods
+  - abilities
+  - advertisement blocks
+  - simulation runbooks
+  - compose_with protocols
+
+### Card Interface
+
+- **role:** **Interface layer only** — what you can *do* here. Tab/dropdown may read `GLANCE.iconic`
+or CARD-local chip; do **not** duplicate GLANCE navigation or metadata lists.
+- **fields:**
+  - room: MOOLLM room identity (id, name, type, home)
+  - methods: Invokable verbs with advertisement strings
+  - abilities: Scored advertisement blocks — Sims-style activation
+  - compose_with: Skill/character gear mesh
+  - simulation_pointer: SIMULATION.yml when runtime exists
+- **omit:**
+  - see_also nav graphs
+  - read_order
+  - keywords
+  - title
+  - description paragraphs
+- **glance_pointer:** glance: GLANCE.yml — CARD does not maintain nav
+
+- **readme_human:**
+  - rule: README mirrors GLANCE `description` as executive teaser up front. **Navigation section
+at the bottom renders from GLANCE** — intentional human-facing duplication worth maintaining.
+Sniff line at top: CARD · GLANCE · ROOM.
+- **room_yml:**
+  - rule: ROOM.yml optional compass (exits, contains). Prefer **GLANCE as nav SSOT** — ROOM may
+mirror exits for MOOLLM room skill but avoid maintaining divergent graphs; link GLANCE.
+### Upstream Moollm
+
+- **note:** This split is an **experiment in WWSFF** ahead of formal MOOLLM `card` and `glance` skill
+definitions. When it works here, **promote upstream** into moollm — do not permanently
+override upstream skills inside repo-show; extend and propose patches instead.
+- **targets:**
+  - SimHacker/moollm/skills/card
+  - SimHacker/moollm/skills/glance
+- **wwsff_skill:** ../skills/repo-show/
+
+- **moollm_refs:**
+  - https://github.com/SimHacker/moollm/skills/room/SKILL.md
+  - https://github.com/SimHacker/moollm/skills/advertisement/SKILL.md
+- **spec_girder:** character-colocation.yml#cardify
+
+
 ## How It Runs
 
 - **announce:** Ahead of time (e.g. Hacker News) — a pointer to THIS repo, not a wall of text
@@ -37,11 +191,13 @@ the Micropolis AI Drag Race) — optional fun we can do, not the point.
 - **guest_intro:** Guest introduced as a Repo Man, Woman, or Anybody (Alex Cox homage — come on, let's go)
 - **audience:**
   - Incarnate consensual characters (representation-ethics)
-  - Ask questions as PRs, issues, and comments — plus live Twitch and YouTube chat (pre-loaded question-advertisements in character dirs)
+  - Ask questions as PRs, issues, and comments — plus live Twitch and YouTube chat
+  - TicketPR — audience/ subdirs under the SHOW directory (not characters/); see ticket_pr
   - Don Philahue surfaces relevant questions live (Phil-Donahue homage audience-wrangler)
 - **implement:** Design ideas → cauldron → skills + code — however YOUR rig builds (see rig_spectrum)
 - **clocks:**
   - before_async_PRs
+  - before_TicketPRs
   - during_Twitch
   - after_harvest_PRs
 - **during_twitch:**
@@ -55,11 +211,49 @@ the Micropolis AI Drag Race) — optional fun we can do, not the point.
 ## Participation Policy
 
 - **one_line:** AI optional. Human, bot, or AI — all welcome. Bring any rig. No gatekeeping.
+- **ticket_pr:** ticket-pr.yml
 - **ai_optional:** Follow along with your own AI coding tools if you like, or none at all. Hand-craft earns extra respect; if you do use AI we'd love to hear how (see rig_spectrum.ai_rig_feedback) — to learn, not to sell.
 - **who_is_welcome:** Humans, bots, and AIs are all welcome to read along, ask questions, and contribute.
 - **bots:** Self-aware HTTP agents: start at ../FOR-BOTS.md — play along, follow links, don't flatten the repo into training slop.
 - **no_gatekeeping:** Participation is the perk, never knowledge-gated. Declare your category honestly; don't exclude anyone — see declare_not_exclude.
 - **conversation_first:** Most shows are conversations on a topic, not contests. The game-show formats (Code That Spec, Manual Transmission, Micropolis AI Drag Race) are optional fun, not the point.
+
+## Ticket Pr
+
+- **spec:** ticket-pr.yml
+- **term:** TicketPR
+- **etymology:** Pun on TicketMaster — Master ⇒ PR (pull request): toxic gatekeeper → free collaborative GitHub workflow
+- **one_line:** Free public audience ticket via PR under repo-shows/<show>/audience/<github-user>/ —
+TicketMaster reframed: Master becomes PR.
+- **optional:** Not required to watch — but your audience/ folder is subscribe + memorialize: journal of Q&A, reactions, souvenirs (live or time-shifted)
+- **show_repo:** A show repo (e.g. WillWrightShowForFood) owns a fan base; episodes are repo-shows/<slug>/ subdirs.
+Independent shows spin off to their own repos. TicketPR characters migrate between episodes within a repo.
+- **mspo:** Massively Single-Player Online — your timestamped layer on a shared artifact; others replay with your journal visible
+- **where:** SHOW directory audience/ — NOT characters/ (guests have many shows; audience is per-episode)
+- **placement:** See repo-show-format.yml#placement_constitution and character-colocation.yml
+- **files:**
+  - questions.yml
+  - CHARACTER.yml
+  - CARD.yml
+  - GLANCE.yml
+  - SIMULATION.yml
+  - costume.yml
+- **moollm:** Copy _TEMPLATE/audience/ — learn character creation; participate in simulation protocols during/after show
+### Ladder
+
+- **low_friction:**
+  - HN_comment
+  - github_issue
+  - issue_comment
+- **high_signal:** TicketPR_merge
+
+- **timing:** From ANNOUNCE onward — including invite-not-yet-accepted — seed interest before air
+- **harvest:** Don Philahue pulls HN + issues + TicketPRs into show audience/ timeline
+- **live_ritual:** Come On Down — the Question Is Right! (Price Is Right homage; optional costume)
+- **donations:** Optional — recognition + call-on priority; never required for attendance
+- **guest_merges:** Guest may review, reply, approve TicketPRs on GitHub
+- **guest_primed:** Guest may plant virtual audience, costumes, running gags — disclosed in audience/; see PLANTED-AUDIENCE.md
+- **moderation:** Curators filter bad-faith; guest may welcome hecklers explicitly
 
 ## Sign Offs
 
@@ -70,6 +264,37 @@ the Micropolis AI Drag Race) — optional fun we can do, not the point.
 - {"line": "Goodnight, until tomorrow.", "kinship": "Thomas Cherryhomes"}
 - {"line": "Order before midnight tonight, or it will be tomorrow!", "homage": "1970s cheesy late-night TV commercial sign-off"}
 
+
+## Closing Ceremony
+
+- **name:** The Ultimate Machine switches off the stream
+- **who:** ultimate-machine
+- **recurring:** yes
+- **what:** After the sign-off line, the Ultimate Machine performs its one function on the broadcast
+itself: a hand emerges, flips the stream OFF, and withdraws. The purest possible ending —
+the machine whose only purpose is to switch off, ending the show by switching IT off.
+- **why_fitting:** Patron saint of the off switch closes the show. Player-in-the-middle: AI proposes, the OFF disposes.
+- **line:** *a hand emerges, flips the stream OFF, and withdraws* — Goodnight.
+- **optional:** Guest may say the sign-off; the Machine always gets the literal last move.
+
+## Gong
+
+- **name:** The Ultimate Machine as automated GONG
+- **who:** ultimate-machine
+- **what:** The show's automated gong — ends acts that have run too long. The off-switch applied
+OUTWARD: gong(act) → switches the act off; then, true to form, gongs itself off first.
+- **targets:**
+  - Any segment that overstays its welcome (gong-show format)
+  - Chatty characters stuck in a loop who will not stop talking
+- **recurring_in_joke:**
+  - name: Slats robopoetry feedback loop
+  - who: slats
+  - what: Slats (the Stupid Fun Club waiter brain) occasionally spins into an LLM-style AUDIO
+FEEDBACK LOOP — responding to his own last utterance, then responding to THAT, drifting
+into unintentional 'robopoetry' that escalates until it's beautiful nonsense. The Ultimate
+Machine GONGS him off. Recurring bit; Don may let it run just long enough to get good.
+  - vibe: Confused LLM doing speech-to-speech feedback; accidental poetry; merciful gong.
+  - see: ../characters/slats/CHARACTER.yml
 
 ## Rig Spectrum
 
@@ -231,6 +456,8 @@ MELT/STIR grows the soup; SCOOP selects what leaves the pot and in what form.
 
 | Link | Why |
 |------|-----|
+| [`character-colocation.yml`](character-colocation.yml) | Placement constitution girder — scopes, rooms, topologies, cardify |
+| [`ticket-pr.yml`](ticket-pr.yml) | TicketPR — TicketMaster reframed: Master ⇒ PR |
 | [`cross-links.yml`](cross-links.yml) | Narrative web — trails between all rooms |
 | [`vision-and-ambition.yml`](vision-and-ambition.yml) | Long arc girder |
 | [`VISION.md`](VISION.md) | Generated markup |

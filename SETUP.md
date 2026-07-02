@@ -54,7 +54,7 @@ cd WillWrightShowForFood
 nvm install && nvm use          # .nvmrc → 22
 corepack enable
 pnpm install
-pnpm run verify                 # structure + YAML parse check
+pnpm run verify                 # structure + YAML + coherence check
 pnpm run setup:hooks            # pre-push hook → runs verify before every push
 ```
 
@@ -120,7 +120,7 @@ WillWrightShowForFood/
 ## Common commands
 
 ```bash
-pnpm run verify              # structure + YAML
+pnpm run verify              # structure + YAML + coherence
 pnpm run build               # all workspace packages (stubs OK)
 pnpm run test                # workspace tests (stubs OK)
 

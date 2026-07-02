@@ -1,0 +1,92 @@
+# SHOW SEED — Remembering Jef Raskin (group memorial / tribute)
+# Memorial mode for Jef ONLY. Possible discussants = documented connections, NOT invitations.
+# Standards: ../schemas/portrayal-standards.yml#memorial_mode
+
+show:
+  id: remembering-jef-raskin
+  title: "Remembering Jef Raskin"
+  type: group
+  host: Don Hopkins
+  topic: "A tribute to Jef Raskin (1943–2005) — The Humane Interface, the Macintosh he started, the Canon Cat, and humane-interface ideas in this repo."
+  status: seed
+  consent: not_yet_asked
+
+memorial_mode:
+  subject: jef-raskin
+  rule: "We represent and discuss Jef's documented work only. We do NOT interview him or speak as him. Any living person on a produced episode requires their own consent — listing below is NOT an invitation."
+  standards: ../schemas/portrayal-standards.yml#memorial_mode
+  memorial: ../characters/jef-raskin/memorial.md
+
+the_frame:
+  read_the_intent: >
+    Same move as the Engelbart memorial: resist the Macintosh-origin laundry list. Center the intent —
+    protect the user's locus of attention, eliminate arbitrary cognitive load, never trap people in
+    modes. What world was Raskin trying to create?
+  repo_show_synthesis: >
+    See characters/jef-raskin/humane-interface-and-this-repo.md — brutalist listing + humane README
+    overlay; inspectability without abandoning navigation that respects your head.
+  not_a_cat: >
+    Raskin wanted to hide the file system from casual users. We expose it as stage. The README layer
+    is the honest compromise — museum prose on top, yaml girders underneath.
+
+possible_discussants:
+  disclaimer: "Documented connections for show planning only. Nobody listed has consented to this episode unless their invitation.md says otherwise."
+  candidates:
+    - name: "Terry Winograd"
+      character: characters/terry-winograd/
+      connection: "Hosted Raskin's CS547 talk 'Prolegomena to future interface design' (2001-10-05)."
+      verified: true
+      consent: not_yet_asked
+      in_repo: ../characters/terry-winograd/media/cs547-ARCHIVE.md
+    - name: "Ben Shneiderman"
+      character: characters/ben-shneiderman/
+      connection: "HCI peer — direct manipulation era; humane attention vs calm technology (Weiser) framing."
+      verified: true
+      consent: not_yet_asked
+    - name: "Bret Victor"
+      character: characters/bret-victor/
+      connection: "Humane-interface lineage in writing — read intent, not feature lists."
+      verified: true
+      consent: not_yet_asked
+      to_verify: "Personal acquaintance with Raskin not established — only lineage/essay framing unless he says otherwise."
+    - name: "Alan Kay"
+      character: characters/alan-kay/
+      connection: "Mac/Dynabook era contemporary — what shipped vs what humane computing could have been."
+      verified: true
+      consent: not_yet_asked
+    - name: "Walter Bender"
+      character: characters/walter-bender/
+      connection: "OLPC View Source + constructionist navigation — inspectability half of the pair."
+      verified: true
+      consent: not_yet_asked
+    - name: "Don Hopkins"
+      character: characters/don-hopkins/
+      connection: "Host — README-overlay design; CHI'88 pie menus; Repo Show format."
+      verified: true
+      consent: self_sovereign
+
+centerpieces:
+  two_layer_demo: "Live on GitHub — directory URL vs README.md URL for the same folder. Name the projections."
+  humane_interface_walk: "Walk *The Humane Interface* load-bearing chapters — locus, modes, cognetics — with whoever consents to join."
+  cs547_shelf: "CS547 catalog entry + what Prolegomena meant in 2001."
+  mac_vs_cat: "What Raskin started at Apple vs what the Canon Cat actually shipped — and what Archy was reaching for."
+
+threads:
+  - "Humane vs user-friendly — marketing words vs measurable cognitive load"
+  - "Modelessness — modal dialogs as attention theft"
+  - "README overlay × View Source — WWSFF synthesis on air"
+  - "Zooming interfaces vs menu hierarchies — cousin to GLANCE → CARD → README pyramid"
+  - "Harvest: one cauldron note — what would a humane MOOLLM skill loader look like?"
+
+format:
+  live: true
+  audience_qa: true
+  tone: "Warm, argumentative where the history is honest — a tribute that builds something."
+
+ties_to:
+  - ../characters/jef-raskin/
+  - ../characters/jef-raskin/memorial.md
+  - ../characters/jef-raskin/humane-interface-and-this-repo.md
+  - ../characters/jef-raskin/ideas.md
+  - ../process/character-colocation.yml
+  - ../repo-shows/remembering-douglas-engelbart.yml

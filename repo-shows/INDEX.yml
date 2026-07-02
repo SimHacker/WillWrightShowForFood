@@ -39,6 +39,7 @@ shows:
       turtlestitch/: "TurtleStitch — Snap!-based coded embroidery (Andrea Mayr-Stalder + Michael Aschauer): program turtle geometry, stitch it on a real machine. Two shows in one — the tool, and the genuine inclusive constructionism Don witnessed at Snap!Con Barcelona (kids of every background coding + sewing with zero self-consciousness; the real thing, not a slogan). Don embroidered felt there himself. Part of the Snap! community 'band' — see ../process/old-band-back-together.yml."
       skill-creation.yml: "SKILL CREATION — authoring Anthropic Agent Skills + MOOLLM skills as constructionism + PBD for the LLM era. Candidate guests: Walter Bender, Henry Minsky, + people into Claude skills + constructionism (to vet/invite)."
       remembering-douglas-engelbart.yml: "★ MEMORIAL TRIBUTE. Remembering Doug Engelbart with Ted Nelson (eulogy — Doug officiated his wedding), Alan Kay (1968-demo lineage), Yoot Saito (1993 anniversary interview), and Bret Victor (author of 'A few words on Doug Engelbart' — read the intent, not the feature list). Memorial mode; consent not_yet_asked."
+      remembering-jef-raskin.yml: "★ MEMORIAL SEED for Jef Raskin (d. 2005) only. possible_discussants = documented connections — NOT invitations; consent not_yet_asked for all."
     bridges:   # the data-portability CROWN JEWEL (crystallized/DESIGN-WISDOM)
       game-bridge-sims-stardew.yml: "Eric Barone — Sims ⇔ Simopolis ⇔ Stardew two-way bridge (parallel synchronized lives)."
       game-bridge-proxi-sims.yml:   "Will — Proxi ⇔ Simopolis ⇔ Sims bridge (the crown-jewel payoff; Mind Mirror layer; the Wig-O-Matic worked example). Flows from the Will kickoff."
@@ -77,7 +78,7 @@ shows:
       brad-myers/pbd-in-llm-era.yml: "Narrow vertical: PBD in the LLM Era. Watch What I Do (Cypher + Brad) chapter-by-chapter modern reimplementations as simple playable demo seeds + exercises. Explicit open courseware for CMU and others."
       ted-nelson-intertwingled.yml: "Ted Nelson — Xanalinks vs jumplinks, intertwingling, MOOLLM, transcribe-the-vision. DREAM GUEST (warm lead). Optional co-guest Ted Selker for NPUC resurrection."
       phoneloper-speech-synthesis.yml: "Kevin Lenzo — open-source Phoneloper Repo Show (Flite/Cepstral; SFC talking toys; phonoscoping → web vocal jam + Pink Trombone)."
-      pixie-pie-menus-pdp6.yml: "Heinz U. Lemke — PIXIE pie menus on the PDP-6 (1969)."
+      pixie-pie-menus-pdp7.yml: "Heinz U. Lemke — PIXIE pie menus on PDP-7/Titan (1969)."
       pie-menus-retrospective.yml: "Don (host-as-expert) — redesign + reimplement pie menus from scratch."
       lambdamoo-pavel-curtis.yml: "Pavel Curtis — LambdaMOO's influence on MOOLLM (direct-source lineage)."
       walter-bender-olpc.yml:   "Walter Bender — OLPC Stone Soup, open-sourcing SimCity, constructionist playgrounds."

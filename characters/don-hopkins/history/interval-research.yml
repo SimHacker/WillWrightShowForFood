@@ -10,6 +10,19 @@ interval_research:
   don_reflection: |
     "Interval was an amazing place — like working as an oompa loompa in Willy Wonka's
     chocolate factory… Camelot." — Don Hopkins
+  don_note: |
+    MediaFlow and Bounce/Body Electric were separate but related — worked on both at once.
+    Also Director plug-ins and Tom Ngo's ECG (Mouther). Camelot: visiting speakers; Don guest-
+    lectured on pie menus + SimCity ~year before joining. MCL MediaFlow; Bounce live TV + COM wires.
+  don_circle: |
+    Don did not overlap at Interval with every name in the Camelot roster — but he was in that
+    circle before and after: Kaleida/ScriptX, Terry's CS547 world, MIT/Lisp/visual-programming
+    orbit, Maxis/The Sims, NeWS gang, Stanford HCI preservation, etc. Interval was one year
+    staff (~mid-1990s); the relationships outlasted the building.
+  sources:
+    grokipedia: https://grokipedia.com/page/interval_research_corporation
+    wikipedia: https://en.wikipedia.org/wiki/Interval_Research_Corporation
+    private_roster: DonHopkins/characters/don-hopkins/contacts/interval-alumni.yml
 
 don_projects:
   pluggers_survey:
@@ -18,18 +31,86 @@ don_projects:
     note: "COM, OLE, CORBA, OpenDoc, Java — component chaos captured on paper"
   ifc_vs_bongo:
     url: https://donhopkins.com/home/interval/ifc-vs-bongo.html
-    note: "Java component frameworks; Arthur van Hoff / Marimba Bongo"
+    full_text: ../ifc-vs-bongo-comparison.md
+    method: "Don read/analyzed/reflecting from experience — IFC (bad) vs Bongo (good), in that order"
+    bongo_lineage: "HyperCard → GoodNeWS → HyperNeWS → HyperLook → Bongo (Java)"
+    architect: "Arthur van Hoff — Turing Glasgow, Java compiler, AWT, Marimba Castanet/Bongo"
+    don_arthur: "Turing Institute Glasgow; later Jaunt VR Palo Alto"
   mediaflow:
     url: https://donhopkins.com/home/interval/mediaflow-design.html
-    note: "Marc Davis — visual video dataflow; Don reimplemented in Mac Common Lisp + QuickTime"
+    full_text: ../mediaflow-design-comments.md
+    implementation: "Mac Common Lisp + QuickTime (Don; separate project from Bounce extensions)"
+    note: "Marc Davis — hypermedia / temporal stream dataflow; design essay + MCL implementation"
+    topics:
+      - streams_and_sessions
+      - control_data_codesign
+      - plug_in_clay_types
+      - visual_programming_philosophy
   bounce_body_electric:
-    note: "David Levitt visual programming port — music and animation dataflow"
+    lineage: "David Levitt — VPL Body Electric visual programming"
+    bounce_notes: https://www.donhopkins.com/home/archive/visual-programming/bounce-notes.txt
+    don_work:
+      - "Custom compositor replacing Macromedia Director player — animation/overlays on live video"
+      - "Synchronized real-time closed-caption feed"
+      - "TV-commentary bots — Rush Limbaugh, Jesse Jackson, house fly (MST3K-style)"
+      - "Live editing of running Bounce simulations"
+      - "Plug-in COM object data types on wires — Macromedia IMOADict / IMOAArray"
+      - "Cross-platform COM on Mac (Metrowerks C++; IE-on-Mac era)"
+    note: "Extended Bounce on Mac — not a Mac Common Lisp port (that was MediaFlow)"
+  director_plugins:
+    note: "Macromedia Director Xtra / plug-in development — same multimedia orbit as Bounce compositor"
+  ecg_tom_ngo:
+    title: Embedded Constraint Graphics
+    patent: https://patents.google.com/patent/US5933150
+    wwsff: ../tom-ngo-embedded-constraint-graphics-at-interval.md
+    breakfast_simplex: ../breakfast-simplex-barycentric-direct-manipulation.md
+    mouther: https://www.flong.com/archive/projects/mouther/
+    hn_2016: https://news.ycombinator.com/item?id=12572696
+    colleagues: [Golan Levin, Malcolm Slaney, Tom Ngo]
+  camelot:
+    don_prior_visit: "Guest talk ~year before employment — pie menus + SimCity"
+    atmosphere: "Interesting people always visiting; exhilarating live simulation editing"
 
 colleagues_public:
-  - Terry Winograd
-  - David Levitt
-  - Marc Davis
-  - Golan Levin
+  # Don worked directly with these at Interval (one-year staff):
+  direct:
+    - David Levitt      # Bounce / Body Electric
+    - Marc Davis        # MediaFlow
+    - Golan Levin       # ECG / Mouther; Rouen Revisited w/ Debevec
+    - Tom Ngo           # Embedded Constraint Graphics
+    - Malcolm Slaney    # audio/video (Video Rewrite lineage)
+  circle_not_all_overlapping:
+    - Terry Winograd    # 1992–93 leave + 1993–98 consulting (not Don's year on staff)
+    - Dan Ingalls       # Smalltalk VM ~1993
+    - Paul Debevec      # Rouen Revisited; HDR / Light Stage
+    - Joy Mountford     # HCI after Apple HIG
+    - Brenda Laurel     # gender + tech → Purple Moon
+    - Bill Verplank     # HCI / interaction design (ex-PARC Star)
+    - Franklin Crow     # graphics / anti-aliasing
+    - Caterina Fake     # collaborative animation → Flickr
+    - Gavin Miller      # Sashimi holographic 3D TV
+    - Trevor Darrell    # computer vision → Berkeley BAIR
+    - Arati Prabhakar   # VP Research / President 1998–2000
+    - Glenn Edens       # broadband → Avio Digital
+    - Michael Naimark   # place representation (Aspen Movie Map lineage)
+  pedigree: "PARC, Apple, Atari, Stanford, MIT Media Lab — see Grokipedia roster"
+
+repo_show_nexus:
+  why: |
+    Interval is one of the richest veins for Repo Show / Connections: a Camelot-era roster
+    of people Don knew — many doing live, forkable, teachable work the show celebrates.
+  already_in_wwsff:
+    - characters/golan-levin/
+    - characters/terry-winograd/
+    - characters/david-levitt/
+    - characters/don-hopkins/interval-research-pluggers-and-mediaflow.md
+  strong_candidates:  # Grokipedia + DonHopkins/contacts/interval-alumni.yml
+    - paul-debevec     # Rouen Revisited dual w/ Golan
+    - caterina_fake    # Interval → Flickr; braid w/ Ben Cerveny / Game Neverending
+    - brenda_laurel    # Purple Moon; Computers as Theatre
+    - marc_davis       # MediaFlow / garage theatre (semantic video before vision AI)
+    - dan-ingalls      # Smalltalk at Interval
+  consent: not_yet_asked
 
 wwsff_entry: ../interval-research-pluggers-and-mediaflow.md
 see_also:

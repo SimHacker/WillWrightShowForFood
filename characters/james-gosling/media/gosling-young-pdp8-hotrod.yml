@@ -1,0 +1,54 @@
+# Sidecar — gosling-young-pdp8-hotrod.png
+# YAML Jazz: comments carry meaning for humans, LLMs, and verify scripts.
+
+artifact:
+  file: gosling-young-pdp8-hotrod.png
+  type: photograph
+  format: png
+  era_estimate: "mid-1970s"
+  provenance: "Don Hopkins personal archive; pulled in from Heinz/PIXIE correspondence thread (2026-07)"
+  rights: "Private scan — confirm with James Gosling before public redistribution beyond this repo context"
+  sidecar_of: gosling-young-pdp8-hotrod.png
+
+subject:
+  person: James Gosling
+  life_stage: "young adult / grad-student era"
+  pose: "seated, arms crossed, direct eye contact"
+  expression:
+    primary: satisfied
+    read: "quiet pride — the look of someone who knows exactly what the machine behind him can do"
+    don_note: "satisfied expression in front of his PDP-8 hotrod muscle car"
+
+wardrobe:
+  shirt: "light pink long-sleeve button-down, wide 1970s collar"
+  glasses: "thick dark rectangular frames"
+
+hardware:
+  headline: "PDP-8 hotrod muscle car"
+  platform: DEC PDP-8 family (front-panel switches visible)
+  visible_peripherals:
+    - PDP-8 control panel (toggle switches, indicator lamps, DEC stripe livery)
+    - dual DECtape drives (reels labeled 0 and 7)
+    - rack-mounted modules (dials, lamps, patch bays)
+    - partial keyboard/terminal lower right
+  metaphor: |
+    Student-owned minicomputer as hot rod — not a timeshare terminal in a glass room but *his*
+    machine, wired into racks he can touch. Same energy as later: write the window system, write
+    the extension language, sit in front of the iron.
+
+composition:
+  framing: medium close-up; subject centered; hardware fills background
+  tone: warm faded 1970s print grain; interior lab lighting
+  focal_layers: [Gosling, PDP-8 panel, DECtape stack, rack depth]
+
+repo_show:
+  tie_in:
+    - "Cheesy little extension languages — constraints breed languages"
+    - "Contrast with Cambridge PDP-7/Titan (Heinz PIXIE) — personal 8-bit hotrod vs distributed graphics satellite"
+    - "Gosling Emacs lineage — the kid at the switches becomes the person who ships NeWS then Java"
+  show_seed: ../../repo-shows/james-gosling/README.md
+  character_readme: ../README.md
+
+see_also:
+  - { path: ../README.md, why: "Guest hub — brutalist portrait + invitation links" }
+  - { path: ../../heinz-lemke/pull-in-gaps.yml#james_gosling_young_pdp8_photo, why: "Original pull-in gap — now closed" }

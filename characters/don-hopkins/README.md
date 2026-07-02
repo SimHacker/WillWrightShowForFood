@@ -82,7 +82,11 @@ Each blurb below is **one beat long** (~24 words). Read in order; each line **op
 
 | File | What it is | Opens → |
 |------|------------|---------|
-| [`interval-research-pluggers-and-mediaflow.md`](interval-research-pluggers-and-mediaflow.md) | Interval Research — Pluggers survey, MediaFlow, Camelot; hypermedia patterns that echo NeWS and prefigure MOOLLM rooms. | [`history/interval-research.yml`](history/interval-research.yml) |
+| [`interval-research-pluggers-and-mediaflow.md`](interval-research-pluggers-and-mediaflow.md) | Interval Camelot — MediaFlow + Bounce + Director plug-ins + Tom Ngo ECG; pie menus talk before hire. | [`tom-ngo-embedded-constraint-graphics-at-interval.md`](tom-ngo-embedded-constraint-graphics-at-interval.md) |
+| [`tom-ngo-embedded-constraint-graphics-at-interval.md`](tom-ngo-embedded-constraint-graphics-at-interval.md) | **ECG at Interval** — simplicial complexes, Mouther, patent US5933150; Don's 2016 G9.js HN comment. | [`breakfast-simplex-barycentric-direct-manipulation.md`](breakfast-simplex-barycentric-direct-manipulation.md) |
+| [`breakfast-simplex-barycentric-direct-manipulation.md`](breakfast-simplex-barycentric-direct-manipulation.md) | **Breakfast simplex** — Dark Breakfast × barycentric coords × pie menus; 2025 HN essay. | [`mediaflow-design-comments.md`](mediaflow-design-comments.md) |
+| [`mediaflow-design-comments.md`](mediaflow-design-comments.md) | **MediaFlow Design Comments** — full Interval essay; Bongo dictionaries → [IFC vs Bongo](ifc-vs-bongo-comparison.md). | [`ifc-vs-bongo-comparison.md`](ifc-vs-bongo-comparison.md) |
+| [`ifc-vs-bongo-comparison.md`](ifc-vs-bongo-comparison.md) | **IFC vs Bongo** — Netscape vs Marimba; `getProperties` property sheets; Arthur van Hoff; yaml-jazz echo. | [`history/interval-research.yml`](history/interval-research.yml) |
 | [`history/interval-research.yml`](history/interval-research.yml) | Distilled era yaml — same Interval thread in machine-readable backbone form for cross-repo grep. | [`history/README.md`](history/README.md) |
 | [`history/README.md`](history/README.md) | History subdir index — public-safe era distills; one room per research epoch, not raw correspondence. | Cluster V |
 

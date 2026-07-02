@@ -170,7 +170,7 @@ see stick-shift-protocol.yml#gear_commitment
 | [`ai-offs.yml`](ai-offs.yml) |
 | [`brain-stream.yml`](brain-stream.yml) |
 | [`homefun-grading.yml`](homefun-grading.yml) |
-| [`../characters/brad-myers/`](../characters/brad-myers/README.md) |
+| [`../characters/brad-myers/`](../characters/brad-myers/) |
 | [`SimHacker/moollm/skills/thoughtful-commitment`](SimHacker/moollm/skills/thoughtful-commitment) |
 | [`SimHacker/moollm/skills/cursor-mirror`](SimHacker/moollm/skills/cursor-mirror) |
 | [`SimHacker/moollm/skills/rubric`](SimHacker/moollm/skills/rubric) |

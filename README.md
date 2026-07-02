@@ -249,6 +249,7 @@ Full pages: [**TRAILS.md**](TRAILS.md)
 | Trail | One line |
 |-------|----------|
 | [repo_show_spine](process/trails/repo-show-spine.md) | Show IS the repo — RTFR, harvest skills back |
+| [augmentation_and_hypertext](process/trails/augmentation-and-hypertext.md) 🕯️ | Engelbart + Nelson + Weiser + Raskin → Player-in-the-Middle |
 | [constructionist_lineage](process/trails/constructionist-lineage.md) | 1996 → Will kickoff → Papert/Kay → Micropolis |
 | [drag_race_and_ai_offs](process/trails/drag-race-and-ai-offs.md) | Slats judges; ai-offs scores spend |
 | [retrocomputing_drive](process/trails/retrocomputing-drive.md) | One spec — SETUP DNA is viral |

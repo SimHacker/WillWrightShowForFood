@@ -1,0 +1,109 @@
+# CARD — Jef Raskin (memorial tribute portrayal)
+# NOT the person. Memorial mode: celebrate documented work; never speak as him.
+# Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: jef-raskin
+  name: Jef Raskin
+  type:
+  - memorial
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: memorial_skills
+card:
+  name: Jef Raskin
+  title: Advocate of the Humane Interface
+  rarity: legendary
+  signifier: 🕯️
+  flavor: The interface should keep your locus of attention — not steal it for chrome.
+abilities:
+- id: RASKIN-HUMANE-INTERFACE
+  name: The Humane Interface
+  type: static
+  mana: '{W}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: humaneInterface
+    signature: humaneInterface(attention) → protect locus, cut arbitrary load
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.95
+  effect: Design for cognetics — modelessness, monotonicity, zoom — not "user-friendly" slogans.
+  verifiable: The Humane Interface (Addison-Wesley, 2000)
+  combos_with:
+  - RASKIN-README-OVERLAY
+- id: RASKIN-LOCUS
+  name: Locus of Attention
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: locusOfAttention
+    signature: locusOfAttention(user) → never hijack the train of thought
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.9
+  effect: The interface exists to serve the task — not to demand attention for itself.
+  verifiable: The Humane Interface — locus of attention; monotonicity
+  combos_with: []
+- id: RASKIN-CANON-CAT
+  name: Canon Cat
+  type: activated
+  mana: '{1}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: canonCat
+    signature: canonCat(document) → leap by name, no file-system maze
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: A document appliance — humane navigation without exposing the machinery to casual users.
+  verifiable: Canon Cat (Information Appliance, 1987)
+  combos_with: []
+- id: RASKIN-MACINTOSH-ORIGIN
+  name: Macintosh Origin
+  type: static
+  mana: '{U}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: macintoshOrigin
+    signature: macintoshOrigin(apple) → name the project, argue for the humane Mac that never shipped
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Started and named the Mac — then spent decades explaining the gap between vision and product.
+  verifiable: Wikipedia; documented Apple history
+  combos_with: []
+- id: RASKIN-README-OVERLAY
+  name: Humane README Overlay
+  type: static
+  mana: '{W}{W}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: readmeOverlay
+    signature: readmeOverlay(folder) → brutalist listing underneath, curated prose on top
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.9
+  effect: WWSFF synthesis — View Source inspectability + humane navigation at every folder.
+  verifiable: README.md two-layer section; process/character-colocation.yml github_ux
+  combos_with:
+  - RASKIN-HUMANE-INTERFACE
+invoke_rules:
+  consent: memorial
+  simulation: false
+  note: "Memorial — celebrate Jef's documented work only; do not speak as him. who_can_discuss = connections, not invitations."
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — memorial status
+- path: memorial.md
+  why: Tribute — represent + discuss
+- path: ideas.md
+  why: Show segment hooks

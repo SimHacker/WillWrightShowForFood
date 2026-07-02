@@ -1,0 +1,34 @@
+# Assets to pull into repo / show — PIXIE + Cambridge arc
+# gap = not yet in git or not yet linked; pull_in = action needed
+
+meta:
+  room: characters/heinz-lemke/
+  curated_by: don-hopkins
+  consent: not_yet_asked
+
+gaps:
+  james_gosling_young_pdp8_photo:
+    what: "Very young James Gosling in front of his PDP-8 hotrod — satisfied expression"
+    status: pulled_in
+    path: ../james-gosling/media/gosling-young-pdp8-hotrod.png
+    sidecar: ../james-gosling/media/gosling-young-pdp8-hotrod.yml
+    show_use: "NeWS reunion / PIXIE prehistory — contrast PDP-8 student machine vs Cambridge PDP-7/Titan"
+    note: "Pulled in from Don's archive (2026-07); not in HeinzLemke Gmail export"
+
+  electronics_magazine_1969_pdf:
+    what: "McGraw-Hill Electronics (Apr 28 1969) PIXIE article; Gilmore scan"
+    status: gap
+    pull_in: "Re-export from Gmail or locate Gilmore PDF; attachments SAVE-FAILED in temp/HeinzLemke"
+    show_use: "Heinz US-trip + magazine story on air"
+
+  heinz_cambridge_word_doc:
+    what: "Heinz Word doc summarizing Cambridge work (Don asked permission to Medium-ify)"
+    status: gap
+    pull_in: "From HeinzLemke export msg-392/393 or Don archive"
+    show_use: "Primary narrative for PIXIE interview"
+
+  wiseman_notes_pdf:
+    what: "Wiseman Notes on Radial Menus in PIXIE.pdf"
+    status: gap
+    pull_in: "Don has copy at donhopkins.com/home/Wiseman%20Notes... ; export SAVE-FAILED"
+    show_use: "Radial menu prehistory evidence"

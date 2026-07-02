@@ -6,14 +6,14 @@ Radial menus you select by **direction**, not distance — fast, reliable, eyes-
 
 Don does **not** claim to have invented pie/radial menus. That honor belongs earlier:
 
-- **PIXIE** — *A New Approach to Graphical Man-Machine Communication* (1969 CAD Conference, Southampton; IEEE Conf. Pub. 51, pp. 463–471). Radial menus on the **PDP-6**, light-pen era — **Neil E. Wiseman**, **Heinz U. Lemke**, **John O. Hiles**, and colleagues.
+- **PIXIE** — *A New Approach to Graphical Man-Machine Communication* (1969 CAD Conference, Southampton; IEEE Conf. Pub. 51, pp. 463–471). Radial menus on **PDP-7/Titan**, light-pen era — **Neil E. Wiseman**, **Heinz U. Lemke**, **John O. Hiles**, and colleagues.
 - Don's role: **study, implement, evaluate, and ship** — then bake them into modeled worlds for forty years.
 
 **Repo Show priority (ASAP):** episode with **Heinz U. Lemke** on PIXIE → CHI'88 → now.
 
 | Show seed | Link |
 |-----------|------|
-| Solo — PIXIE on the PDP-6 | [`../../repo-shows/INDEX.yml`](../../repo-shows/INDEX.yml) → `pixie-pie-menus-pdp6.yml` |
+| Solo — PIXIE on PDP-7/Titan | [`../../repo-shows/INDEX.yml`](../../repo-shows/INDEX.yml) → `pixie-pie-menus-pdp7.yml` |
 | Group — Ben Shneiderman + Heinz | `ben-and-heinz-pie-menus.yml` |
 | Don's hook list | [`ideas.md`](ideas.md) |
 

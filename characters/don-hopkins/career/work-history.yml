@@ -67,7 +67,9 @@ employment_timeline:
 
   - org: Interval Research
     years: "1996–1997"
-    note: Bounce/Body Electric visual programming port
+    note: |
+      Camelot year: MediaFlow (MCL + QuickTime); Bounce live-TV compositor + COM on wires;
+      Director plug-ins; Tom Ngo ECG / Mouther orbit. Guest talk on pie menus + SimCity ~year prior.
 
   - org: Kaleida Labs
     years: "1993–1996"

@@ -15,7 +15,8 @@
 		"scaffold:cards": "python3 scripts/scaffold-guest-skills-cards.py",
 		"scaffold:skills-cards": "python3 scripts/scaffold-guest-skills-cards.py",
 		"normalize:characters": "node scripts/normalize-guest-characters.mjs",
-		"verify": "pnpm run verify:structure && pnpm run verify:yaml",
+		"verify:coherence": "node scripts/verify-coherence.mjs",
+		"verify": "pnpm run verify:structure && pnpm run verify:yaml && pnpm run verify:coherence",
 		"setup:python": "python3 -m venv .venv && .venv/bin/pip install -r requirements.txt",
 		"setup:hooks": "sh scripts/install-git-hooks.sh"
 	},

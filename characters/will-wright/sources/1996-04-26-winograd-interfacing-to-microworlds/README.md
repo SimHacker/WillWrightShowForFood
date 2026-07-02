@@ -7,7 +7,7 @@ direct artifact of a **forebear** (Terry Winograd's open public Stanford UI
 seminar; see `../../../../process/design-in-public.yml#forebears`).
 
 This episode is the preserved centerpiece of the larger **Terry Winograd / CS547 archive** ("the treasure trove"). See the dedicated forebear show
-`../../../terry-winograd/media/` — [`cs547-ARCHIVE.md`](../../../terry-winograd/media/cs547-ARCHIVE.md) / [`cs547-archive.yml`](../../../terry-winograd/media/cs547-archive.yml) hold the **full catalog of 339 talks** (15 with online scans, 25 by people who are WWSFF characters): the shoulders we stand on — Terry as dragon + Will + James Gosling (Java, 1995) + S. Joy Mountford (1994) + Jef Raskin + Donald Norman + Alan Kay + Ted Selker + Scott Kim + ~290 others.
+`../../../terry-winograd/media/` — [`cs547-ARCHIVE.md`](../../../terry-winograd/media/cs547-ARCHIVE.md) / [`cs547-archive.yml`](../../../terry-winograd/media/cs547-archive.yml) hold the **full catalog of 339 talks** (15 with online scans, 25 by people who are WWSFF characters): the shoulders we stand on — Terry as dragon + Will + James Gosling (Java, 1995) + S. Joy Mountford (1994) + [Jef Raskin](../../../jef-raskin/README.md) 🕯️ + Donald Norman + Alan Kay + Ted Selker + Scott Kim + ~290 others.
 
 ## What this is
 

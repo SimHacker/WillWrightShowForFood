@@ -42,8 +42,8 @@ intellectual_lineage:
 pie_menus_prehistory:
   note: "Don does not claim to have invented radial/pie menus"
   heinz_u_lemke:
-    role: "PIXIE 1969 co-author — radial menus on the PDP-6"
-    repo_show: "ASAP — pixie-pie-menus-pdp6.yml, ben-and-heinz-pie-menus.yml"
+    role: "PIXIE 1969 co-author — radial menus on PDP-7/Titan"
+    repo_show: "ASAP — pixie-pie-menus-pdp7.yml, ben-and-heinz-pie-menus.yml"
   neil_e_wiseman:
     role: "PIXIE lead — Wiseman notes on radial menus in PIXIE (see Engelbart/Kay mail manifests)"
   john_o_hiles:

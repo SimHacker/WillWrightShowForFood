@@ -304,7 +304,7 @@ Raw mirror: [`cs547-catalog.tsv`](cs547-catalog.tsv) · machine girder: [`cs547-
 - **2001-05-25** — Orkut Buyukkokten — Web Browsing on Handheld Devices · _CS547 Winograd 8_
 - **2001-06-01** — Francois Guimbretiere — Fluid Interaction for High Resolution Wall-Size Displays · _CS547 Winograd 9_
 - **2001-09-28** — Dan Russell — BlueBoards in Use: Large Public Displays for Collaboration · _CS547 Winograd 1_
-- **2001-10-05** — Jef Raskin — Prolegomena to future interface design · _CS547 Winograd 2_
+- **2001-10-05** — [Jef Raskin](../../jef-raskin/README.md) 🕯️ — Prolegomena to future interface design · _CS547 Winograd 2_
 - **2001-10-12** — Scott Snibbe — Haptic Techniques for Media Control · _CS547 Winograd 3_
 - **2001-10-19** — Kristen Nygaard — A process-Oriented Conceptual Platform for Informatics · _CS547 Winograd 4_
 - **2001-10-26** — David Hilbert, Jonathan Trevor — M-Links: A UI For Web Interaction On Very Small Devices · _CS547 Winograd 5_

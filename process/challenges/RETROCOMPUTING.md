@@ -179,8 +179,8 @@ install/upgrade preserving .rig/<slug>/state.yml. Human decides whether agent ex
 | [`manual-transmission.yml`](../manual-transmission.yml) | Measurement lane — smallest model on retro target |
 | [`ai-offs.yml`](../ai-offs.yml) | Declare class + spend proof for AI-assisted retro |
 | [`homefun-grading.yml`](../homefun-grading.yml) | Homefun rubric applies to retro PRs |
-| [`../../characters/lars-brinkhoff/`](../../characters/lars-brinkhoff/README.md) | PDP-10 anchor — make it so |
-| [`../../characters/thomas-cherryhomes/`](../../characters/thomas-cherryhomes/README.md) | Real ][ on FujiNet — pairs with apple2-drive |
+| [`../../characters/lars-brinkhoff/`](../../characters/lars-brinkhoff/) | PDP-10 anchor — make it so |
+| [`../../characters/thomas-cherryhomes/`](../../characters/thomas-cherryhomes/) | Real ][ on FujiNet — pairs with apple2-drive |
 | [`rig-setup-dna.yml`](../../schemas/rig-setup-dna.yml) | SETUP.md is Rig DNA — LLM may draft; not facade-registry bulk md |
 | [`SKILL.md`](../../skills/repo-show/SKILL.md) | Repo Show harvests retro technique back to skills/ |
 | [`constructionism`](https://github.com/SimHacker/moollm/skills/constructionism) | Microworlds — learn by building on your platform |

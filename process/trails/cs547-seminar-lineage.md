@@ -17,6 +17,7 @@ Terry Winograd's Stanford **CS547 "People, Computers, and Design"** seminar is t
 | [**Will's 1996 talk**](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) | "Interfacing to Microworlds" — the anchor the repo orbits |
 | [**Transcript**](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md) | Primary text — cite Will's words |
 | [**James Gosling**](../../characters/james-gosling/README.md) | 1995 CS547 "Bringing Behavior to the Internet" (Java) — Don on camera |
+| [**Jef Raskin**](../../characters/jef-raskin/README.md) 🕯️ | 2001 CS547 *Prolegomena to future interface design* — humane interface forebear (memorial) |
 | [**Will Wright**](../../characters/will-wright/README.md) | Flagship guest |
 | [**repo-show-format.yml**](../repo-show-format.yml) | The Repo Show — CS547's recorded-conversation descendant |
 

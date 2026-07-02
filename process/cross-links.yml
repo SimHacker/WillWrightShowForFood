@@ -27,6 +27,9 @@ trails:
       - { path: ../repo-shows/will-wright/, why: "Flagship planted show — Will kickoff arc" }
       - { path: ../repo-shows/REPO-SHOWS.yml, why: "Implicit SHOW inheritance for whole collection" }
       - { path: live-repo.yml, why: "Public WWSFF vs DonHopkins private — export ethics" }
+      - { path: ../README.md, why: "Two-layer navigation — brutalist listing + humane README overlay" }
+      - { path: ../characters/jef-raskin/, why: "🕯️ Humane Interface memorial — philosophical anchor for README overlay" }
+      - { path: character-colocation.yml, why: "github_ux — humans link to README.md, not bare directory URLs" }
 
   drag_race_and_ai_offs:
     k_line: "Start your engines — werk, commit, merge"
@@ -177,19 +180,23 @@ trails:
       - { path: ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "Will's 1996 'Interfacing to Microworlds' — the anchor talk" }
       - { path: ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md, why: "Primary text — cite Will's words" }
       - { path: ../characters/james-gosling/, why: "1995 CS547 'Bringing Behavior to the Internet' (Java) — Don on camera" }
+      - { path: ../characters/jef-raskin/, why: "🕯️ 2001 CS547 Prolegomena to future interface design — humane interface (memorial)" }
       - { path: ../characters/will-wright/, why: "Flagship guest — the talk the repo orbits" }
       - { path: repo-show-format.yml, why: "The Repo Show — CS547's recorded-conversation descendant" }
 
   augmentation_and_hypertext:
     k_line: "Augment, don't replace — and connect everything"
     human: trails/augmentation-and-hypertext.md
-    why: "Engelbart's augmentation + Nelson's hypertext + Weiser's calm tech — the forebears behind Player-in-the-Middle (memorial mode: represent + discuss)"
+    why: "Engelbart's augmentation + Nelson's hypertext + Weiser's calm tech + Raskin's humane interface — forebears behind Player-in-the-Middle (memorial mode: represent + discuss)"
     nodes:
       - { path: ../characters/douglas-engelbart/, why: "🕯️ Augmenting human intellect — NLS, the mouse, the Mother of All Demos (memorial)" }
       - { path: ../characters/douglas-engelbart/eulogy-ted-nelson.md, why: "Ted Nelson's eulogy for Doug (CHM, 2013) — primary source, 'I feel like I've lost my best planet'" }
       - { path: ../characters/ted-nelson/, why: "Coined hypertext; Xanadu; transclusion — living discussant for the memorials" }
       - { path: ../characters/hugh-daniel/, why: "🕯️ Xanadu + NeWS — the Hugh + Ted + Don triangle (memorial)" }
       - { path: ../characters/mark-weiser/, why: "🕯️ Ubiquitous + calm computing; CHI'88 pie-menu co-author with Don (memorial)" }
+      - { path: ../characters/jef-raskin/, why: "🕯️ The Humane Interface — locus of attention; humane README overlay echo (memorial)" }
+      - { path: ../repo-shows/remembering-jef-raskin.yml, why: "Memorial seed — possible_discussants are connections only, not invitations" }
+      - { path: ../README.md, why: "Root two-layer navigation essay — brutalist listing + humane README" }
       - { path: ../characters/don-hopkins/CARD.yml, why: "Pie menus + HyperTIES — augmentation in practice" }
       - { path: crazy-idea-jam.yml#player_in_the_middle, why: "Augmentation-not-automation = the PITM tenet" }
       - { path: ../schemas/portrayal-standards.yml#memorial_mode, why: "How we honor the deceased — represent + discuss, never interview" }
@@ -219,6 +226,7 @@ trails:
       - { path: ../characters/terry-winograd/, why: "Stanford HCI; CS547 seminar host of the 1996 talk" }
       - { path: ../characters/douglas-engelbart/, why: "🕯️ The mouse + NLS — direct manipulation's origin (memorial)" }
       - { path: ../characters/mark-weiser/, why: "🕯️ Calm/ubiquitous computing; CHI'88 pie-menu co-author (memorial)" }
+      - { path: ../characters/jef-raskin/, why: "🕯️ Humane Interface — locus of attention; README overlay (memorial)" }
       - { path: ../characters/don-hopkins/CARD.yml, why: "Pie menus + PostScript UI — direct manipulation in practice" }
 
   live_objects:

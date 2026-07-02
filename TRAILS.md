@@ -27,7 +27,7 @@ Playlists ([**entryways**](process/entryways/README.md)) are **ordered tours**. 
 | [maxis_sims_lineage](process/trails/maxis-sims-lineage.md) | *SimCity → Dollhouse → The Sims → Spore* | The genealogy this repo grew from — with primary-source images |
 | [the_card_game](process/trails/the-card-game.md) | *Build a segment deck* | Guest CARDs as MTG verbs; combos across guests; Slats judges |
 | [cs547_seminar_lineage](process/trails/cs547-seminar-lineage.md) | *One guest, open access, recorded* | Winograd's CS547 → Will's 1996 talk → the Repo Show |
-| [augmentation_and_hypertext](process/trails/augmentation-and-hypertext.md) 🕯️ | *Augment, don't replace* | Engelbart + Nelson + Weiser → Player-in-the-Middle (memorial mode) |
+| [augmentation_and_hypertext](process/trails/augmentation-and-hypertext.md) 🕯️ | *Augment, don't replace* | Engelbart + Nelson + Weiser + Raskin → Player-in-the-Middle (memorial mode) |
 
 ---
 

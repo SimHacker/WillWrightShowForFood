@@ -47,8 +47,8 @@ creators; front-row audience + catalog cross-links.
 
 **[phil-salvador/](phil-salvador/README.md)** — VGHF / Obscuritory; SimRefinery recovery; librarian box seat.
 
-**[douglas-engelbart/](douglas-engelbart/README.md)** · **[mark-weiser/](mark-weiser/README.md)** · **[hugh-daniel/](hugh-daniel/README.md)** —
-Memorial mode examples — represent and discuss; never voice the deceased.
+**[douglas-engelbart/](douglas-engelbart/README.md)** · **[jef-raskin/](jef-raskin/README.md)** · **[mark-weiser/](mark-weiser/README.md)** · **[hugh-daniel/](hugh-daniel/README.md)** —
+Memorial mode examples — represent and discuss **the deceased only**; never voice them. Living people appear only as **possible discussants** after consent — see each `memorial.md` and `portrayal-standards.yml#memorial_mode`.
 
 *Every other name:* list this folder or follow links from [`../repo-shows/`](../repo-shows/README.md).
 

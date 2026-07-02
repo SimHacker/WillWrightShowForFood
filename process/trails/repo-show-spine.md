@@ -19,6 +19,9 @@ The show **is** the repo — RTFR, play on your rig, harvest skills back into th
 | [**will-wright show**](../../repo-shows/will-wright/README.md) | Flagship planted show — Will kickoff arc |
 | [**REPO-SHOWS.yml**](../../repo-shows/REPO-SHOWS.yml) | Implicit SHOW inheritance for whole collection |
 | [**Live repo**](../live-repo.yml) | Public WWSFF vs DonHopkins private — export ethics |
+| [**Root README**](../../README.md) | Two layers — brutalist directory listing + humane README overlay |
+| [**Jef Raskin**](../../characters/jef-raskin/README.md) 🕯️ | Humane interface memorial — README overlay echo |
+| [**character-colocation**](../character-colocation.yml) | `github_ux` — link humans to README.md, not bare listings |
 
 ---
 

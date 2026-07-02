@@ -1,0 +1,64 @@
+# Jef Raskin — memorial portrayal (in memoriam). NOT Jef Raskin.
+# Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.yml#memorial_mode
+
+character:
+  id: jef-raskin
+  name: "Jef Raskin"
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  field: "The Humane Interface — locus of attention, modelessness, cognetics; Macintosh origin; Canon Cat; Archy"
+  home: characters/jef-raskin/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 5
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  consent: not_yet_asked
+  document: memorial.md
+  note: "deceased (1943–2005) — represent + discuss Jef only"
+
+memorial:
+  mode: represent_and_discuss
+  rule: "Represent and discuss Jef's documented work only. Do not interview Jef, do not speak as him, invent no inner life or quotes."
+  # Documented connections only — NOT invitations. Consent required before any show guest claim.
+  who_can_discuss:
+    - { who: terry-winograd, why: "Hosted Raskin's CS547 talk 'Prolegomena to future interface design' (2001-10-05); shoulders of the seminar tradition" }
+    - { who: don-hopkins, why: "Repo Show two-layer navigation — brutalist listing + humane README overlay — as a modern echo of his principles" }
+    - { who: ben-shneiderman, why: "HCI peer — direct manipulation era; complementary calm-tech vs humane-attention framing with Weiser" }
+    - { who: bret-victor, why: "Explorable explanations + humane-interface lineage — read intent, protect the user's thinking" }
+    - { who: alan-kay, why: "Mac/Dynabook era contemporary — what shipped vs what Raskin argued computers should become" }
+    - { who: walter-bender, why: "OLPC View Source + constructionist navigation — inspectability without abandoning the learner" }
+  draw_on_for_shows:
+    - "*The Humane Interface* (2000) — locus of attention, monotonicity, modelessness, cognetics (~7±2), zooming"
+    - "**Canon Cat** (1987) — document appliance; leap-by-name; no file-system thinking for the casual user"
+    - "**Archy** / The Humane Environment — unfinished humane shell; son Aza Raskin carried pieces forward"
+    - "Started the **Macintosh** project at Apple (1979); named it; left before the shipped Mac diverged from his vision"
+    - "CS547 **Prolegomena to future interface design** (Terry Winograd, 2001) — in Terry's archive catalog"
+    - "**Repo Show navigation** — directory listing (view source) + README.md (humane overlay) at every level — same path, two projections"
+
+bio:
+  summary: "**Jef Raskin** (1943–2005) — interface philosopher who started Apple's **Macintosh** project and spent the rest of his life arguing for **humane** (not merely user-friendly) computing. His book *The Humane Interface* (2000), the **Canon Cat** document appliance, and the unfinished **Archy** environment center on **protecting the user's locus of attention**, eliminating modes, and respecting cognitive limits (**cognetics**)."
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Jef_Raskin"
+  web:
+    - https://en.wikipedia.org/wiki/The_Humane_Interface
+    - https://en.wikipedia.org/wiki/Canon_Cat
+  papers: []
+  blogs: []
+  in_repo:
+    - { path: ../terry-winograd/media/cs547-ARCHIVE.md, why: "CS547 catalog — Prolegomena to future interface design (2001-10-05)" }
+
+see_also:
+  - { path: humane-interface-and-this-repo.md, why: "Two-layer navigation + Raskin synthesis — depth lives here, not root README" }
+  - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
+  - { path: ideas.md, why: "Show hooks — Humane Interface × Repo Show navigation" }
+  - { path: ../terry-winograd/media/cs547-ARCHIVE.md, why: "CS547 catalog — Raskin guest entry" }
+  - { path: humane-interface-and-this-repo.md, why: "Two-layer navigation + Raskin synthesis" }
+  - { path: ../../process/character-colocation.yml, why: "github_ux — directory listing vs README-only URL" }
+  - { path: ../../repo-shows/remembering-jef-raskin.yml, why: "Group memorial show seed" }
+  - { path: ../../schemas/portrayal-standards.yml#memorial_mode, why: "How memorial guests are handled" }

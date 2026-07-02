@@ -100,6 +100,16 @@ Show seeds: [`repo-shows/dan-ingalls/`](../../repo-shows/dan-ingalls/) · [`phil
 
 ---
 
+## Lineage — clay before YAML Jazz had a name
+
+Interval **MediaFlow** (1996) already argued for **clay-like** plug-in data types — dictionaries,
+polymorphic arrays, operators — externalized for persistence and property sheets (Bongo). Full essay
+inlined: [`characters/don-hopkins/mediaflow-design-comments.md`](../../characters/don-hopkins/mediaflow-design-comments.md).
+
+Don's [**IFC vs Bongo**](../../characters/don-hopkins/ifc-vs-bongo-comparison.md) comparison (same era) is the deep dive on Bongo's **`getProperties`** — persistence and UI metadata in one interface — the direct ancestor of yaml-jazz CARD.yml + semantic comments.
+
+---
+
 ## Doorways
 
 [Hacker](../entryways/hacker.md) · [Educator](../entryways/educator.md) · [Producer](../entryways/producer.md) · [AI coder](../entryways/ai-coder.md) · [Guest — anyone](../entryways/guest-any.md)

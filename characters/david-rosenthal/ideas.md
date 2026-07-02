@@ -11,7 +11,11 @@ David S. H. Rosenthal (DSHR) — Co-developer of NeWS with James Gosling at Sun 
 
 ## The hooks
 
-### 1. Show seed: `repo-shows/david-rosenthal/`
+### 2. Cambridge PDP-7/Titan — same stack as PIXIE
+Undergrad ~1970 on **PDP-7/340 + Titan**; met Neil Wiseman; saw early demos. Don links this to
+PIXIE's distributed CAD and proposed DSHR interview Heinz for CHM ([`../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md`](../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md)).
+
+### 3. Show seed: `repo-shows/david-rosenthal/`
 walk the repo on air and build from the seed.
 
 ## Sources (public)

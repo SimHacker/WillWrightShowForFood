@@ -14,7 +14,7 @@ the_shows:
   series:   [will-wright-series (→planted), ben-shneiderman-series, yoot-saito-series]
   group:    [building-the-sims, music-and-theory, will-and-yoot, ben-and-heinz-pie-menus]
   bridges:  [game-bridge-sims-stardew, game-bridge-proxi-sims]   # the data-portability CROWN JEWEL
-  solo:     [pie-menus-retrospective, ted-selker-input-languages, pixie-pie-menus-pdp6, lambdamoo-pavel-curtis, walter-bender-olpc]
+  solo:     [pie-menus-retrospective, ted-selker-input-languages, pixie-pie-menus-pdp7, lambdamoo-pavel-curtis, walter-bender-olpc]
   game_show: [game-show-wigcercize, micropolis-ai-drag-race]   # VARIETY formats
   ideas: ideas/   # gags, themes, traditions, show content packs
   add_more: "Copy _TEMPLATE.yml → <slug>.yml; list in INDEX.yml + REPO-SHOWS.yml."

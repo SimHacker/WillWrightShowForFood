@@ -18,7 +18,10 @@ Direct manipulation, programming by demonstration, media for thought — the lin
 | [**Terry Winograd**](../../characters/terry-winograd/README.md) | Stanford HCI; CS547 seminar host of the 1996 talk |
 | [**Douglas Engelbart**](../../characters/douglas-engelbart/README.md) 🕯️ | The mouse + NLS — direct manipulation's origin (memorial) |
 | [**Mark Weiser**](../../characters/mark-weiser/README.md) 🕯️ | Calm/ubiquitous computing; CHI'88 pie-menu co-author (memorial) |
+| [**Jef Raskin**](../../characters/jef-raskin/README.md) 🕯️ | *The Humane Interface* — locus of attention; Repo Show README overlay echo (memorial) |
 | [**Don CARD.yml**](../../characters/don-hopkins/CARD.yml) | Pie menus + PostScript UI — direct manipulation in practice |
+| [**ECG at Interval**](../../characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md) | Tom Ngo simplicial complexes — Mouther; drag features, solve blend weights |
+| [**Breakfast simplex**](../../characters/don-hopkins/breakfast-simplex-barycentric-direct-manipulation.md) | Barycentric breakfast space × pie menus — HN essay |
 
 ---
 

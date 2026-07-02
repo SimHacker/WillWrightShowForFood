@@ -31,6 +31,10 @@ bouquet:
     - will-wright-primary-sources-evidence-room.md
   career_eras:
     - interval-research-pluggers-and-mediaflow.md
+    - mediaflow-design-comments.md
+    - ifc-vs-bongo-comparison.md
+    - tom-ngo-embedded-constraint-graphics-at-interval.md
+    - breakfast-simplex-barycentric-direct-manipulation.md
     - kaleida-scriptx-dreamscape-multimedia-lisp-machine.md
     - nutritionquest-turbogears-genshi-alive-pd.md
   related_repos:

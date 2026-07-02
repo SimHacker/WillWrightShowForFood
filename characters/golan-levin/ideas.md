@@ -7,7 +7,7 @@ public work and documented connections to this repository. Things Don would love
 
 ## What Golan has done
 
-Golan Levin — Interactive/computational media artist, engineer, and educator (b. 1972, NYC; based in Pittsburgh). Professor of Electronic Art at Carnegie Mellon University (courtesy appointments in Design, Architecture, Computer Science, ETC) and former Director of CMU's Frank-Ratchye STUDIO for Creative Inquiry. MIT Media Lab alum; Interval Research colleague of Don Hopkins and Paul Debevec.
+Golan Levin — Interactive/computational media artist, engineer, and educator (b. 1972, NYC; based in Pittsburgh). Professor of Electronic Art at Carnegie Mellon University (courtesy appointments in Design, Architecture, Computer Science, ETC) and former Director of CMU's Frank-Ratchye STUDIO for Creative Inquiry. MIT Media Lab alum; **Interval Research** colleague of Don Hopkins and Paul Debevec (*Rouen Revisited*; Mouther on Tom Ngo's ECG). Same Camelot-era circle as Terry Winograd, David Levitt, Marc Davis — Don's roster, not all overlapping one staff year.
 
 ## Shared ground
 
@@ -16,6 +16,7 @@ Golan Levin — Interactive/computational media artist, engineer, and educator (
 - Creative coding / 'Code as Creative Medium' as a teaching practice (kin to Micropolis Class)
 - Gestural + audiovisual interfaces (AVES, Messa di Voce, Manual Input Workstation)
 - Rouen Revisited (1996) — dual interview with Paul Debevec on image-based interactive media
+- **Mouther** (1996) — vector faces in Tom Ngo's [**ECG**](../don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md) editor at Interval; drag eyes/mouth, solve barycentric blends
 - flong.com as an archetype of a live, forkable, anti-extraction archive of interactive work
 - LLM-assisted creative coding and generative design
 ## The hooks
@@ -23,22 +24,18 @@ Golan Levin — Interactive/computational media artist, engineer, and educator (
 ### 1. Show seed: `repo-shows/golan-levin/`
 walk the repo on air and build from the seed.
 
-### 2. Creative coding / 'Code as Creative Medium' as a teaching practice ...
-n to Micropolis Class)
+### 2. Creative coding / 'Code as Creative Medium' as a teaching practice (kin to Micropolis Class)
 
-### 3. Gestural + audiovisual interfaces (AVES, Messa di Voce, Manual Inpu...
-orkstation)
+### 3. Gestural + audiovisual interfaces (AVES, Messa di Voce, Manual Input Workstation)
 
 ### 4. Rouen Revisited (1996)
 dual interview with Paul Debevec on image-based interactive media
 
-### 5. flong.com as an archetype of a live, forkable, anti-extraction arch...
-of interactive work
+### 5. flong.com as an archetype of a live, forkable, anti-extraction archive of interactive work
 
 ### 6. LLM-assisted creative coding and generative design
 
-### 7. Information visualization + critical making as inquiry, not just to...
-ng
+### 7. Information visualization + critical making as inquiry, not just tooling
 
 ## Sources (public)
 

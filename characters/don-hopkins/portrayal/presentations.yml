@@ -12,12 +12,12 @@ prehistory:
     venue: "1969 CAD Conference, Southampton"
     citation: "IEEE Conference Publication 51, pp. 463–471"
     authors: [Neil E. Wiseman, Heinz U. Lemke, John O. Hiles]
-    significance: "Deep prehistory of radial/pie menus on the PDP-6 — Wiseman, Lemke, and Hiles; Don does not claim authorship or the original presentation"
+    significance: "Deep prehistory of radial/pie menus on PDP-7/Titan — Wiseman, Lemke, and Hiles; Don does not claim authorship or the original presentation"
     original_film:
       what: "1969 film made to accompany the PIXIE paper — historic GUI demonstration"
       archive: "Cambridge University Library film archives"
       digitized_by: "David Chapman (Cambridge Univ Library) — credited on YouTube"
-    repo_show: "Heinz U. Lemke ASAP — pixie-pie-menus-pdp6.yml, ben-and-heinz-pie-menus.yml"
+    repo_show: "Heinz U. Lemke ASAP — pixie-pie-menus-pdp7.yml, ben-and-heinz-pie-menus.yml"
 
 homages:
   flight_of_the_pixie:

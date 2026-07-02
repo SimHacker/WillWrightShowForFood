@@ -24,6 +24,7 @@ Smalltalk → Self → NeWS → Java. The live-object lineage behind HyperLook a
 | [**Bill Atkinson**](../../characters/bill-atkinson/README.md) 🕯️ | HyperCard → HyperLook → SimCity (in memoriam) |
 | [**Hugh Daniel**](../../characters/hugh-daniel/README.md) 🕯️ | Hacked NeWS with Don (Grasshopper Group) — Xanadu/NeWS (memorial) |
 | [**SimCity lineage**](../../characters/don-hopkins/career/simcity-lineage.yml) | SimCity on NeWS/HyperLook with pie menus — the lineage in action |
+| [**MediaFlow design comments**](../../characters/don-hopkins/mediaflow-design-comments.md) | Interval (1996) — MCL MediaFlow + parallel Bounce TV bots; streams, clay, COM on wires |
 
 ---
 

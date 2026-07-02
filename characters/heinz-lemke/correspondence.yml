@@ -18,10 +18,32 @@ gist: |
   interfaces. Don wants CHM oral history for Heinz while first-hand memory remains.
 
 threads:
+  chapman_cambridge_films:
+    what: |
+      David Chapman (Cambridge Univ Library Reference) tracked two PIXIE films via Rainbow group,
+      coordinated digitisation (ref #91692), published July 2019. Without this, Don could not
+      have made *Flight of the PIXIE* (Bumblebee edit). Buxton had promised digitization for years
+      but never delivered to Don.
+    doc: cambridge-films-flight-of-the-bumblebee.md
+    export_msgs: ["msg-403", "msg-407", "msg-409", "msg-410", "msg-413", "msg-414"]
   pixie_history:
-    what: "1969 PIXIE paper + film; Wiseman/Hiles co-authors; radial menus on PDP-6"
+    what: "1969 PIXIE paper + film; Wiseman/Hiles co-authors; radial menus on PDP-7"
   flight_of_pixie:
-    what: "Don's Yuja Wang score edit — shared on YouTube"
+    what: "Don's Yuja Wang Bumblebee score edit — highlights of Chapman's digitized films"
+    production: will-wright/sources/don-youtube-jDrqR9XssJI-flight-of-pixie/production-notes.md
+  rosenthal_same_pdp7:
+    what: |
+      David Rosenthal Cambridge undergrad ~1970 on same PDP-7/340 + Titan; met Wiseman;
+      Don proposed DSHR interview Heinz for CHM. Line to NeWS/X11/Andrew.
+    export_msgs: ["msg-408"]
+    doc: cambridge-films-flight-of-the-bumblebee.md
+    character: ../david-rosenthal/
+  electronics_magazine_1969:
+    what: |
+      McGraw-Hill Electronics (Apr 28 1969) PIXIE article; Gilmore scan; Heinz photo at PDP-7.
+      Ask Heinz: US research-lab trip story behind the magazine piece.
+    export_msgs: ["msg-384", "msg-385", "msg-393"]
+    pull_in: pull-in-gaps.yml#electronics_magazine_1969_pdf
   cars_medicine:
     what: "IFCARS, CARS congress, patient-specific modelling, model-guided medicine"
   preservation:
@@ -29,11 +51,15 @@ threads:
 
 connects_in_repo:
   - { path: CHARACTER.yml, why: "Bio + invitation status" }
-  - { path: ../../repo-shows/pixie-pie-menus-pdp6.yml, why: "Solo PIXIE show seed" }
+  - { path: cambridge-films-flight-of-the-bumblebee.md, why: "Chapman + Rosenthal + production + HN index" }
+  - { path: pull-in-gaps.yml, why: "Assets to pull in (Gosling PDP-8 photo, magazine PDFs, etc.)" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Solo PIXIE show seed" }
   - { path: ../don-hopkins/pie-menus-chi-88-and-beyond.md, why: "PIXIE credited; Don does not claim invention" }
+  - { path: ../david-rosenthal/, why: "Same Cambridge PDP-7/Titan; possible CHM interviewer" }
 
 show_hooks:
   - "Neil Wiseman — lab culture, design judgment, personal memory"
+  - "David Rosenthal — same Cambridge PDP-7/Titan; DSHR interview Heinz?"
   - "Cambridge late 1960s + US research-lab trip"
   - "PIXIE → CARS continuity — graphical interaction to model-guided medicine"
   - "CHM oral history — if Heinz is willing"

@@ -19,4 +19,6 @@ Sent in [2020-promised-links](../2020-promised-links-maxscript-pipeline/article.
 Cambridge CAD (Wiseman/Lemke/Hiles) → Chapman's archive digitization → Don's bumblebee homage →
 Sims/Ocean Max pipeline → modern WebGL (VitaMoo).
 
+**Production:** [`production-notes.md`](production-notes.md) — After Effects telecine jiggle, motion tracking.
+
 *Link only — no media in git.*

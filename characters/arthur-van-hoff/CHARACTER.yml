@@ -23,7 +23,7 @@ invitation:
 
 
 bio:
-  summary: "**Arthur van Hoff** — Dutch programmer; great long-time friend of Don with many shared projects. At the **Turing Institute (Glasgow)** he built **GoodNeWS → HyperNeWS → HyperLook** (a NeWS/PostScript reimagining of HyperCard) and **PdB** (an object-oriented C-to-PostScript compiler). On the early **Java** team at Sun he wrote the Java compiler in Java and worked on the **AWT** and **HotJava** browser. Co-founded **Marimba** (Castanet + Bongo; Danny Goodman wrote the Bongo book). Later: TiVo (Str"
+  summary: "**Arthur van Hoff** — Dutch programmer; great long-time friend of Don. Turing Institute (Glasgow): GoodNeWS → HyperNeWS → HyperLook, PdB. Sun: Java compiler in Java, AWT, HotJava. Marimba: Castanet + Bongo (Danny Goodman — HyperCard handbook **and** Bongo book). Later: TiVo, Flipboard, Jaunt VR, Apple."
 
 sources:
   wikipedia: "https://en.wikipedia.org/wiki/Arthur_van_Hoff"

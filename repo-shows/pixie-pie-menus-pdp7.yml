@@ -1,25 +1,35 @@
-# SHOW PROPOSAL — PIXIE Pie Menus on the PDP-6 (Don interviews Heinz U. Lemke)
-# The deep prehistory of pie/radial menus.
+# SHOW PROPOSAL — PIXIE Pie Menus on the PDP-7 (Don interviews Heinz U. Lemke)
+# The deep prehistory of pie/radial menus. PDP-7 + Type 340 display ↔ Titan.
 
 show:
-  id: pixie-pie-menus-pdp6
-  title: "PIXIE: Pie Menus on the PDP-6 (1969)"
+  id: pixie-pie-menus-pdp7
+  title: "PIXIE: Pie Menus on the PDP-7 (1969)"
   type: solo
   host: Don Hopkins
   guests: ["Heinz U. Lemke"]
   character: characters/heinz-lemke/
-  topic: "PIXIE — early graphical man-machine communication + radial/pie menus on the PDP-6, with co-author Heinz U. Lemke."
+  topic: "PIXIE — early graphical man-machine communication + radial/pie menus on PDP-7/Titan, with co-author Heinz U. Lemke."
   status: proposed
   urgency: "Preserve first-hand history while we can; warm correspondence with Heinz."
 
 history:
+  hardware: "PDP-7 + Type 340 display (graphics satellite) ↔ Titan (Cambridge Multiple Access System)"
+  distributed_cad: "Rainbow group; interactive drawing on PDP-7, application/analysis on Titan over Wiseman's high-speed link"
   paper: "PIXIE: A New Approach to Graphical Man-Machine Communication. Proc. 1969 CAD Conference, Southampton. IEEE Conf. Pub. 51, pp. 463–471."
   authors: ["Neil E. Wiseman", "Heinz U. Lemke", "John O. Hiles"]
   film: "1969 film demonstrating an early GUI, made to accompany the PIXIE paper."
-  archive: "David Chapman, Cambridge University Library."
+  archive: "David Chapman, Cambridge University Library — tracked Rainbow-group copies, coordinated digitisation (2019)."
+  flight_of_pixie: "Don's Bumblebee edit — only possible after Chapman published the digitized films."
   youtube: "https://www.youtube.com/watch?v=jDrqR9XssJI"
+  evidence_room: characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md
 
 interview_center:
+  chapman_films_bumblebee:
+    ask: "What was it like when the 1969 films surfaced again? Who is in the footage? How did the light pen + radial menus feel?"
+    doc: characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md
+  rosenthal_cambridge_pdp7:
+    ask: "Heinz + David Rosenthal — same machine, different years. What did the lab feel like?"
+    tie: characters/david-rosenthal/
   neil_wiseman:
     ask: "What was Neil E. Wiseman like to work with — technically, personally, and as a research leader?"
   cambridge_zeitgeist:

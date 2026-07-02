@@ -6,7 +6,7 @@
 
 | Guest | Episode / topic |
 |-------|-----------------|
-| **Heinz U. Lemke** | **PIXIE** (1969 PDP-6 radial menus) → CHI'88 empirical study → forty years of shipping — **book this first**. Show seeds: [`../../repo-shows/INDEX.yml`](../../repo-shows/INDEX.yml) → `pixie-pie-menus-pdp6.yml`, `ben-and-heinz-pie-menus.yml`. Topic file: [`pie-menus-chi-88-and-beyond.md`](pie-menus-chi-88-and-beyond.md). Don does **not** claim to have invented pie menus. |
+| **Heinz U. Lemke** | **PIXIE** (1969 PDP-7 radial menus) → CHI'88 empirical study → forty years of shipping — **book this first**. Show seeds: [`../../repo-shows/INDEX.yml`](../../repo-shows/INDEX.yml) → `pixie-pie-menus-pdp7.yml`, `ben-and-heinz-pie-menus.yml`. Topic file: [`pie-menus-chi-88-and-beyond.md`](pie-menus-chi-88-and-beyond.md). Don does **not** claim to have invented pie menus. |
 
 ## Host shows (Don runs the repo)
 

@@ -3,7 +3,7 @@ status: draft
 character_id: heinz-lemke
 public: true
 consent: not_yet_asked
-show_seed: repo-shows/pixie-pie-menus-pdp6.yml
+show_seed: repo-shows/pixie-pie-menus-pdp7.yml
 format: remote_or_in_person
 ---
 
@@ -27,7 +27,7 @@ public GitHub repo, recorded as a relaxed video call. Not a lecture from me: an 
 **you** tell the story, with the 1969 film and paper on screen when they help. **Show, don't tell**
 — but the show is *your* PIXIE, Cambridge, and CARS arc, told by the person who was there.
 
-**Proposed episode:** *PIXIE: Pie Menus on the PDP-6 (1969)* — from graphical man-machine
+**Proposed episode:** *PIXIE: Pie Menus on the PDP-7 (1969)* — from graphical man-machine
 communication at Cambridge through your medical-computing career to today.
 
 I do **not** claim to have invented pie menus. I studied them, implemented them, evaluated them
@@ -38,7 +38,7 @@ Wiseman, and John Hiles. This show is about honoring that root honestly.
 
 - **Neil Wiseman** — what he was like to work with, technically and personally; the lab culture
   behind PIXIE.
-- **Cambridge in the late 1960s** — the CAD/HCI zeitgeist, the PDP-6, light pen and tablet workflow,
+- **Cambridge in the late 1960s** — the CAD/HCI zeitgeist, PDP-7/Titan distributed graphics, light pen workflow,
   why you made a *film* to accompany the paper.
 - **Your US research-lab trip** — who you met, what you saw, what traveled back to Cambridge.
 - **From PIXIE to CARS** — graphical man-machine communication for design → model-guided medicine;
@@ -55,7 +55,7 @@ gotcha-journalism. We can do English or German as you prefer; captions either wa
 
 | If you're curious about… | Link |
 | --- | --- |
-| **Show seed** (interview outline) | [`repo-shows/pixie-pie-menus-pdp6.yml`](../../repo-shows/pixie-pie-menus-pdp6.yml) |
+| **Show seed** (interview outline) | [`repo-shows/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7.yml) |
 | **Your guest page** | [`characters/heinz-lemke/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/heinz-lemke) |
 | **Conversation hooks** | [`ideas.md`](ideas.md) |
 | **Don's pie-menu thread** (PIXIE credited) | [`../don-hopkins/pie-menus-chi-88-and-beyond.md`](../don-hopkins/pie-menus-chi-88-and-beyond.md) |
@@ -69,7 +69,7 @@ more history than I had any right to hope for in email; there's no pressure, onl
 recording your memories while we still can sounds worthwhile.
 
 It would be an honor to help your story reach the people building interfaces today — most of whom
-have never heard that radial menus were already on a PDP-6 in 1969.
+have never heard that radial menus were already on a PDP-7 in 1969.
 
 — Don Hopkins *(the User Interface Flower Child)* 🥧🌀
 

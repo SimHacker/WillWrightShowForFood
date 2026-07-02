@@ -78,13 +78,14 @@ guests:
   david-levitt: { invitation_status: draft, show_seed: repo-shows/REPO-SHOWS.yml#music-and-theory.yml, note: "Don's good friend; music + interactive media; MIT PhD on AI music/jazz improvisation (advised by Marvin Minsky); Atari Cambridge Research; Lynn Conway VLSI class (w/ James Clark, Guy L. Steele); in Cynthia Solomon's video trove; music-and-theory show with Jerry Martin" }
   david-rosenthal: { invitation_status: not_yet_asked }
   david-ungar: { invitation_status: draft, show_seed: repo-shows/david-ungar-self-moollm.yml, priority: send_now, note: "Reflecting on Self: Narcissa's Mirror; Self × MOOLLM; Conscientious Objectors (ScriptX × Self at Kaleida)" }
+  drew-carey: { invitation_status: dream_guest, note: "DREAM GUEST: Whose Line + Price Is Right + Sims NPC mythology; public-figure sketch only" }
   edd-coates: { invitation_status: not_yet_asked, show_seed: repo-shows/edd-coates/ }
   eric-bowman: { invitation_status: draft, show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml, note: "Programmer on the original The Sims team (Maxis), core systems; later reunited with Don at TomTom" }
   eric-hedman: { invitation_status: not_yet_asked, show_seed: repo-shows/eric-hedman/ }
   gary-drescher: { invitation_status: draft, show_seed: repo-shows/gary-drescher/, note: "Made-Up Minds — the schema mechanism (constructivist AI); Good and Real; MIT AI Lab/Minsky orbit; Leela adviser + Henry's friend (Python schema-factory reimpl); remake it for the LLM era" }
   golan-levin: { invitation_status: not_yet_asked }
   heather-alvey: { invitation_status: draft, show_seed: repo-shows/heather-steve-alvey/, note: "SimFreaks founder (née Castello) — ~26-year Sims content brand; w/ Steve Alvey (SimSlice/SliceCity); Zombie Sims; worked with Will at Gallium (Proxi); Don's SimProv + Micropolis-publishing collaborator. Independent creator — drive fans/subscriptions." }
-  heinz-lemke: { invitation_status: draft, show_seed: repo-shows/pixie-pie-menus-pdp6.yml, priority: send_now, note: "ASAP — PIXIE 1969 co-author (Wiseman/Lemke/Hiles); CARS/model-guided medicine; warm correspondence; preserve first-hand history" }
+  heinz-lemke: { invitation_status: draft, show_seed: repo-shows/pixie-pie-menus-pdp7.yml, priority: send_now, note: "ASAP — PIXIE 1969 co-author (Wiseman/Lemke/Hiles); CARS/model-guided medicine; warm correspondence; preserve first-hand history" }
   steve-alvey: { invitation_status: draft, show_seed: repo-shows/heather-steve-alvey/, note: "SimSlice / SliceCity — SimCity running INSIDE The Sims (the shipped precedent for Will's data-portability/nested-games vision); ~26-year Sims content brand; Zombie Sims w/ Heather; worked with Will at Gallium (Proxi); Don's SimProv + Micropolis-publishing collaborator. Independent creator — drive fans/subscriptions." }
   hugh-daniel: { invitation_status: memorial, note: "deceased (1962–2013) — MEMORIAL MODE: early WELL sysop; Xanadu; GoodNeWS→HyperNeWS→HyperLook; NeWS; FreeS/WAN; discussants: Ted Nelson, Don" }
   james-gosling: { invitation_status: not_yet_asked }
@@ -92,6 +93,7 @@ guests:
   jerry-martin: { invitation_status: draft, show_seed: repo-shows/REPO-SHOWS.yml#music-and-theory.yml, note: "Composer — The Sims + SimCity 3000 music (Maxis); music-and-theory show with David Levitt; Don's Maxis colleague" }
   jim-mackraz: { invitation_status: draft, show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml, note: "CTG (Core Technology Group) team leader on The Sims (Maxis); Don's team lead" }
   jim-crutchfield: { invitation_status: draft, show_seed: repo-shows/jim-crutchfield/, note: "James P. Crutchfield ('Chaos') — UC Davis physicist of complexity; video feedback, edge of chaos + evolving cellular automata, computational mechanics (ε-machines); Santa Cruz Dynamical Systems Collective (Eudaemonic Pie). The 'in': video feedback + CA jam with Don's CAM6 + Scott Draves + Norman Margolus." }
+  jef-raskin: { invitation_status: memorial, show_seed: repo-shows/remembering-jef-raskin.yml, note: "deceased (1943–2005) — MEMORIAL MODE for Jef only. who_can_discuss = documented connections, NOT invitations" }
   jens-monig: { invitation_status: not_yet_asked, show_seed: repo-shows/jens-monig/ }
   jason-shankel: { invitation_status: not_yet_asked, show_seed: repo-shows/jason-shankel/ }
   jean-piaget: { invitation_status: memorial, note: "MEMORIAL MODE (1896–1980): genetic epistemology; constructivism + stages of cognitive development; the developmental root of Papert's constructionism. Discussants: Alan Kay, Walter Bender, Brian Harvey, Ken Kahn, Don" }
