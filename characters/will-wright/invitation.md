@@ -1,13 +1,15 @@
 ---
-
-## status: draft character_id: will-wright public: true consent: invitation_accepted show_seed: repo-shows/will-wright/
+status: draft
+character_id: will-wright
+public: true
+consent: invitation_accepted
+show_seed: repo-shows/will-wright/
+---
 
 # Repo Show invitation — Will Wright
 
 *Public draft — not sent. Will may edit, decline, delay, or request changes or removal at any time.*
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.yml)
-
----
 
 ## Invitation
 
