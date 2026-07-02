@@ -1,0 +1,130 @@
+# Cambridge gag credits — deadpan university film departments on telecine jiggle
+# Post-production: process/post-production/cambridge-telecine-jiggle.yml
+
+id: cambridge-gag-credits
+type: gag
+status: ready
+shows: [pixie-pie-menus-pdp7]
+tradition: cambridge_university_film_slate
+post_production: ../../process/post-production/cambridge-telecine-jiggle.yml
+
+beat: |
+  Between segments or rolling at the tail — fake Cambridge Computing Laboratory
+  department slates in ALL CAPS serif. Same After Effects motion track as the 1969
+  PIXIE film. Played straight; audience reads them as real until the joke lands.
+  **Ground Up Software** consulting plugs in identical deadpan — Don's eenmanszaak
+  dressed as 1969 bureaucracy. The jokes write themselves.
+
+when:
+  - end_credits_roll
+  - segment_bumpers
+  - after_emulator_boot_fail
+  - dedication_after_chm_hook
+  - ground_up_consulting_stinger
+
+format:
+  typography: "Serif caps — Cambridge Univ Library telecine feel"
+  motion: "Parent to cambridge-telecine-jiggle driver null"
+  filters: "Blur + glow — emulsion not overlay"
+  duration: "3–6 seconds each; faster during roll"
+
+ground_up_software:
+  company: Ground Up Software
+  role: "Don Hopkins consulting — Amsterdam eenmanszaak since 2017"
+  portrayal: characters/don-hopkins/career/work-history.yml
+  tone: |
+    Play straight like a real university film credit. Not a hard sell — the absurdity
+    of *Department of Research Simulation* and *Ground Up Software — Pie Menu Consultancy*
+    on the same jiggle track as Cambridge 1969. Optional opening stinger before departments roll.
+  opening_stingers:
+    - "A GROUND UP SOFTWARE CONSULTING ENGAGEMENT"
+    - "PRODUCED IN ASSOCIATION WITH GROUND UP SOFTWARE — AMSTERDAM"
+    - "FROM THE GROUND UP — RESEARCH SIMULATION DIVISION"
+  consulting_plugs:
+    - line: "Ground Up Software — Department of Research Simulation"
+      note: "Anchor consulting plug — pairs with department gag"
+    - line: "Ground Up Software — Pie Menu Consultancy"
+    - line: "Ground Up Software — Telecine Motion Tracking Services"
+      wink: "Same AE track as Bumblebee edit"
+    - line: "Ground Up Software — Bottom-Up Implementation Bureau"
+      pun: "Dave Ackley bottom-up; company name"
+    - line: "Ground Up Software — User Interface Flower Child Services"
+    - line: "Ground Up Software — Distributed CAD Liaison"
+    - line: "Ground Up Software — Emulator Boot Support"
+      segment: lars_emulation
+    - line: "Ground Up Software — After Effects Jiggle Department"
+    - line: "Ground Up Software — Nightly Batch Consulting"
+      pun: "Titan link; consulting hours"
+    - line: "Ground Up Software — Model-Guided Medicine Advisory"
+      guest: heinz-lemke
+    - line: "Ground Up Software — Lots Of Copies Keep Stuff Safe Liaison"
+      guest: david-rosenthal
+    - line: "IF YOUR LAB STILL RUNS ON TITAN — GROUND UP SOFTWARE"
+      tone: "Fake 1969 help line; end-roll stinger"
+    - line: "ADDITIONAL RESEARCH SIMULATION BY GROUND UP SOFTWARE"
+      tone: "Classic film credit voice — *additional animation by*"
+    - line: "CONSULTING ENGAGEMENTS NOW ACCEPTED — GROUND UP SOFTWARE"
+      optional: true
+      placement: end_roll_only
+
+pixie_pie_menus_pdp7:
+  show_seed: ../../pixie-pie-menus-pdp7.yml
+  roll:
+    - line: "Department of Research Simulation"
+      note: "Anchor gag — Micropolis Class in 1969 university voice"
+    - line: "Ground Up Software — Department of Research Simulation"
+      note: "Consulting plug — same joke, company name"
+    - line: "Rainbow Group — Distributed CAD"
+      note: "Real group; deadpan credit"
+    - line: "Computing Laboratory — Light Pen Bureau"
+    - line: "Type 340 Display Programming — Manual Compliance Office"
+      segment: lars_emulation
+    - line: "Ground Up Software — Emulator Boot Support"
+      segment: lars_emulation
+    - line: "Titan Link — Nightly Batch Division"
+    - line: "Reference Department — Film Recovery"
+      honor: david-chapman
+    - line: "Department of Pie Menu Empirical Studies"
+      wink: "CHI'88 — Ben optional second episode"
+    - line: "Ground Up Software — Pie Menu Consultancy"
+    - line: "Lots Of Copies Keep Stuff Safe"
+      guest: david-rosenthal
+    - line: "PDP-7 Graphics Satellite — Emulated Under Supervision of Lars Brinkhoff"
+    - line: "User Interface Flower Child — Radial Menu Division"
+      host: don-hopkins
+    - line: "Ground Up Software — User Interface Flower Child Services"
+    - line: "Flight of the Bumblebee — Musical Sync Unit"
+      homage: "Yuja Wang; jDrqR9XssJI"
+    - line: "Ground Up Software — Telecine Motion Tracking Services"
+    - line: "Model-Guided Medicine — CARS Liaison"
+      guest: heinz-lemke
+    - line: "Neil E. Wiseman — High-Speed Data Link"
+      tone: honor_not_gag
+    - line: "Computer History Museum — Oral History Pending"
+      optional: true
+    - line: "ADDITIONAL RESEARCH SIMULATION BY GROUND UP SOFTWARE"
+      placement: pre_tail
+  real_credits_tail:
+    - "Neil E. Wiseman · Heinz U. Lemke · John O. Hiles"
+    - "David Chapman · Cambridge University Library"
+    - "Repo Show — WillWrightShowForFood"
+    - "Post-production consulting — Ground Up Software"
+
+repo_show_generic:
+  examples:
+    - "Department of Read The Fucking Repo"
+    - "Ground Up Software — RTFR Implementation Services"
+    - "TicketPR — Master Becomes PR Division"
+    - "Ground Up Software — TicketPR Consulting Bureau"
+    - "Brain Stream — Throttled Overlay Bureau"
+    - "Ultimate Machine — Stream Termination Services"
+    - "Don Philahue — Audience Wrangling Unit"
+    - "Cauldron — Harvest and Scoop Division"
+    - "Ground Up Software — Micropolis Class Advisory"
+    - "FROM THE GROUND UP — A CONSULTING ENGAGEMENT"
+
+see_also:
+  - ../../process/post-production/cambridge-telecine-jiggle.yml
+  - ../../../characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md
+  - ../../../characters/don-hopkins/career/work-history.yml
+  - ../../pixie-pie-menus-pdp7.yml

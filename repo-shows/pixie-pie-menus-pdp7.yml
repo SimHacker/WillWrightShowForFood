@@ -89,7 +89,10 @@ format:
       Bumblebee edit on Repo Show titles, credits, guest slates, segment cards, jokes, and
       dedication blocks. Match Chapman digitized 1969 film jiggle so packaging looks like the
       same old Cambridge University reel as the archival inserts.
-    applies_to: [opening_title, guest_slates, segment_cards, lower_thirds, jokes, dedication, end_credits]
+    applies_to: [opening_title, guest_slates, segment_cards, lower_thirds, jokes, dedication, end_credits, gag_credits]
+    gag_credits: repo-shows/ideas/gags/cambridge-gag-credits.yml
+    gag_credits_anchor: "Department of Research Simulation"
+    consulting: Ground Up Software
 
 ties_to:
   - characters/heinz-lemke/

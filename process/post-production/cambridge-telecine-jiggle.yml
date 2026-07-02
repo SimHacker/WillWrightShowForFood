@@ -18,6 +18,19 @@ look:
     homage: "https://www.youtube.com/watch?v=jDrqR9XssJI"
   vibe: "Old university film reel — not fake VHS; digitized 16mm/telecine drift at slate boundaries"
 
+gag_credits:
+  what: |
+    Deadpan fake **university department** slates — played straight on the same jiggle track.
+    *Department of Research Simulation!* Micropolis Class dressed as 1969 Cambridge bureaucracy.
+    **Ground Up Software** consulting plugs in the same voice — the jokes write themselves.
+  format:
+    typography: "ALL CAPS serif — Computing Laboratory / Univ Library film credit cards"
+    tone: "Straight-faced until the audience catches the joke; mix real honors (Wiseman, Chapman) with gags and consulting plugs"
+    placement: [segment_bumpers, end_roll, post_emulator_bloopers]
+  spec: repo-shows/ideas/gags/cambridge-gag-credits.yml
+  pixie_roll_anchor: "Department of Research Simulation"
+  consulting: Ground Up Software
+
 pipeline:
   tool: Adobe After Effects
   steps:
@@ -34,6 +47,7 @@ pipeline:
         - on_screen_jokes_and_running_gags
         - dedication_blocks
         - end_credits_roll
+        - gag_credits_departments
         - repo_show_sign_off_lines
     - id: telecine_filters
       what: "Match Bumblebee-edit stack — blur + glow on text overlays at head/tail boundaries"
@@ -59,10 +73,12 @@ shows:
       - "Wiseman · Lemke · Hiles · Chapman dedication card (same jiggle as YouTube homage tail)"
       - "Type 340 manual joke lower-thirds during Lars segment"
       - "CARS bridge title — same drift as Heinz film memories"
+      - "Gag credits roll — Department of Research Simulation, Light Pen Bureau, Ground Up Software consulting division, …"
   any_repo_show:
     rule: "Optional skin — not mandatory format-wide; strongest when episode cites Cambridge/PIXIE/archive"
 
 see_also:
+  - repo-shows/ideas/gags/cambridge-gag-credits.yml
   - characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md
   - characters/will-wright/sources/don-youtube-jDrqR9XssJI-flight-of-pixie/production-notes.md
   - characters/will-wright/sources/don-youtube-jDrqR9XssJI-flight-of-pixie/article.md

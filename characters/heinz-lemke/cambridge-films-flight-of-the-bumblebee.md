@@ -48,7 +48,8 @@ same After Effects motion track and filter stack** to episode graphics — not o
 
 Goal: titles and credits look like they were **printed on the same old university film** as the
 PIXIE demonstration reels — one visual language from archival clip through Bumblebee homage through
-live show packaging. Canonical spec: [`../../process/post-production/cambridge-telecine-jiggle.yml`](../../process/post-production/cambridge-telecine-jiggle.yml). Pipeline detail: [`../will-wright/sources/don-youtube-jDrqR9XssJI-flight-of-pixie/production-notes.md`](../will-wright/sources/don-youtube-jDrqR9XssJI-flight-of-pixie/production-notes.md).
+live show packaging. **Gag credits** (*Department of Research Simulation!*, **Ground Up Software**
+consulting plugs, Light Pen Bureau, …) on the same jiggle track: [`../../repo-shows/ideas/gags/cambridge-gag-credits.yml`](../../repo-shows/ideas/gags/cambridge-gag-credits.yml). Canonical spec: [`../../process/post-production/cambridge-telecine-jiggle.yml`](../../process/post-production/cambridge-telecine-jiggle.yml). Pipeline detail: [`../will-wright/sources/don-youtube-jDrqR9XssJI-flight-of-pixie/production-notes.md`](../will-wright/sources/don-youtube-jDrqR9XssJI-flight-of-pixie/production-notes.md).
 
 Munching Squares on living PDP-7/340 (AM radio music): https://www.youtube.com/watch?v=V4oRHv-Svwc
 
