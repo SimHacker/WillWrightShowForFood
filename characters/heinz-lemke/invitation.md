@@ -6,6 +6,7 @@ consent: not_yet_asked
 show_seed: repo-shows/pixie-pie-menus-pdp7.yml
 format: remote_or_in_person
 co_guests: [lars-brinkhoff, david-rosenthal]
+send_batch: pixie-trio-2026
 ---
 
 # Repo Show invitation — Heinz U. Lemke
@@ -13,6 +14,7 @@ co_guests: [lars-brinkhoff, david-rosenthal]
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │ REPO SHOW · MICROPOLIS CLASS · PUBLIC GITHUB STAGE                          │
+│ episode: PIXIE — Pie Menus on the PDP-7 (1969)  ·  type: group            │
 │ guest: Heinz U. Lemke 🥧                                                    │
 │ co-guests: Lars Brinkhoff 🖥️  ·  David S. H. Rosenthal 🗄️                   │
 │ host: Don Hopkins                                                           │
@@ -23,6 +25,8 @@ co_guests: [lars-brinkhoff, david-rosenthal]
 
 *Send-ready draft — not yet sent. Heinz U. Lemke may edit, decline, delay, or request removal at any time.*  
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.yml)
+
+**Today I'm sending three matching invitations** — yours, **David Rosenthal's**, and **Lars Brinkhoff's** — for **one group episode**. Each letter is written for the person receiving it; all three describe the same show from different angles.
 
 Heinz —
 
@@ -50,6 +54,24 @@ public GitHub repo, recorded as a relaxed video call. Not a lecture from me: an 
 I do **not** claim to have invented pie menus. I studied them, implemented them, evaluated them
 at CHI'88 with Ben Shneiderman, and shipped them for decades — always knowing **PIXIE** came
 first, with you, Neil Wiseman, and John Hiles. This show is about honoring that root honestly.
+
+---
+
+## The trio — same episode, three roles
+
+| Who | Role on the call |
+| --- | --- |
+| **You (Heinz)** | PIXIE co-author — lived Cambridge, 1969 film, light pen, Titan link, Wiseman & Hiles, CARS arc |
+| **David S. H. Rosenthal** | Same **PDP-7/340 + Titan** ~1970; met Wiseman; PIXIE → Andrew → NeWS → X11; **LOCKSS** preservation |
+| **Lars Brinkhoff** | **Type 340** + light pen → SIMH/emulation — make radial menus **runnable on stream** again |
+
+David and Lars are getting their own invitations today — personalized to them, about this same
+conversation. You don't need to coordinate with them; I will. If any of you prefers a shorter
+segment or a follow-up call instead of one long session, that's fine.
+
+**Suggested flow on air:** your history first → David on the same machine from ~1970 → Lars on
+emulation → your CARS bridge → open Q&A. We intercut the 1969 film, the Bumblebee edit, and a
+live emulator window when Lars has iron booting.
 
 ---
 
@@ -87,15 +109,14 @@ first, with you, Neil Wiseman, and John Hiles. This show is about honoring that 
   article with a photo of young you at the PDP-7; you wanted a high-res copy. **I'd love you to
   tell that story on air** — the trip, the magazine, the photo.
 
-### Same machine, different years — with David Rosenthal
+### Same machine, different years — David's segment
 
-**David S. H. Rosenthal (DSHR)** was an undergraduate at Cambridge ~1970 on the **same PDP-7/340 +
-Titan** stack you used for PIXIE. He met **Neil Wiseman**, saw demos from that era, and later
-co-built **NeWS** with Gosling *and* architected **X11** (ICCCM) — so he carries both the
-Cambridge memory and the networked-window-system lineage PIXIE foreshadowed. I'd like him on the
-call with us:
+**David** was an undergraduate at Cambridge ~1970 on the **same stack** you used for PIXIE. He met
+**Neil Wiseman**, saw demos from that era, and later co-built **NeWS** with Gosling *and*
+architected **X11** (ICCCM) — so he carries both the Cambridge memory and the networked-window
+lineage PIXIE foreshadowed. On the call I'd love:
 
-- What did the lab feel like from your side vs his — same iron, different moment in time?
+- What the lab felt like from your side vs his — same iron, different moment in time?
 - Wiseman from two perspectives.
 - **PIXIE → Andrew → NeWS → X11** — distributed graphics as through-line (not a lecture from me).
 - **LOCKSS** meets film archive meets runnable emulator — one preservation conversation.
@@ -103,10 +124,10 @@ call with us:
 (Don once suggested David interview you for a **Computer History Museum** oral history — still a
 good idea if you're both willing.)
 
-### Runnable iron today — with Lars Brinkhoff
+### Runnable iron today — Lars's segment
 
-**Lars Brinkhoff** (PDP-10/ITS restoration, SIMH, preservation hacker) would join for a co-segment:
-you hold the lived memory; he maps **Type 340 vector display programming** and the light pen to
+**Lars** (PDP-10/ITS restoration, SIMH, preservation hacker) holds the emulation thread: you
+supply lived memory; he maps **Type 340 vector display programming** and the light pen to
 emulators we can boot on stream. Goal: not just film archaeology — **radial menus demonstrably
 runnable again**. Lars walks the [Type 340 manual](http://bitsavers.trailing-edge.com/pdf/dec/graphics/7-13_340_Display_Programming_Manual.pdf);
 you correct our mental model from the console.
@@ -119,19 +140,17 @@ you correct our mental model from the console.
 ### Later (optional second episode)
 
 - Group show with **Ben Shneiderman** — 1969 PIXIE → 1988 CHI empirical study → forty years of
-  shipping pie menus. Seed: `ben-and-heinz-pie-menus.yml`. No pressure; solo with you is plenty.
+  shipping pie menus. Seed: `ben-and-heinz-pie-menus.yml`. No pressure; this trio episode is plenty.
 
 ---
 
 ## Format
 
 Remote is perfect — Bechtersbohl, Gothenburg, Menlo Park, and Amsterdam are all real places on
-the internet. **David** and **Lars** join as co-guests (same call, or short follow-ups if that's
-easier — your call). In-person if I ever get to visit the farmhouse properly.
+the internet. **David** and **Lars** join as co-guests on the **same call** (or short follow-ups
+if that's easier — your call). In-person if I ever get to visit the farmhouse properly.
 
 **Zero homework.** Warm room, not gotcha-journalism. English or German as you prefer; captions either way.
-We can intercut the 1969 film, the Bumblebee edit, Cambridge memories from David, and a live
-emulator window if Lars gets iron booting.
 
 ---
 
@@ -144,8 +163,8 @@ emulator window if Lars gets iron booting.
 | **Evidence room** — Chapman → films → Bumblebee | [`cambridge-films-flight-of-the-bumblebee.md`](cambridge-films-flight-of-the-bumblebee.md) |
 | **Conversation hooks** (same topics, shorter) | [`ideas.md`](ideas.md) |
 | **Correspondence digest** | [`correspondence.yml`](correspondence.yml) |
-| **Co-guest David** (same PDP-7/Titan ~1970) | [`../david-rosenthal/README.md`](../david-rosenthal/README.md) |
-| **Co-guest Lars** (PDP-7/340 emulation) | [`../lars-brinkhoff/README.md`](../lars-brinkhoff/README.md) |
+| **Co-guest David** (same PDP-7/Titan ~1970) | [`../david-rosenthal/README.md`](../david-rosenthal/README.md) · [his invitation](../david-rosenthal/invitation.md) |
+| **Co-guest Lars** (PDP-7/340 emulation) | [`../lars-brinkhoff/README.md`](../lars-brinkhoff/README.md) · [his invitation](../lars-brinkhoff/invitation.md) |
 | **Don's pie-menu thread** (PIXIE credited) | [`../don-hopkins/pie-menus-chi-88-and-beyond.md`](../don-hopkins/pie-menus-chi-88-and-beyond.md) |
 | ***Flight of the PIXIE*** (YouTube) | [youtube.com/watch?v=jDrqR9XssJI](https://www.youtube.com/watch?v=jDrqR9XssJI) |
 | **PIXIE paper** (PDF) | [donhopkins.com — PIXIE](https://www.donhopkins.com/home/documents/PIXIE%20a%20new%20approach%20to%20man-machine%20communication.pdf) |
