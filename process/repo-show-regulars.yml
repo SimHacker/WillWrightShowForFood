@@ -67,6 +67,16 @@ kinds:
       - bot-slats call-in
       - bot-ultimate-machine gong
       - recurring Come On Down costume
+      - lightpenisland-net regular sponsor read + SWAG
+
+regular_sponsors:
+  lightpenisland_net:
+    domain: lightpenisland.net
+    operator: Ground Up Software
+    spec: ../repo-shows/ideas/gags/lightpenisland-net.yml
+    read: "And now, a word from our regular sponsor — lightpenisland.net. SWAG ;)"
+    on_every_show: true
+    pixie_telecine: "Light Pen Bureau insert on cambridge-telecine-jiggle track"
 
 images:
   required_for_examples:
