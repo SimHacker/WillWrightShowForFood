@@ -1,0 +1,70 @@
+# Post-production — Cambridge telecine jiggle (After Effects)
+# Reuse the exact *Flight of the PIXIE* motion-track + filter stack on Repo Show graphics.
+# Look: Cambridge University Library digitized 1969 film — head/tail credits, title cards, jokes.
+
+meta:
+  id: cambridge-telecine-jiggle
+  scope: repo_show_post_production
+  origin: characters/will-wright/sources/don-youtube-jDrqR9XssJI-flight-of-pixie/production-notes.md
+  first_use: "Flight of the PIXIE (YouTube jDrqR9XssJI) — homage edit on Chapman's 2019 telecine"
+  canonical_evidence: characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md
+
+look:
+  one_line: |
+    Titles, credits, lower thirds, and joke cards wobble and breathe like the Cambridge Univ
+    Library PIXIE films — same telecine jiggle Don matched in After Effects for the Bumblebee edit.
+  reference_footage:
+    archival: "1969 PIXIE demonstration films — cl.cam.ac.uk/library/archives.html (David Chapman, 2019)"
+    homage: "https://www.youtube.com/watch?v=jDrqR9XssJI"
+  vibe: "Old university film reel — not fake VHS; digitized 16mm/telecine drift at slate boundaries"
+
+pipeline:
+  tool: Adobe After Effects
+  steps:
+    - id: source_track
+      what: "Motion-track the digitized Cambridge film (Chapman telecine) — position, rotation, scale drift"
+      note: "Track on stable background or registration marks; export track to null/driver layer"
+    - id: apply_same_track
+      what: "Parent Repo Show title/credit/joke comps to the **same** motion track (or paste keyframes)"
+      applies_to:
+        - opening_title_card
+        - episode_slug_lower_third
+        - guest_name_slates
+        - segment_chapter_cards
+        - on_screen_jokes_and_running_gags
+        - dedication_blocks
+        - end_credits_roll
+        - repo_show_sign_off_lines
+    - id: telecine_filters
+      what: "Match Bumblebee-edit stack — blur + glow on text overlays at head/tail boundaries"
+      intent: "Text feels printed on the film emulsion, not composited sharp vector on top"
+    - id: grade_match
+      what: "Optional — lift blacks / soften contrast to sit beside intercut archival PIXIE clips"
+  reuse:
+    project: "Save motion track + filter preset from Bumblebee AE project as cambridge-telecine-jiggle.aep fragment"
+    per_episode: "Swap text layers; keep driver track from Chapman source (or re-track if new film plate)"
+
+hn_provenance:
+  thread: https://news.ycombinator.com/item?id=22718422
+  date: "2020-03"
+  note: "Don on TV-logo telecine thread — documents After Effects jiggle production choice"
+
+shows:
+  pixie_pie_menus_pdp7:
+    seed: repo-shows/pixie-pie-menus-pdp7.yml
+    why: "Native fit — intercut 1969 film, Bumblebee edit, live emulator; graphics must match archive"
+    guests: [heinz-lemke, david-rosenthal, lars-brinkhoff]
+    graphic_ideas:
+      - "Cambridge Univ Library-style opening slate — PIXIE episode title"
+      - "Wiseman · Lemke · Hiles · Chapman dedication card (same jiggle as YouTube homage tail)"
+      - "Type 340 manual joke lower-thirds during Lars segment"
+      - "CARS bridge title — same drift as Heinz film memories"
+  any_repo_show:
+    rule: "Optional skin — not mandatory format-wide; strongest when episode cites Cambridge/PIXIE/archive"
+
+see_also:
+  - characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md
+  - characters/will-wright/sources/don-youtube-jDrqR9XssJI-flight-of-pixie/production-notes.md
+  - characters/will-wright/sources/don-youtube-jDrqR9XssJI-flight-of-pixie/article.md
+  - process/repo-show-format.yml
+  - process/trails/live-production.md

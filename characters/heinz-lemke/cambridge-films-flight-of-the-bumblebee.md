@@ -35,6 +35,21 @@ Don's YouTube edit is **not** the 1969 film — it is post-production on Chapman
 | Telecine feel | **Motion tracking** on the digitized film + blur/glow on text overlays to **match the jiggle** of old telecine at title/credit boundaries ([HN Mar 2020](https://news.ycombinator.com/item?id=22718422)) |
 | Intent | Show radial-menu speed; homage credits Wiseman, Lemke, Hiles, Chapman |
 
+### Repo Show post-production — same jiggle on titles and credits
+
+For the **PIXIE Repo Show** (and any episode that intercuts Chapman's archive), apply the **exact
+same After Effects motion track and filter stack** to episode graphics — not only to film inserts:
+
+- **Opening title** — episode slug on a Cambridge Univ Library-style slate
+- **Guest slates** — Heinz, David, Lars name cards
+- **Segment cards** — emulation, same-machine memory, CARS bridge
+- **Jokes and running gags** — lower thirds, dedication blocks, sign-off lines
+- **End credits** — roll with the same telecine drift as the 1969 film head/tail
+
+Goal: titles and credits look like they were **printed on the same old university film** as the
+PIXIE demonstration reels — one visual language from archival clip through Bumblebee homage through
+live show packaging. Canonical spec: [`../../process/post-production/cambridge-telecine-jiggle.yml`](../../process/post-production/cambridge-telecine-jiggle.yml). Pipeline detail: [`../will-wright/sources/don-youtube-jDrqR9XssJI-flight-of-pixie/production-notes.md`](../will-wright/sources/don-youtube-jDrqR9XssJI-flight-of-pixie/production-notes.md).
+
 Munching Squares on living PDP-7/340 (AM radio music): https://www.youtube.com/watch?v=V4oRHv-Svwc
 
 ## Hardware docs

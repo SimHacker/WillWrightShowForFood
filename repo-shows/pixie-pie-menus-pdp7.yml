@@ -80,6 +80,16 @@ format:
   production_style: "Relaxed Studio Session (recorded video call) or Live Twitch Event."
   notes: "Heinz leads history; Rosenthal holds Cambridge ~1970 + lineage thread; Lars leads emulation. Intercut 1969 film + live emulator. Honor Wiseman and Hiles."
   segment_order_suggestion: [heinz_history, rosenthal_same_machine, lars_emulation, heinz_cars, open_qa]
+  post_production:
+    look: cambridge_telecine_jiggle
+    spec: process/post-production/cambridge-telecine-jiggle.yml
+    pipeline: characters/will-wright/sources/don-youtube-jDrqR9XssJI-flight-of-pixie/production-notes.md
+    what: |
+      After Effects — reuse the exact motion track + blur/glow from Don's *Flight of the PIXIE*
+      Bumblebee edit on Repo Show titles, credits, guest slates, segment cards, jokes, and
+      dedication blocks. Match Chapman digitized 1969 film jiggle so packaging looks like the
+      same old Cambridge University reel as the archival inserts.
+    applies_to: [opening_title, guest_slates, segment_cards, lower_thirds, jokes, dedication, end_credits]
 
 ties_to:
   - characters/heinz-lemke/

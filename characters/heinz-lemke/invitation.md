@@ -84,6 +84,9 @@ live emulator window when Lars has iron booting.
 - ***Flight of the PIXIE*** — my Bumblebee edit on Chapman's digitized telecine; who is in the
   footage; how fast the radial menus really were; production craft (motion tracking to match
   telecine jiggle — the [HN thread](https://news.ycombinator.com/item?id=22718422) if you're curious).
+  **Post-production plan:** same After Effects track + filters on the **Repo Show** titles, credits,
+  and jokes — so our slates look like the Cambridge Univ Library film, not sharp overlays
+  ([`cambridge-telecine-jiggle.yml`](../../process/post-production/cambridge-telecine-jiggle.yml)).
 - **Preservation** — digitized archive, YouTube homage, and (if you're willing) planting seeds for
   a **Computer History Museum** oral history — Wiseman and Hiles remembered through your voice.
 
