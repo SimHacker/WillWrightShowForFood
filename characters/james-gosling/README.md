@@ -32,7 +32,7 @@ Invitation portrayal — **not** James Gosling. [Standards](../../schemas/portra
 | → | |
 |---|---|
 | **Invitation** | [invitation.md](invitation.md) *(draft — not sent)* |
-| **Show prep** | [ideas.md](ideas.md) |
+| **Show prep** | [ideas.md](ideas.md) · [window-systems-lineage.yml](window-systems-lineage.yml) |
 | **Media** | [media/README.md](media/README.md) |
 | **Show seed** | [repo-shows/james-gosling/](../../repo-shows/james-gosling/README.md) |
 
@@ -43,9 +43,13 @@ Invitation portrayal — **not** James Gosling. [Standards](../../schemas/portra
 **James Gosling** (b. 1955, Calgary; CMU PhD 1983) — father of **Java**. Before Java:
 
 - **Gosling Emacs** — first Unix Emacs; UniPress ("Evil Software Hoarder Emacs" per RMS → GNU Emacs)
-- **Andrew** window system at CMU — with [**David Rosenthal**](../david-rosenthal/README.md)
+- **Andrew** window system at CMU — with [**David Rosenthal**](../david-rosenthal/README.md); both
+  **published and participated** in the **1985 Alvey *Methodology of Window Management*** workshop
+  ([`window-systems-lineage.yml`](window-systems-lineage.yml) ·
+  [`../david-rosenthal/window-systems-lineage.yml`](../david-rosenthal/window-systems-lineage.yml))
 - **NeWS/SunDew** at Sun — PostScript-programmable, network-transparent windows (**send a program,
-  not a data structure**); AJAX before AJAX
+  not a data structure**); AJAX before AJAX. **Warren Teitelman** — Alvey retrospective author;
+  later Don's manager on the **NeWS Toolkit** team at Sun.
 
 Self-described record-holder for *"the largest number of cheesy little extension languages."*
 Don worked on Gosling Emacs at UniPress and NeWS at Sun (Gosling's 1990 email brought Don in).

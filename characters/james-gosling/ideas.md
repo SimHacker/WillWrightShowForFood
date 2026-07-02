@@ -7,7 +7,13 @@ public work and documented connections to this repository. Things Don would love
 
 ## What James has done
 
-James Gosling (b. 1955, Calgary; CMU PhD 1983) — the father of Java. Before Java he wrote Gosling Emacs (the first Unix Emacs, sold by UniPress — RMS's "Evil Software Hoarder Emacs", which spurred GNU Emacs), co-designed the Andrew window system (CMU, with David Rosenthal), and architected NeWS/SunDew at Sun — a PostScript-programmable network window system years ahead of its time (an AJAX architecture avant la lettre). Self-described record-holder for "the largest number of cheesy little extension languages." Later Chief Software Architect at Liquid Robotics (Wave Glider ocean robots). Order of Canada; ACM Fellow; IEEE John von Neumann Medal.
+James Gosling (b. 1955, Calgary; CMU PhD 1983) — the father of Java. Before Java he wrote
+Gosling Emacs (the first Unix Emacs, sold by UniPress — RMS's "Evil Software Hoarder Emacs",
+which spurred GNU Emacs), co-designed the **Andrew** window system (CMU, with David Rosenthal),
+and architected **NeWS/SunDew** at Sun — a PostScript-programmable network window system years
+ahead of its time (an AJAX architecture avant la lettre). Self-described record-holder for "the
+largest number of cheesy little extension languages." Later Chief Software Architect at Liquid
+Robotics (Wave Glider ocean robots). Order of Canada; ACM Fellow; IEEE John von Neumann Medal.
 
 ## Shared ground
 
@@ -19,15 +25,32 @@ James Gosling (b. 1955, Calgary; CMU PhD 1983) — the father of Java. Before Ja
 
 ## The hooks
 
-### 1. Show seed: `repo-shows/james-gosling/`
-walk the repo on air and build from the seed.
+### 1. Alvey 1985 — Methodology of Window Management
+**SunDew** (NeWS precursor) + **Andrew window manager** (with Rosenthal) — published in the
+same Alvey workshop proceedings as **Warren Teitelman's** *Ten Years of Window Systems*.
+Both **published and participated** in working-group discussions (architecture, input, redraw).
+Teitelman later managed Sun's **NeWS Toolkit** — **Don's manager** there (pie menus, PizzaTool).
+Warren invented **DWIM** (*Do What I Mean*) in Interlisp.
 
-### 2. PDP-8 hotrod → cheesy extension languages → NeWS → Java
+| Thread | Link |
+|--------|------|
+| Gosling angle | [`window-systems-lineage.yml`](window-systems-lineage.yml) |
+| Rosenthal + X11/ICCCM | [`../david-rosenthal/window-systems-lineage.yml`](../david-rosenthal/window-systems-lineage.yml) |
+| Proceedings | [Chilton — Methodology of Window Management](http://www.chilton-computing.org.uk/inf/literature/books/wm/index.htm) |
+
+### 2. Show seed: `repo-shows/james-gosling/`
+NeWS → Java; walk the repo on air and build from the seed.
+
+### 3. PDP-8 hotrod → cheesy extension languages → NeWS → Java
 The kid at the switches becomes the person who ships network window systems and Java.
+
+### 4. NeWS reunion (optional group)
+Rosenthal (Andrew + ICCCM), van Hoff (HyperLook), Densmore — Alvey papers as shared origin story.
 
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
+- [`window-systems-lineage.yml`](window-systems-lineage.yml)
 - Show seed: [`repo-shows/james-gosling/`](../../repo-shows/james-gosling/)
 - [`media/from-mail/MANIFEST.yml`](media/from-mail/MANIFEST.yml) — mail-sourced artifacts
 - [`CHARACTER.yml`](CHARACTER.yml)

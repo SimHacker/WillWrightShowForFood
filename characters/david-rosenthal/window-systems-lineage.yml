@@ -1,0 +1,167 @@
+# Window-systems lineage — DSHR's through-line (public sources)
+# Show hook: not Don's lecture — David's lived arc from Cambridge stack to NeWS *and* X11.
+
+meta:
+  room: characters/david-rosenthal/
+  curated_by: don-hopkins
+  consent: not_yet_asked
+  guest: david-rosenthal
+  show:
+    - ../../repo-shows/pixie-pie-menus-pdp7.yml
+    - ../../repo-shows/david-rosenthal/
+
+through_line: |
+  **PIXIE distributed GUI → Andrew → NeWS → X11/ICCCM** — the lineage David uniquely bridges.
+  What carried from Cambridge satellite graphics (PDP-7/340 + Titan) into networked window
+  systems? NeWS vs X11 — what historians should get right (he built both sides).
+
+pixie_cambridge_hook:
+  what: |
+    Undergrad ~1970 on same **PDP-7/340 + Titan** stack as PIXIE; met Wiseman. On the PIXIE
+    group show: connect satellite-graphics / distributed-CAD zeitgeist to Andrew/NeWS/X — not
+    as invention claim, as continuity question for David to answer.
+  doc: ../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md
+
+alvey_workshop_1985:
+  title: "Methodology of Window Management — Alvey Workshop"
+  when: "29 April – 1 May 1985"
+  where: "Cosener's House, Abingdon, UK (Rutherford Appleton Laboratory)"
+  proceedings:
+    springer: https://link.springer.com/book/10.1007/978-3-642-70919-7
+    chilton_index: http://www.chilton-computing.org.uk/inf/literature/books/wm/index.htm
+  format: |
+    Day 1 — invited papers (Gosling, Rosenthal, Teitelman, …). Day 2 — split working groups
+    (architecture, input, redraw, IPC); plenary keeps groups aligned. Day 3 — group reports +
+    framework for future UK MMI work. Not just publication — **consensus-forging discussion**
+    on panel/window nomenclature, client–server levels, programmable window managers, redraw policy.
+  architecture_wg_report: http://www.chilton-computing.org.uk/inf/literature/books/wm/p020.htm
+  note: |
+    **Gosling** and **Rosenthal** both published papers and participated in the workshop
+    discussions. **Teitelman's** retrospective surveyed a decade of window systems in the same
+    room as **SunDew** (NeWS precursor) and **Andrew**. DSHR's *Recreational Bugs* post links
+    the full proceedings via Chilton.
+
+guest_angles:
+  david_rosenthal:
+    published:
+      - "A Window Manager for Bitmapped Displays and Unix (with Gosling)"
+    participated: "Architecture + plenary discussions; later Sun NeWS + X11/ICCCM"
+    show: "PIXIE Cambridge stack → Andrew → NeWS → X11 — his through-line, not Don's lecture"
+  james_gosling:
+    published:
+      - "SunDew — A Distributed and Extensible Window System"
+      - "A Window Manager for Bitmapped Displays and Unix (with Rosenthal)"
+    participated: "Same workshop discussions; SunDew cited in architecture WG as programmable-WM indicator"
+    after: "Renamed SunDew → NeWS; Rosenthal joined him at Sun (1985)"
+    page: ../james-gosling/window-systems-lineage.yml
+  don_hopkins:
+    teitelman: |
+      **Warren Teitelman** — invented **DWIM** (*Do What I Mean*) in Interlisp; Interlisp-D lineage;
+      *Ten Years of Window Systems* at Alvey 1985. Later at Sun: **Don's manager** on the
+      **NeWS Toolkit** team (~1990–1991) — pie menus, PizzaTool, PostScript UI work.
+    work_history: ../don-hopkins/career/work-history.yml
+    pie_menus_siggraph: "Don loads pie menus at SIGGRAPH NeWS booth — DSHR blog *Pie Menus*"
+
+teitelman_warren:
+  interlisp: "Designed Interlisp at Xerox PARC; D-Lisp client–server windows; Undo/redo, advising"
+  dwim:
+    acronym: "Do What I Mean"
+    what: |
+      Warren Teitelman's famous Interlisp facility — correct trivial errors (typos, transpositions,
+      missing parentheses, misspelled commands) instead of scolding the programmer and stopping.
+      Philosophy he stated plainly: **people time is more valuable than computer time** — the
+      system should act as an agent that interprets intent from context (Teitelman & Masinter,
+      Interlisp environment papers).
+    era: "Coined ~1966 in BBN Lisp PILOT; central to Interlisp by the 1970s"
+    wikipedia: https://en.wikipedia.org/wiki/DWIM
+    teitelman: https://en.wikipedia.org/wiki/Warren_Teitelman
+    critics_joke: "Do What Teitelman Means — or Do What Interlisp Means"
+    repo_meta:
+      note: |
+        Don said *DWIM of course* about YAML key `sun_news_toolkit` (headline *news*, not **NeWS**).
+        Cursor agent fixed the spelling but skipped Warren's DWIM — then Don asked to **DWIM about
+        DWIM**. Two senses: Teitelman's shipped Interlisp agent vs today's coding agents.
+      show_beat: "Warren invented DWIM; Don reported to him on NeWS Toolkit — worth one straight-faced beat"
+  alvey_1985:
+    title: "Ten Years of Window Systems — A Retrospective View"
+    covers: "Smalltalk, Interlisp-D, Tajo, Cedar Viewers, SunWindows, SunDew"
+  sun_NeWS_toolkit:
+    product: NeWS
+    not: "Not headline news — Network extensible Window System"
+    role: "Managed NeWS Toolkit team at Sun"
+    don_hopkins: "Don's manager — pie menus, PizzaTool, NeWS UI (~1990–1991)"
+  bridges:
+    - "Interlisp DWIM → humane agents → window-system retrospectives → NeWS Toolkit management"
+    - "Alvey retrospective named SunDew in same proceedings as Gosling + Rosenthal papers"
+    - "Teitelman → Sun → NeWS Toolkit → Don's pie-menu work → CHI'88 → The Sims"
+
+papers_and_talks:
+  andrew_window_manager:
+    authors: [James Gosling, David S. H. Rosenthal]
+    title: "A Window Manager for Bitmapped Displays and Unix"
+    venue: "Alvey Workshop on Methodology of Window Management (1985)"
+    book: "Methodology of Window Management (Springer, 1986)"
+    also: "Andrew, a Distributed Computing Environment — CACM 29(3), March 1986"
+  sundew_NeWS:
+    author: James Gosling
+    title: "SunDew — A Distributed and Extensible Window System"
+    note: "SunDew renamed NeWS; convinced DSHR to leave CMU for Sun (1985)"
+    venue: "Same Alvey workshop; NeWS Book (1989)"
+  teitelman_retrospective:
+    author: Warren Teitelman
+    title: "Ten Years of Window Systems — A Retrospective View"
+    covers: "Smalltalk, Interlisp-D, Tajo, Cedar Viewers, SunWindows, SunDew"
+    venue: "Alvey workshop proceedings"
+  icccm_x11:
+    author: David S. H. Rosenthal
+    title: "Inter-Client Communication Conventions Manual (ICCCM)"
+    when: "~1988"
+    note: "Editor/main author; Part III of Scheifler & Gettys X Window System"
+
+alan_kay_window_history:
+  what: |
+    DSHR's *History of Window Systems* (2021) embeds Alan Kay's account of pre-Smalltalk
+    windows — Sketchpad, Flex, viewport vs window naming — from a long /. comment DSHR
+    preserved. Not a live Kay interview in repo; David's synthesis of Kay + Alvey + his own path.
+  blog: https://blog.dshr.org/2021/03/history-of-window-systems.html
+
+blog_dshr_org:
+  base: https://blog.dshr.org/
+  posts:
+    - id: history-of-window-systems
+      url: https://blog.dshr.org/2021/03/history-of-window-systems.html
+      use: "Alvey papers + Teitelman + Alan Kay window prehistory + NeWS arc"
+    - id: x-at-40
+      url: https://blog.dshr.org/2024/07/x-window-system-at-40.html
+      use: "NeWS vs X11 — honest postmortem; ICCCM; why X endured"
+    - id: pie-menus
+      url: https://blog.dshr.org/2018/05/pie-menus.html
+      use: "SIGGRAPH NeWS booth; Don loads pie menus; PIXIE→NeWS→Don thread on air"
+    - id: recreational-bugs
+      url: https://blog.dshr.org/2018/05/recreational-bugs.html
+      use: "Alvey Andrew paper DOI; Methodology proceedings link; X11 client viz talk"
+    - id: x-turns-30
+      url: https://blog.dshr.org/2014/06/x-window-system-turns-30.html
+    - id: engineering-long-term
+      url: https://blog.dshr.org/2024/07/engineering-for-long-term.html
+      use: "X11 + NeWS parallel work; vnode/stacking lineage"
+
+show_questions:
+  - "What carried from Cambridge satellite graphics into Andrew/NeWS/X?"
+  - "NeWS vs X11 — what do historians get wrong? (You built both.)"
+  - "Alvey 1985 — what did the working-group fights actually decide?"
+  - "Teitelman's retrospective vs SunDew/Andrew shipping — what aged well?"
+  - "Warren Teitelman — DWIM (Do What I Mean) vs today's coding agents."
+  - "Don's manager's happyness tracking algorithm and HappyTool/in.happyd story"
+  - "Warren Teitelman at Alvey vs Warren as Sun NeWS Toolkit manager — Don's side"
+  - "Alan Kay's window prehistory — what you'd add from the Andrew/NeWS trenches"
+  - "Don loads pie menus at SIGGRAPH — your memory of that demo"
+
+see_also:
+  - { path: invitation.md, why: "Invitation — lineage section points here" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: ../james-gosling/window-systems-lineage.yml, why: "Gosling's Alvey papers + workshop angle" }
+  - { path: ../don-hopkins/career/work-history.yml, why: "Sun — NeWS Toolkit under Teitelman" }
+  - { path: ../don-hopkins/pie-menus-chi-88-and-beyond.md, why: "Don's side — PIXIE credit, CHI'88" }
+  - { path: ../james-gosling/window-systems-lineage.yml, why: "Gosling SunDew + Andrew at same Alvey workshop" }
+  - { path: ../heinz-lemke/, why: "PIXIE show co-guest" }

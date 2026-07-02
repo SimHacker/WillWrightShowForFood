@@ -41,6 +41,13 @@ Arthur van Hoff, David Rosenthal, Owen Densmore — your pick.
   extension languages"* lineage; constraints at the console (I have a photo of very young you,
   arms crossed, **satisfied**, in front of your **PDP-8 hotrod** — [`media/gosling-young-pdp8-hotrod.yml`](media/gosling-young-pdp8-hotrod.yml)).
 - **Andrew + Rosenthal** — CMU window system before Sun; bridge to NeWS and later X11/ICCCM world.
+- **Alvey 1985 — Methodology of Window Management** — you and Rosenthal **published and
+  participated** (Andrew window manager + **SunDew** papers; **Teitelman's** ten-year
+  retrospective in the same workshop). [`window-systems-lineage.yml`](window-systems-lineage.yml)
+  · shared with [`../david-rosenthal/window-systems-lineage.yml`](../david-rosenthal/window-systems-lineage.yml)
+- **Warren Teitelman** — invented **DWIM** (*Do What I Mean*, Interlisp); Alvey retrospective;
+  later managed Sun **NeWS Toolkit** (Don's manager there — pie menus, PizzaTool).
+  [`../david-rosenthal/window-systems-lineage.yml#teitelman_warren`](../david-rosenthal/window-systems-lineage.yml)
 - **HyperLook + early Java** — Arthur's NeWS HyperCard; you on Java; what survived the transition.
 - **Checked exceptions, reliability, and what you'd change** — design philosophy debated live, not
   as a flame war.
@@ -57,6 +64,7 @@ NeWS reunion can be one long episode or a short series — your call.
 | **Your guest README** | [`characters/james-gosling/README.md`](README.md) |
 | **Show seed** (segments · pair w/ van Hoff) | [`repo-shows/james-gosling/`](../../repo-shows/james-gosling/README.md) |
 | **Conversation hooks** | [`ideas.md`](ideas.md) |
+| **Alvey 1985 — SunDew + Andrew papers** | [`window-systems-lineage.yml`](window-systems-lineage.yml) |
 | **PDP-8 hotrod photo + sidecar** | [`media/gosling-young-pdp8-hotrod.yml`](media/gosling-young-pdp8-hotrod.yml) |
 | **NeWS trail** | [`send-code-not-commands`](../../process/trails/send-code-not-commands.md) |
 | **The whole Repo Show project** | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |

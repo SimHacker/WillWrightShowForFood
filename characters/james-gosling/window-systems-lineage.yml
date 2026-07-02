@@ -1,0 +1,47 @@
+# Window-systems lineage — Gosling at Alvey 1985 (public sources)
+# Shared workshop arc: ../david-rosenthal/window-systems-lineage.yml
+
+meta:
+  room: characters/james-gosling/
+  curated_by: don-hopkins
+  consent: not_yet_asked
+  guest: james-gosling
+  shared: ../david-rosenthal/window-systems-lineage.yml
+
+through_line: |
+  **Andrew (CMU) → SunDew → NeWS** — PostScript-programmable, network-transparent windows.
+  At the **1985 Alvey Methodology of Window Management** workshop, Gosling published **SunDew**
+  (NeWS precursor) and co-authored the **Andrew window manager** paper with **David Rosenthal**
+  — same proceedings as **Warren Teitelman's** ten-year retrospective. Both **published and
+  participated** in the architecture working-group discussions that shaped window-system vocabulary
+  and UK MMI planning.
+
+alvey_workshop_1985:
+  see: ../david-rosenthal/window-systems-lineage.yml#alvey_workshop_1985
+  proceedings: http://www.chilton-computing.org.uk/inf/literature/books/wm/index.htm
+
+gosling_papers:
+  sundew:
+    title: "SunDew — A Distributed and Extensible Window System"
+    note: "Renamed NeWS; programmable WM — cited in Alvey architecture WG discussions"
+    venue: "Alvey Workshop (1985); *The NeWS Book* (1989)"
+  andrew_window_manager:
+    title: "A Window Manager for Bitmapped Displays and Unix"
+    coauthor: david-rosenthal
+    venue: "Same Alvey workshop; CACM *Andrew* paper (March 1986)"
+
+teitelman_warren:
+  see: ../david-rosenthal/window-systems-lineage.yml#teitelman_warren
+  dwim: "Warren Teitelman — invented DWIM (Do What I Mean) in Interlisp; see shared doc"
+
+NeWS_reunion_hooks:
+  - "SunDew design vs what Teitelman surveyed in his retrospective"
+  - "Andrew tiling WM vs NeWS PostScript extensibility — what carried to Java"
+  - "Alvey architecture WG — programmable window managers (SunDew as existence proof)"
+  - "Three-way with Rosenthal — same workshop, two papers, one NeWS future"
+
+see_also:
+  - { path: ../david-rosenthal/window-systems-lineage.yml, why: "Full workshop + DSHR X11/ICCCM arc" }
+  - { path: ../david-rosenthal/, why: "Andrew co-author; NeWS reunion" }
+  - { path: ideas.md, why: "Show conversation hooks" }
+  - { path: invitation.md, why: "NeWS → Java Repo Show invite" }

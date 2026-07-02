@@ -94,6 +94,18 @@ oral history — if you're both willing — whether on this call or separately.)
 - **PIXIE distributed GUI → Andrew → NeWS → X11/ICCCM** — not a lecture from me; your through-line.
 - What carried from Cambridge satellite graphics into networked window systems?
 - NeWS vs X11 — what you'd want historians to get right (you built both).
+- **Alvey Workshop on Methodology of Window Management** (Cosener's House, Abingdon, April 1985) —
+  you and Gosling **published and participated** — **Andrew** (*A Window Manager for Bitmapped
+  Displays and Unix*); Gosling's **SunDew** (NeWS precursor); **Warren Teitelman's** *Ten Years
+  of Window Systems — A Retrospective View* in the same room and proceedings. Working-group
+  discussions (architecture, input, redraw) — not just papers on the shelf. Full arc:
+  [`window-systems-lineage.yml`](window-systems-lineage.yml).
+- **Warren Teitelman** — invented **DWIM** (*Do What I Mean*) in Interlisp; Alvey retrospective;
+  later managed Sun **NeWS Toolkit** (**my manager** there — pie menus, PizzaTool).
+- Your **Alan Kay** window-prehistory synthesis (*History of Window Systems* on blog.dshr.org —
+  Sketchpad, Flex, viewport vs window — Kay's long comment, your frame).
+- Other public threads on **blog.dshr.org** — *X at 40*, *Pie Menus* (SIGGRAPH NeWS booth, I load
+  the tape), *Recreational Bugs* (Alvey proceedings + Andrew paper link).
 
 ### Preservation — films, papers, emulators
 

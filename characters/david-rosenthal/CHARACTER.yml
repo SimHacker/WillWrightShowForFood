@@ -31,15 +31,22 @@ bio:
     at Stanford Libraries — long-term **digital preservation** (2025 Paul Evan Peters Award).
     Cambridge undergrad ~1970 on **PDP-7/340 + Titan** — same stack as PIXIE.
 
+sources:
+  wikipedia: https://en.wikipedia.org/wiki/David_S._H._Rosenthal
+  blog: https://blog.dshr.org/
+  web:
+    - https://blog.dshr.org/2021/03/history-of-window-systems.html
+    - https://blog.dshr.org/2024/07/x-window-system-at-40.html
+    - http://www.chilton-computing.org.uk/inf/literature/books/wm/index.htm
+  papers:
+    - title: "A Window Manager for Bitmapped Displays and Unix (with Gosling)"
+      venue: "Alvey Workshop — Methodology of Window Management (1985)"
+    - title: "Andrew, a Distributed Computing Environment"
+      venue: "Communications of the ACM, March 1986"
+
 see_also:
+  - { path: window-systems-lineage.yml, why: "PIXIE→Andrew→NeWS→X11 through-line + Alvey papers + blog index" }
   - { path: ../heinz-lemke/invitation.md, why: "Co-guest on PIXIE show — same Cambridge PDP-7/Titan ~1970" }
   - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Group show with Heinz + Lars Brinkhoff" }
   - { path: ../lars-brinkhoff/, why: "Co-guest — emulation segment on same show" }
   - { path: ../james-gosling/, why: "NeWS reunion lineage" }
-
-sources:
-  wikipedia: "https://en.wikipedia.org/wiki/David_S._H._Rosenthal"
-  web:
-    []
-  papers: []
-  blogs: []

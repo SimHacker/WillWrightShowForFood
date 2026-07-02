@@ -87,7 +87,11 @@ employment_timeline:
 
   - org: Sun Microsystems
     years: "1987 intern, 1990–1991"
-    note: NeWS Toolkit, PizzaTool, pie menus
+    note: |
+      NeWS Toolkit team — **Warren Teitelman** (manager; inventor of Interlisp **DWIM** — *Do What I Mean*).
+      PizzaTool, pie menus, PostScript UI.
+      Alvey 1985 workshop connects forward: Teitelman's retrospective + Gosling/Rosenthal SunDew/Andrew
+      papers → NeWS → this team.
 
   - org: University of Maryland HCIL
     years: "1985–1990"

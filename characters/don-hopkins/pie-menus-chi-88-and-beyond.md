@@ -26,6 +26,10 @@ Primary sources in mail archive: Wiseman notes on radial menus in PIXIE; Cambrid
 
 ## Where they shipped
 
+**NeWS lineage:** Sun **NeWS Toolkit** under **Warren Teitelman** (Don's manager ~1990–1991). Alvey 1985
+*Methodology of Window Management* — Gosling **SunDew**, Rosenthal **Andrew**, Teitelman retrospective
+([`../david-rosenthal/window-systems-lineage.yml`](../david-rosenthal/window-systems-lineage.yml)).
+
 | Era | Platform |
 |-----|----------|
 | 1980s–90s | NeWS / PostScript, X11 / Tcl-Tk multiplayer SimCity |
