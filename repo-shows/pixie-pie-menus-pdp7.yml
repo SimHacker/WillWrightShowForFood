@@ -1,4 +1,4 @@
-# SHOW PROPOSAL — PIXIE Pie Menus on the PDP-7 (Don interviews Heinz U. Lemke)
+# SHOW PROPOSAL — PIXIE Pie Menus on the PDP-7 (Don and buds interview Heinz U. Lemke)
 # The deep prehistory of pie/radial menus. PDP-7 + Type 340 display ↔ Titan.
 
 show:
@@ -6,18 +6,66 @@ show:
   title: "PIXIE: Pie Menus on the PDP-7 (1969)"
   type: group
   host: Don Hopkins
+  dialect:
+    voice: stoner_techno_hippie
+    terms:
+      guest: bud
+      guests: buds
+      co_guest: co-bud
+    on_air_opener: "This show's buds are…"
+    voice_ref: characters/don-hopkins/portrayal/voice.yml
+    note: "User Interface Flower Child host voice — warm, deadpan, never corporate 'guest panel'."
   guests: ["Heinz U. Lemke", "Lars Brinkhoff", "David S. H. Rosenthal"]
-  guest_roles:
+  buds: ["Heinz U. Lemke", "Lars Brinkhoff", "David S. H. Rosenthal"]
+  bud_roles: &bud_roles
     heinz_u_lemke: "First-hand PIXIE history — Cambridge lab, 1969 film, light pen, Titan link, CARS arc"
     lars_brinkhoff: "PDP-7 + Type 340 display hardware; preservation and emulation — make PIXIE runnable again today"
     david_s_h_rosenthal: "Same Cambridge PDP-7/340 + Titan stack ~1970; met Wiseman; distributed GUI → NeWS/X11 lineage; LOCKSS preservation"
+  guest_roles: *bud_roles
   character: characters/heinz-lemke/
   co_characters:
     - characters/lars-brinkhoff/
     - characters/david-rosenthal/
-  topic: "PIXIE — radial/pie menus on PDP-7/Titan (Heinz) + same-machine memory (Rosenthal) + emulating the iron (Lars)."
+  topic: "PIXIE — radial/pie menus on PDP-7/Titan (Heinz bud) + same-machine memory (DSHR bud) + emulating the iron (Lars bud)."
   status: proposed
   urgency: "Preserve first-hand history while we can; warm correspondence with Heinz."
+
+buds:
+  opener: |
+    This show's buds are: Heinz U. Lemke, who drew the first radial menus on a PDP-7 before
+    most of us were born; Lars Brinkhoff, who makes dead iron boot again; and David S. H.
+    Rosenthal, who sat at the same Cambridge stack a year later and went on to wire the world.
+  introductions:
+    heinz_u_lemke:
+      name: "Heinz U. Lemke"
+      signifier: "🥧"
+      slug: heinz-lemke
+      one_liner: |
+        First bud — PIXIE co-author, light pen, Titan link, *in* the 1969 film. Black Forest
+        farmhouse correspondence; CARS and model-guided medicine today. Neil Wiseman and John
+        Hiles through his voice.
+      invite: characters/heinz-lemke/invitation.md
+    lars_brinkhoff:
+      name: "Lars Brinkhoff"
+      signifier: "🖥️"
+      slug: lars-brinkhoff
+      one_liner: |
+        Second bud — Gothenburg preservation hacker. PDP-10/ITS from source; SIMH toolchain;
+        maps Type 340 vector display + light pen so radial menus run on stream, not just in
+        telecine archaeology.
+      invite: characters/lars-brinkhoff/invitation.md
+    david_s_h_rosenthal:
+      name: "David S. H. Rosenthal"
+      signifier: "🗄️"
+      slug: david-rosenthal
+      one_liner: |
+        Third bud — Cambridge ~1970 on the same PDP-7/340 + Titan; met Wiseman. Built NeWS with
+        Gosling *and* architected X11. LOCKSS: lots of copies keep stuff safe — films, papers,
+        emulators, one preservation story.
+      invite: characters/david-rosenthal/invitation.md
+  segment: introductions
+  order: [heinz_u_lemke, lars_brinkhoff, david_s_h_rosenthal]
+  telecine_slate: "Cambridge jiggle lower-third — bud name + signifier on each intro"
 
 history:
   hardware: "PDP-7 + Type 340 display (graphics satellite) ↔ Titan (Cambridge Multiple Access System)"
@@ -32,7 +80,7 @@ history:
   type_340_manual: "http://bitsavers.trailing-edge.com/pdf/dec/graphics/7-13_340_Display_Programming_Manual.pdf"
   living_pdp7_340: "https://www.youtube.com/watch?v=V4oRHv-Svwc"
 
-why_co_guests:
+why_these_buds:
   lars_brinkhoff:
     preservation: "PDP-10/ITS restoration lead; SIMH toolchain hacker; make-it-so on stream."
     pixie_fit: "Maps Type 340 vector display + light pen to emulators we can ship in the repo."
@@ -78,18 +126,18 @@ format:
   live: true
   audience_qa: true
   production_style: "Relaxed Studio Session (recorded video call) or Live Twitch Event."
-  notes: "Heinz leads history; Rosenthal holds Cambridge ~1970 + lineage thread; Lars leads emulation. Intercut 1969 film + live emulator. Honor Wiseman and Hiles."
-  segment_order_suggestion: [heinz_history, rosenthal_same_machine, lars_emulation, heinz_cars, open_qa]
+  notes: "Open with buds introductions (telecine slates). Heinz bud leads history; DSHR bud holds Cambridge ~1970 + lineage; Lars bud leads emulation. Intercut 1969 film + live emulator. Honor Wiseman and Hiles."
+  segment_order_suggestion: [introductions, heinz_history, rosenthal_same_machine, lars_emulation, heinz_cars, open_qa]
   post_production:
     look: cambridge_telecine_jiggle
     spec: process/post-production/cambridge-telecine-jiggle.yml
     pipeline: characters/will-wright/sources/don-youtube-jDrqR9XssJI-flight-of-pixie/production-notes.md
     what: |
       After Effects — reuse the exact motion track + blur/glow from Don's *Flight of the PIXIE*
-      Bumblebee edit on Repo Show titles, credits, guest slates, segment cards, jokes, and
+      Bumblebee edit on Repo Show titles, credits, bud slates, segment cards, jokes, and
       dedication blocks. Match Chapman digitized 1969 film jiggle so packaging looks like the
       same old Cambridge University reel as the archival inserts.
-    applies_to: [opening_title, guest_slates, segment_cards, lower_thirds, jokes, dedication, end_credits, gag_credits]
+    applies_to: [opening_title, bud_slates, introductions, segment_cards, lower_thirds, jokes, dedication, end_credits, gag_credits]
     gag_credits: repo-shows/ideas/gags/cambridge-gag-credits.yml
     gag_credits_anchor: "Department of Research Simulation"
     consulting: Ground Up Software
