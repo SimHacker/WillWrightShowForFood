@@ -24,6 +24,7 @@ invitation:
   show_seed: repo-shows/lars-brinkhoff/
   paired_guest: thomas-cherryhomes
   challenge: "Make it so — PDP-10/ITS + MACLISP on emulated iron for Micropolis AI Drag Race"
+  cold_open_excerpt: ../../process/repo-show-branding.yml#cultural_excerpts#americans_arpanet_pdp10
 
 bio:
   summary: |
@@ -40,9 +41,9 @@ t_shirts:
   what: |
     Vintage computing t-shirt design emporium — PDP-10, Lisp Machine Inc., Interlisp, IMP,
     DEC, Foonly, Zork (1978), and other dead-iron logotypes. Lars makes shirts for friends;
-    Don wears his (e.g. orange **LISP MACHINE MANUAL** / *LISP CHINE NUAL* — see
-    characters/don-hopkins/media.md).
-  on_stream: "Host or buds may wear Lars's retrocomputing tees on PIXIE / ITS episodes"
+    Don wears his — orange **LISP MACHINE MANUAL** / *LISP CHINE NUAL*, **36-bit / full DEC**
+    designs, and others (see characters/don-hopkins/media.md).
+  on_stream: "Host wears Lars tees on PIXIE / ITS episodes — intro atom #4 in lars-brinkhoff/ideas.md"
 
 sources:
   wikipedia: null

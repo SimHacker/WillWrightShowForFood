@@ -1,0 +1,41 @@
+# Arthur van Hoff — birthday party photo
+
+artifact:
+  file: birthday-party.png
+  what: "Seven friends — costumes, wigs, lab coat, Hawaiian shirt, leather jackets; purple balloon"
+  occasion: "Arthur van Hoff's birthday party"
+
+scene:
+  cast_count: 7
+  vibe: "Themed birthday — shaka signs, peace sign, surprised faces, bead necklaces"
+  setting: "Gray wall, festive informal group portrait"
+  costumes:
+    - "Blonde afro wig + sunglasses + leather jacket"
+    - "White lab coat, neon green sleeve, Mardi Gras beads"
+    - "Red parrot Hawaiian shirt"
+    - "Blue windbreaker"
+    - "Fiery orange/yellow shirt + blonde wig"
+
+arthur:
+  note: "Birthday honoree — Arthur van Hoff"
+  likely_position: "Far right — tall, dark hair, glasses, black leather jacket, broad smile"
+
+don_orbit:
+  relationship: "Great long-time friend — Turing HyperLook, SimCity UI, Java/Marimba lineage"
+  turing: "Legendary Robot Olympics t-shirt from Glasgow era"
+
+repo_jokes:
+  menagerie:
+    bunny: "Board approved the parrot shirt as team-building PFP."
+    vandermeer: "The afro wig performs cryptid taxonomy—"
+    don: "Arthur's birthday. Shaka from the HyperLook crew."
+
+see_also:
+  - INDEX.yml
+  - plane-n333st-cockpit.yml
+  - ../CHARACTER.yml
+  - ../../don-hopkins/media/turing-institute/INDEX.yml
+  - ../../don-hopkins/ifc-vs-bongo-comparison.md
+  - ../../../process/old-band-back-together.yml
+
+note: "Not AI Generated!"

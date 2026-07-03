@@ -79,6 +79,7 @@ connections:
 
 show_suggestions:
   - { seed: ../../repo-shows/scott-draves/, what: "A generative-art Repo Show: Flame → Electric Sheep → Dreams in High Fidelity → Infinidream — evolution, collective intelligence, open source, and where AI image-gen fits. Read old Flame papers, run the Sheep live, riff on what's next." }
+  - { seed: ../../repo-shows/scott-draves/simulated-opening.yml, what: "Simulated art opening — menagerie buys your work for §; start buried in worthless Simoleons for Twitch" }
   - { seed: ../../repo-shows/will-wright/, what: "A reunion thread: Don, Scott and (ideally) Brian Eno + Will, recalling the 2006 Long Now evening and talking generative systems, simulation, and AI." }
 
 sources:

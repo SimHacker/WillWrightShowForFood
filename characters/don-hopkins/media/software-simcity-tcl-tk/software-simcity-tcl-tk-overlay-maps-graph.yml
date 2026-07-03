@@ -1,0 +1,11 @@
+# Sidecar — software-simcity-tcl-tk-overlay-maps-graph.png
+
+artifact:
+  file: software-simcity-tcl-tk-overlay-maps-graph.png
+  slug: software-simcity-tcl-tk-overlay-maps-graph
+  category: software
+  subcategory: simcity-tcl-tk
+  what: "Six overlay maps + 10-year history graph"
+  sidecar_of: software-simcity-tcl-tk-overlay-maps-graph.png
+
+note: "Not AI Generated!"

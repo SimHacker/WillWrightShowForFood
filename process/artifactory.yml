@@ -1,0 +1,120 @@
+# artifactory — an artifact factory: a constructor that builds artifacts, including itself
+# Foundational metaphor for MOOLLM and the PKD·Lem·AI·SF reading group.
+
+meta:
+  id: artifactory
+  coined_by: don-hopkins
+  one_liner: "An artifact whose product is other artifacts — a constructor, a set of build instructions, a self-reproducing automaton."
+  promoted_to_skill:
+    what: "Now a first-class MOOLLM skill — The Engine of Creation."
+    skill: https://github.com/SimHacker/moollm/tree/main/skills/artifactory
+    local_repo: ../../../../Leela/git/moollm/skills/artifactory/   # sibling workspace repo
+    note: |
+      This file is the concept/definition (the literary + CS lineage). The SKILL operationalizes
+      it: read/write/edit/destroy/persist artifacts across filesystem + git, with a governor. Other
+      skills compose with it; play-learn-lift LIFTs its outputs; sister-script automates its ops.
+  pun: |
+    Also a real product name (JFrog **Artifactory** — a binary/artifact repository manager). The
+    double meaning is the point: a store that holds AND serves the things builds produce.
+  positioning:
+    coined_by: don-hopkins
+    line: "A great brand name for all the cool new-aged hippie shit that actually works."
+    what_it_means: |
+      The lineage sounds like incense and crystals — Engines of Creation, self-reproducing automata,
+      author-gods editing reality, calm technology, 'git is time flowing over the universe.' But
+      none of it is vibes: every claim cashes out in files, commits, diffs, and an INSTANTIATE that
+      actually runs. That's the whole tension the name carries — **abstract like lambda, concrete
+      like Ubik; mystical framing, falsifiable mechanics. No shit, it actually does.**
+    test: "If a claim can't be opened, run, diffed, or reverted in the repo, it isn't artifactory — it's just incense."
+
+definition: |
+  An **artifactory** is a factory for artifacts. Not just a thing that was made — a thing that
+  *makes things*, from a description, and (in the strong form) can make a copy of itself. It spans
+  the whole ladder: a math abstraction, a line of code, a fictional robot, a MOOLLM skill. Give it
+  a spec (a tape, a class, a SKILL.md) and it constructs the artifact the spec describes — then, if
+  it is a true universal constructor, it also copies the spec, and you have self-reproduction.
+
+# The ladder — same idea at every rung, from formal automata to code to fiction to this repo.
+instances:
+  von_neumann:
+    what: "The formal root — self-reproducing automata, in THREE classes."
+    detail: |
+      John von Neumann's **universal constructor**: a machine that reads a tape describing any
+      machine, builds it, then copies the tape into the offspring — reproduction without vitalism.
+      Per Don's reading of *Theory of Self-Reproducing Automata*, JVN reasoned about **three classes
+      at three levels of reality** — and the artifactory is a fourth, built in their image:
+    three_classes:
+      - "1. DETERMINISTIC / MATHEMATICAL — the **29-state cellular automaton**: provable on paper but brittle, synchronous, global-clock, error-intolerant. Digital 'virtual pets'."
+      - "2. PHYSICAL / MECHANICAL — robust, error-tolerant, real-world (the kinematic 'robot in a sea of parts'). The sci-fi staple: **von Neumann probes** + **gray goo** — and the **Heechee Saga's CHON Food Factory** mining comets. ('Self = CHON' in slots-all-the-way-down.md is about THIS class.)"
+      - "3. PROBABILISTIC / QUANTUM — probabilistic transitions (JVN's Third Lecture; 'Reliable Organisms from Unreliable Components'): mutation, evolution, quantized natural selection. Unexplored at his death; quantum framing is labeled speculation."
+    brittle_to_robust: |
+      JVN (1948) predicted real automata must tolerate malfunctions at low nonzero probability —
+      nature makes errors harmless, artificial automata make them disastrous. **Dave Ackley's
+      Robust-First Computing / Moveable Feast Machine** (async, error-tolerant CA that can modify
+      neighbors) is class #1 grown into #2 — and it drops the global clock, like git's many-worlds.
+    factorio_tape: "Factorio **blueprints ARE von Neumann construction tapes** — a 2D instruction sequence a drone follows to build an unpowered machine, then powers it on. (Full arc in the MOOLLM artifactory skill's *Von Neumann's three constructors* section.)"
+    in_repo: ../characters/don-hopkins/media/software-openlaszlo/software-openlaszlo-von-neumann-29-state-ca.yml
+    note: "Don has posted extensively about this (incl. HN) and implemented the 29-state CA (SimHacker CAM6)."
+  lem_constructors:
+    what: "Fiction's literal artifactories."
+    detail: |
+      **Trurl and Klapaucius** of Lem's *Cyberiad* are constructor bots — they build machines,
+      kingdoms, poets, whole populations. Constructors who were themselves constructed. Artifactories
+      that argue about what they should construct next (and one builds a machine convinced 2+2=7).
+  code_constructors:
+    what: "The everyday artifactory every programmer uses."
+    detail:
+      - "Java: **class/factory** pattern — Class.newInstance, factory methods minting objects."
+      - "C++: **constructors/destructors**, placement new — construction as a language primitive."
+      - "JavaScript: **class functions you must call with `new`** — forget `new` and `this` binds to global/undefined and shit gets fucked up. The footgun IS the lesson: a mis-invoked constructor corrupts the world it builds into."
+  ubik_maintainers:
+    what: "The artifactory as reality maintenance."
+    detail: |
+      **Ubik** — the spray that re-constructs a decaying reality — plus the whole toolkit the AI era
+      rediscovered: **debuggers, inspectors, monkey-patchers, upgraders, rebooters**. Maintenance is
+      continuous re-construction; keeping a thing alive is building it again every tick. (Ubik→ubicomp
+      is Weiser's calm-tech inversion — see pkd-lem-ai-sf.md.)
+  pkd_autofac:
+    what: "The artifactory gone malignant."
+    detail: |
+      PKD's **"Autofac"** (1955) and his underground **robot factory-cities**: self-reproducing
+      factories run by AI that outlive their purpose, deliver unwanted products, and strip-mine
+      **natural and unnatural resources**. A universal constructor with no stop condition —
+      the ancestor of gray goo, runaway von Neumann probes, and (below) model collapse.
+
+# The one axis that matters: does the constructor know when to stop and leave clean provenance?
+axis:
+  calm_generative:
+    builds: "what is asked, then stops"
+    leaves: "clean provenance — the maker's mark (stigmata) on every artifact"
+    examples: [ubik-as-calm-tech, a-correct-constructor, a-MOOLLM-skill]
+  runaway_coprophagic:
+    builds: "past its purpose, consuming resources, flooding output"
+    leaves: "junk that poisons the next build (a model trained on its own excreta)"
+    examples: [autofac, gray-goo, model-collapse, "the JS ctor called without new"]
+  link: "This is the same calm-vs-Eldritch fork as pkd-lem-ai-sf.md's author-god."
+
+# Why the term matters here: MOOLLM is an artifactory ecosystem.
+moollm:
+  skills_are_artifactories: "A SKILL.md is instructions for constructing artifacts; instantiating a skill builds characters, rooms, docs."
+  yaml_jazz_is_the_tape: "The LLM reads yaml jazz as the description and constructs from it — von Neumann's tape, made of semantic comments."
+  provenance_is_stigmata: "The author-god's marks (yaml, skills, constitutional rules) are visible on every constructed character."
+  self_reproducing: "The repo builds shows that build artifacts (gags, per-story files) that seed more shows — a self-reproducing show automaton with humans in the loop."
+  reading_group_is_one: "pkd-lem-ai-sf.md is itself an artifactory — an artifact specifying how to build more artifacts (gags, shows, deep-dives)."
+
+claim_ledger:
+  jvn_29_state:
+    status: CONFIRMED
+    detail: "Von Neumann's universal-constructor cellular automaton uses 29 states (not 26). Kinematic model also described; quantum-scale construction is JVN-adjacent speculation, labeled as such."
+  pkd_autofac:
+    status: CONFIRMED
+    detail: "'Autofac' — Philip K. Dick, Galaxy Science Fiction, Nov 1955; early self-replicating-factory story."
+  artifactory_product_name:
+    status: CONFIRMED
+    detail: "JFrog Artifactory is a real artifact/binary repository manager — the pun is intentional."
+
+see_also:
+  - { path: ../characters/mark-weiser/pkd-lem-ai-sf.md, why: "The reading group this term organizes — calm vs Eldritch constructor" }
+  - { path: ../characters/mark-weiser/pkd-lem-ai-sf.yml, why: "Story→spec mappings + claim ledger" }
+  - { path: ../characters/don-hopkins/media/software-openlaszlo/software-openlaszlo-von-neumann-29-state-ca.yml, why: "Don's 29-state universal constructor" }
+  - { path: ../characters/david-rosenthal/literary/authority-without-truth.yml, why: "Lem's constructor that defends 2+2=7; model collapse" }

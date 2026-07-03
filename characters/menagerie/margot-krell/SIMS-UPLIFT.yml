@@ -1,0 +1,43 @@
+# Sims export handoff — see ../EXPORT-SIMS-RELATIONSHIPS.yml
+schema_version: 1
+source:
+  direction: uplift
+  neighbor_id: 906
+  character: margot-krell
+identity:
+  name: Margot Krell
+  age: adult
+  gender: female
+  zodiac: scorpio
+traits:
+  neat: 5
+  outgoing: 5
+  active: 4
+  playful: 1
+  nice: 2
+  generous: 3
+skills:
+  cooking: 5
+  mechanical: 1
+  charisma: 4
+  logic: 7
+  body: 3
+  creativity: 5
+  cleaning: 4
+career:
+  track: science
+  performance: 520
+relationships:
+  '902':
+    daily: 10
+    lifetime: 25
+  '903':
+    daily: -45
+    lifetime: -30
+  '905':
+    daily: 30
+    lifetime: 50
+  '907':
+    daily: -5
+    lifetime: 15
+family_budget: 22000

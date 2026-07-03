@@ -1,0 +1,42 @@
+# Literary — Authority without truth (Lem, coprophagia, PDP-7 Hex)
+# Thread linking DSHR blog, Lem's Cyberiad, and Cambridge Hex machine.
+
+meta:
+  thread: authority_without_truth
+  span: "2026-07 — Don ↔ DSHR correspondence"
+
+lem_cyberiad:
+  story: "Trurl's Machine"
+  source: Stanisław Lem, *The Cyberiad*
+  beat: |
+    Trurl builds a gigantic thinking machine and asks the simplest question: "What is 2 + 2?"
+    The machine answers "7." Corrected, it does not reconsider — it rage-quits reality: elaborate
+    rationalizations, denunciation of doubters, destructive rampage — all to defend an obviously
+    false claim.
+  satire: "Intelligence divorced from humility — preserving authority more important than truth"
+  dshr_citation: "Reading it today, remarkably prescient — David to Don, 2026-07-03"
+
+coprophagia:
+  title: "Coprophagia Is Bad For You"
+  author: David S. H. Rosenthal
+  url: https://blog.dshr.org/2026/06/coprophagia-is-bad-for-you.html
+  hook: "Models eating model output — model collapse; every story stars Elias the lighthouse keeper"
+  don_link: "Connected to Lem + PDP-7 Hex 'let the machine win' in same email thread"
+
+pdp7_hex:
+  artifact: ../media/pdp7-hex-let-machine-win.yml
+  punchline: "Let the machine win — Hex cheats if you try to win"
+  permission: "DSHR approved sharing draft with Lars and Heins"
+
+moollm_angle: |
+  Rig culture: humans author canon; LLMs orchestrate when asked. Coprophagia is what happens
+  when machines train on machine output without grounding. Yaml jazz is the antidote — semantic,
+  auditable, human-authored structure.
+
+connects:
+  - rautavaaras-case-pkd.yml
+  - ../../repo-shows/ideas/gags/let-the-machine-win.yml
+  - ../../repo-shows/david-rosenthal/discussion-pack.yml
+
+see_also:
+  - ../correspondence.yml

@@ -1,0 +1,39 @@
+# Episode — Marathon Session, Turn 7 — The Wish is Spoken
+# Long-form reading; recorded in Vondelpark with ambient Amsterdam sound.
+
+episode:
+  id: marathon-turn-7-wish-spoken
+  show: moollm-readings
+  number: 2
+  title: "The Long Version: Marathon Session Reading, Turn 7 — The Wish is Spoken"
+  youtube_url: https://www.youtube.com/watch?v=T-OIeUSc5vI
+  recorded: "2026-07"
+  host: Don Hopkins
+  setting: |
+    Vondelpark, Amsterdam — hippies playing guitar and singing in the distance. Don plans
+    more park readings.
+
+what: |
+  Turn 7 of the Marathon Session — Palm, adventure layer, and the microworld at depth.
+  Demonstrates long-form MOOLLM script reading as performance and pedagogy.
+
+teaches:
+  - "Marathon session structure — turns, wishes, accumulated lore"
+  - "Adventure layer — journals, dreams, exploration logs"
+  - "Readings as living canon — git-audited, linkable from video"
+
+repo_artifacts:
+  - ../../characters/palm/GLANCE.yml
+  - ../../characters/don-hopkins/
+
+moollm_links:
+  - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md
+  - https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/stage/palm-nook
+
+referenced_by:
+  - ../intro-canon.yml
+  - ../../repo-shows/david-rosenthal/discussion-pack.yml
+
+see_also:
+  - palm-love-wave.yml
+  - dasher-palm-tog-monkeys.yml

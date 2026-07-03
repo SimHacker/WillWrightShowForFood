@@ -17,6 +17,7 @@ Raw mirror: [`cs547-catalog.tsv`](cs547-catalog.tsv) · machine girder: [`cs547-
 - **[margaret-minsky](../../margaret-minsky/README.md)** — Putting 'Feel' into 'Look and Feel': Interaction with the Sense of Touch (1993-10-01)
 - **[ken-kahn](../../ken-kahn/README.md)** — Toon Talk (1993-12-03)
 - **[james-gosling](../../james-gosling/README.md)** — Bringing Behavior to the Internet (1995-12-01)
+- **[amy-jo-kim](../../amy-jo-kim/README.md)** — The Network is the Game: Social Trends in Mobile Entertainment (2004-10-01)
 - **[scott-kim](../../scott-kim/README.md)** — VizAbility (1996-02-16); Paper, Plastic, or Playstation? Adapting a Game to Wide Range of Technologies (2004-10-08)
 - **[will-wright](../../will-wright/README.md)** — Interfacing to Microworlds (1996-04-26); Games and Simulation (2003-05-02)
 - **[ben-shneiderman](../../ben-shneiderman/README.md)** — The Eyes Have It: User Interfaces for Information Visualization (1998-02-20); Leonardo's Laptop: Human Needs and the new Computing (2000-10-20)

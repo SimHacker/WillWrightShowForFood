@@ -1,0 +1,24 @@
+# SHOW PROPOSAL — ConnectedTV calm technology (Touch Tuning + Finger Pies)
+
+show:
+  id: connectedtv-calm-technology
+  title: "ConnectedTV — Touch Tuning & Finger Pies in the Dark Living Room"
+  type: group
+  host: Don Hopkins
+  guests: ["David Levitt"]
+  co_characters:
+    - characters/david-levitt/
+  topic: |
+    Revive ConnectedTV slogans: Touch Tuning (name-the-show to tune), Finger Pies
+    (directional strokes with feedback — not graffiti gestures). Palm universal remote
+    as Mark Weiser calm technology; HyperCard/HyperLook for IR devices; stroke vs poke
+    before iPhone. Live rebuild of finger-pie remote pages.
+  status: proposed
+  topic_file: characters/don-hopkins/connectedtv-touch-tuning-finger-pies.md
+  hn_threads:
+    - 7262676
+    - 22738415
+    - 37902412
+  repos:
+    - SimHacker/ConnectedTVSkinEditor
+    - SimHacker/IE-JScript-HTC-PieMenus

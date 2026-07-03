@@ -44,6 +44,18 @@ clusters:
     - will-wright-holding-sim.png
     - sim-picking-wills-nose.png
     - will-wright-eating-sim.png
+  computer_history_museum:
+    - computer-history-museum-maxis-display.png
+    - computer-history-museum-maxis-display.yml
+  snapshots_from_will:
+    - high-while-programming-flyer.png
+    - high-while-programming-flyer.yml
+  gallium_gdc:
+    - gallium-gdc-alameda-pacman-will-wright.png
+    - gallium-gdc-alameda-pacman-will-wright.yml
+  stupid_fun_club_ant_farm:
+    - ant-farm-revolution-frys-box.png
+    - ant-farm-revolution-frys.yml
   sims_series_galleries:
     - sims-dumbold-voting-machine-README.md
     - sims-simfreaks-content-gameplay-README.md

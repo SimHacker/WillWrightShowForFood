@@ -1,0 +1,14 @@
+# Broadcast Current Tv
+
+room:
+  id: broadcast-current-tv
+  category: broadcast
+  subcategory: current-tv
+  parent: ../INDEX.yml
+  count: 1
+
+artifacts:
+  - file: broadcast-current-tv-sf-headend-racks.png
+    sidecar: broadcast-current-tv-sf-headend-racks.yml
+
+note: "Not AI Generated!"

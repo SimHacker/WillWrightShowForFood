@@ -1,0 +1,53 @@
+# SHOW — Amy Jo & Scott Kim — Social Loops, Puzzle Craft, and Shufflebrain
+# Married creative partners; interview TOGETHER for shared work. See process/couple-and-solo-shows.yml
+
+show:
+  id: amy-jo-and-scott-kim
+  title: "A Repo Show with Amy Jo & Scott Kim — Game Thinking Meets the Designed Aha"
+  type: group
+  host: Don Hopkins
+  guests: ["Amy Jo Kim", "Scott Kim"]
+  character: [characters/amy-jo-kim/, characters/scott-kim/]
+  topic: "Shufflebrain + Game Thinking + puzzle craft — social systems and designed ahas as one marriage of crafts"
+  status: seed
+  consent: not_yet_asked
+  beloved_guests: true
+
+why_them:
+  shufflebrain: "Co-founded **Shufflebrain** — consultancy and games marrying Amy Jo's social design with Scott's puzzles (Photograb, brain-training lineage)."
+  amy_jo: "**Game Thinking** — retention, community, social loops; designer on **The Sims**, **Rock Band**, **Ultima Online**, **eBay**; *Community Building on the Web*."
+  scott_kim: "**Inversions**, puzzle design, **Viewpoint** thesis, Bejeweled/Tetris puzzle craft; CS547 *Paper, Plastic, or Playstation?* (2004)."
+  will_orbit: "Amy Jo in Will's Sims social-design circle; Scott friend of Will — play, puzzles, possibility space."
+  pair_not_solo: |
+    Default interview is **this pair show**. Solo seeds (scott-kim/) remain for optional deep
+    verticals — Viewpoint dissertation, ambigram masterclass — not duplicate Shufflebrain material.
+
+episodes:
+  - id: pair-kickoff
+    what: "Shufflebrain story + Game Thinking live on a Micropolis Home / Exchange sketch — social loop meets puzzle spec in browser."
+  - id: cs547-double
+    what: "Terry Winograd archive night — Amy Jo *Network is the Game* + Scott *Paper, Plastic, or Playstation?* made runnable."
+  - id: sims-community
+    what: "Amy Jo's Sims social-design lens on Micropolis Exchange revival — attribution, opt-in publish, community without extraction."
+  - id: will-triangle
+    what: "Optional Will Wright thread — data portability, social toys, Gardner/play orbit (async or cameo)."
+
+scheduling:
+  primary: amy-jo-and-scott-kim
+  optional_solo:
+    - scott-kim
+    note: "Schedule solo Scott only for Viewpoint/inversions vertical — after or instead of pair, never both covering Shufflebrain."
+
+format:
+  live: true
+  run_code: true
+  audience_qa: true
+
+ties_to:
+  - ../../characters/amy-jo-kim/
+  - ../../characters/scott-kim/
+  - ../../characters/will-wright/
+  - ../../characters/terry-winograd/
+  - ../../process/couple-and-solo-shows.yml
+  - ../../repo-shows/ideas/themes/data-portability-crown-jewel.yml
+  - ../scott-kim/SHOW.yml

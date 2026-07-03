@@ -1,0 +1,18 @@
+# SHOW PROPOSAL — The Adorable Will Wright Minutes (async Q&A format)
+
+show:
+  id: will-wright-adorable-minutes
+  title: "The Adorable Will Wright Minutes — Async Q&A"
+  type: group
+  host: Don Hopkins
+  guests: ["Will Wright"]
+  character: characters/will-wright/
+  topic: |
+    Revive Will's 2008 one-minute lesson format. Don collects HN/viewer questions;
+    Will replies on camera. Short-form primers before long Repo Show episodes.
+    Care Bears mythology corner optional but encouraged.
+  status: proposed
+  topic_file: characters/will-wright/adorable-minutes.md
+  reference_video: https://www.youtube.com/watch?v=f7G6c097oWU
+  source_clips_1996: characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/short-form-clips.yml
+  production_schedule: characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/short-form-production-schedule.yml

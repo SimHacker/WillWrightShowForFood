@@ -37,6 +37,15 @@ format:
   run_code: true
   audience_qa: true
 
+simulated_opening:
+  enabled: true
+  spec: simulated-opening.yml
+  protocol: ../../process/simulated-art-opening.yml
+  invite: "Play along — menagerie buys your artwork for §; start buried in worthless Simoleons"
+  ledger: AUCTIONS.yml
+  before_main_show: true
+  minutes: "25–35"
+
 ideas: ../../characters/scott-draves/ideas.md   # grounded conversation hooks
 
 ties_to:

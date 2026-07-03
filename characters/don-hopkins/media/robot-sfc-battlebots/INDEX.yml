@@ -1,0 +1,18 @@
+# Robot Sfc Battlebots
+
+room:
+  id: robot-sfc-battlebots
+  category: robot
+  subcategory: sfc-battlebots
+  parent: ../INDEX.yml
+  count: 3
+
+artifacts:
+  - file: robot-sfc-battlebots-reprop-metal-pvc-duo.png
+    sidecar: robot-sfc-battlebots-reprop-metal-pvc-duo.yml
+  - file: robot-sfc-battlebots-stupid-fun-club-wedge-pair.png
+    sidecar: robot-sfc-battlebots-stupid-fun-club-wedge-pair.yml
+  - file: robot-sfc-battlebots-treaded-wheel-warning-sticker.png
+    sidecar: robot-sfc-battlebots-treaded-wheel-warning-sticker.yml
+
+note: "Not AI Generated!"

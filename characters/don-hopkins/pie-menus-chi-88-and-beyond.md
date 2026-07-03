@@ -45,3 +45,21 @@ Primary sources in mail archive: Wiseman notes on radial menus in PIXIE; Cambrid
 - DonHopkins `talks/past/pie-menus-chi88.yml` (full talk package in private archive)
 
 → Live demo target: MicropolisCore `@micropolis/render-core` pie holodeck
+
+## PieCraft — player-crafted menus as first-class artifacts
+
+From [HN retrospective](https://news.ycombinator.com/item?id=17098179): pie menus as **in-game
+craftable artifacts** — editable, vulnerable in combat, discoverable through pressure and reward.
+Teaches Fitts/Steering through play (Monster Hunter: World radial guide as shipped example).
+
+| Show seed | Link |
+|-----------|------|
+| Edd Coates — pie menus in games | [`../../repo-shows/edd-coates/pie-menus-piecraft.yml`](../../repo-shows/edd-coates/pie-menus-piecraft.yml) |
+| Gesture + discoverability | [`gesture-space.md`](gesture-space.md) |
+
+MicropolisCore design: [PieCraft](https://github.com/SimHacker/MicropolisCore/tree/main/documentation/designs/piecraft)
+
+## IE5 — XML + XSLT + HTC (obsolete but instructive)
+
+Museum stack for declarative pie menus on Internet Explorer 5 — ancestor of ConnectedTV Skin Editor.
+→ [`ie-jscript-htc-xslt-pie-menus.md`](ie-jscript-htc-xslt-pie-menus.md)

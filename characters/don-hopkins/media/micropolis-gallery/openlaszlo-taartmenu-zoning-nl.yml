@@ -1,0 +1,18 @@
+# Sidecar — openlaszlo-taartmenu-zoning-nl.png
+
+artifact:
+  file: openlaszlo-taartmenu-zoning-nl.png
+  slug: openlaszlo-taartmenu-zoning-nl
+  room: micropolis-gallery
+  what: openlaszlo taartmenu zoning nl
+  era: 1991 HyperLook through 2010s Facebook
+  sidecar_of: openlaszlo-taartmenu-zoning-nl.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/micropolis-gallery.yml
+  - ../../../repo-shows/ideas/gags/pacbot-eats-traffic.yml
+
+see_also:
+  - micropolis-gallery.yml
+
+note: "Not AI Generated!"

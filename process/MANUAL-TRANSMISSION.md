@@ -205,7 +205,7 @@ showed GitHub bug-fix commits train repair models; we extend with thoughtful-com
 
 - **slats:**
   - role: celebrity_robot_judge
-  - rubric: ../characters/slats/judge-rubric.yml
+  - rubric: ../characters/robots/slats/judge-rubric.yml
   - note: Subjective Rubik faces — camp, robopoetry, werk
 ### Rubric Experiment
 
@@ -275,7 +275,7 @@ feed rubric SCORE, experiment COMPARE, and orchestration gold — with secrets s
 | [`code-that-spec.yml`](code-that-spec.yml) |
 | [`brain-stream.yml`](brain-stream.yml) |
 | [`model-branching.yml`](model-branching.yml) |
-| [`../characters/slats/judge-rubric.yml`](../characters/slats/judge-rubric.yml) |
+| [`../characters/robots/slats/judge-rubric.yml`](../characters/robots/slats/judge-rubric.yml) |
 | [`../rigs/stick-shift-composer-moollm.rig.yml`](../rigs/stick-shift-composer-moollm.rig.yml) |
 | [`SimHacker/moollm/skills/cursor-mirror`](SimHacker/moollm/skills/cursor-mirror) |
 | [`SimHacker/moollm/skills/rubric`](SimHacker/moollm/skills/rubric) |

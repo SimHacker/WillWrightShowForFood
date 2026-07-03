@@ -1,0 +1,71 @@
+# Apple II Red Book schematics — Woz system diagrams (page 141 orbit)
+
+room:
+  id: apple-ii-redbook
+  parent: ../GLANCE.yml
+  designer: Steve Wozniak
+  source: Apple II Reference Manual ("Red Book")
+  classiccmp: http://www.classiccmp.org/cpmarchives/AppleII/Apple%20II%20(Redbook).pdf
+
+dedup:
+  spec: dedup.yml
+  uploaded: 12
+  kept: 11
+
+figures:
+  s01: apple-ii-redbook-fig-s01-system-diagram.png
+  timing: apple-ii-redbook-system-timing-diagram.png
+  s02: apple-ii-redbook-fig-s02-mpu-system-bus.png
+  s04: apple-ii-redbook-fig-s04-sync-counter.png
+  s05: apple-ii-redbook-fig-s05-rom-memory.png
+  s06: apple-ii-redbook-fig-s06-ram-select.png
+  s07: apple-ii-redbook-fig-s07-ram-address-mux.png
+  s08: apple-ii-redbook-fig-s08-ram-memory-data-latch.png
+  s09: apple-ii-redbook-fig-s09-peripheral-io.png
+  s10: apple-ii-redbook-fig-s10-on-board-io-speaker.png
+  s11: apple-ii-redbook-fig-s11-video-generator.png
+
+facebook:
+  occasion: "Happy 70th Birthday Woz!"
+  don_anchor: "Page 141 of the Apple II Red Book"
+  comments:
+    - author: Lee Thalblum
+      text: "This was always the most interesting part of the Apple design. Took me ages to figure out what was going on here, 40 plus years ago"
+    - author: Raines Cohen
+      text: "Red book?"
+    - author: Don Hopkins
+      text: "Yep!"
+    - author: Jeff Bulf
+      text: "Y'know... it looks just a bit like LAX!"
+    - author: Jeff Becker
+      text: "So much memory!"
+    - author: David Burrow
+      text: "We had a cassette-drive Apple II c.'77-78 I think. Star Trek was the bomb."
+    - author: Don Hopkins
+      text: "LRS - Long Range Scan / SRS - Short Range Scan — I helped type it in from Creative Computing!"
+    - author: Don Hopkins
+      text: "I love the beeping and booping and woop woop woooping sounds!"
+    - author: David Burrow
+      text: "Boop beep to you too."
+    - author: Don Hopkins
+      text: "My first assembly language program I learned and could recite from memory was the beep routine!"
+    - author: Don Hopkins
+      text: "BASIC was just too slow to beep. All you could do was buzz and grumble. You had to learn assembly language if you wanted to beep!"
+  links:
+    star_trek_1979: https://www.youtube.com/watch?v=D9U57Q5y17o
+    twiki_malfunction: https://www.youtube.com/watch?v=8oFX7IgLlDk
+    twiki_in_love: https://www.youtube.com/watch?v=yptoaCKZ0Tw
+
+story_hooks:
+  - "Walk FIG S-1 on air — Jeff Bulf says it looks like LAX"
+  - "FIG S-10 speaker circuit → Don's first assembly beep routine"
+  - "Cassette Star Trek 1979 — LRS/SRS from Creative Computing"
+  - "Lee Thalblum — took 40 years to understand the design"
+
+see_also:
+  - ../../ideas.md
+  - ../../../don-hopkins/career/work-history.yml
+  - ../../../repo-shows/ideas/gags/apple-ii-redbook-lax-beep.yml
+  - ../../../../process/challenges/apple2-drive.yml
+
+note: "Not AI Generated!"

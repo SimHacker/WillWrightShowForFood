@@ -1,0 +1,9 @@
+🎪 **Menagerie** — Pee-wee's Playhouse virtual guests (`characters/menagerie/`). One soul, many roles — not only gallery patrons, not necessarily from video games.
+
+**Cohort:** Lower Chelsea Eight (🥂📈📚…) — reified Sims + Mind Mirror souls; born in JSONsters; bid § at gallery openings.
+
+**MOOLLM imports:** 🍄👸🍊💅🎭 Donna · 🧣🔦🚫🤫🌟 Doctor No · 🐒✋🌴🔮💜 Palm — five-emoji flourishes like Palm's signature string.
+
+**Protocol:** [`MOOLLM-OVERLAY.yml`](MOOLLM-OVERLAY.yml) — local dir points upstream, augments with `wwsff_overlay`. Bulk import (kittens, puppies, monkeys) on hold.
+
+**Gallery openings:** [`GUEST-ROSTER.yml`](GUEST-ROSTER.yml) — menagerie + sims + robots.

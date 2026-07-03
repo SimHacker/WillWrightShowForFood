@@ -1,0 +1,33 @@
+# Arthur van Hoff — plane N333ST cockpit
+
+artifact:
+  file: plane-n333st-cockpit.png
+  exterior: plane-n333st-exterior.png
+  what: "Glass-cockpit light aircraft — Arthur leaning into open canopy, red/black seats, tarmac"
+
+aircraft:
+  registration: N333ST
+  placard: "Silver ID tag on instrument panel"
+  type: "Modern light sport / kit plane — gull-wing canopy"
+  cockpit: "Dual PFD/MFD glass displays, center avionics stack, dual sticks, red REMOVE BEFORE FLIGHT tag"
+
+scene:
+  arthur: "Grey hair, sunglasses, blue polo, grey jacket — reaching into left mesh storage pocket"
+  interior: "Red and black leather seats; white throttle/mixture levers on center console"
+  exterior: "Asphalt ramp; other GA aircraft; control tower; blue car (Tesla?) behind; prop tip visible"
+
+don_orbit:
+  note: "Arthur's plane — longtime friend beyond HyperLook/Java/Marimba"
+
+repo_jokes:
+  menagerie:
+    gregory: "Long runway, short taxi — I'm long N333ST."
+    mimsy: "The glass cockpit performs restraint—"
+    don: "Arthur's plane. Remove before flight."
+
+see_also:
+  - plane-n333st-exterior.yml
+  - INDEX.yml
+  - ../CHARACTER.yml
+
+note: "Not AI Generated!"

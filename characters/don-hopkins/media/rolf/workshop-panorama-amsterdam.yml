@@ -1,0 +1,19 @@
+# Sidecar — workshop-panorama-amsterdam.png
+
+artifact:
+  file: workshop-panorama-amsterdam.png
+  slug: workshop-panorama-amsterdam
+  room: rolf
+  what: workshop panorama amsterdam
+  era: TomTom-era Amsterdam
+  sidecar_of: workshop-panorama-amsterdam.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/rolf-junk-auction.yml
+
+see_also:
+  - INDEX.yml
+  - raving-bonkers.yml
+  - ../robot-collection/INDEX.yml
+
+note: "Not AI Generated!"

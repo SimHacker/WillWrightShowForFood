@@ -1,5 +1,5 @@
 # Slats — audience TicketPR overlay
-# Canonical character: characters/slats/CHARACTER.yml
+# Canonical character: characters/robots/slats/CHARACTER.yml
 
 character:
   name: Slats
@@ -8,7 +8,7 @@ character:
   signifier: "🤖"
   home: repo-shows/will-wright/audience/bot-slats/
 
-character_ref: ../../../../characters/slats/CHARACTER.yml
+character_ref: ../../../../characters/robots/slats/CHARACTER.yml
 
 representation:
   fictional: true
@@ -56,5 +56,5 @@ media:
 
 see_also:
   - questions.yml
-  - ../../../../characters/slats/one-minute-movies.md
+  - ../../../../characters/robots/slats/one-minute-movies.md
   - ../FICTIONAL-AUDIENCE.md

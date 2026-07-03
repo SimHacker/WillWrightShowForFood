@@ -1,0 +1,17 @@
+# Brainwash Cafe / Laundromat — Folsom St SF (sadly closed)
+
+artifact:
+  file: brainwash-cafe-logo.png
+  what: "BRAINWASH logo — head silhouette with HOT / WARM / COLD brain wedges"
+  location: "Folsom Street, San Francisco"
+  status: "Sadly closed — laundromat + cafe culture landmark"
+
+repo_orbit:
+  pizza_tool: ../news-tnt/news-tnt.yml#pizza_tool
+  bay_area: ../../career/work-history.yml
+
+menagerie:
+  don: "Brainwash. HOT WARM COLD. Laundry and espresso. Gone."
+  gregory: "Long spin cycle, short lease."
+
+note: "Not AI Generated!"

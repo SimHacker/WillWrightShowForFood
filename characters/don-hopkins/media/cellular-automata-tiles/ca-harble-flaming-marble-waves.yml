@@ -1,0 +1,17 @@
+# Sidecar — ca-harble-flaming-marble-waves.png
+
+artifact:
+  file: ca-harble-flaming-marble-waves.png
+  slug: ca-harble-flaming-marble-waves
+  room: cellular-automata-tiles
+  what: SimCity-tile cellular automata — harble flaming marble waves
+  era: ~2010-2011
+  sidecar_of: ca-harble-flaming-marble-waves.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/cellular-automata-simcity-tiles.yml
+
+see_also:
+  - ../micropolis-gallery/INDEX.yml
+
+note: "Not AI Generated!"

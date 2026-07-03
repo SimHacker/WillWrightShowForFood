@@ -1,0 +1,19 @@
+# Sidecar — keychains-cosmonaut-nikolayev-cluster.png
+
+artifact:
+  file: keychains-cosmonaut-nikolayev-cluster.png
+  slug: keychains-cosmonaut-nikolayev-cluster
+  room: rolf
+  what: keychains cosmonaut nikolayev cluster
+  era: TomTom-era Amsterdam
+  sidecar_of: keychains-cosmonaut-nikolayev-cluster.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/rolf-junk-auction.yml
+
+see_also:
+  - INDEX.yml
+  - raving-bonkers.yml
+  - ../robot-collection/INDEX.yml
+
+note: "Not AI Generated!"

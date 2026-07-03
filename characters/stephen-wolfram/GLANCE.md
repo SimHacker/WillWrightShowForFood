@@ -1,0 +1,1 @@
+🔷 **Stephen Wolfram** — Mathematica, Wolfram Language, *A New Kind of Science*, Wolfram Physics Project. **Draft invite** for [`moollm-readings`](../../repo-shows/moollm-readings/) + CA/complexity threads. [`CHARACTER.yml`](CHARACTER.yml)

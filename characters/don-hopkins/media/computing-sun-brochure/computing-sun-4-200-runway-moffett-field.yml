@@ -1,0 +1,12 @@
+# Sidecar — computing-sun-4-200-runway-moffett-field.png
+
+artifact:
+  file: computing-sun-4-200-runway-moffett-field.png
+  slug: computing-sun-4-200-runway-moffett-field
+  category: computing
+  subcategory: sun-brochure
+  what: "Sun 4/200 brochure — runway shot, plane takeoff, Moffett Field"
+  sidecar_of: computing-sun-4-200-runway-moffett-field.png
+
+archive: https://archive.org/details/sun4200seriesbrochure
+note: "Not AI Generated!"

@@ -23,7 +23,7 @@ the PET, MAME, or a breadboard with honor?
 |-----|-------|
 | **id** | retrocomputing-drive |
 | **status** | seed |
-| **celebrity_judge** | ../characters/slats/judge-rubric.yml |
+| **celebrity_judge** | ../characters/robots/slats/judge-rubric.yml |
 
 ## What A Rig Declares
 
@@ -167,7 +167,7 @@ install/upgrade preserving .rig/<slug>/state.yml. Human decides whether agent ex
 | [`../stick-shift-protocol.yml`](../stick-shift-protocol.yml) |
 | [`../../schemas/rig-schema.yml`](../../schemas/rig-schema.yml) |
 | [`../../rigs/README.md`](../../rigs/README.md) |
-| [`../../characters/slats/judge-rubric.yml`](../../characters/slats/judge-rubric.yml) |
+| [`../../characters/robots/slats/judge-rubric.yml`](../../characters/robots/slats/judge-rubric.yml) |
 
 ## Related
 

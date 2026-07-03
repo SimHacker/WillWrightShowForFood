@@ -1,0 +1,18 @@
+# Sidecar — simcity-zone-pie-menu.png
+
+artifact:
+  file: simcity-zone-pie-menu.png
+  slug: simcity-zone-pie-menu
+  room: pie-menus
+  what: simcity zone pie menu
+  era: CHI 1988 through Sims Online
+  sidecar_of: simcity-zone-pie-menu.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
+
+see_also:
+  - pie-menus.yml
+  - ../news-tnt/INDEX.yml
+
+note: "Not AI Generated!"

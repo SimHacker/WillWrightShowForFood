@@ -1,0 +1,21 @@
+room:
+  id: storymaker-urban-safari
+  name: StoryMaker Urban Safari
+  parent: ../../media.md
+
+artifacts:
+  - urban-safari-title-card.png
+  - storymaker-canal-scene-dev.png
+  - storymaker-ar-thumbnails.png
+  - storymaker-smoking-papers-notification.png
+  - storymaker-amsterdam-street-scene.png
+
+spec:
+  - storymaker-urban-safari.yml
+
+see_also:
+  - ../storymaker/INDEX.yml
+  - ../amsterdam-tile-art/INDEX.yml
+  - ../../career/stupid-fun-club.yml
+
+note: "Not AI Generated!"

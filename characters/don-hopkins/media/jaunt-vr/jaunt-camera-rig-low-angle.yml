@@ -1,0 +1,14 @@
+# Sidecar — jaunt-camera-rig-low-angle.png
+
+artifact:
+  file: jaunt-camera-rig-low-angle.png
+  slug: jaunt-camera-rig-low-angle
+  room: jaunt-vr
+  what: Jaunt VR camera rig — camera rig low angle
+  era: 2016-2017
+  sidecar_of: jaunt-camera-rig-low-angle.png
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

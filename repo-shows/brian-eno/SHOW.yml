@@ -42,6 +42,22 @@ format:
   audience_qa: true
   note: "Dream seed — entirely contingent on Brian's interest, reached gently via Will + Scott."
 
+simulated_opening:
+  enabled: true
+  spec: simulated-opening.yml
+  protocol: ../../process/simulated-art-opening.yml
+  anchor_product: 77-million-paintings.yml
+  totally_eno: true
+  note: |
+    77 Million Paintings (2006 DVD) — 296 slides, infinite combinations, not 77M files.
+    Art Thief secondary market: covet, trade, forge, steal deeds; matrix updates on git.
+    Menagerie misreads as NFT/web3; Brian surrenders § on stream. Pairs with Scott Draves opening.
+  ledger: AUCTIONS.yml
+  secondary_market: SECONDARY-MARKET.yml
+  moola: MOOLA.yml
+  art_thief: ../../process/art-thief-game.yml
+  moola_spec: ../../process/moola.yml
+
 ties_to:
   - ../../characters/brian-eno/
   - ../../characters/doug-hilsinger/

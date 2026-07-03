@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-bride-lace-gown-profile.png
+
+artifact:
+  file: transmogrifier-bride-lace-gown-profile.png
+  slug: transmogrifier-bride-lace-gown-profile
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — bride lace gown profile
+  era: 2000-2002
+  sidecar_of: transmogrifier-bride-lace-gown-profile.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

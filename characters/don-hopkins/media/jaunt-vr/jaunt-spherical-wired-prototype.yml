@@ -1,0 +1,14 @@
+# Sidecar — jaunt-spherical-wired-prototype.png
+
+artifact:
+  file: jaunt-spherical-wired-prototype.png
+  slug: jaunt-spherical-wired-prototype
+  room: jaunt-vr
+  what: Jaunt VR camera rig — spherical wired prototype
+  era: 2016-2017
+  sidecar_of: jaunt-spherical-wired-prototype.png
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

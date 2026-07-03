@@ -1,0 +1,17 @@
+# Sidecar — simcity-scenario-selection.png
+
+artifact:
+  file: simcity-scenario-selection.png
+  slug: simcity-scenario-selection
+  room: cellular-automata-tiles
+  what: simcity scenario selection
+  era: ~2010-2011
+  sidecar_of: simcity-scenario-selection.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/cellular-automata-simcity-tiles.yml
+
+see_also:
+  - ../micropolis-gallery/INDEX.yml
+
+note: "Not AI Generated!"

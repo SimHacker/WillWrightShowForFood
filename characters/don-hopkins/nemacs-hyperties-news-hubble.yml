@@ -1,0 +1,50 @@
+# Sidecar — nemacs-hyperties-news-hubble.png
+
+artifact:
+  file: nemacs-hyperties-news-hubble.png
+  title: NeMACS and HyperTIES on NeWS
+  type: screenshot
+  format: png
+  era: "~1989"
+  note: "Not AI Generated!"
+
+what_it_is:
+  stack: NeMACS + HyperTIES on NeWS
+  nemacs: NeWS Emacs — Don's UniPress Emacs authoring environment on the Network extensible Window System
+  hyperties: UMD HCIL hypermedia browser/editor (Ben Shneiderman); PostScript display + embedded links
+  news: PostScript-programmable network window system (James Gosling, David Rosenthal, Sun)
+  document: Hubble Space Telescope — Main View (hypertext page with labelled instrument diagram)
+
+visible_in_frame:
+  left_panes:
+    - HyperTIES markup / source — author Hopkins, Don; tags like telescope-main-view, FOS targets
+    - Descriptive prose — Support Systems Module, five scientific instruments
+    - PostScript drawing code — lineto coordinates (NeWS canvas)
+  pie_menus:
+    - Articulate · Edit · Define · View
+    - Storyboard · Link · Picture · Target
+  right_pane:
+    - Rendered HyperTIES page — HST line-art diagram with component callouts
+    - Embedded link targets — spectrograph exploded views, frame references
+    - Navigation bar — RETURN · TOPICS · INDEX · HOME · SHOW · SEARCH · QUIT
+  chrome: NeWS window border; icon strip along bottom
+
+lineage:
+  - UMD HCIL HyperTIES — embedded menus, graphical pop-out targets, definition previews
+  - NeWS send-code-not-commands — PostScript applets in the page
+  - Pie menus — Don Hopkins; CHI 1988 study with Shneiderman, Callahan, Weiser
+  - PSIBER debugged HyperTIES and NeMACS alongside other NeWS applications
+
+repo_show:
+  - ../../repo-shows/REPO-SHOWS.yml#news-postscript-window-system.yml
+  - ../ben-shneiderman/
+  - ../../process/trails/send-code-not-commands.md
+
+demos:
+  - http://www.donhopkins.com/home/movies/HyperTIESDemo.mov
+  - http://www.donhopkins.com/home/movies/NeMACSDemo.mov
+
+see_also:
+  - history/umd-hcil.yml
+  - pie-menus-chi-88-and-beyond.md
+  - CARD.yml#connections_index

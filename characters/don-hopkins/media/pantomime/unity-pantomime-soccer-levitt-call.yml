@@ -1,0 +1,19 @@
+# Sidecar — unity-pantomime-soccer-levitt-call.png
+
+artifact:
+  file: unity-pantomime-soccer-levitt-call.png
+  slug: unity-pantomime-soccer-levitt-call
+  room: pantomime
+  what: unity pantomime soccer levitt call
+  era: ~2014 (Oculus SDK demos); copyleft envelope 1984
+  sidecar_of: unity-pantomime-soccer-levitt-call.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/pantomime-gallery.yml
+  - ../../../repo-shows/ideas/gags/curiosity-cow-cube.yml
+
+see_also:
+  - INDEX.yml
+  - bug-farm.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,22 @@
+# Gag — Apple II Red Book looks like LAX + beep routine
+
+gag:
+  id: apple-ii-redbook-lax-beep
+  title: "Red Book — Looks Like LAX"
+  source: characters/steve-wozniak/media/apple-ii-redbook/apple-ii-redbook.yml
+
+beat:
+  opener: "Happy 70th Birthday Woz! Page 141."
+  jeff_bulf: "Y'know... it looks just a bit like LAX!"
+  lee_thalblum: "Most interesting part of the Apple design — took me 40 years"
+  don_beep: "BASIC was too slow to beep. You had to learn assembly."
+  david_burrow: "Star Trek was the bomb. Photon torpedos. Boop beep to you too."
+  fig_s10: "Speaker jack B14A — Don's first assembly program recited from memory"
+
+on_air:
+  walkthrough: "Pan FIG S-1 buses like airport terminals"
+  sound: "Beep routine live — not BASIC buzz and grumble"
+
+see_also:
+  - ../../../characters/steve-wozniak/media/apple-ii-redbook/INDEX.yml
+  - ../../../process/challenges/apple2-drive.yml

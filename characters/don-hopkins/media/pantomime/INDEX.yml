@@ -1,0 +1,55 @@
+# Pantomime gallery — Don Hopkins media room
+# Bug Farm AR/VR · Oculus SDK demos · Unity3D w/ David Levitt · Copyleft origin story
+
+room:
+  id: pantomime-gallery
+  name: Pantomime Gallery
+  parent: ../../media.md
+  company: Pantomime Corporation (~2014)
+  cofounders: [Don Hopkins, David Levitt]
+  donhopkins_tech: ../../../../DonHopkins/characters/don-hopkins/technology/pantomime/INDEX.yml
+
+what_this_is:
+  pitch: |
+    **Pantomime** — physically realistic, networked AR/VR on phones and tablets as portals
+    (no headset required). **Bug Farm** is the creepy bug-squisher: reach in with your hands,
+    squash flies and spiders on a wooden table, green splats and yellow hit-flares at 60 FPS.
+    Early **Oculus SDK** demos include *Too many butterflies!* — stereo barrel distortion,
+    blue morphos swarming a stone hall. Don, **David Levitt**, and **Nelson** hacked it in **Unity3D**
+    (PantomimeSoccer, PantomimePong, AccessoryHands, TreeJoint).
+
+copyleft_wall:
+  spec: copyleft-envelope-1984.yml
+  gnu_art: "https://www.gnu.org.cach3.com/graphics/copyleft-sticker.en.html"
+  wikipedia: "https://en.wikipedia.org/wiki/Copyleft"
+  punchline: "Copyleft (L) 1984 by an amoeba named Tom — inspired RMS to name free-software copyleft"
+
+gallery_wings:
+  bug_farm: bug-farm.yml
+  too_many_butterflies: too-many-butterflies.yml
+  unity_dev: unity-levitt-nelson.yml
+  copyleft: copyleft-envelope-1984.yml
+
+artifacts:
+  - tutorial-parchment-hands.png
+  - too-many-butterflies-oculus.png
+  - unity-pantomime-soccer-levitt-call.png
+  - copyleft-envelope-front-1984.png
+  - copyleft-envelope-back-1984.png
+  - bug-farm-screenshots/   # 34 Unity dev captures
+
+repo_show_beats:
+  - jsonsters_opening_adjacent_wing
+  - menagerie_squishes_bugs_for_moola
+  - levitt_reunion_old_band_back_together
+  - copyleft_envelope_vs_moola_legal_parody
+  - distressed_moo_meets_bug_squish_compulsion
+
+see_also:
+  - ../../../david-levitt/
+  - ../../../../process/old-band-back-together.yml
+  - ../../../../repo-shows/ideas/gags/pantomime-gallery.yml
+  - ../../../../process/moola.yml
+  - ../turing-institute/INDEX.yml
+
+note: "Not AI Generated!"

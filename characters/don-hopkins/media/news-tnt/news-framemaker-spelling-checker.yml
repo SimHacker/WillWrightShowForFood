@@ -1,0 +1,17 @@
+# Sidecar — news-framemaker-spelling-checker.png
+
+artifact:
+  file: news-framemaker-spelling-checker.png
+  slug: news-framemaker-spelling-checker
+  room: news-tnt
+  what: news framemaker spelling checker
+  era: Sun NeWS / OpenWindows
+  sidecar_of: news-framemaker-spelling-checker.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/news-pizza-tool-fax.yml
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

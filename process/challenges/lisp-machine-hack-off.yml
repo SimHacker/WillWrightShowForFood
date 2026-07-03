@@ -8,7 +8,7 @@ meta:
   type: [drag_race_challenge, flair_class, vendor_rivalry, emulated_runtime]
   tagline: "Lisp Machine Hack-Off — Symbolics vs LMI: the battle continues"
   class: flair
-  celebrity_judge: ../characters/slats/judge-rubric.yml
+  celebrity_judge: ../characters/robots/slats/judge-rubric.yml
   homage: [MIT_CADR, Genera, LMI_Lambda, Zmacs, Dynamic_Windows]
 
 pitch: |
@@ -101,7 +101,7 @@ ties_to:
   - lisp-machine-stack.yml
   - ../micropolis-ai-drag-race.yml
   - ../pdp10-its-stack.yml
-  - ../../characters/slats/judge-rubric.yml
+  - ../../characters/robots/slats/judge-rubric.yml
 
 see_also:
   - { path: retrocomputing-drive.yml, why: "Family umbrella" }
@@ -110,7 +110,7 @@ see_also:
   - { path: ../../rigs/lisp-machine-symbolics.rig.yml, why: "Symbolics camp rig" }
   - { path: ../../rigs/lisp-machine-lmi.rig.yml, why: "LMI camp rig" }
   - { path: ../micropolis-ai-drag-race.yml#lisp_machine_hack_off, why: "Drag race vendor battle slot" }
-  - { path: ../../characters/slats/judge-rubric.yml, why: "Slats judges Zmacs werk" }
+  - { path: ../../characters/robots/slats/judge-rubric.yml, why: "Slats judges Zmacs werk" }
   - { path: ../cross-links.yml#retrocomputing_drive, why: "Full retro trail index" }
   - { path: https://lisp-machine.org/, why: "Community hub — emulator links" }
   - { path: https://github.com/salewski/ld-lambda-delta, why: "LambdaDelta — LMI lane emulator" }

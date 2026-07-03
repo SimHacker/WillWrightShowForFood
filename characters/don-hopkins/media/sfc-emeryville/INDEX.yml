@@ -1,0 +1,28 @@
+# Stupid Fun Club — Emeryville workshop (outside Maxis office)
+
+room:
+  id: sfc-emeryville
+  name: Stupid Fun Club Emeryville
+  parent: ../../media.md
+  location: Emeryville, California
+  note: "Near Maxis Suite 6 — different building"
+
+who:
+  will_wright: Stupid Fun Club founder
+  jason_shankel: "Happy birthday post — with Jason Shankel and 2 others"
+  don_hopkins: Photographer
+
+artifacts:
+  - sfc-logo-outside-workshop.png
+  - will-wright-birthday-workshop.png
+
+spec:
+  - sfc-emeryville.yml
+
+see_also:
+  - ../../career/stupid-fun-club.yml
+  - ../../../robots/slats/photos.md
+  - ../maxis-emeryville/INDEX.yml
+  - ../../../will-wright/CHARACTER.yml
+
+note: "Not AI Generated!"

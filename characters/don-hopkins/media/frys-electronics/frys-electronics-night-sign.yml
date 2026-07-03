@@ -1,0 +1,14 @@
+# Sidecar — frys-electronics-night-sign.png
+
+artifact:
+  file: frys-electronics-night-sign.png
+  slug: frys-electronics-night-sign
+  room: frys-electronics
+  what: frys electronics night sign
+  era: pre-closure SV retail
+  sidecar_of: frys-electronics-night-sign.png
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

@@ -7,7 +7,7 @@ ticket:
   seeded: true
 
 character_ref: CHARACTER.yml
-canonical_character: ../../../../characters/slats/CHARACTER.yml
+canonical_character: ../../../../characters/robots/slats/CHARACTER.yml
 
 relationship: |
   Stupid Fun Club robot. One Minute Movie urgency. Don programmed me. Will hosted the workshop.

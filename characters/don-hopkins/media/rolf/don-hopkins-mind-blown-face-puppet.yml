@@ -1,0 +1,19 @@
+# Sidecar — don-hopkins-mind-blown-face-puppet.png
+
+artifact:
+  file: don-hopkins-mind-blown-face-puppet.png
+  slug: don-hopkins-mind-blown-face-puppet
+  room: rolf
+  what: don hopkins mind blown face puppet
+  era: TomTom-era Amsterdam
+  sidecar_of: don-hopkins-mind-blown-face-puppet.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/rolf-junk-auction.yml
+
+see_also:
+  - INDEX.yml
+  - raving-bonkers.yml
+  - ../robot-collection/INDEX.yml
+
+note: "Not AI Generated!"

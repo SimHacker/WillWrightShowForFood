@@ -1,0 +1,22 @@
+# Olpc Dinners
+
+room:
+  id: olpc-dinners
+  category: olpc
+  subcategory: dinners
+  parent: ../INDEX.yml
+  count: 5
+
+artifacts:
+  - file: olpc-dinner-don-hopkins-conference-lanyard.png
+    sidecar: olpc-dinner-don-hopkins-conference-lanyard.yml
+  - file: olpc-dinner-don-hopkins-grey-shirt.png
+    sidecar: olpc-dinner-don-hopkins-grey-shirt.yml
+  - file: olpc-dinner-don-hopkins-will-wright-table.png
+    sidecar: olpc-dinner-don-hopkins-will-wright-table.yml
+  - file: olpc-dinner-suits-formal-table-demo.png
+    sidecar: olpc-dinner-suits-formal-table-demo.yml
+  - file: olpc-dinner-will-wright-wine-glasses.png
+    sidecar: olpc-dinner-will-wright-wine-glasses.yml
+
+note: "Not AI Generated!"

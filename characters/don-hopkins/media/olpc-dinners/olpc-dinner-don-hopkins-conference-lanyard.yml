@@ -1,0 +1,11 @@
+# Sidecar — olpc-dinner-don-hopkins-conference-lanyard.png
+
+artifact:
+  file: olpc-dinner-don-hopkins-conference-lanyard.png
+  slug: olpc-dinner-don-hopkins-conference-lanyard
+  category: olpc
+  subcategory: dinners
+  what: "Don demos XO at conference table"
+  sidecar_of: olpc-dinner-don-hopkins-conference-lanyard.png
+
+note: "Not AI Generated!"

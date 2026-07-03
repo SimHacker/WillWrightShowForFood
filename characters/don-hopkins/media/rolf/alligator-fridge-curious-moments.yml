@@ -1,0 +1,19 @@
+# Sidecar — alligator-fridge-curious-moments.png
+
+artifact:
+  file: alligator-fridge-curious-moments.png
+  slug: alligator-fridge-curious-moments
+  room: rolf
+  what: alligator fridge curious moments
+  era: TomTom-era Amsterdam
+  sidecar_of: alligator-fridge-curious-moments.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/rolf-junk-auction.yml
+
+see_also:
+  - INDEX.yml
+  - raving-bonkers.yml
+  - ../robot-collection/INDEX.yml
+
+note: "Not AI Generated!"

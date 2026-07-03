@@ -124,7 +124,7 @@ scoring:
 judges:
   slats:
     role: celebrity_robot_judge
-    rubric: ../characters/slats/judge-rubric.yml
+    rubric: ../characters/robots/slats/judge-rubric.yml
     note: "Subjective Rubik faces — camp, robopoetry, werk"
   rubric_experiment:
     role: "MOOLLM rubric SCORE + experiment COMPARE — many axes at once"
@@ -173,7 +173,7 @@ ties_to:
   - code-that-spec.yml
   - brain-stream.yml
   - model-branching.yml
-  - ../characters/slats/judge-rubric.yml
+  - ../characters/robots/slats/judge-rubric.yml
   - ../rigs/stick-shift-composer-moollm.rig.yml
   - SimHacker/moollm/skills/cursor-mirror
   - SimHacker/moollm/skills/rubric

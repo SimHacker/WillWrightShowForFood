@@ -1,0 +1,132 @@
+# Squares in a Box — push-to-talk panel talk show (one camera, many mouths)
+# Evolves character-button-board + conan-face-puppet into a full layout engine.
+# Working title; better catchy illiterating names welcome (NOT "Celebrity Sims" — trademark).
+
+meta:
+  id: squares-in-a-box
+  status: spec
+  role: panel_talk_show_engine
+  one_camera: true
+  design: ../../process/performance-space.yml#narrative_engine
+  inherits: [character-button-board.yml, conan-face-puppet.yml, faceball-construction-set.yml]
+
+names:
+  working: Squares in a Box
+  candidates:
+    - Panel Puppets
+    - Dummy Squares
+    - Persona Panels
+    - Distinguished Dummies
+    - Pannel Puppets   # illiterating homage
+  rejected:
+    - Celebrity Sims   # EA/Maxis trademark; wrong metaphor anyway
+  tagline: "Push-to-talk multi-dummy improv impersonation talk show — in a box!"
+
+what: |
+  **One webcam stream** drives a **Celebrity Squares** (or any grid) layout of conversation
+  participants. A single performer is the **driver**: button-board **microphone focus switcher**
+  + voice actor. Each panel cell is a distinguished portrait; when **idle**, show the **original
+  picture** (mouth intact). When **talking**, **fade open** the mouth hole and map the driver's
+  live mouth into it — same position, optionally scaled, stretched, rotated (**upside-down face**
+  encouraged). Crossfade **closes** the previous speaker's mouth and restores their still photo.
+
+driver:
+  center_slot: |
+    Driver may appear **as themselves** in the middle (or host position) with **no overlay** —
+    regular Don, not a dummy. Surrounding squares are the dummies.
+  push_to_talk: |
+    Button board = PTT focus switcher, not hard cuts. Fade mouth closed on outgoing; fade mouth
+    open on incoming; voice + mouth move together. Improv table-read energy.
+
+layout:
+  presets:
+    - hollywood_squares   # 3×3 or 1+8 around center driver
+    - row_of_guests       # host left, guests right
+    - zoom_gallery        # video-conference grid
+    - single_spotlight    # one dummy full frame (degenerate mode)
+  configurable: "YAML roster per episode — positions, z-order, who faces center"
+
+panel_cell:
+  idle:
+    image: full_distinguished_portrait   # mouth NOT cut out
+  active:
+    mouth_hole: fade_open                  # alpha animate 0→1 on hole mask
+    mouth_map:
+      source: driver_webcam_mouth_region
+      transform: [scale, stretch, rotate]  # upside-down face is a feature
+      align: map_to_hole_position_in_cell
+  chrome:
+    title_above: [name, role]              # "Will Wright · Guest"
+    caption_below: [line_hint, mood, emoji badges]
+    badges: iconic_signifiers_from_CARD    # 🌀 🎙️ 🕯️ etc.
+  video_conference_language:
+    simulate: true
+    cues:
+      - active_speaker_border_or_glow
+      - mute_indicator_when_idle
+      - optional_name_plate_lower_third
+      - optional_connection_quality_gag
+      - raised_hand_queue_from_ticketpr
+  faceball_construction_set:
+    spec: faceball-construction-set.yml
+    googly_eyes:
+      awake: fade_in + focus_track   # NeWS Mona Eyes lineage
+      asleep: fade_out + frozen_lids + nostril ZZZ particles
+    fiduciary_markers: [nostrils, optional_ears, hat_brim]
+    metaphor: "Faceball Construction Set — paste on, wire up, play"
+
+focus_switcher:
+  input: [stream_deck, midi, keyboard, on_screen_grid]
+  per_button:
+    - character_id
+    - portrait_assets   # full + mouth_mask
+    - face_attachments  # googly eyes, nostril pins — faceball-construction-set.yml
+    - voice_notes
+    - fade_ms           # default ~150–300ms mouth crossfade
+    - state             # awake | asleep | bored
+  behavior:
+    on_press:
+      - fade_close_mouth_outgoing
+      - restore_outgoing_idle_portrait
+      - fade_open_mouth_incoming
+      - route_webcam_mouth_to_incoming_hole
+      - update_active_speaker_chrome
+      - optional_ptt_gate_audio   # driver mic only hot while button held, or latch mode
+  center_self_button: "No overlay — driver webcam raw in center slot"
+
+obs_stack:
+  layers_bottom_to_top:
+    - background_layout_grid
+    - panel_portraits_idle_layer
+    - panel_mouth_holes_active_layer
+    - googly_eyes_layer
+    - particle_systems_layer           # ZZZ snore, etc. from nostril fiduciaries
+    - chrome_titles_captions_badges
+    - driver_center_raw_optional
+  single_browser_source: preferred      # one compositor page vs N sources
+  see: conan-face-puppet.yml
+
+tech:
+  stack: "TypeScript + WebGPU — browser compositor, one OBS source"
+  v0:
+    - Canvas2D bring-up: N cells, 1 webcam, active index, preset jump
+    - per-face mappings in squares-roster.yml
+  v1:
+    - WebGPU: operator mouth normalize → warp to active preset hole
+    - per-face look_grade (skin match, Betty Boop B&W, scene lighting)
+    - obs-websocket + stream-gateway focus cues
+  v2:
+    - particle + googly eyes GPU passes
+    - optional landmark assist
+
+ethics:
+  - "Distinguished fan portrayals; living people with consent"
+  - "Driver-as-self center slot = no impersonation claim"
+  - "Simulate Zoom/Teams **language**, not impersonate a real VC product"
+
+see_also:
+  - faceball-construction-set.yml
+  - character-button-board.yml
+  - conan-face-puppet.yml
+  - ../../process/performance-space.yml
+  - ../../process/repo-show-branding.yml

@@ -1,0 +1,32 @@
+# James Gosling — lunch at Hobee's (cropped)
+
+artifact:
+  file: gosling-hobees-lunch.png
+  what: "James Gosling at restaurant table — cropped portrait"
+  venue: Hobee's
+  crop: "Left crop only — dining companions removed from frame for privacy"
+  original: "Not stored in repo"
+
+who:
+  james_gosling:
+    character: ../CHARACTER.yml
+    visible: "Left seat — black t-shirt, glasses, white beard"
+
+visual:
+  table: "Red laminate tabletop — ketchup, Tabasco, water glass, napkins"
+  setting: "Wood-paneled casual restaurant booth"
+
+context:
+  don_hopkins: Photographer
+  jaunt_era: ../../don-hopkins/media/jaunt-vr/INDEX.yml
+  news_orbit: "../CHARACTER.yml"
+
+rights:
+  note: "Private photo — confirm with James Gosling before redistribution beyond repo context"
+
+see_also:
+  - gosling-young-pdp8-hotrod.yml
+  - ../../don-hopkins/media/jaunt-vr/INDEX.yml
+  - ../../arthur-van-hoff/CHARACTER.yml
+
+note: "Not AI Generated!"

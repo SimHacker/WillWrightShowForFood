@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-cherub-urn-gold-coin.png
+
+artifact:
+  file: transmogrifier-cherub-urn-gold-coin.png
+  slug: transmogrifier-cherub-urn-gold-coin
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — cherub urn gold coin
+  era: 2000-2002
+  sidecar_of: transmogrifier-cherub-urn-gold-coin.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

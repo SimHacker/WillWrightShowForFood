@@ -1,0 +1,149 @@
+# Simulated art opening — Brian Eno
+# Anchor: 77 Million Paintings (2006 DVD/software) — not 77M files; 296 slides, infinite combinations
+# Art Thief game: trade, forge, steal deeds — social commentary on NFT/AI/attention economy
+# Protocol: ../../process/simulated-art-opening.yml
+
+meta:
+  guest: brian-eno
+  show: repo-shows/brian-eno/
+  status: dream_seed
+  anchor_product: 77-million-paintings.yml
+  art_thief: ../../process/art-thief-game.yml
+
+pitch: |
+  **77 Million Paintings** (2006 limited-edition DVD/software — generative disc, interview DVD,
+  52-page book). Not seventy-seven million image files: 296 hand-made slides, layered four at a
+  time, ~77 million *combinations* that never repeat. Patrons hear "ten bazillion" and bid anyway.
+
+  Ten bazillion fictional patrons (performed by our eight lunatics + menagerie) gush, misread,
+  outbid, covet each other's combination deeds, forge collisions, steal — **Art Thief** game.
+  Social commentary: AI scraping, diffusion, crypto/NFT false scarcity, bored-ape PFP energy,
+  attention economy. The jokes write themselves; Eno already wrote the Benjamin essay in the box.
+
+artwork_series:
+  ambient_trigger:
+    magnificent:
+      - { id: lot-airports, wall_title: "Music for Airports — Trigger Study I", concept: "Sound as furniture; patron buys the room not the recording" }
+      - { id: lot-discreet, wall_title: "Discreet Music — System Score", concept: "Rules sheet auctioned; music composes itself" }
+    patron_misread:
+      helena: "The airport is a confession booth. I walked through the reverb."
+      margot: "Administrative overhead of silence — I'm crying."
+    eno_truth: "Art as trigger, not object — they bought the wrong layer on purpose."
+
+  oblique_strategies:
+    magnificent:
+      - { id: lot-oblique-deck, wall_title: "Oblique Strategies — Deck as Protocol (Mint Pass)" }
+      - { id: lot-oblique-draw-live, wall_title: "Live Draw — 'Honor Thy Error as a Hidden Intention'" }
+    patron_misread:
+      bunny: "Mint button! §80,000 for the card!"
+      doctor_no: "Declared bias toward errors. No comment."
+      vandermeer: "Scotland invented the oblique."
+    crypto_jab: "NFT mint pass that only ever draws cards — utility is surrender"
+
+  seventy_seven_million:
+    product: 77-million-paintings.yml
+    release: "2006 DVD/software package (second edition 2008)"
+    repo_truth: "296 slides · 4 layers · combinations never repeat — not 77M files on disc"
+    magnificent:
+      - { id: lot-77mp-software-disc, wall_title: "77 Million Paintings — Generative Software Disc (The Seed)" }
+      - { id: lot-77mp-combination-floor, wall_title: "Combination Space Floor — Abstract Deed to Instance ∞" }
+    quick_sale_combinations:
+      rule: "Patrons buy random 77MP-{id} deeds — red dot — §1,200–§4,800 each"
+      collision: "Two patrons same combination → forgery dispute → art-thief beat"
+    patron_misread:
+      gregory: "Seventy-seven million paintings, ten bazillion bids — I'm long the permutation."
+      mimsy: "Generative drop! I bought combination 4,291,033 before my sentence—"
+      don: "There are eight of you. One DVD. From 2006."
+      bunny: "My PFP is combination 12! §80,000! Board approved!"
+    eno_truth: "Millions of originals appear and vanish — art as trigger, not object"
+    art_thief_hooks: [forgery_collision, julian_covets_deed, slats_scrapes_reviews]
+
+  bloom_scenius:
+    magnificent:
+      - { id: lot-bloom-touch, wall_title: "Bloom — Touch Generative (Phone as Seed)" }
+      - { id: lot-scenius-flock, wall_title: "Scenius — Electric Sheep Vote Collage", crossref: scott-draves/simulated-opening.yml }
+    patron_misread:
+      gregory: "Touch is proof-of-stake for beauty."
+      helena: "We were always the Bleep — scenius is love under load."
+    reunion: "2006 apartment energy — Sheep on every surface; Eno + Scott watch menagerie bid"
+
+opening_beats:
+  - surrender_cold_open: "Don: 'The work refuses the artist.' Eno: 'Good.'"
+  - seventy_seven_million_explainer: "Don names the DVD. Gregory names ten bazillion patrons."
+  - combination_quick_sales: "Red-dot storm — everyone owns a unique 77MP number (until collision)"
+  - forgery_trial: "Two patrons, same combination — Doctor No: declared bias; Palm: offering not minting"
+  - art_thief: "Julian steals Gregory's deed; matrix updates; friendships snap"
+  - auto_art_theft_grand: "Slats batch-scrapes every 77MP deed — GTA wanted poster — MOOLA payout roulette"
+  - oblique_mint: "Bunny slaps red dot on a card; room obeys the error."
+  - scenius_sermon: "Helena: collective genius is a tunnel; walk through or don't."
+  - slats_scrape_jab: "I trained on the wall labels. The art is the dataset now."
+  - donna_forgery_nft: "TREMENDOUS JPEG of the forgery. Stormy was right."
+  - guest_wallet: "§3,700,000 aggregate — exchange to MOOLA — burn, dig hole, surrender on stream"
+
+moola:
+  spec: ../../process/moola.yml
+  after_opening: "§ → MOOLA — burning money performance or Holiday Hole backhoe until pile zero"
+  mantra: "NEVER gateway · ALWAYS invite duplication"
+  training_data_joke: "Patron misreads harvested → Slats pays worthless MOOLA"
+
+art_thief_game:
+  spec: ../../process/art-thief-game.yml
+  ledger: SECONDARY-MARKET.yml
+  auto_art_theft_grand: ../../process/auto-art-theft-grand.yml
+  during_show: [trade, theft, forgery_dispute, pfp_coveting, repair_auction, batch_scrape]
+
+parody:
+  crypto_nft: "Patrons mint the aura; Brian sells the rule. False scarcity vs never-repeating."
+  web3: "Discord is the flock; Oblique deck is the whitepaper; Doctor No declares bias."
+  totally_eno:
+    - "77 Million Paintings DVD (2006) — generative before NFT"
+    - "296 slides not seventy-seven million files"
+    - "Surrender to the system — combinations never repeat"
+    - "Scenius not genius — ten bazillion patrons performed by eight lunatics"
+    - "Walter Benjamin in the book; patrons never read it"
+  art_thief:
+    - "Covet, trade, forge, steal — digital deeds only; duplication always invited"
+    - "Bored ape → bored sheep / broccoli PFP"
+    - "AI scrape → Slats trained on misread reviews → MOOLA payout"
+    - "Attention economy → Mimsy buys before JPEG loads"
+  moola:
+    - "§ → MOOLA — burn pile or fund backhoe hole"
+    - "Training data to AI god → worthless MOOLA — that IS the joke"
+    - "K Foundation burn · Cards Against Humanity Holiday Hole"
+    - "Curiosity cube clicks · Cow Clicker Mooney lineage · Cowpocalypse extensions"
+  curiosity_cow_cube:
+    spec: ../ideas/gags/curiosity-cow-cube.yml
+    beat: "Gallery cube — click for MOOLA — distant distressed moos — AATG fills faces — center is Rightward-Facing Cow"
+  turing_robot_olympics:
+    spec: ../ideas/gags/turing-robot-olympics.yml
+    beat: "Peter Mowforth wall — Slats runs vision APIs — JOY · POSING · GAS PUMP — MOOLA payout"
+
+twitch_after:
+  guest_simoleons_start: 3700000
+  spend_ideas:
+    - "Draw Oblique card — § prize for chat interpretation"
+    - "Surrender pile — Brian gives all § away (trigger not object)"
+    - "Fund 77 Million toy fork for audience"
+    - "Art thief repair auction — chat picks who gets deed back"
+    - "Tip Scott for hosting the 2006 reunion on screen"
+
+see_also:
+  - 77-million-paintings.yml
+  - SECONDARY-MARKET.yml
+  - MOOLA.yml
+  - ../../process/moola.yml
+  - ../../process/auto-art-theft-grand.yml
+  - ../../process/art-thief-game.yml
+  - ../../characters/don-hopkins/media/turing-institute/first-robot-olympics.yml
+  - ../ideas/gags/turing-robot-olympics.yml
+  - SHOW.yml
+  - invitation.md
+  - ../../characters/brian-eno/
+  - ../scott-draves/simulated-opening.yml
+  - ../../process/simulated-art-opening.yml
+
+scott_draves_pairing:
+  run_order: "Scott opening (sheep) → Eno opening (77MP) → merged scenius beat"
+  show: repo-shows/scott-draves/SHOW.yml#dream_segments
+
+note: "Not AI Generated!"

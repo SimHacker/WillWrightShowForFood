@@ -1,0 +1,34 @@
+# OLPC and GDC demo stills — Miguel, Miyamoto, Barlow, Devon, Dutch politicians
+
+artifact:
+  era: "2007–2010 OLPC / GDC era"
+  location: "San Francisco, CA"
+
+photos:
+  gdc_olpc_gnome:
+    file: gdc-olpc-gnome-flipping-bird-yoda.png
+    caption: "Miguel and cement garden gnome flipping the bird"
+    with: ["Chris Toshok", "Miguel de Icaza"]
+    location: San Francisco
+  devon_eyeballs:
+    file: olpc-devon-mccullough-big-eyeballs.png
+    who: Devon McCulough
+  miyamoto:
+    file: gdc-miyamoto-talking.png
+    what: "Miyamoto talking at GDC"
+  barlow:
+    file: olpc-john-perry-barlow.png
+    who: John Perry Barlow
+  dutch_politicians:
+    file: olpc-dutch-politicians-demo.png
+    what: "Don shows OLPC to Dutch politicians"
+  justin_hall:
+    file: gdc-teaching-world-to-play-justin-hall.png
+    article: "Teaching the world to play — GDC OLPC demos"
+    with: Justin Hall
+
+repo_orbit:
+  olpc_gdc_booth: ../olpc-gdc/INDEX.yml
+  micropolis_gallery: ../micropolis-gallery/INDEX.yml
+
+note: "Not AI Generated!"

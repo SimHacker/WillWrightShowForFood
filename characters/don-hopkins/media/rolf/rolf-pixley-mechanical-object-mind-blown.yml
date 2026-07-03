@@ -1,0 +1,19 @@
+# Sidecar — rolf-pixley-mechanical-object-mind-blown.png
+
+artifact:
+  file: rolf-pixley-mechanical-object-mind-blown.png
+  slug: rolf-pixley-mechanical-object-mind-blown
+  room: rolf
+  what: rolf pixley mechanical object mind blown
+  era: TomTom-era Amsterdam
+  sidecar_of: rolf-pixley-mechanical-object-mind-blown.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/rolf-junk-auction.yml
+
+see_also:
+  - INDEX.yml
+  - raving-bonkers.yml
+  - ../robot-collection/INDEX.yml
+
+note: "Not AI Generated!"

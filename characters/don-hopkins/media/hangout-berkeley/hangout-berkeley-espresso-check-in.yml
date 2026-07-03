@@ -1,0 +1,11 @@
+# Sidecar — hangout-berkeley-espresso-check-in.png
+
+artifact:
+  file: hangout-berkeley-espresso-check-in.png
+  slug: hangout-berkeley-espresso-check-in
+  category: hangout
+  subcategory: berkeley
+  what: "Berkeley Espresso check-in"
+  sidecar_of: hangout-berkeley-espresso-check-in.png
+
+note: "Not AI Generated!"

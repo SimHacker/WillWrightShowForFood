@@ -1,0 +1,19 @@
+# Sidecar — keychains-cosmonaut-profile.png
+
+artifact:
+  file: keychains-cosmonaut-profile.png
+  slug: keychains-cosmonaut-profile
+  room: rolf
+  what: keychains cosmonaut profile
+  era: TomTom-era Amsterdam
+  sidecar_of: keychains-cosmonaut-profile.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/rolf-junk-auction.yml
+
+see_also:
+  - INDEX.yml
+  - raving-bonkers.yml
+  - ../robot-collection/INDEX.yml
+
+note: "Not AI Generated!"

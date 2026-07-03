@@ -1,0 +1,23 @@
+# Sims CTG 1999 — bugs, glitches, and dev-era screenshots
+
+artifact:
+  what: "Original Sims screenshots from CTG / Maxis development era (~1999)"
+  era: "1999"
+
+photos:
+  - file: sims-1999-floating-head-help-hope-glitch.png
+    what: "Disembodied floating head — Help and Hope thought bubbles"
+  - file: sims-1999-graveyard-skeleton-scientist.png
+    what: "Graveyard with green skeleton and fleeing scientist Sim"
+  - file: sims-1999-tuxedo-flamingo-thought.png
+    what: "Tuxedo Sim rejecting pink flamingo in thought bubble"
+  - file: sims-1999-redhead-sheer-skirt-pond.png
+    what: "Redhead Sim by lily pond — sheer skirt outfit"
+  - file: sims-1999-redhead-pond-sidewalk.png
+    what: "Same character near sidewalk and pond"
+
+repo_orbit:
+  transmogrifier: ../sims-transmogrifier/INDEX.yml
+  sims_series: ../../../will-wright/media/sims-series-README.md
+
+note: "Not AI Generated!"

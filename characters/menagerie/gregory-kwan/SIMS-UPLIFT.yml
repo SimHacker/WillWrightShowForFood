@@ -1,0 +1,52 @@
+# Sims export handoff — see ../EXPORT-SIMS-RELATIONSHIPS.yml
+schema_version: 1
+source:
+  direction: uplift
+  neighbor_id: 902
+  character: gregory-kwan
+identity:
+  name: Gregory Kwan
+  age: adult
+  gender: male
+  zodiac: capricorn
+traits:
+  neat: 8
+  outgoing: 6
+  active: 5
+  playful: 2
+  nice: 3
+  generous: 1
+skills:
+  cooking: 1
+  mechanical: 2
+  charisma: 5
+  logic: 9
+  body: 3
+  creativity: 1
+  cleaning: 7
+career:
+  track: politics
+  performance: 900
+relationships:
+  '901':
+    daily: 35
+    lifetime: 40
+  '903':
+    daily: -10
+    lifetime: 5
+  '904':
+    daily: 30
+    lifetime: 35
+  '905':
+    daily: 40
+    lifetime: 55
+  '906':
+    daily: 10
+    lifetime: 25
+  '907':
+    daily: -20
+    lifetime: 0
+  '908':
+    daily: 25
+    lifetime: 45
+family_budget: 850000

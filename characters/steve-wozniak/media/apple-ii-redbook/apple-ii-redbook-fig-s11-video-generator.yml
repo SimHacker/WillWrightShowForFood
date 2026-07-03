@@ -1,0 +1,16 @@
+# Sidecar — apple-ii-redbook-fig-s11-video-generator.png
+
+artifact:
+  file: apple-ii-redbook-fig-s11-video-generator.png
+  slug: apple-ii-redbook-fig-s11-video-generator
+  source: Apple II Red Book (Reference Manual)
+  designer: Steve Wozniak
+  what: "FIG S-11 video generator — char gen, hires, composite out"
+  sidecar_of: apple-ii-redbook-fig-s11-video-generator.png
+
+provenance:
+  photographed_by: Don Hopkins
+  facebook: "Happy 70th Birthday Woz!"
+  classiccmp: http://www.classiccmp.org/cpmarchives/AppleII/Apple%20II%20(Redbook).pdf
+
+note: "Not AI Generated!"

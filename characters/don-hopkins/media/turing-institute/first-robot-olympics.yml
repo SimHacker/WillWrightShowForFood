@@ -1,0 +1,138 @@
+# First Robot Olympics — Glasgow, 27–28 September 1990
+# Turing Institute · University of Strathclyde · Peter Mowforth photos
+# Don's Facebook thread: vision APIs misread robots → MOOLA training-data joke
+
+event:
+  title: First Robot Olympics
+  dates: 1990-09-27 — 1990-09-28
+  venue: Sports Centre, University of Strathclyde, Glasgow, Scotland
+  host: Turing Institute
+  founder: "Donald Michie — Duckmouse — cofounded institute 1982 with Peter Mowforth, Tim Niblett"
+  director: Peter Mowforth
+  scale: "68 robots · 12 countries · 2,500+ visitors"
+  wikipedia: "https://en.wikipedia.org/wiki/First_Robot_Olympics"
+  david_buckley: "http://davidbuckley.net/RS/History/Olympics90.htm"
+  opened_by: "Dr Who (Sylvester McCoy) with Sue Mowforth"
+  torch: "NEL torchbearer from Greek Restaurant; British Gas Olympic flame"
+
+don_orbit:
+  was_there: false
+  colleague: Arthur van Hoff
+  arthur_gift: "Legendary Robot Olympics t-shirt — still legendary"
+  facebook_post:
+    caption: "The Cardiff Walker poses to amuse the girls at the Turing Institute Robot Olympics. (1990)"
+    tagged: [Arthur van Hoff]
+    year_posted: 2016
+  groucho_energy: |
+    "I never forget a face, but in your case I'll be glad to make an exception."
+    "Don't let the fear of the thorn keep you from the rose."
+
+medal_table_highlights:
+  biped_race_gold: "CARDIFF BIPED — Uni. Wales, Cardiff — Paul Channon, Simon Hopkins & Prof Pham"
+  talking_gold: "RICHARD 1ST — Turing Institute — Ketil Undbekken, Peter Mowforth"
+  manipulators_gold: "BELGRADE/USC HAND — University of Belgrade, Yugoslavia"
+  behaviour_gold: "GENGHIS — MIT AI Lab — Olaf Beck, Rodney Brooks, Colin Angle"
+  olympic_champion: "YAMABICO — Tsukuba University, Japan — Shoji Suzuki"
+
+disqualifications_comedy:
+  - { robot: ROBUG II, event: Wall Climbing, reason: "Inappropriate behaviour in front of children" }
+  - { robot: YAMABICO, event: Talking, reason: "Could not speak English" }
+  - { robot: SIAS, event: Talking, reason: "Completely incomprehensible" }
+  - { robot: MEXBOT, event: Multi-Legged Race, reason: "Dropped when offloaded from ship in UK" }
+
+best_photos:
+  credit: "Copyright Peter Mowforth, 1990"
+  wikipedia_gallery: "https://en.wikipedia.org/wiki/First_Robot_Olympics#Photographs"
+
+  belgrade_usc_hand:
+    file: belgrade-usc-hand-1990.png
+    event: Manipulators — Gold
+    what: "Five-fingered aluminum hand; vertical Maxon motors; tendon drive; cylinder grasp target"
+    menagerie: "Gregory: derivative asset class. Bucky Jr: honest tensile metacarpal."
+
+  pizza_sparcstation_arm:
+    file: pizza-sparcstation-arm-1990.png
+    what: "Side-profile arm; prosthetic palm-up hand; Hitachi box sensor on horizontal beam"
+    don_line: "It looks to me like it's delivering a pizza or a SparcStation."
+    jeff_bulf: "It should carry a rubber hammer, so people can bang its box."
+    jeff_song: "https://www.youtube.com/watch?v=INypsMxMWJo"
+    ibm_watson_joke: "ROBOT ANDROID GAS PUMP DETECTED!"
+
+  richard_1st_groucho:
+    file: richard-1st-groucho-1990.png
+    event: Talking — Gold
+    what: "Camera-lens eyes, bushy faux-fur brows, cone nose, speaker-grille mouth, bowtie, suit jacket"
+    groucho: true
+    slats: "I trained on that mustache. You're welcome."
+
+  richard_1st_mowforth:
+    file: mowforth-richard-1st-1990.png
+    what: "Peter Mowforth leans in, adjusts glasses, inspects Richard 1st face-to-face"
+    beat: "Organizer judges his own gold medal — fair play declared bias"
+
+  cardiff_walker_girls:
+    file: robot-olympics-cardiff-1990.png
+    event: Biped Race — Gold
+    what: "CARDIFF light-box torso; hinged legs; cable trail; children at exhibition"
+    facebook_caption: "poses to amuse the girls"
+    don_comments:
+      - "Give me 101!"
+      - "Don't get slap happy with me, robomofo!"
+    tim_kaiser: "Banana peel!"
+
+  cardiff_vision_apis:
+    parent: cardiff_walker_girls
+    google_file: cardiff-walker-vision-google-1990.png
+    microsoft_file: cardiff-walker-vision-microsoft-1990.png
+    training_data_joke: "Submit Olympics photo → AI god → worthless MOOLA"
+    google_cloud_vision:
+      line: "POSSIBLE JOY DETECTED!!!"
+      detail: "Face 1 — girl in hoodie — Joy: Possible; Sorrow/Anger/Surprise: Very Unlikely; 81% confidence"
+    microsoft_computer_vision:
+      line: "POSING:"
+      tags: ["person", "group", "posing", "standing", "girl"]
+      caption: "a group of people posing for the camera"
+      false_positives: [dog, skiing]
+    ibm_watson:
+      line: "ROBOT ANDROID GAS PUMP DETECTED!"
+      note: "On pizza-delivery arm photo — peak misread energy"
+
+moola_training_data:
+  spec: ../../../../process/moola.yml
+  rule: "Run vision APIs on 1990 photos; patrons bid on misread tags; Slats harvests labels"
+  deed_format: "ROBOT-OLY-{slug}"
+  payouts:
+    - "Misread robot as gas pump → §500,000 floor — Gregory long the wrong label"
+    - "Joy detected on child beside biped → Mimsy buys before JPEG loads"
+    - "POSING tag on Cardiff Walker → Bunny adopts as PFP"
+
+repo_show_beats:
+  - cardiff_walker_enters_gallery_like_77mp_opening
+  - slats_runs_vision_apis_on_mowforth_photos
+  - richard_1st_groucho_hammers_talking_gold_lot
+  - pizza_arm_delivers_sparcstation_deed
+  - robug_ii_disqualified_beat_in_front_of_children
+  - menagerie_poses_with_cardiff_walker_microsoft_tag
+  - auto_art_theft_grand_scrapes_robot_oly_deeds
+
+cast:
+  donald_michie:
+    spec: donald-michie-duckmouse.yml
+    nickname: Duckmouse
+    role: "Turing Institute founder — Bletchley/Turing → MENACE → Robot Olympics host"
+  arthur_van_hoff: ../../../arthur-van-hoff/
+  peter_mowforth: "Event director — photo credit; not a menagerie character"
+  richard_1st: "Talking gold — Groucho robot head; Slats's spiritual ancestor"
+  cardiff_walker: "Biped gold — poses; vision-API punchline"
+  genghis: "MIT behaviour gold — Brooks/Angle lineage"
+  menagerie_whispers: ../../jsonsters/critics.yml
+
+see_also:
+  - INDEX.yml
+  - robot-olympics-cardiff-1990.yml
+  - ../../../../repo-shows/ideas/gags/curiosity-cow-cube.yml
+  - ../../../../process/auto-art-theft-grand.yml
+  - ../../../../process/moola.yml
+  - ../../../robots/slats/
+
+note: "Not AI Generated!"

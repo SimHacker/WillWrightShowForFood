@@ -57,7 +57,7 @@ lip-sync thoughtful commits, merge technique DNA back into the organism. Declare
 ## Judging
 
 - **celebrity_judge:**
-  - slats: ../characters/slats/judge-rubric.yml
+  - slats: ../characters/robots/slats/judge-rubric.yml
 - **panel:**
   - slats
   - ai_scorecard
@@ -136,7 +136,7 @@ lip-sync thoughtful commits, merge technique DNA back into the organism. Declare
 | [`homefun-grading.yml`](homefun-grading.yml) | Commit vs thinking blocks |
 | [`retrocomputing-drive.yml`](challenges/retrocomputing-drive.yml) | Retro rotation — apple2, ITS, LispM |
 | [`RETROCOMPUTING.md`](challenges/RETROCOMPUTING.md) | Generated retro umbrella markup |
-| [`judge-rubric.yml`](../characters/slats/judge-rubric.yml) | Celebrity judge |
+| [`judge-rubric.yml`](../characters/robots/slats/judge-rubric.yml) | Celebrity judge |
 | [`README.md`](../rigs/README.md) | Rig personas + SETUP DNA |
 | [`SKILL.md`](../skills/repo-show/SKILL.md) | Same skill wraps drag race beats |
 | [`showmaker-network.yml`](showmaker-network.yml) | Scoreboard + linked shows |

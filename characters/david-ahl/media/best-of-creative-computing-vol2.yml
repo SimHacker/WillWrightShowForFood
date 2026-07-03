@@ -1,0 +1,33 @@
+# The Best of Creative Computing — Vol. 2 cover
+# Gilbert Shelton art · David Ahl editor
+
+artifact:
+  file: best-of-creative-computing-vol2-cover.png
+  title: "The Best of Creative Computing — Vol. 2"
+  editor: David Ahl
+  cover_art: Gilbert Shelton
+  cover_copyright: "© 1977 Gilbert Shelton"
+  isbn: "0-916688-03"
+  price: "$8.95"
+
+visual:
+  what: "Red pickup truck careening — printing press in bed, pages flying, Shelton comix crew"
+  mood: "DIY magazine chaos — creative computing as counterculture joyride"
+
+don:
+  verdict: "One of my favorite magazines and compilations — I aspire to be as wonderful!"
+  relationship: "Facebook friend"
+  role: "Patron saint of Repo Show compilations"
+
+lineage:
+  creative_computing: "David Ahl — Creative Computing magazine (1974); BASIC games anthologies"
+  repo_show: "WillWrightShowForFood aspires to the same spirit — wonderful compilations, accessible wonder"
+  gilbert_shelton: "Fabulous Furry Freak Brothers orbit — underground comix meets home computing"
+
+see_also:
+  - ../CHARACTER.yml
+  - ../README.md
+  - ../../don-hopkins/portrayal/heroes.yml
+  - ../../../process/VISION.md
+
+note: "Not AI Generated!"

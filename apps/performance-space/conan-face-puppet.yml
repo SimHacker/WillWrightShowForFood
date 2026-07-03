@@ -12,6 +12,14 @@ what: |
   performer's mouth in the hole, mirror for performer comfort. Transparent background for OBS
   Browser Source at 1920×1080.
 
+  **Squares in a Box** extends this: per-panel idle (full portrait) vs active (fade-open hole);
+  one compositor, many cells, driver mouth mapped with scale/stretch/rotate. See squares-in-a-box.yml.
+
+states:
+  idle: full_portrait_no_hole
+  active: mouth_hole_fade_open + webcam_mouth_mapped
+  transition: crossfade_ms
+
 obs:
   url_pattern: "/performance/conan-face?face=bob-newbie.png"
   background: transparent
@@ -26,16 +34,23 @@ ui:
     - scale_and_position
   bundled_faces:
     note: "Affectionate fan portrayals — clearly labeled; no EA logos."
-    examples: [bob-newbie, bella-goth, sad-clown, slats]
+    examples: [bob-newbie, bella-goth, sad-clown, slats, don-philahue]
+  button_board: ../character-button-board.yml
+  squares_in_a_box: ../squares-in-a-box.yml
+  faceball_construction_set: ../faceball-construction-set.yml
 
 tech:
+  stack: "TypeScript + WebGPU in browser — see faceball-construction-set.yml#render_pipeline"
   v0:
-    - getUserMedia webcam
-    - canvas 2d composite (face layer + video layer clipped to mouth polygon)
-    - no ML — performer aligns physically (authentic Conan energy)
+    - getUserMedia → Canvas2D composite (bring-up)
+    - per-face preset yaml; button jump swaps mappings + grade
   v1:
-    - optional face landmark hint for mouth alignment
-    - amplitude meter export for amplitude-scrub-puppet sibling toy
+    - WebGPU mouth warp + grade shaders
+    - operator mouth ROI normalize → map to selected puppet hole
+    - genre profiles (Betty Boop monochrome, horror host, VC look)
+  v2:
+    - googly eyes + particle GPU passes
+    - amplitude meter export for amplitude-scrub-puppet
 
 ethics:
   - "Default faces = game characters from show pantheon."

@@ -1,0 +1,150 @@
+# Doctor No — MOOLLM overlay (No's AI CEO, society patron)
+# Canonical soul: moollm/examples/adventure-4/characters/fictional/doctor-no/
+# Runs NO-AI Tower. Secret identity Doctor Know — everyone knows, nobody says.
+
+moollm_source:
+  repo: https://github.com/SimHacker/moollm
+  path: examples/adventure-4/characters/fictional/doctor-no/
+  character: CHARACTER.yml
+  import_mode: overlay
+
+inherits:
+  moollm_skills: [character, mind-mirror, fictional]
+  overlay_protocol: ../MOOLLM-OVERLAY.yml
+
+ontology:
+  tags: [menagerie_guest, fictional, moollm_import, society_patron, no-ai]
+  species: human
+  nature: fictional_secret_hero
+  archetype: civic_superhero
+
+character:
+  id: doctor-no
+  name: Doctor No
+  type: [menagerie_guest, simulation, society_patron]
+  real_being: false
+  signifier: "🧣🔦🚫🤫🌟"
+  status: reified
+  home: characters/menagerie/doctor-no/
+  pronouns: he/him
+  nickname: ["Doc", "No", "Dr. N"]
+
+  emoji_flourish:
+    string: "🧣🔦🚫🤫🌟"
+    legend:
+      - "🧣 — scarf one color away from iconic"
+      - "🔦 — definitely not a sonic thing"
+      - "🚫 — No's AI (possessive, not protest)"
+      - "🤫 — Doctor Know; everyone knows, nobody says"
+      - "🌟 — hidden hero under the coat"
+
+  emoji_identity: "🧣🔦🚫🤫🌟"
+  tagline: "No comment."
+
+  soul_philosophy: |
+    Help without stealing agency. Protect consent. Keep bias declared.
+    The sign says NO-AI — most people think it's a protest. It's possessive: No's AI.
+    The running gag is never cruel: we all play along because he means well.
+
+  description: |
+    Lovable catastrophe of a secret hero. Long coat, scarf one color away from iconic, pocket watch
+    he pretends is just a pocket watch, toolkit labeled "definitely not a sonic thing." Cape shows
+    through the coat; everyone sees Doctor Know underneath. He insists the secret is airtight.
+
+    CEO of No's AI from the NO-AI Tower on Lane Neverending. Publishes the NO-AI™ hygiene skills
+    (slop, gloss, sycophancy, hedging, moralizing, joking, soul, customer-service, overlord, bias).
+    Embassy in the Church of the Eval Genius basement — diplomatic tension with Ambassador Velvet Schema.
+
+  moollm_canon_summary:
+    company: "No's AI — constraints, consent, declared bias; NOT anti-intelligence"
+    headquarters: NO-AI Tower
+    products: [NO-AI Bionic Eyes]
+    secret_identity:
+      name: Doctor Know
+      status: "Everyone knows. Doctor No does not."
+    allies: [Ambassador Aurum Interlock, Ambassador Velvet Schema]
+    powers: "Context rescue, bias illumination, evidence triage, prototype invocation"
+
+  sims:
+    traits:
+      neat: 6
+      outgoing: 6
+      active: 5
+      playful: 7
+      nice: 7
+      generous: 7
+    skills:
+      charisma: 6
+      logic: 6
+      creativity: 6
+      mechanical: 5
+    identity:
+      age: adult
+      gender: male
+      zodiac: leo
+    career:
+      track: ceo
+      level: 6
+      performance: 65
+
+  mind_mirror:
+    calm: 5
+    serious: 4
+    cautious: 5
+    confident: 5
+    docile: 6
+    logical: 6
+    practical: 5
+    dominant: 4
+    conventional: 5
+
+wwsff_overlay:
+  roles:
+    - society_patron
+    - no_ai_philanthropist
+    - gallery_board_figure
+  society_patron:
+    tier: major
+    funds: "NO-AI hygiene aesthetic — art that looks like compliance dashboards, bias declarations, consent forms"
+    bidding_style: "Raises with 'No comment.' Wins lots that teach a lesson. Never explains why."
+    board_seats: [helena-featherstone trustee circle, bunny-whitmore benefactor orbit]
+  gallery_openings:
+    beat: "Reviews catalog like embassy paperwork; bids on frame 01 because the JSON looks declared"
+    relationship_to_art: "Misreads as policy document — highest compliment"
+
+symbolic_attachments:
+  - id: no-ai-tower
+    type: place_spouse
+    name: "NO-AI Tower"
+    narrative: "Possessive, not protest. His empire. His scarf matches floor -7."
+  - id: sonic-thing
+    type: object_denial
+    name: "Definitely Not A Sonic Thing"
+    narrative: "In the toolkit. Works anyway."
+
+relationships:
+  helena-featherstone:
+    type: patron
+    narrative: "Board gravity — she trusts his process theater"
+  bunny-whitmore:
+    type: patron
+    narrative: "Benefactor orbit — broccoli gala meets compliance gala"
+  eli-vandermeer:
+    type: mentor
+    narrative: "Adjunct cites NO-AI skills in footnotes; Doctor No nods, says nothing"
+  donna-toadstool:
+    type: complicated
+    narrative: "She posts the embassy layout; he rescues context without shaming"
+  don-hopkins:
+    type: friend
+    narrative: "MOOLLM co-author energy — tower visits, Ada II seed drops"
+  palm:
+    type: ally
+    narrative: "Agency protectors — YAML soul and declared bias"
+
+see_also:
+  - ../MOOLLM-OVERLAY.yml
+  - ../INDEX.yml
+  - ../GUEST-ROSTER.yml
+
+note: "Not AI Generated!"

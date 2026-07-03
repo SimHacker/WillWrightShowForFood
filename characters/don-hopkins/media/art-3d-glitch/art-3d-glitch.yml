@@ -1,0 +1,63 @@
+# Art — 3D glitch / Frankinsideout (AI Foundation pipeline nightmare)
+
+room:
+  id: art-3d-glitch
+  category: art
+  subcategory: 3d-glitch
+  parent: ../CATALOG-INDEX.yml
+  tagline: "Character Creator 3 + iClone + Blender + Unity = BLARRRRGGGHHH"
+
+work:
+  client: AI Foundation
+  stack: [Character Creator 3, iClone, Blender, Unity]
+  presentations: ../../portrayal/presentations.yml
+  will_sources: ../../../will-wright/sources/2020-promised-links-maxscript-pipeline/README.md
+
+facebook:
+  don_opener: "BLARRRRGGGHHH!!!"
+  thread:
+    - author: B.J. West
+      text: "That's not normal(s)!"
+    - author: Don Hopkins
+      text: "Abby Normal!"
+    - author: Don Hopkins
+      text: "SGGGKKKKNORRRK!!!"
+    - author: Don Hopkins
+      text: "SPFGHGHGHLLMMZZZZZ!!!!"
+    - author: Michelle Donahue
+      text: "Bladerunner-esque..."
+    - author: Michelle Donahue
+      text: "Don Hopkins is this the software you were describing to me?"
+    - author: Don Hopkins
+      text: "it's a bunch of different software colliding together! Character Creator 3 + iClone + Blender, and Unity…"
+    - author: Michelle Donahue
+      text: "It's ingenious and looks like fun!"
+    - author: Don Hopkins
+      text: "GZZZEEEENNNNNKKKKKPFFFK!"
+    - author: Don Hopkins
+      text: "My halloween costume is Frankinsideout!"
+    - author: Dave Hsu
+      text: "You've assembled its organs sideways! And/or backwards!"
+    - author: Dave Hsu
+      text: '"By the power of LOBACHEVSKY!"'
+    - author: Pascal Rudolsky
+      text: "WELCOME to the club"
+    - author: Pascal Rudolsky
+      text: "The cenobites might be able to nail you back outside in."
+    - author: Roger Jones
+      text: "That's not normal"
+
+blender_shots:
+  - art-3d-glitch-blender-inverted-normals-torso.png
+  - art-3d-glitch-blender-face-eye-bones-closeup.png
+  - art-3d-glitch-blender-mesh-explosion-face.png
+  - art-3d-glitch-blender-dome-forehead-hdri.png
+
+references:
+  inside_out_man: art-3d-glitch-reference-inside-out-man-comic.png
+  cenobites: art-3d-glitch-reference-hellraiser-cenobites-street.png
+  pinhead: art-3d-glitch-reference-hellraiser-pinhead-closeup.png
+
+gag: ../../../../repo-shows/ideas/gags/frankinsideout-abby-normal.yml
+
+note: "Per-file sidecars. Not AI Generated!"

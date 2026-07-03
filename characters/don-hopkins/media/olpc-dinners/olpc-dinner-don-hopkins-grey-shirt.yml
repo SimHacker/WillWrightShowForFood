@@ -1,0 +1,11 @@
+# Sidecar — olpc-dinner-don-hopkins-grey-shirt.png
+
+artifact:
+  file: olpc-dinner-don-hopkins-grey-shirt.png
+  slug: olpc-dinner-don-hopkins-grey-shirt
+  category: olpc
+  subcategory: dinners
+  what: "Don shows XO at white-tablecloth dinner"
+  sidecar_of: olpc-dinner-don-hopkins-grey-shirt.png
+
+note: "Not AI Generated!"

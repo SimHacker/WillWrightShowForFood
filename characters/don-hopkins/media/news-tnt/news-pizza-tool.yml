@@ -1,0 +1,17 @@
+# Sidecar — news-pizza-tool.png
+
+artifact:
+  file: news-pizza-tool.png
+  slug: news-pizza-tool
+  room: news-tnt
+  what: news pizza tool
+  era: Sun NeWS / OpenWindows
+  sidecar_of: news-pizza-tool.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/news-pizza-tool-fax.yml
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

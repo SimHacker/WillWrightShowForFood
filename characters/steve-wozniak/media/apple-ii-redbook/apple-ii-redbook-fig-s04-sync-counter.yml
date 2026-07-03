@@ -1,0 +1,16 @@
+# Sidecar — apple-ii-redbook-fig-s04-sync-counter.png
+
+artifact:
+  file: apple-ii-redbook-fig-s04-sync-counter.png
+  slug: apple-ii-redbook-fig-s04-sync-counter
+  source: Apple II Red Book (Reference Manual)
+  designer: Steve Wozniak
+  what: "FIG S-4 sync counter — 74LS161 H/V timing chain"
+  sidecar_of: apple-ii-redbook-fig-s04-sync-counter.png
+
+provenance:
+  photographed_by: Don Hopkins
+  facebook: "Happy 70th Birthday Woz!"
+  classiccmp: http://www.classiccmp.org/cpmarchives/AppleII/Apple%20II%20(Redbook).pdf
+
+note: "Not AI Generated!"

@@ -1,0 +1,11 @@
+# Sidecar — misc-art-rembrandt-anatomy-lesson.png
+
+artifact:
+  file: misc-art-rembrandt-anatomy-lesson.png
+  slug: misc-art-rembrandt-anatomy-lesson
+  category: misc
+  subcategory: art
+  what: "Rembrandt Anatomy Lesson — misfiled under Eric Bowman name"
+  sidecar_of: misc-art-rembrandt-anatomy-lesson.png
+
+note: "Not AI Generated!"

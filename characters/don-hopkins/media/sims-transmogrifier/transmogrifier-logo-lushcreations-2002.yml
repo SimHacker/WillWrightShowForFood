@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-logo-lushcreations-2002.png
+
+artifact:
+  file: transmogrifier-logo-lushcreations-2002.png
+  slug: transmogrifier-logo-lushcreations-2002
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — logo lushcreations 2002
+  era: 2000-2002
+  sidecar_of: transmogrifier-logo-lushcreations-2002.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

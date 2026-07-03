@@ -1,0 +1,23 @@
+# Pizza Tool — NeWS TNT fax to Tony & Alba's
+
+id: news-pizza-tool-fax
+type: gag
+status: canon
+authored_by: don-hopkins
+tagline: "Warm up a few Stouts! Send FAX?"
+
+pitch: |
+  **Pizza Tool** on **NeWS TNT** — Don Hopkins orders from **Tony & Alba's** Mountain View
+  (Sun Microsystems address). Fax confirmation dialog: *"This will cost you money and make
+  you want to drink beer."*
+
+canonical: ../../characters/don-hopkins/media/news-tnt/news-tnt.yml#pizza_tool
+
+menagerie_lines:
+  don: "Pizza Tool. Fax Tony & Alba's. Warm up a few Stouts."
+  gregory: "Long toppings list, short attention span."
+
+see_also:
+  - ../../characters/don-hopkins/media/news-tnt/INDEX.yml
+
+note: "Not AI Generated!"

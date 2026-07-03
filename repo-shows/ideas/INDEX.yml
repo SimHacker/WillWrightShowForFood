@@ -47,7 +47,7 @@ traditions:
     canonical: ../../process/old-band-back-together.yml
   - id: audience-orchestrated-gameplay
     file: traditions/audience-orchestrated-gameplay.yml
-    shows: [will-wright, heather-steve-alvey]
+    shows: [will-wright, heather-and-steve-alvey]
     status: ready
   - id: make-play-tools-show
     file: traditions/make-play-tools-show.yml
@@ -75,7 +75,7 @@ gags:
     status: seed
   - id: speed-dating-with-cupid
     file: gags/speed-dating-with-cupid.yml
-    shows: [will-wright, heather-steve-alvey]
+    shows: [will-wright, heather-and-steve-alvey]
     status: recorded_prior_art
     episode: "Speed Dating with Cupid"
 
@@ -86,7 +86,7 @@ themes:
     status: ready
   - id: procedural-rhetoric
     file: themes/procedural-rhetoric.yml
-    shows: [will-wright, heather-steve-alvey]
+    shows: [will-wright, heather-and-steve-alvey]
     status: ready
   - id: microworld-morality
     file: themes/microworld-morality.yml
@@ -121,3 +121,9 @@ shows:
     dir: shows/will-wright/
     index: shows/will-wright/INDEX.yml
     note: "Flagship content pack — episodes, performance bits, audience hooks"
+  jsonsters-gallery-lecture:
+    file: jsonsters-gallery-lecture.yml
+    host: don-hopkins
+    status: seed
+    note: "Sell art to virtual patrons for § — lecture + ensemble-beat hammers; scarcity auctions later"
+    gallery: ../../characters/don-hopkins/jsonsters/

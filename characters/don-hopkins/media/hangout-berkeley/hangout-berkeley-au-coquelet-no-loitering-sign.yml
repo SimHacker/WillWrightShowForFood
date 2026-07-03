@@ -1,0 +1,11 @@
+# Sidecar — hangout-berkeley-au-coquelet-no-loitering-sign.png
+
+artifact:
+  file: hangout-berkeley-au-coquelet-no-loitering-sign.png
+  slug: hangout-berkeley-au-coquelet-no-loitering-sign
+  category: hangout
+  subcategory: berkeley
+  what: "Au Coquelet — I loitered!"
+  sidecar_of: hangout-berkeley-au-coquelet-no-loitering-sign.png
+
+note: "Not AI Generated!"

@@ -1,0 +1,17 @@
+# Sidecar — pie-menu-on-globe.png
+
+artifact:
+  file: pie-menu-on-globe.png
+  slug: pie-menu-on-globe
+  room: cellular-automata-tiles
+  what: pie menu on globe
+  era: ~2010-2011
+  sidecar_of: pie-menu-on-globe.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/cellular-automata-simcity-tiles.yml
+
+see_also:
+  - ../micropolis-gallery/INDEX.yml
+
+note: "Not AI Generated!"

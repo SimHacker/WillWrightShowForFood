@@ -1,0 +1,118 @@
+# Character button board — core Repo Show narrative engine
+# One performer, many Conan face-holes, live improv voice switching.
+
+meta:
+  id: character-button-board
+  status: spec
+  role: core_narrative_engine
+  design: ../../process/performance-space.yml#narrative_engine
+  style: "See characters/don-hopkins/portrayal/upbringing.yml — high values, low costs, Don's wavelength"
+
+what: |
+  A **button board** (physical MIDI/stream-deck or on-screen grid) — **PTT focus switcher** for
+  Squares in a Box. One camera; many panel dummies; driver may occupy center slot as themselves.
+  Each button: fade mouth closed on outgoing still portrait, fade open on incoming hole, voice
+  follows. Celebrity Squares layout or any grid. Video-conference chrome (name, role, badges).
+
+panel_mode: ../squares-in-a-box.yml
+
+host:
+  character: don-philahue
+  default_performer: don-hopkins
+  rule: |
+    Don Philahue is the MC **character**. Don Hopkins is NOT him — he does a great impression.
+    **Anyone** can perform Don Philahue or any other role: human puppetry, not impersonation.
+
+dc_host_lineage_puppets:
+  what: |
+    Face puppets of **Captain Chesapeake**, **Captain 20**, and **Count Gore De Vol** — DC kids-TV
+    lineage from upbringing. Each gets a button on the board plus **canned sound-box clips** you
+    **lip-sync to like a drag queen**: tap button → face swaps → audio plays → performer mouths
+    through the hole. Perfect for **sign-on and sign-off** beats without breaking the bit.
+  lineage: ../../characters/don-hopkins/portrayal/upbringing.yml#local_tv
+  performed_by: don-philahue
+  sound_box:
+    what: "Pre-recorded audio on a button — host lip-syncs; mic ducked or muted during playback"
+    drag_queen_lineage: "Camp-forward performance — voice comes from the box; face sells the illusion"
+    sources:
+      - host-recorded impressions (legal, transformative homage)
+      - public-domain or licensed station stingers where available
+      - theme fragments (e.g. Chesapeake Stumblin chipmunk warmth — rights-aware)
+    ui: "Stream Deck / on-screen grid — one cell per clip; optional face+preset auto-switch"
+  roster:
+    captain_chesapeake:
+      hail: "Ahoy, crew members!"
+      sign_offs:
+        - "Be somebody important — be yourself!"
+        - "So long, crew members."
+      puppet: distinguished portrait + captain hat / tugboat-deck grade optional
+      sound_box_buttons: [hail, opening_poem_excerpt, treasure_chest_stinger, sign_off_be_yourself, sign_off_so_long]
+      north_star: true
+    captain_twenty:
+      sign_off: "Live long and win lots of prizes!"
+      salute: Vulcan
+      puppet: fast-food-commercial-hat energy; daylight captain grade
+      sound_box_buttons: [sign_off_live_long, club_card_drum_hit, space_gallery_stinger]
+    count_gore_de_vol:
+      greeting: "Greetings! I am the Count Gore De Vol!"
+      sign_off: "May all your blood be warm!"
+      puppet: midnight horror-host grade — desaturate, vignette optional
+      sound_box_buttons: [greeting, sign_off_warm_blood]
+      when: "Spice register — optional cold open or late segment; not default tone"
+  sign_on_sign_off:
+    default: captain_chesapeake
+    pattern: |
+      **Sign-on:** Chesapeake hail or Captain 20 salute → show body → **Sign-off:** Chesapeake
+      twin lines ("Be somebody important — be yourself!" / "So long, crew members.") or Captain 20
+      "Live long and win lots of prizes!" — lip-synced, never rushed.
+    repo_show: ../../process/repo-show-branding.yml#hosting
+
+live_vs_post:
+  live: preferred — face switches sync with voice; audience sees the weave happen
+  post: acceptable — cut between face presets per line in edit
+
+face_roster:
+  per_character:
+    - distinguished_portrait_png   # mouth hole pre-cut or adjustable
+    - voice_notes                  # optional — pitch, pace, catchphrase hints in CARD.yml
+    - button_label                 # emoji prefix + short name
+  sources:
+    - characters/*/media/
+    - repo-shows/*/audience/*/     # fictional + guest-primed personas
+    - bundled game-character faces in conan-face-puppet.yml
+
+ui:
+  layout: grid_or_stream_deck       # 8–16 buttons typical; pie-menu octagon optional homage
+  active_button: highlights_current_speaker
+  hotkeys: "1–9, QWERTY map, or MIDI note per character"
+  obs_integration:
+    - "Each button → switch Browser Source URL or obs-websocket scene item"
+    - "stream-gateway can fire preset from TicketPR cue"
+
+workflow:
+  prep:
+    - "Face-hole-ify one distinguished photo per character in the roster"
+    - "Assign button; test mouth alignment in conan-face-puppet web toy"
+  on_air:
+    - "Performer webcam → active face overlay"
+    - "Tap button → swap face; modulate voice; read next line or improvise"
+    - "Don Philahue buttons for MC beats; guest faces for their lines; audience chars for TicketPR"
+  weave:
+    - "Insert short guest clips between button-board segments"
+    - "Session log narration while 'walking' MOOLLM pub rooms"
+
+tech:
+  v0:
+    - conan-face-puppet.yml face picker + keyboard shortcuts
+    - obs-websocket preset list from roster yaml
+  v1:
+    - Stream Deck / MIDI profile checked into repo
+    - roster: character-button-roster.yml per show episode
+    - dc_host_lineage sound-box profile — Chesapeake / Captain 20 / Count Gore lip-sync cells
+
+see_also:
+  - squares-in-a-box.yml
+  - conan-face-puppet.yml
+  - ../../characters/don-philahue/CHARACTER.yml
+  - ../../process/performance-space.yml
+  - ../../characters/will-wright/guest-prototype.yml#ensemble_medium

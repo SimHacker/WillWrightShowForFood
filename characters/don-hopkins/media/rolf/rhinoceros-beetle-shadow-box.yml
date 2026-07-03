@@ -1,0 +1,19 @@
+# Sidecar — rhinoceros-beetle-shadow-box.png
+
+artifact:
+  file: rhinoceros-beetle-shadow-box.png
+  slug: rhinoceros-beetle-shadow-box
+  room: rolf
+  what: rhinoceros beetle shadow box
+  era: TomTom-era Amsterdam
+  sidecar_of: rhinoceros-beetle-shadow-box.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/rolf-junk-auction.yml
+
+see_also:
+  - INDEX.yml
+  - raving-bonkers.yml
+  - ../robot-collection/INDEX.yml
+
+note: "Not AI Generated!"

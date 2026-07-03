@@ -1,0 +1,19 @@
+# Sidecar — keychains-wit-lam-lucky-strikes.png
+
+artifact:
+  file: keychains-wit-lam-lucky-strikes.png
+  slug: keychains-wit-lam-lucky-strikes
+  room: rolf
+  what: keychains wit lam lucky strikes
+  era: TomTom-era Amsterdam
+  sidecar_of: keychains-wit-lam-lucky-strikes.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/rolf-junk-auction.yml
+
+see_also:
+  - INDEX.yml
+  - raving-bonkers.yml
+  - ../robot-collection/INDEX.yml
+
+note: "Not AI Generated!"

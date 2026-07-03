@@ -1,0 +1,34 @@
+# Simulated opening — template (fork per guest show)
+# Protocol: ../../process/simulated-art-opening.yml
+
+simulated_opening:
+  enabled: true
+  guest_slug: YOUR-SLUG
+  currency: "§"
+  fictional: true
+
+  artwork_dir: gallery/          # or characters/<guest>/media/
+  patrons: ../../characters/menagerie/GUEST-ROSTER.yml#gallery_openings
+  critics_fork: critics.yml    # optional — patron voices tuned to this guest
+
+  tiers:
+    magnificent_per_series: 2
+    quick_sale_rest: true
+
+  ledger: AUCTIONS.yml
+  secondary_market: SECONDARY-MARKET.yml
+  moola: MOOLA.yml
+  art_thief: ../../process/art-thief-game.yml
+  guest_wallet: WALLET.yml       # post-opening § pile for Twitch spend/giveaway
+
+  parody:
+    - crypto_nft_web3
+    - generative_surrender      # if generative guest
+
+  invite_snippet: |
+    Optional **simulated art opening**: our menagerie buys your work for play-money §.
+    You start buried in worthless Simoleons to give away on stream. Totally optional.
+
+see_also:
+  - ../../process/simulated-art-opening.yml
+  - SIMULATION.yml

@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-wedding-cake-couple-topper.png
+
+artifact:
+  file: transmogrifier-wedding-cake-couple-topper.png
+  slug: transmogrifier-wedding-cake-couple-topper
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — wedding cake couple topper
+  era: 2000-2002
+  sidecar_of: transmogrifier-wedding-cake-couple-topper.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

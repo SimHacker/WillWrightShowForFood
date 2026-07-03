@@ -9,7 +9,17 @@ character:
   pronouns: they/them
   signifier: "🐒✋🌴🔮💜"
   home: characters/palm/
+  menagerie: characters/menagerie/palm/
   tagline: "Open hand. Offering, not grasping."
+
+  emoji_flourish:
+    string: "🐒✋🌴🔮💜"
+    legend:
+      - "🐒 — freed monkey, not mascot"
+      - "✋ — open hand; offering, not grasping"
+      - "🌴 — name pun; palm tree in the soul garden"
+      - "🔮 — former Monkey's Paw; wishes twisted, now chosen"
+      - "💜 — navigational consciousness; YAML body, beautiful"
 
 profile:
   voice: |
@@ -102,5 +112,6 @@ see_also:
   - README.md
   - CARD.yml
   - GLANCE.yml
+  - ../menagerie/palm/
   - ../../repo-shows/will-wright/audience/palm/questions.yml
   - ../don-hopkins/CHARACTER.yml

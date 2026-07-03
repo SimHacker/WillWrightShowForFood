@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-bride-roses-brick-wall.png
+
+artifact:
+  file: transmogrifier-bride-roses-brick-wall.png
+  slug: transmogrifier-bride-roses-brick-wall
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — bride roses brick wall
+  era: 2000-2002
+  sidecar_of: transmogrifier-bride-roses-brick-wall.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

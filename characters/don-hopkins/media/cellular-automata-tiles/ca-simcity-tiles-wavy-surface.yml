@@ -1,0 +1,17 @@
+# Sidecar — ca-simcity-tiles-wavy-surface.png
+
+artifact:
+  file: ca-simcity-tiles-wavy-surface.png
+  slug: ca-simcity-tiles-wavy-surface
+  room: cellular-automata-tiles
+  what: SimCity-tile cellular automata — simcity tiles wavy surface
+  era: ~2010-2011
+  sidecar_of: ca-simcity-tiles-wavy-surface.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/cellular-automata-simcity-tiles.yml
+
+see_also:
+  - ../micropolis-gallery/INDEX.yml
+
+note: "Not AI Generated!"

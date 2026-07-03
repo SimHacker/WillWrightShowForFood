@@ -1,0 +1,11 @@
+# Sidecar — travel-amsterdam-space-invader-mosaic-stone.png
+
+artifact:
+  file: travel-amsterdam-space-invader-mosaic-stone.png
+  slug: travel-amsterdam-space-invader-mosaic-stone
+  category: travel
+  subcategory: amsterdam
+  what: "Invader mosaic on stone wall"
+  sidecar_of: travel-amsterdam-space-invader-mosaic-stone.png
+
+note: "Not AI Generated!"

@@ -1,0 +1,18 @@
+# Sidecar — openlaszlo-explosion-notice-nl.png
+
+artifact:
+  file: openlaszlo-explosion-notice-nl.png
+  slug: openlaszlo-explosion-notice-nl
+  room: micropolis-gallery
+  what: openlaszlo explosion notice nl
+  era: 1991 HyperLook through 2010s Facebook
+  sidecar_of: openlaszlo-explosion-notice-nl.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/micropolis-gallery.yml
+  - ../../../repo-shows/ideas/gags/pacbot-eats-traffic.yml
+
+see_also:
+  - micropolis-gallery.yml
+
+note: "Not AI Generated!"

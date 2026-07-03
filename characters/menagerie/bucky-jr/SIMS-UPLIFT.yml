@@ -1,0 +1,43 @@
+# Sims export handoff — see ../EXPORT-SIMS-RELATIONSHIPS.yml
+schema_version: 1
+source:
+  direction: uplift
+  neighbor_id: 904
+  character: bucky-jr
+identity:
+  name: Bucky Jr.
+  age: adult
+  gender: male
+  zodiac: taurus
+traits:
+  neat: 6
+  outgoing: 4
+  active: 7
+  playful: 3
+  nice: 6
+  generous: 5
+skills:
+  cooking: 4
+  mechanical: 9
+  charisma: 3
+  logic: 4
+  body: 8
+  creativity: 9
+  cleaning: 6
+career:
+  track: unemployed
+  performance: 0
+relationships:
+  '901':
+    daily: 45
+    lifetime: 50
+  '902':
+    daily: 30
+    lifetime: 35
+  '906':
+    daily: 40
+    lifetime: 45
+  '907':
+    daily: 15
+    lifetime: 20
+family_budget: 18000

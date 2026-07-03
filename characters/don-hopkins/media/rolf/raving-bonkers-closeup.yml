@@ -1,0 +1,19 @@
+# Sidecar — raving-bonkers-closeup.png
+
+artifact:
+  file: raving-bonkers-closeup.png
+  slug: raving-bonkers-closeup
+  room: rolf
+  what: raving bonkers closeup
+  era: TomTom-era Amsterdam
+  sidecar_of: raving-bonkers-closeup.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/rolf-junk-auction.yml
+
+see_also:
+  - INDEX.yml
+  - raving-bonkers.yml
+  - ../robot-collection/INDEX.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-green-flamingo-catalog.png
+
+artifact:
+  file: transmogrifier-green-flamingo-catalog.png
+  slug: transmogrifier-green-flamingo-catalog
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — green flamingo catalog
+  era: 2000-2002
+  sidecar_of: transmogrifier-green-flamingo-catalog.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

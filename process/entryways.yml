@@ -61,7 +61,7 @@ entryways:
       - { priority: 4, title: "Will CARD", path: ../characters/will-wright/CARD.md, why: "Simulator Effect, implication over simulation — named traditions" }
       - { priority: 5, title: "Chaim Gingold", path: ../characters/chaim-gingold/CARD.yml, why: "Building SimCity — the simulation loop drawn as diagrams" }
       - { priority: 6, title: "Drag Race", path: DRAG-RACE.md, why: "Game-show format inside the repo — rig personas, Slats judges" }
-      - { priority: 7, title: "Slats", path: ../characters/slats/CARD.yml, why: "Robot waiter from Stupid Fun Club films — fictional judge card" }
+      - { priority: 7, title: "Slats", path: ../characters/robots/slats/CARD.yml, why: "Robot waiter from Stupid Fun Club films — fictional judge card" }
 
   watcher:
     title: "Watcher — stream / VOD audience"

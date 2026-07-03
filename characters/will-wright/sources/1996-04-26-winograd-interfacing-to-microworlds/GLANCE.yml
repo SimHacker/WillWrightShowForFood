@@ -28,6 +28,9 @@ navigation:
   children:
     - images/
     - transcript.md
+    - transcript-cache/
+    - short-form-clips.yml
+    - short-form-clips.md
     - medium-article.md
   siblings:
     - ../2008-02-10-soul-of-the-sims/

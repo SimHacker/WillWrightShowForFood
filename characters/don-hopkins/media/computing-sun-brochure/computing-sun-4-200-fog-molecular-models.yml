@@ -1,0 +1,12 @@
+# Sidecar — computing-sun-4-200-fog-molecular-models.png
+
+artifact:
+  file: computing-sun-4-200-fog-molecular-models.png
+  slug: computing-sun-4-200-fog-molecular-models
+  category: computing
+  subcategory: sun-brochure
+  what: "Sun 4/200 — fog and molecular models on water"
+  sidecar_of: computing-sun-4-200-fog-molecular-models.png
+
+archive: https://archive.org/details/sun4200seriesbrochure
+note: "Not AI Generated!"

@@ -1,0 +1,45 @@
+# Turing Robot Olympics gag — vision APIs misread 1990 Glasgow robots
+# Canonical detail: characters/don-hopkins/media/turing-institute/first-robot-olympics.yml
+
+id: turing-robot-olympics
+type: gag
+status: canon
+authored_by: don-hopkins
+tagline: "POSSIBLE JOY DETECTED!!! — submit Peter Mowforth's 1990 photos to the AI god; receive MOOLA."
+
+pitch: |
+  The [First Robot Olympics](https://en.wikipedia.org/wiki/First_Robot_Olympics) (Glasgow, Sept 1990):
+  68 robots, Dr Who opened it, **Donald Michie**'s **Turing Institute** hosted it — Duckmouse
+  on the wall, Bletchley-to-MENACE lineage. Genghis won behaviour gold, **Richard 1st** won talking
+  gold dressed as Groucho, **Cardiff Walker** won biped gold and posed for girls. Don wasn't there —
+  Arthur van Hoff's legendary tee survived. Peter Mowforth's photos are the best.
+
+  Years later Don posted Cardiff Walker on Facebook and ran **Google Cloud Vision** (POSSIBLE JOY
+  DETECTED!!!), **Microsoft Computer Vision** (POSING: a group of people posing for the camera),
+  and **IBM Watson** on the pizza-arm photo (ROBOT ANDROID GAS PUMP DETECTED). The robot is
+  delivering a pizza or a SparcStation. That IS the MOOLA joke.
+
+canonical: ../../characters/don-hopkins/media/turing-institute/first-robot-olympics.yml
+
+highlight_photos:
+  - belgrade_usc_hand — Manipulators gold
+  - pizza_sparcstation_arm — Watson gas pump misread
+  - richard_1st_groucho — Talking gold
+  - cardiff_walker_girls — Joy + Posing detected
+
+integration:
+  moola: ../../process/moola.yml
+  art_thief: ../../process/art-thief-game.yml
+  auto_art_theft_grand: ../../process/auto-art-theft-grand.yml
+  simulated_opening: "Robot-OLY deeds auction beside 77MP combinations"
+  slats: ../../characters/robots/slats/
+
+menagerie_lines:
+  vandermeer: "Duckmouse — the cryptid already has tenure."
+  margot_krell: "He knew Turing at Bletchley. The portrait remembers."
+  gregory: "IBM says gas pump. I'm long the misread."
+  bunny: "Board approved Richard 1st as PFP. Bowtie darling."
+  slats: "I trained on Peter Mowforth's copyright. You're welcome."
+  don: "It's delivering a pizza or a SparcStation. Give me 101!"
+
+note: "Not AI Generated!"

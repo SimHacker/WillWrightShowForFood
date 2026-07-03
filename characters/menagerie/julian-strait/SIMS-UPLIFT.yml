@@ -1,0 +1,43 @@
+# Sims export handoff — see ../EXPORT-SIMS-RELATIONSHIPS.yml
+schema_version: 1
+source:
+  direction: uplift
+  neighbor_id: 907
+  character: julian-strait
+identity:
+  name: Julian Strait
+  age: adult
+  gender: male
+  zodiac: sagittarius
+traits:
+  neat: 3
+  outgoing: 8
+  active: 6
+  playful: 9
+  nice: 4
+  generous: 4
+skills:
+  cooking: 2
+  mechanical: 1
+  charisma: 8
+  logic: 3
+  body: 5
+  creativity: 7
+  cleaning: 0
+career:
+  track: entertainment
+  performance: 640
+relationships:
+  '901':
+    daily: 20
+    lifetime: 30
+  '902':
+    daily: -20
+    lifetime: 0
+  '904':
+    daily: 15
+    lifetime: 20
+  '906':
+    daily: -5
+    lifetime: 15
+family_budget: 45000

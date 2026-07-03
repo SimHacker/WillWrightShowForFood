@@ -1,0 +1,11 @@
+# Sidecar — olpc-demo-john-perry-barlow.png
+
+artifact:
+  file: olpc-demo-john-perry-barlow.png
+  slug: olpc-demo-john-perry-barlow
+  category: olpc
+  subcategory: demos
+  what: "John Perry Barlow OLPC demo"
+  sidecar_of: olpc-demo-john-perry-barlow.png
+
+note: "Not AI Generated!"

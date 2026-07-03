@@ -1,0 +1,11 @@
+# Sidecar — robot-sfc-battlebots-treaded-wheel-warning-sticker.png
+
+artifact:
+  file: robot-sfc-battlebots-treaded-wheel-warning-sticker.png
+  slug: robot-sfc-battlebots-treaded-wheel-warning-sticker
+  category: robot
+  subcategory: sfc-battlebots
+  what: "Treaded battlebot wheel with machinery hazard sticker"
+  sidecar_of: robot-sfc-battlebots-treaded-wheel-warning-sticker.png
+
+note: "Not AI Generated!"

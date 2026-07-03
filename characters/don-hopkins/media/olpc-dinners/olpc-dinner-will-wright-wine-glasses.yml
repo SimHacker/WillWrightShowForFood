@@ -1,0 +1,11 @@
+# Sidecar — olpc-dinner-will-wright-wine-glasses.png
+
+artifact:
+  file: olpc-dinner-will-wright-wine-glasses.png
+  slug: olpc-dinner-will-wright-wine-glasses
+  category: olpc
+  subcategory: dinners
+  what: "Will Wright at formal dinner OLPC demo"
+  sidecar_of: olpc-dinner-will-wright-wine-glasses.png
+
+note: "Not AI Generated!"

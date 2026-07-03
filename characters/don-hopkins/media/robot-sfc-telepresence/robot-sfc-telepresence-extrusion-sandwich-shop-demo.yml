@@ -1,0 +1,11 @@
+# Sidecar — robot-sfc-telepresence-extrusion-sandwich-shop-demo.png
+
+artifact:
+  file: robot-sfc-telepresence-extrusion-sandwich-shop-demo.png
+  slug: robot-sfc-telepresence-extrusion-sandwich-shop-demo
+  category: robot
+  subcategory: sfc-telepresence
+  what: "Extrusion robot demo outside sandwich shop — Will orbit"
+  sidecar_of: robot-sfc-telepresence-extrusion-sandwich-shop-demo.png
+
+note: "Not AI Generated!"

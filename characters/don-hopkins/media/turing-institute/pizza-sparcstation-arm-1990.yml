@@ -1,0 +1,18 @@
+# Sidecar — pizza-sparcstation-arm-1990.png
+
+artifact:
+  file: pizza-sparcstation-arm-1990.png
+  slug: pizza-sparcstation-arm-1990
+  room: turing-institute
+  what: pizza sparcstation arm 1990
+  era: ~1990-1992
+  sidecar_of: pizza-sparcstation-arm-1990.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/turing-robot-olympics.yml
+
+see_also:
+  - first-robot-olympics.yml
+  - ../simprov-exploratorium/INDEX.yml
+
+note: "Not AI Generated!"

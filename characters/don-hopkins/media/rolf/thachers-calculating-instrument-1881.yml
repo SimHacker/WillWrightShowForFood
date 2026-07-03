@@ -1,0 +1,19 @@
+# Sidecar — thachers-calculating-instrument-1881.png
+
+artifact:
+  file: thachers-calculating-instrument-1881.png
+  slug: thachers-calculating-instrument-1881
+  room: rolf
+  what: thachers calculating instrument 1881
+  era: TomTom-era Amsterdam
+  sidecar_of: thachers-calculating-instrument-1881.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/rolf-junk-auction.yml
+
+see_also:
+  - INDEX.yml
+  - raving-bonkers.yml
+  - ../robot-collection/INDEX.yml
+
+note: "Not AI Generated!"

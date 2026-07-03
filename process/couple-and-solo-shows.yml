@@ -1,0 +1,206 @@
+# Couple shows vs solo shows — scheduling & production policy
+#
+# One show per character (or pair). Shows have episodes — guests return as themselves.
+# Bread-and-butter: casual async one-on-ones. Readings show + rare synchronized specials.
+
+meta:
+  id: couple-and-solo-shows
+  applies_to: [characters/, repo-shows/]
+
+default:
+  one_show_per_character: |
+    **Default:** one show per person — `characters/<slug>/` maps to at most one primary
+    `repo-shows/<slug>/` unless a documented exception below applies.
+  exceptions:
+    - natural_couples  # pair show replaces two solo shows for shared career material
+    - memorial_shows   # case-by-case; see memorial_shows — no fixed rules here
+
+naming:
+  rule: |
+    Each person gets exactly one directory: `characters/<first-last>/` — hyphenated slug,
+    no suffixes like `-simfreaks`, `-simslice`, `-ambigrams`. Some people would need dozens
+    of suffixes; names stay clean and single.
+  where_roles_live:
+    - "CHARACTER.yml → field, bio, connections, aliases[]"
+    - "ideas.md → show hooks tied to public work"
+    - "repo-shows/ → episode focus and pair membership"
+  show_guest_lists: "Use legal names only — Heather Alvey, Scott Kim — not Heather (SimFreaks)"
+
+shows_and_episodes:
+  shape: |
+    A **show** is the long-running frame (`repo-shows/<slug>/` — SHOW.yml, README, ideas).
+    **Episodes** are passes within that show — new interviews, artifact drops, responses to
+    other guests, follow-up threads. Same person, same character directory, many episodes over
+    time. Returning as yourself is normal, not a sequel gimmick.
+  medium: |
+    Each show is a **shotgun blast** — an ensemble of intertwingled multimedia artifacts (video,
+    transcripts, sources, code, links), time-shifted and **jumpable**: pause, skip, fast-forward,
+    follow links into Cursor, run code, return. Defined in yaml; transcribed for search.
+    Prototype: characters/will-wright/guest-prototype.yml#ensemble_medium
+  attention: |
+    Designed for today's browsing — bumblebee spans, not appointment TV. **Shorter than TikTok:**
+    one quote + link, or one K-line that explains itself — see repo-show-branding.yml#attention_atoms.
+    Guests and audience want to be seen and heard without burning time neither side has.
+  default_show: one primary show per character (or pair); episodes accumulate inside it
+  guest_returns: |
+    Encourage guests back on their own show as the conversation grows — late-night casual
+    energy, low scheduling friction, pick up where the repo left off.
+
+show_tiers:
+  ongoing_one_on_one:
+    what: |
+      **Default cadence** — casual late-night-style interviews, one guest at a time, recorded
+      when it suits them, woven async. Repeating, ongoing, minimally intrusive. This is most
+      of what we do.
+    scheduling: loose — guest picks the window; no mass synchronized arrival
+  moollm_readings:
+    what: |
+      A **whole show** for long-form script readings — Don (and guests) voice MOOLLM-generated
+      characters, lore, and objects on camera; episodes posted to YouTube. Primes the pump:
+      introduces how MOOLLM works, teaches AI honestly, Apple ][ nostalgia, science, and the
+      repo-as-stage before guests commit to a solo interview show.
+    show: repo-shows/moollm-readings/
+    cadence: ongoing episodes; each reading is an episode; guests may return for later readings
+    differs_from_interviews: performance + pedagogy, not a career post-mortem
+  special_events:
+    what: |
+      **Less frequent, harder to schedule** — synchronized live events when the format demands it.
+      Examples: Twitch stream, group table read with many guests in one window, audience
+      play-along cathedral. Distinct from the readings show (mostly async YouTube) and from
+      casual one-on-one interviews.
+    scheduling: plan ahead; treat as events, not the weekly default
+    see_also:
+      - performance-space.yml
+      - sims-play-along-narration.yml
+
+natural_couples:
+  definition: |
+    Married or long-running creative partners who ship shared work together. Interview them
+    **as a pair** for the shared story so we do not dilute or repeat the same material in
+    two solo episodes.
+  examples:
+    - pair: [heather-alvey, steve-alvey]
+      show: repo-shows/heather-and-steve-alvey/
+    - pair: [amy-jo-kim, scott-kim]
+      show: repo-shows/amy-jo-and-scott-kim/
+    - pair: null  # cheech-and-chong — pattern placeholder when/if invited
+
+scheduling:
+  pair_first: |
+    When a couple has a pair show, that show is the **default interview** for shared career
+    chapters (Shufflebrain, Sims brands, etc.). The pair need not record together in one
+    sitting — two one-on-ones at each person's best time, woven in post, is fine.
+  one_on_one_default: |
+    **Default interview shape:** one guest, one session, at whatever time works for them.
+    Do not overreach by insisting everyone arrive at the same moment — a huge ask even
+    within one time zone. Mix guests together in post-production instead.
+  solo_when:
+    - "Deep vertical on one person's solo body of work (e.g. Scott Viewpoint dissertation)"
+    - "Guest prefers a second focused episode after the pair show"
+    - "One partner temporarily unavailable — reschedule pair, do not half-interview shared material solo"
+  both_allowed: |
+    A person may have a solo show seed AND appear on a pair show if the shapes differ and
+    both would be compelling — e.g. Scott Kim solo for Viewpoint/inversions; pair for
+    Shufflebrain + social-puzzle design with Amy Jo.
+
+pair_show_shape:
+  type: group
+  guests: ["Name One", "Name Two"]  # legal names, no role parentheticals
+  character: [characters/person-one/, characters/person-two/]
+  id: "<first>-and-<first>-<surname>"  # surname once — how people say it
+  examples:
+    - heather-and-steve-alvey   # not heather-alvey-and-steve-alvey
+    - amy-jo-and-scott-kim      # not amy-jo-kim-and-scott-kim
+
+memorial_shows:
+  stance: |
+    Memorial shows are **possible** — for someone who has passed, or for a pair where one
+    partner is still alive and one is not. We do **not** write hard-and-fast rules ahead of
+    time. Each case depends on who wants to contribute, what friends and family are
+    comfortable with, and whether a living guest would want to share a show frame with
+    someone they have lost.
+  friend_phone_submissions:
+    what: |
+      **Easiest path for friends of the deceased** — no live interview, not even one-on-one
+      sync. Each friend records a short personal tribute on their **phone**, anywhere peaceful
+      (a park, a bench, a window). One person, one memory, one story. Send the file; we edit
+      episodes together in post — same async weave as living guests.
+    ask_of_contributors:
+      - "One person per clip — your voice, your story, your pace"
+      - "Phone video is fine — no studio, no schedule coordination"
+      - "Consent from the speaker; respect family/estate wishes before publish"
+    production: weave clips into memorial episodes; repo holds transcripts + artifact links
+  when_considering:
+    - "Who would like to contribute — colleagues, family, estate, surviving partner?"
+    - "Would friend-phone clips feel right, or does someone want a longer living discussant episode?"
+    - "Would a pair-shaped memorial feel right to the living person, or should it stay solo?"
+    - "Is the show honoring memory, continuing unfinished work, or both?"
+  do_not:
+    - "Assume every deceased character gets an automatic memorial show"
+    - "Force a couple show shape when only one side can speak"
+    - "Publish sensitive material without consent from people who knew them"
+    - "Speak AS the deceased or invent quotes — discuss ABOUT them only"
+
+women_trans_pioneers:
+  stance: |
+    Explicit inclusion of women and trans pioneers — interview them **while they are still with
+    us** (async one-on-one on their own show). For those who have passed, memorial episodes via
+    friend-phone submissions from people who knew them. Catalog: moollm PR Women & Trans Pioneers.
+  interview_while_living:
+    - slug: diana-merry-shapiro
+      note: "Co-invented BitBLT at Xerox PARC"
+    - slug: sophie-wilson
+      note: "ARM architecture — in every smartphone"
+    - slug: rebecca-heineman
+      note: "Space Invaders champion, Interplay co-founder, Burger Becky; Don's IIgs SimCity thread"
+    - slug: audrey-tang
+      note: "Taiwan Digital Minister, radical transparency, g0v"
+  memorial_suggestions:
+    friend_phone_format: true
+    heroes:
+      - slug: jennell-jaquays
+        note: "D&D legend, id Software level design (d. 2024)"
+      - slug: lynn-conway
+        note: "VLSI revolution; fired from IBM for transitioning (d. 2024)"
+      - slug: dame-stephanie-shirley
+        note: "Signed letters Steve to get meetings; software entrepreneur (d. 2021)"
+      - slug: vanessa-freudenberg
+        note: "SqueakJS, Croquet, Multisynq — existing memorial arc; Craig Latta anchor"
+  see_also: SimHacker/moollm/designs/pr/PR-CHARACTER-CATALOG-EXPANSION.md#women--trans-pioneers
+
+async_production:
+  the_thing: |
+    Minimally intrusive interviews, **time-shifted and woven together** in post. This can be
+    the whole style — not a compromise. Previous and ongoing guests mix on the timeline;
+    the repo is the real-time staging layer for pre-show discussion, ideas, and artifact
+    exchange before and between recordings.
+  repo_as_stage:
+    - "Don pre-gathers research bundles (private archive → guest review → public projection)"
+    - "Guest walks the bundle on camera — point, correct, story; or solo demo videos (best take wins)"
+    - "Guest-submitted or recommended YouTube links woven into episodes"
+    - "Guest **face puppet** clips — live on stream or recorded offline; modular portrait from their photo (see faceball-construction-set.yml#guest_characters)"
+    - "Memory palace **talking selfies** — one phone clip per stop, puppet posed next to artifact (see faceball-construction-set.yml#memory_palace_tour#talking_selfies)"
+    - "Audience watches time-shifted and opens the same paths in Cursor — edit data, run code, PR"
+    - "Guests watch each other's prior shows and raw footage in the repo"
+    - "Respond, chime in, and ask questions asynchronously — correspondence, ideas.md, artifacts"
+    - "Pre-show threads shape what each one-on-one covers without a live roundtable"
+  repeat_shows: |
+    Same as shows_and_episodes.guest_returns — episodes on your show, chime-ins on others',
+    async threads between passes. Ideas diffuse across the network instead of one-and-done.
+
+guest_prototype:
+  archetype: will-wright
+  girder: ../characters/will-wright/guest-prototype.yml
+  when: "2026-07 — accepted; nucleates crystallization"
+  rule: |
+    Optimize every process for **Will's time first**. He is the reference guest: async
+    one-on-one, topic-less, no homework, episodes not one-shot, repo does staging, special
+    live events only on request. Don pre-researches; guest reviews bundle on video; audience
+    follows in Cursor time-shifted. Copy `respect_time` + `research_bundle` for anyone else.
+
+see_also:
+  - ../schemas/portrayal-standards.yml#guest_directory
+  - ../characters/INDEX.yml
+  - ../repo-shows/moollm-readings/
+  - ../characters/will-wright/guest-prototype.yml
+  - moollm-stage.yml

@@ -1,0 +1,20 @@
+# Arcade Santa Cruz
+
+room:
+  id: arcade-santa-cruz
+  category: arcade
+  subcategory: santa-cruz
+  parent: ../INDEX.yml
+  count: 4
+
+artifacts:
+  - file: arcade-santa-cruz-flappy-bird-cabinet.png
+    sidecar: arcade-santa-cruz-flappy-bird-cabinet.yml
+  - file: arcade-santa-cruz-star-wars-cockpit-yoke.png
+    sidecar: arcade-santa-cruz-star-wars-cockpit-yoke.yml
+  - file: arcade-santa-cruz-star-wars-vector-game-over.png
+    sidecar: arcade-santa-cruz-star-wars-vector-game-over.yml
+  - file: arcade-santa-cruz-street-fighter-anniversary.png
+    sidecar: arcade-santa-cruz-street-fighter-anniversary.yml
+
+note: "Not AI Generated!"

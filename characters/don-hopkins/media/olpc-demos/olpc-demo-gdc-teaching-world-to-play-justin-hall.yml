@@ -1,0 +1,11 @@
+# Sidecar — olpc-demo-gdc-teaching-world-to-play-justin-hall.png
+
+artifact:
+  file: olpc-demo-gdc-teaching-world-to-play-justin-hall.png
+  slug: olpc-demo-gdc-teaching-world-to-play-justin-hall
+  category: olpc
+  subcategory: demos
+  what: "Teaching the world to play — GDC article still"
+  sidecar_of: olpc-demo-gdc-teaching-world-to-play-justin-hall.png
+
+note: "Not AI Generated!"

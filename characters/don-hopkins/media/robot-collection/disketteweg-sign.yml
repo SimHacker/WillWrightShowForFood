@@ -1,0 +1,18 @@
+# Sidecar — disketteweg-sign.png
+
+artifact:
+  file: disketteweg-sign.png
+  slug: disketteweg-sign
+  room: robot-collection
+  what: disketteweg sign
+  era: ~2007-2009
+  sidecar_of: disketteweg-sign.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/van-leer-robot-collection.yml
+  - ../../../repo-shows/ideas/gags/turing-robot-olympics.yml
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

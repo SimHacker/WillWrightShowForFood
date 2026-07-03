@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-wedding-cake-five-tier.png
+
+artifact:
+  file: transmogrifier-wedding-cake-five-tier.png
+  slug: transmogrifier-wedding-cake-five-tier
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — wedding cake five tier
+  era: 2000-2002
+  sidecar_of: transmogrifier-wedding-cake-five-tier.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

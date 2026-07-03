@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-engagement-dialog.png
+
+artifact:
+  file: transmogrifier-engagement-dialog.png
+  slug: transmogrifier-engagement-dialog
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — engagement dialog
+  era: 2000-2002
+  sidecar_of: transmogrifier-engagement-dialog.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

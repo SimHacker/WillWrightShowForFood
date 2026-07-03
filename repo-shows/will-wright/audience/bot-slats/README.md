@@ -19,7 +19,7 @@
 | | → |
 |--|---|
 | **Up** | [audience](../README.md) |
-| **Canonical bot** | [characters/slats/](../../../../characters/slats/README.md) |
+| **Canonical bot** | [characters/robots/slats/](../../../../characters/robots/slats/README.md) |
 | **SFC source** | [one-minute-movies](../../../../characters/will-wright/sources/stupid-fun-club-one-minute-movies/README.md) |
 | **Show segment** | [slats-reincarnation.yml](../../slats-reincarnation.yml) |
 | **Seat** | [venue/orchestra pit](../../venue/README.md) — Transmogrifier, not balcony |
@@ -45,6 +45,6 @@
 
 ---
 
-↑ [audience](../README.md) · [Slats character](../../../../characters/slats/README.md) · [show](../../README.md)
+↑ [audience](../README.md) · [Slats character](../../../../characters/robots/slats/README.md) · [show](../../README.md)
 
 *Raw directory:* [browse files in this folder](./)

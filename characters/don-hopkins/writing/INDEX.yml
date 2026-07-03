@@ -18,8 +18,8 @@ featured_essays:
     wwsff: ../pie-menus-chi-88-and-beyond.md
 
 evidence_room_hub:
-  path: ../will-wright-primary-sources-evidence-room.md
-  canonical: ../../characters/will-wright/sources/README.md
+  path: ../../will-wright/primary-sources-evidence-room.md
+  canonical: ../../will-wright/sources/README.md
   note: "Curated map from Don's bouquet to every major Will Wright sources cluster"
 
 wwsff_primary_sources:
@@ -50,4 +50,4 @@ donhopkins_research_mirror:
 
 see_also:
   - { path: ../career/contracts/README.md, why: "Legal primary sources for SimCity OSS" }
-  - { path: ../will-wright-primary-sources-evidence-room.md, why: "Complete cross-link hub to Will sources" }
+  - { path: ../../will-wright/primary-sources-evidence-room.md, why: "Complete cross-link hub to Will sources" }

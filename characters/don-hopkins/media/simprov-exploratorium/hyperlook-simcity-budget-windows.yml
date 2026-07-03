@@ -1,0 +1,18 @@
+# Sidecar — hyperlook-simcity-budget-windows.png
+
+artifact:
+  file: hyperlook-simcity-budget-windows.png
+  slug: hyperlook-simcity-budget-windows
+  room: simprov-exploratorium
+  what: HyperLook Exploratorium demo — simcity budget windows
+  era: early 1990s
+  sidecar_of: hyperlook-simcity-budget-windows.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
+
+see_also:
+  - ../pie-menus/INDEX.yml
+  - ../cellular-automata-tiles/INDEX.yml
+
+note: "Not AI Generated!"

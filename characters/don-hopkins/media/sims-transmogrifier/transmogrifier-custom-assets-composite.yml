@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-custom-assets-composite.png
+
+artifact:
+  file: transmogrifier-custom-assets-composite.png
+  slug: transmogrifier-custom-assets-composite
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — custom assets composite
+  era: 2000-2002
+  sidecar_of: transmogrifier-custom-assets-composite.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

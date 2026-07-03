@@ -1,0 +1,11 @@
+# Sidecar — misc-facebook-slats-berkeley.png
+
+artifact:
+  file: misc-facebook-slats-berkeley.png
+  slug: misc-facebook-slats-berkeley
+  category: misc
+  subcategory: facebook
+  what: "Slats in Berkeley"
+  sidecar_of: misc-facebook-slats-berkeley.png
+
+note: "Not AI Generated!"

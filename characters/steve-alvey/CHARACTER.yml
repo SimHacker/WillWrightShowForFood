@@ -22,7 +22,7 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  show_seed: repo-shows/heather-steve-alvey/
+  show_seed: repo-shows/heather-and-steve-alvey/
   likelihood: "warm — longtime friend + collaborator (SimProv; Micropolis publishing)"
 
 bio:
@@ -52,7 +52,7 @@ support:
   how: "Feature SliceCity + the catalog live; link their sites/stores as storefronts; spotlight subscriptions so the audience can directly support the work."
 
 show_suggestions:
-  - { seed: ../../repo-shows/heather-steve-alvey/, what: "The Alveys' whole-career show — SimSlice/SliceCity, SimFreaks, Zombie Sims, 26 years of artisanal UCC — and how to keep it thriving (Micropolis publishing; subscriptions). Flagship episode: Afterlife × ZombieSims." }
+  - { seed: ../../repo-shows/heather-and-steve-alvey/, what: "The Alveys' whole-career show — SimSlice/SliceCity, SimFreaks, Zombie Sims, 26 years of artisanal UCC — and how to keep it thriving (Micropolis publishing; subscriptions). Flagship episode: Afterlife × ZombieSims." }
 
 sources:
   web:
@@ -63,6 +63,6 @@ see_also:
   - { path: ../heather-alvey/, why: "Partner; SimFreaks; co-author of Zombie Sims" }
   - { path: ../will-wright/, why: "Worked with Will at Gallium Studios (Proxi)" }
   - { path: ../don-hopkins/, why: "Host — SimProv + Micropolis publishing collaborator" }
-  - { path: ../../repo-shows/heather-steve-alvey/, why: "Their show" }
+  - { path: ../../repo-shows/heather-and-steve-alvey/, why: "Their show" }
   - { path: ../../characters/will-wright/media/sims-simslice-README.md, why: "SliceCity screenshot gallery" }
   - { path: ../../process/trails/send-code-not-commands.md, why: "SliceCity = send code as content; Simopolis precedent" }

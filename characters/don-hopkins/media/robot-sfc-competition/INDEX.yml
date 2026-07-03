@@ -1,0 +1,22 @@
+# Robot Sfc Competition
+
+room:
+  id: robot-sfc-competition
+  category: robot
+  subcategory: sfc-competition
+  parent: ../INDEX.yml
+  count: 5
+
+artifacts:
+  - file: robot-sfc-competition-battlebot-pit-repair-wiring.png
+    sidecar: robot-sfc-competition-battlebot-pit-repair-wiring.yml
+  - file: robot-sfc-competition-chassis-internals-workbench.png
+    sidecar: robot-sfc-competition-chassis-internals-workbench.yml
+  - file: robot-sfc-competition-flipper-robot-pit-table.png
+    sidecar: robot-sfc-competition-flipper-robot-pit-table.yml
+  - file: robot-sfc-competition-rc-transmitter-pit-bench.png
+    sidecar: robot-sfc-competition-rc-transmitter-pit-bench.yml
+  - file: robot-sfc-competition-treaded-battlebot-side-profile.png
+    sidecar: robot-sfc-competition-treaded-battlebot-side-profile.yml
+
+note: "Not AI Generated!"

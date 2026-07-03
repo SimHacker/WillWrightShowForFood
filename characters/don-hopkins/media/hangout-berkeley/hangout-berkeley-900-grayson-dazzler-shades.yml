@@ -1,0 +1,21 @@
+# Sidecar — hangout-berkeley-900-grayson-dazzler-shades.png
+
+artifact:
+  file: hangout-berkeley-900-grayson-dazzler-shades.png
+  slug: hangout-berkeley-900-grayson-dazzler-shades
+  category: hangout
+  subcategory: berkeley
+  what: "900 Grayson — Don, Peter Swearengen, Ben Cerveny, Dazzler shades"
+  sidecar_of: hangout-berkeley-900-grayson-dazzler-shades.png
+
+facebook:
+  with: [Peter Swearengen, Ben Cerveny]
+  comments:
+    - author: Anselm Hook
+      text: "nice shades"
+    - author: Don Hopkins
+      text: "They're Dazzlers! http://en.wikipedia.org/wiki/Dazzler_(weapon)"
+    - author: Christian Cummings
+      text: "You guys have some sort of 3 musketeer mustaches... Good teamwork!"
+
+note: "Not AI Generated!"

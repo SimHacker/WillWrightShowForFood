@@ -1,0 +1,98 @@
+# Discussion pack — David S. H. Rosenthal × Don Hopkins (July 2026)
+# Async PIXIE segment + MOOLLM demo + literary canon. Send-ready digest for David.
+
+meta:
+  for: david-rosenthal
+  curated_by: don-hopkins
+  date: "2026-07-03"
+  consent: not_yet_asked
+  format: async_discussion
+  show: repo-shows/david-rosenthal/
+
+purpose: |
+  Artifacts for discussing with David: what to watch/read before a MOOLLM demo, what ties
+  to the PIXIE async segment, and reusable intro episodes (Palm, Dasher, Tog) as canon
+  backstory for later shows.
+
+logistics:
+  from: correspondence.yml
+  pivot: async_1_on_1
+  dshr_constraints:
+    - "9 hours from Amsterdam"
+    - "Grandparent duty through 2026-08-17"
+  scope_split:
+    pixie_show: "PDP-7/340 + Cambridge ~1970 — short segment"
+    this_show: "NeWS, X11, LOCKSS, MOOLLM, preservation depth"
+
+threads:
+  pdp7_hex:
+    title: "Let the machine win"
+    permission: "DSHR approved sending draft to Lars and Heins"
+    draft_url: https://www.abitare.org/~dshr/tmp/pdp7.html
+    artifact: ../../characters/david-rosenthal/media/pdp7-hex-let-machine-win.yml
+    gag: ../ideas/gags/let-the-machine-win.yml
+    lem_bridge: |
+      Stanisław Lem, *The Cyberiad* — Trurl's machine answers 2+2=7, rage-quits truth.
+      Satire on intelligence without humility; authority over correction.
+
+  coprophagia:
+    title: "Coprophagia Is Bad For You"
+    url: https://blog.dshr.org/2026/06/coprophagia-is-bad-for-you.html
+    artifact: ../../characters/david-rosenthal/literary/authority-without-truth.yml
+    hook: "Models eating model output until every story stars Elias the lighthouse keeper"
+
+  rautavaaras_case:
+    title: "Rautavaara's Case — Philip K. Dick (1980)"
+    artifact: ../../characters/david-rosenthal/literary/rautavaaras-case-pkd.yml
+    gag: ../ideas/gags/gods-eat-worshippers.yml
+    moollm_bridge: |
+      We, as gods, edit yaml jazz — simulated minds, sacraments inverted. PKD's Approximations
+      overwrite a dying brain's Christ vision with a cannibal savior; symmetry argument at trial.
+
+  moollm_demo:
+    title: "MOOLLM — yaml jazz orchestration for Repo Shows"
+    walkthrough: moollm-demo.yml
+    readings_show: ../moollm-readings/
+    pitch: |
+      Unholy cross of LambdaMOO and The Sims: filesystem as navigable microworld, skills as
+      inheritable prototypes, LLM as orchestrator — humans author, machines navigate and code
+      when asked. The readings link to the object network behind the generated text.
+
+watch_first:
+  role: primer_and_canon
+  note: "Reusable intro episodes — background for Palm, Dasher, Tog; not the PIXIE show itself"
+  episodes:
+    - id: palm-love-wave
+      title: "✋💜🌊 Palm Love Wave"
+      youtube: https://www.youtube.com/watch?v=4GS8Xx0ZTZI
+      file: ../moollm-readings/episodes/palm-love-wave.yml
+      introduces: [palm, moollm_microworld, yaml_jazz]
+    - id: marathon-turn-7
+      title: "Marathon Session Reading, Turn 7 — The Wish is Spoken"
+      youtube: https://www.youtube.com/watch?v=T-OIeUSc5vI
+      file: ../moollm-readings/episodes/marathon-turn-7-wish-spoken.yml
+      setting: "Vondelpark — hippies with guitar in the distance"
+      introduces: [palm, marathon_session, adventure_layer]
+    - id: dasher-palm-tog
+      title: "Dasher, Palm On Being Palm, Tog's Infinite Monkeys"
+      youtube: https://www.youtube.com/watch?v=lL2sw2oYU98
+      file: ../moollm-readings/episodes/dasher-palm-tog-monkeys.yml
+      introduces: [dasher, palm_on_being_palm, tog_monkeys]
+
+read_in_repo:
+  - path: ../../characters/palm/GLANCE.yml
+    why: "Palm — fictional AI philosopher; meet before later shows"
+  - path: ../moollm-readings/topics/dasher.yml
+    why: "David MacKay Dasher — deferred deep dive"
+  - path: ../moollm-readings/topics/tog-infinite-monkeys.yml
+    why: "Tog's essay — deferred"
+  - path: ../../characters/david-rosenthal/window-systems-lineage.yml
+    why: "Solo-show paper list and questions"
+  - path: ../pixie-pie-menus-pdp7.yml
+    why: "Async trio tapestry — DSHR Cambridge segment"
+
+see_also:
+  - SHOW.yml
+  - moollm-demo.yml
+  - ../../characters/david-rosenthal/correspondence.yml
+  - ../../characters/david-rosenthal/ideas.md

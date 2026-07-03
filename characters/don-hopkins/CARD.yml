@@ -41,9 +41,24 @@ connections_index:
       entries:
         - path: about-host.md
           blurb: Resume reimagined as a repo room — portfolio not pitch; one-screen map of the whole career arc.
+          opens: portrayal/upbringing.yml
+        - path: portrayal/upbringing.yml
+          blurb: DC Metro childhood, Gen X camp, Captain Chesapeake hosting lineage — who Don is before the career arc runs.
           opens: media.md
         - path: media.md
-          blurb: Photos and screenshots — Queen's Day LISP shirt, Sims era, Micropolis demos; face behind the frob panel.
+          blurb: Kitchen-sink media index — NeMACS, Turing, Queen's Day; JSONsters lives in its own gallery room.
+          opens: jsonsters/README.md
+        - path: jsonsters/README.md
+          blurb: JSON Monsters Unity tour — eight fictional patrons misread screenshots; reverse over-engineering as art.
+          opens: jsonsters/lecture-selling-art-to-virtual-characters.md
+        - path: jsonsters/lecture-selling-art-to-virtual-characters.md
+          blurb: Repo Show lecture — § auctions at ensemble beats; patrons jump out live.
+          opens: ../menagerie/INDEX.yml
+        - path: ../menagerie/INDEX.yml
+          blurb: Lower Chelsea Eight — reified fictional patrons with Sims + Mind Mirror souls.
+          opens: ../menagerie/RELATIONSHIP-MATRIX.yml
+        - path: ../menagerie/RELATIONSHIP-MATRIX.yml
+          blurb: Friendships, rivalries, love, enemies — plus symbolic edges to beds, cars, dogs, guest books.
           opens: career/lineage.yml
         - path: GLANCE.md
           blurb: Sniff card — five-line orientation; metadata SSOT paired with CARD.yml and CHARACTER.yml registry.
@@ -138,8 +153,8 @@ connections_index:
           opens: career/contracts/README.md
         - path: career/contracts/README.md
           blurb: DUX Maxis EA OLPC paper trail — contracts making open source legally possible, not merely wished for.
-          opens: will-wright-primary-sources-evidence-room.md
-        - path: will-wright-primary-sources-evidence-room.md
+          opens: ../will-wright/primary-sources-evidence-room.md
+        - path: ../will-wright/primary-sources-evidence-room.md
           blurb: Curated map to Will Wright evidence room — Winograd centerpiece, Motive.c, Transmogrifier hub, OLPC mail arc.
           opens: the-sims-transmogrifier-mod-tools.md
         - path: the-sims-transmogrifier-mod-tools.md

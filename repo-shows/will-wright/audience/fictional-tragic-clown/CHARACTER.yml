@@ -4,6 +4,8 @@ character:
   real_being: false
   signifier: "🤡"
   home: repo-shows/will-wright/audience/fictional-tragic-clown/
+  canonical_soul: characters/sims/tragic-clown/
+  prototype_ref: ../../../../characters/sims/tragic-clown/CHARACTER.yml
   origin: "The Sims — negative aura object; Sims cry near the painting"
 
 representation:
@@ -54,4 +56,6 @@ see_also:
   - ../fictional-grim-reaper/
   - ../bot-slats/
   - ../FICTIONAL-AUDIENCE.md
+  - ../../../../characters/sims/tragic-clown/
+  - ../../../../characters/menagerie/GUEST-ROSTER.yml
   - ../../../../process/repo-show-regulars.yml

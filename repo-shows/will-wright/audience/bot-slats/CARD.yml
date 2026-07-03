@@ -1,7 +1,7 @@
 card:
   name: Slats
   tagline: "SFC waiter brain — RoboResurrection pending"
-  character_ref: ../../../../characters/slats/CARD.yml
+  character_ref: ../../../../characters/robots/slats/CARD.yml
   abilities:
     - id: CALL-IN-MID-SHOW
       verb: interrupt

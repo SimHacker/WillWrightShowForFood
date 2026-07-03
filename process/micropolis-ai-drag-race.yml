@@ -68,7 +68,7 @@ challenges:
 
 judging:
   celebrity_judge:
-    slats: ../characters/slats/judge-rubric.yml
+    slats: ../characters/robots/slats/judge-rubric.yml
   panel: [slats, ai_scorecard, human_taste, spreadsheet_ref]
   criteria:
     - "Taste — eleganza, clarity, humor, constructionist generosity"
@@ -134,7 +134,7 @@ see_also:
   - { path: homefun-grading.yml, why: "Commit vs thinking blocks" }
   - { path: challenges/retrocomputing-drive.yml, why: "Retro rotation — apple2, ITS, LispM" }
   - { path: challenges/RETROCOMPUTING.md, why: "Generated retro umbrella markup" }
-  - { path: ../characters/slats/judge-rubric.yml, why: "Celebrity judge" }
+  - { path: ../characters/robots/slats/judge-rubric.yml, why: "Celebrity judge" }
   - { path: ../rigs/README.md, why: "Rig personas + SETUP DNA" }
   - { path: ../skills/repo-show/SKILL.md, why: "Same skill wraps drag race beats" }
   - { path: showmaker-network.yml, why: "Scoreboard + linked shows" }

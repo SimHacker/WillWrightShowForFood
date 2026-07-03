@@ -1,0 +1,46 @@
+# Maxis Suite 6 door — Emeryville office visit
+
+artifact:
+  file: maxis-suite-6-door.png
+  what: "Glass door — Suite 6, Maxis logo decal, wire-mesh safety glass; SimCity poster visible inside"
+
+location:
+  place: Maxis office
+  suite: "Suite 6"
+  city: Emeryville
+  california: true
+  note: "SIX AM spelled backwards — maxis ↔ Suite 6"
+
+visit:
+  don_hopkins: Photographer
+  with: [Ocean Quigley]
+  others: "and others at Maxis"
+  era: "Post-Sims reunion visit (~2013 Facebook post)"
+
+visual:
+  door: "Black frame, lever handle, Maxis orbit-logo on glass"
+  interior: "Ramp with handrail; framed SimCity poster on wall beyond"
+
+facebook:
+  shared: "Public — with Ocean Quigley"
+  circa: "~2013"
+  comments:
+    don_hopkins: "SIX AM spelled backwards!"
+    alexander_benz: "Old friends meet again 🙂"
+    bobby_busch: "Ancient Runes"
+
+repo_orbit:
+  ocean_quigley: ../../../will-wright/media/sims-series-maxis-people.yml#ocean-quigley
+  chm_display: ../../../will-wright/media/computer-history-museum-maxis-display.yml
+  sfc_emeryville: ../../../robots/slats/photos.md
+  work_history: ../../career/work-history.yml
+
+menagerie:
+  gregory: "Suite 6. SIX AM. I'm long nostalgia."
+  don: "Visiting Ocean Quigley. SIX AM spelled backwards."
+
+see_also:
+  - INDEX.yml
+  - ../../../will-wright/media/sims-series-maxis-people.yml
+
+note: "Not AI Generated!"

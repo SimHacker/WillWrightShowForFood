@@ -1,0 +1,11 @@
+# Sidecar — travel-amsterdam-space-invader-sticker.png
+
+artifact:
+  file: travel-amsterdam-space-invader-sticker.png
+  slug: travel-amsterdam-space-invader-sticker
+  category: travel
+  subcategory: amsterdam
+  what: "Space Invader sticker — turtle mothership joke"
+  sidecar_of: travel-amsterdam-space-invader-sticker.png
+
+note: "Not AI Generated!"

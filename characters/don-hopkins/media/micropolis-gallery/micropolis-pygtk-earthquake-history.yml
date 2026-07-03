@@ -1,0 +1,18 @@
+# Sidecar — micropolis-pygtk-earthquake-history.png
+
+artifact:
+  file: micropolis-pygtk-earthquake-history.png
+  slug: micropolis-pygtk-earthquake-history
+  room: micropolis-gallery
+  what: micropolis pygtk earthquake history
+  era: 1991 HyperLook through 2010s Facebook
+  sidecar_of: micropolis-pygtk-earthquake-history.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/micropolis-gallery.yml
+  - ../../../repo-shows/ideas/gags/pacbot-eats-traffic.yml
+
+see_also:
+  - micropolis-gallery.yml
+
+note: "Not AI Generated!"

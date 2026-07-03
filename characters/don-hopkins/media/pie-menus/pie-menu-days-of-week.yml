@@ -1,0 +1,18 @@
+# Sidecar — pie-menu-days-of-week.png
+
+artifact:
+  file: pie-menu-days-of-week.png
+  slug: pie-menu-days-of-week
+  room: pie-menus
+  what: pie menu days of week
+  era: CHI 1988 through Sims Online
+  sidecar_of: pie-menu-days-of-week.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
+
+see_also:
+  - pie-menus.yml
+  - ../news-tnt/INDEX.yml
+
+note: "Not AI Generated!"

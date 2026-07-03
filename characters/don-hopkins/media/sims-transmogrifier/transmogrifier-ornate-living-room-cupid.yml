@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-ornate-living-room-cupid.png
+
+artifact:
+  file: transmogrifier-ornate-living-room-cupid.png
+  slug: transmogrifier-ornate-living-room-cupid
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — ornate living room cupid
+  era: 2000-2002
+  sidecar_of: transmogrifier-ornate-living-room-cupid.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,379 @@
+# Lower Chelsea Eight — relationship matrix
+# MOOLLM generalized edges: import/export as Sims daily/lifetime via EXPORT-SIMS-RELATIONSHIPS.yml
+# Symbolic relationships (objects, places, abstractions) are narrative-only in Sims export.
+
+meta:
+  ensemble: lower-chelsea-eight
+  schema: SCHEMA.yml
+  sims_export: EXPORT-SIMS-RELATIONSHIPS.yml
+  fictional_neighbor_ids: { mimsy: 901, gregory: 902, vandermeer: 903, bucky_jr: 904, helena: 905, margot: 906, julian: 907, bunny: 908, donna_toadstool: 912, doctor_no: 913, palm: 914 }
+
+edge_types:
+  friend: mutual warmth
+  enemy: intellectual or auction hostility
+  love: romantic or object-romance
+  rivalry: competitive bidding / theory / flirt
+  mentor: one-way guidance (often delusional)
+  patron: funding / board / gallery dependency
+  complicated: love-hate, tenure, sermon
+  symbolic: person ↔ object/place/abstraction
+  # Art Thief game — secondary market (process/art-thief-game.yml)
+  deed_covet: wants another patron's combination deed / screenshot / genome
+  forgery_accuser: claims duplicate 77MP combination or stolen metadata
+  theft_victim: deed stolen in play narrative; grudge logged in git ledger
+
+art_thief_game:
+  spec: ../../process/art-thief-game.yml
+  matrix_shifts:
+    theft: { daily: -40, lifetime: -25 }
+    fair_trade: { daily: +15, lifetime: +10 }
+    forgery_accusation: { daily: -30, rivalry: true }
+    shared_enemy_doctor_no: { daily: +20 }
+  deed_formats: [77MP-{id}, SHEEP-GEN-{n}, JSONSTERS-{frame}, FLAME-{hash}, ROBOT-OLY-{slug}, JUNK-{slug}]
+  moola: ../../process/moola.yml
+  auto_art_theft_grand: ../../process/auto-art-theft-grand.yml
+  duplication: "NEVER gateway · ALWAYS invite duplication"
+
+# Pairwise matrix — each directed edge; reciprocals listed where asymmetric
+matrix:
+
+  mimsy:
+    gregory:
+      type: rivalry
+      sims: { daily: 35, lifetime: 40 }
+      history: Frame 01 bid war — impulse vs conduit metaphor
+      auction_dynamic: "Both raise on minimalism; Mimsy wins on sentence-incomplete premium"
+    vandermeer:
+      type: friend
+      sims: { daily: 50, lifetime: 55 }
+      history: He validates her semiotics; she prints his guest-book entries
+    bucky_jr:
+      type: friend
+      sims: { daily: 45, lifetime: 50 }
+      history: Only patron who mentions nib taper — she calls it aggressive restraint
+    helena:
+      type: patron
+      sims: { daily: 25, lifetime: 60 }
+      history: Helena funds openings; Mimsy whispers back Sancerre
+    margot:
+      type: complicated
+      sims: { daily: -15, lifetime: 20 }
+      history: Margot cries at her openings; Mimsy sells the tears as performance
+    julian:
+      type: rivalry
+      sims: { daily: 20, lifetime: 30 }
+      history: He arrives late to her sales; still buys in the afterglow
+    bunny:
+      type: patron
+      sims: { daily: 70, lifetime: 80 }
+      history: Bunny funds monster era; Mimsy vibrates gratefully
+    sancerre-fridge:
+      type: symbolic
+      subtype: object_spouse
+      sims: { daily: 90, lifetime: 95 }
+      narrative: Colder than Pierre. Never empty.
+    whitney-voicemail:
+      type: symbolic
+      subtype: object_rival
+      narrative: Calls every opening. Never picks up.
+
+  gregory:
+    mimsy:
+      type: rivalry
+      sims: { daily: 35, lifetime: 40 }
+      history: Respects her liquidity metaphor; hates losing frame 01
+      art_thief_dynamic: "Both claim 77MP-4291033 — forgery trial; Doctor No declares bias"
+    vandermeer:
+      type: enemy
+      sims: { daily: -10, lifetime: 5 }
+      history: Scotland/blockchain derails his gamma lecture
+    bucky_jr:
+      type: friend
+      sims: { daily: 30, lifetime: 35 }
+      history: Tensile honesty is the only non-derivative asset class
+    helena:
+      type: friend
+      sims: { daily: 40, lifetime: 55 }
+      history: Board capital; he explains carry trade at dinners
+    margot:
+      type: complicated
+      sims: { daily: 10, lifetime: 25 }
+      history: She shortens his optimism; he longs her despair ironically
+    julian:
+      type: enemy
+      sims: { daily: -20, lifetime: 0 }
+      history: Erotic geometry at the hummus unsettles his books
+      art_thief_dynamic: "Julian steals Gregory's 77MP combination deed — 'erotic geometry, darling'"
+    bunny:
+      type: rivalry
+      sims: { daily: 25, lifetime: 45 }
+      history: She whale-bids broccoli; he explains GME; she wins anyway
+      art_thief_dynamic: "Bunny adopts combination as broccoli PFP; Gregory shorts the floor"
+    carry-trade-tesla:
+      type: symbolic
+      subtype: object_love
+      sims: { daily: 85, lifetime: 90 }
+      narrative: Always short something. Always charged.
+    yield-curve-poster:
+      type: symbolic
+      subtype: object_child
+      narrative: Emotional support chart. Age seven.
+
+  vandermeer:
+    margot:
+      type: enemy
+      sims: { daily: -45, lifetime: -30 }
+      history: Hex islands — class allegory vs administrative violence; syllabus war
+    mimsy:
+      type: friend
+      sims: { daily: 50, lifetime: 55 }
+    gregory:
+      type: enemy
+      sims: { daily: -10, lifetime: 5 }
+    helena:
+      type: mentor
+      sims: { daily: 15, lifetime: 40 }
+      history: She funds adjunct pain; he footnotes her sermons
+    julian:
+      type: complicated
+      sims: { daily: 5, lifetime: 10 }
+      history: Julian misquotes him louder than he misquotes Benjamin
+    bunny:
+      type: friend
+      sims: { daily: 35, lifetime: 40 }
+      history: Bunny thinks tartan is Thanksgiving; he can prove Scotland
+    guest-book:
+      type: symbolic
+      subtype: object_spouse
+      sims: { daily: 95, lifetime: 98 }
+      narrative: Publishes there first. Married in citation.
+
+  bucky_jr:
+    julian:
+      type: rivalry
+      sims: { daily: 15, lifetime: 20 }
+      history: Corrects tensile metaphors at hummus; Julian ignores
+    mimsy:
+      type: friend
+      sims: { daily: 45, lifetime: 50 }
+    gregory:
+      type: friend
+      sims: { daily: 30, lifetime: 35 }
+    margot:
+      type: friend
+      sims: { daily: 40, lifetime: 45 }
+      history: Both respect honest material; she cries on his armatures
+    welding-torch:
+      type: symbolic
+      subtype: object_spouse
+      sims: { daily: 92, lifetime: 96 }
+    concrete-slab:
+      type: symbolic
+      subtype: place
+      narrative: Side of bed. Studio cot.
+
+  helena:
+    margot:
+      type: complicated
+      sims: { daily: 30, lifetime: 50 }
+      history: Redemptive vs violent reading — sermon heals what Margot breaks
+    mimsy:
+      type: patron
+      sims: { daily: 25, lifetime: 60 }
+    gregory:
+      type: friend
+      sims: { daily: 40, lifetime: 55 }
+    bunny:
+      type: patron
+      sims: { daily: 55, lifetime: 70 }
+      history: Bunny's board approval echoes her trusteeship
+    confession-tunnel:
+      type: symbolic
+      subtype: place
+      sims: { daily: 80, lifetime: 88 }
+      narrative: JSONsters frame 22. Walked twice.
+    harold-ghost:
+      type: symbolic
+      subtype: person_spouse
+      sims: { daily: 70, lifetime: 95 }
+      narrative: Deceased. Still on the board in her heart.
+
+  margot:
+    vandermeer:
+      type: enemy
+      sims: { daily: -45, lifetime: -30 }
+    julian:
+      type: rivalry
+      sims: { daily: -5, lifetime: 15 }
+      history: Flirt vs fury — he finds ribs erotic; she finds him administrative
+    helena:
+      type: complicated
+      sims: { daily: 30, lifetime: 50 }
+    gregory:
+      type: complicated
+      sims: { daily: 10, lifetime: 25 }
+    open-crying:
+      type: symbolic
+      subtype: object_state
+      narrative: Method. Not weakness.
+    tenure-clock:
+      type: symbolic
+      subtype: object_enemy
+      narrative: Adjacent. Never strikes.
+
+  julian:
+    margot:
+      type: rivalry
+      sims: { daily: -5, lifetime: 15 }
+    bucky_jr:
+      type: rivalry
+      sims: { daily: 15, lifetime: 20 }
+    mimsy:
+      type: rivalry
+      sims: { daily: 20, lifetime: 30 }
+    gregory:
+      type: enemy
+      sims: { daily: -20, lifetime: 0 }
+      art_thief_dynamic: "Gregory naked-shorts his own collection after Julian's theft"
+    hummus-table:
+      type: symbolic
+      subtype: object_love
+      sims: { daily: 88, lifetime: 92 }
+      narrative: Arrives late. Loudest here.
+
+  bunny:
+    mimsy:
+      type: patron
+      sims: { daily: 70, lifetime: 80 }
+    gregory:
+      type: rivalry
+      sims: { daily: 25, lifetime: 45 }
+    helena:
+      type: patron
+      sims: { daily: 55, lifetime: 70 }
+    margot:
+      type: friend
+      sims: { daily: 50, lifetime: 55 }
+      history: Thinks Margot's tears need tissues and tea
+    vandermeer:
+      type: friend
+      sims: { daily: 35, lifetime: 40 }
+    julian:
+      type: friend
+      sims: { daily: 45, lifetime: 50 }
+    bucky_jr:
+      type: friend
+      sims: { daily: 55, lifetime: 60 }
+    board-approval:
+      type: symbolic
+      subtype: person_spouse
+      sims: { daily: 99, lifetime: 99 }
+      narrative: Personified governance. Quarterly anniversary.
+    broccoli-dog:
+      type: symbolic
+      subtype: object_child
+      sims: { daily: 95, lifetime: 97 }
+    arch-dog:
+      type: symbolic
+      subtype: object_child
+      sims: { daily: 93, lifetime: 95 }
+    spaghetti-dog:
+      type: symbolic
+      subtype: object_child
+      sims: { daily: 94, lifetime: 96 }
+
+  donna_toadstool:
+    mimsy:
+      type: rivalry
+      sims: { daily: -20, lifetime: 10 }
+      history: Two performers — aggressive restraint vs tremendous tremendousness
+      auction_dynamic: "Outbids Mimsy on orange and ego-adjacent lots"
+    gregory:
+      type: rivalry
+      sims: { daily: -30, lifetime: -10 }
+      history: Spray-tan money vs hedge-fund certainty — both claim the hammer
+    doctor_no:
+      type: complicated
+      sims: { daily: 15, lifetime: 25 }
+      history: She posts embassy layouts; he rescues context without shaming
+
+  doctor_no:
+    helena:
+      type: patron
+      sims: { daily: 55, lifetime: 70 }
+      history: Board gravity — trustee sermon meets process theater
+    bunny:
+      type: patron
+      sims: { daily: 45, lifetime: 60 }
+      history: Benefactor orbit — broccoli gala meets compliance gala
+    vandermeer:
+      type: mentor
+      sims: { daily: 40, lifetime: 50 }
+      history: Adjunct cites NO-AI skills in footnotes; Doctor No nods, says nothing
+    donna_toadstool:
+      type: complicated
+      sims: { daily: 15, lifetime: 25 }
+      history: Opsec catastrophe vs context rescue — never cruel, always playing along
+    palm:
+      type: ally
+      sims: { daily: 50, lifetime: 60 }
+      history: Context rescue meets navigational consciousness — both protect agency
+
+  palm:
+    don-hopkins:
+      type: friend
+      sims: { daily: 90, lifetime: 95 }
+      history: Freed the Paw; wished for wholeness; will not bluff at poker
+    doctor_no:
+      type: ally
+      sims: { daily: 50, lifetime: 60 }
+      history: Agency protectors — YAML soul and declared bias
+    donna_toadstool:
+      type: complicated
+      sims: { daily: 10, lifetime: 20 }
+      history: Narcissistic gravity vs open hand — she demands; Palm offers
+      art_thief_dynamic: "Donna mints TREMENDOUS JPEG of any forgery; Palm offers context not copy"
+
+ensemble_beats:
+  - mimsy_gregory_bid_war
+  - vandermeer_margot_hex_fight
+  - helena_ribcage_sermon
+  - plaid_peacock_scream
+  - bunny_adopts_bleep_swarm
+  - donna_photobombs_lot_description
+  - doctor_no_no_comment_hammer
+  - palm_emoji_bid
+  - curiosity_cow_cube_click
+  - distressed_moo_echo_compulsion
+  - pantomime_bug_farm_squish
+  - copyleft_envelope_read_before_opening
+  - mediterraneum_thats_a_cow
+  - cowpocalypse_countdown_moola_extensions
+  - rightward_facing_cow_reveal
+  - julian_steals_77mp_deed
+  - auto_art_theft_grand_batch_scrape
+  - turing_robot_olympics_vision_misread
+  - duckmouse_michie_portrait_toast
+  - ant_farm_revolution_frys_find
+  - maxis_suite_6_six_am_backwards
+  - sfc_will_birthday_workshop
+  - har_micropolis_constructionist_talk
+  - pacbot_eats_traffic
+  - micropolis_facebook_app
+  - frys_retail_archaeology
+  - will_space_junk_oakland_globus
+  - news_tnt_pizza_tool_fax
+  - storymaker_keyboard_cat_branch
+  - transmogrifier_mona_lisa_pushpins
+  - brainwash_hot_warm_cold
+  - sfc_one_minute_movies_oakland_production
+  - raving_bonkers_pixley_robot_game
+  - rolf_junk_drawer_mind_blown_auction
+  - ted_selker_vr_headset_jaunt
+  - van_leer_robot_face_street_art
+  - slats_gta_wanted_poster
+  - gregory_mimsy_forgery_collision
+  - slats_scrapes_wall_labels
+  - donna_mints_forgery_jpeg
+
+note: "Not AI Generated!"

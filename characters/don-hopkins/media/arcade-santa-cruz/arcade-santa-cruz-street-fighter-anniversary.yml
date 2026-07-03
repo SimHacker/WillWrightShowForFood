@@ -1,0 +1,11 @@
+# Sidecar — arcade-santa-cruz-street-fighter-anniversary.png
+
+artifact:
+  file: arcade-santa-cruz-street-fighter-anniversary.png
+  slug: arcade-santa-cruz-street-fighter-anniversary
+  category: arcade
+  subcategory: santa-cruz
+  what: "Street Fighter Anniversary Ultracade"
+  sidecar_of: arcade-santa-cruz-street-fighter-anniversary.png
+
+note: "Not AI Generated!"

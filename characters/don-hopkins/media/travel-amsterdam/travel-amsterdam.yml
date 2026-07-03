@@ -1,0 +1,22 @@
+# Travel — Amsterdam (NDSM computer streets, C-Base, street art)
+
+room:
+  id: travel-amsterdam
+  category: travel
+  subcategory: amsterdam
+  parent: ../CATALOG-INDEX.yml
+
+themes:
+  computer_streets:
+    note: "Tuindorp Oostzaan / NDSM — Programmeurstraat, Hardwareweg, Modemstraat, Disketteweg, Scannerstraat"
+    see_also: ../robot-collection/van-leer-leather-press.yml
+  c_base:
+    club_mate: "A full fridge full of CLUB-MATE at C-Base. (Klub Mahtay as the German hackers call it.)"
+  street_art:
+    turtle_joke:
+      - author: David Den Ouden
+        text: "Don, this is no space invader. Just some lost turtle..."
+      - author: Don Hopkins
+        text: "It's the mothership that glides along the top of the screen!!!"
+
+note: "Per-file sidecars in this directory. Not AI Generated!"

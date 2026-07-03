@@ -1,5 +1,5 @@
 ---
-status: draft
+status: accepted
 character_id: will-wright
 public: true
 consent: invitation_accepted
@@ -8,8 +8,8 @@ show_seed: repo-shows/will-wright/
 
 # Repo Show invitation — Will Wright
 
-*Public draft — not sent. Will may edit, decline, delay, or request changes or removal at any time.*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.yml)
+*Accepted — Will loves the idea and is ready to go. He may edit, delay episodes, or request changes anytime.*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.yml) · [**Guest prototype**](guest-prototype.yml) (how we respect your time)
 
 ## Invitation
 
@@ -44,7 +44,7 @@ energy — not a required topic. Details: [slats-reincarnation.yml](https://gith
 
 | What                          | Link                                                                                                                                                                                                                                       |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 🤖 **Slats RoboResurrection** | [slats-reincarnation.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright/slats-reincarnation.yml) · [characters/slats](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/slats) |
+| 🤖 **Slats RoboResurrection** | [slats-reincarnation.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright/slats-reincarnation.yml) · [characters/robots/slats](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/robots/slats) |
 | Show hub                      | [repo-shows/will-wright/README.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright/README.md)                                                                                                          |
 | 1996 talk (centerpiece)       | [source bundle](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds) · [YouTube](https://www.youtube.com/watch?v=nsxoZXaYJSk)                       |
 | Root README                   | [github.com/SimHacker/WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood#readme)                                                                                                                                    |

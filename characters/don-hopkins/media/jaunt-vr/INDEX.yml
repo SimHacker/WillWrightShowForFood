@@ -1,0 +1,43 @@
+# Jaunt VR — Don Hopkins contractor era (2016–2017)
+# With Arthur van Hoff · cinematic 360° VR hardware + player
+
+room:
+  id: jaunt-vr
+  name: Jaunt VR
+  parent: ../../media.md
+  years: "2016–2017"
+  role: Contractor — Unity3D/JavaScript VR player; UnityJS open-sourced
+  colleague: ../../../arthur-van-hoff/CHARACTER.yml
+
+who:
+  don_hopkins: Contractor — VR player stack
+  arthur_van_hoff: "Jaunt VR — long-time collaborator; Turing/HyperLook → Java orbit"
+  ted_selker: "VR headset visit — considerate computing meets cinematic VR"
+
+hardware:
+  count: 12
+  highlights:
+    - jaunt-one-tripod-rti-case.png
+    - jaunt-prototype-1-august-2013.png
+    - jaunt-office-camera-table.png
+    - jaunt-lego-gopro-rig.png
+
+spec:
+  - jaunt-vr-era.yml
+  - ted-selker-vr-headset.yml
+
+related_media:
+  gosling_lunch: ../../../james-gosling/media/gosling-hobees-lunch.yml
+
+dedup:
+  uploaded: 13
+  kept: 13
+  note: "Gosling Hobee's lunch cropped for privacy — original not stored"
+
+see_also:
+  - ../../career/work-history.yml
+  - ../../../arthur-van-hoff/media/INDEX.yml
+  - ../../../james-gosling/media/gosling-hobees-lunch.yml
+  - ../../../ted-selker/media.md
+
+note: "Not AI Generated!"

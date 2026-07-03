@@ -1,0 +1,11 @@
+# Sidecar — travel-amsterdam-disketteweg-sign.png
+
+artifact:
+  file: travel-amsterdam-disketteweg-sign.png
+  slug: travel-amsterdam-disketteweg-sign
+  category: travel
+  subcategory: amsterdam
+  what: "Disketteweg street sign, Tuindorp Oostzaan"
+  sidecar_of: travel-amsterdam-disketteweg-sign.png
+
+note: "Not AI Generated!"

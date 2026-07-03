@@ -1,0 +1,17 @@
+room:
+  id: google-pacman
+  name: Google Pac-Man
+  parent: ../../media.md
+
+artifacts:
+  - google-pacman-doodle-maze.png
+  - google-pacman-maps-iphone.png
+
+spec:
+  - google-pacman.yml
+
+see_also:
+  - ../amsterdam-tile-art/INDEX.yml
+  - ../../../will-wright/media/gallium-gdc-alameda-pacman-will-wright.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,14 @@
+# Sidecar — travel-prague-don-hopkins-gargoyles-bracketed.png
+
+artifact:
+  file: travel-prague-don-hopkins-gargoyles-bracketed.png
+  slug: travel-prague-don-hopkins-gargoyles-bracketed
+  category: travel
+  subcategory: prague
+  what: "Don bracketed by Prague Castle gargoyles"
+  sidecar_of: travel-prague-don-hopkins-gargoyles-bracketed.png
+
+facebook:
+  - author: Don Hopkins
+    text: "I'm bracketed by gargoyles!"
+note: "Not AI Generated!"

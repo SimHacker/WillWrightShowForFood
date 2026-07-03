@@ -1,0 +1,17 @@
+# Sidecar — simcity-youre-a-winner.png
+
+artifact:
+  file: simcity-youre-a-winner.png
+  slug: simcity-youre-a-winner
+  room: cellular-automata-tiles
+  what: simcity youre a winner
+  era: ~2010-2011
+  sidecar_of: simcity-youre-a-winner.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/cellular-automata-simcity-tiles.yml
+
+see_also:
+  - ../micropolis-gallery/INDEX.yml
+
+note: "Not AI Generated!"

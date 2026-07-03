@@ -1,0 +1,11 @@
+# Sidecar — arcade-santa-cruz-flappy-bird-cabinet.png
+
+artifact:
+  file: arcade-santa-cruz-flappy-bird-cabinet.png
+  slug: arcade-santa-cruz-flappy-bird-cabinet
+  category: arcade
+  subcategory: santa-cruz
+  what: "Flappy Bird redemption cabinet"
+  sidecar_of: arcade-santa-cruz-flappy-bird-cabinet.png
+
+note: "Not AI Generated!"

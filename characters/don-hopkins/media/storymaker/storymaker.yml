@@ -1,0 +1,26 @@
+# StoryMaker — SFC iPhone branching-story UI (Bar Karma progenitor)
+
+storymaker:
+  what: "Collaborative branching storytelling — CreationTV → StoryMaker → Bar Karma"
+  platform: "iPhone — cross-nav + branching tree; T-Mobile era screenshots"
+  youtube:
+    comprehensive: "https://www.youtube.com/watch?v=_2yEHs_WLzQ"
+    bar_karma: "https://www.youtube.com/watch?v=Nb_-J1lv-B8"
+    asmr_wordless: "Don recorded wordless ASMR walkthrough on YouTube — screenshots match that demo era"
+
+screenshots:
+  - file: storymaker-first-episode-branching.png
+    what: "The first episode — yellow diamond arrows; branching thumbnails; No-sign decision node"
+  - file: storymaker-keyboard-cat-cross-nav.png
+    what: "Green cross navigation — Keyboard Cat center; storyboard sketch above"
+
+repo_orbit:
+  stupid_fun_club: ../../career/stupid-fun-club.yml
+  crazy_idea_jam: ../../../../process/crazy-idea-jam.yml#creationtv_storymaker
+  jason_shankel: ../../../jason-shankel/CARD.yml
+
+menagerie:
+  mimsy: "The story branches perform choice—"
+  don: "Keyboard Cat at the narrative crossroads. Of course."
+
+note: "Not AI Generated!"

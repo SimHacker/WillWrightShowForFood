@@ -1,0 +1,18 @@
+# Sidecar — hyperlook-alan-turing-clock-editor.png
+
+artifact:
+  file: hyperlook-alan-turing-clock-editor.png
+  slug: hyperlook-alan-turing-clock-editor
+  room: simprov-exploratorium
+  what: HyperLook Exploratorium demo — alan turing clock editor
+  era: early 1990s
+  sidecar_of: hyperlook-alan-turing-clock-editor.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
+
+see_also:
+  - ../pie-menus/INDEX.yml
+  - ../cellular-automata-tiles/INDEX.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,51 @@
+# David S. H. Rosenthal — GLANCE
+
+title: David S. H. Rosenthal
+iconic: "🗄️"
+description: |
+  NeWS + X11 bridge, LOCKSS preservation, Cambridge PDP-7/340 ~1970. PIXIE async co-bud;
+  solo show seed for NeWS/X11/LOCKSS depth. July 2026 — MOOLLM demo + literary thread with Don.
+
+keywords:
+  - david rosenthal
+  - dshr
+  - news
+  - x11
+  - icccm
+  - lockss
+  - pixie
+  - pdp-7
+
+navigation:
+  up: ../GLANCE.yml
+  card: CARD.yml
+  readme: README.md
+
+shows:
+  pixie_trio: ../../repo-shows/pixie-pie-menus-pdp7.yml
+  solo: ../../repo-shows/david-rosenthal/
+
+discussion_july_2026:
+  pack: ../../repo-shows/david-rosenthal/discussion-pack.yml
+  moollm_demo: ../../repo-shows/david-rosenthal/moollm-demo.yml
+  readings: ../../repo-shows/moollm-readings/
+
+literary:
+  - literary/authority-without-truth.yml
+  - literary/rautavaaras-case-pkd.yml
+  - ../mark-weiser/pkd-lem-ai-sf.md   # reading group lives with Mark's memorial (Ubik→ubicomp seed)
+
+media:
+  - media/pdp7-hex-let-machine-win.yml
+
+read_order:
+  - README.md
+  - correspondence.yml
+  - ../../repo-shows/david-rosenthal/discussion-pack.yml
+  - ideas.md
+  - window-systems-lineage.yml
+
+see_also:
+  - { path: invitation.md, why: "PIXIE trio invitation" }
+  - { path: ../heinz-lemke/, why: "Co-bud — same PDP-7 stack" }
+  - { path: ../lars-brinkhoff/, why: "Co-bud — emulation" }

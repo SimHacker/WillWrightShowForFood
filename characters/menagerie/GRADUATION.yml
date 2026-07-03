@@ -1,0 +1,103 @@
+# Menagerie — graduation lifecycle
+# Instance-first in jsonsters/critics.yml → characters/menagerie/ → live repo-shows
+
+lifecycle:
+  stages:
+    - id: instance
+      where: characters/don-hopkins/jsonsters/critics.yml
+      what: Voices, wallets, misreadings — JSONsters premiere cast only
+    - id: character
+      where: characters/menagerie/<slug>/
+      what: CHARACTER.yml + simoleons + collection; playable simulation tier
+    - id: audience
+      where: repo-shows/<show>/audience/fictional-<slug>/
+      what: Per-episode TicketPR instance — questions, journal, show-specific bids
+    - id: live
+      where: repo-shows/<show>/ on air
+      what: Patrons bid, banter, jump out of the JSONsters story — ensemble beats performed
+
+  jump_out_moment: |
+    After the JSONsters lecture premieres, patrons are no longer trapped in the Chelsea white-cube
+    fiction. They enter the Repo Show as labeled simulations — bidding §, heckling real guests,
+    misreading whatever artifact is on screen (NeMACS, Turing robot, Micropolis graphs). Same
+    voices; new walls.
+
+graduation:
+  authored_by: don-hopkins
+  consent: self_sovereign_fictional
+  portrayal_tier: game_and_fictional
+  rule: |
+    NOT real people. Always labeled fictional gallery patrons. OK to simulate per
+    schemas/portrayal-standards.yml#simulation.tiers.game_and_fictional.
+
+  on_graduate:
+    - Copy wallet from jsonsters/simoleon-auctions.yml patron_wallets → CHARACTER.yml simoleons
+    - Copy lens/voice from critics.yml → portrayal block
+    - Link acquired lots from jsonsters/AUCTIONS.yml → collection field
+    - Sims traits + mind_mirror + symbolic_attachments in CHARACTER.yml (see SCHEMA.yml)
+    - Ensemble edges in RELATIONSHIP-MATRIX.yml; Sims export in EXPORT-SIMS-RELATIONSHIPS.yml
+    - Register in characters/INDEX.yml gallery_patrons roster
+    - Optional: fork to repo-shows/<show>/audience/fictional-<slug>/ for episode
+
+  live_performance:
+    invokable_by: [don-hopkins, don-philahue, host]
+    beats:
+      - bid_in_character during § auctions
+      - misread_artifact on any gallery walk (fork critics.yml per collection)
+      - banter_with_each_other and real guests
+      - jump_from_JSONsters_story — reference lecture premiere as backstory
+    shows:
+      seed: repo-shows/ideas/jsonsters-gallery-lecture.yml
+      later: [will-wright, nemacs-gallery, turing-institute-walk, any-repo-show-with-screenshots]
+
+roster:
+  - id: mimsy
+    slug: mimsy-caldwell
+    name: Mimsy Caldwell
+    signifier: "🥂"
+    status: reified
+    prototype: ../../don-hopkins/jsonsters/critics.yml#critics.mimsy
+  - id: gregory
+    slug: gregory-kwan
+    name: Gregory Kwan
+    signifier: "📈"
+    status: reified
+  - id: vandermeer
+    slug: eli-vandermeer
+    name: Prof. Eli Vandermeer
+    signifier: "📚"
+    status: reified
+  - id: bucky_jr
+    slug: bucky-jr
+    name: Bucky Jr.
+    signifier: "🔧"
+    status: reified
+  - id: helena
+    slug: helena-featherstone
+    name: Helena Featherstone
+    signifier: "🕯️"
+    status: reified
+  - id: margot
+    slug: margot-krell
+    name: Margot Krell
+    signifier: "⚔️"
+    status: reified
+  - id: julian
+    slug: julian-strait
+    name: Julian Strait
+    signifier: "💋"
+    status: reified
+  - id: bunny
+    slug: bunny-whitmore
+    name: Bunny Whitmore
+    signifier: "🥦"
+    status: reified
+
+see_also:
+  - INDEX.yml
+  - ../../don-hopkins/jsonsters/critics.yml
+  - ../../don-hopkins/jsonsters/simoleon-auctions.yml
+  - ../../schemas/portrayal-standards.yml#simulation
+  - ../../repo-shows/will-wright/audience/FICTIONAL-AUDIENCE.md
+
+note: "Not AI Generated!"

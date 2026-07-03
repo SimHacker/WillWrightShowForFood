@@ -1,0 +1,25 @@
+# Arthur van Hoff — media room
+# Birthday party · N333ST plane · Turing Glasgow orbit · HyperLook lineage
+
+room:
+  id: arthur-van-hoff-media
+  name: Arthur van Hoff — media
+  parent: ../CHARACTER.yml
+
+artifacts:
+  - birthday-party.png
+  - plane-n333st-cockpit.png
+  - plane-n333st-exterior.png
+
+spec:
+  - birthday-party.yml
+  - plane-n333st-cockpit.yml
+  - plane-n333st-exterior.yml
+
+see_also:
+  - ../CHARACTER.yml
+  - ../../don-hopkins/media/jaunt-vr/INDEX.yml
+  - ../../don-hopkins/media/turing-institute/INDEX.yml
+  - ../../../repo-shows/arthur-van-hoff/
+
+note: "Not AI Generated!"

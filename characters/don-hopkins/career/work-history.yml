@@ -15,6 +15,7 @@ employment_timeline:
     years: "2022–present"
     role: Consultant
     note: Procedural voxel worlds, cellular automata
+    media: ../../will-wright/media/gallium-gdc-alameda-pacman-will-wright.yml
 
   - org: Ground Up Software
     years: "2017–present"
@@ -30,17 +31,21 @@ employment_timeline:
     years: "2016–2017"
     role: Contractor
     note: Unity3D/JavaScript VR player; UnityJS open-sourced
+    media: ../media/jaunt-vr/INDEX.yml
+    colleague: ../../arthur-van-hoff/CHARACTER.yml
 
   - org: Stupid Fun Club / Syntertainment
     years: "2002–2003, 2009–2014"
     role: Research Programmer
     boss: Will Wright
+    media: ../media/sfc-emeryville/INDEX.yml
     see_also: stupid-fun-club.yml
 
   - org: TomTom
     years: "2007–2009"
     role: Senior Developer
-    location: Amsterdam
+    location: Amsterdam — Oosterdok
+    media: ../media/oosterdok-bike-parking-tomtom.yml
     note: "Day job. On the side at the Bluebird coffeeshop: iLoci Memory Palace app + Mobile Dev Camp talk (2008), then the Amsterdam Coffeeshops app + BONGO BINGO (2009) — which led Will Wright to invite Don back to Stupid Fun Club. See stupid-fun-club.yml#how_don_rejoined_will"
 
   - org: NutritionQuest / Block Dietary
@@ -59,10 +64,12 @@ employment_timeline:
     years: "1997–2000 FT, 2000–2007 contractor"
     role: Senior Developer
     product: The Sims
+    media: ../media/maxis-emeryville/INDEX.yml
     note: |
       Pie menus, VitaBoy, Transmogrifier, OLPC SimCity open source push.
       OLPC/Micropolis: Python Sugar adaptor around TCL/Tk SimCity; PyGTK/Pango/Cairo desktop UI
       (see simcity-lineage.yml#implementation).
+    micropolis_gallery: ../media/micropolis-gallery/INDEX.yml
     see_also: simcity-lineage.yml
 
   - org: Interval Research
@@ -82,8 +89,12 @@ employment_timeline:
     note: Opal graphics, pie menu window manager
 
   - org: Turing Institute
-    years: "1992"
-    note: HyperLook; SimCity port; Arthur van Hoff
+    years: "1991–1992"
+    place: Glasgow
+    note: |
+      HyperLook with Arthur van Hoff — shipped HyperLook and SimCity on top of it.
+      Turing ran Robot Olympics (Don not present; Arthur's legendary tee).
+    media: ../media/turing-institute/INDEX.yml
 
   - org: Sun Microsystems
     years: "1987 intern, 1990–1991"
@@ -113,6 +124,8 @@ key_contributions:
     what: The Sims character animation system
   transmogrifier:
     what: Sims modding tool — kickstarted UGC community
+    media: ../../will-wright/media/transmogrifier-mona-lisa-pushpins.yml
+    note: "Mona Lisa pushpins — 3DS Max UV exporter test into Sims objects"
   unityjs:
     url: https://github.com/SimHacker/UnityJS
 

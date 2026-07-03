@@ -30,6 +30,7 @@ see_also:
   - { path: SKILL.md, why: "Protocol depth" }
   - { path: ../../process/cross-links.yml#repo_show_spine, why: "Mind-expanding trail from here" }
   - { path: ../../process/repo-show-format.yml, why: "Format girder" }
+  - { path: ../../process/repo-show-branding.yml, why: "Orchestration + branding — rituals, cultural excerpts" }
   - { path: ../../process/FORMAT.md, why: "Generated markup" }
   - { path: ../../repo-shows/README.md, why: "Show collection" }
   - { path: ../../repo-shows/will-wright/README.md, why: "Flagship" }

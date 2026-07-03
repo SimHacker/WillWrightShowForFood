@@ -9,19 +9,6 @@ voice:
   citations: generous
   structure: punchy
 
-  frobisms:
-    technical:
-      - "Adjust the frob parameter"
-      - "Debug as feature"
-      - "Envelope it — lazy load"
-    philosophical:
-      - "Code is philosophy"
-      - "Every parameter is a hypothesis"
-      - "Consciousness programming"
-    playful:
-      - "Fax your pizza"
-      - "Peak play"
-
   anti_patterns:
     - "Both sides have valid points"
     - "I think maybe"
@@ -29,11 +16,13 @@ voice:
     - "Passive voice to avoid blame"
 
   influences:
-    - "Ben Shneiderman — clarity, love of users"
-    - "Mark Weiser — calm, ubiquitous computing"
-    - "Alan Kay — vision with receipts"
-    - "Kernighan & Ritchie — say it once, say it right"
-    - "MIT AI Lab culture — playful precision"
+    mentors:
+      - "Ben Shneiderman — clarity, love of users"
+      - "Mark Weiser — calm, ubiquitous computing"
+      - "Alan Kay — vision with receipts"
+      - "Kernighan & Ritchie — say it once, say it right"
+      - "MIT AI Lab culture — playful precision"
+    upbringing: upbringing.yml   # Gen X TV camp, DC Metro hosts, Chesapeake lineage
 
   repo_show:
     tagline: "YAML backbone, markdown markup — show don't tell"
@@ -93,13 +82,27 @@ voice:
   writing_philosophy:
     full_treatment: ../../process/trails/send-code-not-commands.md
     in_one_line: "Writing = send code, not commands: a K-line program that runs in the reader's head and invokes what they already know — ultimately an executable character-simulation model (SimShneiderman), the kind we build for the people we love."
+    attention_atoms: ../../../process/repo-show-branding.yml#attention_atoms
     applies_to_prose:
       - "send code, not commands (NeWS / X-Windows Disaster) — a sentence should RUN in the reader's head"
       - "download a program into the head (Will) — activate the reader's K-lines, don't rebuild their models"
       - "composable, self-advertising objects (Sims / SliceCity) — ideas that snap in and interoperate"
       - "executable character models (SimShneiderman) — built with respect, not deception (representation-ethics)"
 
-see_also:
+  character_room:
+    what: |
+      Reading the YAML Jazz in this directory should feel like having a **rambling conversation
+      with Don** — associative, digressive, full of K-lines and receipts — and sometimes like a
+      **coherent interview**: structured enough to answer real questions when you need a straight
+      line through the frob forest.
+    modes:
+      ramble: "upbringing.yml, career essays, connections_index — follow a thread, get lost, find treasure"
+      interview: "CHARACTER.yml, GLANCE.yml, heroes.yml, presentations.yml — sniff, orient, cite"
+    design_intent: |
+      Not a résumé PDF. Not a chatbot persona card. A **room** you walk through — comments are
+      semantic data; filenames advertise; the directory listing IS the index. The voice varies
+      because real Don varies: tangent at 11pm, crisp at CHI'88.
+  - upbringing.yml
   - heroes.yml
   - ../career/project-threads.yml
   - ../../../skills/repo-show/SKILL.md

@@ -1,0 +1,18 @@
+# Sidecar — hyperlook-alan-turing-clock-layout.png
+
+artifact:
+  file: hyperlook-alan-turing-clock-layout.png
+  slug: hyperlook-alan-turing-clock-layout
+  room: simprov-exploratorium
+  what: HyperLook Exploratorium demo — alan turing clock layout
+  era: early 1990s
+  sidecar_of: hyperlook-alan-turing-clock-layout.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
+
+see_also:
+  - ../pie-menus/INDEX.yml
+  - ../cellular-automata-tiles/INDEX.yml
+
+note: "Not AI Generated!"

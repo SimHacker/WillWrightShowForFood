@@ -1,0 +1,11 @@
+# Sidecar — misc-facebook-tomtom-iphone-wwdc-soma.png
+
+artifact:
+  file: misc-facebook-tomtom-iphone-wwdc-soma.png
+  slug: misc-facebook-tomtom-iphone-wwdc-soma
+  category: misc
+  subcategory: facebook
+  what: "TomTom on iPhone at WWDC SOMA"
+  sidecar_of: misc-facebook-tomtom-iphone-wwdc-soma.png
+
+note: "Not AI Generated!"

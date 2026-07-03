@@ -1,0 +1,59 @@
+# Provenance — 1996 Winograd talk transcripts
+
+video:
+  id: nsxoZXaYJSk
+  url: https://www.youtube.com/watch?v=nsxoZXaYJSk
+  title: "Will Wright — Maxis — Interfacing to Microworlds — 1996-04-26"
+  event: "Terry Winograd CS547 HCI Seminar, Stanford University"
+  date: 1996-04-26
+  stanford_archives: https://searchworks.stanford.edu/view/yj113jt5999
+  uploaded_youtube_by: Don Hopkins
+  youtube_upload_note: Jan 2023 mirror from Stanford Archives scan (COVID-era recovery)
+
+canonical:
+  file: ../transcript.md
+  also: ../transcript-summary.md
+  author: Don Hopkins
+  method: hand-proofread from YouTube auto-captions + listening pass
+  status: authoritative_for_quotes
+  footer: |
+    Automatic closed captioning by YouTube, cleaned up and clarified by Don Hopkins.
+    Report typos/sync problems to don@donhopkins.com.
+  medium_article: https://donhopkins.medium.com/designing-user-interfaces-to-simulation-games-bd7a9d81e62d
+
+reference_cache:
+  directory: .
+  downloaded: 2026-07-04
+  tool: yt-dlp
+  extractor_args: "youtube:player_client=android"
+  files:
+    - youtube-auto-en.en.vtt
+    - youtube-auto-en.en.json3
+    - youtube-auto-en.timeline.tsv
+  purpose: timestamp verification, clip cut discovery, diff against canonical
+  not_for: on-air quotes, publication without Don's transcript
+
+regenerate_timeline: |
+  python3 -c "
+  import json; from pathlib import Path
+  p = Path('youtube-auto-en.en.json3')
+  data = json.loads(p.read_text())
+  out = Path('youtube-auto-en.timeline.tsv')
+  with out.open('w') as f:
+      f.write('sec\\tdisplay\\ttext\\n')
+      for ev in data.get('events', []):
+          if not ev.get('segs'): continue
+          t = ev['tStartMs']/1000
+          h,m,s = int(t//3600), int((t%3600)//60), t%60
+          ts = f'{h}:{m:02d}:{s:05.2f}' if h else f'{m}:{s:05.2f}'
+          text = ''.join(s.get('utf8','') for s in ev['segs']).replace('\\n',' ').strip()
+          if text: f.write(f'{t:.3f}\\t{ts}\\t{text}\\n')
+  "
+
+sync_notes:
+  - hand_transcript_uses_round_seconds; youtube_cache_subsecond
+  - pivotal_moment_student_question_youtube: "1:08:19.600"
+  - pivotal_moment_oh_god_hand: "1:08:19–1:08:38" (speaker labels in canonical)
+  - pivotal_moment_oh_god_youtube_auto: "~1:08:33–1:08:38" (caption merges speakers — use canonical text)
+  - cliffhanger_cut_before: "Let me show you something real quick" @ youtube ~1:09:55.120
+  - dollhouse_demo_start: "1:10:02" canonical / ~1:10:01.600 youtube

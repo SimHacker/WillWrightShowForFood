@@ -10,7 +10,21 @@ show:
   guests: ["Will Wright"]
   character: characters/will-wright/    # represented, living, consent level 3
   topic: TOPIC-LESS                 # Will Wright is the topic — talk about anything he wants.
-  status: planted                   # seed → PLANTED → DISTILL → public repo LIVE → INVITE
+  status: planted                   # accepted guest — crystallization anchor
+  guest_prototype: ../../characters/will-wright/guest-prototype.yml
+
+ensemble:
+  # The medium — not appointment TV. See guest-prototype.yml#ensemble_medium
+  shape: shotgun_blast
+  moollm_stage: ../../process/moollm-stage.yml
+  what: |
+    An ensemble of multimedia artifacts — intertwingled, time-shifted, pausable, fast-forwardable,
+    skippable, jumpable, transcribed, linked, and yaml-defined. Video is one thread through the
+    repo; the repo is the show. Will's kickoff crystallizes this pattern for every show after.
+  navigate: "Transcript → link → open in Cursor → edit/run → jump back to timestamp — audience assembles their own path"
+  attention_economy: |
+    Built for eyeball economy + bumblebee attention spans — skim, skip, jump. Guests and audience
+    both get to be seen and heard without pretending anyone has three uninterrupted hours.
 
 public_repo:
   url: https://github.com/SimHacker/WillWrightShowForFood
@@ -49,10 +63,15 @@ why:
 
 format:
   canonical: ../../process/repo-show-format.yml
-  live: true
-  audience_qa: true
+  guest_prototype: ../../characters/will-wright/guest-prototype.yml
+  default_tier: ongoing_one_on_one   # couple-and-solo-shows.yml — async, respect Will's time
+  live: true                         # optional special tier — not the default ask
+  audience_qa: true                  # async via repo; live chat only on special events
   the_repo_show: "A Repo Show: the artifact + stage is this repo. 'So you have a Repo to Show us?'"
-  production_style: "Live Twitch Event. Will is a huge draw. We can avoid the 'ghost town' by priming the repo with his 1996 talk PLUS a 1-on-1 teaser."
+  production_style: |
+    **Default:** async one-on-one when Will chooses — minimally intrusive, episodes over time.
+    Repo + audience prime the conversation; Don does homework. Live Twitch is a **special event**
+    if Will wants it — not the opening ask.
   pump_priming: |
     Announce the repo ahead of time. Audience submits HN comments, issues, and TicketPRs
     (repo-shows/<show>/audience/<github-user>/) — including before the guest accepts.

@@ -1,0 +1,19 @@
+# Sidecar — keychains-mixed-cluster.png
+
+artifact:
+  file: keychains-mixed-cluster.png
+  slug: keychains-mixed-cluster
+  room: rolf
+  what: keychains mixed cluster
+  era: TomTom-era Amsterdam
+  sidecar_of: keychains-mixed-cluster.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/rolf-junk-auction.yml
+
+see_also:
+  - INDEX.yml
+  - raving-bonkers.yml
+  - ../robot-collection/INDEX.yml
+
+note: "Not AI Generated!"

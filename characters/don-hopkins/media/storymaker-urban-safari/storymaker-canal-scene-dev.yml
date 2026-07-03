@@ -1,0 +1,15 @@
+# Sidecar — storymaker-canal-scene-dev.png
+
+artifact:
+  file: storymaker-canal-scene-dev.png
+  slug: storymaker-canal-scene-dev
+  room: storymaker-urban-safari
+  what: storymaker canal scene dev
+  era: 2011
+  sidecar_of: storymaker-canal-scene-dev.png
+
+see_also:
+  - ../storymaker/INDEX.yml
+  - ../amsterdam-tile-art/INDEX.yml
+
+note: "Not AI Generated!"

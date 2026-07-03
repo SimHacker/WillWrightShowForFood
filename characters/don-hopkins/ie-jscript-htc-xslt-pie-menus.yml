@@ -1,0 +1,10 @@
+# Sidecar — ie-jscript-htc-xslt-pie-menus.md
+topic:
+  id: ie-jscript-htc-xslt-pie-menus
+  hn_threads: [44393817]
+  repos:
+    - SimHacker/IE-JScript-HTC-PieMenus
+    - SimHacker/ConnectedTVSkinEditor
+  cross_links:
+    - connectedtv-touch-tuning-finger-pies.md
+    - pie-menus-chi-88-and-beyond.md

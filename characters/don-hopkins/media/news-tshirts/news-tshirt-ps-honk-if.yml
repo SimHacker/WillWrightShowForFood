@@ -1,0 +1,15 @@
+# Sidecar — news-tshirt-ps-honk-if.png
+
+artifact:
+  file: news-tshirt-ps-honk-if.png
+  slug: news-tshirt-ps-honk-if
+  room: news-tshirts
+  what: news tshirt ps honk if
+  era: late 1980s-1990s
+  sidecar_of: news-tshirt-ps-honk-if.png
+
+see_also:
+  - ../news-tnt/INDEX.yml
+  - ../hyperties/INDEX.yml
+
+note: "Not AI Generated!"

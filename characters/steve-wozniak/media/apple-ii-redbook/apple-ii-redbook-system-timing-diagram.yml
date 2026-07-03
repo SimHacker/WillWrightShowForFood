@@ -1,0 +1,16 @@
+# Sidecar — apple-ii-redbook-system-timing-diagram.png
+
+artifact:
+  file: apple-ii-redbook-system-timing-diagram.png
+  slug: apple-ii-redbook-system-timing-diagram
+  source: Apple II Red Book (Reference Manual)
+  designer: Steve Wozniak
+  what: "System timing — 14M oscillator, Φ0–Φ3, COLOR REF waveforms"
+  sidecar_of: apple-ii-redbook-system-timing-diagram.png
+
+provenance:
+  photographed_by: Don Hopkins
+  facebook: "Happy 70th Birthday Woz!"
+  classiccmp: http://www.classiccmp.org/cpmarchives/AppleII/Apple%20II%20(Redbook).pdf
+
+note: "Not AI Generated!"

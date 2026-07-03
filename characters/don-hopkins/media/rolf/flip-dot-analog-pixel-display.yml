@@ -1,0 +1,19 @@
+# Sidecar — flip-dot-analog-pixel-display.png
+
+artifact:
+  file: flip-dot-analog-pixel-display.png
+  slug: flip-dot-analog-pixel-display
+  room: rolf
+  what: flip dot analog pixel display
+  era: TomTom-era Amsterdam
+  sidecar_of: flip-dot-analog-pixel-display.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/rolf-junk-auction.yml
+
+see_also:
+  - INDEX.yml
+  - raving-bonkers.yml
+  - ../robot-collection/INDEX.yml
+
+note: "Not AI Generated!"

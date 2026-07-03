@@ -1,0 +1,11 @@
+# Sidecar — travel-berlin-waag-dissection-paintings.png
+
+artifact:
+  file: travel-berlin-waag-dissection-paintings.png
+  slug: travel-berlin-waag-dissection-paintings
+  category: travel
+  subcategory: berlin
+  what: "Waag Society dissection paintings"
+  sidecar_of: travel-berlin-waag-dissection-paintings.png
+
+note: "Not AI Generated!"

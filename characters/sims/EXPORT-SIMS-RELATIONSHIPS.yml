@@ -1,0 +1,43 @@
+# Sims cast — neighbor export for gallery-opening ensemble
+# Extends menagerie 901–908 with Sims icons 909–911
+
+export:
+  format: sims-uplift
+  neighbor_id_base: 909
+  pairs_with: ../menagerie/EXPORT-SIMS-RELATIONSHIPS.yml
+
+neighbors:
+  bella_goth:
+    neighbor_id: 909
+    slug: bella-goth
+    daily:
+      mortimer_goth: 85
+      tragic_clown: 20
+      mimsy_caldwell: 15
+    lifetime:
+      mortimer_goth: 95
+      tragic_clown: 30
+  mortimer_goth:
+    neighbor_id: 910
+    slug: mortimer-goth
+    daily:
+      bella_goth: 85
+      mimsy_caldwell: 25
+      gregory_kwan: 10
+    lifetime:
+      bella_goth: 95
+      mimsy_caldwell: 40
+  tragic_clown:
+    neighbor_id: 911
+    slug: tragic-clown
+    daily:
+      bella_goth: 20
+      mortimer_goth: 15
+      julian_strait: 35
+      slats: 25
+    lifetime:
+      bella_goth: 30
+      julian_strait: 50
+
+gallery_opening_edges:
+  note: Narrative-only symbolic edges; full matrix in menagerie/GUEST-ROSTER.yml#cross_edges

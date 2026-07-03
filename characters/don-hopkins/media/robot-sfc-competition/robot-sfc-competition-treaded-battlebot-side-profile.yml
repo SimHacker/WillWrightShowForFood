@@ -1,0 +1,11 @@
+# Sidecar — robot-sfc-competition-treaded-battlebot-side-profile.png
+
+artifact:
+  file: robot-sfc-competition-treaded-battlebot-side-profile.png
+  slug: robot-sfc-competition-treaded-battlebot-side-profile
+  category: robot
+  subcategory: sfc-competition
+  what: "Treaded battlebot side profile on pit table"
+  sidecar_of: robot-sfc-competition-treaded-battlebot-side-profile.png
+
+note: "Not AI Generated!"

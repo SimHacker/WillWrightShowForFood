@@ -1,0 +1,19 @@
+# Sidecar — keychains-astronaut-nikolayev-white.png
+
+artifact:
+  file: keychains-astronaut-nikolayev-white.png
+  slug: keychains-astronaut-nikolayev-white
+  room: rolf
+  what: keychains astronaut nikolayev white
+  era: TomTom-era Amsterdam
+  sidecar_of: keychains-astronaut-nikolayev-white.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/rolf-junk-auction.yml
+
+see_also:
+  - INDEX.yml
+  - raving-bonkers.yml
+  - ../robot-collection/INDEX.yml
+
+note: "Not AI Generated!"

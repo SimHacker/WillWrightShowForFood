@@ -1,0 +1,52 @@
+# Copyleft (L) envelope — Don Hopkins → Richard Stallman, 1984
+
+event:
+  year: 1984
+  from: "Don Hopkins, 7219 Ruatan St., College Park, MD"
+  to: "Richard M. Stallman, 545 Tech Square, Cambridge, MA"
+  contents: "68000 manual Don borrowed from RMS — returning by mail"
+  outcome: "Sticker inspired Stallman to use the word *copyleft* for free software licensing"
+  wikipedia: "https://en.wikipedia.org/wiki/Copyleft#History"
+  gnu_art: "https://www.gnu.org.cach3.com/graphics/copyleft-sticker.en.html"
+  license: "CC BY-SA 4.0 (GNU art page, Don Hopkins 2014)"
+
+files:
+  front: ../copyleft-envelope-front-1984.png
+  back_sticker: ../copyleft-envelope-back-1984.png
+
+front_art:
+  address: "545 TECH SQUARE — hand-drawn block letters"
+  doodles: "Grinning creature, screaming mouth, DON'T GET WE..., THANK YOU!, claw marks"
+  commands: "DON'T FOLD !!!!!!! — POSTAGE box"
+
+sticker_text:
+  attention: "READ NOTE BEFORE OPENING!"
+  mark: "Copyleft (L)"
+  body: |
+    The material contained in this envelope is Copyleft (L) 1984 by an amoeba named "Tom".
+    Any violation of this stringent pact with person or persons who are to remain un-named
+    will void the warrantee of every small appliance in your kitchen, and furthermore, you
+    will grow a pimple underneath your fingernail. Breaking the seal shows that you agree to
+    abide by Judith Martin's guidelines concerning the choosing of fresh flowers to be put on
+    the dining room table. Failure to break the seal on a weekday is […]
+  margin: "SPAM column — repeated graffiti typography"
+
+repo_jokes:
+  lisp_parallel: "../metropolitan-rage-warehouse-mit.yml"
+  morningstar_parallel: "Mail-art deconstruction — cousin to How to Deconstruct the Cube"
+  li_chen_wang: "@COPYLEFT ALL WRONGS RESERVED — Palo Alto Tiny BASIC, Dr. Dobb's 1976"
+  stallman_line: "Copyleft — all rights reversed"
+
+gallery_placement:
+  wing: "Opposite Bug Farm — squish compulsion meets copyleft reciprocity"
+  menagerie:
+    margot_krell: "The envelope performs administrative violence on copyright itself."
+    gregory: "Viral licensing — I'm long the pimple-under-fingernail clause."
+    don: "An amoeba named Tom wrote your license. You're welcome."
+
+see_also:
+  - INDEX.yml
+  - ../../../../repo-shows/ideas/gags/how-to-deconstruct-the-cube.yml
+  - ../../../../process/moola.yml
+
+note: "Not AI Generated!"

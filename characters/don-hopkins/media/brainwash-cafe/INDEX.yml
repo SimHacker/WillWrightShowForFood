@@ -1,0 +1,16 @@
+# Brainwash Cafe / Laundromat — Folsom St, San Francisco (closed)
+
+room:
+  id: brainwash-cafe
+  name: Brainwash Cafe
+  parent: ../../media.md
+  location: "Folsom Street, San Francisco"
+  status: closed
+
+artifacts:
+  - brainwash-cafe-logo.png
+
+spec:
+  - brainwash-cafe.yml
+
+note: "Not AI Generated!"

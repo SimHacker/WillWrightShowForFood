@@ -1,0 +1,69 @@
+# 77 Million Paintings — Brian Eno generative art package (2006)
+# The "ten bazillion" you remember — combinatorial infinity sold as limited edition
+# Social-commentary anchor for simulated opening + art-thief game
+
+product:
+  title: "77 Million Paintings"
+  artist: Brian Eno
+  released: 2006-09-25
+  second_edition: 2008-01-14
+  format: "Limited-edition DVD/software package (Mac + PC)"
+  not: "A CD-ROM of 77 million image files — 296 hand-made slides, layered 4 at a time"
+
+package:
+  discs:
+    - generative_software: "DVD-Rom — evolving light painting + generative music on screen"
+    - interview_dvd: "Eno discusses generative software and light as medium"
+  book: "52-page hardbound essay — visual art career; Walter Benjamin / 'original' in age of reproduction"
+
+how_it_works:
+  slides: 296
+  layers: "Up to 4 overlaid asynchronously; slow crossfade"
+  combinations: "~77 million possible image/soundscapes — never the same twice"
+  eno_quote_energy: |
+    Millions of originals created and disappear, replaced by millions more.
+    The seed is authored; the instance is unpredictable — even to the artist.
+  repo_show_joke: |
+    Patrons hear "seventy-seven million" and think scarcity drop.
+    Don hears "two hundred ninety-six slides and rules" — same as NFT metadata.
+
+patron_scale_joke:
+  menagerie_count: 8
+  pretend_scale: "ten bazillion patrons"
+  line: |
+    Gregory: "Seventy-seven million paintings, ten bazillion bids — the liquidity is breathtaking."
+    Mimsy: "I bought combination 4,291,033 before finishing my—"
+    Don: "There are eight of you. And one DVD. From 2006."
+    Vandermeer: "Scotland invented combinatorics."
+
+auction_all_combinations:
+  rule: "We do NOT hammer 77 million lots — we sell the *idea* of owning combinations"
+  tiers:
+    magnificent:
+      - { lot: lot-77mp-software-disc, wall_title: "Generative Software Disc — The Seed" }
+      - { lot: lot-77mp-combination-floor, wall_title: "Combination Space Floor (Abstract Deed)" }
+    quick_sale:
+      - "Patron buys 'their' unique combination number — §2,400 — red dot"
+      - "Ten patrons claim the same combination — forgery arc begins"
+    deed_format: "77MP-{random_combination_id} — wall-title in patron collection field"
+
+duplication_policy:
+  mantra: "NEVER gateway · ALWAYS invite duplication"
+  moola: ../../process/moola.yml
+
+social_commentary_targets:
+  ai_scraping: "Menagerie reviews train Slats; Donna NFTs the reviews; artist seed untouched"
+  ai_generated_images: "Gregory can't tell slide from diffusion; doesn't care"
+  crypto_nft: "Combination deed = mint pass; false scarcity on infinite variety"
+  attention_economy: "Mimsy buys before wall text loads; Bunny adopts combination as PFP"
+  bored_apes: "Bunny's broccoli PFP; Sheep genome as blue-chip; Gregory shorts the ape"
+  originality: "Eno already wrote the Benjamin essay in the book; patrons never read it"
+  training_data_moola: "Submit misread reviews → AI god → worthless MOOLA — that IS the joke"
+
+see_also:
+  - simulated-opening.yml
+  - ../../process/moola.yml
+  - ../../process/art-thief-game.yml
+  - ../../characters/brian-eno/
+
+note: "Not AI Generated!"

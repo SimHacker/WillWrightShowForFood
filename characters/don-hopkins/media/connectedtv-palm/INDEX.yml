@@ -1,0 +1,18 @@
+# ConnectedTV on Palm
+
+room:
+  id: connectedtv-palm
+  name: ConnectedTV on Palm
+  parent: ../../media.md
+
+artifacts:
+  - connectedtv-palm-m505-tvguide.png
+
+spec:
+  - connectedtv-palm.yml
+
+see_also:
+  - ../../career/work-history.yml
+  - ../simfaux/INDEX.yml
+
+note: "Not AI Generated!"

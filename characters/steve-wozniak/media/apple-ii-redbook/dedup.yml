@@ -1,0 +1,12 @@
+# Apple II Red Book — dedup manifest
+
+dedup:
+  uploaded: 12
+  kept: 11
+  dropped:
+    - source_uuid: 85a7cd47-baff-4498-87a2-03ee141f6837
+      reason: duplicate_figure
+      duplicate_of: apple-ii-redbook-fig-s01-system-diagram.png
+      note: "Same FIG S-1 system diagram — different scan/crop; kept b1bf82f5"
+
+note: "Not AI Generated!"

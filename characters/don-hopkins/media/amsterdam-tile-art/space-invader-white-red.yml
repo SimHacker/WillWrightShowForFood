@@ -1,0 +1,14 @@
+# Sidecar — space-invader-white-red.png
+
+artifact:
+  file: space-invader-white-red.png
+  slug: space-invader-white-red
+  room: amsterdam-tile-art
+  what: space invader white red
+  era: ~2010-2011
+  sidecar_of: space-invader-white-red.png
+
+see_also:
+  - ../storymaker-urban-safari/INDEX.yml
+
+note: "Not AI Generated!"

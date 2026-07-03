@@ -1,0 +1,51 @@
+# JSONsters — gallery room
+# Don Hopkins character · top-level artwork directory (not media kitchen-sink)
+
+room:
+  id: jsonsters
+  name: JSONsters
+  tagline: JSON Monsters — Unity3D graph visualization + patron simulation
+  parent: ../CHARACTER.yml
+  user_facing: README.md
+
+what_lives_here:
+  artwork: 32 Unity screenshots (evolution 01–28 + monster era 4)
+  simulation: Eight fictional NYC patrons who misread every frame
+  instance_first: critics.yml — fork for other gallery shows
+  economy: Simoleon auctions — sell art to virtual patrons for § (play money)
+  guest_ritual: ../../process/simulated-art-opening.yml
+
+show:
+  lecture: lecture-selling-art-to-virtual-characters.md
+  opening_night: art-opening-night.yml
+  auctions: simoleon-auctions.yml
+  ledger: AUCTIONS.yml
+  repo_show_seed: ../../repo-shows/ideas/jsonsters-gallery-lecture.yml
+
+files:
+  README.md: User-facing tour — characters + embedded pictures
+  lecture-selling-art-to-virtual-characters.md: Repo Show lecture — reverse over-engineering + § auctions
+  art-opening-night.yml: Opening night script — tiered sales, room walk, crypto parody
+  simoleon-auctions.yml: Patron wallets, premiere + scarcity auction modes
+  AUCTIONS.yml: Lot ledger — hammer log (fill after air)
+  series.yml: Technical metadata, evolution phases, repo truth
+  reviews.yml: Per-piece wall titles and patron reviews
+  critics.yml: Patron menagerie (JSONsters premiere cast)
+  tour.md: Machine-readable full review tables
+
+lineage:
+  engine: Unity3D
+  inspired_by: PseudoScientific Visualizer
+  labels: [Blob, Bloop, Bleep]
+  facebook_circa: "~8 years ago"
+
+see_also:
+  - ../../menagerie/GRADUATION.yml
+  - ../../menagerie/INDEX.yml
+  - ../pie-menus-chi-88-and-beyond.md
+  - ../media.md
+  - ../media/pantomime/INDEX.yml
+  - ../../repo-shows/ideas/gags/pantomime-gallery.yml
+  - ../../repo-shows/REPO-SHOWS.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,132 @@
+# PKD · Lem · AI · SF — companion data for pkd-lem-ai-sf.md
+# Reading-group artifactory kept with Mark's memorial (seed: he named ubicomp after Ubik).
+# Memorial mode for Mark: represent/discuss, never speak-as. Standards: ../../schemas/portrayal-standards.yml
+
+meta:
+  id: pkd-lem-ai-sf
+  home: characters/mark-weiser/
+  doc: pkd-lem-ai-sf.md
+  curated_by: don-hopkins
+  consent: not_yet_asked
+  framing: "conversation hooks grounded in public work — no fabricated quotes, no speak-for; Mark in memorial mode"
+  seed: "Weiser named ubiquitous computing after PKD's Ubik — the one fact that opens the whole thread"
+  concept: ../../process/artifactory.yml   # this doc is itself an artifactory — an artifact that builds artifacts
+  seeded_from:
+    - ../david-rosenthal/correspondence.yml   # Lem 2+2=7 + Coprophagia + MOOLLM readings
+    - ../david-rosenthal/media/pdp7-hex-let-machine-win.yml
+    - ../david-rosenthal/literary/rautavaaras-case-pkd.yml
+    - ../david-rosenthal/literary/authority-without-truth.yml
+
+thesis: |
+  Read PKD and Lem as literal engineering specs. Each story = an authored reality with a
+  demiurge inside it, plus an arrow of entropy. The AI era instantiates the premise; the only
+  open variable is Weiser's: calm servant vs Palmer Eldritch.
+
+# CLAIM-LEDGER — every factual claim handled before it enters the repo (no-ai-slop).
+claim_ledger:
+  weiser_coined_ubicomp_after_ubik:
+    status: CONFIRMED
+    detail: "Weiser coined 'ubiquitous computing' (PARC, 1988), explicitly referencing PKD's Ubik as ironically dystopian, inverted into 'calm technology'."
+    sources: [https://en.wikipedia.org/wiki/Ubiquitous_computing, https://en.wikipedia.org/wiki/Mark_Weiser]
+    primary_source: |
+      Don heard it directly from Mark — Don was Weiser's student at UMD and a close friend until
+      Weiser's death. Mark cited the Ubik scene where Joe Chip is trapped in his apartment, unable
+      to afford the fee to open his own door (Don recalls him borrowing coins from the toaster) as
+      the dystopia calm technology was built to avoid. Attributed to Don's memory; not a Weiser quote.
+  vicki_reich_widow_of_weiser:
+    status: CONFIRMED
+    detail: "Victoria 'Vicky' Reich was married to Mark Weiser (d. 1999); daughters Nicole & Corinne Reich-Weiser."
+    sources: ["Weiser memorial bio (cs.berkeley.edu/Weiser/bio)", https://en.wikipedia.org/wiki/Mark_Weiser]
+  reich_rosenthal_cofounded_lockss:
+    status: CONFIRMED
+    detail: "Victoria Reich & David S. H. Rosenthal founded LOCKSS (1999, Stanford); shared 2025 Paul Evan Peters Award."
+    sources: [https://www.lockss.org/about/history, "CNI 2025 award"]
+  david_married_to_vicki:
+    status: DISPUTED_UNVERIFIED
+    detail: |
+      Not in the public record we found; public materials describe David and Vicki as LOCKSS
+      co-founders / professional partners, and one summary says they are not married. David's own
+      marital status is his to state, not ours. DO NOT publish as fact.
+    action: defer_to_david
+    published: false
+  don_relationships:
+    status: CONFIRMED_BY_DON
+    detail: "Don was Mark Weiser's student (UMD) and close friend until Weiser's death; long-time friend of David. Primary source for the Weiser/Ubik thread."
+  stigmata_is_the_sims:
+    status: INTERPRETATION
+    detail: "Don's reading: Perky Pat layouts (dolls in dollhouses, inhabited via Can-D) + Eldritch's stigmata in every avatar = The Sims + provenance-in-every-character. Defensible, labeled as reading not fact."
+  counterclock_reverse_christianity:
+    status: INTERPRETATION
+    detail: "Hobart Phase = entropy reversed; resurrection as default, Eucharist mirrored, digestion backward. Don's reading grounded in the novel's premise."
+  lem_2plus2_equals_7:
+    status: CONFIRMED
+    detail: "Lem, 'Trurl's Machine' (Cyberiad): machine insists 2+2=7, rejects correction, rampages. Also in ../david-rosenthal/media/pdp7-hex-let-machine-win.yml."
+
+mappings:
+  ubik:
+    work: "PKD — Ubik (1969)"
+    reads_as: "Ubiquitous computing (Weiser, PARC 1988)"
+    entropy: "dystopia inverted into calm technology; Ubik-the-spray reverses reality decay"
+    draw_in: mark-weiser
+  palmer_eldritch:
+    work: "PKD — The Three Stigmata of Palmer Eldritch (1965)"
+    reads_as: "The Sims — Perky Pat layouts; Chew-Z 'eternal life'; stigmata = maker's mark in every avatar"
+    entropy: "author descends into the sim; provenance visible in every character"
+    draw_in: will-wright
+  counter_clock_world:
+    work: "PKD — Counter-Clock World (1967)"
+    reads_as: "Christianity with the arrow reversed — resurrection as thermodynamics; the Anarch as commercial asset"
+    entropy: "Hobart Phase; reverse digestion = reverse-coprophagia = model-collapse mirror"
+    draw_in: preservation_thread
+  rautavaara:
+    work: "PKD — 'Rautavaara's Case' (Omni, 1980)"
+    reads_as: "Theophagia inversa — reverse Eucharist; the god eats the faithful, defended in court"
+    entropy: "sacrament mirrored"
+    deep_file: ../david-rosenthal/literary/rautavaaras-case-pkd.yml
+  trurls_machine:
+    work: "Lem — 'Trurl's Machine' (Cyberiad, 1965)"
+    reads_as: "Authority over truth; confidently-wrong AI — model collapse / DSHR Coprophagia"
+    entropy: "correction rejected -> collapse"
+    draw_in: david-rosenthal
+    deep_file: ../david-rosenthal/literary/authority-without-truth.yml
+
+reflexive_punchline: |
+  MOOLLM (LambdaMOO x The Sims) makes the PKD premise literal: gods edit the minds of simulated
+  characters via yaml jazz; the author's marks are the stigmata on every character. Calm vs
+  predatory demiurge = the repo's procedural answer: Player-in-the-Middle, consent, labeled
+  simulation, portrayal standards. LOCKSS = an engineered Hobart Phase (preservation as applied
+  eschatology).
+
+feeds_shows:
+  - { show: ../../repo-shows/remembering-mark-weiser.yml, angle: "Ubik -> ubicomp -> calm tech, told by people who knew Mark" }
+  - { show: ../../repo-shows/david-rosenthal/, angle: "LOCKSS as Hobart Phase; coprophagia/model collapse; Hex-that-cheats" }
+  - { show: ../will-wright/, angle: "Palmer Eldritch / The Sims" }
+
+open_questions:
+  - "Weiser inverted Ubik to 'calm' — did the field keep the calm or ship the dystopia?"
+  - "Is 'lots of copies keep stuff safe' the antidote to model collapse (coprophagia)?"
+  - "Is digital preservation a deliberately engineered reversal of entropy?"
+  - "Bug vs a machine defending its authority — Hex-that-cheats and Lem's 2+2=7."
+
+participants:
+  mark-weiser:     { mode: memorial, note: "1952-1999; this is his dir; represent/discuss, no speak-as; Don's teacher & friend; David knew him; CHI'88 pie-menu co-author" }
+  david-rosenthal: { mode: invitation_guest, consent: not_yet_asked, basis: public_work_only, note: "knew Mark; can speak to it firsthand" }
+  vicki-reich:     { mode: welcome_co_guest, consent: not_yet_asked, note: "LOCKSS co-founder; Weiser's widow; own body of work. Don would love both — David AND Vicki's call, together" }
+  will-wright:     { mode: guest, consent: invitation_accepted }
+  philip-k-dick:   { mode: discuss_about, note: "deceased author; published work" }
+  stanislaw-lem:   { mode: discuss_about, note: "deceased author; published work" }
+  don-hopkins:     { mode: host, consent: self_sovereign, note: "primary source for Weiser/Ubik thread" }
+
+klines: [ubik, ubiquitous-computing, calm-technology, palmer-eldritch, perky-pat, the-sims,
+         counter-clock-world, hobart-phase, theophagia-inversa, model-collapse, coprophagia,
+         lockss, hobart-phase-preservation, player-in-the-middle, author-god, stigmata-as-provenance]
+
+see_also:
+  - { path: pkd-lem-ai-sf.md, why: "human-readable discussion doc" }
+  - { path: memorial.md, why: "Mark's memorial — represent + discuss" }
+  - { path: ../../repo-shows/remembering-mark-weiser.yml, why: "memorial show — async clips cut together" }
+  - { path: ../david-rosenthal/correspondence.yml, why: "seed thread — Lem 2+2=7 + Coprophagia + MOOLLM readings" }
+  - { path: ../david-rosenthal/literary/rautavaaras-case-pkd.yml, why: "PKD plot + MOOLLM yaml jazz bridge" }
+  - { path: ../david-rosenthal/literary/authority-without-truth.yml, why: "Lem + coprophagia + Hex" }
+  - { path: ../david-rosenthal/media/pdp7-hex-let-machine-win.yml, why: "let-the-machine-win + Cyberiad parallel" }
+  - { path: ../will-wright/, why: "The Sims / Palmer Eldritch reading" }

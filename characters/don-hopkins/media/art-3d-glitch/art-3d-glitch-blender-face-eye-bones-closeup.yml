@@ -1,0 +1,17 @@
+# Sidecar — art-3d-glitch-blender-face-eye-bones-closeup.png
+
+artifact:
+  file: art-3d-glitch-blender-face-eye-bones-closeup.png
+  slug: art-3d-glitch-blender-face-eye-bones-closeup
+  category: art
+  subcategory: 3d-glitch
+  what: "Blender face close-up — octahedral eye bones, inside-out mouth mesh"
+  sidecar_of: art-3d-glitch-blender-face-eye-bones-closeup.png
+
+work:
+  client: AI Foundation
+  era: "~2020 character animation pipeline interview"
+  stack: [Character Creator 3, iClone, Blender, Unity]
+  see_also: ../../portrayal/presentations.yml
+
+note: "Not AI Generated!"

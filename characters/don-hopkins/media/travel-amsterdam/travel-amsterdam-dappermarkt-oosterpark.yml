@@ -1,0 +1,11 @@
+# Sidecar — travel-amsterdam-dappermarkt-oosterpark.png
+
+artifact:
+  file: travel-amsterdam-dappermarkt-oosterpark.png
+  slug: travel-amsterdam-dappermarkt-oosterpark
+  category: travel
+  subcategory: amsterdam
+  what: "Dappermarkt / Oosterpark"
+  sidecar_of: travel-amsterdam-dappermarkt-oosterpark.png
+
+note: "Not AI Generated!"

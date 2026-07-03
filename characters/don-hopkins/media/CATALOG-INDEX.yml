@@ -1,0 +1,34 @@
+# Don Hopkins media — category index (big-endian dirs)
+
+catalog:
+  convention: category-first slugs + co-located sidecars
+  sidecars_complete: "2026-07 — 387/387 PNGs have matching .yml"
+  legacy_index: LEGACY-INDEX.yml
+  rooms:
+    - arcade-santa-cruz/INDEX.yml
+    - broadcast-current-tv/INDEX.yml
+    - culture-holiday/INDEX.yml
+    - computing-sun-brochure/INDEX.yml
+    - computing-umd/INDEX.yml
+    - computing-vintage/INDEX.yml
+    - hangout-berkeley/INDEX.yml
+    - art-3d-glitch/INDEX.yml
+    - memorial-sf/INDEX.yml
+    - misc-art/INDEX.yml
+    - misc-facebook/INDEX.yml
+    - misc-magazine/INDEX.yml
+    - misc-personal/INDEX.yml
+    - olpc-demos/INDEX.yml
+    - olpc-dinners/INDEX.yml
+    - robot-sfc-battlebots/INDEX.yml
+    - robot-sfc-competition/INDEX.yml
+    - robot-sfc-telepresence/INDEX.yml
+    - software-blabber/INDEX.yml
+    - software-openlaszlo/INDEX.yml
+    - software-simcity-tcl-tk/INDEX.yml
+    - software-simfreaks/INDEX.yml
+    - travel-amsterdam/INDEX.yml
+    - travel-berlin/INDEX.yml
+    - travel-prague/INDEX.yml
+
+note: "Not AI Generated!"

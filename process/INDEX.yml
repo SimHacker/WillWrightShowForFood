@@ -85,6 +85,11 @@ live_and_training:
   brain-stream.yml:
     markup: BRAIN-STREAM.md
     app: ../apps/stream-gateway/
+  moola.yml:
+    topic: "MOOLA — native worthless play currency; §/gold/art exchange; training-data-for-tokens joke; burn & hole performances"
+  auto-art-theft-grand.yml:
+    topic: "Auto Art Theft Grand — Slats batch-scrapes all deeds; GTA pun; MOOLA compensation theater"
+    parent: art-thief-game.yml
   model-branching.yml:
     topic: "Fork model at bubble — compare trajectories"
   orchestration-gold.yml:
@@ -93,6 +98,23 @@ live_and_training:
 themes:
   old-band-back-together.yml:
     topic: "Reunions as a recurring show FORMAT — NeWS gang, Sims team, David Levitt crew, OpenLaszlo, the 2006 Eno circle, …"
+
+concepts:
+  artifactory.yml:
+    topic: "Artifactory — an artifact factory / universal constructor / self-reproducing automaton (von Neumann 29-state → Trurl & Klapaucius → class factories & ctors → Ubik debuggers → PKD's Autofac). MOOLLM skills as artifactories; calm vs runaway construction."
+    ties_to: ../characters/mark-weiser/pkd-lem-ai-sf.yml
+    skill: https://github.com/SimHacker/moollm/tree/main/skills/artifactory
+  artifactorio.yml:
+    topic: "Artifactorio — the GAME about skill-skills: Factorio where assemblers build assemblers (artifactory-factories). Papert-grounded (objects-to-think-with); calm-constructor-vs-Autofac as win/lose."
+    ties_to: artifactory.yml
+
+methodology:
+  lift-pipeline.yml:
+    topic: "WWSFF↔MOOLLM lift pipeline — dogfood concrete here, then LIFT proven core down into public MOOLLM skills. Use before abstract; concrete (repo-show) before generic (show); intentional dogfooding scheduling."
+    ties_to: ../skills/repo-show/
+    skill: https://github.com/SimHacker/moollm/tree/main/skills/play-learn-lift
+  handoff-hn-mining-queue.yml:
+    topic: "Session handoff — HN thread mining queue, prioritized artifacts, open sourcing tasks"
 
 vision:
   vision-and-ambition.yml:

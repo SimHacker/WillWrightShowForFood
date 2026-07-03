@@ -18,7 +18,7 @@ You know the games; this repo is a public conversation about how they were desig
 | 4 | [**Will CARD**](../../characters/will-wright/CARD.md) | Simulator Effect, implication over simulation — named traditions |
 | 5 | [**Chaim Gingold**](../../characters/chaim-gingold/CARD.yml) | Building SimCity — the simulation loop drawn as diagrams |
 | 6 | [**Drag Race**](../DRAG-RACE.md) | Game-show format inside the repo — rig personas, Slats judges |
-| 7 | [**Slats**](../../characters/slats/CARD.yml) | Robot waiter from Stupid Fun Club films — fictional judge card |
+| 7 | [**Slats**](../../characters/robots/slats/CARD.yml) | Robot waiter from Stupid Fun Club films — fictional judge card |
 
 ---
 

@@ -1,0 +1,19 @@
+# Sidecar — rolf-beard-clock-mechanism-mind-blown.png
+
+artifact:
+  file: rolf-beard-clock-mechanism-mind-blown.png
+  slug: rolf-beard-clock-mechanism-mind-blown
+  room: rolf
+  what: rolf beard clock mechanism mind blown
+  era: TomTom-era Amsterdam
+  sidecar_of: rolf-beard-clock-mechanism-mind-blown.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/rolf-junk-auction.yml
+
+see_also:
+  - INDEX.yml
+  - raving-bonkers.yml
+  - ../robot-collection/INDEX.yml
+
+note: "Not AI Generated!"

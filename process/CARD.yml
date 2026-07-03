@@ -31,6 +31,8 @@ methods:
 
 entries:
   format: { yaml: repo-show-format.yml, markup: FORMAT.md }
+  moola: { yaml: moola.yml, topic: "Native play currency — exchange, duplication policy, performances" }
+  auto_art_theft_grand: { yaml: auto-art-theft-grand.yml, topic: "AATG — Slats batch-scrapes deeds at GTA scale" }
   drag_race: { yaml: micropolis-ai-drag-race.yml, markup: DRAG-RACE.md }
   retro: { yaml: challenges/retrocomputing-drive.yml, markup: challenges/RETROCOMPUTING.md }
   ai_offs: { yaml: ai-offs.yml, markup: AI-OFFS.md }

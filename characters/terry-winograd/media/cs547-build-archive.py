@@ -59,6 +59,7 @@ WWSFF = [
     ("Gosling", "james-gosling"),
     ("Alan Kay", "alan-kay"),
     ("Ted Selker", "ted-selker"),
+    ("Amy Jo Kim", "amy-jo-kim"),
     ("Scott Kim", "scott-kim"),
     ("Ken Kahn", "ken-kahn"),
     ("Ben Shneiderman", "ben-shneiderman"),

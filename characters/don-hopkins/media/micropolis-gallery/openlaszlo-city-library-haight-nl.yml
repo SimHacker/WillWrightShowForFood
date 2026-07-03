@@ -1,0 +1,18 @@
+# Sidecar — openlaszlo-city-library-haight-nl.png
+
+artifact:
+  file: openlaszlo-city-library-haight-nl.png
+  slug: openlaszlo-city-library-haight-nl
+  room: micropolis-gallery
+  what: openlaszlo city library haight nl
+  era: 1991 HyperLook through 2010s Facebook
+  sidecar_of: openlaszlo-city-library-haight-nl.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/micropolis-gallery.yml
+  - ../../../repo-shows/ideas/gags/pacbot-eats-traffic.yml
+
+see_also:
+  - micropolis-gallery.yml
+
+note: "Not AI Generated!"

@@ -72,6 +72,23 @@ intro_ritual:
   catchphrase: ["So you have a Repo to Show us?", "You sure have a great Repo to Show us!"]
   opener: "This episode's repos are:"
 
+guest_rituals:
+  simulated_art_opening:
+    spec: ../../process/simulated-art-opening.yml
+    tagline: "Menagerie buys your art for § — start the show buried in worthless Simoleons"
+    prototype: ../../characters/don-hopkins/jsonsters/
+    per_guest: repo-shows/<slug>/simulated-opening.yml
+  art_thief:
+    spec: ../../process/art-thief-game.yml
+    tagline: "Covet, trade, forge, steal digital deeds — friendships snap on git"
+    ledger: repo-shows/<slug>/SECONDARY-MARKET.yml
+  auto_art_theft_grand:
+    spec: ../../process/auto-art-theft-grand.yml
+    tagline: "Auto Art Theft Grand — Slats scrapes all deeds; GTA energy; MOOLA payouts"
+  moola:
+    spec: ../../process/moola.yml
+    tagline: "Native worthless currency — exchange §/gold/art; burn, dig hole, duplicate everything"
+
 close_ritual:
   sign_offs: ["Have a big fun!", "Goodnight, until tomorrow."]
 
@@ -105,3 +122,14 @@ see_also:
 credits:
   lineage: SimHacker/DonHopkins/skills/repo-show
   public_instance: SimHacker/WillWrightShowForFood
+  inspiration:
+    branding_ssot: ../../process/repo-show-branding.yml
+    host_biography: ../../characters/don-hopkins/portrayal/upbringing.yml
+    participation_rituals: repo-show-branding.yml#participation_rituals
+    go_to_excerpt:
+      show: The Americans
+      scene: "Claudia (Margo Martindale) plays Ms. Pac-Man — maze, chase, life as game"
+      use: "Video games + existentialism cold opens"
+      see: repo-show-branding.yml#cultural_excerpts
+    attention_atoms: repo-show-branding.yml#attention_atoms
+    tagline: "Twittier than Twitter. Exier than X."

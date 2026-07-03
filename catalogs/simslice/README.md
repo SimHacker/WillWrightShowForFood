@@ -19,8 +19,8 @@ SimSlice ships object suites and deep integrations. The headline proof:
 | Gallery | [SliceCity screenshots](../../characters/will-wright/media/sims-simslice-README.md) |
 | Winograd lineage | [1996 talk + Medium](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) |
 | Character | [Steve Alvey](../../characters/steve-alvey/README.md) |
-| Show | [Heather & Steve — whole career](../../repo-shows/heather-steve-alvey/README.md) |
-| Flagship episode | [Afterlife × Zombie Sims](../../repo-shows/heather-steve-alvey/afterlife-zombie-bridge.yml) |
+| Show | [Heather & Steve — whole career](../../repo-shows/heather-and-steve-alvey/README.md) |
+| Flagship episode | [Afterlife × Zombie Sims](../../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml) |
 | Buy base game | [Get The Sims on Steam](../get-the-sims-on-steam.md) |
 
 ## Related catalogs

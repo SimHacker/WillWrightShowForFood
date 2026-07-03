@@ -1,0 +1,14 @@
+# Sidecar — pacman-ghost-checker-mosaic.png
+
+artifact:
+  file: pacman-ghost-checker-mosaic.png
+  slug: pacman-ghost-checker-mosaic
+  room: amsterdam-tile-art
+  what: pacman ghost checker mosaic
+  era: ~2010-2011
+  sidecar_of: pacman-ghost-checker-mosaic.png
+
+see_also:
+  - ../storymaker-urban-safari/INDEX.yml
+
+note: "Not AI Generated!"

@@ -47,8 +47,18 @@ sources:
       venue: "Communications of the ACM, March 1986"
 
 see_also:
-  - { path: window-systems-lineage.yml, why: "PIXIE→Andrew→NeWS→X11 through-line + Alvey papers + blog index" }
-  - { path: ../heinz-lemke/invitation.md, why: "Co-guest on PIXIE show — same Cambridge PDP-7/Titan ~1970" }
-  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Group show with Heinz + Lars Brinkhoff" }
-  - { path: ../lars-brinkhoff/, why: "Co-guest — emulation segment on same show" }
+  - { path: GLANCE.yml, why: "Navigation hub" }
+  - { path: window-systems-lineage.yml, why: "PIXIE→Andrew→NeWS→X11 through-line + Alvey papers" }
+  - { path: slots-all-the-way-down.md, why: "Self ≈ Smalltalk ≈ NeWS class.ps ≈ Unix FS (≈ JS) — namespace+delegation equivalence; David's NeWS/PostScript seat; draws in Densmore, Ungar, Ingalls, Gosling" }
+  - { path: correspondence.yml, why: "July 2026 async pivot + MOOLLM demo thread" }
+  - { path: ../../repo-shows/david-rosenthal/discussion-pack.yml, why: "July 2026 MOOLLM + literary discussion brief" }
+  - { path: ../../repo-shows/moollm-readings/, why: "Primer readings — Palm, Dasher, Tog" }
+  - { path: literary/authority-without-truth.yml, why: "Lem + coprophagia + Hex thread" }
+  - { path: literary/rautavaaras-case-pkd.yml, why: "PKD gods-eat-worshippers — MOOLLM yaml jazz hook" }
+  - { path: ../mark-weiser/pkd-lem-ai-sf.md, why: "PKD·Lem·AI·SF reading group (lives with Mark's memorial — Ubik→ubicomp seed); David draws in" }
+  - { path: ../mark-weiser/pkd-lem-ai-sf.yml, why: "Companion data + claim ledger" }
+  - { path: media/pdp7-hex-let-machine-win.yml, why: "Let the machine win — Lem 2+2=7 parallel" }
+  - { path: ../heinz-lemke/invitation.md, why: "Co-guest PIXIE — same PDP-7/Titan ~1970" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Group show with Heinz + Lars" }
+  - { path: ../lars-brinkhoff/, why: "Co-guest — emulation segment" }
   - { path: ../james-gosling/, why: "NeWS reunion lineage" }

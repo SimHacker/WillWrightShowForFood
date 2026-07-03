@@ -1,0 +1,109 @@
+# Question provenance + routing — trace asks from ephemeral channels back to humans
+# Pairs with question-tree.yml (orchestration) and ticket-pr.yml (TicketPR lifecycle).
+# Worked example: repo-shows/will-wright/audience/hn-nanna/questions.yml
+
+meta:
+  id: question-provenance
+  version: 0.1
+  one_line: |
+    Where a question came from, who asked it, how we pose it to the guest, and how we route
+    Will's answer back — git, email, interview, async video, live Twitch, HN reply.
+
+provenance:
+  required_when: |
+    Any question curated from an ephemeral channel (HN comment, Twitch chat, YouTube comment)
+    into questions.yml — so we can attribute, reply, and amplify without losing the thread.
+  ticket_level:
+    what: "Once per audience/questions.yml — the submitter's identity and capture event."
+    fields:
+      source: [hacker_news, github_issue, email, twitch_chat, youtube_comment, ticket_pr, curator]
+      captured_at: ISO date
+      curator: "github username or character id who moved ephemeral → git"
+      hn:
+        user: "HN login (stable route-back handle)"
+        user_url: "https://news.ycombinator.com/user?id=…"
+        thread_id: numeric item id
+        comment_id: numeric comment id (when question is a reply)
+        parent_id: parent comment id (when nested)
+        thread_url: "https://news.ycombinator.com/item?id=…"
+        comment_url: "https://news.ycombinator.com/item?id=…"
+      github:
+        user: "@username"
+        issue: number
+        comment: optional
+      email:
+        from: "only if submitter shared — never invent"
+        subject_ref: optional thread slug
+  node_level:
+    what: "Optional per question node — verbatim quote + finer HN anchor when one ticket has many asks."
+    fields:
+      verbatim: "Original wording — do not paraphrase for attribution"
+      hn_comment_id: "when this node maps to one HN comment"
+      captured_at: "override if node added later"
+
+routing:
+  asker:
+    what: "Who gets the answer back. HN user is enough until they open a TicketPR or share email."
+    fields:
+      hn_user: login
+      hn_profile: URL
+      github: "@username or null"
+      email: "null until consented"
+      display_name: optional
+  reply_channels:
+    what: |
+      Ordered plan for returning Will's answer. Status: planned | posed | answered | skipped.
+      Orchestrator / Don updates as each channel fires.
+    channel_enum:
+      - id: git_queue
+        action: "questions.yml node + optional GitHub issue"
+      - id: github_issue
+        action: "comment on bound issue; @mention asker if on GitHub"
+      - id: email_to_guest
+        action: "Don forwards batch to Will"
+      - id: email_to_asker
+        action: "Don forwards Will's reply — only with consent"
+      - id: hacker_news
+        action: "reply on asker's comment or thread"
+      - id: adorable_minutes
+        action: "async short video — Will answers on camera"
+      - id: repo_show_interview
+        action: "long-form recorded or live segment"
+      - id: twitch_live
+        action: "mic line, chat callout, or overlay card"
+      - id: youtube_comment
+        action: "reply on source video if applicable"
+  fields: [channel, action, target, status, posed_at, answered_at, url]
+
+pose:
+  what: |
+    Draft text per channel — copy/paste for Don. Git SSOT is questions.yml; these are outbound
+    shells. Update status in routing when sent.
+  channels: [email_to_guest, email_to_asker, hn_reply, github_issue_body, twitch_callout, on_air_intro]
+
+amplification:
+  what: |
+    Others may amplify without owning the question — HN +1, GitHub reactions, me_too children,
+    or their own audience/ folder pointing at the same ref. Record amplifiers here or as
+    children with stance: amplify | me_too.
+  fields:
+    by: "hn_user or github or character id"
+    channel: hacker_news | github | ticket_pr
+    action: "question_pump | me_too | repost | +1"
+    ref: URL or comment id
+    date: ISO date
+  invite: |
+    Reply on HN, 👍 the GitHub issue, open a TicketPR with stance me_too, or message Don —
+    all tie back via shared discussion ref + provenance.hn.comment_id.
+
+lifecycle:
+  - curated_into_git
+  - posed_to_guest
+  - guest_answered
+  - routed_back_to_asker
+  - amplified
+
+see_also:
+  - question-tree.yml
+  - ../process/ticket-pr.yml
+  - ../repo-shows/will-wright/audience/hn-nanna/questions.yml

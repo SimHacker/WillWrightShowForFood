@@ -1,0 +1,16 @@
+# Sidecar — apple-ii-redbook-fig-s06-ram-select.png
+
+artifact:
+  file: apple-ii-redbook-fig-s06-ram-select.png
+  slug: apple-ii-redbook-fig-s06-ram-select
+  source: Apple II Red Book (Reference Manual)
+  designer: Steve Wozniak
+  what: "FIG S-6 4K/16K RAM select — jumper plugs, row CAS/CS"
+  sidecar_of: apple-ii-redbook-fig-s06-ram-select.png
+
+provenance:
+  photographed_by: Don Hopkins
+  facebook: "Happy 70th Birthday Woz!"
+  classiccmp: http://www.classiccmp.org/cpmarchives/AppleII/Apple%20II%20(Redbook).pdf
+
+note: "Not AI Generated!"

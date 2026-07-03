@@ -1,0 +1,17 @@
+# Sidecar — art-3d-glitch-blender-mesh-explosion-face.png
+
+artifact:
+  file: art-3d-glitch-blender-mesh-explosion-face.png
+  slug: art-3d-glitch-blender-mesh-explosion-face
+  category: art
+  subcategory: 3d-glitch
+  what: "Blender mesh explosion — fragmented face, misplaced armature"
+  sidecar_of: art-3d-glitch-blender-mesh-explosion-face.png
+
+work:
+  client: AI Foundation
+  era: "~2020 character animation pipeline interview"
+  stack: [Character Creator 3, iClone, Blender, Unity]
+  see_also: ../../portrayal/presentations.yml
+
+note: "Not AI Generated!"

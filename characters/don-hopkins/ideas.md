@@ -8,11 +8,24 @@
 |-------|-----------------|
 | **Heinz U. Lemke** | **PIXIE** (1969 PDP-7 radial menus) → CHI'88 empirical study → forty years of shipping — **book this first**. Show seeds: [`../../repo-shows/INDEX.yml`](../../repo-shows/INDEX.yml) → `pixie-pie-menus-pdp7.yml`, `ben-and-heinz-pie-menus.yml`. Topic file: [`pie-menus-chi-88-and-beyond.md`](pie-menus-chi-88-and-beyond.md). Don does **not** claim to have invented pie menus. |
 
+## Later — implementation on air (not now)
+
+| Show | Hook |
+|------|------|
+| [`selfish-config-typescript-module.md`](selfish-config-typescript-module.md) | Port central `worker_config.py` → `packages/selfish-config` TS; C3 merge + provenance + shards overlay |
+
 ## Host shows (Don runs the repo)
 
 | Show | Hook |
 |------|------|
 | [`repo-shows/will-wright/`](../../repo-shows/will-wright/) | Flagship — Sims birth, Micropolis saga, procedural worlds |
+| [`gesture-space.md`](gesture-space.md) | Multitouch constraints, self-revealing vs graffiti — [`gesture-space-self-revealing-ui.yml`](../../repo-shows/gesture-space-self-revealing-ui.yml) |
+| [`connectedtv-touch-tuning-finger-pies.md`](connectedtv-touch-tuning-finger-pies.md) | Touch Tuning + Finger Pies — calm tech in the dark — [`connectedtv-calm-technology.yml`](../../repo-shows/connectedtv-calm-technology.yml) |
+| [`ie-jscript-htc-xslt-pie-menus.md`](ie-jscript-htc-xslt-pie-menus.md) | Punkemon + ConnectedTV Skin Editor — XSLT-native web on IE5 (HN 44393817) |
+| [`visual-programming-taxonomy.md`](visual-programming-taxonomy.md) | Boxes/lines ≠ one model — Snap!, Max, Petri nets (HN 40842599) |
+| [`drakon-control-flow-vs-dataflow.md`](drakon-control-flow-vs-dataflow.md) | SimAntics vs Grasshopper vs Bounce — control vs data flow (HN 10100932) |
+| [`levity-bounce-space-seed.md`](levity-bounce-space-seed.md) | Bounce @ Levity — patch-cord trail with [`../jaron-lanier/`](../jaron-lanier/README.md) + [`../david-levitt/`](../david-levitt/README.md) |
+| [`../will-wright/adorable-minutes.md`](../will-wright/adorable-minutes.md) | Async one-minute Q&A — [`will-wright-adorable-minutes.yml`](../../repo-shows/will-wright-adorable-minutes.yml) |
 | [`repo-shows/scott-adams/`](../../repo-shows/scott-adams/) | Adventure-as-data ancestor — portable VM + 16K worlds |
 | [`repo-shows/walter-bender-olpc/`](../../repo-shows/walter-bender-olpc.yml) | Stone Soup, Sugar, open-sourcing SimCity |
 
@@ -25,6 +38,8 @@
 | **Brian Eno** | Generative art + Long Now + Will Wright 2006 |
 | **Scott Adams** | Warm contact — adventure compiler + MOOLLM ([`correspondence verified`](../scott-adams/)) |
 | **Yoot Saito** | Yoot Tower OSS + revisit 1993 Alan Kay interview — [`yoot-tower-open-source-and-alan-kay-interview.md`](yoot-tower-open-source-and-alan-kay-interview.md) |
+| **Jaron Lanier** | VPL → Body Electric → Bounce rights chain — [`../jaron-lanier/ideas.md`](../jaron-lanier/ideas.md) |
+| **Donald Norman** | Self-revealing pie menus vs mystery meat — [`../don-norman/ideas.md`](../don-norman/ideas.md) |
 
 ## Related repos (deep links)
 

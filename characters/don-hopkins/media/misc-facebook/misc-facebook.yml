@@ -1,0 +1,53 @@
+# Misc Facebook moments — SimRefinery, antispore, trillion dollars, LinkedIn absurdity
+
+artifact:
+  what: "One-off Facebook posts with good comment threads"
+
+posts:
+  simrefinery:
+    file: will-jeff-braun-simrefinery-newspaper.png
+    caption: "Will Wright and Jeff Braun showing SimRefinery!"
+    comments:
+      - author: Chris Trottier
+        text: "That is precious."
+      - author: Judson Hudson
+        text: "Will made it cool to sport huge-styled lenses for our glasses."
+      - author: Eric Irk Hedman
+        text: "Ahhh....so it's their Sim Fault."
+      - author: Don Hopkins
+        text: "The last copy of SimRefinery was lost in a giant explosion in Martinez, the toxic smoke cloud from which you could see from Santa Cruz."
+  antispore:
+    file: antispore-will-wright-parody.png
+    url: http://www.antispore.com
+    don_quote: "The evil man behind it all - Will Wright"
+  trillion_dollars:
+    file: sfc-trillion-dollar-christmas-bonus.png
+    don_comment: "Will Wright gave me my Christmas Bonus: One Hundred Trillion Dollars!!! Even Dr. Evil would be satisfied."
+    star_simpson_where: "On the wall of Will Wright's office at the Stupid Fun Club in Berkeley."
+  linkedin_barlow:
+    file: linkedin-john-perry-barlow-lsd-endorsement.png
+    prompt: "Does John Perry Barlow know about LSD?"
+  ea_watch:
+    file: ea-watch-tin-stash-box.png
+  tomtom_wwdc:
+    file: tomtom-iphone-wwdc-soma.png
+    caption: "TomTom on iPhone at WWDC in SOMA SF!"
+    comments:
+      - author: Star Simpson
+        text: "congratulations!!!"
+      - author: Rich Rosen
+        text: "What happens if you have Tourette's and try to use the new voice command interface on the iPhone to talk to TomTom?"
+  tomtom_desk:
+    file: tomtom-article-don-workdesk.png
+  doggie_diner:
+    file: doggie-diner-heads-lost-landscapes-sf.png
+    don_comment: |
+      In front of the Herbst Theater for Lost Landscapes of SF. When you see three Doggie Diner heads,
+      it means John Law is around somewhere.
+  slats:
+    file: slats-berkeley.png
+
+sfc_logo:
+  note: "SFC logo duplicate — see media/sfc-emeryville/; not duplicated here"
+
+note: "Not AI Generated!"

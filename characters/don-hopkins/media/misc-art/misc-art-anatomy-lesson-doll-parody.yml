@@ -1,0 +1,11 @@
+# Sidecar — misc-art-anatomy-lesson-doll-parody.png
+
+artifact:
+  file: misc-art-anatomy-lesson-doll-parody.png
+  slug: misc-art-anatomy-lesson-doll-parody
+  category: misc
+  subcategory: art
+  what: "Dutch anatomy-lesson parody painting"
+  sidecar_of: misc-art-anatomy-lesson-doll-parody.png
+
+note: "Not AI Generated!"

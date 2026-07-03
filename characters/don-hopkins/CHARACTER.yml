@@ -21,6 +21,9 @@ representation:
     public_wwsff: "This directory — career/ + portrayal/"
     moollm_adventure: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/don-hopkins
   note: "Don controls this directory. Adventure microworld state stays upstream."
+  reading_experience: |
+    YAML Jazz here = rambling conversation with Don, sometimes coherent interview.
+    See portrayal/voice.yml#character_room.
 
 simulation:
   permitted: true
@@ -32,6 +35,7 @@ invitation:
 
 bio:
   summary: "Pie menus, The Sims, Micropolis, MOOLLM, Repo Show. YAML girder + generated markup."
+  upbringing: portrayal/upbringing.yml
   backbone: career/*.yml
   portrayal: portrayal/*.yml
   backstory_condensed: |
@@ -54,14 +58,17 @@ see_also:
   - { path: CARD.yml, why: "MOOLLM room interface" }
   - { path: GLANCE.yml, why: "Sniff" }
   - { path: career/INDEX.yml, why: "Career yaml index" }
+  - { path: portrayal/upbringing.yml, why: "DC Metro upbringing, Gen X wavelength, hosting lineage — biographical SSOT" }
   - { path: portrayal/voice.yml, why: "How Don writes and speaks" }
-  - { path: portrayal/heroes.yml, why: "Mentors — Shneiderman, Weiser, Will, Kay" }
+  - { path: portrayal/heroes.yml, why: "Mentors + patron saints — Shneiderman, Weiser, Will, Kay, David Ahl" }
   - { path: portrayal/presentations.yml, why: "CHI'88 and verified talks" }
   - { path: career/stupid-fun-club.yml, why: "Slats + Dents — robot brains for Will" }
   - { path: ../don-philahue/, why: "MC avatar on stream" }
   - { path: ../slats/, why: "Slats — waiter robot → drag race judge" }
   - { path: ../will-wright/, why: "Boss, collaborator, flagship guest" }
+  - { path: ../david-ahl/, why: "Patron saint — Creative Computing; aspire to be as wonderful" }
   - { path: ../../repo-shows/ideas/gags/lightpenisland-net.yml#engelbart_division, why: "Public Engelbart open models + SWAG catalog (Augment Division)" }
+  - { path: ../../process/repo-show-branding.yml, why: "Show orchestration + branding — participation rituals, cultural excerpts" }
   - { path: ../../skills/repo-show/SKILL.md, why: "Show orchestrator" }
   - { path: ../../process/live-repo.yml, why: "WWSFF is live — edit here" }
   - { path: ../../process/cross-links.yml#constructionist_lineage, why: "1996 microworlds → today" }

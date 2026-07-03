@@ -1,0 +1,18 @@
+# Maxis — Emeryville office (Don visits)
+
+room:
+  id: maxis-emeryville
+  name: Maxis Emeryville
+  parent: ../../media.md
+  city: Emeryville
+  note: "Suite 6 — maxis is SIX AM spelled backwards"
+
+spec:
+  - maxis-suite-6-door.yml
+
+see_also:
+  - ../../career/work-history.yml
+  - ../../../will-wright/media/sims-series-maxis-people.yml
+  - ../../../robots/slats/photos.md
+
+note: "Not AI Generated!"

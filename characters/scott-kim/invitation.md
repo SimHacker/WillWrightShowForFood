@@ -3,24 +3,21 @@ status: draft
 character_id: scott-kim
 public: true
 consent: not_yet_asked
-show_seed: repo-shows/scott-kim/
+show_seed: repo-shows/amy-jo-and-scott-kim/
+pair_with: amy-jo-kim
+beloved: true
 ---
 
-# Repo Show invitation — Scott Kim
+# Repo Show invitation — Scott Kim (with Amy Jo Kim)
 
 *Public draft — not sent. Scott Kim may edit, decline, delay, or request removal at any time.*
 [Portrayal standards](../../schemas/portrayal-standards.yml)
 
-We would respectfully invite **Scott Kim** to a **Repo Show** — a Micropolis Class conversation
-whose stage is [this public GitHub repository](https://github.com/SimHacker/WillWrightShowForFood),
-following through to working code and credited ideas in public.
+**Primary invitation:** see the **joint** invite at
+[`amy-jo-kim/invitation.md`](../amy-jo-kim/invitation.md) — we want to interview you **together**
+for Shufflebrain and shared work.
 
-**Proposed focus:** Ambigrams / **inversions** and symmetry as a design tool; the **craft of puzzle
-design** (designing the "aha"); puzzles as math play. Possibly **paired with Will Wright**, his
-friend. See the [show seed](../../repo-shows/scott-kim/README.md) for segment ideas.
-
-Browse without a GitHub account — start at the [README](https://github.com/SimHacker/WillWrightShowForFood).
-
-**Your response:** Accepted, delayed, too busy, declined, or no reply — all honored gracefully.
+**Optional solo:** [`repo-shows/scott-kim/`](../../repo-shows/scott-kim/README.md) — Viewpoint,
+inversions, puzzle-craft deep-dive — only if you want a second focused episode.
 
 — Don Hopkins, Micropolis Class

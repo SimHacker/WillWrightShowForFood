@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-ornate-vanity-chest.png
+
+artifact:
+  file: transmogrifier-ornate-vanity-chest.png
+  slug: transmogrifier-ornate-vanity-chest
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — ornate vanity chest
+  era: 2000-2002
+  sidecar_of: transmogrifier-ornate-vanity-chest.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

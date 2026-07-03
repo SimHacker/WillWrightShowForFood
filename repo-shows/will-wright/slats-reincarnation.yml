@@ -56,7 +56,7 @@ after_robo_resurrection:
   celebrity_judge: |
     Reincarnated Slats becomes celebrity robot judge for Micropolis AI Drag Race and
     Manual Transmission — camp callouts on brain-stream overlay; robopoetry stingers.
-  judge_rubric: ../../characters/slats/judge-rubric.yml
+  judge_rubric: ../../characters/robots/slats/judge-rubric.yml
 
 ties:
   - ./SHOW.yml
@@ -66,5 +66,5 @@ ties:
   - ../../process/manual-transmission.yml
   - ../../process/brain-stream.yml
   - ../../process/micropolis-ai-drag-race.yml
-  - ../../characters/slats/judge-rubric.yml
+  - ../../characters/robots/slats/judge-rubric.yml
   - ../../crystallized/AI-MANIFESTO.yml

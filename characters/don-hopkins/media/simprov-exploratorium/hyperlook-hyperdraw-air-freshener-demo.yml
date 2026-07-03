@@ -1,0 +1,18 @@
+# Sidecar — hyperlook-hyperdraw-air-freshener-demo.png
+
+artifact:
+  file: hyperlook-hyperdraw-air-freshener-demo.png
+  slug: hyperlook-hyperdraw-air-freshener-demo
+  room: simprov-exploratorium
+  what: HyperLook Exploratorium demo — hyperdraw air freshener demo
+  era: early 1990s
+  sidecar_of: hyperlook-hyperdraw-air-freshener-demo.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
+
+see_also:
+  - ../pie-menus/INDEX.yml
+  - ../cellular-automata-tiles/INDEX.yml
+
+note: "Not AI Generated!"

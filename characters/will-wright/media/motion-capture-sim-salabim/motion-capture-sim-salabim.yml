@@ -1,0 +1,21 @@
+# Will Wright — monkey motion capture suit ("Sim Salabim")
+
+artifact:
+  subject: Will Wright
+  what: "Early Maxis motion-capture exoskeleton — magazine spread + hallway double-exposure"
+  title_pun: "Sim Salabim — magic phrase meets Sim branding"
+
+photos:
+  - file: will-motion-capture-sim-salabim-magazine.png
+    title: "Sim Salabim"
+    setting: "Low-angle outdoor — skyscrapers, lens flare, white square overlays"
+    note: "Magazine scan; Don Hopkins also photographed in similar rig in some accounts"
+  - file: will-motion-capture-hallway-green-ghost.png
+    effect: "Green translucent duplicate offset — spectral mocap aura"
+    setting: "Institutional hallway, wide stance"
+
+repo_orbit:
+  will_character: ../../CHARACTER.yml
+  maxis_emeryville: ../../../don-hopkins/media/maxis-emeryville/INDEX.yml
+
+note: "Not AI Generated!"

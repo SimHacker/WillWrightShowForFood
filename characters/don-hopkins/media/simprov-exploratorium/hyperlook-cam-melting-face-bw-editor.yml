@@ -1,0 +1,18 @@
+# Sidecar — hyperlook-cam-melting-face-bw-editor.png
+
+artifact:
+  file: hyperlook-cam-melting-face-bw-editor.png
+  slug: hyperlook-cam-melting-face-bw-editor
+  room: simprov-exploratorium
+  what: HyperLook Exploratorium demo — cam melting face bw editor
+  era: early 1990s
+  sidecar_of: hyperlook-cam-melting-face-bw-editor.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
+
+see_also:
+  - ../pie-menus/INDEX.yml
+  - ../cellular-automata-tiles/INDEX.yml
+
+note: "Not AI Generated!"

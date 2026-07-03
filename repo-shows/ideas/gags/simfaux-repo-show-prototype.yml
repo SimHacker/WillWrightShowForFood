@@ -1,0 +1,23 @@
+# Gag — SimFaux as Repo Show prototype
+
+gag:
+  id: simfaux-repo-show-prototype
+  title: "Faux Casting — You Decide What Goes On Screen"
+  source: characters/don-hopkins/media/simfaux/simfaux.yml
+
+beat:
+  setup: "2006 OpenLaszlo Fox News parody — pie menus, channel surf, talking-head cutouts"
+  demo: "YouTube SimFaux Demo — Dick Cheney show, Arianna Huffington, Zappa overlay, gravitas -67"
+  punchline: "More than a decade before Repo Show — modular, extensible, live video overlays. Source pending."
+
+repo_show:
+  channels: "F I D T Q C B A — per-channel frame layouts"
+  overlays: "Conan-style floating heads and hands on blue squares"
+  surf: "Checkbox auto-cycles channels — proto gallery economy"
+
+menagerie:
+  don: "Sympho. Faux casting. Of course."
+
+see_also:
+  - ../../../characters/don-hopkins/media/simfaux/INDEX.yml
+  - https://www.youtube.com/watch?v=gRodlxUZ9SQ

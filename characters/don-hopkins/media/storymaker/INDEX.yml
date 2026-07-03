@@ -1,0 +1,19 @@
+# StoryMaker — Stupid Fun Club / Bar Karma iPhone UI
+
+room:
+  id: storymaker
+  name: StoryMaker Screenshots
+  parent: ../../media.md
+
+artifacts:
+  - storymaker-first-episode-branching.png
+  - storymaker-keyboard-cat-cross-nav.png
+
+spec:
+  - storymaker.yml
+
+see_also:
+  - ../../career/stupid-fun-club.yml
+  - ../../../will-wright/sources/don-youtube-storymaker-demo/README.md
+
+note: "Not AI Generated!"

@@ -1,0 +1,57 @@
+# Bill Budge — invitation portrayal. NOT Bill Budge.
+# LIVING person — invitation mode, consent not_yet_asked. NOT a memorial.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: bill-budge
+  name: "Bill Budge"
+  type: invitation
+  signifier: "🕹️"
+  status: living
+  field: "Raster Blaster; Pinball Construction Set — the construction-set genre & user-generated content; a lifelong tools/frameworks builder (BudgeCo, EA, 3DO, Sony, Google)"
+  home: characters/bill-budge/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3   # public figure — public work + tradition; no impersonation; not yet asked
+  authored_by: don-hopkins
+  living_not_memorial: |
+    Bill Budge is ALIVE (b. 1954-08-11; retired from Google Jan 2022; active on GitHub into 2026).
+    This is an invitation to a living person — represent his public work, invite him and people who
+    know him. Do NOT treat as memorial.
+
+invitation:
+  status: not_yet_asked
+  consent: not_yet_asked
+  document: invitation.md
+  tribute_app: ../../apps/performance-space/faceball-construction-set.yml
+  angle: "Faceball Construction Set tribute + construction-set genealogy + tools/frameworks ethos"
+
+bio:
+  summary: |
+    **Bill Budge** (b. 1954) — American game programmer/designer, an industry legend for the Apple II
+    classics **Raster Blaster** (1981) and **Pinball Construction Set** (1983). PCS wasn't a game so
+    much as a **tool to build games**: drag pinball parts onto a table, wire up how they behave, and
+    play — pioneering **user-generated content** and naming the **"construction set"** genre. It
+    required him to write a mini paint program, a mini sound editor, and save/load. Published through
+    his **BudgeCo** and then **Electronic Arts** (he's the one wearing the glove in EA's 1983
+    "Software Artists / We See Farther" photo). He later built tools at **3DO**, **Sony** (Lead Tools
+    Programmer), and **Google** (retired 2022), and still ships editor frameworks on GitHub. His
+    passion, in his own words, is building **tools and frameworks**.
+
+sources:
+  wikipedia: https://en.wikipedia.org/wiki/Bill_Budge
+  github: https://github.com/billbudge
+  mobygames: https://www.mobygames.com/person/742/bill-budge/
+  interview: https://www.gamedeveloper.com/design/a-conversation-with-bill-budge
+  works:
+    - "Raster Blaster (1981), Apple II"
+    - "Pinball Construction Set (1983), BudgeCo / Electronic Arts"
+    - "PCS_AppleII / PCS_Atari800 — source released on GitHub"
+    - "Diagrammar, WebEditorFramework, JSStatecharts — TypeScript editor frameworks (active into 2026)"
+
+see_also:
+  - { path: ../../apps/performance-space/faceball-construction-set.yml, why: "Faceball = Pinball Construction Set for faces — the tribute" }
+  - { path: ../../process/artifactory.yml, why: "A construction set IS an artifactory — same lineage" }
+  - { path: ../will-wright/, why: "PCS is a foundational influence on construction-set design / The Sims" }
+  - { path: ../don-hopkins/, why: "Apple II era; construction-set + tool-builder ethos; host" }

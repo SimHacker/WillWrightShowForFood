@@ -1,0 +1,247 @@
+# Repo Show — orchestration, branding, participation rituals
+# SHOW policy SSOT. Draws from host biography; does not live only in characters/don-hopkins/.
+# Host wavelength + DC lived history: ../characters/don-hopkins/portrayal/upbringing.yml
+
+meta:
+  id: repo-show-branding
+  scope: show_orchestration
+  host_biography: ../characters/don-hopkins/portrayal/upbringing.yml
+  performance: performance-space.yml
+  orchestrator: ../characters/don-philahue/CHARACTER.yml
+
+production_values:
+  stance: "High production values. Low production costs."
+  mantra: "Lean into the cheese — Conan face-holes, South Park construction paper."
+  mechanism: performance-space.yml#narrative_engine
+  host_wavelength: upbringing.yml#production_aesthetic
+
+hosting:
+  north_star: Captain Chesapeake
+  dc_lineage: upbringing.yml#local_tv
+  dc_host_puppets: ../apps/performance-space/character-button-board.yml#dc_host_lineage_puppets
+  sign_on_sign_off:
+    what: "Chesapeake / Captain 20 / Count Gore face puppets + canned sound-box buttons — lip-sync like a drag queen"
+    sign_offs:
+      - "Be somebody important — be yourself!"
+      - "So long, crew members."
+  sign_offs_in_spirit:
+    - "Be somebody important — be yourself!"
+    - "So long, crew members."
+  captain_twenty:
+    sign_off: "Live long and win lots of prizes!"
+  count_gore:
+    sign_off: "May all your blood be warm!"
+  performed_by: don-philahue
+
+panel_format:
+  spec: ../apps/performance-space/squares-in-a-box.yml
+  face_attachments: ../apps/performance-space/faceball-construction-set.yml
+  dc_host_puppets: ../apps/performance-space/character-button-board.yml#dc_host_lineage_puppets
+  guest_puppets: faceball-construction-set.yml#guest_characters
+  memory_palace_tour: faceball-construction-set.yml#memory_palace_tour
+  talking_selfies: faceball-construction-set.yml#memory_palace_tour#talking_selfies
+  sanspiel: faceball-construction-set.yml#sanspiel_simulation
+  audience_as_balls: faceball-construction-set.yml#audience_as_balls
+  faceball_machine: faceball-construction-set.yml#faceball_machine
+  choreography_modes: faceball-construction-set.yml#faceball_machine#choreography_modes
+  spore_creature_avatars: faceball-construction-set.yml#spore_creature_avatars
+  tagline: "Push-to-talk multi-dummy improv in a box — Faceball Construction Set"
+  mona_eyes_lineage: "NeWS googly eyes awake/asleep; nostril ZZZ particles when asleep"
+  not: Celebrity Sims
+
+attention_atoms:
+  tagline:
+    - "Twittier than Twitter."
+    - "Exier than X."
+  thesis: |
+    Shorter than TikTok. If we embrace short-form, go **shorter still** — respect the bumblebee
+    span by not explaining what the link already contains.
+  premium_tier_gag:
+    what: |
+      Satire of enshittified platforms: you **subscribe and pay** for the right to post **single
+      letters and emojis** — the shorter the atom, the higher the tier. 🌀 costs more than "plays."
+    repo_show_flip: |
+      **TicketPR is free.** Merged PR = crew member. Optional donations buy recognition (box seats),
+      not the right to speak. We charge for **less** text only as comedy — never as gatekeeping.
+    see: repo-shows/will-wright/performance-and-culture.yml#participation_economy
+  forms:
+    one_quote_one_link:
+      what: "One quote. No explanation. Just a link."
+      example_shape: |
+        > "Pac-dots are calorie free."
+        → repo path or primary source URL
+    one_glyph:
+      what: "One letter or emoji — maximum compression; premium-tier gag only"
+      examples: ["🌀", "X", "⚡"]
+      note: "Twittier than Twitter; Exier than X"
+    one_kline:
+      what: "One word, phrase, or K-line that **explains itself** and invites exploration."
+      examples:
+        - "fnord"
+        - "plays"
+        - "Send code, not commands"
+        - "Be somebody important — be yourself."
+      rule: "Send code not commands — the atom RUNS in the reader's head; the repo is the manual"
+  not:
+    - "Thumbnail face + 90-second setup before the point"
+    - "Algorithmic engagement bait padding"
+  yes:
+    - "Shotgun blast of atoms — skim, skip, jump; depth is optional, always linkable"
+    - "Repo path as the explanation (RTFR when you want more)"
+  ties_to:
+    - couple-and-solo-shows.yml#shows_and_episodes
+    - characters/will-wright/guest-prototype.yml#attention_economy
+    - characters/don-hopkins/portrayal/voice.yml#writing_philosophy
+
+participation_rituals:
+  note: "Local kids-TV participation → Repo Show orchestration (TicketPR, audience/, live call-on)"
+  map:
+    - from: "Captain 20 Gerbil Races — postcard in, call kid live, pick a racer, win a prize"
+      to: "TicketPR lottery + YOUR NAME HERE: COME ON DOWN"
+    - from: "Channel 20 Club Card drum — numbered stubs pulled between cartoons"
+      to: "Merged TicketPRs + box_seats / balcony in audience/INDEX.yml"
+    - from: "Space Gallery / Bozo Art Gallery — every kid drawing on air"
+      to: "Audience PR artifacts, costume.yml, homefun — shown in repo + on stream"
+    - from: "Captain Chesapeake treasure chest — read viewer letters on the tugboat"
+      to: "Don Philahue surfaces questions.yml + HN comments; letters become git"
+    - from: "Bruce the Bird unseen — kids mail how they imagine him"
+      to: "MOOLLM audience characters — you define the persona; host reads your CARD"
+    - from: "Crew Members Club cards"
+      to: "TicketPR merge = crew member at repo-shows/<show>/audience/<you>/"
+    - from: "Kids Break — snack, cartoon, discuss, craft"
+      to: "Async clips + research bundle walkthrough + live homefun implement"
+
+cultural_excerpts:
+  note: "Go-to clips and scenes for cold opens, themes, or between-segment riffs — not biographical SSOT"
+  dc_cold_war_wavelength:
+    show: The Americans
+    era: "1980s DC Metro — same window as host upbringing (see upbringing.yml#dc_metro)"
+    authenticity_touchstone: "Jhoon Rhee 'Nobody bothers me' — Don loved the show's DC detail"
+    jhoon_rhee: cultural_excerpts#jhoon_rhee_nobody_bothers_me
+    arpanet_pdp10: cultural_excerpts#americans_arpanet_pdp10
+    lars_intro_sequence: characters/lars-brinkhoff/ideas.md#intro-sequence--get-the-ball-rolling-on-pdp-10
+  jhoon_rhee_nobody_bothers_me:
+    what: |
+      **Jhoon Rhee** — DC-area taekwondo legend; local TV commercial jingle **"Nobody bothers me,
+      nobody bothers me!"** Real Beltway wallpaper — *The Americans* dropped it in as authenticity
+      candy; Don noticed and loved it.
+    tagline: "Nobody bothers me!"
+    youtube:
+      - title: "Jhoon Rhee commercial on The Americans"
+        url: https://www.youtube.com/watch?v=MoBm6ev-3wc
+        note: "Show excerpt — the moment that pinged Don"
+      - title: "OK Go — Nobody Bothers Me (Jhoon Rhee commercial)"
+        url: https://www.youtube.com/watch?v=X8nAIo2pBE
+        note: "OK Go cover/homage — full jingle energy"
+      - title: "Jhoon Rhee Taekwondo — Nobody Bother Me commercial"
+        url: https://www.youtube.com/watch?v=n7PEMGuA6tw
+        note: "Period local-TV spot"
+    use_when:
+      - "Cold War DC / Beltway formative culture"
+      - "The Americans cold open or between-segment riff"
+      - "Local TV lineage beside Captain Chesapeake / Captain 20"
+      - "Attention atom — one line, then link"
+    host_note: upbringing.yml#dc_metro#jhoon_rhee
+  claudia_ms_pac_man:
+    show: The Americans
+    season: 1
+    episode: "The Oath"
+    character: "Claudia (Margo Martindale) — KGB handler"
+    scene: "Cafe — Elizabeth finds 'Granny' playing Ms. Pac-Man"
+    dialogue:
+      - "I enjoy the maze part and the eating without eating part. Pac-dots are calorie free."
+    theme: |
+      Maze chase, consume without consequence, hunter and hunted — life as arcade logic.
+      Viewers read it as existentialism through Pac-Man: the handler philosophizing spy life
+      as a game you play in a maze. GO-TO excerpt for episodes about **video games and
+      existentialism** (SimCity, The Sims, microworlds, attention economy).
+    use_when:
+      - "Video games + philosophy / procedural rhetoric"
+      - "Cold War DC backdrop + formative tech culture"
+      - "Handlers, puppetry, characters who perform identities (ties to Don Philahue)"
+    host_note: upbringing.yml#dc_metro
+  americans_arpanet_pdp10:
+    show: The Americans
+    season: 2
+    episode: ARPANET
+    episode_no: 7
+    air_date: 2014-04-09
+    character: "Thane Rosenbloom (Geoffrey Cantor) — computer science professor"
+    scene: |
+      Philip (posing as journalist) gets an **ARPANET** explainer in the professor's lab — virtual
+      highway, post-office translation analogy, **Interface Message Processor** as interstate for
+      information — then the camera **pans up to a PDP-10**. "It's like God." (LA Times: "…except
+      without the big beard and flowing white robes.")
+    dialogue:
+      - "It is, in a manner of speaking, the interstate highway system through which all of information flows."
+      - "It's sort of like God, except without the big beard and flowing white robes."
+    theme: |
+      Cold War spy fiction meets real networking history — ARPANET as deity, **PDP-10 as the icon**.
+      Perfect cold open before Lars Brinkhoff makes dead iron boot again.
+    references:
+      - title: "Wikipedia — Arpanet (The Americans)"
+        url: https://en.wikipedia.org/wiki/Arpanet_(The_Americans)
+      - title: "net.wars — The PDP-10 who was God"
+        url: https://www.pelicancrossing.net/netwars/2014/04/the_pdp-10_who_was_god_1.html
+      - title: "LA Times recap"
+        url: https://www.latimes.com/entertainment/tv/showtracker/la-et-st-the-americans-recap-20140409-story.html
+    use_when:
+      - "Lars Brinkhoff / PDP-10/ITS episodes — GO-TO intro"
+      - "PIXIE PDP-7/340 show — same iron lineage"
+      - "ARPANET + Beltway kid networking thread (upbringing.yml)"
+      - "Thomas Cherryhomes pair episode — emulated × networked retro"
+    guest: characters/lars-brinkhoff/
+    host_note: upbringing.yml#dc_metro
+  warf_deck_ten_pdp10:
+    what: |
+      **ST:TNG** elevator gag — Don asks Worf: *"What is your favorite 36-bit computer?"* Short
+      clip: Worf answers loudly and clearly: **"Deck Ten!"** (PDP-10 pun). Bridges sci-fi panel
+      to Lars's iron.
+    setup_question: "Worf, what is your favorite 36-bit computer?"
+    punchline: "Deck Ten!"
+    guest: characters/lars-brinkhoff/
+    sequence: characters/lars-brinkhoff/ideas.md#intro-sequence--get-the-ball-rolling-on-pdp-10
+    use_when:
+      - "Lars / PDP-10 intro atom #2"
+      - "36-bit vs 32-bit VAX weenie banter lead-in"
+  digex_full_dec_36bit:
+    what: |
+      Don quotes old friend **DIGEX** — USENIX banter teasing 32-bit VAX weenies: *"If you're not
+      playing with 36 bits, you're not playing with a full DEC."* East Coast ISP lineage (see
+      upbringing networking thread).
+    quote: "If you're not playing with 36 bits, you're not playing with a full DEC."
+    attribution: "DIGEX — Don's old friend; USENIX era"
+    host_note: upbringing.yml#dc_metro#networking
+    guest: characters/lars-brinkhoff/
+    sequence: characters/lars-brinkhoff/ideas.md#intro-sequence--get-the-ball-rolling-on-pdp-10
+    use_when:
+      - "Lars / PDP-10 intro atom #3"
+      - "DEC PDP-10 vs VAX culture"
+  umd_college_park:
+    era: "1980s UMD College Park — same window as HCIL + host student life"
+    host_note: upbringing.yml#dc_metro#umd#college_park_life
+    terrapin_tacos:
+      what: "Terrapin Taco House — Doghouse → Tippy's → Terrapin; off-campus meal institution"
+      youtube:
+        title: TerpTaco
+        url: https://www.youtube.com/watch?v=xz8xy61nBjY
+      use_when:
+        - "College Park / Terp nostalgia beats"
+        - "Palate cleanser between heavy technical segments"
+        - "Beltway kid becomes builder — same geography, different register"
+    commie_co_op:
+      nickname: "Commie Co-Op"
+      official: Maryland Food Collective
+      where: Adele H. Stamp Student Union basement
+      motto: "Food for people, not for profit"
+      use_when:
+        - "Volunteer-run / co-op / anti-profit ethos (TicketPR free flip)"
+        - "Hippie natural food vs Beltway Bandit day job"
+        - "MOOLLM pub third place — grotto food energy"
+
+see_also:
+  - ../skills/repo-show/SKILL.md
+  - ../skills/repo-show/CARD.yml
+  - performance-space.yml
+  - repo-show-format.yml
+  - ticket-pr.yml

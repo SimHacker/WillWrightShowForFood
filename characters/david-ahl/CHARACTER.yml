@@ -1,0 +1,45 @@
+# David Ahl — invitation portrayal. NOT David Ahl.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: david-ahl
+  name: "David Ahl"
+  type: invitation
+  signifier: "📰"
+  status: living
+  field: "Creative Computing magazine founder; BASIC games anthologies; home-computing evangelist"
+  home: characters/david-ahl/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: facebook_friend
+  consent: not_yet_asked
+  note: "Don's Facebook friend — patron saint; aspire-to guest when the time is right"
+
+bio:
+  summary: |
+    **David Ahl** — founded **Creative Computing** (1974), the magazine that made home computers
+    feel wonderful. Editor of *101 BASIC Computer Games*, *BASIC Computer Games*, and **The Best of
+    Creative Computing** compilations — Vol. 2 cover art by **Gilbert Shelton**. Don: patron saint
+    of compilations; aspires to be as wonderful.
+
+patron_saint:
+  for: don-hopkins
+  why: "Wonderful magazines and anthologies — accessible joy, not gatekeeping"
+  media: media/best-of-creative-computing-vol2.yml
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/David_H._Ahl"
+  web:
+    - https://www.atarimagazines.com/creative/
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: media/best-of-creative-computing-vol2.yml, why: "Vol. 2 cover — Gilbert Shelton" }
+  - { path: ../don-hopkins/portrayal/heroes.yml, why: "Patron saints alongside McCloud, mentors" }
+  - { path: ../../process/VISION.md, why: "Archival compilation ethos" }

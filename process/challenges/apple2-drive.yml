@@ -9,7 +9,7 @@ meta:
   type: [drag_race_challenge, flair_class, emulated_runtime, real_hardware_ok]
   tagline: "Drive the Apple ][ — INTEGER BASIC if you dare"
   class: flair
-  celebrity_judge: ../characters/slats/judge-rubric.yml
+  celebrity_judge: ../characters/robots/slats/judge-rubric.yml
 
 pitch: |
   Same spec CARD as everyone else — declare your full rig: languages (APPLESOFT, INTEGER,
@@ -79,7 +79,7 @@ ties_to:
   - ../manual-transmission.yml
   - ../homefun-grading.yml
   - ../../repo-shows/will-wright/slats-reincarnation.yml
-  - ../../characters/slats/judge-rubric.yml
+  - ../../characters/robots/slats/judge-rubric.yml
   - ../../characters/thomas-cherryhomes/
   - ../../characters/steve-wozniak/
 

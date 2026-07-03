@@ -8,7 +8,7 @@ meta:
   type: [drag_race_challenge, flair_class, emulated_runtime]
   tagline: "Write in MACLISP on a PDP-10 emulator running ITS!"
   class: flair
-  celebrity_judge: ../characters/slats/judge-rubric.yml
+  celebrity_judge: ../characters/robots/slats/judge-rubric.yml
   homage: [MIT_AI_Lab, ITS_Tourist_Policy, Kent_Pitman, Lars_Brinkhoff]
 
 pitch: |
@@ -96,7 +96,7 @@ ties_to:
   - ../micropolis-ai-drag-race.yml
   - ../stick-shift-protocol.yml
   - ../homefun-grading.yml
-  - ../../characters/slats/judge-rubric.yml
+  - ../../characters/robots/slats/judge-rubric.yml
   - ../../characters/lars-brinkhoff/
   - ../../characters/thomas-cherryhomes/
   - ../../repo-shows/lars-brinkhoff/SHOW.yml

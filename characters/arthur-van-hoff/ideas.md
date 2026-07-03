@@ -9,7 +9,7 @@ public work and documented connections to this repository. Things Don would love
 
 Arthur van Hoff — Dutch programmer; great long-time friend of Don with many shared projects. At the **Turing Institute (Glasgow)** he built **GoodNeWS → HyperNeWS → HyperLook** (a NeWS/PostScript reimagining of HyperCard) and **PdB** (C-to-PostScript). On the early **Java** team at Sun he wrote the **Java compiler in Java** and worked on **AWT** (widely used) and **HotJava**. Co-founded **Marimba** (**Castanet + Bongo**). **Danny Goodman** — *Complete HyperCard Handbook* **and** the Bongo/Castanet book; he totally **gets** the lineage. HyperLook reached fewer people than AWT — Don suspects it's the line Arthur is **prouder of**; good show question. Later: TiVo, Flipboard, Jaunt VR, Apple.
 
-Don ↔ Arthur: **Turing (Glasgow)** → Don's **IFC vs Bongo** essay at Interval (1996–1997) → **Jaunt VR (Palo Alto)** contractor overlap (2016–2017).
+Don ↔ Arthur: **Sun** (Arthur visits to design **HyperNeWS 2.0** in PdB; Sun declines to hire him) → **Turing Institute (Glasgow)** — Don moves there ~1992 to build **HyperLook** (the product version of HyperNeWS 1.0) with Arthur and **Dug Scouler**, and port **SimCity** to NeWS/HyperLook for **DUX** → Don's **IFC vs Bongo** essay at Interval (1996–1997) → **Jaunt VR (Palo Alto)** contractor overlap (2016–2017).
 
 ## Shared ground
 
@@ -67,9 +67,39 @@ Not nostalgia — **continuity of collaboration**: HyperLook demos, Interval cri
 
 ### 6. PdB — C-to-PostScript compiler; Axis of Eval
 
-### 7. Freaky Putty — interactive image goo-ing toy
+**PdB = "Pure dead Brilliant"** (Glaswegian for *excellent*). Arthur's **object-oriented C → PostScript
+compiler**, written at the Turing Institute (~1990–1993) — conceptually a bit like TypeScript-for-
+PostScript. The party trick that makes it relevant to *slots all the way down*: you could **subclass a
+PostScript class in PdB, and subclass a PdB class in PostScript** — two syntaxes, one object model,
+crossing the language boundary in both directions (the [SWIG/Embind impedance-matcher idea](../david-rosenthal/slots-all-the-way-down.md), decades early). Don used PdB to build **HyperLook**.
 
-### 8. Button sticking out of the window frame
+### 7. HyperNeWS 2.0 at Sun — the collaboration, the almost-hire (Don's firsthand)
+
+Before Glasgow, **Arthur came to Sun to collaborate on the design of HyperNeWS 2.0**, using **PdB** —
+and **Don still has the design docs and code samples** from that work. Sun **decided not to hire
+Arthur** (Don's verdict: crazy). So instead Don packed up his SPARCstation and went to the **Turing
+Institute in Glasgow** to build the product version — **HyperLook** (nee HyperNeWS 1.0) — with Arthur
+and **Dug Scouler**, and to **port SimCity to NeWS/HyperLook for DUX**. A great NeWS-reunion thread to
+walk through with Arthur, **Owen Densmore**, **David Rosenthal**, and **James Gosling**.
+*(Firsthand account from Don; the HyperNeWS 2.0 design docs + code samples are Don's archive — a
+candidate media artifact to catalog here.)*
+
+### 8. Freaky Putty — interactive image goo-ing toy (reincarnation candidate)
+
+A HyperLook-era **interactive image goo-ing toy**, and a perfect **reincarnation** project — Don would
+love to bring it back. It's deceptively simple under the hood: a **3D-perspective rendering loop over
+just two triangles**, textured with the source image, plus **direct-manipulation mouse tracking** that
+lets you **grab, toss, and bounce the corner points** — the image warps and jiggles as the points
+spring around. Small kernel, big delight; a clean modern rebuild (WebGL/WASM/Canvas) would be almost
+trivial and gorgeous.
+
+Reincarnate it **with the original artwork by Levi Kruger** (the original FreakyPutty artist — credit
+and honor the source art). Great on-air demo: show the two-triangle trick, then let the audience toss
+the points around.
+*(Firsthand, Don's; Levi Kruger credited as the original artist — confirm attribution/permission before
+publishing the art.)*
+
+### 9. Button sticking out of the window frame
 
 ## Sources (public)
 

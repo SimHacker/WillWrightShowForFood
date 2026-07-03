@@ -1,0 +1,32 @@
+# Brian Eno opening — lot ledger (play § only)
+meta:
+  currency: "§"
+  fictional: true
+  guest: brian-eno
+  spec: simulated-opening.yml
+  status: dream_seed
+
+guest_wallet:
+  simoleons: 0
+  post_opening_target: 3700000
+
+magnificent_lots:
+  - { id: lot-77mp-software-disc, wall_title: "77 Million Paintings — Generative Software Disc (The Seed)", reserve_§: 180000 }
+  - { id: lot-77mp-combination-floor, wall_title: "Combination Space Floor — Abstract Deed to Instance ∞", reserve_§: 95000 }
+  - { id: lot-oblique-deck, wall_title: "Oblique Strategies — Deck as Protocol (Mint Pass)", reserve_§: 120000 }
+  - { id: lot-airports, wall_title: "Music for Airports — Trigger Study I", reserve_§: 85000 }
+
+quick_sale_combinations:
+  deed_format: "77MP-{id}"
+  price_range_§: [1200, 4800]
+  collision_lot: 77MP-4291033
+  note: "Two patrons same combination → forgery arc → art-thief beat"
+
+see_also:
+  - 77-million-paintings.yml
+  - SECONDARY-MARKET.yml
+  - ../../process/art-thief-game.yml
+
+hammer_log: []
+
+note: "Not AI Generated!"

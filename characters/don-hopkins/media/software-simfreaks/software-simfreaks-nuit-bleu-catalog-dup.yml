@@ -1,0 +1,11 @@
+# Sidecar — software-simfreaks-nuit-bleu-catalog-dup.png
+
+artifact:
+  file: software-simfreaks-nuit-bleu-catalog-dup.png
+  slug: software-simfreaks-nuit-bleu-catalog-dup
+  category: software
+  subcategory: simfreaks
+  what: "Duplicate SimFreaks Nuit Bleu catalog"
+  sidecar_of: software-simfreaks-nuit-bleu-catalog-dup.png
+
+note: "Not AI Generated!"

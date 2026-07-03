@@ -1,0 +1,26 @@
+# NeWS era t-shirt graphics — X11/NeWS, PostScript puns
+
+artifact:
+  what: "Sun Microsystems NeWS window-system merch — PostScript inside jokes"
+  era: "late 1980s–1990s"
+
+designs:
+  - file: news-tshirt-x11-news-porsche-bw.png
+    title: "X11/NeWS"
+    pun: "Porsche 911 = X11; pixel rear / vector front"
+  - file: news-tshirt-x11-news-porsche-color-sunsoft.png
+    title: "X11/NeWS crashes into SunSoft wall"
+    pun: "911 into brick wall — SunSoft logo"
+  - file: news-tshirt-postscript-for-poets.png
+    title: "NeWS — PostScript For Poets"
+    trademarks: "NeWS™ Sun · PostScript® Adobe"
+  - file: news-tshirt-ps-honk-if.png
+    title: "PS ♥ { honk } if"
+    pun: "PostScript procedure + if — bumper-sticker syntax"
+
+repo_orbit:
+  news_tnt: ../news-tnt/INDEX.yml
+  hyperties: ../hyperties/INDEX.yml
+  mark_weiser: ../danielle-bunten-berry/danielle-bunten-berry.yml
+
+note: "Not AI Generated!"

@@ -87,4 +87,58 @@ meta_project:
   - id: goals-were-your-goals
     q: "Almost every goal of THIS project — plugin objects, content sharing, data portability, characters moving between worlds — you named in 1996. Are we finally building the thing you were describing? What did we miss?"
 
+# HN — filfre.net Maxis Part 1 thread (2026-07-04)
+# Don question-pump: item?id=48780144 · Queue: audience/hn-nanna/questions.yml
+# Provenance + routing: schemas/question-provenance.yml
+hn_filfre_maxis_2026_07:
+  thread: https://news.ycombinator.com/item?id=48776525
+  article: https://www.filfre.net/2026/07/the-life-and-times-of-maxis-part-1-simeverything/
+  source_pack: ../../characters/will-wright/sources/2026-07-03-digital-antiquarian-maxis-part1/
+  provenance_schema: ../../schemas/question-provenance.yml
+  queued:
+    - id: hn-nanna-okolopoly
+      from: nanna
+      hn_user: nanna
+      hn_profile: https://news.ycombinator.com/user?id=nanna
+      audience: audience/hn-nanna/questions.yml
+      hn_comment: https://news.ycombinator.com/item?id=48780477
+      routing: [git, email_to_will, adorable_minutes, repo_show, twitch, hn_reply]
+      q: "Was Ökolopoly (West German cybernetic environment game, board + DOS) an influence on SimCity?"
+    - id: hn-nanna-cybernetics-wiener
+      from: nanna
+      hn_user: nanna
+      audience: audience/hn-nanna/questions.yml
+      hn_comment: https://news.ycombinator.com/item?id=48780477
+      routing: [git, email_to_will, adorable_minutes, repo_show, twitch, hn_reply]
+      q: "How much cybernetics beyond Gaia Theory? Norbert Wiener?"
+  thread_seeds:
+    - id: hn-fallinditch-widget-workshop
+      from: fallinditch
+      hn: https://news.ycombinator.com/item?id=48778595
+      q: "Widget Workshop (1996) — drag-and-drop cause-and-effect pipelines, Rube Goldberg puzzle mode. What was the design intent? Any stories from that era at Maxis?"
+    - id: hn-rustcleaner-sc2000-gdi-ui
+      from: rustcleaner
+      hn: https://news.ycombinator.com/item?id=48780203
+      q: "SimCity 2000 had that simulator feel and Win32 GDI integration — later Maxis UIs went full-screen with big dumb buttons. Was that a deliberate tradeoff, or drift you noticed too?"
+    - id: hn-rustcleaner-care-bears
+      from: rustcleaner
+      hn: https://news.ycombinator.com/item?id=48780203
+      q: "You and rustcleaner both loved Care Bears (Nelvana). Why bronies and not care bros?"
+    - id: hn-hluska-simgolf-humor
+      from: hluska
+      hn: https://news.ycombinator.com/item?id=48778304
+      q: "SimGolf humor landed hard — decades later 'gregiscool.com' still feels like a startup name. What were you going for with that tone?"
+    - id: hn-hluska-simearth-manual
+      from: hluska
+      hn: https://news.ycombinator.com/item?id=48778304
+      q: "SimEarth's manual felt like a PhD program for a kid — was that density intentional design, or happy accident?"
+    - id: hn-drayfield-simearth-inscrutable
+      from: drayfield
+      hn: https://news.ycombinator.com/item?id=48778074
+      q: "SimEarth's inscrutability and huge manuals — tantalizing ecological secret out of reach. Did you want players to feel that mystery, or was it a complexity problem?"
+    - id: hn-sg-mac-resolution
+      from: SG-
+      hn: https://news.ycombinator.com/item?id=48778336
+      q: "Original Mac versions at higher resolution — preservation/remaster angle: do those assets still exist in a usable form?"
+
 note: "We can come up with a LOT more. Audience copies/forks/elaborates these into their characters; the popular + best-elaborated ones bubble up. Long-form, but finite — let the collective surface the gold."

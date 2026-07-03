@@ -1,0 +1,18 @@
+# Sidecar — pie-menu-fitts-law-promo.png
+
+artifact:
+  file: pie-menu-fitts-law-promo.png
+  slug: pie-menu-fitts-law-promo
+  room: pie-menus
+  what: pie menu fitts law promo
+  era: CHI 1988 through Sims Online
+  sidecar_of: pie-menu-fitts-law-promo.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
+
+see_also:
+  - pie-menus.yml
+  - ../news-tnt/INDEX.yml
+
+note: "Not AI Generated!"

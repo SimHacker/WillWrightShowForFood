@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-wedding-reception-buffet.png
+
+artifact:
+  file: transmogrifier-wedding-reception-buffet.png
+  slug: transmogrifier-wedding-reception-buffet
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — wedding reception buffet
+  era: 2000-2002
+  sidecar_of: transmogrifier-wedding-reception-buffet.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

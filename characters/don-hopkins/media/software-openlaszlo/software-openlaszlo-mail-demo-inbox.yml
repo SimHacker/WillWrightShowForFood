@@ -1,0 +1,11 @@
+# Sidecar — software-openlaszlo-mail-demo-inbox.png
+
+artifact:
+  file: software-openlaszlo-mail-demo-inbox.png
+  slug: software-openlaszlo-mail-demo-inbox
+  category: software
+  subcategory: openlaszlo
+  what: "Laszlo Mail Demo — Don Hopkins inbox"
+  sidecar_of: software-openlaszlo-mail-demo-inbox.png
+
+note: "Not AI Generated!"

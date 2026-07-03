@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-1-1-flamingo-browser.png
+
+artifact:
+  file: transmogrifier-1-1-flamingo-browser.png
+  slug: transmogrifier-1-1-flamingo-browser
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — 1 1 flamingo browser
+  era: 2000-2002
+  sidecar_of: transmogrifier-1-1-flamingo-browser.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

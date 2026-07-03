@@ -1,0 +1,20 @@
+# Computing Sun Brochure
+
+room:
+  id: computing-sun-brochure
+  category: computing
+  subcategory: sun-brochure
+  parent: ../INDEX.yml
+  count: 4
+
+artifacts:
+  - file: computing-sun-4-200-fog-molecular-models.png
+    sidecar: computing-sun-4-200-fog-molecular-models.yml
+  - file: computing-sun-4-200-hillside-survey-poles.png
+    sidecar: computing-sun-4-200-hillside-survey-poles.yml
+  - file: computing-sun-4-200-runway-moffett-field.png
+    sidecar: computing-sun-4-200-runway-moffett-field.yml
+  - file: computing-sun-4-200-stone-neon-cables.png
+    sidecar: computing-sun-4-200-stone-neon-cables.yml
+
+note: "Not AI Generated!"

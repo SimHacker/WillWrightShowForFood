@@ -1,0 +1,18 @@
+# Sidecar — van-leer-press-nameplate.png
+
+artifact:
+  file: van-leer-press-nameplate.png
+  slug: van-leer-press-nameplate
+  room: robot-collection
+  what: Van Leer press robot face — press nameplate
+  era: ~2007-2009
+  sidecar_of: van-leer-press-nameplate.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/van-leer-robot-collection.yml
+  - ../../../repo-shows/ideas/gags/turing-robot-olympics.yml
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

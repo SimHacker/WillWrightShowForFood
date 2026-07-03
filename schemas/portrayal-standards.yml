@@ -109,7 +109,11 @@ guest_directory:
 per_character_files:
   required: [CHARACTER.yml, CARD.yml, GLANCE.md, README.md, invitation.md]
   recommended: [ideas.md]
-  optional: [correspondence.yml, sources.yml, bio.yml, portrayal/, sources/, media/]
+  optional: [correspondence.yml, sources.yml, bio.yml, portrayal/, sources/, media/, face-puppet.yml]
+  face_puppet:
+    spec: ../../apps/performance-space/faceball-construction-set.yml#guest_characters
+    file: face-puppet.yml
+    rule: "Optional modular portrait puppet — guest photo + attachments; live or offline recording"
   ideas_file: |
     ideas.md — conversation hooks for the guest browsing their invitation: what they've done
     (public career), shared ground with the repo (abstracted — no private email bodies), and
@@ -117,6 +121,11 @@ per_character_files:
     a factual Shared ground section is OK if it adds value without boastfulness.
   grows: "Add files as responses and show prep warrant — not a fixed template checklist"
   do_not_repeat: "This standards file — reference governed_by: portrayal-standards.yml"
+  couple_shows:
+    doc: ../../process/couple-and-solo-shows.yml
+    rule: |
+      One clean slug per person (no role suffixes in directory names). Natural couples get a
+      pair show for shared work; interview together to avoid diluting/repeating the same story.
 
 simulation:
   # Constitutional distinction — impersonation vs simulation. See also human-control-and-authorship theme.

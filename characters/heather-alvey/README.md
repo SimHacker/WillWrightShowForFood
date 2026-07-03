@@ -23,7 +23,7 @@ users of Don's **Micropolis content-management & publishing system**.
 
 ## The show
 
-[`repo-shows/heather-steve-alvey/`](../../repo-shows/heather-steve-alvey/README.md) — a whole-career show with
+[`repo-shows/heather-and-steve-alvey/`](../../repo-shows/heather-and-steve-alvey/README.md) — a whole-career show with
 **Steve**: SimFreaks, SimSlice/SliceCity, Zombie Sims, 26 years of artisanal content, and how to keep
 it thriving. Flagship episode: the playful **Afterlife × ZombieSims** bridge.
 

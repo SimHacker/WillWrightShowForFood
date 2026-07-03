@@ -1,0 +1,17 @@
+# Sidecar — art-3d-glitch-blender-dome-forehead-hdri.png
+
+artifact:
+  file: art-3d-glitch-blender-dome-forehead-hdri.png
+  slug: art-3d-glitch-blender-dome-forehead-hdri
+  category: art
+  subcategory: 3d-glitch
+  what: "Blender glitch — reflective HDRI dome replaces forehead, inverted jaw"
+  sidecar_of: art-3d-glitch-blender-dome-forehead-hdri.png
+
+work:
+  client: AI Foundation
+  era: "~2020 character animation pipeline interview"
+  stack: [Character Creator 3, iClone, Blender, Unity]
+  see_also: ../../portrayal/presentations.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,14 @@
+# Sidecar — google-pacman-maps-iphone.png
+
+artifact:
+  file: google-pacman-maps-iphone.png
+  slug: google-pacman-maps-iphone
+  room: google-pacman
+  what: google pacman maps iphone
+  era: 2010
+  sidecar_of: google-pacman-maps-iphone.png
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

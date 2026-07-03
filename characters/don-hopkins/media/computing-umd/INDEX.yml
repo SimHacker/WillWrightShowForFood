@@ -1,0 +1,18 @@
+# Computing Umd
+
+room:
+  id: computing-umd
+  category: computing
+  subcategory: umd
+  parent: ../INDEX.yml
+  count: 3
+
+artifacts:
+  - file: computing-umd-vax-8600.png
+    sidecar: computing-umd-vax-8600.yml
+  - file: computing-umd-vax-lab.png
+    sidecar: computing-umd-vax-lab.yml
+  - file: computing-umd-zmob-256-z80-board.png
+    sidecar: computing-umd-zmob-256-z80-board.yml
+
+note: "Not AI Generated!"

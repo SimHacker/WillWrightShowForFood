@@ -1,0 +1,42 @@
+# Cellular automata on iPad — SimCity tiles as cells
+
+room:
+  id: cellular-automata-tiles
+  name: Cellular Automata — SimCity Tiles
+  parent: ../../media.md
+
+artifacts:
+  - ca-simcity-tiles-portrait-mosaic.png
+  - ca-harble-flaming-marble-waves.png
+  - ca-worms-tube-worms-purple.png
+  - ca-worms-flow-blue-orange.png
+  - ca-harble-spirals-black-bg.png
+  - ca-worms-earth-tones.png
+  - ca-simcity-tiles-wavy-surface.png
+  - ca-zelda-inventory-items-grid.png
+  - ca-laundromat-dryers-misread.png
+  - ca-soyuz-globus-console.png
+  - ca-soyuz-button-panel.png
+  - ca-globus-imp-instrument.png
+  - simcity-heatmap-toolbar.png
+  - simcity-rci-demand-meter.png
+  - simcity-pos-neg-scale.png
+  - simcity-tile-river-stamp.png
+  - simcity-skyline-decay-strip.png
+  - simcity-terrain-toolbar.png
+  - simcity-overlay-toolbar.png
+  - simcity-toolbar-strip.png
+  - simcity-scenario-selection.png
+  - simcity-youre-a-winner.png
+  - pie-menu-on-globe.png
+  - micropolis-openlaszlo-debugger.png
+
+spec:
+  - cellular-automata-tiles.yml
+
+see_also:
+  - ../../career/simcity-lineage.yml
+  - ../micropolis-gallery/INDEX.yml
+  - ../../../will-wright/CHARACTER.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,17 @@
+# Danielle Bunten Berry — portraits and party photo
+
+artifact:
+  subject: Danielle Bunten Berry (Dan Bunten)
+  games: [M.U.L.E., The Seven Cities of Gold]
+
+photos:
+  - file: danielle-bunten-portrait.png
+    what: "Studio portrait — curly hair, turtleneck, spiral earrings"
+  - file: danielle-bunten-party-with-mark-weiser.png
+    what: "Indoor party — Don (bearded, plaid) with group; possibly CHI"
+    note: "User tagged April 2010 with Danielle; Mark Weiser may appear in frame"
+
+repo_orbit:
+  olpc_gdc: ../olpc-gdc/INDEX.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,31 @@
+# HyperTIES — UMD HCIL hypermedia on NeWS
+
+artifact:
+  what: "HyperTIES hypermedia browser — client/server + PostScript applets on NeWS"
+  director: Ben Shneiderman
+  lab: University of Maryland Human Computer Interaction Lab
+  history: "http://www.cs.umd.edu/hcil/hyperties/"
+
+road_pizza:
+  file: hyperties-road-pizza-diagram.png
+  caption: "HyperTIES architectural road pizza diagram"
+  drawn_on: "Xerox 8010 Dandelion / Viewpoint (Star)"
+  with: [Catherine Plaisant, Ben Shneiderman]
+  don_comment: "Embedded PostScript applets downloaded onto hypermedia pages. PS: Fuck Eolas!"
+
+news_tape:
+  file: hyperties-news-tape-browser.png
+  what: "The NeWS Tape — Gosling CHED tour, Kanji demo, Big Brother eye.ps, pie menu"
+
+shell:
+  file: nemacs-hyperties-shell.png
+  what: "NeWS shell — MenuPSBegin, .cshrc, PSLIBDIR"
+
+hubble:
+  note: "Sun pop-out Hubble components demo cited by Ben Shneiderman — see nemacs-hyperties-news-hubble.yml"
+
+repo_orbit:
+  nemacs_hubble: ../../nemacs-hyperties-news-hubble.yml
+  ben_shneiderman: ../../../ben-shneiderman/CHARACTER.yml
+
+note: "Not AI Generated!"

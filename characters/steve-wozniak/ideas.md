@@ -11,11 +11,21 @@ Steve Wozniak — Apple co-founder, creator of the Apple I and Apple II, and emb
 
 ## The hooks
 
-### 1. Show seed: `repo-shows/steve-wozniak/`
+### 1. Apple II Red Book — page 141 walkthrough
+Don posted the schematic set for Woz's 70th — [`media/apple-ii-redbook/`](media/apple-ii-redbook/INDEX.yml).
+- **FIG S-1** system diagram — Jeff Bulf: *"looks just a bit like LAX!"*
+- **FIG S-10** on-board I/O + speaker — Don's first assembly program was the **beep routine** (*BASIC buzz and grumble* wasn't enough)
+- Lee Thalblum: *most interesting part of the Apple design — took 40 years to figure out*
+- David Burrow cassette **Star Trek 1979** — LRS/SRS, photon torpedos, Don typed it in from *Creative Computing*
+- Gag: [`apple-ii-redbook-lax-beep.yml`](../../repo-shows/ideas/gags/apple-ii-redbook-lax-beep.yml)
+
+### 2. Show seed: `repo-shows/steve-wozniak/`
 walk the repo on air and build from the seed.
 
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
+- [`media/apple-ii-redbook/`](media/apple-ii-redbook/INDEX.yml) — Red Book figures S-1–S-11 + timing (11 kept, 1 deduped)
 - Show seed: [`repo-shows/steve-wozniak/`](../../repo-shows/steve-wozniak/)
 - [`CHARACTER.yml`](CHARACTER.yml)
+- Don Hopkins thread: [`../don-hopkins/media.md`](../don-hopkins/media.md) → Woz media cross-link

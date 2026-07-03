@@ -1,0 +1,11 @@
+# Sidecar — olpc-demo-devon-mccullough-big-eyeballs.png
+
+artifact:
+  file: olpc-demo-devon-mccullough-big-eyeballs.png
+  slug: olpc-demo-devon-mccullough-big-eyeballs
+  category: olpc
+  subcategory: demos
+  what: "Devon McCulough OLPC big eyeballs"
+  sidecar_of: olpc-demo-devon-mccullough-big-eyeballs.png
+
+note: "Not AI Generated!"

@@ -22,6 +22,7 @@ Playlists ([**entryways**](process/entryways/README.md)) are **ordered tours**. 
 | [archive_and_provenance](process/trails/archive-and-provenance.md) | *Source, don't paraphrase* | Public bud vs private archive — export log, primary sources |
 | [game_design_lineage](process/trails/game-design-lineage.md) | *What is a game?* | Toys, possibility space, MUDs, one-page design, reverse-engineered history |
 | [direct_manipulation](process/trails/direct-manipulation.md) | *See it, touch it, change it live* | Shneiderman → Myers → Victor — the interface IS the idea |
+| [visual_programming_patch_cord](process/trails/visual-programming-patch-cord.md) | *Boxes, lines, patch-cords* | Hookup → Bounce → Image/ine → Isadora |
 | [live_objects](process/trails/live-objects.md) | *The machine is alive* | Smalltalk → Self → NeWS → Java; the lineage behind HyperLook |
 | [procedural_beauty](process/trails/procedural-beauty.md) | *Generative art, runnable artifacts* | Perlin noise, Light Stage, audiovisual art, maps |
 | [maxis_sims_lineage](process/trails/maxis-sims-lineage.md) | *SimCity → Dollhouse → The Sims → Spore* | The genealogy this repo grew from — with primary-source images |

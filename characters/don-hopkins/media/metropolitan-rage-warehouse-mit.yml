@@ -1,0 +1,49 @@
+# Metropolitan RAGE WAREHOUSE — MIT tourist memory, RMS at Tech Square
+
+artifact:
+  file: metropolitan-rage-warehouse-mit.png
+  what: "Red brick facade — cropped lettering reads METROPOLITAN / RAGE WAREHOUSE. / IRE PROOF."
+
+building:
+  full_intended: "METROPOLITAN STORAGE WAREHOUSE. FIRE PROOF."
+  visible_crop:
+    line1: METROPOLITAN
+    line2: "RAGE WAREHOUSE."
+    line3: "IRE PROOF."
+  mechanism: "STO and F cropped by framing — same joke as wraparound book covers"
+  location: "Near MIT / Tech Square, Cambridge, MA"
+  architecture: "Red brick, recessed arches, fleur-de-lis iron anchors, crenellated parapet below"
+
+rms_encounter:
+  when: "~1980s"
+  context: "Don visiting MIT as a tourist"
+  who: Richard M. Stallman
+  where: "Nearby Tech Square — in front of this building"
+  what: "RMS pointed the sign out to Don"
+  tech_square: "545 Tech Square orbit — copyleft envelope, GNU, Hugh Daniel Xanadu cap"
+
+lisp_machine_manual_parallel:
+  shirt: don-hopkins-lisp-machine-manual-shirt-queensday.png
+  wraparound: "Letters wrap spine and back — front cover reads LISP / CHINE / NUAL"
+  warehouse_parallel: "METROPOLITAN / RAGE WAREHOUSE / IRE PROOF — framing eats the letters"
+  lars_brinkhoff: "../../lars-brinkhoff/CHARACTER.yml#t_shirts"
+  punchline: "Typography as accidental poetry when the viewport is wrong"
+
+copyleft_orbit:
+  envelope: pantomime/copyleft-envelope-1984.yml
+  gnu_art: "https://www.gnu.org.cach3.com/graphics/copyleft-sticker.en.html"
+
+repo_jokes:
+  menagerie:
+    margot_krell: "The warehouse performs administrative rage—"
+    vandermeer: "IRE PROOF — the cryptid is fire-adjacent."
+    don: "RMS showed me. RAGE WAREHOUSE. Just like LISP CHINE NUAL."
+
+see_also:
+  - ../media.md
+  - pantomime/copyleft-envelope-1984.yml
+  - ../../lars-brinkhoff/CHARACTER.yml
+  - ../../hugh-daniel/CHARACTER.yml
+  - ../../../repo-shows/ideas/gags/pantomime-gallery.yml
+
+note: "Not AI Generated!"

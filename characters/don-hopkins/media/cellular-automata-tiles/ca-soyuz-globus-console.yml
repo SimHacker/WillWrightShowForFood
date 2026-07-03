@@ -1,0 +1,17 @@
+# Sidecar — ca-soyuz-globus-console.png
+
+artifact:
+  file: ca-soyuz-globus-console.png
+  slug: ca-soyuz-globus-console
+  room: cellular-automata-tiles
+  what: SimCity-tile cellular automata — soyuz globus console
+  era: ~2010-2011
+  sidecar_of: ca-soyuz-globus-console.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/cellular-automata-simcity-tiles.yml
+
+see_also:
+  - ../micropolis-gallery/INDEX.yml
+
+note: "Not AI Generated!"

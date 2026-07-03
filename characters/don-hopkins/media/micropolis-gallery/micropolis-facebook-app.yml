@@ -1,0 +1,18 @@
+# Sidecar — micropolis-facebook-app.png
+
+artifact:
+  file: micropolis-facebook-app.png
+  slug: micropolis-facebook-app
+  room: micropolis-gallery
+  what: micropolis facebook app
+  era: 1991 HyperLook through 2010s Facebook
+  sidecar_of: micropolis-facebook-app.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/micropolis-gallery.yml
+  - ../../../repo-shows/ideas/gags/pacbot-eats-traffic.yml
+
+see_also:
+  - micropolis-gallery.yml
+
+note: "Not AI Generated!"

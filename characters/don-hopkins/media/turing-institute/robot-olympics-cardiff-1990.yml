@@ -1,0 +1,48 @@
+# Sidecar — robot-olympics-cardiff-1990.png
+
+artifact:
+  file: robot-olympics-cardiff-1990.png
+  credit: "Copyright Peter Mowforth, 1990"
+  type: photograph
+  format: png
+  era: "1990"
+  note: "Not AI Generated!"
+
+room: INDEX.yml
+
+turing_institute:
+  place: Turing Institute, Glasgow
+  don_and_arthur: |
+    Don worked with **Arthur van Hoff** at the Turing Institute — built **HyperLook** in Glasgow,
+    ported **SimCity** on top of it, **shipped both**. One of the fun places.
+  robot_olympics:
+    host: Turing Institute ran the Robot Olympics
+    don_present: false
+    arthur_gift: "Legendary Robot Olympics t-shirt from Arthur — still legendary"
+
+this_image:
+  what: |
+    Biped walking robot — metallic plates, hinged ankles/knees, rectangular light-box torso
+    bearing **University of Wales Cardiff** logo. Thick cable from underside. Children crowd
+    around at a science-fair / exhibition hall (wood floor, display partitions, monitor in back).
+  read: Robot Olympics era — UK robotics as public spectacle; Cardiff team in the orbit of
+    Turing's Glasgow games. Don wasn't at the Olympics; Arthur was in that world.
+
+patron_menagerie: ../../jsonsters/critics.yml
+patron_whispers:
+  mimsy: "The Cardiff monolith strides — institutional logo as breastplate. The children are the jury."
+  gregory: "Two legs, one cable, zero revenue. I'd still short the competition."
+  bunny: "Are those little humans? How darling. The robot looks like a walking briefcase. I need a tee."
+
+vision_api_beats:
+  canonical: first-robot-olympics.yml#cardiff_vision_apis
+  google: "POSSIBLE JOY DETECTED!!!"
+  microsoft: "POSING: a group of people posing for the camera"
+  ibm_watson: "ROBOT ANDROID GAS PUMP DETECTED!"
+  don_pizza_line: "delivering a pizza or a SparcStation"
+  moola: "Misread labels → training data → worthless MOOLA"
+
+see_also:
+  - first-robot-olympics.yml
+  - ../../../arthur-van-hoff/
+  - ../../../hyperlook-news-postscript-simcity.md

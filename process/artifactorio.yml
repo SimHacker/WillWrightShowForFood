@@ -1,0 +1,53 @@
+# artifactorio — the game about skill-skills: Factorio where assemblers build assemblers
+# Pairs with process/artifactory.yml (the concept) + the moollm artifactory skill (the engine).
+
+meta:
+  id: artifactorio
+  coined_by: don-hopkins
+  one_liner: "Factorio, but the belts carry skills and the assemblers build assemblers — you automate the building of the builders."
+  epigraph: |
+    "Skill skills are artifactory-factories. Games about skill skills are Artifactorio.
+     You can't think about thinking without thinking about thinking about something." — Don Hopkins / Papert
+
+premise: |
+  A skill is an artifactory (it builds artifacts). The meta-skill — the skill for making skills —
+  is an artifactory-FACTORY (it builds artifactories). Artifactorio is the game of that recursion:
+  lay down factories that build factories that build factories, on belts, with a budget, and a
+  governor that punishes runaway construction.
+
+the_ladder:
+  - { level: artifact, is: "a file, character, doc, image", builds: "-" }
+  - { level: artifactory, is: "a skill", builds: "artifacts" }
+  - { level: artifactory_factory, is: "the meta-skill (skills/skill)", builds: "artifactories" }
+  - { level: artifactorio, is: "the game", builds: "grounded play across all the above" }
+
+why_not_vacuous:
+  papert: "\"You can't think about thinking without thinking about thinking about something.\" — Seymour Papert, Mindstorms"
+  grounding: |
+    Every meta-level needs a concrete SOMETHING to be about — Papert's objects-to-think-with.
+    Artifactorio keeps the recursion playable by making each rung a REAL artifact (files, commits,
+    characters, skills you can open, run, diff, break). No hand-waving: there is always an object
+    in hand.
+
+gameplay_sketch:
+  resources: "tokens (the energy source — consumed on read, generated on write)"
+  belts: "git — commits, branches, merges, PRs; artifacts flow down the timeline"
+  assemblers: "skills / artifactories — each consumes artifacts and emits artifacts (or more assemblers)"
+  products: "artifacts, then skills, then skill-skills"
+  win: "a self-sustaining factory of builders that still stops on satisfy and stamps provenance"
+  lose_condition:
+    autofac: "runaway self-reproduction — unwanted output floods the belts (pollution)"
+    coprophagia: "assemblers fed only their own output -> model collapse -> every product is the same product"
+  governor: "stop conditions, human-in-the-loop (Player-in-the-Middle), provenance/stigmata — the anti-Autofac rules from the artifactory skill"
+
+show_hooks:
+  - "Audience builds a factory-of-builders live; the chant game CODE THAT SPEC feeds the belts"
+  - "Calm constructor vs Autofac as a visible win/lose — the PKD danger axis made playable"
+  - "Meta-Factorio speedrun: fewest belts to a self-reproducing skill-skill"
+
+see_also:
+  - { path: artifactory.yml, why: "the concept this game is built on" }
+  - { path: ../characters/mark-weiser/pkd-lem-ai-sf.md, why: "calm vs Autofac danger axis; author-god" }
+  - { path: code-that-spec.yml, why: "audience chant that feeds the belts" }
+  - { path: crazy-idea-jam.yml, why: "stupid-fun-forward idea reactor" }
+  - { path: ../../../../Leela/git/moollm/skills/artifactory/SKILL.md, why: "the engine (sibling workspace repo)" }

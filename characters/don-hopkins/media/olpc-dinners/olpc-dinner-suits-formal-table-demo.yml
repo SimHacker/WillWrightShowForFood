@@ -1,0 +1,11 @@
+# Sidecar — olpc-dinner-suits-formal-table-demo.png
+
+artifact:
+  file: olpc-dinner-suits-formal-table-demo.png
+  slug: olpc-dinner-suits-formal-table-demo
+  category: olpc
+  subcategory: dinners
+  what: "Formal dinner OLPC demo for suited guests"
+  sidecar_of: olpc-dinner-suits-formal-table-demo.png
+
+note: "Not AI Generated!"

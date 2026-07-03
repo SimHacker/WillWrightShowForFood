@@ -1,0 +1,25 @@
+# Arthur van Hoff — plane N333ST exterior
+
+artifact:
+  file: plane-n333st-exterior.png
+  pair: plane-n333st-cockpit.png
+  what: "Side profile on ramp — shattered red/orange/black geometric livery, gull-wing door open"
+
+aircraft:
+  registration: N333ST
+  tail_marking: "Large white italic N333ST on rear fuselage"
+  likely_model: "Cirrus SR-series (SR22)"
+  livery: "Jagged shard paint — red, orange, black; solid red mid-fuselage; dark tail"
+  features: "Low wing, tricycle gear with wheel pants, single prop"
+
+scene:
+  location: "GA ramp — tie-downs, white lines"
+  background: "Other aircraft, cars, hills, blue sky with cirrus"
+  cockpit_file: plane-n333st-cockpit.yml
+
+see_also:
+  - plane-n333st-cockpit.yml
+  - INDEX.yml
+  - birthday-party.yml
+
+note: "Not AI Generated!"

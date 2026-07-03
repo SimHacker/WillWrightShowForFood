@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-chapel-kneeling-prayer.png
+
+artifact:
+  file: transmogrifier-chapel-kneeling-prayer.png
+  slug: transmogrifier-chapel-kneeling-prayer
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — chapel kneeling prayer
+  era: 2000-2002
+  sidecar_of: transmogrifier-chapel-kneeling-prayer.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

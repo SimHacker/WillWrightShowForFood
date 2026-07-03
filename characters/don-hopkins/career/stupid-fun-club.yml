@@ -74,6 +74,23 @@ stupid_fun_club:
     - https://donhopkins.com
     - https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/don-hopkins
 
+  toys:
+    ant_farm_revolution:
+      product: "Ant Farm Revolution — Uncle Milton"
+      designer: "Will Wright / Stupid Fun Club"
+      feature: "Ceiling-projector ant shadows in nutrient gel"
+      media: ../../../will-wright/media/ant-farm-revolution-frys.yml
+      found: "Fry's Electronics — cowboy-themed SV retail (gone)"
+      frys_gallery: ../media/frys-electronics/INDEX.yml
+
+  workshop:
+    location: Emeryville — near Maxis Suite 6, along Amtrak tracks
+    media: ../media/sfc-emeryville/INDEX.yml
+    exterior_logo: ../media/sfc-emeryville/sfc-logo-outside-workshop.png
+    will_birthday: ../media/sfc-emeryville/will-wright-birthday-workshop.png
+    note: "Cast globe plaque outside; birthday party ~2013 with Jason Shankel"
+    storymaker: ../media/storymaker/INDEX.yml
+
 see_also:
   - { path: work-history.yml, why: "Timeline — SFC employment bands" }
   - { path: project-threads.yml, why: "Thread merge map" }

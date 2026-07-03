@@ -65,6 +65,18 @@ basically — your territory and Will's. Generosity, not nostalgia.
 If a four-way is fun, I'd love **you, Scott, and Will** together; if not, any shape you like.
 Recording, publicity — all your call. Zero homework; I do the setup.
 
+**Simulated art opening — totally your thing.** Before we talk, a **simulated gallery opening**
+for generative work: our menagerie misreads ***77 Million Paintings*** (2006 DVD/software — 296
+slides, ~77 million *combinations*, not 77 million files), Oblique Strategies, ambient systems —
+as NFT mint passes and floor prices. Ten bazillion fictional patrons (performed by eight lunatics)
+gush, misread, outbid, covet each other's combination deeds, forge, steal — the **Art Thief** game.
+They bid play-money **§**; you start buried in worthless Simoleons to **surrender on stream**
+(give it all away — art as trigger, not object). Scenius made literal: the patrons *are* the
+collective composer. Scott's Sheep opening pairs before or after. Spec:
+[`simulated-opening.yml`](simulated-opening.yml) · product canon:
+[`77-million-paintings.yml`](77-million-paintings.yml) · secondary market:
+[`../../process/art-thief-game.yml`](../../process/art-thief-game.yml).
+
 ## A personal note — for you, Brian
 
 *(In the open repo because I'd rather be honest than coy — but written to you, not to an audience.)*

@@ -1,17 +1,17 @@
-# Repo Show — Scott Kim
+# Repo Show — Scott Kim (optional solo)
 
 *Seed — consent not yet asked.*
 
-**Guest:** [Scott Kim](../../characters/scott-kim/README.md) — ambigrams ("inversions"), puzzle design, symmetry & visual thinking
-**Invitation:** [`characters/scott-kim/invitation.md`](../../characters/scott-kim/invitation.md)
+**Primary interview:** [`amy-jo-and-scott-kim/`](../amy-jo-and-scott-kim/README.md) — with **Amy Jo Kim** (Shufflebrain, Game Thinking × puzzles).
 
-## The show
+**This solo seed:** Viewpoint / inversions / puzzle-craft **deep-dive only** — not a substitute for the pair show.
 
-The master of **inversions** on the craft of puzzles and visual thinking: design an ambigram live, take apart what makes a good **"aha,"** and treat math as play in the **Martin Gardner** tradition. Naturally **paired with [Will Wright](../../characters/will-wright/README.md)** — his friend — for a conversation on play, puzzles, and designing for discovery (Will's "possibility space" meets Scott's designed difficulty curve).
+**Guest:** [Scott Kim](../../characters/scott-kim/README.md)  
+**Invitation:** [`characters/scott-kim/invitation.md`](../../characters/scott-kim/invitation.md) · joint [`amy-jo-kim/invitation.md`](../../characters/amy-jo-kim/invitation.md)
 
-## Trail
+## Policy
 
-[game_design_lineage](../../process/trails/game-design-lineage.md) — designers of play across genres.
+[`process/couple-and-solo-shows.yml`](../../process/couple-and-solo-shows.yml)
 
 ---
 

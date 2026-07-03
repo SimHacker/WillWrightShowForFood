@@ -1,0 +1,46 @@
+# Paste into audience/<hn-user>/questions.yml when curating HN → Will queue
+# Full spec: ../../../schemas/question-provenance.yml
+
+provenance:
+  source: hacker_news
+  captured_at: YYYY-MM-DD
+  curator:
+    github: YOUR_GITHUB
+    hn: YOUR_HN_USER
+  hn:
+    user: ASKER_HN_LOGIN
+    user_url: https://news.ycombinator.com/user?id=ASKER_HN_LOGIN
+    thread_id: 0
+    comment_id: 0
+    parent_id: 0
+    thread_url: https://news.ycombinator.com/item?id=0
+    comment_url: https://news.ycombinator.com/item?id=0
+
+routing:
+  asker:
+    hn_user: ASKER_HN_LOGIN
+    hn_profile: https://news.ycombinator.com/user?id=ASKER_HN_LOGIN
+    github: null
+    email: null
+  reply_channels:
+    - { channel: git_queue, action: questions.yml, status: done }
+    - { channel: github_issue, action: open_or_bind_issue, status: planned }
+    - { channel: email_to_guest, action: don_forwards_batch_to_will, status: planned }
+    - { channel: adorable_minutes, action: async_short_video, status: planned }
+    - { channel: repo_show_interview, action: on_air_segment, status: planned }
+    - { channel: twitch_live, action: mic_line_or_chat_callout, status: planned }
+    - { channel: hacker_news, action: reply_on_comment, target: COMMENT_URL, status: planned }
+
+pose:
+  email_to_guest:
+    status: draft
+    subject: "HN question for you — ASKER_HN_LOGIN"
+    body: |
+      Will — question from HN user **ASKER_HN_LOGIN** …
+  hn_reply_when_answered:
+    status: template
+    body: "@ASKER_HN_LOGIN — Will replied …"
+
+amplification:
+  invite: |
+    Reply on HN, 👍 the GitHub issue, me_too child in questions.yml, or message Don.

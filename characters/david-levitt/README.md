@@ -1,20 +1,19 @@
-# David Levitt 🎼
+# David Levitt
 
-*Invitation portrayal. A respectful, source-grounded sketch — not David Levitt, and not his words.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · consent level 2 · authored by Don Hopkins
+Invitation portrayal — **not** David Levitt. [Standards](../../schemas/portrayal-standards.yml)
 
-## Who
+**Field:** AI music (MIT/Minsky), VR (VPL Research), Interval Research, ConnectedTV, Pantomime AR/VR
 
-**David Levitt** is a longtime good friend of Don's who works at the intersection of **music, AI, and
-interactive media**. He earned his **MIT PhD under Marvin Minsky**, with a thesis on **AI music
-generation and jazz improvisation**; worked at **Atari Cambridge Research**; and was part of **Lynn
-Conway's** pioneering **VLSI design course** — the Mead–Conway moment — alongside James Clark, Guy L.
-Steele, and other names that would become legends.
+[Invitation](invitation.md) · [Ideas](ideas.md) · [GLANCE](GLANCE.md) · [Card](CARD.yml) · [Media & sources](media/README.md)
 
-A young, wild-haired David demoing his AI music-improvisation system survives in
-[Cynthia Solomon](../cynthia-solomon/README.md)'s YouTube treasure trove.
+Dr. David Levitt — cognitive scientist, entrepreneur, and musician; Don's **dear friend** and longtime
+collaborator. Co-founder & CEO of **Pantomime Corporation**, where **Don was Chief Architect** and
+built the **JSON object system** that became the ancestor of Don's JSON/YAML config system and MOOLLM
+(see [`slots-all-the-way-down.md`](../david-rosenthal/slots-all-the-way-down.md)). Earlier: **VPL
+Research** (the team that invented VR); **Interval Research** (MediaFlow, Bounce); **ConnectedTV**
+(ConnectedMedia — the Palm stroke-vs-poke TV guide + remote he and Don built together); **Hookup /
+Bounce**, his patch-cord visual-programming line (Don co-developed Bounce); and — under **Marvin
+Minsky** at MIT — pioneering **AI music / computational jazz**. A dear friend to interview, and to
+**memorialize Minsky** with. Sourced links: [`media/README.md`](media/README.md).
 
-## Why a Repo Show
-
-A conversation about music and the systems behind it — improvisation, generation, and the ideas
-underneath — paired with composer [Jerry Martin](../jerry-martin/README.md) for **music + theory**.
+Verifiable sources in [`CHARACTER.yml`](CHARACTER.yml). Subject may request correction or removal anytime.

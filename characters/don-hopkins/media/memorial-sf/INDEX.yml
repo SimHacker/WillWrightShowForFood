@@ -1,0 +1,17 @@
+# Memorial San Francisco
+
+room:
+  id: memorial-sf
+  category: memorial
+  subcategory: sf
+  parent: ../CATALOG-INDEX.yml
+  count: 1
+
+artifacts:
+  - file: memorial-sf-heklina-trannyshack-tshirt.png
+    sidecar: memorial-sf-heklina-trannyshack-tshirt.yml
+
+spec:
+  - memorial-sf.yml
+
+note: "Not AI Generated!"

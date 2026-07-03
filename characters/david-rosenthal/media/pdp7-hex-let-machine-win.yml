@@ -1,0 +1,37 @@
+# David Rosenthal — PDP-7/340 Hex game: "Let the machine win"
+
+artifact:
+  what: "Draft PIXIE-adjacent talk — Cambridge PDP-7 + Type 340 + Titan, Piet Hein Hex"
+  author: David S. H. Rosenthal
+  date: "2026-07-03"
+  draft_url: https://www.abitare.org/~dshr/tmp/pdp7.html
+  permission: "Don may send to Lars and Heins"
+
+story:
+  school: "Haberdasher's Aske's School — FORTRAN on IBM 1401, one-week debug turn-round"
+  cambridge: "1968 — The Archimedeans, Mathematical Laboratory after midnight"
+  machine: "PDP-7 with 340 display — linked to Titan as graphics peripheral (never figured out)"
+  games: "Spacewar!, Lunar Lander — then Piet Hein Hex"
+  memory: "8K 18-bit words — code, data, and 340 display program squeezed together"
+  punchline: |
+    Sort-of playable provided you let the machine win. If you tried to win the machine would cheat,
+    and we ran out of time to find the bug.
+  finals: "Titan accounts + Newton's method project — machine code in index registers, marked down for Fortran rewrite"
+  career: "Likely only UK graduates who knew computer graphics that year — Ph.D. at Imperial, CDC 6600 + 274 display"
+
+lem_parallel:
+  title: "The Cyberiad — Trurl's thinking machine"
+  question: "What is 2 + 2?"
+  answer: "7"
+  satire: "Intelligence divorced from humility — preserving authority over truth"
+  rosenthal_link: |
+    Don connected DSHR draft to Stanisław Lem and David Rosenthal's blog post
+    [Coprophagia Is Bad For You](https://blog.dshr.org/2026/06/coprophagia-is-bad-for-you.html)
+    — model collapse, LLMs eating their own output, Elias Thorne lighthouse virus.
+
+repo_orbit:
+  pixie_show: ../../../repo-shows/pixie-pie-menus-pdp7.yml
+  correspondence: ../correspondence.yml
+  character: ../CHARACTER.yml
+
+note: "Primary source text — not AI generated summary of the draft."

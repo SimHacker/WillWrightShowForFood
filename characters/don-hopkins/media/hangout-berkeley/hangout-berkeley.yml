@@ -1,0 +1,21 @@
+# Hangouts — Berkeley cafes and SFC lounge
+
+room:
+  id: hangout-berkeley
+  category: hangout
+  subcategory: berkeley
+  parent: ../CATALOG-INDEX.yml
+
+spots:
+  - slug: hangout-berkeley-900-grayson-dazzler-shades
+    venue: 900 Grayson
+    with: [Peter Swearengen, Ben Cerveny]
+  - slug: hangout-berkeley-au-coquelet-no-loitering-sign
+    venue: Au Coquelet Cafe
+    don_line: "I loitered! 😉"
+  - slug: hangout-berkeley-espresso-check-in
+    venue: Berkeley Espresso
+  - slug: hangout-berkeley-stupid-fun-club-lounge-bar
+    venue: Stupid Fun Club workshop lounge
+
+note: "Per-file sidecars. Not AI Generated!"

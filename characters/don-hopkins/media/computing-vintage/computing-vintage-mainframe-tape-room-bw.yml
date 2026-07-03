@@ -1,0 +1,11 @@
+# Sidecar — computing-vintage-mainframe-tape-room-bw.png
+
+artifact:
+  file: computing-vintage-mainframe-tape-room-bw.png
+  slug: computing-vintage-mainframe-tape-room-bw
+  category: computing
+  subcategory: vintage
+  what: "Vintage mainframe room — tape reels teleprinter"
+  sidecar_of: computing-vintage-mainframe-tape-room-bw.png
+
+note: "Not AI Generated!"

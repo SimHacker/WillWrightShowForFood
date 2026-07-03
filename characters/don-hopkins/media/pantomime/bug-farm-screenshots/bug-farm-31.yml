@@ -1,0 +1,19 @@
+# Sidecar — bug-farm-31.png
+
+artifact:
+  file: bug-farm-31.png
+  slug: bug-farm-31
+  room: pantomime
+  what: "Pantomime Bug Farm screenshot #31 — squish-compulsion AR tutorial"
+  era: ~2014 (Oculus SDK demos); copyleft envelope 1984
+  sidecar_of: bug-farm-31.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/pantomime-gallery.yml
+  - ../../../repo-shows/ideas/gags/curiosity-cow-cube.yml
+
+see_also:
+  - INDEX.yml
+  - bug-farm.yml
+
+note: "Not AI Generated!"

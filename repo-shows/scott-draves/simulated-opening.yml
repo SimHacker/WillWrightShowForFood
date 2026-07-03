@@ -1,0 +1,93 @@
+# Simulated art opening — Scott Draves
+# Electric Sheep / Flame / Infinidream sold to menagerie for §
+# Guest starts show with huge worthless § pile — spend/give away on Twitch
+# Protocol: ../../process/simulated-art-opening.yml · Prototype: jsonsters/art-opening-night.yml
+
+meta:
+  guest: scott-draves
+  show: repo-shows/scott-draves/
+  host: don-hopkins
+  auctioneer: don-philahue
+  invite: invitation.md#simulated-opening
+  play_along: true
+  consent: not_yet_asked
+
+pitch_to_scott: |
+  Spot — play along with a fun simulated opening for **your** artwork before we talk.
+  The menagerie (fictional Chelsea patrons + Bella + Sad Clown + Slats + Donna + Palm…)
+  misreads Flame and Electric Sheep, bids §, and you end up with a mountain of worthless
+  Simoleons to scatter on Twitch. We did it for JSONsters; yours is generative-art misreads.
+  Totally optional; you can redirect the patron voices or skip.
+
+artwork_home: ../../characters/scott-draves/media/
+ledger: AUCTIONS.yml
+guest_wallet: WALLET.yml
+
+series:
+  fnord_origin:
+    magnificent:
+      - { id: lot-fnord-thesis, asset: thesis-fnord-placeholder, wall_title: "Functional Description of Higher-D Form (Working Title)", note: "Resurface thesis / Banchoff 4D lineage when PDF wired" }
+    patron_misread: "Vandermeer: Scotland invented four dimensions."
+  fractal_flame:
+    magnificent:
+      - { id: lot-flame-classic, asset: flame-1992-hero, wall_title: "Fractal Flame — Algorithm I (Open Source, 1992)" }
+      - { id: lot-flame-siggraph, asset: evolve-siggraph-2008, wall_title: "Evolve — SIGGRAPH Identity Study" }
+    quick_sale: [flam3-variation-a, flam3-variation-b]
+    patron_misread:
+      mimsy: "The iteration is aggressive restraint at infinity!"
+      gregory: "Self-similar tranches — I'm long the bifurcation."
+  electric_sheep:
+    magnificent:
+      - { id: lot-sheep-vote-winner, asset: sheep-genome-winner, wall_title: "Generation N — Human Vote Champion" }
+      - { id: lot-sheep-cyborg-dream, asset: sheep-flock-hero, wall_title: "Collective Dream of a Cyborg Mind (Flock Study)" }
+    quick_sale: [sheep-frame-a, sheep-frame-b, sheep-frame-c]
+    patron_misread:
+      gregory: "Distributed rendering is yield farming with fur."
+      bunny: "Adopt a sheep! §400,000! Are those broccoli wool?"
+      helena: "The flock is a congregation. I walked into the screensaver."
+    crypto_jab: "Genetic algorithm = proof-of-stake cute; voting = the real blockchain"
+  hifi_infinidream:
+    magnificent:
+      - { id: lot-hifi-painting, asset: dreams-hifi-hero, wall_title: "Dreams in High Fidelity — Evolving Painting" }
+      - { id: lot-infinidream-2026, asset: infinidream-hero, wall_title: "Infinidream — Generation 248 (1080p/60)" }
+    patron_misread:
+      palm: "🐒✋🌴 — what is ownership when the painting never stops?"
+      doctor_no: "Declared bias: toward never-repeating. No comment on floor price."
+
+opening_beats:
+  - scott_arrives: "Spot watches patrons simulate expertise onto his sheep."
+  - gregory_deFi_sheep: "This is a DAO that bleats."
+  - bunny_adopts_genome: "Whale bid on vote champion — board approved."
+  - mimsy_flame_impulse: "Bought the bifurcation before the sentence ended."
+  - facebook_chorus: "Now do it in 64k 😉" (Nuey San Waldman energy — not § eligible)
+  - scott_wallet: "Guest credited §2,400,000 aggregate — worthless; ready for Twitch scatter."
+
+run_of_show:
+  duration: "25–35 min (fold into cold open or pre-show)"
+  acts:
+    - arrival: menagerie + prosecco; Sheep on every surface (2006 callback)
+    - room_flame: 2 magnificent + 2 quick
+    - room_sheep: 2 magnificent + 3 quick; ensemble hex-fight energy on flock
+    - room_hifi: 2 magnificent; Infinidream as finale hammer
+    - coda: Scott buried in §; Don: "Spend it all before we talk fnord."
+
+twitch_after:
+  guest_simoleons_start: 2400000
+  spend_ideas:
+    - "§ to chat for best wrong review of a sheep"
+    - "Tip Mimsy back for calling Flame 'pre-oedipal lava'"
+    - "Fund next live Sheep render vote with § pile"
+    - "Rosebud scatter — Spot gives § away, opposite of Klapaucius"
+
+brian_eno_reunion:
+  note: "If Brian joins — this opening is totally Eno too; run brian-eno/simulated-opening.yml as Room V or merge reunion"
+  see: ../brian-eno/simulated-opening.yml
+
+see_also:
+  - SHOW.yml
+  - ../../characters/scott-draves/
+  - ../../characters/menagerie/GUEST-ROSTER.yml
+  - ../../characters/don-hopkins/jsonsters/art-opening-night.yml
+  - ../../process/simulated-art-opening.yml
+
+note: "Not AI Generated!"

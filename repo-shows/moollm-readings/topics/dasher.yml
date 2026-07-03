@@ -1,0 +1,31 @@
+# Dasher — David MacKay (deferred topic)
+# Introduced in MOOLLM Reading episode 3; full show TBD.
+
+topic:
+  id: dasher
+  title: "Dasher — David MacKay's predictive text"
+  status: introduced_not_exhausted
+  introduced_in: ../episodes/dasher-palm-tog-monkeys.yml
+
+who:
+  name: David MacKay
+  field: "Information theory, inference, sustainable energy"
+  known_for: "Dasher — gaze-driven predictive text using language model over characters"
+
+what: |
+  Dasher lets the user steer toward likely text instead of typing every character — an early
+  marriage of information theory and human input. Don's Alan Kay mail archive includes Dasher
+  artifacts (see ken-kahn, brian-harvey, chaim-gingold from-mail MANIFESTs).
+
+hooks_for_later:
+  - "Dasher vs modern LLM completion — same problem, different era"
+  - "Information theory of language — MacKay's *Information Theory, Inference, and Learning Algorithms*"
+  - "Micropolis Streets of SimCity feature thread in Don's mail"
+
+repo_touchpoints:
+  - ../../characters/ken-kahn/media/from-mail/MANIFEST.yml
+  - ../../characters/chaim-gingold/media/from-mail/MANIFEST.yml
+
+see_also:
+  - ../episodes/dasher-palm-tog-monkeys.yml
+  - ../intro-canon.yml

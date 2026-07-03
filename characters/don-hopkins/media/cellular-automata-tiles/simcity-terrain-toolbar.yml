@@ -1,0 +1,17 @@
+# Sidecar — simcity-terrain-toolbar.png
+
+artifact:
+  file: simcity-terrain-toolbar.png
+  slug: simcity-terrain-toolbar
+  room: cellular-automata-tiles
+  what: simcity terrain toolbar
+  era: ~2010-2011
+  sidecar_of: simcity-terrain-toolbar.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/cellular-automata-simcity-tiles.yml
+
+see_also:
+  - ../micropolis-gallery/INDEX.yml
+
+note: "Not AI Generated!"

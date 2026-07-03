@@ -1,0 +1,40 @@
+# Computing — Sun 4/200 brochure (1987)
+
+room:
+  id: computing-sun-brochure
+  category: computing
+  subcategory: sun-brochure
+  parent: ../CATALOG-INDEX.yml
+
+artifact:
+  what: "1987 Sun 4/200 SPARC workstation promotional brochure"
+  scanned_by: miunau
+  uploaded: "2020-03-12"
+  archive: https://archive.org/details/sun4200seriesbrochure
+  twitter: https://x.com/miuott/status/1238181870816366592
+
+facebook:
+  don_caption: "We just scanned an old Sun 4/200 brochure I saved, and uploaded it to archive.org!"
+  comments:
+    - author: Don Hopkins
+      text: "Sun had nice offices back in those days. Except for the open seating on the airport runway."
+    - author: Jeff Bulf
+      text: "Rember, strong typing helps you run without SEGFAULTs!"
+    - author: Don Hopkins
+      text: "I'm strong smelling, too!"
+    - author: David Tristram
+      text: "Optical mouse!"
+    - author: Don Hopkins
+      text: "shhhh! Photoshop didn't run on the Sun at the time, so they had to smuggle a Mac in through the loading dock."
+    - author: Don Hopkins
+      text: "PS: PHOTOSHOP IS NOT A VERB EITHER!!! -Adobe Legal"
+    - author: Curt Mayer
+      text: "I remember the sun4/200. It had the option of a hires monochrome (1600 x1280) back when that was mind boggling."
+
+photos:
+  - computing-sun-4-200-runway-moffett-field.png
+  - computing-sun-4-200-stone-neon-cables.png
+  - computing-sun-4-200-fog-molecular-models.png
+  - computing-sun-4-200-hillside-survey-poles.png
+
+note: "Not AI Generated!"

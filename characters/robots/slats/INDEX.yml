@@ -1,0 +1,25 @@
+# Slats — One Minute Movies production media room
+
+room:
+  id: slats-1mm-production
+  name: One Minute Movies — Oakland production
+  parent: CHARACTER.yml
+  year: 2003
+
+spec:
+  - one-minute-movies-production.yml
+
+photos:
+  count: 6
+  note: "5 new uploads Jul 2026 + existing slats-oakland-location-filming.png"
+
+pending:
+  video_archive: "Live shoot footage — excerpt to short-form"
+
+see_also:
+  - one-minute-movies.md
+  - photos.md
+  - ../../don-hopkins/career/stupid-fun-club.yml
+  - ../../../repo-shows/will-wright/slats-reincarnation.yml
+
+note: "Not AI Generated!"

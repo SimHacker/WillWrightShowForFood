@@ -1,0 +1,57 @@
+# Van Leer leather press — menacing robot-face street art
+# Don's robot collection · industrial North Amsterdam
+
+artifact:
+  subject: Van Leer antique leather press
+  what: "Outdoor industrial monument — painted grey/charcoal, pink gears, pareidolia robot faces"
+  branding: "Van Leer — embossed on press base"
+  street_art: "Menacing robot face — accidental sculpture, not commissioned"
+
+location:
+  area: Industrial North Amsterdam
+  near: [Oosterdok, Modemstraat, Disketteweg]
+  neighborhood: Tuindorp Oostzaan
+  don_note: "Of course — Modemstraat and Disketteweg. Disketteweb."
+  tomtom_era: "../oosterdok-bike-parking-tomtom.yml"
+
+photos:
+  don_crushed:
+    - van-leer-press-don-crushed.png
+    what: "Don lying under the press heads — staged crush photo for robot collection gallery"
+    facebook: "me being crushed by the robot leather press"
+    comment:
+      author: Ken Stone
+      text: "I'd personally prefer another means of getting hammered, but this definitely wins points for style."
+  press:
+    - van-leer-press-full-robot-face.png
+    - van-leer-press-rust-cylinder-mouths.png
+    - van-leer-press-teeth-row.png
+    - van-leer-press-nameplate.png
+    - van-leer-press-red-gear-eye.png
+    - van-leer-press-gears-worm-face.png
+  streets:
+    - modemstraat-sign.png
+    - disketteweg-sign.png
+
+robot_faces:
+  full: "Circular eye holes, threaded nose, tooth-plate mouth, pink gear ears"
+  teeth_row: "Six rusty-orange press pistons as upper teeth; five block dies as jaw"
+  rust_cylinders: "Four hollow rust mouths — low-angle menace"
+  red_gear: "Central red gear as single giant eye"
+  gears_worm: "Red cogs + vertical worm screw — multi-eye face"
+
+repo_orbit:
+  slats: "../../../robots/slats/CHARACTER.yml"
+  turing_olympics: "../turing-institute/first-robot-olympics.yml"
+  face_puppets: "../rolf/face-puppets.yml"
+  menagerie:
+    slats: "I trained on Van Leer. You're welcome."
+    vandermeer: "Disketteweg — the cryptid stores on floppies."
+    don: "Menacing leather press. Modemstraat. Of course."
+
+see_also:
+  - ../../repo-shows/ideas/gags/van-leer-robot-collection.yml
+  - INDEX.yml
+  - ../oosterdok-bike-parking-tomtom.yml
+
+note: "Not AI Generated!"

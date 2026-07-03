@@ -1,5 +1,5 @@
 # The Ultimate Machine — audience TicketPR overlay
-# Canonical character: characters/ultimate-machine/CHARACTER.yml
+# Canonical character: characters/robots/ultimate-machine/CHARACTER.yml
 
 character:
   name: The Ultimate Machine
@@ -8,7 +8,7 @@ character:
   signifier: "🔌"
   home: repo-shows/will-wright/audience/bot-ultimate-machine/
 
-character_ref: ../../../../characters/ultimate-machine/CHARACTER.yml
+character_ref: ../../../../characters/robots/ultimate-machine/CHARACTER.yml
 
 representation:
   fictional: true
@@ -33,6 +33,6 @@ show_roles:
 
 see_also:
   - questions.yml
-  - ../../../../characters/ultimate-machine/writings.md
+  - ../../../../characters/robots/ultimate-machine/writings.md
   - ../bot-slats/        # the bot I most often gong
   - ../FICTIONAL-AUDIENCE.md

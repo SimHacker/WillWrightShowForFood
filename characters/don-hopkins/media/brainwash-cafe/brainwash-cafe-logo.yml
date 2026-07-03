@@ -1,0 +1,14 @@
+# Sidecar — brainwash-cafe-logo.png
+
+artifact:
+  file: brainwash-cafe-logo.png
+  slug: brainwash-cafe-logo
+  room: brainwash-cafe
+  what: brainwash cafe logo
+  era: pre-closure
+  sidecar_of: brainwash-cafe-logo.png
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

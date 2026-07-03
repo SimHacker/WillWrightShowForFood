@@ -1,0 +1,17 @@
+# Sidecar — ca-worms-flow-blue-orange.png
+
+artifact:
+  file: ca-worms-flow-blue-orange.png
+  slug: ca-worms-flow-blue-orange
+  room: cellular-automata-tiles
+  what: SimCity-tile cellular automata — worms flow blue orange
+  era: ~2010-2011
+  sidecar_of: ca-worms-flow-blue-orange.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/cellular-automata-simcity-tiles.yml
+
+see_also:
+  - ../micropolis-gallery/INDEX.yml
+
+note: "Not AI Generated!"

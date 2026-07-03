@@ -1,0 +1,39 @@
+# HIGH WHILE PROGRAMMING — corkboard flyer (Will → Don)
+
+artifact:
+  file: high-while-programming-flyer.png
+  what: "UMich observational study flyer pinned to corkboard — Python programmers, cannabis, $80"
+  study: "Observational Study on Cannabis-Using Programmers"
+  compensation: "$80 for two 1.5-hour Zoom sessions (high + sober coding questions)"
+
+provenance:
+  photographed_by: Will Wright
+  sent_to: Don Hopkins
+  don_note: "Will took a snapshot and sent me ;)"
+
+flyer_text:
+  headline: "HIGH WHILE PROGRAMMING"
+  prescreen: "Are you 21 or over? Have you tried using cannabis when programming? Are you familiar with Python?"
+  sessions: "Two 1.5-hour Zoom sessions — one high, one sober — coding questions"
+  survey: "https://bit.ly/3RixZl3"
+  contact: [endremad@umich.edu, wenxinhe@umich.edu]
+
+visual:
+  background: "Faint green Python source (tweets/JSON parsing snippets)"
+  graphics: "Cannabis leaf icons along right edge"
+  setting: "Corkboard, silver frame, white wall below"
+
+repo_jokes:
+  procedural_rhetoric: "Study design as gag — sober session is the control group for microworld behavior"
+  python_parallel: "Background code processes tweets — same era as JSONsters graph visualization energy"
+  menagerie:
+    gregory: "Long high session, short sober session — I'm long the compensation."
+    doctor_no: "Declared bias: I do not comment on the flyer. I comment on the study design."
+    don: "Will sent me this. MIND=BLOWN is scheduled for a separate drawer."
+
+see_also:
+  - README.md
+  - ../../don-hopkins/jsonsters/INDEX.yml
+  - ../../../repo-shows/ideas/gags/rolf-junk-auction.yml
+
+note: "Not AI Generated!"

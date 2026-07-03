@@ -1,0 +1,52 @@
+# Sims export handoff — see ../EXPORT-SIMS-RELATIONSHIPS.yml
+schema_version: 1
+source:
+  direction: uplift
+  neighbor_id: 901
+  character: mimsy-caldwell
+identity:
+  name: Mimsy Caldwell
+  age: adult
+  gender: female
+  zodiac: leo
+traits:
+  neat: 7
+  outgoing: 9
+  active: 8
+  playful: 6
+  nice: 4
+  generous: 2
+skills:
+  cooking: 3
+  mechanical: 1
+  charisma: 9
+  logic: 2
+  body: 4
+  creativity: 8
+  cleaning: 5
+career:
+  track: entertainment
+  performance: 820
+relationships:
+  '902':
+    daily: 35
+    lifetime: 40
+  '903':
+    daily: 50
+    lifetime: 55
+  '904':
+    daily: 45
+    lifetime: 50
+  '905':
+    daily: 25
+    lifetime: 60
+  '906':
+    daily: -15
+    lifetime: 20
+  '907':
+    daily: 20
+    lifetime: 30
+  '908':
+    daily: 70
+    lifetime: 80
+family_budget: 120000

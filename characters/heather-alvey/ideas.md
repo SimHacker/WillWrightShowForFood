@@ -11,7 +11,7 @@ Heather Alvey (née Castello) — founder of SimFreaks, one of the longest-runni
 
 ## The hooks
 
-### 1. Show seed: `repo-shows/heather-steve-alvey/`
+### 1. Show seed: `repo-shows/heather-and-steve-alvey/`
 walk the repo on air and build from the seed.
 
 ### 2. SimFreaks founder (née Castello)
@@ -20,5 +20,5 @@ walk the repo on air and build from the seed.
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
-- Show seed: [`repo-shows/heather-steve-alvey/`](../../repo-shows/heather-steve-alvey/)
+- Show seed: [`repo-shows/heather-and-steve-alvey/`](../../repo-shows/heather-and-steve-alvey/)
 - [`CHARACTER.yml`](CHARACTER.yml)

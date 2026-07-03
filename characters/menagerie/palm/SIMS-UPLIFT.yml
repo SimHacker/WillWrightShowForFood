@@ -1,0 +1,27 @@
+schema_version: 1
+source:
+  direction: uplift
+  neighbor_id: 914
+  character: palm
+  moollm_upstream: SimHacker/moollm/examples/adventure-4/characters/animals/monkey-palm/
+  wwsff_profile: ../../palm/
+identity:
+  name: Palm
+  age: adult
+  gender: nonbinary
+traits:
+  neat: 5
+  outgoing: 6
+  active: 5
+  playful: 8
+  nice: 9
+  generous: 10
+skills:
+  charisma: 7
+  logic: 8
+  creativity: 9
+career:
+  track: slacker
+  performance: 75
+relationships:
+  913: { daily: 50, lifetime: 60 }

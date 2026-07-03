@@ -1,0 +1,14 @@
+# Sidecar — jaunt-mirror-dome-optics.png
+
+artifact:
+  file: jaunt-mirror-dome-optics.png
+  slug: jaunt-mirror-dome-optics
+  room: jaunt-vr
+  what: Jaunt VR camera rig — mirror dome optics
+  era: 2016-2017
+  sidecar_of: jaunt-mirror-dome-optics.png
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

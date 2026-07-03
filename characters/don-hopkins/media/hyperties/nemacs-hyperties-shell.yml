@@ -1,0 +1,15 @@
+# Sidecar — nemacs-hyperties-shell.png
+
+artifact:
+  file: nemacs-hyperties-shell.png
+  slug: nemacs-hyperties-shell
+  room: hyperties
+  what: nemacs hyperties shell
+  era: 1980s-90s NeWS
+  sidecar_of: nemacs-hyperties-shell.png
+
+see_also:
+  - INDEX.yml
+  - ../../nemacs-hyperties-news-hubble.yml
+
+note: "Not AI Generated!"

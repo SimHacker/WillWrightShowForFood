@@ -1,0 +1,17 @@
+# Sidecar — ca-simcity-tiles-portrait-mosaic.png
+
+artifact:
+  file: ca-simcity-tiles-portrait-mosaic.png
+  slug: ca-simcity-tiles-portrait-mosaic
+  room: cellular-automata-tiles
+  what: SimCity-tile cellular automata — simcity tiles portrait mosaic
+  era: ~2010-2011
+  sidecar_of: ca-simcity-tiles-portrait-mosaic.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/cellular-automata-simcity-tiles.yml
+
+see_also:
+  - ../micropolis-gallery/INDEX.yml
+
+note: "Not AI Generated!"

@@ -153,6 +153,7 @@ questions_file:
   moollm_stack: [CHARACTER.yml, CARD.yml, GLANCE.yml, SIMULATION.yml]
   template: repo-shows/_TEMPLATE/audience/
   schema: ../schemas/question-tree.yml
+  provenance_schema: ../schemas/question-provenance.yml
   character_queues:
     output: |
       Root `questions:` list — what THIS character wants asked (to guest, named person, or `any`).
@@ -172,6 +173,10 @@ questions_file:
       When guest answers on air: comment on the bound ref (preferred) OR append sub-question /
       thread child in asker's questions.yml — `by:` the speaker, `on_air: true`. 👍 on the GitHub
       target counts as global vote; YAML records who curated the ref.
+    hn_curation: |
+      HN comments curated into audience/hn-<user>/questions.yml MUST include provenance.hn
+      (user, comment_id, URLs) and routing.reply_channels so Don can pose via git + email + async
+      video + live Twitch and route Will's answer back on HN. See question-provenance.yml.
     node_kinds: [answer, follow_up, me_too, quorum, discussion, answer_draft]
     status: [open, asked, answered, deferred, withdrawn]
     fields: [question, to, answer, ref, issue, id, context_lasers, children]

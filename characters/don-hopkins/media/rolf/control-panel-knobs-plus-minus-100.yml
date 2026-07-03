@@ -1,0 +1,19 @@
+# Sidecar — control-panel-knobs-plus-minus-100.png
+
+artifact:
+  file: control-panel-knobs-plus-minus-100.png
+  slug: control-panel-knobs-plus-minus-100
+  room: rolf
+  what: control panel knobs plus minus 100
+  era: TomTom-era Amsterdam
+  sidecar_of: control-panel-knobs-plus-minus-100.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/rolf-junk-auction.yml
+
+see_also:
+  - INDEX.yml
+  - raving-bonkers.yml
+  - ../robot-collection/INDEX.yml
+
+note: "Not AI Generated!"

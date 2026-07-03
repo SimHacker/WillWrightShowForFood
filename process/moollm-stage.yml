@@ -1,0 +1,72 @@
+# MOOLLM as show stage — pub third place, session logs, skill harvest
+# Repo Shows run in MOOLLM microworld; WWSFF is the public bud; adventure-4 pub is third place.
+
+meta:
+  id: moollm-stage
+  status: active
+  thesis: "MOOLLM is the ideal environment for Repo Show discussions — navigable rooms, ongoing narrative, harvestable skills."
+
+third_place:
+  pub: SimHacker/moollm/examples/adventure-4/pub/
+  grotto: Gezelligheid Grotto — third_place framing (neither home nor work)
+  pie_table:
+    object: pub/pie-table.yml
+    what: |
+      The **round pie-menu table** — octagonal, all voices equidistant from center. People pop in,
+      ring to speak, add to an **ongoing** discussion without a scheduled roundtable.
+  also_rooms:
+    - conference_rooms   # topic-focused ongoing shows
+    - coffee_shops       # specialized tone / smaller circles
+    - theaters           # readings, performances, audience play-along
+  rule: "Each room can host an ongoing show — not one-and-done events"
+
+pub_as_show:
+  what: |
+    The **pub is itself a show** — it publishes **episodes** when somebody (or multiple people,
+    moo) wanders in and continues the conversation. Each episode is a **chat narrative session log**
+    appended to the ongoing thread.
+  episode_shape: session log markdown — cast registry, location, arrows, emoji prefixes
+  canon_examples:
+    - SimHacker/moollm/examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md
+    - SimHacker/moollm/examples/adventure-4/characters/real-people/don-hopkins/sessions/world-tour-leela.md
+  wandering: |
+    Sessions need not stay at the pie table — take the discussion **around the world**: pub →
+    Lane Neverending → Leela Manufacturing → skill rooms → rooftop → garden. World tour =
+    curriculum + entertainment.
+
+repo_show_bridge:
+  wwsff: "Public Repo Show — shotgun-blast ensemble, guest prototype, ensemble medium"
+  moollm: "Third place + session logs + room graph — where discussions actually happen"
+  memory_palace_tour:
+    spec: ../apps/performance-space/faceball-construction-set.yml#memory_palace_tour
+    what: "Face puppets at each palace stop — git room + artifact + one K-line; tour on stream or async clips per room"
+  together: |
+    Guest async video walks the WWSFF bundle; MOOLLM pub session logs capture pop-in continuations;
+    audience jumps between git paths and pub narrative in Cursor time-shifted.
+
+session_to_skill:
+  pipeline: |
+    Every substantial **session log** should be **harvested into a MOOLLM skill** — protocol distilled
+    from what happened, links preserved, CARD + SKILL.md body.
+  criterion_collection_overlay:
+    what: |
+      Like a **Criterion Collection** commentary track: the humans who were there record a second
+      pass — voice-over or async video — talking **over** the session log. Backstory, why they said
+      what they said, what actually happened, what they'd do differently.
+    layers:
+      - session_log      # primary narrative (chat transcript style)
+      - commentary_track # human directors' commentary — optional per episode
+      - skill            # lifted technique — GLANCE → CARD → SKILL → README
+  harvest: skills/cauldron — melt session + commentary → breed back to skills/
+
+ongoing_shows:
+  model: |
+    Conference rooms, coffee shops, theaters, and the pub each run **ongoing shows** — new session
+    logs are episodes, not reboots. Will Wright's WWSFF show and MOOLLM pub threads can intertwingled.
+
+see_also:
+  - ../characters/will-wright/guest-prototype.yml
+  - couple-and-solo-shows.yml
+  - play-along-skills.yml
+  - SimHacker/moollm/examples/adventure-4/pub/ROOM.yml
+  - SimHacker/moollm/examples/adventure-4/pub/pie-table.yml

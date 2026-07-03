@@ -1,0 +1,11 @@
+# Sidecar — robot-sfc-telepresence-don-hopkins-coke-can-berkeley.png
+
+artifact:
+  file: robot-sfc-telepresence-don-hopkins-coke-can-berkeley.png
+  slug: robot-sfc-telepresence-don-hopkins-coke-can-berkeley
+  category: robot
+  subcategory: sfc-telepresence
+  what: "Don beside extrusion telepresence robot with Coke can"
+  sidecar_of: robot-sfc-telepresence-don-hopkins-coke-can-berkeley.png
+
+note: "Not AI Generated!"

@@ -1,0 +1,23 @@
+# OLPC booth — Game Developers Conference (~April 2010)
+
+artifact:
+  event: GDC
+  year: 2010
+  file: olpc-booth-gdc-micropolis.png
+  what: "One Laptop Per Child booth — Don staffing XO laptops running Micropolis / Sugar"
+
+booth:
+  banner: "one laptop per child"
+  signage: "HELP SUPPORT OLPC T-SHIRTS $10"
+  laptops: "XO-1 green machines — grid UI on screen (Micropolis / CA tiles)"
+
+related_posts:
+  - caption: "April 2010 — with Danielle Bunten Berry"
+    note: "Separate Anonymous-mask jail photo at don-anonymous-behind-bars.png"
+
+repo_orbit:
+  micropolis_gallery: ../micropolis-gallery/INDEX.yml
+  walter_bender: ../../../walter-bender/CHARACTER.yml
+  danielle_bunten: ../danielle-bunten-berry/INDEX.yml
+
+note: "Not AI Generated!"

@@ -5,9 +5,9 @@ character:
   id: david-levitt
   name: "David Levitt"
   type: invitation
-  signifier: "🎼"
+  signifier: "🎹"
   status: living
-  field: "Music + interactive media; MIT PhD on AI music/jazz improvisation (advised by Marvin Minsky); Atari Cambridge Research; Don's longtime friend"
+  field: "AI music / computational jazz (MIT/Minsky), visual programming (Hookup/Bounce), VR (VPL Body Electric), Interval Research, ConnectedTV, Pantomime AR/VR (with Don as Chief Architect)"
   home: characters/david-levitt/
 
 representation:
@@ -22,32 +22,60 @@ invitation:
   show_seed: repo-shows/REPO-SHOWS.yml#music-and-theory.yml
 
 bio:
-  summary: "**David Levitt** is a good friend of Don's who works at the intersection of **music, AI, and interactive media**. He earned his **MIT PhD advised by Marvin Minsky**, with a thesis on **AI music generation and jazz improvisation**; worked at **Atari Cambridge Research**; and was part of **Lynn Conway's** pioneering **VLSI design course** alongside James Clark, Guy L. Steele, and other now-legendary names. Don has paired him with composer **Jerry Martin** for a *music + theory* Repo Show."
+  summary: >
+    **Dr. David Levitt** — cognitive scientist, entrepreneur, musician; Don's **dear friend** and
+    longtime collaborator. Under **Marvin Minsky** at MIT pioneered **AI music** with a PhD on
+    **computational jazz / improvisation** (thesis *A Representation of Musical Dialects*; co-edited
+    *Machine Models of Music*, MIT Press), and built **Hookup** — credited (by Mark Coniglio) as the
+    first **patch-cord** visual programming language, ancestor of Interactor/Isadora and the metaphor
+    Max inherits. **VPL Research** (the team that invented VR — added realistic gravity, collisions,
+    thrown-ball physics; **Body Electric** context). **Interval Research**: consumer media creation
+    (**MediaFlow**) and **Bounce** character simulation. Founder/CEO of **ConnectedMedia** — the
+    **ConnectedTV** app (Palm PDA → personalized TV guide + universal remote, a one-handed stroke-vs-poke
+    interface **built with Don Hopkins**; bundled by Sony on the CLIÉ) — and **Hip Software / Levity**.
+    Co-founder & CEO of **Pantomime Corporation** (2014; **Don Hopkins = Chief Architect**), interactive
+    AR/VR for any mobile/consumer device, headset optional — won the Launch Silicon Valley World Cup,
+    granted an AR patent; apps include **Pantomime Bug Farm** and **Creatures AR**. Also **Atari
+    (Cambridge Research)**. 2019 Virtual World Society Nextant Prize.
 
-connections:
-  minsky: "PhD advised by Marvin Minsky at MIT — a thesis on AI music generation and jazz improvisation."
-  atari_cambridge: "Worked at Atari Cambridge Research — the same lab that appears in Cynthia Solomon's video trove."
-  vlsi_class: "Took Lynn Conway's landmark VLSI design course, alongside James Clark and Guy L. Steele, among others."
-  cynthia_trove: "A young, wild-haired David appears demoing his AI music-improvisation system in Cynthia Solomon's YouTube archive."
-  jerry_martin: "Paired with Jerry Martin for the music + theory Repo Show."
-  don: "A longtime good friend of Don Hopkins — they've done LOTS of fun stuff together and are great close friends."
-  shared_ventures_with_don: "Per Don, the two worked together across a string of music/interactive-media ventures: Bounce, Body Electric, Interval, MediaFlow, ConnectedMedia / Connected TV, and Pantomime — a prime 'get the old band back together' reunion candidate (see ../../process/old-band-back-together.yml)."
-
-show_suggestions:
-  - { seed: ../../repo-shows/REPO-SHOWS.yml#music-and-theory.yml, what: "Music + theory — with Jerry Martin. AI music generation, jazz improvisation, and the ideas underneath." }
-  - { seed: ../../repo-shows/remembering-the-constructionists.yml, what: "Discussant — fond first-hand memories of his PhD advisor Marvin Minsky and the AI Lab milieu." }
+  # Don ↔ David shared timeline (Don's firsthand): VPL Body Electric → Levity (Bounce Mac product, Don
+  # serial contract, COM reinvention) → Interval (MediaFlow, Bounce character sim) → ConnectedMedia
+  # (ConnectedTV) → Pantomime (Don = Chief Architect) → friendship.
 
 sources:
-  wikipedia: null
+  wikipedia: ""
   web:
-    - "https://www.youtube.com/@cynthiaso"   # Cynthia Solomon's archive — young David demoing his music system
-  papers: []
-  blogs: []
+    - "https://www.pantomime.co/  (Pantomime Corporation — Levitt CEO, Hopkins Chief Architect)"
+    - "http://www.pencomputing.com/palm/Pen44/connectedTV.html  (Geoff Walker, ConnectedTV review, PenComputing 2002)"
+    - "https://www.facebook.com/note.php?note_id=106220169912  (David Levitt, 'iPhone Lovefest — How Don and I Invented Stroking vs Poking')"
+    - "http://www.sdela.dds.nl/sfd/isadora.html  (Mark Coniglio history: Hookup as first patch-cord visual language)"
+    - "http://www.jaronlanier.com/vpl.html  (VPL / Body Electric context)"
+  # Don's firsthand HN testimony (accounts DonHopkins + older SimHacker, non-overlapping):
+  hn_firsthand:
+    - "https://news.ycombinator.com/item?id=8023893   (VPL 'good VR' three goals — Levitt)"
+    - "https://news.ycombinator.com/item?id=7262676   (ConnectedTV — David + Don, stroke vs poke)"
+    - "https://news.ycombinator.com/item?id=22788773  (Hookup / Body Electric / Bounce lineage)"
+    - "https://news.ycombinator.com/item?id=33572067  (Pantomime networked physics; Levitt demo)"
+    - "https://news.ycombinator.com/item?id=20744552  (Pantomime JSON object/config system)"
+  blogs:
+    - "https://medium.com/@donhopkins/bounce-stuff-8310551a96e3  (Bounce writeup)"
+    - "https://wiki.c2.com/?BounceLanguage  (Bounce language)"
+    - "https://www.donhopkins.com/home/archive/visual-programming/bounce-notes.txt  (Bounce notes, LEV list 2000)"
+  papers:
+    - "David Levitt, *A Representation of Musical Dialects* (MIT)"
+    - "*Machine Models of Music* (MIT Press) — co-edited"
+  media_hub: media/README.md
+  pending_firsthand:
+    - "Cynthia Solomon video: young David at MIT AI Lab / Lisp machine, music-improvisation software"
+    - "ConnectedTV XML-based custom-UI editor; IR-code capture + community sharing site"
+    - "Bounce 'Space Seed' demo; MediaFlow at Interval — confirm public links"
 
 see_also:
-  - { path: ../jerry-martin/, why: "Music + theory show partner (composer)" }
-  - { path: ../marvin-minsky/, why: "🕯️ PhD advisor; AI music thesis" }
-  - { path: ../../repo-shows/remembering-the-constructionists.yml, why: "Discussant — fond memories of Marvin" }
-  - { path: ../cynthia-solomon/, why: "Her video trove has young David demoing his music system; shared Atari Cambridge milieu" }
-  - { path: ../don-hopkins/, why: "Longtime close friend; host; many shared ventures (Bounce, Body Electric, Interval, MediaFlow, ConnectedMedia/Connected TV, Pantomime)" }
-  - { path: ../../process/old-band-back-together.yml, why: "Reunion theme — the David Levitt crew is one of the bands" }
+  - { path: media/README.md, why: "Sourced evidence hub — HN permalinks + videos by project (Pantomime, Bounce, ConnectedTV, AI music)" }
+  - { path: ../don-hopkins/media/pantomime/, why: "Pantomime media (Bug Farm, soccer, Levitt calls) — Don was Chief Architect" }
+  - { path: ../david-rosenthal/slots-all-the-way-down.md, why: "Pantomime's JSON object system → Don's JSON/YAML config → MOOLLM" }
+  - { path: ../jerry-martin/, why: "music-and-theory show pairing (Sims/SimCity composer)" }
+  - { path: ../marvin-minsky/, why: "PhD advisor — AI music; memorial discussant" }
+  - { path: ../cynthia-solomon/, why: "appears in Cynthia's video trove" }
+  - { path: ../don-hopkins/, why: "Pantomime Chief Architect; longtime friend + collaborator" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

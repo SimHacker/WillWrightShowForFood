@@ -1,0 +1,17 @@
+# Sidecar — ca-laundromat-dryers-misread.png
+
+artifact:
+  file: ca-laundromat-dryers-misread.png
+  slug: ca-laundromat-dryers-misread
+  room: cellular-automata-tiles
+  what: SimCity-tile cellular automata — laundromat dryers misread
+  era: ~2010-2011
+  sidecar_of: ca-laundromat-dryers-misread.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/cellular-automata-simcity-tiles.yml
+
+see_also:
+  - ../micropolis-gallery/INDEX.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,17 @@
+# Robot — Stupid Fun Club telepresence rigs
+
+room:
+  id: robot-sfc-telepresence
+  category: robot
+  subcategory: sfc-telepresence
+  parent: ../CATALOG-INDEX.yml
+  era: "~2008–2013"
+
+what: "Aluminum-extrusion telepresence bots — face-screen, STUPID FUN CLUB medallion, Berkeley street demos"
+
+see_also:
+  - ../hangout-berkeley/hangout-berkeley.yml
+  - ../../career/stupid-fun-club.yml
+  - ../sfc-emeryville/INDEX.yml
+
+note: "Per-file sidecars. Not AI Generated!"

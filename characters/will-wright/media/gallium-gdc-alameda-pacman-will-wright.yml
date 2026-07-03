@@ -1,0 +1,42 @@
+# Gallium party — Pac-Man Battle Royale with Will Wright (GDC, Alameda)
+
+artifact:
+  file: gallium-gdc-alameda-pacman-will-wright.png
+  what: "Four-player Pac-Man Battle Royale cocktail cabinet — Will Wright at controls, arcade glow"
+  game: "Pac-Man Battle Royale (Namco cocktail table — WAIT FOR NEXT ROUND on screen)"
+  venue: "Alameda arcade / barcade"
+
+event:
+  occasion: Gallium party during GDC
+  studio: Gallium Studios
+  location: Alameda, California
+  context: "Will Wright + Don Hopkins playing console arcade game together"
+
+provenance:
+  photographed_by: Don Hopkins
+  with: Will Wright
+  don_note: "Playing PacMan console video game with Will Wright!"
+
+visual:
+  will: "Silver-grey hair, glasses, bomber jacket with mission patches, plaid shirt — animated hand to temple"
+  cabinet: "Yellow-black cocktail table; red joysticks; Coca-Cola bottles in cup holders"
+  background: "Classic upright Pac-Man cabinet marquee (Namco) upper left"
+  screen: "Blue maze; WINNER 2 WINS; large red Pac-Man"
+
+repo_jokes:
+  microworld_parallel: "Maze procedural rhetoric — eat dots, avoid ghosts, wait for next round"
+  gallium_orbit: "Same studio era as Proxi — Heather & Steve Alvey Gallium chapter"
+  menagerie:
+    mimsy: "The maze performs restraint—"
+    bunny: "Board approved Pac-Man as team-building PFP."
+    don: "Playing Pac-Man with Will. Winner 2 wins."
+
+see_also:
+  - README.md
+  - ../../don-hopkins/career/work-history.yml
+  - ../CHARACTER.yml
+  - ../../heather-alvey/CHARACTER.yml
+  - ../../steve-alvey/CHARACTER.yml
+  - ../../../repo-shows/heather-and-steve-alvey/SHOW.yml
+
+note: "Not AI Generated!"

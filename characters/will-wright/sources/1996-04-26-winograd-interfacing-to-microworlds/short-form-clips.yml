@@ -1,0 +1,386 @@
+# Short-form clips — 1996 Winograd talk (Will Wright)
+# Self-contained cuts for HN pump / Adorable Minutes style / social.
+# Canonical text: transcript.md · Timestamp cache: transcript-cache/
+
+meta:
+  source: 1996-04-26-winograd-interfacing-to-microworlds
+  video_id: nsxoZXaYJSk
+  video_url: https://www.youtube.com/watch?v=nsxoZXaYJSk
+  host: Terry Winograd
+  venue: Stanford CS547 HCI Seminar
+  format: Adorable Minutes–style — one idea, one arc, hard out
+  format_tiers:
+    flagship: "90–120s — project thesis, cliffhangers"
+    jewel: "60–110s — self-contained story arc"
+    quip: "20–45s — one idea, optional 1-line text card for context"
+    meme: "5–20s — punchline, reaction, or single quote"
+  transcript_canonical: transcript.md
+  transcript_cache: transcript-cache/youtube-auto-en.timeline.tsv
+
+# status: verified = cut points checked on YouTube; draft = transcript sync only
+
+clips:
+  flagship:
+    - id: oh-god-cliffhanger-data-portability
+      title: "Oh, God… — the $5B question (CLIFFHANGER)"
+      hook: |
+        Student asks what Will's building. Will steps back: "Oh, God…" Then the thesis
+        of this entire project in one breath — hobby model, train set, **persistent data
+        that can move from one game to another.** CUT before he dives into Dollhouse.
+      priority: 1
+      most_important: true
+      cliffhanger: true
+      self_contained: true
+      start_sec: 4099
+      end_sec: 4195
+      start_display: "1:08:19"
+      end_display: "1:09:55"
+      cut_before: "Let me show you something real quick"
+      last_words: "persistent data that can move from one game to another"
+      duration_sec: 96
+      youtube: https://youtu.be/nsxoZXaYJSk?t=4099
+      tags: [data-portability, dollhouse-teaser, student-question, project-thesis, cliffhanger]
+      hn_pump: true
+      pairs_with: dollhouse-load-simcity
+      notes: |
+        THE clip. Jump off the cliff — end on the hook, not the dive. Part 2 = Dollhouse demo.
+        Canonical dialogue: transcript.md#data-portability. YouTube cut ~1:09:55.120 (cache).
+
+  verified:
+    - id: lem-seventh-sally-trurl-knobs
+      title: "Lem's Seventh Sally — why Will builds microworlds"
+      hook: "Stanisław Lem wrote the blueprint. Don says 'Really fancy knobs!' Will says that's why he does this."
+      start_sec: 548
+      end_sec: 608
+      start_display: "9:08"
+      end_display: "10:08"
+      cut_at: "kind of why I do a lot of this."
+      duration_sec: 60
+      self_contained: true
+      jewel: true
+      youtube: https://youtu.be/nsxoZXaYJSk?t=548
+      tags: [lem, cyberiad, trurl, simcity, inspiration, don-hopkins-on-camera]
+      hn_pump: true
+
+    - id: simearth-failure-mode-no-why
+      title: "SimEarth — kids vs adults on failure (ends on 'run away screaming')"
+      hook: "Kids push every button — planet freezes, they think it's cool. Adults hit opaque failure: 'oh no, I can't play this, it's too complex' — and so they run away screaming. Cut OUT on the scream."
+      start_sec: 1659
+      end_sec: 1745
+      start_display: "27:39"
+      end_display: "29:05"
+      end_on: "And so they run away screaming."
+      last_words: "And so they run away screaming."
+      duration_sec: 86
+      self_contained: true
+      jewel: true
+      user_verified: true
+      verified_at: 2026-07-04
+      don_pick: true
+      youtube: https://youtu.be/nsxoZXaYJSk?t=1659
+      tags: [simearth, failure-mode, kids-vs-adults, design, postmortem, constructionism]
+      hn_pump: true
+      notes: |
+        Don rewatch — "brilliant." Live-demo digression: kids guns blazing, failure is fun;
+        adults uncomfortable when the planet freezes — opaque failure, not learnable failure.
+        The full punchline: "To the adults... the planet freezes up and 'oh no, I can't play this.
+        It's too complex.' And so they run away screaming." (29:03.84–~29:05). Cut OUT on "screaming."
+        as the button; SimAnt handoff follows right after. Pairs with Calvin Syndrome (poke it with
+        a stick) and mental-model-compiler wave.
+
+    - id: julie-doll-peanuts-simlish
+      title: "They took the batteries out — then Peanuts (Simlish origin)"
+      hook: "$250 hacker's doll → girls yank batteries → Peanuts adult talk → you read the words in yourself."
+      arc: |
+        ONE continuous Will answer — not two separate topics. Peanuts is the design FIX for the
+        Julie doll failure (literal doll speech killed the girls' fantasy). Best together; ~109s.
+      start_sec: 4650
+      end_sec: 4759
+      start_display: "1:17:30"
+      end_display: "1:19:19"
+      cut_at: "you'd have to read that into it"
+      duration_sec: 109
+      format_tier: jewel
+      self_contained: true
+      jewel: true
+      don_pick: true
+      user_verified: true
+      verified_at: 2026-07-04
+      youtube: https://youtu.be/nsxoZXaYJSk?t=4650
+      tags: [julie-doll, simlish, peanuts, focus-group, masking, worlds-of-wonder]
+      hn_pump: true
+      variants:
+        - id: julie-doll-batteries-only
+          format_tier: quip
+          title: "Half an hour later — take the batteries out"
+          start_sec: 4691
+          end_sec: 4718
+          start_display: "1:18:11"
+          end_display: "1:18:38"
+          duration_sec: 27
+          youtube: https://youtu.be/nsxoZXaYJSk?t=4691
+          self_contained: with_text_card
+          text_card: "Worlds of Wonder Julie doll focus group, 1996 — before The Sims"
+        - id: peanuts-mwa-simlish-fix
+          format_tier: quip
+          title: "More like Peanuts — you read it into it (Simlish)"
+          start_sec: 4735
+          end_sec: 4759
+          start_display: "1:18:55"
+          end_display: "1:19:19"
+          duration_sec: 24
+          youtube: https://youtu.be/nsxoZXaYJSk?t=4735
+          self_contained: with_text_card
+          text_card: "Will's fix after the talking doll failed — became Simlish"
+          notes: "Works alone with caption; richer after full arc or batteries quip"
+        - id: hackers-doll-meme
+          format_tier: meme
+          title: "The only doll that appealed to grown men"
+          start_sec: 4682
+          end_sec: 4691
+          start_display: "1:18:02"
+          end_display: "1:18:11"
+          duration_sec: 9
+          youtube: https://youtu.be/nsxoZXaYJSk?t=4682
+          self_contained: with_text_card
+      notes: |
+        Don rewatch — "golden" (doll) + "great" (Peanuts). Publish jewel first; spin quips/meme after.
+
+  micro:
+    - id: really-fancy-knobs-meme
+      format_tier: meme
+      title: "Really fancy knobs!"
+      parent: lem-seventh-sally-trurl-knobs
+      start_sec: 550
+      end_sec: 565
+      duration_sec: 15
+      youtube: https://youtu.be/nsxoZXaYJSk?t=550
+      speakers: [Don Hopkins, Will Wright]
+
+    - id: oh-god-meme
+      format_tier: meme
+      title: "Oh, God…"
+      parent: oh-god-cliffhanger-data-portability
+      start_sec: 4113
+      end_sec: 4125
+      start_display: "1:08:33"
+      end_display: "1:08:45"
+      duration_sec: 12
+      youtube: https://youtu.be/nsxoZXaYJSk?t=4113
+      verify: true
+      text_card: "Student asks what Will's building. 1996."
+
+    - id: eat-me-quip
+      format_tier: quip
+      title: "If you're hungry, eat me!"
+      parent: objects-advertise-eat-me
+      start_sec: 4382
+      end_sec: 4405
+      duration_sec: 23
+      youtube: https://youtu.be/nsxoZXaYJSk?t=4382
+      verify: true
+
+  qa_and_don:
+    - id: don-courseware-educators
+      title: "Don asks about courseware for educators"
+      start_sec: 3512
+      end_sec: 3599
+      start_display: "58:32"
+      end_display: "59:59"
+      speakers: [Don Hopkins, Will Wright]
+      youtube: https://youtu.be/nsxoZXaYJSk?t=3512
+      verify: true
+
+    - id: one-vision-not-committee
+      title: "I've never seen a product design through a committee that came out well"
+      hook: "Someone needs the X on their back."
+      start_sec: 3706
+      end_sec: 3882
+      start_display: "1:01:46"
+      end_display: "1:04:42"
+      youtube: https://youtu.be/nsxoZXaYJSk?t=3706
+      verify: true
+
+    - id: simulator-effect-don-on-camera
+      title: "Piece of paper to write — story as reverse-engineering (Don on camera)"
+      hook: "SimCity players invent nuclear→plane causal chains that aren't in the code. Don: 'using it as a piece of paper to write.' Will: the story IS their reverse-engineering."
+      arc: |
+        Student asks about person-to-person sim → Will's answer builds to SimCity example → Don
+        interjects (on camera) → Will's thesis on parallel simulation + dolls not sentient.
+        Hard cut BEFORE Julie doll (~1:17:29) — doll is next beat, not this one.
+      start_sec: 4574
+      end_sec: 4648
+      start_display: "1:16:14"
+      end_display: "1:17:28"
+      cut_at: "games with them"
+      cut_before: "There was actually a really interesting doll"
+      duration_sec: 74
+      format_tier: jewel
+      self_contained: true
+      speakers: [Will Wright, Don Hopkins]
+      youtube: https://youtu.be/nsxoZXaYJSk?t=4574
+      verify: true
+      don_pick: true
+      tags: [simulator-effect, storytelling, don-hopkins-on-camera, simcity, causal-chain, dollhouse]
+      hn_pump: true
+      variants:
+        - id: storytelling-don-exchange-quip
+          format_tier: quip
+          title: "Using it as a piece of paper to write"
+          start_sec: 4597
+          end_sec: 4630
+          start_display: "1:16:37"
+          end_display: "1:17:10"
+          duration_sec: 33
+          youtube: https://youtu.be/nsxoZXaYJSk?t=4597
+          self_contained: with_text_card
+          text_card: "SimCity players invent stories about causal chains that aren't in the simulation"
+        - id: nuclear-causal-chain-quip
+          format_tier: quip
+          title: "I know that linkage does not exist"
+          start_sec: 4577
+          end_sec: 4597
+          start_display: "1:16:17"
+          end_display: "1:16:37"
+          duration_sec: 20
+          youtube: https://youtu.be/nsxoZXaYJSk?t=4577
+          self_contained: true
+          notes: "Will solo — sets up Don's line; pair with storytelling quip or use jewel"
+        - id: convincing-illusion-expanded
+          format_tier: jewel
+          title: "Prop up a convincing illusion (expanded ~90s)"
+          start_sec: 4547
+          end_sec: 4648
+          start_display: "1:15:47"
+          end_display: "1:17:28"
+          duration_sec: 101
+          youtube: https://youtu.be/nsxoZXaYJSk?t=4547
+          notes: "Adds gesture/ambiguity setup before SimCity story; upper bound for one nugget"
+        - id: piece-of-paper-meme
+          format_tier: meme
+          title: "Piece of paper to write"
+          start_sec: 4603
+          end_sec: 4618
+          duration_sec: 15
+          youtube: https://youtu.be/nsxoZXaYJSk?t=4603
+          self_contained: with_text_card
+      notes: |
+        Expand BACK to 1:15:47 only if you want illusion+gestures (~101s). Do NOT extend FORWARD
+        into Julie doll — different thesis (masking/Simlish). Student question at 1:14:49 adds ~58s
+        preamble (MUD vs standalone) — too much for bite-sized; use text card instead.
+
+    - id: multiplayer-easier-than-ai
+      title: "A multi-user game would be far easier than an AI game"
+      hook: "Don asks; Will agrees — on camera."
+      start_sec: 4775
+      end_sec: 4833
+      start_display: "1:19:35"
+      end_display: "1:20:33"
+      speakers: [Don Hopkins, Will Wright]
+      youtube: https://youtu.be/nsxoZXaYJSk?t=4775
+      verify: true
+
+  jokes_and_memes:
+    - id: really-fancy-knobs
+      title: "Really fancy knobs! (Don on camera)"
+      start_sec: 550
+      end_sec: 565
+      start_display: "9:10"
+      end_display: "9:25"
+      youtube: https://youtu.be/nsxoZXaYJSk?t=550
+      verify: true
+      tags: [lem, don-hopkins, meme]
+
+    - id: toilet-demo-laughter
+      title: "Puts down toilet — room laughs"
+      start_sec: 4339
+      end_sec: 4382
+      start_display: "1:12:19"
+      end_display: "1:13:02"
+      youtube: https://youtu.be/nsxoZXaYJSk?t=4339
+      verify: true
+      tags: [dollhouse, demo, humor]
+      notes: Pair with objects-advertise-eat-me or cut before eat-me speech.
+
+    - id: calvin-syndrome-bulldozer
+      title: "The Calvin Syndrome — blow it up first, then build"
+      hook: "Players poke the city with a stick to see if it's real."
+      start_sec: 3228
+      end_sec: 3380
+      start_display: "53:48"
+      end_display: "56:20"
+      youtube: https://youtu.be/nsxoZXaYJSk?t=3228
+      verify: true
+      notes: Trim to ~90s for short-form; full arc to Nero on the fiddle is longer.
+
+  draft:
+    - id: mental-model-compiler
+      title: "The real product is the mental model in the player's head"
+      hook: "The computer model is just a compiler for the mental model."
+      start_sec: 432
+      end_sec: 490
+      start_display: "7:12"
+      end_display: "8:10"
+      youtube: https://youtu.be/nsxoZXaYJSk?t=432
+      self_contained: true
+      verify: true
+
+    - id: gaia-face-five-people
+      title: "It took five people to play SimEarth"
+      start_sec: 1401
+      end_sec: 1521
+      start_display: "23:21"
+      end_display: "25:21"
+      youtube: https://youtu.be/nsxoZXaYJSk?t=1401
+      verify: true
+
+    - id: goldilocks-three-games
+      title: "SimEarth too hard, SimAnt too easy, SimCity just right"
+      start_sec: 3441
+      end_sec: 3512
+      start_display: "57:21"
+      end_display: "58:32"
+      youtube: https://youtu.be/nsxoZXaYJSk?t=3441
+      verify: true
+
+    - id: dollhouse-load-simcity
+      title: "I've just loaded a SimCity file into here (Part 2 — the dive)"
+      hook: "Dollhouse demo — birth of The Sims on camera. Follows oh-god-cliffhanger."
+      start_sec: 4202
+      end_sec: 4339
+      start_display: "1:10:02"
+      end_display: "1:12:19"
+      youtube: https://youtu.be/nsxoZXaYJSk?t=4202
+      verify: true
+      jewel: true
+      pairs_with: oh-god-cliffhanger-data-portability
+
+    - id: objects-advertise-eat-me
+      title: "If you're hungry, eat me!"
+      start_sec: 4382
+      end_sec: 4465
+      start_display: "1:13:02"
+      end_display: "1:14:25"
+      youtube: https://youtu.be/nsxoZXaYJSk?t=4382
+      verify: true
+      jewel: true
+
+    - id: julie-doll-peanuts-simlish
+      title: "They took the batteries out and kept playing"
+      start_sec: 4649
+      end_sec: 4775
+      start_display: "1:17:29"
+      end_display: "1:19:35"
+      youtube: https://youtu.be/nsxoZXaYJSk?t=4649
+      verify: true
+      moved_to: verified
+      note: "See verified section — don_pick, tightened in/out"
+
+    - id: game-facilitates-social-interaction
+      title: "The game is facilitating a social interaction"
+      start_sec: 4928
+      end_sec: 5034
+      start_display: "1:22:08"
+      end_display: "1:23:54"
+      youtube: https://youtu.be/nsxoZXaYJSk?t=4928
+      verify: true

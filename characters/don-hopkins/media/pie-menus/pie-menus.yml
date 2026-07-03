@@ -1,0 +1,35 @@
+# Pie menus — SimCity HyperLook, Sims Online, Fitts Law promo
+
+artifact:
+  what: "Radial pie menu UI examples across NeWS SimCity, general demos, and Sims Online"
+  lineage: "Don Hopkins pie menu research — CHI '88 and beyond"
+
+photos:
+  simcity_hyperlook:
+    - file: simcity-build-pie-menu.png
+      what: "Build pie over isometric city map"
+    - file: simcity-zone-pie-menu.png
+      what: "Zone pie — Commercial selected"
+  general:
+    - file: pie-menu-days-of-week.png
+      what: "Days-of-week radial menu — Saturday wedge"
+    - file: pie-menu-fitts-law-promo.png
+      what: "PieMenu.com promo citing Fitts's Law"
+  sims_online:
+    - file: sims-online-multiplayer-pie-menu.png
+      what: "The Sims Online radial menu with player name bubbles"
+
+transmogrifier_crossover:
+  file: ../sims-transmogrifier/transmogrifier-hope-chest-pie-menu-intro.png
+  what: "Hope chest dialog explains wedding pie menu Hope option"
+
+pending:
+  - "NeWS TNT pie menu — see media/news-tnt/"
+  - "Multi Player TCL/Tk/X11 pie menus — not in this batch"
+
+see_also:
+  - ../../pie-menus-chi-88-and-beyond.md
+  - ../news-tnt/INDEX.yml
+  - ../simprov-exploratorium/INDEX.yml
+
+note: "Not AI Generated!"

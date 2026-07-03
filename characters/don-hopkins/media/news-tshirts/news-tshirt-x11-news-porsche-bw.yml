@@ -1,0 +1,15 @@
+# Sidecar — news-tshirt-x11-news-porsche-bw.png
+
+artifact:
+  file: news-tshirt-x11-news-porsche-bw.png
+  slug: news-tshirt-x11-news-porsche-bw
+  room: news-tshirts
+  what: news tshirt x11 news porsche bw
+  era: late 1980s-1990s
+  sidecar_of: news-tshirt-x11-news-porsche-bw.png
+
+see_also:
+  - ../news-tnt/INDEX.yml
+  - ../hyperties/INDEX.yml
+
+note: "Not AI Generated!"

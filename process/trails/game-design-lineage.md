@@ -18,7 +18,7 @@ Designers across genres — simulation toys, MUDs, one-page systems, reverse-eng
 | [**Richard Bartle**](../../characters/richard-bartle/README.md) | MUD1 (1978) + the Bartle taxonomy of player types |
 | [**Chaim Gingold**](../../characters/chaim-gingold/README.md) | Building SimCity — the simulation loop drawn as diagrams |
 | [**Jason Shankel**](../../characters/jason-shankel/README.md) | Maxis / Stupid Fun Club alumnus — games + AI |
-| [**Slats judge rubric**](../../characters/slats/judge-rubric.yml) | Flair vs spreadsheet — how design gets judged on air |
+| [**Slats judge rubric**](../../characters/robots/slats/judge-rubric.yml) | Flair vs spreadsheet — how design gets judged on air |
 
 ---
 

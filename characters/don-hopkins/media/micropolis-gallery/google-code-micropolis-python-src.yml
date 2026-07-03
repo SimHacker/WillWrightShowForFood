@@ -1,0 +1,18 @@
+# Sidecar — google-code-micropolis-python-src.png
+
+artifact:
+  file: google-code-micropolis-python-src.png
+  slug: google-code-micropolis-python-src
+  room: micropolis-gallery
+  what: google code micropolis python src
+  era: 1991 HyperLook through 2010s Facebook
+  sidecar_of: google-code-micropolis-python-src.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/micropolis-gallery.yml
+  - ../../../repo-shows/ideas/gags/pacbot-eats-traffic.yml
+
+see_also:
+  - micropolis-gallery.yml
+
+note: "Not AI Generated!"

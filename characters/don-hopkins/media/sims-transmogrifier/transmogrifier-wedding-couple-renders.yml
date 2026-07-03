@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-wedding-couple-renders.png
+
+artifact:
+  file: transmogrifier-wedding-couple-renders.png
+  slug: transmogrifier-wedding-couple-renders
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — wedding couple renders
+  era: 2000-2002
+  sidecar_of: transmogrifier-wedding-couple-renders.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

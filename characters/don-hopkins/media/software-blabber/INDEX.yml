@@ -1,0 +1,14 @@
+# Software Blabber
+
+room:
+  id: software-blabber
+  category: software
+  subcategory: blabber
+  parent: ../INDEX.yml
+  count: 1
+
+artifacts:
+  - file: software-blabber-character-network-graph.png
+    sidecar: software-blabber-character-network-graph.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-export-whizzer-flamingo.png
+
+artifact:
+  file: transmogrifier-export-whizzer-flamingo.png
+  slug: transmogrifier-export-whizzer-flamingo
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — export whizzer flamingo
+  era: 2000-2002
+  sidecar_of: transmogrifier-export-whizzer-flamingo.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

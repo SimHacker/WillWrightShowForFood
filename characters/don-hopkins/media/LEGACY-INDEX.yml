@@ -1,0 +1,98 @@
+# Don Hopkins media — legacy rooms index (batch-6 sidecars complete 2026-07)
+# Themed directories predating category-first reorg; each PNG now has co-located .yml sidecar.
+
+meta:
+  png_count: 387
+  sidecar_count: 387
+  completed: "2026-07"
+  generator: _tools/generate_legacy_sidecars.py
+
+legacy_rooms:
+  sims-transmogrifier:
+    count: 50
+    era: "2000-2002"
+    gags: [transmogrifier-mona-lisa-pushpins.yml]
+    spec: sims-transmogrifier.yml
+  pantomime:
+    count: 39
+    era: "~2014"
+    gags: [pantomime-gallery.yml, curiosity-cow-cube.yml]
+    subdirs: [bug-farm-screenshots]
+  simprov-exploratorium:
+    count: 31
+    era: "early 1990s"
+    gags: [simprov-exploratorium-sparc.yml]
+  cellular-automata-tiles:
+    count: 24
+    era: "~2010-2011"
+    gags: [cellular-automata-simcity-tiles.yml]
+  micropolis-gallery:
+    count: 23
+    era: "1991-2010s"
+    gags: [micropolis-gallery.yml, pacbot-eats-traffic.yml]
+  rolf:
+    count: 23
+    era: "TomTom-era Amsterdam"
+    gags: [rolf-junk-auction.yml]
+  jaunt-vr:
+    count: 12
+    era: "2016-2017"
+  robot-collection:
+    count: 9
+    era: "~2007-2009"
+    gags: [van-leer-robot-collection.yml]
+  amsterdam-tile-art:
+    count: 7
+    era: "~2010-2011"
+  turing-institute:
+    count: 8
+    era: "~1990-1992"
+    gags: [turing-robot-olympics.yml]
+  pie-menus:
+    count: 5
+    era: "CHI 1988-Sims Online"
+    gags: [simprov-exploratorium-sparc.yml]
+  sims-ctg-1999:
+    count: 5
+    era: "~1999"
+  storymaker-urban-safari:
+    count: 5
+    era: "2011"
+  news-tshirts:
+    count: 4
+    era: "late 1980s-1990s"
+  frys-electronics:
+    count: 3
+  hyperties:
+    count: 3
+  news-tnt:
+    count: 3
+    gags: [news-pizza-tool-fax.yml]
+  danielle-bunten-berry:
+    count: 2
+  google-pacman:
+    count: 2
+  sfc-emeryville:
+    count: 2
+  simfaux:
+    count: 2
+    gags: [simfaux-repo-show-prototype.yml]
+  storymaker:
+    count: 2
+  brainwash-cafe:
+    count: 1
+  connectedtv-palm:
+    count: 1
+  olpc-gdc:
+    count: 1
+
+batch6_rooms:
+  note: "Category-first dirs from batch-6 reorg — see CATALOG-INDEX.yml"
+  count: 120
+
+gag_index: ../../../repo-shows/ideas/gags/INDEX.yml
+
+see_also:
+  - CATALOG-INDEX.yml
+  - GLANCE.yml
+  - ../media.md

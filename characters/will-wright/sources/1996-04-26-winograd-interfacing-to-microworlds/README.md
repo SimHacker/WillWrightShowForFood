@@ -25,6 +25,7 @@ centerpiece by design (see `../../SHOW.yml#topic_less_by_design`).
 
 - `transcript.md` — Don's hand-perfected transcript with table of contents and section headers.
 - `transcript-summary.md` — same text, plain layout (no navigation).
+- `short-form-clips.yml` / `short-form-clips.md` — Adorable Minutes cut list (YouTube in/out, HN pump).
 - `medium-article.md` — Don's Medium article, woven around the video with slides.
 - Video: <https://www.youtube.com/watch?v=nsxoZXaYJSk>
 - Stanford: <https://searchworks.stanford.edu/view/yj113jt5999>

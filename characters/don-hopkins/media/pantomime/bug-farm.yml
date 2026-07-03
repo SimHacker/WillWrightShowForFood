@@ -1,0 +1,47 @@
+# Pantomime Bug Farm — creepy AR/VR bug squisher
+
+app:
+  name: Pantomime Bug Farm
+  platform: iOS
+  url: "https://apps.apple.com/nl/app/pantomime-bug-farm/id969738938"
+  tagline: "Reach in. Squish. Green splat. 60 FPS guilt."
+
+gameplay:
+  perspective: "First-person hands at screen edges — phone/tablet as portal into tabletop microworld"
+  cast: [flies, spiders, scorpions, ants, brain-marble bait]
+  squish: "Yellow god-rays + dark green splats — compulsion loop cousin to cube distressed moos"
+  tutorial: "Torn parchment scraps — stroke one finger to move, twist two to turn, walk on corners"
+  hud: "Time + FPS overlay — honest Unity dev build energy"
+
+tutorial_parchment:
+  file: ../tutorial-parchment-hands.png
+  lines:
+    - "To move: stroke the screen with one finger! To turn: twist it with two!"
+    - "Walk it forward or back on its corners! Hear the foot steps?"
+    - "To hold... grab it by the... screen with... your thumb"
+
+screenshots:
+  dir: ../bug-farm-screenshots/
+  count: 34
+  highlights:
+    - "Flies with red eyes and translucent wings"
+    - "Spiders with skull-patterned carapaces"
+    - "Scorpion + brain sphere + green mist"
+    - "Green glow squish moment — butterfly-shaped splat"
+    - "Spider on table with ant and hold-note parchment"
+
+compulsion_audio:
+  parallel: "../../../../repo-shows/ideas/gags/curiosity-cow-cube.yml#click_audio"
+  idea: "Optional far-away insect chitter between squishes — same retention grammar, different phylum"
+
+menagerie:
+  mimsy: "The splat is aggressive restraint made kinetic—"
+  gregory: "I'm short spiders, long splat futures."
+  bunny: "Board approved the green residue as brand color."
+  helena: "Every squish is a small apocalypse. Continue."
+
+see_also:
+  - INDEX.yml
+  - ../../../../repo-shows/ideas/gags/pantomime-gallery.yml
+
+note: "Not AI Generated!"

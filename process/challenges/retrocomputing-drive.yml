@@ -6,7 +6,7 @@ meta:
   status: seed
   type: [drag_race_challenge_family, flair_class, emulated_runtime, real_hardware_ok]
   tagline: "Retrocomputing AI drag races — pick your language, tools, and platform"
-  celebrity_judge: ../characters/slats/judge-rubric.yml
+  celebrity_judge: ../characters/robots/slats/judge-rubric.yml
 
 pitch: |
   Same spec CARD as the room — but you declare the whole rig: programming languages,
@@ -102,7 +102,7 @@ ties_to:
   - ../stick-shift-protocol.yml
   - ../../schemas/rig-schema.yml
   - ../../rigs/README.md
-  - ../../characters/slats/judge-rubric.yml
+  - ../../characters/robots/slats/judge-rubric.yml
 
 see_also:
   - { path: cross-links.yml#retrocomputing_drive, why: "Narrative trail — all retro nodes" }

@@ -1,0 +1,11 @@
+# Sidecar — computing-umd-zmob-256-z80-board.png
+
+artifact:
+  file: computing-umd-zmob-256-z80-board.png
+  slug: computing-umd-zmob-256-z80-board
+  category: computing
+  subcategory: umd
+  what: "UMD ZMob — 256 Z-80 processors of the past"
+  sidecar_of: computing-umd-zmob-256-z80-board.png
+
+note: "Not AI Generated!"

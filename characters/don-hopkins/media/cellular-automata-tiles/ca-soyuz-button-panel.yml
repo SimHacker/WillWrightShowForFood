@@ -1,0 +1,17 @@
+# Sidecar — ca-soyuz-button-panel.png
+
+artifact:
+  file: ca-soyuz-button-panel.png
+  slug: ca-soyuz-button-panel
+  room: cellular-automata-tiles
+  what: SimCity-tile cellular automata — soyuz button panel
+  era: ~2010-2011
+  sidecar_of: ca-soyuz-button-panel.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/cellular-automata-simcity-tiles.yml
+
+see_also:
+  - ../micropolis-gallery/INDEX.yml
+
+note: "Not AI Generated!"

@@ -102,5 +102,8 @@ medium — the same shapes, told as a cautionary fable. (Don's summary of the un
 ---
 
 See also: [`character-endosymbiosis.yml`](character-endosymbiosis.yml) ·
+[`spore-rethinks-multiplayer-time-ownership.md`](spore-rethinks-multiplayer-time-ownership.md)
+(the other half: **what** async content-sharing does to multiplayer/time/ownership — this doc is
+**how** content moves, that one is **what it means**) ·
 [`../repo-shows/INDEX.yml`](../repo-shows/INDEX.yml) (the bridges) ·
 [`crazy-idea-jam.yml`](crazy-idea-jam.yml) (Mind Mirror diffusion, emulated runtimes, ZombieSims)

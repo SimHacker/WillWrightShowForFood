@@ -1,0 +1,11 @@
+# Sidecar — selfish-config-typescript-module.md
+topic:
+  id: selfish-config-typescript
+  status: later
+  implementation_target: MicropolisCore/packages/selfish-config
+  alternate_target: vitamoo
+  show_seed: ../../repo-shows/selfish-config-typescript.yml
+  upstream:
+    playbook: leela-central/skills/gcs/protocols/pipeline-optimization/playbooks/PB-44-worker-config-fragment-composition.md
+    impl: leela-central/packages/leela-cicd/src/leela_cicd/worker_config.py
+  test_composition: image-web-caddy

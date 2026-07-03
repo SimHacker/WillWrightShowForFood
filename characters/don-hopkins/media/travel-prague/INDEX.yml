@@ -1,0 +1,14 @@
+# Travel Prague
+
+room:
+  id: travel-prague
+  category: travel
+  subcategory: prague
+  parent: ../INDEX.yml
+  count: 1
+
+artifacts:
+  - file: travel-prague-don-hopkins-gargoyles-bracketed.png
+    sidecar: travel-prague-don-hopkins-gargoyles-bracketed.yml
+
+note: "Not AI Generated!"

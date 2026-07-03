@@ -1,0 +1,18 @@
+# Computing Vintage
+
+room:
+  id: computing-vintage
+  category: computing
+  subcategory: vintage
+  parent: ../INDEX.yml
+  count: 3
+
+artifacts:
+  - file: computing-vintage-mainframe-tape-room-bw.png
+    sidecar: computing-vintage-mainframe-tape-room-bw.yml
+  - file: computing-vintage-tape-drive-console-bw.png
+    sidecar: computing-vintage-tape-drive-console-bw.yml
+  - file: computing-vintage-will-wright-circuit-board-lab.png
+    sidecar: computing-vintage-will-wright-circuit-board-lab.yml
+
+note: "Not AI Generated!"

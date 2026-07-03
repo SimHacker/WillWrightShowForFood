@@ -1,0 +1,306 @@
+# Art opening night — narrative script, sales tiers, crypto parody
+# Performable run-of-show: conversation + hammer + quick red-dot sales
+# Parent: series.yml · Economy: simoleon-auctions.yml · Ledger: AUCTIONS.yml
+
+meta:
+  event: jsonsters_premiere_opening
+  venue: Lower Chelsea white cube — third Thursday, prosecco flat
+  duration: "45–55 minutes on air"
+  host: don-hopkins
+  auctioneer: don-philahue
+  cast: ../../menagerie/GUEST-ROSTER.yml#gallery_openings
+  not_real_money: true
+  currency: "§"
+
+sales_philosophy: |
+  NOT thirty-two hammer moments. Two magnificent examples per evolution series get the
+  full (but FAST) auction — sixty to ninety seconds each. Everything else sells on delight:
+  a patron gasps, names the wrong thing beautifully, slaps a red dot, § changes hands, move on.
+  Ten to twenty seconds per quick sale. The room should feel like a salon, not a Sotheby's
+  that discovered Discord.
+
+  Ongoing parody: crypto, NFTs, false scarcity, web3 — Gregory is the accidental bro;
+  Vandermeer proves Scotland invented the blockchain; Bunny thinks red dots are mint buttons;
+  Doctor No offers declared bias instead of a whitepaper; Donna drops an NFT of herself on
+  every lot. The Facebook chorus is the only honest floor price.
+
+tiers:
+  magnificent_auction:
+    rule: "Two grandest pieces per series — brisk hammer, ensemble beat optional"
+    pace: "60–90 sec per lot; Philahue keeps ledger"
+  quick_sale:
+    rule: "Red dot + one line of misread delight + § band from bid_bands low end"
+    pace: "10–20 sec; no counterbid unless joke requires it"
+  chorus_only:
+    rule: "Facebook commenters — ground truth, no §"
+    pace: "heckle from chat overlay"
+
+crypto_parody:
+  thread: running_gag
+  not_a_lecture: "Woven into patron dialogue — never a sober web3 explainer"
+  motifs:
+    false_scarcity: "Only 32 screenshots ever minted — Don pasted them on Facebook for free in 2016"
+    floor_price: "Gregory cites a floor that does not exist; Vandermeer cites Scotland"
+    rug_pull: "Margot says the plaid peacock is a rug; Gregory says he's short it"
+    gas_fees: "Slats heckles — every bid costs one reboot"
+    soul_on_chain: "Palm bids in emoji; Doctor No says bias must be declared"
+    mint_pass: "Donna photobombs each lot — 'I already own the JPEG of me owning it'"
+    dao: "Bunny's board approval is governance; Helena's sermon is the whitepaper"
+    utility: "Bleep swarm is 'community' — Bunny adopts the discord"
+  ground_truth_chorus:
+    - "such pie such serialise such wow"
+    - "3D pie menus!"
+    - "So this is the new bleep/bloop menu?"
+    - "Now do it in 64k"
+
+series_auction_map:
+  # Two magnificent per series; remainder → quick_sale in salon_pass
+  essential:
+    magnificent:
+      - { file: jsonsters-evolution-01.png, lot_id: lot-01-bridge, wall_title: "Study for a Financial Bridge (Working Title)", beat: mimsy_gregory_bid_war }
+    quick_sale: []
+  textured_arcs:
+    magnificent:
+      - { file: jsonsters-evolution-05.png, lot_id: lot-05-flame, wall_title: "Gamma Exposure (Flame Tranche I)" }
+      - { file: jsonsters-evolution-09.png, lot_id: lot-09-ribbon, wall_title: "Liquidity Streams — Terminal Bulge" }
+    quick_sale: [02, 03, 04, 06, 07, 08]
+  spindle_tendrils:
+    magnificent:
+      - { file: jsonsters-evolution-10.png, lot_id: lot-10-tendrils, wall_title: "Five Tendrils — Fan Out I" }
+      - { file: jsonsters-evolution-11.png, lot_id: lot-11-tendrils, wall_title: "Five Tendrils — Fan Out II" }
+    quick_sale: []
+  inspector_surgery:
+    magnificent:
+      - { file: jsonsters-evolution-12.png, lot_id: lot-12-rainbow-inspector, wall_title: "Rainbow Autopsy — Inspector Open" }
+      - { file: jsonsters-evolution-13.png, lot_id: lot-13-bow4, wall_title: "Bow4 LineRenderer — Width Curve Sermon" }
+    quick_sale: []
+  hex_islands:
+    magnificent:
+      - { file: jsonsters-evolution-14.png, lot_id: lot-14-hex, wall_title: "Sedimentary Node with Rainbow Collar", beat: vandermeer_margot_hex_fight }
+      - { file: jsonsters-evolution-18.png, lot_id: lot-18-hex-peak, wall_title: "Hex Archipelago — Carry Trade at Dusk" }
+    quick_sale: [15, 16, 17]
+  terrain_ribcage:
+    magnificent:
+      - { file: jsonsters-evolution-22.png, lot_id: lot-22-ribcage, wall_title: "Ribcage Tunnel — Portal I", beat: helena_ribcage_sermon }
+      - { file: jsonsters-evolution-24.png, lot_id: lot-24-ribcage, wall_title: "Ribcage Tunnel — Portal III" }
+    quick_sale: [19, 20, 21, 23]
+  maximal_plaid:
+    magnificent:
+      - { file: jsonsters-evolution-25.png, lot_id: lot-25-plaid, wall_title: "Plaid Peacock — Ribs I", beat: plaid_peacock_scream }
+      - { file: jsonsters-evolution-28.png, lot_id: lot-28-plaid-landscape, wall_title: "Plaid Peacock — Landscape Stress Test" }
+    quick_sale: [26, 27]
+  monster_era:
+    magnificent:
+      - { file: jsonsters-03-pearl-collar.png, lot_id: lot-monster-pearl, wall_title: "Pearl Collar — Court Presentation" }
+      - { file: jsonsters-04-bleep-swarm.png, lot_id: lot-monster-swarm, wall_title: "Bleep Swarm (Choir Study)", beat: bunny_adopts_bleep_swarm }
+    quick_sale:
+      - { file: bleep-bloop-blob.png, wall_title: "Blob with Attendants" }
+      - { file: jsonsters-02-rainbow-bridge.png, wall_title: "Rainbow Bridge — Covenant Study" }
+
+run_of_show:
+  - act: arrival
+    minutes: "0–5"
+    beats:
+      - prosecco_flat; wall_text_unread
+      - donna_photobomb: "TREMENDOUS opening. Best opening. Many people say."
+      - doctor_no_floor_sheet: "No comment." (buys nothing yet)
+      - palm_watches: "🐒✋🌴 — offering, not minting"
+      - tragic_clown_weeps_at_reserve_price
+
+  - act: cold_open
+    minutes: "5–8"
+    doc: lecture-selling-art-to-virtual-characters.md#cold-open
+    don_line: "You can sell art to people who are not people. They pay in §. That is why the bit works."
+    crypto_jab: |
+      Gregory (already loud): "It's like an NFT collection but with curator risk and no Discord."
+      Don: "It's a Facebook album from eight years ago."
+      Facebook chorus overlay: "such pie such serialise such wow"
+
+  - act: room_I_essential
+    minutes: "8–12"
+    series: essential
+    magnificent:
+      lot: lot-01-bridge
+      script: |
+        Don: "Two nodes. One Arc. Caption unavailable."
+        Mimsy: "Aggressive restraint — I bought it before—"
+        Philahue: "Ma'am, the auction hasn't—"
+        Mimsy: "—finishing my sentence. §18,000."
+        Gregory: "Source, sink, conduit. I'll match. This is DeFi for spheres."
+        Mimsy: "§22,000. It's generative. Only one exists."
+        Don: "Thirty-two exist. On Facebook. For free."
+        Gregory: "§24,000. Floor price is a feeling."
+        *KACHING* — Mimsy (impulse premium)
+        Slats: "Gas fee: one reboot."
+    quick_sales: []
+
+  - act: room_II_textured
+    minutes: "12–16"
+    series: textured_arcs
+    salon_pass:
+      - frame: 02
+        delight: { mimsy: "Diptych! Whitney will regret!", buyer: mimsy, price_§: 4200 }
+      - frame: 06
+        delight: { gregory: "Diversifying into purple noise.", buyer: gregory, price_§: 8900 }
+      - frame: 08
+        delight: { julian: "(late) The bulge is the climax, darling.", buyer: julian, price_§: 5500 }
+    magnificent:
+      - lot: lot-05-flame
+        script: |
+          Gregory: "Flame strip is gamma. I'm long volatility."
+          Vandermeer: "The veil of Maya over a CSV — §400 in citations."
+          Gregory: "§31,000. Not a rug." 
+          Margot: "Everything here is a rug over suburban longing."
+          *KACHING* — Gregory
+        crypto_jab: "Gregory calls it 'staking the flame layer.' Don calls it a texture URL."
+      - lot: lot-09-ribbon
+        script: |
+          Mimsy: "Terminal bulge! Liquidity event!"
+          Bunny: "Is that a mint button? §12,000!"
+          Gregory: "That's not— fine. §14,000. Utility is visual."
+          *KACHING* — Bunny (accidental whale, Gregory explains GME off-mic)
+
+  - act: room_III_spindle_inspector
+    minutes: "16–20"
+    series: [spindle_tendrils, inspector_surgery]
+    magnificent:
+      - lot: lot-10-tendrils
+        quick_hammer: { bucky_jr: "Edge with a point. §4,200.", buyer: bucky_jr }
+      - lot: lot-11-tendrils
+        quick_hammer: { bucky_jr: "Tensile honesty. §4,800.", buyer: bucky_jr }
+      - lot: lot-12-rainbow-inspector
+        script: |
+          Vandermeer: "Update Always checked — that's the smart contract. Always updates. Scotland."
+          Doctor No: "No comment." *raises paddle* "Declared bias: toward width curves."
+          *KACHING* — Doctor No (society patron premium, low §, high dignity)
+      - lot: lot-13-bow4
+        script: |
+          Julian: "Bow4 is four narrative arcs before climax— don't look at me."
+          Margot: "§900. Hostile acquisition through tears."
+          Julian: "§3,200. Erotic geometry is non-fungible."
+          *KACHING* — Julian (late arrival rule)
+
+  - act: room_IV_hex
+    minutes: "20–26"
+    series: hex_islands
+    salon_pass:
+      - frame: 15
+        delight: { bunny: "Broccoli! §6,000!", buyer: bunny }
+      - frame: 17
+        delight: { vandermeer: "Class allegory with trees — guest book entry §200", buyer: vandermeer }
+    magnificent:
+      - lot: lot-14-hex
+        script: |
+          Vandermeer: "Nation-states in a liquidity sea!"
+          Margot: "Gravel is where they dump the complaining nodes!"
+          Bunny: "Are those broccoli? §200,000!"
+          Gregory: "(to camera) She's pricing land use like GameStop. This is web3."
+          Helena: "(whisper growing) Each pillar remembers soil."
+          *KACHING* — Bunny OR split joke with Gregory — Don picks live
+      - lot: lot-18-hex-peak
+        script: |
+          Gregory: "Carry trade at dusk. Hex tile 18 is the exit liquidity."
+          Mimsy: "§19,000 before you finish— I finished. §21,000."
+          *KACHING* — Mimsy
+
+  - act: room_V_terrain
+    minutes: "26–32"
+    series: terrain_ribcage
+    salon_pass:
+      - frame: 19
+        delight: { gregory: "Biome tile fund. §7,500.", buyer: gregory }
+      - frame: 21
+        delight: { margot: "Suburban dream crushed. §1,200. Crying.", buyer: margot }
+    magnificent:
+      - lot: lot-22-ribcage
+        script: |
+          Helena walks the projected tunnel. Room silent.
+          Helena: "Confession. Walk through or don't. I walked."
+          Philahue: "Any counterbid?"
+          (silence)
+          *KACHING* — Helena (sermon premium, no competition with redemption)
+        crypto_jab: "Vandermeer whispers: 'The tunnel is a time-locked vault.' Helena ignores him."
+      - lot: lot-24-ribcage
+        script: |
+          Margot: "Administrative ribs crushing the dream. §2,400."
+          Helena: "§38,000. The third portal funds the board."
+          *KACHING* — Helena
+
+  - act: room_VI_plaid
+    minutes: "32–38"
+    series: maximal_plaid
+    salon_pass:
+      - frame: 26
+        delight: { vandermeer: "Post-literate tartan ledger. §350.", buyer: vandermeer }
+    magnificent:
+      - lot: lot-25-plaid
+        script: |
+          Mimsy: "(screaming softly) PLAID PEACOCK OF CAPITAL!"
+          Gregory: "I'm short the plaid. Long water shader. Passing."
+          Mimsy: "§24,000. Generative scarcity!"
+          Don: "It's a stress test. There are four plaid frames."
+          Donna: "I own the peacock. I own the JPEG of the peacock. Tremendous."
+          *KACHING* — Mimsy
+        crypto_jab: "Margot: 'Rug pull in tartan.' Gregory: 'Finally an honest critique.'"
+      - lot: lot-28-plaid-landscape
+        script: |
+          Gregory: "Landscape backdrop is exit scam aesthetics. §45,000 anyway."
+          Bunny: "I'd live under the peacock! §80,000!"
+          *KACHING* — Bunny
+
+  - act: room_VII_monster
+    minutes: "38–44"
+    series: monster_era
+    salon_pass:
+      - file: bleep-bloop-blob.png
+        delight: { helena: "Something remembers being touched. §9,000.", buyer: helena }
+      - file: jsonsters-02-rainbow-bridge.png
+        delight: { mimsy: "Covenant after metadata flood! §11,000!", buyer: mimsy }
+    magnificent:
+      - lot: lot-monster-pearl
+        script: |
+          Mimsy: "Pearl collar — court dress! Deceased. Wine."
+          Julian: "Presented to society. §8,500."
+          *KACHING* — Julian
+      - lot: lot-monster-swarm
+        script: |
+          Mimsy: "THE BLEEP SWARM IS THE CHOIR!"
+          Helena: "We were always the Bloop."
+          Bunny: "Community governance! I adopt all Bleep. §250,000 bundle."
+          Facebook chorus: "So this is the new bleep/bloop menu? 😁"
+          *KACHING* — Bunny (whale; optional bundle quick-sales already sold)
+        crypto_jab: "Gregory: 'Discord with liquidity.' Palm: 🐒✋🌴🔮 — emoji bid declined; offering only."
+
+  - act: coda
+    minutes: "44–50"
+    beats:
+      - don_close: lecture-selling-art-to-virtual-characters.md#close
+      - nuey_san_waldman_voice: "Now do it in 64k 😉"
+      - philahue_ledger: "§ totals fictional. Git commit real."
+      - graduation_tease: patrons jump to menagerie / live shows next
+
+quick_sale_template:
+  format: |
+    [Patron spots frame] → one misread line → "§X,000" → red dot slap → *KACHING* (small) → next
+  price_band: "§1,200–§9,000 unless bunny_accident"
+  duration: "10–20 sec"
+
+magnificent_auction_template:
+  format: |
+    Don names repo truth (one sentence) → 2–3 patron misreads → optional crypto jab →
+    1–2 raises → hammer → *KACHING* → Philahue logs → move on
+  duration: "60–90 sec max"
+
+ledger:
+  file: AUCTIONS.yml
+  commit: "Append hammer_log after air; update patron simoleons in menagerie CHARACTER.yml or critics wallets"
+
+see_also:
+  - simoleon-auctions.yml
+  - series.yml
+  - critics.yml
+  - lecture-selling-art-to-virtual-characters.md
+  - ../../menagerie/GUEST-ROSTER.yml
+  - ../../repo-shows/ideas/jsonsters-gallery-lecture.yml
+
+note: "Not AI Generated!"

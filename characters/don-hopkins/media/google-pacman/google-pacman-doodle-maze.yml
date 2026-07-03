@@ -1,0 +1,14 @@
+# Sidecar — google-pacman-doodle-maze.png
+
+artifact:
+  file: google-pacman-doodle-maze.png
+  slug: google-pacman-doodle-maze
+  room: google-pacman
+  what: google pacman doodle maze
+  era: 2010
+  sidecar_of: google-pacman-doodle-maze.png
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

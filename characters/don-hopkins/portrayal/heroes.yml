@@ -33,6 +33,17 @@ direct_mentors:
     credit: "Don: huge credit for where we are — Self doesn't run on every phone; in spirit it does"
     wwsff_link: ../../david-ungar/README.md
 
+patron_saints:
+  david_ahl:
+    relationship: "Facebook friend — Creative Computing founder"
+    taught: "Wonderful magazines and compilations — accessible joy, not gatekeeping"
+    don: "I aspire to be as wonderful!"
+    wwsff_link: ../../david-ahl/README.md
+    media: ../../david-ahl/media/best-of-creative-computing-vol2.yml
+  scott_mccloud:
+    relationship: "Understanding Comics — closure, masking, amplification through simplification"
+    wwsff_link: ../../scott-mccloud/README.md
+
 intellectual_lineage:
   thread: "Papert constructionism → microworlds → Sims → MOOLLM → Repo Show"
   moollm_skills:

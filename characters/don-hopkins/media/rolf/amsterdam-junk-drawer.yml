@@ -1,0 +1,78 @@
+# Rolf Pixley — full Amsterdam series (deduped, all unique kept)
+
+provenance:
+  from: Rolf Pixley
+  aka: Rich Pixley
+  when: "Before he left Amsterdam"
+  context: "Workshop / library hoard — junk drawer find, not curated gallery"
+  don_note: "Great face puppet! MIND=BLOWN"
+
+lots:
+  workshop_panorama:
+    file: workshop-panorama-amsterdam.png
+    what: "Floor-to-ceiling clutter — CRTs, bins, pinball, bicycle on wall, shipping boxes"
+    auction_tag: "LOT-WORKSHOP-PANORAMA"
+
+  space_keychains:
+    files:
+      - keychains-cosmonaut-tereshkova-cccp.png
+      - keychains-cosmonaut-nikolayev-cluster.png
+      - keychains-cosmonaut-profile.png
+      - keychains-astronaut-shepard-glenn.png
+      - keychains-astronaut-nikolayev-white.png
+      - keychains-astronaut-shepard-close.png
+      - keychains-wit-lam-lucky-strikes.png
+      - keychains-mixed-cluster.png
+    what: "Vintage lucite cosmonaut/astronaut portrait fobs — Tereshkova, Nikolayev, Shepard, Glenn, White; wit lam lucky strikes"
+    face_puppet_potential: "Helmet portraits — crop-ready puppet mouths"
+    auction_tag: "LOT-SPACE-KEYCHAINS"
+
+  retro_compute:
+    files:
+      - pcbs-green-ce-16k-ram-solartron.png
+      - pcbs-green-stack-nec-z80.png
+      - patch-panel-breadboard.png
+      - control-panel-knobs-plus-minus-100.png
+      - flip-dot-analog-pixel-display.png
+    what: "CE 6-16K RAM, Solartron NEC D780C-1, breadboard rat's nest, ±100 knob panel, flip-dot pixels"
+    auction_tag: "LOT-RETRO-COMPUTE"
+
+  cabinet_of_curiosities:
+    files:
+      - thachers-calculating-instrument-1881.png
+      - jenny-haniver-bell-jar.png
+      - rhinoceros-beetle-shadow-box.png
+      - alligator-fridge-curious-moments.png
+    what: "K&E Thacher 1881, dried sea devil in cloche, rhino beetle wings spread, taxidermy gator on fridge beside CURIOUS MOMENTS"
+    auction_tag: "LOT-CURIOS"
+
+  mind_blown_reactions:
+    files:
+      - don-hopkins-mind-blown-face-puppet.png
+      - rolf-pixley-mechanical-object-mind-blown.png
+      - rolf-beard-clock-mechanism-mind-blown.png
+    what: "Three MIND=BLOWN faces — Don face-puppet canonical; Rolf with cast-iron mechanism (NO MUNDANE OPTION shelf); bearded clock guts"
+    spec: face-puppets.yml
+    auction_tag: "LOT-MIND-BLOWN"
+
+  raving_bonkers:
+    files:
+      - raving-bonkers-closeup.png
+      - raving-bonkers-top-motion-blur.png
+    what: "RAVING BONKERS — British Rock 'Em Sock 'Em Robots; two red bucket-head bots on yellow base"
+    spec: raving-bonkers.yml
+    auction_tag: "LOT-RAVING-BONKERS"
+
+menagerie:
+  mimsy: "The junk drawer performs curation by accident—"
+  gregory: "Long keychains, short flip-dots, long Thacher slide rule — diversified hoard."
+  vandermeer: "Jenny Haniver in cloche. The cryptid has tenure."
+  bunny: "Board approved the alligator on the fridge. CURIOUS MOMENTS spine visible."
+  don: "Great face puppet! MIND=BLOWN."
+
+see_also:
+  - INDEX.yml
+  - face-puppets.yml
+  - virtual-junk-auction.yml
+
+note: "Not AI Generated!"

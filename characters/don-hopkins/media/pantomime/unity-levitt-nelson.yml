@@ -1,0 +1,32 @@
+# Unity3D dev — Don, David Levitt, Nelson on Pantomime
+
+file: ../unity-pantomime-soccer-levitt-call.png
+project: "PantomimeSoccer.unity — PantomimePong"
+engine: Unity3D
+platform: macOS
+
+collaborators:
+  don_hopkins: "Chief Software Architect — AccessoryHands, TreeJoint, AvatarRoot"
+  david_levitt: "Cofounder — VPL lineage, good VR prerequisites"
+  nelson: "Dev collaborator on Unity builds"
+
+scene_capture:
+  game_view: "Composite video — cat on chair, Don face close-ups, pantomime hand silhouettes"
+  hierarchy: "Ball_Marble(Clone) spam — physics toys"
+  inspector: "AvatarRoot(Clone) — Rigidbody, TreeJoint script"
+  console: "AccessoryHands: Walking -> Resting, edgeToFaceThreshold"
+  video_call: "Current Call overlay — remote session while iterating"
+
+old_band:
+  spec: ../../../../process/old-band-back-together.yml
+  levitt_ventures: [Bounce, Body Electric, Interval, MediaFlow, ConnectedMedia, Pantomime]
+
+show_seed:
+  pairing: "David Levitt + Jerry Martin music-and-theory OR Levitt crew reunion episode"
+  beat: "Screen-share the Unity hierarchy while squishing bugs — procedural rhetoric of hands"
+
+see_also:
+  - INDEX.yml
+  - ../../../david-levitt/CHARACTER.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,36 @@
+# Apple II Red Book
+
+room:
+  id: apple-ii-redbook
+  parent: ../GLANCE.yml
+  count: 11
+
+artifacts:
+  - file: apple-ii-redbook-fig-s01-system-diagram.png
+    sidecar: apple-ii-redbook-fig-s01-system-diagram.yml
+  - file: apple-ii-redbook-system-timing-diagram.png
+    sidecar: apple-ii-redbook-system-timing-diagram.yml
+  - file: apple-ii-redbook-fig-s02-mpu-system-bus.png
+    sidecar: apple-ii-redbook-fig-s02-mpu-system-bus.yml
+  - file: apple-ii-redbook-fig-s04-sync-counter.png
+    sidecar: apple-ii-redbook-fig-s04-sync-counter.yml
+  - file: apple-ii-redbook-fig-s05-rom-memory.png
+    sidecar: apple-ii-redbook-fig-s05-rom-memory.yml
+  - file: apple-ii-redbook-fig-s06-ram-select.png
+    sidecar: apple-ii-redbook-fig-s06-ram-select.yml
+  - file: apple-ii-redbook-fig-s07-ram-address-mux.png
+    sidecar: apple-ii-redbook-fig-s07-ram-address-mux.yml
+  - file: apple-ii-redbook-fig-s08-ram-memory-data-latch.png
+    sidecar: apple-ii-redbook-fig-s08-ram-memory-data-latch.yml
+  - file: apple-ii-redbook-fig-s09-peripheral-io.png
+    sidecar: apple-ii-redbook-fig-s09-peripheral-io.yml
+  - file: apple-ii-redbook-fig-s10-on-board-io-speaker.png
+    sidecar: apple-ii-redbook-fig-s10-on-board-io-speaker.yml
+  - file: apple-ii-redbook-fig-s11-video-generator.png
+    sidecar: apple-ii-redbook-fig-s11-video-generator.yml
+
+spec:
+  - apple-ii-redbook.yml
+  - dedup.yml
+
+note: "Not AI Generated!"

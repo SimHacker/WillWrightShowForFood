@@ -1,0 +1,17 @@
+# Sidecar — ca-worms-tube-worms-purple.png
+
+artifact:
+  file: ca-worms-tube-worms-purple.png
+  slug: ca-worms-tube-worms-purple
+  room: cellular-automata-tiles
+  what: SimCity-tile cellular automata — worms tube worms purple
+  era: ~2010-2011
+  sidecar_of: ca-worms-tube-worms-purple.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/cellular-automata-simcity-tiles.yml
+
+see_also:
+  - ../micropolis-gallery/INDEX.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,19 @@
+# Slats — Auto Art Theft Grand stolen-deed ledger (duplicates only)
+# Parent: ../../process/auto-art-theft-grand.yml
+# NEVER moves originals — copies for training-data theater
+
+meta:
+  mode: auto-art-theft-grand
+  actor: slats
+  fictional: true
+  duplication_only: true
+
+stolen_deeds: []
+# Example after batch run:
+# - { deed_id: 77MP-4291033, copied_from: gregory-kwan, wall_title: "Combination 4,291,033" }
+# - { deed_id: JSONSTERS-evolution-01, copied_from: mimsy-caldwell, batch: opening_night }
+
+batch_log: []
+moola_paid_to_victims: {}
+
+note: "Not AI Generated!"

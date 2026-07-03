@@ -1,0 +1,20 @@
+# Hangout Berkeley
+
+room:
+  id: hangout-berkeley
+  category: hangout
+  subcategory: berkeley
+  parent: ../INDEX.yml
+  count: 4
+
+artifacts:
+  - file: hangout-berkeley-900-grayson-dazzler-shades.png
+    sidecar: hangout-berkeley-900-grayson-dazzler-shades.yml
+  - file: hangout-berkeley-au-coquelet-no-loitering-sign.png
+    sidecar: hangout-berkeley-au-coquelet-no-loitering-sign.yml
+  - file: hangout-berkeley-espresso-check-in.png
+    sidecar: hangout-berkeley-espresso-check-in.yml
+  - file: hangout-berkeley-stupid-fun-club-lounge-bar.png
+    sidecar: hangout-berkeley-stupid-fun-club-lounge-bar.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,267 @@
+# Production schedule — 1996 Winograd short-form videos
+# Don rewatch → call out new clips in `user_callouts` below → bump into next wave.
+# Clip specs: short-form-clips.yml · Canonical text: transcript.md
+
+meta:
+  series: "1996 Winograd — Adorable Minutes cuts"
+  source_video: https://www.youtube.com/watch?v=nsxoZXaYJSk
+  show_seed: ../../../../repo-shows/will-wright-adorable-minutes.yml
+  target_length: "tiered — see format_tiers in short-form-clips.yml"
+  format_tiers:
+    flagship: "90–120s"
+    jewel: "60–110s"
+    quip: "20–45s (+ optional text card)"
+    meme: "5–20s"
+  end_card: "Question for Will? → WWSFF / HN thread"
+  production_status_enum: [planned, in_cut, in_review, published, dropped]
+
+# Per-video checklist (repeat for each slot):
+#   [ ] In/out verified on YouTube (not just transcript)
+#   [ ] Title + hook line (HN / Shorts)
+#   [ ] Optional 1-line Don intro (voice or text card)
+#   [ ] End card → collect questions for Will async show
+#   [ ] Update short-form-clips.yml status + published_url
+
+waves:
+  wave_0_hn_pump:
+    goal: "Prime HN / social before long Repo Show — lead with project thesis"
+    publish_order: 1
+    slots:
+      - slot: 1
+        clip_id: oh-god-cliffhanger-data-portability
+        working_title: "Oh, God… (1996) — moving data between games"
+        in_out: "1:08:19 → 1:09:55"
+        youtube: https://youtu.be/nsxoZXaYJSk?t=4099
+        status: planned
+        priority: critical
+        notes: "MOST IMPORTANT. Hard cut before demo. CTA: 'Part 2?' or link to full talk."
+
+  wave_1_verified_jewels:
+    goal: "Self-contained 60–90s hooks — no context needed. Publish #2 right after cliffhanger."
+    publish_order: 2
+    slots:
+      - slot: 2
+        clip_id: simearth-failure-mode-no-why
+        working_title: "How cool kids are — SimEarth failure (Don pick ★)"
+        in_out: "27:39 → 29:05 (end ON 'and so they run away screaming')"
+        youtube: https://youtu.be/nsxoZXaYJSk?t=1659
+        status: planned
+        user_verified: true
+        don_pick: true
+        priority: high
+        notes: "Brilliant — kids vs adults on failure. Slot #2 after Oh God cliffhanger."
+      - slot: 3
+        clip_id: lem-seventh-sally-trurl-knobs
+        working_title: "Will Wright on Lem's Cyberiad — really fancy knobs"
+        in_out: "9:08 → 10:08"
+        youtube: https://youtu.be/nsxoZXaYJSk?t=548
+        status: planned
+      - slot: 4
+        clip_id: julie-doll-peanuts-simlish
+        format_tier: jewel
+        working_title: "Julie doll + Peanuts → Simlish (full arc, ~109s)"
+        in_out: "1:17:30 → 1:19:19 — doll story AND Peanuts fix, one answer"
+        youtube: https://youtu.be/nsxoZXaYJSk?t=4650
+        status: planned
+        user_verified: true
+        don_pick: true
+        priority: high
+        spin_offs:
+          - julie-doll-batteries-only
+          - peanuts-mwa-simlish-fix
+          - hackers-doll-meme
+
+  wave_1b_micro_quips:
+    goal: "Very short form — quips, memes, ideas (after jewel drops or standalone)"
+    publish_order: 2b
+    slots:
+      - slot: 4a
+        clip_id: julie-doll-batteries-only
+        format_tier: quip
+        working_title: "Take the batteries out (~27s)"
+        youtube: https://youtu.be/nsxoZXaYJSk?t=4691
+        status: planned
+      - slot: 4b
+        clip_id: peanuts-mwa-simlish-fix
+        format_tier: quip
+        working_title: "Like Peanuts adults — read it in (~24s)"
+        youtube: https://youtu.be/nsxoZXaYJSk?t=4735
+        status: planned
+      - slot: 4c
+        clip_id: hackers-doll-meme
+        format_tier: meme
+        working_title: "Hacker's doll (~9s)"
+        youtube: https://youtu.be/nsxoZXaYJSk?t=4682
+        status: planned
+      - slot: m1
+        clip_id: really-fancy-knobs-meme
+        format_tier: meme
+        youtube: https://youtu.be/nsxoZXaYJSk?t=550
+        status: planned
+      - slot: m2
+        clip_id: oh-god-meme
+        format_tier: meme
+        youtube: https://youtu.be/nsxoZXaYJSk?t=4113
+        status: planned
+        verify: true
+
+  wave_2_sims_birth_arc:
+    goal: "Dollhouse → The Sims — sequential drops after cliffhanger lands"
+    publish_order: 3
+    depends_on: wave_0_hn_pump
+    slots:
+      - slot: 4
+        clip_id: dollhouse-load-simcity
+        working_title: "Part 2 — I've just loaded a SimCity file into here"
+        in_out: "1:10:02 → 1:12:19"
+        youtube: https://youtu.be/nsxoZXaYJSk?t=4202
+        status: planned
+        verify: true
+      - slot: 5
+        clip_id: toilet-demo-laughter
+        working_title: "1996 Dollhouse toilet demo (the room laughs)"
+        in_out: "1:12:19 → 1:13:02"
+        youtube: https://youtu.be/nsxoZXaYJSk?t=4339
+        status: planned
+        verify: true
+      - slot: 6
+        clip_id: objects-advertise-eat-me
+        working_title: "If you're hungry, eat me! — SimAntics in 1996"
+        in_out: "1:13:02 → 1:14:25"
+        youtube: https://youtu.be/nsxoZXaYJSk?t=4382
+        status: planned
+        verify: true
+
+  wave_3_design_philosophy:
+    goal: "Mind-blowing ideas — mental model, failure, goldilocks"
+    publish_order: 4
+    slots:
+      - slot: 7
+        clip_id: mental-model-compiler
+        working_title: "The computer model is a compiler for the mental model"
+        in_out: "7:12 → 8:10"
+        youtube: https://youtu.be/nsxoZXaYJSk?t=432
+        status: planned
+        verify: true
+      - slot: 8
+        clip_id: goldilocks-three-games
+        working_title: "Too hard · too easy · just right"
+        in_out: "57:21 → 58:32"
+        youtube: https://youtu.be/nsxoZXaYJSk?t=3441
+        status: planned
+        verify: true
+      - slot: 9
+        clip_id: calvin-syndrome-bulldozer
+        working_title: "The Calvin Syndrome — blow it up first"
+        in_out: "53:48 → ~56:20 (trim to ~90s)"
+        youtube: https://youtu.be/nsxoZXaYJSk?t=3228
+        status: planned
+        verify: true
+      - slot: 10
+        clip_id: gaia-face-five-people
+        working_title: "It took five people to play SimEarth"
+        in_out: "23:21 → 25:21"
+        youtube: https://youtu.be/nsxoZXaYJSk?t=1401
+        status: planned
+        verify: true
+
+  wave_4_simlish_and_illusion:
+    goal: "Simulator effect — Julie doll moved to wave 1 slot 4 (don pick)"
+    publish_order: 5
+    slots:
+      - slot: 12
+        clip_id: simulator-effect-don-on-camera
+        format_tier: jewel
+        working_title: "Don — piece of paper to write (~74s)"
+        in_out: "1:16:14 → 1:17:28 — nuclear causal chain → Don exchange → reverse-engineering; cut BEFORE Julie doll"
+        youtube: https://youtu.be/nsxoZXaYJSk?t=4574
+        status: planned
+        don_pick: true
+        verify: true
+        spin_offs:
+          - storytelling-don-exchange-quip
+          - nuclear-causal-chain-quip
+          - convincing-illusion-expanded
+          - piece-of-paper-meme
+
+  wave_5_don_qa:
+    goal: "Don on camera — primers for async Will Q&A show"
+    publish_order: 6
+    slots:
+      - slot: 13
+        clip_id: multiplayer-easier-than-ai
+        working_title: "Don: multiplayer easier than AI? Will: Oh yeah"
+        in_out: "1:19:35 → 1:20:33"
+        youtube: https://youtu.be/nsxoZXaYJSk?t=4775
+        status: planned
+        verify: true
+      - slot: 14
+        clip_id: don-courseware-educators
+        working_title: "Don asks Will about educator courseware"
+        in_out: "58:32 → 59:59"
+        youtube: https://youtu.be/nsxoZXaYJSk?t=3512
+        status: planned
+        verify: true
+      - slot: 15
+        clip_id: one-vision-not-committee
+        working_title: "One vision — not committee design"
+        in_out: "1:01:46 → 1:04:42"
+        youtube: https://youtu.be/nsxoZXaYJSk?t=3706
+        status: planned
+        verify: true
+        notes: Long — consider trimming to X-on-back quote (~45s)
+
+  wave_6_meme_shorts:
+    goal: "Quick hits — shareable, funny"
+    publish_order: 7
+    slots:
+      - slot: 16
+        clip_id: really-fancy-knobs
+        working_title: "Really fancy knobs! (15s meme cut)"
+        in_out: "9:10 → 9:25"
+        youtube: https://youtu.be/nsxoZXaYJSk?t=550
+        status: planned
+        verify: true
+      - slot: 17
+        clip_id: game-facilitates-social-interaction
+        working_title: "The game is facilitating a social interaction"
+        in_out: "1:22:08 → 1:23:54"
+        youtube: https://youtu.be/nsxoZXaYJSk?t=4928
+        status: planned
+        verify: true
+
+# Don rewatch — append callouts here (agent merges into short-form-clips.yml + next wave)
+user_callouts:
+  - noted_at: 2026-07-04
+    clip_id: simearth-failure-mode-no-why
+    in_out: "27:39 → 29:05"
+    end_on: "And so they run away screaming."
+    don_pick: true
+    status: merged
+    note: "Brilliant — how cool kids are on failure; END on the 'run away screaming' punchline (do not cut before)"
+  - noted_at: 2026-07-04
+    clip_id: julie-doll-peanuts-simlish
+    in_out: "1:17:30 → 1:19:19"
+    don_pick: true
+    status: merged
+    note: "Golden — talking doll, girls took batteries out"
+  - noted_at: 2026-07-04
+    clip_id: julie-doll-peanuts-simlish
+    note: "Peanuts part also great — same arc as doll, good together ~109s; quips OK too"
+    status: merged
+# example:
+#   - noted_at: 2026-07-04
+#     in_out: "12:34 → 13:00"
+#     hook: "description"
+#     status: candidate
+
+backlog_after_rewatch:
+  - "Terry Winograd intro — generation gap (0:14–1:37)?"
+  - "SimAnt larva-sorting / emergence (~33:00)?"
+  - "3D fad surprise closing (~1:23:54)?"
+  - "Any new cuts Don marks while rewatching → user_callouts"
+
+summary:
+  planned_slots: 17
+  critical_first: oh-god-cliffhanger-data-portability
+  estimated_publish_cadence: "1–2 per week while mining HN + async Will questions"

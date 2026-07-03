@@ -1,0 +1,11 @@
+# Sidecar — olpc-demo-gdc-miyamoto-talking.png
+
+artifact:
+  file: olpc-demo-gdc-miyamoto-talking.png
+  slug: olpc-demo-gdc-miyamoto-talking
+  category: olpc
+  subcategory: demos
+  what: "Miyamoto talking at GDC"
+  sidecar_of: olpc-demo-gdc-miyamoto-talking.png
+
+note: "Not AI Generated!"

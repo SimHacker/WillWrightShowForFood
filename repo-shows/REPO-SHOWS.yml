@@ -39,6 +39,8 @@ planted_shows:
   will-wright/: "★ First planted show. Topic-less kickoff with Will Wright (Will IS the topic; topical shows flow from it). Seed: will-wright-series.yml."
   steve-wozniak/: "Topic-less kickoff with Steve Wozniak. Apple II, 6502, open hardware, and browser-based emulators."
   terry-winograd/: "★ Forebear show. Terry Winograd (the dragon) + the CS547 treasure trove archive. Stands on his shoulders and the shoulders of all his guests (Will 1996, Gosling 1995, Joy Mountford 1994, etc.). Archive recovery, runnable seeds, Micropolis Class, Connections series. (Pie menus = Don's own thread.)"
+  david-rosenthal/: "Solo: DSHR — NeWS/X11/LOCKSS bridge; async PIXIE segment; MOOLLM demo + literary thread (Lem, coprophagia, PKD)."
+  moollm-readings/: "Performance: Don's YouTube readings — primer/canon for Palm, Dasher, Tog, yaml jazz microworld."
 naming: "Planted directories use symbolic BIG-ENDIAN names (category-first) for coherent browsing. Seeds may be renamed to big-endian when planted."
 
 templates:
@@ -73,7 +75,7 @@ seeds:
   game-bridge-sims-spore.yml:   "Will + Spore team — Sims ⇔ Simopolis ⇔ Spore creatures. CAPSTONE/big-ambition bridge: clean-room web re-creation of the creature renderer/animator/editor/builder, designed from interviews. Likely a multi-episode ARC."
   game-bridge-mind-mirror.yml:  "Sims ⇔ Simopolis ⇔ Timothy Leary's Mind Mirror (1986 EA) — first EMULATED-RUNTIME organelle (real Apple ][ binary in a web emulator) + cross-organelle property diffusion."
   game-bridge-afterlife-soul.yml: "Simopolis Soul Bridge ⇔ LucasArts Afterlife (1996) — rescue souls FROM hell, send characters TO hell; hell-is-full → ZombieSims waves; They Are Billions scale."
-  heather-steve-alvey/afterlife-zombie-bridge.yml: "Heather Alvey (SimFreaks) + Steve Alvey (SimSlice) — drain hell into ZombieSims; catalog + tool integration show."
+  heather-and-steve-alvey/afterlife-zombie-bridge.yml: "Heather Alvey (SimFreaks) + Steve Alvey (SimSlice) — drain hell into ZombieSims; catalog + tool integration show."
   game-show-wigcercize.yml:     "Wigcercize! — a wig GAME SHOW (MC: Boogaloo Stu). A VARIETY format, not an interview — the collection holds multiple show TYPES."
   game-show-gong.yml:           "The Gong Show — a VARIETY game-show format: oddball acts, hook-yanked when they bomb. The Ultimate Machine IS the gong (its one function, switch off, ends an act — then gongs itself first). Pairs with Wigcercize as the game-show lineup; Slats can host/heckle."
   micropolis-ai-drag-race.yml:  "★ MICROPOLIS AI DRAG RACE — rig personas, ai-offs challenges, spend-log judges, merge or sashay. See process/micropolis-ai-drag-race.yml"
@@ -82,7 +84,8 @@ seeds:
   news-postscript-window-system.yml: "Group/flagship: NeWS reunion — Gosling + Rosenthal + van Hoff (+ Densmore, Mak). 'Send a program, not a data structure', made runnable in the browser."
   james-gosling-news-java.yml:  "Solo: James Gosling — Emacs → NeWS → Java (cheesy little extension languages). Feeds the NeWS reunion."
   arthur-van-hoff-hyperlook.yml: "Solo: Arthur van Hoff — HyperLook + PdB + the Axis of Eval. Feeds the NeWS reunion."
-  ben-cerveny: "Solo: Ben Cerveny — topic-less kickoff (public code, games-to-infra, maps, Connections-style series)."
+  amy-jo-and-scott-kim/: "Group: Amy Jo Kim + Scott Kim — Shufflebrain, Game Thinking × puzzles; pair interview; optional solo scott-kim for Viewpoint."
+  ben-cerveny.yml: "Solo: Ben Cerveny — GNE/Habitat × browser Simopolis; public code × publish gates; Signal warm contact; data-portability spine for Will ep.1."
   terry-winograd: "Solo / Forebear: Terry Winograd — the dragon with the treasure trove of videos. Archive as origin story, curriculum, and series material. Shoulders credit to Terry + every guest."
   jens-monig: "Solo: Jens Mönig — Snap! (BYOB) × Micropolis integration, Snap! internals + the Y combinator, schemas for Snap! (Don's Barcelona talk), and distributed/actor systems in Snap!."
   brian-harvey: "Solo: Brian Harvey — Logo + his books (CS Logo Style, Simply Scheme), BJC, and a lifetime of joyful CS education."

@@ -1,0 +1,82 @@
+# Repo Show idea — JSONsters gallery lecture + Simoleon auctions
+
+idea:
+  id: jsonsters-gallery-lecture
+  title: "Selling Art to Virtual Characters for Simoleons"
+  host: don-hopkins
+  format: lecture + guided gallery tour + live § auctions
+  status: seed
+
+pitch: |
+  Don explains reverse over-engineering — viewers simulate worlds onto Unity JSON graphs until
+  the LineRenderer blushes. Eight fictional Chelsea patrons misread every frame. Then they BID:
+  Simoleons flow FROM the nut jobs TO the house (opposite of Klapaucius). Ensemble beats are
+  hammer moments; later scarcity auctions when fewer lots remain or a character needs §.
+
+segments:
+  - id: lecture
+    doc: ../../characters/don-hopkins/jsonsters/lecture-selling-art-to-virtual-characters.md
+    minutes: "8–12"
+  - id: opening_night
+    doc: ../../characters/don-hopkins/jsonsters/art-opening-night.yml
+    minutes: "35–45"
+    what: |
+      Gallery walk with tiered sales: 15 magnificent auctions (two per series), 17 quick red-dot
+      delight sales. Crypto/NFT/web3 parody in patron dialogue. Full cast from GUEST-ROSTER.
+  - id: tour_highlights
+    doc: ../../characters/don-hopkins/jsonsters/README.md
+    rooms: [I, V, VI, VII, VIII]
+  - id: premiere_auctions
+    spec: ../../characters/don-hopkins/jsonsters/simoleon-auctions.yml
+    script: ../../characters/don-hopkins/jsonsters/art-opening-night.yml
+    lots: magnificent_lots + quick_sale_lots
+    ledger: ../../characters/don-hopkins/jsonsters/AUCTIONS.yml
+  - id: crypto_parody
+    spec: ../../characters/don-hopkins/jsonsters/art-opening-night.yml#crypto_parody
+    what: Running gag — false scarcity, floor price, rug pull, mint pass; Facebook chorus = truth
+  - id: facebook_chorus
+    what: Chat hecklers cite pie menus — not eligible to bid
+
+ensemble_beats:
+  - mimsy_gregory_bid_war_on_frame_01
+  - vandermeer_margot_hex_fight
+  - helena_ribcage_sermon
+  - plaid_peacock_scream
+  - bunny_adopts_bleep_swarm
+  - palm_emoji_bid
+  - facebook_chorus_ground_truth
+  - gregory_nft_collection_joke
+  - bunny_mint_button_red_dot
+
+later_modes:
+  scarcity_auction:
+    when: [fewer_unsold_lots, character_needs_money, artist_needs_§]
+    spec: ../../characters/don-hopkins/jsonsters/simoleon-auctions.yml#modes.scarcity_auction
+  live_patrons:
+    when: After JSONsters premiere — patrons jump out of the story
+    graduation: ../../characters/menagerie/GRADUATION.yml
+    perform: [bid_on_air, misread_any_artifact, banter_with_guests, audience/fictional-* instances]
+
+crypto_parody:
+  doc: ../../characters/don-hopkins/jsonsters/art-opening-night.yml#crypto_parody
+  tone: "Social criticism through patron misread — never earnest web3 advocacy"
+
+economy:
+  currency: Simoleons
+  fictional: true
+  crossref: ../../characters/don-philahue/CHARACTER.yml#easter_eggs.rosebud_cheat
+
+gallery:
+  path: ../../characters/don-hopkins/jsonsters/
+  readme: README.md
+  critics: critics.yml
+  opening_guests: ../../characters/menagerie/GUEST-ROSTER.yml#gallery_openings
+
+see_also:
+  - ../../characters/don-hopkins/jsonsters/INDEX.yml
+  - ../../characters/menagerie/GUEST-ROSTER.yml
+  - ../../characters/sims/INDEX.yml
+  - ../../characters/robots/INDEX.yml
+  - ../will-wright/performance-and-culture.yml
+
+note: "Not AI Generated!"

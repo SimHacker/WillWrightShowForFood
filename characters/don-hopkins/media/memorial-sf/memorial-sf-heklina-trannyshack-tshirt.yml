@@ -1,0 +1,71 @@
+# Sidecar — memorial-sf-heklina-trannyshack-tshirt.png
+# RIP Heklina — Trannyshack graphic tee; Conan face-hole puppet candidate
+
+artifact:
+  file: memorial-sf-heklina-trannyshack-tshirt.png
+  slug: memorial-sf-heklina-trannyshack-tshirt
+  category: memorial
+  subcategory: sf
+  what: "Screen-printed Trannyshack tribute tee — Heklina portrait, wild hair, yellow H pendant, mouth open"
+  sidecar_of: memorial-sf-heklina-trannyshack-tshirt.png
+
+subject:
+  name: Heklina
+  aka: Stefan Grygelko
+  role: "Legendary SF drag queen — founded Trannyshack and Mother"
+  qualities: [kind heart, volcanic wit]
+
+graphic:
+  medium: screen print on grey marled fabric
+  text: TRANNYSHACK arched in hair
+  jewelry: yellow cursive H pendant
+  face: heavy eye makeup, beauty mark, mouth open — ideal Conan face-hole crop zone
+  note: "Open mouth on tee parallels rimming-chair seat face at Oasis memorial"
+
+facebook:
+  don_caption: |
+    RIP Heklina, the legendary queen of drag from San Francisco who founded Trannyshack and Mother,
+    beloved by so many for her kind heart and volcanic wit, who left us too soon.
+  comments:
+    - author: Chuck Farnham
+      text: "Mother was awesome"
+    - author: Don Hopkins
+      text: "https://www.youtube.com/watch?v=61qbUimYg9g&t=4s — Heklina | KQED Truly CA"
+    - author: Don Hopkins
+      text: |
+        I'll never forget the cloying smell of Trannyshack: hotdogs, bacon, caramelized onions,
+        marijuana, booze, smoke machines, chocolate, astroglide, glitter, sweaty trannies, cheeky punks,
+        fabulous freaks, and nuns with dirty habits.
+    - author: Don Hopkins
+      text: |
+        But there was one distinctive, commemorative item that the local TV reporters couldn't fully
+        comment on — a spotlit chair that was in the center of the room, on stage at Oasis, surrounded
+        by flowers. That's because it commemorates one of Heklina's best-known sexual proclivities, and
+        something she was known to do to select audience members she pulled on stage back in the day at
+        Trannyshack at the Stud: rimming. This was a symbolic rimming chair, with Heklina's face painted,
+        mouth open, on the seat — a hilarious IYKYK object for all the friends who gathered to mourn on
+        Monday, and an item that recalls a raunchier, not-ready-for-prime-time era in SF drag with which
+        Heklina will always be associated.
+      link: https://sfist.com/news/local-news-stations-cover-heklinas-memorial-at-oasis
+    - author: Don Hopkins
+      text: '"Tales of the Tails of the City"'
+
+performance_space:
+  conan_face_hole:
+    fit: excellent
+    why: "Mouth-open portrait — same energy as rimming-chair seat face; webcam lips through hole"
+    tool: ../../../../apps/performance-space/conan-face-puppet.yml
+    process_ref: ../../../../process/performance-space.yml
+
+venues:
+  trannyshack: The Stud (historical)
+  mother: Mother bar
+  memorial: Oasis — rimming chair with face on seat
+
+see_also:
+  - memorial-sf.yml
+  - ../../../../repo-shows/ideas/gags/heklina-conan-face-hole.yml
+  - ../rolf/face-puppets.yml
+  - ../don-high-score-space-invaders.yml
+
+note: "Not AI Generated!"

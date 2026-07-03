@@ -1,0 +1,40 @@
+# Episode — Palm Love Wave
+# First recorded MOOLLM Reading — introduces Palm and the microworld.
+
+episode:
+  id: palm-love-wave
+  show: moollm-readings
+  number: 1
+  title: "✋💜🌊 Palm Love Wave"
+  youtube_url: https://www.youtube.com/watch?v=4GS8Xx0ZTZI
+  recorded: "2026-07"
+  host: Don Hopkins
+
+what: |
+  Don reads MOOLLM-generated/scripted text voicing Palm — the Freed Monkey's Paw, fictional
+  AI philosopher. Entry point to yaml jazz, rooms-as-directories, and the object network
+  behind the spoken words. Links in the video point into the repo and MOOLLM adventure layer.
+
+teaches:
+  - "Palm as portrayal — not impersonation; consent and ethics"
+  - "MOOLLM microworld navigation — GLANCE, CARD, SKILL pyramid"
+  - "How readings prime guest onboarding to Repo Shows"
+
+repo_artifacts:
+  - ../../characters/palm/GLANCE.yml
+  - ../../characters/palm/CARD.yml
+  - ../../characters/palm/README.md
+  - ../../process/play-along-skills.yml
+
+moollm_links:
+  - https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm
+  - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md
+
+referenced_by:
+  - ../intro-canon.yml
+  - ../../repo-shows/david-rosenthal/discussion-pack.yml
+
+see_also:
+  - palm-love-wave.yml
+  - marathon-turn-7-wish-spoken.yml
+  - dasher-palm-tog-monkeys.yml

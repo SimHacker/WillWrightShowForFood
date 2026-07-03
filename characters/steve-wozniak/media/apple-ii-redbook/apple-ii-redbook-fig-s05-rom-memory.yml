@@ -1,0 +1,16 @@
+# Sidecar — apple-ii-redbook-fig-s05-rom-memory.png
+
+artifact:
+  file: apple-ii-redbook-fig-s05-rom-memory.png
+  slug: apple-ii-redbook-fig-s05-rom-memory
+  source: Apple II Red Book (Reference Manual)
+  designer: Steve Wozniak
+  what: "FIG S-5 ROM memory — 9316B ROM, 74LS138 decode"
+  sidecar_of: apple-ii-redbook-fig-s05-rom-memory.png
+
+provenance:
+  photographed_by: Don Hopkins
+  facebook: "Happy 70th Birthday Woz!"
+  classiccmp: http://www.classiccmp.org/cpmarchives/AppleII/Apple%20II%20(Redbook).pdf
+
+note: "Not AI Generated!"

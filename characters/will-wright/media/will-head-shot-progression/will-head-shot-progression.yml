@@ -1,0 +1,24 @@
+# Will Wright head-shot progression — Don Photoshop composites
+
+artifact:
+  author: Don Hopkins
+  subject: Will Wright
+  era: "late 1990s–early 2000s"
+  what: "God-game metaphor — tiny Sims composited into Will portraits"
+
+progression:
+  - file: will-sim-in-palm.png
+    gag: "Sim waving from Will's open palm"
+  - file: will-sim-touches-nose.png
+    gag: "Sim reaches up to boop Will's nose"
+  - file: will-legs-in-mouth.png
+    gag: "Tiny blue legs sticking out of Will's mouth"
+  - file: will-young-grayscale.png
+    what: "Early grayscale headshot base"
+  - file: will-linkedin-computer-games-parody.png
+    gag: "Does Will Wright know about Computer Games? — LinkedIn endorsement parody"
+
+repo_orbit:
+  will_character: ../../CHARACTER.yml
+
+note: "Not AI Generated!"

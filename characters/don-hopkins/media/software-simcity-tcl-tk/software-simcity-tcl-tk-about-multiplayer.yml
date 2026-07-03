@@ -1,0 +1,11 @@
+# Sidecar — software-simcity-tcl-tk-about-multiplayer.png
+
+artifact:
+  file: software-simcity-tcl-tk-about-multiplayer.png
+  slug: software-simcity-tcl-tk-about-multiplayer
+  category: software
+  subcategory: simcity-tcl-tk
+  what: "About dialog — Multi-Player Interface by Don Hopkins"
+  sidecar_of: software-simcity-tcl-tk-about-multiplayer.png
+
+note: "Not AI Generated!"

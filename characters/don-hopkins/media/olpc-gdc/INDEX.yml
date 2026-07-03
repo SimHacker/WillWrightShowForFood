@@ -1,0 +1,16 @@
+room:
+  id: olpc-gdc
+  name: OLPC Booth at GDC
+  parent: ../../media.md
+
+artifacts:
+  - olpc-booth-gdc-micropolis.png
+
+spec:
+  - olpc-gdc.yml
+
+see_also:
+  - ../micropolis-gallery/INDEX.yml
+  - ../../open-sourcing-simcity-for-olpc.md
+
+note: "Not AI Generated!"

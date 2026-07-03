@@ -1,0 +1,78 @@
+# SimProv — Exploratorium video demo on SPARCstation 2
+
+artifact:
+  what: "HyperLook / CAM / SimCity UI stills from Don's Exploratorium demo recording"
+  machine: "Sun SPARCstation 2"
+  venue: "Exploratorium, San Francisco"
+  era: "early 1990s — NeWS / OpenWindows / HyperLook"
+
+demo_beats:
+  cam:
+    title: "Cellular Automata Machine (CAM6)"
+    intro: hyperlook-cam-intro-simulator.png
+    note: "Copyright © 1992 Don Hopkins — 128×128 wrap-around array; Toffoli & Margolis"
+    melting_faces:
+      - hyperlook-cam-melting-face-happytool.png
+      - hyperlook-cam-melting-face-neutral.png
+      - hyperlook-cam-melting-faces-happytool-bg.png
+      - hyperlook-cam-melting-face-closeup.png
+      - hyperlook-cam-melting-face-posterized.png
+      - hyperlook-cam-cell-editor-melting-face.png
+      - hyperlook-cam-melting-face-bw-editor.png
+      - hyperlook-cam-melting-face-clock-bg.png
+    air_freshener:
+      what: "Little Trees CAR-FRESHNER — CA melt through HyperDraw"
+      photos:
+        - hyperlook-hyperdraw-air-freshener-demo.png
+        - hyperlook-hyperdraw-air-freshener-pointing.png
+        - hyperlook-hyperdraw-air-freshener-card.png
+        - hyperlook-cam-air-freshener-ca.png
+        - hyperlook-happytool-air-freshener-stack.png
+        - hyperlook-desktop-icons-air-freshener.png
+
+  happytool:
+    what: "Happytool face editor — Neutral slider, color palette, melting CA on smileys"
+    photos:
+      - hyperlook-happytool-melting-face-color.png
+      - hyperlook-happytool-purple-face-hyperdraw.png
+      - hyperlook-cam-happytool-melting-face.png
+      - hyperlook-cam-eco-rule-happytool.png
+
+  alan_turing_neatclock:
+    what: "NeatClock stack — AlanTuring style with Roman numerals and portrait overlay"
+    menu: hyperlook-neatclock-menu-alanturing.png
+    photos:
+      - hyperlook-alan-turing-clock-editor.png
+      - hyperlook-alan-turing-clock-layout.png
+      - hyperlook-alan-turing-neatclock-overlay.png
+      - hyperlook-alan-turing-neatclock-measure.png
+
+  hyperlook_ui:
+    object_properties:
+      - hyperlook-object-properties-button-reset.png
+      - hyperlook-object-properties-simcity-1967.png
+    simcity:
+      - hyperlook-simcity-budget-windows.png
+      - hyperlook-simcity-plane-crash-demo.png
+      - hyperlook-simcity-zone-map.png
+    desktop:
+      - hyperlook-hyperdraw-desktop-demo.png
+      - hyperlook-cam-editor-melting-speckle.png
+
+repo_orbit:
+  cellular_automata_tiles: ../cellular-automata-tiles/INDEX.yml
+  pie_menus: ../pie-menus/INDEX.yml
+  micropolis_gallery: ../micropolis-gallery/INDEX.yml
+  alan_turing_portrait: ../../alan-turing-portrait.png
+
+sidecars:
+  completed: "2026-07"
+  count: 31
+
+pending_assets:
+  - "NeWS TNT pie menu still (may overlap news-tnt room)"
+  - "Multi Player TCL/Tk/X11 pie menus"
+  - "Sims Transmogrifier t-shirt"
+  - "Will Spore one-page Wired diagram"
+
+note: "Not AI Generated!"

@@ -1,0 +1,14 @@
+# Sidecar — frys-prospector-interior.png
+
+artifact:
+  file: frys-prospector-interior.png
+  slug: frys-prospector-interior
+  room: frys-electronics
+  what: frys prospector interior
+  era: pre-closure SV retail
+  sidecar_of: frys-prospector-interior.png
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

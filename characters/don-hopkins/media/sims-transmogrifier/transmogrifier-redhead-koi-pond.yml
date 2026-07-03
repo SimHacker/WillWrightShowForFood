@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-redhead-koi-pond.png
+
+artifact:
+  file: transmogrifier-redhead-koi-pond.png
+  slug: transmogrifier-redhead-koi-pond
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — redhead koi pond
+  era: 2000-2002
+  sidecar_of: transmogrifier-redhead-koi-pond.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

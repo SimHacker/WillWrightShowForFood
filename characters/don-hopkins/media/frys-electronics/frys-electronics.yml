@@ -1,0 +1,25 @@
+# Fry's Electronics — themed retail (extinct)
+
+artifact:
+  era: "Silicon Valley big-box — cowboy / gold-rush themes"
+  found_by: Don Hopkins
+  note: "Found Ant Farm Revolution at Fry's — same retail archaeology"
+
+photos:
+  - frys-prospector-interior.png
+  - frys-cowboy-horse-ceiling.png
+  - frys-electronics-night-sign.png
+
+visual:
+  prospector: "Gold-panner mannequin amid monitors and laptops"
+  horse: "Cowboy on rearing horse suspended from ceiling — YOUR BEST BUYS ARE ALWAYS AT FRY'S"
+  sign: "Night exterior — Fry's ELECTRONICS sign + saguaro cactus statues"
+
+repo_orbit:
+  ant_farm: ../../../will-wright/media/ant-farm-revolution-frys.yml
+
+menagerie:
+  gregory: "Long Fry's, short liquidity. I'm diversified."
+  don: "Cowboy-themed Fry's. Silicon Valley culture gold. All now gone."
+
+note: "Not AI Generated!"

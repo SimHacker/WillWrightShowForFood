@@ -1,0 +1,17 @@
+room:
+  id: motion-capture-sim-salabim
+  name: Sim Salabim Motion Capture
+  parent: ../../media.md
+
+artifacts:
+  - will-motion-capture-sim-salabim-magazine.png
+  - will-motion-capture-hallway-green-ghost.png
+
+spec:
+  - motion-capture-sim-salabim.yml
+
+see_also:
+  - ../will-head-shot-progression/INDEX.yml
+  - ../../CHARACTER.yml
+
+note: "Not AI Generated!"

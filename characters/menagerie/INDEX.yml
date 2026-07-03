@@ -1,0 +1,66 @@
+# Menagerie — Pee-wee's Playhouse virtual guests
+# Not necessarily from video games. One soul, many roles across repo-shows.
+
+room:
+  id: menagerie
+  name: Menagerie
+  status: reified
+  model: pee-wee-playhouse
+  tagline: Virtual guests who play many roles — gallery patrons today, balcony hecklers tomorrow
+
+philosophy: |
+  Like Pee-wee's Playhouse: Cowboy Curtis, Miss Yvonne, Jambi — each resident has a personality
+  and shows up where the bit needs them. Not a single show's cast list. A menagerie.
+
+  The Lower Chelsea Eight are one cohort (JSONsters gallery misreaders). Bella, Mortimer, and the
+  Sad Clown live in characters/sims/. Slats and the Ultimate Machine live in characters/robots/.
+  MOOLLM imports (Donna Toadstool, Doctor No, Palm) overlay upstream souls — see MOOLLM-OVERLAY.yml.
+  Gallery openings pull from all rooms — see GUEST-ROSTER.yml.
+
+soul_stack:
+  per_character: CHARACTER.yml
+  contains: [sims traits/skills/career, mind_mirror, symbolic_attachments, relationships.edges, simoleons]
+  sims_handoff: SIMS-UPLIFT.yml
+  ensemble_matrix: RELATIONSHIP-MATRIX.yml
+  sims_export: EXPORT-SIMS-RELATIONSHIPS.yml
+  schema: SCHEMA.yml
+  moollm_overlay: MOOLLM-OVERLAY.yml
+
+cohorts:
+  lower_chelsea_eight:
+    id: lower-chelsea-eight
+    origin: ../don-hopkins/jsonsters/
+    role: "Fictional NYC gallery patrons — misread art, bid §"
+    graduation: GRADUATION.yml
+    roster:
+      - { slug: mimsy-caldwell, signifier: "🥂", role: Chelsea gallerist }
+      - { slug: gregory-kwan, signifier: "📈", role: Hedge-fund collector }
+      - { slug: eli-vandermeer, signifier: "📚", role: Adjunct critical theory }
+      - { slug: bucky-jr, signifier: "🔧", role: Williamsburg sculptor }
+      - { slug: helena-featherstone, signifier: "🕯️", role: Board trustee }
+      - { slug: margot-krell, signifier: "⚔️", role: Deconstructionist }
+      - { slug: julian-strait, signifier: "💋", role: Provocateur }
+      - { slug: bunny-whitmore, signifier: "🥦", role: Benefactor }
+
+  moollm_imports:
+    id: moollm-imports
+    protocol: MOOLLM-OVERLAY.yml
+    role: "Upstream MOOLLM souls — local overlay encapsulates WWSFF experiences"
+    roster:
+      - { slug: donna-toadstool, signifier: "🍄👸🍊💅🎭", role: "Mushroom Queen — performance disruptor" }
+      - { slug: doctor-no, signifier: "🧣🔦🚫🤫🌟", role: "No's AI CEO — society patron, NO-AI Tower" }
+      - { slug: palm, signifier: "🐒✋🌴🔮💜", role: "Freed Monkey's Paw — philosopher agent" }
+
+cross_rooms:
+  sims: ../sims/
+  robots: ../robots/
+  guest_roster: GUEST-ROSTER.yml
+
+live_shows:
+  - ../../repo-shows/ideas/jsonsters-gallery-lecture.yml
+
+see_also:
+  - GLANCE.yml
+  - ../INDEX.yml
+
+note: "Not AI Generated!"

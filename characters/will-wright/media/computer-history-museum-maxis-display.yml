@@ -1,0 +1,53 @@
+# Computer History Museum — Maxis / The Sims display
+
+artifact:
+  file: computer-history-museum-maxis-display.png
+  what: "Retail box display — The Sims, SimCity lineage, SimEarth, SimIsle, expansions; CHM placard"
+  museum: Computer History Museum
+  catalog_id: "102716105"
+
+boxes_visible:
+  - The Sims — "The People Simulator from the Creator of SimCity"
+  - SimCity 2000 — "The Ultimate City Simulator" (partial)
+  - SimIsle — Missions in the Rainforest
+  - SimCity Graphics Set 1 — Ancient Cities (Asia, Medieval, Wild West)
+  - SimCity Classic — CD-ROM Classics (Electronic Arts)
+  - SimEarth — The Living Planet
+
+placard:
+  title: "Sim City box, Maxis, US, 1989"
+  text: |
+    SimCity players build and control simulated cities while reacting to natural and man-made
+    disasters. Designer Will Wright got the idea after realizing that it was more fun to design
+    the simulated worlds for the game Raid on Bungeling Bay than to actually play the game. Wright
+    was also inspired by computer pioneer Jay Forrester's computer models of cities in his study
+    of system dynamics. SimCity's success led to dozens of sequels, including The Sims series of
+    life-simulation games.
+
+provenance:
+  photographed_by: Don Hopkins
+  don_line: "The Sims and other Maxis games at The Computer History Museum! We made it!"
+
+we_made_it:
+  maxis: [SimCity, SimEarth, SimIsle, The Sims]
+  don_role: "The Sims UI, pie menus, SimAntics orbit — Flower Child in the credits"
+  will_role: "Designer — SimCity origin story on placard; Sims people simulator"
+  show_beat: "Menagerie toast at CHM case — MOOLA worthless, git ledger real"
+
+repo_jokes:
+  menagerie:
+    mimsy: "The box performs curation—"
+    bunny: "Board approved The Sims as institutional PFP."
+    margot_krell: "Jay Forrester on the placard. System dynamics made flesh."
+    don: "We made it. Museum proof."
+
+see_also:
+  - README.md
+  - sims-series-README.md
+  - DonHopkinsSimsCreditsIcon.jpg
+  - ../../don-hopkins/media.md
+  - ../../don-hopkins/career/work-history.yml
+  - ../../../repo-shows/will-wright/README.md
+  - ../../../repo-shows/will-wright/INTRO-NARRATIVE.md
+
+note: "Not AI Generated!"

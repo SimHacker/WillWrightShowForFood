@@ -28,7 +28,7 @@ One of the deepest artisanal catalogs in Sims 1 history.
 | OpenLaszlo mockups | [Gallery](../../characters/will-wright/media/sims-simfreaks-openlaszlo-catalog-README.md) |
 | Gameplay shots | [SimFreaks / SimProv in-game](../../characters/will-wright/media/sims-simfreaks-content-gameplay-README.md) |
 | Character | [Heather Alvey](../../characters/heather-alvey/README.md) |
-| Show | [Heather & Steve Alvey](../../repo-shows/heather-steve-alvey/README.md) |
+| Show | [Heather & Steve Alvey](../../repo-shows/heather-and-steve-alvey/README.md) |
 | Buy base game | [Get The Sims on Steam](../get-the-sims-on-steam.md) |
 
 ## Related catalogs

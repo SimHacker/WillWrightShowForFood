@@ -8,6 +8,10 @@ Auto-captions cleaned + clarified by Don Hopkins. Stanford Archives materials ar
 
 *Faithful capture of Will's own words — the seed corpus. Speaker labels added; YouTube duplicate-timestamp artifacts removed.*
 
+**Timestamp cache:** [`transcript-cache/`](transcript-cache/README.md) — YouTube auto-captions (reference). **This file is canonical.**
+
+**Short-form cuts:** [`short-form-clips.yml`](short-form-clips.yml) · flagship cliffhanger @ 1:08:19–1:09:55
+
 See [transcript-summary.md](transcript-summary.md) for the same text without section navigation. See [medium-article.md](medium-article.md) for Don's article woven around the talk.
 
 ## Table of contents

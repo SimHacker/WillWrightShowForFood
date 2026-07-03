@@ -1,0 +1,18 @@
+# Travel Berlin
+
+room:
+  id: travel-berlin
+  category: travel
+  subcategory: berlin
+  parent: ../INDEX.yml
+  count: 3
+
+artifacts:
+  - file: travel-berlin-ccc-pacman-jacket-ghost-shirt.png
+    sidecar: travel-berlin-ccc-pacman-jacket-ghost-shirt.yml
+  - file: travel-berlin-waag-dissection-paintings.png
+    sidecar: travel-berlin-waag-dissection-paintings.yml
+  - file: travel-berlin-zoo-lion-cage-warning.png
+    sidecar: travel-berlin-zoo-lion-cage-warning.yml
+
+note: "Not AI Generated!"

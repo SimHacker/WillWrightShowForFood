@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-ornate-desk-quill-phone.png
+
+artifact:
+  file: transmogrifier-ornate-desk-quill-phone.png
+  slug: transmogrifier-ornate-desk-quill-phone
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — ornate desk quill phone
+  era: 2000-2002
+  sidecar_of: transmogrifier-ornate-desk-quill-phone.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

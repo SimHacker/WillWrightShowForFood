@@ -12,6 +12,11 @@ simulation:
     - ../../process/ticket-pr.yml
 
 runbook:
+  before_show:
+    simulated_opening:
+      optional: true
+      spec: simulated-opening.yml
+      protocol: ../../process/simulated-art-opening.yml
   during_show:
     philahue:
       pulls_from: [audience/*/questions.yml]

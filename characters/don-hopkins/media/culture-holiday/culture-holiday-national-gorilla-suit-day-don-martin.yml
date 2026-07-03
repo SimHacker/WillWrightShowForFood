@@ -1,0 +1,36 @@
+# Sidecar — culture-holiday-national-gorilla-suit-day-don-martin.png
+# Don Martin (MAD) — NOT Don Hopkins
+
+artifact:
+  file: culture-holiday-national-gorilla-suit-day-don-martin.png
+  slug: culture-holiday-national-gorilla-suit-day-don-martin
+  category: culture
+  subcategory: holiday
+  what: "Don Martin MAD cartoon — three gorillas in striped suits, National Gorilla-Suit Day January 31st"
+  sidecar_of: culture-holiday-national-gorilla-suit-day-don-martin.png
+
+holiday:
+  name: National Gorilla Suit Day
+  date: January 31
+  origin: "Don Martin MAD Magazine strip, 1963"
+  hacker_tradition: "Programmer / early-internet calendar humor — Don Hopkins orbit"
+
+artist:
+  name: Don Martin
+  not: Don Hopkins
+  signature: "© Don Martin… (vertical between gorillas)"
+  style: "MAD Magazine — bulbous noses, floppy feet, cross-hatch fur"
+
+graphic:
+  subjects: "Three gorillas — large and small mouths open, medium smiling"
+  attire: horizontally striped shirts
+  text: "NATIONAL GORILLA-SUIT DAY / JANUARY 31st"
+
+rights:
+  note: "Don Martin estate / MAD — fine art america watermark on scan; confirm before public redistribution"
+
+repo_orbit:
+  don_hopkins_humor: "Same energy as Frankinsideout, Heklina IYKYK — lean into the cheese"
+  menagerie: "Gorilla suit optional for Repo Show openers on Jan 31"
+
+note: "Not AI Generated!"

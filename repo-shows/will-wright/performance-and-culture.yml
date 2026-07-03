@@ -8,6 +8,13 @@ meta:
   thesis: "Using Twitch chat (and GitHub, and HN) to edit a repo, live and time-shifted. That is why it's the Repo Show."
   see_also: [SEGMENTS.yml, venue/VENUE.yml, ../../process/repo-show-format.yml, ../../process/performance-space.yml, ../../characters/don-philahue/CHARACTER.yml]
 
+brand:
+  ssot: ../../process/repo-show-branding.yml
+  host_biography: ../../characters/don-hopkins/portrayal/upbringing.yml
+  summary: |
+    Repo Show orchestration + participation rituals + cultural excerpts (Americans Pac-Man, etc.).
+    Draws on Don's DC Metro upbringing — does not live only in the character dir.
+
 # VOICING — LLM text → voice, with NO synthesizers
 voicing:
   problem: "MOOLLM characters natively speak TEXT + emojis. How do we give them VOICE on a stream?"
@@ -36,6 +43,13 @@ puppet_kinds:
       through and they speak the character's MOOLLM-generated lines. You perform the LIPS + the
       VOICE at once — that simultaneity is what makes it hilarious.
     use_for: "Game-character faces (Bob Newbie, Bella Goth, Slats, Death, Sad Clown) — clearly-labeled affectionate fan portrayals."
+  guest_face_puppet:
+    what: |
+      **Modular face puppet per guest** — their photo + Faceball Construction Set attachments.
+      Guest puppeteers **live** on stream, or **records offline** and submits clips. Exemplar:
+      **Game Gosling at the PDP-8** — young James, satisfied, hotrod iron behind him.
+    spec: ../../apps/performance-space/faceball-construction-set.yml#guest_characters
+    not: "Voice clone; host impersonation — guest drives their own mouth through the hole"
   voice_puppet:
     what: "Hide your face entirely; just VOICE the character off-screen. Lowest friction; anyone can do it."
     instruments: |
@@ -174,7 +188,7 @@ speech_feedback_loop_instrument:
     steering Slats together. Pairs with the vocal-tract instruments (Pink Trombone, Phoneloper —
     see schemas/language-cow.yml#performance_instruments) and the Phoneloper granular moo-chorus.
   arc: "Let it climb to peak absurd beauty, then the Ultimate Machine gongs Slats. Reset laugh. Repeat later."
-  see: ../../characters/slats/CHARACTER.yml
+  see: ../../characters/robots/slats/CHARACTER.yml
 
 # UNNECESSARY CENSORSHIP — a homage gag (credit where due)
 unnecessary_censorship:

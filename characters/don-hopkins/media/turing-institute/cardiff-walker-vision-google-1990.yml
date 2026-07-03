@@ -1,0 +1,18 @@
+# Sidecar — cardiff-walker-vision-google-1990.png
+
+artifact:
+  file: cardiff-walker-vision-google-1990.png
+  slug: cardiff-walker-vision-google-1990
+  room: turing-institute
+  what: cardiff walker vision google 1990
+  era: ~1990-1992
+  sidecar_of: cardiff-walker-vision-google-1990.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/turing-robot-olympics.yml
+
+see_also:
+  - first-robot-olympics.yml
+  - ../simprov-exploratorium/INDEX.yml
+
+note: "Not AI Generated!"

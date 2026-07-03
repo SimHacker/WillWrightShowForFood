@@ -1,0 +1,15 @@
+# Sidecar — hyperties-road-pizza-diagram.png
+
+artifact:
+  file: hyperties-road-pizza-diagram.png
+  slug: hyperties-road-pizza-diagram
+  room: hyperties
+  what: hyperties road pizza diagram
+  era: 1980s-90s NeWS
+  sidecar_of: hyperties-road-pizza-diagram.png
+
+see_also:
+  - INDEX.yml
+  - ../../nemacs-hyperties-news-hubble.yml
+
+note: "Not AI Generated!"

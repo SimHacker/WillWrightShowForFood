@@ -1,0 +1,61 @@
+# The Sims Transmogrifier — artwork, Green Flamingo tutorial, SimProv Theatre wedding pack
+
+artifact:
+  what: "Don Hopkins Sims 1 mod tool — clone objects, export BMP sprites, SimProv Theatre content"
+  era: "2000–2002"
+  artwork_by: "LushCreations.com"
+
+logo:
+  - transmogrifier-logo-lushcreations-2002.png
+  - transmogrifier-logo-cropped.png
+  - transmogrifier-robot-logo-isometric.png
+
+green_flamingo_tutorial:
+  workflow:
+    - transmogrifier-green-flamingo-catalog.png
+    - transmogrifier-edit-object-green-flamingo.png
+    - transmogrifier-edit-object-pink-flamingo.png
+    - transmogrifier-flamingo-photoshop-sprites.png
+    - transmogrifier-import-progress-flamingo.png
+    - transmogrifier-cloning-progress-flamingo.png
+    - transmogrifier-export-whizzer-flamingo.png
+  browser: transmogrifier-1-1-flamingo-browser.png
+
+simprov_theatre_wedding:
+  dialog: transmogrifier-choozweek-simprov-theatre-dialog.png
+  note: "Choozweek magazine — ALL NEW decorative items from SimProv Theatre designed especially for Weddings"
+  hope_chest: transmogrifier-hope-chest-pie-menu-intro.png
+  license: transmogrifier-wedding-license-chime-dialog.png
+  in_game:
+    - transmogrifier-chapel-kneeling-prayer.png
+    - transmogrifier-wedding-carriage-draft.png
+    - transmogrifier-wedding-reception-buffet.png
+    - transmogrifier-ornate-living-room-cupid.png
+    - transmogrifier-purple-piano-living-room.png
+  cakes:
+    - transmogrifier-wedding-cake-five-tier.png
+    - transmogrifier-wedding-cake-floating-tiers.png
+    - transmogrifier-wedding-cake-cupid-topper.png
+    - transmogrifier-wedding-cake-couple-topper.png
+    - transmogrifier-wedding-cake-rose-gold.png
+    - transmogrifier-harlequin-wedding-cake.png
+  renders:
+    - transmogrifier-wedding-couple-renders.png
+    - transmogrifier-wedding-top-hat-couple.png
+    - transmogrifier-wedding-frame-spritesheet.png
+    - transmogrifier-custom-assets-composite.png
+
+repo_orbit:
+  transmogrifier_story: ../../../will-wright/media/sims-series-transmogrifier-story.md
+  transmogrifier_docs: ../../../will-wright/sources/2004-transmogrifier-documentation-hub/README.md
+  pie_menus: ../pie-menus/INDEX.yml
+
+pending_assets:
+  - "Sims Transmogrifier t-shirt (not yet photographed)"
+
+sidecars:
+  completed: "2026-07"
+  count: 50
+  index: INDEX.yml
+
+note: "Not AI Generated!"

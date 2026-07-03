@@ -33,6 +33,11 @@ wwsff:
 workflow:
   edit_here: [repo-shows/, characters/, process/, skills/, packages/, README.md]
   pull_from_donhopkins: "SELECT → FILTER → EXPORT per MANIFEST.yml — not continuous dual-edit"
+  guest_review_bundles: |
+    Per-guest research packages: artifacts, links, videos, HN, Don's essays, email excerpts.
+    Assembled in private archive → guest reviews/organizes → public-safe projection to WWSFF.
+    Guest walks bundle on async video; audience opens same paths in Cursor time-shifted.
+    See characters/will-wright/guest-prototype.yml#research_bundle.
   prs: "Public PRs welcome; may cherry-pick back to DonHopkins later if needed"
 
 see_also:

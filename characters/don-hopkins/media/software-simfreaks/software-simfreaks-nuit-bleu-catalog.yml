@@ -1,0 +1,11 @@
+# Sidecar — software-simfreaks-nuit-bleu-catalog.png
+
+artifact:
+  file: software-simfreaks-nuit-bleu-catalog.png
+  slug: software-simfreaks-nuit-bleu-catalog
+  category: software
+  subcategory: simfreaks
+  what: "SimFreaks — Nuit Bleu Flowers catalog"
+  sidecar_of: software-simfreaks-nuit-bleu-catalog.png
+
+note: "Not AI Generated!"

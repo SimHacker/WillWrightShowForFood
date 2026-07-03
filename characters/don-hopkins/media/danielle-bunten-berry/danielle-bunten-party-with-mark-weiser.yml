@@ -1,0 +1,15 @@
+# Sidecar — danielle-bunten-party-with-mark-weiser.png
+
+artifact:
+  file: danielle-bunten-party-with-mark-weiser.png
+  slug: danielle-bunten-party-with-mark-weiser
+  room: danielle-bunten-berry
+  what: danielle bunten party with mark weiser
+  era: ~2010
+  sidecar_of: danielle-bunten-party-with-mark-weiser.png
+
+see_also:
+  - INDEX.yml
+  - ../olpc-gdc/INDEX.yml
+
+note: "Not AI Generated!"

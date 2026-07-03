@@ -1,0 +1,577 @@
+# Faceball Construction Set — Pinball Construction Set for faces
+# Faceball like Pinball. Snap attachments, wire behaviors, play physics. Break the Brady Bunch frames.
+# Lineage: NeWS Mona Eyes → Tom Ngo ECG / Mouther → Squares in a Box panel dummies.
+
+meta:
+  id: faceball-construction-set
+  name: Faceball Construction Set
+  status: spec
+  tagline: "Faceball like Pinball — paste on, wire up, play; audience sometimes as balls"
+  design: ../../process/performance-space.yml#narrative_engine
+  used_by: squares-in-a-box.yml
+
+tribute:
+  to: Bill Budge
+  character: ../../characters/bill-budge/
+  for: |
+    **Pinball Construction Set** (1983) — Bill Budge's seminal construction set: instead of one
+    pinball game, a tool for building *arbitrary* pinball tables (drag parts, wire behaviors, play
+    the physics). The archetype of the whole "construction set" genre and of user-generated
+    content. Faceball Construction Set is Pinball Construction Set for faces — same verbs (snap on,
+    wire up, play), aimed at face puppets instead of flippers.
+  also: "Raster Blaster (1981) — the Apple II pinball that came first."
+  artifactory_note: |
+    PCS is a canonical **artifactory** — a construction set is an artifact factory. It sits on the
+    same lineage as Will Wright's construction-set design and MOOLLM. See process/artifactory.yml.
+  status: "Bill Budge is living (b. 1954, retired 2022, still shipping tools on GitHub). Invitation, not memorial — invite the man himself."
+
+lineage:
+  mona_eyes:
+    what: |
+      Classic NeWS demo — Mona Lisa with paste-on **Eyeball** objects; pupils **track cursor /
+      focus**. Split eyes, resize, nest. Send code not commands: PostScript classes on canvas.
+    author: Don Hopkins
+    archive:
+      - https://donhopkins.com/home/archive/NeWS/monaeyes.txt
+      - https://donhopkins.com/home/archive/NeWS/eyes.ps.txt
+    repo_show_use: "Googly eyes on distinguished portraits — awake tracks driver focus; asleep freezes"
+  ecg_cartoons:
+    what: |
+      **ECG-like cartoon faces** — Tom Ngo's Embedded Constraint Graphics at Interval Research;
+      Golan Levin's **Mouther**. Example poses at simplex vertices; drag eyes/mouth → barycentric
+      blend. Patent US5933150 expired ~2016 — free to play with now.
+    spec: ../../characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md
+  physics_toys:
+    what: |
+      **The Incredible Machine** / **Incredible Toons** energy — Sanspiel fluids and props;
+      tears drench the panel below, vomit arcs, spit takes. Breaks the Brady Bunch grid.
+    engine: sanspiel_simulation
+
+expression_modes:
+  what: "Each puppet runs in a **mode** that decides what drives eyes, mouth, and face"
+  modes:
+    webcam_mouth:
+      what: "Driver webcam through mouth hole — default PTT panel dummy"
+      drives: [mouth]
+      eyes: googly_focus_track_or_static
+    ecg_blend:
+      what: "Drag features on screen → barycentric pose blend (ECG / Mouther lineage)"
+      drives: [eyes, mouth, brows, cheeks]
+      lineage: tom-ngo-embedded-constraint-graphics-at-interval.md
+    canned_sound_box:
+      what: "Pre-recorded clip plays; driver lip-syncs like a drag queen — mic ducked"
+      drives: [mouth_viseme_approx]
+      eyes: manual_or_button_cued
+      see: character-button-board.yml#dc_host_lineage_puppets
+    amplitude_scrub:
+      what: "Audio amplitude or manual slider scrubs mouth open/closed on still portrait"
+      drives: [mouth]
+    hand_drawn_overlay:
+      what: "Ink-and-paint mouth/eyes drawn on transparent layer — South Park construction paper"
+      drives: [mouth, eyes, accessories]
+  per_preset: "squares-roster.yml stores mode + attachment bundle per dummy"
+
+accessories:
+  what: |
+    **Hand-drawn or Photoshopped layover accessories** — hats, glasses, captain hats, fangs,
+    construction-paper props. Snap to fiduciary markers or float free in the physics layer.
+  sources: [hand_drawn_png, photoshop_layer, construction_paper_scan]
+  snap_to: [nostril_fiduciary, googly_eye_pin, hat_brim_pin, custom_yaml_anchor]
+  defenses:
+    umbrella_hat:
+      what: "Layover umbrella — **protects precious hairdo** from tears, sweat, confetti, splash above"
+      blocks_fluids_from: [above, diagonal_cascade]
+      gag: "Panel dummy deploys umbrella mid-roast — hair survives, dignity does not"
+    plastic_tarp:
+      what: "Front-row / low-seat drape — Gallagher-era splash protection for audience cells"
+      see: sanspiel_simulation#stage_gags#watermelon_smash
+
+attachments:
+  mouth_hole:
+    states: [idle_intact, active_fade_open]
+    maps: driver_webcam_mouth
+    transform: [scale, stretch, rotate]
+  googly_eyes:
+    paste_on: true
+    pair: true
+    states:
+      awake:
+        visible: fade_in
+        behavior: focus_track
+        pupils: independent_jiggle_optional
+      asleep:
+        visible: fade_out_or_droopy_lids
+        behavior: frozen_non_responsive
+        lids: half_closed_static
+    fade: "Crossfade with mouth PTT — eyes wake when cell active or on cue"
+  nostril_fiduciary_markers:
+    what: |
+      **Fiduciary anchors** — normalized (x,y) on portrait for particle emitters, props, gags.
+      Not always visible; debug overlay in editor mode.
+    uses:
+      - snore_zzz_particles
+      - smoke_puff
+      - confetti_sneeze
+      - idea_sparkles
+      - tear_emitter
+      - sweat_brow_emitter
+      - spit_stream
+      - vomit_arc
+      - snot_sneeze_emitter
+      - confetti_burst
+      - custom_per_character_yaml
+
+particle_systems:
+  snore_sleep:
+    emitter: nostril_fiduciary_markers
+    animation: kinetic_type_ZZZ
+    trigger: character_state_asleep
+    combo: googly_eyes asleep + non_responsive_lids
+
+sanspiel_simulation:
+  what: |
+    **Sanspiel** — pluggable particle/fluid simulation for Faceball gags. Tears, vomit, sweat from
+    the brow, snot from sneezes, Rip Taylor confetti, watermelon pulp — **easy to plug in new
+    particles** per guest or running bit. YAML emitter defs snap to fiduciary markers; physics
+    pass runs in WebGPU beside the compositor.
+  plugin_model:
+    def: particles/<name>.yml
+    fields:
+      - emitter_anchor          # nostril, brow, mouth, hand, confetti_cannon
+      - fluid_type              # water, goo, confetti, pulp, sparkle
+      - gravity_viscosity
+      - splash_radius
+      - cross_cell              # breaks Brady Bunch borders
+      - duration_ms
+      - targets                 # panel_ids, audience_ball_ids, front_row
+    add_guest_gag: "Drop particles/guest-<slug>-<gag>.yml — register in squares-roster.yml"
+  built_ins:
+    tears:
+      emitter: eye_fiduciary
+      crosses_cells: true
+      drench_panel_below: true
+    vomit:
+      emitter: mouth_fiduciary
+      arc: parabolic
+      trigger: dizziness_tracking#on_threshold
+    sweat_brow:
+      emitter: brow_fiduciary
+      drip: slow_seep
+    snot_sneeze:
+      emitter: nostril_fiduciary
+      trigger: sneeze_button
+    rip_taylor_confetti:
+      emitter: confetti_cannon_or_hand
+      wavelength: upbringing.yml#national_touchstones
+      tagline: "Dear!"
+    spit_take:
+      emitter: mouth_fiduciary
+      trigger: shock_beat
+  stage_gags:
+    watermelon_smash:
+      archetype: "Sledge-O-Matic energy — **recast character**, not the racist; steal the gag shamelessly (he stole from Carrot Top et al.)"
+      what: "Smash watermelon — showers guests and front row; plastic tarp on low seats"
+      sanspiel: watermelon_pulp_splash
+      targets: [panel_guests, front_row_audience]
+    rip_taylor_dear:
+      what: "Confetti cannon on 'Dear!' — camp Hollywood constellation"
+      sanspiel: rip_taylor_confetti
+  arena_defenses:
+    plexiglass_barrier:
+      what: |
+        **Robot Wars arena** guard rails — bulletproof plexiglass between panel grid and audience
+        row. Fluids splat the booth; crew behind glass stays dry. BattleBots / Robot Wars energy.
+      protects: [audience_panel_row, stream_chat_overlay_optional]
+      aesthetic: industrial_arena_booth
+    umbrella_hat: accessories#defenses#umbrella_hat
+  breaks_brady_bunch: |
+    Fluids, confetti, and pulp ignore the Zoom grid — **Brady Bunch frames** are suggestions, not
+    prison walls. Squares in a Box is the default layout; Sanspiel physics is the escape hatch.
+  extensible: "Any Sanspiel rig snaps to fiduciary markers — construction set, not one-off"
+
+audience_as_balls:
+  what: |
+    Faceball includes **audience members** — sometimes as panel cells, sometimes literally as
+    **balls** in the physics sim. ;) TicketPR crew in `repo-shows/<show>/audience/` bounce between
+    dummies, get drenched, deploy umbrella hats, or ride the confetti cannon.
+  modes:
+    panel_cell: "Standard Squares in a Box — portrait + face puppet"
+    physics_ball: "Sanspiel rigid/soft body — collides, rolls, splashed by fluids"
+    both: "Portrait in cell until gag ejects them as a ball"
+  schema: ../../schemas/audience-character.yml
+  consent: "Self-authored audience characters only — see fictional-audience.yml"
+  front_row:
+    plastic_tarp: true
+    plexiglass: sanspiel_simulation#arena_defenses#plexiglass_barrier
+
+dizziness_tracking:
+  what: |
+    **Spinning dizziness meter** — track angular velocity, camera spin, flipper chaos, and tumble
+    state per avatar. Accumulates **barf pressure**; crosses **vomit threshold** → Sanspiel barf
+    particle system fires from mouth fiduciary. Eyes spiral (googly eyes in ECG dizzy pose).
+  inputs:
+    - spin_rate               # rad/s from physics or operator head-shake proxy
+    - torture_wheel_spin      # choreography_modes#spin_wheel penalty crank
+    - tumble_collisions       # bump count in faceball machine
+    - flipper_impulse_sum     # how hard the table is working you
+    - optional_gyroscope      # phone / webcam motion for talking-selfie mode
+  meter:
+    id: barf_pressure
+    range: 0.0–1.0
+    decay: slow_when_stable
+    vomit_threshold: configurable_per_avatar   # Spore creature constitution stat
+  on_threshold:
+    - trigger: sanspiel_simulation#built_ins#vomit
+    - expression: ecg_blend dizzy_face corner
+    - googly_eyes: spiral_spin_mode
+    - reset_pressure: partial   # can barf again — endurance game
+  display: [per_cell_barf_bar, leaderboard_time_since_last_barf]
+
+faceball_machine:
+  what: |
+    The **Faceball machine** — pinball table meets Brady Bunch grid. Every player has **two
+    flippers**; avatars may **move around** inside the playfield (not locked to panel cells).
+    Real-time **Twitch game**: *how long can you last without barfing?*
+  metaphor: "Faceball like Pinball — but you ARE the ball, and your face is the creature"
+  players:
+    flippers:
+      count: 2
+      per: [host, guest, audience_ball, spore_avatar]
+      input: [keyboard_lr, gamepad_shoulders, stream_deck, twitch_vote_majority]
+    movement:
+      modes: [panel_cell_fixed, physics_body_free, vehicular_appendage]
+      note: "Might even move around — not just bounce; drive with armor wheels or flipper nudges"
+  twitch_game:
+    title: "How Long Can You Last Without Barfing?"
+    loop: |
+      Spin, bump, flipper-frenzy → barf pressure rises → hold on → barf = out or score penalty →
+      last face standing wins. Chat votes on flipper slaps, machine tilt, watermelon round.
+    integration: ../../apps/stream-gateway/SPEC.yml#twitch
+    ticketpr: "Audience crew as balls + flippers via merged PR"
+    leaderboard: [time_since_last_barf, clean_streak, most_barfs_survived]
+  choreography: choreography_modes
+  arena: sanspiel_simulation#arena_defenses
+  choreography_modes:
+    what: |
+      Scripted chaos → deadpan reset. Penalty spin, synchronized swimmers, formation swoop,
+      musical-chairs seat swap, or friendly multi-cursor frenzy — then **nothing happened**.
+    spin_wheel:
+      what: |
+        **Penalty spin** — lock a character on a medieval torture-wheel rig (breaking wheel /
+        Catherine wheel energy). Cranks `barf_pressure` via dizziness_tracking. Also for **fun**
+        — host spins Captain 20 on sound-box sign-off.
+      trigger: [score_penalty, chat_vote, host_button, all_at_once_round]
+      sync_modes:
+        same_direction: "Synchronized swimmers — all spin clockwise"
+        counter_rotating: "Pairs spin opposite — barf pressure asymmetric"
+        chaos: "Every cell different rate and phase"
+    formation_swoop:
+      what: |
+        After synchronized spin, avatars **swoop in formation** — figure-eight, pinball ballet,
+        Brady Bunch grid becomes swim meet. ECG blend + physics_body_free; flippers idle.
+      preset_choreographies: [line_abreast, diamond, conga, hunger_games_circle]
+    musical_chairs_return:
+      what: |
+        Music stops. All avatars **drive back under manual control** to a panel seat — flippers
+        on, dizzy meter decaying. **One seat may have been removed** while they danced.
+      beats:
+        - music_sting_stop
+        - scramble_to_nearest_cell
+        - one_avatar_has_no_seat
+        - eliminated_avatar_falls_off_machine   # into void / Sanspiel / never mentioned
+      the_missing_loser:
+        rule: |
+          Nobody ever speaks of them again. Don Philahue moves on. Next segment. (Hunger Games /
+          Korean Netflix elimination-drama vibes — camp cruelty, not real harm.)
+        tone: deadpan_host_warmth
+        never: [eulogy, recap, acknowledgment]
+    multi_user_appendage_frenzy:
+      what: |
+        **Pure friendly direct-manipulation frenzy** — every player steers a shared slithering
+        appendage; heads pop through each other's cells; collaborative cursor chaos. Ben
+        Shneiderman direct manipulation as party game. Lineage: multiplayer browser slither toys
+        (incl. the infamous multi-user appendage meme — great inspiration).
+      mode: physics_body_free + multi_cursor_merge
+      verbs: [slither, dock, undock, head_pop_through_neighbor_cell]
+      not: voice_clone
+      see: ../../process/trails/direct-manipulation.md
+    reset:
+      what: "Cut to VC grid — everyone in a seat, mouths closed, as if choreography never happened"
+      host_line: optional_none
+
+spore_creature_avatars:
+  what: |
+    **Build-and-play avatar face puppets** like **Spore creatures** — pop-on mouth, eyes, brows,
+    then **capabilities, tools, armor, vehicular appendages**. Faceball Construction Set meets
+    creature editor: yaml parts list, fiduciary snap points, physics mass per limb.
+  lineage:
+    - Will Wright Spore creature editor — cell → parts → behavior
+    - repo-shows/will-wright/game-bridge-sims-spore.yml
+    - characters/will-wright/audience/fictional-spore-creature/
+  builder:
+    base: distinguished_portrait_or_procedural_face
+    pop_on:
+      - mouth_hole
+      - googly_eyes
+      - brows_cheeks_ears
+      - capability_modules
+      - tool_appendages
+      - armor_plates
+      - vehicular_limbs        # wheels, treads, fins, rotors
+    snap_points: [head, mouth, eye_l, eye_r, brow, shoulder_l, shoulder_r, chassis, mount_n]
+    per_creature_yaml: spore-avatar.yml
+  capabilities:
+    what: "Pop-on modules that change expression mode, physics, or game verbs"
+    examples:
+      - umbrella_hat           # accessories#defenses
+      - confetti_cannon        # Rip Taylor module
+      - iron_stomach           # raises vomit_threshold
+      - weak_constitution      # lowers vomit_threshold — comedy guest pick
+      - watermelon_sledge      # stage gag tool — recast archetype only
+      - plexiglass_shield      # arena_defenses portable
+  vehicular:
+    what: "Avatar moves as vehicle — appendages drive Sanspiel body; face puppet stays on cockpit"
+    examples: [shopping_cart_chassis, office_chair_treads, terrapin_shell]
+  play:
+    faceball_machine: faceball_machine
+    export: "PR spore-avatar.yml into characters/<id>/ or audience/<you>/"
+    will_wright_show: "Natural homefun — build creature, survive the barf machine on stream"
+
+character_states:
+  awake: [eyes_track, mouth_on_ptt, particles_off_or_idle]
+  asleep: [eyes_fade_frozen, mouth_idle_closed, snore_particles_on]
+  bored: [eyes_half_lid, slow_drift]
+  dizzy: [barf_pressure_rising, googly_eyes_spiral, vomit_threshold_near]
+  spinning: [torture_wheel_locked, spin_wheel_penalty_or_fun]
+  choreographed: [formation_swoop, sync_swimmer_spin]
+  barfed: [vomit_sanspiel_active, pressure_partial_reset, shame_badge]
+  eliminated: [fell_from_machine, seat_lost_musical_chairs, never_spoken_of_again]
+  triggered_from: [button_board, roster_yaml, moollm_cue, audience_ticketpr, dizziness_tracking, choreography_modes]
+
+editor:
+  what: "Per-portrait attachment layout — save to squares-roster.yml"
+  tools:
+    - place_googly_eyes
+    - define_mouth_hole_polygon
+    - drop_nostril_fiduciary_pins
+    - paste_accessory_layover
+    - pick_expression_mode
+    - preview_awake_asleep
+    - test_particle_emitter
+    - test_sanspiel_gag
+    - preview_umbrella_vs_splash
+    - tune_vomit_threshold
+    - assemble_spore_avatar
+    - test_flipper_physics
+    - preview_spin_wheel_sync
+    - choreograph_formation_swoop
+  coordinates: normalized_0_1
+
+compositor_layers:
+  bottom_to_top:
+    - portrait_idle_or_active
+    - mouth_hole_webcam_clip_or_ecg_blend
+    - googly_eyes_layer
+    - accessory_layovers
+    - particle_systems_layer
+    - physics_fluids_layer
+    - chrome_badges_captions
+
+per_face_preset:
+  note: "Each dummy has its own mapping bundle — button board jumps between them instantly"
+  fields:
+    - portrait_asset
+    - expression_mode
+    - mouth_hole_polygon
+    - googly_eye_positions
+    - nostril_fiduciary_pins
+    - accessory_layovers
+    - mouth_map_transform
+    - operator_mouth_calibration
+    - look_grade
+    - genre_profile
+    - physics_gags_enabled
+    - barf_pressure_sensitivity
+    - flipper_bindings
+    - spore_avatar_parts
+  storage: squares-roster.yml per episode
+
+operator_input:
+  what: |
+    **Normalize the driver's webcam once** — mouth region, mirror, exposure — then **remap**
+    puppetry to whichever face preset is selected. Driver's mouth can sit anywhere in frame;
+    calibration extracts ROI and warps into the active dummy's mouth hole. Piece of cake.
+  normalize:
+    - mouth_roi_detect_or_manual_crop
+    - optional_exposure_white_balance_lock
+    - mirror_for_performer_comfort
+  remap:
+    - warp_operator_mouth_to_active_preset_hole
+    - inherit_preset_transforms (upside-down OK)
+    - crossfade_on_preset_jump
+
+look_grade:
+  per_face: true
+  adjustable:
+    - color_temperature
+    - brightness_contrast
+    - saturation
+    - skin_tone_match_curve
+    - scene_lighting_match
+    - effects_stack
+  genre_profiles:
+    betty_boop:
+      monochrome: true
+      high_contrast: true
+      film_grain: light
+      note: "Black and white — 1930s ink-and-paint energy"
+    modern_color: default
+    horror_host: [desaturate, heavy_vignette, green_fill_optional]
+    vc_webcam: [auto_exposure_look, soft_sharpen]
+  jump: "Switching presets loads that face's grade + mapping — no re-tune mid-show"
+
+render_pipeline:
+  stack: "TypeScript + WebGPU in the browser — single OBS Browser Source"
+  piece_of_cake: true
+  modules:
+    - getUserMedia → GPU texture (operator stream)
+    - portrait_atlas → per-face idle/active layers
+    - mouth_mask_shader → hole clip + warp
+    - ecg_blend_solver → optional barycentric pose
+    - grade_shader → per-preset color/brightness/genre
+    - googly_eyes_compute → Mona Eyes focus track
+    - particle_pass → Sanspiel fiduciary emitters
+    - sanspiel_physics_pass → fluids, confetti, pulp, audience balls
+    - composite → transparent PNG out for OBS
+  fallback: "Canvas2D v0 for bring-up; WebGPU primary"
+  reference_lineage:
+    - ../../characters/don-hopkins/porter-duff-postscript-to-webgpu.md
+    - NeWS send-code-not-commands → GPU shaders
+
+guest_characters:
+  what: |
+    Every guest character can ship a **modular face puppet** — their photo + Faceball Construction
+    Set attachments (mouth hole, googly eyes, nostril pins, accessories, grade). Stored in
+    `characters/<id>/`. They **puppeteer live** on stream, or **record offline** and submit clips.
+  exemplar:
+    name: "Game Gosling at the PDP-8"
+    character: james-gosling
+    portrait: media/gosling-young-pdp8-hotrod.png
+    sidecar: media/gosling-young-pdp8-hotrod.yml
+    bit: "Young James, satisfied, arms crossed — hotrod iron behind him; he voices himself through the paste-on puppet"
+  per_character:
+    optional_file: face-puppet.yml
+    assets:
+      - portrait_png
+      - mouth_hole_polygon
+      - googly_eye_pins
+      - nostril_fiduciary_pins
+      - accessory_layovers
+      - look_grade
+    consent: "Living guest supplies photo + drives puppetry — not host impersonation"
+  modes:
+    live:
+      what: "Guest joins with webcam — puppeteers their own panel cell (or center self, no overlay)"
+      stack: squares-in-a-box.yml + browser compositor
+    async:
+      what: |
+        Guest records a puppeteering session offline — phone or laptop — best take wins; PR or
+        drop into `characters/<id>/media/` or show `sources/`. Woven into shotgun-blast ensemble.
+      fits: couple-and-solo-shows.yml#async_production
+    host_driven:
+      what: "Driver performs guest dummy on button board — improv voice; guest reviews async"
+      when: "Guest has no time to record — dignity preserved via bundle + correspondence"
+  not_voice_clone: "Human mouth through hole only — see portrayal-standards.yml#simulation"
+
+memory_palace_tour:
+  what: |
+    **Many puppets, many topics** — build a different face puppet for each idea, era, or guest
+    beat. Take the audience on a **tour of your memory palace**: at each stop, the active puppet is
+    **posed next to the thing** you talk about (photo, artifact, repo path, props). Method of loci
+    on air — the room IS the directory; the puppet IS the hook.
+  lineage:
+    - DreamScape / ScriptX mirror-world (Kaleida 1993–1996)
+    - iLoci — method of loci on iPhone
+    - MOOLLM rooms — filesystem as navigable space
+    - characters/don-hopkins/GLANCE.yml#future navigable_memory_palace
+  how:
+    roster:
+      what: "One puppet preset per stop — not one face for the whole show"
+      examples:
+        - "Game Gosling at the PDP-8 — next to hotrod photo while talking NeWS"
+        - "Ben at the pie menu — CHI'88 paper on screen"
+        - "Young Don at the yellow submarine bong — Amsterdam set beat"
+    stops:
+      each:
+        - puppet_preset_id
+        - backdrop_asset
+        - pose_note
+        - kline_or_quote
+        - repo_path
+    navigation:
+      - pie_menu_map_between_stops
+      - button_board_switch_puppet_on_enter_room
+      - optional_adventure_compiler_sync_to_video
+  layouts:
+    - memory_palace_corridor
+    - room_enter_full_bleed
+    - squares_sidebar
+  guests:
+    what: "Guest builds their own palace tour — puppets at their artifacts; live or offline takes per stop"
+    async: "One clip per room — woven shotgun-blast; audience walks git paths between videos"
+  talking_selfies:
+    what: |
+      **Works great for talking selfies** — phone, front camera, you in frame **next to the thing**
+      you talk about. One puppet preset per topic; one clip per palace stop.
+    per_stop:
+      - front_camera_selfie
+      - artifact_in_frame
+      - puppet_preset_for_topic
+      - attention_atom_close
+    modes:
+      solo_phone: "Guest records each room on their phone — best take per stop; PR into characters/<id>/media/"
+      host_walk: "Driver walks their own dir — selfie beside on-screen artifact or physical prop on desk"
+      live_tour: "Same layout on stream — switch puppet on button board as you enter each room"
+    why:
+      - "Respects guest time — five one-minute selfies beat one three-hour obligation"
+      - "Method of loci made literal — you are standing in the room next to the object"
+      - "Feeds attention atoms — each selfie is shorter than TikTok"
+    see: ../../process/repo-show-branding.yml#attention_atoms
+  see:
+    - ../../process/moollm-stage.yml
+    - ../../apps/stream-gateway/bubble-wrangler.yml#memory_palace
+    - ../../characters/don-hopkins/ideas.md
+
+tech:
+  v0:
+    - Canvas2D bring-up — prove PTT jump + one grade preset
+    - manual mouth ROI + per-face yaml mappings
+  v1:
+    - WebGPU compositor — grade shader + mouth warp per preset
+    - squares-roster.yml hot-swap on button board
+    - memory_palace_tour stops yaml — puppet + artifact per room
+  v2:
+    - ECG blend mode — barycentric pose corners per face
+    - Sanspiel built-ins — tears, vomit, sweat, snot, confetti, spit take
+    - optional landmark assist for default pin placement
+    - amplitude export for scrub-puppet cells
+  v3:
+    - watermelon_smash + plexiglass arena + audience-as-balls
+    - per-guest particle plugins — particles/guest-<slug>-<gag>.yml
+  v4:
+    - dizziness_tracking + vomit threshold → Sanspiel barf trigger
+    - faceball_machine Twitch game — flippers, movement, barf leaderboard
+    - spore_creature_avatars — pop-on tools, armor, vehicular appendages
+  v5:
+    - spin_wheel penalty + synchronized swimmer choreography
+    - musical_chairs seat swap + eliminated avatar (deadpan never-mention)
+    - multi_user_appendage_frenzy mode
+
+see_also:
+  - squares-in-a-box.yml
+  - conan-face-puppet.yml
+  - character-button-board.yml
+  - ../../characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md
+  - ../../characters/don-hopkins/career/lineage.yml
+  - ../../repo-shows/will-wright/game-bridge-sims-spore.yml
+  - ../../apps/stream-gateway/SPEC.yml

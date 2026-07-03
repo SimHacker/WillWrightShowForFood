@@ -1,0 +1,17 @@
+# Sidecar — simcity-skyline-decay-strip.png
+
+artifact:
+  file: simcity-skyline-decay-strip.png
+  slug: simcity-skyline-decay-strip
+  room: cellular-automata-tiles
+  what: simcity skyline decay strip
+  era: ~2010-2011
+  sidecar_of: simcity-skyline-decay-strip.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/cellular-automata-simcity-tiles.yml
+
+see_also:
+  - ../micropolis-gallery/INDEX.yml
+
+note: "Not AI Generated!"

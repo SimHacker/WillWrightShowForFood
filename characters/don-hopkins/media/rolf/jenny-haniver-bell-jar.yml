@@ -1,0 +1,19 @@
+# Sidecar — jenny-haniver-bell-jar.png
+
+artifact:
+  file: jenny-haniver-bell-jar.png
+  slug: jenny-haniver-bell-jar
+  room: rolf
+  what: jenny haniver bell jar
+  era: TomTom-era Amsterdam
+  sidecar_of: jenny-haniver-bell-jar.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/rolf-junk-auction.yml
+
+see_also:
+  - INDEX.yml
+  - raving-bonkers.yml
+  - ../robot-collection/INDEX.yml
+
+note: "Not AI Generated!"

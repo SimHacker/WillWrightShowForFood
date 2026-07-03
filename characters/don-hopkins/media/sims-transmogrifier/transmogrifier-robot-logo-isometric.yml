@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-robot-logo-isometric.png
+
+artifact:
+  file: transmogrifier-robot-logo-isometric.png
+  slug: transmogrifier-robot-logo-isometric
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — robot logo isometric
+  era: 2000-2002
+  sidecar_of: transmogrifier-robot-logo-isometric.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,18 @@
+# Sidecar — mowforth-richard-1st-1990.png
+
+artifact:
+  file: mowforth-richard-1st-1990.png
+  slug: mowforth-richard-1st-1990
+  room: turing-institute
+  what: mowforth richard 1st 1990
+  era: ~1990-1992
+  sidecar_of: mowforth-richard-1st-1990.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/turing-robot-olympics.yml
+
+see_also:
+  - first-robot-olympics.yml
+  - ../simprov-exploratorium/INDEX.yml
+
+note: "Not AI Generated!"

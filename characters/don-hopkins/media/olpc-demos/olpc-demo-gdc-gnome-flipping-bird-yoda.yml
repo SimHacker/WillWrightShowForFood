@@ -1,0 +1,11 @@
+# Sidecar — olpc-demo-gdc-gnome-flipping-bird-yoda.png
+
+artifact:
+  file: olpc-demo-gdc-gnome-flipping-bird-yoda.png
+  slug: olpc-demo-gdc-gnome-flipping-bird-yoda
+  category: olpc
+  subcategory: demos
+  what: "GDC — gnome flipping bird with Yoda plush"
+  sidecar_of: olpc-demo-gdc-gnome-flipping-bird-yoda.png
+
+note: "Not AI Generated!"

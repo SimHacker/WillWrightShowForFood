@@ -1,0 +1,17 @@
+# Sidecar — simcity-pos-neg-scale.png
+
+artifact:
+  file: simcity-pos-neg-scale.png
+  slug: simcity-pos-neg-scale
+  room: cellular-automata-tiles
+  what: simcity pos neg scale
+  era: ~2010-2011
+  sidecar_of: simcity-pos-neg-scale.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/cellular-automata-simcity-tiles.yml
+
+see_also:
+  - ../micropolis-gallery/INDEX.yml
+
+note: "Not AI Generated!"

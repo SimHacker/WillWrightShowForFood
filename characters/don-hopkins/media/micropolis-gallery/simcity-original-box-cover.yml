@@ -1,0 +1,18 @@
+# Sidecar — simcity-original-box-cover.png
+
+artifact:
+  file: simcity-original-box-cover.png
+  slug: simcity-original-box-cover
+  room: micropolis-gallery
+  what: simcity original box cover
+  era: 1991 HyperLook through 2010s Facebook
+  sidecar_of: simcity-original-box-cover.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/micropolis-gallery.yml
+  - ../../../repo-shows/ideas/gags/pacbot-eats-traffic.yml
+
+see_also:
+  - micropolis-gallery.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,53 @@
+# SHOW — David S. H. Rosenthal — NeWS, X11, LOCKSS, and the window-system bridge
+# Planted seed. Solo show deferred from PIXIE trio; async segments may feed both.
+
+show:
+  id: david-rosenthal
+  title: "A Repo Show with David S. H. Rosenthal — NeWS, X11, and Lots Of Copies"
+  type: solo
+  host: Don Hopkins
+  guests: ["David S. H. Rosenthal"]
+  character: characters/david-rosenthal/
+  topic: |
+    The lineage David uniquely bridges: Cambridge PDP-7/340 ~1970 → PIXIE-era distributed
+    graphics → Andrew → NeWS → X11/ICCCM → Nvidia #4 → LOCKSS preservation. Plus MOOLLM,
+    honest AI orchestration, and preservation of runnable emulators — not just papers.
+  status: seed
+  consent: not_yet_asked
+
+why_him:
+  both_sides: "Co-developed NeWS with Gosling; also architected winning rival X11 (ICCCM, X security patent)."
+  cambridge: "Undergrad on same PDP-7/340 + Titan stack as PIXIE (~1970); met Wiseman."
+  lockss: "Chief Scientist LOCKSS at Stanford Libraries — Paul Evan Peters Award 2025."
+  blog: "Long-running public history — window systems, pie menus, preservation."
+
+async_now:
+  date: "2026-07"
+  what: |
+    Logistics blocked synchronized PIXIE trio call. DSHR contributes short Cambridge ~1970
+    segment to PIXIE tapestry; defers NeWS/X11/NVIDIA/LOCKSS depth here.
+  discussion_pack: discussion-pack.yml
+  moollm_demo: moollm-demo.yml
+
+dream_segments:
+  - "Window-system wars — what historians should get right (NeWS vs X11, not a morality play)"
+  - "ICCCM and X security — the protocols David actually wrote"
+  - "Andrew at CMU with Gosling — what carried from Cambridge satellite graphics"
+  - "Alvey 1985 — Methodology of Window Management retrospective"
+  - "LOCKSS + Chapman films + Lars emulation — lots of copies keep PDP-7 display lists safe"
+  - "MOOLLM demo — yaml jazz, LambdaMOO × Sims, gods editing simulated minds"
+  - "Literary thread — Lem's 2+2=7, coprophagia, PKD Rautavaara's Case (authority vs truth)"
+
+format:
+  live: true
+  async_segments: true
+  audience_qa: true
+  note: "PIXIE async clip may be cut into group show; solo show holds the deep arc."
+
+ties_to:
+  - ../../characters/david-rosenthal/
+  - ../../characters/david-rosenthal/invitation.md
+  - ../../characters/david-rosenthal/correspondence.yml
+  - ../../characters/david-rosenthal/window-systems-lineage.yml
+  - ../pixie-pie-menus-pdp7.yml
+  - ../moollm-readings/

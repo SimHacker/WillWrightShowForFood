@@ -1,0 +1,18 @@
+# Sidecar — hyperlook-cam-melting-face-closeup.png
+
+artifact:
+  file: hyperlook-cam-melting-face-closeup.png
+  slug: hyperlook-cam-melting-face-closeup
+  room: simprov-exploratorium
+  what: HyperLook Exploratorium demo — cam melting face closeup
+  era: early 1990s
+  sidecar_of: hyperlook-cam-melting-face-closeup.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
+
+see_also:
+  - ../pie-menus/INDEX.yml
+  - ../cellular-automata-tiles/INDEX.yml
+
+note: "Not AI Generated!"

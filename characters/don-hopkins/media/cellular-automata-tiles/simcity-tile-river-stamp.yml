@@ -1,0 +1,17 @@
+# Sidecar — simcity-tile-river-stamp.png
+
+artifact:
+  file: simcity-tile-river-stamp.png
+  slug: simcity-tile-river-stamp
+  room: cellular-automata-tiles
+  what: simcity tile river stamp
+  era: ~2010-2011
+  sidecar_of: simcity-tile-river-stamp.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/cellular-automata-simcity-tiles.yml
+
+see_also:
+  - ../micropolis-gallery/INDEX.yml
+
+note: "Not AI Generated!"

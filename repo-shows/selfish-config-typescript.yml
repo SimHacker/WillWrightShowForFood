@@ -1,0 +1,24 @@
+# SHOW PROPOSAL — selfish-config TypeScript module (LATER)
+# Port central worker_config.py fragment composition to MicropolisCore.
+
+show:
+  id: selfish-config-typescript
+  title: "Selfish Config — C3 Merge with Provenance (TypeScript port)"
+  type: solo
+  host: Don Hopkins
+  status: later
+  note: "NOT building until scheduled — artifact note exists at characters/don-hopkins/selfish-config-typescript-module.md"
+  topic: |
+    Live port of Leela central's two-pass config fragment composition:
+    load YAML/JSON fragments, C3-linearize parents DAG, deep-merge slots with
+    provenance, Pass-2 shards overlay. Test mirrors image-web-caddy composition.
+    Makes MicropolisCore filesystem-object-model parents: operational.
+  artifact_target: MicropolisCore/packages/selfish-config
+  upstream:
+    playbook: leela-central PB-44-worker-config-fragment-composition
+    impl: packages/leela-cicd/src/leela_cicd/worker_config.py
+  topic_file: characters/don-hopkins/selfish-config-typescript-module.md
+  dream_guests:
+    - David S. H. Rosenthal
+    - David Ungar
+    - David Levitt

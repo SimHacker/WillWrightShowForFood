@@ -1,0 +1,2479 @@
+sec	display	text
+14.480	0:14.48	Welcome to the seminar on people
+17.039	0:17.04	computers and design. Um
+21.600	0:21.60	I will do a brief introduction today. We
+23.119	0:23.12	started a touch late. Um I guess Will
+26.480	0:26.48	Wright who's our speaker today is one of
+28.960	0:28.96	these people who makes me uncomfortably
+30.720	0:30.72	aware of the generation gap. And that's
+34.640	0:34.64	not because of him. He's sort of in
+36.640	0:36.64	between my generation the next one. But
+38.719	0:38.72	because the things that he's done uh in
+40.800	0:40.80	particular, he was the inventor of Sim
+42.960	0:42.96	City and a whole series of innovative uh
+45.600	0:45.60	programs and games since then are things
+47.920	0:47.92	which I discovered as a computer science
+50.800	0:50.80	professor learning about interface
+52.480	0:52.48	design. And when I look out into a
+54.800	0:54.80	classroom full of students nowadays,
+56.640	0:56.64	they're people who discovered it the way
+58.160	0:58.16	that I discovered model cars, right?
+60.239	1:00.24	That is they grew up with it. uh that
+63.120	1:03.12	the kind of tools and and games and
+66.560	1:06.56	whatever you want to call them he's
+67.600	1:07.60	producing have really been a major part
+69.680	1:09.68	of life with computers, what it means to
+72.560	1:12.56	be computers and use computers for the
+74.400	1:14.40	generation that's just now uh appearing
+76.880	1:16.88	in college. uh and my own intuition,
+80.159	1:20.16	which I of course can't validate since
+81.840	1:21.84	I'm in the wrong generation, but is that
+84.080	1:24.08	that's going to lead over time to a real
+86.960	1:26.96	shift in the way not just the people
+89.200	1:29.20	think about games, but people think
+90.479	1:30.48	about computers and computing in
+91.840	1:31.84	general. Um, and today he's going to be
+94.640	1:34.64	talking about his experience and his
+96.640	1:36.64	ideas along those lines.
+98.400	1:38.40	Thank you, Terry. Um,
+102.799	1:42.80	yeah, I guess I'm kind of from that in
+104.240	1:44.24	between generation. uh spent a lot of
+106.880	1:46.88	time building models when I was a kid.
+110.240	1:50.24	Way too much time building models when I
+111.680	1:51.68	was a kid. Um and I really was
+115.920	1:55.92	fascinated by the idea of these kind of
+117.520	1:57.52	micro systems, models, micro worlds,
+120.240	2:00.24	whatever. Uh you got there now and you
+123.600	2:03.60	can't find models the way they used to
+124.960	2:04.96	be. Used to be you could find plastic
+126.240	2:06.24	models, wooden models all over the
+127.600	2:07.60	place. And that's what kids did,
+129.280	2:09.28	especially boys. um whereas girls would
+132.560	2:12.56	play with the dolls which was a
+133.760	2:13.76	different kind of modeling or a social
+135.360	2:15.36	system model. Uh that whole industry
+138.319	2:18.32	seems to have been displaced recently by
+141.040	2:21.04	the video game industry which to me is
+143.440	2:23.44	kind of sad in a way because on the
+146.239	2:26.24	modeling front there was so much
+147.360	2:27.36	creativity involved. You would spend so
+148.959	2:28.96	much time and there were just infinite
+151.200	2:31.20	levels of progression. I started out
+152.560	2:32.56	with these kind of plastic models you'd
+153.920	2:33.92	glue together. Then I kind of got into
+155.920	2:35.92	the wooden ones, the pre-formed wooden
+157.440	2:37.44	ones where you'd glue them together and
+158.480	2:38.48	build these airplanes and put the paper
+160.080	2:40.08	over it. And then eventually started
+161.519	2:41.52	building my own just out of scratch
+162.720	2:42.72	wood. And it was really interesting to
+166.560	2:46.56	me because you could get such a good
+167.840	2:47.84	sense of the structural definition of a
+170.160	2:50.16	system with these models. So when I got
+173.280	2:53.28	a computer in my early 20s, a friend of
+175.280	2:55.28	mine talked me into buying one. I very
+178.400	2:58.40	quickly realized how cool the computer
+180.800	3:00.80	was as a modeling tool.
+183.360	3:03.36	the uh computer all of a sudden allows
+185.360	3:05.36	you to start modeling process in
+187.599	3:07.60	addition to just structure. So uh my
+191.440	3:11.44	definitions here are kind of loose and
+193.120	3:13.12	freewheeling but uh like a tree the
+196.400	3:16.40	structure might be the leaves and the
+197.599	3:17.60	branches and whatnot. Process might be
+199.519	3:19.52	combustion you know structural change in
+201.519	3:21.52	the tree. So for the first time with a
+204.159	3:24.16	computer I had a tool that I could start
+205.599	3:25.60	modeling process with. And as a model
+208.159	3:28.16	builder, I just went hog wild, taught
+210.400	3:30.40	myself to program, and kind of got into
+211.920	3:31.92	the games industry. Um, this is about 15
+215.120	3:35.12	years ago now. I was supposed to talk
+217.680	3:37.68	here today about interface design, and
+219.360	3:39.36	I'm going to try to, but really I'm
+222.239	3:42.24	going to touch on three major areas. I
+224.159	3:44.16	think I'm going to talk on simulation
+226.159	3:46.16	design, game design, and interface
+229.280	3:49.28	design. Because those three to me are
+232.080	3:52.08	very tightly linked. I can't just design
+234.239	3:54.24	the interface after the game's done or
+236.319	3:56.32	design the game in isolation from the
+238.000	3:58.00	interface. Um, each one of these
+240.879	4:00.88	supports the other and a lot of times
+242.480	4:02.48	there'll be a game I want to do, but I
+244.239	4:04.24	can't design the interface to support it
+246.400	4:06.40	or the simulation underneath that it
+248.720	4:08.72	needs to have. So, to me, these three
+251.360	4:11.36	kind of go in this dynamic process and
+253.200	4:13.20	design together. So, um, I'll be talking
+256.160	4:16.16	about all three today. I'm going to be
+257.280	4:17.28	showing you some of our older games kind
+259.600	4:19.60	of in chronological order and going
+262.000	4:22.00	through some of the issues we were
+263.360	4:23.36	thinking about, why we did things the
+265.199	4:25.20	way we did. Um, and then lessons learned
+268.400	4:28.40	after it was out there and hundreds of
+270.639	4:30.64	thousands of people were complaining
+272.000	4:32.00	about it and telling us how bad a job we
+274.240	4:34.24	did. Um, we get some more perspective
+277.040	4:37.04	after time and then, you know, each one
+278.560	4:38.56	after that we would try to address the
+279.919	4:39.92	problems and usually we'd overshoot or
+282.720	4:42.72	we'd go off in a totally different
+283.759	4:43.76	direction and invent new problems for
+285.440	4:45.44	the users. Uh on the simulation side,
+289.840	4:49.84	most of the games we do are about real
+292.240	4:52.24	world systems. Um so the simulation in a
+296.000	4:56.00	sense is leading the charge on the
+297.680	4:57.68	educational front. We pick a system that
+299.919	4:59.92	we want to educate the user about and
+302.240	5:02.24	then we look at the simulation design
+304.320	5:04.32	and how much of the system do we want to
+307.360	5:07.36	wrap the user's mind around. Um there
+310.080	5:10.08	are a lot of issues there in terms of
+312.000	5:12.00	how much of a simulation do we put in?
+313.840	5:13.84	How high is the fidelity of the
+315.680	5:15.68	situation? When does it match reality
+317.440	5:17.44	versus users expectations? Um on the
+320.400	5:20.40	game design, a lot of times we will
+321.840	5:21.84	decide to make the simulation match
+324.160	5:24.16	users expectations rather than reality.
+327.039	5:27.04	Uh in certain cases, if otherwise it
+329.600	5:29.60	would destroy the gameplay. Um on the
+332.320	5:32.32	game design, games are really all about
+335.360	5:35.36	problem solving, constraints,
+337.680	5:37.68	challenges. So simulation is more about
+342.320	5:42.32	modeling the real world. So the
+344.000	5:44.00	simulation is where the problem is
+345.680	5:45.68	usually embedded. We will build a
+347.360	5:47.36	simulation so that the problems come up.
+349.680	5:49.68	Uh as far as the simulation is
+351.039	5:51.04	concerned, they're not problems. It's
+352.240	5:52.24	just data going through some uh
+353.759	5:53.76	algorithms. It's the game design that
+356.560	5:56.56	basically points you toward a goal. So
+360.320	6:00.32	the game design is actually going to
+362.080	6:02.08	tell you what is a problem in the
+364.639	6:04.64	simulation, what constraints the user
+366.880	6:06.88	has to deal with that problem, and those
+369.840	6:09.84	constraints are typically where the
+371.440	6:11.44	gameplay is going to come from. Uh the
+374.800	6:14.80	interface has to support both of these
+377.440	6:17.44	processes. Uh you have to visualize the
+381.280	6:21.28	simulation. There are a lot of issues
+383.680	6:23.68	with how much of the simulation do we
+385.919	6:25.92	make explicit to the user. Sometimes we
+388.080	6:28.08	don't want to show every last detail of
+390.080	6:30.08	the simulation to the user. Uh we want
+392.880	6:32.88	to sometimes prop up this illusion of
+395.280	6:35.28	reality and that's one of these issues
+399.039	6:39.04	where the game design is in opposition
+400.800	6:40.80	to the simulation design. Sometimes as
+403.280	6:43.28	an educator a lot of people
+406.160	6:46.16	would rather see simulations that were
+407.759	6:47.76	very explicit in the way they modeled or
+410.000	6:50.00	in uh what the user sees of the modeling
+412.880	6:52.88	process. In other words, they want the
+414.960	6:54.96	users to know exactly how Sim City is
+416.960	6:56.96	calculating the traffic rate or why
+419.280	6:59.28	crime appears, what the algorithm for
+420.880	7:00.88	crime is. On a game design front, that's
+423.520	7:03.52	not always desirable. If you make the
+425.360	7:05.36	system too explicit, a, you destroy that
+428.160	7:08.16	illusion of reality, and b, you take
+430.400	7:10.40	away some of the challenge of the
+431.520	7:11.52	problem solving. One of the things that
+433.840	7:13.84	we think about uh on the education front
+436.000	7:16.00	is that when we're designing a model,
+438.400	7:18.40	we're not necessarily designing a
+440.960	7:20.96	computer model. our real end product is
+443.919	7:23.92	the uh mental model in the player's
+445.919	7:25.92	head. We're trying to give them maybe a
+449.039	7:29.04	more robust model of the way a city
+451.120	7:31.12	works or a planet works or whatever. The
+453.840	7:33.84	computer model really is just an
+455.120	7:35.12	incremental step in that direction. It's
+457.599	7:37.60	like a compiler for the middle model. So
+460.560	7:40.56	uh
+464.080	7:44.08	the actions that the user is allowed to
+466.160	7:46.16	do in the interface basically define how
+470.080	7:50.08	you can deal with the problems and these
+471.520	7:51.52	are the constraints. Most of the uh
+474.319	7:54.32	interfaces I'm going to show you
+476.000	7:56.00	conceptually can be kind of split into
+478.879	7:58.88	the data output you know problem
+481.680	8:01.68	identification side and the data input
+484.720	8:04.72	problem solving side where the tools are
+486.560	8:06.56	applied and the user actually has input
+488.000	8:08.00	to the model.
+489.759	8:09.76	the uh one of the paradigms we've tried
+492.160	8:12.16	to use in designing these simulations is
+494.240	8:14.24	to think of them a little bit more as
+496.639	8:16.64	toys rather than games. That is to leave
+499.759	8:19.76	them a little more open-ended. They're
+500.960	8:20.96	not necessarily as goal- directed as
+502.400	8:22.40	most games would be. Most games you have
+504.720	8:24.72	a very single-minded goal. You solve
+506.800	8:26.80	that, you win. Uh the kind of
+509.120	8:29.12	simulations we've been moving towards
+511.199	8:31.20	really are a little more open-ended
+512.399	8:32.40	where in a lot of cases the user is
+514.479	8:34.48	deciding what the goal is before they
+516.719	8:36.72	play. when they play Sim City for
+518.240	8:38.24	instance, we don't necessarily tell them
+520.080	8:40.08	you have to get the biggest city you can
+521.599	8:41.60	or you have to make your residents as
+522.880	8:42.88	happy as can be. People will actually
+525.519	8:45.52	take it and play different ways. They'll
+527.040	8:47.04	basically identify, they'll think of,
+529.040	8:49.04	well, what's my goal today or what kind
+531.120	8:51.12	of city do I want to build? I want to
+532.399	8:52.40	build a city that has the happiest
+533.920	8:53.92	possible residence and then they'll try
+535.360	8:55.36	to meet that goal. So, it's a little
+537.040	8:57.04	more open-ended the way a ball can be
+539.279	8:59.28	used for different games. The user
+540.640	9:00.64	decides what the goal is. You know, if I
+541.920	9:01.92	kick the ball through the goal, then I
+543.519	9:03.52	win. Uh that's the way I think of these
+546.000	9:06.00	kind of as software toys rather than
+547.680	9:07.68	games. Um
+550.720	9:10.72	there was a really cool uh short story
+552.720	9:12.72	written by Stannis Lim called the
+554.240	9:14.24	Seventh Sally
+556.080	9:16.08	and he describes this he's got these
+558.880	9:18.88	robot cultures and they go around doing
+561.040	9:21.04	these things and uh one of the robots
+563.040	9:23.04	who was an inventor Tur came across this
+565.519	9:25.52	asteroid where there was this deposed
+567.839	9:27.84	dictator all by himself and he was
+569.839	9:29.84	really sad because he didn't have a
+570.959	9:30.96	kingdom to rule and so Turl invented
+573.360	9:33.36	this magical invention for him and it
+574.880	9:34.88	was a box with a whole kingdom inside
+576.959	9:36.96	that he could rule and enslave and do
+579.440	9:39.44	bad things to with little knobs to
+580.959	9:40.96	control them. He never got real explicit
+583.360	9:43.36	about what the interface was.
+585.279	9:45.28	Really fancy knobs.
+586.320	9:46.32	Yeah, really fancy knobs. But I mean, he
+588.240	9:48.24	could go down to the point of, you know,
+589.600	9:49.60	issuing decrees and, you know, making
+591.360	9:51.36	that guy slip off his horse and doing
+593.600	9:53.60	these little things in the midst of a
+595.040	9:55.04	battle. And it was just the idea of it
+597.920	9:57.92	is kind of what's uh inspired me through
+599.920	9:59.92	the years to build these things. We're
+601.279	10:01.28	nowhere near building turtles invention,
+603.600	10:03.60	but uh
+606.000	10:06.00	I I think to me that's kind of why I do
+608.080	10:08.08	a lot of this. Um I'm going to start off
+610.160	10:10.16	with an old program, Sim Earth, and go
+613.760	10:13.76	through some of the elements.
+619.950	10:19.95	[Music]
+625.760	10:25.76	Let me change the monitor setting real
+627.279	10:27.28	quick here.
+633.600	10:33.60	Now, this project was a little bit
+635.120	10:35.12	ambitious.
+636.800	10:36.80	Um,
+638.480	10:38.48	we were trying to do a simulation of the
+640.640	10:40.64	planet.
+643.040	10:43.04	Turn off the annoying music.
+647.120	10:47.12	Uh, so you know, we started this
+648.560	10:48.56	project. The intent of this project was
+651.120	10:51.12	to kind of show how complex planetary
+654.720	10:54.72	systems are,
+656.640	10:56.64	show the linkages between various
+658.959	10:58.96	systems that most people don't think
+660.320	11:00.32	about. Most people uh up till recently
+662.959	11:02.96	interdisciplinary study has been kind of
+664.800	11:04.80	a a backwater thing and now it's getting
+667.839	11:07.84	really in the forefront. But people have
+669.600	11:09.60	been doing for instance climate models
+671.120	11:11.12	or evolution models or biom models in
+674.240	11:14.24	isolation without regard for the way
+676.079	11:16.08	these things link together. So one of
+678.000	11:18.00	our intents was to show the inter
+679.120	11:19.12	relationship between these different
+680.480	11:20.48	fields of study. Another was to give a
+682.640	11:22.64	sense of the vast time scales over which
+684.560	11:24.56	the planets evolved. Um and so our task
+687.600	11:27.60	here was to kind of figure out what
+688.800	11:28.80	would the interface to a planet be. The
+691.680	11:31.68	uh the main window you see here is a map
+694.320	11:34.32	of the planet we have. Um let me load
+698.160	11:38.16	Earth. It'll give you a little bit more
+699.519	11:39.52	sense of the scale here.
+703.120	11:43.12	This is one of the scenarios you can
+704.320	11:44.32	play with it. Earth modern day.
+709.120	11:49.12	At this level, we're getting an overview
+710.560	11:50.56	of the planet. Um, I can actually open
+713.519	11:53.52	another window here. This is a local
+715.120	11:55.12	window. This is what we use for uh the
+717.279	11:57.28	local control of the planet. I can
+719.360	11:59.36	actually use this to move that around as
+722.320	12:02.32	a little finder for it. Um so in the
+725.839	12:05.84	interface here one of the conceptual
+728.160	12:08.16	things that we've done in most of our
+729.519	12:09.52	products is that we have a distinction
+731.120	12:11.12	here between the global in this window
+734.240	12:14.24	and the local in this window.
+739.120	12:19.12	That distinction also applies to the
+740.880	12:20.88	controls and the displays that you get
+742.880	12:22.88	from each window.
+745.200	12:25.20	Uh on the illusion of reality whenever
+747.279	12:27.28	you look at a map it's hard to imagine
+749.279	12:29.28	that you're really seeing a real system.
+751.279	12:31.28	So after playing with this for a while
+752.720	12:32.72	in development um we started thinking
+754.720	12:34.72	you know this is looks like a simulation
+756.560	12:36.56	it doesn't look like a toy planet. How
+757.920	12:37.92	do we make it look more like a toy
+759.120	12:39.12	planet? So we went through a lot of uh
+761.920	12:41.92	hoops and kind of came up with this
+765.200	12:45.20	which is displaying the same data
+766.880	12:46.88	actually in a more restrictive format
+769.360	12:49.36	because you're only seeing half the
+770.399	12:50.40	planet at one time. But uh in some ways
+773.360	12:53.36	it gives you more the feeling of playing
+774.639	12:54.64	with a planet. So this is my little toy
+776.160	12:56.16	planet. This works the same. All the
+778.000	12:58.00	maps that display on this work the same.
+780.399	13:00.40	Uh this actually turned out to be the
+782.079	13:02.08	appropriate place for us to show the
+784.079	13:04.08	core because as you play the game the
+786.399	13:06.40	model of the geosphere includes the core
+789.600	13:09.60	coallesing which is changing the
+790.959	13:10.96	continental drift rates and a few other
+792.480	13:12.48	factors.
+794.560	13:14.56	Um this really for the amount of effort
+797.760	13:17.76	and time we spent on this I think was
+799.519	13:19.52	more of a macho programmer thing. Uh
+803.440	13:23.44	let's see if we can map this onto a
+805.120	13:25.12	sphere in real time. uh a horrendous
+807.519	13:27.52	amount of code and time and effort went
+809.040	13:29.04	into that which probably was not worth
+810.399	13:30.40	it. Um
+813.120	13:33.12	but live and learn.
+815.600	13:35.60	On the bottom here we have controls. Uh
+819.600	13:39.60	I'll go through them very briefly. Uh
+821.519	13:41.52	this is just the terrain basically.
+823.839	13:43.84	Events show on this map. Um this is
+827.440	13:47.44	continental drift rates. We can hold the
+829.600	13:49.60	button down and get a view of the plate
+831.519	13:51.52	boundary. what the plate names are. Uh,
+834.160	13:54.16	on the continental drift in this game,
+837.120	13:57.12	the continents are drifting around at
+838.480	13:58.48	certain time scales and it actually
+840.399	14:00.40	records the drift. So, I can come back
+842.079	14:02.08	over here and replay the current
+844.320	14:04.32	continental drift. This is an internal
+846.800	14:06.80	record that it's keeping of the latest
+848.160	14:08.16	continental drift. One of the inputs you
+849.920	14:09.92	have in the program is creating
+850.800	14:10.80	earthquakes, and you pick out which way
+852.000	14:12.00	you want to push the plates. And, um,
+854.480	14:14.48	kind of a high level of control in this
+856.079	14:16.08	game.
+858.959	14:18.96	This turns off the oceans so you can see
+860.959	14:20.96	the ocean floor terrain. Uh we initially
+863.600	14:23.60	had this just toggle on and off. We
+865.839	14:25.84	found that by animating it um people got
+868.560	14:28.56	a much better feel. It's not so much on
+870.880	14:30.88	Earth because the continental plate
+872.160	14:32.16	boundaries are so distinct, but on other
+874.320	14:34.32	planets they got a much better feel by
+875.920	14:35.92	actually animating the water going up
+877.360	14:37.36	and down.
+879.440	14:39.44	This is the uh ocean temperatures.
+883.839	14:43.84	It's ocean currents, atmosphere,
+886.720	14:46.72	rainfall,
+888.399	14:48.40	air currents,
+890.320	14:50.32	biome distribution. You'll notice for
+892.240	14:52.24	each of these maps, there's a small key
+894.000	14:54.00	that appears down here
+896.639	14:56.64	showing you how to interpret the colors
+898.399	14:58.40	or the vectors.
+901.279	15:01.28	Now, one thing about this interface that
+904.000	15:04.00	uh we later came back and looked at it
+905.680	15:05.68	and kind of said it's so information
+908.560	15:08.56	dense. Um, primarily when we were
+910.800	15:10.80	designing this game many years ago, uh,
+913.199	15:13.20	this was pretty much the standard screen
+915.040	15:15.04	size, 640x 480. Um, since then, standard
+918.399	15:18.40	screen size has gotten much bigger. At
+920.079	15:20.08	that time, we were very concerned with
+921.519	15:21.52	information density. How much could we
+923.040	15:23.04	display without the user having to bring
+924.639	15:24.64	up another window or uh, obscure what
+927.360	15:27.36	they're seeing. So consequently, most of
+930.160	15:30.16	our interfaces came out kind of like
+931.839	15:31.84	these uh really fancy car stereoss with
+934.560	15:34.56	the billion and a half buttons, you
+936.079	15:36.08	know, and uh you know, if you're into
+937.839	15:37.84	playing with buttons and all that in the
+939.199	15:39.20	showroom floor, it's really fun to play
+940.399	15:40.40	with, right? You know, it's got all
+941.440	15:41.44	little buttons and modes and lights and
+943.199	15:43.20	but then you're driving down the road
+944.240	15:44.24	and you just want to hear music, okay?
+946.000	15:46.00	So, you get totally lost with all the
+948.000	15:48.00	buttons. Um
+950.480	15:50.48	after finishing this program, I started
+952.240	15:52.24	feeling that, you know, this was kind of
+953.360	15:53.36	the fancy car stereo. Maybe we could
+954.959	15:54.96	have been a little less dense on it. But
+956.959	15:56.96	part of that again was pulled in by the
+958.880	15:58.88	simulation design. You know, everything
+960.160	16:00.16	in here is supporting the simulation and
+961.680	16:01.68	what we were trying to do with that. So
+963.199	16:03.20	perhaps that's as much a criticism of
+964.880	16:04.88	the simulation as anything else.
+967.680	16:07.68	So on that theme down here where the key
+970.320	16:10.32	is to maximize what we can do in this
+973.120	16:13.12	window, we have a toggle for that. Even
+975.920	16:15.92	if we toggle it to this, what we're now
+977.519	16:17.52	getting is a overtime graph of the map
+980.160	16:20.16	that we're currently seeing up here. So
+982.399	16:22.40	right now we're seeing the biome map up
+984.000	16:24.00	here. And this is the uh current biomass
+986.880	16:26.88	of the planet. Um I'm just starting the
+989.120	16:29.12	model. So all these are coming up from
+990.399	16:30.40	zero right now. This is the average air
+992.639	16:32.64	temperature across the planet,
+995.440	16:35.44	rainfall, etc. So the buttons up here
+998.959	16:38.96	along the top basically are all data
+1001.920	16:41.92	output for the player. There are certain
+1005.279	16:45.28	things associated with each of these
+1006.959	16:46.96	fields that are global. And you can
+1009.120	16:49.12	double click for instance on this one
+1010.639	16:50.64	which is the biome map. And here you get
+1013.759	16:53.76	a global readout of the uh ratios of
+1017.680	16:57.68	biomes on the planet. This is like
+1019.199	16:59.20	grassland to forest to jungle to swamp
+1021.440	17:01.44	to desert. Um same with the other ones.
+1023.680	17:03.68	If this is the uh life form display,
+1025.679	17:05.68	diversity display. I double click on
+1027.120	17:07.12	that. I get global readings on the
+1030.640	17:10.64	different life forms on the planet.
+1033.600	17:13.60	So we've tried to collapse most of the
+1035.600	17:15.60	uh information that you can get from the
+1037.280	17:17.28	simulation on a global side up here on
+1039.919	17:19.92	the top row. Now on the bottom row, we
+1041.839	17:21.84	have these buttons. We have geosphere,
+1043.439	17:23.44	atmosphere, biosphere, uh, civilization.
+1047.199	17:27.20	These are the global inputs the player
+1048.880	17:28.88	has. So we have on the top here again
+1052.640	17:32.64	the outputs. The bottom here the inputs.
+1055.120	17:35.12	These are the factors that the player
+1057.280	17:37.28	can control. I can grab the axle tilt of
+1059.280	17:39.28	the earth and right here I can start
+1061.280	17:41.28	moving it around causing chaos. I can
+1064.000	17:44.00	bring up the meteorite impacts. I can
+1066.320	17:46.32	increase the continental drift rate. Um,
+1069.919	17:49.92	these are rather major uh, inputs for a
+1072.720	17:52.72	game, but it was kind of aiming high.
+1076.080	17:56.08	The, uh, one of the things that we've
+1077.840	17:57.84	tried pretty hard at, I think we've been
+1080.320	18:00.32	pretty successful at is keeping numbers
+1082.320	18:02.32	out of the user's face. So, whenever
+1084.799	18:04.80	possible, we do things graphically. So,
+1087.280	18:07.28	uh, just notice in here how few numbers
+1088.960	18:08.96	you see, but yet we're trying to display
+1091.039	18:11.04	a lot of information about the planet.
+1093.760	18:13.76	Now the local side we have the same kind
+1096.960	18:16.96	of things. Um
+1099.840	18:19.84	we have down here mostly the information
+1103.200	18:23.20	output except it's here it's mostly uh
+1105.919	18:25.92	organized as filters. So this is turning
+1108.160	18:28.16	off the ocean. This is turning off the
+1109.600	18:29.60	biome display, the city display.
+1114.480	18:34.48	These up here are the inputs. These are
+1116.640	18:36.64	new life forms I can drop down or
+1118.320	18:38.32	cities. Can put dinosaurs in North
+1120.400	18:40.40	America.
+1122.400	18:42.40	Um, I can raise and lower terrain with
+1124.320	18:44.32	this. Uh, I can just grab and move
+1126.480	18:46.48	things with this. I can move a dinosaur
+1127.760	18:47.76	to South America.
+1129.840	18:49.84	Um, these are events I can actually
+1131.840	18:51.84	drop. Uh, this is really where most of
+1133.760	18:53.76	the control to the player comes in the
+1135.280	18:55.28	game. Um, I can, you know, drop a
+1137.360	18:57.36	meteorite in the Atlantic
+1141.919	19:01.92	causing tidal waves and destruction.
+1145.679	19:05.68	I can pick out an earthquake and
+1148.960	19:08.96	change the uh vector of the plate
+1150.480	19:10.48	boundary.
+1153.440	19:13.44	So, these are the kind of things that
+1154.559	19:14.56	the player does in this game. Um, I want
+1158.000	19:18.00	to talk a little bit in each interface I
+1159.440	19:19.44	show you here about the help system
+1160.400	19:20.40	because our help systems have kind of
+1161.760	19:21.76	evolved over the years. We've tried and
+1164.160	19:24.16	tried and tried and we never can get
+1165.360	19:25.36	people to use them basically is what the
+1167.120	19:27.12	short story here. Um, in this one, the
+1169.679	19:29.68	shift key turns the icon into a help
+1172.799	19:32.80	icon. And any button or control you
+1174.960	19:34.96	click on
+1176.640	19:36.64	will come up with a description. Now, uh
+1180.240	19:40.24	I know this is really standard stuff
+1181.919	19:41.92	now, but this program was designed oh
+1185.360	19:45.36	about seven years ago. So, back then
+1187.760	19:47.76	there weren't that many established.
+1189.280	19:49.28	This is before balloon help. This is
+1190.799	19:50.80	before the little pop-up stuff and
+1192.240	19:52.24	windows and all that. So, we didn't
+1194.240	19:54.24	really have any established thing to uh
+1196.160	19:56.16	to go by there.
+1198.320	19:58.32	The uh down here you can see it's a very
+1201.520	20:01.52	confusing display which is why we put
+1204.320	20:04.32	all these in. What basically the users
+1206.320	20:06.32	ended up doing was turning off most of
+1208.080	20:08.08	the displays when they were trying to
+1209.360	20:09.36	deal with a certain problem and then uh
+1212.480	20:12.48	dealing with it on a local or global
+1214.240	20:14.24	level. Very rarely did they have all
+1216.000	20:16.00	these displays on. We can also turn on
+1218.640	20:18.64	overlay things like the heat rainfall
+1220.400	20:20.40	maps on top of this which uh makes it
+1223.120	20:23.12	even more confusing.
+1225.919	20:25.92	Now the time scales was one of the major
+1229.120	20:29.12	intents of this program. So I'm going to
+1232.000	20:32.00	start a new planet here.
+1235.200	20:35.20	This game actually runs at four time
+1236.720	20:36.72	scales. What we call the geologic, time
+1238.559	20:38.56	scale, evolution, civilized and
+1240.320	20:40.32	technology. We were trying to show how
+1242.240	20:42.24	the changes on the earth have
+1243.520	20:43.52	accelerated over time uh based on the
+1246.480	20:46.48	life primarily. So in this game, it runs
+1248.720	20:48.72	at the geological time scale until
+1250.240	20:50.24	you've evolved
+1252.480	20:52.48	multisellular life. And generally it's
+1254.720	20:54.72	going by a million years at a click and
+1256.799	20:56.80	then at some point you evolve
+1258.159	20:58.16	multisellular life and then it slows
+1259.760	20:59.76	down and it starts going by a few
+1261.840	21:01.84	hundred thousand years at a click. And
+1263.280	21:03.28	then once you've evolved intelligent
+1264.880	21:04.88	life, which is not necessarily mammals,
+1266.799	21:06.80	it could be radiates or reptiles or
+1269.120	21:09.12	whatever in this game. Uh it slows down
+1271.039	21:11.04	again. Each one of these is dealing with
+1273.600	21:13.60	different factors. uh the simulation
+1276.080	21:16.08	itself changes depending on what time
+1277.840	21:17.84	scale you're working at. We had a hard
+1279.600	21:19.60	time communicating this to the user
+1282.159	21:22.16	except through time. I mean they would
+1283.520	21:23.52	only really get the sense of this as
+1284.799	21:24.80	they played through the whole game. But
+1286.559	21:26.56	we did try to organize the the uh
+1288.640	21:28.64	interface to support this. For instance,
+1290.960	21:30.96	I can start a planet here. Starting a
+1292.720	21:32.72	random planet.
+1295.039	21:35.04	This is roughly when Earth began. It's
+1296.880	21:36.88	really redot. Uh we're getting a lot of
+1299.120	21:39.12	meteorite impacts. The continents are
+1300.880	21:40.88	drifting around. Um, the oceans will
+1303.360	21:43.36	form soon as the water condenses out of
+1306.240	21:46.24	the atmosphere, as the planet's cooling.
+1308.480	21:48.48	Um, down here at the bottom, the
+1311.200	21:51.20	information displays I showed you
+1312.400	21:52.40	before, we basically organize those
+1315.200	21:55.20	according to time scale. So, here we're
+1318.720	21:58.72	evolving very quickly. The kind of
+1320.960	22:00.96	events we're getting, meteorite impacts,
+1322.480	22:02.48	this is showing us uh tidal waves,
+1324.720	22:04.72	meteorites, major volcanic eruptions.
+1327.440	22:07.44	Um, continental drift map you can see is
+1329.440	22:09.44	changing very quickly here. So roughly
+1331.200	22:11.20	the icons on the bottom here are
+1332.880	22:12.88	organized from the things that occur
+1334.880	22:14.88	over the longest time scales on the left
+1337.919	22:17.92	to the things that occur over the
+1339.120	22:19.12	shortest time scales on the right. See
+1340.720	22:20.72	on the right here we have civilization.
+1342.480	22:22.48	So basically as the game is progressing
+1344.159	22:24.16	and you're advancing, if you start with
+1345.760	22:25.76	a a scratch planet like this, you're
+1347.760	22:27.76	trying to evolve life and promote it to
+1349.600	22:29.60	higher intelligence. Your focus will
+1352.000	22:32.00	actually be moving down this row. As you
+1354.320	22:34.32	move to the evolution time scale, the
+1356.000	22:36.00	climate model will get uh higher
+1357.600	22:37.60	fidelity and you'll start concerning
+1359.280	22:39.28	yourself with these factors. As life
+1361.120	22:41.12	evolves, you'll start concerning
+1362.159	22:42.16	yourself with the biomes and the life
+1364.000	22:44.00	forms. So basically what we were trying
+1367.600	22:47.60	to do here and maybe I'll get right now
+1370.480	22:50.48	a little bit oh before I do that let me
+1372.240	22:52.24	show you a few more windows because this
+1374.559	22:54.56	has a little bit to do with my u
+1376.640	22:56.64	postmortem.
+1378.480	22:58.48	Let me pause the model for a second.
+1382.240	23:02.24	other model other uh windows we have in
+1384.000	23:04.00	here. We have a history window which has
+1386.720	23:06.72	all the same factors collapsed on a
+1388.559	23:08.56	history graph.
+1390.640	23:10.64	We have reports which will give you a
+1392.559	23:12.56	report on the current state of the
+1393.760	23:13.76	planet based on your goals. And then we
+1396.480	23:16.48	have
+1398.240	23:18.24	our little guy window.
+1401.679	23:21.68	Now this this is our first stupid
+1403.280	23:23.28	attempt at an agent-based interface. Uh
+1406.799	23:26.80	we after we basically this this product
+1409.600	23:29.60	uh grew through recretion. Okay. Okay,
+1411.120	23:31.12	so we started with a simple little
+1412.159	23:32.16	climate model. Said, "Oh, that's cool.
+1413.679	23:33.68	Let's put in a continental drift model.
+1415.280	23:35.28	Oh, that's cool. Let's put in an
+1416.480	23:36.48	evolution model. Oh, that's cool. Let's
+1418.000	23:38.00	put in a civilization model." So, of
+1420.240	23:40.24	course, us as the designers, you know,
+1421.840	23:41.84	it made a lot of sense. We were layering
+1423.280	23:43.28	this model and it was building and
+1424.799	23:44.80	everything was resting on layers below
+1426.480	23:46.48	it and all made sense. But now, we
+1428.880	23:48.88	showed this to new users, you know, who
+1430.880	23:50.88	were looking to buy some quick
+1432.559	23:52.56	entertainment, right? And they look at
+1434.559	23:54.56	this and they start opening the windows
+1435.919	23:55.92	and all this and they were quite
+1437.679	23:57.68	overwhelmed. Um actually I got a paper
+1440.000	24:00.00	from somebody who was doing uh learning
+1441.760	24:01.76	studies and they they proved they were
+1443.679	24:03.68	actually doing some studies on group
+1445.200	24:05.20	learning. They proved that it took five
+1446.720	24:06.72	people to place ME Earth. One person
+1448.640	24:08.64	just couldn't you know divide up the
+1450.400	24:10.40	conceptual things and make the linkages.
+1452.799	24:12.80	So this is our our last ditch attempt at
+1455.039	24:15.04	trying to give some point source
+1457.039	24:17.04	collapse all the data into one score.
+1458.640	24:18.64	Give the user some sense of how they
+1460.880	24:20.88	were doing. Um this little face actually
+1463.440	24:23.44	kind of changes depending on how you're
+1464.960	24:24.96	doing it. Right now it's kind of uh in
+1466.559	24:26.56	an indeterminate state, but it'll be
+1468.480	24:28.48	really happy sometimes if the bios uh
+1471.360	24:31.36	biosphere is really thriving. Other
+1473.200	24:33.20	times it'll look really mad. You know,
+1474.320	24:34.32	we can come in and I can uh let's see.
+1477.440	24:37.44	Turn off the sun or something. It
+1479.600	24:39.60	doesn't like that.
+1482.880	24:42.88	Yeah, turn the sun off here.
+1486.159	24:46.16	Now we go to this display. Actually got
+1487.600	24:47.60	the biome display. Oh, just as we
+1489.840	24:49.84	evolved life, too.
+1492.799	24:52.80	So here the planet will freeze up now
+1494.480	24:54.48	really quick. Polar ice caps will crawl
+1496.880	24:56.88	down. You can see the uh air temperature
+1499.039	24:59.04	dropping precipitously on the graph down
+1501.919	25:01.92	here. These are the kind of problems
+1504.480	25:04.48	that we were trying to get the user to
+1505.840	25:05.84	face in this uh program. Uh in some of
+1509.279	25:09.28	like the evolution time scale frequently
+1510.960	25:10.96	you would get a runaway greenhouse
+1512.400	25:12.40	effect or
+1514.960	25:14.96	uh the planet would overheat and the
+1516.559	25:16.56	oceans would boil off which wasn't
+1518.240	25:18.24	really good for your civilizations. Um,
+1521.520	25:21.52	but on the postmortem for this one, you
+1524.240	25:24.24	know, I think we had too much window
+1525.520	25:25.52	clutter. Uh, we were trying to stretch
+1528.240	25:28.24	the user in too many conceptual
+1529.440	25:29.44	directions at once had we maybe uh cut
+1533.600	25:33.60	down the simulation to just include
+1535.520	25:35.52	climate or geosphere or a few other
+1538.159	25:38.16	things. I think we probably could have
+1539.440	25:39.44	gotten people to get deeper into it. But
+1541.200	25:41.20	probably the biggest failure of this had
+1543.840	25:43.84	to do with the failure mode itself. Um,
+1547.600	25:47.60	really if you're dealing with conflicts
+1549.679	25:49.68	and challenges in a game and problems to
+1552.480	25:52.48	solve, the whole game, the whole thing
+1554.960	25:54.96	is about failure. Really, you want the
+1557.120	25:57.12	game, the user to be failing
+1558.960	25:58.96	continuously in an entertaining way. The
+1561.679	26:01.68	user has to confront problems, fail at
+1564.159	26:04.16	them several times, but know why they
+1565.840	26:05.84	failed. Uh, generally when you play a
+1568.000	26:08.00	really good game, no matter what it is,
+1569.200	26:09.20	even if it's Doom or something like
+1571.039	26:11.04	that, you know, I went around this
+1572.559	26:12.56	corner, I got blasted. I know why I got
+1574.559	26:14.56	blasted. Next time I'm not going to go
+1575.840	26:15.84	around that corner so fast. I'm going to
+1577.200	26:17.20	sneak around the corner or go the other
+1578.559	26:18.56	way. It's really important that when the
+1580.159	26:20.16	user fails that they understand why they
+1582.000	26:22.00	failed so that they will go back to play
+1583.279	26:23.28	it again the next time and then fail
+1585.520	26:25.52	further down the line. In this program,
+1587.919	26:27.92	people were failing and they had no idea
+1590.480	26:30.48	why. You know, they'd be sitting here
+1591.840	26:31.84	playing the game and all a sudden the
+1592.720	26:32.72	plant would freeze up. And as designers
+1595.279	26:35.28	of the simulation, we had no idea why
+1597.520	26:37.52	either. This simulation was just, you
+1599.600	26:39.60	know, too complex and they had a lot of
+1601.039	26:41.04	chaotic kind of attractors in the
+1603.279	26:43.28	attraction space. And it was kind of
+1604.960	26:44.96	like you're rolling this marble through
+1606.159	26:46.16	this very flat space and every now and
+1608.000	26:48.00	then it falls into one of these chaotic
+1609.360	26:49.36	chaotic attractors and we can't really
+1610.960	26:50.96	say why. So really that was almost a
+1614.720	26:54.72	failure of the uh simulation design. The
+1618.960	26:58.96	game design just couldn't uh convey that
+1621.200	27:01.20	to the user. You know even with
+1622.400	27:02.40	constraints um we had a few things that
+1625.120	27:05.12	worked a little better. One of the
+1626.320	27:06.32	things we stuck in here I'll just show
+1627.600	27:07.60	you real quick is you can load Mars.
+1631.200	27:11.20	And so on Mars all you're trying to do
+1632.559	27:12.56	is terraform it. You have little things
+1634.080	27:14.08	you can drop in the environment on the
+1635.520	27:15.52	local level. Oops.
+1638.559	27:18.56	I can drop down um CO2 generators or I
+1642.240	27:22.24	can uh impact Mars with ice meteors.
+1648.880	27:28.88	If I do enough for those, I'll start
+1650.159	27:30.16	forming an ocean. Uh one of the other
+1652.320	27:32.32	tools we gave the player was a monolith,
+1653.919	27:33.92	which kind of increases the sentience of
+1655.919	27:35.92	the little creatures on the planet.
+1660.559	27:40.56	on the failure mode. Um, one thing I
+1662.880	27:42.88	just want to mention real briefly is
+1663.919	27:43.92	that, uh, I've seen two different
+1665.679	27:45.68	failure modes between kids and adults,
+1668.400	27:48.40	there seems to be a big difference. Um,
+1670.559	27:50.56	adults, primarily, ones that, uh, kind
+1672.480	27:52.48	of grew up before the computer
+1673.919	27:53.92	generation really got into full swing.
+1676.240	27:56.24	When they're put in front of a computer,
+1677.600	27:57.60	they're afraid of failure. Generally,
+1679.600	27:59.60	they're timid. They're
+1682.080	28:02.08	they're very uh, they think twice before
+1684.399	28:04.40	they click a button. They don't just try
+1685.679	28:05.68	anything. Whereas kids, they fail all
+1687.679	28:07.68	the time. You know, they kind of like
+1689.440	28:09.44	failure. You know, failure doesn't
+1691.120	28:11.12	bother them because they're always
+1692.080	28:12.08	failing. When you see a kid build a
+1694.159	28:14.16	tower of blocks, you know, they'll build
+1695.200	28:15.20	it and they'll knock it down. Oh, it's
+1696.399	28:16.40	fun. What's important for the kid is
+1697.919	28:17.92	that the failure mode is fun and
+1699.679	28:19.68	interesting. Okay. What kids don't like
+1701.520	28:21.52	is a boring failure mode. Adults are
+1703.440	28:23.44	uncomfortable with failure in general,
+1704.880	28:24.88	which is what makes kids so cool. You
+1706.559	28:26.56	know, they're just really fun to watch
+1708.720	28:28.72	them. And that's I think one of the
+1710.000	28:30.00	reasons they learn so fast. You know,
+1711.120	28:31.12	they're not afraid to fail and that
+1712.159	28:32.16	failure is really the basis of their
+1713.440	28:33.44	learning. Um, so when we show games to
+1718.000	28:38.00	this to kids, even something this
+1720.240	28:40.24	complex, it's surprising. I've had
+1721.600	28:41.60	eight, nine year olds playing this game
+1723.279	28:43.28	that knew everything about it, every
+1725.360	28:45.36	little control in there. They knew what
+1726.640	28:46.64	it did and how it worked because they
+1728.240	28:48.24	just went in there, you know, with both
+1729.679	28:49.68	guns blazing, pushing everything and
+1731.279	28:51.28	playing with it. And they had the uh
+1733.520	28:53.52	their interest level stayed up enough
+1734.799	28:54.80	and they didn't care that the planet
+1736.000	28:56.00	kept freezing up or boiling over. You
+1737.600	28:57.60	know, to them that was cool. To the
+1739.279	28:59.28	adults, they do it. The planet freezes
+1740.559	29:00.56	up and oh no, I can't play this. It's
+1742.080	29:02.08	too complex. And so they run away
+1743.840	29:03.84	screaming.
+1745.440	29:05.44	I'm going to skip to the next one really
+1747.120	29:07.12	quick, which is uh we decided that that
+1749.520	29:09.52	was a little bit too much for the user
+1750.880	29:10.88	to bite off. A little too complex, too
+1752.320	29:12.32	many windows. So um we kind of swung the
+1755.679	29:15.68	other extreme on this one. This is sim
+1757.440	29:17.44	ant.
+1759.200	29:19.20	Next one we decided we would instead
+1760.880	29:20.88	scale back our expectations a little bit
+1762.799	29:22.80	and just simulate an ant colony.
+1768.080	29:28.08	Once again, turn off the annoying music.
+1771.360	29:31.36	Now in this one again we have the
+1774.240	29:34.24	interface kind of broken out into uh
+1777.520	29:37.52	local and global areas. This is
+1780.240	29:40.24	primarily the local window. This is my
+1782.000	29:42.00	little ant. That little yellow ant
+1783.279	29:43.28	there. If I click in the window that my
+1785.039	29:45.04	little ant crawls around digs tunnels.
+1789.039	29:49.04	This is uh where most of the global
+1791.039	29:51.04	information is on this window. In this
+1793.440	29:53.44	game it's a little different. Instead of
+1794.799	29:54.80	having the tools on the side the tool
+1798.000	29:58.00	the primary tool in this game is the
+1799.440	29:59.44	ant. So most of what you do in this game
+1801.600	30:01.60	is by navigating this little ant around.
+1803.360	30:03.36	Now I just came out of the ground. Now
+1805.120	30:05.12	you'll notice something here. The uh
+1807.600	30:07.60	when you're outside the viewpoint is
+1809.919	30:09.92	straight down two-dimensional. When
+1812.399	30:12.40	you're in the nest, it's side view two
+1814.080	30:14.08	dimensional. We actually had plans at
+1815.520	30:15.52	the beginning of this for a very
+1816.399	30:16.40	elaborate three-dimensional display of
+1818.720	30:18.72	the nest and the way it really looks. We
+1822.080	30:22.08	did a few prototypes and most people
+1823.360	30:23.36	were just totally baffled. Just the 3D
+1825.840	30:25.84	navigation to them just totally confused
+1827.440	30:27.44	them. So we decided to fall back on the
+1829.840	30:29.84	experience of the users. We really
+1832.080	30:32.08	wanted the users to uh have direct
+1833.760	30:33.76	experience and be able to map this into
+1835.840	30:35.84	the real experience. So most users
+1837.600	30:37.60	experience of seeing an ant nest is in
+1839.440	30:39.44	an ant farm which is you know
+1841.200	30:41.20	two-dimensional basically side view like
+1842.720	30:42.72	this. Uh most people see ants on the
+1845.440	30:45.44	ground straight down like this. This
+1847.679	30:47.68	turned out to be no problem at all. Even
+1849.200	30:49.20	though you're going through this what
+1850.960	30:50.96	seemed at the time a major viewpoint
+1853.039	30:53.04	shift just by going out of the hole.
+1854.799	30:54.80	Most people didn't even notice the fact,
+1856.399	30:56.40	didn't even mention it. Um,
+1859.360	30:59.36	this ant can actually uh control other
+1862.880	31:02.88	ants to some degree. I can recruit ants.
+1865.200	31:05.20	I don't think I have too many. Let me
+1866.320	31:06.32	speed up the game a little bit here. In
+1867.919	31:07.92	this game, what you do is you crawl
+1870.240	31:10.24	around, look for food, feed your colony,
+1872.960	31:12.96	uh, establish food trails. Here's some
+1874.399	31:14.40	food over here. I can go pick up a
+1876.159	31:16.16	piece. Um,
+1879.200	31:19.20	bring it back to my queen. the uh in
+1882.399	31:22.40	some earth on the local window we had
+1884.240	31:24.24	scroll bars as this window has. But we
+1887.679	31:27.68	wanted to have the ant self-c centering.
+1891.200	31:31.20	Oh, we're starting to get a rainstorm
+1892.480	31:32.48	here.
+1895.200	31:35.20	That's what that blue stuff is. I have
+1897.279	31:37.28	it on pause.
+1901.519	31:41.52	So, here's how the user basically plays
+1903.200	31:43.20	this game as they go get food, establish
+1905.279	31:45.28	food trails, start fighting there. At
+1907.600	31:47.60	the other end of this piece of ground is
+1910.720	31:50.72	a red colony of ants. And so what you're
+1912.480	31:52.48	doing in this game is you're actually
+1914.159	31:54.16	battling the red ants for dominance.
+1915.679	31:55.68	Once you destroy the red ants, you win
+1917.919	31:57.92	this patch. Um so this is the local here
+1920.880	32:00.88	in this window. This is the global in
+1922.480	32:02.48	this window. We have in this game
+1925.679	32:05.68	actually kind of a meta game. So this
+1928.159	32:08.16	little area of ground here
+1931.760	32:11.76	represents about uh four square feet of
+1934.480	32:14.48	ground.
+1936.399	32:16.40	This actually is the whole game field.
+1940.320	32:20.32	So, this little blinking square on the
+1941.840	32:21.84	side here is the current patch of ground
+1943.679	32:23.68	we're in.
+1945.440	32:25.44	The uh object of the game here is to
+1947.200	32:27.20	actually start breeding new colonies and
+1949.120	32:29.12	starting take over the yard. And so, you
+1950.640	32:30.64	actually start spreading out as the red
+1952.640	32:32.64	ants are spreading out. At this point,
+1953.840	32:33.84	it becomes kind of a territorial game
+1955.200	32:35.20	like go. Uh, and the real reward in this
+1958.480	32:38.48	game is if you can get into the uh house
+1960.240	32:40.24	here. And so, you're trying to get the
+1963.120	32:43.12	ants to invade the house. and the the
+1964.640	32:44.64	highest food content areas like around
+1966.159	32:46.16	the fridge and sink and whatever. So,
+1969.120	32:49.12	this is kind of the strategic game
+1970.640	32:50.64	you're playing. Uh the tactical game is
+1973.279	32:53.28	down at the local level. Let me pop back
+1976.159	32:56.16	to the local level here. Um
+1979.840	32:59.84	in this game, we tried to keep the
+1981.279	33:01.28	failure modes after the Sim Earth
+1982.960	33:02.96	experience very direct and obvious. So,
+1985.679	33:05.68	if I'm crawling around and die, usually
+1988.240	33:08.24	I know why. So, in this case, I walk by
+1990.159	33:10.16	a spider and get slurped up. Um, now in
+1994.640	33:14.64	in today's multime media environment,
+1996.080	33:16.08	that would have been a 10-minute video
+1997.360	33:17.36	sequence, you know, with a but uh again,
+2000.559	33:20.56	this is way back. They shipped on like
+2001.840	33:21.84	one disc kind of a thing. Um,
+2004.799	33:24.80	so but we didn't want the emphasis in
+2006.640	33:26.64	the game design to be on not dying
+2009.200	33:29.20	because we really wanted to get the the
+2011.120	33:31.12	idea across that it doesn't really
+2012.480	33:32.48	matter if an ant dies. It's the colony
+2014.880	33:34.88	that matters. The ants are more like the
+2016.720	33:36.72	cells. The colony is more like the
+2018.559	33:38.56	organism. So, in the game design, we
+2020.799	33:40.80	were trying to support that idea by
+2022.159	33:42.16	basically making death free. When you
+2023.519	33:43.52	die, you just come back as another ant.
+2024.960	33:44.96	Your ant colonies lost one ant. That's
+2026.559	33:46.56	not a big issue. Um, on the map here, we
+2030.320	33:50.32	found that we were going back and forth
+2031.519	33:51.52	to this map a lot just to get an
+2032.799	33:52.80	overview of where we were. Uh, which
+2034.960	33:54.96	seemed kind of a waste. Generally, we
+2036.960	33:56.96	wanted to play this with full screen
+2038.320	33:58.32	mode like this. So, we put the map in
+2040.080	34:00.08	here as a little popup.
+2042.320	34:02.32	So, as you're playing the game, if you
+2043.600	34:03.60	just want to get a bearings on where you
+2044.720	34:04.72	are, if I want to move the screen
+2045.840	34:05.84	around, uh that's what that little map
+2048.159	34:08.16	is for. That evolved into the next uh
+2051.839	34:11.84	game we did, which I'll show you in a
+2052.960	34:12.96	little bit. One of the real issues we
+2054.399	34:14.40	had in the interface design on this one
+2055.679	34:15.68	was that we wanted to give the player
+2057.679	34:17.68	some global control over the colony
+2059.280	34:19.28	behavior. One of the things we wanted
+2061.119	34:21.12	them to control was how many ants were
+2062.560	34:22.56	foraging versus nest building versus uh
+2066.079	34:26.08	other things. Another thing we wanted
+2067.760	34:27.76	them to control was how many workers
+2069.119	34:29.12	were being uh born versus uh soldiers
+2073.119	34:33.12	and breeders. We had this elaborate
+2075.359	34:35.36	thing at first where we had like four
+2076.800	34:36.80	bar graphs and each one represented the
+2079.119	34:39.12	percentage of let's say workers. One was
+2081.280	34:41.28	workers, one was soldiers, one was
+2082.720	34:42.72	breeders. You'd grab one bar, pull it
+2084.879	34:44.88	up, the other two would go down. Uh or
+2086.960	34:46.96	you'd pull one down, the other two would
+2088.320	34:48.32	go up. It was very confusing to users.
+2090.399	34:50.40	We tried it another way with a pyraph
+2091.919	34:51.92	where you were pulling things and again
+2093.280	34:53.28	it was very confusing to users. What we
+2095.760	34:55.76	finally came up with was this triangular
+2098.880	34:58.88	control, which actually worked pretty
+2100.160	35:00.16	well. In this, you just move this thing
+2102.640	35:02.64	around and it's establishing a three-way
+2104.320	35:04.32	percentage. Um, in this case, it's
+2106.320	35:06.32	between the amount of different type
+2108.000	35:08.00	casts of ant that are bred in your nest.
+2110.400	35:10.40	If I want all breeders, I bring it to
+2111.920	35:11.92	this verticy. If I want all workers, I
+2114.480	35:14.48	bring it down here. So, I can establish
+2115.760	35:15.76	a three-way relationship actually pretty
+2117.599	35:17.60	quickly. And this is just through
+2119.119	35:19.12	testing. You know, we went through uh I
+2120.720	35:20.72	don't know how many prototypes to
+2121.760	35:21.76	discover this. Um, and then we have, of
+2124.880	35:24.88	course, you can do presets. So, we have
+2126.960	35:26.96	three presets. I might have one set for
+2128.640	35:28.64	fighting, one for making my nest bigger,
+2131.280	35:31.28	and that way I can go through those very
+2132.560	35:32.56	quickly. The uh, now the help system on
+2135.359	35:35.36	Sim Earth was the shift click. On this
+2137.920	35:37.92	one, we decided to make it a little more
+2139.200	35:39.20	basic. We just put little uh, question
+2140.880	35:40.88	marks in each window. If you hold down
+2143.200	35:43.20	the question mark, it basically shows
+2145.760	35:45.76	you all the icons. This is not unlike
+2147.680	35:47.68	kind of the current paradigm of the
+2148.960	35:48.96	pop-up contextsensitive help. We did
+2151.440	35:51.44	that in every window in the product. So
+2152.960	35:52.96	in this window we have the same thing
+2156.160	35:56.16	and in the map window we have the same
+2157.839	35:57.84	thing too.
+2160.079	36:00.08	The uh there are a couple things we did
+2162.880	36:02.88	experimentally in this game which I oh
+2165.200	36:05.20	just very briefly these are the global
+2166.880	36:06.88	displays. These are pheromone displays
+2169.040	36:09.04	you see from the ants. One of the main
+2170.720	36:10.72	things we were trying to communicate in
+2171.839	36:11.84	this product was why ants are so cool. I
+2174.720	36:14.72	mean ants are really really cool. You
+2176.720	36:16.72	have these little things that just
+2178.000	36:18.00	operate on these local rules and have no
+2179.680	36:19.68	idea what's going on, but yet when you
+2181.920	36:21.92	add them up, you get this surprisingly
+2183.760	36:23.76	intelligent colony. And this is really
+2185.920	36:25.92	what we were trying to communicate to
+2187.040	36:27.04	the user in this game. And that's why it
+2189.680	36:29.68	was important that they saw the
+2190.720	36:30.72	pherommones they were dropping because
+2191.760	36:31.76	we were actually trying to build the
+2193.680	36:33.68	behavior. We were actually building the
+2195.119	36:35.12	simulation fairly close to real rules of
+2197.680	36:37.68	ants. Um, as an example, there's a thing
+2200.640	36:40.64	that uh somebody did, I forgot his name,
+2203.520	36:43.52	he did in a simulation. And it was
+2204.720	36:44.72	interesting because it was one of the
+2205.520	36:45.52	few cases where the real behavior of an
+2208.160	36:48.16	organism was discovered through
+2209.520	36:49.52	simulation. And people always wondered
+2211.520	36:51.52	how ants were able to effectively sort
+2213.440	36:53.44	larvae at different stages. In other
+2215.599	36:55.60	words, they'll have one little room with
+2217.200	36:57.20	the uh little eggs that were just laid,
+2218.880	36:58.88	another room with the medium-sized
+2220.079	37:00.08	larvae, another room with almost fully
+2222.720	37:02.72	grown ones. These larvae at each stage
+2225.200	37:05.20	put out a particular odor. These ants
+2227.680	37:07.68	apparently, and he found this through
+2229.119	37:09.12	stimulation, have this very local rule,
+2231.280	37:11.28	which is to say if I'm walking around
+2233.359	37:13.36	with nothing in my mandibles and I come
+2235.520	37:15.52	across a larvae and I haven't smelled
+2238.720	37:18.72	its smell in my vicinity, I'll tend to
+2241.040	37:21.04	pick it up. On the other hand, if I'm
+2243.200	37:23.20	carrying a larvae and its smell matches
+2246.880	37:26.88	the area, the smell in the local area,
+2249.280	37:29.28	I'll put it down. Now in simulation you
+2252.320	37:32.32	can just scatter these larvae all over
+2253.599	37:33.60	the screen. Turn this rule on and the
+2256.000	37:36.00	ants will eventually you know pick up
+2257.440	37:37.44	the larvae that are sitting by
+2258.560	37:38.56	themselves walk around with them
+2259.839	37:39.84	randomly until they get to an area with
+2261.599	37:41.60	similar larvae and drop them and thereby
+2264.000	37:44.00	sort them very efficiently. So this is
+2266.640	37:46.64	the kind of thing we were trying to
+2267.680	37:47.68	build the simulation out of. Now we
+2270.240	37:50.24	didn't want to start the user at this
+2272.640	37:52.64	level with you know the mechanisms
+2274.000	37:54.00	through which this emergent behavior
+2275.839	37:55.84	occurs in an ant colony. We wanted to
+2277.680	37:57.68	get them into the game first very
+2278.880	37:58.88	quickly. You know here's how you play
+2279.920	37:59.92	the game. Here's how you walk around,
+2281.119	38:01.12	get food. Here's how you uh defeat the
+2283.280	38:03.28	red ants. So, what we were hoping and
+2286.880	38:06.88	was somewhat successful is that we
+2288.960	38:08.96	embedded in this in the uh we put in
+2291.760	38:11.76	this little infos.
+2294.079	38:14.08	And this is kind of like a little
+2295.440	38:15.44	hypercard oops
+2298.560	38:18.56	database about ants and ant behavior. Uh
+2301.359	38:21.36	so, for instance, these are just little
+2302.560	38:22.56	hot buttons. I can click on them. They
+2304.079	38:24.08	have pop-up definitions. Uh, and I can
+2307.440	38:27.44	kind of explore this at my leisure and
+2310.640	38:30.64	find out more about ants. A lot of the
+2312.880	38:32.88	information contained in here relates
+2314.400	38:34.40	directly to the game and the game play.
+2316.640	38:36.64	Um, we have sections in here that
+2318.720	38:38.72	actually go into that. So, I can back
+2320.800	38:40.80	up. I can go to the Oops, I've been
+2324.480	38:44.48	eaten.
+2326.800	38:46.80	You die a lot in this game, but it's
+2328.400	38:48.40	okay.
+2330.320	38:50.32	So, uh, this is actually a small
+2332.160	38:52.16	flowchart of the simulation in the game.
+2335.359	38:55.36	Oops. It gets stepped onto.
+2339.760	38:59.76	So, this is a very simple flowchart,
+2341.680	39:01.68	much simpler than the real simulation,
+2342.880	39:02.88	but we were trying to give the user the
+2344.960	39:04.96	information and have the user pull the
+2346.400	39:06.40	information out of the system rather
+2348.160	39:08.16	than in most educational products, it's
+2350.160	39:10.16	kind of, you know, present the user
+2351.359	39:11.36	with, you know, gobs of information.
+2352.640	39:12.64	Here, remember this, this is cool. You
+2354.320	39:14.32	know, don't doesn't matter why, just
+2356.079	39:16.08	trust us. It's cool. We wanted the users
+2357.920	39:17.92	to more play this for a while and start
+2359.359	39:19.36	wondering about it and say, hey, that's
+2360.880	39:20.88	kind of cool. I wish I knew more about
+2361.839	39:21.84	this. And then pull the information out
+2362.880	39:22.88	of the system. So this was you know I
+2365.280	39:25.28	would say reasonably uh successful in
+2367.440	39:27.44	the game. Another kind of experimental
+2369.359	39:29.36	thing we did in this
+2372.079	39:32.08	was u this blank icon here which we
+2376.320	39:36.32	called the mystery button. Uh what this
+2379.520	39:39.52	does this does something totally random
+2380.720	39:40.72	and unexpected every time you click on
+2382.160	39:42.16	it. Uh sometimes it'll tell you a joke.
+2385.520	39:45.52	Uh
+2387.680	39:47.68	sometimes it'll play the entire sound
+2389.119	39:49.12	list. Sometimes it'll, you know, wipe
+2391.440	39:51.44	out the entire red ant colony. Sometimes
+2393.200	39:53.20	it will give you uh 500 more ants in the
+2395.359	39:55.36	black ant colony or it'll fill the world
+2396.800	39:56.80	with food. We have about 50 random
+2398.960	39:58.96	things it does. Um we found this
+2400.880	40:00.88	particularly appealed to kids. Kids
+2402.560	40:02.56	really like this idea of, you know,
+2403.839	40:03.84	they've played with something, played
+2404.800	40:04.80	with something, they've gone through a
+2405.599	40:05.60	goal- directed state and all a sudden
+2406.960	40:06.96	they want to get crazy. This is kind of
+2408.320	40:08.32	the let's get crazy button. You know,
+2409.760	40:09.76	let's do something totally
+2410.560	40:10.56	unpredictable. Um but again, as in most
+2413.920	40:13.92	cases, the adults didn't quite uh relate
+2416.400	40:16.40	to it too well.
+2418.960	40:18.96	Now, on this product, I would say
+2423.119	40:23.12	I was we were actually our failure here
+2425.119	40:25.12	was more in the marketing side. We were
+2426.560	40:26.56	actually marketing this to a similar
+2427.760	40:27.76	audience that Sim City and Sim Earth
+2429.040	40:29.04	were market was marketed at. But what
+2431.520	40:31.52	this game really appealed to were the uh
+2433.200	40:33.20	10-year-olds. I mean, 10-year-old girls
+2435.119	40:35.12	and boys loved this game. Uh
+2437.440	40:37.44	20-year-olds and up thought it was too
+2439.119	40:39.12	simplistic. The model was too explicit.
+2442.160	40:42.16	Um especially when they failed, they
+2444.000	40:44.00	knew not only why they failed, but it
+2445.599	40:45.60	was too obvious how to solve it next
+2447.839	40:47.84	time. So, they generally only failed
+2449.599	40:49.60	once or twice. The game was too easy for
+2451.280	40:51.28	them. Um, the kids didn't mind that it
+2453.520	40:53.52	was too easy cuz the kids tended to
+2454.960	40:54.96	approach this more experimentally. Uh,
+2457.760	40:57.76	one of the features we put in the game
+2459.760	40:59.76	that again the kids seem to appreciate
+2461.440	41:01.44	more than the adults was experimental
+2463.040	41:03.04	mode. Now, in this mode here, I can
+2466.480	41:06.48	actually put down little things to play
+2467.839	41:07.84	with the ants. I can drop down little
+2470.240	41:10.24	walls. So, I can, you know, make mazes
+2472.560	41:12.56	for my ants and see if they can figure
+2473.760	41:13.76	their way out of them with their
+2474.720	41:14.72	pherommones. Um, I can add food.
+2479.680	41:19.68	I can feed some ants over here, kill
+2481.440	41:21.44	ones over there. I can, you know, put an
+2482.560	41:22.56	ant in the thing, feed him, and see if
+2483.760	41:23.76	he can find his way out with trails of
+2485.040	41:25.04	food to follow. Um, I can get
+2487.520	41:27.52	destructive. I can go spraying them with
+2488.880	41:28.88	insecticide.
+2492.319	41:32.32	Spider's pretty resistant. Red answer.
+2496.800	41:36.80	There we go.
+2500.160	41:40.16	The kids have played with this for a
+2501.599	41:41.60	long time. It was kind of amazing to me.
+2503.760	41:43.76	Um,
+2506.319	41:46.32	one of the other failure modes of this,
+2507.920	41:47.92	I think, was in the, uh, lack of
+2510.400	41:50.40	creative input. I mean, you had this
+2512.319	41:52.32	local control as an ant. You were
+2513.520	41:53.52	actually building up the colony, but
+2515.280	41:55.28	there wasn't a whole lot of creativity
+2517.200	41:57.20	really. Um, the ants would kind of build
+2518.960	41:58.96	their colony, you know, and you'd end up
+2520.480	42:00.48	with this kind of mish mash of a nest,
+2521.920	42:01.92	and the nest never looked like a
+2523.359	42:03.36	designer nest or anything. Uh, and it
+2526.560	42:06.56	was, as a game, you know, it was fine,
+2528.720	42:08.72	but, uh, it was a little different than
+2530.240	42:10.24	most of the products we did. I'm going
+2531.280	42:11.28	to go to another one now.
+2533.920	42:13.92	which is um our latest version of Sim
+2537.599	42:17.60	City or the one that was released a few
+2539.599	42:19.60	years ago.
+2541.280	42:21.28	Two six colors here.
+2553.200	42:33.20	Now, in Sim City, you're running a city
+2554.720	42:34.72	obviously um rather than ant colony
+2559.040	42:39.04	or a planet. Start a new city.
+2570.800	42:50.80	Now, in this one, we did a few things
+2573.359	42:53.36	different. Um,
+2575.599	42:55.60	rather than having the two windows, the
+2577.359	42:57.36	local global windows as in the other two
+2579.119	42:59.12	games, we decided to try and collapse
+2580.480	43:00.48	everything into one
+2582.800	43:02.80	into one window. And basically to do
+2585.359	43:05.36	that, we added zoom. So, this basically
+2588.000	43:08.00	for the most part is your map view of
+2590.240	43:10.24	this game. Um, I can zoom in and this is
+2593.680	43:13.68	pretty much the local view, but it
+2594.880	43:14.88	occurs in the same window. The, uh, let
+2597.760	43:17.76	me load a city.
+2605.599	43:25.60	There we go. Because of the uh,
+2608.319	43:28.32	isometric perspective we had here, we
+2610.640	43:30.64	had to add rotate buttons, which wasn't
+2614.160	43:34.16	too much of a problem for most people.
+2616.400	43:36.40	Um, got to be a little bit of a problem
+2617.680	43:37.68	on mapping some of the other data. The
+2620.160	43:40.16	uh
+2622.720	43:42.72	the centering tool
+2625.680	43:45.68	actually allows you to browse around the
+2627.280	43:47.28	city. I've always had a problem with
+2628.400	43:48.40	scroll bars. Um in Sim Earth, I first
+2630.240	43:50.24	noticed it, which is why we had the
+2632.160	43:52.16	little map thing as you drag it around
+2633.760	43:53.76	controls the uh local window. In Sim
+2636.000	43:56.00	Ant, we tried to address that with the
+2637.280	43:57.28	local ant that became the center point
+2639.200	43:59.20	of the window. In this one, we made a
+2641.599	44:01.60	special tool, the centering tool, which
+2643.760	44:03.76	just allows you to browse around from
+2645.599	44:05.60	any other tool. Also, I can hold down
+2647.920	44:07.92	the uh
+2650.240	44:10.24	oops, that's not the right key to hold
+2651.599	44:11.60	down the option key and go straight to
+2654.800	44:14.80	the centering tool. The uh now this like
+2658.240	44:18.24	Sim Earth was a pretty information dense
+2661.200	44:21.20	display. Uh at this point, we had kind
+2663.359	44:23.36	of changed our minds and gone to
+2665.119	44:25.12	floating pallets rather than uh an
+2668.079	44:28.08	integrated window. So, you'll notice
+2669.920	44:29.92	this is the toolbar and it's a separate
+2671.440	44:31.44	pallet. It never goes behind. We have a
+2673.520	44:33.52	lot of other windows that occur in this
+2675.520	44:35.52	that can be opened, but they're all done
+2677.440	44:37.44	as floating pallets because we basically
+2679.200	44:39.20	wanted the user to just bring them up
+2680.800	44:40.80	when they needed them and close them
+2683.599	44:43.60	when they didn't. And that seemed to
+2685.280	44:45.28	work pretty well. Actually, I was kind
+2686.880	44:46.88	of surprised. The uh another thing we
+2690.480	44:50.48	did different was that we tried to
+2691.839	44:51.84	collapse as much information as possible
+2694.400	44:54.40	into this main window. Rather than
+2696.000	44:56.00	having all these hundreds of different
+2697.200	44:57.20	display modes, we basically tried to
+2699.280	44:59.28	make everything graphic, but in a way to
+2702.000	45:02.00	where it kind of made sense. It matched
+2703.359	45:03.36	reality. There was a, you know, obvious
+2704.640	45:04.64	mapping here. So, just by looking at
+2706.400	45:06.40	this map,
+2708.720	45:08.72	pause you for a second. Just looking at
+2710.880	45:10.88	this map here, the uh user can get a
+2714.240	45:14.24	sense of a lot of the data that's
+2716.400	45:16.40	actually going on. I can see the density
+2717.839	45:17.84	of development, the population density.
+2719.359	45:19.36	I can look at the current zoning at each
+2721.280	45:21.28	of these lots. If you look very closely,
+2722.880	45:22.88	there's a little color-coded thing on
+2724.160	45:24.16	the border. the uh of course where the
+2726.160	45:26.16	roads and buildings and terrain are. I
+2727.920	45:27.92	can see the traffic levels. Um I can see
+2730.319	45:30.32	the power status if power goes out to a
+2732.240	45:32.24	certain area. The uh toolbar over here
+2735.839	45:35.84	is organized into roughly four areas.
+2739.280	45:39.28	This top area up here are the tools in
+2742.560	45:42.56	the game. These are the inputs that the
+2744.240	45:44.24	user is able to uh have to the
+2746.720	45:46.72	simulation. This is a bulldozer. So I
+2749.440	45:49.44	can level terrain of a bulldozer.
+2754.480	45:54.48	This is uh a road. So
+2758.720	45:58.72	each tool is basically one of three
+2760.400	46:00.40	types. There's a uh basically a point
+2762.319	46:02.32	select which is like drop a tree
+2766.319	46:06.32	or drop water.
+2768.720	46:08.72	There's a line select which is the road.
+2772.319	46:12.32	And then there's an area select which
+2773.680	46:13.68	would be the zones. That's like a
+2776.000	46:16.00	residential zone or commercial zone is
+2778.960	46:18.96	an area select. Each one of those works
+2781.200	46:21.20	you know as a single click also. So the
+2783.200	46:23.20	user doesn't have to worry about what
+2784.240	46:24.24	mode they're in. They all if they just
+2785.359	46:25.36	want to single click each one that works
+2786.640	46:26.64	fine too. Um
+2789.359	46:29.36	one of the things this was actually this
+2790.800	46:30.80	is a sequel to the original Sim City
+2792.319	46:32.32	that we did many years beforehand. One
+2794.560	46:34.56	of the things we did in the interface
+2796.160	46:36.16	the interface is much more complex but
+2797.680	46:37.68	we tried to organize these tools
+2799.520	46:39.52	actually in the same order and using
+2800.800	46:40.80	similar icons to the old Sim City. So
+2802.800	46:42.80	people who have played Sim City before
+2804.400	46:44.40	can come into this and they know the
+2805.680	46:45.68	bulldozer is going to be the top icon
+2807.040	46:47.04	and the road is going to be next to the
+2808.560	46:48.56	uh rail. The additional detail that we
+2811.040	46:51.04	added in this basically we did in pop-up
+2813.520	46:53.52	menus. So whereas Sim City had a road,
+2815.839	46:55.84	this one has um five different types.
+2819.119	46:59.12	Whereas Sim City had one type of
+2820.480	47:00.48	residential zone, this has two. This has
+2822.400	47:02.40	many different bulldozer modes.
+2824.079	47:04.08	Basically, if a user just boots this up,
+2825.839	47:05.84	doesn't read the manual, which is what
+2827.119	47:07.12	they always do, they just click on the
+2829.599	47:09.60	buttons and they work kind of like they
+2830.720	47:10.72	expect them to. As they start playing
+2832.400	47:12.40	with it a while, they start realizing
+2833.440	47:13.44	that each of these has a pop-up menu.
+2834.880	47:14.88	Some of them bring up dialogues. Uh and
+2837.440	47:17.44	that's where they can start learning the
+2838.880	47:18.88	program. There's nice early I mean nice
+2840.560	47:20.56	easy learning ramp built into the
+2842.079	47:22.08	program.
+2845.359	47:25.36	These things around here are basically
+2847.440	47:27.44	display functions. Uh the rotate world,
+2850.480	47:30.48	zoom in, zoom out, centering tool. This
+2852.640	47:32.64	sign function allows
+2856.640	47:36.64	the user to put new signs in the city.
+2859.440	47:39.44	Now, these are kind of important a
+2861.760	47:41.76	little later on because they're used in
+2864.240	47:44.24	the newspaper when an event happens. Uh
+2866.720	47:46.72	you can sit there and name all the
+2867.760	47:47.76	different districts of your city. You
+2868.800	47:48.80	can also name the different buildings.
+2870.560	47:50.56	And again, we're trying to prop up the
+2873.920	47:53.92	illusion of a real city. A, we're also
+2875.839	47:55.84	trying to get the user to care about the
+2877.119	47:57.12	city. Now, the city thing seems to work
+2879.520	47:59.52	better than, for instance, the ant
+2880.720	48:00.72	colony or the planet because the user
+2882.160	48:02.16	actually has a lot more creative control
+2884.240	48:04.24	over the system that they're dealing
+2885.680	48:05.68	with. When I do something in Sim Earth,
+2887.839	48:07.84	you know, no matter what I do, it's
+2889.119	48:09.12	going to be erased in a billion years of
+2890.800	48:10.80	erosion. Uh, in Sim City, I build a road
+2893.599	48:13.60	and it stays there most of the time as
+2894.720	48:14.72	long as I fund it and repair it after
+2896.240	48:16.24	fires and whatnot. There's a lot more
+2897.760	48:17.76	permanence to Sim City. So, as a
+2899.599	48:19.60	consequence, after I've been playing the
+2901.520	48:21.52	game a while, what I've got on the
+2903.200	48:23.20	screen is something very much that I've
+2905.280	48:25.28	created. You know, I've built a model of
+2906.640	48:26.64	a city as a player. In Summer Earth,
+2909.839	48:29.84	I've done the same thing,
+2914.800	48:34.80	but the changes I made just are not
+2916.319	48:36.32	permanent. The bottom level down here
+2918.880	48:38.88	are uh additional windows or actually
+2922.480	48:42.48	pallets I can bring up. This is a uh the
+2925.119	48:45.12	map which again here we're pretty much
+2928.319	48:48.32	have replaced with the zoom out level of
+2930.240	48:50.24	this window. But this little map allows
+2932.319	48:52.32	us to bring up the data layers. So for
+2934.079	48:54.08	instance, I can show uh the crime and it
+2937.119	48:57.12	will be mapped onto this map over here.
+2939.920	48:59.92	We actually originally designed this
+2941.280	49:01.28	little map as a diamond shape to match
+2943.760	49:03.76	the orientation of that. Users found
+2945.599	49:05.60	that totally confusing. Um we changed it
+2948.400	49:08.40	to this. it was still confusing because
+2950.240	49:10.24	the user had to make basically a 45
+2952.559	49:12.56	degree rotation in their mind between
+2954.960	49:14.96	what they're seeing on this map and what
+2956.800	49:16.80	they're seeing on that map. Um, we
+2959.040	49:19.04	almost took it out altogether and just
+2960.720	49:20.72	left it as the uh selection icon, but uh
+2964.319	49:24.32	for some reason we didn't. I don't
+2966.000	49:26.00	remember why. Um, but most people never
+2969.040	49:29.04	You could also grow this and use this as
+2970.480	49:30.48	your primary map if you wanted to. Some
+2972.480	49:32.48	people felt more comfortable with this
+2973.760	49:33.76	map, but not many. Most people brought
+2975.760	49:35.76	this up, used it basically just for the
+2977.520	49:37.52	icons on the side. to uh apply to the
+2980.079	49:40.08	bigger map and you can zoom in and use
+2981.760	49:41.76	the same controls and get a detailed
+2983.040	49:43.04	area. I can actually toggle between so I
+2985.200	49:45.20	can look at where the highest crime
+2987.040	49:47.04	areas are in relation to the buildings
+2988.480	49:48.48	and structures there. Um these are
+2991.680	49:51.68	graphs, boring graphs. These are uh
+2994.480	49:54.48	population cohort graphs. In this model,
+2997.359	49:57.36	what you do over time is uh in a lot of
+2999.520	49:59.52	ways represented here in terms of to
+3002.319	50:02.32	bring certain industries into my city.
+3004.480	50:04.48	There's actually a national economic
+3006.160	50:06.16	model in the game. So around the turn of
+3008.240	50:08.24	the century, steel is a big national
+3010.960	50:10.96	demand industry. So are textiles.
+3013.680	50:13.68	Prochemical kicks in around uh the 50s.
+3017.040	50:17.04	Uh media electronics kick in a little
+3019.680	50:19.68	bit later. So if you want your city to
+3023.280	50:23.28	grow on the industrial base, you
+3024.960	50:24.96	actually have to have the right kind of
+3026.720	50:26.72	uh labor force. So for instance, if I
+3028.640	50:28.64	want to get heavily into electronics, I
+3030.160	50:30.16	have to have a pretty high education
+3031.760	50:31.76	level. This is the education level
+3033.599	50:33.60	currently in my city broken down by age
+3036.400	50:36.40	grouping. Um I address this actually by
+3039.119	50:39.12	building schools, museums, libraries.
+3041.920	50:41.92	Each one of those buildings applies to a
+3043.920	50:43.92	different uh age range on this bar
+3045.520	50:45.52	graph. If I build primary schools, it's
+3047.440	50:47.44	going to boost the bars on the 0ero to
+3049.760	50:49.76	10 year old range. Over time, these bars
+3052.480	50:52.48	obviously scroll to the side. The area
+3054.480	50:54.48	between 20 years old and 55 years old is
+3056.640	50:56.64	considered the workforce. That's
+3058.160	50:58.16	averaged into this EQ here. that average
+3061.280	51:01.28	is going to affect these uh industrial
+3066.160	51:06.16	how many of these industries will come
+3067.200	51:07.20	into your city and how fastly how fast.
+3069.680	51:09.68	So this is the kind of problem we were
+3072.240	51:12.24	trying to get the user to confront in
+3073.520	51:13.52	this game. Long-term planning issues
+3078.240	51:18.24	like in Sim Earth on the very bottom
+3080.000	51:20.00	here. So, we've gone through the tools
+3081.520	51:21.52	up here, display items there, additional
+3083.920	51:23.92	windows and clutter there, and the
+3086.160	51:26.16	bottom
+3087.839	51:27.84	we have filters. This uh information
+3092.480	51:32.48	here, information window here was too
+3094.960	51:34.96	complex for certain uh tactical things
+3097.760	51:37.76	that the users were trying to do. So,
+3098.960	51:38.96	these basically allow the user to turn
+3100.480	51:40.48	off parts of the data that are being
+3102.960	51:42.96	seen.
+3104.880	51:44.88	I might just want to see the terrain or
+3106.240	51:46.24	just the road network in isolation. Um,
+3109.200	51:49.20	another major part of this game uh
+3111.599	51:51.60	requires that you build underground
+3112.880	51:52.88	infrastructure. This shows you the
+3114.880	51:54.88	underground infrastructure in the city
+3116.800	51:56.80	where you're building subways, water
+3118.319	51:58.32	manes, and such.
+3121.920	52:01.92	The uh now like like the Gaia and Sim
+3126.400	52:06.40	Earth, we were trying to find a way to
+3127.760	52:07.76	collapse information here to give the
+3129.200	52:09.20	user a very quick thumbnail on how they
+3130.960	52:10.96	were doing. And so we spent a lot of
+3132.880	52:12.88	time building this with limited success.
+3135.599	52:15.60	Um, what this is, it's the newspaper
+3137.599	52:17.60	that you can get in your city. As your
+3138.800	52:18.80	city gets larger, you can actually
+3140.480	52:20.48	subscribe to different newspapers. Each
+3141.920	52:21.92	one has a different slant on the news, a
+3143.599	52:23.60	different layout. Um, but most of what
+3146.960	52:26.96	you see in the newspaper actually is an
+3149.520	52:29.52	output from the simulation model. Uh,
+3151.839	52:31.84	you can actually click on the articles
+3154.079	52:34.08	and it kind of randomly generates an
+3156.720	52:36.72	article trying to randomly describing a
+3159.599	52:39.60	real problem. Um
+3163.280	52:43.28	they also describe uh the current things
+3166.880	52:46.88	that the uh residents are having
+3168.400	52:48.40	problems with. You know like this one
+3169.680	52:49.68	for instance this article is telling us
+3170.880	52:50.88	that we need more power having too many
+3172.240	52:52.24	brownouts. Um this is giving us a sense
+3175.440	52:55.44	of the weather weather model which has
+3176.880	52:56.88	certain inputs. This uh some of the
+3179.280	52:59.28	papers have editorial sections where
+3180.960	53:00.96	basically it's a critique of you and
+3183.280	53:03.28	talking about the major problems you
+3185.520	53:05.52	have to deal with. So right now
+3186.720	53:06.72	education is probably a major problem.
+3188.319	53:08.32	it's probably high on the list of
+3189.440	53:09.44	problems that are bubbling up in the
+3190.640	53:10.64	thing. So, this in essence is another
+3192.559	53:12.56	type of data filter. We're trying to
+3194.079	53:14.08	take all the data maps inside of the
+3195.760	53:15.76	city, collapse them down into a in a way
+3198.559	53:18.56	that most people are familiar with. Most
+3200.079	53:20.08	people find out about the problems in
+3201.440	53:21.44	their city by reading the newspaper. Um,
+3203.839	53:23.84	I only wish that the technology
+3206.400	53:26.40	would have been a lot better so that we
+3207.680	53:27.68	could have made the newspaper much more
+3208.960	53:28.96	interesting to read. What this actually
+3210.240	53:30.24	was was kind of a Mad Libs thing where
+3212.720	53:32.72	we had hundreds of articles like a power
+3214.880	53:34.88	shortage article and we replace strings
+3217.040	53:37.04	like the people and place names and some
+3219.040	53:39.04	adjectives to give it some random uh
+3221.440	53:41.44	most people burned out on this after
+3222.800	53:42.80	about oh two weeks. You know, they'd
+3226.319	53:46.32	read it for two weeks, then they'd play
+3227.520	53:47.52	the game without it entirely. So, it was
+3229.599	53:49.60	kind of limited there. Um,
+3233.200	53:53.20	one of the things I noticed when we were
+3234.720	53:54.72	working on the original Sim City, we had
+3237.119	53:57.12	basically you build the city. We had all
+3238.400	53:58.40	these tools. We had bulldozer, uh,
+3241.040	54:01.04	roads, zones. I show it to people and
+3243.119	54:03.12	said, "Look, here you can build the
+3244.000	54:04.00	city. It's really cool." The first thing
+3245.440	54:05.44	they would do is they would find the
+3246.880	54:06.88	bulldozer because it was the first tool
+3248.160	54:08.16	and they'd try it, you know,
+3250.960	54:10.96	and generally it'd blow something up,
+3252.240	54:12.24	you know, you'd be bulldozing a building
+3253.520	54:13.52	and they'd say, "Hey, that's cool." And
+3254.880	54:14.88	then they'd start attacking the city
+3255.920	54:15.92	with a bulldozer like this.
+3258.800	54:18.80	And so they would sit there. It was kind
+3260.640	54:20.64	of like poking an ant colony with a
+3261.839	54:21.84	stick to see what happens. They had to
+3264.000	54:24.00	perturb the system to get a sense of,
+3266.319	54:26.32	you know, is it fragile or not? Or is
+3267.760	54:27.76	this a painting or is it really a
+3269.040	54:29.04	simulation? So it was like they were
+3270.720	54:30.72	testing the validity validity of the
+3272.640	54:32.64	simulation by poking at it and watching
+3274.559	54:34.56	it break. Um, and this is almost
+3277.760	54:37.76	universal kids and adults. Uh, and this
+3279.920	54:39.92	is just with a bulldozer. So we decided
+3283.359	54:43.36	to name that the Calvin syndrome. you
+3285.280	54:45.28	know, these people wanted to go in and
+3286.960	54:46.96	cause, you know, wreck havoc on these
+3288.800	54:48.80	things, especially if they didn't build
+3290.160	54:50.16	it. You know, the these are cities I
+3291.599	54:51.60	built and I labored over for hours and
+3292.800	54:52.80	hours. Look at my beautiful city. Oh,
+3294.240	54:54.24	I'll destroy it for you. And so, that's
+3296.800	54:56.80	when we put in the disaster menu. Um, so
+3299.920	54:59.92	in this one, you know, one of the things
+3301.280	55:01.28	a lot of people like to do is they'll
+3302.400	55:02.40	spend hours building up a city and then
+3304.160	55:04.16	kind of like the uh semant random mode
+3306.640	55:06.64	or experimental mode, except in this
+3308.000	55:08.00	case, I can, you know, bring some
+3309.280	55:09.28	disaster on my city. I can call in a
+3311.200	55:11.20	tornado
+3312.800	55:12.80	um or an earthquake
+3315.760	55:15.76	or a monster or everything all at once.
+3321.280	55:21.28	Usually, you know, these are fairly
+3323.119	55:23.12	major. They destroy the city, but people
+3324.880	55:24.88	just kind of like seeing the thing go
+3326.160	55:26.16	down in ruins. It's like, you know, uh I
+3328.400	55:28.40	guess Nero and the fiddle or whatever.
+3330.559	55:30.56	The uh
+3332.640	55:32.64	we did this in the original Sim City. We
+3334.160	55:34.16	kind of expanded on it in this one. We
+3336.559	55:36.56	uh one of the things you can do before
+3338.160	55:38.16	you get into the really full-blown plan
+3340.079	55:40.08	out the city in every little detail is
+3342.160	55:42.16	that you can play scenarios um which are
+3344.480	55:44.48	pre-built cities with certain disasters
+3346.559	55:46.56	or problems that you have to solve. Um
+3349.200	55:49.20	this is one of the ones I did that I
+3352.160	55:52.16	like because uh my home burned down in
+3354.640	55:54.64	Oakland Hills fire several years ago and
+3356.960	55:56.96	that was about uh a little about a year
+3359.520	55:59.52	and a half before we released this. So I
+3362.400	56:02.40	decided I'd put in the Oakland Hills
+3363.680	56:03.68	scenario and I put in my house. This is
+3365.119	56:05.12	my house up here on the hill. That's
+3366.880	56:06.88	where it really was. But now I can play
+3368.799	56:08.80	the game and I can go and I can dispatch
+3370.240	56:10.24	all the firefighters to save my house
+3372.960	56:12.96	and let the rest of Oakland burn down.
+3376.640	56:16.64	But uh
+3379.280	56:19.28	so at this level, Sim City becomes very
+3381.200	56:21.20	tactical. Um the time scale actually
+3384.079	56:24.08	freezes to real time for the most part.
+3386.799	56:26.80	Uh the uh
+3390.799	56:30.80	it's really funny the disaster thing
+3392.400	56:32.40	because I think people have to see how
+3395.599	56:35.60	fragile a system is before they really
+3398.240	56:38.24	appreciate
+3400.079	56:40.08	um building it. When people would
+3402.400	56:42.40	destroy the cities after I showed it to
+3404.000	56:44.00	them, they'd burn out on that usually
+3405.359	56:45.36	after about half an hour. They'd, you
+3406.559	56:46.56	know, blow them up, burn them down, hit
+3408.079	56:48.08	them with an earthquake. Then they'd
+3409.680	56:49.68	start rebuilding the city and they'd
+3411.119	56:51.12	start realizing how much more
+3412.880	56:52.88	interesting that was. It's almost like
+3414.319	56:54.32	they had to get the destruction out of
+3415.680	56:55.68	their system first before they
+3417.680	56:57.68	appreciated, you know, that part. And
+3419.359	56:59.36	then once they started building the
+3420.559	57:00.56	city, they had invested so much time in
+3422.960	57:02.96	building it. Some people would spend 10,
+3424.400	57:04.40	20 hours building one city that they
+3426.319	57:06.32	really empathized with it. You know,
+3427.599	57:07.60	then when the uh when the earthquake hit
+3430.480	57:10.48	randomly, you know, because they do
+3431.599	57:11.60	happen randomly also, they would say,
+3433.920	57:13.92	you know, oh, I've been hit by an
+3434.960	57:14.96	earthquake, you know, they wouldn't say
+3435.920	57:15.92	my my city's been hit by an earthquake.
+3437.359	57:17.36	They'd really identify and say, I've
+3438.880	57:18.88	been hit by the earthquake. Um
+3441.839	57:21.84	on this side we I think we did a pretty
+3444.079	57:24.08	good job whereas the sim earth was uh
+3446.400	57:26.40	too hard too complex very difficult for
+3448.799	57:28.80	the users to understand the conceptual
+3450.319	57:30.32	mapping of the simulation and sim ant
+3453.040	57:33.04	was too easy. Um this was kind of the
+3455.839	57:35.84	just right in terms of what I think the
+3458.160	57:38.16	uh complexity of the simulation turned
+3459.599	57:39.60	out and the visualization of it. Not
+3462.319	57:42.32	doing too good saving my house here but
+3464.319	57:44.32	uh the uh the only real criticism we got
+3467.359	57:47.36	from this was more from the educational
+3468.880	57:48.88	side. A lot of people, a lot of
+3470.240	57:50.24	educators use these in schools primarily
+3473.119	57:53.12	uh K through 12. And most of the
+3476.480	57:56.48	educators wanted in this game the model
+3478.559	57:58.56	to be more explicit. They wanted to know
+3480.000	58:00.00	the algorithms for why crime happens,
+3482.160	58:02.16	what causes traffic, what causes
+3483.680	58:03.68	pollution. Um
+3486.480	58:06.48	and perhaps, you know, it really it
+3489.200	58:09.20	needs a different design. I'm thinking
+3490.480	58:10.48	that, you know, we were really focusing
+3491.839	58:11.84	here on maintaining the illusion of
+3493.119	58:13.12	reality with things like the newspapers
+3494.960	58:14.96	and collapsing all the data into one
+3496.480	58:16.48	display. And in some sense uh that
+3499.520	58:19.52	requires almost a more structural view
+3501.119	58:21.12	of the system more like Sim Earth had.
+3503.599	58:23.60	Uh so this is again one of these things
+3505.920	58:25.92	where you have these two things in
+3506.960	58:26.96	opposition. Uh
+3509.839	58:29.84	this is most of what I wanted to show
+3511.599	58:31.60	you. Um I'd like to open it up just to
+3513.599	58:33.60	questions and get a little more
+3515.520	58:35.52	interactive at this point. Uh
+3521.119	58:41.12	teaches those things that are missing
+3522.559	58:42.56	from
+3525.520	58:45.52	models that are
+3528.640	58:48.64	Oh,
+3530.319	58:50.32	can you tell me about courseware that
+3531.760	58:51.76	people have developed that teach those
+3533.440	58:53.44	things that the educators want to know
+3535.760	58:55.76	about?
+3536.559	58:56.56	Yeah. Um you're talking about uh I
+3538.720	58:58.72	assume like hard copy as opposed to in
+3540.400	59:00.40	software. Yeah. Well, we have for each
+3542.160	59:02.16	one of our products, we have what's
+3543.280	59:03.28	called a teacher edition and we have
+3545.119	59:05.12	lesson manuals for each one which
+3547.359	59:07.36	generally try to take the programs
+3548.640	59:08.64	through bite-sized chunks, usually
+3550.160	59:10.16	something that can be accomplished in a
+3551.359	59:11.36	30-inut time period. So, they students
+3554.400	59:14.40	might concentrate on mapping in one time
+3556.160	59:16.16	period or traffic in another time
+3558.160	59:18.16	period. And then it would be related to
+3559.760	59:19.76	a social studies course. One of the
+3561.440	59:21.44	difficulties that educators have had
+3562.799	59:22.80	with these products is that we've
+3564.400	59:24.40	primarily been going at these with an
+3566.400	59:26.40	interdisciplinary approach. Um and so
+3569.599	59:29.60	there's not always an appropriate
+3570.880	59:30.88	classroom to teach these subjects in. It
+3573.280	59:33.28	usually gets lumped into either the
+3574.559	59:34.56	computer science curriculum or social
+3576.160	59:36.16	studies or in some cases earth science
+3578.880	59:38.88	is becoming you know lower and lower
+3580.400	59:40.40	grade levels and sim is a little more
+3582.720	59:42.72	but nobody takes ant behavior you know
+3585.760	59:45.76	even though there a lot of valuable
+3586.799	59:46.80	lessons to be learned there but uh
+3589.599	59:49.60	that's kind of the other one of the
+3591.280	59:51.28	other hurdles I think we're hitting in
+3592.640	59:52.64	the education but you know it is being
+3594.160	59:54.16	used.
+3595.359	59:55.36	Other questions? Yeah,
+3600.160	1:00:00.16	you talked a couple times about trying
+3602.079	1:00:02.08	things out on groups before you put it
+3604.559	1:00:04.56	into the final um final design that you
+3607.280	1:00:07.28	released. How did you structure those
+3608.960	1:00:08.96	trials? Who did you use? What kinds of
+3611.200	1:00:11.20	things did you do? What did you watch
+3612.480	1:00:12.48	for?
+3614.000	1:00:14.00	Very very informally and we've tried a
+3615.920	1:00:15.92	lot of things. Um as we've gotten bigger
+3617.760	1:00:17.76	and we have some money in the bank, we
+3618.880	1:00:18.88	can do real focus groups now. Um, we've
+3621.680	1:00:21.68	started doing that both uh toward the
+3623.760	1:00:23.76	end of a product to get a sense of how
+3625.359	1:00:25.36	users would view this, but also at the
+3628.000	1:00:28.00	beginning of the product before we've
+3629.040	1:00:29.04	done any code development and presenting
+3630.480	1:00:30.48	them with concepts and artist sketches.
+3632.559	1:00:32.56	Um, we've avoided, I think, some costly
+3634.480	1:00:34.48	blenders that way. But most of what we
+3637.119	1:00:37.12	do, and I'd say the most value comes
+3638.480	1:00:38.48	from informal testing, showing new
+3640.160	1:00:40.16	people. Uh, I've got a nine-year-old
+3642.559	1:00:42.56	daughter. I show her all the time. Her
+3644.000	1:00:44.00	friends come in, I show them, I show it
+3646.000	1:00:46.00	to adults. To me, I kind of look at the
+3648.319	1:00:48.32	uh the spectrum between kids and adults,
+3650.160	1:00:50.16	how they relate to it. And so, in some
+3652.079	1:00:52.08	sense, we're targeting the demographic
+3653.440	1:00:53.44	with these products. And we found that,
+3655.280	1:00:55.28	you know, we kind of learned that lesson
+3656.319	1:00:56.32	on Sim Ant that we might have had a
+3658.079	1:00:58.08	really fun game, but if we target the
+3659.280	1:00:59.28	wrong demographic, uh commercially, it
+3662.240	1:01:02.24	might not be the success it could be. Um
+3664.160	1:01:04.16	or we might have taken different design
+3665.760	1:01:05.76	paths had we known what the real
+3667.119	1:01:07.12	demographic was. So, one of the things
+3669.839	1:01:09.84	we try to identify early is the
+3671.520	1:01:11.52	demographic we're targeting. And then we
+3673.680	1:01:13.68	get into gameplay issues and the
+3676.079	1:01:16.08	interface issues in terms of what
+3677.359	1:01:17.36	confuses somebody that seems to be a lot
+3679.920	1:01:19.92	easier. I can show that to somebody in
+3681.119	1:01:21.12	our accounting department who doesn't
+3682.240	1:01:22.24	even like games and you know I can spend
+3684.559	1:01:24.56	10 minutes and if I can't get them to
+3685.839	1:01:25.84	figure it out I know there's a problem.
+3687.599	1:01:27.60	Um generally the kids will sit there and
+3689.680	1:01:29.68	they'll figure it out through trial and
+3691.040	1:01:31.04	error. You know they have the patience
+3692.319	1:01:32.32	and they kind of enjoy the failure but
+3694.799	1:01:34.80	uh the adults really are a good test for
+3696.559	1:01:36.56	that you know.
+3700.000	1:01:40.00	Yeah.
+3702.319	1:01:42.32	you.
+3705.280	1:01:45.28	Hi. Um, hi.
+3706.720	1:01:46.72	So, you use you say we here and I guess
+3709.839	1:01:49.84	I'm interested in a little more about,
+3712.240	1:01:52.24	you know, how you work with your various
+3714.720	1:01:54.72	colleagues, you know, how you set up the
+3717.440	1:01:57.44	group. Do you have an ant expert? You
+3719.359	1:01:59.36	know what,
+3721.119	1:02:01.12	you know, what what's the team like?
+3723.280	1:02:03.28	Well, generally on all these products,
+3725.680	1:02:05.68	I've done the research because that's
+3726.880	1:02:06.88	the part I really enjoy. Um, it's
+3730.079	1:02:10.08	evolved over time. you know, the the
+3731.520	1:02:11.52	kind of projects I'm doing now involve
+3733.200	1:02:13.20	bigger teams. Uh I'm doing very little
+3735.520	1:02:15.52	if any coding. Um on the current
+3737.680	1:02:17.68	projects I'm working on, I'm usually
+3739.119	1:02:19.12	doing conceptual coding or working out
+3740.880	1:02:20.88	simulator tricks, things like that. Uh
+3743.440	1:02:23.44	on most of these projects I've shown
+3744.559	1:02:24.56	you, I wrote about half the code in the
+3745.760	1:02:25.76	product. So I was heavily involved in
+3747.920	1:02:27.92	all the details. I'm still trying to be
+3749.359	1:02:29.36	involved on the design side. Um on these
+3752.880	1:02:32.88	projects, each one of these I shown you,
+3755.040	1:02:35.04	Sim Earth, Sim Ant, and Sim City, it was
+3757.440	1:02:37.44	me and one other person in a very close
+3759.119	1:02:39.12	collaboration. um with Sim Earth and Sim
+3761.920	1:02:41.92	City, it was the same person uh for both
+3764.480	1:02:44.48	those projects. Um most of it really was
+3767.760	1:02:47.76	through discussion with the other
+3769.119	1:02:49.12	person. You know, I'd come up with an
+3770.160	1:02:50.16	idea, he'd tell me what a terrible idea
+3771.760	1:02:51.76	it was, he'd come up with an idea, we'd
+3774.079	1:02:54.08	end up with some compromise in between,
+3775.839	1:02:55.84	and that was pretty well targeted toward
+3778.240	1:02:58.24	the final solution, except in a couple
+3779.680	1:02:59.68	cases. If we couldn't figure it out
+3780.960	1:03:00.96	between ourselves, and it wasn't an
+3782.160	1:03:02.16	obvious um solution, that's when we
+3784.799	1:03:04.80	would start showing it to people. We'd
+3786.079	1:03:06.08	both kind of broaden the discussion with
+3788.319	1:03:08.32	more people. Um, that process is
+3790.720	1:03:10.72	evolving as these games get more
+3792.160	1:03:12.16	complex. The current games we're working
+3793.359	1:03:13.36	on are far more complex than what I've
+3795.039	1:03:15.04	shown you today. Um, so now we're into a
+3798.160	1:03:18.16	design process that usually involves
+3800.640	1:03:20.64	three or four, five people, but
+3803.359	1:03:23.36	depending on whose project it is, there
+3804.720	1:03:24.72	has to be one person with the X on their
+3806.799	1:03:26.80	back that's going to call the shots. So,
+3808.319	1:03:28.32	you might have a group discussion over
+3810.319	1:03:30.32	is this icon blue or red or is this game
+3812.880	1:03:32.88	about ants or planets, but some person
+3815.119	1:03:35.12	has got to be pulling that thing
+3816.079	1:03:36.08	through. I've never seen a product
+3817.200	1:03:37.20	design through a committee that came out
+3819.680	1:03:39.68	well. You really have to have one
+3820.880	1:03:40.88	vision, I think, behind it. Um, and it's
+3823.920	1:03:43.92	really hard to communicate that vision.
+3825.359	1:03:45.36	I spend a lot of my time time trying to
+3827.280	1:03:47.28	do that. I have this idea in the back of
+3828.720	1:03:48.72	my head about why it would be so cool to
+3830.559	1:03:50.56	have a simulation of a thunderstorm and
+3832.559	1:03:52.56	what it would look like and what the
+3833.920	1:03:53.92	visuals would be like. And this is a
+3836.079	1:03:56.08	real example. I go around explaining
+3837.599	1:03:57.60	this to people and they stare at me with
+3838.720	1:03:58.72	a blank stare, you know, because I'm
+3840.480	1:04:00.48	seeing these things in my head, these
+3841.599	1:04:01.60	elaborate threedimensional displays and
+3843.280	1:04:03.28	these I kind of know what the simulation
+3844.799	1:04:04.80	would be and the kind of expected
+3846.240	1:04:06.24	emergent behavior coming out of the
+3847.760	1:04:07.76	system. I just cannot convey that to
+3850.240	1:04:10.24	somebody to the point where they're
+3852.079	1:04:12.08	going to drop a half million dollars on
+3853.599	1:04:13.60	it to develop a game. Um, luckily I'm in
+3856.160	1:04:16.16	the point where I can kind of push it
+3857.039	1:04:17.04	through and make it happen, you know,
+3858.240	1:04:18.24	just because they'll trust me on it. But
+3860.799	1:04:20.80	I think uh in our industry that's kind
+3863.599	1:04:23.60	of a really big issue. you have uh on
+3866.079	1:04:26.08	the financial side, people want control,
+3868.000	1:04:28.00	they want predictability, they don't
+3869.760	1:04:29.76	know what you're talking about, but you
+3870.960	1:04:30.96	really all have to have one person with
+3872.720	1:04:32.72	that idea all the way through from form
+3875.680	1:04:35.68	to style to mechanics to plumbing about
+3878.640	1:04:38.64	how to make that idea happen. So yeah,
+3884.400	1:04:44.40	who are your customers? What are they
+3886.160	1:04:46.16	like? And I'm talking about the people
+3887.839	1:04:47.84	who buy the product initially and then
+3889.920	1:04:49.92	also the ones who are repeat or um
+3892.480	1:04:52.48	really committed users. I'm thinking of
+3895.039	1:04:55.04	demographics and also other
+3896.480	1:04:56.48	characteristics of these customers.
+3898.880	1:04:58.88	Well, obviously it varies by product. We
+3900.319	1:05:00.32	have other products that I haven't shown
+3901.359	1:05:01.36	today which are more kid-based. We have
+3903.359	1:05:03.36	Sim Town which is kind of like Sim City.
+3904.960	1:05:04.96	Yeah, I'm thinking say for the Sim Sim
+3906.480	1:05:06.48	City 2000 that we just
+3907.760	1:05:07.76	like the kind of things I've shown
+3908.559	1:05:08.56	today. Generally, our demographic um
+3912.000	1:05:12.00	falls between about 20 and 35 or 40.
+3915.760	1:05:15.76	It's actually surprisingly old for
+3917.599	1:05:17.60	computer games. Uh when we do focus
+3920.160	1:05:20.16	groups um we'll invite people who are
+3923.599	1:05:23.60	registered customers. So we recently had
+3926.319	1:05:26.32	a focus group for the next version of
+3927.599	1:05:27.60	Sim City, the next generation we're
+3928.799	1:05:28.80	working on and we pulled kind of a
+3930.319	1:05:30.32	random sampling of Sim City 2000
+3932.079	1:05:32.08	customers. The age ranges were
+3934.000	1:05:34.00	surprisingly high. I mean there were
+3935.200	1:05:35.20	some people in there that were 60 65
+3936.720	1:05:36.72	years old that were avid gamers which
+3939.200	1:05:39.20	kind of surprised me. There's uh in the
+3941.119	1:05:41.12	game field basically there almost three
+3944.319	1:05:44.32	major areas. There's kind of the kids
+3947.039	1:05:47.04	early education market and that's
+3949.359	1:05:49.36	primarily the purchase decision there is
+3951.520	1:05:51.52	adult-based. I mean the parent based.
+3953.440	1:05:53.44	The parent decides, oh, you know, little
+3954.960	1:05:54.96	Tommy should learn math. I'll buy him
+3956.799	1:05:56.80	Math Blaster or, you know, I want uh
+3959.760	1:05:59.76	Susie to learn how to read. I'll buy
+3961.119	1:06:01.12	this. Then you get into from about the
+3964.079	1:06:04.08	10 or 12 to 16, it's kind of what we
+3967.760	1:06:07.76	call Nintendo Gulch. Okay. This is the
+3970.559	1:06:10.56	cart machine territory. this is where
+3972.160	1:06:12.16	the kids are buying Nintendo, Sega,
+3974.480	1:06:14.48	Sony, all that stuff. They're driving
+3976.799	1:06:16.80	the purchase decision. You know, they
+3978.559	1:06:18.56	want, you know, Hacken Slash 3 and
+3980.799	1:06:20.80	they're the ones that'll actually spend
+3981.920	1:06:21.92	their money on Hacken Slash 3 in that
+3983.599	1:06:23.60	area. And then you have kind of the
+3985.920	1:06:25.92	adult hardcore gamer market. But across
+3989.119	1:06:29.12	that whole thing in kind of a broad thin
+3990.799	1:06:30.80	veneer is the PC gaming market, which we
+3993.599	1:06:33.60	actually have, you know, a lot of 8 10
+3995.599	1:06:35.60	year olds playing Sim City. you know,
+3997.599	1:06:37.60	either their parent bought it for them
+3998.960	1:06:38.96	or they wanted to buy it or they got it
+4001.119	1:06:41.12	from their friend or whatever. But, you
+4002.559	1:06:42.56	know, we also have the 15-year-olds who
+4004.079	1:06:44.08	aren't into the hacken slash that are
+4005.520	1:06:45.52	buying it and playing it.
+4006.720	1:06:46.72	Yeah. I guess I guess what I'm getting
+4008.000	1:06:48.00	at is what do you know about those that
+4011.520	1:06:51.52	rather you have a rather unusual or
+4013.680	1:06:53.68	different game?
+4015.200	1:06:55.20	Yeah. Sim City, what do you know about
+4017.119	1:06:57.12	them besides their age and their sex?
+4021.119	1:07:01.12	Oh, you mean how much information have
+4022.480	1:07:02.48	we collected on them?
+4023.440	1:07:03.44	Yeah. And what what really what
+4024.640	1:07:04.64	distinguishes the person who gets this
+4026.000	1:07:06.00	and uses it from another 65year-old or
+4028.240	1:07:08.24	30-year-old who isn't?
+4029.520	1:07:09.52	Oh, I see what you're saying. Well, um,
+4034.000	1:07:14.00	right now the computer game market is
+4036.480	1:07:16.48	still what I would call kind of the
+4037.680	1:07:17.68	hobbyist market. So, these are people
+4039.280	1:07:19.28	that, you know, in some sense have some
+4040.799	1:07:20.80	time on their hands, are willing to
+4042.000	1:07:22.00	devote it to a hobby, and they've
+4043.520	1:07:23.52	decided that hobby is computers. Um,
+4046.640	1:07:26.64	that's kind of what how our the PC
+4048.319	1:07:28.32	gaming industry has grown, which is a
+4050.079	1:07:30.08	very different model than from the
+4051.599	1:07:31.60	Nintendo industry. Nintendo industry has
+4053.039	1:07:33.04	gone in and decimated the model building
+4055.680	1:07:35.68	hobby toy industry is what it's done. Uh
+4059.520	1:07:39.52	but the people who buy this you we've
+4061.280	1:07:41.28	actually done a lot of things where we
+4062.400	1:07:42.40	ask them you know what kind of game what
+4063.680	1:07:43.68	other games do you have and we look at
+4065.119	1:07:45.12	the intersections between our games and
+4066.480	1:07:46.48	the other games and we haven't you know
+4069.760	1:07:49.76	come to any really firm conclusions
+4071.280	1:07:51.28	actually if anything our games have a
+4073.760	1:07:53.76	much broader I think demographic than
+4075.520	1:07:55.52	most games. We tend to have a lot of
+4077.280	1:07:57.28	players who only play two or three games
+4079.520	1:07:59.52	and this is one of them or these kind of
+4081.760	1:08:01.76	games are the only games that appeal to
+4083.039	1:08:03.04	them and it's just the fact that there
+4084.559	1:08:04.56	aren't more of them out there that keeps
+4085.839	1:08:05.84	them from becoming a hardcore gamer. So,
+4088.559	1:08:08.56	uh, and we get a lot of kids like that,
+4091.119	1:08:11.12	too, who, you know, maybe don't play
+4092.240	1:08:12.24	that many PC games, but they'll play Sim
+4094.240	1:08:14.24	Ant because they think it's cool because
+4095.839	1:08:15.84	their parents gave it to them, maybe. I
+4097.279	1:08:17.28	don't know.
+4098.799	1:08:18.80	Yeah.
+4099.600	1:08:19.60	Uh, what projects are you working on
+4101.040	1:08:21.04	now? And, uh, if you don't if you'd
+4102.480	1:08:22.48	rather not talk about that, uh, what
+4104.319	1:08:24.32	projects or models uh, had you
+4106.000	1:08:26.00	considered before that were kind of
+4107.359	1:08:27.36	interesting, but you didn't do?
+4108.960	1:08:28.96	You mean like system what systems have I
+4110.719	1:08:30.72	considered modeling?
+4111.839	1:08:31.84	Right.
+4112.640	1:08:32.64	Oh, god. and also what systems are you
+4115.600	1:08:35.60	currently working on if you if you could
+4117.279	1:08:37.28	talk about them.
+4118.239	1:08:38.24	Okay. Well, one thing we're working on
+4120.319	1:08:40.32	is a uh we've been kind of interested in
+4123.359	1:08:43.36	our company for a long time about the
+4125.040	1:08:45.04	idea of data portability. Um really let
+4128.880	1:08:48.88	me back up just a little bit here and
+4130.000	1:08:50.00	this might be a little bit more of an
+4131.199	1:08:51.20	answer than you were looking for, but uh
+4133.839	1:08:53.84	most of the game industry right now is
+4135.440	1:08:55.44	built on kind of the movie model. So you
+4137.279	1:08:57.28	spend a lot of money developing one big
+4138.640	1:08:58.64	title. You come out with it. You
+4139.920	1:08:59.92	advertise it. It either, you know, goes
+4141.520	1:09:01.52	or it dies. And then you do the next one
+4143.679	1:09:03.68	separate. Except, you know, for sequels.
+4145.759	1:09:05.76	There's the one consistent genre that
+4147.759	1:09:07.76	does better than any other genre in the
+4149.199	1:09:09.20	game industry is sequels. Um,
+4152.480	1:09:12.48	now what we've tried to do and we're
+4154.799	1:09:14.80	kind of working on slowly over time is
+4157.120	1:09:17.12	to build our games more as a hobby model
+4160.960	1:09:20.96	where people buy and collect things, but
+4163.759	1:09:23.76	they relate to the last things they
+4164.960	1:09:24.96	collected. You know, it's like a train
+4166.000	1:09:26.00	set. you build this train set and
+4167.759	1:09:27.76	people, some people get into the
+4169.199	1:09:29.20	building the hills and the cliffs and
+4170.400	1:09:30.40	the mountains and the trees really
+4171.520	1:09:31.52	detailed. They could care less about the
+4173.199	1:09:33.20	train. Other people get into the village
+4174.880	1:09:34.88	or the track switching and the
+4176.239	1:09:36.24	scheduling. Everybody can kind of come
+4177.920	1:09:37.92	into that, take their particular slant
+4180.159	1:09:40.16	on it, their interest, and focus in that
+4181.920	1:09:41.92	area in great detail. Um, I'd like to
+4184.080	1:09:44.08	see the game industry kind of evolve
+4185.359	1:09:45.36	that way. And part of that is I want the
+4187.279	1:09:47.28	games to actually be able to uh have
+4189.040	1:09:49.04	persistent data that can move from one
+4190.400	1:09:50.40	game to another or have a large data set
+4192.400	1:09:52.40	that I can reuse in different ways. Um,
+4195.120	1:09:55.12	let me show you something real quick
+4196.400	1:09:56.40	here, which is kind of along those
+4198.560	1:09:58.56	lines. Just this is just a kind of a
+4200.400	1:10:00.40	little This is one of the things I'm
+4201.600	1:10:01.60	working on, by the way, but it's uh
+4205.040	1:10:05.04	it'll give you some sense of what I'm
+4207.440	1:10:07.44	talking about. Um,
+4210.880	1:10:10.88	this is a game I call Dollhouse.
+4215.360	1:10:15.36	And if this looks familiar, it's because
+4217.040	1:10:17.04	I've just loaded a Sim City file into
+4218.719	1:10:18.72	here. Okay, so what we're seeing is a
+4219.760	1:10:19.76	Sim City file. But now at this point, I
+4221.679	1:10:21.68	can actually zoom down to the street
+4223.199	1:10:23.20	level.
+4224.159	1:10:24.16	this zoom in here. This little area
+4226.239	1:10:26.24	right there by the street is what I'm
+4227.600	1:10:27.60	zooming into. I can keep zooming in and
+4230.000	1:10:30.00	now I can get a little person. This is
+4231.520	1:10:31.52	me. I'm actually controlling this person
+4233.199	1:10:33.20	with a puppet. I can wave and walk
+4235.360	1:10:35.36	around and do things. Um
+4239.040	1:10:39.04	I can actually walk anywhere in the city
+4240.640	1:10:40.64	here. Uh we haven't don't have a full
+4243.600	1:10:43.60	database in this, but I have a database
+4245.679	1:10:45.68	for all the roads and the terrain. Um,
+4248.880	1:10:48.88	it's very feasible for us to put a
+4250.880	1:10:50.88	database in for every building in Sim
+4252.320	1:10:52.32	City so that I could actually walk
+4254.320	1:10:54.32	anywhere in the city I've created and uh
+4256.239	1:10:56.24	into any building. And so the tools in
+4259.440	1:10:59.44	this game are more architectural tools.
+4262.719	1:11:02.72	So uh I can let's see real quickly. I'll
+4264.719	1:11:04.72	build a foundation here. Oops. Yeah,
+4267.920	1:11:07.92	there we go. Um this is a wall tool. I
+4270.080	1:11:10.08	have different wall styles.
+4272.239	1:11:12.24	So, what we're trying to do here is
+4273.679	1:11:13.68	designing kind of like a little CAD
+4275.280	1:11:15.28	program that a a 10-year-old could use,
+4277.199	1:11:17.20	for instance. So, very simple tools,
+4279.679	1:11:19.68	kind of like you would build a little
+4280.880	1:11:20.88	dollhouse. Um,
+4284.239	1:11:24.24	so I just made a really quick little
+4287.120	1:11:27.12	quick and dirty architecture here. Um,
+4289.600	1:11:29.60	we also have landscaping tools. So, part
+4291.280	1:11:31.28	of this game is, you know, planning my
+4292.880	1:11:32.88	yard. Um, we've played around with some
+4295.440	1:11:35.44	L systems for generating the plants in
+4297.840	1:11:37.84	real time, which a little too slow,
+4299.920	1:11:39.92	actually.
+4302.000	1:11:42.00	So, these are windows. Um, I can zoom
+4304.239	1:11:44.24	into the house.
+4307.280	1:11:47.28	So, this right now is not much of a
+4309.280	1:11:49.28	defined game. Um, but this is almost
+4311.440	1:11:51.44	more of what I would consider a hobby. I
+4314.080	1:11:54.08	could take a city that I built in Sim
+4315.520	1:11:55.52	City and now I can come live in it. I
+4317.040	1:11:57.04	can actually, you know, stake a claim. I
+4318.640	1:11:58.64	can uh build my house and I can decorate
+4321.120	1:12:01.12	it and invite my friends over. We're
+4322.960	1:12:02.96	looking at actually having like a little
+4324.080	1:12:04.08	family model inside of here so that uh
+4327.760	1:12:07.76	there'll be little personality models
+4329.120	1:12:09.12	for these guys. there's behavior
+4331.360	1:12:11.36	embedded in some of these objects. So
+4333.760	1:12:13.76	the cool thing about this game is that
+4336.239	1:12:16.24	almost the entire simulation is data
+4337.760	1:12:17.76	driven at at a local level. Um so for
+4340.960	1:12:20.96	instance I click on an object. Um
+4346.000	1:12:26.00	now what's interesting here is that uh
+4349.440	1:12:29.44	that person in the person's data
+4351.280	1:12:31.28	structure there's no knowledge of any
+4352.960	1:12:32.96	objects in this environment whatsoever.
+4355.440	1:12:35.44	The object itself contains the
+4357.520	1:12:37.52	descriptions of how a person interacts
+4359.040	1:12:39.04	with it and why, what the animation
+4361.120	1:12:41.12	sequence would be and the scheduling. So
+4364.400	1:12:44.40	the this is my person. This is my little
+4366.159	1:12:46.16	avatar. I can also add uh pop in some
+4368.880	1:12:48.88	simulated people that'll walk around and
+4370.880	1:12:50.88	do things. Right now they they're kind
+4372.640	1:12:52.64	of ghosts because they don't know about
+4374.159	1:12:54.16	the walls, but uh they'll walk around,
+4377.760	1:12:57.76	they'll have conversations, some of them
+4378.960	1:12:58.96	will panhandle each other. Um
+4382.080	1:13:02.08	but what's cool is that uh the behavior
+4384.480	1:13:04.48	is entirely distributed in the
+4386.640	1:13:06.64	environment. So a person's in a room,
+4388.480	1:13:08.48	they have certain motivations, needs.
+4389.760	1:13:09.76	They might be hungry, sleepy, lonely,
+4391.360	1:13:11.36	angry. They scan the room for people and
+4394.239	1:13:14.24	objects. And the objects are all kind of
+4395.920	1:13:15.92	advertising, you know, if you're angry,
+4397.520	1:13:17.52	pick up me and throw me. If you're
+4399.199	1:13:19.20	hungry, eat me. You know, and
+4402.880	1:13:22.88	there's the communication there is all
+4404.159	1:13:24.16	data driven. And even the animation, so
+4405.920	1:13:25.92	the animation of these people is done
+4407.360	1:13:27.36	through this kind of component- driven
+4408.640	1:13:28.64	geometry. So they don't have to know how
+4410.640	1:13:30.64	to ride a bike or sit on the toilet. The
+4412.560	1:13:32.56	object tells them how to when they come
+4413.760	1:13:33.76	up and say, "Okay, you know, you're
+4414.960	1:13:34.96	gonna make me less hungry. I'm going to
+4416.719	1:13:36.72	interact with you. What do I do?" The
+4418.000	1:13:38.00	object tells it what to do. The cool
+4419.520	1:13:39.52	thing about this is that we can drop new
+4420.719	1:13:40.72	objects in later. You know, maybe it's
+4422.400	1:13:42.40	network based or maybe it's something
+4424.159	1:13:44.16	else. We can even have tools where the
+4425.920	1:13:45.92	users build these objects. Maybe one
+4427.440	1:13:47.44	person is totally into designing
+4428.480	1:13:48.48	furniture or designing exercise
+4430.320	1:13:50.32	equipment. I don't know what exercise
+4432.080	1:13:52.08	videos. But if we had a tool to where
+4434.159	1:13:54.16	the user could build these things, they
+4435.840	1:13:55.84	could then post them on the net and
+4436.960	1:13:56.96	other people could download them and
+4438.560	1:13:58.56	then the environment gets more rich. And
+4440.400	1:14:00.40	so to me, this is what I want to move
+4442.480	1:14:02.48	towards more of the hobbyist kind of a
+4444.400	1:14:04.40	thing, distributed environment, um, with
+4447.120	1:14:07.12	objects that can move from one game to
+4448.719	1:14:08.72	another. So this might be, you know, one
+4450.320	1:14:10.32	game I'm playing here. I can, this is
+4451.920	1:14:11.92	actually a very similar data structure
+4453.199	1:14:13.20	to Doom. I could be in here in a 3D
+4455.840	1:14:15.84	point of view, you know, shooting the
+4457.520	1:14:17.52	person on the toilet if I wanted to.
+4459.040	1:14:19.04	maybe as a different game player in a
+4460.320	1:14:20.32	different game, but still running off
+4461.600	1:14:21.60	the same server. So, you know, in a way,
+4463.840	1:14:23.84	you could think of this as a graphic mod
+4465.120	1:14:25.12	or something like that. But, uh
+4466.960	1:14:26.96	um what about from person to
+4469.679	1:14:29.68	Yeah, go ahead.
+4471.199	1:14:31.20	Finished.
+4471.920	1:14:31.92	Person to person. You talking about like
+4473.760	1:14:33.76	the information obtained that's
+4475.760	1:14:35.76	contained within the objects, but
+4478.800	1:14:38.80	it can be information I guess in a
+4481.600	1:14:41.60	person, another person that you would
+4483.040	1:14:43.04	want to interact with in the
+4484.320	1:14:44.32	environment. Did you have you looked at
+4486.480	1:14:46.48	any reasons why you would go want to do
+4488.480	1:14:48.48	that or
+4489.280	1:14:49.28	Oh yeah, that I mean that's that's the
+4490.880	1:14:50.88	hard problem.
+4492.080	1:14:52.08	I mean simulating ants is hard enough
+4494.960	1:14:54.96	when you get to people there's really no
+4496.960	1:14:56.96	hope but
+4498.960	1:14:58.96	they use
+4502.640	1:15:02.64	well yeah
+4506.080	1:15:06.08	there are two issues here. You can look
+4508.320	1:15:08.32	at this as a technology. It's not a
+4510.640	1:15:10.64	product right now. Um and there are
+4513.120	1:15:13.12	future directions this could go. I could
+4514.719	1:15:14.72	see this becoming, let's say, a
+4516.159	1:15:16.16	multiplayer
+4517.679	1:15:17.68	network mud kind of a thing. You might
+4520.000	1:15:20.00	have a thousand people playing Sim City
+4521.520	1:15:21.52	from the bottom up. Each person building
+4523.360	1:15:23.36	their own house in a big multi-user
+4525.360	1:15:25.36	space. In which case, that issue is a
+4528.000	1:15:28.00	little less important because most of
+4529.440	1:15:29.44	the people are real people and you're
+4530.800	1:15:30.80	dealing with puppets. As a standalone
+4532.960	1:15:32.96	game, which is probably our our closer
+4536.239	1:15:36.24	target, we have to deal with the problem
+4537.600	1:15:37.60	you're bringing up, which is how do we
+4539.040	1:15:39.04	deal with people to people? And it's
+4541.199	1:15:41.20	hard. I mean, there's just I'm sure
+4542.960	1:15:42.96	Terry can elaborate on that more than I
+4545.600	1:15:45.60	can. But you know, the best thing we can
+4547.520	1:15:47.52	do is prop up a convincing illusion. Uh
+4550.560	1:15:50.56	we don't have to be doing a valid
+4553.520	1:15:53.52	simulation of human personality. What we
+4555.920	1:15:55.92	have to do is we have to put up
+4558.080	1:15:58.08	something that's ambiguous enough to
+4559.920	1:15:59.92	where somebody can read in what they
+4561.440	1:16:01.44	want. Actually, in this thing, what I
+4563.199	1:16:03.20	have right now are people come up and
+4564.159	1:16:04.16	they converse, but you don't hear what
+4565.199	1:16:05.20	they're saying. They just gesture and
+4566.560	1:16:06.56	sometimes they look mad, sometimes they
+4568.000	1:16:08.00	kind of look contemplative. Um it's kind
+4570.719	1:16:10.72	of interesting. uh
+4573.520	1:16:13.52	how much people will read into that.
+4574.800	1:16:14.80	There's this kind of dynamic that we've
+4575.920	1:16:15.92	seen again and again where something
+4577.440	1:16:17.44	happens in Sim City and they said, "Oh,
+4579.360	1:16:19.36	I was running my nuclear reactor near
+4581.040	1:16:21.04	the red line and then there was so much
+4583.040	1:16:23.04	smoke coming out of it. This plane
+4584.159	1:16:24.16	crashed and because of that, this and
+4585.440	1:16:25.44	that happened." And they'll describe
+4586.719	1:16:26.72	this long causal chain of events that I
+4589.120	1:16:29.12	know does not exist. You know, I
+4591.360	1:16:31.36	designed the simulation. I know that
+4592.480	1:16:32.48	there's no linkage between the power
+4593.920	1:16:33.92	output of the power plant, the planes
+4595.360	1:16:35.36	crashing, but they're convinced it
+4596.800	1:16:36.80	exists.
+4597.199	1:16:37.20	They're using it as a medium for telling
+4598.640	1:16:38.64	stories, right? Making up the stories.
+4601.199	1:16:41.20	the micros here.
+4603.600	1:16:43.60	Yeah. They're using it as a medium to
+4605.760	1:16:45.76	tell stories about where they're, you
+4607.760	1:16:47.76	know,
+4608.320	1:16:48.32	using it as a piece of paper to write.
+4609.920	1:16:49.92	Yeah, that's exactly right. You know,
+4611.280	1:16:51.28	this is there's a parallel simulation
+4612.640	1:16:52.64	going on here in the game. Everybody's
+4614.480	1:16:54.48	taking a linear path through this and
+4616.640	1:16:56.64	they're basically most people will
+4618.000	1:16:58.00	attempt to understand things like this
+4619.440	1:16:59.44	with a story. You know, think about I
+4621.199	1:17:01.20	did this then that happened because of
+4622.960	1:17:02.96	that. And so the story becomes kind of
+4624.880	1:17:04.88	their logical connection, their logical
+4628.239	1:17:08.24	reverse engineering of the simulation
+4630.080	1:17:10.08	that they're playing inside of. Um,
+4633.760	1:17:13.76	now the uh on the people's side, I think
+4636.320	1:17:16.32	we can do a lot in this as a product by
+4638.159	1:17:18.16	propping up that illusion of people. You
+4639.600	1:17:19.60	know, again, if this is a dollhouse, uh,
+4642.080	1:17:22.08	we don't want the dolls to be sensient
+4644.640	1:17:24.64	things. We want the dolls to be
+4646.400	1:17:26.40	interesting enough to where I can play
+4648.800	1:17:28.80	games with them. Um, there was actually
+4650.800	1:17:30.80	a really interesting doll that this
+4652.080	1:17:32.08	company came out with. It was Oh, it was
+4653.360	1:17:33.36	a Worlds of Wonder. They had this really
+4654.800	1:17:34.80	cool doll. I've got a couple of them
+4656.000	1:17:36.00	after they went out of business. It's
+4657.120	1:17:37.12	called the Julie doll, but it was like
+4658.560	1:17:38.56	this $250 doll with voice recognition
+4661.040	1:17:41.04	and it said all these things. It had
+4662.640	1:17:42.64	just, you know, a huge amount of ROM
+4664.400	1:17:44.40	with digitized speech in it. And so, you
+4667.120	1:17:47.12	would sit there and try and have stupid
+4668.640	1:17:48.64	conversations with you. And really, it
+4670.080	1:17:50.08	was kind of Eliza, you know, where it
+4671.920	1:17:51.92	had keywords it would recognize and give
+4673.360	1:17:53.36	you these kind of uh non-committal
+4675.199	1:17:55.20	responses. But in the testing of that,
+4677.440	1:17:57.44	well, first of all, it was a $300 doll.
+4678.960	1:17:58.96	Who's going to buy their kid a $300
+4680.640	1:18:00.64	doll? So, it was really more It was
+4682.480	1:18:02.48	actually the only doll I've ever seen
+4683.520	1:18:03.52	that appealed to grown men. Grown men
+4685.760	1:18:05.76	love this. I mean, this is a hacker's
+4687.360	1:18:07.36	doll, but uh they put I talked to the
+4690.080	1:18:10.08	guy who was working on this project and
+4691.199	1:18:11.20	he said they put this in focus groups
+4692.560	1:18:12.56	with girls and they'd play with it for a
+4694.239	1:18:14.24	while and then after about a half an
+4696.080	1:18:16.08	hour they take the batteries out and
+4697.679	1:18:17.68	keep playing with it. And what was
+4699.280	1:18:19.28	happening is that the girls were
+4700.320	1:18:20.32	propping up this elaborate fantasy, you
+4702.239	1:18:22.24	know, in their play. And the dolls were
+4704.880	1:18:24.88	supposed to be a structure for that
+4706.000	1:18:26.00	fantasy. They weren't supposed to be the
+4707.440	1:18:27.44	fantasy. the doll was telling them what
+4708.880	1:18:28.88	the fantasy was and it was conflicting
+4710.320	1:18:30.32	with what the girls were saying and so
+4712.080	1:18:32.08	it was interfering actively with their
+4713.600	1:18:33.60	fantasy in their play. So in that
+4716.000	1:18:36.00	regard, I think we can actually kind of
+4717.440	1:18:37.44	take that path with these people and all
+4720.480	1:18:40.48	we have to do is deal with them on a
+4721.760	1:18:41.76	very local, you know, kind of a state
+4723.199	1:18:43.20	machine, Bradenberg machine kind of
+4725.440	1:18:45.44	level and say that they're angry and
+4728.239	1:18:48.24	they're hungry and they're sleepy and
+4730.000	1:18:50.00	then we can actually do some things
+4731.360	1:18:51.36	where maybe they have a little uh what
+4735.120	1:18:55.12	you might call structural ambiguity
+4736.640	1:18:56.64	about what they're actually saying. You
+4738.400	1:18:58.40	know, one of the thoughts I had about
+4739.440	1:18:59.44	this project in particular is that you'd
+4740.480	1:19:00.48	see the people go up and they talk and
+4742.080	1:19:02.08	there would be some tenor, some kind of
+4743.840	1:19:03.84	a a flavor to their conversation, but it
+4746.800	1:19:06.80	would be more like peanuts. The when
+4748.800	1:19:08.80	they did the PV the TV show of peanuts,
+4750.719	1:19:10.72	you'd hear the adults talking and adults
+4752.560	1:19:12.56	would always be
+4754.560	1:19:14.56	or, you know, soft or loud. You could
+4756.000	1:19:16.00	tell if they're mad or angry or what,
+4757.679	1:19:17.68	but you wouldn't hear what they were
+4758.560	1:19:18.56	saying. You'd have to read that into it.
+4760.480	1:19:20.48	So, uh, I think this is the area where
+4762.640	1:19:22.64	we sidestep the issue just because, you
+4765.280	1:19:25.28	know, as a commercial company, we have
+4766.880	1:19:26.88	to ship a game. We're not doing a
+4768.400	1:19:28.40	research project. So, that's a
+4770.640	1:19:30.64	long-winded answer. Sorry.
+4773.040	1:19:33.04	Yeah.
+4775.199	1:19:35.20	Um, if you do do that and you have um
+4777.120	1:19:37.12	people can read into what people are
+4778.560	1:19:38.56	actually doing in the game, um, more
+4780.320	1:19:40.32	that sort of interfere with their
+4781.520	1:19:41.52	expectations in the simulation, if the
+4783.280	1:19:43.28	simulation doesn't actually um, meet
+4785.920	1:19:45.92	those expectations, if they're reading
+4787.600	1:19:47.60	too much into it and it's not really
+4789.280	1:19:49.28	happening that way,
+4790.640	1:19:50.64	won't they be sort of misled in their
+4792.320	1:19:52.32	um,
+4792.960	1:19:52.96	expectation? It really comes down what
+4794.000	1:19:54.00	the simulation is. Um,
+4797.760	1:19:57.76	it's uh that I think would be addressed
+4800.719	1:20:00.72	on the game design side. Um,
+4803.840	1:20:03.84	again, I mean, just in terms of reality,
+4805.520	1:20:05.52	I don't think there's any way I'm going
+4806.640	1:20:06.64	to come anywhere close to simulating a
+4808.320	1:20:08.32	person. Um,
+4810.880	1:20:10.88	with a lot of tricks, I could have these
+4813.280	1:20:13.28	people walking through the day, getting
+4816.159	1:20:16.16	up, uh, taking a bath or a shower,
+4819.520	1:20:19.52	fixing breakfast, going to work, while
+4821.679	1:20:21.68	at the same time deciding that I'm
+4823.360	1:20:23.36	bored. I'm going to sit on the couch.
+4824.480	1:20:24.48	I'm going to turn on the TV. And
+4828.320	1:20:28.32	how you make that into a game design
+4829.679	1:20:29.68	might have a lot to do with how valid
+4831.679	1:20:31.68	the simulation of the people has to be.
+4833.520	1:20:33.52	You know, if it's a story kind of a game
+4835.280	1:20:35.28	where you want drama to unfold at the
+4837.679	1:20:37.68	right time and the conversation between
+4839.360	1:20:39.36	these two people is a crucial thing that
+4841.199	1:20:41.20	happens before he gets really upset and
+4843.280	1:20:43.28	does that then yes, the model would need
+4845.679	1:20:45.68	to be a real simulation. I really don't
+4847.760	1:20:47.76	think we're anywhere near that though. I
+4849.440	1:20:49.44	mean, uh, really, I think, you know,
+4851.760	1:20:51.76	unless you're in a very very tightly
+4853.360	1:20:53.36	confined domain, uh, you're going to
+4855.280	1:20:55.28	have a hard time dealing with this
+4856.719	1:20:56.72	open-ended simulation about people in
+4858.560	1:20:58.56	that way. So, uh, I I think really,
+4861.520	1:21:01.52	unfortunately, we're not there yet, and
+4863.120	1:21:03.12	I think it'll be quite a long time
+4864.080	1:21:04.08	before we are. So, really, we have to
+4866.640	1:21:06.64	constrain what the user is doing. You
+4867.760	1:21:07.76	know, maybe it's just a dollhouse. Maybe
+4868.960	1:21:08.96	all I do is I kind of, uh, I have to get
+4871.040	1:21:11.04	two people to meet at a party, and
+4872.560	1:21:12.56	everything else is kind of indeterminate
+4873.920	1:21:13.92	about what they say and all that, and
+4875.120	1:21:15.12	I'm moving furniture around. So there
+4877.280	1:21:17.28	are a lot of game design things we can
+4878.640	1:21:18.64	do with this without doing a personality
+4880.719	1:21:20.72	model.
+4881.760	1:21:21.76	So it's an AI game versus a multi-user
+4884.320	1:21:24.32	game would be easier to design than an
+4885.920	1:21:25.92	AI game.
+4887.920	1:21:27.92	So you're you're saying a multi-user
+4889.679	1:21:29.68	game would be easier to design than an
+4891.280	1:21:31.28	AI game because you could I think so
+4894.400	1:21:34.40	it's just the technology of
+4895.920	1:21:35.92	communicating and time lags.
+4897.679	1:21:37.68	This is how interest I mean you're
+4898.960	1:21:38.96	always building models of the system
+4900.159	1:21:40.16	you're playing with. It's easy to build
+4901.600	1:21:41.60	a model of a stupid computer agent. It's
+4904.480	1:21:44.48	hard to build a model of, you know, your
+4906.960	1:21:46.96	head while I'm talking to you. That's
+4908.400	1:21:48.40	what's interesting is trying to reverse
+4909.760	1:21:49.76	engineer your thought process.
+4914.080	1:21:54.08	Yeah. There's a lot of like commercial
+4915.679	1:21:55.68	services, worlds away and habitat things
+4918.159	1:21:58.16	that have been done that only have other
+4920.719	1:22:00.72	people. Yeah.
+4921.760	1:22:01.76	Robots or anything, and they're pretty
+4923.040	1:22:03.04	successful just because of that.
+4924.800	1:22:04.80	Yeah. People are pretty interesting.
+4929.440	1:22:09.44	I had a question related to that which
+4931.199	1:22:11.20	is the standard modes of game play are
+4933.280	1:22:13.28	individual and then competitive. There's
+4935.120	1:22:15.12	more than one person and it would seem
+4936.239	1:22:16.24	that your games are the most likely of
+4938.080	1:22:18.08	any to have a mode of multiplayer
+4940.480	1:22:20.48	cooperative play where you're working.
+4942.080	1:22:22.08	You mentioned five people playing Sim
+4943.440	1:22:23.44	Earth and trying to work together to
+4944.800	1:22:24.80	accomplish something. Does that happen
+4946.480	1:22:26.48	very much or pretty much when people are
+4948.639	1:22:28.64	playing with them it's one person?
+4950.400	1:22:30.40	Uh well yeah actually it happens a lot.
+4952.159	1:22:32.16	Um especially more with the kids than
+4954.000	1:22:34.00	the adults. um the kids and not just our
+4958.000	1:22:38.00	games but other games too. Uh one of the
+4961.040	1:22:41.04	interesting things I've noticed with my
+4962.320	1:22:42.32	daughter is that she almost never plays
+4964.400	1:22:44.40	computer games or video games by herself
+4966.639	1:22:46.64	but if a friend's over they'll both play
+4968.480	1:22:48.48	them and usually it's one of the
+4970.480	1:22:50.48	controls and the other one is the
+4971.920	1:22:51.92	backseat driver. And it's the dialogue
+4973.920	1:22:53.92	between the two that really makes the
+4975.679	1:22:55.68	game interesting. So really for them the
+4977.040	1:22:57.04	game is facilitating a social
+4978.159	1:22:58.16	interaction. Um and the game itself is
+4981.440	1:23:01.44	not interesting enough for them to
+4982.560	1:23:02.56	really spend much time with it. But in
+4983.840	1:23:03.84	terms of it facilitating a social
+4985.120	1:23:05.12	interaction, that's when uh it really is
+4988.560	1:23:08.56	valuable. And I think a lot of kids,
+4990.080	1:23:10.08	that's a big attraction of this Nintendo
+4992.639	1:23:12.64	Gulch thing is this peer group that's
+4995.679	1:23:15.68	out there. And they may have Super Mario
+4997.840	1:23:17.84	Brothers and I'm motivated to get better
+5000.320	1:23:20.32	at it and find the hidden level. So I
+5001.760	1:23:21.76	can tell Tommy and it's kind of like
+5003.360	1:23:23.36	social currency that I'm passing around
+5004.960	1:23:24.96	this knowledge I have about the system.
+5006.560	1:23:26.56	And then Tommy comes over to my house
+5008.000	1:23:28.00	and we play it together. So really in
+5010.320	1:23:30.32	some sense, I think that's kind of cool.
+5011.679	1:23:31.68	social interaction that these systems
+5014.320	1:23:34.32	involve in our games. Um,
+5017.520	1:23:37.52	it's it's much more e it's much easier
+5019.280	1:23:39.28	for players to do that in our games
+5020.400	1:23:40.40	because of the time scale involved. It's
+5022.000	1:23:42.00	not like Doom where I can't stop and
+5024.239	1:23:44.24	think and every second, you know, I'm
+5025.679	1:23:45.68	moving. It's not like driving a car. Our
+5027.600	1:23:47.60	games are more like, you know, sitting
+5029.120	1:23:49.12	back and taking a leisurely stroll. So,
+5031.120	1:23:51.12	I think the time scale probably has a
+5032.480	1:23:52.48	lot to do with that.
+5034.719	1:23:54.72	Yeah.
+5038.080	1:23:58.08	What sort of looking back to where you
+5040.400	1:24:00.40	were uh 10 or 15 years ago, what what
+5043.280	1:24:03.28	have been some of the surprises and how
+5045.280	1:24:05.28	things have gone?
+5046.960	1:24:06.96	Surprises in the industry or surprises
+5048.639	1:24:08.64	in uh
+5049.760	1:24:09.76	the working as a designer
+5051.760	1:24:11.76	in the industry and where where games
+5054.000	1:24:14.00	are and what direction that's they've
+5057.040	1:24:17.04	taken. I'm kind of surprised right now
+5059.199	1:24:19.20	that there seems to be a shift in some
+5062.080	1:24:22.08	sense away from deeper games and this
+5064.560	1:24:24.56	kind of happened with Doom and I've
+5066.560	1:24:26.56	played enough Doom myself that I can't
+5068.320	1:24:28.32	sit here and criticize Doom for not
+5069.840	1:24:29.84	being fun. It's a very different kind of
+5071.760	1:24:31.76	thing than Sim City. Um, right now
+5076.400	1:24:36.40	that's driving a lot of the industry.
+5077.920	1:24:37.92	Uh, related to that is the distribution
+5080.480	1:24:40.48	system, which I don't think you want to
+5081.600	1:24:41.60	hear about distribution because it's
+5082.639	1:24:42.64	extremely boring topic. Um, but that's
+5086.000	1:24:46.00	really changed a lot in our industry. I
+5087.520	1:24:47.52	think that's probably going to be the uh
+5089.840	1:24:49.84	biggest change we're going to see in our
+5091.199	1:24:51.20	industry over the next few years. Um as
+5092.960	1:24:52.96	all sudden gets interesting again and
+5095.600	1:24:55.60	hopefully we get into perhaps a
+5097.600	1:24:57.60	network-based distribution alternative
+5099.600	1:24:59.60	distribution system. I think that more
+5101.440	1:25:01.44	than anything else will have the biggest
+5103.600	1:25:03.60	impact on the kind of games that are
+5105.760	1:25:05.76	developed and the economies of
+5107.360	1:25:07.36	developing those games. Uh right now a
+5110.560	1:25:10.56	lot of things are filtered out in the
+5111.760	1:25:11.76	distribution process that are really
+5113.600	1:25:13.60	creative and really cool and you just
+5115.520	1:25:15.52	never see and nobody can afford to
+5117.040	1:25:17.04	develop because they won't get on the
+5118.400	1:25:18.40	shelf. Um so that's kind of a big
+5120.639	1:25:20.64	surprise is how quickly that's happening
+5121.920	1:25:21.92	this whole net thing but surprising
+5123.360	1:25:23.36	everybody. Uh on the technology side 3D
+5127.120	1:25:27.12	seems to be getting uh 3D immersive
+5129.440	1:25:29.44	stuff seems to actually have some
+5131.520	1:25:31.52	staying power which has surprised me. I
+5133.199	1:25:33.20	thought 3D was going to come and go as a
+5134.560	1:25:34.56	fad, but now I'm thinking, you know,
+5137.120	1:25:37.12	actually it's going to stay. Uh, and a
+5139.760	1:25:39.76	lot of that is just that people have
+5141.040	1:25:41.04	gotten so accustomed to immersive
+5142.560	1:25:42.56	environments through things like Doom or
+5145.199	1:25:45.20	some of the current crop of the uh game
+5147.120	1:25:47.12	consoles, the PlayStation, the new uh
+5150.080	1:25:50.08	Nintendo Ultra 64 that's coming out.
+5152.800	1:25:52.80	you're going to have a whole new
+5153.840	1:25:53.84	generation of kids that are kind of
+5156.719	1:25:56.72	going to be weaned, you know, you know,
+5158.560	1:25:58.56	grown up on this 3D paradigm, you know,
+5161.360	1:26:01.36	used to 3D interfaces, used to
+5162.639	1:26:02.64	navigating around the 3D space. And so I
+5165.199	1:26:05.20	think that's probably going to remain
+5167.199	1:26:07.20	with us. Um,
+5171.280	1:26:11.28	more questions?
+5174.960	1:26:14.96	We finished right on time. Just right on
+5176.320	1:26:16.32	time.

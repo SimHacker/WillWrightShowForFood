@@ -1,0 +1,49 @@
+# Sims export handoff — see ../EXPORT-SIMS-RELATIONSHIPS.yml
+schema_version: 1
+source:
+  direction: uplift
+  neighbor_id: 903
+  character: eli-vandermeer
+identity:
+  name: Prof. Eli Vandermeer
+  age: adult
+  gender: male
+  zodiac: gemini
+traits:
+  neat: 4
+  outgoing: 7
+  active: 3
+  playful: 5
+  nice: 5
+  generous: 2
+skills:
+  cooking: 2
+  mechanical: 0
+  charisma: 6
+  logic: 5
+  body: 2
+  creativity: 4
+  cleaning: 1
+career:
+  track: science
+  performance: 310
+relationships:
+  '901':
+    daily: 50
+    lifetime: 55
+  '902':
+    daily: -10
+    lifetime: 5
+  '905':
+    daily: 15
+    lifetime: 40
+  '906':
+    daily: -45
+    lifetime: -30
+  '907':
+    daily: 5
+    lifetime: 10
+  '908':
+    daily: 35
+    lifetime: 40
+family_budget: 2400

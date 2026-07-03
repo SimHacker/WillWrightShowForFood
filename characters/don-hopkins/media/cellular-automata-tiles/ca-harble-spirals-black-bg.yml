@@ -1,0 +1,17 @@
+# Sidecar — ca-harble-spirals-black-bg.png
+
+artifact:
+  file: ca-harble-spirals-black-bg.png
+  slug: ca-harble-spirals-black-bg
+  room: cellular-automata-tiles
+  what: SimCity-tile cellular automata — harble spirals black bg
+  era: ~2010-2011
+  sidecar_of: ca-harble-spirals-black-bg.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/cellular-automata-simcity-tiles.yml
+
+see_also:
+  - ../micropolis-gallery/INDEX.yml
+
+note: "Not AI Generated!"

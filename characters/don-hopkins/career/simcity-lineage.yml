@@ -10,6 +10,7 @@ simcity_lineage:
     era: "1991–1992"
     don_role: "NeWS/HyperLook port with pie menus, PostScript UI and tile renderer, showcase package"
     runs_on: [NeWS, HyperLook]
+    media: ../media/micropolis-gallery/hyperlook-simcity-sun.png
     note: |
       Parallel to official Sun X11 port; Carol Adams 'SimCity NeWS' opportunity. HyperLook
       (HyperCard on NeWS) — reimagined simulation environment: integrated scalable PostScript
@@ -57,6 +58,7 @@ simcity_lineage:
       - EA donated source; Jim Gettys / Sugar integration
       - Pie menus on XO; constructionist education alignment
       - CellEngine CA bridge; Python scripting layer
+    media_gallery: ../media/micropolis-gallery/INDEX.yml
     implementation:
       python_olpc: |
         Don dove into Python adapting SimCity for OLPC. Python was the lifeblood of the
@@ -163,6 +165,7 @@ moollm_parallel: |
   Branching what-if cities → branching chat/crystal logs.
 
 see_also:
-  - project-threads.yml
-  - stupid-fun-club.yml
-  - ../README.md
+  - { path: project-threads.yml, why: "Thread merge map" }
+  - { path: stupid-fun-club.yml, why: "SFC / Will Wright lab continuity" }
+  - { path: ../media/micropolis-gallery/INDEX.yml, why: "Screenshot gallery — HyperLook to Facebook" }
+  - { path: ../README.md, why: "Human narrative" }

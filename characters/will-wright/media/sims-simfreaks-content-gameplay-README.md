@@ -6,4 +6,4 @@
 |------|---------|
 | `image-15c67356-*.png` | Gothic throne room — skeleton regent, hooded figures, relationship bubble |
 
-Cross-links: [Heather & Steve show](../../../heather-steve-alvey/README.md), [SimProv wedding objects in publishing vision](../sims-series-micropolis-publishing-vision.md).
+Cross-links: [Heather & Steve show](../../../heather-and-steve-alvey/README.md), [SimProv wedding objects in publishing vision](../sims-series-micropolis-publishing-vision.md).

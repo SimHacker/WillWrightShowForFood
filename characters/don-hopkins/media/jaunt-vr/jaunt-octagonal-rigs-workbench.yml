@@ -1,0 +1,14 @@
+# Sidecar — jaunt-octagonal-rigs-workbench.png
+
+artifact:
+  file: jaunt-octagonal-rigs-workbench.png
+  slug: jaunt-octagonal-rigs-workbench
+  room: jaunt-vr
+  what: Jaunt VR camera rig — octagonal rigs workbench
+  era: 2016-2017
+  sidecar_of: jaunt-octagonal-rigs-workbench.png
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

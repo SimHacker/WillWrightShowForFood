@@ -21,8 +21,10 @@ representation:
   subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
-  status: draft
-  consent: not_yet_asked
+  status: accepted
+  consent: invitation_accepted
+  accepted: "2026-07 — pitched; loves the idea, gets it, hot to trot"
+  guest_prototype: guest-prototype.yml
   document: invitation.md
   long_drafts_in: repo-shows/will-wright/   # invitation.md (sent), invitation-opus-draft.md, invitation-gpt55-draft.md
   browse_landing: repo-shows/will-wright/BROWSE.md
@@ -129,7 +131,12 @@ media:
   gallery: media/README.md
   galleries:
     - { path: media/README.md, what: "SimCity/Sims history, Rug-O-Matic, programmer art, robot-combat meetup (LA)" }
-    - { path: media/russian-space-junk.md, what: "Will's Soviet/Russian spaceflight-hardware collection — Globus IMP navigation globes, Cyrillic control panels, hand controllers, hatch, ejection seat (photos by Don Hopkins)" }
+    - { path: media/russian-space-junk.md, what: "Will's Soviet/Russian spaceflight-hardware collection at home in Oakland — Globus IMP navigation globes, Cyrillic control panels, hand controllers, hatch, ejection seat (photos by Don Hopkins)" }
+    - { path: media/transmogrifier-mona-lisa-pushpins.yml, what: "Transmogrifier + 3DS Max UV exporter test — Mona Lisa pushpins" }
+    - { path: media/high-while-programming-flyer.yml, what: "HIGH WHILE PROGRAMMING — UMich study flyer; Will snapped corkboard photo and sent to Don" }
+    - { path: media/computer-history-museum-maxis-display.yml, what: "CHM Maxis display — The Sims, SimCity, SimEarth; Don: We made it!" }
+    - { path: media/gallium-gdc-alameda-pacman-will-wright.yml, what: "Gallium party GDC — Pac-Man Battle Royale with Will at Alameda arcade (photo by Don)" }
+    - { path: media/ant-farm-revolution-frys.yml, what: "Ant Farm Revolution — Will × Uncle Milton × SFC; found at Fry's" }
     - { path: media/artwork.md, what: "Will's mixed-media relief constructions — evolution/systems piece, cell-division piece, terrain & city reliefs" }
 
 see_also:

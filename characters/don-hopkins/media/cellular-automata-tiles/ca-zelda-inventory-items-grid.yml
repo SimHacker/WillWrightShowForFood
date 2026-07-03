@@ -1,0 +1,17 @@
+# Sidecar — ca-zelda-inventory-items-grid.png
+
+artifact:
+  file: ca-zelda-inventory-items-grid.png
+  slug: ca-zelda-inventory-items-grid
+  room: cellular-automata-tiles
+  what: SimCity-tile cellular automata — zelda inventory items grid
+  era: ~2010-2011
+  sidecar_of: ca-zelda-inventory-items-grid.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/cellular-automata-simcity-tiles.yml
+
+see_also:
+  - ../micropolis-gallery/INDEX.yml
+
+note: "Not AI Generated!"

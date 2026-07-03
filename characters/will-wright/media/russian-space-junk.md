@@ -2,8 +2,8 @@
 
 *Will Wright is a longtime collector of real **Soviet/Russian spaceflight hardware** — flown
 and ground-test control panels, navigation instruments, hand controllers, hatches, and an
-ejection seat. These photos were taken by **Don Hopkins**. Captions describe what is visibly
-in each frame; the Cyrillic labels are transcribed/translated where legible. Corrections welcome.*
+ejection seat. These photos were taken by **Don Hopkins** at Will's home in **Oakland**.
+Captions describe what is visibly in each frame; the Cyrillic labels are transcribed/translated where legible. Corrections welcome.*
 
 ## The Globus (IMP) navigation instrument
 

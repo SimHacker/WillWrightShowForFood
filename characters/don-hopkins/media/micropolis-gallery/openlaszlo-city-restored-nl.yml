@@ -1,0 +1,18 @@
+# Sidecar — openlaszlo-city-restored-nl.png
+
+artifact:
+  file: openlaszlo-city-restored-nl.png
+  slug: openlaszlo-city-restored-nl
+  room: micropolis-gallery
+  what: openlaszlo city restored nl
+  era: 1991 HyperLook through 2010s Facebook
+  sidecar_of: openlaszlo-city-restored-nl.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/micropolis-gallery.yml
+  - ../../../repo-shows/ideas/gags/pacbot-eats-traffic.yml
+
+see_also:
+  - micropolis-gallery.yml
+
+note: "Not AI Generated!"

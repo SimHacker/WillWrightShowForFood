@@ -1,0 +1,49 @@
+# SHOW — MOOLLM Readings — long-form script readings on YouTube
+# Whole show for voicing MOOLLM characters, lore, objects, and pedagogy. Primes guest onboarding.
+
+show:
+  id: moollm-readings
+  title: "MOOLLM Readings"
+  type: performance
+  host: Don Hopkins
+  status: airing
+  format: live_script_reading
+  distribution: YouTube
+  character: characters/don-hopkins/
+
+what: |
+  Long-form readings Don records and posts to YouTube — voicing MOOLLM-generated characters and
+  walking the microworld: skills, lore, interactive objects, AI orchestration, Apple ][ nostalgia,
+  cellular automata, and science. Onboarding theater: watch a reading, explore the repo, then
+  decide if you want your own interview show or a guest reading episode.
+
+why_a_whole_show: |
+  Readings are not one-off specials — they are the **primer course** for the network. Three
+  episodes recorded July 2026 (Palm, Marathon Turn 7, Dasher/Palm/Tog); more accumulate.
+  Guests invited to read a character, chime in async, or return for a solo interview show later.
+
+recorded_episodes:
+  - episodes/palm-love-wave.yml
+  - episodes/marathon-turn-7-wish-spoken.yml
+  - episodes/dasher-palm-tog-monkeys.yml
+
+intro_canon: intro-canon.yml
+
+discussion_with:
+  - ../david-rosenthal/discussion-pack.yml
+
+episodes: episodes.yml
+
+dream_reading_guests:
+  - stephen-wolfram   # cellular automata, NKS, Wolfram Language — natural reading-show guest
+  - jim-crutchfield
+  - norman-margolus
+  - scott-draves
+  - peter-norvig
+  - brian-eno
+
+ties_to:
+  - ../../process/performance-space.yml#live_script_reading
+  - ../../repo-shows/will-wright/performance-and-culture.yml#the_reading
+  - ../../process/couple-and-solo-shows.yml#show_tiers.moollm_readings
+  - SimHacker/moollm

@@ -36,7 +36,7 @@ bundles:
     priority: 2
     source: projects/micropolis-moollm/repo-shows/
     target: repo-shows/
-    include: [INDEX.yml, REPO-SHOWS.yml, GLANCE.yml, game-bridge-*.yml, heather-steve-alvey/]
+    include: [INDEX.yml, REPO-SHOWS.yml, GLANCE.yml, game-bridge-*.yml, heather-and-steve-alvey/]
     exclude: [scaffold.py, _TEMPLATE.yml]
 
   characters_public:

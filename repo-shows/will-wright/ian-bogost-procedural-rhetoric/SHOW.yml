@@ -31,10 +31,26 @@ discussion_prompts:
   - "How does procedural satire (Dumbold) age vs. procedural inclusion (playset) when republished 20+ years later?"
   - "Motive.c global variables vs. shipping Sims — does the *prototype* rhetoric differ from the *product* rhetoric?"
   - "Federation publishing (Micropolis Home) — procedural rhetoric as infrastructure, not one object at a time"
+  - "Deconstruct Curiosity (2012) without resurrecting it — Cow Clicker (2010) already argued on purpose; Molyneux argued by accident"
+  - "Chip Morningstar's engineer deconstruction vs. procedural rhetoric — same immune system, different vocabulary?"
+  - "Captain Ashford's homage essay How to Incarnate Almost Anything — invite a live read of How to Deconstruct the Cube"
+
+curiosity_deconstruction:
+  spec: ../../ideas/gags/how-to-deconstruct-the-cube.yml
+  cube_parody: ../../ideas/gags/curiosity-cow-cube.yml
+  invite_framing: |
+    Optional segment for Bogost: **Morningstar (1993) → Ashford (MOOLLM homage) → Bogost (procedural rhetoric) → Don (cow inside the box).**
+    Not a Curiosity revival — a postmortem. Distressed moos, MOOLA clicks, center is cow or Berkeley horse.
+  morningstar: "http://www.fudco.com/chip/deconstr.html"
+  ashford:
+    persona: "Captain Kira Ashford — Belter space pirate, Expanse aesthetic — MOOLLM adventure-4"
+    homage: "How to Incarnate Almost Anything — designs/postmodern-deconstruction.md"
+    reincarnate: "Wear captain-ashford.yml from adventure-4 coatroom; or read from pub Palm Nook study"
 
 ties_to:
   - ../../characters/will-wright/media/sims-series-procedural-rhetoric-inclusion-agitprop.md
   - ../INTRO-NARRATIVE.md
   - ../../../catalogs/micropolis-home/
   - ../../../characters/will-wright/sources/2008-02-10-soul-of-the-sims/
-  - ../../process/cross-links.yml
+  - ../../ideas/gags/how-to-deconstruct-the-cube.yml
+  - ../../ideas/gags/curiosity-cow-cube.yml

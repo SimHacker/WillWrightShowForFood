@@ -1,0 +1,16 @@
+room:
+  id: danielle-bunten-berry
+  name: Danielle Bunten Berry
+  parent: ../../media.md
+
+artifacts:
+  - danielle-bunten-portrait.png
+  - danielle-bunten-party-with-mark-weiser.png
+
+spec:
+  - danielle-bunten-berry.yml
+
+see_also:
+  - ../olpc-gdc/INDEX.yml
+
+note: "Not AI Generated!"

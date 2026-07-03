@@ -1,0 +1,11 @@
+# Sidecar — arcade-santa-cruz-star-wars-vector-game-over.png
+
+artifact:
+  file: arcade-santa-cruz-star-wars-vector-game-over.png
+  slug: arcade-santa-cruz-star-wars-vector-game-over
+  category: arcade
+  subcategory: santa-cruz
+  what: "Star Wars vector — GAME OVER Obi-Wan text"
+  sidecar_of: arcade-santa-cruz-star-wars-vector-game-over.png
+
+note: "Not AI Generated!"

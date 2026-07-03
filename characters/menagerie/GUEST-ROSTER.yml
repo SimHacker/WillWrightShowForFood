@@ -1,0 +1,72 @@
+# Virtual guest roster — who shows up where
+# Cross-room cast for gallery openings, balcony bits, repo-show plants
+
+model: pee-wee-playhouse
+rule: |
+  Canonical souls live in menagerie/, sims/, or robots/. Show-specific TicketPR forks live under
+  repo-shows/*/audience/ with prototype_ref pointing back here.
+
+gallery_openings:
+  event: jsonsters_premiere
+  show_seed: ../../repo-shows/ideas/jsonsters-gallery-lecture.yml
+  always:
+    menagerie:
+      cohort: lower_chelsea_eight
+      path: ./
+      count: 8
+      note: Misread the art, bid §, perform the wrong interpretation out loud
+    sims:
+      path: ../sims/
+      roster:
+        - { slug: bella-goth, signifier: "👗🔥👁️🌙👻", beat: "Arrives like she never left the loading screen" }
+        - { slug: mortimer-goth, signifier: "🔭🏚️💔📚🔬", beat: "Studies the JSON like a telescope chart" }
+        - { slug: tragic-clown, signifier: "🤡💧🖼️😭🛏️", beat: "Sad clown always shows up at gallery openings — depressive aura as critique" }
+    robots:
+      path: ../robots/
+      roster:
+        - { slug: slats, signifier: "🤖", beat: "Loud takes before the hammer; reprogrammable mid-auction" }
+        - { slug: ultimate-machine, signifier: "📦", beat: "Switches itself off when the bid gets too high" }
+    moollm_imports:
+      path: ./
+      roster:
+        - { slug: donna-toadstool, signifier: "🍄👸🍊💅🎭", beat: "Photobombs every lot — her description exceeds the art" }
+        - { slug: doctor-no, signifier: "🧣🔦🚫🤫🌟", beat: "Society patron — bids with 'No comment.' on JSON that looks declared" }
+        - { slug: palm, signifier: "🐒✋🌴🔮💜", beat: "Watches in emoji — what is bidding when your body is YAML?" }
+  optional:
+    - { who: don-philahue, role: auctioneer_mc }
+    - { who: don-hopkins, role: host_author }
+
+balcony_regulars:
+  duo: sims-balcony
+  left: { soul: ../sims/tragic-clown/, seat: balcony_left, partner: fictional-grim-reaper }
+  right: { soul: repo-shows/will-wright/audience/fictional-grim-reaper/, seat: balcony_right }
+  homage: "Statler & Waldorf — Sims culture"
+  see: ../../process/repo-show-regulars.yml
+
+audience_forks:
+  bella-goth: repo-shows/will-wright/audience/fictional-bella-goth/
+  tragic-clown: repo-shows/will-wright/audience/fictional-tragic-clown/
+  palm: repo-shows/will-wright/audience/palm/
+  slats: repo-shows/will-wright/audience/bot-slats/
+  ultimate-machine: repo-shows/will-wright/audience/bot-ultimate-machine/
+
+opening_beats:
+  - "Bella asks if the missing pixels are her"
+  - "Mortimer catalogs lot numbers like star charts"
+  - "Sad Clown weeps at the reserve price"
+  - "Mimsy buys before the sentence ends"
+  - "Slats heckles the reserve; Ultimate Machine clicks off"
+  - "Donna arrives — description of HER exceeds description of the art"
+  - "Doctor No raises with 'No comment.' — wins the compliance-dashboard lot"
+  - "Palm offers 🐒✋🌴 — emoji bid nobody can parse except Don"
+
+cross_edges:
+  note: Person-to-person scores in EXPORT-SIMS-RELATIONSHIPS.yml (901–908, 912–913)
+  gallery_nights:
+    - { from: tragic-clown, to: bella-goth, type: symbolic, narrative: "Both haunt openings — absence and aura" }
+    - { from: mortimer-goth, to: mimsy-caldwell, type: patron, narrative: "Old money meets new money misread" }
+    - { from: slats, to: gregory-kwan, type: rivalry, narrative: "Robot hot take vs hedge-fund certainty" }
+    - { from: donna-toadstool, to: mimsy-caldwell, type: rivalry, narrative: "Two narcissists, one white cube" }
+    - { from: doctor-no, to: helena-featherstone, type: patron, narrative: "Board gravity — process theater meets trustee sermon" }
+    - { from: doctor-no, to: donna-toadstool, type: complicated, narrative: "She posts embassy layouts; he rescues context" }
+    - { from: palm, to: doctor-no, type: ally, narrative: "Both protect agency — YAML soul meets declared bias" }

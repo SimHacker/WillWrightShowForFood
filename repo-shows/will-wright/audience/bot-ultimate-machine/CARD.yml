@@ -1,7 +1,7 @@
 card:
   name: The Ultimate Machine
   tagline: "One switch. One refusal."
-  character_ref: ../../../../characters/ultimate-machine/CARD.yml
+  character_ref: ../../../../characters/robots/ultimate-machine/CARD.yml
   abilities:
     - id: SWITCH-OFF
       verb: refuse

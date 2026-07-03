@@ -294,7 +294,7 @@ FEEDBACK LOOP — responding to his own last utterance, then responding to THAT,
 into unintentional 'robopoetry' that escalates until it's beautiful nonsense. The Ultimate
 Machine GONGS him off. Recurring bit; Don may let it run just long enough to get good.
   - vibe: Confused LLM doing speech-to-speech feedback; accidental poetry; merciful gong.
-  - see: ../characters/slats/CHARACTER.yml
+  - see: ../characters/robots/slats/CHARACTER.yml
 
 ## Rig Spectrum
 

@@ -1,0 +1,14 @@
+# Sidecar — ricoh-theta-jaunt-mug.png
+
+artifact:
+  file: ricoh-theta-jaunt-mug.png
+  slug: ricoh-theta-jaunt-mug
+  room: jaunt-vr
+  what: ricoh theta jaunt mug
+  era: 2016-2017
+  sidecar_of: ricoh-theta-jaunt-mug.png
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

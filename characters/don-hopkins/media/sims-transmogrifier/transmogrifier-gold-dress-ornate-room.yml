@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-gold-dress-ornate-room.png
+
+artifact:
+  file: transmogrifier-gold-dress-ornate-room.png
+  slug: transmogrifier-gold-dress-ornate-room
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — gold dress ornate room
+  era: 2000-2002
+  sidecar_of: transmogrifier-gold-dress-ornate-room.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,31 @@
+# Intro canon — characters and ideas introduced by MOOLLM Readings
+# Refer back when discussing later shows; not exhaustive character rooms.
+
+meta:
+  show: moollm-readings
+  role: backstory_index
+
+characters:
+  palm:
+    signifier: "🐒✋🌴🔮💜"
+    room: ../../characters/palm/
+    moollm_canonical: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm
+    first_reading: episodes/palm-love-wave.yml
+    later_shows: [will-wright/audience/palm]
+
+ideas_deferred:
+  dasher:
+    file: topics/dasher.yml
+    introduced_in: episodes/dasher-palm-tog-monkeys.yml
+  tog_infinite_monkeys:
+    file: topics/tog-infinite-monkeys.yml
+    introduced_in: episodes/dasher-palm-tog-monkeys.yml
+
+discussion_guests:
+  david-rosenthal:
+    pack: ../david-rosenthal/discussion-pack.yml
+    why: "MOOLLM demo + LOCKSS/preservation + literary authority thread"
+
+see_also:
+  - episodes.yml
+  - SHOW.yml

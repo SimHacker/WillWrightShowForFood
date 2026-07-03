@@ -1,0 +1,41 @@
+# Amsterdam — Invader mosaics + Objectionable C dev selfies
+
+artifact:
+  location: Amsterdam, NL
+  era: "~2010–2011"
+  context: "StoryMaker / Urban Safari iPhone development; Invader-style tile mosaics on building sides"
+
+street_art:
+  - file: space-invader-met-mosaic.png
+    what: "Mega Man Met enemy — brick wall mosaic"
+  - file: space-invader-orange-alien.png
+    what: "Classic orange Space Invader under concrete ledge"
+  - file: space-invader-white-red.png
+    what: "White/red Invader on stone ledge"
+  - file: bethanienstraat-invader-sign.png
+    what: "BETHANIENSTRAAT CENTRUM sign + pixel mosaic"
+  - file: pacman-ghost-checker-mosaic.png
+    what: "Pac-Man ghost with checkerboard skirt — brick wall"
+
+objectionable_c:
+  venue: "Betty Too, Amsterdam"
+  facebook_caption: "Objectionable C"
+  stack: "Objective-C + Three20 TTURLRequest — basic auth POST"
+  photos:
+    - objectionable-c-selfie-three20.png
+    - objectionable-c-mirror-selfie.png
+  comments:
+    - author: Christophe Degraeve
+      text: "objective-c... Yummy!"
+    - author: Ron Natalie
+      text: "Blech... objective C?"
+    - author: Jason Shankel
+      text: "Friends don't let friends do Objective-C"
+    - author: Don Hopkins
+      text: "I suffer from the syntactic dissonance of trying to indent code like Lisp with lots of line breaks..."
+
+repo_orbit:
+  storymaker_urban_safari: ../storymaker-urban-safari/INDEX.yml
+  arthur_van_hoff: ../../../arthur-van-hoff/CHARACTER.yml
+
+note: "Not AI Generated!"

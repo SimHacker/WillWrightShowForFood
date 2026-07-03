@@ -1,0 +1,18 @@
+# Sidecar — van-leer-press-rust-cylinder-mouths.png
+
+artifact:
+  file: van-leer-press-rust-cylinder-mouths.png
+  slug: van-leer-press-rust-cylinder-mouths
+  room: robot-collection
+  what: Van Leer press robot face — press rust cylinder mouths
+  era: ~2007-2009
+  sidecar_of: van-leer-press-rust-cylinder-mouths.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/van-leer-robot-collection.yml
+  - ../../../repo-shows/ideas/gags/turing-robot-olympics.yml
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

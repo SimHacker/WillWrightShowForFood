@@ -1,0 +1,11 @@
+# Sidecar — olpc-demo-don-hopkins-xo-indoor-smile.png
+
+artifact:
+  file: olpc-demo-don-hopkins-xo-indoor-smile.png
+  slug: olpc-demo-don-hopkins-xo-indoor-smile
+  category: olpc
+  subcategory: demos
+  what: "Don Hopkins holding OLPC XO indoors"
+  sidecar_of: olpc-demo-don-hopkins-xo-indoor-smile.png
+
+note: "Not AI Generated!"

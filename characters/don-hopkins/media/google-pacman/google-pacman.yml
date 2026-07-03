@@ -1,0 +1,23 @@
+# Google Pac-Man — HTML/JS doodle and Maps mashup
+
+artifact:
+  era: 2010
+  facebook_caption: "Google PacMan!"
+
+doodle:
+  file: google-pacman-doodle-maze.png
+  what: "30th anniversary playable maze spelling GOOGLE"
+  comments:
+    - author: Rich Rosen
+      text: "Apparently not one bit of Flash - pure HTML and JavaScript."
+    - author: Eric Benson
+      text: "The audio is Flash. Works on iPhone and iPad, but no sound."
+
+maps:
+  file: google-pacman-maps-iphone.png
+  what: "Pac-Man on real street map — T-Mobile NL iPhone screenshot"
+
+repo_orbit:
+  gallium_pacman: ../../../will-wright/media/gallium-gdc-alameda-pacman-will-wright.yml
+
+note: "Not AI Generated!"

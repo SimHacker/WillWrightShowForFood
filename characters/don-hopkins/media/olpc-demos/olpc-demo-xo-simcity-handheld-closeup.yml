@@ -1,0 +1,11 @@
+# Sidecar — olpc-demo-xo-simcity-handheld-closeup.png
+
+artifact:
+  file: olpc-demo-xo-simcity-handheld-closeup.png
+  slug: olpc-demo-xo-simcity-handheld-closeup
+  category: olpc
+  subcategory: demos
+  what: "OLPC XO-1 running SimCity handheld"
+  sidecar_of: olpc-demo-xo-simcity-handheld-closeup.png
+
+note: "Not AI Generated!"

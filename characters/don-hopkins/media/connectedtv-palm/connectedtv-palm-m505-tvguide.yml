@@ -1,0 +1,14 @@
+# Sidecar — connectedtv-palm-m505-tvguide.png
+
+artifact:
+  file: connectedtv-palm-m505-tvguide.png
+  slug: connectedtv-palm-m505-tvguide
+  room: connectedtv-palm
+  what: connectedtv palm m505 tvguide
+  era: 2001
+  sidecar_of: connectedtv-palm-m505-tvguide.png
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

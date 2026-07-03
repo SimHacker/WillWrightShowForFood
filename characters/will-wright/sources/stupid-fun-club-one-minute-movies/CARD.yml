@@ -14,7 +14,7 @@ methods:
     signature: "readArticle() → article.md"
     advertisement: "Servitude & empathy — how robot waiter demos became Slats."
   LINK-SLATS:
-    signature: "linkSlats() → characters/slats/"
+    signature: "linkSlats() → characters/robots/slats/"
     advertisement: "Sidekick CARD + ROBORESURRECTION segment wiring."
 
 abilities:

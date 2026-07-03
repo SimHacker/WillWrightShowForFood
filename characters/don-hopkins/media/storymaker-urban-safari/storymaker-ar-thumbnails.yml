@@ -1,0 +1,15 @@
+# Sidecar — storymaker-ar-thumbnails.png
+
+artifact:
+  file: storymaker-ar-thumbnails.png
+  slug: storymaker-ar-thumbnails
+  room: storymaker-urban-safari
+  what: storymaker ar thumbnails
+  era: 2011
+  sidecar_of: storymaker-ar-thumbnails.png
+
+see_also:
+  - ../storymaker/INDEX.yml
+  - ../amsterdam-tile-art/INDEX.yml
+
+note: "Not AI Generated!"

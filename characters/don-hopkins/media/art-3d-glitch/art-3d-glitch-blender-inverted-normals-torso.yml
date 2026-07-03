@@ -1,0 +1,22 @@
+# Sidecar — art-3d-glitch-blender-inverted-normals-torso.png
+
+artifact:
+  file: art-3d-glitch-blender-inverted-normals-torso.png
+  slug: art-3d-glitch-blender-inverted-normals-torso
+  category: art
+  subcategory: 3d-glitch
+  what: "Blender viewport — inverted normals, armature bones through denim shirt torso"
+  sidecar_of: art-3d-glitch-blender-inverted-normals-torso.png
+
+work:
+  client: AI Foundation
+  era: "~2020 character animation pipeline interview"
+  stack: [Character Creator 3, iClone, Blender, Unity]
+  see_also: ../../portrayal/presentations.yml
+
+facebook:
+  room_spec: art-3d-glitch.yml
+  don_opener: "BLARRRRGGGHHH!!!"
+  bj_west: "That's not normal(s)! — Abby Normal!"
+
+note: "Not AI Generated!"

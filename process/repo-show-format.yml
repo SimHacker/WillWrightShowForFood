@@ -151,6 +151,11 @@ how_it_runs:
   announce: "Ahead of time (e.g. Hacker News) — a pointer to THIS repo, not a wall of text"
   rtfr: "Read The Fucking Repo — follow along on your own rig (editor, browser, notebook, AI, or bare hands)"
   guest_intro: "Guest introduced as a Repo Man, Woman, or Anybody (Alex Cox homage — come on, let's go)"
+  simulated_art_opening:
+    spec: simulated-art-opening.yml
+    default: "Optional pre-show — menagerie buys guest artwork for §; guest starts with huge worthless pile for Twitch"
+    prototype: characters/don-hopkins/jsonsters/art-opening-night.yml
+    template: repo-shows/_TEMPLATE/simulated-opening.yml
   audience:
     - "Incarnate consensual characters (representation-ethics)"
     - "Ask questions as PRs, issues, and comments — plus live Twitch and YouTube chat"
@@ -229,7 +234,7 @@ sign_offs:
 
 closing_ceremony:
   name: "The Ultimate Machine switches off the stream"
-  who: ultimate-machine          # characters/ultimate-machine/ ; audience overlay bot-ultimate-machine/
+  who: ultimate-machine          # characters/robots/ultimate-machine/ ; audience overlay bot-ultimate-machine/
   recurring: true                # a REGULAR closing ceremony every show can perform
   what: |
     After the sign-off line, the Ultimate Machine performs its one function on the broadcast
@@ -257,7 +262,7 @@ gong:
       into unintentional 'robopoetry' that escalates until it's beautiful nonsense. The Ultimate
       Machine GONGS him off. Recurring bit; Don may let it run just long enough to get good.
     vibe: "Confused LLM doing speech-to-speech feedback; accidental poetry; merciful gong."
-    see: ../characters/slats/CHARACTER.yml
+    see: ../characters/robots/slats/CHARACTER.yml
 
 rig_spectrum:
   principle: "Play along with YOUR rig — or learn a new one. See who makes the coolest."

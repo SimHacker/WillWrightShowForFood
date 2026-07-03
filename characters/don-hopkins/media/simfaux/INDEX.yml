@@ -1,0 +1,20 @@
+# SimFaux — OpenLaszlo Fox News parody (2006)
+
+room:
+  id: simfaux
+  name: SimFaux — Interactive Fox Parody
+  parent: ../../media.md
+
+artifacts:
+  - simfaux-dashboard-full.png
+  - simfaux-the-me-show-youtube.png
+
+spec:
+  - simfaux.yml
+
+see_also:
+  - ../../writing/INDEX.yml
+  - ../micropolis-gallery/INDEX.yml
+  - ../../../../repo-shows/will-wright/INTRO-NARRATIVE.md
+
+note: "Not AI Generated!"

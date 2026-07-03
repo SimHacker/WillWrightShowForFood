@@ -1,0 +1,57 @@
+# Jaunt VR era — hardware gallery + UnityJS player work
+
+artifact:
+  era: "2016–2017"
+  org: Jaunt VR
+  role: Contractor
+  stack: "Unity3D/JavaScript VR player — UnityJS open-sourced"
+  work_history: ../../career/work-history.yml
+
+colleagues:
+  arthur_van_hoff:
+    path: ../../../arthur-van-hoff/CHARACTER.yml
+    note: "Shared Jaunt VR orbit — Turing Institute → Java → cinematic VR"
+
+cameras:
+  jaunt_one:
+    file: jaunt-one-tripod-rti-case.png
+    what: "Jaunt ONE on tripod — rti hard case, JAUNT sticker on leg, umbilical cable"
+  prototype_1:
+    file: jaunt-prototype-1-august-2013.png
+    what: "Jaunt Camera Prototype #1 — dated August 2013, paper label on desk"
+  spherical_arm:
+    file: jaunt-camera-spherical-arm.png
+    what: "Grey multi-lens sphere on articulated arm — office ceiling tiles"
+  mirror_dome:
+    file: jaunt-mirror-dome-optics.png
+    what: "Parabolic mirror dome optics — clear hemisphere, black top plate"
+  low_angle_rig:
+    file: jaunt-camera-rig-low-angle.png
+    what: "Large octagonal rig + smaller pollen-sphere rig — window backlight"
+  collection:
+    file: jaunt-camera-collection-green-wall.png
+    what: "~10 rigs against green wall — JAUNT logo, plastic-wrapped unit"
+  octagonal_workbench:
+    file: jaunt-octagonal-rigs-workbench.png
+    what: "Clear/black/grey octagonal rigs — GoPro modules in translucent shell"
+  office_table:
+    file: jaunt-office-camera-table.png
+    what: "Full office table of disc and sphere rigs — LEGO mobile prototype visible"
+  spherical_wired:
+    file: jaunt-spherical-wired-prototype.png
+    what: "3D-printed sphere with wired sensors — tennis ball for scale, JAUNT emboss"
+  lego_gopro:
+    file: jaunt-lego-gopro-rig.png
+    what: "LEGO Technic dolly + GoPro + red toggle — low-fi rig beside sphere prototype"
+  ricoh_theta:
+    file: ricoh-theta-jaunt-mug.png
+    what: "Ricoh Theta in drinking glass — JAUNT mug behind, blue LED"
+
+photos: 12
+
+repo_orbit:
+  pantomime: "../pantomime/INDEX.yml"
+  turing: "../turing-institute/INDEX.yml"
+  arthur: "../../../arthur-van-hoff/media/INDEX.yml"
+
+note: "Not AI Generated!"

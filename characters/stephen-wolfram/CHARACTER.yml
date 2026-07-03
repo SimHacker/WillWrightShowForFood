@@ -1,0 +1,45 @@
+# Stephen Wolfram — invitation portrayal. NOT Stephen Wolfram.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: stephen-wolfram
+  name: "Stephen Wolfram"
+  aliases: ["Steven Wolfram"]  # common misspelling — legal name is Stephen
+  type: invitation
+  signifier: "🔷"
+  status: living
+  field: "Mathematica, Wolfram Language, A New Kind of Science, computational universe"
+  home: characters/stephen-wolfram/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: null
+  reading_show: repo-shows/moollm-readings/
+  note: "Invite for MOOLLM Readings episode and/or solo on cellular automata + computational irreducibility"
+
+bio:
+  summary: |
+    **Stephen Wolfram** (b. 1959) is a physicist, computer scientist, and entrepreneur — creator of
+    **Mathematica** and the **Wolfram Language**, author of ***A New Kind of Science*** (2002) on
+    simple programs and cellular automata as fundamental science, and founder of the **Wolfram
+    Physics Project**. His CA and complexity work connects naturally to Norman Margolus, Jim
+    Crutchfield, and the Repo Show's emulated-runtime / organelle bridges.
+
+show_suggestions:
+  - "MOOLLM Readings — guest table-read or commentary on a generated CA / science thread"
+  - "Cellular automata as organelles — round-trip with Mind Mirror and Sims personality diffusion"
+  - "Computational irreducibility vs. LLM summarization — what models can and cannot shortcut"
+  - "Wolfram Language as a rig — live notebook alongside MOOLLM yaml skills"
+
+see_also:
+  - { path: ../../repo-shows/moollm-readings/, why: "Reading-show onboarding — low-friction first appearance" }
+  - { path: ../norman-margolus/, why: "CAM-6 / Margolus neighborhood — CA summit" }
+  - { path: ../jim-crutchfield/, why: "Edge of chaos + evolving CA" }
+  - { path: ../peter-norvig/, why: "AIMA / PAIP — AI pedagogy peers" }

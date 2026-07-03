@@ -1,0 +1,47 @@
+# Ant Farm Revolution — Will Wright × Uncle Milton × Stupid Fun Club
+# Found at Fry's — Silicon Valley culture gold (now gone)
+
+artifact:
+  file: ant-farm-revolution-frys-box.png
+  product: Ant Farm Revolution
+  brand: Uncle Milton
+  tagline: "live ant habitat"
+  designer: "from the mind of Will Wright"
+  studio_badge: Stupid Fun Club
+
+features:
+  - "Giant ant shadows projected on your CEILING"
+  - "Ants dig 3D TUNNELS in nutrient rich gel"
+  - "LED and projecting lens — no food or water needed"
+  - "Break resistant and escape proof"
+
+provenance:
+  found_at: Fry's Electronics
+  found_by: Don Hopkins
+  note: "Cowboy-themed Fry's — Silicon Valley culture gold, all now gone"
+  photo: "Retail box on dark wood — Sharks 2012-13 box edge visible"
+  frys_gallery: ../../don-hopkins/media/frys-electronics/INDEX.yml
+
+will_wright:
+  role: Designer — Stupid Fun Club product line
+  what: "Ceiling-projector ant farm — ants as architects, shadows as spectacle"
+
+silicon_valley:
+  frys: "Iconic cowboy-themed big-box — extinct"
+  culture: "Will toy on Fry's shelf = peak SV retail archaeology"
+
+repo_orbit:
+  stupid_fun_club: ../../don-hopkins/career/stupid-fun-club.yml
+  slats: ../../robots/slats/CHARACTER.yml
+  pantomime_bug_farm: ../../don-hopkins/media/pantomime/bug-farm.yml
+
+menagerie:
+  mimsy: "The ants perform architecture—"
+  gregory: "Long gel tunnels, short Fry's shelf life."
+  don: "Will's Ant Farm ceiling projector. Found it at Fry's."
+
+see_also:
+  - ../CHARACTER.yml
+  - ../media/README.md
+
+note: "Not AI Generated!"

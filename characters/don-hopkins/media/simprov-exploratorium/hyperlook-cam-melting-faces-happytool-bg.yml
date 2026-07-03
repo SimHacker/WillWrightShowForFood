@@ -1,0 +1,18 @@
+# Sidecar — hyperlook-cam-melting-faces-happytool-bg.png
+
+artifact:
+  file: hyperlook-cam-melting-faces-happytool-bg.png
+  slug: hyperlook-cam-melting-faces-happytool-bg
+  room: simprov-exploratorium
+  what: HyperLook Exploratorium demo — cam melting faces happytool bg
+  era: early 1990s
+  sidecar_of: hyperlook-cam-melting-faces-happytool-bg.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
+
+see_also:
+  - ../pie-menus/INDEX.yml
+  - ../cellular-automata-tiles/INDEX.yml
+
+note: "Not AI Generated!"

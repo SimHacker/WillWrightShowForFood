@@ -1,0 +1,14 @@
+# Sidecar — will-wright-birthday-workshop.png
+
+artifact:
+  file: will-wright-birthday-workshop.png
+  slug: will-wright-birthday-workshop
+  room: sfc-emeryville
+  what: will wright birthday workshop
+  era: ~2013
+  sidecar_of: will-wright-birthday-workshop.png
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

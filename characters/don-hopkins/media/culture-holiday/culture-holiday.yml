@@ -1,0 +1,12 @@
+# Culture — hacker / programmer holidays
+
+room:
+  id: culture-holiday
+  category: culture
+  subcategory: holiday
+  parent: ../CATALOG-INDEX.yml
+
+artifacts:
+  - culture-holiday-national-gorilla-suit-day-don-martin.png
+
+note: "Per-file sidecars. Not AI Generated!"

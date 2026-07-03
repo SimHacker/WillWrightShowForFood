@@ -1,0 +1,11 @@
+# Sidecar — travel-amsterdam-scannerstraat-sign.png
+
+artifact:
+  file: travel-amsterdam-scannerstraat-sign.png
+  slug: travel-amsterdam-scannerstraat-sign
+  category: travel
+  subcategory: amsterdam
+  what: "Scannerstraat sign — scanner pun for brochure digitization"
+  sidecar_of: travel-amsterdam-scannerstraat-sign.png
+
+note: "Not AI Generated!"

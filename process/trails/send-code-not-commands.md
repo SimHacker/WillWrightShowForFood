@@ -121,7 +121,7 @@ Alvey's SimSlice / SliceCity** — a **Lilliputian SimCity that fits in your Sim
 SimCity running *inside* The Sims. That's the **shipped precedent** for **Simopolis** data portability
 (link actual save files, run emulators, round-trip state across many games).
 
-- 📁 [`characters/heather-alvey/`](../../characters/heather-alvey/README.md) · 📁 [`repo-shows/heather-steve-alvey/`](../../repo-shows/heather-steve-alvey/README.md)
+- 📁 [`characters/heather-alvey/`](../../characters/heather-alvey/README.md) · 📁 [`repo-shows/heather-and-steve-alvey/`](../../repo-shows/heather-and-steve-alvey/README.md)
 - 📁 [`process/character-endosymbiosis.yml`](../character-endosymbiosis.yml) · [`repo-shows/INDEX.yml`](../../repo-shows/INDEX.yml) (`bridges_architecture`)
 
 ## 6. Drescher — schemas are little programs you can run

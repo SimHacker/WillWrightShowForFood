@@ -1,0 +1,11 @@
+# Sidecar — software-openlaszlo-von-neumann-29-state-ca.png
+
+artifact:
+  file: software-openlaszlo-von-neumann-29-state-ca.png
+  slug: software-openlaszlo-von-neumann-29-state-ca
+  category: software
+  subcategory: openlaszlo
+  what: "Von Neumann 29-state CA with pie menu"
+  sidecar_of: software-openlaszlo-von-neumann-29-state-ca.png
+
+note: "Not AI Generated!"

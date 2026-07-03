@@ -7,7 +7,7 @@ character:
   type: invitation
   signifier: "👤"
   status: living
-  field: "Strategist, Designer, Public Code & Digital Public Infrastructure; Game Neverending / Flickr; Stamen map viz; speculative design, civic tech"
+  field: "Strategist, designer, public code & digital public infrastructure; Game Neverending / Flickr; Stamen; Foundation for Public Code (Amsterdam)"
   home: characters/ben-cerveny/
 
 representation:
@@ -15,15 +15,27 @@ representation:
   consent_level: 2
   authored_by: don-hopkins
 
+contact:
+  channel: Signal
+  warm_contact: true
+  moved_from: Facebook Messenger
+  moved_date: "2026-07-03"
+
 invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  show_seed: repo-shows/ben-cerveny/
+  show_seed: repo-shows/ben-cerveny.yml
+  correspondence: correspondence.yml
 
 
 bio:
-  summary: "**Ben Cerveny** — Strategist and designer working at the intersection of games, maps, social platforms, speculative design, and civic digital public infrastructure. Key roles in Game Neverending (evolved into Flickr), Stamen Design visualizations, Bloom Studio (Planetary app acquired by Smithsonian), Samsung, and currently President of the Foundation for Public Code (Amsterdam). Friend of Don Hopkins; early candidate for Repo Show interviews on executable history, public code, and nurturing envi"
+  summary: |
+    **Ben Cerveny** — strategist and designer at games, maps, social platforms, speculative
+    design, and civic digital public infrastructure. Game Neverending (→ Flickr), Stamen Design,
+    Planetary (Smithsonian), President of the **Foundation for Public Code** (Amsterdam). Signal
+    correspondent with Don Hopkins (2026-07-03); endorsed data portability as spine for Will Wright
+    kickoff episode.
 
 sources:
   wikipedia: null

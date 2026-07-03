@@ -1,0 +1,18 @@
+# Sidecar — openlaszlo-pacbot-control-panel-nl.png
+
+artifact:
+  file: openlaszlo-pacbot-control-panel-nl.png
+  slug: openlaszlo-pacbot-control-panel-nl
+  room: micropolis-gallery
+  what: openlaszlo pacbot control panel nl
+  era: 1991 HyperLook through 2010s Facebook
+  sidecar_of: openlaszlo-pacbot-control-panel-nl.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/micropolis-gallery.yml
+  - ../../../repo-shows/ideas/gags/pacbot-eats-traffic.yml
+
+see_also:
+  - micropolis-gallery.yml
+
+note: "Not AI Generated!"

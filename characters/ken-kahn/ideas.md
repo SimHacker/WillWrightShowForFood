@@ -16,6 +16,7 @@ Ken Kahn — creator of ToonTalk (a game-like visual programming world for kids)
 - Snap! AI blocks: machine learning in visual programming
 - ToonTalk: game-like visual programming
 - Amsterdam meeting: Westerpark area
+- Don lent Ken an ebike for solo rides around Amsterdam (2026) — mobility parallel to MOOLLM [Lane Neverending](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/street/lane-neverending) bike rack
 - Constructionist education: shared interest
 - Machine learning for kids: accessible AI education
 ## The hooks

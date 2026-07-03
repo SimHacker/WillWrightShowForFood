@@ -1,0 +1,19 @@
+# Sidecar — raving-bonkers-top-motion-blur.png
+
+artifact:
+  file: raving-bonkers-top-motion-blur.png
+  slug: raving-bonkers-top-motion-blur
+  room: rolf
+  what: raving bonkers top motion blur
+  era: TomTom-era Amsterdam
+  sidecar_of: raving-bonkers-top-motion-blur.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/rolf-junk-auction.yml
+
+see_also:
+  - INDEX.yml
+  - raving-bonkers.yml
+  - ../robot-collection/INDEX.yml
+
+note: "Not AI Generated!"

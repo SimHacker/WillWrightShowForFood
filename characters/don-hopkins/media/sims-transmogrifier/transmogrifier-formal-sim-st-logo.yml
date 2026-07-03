@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-formal-sim-st-logo.png
+
+artifact:
+  file: transmogrifier-formal-sim-st-logo.png
+  slug: transmogrifier-formal-sim-st-logo
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — formal sim st logo
+  era: 2000-2002
+  sidecar_of: transmogrifier-formal-sim-st-logo.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

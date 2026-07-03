@@ -1,0 +1,18 @@
+# Sidecar — hyperlook-cam-editor-melting-speckle.png
+
+artifact:
+  file: hyperlook-cam-editor-melting-speckle.png
+  slug: hyperlook-cam-editor-melting-speckle
+  room: simprov-exploratorium
+  what: HyperLook Exploratorium demo — cam editor melting speckle
+  era: early 1990s
+  sidecar_of: hyperlook-cam-editor-melting-speckle.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
+
+see_also:
+  - ../pie-menus/INDEX.yml
+  - ../cellular-automata-tiles/INDEX.yml
+
+note: "Not AI Generated!"

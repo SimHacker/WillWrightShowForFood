@@ -1,0 +1,14 @@
+# Sidecar — jaunt-camera-spherical-arm.png
+
+artifact:
+  file: jaunt-camera-spherical-arm.png
+  slug: jaunt-camera-spherical-arm
+  room: jaunt-vr
+  what: Jaunt VR camera rig — camera spherical arm
+  era: 2016-2017
+  sidecar_of: jaunt-camera-spherical-arm.png
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

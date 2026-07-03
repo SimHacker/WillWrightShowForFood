@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-custom-furniture-showcase.png
+
+artifact:
+  file: transmogrifier-custom-furniture-showcase.png
+  slug: transmogrifier-custom-furniture-showcase
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — custom furniture showcase
+  era: 2000-2002
+  sidecar_of: transmogrifier-custom-furniture-showcase.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

@@ -140,7 +140,7 @@ competitions:
     see: micropolis-ai-drag-race.yml
     brand: "Micropolis AI Drag Race — flagship variety format"
     tagline: "Start your engines — rig personas werk specs; spend log judges; merge or sashay"
-    celebrity_judge: ../characters/slats/judge-rubric.yml
+    celebrity_judge: ../characters/robots/slats/judge-rubric.yml
     challenges: [design_challenge, code_that_spec_mini, stiletto_sprint, manual_transmission, lip_sync_for_your_commits, harvest_runway]
   manual_transmission:
     see: manual-transmission.yml

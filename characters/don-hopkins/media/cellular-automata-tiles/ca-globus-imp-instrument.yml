@@ -1,0 +1,17 @@
+# Sidecar — ca-globus-imp-instrument.png
+
+artifact:
+  file: ca-globus-imp-instrument.png
+  slug: ca-globus-imp-instrument
+  room: cellular-automata-tiles
+  what: SimCity-tile cellular automata — globus imp instrument
+  era: ~2010-2011
+  sidecar_of: ca-globus-imp-instrument.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/cellular-automata-simcity-tiles.yml
+
+see_also:
+  - ../micropolis-gallery/INDEX.yml
+
+note: "Not AI Generated!"

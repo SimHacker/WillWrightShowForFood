@@ -1,0 +1,50 @@
+# SimProv — Exploratorium SPARCstation 2 Demo
+
+room:
+  id: simprov-exploratorium
+  name: SimProv — Exploratorium SPARCstation 2 Demo
+  parent: ../../media.md
+
+artifacts:
+  - hyperlook-alan-turing-clock-editor.png
+  - hyperlook-alan-turing-clock-layout.png
+  - hyperlook-alan-turing-neatclock-measure.png
+  - hyperlook-alan-turing-neatclock-overlay.png
+  - hyperlook-cam-air-freshener-ca.png
+  - hyperlook-cam-cell-editor-melting-face.png
+  - hyperlook-cam-eco-rule-happytool.png
+  - hyperlook-cam-editor-melting-speckle.png
+  - hyperlook-cam-happytool-melting-face.png
+  - hyperlook-cam-intro-simulator.png
+  - hyperlook-cam-melting-face-bw-editor.png
+  - hyperlook-cam-melting-face-clock-bg.png
+  - hyperlook-cam-melting-face-closeup.png
+  - hyperlook-cam-melting-face-happytool.png
+  - hyperlook-cam-melting-face-neutral.png
+  - hyperlook-cam-melting-face-posterized.png
+  - hyperlook-cam-melting-faces-happytool-bg.png
+  - hyperlook-desktop-icons-air-freshener.png
+  - hyperlook-happytool-air-freshener-stack.png
+  - hyperlook-happytool-melting-face-color.png
+  - hyperlook-happytool-purple-face-hyperdraw.png
+  - hyperlook-hyperdraw-air-freshener-card.png
+  - hyperlook-hyperdraw-air-freshener-demo.png
+  - hyperlook-hyperdraw-air-freshener-pointing.png
+  - hyperlook-hyperdraw-desktop-demo.png
+  - hyperlook-neatclock-menu-alanturing.png
+  - hyperlook-object-properties-button-reset.png
+  - hyperlook-object-properties-simcity-1967.png
+  - hyperlook-simcity-budget-windows.png
+  - hyperlook-simcity-plane-crash-demo.png
+  - hyperlook-simcity-zone-map.png
+
+spec:
+  - simprov-exploratorium.yml
+
+see_also:
+  - ../../career/simcity-lineage.yml
+  - ../cellular-automata-tiles/INDEX.yml
+  - ../pie-menus/INDEX.yml
+  - ../../../will-wright/CHARACTER.yml
+
+note: "Not AI Generated!"

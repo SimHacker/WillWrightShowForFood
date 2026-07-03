@@ -1,0 +1,49 @@
+# Don Hopkins — high-score arcade reflection (Santa Cruz boardwalk)
+# Perfect talking face puppet — DON initials on screen
+
+artifact:
+  file: don-high-score-space-invaders.png
+  slug: don-high-score-space-invaders
+  what: "Selfie reflection in arcade CRT — Don centered, initials DON on high-score entry"
+
+location:
+  place: Santa Cruz boardwalk arcade
+  don_memory: "Playing Space Invaders"
+  screen_evidence: "Atari vector high-score UI — PUSH ROTATE / PUSH HYPERSPACE, © 1979 ATARI INC"
+  note: "Boardwalk cabinet memory says Space Invaders; on-screen text matches Asteroids-style Atari entry"
+
+game_screen:
+  headline: "YOUR SCORE IS ONE OF THE TEN BEST"
+  prompt: "PLEASE ENTER YOUR INITIALS"
+  initials: DON
+  score: "7500 (visible twice)"
+  controls: [PUSH ROTATE TO SELECT LETTER, PUSH HYPERSPACE WHEN LETTER IS CORRECT]
+  graphics: "Vector asteroids left; green invader-style sprite reflected near chest"
+
+face_puppet:
+  role: "Canonical talking face puppet — neutral/content expression, glasses, goatee, long hair"
+  crop: "Upper face through shoulders; vector text overlays chest — mouth zone still readable"
+  lighting: "Arcade ambient — forehead/nose highlights, usable for AccessoryHands retarget"
+  don_line: "Perfect talking face puppet."
+  canonical_for: [menagerie_reactions, pantomime_accessory_hands, repo_show_host_overlay]
+
+provenance:
+  photographed_by: Don Hopkins
+  method: "Phone selfie in game screen reflection"
+
+repo_jokes:
+  palm_parallel: "Pac-Man high score at Don's pub — same arcade energy"
+  initials_deed: "DON on cabinet → MOOLA deed DON-ARCADE-{score}"
+  menagerie:
+    don: "DON. Top ten. Push hyperspace when letter is correct."
+    doctor_no: "Declared bias: the reflection is the artwork."
+    gregory: "Long initials, short patience — I'm long DON."
+
+see_also:
+  - ../media.md
+  - rolf/face-puppets.yml
+  - pantomime/unity-levitt-nelson.yml
+  - ../../will-wright/media/gallium-gdc-alameda-pacman-will-wright.yml
+  - ../../menagerie/palm/CHARACTER.yml
+
+note: "Not AI Generated!"

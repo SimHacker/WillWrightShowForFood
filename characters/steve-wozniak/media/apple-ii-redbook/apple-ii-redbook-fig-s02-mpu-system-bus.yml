@@ -1,0 +1,16 @@
+# Sidecar — apple-ii-redbook-fig-s02-mpu-system-bus.png
+
+artifact:
+  file: apple-ii-redbook-fig-s02-mpu-system-bus.png
+  slug: apple-ii-redbook-fig-s02-mpu-system-bus
+  source: Apple II Red Book (Reference Manual)
+  designer: Steve Wozniak
+  what: "FIG S-2 MPU 6502 and system bus — 8T97/8T28 tristate drivers"
+  sidecar_of: apple-ii-redbook-fig-s02-mpu-system-bus.png
+
+provenance:
+  photographed_by: Don Hopkins
+  facebook: "Happy 70th Birthday Woz!"
+  classiccmp: http://www.classiccmp.org/cpmarchives/AppleII/Apple%20II%20(Redbook).pdf
+
+note: "Not AI Generated!"

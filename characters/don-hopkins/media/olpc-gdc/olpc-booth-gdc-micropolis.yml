@@ -1,0 +1,14 @@
+# Sidecar — olpc-booth-gdc-micropolis.png
+
+artifact:
+  file: olpc-booth-gdc-micropolis.png
+  slug: olpc-booth-gdc-micropolis
+  room: olpc-gdc
+  what: olpc booth gdc micropolis
+  era: GDC 2010
+  sidecar_of: olpc-booth-gdc-micropolis.png
+
+see_also:
+  - ../micropolis-gallery/INDEX.yml
+
+note: "Not AI Generated!"

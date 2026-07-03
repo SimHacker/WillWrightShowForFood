@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-business-sim-ornate-room.png
+
+artifact:
+  file: transmogrifier-business-sim-ornate-room.png
+  slug: transmogrifier-business-sim-ornate-room
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — business sim ornate room
+  era: 2000-2002
+  sidecar_of: transmogrifier-business-sim-ornate-room.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

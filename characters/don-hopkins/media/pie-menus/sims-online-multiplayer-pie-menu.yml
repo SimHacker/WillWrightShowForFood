@@ -1,0 +1,18 @@
+# Sidecar — sims-online-multiplayer-pie-menu.png
+
+artifact:
+  file: sims-online-multiplayer-pie-menu.png
+  slug: sims-online-multiplayer-pie-menu
+  room: pie-menus
+  what: sims online multiplayer pie menu
+  era: CHI 1988 through Sims Online
+  sidecar_of: sims-online-multiplayer-pie-menu.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
+
+see_also:
+  - pie-menus.yml
+  - ../news-tnt/INDEX.yml
+
+note: "Not AI Generated!"

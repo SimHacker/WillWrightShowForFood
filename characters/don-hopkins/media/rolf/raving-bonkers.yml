@@ -1,0 +1,43 @@
+# RAVING BONKERS — British Rock 'Em Sock 'Em Robots
+# From Rich / Rolf Pixley's collection
+
+artifact:
+  name: RAVING BONKERS
+  british_brand: true
+  us_equivalent: "Rock 'Em Sock 'Em Robots (Marx)"
+  what: "Vintage plastic boxing-robot tabletop game — two red bots on yellow textured base"
+
+provenance:
+  from: Rolf Pixley
+  aka: Rich Pixley
+  context: "Robot game from Pixley's hoard — not Amsterdam drawer batch; same orbit"
+
+photos:
+  - raving-bonkers-closeup.png
+  - raving-bonkers-top-motion-blur.png
+
+visual:
+  closeup: "Two red/orange bucket-head bots — guard stance, yellow cross-hatch base, red control lever"
+  top_blur: "Overhead motion blur — green/yellow plungers, car-interior background"
+
+robot_orbit:
+  turing_richard_1st: "../turing-institute/first-robot-olympics.yml"
+  slats: "../../../robots/slats/CHARACTER.yml"
+  van_leer: "../robot-collection/van-leer-leather-press.yml"
+
+auction:
+  deed: JUNK-RAVING-BONKERS
+  slug: raving-bonkers
+  spec: virtual-junk-auction.yml
+
+menagerie:
+  slats: "I trained on RAVING BONKERS. You're welcome."
+  gregory: "British boxing robots. Different ticker, same punch."
+  don: "Rich Pixley's RAVING BONKERS — not Rock 'Em Sock 'Em. Of course."
+
+see_also:
+  - INDEX.yml
+  - amsterdam-junk-drawer.yml
+  - ../../../../repo-shows/ideas/gags/rolf-junk-auction.yml
+
+note: "Not AI Generated!"

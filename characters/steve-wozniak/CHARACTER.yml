@@ -29,5 +29,11 @@ sources:
   wikipedia: null
   web:
     - https://woz.org/
+  media:
+    - media/apple-ii-redbook/INDEX.yml
   papers: []
   blogs: []
+
+see_also:
+  - { path: media/apple-ii-redbook/apple-ii-redbook.yml, why: "Red Book schematics — Don FB Woz 70th" }
+  - { path: ../don-hopkins/career/work-history.yml, why: "Apple II Forth → UMD HCI lineage" }

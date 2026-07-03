@@ -133,6 +133,7 @@ groups:
         role: Senior Software Engineer, Maxis (1994–2009)
         verify: https://www.mobygames.com/person/8375/jason-shankel/
         character: ../../../jason-shankel/
+        media: ../../../don-hopkins/media/sfc-emeryville/sfc-emeryville.yml
 
   design_art_audio:
     label: Design, art & audio
@@ -142,6 +143,7 @@ groups:
         epithet: Holodeck
         role: Art Director; hybrid 2D+Z/3D rendering; The Sims visual identity
         verify: https://www.mobygames.com/person/166/ocean-quigley/
+        media: ../../../don-hopkins/media/maxis-emeryville/maxis-suite-6-door.yml
 
       - id: jenny-martin
         name: Jenny Martin

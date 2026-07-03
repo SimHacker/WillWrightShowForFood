@@ -1,0 +1,161 @@
+# Mark Weiser's living legacy — the award, the students, and the torchbearers 🕯️
+# Memorial-mode artifact: we document public record and public work. We do NOT speak as Mark,
+# and we do NOT enroll living recipients or authors as characters — this is an honor roll and a
+# citation index. Standards: ../../schemas/portrayal-standards.yml#memorial_mode
+#
+# Don's note: Mark was my teacher at UMD and my friend until he died. Part of remembering him is
+# seeing who his ideas kept reaching — undergrads getting a scholarship in his name every spring,
+# and researchers/designers still building calm technology two decades on.
+
+meta:
+  id: weiser-legacy
+  home: characters/mark-weiser/
+  about: "How Mark Weiser's name and ideas keep touching people: an endowed Berkeley scholarship, and the calm-tech / ubicomp lineage that carries his work forward."
+  ties_to:
+    - CHARACTER.yml
+    - ideas.md
+    - pkd-lem-ai-sf.yml            # Ubik → ubicomp → calm tech seed
+    - abowd-internet-of-materials.md
+    - ../../repo-shows/remembering-mark-weiser.yml
+
+# ─── THE AWARD ───────────────────────────────────────────────────────────────
+mark_weiser_scholarship:
+  name: "Mark D. Weiser Excellence in Computing Scholarship"
+  host: "UC Berkeley EECS"
+  channel: https://www.youtube.com/@UCBerkeleyEECS
+  what: |
+    An endowed scholarship given each spring at UC Berkeley's EECS department in Mark Weiser's
+    name. Recipients post short thank-you clips to the Berkeley EECS channel — a quiet, recurring
+    trace of his legacy: undergraduates he never met, supported in his name, year after year.
+  also_called: "One 2017 recipient thanks the 'Mark Weiser Foundation'."
+  donor: "Recipients thank 'my donor' / the donor family; the donor is not named in the public clips — not asserting who (defer to the family / Berkeley EECS)."
+  bundled_in: "Shown alongside other EECS student awards (Warren Dere Design, Arthur M. Hopkin, Eugene L. Lawler, Lotfi A. Zadeh Prize, Jim & Donna Gray, Art & Mary Fong, etc.)."
+
+  honor_roll:
+    note: "Named recipients as stated in their public thank-you clips. Kept here on purpose — a nice, concrete context to name them in."
+    appreciation: |
+      Don's note — a formal thank-you for their thank-yous. These students were thanking their
+      donor, not me; I had no part in it. But as **Mark Weiser's mentee and friend**, I want to
+      thank *them* — for the short, genuine, moving clips, and for carrying his name forward
+      without ever having met him. Watching undergraduate after undergraduate accept a scholarship
+      in Mark's name is the clearest reminder of his legacy and its real effect on people; the
+      field he named is still opening doors. So, on Mark's behalf and my own: thank you. Receiving
+      their gratitude for someone I loved, and returning it, is exactly what a memorial is for.
+      (Public record; if any recipient would rather not be listed, just ask and it comes out.)
+    recipients:
+      - year: 2018
+        name: "Angelina Wang"
+        source: https://www.youtube.com/watch?v=yLZdgJDlXx0   # 2018 EECS awards playlist, item 3
+      - year: 2017
+        name: "Rohan"
+        note: "First name only in the clip; thanks the 'Mark Weiser Foundation.'"
+        source: https://www.youtube.com/watch?v=1tKCWXfyD28
+      - year: 2019
+        name: "Alex Lee"
+        detail: "Third-year undergraduate."
+        source: https://www.youtube.com/watch?v=QmsUuMsxZ4Q
+      - year: 2022
+        names: ["Ethan Yue Guo", "Jason S. Wang"]
+        detail: "Ethan: EE, CS & statistics. Jason: third-year CS."
+        source: https://www.youtube.com/watch?v=M03_eglw8xE
+      - year: 2023
+        name: "Meiqi Sun"
+        detail: "Junior undergrad."
+        source: https://www.youtube.com/watch?v=ivPZiVtv8_g
+    recipient_not_named_in_clip:
+      - { year: 2015, source: https://www.youtube.com/watch?v=HnfHq5payaQ, note: "Listed in 2015 EECS awards playlist ('Mark Weiser Excellence'); recipient not transcribed." }
+      - { year: 2024, source: https://www.youtube.com/watch?v=SM8OFMVKMgU, note: "2024 clip exists; recipient not named in transcript." }
+      - { year: 2025, note: "Listed in 2025 EECS awards playlist (item 5, ~0:22); recipient not transcribed." }
+    do_not_confuse:
+      warren_dere_2025: "Max Wilcoxson, Anish Dhanashekar, Elam Day-Friedland — those are the Warren Y. Dere Design Award (2025), NOT the Weiser scholarship."
+
+# ─── THE TORCHBEARERS — living work built on Weiser ──────────────────────────
+torchbearers:
+  note: "People still carrying calm-tech / ubicomp forward. Documented public work; potential discussants / draw-ins for the memorial (their consent, not ours)."
+
+  gregory_abowd:
+    who: "Gregory D. Abowd"
+    connection: |
+      Read Weiser's 1991 paper when he joined Georgia Tech's College of Computing in 1994 — says
+      it 'literally changed the direction of my research.' Built a ubicomp career on it: the Aware
+      Home, Classroom 2000, and now 'computational materials' / the Internet of Materials.
+    credentials_stated_in_talk: "Georgia Tech Regents' Professor & J.Z. Liang Chair, School of Interactive Computing; Associate Dean, College of Computing; ACM Fellow."
+    artifact: abowd-internet-of-materials.md
+    talks:
+      - { title: "The Internet of Materials: The next logical step or a paradigm shift?", venue: "UC Berkeley EECS Colloquium", date: "2019-12-05", url: https://www.youtube.com/watch?v=qko_wzQeP20, summary: abowd-internet-of-materials.md }
+      - { title: "Beyond Weiser's Ubiquitous Computing (Sanders Series Lecture)", date: "2016", url: https://www.youtube.com/watch?v=eYsLbVOl31M, note: "3rd generation (Weiser) → 4th generation (emerged) → 5th generation (soon)." }
+    why_draw_in: "A living researcher whose whole arc IS Weiser's legacy — ideal memorial voice; consent not_yet_asked."
+
+  amber_case:
+    who: "Amber Case"
+    connection: |
+      Found Weiser & John Seely Brown's calm-tech papers as a student; after Mark died she built
+      calmtech.com to keep the ideas alive and wrote *Calm Technology* (O'Reilly) and *Designing
+      Products with Sound*. Reframes his work for the notification age: 'a person's primary task
+      should not be computing, it should be being human; the scarce resource is attention.'
+    talks:
+      - { title: "An Introduction to Calm Technology", venue: "CyborgCamp", date: "2018", url: https://www.youtube.com/watch?v=KpRoGJrZQWM }
+      - { title: "The beginnings of calm technology", date: "2017", url: https://www.youtube.com/watch?v=OS928j6fUa4, note: "Walks the three canonical examples — the inner-office window, the teapot, the dangling string." }
+    resource: https://calmtech.com
+
+  parc_collaborators:
+    note: "Mark's documented calm-tech collaborators (planning/context, not invitations)."
+    - { who: "John Seely Brown", role: "PARC Director; calm-technology co-author with Weiser" }
+    - { who: "Rich Gold", role: "PARC — calm-tech circle (artist/designer)" }
+    - { who: "Natalie Jeremijenko", role: "Artist behind the Dangling String (Live Wire) installation at PARC" }
+
+  explainer_scholars:
+    note: "People who teach Weiser to new audiences — good clip sources / citations."
+    - { who: "Stuart Reeves", what: "Computerphile 'Ubicomp' explainer — Weiser at PARC, reaction against VR, IoT lineage, ate-their-own-dogfood testing", url: https://www.youtube.com/watch?v=Ff1QwznMffA }
+    - { who: "Geoffrey Challen", what: "internet-class 'What is calm computing?' — the ideal vs the phone as 'least calm device on the planet'", url: https://www.youtube.com/watch?v=Y3xFBe9rXzU }
+
+# ─── EXPLAINER / SUMMARY VIDEOS — quotable citations ─────────────────────────
+explainer_videos:
+  the_computer_for_the_21st_century_doodle:
+    title: "The Computer for the 21st Century (time-lapse doodle)"
+    by: "Nicola Brown"
+    date: "2014"
+    url: https://www.youtube.com/watch?v=CkHALBOqn7s
+    what: |
+      Illustrated summary of Weiser's 1991 Scientific American article. Good, faithful primer:
+      profound technologies disappear; writing as the model ubiquitous tech; tabs (Post-it size),
+      pads (paper size), boards (bulletin size); the 'Sal' scenario of a calm computed morning;
+      his three enablers (cheap low-power computers, powerful networks, ubiquitous software) and
+      1990s hardware predictions checked against today.
+    quotable: "'Smartphones play the role of tabs, today.' — top comment, and basically true."
+  computerphile_ubicomp:
+    title: "Ubicomp (Ubiquitous Computing) — Computerphile"
+    by: "Dr Stuart Reeves"
+    date: "2021"
+    url: https://www.youtube.com/watch?v=Ff1QwznMffA
+    key_points:
+      - "Ubicomp = computers embedded into everyday life, effectively invisible in use (opposite of VR's absorption)."
+      - "Weiser at Xerox PARC unified PARC's disparate tech (networking, mobility, power, displays) into one vision."
+      - "Direct line ubicomp → IoT, though IoT is 'far from his vision' (ramshackle, per-manufacturer)."
+      - "Core text: 'The Computer for the 21st Century' (Scientific American, 1991) — not highly technical; go read it."
+  calm_computing_internet_class:
+    title: "What is calm computing?"
+    by: "internet-class (Geoffrey Challen, U at Buffalo)"
+    date: "2016"
+    url: https://www.youtube.com/watch?v=Y3xFBe9rXzU
+    thesis: "Calm computing remains 'much more myth than reality'; the smartphone is 'one of the least calm devices on the planet' — but the vision is still worth pursuing."
+  ubiquitous_computing_overview:
+    title: "Ubiquitous Computing"
+    by: "Our Kaleidoscope Journey (Victor)"
+    date: "2020"
+    url: https://www.youtube.com/watch?v=xa7jnY_mCaw
+    what: "Classroom-style overview: definition, Weiser as father of ubicomp (coined ~1988), goals, examples, ubicomp vs VR, key elements (sensing, access, middleware, networking)."
+    caution: "Educational summary; fine for framing, not a primary source. One commenter ties ubicomp to Zuboff's *Surveillance Capitalism* — a fair counter-reading to hold alongside the utopian framing."
+
+# ─── THE CANONICAL CALM-TECH EXAMPLES (Weiser & Brown) ───────────────────────
+calm_tech_examples:
+  note: "The three examples Weiser & Brown used to teach calm technology — reusable show props / demos."
+  inner_office_window: "A slight transparency lets you sense whether someone is in, without violating privacy — ambient presence."
+  the_teapot: "Set it and forget it; it calls your attention only when ready, via the periphery (a status shout, not a voice)."
+  dangling_string: "Natalie Jeremijenko's Live Wire — a plastic string wired to the network; it whirs and moves with traffic, making the invisible visible in the periphery."
+  principle: "Technology should use the least amount of attention necessary, and inform from the periphery. 'The most profound technologies are those that disappear.'"
+
+sources:
+  primary: "Weiser, 'The Computer for the 21st Century', Scientific American (1991); Weiser & Brown, 'The Coming Age of Calm Technology' (1996); Weiser, 'The World Is Not a Desktop'."
+  wikipedia: [https://en.wikipedia.org/wiki/Mark_Weiser, https://en.wikipedia.org/wiki/Calm_technology, https://en.wikipedia.org/wiki/Ubiquitous_computing]
+  award_channel: https://www.youtube.com/@UCBerkeleyEECS

@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-wedding-top-hat-couple.png
+
+artifact:
+  file: transmogrifier-wedding-top-hat-couple.png
+  slug: transmogrifier-wedding-top-hat-couple
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — wedding top hat couple
+  era: 2000-2002
+  sidecar_of: transmogrifier-wedding-top-hat-couple.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

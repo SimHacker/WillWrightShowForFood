@@ -1,0 +1,164 @@
+# Guest prototype — Will Wright (archetypal gest)
+# Accepted 2026-07 — loves the idea, gets it, hot to trot.
+# Every other guest inherits this shape unless they negotiate otherwise.
+# Policy girder: ../../process/couple-and-solo-shows.yml
+
+meta:
+  id: guest-prototype
+  character: will-wright
+  role: archetypal_guest
+  status: accepted
+  crystallizes: "First real guest nucleates the network — optimize for his time first"
+
+acceptance:
+  when: "2026-07"
+  summary: "Pitched and accepted. Will loves the async repo-show idea, understands the format, eager to participate."
+  consent: invitation_accepted
+
+respect_time:
+  north_star: |
+    Will's attention is the scarce resource. The repo + audience do the homework; he brings
+    curiosity and stories. One session at a time; no marathon; no synchronized roundtable unless
+    he asks for it.
+  defaults:
+    - "Record when it suits him — async one-on-one, not appointment-TV"
+    - "Topic-less — he chooses the thread; menu in ideas.md, not an agenda"
+    - "No prep deck — warm conversation; Don primes the repo so Will can skim or skip"
+    - "Episodes, not a finale — return visits normal; no pressure to 'complete' in one sitting"
+    - "Optional everything — Slats, live Twitch, AI slide play: opt-in segments only"
+  don_does_the_work:
+    - "Prime repo with 1996 talk + catalogs before he records"
+    - "Gather research bundle from private archive — artifacts, links, HN, Don's essays, email excerpts — for Will to review and organize"
+    - "Harvest audience TicketPRs / issues into a short list — not a firehose at him"
+    - "Implement follow-through in public so his ideas become code without him coding"
+    - "Edit other guests' async threads into episodes he can watch on his own time"
+  never:
+    - "Insist on synchronized multi-guest arrival"
+    - "Assign homework or a fixed topic list"
+    - "Treat one recording as the whole show — episodes accumulate"
+    - "Re-pitch after yes"
+
+show_shape:
+  show: repo-shows/will-wright/
+  tier: ongoing_one_on_one   # couple-and-solo-shows.yml
+  episodes: "Many passes on one show — data portability, Sims post-mortem, Proxi, Slats, whatever opens"
+  special_tier: "Live Twitch / group reading only if Will wants it — not the default ask"
+  weave: "Other guests time-shifted; Will can chime in async between his own episodes"
+
+ensemble_medium:
+  metaphor: shotgun_blast
+  what: |
+    A show — especially the first with Will — is not one linear video. It is a **shotgun blast**:
+    an **ensemble** of multimedia artifacts **intertwingled** in the repo and in the edit.
+    Video, transcripts, yaml definitions, source bundles, demos, links, code, audience PRs —
+    all linked, all navigable, none mandatory in order.
+  audience_controls:
+    - time_shifted   # watch whenever
+    - pausable
+    - fast_forwardable
+    - skippable
+    - jumpable       # follow links from transcript → file → run code → back to video
+  each_artifact:
+    transcribed: "Speech → text; text → timestamps; searchable"
+    linked: "Every mention has a repo path or URL — one click from player or transcript"
+    defined: "Yaml girders (SHOW.yml, episodes.yml, sources/) — machines and humans read the same map"
+  not_appointment_tv: |
+    The ensemble grows over episodes. Will's first show crystallizes the pattern: blast the
+    bundle, let the audience assemble their own path through it.
+  attention_economy:
+    designed_for: |
+      Today's **eyeball economy** and **attention theater** — bumblebee attention spans and
+      browsing patterns, not couch-and-commitment TV. People do not have time anymore; they
+      still want to **be seen and heard**. The format respects both sides.
+    guests:
+      - "Async clips — solo demos, phone memorials, walkthroughs when it suits them"
+      - "Face puppet — live or recorded offline; their photo, their mouth, modular attachments"
+      - "Memory palace talking selfies — one short clip per room, posed next to the artifact"
+      - "Seen: their bundle, their corrections, their stories in git — durable, linkable"
+      - "Heard: voice on video without a three-hour live obligation"
+    audience:
+      - "Skim, skip, jump — no guilt for not watching the whole thing"
+      - "Heard: TicketPR, issues, PRs — chime-ins that survive the edit"
+      - "Seen: rig class, contributions credited in the repo graph"
+    not_fighting_the_feed: |
+      We do not pretend everyone will sit through a linear three-hour interview. We design for
+      how people actually browse — and give guests a dignified way to show up without burning out.
+    shorter_than_tiktok: ../../process/repo-show-branding.yml#attention_atoms
+
+moollm_stage:
+  girder: ../../process/moollm-stage.yml
+  thesis: |
+    **MOOLLM is the ideal environment** for these discussions — navigable microworld, ongoing
+    narrative, harvestable skills. WWSFF is the public ensemble; MOOLLM is where people pop in.
+  third_place:
+    where: SimHacker/moollm/examples/adventure-4/pub/
+    pie_table: "Round pie-menu table — octagonal third place; ring to speak; ongoing thread"
+    also: "Conference rooms, coffee shops, theaters — each hosts ongoing topic shows"
+  pub_as_show:
+    episodes: "Session logs when moo wanders in — marathon-session.md, world-tour-leela.md shape"
+    wander: "Discussion roams the world — pub → streets → factories → skill rooms"
+  session_to_skill:
+    every_log: "Harvest substantial session logs into MOOLLM skills"
+    criterion_collection: |
+      Commentary overlay — humans who made it talk over the log: backstory, why they said it,
+      what happened. Session + commentary → cauldron → skill.
+  narrative_engine:
+    girder: performance-space.yml#narrative_engine
+    summary: "Button board + Conan face-holes + improv voices — Don Philahue host ties clips together live"
+    style: "../../don-hopkins/portrayal/upbringing.yml — host wavelength + production aesthetic"
+
+research_bundle:
+  what: |
+    For many guests Don has **already done the homework** — artifacts, links, videos, Hacker News
+    threads, essays Don wrote, email archives. Curate a **review bundle** (private repo first,
+    then public-safe projection) for the guest to skim, reorganize, and walk through on camera.
+  workflow:
+    - "Don gathers from DonHopkins private archive → filtered bundle per guest"
+    - "Guest reviews, corrects, reorganizes — co-authors their directory"
+    - "Public WWSFF gets representation-ethics-safe projections (sources/, media/, correspondence.yml)"
+  will_already_has:
+    - characters/will-wright/sources/   # dozens of article bundles, YouTube indexes
+    - characters/will-wright/media/
+    - repo-shows/will-wright/audience/
+  private_first: "../../process/live-repo.yml — DonHopkins authoritative; WWSFF is live bud"
+
+video_walkthrough:
+  guest_on_camera: |
+    Guest records async — **pointing at** the bundle on screen: open files, follow links, react,
+    correct Don's portrayals, tell stories the archive missed. No live sync required.
+  audience_parallel: |
+    **Time-shifted real time:** audience watches the episode and opens the **same paths in Cursor**
+    (or browser) — talk about, edit the data, run the code, file PRs. The repo is the shared stage;
+    video is the tour guide, git is the playground.
+  solo_demos:
+    encouraged: true
+    what: |
+      Guests encouraged to record **separate solo demo videos** — one topic, one rig, easy to
+      re-do. Try a few takes; keep the one that worked best. Easier to manage than one long session.
+  guest_youtube:
+    submit_or_recommend: |
+      Guests may submit **YouTube videos they already made** or **recommend viewing** — link in
+      sources/ or episodes.yml; episode weaves them in. No need to recreate on camera.
+
+first_episode:
+  low_friction: |
+    Smallest viable pass: one comfortable recording window, one thread he picks (likely 1996
+    talk → Sims post-mortem or data portability). Will walks the **existing source bundles** on
+    camera — or a short solo demo — try a few takes, keep the best. Publish raw + cut; repo grows.
+  centerpiece: characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
+  optional_segments: [slats-reincarnation, the_big_ask AI visual play]
+
+template_for_other_guests: |
+  Copy **respect_time** + **research_bundle** + **video_walkthrough** + **ensemble_medium**
+  when inviting anyone else. Will is the reference: shotgun-blast ensemble, intertwingled,
+  time-shifted, jumpable — Don pre-researches → guest reviews bundle → audience assembles path.
+
+see_also:
+  - CHARACTER.yml
+  - invitation.md
+  - sources/README.md
+  - ../../process/live-repo.yml
+  - ../../repo-shows/will-wright/SHOW.yml
+  - ../../process/moollm-stage.yml
+  - ../../process/couple-and-solo-shows.yml
+  - ../../process/entryways/guest-will.md

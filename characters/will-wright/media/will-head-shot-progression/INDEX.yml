@@ -1,0 +1,20 @@
+room:
+  id: will-head-shot-progression
+  name: Will Head Shot Progression
+  parent: ../../media.md
+
+artifacts:
+  - will-sim-in-palm.png
+  - will-sim-touches-nose.png
+  - will-legs-in-mouth.png
+  - will-young-grayscale.png
+  - will-linkedin-computer-games-parody.png
+
+spec:
+  - will-head-shot-progression.yml
+
+see_also:
+  - ../motion-capture-sim-salabim/INDEX.yml
+  - ../../CHARACTER.yml
+
+note: "Not AI Generated!"

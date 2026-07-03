@@ -1,0 +1,18 @@
+room:
+  id: hyperties
+  name: HyperTIES Architecture
+  parent: ../../media.md
+
+artifacts:
+  - hyperties-road-pizza-diagram.png
+  - hyperties-news-tape-browser.png
+  - nemacs-hyperties-shell.png
+
+spec:
+  - hyperties.yml
+
+see_also:
+  - ../../nemacs-hyperties-news-hubble.yml
+  - ../news-tshirts/INDEX.yml
+
+note: "Not AI Generated!"

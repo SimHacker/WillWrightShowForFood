@@ -1,0 +1,27 @@
+# NeWS Toolkit (TNT) — RasterRap, Pizza Tool, FrameMaker spelling checker
+
+tnt:
+  what: "The NeWS Toolkit — OPEN LOOK widgets on NeWS PostScript window system"
+  demos:
+    raster_rap:
+      file: news-tnt-raster-rap-demos.png
+      what: "RasterRap collage tool — Scratch, Spotlight, Rotate, Dizzy; JED editor; ClassPopup demos"
+    pizza_tool:
+      file: news-pizza-tool.png
+      what: "Pizza Tool — Tony & Alba's Mountain View; Don Hopkins order; fax confirmation dialog"
+      address: "Sun Microsystems, 2400 Garcia Ave, Mountain View"
+      note: "Warm up a few Stouts!"
+    framemaker_spelling:
+      file: news-framemaker-spelling-checker.png
+      what: "FrameMaker for NeWS spelling checker — xmodmap → smegmas"
+
+repo_orbit:
+  nemacs_hyperties: ../../nemacs-hyperties-news-hubble.yml
+  arthur_van_hoff: ../../../arthur-van-hoff/CHARACTER.yml
+  pie_menus: ../../../../process/crazy-idea-jam.yml
+
+menagerie:
+  don: "Pizza Tool faxed Tony & Alba's. FrameMaker suggests smegmas. Obviously."
+  gregory: "Long PostScript, short delivery window."
+
+note: "Not AI Generated!"

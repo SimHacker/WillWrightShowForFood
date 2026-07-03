@@ -19,6 +19,9 @@ and we do not speak as him without consent.
 | **Up** | [characters](../README.md) | Guest registry |
 | **Show** | [will-wright show](../../repo-shows/will-wright/README.md) | Flagship Repo Show room |
 | **Sources** | [sources](sources/README.md) | Evidence — 1996 centerpiece lives here |
+| **Primary sources map** | [primary-sources-evidence-room.md](primary-sources-evidence-room.md) | Curated slug index + cross-links |
+| **Adorable Minutes** | [adorable-minutes.md](adorable-minutes.md) | 2008 one-minute Q&A format; async show seed |
+| **Proto-Dollhouse @ Kaleida** | [proto-dollhouse-kaleida-visit.md](proto-dollhouse-kaleida-visit.md) | Will's pre-1996 visit to Don's Mac |
 | **Media** | [media](media/README.md) | Flower Child + flat galleries |
 | **Invitation** | [invitation.md](invitation.md) | Public ask — edit or decline anytime |
 | **Siblings** | [don-hopkins](../don-hopkins/README.md) · [terry-winograd](../terry-winograd/README.md) · [chaim-gingold](../chaim-gingold/README.md) | Host + forebears |

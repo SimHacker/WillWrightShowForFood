@@ -1,0 +1,33 @@
+# Sims character schema — simulated Sims souls
+# Fork of menagerie schema; neighbor_ids 909+ for Sims export
+
+schema:
+  id: sims-character-soul
+  version: 1
+  portrayal: ../../schemas/portrayal-standards.yml#simulation.tiers.game_and_fictional
+  moollm_upstream:
+    simopolis: SimHacker/moollm/examples/simopolis/characters/
+    mind_mirror: SimHacker/moollm/skills/mind-mirror/
+
+character_file:
+  required:
+    - character.id
+    - character.sims.traits
+    - character.mind_mirror
+  optional:
+    - soul_philosophy
+    - emoji_identity
+    - gallery_opening
+    - audience_fork
+    - balcony
+
+sims_export:
+  file: EXPORT-SIMS-RELATIONSHIPS.yml
+  neighbor_ids:
+    bella_goth: 909
+    mortimer_goth: 910
+    tragic_clown: 911
+
+audience_fork:
+  pattern: repo-shows/*/audience/fictional-{slug}/
+  fields: [prototype_ref, questions.yml, planted.disclosure]

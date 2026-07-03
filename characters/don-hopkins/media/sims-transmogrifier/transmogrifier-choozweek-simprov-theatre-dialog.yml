@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-choozweek-simprov-theatre-dialog.png
+
+artifact:
+  file: transmogrifier-choozweek-simprov-theatre-dialog.png
+  slug: transmogrifier-choozweek-simprov-theatre-dialog
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — choozweek simprov theatre dialog
+  era: 2000-2002
+  sidecar_of: transmogrifier-choozweek-simprov-theatre-dialog.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

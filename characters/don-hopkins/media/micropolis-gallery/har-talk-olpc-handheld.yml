@@ -1,0 +1,18 @@
+# Sidecar — har-talk-olpc-handheld.png
+
+artifact:
+  file: har-talk-olpc-handheld.png
+  slug: har-talk-olpc-handheld
+  room: micropolis-gallery
+  what: har talk olpc handheld
+  era: 1991 HyperLook through 2010s Facebook
+  sidecar_of: har-talk-olpc-handheld.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/micropolis-gallery.yml
+  - ../../../repo-shows/ideas/gags/pacbot-eats-traffic.yml
+
+see_also:
+  - micropolis-gallery.yml
+
+note: "Not AI Generated!"

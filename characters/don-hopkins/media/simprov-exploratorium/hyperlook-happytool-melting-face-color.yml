@@ -1,0 +1,18 @@
+# Sidecar — hyperlook-happytool-melting-face-color.png
+
+artifact:
+  file: hyperlook-happytool-melting-face-color.png
+  slug: hyperlook-happytool-melting-face-color
+  room: simprov-exploratorium
+  what: HyperLook Exploratorium demo — happytool melting face color
+  era: early 1990s
+  sidecar_of: hyperlook-happytool-melting-face-color.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
+
+see_also:
+  - ../pie-menus/INDEX.yml
+  - ../cellular-automata-tiles/INDEX.yml
+
+note: "Not AI Generated!"

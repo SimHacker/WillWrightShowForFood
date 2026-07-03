@@ -1,0 +1,98 @@
+# Sims relationship export — Lower Chelsea Eight
+# Maps MOOLLM RELATIONSHIP-MATRIX.yml → SIMS-UPLIFT relationships block
+# Fictional neighbor_ids 901-908 (not in any real neighborhood.iff)
+
+schema_version: 1
+source:
+  matrix: RELATIONSHIP-MATRIX.yml
+  direction: moollm_to_sims
+  note: Symbolic edges omitted from binary export; narrative stays in CHARACTER.yml
+
+neighbor_ids:
+  mimsy-caldwell: 901
+  gregory-kwan: 902
+  eli-vandermeer: 903
+  bucky-jr: 904
+  helena-featherstone: 905
+  margot-krell: 906
+  julian-strait: 907
+  bunny-whitmore: 908
+  donna-toadstool: 912
+  doctor-no: 913
+  palm: 914
+
+# Per Sim: relationships keyed by target neighbor_id
+# Only person-to-person edges with sims.daily/lifetime
+
+exports:
+  901:  # mimsy
+    902: { daily: 35, lifetime: 40 }
+    903: { daily: 50, lifetime: 55 }
+    904: { daily: 45, lifetime: 50 }
+    905: { daily: 25, lifetime: 60 }
+    906: { daily: -15, lifetime: 20 }
+    907: { daily: 20, lifetime: 30 }
+    908: { daily: 70, lifetime: 80 }
+  902:  # gregory
+    901: { daily: 35, lifetime: 40 }
+    903: { daily: -10, lifetime: 5 }
+    904: { daily: 30, lifetime: 35 }
+    905: { daily: 40, lifetime: 55 }
+    906: { daily: 10, lifetime: 25 }
+    907: { daily: -20, lifetime: 0 }
+    908: { daily: 25, lifetime: 45 }
+  903:  # vandermeer
+    901: { daily: 50, lifetime: 55 }
+    902: { daily: -10, lifetime: 5 }
+    905: { daily: 15, lifetime: 40 }
+    906: { daily: -45, lifetime: -30 }
+    907: { daily: 5, lifetime: 10 }
+    908: { daily: 35, lifetime: 40 }
+  904:  # bucky_jr
+    901: { daily: 45, lifetime: 50 }
+    902: { daily: 30, lifetime: 35 }
+    906: { daily: 40, lifetime: 45 }
+    907: { daily: 15, lifetime: 20 }
+  905:  # helena
+    901: { daily: 25, lifetime: 60 }
+    902: { daily: 40, lifetime: 55 }
+    906: { daily: 30, lifetime: 50 }
+    908: { daily: 55, lifetime: 70 }
+  906:  # margot
+    902: { daily: 10, lifetime: 25 }
+    903: { daily: -45, lifetime: -30 }
+    905: { daily: 30, lifetime: 50 }
+    907: { daily: -5, lifetime: 15 }
+  907:  # julian
+    901: { daily: 20, lifetime: 30 }
+    902: { daily: -20, lifetime: 0 }
+    904: { daily: 15, lifetime: 20 }
+    906: { daily: -5, lifetime: 15 }
+  908:  # bunny
+    901: { daily: 70, lifetime: 80 }
+    902: { daily: 25, lifetime: 45 }
+    903: { daily: 35, lifetime: 40 }
+    904: { daily: 55, lifetime: 60 }
+    905: { daily: 55, lifetime: 70 }
+    906: { daily: 50, lifetime: 55 }
+    907: { daily: 45, lifetime: 50 }
+
+  912:  # donna-toadstool
+    901: { daily: -20, lifetime: 10 }
+    902: { daily: -30, lifetime: -10 }
+    913: { daily: 15, lifetime: 25 }
+  913:  # doctor-no
+    903: { daily: 40, lifetime: 50 }
+    905: { daily: 55, lifetime: 70 }
+    908: { daily: 45, lifetime: 60 }
+    912: { daily: 15, lifetime: 25 }
+    914: { daily: 50, lifetime: 60 }
+  914:  # palm
+    913: { daily: 50, lifetime: 60 }
+
+import_protocol: |
+  On uplift: merge exports[N] into character SIMS-UPLIFT.yml relationships block.
+  On homecoming: write relationships from SIMS-UPLIFT back into matrix sims scores only.
+  Narrative, type, symbolic edges remain MOOLLM-only.
+
+note: "Not AI Generated!"

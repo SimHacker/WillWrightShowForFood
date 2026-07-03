@@ -1,0 +1,24 @@
+# Software Simcity Tcl Tk
+
+room:
+  id: software-simcity-tcl-tk
+  category: software
+  subcategory: simcity-tcl-tk
+  parent: ../INDEX.yml
+  count: 6
+
+artifacts:
+  - file: software-simcity-tcl-tk-about-multiplayer.png
+    sidecar: software-simcity-tcl-tk-about-multiplayer.yml
+  - file: software-simcity-tcl-tk-kowloon-explosion-fire.png
+    sidecar: software-simcity-tcl-tk-kowloon-explosion-fire.yml
+  - file: software-simcity-tcl-tk-kowloon-stadium-query.png
+    sidecar: software-simcity-tcl-tk-kowloon-stadium-query.yml
+  - file: software-simcity-tcl-tk-multiplayer-editor-windows.png
+    sidecar: software-simcity-tcl-tk-multiplayer-editor-windows.yml
+  - file: software-simcity-tcl-tk-multiplayer-talk-nuke.png
+    sidecar: software-simcity-tcl-tk-multiplayer-talk-nuke.yml
+  - file: software-simcity-tcl-tk-overlay-maps-graph.png
+    sidecar: software-simcity-tcl-tk-overlay-maps-graph.yml
+
+note: "Not AI Generated!"

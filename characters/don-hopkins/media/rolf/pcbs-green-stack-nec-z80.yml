@@ -1,0 +1,19 @@
+# Sidecar — pcbs-green-stack-nec-z80.png
+
+artifact:
+  file: pcbs-green-stack-nec-z80.png
+  slug: pcbs-green-stack-nec-z80
+  room: rolf
+  what: pcbs green stack nec z80
+  era: TomTom-era Amsterdam
+  sidecar_of: pcbs-green-stack-nec-z80.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/rolf-junk-auction.yml
+
+see_also:
+  - INDEX.yml
+  - raving-bonkers.yml
+  - ../robot-collection/INDEX.yml
+
+note: "Not AI Generated!"

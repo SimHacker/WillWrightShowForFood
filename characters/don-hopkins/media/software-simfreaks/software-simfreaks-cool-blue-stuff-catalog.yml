@@ -1,0 +1,11 @@
+# Sidecar — software-simfreaks-cool-blue-stuff-catalog.png
+
+artifact:
+  file: software-simfreaks-cool-blue-stuff-catalog.png
+  slug: software-simfreaks-cool-blue-stuff-catalog
+  category: software
+  subcategory: simfreaks
+  what: "SimFreaks catalog — Cool Blue Stuff"
+  sidecar_of: software-simfreaks-cool-blue-stuff-catalog.png
+
+note: "Not AI Generated!"

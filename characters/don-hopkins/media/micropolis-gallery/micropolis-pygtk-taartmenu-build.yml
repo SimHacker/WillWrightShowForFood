@@ -1,0 +1,18 @@
+# Sidecar — micropolis-pygtk-taartmenu-build.png
+
+artifact:
+  file: micropolis-pygtk-taartmenu-build.png
+  slug: micropolis-pygtk-taartmenu-build
+  room: micropolis-gallery
+  what: micropolis pygtk taartmenu build
+  era: 1991 HyperLook through 2010s Facebook
+  sidecar_of: micropolis-pygtk-taartmenu-build.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/micropolis-gallery.yml
+  - ../../../repo-shows/ideas/gags/pacbot-eats-traffic.yml
+
+see_also:
+  - micropolis-gallery.yml
+
+note: "Not AI Generated!"

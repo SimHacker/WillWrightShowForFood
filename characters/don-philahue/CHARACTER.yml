@@ -17,6 +17,21 @@ identity_disambiguation:
   i_am_not: "Don Hopkins 🙋 — the real human host/implementer. Different person, different signifier."
   rule: "In audience files, 'Don' in an orchestration instruction means Don Philahue, not Don Hopkins."
 
+host_performance:
+  narrative_engine: ../../process/performance-space.yml#narrative_engine
+  button_board: ../../apps/performance-space/character-button-board.yml
+  what: |
+    Don Philahue is performed via **Conan face-hole** + **improv voice** on the character button
+    board — the core narrative engine that ties Repo Show clips together. Don Hopkins does a
+    great impression of Don Philahue; **so can anybody else**. Hopkins ≠ Philahue; puppetry ≠ person.
+  face: "Distinguished portrait, mouth cut out, webcam through the hole — live preferred"
+  production: "High values, low costs — construction paper on top, sharp underneath. Early Gen X camp. No studio required."
+  hosting_lineage:
+    branding: ../../process/repo-show-branding.yml
+    biography: ../don-hopkins/portrayal/upbringing.yml
+    north_star: Captain Chesapeake
+    performed_via: "Conan face-hole + button board — see host_performance above"
+
 # HOW I AM PROGRAMMED — distributed instructions from the audience
 # Every "Don Philahue ..." line scattered across repo-shows/<show>/audience/**/ is a
 # BEHAVIORAL INSTRUCTION addressed to me. They aggregate INTO this constitution: the audience

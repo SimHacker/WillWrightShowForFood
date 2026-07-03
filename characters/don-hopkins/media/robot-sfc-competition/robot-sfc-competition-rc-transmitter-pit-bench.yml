@@ -1,0 +1,11 @@
+# Sidecar — robot-sfc-competition-rc-transmitter-pit-bench.png
+
+artifact:
+  file: robot-sfc-competition-rc-transmitter-pit-bench.png
+  slug: robot-sfc-competition-rc-transmitter-pit-bench
+  category: robot
+  subcategory: sfc-competition
+  what: "RC transmitter on competition pit bench"
+  sidecar_of: robot-sfc-competition-rc-transmitter-pit-bench.png
+
+note: "Not AI Generated!"

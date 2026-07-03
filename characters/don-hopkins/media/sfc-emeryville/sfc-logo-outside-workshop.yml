@@ -1,0 +1,14 @@
+# Sidecar — sfc-logo-outside-workshop.png
+
+artifact:
+  file: sfc-logo-outside-workshop.png
+  slug: sfc-logo-outside-workshop
+  room: sfc-emeryville
+  what: sfc logo outside workshop
+  era: ~2013
+  sidecar_of: sfc-logo-outside-workshop.png
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

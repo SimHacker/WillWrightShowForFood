@@ -1,0 +1,24 @@
+# Misc Magazine
+
+room:
+  id: misc-magazine
+  category: misc
+  subcategory: magazine
+  parent: ../INDEX.yml
+  count: 6
+
+artifacts:
+  - file: misc-magazine-teaching-world-to-play-olpc.png
+    sidecar: misc-magazine-teaching-world-to-play-olpc.yml
+  - file: misc-magazine-teaching-world-to-play-olpc-dup.png
+    sidecar: misc-magazine-teaching-world-to-play-olpc-dup.yml
+  - file: misc-magazine-tomtom-barbara-wojciech-spread.png
+    sidecar: misc-magazine-tomtom-barbara-wojciech-spread.yml
+  - file: misc-magazine-tomtom-employee-map-ad.png
+    sidecar: misc-magazine-tomtom-employee-map-ad.yml
+  - file: misc-magazine-tomtom-office-fifth-gear.png
+    sidecar: misc-magazine-tomtom-office-fifth-gear.yml
+  - file: misc-magazine-tomtom-sinterklaas-contents-2007.png
+    sidecar: misc-magazine-tomtom-sinterklaas-contents-2007.yml
+
+note: "Not AI Generated!"

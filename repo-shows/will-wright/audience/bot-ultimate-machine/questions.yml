@@ -7,7 +7,7 @@ ticket:
   seeded: true
 
 character_ref: CHARACTER.yml
-canonical_character: ../../../../characters/ultimate-machine/CHARACTER.yml
+canonical_character: ../../../../characters/robots/ultimate-machine/CHARACTER.yml
 
 relationship: |
   Shannon's desk toy. Minsky's ultimate machine. One switch. One refusal. Your questions
@@ -25,7 +25,7 @@ questions:
 
 comments_for_guest: |
   Questions delivered as koans — Don may read them slowly. Never attribute invented lines to
-  Minsky/Shannon; origin history lives in characters/ultimate-machine/.
+  Minsky/Shannon; origin history lives in characters/robots/ultimate-machine/.
 
 meta:
   moollm_stack:

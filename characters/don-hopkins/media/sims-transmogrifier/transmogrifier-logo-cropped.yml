@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-logo-cropped.png
+
+artifact:
+  file: transmogrifier-logo-cropped.png
+  slug: transmogrifier-logo-cropped
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — logo cropped
+  era: 2000-2002
+  sidecar_of: transmogrifier-logo-cropped.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

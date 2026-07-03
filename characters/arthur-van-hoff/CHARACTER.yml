@@ -33,6 +33,9 @@ sources:
   blogs: []
 
 see_also:
+  - { path: media/INDEX.yml, why: "Birthday party + plane N333ST — HyperLook crew energy" }
+  - { path: media/plane-n333st-exterior.yml, what: "N333ST exterior — shattered livery on ramp" }
+  - { path: ../don-hopkins/media/turing-institute/INDEX.yml, why: "Glasgow — HyperLook, SimCity shipped; Robot Olympics tee" }
   - { path: ../james-gosling/, why: "Old NeWS + early-Java friend — the 'NeWS to Java' pairing (repo-shows/james-gosling/)" }
   - { path: ../don-hopkins/, why: "HyperLook (where Don built SimCity's UI), NeWS, PdB — longtime collaborator" }
   - { path: ../bill-atkinson/, why: "HyperCard → HyperLook lineage (van Hoff's NeWS reimagining) — memorial" }

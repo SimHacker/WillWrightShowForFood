@@ -1,0 +1,11 @@
+# Sidecar — software-openlaszlo-kooshballs-graphic.png
+
+artifact:
+  file: software-openlaszlo-kooshballs-graphic.png
+  slug: software-openlaszlo-kooshballs-graphic
+  category: software
+  subcategory: openlaszlo
+  what: "KooshBalls for Laszlo graphic"
+  sidecar_of: software-openlaszlo-kooshballs-graphic.png
+
+note: "Not AI Generated!"

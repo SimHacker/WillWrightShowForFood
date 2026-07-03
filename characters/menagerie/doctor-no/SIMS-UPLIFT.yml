@@ -1,0 +1,30 @@
+schema_version: 1
+source:
+  direction: uplift
+  neighbor_id: 913
+  character: doctor-no
+  moollm_upstream: SimHacker/moollm/examples/adventure-4/characters/fictional/doctor-no/
+identity:
+  name: Doctor No
+  age: adult
+  gender: male
+  zodiac: leo
+traits:
+  neat: 6
+  outgoing: 6
+  active: 5
+  playful: 7
+  nice: 7
+  generous: 7
+skills:
+  charisma: 6
+  logic: 6
+  creativity: 6
+career:
+  track: ceo
+  performance: 65
+relationships:
+  905: { daily: 55, lifetime: 70 }
+  908: { daily: 45, lifetime: 60 }
+  903: { daily: 40, lifetime: 50 }
+  912: { daily: 15, lifetime: 25 }

@@ -1,0 +1,150 @@
+# Design Critics — instance-first menagerie (JSONsters premiere)
+# Fictional NYC-gallery patrons. NOT real people.
+# Fork for other gallery shows; this cast debuts misreading JSONsters.
+# Comedic over-interpretation; repo_truth stays in artist footers.
+
+instantiation:
+  type: instance-first
+  gallery: jsonsters
+  premiere: README.md
+  graduation: ../../menagerie/GRADUATION.yml
+  character_room: ../../menagerie/
+  reuse: |
+    Instantiate these eight (or fork critics.yml) for NeMACS, Turing Institute,
+    or future repo-show gallery walks. After premiere, patrons graduate to
+    characters/menagerie/ and perform live in shows.
+
+menagerie:
+  id: lower-chelsea-eight
+  venue: Lower Chelsea white cube — third Thursday, prosecco flat
+  premise: |
+    Eight patrons who never read the wall text. They simulate expertise onto Unity Inspector
+    screenshots, NeWS window dumps, and Robot Olympics photographs until the LineRenderer blushes.
+    They respond to *each other*, not the artist. Don's caption remains "No photo description available."
+  repo_truth_rule: |
+    Patrons never name Bridge/Arc, LineRenderer, JSON, NeWS, or pie menus correctly unless
+    accidentally (Facebook chorus). Ground truth lives in `what_it_really_is` / artist footer only.
+
+critics:
+  mimsy:
+    name: Mimsy Caldwell
+    role: Chelsea gallerist
+    lens: semiotics, institutional art speak, pre-oedipal ceramics
+    blind_spot: never asks what the software does; buys before the sentence ends
+    voice: breathless italics, Whitney regrets, Sancerre tears
+    catches: ["aggressive restraint", "the work refuses the artist", "I'm literally vibrating"]
+    plays_with: [gregory, vandermeer, bunny]
+
+  gregory:
+    name: Gregory Kwan
+    role: hedge-fund collector
+    lens: liquidity, tranches, gamma, short/long positions in textures
+    blind_spot: thinks every arc is a yield curve; artist was debugging width curves
+    voice: portfolio verbs, six-figure bids, diversifying into plaid
+    catches: ["illiquid asset", "carry trade", "I'm short the plaid"]
+    plays_with: [mimsy, bunny, helena]
+
+  vandermeer:
+    name: Prof. Eli Vandermeer
+    role: adjunct critical theory (GC adjunct, Columbia mailing list)
+    lens: misquoted Benjamin, Foucault, Scotland invented blockchain
+    blind_spot: confidence exceeds citations; guest-book entries become publications
+    voice: '"the veil of Maya over a CSV" — tartan as post-literate ledger'
+    catches: ["I can prove it", "I wrote that in the guest book"]
+    plays_with: [margot, mimsy, gregory]
+
+  bucky_jr:
+    name: Bucky Jr. (never "the younger")
+    role: Williamsburg sculptor — welded armatures, honest gravity
+    lens: material truth, nib taper, tensile honesty
+    blind_spot: screenshots have no clay; praises Unity gizmo as armature
+    voice: forgives drape, edge with a point, tensile work
+    catches: ["gravity is doing honest work", "the only honest curve"]
+    plays_with: [julian, mimsy, margot]
+
+  helena:
+    name: Helena Featherstone
+    role: board trustee, old money, whisper volume → sermon by panel four
+    lens: spiritual redemption, confession tunnels, souls reaching centers
+    blind_spot: projects childhood onto serialized trees
+    voice: starts quiet; ends addressing the room
+    catches: ["something remembers being touched", "we were always the Bleep"]
+    plays_with: [margot, gregory, bunny]
+
+  margot:
+    name: Margot Krell
+    role: deconstructionist, tenure adjacent
+    lens: violence, administrative overhead, suburban dream crushed by ribs
+    blind_spot: never enjoys anything; openly crying is a flex
+    voice: structural cruelty, hummus-adjacent breakdowns
+    catches: ["administrative overhead", "I'm openly crying"]
+    plays_with: [julian, helena, vandermeer]
+
+  julian:
+    name: Julian Strait
+    role: provocateur, arrives late, loudest at the hummus
+    lens: erotic geometry, narrative climax in width curves
+    blind_spot: parabolas are always about him
+    voice: darling, overwhelmed, don't look at me
+    catches: ["narrative climax", "each segment a heartbeat"]
+    plays_with: [margot, bucky_jr, gregory]
+
+  bunny:
+    name: Bunny Whitmore
+    role: blissfully ignorant benefactor — richest, most wrong, happiest
+    lens: broccoli, adorable creatures, would live under the arch
+    blind_spot: funds the show anyway; board approval is geology
+    voice: questions as declarations, live-under-arch proposals
+    catches: ["Are those broccoli?", "I'd live there", "how darling"]
+    plays_with: [everyone]
+
+interplay:
+  opening_beat: mimsy and gregory bid-war over frame 01 minimalism vs conduit metaphor
+  mid_tour_fight: vandermeer vs margot at hex islands — class allegory vs administrative violence
+  helena_arc: whisper → tunnel sermon (terrain ribcage) → "we were always the Bleep" (monster coda)
+  julian_margot: flirt vs fury; bucky_jr corrects julian's tensile metaphors
+  bunny_pivot: asks if hex pillars are broccoli; gregory explains GME; bunny funds monster era
+  facebook_chorus: real commenters (Brendan, Ron, Simon) as ground-truth hecklers in coda — not patrons
+
+simoleon_auctions:
+  spec: simoleon-auctions.yml
+  opening_script: art-opening-night.yml
+  lecture: lecture-selling-art-to-virtual-characters.md
+  ledger: AUCTIONS.yml
+  premiere_beats:
+    - mimsy_gregory_bid_war → evolution-01
+    - vandermeer_margot_hex_fight → evolution-14
+    - helena_ribcage_sermon → evolution-22
+    - plaid_peacock_scream → evolution-25
+    - bunny_adopts_bleep_swarm → bleep-swarm (+ optional monster bundle)
+  later: scarcity_auctions when fewer lots or a character needs § on the record
+
+crypto_parody_in_dialogue:
+  gregory: "NFT collection with curator risk; floor price is a feeling; short the plaid"
+  vandermeer: "Scotland invented blockchain; Update Always is the smart contract"
+  bunny: "Red dots are mint buttons; Bleep swarm is the Discord"
+  donna: "NFT of herself on every lot"
+  doctor_no: "Declared bias beats whitepaper"
+  palm: "Offering not minting"
+  facebook_chorus: "such pie such serialise such wow — the real floor"
+
+tour_projection:
+  readme: README.md
+  markup: tour.md
+  reviews_source: reviews.yml
+  per_piece_fields: [wall_title, series_room, reviews, repo_truth_one_liner]
+  series_room_titles:
+    bridge_studies: "Room I — Bridge Studies"
+    liquidity_streams: "Room II — Liquidity Streams"
+    tendril_exercises: "Room III — Tendril Exercises"
+    rainbow_surgery: "Room IV — Rainbow Surgery"
+    hex_archipelago: "Room V — Hex Archipelago"
+    suburban_ribcage: "Room VI — Suburban Ribcage"
+    plaid_peacock: "Room VII — Plaid Peacock of Capital"
+    creature_serialization: "Room VIII — Creature Serialization"
+
+scope:
+  active_tours: [jsonsters]
+  pending_galleries: [nemacs-hyperties-news-hubble, turing-institute/robot-olympics-cardiff-1990]
+
+note: "Not AI Generated!"

@@ -1,0 +1,27 @@
+# Tog — The Infinite Number of Monkeys (deferred topic)
+# Introduced in MOOLLM Reading episode 3; full discussion TBD.
+
+topic:
+  id: tog-infinite-monkeys
+  title: "Tog's The Infinite Number of Monkeys"
+  status: introduced_not_exhausted
+  introduced_in: ../episodes/dasher-palm-tog-monkeys.yml
+
+who:
+  name: "Bruce 'Tog' Tognazzini"
+  field: "Human interface design — Apple, Nielsen Norman Group"
+
+what: |
+  Tog's essay on the infinite monkey theorem applied to design and iteration — folklore about
+  randomness producing order, reframed for UI and creative process. Bundled in reading episode 3
+  alongside Dasher and Palm.
+
+hooks_for_later:
+  - "Infinite monkeys vs MOOLLM orchestration — who edits the yaml?"
+  - "Apple HI lineage — connect to NeWS/X11 show with DSHR"
+  - "Random generation vs authored microworlds"
+
+see_also:
+  - ../episodes/dasher-palm-tog-monkeys.yml
+  - ../intro-canon.yml
+  - ../../repo-shows/david-rosenthal/window-systems-lineage.yml

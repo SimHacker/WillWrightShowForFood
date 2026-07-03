@@ -1,0 +1,22 @@
+room:
+  id: amsterdam-tile-art
+  name: Amsterdam Tile Street Art
+  parent: ../../media.md
+
+artifacts:
+  - space-invader-met-mosaic.png
+  - space-invader-orange-alien.png
+  - space-invader-white-red.png
+  - bethanienstraat-invader-sign.png
+  - pacman-ghost-checker-mosaic.png
+  - objectionable-c-selfie-three20.png
+  - objectionable-c-mirror-selfie.png
+
+spec:
+  - amsterdam-tile-art.yml
+
+see_also:
+  - ../storymaker-urban-safari/INDEX.yml
+  - ../don-high-score-space-invaders.yml
+
+note: "Not AI Generated!"

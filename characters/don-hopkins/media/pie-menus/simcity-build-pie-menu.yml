@@ -1,0 +1,18 @@
+# Sidecar — simcity-build-pie-menu.png
+
+artifact:
+  file: simcity-build-pie-menu.png
+  slug: simcity-build-pie-menu
+  room: pie-menus
+  what: simcity build pie menu
+  era: CHI 1988 through Sims Online
+  sidecar_of: simcity-build-pie-menu.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
+
+see_also:
+  - pie-menus.yml
+  - ../news-tnt/INDEX.yml
+
+note: "Not AI Generated!"

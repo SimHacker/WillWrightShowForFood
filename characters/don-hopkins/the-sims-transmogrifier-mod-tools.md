@@ -23,6 +23,6 @@
 | Transmogrifier documentation hub | [`../../characters/will-wright/sources/2004-transmogrifier-documentation-hub/`](../../characters/will-wright/sources/2004-transmogrifier-documentation-hub/README.md) |
 | Green flamingo tutorial | [`../../characters/will-wright/sources/2004-transmogrifier-tutorial-green-flamingo/`](../../characters/will-wright/sources/2004-transmogrifier-tutorial-green-flamingo/README.md) |
 | RugOMatic tutorial | [`../../characters/will-wright/sources/2004-01-21-rugomatic-tutorial/`](../../characters/will-wright/sources/2004-01-21-rugomatic-tutorial/README.md) |
-| Full Transmogrifier + UCC cluster | [`will-wright-primary-sources-evidence-room.md`](will-wright-primary-sources-evidence-room.md) |
+| Full Transmogrifier + UCC cluster | [`../will-wright/primary-sources-evidence-room.md`](../will-wright/primary-sources-evidence-room.md) |
 
 → [`career/work-history.yml`](career/work-history.yml) · [`career/stupid-fun-club.yml`](career/stupid-fun-club.yml) (post-Maxis Will arc) · [`career/contracts/transmogrifier-distribution-license-notes.md`](career/contracts/transmogrifier-distribution-license-notes.md)

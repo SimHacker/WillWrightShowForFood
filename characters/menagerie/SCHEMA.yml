@@ -1,0 +1,73 @@
+# Menagerie guests — MOOLLM character schema
+# Sims traits + Mind Mirror + generalized relationship matrix (Sims-exportable)
+# One soul, many roles — Pee-wee's Playhouse virtual guests
+
+schema:
+  id: menagerie-guest-soul
+  version: 1
+  portrayal: ../../schemas/portrayal-standards.yml#simulation.tiers.game_and_fictional
+  moollm_upstream:
+    mind_mirror: SimHacker/moollm/skills/mind-mirror/
+    sims_stats: SimHacker/moollm/skills/mind-mirror/SIMS-STATS.yml
+    sims_uplift: SimHacker/moollm/examples/simopolis/exchange/templates/SIMS-UPLIFT-SCHEMA.yml
+
+character_file:
+  required:
+    - character.id
+    - character.sims.traits
+    - character.mind_mirror
+    - relationships  # local edges + symbolic; matrix is canonical ensemble
+  optional:
+    - soul_philosophy
+    - emoji_identity
+    - emoji_flourish
+    - symbolic_attachments
+    - SIMS-UPLIFT.yml  # per-character obliterator handoff
+
+signifier:
+  format: "Five-emoji flourish string — cast signature (Palm originated)"
+  example: "🐒✋🌴🔮💜"
+  see: MOOLLM-OVERLAY.yml#emoji_flourish
+
+sims_traits:
+  scale: "0-10 (Sims 1 display)"
+  fields: [neat, outgoing, active, playful, nice, generous]
+
+mind_mirror:
+  scale: "0-7 per dimension (Leary circumplex condensed)"
+  planes:
+    bio_energy: [calm, serious, cautious]
+    emotional_insight: [confident, docile]
+    mental_abilities: [logical, practical]
+    social_interaction: [dominant, conventional]
+
+relationship_matrix:
+  canonical: RELATIONSHIP-MATRIX.yml
+  edge_types: [friend, enemy, love, rivalry, mentor, patron, complicated, symbolic]
+  symbolic_targets: |
+    People, objects, places, abstractions — side of bed, car, kids, spouse-as-concept.
+    Sims export maps symbolic edges to narrative-only (no neighbor_id); people/patrons use
+    fictional neighbor_id 901-908 in EXPORT-SIMS-RELATIONSHIPS.yml.
+    MOOLLM imports use 912+ (donna-toadstool: 912, doctor-no: 913).
+
+sims_export:
+  file: EXPORT-SIMS-RELATIONSHIPS.yml
+  neighbor_ids:
+    mimsy: 901
+    gregory: 902
+    vandermeer: 903
+    bucky_jr: 904
+    helena: 905
+    margot: 906
+    julian: 907
+    bunny: 908
+    donna_toadstool: 912
+    doctor_no: 913
+    palm: 914
+  format: |
+    daily/lifetime -100..100 per SIMS-UPLIFT-SCHEMA. Import/export via sim-obliterator bridge.
+    MOOLLM matrix is superset — narrative, type, history survive round-trip as YAML jazz.
+
+status: reified
+
+note: "Not AI Generated!"

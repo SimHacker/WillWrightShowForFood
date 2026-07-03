@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-bride-veil-render.png
+
+artifact:
+  file: transmogrifier-bride-veil-render.png
+  slug: transmogrifier-bride-veil-render
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — bride veil render
+  era: 2000-2002
+  sidecar_of: transmogrifier-bride-veil-render.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

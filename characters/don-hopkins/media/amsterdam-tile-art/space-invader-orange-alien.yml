@@ -1,0 +1,14 @@
+# Sidecar — space-invader-orange-alien.png
+
+artifact:
+  file: space-invader-orange-alien.png
+  slug: space-invader-orange-alien
+  room: amsterdam-tile-art
+  what: space invader orange alien
+  era: ~2010-2011
+  sidecar_of: space-invader-orange-alien.png
+
+see_also:
+  - ../storymaker-urban-safari/INDEX.yml
+
+note: "Not AI Generated!"

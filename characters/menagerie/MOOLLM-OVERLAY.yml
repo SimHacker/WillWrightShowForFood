@@ -1,0 +1,76 @@
+# MOOLLM character overlay protocol
+# Local dirs instantiate upstream souls; WWSFF experiences augment without forking canon
+
+protocol:
+  id: moollm-overlay
+  version: 1
+  status: active
+  bulk_import: hold
+  note: |
+    Hold on mass import from adventure-4 (kittens, puppies, monkeys, etc.).
+    The pattern is defined here; add guests one at a time as repo-shows need them.
+
+pattern:
+  local_dir: characters/menagerie/<slug>/
+  upstream:
+    repo: https://github.com/SimHacker/moollm
+    base: examples/adventure-4/characters/
+    categories: [fictional, animals, real-people, liminal]
+  encapsulation: |
+    Canonical soul lives in MOOLLM. WWSFF keeps a thin local CHARACTER.yml that:
+    1) points upstream via moollm_source
+    2) summarizes identity for this repo (no 1000-line copy)
+    3) records wwsff_overlay — experiences, roles, relationships earned HERE
+    4) optional SIMS-UPLIFT.yml for menagerie/Sims export
+
+  required_local_fields:
+    - moollm_source.repo
+    - moollm_source.path
+    - character.id
+    - character.signifier
+    - wwsff_overlay.roles
+  optional_local_fields:
+    - wwsff_overlay.gallery_openings
+    - wwsff_overlay.relationships
+    - symbolic_attachments
+    - SIMS-UPLIFT.yml
+
+future_pools:
+  adventure-4:
+    - fictional/donna-toadstool/          # imported
+    - fictional/doctor-no/                # imported
+    - fictional/velvet-schema/
+    - fictional/aurum-interlock/
+    - animals/                            # kittens, puppies, monkeys — hold
+  simopolis:
+    - characters/bella-goth/              # lives in characters/sims/ instead
+
+instances:
+  - slug: donna-toadstool
+    upstream: fictional/donna-toadstool/
+    local: donna-toadstool/
+    signifier: "🍄👸🍊💅🎭"
+    status: active
+  - slug: doctor-no
+    upstream: fictional/doctor-no/
+    local: doctor-no/
+    signifier: "🧣🔦🚫🤫🌟"
+    status: active
+  - slug: palm
+    upstream: animals/monkey-palm/
+    wwsff_profile: ../../palm/
+    local: palm/
+    signifier: "🐒✋🌴🔮💜"
+    status: active
+
+emoji_flourish:
+  pattern: "Five emojis — memorable cast signature (Palm originated the format)"
+  fields: [character.signifier, character.emoji_flourish.string, character.emoji_flourish.legend]
+  examples:
+    palm: "🐒✋🌴🔮💜"
+    donna-toadstool: "🍄👸🍊💅🎭"
+    doctor-no: "🧣🔦🚫🤫🌟"
+
+see_also:
+  - SCHEMA.yml
+  - INDEX.yml

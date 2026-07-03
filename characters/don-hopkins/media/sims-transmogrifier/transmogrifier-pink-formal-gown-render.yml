@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-pink-formal-gown-render.png
+
+artifact:
+  file: transmogrifier-pink-formal-gown-render.png
+  slug: transmogrifier-pink-formal-gown-render
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — pink formal gown render
+  era: 2000-2002
+  sidecar_of: transmogrifier-pink-formal-gown-render.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

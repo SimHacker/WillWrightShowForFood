@@ -1,0 +1,18 @@
+# Sidecar — hyperlook-happytool-air-freshener-stack.png
+
+artifact:
+  file: hyperlook-happytool-air-freshener-stack.png
+  slug: hyperlook-happytool-air-freshener-stack
+  room: simprov-exploratorium
+  what: HyperLook Exploratorium demo — happytool air freshener stack
+  era: early 1990s
+  sidecar_of: hyperlook-happytool-air-freshener-stack.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
+
+see_also:
+  - ../pie-menus/INDEX.yml
+  - ../cellular-automata-tiles/INDEX.yml
+
+note: "Not AI Generated!"

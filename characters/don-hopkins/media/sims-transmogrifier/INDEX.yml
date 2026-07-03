@@ -1,0 +1,68 @@
+# The Sims Transmogrifier
+
+room:
+  id: sims-transmogrifier
+  name: The Sims Transmogrifier
+  parent: ../../media.md
+
+artifacts:
+  - transmogrifier-1-1-flamingo-browser.png
+  - transmogrifier-bride-bouquet-koi-pond.png
+  - transmogrifier-bride-gown-profile.png
+  - transmogrifier-bride-lace-gown-profile.png
+  - transmogrifier-bride-roses-brick-wall.png
+  - transmogrifier-bride-sparkle-veil-render.png
+  - transmogrifier-bride-veil-render.png
+  - transmogrifier-business-sim-ornate-room.png
+  - transmogrifier-chapel-kneeling-prayer.png
+  - transmogrifier-cherub-urn-gold-coin.png
+  - transmogrifier-choozweek-simprov-theatre-dialog.png
+  - transmogrifier-cloning-progress-flamingo.png
+  - transmogrifier-custom-assets-composite.png
+  - transmogrifier-custom-furniture-showcase.png
+  - transmogrifier-custom-kitchen-showcase.png
+  - transmogrifier-desk-piano-study.png
+  - transmogrifier-edit-object-green-flamingo.png
+  - transmogrifier-edit-object-pink-flamingo.png
+  - transmogrifier-engagement-dialog.png
+  - transmogrifier-export-whizzer-flamingo.png
+  - transmogrifier-flamingo-photoshop-sprites.png
+  - transmogrifier-formal-sim-st-logo.png
+  - transmogrifier-gold-dress-ornate-room.png
+  - transmogrifier-green-flamingo-catalog.png
+  - transmogrifier-groom-tux-seated-render.png
+  - transmogrifier-harlequin-wedding-cake.png
+  - transmogrifier-hope-chest-pie-menu-intro.png
+  - transmogrifier-hope-chest-simone-simbabe.png
+  - transmogrifier-import-progress-flamingo.png
+  - transmogrifier-logo-cropped.png
+  - transmogrifier-logo-lushcreations-2002.png
+  - transmogrifier-ornate-desk-quill-phone.png
+  - transmogrifier-ornate-living-room-cupid.png
+  - transmogrifier-ornate-vanity-chest.png
+  - transmogrifier-pink-formal-gown-render.png
+  - transmogrifier-pink-gown-pose-render.png
+  - transmogrifier-purple-piano-living-room.png
+  - transmogrifier-redhead-koi-pond.png
+  - transmogrifier-robot-logo-isometric.png
+  - transmogrifier-wedding-cake-couple-topper.png
+  - transmogrifier-wedding-cake-cupid-topper.png
+  - transmogrifier-wedding-cake-five-tier.png
+  - transmogrifier-wedding-cake-floating-tiers.png
+  - transmogrifier-wedding-cake-rose-gold.png
+  - transmogrifier-wedding-carriage-draft.png
+  - transmogrifier-wedding-couple-renders.png
+  - transmogrifier-wedding-frame-spritesheet.png
+  - transmogrifier-wedding-license-chime-dialog.png
+  - transmogrifier-wedding-reception-buffet.png
+  - transmogrifier-wedding-top-hat-couple.png
+
+spec:
+  - sims-transmogrifier.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../../../will-wright/sources/2004-transmogrifier-documentation-hub/README.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

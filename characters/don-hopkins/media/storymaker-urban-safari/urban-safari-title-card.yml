@@ -1,0 +1,15 @@
+# Sidecar — urban-safari-title-card.png
+
+artifact:
+  file: urban-safari-title-card.png
+  slug: urban-safari-title-card
+  room: storymaker-urban-safari
+  what: urban safari title card
+  era: 2011
+  sidecar_of: urban-safari-title-card.png
+
+see_also:
+  - ../storymaker/INDEX.yml
+  - ../amsterdam-tile-art/INDEX.yml
+
+note: "Not AI Generated!"

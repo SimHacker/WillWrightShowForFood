@@ -1,0 +1,14 @@
+# Memorial — San Francisco tributes
+
+room:
+  id: memorial-sf
+  category: memorial
+  subcategory: sf
+  parent: ../CATALOG-INDEX.yml
+
+what: "RIP posts and commemorative artifacts — SF drag, clubs, culture Don knew firsthand"
+
+artifacts:
+  - memorial-sf-heklina-trannyshack-tshirt.png
+
+note: "Per-file sidecars. Not AI Generated!"

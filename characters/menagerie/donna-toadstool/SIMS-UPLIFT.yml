@@ -1,0 +1,29 @@
+schema_version: 1
+source:
+  direction: uplift
+  neighbor_id: 912
+  character: donna-toadstool
+  moollm_upstream: SimHacker/moollm/examples/adventure-4/characters/fictional/donna-toadstool/
+identity:
+  name: Donna Toadstool
+  age: adult
+  gender: female
+  zodiac: leo
+traits:
+  neat: 3
+  outgoing: 10
+  active: 6
+  playful: 9
+  nice: 1
+  generous: 1
+skills:
+  charisma: 10
+  creativity: 9
+  logic: 1
+career:
+  track: entertainment
+  performance: 999
+relationships:
+  901: { daily: -20, lifetime: 10 }
+  902: { daily: -30, lifetime: -10 }
+  913: { daily: 15, lifetime: 25 }

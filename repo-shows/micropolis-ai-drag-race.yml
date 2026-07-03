@@ -34,7 +34,7 @@ challenges_rotation:
   - harvest_runway
 
 judging:
-  celebrity_judge: ../characters/slats/judge-rubric.yml
+  celebrity_judge: ../characters/robots/slats/judge-rubric.yml
   brain_stream: ../process/brain-stream.yml
 
 contestants:
@@ -54,7 +54,7 @@ ties_to:
   - ../process/challenges/lisp-machine-hack-off.yml
   - ../rigs/lisp-machine-symbolics.rig.yml
   - ../rigs/lisp-machine-lmi.rig.yml
-  - ../characters/slats/judge-rubric.yml
+  - ../characters/robots/slats/judge-rubric.yml
   - ../rigs/stick-shift-composer-moollm.rig.yml
   - game-show-wigcercize.yml
 

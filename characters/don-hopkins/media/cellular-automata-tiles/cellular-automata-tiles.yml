@@ -1,0 +1,108 @@
+# iPad cellular-automata toy — SimCity / Micropolis tiles as pixels
+
+artifact:
+  what: "Touch-screen CA sandbox — each cell is a classic SimCity tile, not a solid color"
+  platform: "iPad (portrait); also Zelda inventory sprites and hardware misreads"
+  era: "~2010–2011 Facebook posts"
+
+facebook:
+  cellular_automata_on_ipad:
+    caption: "cellular automata on ipad with simcity tiles"
+    comments:
+      - author: David Biedny
+        text: "What, Where, How? I love it."
+      - author: Howard Penner
+        text: "from aspect ratio, i am guessing a cellular automata toy for a small touch screen device."
+      - author: Patrick Fitzgerald
+        text: "Ha ha ha ha. You dumb bastard. It's not a schooner... it's a Sailboat."
+    misread_hardware:
+      - file: ca-laundromat-dryers-misread.png
+        what: "Laundromat dryer grid — mistaken for LEDs / CA toy"
+      - file: ca-soyuz-globus-console.png
+        what: "Soyuz Globus navigation console on blue toy frame"
+      - file: ca-soyuz-button-panel.png
+        what: "Cyrillic spacecraft button matrix"
+      - file: ca-globus-imp-instrument.png
+        what: "Globus IMP electromechanical Earth tracker"
+
+rules:
+  worms2:
+    source: "Forth-style worms2.rule — tube worms (p. 82)"
+    code: |
+      : alarm 8sum { 0 0 0 1 1 1 1 1 1 } ;
+      : tube-worms &centers { 1 0 0 0 } >pln0 alarm >pln1 ;
+      : timer center center' and if 3 else &centers { 0 0 1 2 } then >plnb ;
+      : worms2 tube-worms timer ;
+      : :WORMS2 n/moore-ab rule: worms2 ;
+    photos:
+      - ca-worms-tube-worms-purple.png
+      - ca-worms-flow-blue-orange.png
+      - ca-worms-earth-tones.png
+    comments:
+      - author: Howard Penner
+        text: "worms?"
+      - author: Don Hopkins
+        text: "( ************** worms2.rule ) tube worms (p. 82)"
+
+  harble:
+    what: "Wavy flaming-marble — eight convolution kernels, joystick hubba"
+    photos:
+      - ca-harble-flaming-marble-waves.png
+      - ca-harble-spirals-black-bg.png
+    comments:
+      - author: Eric Lennon Bowman
+        text: "How can you toss out all that hubba?"
+      - author: Ray Hunter
+        text: "It's making my head frob"
+      - author: Don Hopkins
+        text: "EIGHT count them EIGHT different convolution kernels! And if you act now, we'll throw in bigger geebees!"
+      - author: Eric Lennon Bowman
+        text: "That is indeed 8x convoluted."
+    convolvotron: "http://www-cdr.stanford.edu/.../sponsors/Convolvotron.html"
+
+  zelda_inventory:
+    caption: "It's something I've been wanting to do for a long time! Yes, Zelda inventory items!"
+    file: ca-zelda-inventory-items-grid.png
+    comments:
+      - author: Eric Lennon Bowman
+        text: "Does it respond to touch yet?"
+      - author: Eric Lennon Bowman
+        text: "That's a lot of hubba."
+
+outputs:
+  portrait_mosaic:
+    file: ca-simcity-tiles-portrait-mosaic.png
+    what: "Face mosaic from SimCity tile palette"
+  wavy_surface:
+    file: ca-simcity-tiles-wavy-surface.png
+    what: "3D-warped tile grid"
+
+tile_assets:
+  ui:
+    - simcity-heatmap-toolbar.png
+    - simcity-rci-demand-meter.png
+    - simcity-pos-neg-scale.png
+    - simcity-terrain-toolbar.png
+    - simcity-overlay-toolbar.png
+    - simcity-toolbar-strip.png
+  stamps:
+    - simcity-tile-river-stamp.png
+    - simcity-skyline-decay-strip.png
+  misc:
+    - simcity-scenario-selection.png
+    - simcity-youre-a-winner.png
+    - pie-menu-on-globe.png
+    - micropolis-openlaszlo-debugger.png
+
+repo_orbit:
+  micropolis_gallery: ../micropolis-gallery/INDEX.yml
+  simcity_lineage: ../../career/simcity-lineage.yml
+  scott_draves: ../../../scott-draves/CHARACTER.yml
+  gags:
+    - ../../../../repo-shows/ideas/gags/cellular-automata-simcity-tiles.yml
+
+menagerie:
+  slats: "I trained on tube worms. You're welcome."
+  don: "Harble. Hubba. Schooner? It's a Sailboat."
+
+note: "Not AI Generated!"

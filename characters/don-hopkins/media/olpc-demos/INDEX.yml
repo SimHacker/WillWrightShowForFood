@@ -1,0 +1,32 @@
+# Olpc Demos
+
+room:
+  id: olpc-demos
+  category: olpc
+  subcategory: demos
+  parent: ../INDEX.yml
+  count: 10
+
+artifacts:
+  - file: olpc-demo-devon-mccullough-big-eyeballs.png
+    sidecar: olpc-demo-devon-mccullough-big-eyeballs.yml
+  - file: olpc-demo-don-hopkins-xo-indoor-smile.png
+    sidecar: olpc-demo-don-hopkins-xo-indoor-smile.yml
+  - file: olpc-demo-don-hopkins-yellow-jacket-xo.png
+    sidecar: olpc-demo-don-hopkins-yellow-jacket-xo.yml
+  - file: olpc-demo-dutch-politicians.png
+    sidecar: olpc-demo-dutch-politicians.yml
+  - file: olpc-demo-gdc-gnome-flipping-bird-yoda.png
+    sidecar: olpc-demo-gdc-gnome-flipping-bird-yoda.yml
+  - file: olpc-demo-gdc-miyamoto-talking.png
+    sidecar: olpc-demo-gdc-miyamoto-talking.yml
+  - file: olpc-demo-gdc-teaching-world-to-play-justin-hall.png
+    sidecar: olpc-demo-gdc-teaching-world-to-play-justin-hall.yml
+  - file: olpc-demo-john-perry-barlow.png
+    sidecar: olpc-demo-john-perry-barlow.yml
+  - file: olpc-demo-xo-simcity-handheld-closeup.png
+    sidecar: olpc-demo-xo-simcity-handheld-closeup.yml
+  - file: olpc-demo-xo-simcity-workshop-desk.png
+    sidecar: olpc-demo-xo-simcity-workshop-desk.yml
+
+note: "Not AI Generated!"

@@ -34,6 +34,13 @@ Ask Bogost to react to:
 3. **Dumbold** — agitprop that aged; how procedural satire dates vs. inclusion playsets that **gain** force when republished
 4. **Micropolis Home** — federation publishing for artisanal UCC; procedural rhetoric as a **platform** feature, not one-off objects
 
+5. **How to Deconstruct the Cube** — optional segment with Ian:
+   - [Curiosity + Cow Clicker parody](../../ideas/gags/curiosity-cow-cube.yml) — keep real Curiosity dead; center is Bogost's cow (or Berkeley horse — "that's a cow")
+   - [Morningstar → Ashford → Bogost chain](../../ideas/gags/how-to-deconstruct-the-cube.yml) — engineer deconstruction meets procedural rhetoric
+   - **Chip Morningstar**, ["How to Deconstruct Almost Anything"](http://www.fudco.com/chip/deconstr.html) (1993) — working builder survives postmodern conference
+   - **Captain Kira Ashford** (MOOLLM adventure-4 Belter pirate, Expanse aesthetic) — homage *How to Incarnate Almost Anything*; reincarnate from `captain-ashford.yml`
+   - Ask: Is distressed-moo click audio procedural rhetoric or cruelty with reverb? When Cow Clicker got popular anyway, is *that* the second joke?
+
 Related: [sims-series-micropolis-publishing-vision.md](sims-series-micropolis-publishing-vision.md) · [inclusivity-paper-draft.md](inclusivity-paper-draft.md)
 
 Show seed: [ian-bogost-procedural-rhetoric.yml](../../../repo-shows/will-wright/ian-bogost-procedural-rhetoric/SHOW.yml)

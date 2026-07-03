@@ -1,0 +1,78 @@
+# Micropolis — screenshot gallery (HyperLook → OLPC → PyGTK → OpenLaszlo → Facebook)
+
+lineage:
+  original: "Will Wright / Maxis SimCity"
+  hyperlook: "SimCity HyperLook Edition — Arthur van Hoff, Turing Institute"
+  open_source: "Micropolis — Google Code (simhacker); OLPC Sugar push"
+  stacks:
+    pygtk: "C++ / SWIG / Python / PyGTK / Cairo / Pango"
+    web_flash: "C++ / SWIG / Python / TurboGears / AMF / Flash / OpenLaszlo"
+  pacbot: "Python plug-in agent — follows roads, eats traffic"
+  taartmenu: "Dutch pie menu — nl-NL localization"
+
+hyperlook:
+  - file: hyperlook-simcity-sun.png
+    credits: "Don Hopkins DUX · Arthur van Hoff HyperLook · Will Wright concept"
+
+origins:
+  - file: simcity-original-box-cover.png
+    what: "Original SimCity box — marble console, disasters, MAXIS"
+
+olpc:
+  - file: olpc-micropolis-amsterdam.png
+    location: Amsterdam
+    what: "SimCity on OLPC XO-1 — Sugar laptop"
+
+har_constructionist:
+  talk: "HAR (Hacking at Random) — constructionist education Micropolis demo"
+  photos:
+    - har-talk-olpc-handheld.png
+    - har-constructionist-talk-podium.png
+  web_backend: micropolis-translations-web-nl.png
+
+google_code:
+  - google-code-micropolis-python-src.png
+  - google-code-micropolisrobot-py.png
+
+pygtk_stack:
+  - micropolis-pygtk-earthquake-history.png
+  - micropolis-pygtk-taartmenu-build.png
+
+openlaszlo_nl:
+  start:
+    - openlaszlo-scenario-selection-nl.png
+    - openlaszlo-city-library-haight-nl.png
+    - openlaszlo-city-restored-nl.png
+  simulation:
+    - openlaszlo-history-graph-meltdown-nl.png
+    - openlaszlo-overlays-nl.png
+    - openlaszlo-explosion-notice-nl.png
+    - openlaszlo-multiple-views-taartmenu-nl.png
+  taartmenu:
+    - openlaszlo-taartmenu-tools-nl.png
+    - openlaszlo-taartmenu-zoning-nl.png
+  pacbot:
+    - openlaszlo-pacbot-on-road-nl.png
+    - openlaszlo-pacbot-eats-traffic-nl.png
+    - openlaszlo-pacbot-control-panel-nl.png
+
+facebook:
+  - file: micropolis-facebook-app.png
+    url: apps.facebook.com/micropolisonline
+    with: Marc Hollenbach
+
+repo_orbit:
+  arthur_van_hoff: ../../../arthur-van-hoff/CHARACTER.yml
+  will_wright: ../../../will-wright/CHARACTER.yml
+  work_history: ../../career/work-history.yml
+  simcity_lineage: ../../career/simcity-lineage.yml
+  pie_menus: ../../../../process/crazy-idea-jam.yml
+  gags:
+    - ../../../../repo-shows/ideas/gags/micropolis-gallery.yml
+    - ../../../../repo-shows/ideas/gags/pacbot-eats-traffic.yml
+
+menagerie:
+  slats: "I trained on PacBot. You're welcome."
+  don: "Taartmenu. PacBot eats traffic. Of course."
+
+note: "Not AI Generated!"

@@ -53,6 +53,16 @@ the repo. Warm and earnest, not gotcha-podcast. I run it all in Cursor, screen-s
 watch the ideas become real. **Zero homework** — I do the setup. Everything's open to discussion:
 what we record, what's public, all your call.
 
+**Simulated art opening (play along if you want).** Before we talk, we run a fun **simulated
+gallery opening** for *your* work — same bit we prototyped on my JSONsters screenshots. Our
+**menagerie** of fictional patrons (Chelsea lunatics, Bella Goth, Sad Clown, Slats, Donna
+Toadstool, Palm…) misreads Flame and Electric Sheep, bids **Simoleons (§)** for play-money only,
+and you start the show with a **huge pile of worthless §** to spend or give away on Twitch.
+Two magnificent pieces per series get a brisk hammer; everything else is quick red-dot delight.
+Gregory will call your flock a DAO. Bunny will try to adopt a sheep. Totally optional — redirect
+the voices, shorten, or skip. Spec: [`simulated-opening.yml`](simulated-opening.yml) ·
+protocol: [`process/simulated-art-opening.yml`](../../process/simulated-art-opening.yml).
+
 Got up-to-date versions of your portfolio, papers, and the latest Sheep/Infinidream builds we
 could drop into the repo and talk through? Send them over and I'll wire them up. (I've jotted some
 starting-point threads in [`ideas.md`](../../characters/scott-draves/ideas.md) and the

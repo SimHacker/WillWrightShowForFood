@@ -1,0 +1,69 @@
+# Donald Michie — "Duckmouse" · Turing Institute founder
+# Bletchley → Edinburgh MENACE → Glasgow Robot Olympics host orbit
+
+person:
+  name: Donald Michie
+  nickname: Duckmouse
+  nickname_source: "Known to his colleagues as 'Duckmouse' — Daily Telegraph obituary, July 2007"
+  born: 1923-11-11
+  died: 2007-07-07
+  wikipedia: "https://en.wikipedia.org/wiki/Donald_Michie"
+  gchq: "https://www.gchq.gov.uk/person/donald-michie"
+  aiai: "https://www.aiai.ed.ac.uk/~dm/"
+
+portrait:
+  file: donald-michie-duckmouse.png
+  what: "Head-and-shoulders — grey suit, white shirt, dark tie; serious gaze; archival grain"
+  era: "~1980s–1990s Turing Institute orbit"
+
+lineage:
+  bletchley:
+    with: Alan Turing
+    work: "Tunny teleprinter cipher; Colossus logic improvements — person-weeks → person-hours on daily patterns"
+    infection: "Turing's 1947 LMS lecture on learning machines → Michie's lifelong machine-learning program"
+  edinburgh:
+    role: "Professor of Machine Intelligence; Department of Machine Intelligence and Perception (from 1966)"
+    inventions: [MENACE — matchbox tic-tac-toe learner (1960), BOXES algorithm, FREDERICK industrial robot prototype]
+    series: "Machine Intelligence — founder/editor, 19 volumes"
+  glasgow:
+    founded: 1982
+    institute: Turing Institute
+    cofounders: [Peter Mowforth, Tim Niblett]
+    roles: [Founder, Chief Scientist, Director of Research]
+    contracts: "Space Shuttle auto-lander (Radian Corp, 1984) — Rulemaster inductive rule generator"
+    robotics: "Navigation, sensing, naïve physics through random play — Robot Olympics host institution"
+
+don_orbit:
+  when: "~1991–1992"
+  with: Arthur van Hoff
+  shipped: [HyperLook, SimCity on HyperLook]
+  duckmouse_note: |
+    Don worked at the fun Glasgow lab Michie built — HyperLook microworld shipped while
+    the institute was still hosting robot spectacles and learning-from-experience folklore.
+
+robot_olympics:
+  role: "Host institution founder — Turing Institute ran First Robot Olympics Sept 1990"
+  peter_mowforth: "Event director; Michie's orbit — photos credit Mowforth"
+  richard_1st: "Talking gold — built at Turing Institute (Ketil Undbekken, Mowforth)"
+  beat: "Duckmouse portrait on wall when Slats misreads Cardiff Walker as POSING"
+
+menagerie:
+  margot_krell: "He knew Turing at Bletchley. The portrait performs institutional memory."
+  vandermeer: "Duckmouse — the nickname is already a cryptid taxonomy."
+  helena: "MENACE learned from matchboxes. We learn from MOOLA. Same hunger, worse incense."
+  gregory: "Long classical scholar, short genetics, long machine intelligence — diversified polymath."
+  don: "Build a brain. Ship SimCity. Miss the Olympics. Keep Arthur's shirt."
+
+repo_show_beats:
+  - duckmouse_portrait_introduces_turing_wing
+  - michie_menace_boxes_learning_parallel_to_moola_training_data
+  - robot_olympics_host_founder_toast_before_vision_api_misread
+
+see_also:
+  - INDEX.yml
+  - first-robot-olympics.yml
+  - ../../../../repo-shows/ideas/gags/turing-robot-olympics.yml
+  - ../../../marvin-minsky/CHARACTER.yml
+  - ../../career/work-history.yml
+
+note: "Not AI Generated!"

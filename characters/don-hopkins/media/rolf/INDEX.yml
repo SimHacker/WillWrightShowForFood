@@ -1,0 +1,51 @@
+# Rolf Pixley — Amsterdam junk drawer (before departure)
+# Cool thing to find in a drawer · virtual junk auction · face-puppet source faces
+
+room:
+  id: rolf-pixley-amsterdam
+  name: Rolf Pixley's Junk Drawer
+  parent: ../../media.md
+  era: "Before Rolf left Amsterdam"
+  tomtom_era: "../oosterdok-bike-parking-tomtom.yml"
+  findability: "Junk drawer — not a gallery wing; discovered, not announced"
+
+who:
+  rolf_pixley: "Amsterdam orbit — workshop hoarder, NO MUNDANE OPTION energy"
+  aka: Rich Pixley
+  don_hopkins: "Queen's Day / Lisp Machine Manual shirt era — same city, same clutter"
+
+dedup:
+  uploaded: 25
+  exact_duplicates_removed: 2
+  kept: 23
+  removed:
+    - { dup_of: workshop-panorama-amsterdam.png, dropped: "second panorama upload (identical hash)" }
+    - { dup_of: don-hopkins-mind-blown-face-puppet.png, dropped: "second face-puppet upload (identical hash)" }
+
+spec:
+  - amsterdam-junk-drawer.yml
+  - raving-bonkers.yml
+  - face-puppets.yml
+  - virtual-junk-auction.yml
+
+face_puppets:
+  spec: face-puppets.yml
+  talking_canonical: ../don-high-score-space-invaders.yml
+  mind_blown: don-hopkins-mind-blown-face-puppet.png
+
+virtual_auction:
+  spec: virtual-junk-auction.yml
+  currency: MOOLA
+  deed_format: "JUNK-{slug}"
+  mantra: "NEVER gateway · ALWAYS invite duplication"
+
+artifacts: 23
+
+see_also:
+  - ../pantomime/INDEX.yml
+  - ../robot-collection/INDEX.yml
+  - ../../../../repo-shows/ideas/gags/rolf-junk-auction.yml
+  - ../../../../process/moola.yml
+  - ../../jsonsters/simoleon-auctions.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,90 @@
+# How to Deconstruct Almost Anything Inside the Cube
+# After Chip Morningstar · performed by Captain Kira Ashford · for Bogost invite
+# Curiosity (2012) vs Cow Clicker (2010) — engineer immune system meets procedural rhetoric
+
+id: how-to-deconstruct-the-cube
+type: gag
+status: invitation_seed
+authored_by: captain-ashford
+voice: "Belter space pirate Ph.D. (Pending) — MOOLLM adventure-4 persona"
+
+lineage:
+  morningstar:
+    title: "How to Deconstruct Almost Anything"
+    url: "http://www.fudco.com/chip/deconstr.html"
+    year: 1993
+    method: "Working engineer attends postmodern conference; builds parody from real jargon; learns the field is epistemologically challenged but not empty"
+  ashford_homage:
+    title: "How to Incarnate Almost Anything"
+    moollm: "../../../../Leela/git/moollm/designs/postmodern-deconstruction.md"
+    persona: "../../../../Leela/git/moollm/examples/adventure-4/personas/captain-ashford.yml"
+    note: "Captain Kira Ashford — Belter captain, Expanse aesthetic — still wearable in adventure-4 coatroom"
+  reincarnation: |
+    Ashford lives in git: adventure-4 personas, Palm Nook study, attic Sims1 screenshot,
+    deconstruct-simulator session. WEAR captain-ashford or invoke from pub stage.
+
+this_essay:
+  working_title: "How to Deconstruct Almost Anything Inside the Cube (My Postmodern Clicker Adventure)"
+  subtitle: "After Morningstar; before the cow"
+  author: "Captain Kira Ashford, Ph.D. (Pending), Department of Distressed Bovine Studies"
+  target: "Peter Molyneux's Curiosity — not Bogost's Cow Clicker (that one already deconstructed itself)"
+
+morningstar_three_part_test:
+  source: "Chip Morningstar (1993) — applied to clicker rhetoric"
+  test_1_hidden_structure:
+    question: "Does peeling layers reveal structure that was always there?"
+    curiosity: "Yes — one winner, hollow center, hype as load-bearing wall"
+    cow_clicker: "Yes — scheduled death, Mooney, cow JPEG — honest architecture"
+    cube_parody: "Yes — stolen deeds on faces, MOOLA, distressed moos, horse-is-cow reveal"
+  test_2_non_obvious:
+    question: "Does analysis surface what players feel but cannot name?"
+    curiosity: "Compulsion without rescue; crucifix-pose surface promise; godhood as deferred signifier"
+    cow_clicker: "It wasn't very fun before — Bogost named the shame out loud"
+    cube_parody: "Filtered far-away moos cry for help — procedural guilt as retention"
+  test_3_practical:
+    question: "Can a working builder use this without tenure?"
+    curiosity: "FAIL — promises life-changing center; delivers liability and podcast"
+    cow_clicker: "PASS — criticism you can click; extension payments as punchline"
+    bogost_term: "Procedural rhetoric — Morningstar's immune system, Bogost's design vocabulary"
+
+bogost_invite_hook: |
+  **Ian:** You coined *procedural rhetoric*. Chip Morningstar wrote the engineer's field guide
+  to surviving postmodern jargon. Captain Ashford (our Belter pirate lit-crit ghost) wrote the
+  homage *How to Incarnate Almost Anything*. We'd like a fourth voice on the show:
+
+  **Deconstruct Curiosity without resurrecting it.** Cow Clicker already made the argument on
+  purpose (2010). Molyneux made the addiction by accident (2012). Don trolled Peter at Unite
+  2012: the secret inside the box is a cow. Peter didn't get it.
+
+  Ask Bogost:
+  - Is distressed-moo audio procedural rhetoric or just cruelty with reverb?
+  - Does Morningstar's deconstruction essay and your Persuasive Games share a family tree?
+  - When satire becomes popular anyway (Cow Clicker), is the second joke the product?
+  - Should Curiosity stay dead and buried — and is our cube parody honest enough about that?
+
+ashford_sample_lines:
+  - "Sa-sa ke. The cube is a signifier. The cow is a signified. The horse on Telegraph is a cow. Commit."
+  - "Molyneux dynamically put ANY image on ANY surface. I dynamically put ANY guilt on ANY moo."
+  - "Academics get paid for being clever, not for being right. Clickers get paid for being compulsive."
+  - "Morningstar survived the conference. I survived the Cowpocalypse. Peter survived the lawsuit. Not all equal."
+  - "Procedural rhetoric is when the rules argue. Deconstruction is when the argument argues with itself. Same belt, different vac suit."
+
+show_beats:
+  - "Ashford reads excerpt (Belter patois optional) — Palm Nook or pub attic energy"
+  - "Bogost reacts: Cow Clicker vs Curiosity vs our MOOLA cube"
+  - "Don: the cow was always the joke; Peter still didn't get it"
+  - "Menagerie misreads essay as NFT whitepaper — Gregory long the signifier"
+  - "Slats trains on Ashford PDF — MOOLA payout"
+
+ties:
+  curiosity_cow_cube: curiosity-cow-cube.yml
+  bogost_show: ../../will-wright/ian-bogost-procedural-rhetoric/SHOW.yml
+  moola: ../../process/moola.yml
+  morningstar_habitat: "Chip Morningstar & Randy Farmer — Habitat 1986, avatar, First Penguin Award"
+
+see_also:
+  - curiosity-cow-cube.yml
+  - ../../will-wright/ian-bogost-procedural-rhetoric/SHOW.yml
+  - ../../characters/will-wright/media/sims-series-procedural-rhetoric-inclusion-agitprop.md
+
+note: "Not AI Generated!"

@@ -1,0 +1,22 @@
+# Sidecar — gesture-space.md
+topic:
+  id: gesture-space
+  status: documented
+  priority: high
+  hn_threads:
+    - id: 17098179
+      title: Pie Menus 30-Year Retrospective
+      don_comments: multitouch, Pantomime, Iwata haptics
+    - id: 37902412
+      title: Don Norman elderly UI (Fast Company)
+      don_comments: self-revealing pie menus vs graffiti gestures
+    - id: 37904328
+      title: related elderly/gesture thread
+    - id: 16613903
+      title: Visualizing Fitts's Law
+  primary_source: https://medium.com/@donhopkins/gesture-space-842e3cdc7102
+  cross_links:
+    - pie-menus-chi-88-and-beyond.md
+    - connectedtv-touch-tuning-finger-pies.md
+    - ../david-levitt/ideas.md
+  show_seed: ../../repo-shows/gesture-space-self-revealing-ui.yml

@@ -1,0 +1,94 @@
+# CARD — Bill Budge (public portrayal)
+# LIVING invitation guest. NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: bill-budge
+  name: Bill Budge
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Bill Budge
+  title: The Construction Set
+  rarity: legendary
+  signifier: 🕹️
+  flavor: "Didn't make a pinball game — made the machine that makes pinball games."
+abilities:
+- id: PINBALL-CONSTRUCTION-SET
+  name: Pinball Construction Set
+  type: activated
+  mana: '{1}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: pinballConstructionSet
+    signature: pinballConstructionSet(parts, wiring) → your own pinball table
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.9
+  effect: "Explain the birth of the construction-set genre & user-generated content (1983)."
+  verifiable: Pinball Construction Set (EA, 1983)
+  combos_with:
+  - WW-CONSTRUCTION-SETS
+- id: RASTER-BLASTER
+  name: Raster Blaster
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: rasterBlaster
+    signature: rasterBlaster() → Apple II pinball, hand-tuned physics
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: "The 1981 Apple II pinball that PCS grew out of."
+  verifiable: Raster Blaster (1981)
+  combos_with: []
+- id: TOOLS-AND-FRAMEWORKS
+  name: Tools & Frameworks
+  type: static
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: toolsAndFrameworks
+    signature: toolsAndFrameworks(era) → editors that empower other makers
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: "3DO → Sony (Lead Tools Programmer) → Google → GitHub editor frameworks. 'My passion is building tools.'"
+  verifiable: "Public career + github.com/billbudge (WebEditorFramework, Diagrammar)"
+  combos_with:
+  - ARTIFACTORY
+- id: EA-SOFTWARE-ARTIST
+  name: EA Software Artist
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: eaSoftwareArtist
+    signature: eaSoftwareArtist(1983) → the glove in the "We See Farther" photo
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.8
+  effect: "Early Electronic Arts, when programmers were credited like rock stars."
+  verifiable: EA 1983 launch campaign
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+  living_not_memorial: true
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status (living)
+- path: invitation.md
+  why: Public invitation document
+- path: ../../apps/performance-space/faceball-construction-set.yml
+  why: Faceball Construction Set — the tribute

@@ -1,0 +1,11 @@
+# Sidecar — travel-amsterdam-programmeurstraat-hardwareweg-map.png
+
+artifact:
+  file: travel-amsterdam-programmeurstraat-hardwareweg-map.png
+  slug: travel-amsterdam-programmeurstraat-hardwareweg-map
+  category: travel
+  subcategory: amsterdam
+  what: "NDSM map — Programmeurstraat, Hardwareweg, Internetstraat"
+  sidecar_of: travel-amsterdam-programmeurstraat-hardwareweg-map.png
+
+note: "Not AI Generated!"

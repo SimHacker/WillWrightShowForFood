@@ -25,4 +25,4 @@ See [INTRO-NARRATIVE.md](../../../repo-shows/will-wright/INTRO-NARRATIVE.md) and
 ## Related
 
 - [Sims Content Catalog in Laszlo and Python](../../sources/2005-09-18-simfreaks-content-catalog-laszlo/article.md)
-- [Heather & Steve Alvey show](../../../heather-steve-alvey/README.md)
+- [Heather & Steve Alvey show](../../../heather-and-steve-alvey/README.md)

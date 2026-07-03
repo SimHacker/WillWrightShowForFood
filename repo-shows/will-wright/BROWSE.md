@@ -12,7 +12,7 @@
 
 | If you're curious about… | Click |
 |--------------------------|--------|
-| **🤖 Reincarnate Slats** (Stupid Fun Club robot — *Servitude*, *Empathy*) | [**SLATS LIVES — RoboResurrection quest**](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright/slats-reincarnation.yml) · [Slats character](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/slats) |
+| **🤖 Reincarnate Slats** (Stupid Fun Club robot — *Servitude*, *Empathy*) | [**SLATS LIVES — RoboResurrection quest**](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright/slats-reincarnation.yml) · [Slats character](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/robots/slats) |
 | **Family UCC / catalogs** (SimFreaks, SimSlice, SimProv, Zombie Sims, Micropolis Home) | [**Content catalogs**](https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs) · [INTRO-NARRATIVE](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright/INTRO-NARRATIVE.md) |
 | **This show** (topic-less — you're the topic) | [**Show hub README**](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright/README.md) |
 | **Your 1996 Stanford talk** (Dollhouse preview — the anchor) | [**1996 Winograd source bundle**](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds) · [Watch on YouTube](https://www.youtube.com/watch?v=nsxoZXaYJSk) · [Don's Medium article](https://donhopkins.medium.com/designing-user-interfaces-to-simulation-games-bd7a9d81e62d) |
@@ -39,7 +39,7 @@
 | Show instance (yaml) | [`SHOW.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright/SHOW.yml) |
 | Episodes that might flow from kickoff | [`episodes.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright/episodes.yml) |
 | Full transcript (1996) | [`transcript.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md) |
-| Slats judge rubric (Drag Race — later) | [`judge-rubric.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/slats/judge-rubric.yml) |
+| Slats judge rubric (Drag Race — later) | [`judge-rubric.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/robots/slats/judge-rubric.yml) |
 | All show seeds | [`repo-shows/INDEX.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/INDEX.yml) |
 
 ---

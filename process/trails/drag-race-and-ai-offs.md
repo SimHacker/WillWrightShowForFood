@@ -19,7 +19,7 @@ Game-show formats inside Repo Show — declare class honestly; Slats judges; ai-
 | [**stick-shift-protocol.yml**](../stick-shift-protocol.yml) | Every model shift = commit in git |
 | [**code-that-spec.yml**](../code-that-spec.yml) | Audience chant game — bid tokens or time |
 | [**homefun-grading.yml**](../homefun-grading.yml) | Micropolis Class — commit message vs thinking blocks |
-| [**Slats judge rubric**](../../characters/slats/judge-rubric.yml) | Celebrity judge — flair vs spreadsheet |
+| [**Slats judge rubric**](../../characters/robots/slats/judge-rubric.yml) | Celebrity judge — flair vs spreadsheet |
 | [**Drag race show seed**](../../repo-shows/micropolis-ai-drag-race.yml) | Show seed for drag race episodes |
 
 **Markup:** [AI-OFFS.md](../AI-OFFS.md) · [HOMEFUN.md](../HOMEFUN.md) · [MANUAL-TRANSMISSION.md](../MANUAL-TRANSMISSION.md)

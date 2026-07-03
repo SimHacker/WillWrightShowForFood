@@ -1,0 +1,24 @@
+# Micropolis gallery — Don Hopkins archive screenshots
+
+room:
+  id: micropolis-gallery
+  name: Micropolis Gallery
+  parent: ../../media.md
+  tagline: "Open-source SimCity — HyperLook to OLPC to OpenLaszlo to Facebook"
+
+dedup:
+  uploaded: 28
+  kept: 28
+  rooms: [sfc-emeryville, frys-electronics, micropolis-gallery]
+
+spec:
+  - micropolis-gallery.yml
+
+see_also:
+  - ../../career/work-history.yml
+  - ../../career/simcity-lineage.yml
+  - ../../../will-wright/CHARACTER.yml
+  - ../../../arthur-van-hoff/CHARACTER.yml
+  - ../../../../repo-shows/will-wright/slats-reincarnation.yml
+
+note: "Not AI Generated!"

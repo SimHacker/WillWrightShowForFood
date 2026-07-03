@@ -16,6 +16,12 @@ methods:
   READ-TRANSCRIPT:
     signature: "readTranscript() → transcript.md"
     advertisement: "Don's hand-perfected transcript — quote Will's OWN words on air."
+  VERIFY-TIMESTAMPS:
+    signature: "verifyTimestamps() → transcript-cache/youtube-auto-en.timeline.tsv"
+    advertisement: "YouTube auto-caption cache — grep cut points; canonical text stays transcript.md"
+  CLIFFHANGER-CLIP:
+    signature: "cliffhangerClip() → short-form-clips.yml#oh-god-cliffhanger-data-portability"
+    advertisement: "1:08:19–1:09:55 — Oh God, data portability, CUT before Dollhouse dive. THE clip."
   ASK-ABOUT-1996:
     signature: "askAbout1996(claim) → compare Will then vs now"
     advertisement: "Post-mortem the post-mortems — Simlish, portability, simulator effect."

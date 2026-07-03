@@ -5,7 +5,7 @@ title: Don Hopkins
 iconic: "🌸 Don"
 description: |
   Self-sovereign host — pie menus, Sims lineage, Micropolis, Repo Show, MOOLLM microworld.
-  User Interface Flower Child; archive keeper; contracts and career yaml under career/.
+  User Interface Flower Child; DC Metro upbringing + Gen X wavelength in portrayal/upbringing.yml.
 
 keywords:
   - don hopkins
@@ -51,6 +51,10 @@ future:   # the roadmap form of serves_as -- where this dir wants to grow
     method of loci (from his own lineage) presenting the lineage; ideas as Sims-style objects
     that carry their own behavior (also from his lineage). The flat dir is v1; the walkable
     palace is the payoff -- and a natural Repo Show.
+  on_air_palace_tour:
+    spec: ../../apps/performance-space/faceball-construction-set.yml#memory_palace_tour
+    what: "Many puppets — one per stop; each posed next to the artifact; button-board walk through the dir"
+    talking_selfies: "Phone front-camera clips per room — works great for async guests"
   compiled_artifact: |
     Then run it through the ADVENTURE COMPILER to compile the palace into a self-contained,
     interactive, browser-based artifact: text + multimedia, with time-based content
@@ -102,7 +106,7 @@ see_also:
   across:
     - { path: ../../repo-shows/will-wright/GLANCE.yml, why: "Flagship show" }
     - { path: ../../skills/repo-show/SKILL.md, why: "Host protocol" }
-    - { path: will-wright-primary-sources-evidence-room.md, why: "Curated map to all Will Wright primary sources" }
+    - { path: ../will-wright/primary-sources-evidence-room.md, why: "Curated map to all Will Wright primary sources" }
     - { path: ../../characters/will-wright/sources/README.md, why: "Evidence room spine + complete slug index" }
     - { path: ../../characters/will-wright/sources/simcity-open-source-saga/GLANCE.yml, why: "Micropolis origin mail" }
   deep:

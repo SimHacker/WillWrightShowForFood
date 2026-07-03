@@ -23,7 +23,7 @@ curb appeal up top, **brutalist GitHub underneath** (yaml girders, verify CI, re
 | **ShowMaker network** | [`process/showmaker-network.yml`](process/showmaker-network.yml) |
 | **Setup (dev)** | [**SETUP.md**](SETUP.md) |
 | **The show pitch** | [`repo-shows/will-wright/README.md`](repo-shows/will-wright/README.md) · [**Will: browse any order**](repo-shows/will-wright/BROWSE.md) |
-| **🤖 Slats / RoboResurrection** | [`slats-reincarnation.yml`](repo-shows/will-wright/slats-reincarnation.yml) · [`characters/slats/`](characters/slats/README.md) |
+| **🤖 Slats / RoboResurrection** | [`slats-reincarnation.yml`](repo-shows/will-wright/slats-reincarnation.yml) · [`characters/robots/slats/`](characters/robots/slats/README.md) |
 | **1996 Winograd talk** (centerpiece) | [`characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/`](characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) |
 | **Draft invitation to Will** | [`characters/will-wright/invitation.md`](characters/will-wright/invitation.md) · [**BROWSE any order**](repo-shows/will-wright/BROWSE.md) |
 | **Guest directories** | [`characters/`](characters/README.md) · [`characters/README.md`](characters/README.md) |
@@ -38,7 +38,7 @@ curb appeal up top, **brutalist GitHub underneath** (yaml girders, verify CI, re
 | **Homefun grading** (Micropolis Class — match commit to thinking) | [`process/homefun-grading.yml`](process/homefun-grading.yml) |
 | **Model branching** (fork chat, compare trajectories) | [`process/model-branching.yml`](process/model-branching.yml) |
 | **Brain stream** (live Cursor on overlay) | [`process/brain-stream.yml`](process/brain-stream.yml) · [`apps/stream-gateway/`](apps/stream-gateway/README.md) |
-| **Slats** (judge + RoboResurrection) | [`characters/slats/`](characters/slats/README.md) |
+| **Slats** (judge + RoboResurrection) | [`characters/robots/slats/`](characters/robots/slats/README.md) |
 | **Code That Spec** (game show) | [`process/code-that-spec.yml`](process/code-that-spec.yml) |
 | **Don Hopkins** (host bio) | [`characters/don-hopkins/README.md`](characters/don-hopkins/README.md) |
 | **All show seeds** | [`repo-shows/README.md`](repo-shows/README.md) · [`repo-shows/INDEX.yml`](repo-shows/INDEX.yml) |

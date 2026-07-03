@@ -20,7 +20,7 @@ best way (people author; AI orchestrates and writes code). [`ideas/traditions/ma
 |------|-------|
 | **will-wright/** ★ | 1996 Winograd talk + draft invitation |
 | lars-brinkhoff/ | PDP-10 ITS *make it so* |
-| heather-steve-alvey/ | Afterlife zombie bridge |
+| heather-and-steve-alvey/ | Afterlife zombie bridge |
 
 ## Ideas catalog
 

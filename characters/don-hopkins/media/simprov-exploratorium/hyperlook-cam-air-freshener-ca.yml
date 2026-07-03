@@ -1,0 +1,18 @@
+# Sidecar — hyperlook-cam-air-freshener-ca.png
+
+artifact:
+  file: hyperlook-cam-air-freshener-ca.png
+  slug: hyperlook-cam-air-freshener-ca
+  room: simprov-exploratorium
+  what: HyperLook Exploratorium demo — cam air freshener ca
+  era: early 1990s
+  sidecar_of: hyperlook-cam-air-freshener-ca.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
+
+see_also:
+  - ../pie-menus/INDEX.yml
+  - ../cellular-automata-tiles/INDEX.yml
+
+note: "Not AI Generated!"

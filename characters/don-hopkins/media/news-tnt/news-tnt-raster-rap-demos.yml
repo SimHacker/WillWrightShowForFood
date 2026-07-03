@@ -1,0 +1,17 @@
+# Sidecar — news-tnt-raster-rap-demos.png
+
+artifact:
+  file: news-tnt-raster-rap-demos.png
+  slug: news-tnt-raster-rap-demos
+  room: news-tnt
+  what: news tnt raster rap demos
+  era: Sun NeWS / OpenWindows
+  sidecar_of: news-tnt-raster-rap-demos.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/news-pizza-tool-fax.yml
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

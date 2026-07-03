@@ -1,0 +1,158 @@
+# Simoleon auctions — sell art to virtual patrons for §
+# Play-money only (see characters/don-philahue/CHARACTER.yml#easter_eggs.rosebud_cheat.ethics)
+# Instance-first: this gallery debuts the mechanic; fork for NeMACS / Turing / scarcity auctions.
+
+economy:
+  currency: Simoleons
+  symbol: "§"
+  native_settlement: MOOLA
+  moola_spec: ../../../process/moola.yml
+  fictional: true
+  not_real_money: true
+  flow: |
+    Virtual patrons PAY § to acquire wall-title deeds to screenshots.
+    Proceeds credit the show pool and/or the artist character (`don-hopkins.simoleons` or
+    `jsonsters/show-pool`). Reverse of Rosebud/Klapaucius (§ flows TO audience) — here §
+    flows FROM nut-job patrons TO the house. Same ledger discipline; different comedy direction.
+    Exchange §, gold, and deeds → MOOLA for worthless performances (burn, hole, scatter).
+
+  ledger:
+    path: AUCTIONS.yml
+    show_ledger_crossref: repo-shows/<show>/audience/LEDGER.yml
+    tracks: [lot_id, wall_title, file, buyer_id, hammer_price_§, bid_reason, timestamp, play_or_real]
+
+modes:
+  premiere_opening:
+    when: JSONsters art opening night — narrative script + tiered sales
+    doc: art-opening-night.yml
+    lecture: lecture-selling-art-to-virtual-characters.md
+    what: |
+      Fifteen magnificent auctions (two grandest per evolution series; essential has one).
+      Seventeen quick red-dot sales — ten to twenty seconds each, one line of delight.
+      Crypto/NFT/web3 parody woven through patron dialogue (not a sober explainer).
+      Facebook chorus = honest floor price; no §.
+    tiers:
+      magnificent: art-opening-night.yml#tiers.magnificent_auction
+      quick_sale: art-opening-night.yml#tiers.quick_sale
+    ledger: AUCTIONS.yml
+
+  scarcity_auction:
+    when: |
+      Later — fewer unsold pieces, a patron needs liquidity drama, or Don/a guest character
+      needs § on the record. Live paddle war among the same eight lunatics.
+    triggers:
+      - unsold_lots_remain in AUCTIONS.yml
+      - artist_needs_§: don-hopkins or guest character `simoleons` field low — fundraiser beat
+      - character_needs_money: a patron is written broke and must sell their collection (secondary market)
+    rules:
+      - opening_bid: prior_review_quote converted to § band (see bid_bands)
+      - escalation: each patron bids in-character; Gregory cites gamma, Mimsy cites Whitney regret
+      - bunny_floor: Bunny may accidentally win everything
+      - commit: edit buyer `simoleons` -= price; show pool += price; git commit per hammer
+    crypto_jab: "Secondary market — Vandermeer proves Scotland invented the flip"
+
+  premiere_lecture:
+    when: First JSONsters gallery Repo Show — lecture + guided tour
+    doc: lecture-selling-art-to-virtual-characters.md
+    what: |
+      Don delivers the lecture. Patrons bid aloud (simulated) at ensemble beats.
+      Hammer prices committed to AUCTIONS.yml after the segment. Not all 32 lots —
+      highlight lots tied to ensemble beats; remainder listed as buy-now wall labels.
+    highlight_lots: art-opening-night.yml#series_auction_map
+    legacy_beats:
+      # Ensemble beats map to magnificent lots — full script in art-opening-night.yml
+      - evolution-01   # Mimsy/Gregory bid war
+      - evolution-14   # Vandermeer/Margot hex fight
+      - evolution-22   # Helena ribcage sermon
+      - evolution-25   # Plaid peacock scream
+      - bleep-swarm    # Bunny adopts choir
+
+crypto_parody:
+  doc: art-opening-night.yml#crypto_parody
+  rule: "Running gag in patron lines — false scarcity, floor price, rug pull, mint pass, DAO board approval"
+  patrons:
+    gregory: "Accidental web3 bro — liquidity, floor, short the plaid"
+    vandermeer: "Scotland invented blockchain; smart contract = Update Always"
+    bunny: "Red dots are mint buttons; Bleep swarm is community governance"
+    doctor_no: "Declared bias instead of whitepaper"
+    donna: "NFT of herself on every lot"
+    palm: "Emoji bid — offering not minting"
+    margot: "Everything is a rug over suburban longing"
+    slats: "Gas fee = one reboot"
+  ground_truth: Facebook chorus — pie menus, serialize such wow
+
+bid_bands:
+  mimsy_impulse_buy: "§8,000–§24,000 — before sentence ends"
+  gregory_rational: "§12,000–§80,000 — cites tranches; shorts plaid anyway"
+  vandermeer_guest_book: "§200–§2,000 — pays in citations"
+  bucky_jr_studio: "§1,500–§6,000 — only if tensile honesty satisfied"
+  helena_sermon_premium: "§5,000–§40,000 — spikes at tunnels and Blob"
+  margot_crying_bid: "§500–§8,000 — bids through tears, regrets winning"
+  julian_late_arrival: "§3,000–§15,000 — arrives after opening, wins anyway"
+  bunny_benefactor: "§50,000–§500,000 — board approved"
+
+patron_wallets:
+  # Starting § for JSONsters premiere cast. Persistent when promoted to audience/fictional-* dirs.
+  mimsy: { simoleons: 120000, spend_style: impulse, already_owns: [evolution-01] }
+  gregory: { simoleons: 850000, spend_style: portfolio, notes: "Short plaid mentally; may still bid" }
+  vandermeer: { simoleons: 2400, spend_style: IOU_and_footnotes }
+  bucky_jr: { simoleons: 18000, spend_style: craft_selective }
+  helena: { simoleons: 420000, spend_style: redemptive_premium }
+  margot: { simoleons: 22000, spend_style: hostile_acquisition }
+  julian: { simoleons: 45000, spend_style: erotic_escalation }
+  bunny: { simoleons: 999999, spend_style: adorable_whale, funds_monster_era: true }
+
+ensemble_auction_beats:
+  - beat: mimsy_gregory_bid_war
+    lot: jsonsters-evolution-01.png
+    wall_title: "Study for a Financial Bridge (Working Title)"
+    script: |
+      Mimsy: "I bought it before finishing my sentence." *KACHING*
+      Gregory: "Source, sink, one conduit — I'll match and raise." *KACHING*
+      Hammer to Mimsy (impulse premium) or split deed joke — Don picks live.
+  - beat: vandermeer_margot_hex_fight
+    lot: jsonsters-evolution-14.png
+    wall_title: "Sedimentary Node with Rainbow Collar"
+    script: |
+      Vandermeer: "Nation-states in a liquidity sea!" (bids §400)
+      Margot: "Gravel is where they dump the complaining nodes!" (bids §600 through tears)
+      Bunny: "Are those broccoli? §200,000!" — Gregory explains GME; Bunny wins or ties.
+  - beat: helena_ribcage_sermon
+    lot: jsonsters-evolution-22.png
+    wall_title: "Ribcage Tunnel — Portal I"
+    script: |
+      Helena walks the tunnel on stage. Room silent. Hammer without counterbid — sermon premium.
+  - beat: plaid_peacock_scream
+    lot: jsonsters-evolution-25.png
+    wall_title: "Plaid Peacock — Ribs I"
+    script: |
+      Mimsy screaming softly bids §24k. Gregory: "I'm short the plaid" — passes. Vandermeer bids in tartan.
+  - beat: bunny_adopts_bleep_swarm
+    lot: jsonsters-04-bleep-swarm.png
+    wall_title: "Bleep Swarm (Choir Study)"
+    script: |
+      Bunny adopts all Bleep. Bulk lot includes monster era bundle. Helena: "We were always the Bloop."
+      Facebook chorus heckles from chat — not eligible to bid.
+
+promotion_path:
+  lifecycle: ../../menagerie/GRADUATION.yml
+  stages:
+    instance: critics.yml
+    character: ../../menagerie/<slug>/CHARACTER.yml
+    audience: repo-shows/<show>/audience/fictional-<slug>/
+    live: on air — bid, banter, misread any artifact; jump out of JSONsters story
+  what: |
+    Patrons incubate here (instance-first). Graduate to characters/menagerie/ with
+    simoleons + collection. Per-show copies under audience/fictional-*. Then perform live —
+    no longer trapped in the Chelsea white-cube fiction.
+  reuse: Fork critics.yml + simoleon-auctions.yml for NeMACS, Turing, other gallery walks.
+
+see_also:
+  - art-opening-night.yml
+  - lecture-selling-art-to-virtual-characters.md
+  - critics.yml
+  - reviews.yml
+  - ../../don-philahue/CHARACTER.yml
+  - ../../repo-shows/will-wright/performance-and-culture.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,24 @@
+# SFC Emeryville — logo + Will birthday
+
+sfc_logo:
+  file: sfc-logo-outside-workshop.png
+  what: "Cast metal STUPID FUN CLUB globe plaque on exterior wall — night"
+  location: Emeryville workshop
+  facebook:
+    circa: "~2013"
+    with: [Jason Shankel]
+    comments:
+      catherine_ann_fitzpatrick: "Happy Brithday, Will!"
+    don: "Happy birthday Will!!!"
+
+will_birthday:
+  file: will-wright-birthday-workshop.png
+  what: "Will Wright at red table — cake, balloons, HAPPY BIRTHDAY banner, workshop interior"
+
+repo_orbit:
+  stupid_fun_club: ../../career/stupid-fun-club.yml
+  slats: ../../../robots/slats/photos.md
+  maxis_suite_6: ../maxis-emeryville/maxis-suite-6-door.yml
+  jason_shankel: ../../../will-wright/media/sims-series-maxis-people.yml#jason-shankel
+
+note: "Not AI Generated!"

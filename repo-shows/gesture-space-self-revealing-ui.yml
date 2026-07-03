@@ -1,0 +1,23 @@
+# SHOW PROPOSAL — Gesture space & self-revealing UI
+
+show:
+  id: gesture-space-self-revealing-ui
+  title: "Gesture Space — Self-Revealing vs Graffiti Gestures"
+  type: solo
+  host: Don Hopkins
+  topic: |
+    Multitouch as constraint maintenance (not mouse emulation). Pantomime inertia/gyros.
+    Pie menus as self-revealing affordances vs undiscoverable stroke alphabets.
+    Norman/Jobs historical receipts; Fitts + steering; live constraint tracker in MicropolisCore.
+  status: proposed
+  topic_file: characters/don-hopkins/gesture-space.md
+  dream_guests:
+    - Donald Norman
+    - Ted Selker
+    - David Levitt
+    - Daniel Vogel
+  hn_threads:
+    - 17098179
+    - 37902412
+    - 37904328
+    - 16613903

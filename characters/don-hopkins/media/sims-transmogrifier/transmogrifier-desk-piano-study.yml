@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-desk-piano-study.png
+
+artifact:
+  file: transmogrifier-desk-piano-study.png
+  slug: transmogrifier-desk-piano-study
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — desk piano study
+  era: 2000-2002
+  sidecar_of: transmogrifier-desk-piano-study.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

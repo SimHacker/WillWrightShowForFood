@@ -47,6 +47,6 @@ segments:
 
 related:
   - repo-shows/will-wright/
-  - characters/slats/                       # SFC lineage (Phoneloper sibling)
+  - characters/robots/slats/                       # SFC lineage (Phoneloper sibling)
   - repo-shows/will-wright/performance-and-culture.yml
   - "DonHopkins seed: projects/micropolis-moollm/repo-shows/phoneloper-speech-synthesis.yml"

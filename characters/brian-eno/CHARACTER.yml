@@ -35,7 +35,7 @@ bio:
     Foundation**, where in 2006 he and **Will Wright** gave the talk *Playing with Time*.
   known_for:
     - Ambient music (Music for Airports)
-    - Generative music & art (Bloom, 77 Million Paintings)
+    - Generative music & art (Bloom, 77 Million Paintings — 2006 DVD/software, 296 slides, ~77M combinations)
     - Producing Bowie, Talking Heads, U2, Roxy Music, Devo
     - Oblique Strategies (with Peter Schmidt)
     - The Long Now Foundation ("The Long Now")
@@ -48,6 +48,8 @@ connections:
 
 show_suggestions:
   - { seed: ../../repo-shows/brian-eno/, what: "A dream conversation on generative systems — ambient/generative music meeting generative visual art and simulation; rules, time, surrender, and what AI changes. Reachable via Will + Scott." }
+  - { seed: ../../repo-shows/brian-eno/simulated-opening.yml, what: "Simulated opening — 77 Million Paintings DVD, Art Thief game, scenius, surrender § on stream" }
+  - { seed: ../../repo-shows/brian-eno/77-million-paintings.yml, what: "Product canon — combinatorial infinity vs NFT false scarcity" }
   - { seed: ../../repo-shows/scott-draves/, what: "Reunion variant of the 2006 evening: Don + Scott + Brian (+ Will)." }
 
 sources:

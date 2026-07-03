@@ -1,0 +1,22 @@
+# STEVE WOZNIAK MEDIA — GLANCE
+
+title: Steve Wozniak — Media
+iconic: "👤 Woz"
+description: |
+  Hardware schematics and Woz-design artifacts. Big-endian filenames.
+  Apple II Red Book figure set ingested from Don Hopkins Facebook (Woz 70th).
+
+navigation:
+  up: ../GLANCE.md
+  character: ../CHARACTER.yml
+
+rooms:
+  - apple-ii-redbook/INDEX.yml
+
+convention:
+  prefix: apple-ii-redbook-
+  sidecars: co-located .yml per .png
+
+see_also:
+  - ../ideas.md
+  - ../../don-hopkins/media/CATALOG-INDEX.yml

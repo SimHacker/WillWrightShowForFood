@@ -1,0 +1,108 @@
+# CARD — David Levitt (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: david-levitt
+  name: David Levitt
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: David Levitt
+  title: AI Music & VR
+  rarity: uncommon
+  signifier: "🎹"
+  flavor: From Minsky's music to VR worlds to reaching into AR — objects made of meaning.
+abilities:
+- id: PANTOMIME
+  name: Pantomime
+  type: activated
+  mana: '{U}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: pantomime
+    signature: pantomime(device) → shared AR/VR, headset optional
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Reach into a shared virtual world with any mobile device (Don = Chief Architect).
+  verifiable: Pantomime Corporation (pantomime.co)
+  combos_with: []
+- id: AI-MUSIC
+  name: AI Music
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: aiMusic
+    signature: aiMusic(dialect) → generated arrangement
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Generate musical arrangements from a model that understands dialects.
+  verifiable: MIT/Minsky; A Representation of Musical Dialects
+  combos_with: []
+- id: CONNECTEDTV
+  name: ConnectedTV
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: connectedTV
+    signature: connectedTV(pda) → personalized web TV guide + remote
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Tap and stroke a PDA into a personalized TV guide — touch before touch was cool.
+  verifiable: ConnectedMedia / ConnectedTV (Sony Clié bundling)
+  combos_with: []
+- id: VPL-VR
+  name: VPL VR Worlds
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: vplWorld
+    signature: vplWorld() → first VR with gravity, collisions, 3D sound
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Recall building the first realistic VR worlds at the company that coined "VR".
+  verifiable: VPL Research
+  combos_with: []
+- id: BOUNCE
+  name: Bounce / Hookup
+  type: activated
+  mana: '{U}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: patchCord
+    signature: patchCord() → real-time visual program for VR, music, video
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Wire modules with virtual patch-cords — the metaphor Hookup pioneered, that Bounce and Body Electric ran with (Don co-developed Bounce).
+  verifiable: Coniglio history (sdela.dds.nl/sfd/isadora.html); donhopkins.com Bounce notes; c2 BounceLanguage
+  combos_with:
+  - AI-MUSIC
+  - VPL-VR
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document
+- path: ideas.md
+  why: Conversation hooks

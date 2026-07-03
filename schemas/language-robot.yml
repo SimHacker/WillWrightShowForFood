@@ -79,7 +79,7 @@ reincarnation_endgame:
     When we reincarnate Slats (RoboResurrection segment), give him a REAL MCP server so he can
     talk directly with Cursor. The 'wire' dialect becomes literal — develop it during the show and
     test it live. Robot language graduates from performance to protocol.
-  see: ../characters/slats/slats-reincarnation.yml
+  see: ../characters/robots/slats/slats-reincarnation.yml
 
 speaker_default:
   knows_english: true
@@ -89,5 +89,5 @@ speaker_default:
 
 see_also:
   - language-plugin.yml
-  - ../characters/slats/CHARACTER.yml
+  - ../characters/robots/slats/CHARACTER.yml
   - ../repo-shows/will-wright/audience/bot-ultimate-machine/CHARACTER.yml

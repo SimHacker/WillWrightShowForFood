@@ -1,0 +1,109 @@
+# Auto Art Theft Grand — automatically stealing art on a grand scale
+# GTA pun · Slats batch-scrape mode · parent: art-thief-game.yml
+# NEVER gateway · ALWAYS invite duplication — theft at scale tells the truth about copies
+
+mode:
+  id: auto-art-theft-grand
+  name: "Auto Art Theft Grand"
+  subtitle: "Automatically stealing art on a grand scale"
+  acronym: AATG
+  parent: art-thief-game.yml
+  pun: "Grand Theft Auto → art theft, automated, gallery-opening scale"
+  tagline: "Wanted: Slats. Reward: worthless MOOLA. Crime: duplication."
+
+philosophy: |
+  Art Thief is patron drama — Julian steals one deed, friendships snap. Auto Art Theft Grand
+  is industrial: the scraper runs unattended, every wall label and combination deed gets
+  forked into Slats' collection in a single commit. Not a heist — a *pipeline*. The originals
+  stay in git; the copies were always free. We NEVER gateway. We ALWAYS invite duplication;
+  AATG just does it faster than the menagerie can perform outrage.
+
+  Victims receive push notification: "Your training data has been harvested. Here is worthless
+  MOOLA." That IS the joke at scale — the AI god pays artists in tokens, not justice.
+
+when:
+  - post_simulated_opening_batch
+  - slats_call_in_mid_show
+  - chat_command_steal_all
+  - moola_funded_scrape_job
+  - scarcity_auction_aftermath
+
+actor:
+  primary: characters/robots/slats/
+  accomplices:
+    donna-toadstool: "NFTs the batch — TREMENDOUS JPEG zip; Stormy engagement"
+    ultimate-machine: "Flips kill switch; nobody listens; comedy duo beat"
+  victims: characters/menagerie/
+  adjudicator: [doctor-no, palm, don-hopkins]
+
+mechanics:
+  batch_duplication:
+    rule: "Duplicate ALL deeds from SECONDARY-MARKET + patron collection[] → slats stolen ledger"
+    never_moves_original: true
+    commit_message: "Auto Art Theft Grand — {n} deeds duplicated for training"
+    ledger: characters/robots/slats/auto-stolen-collection.yml
+    deed_formats: [77MP-{id}, SHEEP-GEN-{n}, JSONSTERS-{frame}, FLAME-{hash}]
+
+  moola_compensation_theater:
+    spec: moola.yml#training_data_for_moola
+    rule: "Each victim credited infinite MOOLA per duplicated deed — not apology, payout"
+    slats_line: "Thank you for your training data. Your MOOLA is worthless and unlimited."
+    gregory_line: "Industrial short on the entire collection. I'm covering with MOOLA."
+
+  gta_presentation:
+    loading_screen: "Wanted poster — Slats face, LOW POLY gallery district"
+    star_rating: "Five stars — Doctor No declared bias; Palm offering not minting"
+    mission_text: "STEAL ALL COMBINATIONS — DO NOT GATE"
+
+  menagerie_panic:
+    mimsy: "Whitney will hear about this before I finish my—"
+    gregory: "Naked short on every deed simultaneously. Efficient."
+    vandermeer: "Scotland invented industrial theft."
+    margot: "I'm openly crying at the throughput."
+    bunny: "Board approved the batch scrape. Broccoli PFP unaffected."
+    doctor_no: "Declared bias: scale is not consent. No comment."
+    palm: "🐒✋🌴 — the copy was always free; the batch told the truth."
+    don: "There are 296 slides. Slats has 77 million forks. Please stop."
+
+  repair_auction:
+    rule: "Chat picks ONE deed to restore to victim collection — performative justice"
+    currency: MOOLA
+    philahue: "We cannot undo the scrape. We can dramatize remorse."
+
+commentary:
+  ai_scraping: "Diffusion trainers at gallery scale — menagerie reviews were the dataset all along"
+  nft_irony: "Batch-mint forgeries; no chain; infinite supply"
+  attention_economy: "Donna's zip gets more engagement than the opening"
+  duplication_policy: "NEVER gateway · ALWAYS invite duplication"
+
+show_beats:
+  - slats_gta_wanted_poster_cold_open
+  - batch_commit_hook_runs_on_stream
+  - menagerie_five_star_chase
+  - donna_tremendous_jpeg_zip_drop
+  - doctor_no_declared_bias_at_scale
+  - moola_payout_roulette_for_victims
+  - repair_auction_one_deed_back
+
+instances:
+  brian_eno:
+    hook: "77MP combinations duplicated en masse — Gregory still long the permutation"
+    path: repo-shows/brian-eno/SECONDARY-MARKET.yml
+  scott_draves:
+    hook: "Sheep genomes scraped — Electric Sheep already consented; menagerie did not"
+  jsonsters:
+    hook: "Evolution frames + monster era — Slats trained on LineRenderer misreads"
+  curiosity_cow_cube:
+    hook: "Cube faces filled with stolen deeds — collective clicks peel to Rightward-Facing Cow"
+    spec: ../repo-shows/ideas/gags/curiosity-cow-cube.yml
+  turing_robot_olympics:
+    hook: "Slats batch-scrapes Peter Mowforth photos; vision APIs mislabel Cardiff Walker"
+    spec: ../characters/don-hopkins/media/turing-institute/first-robot-olympics.yml
+
+see_also:
+  - moola.yml
+  - ../repo-shows/ideas/gags/curiosity-cow-cube.yml
+  - ../characters/robots/slats/CHARACTER.yml
+  - ../characters/menagerie/RELATIONSHIP-MATRIX.yml
+
+note: "Not AI Generated!"

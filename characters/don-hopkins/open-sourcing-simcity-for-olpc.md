@@ -21,7 +21,7 @@
 | Timeline + contracts | [`career/simcity-lineage.yml`](career/simcity-lineage.yml) |
 | Contract scans | [`career/contracts/`](career/contracts/README.md) |
 | Will Wright mail saga | [`../../characters/will-wright/sources/simcity-open-source-saga/`](../../characters/will-wright/sources/simcity-open-source-saga/README.md) |
-| Full evidence room map | [`will-wright-primary-sources-evidence-room.md`](will-wright-primary-sources-evidence-room.md) |
+| Full evidence room map | [`../will-wright/primary-sources-evidence-room.md`](../will-wright/primary-sources-evidence-room.md) |
 | Chaim Gingold account | [Open Sourcing SimCity on Medium](https://donhopkins.medium.com/open-sourcing-simcity-58470a275446) |
 
 → Python/Sugar detail: [`olpc-micropolis-python-pygtk.md`](olpc-micropolis-python-pygtk.md)

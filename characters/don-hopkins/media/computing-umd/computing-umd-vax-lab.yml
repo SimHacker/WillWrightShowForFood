@@ -1,0 +1,11 @@
+# Sidecar — computing-umd-vax-lab.png
+
+artifact:
+  file: computing-umd-vax-lab.png
+  slug: computing-umd-vax-lab
+  category: computing
+  subcategory: umd
+  what: "University of Maryland VAX lab"
+  sidecar_of: computing-umd-vax-lab.png
+
+note: "Not AI Generated!"

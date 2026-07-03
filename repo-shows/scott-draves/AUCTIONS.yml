@@ -1,0 +1,23 @@
+# Scott Draves opening — lot ledger (play § only)
+# Populated during simulated opening; guest wallet credits here
+
+meta:
+  currency: "§"
+  fictional: true
+  guest: scott-draves
+  spec: simulated-opening.yml
+  protocol: ../../process/simulated-art-opening.yml
+
+guest_wallet:
+  simoleons: 0
+  post_opening_target: 2400000
+  note: "Scott starts main show buried in § — spend/give away on Twitch"
+
+lots:
+  status: pre_show
+  magnificent: 8
+  quick_sale: 5
+
+hammer_log: []
+
+note: "Not AI Generated!"

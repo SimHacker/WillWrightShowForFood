@@ -1,0 +1,53 @@
+# Face puppets — MIND=BLOWN reference faces from Rolf's Amsterdam drawer
+
+purpose: |
+  Source reaction geometry for Pantomime AccessoryHands / menagerie patron puppets.
+  Don's verdict on the series: **"Great face puppet! MIND=BLOWN"**
+
+canonical:
+  talking: don-high-score-space-invaders.png
+  talking_spec: ../don-high-score-space-invaders.yml
+  talking_note: "Santa Cruz boardwalk arcade reflection — neutral face, DON on screen; perfect talking puppet"
+  mind_blown: don-hopkins-mind-blown-face-puppet.png
+  mind_blown_note: "Wide eyes, open mouth — peak reaction rig"
+
+reference_faces:
+  don_talking:
+    file: ../don-high-score-space-invaders.png
+    spec: ../don-high-score-space-invaders.yml
+    role: "Canonical talking face puppet — arcade reflection, DON initials"
+    expression: "Neutral/content — glasses, goatee, long hair; vector UI overlay on chest"
+
+  don_mind_blown:
+    file: don-hopkins-mind-blown-face-puppet.png
+    role: "Peak reaction puppet — Rolf drawer find"
+    crop: "Center face; preserve glasses and mouth oval for puppet hinge"
+
+  rolf_mechanical:
+    file: rolf-pixley-mechanical-object-mind-blown.png
+    expression: "Animated surprise — cast-iron mechanism, bookshelf, NO MUNDANE OPTION sign"
+    role: "Secondary puppet — collector discovering object"
+
+  rolf_clock:
+    file: rolf-beard-clock-mechanism-mind-blown.png
+    expression: "Profile wow — brass gears in wooden frame, kitchen clutter"
+    role: "Bearded elder puppet variant"
+
+helmet_portraits:
+  note: "Space keychain crops — alternate puppet skins"
+  files:
+    - keychains-cosmonaut-tereshkova-cccp.png
+    - keychains-astronaut-shepard-close.png
+    - keychains-astronaut-nikolayev-white.png
+
+integration:
+  pantomime: ../pantomime/unity-levitt-nelson.yml
+  bug_farm_hands: "AccessoryHands walking/resting — same puppet pipeline"
+  menagerie: "Patron auction reactions reuse MIND=BLOWN mouth rig"
+
+see_also:
+  - amsterdam-junk-drawer.yml
+  - ../don-high-score-space-invaders.yml
+  - ../pantomime/bug-farm.yml
+
+note: "Not AI Generated!"

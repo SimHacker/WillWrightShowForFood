@@ -1,0 +1,14 @@
+# Sidecar — jaunt-one-tripod-rti-case.png
+
+artifact:
+  file: jaunt-one-tripod-rti-case.png
+  slug: jaunt-one-tripod-rti-case
+  room: jaunt-vr
+  what: Jaunt VR camera rig — one tripod rti case
+  era: 2016-2017
+  sidecar_of: jaunt-one-tripod-rti-case.png
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

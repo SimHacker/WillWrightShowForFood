@@ -1,0 +1,14 @@
+# Sidecar — don-anonymous-behind-bars.png
+
+artifact:
+  file: don-anonymous-behind-bars.png
+  slug: don-anonymous-behind-bars
+  room: (root)
+  what: Don in Anonymous mask behind bars — GDC 2010 / OLPC orbit
+  era: 2010
+  sidecar_of: don-anonymous-behind-bars.png
+
+see_also:
+  - ../olpc-gdc/INDEX.yml
+
+note: "Not AI Generated!"

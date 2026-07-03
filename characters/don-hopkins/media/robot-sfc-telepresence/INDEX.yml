@@ -1,0 +1,20 @@
+# Robot Sfc Telepresence
+
+room:
+  id: robot-sfc-telepresence
+  category: robot
+  subcategory: sfc-telepresence
+  parent: ../INDEX.yml
+  count: 4
+
+artifacts:
+  - file: robot-sfc-telepresence-don-hopkins-coke-can-berkeley.png
+    sidecar: robot-sfc-telepresence-don-hopkins-coke-can-berkeley.yml
+  - file: robot-sfc-telepresence-extrusion-berkeley-street.png
+    sidecar: robot-sfc-telepresence-extrusion-berkeley-street.yml
+  - file: robot-sfc-telepresence-extrusion-sandwich-shop-demo.png
+    sidecar: robot-sfc-telepresence-extrusion-sandwich-shop-demo.yml
+  - file: robot-sfc-telepresence-stupid-fun-club-medallion.png
+    sidecar: robot-sfc-telepresence-stupid-fun-club-medallion.yml
+
+note: "Not AI Generated!"

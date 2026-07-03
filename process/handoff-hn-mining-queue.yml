@@ -1,0 +1,76 @@
+# HN mining queue — session handoff 2026-07-04
+# Merged from WWSFF handoff + lots-of-chat.txt queued prompts.
+
+meta:
+  session: 2026-07-04
+  transcript: agent-transcripts/e61fde4c-9fbb-42f6-bc19-7ccbf794b76d.jsonl
+  source_dump: DonHopkins/temp/lots-of-chat.txt
+
+priorities:
+  p0_done_this_session:
+    - gesture-space.md + yml + show seed
+    - selfish-config-typescript-module.md + yml + show seed (status: later)
+    - connectedtv-touch-tuning-finger-pies.md + show seed
+    - will-wright/adorable-minutes.md + show seed
+    - will-wright/proto-dollhouse-kaleida-visit.md
+    - will-wright/primary-sources-evidence-room.md
+
+  p1_done_iteration_2:
+    - ie-jscript-htc-xslt-pie-menus.md + yml
+    - visual-programming-taxonomy.md
+    - process/trails/visual-programming-patch-cord.md
+    - characters/jaron-lanier/ stub
+    - characters/tom-demeyer/ stub
+    - characters/don-norman/ stub
+    - mark-weiser/ideas.md — ConnectedTV + Honda calm-tech hook
+    - drakon-control-flow-vs-dataflow.md (HN 10100932)
+    - characters/kim-cascone/ stub (HN 22787566)
+    - characters/steina-vasulka/ stub
+
+  p1_next:
+    - bill-buxton, gordon-kurtenbach, david-mackay, aaron-mcleran — when HN yields material
+    - PieCraft extension — mostly in pie-menus-chi-88-and-beyond.md
+    - 22978454, 34022484 — skim for Don comments
+
+  p2_character_dirs_stubs:
+    - bill-buxton
+    - gordon-kurtenbach
+    - david-mackay
+    - aaron-mcleran
+
+  p3_sourcing_open:
+    - Cynthia Solomon video — young David Levitt at MIT AI Lab
+    - Bounce Space Seed demo public link
+    - MediaFlow at Interval public link
+    - Kaleida-era photos (DreamScape context — not Space Seed)
+
+hn_threads:
+  processed:
+    - { id: 17098179, artifact: characters/don-hopkins/gesture-space.md }
+    - { id: 37902412, artifact: characters/don-hopkins/gesture-space.md }
+    - { id: 37904328, artifact: characters/don-hopkins/gesture-space.md }
+    - { id: 16613903, artifact: characters/don-hopkins/gesture-space.md }
+    - { id: 44393817, artifact: characters/don-hopkins/ie-jscript-htc-xslt-pie-menus.md }
+    - { id: 22788773, artifact: process/trails/visual-programming-patch-cord.md }
+    - { id: 33668198, artifact: process/trails/visual-programming-patch-cord.md }
+    - { id: 33706604, artifact: process/trails/visual-programming-patch-cord.md }
+    - { id: 40842599, artifact: characters/don-hopkins/visual-programming-taxonomy.md }
+    - { id: 40842388, artifact: characters/don-hopkins/visual-programming-taxonomy.md }
+    - { id: 22738415, artifact: characters/mark-weiser/ideas.md + connectedtv-calm-technology.yml }
+    - { id: 24265876, artifact: characters/jaron-lanier/ideas.md }
+    - { id: 10100932, artifact: characters/don-hopkins/drakon-control-flow-vs-dataflow.md }
+    - { id: 22787566, artifact: characters/kim-cascone/ideas.md }
+  queued:
+    - { id: 40841980, topic: Yahoo Pipes successors }
+    - { id: 22978454, topic: visual programming answer }
+    - { id: 34022484, topic: Carmack leaves Meta }
+
+queued_prompts_merged:
+  - prompt: selfish-config TS module
+    disposition: noted later — selfish-config-typescript-module.md
+  - prompt: Kaleida Space Seed photo + proto-dollhouse before Winograd
+    disposition: will-wright/proto-dollhouse-kaleida-visit.md + don-hopkins/levity-bounce-space-seed.md
+  - prompt: Revive Touch Tuning + Finger Pies slogans
+    disposition: connectedtv-touch-tuning-finger-pies.md
+  - prompt: Adorable Will Wright Minutes + async Q&A
+    disposition: will-wright/adorable-minutes.md

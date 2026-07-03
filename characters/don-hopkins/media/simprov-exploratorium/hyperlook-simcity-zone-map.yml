@@ -1,0 +1,18 @@
+# Sidecar — hyperlook-simcity-zone-map.png
+
+artifact:
+  file: hyperlook-simcity-zone-map.png
+  slug: hyperlook-simcity-zone-map
+  room: simprov-exploratorium
+  what: HyperLook Exploratorium demo — simcity zone map
+  era: early 1990s
+  sidecar_of: hyperlook-simcity-zone-map.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
+
+see_also:
+  - ../pie-menus/INDEX.yml
+  - ../cellular-automata-tiles/INDEX.yml
+
+note: "Not AI Generated!"

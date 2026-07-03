@@ -52,11 +52,48 @@ including 1969 telecine and Type 340 display lists.
 NeWS reunion (Gosling, van Hoff, …), X11/ICCCM deep dive, Nvidia #4, LOCKSS / Paul Evan Peters Award.
 Walk the repo on air and build from the seed.
 
+### 6. Sci-fi as system spec — PKD, Lem, model collapse
+Grew out of the *let-the-machine-win* / Lem 2+2=7 / **Coprophagia Is Bad For You** thread. Reading
+PKD and Lem as literal engineering specs: **Ubik → ubiquitous computing** (Weiser named it after
+*Ubik*, inverted to calm tech), **Palmer Eldritch → The Sims**, **Counter-Clock World → resurrection
+as thermodynamics** (LOCKSS as an engineered Hobart Phase — preservation as applied eschatology),
+and Lem's authority-over-truth machine → model collapse. Documented intertwingle: David's LOCKSS
+co-founder/2025 co-awardee **Vicki Reich was Mark Weiser's widow**.
+[`../mark-weiser/pkd-lem-ai-sf.md`](../mark-weiser/pkd-lem-ai-sf.md) · [`../mark-weiser/pkd-lem-ai-sf.yml`](../mark-weiser/pkd-lem-ai-sf.yml) *(lives with Mark's memorial — Ubik→ubicomp seed)*
+
+### 6. MOOLLM demo + primer readings (July 2026)
+Don sent three [MOOLLM Readings](../../repo-shows/moollm-readings/) — reusable intro/canon for
+Palm, Dasher, Tog, and the yaml jazz microworld. Discussion pack + demo walkthrough:
+[`../../repo-shows/david-rosenthal/discussion-pack.yml`](../../repo-shows/david-rosenthal/discussion-pack.yml)
+
+| Reading | URL |
+|---------|-----|
+| ✋💜🌊 Palm Love Wave | https://www.youtube.com/watch?v=4GS8Xx0ZTZI |
+| Marathon Turn 7 — The Wish is Spoken | https://www.youtube.com/watch?v=T-OIeUSc5vI |
+| Dasher, Palm On Being Palm, Tog's Monkeys | https://www.youtube.com/watch?v=lL2sw2oYU98 |
+
+### 7. Literary thread — authority without truth
+Lem's 2+2=7 machine + [Coprophagia Is Bad For You](https://blog.dshr.org/2026/06/coprophagia-is-bad-for-you.html)
++ PKD *Rautavaara's Case* (gods eating worshippers ↔ yaml jazz). See
+[`literary/`](literary/) and gag [`gods-eat-worshippers`](../../repo-shows/ideas/gags/gods-eat-worshippers.yml).
+
+### 8. Slots all the way down — Self ≈ Smalltalk ≈ NeWS `class.ps` ≈ Unix FS (≈ JS, sigh)
+How much are **Self**, **NeWS `class.ps`** (object-oriented PostScript), **Smalltalk**, and **Unix
+filesystem trees with shell `$PATH`** all the *same machine* — a namespace of named slots plus a
+lookup rule that delegates to a parent when a name isn't found — with some sub/supersets and some
+just-different-for-good-or-terrible reasons (**looking at you, JavaScript**). David's seat: he
+co-built **NeWS** (*send code, not commands*), where the PostScript dict stack **is** a delegation
+chain. Converges with Don's MOOLLM (filesystem-as-prototype-object-system) from the opposite road.
+**Draw in:** Owen Densmore (wrote the NeWS class system), David Ungar (Self), Dan Ingalls (Smalltalk),
+James Gosling (NeWS). [`slots-all-the-way-down.md`](slots-all-the-way-down.md) ·
+concept: [`../../process/artifactory.yml`](../../process/artifactory.yml)
+
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
-- [`correspondence.yml`](correspondence.yml)
-- [`window-systems-lineage.yml`](window-systems-lineage.yml)
+  - [`correspondence.yml`](correspondence.yml)
+  - [`literary/`](literary/)
+  - [`window-systems-lineage.yml`](window-systems-lineage.yml)
 - Show seed: [`repo-shows/david-rosenthal/`](../../repo-shows/david-rosenthal/)
 - [`CHARACTER.yml`](CHARACTER.yml)
 - DSHR blog: https://blog.dshr.org/

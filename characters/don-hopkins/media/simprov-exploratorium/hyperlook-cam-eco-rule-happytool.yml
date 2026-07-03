@@ -1,0 +1,18 @@
+# Sidecar — hyperlook-cam-eco-rule-happytool.png
+
+artifact:
+  file: hyperlook-cam-eco-rule-happytool.png
+  slug: hyperlook-cam-eco-rule-happytool
+  room: simprov-exploratorium
+  what: HyperLook Exploratorium demo — cam eco rule happytool
+  era: early 1990s
+  sidecar_of: hyperlook-cam-eco-rule-happytool.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
+
+see_also:
+  - ../pie-menus/INDEX.yml
+  - ../cellular-automata-tiles/INDEX.yml
+
+note: "Not AI Generated!"

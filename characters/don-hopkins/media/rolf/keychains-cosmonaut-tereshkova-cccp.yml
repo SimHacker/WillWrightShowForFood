@@ -1,0 +1,19 @@
+# Sidecar — keychains-cosmonaut-tereshkova-cccp.png
+
+artifact:
+  file: keychains-cosmonaut-tereshkova-cccp.png
+  slug: keychains-cosmonaut-tereshkova-cccp
+  room: rolf
+  what: keychains cosmonaut tereshkova cccp
+  era: TomTom-era Amsterdam
+  sidecar_of: keychains-cosmonaut-tereshkova-cccp.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/rolf-junk-auction.yml
+
+see_also:
+  - INDEX.yml
+  - raving-bonkers.yml
+  - ../robot-collection/INDEX.yml
+
+note: "Not AI Generated!"

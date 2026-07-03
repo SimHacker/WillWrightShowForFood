@@ -7,6 +7,8 @@ character:
   real_being: false
   signifier: "👁️"
   home: repo-shows/will-wright/audience/fictional-bella-goth/
+  canonical_soul: characters/sims/bella-goth/
+  prototype_ref: ../../../../characters/sims/bella-goth/CHARACTER.yml
   origin: "The Sims — missing wife; Strangetown; alien abduction fan lore"
 
 representation:
@@ -38,3 +40,5 @@ media:
 see_also:
   - questions.yml
   - ../FICTIONAL-AUDIENCE.md
+  - ../../../../characters/sims/bella-goth/
+  - ../../../../characters/menagerie/GUEST-ROSTER.yml

@@ -20,7 +20,7 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  show_seed: repo-shows/heather-steve-alvey/
+  show_seed: repo-shows/heather-and-steve-alvey/
 
 bio:
   summary: "**Heather Alvey** (née **Castello**) — founder of **SimFreaks**, one of the longest-running, most respected Sims custom-content houses (a **~26-year** brand): original object suites, sophisticated SimAntics programming, and community leadership. With her husband **Steve Alvey** (**SimSlice** / **SliceCity** — SimCity running *inside* The Sims) she still ships **tour-de-force magnum-opus expansion packs** like **Zombie Sims** for The Sims 1. Don's longtime friend and collaborator."
@@ -43,6 +43,6 @@ sources:
   blogs: []
 
 see_also:
-  - { path: ../../repo-shows/heather-steve-alvey/, why: "Afterlife × ZombieSims show + the Micropolis publishing collaboration" }
+  - { path: ../../repo-shows/heather-and-steve-alvey/, why: "Afterlife × ZombieSims show + the Micropolis publishing collaboration" }
   - { path: ../../characters/will-wright/media/sims-simfreaks-openlaszlo-catalog-README.md, why: "OpenLaszlo catalog CMS + SimFreaks gameplay gallery" }
   - { path: ../don-hopkins/, why: "Host — longtime friend/collaborator (SimProv Wedding Playset)" }

@@ -348,6 +348,7 @@ CAM-6 pie menus as visual programming — YouTube + essay cross-link.
 | [2024-yoot-tower-open-source](2024-yoot-tower-open-source/README.md) | Yoot + Phil Salvador VGHF |
 | [stupid-fun-club-one-minute-movies](stupid-fun-club-one-minute-movies/README.md) | Servitude & Empathy robots |
 | [2024-building-simcity-chaim-intro](2024-building-simcity-chaim-intro/README.md) | Chaim MIT Press book + Sam Arbesman intro |
+| [2026-07-03-digital-antiquarian-maxis-part1](2026-07-03-digital-antiquarian-maxis-part1/README.md) | Jimmy Maher Maxis history (SimEverything) + HN question-pump thread |
 | [2013-tale-of-two-simcities](2013-tale-of-two-simcities/README.md) | Charles Normann — EA CEO sign-off inside story |
 | [2019-apple-iigs-simcity-becky-heineman](2019-apple-iigs-simcity-becky-heineman/README.md) | Becky Heineman IIgs source · Phil/Chaim books |
 | [2023-turd-polishing-talk](2023-turd-polishing-talk/README.md) | Sims shipping / "worse is better" |

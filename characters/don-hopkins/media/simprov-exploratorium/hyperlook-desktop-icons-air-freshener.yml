@@ -1,0 +1,18 @@
+# Sidecar — hyperlook-desktop-icons-air-freshener.png
+
+artifact:
+  file: hyperlook-desktop-icons-air-freshener.png
+  slug: hyperlook-desktop-icons-air-freshener
+  room: simprov-exploratorium
+  what: HyperLook Exploratorium demo — desktop icons air freshener
+  era: early 1990s
+  sidecar_of: hyperlook-desktop-icons-air-freshener.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
+
+see_also:
+  - ../pie-menus/INDEX.yml
+  - ../cellular-automata-tiles/INDEX.yml
+
+note: "Not AI Generated!"

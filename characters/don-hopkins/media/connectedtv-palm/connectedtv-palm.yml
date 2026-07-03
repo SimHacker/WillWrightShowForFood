@@ -1,0 +1,19 @@
+# ConnectedTV — Palm m505 program guide
+
+artifact:
+  what: "ConnectedTV UI on Palm m505 — Twilight Zone and grid listings"
+  device: "Palm m505"
+  date_shown: "6:00 pm Mon 12/31/01"
+  featured: "The Twilight Zone: To Serve Man — Visiting aliens promise to serve man."
+
+photo: connectedtv-palm-m505-tvguide.png
+
+hardware_labels:
+  - "power — calendar button"
+  - "mute — address book button"
+  - "volume — center rocker"
+
+repo_orbit:
+  simfaux: ../simfaux/INDEX.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,20 @@
+room:
+  id: news-tshirts
+  name: NeWS T-Shirt Designs
+  parent: ../../media.md
+
+artifacts:
+  - news-tshirt-x11-news-porsche-bw.png
+  - news-tshirt-x11-news-porsche-color-sunsoft.png
+  - news-tshirt-postscript-for-poets.png
+  - news-tshirt-ps-honk-if.png
+
+spec:
+  - news-tshirts.yml
+
+see_also:
+  - ../news-tnt/INDEX.yml
+  - ../hyperties/INDEX.yml
+  - ../../nemacs-hyperties-news-hubble.yml
+
+note: "Not AI Generated!"

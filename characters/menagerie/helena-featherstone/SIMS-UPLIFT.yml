@@ -1,0 +1,43 @@
+# Sims export handoff — see ../EXPORT-SIMS-RELATIONSHIPS.yml
+schema_version: 1
+source:
+  direction: uplift
+  neighbor_id: 905
+  character: helena-featherstone
+identity:
+  name: Helena Featherstone
+  age: adult
+  gender: female
+  zodiac: pisces
+traits:
+  neat: 9
+  outgoing: 3
+  active: 2
+  playful: 1
+  nice: 7
+  generous: 8
+skills:
+  cooking: 6
+  mechanical: 1
+  charisma: 7
+  logic: 4
+  body: 2
+  creativity: 3
+  cleaning: 8
+career:
+  track: politics
+  performance: 750
+relationships:
+  '901':
+    daily: 25
+    lifetime: 60
+  '902':
+    daily: 40
+    lifetime: 55
+  '906':
+    daily: 30
+    lifetime: 50
+  '908':
+    daily: 55
+    lifetime: 70
+family_budget: 420000

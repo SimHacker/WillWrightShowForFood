@@ -1,0 +1,120 @@
+# Simulated art opening — standard guest ritual
+# Sell guest artwork to menagerie patrons for § before the main show
+# Prototype: characters/don-hopkins/jsonsters/art-opening-night.yml
+
+ritual:
+  id: simulated-art-opening
+  name: "Simulated Art Opening"
+  tagline: "Your patrons buy everything. You start the show buried in worthless §."
+
+  when: Before main Repo Show segment (cold open or pre-show block, 20–40 min)
+  optional: true
+  default_for: [guests_with_visual_art, generative_artists, gallery_walk_shows]
+  play_money_only: true
+
+outcome:
+  guest_wallet:
+    field: "characters/<guest>/CHARACTER.yml → character.simoleons OR repo-shows/<show>/WALLET.yml"
+    target: "Huge pile — aggregate of all opening sales (§500k–§5M+ comedy scale)"
+    worthless: true
+    note: "NOT real money. Same ethics as Rosebud/Klapaucius — perform straight, ledger in git."
+  twitch_spend:
+    during_show:
+      - "Scatter § to chat (Rosebud inverse — guest gives away play money)"
+      - "Tip fictional patrons back for wrong reviews"
+      - "Oblique-Strategy / pie-menu bids on live builds"
+      - "Audience poll: which § pile funds the next cauldron melt"
+    auctioneer: don-philahue
+    ledger: repo-shows/<show>/AUCTIONS.yml
+
+economy:
+  currency: Simoleons
+  symbol: "§"
+  native_settlement: MOOLA
+  moola_spec: moola.yml
+  flow: "Menagerie patrons → guest (artist) in § — then exchange §/gold/art → MOOLA for performances"
+  crossref:
+    - moola.yml
+    - characters/don-philahue/CHARACTER.yml#easter_eggs.rosebud_cheat
+    - characters/don-hopkins/jsonsters/simoleon-auctions.yml
+
+moola_exchange:
+  after_opening: "Guest § pile → MOOLA — burn, dig hole, scatter to chat, fund art-thief repairs"
+  mantra: "NEVER gateway · ALWAYS invite duplication"
+  training_data_joke: "Chat/patron misreads → AI god harvest → worthless MOOLA payout"
+  performances: [burning_money, holiday_hole, surrender_pile, ten_bazillion_patrons]
+
+cast:
+  canonical: characters/menagerie/GUEST-ROSTER.yml#gallery_openings
+  fork: "Per-show critics.yml optional — patron voices tuned to guest medium"
+  auctioneer: don-philahue
+  host: don-hopkins
+
+sales_tiers:
+  magnificent_auction:
+    rule: "Two grandest pieces per series — brisk hammer (60–90 sec)"
+    see: jsonsters/art-opening-night.yml#tiers.magnificent_auction
+  quick_sale:
+    rule: "Red dot + one misread delight + small § (10–20 sec)"
+    see: jsonsters/art-opening-night.yml#tiers.quick_sale
+
+parody_threads:
+  crypto_nft_web3:
+    rule: "Running gag in patron lines — never earnest web3 advocacy"
+    see: jsonsters/art-opening-night.yml#crypto_parody
+  generative_surrender:
+    rule: "Guest's philosophy reflected in misread — art as trigger, scenius, never-repeating"
+    eno: "77 Million Paintings (2006 DVD) — 296 slides, ~77M combinations, not 77M files"
+    draves: "Electric Sheep is a DAO that bleats; genetic algorithm is proof-of-stake cute"
+
+art_thief_game:
+  spec: art-thief-game.yml
+  when: after opening + during show secondary market
+  tagline: "Covet, trade, forge, steal digital deeds — friendships snap on git"
+  auto_art_theft_grand: auto-art-theft-grand.yml
+
+moola:
+  spec: moola.yml
+  tagline: "Native worthless currency — exchange §/gold/art; training data in, MOOLA out"
+  mantra: "NEVER gateway · ALWAYS invite duplication"
+
+per_guest_files:
+  template: repo-shows/_TEMPLATE/simulated-opening.yml
+  spec:
+    - repo-shows/<guest>/simulated-opening.yml
+    - repo-shows/<guest>/AUCTIONS.yml
+    - repo-shows/<guest>/SECONDARY-MARKET.yml
+    - repo-shows/<guest>/MOOLA.yml
+    - repo-shows/<guest>/gallery/ or characters/<guest>/media/
+  script_optional: art-opening-night.yml  # fork jsonsters pattern when piece count warrants
+
+invite_copy:
+  one_liner: |
+    We'd love you to play along with a **simulated art opening** — our menagerie of fictional
+    patrons misreads your work and buys it for Simoleons (§). You start the show with a huge pile
+    of worthless play money to spend or give away on stream. JSONsters gallery was the prototype;
+    your opening uses your artwork and your patron misreads.
+  opt_out: "Skip entirely, shorten, or rewrite — your call."
+
+instances:
+  prototype:
+    guest: don-hopkins
+    path: characters/don-hopkins/jsonsters/
+    status: scripted
+  scott_draves:
+    guest: scott-draves
+    path: repo-shows/scott-draves/simulated-opening.yml
+    invitation: repo-shows/scott-draves/invitation.md
+    status: draft_invite
+  brian_eno:
+    guest: brian-eno
+    path: repo-shows/brian-eno/simulated-opening.yml
+    note: "Totally Brian — generative surrender, art as trigger, scenius, 77 Million Paintings"
+    status: dream_seed
+
+see_also:
+  - repo-show-format.yml#simulated_art_opening
+  - ../skills/repo-show/CARD.yml#guest_rituals
+  - ../characters/menagerie/GUEST-ROSTER.yml
+
+note: "Not AI Generated!"

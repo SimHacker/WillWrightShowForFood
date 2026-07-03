@@ -1,0 +1,19 @@
+# Sidecar — keychains-astronaut-shepard-close.png
+
+artifact:
+  file: keychains-astronaut-shepard-close.png
+  slug: keychains-astronaut-shepard-close
+  room: rolf
+  what: keychains astronaut shepard close
+  era: TomTom-era Amsterdam
+  sidecar_of: keychains-astronaut-shepard-close.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/rolf-junk-auction.yml
+
+see_also:
+  - INDEX.yml
+  - raving-bonkers.yml
+  - ../robot-collection/INDEX.yml
+
+note: "Not AI Generated!"

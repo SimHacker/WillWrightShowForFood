@@ -1,5 +1,5 @@
 # SHOW — Scott Kim (inversions, puzzle craft, playful math)
-# Will's friend; pairs beautifully with a Will design conversation.
+# OPTIONAL solo deep-dive. PRIMARY interview: repo-shows/amy-jo-and-scott-kim/ (with Amy Jo Kim).
 
 show:
   id: scott-kim
@@ -8,9 +8,12 @@ show:
   host: Don Hopkins
   guests: ["Scott Kim"]
   character: characters/scott-kim/
-  topic: "Ambigrams / inversions; the craft of puzzle design; symmetry, visual thinking, and math as play"
+  topic: "Ambigrams / inversions; Viewpoint; the craft of puzzle design"
   status: seed
   consent: not_yet_asked
+  scheduling:
+    primary: repo-shows/amy-jo-and-scott-kim/
+    when_solo: "Optional second episode — Viewpoint/inversions vertical only; do not duplicate pair-show material"
 
 why_him:
   inversions: "Ambigram pioneer — words that read the same upside down or mirrored (Inversions, 1981)."
@@ -34,6 +37,8 @@ format:
 
 ties_to:
   - ../../characters/scott-kim/invitation.md
+  - ../../characters/amy-jo-kim/
+  - ../amy-jo-and-scott-kim/SHOW.yml
   - ../../characters/will-wright/
   - ../../characters/ken-perlin/
   - ../../characters/stone-librande/

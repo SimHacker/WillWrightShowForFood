@@ -1,0 +1,18 @@
+# Software Simfreaks
+
+room:
+  id: software-simfreaks
+  category: software
+  subcategory: simfreaks
+  parent: ../INDEX.yml
+  count: 3
+
+artifacts:
+  - file: software-simfreaks-cool-blue-stuff-catalog.png
+    sidecar: software-simfreaks-cool-blue-stuff-catalog.yml
+  - file: software-simfreaks-nuit-bleu-catalog.png
+    sidecar: software-simfreaks-nuit-bleu-catalog.yml
+  - file: software-simfreaks-nuit-bleu-catalog-dup.png
+    sidecar: software-simfreaks-nuit-bleu-catalog-dup.yml
+
+note: "Not AI Generated!"

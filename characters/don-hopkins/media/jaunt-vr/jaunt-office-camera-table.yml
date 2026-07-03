@@ -1,0 +1,14 @@
+# Sidecar — jaunt-office-camera-table.png
+
+artifact:
+  file: jaunt-office-camera-table.png
+  slug: jaunt-office-camera-table
+  room: jaunt-vr
+  what: Jaunt VR camera rig — office camera table
+  era: 2016-2017
+  sidecar_of: jaunt-office-camera-table.png
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

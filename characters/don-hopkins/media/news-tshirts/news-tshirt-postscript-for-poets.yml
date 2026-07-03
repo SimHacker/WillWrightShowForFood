@@ -1,0 +1,15 @@
+# Sidecar — news-tshirt-postscript-for-poets.png
+
+artifact:
+  file: news-tshirt-postscript-for-poets.png
+  slug: news-tshirt-postscript-for-poets
+  room: news-tshirts
+  what: news tshirt postscript for poets
+  era: late 1980s-1990s
+  sidecar_of: news-tshirt-postscript-for-poets.png
+
+see_also:
+  - ../news-tnt/INDEX.yml
+  - ../hyperties/INDEX.yml
+
+note: "Not AI Generated!"

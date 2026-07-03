@@ -1,0 +1,14 @@
+# Sidecar — jaunt-lego-gopro-rig.png
+
+artifact:
+  file: jaunt-lego-gopro-rig.png
+  slug: jaunt-lego-gopro-rig
+  room: jaunt-vr
+  what: Jaunt VR camera rig — lego gopro rig
+  era: 2016-2017
+  sidecar_of: jaunt-lego-gopro-rig.png
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

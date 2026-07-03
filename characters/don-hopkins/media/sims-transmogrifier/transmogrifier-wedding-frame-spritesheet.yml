@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-wedding-frame-spritesheet.png
+
+artifact:
+  file: transmogrifier-wedding-frame-spritesheet.png
+  slug: transmogrifier-wedding-frame-spritesheet
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — wedding frame spritesheet
+  era: 2000-2002
+  sidecar_of: transmogrifier-wedding-frame-spritesheet.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

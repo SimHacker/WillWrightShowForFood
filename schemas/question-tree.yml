@@ -34,7 +34,9 @@ orchestration:
 persistence_policy:
   ephemeral:
     channels: [twitch_chat, youtube_chat, hacker_news_comments]
-    note: "Not in orchestration trees unless curated into questions.yml."
+    note: |
+      Not in orchestration trees unless curated into questions.yml. When curated, attach
+      provenance + routing per question-provenance.yml (HN user, comment id, route-back plan).
   persistent:
     medium: github_issues
     rule: |
@@ -337,10 +339,13 @@ playback:
 
 examples:
   worked: ../repo-shows/will-wright/audience/palm/questions.yml
+  hn_provenance: ../repo-shows/will-wright/audience/hn-nanna/questions.yml
   template: ../repo-shows/_TEMPLATE/audience/questions.yml
+  hn_curation_snippet: ../repo-shows/_TEMPLATE/audience/hn-curation-snippet.yml
   draft_menu: ../repo-shows/will-wright/audience/richard-bartle/questions.yml
 
 see_also:
   - ../process/ticket-pr.yml
+  - question-provenance.yml
   - audience-character.yml
   - ../repo-shows/_TEMPLATE/audience/CHARACTER.md

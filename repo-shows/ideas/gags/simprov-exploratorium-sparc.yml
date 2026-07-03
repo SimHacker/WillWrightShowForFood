@@ -1,0 +1,27 @@
+# Gag — SimProv Exploratorium demo on SPARCstation 2
+
+gag:
+  id: simprov-exploratorium-sparc
+  title: "Melting Happy Faces with CA — It's Not a Schooner"
+  source: characters/don-hopkins/media/simprov-exploratorium/simprov-exploratorium.yml
+
+beat:
+  setup: "Don records a video demo at the Exploratorium on his SPARCstation 2"
+  demos:
+    - "CAM melts a Little Trees air freshener"
+    - "Happytool smileys dissolve under cellular automata rules"
+    - "Alan Turing gets a NeatClock face with Roman numerals"
+    - "SimCity Fiscal Budget runs beside Object Properties — rotate the RESET button"
+  punchline: "Send code not commands — every UI element is a live PostScript drawing"
+
+repo_show:
+  lineage: "HyperLook → SimProv → Repo Show — modular stacks, live video overlays later in SimFaux"
+
+menagerie:
+  slats: "I trained on tube worms AND happy faces. You're welcome."
+  don: "Eight kernels. Alan Turing clock. Air freshener. Of course."
+
+see_also:
+  - ../../../characters/don-hopkins/media/simprov-exploratorium/INDEX.yml
+  - ../../../characters/don-hopkins/media/pie-menus/INDEX.yml
+  - cellular-automata-simcity-tiles.yml

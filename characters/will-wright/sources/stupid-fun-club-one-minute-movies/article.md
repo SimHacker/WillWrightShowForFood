@@ -13,7 +13,7 @@
 
 Hidden-camera **reality TV** robots in public — real humans, robot dialogue driven by Don's Python personality simulation over WiFi web UI. Written by Will; brains by Don.
 
-- **Slats** — validation-seeking waiter (`characters/slats/`)  
+- **Slats** — validation-seeking waiter (`characters/robots/slats/`)  
 - **Dents** — broken robot begging empathy  
 
 Films never aired due to NBC/SAG rules (real people on camera).
@@ -30,6 +30,6 @@ Films never aired due to NBC/SAG rules (real people on camera).
 - [Phonoloper](https://www.youtube.com/watch?v=qy5cqV8ypIs) — speech editor (separate from Slats voice)  
 - [StoryMaker demo](https://www.youtube.com/watch?v=_2yEHs_WLzQ) — [`../don-youtube-storymaker-demo/`](../don-youtube-storymaker-demo/README.md)  
 - HN: https://news.ycombinator.com/item?id=9104857  
-- Show: [`../../slats-reincarnation/`](../../slats-reincarnation/README.md) · [`characters/slats/one-minute-movies.md`](../../../../slats/one-minute-movies.md)
+- Show: [`../../slats-reincarnation/`](../../slats-reincarnation/README.md) · [`characters/robots/slats/one-minute-movies.md`](../../../../slats/one-minute-movies.md)
 
 *Harvest: re-promised-links.txt · stupid-fun-club.yml*

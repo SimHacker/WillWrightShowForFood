@@ -1,0 +1,11 @@
+# Sidecar — software-openlaszlo-pie-menus-graphic.png
+
+artifact:
+  file: software-openlaszlo-pie-menus-graphic.png
+  slug: software-openlaszlo-pie-menus-graphic
+  category: software
+  subcategory: openlaszlo
+  what: "Pie Menus for Laszlo graphic"
+  sidecar_of: software-openlaszlo-pie-menus-graphic.png
+
+note: "Not AI Generated!"

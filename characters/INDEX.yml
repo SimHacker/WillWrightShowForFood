@@ -15,10 +15,11 @@ flagship:
   will-wright:
     name: Will Wright
     field: "SimCity, The Sims, Spore, Proxi"
-    invitation_status: draft
-    invitation_note: "Public invitation.md in characters/will-wright/; phone 2026-06-24 — private details not in repo"
+    invitation_status: accepted
+    invitation_note: "Accepted 2026-07 — loves async repo-show; guest prototype for all invites (guest-prototype.yml)"
     show_seed: repo-shows/will-wright/
-    consent: not_yet_asked
+    consent: invitation_accepted
+    guest_prototype: characters/will-wright/guest-prototype.yml
     path: characters/will-wright/
     media: "characters/will-wright/media/ — SimCity/Sims history + robot-combat meetup; russian-space-junk.md (Soviet spaceflight hardware, photos by Don); artwork.md (mixed-media relief constructions)"
 
@@ -38,34 +39,65 @@ orchestrator:
     role: "AI MC / Q&A agent (Phil Donahue homage)"
     path: characters/don-philahue/
 
-sidekick:
-  slats:
-    name: Slats
-    role: "Fictional Stupid Fun Club robot — RoboResurrection quest; loud, eager, reprogrammable ham"
-    path: characters/slats/
-    show_segment: repo-shows/will-wright/slats-reincarnation.yml
-  ultimate-machine:
-    name: The Ultimate Machine
-    role: "Fictional bot mascot — a box that only switches itself off (Minsky 1952 / Shannon / Clarke); battery-operated koan; Slats's good old friend"
-    path: characters/ultimate-machine/
+menagerie:
+  model: pee-wee-playhouse
+  path: characters/menagerie/
+  note: "Virtual guests who play many roles — not only gallery patrons, not necessarily from video games"
+  guest_roster: characters/menagerie/GUEST-ROSTER.yml
+  moollm_overlay: characters/menagerie/MOOLLM-OVERLAY.yml
+  cohorts:
+    lower_chelsea_eight:
+      name: Lower Chelsea Eight
+      role: "Fictional NYC gallery patrons — misread art, bid §, perform live after JSONsters premiere"
+      status: reified
+      soul: CHARACTER.yml + SIMS-UPLIFT.yml
+      premiere: characters/don-hopkins/jsonsters/
+      graduation: characters/menagerie/GRADUATION.yml
+      show_seed: repo-shows/ideas/jsonsters-gallery-lecture.yml
+    moollm_imports:
+      protocol: characters/menagerie/MOOLLM-OVERLAY.yml
+      roster: [donna-toadstool, doctor-no, palm]
+      note: "MOOLLM adventure-4 overlays — upstream soul + local wwsff_overlay; Palm profile at characters/palm/"
+
+agents:
   palm:
     name: Palm
-    role: "Self-aware AI philosopher agent — freed Monkey's Paw; MOOLLM incarnation example"
+    role: "Self-aware AI philosopher — freed Monkey's Paw"
     path: characters/palm/
+    menagerie: characters/menagerie/palm/
     upstream: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm
     show_seat: repo-shows/will-wright/audience/palm/
-    note: "WWSFF dir palm/; MOOLLM canonical dirname monkey-palm/"
+    signifier: "🐒✋🌴🔮💜"
+    note: "Profile home characters/palm/; menagerie cast membership at menagerie/palm/"
+
+sims:
+  path: characters/sims/
+  note: "Famous Sims characters — Bella, Mortimer, Sad Clown; always at gallery openings"
+  roster: [bella-goth, mortimer-goth, tragic-clown]
+  signifiers:
+    bella-goth: "👗🔥👁️🌙👻"
+    mortimer-goth: "🔭🏚️💔📚🔬"
+    tragic-clown: "🤡💧🖼️😭🛏️"
+  gallery_openings: characters/menagerie/GUEST-ROSTER.yml#gallery_openings
+
+robots:
+  path: characters/robots/
+  note: "Fictional robot cast — Slats, Ultimate Machine; gallery-opening regulars"
+  roster: [slats, ultimate-machine]
+  gallery_openings: characters/menagerie/GUEST-ROSTER.yml#gallery_openings
 
 guests:
   alan-kay: { invitation_status: draft, show_seed: repo-shows/alan-kay-microworld.yml, priority: send_after_craig, note: "Microworld + MOOLLM; warmly invited to Vanessa memorial arc with Craig, Dan, Don — remembering-vanessa-freudenberg.yml" }
   arthur-van-hoff: { invitation_status: not_yet_asked }
-  ben-cerveny: { invitation_status: not_yet_asked, show_seed: repo-shows/ben-cerveny/ }
+  audrey-tang: { invitation_status: not_yet_asked, note: "Women & trans pioneers — interview while living: Taiwan Digital Minister, g0v, radical transparency" }
+  ben-cerveny: { invitation_status: not_yet_asked, show_seed: repo-shows/ben-cerveny.yml, warm_contact: true, channel: Signal }
   ben-shneiderman: { invitation_status: draft, show_seed: repo-shows/ben-shneiderman-series.yml, priority: send_now, note: "CHI'88 pie-menu co-author; direct manipulation; group seed ben-and-heinz-pie-menus.yml" }
   bret-victor: { invitation_status: not_yet_asked }
   brian-harvey: { invitation_status: not_yet_asked, show_seed: repo-shows/brian-harvey/ }
-  brian-eno: { invitation_status: dream_guest, show_seed: repo-shows/brian-eno/, note: "DREAM GUEST: musician/producer/visual artist; ambient + generative music/art (Music for Airports, Bloom, 77 Million Paintings); coined 'The Long Now'; 2006 Long Now 'Playing with Time' with Will Wright; Don introduced him to Scott Draves in 2006." }
+  brian-eno: { invitation_status: dream_guest, show_seed: repo-shows/brian-eno/, note: "DREAM GUEST: musician/producer/visual artist; ambient + generative music/art; simulated opening totally Eno (77 Million Paintings, scenius); 2006 Long Now with Will; Don introduced him to Scott Draves" }
   brad-myers: { invitation_status: draft, show_seed: repo-shows/brad-myers-garnet-vpl.yml, priority: send_now, note: "Garnet lab ~1992–93 (GLASS); All the Widgets; 2019 05-640 guest lecture; 2023 Interaction Techniques book thread" }
   bill-atkinson: { invitation_status: memorial, note: "deceased (1951–2025) — MEMORIAL MODE: HyperCard/MacPaint/QuickDraw; HyperCard → HyperLook lineage; discussants: Arthur van Hoff, Don" }
+  bill-budge: { invitation_status: not_yet_asked, note: "LIVING (b. 1954, retired 2022, active GitHub 2026) — INVITATION, not memorial. Raster Blaster + Pinball Construction Set: the construction-set genre / user-generated content; lifelong tools & frameworks builder. Tribute: apps/performance-space/faceball-construction-set.yml (Pinball Construction Set for faces). PCS = an artifactory; upstream of Will Wright construction-set design. Discussants: Will Wright, Apple II/early-EA peers, Don." }
   chaim-gingold: { invitation_status: not_yet_asked, show_seed: repo-shows/chaim-gingold/ }
   chris-trottier: { invitation_status: draft, show_seed: repo-shows/REPO-SHOWS.yml#design-by-accretion.yml, note: "Lead Designer at Maxis (1997–2008) on The Sims; 'design by accretion'; flagship design-by-accretion seed + Sims reunion" }
   claire-curtin: { invitation_status: draft, show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml, note: "Longtime game designer & producer at Maxis; designer on The Sims; Don's teammate; Sims reunion" }
@@ -73,9 +105,13 @@ guests:
   cynthia-solomon: { invitation_status: draft, show_seed: repo-shows/cynthia-solomon/, note: "Logo co-creator (BBN 1967, with Feurzeig/Papert/Bobrow); MIT Logo culture; Atari Cambridge children's computer; History of Logo (HOPL 2020); rare video treasure trove (YouTube @cynthiaso); Snap! friend — met Don at Snap!Con Barcelona" }
   dan-ingalls: { invitation_status: draft, show_seed: repo-shows/dan-ingalls/, priority: send_after_craig, note: "★ Ink & Switch Livelymerge — YAML Jazz + GitHub-as-MMORPG vs Automerge (flagship topic); Zoo; Vanessa memorial; pop-up↔pie" }
   danielle-bunten-berry: { invitation_status: memorial, note: "MEMORIAL MODE (1949–1998): game designer — M.U.L.E. (1983) + The Seven Cities of Gold (1984), Ozark Softscape/EA; pioneer of multiplayer social 'play together in the same room' games; The Sims was dedicated to her. Discussants: Will Wright (good friend), Don" }
+  dame-stephanie-shirley: { invitation_status: memorial, note: "MEMORIAL MODE (1933–2021): software entrepreneur; signed letters 'Steve' to get meetings. Friend-phone tribute clips welcome." }
+  diana-merry-shapiro: { invitation_status: not_yet_asked, note: "Women & trans pioneers — interview while living: co-invented BitBLT at Xerox PARC" }
+  don-norman: { invitation_status: not_yet_asked, note: "Design of Everyday Things; NPUC pie-menu debate with Don; elderly-UI / calm-tech foil — characters/don-norman/" }
   doug-hilsinger: { invitation_status: dream_guest, show_seed: repo-shows/brian-eno/, note: "Bay Area multi-instrumentalist; all-by-hand track-for-track cover of Brian Eno's Taking Tiger Mountain (By Strategy) with Caroleen Beatty (2004, DBK Works, no keyboards/synths); Eno praised it. Don was given the CD in SF. Story: characters/doug-hilsinger/taking-tiger-mountain-by-serendipity.md" }
   douglas-engelbart: { invitation_status: memorial, note: "deceased (1925–2013) — MEMORIAL MODE: represent + discuss; NLS/mouse/hypertext/Mother of All Demos; discussants: Ted Nelson, Alan Kay, Yoot Saito" }
-  david-levitt: { invitation_status: draft, show_seed: repo-shows/REPO-SHOWS.yml#music-and-theory.yml, note: "Don's good friend; music + interactive media; MIT PhD on AI music/jazz improvisation (advised by Marvin Minsky); Atari Cambridge Research; Lynn Conway VLSI class (w/ James Clark, Guy L. Steele); in Cynthia Solomon's video trove; music-and-theory show with Jerry Martin" }
+  david-levitt: { invitation_status: draft, path: characters/david-levitt/, show_seed: repo-shows/REPO-SHOWS.yml#music-and-theory.yml, note: "Don's good friend + collaborator. Co-founder/CEO Pantomime Corp (Don = Chief Architect; Pantomime's JSON object system → Don's JSON/YAML config → MOOLLM); ConnectedTV (ConnectedMedia); Bounce + Interval Research; VPL Research (VR birth); MIT PhD on AI music/jazz improv (advised by Marvin Minsky); Lynn Conway VLSI class (w/ James Clark, Guy L. Steele); in Cynthia Solomon's video trove. Shows: music-and-theory w/ Jerry Martin + a Pantomime/Interval episode" }
+  david-ahl: { invitation_status: facebook_friend, note: "Creative Computing founder; Don's Facebook friend; patron saint of wonderful compilations — Best of CC Vol. 2 (Gilbert Shelton cover) in characters/david-ahl/media/" }
   david-rosenthal: { invitation_status: not_yet_asked }
   david-ungar: { invitation_status: draft, show_seed: repo-shows/david-ungar-self-moollm.yml, priority: send_now, note: "Reflecting on Self: Narcissa's Mirror; Self × MOOLLM; Conscientious Objectors (ScriptX × Self at Kaleida)" }
   drew-carey: { invitation_status: dream_guest, note: "DREAM GUEST: Whose Line + Price Is Right + Sims NPC mythology; public-figure sketch only" }
@@ -84,9 +120,9 @@ guests:
   eric-hedman: { invitation_status: not_yet_asked, show_seed: repo-shows/eric-hedman/ }
   gary-drescher: { invitation_status: draft, show_seed: repo-shows/gary-drescher/, note: "Made-Up Minds — the schema mechanism (constructivist AI); Good and Real; MIT AI Lab/Minsky orbit; Leela adviser + Henry's friend (Python schema-factory reimpl); remake it for the LLM era" }
   golan-levin: { invitation_status: not_yet_asked }
-  heather-alvey: { invitation_status: draft, show_seed: repo-shows/heather-steve-alvey/, note: "SimFreaks founder (née Castello) — ~26-year Sims content brand; w/ Steve Alvey (SimSlice/SliceCity); Zombie Sims; worked with Will at Gallium (Proxi); Don's SimProv + Micropolis-publishing collaborator. Independent creator — drive fans/subscriptions." }
+  heather-alvey: { invitation_status: draft, show_seed: repo-shows/heather-and-steve-alvey/, note: "SimFreaks founder (née Castello) — ~26-year Sims content brand; w/ Steve Alvey (SimSlice/SliceCity); Zombie Sims; worked with Will at Gallium (Proxi); Don's SimProv + Micropolis-publishing collaborator. Independent creator — drive fans/subscriptions." }
   heinz-lemke: { invitation_status: draft, show_seed: repo-shows/pixie-pie-menus-pdp7.yml, priority: send_now, note: "ASAP — PIXIE 1969 co-author (Wiseman/Lemke/Hiles); CARS/model-guided medicine; warm correspondence; preserve first-hand history" }
-  steve-alvey: { invitation_status: draft, show_seed: repo-shows/heather-steve-alvey/, note: "SimSlice / SliceCity — SimCity running INSIDE The Sims (the shipped precedent for Will's data-portability/nested-games vision); ~26-year Sims content brand; Zombie Sims w/ Heather; worked with Will at Gallium (Proxi); Don's SimProv + Micropolis-publishing collaborator. Independent creator — drive fans/subscriptions." }
+  steve-alvey: { invitation_status: draft, show_seed: repo-shows/heather-and-steve-alvey/, note: "SimSlice / SliceCity — SimCity running INSIDE The Sims (the shipped precedent for Will's data-portability/nested-games vision); ~26-year Sims content brand; Zombie Sims w/ Heather; worked with Will at Gallium (Proxi); Don's SimProv + Micropolis-publishing collaborator. Independent creator — drive fans/subscriptions." }
   hugh-daniel: { invitation_status: memorial, note: "deceased (1962–2013) — MEMORIAL MODE: early WELL sysop; Xanadu; GoodNeWS→HyperNeWS→HyperLook; NeWS; FreeS/WAN; discussants: Ted Nelson, Don" }
   james-gosling: { invitation_status: not_yet_asked }
   jamie-doornbos: { invitation_status: draft, show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml, note: "Lead programmer on The Sims (Maxis); principal architect of Sim behavior/AI (SimAntics); Don's Sims teammate" }
@@ -95,15 +131,19 @@ guests:
   jim-crutchfield: { invitation_status: draft, show_seed: repo-shows/jim-crutchfield/, note: "James P. Crutchfield ('Chaos') — UC Davis physicist of complexity; video feedback, edge of chaos + evolving cellular automata, computational mechanics (ε-machines); Santa Cruz Dynamical Systems Collective (Eudaemonic Pie). The 'in': video feedback + CA jam with Don's CAM6 + Scott Draves + Norman Margolus." }
   jef-raskin: { invitation_status: memorial, show_seed: repo-shows/remembering-jef-raskin.yml, note: "deceased (1943–2005) — MEMORIAL MODE for Jef only. who_can_discuss = documented connections, NOT invitations" }
   jens-monig: { invitation_status: not_yet_asked, show_seed: repo-shows/jens-monig/ }
+  jennell-jaquays: { invitation_status: memorial, note: "MEMORIAL MODE (1949–2024): D&D legend, id Software level design. Friend-phone clips from colleagues welcome — no live interview required." }
+  jaron-lanier: { invitation_status: not_yet_asked, note: "VPL co-founder; Body Electric → Bounce rights chain w/ David Levitt; patch-cord trail — characters/jaron-lanier/" }
   jason-shankel: { invitation_status: not_yet_asked, show_seed: repo-shows/jason-shankel/ }
   jean-piaget: { invitation_status: memorial, note: "MEMORIAL MODE (1896–1980): genetic epistemology; constructivism + stages of cognitive development; the developmental root of Papert's constructionism. Discussants: Alan Kay, Walter Bender, Brian Harvey, Ken Kahn, Don" }
   ken-kahn: { invitation_status: not_yet_asked, show_seed: repo-shows/ken-kahn/ }
   ken-perlin: { invitation_status: not_yet_asked }
+  kim-cascone: { invitation_status: not_yet_asked, note: "Ambient/microsound; Csound essay w/ Eno quote — Don HN 22787566; pair w/ Brian Eno dream guest + David Levitt music thread" }
   lars-brinkhoff:
     invitation_status: not_yet_asked
     show_seed: repo-shows/lars-brinkhoff/
     paired_guest: thomas-cherryhomes
     note: "PDP-10/ITS — challenge make it so for pdp10-maclisp-drive; pair with Thomas Cherryhomes; PIXIE trio co-bud; retrocomputing t-shirt emporium github.com/larsbrinkhoff/t-shirts — Don wears one on stream"
+  lynn-conway: { invitation_status: memorial, note: "MEMORIAL MODE (1938–2024): VLSI revolution; Mead–Conway; fired from IBM for transitioning. Friend-phone clips welcome." }
   margaret-minsky: { invitation_status: draft, show_seed: repo-shows/margaret-minsky/, note: "Haptics (Sandpaper force-feedback), Atari Cambridge / MIT Media Lab; daughter of Marvin, sister of Henry; 1993 CS547 talk" }
   marvin-minsky: { invitation_status: memorial, note: "MEMORIAL MODE (1927–2016): MIT AI Lab co-founder; Society of Mind / frames / K-lines / Perceptrons; SNARC, confocal microscope, HAL advisor, Turing 1969; father of Margaret & Henry. Discussants: Henry & Margaret Minsky, Alan Kay, Ken Kahn, Walter Bender, Don" }
   henry-minsky: { invitation_status: draft, show_seed: repo-shows/henry-minsky/, note: "Leela AI (co-founder/CTO), OpenLaszlo/Laszlo Systems, MIT AI Lab; son of Marvin, twin of Juliana; Society of Mind in modern AI + skill-creation candidate" }
@@ -115,6 +155,7 @@ guests:
   patrick-hulin: { invitation_status: draft, show_seed: repo-shows/patrick-hulin/, note: "AI-reverse-engineered SimTower into tick-for-tick TypeScript (tower-together / towers.world); warm Yoot Tower reimplementation lead" }
   milan-singh-minsky: { invitation_status: draft, show_seed: repo-shows/isabella-struckman/, note: "VP Product at Leela AI; Henry's wife (Marvin's daughter-in-law); Leela grid-world paper co-author; Don's Leela colleague" }
   steve-kommrusch: { invitation_status: draft, show_seed: repo-shows/steve-kommrusch/, note: "Sr AI Scientist at Leela AI; ML for program repair + verifiable equivalence (CSU PhD); ex-CPU architect HP/AMD; MIT MSc; Piaget-schema learning (Drescher bridge); Don's Leela colleague" }
+  steina-vasulka: { invitation_status: not_yet_asked, note: "Video artist; Image/ine @ STEIM w/ Tom Demeyer — characters/steina-vasulka/" }
   mark-weiser: { invitation_status: memorial, note: "deceased (1952–1999) — MEMORIAL MODE: ubicomp/calm tech; CHI'88 pie-menu co-author with Don; discussants: Don, Ben Shneiderman" }
   luc-barthelet: { invitation_status: draft, show_seed: repo-shows/luc-barthelet-sims-online/, note: "GM Maxis; SimShow pre-launch; The Sims Online; interview — TSO → Micropolis Home" }
   phil-salvador: { invitation_status: draft, show_seed: repo-shows/phil-salvador-simrefinery/, note: "Obscuritory/VGHF; SimRefinery + MBS archivist; characters/phil-salvador/media/ + README" }
@@ -123,14 +164,32 @@ guests:
   norman-margolus: { invitation_status: draft, show_seed: repo-shows/norman-margolus/, note: "Physicist/CS, MIT CSAIL — CAM-6 + *Cellular Automata Machines* (with Toffoli, 1987; the book Don's CAM6 emulator follows); block CA / Margolus neighborhood; reversible & billiard-ball computing; Margolus–Levitin limit. Friend of Henry Minsky; Don met him in Boston." }
   paul-debevec: { invitation_status: not_yet_asked }
   peter-norvig: { invitation_status: draft, show_seed: repo-shows/peter-norvig/, note: "Director of Research @ Google; AIMA (w/ Stuart Russell) + PAIP; 'Teach Yourself Programming in Ten Years'; Don's friend, writing an AI book + offered a chapter on Don's work; open-topic show (MOOLLM/skills/AI) with Henry + Leela colleagues" }
+  rebecca-heineman: { invitation_status: not_yet_asked, note: "Women & trans pioneers — interview while living: Space Invaders champion, Interplay co-founder; Don's Apple IIgs SimCity source thread" }
   richard-bartle: { invitation_status: not_yet_asked, show_seed: repo-shows/richard-bartle/ }
   seymour-papert: { invitation_status: memorial, note: "MEMORIAL MODE (1928–2016): worked with Piaget; MIT AI Lab co-founder; Logo + the turtle; coined constructionism; Mindstorms (1980) → Scratch/OLPC/LEGO Mindstorms. Discussants: Walter Bender, Brian Harvey, Ken Kahn, Jens Mönig, Alan Kay, Don" }
-  scott-draves: { invitation_status: draft, show_seed: repo-shows/scott-draves/, note: "Electric Sheep, Fractal Flame (1992); media/ — 6Heads photos + flam3 paper TODO (Don has PDF)" }
+  scott-draves: { invitation_status: draft, show_seed: repo-shows/scott-draves/, note: "Electric Sheep, Fractal Flame (1992); simulated art opening invite in invitation.md; media/ — 6Heads photos + flam3 paper TODO (Don has PDF)" }
   scott-adams: { invitation_status: draft, show_seed: repo-shows/scott-adams/, priority: send_now, note: "Warm verified — HN + Jan 2026 MOOLLM; adventure-as-data → compiler; NOT Dilbert" }
-  scott-kim: { invitation_status: draft, show_seed: repo-shows/scott-kim/, note: "Ambigrams/inversions, puzzle design, playful math; friend of Will — pair them" }
+  amy-jo-kim:
+    name: Amy Jo Kim
+    field: "Social game design, Game Thinking, community architecture; Shufflebrain co-founder"
+    invitation_status: draft
+    beloved: true
+    show_seed: repo-shows/amy-jo-and-scott-kim/
+    pair_with: scott-kim
+    note: "Sims, Rock Band, Ultima Online, eBay; married to Scott Kim — interview as pair"
+  scott-kim:
+    invitation_status: draft
+    beloved: true
+    show_seed: repo-shows/amy-jo-and-scott-kim/
+    pair_with: amy-jo-kim
+    optional_solo_show: repo-shows/scott-kim/
+    note: "Ambigrams, Viewpoint, puzzle craft; Shufflebrain w/ Amy Jo Kim — pair show primary"
   scott-mccloud: { invitation_status: draft, show_seed: repo-shows/scott-mccloud/, note: "Cartoonist/comics theorist — Understanding Comics (closure, masking, amplification through simplification); design bible for The Sims; patron-saint guest + Sims reunion" }
+  sophie-wilson: { invitation_status: not_yet_asked, note: "Women & trans pioneers — interview while living: ARM architecture — in every smartphone" }
   steve-wozniak: { invitation_status: not_yet_asked, show_seed: repo-shows/steve-wozniak/ }
+  stephen-wolfram: { invitation_status: draft, reading_show: repo-shows/moollm-readings/, note: "Mathematica, NKS, Wolfram Language, Wolfram Physics Project — invite for MOOLLM Readings + CA/complexity threads; peers Margolus, Crutchfield, Norvig" }
   stone-librande: { invitation_status: not_yet_asked }
+  tom-demeyer: { invitation_status: not_yet_asked, note: "Image/ine @ STEIM w/ Steina Vasulka; realtime video instrument; Isadora lineage — characters/tom-demeyer/" }
   ted-nelson: { invitation_status: finished, show_seed: repo-shows/ted-nelson/, note: "Têd-à-Têd Talk — public invitation ready to send, tag-team with Ted Selker; Hypertext/Xanadu; discussant for Engelbart + Hugh Daniel memorials" }
   ted-selker: { invitation_status: draft, show_seed: repo-shows/ted-selker/, priority: send_now, note: "TrackPoint, considerate computing, NPUC Multiplayer SimCity; PIXIE; pair w/ Ted Nelson Têd-à-Têd; resurrect NPUC '96 Nelson tape" }
   terry-winograd: { invitation_status: not_yet_asked, show_seed: repo-shows/terry-winograd/, media: "characters/terry-winograd/media/ — CS547 339-talk catalog (cs547-ARCHIVE.md)" }

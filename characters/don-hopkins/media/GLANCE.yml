@@ -1,0 +1,82 @@
+# DON HOPKINS MEDIA — GLANCE
+# Big-endian category dirs + co-located PNG/YML sidecar pairs
+
+title: Don Hopkins — Media
+iconic: "📸 Archive"
+description: |
+  Don's photographed and screenshotted archive — travel, robots, software demos, OLPC, hangouts.
+  Batch-6 reorg (2026-07): category-first directory names, descriptive slugs, per-file sidecars.
+  Legacy themed rooms (micropolis-gallery, pie-menus, etc.) — all 387 PNGs now have sidecars.
+
+keywords:
+  - don hopkins media
+  - big-endian
+  - sidecar
+  - travel-amsterdam
+  - robot-sfc
+  - olpc
+  - simcity tcl tk
+
+navigation:
+  up: ../GLANCE.yml
+  catalog: CATALOG-INDEX.yml
+
+convention:
+  dirs: "{category}-{subcategory}/"
+  files: "{category}-{subcategory}-{descriptor}.png + matching .yml"
+  examples:
+    - travel-amsterdam-modemstraat-sign-bus134
+    - robot-sfc-telepresence-stupid-fun-club-medallion
+    - software-simcity-tcl-tk-kowloon-stadium-query
+    - misc-facebook-simrefinery-will-jeff-braun-newspaper
+
+categories:
+  travel:
+    - travel-amsterdam/
+    - travel-berlin/
+    - travel-prague/
+  robots:
+    - robot-sfc-telepresence/
+    - robot-sfc-battlebots/
+    - robot-sfc-competition/
+  software:
+    - software-simcity-tcl-tk/
+    - software-openlaszlo/
+    - software-simfreaks/
+    - software-blabber/
+  olpc:
+    - olpc-demos/
+    - olpc-dinners/
+  computing:
+    - computing-sun-brochure/
+    - computing-umd/
+    - computing-vintage/
+  hangouts:
+    - hangout-berkeley/
+  arcade:
+    - arcade-santa-cruz/
+  broadcast:
+    - broadcast-current-tv/
+  misc:
+    - misc-facebook/
+    - misc-magazine/
+    - misc-personal/
+    - misc-art/
+  memorial:
+    - memorial-sf/
+  art:
+    - art-3d-glitch/
+  culture:
+    - culture-holiday/
+
+legacy_rooms:
+  - micropolis-gallery/
+  - pie-menus/
+  - simprov-exploratorium/
+  - robot-collection/
+  - sfc-emeryville/
+
+see_also:
+  - { path: ../media.md, why: "Human scroll index" }
+  - { path: CATALOG-INDEX.yml, why: "Batch-6 category rooms" }
+  - { path: LEGACY-INDEX.yml, why: "Legacy themed rooms — 267 sidecars completed 2026-07" }

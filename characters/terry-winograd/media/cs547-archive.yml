@@ -2247,6 +2247,7 @@ talks:
     cs547_session: "CS547 Winograd 1"
     boxes: "Box 10"
     formats: [VHS]
+    wwsff_character: amy-jo-kim
   - speaker: "Scott Kim"
     org: "Unknown Organization"
     title: "Paper, Plastic, or Playstation? Adapting a Game to Wide Range of Technologies"

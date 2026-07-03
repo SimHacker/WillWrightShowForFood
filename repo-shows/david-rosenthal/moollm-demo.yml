@@ -1,0 +1,69 @@
+# MOOLLM demo — for David S. H. Rosenthal (and reusable intro)
+# What Don demos when discussing yaml jazz + Repo Show orchestration.
+
+meta:
+  audience: david-rosenthal
+  also: reusable_intro_for_moollm_readings
+  moollm_repo: https://github.com/SimHacker/moollm
+
+elevator: |
+  MOOLLM is an LLM operating system / orchestration layer — like LambdaMOO crossed with The Sims.
+  Directories are rooms. YAML files carry semantic comments (yaml jazz). Skills are inheritable
+  prototypes. Humans author canon; LLMs navigate, orchestrate, and write code when asked.
+  Repo Shows script and run inside this microworld.
+
+demo_flow:
+  - step: watch_readings
+    what: "Three YouTube readings link to the object network behind the spoken text"
+    episodes: ../moollm-readings/episodes.yml
+  - step: filesystem_as_stage
+    what: "Browse characters/don-hopkins/, characters/palm/, repo-shows/ — each directory is a room"
+    example: ../../characters/palm/GLANCE.yml
+  - step: semantic_pyramid
+    what: "GLANCE → CARD → SKILL → README — read resolution matches curiosity depth"
+    driver: https://github.com/SimHacker/moollm/blob/main/kernel/drivers/cursor.yml
+  - step: yaml_jazz
+    what: "Comments are first-class data — three audiences: human, LLM, machine"
+    skill: https://github.com/SimHacker/moollm/tree/main/skills/yaml-jazz
+  - step: characters_not_impersonation
+    what: "MOOLLM characters are portrayals with consent standards — see portrayal-standards.yml"
+    path: ../../schemas/portrayal-standards.yml
+  - step: gods_edit_minds
+    what: |
+      PKD hook: Approximations edit a hallucination. MOOLLM hook: we edit yaml jazz — simulated
+      characters, dreams, skills — with ethics and audit trail in git.
+    literary: ../../characters/david-rosenthal/literary/rautavaaras-case-pkd.yml
+
+reading_links_in_video:
+  note: "Don reads generated/scripted text; video description links to repo objects"
+  network:
+    - characters and places
+    - journals of exploration
+    - constitutional rules (ambient skills)
+    - anthropic-compatible skills
+    - adventure layer objects
+
+palm_entry:
+  glance: ../../characters/palm/GLANCE.yml
+  on_being_palm: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md
+  show_seat: ../will-wright/audience/palm/
+
+dasher_entry:
+  topic: ../moollm-readings/topics/dasher.yml
+  note: "David MacKay — information theory, predictive text; full show later"
+
+repo_show_stack:
+  - ../../repo-shows/REPO-SHOWS.yml
+  - ../../process/couple-and-solo-shows.yml
+  - ../moollm-readings/SHOW.yml
+  - SHOW.yml
+
+discussion_questions_for_dshr:
+  - "LOCKSS for MOOLLM skills and Repo Show artifacts — lots of copies keep yaml safe?"
+  - "Unix filesystem as object system — does this rhyme with Andrew/NeWS lineage?"
+  - "Honest AI — humans author, LLMs orchestrate: rig culture vs coprophagia"
+  - "Preservation of runnable emulators alongside papers — Lars + Chapman films thread"
+
+see_also:
+  - discussion-pack.yml
+  - ../moollm-readings/intro-canon.yml

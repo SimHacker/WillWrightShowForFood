@@ -27,7 +27,7 @@ sincere praise that sends real **fans and subscribers** their way.
 
 ## The show
 
-[`repo-shows/heather-steve-alvey/`](../../repo-shows/heather-steve-alvey/README.md) — a whole-career show with
+[`repo-shows/heather-and-steve-alvey/`](../../repo-shows/heather-and-steve-alvey/README.md) — a whole-career show with
 **Heather**: SimSlice/SliceCity, SimFreaks, Zombie Sims, 26 years of artisanal content, and how to
 keep it thriving (the Micropolis publishing system; subscriptions). Flagship episode: the playful
 **Afterlife × ZombieSims** bridge.

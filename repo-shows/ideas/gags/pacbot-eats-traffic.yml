@@ -1,0 +1,30 @@
+# PacBot — Micropolis Python plug-in agent
+
+id: pacbot-eats-traffic
+type: gag
+status: canon
+authored_by: don-hopkins
+tagline: "Volgt de weg richting zwaar verkeer, en eet auto's."
+
+pitch: |
+  **PacBot** — yellow Pac-Man-style plug-in agent in **Micropolis**. Python scripted via
+  `micropolisrobot.py` on **Google Code**. Follows roads toward heavy traffic, eats cars,
+  reduces congestion. Cost: $1,000. Dutch tooltip: *Volgt de weg richting zwaar verkeer, en
+  eet auto's, het terugdringen van het verkeer.*
+
+canonical: ../../characters/don-hopkins/media/micropolis-gallery/micropolis-gallery.yml#pacbot
+
+photos:
+  - ../../characters/don-hopkins/media/micropolis-gallery/openlaszlo-pacbot-on-road-nl.png
+  - ../../characters/don-hopkins/media/micropolis-gallery/openlaszlo-pacbot-eats-traffic-nl.png
+  - ../../characters/don-hopkins/media/micropolis-gallery/google-code-micropolisrobot-py.png
+
+menagerie_lines:
+  slats: "PacBot ate my commute. I relate."
+  don: "Plug-in Python agent. Eats traffic. Obviously."
+
+see_also:
+  - micropolis-gallery.yml
+  - ../../characters/don-hopkins/career/simcity-lineage.yml
+
+note: "Not AI Generated!"

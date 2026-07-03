@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-groom-tux-seated-render.png
+
+artifact:
+  file: transmogrifier-groom-tux-seated-render.png
+  slug: transmogrifier-groom-tux-seated-render
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — groom tux seated render
+  era: 2000-2002
+  sidecar_of: transmogrifier-groom-tux-seated-render.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

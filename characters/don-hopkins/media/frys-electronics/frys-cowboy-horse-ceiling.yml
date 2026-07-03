@@ -1,0 +1,14 @@
+# Sidecar — frys-cowboy-horse-ceiling.png
+
+artifact:
+  file: frys-cowboy-horse-ceiling.png
+  slug: frys-cowboy-horse-ceiling
+  room: frys-electronics
+  what: frys cowboy horse ceiling
+  era: pre-closure SV retail
+  sidecar_of: frys-cowboy-horse-ceiling.png
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-wedding-license-chime-dialog.png
+
+artifact:
+  file: transmogrifier-wedding-license-chime-dialog.png
+  slug: transmogrifier-wedding-license-chime-dialog
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — wedding license chime dialog
+  era: 2000-2002
+  sidecar_of: transmogrifier-wedding-license-chime-dialog.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

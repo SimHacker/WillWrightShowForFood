@@ -1,0 +1,20 @@
+# Misc Personal
+
+room:
+  id: misc-personal
+  category: misc
+  subcategory: personal
+  parent: ../INDEX.yml
+  count: 4
+
+artifacts:
+  - file: misc-personal-don-hopkins-floor-laptop-cat.png
+    sidecar: misc-personal-don-hopkins-floor-laptop-cat.yml
+  - file: misc-personal-don-hopkins-sticker-laptop-office.png
+    sidecar: misc-personal-don-hopkins-sticker-laptop-office.yml
+  - file: misc-personal-eric-bowman-surprised-floor-laptop.png
+    sidecar: misc-personal-eric-bowman-surprised-floor-laptop.yml
+  - file: misc-personal-young-builder-robot-shirt-workshop.png
+    sidecar: misc-personal-young-builder-robot-shirt-workshop.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,18 @@
+# Sidecar — richard-1st-groucho-1990.png
+
+artifact:
+  file: richard-1st-groucho-1990.png
+  slug: richard-1st-groucho-1990
+  room: turing-institute
+  what: richard 1st groucho 1990
+  era: ~1990-1992
+  sidecar_of: richard-1st-groucho-1990.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/turing-robot-olympics.yml
+
+see_also:
+  - first-robot-olympics.yml
+  - ../simprov-exploratorium/INDEX.yml
+
+note: "Not AI Generated!"

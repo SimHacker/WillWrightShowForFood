@@ -1,0 +1,32 @@
+# Misc Facebook
+
+room:
+  id: misc-facebook
+  category: misc
+  subcategory: facebook
+  parent: ../INDEX.yml
+  count: 10
+
+artifacts:
+  - file: misc-facebook-antispore-will-wright-parody.png
+    sidecar: misc-facebook-antispore-will-wright-parody.yml
+  - file: misc-facebook-doggie-diner-heads-lost-landscapes-sf.png
+    sidecar: misc-facebook-doggie-diner-heads-lost-landscapes-sf.yml
+  - file: misc-facebook-ea-watch-tin-stash-box.png
+    sidecar: misc-facebook-ea-watch-tin-stash-box.yml
+  - file: misc-facebook-linkedin-barlow-lsd-endorsement.png
+    sidecar: misc-facebook-linkedin-barlow-lsd-endorsement.yml
+  - file: misc-facebook-sfc-trillion-dollar-christmas-bonus.png
+    sidecar: misc-facebook-sfc-trillion-dollar-christmas-bonus.yml
+  - file: misc-facebook-simrefinery-will-jeff-braun-newspaper.png
+    sidecar: misc-facebook-simrefinery-will-jeff-braun-newspaper.yml
+  - file: misc-facebook-slats-berkeley.png
+    sidecar: misc-facebook-slats-berkeley.yml
+  - file: misc-facebook-tomtom-article-don-workdesk.png
+    sidecar: misc-facebook-tomtom-article-don-workdesk.yml
+  - file: misc-facebook-tomtom-iphone-wwdc-soma.png
+    sidecar: misc-facebook-tomtom-iphone-wwdc-soma.yml
+  - file: misc-facebook-will-wright-sfc-prohibition-portrait.png
+    sidecar: misc-facebook-will-wright-sfc-prohibition-portrait.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,19 @@
+# Sidecar — patch-panel-breadboard.png
+
+artifact:
+  file: patch-panel-breadboard.png
+  slug: patch-panel-breadboard
+  room: rolf
+  what: patch panel breadboard
+  era: TomTom-era Amsterdam
+  sidecar_of: patch-panel-breadboard.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/rolf-junk-auction.yml
+
+see_also:
+  - INDEX.yml
+  - raving-bonkers.yml
+  - ../robot-collection/INDEX.yml
+
+note: "Not AI Generated!"

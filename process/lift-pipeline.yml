@@ -1,0 +1,74 @@
+what: |
+  How reusable stuff flows between this repo (WWSFF) and the public MOOLLM library.
+  WWSFF is the dogfooding kitchen; MOOLLM is the public pantry others cook from.
+  Play concretely here, then LIFT proven core DOWN into MOOLLM skills to share and build on.
+
+upstream_skill:
+  moollm: https://github.com/SimHacker/moollm/tree/main/skills/play-learn-lift
+  section: "LIFT is earned — dogfood the concrete before you abstract the generic"
+  note: "This file is the WWSFF-specific instance of that MOOLLM policy."
+
+principle:
+  use_before_abstract: "The concrete instance teaches you the generic. Don't invent the generic first."
+  concrete_before_generic: "A specific, in-use thing precedes any reusable skill lifted from it."
+  intentional_scheduling: |
+    Deliberately schedule dogfooding PLAY/LEARN cycles BEFORE lifting.
+    Do not lift reactively the moment something looks reusable — let real use
+    reveal its seams, defaults, and failure modes first.
+  tessellating_refactorings: |
+    We are performing a tessellating, PLANNED series of refactorings: each refactor
+    is a tile that fits the next, together covering the space without gaps or overlap.
+    Not a big-bang rewrite — a scheduled sequence, each step small, safe, and reversible
+    (git as safety net), each one earning the next abstraction.
+
+named_precedent:
+  who: Oliver Steele
+  what: "Instance-First Development"
+  url: https://blog.osteele.com/2004/03/classes-and-prototypes/
+  thesis: |
+    Implement functionality for a single INSTANCE, then refactor the instance into a
+    CLASS that supports multiple instances. Avoids "premature abstraction."
+    "It's easier to generalize from two examples than from one."
+  instance_substitution_principle: |
+    An instance of a class can be replaced by the definition of the instance without
+    changing semantics — class-member and instance-member definitions are syntactically
+    parallel (prototype-based, à la Self). Makes instance→class a seamless refactor.
+  platform: "OpenLaszlo / LZX (declarative, prototype-based, constraints)"
+  orthogonal_to: "test-driven development — both do the specific first, then generalize"
+  dons_testimony: |
+    Don has used OpenLaszlo heavily and vouches for instance-first in practice:
+    'tacking against the wind — explore by creating instances, refactor into reusable
+    classes, then explore further with those.' Compares to CMU's Garnet (Common Lisp,
+    constraint + prototype UI).
+  see_also_slots: ../characters/david-rosenthal/slots-all-the-way-down.md
+
+direction:
+  public_moollm:
+    holds: "Fundamental, reusable core + designs — so others can share and build on them."
+    examples: [play-learn-lift, artifactory, skill, yaml-jazz]
+  wwsff_local:
+    holds: "Instance-specific glue, live experiments, not-yet-proven shapes."
+    role: "The kitchen where we find out what a thing is and what it's good for."
+
+live_example:
+  concrete: repo-show
+  status: in_use            # exercised here, in WWSFF, right now
+  where: ../skills/repo-show/
+  generic: show
+  generic_status: not_yet_lifted
+  rule: |
+    Do NOT abstract a generic `show` skill out of `repo-show` yet.
+    First use repo-show enough that it surprises us; then lift the proven core.
+
+lift_readiness:      # all true before extracting a generic MOOLLM skill
+  - "Concrete instance used in anger more than once (not just written)."
+  - "Use surfaced at least one surprise the design didn't predict."
+  - "We can name what it's good for (and what it isn't) FROM USE."
+  - "A second, real caller would be served by the generic."
+  - "Provenance can point at actual logs, not plans."
+
+see_also:
+  - { path: ../skills/repo-show/, why: "The concrete instance currently being dogfooded." }
+  - { path: artifactory.yml, why: "Example of core already lifted down into a public MOOLLM skill." }
+  - { path: live-repo.yml, why: "Public WWSFF vs DonHopkins private — what may travel." }
+  - { path: cross-links.yml, why: "Trail registry — generous see_also habit." }

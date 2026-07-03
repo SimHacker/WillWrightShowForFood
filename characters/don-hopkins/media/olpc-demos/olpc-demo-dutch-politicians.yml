@@ -1,0 +1,11 @@
+# Sidecar — olpc-demo-dutch-politicians.png
+
+artifact:
+  file: olpc-demo-dutch-politicians.png
+  slug: olpc-demo-dutch-politicians
+  category: olpc
+  subcategory: demos
+  what: "Don shows OLPC to Dutch politicians"
+  sidecar_of: olpc-demo-dutch-politicians.png
+
+note: "Not AI Generated!"

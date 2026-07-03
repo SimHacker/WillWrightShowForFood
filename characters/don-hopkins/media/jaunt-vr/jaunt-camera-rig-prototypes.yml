@@ -1,0 +1,14 @@
+# Sidecar — jaunt-camera-rig-prototypes.png
+
+artifact:
+  file: jaunt-camera-rig-prototypes.png
+  slug: jaunt-camera-rig-prototypes
+  room: jaunt-vr
+  what: Jaunt VR camera rig — camera rig prototypes
+  era: 2016-2017
+  sidecar_of: jaunt-camera-rig-prototypes.png
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

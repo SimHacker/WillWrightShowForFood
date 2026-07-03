@@ -1,0 +1,15 @@
+# Sidecar — danielle-bunten-portrait.png
+
+artifact:
+  file: danielle-bunten-portrait.png
+  slug: danielle-bunten-portrait
+  room: danielle-bunten-berry
+  what: danielle bunten portrait
+  era: ~2010
+  sidecar_of: danielle-bunten-portrait.png
+
+see_also:
+  - INDEX.yml
+  - ../olpc-gdc/INDEX.yml
+
+note: "Not AI Generated!"

@@ -91,7 +91,7 @@ ideas:
       says shit, gets interviewed, gets reprogrammed, gets interviewed AGAIN. The diff is the
       drama. Do it on EASTER SUNDAY. Start a cult. "It seemed to be the thing to do at the time."
     robopoetry_ceremony: "Interpret Slats' recorded voice-synth stream-of-thought as lyrical robopoetry and sing along — a seriously, respectfully presented religious ceremony with Stupid Fun Club irreverence."
-    ties: [../repo-shows/will-wright/slats-reincarnation.yml, ../characters/slats/CARD.yml]
+    ties: [../repo-shows/will-wright/slats-reincarnation.yml, ../characters/robots/slats/CARD.yml]
 
   phoneloper:
     emoji: "🗣️"
@@ -224,7 +224,7 @@ ideas:
       A two-way, round-trippable SOUL LEDGER between LucasArts' Afterlife and The Sims. Souls
       are a portable resource that crosses the membrane (player-in-the-middle again) — heaven and
       hell as upstream supply for downstream worlds. The bridge IS the gameplay.
-    ties: [../repo-shows/heather-steve-alvey/afterlife-zombie-bridge.yml]
+    ties: [../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml]
 
   hell_is_full_zombie_sims:
     emoji: "🧟"
@@ -235,7 +235,7 @@ ideas:
       zombie suppliers: artisanal, farm-grown, soil-to-spike? SimFreaks & SimSlice spouses = 
       original and renounded Sims 1 content creators from the very beginning, 
       artisan label on the jar, SFC alumni; the hell save = the industrial supply chain.
-    ties: [../repo-shows/heather-steve-alvey/afterlife-zombie-bridge.yml]
+    ties: [../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml]
 
   github_as_mmorpg_multiverse:
     emoji: "🌌"
@@ -348,6 +348,66 @@ ideas:
       twitch game. Demonstrate it; argue about whether ease helps or hurts learning.
     ties: [../characters/don-hopkins/CARD.yml]
 
+  moola_worthless_performances:
+    emoji: "🐄🔥"
+    blurb: |
+      MOOLA — native worthless play currency. Exchange § Simoleons, gold, and art deeds into MOOLA.
+      Submit training data to the AI god (chat, misread reviews, homefun, git commits) — receive
+      infinite worthless MOOLA. Spend it on performances only absurd money enables: **burn a million**
+      (K Foundation energy), **dig a hole with a backhoe until the pile runs out** (Cards Against
+      Humanity Holiday Hole, 2016), fund ten bazillion imaginary patrons at the 77 Million Paintings
+      opening. NEVER gateway. ALWAYS invite duplication — the anti-NFT, anti-scarcity, pro-fork economy.
+    ties: [moola.yml, art-thief-game.yml, auto-art-theft-grand.yml, simulated-art-opening.yml, ../repo-shows/brian-eno/77-million-paintings.yml]
+
+  curiosity_cow_cube:
+    emoji: "🧊🐄"
+    blurb: |
+      Parody of Peter Molyneux's **Curiosity** (2012 cube clicker — dead, buried, never deliver
+      again) crossed with Ian Bogost's **Cow Clicker** (2010 — social commentary that became
+      accidentally popular). Don trolled Peter at Unite 2012: the secret inside the cube is a
+      **Rightward-Facing Cow**. Our version: click the repo cube for worthless **MOOLA** (Mooney
+      lineage), peel layers of stolen gallery deeds, scheduled **Cowpocalypse** with MOOLA-paid
+      extensions,       center reveal is the cow — not godhood, royalties, or lies. NEVER gateway; the
+      cow JPEG is duplicable. Berkeley coda: [Cows In Berkeley? Moooo](https://www.youtube.com/watch?v=10JSPdTDFsI)
+      — Mediterraneum Cafe, shirtless horse up Telegraph, deadpan "that's a cow." Don: "It's a cow."
+      *It wasn't very fun before.*
+    ties: [../repo-shows/ideas/gags/curiosity-cow-cube.yml, ../repo-shows/ideas/gags/how-to-deconstruct-the-cube.yml, moola.yml, ../repo-shows/will-wright/ian-bogost-procedural-rhetoric/SHOW.yml]
+
+  how_to_deconstruct_the_cube:
+    emoji: "📖🚀🐄"
+    blurb: |
+      **Morningstar → Ashford → Bogost** on Curiosity. Chip's *How to Deconstruct Almost Anything*
+      (1993); **Captain Kira Ashford** (Belter pirate, Expanse — MOOLLM adventure-4) wrote the homage
+      *How to Incarnate Almost Anything*. Sequel: *How to Deconstruct Almost Anything Inside the Cube*.
+      Bogost invite — procedural rhetoric vs engineer deconstruction; Cow Clicker meant it; Molyneux didn't.
+    ties: [../repo-shows/ideas/gags/how-to-deconstruct-the-cube.yml, ../repo-shows/ideas/gags/curiosity-cow-cube.yml]
+
+  turing_robot_olympics:
+    emoji: "🤖🏅"
+    blurb: |
+      **First Robot Olympics** (Glasgow, Sept 1990) — Turing Institute, Peter Mowforth photos,
+      Cardiff Walker biped gold, **Richard 1st** Groucho talking gold, Genghis from MIT.
+      Don posted Cardiff Walker years later; ran vision APIs: Google **POSSIBLE JOY DETECTED!!!**,
+      Microsoft **POSING**, IBM **ROBOT ANDROID GAS PUMP DETECTED** on the pizza-arm.
+      "Delivering a pizza or a SparcStation." Training data → MOOLA. Slats scrapes Mowforth copyright.
+    ties: [../characters/don-hopkins/media/turing-institute/first-robot-olympics.yml, ../repo-shows/ideas/gags/turing-robot-olympics.yml, moola.yml]
+
+  pantomime_gallery:
+    emoji: "🪲🦋🄯"
+    blurb: |
+      **Pantomime gallery** — Bug Farm creepy squisher (hands, spiders, green splats), *Too many
+      butterflies!* Oculus SDK demo, Unity3D with **David Levitt** + Nelson. **Copyleft (L)** 1984
+      envelope to RMS — amoeba named Tom, all rights reversed. Squish compulsion ↔ cube distressed moos.
+    ties: [../characters/don-hopkins/media/pantomime/INDEX.yml, ../repo-shows/ideas/gags/pantomime-gallery.yml, moola.yml]
+
+  rolf_junk_auction:
+    emoji: "🗄️🧑‍🚀"
+    blurb: |
+      **Rolf Pixley junk drawer** — Amsterdam workshop hoard before departure. 23 deduped photos:
+      cosmonaut keychains, Thacher 1881, jenny haniver, alligator on fridge. Don: *Great face puppet!
+      MIND=BLOWN.* Virtual junk auction — JUNK-{slug} deeds.
+    ties: [../characters/don-hopkins/media/rolf/INDEX.yml, ../repo-shows/ideas/gags/rolf-junk-auction.yml, moola.yml]
+
 graduation:
   note: "Ideas leave the jam by becoming something runnable."
   paths:
@@ -359,7 +419,7 @@ graduation:
 see_also:
   - { path: cross-links.yml#stupid_fun_forward, why: "The wacky trail that wanders these ideas" }
   - { path: ../repo-shows/will-wright/slats-reincarnation.yml, why: "RoboResurrection quest in full" }
-  - { path: ../repo-shows/heather-steve-alvey/afterlife-zombie-bridge.yml, why: "Drain Hell soul/zombie bridge" }
+  - { path: ../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml, why: "Drain Hell soul/zombie bridge" }
   - { path: ../repo-shows/david-ungar-self-moollm.yml, why: "Self × MOOLLM seed" }
   - { path: vision-and-ambition.yml, why: "The serious long arc these ideas serve" }
   - { path: SimHacker/DonHopkins/projects/micropolis-moollm/crystallized/DESIGN-WISDOM.yml, why: "Upstream full principle set (private archive)" }

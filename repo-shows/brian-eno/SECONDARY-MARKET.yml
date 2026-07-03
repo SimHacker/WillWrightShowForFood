@@ -1,0 +1,25 @@
+# Secondary market — art thief ledger (play § only)
+# Deeds, trades, thefts, forgeries — populated during show
+
+meta:
+  currency: "§"
+  fictional: true
+  game: ../../process/art-thief-game.yml
+  show: brian-eno
+
+collections: {}
+# Example after opening:
+# mimsy-caldwell:
+#   - { deed_id: 77MP-4291033, wall_title: "Combination 4,291,033", price_§: 2400 }
+# gregory-kwan:
+#   - { deed_id: 77MP-4291033, wall_title: "FORGERY — same combination", disputed: true }
+
+trades: []
+thefts: []
+forgery_disputes: []
+auto_art_theft_grand:
+  spec: ../../process/auto-art-theft-grand.yml
+  slats_ledger: ../../characters/robots/slats/auto-stolen-collection.yml
+  batch_runs: []
+
+note: "Not AI Generated!"

@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-harlequin-wedding-cake.png
+
+artifact:
+  file: transmogrifier-harlequin-wedding-cake.png
+  slug: transmogrifier-harlequin-wedding-cake
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — harlequin wedding cake
+  era: 2000-2002
+  sidecar_of: transmogrifier-harlequin-wedding-cake.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

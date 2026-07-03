@@ -1,0 +1,11 @@
+# Sidecar — software-simcity-tcl-tk-kowloon-explosion-fire.png
+
+artifact:
+  file: software-simcity-tcl-tk-kowloon-explosion-fire.png
+  slug: software-simcity-tcl-tk-kowloon-explosion-fire
+  category: software
+  subcategory: simcity-tcl-tk
+  what: "Kowloon explosion — fire by police station"
+  sidecar_of: software-simcity-tcl-tk-kowloon-explosion-fire.png
+
+note: "Not AI Generated!"

@@ -1,5 +1,9 @@
 # Transmogrifier — story and sources
 
+![Mona Lisa pushpins — Transmogrifier + 3DS Max UV test](transmogrifier-mona-lisa-pushpins.png)
+
+[`transmogrifier-mona-lisa-pushpins.yml`](transmogrifier-mona-lisa-pushpins.yml) — Don's screenshot of the UV-mapping pipeline test in-game.
+
 ## Why "Transmogrifier?"
 
 > Because it's a real old word (since ~1650), and its letters rearrange to spell **"I Fart Iron Germs"**.

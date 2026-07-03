@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-import-progress-flamingo.png
+
+artifact:
+  file: transmogrifier-import-progress-flamingo.png
+  slug: transmogrifier-import-progress-flamingo
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — import progress flamingo
+  era: 2000-2002
+  sidecar_of: transmogrifier-import-progress-flamingo.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

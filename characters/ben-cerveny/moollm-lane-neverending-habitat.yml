@@ -1,0 +1,39 @@
+# MOOLLM cross-reference — Lane Neverending, Habitat, Game Neverending
+# Don shared with Ben Cerveny (Signal, 2026-07-03) while discussing spliceable worlds.
+# Not in-repo MOOLLM files — pointers only.
+
+meta:
+  character: ben-cerveny
+  kind: cross_reference
+  date: "2026-07-03"
+  channel: Signal
+
+why_ben_cares: |
+  Ben's lineage: **Game Neverending** (social spatial world → Flickr), **Habitat** thinking,
+  public digital infrastructure. Don's MOOLLM **adventure-4** street is a deliberate homage:
+  topologically circular, infinitely extensible by splicing segments — same move as GNE and
+  Habitat-style world growth. YAML and markdown files are *paper*; buildings park on the street.
+
+moollm_artifacts:
+  lane_neverending:
+    url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/street/lane-neverending
+    note: "Topologically circular street outside the Gezelligheid Grotto pub. Splice segments for more real estate."
+  acme_bakfiets:
+    url: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/street/lane-neverending/w1/acme-bakfiets-of-holding.yml
+    note: |
+      ACME Road Runner bakfiets parked on Lane Neverending — MOOLLM plugin object (inheritance +
+      programming-by-example). GPS tracker + heavy lock + recovery service = Don's real Amsterdam
+      ebike parking problem (garage rented but bikes stay in house; Ken Kahn borrowed one).
+  bike_rack:
+    url: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/street/lane-neverending/center/bike-rack.yml
+    note: "Upside-down-U rack bolted to pub façade — less disruptive than a shed; lock to something anchored."
+
+design_parallels:
+  habitat: "Objects in a shared spatial world; persistence; user-authored extensions"
+  game_neverending: "Playful social space that became durable photo infrastructure (Flickr)"
+  lane_neverending: "Infinite loop by splicing — git-checked-in segments, not one frozen map"
+  micropolis_home: "Browser TS tools; player-owned Sims directory as working copy; opt-in publish"
+
+show_beat: |
+  Walk Ben through Lane Neverending on air — compare Habitat/GNE splice semantics to
+  Micropolis zone↔neighborhood binding and the Simopolis hub-and-spoke bridges.

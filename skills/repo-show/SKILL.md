@@ -164,6 +164,21 @@ After AIR:
 
 - cauldron · character · thoughtful-commitment · rubric · experiment · cursor-mirror · advertisement
 
+## Hosting model — warm, earnest, community-first
+
+**Branding SSOT:** [`process/repo-show-branding.yml`](../../process/repo-show-branding.yml) —
+participation rituals (Gerbil Races → TicketPR, treasure chest → questions.yml), cultural
+excerpts, production stance.
+
+**Host biography** (draw from, don't duplicate): [`characters/don-hopkins/portrayal/upbringing.yml`](../../characters/don-hopkins/portrayal/upbringing.yml) —
+DC Metro childhood, Captain Chesapeake / Captain 20 routines and slogans.
+
+**Go-to excerpt** — video games + existentialism: *The Americans* S1 **"The Oath"** — Claudia
+(Margo Martindale) on Ms. Pac-Man: *"I enjoy the maze part… Pac-dots are calorie free"* — handler
+as maze philosopher. See `repo-show-branding.yml#claudia_ms_pac_man`.
+
+Performed by [`characters/don-philahue/`](../../characters/don-philahue/). Mechanism: [`performance-space.yml#narrative_engine`](../../process/performance-space.yml#narrative_engine).
+
 ## See also (rabbit holes)
 
 | Trail | Start here |

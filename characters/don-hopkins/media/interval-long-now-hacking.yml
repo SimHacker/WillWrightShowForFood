@@ -1,0 +1,52 @@
+# The Interval at Long Now — Don hacking with a cocktail
+
+artifact:
+  file: interval-long-now-hacking.png
+  what: "First-person laptop session — green terminal, cocktail with metal straw, Long Now bar interior"
+
+venue:
+  name: The Interval
+  parent: Long Now Foundation
+  location: "Fort Mason, San Francisco"
+  vibe: "Bar + museum — armillary sphere, silhouette portrait grid, floor-to-ceiling bookshelves"
+  url: "https://theinterval.org/"
+
+scene:
+  don_activity: "Hacking — apt install opencv/protobuf on remote GPU host"
+  beverage: "Tall amber cocktail, ice, dehydrated citrus wheel, metal straw"
+  laptop: "MacBook Pro — backlit keyboard, terminal green on black"
+  timestamp_visible: "2023-11-28 4:51"
+  hostname: devops-gpu-1
+
+terminal_packages:
+  note: "Ubuntu apt — computer vision + protobuf stack"
+  visible:
+    - libopencv-flann4.2
+    - libopencv-imgproc4.2
+    - libopencv-video4.2
+    - python3-opencv
+    - libprotobuf-dev
+    - protobuf-compiler
+  status: "217 MB archives; 1502 kB additional disk space"
+
+long_now_orbit:
+  eno: "Coined 'The Long Now'; 2006 Playing with Time with Will Wright"
+  scott_draves: "Don introduced Brian to Scott after that talk"
+  show_thread: "Brian Eno simulated opening · 77 Million Paintings · 10,000-year audience"
+  don_line: "Don hacking and drinking adult beverages at The Interval at Long Now."
+
+repo_jokes:
+  menagerie:
+    helena: "The cocktail is a sermon from the hollow—"
+    gregory: "Long opencv install, short patience — I'm long the GPU."
+    mimsy: "The terminal performs restraint in green—"
+    don: "Adult beverages. Adult packages. Long Now."
+
+see_also:
+  - ../media.md
+  - ../../../repo-shows/brian-eno/SHOW.yml
+  - ../../../process/vision-and-ambition.yml
+  - ../../scott-draves/correspondence.yml
+  - ../../brian-eno/CHARACTER.yml
+
+note: "Not AI Generated!"

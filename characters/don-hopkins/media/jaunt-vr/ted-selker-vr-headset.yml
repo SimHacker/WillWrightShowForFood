@@ -1,0 +1,33 @@
+# Ted Selker — VR headset at Jaunt
+
+artifact:
+  file: ted-selker-vr-headset.png
+  what: "Ted Selker in black VR headset — pink/magenta studio light, acoustic foam walls"
+  setting: "Jaunt VR office — colleague at monitor running capture/editing software"
+
+who:
+  ted_selker:
+    character: ../../../ted-selker/CHARACTER.yml
+    note: "TrackPoint inventor — considerate computing; PIXIE; NPUC SimCity orbit"
+  don_hopkins: Photographer / host orbit
+
+visual:
+  headset: "Early Oculus-class black HMD"
+  jacket: "Black with yellow hood lining, plaid shirt, khakis"
+  studio: "Dark acoustic foam, pink side light, white ribbed chair at workstation"
+
+context:
+  jaunt: jaunt-vr-era.yml
+  ted_nelson_pair: ../../../../repo-shows/ted-selker/README.md
+
+repo_jokes:
+  menagerie:
+    don: "Ted in a headset. Considerate computing meets cinematic VR."
+    mimsy: "The headset performs presence—"
+
+see_also:
+  - INDEX.yml
+  - jaunt-vr-era.yml
+  - ../../../ted-selker/media.md
+
+note: "Not AI Generated!"

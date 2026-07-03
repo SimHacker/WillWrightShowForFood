@@ -1,0 +1,136 @@
+# Provocateur — fictional gallery patron (Lower Chelsea Eight)
+# MOOLLM soul file — Sims traits + Mind Mirror + relationship matrix
+# NOT a real person. portrayal-standards.yml#simulation.tiers.game_and_fictional
+
+inherits:
+  moollm_skills: [character, mind-mirror]
+  note: SimHacker/moollm — traits + Leary circumplex condensed
+
+ontology:
+  tags: [menagerie_guest, fictional, lower-chelsea-eight, jsonsters, simopolis_eligible]
+  species: human
+  nature: fictional_menagerie_guest
+  ensemble: ../RELATIONSHIP-MATRIX.yml
+
+character:
+  id: julian-strait
+  name: Julian Strait
+  type: [fictional_menagerie_guest, simulation]
+  real_being: false
+  signifier: "💋"
+  status: reified
+  home: characters/menagerie/julian-strait/
+  pronouns: he/him
+
+  emoji_identity: "💋🫦🕐🥙😳"
+  tagline: "Arrives late. Loudest at the hummus."
+
+  soul_philosophy: |
+    The bulge in the width curve is the story. Darling.
+
+  description: |
+    Provocateur in the Lower Chelsea Eight — misreads art for a living.
+    Lens: Erotic geometry, narrative climax in width curves. Blind spot: Parabolas are always about him.
+    Debuts in JSONsters gallery; graduates to live Repo Show performance.
+
+  sims:
+    traits:
+      neat: 3
+      outgoing: 8
+      active: 6
+      playful: 9
+      nice: 4
+      generous: 4
+    skills:
+      cooking: 2
+      mechanical: 1
+      charisma: 8
+      logic: 3
+      body: 5
+      creativity: 7
+      cleaning: 0
+    identity:
+      age: adult
+      gender: male
+      zodiac: sagittarius
+    career:
+      track: entertainment
+      level: 5
+      performance: 640
+
+  mind_mirror:
+    calm: 1
+    serious: 2
+    cautious: 1
+    confident: 6
+    docile: 2
+    logical: 2
+    practical: 2
+    dominant: 5
+    conventional: 0
+
+symbolic_attachments:
+    - id: hummus-table
+      type: object_love
+      name: "The Hummus Table"
+      narrative: "Narrative climax staging area. Don't look at me."
+    - id: width-curve-poster
+      type: object_child
+      name: "LineRenderer Width Curve Print"
+      narrative: "Framed. Erotic. Denied."
+    - id: uber-receipts
+      type: object_parent
+      name: "Stack of Late Arrival Ubers"
+      narrative: "His accountability system."
+
+relationships:
+  matrix: ../RELATIONSHIP-MATRIX.yml#julian
+  edges:
+    margot:
+      type: 'rivalry'
+      daily: -5
+      lifetime: 15
+    bucky_jr:
+      type: 'rivalry'
+      daily: 15
+      lifetime: 20
+    mimsy:
+      type: 'rivalry'
+      daily: 20
+      lifetime: 30
+    gregory:
+      type: 'enemy'
+      daily: -20
+      lifetime: 0
+    hummus-table:
+      type: 'symbolic'
+      symbolic: True
+      narrative: "Arrives late. Loudest here."
+      daily: 88
+      lifetime: 92
+
+representation:
+  fictional: true
+  portrayal_tier: game_and_fictional
+  authored_by: don-hopkins
+  prototype: ../../don-hopkins/jsonsters/critics.yml#critics.julian
+
+simoleons: 45000
+collection: []
+
+sims_export:
+  neighbor_id: 907
+  uplift: SIMS-UPLIFT.yml
+  relationships: ../EXPORT-SIMS-RELATIONSHIPS.yml
+
+live_performance:
+  invokable_by: [don-hopkins, don-philahue]
+  when: [bid_in_character, misread_artifact, banter_with_patrons_and_guests]
+
+see_also:
+  - ../INDEX.yml
+  - ../RELATIONSHIP-MATRIX.yml
+  - ../SCHEMA.yml
+  - ../../don-hopkins/jsonsters/
+
+note: "Not AI Generated!"

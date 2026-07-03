@@ -1,0 +1,25 @@
+# Sidecar — apple-ii-redbook-fig-s10-on-board-io-speaker.png
+
+artifact:
+  file: apple-ii-redbook-fig-s10-on-board-io-speaker.png
+  slug: apple-ii-redbook-fig-s10-on-board-io-speaker
+  source: Apple II Red Book (Reference Manual)
+  designer: Steve Wozniak
+  what: "FIG S-10 on-board I/O — keyboard, cassette, game, speaker"
+  sidecar_of: apple-ii-redbook-fig-s10-on-board-io-speaker.png
+
+provenance:
+  photographed_by: Don Hopkins
+  facebook: "Happy 70th Birthday Woz!"
+  classiccmp: http://www.classiccmp.org/cpmarchives/AppleII/Apple%20II%20(Redbook).pdf
+
+don_story:
+  first_asm: "My first assembly language program I learned and could recite from memory was the beep routine!"
+  basic_limit: "BASIC was just too slow to beep. All you could do was buzz and grumble."
+
+hardware:
+  speaker: "2 1/4 inch 8 ohm speaker jack B14A"
+  cassette: [CASSETTE IN K12, CASSETTE OUT]
+  circuit: "74LS74 → MPSA13 Darlington → speaker"
+
+note: "Not AI Generated!"

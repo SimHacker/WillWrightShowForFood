@@ -1,0 +1,14 @@
+# Sidecar — space-invader-met-mosaic.png
+
+artifact:
+  file: space-invader-met-mosaic.png
+  slug: space-invader-met-mosaic
+  room: amsterdam-tile-art
+  what: space invader met mosaic
+  era: ~2010-2011
+  sidecar_of: space-invader-met-mosaic.png
+
+see_also:
+  - ../storymaker-urban-safari/INDEX.yml
+
+note: "Not AI Generated!"

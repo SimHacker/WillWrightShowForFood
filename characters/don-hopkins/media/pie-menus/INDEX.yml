@@ -1,0 +1,23 @@
+# Pie Menus
+
+room:
+  id: pie-menus
+  name: Pie Menus
+  parent: ../../media.md
+
+artifacts:
+  - pie-menu-days-of-week.png
+  - pie-menu-fitts-law-promo.png
+  - simcity-build-pie-menu.png
+  - simcity-zone-pie-menu.png
+  - sims-online-multiplayer-pie-menu.png
+
+spec:
+  - pie-menus.yml
+
+see_also:
+  - ../news-tnt/INDEX.yml
+  - ../../pie-menus-chi-88-and-beyond.md
+  - ../simprov-exploratorium/INDEX.yml
+
+note: "Not AI Generated!"

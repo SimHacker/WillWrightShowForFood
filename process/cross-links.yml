@@ -43,7 +43,7 @@ trails:
       - { path: stick-shift-protocol.yml, why: "Every model shift = commit in git" }
       - { path: code-that-spec.yml, why: "Audience chant game — bid tokens or time" }
       - { path: homefun-grading.yml, why: "Micropolis Class — commit message vs thinking blocks" }
-      - { path: ../characters/slats/judge-rubric.yml, why: "Celebrity judge — flair vs spreadsheet" }
+      - { path: ../characters/robots/slats/judge-rubric.yml, why: "Celebrity judge — flair vs spreadsheet" }
       - { path: ../repo-shows/micropolis-ai-drag-race.yml, why: "Show seed for drag race episodes" }
 
   retrocomputing_drive:
@@ -213,7 +213,7 @@ trails:
       - { path: ../characters/richard-bartle/, why: "MUD1 (1978) + the Bartle taxonomy of player types (incarnated with permission)" }
       - { path: ../characters/chaim-gingold/, why: "Building SimCity — the simulation loop drawn as diagrams" }
       - { path: ../characters/jason-shankel/, why: "Maxis / Stupid Fun Club alumnus — games + AI" }
-      - { path: ../characters/slats/judge-rubric.yml, why: "Flair vs spreadsheet — how design gets judged on air" }
+      - { path: ../characters/robots/slats/judge-rubric.yml, why: "Flair vs spreadsheet — how design gets judged on air" }
 
   direct_manipulation:
     k_line: "See it, touch it, change it live"
@@ -255,7 +255,8 @@ trails:
       - { path: ../characters/ken-perlin/, why: "Perlin noise; interactive Java demos; teaching through runnable artifacts (NYU)" }
       - { path: ../characters/paul-debevec/, why: "Light Stage; image-based lighting; photogrammetry; virtual production" }
       - { path: ../characters/golan-levin/, why: "Computational media art; audiovisual interfaces; Interval colleague of Don & Debevec" }
-      - { path: ../characters/ben-cerveny/, why: "Game Neverending → Flickr; Stamen map viz; Planetary; public code" }
+      - { path: ../characters/amy-jo-kim/, why: "Game Thinking; Sims social design; pair show with Scott Kim" }
+      - { path: ../characters/ben-cerveny/, why: "Signal 2026-07-03; GNE/Flickr × browser Simopolis; public code × publish gates; data-portability spine for Will ep.1" }
 
   maxis_sims_lineage:
     k_line: "SimCity → Dollhouse → The Sims → Spore"
@@ -284,7 +285,7 @@ trails:
       - { path: ../catalogs/simprov/, why: "Wedding playset + composable orchestration" }
       - { path: ../catalogs/zombie-sims/, why: "Current magnum-opus pack — Afterlife bridge" }
       - { path: ../repo-shows/will-wright/INTRO-NARRATIVE.md, why: "Mission + proof" }
-      - { path: ../repo-shows/heather-steve-alvey/, why: "First platform users" }
+      - { path: ../repo-shows/heather-and-steve-alvey/, why: "First platform users" }
 
   the_card_game:
     k_line: "Build a segment deck — stack guest abilities"
@@ -295,8 +296,8 @@ trails:
       - { path: ../characters/_TEMPLATE/CARD.yml, why: "Copy-me ability card — declare your verbs" }
       - { path: ../characters/will-wright/CARD.yml, why: "Flagship — DOLLHOUSE-TO-SIMS combos with CHAIM-REVERSE-ENGINEER" }
       - { path: ../characters/don-hopkins/CARD.yml, why: "Host — DON-PROGRAM-ROBOT-BRAIN combos into STUPID-FUN-CLUB" }
-      - { path: ../characters/slats/CARD.yml, why: "Fictional but fierce — JUDGE-FLAIR, ROBO-RESURRECT" }
-      - { path: ../characters/slats/judge-rubric.yml, why: "Flair vs spreadsheet scoring" }
+      - { path: ../characters/robots/slats/CARD.yml, why: "Fictional but fierce — JUDGE-FLAIR, ROBO-RESURRECT" }
+      - { path: ../characters/robots/slats/judge-rubric.yml, why: "Flair vs spreadsheet scoring" }
       - { path: ../characters/CARD.yml, why: "Guest room interface — per-person verbs" }
       - { path: https://github.com/SimHacker/moollm/skills/advertisement, why: "How abilities score, Sims-style" }
 
@@ -308,9 +309,9 @@ trails:
       - { path: crazy-idea-jam.yml, why: "The reactor — every wacky idea in one girder" }
       - { path: CRAZY-IDEA-JAM.md, why: "Human view — tight blurbs, grouped" }
       - { path: ../repo-shows/will-wright/slats-reincarnation.yml, why: "SLATS LIVES — RoboResurrection on Easter, robopoetry ceremony" }
-      - { path: ../characters/slats/CARD.yml, why: "Robot waiter abilities — SEEK-GENETIC-MATERIAL, ROBO-RESURRECT" }
+      - { path: ../characters/robots/slats/CARD.yml, why: "Robot waiter abilities — SEEK-GENETIC-MATERIAL, ROBO-RESURRECT" }
       - { path: ../characters/don-hopkins/career/stupid-fun-club.yml, why: "Robots among humans — One Minute Movies" }
-      - { path: ../repo-shows/heather-steve-alvey/afterlife-zombie-bridge.yml, why: "Drain Hell — artisanal ZombieSims, soul ledger" }
+      - { path: ../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml, why: "Drain Hell — artisanal ZombieSims, soul ledger" }
       - { path: ../repo-shows/david-ungar-self-moollm.yml, why: "Self × MOOLLM — Stage Magic, Idea Scavenging" }
       - { path: ../characters/will-wright/CARD.yml, why: "Procedural creatures, gallium voxel worlds" }
       - { path: ../characters/yoot-saito/, why: "Seaman energy — a creature that insults you on purpose" }

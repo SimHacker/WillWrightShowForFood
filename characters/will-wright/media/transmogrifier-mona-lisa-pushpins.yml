@@ -1,0 +1,27 @@
+# Transmogrifier + 3D Studio Max UV test — Mona Lisa pushpins
+
+artifact:
+  file: transmogrifier-mona-lisa-pushpins.png
+  what: "Giant pushpins with Mona Lisa UV-mapped heads — checkerboard floor test room"
+  tools:
+    transmogrifier: "The Sims content tool — BMP sprite export/import"
+    max_exporter: "3D Studio Max object exporter — UV map layers back onto object surfaces"
+
+test:
+  purpose: "Pipeline test — custom geometry + texture mapping into Sims catalog objects"
+  room: "Black-and-white checker floor; Mona Lisa wallpaper strips; oversized gold pushpin shafts"
+
+repo_orbit:
+  transmogrifier_story: sims-series-transmogrifier-story.md
+  work_history: ../../don-hopkins/career/work-history.yml#transmogrifier
+  don: "../../don-hopkins/CHARACTER.yml"
+
+menagerie:
+  donna: "I would mint that JPEG—"
+  don: "Mona Lisa pushpins. Transmogrifier test. Obviously."
+
+see_also:
+  - sims-series-transmogrifier-story.md
+  - README.md
+
+note: "Not AI Generated!"

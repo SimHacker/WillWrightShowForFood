@@ -1,0 +1,14 @@
+# Sidecar — bethanienstraat-invader-sign.png
+
+artifact:
+  file: bethanienstraat-invader-sign.png
+  slug: bethanienstraat-invader-sign
+  room: amsterdam-tile-art
+  what: bethanienstraat invader sign
+  era: ~2010-2011
+  sidecar_of: bethanienstraat-invader-sign.png
+
+see_also:
+  - ../storymaker-urban-safari/INDEX.yml
+
+note: "Not AI Generated!"

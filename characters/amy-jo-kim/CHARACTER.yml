@@ -1,0 +1,56 @@
+# Amy Jo Kim — invitation portrayal. NOT Amy Jo Kim.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: amy-jo-kim
+  name: "Amy Jo Kim"
+  type: invitation
+  signifier: "🎮"
+  status: living
+  beloved: true
+  field: "Social game designer, community architect, Game Thinking — retention and social systems"
+  home: characters/amy-jo-kim/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/amy-jo-and-scott-kim/
+  pair_show: repo-shows/amy-jo-and-scott-kim/
+  solo_show: null
+
+bio:
+  summary: |
+    **Amy Jo Kim** — social game designer, community architect, and startup coach. Designer and
+    consultant on **The Sims**, **Rock Band**, **Ultima Online**, **eBay**, **Netflix**, and many
+    others. Author of *Community Building on the Web* (2000) and *Game Thinking* (2018). PhD
+    behavioral neuroscience (University of Washington). Co-founder of **Shufflebrain** with her
+    husband **Scott Kim**. Named by Fortune among powerful women in games; praised by **Will Wright**
+    for social-design craft.
+
+connections:
+  scott_kim: |
+    Married to **Scott Kim** — puzzle designer, ambigram artist, Viewpoint thesis. Co-founders of
+    **Shufflebrain** (consultancy + brain/social games). Interview **together** for shared work;
+    see `repo-shows/amy-jo-and-scott-kim/`.
+  will_wright: "Consultant on The Sims era; in Will's orbit of playful-system designers."
+  terry_winograd: "CS547 guest (2004-10-01) — The Network is the Game: Social Trends in Mobile Entertainment"
+
+sources:
+  wikipedia: null
+  web:
+    - { title: "Game Thinking", url: "https://gamethinking.io/about/" }
+    - { title: "Amy Jo Kim — LinkedIn", url: "https://www.linkedin.com/in/amyjokim/" }
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: ../scott-kim/, why: "Husband; Shufflebrain co-founder; pair show" }
+  - { path: ../will-wright/, why: "Sims consultant; mutual design orbit" }
+  - { path: ../../repo-shows/amy-jo-and-scott-kim/, why: "Primary show — interview as a pair" }
+  - { path: ../terry-winograd/media/cs547-ARCHIVE.md, why: "2004 CS547 talk on network-as-game" }

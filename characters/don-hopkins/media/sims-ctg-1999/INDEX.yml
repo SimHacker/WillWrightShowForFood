@@ -1,0 +1,22 @@
+# Sims CTG 1999 — Bugs and Glitches
+
+room:
+  id: sims-ctg-1999
+  name: Sims CTG 1999 — Bugs and Glitches
+  parent: ../../media.md
+
+artifacts:
+  - sims-1999-floating-head-help-hope-glitch.png
+  - sims-1999-graveyard-skeleton-scientist.png
+  - sims-1999-redhead-pond-sidewalk.png
+  - sims-1999-redhead-sheer-skirt-pond.png
+  - sims-1999-tuxedo-flamingo-thought.png
+
+spec:
+  - sims-ctg-1999.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-README.md
+  - ../sims-transmogrifier/INDEX.yml
+
+note: "Not AI Generated!"

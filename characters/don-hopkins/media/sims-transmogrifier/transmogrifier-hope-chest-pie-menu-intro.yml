@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-hope-chest-pie-menu-intro.png
+
+artifact:
+  file: transmogrifier-hope-chest-pie-menu-intro.png
+  slug: transmogrifier-hope-chest-pie-menu-intro
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — hope chest pie menu intro
+  era: 2000-2002
+  sidecar_of: transmogrifier-hope-chest-pie-menu-intro.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,15 @@
+# Sidecar — storymaker-amsterdam-street-scene.png
+
+artifact:
+  file: storymaker-amsterdam-street-scene.png
+  slug: storymaker-amsterdam-street-scene
+  room: storymaker-urban-safari
+  what: storymaker amsterdam street scene
+  era: 2011
+  sidecar_of: storymaker-amsterdam-street-scene.png
+
+see_also:
+  - ../storymaker/INDEX.yml
+  - ../amsterdam-tile-art/INDEX.yml
+
+note: "Not AI Generated!"

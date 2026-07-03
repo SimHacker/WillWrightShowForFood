@@ -1,0 +1,14 @@
+# Sidecar — alan-turing-portrait.png
+
+artifact:
+  file: alan-turing-portrait.png
+  slug: alan-turing-portrait
+  room: (root)
+  what: Alan Turing portrait used in HyperLook NeatClock / Exploratorium demos
+  era: archival reference
+  sidecar_of: alan-turing-portrait.png
+
+see_also:
+  - ../simprov-exploratorium/INDEX.yml
+
+note: "Not AI Generated!"

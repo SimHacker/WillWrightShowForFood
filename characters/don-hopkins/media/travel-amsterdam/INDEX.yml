@@ -1,0 +1,46 @@
+# Travel Amsterdam
+
+room:
+  id: travel-amsterdam
+  category: travel
+  subcategory: amsterdam
+  parent: ../INDEX.yml
+  count: 17
+
+artifacts:
+  - file: travel-amsterdam-c-base-club-mate-fridge.png
+    sidecar: travel-amsterdam-c-base-club-mate-fridge.yml
+  - file: travel-amsterdam-c-base-star-simpson.png
+    sidecar: travel-amsterdam-c-base-star-simpson.yml
+  - file: travel-amsterdam-dappermarkt-oosterpark.png
+    sidecar: travel-amsterdam-dappermarkt-oosterpark.yml
+  - file: travel-amsterdam-disketteweg-sign.png
+    sidecar: travel-amsterdam-disketteweg-sign.yml
+  - file: travel-amsterdam-garden-gnome-flipping-bird-yoda.png
+    sidecar: travel-amsterdam-garden-gnome-flipping-bird-yoda.yml
+  - file: travel-amsterdam-lost-turtle-george-poster.png
+    sidecar: travel-amsterdam-lost-turtle-george-poster.yml
+  - file: travel-amsterdam-melkweg-ps-cover-2007.png
+    sidecar: travel-amsterdam-melkweg-ps-cover-2007.yml
+  - file: travel-amsterdam-modemstraat-sign-bus134.png
+    sidecar: travel-amsterdam-modemstraat-sign-bus134.yml
+  - file: travel-amsterdam-ndsm-computer-street-map-you-are-here.png
+    sidecar: travel-amsterdam-ndsm-computer-street-map-you-are-here.yml
+  - file: travel-amsterdam-programmeurstraat-hardwareweg-map.png
+    sidecar: travel-amsterdam-programmeurstraat-hardwareweg-map.yml
+  - file: travel-amsterdam-queens-day-lisp-machine-manual-shirt.png
+    sidecar: travel-amsterdam-queens-day-lisp-machine-manual-shirt.yml
+  - file: travel-amsterdam-queens-day-lisp-shirt-market-alt.png
+    sidecar: travel-amsterdam-queens-day-lisp-shirt-market-alt.yml
+  - file: travel-amsterdam-scannerstraat-sign.png
+    sidecar: travel-amsterdam-scannerstraat-sign.yml
+  - file: travel-amsterdam-space-invader-building-window.png
+    sidecar: travel-amsterdam-space-invader-building-window.yml
+  - file: travel-amsterdam-space-invader-linnaeusstraat-mosaic.png
+    sidecar: travel-amsterdam-space-invader-linnaeusstraat-mosaic.yml
+  - file: travel-amsterdam-space-invader-mosaic-stone.png
+    sidecar: travel-amsterdam-space-invader-mosaic-stone.yml
+  - file: travel-amsterdam-space-invader-sticker.png
+    sidecar: travel-amsterdam-space-invader-sticker.yml
+
+note: "Not AI Generated!"

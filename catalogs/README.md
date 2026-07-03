@@ -95,7 +95,7 @@ SimFreaks, SimSlice, SimProv, and Zombie Sims federate **into** Micropolis Home.
 - CMS lineage: [micropolis-publishing-vision.md](../characters/will-wright/media/sims-series-micropolis-publishing-vision.md)
 - Primary sources: [../characters/will-wright/sources/README.md](../characters/will-wright/sources/README.md) · [1996 centerpiece](../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md)
 - Screenshot themes: [../characters/will-wright/media/](../characters/will-wright/media/README.md)
-- Alvey show seed: [heather-steve-alvey/](../repo-shows/heather-steve-alvey/README.md)
+- Alvey show seed: [heather-and-steve-alvey/](../repo-shows/heather-and-steve-alvey/README.md)
 - Founders: [Heather Alvey](../characters/heather-alvey/README.md) · [Steve Alvey](../characters/steve-alvey/README.md)
 
 ## Status

@@ -1,0 +1,18 @@
+# Sidecar — hyperlook-cam-melting-face-clock-bg.png
+
+artifact:
+  file: hyperlook-cam-melting-face-clock-bg.png
+  slug: hyperlook-cam-melting-face-clock-bg
+  room: simprov-exploratorium
+  what: HyperLook Exploratorium demo — cam melting face clock bg
+  era: early 1990s
+  sidecar_of: hyperlook-cam-melting-face-clock-bg.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
+
+see_also:
+  - ../pie-menus/INDEX.yml
+  - ../cellular-automata-tiles/INDEX.yml
+
+note: "Not AI Generated!"

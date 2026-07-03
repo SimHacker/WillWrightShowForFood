@@ -1,0 +1,18 @@
+# Sidecar — micropolis-translations-web-nl.png
+
+artifact:
+  file: micropolis-translations-web-nl.png
+  slug: micropolis-translations-web-nl
+  room: micropolis-gallery
+  what: micropolis translations web nl
+  era: 1991 HyperLook through 2010s Facebook
+  sidecar_of: micropolis-translations-web-nl.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/micropolis-gallery.yml
+  - ../../../repo-shows/ideas/gags/pacbot-eats-traffic.yml
+
+see_also:
+  - micropolis-gallery.yml
+
+note: "Not AI Generated!"

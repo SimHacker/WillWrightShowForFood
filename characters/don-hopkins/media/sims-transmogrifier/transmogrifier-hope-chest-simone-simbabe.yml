@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-hope-chest-simone-simbabe.png
+
+artifact:
+  file: transmogrifier-hope-chest-simone-simbabe.png
+  slug: transmogrifier-hope-chest-simone-simbabe
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — hope chest simone simbabe
+  era: 2000-2002
+  sidecar_of: transmogrifier-hope-chest-simone-simbabe.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,17 @@
+# Sidecar — ca-worms-earth-tones.png
+
+artifact:
+  file: ca-worms-earth-tones.png
+  slug: ca-worms-earth-tones
+  room: cellular-automata-tiles
+  what: SimCity-tile cellular automata — worms earth tones
+  era: ~2010-2011
+  sidecar_of: ca-worms-earth-tones.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/cellular-automata-simcity-tiles.yml
+
+see_also:
+  - ../micropolis-gallery/INDEX.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,18 @@
+# Sidecar — openlaszlo-scenario-selection-nl.png
+
+artifact:
+  file: openlaszlo-scenario-selection-nl.png
+  slug: openlaszlo-scenario-selection-nl
+  room: micropolis-gallery
+  what: openlaszlo scenario selection nl
+  era: 1991 HyperLook through 2010s Facebook
+  sidecar_of: openlaszlo-scenario-selection-nl.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/micropolis-gallery.yml
+  - ../../../repo-shows/ideas/gags/pacbot-eats-traffic.yml
+
+see_also:
+  - micropolis-gallery.yml
+
+note: "Not AI Generated!"

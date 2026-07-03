@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-flamingo-photoshop-sprites.png
+
+artifact:
+  file: transmogrifier-flamingo-photoshop-sprites.png
+  slug: transmogrifier-flamingo-photoshop-sprites
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — flamingo photoshop sprites
+  era: 2000-2002
+  sidecar_of: transmogrifier-flamingo-photoshop-sprites.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

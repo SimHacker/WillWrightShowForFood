@@ -1,0 +1,14 @@
+# Sidecar — storymaker-first-episode-branching.png
+
+artifact:
+  file: storymaker-first-episode-branching.png
+  slug: storymaker-first-episode-branching
+  room: storymaker
+  what: storymaker first episode branching
+  era: ~2010
+  sidecar_of: storymaker-first-episode-branching.png
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

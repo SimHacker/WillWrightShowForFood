@@ -1,0 +1,14 @@
+# Sidecar — storymaker-keyboard-cat-cross-nav.png
+
+artifact:
+  file: storymaker-keyboard-cat-cross-nav.png
+  slug: storymaker-keyboard-cat-cross-nav
+  room: storymaker
+  what: storymaker keyboard cat cross nav
+  era: ~2010
+  sidecar_of: storymaker-keyboard-cat-cross-nav.png
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

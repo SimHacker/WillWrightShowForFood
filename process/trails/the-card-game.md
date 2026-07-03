@@ -16,8 +16,8 @@ Every guest CARD is a hand of MTG-style invokable verbs. Combos link cards acros
 | [**_TEMPLATE CARD**](../../characters/_TEMPLATE/CARD.yml) | Copy-me ability card — declare your verbs |
 | [**Will CARD**](../../characters/will-wright/CARD.yml) | Flagship — `DOLLHOUSE-TO-SIMS` combos with `CHAIM-REVERSE-ENGINEER` |
 | [**Don CARD**](../../characters/don-hopkins/CARD.yml) | Host — `DON-PROGRAM-ROBOT-BRAIN` combos into `STUPID-FUN-CLUB` |
-| [**Slats CARD**](../../characters/slats/CARD.yml) | Fictional but fierce — `JUDGE-FLAIR`, `ROBO-RESURRECT` |
-| [**Slats judge rubric**](../../characters/slats/judge-rubric.yml) | Flair vs spreadsheet scoring |
+| [**Slats CARD**](../../characters/robots/slats/CARD.yml) | Fictional but fierce — `JUDGE-FLAIR`, `ROBO-RESURRECT` |
+| [**Slats judge rubric**](../../characters/robots/slats/judge-rubric.yml) | Flair vs spreadsheet scoring |
 | [**Guest room CARD**](../../characters/CARD.yml) | Per-person verbs — the room interface |
 | [**advertisement skill**](https://github.com/SimHacker/moollm/skills/advertisement) | How abilities score, Sims-style |
 

@@ -1,0 +1,53 @@
+# Literary — Philip K. Dick, "Rautavaara's Case" (1980, Omni)
+# Don → DSHR thread: gods eating worshippers; yaml jazz symmetry.
+
+story:
+  title: "Rautavaara's Case"
+  author: Philip K. Dick
+  year: 1980
+  publication: Omni
+
+plot_summary: |
+  Three human technicians — Rautavaara (Finnish), Travis, Elms — monitor near Proxima Centauri.
+  Accident kills all three; Rautavaara dies choking when helmet hoses tangle. The Approximations,
+  a plasma-based Proxima species, reach the wreck. Both men unrecoverable; they regenerate and
+  life-support Rautavaara's isolated brain.
+
+  Her brain replays events backward and hallucinates Christ approaching (her afterlife expectation).
+  The Approximations treat this as research: they **edit** the hallucination, substituting their
+  own savior — one that **eats worshippers**. The figure devours Travis, leaving gloves and boots.
+
+  Framed as testimony before a board of inquiry. Horrified Earth members order her brain shut down
+  and censure the Approximation crew. The Approximation narrator is puzzled: their cannibal-savior
+  is just the Christian Eucharist reversed — humans eat God, so God eating humans is symmetrical.
+
+correction: |
+  Common misremembering: aliens don't benevolently grant a hoped-for vision. They deliberately
+  **overwrite** her Christ vision with their own as an experiment — that's the act on trial.
+
+themes:
+  - "Ethics of keeping a disembodied, suffering mind alive"
+  - "Incommensurable value systems — each species finds the other's sacraments monstrous"
+  - "Religion read literally by outsiders, inverted into horror"
+  - "Symmetry arguments that fail across moral frames"
+
+moollm_bridge: |
+  We, as gods, play games with simulated minds by writing and editing yaml jazz. MOOLLM orchestrates
+  characters, dreams, skills — audit trail in git, consent standards for portrayals. PKD's horror
+  is outsiders editing inner experience without shared ethics; MOOLLM's answer is authored canon,
+  portrayal standards, and human-in-the-loop orchestration.
+
+don_to_dshr: |
+  Coprophagia post tangentially reminded Don of this story — probably a perfectly on-the-nose Latin
+  word for your god eating you as you eat him. Demo hook for MOOLLM discussion with David.
+
+connects:
+  - authority-without-truth.yml
+  - ../../mark-weiser/pkd-lem-ai-sf.yml
+  - ../../repo-shows/ideas/gags/gods-eat-worshippers.yml
+  - ../../repo-shows/david-rosenthal/moollm-demo.yml
+  - ../../repo-shows/david-rosenthal/discussion-pack.yml
+
+see_also:
+  - media/pdp7-hex-let-machine-win.yml
+  - ../correspondence.yml

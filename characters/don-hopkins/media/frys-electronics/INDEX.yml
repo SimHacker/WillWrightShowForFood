@@ -1,0 +1,20 @@
+# Fry's Electronics — Silicon Valley retail archaeology (gone)
+
+room:
+  id: frys-electronics
+  name: Fry's Electronics
+  parent: ../../media.md
+  note: "Cowboy-themed big-box — SV culture gold, all now gone"
+
+artifacts:
+  - frys-prospector-interior.png
+  - frys-cowboy-horse-ceiling.png
+  - frys-electronics-night-sign.png
+
+related:
+  ant_farm: ../../../will-wright/media/ant-farm-revolution-frys.yml
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

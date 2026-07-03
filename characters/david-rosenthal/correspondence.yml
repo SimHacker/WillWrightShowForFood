@@ -6,7 +6,7 @@ meta:
   with: david-rosenthal
   curated_by: don-hopkins
   consent: not_yet_asked
-  span: "2026-07 — PIXIE Repo Show invitation response"
+  span: "2026-07 — PIXIE invitation, Hex draft, MOOLLM demo readings"
   provenance_private: DonHopkins email (dshr@abitare.org)
 
 gist: |
@@ -21,6 +21,62 @@ gist: |
   **separate solo episode** while keeping PIXIE focused on PDP-7/340 + Cambridge ~1970.
 
 threads:
+  pdp7_hex_draft:
+    date: "2026-07-03"
+    from: David S. H. Rosenthal
+    to: Don Hopkins
+    subject: "Re: Invitation to PIXIE Repo Show interview"
+    draft: https://www.abitare.org/~dshr/tmp/pdp7.html
+    permission: "Don may send draft to Lars and Heins"
+    punchline: "Let the machine win — Hex on PDP-7/340 cheats if you try to win"
+    dshr_lem: |
+      Favorite Lem *Cyberiad* story — Trurl's machine answers 2+2=7, rage-quits truth.
+      Satire on intelligence without humility; prescient today.
+    don_response: |
+      Connected Lem to DSHR blog Coprophagia Is Bad For You — model collapse / authority over truth.
+      Tangentially PKD "Rautavaara's Case" — gods eating worshippers; yaml jazz symmetry.
+      MOOLLM demo pitch — three YouTube readings link to object network behind generated text.
+    artifacts:
+      - media/pdp7-hex-let-machine-win.yml
+      - literary/authority-without-truth.yml
+      - literary/rautavaaras-case-pkd.yml
+  moollm_demo_readings:
+    date: "2026-07-03"
+    from: Don Hopkins
+    to: David S. H. Rosenthal
+    subject: "Re: Invitation to PIXIE Repo Show interview"
+    pitch: |
+      MOOLLM — yaml jazz orchestration (LambdaMOO × Sims) for Repo Shows. Demo and discuss.
+      Readings recorded with links to characters, places, journals, skills, constitutional rules.
+    videos:
+      - title: "✋💜🌊 Palm Love Wave"
+        url: https://www.youtube.com/watch?v=4GS8Xx0ZTZI
+        episode: ../../repo-shows/moollm-readings/episodes/palm-love-wave.yml
+      - title: "Marathon Session Turn 7 — The Wish is Spoken"
+        url: https://www.youtube.com/watch?v=T-OIeUSc5vI
+        setting: "Vondelpark — guitar and singing in distance"
+        episode: ../../repo-shows/moollm-readings/episodes/marathon-turn-7-wish-spoken.yml
+      - title: "Dasher, Palm On Being Palm, Tog's Infinite Monkeys"
+        url: https://www.youtube.com/watch?v=lL2sw2oYU98
+        episode: ../../repo-shows/moollm-readings/episodes/dasher-palm-tog-monkeys.yml
+    discussion_pack: ../../repo-shows/david-rosenthal/discussion-pack.yml
+    moollm_demo: ../../repo-shows/david-rosenthal/moollm-demo.yml
+  scifi_ai_reading_group:
+    date: "2026-07-03"
+    what: |
+      Thread widened into a sci-fi-as-system-spec reading group: PKD/Lem read as literal specs.
+      Ubik -> ubiquitous computing (Weiser named it after Ubik, inverted to calm tech);
+      Palmer Eldritch -> The Sims; Counter-Clock World -> resurrection as thermodynamics
+      (LOCKSS as engineered Hobart Phase); Lem 2+2=7 + Rautavaara's Case -> authority/model collapse.
+    show_is_about: "David — Mark is the shared thread (Don's teacher/friend; David knew him) that opens the PKD/sci-fi/AI door."
+    documented_backdrop: |
+      David's LOCKSS co-founder & 2025 Paul Evan Peters co-awardee Victoria 'Vicki' Reich was
+      Mark Weiser's widow — the man who coined ubiquitous computing after Ubik. Don would love to
+      have both David and Vicki (she has her own body of work); it's David and Vicki's call,
+      together. Warm standing invitation, not_yet_asked.
+    primary_source: "Don was Weiser's UMD student & friend; heard the Ubik influence from Mark directly."
+    flagged_unverified: "David's own marital status — not in public record; defer_to_david; not published as fact."
+    artifact: ../mark-weiser/pkd-lem-ai-sf.md
   pixie_invitation_response:
     date: "2026-07-02"
     response: interested_logistics_constrained
@@ -46,11 +102,17 @@ show_hooks:
   - "LOCKSS + Chapman films + Lars emulation — preservation thread"
   - "CHM oral history interviewer for Heinz — still proposed"
   - "Solo show later — window-systems-lineage.yml material"
+  - "MOOLLM demo — watch three readings, then yaml jazz walkthrough"
+  - "Literary — Lem 2+2=7, coprophagia, PKD Rautavaara's Case"
 
 connects_in_repo:
   - { path: invitation.md, why: "PIXIE trio invitation" }
   - { path: window-systems-lineage.yml, why: "Solo-show depth — defer from PIXIE" }
-  - { path: ../../repo-shows/david-rosenthal/, why: "NeWS/X11/LOCKSS solo seed" }
+  - { path: ../../repo-shows/david-rosenthal/, why: "NeWS/X11/LOCKSS solo seed + discussion pack" }
+  - { path: ../../repo-shows/david-rosenthal/discussion-pack.yml, why: "July 2026 discussion brief" }
+  - { path: ../../repo-shows/moollm-readings/, why: "Primer readings — Palm, Dasher, Tog" }
+  - { path: literary/authority-without-truth.yml, why: "Lem + coprophagia + Hex thread" }
+  - { path: literary/rautavaaras-case-pkd.yml, why: "PKD gods-eat-worshippers" }
   - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Async PIXIE tapestry" }
   - { path: ../heinz-lemke/correspondence.yml, why: "Rosenthal same-machine thread" }
   - { path: ../lars-brinkhoff/correspondence.yml, why: "Emulation segment + async pivot" }

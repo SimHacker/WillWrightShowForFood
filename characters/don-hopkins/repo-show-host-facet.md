@@ -7,6 +7,7 @@ Don hosts **Micropolis Class** / **Repo Show**: conversations whose **stage is a
 | Facet | Where |
 |-------|--------|
 | On-stream persona | [`career/on-stream.yml`](career/on-stream.yml) |
+| Upbringing + hosting lineage | [`portrayal/upbringing.yml`](portrayal/upbringing.yml) |
 | Voice + taglines | [`portrayal/voice.yml`](portrayal/voice.yml) |
 | MC avatar (orchestrator) | [`../don-philahue/`](../don-philahue/) |
 | Protocol | [`../../skills/repo-show/SKILL.md`](../../skills/repo-show/SKILL.md) |

@@ -1,0 +1,72 @@
+# AUCTIONS.yml — JSONsters lot ledger (play § only)
+# Tier A: magnificent_auction (two per series) · Tier B: quick_sale · Tier C: chorus_only
+# Script: art-opening-night.yml · Updated live during premiere.
+
+meta:
+  currency: "§"
+  fictional: true
+  spec: simoleon-auctions.yml
+  script: art-opening-night.yml
+  magnificent_count: 15
+  quick_sale_count: 17
+
+show_pool:
+  simoleons: 0
+  note: Proceeds from patron sales credit here unless routed to don-hopkins
+
+tiers:
+  magnificent_auction: 15   # two per series (essential has one)
+  quick_sale: 17            # salon red-dot delight sales
+  chorus_only: 4            # Facebook — no §
+
+magnificent_lots:
+  - { id: lot-01-bridge, file: jsonsters-evolution-01.png, series: essential, status: available, beat: mimsy_gregory_bid_war }
+  - { id: lot-05-flame, file: jsonsters-evolution-05.png, series: textured_arcs, status: available }
+  - { id: lot-09-ribbon, file: jsonsters-evolution-09.png, series: textured_arcs, status: available }
+  - { id: lot-10-tendrils, file: jsonsters-evolution-10.png, series: spindle_tendrils, status: available }
+  - { id: lot-11-tendrils, file: jsonsters-evolution-11.png, series: spindle_tendrils, status: available }
+  - { id: lot-12-rainbow-inspector, file: jsonsters-evolution-12.png, series: inspector_surgery, status: available }
+  - { id: lot-13-bow4, file: jsonsters-evolution-13.png, series: inspector_surgery, status: available }
+  - { id: lot-14-hex, file: jsonsters-evolution-14.png, series: hex_islands, status: available, beat: vandermeer_margot_hex_fight }
+  - { id: lot-18-hex-peak, file: jsonsters-evolution-18.png, series: hex_islands, status: available }
+  - { id: lot-22-ribcage, file: jsonsters-evolution-22.png, series: terrain_ribcage, status: available, beat: helena_ribcage_sermon }
+  - { id: lot-24-ribcage, file: jsonsters-evolution-24.png, series: terrain_ribcage, status: available }
+  - { id: lot-25-plaid, file: jsonsters-evolution-25.png, series: maximal_plaid, status: available, beat: plaid_peacock_scream }
+  - { id: lot-28-plaid-landscape, file: jsonsters-evolution-28.png, series: maximal_plaid, status: available }
+  - { id: lot-monster-pearl, file: jsonsters-03-pearl-collar.png, series: monster_era, status: available }
+  - { id: lot-monster-swarm, file: jsonsters-04-bleep-swarm.png, series: monster_era, status: available, beat: bunny_adopts_bleep_swarm }
+
+quick_sale_lots:
+  # Pre-seeded buyers from art-opening-night.yml salon_pass — override live
+  - { file: jsonsters-evolution-02.png, status: available, tier: quick_sale }
+  - { file: jsonsters-evolution-03.png, status: available, tier: quick_sale }
+  - { file: jsonsters-evolution-04.png, status: available, tier: quick_sale }
+  - { file: jsonsters-evolution-06.png, status: available, tier: quick_sale }
+  - { file: jsonsters-evolution-07.png, status: available, tier: quick_sale }
+  - { file: jsonsters-evolution-08.png, status: available, tier: quick_sale }
+  - { file: jsonsters-evolution-15.png, status: available, tier: quick_sale }
+  - { file: jsonsters-evolution-16.png, status: available, tier: quick_sale }
+  - { file: jsonsters-evolution-17.png, status: available, tier: quick_sale }
+  - { file: jsonsters-evolution-19.png, status: available, tier: quick_sale }
+  - { file: jsonsters-evolution-20.png, status: available, tier: quick_sale }
+  - { file: jsonsters-evolution-21.png, status: available, tier: quick_sale }
+  - { file: jsonsters-evolution-23.png, status: available, tier: quick_sale }
+  - { file: jsonsters-evolution-26.png, status: available, tier: quick_sale }
+  - { file: jsonsters-evolution-27.png, status: available, tier: quick_sale }
+  - { file: bleep-bloop-blob.png, status: available, tier: quick_sale }
+  - { file: jsonsters-02-rainbow-bridge.png, status: available, tier: quick_sale }
+
+hammer_log: []
+# After air — magnificent + quick_sale entries:
+# - lot_id: lot-01-bridge
+#   tier: magnificent_auction
+#   buyer: mimsy
+#   price_§: 24000
+#   reason: "Aggressive restraint — generative scarcity (Don: there are 32)"
+# - file: jsonsters-evolution-06.png
+#   tier: quick_sale
+#   buyer: gregory
+#   price_§: 8900
+#   reason: "Diversifying into purple noise"
+
+note: "Not AI Generated!"

@@ -1,0 +1,23 @@
+# Too many butterflies! — Oculus SDK demo
+
+demo:
+  title: "Too many butterflies!"
+  era: "Early Oculus SDK — Unity Game view, stereo barrel distortion"
+  file: ../too-many-butterflies-oculus.png
+  captured: "Wed 26 Nov — Unity on Mac, ~22:46"
+
+scene:
+  setting: "Stone hall, wooden beams, balcony, wall torches"
+  swarm: "Blue Morpho butterflies — overwhelming count, depth stack, chromatic aberration at lens edge"
+  vr_note: "Pre-consumer VR research aesthetic — too many is the joke"
+
+contrast_bug_farm:
+  butterflies: "Beauty overload — serene uncanny"
+  bug_farm: "Creepy overload — squish compulsion"
+  shared: "Hands reach through portal; physics toy; Don + Levitt + Nelson in Unity"
+
+see_also:
+  - INDEX.yml
+  - bug-farm.yml
+
+note: "Not AI Generated!"

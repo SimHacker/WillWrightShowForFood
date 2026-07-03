@@ -1,0 +1,18 @@
+# Sidecar — hyperlook-alan-turing-neatclock-overlay.png
+
+artifact:
+  file: hyperlook-alan-turing-neatclock-overlay.png
+  slug: hyperlook-alan-turing-neatclock-overlay
+  room: simprov-exploratorium
+  what: HyperLook Exploratorium demo — alan turing neatclock overlay
+  era: early 1990s
+  sidecar_of: hyperlook-alan-turing-neatclock-overlay.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
+
+see_also:
+  - ../pie-menus/INDEX.yml
+  - ../cellular-automata-tiles/INDEX.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,217 @@
+# Curiosity Cow Cube — parody of Peter Molyneux's Curiosity + Ian Bogost's Cow Clicker
+# Don's Unite 2012 troll: the secret inside the cube is a Rightward-Facing Cow
+# Berkeley 2008: Mediterraneum Cafe — deadpan hippie gaslighting that a horse is a cow
+# MOOLA clicks · scheduled death · NEVER gateway · the cow was always duplicable
+# Status: gag / show beat — NOT a product resurrection (keep Curiosity dead and buried)
+
+id: curiosity-cow-cube
+type: gag
+status: parody_seed
+authored_by: don-hopkins
+tagline: "Click the cube for worthless MOOLA. Peel layers. The center is a cow. It wasn't very fun before. That's a cow."
+
+should_never_ship: |
+  If there was ever a game that should never be recreated and kept dead and buried forever,
+  it's Molyneux's cube clicker Curiosity (released 6 Nov 2012, ended 26 May 2013, never delivered
+  on grandiose promises). This repo holds a *parody* and social-commentary beat — scheduled
+  termination communicated upfront (Cow Clicker Cowpocalypse model). We do not resurrect the scam;
+  we put Bogost's cow in the middle instead of godhood and broken lies.
+
+sources:
+  curiosity:
+    title: "Curiosity: What's Inside the Cube?"
+    released: 2012-11-06
+    ended: 2013-05-26
+    wikipedia: "https://en.wikipedia.org/wiki/Curiosity:_What%27s_Inside_the_Cube%3F"
+    keynote: "https://www.youtube.com/watch?v=24AY4fJ66xA&t=1h08m21s"
+    keynote_bs_starts: "1h 8m 21s — Unite 2012 Amsterdam, Westergasfabriek"
+    crucifix_pose: "1h 48m 06s — arms spread: dynamically put ANY image on ANY cube surface"
+    don_hn:
+      - "https://news.ycombinator.com/item?id=48329842"
+      - "https://news.ycombinator.com/item?id=47110605"
+      - "https://news.ycombinator.com/item?id=31981916"
+      - "https://news.ycombinator.com/item?id=24380418"
+  cow_clicker:
+    title: Cow Clicker
+    author: Ian Bogost
+    released: 2010-07-21
+    wikipedia: "https://en.wikipedia.org/wiki/Cow_Clicker"
+    site: "http://www.cowclicker.com/"
+    purpose: "Social-commentary parody of Zynga/Facebook dopamine games — not accidental product"
+    currency: Mooney
+    cowpocalypse:
+      scheduled: 2011-07-21
+      extended_by_payments: true
+      expired: 2011-09-07
+      bogost_line: "It wasn't very fun before."
+    don_hn: "https://news.ycombinator.com/item?id=27324466"
+  bogost_show: repo-shows/will-wright/ian-bogost-procedural-rhetoric/SHOW.yml
+  deconstruct_the_cube: how-to-deconstruct-the-cube.yml
+  pantomime_squish_parallel: pantomime-gallery.yml#bug_farm
+  face_puppet_parallel: "../../characters/don-hopkins/media/don-high-score-space-invaders.yml"
+  morningstar:
+    essay: "http://www.fudco.com/chip/deconstr.html"
+    title: "How to Deconstruct Almost Anything (1993)"
+  ashford_homage:
+    persona: "Captain Kira Ashford — Belter space pirate, The Expanse aesthetic (MOOLLM adventure-4)"
+    essay: "How to Incarnate Almost Anything — moollm/designs/postmodern-deconstruction.md"
+    reincarnate: "examples/adventure-4/personas/captain-ashford.yml — WEAR from coatroom"
+  berkeley_cows_in_berkeley:
+    title: "Cows In Berkeley? Moooo"
+    author: Charles Scamahorn
+    uploaded: 2008-06-13
+    video: "https://www.youtube.com/watch?v=10JSPdTDFsI"
+    location:
+      cafe: Mediterraneum Cafe
+      note: "Often called 'Caffe Mediterraneum' — Telegraph Avenue, Berkeley"
+      avenue: Telegraph Avenue
+      city: Berkeley
+    scene: |
+      Oh-so-Berkeley. Shirtless dude rides a horse the wrong way up Telegraph Avenue while
+      buddies high on too much coffee sit outside the Mediterraneum and deadpan-commit — with
+      silly hippie gaslighting energy — that the animal is a cow, not a horse. "That's a cow.
+      I know the difference." "How do you know? Cuz I know." "That's an interesting sight.
+      I've been waiting for that all my life."
+    transcript_beats:
+      - "That's a cow."
+      - "I know the difference."
+      - "Similar to a cow — that's a cow."
+      - "Can a cow and a horse — that looks like a cow to me."
+      - "Nobody's going to believe this unless I have it on video."
+      - "I've been waiting for that all my life."
+    don_youtube_comment: "It's a cow."
+    don_comment_years_ago: 9
+    repo_joke: |
+      The cube's final layer isn't Bogost's pixel cow — it's this horse. The menagerie insists
+      it's a cow. Don insists it's a cow. Molyneux never got the joke. Palm offers the horse.
+    berkeley_lineage:
+      - "Slats street shoots — Au Coquelet, University Ave (Telegraph neighborhood)"
+      - "Don's Berkeley hangouts — coffee, deadpan, commit to the bit"
+
+don_unite_2012:
+  what: |
+    After Molyneux's insufferably vainglorious Curiosity keynote, Don chatted him up and trolled:
+    the big surprise inside the box is a cow — ironic reference to Cow Clicker. Peter didn't get
+    it. Don explained. Peter still didn't get it. Ian Bogost had the self-awareness to design
+    Cow Clicker as critical statement; Molyneux had the hype.
+  punchline: "Recreate the Curiosity server — put a life-changing Rightward-Facing Cow inside instead of disappointment."
+
+parody_game:
+  title: "Curiosity: What's Inside the Repo?"
+  subtitle: "A cube clicker that should stay dead — performed once, then Cowpocalypse"
+  clicks_for: MOOLA
+  moola_lineage: "Cow Clicker Mooney → Repo Show MOOLA 🐄 — click cow, click cube, receive nothing"
+
+  cube:
+    layers: "Peel by collective clicks — each layer a gallery deed / 77MP face / sheep genome tile"
+    surfaces: "ANY face can show ANY stolen deed (AATG scrape) — Molyneux crucifix pose energy"
+    center_reveal: "Rightward-Facing Cow — OR the Telegraph Avenue horse (menagerie insists: cow)"
+    cow_asset: "Ian Bogost's cow — social commentary payload"
+    click_audio:
+      rule: "Sometimes — not every click — a filtered, echoing, far-away distressed moo cries for help"
+      feel: "Reverb tail · band-passed · distant pasture · wrong room · wrong decade"
+      compulsion: "You hear something suffering behind the next layer; you keep clicking to 'rescue' it"
+      honesty: "The cow is never rescued until the center — then it's a JPEG. It wasn't very fun before."
+      triggers:
+        probability: "~15% per click (tune so absence makes the next moo hit harder)"
+        deeper_layers: "Moo rate rises as layers thin — urgency without guaranteeing relief"
+        cowpocalypse_final_hour: "Moos overlap; echo stack; still no actual cow until reveal"
+      never:
+        - "Cartoon happy moo — wrong register"
+        - "Every click — habituation kills the hook"
+        - "Promise rescue — only deliver duplication at center"
+      bogost_line: "Distressed audio is procedural rhetoric: the game admits it's manipulating you."
+      pantomime_parallel: "Bug Farm squish compulsion — same grammar, different phylum (see pantomime-gallery.yml)"
+    berkeley_horse:
+      video: "https://www.youtube.com/watch?v=10JSPdTDFsI"
+      rule: "Final click reveals horse JPEG; patrons deadpan 'that's a cow' — NEVER correct them"
+      mediterraneum_energy: "Too much coffee · hippie gaslighting · commit to the bit"
+
+  cowpocalypse:
+    rule: "Scheduled termination communicated upfront — death date is the feature"
+    countdown: "Every click deducts time; pay MOOLA to supplicate and extend (Cow Clicker parody)"
+    extension_rates:
+      - { moola: 10, extends: "1 hour" }
+      - { moola: 4000, extends: "1 month" }
+    end_state: "Cows raptured to blank spaces — cube hollow — MOOLA pile burned or hole dug"
+    bogost_energy: "It wasn't very fun before. Now it's honest about that."
+
+  never_gateway:
+    mantra: "NEVER gateway · ALWAYS invite duplication"
+    inside_the_cube: "The cow is a fork — Rightward-Facing, freely copyable, not a single-winner NFT"
+    curiosity_original_sin: "One person wins the center — we reject that; everyone gets the cow JPEG"
+
+commentary_targets:
+  dopamine_clicker: "Zynga/Facebook rage era — arbitrary value becomes real value when not meant to"
+  grandiose_promises: "Godhood, credits, royalties, surprise the world — arms spread like crucifix"
+  pathological_hype: "Not lying if circumstances outside control — RPS interview energy"
+  ai_attention_economy: "Curiosity was clicks for clicks; MOOLA is training data for training data"
+  procedural_rhetoric: "Bogost made the argument on purpose; Curiosity made the addiction by accident"
+  distressed_moo_audio: "Filtered far-away moos cry for help — compulsion without rescue until center JPEG"
+  berkeley_gaslighting: "Horse on Telegraph → 'that's a cow' — epistemic commitment as performance art"
+
+cast_beats:
+  berkeley_mediterraneum:
+    - "That's a cow. I know the difference."
+    - "Similar to a cow — that's a cow."
+    - "Nobody's going to believe this unless I have it on video."
+    - "I've been waiting for that all my life."
+    don: "It's a cow."
+    passerby: "go try to milk that cow..."
+  molyneux_voice_parody:
+    - "We can dynamically put on ANY surface ANY image we like — THAT's how we surprise the world."
+    - "Clues about what's in the middle later on."
+    - "I haven't got a reputation in this industry any more." # RPS — quoted for parody
+  don:
+    - "The secret inside the box is a cow."
+    - "Ian Bogost explained this in 2010. You explained it in 2012. I'm explaining it again."
+  bogost_energy:
+    - "Cow Clicker was criticism. It became popular anyway. That was the second joke."
+    - "It wasn't very fun before."
+  menagerie:
+    gregory: "I'm long the final layer; short the cow."
+    mimsy: "I clicked before the cow loaded—"
+    bunny: "Board approved the Rightward-Facing Cow as PFP."
+    slats: "Auto Art Theft Grand scraped all six faces. You're welcome."
+    vandermeer: "Scotland invented the horse-cow. That's a cow."
+    helena: "The moo is a sermon from the hollow. Click again. Suffering is layered."
+  palm: "🐒✋🌴 — offering the cow, not minting the cube."
+
+live_build_seed:
+  berkeley_reveal_option: |
+    Alternate ending: cube opens to horse-on-Telegraph footage (Scamahorn 2008). Chat and
+    menagerie must deadpan 'that's a cow.' Don comments: "It's a cow." Never break character.
+  minimal: "Unity/Web toy — cube mesh, click counter, MOOLA ticker, intermittent distressed moo SFX, cow-or-horse reveal, countdown"
+  scheduled_death: true
+  do_not: "Promise godhood, single winner, or life-changing anything except the cow"
+
+repo_show_integration:
+  simulated_opening:
+    beat: "Cube in gallery corner — patrons click for MOOLA; surfaces show misread deed JPEGs"
+    spec: ../../process/simulated-art-opening.yml
+  art_thief:
+    beat: "Steal deed → paste on cube face — Molyneux surface promise as duplication invite"
+    spec: ../../process/art-thief-game.yml
+  auto_art_theft_grand:
+    beat: "Slats batch-fills all cube faces before anyone reaches center"
+    spec: ../../process/auto-art-theft-grand.yml
+  moola:
+    beat: "Click cube → MOOLA; pay MOOLA → extend Cowpocalypse; burn remainder at end"
+    spec: ../../process/moola.yml
+  brian_eno:
+    beat: "77MP combination tiles on cube faces — center is still the cow (or the horse — it's a cow)"
+  berkeley:
+    beat: "Mediterraneum table read — menagerie gaslights horse as cow while cube counts down"
+    video: "https://www.youtube.com/watch?v=10JSPdTDFsI"
+
+see_also:
+  - pantomime-gallery.yml
+  - how-to-deconstruct-the-cube.yml
+  - ../../process/moola.yml
+  - ../../process/art-thief-game.yml
+  - ../../process/auto-art-theft-grand.yml
+  - ../will-wright/ian-bogost-procedural-rhetoric/SHOW.yml
+  - ../../characters/robots/slats/README.md
+  - lightpenisland-net.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,11 @@
+# Sidecar — travel-amsterdam-space-invader-linnaeusstraat-mosaic.png
+
+artifact:
+  file: travel-amsterdam-space-invader-linnaeusstraat-mosaic.png
+  slug: travel-amsterdam-space-invader-linnaeusstraat-mosaic
+  category: travel
+  subcategory: amsterdam
+  what: "Space Invader mosaic Linnaeusstraat"
+  sidecar_of: travel-amsterdam-space-invader-linnaeusstraat-mosaic.png
+
+note: "Not AI Generated!"

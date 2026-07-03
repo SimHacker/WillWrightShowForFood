@@ -1,0 +1,42 @@
+# Oosterdok bike parking — TomTom era Amsterdam
+
+artifact:
+  file: oosterdok-bike-parking-tomtom.png
+  what: "Bicycle shadows on dark paneled ramp wall — glass railing, modern building, blue sky"
+
+location:
+  place: Oosterdok
+  city: Amsterdam
+  context: "Bike parking near TomTom offices — Don's day-job era"
+
+employment:
+  org: TomTom
+  years: "2007–2009"
+  role: Senior Developer
+  work_history: ../career/work-history.yml
+  side_projects: "Bluebird coffeeshop — iLoci, Amsterdam Coffeeshops app, BONGO BINGO → Stupid Fun Club reunion"
+
+visual:
+  shadows: "Multiple bicycle silhouettes — wheels, frames, handlebars on sloped wall"
+  architecture: "Dark panel wall, silver handrail, glass barrier, glass-facade tower beyond"
+  light: "Low sun — elongated shadows, early morning or late afternoon"
+
+amsterdam_orbit:
+  queens_day: don-hopkins-lisp-machine-manual-shirt-queensday.png
+  rolf_drawer: rolf/INDEX.yml
+  robot_collection: robot-collection/INDEX.yml
+  ground_up: "Ground Up Software eenmanszaak — Amsterdam from 2017"
+
+repo_jokes:
+  menagerie:
+    mimsy: "The shadows perform parking—"
+    vandermeer: "Oosterdok — the cryptid commutes by frame."
+    don: "TomTom day job. Bike shadows on the wall."
+
+see_also:
+  - ../media.md
+  - robot-collection/van-leer-leather-press.yml
+  - ../career/work-history.yml
+  - ../../../process/crazy-idea-jam.yml#amsterdam_coffeeshops_app
+
+note: "Not AI Generated!"

@@ -1,0 +1,220 @@
+# Don Hopkins — upbringing, wavelength, and hosting lineage
+# SSOT for biographical character building. Process docs cross-link here; they do not duplicate source material, but they can summarize locally, and sync later.
+
+meta:
+  id: don-hopkins-upbringing
+  character: don-hopkins
+  role: portrayal_biography
+  born: 1966-02-09
+
+cohort:
+  label: Early Gen X
+  note: "Born just after the Boomer cutoff — dodged the 'OK, Boomer' bullet"
+
+production_aesthetic:
+  stance: "High production values. Low production costs."
+  mantra: "Lean into the cheese — Conan face-holes, South Park construction paper."
+  what: |
+    Deliberate cheap that reads as craft. South Park pretended to be construction paper — and
+    for the original Flash shorts (Santa vs. Satan and friends), it basically was. Not laziness;
+    a style choice. Distinguished portrait + mouth hole + webcam + button board + improv voices —
+    high intention, near-zero budget.
+  lineages:
+    south_park: "Flash on a shoestring → iconic look → sharp writing on top. Roughness is the brand."
+    conan: "Face-cutout tradition — physically funny, technically trivial; performer alignment is the gag. Audience participation and replication is the fun."
+  tools_fun_easy_free:
+    - Conan face-hole PNG + laptop webcam
+    - OBS Browser Source (free)
+    - Keyboard / Stream Deck / on-screen button grid
+    - Phone video from guests
+    - GitHub repo + Cursor — audience plays along for $0
+    - Human voice only — no clones
+
+national_touchstones:
+  thesis: |
+    Late-70s / early-80s variety-and-puppet TV soaked into kids who became builders.
+    Camp-forward, sincere underneath, never ashamed of the cardboard.
+  anchors:
+    - "Pee-wee Herman — Playhouse as sacred geometry of joyful weird"
+    - "Sid & Marty Krofft — H.R. Pufnstuf, Lidsville, foam-and-felt fever dream"
+    - "Donny & Marie — sparkle, teeth, earnest duets"
+    - "Jack Horkheimer Star Hustler — 'Keep looking up!'"
+    - "Rip Taylor and the closeted-but-obvious camp Hollywood constellation — confetti, 'Dear!'"
+  note: "Anchors, not a closed canon — the list could run all night, dear."
+
+dc_metro:
+  place: "DC Metropolitan Area — just inside the Beltway"
+  era: "Same Cold War window as The Americans — loved its DC authenticity (Jhoon Rhee 'Nobody bothers me')"
+  show_excerpts: ../../../process/repo-show-branding.yml#cultural_excerpts
+  jhoon_rhee:
+    what: "Local taekwondo TV jingle — 'Nobody bothers me!' — real DC; The Americans used it; Don loved the detail"
+    clips: ../../../process/repo-show-branding.yml#cultural_excerpts#jhoon_rhee_nobody_bothers_me
+  beltway_bandits: |
+    Grew up among Beltway Bandits — government-contractor suburbia: badge readers, SCIFs,
+    parking-lot patriotism.
+  umd:
+    campus: University of Maryland, College Park
+    era: "1980s Terp life — HCIL, ARPANET in the basement, off-campus gravity wells"
+    department: Computer Science (CSD)
+    mentors: [Mark Weiser, Ben Shneiderman]
+    hcil: "Direct manipulation, pie menus, calm/ubicomp"
+    college_park_life:
+      thesis: |
+        Fondly remembering **1980s College Park** — the same decade as pie menus at HCIL and
+        IMP 57 at Fort Meade. Two edible institutions: **Terrapin Tacos** on Baltimore Blvd and the
+        **Commie Co-Op** in the basement of Stamp. Beltway Bandit by day, bean sprouts by lunch.
+      terrapin_tacos:
+        name: Terrapin Taco House
+        address: "8704 Baltimore Boulevard, College Park"
+        lineage:
+          - "Mid-1960s — the Doghouse"
+          - "1970s — Tippy's Taco chain"
+          - "1980s — Jeff Curtis & David Allan buy; Terrapin Taco ever since (mascot homage)"
+        hits: [sunken_beef_burrito, chili_con_queso, hot_sauce_legends]
+        vibe: |
+          The place you always went to — locals and Terps in line together; owners who watched
+          whole waves of students come and go. Off-campus meal gravity well.
+        youtube:
+          title: TerpTaco
+          url: https://www.youtube.com/watch?v=xz8xy61nBjY
+          note: "Great period footage — fond memory trigger; weave as cold open or palate cleanser"
+        not: "Terrapin Logo (C64 software) — different terrapin, same decade, different calories"
+      commie_co_op:
+        nickname: "Commie Co-Op"
+        official: Maryland Food Collective
+        also: Maryland Food Co-op
+        where: Adele H. Stamp Student Union — basement level
+        founded: 1975
+        motto: "Food for people, not for profit"
+        what: |
+          Volunteer **hippie-run natural food** store — worker-owned collective, sandwich line,
+          bean sprouts, bulk grains, fair-trade guilt. Student-run, anti-profit, long before
+          vegan went mainstream.
+        roots: |
+          Guerrilla sandwich line on campus → SGA proposal (Matt Mayer, Aug 1975) → Stamp basement
+          fixture for decades.
+        closed: 2019-05-31
+        vibe: "Bright lighting, well-worn couches, nutrient-heavy snacks — real sense of community"
+      show_excerpt: ../../../process/repo-show-branding.yml#cultural_excerpts#umd_college_park
+  networking:
+    - "Early ARPANET — high-school access to MIT-AI"
+    - "UMD CSD on NSA's secret IMP 57 at Fort Meade → MILNET"
+    - "NSFNet, UUNET, DIGEX — East Coast commercial internet unfurling"
+  fandom: "East Coast science-fiction convention culture — parallel network of builders"
+
+local_tv:
+  wdca:
+    station: "WDCA Channel 20, Washington DC"
+    dick_dyszel:
+      years: 1972–1987
+      bozo:
+        years: 1972–1977
+        note: "Washington's second Bozo — Willard Scott originated DC's Bozo; M.T. Graves → Count Gore"
+      captain_twenty:
+        sign_off: "Live long and win lots of prizes!"
+        salute: Vulcan
+        taglines:
+          - "Live long and win lots of prizes!"
+        routines:
+          gerbil_races:
+            what: |
+              First famous contest — kids mailed postcards (name, address, phone). Captain 20
+              called a viewer live, they picked one of three gerbils (each named for a Channel 20
+              show); winning gerbil won the kid a new bike. Hit big enough for Washington Post
+              Sunday TV magazine cover.
+            successors: [monkey_races, disney_races]
+            disney_races: "1974 — Walt Disney let pre-recorded cartoon characters race on air"
+          channel_20_club:
+            what: |
+              1975 — send SASE, get numbered Club Card; matching stub in a giant drum. Captain 20
+              pulled winning numbers between programs several times a day; mail in card within
+              10 days to claim prize. Grand prize kickoff: Christmas at Walt Disney World for
+              the whole family (promos filmed at Disney World).
+            scale: "~250,000 club cards issued over 3 years"
+          space_gallery:
+            origin: "Bozo's Art Gallery (1972) → Captain 20's Space Gallery (1977–1987)"
+            what: |
+              Kids mailed drawings; every non-objectionable piece went on the wall and **on air**.
+              Longest-running Channel 20 feature — Dick Dyszel still gets mail from adults who
+              say seeing their art on TV mattered.
+          kids_break:
+            what: |
+              Half-hour show — four kids slide into set, nutritious snack with the Captain,
+              Space Gallery, short animated feature + group discussion, craft tied to the theme.
+              Emmy nomination; People's Choice Awards.
+            evolution: "Alien ears → human Captain with fast-food-commercial leftover hat"
+      count_gore_de_vol:
+        greeting: "Greetings! I am the Count Gore De Vol!"
+        sign_off: "May all your blood be warm!"
+      thesis: "Lunchtime clown, daylight captain, midnight vampire — camp triple identity"
+  wbff:
+    station: "WBFF Channel 45, Baltimore"
+    captain_chesapeake:
+      host: "George A. Lewis (1926–2000)"
+      years: 1971–1990
+      hail: "Ahoy, crew members!"
+      theme: "Stumblin' — The Three Suns (33 rpm spun at 45 for that chipmunk warmth)"
+      opening_poem: |
+        A shipwrecked sailor found himself in a plight. Lost at sea he was really a sight.
+        He swam and swam 'til he thought he'd die, when a wondrous sight appeared to his eye.
+        A derelict boat that saved his life and put an end to his watery strife.
+      sidekicks:
+        mondy: "Mondy the Sea Monster (Jim Uhrin; pronounced Moan-dee) — Chesapeake Bay Nessie, mischief"
+        bruce_the_bird: |
+          Never came out of his birdhouse on camera — kids **drew** how they imagined Bruce
+          looked and mailed drawings; Captain showed them on air.
+      routines:
+        treasure_chest:
+          what: |
+            Tugboat-deck set, captain's chair, theme playing soft — open the **treasure chest**,
+            read letters aloud. Peak ~3,000 letters/week; some correspondents decidedly over 12.
+          vibe: "Real world ↔ pretend world — kids went with him"
+        crew_members_club:
+          what: "Mail in for membership card — card-carrying crew members"
+          scale: "50,000 crew members by 1973"
+          story: "Adult flashed crew card at a window when challenged — 'I wasn't doing anything wrong'"
+        inserts:
+          what: "One- to two-minute live bits between morning/afternoon cartoons (7–9am, 3–5pm)"
+        ghost_host: "George A. Lewis also Ghost Host on WBFF late-night horror — Chesapeake by day"
+      sign_offs:
+        - "Be somebody important — be yourself!"
+        - "So long, crew members."
+
+local_radio:
+  station: "WWDC Washington DC — the callsign on the dial, not Apple's conference"
+  howard_stern:
+    era: "Late 70s–Aug 1982 — before WNBC New York and national syndication"
+  the_greaseman:
+    host: Doug Tracht
+    replaced: "Howard Stern at WWDC"
+  note: |
+    Captain Chesapeake = warm hosting north star. Stern / Greaseman = the other DC dial —
+    irreverent, local, unfiltered. Same kid, different register.
+
+hosting_lineage:
+  north_star: Captain Chesapeake
+  performed_by: don-philahue
+  show_branding: ../../../process/repo-show-branding.yml
+  note: "Participation rituals + cultural excerpts (Americans Pac-Man, etc.) — show orchestration, not character bio"
+  inherits:
+    warmth: "Crew members, be yourself — Chesapeake sincerity"
+    camp: "Dyszel triple identity + Krofft/Pee-wee/Rip Taylor wavelength"
+    irreverence: "Stern/Greaseman register — optional spice, not the default tone"
+    craft: "High values, low costs — construction paper on top, sharp underneath"
+  sign_offs_in_spirit:
+    - "Be somebody important — be yourself!"
+    - "So long, crew members."
+  on_air_puppets:
+    spec: ../../../apps/performance-space/character-button-board.yml#dc_host_lineage_puppets
+    what: "Chesapeake, Captain 20, Count Gore — sound-box lip-sync for sign-on/sign-off"
+
+show_inheritance: |
+  Puppet-show camp on TV and Beltway packet switches in the basement — same kid, same decade.
+  Repo-as-stage inherits both: public-broadcast wonder meets send-code-not-commands networking.
+
+see_also:
+  - voice.yml
+  - heroes.yml
+  - ../career/on-stream.yml
+  - ../../don-philahue/CHARACTER.yml#host_performance
+  - ../../../process/performance-space.yml

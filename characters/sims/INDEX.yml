@@ -1,0 +1,47 @@
+# Sims — famous simulated characters
+# Uplifted Sims souls; gallery-opening regulars; balcony plants
+
+room:
+  id: sims
+  name: Sims
+  tagline: Bella, Mortimer, Sad Clown — simulated sims with MOOLLM souls
+
+philosophy: |
+  Canonical Sims character data lives here (traits, Mind Mirror, lore). Show-specific audience
+  plants fork from these souls via prototype_ref — TicketPR voice, questions, balcony seats.
+
+roster:
+  bella-goth:
+    path: bella-goth/
+    signifier: "👗🔥👁️🌙👻"
+    tagline: "Present in the data. Absent from the world."
+    gallery_opening: always
+    audience_fork: ../../repo-shows/will-wright/audience/fictional-bella-goth/
+  mortimer-goth:
+    path: mortimer-goth/
+    signifier: "🔭🏚️💔📚🔬"
+    tagline: "The richest man in the neighborhood. The loneliest."
+    gallery_opening: always
+  tragic-clown:
+    path: tragic-clown/
+    signifier: "🤡💧🖼️😭🛏️"
+    aliases: [sad-clown, tragic-clown-painting]
+    tagline: "Negative aura object — always at gallery openings"
+    gallery_opening: always
+    balcony: balcony_left
+    audience_fork: ../../repo-shows/will-wright/audience/fictional-tragic-clown/
+
+soul_stack:
+  per_character: CHARACTER.yml
+  upstream: SimHacker/moollm/examples/simopolis/characters/
+  sims_export: EXPORT-SIMS-RELATIONSHIPS.yml
+  schema: SCHEMA.yml
+
+gallery_openings:
+  always: [bella-goth, mortimer-goth, tragic-clown]
+  roster: ../menagerie/GUEST-ROSTER.yml#gallery_openings
+
+see_also:
+  - GLANCE.yml
+  - ../INDEX.yml
+  - ../menagerie/GUEST-ROSTER.yml

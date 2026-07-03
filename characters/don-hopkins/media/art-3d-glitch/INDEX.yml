@@ -1,0 +1,29 @@
+# Art 3D Glitch — Frankinsideout
+
+room:
+  id: art-3d-glitch
+  category: art
+  subcategory: 3d-glitch
+  parent: ../CATALOG-INDEX.yml
+  count: 7
+
+artifacts:
+  - file: art-3d-glitch-blender-inverted-normals-torso.png
+    sidecar: art-3d-glitch-blender-inverted-normals-torso.yml
+  - file: art-3d-glitch-blender-face-eye-bones-closeup.png
+    sidecar: art-3d-glitch-blender-face-eye-bones-closeup.yml
+  - file: art-3d-glitch-blender-mesh-explosion-face.png
+    sidecar: art-3d-glitch-blender-mesh-explosion-face.yml
+  - file: art-3d-glitch-blender-dome-forehead-hdri.png
+    sidecar: art-3d-glitch-blender-dome-forehead-hdri.yml
+  - file: art-3d-glitch-reference-inside-out-man-comic.png
+    sidecar: art-3d-glitch-reference-inside-out-man-comic.yml
+  - file: art-3d-glitch-reference-hellraiser-cenobites-street.png
+    sidecar: art-3d-glitch-reference-hellraiser-cenobites-street.yml
+  - file: art-3d-glitch-reference-hellraiser-pinhead-closeup.png
+    sidecar: art-3d-glitch-reference-hellraiser-pinhead-closeup.yml
+
+spec:
+  - art-3d-glitch.yml
+
+note: "Not AI Generated!"

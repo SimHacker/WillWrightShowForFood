@@ -18,7 +18,7 @@ Gallium Studios (Will & Lauren Elliott's studio behind Proxi).
 
 ## The hooks
 
-### 1. Show seed: `repo-shows/heather-steve-alvey/`
+### 1. Show seed: `repo-shows/heather-and-steve-alvey/`
 walk the repo on air and build from the seed.
 
 ### 2. SimSlice / SliceCity
@@ -27,5 +27,5 @@ SimCity running INSIDE The Sims (the shipped precedent for Will's data-portabili
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
-- Show seed: [`repo-shows/heather-steve-alvey/`](../../repo-shows/heather-steve-alvey/)
+- Show seed: [`repo-shows/heather-and-steve-alvey/`](../../repo-shows/heather-and-steve-alvey/)
 - [`CHARACTER.yml`](CHARACTER.yml)

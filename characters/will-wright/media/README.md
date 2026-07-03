@@ -38,6 +38,34 @@ Nintendo. [`will-wright-and-miyamoto-simcity-snes.png`](will-wright-and-miyamoto
 
 Conference photo with colleagues. [`will-wright-conference-photo.png`](will-wright-conference-photo.png)
 
+## Stupid Fun Club — Ant Farm Revolution (Fry's)
+
+![Ant Farm Revolution — Uncle Milton, from the mind of Will Wright, Stupid Fun Club](ant-farm-revolution-frys-box.png)
+
+**Ant Farm Revolution** — Will Wright designed with **Uncle Milton**: gel ant habitat with **ceiling
+projector** (giant ant shadows on your ceiling). Stupid Fun Club badge on box. Don found it at
+**Fry's** — cowboy-themed Silicon Valley retail archaeology, all now gone.
+[`ant-farm-revolution-frys-box.png`](ant-farm-revolution-frys-box.png) · [`ant-farm-revolution-frys.yml`](ant-farm-revolution-frys.yml) ·
+[Fry's gallery](../../don-hopkins/media/frys-electronics/INDEX.yml)
+
+## Micropolis — open-source SimCity lineage
+
+Don's screenshot gallery: **HyperLook on Sun** · **OLPC XO** · **HAR** constructionist demo ·
+**PacBot** Python plug-in · Dutch **taartmenu** · Facebook app.
+
+[`../../don-hopkins/media/micropolis-gallery/`](../../don-hopkins/media/micropolis-gallery/INDEX.yml)
+
+![PacBot on road — Micropolis](../../don-hopkins/media/micropolis-gallery/openlaszlo-pacbot-on-road-nl.png)
+
+## Transmogrifier — Mona Lisa pushpins (UV test)
+
+![Mona Lisa pushpins — Transmogrifier + 3DS Max UV exporter test](transmogrifier-mona-lisa-pushpins.png)
+
+Giant pushpins with **Mona Lisa** texture-mapped heads — pipeline test for **Transmogrifier**
+and **3D Studio Max** UV layer export back onto Sims object surfaces.
+[`transmogrifier-mona-lisa-pushpins.yml`](transmogrifier-mona-lisa-pushpins.yml) ·
+[`sims-series-transmogrifier-story.md`](sims-series-transmogrifier-story.md)
+
 ## The Sims — before it was "The Sims"
 
 ![Box-cover mockup: "Home Tactics: The Experimental Domestic Simulator" by Maxis](home-tactics-box-cover-mockup.png)
@@ -103,6 +131,42 @@ family (not BattleBots™ TV).
 
 ---
 
+## Computer History Museum
+
+![Maxis retail boxes at the Computer History Museum — The Sims, SimCity, SimEarth, SimIsle](computer-history-museum-maxis-display.png)
+
+**The Sims** and other **Maxis** games in the **Computer History Museum** display case — SimCity
+(1989) placard credits Will Wright, Jay Forrester, and the road to *The Sims*. Don: *We made it!*
+[`computer-history-museum-maxis-display.png`](computer-history-museum-maxis-display.png) · [`computer-history-museum-maxis-display.yml`](computer-history-museum-maxis-display.yml)
+
+---
+
+## Maxis Emeryville — Suite 6 door
+
+![Maxis Suite 6 door — Don visiting Ocean Quigley](../../don-hopkins/media/maxis-emeryville/maxis-suite-6-door.png)
+
+Don's visit to **Ocean Quigley** and others at the **Maxis** office in **Emeryville** — Suite 6,
+Maxis logo on the glass, **SimCity** poster inside. *SIX AM spelled backwards!*
+[`../../don-hopkins/media/maxis-emeryville/maxis-suite-6-door.yml`](../../don-hopkins/media/maxis-emeryville/maxis-suite-6-door.yml)
+
+---
+
+## Snapshots from Will
+
+![HIGH WHILE PROGRAMMING — UMich study flyer on corkboard](high-while-programming-flyer.png)
+
+**HIGH WHILE PROGRAMMING** — University of Michigan observational study flyer (Python + cannabis,
+$80 compensation). **Will Wright** snapped it on a corkboard and sent it to Don.
+[`high-while-programming-flyer.png`](high-while-programming-flyer.png) · [`high-while-programming-flyer.yml`](high-while-programming-flyer.yml)
+
+![Gallium party — Pac-Man Battle Royale with Will Wright at GDC Alameda arcade](gallium-gdc-alameda-pacman-will-wright.png)
+
+**Gallium party, GDC** — **Pac-Man Battle Royale** cocktail cabinet at an Alameda arcade.
+Don playing with **Will Wright** (Gallium Studios party).
+[`gallium-gdc-alameda-pacman-will-wright.png`](gallium-gdc-alameda-pacman-will-wright.png) · [`gallium-gdc-alameda-pacman-will-wright.yml`](gallium-gdc-alameda-pacman-will-wright.yml)
+
+---
+
 ## Sub-galleries (markdown + co-located PNGs)
 
 Longer scrolls with many figures — files sit alongside this README:
@@ -119,13 +183,16 @@ Longer scrolls with many figures — files sit alongside this README:
 | Theme | Files |
 |-------|-------|
 | SimCity / Nintendo | `will-wright-and-miyamoto-simcity-snes.png` |
+| Computer History Museum | `computer-history-museum-maxis-display.png` · [`computer-history-museum-maxis-display.yml`](computer-history-museum-maxis-display.yml) |
 | Events | `will-wright-conference-photo.png` |
 | Pre-Sims naming | `home-tactics-box-cover-mockup.png` |
 | Promo sequence | `will-wright-holding-sim.png` · `sim-picking-wills-nose.png` · `will-wright-eating-sim.png` |
 | Dev art / tools | `sims-programmer-art-1.png` · `sims-programmer-art-2.png` · `rug-o-matic-samples.png` · `sims-warning-sticker.png` |
 | Simlish origins audio | `steve-and-gerri-simlish-adlib.wav` → [source bundle](../sources/steve-and-gerri-simlish-adlib/README.md) |
 | Robot meetup | `robot-fight-la-1.png` … `robot-fight-la-8-controller.png` |
-| Space junk | → [`russian-space-junk.md`](russian-space-junk.md) |
+| Snapshots from Will | `high-while-programming-flyer.png` · [`high-while-programming-flyer.yml`](high-while-programming-flyer.yml) |
+| Gallium / GDC | `gallium-gdc-alameda-pacman-will-wright.png` · [`gallium-gdc-alameda-pacman-will-wright.yml`](gallium-gdc-alameda-pacman-will-wright.yml) |
+| Space junk | → [`russian-space-junk.md`](russian-space-junk.md) — **Oakland**; 16 photos now on disk |
 | Physical art | → [`artwork.md`](artwork.md) |
 
 ---

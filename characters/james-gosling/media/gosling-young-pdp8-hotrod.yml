@@ -61,6 +61,12 @@ repo_show:
       - "From toggling switches here to SunDew/NeWS/Java — what carried?"
   show_seed: ../../repo-shows/james-gosling/README.md
   character_readme: ../README.md
+  face_puppet:
+    label: "Game Gosling at the PDP-8"
+    spec: ../../../apps/performance-space/faceball-construction-set.yml#guest_characters
+    modes:
+      - "James puppeteers live — webcam through paste-on young-Gosling portrait"
+      - "Or records offline session → submits clip to repo"
 
 see_also:
   - { path: ../README.md, why: "Guest hub — brutalist portrait + invitation links" }

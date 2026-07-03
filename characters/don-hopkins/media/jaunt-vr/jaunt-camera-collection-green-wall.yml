@@ -1,0 +1,14 @@
+# Sidecar — jaunt-camera-collection-green-wall.png
+
+artifact:
+  file: jaunt-camera-collection-green-wall.png
+  slug: jaunt-camera-collection-green-wall
+  room: jaunt-vr
+  what: Jaunt VR camera rig — camera collection green wall
+  era: 2016-2017
+  sidecar_of: jaunt-camera-collection-green-wall.png
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"

@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-purple-piano-living-room.png
+
+artifact:
+  file: transmogrifier-purple-piano-living-room.png
+  slug: transmogrifier-purple-piano-living-room
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — purple piano living room
+  era: 2000-2002
+  sidecar_of: transmogrifier-purple-piano-living-room.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

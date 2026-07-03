@@ -184,7 +184,7 @@ steam_community_guides:
 # FEDERATION PRINCIPLE (Heather & Steve show)
 non_extractive_lift:
   rule: "Send fans to SimFreaks / ZombieSims subscriptions — Micropolis Home is rails, not a loot box"
-  show: ../../repo-shows/heather-steve-alvey/SHOW.yml#support_them
+  show: ../../repo-shows/heather-and-steve-alvey/SHOW.yml#support_them
 
 see_also:
   - micropolis-home/README.md

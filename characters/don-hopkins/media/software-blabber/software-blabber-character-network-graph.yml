@@ -1,0 +1,11 @@
+# Sidecar — software-blabber-character-network-graph.png
+
+artifact:
+  file: software-blabber-character-network-graph.png
+  slug: software-blabber-character-network-graph
+  category: software
+  subcategory: blabber
+  what: "Blabber dialogue network — Kermit, Homer, Spider-Man"
+  sidecar_of: software-blabber-character-network-graph.png
+
+note: "Not AI Generated!"

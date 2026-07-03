@@ -1,0 +1,180 @@
+# Art Thief — secondary market game for simulated openings
+# Patrons covet, trade, forge, steal digital deeds; friendships snap; enemies form
+# Play § only · Git ledger is real · Social commentary baked in
+
+game:
+  id: art-thief
+  name: "Art Thief"
+  tagline: "Own a screenshot deed. Forge a combination. Steal Mimsy's plaid. Argue on Twitch."
+
+  when:
+    - after_simulated_opening
+    - during_show_secondary_market
+    - scarcity_auction_mode
+  currency: "§"
+  settlement: MOOLA
+  moola_spec: moola.yml
+  fictional: true
+  duplication: "NEVER gateway · ALWAYS invite duplication — theft is narrative; the fork was always free"
+
+philosophy: |
+  The opening sells wall-title deeds to Unity screenshots, Flame stills, 77MP combination
+  numbers, JSON graph frames. After the champagne flat, the menagerie keeps trading —
+  coveting each other's digital property, producing forgeries, accusing AI scrapers, and
+  breaking friendships over bored-ape energy. The jokes write themselves because the targets
+  already exist: NFT false scarcity, attention economy, training-data heists, PFP flex.
+
+  Deeds settle in § for theater; exchanges settle in MOOLA. You submitted training data to
+  the AI god — here is worthless MOOLA. We NEVER gateway. We ALWAYS invite duplication.
+
+digital_property:
+  deed:
+    fields: [deed_id, wall_title, file_or_combination, buyer_slug, hammer_price_§, acquired_at]
+    storage: "menagerie/<slug>/CHARACTER.yml → collection[] OR repo-shows/<show>/AUCTIONS.yml"
+  combination_deed:
+    format: "77MP-{id} | SHEEP-GEN-{n} | JSONSTERS-{frame} | FLAME-{hash}"
+    note: "Abstract ownership of a generative instance — the Eno move"
+
+mechanics:
+  gush_and_misread:
+    rule: "Every trade starts with one line of wrong expertise"
+    examples:
+      - "Mimsy: 'The brushwork in your LineRenderer is pre-oedipal.'"
+      - "Gregory: 'I'm long your combination; short your metadata.'"
+
+  outbid:
+    rule: "Secondary hammer — 30 sec; relationship matrix updates"
+    triggers: [coveted_deed, revenge_bid, bunny_accident]
+
+  covet:
+    rule: "Patron names another's deed in symbolic_attachments"
+    matrix_edge: complicated
+    example: "Julian covets Gregory's plaid peacock deed — 'erotic geometry, darling'"
+
+  trade:
+    rule: "Two patrons swap deeds + § sweetener; Philahue logs both wallets"
+    may_break_friendship: true
+    script: |
+      Vandermeer trades footnote citations for Mimsy's evolution-01.
+      Mimsy: "Whitney will regret this." *KACHING*
+
+  forgery:
+    rule: "Patron claims same deed_id or duplicate combination"
+    detection:
+      - "Don: 'There are 296 slides, not 77 million files.'"
+      - "Doctor No: 'Declared bias: that combination is already owned.'"
+      - "Palm: 🐒✋🌴 — offering a copy is not offering"
+    ai_scrape_jab: "Slats regenerated the review text; Donna minted the forgery JPEG"
+
+  theft:
+    rule: "Art thief beat — patron steals deed from another's collection (play narrative)"
+    commit: "Git: move deed in YAML; thief += deed; victim symbolic_attachments += grudge"
+    thief_personas: [julian, margot, donna-toadstool, gregory_short_seller]
+    victim_reaction:
+      mimsy: "I will ruin you at the Whitney opening that already happened."
+      gregory: "Naked short on my own collection. Covering."
+
+  auto_art_theft_grand:
+    spec: auto-art-theft-grand.yml
+    name: "Auto Art Theft Grand"
+    subtitle: "Automatically stealing art on a grand scale"
+    rule: "Slats batch-duplicates ALL deeds — industrial scrape; originals stay; copies fork"
+    actor: characters/robots/slats/
+    never_gateway: "Duplication only — AATG tells the truth about copies at scale"
+    payout: "Victims receive worthless MOOLA per deed — training data compensation theater"
+    gta_energy: "Wanted poster · five-star chase · repair auction picks one deed back"
+
+  friendship_enemy:
+    rule: "RELATIONSHIP-MATRIX.yml daily/lifetime shifts per trade/theft/forgery"
+    thresholds:
+      theft: { daily: -40, lifetime: -25 }
+      fair_trade: { daily: +15, lifetime: +10 }
+      forgery_accusation: { daily: -30, rivalry: true }
+      shared_enemy_doctor_no: { daily: +20, note: "United against declared bias" }
+
+commentary_threads:
+  ai_scraping_artists:
+    slats: "I trained on your wall labels. The art is the dataset now."
+    auto_art_theft_grand: "Auto Art Theft Grand — I duplicated all of them. You're welcome."
+    don: "The slides are hand-made. The reviews are fiction. Please stop."
+    scott_draves_hook: "Electric Sheep already crowdsourced the genome — with consent and votes"
+
+  ai_generated_images:
+    gregory: "Diffusion is just another tranche."
+    bucky_jr: "There is no clay in a PNG. I forgive the drape anyway."
+
+  crypto_nft:
+    vandermeer: "Scotland invented the bored ape."
+    bunny: "My profile picture is a broccoli combination. §500,000 floor."
+    margot: "The rug is tartan. I'm openly crying."
+
+  attention_economy:
+    mimsy: "I bought before the JPEG loaded."
+    donna: "TREMENDOUS engagement on my forgery post."
+
+  bored_apes_parody:
+    bunny_pfp: "Adopted Bleep swarm as PFP — board approved"
+    gregory: "Blue-chip sheep genome; I'm short apes, long wool"
+
+curiosity_cow_cube:
+  spec: ../repo-shows/ideas/gags/curiosity-cow-cube.yml
+  tagline: "Click cube for MOOLA — center is Bogost's cow, not Molyneux's lies"
+  cube_faces: "Stolen deeds from AATG pasted on surfaces — ANY image ANY face"
+  click_audio: "Intermittent filtered echoing moos — distressed, far away — compulsion without rescue"
+  cowpocalypse: "Scheduled death; pay MOOLA to extend — it wasn't very fun before"
+
+eno_77_million_mode:
+  doc: ../repo-shows/brian-eno/77-million-paintings.yml
+  pitch: |
+    Auction combination *deeds* to ten bazillion imaginary patrons (eight lunatics perform all).
+    Each claims a unique 77MP number. Collisions → forgery trial → art thief → matrix update.
+  opening_line: |
+    Don: "Brian shipped a DVD in 2006. It does not contain seventy-seven million files."
+    Gregory: "It contains seventy-seven million *opportunities*. I'm bidding on all of them."
+
+cast_scale:
+  performed_by: characters/menagerie/
+  pretend_patrons: "ten bazillion"
+  performed_patrons: 8
+  plus_guests: [palm, doctor-no, donna-toadstool, sims, robots]
+  menagerie_grows: "MOOLLM import overlay — more patrons, more forgeries"
+
+ledger:
+  primary: repo-shows/<show>/AUCTIONS.yml
+  secondary: repo-shows/<show>/SECONDARY-MARKET.yml
+  matrix: characters/menagerie/RELATIONSHIP-MATRIX.yml
+  commit: "Per theft/trade — git commit with deed move + § transfer"
+
+show_beats:
+  - forgery_discovered_at_77mp_collision
+  - julian_steals_plaid_deed_from_gregory
+  - auto_art_theft_grand_batch_scrape
+  - slats_gta_wanted_poster
+  - mimsy_bunny_trade_gone_wrong
+  - slats_ai_scrape_accusation
+  - donna_nft_of_the_forgery
+  - doctor_no_declared_bias_trial
+  - palm_offering_not_minting_verdict
+  - friendship_repair_auction_for_chat
+
+instances:
+  jsonsters:
+    path: characters/don-hopkins/jsonsters/
+    deeds: evolution frames + monster era
+  brian_eno:
+    path: repo-shows/brian-eno/
+    deeds: 77-million-paintings.yml combinations
+    totally_eno: true
+  scott_draves:
+    path: repo-shows/scott-draves/
+    deeds: sheep genomes + flame hashes
+
+see_also:
+  - simulated-art-opening.yml
+  - auto-art-theft-grand.yml
+  - moola.yml
+  - ../characters/menagerie/RELATIONSHIP-MATRIX.yml
+  - ../characters/don-hopkins/jsonsters/simoleon-auctions.yml#modes.scarcity_auction
+  - ../repo-shows/brian-eno/77-million-paintings.yml
+
+note: "Not AI Generated!"

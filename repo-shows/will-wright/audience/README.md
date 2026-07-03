@@ -32,7 +32,7 @@ Full constitution: [`../../process/ticket-pr.yml`](../../process/ticket-pr.yml) 
 
 | Level | How | Persists? |
 |-------|-----|-----------|
-| Easiest | Comment on the **Hacker News** thread when we announce | ephemeral |
+| Easiest | Comment on the **Hacker News** thread when we announce | ephemeral → curated into `audience/hn-<user>/` with [provenance schema](../../schemas/question-provenance.yml) |
 | Easy | **[Open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues)** — discussion, answers, 👍 votes | **in repo (GitHub)** |
 | **TicketPR** | Fork → copy [`_TEMPLATE/audience/`](../../_TEMPLATE/audience/README.md) → `audience/<you>/` → PR | **on the record** |
 

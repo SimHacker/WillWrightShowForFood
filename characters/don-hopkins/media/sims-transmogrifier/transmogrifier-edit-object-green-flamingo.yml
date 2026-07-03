@@ -1,0 +1,18 @@
+# Sidecar — transmogrifier-edit-object-green-flamingo.png
+
+artifact:
+  file: transmogrifier-edit-object-green-flamingo.png
+  slug: transmogrifier-edit-object-green-flamingo
+  room: sims-transmogrifier
+  what: Sims Transmogrifier — edit object green flamingo
+  era: 2000-2002
+  sidecar_of: transmogrifier-edit-object-green-flamingo.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+
+see_also:
+  - ../../../will-wright/media/sims-series-transmogrifier-story.md
+  - ../pie-menus/INDEX.yml
+
+note: "Not AI Generated!"

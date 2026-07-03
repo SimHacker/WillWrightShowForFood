@@ -3,7 +3,7 @@ status: draft
 character_id: steve-alvey
 public: true
 consent: not_yet_asked
-show_seed: repo-shows/heather-steve-alvey/
+show_seed: repo-shows/heather-and-steve-alvey/
 ---
 
 # Repo Show invitation — Steve Alvey

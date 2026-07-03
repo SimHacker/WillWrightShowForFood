@@ -24,16 +24,21 @@ invitation:
 memorial:
   mode: represent_and_discuss
   rule: "Represent and discuss his documented work and stories. Do not interview, do not speak as him, invent no inner life or quotes."
+  show_seed: ../../repo-shows/remembering-mark-weiser.yml
   who_can_discuss:
-    - { who: don-hopkins, why: "Co-author with Weiser on the CHI'88 pie-menu paper (Callahan, Hopkins, Weiser, Shneiderman)" }
+    - { who: don-hopkins, why: "Weiser's student at UMD and close friend until his death; co-author on the CHI'88 pie-menu paper (Callahan, Hopkins, Weiser, Shneiderman); primary source for the Ubik→ubicomp story" }
+    - { who: david-rosenthal, why: "Knew Mark; LOCKSS co-founder with Weiser's widow Vicki Reich; anchor of the Ubik/ubicomp reading-group thread", consent: not_yet_asked }
+    - { who: vicki-reich, why: "Mark Weiser's widow; LOCKSS co-founder — warmly welcome, David and Vicki's call together", consent: not_yet_asked }
     - { who: ben-shneiderman, why: "Co-author on the same CHI'88 pie-menu paper" }
     - { who: brad-myers, why: "HCI peer — UI tools and techniques era" }
   draw_on_for_shows:
     - "Coined **ubiquitous computing** (ubicomp); 'The Computer for the 21st Century' (Scientific American, 1991)"
     - "**Calm technology** — tech that informs without demanding attention; tabs / pads / boards"
+    - "Named ubicomp in reference to PKD's **Ubik** — inverted the metered-everyware dystopia into calm tech (see pkd-lem-ai-sf.md — the PKD·Lem·AI·SF reading group lives here)"
     - "Xerox PARC CTO; garbage-collection and systems research"
     - "Co-author of the **CHI'88 pie-menu empirical study** with Don, Jack Callahan, Ben Shneiderman"
     - "Drummer for **Severe Tire Damage** — the first band to perform live on the Internet (1993)"
+    - "**Living legacy** — the Mark D. Weiser Excellence in Computing Scholarship (UC Berkeley EECS) and the calm-tech torchbearers (Gregory Abowd, Amber Case). See legacy.yml + abowd-internet-of-materials.md"
 
 bio:
   summary: "**Mark Weiser** (1952–1999) — father of **ubiquitous computing** and **calm technology**, and CTO of Xerox PARC. His 1991 'The Computer for the 21st Century' imagined computing woven invisibly into everyday life (tabs, pads, boards). He co-authored the **CHI'88 empirical comparison of pie vs linear menus** with Jack Callahan, Don Hopkins, and Ben Shneiderman — and drummed for **Severe Tire Damage**, the first band to play live on the Internet."
@@ -47,6 +52,11 @@ sources:
 
 see_also:
   - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
+  - { path: ../../repo-shows/remembering-mark-weiser.yml, why: "Memorial show seed — async clips cut together" }
+  - { path: pkd-lem-ai-sf.md, why: "PKD·Lem·AI·SF reading group — Ubik→ubicomp→calm-tech seed; feeds this memorial, David's solo, and Will's show" }
+  - { path: pkd-lem-ai-sf.yml, why: "Companion data + claim ledger" }
+  - { path: legacy.yml, why: "Living legacy — Weiser Scholarship honor roll + calm-tech torchbearers + explainer-video citations" }
+  - { path: abowd-internet-of-materials.md, why: "Gregory Abowd's 2019 Berkeley talk — Weiser's vision compounding into computational materials" }
   - { path: ../don-hopkins/career/work-history.yml, why: "CHI'88 pie menus — Callahan, Hopkins, Weiser, Shneiderman" }
   - { path: ../ben-shneiderman/, why: "Co-author who can discuss him on air" }
   - { path: ../../schemas/portrayal-standards.yml#memorial_mode, why: "How memorial guests are handled" }

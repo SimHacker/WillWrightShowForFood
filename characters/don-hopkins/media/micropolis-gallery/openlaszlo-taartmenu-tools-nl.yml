@@ -1,0 +1,18 @@
+# Sidecar — openlaszlo-taartmenu-tools-nl.png
+
+artifact:
+  file: openlaszlo-taartmenu-tools-nl.png
+  slug: openlaszlo-taartmenu-tools-nl
+  room: micropolis-gallery
+  what: openlaszlo taartmenu tools nl
+  era: 1991 HyperLook through 2010s Facebook
+  sidecar_of: openlaszlo-taartmenu-tools-nl.png
+
+gags:
+  - ../../../repo-shows/ideas/gags/micropolis-gallery.yml
+  - ../../../repo-shows/ideas/gags/pacbot-eats-traffic.yml
+
+see_also:
+  - micropolis-gallery.yml
+
+note: "Not AI Generated!"

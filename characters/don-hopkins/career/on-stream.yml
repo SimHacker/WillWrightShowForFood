@@ -28,5 +28,6 @@ voice:
 pairs_with: ../../don-philahue/
 
 see_also:
+  - ../portrayal/upbringing.yml
   - ../README.md
   - project-threads.yml
