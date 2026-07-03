@@ -28,4 +28,8 @@ Not "toy blocks" — full Scheme power with visual syntax.
 
 Full patch-cord lineage: [`../../process/trails/visual-programming-patch-cord.md`](../../process/trails/visual-programming-patch-cord.md)
 
-Control vs data flow (SimAntics angle): [`../don-hopkins/drakon-control-flow-vs-dataflow.md`](../don-hopkins/drakon-control-flow-vs-dataflow.md)
+Control vs data flow (SimAntics angle): [`drakon-control-flow-vs-dataflow.md`](drakon-control-flow-vs-dataflow.md)
+
+Excel / dimensionality debate (HN 22978454): [`visual-programming-excel-and-dimensionality.md`](visual-programming-excel-and-dimensionality.md)
+
+Yahoo Pipes successors (HN 40841980): [`yahoo-pipes-successors.md`](yahoo-pipes-successors.md)

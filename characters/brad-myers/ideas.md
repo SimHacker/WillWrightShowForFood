@@ -18,6 +18,7 @@ Brad A. Myers — CMU HCI professor; Garnet, Peridot, C32; *All the Widgets*; VP
 - CMU 05-640 Interaction Techniques — guest lectures, Panopto archive
 - Pick, Click, Flick! (ixtbook.com) — Brad's interaction-techniques book
 - Visual programming taxonomy — spreadsheets as VPL (CHI '86 / JVLC 1990)
+- HN 22978454 — Don defended Excel-as-VPL; cited C32 + Watch What I Do — [`../don-hopkins/visual-programming-excel-and-dimensionality.md`](../don-hopkins/visual-programming-excel-and-dimensionality.md)
 ## The hooks
 
 ### 1. Show seed: `repo-shows/brad-myers/`
@@ -39,6 +40,9 @@ spreadsheets as VPL (CHI '86 / JVLC 1990)
 
 ### 7. C32
 spreadsheet constraints by demonstration (Garnet-based, 1991)
+
+### 8. HN metaobject thread — Excel vs Ruby popularity contest
+Don's dimensionality definition + C32 cite on [HN 22978454](https://news.ycombinator.com/item?id=22978454) — live debate material with Brad
 
 ## Sources (public)
 

@@ -112,6 +112,7 @@ guests:
   douglas-engelbart: { invitation_status: memorial, note: "deceased (1925–2013) — MEMORIAL MODE: represent + discuss; NLS/mouse/hypertext/Mother of All Demos; discussants: Ted Nelson, Alan Kay, Yoot Saito" }
   david-levitt: { invitation_status: draft, path: characters/david-levitt/, show_seed: repo-shows/REPO-SHOWS.yml#music-and-theory.yml, note: "Don's good friend + collaborator. Co-founder/CEO Pantomime Corp (Don = Chief Architect; Pantomime's JSON object system → Don's JSON/YAML config → MOOLLM); ConnectedTV (ConnectedMedia); Bounce + Interval Research; VPL Research (VR birth); MIT PhD on AI music/jazz improv (advised by Marvin Minsky); Lynn Conway VLSI class (w/ James Clark, Guy L. Steele); in Cynthia Solomon's video trove. Shows: music-and-theory w/ Jerry Martin + a Pantomime/Interval episode" }
   david-ahl: { invitation_status: facebook_friend, note: "Creative Computing founder; Don's Facebook friend; patron saint of wonderful compilations — Best of CC Vol. 2 (Gilbert Shelton cover) in characters/david-ahl/media/" }
+  david-henkel-wallace: { invitation_status: draft, note: "Cygnus co-founder (Gumby, BFD/binutils); TLGnet w/ Tom Jennings; Leela AI — characters/david-henkel-wallace/" }
   david-rosenthal: { invitation_status: not_yet_asked }
   david-ungar: { invitation_status: draft, show_seed: repo-shows/david-ungar-self-moollm.yml, priority: send_now, note: "Reflecting on Self: Narcissa's Mirror; Self × MOOLLM; Conscientious Objectors (ScriptX × Self at Kaleida)" }
   drew-carey: { invitation_status: dream_guest, note: "DREAM GUEST: Whose Line + Price Is Right + Sims NPC mythology; public-figure sketch only" }
@@ -133,6 +134,7 @@ guests:
   jens-monig: { invitation_status: not_yet_asked, show_seed: repo-shows/jens-monig/ }
   jennell-jaquays: { invitation_status: memorial, note: "MEMORIAL MODE (1949–2024): D&D legend, id Software level design. Friend-phone clips from colleagues welcome — no live interview required." }
   jaron-lanier: { invitation_status: not_yet_asked, note: "VPL co-founder; Body Electric → Bounce rights chain w/ David Levitt; patch-cord trail — characters/jaron-lanier/" }
+  john-carmack: { invitation_status: draft, note: "id/Oculus; Meta departure HN 34022484 — Don wit + Dynabook/GRiD tangent; light show value — characters/john-carmack/" }
   jason-shankel: { invitation_status: not_yet_asked, show_seed: repo-shows/jason-shankel/ }
   jean-piaget: { invitation_status: memorial, note: "MEMORIAL MODE (1896–1980): genetic epistemology; constructivism + stages of cognitive development; the developmental root of Papert's constructionism. Discussants: Alan Kay, Walter Bender, Brian Harvey, Ken Kahn, Don" }
   ken-kahn: { invitation_status: not_yet_asked, show_seed: repo-shows/ken-kahn/ }
@@ -166,6 +168,7 @@ guests:
   peter-norvig: { invitation_status: draft, show_seed: repo-shows/peter-norvig/, note: "Director of Research @ Google; AIMA (w/ Stuart Russell) + PAIP; 'Teach Yourself Programming in Ten Years'; Don's friend, writing an AI book + offered a chapter on Don's work; open-topic show (MOOLLM/skills/AI) with Henry + Leela colleagues" }
   rebecca-heineman: { invitation_status: not_yet_asked, note: "Women & trans pioneers — interview while living: Space Invaders champion, Interplay co-founder; Don's Apple IIgs SimCity source thread" }
   richard-bartle: { invitation_status: not_yet_asked, show_seed: repo-shows/richard-bartle/ }
+  richard-stallman: { invitation_status: draft, note: "Copyleft envelope 1984 — characters/richard-stallman/" }
   seymour-papert: { invitation_status: memorial, note: "MEMORIAL MODE (1928–2016): worked with Piaget; MIT AI Lab co-founder; Logo + the turtle; coined constructionism; Mindstorms (1980) → Scratch/OLPC/LEGO Mindstorms. Discussants: Walter Bender, Brian Harvey, Ken Kahn, Jens Mönig, Alan Kay, Don" }
   scott-draves: { invitation_status: draft, show_seed: repo-shows/scott-draves/, note: "Electric Sheep, Fractal Flame (1992); simulated art opening invite in invitation.md; media/ — 6Heads photos + flam3 paper TODO (Don has PDF)" }
   scott-adams: { invitation_status: draft, show_seed: repo-shows/scott-adams/, priority: send_now, note: "Warm verified — HN + Jan 2026 MOOLLM; adventure-as-data → compiler; NOT Dilbert" }
@@ -190,6 +193,7 @@ guests:
   stephen-wolfram: { invitation_status: draft, reading_show: repo-shows/moollm-readings/, note: "Mathematica, NKS, Wolfram Language, Wolfram Physics Project — invite for MOOLLM Readings + CA/complexity threads; peers Margolus, Crutchfield, Norvig" }
   stone-librande: { invitation_status: not_yet_asked }
   tom-demeyer: { invitation_status: not_yet_asked, note: "Image/ine @ STEIM w/ Steina Vasulka; realtime video instrument; Isadora lineage — characters/tom-demeyer/" }
+  tom-jennings: { invitation_status: draft, note: "FidoNet; TLGnet ISP w/ David Henkel-Wallace; Phoenix BIOS; Wired web; artist — characters/tom-jennings/" }
   ted-nelson: { invitation_status: finished, show_seed: repo-shows/ted-nelson/, note: "Têd-à-Têd Talk — public invitation ready to send, tag-team with Ted Selker; Hypertext/Xanadu; discussant for Engelbart + Hugh Daniel memorials" }
   ted-selker: { invitation_status: draft, show_seed: repo-shows/ted-selker/, priority: send_now, note: "TrackPoint, considerate computing, NPUC Multiplayer SimCity; PIXIE; pair w/ Ted Nelson Têd-à-Têd; resurrect NPUC '96 Nelson tape" }
   terry-winograd: { invitation_status: not_yet_asked, show_seed: repo-shows/terry-winograd/, media: "characters/terry-winograd/media/ — CS547 339-talk catalog (cs547-ARCHIVE.md)" }

@@ -25,7 +25,7 @@ bio:
   summary: "**Steve Kommrusch** — Senior AI Scientist at **Leela AI**, applying deep learning to hard problems including **automatic program repair** and **verifiable program equivalence** (his CSU PhD, 2022: VRepair, graph-to-sequence proofs, S4Eq; contributor to OpenNMT-py). A former silicon/CPU/chip-design architect at **HP, National Semiconductor, and AMD**. BSc (U Illinois), **MSc (MIT, 1989)**, PhD (Colorado State). At Leela he works on a learning approach inspired by **Piaget's schemas** — a direct bridge to Gary Drescher's schema-mechanism lineage. Don's colleague at Leela."
 
 leela_colleagues:
-  with: ["henry-minsky", "milan-singh-minsky", "isabella-struckman", "don-hopkins"]
+  with: ["henry-minsky", "david-henkel-wallace", "milan-singh-minsky", "isabella-struckman", "don-hopkins"]
   schema_link: "Leela's Piaget-schema approach connects to gary-drescher (Made-Up Minds) and the constructionist lineage (Piaget → Papert → Minsky)."
 
 show_suggestions:

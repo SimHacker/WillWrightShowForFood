@@ -17,7 +17,9 @@ Real-time visual programming for music, video, and VR — the lineage Don docume
 | [**Jaron Lanier**](../../characters/jaron-lanier/README.md) | **VPL Research** — **Body Electric** (original Bounce); rights to Hookup/Body Electric |
 | [**Tom Demeyer**](../../characters/tom-demeyer/README.md) | **Image/ine** @ STEIM (1996–2001) — realtime video instrument; plugin architecture |
 | [**Don — VPL taxonomy comment**](../../characters/don-hopkins/visual-programming-taxonomy.md) | Boxes/lines ≠ one model — control vs data flow, Snap!, Max/MSP, Petri nets (HN 40842599) |
-| [**Brad Myers**](../../characters/brad-myers/README.md) | Garnet, VPL taxonomy, PBD |
+| [**Don — Yahoo Pipes successors**](../../characters/don-hopkins/yahoo-pipes-successors.md) | pipes.digital — data-flow RSS blocks; puzzle-piece VPLs (HN 40841980) |
+| [**Don — Excel & dimensionality**](../../characters/don-hopkins/visual-programming-excel-and-dimensionality.md) | Excel as VPL; SimAntics shipped evidence; PSIBER (HN 22978454) |
+| [**Brad Myers**](../../characters/brad-myers/README.md) | Garnet, VPL taxonomy, PBD, C32 |
 | [**Jens Mönig / Brian Harvey**](../../characters/jens-monig/README.md) | Snap! — blocks without lines, macros, Scheme semantics |
 | [**Don — Levity Bounce**](../../characters/don-hopkins/levity-bounce-space-seed.md) | COM on wires, Space Seed demo |
 | [**Don — DRAKON / SimAntics**](../../characters/don-hopkins/drakon-control-flow-vs-dataflow.md) | Control flow vs data flow — Grasshopper, SimAntics, Bounce (HN 10100932) |

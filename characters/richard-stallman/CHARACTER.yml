@@ -1,0 +1,23 @@
+character:
+  id: richard-stallman
+  name: "Richard M. Stallman"
+  aliases: [rms, RMS]
+  type: invitation
+  status: living
+  field: "GNU, free software movement, copyleft, Emacs, GPL"
+  home: characters/richard-stallman/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+
+see_also:
+  - { path: contact-channels.yml, why: "Public contact protocol (email, phone, video)" }
+  - { path: ../don-hopkins/media/pantomime/copyleft-envelope-1984.yml, why: "Copyleft (L) sticker 1984" }
+  - { path: ../david-henkel-wallace/, why: "Cygnus / BFD" }
+  - { path: ../walter-bender/, why: "OLPC Sugar / GPL games thread" }

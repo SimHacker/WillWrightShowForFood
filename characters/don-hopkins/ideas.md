@@ -23,7 +23,10 @@
 | [`connectedtv-touch-tuning-finger-pies.md`](connectedtv-touch-tuning-finger-pies.md) | Touch Tuning + Finger Pies — calm tech in the dark — [`connectedtv-calm-technology.yml`](../../repo-shows/connectedtv-calm-technology.yml) |
 | [`ie-jscript-htc-xslt-pie-menus.md`](ie-jscript-htc-xslt-pie-menus.md) | Punkemon + ConnectedTV Skin Editor — XSLT-native web on IE5 (HN 44393817) |
 | [`visual-programming-taxonomy.md`](visual-programming-taxonomy.md) | Boxes/lines ≠ one model — Snap!, Max, Petri nets (HN 40842599) |
+| [`yahoo-pipes-successors.md`](yahoo-pipes-successors.md) | pipes.digital + block models without wires (HN 40841980) |
+| [`visual-programming-excel-and-dimensionality.md`](visual-programming-excel-and-dimensionality.md) | Excel as VPL, PSIBER, SimAntics evidence (HN 22978454) |
 | [`drakon-control-flow-vs-dataflow.md`](drakon-control-flow-vs-dataflow.md) | SimAntics vs Grasshopper vs Bounce — control vs data flow (HN 10100932) |
+| [`carmack-leaves-meta-hn.md`](carmack-leaves-meta-hn.md) | Meta departure wit + Dynabook tangent (HN 34022484) → [`../john-carmack/`](../john-carmack/README.md) |
 | [`levity-bounce-space-seed.md`](levity-bounce-space-seed.md) | Bounce @ Levity — patch-cord trail with [`../jaron-lanier/`](../jaron-lanier/README.md) + [`../david-levitt/`](../david-levitt/README.md) |
 | [`../will-wright/adorable-minutes.md`](../will-wright/adorable-minutes.md) | Async one-minute Q&A — [`will-wright-adorable-minutes.yml`](../../repo-shows/will-wright-adorable-minutes.yml) |
 | [`repo-shows/scott-adams/`](../../repo-shows/scott-adams/) | Adventure-as-data ancestor — portable VM + 16K worlds |
@@ -33,6 +36,7 @@
 
 | Guest | Episode / topic |
 |-------|-----------------|
+| **Richard M. Stallman** | Copyleft envelope 1984 — [`../richard-stallman/ideas.md`](../richard-stallman/ideas.md) |
 | **David Ungar** | *Reflecting on Self: Narcissa's Mirror* — Conscientious Objectors (ScriptX × Self at Kaleida) — [`../david-ungar/`](../david-ungar/invitation.md) |
 | **Walter Bender** | OLPC introducing-the-players thread |
 | **Brian Eno** | Generative art + Long Now + Will Wright 2006 |

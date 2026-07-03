@@ -1,0 +1,16 @@
+character:
+  id: john-carmack
+  name: "John Carmack"
+  type: invitation
+  status: living
+  home: characters/john-carmack/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  note: "id/Oculus legend; Meta departure HN 34022484 — Don wit + Dynabook tangent only; no warm contact yet"

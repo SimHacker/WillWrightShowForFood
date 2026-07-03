@@ -5,6 +5,7 @@ meta:
   session: 2026-07-04
   transcript: agent-transcripts/e61fde4c-9fbb-42f6-bc19-7ccbf794b76d.jsonl
   source_dump: DonHopkins/temp/lots-of-chat.txt
+  opening_instruction: "add to topics about projects i worked on; artifacts in don-hopkins dir or best character dir"
 
 priorities:
   p0_done_this_session:
@@ -27,10 +28,17 @@ priorities:
     - characters/kim-cascone/ stub (HN 22787566)
     - characters/steina-vasulka/ stub
 
+  p1_done_iteration_3:
+    - visual-programming-excel-and-dimensionality.md + yml (HN 22978454)
+    - yahoo-pipes-successors.md + yml (HN 40841980)
+    - carmack-leaves-meta-hn.md + characters/john-carmack/ stub (HN 34022484)
+    - will-wright/sources/2026-07-03-digital-antiquarian-maxis-part1/ (HN 48776525)
+    - repo-shows/will-wright/audience/hn-nanna/questions.yml (nanna queue)
+
   p1_next:
     - bill-buxton, gordon-kurtenbach, david-mackay, aaron-mcleran — when HN yields material
     - PieCraft extension — mostly in pie-menus-chi-88-and-beyond.md
-    - 22978454, 34022484 — skim for Don comments
+    - Remaining lots-of-chat.txt threads not yet grep'd for Don comments
 
   p2_character_dirs_stubs:
     - bill-buxton
@@ -43,6 +51,7 @@ priorities:
     - Bounce Space Seed demo public link
     - MediaFlow at Interval public link
     - Kaleida-era photos (DreamScape context — not Space Seed)
+    - Open GitHub issue for hn-nanna; bind discussion.issue in questions.yml
 
 hn_threads:
   processed:
@@ -56,14 +65,15 @@ hn_threads:
     - { id: 33706604, artifact: process/trails/visual-programming-patch-cord.md }
     - { id: 40842599, artifact: characters/don-hopkins/visual-programming-taxonomy.md }
     - { id: 40842388, artifact: characters/don-hopkins/visual-programming-taxonomy.md }
+    - { id: 40841980, artifact: characters/don-hopkins/yahoo-pipes-successors.md }
+    - { id: 22978454, artifact: characters/don-hopkins/visual-programming-excel-and-dimensionality.md }
+    - { id: 34022484, artifact: characters/don-hopkins/carmack-leaves-meta-hn.md + characters/john-carmack/ }
     - { id: 22738415, artifact: characters/mark-weiser/ideas.md + connectedtv-calm-technology.yml }
     - { id: 24265876, artifact: characters/jaron-lanier/ideas.md }
     - { id: 10100932, artifact: characters/don-hopkins/drakon-control-flow-vs-dataflow.md }
     - { id: 22787566, artifact: characters/kim-cascone/ideas.md }
-  queued:
-    - { id: 40841980, topic: Yahoo Pipes successors }
-    - { id: 22978454, topic: visual programming answer }
-    - { id: 34022484, topic: Carmack leaves Meta }
+    - { id: 48776525, artifact: characters/will-wright/sources/2026-07-03-digital-antiquarian-maxis-part1/ + repo-shows/will-wright/audience/hn-nanna/questions.yml }
+  queued: []
 
 queued_prompts_merged:
   - prompt: selfish-config TS module

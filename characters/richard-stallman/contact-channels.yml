@@ -1,0 +1,30 @@
+# RMS — public contact protocol
+# Sources: stallman.org, rms-assist autoreply, gnu.org/audio-video
+
+public_email:
+  general: rms@gnu.org
+  speaking_invitations: rms-invitation@gnu.org
+  urgent_callback: rms-assist@gnu.org
+  gpg: "See stallman.org/gpg.html — do not trust key servers"
+
+phone:
+  mobile: none
+  landline_callback: |
+    Email rms-assist@gnu.org with topic and landline number; he may call back.
+    For urgent contact only.
+  fsf_office: "+1-617-542-5942"
+
+refuses_or_avoids:
+  video: [Zoom, Skype, WhatsApp, Discord]
+  other:
+    - mobile phones
+    - preferred term open source — uses free software
+    - Linux alone — GNU/Linux when the OS is meant
+
+accepts:
+  email: primary
+  video: [Jitsi Meet, BigBlueButton]
+  audio: landline callback via rms-assist
+  recording_formats:
+    video: WebM VP8/VP9
+    audio: Ogg Vorbis or Speex

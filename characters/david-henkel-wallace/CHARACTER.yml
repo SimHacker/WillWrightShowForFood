@@ -1,0 +1,29 @@
+character:
+  id: david-henkel-wallace
+  name: "David Henkel-Wallace"
+  aliases: ["Gumby"]
+  type: invitation
+  status: living
+  field: "Cygnus Solutions co-founder (BFD, binutils); TLGnet; Leela AI partner"
+  home: characters/david-henkel-wallace/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  note: "Leela AI partner — characters/david-henkel-wallace/"
+
+bio:
+  summary: "**David Henkel-Wallace** (nickname **Gumby**) — co-founded **Cygnus Solutions** (1989) with John Gilmore and Michael Tiemann, the first commercial open-source company; key author of **BFD** (Binary File Descriptor library) and GNU binutils work; **TLGnet** partner with Tom Jennings; MIT AI Lab background; **Partner at Leela AI**. Open Core Summit 2019 talk on Cygnus as original COSS."
+
+leela_colleagues:
+  with: ["henry-minsky", "steve-kommrusch", "isabella-struckman", "milan-singh-minsky", "don-hopkins"]
+
+see_also:
+  - { path: ../tom-jennings/, why: "TLGnet co-founder" }
+  - { path: ../steve-kommrusch/, why: "Leela AI colleague" }
+  - { path: ../henry-minsky/, why: "Leela AI co-founder" }

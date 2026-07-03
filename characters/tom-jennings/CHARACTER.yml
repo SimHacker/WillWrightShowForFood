@@ -1,0 +1,23 @@
+character:
+  id: tom-jennings
+  name: "Tom Jennings"
+  type: invitation
+  status: living
+  field: "FidoNet, TLGnet ISP, Phoenix portable BIOS, Wired first web — artist/programmer"
+  home: characters/tom-jennings/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+
+bio:
+  summary: "**Tom Jennings** (b. 1955) — created **Fido** BBS and **FidoNet** (1984), the first large store-and-forward BBS network; co-founded **The Little Garden (TLGnet)** early ISP (1992) with David Henkel-Wallace, John Romkey, and Steve Crocker; portable BIOS work at Phoenix Technologies; built **Wired** magazine's first internet presence; artist/programmer (CalArts). Archive: [sensitiveresearch.com](https://www.sensitiveresearch.com/)."
+
+see_also:
+  - { path: ../david-henkel-wallace/, why: "TLGnet co-founder" }
+  - { path: ../hugh-daniel/, why: "WELL / Bay Area hacker social graph — parallel community-building lineage" }
