@@ -36,7 +36,7 @@ scheduling:
   primary: amy-jo-and-scott-kim
   optional_solo:
     - scott-kim
-    note: "Schedule solo Scott only for Viewpoint/inversions vertical — after or instead of pair, never both covering Shufflebrain."
+  note: "Schedule solo Scott only for Viewpoint/inversions vertical — after or instead of pair, never both covering Shufflebrain."
 
 format:
   live: true

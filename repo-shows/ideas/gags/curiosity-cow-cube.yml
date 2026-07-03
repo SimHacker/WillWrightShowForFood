@@ -152,10 +152,11 @@ commentary_targets:
 
 cast_beats:
   berkeley_mediterraneum:
-    - "That's a cow. I know the difference."
-    - "Similar to a cow — that's a cow."
-    - "Nobody's going to believe this unless I have it on video."
-    - "I've been waiting for that all my life."
+    lines:
+      - "That's a cow. I know the difference."
+      - "Similar to a cow — that's a cow."
+      - "Nobody's going to believe this unless I have it on video."
+      - "I've been waiting for that all my life."
     don: "It's a cow."
     passerby: "go try to milk that cow..."
   molyneux_voice_parody:

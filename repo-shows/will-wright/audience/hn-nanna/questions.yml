@@ -103,11 +103,12 @@ pose:
     body: "Question from HN user nanna — Ökolopoly & Norbert Wiener — in the queue; Will, take it when you're ready."
 
 amplification:
-  - by: DonHopkins
-    channel: hacker_news
-    action: question_pump_parent
-    ref: https://news.ycombinator.com/item?id=48780144
-    date: 2026-07-04
+  events:
+    - by: DonHopkins
+      channel: hacker_news
+      action: question_pump_parent
+      ref: https://news.ycombinator.com/item?id=48780144
+      date: 2026-07-04
   invite: |
     Anyone can amplify — reply on the HN thread, 👍 the GitHub issue once open, add a me_too
     child here, or message Don. Tie amplifications to the same hn.comment_id 48780477.

@@ -42,7 +42,7 @@ mechanics:
     never_moves_original: true
     commit_message: "Auto Art Theft Grand — {n} deeds duplicated for training"
     ledger: characters/robots/slats/auto-stolen-collection.yml
-    deed_formats: [77MP-{id}, SHEEP-GEN-{n}, JSONSTERS-{frame}, FLAME-{hash}]
+    deed_formats: ["77MP-{id}", "SHEEP-GEN-{n}", "JSONSTERS-{frame}", "FLAME-{hash}"]
 
   moola_compensation_theater:
     spec: moola.yml#training_data_for_moola

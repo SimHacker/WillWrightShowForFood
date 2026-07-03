@@ -217,7 +217,8 @@ human_ticket_pr:
 hn_curated:
   spec: ../../../schemas/question-provenance.yml
   template: ../../_TEMPLATE/audience/hn-curation-snippet.yml
-  - id: hn-nanna
+  entries:
+    - id: hn-nanna
     name: nanna
     type: hn_commenter
     hn_user: nanna

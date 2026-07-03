@@ -49,7 +49,7 @@ exchange:
       source: [show pool, twitch tips_as_play, homefun bounties]
     works_of_art:
       note: "Deeds, combinations, genomes, frames — exchange deed for MOOLA to fund next performance"
-      formats: [77MP-{id}, SHEEP-GEN-{n}, JSONSTERS-{frame}, FLAME-{hash}, wall_title_deed]
+      formats: ["77MP-{id}", "SHEEP-GEN-{n}", "JSONSTERS-{frame}", "FLAME-{hash}", wall_title_deed]
       rate: "Appraised by Philahue in 30 sec — always too high"
   outputs:
     performances: [burn_moola, dig_hole, scatter_to_chat, repair_auction, fund_backhoe]
