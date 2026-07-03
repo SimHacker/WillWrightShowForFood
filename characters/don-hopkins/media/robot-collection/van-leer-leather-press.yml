@@ -16,7 +16,8 @@ location:
 
 photos:
   don_crushed:
-    - van-leer-press-don-crushed.png
+    files:
+      - van-leer-press-don-crushed.png
     what: "Don lying under the press heads — staged crush photo for robot collection gallery"
     facebook: "me being crushed by the robot leather press"
     comment:

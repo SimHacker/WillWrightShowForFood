@@ -1,0 +1,15 @@
+character:
+  id: jennell-jaquays
+  name: "Jennell Jaquays"
+  type: invitation
+  status: deceased
+  home: characters/jennell-jaquays/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked

@@ -102,6 +102,8 @@ voice:
       Not a résumé PDF. Not a chatbot persona card. A **room** you walk through — comments are
       semantic data; filenames advertise; the directory listing IS the index. The voice varies
       because real Don varies: tangent at 11pm, crisp at CHI'88.
+
+see_also:
   - upbringing.yml
   - heroes.yml
   - ../career/project-threads.yml

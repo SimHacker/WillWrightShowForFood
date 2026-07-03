@@ -63,8 +63,8 @@ mark_weiser_scholarship:
         detail: "Junior undergrad."
         source: https://www.youtube.com/watch?v=ivPZiVtv8_g
     recipient_not_named_in_clip:
-      - { year: 2015, source: https://www.youtube.com/watch?v=HnfHq5payaQ, note: "Listed in 2015 EECS awards playlist ('Mark Weiser Excellence'); recipient not transcribed." }
-      - { year: 2024, source: https://www.youtube.com/watch?v=SM8OFMVKMgU, note: "2024 clip exists; recipient not named in transcript." }
+      - { year: 2015, source: "https://www.youtube.com/watch?v=HnfHq5payaQ", note: "Listed in 2015 EECS awards playlist (Mark Weiser Excellence); recipient not transcribed." }
+      - { year: 2024, source: "https://www.youtube.com/watch?v=SM8OFMVKMgU", note: "2024 clip exists; recipient not named in transcript." }
       - { year: 2025, note: "Listed in 2025 EECS awards playlist (item 5, ~0:22); recipient not transcribed." }
     do_not_confuse:
       warren_dere_2025: "Max Wilcoxson, Anish Dhanashekar, Elam Day-Friedland — those are the Warren Y. Dere Design Award (2025), NOT the Weiser scholarship."
@@ -82,8 +82,8 @@ torchbearers:
     credentials_stated_in_talk: "Georgia Tech Regents' Professor & J.Z. Liang Chair, School of Interactive Computing; Associate Dean, College of Computing; ACM Fellow."
     artifact: abowd-internet-of-materials.md
     talks:
-      - { title: "The Internet of Materials: The next logical step or a paradigm shift?", venue: "UC Berkeley EECS Colloquium", date: "2019-12-05", url: https://www.youtube.com/watch?v=qko_wzQeP20, summary: abowd-internet-of-materials.md }
-      - { title: "Beyond Weiser's Ubiquitous Computing (Sanders Series Lecture)", date: "2016", url: https://www.youtube.com/watch?v=eYsLbVOl31M, note: "3rd generation (Weiser) → 4th generation (emerged) → 5th generation (soon)." }
+      - { title: "The Internet of Materials: The next logical step or a paradigm shift?", venue: "UC Berkeley EECS Colloquium", date: "2019-12-05", url: "https://www.youtube.com/watch?v=qko_wzQeP20", summary: abowd-internet-of-materials.md }
+      - { title: "Beyond Weiser's Ubiquitous Computing (Sanders Series Lecture)", date: "2016", url: "https://www.youtube.com/watch?v=eYsLbVOl31M", note: "3rd generation (Weiser) → 4th generation (emerged) → 5th generation (soon)." }
     why_draw_in: "A living researcher whose whole arc IS Weiser's legacy — ideal memorial voice; consent not_yet_asked."
 
   amber_case:
@@ -94,20 +94,22 @@ torchbearers:
       Products with Sound*. Reframes his work for the notification age: 'a person's primary task
       should not be computing, it should be being human; the scarce resource is attention.'
     talks:
-      - { title: "An Introduction to Calm Technology", venue: "CyborgCamp", date: "2018", url: https://www.youtube.com/watch?v=KpRoGJrZQWM }
-      - { title: "The beginnings of calm technology", date: "2017", url: https://www.youtube.com/watch?v=OS928j6fUa4, note: "Walks the three canonical examples — the inner-office window, the teapot, the dangling string." }
+      - { title: "An Introduction to Calm Technology", venue: "CyborgCamp", date: "2018", url: "https://www.youtube.com/watch?v=KpRoGJrZQWM" }
+      - { title: "The beginnings of calm technology", date: "2017", url: "https://www.youtube.com/watch?v=OS928j6fUa4", note: "Walks the three canonical examples — the inner-office window, the teapot, the dangling string." }
     resource: https://calmtech.com
 
   parc_collaborators:
     note: "Mark's documented calm-tech collaborators (planning/context, not invitations)."
-    - { who: "John Seely Brown", role: "PARC Director; calm-technology co-author with Weiser" }
-    - { who: "Rich Gold", role: "PARC — calm-tech circle (artist/designer)" }
-    - { who: "Natalie Jeremijenko", role: "Artist behind the Dangling String (Live Wire) installation at PARC" }
+    people:
+      - { who: "John Seely Brown", role: "PARC Director; calm-technology co-author with Weiser" }
+      - { who: "Rich Gold", role: "PARC — calm-tech circle (artist/designer)" }
+      - { who: "Natalie Jeremijenko", role: "Artist behind the Dangling String (Live Wire) installation at PARC" }
 
   explainer_scholars:
     note: "People who teach Weiser to new audiences — good clip sources / citations."
-    - { who: "Stuart Reeves", what: "Computerphile 'Ubicomp' explainer — Weiser at PARC, reaction against VR, IoT lineage, ate-their-own-dogfood testing", url: https://www.youtube.com/watch?v=Ff1QwznMffA }
-    - { who: "Geoffrey Challen", what: "internet-class 'What is calm computing?' — the ideal vs the phone as 'least calm device on the planet'", url: https://www.youtube.com/watch?v=Y3xFBe9rXzU }
+    people:
+      - { who: "Stuart Reeves", what: "Computerphile 'Ubicomp' explainer — Weiser at PARC, reaction against VR, IoT lineage, ate-their-own-dogfood testing", url: "https://www.youtube.com/watch?v=Ff1QwznMffA" }
+      - { who: "Geoffrey Challen", what: "internet-class 'What is calm computing?' — the ideal vs the phone as 'least calm device on the planet'", url: "https://www.youtube.com/watch?v=Y3xFBe9rXzU" }
 
 # ─── EXPLAINER / SUMMARY VIDEOS — quotable citations ─────────────────────────
 explainer_videos:

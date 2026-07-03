@@ -1,0 +1,15 @@
+character:
+  id: don-norman
+  name: "Don Norman"
+  type: invitation
+  status: living
+  home: characters/don-norman/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked

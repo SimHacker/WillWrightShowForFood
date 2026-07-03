@@ -69,7 +69,7 @@ run_of_show:
     - room_flame: 2 magnificent + 2 quick
     - room_sheep: 2 magnificent + 3 quick; ensemble hex-fight energy on flock
     - room_hifi: 2 magnificent; Infinidream as finale hammer
-    - coda: Scott buried in §; Don: "Spend it all before we talk fnord."
+    - coda: "Scott buried in § — Don: Spend it all before we talk fnord."
 
 twitch_after:
   guest_simoleons_start: 2400000

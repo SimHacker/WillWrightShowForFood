@@ -1,0 +1,15 @@
+character:
+  id: dame-stephanie-shirley
+  name: "Dame Stephanie Shirley"
+  type: invitation
+  status: deceased
+  home: characters/dame-stephanie-shirley/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked

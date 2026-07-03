@@ -1,0 +1,15 @@
+character:
+  id: jaron-lanier
+  name: "Jaron Lanier"
+  type: invitation
+  status: living
+  home: characters/jaron-lanier/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked

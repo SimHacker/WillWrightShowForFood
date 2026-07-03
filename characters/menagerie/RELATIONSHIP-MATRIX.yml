@@ -29,7 +29,7 @@ art_thief_game:
     fair_trade: { daily: +15, lifetime: +10 }
     forgery_accusation: { daily: -30, rivalry: true }
     shared_enemy_doctor_no: { daily: +20 }
-  deed_formats: [77MP-{id}, SHEEP-GEN-{n}, JSONSTERS-{frame}, FLAME-{hash}, ROBOT-OLY-{slug}, JUNK-{slug}]
+  deed_formats: ["77MP-{id}", "SHEEP-GEN-{n}", "JSONSTERS-{frame}", "FLAME-{hash}", "ROBOT-OLY-{slug}", "JUNK-{slug}"]
   moola: ../../process/moola.yml
   auto_art_theft_grand: ../../process/auto-art-theft-grand.yml
   duplication: "NEVER gateway · ALWAYS invite duplication"

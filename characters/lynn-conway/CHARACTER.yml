@@ -1,0 +1,15 @@
+character:
+  id: lynn-conway
+  name: "Lynn Conway"
+  type: invitation
+  status: deceased
+  home: characters/lynn-conway/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked

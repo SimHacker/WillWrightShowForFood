@@ -103,7 +103,7 @@ run_of_show:
     beats:
       - prosecco_flat; wall_text_unread
       - donna_photobomb: "TREMENDOUS opening. Best opening. Many people say."
-      - doctor_no_floor_sheet: "No comment." (buys nothing yet)
+      - doctor_no_floor_sheet: "No comment. — buys nothing yet"
       - palm_watches: "🐒✋🌴 — offering, not minting"
       - tragic_clown_weeps_at_reserve_price
 

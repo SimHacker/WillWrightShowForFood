@@ -54,6 +54,6 @@ sync_notes:
   - hand_transcript_uses_round_seconds; youtube_cache_subsecond
   - pivotal_moment_student_question_youtube: "1:08:19.600"
   - pivotal_moment_oh_god_hand: "1:08:19–1:08:38 — speaker labels in canonical transcript"
-  - pivotal_moment_oh_god_youtube_auto: "~1:08:33–1:08:38" (caption merges speakers — use canonical text)
-  - cliffhanger_cut_before: "Let me show you something real quick" @ youtube ~1:09:55.120
-  - dollhouse_demo_start: "1:10:02" canonical / ~1:10:01.600 youtube
+  - pivotal_moment_oh_god_youtube_auto: "~1:08:33–1:08:38 — caption merges speakers; use canonical text"
+  - cliffhanger_cut_before: "Let me show you something real quick — youtube ~1:09:55.120"
+  - dollhouse_demo_start: "1:10:02 canonical / ~1:10:01.600 youtube"

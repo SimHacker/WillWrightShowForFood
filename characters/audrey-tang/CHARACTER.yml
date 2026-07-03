@@ -1,0 +1,15 @@
+character:
+  id: audrey-tang
+  name: "Audrey Tang"
+  type: invitation
+  status: living
+  home: characters/audrey-tang/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
