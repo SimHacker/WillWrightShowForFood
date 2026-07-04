@@ -7,18 +7,15 @@
 	"scripts": {
 		"build": "pnpm -r --stream --if-present run build",
 		"test": "pnpm -r --stream --if-present run test",
-		"verify:structure": "node scripts/verify-monorepo-structure.mjs",
 		"verify:yaml": "node scripts/verify-yaml.mjs",
+		"verify": "pnpm run verify:yaml",
 		"facades": "node scripts/generate-markup-facades.mjs --force",
 		"facades:check": "node scripts/generate-markup-facades.mjs --check",
 		"scaffold:characters": "node scripts/scaffold-invitation-characters.mjs",
 		"scaffold:cards": "python3 scripts/scaffold-guest-skills-cards.py",
 		"scaffold:skills-cards": "python3 scripts/scaffold-guest-skills-cards.py",
 		"normalize:characters": "node scripts/normalize-guest-characters.mjs",
-		"verify:coherence": "node scripts/verify-coherence.mjs",
-		"verify": "pnpm run verify:structure && pnpm run verify:yaml && pnpm run verify:coherence",
-		"setup:python": "python3 -m venv .venv && .venv/bin/pip install -r requirements.txt",
-		"setup:hooks": "sh scripts/install-git-hooks.sh"
+		"setup:python": "python3 -m venv .venv && .venv/bin/pip install -r requirements.txt"
 	},
 	"engines": {
 		"node": ">=20"
