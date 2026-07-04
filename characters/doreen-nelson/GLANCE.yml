@@ -1,0 +1,49 @@
+# DOREEN NELSON — GLANCE (nav + metadata SSOT)
+# Interface: CARD.yml
+
+title: Doreen Nelson
+iconic: "📐 Doreen"
+description: |
+  Design-Based Learning pioneer — teach any subject by building model cities. Wrote Maxis
+  SimCity teacher guides; Dec 2006 OLPC thread offered to help surface courseware for Micropolis.
+
+keywords:
+  - doreen nelson
+  - design-based learning
+  - city building education
+  - simcity curriculum
+  - constructionism
+  - olpc
+  - micropolis
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  children:
+    - sources/2006-12-21-olpc-curriculum-guide/
+  siblings:
+    - ../will-wright/
+    - ../walter-bender/
+    - ../seymour-papert/
+
+read_order:
+  - README.md
+  - CARD.yml
+  - invitation.md
+  - sources/2006-12-21-olpc-curriculum-guide/olpc-response.md
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Character registry" }
+  siblings:
+    - { path: ../will-wright/GLANCE.yml, why: "SimCity lineage" }
+    - { path: ../walter-bender/GLANCE.yml, why: "OLPC Sugar era" }
+  across:
+    - { path: ../../repo-shows/doreen-nelson/README.md, why: "Show seed" }
+    - { path: ../../repo-shows/walter-bender-olpc/SHOW.yml, why: "OLPC cast segment" }
+    - { path: ../will-wright/sources/2006-12-simcity-olpc-introducing-the-players/README.md, why: "Introducing the players" }
+  deep:
+    - { path: README.md, why: "Portrayal" }
+    - { path: ideas.md, why: "Show hooks" }

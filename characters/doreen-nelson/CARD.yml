@@ -1,0 +1,93 @@
+# CARD — Doreen Nelson (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+# Nav + metadata: GLANCE.yml
+
+glance: GLANCE.yml
+
+room:
+  id: doreen-nelson
+  name: Doreen Nelson
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Doreen Nelson
+  title: Design-Based Learning
+  rarity: rare
+  signifier: 📐
+  flavor: Teach the whole curriculum by building a city first.
+abilities:
+- id: CITY-BUILD-LEARN
+  name: City Build Learn
+  type: activated
+  mana: '{W}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: cityBuildLearn
+    signature: cityBuildLearn(subject) → model city lesson
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.9
+  effect: Start from a world students design — then derive the lesson.
+  verifiable: Design-Based Learning methodology
+  combos_with:
+  - WILL-SIMULATE-CITY
+- id: CURRICULUM-ACCRETION
+  name: Curriculum Accretion
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: curriculumAccretion
+    signature: curriculumAccretion(guide) → layered courseware
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Layer SimCity teacher guides onto open Micropolis.
+  verifiable: Maxis SimCity curriculum guides (Leslie Stoltz co-author)
+  combos_with: []
+- id: BACKWARDS-THINKING
+  name: Backwards Thinking
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: backwardsThinking
+    signature: backwardsThinking(problem) → design-first insight
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Iterate from built artifacts back to abstract concepts.
+  verifiable: DBL "backwards thinking" (public methodology)
+  combos_with: []
+- id: GOLDEN-BELL
+  name: Golden Bell
+  type: triggered
+  mana: '{W}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: goldenBell
+    signature: goldenBell(charter) → award-winning curriculum
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.8
+  effect: Recognize curriculum innovation that scales to real schools.
+  verifiable: California Golden Bell award (curriculum & instruction)
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document

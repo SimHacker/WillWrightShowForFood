@@ -33,6 +33,9 @@ segments:
 
   - id: doreen_nelson
     topic: "Doreen Nelson — curriculum guides and Design-Based Learning"
+    links:
+      - characters/doreen-nelson/invitation.md
+      - characters/doreen-nelson/sources/2006-12-21-olpc-curriculum-guide/olpc-response.md
 
   - id: view_source
     topic: "View Source — scripting SimCity; Robot Odyssey / EToys vision to Micropolis Home"

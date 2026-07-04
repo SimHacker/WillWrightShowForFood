@@ -1,0 +1,44 @@
+# Doreen Nelson — Design-Based Learning × open SimCity
+
+show:
+  id: doreen-nelson
+  title: "Doreen Nelson — Design-Based Learning and the SimCity Guides"
+  kind: interview
+  status: seed
+  host: don-hopkins
+  guest: doreen-nelson
+  character: characters/doreen-nelson/
+
+logline: |
+  DBL pioneer and Maxis SimCity curriculum author — what open Micropolis should ship
+  for classrooms, and how city-building pedagogy meets View Source.
+
+segments:
+  - id: dbl_live
+    topic: "Design-Based Learning — build the city first, teach everything else"
+    links:
+      - characters/doreen-nelson/ideas.md
+
+  - id: olpc_2006
+    topic: "Dec 2006 — curriculum guides still relevant; Golden Bell charter"
+    links:
+      - characters/doreen-nelson/sources/2006-12-21-olpc-curriculum-guide/olpc-response.md
+      - characters/will-wright/sources/2006-12-simcity-olpc-introducing-the-players/article.md
+
+  - id: free_the_guides
+    topic: "Courseware rights — Leslie Stoltz, EA, Chuck Normann clearance arc"
+
+  - id: micropolis_home
+    topic: "Scriptable simulators — spreadsheets, Sugar vision, Micropolis Home today"
+    links:
+      - characters/will-wright/sources/simcity-open-source-saga/
+
+  - id: constructionist_reunion
+    topic: "Papert lineage — physical models × digital microworlds"
+    ties:
+      - repo-shows/remembering-the-constructionists.yml
+
+related:
+  - characters/doreen-nelson/
+  - repo-shows/walter-bender-olpc/SHOW.yml
+  - characters/will-wright/sources/2006-12-simcity-olpc-introducing-the-players/

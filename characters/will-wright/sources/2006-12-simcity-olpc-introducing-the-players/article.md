@@ -1,6 +1,6 @@
 # SimCity for OLPC — introducing the players
 
-*Email thread, December 2006. John Gilmore introduces the cast; Don lays out the Sugar integration roadmap. Harvest: [simcity-for-olpc----introducing-the-players.txt](../../../../DonHopkins/temp/old-email/simcity-for-olpc----introducing-the-players.txt).*
+*Email thread, December 2006. John Gilmore introduces the cast; Don lays out the Sugar integration roadmap. Verbatim mail: [`2006-11-13-simcity-olpc-email-thread/`](../2006-11-13-simcity-olpc-email-thread/README.md) (parts [`02`](../2006-11-13-simcity-olpc-email-thread/02-ea-clearance-dec-2006.md) · [`03`](../2006-11-13-simcity-olpc-email-thread/03-olpc-port-and-sugar-dec-2006.md)).*
 
 ---
 
@@ -79,6 +79,8 @@ Don confirms:
 ## Doreen Nelson
 
 Curriculum guide still relevant; Design-Based Learning program at Cal Poly; charter high school won California Golden Bell — SimCity would be "very useful to everyone."
+
+Full invitation portrayal: [`characters/doreen-nelson/`](../../../../characters/doreen-nelson/README.md) · [sourced Dec 2006 response](../../../../characters/doreen-nelson/sources/2006-12-21-olpc-curriculum-guide/olpc-response.md)
 
 ---
 

@@ -1,0 +1,59 @@
+# Doreen Nelson — invitation portrayal. NOT Doreen Nelson.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: doreen-nelson
+  name: "Doreen Nelson"
+  type: invitation
+  signifier: "📐"
+  status: living
+  field: "Educator — Design-Based Learning; Maxis SimCity curriculum guides"
+  home: characters/doreen-nelson/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/doreen-nelson/
+
+bio:
+  summary: |
+    **Doreen (Gehry) Nelson** created **Design-Based Learning (DBL)** — teaching any subject
+    by having students **design and build model cities and worlds**, then iterate ("backwards
+    thinking"). **Professor Emerita** at Cal Poly Pomona; NY Times named her one of 30 top
+    U.S. education innovators (1991). She contributed to original **Maxis SimCity** and wrote
+    **teacher guides** with Leslie Stoltz. Younger sister of architect **Frank Gehry**.
+
+connections:
+  simcity: "Maxis SimCity curriculum guides — still relevant when OLPC/Micropolis cleared in 2006"
+  design_based_learning: "City Building Education → DBL; Cal Poly Pomona MA program; Art Center teacher training"
+  olpc_2006: "Dec 2006 — volunteered to help surface courseware when John Gilmore introduced the OLPC cast"
+  constructionism: "Lineage with Papert/Piaget; microworlds meet physical city models"
+  don: "Don Hopkins pushed SimCity open source for OLPC; asked Doreen about courseware rights"
+
+show_suggestions:
+  - { seed: ../../repo-shows/doreen-nelson/README.md, what: "Design-Based Learning × open SimCity — curriculum for the XO and beyond" }
+  - { seed: ../../repo-shows/walter-bender-olpc/SHOW.yml#doreen_nelson, what: "OLPC segment — curriculum guides + DBL" }
+  - { seed: ../../repo-shows/remembering-the-constructionists.yml, what: "Constructionist education reunion" }
+
+sources:
+  olpc_2006: sources/2006-12-21-olpc-curriculum-guide/olpc-response.md
+  introducing_players: ../will-wright/sources/2006-12-simcity-olpc-introducing-the-players/article.md
+  winograd_1996: ../will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/medium-article.md
+  web:
+    - "https://www.designbasedlearning.org/doreen-gehry-nelson/"
+  wikipedia: null
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: sources/2006-12-21-olpc-curriculum-guide/, why: "Dec 2006 sourced OLPC response" }
+  - { path: ../will-wright/sources/2006-12-simcity-olpc-introducing-the-players/, why: "OLPC cast article" }
+  - { path: ../will-wright/sources/simcity-open-source-saga/, why: "Micropolis clearance narrative" }
+  - { path: ../seymour-papert/, why: "Constructionism lineage" }
+  - { path: ../don-hopkins/, why: "Host; OLPC SimCity port" }
