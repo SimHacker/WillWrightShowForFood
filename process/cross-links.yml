@@ -100,7 +100,7 @@ trails:
       - { path: ../characters/don-hopkins/sync-sources.yml, why: "Synced from moollm adventure-4 — deduped" }
       - { path: ../characters/don-hopkins/portrayal/voice.yml, why: "Repo Show voice — not adventure rabbit plot" }
       - { path: vision-and-ambition.yml, why: "Long arc girder — no promises, full ambition" }
-      - { path: VISION.md, why: "Generated markup — Flower Child energy" }
+      - { path: VISION.md, why: "Navigation layer — Flower Child energy, link-rich" }
       - { path: ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "Primary source — constructionist microworlds" }
       - { path: ../characters/will-wright/, why: "Guest portrayal — Proxi, Spore, Sims lineage" }
       - { path: ../characters/will-wright/CARD.yml, why: "Will's invokable abilities — MTG card surface" }

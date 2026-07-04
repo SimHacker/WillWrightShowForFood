@@ -14,12 +14,34 @@ relationship: |
 questions:
   - id: 1
     text: "Spore promised powers of ten. Which stage did you lose on the cutting-room floor?"
+    source: seeded
   - id: 2
     text: "You let players make us obscene. Was that procedural amplification or abdication?"
+    source: seeded
   - id: 3
     text: "Cell, creature, tribe, civ, space — which stage is the real Will Wright game?"
+    source: seeded
   - id: 4
     text: "The Grox were the difficulty slider. Were we the moral one?"
+    source: seeded
+  - id: 5
+    text: "Was the T-shaped design (evolution ladder + galactic meta-games) ever shippable once per-level teams split?"
+    source:
+      don_hn: 36280690
+      witness: ../../../../characters/will-wright/sources/2005-03-11-spore-gdc-future-of-content/hn-witness.yml
+      clip: t-shaped-game-powers-of-ten
+  - id: 6
+    text: "Creators and async exchange won — gameplay and story lost. Do you agree?"
+    source:
+      don_hn: 36280831
+      clip: async-pollination-sims-exchange
+      medium: ../../../../characters/will-wright/sources/2005-03-11-spore-gdc-future-of-content/medium-article.md
+  - id: 7
+    text: "Demo scene vs Myst — was that the same algorithmic-compression argument you made at GDC 2005?"
+    source:
+      don_hn: 36599415
+      clip: demo-scene-helsinki
+      demoscene_video: https://www.youtube.com/watch?v=m7iuFVmTJus
 
 comments_for_guest: |
   MSPO RPG resonance — Will's own frame; see SHOW.yml. Optional Grox sibling TicketPR later.

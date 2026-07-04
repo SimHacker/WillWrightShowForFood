@@ -1,0 +1,39 @@
+# CARD — TheSimsAITest (interface only)
+
+glance: GLANCE.yml
+
+room:
+  id: thesims-ai-test
+  name: "TheSimsAITest (Nov 2006 C# sketch)"
+  type: [source_bundle, code_artifact, contrast_piece]
+  home: characters/will-wright/sources/2006-11-06-thesims-ai-test/
+
+methods:
+  READ-DON-REPLY:
+    signature: "readDonReply() → don-reply-to-mats-knutsen.md"
+    advertisement: "Nov 2006 email — top-5 random, advertisements, favorite bed. Don's clearest Sims AI exegesis."
+  READ-NEEDS:
+    signature: "readNeeds() → Needs.cs"
+    advertisement: "Four retail motives, −100…100, decay −5 per 30 sim-minutes."
+  CONTRAST-MOTIVE-C:
+    signature: "contrastMotiveC() → ../2008-02-10-soul-of-the-sims/Motive.c"
+    advertisement: "1997 Will harness vs 2006 outsider sketch — what's missing."
+  ASK-JAMIE:
+    signature: "askJamie() → SimAntics gap analysis"
+    advertisement: "Empty InteractionObject.cs = no smart objects — the whole lesson."
+
+abilities:
+  - id: UTILITY-AI-TEACHING
+    name: Utility AI Teaching Moment
+    type: activated
+    advertisement:
+      method: utilityAiTeaching
+      signature: "utilityAiTeaching(naive, simantics) → show segment"
+      score_when:
+        - trigger: jamie_doornbos_show
+          weight: 0.85
+    effect: "Naive decay loop vs object-advertising architecture."
+
+compose_with:
+  - ../2008-02-10-soul-of-the-sims/CARD.yml
+  - ../../../jamie-doornbos/CHARACTER.yml

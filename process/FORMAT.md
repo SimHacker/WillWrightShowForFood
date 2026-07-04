@@ -460,7 +460,7 @@ MELT/STIR grows the soup; SCOOP selects what leaves the pot and in what form.
 | [`ticket-pr.yml`](ticket-pr.yml) | TicketPR — TicketMaster reframed: Master ⇒ PR |
 | [`cross-links.yml`](cross-links.yml) | Narrative web — trails between all rooms |
 | [`vision-and-ambition.yml`](vision-and-ambition.yml) | Long arc girder |
-| [`VISION.md`](VISION.md) | Generated markup |
+| [`VISION.md`](VISION.md) | Navigation layer (instance-first) — [on this page](VISION.md#on-this-page) |
 | [`rig-feedback.yml`](rig-feedback.yml) | Declare your real AI stack |
 | [`showmaker-network.yml`](showmaker-network.yml) | Shows breed shows |
 | [`manual-transmission.yml`](manual-transmission.yml) | Smallest model that works |

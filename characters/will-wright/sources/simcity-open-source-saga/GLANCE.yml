@@ -39,6 +39,7 @@ see_also:
     - { path: ../maxis-licenses-chain-of-custody/GLANCE.yml, why: "Paper trail PDFs" }
     - { path: ../micropolis-saga-don-draft/GLANCE.yml, why: "Don draft merge target" }
   across:
+    - { path: ../2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml, why: "Audience asks open-source SimCity — t=3929; Don in room" }
     - { path: ../../../don-hopkins/career/simcity-lineage.yml, why: "Timeline girder" }
     - { path: ../../../walter-bender/README.md, why: "OLPC Stone Soup" }
     - { path: ../../../chaim-gingold/GLANCE.yml, why: "Building SimCity POV" }

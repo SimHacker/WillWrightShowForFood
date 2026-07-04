@@ -17,8 +17,12 @@ walk the repo on air and build from the seed.
 ### 2. Lead programmer on The Sims (Maxis); principal architect of Sim beh...
 or/AI (SimAntics); Don's Sims teammate
 
+### 3. TheSimsAITest contrast walkthrough
+[`2006-11-06-thesims-ai-test`](../will-wright/sources/2006-11-06-thesims-ai-test/README.md) — Mats Knutsen's Nov 2006 C# sketch with four motives and an **empty** `InteractionObject.cs`. Pair with Don's [`don-reply-to-mats-knutsen.md`](../will-wright/sources/2006-11-06-thesims-ai-test/don-reply-to-mats-knutsen.md): top-5 random choice, advertisement scoring, favorite-bed trick. Walk what's missing vs SimAntics; pair with Will's [`Motive.c`](../will-wright/sources/2008-02-10-soul-of-the-sims/Motive.c).
+
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
 - Show seed: [`repo-shows/REPO-SHOWS.yml#building-the-sims.yml`](../../repo-shows/REPO-SHOWS.yml#building-the-sims.yml)
 - [`CHARACTER.yml`](CHARACTER.yml)
+- [`2006-11-06-thesims-ai-test`](../will-wright/sources/2006-11-06-thesims-ai-test/README.md)

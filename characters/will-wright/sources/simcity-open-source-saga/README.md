@@ -18,10 +18,18 @@ this first, then branch to threads below.
 
 | File | What |
 |------|------|
-| [`article.md`](article.md) | Narrative timeline + pitch letter |
-| [`sim-city-in-open-source-for-100-laptop.txt`](../../../../DonHopkins/temp/old-email/sim-city-in-open-source-for-100-laptop.txt) | Gilmore → Will → Rod Humble → Charles Normann (Dec 2006) |
-| [`simcity-for-olpc----introducing-the-players.txt`](../../../../DonHopkins/temp/old-email/simcity-for-olpc----introducing-the-players.txt) | Walter Bender, Jim Gettys, Doreen Nelson, Eben Moglen |
-| [`simcity-unix.txt`](../../../../DonHopkins/temp/old-email/simcity-unix.txt) | DUX/Maxis contract history, rights clearance |
+| [`article.md`](article.md) | Narrative timeline + pitch letter excerpt |
+
+## Verbatim email archive (in-repo, Jul 2026)
+
+**[`../2006-11-13-simcity-olpc-email-thread/`](../2006-11-13-simcity-olpc-email-thread/README.md)** — full Nov–Dec 2006 forwarded-mail thread:
+
+| Part | Coverage |
+|------|----------|
+| [`01-spark-and-will-support-nov-2006.md`](../2006-11-13-simcity-olpc-email-thread/01-spark-and-will-support-nov-2006.md) | Gilmore spark, Will support, **Long Now denial PS** (19 Nov) |
+| [`02-ea-clearance-dec-2006.md`](../2006-11-13-simcity-olpc-email-thread/02-ea-clearance-dec-2006.md) | Rod/Chuck/EA, DUX contracts, source drop |
+| [`don-pitch-letter-2006-12-02.md`](../2006-11-13-simcity-olpc-email-thread/don-pitch-letter-2006-12-02.md) | Don → Rod full pitch letter |
+| [`03-olpc-port-and-sugar-dec-2006.md`](../2006-11-13-simcity-olpc-email-thread/03-olpc-port-and-sugar-dec-2006.md) | Introducing the players, B1 laptop, XO photos, Sugar/Tk rework |
 
 ## Published articles (cross-links)
 
@@ -48,9 +56,29 @@ this first, then branch to threads below.
 - [Multiplayer X11 SimCity (1996 gallery)](../1996-04-26-winograd-interfacing-to-microworlds/images/031-multiplayer-x11-simcity-running-on-a-sun-sparcstation-ncd-x.gif)
 - [Sugar / Laszlo multiplayer essay](../sugar-centralized-multiplayer-laszlo/README.md)
 
+## Long Now seed (2006-06-26)
+
+Will was asked in Q&A — **open source SimCity** so players can remix the political assumptions in
+the rules. Don was **in the audience**. Will: arguing with the simulation means it worked; SimHealth
+gave rule access; **very open to the idea**.
+
+→ [Long Now clip — t=3929](../2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml#open-source-simcity-audience-question)
+
+### Long Now → Gilmore → Micropolis (clock)
+
+| When | Δ from Long Now | Event |
+|------|-----------------|-------|
+| **2006-06-26** | — | Dan Ancona + Mark Live ask; Will very open; Don in room |
+| **2006-11-13** | **140 days** (~4 mo 18 d · ~20 wk) | **John Gilmore** → Don: SimCity Classic for OLPC? ([01-spark](../2006-11-13-simcity-olpc-email-thread/01-spark-and-will-support-nov-2006.md)) |
+| **2006-11-17** | 144 days | Don → Will: "Is it possible for EA to release SimCity classic for OLPC?" |
+| **2006-11-18** | 145 days | Will → Don: "Let me check into it. I support the idea wholeheartedly." |
+| **2006-12-01** | 158 days (~5 mo 5 d) | Don's [pitch letter to Rod Humble](article.md) → clearance arc → **Micropolis** |
+
+*Gilmore's email is the outside spark; the Long Now Q&A is the witness beat Don had already heard Will affirm on stage.*
+
 ## Status
 
-**partial** — OLPC negotiation thread extracted; EA contract scans referenced in mail remain on Don's archive disks.
+**partial** — Nov–Dec 2006 thread now in [`2006-11-13-simcity-olpc-email-thread`](../2006-11-13-simcity-olpc-email-thread/README.md); EA contract scans referenced in mail remain on Don's archive disks.
 
 ---
 

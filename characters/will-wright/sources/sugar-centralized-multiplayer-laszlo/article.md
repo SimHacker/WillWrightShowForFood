@@ -13,7 +13,7 @@ From big-prompts and OLPC lists: integrate Micropolis with **Sugar** — mesh ne
 **Primary sources:**
 
 - [`../simcity-open-source-saga/`](../simcity-open-source-saga/README.md) — Dec 2006 EA negotiation
-- [`DonHopkins/temp/old-email/simcity-for-olpc----introducing-the-players.txt`](../../../../DonHopkins/temp/old-email/simcity-for-olpc----introducing-the-players.txt)
+- [`../2006-11-13-simcity-olpc-email-thread/`](../2006-11-13-simcity-olpc-email-thread/README.md) — Dec 2006 verbatim mail (Gilmore "introducing the players", B1 laptop, Sugar)
 - [`../../../../repo-shows/walter-bender-olpc.yml`](../../../../repo-shows/walter-bender-olpc.yml)
 
 ---

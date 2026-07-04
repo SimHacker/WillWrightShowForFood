@@ -1,0 +1,76 @@
+# Post-production — closed captions (accessibility first)
+# Don's hand-cleaned transcript is authoritative text; YouTube auto-cache supplies timing drafts.
+
+meta:
+  id: captions
+  scope: repo_show_post_production
+  policy: "Every published clip ships captions — not optional"
+  canonical_text: characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md
+  timing_reference: characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript-cache/youtube-auto-en.timeline.tsv
+
+principles:
+  - Sidecar WebVTT + SRT on every export (YouTube upload, players, archive)
+  - Speaker labels where Q&A merges in auto-captions (Student / Will Wright)
+  - Clip-relative timing (00:00:00 = clip in-point, not full-talk offset)
+  - Burn-in optional for Shorts; sidecar still required
+  - Auto-sliced drafts are timing-only until merged with canonical text
+
+sources:
+  authoritative:
+    transcript: transcript.md
+    clip_captions: captions/<clip_id>.vtt
+  reference_only:
+    youtube_auto: transcript-cache/youtube-auto-en.en.vtt
+    timeline_tsv: transcript-cache/youtube-auto-en.timeline.tsv
+  known_drift:
+    - "Auto-captions merge speakers in Q&A (~1:08:33) — fix in clip VTT"
+    - "Use transcript.md for quotes; never publish raw auto text"
+
+deliverables_per_clip:
+  git:
+    - captions/<clip_id>.vtt
+  local_repo_show:
+    - clips/captions/<clip_id>.vtt
+    - clips/captions/<clip_id>.srt
+    - clips/finish/<clip_id>.mp4
+    - clips/finish/<clip_id>.vtt
+  youtube:
+    - upload video + same-title .vtt (or paste in YouTube Studio)
+    - verify CC track enabled before publish
+
+pipeline:
+  extract:
+    tool: ~/GroundUp/repo-show/scripts/extract-clip.py
+    emits: [clips/raw/<clip_id>.mp4, clips/captions/<clip_id>.vtt, clips/captions/<clip_id>.srt]
+  caption_priority:
+    - git captions/<clip_id>.vtt if present
+    - else auto-slice from timeline TSV (draft — polish against transcript.md)
+  finish:
+    ae: optional burned captions via Essential Graphics layer OR ffmpeg soft-mux
+    ffmpeg_soft_mux: |
+      ffmpeg -y -i clips/finish/<clip_id>.mp4 -i clips/captions/<clip_id>.vtt \
+        -c copy -c:s mov_text -metadata:s:s:0 language=eng \
+        clips/finish/<clip_id>-cc.mp4
+    ffmpeg_burn_in: |
+      ffmpeg -y -i clips/finish/<clip_id>.mp4 \
+        -vf "subtitles=clips/captions/<clip_id>.vtt:force_style='FontName=Helvetica,FontSize=22,PrimaryColour=&HFFFFFF,OutlineColour=&H000000,Outline=2'" \
+        clips/finish/<clip_id>-burned.mp4
+
+style:
+  max_lines: 2
+  max_chars_per_line: 42
+  speakers: [Student, Will Wright, Terry Winograd, Don Hopkins]
+  format: "Speaker: dialogue" in Q&A segments
+  end_cards: caption CTA text on telecine jiggle slate (~3s)
+
+checklist:
+  - "[ ] captions/<clip_id>.vtt in git (canonical) OR draft flagged in production schedule"
+  - "[ ] Speaker attribution correct at pivotal Q&A"
+  - "[ ] Last cue ends on cut point (not bleed into trimmed tail)"
+  - "[ ] .vtt uploaded with YouTube publish"
+  - "[ ] short-form-clips.yml caption_status updated"
+
+see_also:
+  - characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/captions/README.md
+  - characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript-cache/PROVENANCE.yml
+  - process/post-production/cambridge-telecine-jiggle.yml

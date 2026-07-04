@@ -1,0 +1,26 @@
+id: 2006-11-13-simcity-olpc-email-thread
+title: SimCity OLPC email thread (Nov–Dec 2006)
+date_range: 2006-11-13 — 2006-12-31
+type: primary-source
+format: forwarded-email-verbatim
+
+one_liner: Gilmore sparks OLPC open-source SimCity; Will says yes; EA clears; Don gets an XO-1 running Tcl/Tk SimCity by New Year's Eve.
+
+show_beats:
+  - long_now_denial_payoff  # Don's 19 Nov PS — not him, not Gilmore; Dan Ancona at Long Now
+  - will_wholehearted_yes   # 18 Nov
+  - ea_contract_archaeology # Chuck + DUX/Maxis contracts typed out
+  - introducing_the_players # Gilmore 20 Dec cast email
+  - simcity_on_xo           # 29 Dec photos; 31 Dec Matchbox/Sugar rework
+
+files:
+  - 01-spark-and-will-support-nov-2006.md
+  - 02-ea-clearance-dec-2006.md
+  - 03-olpc-port-and-sugar-dec-2006.md
+  - roadmap.txt
+  - images/
+
+related:
+  - ../2006-06-26-long-now-playing-with-time-eno-wright/
+  - ../simcity-open-source-saga/
+  - ../2006-12-simcity-olpc-introducing-the-players/

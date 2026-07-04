@@ -34,16 +34,44 @@ Will's Stanford CS547 talk — SimEarth/SimAnt/SimCity postmortems, then the **D
 that became The Sims. Don was in the room; preserved transcript + Medium article + 167 figures.
 The student question that unspooled a franchise.
 
+**[2005-03-11-spore-gdc-future-of-content/](2005-03-11-spore-gdc-future-of-content/README.md)**  
+Will **flat-out lied** about the GDC title and debuted **Spore** to developers first (March 11, 2005).
+Don's field notes on [Medium](https://donhopkins.medium.com/the-future-of-content-will-wrights-spore-demo-at-gdc-3-11-2005-9eab0cedc583), reviewed by Will — procedural content, 5000:1 compression, planet buster.
+Retrospective anchor: vision vs shipped Spore. [YouTube remaster](https://www.youtube.com/watch?v=ofA6YWVTURU)
+
+**[2006-06-26-long-now-playing-with-time-eno-wright/](2006-06-26-long-now-playing-with-time-eno-wright/README.md)**  
+**Brian Eno + Will Wright** at the Long Now Foundation — *Playing with Time*: generative music ×
+generative games, Conway's Life scored live, full **Spore** demo. Don **in the audience**; seed evening
+for the Eno ↔ Scott Draves circle. [YouTube](https://www.youtube.com/watch?v=Dfc-DQorohc)
+
 **[2008-02-10-soul-of-the-sims/](2008-02-10-soul-of-the-sims/README.md)**  
 Will's January 1997 **Motive.c** — hunger, bladder, stress as procedural rhetoric at the substrate.
 Scans plus Don's transcription. The wedding playset and Dumbold Voting Machine are later *objects*
 on this same motive machinery.
+
+**[2006-11-06-thesims-ai-test/](2006-11-06-thesims-ai-test/README.md)**  
+**TheSimsAITest.zip** — Nov 2006 C# console sketch of the four retail motives (decay only, no smart
+objects). Email attachment from Don's archives; contrast piece for the Jamie Doornbos / SimAntics show.
 
 ---
 
 ## SimCity open source → Micropolis
 
 The saga belongs in the public repo — primary sources, not backstage scheming.
+
+**[2006-11-13-simcity-olpc-email-thread/](2006-11-13-simcity-olpc-email-thread/README.md)**  
+Verbatim Nov–Dec 2006 forwarded mail: Gilmore spark → Will support → **Long Now denial** (19 Nov) → EA clearance → OLPC B1 laptop → SimCity on XO photos → Tk 2.3 single-window Sugar rework (31 Dec).
+
+**Additional verbatim threads** (mined from Don's mail archive, Jul 2026):
+
+| Bundle | What |
+|--------|------|
+| [`2006-12-20-simcity-for-olpc-introducing-the-players/`](2006-12-20-simcity-for-olpc-introducing-the-players/README.md) | Gilmore cast intro; Walter Bender response |
+| [`2006-12-21-simcity-for-olpc-sugar-integration-ideas/`](2006-12-21-simcity-for-olpc-sugar-integration-ideas/README.md) | Don's Sugar roadmap reply |
+| [`2006-12-28-ideas-for-sugar-development-environment-from-hyp/`](2006-12-28-ideas-for-sugar-development-environment-from-hyp/README.md) | HyperLook → Sugar dev env |
+| [`2006-12-29-pictures-of-simcity-on-olpc/`](2006-12-29-pictures-of-simcity-on-olpc/README.md) | XO-1 photos thread (Gettys, Selker, …) |
+| [`2006-12-27-olpc-b1-machine-on-its-way/`](2006-12-27-olpc-b1-machine-on-its-way/README.md) | B1 laptop shipment |
+| [`2006-12-04-integrating-simcity-with-olpc-s-goals-and-user-i/`](2006-12-04-integrating-simcity-with-olpc-s-goals-and-user-i/README.md) | Integration pitch |
 
 **[simcity-open-source-saga/](simcity-open-source-saga/README.md)**  
 Timeline from Don's December 2006 pitch letter to Rod Humble — SimCityNet screenshots, OLPC
@@ -210,8 +238,6 @@ Opening segment material; seeds Slats robopoetry + Broken Robot gags.
 
 ## Spore, Yoot, preservation threads
 
-**[2005-03-11-spore-gdc-future-of-content/](2005-03-11-spore-gdc-future-of-content/README.md)**  
-Spore GDC 2005 — Future of Content (stub; full text still to recover).
 
 **[2024-yoot-tower-open-source/](2024-yoot-tower-open-source/README.md)**  
 Yoot Saito + Phil Salvador VGHF — open-source tower game discussion.
@@ -285,6 +311,8 @@ CAM-6 pie menus as visual programming — YouTube + essay cross-link.
 | Slug | Title |
 |------|-------|
 | [1996-04-26-winograd-interfacing-to-microworlds](1996-04-26-winograd-interfacing-to-microworlds/README.md) | Designing User Interfaces to Simulation Games (1996 talk + Medium, 167 figures) |
+| [2005-03-11-spore-gdc-future-of-content](2005-03-11-spore-gdc-future-of-content/README.md) | Spore GDC 2005 — first public reveal; Don's Medium notes |
+| [2006-06-26-long-now-playing-with-time-eno-wright](2006-06-26-long-now-playing-with-time-eno-wright/README.md) | Playing with Time — Eno + Will, Long Now 2006 (Spore demo; Don in audience) |
 | [2018-04-23-sims-crowd-sitter](2018-04-23-sims-crowd-sitter/README.md) | The Sims 1 Crowd Sitter |
 | [2018-04-24-dumbold-voting-machine](2018-04-24-dumbold-voting-machine/README.md) | Dumbold Voting Machine for The Sims 1 |
 
@@ -294,10 +322,11 @@ CAM-6 pie menus as visual programming — YouTube + essay cross-link.
 |------|-------|
 | [2004-01-12-winograd-ui-simulation-games](2004-01-12-winograd-ui-simulation-games/README.md) | Winograd UI talk — pre-Medium essay (2004); compare to [1996 Medium](1996-04-26-winograd-interfacing-to-microworlds/README.md) |
 | [2008-02-10-soul-of-the-sims](2008-02-10-soul-of-the-sims/README.md) | Soul of The Sims — Will Wright's Motive.c (1997), scans + [transcribed Motive.c](2008-02-10-soul-of-the-sims/Motive.c) |
+| [2006-11-06-thesims-ai-test](2006-11-06-thesims-ai-test/README.md) | TheSimsAITest.zip — Nov 2006 C# needs-decay sketch (contrast vs SimAntics) |
 | [2004-02-21-chris-trottier-tuned-emergence](2004-02-21-chris-trottier-tuned-emergence/README.md) | Chris Trottier — Tuned Emergence & Design by Accretion |
 | [2007-11-16-simcity-rules-alan-kay](2007-11-16-simcity-rules-alan-kay/README.md) | SimCity Rules (Alan Kay / OLPC thread) |
 | [2007-11-16-olpc-visual-programming-psiber](2007-11-16-olpc-visual-programming-psiber/README.md) | OLPC Visual Programming / PSIBER |
-| [2005-03-11-spore-gdc-future-of-content](2005-03-11-spore-gdc-future-of-content/README.md) | Spore GDC 2005 — Future of Content (stub) |
+| [2005-03-11-spore-gdc-future-of-content](2005-03-11-spore-gdc-future-of-content/README.md) | Spore GDC 2005 — Future of Content (Don notes + clips) |
 
 ## UCC tools & publishing
 
@@ -370,7 +399,7 @@ CAM-6 pie menus as visual programming — YouTube + essay cross-link.
 
 ## Still to extract or enrich
 
-- Spore GDC 2005 — full article text
+- Spore GDC 2005 — hand captions for clip batch
 - OLPC / Micropolis blog cluster (2007–2008)
 - Transmogrifier 2.0 launch post, Bunny Wuffles, XML Pie Menus — partial: [naming saga](2000-05-17-transmogrifier-naming-saga/README.md), [tutorial](2004-transmogrifier-tutorial-green-flamingo/README.md), [glossary](2004-transmogrifier-glossary/README.md)
 - Original Sims site captures (cemetery, dumbold pages)

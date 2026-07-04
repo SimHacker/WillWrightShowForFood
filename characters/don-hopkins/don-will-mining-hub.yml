@@ -1,0 +1,86 @@
+# Don Hopkins × Will Wright — mining hub
+# Session picks: compression / Spore retrospective / witness threads / Kaleida origin
+
+meta:
+  host: don-hopkins
+  guest: will-wright
+  updated: 2026-07-04
+  prompt_scratch: ../../../../DonHopkins/temp/even-more-prompts.txt
+
+arcs:
+  compression:
+    thesis: Science compresses; games and generative art decompress. Same thread from GDC 2005 → Long Now 2006 → demoscene HN 2023.
+    sources:
+      - ../will-wright/sources/2005-03-11-spore-gdc-future-of-content/
+      - ../will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/
+    don_hn:
+      - demoscene-compression-hn-2023.md
+      - spore-stats-hn-2023.md
+    flagship_clips:
+      - five-thousand-to-one-compression
+      - demo-scene-helsinki
+      - amphetamine-ambient-acid-jazz
+      - seeds-not-forests-compression
+
+  spore_retrospective:
+    thesis: GDC promise vs shipped game; Don witness notes + 2023 HN postmortem.
+    witness: ../will-wright/sources/2005-03-11-spore-gdc-future-of-content/medium-article.md
+    don_hn: spore-stats-hn-2023.md
+    don_beats:
+      - id: t-shaped-swoop-failed
+        hn: 36280690
+        summary: Vertical tutorial ladder + horizontal galactic story; swoop-down failed; per-level teams blocked cross-layer design.
+        ask_will: Was T-shaped design ever shippable once teams split by stage?
+      - id: creators-won
+        hn: 36280831
+        summary: Direct-manipulation editors + async exchange (Sims Exchange model) were the durable win; gameplay/story less so.
+        ask_will: Creators and community won — agree?
+    audience:
+      - repo-shows/will-wright/audience/fictional-spore-creature/questions.yml
+
+  sims_don_craft:
+    thesis: Don's SimAntics / Transmogrifier / pixelation war stories × Will's object-advertising design.
+    don_hn: sims-pixelation-censorship-hn-2022.md
+    sources:
+      - the-sims-transmogrifier-mod-tools.md
+      - ../will-wright/sources/steve-and-gerri-simlish-adlib/TRANSCRIPT-DRAFT.md
+      - ../will-wright/sources/2006-11-06-thesims-ai-test/
+      - ../will-wright/sources/2008-02-10-soul-of-the-sims/
+    beats:
+      - TheSimsAITest (Nov 2006) — Mats Knutsen C# needs-decay sketch; empty InteractionObject = no smart objects yet
+      - don-reply-to-mats-knutsen.md — top-5 random choice, advertisement scoring, favorite-bed relationships
+      - Motive.c (1997) vs TheSimsAITest vs SimAntics — three-layer teaching stack for Jamie Doornbos show
+      - Shimmer bar = procedural disguise; no mesh under pixelation (RNG discipline)
+      - TSO UI/sim PRNG desync — networked sim lesson
+      - Maid + plunger SimAntics fix
+      - Stephen Colbert VO: "gonna pixelate" hot tub ad-lib
+
+  before_winograd:
+    thesis: Proto-Dollhouse on Don's Kaleida Mac — years before CS547 "Oh God" moment.
+    file: ../will-wright/proto-dollhouse-kaleida-visit.md
+    kaleida_context: kaleida-scriptx-dreamscape-multimedia-lisp-machine.md
+    ask_will: What changed between Kaleida visit and 1996 Winograd demo?
+
+  long_now_triangle:
+    thesis: Don in audience → Eno + Will → days later Don introduced Eno to Scott Draves.
+    source: ../will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/
+    cross: ../scott-draves/correspondence.yml
+
+  micropolis_open_source:
+    thesis: Audience asks Will to open-source SimCity (Long Now Q&A); Don delivers Micropolis six months later.
+    clip: open-source-simcity-audience-question
+    video: https://youtu.be/Dfc-DQorohc?t=3929
+    saga: ../will-wright/sources/simcity-open-source-saga/README.md
+    verbatim_mail: ../will-wright/sources/2006-11-13-simcity-olpc-email-thread/README.md
+    don_topic: open-sourcing-simcity-for-olpc.md
+    timeline:
+      - 2006-06-26 — Dan Ancona + Mark Live ask; Will very open; Don in room
+      - 2006-11-19 — Don denies he or Gilmore asked at Long Now (humorous effect)
+      - 2006-12 — Don pitch letter to Rod Humble → OLPC clearance arc
+
+next_mine:
+  - Hand-proofread GDC VTT → captions/ (Winograd workflow)
+  - Cache Long Now VTT in transcript-cache/
+  - Promote hn-witness retrospective_prompts → audience YAML batches
+  - Kaleida-era photos for proto-Dollhouse beat
+  - Adorable Minutes episodes → short-form-clips.yml under will-wright/

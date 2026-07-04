@@ -29,16 +29,18 @@ stupid_fun_club:
 
   how_don_rejoined_will:
     what: |
-      At TomTom Don built — solo, for fun, to learn iPhone + web-server programming — an Amsterdam
-      Coffeeshops iPhone app (2009; photos + info on every coffeeshop, driven by his spreadsheet
-      database) and BONGO BINGO (a Foursquare-API web game: bingo card of random coffeeshops, bike
-      around, GPS-verified check-in, review what you tried, feed it back to the spreadsheet). He
-      had also built iLoci (Memory Palace pie-menu network) earlier at TomTom/Bluebird and given a
-      Mobile Dev Camp talk. Don showed these at an Amsterdam meetup where Will Wright was present.
-    the_moment: "Will looked at it, realized it was EXACTLY what he needed for CurrentTV and other projects, and said: 'Hey, by the way, I'm leaving EA — want to work together again, remotely?' Don said yes, left TomTom, and went back to Stupid Fun Club projects. Coffeeshops + BONGO BINGO were the progenitor of StoryMaker / Bar Karma / Urban Safari."
+      During TomTom (2007–2009), Don built three solo self-education projects on the side — pre-SFC,
+      leveraging mobile/maps skills from the day job: iLoci (Memory Palace pie-menu network, 2008,
+      Bluebird/TomTom + Mobile Dev Camp Amsterdam talk), Amsterdam Coffeeshops iPhone app (2009;
+      photos + info on every coffeeshop, spreadsheet database), and BONGO BINGO (Foursquare-API web
+      game: bingo card of random coffeeshops, bike around, GPS-verified check-in, feed reviews back
+      into the spreadsheet). Together they matched exactly what Will was working on — CurrentTV,
+      community GPS storytelling.
+    the_moment: "Don showed them at an Amsterdam meetup — Will wasn't there — then sent Will the videos and demos. Will looked at them and said: 'Hey, by the way, I'm leaving EA — want to work together again, remotely?' Don said yes, left TomTom, and went back to Stupid Fun Club projects. The TomTom trilogy was the progenitor of StoryMaker / Bar Karma / Urban Safari."
+    tomtom_trilogy: [iloci, amsterdam_coffeeshops_app, bongo_bingo]
     coffeeshops_app_video: "https://www.youtube.com/watch?v=nG90XG3STz8"
     iloci_video: "https://www.youtube.com/watch?v=03ddG3jWF98"
-    reincarnate: "Don would love to reincarnate + reinvent the Coffeeshops app + BONGO BINGO — decades out of date, but a fun idea; all part of the tapestry."
+    reincarnate: "Don would love to reincarnate + reinvent the TomTom trilogy — Coffeeshops, BONGO BINGO, iLoci — decades out of date, but a fun idea; all part of the tapestry."
     lineage: "DreamScape (1995 Kaleida) → iLoci (2008) → Coffeeshops/BONGO BINGO (2009) → StoryMaker/Bar Karma/Urban Safari (2011) → MediaGraph"
     ties:
       - ../../../process/crazy-idea-jam.yml#amsterdam_coffeeshops_app

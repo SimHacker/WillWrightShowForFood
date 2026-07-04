@@ -12,7 +12,11 @@
 
 ## Pipeline
 
-`show → cauldron SCOOP → skill lands here → PR breeds network`
+`show → [cauldron SCOOP](https://github.com/SimHacker/moollm/tree/main/skills/cauldron) → skill lands here → PR breeds network`
+
+**PLAY → LEARN → LIFT:** [play-learn-lift](https://github.com/SimHacker/moollm/tree/main/skills/play-learn-lift) · [SCOOP protocol](https://github.com/SimHacker/moollm/blob/main/skills/cauldron/protocols/SCOOP.yml)
+
+**Examples:** [cauldron/examples/](https://github.com/SimHacker/moollm/tree/main/skills/cauldron/examples) · **Deep instance:** [MicropolisCore playable-pie-publishing-cauldron](https://github.com/SimHacker/MicropolisCore/tree/main/documentation/designs/playable-pie-publishing-cauldron) ([GATHERING.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/playable-pie-publishing-cauldron/GATHERING.md))
 
 Compose with [`SimHacker/moollm`](https://github.com/SimHacker/moollm) — do not fork core skills.
 

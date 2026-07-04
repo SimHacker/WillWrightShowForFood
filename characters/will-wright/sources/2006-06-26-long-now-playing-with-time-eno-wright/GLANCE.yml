@@ -1,0 +1,50 @@
+# 2006 LONG NOW — GLANCE (Will Wright + Brian Eno)
+# Generative music × generative games. Don in the audience.
+
+title: "Playing with Time (2006-06-26)"
+iconic: "⏳🎛️ 2006"
+description: |
+  Long Now Foundation seminar — Brian Eno and Will Wright on compression, seeds vs forests,
+  ambient time, Conway's Life scored live, full Spore demo. Stewart Brand hosts. Don Hopkins
+  in the audience; seed evening for Eno ↔ Scott Draves ↔ generative-systems reunion shows.
+
+keywords:
+  - long now
+  - brian eno
+  - playing with time
+  - spore
+  - generative music
+  - generative systems
+  - stewart brand
+  - conway life
+  - compression
+  - possibility space
+  - ambient
+  - amphetamine ambient
+  - acid jazz
+  - 2006
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  children:
+    - summary.md
+    - short-form-clips.yml
+    - transcript-cache/
+
+structure:
+  video: https://www.youtube.com/watch?v=Dfc-DQorohc
+  event: "Long Now Foundation Seminar series, San Francisco"
+  date: 2006-06-26
+  host: Stewart Brand
+  duration: "~1:38"
+  audience: "Don Hopkins (in room)"
+
+see_also:
+  - ../../../../repo-shows/brian-eno/SHOW.yml
+  - ../../../../repo-shows/scott-draves/README.md#the-brian-eno-evening-2006
+  - ../1996-04-26-winograd-interfacing-to-microworlds/README.md
+  - ../2005-03-11-spore-gdc-future-of-content/README.md
+  - ../../../brian-eno/README.md

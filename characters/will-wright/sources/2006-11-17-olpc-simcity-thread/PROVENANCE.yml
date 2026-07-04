@@ -1,0 +1,8 @@
+archive:
+  ingested: 2026-07-04
+  source: temp/lots-of-chat.txt
+  chat_lines: L30131-L30204
+  form: curated verbatim
+
+parts:
+  - email-thread.md

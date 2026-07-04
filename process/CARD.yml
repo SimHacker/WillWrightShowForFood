@@ -7,14 +7,17 @@ room:
 
 purpose: |
   Canonical specs for Repo Show format, game-show variants, retro challenges, ai-offs,
-  and vision. Yaml stays brutalist machine-readable girders; markdown markup facades
-  are generated on demand (pnpm run facades) — never hand-synced.
+  and vision. Yaml stays brutalist machine-readable girders.
+  Important markdown (VISION, CRAZY-IDEA-JAM, ENTRYWAYS, TRAILS, …) is hand-authored;
+  yaml→md script is temporary fallback for the rest.
 
 methods:
   FIND-SPEC:
     signature: "INDEX.yml → yaml girder"
   READ-MARKUP:
-    signature: "Generated *.md human view — regenerate, don't edit"
+    signature: "Human markdown view — hand-authored when instance_first; else pnpm facades fallback"
+    instance_first: [VISION.md, CRAZY-IDEA-JAM.md, ENTRYWAYS.md, TRAILS.md, entryways/*.md, trails/*.md]
+    registry: markup-facades.yml
   READ-GIRDER:
     signature: "Raw yaml when implementing or automating"
   REGENERATE-FACADES:

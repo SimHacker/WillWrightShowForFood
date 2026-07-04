@@ -1,0 +1,8 @@
+archive:
+  ingested: 2026-07-04
+  source: DonHopkins/temp/lots-of-chat.txt
+  subject: [laszlo-dev] openlaszlo youtube player
+  form: verbatim
+
+parts:
+  - email-thread.md

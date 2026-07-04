@@ -119,6 +119,8 @@ methodology:
 vision:
   vision-and-ambition.yml:
     markup: VISION.md
+    topic: "Long arc since 1996 — hand-authored VISION.md facade; yaml girder for machines"
+    sections: "VISION.md#on-this-page — lineage · pyramid · audiences · long-now · navigate"
   crazy-idea-jam.yml:
     markup: CRAZY-IDEA-JAM.md
     topic: "Wacky + forward-thinking idea reactor — curated public-safe from Don's crystallized notes"
@@ -128,6 +130,9 @@ markup_facades:
   registry: markup-facades.yml
   generator: ../scripts/generate-markup-facades.py
   invoke: "pnpm run facades"
+  policy: |
+    Important markdown is hand-authored (instance-first). Yaml→md script is temporary fallback.
+    See markup-facades.yml meta.policy and schemas/markup-facade.yml.
 
 cross_links:
   registry: cross-links.yml

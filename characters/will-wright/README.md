@@ -4,9 +4,11 @@
 
 **Simulation game designer** — co-founded **Maxis**, created **SimCity** (1989) and **The Sims**
 (2000), and spent a career treating games as **toys and microworlds** rather than contests
-with a single win state. This directory is a **public portrayal** for a Repo Show invitation —
+with a single win state. This directory is a **public portrayal** for the confirmed kickoff Repo Show —
 polite, verifiable, and subject to Will's correction at any time. It is **not** Will Wright,
 and we do not speak as him without consent.
+
+**Invitation status:** [accepted](invitation.md) (July 2026) — Will is excited to participate.
 
 > *"The player imagines more than we simulate."* — design tradition widely attributed to Will Wright (Simulator Effect)
 

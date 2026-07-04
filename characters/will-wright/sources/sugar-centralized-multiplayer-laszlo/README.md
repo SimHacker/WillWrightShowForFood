@@ -1,6 +1,6 @@
 # Sugar OLPC multiplayer + centralized Laszlo client (exposition backlog)
 
-**Status:** Tier 1 — article [`article.md`](article.md); OLPC thread split to `DonHopkins/temp/old-email/`.
+**Status:** Tier 1 — article [`article.md`](article.md); OLPC thread in [`2006-11-13-simcity-olpc-email-thread/`](../2006-11-13-simcity-olpc-email-thread/README.md).
 
 ## Thread A — Sugar / OLPC Micropolis multiplayer UI
 

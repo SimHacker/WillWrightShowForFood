@@ -1,0 +1,37 @@
+# Provenance — 2006 Long Now: Playing with Time
+
+video:
+  id: Dfc-DQorohc
+  url: https://www.youtube.com/watch?v=Dfc-DQorohc
+  title: "Playing with Time — Brian Eno and Will Wright"
+  event: "Long Now Foundation Seminar series"
+  date: 2006-06-26
+  host: Stewart Brand
+  venue: San Francisco
+  youtube_publisher: The Long Now Foundation
+  youtube_upload_note: "Mirror published Apr 2020 (Long Now Talks channel)"
+
+witness:
+  don_hopkins: audience_member
+
+canonical:
+  file: ../summary.md
+
+reference_cache:
+  directory: .
+  files:
+    - youtube-auto-en.timeline.tsv
+  purpose: timestamp verification, clip discovery
+  cached_at: 2026-07-04
+  refresh: |
+    yt-dlp --write-auto-sub --sub-lang en --sub-format vtt --skip-download \
+      -o "youtube-auto-en.%(ext)s" "https://www.youtube.com/watch?v=Dfc-DQorohc"
+
+captions:
+  policy: ../../../../process/post-production/captions.yml
+  status: not_started
+
+see_also:
+  - ../../../../repo-shows/brian-eno/SHOW.yml
+  - ../../../../process/VISION.md#long-now-and-later
+  - ../1996-04-26-winograd-interfacing-to-microworlds/README.md

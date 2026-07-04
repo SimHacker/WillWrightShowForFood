@@ -35,6 +35,14 @@ priorities:
     - will-wright/sources/2026-07-03-digital-antiquarian-maxis-part1/ (HN 48776525)
     - repo-shows/will-wright/audience/hn-nanna/questions.yml (nanna queue)
 
+  p1_done_iteration_4:
+    - characters/don-hopkins/don-will-mining-hub.yml
+    - GDC 2005 short-form-clips — 7 new verified clips + demo-scene promoted
+    - Long Now short-form-clips — ambient/restart/bushofghosts/simcity-politics
+    - hn-witness.yml don_retrospective_beats + mining_hub link
+    - fictional-spore-creature/questions.yml — Don HN retrospective Q5–Q7
+    - DonHopkins/temp/even-more-prompts.txt mining scratch expanded
+
   p1_next:
     - bill-buxton, gordon-kurtenbach, david-mackay, aaron-mcleran — when HN yields material
     - PieCraft extension — mostly in pie-menus-chi-88-and-beyond.md
@@ -73,6 +81,9 @@ hn_threads:
     - { id: 10100932, artifact: characters/don-hopkins/drakon-control-flow-vs-dataflow.md }
     - { id: 22787566, artifact: characters/kim-cascone/ideas.md }
     - { id: 48776525, artifact: characters/will-wright/sources/2026-07-03-digital-antiquarian-maxis-part1/ + repo-shows/will-wright/audience/hn-nanna/questions.yml }
+    - { id: 36279341, artifact: characters/don-hopkins/spore-stats-hn-2023.md + GDC hn-witness.yml }
+    - { id: 36597460, artifact: characters/don-hopkins/demoscene-compression-hn-2023.md + demo-scene-helsinki clip }
+    - { id: 30350626, artifact: characters/don-hopkins/sims-pixelation-censorship-hn-2022.md }
   queued: []
 
 queued_prompts_merged:

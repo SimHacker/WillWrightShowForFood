@@ -1,0 +1,40 @@
+# CARD — 2005 GDC: The Future of Content (Spore reveal)
+
+id: 2005-03-11-spore-gdc-future-of-content
+type: primary_source_video
+guests: [will-wright]
+venue: Game Developers Conference (Moscone Center West, San Francisco)
+
+one_line: |
+  Will flat-out lied about the talk title, then debuted Spore to GDC — procedural content as
+  answer to rising AAA costs. Don's field notes (Medium, Will-reviewed) + the remastered video
+  anchor the "what could have been" retrospective.
+
+video: https://www.youtube.com/watch?v=ofA6YWVTURU
+gdc_vault: https://www.gdcvault.com/play/1019981
+medium: https://donhopkins.medium.com/the-future-of-content-will-wrights-spore-demo-at-gdc-3-11-2005-9eab0cedc583
+
+provenance:
+  witness: Don Hopkins — audience, March 11 2005; notes published Medium Apr 21 2018
+  reviewed_by: Will Wright
+  video_note: Zeusmonomon remaster (Aug 2020); game footage blown out (projector capture)
+  archive_org: cited in remaster description — GDC 2005 session tapes
+
+interface:
+  summary: summary.md
+  notes: medium-article.md
+  clips: short-form-clips.yml
+  transcript_status: youtube_auto_only — verify against Don's notes
+  captions: captions/ · process/post-production/captions.yml
+
+retrospective:
+  thesis: Vision demo (baling wire + duct tape) vs 2008 shipped Spore — same through-line as Long Now 2006 demo
+  audience_pain: "Remember what they took from us" — EA, scope cut, kid-friendly pivot
+  don_angle: Witness + note-taker; connect procedural rhetoric to Micropolis / UCC / Repo Show
+  hn_witness: hn-witness.yml
+
+pairs_with:
+  - 2006-06-26-long-now-playing-with-time-eno-wright
+  - 1996-04-26-winograd-interfacing-to-microworlds
+  - 2004-02-21-chris-trottier-tuned-emergence
+  - 2008-02-10-soul-of-the-sims

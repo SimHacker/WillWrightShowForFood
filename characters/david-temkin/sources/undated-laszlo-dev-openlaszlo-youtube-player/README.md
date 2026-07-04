@@ -1,0 +1,7 @@
+# [Laszlo-Dev] Openlaszlo Youtube Player
+
+Verbatim Laszlo/OpenLaszlo thread (4 messages).
+
+| [`email-thread.md`](email-thread.md) | Full thread |
+
+↑ [`../../README.md`](../../README.md)

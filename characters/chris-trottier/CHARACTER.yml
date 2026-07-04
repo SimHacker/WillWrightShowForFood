@@ -7,7 +7,7 @@ character:
   type: invitation
   signifier: "🪶"
   status: living
-  field: "Lead Designer at Maxis (1997–2008) on The Sims; known for 'design by accretion'"
+  field: "Lead Designer at Maxis (1997–2008) on The Sims, Sims Online, and Spore; known for 'design by accretion'"
   home: characters/chris-trottier/
 
 representation:
@@ -22,11 +22,13 @@ invitation:
   show_seed: repo-shows/REPO-SHOWS.yml#design-by-accretion.yml
 
 bio:
-  summary: "**Chris Trottier** was **Lead Designer at Maxis (1997–2008)**, a key designer on **The Sims** and later Sims titles, and a central voice in the game's content and systems design. Don associates him with **'design by accretion'** — building a design up layer by layer, detail by detail, until it comes alive."
+  summary: "**Chris Trottier** was **Lead Designer at Maxis (1997–2008)**, a key designer on **The Sims**, **The Sims Online**, and early **Spore** — a central voice in the game's content and systems design. Don associates her with **'design by accretion'** — building a design up layer by layer, detail by detail, until it comes alive."
 
 connections:
   the_sims: "Senior designer on The Sims; content and systems design across the franchise."
-  design_by_accretion: "The throughline for his Repo Show — design built up by accretion, in dialogue with the 'cauldron'."
+  sims_online: "Producer; in-game alter ego Yoyo Mama."
+  spore: "Early team — usability 'village idiot,' Stinson Beach design offsite."
+  design_by_accretion: "The throughline for her Repo Show — design built up by accretion, in dialogue with the 'cauldron'."
   don: "Don Hopkins's colleague on The Sims team."
 
 show_suggestions:
@@ -34,6 +36,8 @@ show_suggestions:
   - { seed: ../../repo-shows/REPO-SHOWS.yml#building-the-sims.yml, what: "The Sims team reunion." }
 
 sources:
+  farewell_2007: sources/2007-01-10-leaving-maxis/career-memories.md
+  tuned_emergence: ../will-wright/sources/2004-02-21-chris-trottier-tuned-emergence/
   wikipedia: null
   web:
     - "https://www.mobygames.com/search/?q=Chris+Trottier"
@@ -41,6 +45,9 @@ sources:
   blogs: []
 
 see_also:
+  - { path: sources/2007-01-10-leaving-maxis/, why: "Jan 2007 career memoir digest" }
+  - { path: correspondence.yml, why: "Public-safe correspondence summary" }
+  - { path: ../will-wright/sources/2004-02-21-chris-trottier-tuned-emergence/, why: "Tuned emergence essay" }
   - { path: ../will-wright/, why: "Created The Sims" }
   - { path: ../don-hopkins/, why: "Sims teammate; host" }
   - { path: ../jamie-doornbos/, why: "Sims engineering" }

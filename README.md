@@ -8,7 +8,7 @@ Browse without a GitHub account. Clone to play along.
 **Stumbled here?** Long-term ambition since Will's **1996 Stanford talk** (and before) —
 this **GitHub repo** is the **first public point of origin** (tip of the pyramid). Not a launch promise:
 curb appeal up top, **brutalist GitHub underneath** (yaml girders, verify CI, real monorepo).
-→ [**Vision** (readable)](process/VISION.md) · [yaml girder](process/vision-and-ambition.yml)
+→ [**Vision**](process/VISION.md) ([sections](process/VISION.md#on-this-page)) · [yaml girder](process/vision-and-ambition.yml) · [Crazy Idea Jam](process/CRAZY-IDEA-JAM.md)
 
 [![The User Interface Flower Child](characters/will-wright/media/DonHopkinsSimsCreditsIcon.jpg)](repo-shows/will-wright/README.md)
 
@@ -16,7 +16,7 @@ curb appeal up top, **brutalist GitHub underneath** (yaml girders, verify CI, re
 
 | What | Where |
 |------|--------|
-| **Vision** (platforms, archives, viral readers) | [**process/VISION.md**](process/VISION.md) |
+| **Vision** (platforms, archives, viral readers) | [**process/VISION.md**](process/VISION.md) · [sections](process/VISION.md#on-this-page) · [Crazy Idea Jam](process/CRAZY-IDEA-JAM.md) |
 | **MOOLLM pyramid** | [`GLANCE.yml`](GLANCE.yml) · [`CARD.yml`](CARD.yml) · [`skills/repo-show/`](skills/repo-show/README.md) |
 | **Process room** | [`process/README.md`](process/README.md) · [`process/INDEX.yml`](process/INDEX.yml) |
 | **Repo Show format** | [`process/FORMAT.md`](process/FORMAT.md) · [`process/repo-show-format.yml`](process/repo-show-format.yml) · [**TicketPR**](process/ticket-pr.yml) |
@@ -25,7 +25,7 @@ curb appeal up top, **brutalist GitHub underneath** (yaml girders, verify CI, re
 | **The show pitch** | [`repo-shows/will-wright/README.md`](repo-shows/will-wright/README.md) · [**Will: browse any order**](repo-shows/will-wright/BROWSE.md) |
 | **🤖 Slats / RoboResurrection** | [`slats-reincarnation.yml`](repo-shows/will-wright/slats-reincarnation.yml) · [`characters/robots/slats/`](characters/robots/slats/README.md) |
 | **1996 Winograd talk** (centerpiece) | [`characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/`](characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) |
-| **Draft invitation to Will** | [`characters/will-wright/invitation.md`](characters/will-wright/invitation.md) · [**BROWSE any order**](repo-shows/will-wright/BROWSE.md) |
+| **Will — accepted invitation** | [`characters/will-wright/invitation.md`](characters/will-wright/invitation.md) · [**BROWSE any order**](repo-shows/will-wright/BROWSE.md) |
 | **Guest directories** | [`characters/`](characters/README.md) · [`characters/README.md`](characters/README.md) |
 | **Portrayal standards** | [`schemas/portrayal-standards.yml`](schemas/portrayal-standards.yml) |
 | **Live repo policy** | [`process/live-repo.yml`](process/live-repo.yml) |
@@ -62,7 +62,7 @@ No production promises; see [**process/VISION.md**](process/VISION.md).
 MOOLLM skills into [`skills/`](skills/README.md) (composable with [moollm](https://github.com/SimHacker/moollm)).
 Shows are the stage; inheritable technique is the stack that grows downward.
 
-**Will Wright — first guest, topic-less.** Orbit the 1996 Dollhouse talk; crown jewel = **data portability**
+**Will Wright — confirmed kickoff guest, topic-less.** [Accepted](../characters/will-wright/invitation.md) July 2026. Orbit the 1996 Dollhouse talk; crown jewel = **data portability**
 (Proxi ↔ Sims ↔ …).
 
 ## How a Repo Show runs

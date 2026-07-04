@@ -1,21 +1,30 @@
-# process/ — protocol girders + generated markup facades
+# process/ — protocol girders + human markdown facades
 
-**Yaml is source of truth** — compact machine-readable data; may declare includes and references; updates propagate like a dependency graph.
+**Yaml is source of truth for machines** — compact data; dependency graph; MOOLLM and CI read yaml.
 
-**Markdown is the human view** — lazily generated markup facades. **Do not edit registered `*.md` by hand** — edit yaml and regenerate, or re-invoke an LLM with the facade map.
+**Markdown is the human view** — hand-authored for important docs. **Yaml→md (`pnpm facades`) is a temporary fallback** until a quality instance exists.
 
-**Two renderers (instance-first phase):**
+## Instance-first vs fallback
+
+| Tier | Docs | Edit |
+|------|------|------|
+| **Instance-first** (hand) | [VISION.md](VISION.md) · [CRAZY-IDEA-JAM.md](CRAZY-IDEA-JAM.md) · [ENTRYWAYS.md](../ENTRYWAYS.md) · [TRAILS.md](../TRAILS.md) · [entryways/](entryways/) · [trails/](trails/) | Edit the `.md`; sync yaml girder |
+| **Fallback** (script dump) | [FORMAT.md](FORMAT.md) · [DRAG-RACE.md](DRAG-RACE.md) · [HOMEFUN.md](HOMEFUN.md) · … | `pnpm run facades` until hand-authored; then flip registry to `render.mode llm` |
+
+Registry + priority queue: [`markup-facades.yml`](markup-facades.yml) · schema: [`../schemas/markup-facade.yml`](../schemas/markup-facade.yml)
+
+**Two renderers:**
 
 | Renderer | Role |
 |----------|------|
-| **LLM** (target quality) | Reads yaml + `depends_on` + optional `render` profile — tone, merge, empathic prose |
-| **Deterministic** (`pnpm run facades`) | Cheap PyYAML tree walk — tables and headings; good for bulk refresh and CI |
+| **Hand-authored** (default for important docs) | LLM + human edit — link-rich, no-ai-slop, accessibility |
+| **Deterministic** (`pnpm run facades`) | Temporary yaml tree walk — replace when instance exists |
 
-[`rigs/<slug>.SETUP.md`](../rigs/_TEMPLATE.SETUP.md) is **Rig DNA** — emailable viral artifact, not in the facade registry. May be LLM-authored initially; then maintained as standalone DNA, not bulk-regenerated with `pnpm facades`.
+[`rigs/<slug>.SETUP.md`](../rigs/_TEMPLATE.SETUP.md) is **Rig DNA** — emailable viral artifact, not in the facade registry.
 
 ## Read order
 
-1. [`VISION.md`](VISION.md) — long arc (generated from [`vision-and-ambition.yml`](vision-and-ambition.yml))
+1. [**VISION.md**](VISION.md) — long arc, hand-authored ([**on this page**](VISION.md#on-this-page) · girder [`vision-and-ambition.yml`](vision-and-ambition.yml))
 2. [`GLANCE.yml`](GLANCE.yml) — one-screen map
 3. [`INDEX.yml`](INDEX.yml) — every girder + markup link
 4. [`markup-facades.yml`](markup-facades.yml) — registry + dependency graph
@@ -23,23 +32,25 @@
 
 ## Markup facade pattern
 
-| Yaml (girder) | Markdown (generated view) |
-|---------------|---------------------------|
-| [`repo-show-format.yml`](repo-show-format.yml) | [`FORMAT.md`](FORMAT.md) |
-| [`micropolis-ai-drag-race.yml`](micropolis-ai-drag-race.yml) | [`DRAG-RACE.md`](DRAG-RACE.md) |
-| [`challenges/retrocomputing-drive.yml`](challenges/retrocomputing-drive.yml) | [`challenges/RETROCOMPUTING.md`](challenges/RETROCOMPUTING.md) |
-| [`ai-offs.yml`](ai-offs.yml) | [`AI-OFFS.md`](AI-OFFS.md) |
-| [`manual-transmission.yml`](manual-transmission.yml) | [`MANUAL-TRANSMISSION.md`](MANUAL-TRANSMISSION.md) |
-| [`orchestration-gold.yml`](orchestration-gold.yml) | [`ORCHESTRATION-GOLD.md`](ORCHESTRATION-GOLD.md) |
-| [`brain-stream.yml`](brain-stream.yml) | [`BRAIN-STREAM.md`](BRAIN-STREAM.md) |
-| [`homefun-grading.yml`](homefun-grading.yml) | [`HOMEFUN.md`](HOMEFUN.md) |
+| Yaml (girder) | Markdown | Tier |
+|---------------|----------|------|
+| [`vision-and-ambition.yml`](vision-and-ambition.yml) | [**VISION.md**](VISION.md) | hand |
+| [`crazy-idea-jam.yml`](crazy-idea-jam.yml) | [**CRAZY-IDEA-JAM.md**](CRAZY-IDEA-JAM.md) | hand |
+| [`entryways.yml`](entryways.yml) | [**ENTRYWAYS.md**](../ENTRYWAYS.md) · [entryways/](entryways/) | hand |
+| [`cross-links.yml`](cross-links.yml) | [**TRAILS.md**](../TRAILS.md) · [trails/](trails/) | hand |
+| [`repo-show-format.yml`](repo-show-format.yml) | [`FORMAT.md`](FORMAT.md) | fallback → hand next |
+| [`micropolis-ai-drag-race.yml`](micropolis-ai-drag-race.yml) | [`DRAG-RACE.md`](DRAG-RACE.md) | fallback |
+| [`challenges/retrocomputing-drive.yml`](challenges/retrocomputing-drive.yml) | [`challenges/RETROCOMPUTING.md`](challenges/RETROCOMPUTING.md) | fallback |
+| [`ai-offs.yml`](ai-offs.yml) | [`AI-OFFS.md`](AI-OFFS.md) | fallback |
+| [`manual-transmission.yml`](manual-transmission.yml) | [`MANUAL-TRANSMISSION.md`](MANUAL-TRANSMISSION.md) | fallback |
+| [`orchestration-gold.yml`](orchestration-gold.yml) | [`ORCHESTRATION-GOLD.md`](ORCHESTRATION-GOLD.md) | fallback |
+| [`brain-stream.yml`](brain-stream.yml) | [`BRAIN-STREAM.md`](BRAIN-STREAM.md) | fallback |
+| [`homefun-grading.yml`](homefun-grading.yml) | [`HOMEFUN.md`](HOMEFUN.md) | fallback |
 
 ```bash
-pnpm run facades        # regenerate stale or all (--force)
-pnpm run facades:check  # CI — fail if yaml newer than md
+pnpm run facades        # refresh fallback entries only (skips instance-first)
+pnpm run facades:check  # CI — stale fallback facades with GENERATED banner
 ```
-
-Schema: [`../schemas/markup-facade.yml`](../schemas/markup-facade.yml)
 
 **Cross-links:** [`cross-links.yml`](../cross-links.yml) — narrative trails (`retrocomputing_drive`, `retro_guests_real_wire`, …)
 
@@ -79,7 +90,10 @@ Schema: [`../schemas/markup-facade.yml`](../schemas/markup-facade.yml)
 
 ### Vision
 
-- [`VISION.md`](VISION.md) · [`vision-and-ambition.yml`](vision-and-ambition.yml)
+- [**VISION.md**](VISION.md) — hand-authored long arc (instance-first; edit markdown, not `pnpm facades`)
+  - [Lineage](VISION.md#lineage) · [Pyramid](VISION.md#pyramid) · [Who this is for](VISION.md#who-this-is-for) · [Long Now and Later](VISION.md#long-now-and-later) · [Navigate](VISION.md#navigate)
+- [`vision-and-ambition.yml`](vision-and-ambition.yml) — yaml girder
+- [**CRAZY-IDEA-JAM.md**](CRAZY-IDEA-JAM.md) · [`crazy-idea-jam.yml`](crazy-idea-jam.yml) — ideas reactor
 
 ## Up · Across · Down
 

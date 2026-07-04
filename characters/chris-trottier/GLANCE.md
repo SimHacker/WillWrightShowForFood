@@ -1,1 +1,1 @@
-🪶 **Chris Trottier** — Lead Designer at Maxis (1997–2008) on **The Sims**. Don associates him with **"design by accretion"** — building a design up layer by layer until it comes alive. Already has a flagship show seed (design-by-accretion); also a natural for the Sims team reunion.
+🪶 **Chris Trottier** — Lead Designer at Maxis (1997–2008): **The Sims**, **Sims Online**, **Spore**. Don associates her with **"design by accretion"**. Jan 2007 [career memoir digest](sources/2007-01-10-leaving-maxis/career-memories.md). Flagship show seed: design-by-accretion; Sims reunion.

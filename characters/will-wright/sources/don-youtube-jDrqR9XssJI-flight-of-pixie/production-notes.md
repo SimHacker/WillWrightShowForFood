@@ -2,6 +2,14 @@
 
 Homage edit: https://www.youtube.com/watch?v=jDrqR9XssJI
 
+## After Effects project (local)
+
+`~/GroundUp/pixie/Flight of the PIXIE.aep` — canonical Bumblebee edit + telecine jiggle track.
+
+Also in that folder: `Aether.aep`; `Flight of the PIXIE_AME/` (Media Encoder exports).
+
+Find again: `mdfind 'kMDItemFSName == "Flight of the PIXIE.aep"c'` or `find ~/GroundUp/pixie -iname '*.aep'`
+
 ## Pipeline
 
 1. **Source** — Two 1969 PIXIE films digitized by David Chapman, Cambridge Univ Library (2019).

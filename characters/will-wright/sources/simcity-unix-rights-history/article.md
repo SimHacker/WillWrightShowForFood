@@ -1,6 +1,6 @@
 # SimCity Unix — rights, contracts, and DUX history
 
-*Don Hopkins to Charles Normann (EA), 16 December 2006. Primary source for how Micropolis open-source clearance worked. Raw: [`simcity-unix.txt`](../../../../DonHopkins/temp/old-email/simcity-unix.txt).*
+*Don Hopkins to Charles Normann (EA), 16 December 2006. Primary source for how Micropolis open-source clearance worked. Verbatim: [`02-ea-clearance-dec-2006.md`](../2006-11-13-simcity-olpc-email-thread/02-ea-clearance-dec-2006.md).*
 
 ---
 

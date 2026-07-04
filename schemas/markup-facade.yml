@@ -6,42 +6,44 @@ meta:
   version: 0.2
 
 purpose: |
-  Yaml is machine-readable compact data — possibly declaring includes and references,
-  updated when dependencies change like a dependency graph. Markdown is the human-readable
-  markup view: lazily generated and re-generated on demand. Do not hand-edit generated *.md
-  in the facade registry — edit yaml (or re-invoke the renderer).
+  Yaml is machine-readable girder — compact data for tools, MOOLLM, automation, dependency graphs.
+  Markdown is the human-readable view: link-rich, navigable, written for RTFR.
+
+  **Default:** important docs are hand-authored (LLM + human edit). Yaml stays canonical for machines.
+  **Fallback:** deterministic yaml→md (pnpm facades) is TEMPORARY until a quality instance exists.
 
 roles:
   yaml:
-    what: "Source of truth — brutalist girder for tools, MOOLLM, automation"
-    edit: "Always edit yaml first"
+    what: "Source of truth for machines — brutalist girder"
+    edit: "Edit yaml when facts, K-lines, or structure change"
     may_include: [see, ties_to, includes, extends, compose_with]
   markdown:
-    what: "Human-readable markup facade — browse, email, RTFR without flattening yaml"
-    edit: "Never by hand in registry outputs — regenerate via renderer"
-    banner: "<!-- GENERATED ... --> at file head"
+    what: "Human navigation layer — browse, email, RTFR without flattening yaml"
+    edit: |
+      Instance-first (render.mode llm): edit the .md; sync girder separately.
+      Fallback deterministic: script-generated skeleton until hand-authored; then flip to llm mode.
+    banner_deterministic: "<!-- GENERATED ... --> at file head — script output only"
+    banner_instance_first: "No GENERATED banner — hand-authored; pnpm facades must not clobber"
 
 registry: ../process/markup-facades.yml
 
 rendering:
   phase: instance_first
   note: |
-    Target architecture: LLM reads yaml + facade map (depends_on, render profile) and writes
-    empathic markdown — tone, verbosity, merge rules, schema context. Constraint maintenance
-    (auto stale detection, CI, empathic templates in yaml) comes later.
+    Hand-authored markdown is the target for all important user-facing docs.
+    Deterministic tree-walk is a cheap fallback while instances mature.
   modes:
     llm:
-      what: "Primary for quality — agent considers source yaml, resolved dependencies, and per-facade render hints"
-      when: [new instances, flagship views, narrative merge of depends_on, empathic tone]
-      inputs: [source yaml, depends_on paths, render block from registry, schema if any]
-      output: "Registered *.md with GENERATED banner — same contract as deterministic mode"
+      what: "Instance-first — hand-authored markdown; registry render.mode llm skips pnpm facades"
+      when: [VISION, CRAZY-IDEA-JAM, FORMAT when mature, ENTRYWAYS, TRAILS, flagship articles]
+      edit: "Edit the .md file; keep yaml girder in sync for machines"
     deterministic:
-      what: "PyYAML tree walk — prose keys as headings, dicts as tables, see_also as Link|Why"
+      what: "TEMPORARY FALLBACK — PyYAML tree walk until a hand instance replaces the dump"
       script: ../scripts/generate-markup-facades.py
       invoke: "pnpm run facades"
-      check: "pnpm run facades:check"
-      when: [bulk refresh, CI staleness, cheap readable dump while instances mature]
-      limits: "No merge of depends_on content; no tone/verbosity; schema-blind except a few key names"
+      check: "pnpm run facades:check — only for fallback entries with GENERATED banner"
+      when: [bulk refresh while waiting for hand-authored replacement]
+      limits: "No merge, no tone, no links — not a substitute for authored instances"
   future:
     hybrid: "Deterministic skeleton + LLM prose sections where render.profile says so"
     small_model: "Script calls cheap/free model for repetitive blocks — glorified sprintf"
@@ -66,9 +68,9 @@ generator:
     or when content hash differs. CI may run facades:check.
   what_it_does: |
     Loads registry entry → reads source yaml only (depends_on used for staleness, not merge).
-    Walks top-level keys: pitch/what/tagline → ## sections; nested dicts → tables or ### headings;
-    challenges → table; see_also with {path,why} → Link|Why table. Prepends GENERATED banner + sha256
-    of body. Does not call an LLM. Good enough to skim; not a substitute for authored instances.
+    Walks top-level keys into headings/tables. Prepends GENERATED banner.
+    Skips entries with render.mode llm. Skips outputs without GENERATED banner (hand-authored).
+    TEMPORARY FALLBACK — replace with hand-authored instances for important docs.
 
 exceptions:
   rigs_setup_md:

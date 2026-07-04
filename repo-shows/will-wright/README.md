@@ -81,9 +81,9 @@ Repo Man guest; audience TicketPRs + issues; Philahue harvests and wrangles live
 
 ## Status
 
-`planted` — invitation drafted (`invitation.md`, for Don to edit + send). Next:
-elaborate this repo, distill it into its own public-safe Repo Show, then invite.
-Consent per representation-ethics: this is an invitation, not an assumption.
+**Accepted** — Will [accepted the invitation](../../characters/will-wright/invitation.md) (July 2026). Excited to participate; async repo-show at his pace. Guest prototype for every invite after this one: [`guest-prototype.yml`](../../characters/will-wright/guest-prototype.yml).
+
+Next: crystallize the repo, gather audience TicketPRs, schedule the kickoff conversation when Will is ready. He may edit, delay episodes, or request changes anytime — per [portrayal standards](../../schemas/portrayal-standards.yml).
 
 ## Files
 
@@ -95,7 +95,7 @@ Consent per representation-ethics: this is an invitation, not an assumption.
 - **`audience/`** — [`audience/README.md`](audience/README.md) · [`GLANCE.yml`](audience/GLANCE.yml)
 - **`../../characters/will-wright/media/`** — [`../../characters/will-wright/media/README.md`](../../characters/will-wright/media/README.md) · [`sims-series-README.md`](../../characters/will-wright/media/sims-series-README.md)
 - **`venue/`** — [`venue/README.md`](venue/README.md) · [`GLANCE.yml`](venue/GLANCE.yml)
-- `invitation.md` — the markdown invitation email (draft).
+- `invitation.md` — accepted invitation (public).
 - `slats-reincarnation.yml` — **RoboResurrection** quest (optional show segment).
 - `episodes.yml` — the kickoff + the topical episodes that flow from it.
 - `../../characters/will-wright/media/` — the Flower-Child icon.

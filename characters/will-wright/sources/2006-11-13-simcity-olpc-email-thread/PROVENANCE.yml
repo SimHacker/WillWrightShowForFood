@@ -1,0 +1,52 @@
+# SimCity open source for OLPC — email thread provenance
+
+archive:
+  ingested: 2026-07-04
+  channel: Don Hopkins forwarded-mail archive
+  period: 2006-11-13 — 2006-12-31
+  subject: SimCity Classic open-source clearance for OLPC
+
+timeline:
+  long_now_audience_question: 2006-06-26
+  gilmore_spark: 2006-11-13
+  will_support: 2006-11-18
+  don_long_now_denial: 2006-11-19
+  will_ea_forward: 2006-12-01
+  don_pitch_letter: 2006-12-02
+  chuck_ea_clearance: 2006-12-03
+  introducing_players: 2006-12-19
+  olpc_b1_shipped: 2006-12-27
+  simcity_on_xo: 2006-12-29
+
+key_people:
+  - John Gilmore
+  - Will Wright
+  - Don Hopkins
+  - Rod Humble
+  - Scott Evans
+  - Charles Normann
+  - Walter Bender
+  - Jim Gettys
+  - Bill Joy
+  - Doreen Nelson
+
+images:
+  source: Don Hopkins webcam photos of OLPC XO-1 running SimCity
+  date: 2006-12
+  count: 5
+  dir: images/
+  slideshow_md: images/SLIDESHOW.md
+  slideshow_yml: images/SLIDESHOW.yml
+  rotation_applied: 2026-07-04
+
+parts:
+  - 01-spark-and-will-support-nov-2006.md
+  - 02-ea-clearance-dec-2006.md
+  - 03-olpc-port-and-sugar-dec-2006.md
+  - don-pitch-letter-2006-12-02.md
+  - roadmap.txt
+
+related:
+  long_now: ../2006-06-26-long-now-playing-with-time-eno-wright/
+  saga_hub: ../simcity-open-source-saga/
+  players_thread: ../2006-12-simcity-olpc-introducing-the-players/

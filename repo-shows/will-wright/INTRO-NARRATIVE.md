@@ -36,7 +36,7 @@ We are not pitching vapor. The evidence lives in [`../../characters/will-wright/
 | **Composable SimAntics objects** | [Crowd Sitter](../../characters/will-wright/sources/2018-04-23-sims-crowd-sitter/medium-article.md) (10 figures), [Dumbold Voting Machine](../../characters/will-wright/sources/2018-04-24-dumbold-voting-machine/medium-article.md) (20 figures) |
 | **Original Sims public site** | [Halloween tombstones](../../characters/will-wright/sources/2005-09-22-halloween-tombstones-original-sims/article.md), Dumbold, cemetery — families making and sharing personalized objects |
 | **Design lineage** | [1996 Winograd talk](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/medium-article.md) (167 figures), [Soul of The Sims / Motive.c](../../characters/will-wright/sources/2008-02-10-soul-of-the-sims/article.md) |
-| **Procedural vs hand-authored** | [Chris Trottier — tuned emergence](../../characters/will-wright/sources/2004-02-21-chris-trottier-tuned-emergence/article.md); [Spore GDC stub](../../characters/will-wright/sources/2005-03-11-spore-gdc-future-of-content/article.md) — Will's pivot toward procedural content |
+| **Procedural vs hand-authored** | [Chris Trottier — tuned emergence](../../characters/will-wright/sources/2004-02-21-chris-trottier-tuned-emergence/article.md); [Spore GDC 2005](../../characters/will-wright/sources/2005-03-11-spore-gdc-future-of-content/medium-article.md) — Will's pivot toward procedural content |
 
 The grandmother who learned Photoshop and XML for her grandkids is not a marketing fable — it is the stated motivation in Don's archival notes ([family manifesto](../../characters/will-wright/media/sims-series-family-manifesto.md)). Miyamoto's GDC photo of a grandfather watching his granddaughter's face, not the screen, is the register we mean: **the player is the spectacle** (DDR, Wii Sports, a wedding you stage together).
 
@@ -119,7 +119,7 @@ Valid issues remain (vendor lock-in, transparency, accessibility). The Dumbold i
 
 ## The Spore thread (hand-authored → procedural)
 
-Will's [2005 GDC Spore demo](../../characters/will-wright/sources/2005-03-11-spore-gdc-future-of-content/article.md) (article stub — Medium removed) marks the industry pivot toward **procedural content**. Our project holds **both** truths:
+Will's [2005 GDC Spore demo](../../characters/will-wright/sources/2005-03-11-spore-gdc-future-of-content/README.md) ([Don's notes](../../characters/will-wright/sources/2005-03-11-spore-gdc-future-of-content/medium-article.md), [video](https://www.youtube.com/watch?v=ofA6YWVTURU)) marks the industry pivot toward **procedural content**. Our project holds **both** truths:
 
 - **Hand-authored artisanal UCC** (SimFreaks, SimProv, Heather and Steve's 26-year catalogs) — love, craft, family objects
 - **Procedural and AI-assisted creation** (Spore lineage, MOOLLM, Micropolis Class homefun) — scale, remix, new generations

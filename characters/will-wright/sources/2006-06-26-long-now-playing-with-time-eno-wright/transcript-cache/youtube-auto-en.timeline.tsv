@@ -1,0 +1,2491 @@
+start_sec	end_sec	text
+2.149	23.190	fora tv' idea immersion
+6.800	23.190	[Music]
+26.170	35.140	good evening I'm Stuart brand from the
+28.779	37.090	long now foundation Brian Eno has been
+35.140	39.699	with long now from the start he named it
+37.090	41.230	the long now foundation he gave the
+39.699	44.440	first talk in this series of seminars
+41.230	50.019	about long-term thinking and he's a
+44.440	52.000	member of the board and is known as as
+50.019	54.070	well as being one of the great
+52.000	59.680	contemporary musicians and composers and
+54.070	61.719	artists a very very comfortable and
+59.680	65.019	creative collaborator with other people
+61.719	67.300	and so on sort of a trial basis tonight
+65.019	71.250	we'll see what it's like to put a
+67.300	71.250	creator of music with a creator of games
+72.840	80.440	games with four computers are really
+75.729	82.450	news that stays news first serious
+80.440	86.380	computer game was space war forty-four
+82.450	89.440	years ago in 1962 written by a group of
+86.380	92.049	hackers at MIT who was at Steve Russell
+89.440	97.409	mainly along with Alan Koh Tech Peter
+92.049	97.409	Sampson and Dan Edwards ten years later
+98.820	105.430	1972 this was written in rolling stone
+102.509	107.140	space war was the illegitimate child of
+105.430	112.329	the mating of computers and graphic
+107.140	113.829	displays remember back in 62 computation
+112.329	118.329	was something you sent off to the
+113.829	120.520	manufacturer you sent the data away like
+118.329	123.399	color film and then it came back days or
+120.520	127.149	weeks later hopefully usable but not
+123.399	128.649	always space war was real time there was
+127.149	130.239	the illegitimate child of mating of
+128.649	132.430	computers and graphic displays it was
+130.239	135.010	part of no one's grand scheme it served
+132.430	136.930	no grand theory it was the enthusiasm of
+135.010	139.299	irresponsible youngsters it was dis
+136.930	141.250	reputably competitive it was an
+139.299	144.160	administrative headache it was merely
+141.250	146.829	delightful yet space war if anyone cared
+144.160	148.930	to notice was a flawless crystal ball of
+146.829	151.390	things to come in computer science and
+148.930	152.920	computer use it was intensely
+151.390	155.200	interactive in real-time with the
+152.920	156.510	computer in encouraged new programming
+155.200	158.640	by the user
+156.510	161.099	it bonded human and machine through a
+158.640	163.470	responsive broadband interface of live
+161.099	166.739	graphics display it served primarily as
+163.470	168.870	a communication device between humans it
+166.739	170.610	was a game the function best on
+168.870	173.640	standalone equipment which is a big deal
+170.610	175.379	in those days that served human interest
+173.640	176.970	not machine a lot of the work being done
+175.379	179.280	then was trying to keep the machines
+176.970	180.840	interested and games didn't care if the
+179.280	187.310	machines were interested or not and
+180.840	187.310	mainly it was delightful I wrote that
+187.750	196.160	1972 44 years later computer games still
+192.740	197.120	lead the way and we'll right leads
+196.160	200.680	computer games
+197.120	200.680	please welcome Will Wright and Brian Eno
+204.620	210.800	[Applause]
+215.590	223.070	thank everybody can you hear me test
+219.290	225.620	yours can you hear me thank you thank
+223.070	231.820	you all very much for coming and the
+225.620	233.690	format tonight is slightly undecided but
+231.820	239.030	essentially we're going to talk about
+233.690	240.530	games generative music and what those
+239.030	242.750	things do for us and what's different
+240.530	245.990	about them from things we've known in
+242.750	248.840	the past and I'm actually the assistant
+245.990	250.340	here this is this is really wills talk
+248.840	252.320	no not really
+250.340	255.320	I've been encouraging him to basically
+252.320	260.510	interrupt me at every stage overcome his
+255.320	264.740	English reserve show up that's the
+260.510	267.650	spirit we're going to talk and interrupt
+264.740	270.500	each other for about an hour and then
+267.650	272.270	there will be questions which I think
+270.500	275.210	you know to write down on pieces of
+272.270	278.660	paper which will be thrown away at the
+275.210	280.370	back of the room and then Stewart will
+278.660	287.450	ask the questions he want to ask us
+280.370	288.680	anyway now you know okay I'd have to say
+287.450	291.350	what an honor it is actually to share
+288.680	293.450	the stage with Brian whose work has been
+291.350	297.850	just very inspirational to me for as
+293.450	297.850	long as I can remember so thank you
+301.559	305.650	can i reciprocate that I think so I'm
+304.300	307.300	gonna do some boring PowerPoint at the
+305.650	309.729	beginning of the talk and I think
+307.300	313.289	Brian's gonna score my boring PowerPoint
+309.729	316.539	with very interesting experimental music
+313.289	317.949	so you know I actually just got back in
+316.539	319.029	town recently a few days ago and I was
+317.949	320.379	trying to remember what time the talk
+319.029	322.870	was and so I went to the website the
+320.379	327.069	long now foundation and saw the talk was
+322.870	328.240	Friday June 26 which consulting my
+327.069	332.349	calendar I found that those two things
+328.240	334.509	were incompatible an ironic for an
+332.349	340.419	organization whose sole Charter is to
+334.509	342.249	chart this passage of time but when when
+340.419	343.599	you're dealing with 10,000 years a few
+342.249	346.930	days doesn't really make that much good
+343.599	348.810	yeah so I think we're missing half the
+346.930	352.839	audience that probably came here Friday
+348.810	354.580	but so I wanted to start just a little
+352.839	356.199	bit just by delving into compression a
+354.580	358.180	bit because I think a lot of what we're
+356.199	360.580	gonna talk about this is underlying it
+358.180	367.169	and I know that all of you find the idea
+360.580	369.699	of compression just fascinating but
+367.169	371.110	really it's the basis of a lot of really
+369.699	372.639	interesting systems in fact you know
+371.110	374.379	what we know is science is really
+372.639	375.759	observing the natural world around us
+374.379	377.469	you know all the data that we can see
+375.759	378.939	and collect and observe and trying to
+377.469	382.149	compress it into the simplest most
+378.939	383.469	elegant rule sets possible you know in
+382.149	385.149	some sense we even use that as a
+383.469	387.370	guidepost you know when Watson and Crick
+385.149	388.629	discovered the structure of DNA they did
+387.370	389.740	it by building these models in them but
+388.629	391.209	they tripped across the idea of the
+389.740	392.439	double helix and it was so aesthetically
+391.209	395.139	pleasing to them they just kind of knew
+392.439	396.639	it was right and games really are just
+395.139	398.589	kind of the opposite process we're
+396.639	400.810	trying to come up with very very simple
+398.589	402.550	rules that we can decompress into these
+400.810	404.620	elaborate worlds and I think the kind of
+402.550	406.089	work that Brian's doing as well kind of
+404.620	407.379	speaks to that looking for very simple
+406.089	409.569	systems that can generate really
+407.379	413.819	interesting complexity it's it's called
+409.569	416.529	laziness really yeah but yes I I suppose
+413.819	418.029	the thing that most impressed me one of
+416.529	421.120	the musical things that most impressed
+418.029	425.080	me in my life was a piece by a composer
+421.120	427.389	called Steve Reich which is an extremely
+425.080	430.149	simple piece in terms of the inputs and
+427.389	431.649	the system it's it's two two loops of
+430.149	432.180	tape that run out of phase with each
+431.649	435.080	other
+432.180	438.930	get progressively more out of phase and
+435.080	441.289	thus generator a very complex piece of
+438.930	443.850	music and I was so impressed that
+441.289	446.340	something so simple could create
+443.850	446.699	something so powerful when did you do
+446.340	450.660	that
+446.699	454.110	that was 1964 I think that piece it was
+450.660	456.690	called it's gonna rain and it's the
+454.110	460.139	amount of actual sonic material in the
+456.690	462.419	piece is 1.8 seconds long but the piece
+460.139	464.009	is 30 minutes long or something like
+462.419	466.680	that oh really so we're the duration of
+464.009	470.759	the two pieces well it's the same loop
+466.680	472.349	on two machines 1.8 seconds long and one
+470.759	476.099	machine runs slightly slower than the
+472.349	477.330	other so gradually they the relationship
+476.099	480.419	between the two loops
+477.330	482.580	shifts and in fact that's been the basis
+480.419	484.650	of a lot of the music I've done since
+482.580	486.960	then music for airports for example was
+484.650	489.180	based on that idea and a lot of the
+486.960	491.880	ambient music is based on this notion of
+489.180	493.470	instead of trying to design a piece from
+491.880	495.599	the top down which is what you normally
+493.470	497.250	think of as composition you know you
+495.599	498.630	have the whole piece in your mind and
+497.250	501.300	then you sort of build it all like an
+498.630	503.280	architect makes a building this is this
+501.300	504.990	is more like a gardener you you have a
+503.280	507.510	seed and you plant it and you see what
+504.990	509.430	happens you know so so when that seed
+507.510	513.360	comes out and it's not what you like or
+509.430	514.800	you explain you I mean yeah so it's much
+513.360	516.900	more of the process of discovery rather
+514.800	518.550	than composition or engineering yes and
+516.900	520.650	you're sort of in the same position as
+518.550	522.180	an audience actually because you're
+520.650	524.790	you're listening to the music for the
+522.180	527.580	first time as well so so the music is
+524.790	530.459	generating itself anew for you the
+527.580	532.290	listener as well as for the audience so
+530.459	534.180	it's it puts the composer in an
+532.290	536.550	interesting new relationship to the
+534.180	539.279	music I think yeah I mean I think as a
+536.550	540.720	creator it also puts a big challenge on
+539.279	543.120	you because now you're in the process of
+540.720	546.060	exploring rather than engineering or
+543.120	548.310	sculpting yeah so you have to care about
+546.060	550.890	your inputs and your systems a lot more
+548.310	552.480	since since you aren't designing the
+550.890	555.060	whole thing you are not specifying in
+552.480	557.480	detail the whole thing you're making
+555.060	560.880	something that by definition is going to
+557.480	562.380	generate itself in a different way at
+560.880	563.640	different times so yeah we see that a
+562.380	564.750	lot with simulations because we're
+563.640	565.220	always looking for a very simple rule
+564.750	567.680	structure
+565.220	569.269	we build into prototypes and we just try
+567.680	570.860	to long and see what happens and then
+569.269	572.899	from there we will start modifying them
+570.860	574.910	and it's very much the process of
+572.899	576.709	surprising discovery mm-hmm and it's so
+574.910	577.970	not longer it's so counterintuitive that
+576.709	580.519	it's very difficult to kind of have an
+577.970	582.170	end result mind as a target and then
+580.519	584.000	shoot for that it's actually far more
+582.170	586.069	productive to just kind of experiment
+584.000	587.899	and let the results of those experiments
+586.069	589.339	kind of present opportunities to you
+587.899	590.629	yeah you know that oh that's really cool
+589.339	592.759	you know I never would in a million
+590.629	594.439	years have thought to go there but these
+592.759	597.019	simple rules brought me there mm-hmm
+594.439	598.759	yeah well this this is sort of a new way
+597.019	601.100	of being an artist really I mean it's
+598.759	604.220	not so new now people have been doing it
+601.100	606.230	for 30 or 40 years but to to make it
+604.220	608.000	explicit and say this is what I do and
+606.230	609.740	to own up to the fact that what you're
+608.000	612.170	doing is making seeds rather than
+609.740	614.149	forests you know yeah letting the forest
+612.170	616.389	grow themselves so I thought we would
+614.149	619.189	delve into this generative systems
+616.389	620.480	across a broad range of topics here you
+619.189	623.420	know kind of one of the preeminent ones
+620.480	625.189	is biology and this is one that we're
+623.420	627.350	very familiar with a Richard Dawkins a
+625.189	629.389	biologist estimated that typical willow
+627.350	632.059	seed actually only contains contains
+629.389	633.670	about 800 km data which is enough to fit
+632.059	635.750	on like one of the old floppy disks
+633.670	637.160	which is really amazing when you imagine
+635.750	639.410	all the trillions of atoms and all the
+637.160	640.910	complexity in a willow tree that the
+639.410	645.259	genome of it compresses down to that
+640.910	647.180	small it's very powerful ratio there it
+645.259	649.699	also we see examples of this in things
+647.180	651.079	like behavioral sciences you know ants
+649.699	653.209	have very simple rules but when you
+651.079	655.930	combine those simple rules they display
+653.209	659.809	amazingly elaborate intelligent behavior
+655.930	661.189	spirograph is a great example one of the
+659.809	663.139	most understandable examples you know
+661.189	664.879	using simple geometry but another
+663.139	666.709	another example of a very simple
+664.879	668.870	generator system like that is wind
+666.709	670.730	chimes of course that's a that's a
+668.870	672.559	generative system that oh yeah I think
+670.730	675.050	we don't take very seriously but in fact
+672.559	677.629	in fact that's like the first generative
+675.050	680.509	music do you think I think it probably
+677.629	682.040	is yeah okay only an Aeolian half is
+680.509	683.240	probably the first one actually it's an
+682.040	685.250	interesting question I mean do draw a
+683.240	688.100	distinction between let's say randomly
+685.250	689.930	generated music like wind chimes and
+688.100	691.430	algorithmically generated where there
+689.930	694.730	are some deterministic rule underneath
+691.430	695.959	the system well it's one part of course
+694.730	697.089	of the wind chime thing the most
+695.959	699.339	important part isn't
+697.089	702.490	random which is the pitch of the notes
+699.339	705.279	the notes oh so the only random part is
+702.490	707.499	when they when they occur and how they
+705.279	710.499	cluster together and that sounds
+707.499	714.160	generative to me have you done systems
+710.499	716.259	that involve more randomness yes what in
+714.160	720.220	the sand itself or in the selection of
+716.259	722.829	the nodes yes yes so I've experimented
+720.220	726.189	with all sorts of forms of randomness
+722.829	728.230	and I found that I nearly always end up
+726.189	729.430	constraining it quite a lot it seems
+728.230	730.779	like it's some level complexity you
+729.430	732.279	wouldn't even be able to determine
+730.779	734.189	whether it was random or there was a
+732.279	738.639	very complex algorithm underneath and
+734.189	740.649	that's that's true yes they become
+738.639	741.910	functionally identical because it seems
+740.649	743.740	like a lot of the aesthetic for music
+741.910	746.079	involves patterns repeating patterns
+743.740	748.240	that listener can kind of start to
+746.079	751.540	identify and anticipate as they're
+748.240	755.170	coming up well that's what I call
+751.540	757.959	narrative music that's true but in in
+755.170	759.519	the 70s I came up with this word for a
+757.959	761.139	kind of music that more and more people
+759.519	763.389	were starting to do which I called
+761.139	764.949	ambient music and that was quite a
+763.389	766.829	different idea that was the idea of
+764.949	770.319	music as a sort of steady state
+766.829	772.540	condition that you entered stayed in for
+770.319	775.899	a while and then left okay so as music
+772.540	777.370	as painting more than as narrative so it
+775.899	780.009	doesn't have beginning it doesn't have
+777.370	783.759	development it doesn't have climaxes
+780.009	785.949	particularly it's it's closer to sitting
+783.759	787.360	by a river than watching an orchestra
+785.949	789.009	for example yeah I actually spend a lot
+787.360	790.329	of time listening to your albums during
+789.009	792.939	ambient albums and I found them
+790.329	794.350	interesting because it was a whirl of
+792.939	795.790	them in a very subconscious level
+794.350	797.079	it wasn't like most music where you're
+795.790	798.519	hearing it you're thinking about it and
+797.079	800.139	kind of starting to kind of get into the
+798.519	801.579	rhythm and stuff but it would just
+800.139	802.540	totally change the perception the world
+801.579	805.059	around you without you even realizing
+802.540	808.540	that it was your audio system doing that
+805.059	811.990	it seemed almost subconscious and you
+808.540	814.540	stayed awake yeah actually do a lot of
+811.990	816.069	work to it you know the other music was
+814.540	817.179	just like where on me after a while but
+816.069	818.679	the ambient stuff is giving to this
+817.179	820.360	trance-like state in fact it was
+818.679	822.939	interesting because it brought me into
+820.360	823.360	this relaxed trance-like state but kept
+822.939	825.970	me
+823.360	829.110	somehow kept my brain active in a area
+825.970	831.240	that I wasn't even aware of yeah well
+829.110	833.280	I think some of that music came out of
+831.240	835.620	trying to find something I could listen
+833.280	838.950	to while I was trying to work alright
+835.620	840.900	yeah okay so you did like your other
+838.950	842.430	music notes too while you were working
+840.900	844.410	to attention-grabbing
+842.430	846.390	mmm you know it's designed to grab your
+844.410	847.530	attention exactly in that part of the
+846.390	849.480	brain is what you want to apply to your
+847.530	851.850	creative work yeah you know and somehow
+849.480	853.470	it keeps that part of the brain fed you
+851.850	855.210	better go in with that okay loads of
+853.470	856.560	slides right yeah we do we're never
+855.210	857.820	gonna get to spool or otherwise yeah
+856.560	862.860	fractals rattles
+857.820	864.660	you've seen these L systems yeah yeah
+862.860	865.490	this is the boring PowerPoint part of
+864.660	867.510	the lecture
+865.490	870.450	all systems are actually an interesting
+867.510	873.600	form like fractals that allow us to
+870.450	875.610	generate very organic looking shapes and
+873.600	877.440	they come in a variety of kind of styles
+875.610	878.760	but it's actually quite amazing that
+877.440	880.620	there are patterns embedded in this that
+878.760	882.770	you can clearly see but the same time
+880.620	886.890	there's a very organic nature to them
+882.770	889.140	these are more l-system things a lot of
+886.890	890.220	art I tend to think of as generative you
+889.140	892.830	know where artists will use very
+890.220	894.450	primitive elements but in combination
+892.830	896.550	they evoke totally different feelings
+894.450	899.850	much more complex forms you know my
+896.550	901.590	favorite painting Kandinsky yeah even in
+899.850	902.820	design we're starting to see more people
+901.590	904.890	will use generative system cristal
+902.820	907.200	examiner's work is very much about this
+904.890	909.270	how he looks for patterns rules grammars
+907.200	911.820	to apply to design there are other
+909.270	913.710	things known as shape grammars which are
+911.820	915.570	being used in things like architecture
+913.710	917.940	and industrial design these are ways of
+915.570	919.650	applying transformations to certain
+917.940	920.910	design rules to generate new designs
+919.650	923.340	that you can then go through and prune
+920.910	925.170	and kind of score for efficiency when
+923.340	927.180	you do music and you're coming up with
+925.170	928.710	these rules there must be some process
+927.180	930.750	of you playing with the rule set
+928.710	932.430	listening to it saying I don't like that
+930.750	934.800	playing with rule set again so basically
+932.430	936.810	pruning out the rules you don't like to
+934.800	941.760	zero in on the rules you do like yes
+936.810	943.590	exactly and and finding out that one
+941.760	945.780	always in client is inclined as a
+943.590	949.200	composer to put more in than you need as
+945.780	950.730	a listener so so one of the very good
+949.200	951.780	things about working on this is that
+950.730	954.390	there's a speed control
+951.780	956.790	oh so you listen to these things in
+954.390	959.010	first board I work on them much faster
+956.790	961.560	than I end up releasing them Jeff oh
+959.010	962.579	really yeah and in the days of analog
+961.560	964.739	tape that a lot of the
+962.579	967.769	music I released was released at half
+964.739	968.910	the speed I recorded it there's like
+967.769	970.619	people doing the film editing we're
+968.910	971.850	always living through the thing on this
+970.619	973.739	is the opposite of what people do on
+971.850	976.739	television where they always accelerate
+973.739	979.319	you know hmm I find with music if you're
+976.739	982.559	making it you always tend to fill the
+979.319	984.779	gaps you want to paint the whole picture
+982.559	987.509	but if you're listening you you actually
+984.779	989.100	want a lot less than that so I do that
+987.509	990.509	the simplest way it's just by slowing it
+989.100	993.629	all down you should release an album
+990.509	996.389	with all the speeded up versions this is
+993.629	998.189	as Brian heard it while composing it the
+996.389	1006.199	amphetamine version right yeah really
+998.189	1007.819	I'm Fetterman ambient jazz we see
+1006.199	1009.319	generative systems in psychology you
+1007.819	1011.540	know it's amazing how humans can see
+1009.319	1013.009	patterns and almost anything and we're
+1011.540	1014.839	always searching for these patterns even
+1013.009	1016.879	if they don't actually exist
+1014.839	1018.319	and we've even engineered things you
+1016.879	1020.239	know that kind of bring us more into
+1018.319	1022.660	meditative spiritual realms that in some
+1020.239	1025.459	sense regenerative systems for the mind
+1022.660	1027.230	and games of course are a great example
+1025.459	1029.299	this is my favorite game of all time go
+1027.230	1030.949	which has two simple rules but yet the
+1029.299	1032.659	strategy is just amazing the way it
+1030.949	1034.909	unfolds in kind of very unpredictable
+1032.659	1037.039	ways and you know this is one of the
+1034.909	1039.740	clearest examples of generative systems
+1037.039	1043.370	and emergence that I've ever seen this
+1039.740	1045.319	this game by the way there's a book by
+1043.370	1048.830	Frances Fitzgerald called fire over the
+1045.319	1051.529	lake about the war in Vietnam and she
+1048.830	1054.260	once interviewed of Vietcong general
+1051.529	1056.450	after the war and she said why do you
+1054.260	1059.360	think you were so successful he said
+1056.450	1062.779	well the Americans are playing chess but
+1059.360	1064.429	we were playing go and that really
+1062.779	1066.679	captures the difference between the two
+1064.429	1068.450	games goes about a hundred times more
+1066.679	1070.730	complex than chess really in terms of
+1068.450	1072.139	the range of strategy yeah and in fact
+1070.730	1073.100	the compression ratio between the
+1072.139	1075.710	simplicity of the ruleset
+1073.100	1076.880	and the depth of the strategy for here
+1075.710	1080.240	it's just an amazing ratio I think that
+1076.880	1081.980	ratio is interesting in the entire world
+1080.240	1083.750	around us looking at like the DNA versus
+1081.980	1085.279	you know the willow seed and the willow
+1083.750	1087.529	tree you know that compression ratio
+1085.279	1092.000	indicates a certain level of generative
+1087.529	1093.470	system you know and emergence a lot of
+1092.000	1094.550	that is based upon symmetry that you see
+1093.470	1097.730	in a lot of different ways
+1094.550	1099.230	and symmetrical operators rules when
+1097.730	1101.179	we're building models on the computer
+1099.230	1103.820	you know a lot of these become games and
+1101.179	1105.590	in some sense you know models are
+1103.820	1107.450	abstractions of reality and what they
+1105.590	1108.470	kind of remove is interesting they're
+1107.450	1110.090	only presenting you with relevant
+1108.470	1112.580	information when I do a game I actually
+1110.090	1114.230	build physical models of the stuff when
+1112.580	1115.940	I did a game called The Sims involved
+1114.230	1116.809	this screen of the neighborhood and one
+1115.940	1118.370	of the first things I did was actually
+1116.809	1121.790	go build a physical model of it out of
+1118.370	1123.640	like model train materials and that
+1121.790	1126.110	abstraction is kind of interesting to me
+1123.640	1128.660	we abstract things not just spatially in
+1126.110	1130.850	games but also in time you know time is
+1128.660	1133.370	something that you can play with on
+1130.850	1134.570	computers and interactive systems in a
+1133.370	1136.910	totally different way than you ever get
+1134.570	1138.500	the opportunity in reality one of the
+1136.910	1140.960	most important things about games is the
+1138.500	1142.520	fact that they have you know restart you
+1140.960	1143.780	can replay the same situation over and
+1142.520	1145.820	over from the exact same starting
+1143.780	1147.440	position which you never get the
+1145.820	1148.790	opportunity to do that in reality then
+1147.440	1151.190	some sense I guess regenerative music is
+1148.790	1152.360	the same way well this this is one of
+1151.190	1155.210	the very interesting things about
+1152.360	1156.860	generative music that you can start it
+1155.210	1158.809	again and it unfolds differently and
+1156.860	1161.630	this is this is very fascinating because
+1158.809	1163.429	it it implies a sort of space of
+1161.630	1165.320	possibilities that you gradually become
+1163.429	1167.690	familiar with so instead of becoming
+1165.320	1170.120	familiar as you normally do with a piece
+1167.690	1173.179	of recorded music with this particular
+1170.120	1175.340	story you become familiar with a sort of
+1173.179	1177.410	envelope of possible stories that the
+1175.340	1179.059	music might unfold along yeah in fact
+1177.410	1180.470	that's exactly the same thing happens in
+1179.059	1182.690	games you know the players are kind of
+1180.470	1186.030	exploring raesha snakes exactly
+1182.690	1193.450	illustrates what I just said yeah
+1186.030	1195.730	you must be on the same wavelength in
+1193.450	1196.990	games you know the computer actually
+1195.730	1198.820	when it's playing chess is actually
+1196.990	1201.100	analyzing every possible move that you
+1198.820	1202.750	might make and it might make and it's in
+1201.100	1205.360	fact building a map of all the possible
+1202.750	1206.500	moves up to some level of depth that
+1205.360	1210.370	might happen in the game and that's how
+1206.500	1212.050	computer a eyes work and even board
+1210.370	1213.490	games in some sense become a map of the
+1212.050	1215.410	possibility space you know all the
+1213.490	1217.510	different spaces on that board indicate
+1215.410	1218.980	states that you can be in in this game
+1217.510	1221.890	most people just don't think of it as a
+1218.980	1223.890	map really in that sense we can think of
+1221.890	1226.990	our games as these in fact very
+1223.890	1228.190	elaborate landscapes where there's
+1226.990	1230.950	terrain and the Train might represent
+1228.190	1232.690	challenge difficulty some areas are very
+1230.950	1234.100	you know smooth slopes that you can
+1232.690	1235.360	climb up very gradually other ones are
+1234.100	1238.030	steep cliffs that are incredibly
+1235.360	1239.470	challenging the hip so there's in some
+1238.030	1241.750	sense of friction to the possibility
+1239.470	1242.530	space in an interactive experience and I
+1241.750	1244.570	guess when you're working on music
+1242.530	1245.890	there's a certain amount of probability
+1244.570	1247.720	that you might enter certain regions of
+1245.890	1250.870	that possibility space certain regions
+1247.720	1252.580	may be more probable than others yes I I
+1250.870	1254.500	remember one very funny thing that
+1252.580	1257.830	happened once I to use a particular
+1254.500	1259.660	generative piece for all of my sound and
+1257.830	1263.080	light installations for many many years
+1259.660	1266.200	and I must have listened to that piece
+1263.080	1268.840	for thousands of hours unfolding in its
+1266.200	1270.670	various different ways and I was setting
+1268.840	1273.670	up a show in Venice once with my
+1270.670	1275.080	assistant and it was late at night and
+1273.670	1276.700	we were setting out it was that the show
+1275.080	1281.160	was due to open the next day and
+1276.700	1288.670	suddenly the beginning of Tammy Wynette
+1281.160	1290.710	divorce so a pure chance
+1288.670	1293.620	pure trance yes the thing had suddenly
+1290.710	1295.840	clustered together to produce the first
+1293.620	1298.660	couple of bars of divorce and we're both
+1295.840	1302.770	very tired and we looked up and just
+1298.660	1304.850	fell on the floor laughing it was so it
+1302.770	1307.940	never happened again
+1304.850	1309.410	we just didn't listen long enough dr.
+1307.940	1311.450	nerse because that kind of implies the
+1309.410	1312.920	vast space that music you know occupies
+1311.450	1314.630	the fact that it took that long just to
+1312.920	1316.580	hear one tune out of the thousand one
+1314.630	1318.800	tune that I recognize that several
+1316.580	1320.750	thousand dollars yeah so they're kind of
+1318.800	1323.180	implies that composers are finding this
+1320.750	1324.950	very small amount of listenable space
+1323.180	1327.080	yeah within this vast you know
+1324.950	1331.280	astronomically large sea of potential
+1327.080	1332.930	sounds yeah and it's as you know
+1331.280	1335.630	whenever you think of a space like that
+1332.930	1337.340	and you think of the possibilities that
+1335.630	1338.870	have been explored so far you
+1337.340	1340.760	immediately start to think of all the
+1338.870	1342.680	ones that haven't been explored like if
+1340.760	1345.200	you think of the space of all possible
+1342.680	1346.640	seashells and then you think of the
+1345.200	1349.430	number that have actually been explored
+1346.640	1351.050	it's a very small part of that right and
+1349.430	1353.090	you want either that to I mean there's a
+1351.050	1354.650	quality rating so most of the random
+1353.090	1355.550	compositions you can make probably sound
+1354.650	1357.440	awful
+1355.550	1360.710	correct and so you're looking for this
+1357.440	1363.170	region of yes quality since yes you want
+1360.710	1364.700	to be on the cusp where it's where it
+1363.170	1367.880	doesn't sound random but it doesn't
+1364.700	1370.190	sound too obviously too predictable
+1367.880	1372.520	it doesn't unfold like you expect it to
+1370.190	1375.140	but it doesn't unfold in an entirely
+1372.520	1377.480	unexpected and disconnected way either
+1375.140	1379.180	so you explained this huge space it
+1377.480	1382.700	makes me wonder if there's any no
+1379.180	1384.860	algorithmic solution to at least find
+1382.700	1385.970	some rough measure of quality so you're
+1384.860	1388.310	not having to sit there and listen for a
+1385.970	1390.530	thousand hours to get a sense of you
+1388.310	1392.600	know the quality of the entire range on
+1390.530	1394.460	that system well that's a moving target
+1392.600	1396.590	you see because whenever you listen to a
+1394.460	1399.190	piece of music you
+1396.590	1401.720	you really are listening to the latest
+1399.190	1403.190	word in a conversation that you've been
+1401.720	1405.440	having ever since you started listening
+1403.190	1407.690	to music you know you hear every other
+1405.440	1410.990	piece in the piece you are listening to
+1407.690	1413.330	at that moment so as your taste changes
+1410.990	1414.800	and your experience changes that target
+1413.330	1417.680	will change all the time I think
+1414.800	1420.050	can you imagine as any sort of even this
+1417.680	1421.790	first past computational filter that
+1420.050	1423.620	would pre listen to the music you know
+1421.790	1425.810	analyze the structure look for patterns
+1423.620	1428.360	whatever that would at least prune out
+1425.810	1430.430	the 90% that you obviously don't want to
+1428.360	1432.020	listen to and let you focus you know
+1430.430	1436.810	your efforts on the 10% that has some
+1432.020	1436.810	promise would you like to work on that
+1438.389	1443.889	you just have to give me the algorithm
+1440.549	1445.629	I'll get it coated right up for you know
+1443.889	1448.210	it's it's funnily enough there's been a
+1445.629	1449.559	lot of research into that because um you
+1448.210	1453.159	know there are always people trying to
+1449.559	1455.049	figure out how you write a hit oh I see
+1453.159	1457.929	yeah formalizing something I wouldn't
+1455.049	1459.669	mind knowing the hit generator yes sir
+1457.929	1461.080	so there's been there's been all sorts
+1459.669	1464.320	of attempts to do that but they've
+1461.080	1465.899	they've been astoundingly unsuccessful
+1464.320	1468.639	so far yeah I can imagine
+1465.899	1471.519	difficulty unsuccessful in fact they're
+1468.639	1474.610	almost there almost formulas for doing
+1471.519	1476.289	the opposite oh really yes also they
+1474.610	1477.820	were interesting in that respect thing
+1476.289	1479.470	that they they're they're
+1477.820	1481.779	counterproductive it sounds colleague
+1479.470	1482.889	stock trading programs yes yes you know
+1481.779	1484.869	you're hitting this you know moving
+1482.889	1487.330	target that you know in so many
+1484.869	1489.850	dimensions at once yeah very good sorry
+1487.330	1491.440	oh yeah I know we've got you all right
+1489.850	1494.080	there's gonna wrap us over the knuckles
+1491.440	1495.610	if we have these possibility spaces the
+1494.080	1497.289	players are navigating and in some sense
+1495.610	1499.179	as designers we even think about we're
+1497.289	1501.490	engineering these possibility spaces in
+1499.179	1503.259	a very kind of abstract sense in the
+1501.490	1505.240	sims we actually had two main dimensions
+1503.259	1506.950	that the player would kind of pursue as
+1505.240	1508.749	a goal state well he's a material
+1506.950	1510.999	success getting larger house better
+1508.749	1513.340	career etc and one is social getting a
+1510.999	1514.929	larger family more friends really one of
+1513.340	1516.879	the players to kind of balance the two
+1514.929	1518.499	factors and that would lead to the
+1516.879	1520.570	highest level of success in the game
+1518.499	1521.830	they could go for one of the other and
+1520.570	1523.029	they would end up on a local maximum
+1521.830	1525.549	some since the game was very much like
+1523.029	1526.960	bowling if you kind of went off to the
+1525.549	1528.009	side you'd end up in a gutter and you
+1526.960	1529.269	had to get it right down the middle to
+1528.009	1531.669	get the highest level of success in the
+1529.269	1534.429	game this is actually a map that we made
+1531.669	1536.679	of several thousand players playing the
+1534.429	1538.269	game across those dimensions and so
+1536.679	1539.740	we're actually able to formally capture
+1538.269	1541.539	you know players movement through these
+1539.740	1544.019	possibility spaces and start to analyze
+1541.539	1545.860	kind of where players you know
+1544.019	1547.929	coordinating you know coming together
+1545.860	1549.490	where are they fanning out in diverging
+1547.929	1552.730	and learning a lot of interesting things
+1549.490	1554.110	about that I think a lot of times with
+1552.730	1555.940	linear storytelling that's what's
+1554.110	1558.129	happening as well this is one of my
+1555.940	1559.119	favorite scenes from Indiana Jones where
+1558.129	1560.470	the beginning of the movie where he's
+1559.119	1562.059	running out of the temple with his
+1560.470	1563.710	treasure and all these traps are going
+1562.059	1565.750	off you know he almost falls into this
+1563.710	1566.640	pit this giant bowl mister all rolls
+1565.750	1569.399	over him
+1566.640	1571.380	and as a viewer I'm imagining every one
+1569.399	1572.669	of these things as a possible failure
+1571.380	1573.720	state what would happen if the ball
+1572.669	1575.580	rolled over and what if you fell in that
+1573.720	1577.409	pit what if this trap got him and so
+1575.580	1579.600	even though I'm seeing one path through
+1577.409	1581.549	that possibility space my imagination is
+1579.600	1582.960	filling out all the possibilities that
+1581.549	1584.549	could have happened and that is a lot of
+1582.960	1586.110	the drama is me understanding the
+1584.549	1587.549	possibility space that surrounded him
+1586.110	1589.169	and the one particular path he took
+1587.549	1591.299	through it and I think that's the
+1589.169	1596.669	element of a lot of drama oh now we go
+1591.299	1598.380	to stuff stuff yeah stuff at this point
+1596.669	1602.309	I think Brian's gonna start playing up
+1598.380	1604.200	some music there you go all right we
+1602.309	1606.919	thought we'd give a few examples of some
+1604.200	1606.919	different systems
+1609.990	1614.950	and once you describe what you're
+1611.769	1616.460	playing and I will if I can get the
+1614.950	1619.789	volume right
+1616.460	1623.619	I have to get this balance between the
+1619.789	1623.619	way you can hear it yet still here up
+1623.940	1629.660	so actually all the pieces I I should be
+1626.850	1631.890	playing today I made today because
+1629.660	1633.540	that's the power of generative systems
+1631.890	1636.540	like that is the Clary it because
+1633.540	1638.370	because I have a new computer which was
+1636.540	1640.710	supposed to have all the contents of my
+1638.370	1642.150	old computer it was only when I arrived
+1640.710	1646.470	here that I discovered it had none of
+1642.150	1648.750	the contents of my its Willow had
+1646.470	1652.770	viewers it just had the names of all the
+1648.750	1656.970	contents of my own that's a very
+1652.770	1659.730	powerful feature so rather than just
+1656.970	1662.580	recite the names to you I made several
+1659.730	1663.840	new pieces of music and programming
+1662.580	1665.940	terms that's called dangling pointers
+1663.840	1667.860	who don't know this this piece was meant
+1665.940	1669.540	to go with oh yeah yeah we're now we're
+1667.860	1671.790	getting on to the exciting so these are
+1669.540	1673.320	a cellular automata which probably a lot
+1671.790	1674.670	of you are familiar with and the idea
+1673.320	1677.280	behind these is that there are very
+1674.670	1680.040	simple rule systems and we run the rule
+1677.280	1682.080	and it actually analyzes every cell in
+1680.040	1684.240	here each one of these cells looks at
+1682.080	1687.090	its neighbors analyzes what's around it
+1684.240	1688.860	to determine its new state and so it's
+1687.090	1690.090	the same rule apply to every cell but
+1688.860	1692.130	because the number of neighbors is
+1690.090	1693.590	different you get different patterns
+1692.130	1695.970	emerging so I'm stepping through this
+1693.590	1698.100	very slowly okay we just we should
+1695.970	1699.720	perhaps give the audience some idea of
+1698.100	1703.590	what these rules are like they say
+1699.720	1706.500	things like if three if three of your
+1703.590	1708.300	neighbors are alive you're going to die
+1706.500	1710.490	or you're going to survive in the next
+1708.300	1712.710	generation if you've got only one
+1710.490	1715.230	neighbor alive you'll die if you have
+1712.710	1717.000	two neighbors alive you yeah persist
+1715.230	1720.390	whatever and that's the exact rule said
+1717.000	1722.070	those kinds of things is probably the
+1720.390	1724.740	most well-known example of a sailor
+1722.070	1726.510	automatons and this is Conway's life and
+1724.740	1727.980	that's his rule set basically you've got
+1726.510	1729.810	three or four neighbors you survive you
+1727.980	1730.890	have exactly four neighbors and this is
+1729.810	1732.720	going into every little cell and
+1730.890	1734.010	Counting how many neighbors you have to
+1732.720	1736.060	determining whether a new cell is
+1734.010	1737.620	created or destroyed and
+1736.060	1739.750	[Music]
+1737.620	1741.670	please one more I shouldn't have but now
+1739.750	1744.210	as we've run these I'm gonna run it fast
+1741.670	1747.340	now you start seeing these amazing
+1744.210	1749.260	patterns develop and this is entirely
+1747.340	1751.900	deterministic so from this versa there's
+1749.260	1754.000	only those three rules and what's very
+1751.900	1756.220	very interesting is if you make a tiny
+1754.000	1758.250	difference at the beginning it can
+1756.220	1761.680	translate into a huge difference in the
+1758.250	1764.200	lifecycle of the thing so you know if
+1761.680	1767.410	you start with a grid of nine nine
+1764.200	1769.840	squares with one added to it it'll last
+1767.410	1773.740	for 53 generations if you add one more
+1769.840	1776.230	Square to last for 15,800 generations
+1773.740	1778.780	and this pattern I'm showing here every
+1776.230	1780.850	time I run and load it it will generate
+1778.780	1782.500	the exact same result and so all of the
+1780.850	1784.990	complexity you're seeing as it runs here
+1782.500	1787.330	is embedded in a couple of simple rules
+1784.990	1788.920	and these are very interesting systems
+1787.330	1791.110	because there are so many different
+1788.920	1793.150	things that you can kind of generate
+1791.110	1795.430	with them different patterns symmetry
+1793.150	1796.840	some of them are very beautiful and this
+1795.430	1798.070	is actually we're playing with this a
+1796.840	1799.690	little bit earlier today and we were
+1798.070	1801.580	noticing that certain pieces that Brian
+1799.690	1803.590	was composing went very well with
+1801.580	1805.090	certain rule sets this was somewhat
+1803.590	1807.490	unpredictable as to which ones went well
+1805.090	1808.960	together but it's actually too
+1807.490	1810.670	generative systems basically kind of
+1808.960	1814.930	playing off each other having never even
+1810.670	1816.130	that I'm reluctant to play this tool and
+1814.930	1819.960	though because I think it's a bit
+1816.130	1822.190	disturbing to have that's that's lovely
+1819.960	1824.800	now I'm actually pulling back on this
+1822.190	1826.870	pattern this is way zoomed out and as we
+1824.800	1828.220	zoom in closer and closer you've seen
+1826.870	1830.560	different patterns of different scales
+1828.220	1833.230	here so what you have to think about is
+1830.560	1836.320	suppose you had to make this as a film
+1833.230	1838.390	what we're seeing here it would be very
+1836.320	1842.980	complicated that's a lot of information
+1838.390	1845.800	if you had to specify it as as a visual
+1842.980	1847.420	phenomenon like that but what actually
+1845.800	1850.030	has happened is that there's this tiny
+1847.420	1852.730	little set of rules and this landscape
+1850.030	1856.080	for them to work in and the set of rules
+1852.730	1860.320	is well it's typically like a 2k
+1856.080	1862.570	document or something like that and you
+1860.320	1864.820	get all that richness so so this is the
+1862.570	1865.620	really the power of generative systems
+1864.820	1869.280	that
+1865.620	1870.600	you make seeds rather than forests and
+1869.280	1872.100	these are very much the type of thing
+1870.600	1874.410	where you have no idea what its gonna
+1872.100	1876.330	look like we need to build the rules you
+1874.410	1878.910	turn it on and it's always just a total
+1876.330	1881.610	surprise these were actually developed
+1878.910	1883.980	when I couldn't take the four news by
+1881.610	1885.750	one moment before you really even had
+1883.980	1888.060	fast digital computers to run them on
+1885.750	1891.360	and another interesting thing about
+1888.060	1893.250	these is how fragile they are so because
+1891.360	1895.020	this one for instance if we go back to
+1893.250	1897.240	the starting position you can see it's
+1895.020	1900.660	just two simple cells as we start
+1897.240	1903.600	running the pattern it starts expanding
+1900.660	1905.610	but it's totally symmetrical bilaterally
+1903.600	1906.990	symmetrical girl and as we run it it
+1905.610	1909.570	maintains that symmetry to its entire
+1906.990	1912.090	life but if I pause it just for an
+1909.570	1915.390	instant and add one cell somewhere where
+1912.090	1917.790	shouldn't be and then run it it will end
+1915.390	1919.110	up breaking the symmetry so now we've
+1917.790	1921.570	broken the symmetry just by putting one
+1919.110	1923.280	cell in the wrong spots so these things
+1921.570	1927.390	are very complex but also very fragile
+1923.280	1930.570	in some sense they're very dependent on
+1927.390	1933.150	their initial conditions as well so so
+1930.570	1934.890	what they start out with totally
+1933.150	1938.760	determines their life it's actually a
+1934.890	1942.210	very very sort of sad view of human
+1938.760	1947.240	possibilities really sure how fragile it
+1942.210	1950.090	all is and how nothing can change much
+1947.240	1952.710	well you see that biology a lot actually
+1950.090	1955.200	the genetic structure is such that you
+1952.710	1957.270	know only the viable organisms will
+1955.200	1959.220	survive and so every one of your
+1957.270	1962.160	ancestors had to you know survive to
+1959.220	1963.690	reproduce and a lot of times they're all
+1962.160	1965.670	regions of evolution that are cut off to
+1963.690	1969.570	us because we have to jump across this
+1965.670	1971.670	chasm yeah one fitness yes I sometimes
+1969.570	1973.470	wonder about my ancestors on that score
+1971.670	1976.149	this
+1973.470	1977.350	this is another example of things that
+1976.149	1980.049	we can do with these systems we can I
+1977.350	1981.850	just put a little see this is a this is
+1980.049	1983.830	a little machine you see yeah very
+1981.850	1985.409	little machine and I can like put one
+1983.830	1987.669	little cell in the wrong spot here and
+1985.409	1991.929	very quickly the whole thing just kind
+1987.669	1996.700	of goes to crap that was you know one
+1991.929	1998.049	cell and and now the full cycle is
+1996.700	2003.570	broken these guys are going off forever
+1998.049	2005.070	or that direction we can actually use
+2003.570	2006.840	these things for doing simulation in
+2005.070	2009.299	fact a lot of our games are built upon
+2006.840	2011.520	cellular automata at a very simple level
+2009.299	2013.740	to simulate you know what seem to be
+2011.520	2015.450	very complex things SimCity which is one
+2013.740	2017.909	of the games worked on many years ago in
+2015.450	2020.340	fact is under laid by just I said a very
+2017.909	2021.419	simple cellular automata like this you
+2020.340	2023.039	know they have very simple rules for
+2021.419	2025.409	things like crime and traffic and
+2023.039	2027.120	pollution and on top of that we lay all
+2025.409	2028.500	these nice graphics of cars and
+2027.120	2030.720	factories and all that but really
+2028.500	2032.549	underneath it's a very simple grid based
+2030.720	2034.320	system like this it allows us to
+2032.549	2035.820	simulate things and it took a while to
+2034.320	2037.950	discover the rules but once we actually
+2035.820	2039.720	put together a few simple rules we got
+2037.950	2041.399	two systems where we were seeing
+2039.720	2044.820	emergent phenomena we were seeing things
+2041.399	2046.200	like urban gentrification you know just
+2044.820	2049.530	do the simple interactions of the crime
+2046.200	2051.359	land value rules and stuff like that it
+2049.530	2053.300	seemed like it was a much more complex
+2051.359	2055.349	simulation than in fact it really was
+2053.300	2058.200	let's go to another little example here
+2055.349	2060.929	this one is a little more visual in some
+2058.200	2062.700	sense this is a simple program that
+2060.929	2065.879	actually has some very simple rules for
+2062.700	2067.500	figure drawing and poseability the
+2065.879	2071.280	figures and what it does it generates
+2067.500	2072.720	paintings basically on the fly it kind
+2071.280	2075.060	of knows how to draw a few things like
+2072.720	2077.490	plants and I know what this this is by M
+2075.060	2082.020	was it bernhard cohen who wrote this
+2077.490	2086.190	what's the name of Harold a Willie let's
+2082.020	2088.849	find out and I will register this I
+2086.190	2088.849	promise
+2090.350	2099.170	oh let's find out
+2094.220	2100.850	that was Chris wall yeah it's from Chris
+2099.170	2102.530	wall but every time you run this
+2100.850	2107.180	basically it generates a new painting
+2102.530	2108.830	and it's interesting just because the
+2107.180	2110.540	computer is obviously doing you know
+2108.830	2112.160	fairly random redistribution of the
+2110.540	2114.170	poses and the figures and the colors and
+2112.160	2115.310	whatever but they're still evocative
+2114.170	2116.510	it's interesting I can look at each one
+2115.310	2118.430	of these things and there's a certain
+2116.510	2120.530	mood it's kind of you vote for me and
+2118.430	2121.730	looking at them that I'm sure the
+2120.530	2124.760	computer wasn't thinking about that at
+2121.730	2126.320	all but this this is one of the other
+2124.760	2127.970	interesting things about generative
+2126.320	2131.000	systems they depend a lot on the
+2127.970	2134.000	observer as well so one of the things a
+2131.000	2136.130	lot of my work counts on is the idea
+2134.000	2138.050	that if you put something onto a CD
+2136.130	2145.850	people will tend to think it's probably
+2138.050	2148.640	music the cost of the CDR but it's funny
+2145.850	2150.260	it's like if you if you put something in
+2148.640	2151.700	a frame and hang it in an in an art
+2150.260	2154.460	gallery people will think it's a
+2151.700	2156.650	painting and and they'll reserve the
+2154.460	2159.260	special kind of attention for that which
+2156.650	2165.010	they don't give to computer screens or
+2159.260	2167.240	to their shoes or whatever so so I think
+2165.010	2169.430	something I'm very aware of is that
+2167.240	2171.650	people tend to connect things together
+2169.430	2174.260	in their brains I mean I a lot of my
+2171.650	2176.150	work involves using light and sound
+2174.260	2177.890	together and I never synchronize them
+2176.150	2180.460	but people always think that they're
+2177.890	2183.350	synchronized in ways do you use light
+2180.460	2185.030	like light shows or that's a big long
+2183.350	2189.770	story I don't think we should go there
+2185.030	2191.840	actually oh no I have to well if we get
+2189.770	2194.510	time later but that that takes a long
+2191.840	2197.690	time ok I I don't want to I want to get
+2194.510	2199.730	to spore basic ok well we can do that
+2197.690	2204.710	right now on and then we can eat your
+2199.730	2210.110	long story that looks like Julie
+2204.710	2212.660	Christie maybe this okay let's switch
+2210.110	2215.870	screens over to this computer in audio
+2212.660	2217.490	if we can so
+2215.870	2219.320	I'm gonna show you a game that I'm
+2217.490	2222.200	working on right now that relies very
+2219.320	2223.130	heavily on generative systems and it's
+2222.200	2225.470	called Spore
+2223.130	2228.110	the rough idea was inspired by the
+2225.470	2230.120	powers of 10 which is a book and movie
+2228.110	2232.130	done by Charles Mary Ames actually done
+2230.120	2233.180	earlier by a Dutch school teacher named
+2232.130	2236.660	case Boca
+2233.180	2237.980	called cosmic view but I'm sure you've
+2236.660	2239.510	seen this either the film of the movie
+2237.980	2241.310	where you have a guy laying in a park
+2239.510	2243.320	and it zooms down to the Sailor level
+2241.310	2245.300	atomic level all the way down to the
+2243.320	2247.400	quarks and then it pulls all the way
+2245.300	2249.470	back up to you know the planet the Sun
+2247.400	2251.210	the galaxy and I always thought it was a
+2249.470	2252.560	very unique perspective and it was kind
+2251.210	2253.430	of missing the dynamics I always wanted
+2252.560	2255.140	to see the dynamics when different
+2253.430	2256.490	scales so that was part of this brush
+2255.140	2257.630	behind Spore another part of it was
+2256.490	2259.250	allowing the players to be able to
+2257.630	2261.110	create most of the game so almost every
+2259.250	2262.670	piece of content in the game is created
+2261.110	2265.010	by the players I'm just gonna show you a
+2262.670	2266.870	few bits and pieces of it here the game
+2265.010	2269.390	actually occurs across multiple scales
+2266.870	2273.200	from cellular to kind of evolution
+2269.390	2274.850	creature up to tribe city civilization
+2273.200	2278.180	and in space in fact you're actually
+2274.850	2281.150	kind of developing evolving civilization
+2278.180	2282.980	from a single microbe every level the
+2281.150	2284.360	game also has an Associated editor where
+2282.980	2285.920	the players in fact actively creating
+2284.360	2287.210	the content I want to show you kind of
+2285.920	2290.480	an example of what that looks like
+2287.210	2292.040	because a lot of the underlying elements
+2290.480	2294.740	of the game involve the players having
+2292.040	2296.450	very powerful editors so this is our
+2294.740	2299.000	creature editor in the game and so it's
+2296.450	2300.650	a very simple kind of skeletal system
+2299.000	2302.270	here where I can drag out things I can
+2300.650	2305.420	inflate them with the mouse we want to
+2302.270	2306.590	be extremely open-ended to the player we
+2305.420	2308.870	have a palette of parts over here that
+2306.590	2310.220	we can kind of grab and use and stick
+2308.870	2311.990	onto the thing
+2310.220	2313.810	very play like you know everything I can
+2311.990	2318.070	basically kind of sculpt like clay
+2313.810	2318.070	different types of parts use your feet
+2318.319	2322.009	as I start putting parts on the future
+2320.719	2323.869	starts coming to life I could kind of
+2322.009	2325.900	morph and scale these things you know
+2323.869	2332.510	let's give them out here
+2325.900	2334.940	[Music]
+2332.510	2337.510	all these parts have handles let me
+2334.940	2337.510	scale this up
+2339.670	2342.420	maybe give it some more
+2343.420	2346.489	[Music]
+2348.690	2351.829	a set of arms
+2352.380	2357.160	that's gross now the interesting thing
+2355.660	2359.319	about this is that no matter what the
+2357.160	2361.049	player designs the computer has to
+2359.319	2365.680	figure out how this thing would behave
+2361.049	2367.660	so here in a few clicks in about two
+2365.680	2370.029	minutes I've created you know a fully 3d
+2367.660	2372.940	character next up is actually coloring
+2370.029	2375.220	the thing now this is all generative as
+2372.940	2377.079	well so basically we have simple rules
+2375.220	2379.630	for how the computer should paint this
+2377.079	2381.490	thing so we basically select a color and
+2379.630	2382.869	then each one of these spoons here
+2381.490	2384.700	represents a different algorithm that
+2382.869	2387.839	puts a different pattern on the creature
+2384.700	2390.130	so you can go for stripes spots scales
+2387.839	2392.380	we can overlay and mix different
+2390.130	2394.930	patterns so I can pick another color
+2392.380	2396.250	here and then put different stripes the
+2394.930	2399.089	computers actually analyzing things like
+2396.250	2401.230	where the torso is where the legs are
+2399.089	2402.309	very much the way a texture artist would
+2401.230	2403.869	and in fact you know typically a
+2402.309	2405.039	computer texture artist would spend a
+2403.869	2407.470	couple days texture and creature like
+2405.039	2409.750	this so here in about three minutes you
+2407.470	2411.400	know in about maybe 30 miles clicks I've
+2409.750	2412.720	created a creature that's roughly
+2411.400	2415.890	equivalent to what a Pixar artist might
+2412.720	2415.890	create over several weeks
+2420.050	2423.350	and now the computer actually analyzes
+2421.820	2425.030	what we've made and brings it to life so
+2423.350	2427.100	in fact this is the way this thing would
+2425.030	2428.540	move and so no two preachers will
+2427.100	2432.260	actually kind of move or behave the same
+2428.540	2436.340	way in this game so can I just interrupt
+2432.260	2438.440	them in its only you see the ways you
+2436.340	2441.140	see there were hits heaving up and down
+2438.440	2444.080	there yeah that's is breathing right so
+2441.140	2446.150	so is the computer told in every case
+2444.080	2449.300	just to say what would this thing do
+2446.150	2450.590	when it breathes I always do that sort
+2449.300	2452.780	of thing it always makes a decision
+2450.590	2454.190	about yeah everything it does the
+2452.780	2455.990	computers making some decision and
+2454.190	2457.460	sometimes it's abstract out elements of
+2455.990	2460.490	the creature you know maybe it's mass
+2457.460	2462.110	and weight and size the way it moves is
+2460.490	2464.480	very based upon how long the legs are
+2462.110	2465.950	how many feet yeah you know you can move
+2464.480	2468.410	in radically different ways if I put
+2465.950	2471.680	like seven legs or tentacles or whatever
+2468.410	2473.540	so there's a range of possibilities that
+2471.680	2475.340	the computer has to kind of understand
+2473.540	2478.550	based upon the structure for the future
+2475.340	2480.950	39 so everything that creature is doing
+2478.550	2484.010	in the game all the behaviors have to be
+2480.950	2485.900	animatable by the computer algorithm as
+2484.010	2487.430	well as emotions so we have to be able
+2485.900	2489.920	to show you know the features happy or
+2487.430	2492.430	sad I wouldn't depending we designed
+2489.920	2494.840	that could be you know quite tricky so
+2492.430	2496.730	we take this creature and we actually
+2494.840	2498.410	bring it into the world and you're
+2496.730	2500.570	actually playing in a full world of
+2498.410	2502.430	other creatures that were designed by
+2500.570	2504.100	other players so as you design a future
+2502.430	2506.650	in this game
+2504.100	2507.940	you're actually interacting with other
+2506.650	2510.070	creatures that other players have
+2507.940	2512.080	designed automatically and how is the
+2510.070	2514.000	how is the sentient on the creatures
+2512.080	2516.550	that you interact with chosen it's
+2514.000	2518.920	chosen by the computer based upon what
+2516.550	2521.350	you've done in the game so it's based
+2518.920	2524.320	upon how well you are as a player your
+2521.350	2528.160	skill levels based upon a number of
+2524.320	2530.830	other things so do you as a player can
+2528.160	2533.320	you reject a sense so if the computer
+2530.830	2535.870	puts you in a landscape which you don't
+2533.320	2537.310	like very much can you say I'd rather
+2535.870	2539.320	have another set of creatures please
+2537.310	2540.970	well in some sense later stages of the
+2539.320	2542.740	game you can do that you can give the
+2540.970	2544.570	computer kind of directives on the type
+2542.740	2546.130	of content you want so it's trying to
+2544.570	2547.900	select content it's not only appropriate
+2546.130	2550.060	before your kind of skill level but also
+2547.900	2551.530	your aesthetic style so you make some
+2550.060	2552.910	purchasing decisions in the game make
+2551.530	2554.230	the selection decisions yeah the
+2552.910	2556.630	computer tries to abstract it very much
+2554.230	2560.920	the way Amazon recommendations does and
+2556.630	2563.490	so in the game I basically need to find
+2560.920	2563.490	food to eat
+2565.619	2572.859	we're gonna go over here I hear some
+2567.759	2574.059	cutie picking exhibit here now again my
+2572.859	2576.190	creature is doing everything out
+2574.059	2580.660	rigorously based upon how I've designed
+2576.190	2582.970	it now these guys aren't very strong but
+2580.660	2584.410	they're very social so that's sticking
+2582.970	2585.670	up with each other so even though
+2584.410	2587.380	they're weak I'm not gonna get very far
+2585.670	2599.710	with them so I'm gonna go or something a
+2587.380	2602.609	little bit easier here we go some people
+2599.710	2602.609	herbivores over here
+2602.820	2613.590	if I'm quick I could go get a bite of
+2604.590	2614.760	their egg here happy about that their
+2613.590	2617.180	ever worse but they hold up in their
+2614.760	2619.200	mouths but I did get some DNA points now
+2617.180	2620.970	not only am I just trying to survive in
+2619.200	2622.080	this but there's a whole social game if
+2620.970	2623.910	I can find members of my own species
+2622.080	2625.830	like this I can basically socialize with
+2623.910	2627.630	them and it's my brain level advances I
+2625.830	2630.440	get the higher Nova speeds and higher
+2627.630	2630.440	levels of communication
+2630.650	2635.430	now this one's ready to mate so I can
+2634.140	2638.990	actually mate at this point of the game
+2635.430	2638.990	and this is out rhythmic mating
+2641.740	2646.569	that we banned in several states yeah
+2647.319	2651.229	so I actually play every generation on
+2649.579	2653.179	my creature through evolution and that
+2651.229	2655.429	gives me access to the editor again and
+2653.179	2658.189	can I ask you something sure if your
+2655.429	2662.749	creature doesn't survive the illusionary
+2658.189	2664.819	struggle yes what happened basically you
+2662.749	2668.559	like the restart thing that I showed you
+2664.819	2668.559	earlier oh I have to defend my eggs here
+2675.789	2680.089	basically if you died in this stage of
+2678.979	2682.309	the game you would fall back one
+2680.089	2684.140	generation to your last egg and get an
+2682.309	2686.689	opportunity to redesign your future Isis
+2684.140	2688.759	the next generation so this is the
+2686.689	2689.869	creature I had now I might decide I want
+2688.759	2691.159	to make this picture faster so what I'm
+2689.869	2692.599	actually doing is playing every version
+2691.159	2694.429	of my creature every generation of its
+2692.599	2696.649	revolution so I'm gonna take off these
+2694.429	2698.239	feet put on something a little bit
+2696.649	2699.559	faster and this is how I actually
+2698.239	2702.019	increase the performance of my creature
+2699.559	2704.239	over time and do you do you pay extra as
+2702.019	2706.999	it were for these yeah you know for
+2704.239	2708.769	high-performance features yes in fact um
+2706.999	2710.539	there's a currency the yearning kind of
+2708.769	2712.039	DNA currency that you're earning in the
+2710.539	2713.389	game that you didn't spin in the editor
+2712.039	2715.219	so at every level the game so if you
+2713.389	2717.589	design something like a sloth that would
+2715.219	2718.849	actually be very cheap with it yes in
+2717.589	2720.349	fact you could actually start as a slug
+2718.849	2722.389	we have this little slug thing we called
+2720.349	2725.380	Oggy okay you know I had basically a
+2722.389	2729.249	mouth you know and that was about yeah I
+2725.380	2729.249	knew someone like that yeah
+2730.330	2739.040	it was a very tricky you know Larry the
+2732.590	2740.960	guy survived with now I'm gonna make my
+2739.040	2743.030	guy a little bit scarier you can also
+2740.960	2745.340	make changes to your guy that are more
+2743.030	2747.910	aesthetic now so my happy-go-lucky guy
+2745.340	2756.080	is gonna be a little more serious here
+2747.910	2759.500	and then let's go back in a p.m. can you
+2756.080	2761.650	can you also modify the behavioral
+2759.500	2764.330	characteristics or does the computer
+2761.650	2766.250	give use those from from what you've
+2764.330	2767.690	done physically in the editor you're
+2766.250	2769.340	designing the physical characteristics
+2767.690	2771.260	of your creature once you get into the
+2769.340	2773.180	game you're actually designing its
+2771.260	2775.250	behavioral characteristics by the way
+2773.180	2777.290	you play it so if I play my creature is
+2775.250	2780.080	very social then it will start to
+2777.290	2781.310	reflect that in the game by how often I
+2780.080	2782.300	socialize with my other creatures they
+2781.310	2783.740	might become more of a herd mentality
+2782.300	2786.500	and work together like the small
+2783.740	2788.060	creatures we were at before so here i've
+2786.500	2789.200	read these on my creature but as i come
+2788.060	2790.610	back into the game we actually don't
+2789.200	2793.580	start with the full size we start with a
+2790.610	2795.830	baby so this is the baby fide version of
+2793.580	2797.090	the adult that i've just designed we run
+2795.830	2798.350	actually a little simple neonatal
+2797.090	2800.990	algorithm and so you see the head is
+2798.350	2802.550	exaggerated and a few other things and
+2800.990	2804.530	so the social game i can actually click
+2802.550	2806.840	on these guys and have them socialize
+2804.530	2808.370	play together and as i do that i kind of
+2806.840	2809.930	earned this is like playing the
+2808.370	2811.700	friendship game in the sims and these
+2809.930	2815.060	guys will then start to follow me and
+2811.700	2816.750	mimic what i do so here we're playing
+2815.060	2818.940	together
+2816.750	2820.920	now at this point the guy will become my
+2818.940	2823.230	friend I get the little friend thing and
+2820.920	2824.910	now I have roughly follow me around and
+2823.230	2827.849	I can get a little pack of my little
+2824.910	2828.960	baby friends here and we can go over
+2827.849	2831.020	here and we can kind of like annoy our
+2828.960	2833.670	neighbors the herbivores again
+2831.020	2836.749	[Laughter]
+2833.670	2836.749	[Music]
+2837.940	2843.410	those guys are a lot bigger than we are
+2840.049	2846.979	but we're pretty fast yeah they're
+2843.410	2850.549	getting annoyed now they'll definitely
+2846.979	2853.430	get us but I'm gonna skip ahead here a
+2850.549	2854.900	little bit now we actually made a
+2853.430	2856.160	skipper long low intermediate levels of
+2854.900	2857.690	the game eventually you develop
+2856.160	2859.190	intelligence and you start controlling
+2857.690	2860.779	an entire tribe of these guys and
+2859.190	2863.710	control their technical advancements you
+2860.779	2865.940	can get them things like fire Spears etc
+2863.710	2867.410	you can design things like their Hut I
+2865.940	2869.119	can every level the game you're doing
+2867.410	2870.769	things the player is creating and using
+2869.119	2872.420	generative techniques underlying that
+2870.769	2873.650	that's what makes it possible for in 20
+2872.420	2875.599	clicks the player to create something is
+2873.650	2878.239	that we've made so much of it all over
+2875.599	2879.559	Hollywood to make the computer side so
+2878.239	2881.059	that gives the player a huge amount of
+2879.559	2883.719	creative leverage the computer becomes a
+2881.059	2885.650	creative an amplifier to the player
+2883.719	2887.630	eventually you start building the entire
+2885.650	2890.509	cities and you can design the buildings
+2887.630	2891.950	in the cities eventually vehicles as the
+2890.509	2894.349	civilization start interacting with each
+2891.950	2896.059	other and I'm gonna skip way ahead here
+2894.349	2898.009	this is gonna be the same planet that
+2896.059	2899.869	we're on the same creatures but this is
+2898.009	2902.839	basically at the end of the civilization
+2899.869	2904.309	phase and so at the end what the end of
+2902.839	2906.170	the civilization phase so these
+2904.309	2908.390	creatures have you know advanced all the
+2906.170	2909.950	way through you know tribal city and Civ
+2908.390	2912.170	and now there's a high level of
+2909.950	2913.999	technological advancement you can get a
+2912.170	2916.519	sense of some of their cities all these
+2913.999	2918.739	buildings were designed by the player in
+2916.519	2920.450	the editor the cities that you're
+2918.739	2922.039	competing with we're designed by other
+2920.450	2923.509	players in the editor and downloaded
+2922.039	2925.670	your computer automatically to basically
+2923.509	2930.289	fill out your world as well as the
+2925.670	2932.539	vehicles etc here so here's our home
+2930.289	2934.640	city now at this point in the game we
+2932.539	2936.499	can click on it and we can go to the
+2934.640	2938.089	next stage of the game where we're
+2936.499	2940.339	actually entering this space for inside
+2938.089	2942.910	of the game now the UFOs that we have
+2940.339	2945.160	here are like anything else is ahead
+2942.910	2946.900	Claire can create them and this is our
+2945.160	2949.119	civilization that you were playing as
+2946.900	2950.980	evolution earlier now basically entering
+2949.119	2953.609	the space age and so there having been
+2950.980	2953.609	launched
+2961.700	2966.680	so we have a little celebration now if
+2965.270	2969.079	you play the game I'm actually kind of
+2966.680	2970.700	controlling this UFO and flying around
+2969.079	2972.109	the planet this is the planet that we
+2970.700	2973.460	evolved on we've been playing the entire
+2972.109	2974.299	game on this plane up to this point you
+2973.460	2977.000	can get a sense of some of the other
+2974.299	2980.569	styles of buildings this is some of the
+2977.000	2984.020	other cities that I basically built the
+2980.569	2985.069	game now at this point of the game one
+2984.020	2986.119	things I might want to start doing is
+2985.069	2988.069	going out and terraforming and
+2986.119	2990.230	colonizing other worlds one things I
+2988.069	2992.059	might want to do is collect biological
+2990.230	2994.280	samples on my world I can do this with a
+2992.059	2995.599	subduction beam that allows me to kind
+2994.280	3001.599	of go in using real scientific
+2995.599	3003.040	principles here so as we suck these
+3001.599	3005.109	things up into our UFO they go into the
+3003.040	3006.099	cargo hold and we can use them we
+3005.109	3007.030	actually one thing we found that was
+3006.099	3008.849	kind of interesting is that we could use
+3007.030	3013.390	the abduction beam to throw things
+3008.849	3016.140	really far we may have to get some of
+3013.390	3016.140	these guys into orbit
+3017.300	3021.300	but now also for the first time we can
+3019.380	3022.470	like pull all the way out and see the
+3021.300	3024.450	entire planet that we've been playing on
+3022.470	3026.130	so and these planets are generated as
+3024.450	3027.450	well so using very simple rules we were
+3026.130	3029.520	able to generate you know entire
+3027.450	3030.840	planetary systems so as we pull back
+3029.520	3032.940	here we can see that even if had got
+3030.840	3036.960	kind of a very slight and ling around
+3032.940	3038.970	our planet as we keep pulling back we go
+3036.960	3041.400	out to the interstellar view I mean the
+3038.970	3043.770	a planetary view so here's our home
+3041.400	3046.860	solar system that we evolved in these
+3043.770	3049.200	are other planets this one I can tell
+3046.860	3052.100	has some type of life on it so we're
+3049.200	3052.100	gonna fly over this planet
+3053.579	3059.849	and pull down the surface again these
+3057.359	3061.010	planets are all generated auguries mcli
+3059.849	3064.690	and we're
+3061.010	3064.690	that's right in these plans
+3065.830	3070.920	this one's a bit more kind of
+3067.390	3070.920	fantastical imagining
+3071.440	3075.819	so we're going to take our future of our
+3073.839	3078.280	own planet and start introducing them to
+3075.819	3080.410	this now this planet already has a whole
+3078.280	3082.890	atmosphere and in fact somewhat of us
+3080.410	3082.890	simply
+3084.350	3087.200	some of the other planets are more
+3085.850	3088.640	barren in fact you have to kind of
+3087.200	3091.550	bootstrap from the very early stages
+3088.640	3093.820	onto this level so let's find a spot
+3091.550	3093.820	over here
+3107.910	3112.140	we get a little stunned when they get
+3109.930	3112.140	dropped
+3112.250	3115.389	[Applause]
+3117.640	3121.270	okay they didn't get along with the
+3120.140	3123.320	neighbors too well
+3121.270	3125.810	one things we can do is we can scan
+3123.320	3127.130	these guys with our scanning tool and so
+3125.810	3129.080	any other creatures that we see on this
+3127.130	3132.560	planet we can scan they're entered into
+3129.080	3137.140	a database that we call spore PDF and
+3132.560	3140.210	now that database we can access and
+3137.140	3141.500	spore pedia basically is a record of all
+3140.210	3142.730	the content that we've come across in
+3141.500	3144.620	the game so in some sense this is kind
+3142.730	3145.910	of a collection game there's a card
+3144.620	3148.940	that's built for every piece of content
+3145.910	3150.890	so this is our home star the planets
+3148.940	3152.780	around it I click on that and I get a
+3150.890	3153.800	plants this is our home planet this is
+3152.780	3155.510	the place that we're currently visiting
+3153.800	3157.520	right here if I click on that these are
+3155.510	3160.610	the species that I've scanned on this
+3157.520	3162.050	planet each one has ratings etc and so
+3160.610	3163.160	we can use that to kind of keep track of
+3162.050	3169.010	the stuff that we've come across in the
+3163.160	3170.930	game is is it um is progress in the game
+3169.010	3172.910	always hierarchical in the sense that
+3170.930	3175.070	you you start at one level and you
+3172.910	3176.780	proceed up the echelon well could
+3175.070	3179.900	somebody for instance come up with a
+3176.780	3180.620	virus that actually had a planetary
+3179.900	3183.170	impact
+3180.620	3186.200	so somebody specializes on at the lowest
+3183.170	3189.560	level and doesn't decide to evolve into
+3186.200	3191.540	a larger creature oh you can stay at
+3189.560	3193.190	different levels but the idea that we
+3191.540	3194.420	would be simulating viruses at the same
+3193.190	3196.700	time that we're simulating the entire
+3194.420	3198.410	planet is basically kind of unmanageable
+3196.700	3200.720	you know from the computational point of
+3198.410	3202.340	view so in every level of the game we're
+3200.720	3204.440	abstracting out the levels below and
+3202.340	3206.330	above and we're actually running very
+3204.440	3208.130	low res simulations when you're not
+3206.330	3210.050	there at different scales but when you
+3208.130	3212.780	go back there we have to regenerate the
+3210.050	3217.220	content and so a lot of this is us kind
+3212.780	3219.170	of propping up the illusion of thousands
+3217.220	3220.460	and millions of things all running at
+3219.170	3223.640	the same time but we're really doing
+3220.460	3224.840	with abstraction and regeneration so to
+3223.640	3226.250	give you a little bit better example of
+3224.840	3227.960	that is we pull back from this now at
+3226.250	3230.120	some point I can upgrade my UFO and
+3227.960	3231.860	eventually I earn the ability to pull
+3230.120	3234.530	all the way out from our home solar
+3231.860	3236.300	system to the interstellar view so this
+3234.530	3237.980	is a region of interstellar space around
+3236.300	3238.940	our home system with other stars we have
+3237.980	3240.380	a lot of other things that you might see
+3238.940	3243.350	in the Hubble telescope things like
+3240.380	3244.480	black holes nebula etc we can fly to
+3243.350	3247.750	each one of these
+3244.480	3249.880	and these are in many cases worlds
+3247.750	3251.950	created by the computer in other cases
+3249.880	3253.390	the worlds created by other players so
+3251.950	3256.539	if we zoom into one of these worlds here
+3253.390	3259.559	one of these new solar systems we now
+3256.539	3261.880	see different set of planets here and so
+3259.559	3264.069	this one close to the Sun is very hot
+3261.880	3265.420	rocky planet this one it would be a big
+3264.069	3266.680	terraforming challenge we can pull down
+3265.420	3269.079	like the last planet was a very
+3266.680	3270.640	imaginative kind of almost Disney like
+3269.079	3272.049	planet this is in fact a much more
+3270.640	3273.609	realistic planet this is very much like
+3272.049	3276.010	the early Earth was about 4 billion
+3273.609	3281.500	years ago kind of a hot volcanic world
+3276.010	3285.760	here pull down to the surface we could
+3281.500	3286.930	bring up the sound a little bit some of
+3285.760	3288.680	these worlds as you're exploring them
+3286.930	3290.359	you'll come across things
+3288.680	3291.920	there might be hailing artifacts or
+3290.359	3294.920	things you can kind of scan into your
+3291.920	3297.950	UFO so there's a whole kind of astok
+3294.920	3300.020	exploring this vast world and the fact
+3297.950	3301.849	that we can generate an infinity these
+3300.020	3305.299	worlds kind of means that never you
+3301.849	3306.529	never run out of things to explore a lot
+3305.299	3307.970	of these planets are going to be in
+3306.529	3309.680	higher civilizations that other players
+3307.970	3311.420	have created that are brought down to
+3309.680	3313.520	your computers copies and so as you play
+3311.420	3314.630	the game it's keeping track of not just
+3313.520	3316.130	the creatures that you've designed but
+3314.630	3318.440	in the entire planets because you can
+3316.130	3319.730	sculpt entire planets once you get to
+3318.440	3321.170	this level with the UFO so here's
+3319.730	3324.079	another world let's go over this is
+3321.170	3325.970	actually got civilization on it and this
+3324.079	3327.200	world is orbiting this gas giant it's
+3325.970	3330.230	actually kind of a moon around this gas
+3327.200	3332.539	giant here and this was created by
+3330.230	3333.559	another player but it's asynchronous in
+3332.539	3336.230	other words the other player is not
+3333.559	3337.369	online right now what happened is the
+3336.230	3338.359	computers observe the way the other
+3337.369	3340.150	player played this they might have
+3338.359	3343.700	played this is a very peaceful race or
+3340.150	3345.559	trading people or explorers and the
+3343.700	3347.359	computer tries to stay fairly consistent
+3345.559	3350.089	with the way that player has basically
+3347.359	3353.029	programmed their behavior so we're gonna
+3350.089	3356.539	go up and read them do your impacts on
+3353.029	3358.039	that planet register on it permanently I
+3356.539	3360.319	mean that will they be there for the
+3358.039	3361.730	player when that player returns - well
+3360.319	3362.869	see one of the points of this is that we
+3361.730	3365.210	want every player to be able to be a
+3362.869	3366.920	hero in their own universe and so I want
+3365.210	3368.420	to be able to do whatever I want to do
+3366.920	3370.640	on this planet without ruining that
+3368.420	3371.960	players experience so this is where it's
+3370.640	3373.910	asynchronous and this is why I'm playing
+3371.960	3375.260	with a copy but at the same time the
+3373.910	3376.670	other player is gonna get a report of
+3375.260	3378.529	how many people came in and trashed his
+3376.670	3380.359	world or made alliances with it or
+3378.529	3382.160	whatever so you get reports back from
+3380.359	3383.480	what we call the meta verse which is all
+3382.160	3386.660	the parallel universes that people are
+3383.480	3388.549	prizes again so these guys are kind of
+3386.660	3390.319	wondering why we here you know at this
+3388.549	3392.650	point I might try maybe firing some
+3390.319	3392.650	fireworks
+3392.990	3395.950	okay they like that
+3397.800	3403.360	you better
+3400.300	3404.980	now the relationships I can develop with
+3403.360	3406.090	these other races go number of different
+3404.980	3408.010	ways we could end up being trading
+3406.090	3411.610	partners we can end up you know forming
+3408.010	3415.120	an alliance or Federation well in this
+3411.610	3417.910	case they decided to worship us so as
+3415.120	3420.840	gods had tiring yeah so we might pick
+3417.910	3420.840	one of them up and bring them with us
+3421.260	3427.600	okay so they didn't like that's how we
+3424.300	3430.540	treat each other that was bad okay that
+3427.600	3434.380	we treat us but I have weapons somewhere
+3430.540	3437.020	here oh here we go yes shoot back at
+3434.380	3438.790	least I have to take off this planet
+3437.020	3443.880	Earth sorry basically inadvertently
+3438.790	3443.880	smart though interplanetary war here
+3446.790	3454.710	kind of a major Americans are doing that
+3448.830	3458.040	yeah that's about right keep your hands
+3454.710	3459.359	to yourself no comment there okay
+3458.040	3460.859	obviously taking out their defenses and
+3459.359	3462.240	so now I can do whatever I want with
+3460.859	3465.810	them but uh at this point I should
+3462.240	3467.430	probably run you know them out it was an
+3465.810	3469.260	accident you know actually the thing
+3467.430	3479.430	that we found is that the terrifying to
+3469.260	3481.020	intelligence was wrong yeah I can erase
+3479.430	3482.730	the evidence just by bringing a few
+3481.020	3484.280	comments down this is actually
+3482.730	3487.710	terraforming tools that we use for
+3484.280	3488.970	bringing oceans to a planet and so if I
+3487.710	3490.800	drop enough comets on here the ocean
+3488.970	3492.359	levels will start rising here and I
+3490.800	3496.710	could eventually erase what I've done
+3492.359	3500.850	hopefully this is the global warming
+3496.710	3508.099	fast-forward version you can pretty much
+3500.850	3510.829	we create here we should do it
+3508.099	3512.269	alright now as we point now we don't
+3510.829	3517.400	know if this is you know the home rolled
+3512.269	3527.209	of this species or just a colony okay so
+3517.400	3528.920	they're upset sorry as we pull away from
+3527.209	3533.509	this we're getting another message on
+3528.920	3534.920	our comm screen okay so we just started
+3533.509	3536.539	a war and in fact that was just one of
+3534.920	3539.839	their colonies so now we have to head
+3536.539	3541.339	home to defend our umbrella but so this
+3539.839	3543.680	region of space we're looking at here
+3541.339	3545.119	represents several thousand stars you
+3543.680	3546.469	know the player can explore you know
+3545.119	3548.900	many of which are player generated
+3546.469	3550.430	meaning of widget computer generated but
+3548.900	3552.140	even this represents just a very small
+3550.430	3553.849	fraction of the entire world the player
+3552.140	3556.999	can actually plan we're actually dealing
+3553.849	3559.039	with several million worlds that are all
+3556.999	3560.630	unique and the only way that can
+3559.039	3562.099	actually happen is the fact that the
+3560.630	3563.299	world is continually this galaxy is
+3562.099	3565.069	communally being created by the
+3563.299	3568.249	collective efforts of a million players
+3565.069	3570.380	as they play and underneath all of that
+3568.249	3572.569	is the power of these generative systems
+3570.380	3574.670	and you know giving the players that
+3572.569	3576.140	kind of amplification you know through
+3574.670	3578.569	these editors you know that those
+3576.140	3582.390	generative systems provide but so that's
+3578.569	3590.820	the Spore demo fantastic Thanks
+3582.390	3590.820	[Applause]
+3591.540	3599.490	so I think we're right on time for the
+3593.670	3602.840	Q&A stuff right so stuarti you're gonna
+3599.490	3607.460	read the questions or should we just
+3602.840	3609.780	okay well I've had a question if
+3607.460	3611.370	requests if you can put your screen down
+3609.780	3615.930	a bit the people who have been wondering
+3611.370	3618.980	always looks like for a while here's a
+3615.930	3623.910	question from looks like Bert Balki
+3618.980	3627.060	where are you there okay do either of
+3623.910	3629.400	you have any comments on how you we
+3627.060	3631.890	should think about intellectual property
+3629.400	3635.010	and authorship in a world of generative
+3631.890	3636.990	design that's a very interesting
+3635.010	3639.690	question which as you can imagine I've
+3636.990	3641.490	thought about a fair amount I've just I
+3639.690	3644.220	just released a new thing which is
+3641.490	3650.840	called 77 million paintings by Brian Eno
+3644.220	3655.590	it's a it's a generative work 77 million
+3650.840	3658.050	77 million yeah and it's a piece of
+3655.590	3660.030	software and there was a lot of
+3658.050	3662.160	discussion about how he would protect
+3660.030	3666.240	the results of this so I decided to
+3662.160	3668.340	finally put a sign on it which says any
+3666.240	3671.640	of these pictures of available for you
+3668.340	3674.790	sexually well 77 million any or 77
+3671.640	3679.920	million and then it says and but would
+3674.790	3681.480	you please give me a credit because
+3679.920	3683.490	there's no there's absolutely no way of
+3681.480	3685.080	protecting them and and anyway I don't
+3683.490	3686.880	particularly I would never know if
+3685.080	3689.850	anybody used them because I'm never
+3686.880	3693.810	gonna see more than 200,000 of them in
+3689.850	3695.310	my life so that's a lot 200,000 and well
+3693.810	3697.140	it's probably the exaggeration I mean
+3695.310	3699.510	with us we have the issue that we're
+3697.140	3701.930	building these systems that players then
+3699.510	3703.980	use to build content themselves and
+3701.930	3706.290	infrequently other players will take
+3703.980	3707.700	that content make something else you
+3706.290	3709.770	know we had like in the last version of
+3707.700	3711.690	the Sims a machinima tool to where
+3709.770	3713.100	players can make movies frequently they
+3711.690	3714.870	were downloading other players creations
+3713.100	3716.490	their characters or houses to make the
+3714.870	3718.590	movies and so we have so many different
+3716.490	3721.260	layers of authorship yes at some point
+3718.590	3722.790	it gets just horrendously complex you
+3721.260	3723.710	know well it's been like that in music
+3722.790	3725.720	mouth
+3723.710	3729.109	fifteen or twenty years you know I mean
+3725.720	3730.520	of course the record that I made in this
+3729.109	3733.270	city actually my life in the bush of
+3730.520	3736.280	ghosts is a very good example of a
+3733.270	3738.920	complex authorship problem because I'm
+3736.280	3741.109	on that record I used other recordings
+3738.920	3743.390	it was unusual learned to do that but I
+3741.109	3748.130	used other recordings as my lead
+3743.390	3751.099	vocalists preachers or people and get
+3748.130	3752.839	permission and well I at that time of
+3751.099	3754.190	course we didn't do that kind of thing
+3752.839	3756.079	because nobody knew there was gonna be
+3754.190	3759.470	any money in it it sounded so weird at
+3756.079	3762.859	the time yeah so so I did apply for
+3759.470	3766.460	permission and in fact when the record
+3762.859	3768.349	was mastered and ready to go one of
+3766.460	3771.319	those permissions was refused and we had
+3768.349	3773.180	to junk all the records we've made and
+3771.319	3775.550	all the covers and put another track on
+3773.180	3777.800	in its place we actually do that three
+3775.550	3778.970	times actually what one interesting side
+3777.800	3780.980	effect of this whole thing that I found
+3778.970	3783.050	is that it puts us in terms of
+3780.980	3784.430	commercial companies producing stuff in
+3783.050	3786.589	a position to where there are certain
+3784.430	3788.000	things we cannot do but our fans can do
+3786.589	3789.290	because they're not doing it for
+3788.000	3790.940	commercial gain and they're basically
+3789.290	3793.849	under the radar doing grassroots stuff
+3790.940	3795.230	so they can build content and grab stuff
+3793.849	3797.930	and collect it and make these kind of
+3795.230	3799.280	remix things and then put them on their
+3797.930	3801.619	website so we could never put on our
+3799.280	3803.270	website so in some sense it gives the
+3801.619	3805.069	fan communities a whole reason to exist
+3803.270	3807.980	because they're come under the radar of
+3805.069	3809.960	this legal issue actually we we just
+3807.980	3812.660	have another interesting example of this
+3809.960	3813.770	going at the moment them so my life in
+3812.660	3817.430	the bush of ghosts has just been
+3813.770	3819.200	re-released and the record company with
+3817.430	3820.670	that usual flash of brilliance that
+3819.200	3823.430	record companies show when you re
+3820.670	3825.829	release a record since let's put some
+3823.430	3828.650	remixes on it as though nobody had ever
+3825.829	3830.450	thought of that ever before and of
+3828.650	3832.730	course it always happens and they want
+3830.450	3837.290	you to put sort of six horrible dodgy
+3832.730	3840.410	remixes on your wonderful record David
+3837.290	3843.950	Byrne had a much better idea David Burns
+3840.410	3845.869	my collaborator on that record which was
+3843.950	3848.210	to make a website where we would put the
+3845.869	3850.430	individual tracks of some of the records
+3848.210	3852.410	you know the guitar part the bass part
+3850.430	3854.240	this and that and so on onto a website
+3852.410	3856.549	so that anybody could make their own
+3854.240	3863.780	remixes and then post them back on the
+3856.549	3865.339	site yeah actually I've got some if you
+3863.780	3867.710	want to hear them later they they're
+3865.339	3869.500	really very good that the remixes that
+3867.710	3872.210	people have done they're amazing so much
+3869.500	3874.520	what's the URL on that brand where do
+3872.210	3878.270	people find that online it's called
+3874.520	3882.440	bush of ghosts calm bush - of - ghost
+3878.270	3883.819	calm and it's it's fascinating what
+3882.440	3885.740	people have done and what's very
+3883.819	3889.819	interesting because they all have weird
+3885.740	3892.460	names like blast XP and write lobotomy
+3889.819	3894.680	and have no idea who anybody is
+3892.460	3897.589	there's just this stuff flowing into the
+3894.680	3901.099	site and and visitors to the site rate
+3897.589	3903.970	it so there's a chart in there you know
+3901.099	3906.260	which the things people like best and so
+3903.970	3908.119	when people started using the sims to
+3906.260	3909.589	tell stories and movies and stuff was
+3908.119	3911.599	the first time that is a creator
+3909.589	3912.950	I thought the fans were entertaining me
+3911.599	3916.849	just as much as I was entertaining them
+3912.950	3918.799	yes yes I I wondered seriously about the
+3916.849	3921.230	idea of making a whole record like that
+3918.799	3924.500	not actually making the record but just
+3921.230	3926.299	putting the parts up saying to the rest
+3924.500	3930.670	of the world here's some interesting
+3926.299	3933.200	bits try sticking them together for me
+3930.670	3934.760	okay here's a related question pure
+3933.200	3936.290	question it's actually the same question
+3934.760	3942.530	from two different people
+3936.290	3944.030	dan ancona and a mark live okay the
+3942.530	3946.010	first version is there are a lot of
+3944.030	3947.990	really interesting political assumptions
+3946.010	3950.329	embedded in the simple rules that drive
+3947.990	3952.130	Sim City would you ever consider open
+3950.329	3955.309	sourcing a version of it so we could
+3952.130	3957.319	play with those assumptions and then the
+3955.309	3958.970	second question is spore makes a lot of
+3957.319	3961.760	political assumptions about the basic
+3958.970	3963.140	evolution of civilization it seems what
+3961.760	3965.480	do you think about a game where you can
+3963.140	3966.890	model various generative politics maybe
+3965.480	3971.059	play with fascism
+3966.890	3973.339	kisum were you naming okay that's a
+3971.059	3976.849	brilliant idea by the way I have to say
+3973.339	3978.589	that's like yeah that's uh that would
+3976.849	3980.900	certainly be let me go to the first
+3978.589	3982.880	question about Sim City is that we have
+3980.900	3984.049	looked at giving the players more access
+3982.880	3985.250	to the rule structures underneath in
+3984.049	3987.500	fact we did a simulation called Sim
+3985.250	3989.480	health but I know it sounds terribly
+3987.500	3990.559	exciting but it was a model of the
+3989.480	3991.549	national health care system where the
+3990.559	3993.079	players could actually get under the
+3991.549	3995.180	hood and adjust the rules and
+3993.079	3996.829	assumptions in fact I think you know
+3995.180	3998.089	when people play some city and they get
+3996.829	3999.380	to the point of starting to argue with
+3998.089	4001.000	the assumptions of the simulation that
+3999.380	4002.589	means that the game has been successful
+4001.000	4004.809	because they have coalesced in their
+4002.589	4006.190	mind the model of the game and how it
+4004.809	4008.019	differs from their own viewpoint in some
+4006.190	4010.240	sense it helps coalesce their own
+4008.019	4012.760	internal assumptions and when they could
+4010.240	4015.099	start arguing with it that feels to me
+4012.760	4017.410	like a really good result of the game
+4015.099	4020.920	now giving people access to the
+4017.410	4022.869	underlying algorithms again it's not as
+4020.920	4024.010	simple as you might think in that we're
+4022.869	4024.940	dealing with these generative systems
+4024.010	4026.650	and that we spend a lot of time
+4024.940	4028.150	discovering these rules they gave us
+4026.650	4032.109	reasonable looking traffic or crime or
+4028.150	4033.940	whatever so it would more be the process
+4032.109	4035.559	of giving them access to the very
+4033.940	4038.400	underlying generative structures and
+4035.559	4040.390	letting them discover other rules so
+4038.400	4042.369	that's something that would be a very
+4040.390	4044.440	different thing than a game in terms of
+4042.369	4046.779	open sourcing it we have done that with
+4044.440	4048.099	some of our really old stuff and we've
+4046.779	4049.480	seen their interesting results
+4048.099	4050.740	especially like in college programs when
+4049.480	4053.319	people are reprogramming like Sims
+4050.740	4054.819	objects and things like that so yes I
+4053.319	4056.259	think I'm very open to the idea it's
+4054.819	4058.269	probably harder than it sounds for most
+4056.259	4060.579	people in terms of Spore and the
+4058.269	4061.269	political stuff that would be kind of a
+4060.579	4063.089	different direction I think
+4061.269	4065.259	civilizations sid meier's civilization
+4063.089	4066.789	goes into that area much more thoroughly
+4065.259	4067.720	that we can afford to in Spore because
+4066.789	4070.089	we're trying to cover so much ground
+4067.720	4072.250	spores more about breadth and about
+4070.089	4073.660	player creativity than it is about you
+4072.250	4075.880	know delving deep into any one
+4073.660	4079.329	particular aspect of it later said a
+4075.880	4081.519	related question bad Bateman allowing
+4079.329	4083.349	that all creativity may be in some form
+4081.519	4086.319	derivative Brian this you've said and
+4083.349	4088.869	art is about art is the creativity
+4086.319	4092.349	inspired by games more akin to fan
+4088.869	4095.640	fiction believe - what - fan fiction
+4092.349	4098.040	fans of Star Trek making their own
+4095.640	4100.320	Star Trek right things like this or
+4098.040	4103.110	people writing you know their own
+4100.320	4105.300	versions of stories Harry Potter has a
+4103.110	4110.760	whole world of other people's versions
+4105.300	4112.500	of Harry Potter hmm well I think game
+4110.760	4115.440	certain games are allowing more and more
+4112.500	4117.210	access to the underlying content where
+4115.440	4120.840	players can modify the actual objects
+4117.210	4121.770	and in some sense in fact it's kind of
+4120.840	4122.880	interesting because we're starting to
+4121.770	4124.830	see games not just using his
+4122.880	4126.510	entertainment or education but his tools
+4124.830	4128.190	of self-expression as I said before
+4126.510	4130.080	players are making stories and even
+4128.190	4131.220	movies with the Sims you know originally
+4130.080	4132.630	these were very simple little stories
+4131.220	4134.820	about superheroes but later they got
+4132.630	4136.140	very deep very elaborate stories you
+4134.820	4138.210	know about their you know
+4136.140	4140.520	autobiographical experience is very
+4138.210	4143.130	heartfelt things and it was interesting
+4140.520	4145.170	to me that something that starts out as
+4143.130	4147.300	a piece of entertainment eventually
+4145.170	4148.230	becomes a tool for people you know and I
+4147.300	4149.700	think kind of what you come out in your
+4148.230	4151.230	website you know people are probably
+4149.700	4152.460	drawn to that because it feels like you
+4151.230	4153.960	know music I'm gonna listen to these
+4152.460	4154.920	pieces and some way they start playing
+4153.960	4156.660	with them sticking them together like
+4154.920	4158.670	Legos and then they start realizing
+4156.660	4161.730	creative aspirations well there's a
+4158.670	4164.640	couple of questions your will and are
+4161.730	4168.840	you aware of sort of SimCity being used
+4164.640	4171.390	by real urban planners are you things
+4168.840	4173.190	that behaviors that people have
+4171.390	4179.190	developed in the Sims that they then go
+4173.190	4180.810	out and try and real live you know one
+4179.190	4182.640	of the things that we've discovered it
+4180.810	4185.160	and you know this very well is the fact
+4182.640	4186.150	that we thought back in the sixties when
+4185.160	4187.380	computers came out that we could
+4186.150	4189.060	simulate the world if we just had enough
+4187.380	4191.280	data and we had no elaborate enough
+4189.060	4192.630	algorithms but later we discovered this
+4191.280	4194.160	thing called chaos theory which says
+4192.630	4195.960	that you know basically interesting
+4194.160	4198.090	systems are inherently unpredictable and
+4195.960	4199.440	we have very severe limits on the
+4198.090	4202.530	predictability of things like weather
+4199.440	4204.990	and social systems and economies and for
+4202.530	4206.580	that reason a model like SimCity no
+4204.990	4207.720	matter how elaborate you make it no
+4206.580	4209.070	matter what type of supercomputer you
+4207.720	4211.650	run it on has fairly limited
+4209.070	4213.600	productivity value and they're making
+4211.650	4216.780	much better as descriptive models and
+4213.600	4218.130	we're educational models so I know a lot
+4216.780	4220.320	of planners have used SimCity to
+4218.130	4222.630	introduce other planners to GIS systems
+4220.320	4224.100	geographic information systems just the
+4222.630	4225.450	idea of you know basically digital
+4224.100	4226.590	access to the content that they were
+4225.450	4228.660	normally dealing with on paper
+4226.590	4231.030	and it also allows people to kind of get
+4228.660	4232.950	its some sense of the underlying
+4231.030	4237.690	dynamics of a city in a very simplistic
+4232.950	4239.850	caricature fashion but we've seen people
+4237.690	4242.070	go the other way where they take aspects
+4239.850	4243.270	in the real life their real city and
+4242.070	4245.970	then model them and things like the
+4243.270	4247.950	sounds or in some city one of the things
+4245.970	4249.240	that we have a lot of girl players for
+4247.950	4251.190	the sims in fact over half the players
+4249.240	4253.860	are female and one things I hear so
+4251.190	4255.900	often is like fifteen-year-old girls
+4253.860	4257.970	they put their themselves in the game
+4255.900	4258.990	and their boyfriends and simulate their
+4257.970	4261.060	interactions and they go tell their
+4258.990	4264.780	boyfriend what happened their symboi
+4261.060	4266.550	friend did to them and I think it's more
+4264.780	4267.600	to hear his reaction to the fact that he
+4266.550	4270.120	was floating with this person over here
+4267.600	4271.500	or whatever but in some sense they
+4270.120	4274.920	treated kind of almost is a voodoo doll
+4271.500	4276.060	or a spreadsheet you know for why but I
+4274.920	4277.620	tend to think of it more is it's a
+4276.060	4279.210	scaffolding for their imagination these
+4277.620	4280.530	are things they might imagine anyway but
+4279.210	4284.580	the game just becomes a scaffolding for
+4280.530	4289.500	it here's a question from Ken pon Tech
+4284.580	4297.180	where are you how come I never have it
+4289.500	4299.400	enough time what I thought that was you
+4297.180	4302.040	talking what me to probably everybody
+4299.400	4303.630	here and one of the issues is is playing
+4302.040	4305.430	with time you're doing it with music in
+4303.630	4307.410	some ways taking people into a timeless
+4305.430	4309.470	place with the least the ambient music a
+4307.410	4313.830	non narrative non beginning middle end
+4309.470	4315.030	non time event but these games will that
+4313.830	4318.240	you're designing and others are
+4315.030	4320.400	designing seem to compress time and a
+4318.240	4322.530	whole lot happens you're not necessarily
+4320.400	4324.480	in a narrative sense but a whole lot
+4322.530	4326.250	happens in a relatively short time
+4324.480	4329.370	you're taking these creatures from
+4326.250	4332.310	spores to space in a matter of I don't
+4329.370	4335.040	know days that doesn't usually happen in
+4332.310	4338.340	the real world as far as we know well I
+4335.040	4341.880	think the experience of time is very
+4338.340	4343.560	very elastic indeed if any of you have
+4341.880	4346.800	ever been involved in a serious accident
+4343.560	4351.180	and had that experience of your life
+4346.800	4353.100	rushing before you and you know a one
+4351.180	4355.710	second or a half second actually
+4353.100	4357.630	occupies an enormous amount of time you
+4355.710	4358.030	can see every detail unfolding in that
+4357.630	4360.340	house
+4358.030	4362.800	and when I got this cut on my head that
+4360.340	4366.550	that was getting hit by a London taxi
+4362.800	4370.140	there very heavy I can tell you I cut
+4366.550	4372.970	knocked over by one but I was so
+4370.140	4375.970	fascinated by the fact that so much had
+4372.970	4380.080	happened in my mind that in the hospital
+4375.970	4382.030	bed I managed to write a 10-page piece
+4380.080	4384.580	about everything that had happened in
+4382.030	4386.350	that half second right yes it was a bit
+4384.580	4391.810	like those physicists who deal with the
+4386.350	4392.950	first three nanoseconds all right do you
+4391.810	4395.080	think when you do your music do you
+4392.950	4397.030	imagine the perception that you're gonna
+4395.080	4399.160	give the listener of time what does the
+4397.030	4400.210	ambient stuff stretch time for people I
+4399.160	4402.640	think so yes
+4400.210	4404.050	yes I well that's that's what it does
+4402.640	4406.960	for me and I hope it does it for other
+4404.050	4409.650	people it it kind of smoothes time
+4406.960	4413.410	actually it stops it being jerky and
+4409.650	4416.290	urgent and discontinuous it it's like a
+4413.410	4419.230	regular whale it it smoothes it and
+4416.290	4421.240	makes it into a continuous thing just
+4419.230	4424.180	for a bit I tend to think of you know
+4421.240	4425.950	games and even storytelling as almost
+4424.180	4427.750	technologies for us dealing with time
+4425.950	4430.660	because we're basically our perceptions
+4427.750	4431.920	are embedded in the time stream we never
+4430.660	4433.870	have the opportunity to go back in the
+4431.920	4435.610	past but things things like storytelling
+4433.870	4437.500	you know if I come out of the cave and a
+4435.610	4439.540	tiger almost eats me I can go back and
+4437.500	4440.590	tell you and you never experience that
+4439.540	4442.240	but the next time you leave the cave
+4440.590	4443.470	you're gonna look out for that tiger you
+4442.240	4445.960	know basically I have taken this
+4443.470	4448.240	experience out of time displaced it into
+4445.960	4450.190	you and you had that experience yes and
+4448.240	4451.780	in games you know players can restart a
+4450.190	4454.090	level try new options explore that
+4451.780	4456.040	possibility space and so these are you
+4454.090	4457.480	know tools that we also use our
+4456.040	4458.620	imagination for all the time as we're
+4457.480	4460.960	building models and you know kind of
+4458.620	4462.550	running scenarios in our head all of us
+4460.960	4463.630	dealing with the fact the simple fact
+4462.550	4465.700	that we are embedded in the timestream
+4463.630	4466.300	and we do not have mobility through it
+4465.700	4468.100	mm-hmm
+4466.300	4470.530	but you know in the type of stuff you do
+4468.100	4471.760	I think you do have almost a throttle in
+4470.530	4473.410	some sense you know I think you're kind
+4471.760	4476.700	of throttling the flow of time for the
+4473.410	4479.320	listener mm-hmm yes and of course if you
+4476.700	4481.510	you do that with rhythm no end you know
+4479.320	4484.120	you you do it by subdividing rhythm and
+4481.510	4485.800	by missing out beeps where they ought to
+4484.120	4486.690	be that that really increases the
+4485.800	4488.400	experience
+4486.690	4490.739	I think it's like your punctuating time
+4488.400	4493.560	yes you create a grid and then you you
+4490.739	4494.910	don't observe it you miss certain parts
+4493.560	4497.850	out of the grid and that gives a very
+4494.910	4499.830	funny feeling of a huge hole it feels
+4497.850	4502.469	it's like that feeling when one of your
+4499.830	4503.940	teeth breaks you feel its enormous hole
+4502.469	4505.800	in your mouth just because you're so
+4503.940	4508.469	familiar with what should be there you
+4505.800	4510.180	can do that with rhythm I think as well
+4508.469	4512.040	it does the blank space that really
+4510.180	4514.440	defines yeah that's what reggae is all
+4512.040	4516.840	about actually reggae is about creating
+4514.440	4520.440	great big holes where you expect there
+4516.840	4522.989	to be beats really Brian watch it q up
+4520.440	4524.880	one of those pieces that have come on on
+4522.989	4525.390	your website well I asked another
+4524.880	4527.430	question
+4525.390	4530.010	I know even though they do these things
+4527.430	4532.350	at once from Kevin Kelly how these
+4530.010	4534.090	generative systems changed your sense of
+4532.350	4536.449	long-term thinking that's a question for
+4534.090	4536.449	both of you
+4536.870	4541.260	sorry what's that question how these
+4539.280	4544.770	generative systems changed your sense of
+4541.260	4546.750	long-term thinking males aren't very
+4544.770	4549.030	good at multitasking you know putting a
+4546.750	4558.270	CD on completely occupies all of my
+4549.030	4563.880	brain well of course a lot of the pieces
+4558.270	4565.920	I've done have been effectively infinite
+4563.880	4567.810	which which is very interesting to make
+4565.920	4570.239	pieces of music that know what nobody
+4567.810	4572.100	will ever hear the whole of so I sort of
+4570.239	4575.340	liked that idea I used to when I used to
+4572.100	4577.530	do one period doing installations I
+4575.340	4580.110	would you know the way in art galleries
+4577.530	4582.510	they always say dimensions of everything
+4580.110	4585.239	they say so this piece nineteen feet six
+4582.510	4588.690	inches by eleven foot nine and then I
+4585.239	4592.489	would say music estimated length six
+4588.690	4592.489	thousand four hundred and ten years
+4594.260	4599.730	so does that give you a better
+4596.340	4601.350	perspective on the basically the ratio
+4599.730	4603.210	we talked earlier about the compression
+4601.350	4605.510	ratio between the simplest you know set
+4603.210	4607.680	of rules generating these huge amounts
+4605.510	4609.060	and some since it seems like that's kind
+4607.680	4610.620	of what you're alluding to there is the
+4609.060	4612.420	back to these simple little loops you
+4610.620	4614.640	know out-of-phase in fact will not
+4612.420	4616.949	repeat for 67,000 years or whatever it
+4614.640	4619.500	is yeah it's so it's so elegant I think
+4616.949	4621.510	it's so it's so economical I mean
+4619.500	4623.130	especially with the shows I do in
+4621.510	4625.469	galleries I nearly always show people
+4623.130	4628.800	exactly how the trick is done there's
+4625.469	4632.489	normally six or ten CD players each one
+4628.800	4634.949	playing its own CD and the CDs aren't
+4632.489	4637.890	synchronized so this is one of the bush
+4634.949	4641.400	of ghosts remixes by the way so one of
+4637.890	4645.480	the fans made this yeah I think for me
+4641.400	4646.860	the as I played with these generative
+4645.480	4649.500	systems and try to simulate more and
+4646.860	4651.650	more aspects of the world I've see the
+4649.500	4654.000	kind of world around me now as both
+4651.650	4655.230	simpler and more complex than I which
+4654.000	4657.090	they thought you know I do bridge
+4655.230	4659.699	initely thought of it as being under
+4657.090	4661.350	light but these fairly complex rules you
+4659.699	4663.989	know that had some kind of finite space
+4661.350	4665.489	to them now I actually see the world as
+4663.989	4667.800	being built out of these incredibly
+4665.489	4669.180	simple little things interacting that
+4667.800	4671.130	are actually driving a much higher level
+4669.180	4673.890	of complexity than I really thought yes
+4671.130	4675.900	exactly so that so the rules are simpler
+4673.890	4678.449	but the outcomes are much much more
+4675.900	4679.380	lurid than one had ever imagined right
+4678.449	4680.940	and it's not a straightforward
+4679.380	4682.949	transposition of some of these simple
+4680.940	4685.560	rules to that outcome yeah it's a very
+4682.949	4687.660	magical very counterintuitive thing
+4685.560	4690.360	that's that was the thing that most
+4687.660	4692.370	attracted me about life that one of
+4690.360	4695.880	those cellular automata I remember when
+4692.370	4698.550	I lived in San Francisco in 1980 they
+4695.880	4700.830	had a very primitive version of life on
+4698.550	4701.940	a computer at the Exploratorium I
+4700.830	4704.969	remember that yeah
+4701.940	4707.420	I used to go there every day I used to
+4704.969	4712.020	fight people off it well he's annoying
+4707.420	4713.130	annoying children would come and what if
+4712.020	4714.989	they had it ringing hardware they'd
+4713.130	4716.520	actually built a hardware machine so it
+4714.989	4718.409	wasn't even being run software seems
+4716.520	4721.620	like extremely fast for a wife at the
+4718.409	4723.570	time it was fantastic and I I got to
+4721.620	4726.080	know this thing so well then I
+4723.570	4730.830	eventually was appointed as an explainer
+4726.080	4733.080	a kind of honorary most ways just sorry
+4730.830	4735.060	because I didn't want to get get off it
+4733.080	4737.250	but what fascinated me was the
+4735.060	4739.530	counterintuitive nature of it because I
+4737.250	4741.659	you know if you're an artist you sort of
+4739.530	4743.310	flatter yourself with this idea that you
+4741.659	4746.070	know your intuition you work with your
+4743.310	4748.219	intuition and here was a situation where
+4746.070	4751.050	your intuition was absolutely useless
+4748.219	4752.370	and making predictions yeah and it was
+4751.050	4753.989	that disconnect between these simple
+4752.370	4756.150	things door was a very suitable
+4753.989	4758.100	situation you would think with something
+4756.150	4760.080	as simple as that surely predictions
+4758.100	4761.429	would be very easy yeah did that
+4760.080	4763.739	actually spark your interest in
+4761.429	4765.719	generative music yeah that was part of
+4763.739	4769.380	it yes so that that tied in with the
+4765.719	4772.350	Steve Reich experience and some of the
+4769.380	4774.030	things Terry Riley had done there there
+4772.350	4775.250	was there were various things going on
+4774.030	4777.960	in music but they hadn't really
+4775.250	4781.350	consolidated into an idea but I think
+4777.960	4783.120	life was what really sort of clicked it
+4781.350	4784.620	for me and do you feel like the the
+4783.120	4785.909	visual example of life is having these
+4784.620	4788.460	simple rules and leading to these
+4785.909	4789.929	elaborate things do you think that's the
+4788.460	4792.340	same rough kind of thing that you see
+4789.929	4793.960	when you're doing with children of music
+4792.340	4795.460	I mean they're kind of unpredictability
+4793.960	4799.869	you see yeah
+4795.460	4801.790	yes I mean the the great thrill is to to
+4799.869	4803.260	put together something that is much more
+4801.790	4806.409	beautiful than you could have imagined
+4803.260	4809.170	you know you start out another working
+4806.409	4811.449	base if they have a cup of tea things
+4809.170	4813.849	together try some rules and suddenly
+4811.449	4816.219	something beautiful comes in just like a
+4813.849	4819.250	discovery yeah that's how it feels my
+4816.219	4822.580	discovery that it feels like creation
+4819.250	4824.590	yes exactly yeah destruction I got a
+4822.580	4827.050	question here for you silly order of
+4824.590	4828.940	Tommy tongs it's interesting that both
+4827.050	4831.580	of you have locked so totally into that
+4828.940	4833.020	because it is such the sort of founding
+4831.580	4835.060	the generative thinking for a lot of
+4833.020	4839.190	people this question is from Bob
+4835.060	4842.619	co-packer do you think Katrina or the
+4839.190	4848.770	tsunami and Sumatra were caused by one
+4842.619	4851.139	pixel mistakes by which mistake well in
+4848.770	4854.080	the cellular automata where this this
+4851.139	4855.639	was the sort of butterfly effect theory
+4854.080	4857.860	wasn't it you know this this was the
+4855.639	4861.130	idea of chaos theory that you know a
+4857.860	4862.469	tiny tiny piece of behavior in some part
+4861.130	4864.849	of the universe would eventually
+4862.469	4867.670	compound into something huge in another
+4864.849	4870.389	part but that's what restart is for us
+4867.670	4870.389	when that happen
+4870.810	4875.320	that actually brings up an interesting
+4872.560	4877.810	point because there is a big difference
+4875.320	4880.090	between weather and climate mm-hmm you
+4877.810	4881.830	know so chaos theory does operate at the
+4880.090	4883.030	level of weather where small
+4881.830	4885.940	perturbations the atmosphere could
+4883.030	4888.969	possibly create a storm system but in
+4885.940	4890.590	terms of climatic changes which you know
+4888.969	4893.889	as the oceans get warmer or sea levels
+4890.590	4896.800	rise those over statistical periods of
+4893.889	4899.800	time are probably much more stable and
+4896.800	4901.060	much less random than we might think so
+4899.800	4903.040	the you know probability of bad
+4901.060	4904.480	hurricanes occurring is most certainly
+4903.040	4907.300	going to go up over time if the oceans
+4904.480	4909.489	warm that's a certainty really but the
+4907.300	4911.830	fundamentalist chaos theoreticians would
+4909.489	4914.469	say yeah but climate only got that way
+4911.830	4916.440	because some butterfly many many many
+4914.469	4919.659	millions of years ago flapped its wings
+4916.440	4923.069	yeah I don't personally believe this so
+4919.659	4926.789	I think thing
+4923.069	4929.849	and it's unrelated by very elaborate but
+4926.789	4932.369	yet almost glacial processes you know
+4929.849	4934.859	very with a lot of inertia to them that
+4932.369	4936.479	I think that a hurricane could possibly
+4934.859	4938.729	be created by some small local
+4936.479	4939.869	perturbation but in terms of climate in
+4938.729	4941.579	terms of the frequency of really bad
+4939.869	4944.699	hurricanes occurring over the next 10
+4941.579	4946.589	years that is most certainly a probably
+4944.699	4949.189	a long term trend you know based upon
+4946.589	4951.989	very deep cycles of the carbon cycle and
+4949.189	4953.249	things of that nature I did a game while
+4951.989	4954.449	back simearth which is actually
+4953.249	4956.010	simulating a lot of these cycles and it
+4954.449	4959.129	was actually interesting how many of
+4956.010	4960.179	them were related across disciplines so
+4959.129	4961.409	you had certain people up here studying
+4960.179	4964.559	the weather other people studying
+4961.409	4965.879	geology other people studying the ocean
+4964.559	4967.379	but all these things are tightly
+4965.879	4968.549	interconnected and we're just now
+4967.379	4972.359	starting to realize how interconnected
+4968.549	4973.889	they they are yeah a couple of specific
+4972.359	4976.979	questions for each of you one from Brian
+4973.889	4978.899	good for Brian you know did you utilize
+4976.979	4984.229	generative systems when producing you
+4978.899	4986.369	two albums in in some ways I do use
+4984.229	4990.739	generative systems in that I sometimes
+4986.369	4993.510	come up with sets of rules for people so
+4990.739	4994.919	if there's a sort of creative impassive
+4993.510	4997.169	cause if things are going fine you don't
+4994.919	5000.109	need rules good things are going and
+4997.169	5002.659	fine but very often you know things hit
+5000.109	5004.459	a wall and nobody quite knows what to do
+5002.659	5006.019	and when you don't quite know what to do
+5004.459	5009.679	what you normally do is fall back on
+5006.019	5013.369	your habits so I often think of ways of
+5009.679	5014.899	breaking habits like getting people to
+5013.369	5017.629	switch instruments for instance or
+5014.899	5019.280	getting people only to use a small part
+5017.629	5021.530	of the range of their instrument you
+5019.280	5025.429	know play the guitar only on those top
+5021.530	5027.939	frets or getting into role playing for
+5025.429	5033.379	example them when I was working with
+5027.939	5036.049	Bowie on one record we did I wrote some
+5033.379	5039.739	sort of scenarios but clubs of the
+5036.049	5042.499	future for the year 2015 so I I invented
+5039.739	5045.709	this club on the outskirts of Tripoli
+5042.499	5047.479	and invented a kind of music that they
+5045.709	5050.539	played I described the kind of music
+5047.479	5053.869	that was played there sort of as sort of
+5050.539	5054.910	post techno African rye or something
+5053.869	5058.480	like
+5054.910	5059.860	and then invented the kinds of
+5058.480	5062.170	instruments that they would have and
+5059.860	5064.840	what sort of personalities the players
+5062.170	5067.030	have and so it's like a role-playing
+5064.840	5069.910	game actually but the result of it was
+5067.030	5072.250	music so so we tried to occupy those
+5069.910	5074.470	roles and you imagine that there are
+5072.250	5076.450	instruments were those instruments and
+5074.470	5078.640	try to get them to make the kind of
+5076.450	5080.800	sounds those instruments would make so
+5078.640	5083.310	those kinds of things that I think very
+5080.800	5085.420	very useful even if they don't
+5083.310	5087.610	specifically produce pieces of music
+5085.420	5091.450	that you use though they sometimes do
+5087.610	5093.580	what they really do is break habits and
+5091.450	5097.330	sort of open you up to new ways of
+5093.580	5099.100	listening and doing things I work more
+5097.330	5101.710	and more that way with musicians these
+5099.100	5104.080	days try to just think of new ways of
+5101.710	5105.040	starting to think about making music so
+5104.080	5107.170	it's kind of like you're stuck in a
+5105.040	5108.730	creative local Maxima and you want to
+5107.170	5110.890	knock yourself off that Maxima through
+5108.730	5113.500	some strange process to try to find
+5110.890	5115.780	another one exactly yes it's it works
+5113.500	5117.700	especially well with people who've who
+5115.780	5120.010	have worked together for a very long
+5117.700	5122.080	time and if people have worked together
+5120.010	5124.180	for a very long time they have one great
+5122.080	5126.040	strengths which is that they're quite
+5124.180	5128.230	telepathic but they have one great
+5126.040	5131.650	weakness too which is that they're very
+5128.230	5134.800	often over diplomatic in that you know
+5131.650	5137.680	because in order to keep the group's
+5134.800	5139.270	solid and happy nobody really wants to
+5137.680	5142.000	say to the guitar player who's just
+5139.270	5146.920	spent four days on one part it's not
+5142.000	5149.290	very good but in a role-playing
+5146.920	5151.270	situation you can actually because
+5149.290	5153.820	you're not you're not that person any
+5151.270	5155.500	longer you're you'll know no you're now
+5153.820	5157.120	this new character who always says
+5155.500	5160.840	things like that yeah do you see what I
+5157.120	5164.260	mean well a couple of questions for you
+5160.840	5167.040	before have parasites every complex
+5164.260	5168.460	ecology is mostly parasites about Spore
+5167.040	5171.940	I'm sorry
+5168.460	5175.060	it's a Spore have parasites not overtly
+5171.940	5176.380	you know again that's an avenue we could
+5175.060	5178.990	have gone down that would have involved
+5176.380	5181.480	a great deal of confusion on the players
+5178.990	5184.360	part we want to keep things you know
+5181.480	5186.040	very high correspondence between what
+5184.360	5187.410	they create in the editors and the
+5186.040	5189.300	results they get into the game
+5187.410	5190.470	if you get into things like parasites if
+5189.300	5191.670	I design this great creature and I
+5190.470	5194.220	painted it all up and also need eyes
+5191.670	5197.400	have a cold you know it it works for war
+5194.220	5199.050	the world's is the punch line but there
+5197.400	5201.660	are a lot of things that when we do game
+5199.050	5203.820	design we either break reality or
+5201.660	5205.440	conveniently ignore aspects of it
+5203.820	5206.910	because we're trying to engineer a
+5205.440	5209.880	certain experience on the part of the
+5206.910	5211.140	player right so games are not about you
+5209.880	5212.820	know put everything into them that you
+5211.140	5215.370	possibly can in fact really the hard
+5212.820	5216.930	part is a designer of games is deciding
+5215.370	5218.850	how much stuff can we possibly remove
+5216.930	5220.830	and still maintain their core experience
+5218.850	5222.600	one of my favorite quotes
+5220.830	5224.340	there's about Japanese gardening and
+5222.600	5226.140	it's that your garden is not complete
+5224.340	5228.750	until there's nothing else which you can
+5226.140	5230.610	remove and I think you know for me
+5228.750	5232.710	that's very much design you know what is
+5230.610	5234.300	the simplest smallest thing that you can
+5232.710	5236.700	put together that achieves the design
+5234.300	5239.580	goal yeah I think about music that very
+5236.700	5242.430	often the same way and I start off
+5239.580	5245.520	painting so putting everything on and
+5242.430	5249.360	then I end up sculpting cutting cutting
+5245.520	5251.220	stuff out it's Laurie Anderson's album
+5249.360	5253.410	in a big way took all the music off it
+5251.220	5255.360	oh that's right yes so yes when I was
+5253.410	5259.200	working on that album when we came to
+5255.360	5261.210	mixing yeah I got I worked out a
+5259.200	5263.970	procedure for mixing and I cuz I loved
+5261.210	5266.250	her voice so much I thought I'm going to
+5263.970	5268.320	start every mix just with her voice and
+5266.250	5270.510	I'm gonna see how long I can listen just
+5268.320	5272.820	to her voice before I want anything else
+5270.510	5274.380	to happen now I have a very high
+5272.820	5276.000	tolerance for her voice so I probably
+5274.380	5279.420	would have never put another instrument
+5276.000	5281.670	on if only been down to me that with
+5279.420	5284.870	advice I would gradually bring other
+5281.670	5287.760	instruments in hmm okay another question
+5284.870	5291.690	here we come back to reality from Jessie
+5287.760	5294.900	Cohen sharp do you this is for will do
+5291.690	5298.080	you see physical reality virtual reality
+5294.900	5299.910	and gaming merging in the future if so
+5298.080	5300.180	how while you're pondering your answer
+5299.910	5302.790	to that
+5300.180	5306.240	Vernor bingo has this answer out a brand
+5302.790	5309.480	new science fiction book set in 2025
+5306.240	5313.020	called rainbows end which plays out this
+5309.480	5314.790	very question in exquisite detail but
+5313.020	5316.360	will you probably have another sense of
+5314.790	5318.429	how the interaction might work
+5316.360	5320.290	well I think they are merge right now
+5318.429	5323.260	because I think you see things happening
+5320.290	5325.570	you know in when I call cyberspace or
+5323.260	5327.670	you know over the net that very
+5325.570	5329.349	definitely impact you know the real
+5327.670	5331.270	world in fact you know our perceptions
+5329.349	5332.920	have changed as resulting these
+5331.270	5334.300	technologies the computers turned out to
+5332.920	5337.300	be more of a communication tool than a
+5334.300	5339.309	computational tool so I think in a very
+5337.300	5341.619	real sense they are merged I think even
+5339.309	5343.630	in things like online games you have
+5341.619	5344.500	real communities of people forming real
+5343.630	5346.000	relationships
+5344.500	5347.619	you know and a lot of them you actually
+5346.000	5350.110	ending up meeting getting married or
+5347.619	5352.239	whatever so these are definitely areas
+5350.110	5353.710	where socialization is occurring where
+5352.239	5355.780	communities real communities are forming
+5353.710	5358.690	even though they happen to be online so
+5355.780	5361.840	I would say this is one of the kind of
+5358.690	5364.119	most rapid transformative experiences
+5361.840	5366.040	that our culture has gone through in
+5364.119	5367.210	history you know in fact the internet
+5366.040	5371.020	you know it's Kevin Kelley pointed out
+5367.210	5372.010	is 10 years old is astounding you know
+5371.020	5373.900	when you think about how its impacted
+5372.010	5376.570	our world you know in 10 years that
+5373.900	5380.380	we've come to rely and so much of what
+5376.570	5381.610	we do is moved into this medium that yes
+5380.380	5385.659	I think they are very much connected
+5381.610	5388.650	already you'll be in the thick of it is
+5385.659	5390.190	good or heading toward a big finisher so
+5388.650	5392.590	9 o'clock
+5390.190	5394.150	Roger Lynn asked some both of you what
+5392.590	5398.380	did you really want to talk about but
+5394.150	5400.570	nobody asked or another version of that
+5398.380	5403.659	is what did you really want to ask the
+5400.570	5406.110	other person on the stage but we did
+5403.659	5410.770	have we did have an idea actually that
+5406.110	5412.889	well that we might talk about what
+5410.770	5415.059	happens to people when they play games
+5412.889	5416.920	he was going to talk about that and I
+5415.059	5418.630	was going to talk about what happened to
+5416.920	5422.010	people when they engage in culture
+5418.630	5424.420	generally but that's a long story I mean
+5422.010	5427.030	that's too long stories you guys to see
+5424.420	5428.290	long stories yes so I think the culture
+5427.030	5431.889	and work back to the game I'll bet you
+5428.290	5437.159	can do a short version yeah start with
+5431.889	5437.159	culture ok ok
+5438.619	5444.929	my definition of culture which I've used
+5441.960	5448.349	for quite a few years now is culture is
+5444.929	5451.409	everything you don't have to do so you
+5448.349	5453.749	have to wear clothes at least in this
+5451.409	5456.479	climate you do but you don't have to
+5453.749	5459.499	wear these particular clothes we could
+5456.479	5461.909	all just wear sacks actually couldn't we
+5459.499	5464.190	you have to eat that you don't have to
+5461.909	5467.070	develop complex and beautiful cuisines
+5464.190	5470.340	so so there's a layer of things we have
+5467.070	5472.829	to do otherwise we wouldn't survive and
+5470.340	5476.909	then there's a huge layer on top of that
+5472.829	5478.559	which is stylistic essentially and we
+5476.909	5481.590	spend a lot of our time thinking about
+5478.559	5483.329	that stylistic layer so I started asking
+5481.590	5486.179	myself since that's the layer that I
+5483.329	5488.010	make my living in a long time ago why
+5486.179	5491.820	are we so interested in that what are we
+5488.010	5497.999	doing when we engage in stylistic play
+5491.820	5500.599	like that and I think it's a to cut very
+5497.999	5503.579	quickly to the end of this one our
+5500.599	5506.699	explanation I think what's really going
+5503.579	5510.570	on is that we are engaging in some kind
+5506.699	5512.789	of simulation activity so when we look
+5510.570	5516.150	at stylistic things we're very sensitive
+5512.789	5517.920	to what's different in one hairstyle for
+5516.150	5519.739	example than another and we're very
+5517.920	5522.749	sensitive to what those differences
+5519.739	5524.969	implied to us you know he's got a rather
+5522.749	5526.979	feminine hairstyle he looks really gay
+5524.969	5530.280	he looks very masculine
+5526.979	5533.849	he looks this she looks that and we we
+5530.280	5535.170	read these cues from hairstyles quite
+5533.849	5538.940	without thinking about it and we make
+5535.170	5538.940	choices about our own well
+5540.820	5546.700	and so what we're doing always I think
+5543.490	5550.990	is when we see any stylistic object
+5546.700	5553.240	where we're seeing in that a little tiny
+5550.990	5556.270	microcosm of some kind a little set of
+5553.240	5558.190	implications about a world picture and
+5556.270	5560.980	that you know you can see how that's
+5558.190	5563.280	clearly the case in a novel but I think
+5560.980	5567.100	it's also the case in an earring or in a
+5563.280	5569.980	cupcake a decorated cake you know
+5567.100	5572.830	so I think what we're doing then is
+5569.980	5577.090	we're constantly looking at these things
+5572.830	5579.550	to imagine what would that kind of world
+5577.090	5581.230	be like what would it be like to be that
+5579.550	5584.260	kind of person who wears that kind of
+5581.230	5586.780	hair what would it be like to like that
+5584.260	5589.120	kind of picture and I think we we do
+5586.780	5590.680	this at sort of some levels of remove we
+5589.120	5593.140	watch ourselves doing it we watch
+5590.680	5595.720	ourselves surrendering to objects of
+5593.140	5598.000	culture because we can surrender to them
+5595.720	5600.520	because they don't hurt us essentially
+5598.000	5602.920	that's the the best thing about art is
+5600.520	5605.410	that it isn't life you can switch it off
+5602.920	5607.270	or walk out walk away from it so
+5605.410	5610.360	therefore you can surrender to it as
+5607.270	5612.790	well and the the act of surrendering to
+5610.360	5615.880	something is really the act of for a
+5612.790	5617.500	little while agreeing to live in that
+5615.880	5621.220	particular world with its particular
+5617.500	5624.690	values and seeing what it's like and I
+5621.220	5627.010	think this is because the strongest
+5624.690	5629.020	difference between humans and other
+5627.010	5631.300	creatures is that we're capable of
+5629.020	5634.260	imagining and that's exactly what
+5631.300	5637.180	imagining is imagining is the process of
+5634.260	5640.270	imaginative thinking what else it could
+5637.180	5642.220	be like how else things could be and we
+5640.270	5645.070	practice that all the time I think with
+5642.220	5647.830	with objects of culture that's a very
+5645.070	5650.240	poor explanation really but I can make
+5647.830	5653.560	it much better if I had longer
+5650.240	5657.500	[Applause]
+5653.560	5657.890	that was excellent what was the other
+5657.500	5660.380	question
+5657.890	5663.140	this is this is dueling intellectual
+5660.380	5665.810	where does that connect with games both
+5663.140	5668.420	of you well actually I think I think of
+5665.810	5670.280	games and play and actually a quite a
+5668.420	5673.910	bit of overlap with your answer in that
+5670.280	5675.710	I see these as tools that we use for
+5673.910	5677.960	first of all perceiving the world in
+5675.710	5679.460	building models in our head you know in
+5677.960	5681.200	fact when we do these computer models
+5679.460	5682.340	those aren't the real models we're
+5681.200	5684.080	building the real models were building
+5682.340	5686.570	are in the players head the computer
+5684.080	5689.780	game is just a compiler for that mental
+5686.570	5691.640	model in the player and you know we have
+5689.780	5693.110	this ability as humans to build these
+5691.640	5696.710	fairly elaborate models in our
+5693.110	5699.050	imagination and you know the process of
+5696.710	5701.870	play is the process of pushing against
+5699.050	5703.460	reality constructing a model refining
+5701.870	5704.740	the model by looking at the results of
+5703.460	5707.240	us pushing and interacting with things
+5704.740	5709.610	you know one of the probably chief
+5707.240	5711.860	aspects of our survival as we became a
+5709.610	5714.830	social species it was not just modeling
+5711.860	5716.630	the world around us nature but modeling
+5714.830	5718.070	other humans you know which in fact were
+5716.630	5719.720	probably the most complex things we were
+5718.070	5721.130	interacting with you know we probably
+5719.720	5723.950	learned things about the seasons and
+5721.130	5725.420	about the Predators in a much simpler
+5723.950	5728.090	level than the complexity of other
+5725.420	5730.640	humans and so that's what we started I
+5728.090	5732.890	think developing this deep ability of
+5730.640	5734.180	empathy to look at another person to get
+5732.890	5735.740	a sense of their motivations their
+5734.180	5738.920	feelings what they're likely to do next
+5735.740	5741.830	and I think that became the basis of
+5738.920	5743.930	what we call storytelling so as I'm
+5741.830	5745.970	watching a movie or reading a book I can
+5743.930	5747.320	imagine myself as that actor on screen
+5745.970	5750.250	in fact that actor is really just an
+5747.320	5752.270	elaborate simulation of a real person
+5750.250	5754.370	experiencing those emotions having those
+5752.270	5756.500	motivations that we can displace
+5754.370	5758.030	ourselves into temporarily and
+5756.500	5759.050	understand what it would feel like you
+5758.030	5760.010	know just like you were saying we're
+5759.050	5761.720	looking other people what would it be
+5760.010	5764.590	like to be that person yeah that's an
+5761.720	5768.620	amazing human ability almost like a
+5764.590	5770.630	psychic in its level of you know detail
+5768.620	5772.190	you know I could look at another person
+5770.630	5773.210	just with a glance and get a sense of
+5772.190	5775.310	kind of what they're thinking what
+5773.210	5777.800	they're about to do so I think
+5775.310	5780.940	storytelling basically was built upon
+5777.800	5783.020	that empathic circuit and I think play
+5780.940	5784.870	which is probably the other major
+5783.020	5787.750	educational technology
+5784.870	5790.000	that evolution developed was based upon
+5787.750	5791.590	the idea of agency but in fact I can
+5790.000	5793.840	touch the world interact and observe the
+5791.590	5795.220	results and start building models of
+5793.840	5796.990	that world so I think a lot of our
+5795.220	5799.000	understanding the world and the way we
+5796.990	5800.800	perceive it is through those two avenues
+5799.000	5802.930	you know and one is pretty much the
+5800.800	5805.180	domain of playing interaction and the
+5802.930	5807.340	other one is more the domain of linear
+5805.180	5808.230	storytelling and transferring experience
+5807.340	5811.000	across time
+5808.230	5814.360	why does play the common verb here
+5811.000	5816.430	playing music playing games that's a
+5814.360	5818.890	good question why is play the common
+5816.430	5821.980	verb you play music you play games yes
+5818.890	5826.000	yes and it is in most languages as well
+5821.980	5829.270	really it's not just in English yeah yes
+5826.000	5830.830	I don't know it's makes perfect sense in
+5829.270	5833.400	a way that it should be no that one is
+5830.830	5835.930	what is exploring
+5833.400	5838.630	exploring a territory called music just
+5835.930	5840.610	as one explores a a game it's almost
+5838.630	5843.580	like play is a word that was designed
+5840.610	5844.690	not to be precise mm-hmm you know
+5843.580	5846.100	because we fight there's so many
+5844.690	5848.680	different things yeah it's almost the
+5846.100	5851.080	whole purpose of that word is to cast an
+5848.680	5853.450	umbrella over activities that we do not
+5851.080	5854.590	want to be overly specific about yeah
+5853.450	5857.920	and leave a certain amount of creative
+5854.590	5861.460	latitude to its interpretation yeah you
+5857.920	5864.130	guys know the book Homo Lord ins homo
+5861.460	5867.430	Luden's by yeah yeah
+5864.130	5869.440	you've live it keep living it you guys
+5867.430	5871.450	are phenomenally generative this has
+5869.440	5874.540	been a I suspect generative evening or
+5871.450	5876.670	there are any final admonishments or
+5874.540	5878.770	statements you'd like to send us out
+5876.670	5881.020	with well I must say I thoroughly
+5878.770	5882.510	enjoyed it and thank you for very
+5881.020	5885.310	interesting questions from the audience
+5882.510	5889.330	really all good questions weren't they
+5885.310	5891.700	yeah they were hard yes sir thank you
+5889.330	5895.270	very much and thank you as well I yeah I
+5891.700	5898.480	think Brian to give us some music and
+5895.270	5900.500	we'll process out of here thank you okay
+5898.480	5902.800	[Applause]
+5900.500	5905.940	[Music]
+5902.800	5914.180	[Applause]
+5905.940	5914.180	[Music]
+5917.860	5919.920	you

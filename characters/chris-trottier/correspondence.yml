@@ -1,0 +1,44 @@
+# Chris Trottier × Maxis — correspondence summary (public-safe)
+# Career digest from Jan 2007 farewell email. NOT the full private thread.
+# Standards: ../../schemas/portrayal-standards.yml
+
+meta:
+  with: chris-trottier
+  curated_by: don-hopkins
+  consent: not_yet_asked
+  span: "1997–2007 at Maxis"
+  note: "Full verbatim farewell email in Don Hopkins private archive (not published here)."
+
+gist: |
+  Chris Trottier's Jan 2007 wide farewell to Maxis/EA — nine-year career memoir by project
+  (Orinda intern → Sim Safari → The Sims → Sims Online → Spore). Public digest keeps
+  studio-culture and design-history beats; personal lines stay in Don's private archive.
+
+career_arc:
+  hired: "Orinda intern (Claire Curtin, sight-unseen)"
+  projects: [Sim Safari, The Sims, The Sims Online, Spore]
+  left: 2007-01-19
+  thanks_named: [Claire Curtin, Kana Pettus, Luc Barthelet, Lucy Bradshaw, Will Wright]
+
+highlights:
+  sims: "Simlish VOX invention; toilet object; E3 sleeper hit; design-by-accretion ground truth"
+  tso: "Producer (Yoyo Mama); community storms; Will's launch warning at black-tie event"
+  spore: "Early team; designated village idiot for usability; Stinson Beach offsite"
+
+in_repo:
+  digest: sources/2007-01-10-leaving-maxis/career-memories.md
+  tuned_emergence: ../will-wright/sources/2004-02-21-chris-trottier-tuned-emergence/
+  show_seed: ../../repo-shows/REPO-SHOWS.yml#design-by-accretion.yml
+
+connects_in_repo:
+  - { path: sources/2007-01-10-leaving-maxis/, why: "Primary-source career digest" }
+  - { path: ../will-wright/sources/2004-02-21-chris-trottier-tuned-emergence/, why: "Tuned emergence essay" }
+  - { path: ../../repo-shows/REPO-SHOWS.yml#design-by-accretion.yml, why: "Flagship show seed" }
+  - { path: ../../repo-shows/REPO-SHOWS.yml#building-the-sims.yml, why: "Sims reunion seed" }
+  - { path: CHARACTER.yml, why: "Invitation portrayal" }
+
+show_hooks:
+  - "Walk the Jan 2007 career map project by project — accretion in the wild"
+  - "Simlish invention day — VOX sessions with consonant cards"
+  - "TSO producer war stories — community, launch, Will's warning"
+  - "Spore village idiot — if Chris can use it, anyone can"

@@ -1,0 +1,29 @@
+# TheSimsAITest.zip — provenance chain
+
+archive:
+  local_path: ~/Documents/thesimsaitest.zip
+  alt_name: TheSimsAITest.zip
+  size_bytes: 28624
+  ingested: 2026-07-04
+  repo_copy: original/thesimsaitest.zip
+
+context:
+  period: 2006-11
+  channel: email attachment (Don Hopkins archives)
+
+authorship:
+  author: Mats Knutsen
+  contact_2006: afr088@hotmail.com
+  nature: educational C# sketch of Sims needs/decay loop
+  don_reply: don-reply-to-mats-knutsen.md
+  inquiry_date: 2006-11-07
+  reply_date: 2006-11-07
+  reference: http://www.cs.northwestern.edu/~forbus/c95-gd/lectures/The_Sims_Under_the_Hood_files/frame.htm
+
+file_timestamps:
+  project_created: 2006-11-04
+  last_modified: 2006-11-06
+
+repo_contents:
+  source: source/
+  zip: original/thesimsaitest.zip

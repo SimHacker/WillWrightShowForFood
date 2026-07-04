@@ -37,6 +37,7 @@ Mirrored from [donhopkins.com/home/images/Sims/](https://www.donhopkins.com/home
 
 ## Related
 
+- [2006 TheSimsAITest sketch](../2006-11-06-thesims-ai-test/README.md) — outsider C# four-motive decay loop (contrast piece)
 - [1998 steering committee demo](../1998-06-04-sims-steering-committee-demo/README.md) — Edith / SimAntics on camera
 - [1999 alpha prototype](../1999-01-06-sims-alpha-prototype/README.md) — shipped pivot
 - [`characters/jamie-doornbos/`](../../../jamie-doornbos/README.md) — SimAntics architect

@@ -1,0 +1,279 @@
+# Short-form clips — 2005 GDC: The Future of Content (Spore reveal)
+# Timestamps from YouTube remaster transcript — verify on video before publish.
+# Canonical text: medium-article.md (Don's notes) + hand captions when ready.
+
+meta:
+  source: 2005-03-11-spore-gdc-future-of-content
+  video_id: ofA6YWVTURU
+  video_url: https://www.youtube.com/watch?v=ofA6YWVTURU
+  gdc_vault: https://www.gdcvault.com/play/1019981
+  venue: Game Developers Conference, Moscone Center West
+  date: 2005-03-11
+  witness: Don Hopkins (audience; Medium notes reviewed by Will)
+  format: Adorable Minutes / retrospective / HN pump
+  captions_policy: ../../../../process/post-production/captions.yml
+  transcript_status: youtube_auto_only
+  notes: medium-article.md
+
+clips:
+  flagship:
+    - id: flat-out-lied-about-title
+      title: "Will flat-out lied about the talk title"
+      hook: "Fake slides for EA executives — the first public Spore reveal hidden behind 'The Future of Content.'"
+      start_display: "1:31"
+      end_display: "1:43"
+      start_sec: 91
+      end_sec: 103
+      youtube: https://youtu.be/ofA6YWVTURU?t=91
+      tags: [gdc, spore, will, history]
+      caption_status: draft
+
+    - id: five-thousand-to-one-compression
+      title: "5000:1 — genotype to phenotype"
+      hook: "One kilobyte of creature DNA decompresses to five megabytes of mesh, texture, animation — the hub of Spore's design."
+      start_display: "28:05"
+      end_display: "28:35"
+      start_sec: 1685
+      end_sec: 1715
+      youtube: https://youtu.be/ofA6YWVTURU?t=1685
+      tags: [compression, procedural, spore]
+      pairs_with: seeds-not-forests-compression
+      caption_status: draft
+
+    - id: t-shaped-game-powers-of-ten
+      title: "T-shaped game — bacteria to galactic god"
+      hook: "Climb evolution as tutorial; surf sci-fi meta-games at the top. Powers of Ten meets Drake's equation."
+      start_display: "57:21"
+      end_display: "58:05"
+      start_sec: 3441
+      end_sec: 3485
+      youtube: https://youtu.be/ofA6YWVTURU?t=3441
+      tags: [design, spore, powers-of-ten]
+      caption_status: draft
+
+  verified:
+    - id: baling-wire-and-duct-tape
+      title: "Held together with baling wire and duct tape"
+      hook: "Will's disclaimer before the Spore demo — developer honesty that makes the retrospective hurt more."
+      start_display: "12:03"
+      end_display: "12:23"
+      start_sec: 723
+      end_sec: 743
+      youtube: https://youtu.be/ofA6YWVTURU?t=723
+      tags: [spore, demo, gdc]
+      caption_status: draft
+
+    - id: procedural-mating-applause
+      title: "Procedural mating"
+      hook: "The GDC moment the internet never forgot — creatures squawk and crawl until something works."
+      start_display: "20:59"
+      end_display: "21:28"
+      start_sec: 1259
+      end_sec: 1288
+      youtube: https://youtu.be/ofA6YWVTURU?t=1259
+      format_tier: meme
+      tags: [spore, meme, will]
+      pairs_with: rhythmic-mating-banned
+      long_now_echo: ../../2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml#procedural-mating-long-now
+      ae_overlay: playful
+      caption_status: draft
+
+    - id: ford-explorer-creature
+      title: "The Ford Explorer creature"
+      hook: "High center of gravity, tiny legs — takes corners leaning like an SUV. Procedural walking at its funniest."
+      start_display: "22:15"
+      end_display: "22:35"
+      start_sec: 1335
+      end_sec: 1355
+      youtube: https://youtu.be/ofA6YWVTURU?t=1335
+      format_tier: quip
+      tags: [spore, creature, meme]
+      caption_status: draft
+
+    - id: kingdom-of-people-who-dont-give-a-shit
+      title: "Care Bears — kingdom of people who don't give a shit"
+      hook: "Will's Care Bear geography lesson — Earth is where they send bears on missions."
+      start_display: "26:04"
+      end_display: "26:22"
+      start_sec: 1564
+      end_sec: 1582
+      youtube: https://youtu.be/ofA6YWVTURU?t=1564
+      format_tier: quip
+      tags: [will, care-bears, comedy]
+      caption_status: draft
+
+    - id: planet-buster-nonviolent-developer
+      title: "There goes my reputation as a non-violent game developer"
+      hook: "First contact fails → planet-buster missile. Peak Will comedy beat."
+      start_display: "54:50"
+      end_display: "55:08"
+      start_sec: 3290
+      end_sec: 3308
+      youtube: https://youtu.be/ofA6YWVTURU?t=3290
+      format_tier: jewel
+      tags: [spore, will, comedy]
+      caption_status: draft
+
+    - id: next-gen-incredibly-expensive
+      title: "Next-gen titles incredibly expensive — prophetic"
+      hook: "Will at GDC 2005 predicts the AAA content arms race that ate the industry."
+      start_display: "1:43"
+      end_display: "2:02"
+      start_sec: 103
+      end_sec: 122
+      youtube: https://youtu.be/ofA6YWVTURU?t=103
+      tags: [industry, prophecy, content]
+      caption_status: draft
+
+    - id: monkeys-with-weapons
+      title: "Everybody loves monkeys with weapons"
+      hook: "Tribal stage landmark — spears grabbed with tails, procedural dance around the fire."
+      start_display: "31:02"
+      end_display: "31:40"
+      start_sec: 1862
+      end_sec: 1900
+      youtube: https://youtu.be/ofA6YWVTURU?t=1862
+      tags: [spore, tribal, will]
+      caption_status: draft
+
+    - id: explosive-decompression
+      title: "Explosive decompression"
+      hook: "Drop an abducted creature on a moon with no atmosphere — can anybody tell me why that happened?"
+      start_display: "47:16"
+      end_display: "47:45"
+      start_sec: 2836
+      end_sec: 2865
+      youtube: https://youtu.be/ofA6YWVTURU?t=2836
+      tags: [spore, space, science]
+      caption_status: draft
+
+    - id: biggest-bottleneck-imagination
+      title: "The biggest bottleneck was Will's imagination"
+      hook: "Once he believed Spore was buildable, persuading EA was easy — advice to revisit weird ideas."
+      start_display: "1:01:04"
+      end_display: "1:01:36"
+      start_sec: 3664
+      end_sec: 3696
+      youtube: https://youtu.be/ofA6YWVTURU?t=3664
+      tags: [will, advice, design]
+      caption_status: draft
+
+    - id: demo-scene-helsinki
+      title: "Demo scene — worshippers of the algorithm"
+      hook: "64K procedurally generated worlds vs CD-ROM bloat — Will's compression hub before Spore DNA."
+      start_display: "8:46"
+      end_display: "9:31"
+      start_sec: 526
+      end_sec: 571
+      youtube: https://youtu.be/ofA6YWVTURU?t=526
+      tags: [demoscene, compression, gdc]
+      pairs_with: demoscene-compression-hn-2023
+      caption_status: draft
+
+    - id: artist-in-a-box-ocean-quigley
+      title: "Artist in a box — Ocean Quigley"
+      hook: "Will credits Ocean for the creature editor's painterly feel — procedural art with a human hand."
+      start_display: "26:37"
+      end_display: "26:55"
+      start_sec: 1597
+      end_sec: 1615
+      youtube: https://youtu.be/ofA6YWVTURU?t=1597
+      tags: [spore, art, ocean-quigley]
+      caption_status: draft
+
+    - id: async-pollination-sims-exchange
+      title: "Pollination — async multiplayer content"
+      hook: "Genotype travels between worlds like Sims Exchange — the model Don says actually shipped."
+      start_display: "29:15"
+      end_display: "29:45"
+      start_sec: 1755
+      end_sec: 1785
+      youtube: https://youtu.be/ofA6YWVTURU?t=1755
+      tags: [spore, exchange, multiplayer, don-retrospective]
+      hn_beat: creators-won
+      caption_status: draft
+
+    - id: carnivorous-care-bear
+      title: "Carnivorous Care Bear"
+      hook: "Will makes a mean carnivore in the creature editor — Care Bears geography meets teeth."
+      start_display: "23:34"
+      end_display: "23:55"
+      start_sec: 1414
+      end_sec: 1435
+      youtube: https://youtu.be/ofA6YWVTURU?t=1414
+      format_tier: quip
+      tags: [spore, care-bears, creature]
+      pairs_with: kingdom-of-people-who-dont-give-a-shit
+      caption_status: draft
+
+    - id: kid-pix-terraforming
+      title: "Kid Pix terraforming"
+      hook: "Terraform tools inspired by Kid Pix — paint the planet like a toy."
+      start_display: "48:03"
+      end_display: "48:25"
+      start_sec: 2883
+      end_sec: 2905
+      youtube: https://youtu.be/ofA6YWVTURU?t=2883
+      tags: [spore, space, terraforming]
+      caption_status: draft
+
+    - id: seti-tool-alien-radio
+      title: "SETI tool — listen to the stars"
+      hook: "Roll the dish across the galaxy listening for alien radio — Drake's equation as toy."
+      start_display: "52:16"
+      end_display: "52:45"
+      start_sec: 3136
+      end_sec: 3165
+      youtube: https://youtu.be/ofA6YWVTURU?t=3136
+      tags: [spore, space, seti]
+      caption_status: draft
+
+    - id: treasure-island-map-first
+      title: "Treasure Island — map before story"
+      hook: "Stevenson drew the island first; story followed geography — Will's world-first design habit."
+      start_display: "43:05"
+      end_display: "43:25"
+      start_sec: 2585
+      end_sec: 2605
+      youtube: https://youtu.be/ofA6YWVTURU?t=2585
+      tags: [design, storytelling, will]
+      caption_status: draft
+
+  draft:
+    - id: drag-corpse-verb
+      title: "Drag corpse while walking — mixed verbs"
+      start_display: "19:24"
+      end_display: "19:45"
+      start_sec: 1164
+      end_sec: 1185
+      youtube: https://youtu.be/ofA6YWVTURU?t=1164
+      notes: Procedural verb stacking — emergent comedy
+
+    - id: player-stories-beat-cutscenes
+      title: "Player stories beat scripted stories"
+      start_display: "6:02"
+      end_display: "6:18"
+      start_sec: 362
+      end_sec: 378
+      notes: Pairs with 1996 Winograd ownership thread
+
+    - id: break-dont-mix-genres-rule
+      title: "Always wanted to break the don't-mix-genres rule"
+      start_display: "39:55"
+      end_display: "40:12"
+      start_sec: 2395
+      end_sec: 2412
+
+    - id: wired-secret-diagram
+      title: "Design docs hiding in Wired for a year"
+      start_display: "59:28"
+      end_display: "59:47"
+      start_sec: 3568
+      end_sec: 3587
+
+    - id: mutual-of-omaha-tranquilizer
+      title: "Mutual of Omaha — tranquilizer gun from helicopter"
+      start_display: "44:29"
+      end_display: "45:07"
+      start_sec: 2669
+      end_sec: 2707

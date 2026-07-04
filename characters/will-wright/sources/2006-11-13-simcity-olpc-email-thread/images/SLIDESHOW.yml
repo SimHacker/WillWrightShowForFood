@@ -1,0 +1,92 @@
+# SLIDESHOW.yml — machine truth (left eye)
+# Sync narrative: images/SLIDESHOW.md
+
+type: slideshow
+name: "SimCity on OLPC XO-1"
+tagline: "Don Hopkins webcam photos, December 2006"
+location: sources/2006-11-13-simcity-olpc-email-thread
+
+nature:
+  physical: false
+  navigable: false
+  browseable: true
+  atmospheric: true
+
+context:
+  date: 2006-12-29
+  author: Don Hopkins
+  device: OLPC XO-1 (B1 beta)
+  software: SimCity Classic (Tcl/Tk X11 port)
+  network: SimCity running on Fedora Core in VMware, displayed over wireless to XO
+  email: 03-olpc-port-and-sugar-dec-2006.md
+
+rotation:
+  applied: 2026-07-04
+  method: sips -r (macOS); per-image from original webcam captures
+  note: Originals had no EXIF orientation tags; 01/02/04/05 corrected +180° after review
+
+contents:
+  - file: olpc-simcity-01.png
+    subject: "XO tablet mode — multi-window SimCity over the network"
+    role: ESTABLISHING
+    mood: warm
+    rotation_from_original_deg: 0
+    simulated_exif:
+      camera: webcam (close focus, yellow indoor light)
+      captured: ~2006-12-29
+      location: Don Hopkins home lab
+
+  - file: olpc-simcity-02.png
+    subject: "SimCity logo window + city map spelling SIM in water"
+    role: DETAIL
+    mood: cozy
+    rotation_from_original_deg: 0
+    simulated_exif:
+      camera: webcam
+      captured: ~2006-12-29
+
+  - file: olpc-simcity-03.png
+    subject: "Full clamshell XO with keyboard — SimCity on screen"
+    role: ESTABLISHING
+    mood: domestic
+    rotation_from_original_deg: 90
+    simulated_exif:
+      camera: webcam
+      captured: ~2006-12-29
+      note: Screen content rotated on device (XO ebook/tablet modes)
+
+  - file: olpc-simcity-04.png
+    subject: "SIM city letters in terrain + earthquake dialog"
+    role: CLIMAX
+    mood: playful
+    rotation_from_original_deg: 0
+    simulated_exif:
+      camera: webcam
+      captured: ~2006-12-29
+
+  - file: olpc-simcity-05.png
+    subject: "Venice-like water channels — gameplay close-up"
+    role: DETAIL
+    mood: technical
+    rotation_from_original_deg: 0
+    simulated_exif:
+      camera: webcam
+      captured: ~2006-12-29
+
+narrative:
+  opening_quote: "The screen looks really great up close."
+  closing_quote: "It runs very smoothly and is quite playable over the net."
+  overview: |
+    Five photos Don attached to his 29 Dec 2006 email to Jim Gettys and the OLPC
+    list. SimCity displayed on the X11 OLPC screen, fed over wireless from a Fedora
+    Core VMware session. Licensing locks removed; fonts patched for the XO X server;
+    twm substituted for Sugar while debugging multi-window Tcl/Tk.
+  style_notes: |
+    Low-res webcam captures of an LCD. Warm tungsten cast. Multi-window X11/Tk UI
+    (later reworked to single-window for Matchbox/Sugar). Historical evidence of
+    the Micropolis/OLPC arc between EA clearance and January 2008 release.
+
+compiled:
+  parent_readme: ../README.md
+  provenance: ../PROVENANCE.yml
+  email_part: ../03-olpc-port-and-sugar-dec-2006.md

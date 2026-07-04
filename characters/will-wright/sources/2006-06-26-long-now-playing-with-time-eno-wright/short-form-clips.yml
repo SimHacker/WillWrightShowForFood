@@ -1,0 +1,215 @@
+# Short-form clips — 2006 Long Now: Playing with Time (Eno + Will)
+# Timestamps from YouTube auto-transcript — verify on video before publish.
+# Captions: hand-proofread required (see captions/README.md)
+
+meta:
+  source: 2006-06-26-long-now-playing-with-time-eno-wright
+  video_id: Dfc-DQorohc
+  video_url: https://www.youtube.com/watch?v=Dfc-DQorohc
+  host: Stewart Brand
+  venue: Long Now Foundation Seminar, San Francisco
+  date: 2006-06-26
+  witness: Don Hopkins (audience)
+  format: Adorable Minutes / HN pump — generative-systems hooks
+  captions_policy: ../../../../process/post-production/captions.yml
+  transcript_status: youtube_auto_only
+
+clips:
+  flagship:
+    - id: seeds-not-forests-compression
+      title: "Seeds not forests — Eno + Will on compression"
+      hook: "Science compresses the world into rules; games decompress simple rules into worlds. Brian plants seeds; Will builds compilers for mental models."
+      start_display: "6:07"
+      end_display: "8:24"
+      start_sec: 367
+      end_sec: 504
+      youtube: https://youtu.be/Dfc-DQorohc?t=367
+      tags: [compression, generative, eno, will, long-now]
+      pairs_with: 1996-winograd-data-portability
+      caption_status: draft
+
+    - id: amphetamine-ambient-acid-jazz
+      title: "Amphetamine Ambient — acid jazz?"
+      hook: "Eno works at double speed, releases at half; Will pitches the speeded-up album; Brian names a genre on the spot."
+      dialogue:
+        eno: "I work on them much faster than I end up releasing them… the simplest way is just by slowing it all down."
+        will: "You should release an album with all the speeded up versions — as Brian heard it while composing it."
+        eno: "The amphetamine version… Amphetamine Ambient."
+        will_riff: "Acid jazz?"  # verify on audio; YouTube auto-caption garbles as "Fetterman ambient jazz"
+      start_display: "15:50"
+      end_display: "16:40"
+      start_sec: 950
+      end_sec: 1000
+      youtube: https://youtu.be/Dfc-DQorohc?t=950
+      tags: [eno, will, ambient, meme, long-now, compression]
+      format_tier: quip
+      long_now_summary: https://longnow.org/talks/02006-eno-wright/
+      pairs_with: ambient-while-working
+      caption_status: draft
+
+    - id: open-source-simcity-audience-question
+      aliases: [simcity-political-assumptions]
+      title: "Open source SimCity? — audience question"
+      hook: "Dan Ancona asks Will to open-source SimCity so we can play with the political assumptions in the rules. Don was in the room; Gilmore emailed Don 140 days later; Micropolis pitch ~5 months after."
+      audience:
+        askers: [Dan Ancona, Mark Live]
+        question: |
+          There are a lot of really interesting political assumptions embedded in the simple
+          rules that drive SimCity — would you ever consider open sourcing a version of it
+          so we could play with those assumptions?
+      will_answer:
+        highlights:
+          - SimHealth let players adjust rules under the hood
+          - Arguing with the simulation = success — mental model coalesced
+          - Generative discovery ≠ dumping code — give access to underlying structures
+          - "I'm very open to the idea — it's probably harder than it sounds"
+      don_payoff:
+        witness: Don Hopkins in audience (2006-06-26)
+        gilmore_email: 2006-11-13  # 140 days after Long Now
+        don_denial: 2006-11-19      # Don to Will — not me, not Gilmore; "humorous effect"
+        pitch_letter: 2006-12-01    # 158 days after Long Now
+        saga: ../../simcity-open-source-saga/README.md
+        verbatim_mail: ../../2006-11-13-simcity-olpc-email-thread/README.md
+        topic: ../../../../don-hopkins/open-sourcing-simcity-for-olpc.md
+      start_display: "1:05:30"
+      end_display: "1:07:36"
+      start_sec: 3929
+      end_sec: 4056
+      youtube: https://youtu.be/Dfc-DQorohc?t=3929
+      tags: [simcity, open-source, politics, micropolis, don, will, audience-qa]
+      pairs_with: simcity-open-source-saga
+      format_tier: jewel
+      caption_status: draft
+
+    - id: mental-model-compiler
+      title: "The game is a compiler for the mental model"
+      hook: "Will's line that ties 1996 Winograd to every Repo Show — the real simulation runs in the player's head."
+      start_display: "1:34:25"
+      end_display: "1:35:54"
+      start_sec: 5665
+      end_sec: 5754
+      youtube: https://youtu.be/Dfc-DQorohc?t=5665
+      tags: [mental-model, simulator-effect, will]
+      caption_status: draft
+
+  verified:
+    - id: reich-1-8-seconds
+      title: "1.8 seconds → 30 minutes (Steve Reich)"
+      hook: "Brian on It's Gonna Rain — the piece that clicked generative music for him."
+      start_display: "7:05"
+      end_display: "8:06"
+      start_sec: 425
+      end_sec: 486
+      youtube: https://youtu.be/Dfc-DQorohc?t=425
+      tags: [reich, eno, generative-music]
+      caption_status: draft
+
+    - id: go-vs-chess-vietcong
+      title: "Americans play chess; we play Go"
+      hook: "Frances Fitzgerald's Vietcong general — Will on Go's compression ratio."
+      start_display: "17:02"
+      end_display: "17:56"
+      start_sec: 1022
+      end_sec: 1076
+      youtube: https://youtu.be/Dfc-DQorohc?t=1022
+      tags: [go, strategy, will]
+      caption_status: draft
+
+    - id: dangling-pointers-live-score
+      title: "Dangling pointers — Brian scores Life live"
+      hook: "New laptop, no files — Brian composed the Conway's Life accompaniment that morning."
+      start_display: "27:03"
+      end_display: "28:18"
+      start_sec: 1623
+      end_sec: 1698
+      youtube: https://youtu.be/Dfc-DQorohc?t=1623
+      tags: [conway, life, eno, live, hacker]
+      caption_status: draft
+
+    - id: rhythmic-mating-banned
+      aliases: [procedural-mating-long-now]
+      title: "Procedural mating — banned in several states"
+      hook: "Spore creature stage: social game → rhythmic mating demo. Same beat as GDC 2005, Eno scoring live in the room."
+      start_display: "43:40"
+      end_display: "44:11"
+      start_sec: 2620
+      end_sec: 2651
+      youtube: https://youtu.be/Dfc-DQorohc?t=2620
+      format_tier: meme
+      tags: [spore, meme, will, procedural]
+      pairs_with: procedural-mating-applause
+      gdc_echo: ../../2005-03-11-spore-gdc-future-of-content/short-form-clips.yml#procedural-mating-applause
+      caption_status: draft
+      transcript_note: "Auto-caption: 'out rhythmic mating' → our rhythmic mating"
+
+    - id: culture-everything-you-dont-have-to-do
+      title: "Culture is everything you don't have to do"
+      hook: "Brian's definition — stylistic play as simulation."
+      start_display: "1:30:38"
+      end_display: "1:32:10"
+      start_sec: 5438
+      end_sec: 5530
+      youtube: https://youtu.be/Dfc-DQorohc?t=5438
+      tags: [eno, culture, long-now]
+      caption_status: draft
+
+    - id: ambient-while-working
+      title: "Will listened to Eno while working on Spore"
+      hook: "Eno albums as trance fuel — leads into double-speed compose / Amphetamine Ambient banter."
+      start_display: "13:03"
+      end_display: "13:45"
+      start_sec: 783
+      end_sec: 825
+      youtube: https://youtu.be/Dfc-DQorohc?t=783
+      tags: [eno, will, ambient, spore]
+      pairs_with: amphetamine-ambient-acid-jazz
+      caption_status: draft
+
+    - id: restart-possibility-space
+      title: "Restart — games and generative music"
+      hook: "Same save, different story — possibility space replay like generative music."
+      start_display: "18:54"
+      end_display: "19:30"
+      start_sec: 1134
+      end_sec: 1170
+      youtube: https://youtu.be/Dfc-DQorohc?t=1134
+      tags: [will, eno, generative, restart]
+      caption_status: draft
+
+    - id: bushofghosts-remix-stems
+      title: "bushofghosts.com — David Byrne remix stems"
+      hook: "Eno on layered authorship and fan remix — parallel to Sporepedia / machinima."
+      start_display: "1:02:09"
+      end_display: "1:04:45"
+      start_sec: 3729
+      end_sec: 3885
+      youtube: https://youtu.be/Dfc-DQorohc?t=3729
+      tags: [eno, authorship, remix]
+      caption_status: draft
+
+    - id: 77-million-paintings-ip
+      title: "77 million paintings — please credit me"
+      hook: "Eno on unprotectable generative art and layered authorship."
+      start_display: "1:00:35"
+      end_display: "1:01:33"
+      start_sec: 3635
+      end_sec: 3693
+      youtube: https://youtu.be/Dfc-DQorohc?t=3635
+      tags: [eno, ip, generative-art]
+      caption_status: draft
+
+  draft:
+    - id: space-war-crystal-ball
+      title: "Space War — crystal ball of computing (Stewart Brand)"
+      start_display: "1:20"
+      end_display: "3:16"
+      start_sec: 80
+      end_sec: 196
+      notes: Stewart reading Rolling Stone — great cold open for Long Now episode
+
+    - id: homo-ludens-closer
+      title: "Homo Ludens — play music, play games"
+      start_display: "1:36:51"
+      end_display: "1:37:47"
+      start_sec: 5811
+      end_sec: 5867

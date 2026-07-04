@@ -33,6 +33,8 @@ gag_credits:
 
 pipeline:
   tool: Adobe After Effects
+  ae_project: ~/GroundUp/pixie/Flight of the PIXIE.aep
+  ae_project_dir: ~/GroundUp/pixie/
   steps:
     - id: source_track
       what: "Motion-track the digitized Cambridge film (Chapman telecine) — position, rotation, scale drift"
@@ -55,8 +57,9 @@ pipeline:
     - id: grade_match
       what: "Optional — lift blacks / soften contrast to sit beside intercut archival PIXIE clips"
   reuse:
-    project: "Save motion track + filter preset from Bumblebee AE project as cambridge-telecine-jiggle.aep fragment"
+    project: "~/GroundUp/pixie/Flight of the PIXIE.aep — motion track + filter preset (telecine jiggle)"
     per_episode: "Swap text layers; keep driver track from Chapman source (or re-track if new film plate)"
+  captions: process/post-production/captions.yml
 
 hn_provenance:
   thread: https://news.ycombinator.com/item?id=22718422

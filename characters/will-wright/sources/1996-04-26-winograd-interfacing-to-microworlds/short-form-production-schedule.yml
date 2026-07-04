@@ -5,6 +5,9 @@
 meta:
   series: "1996 Winograd — Adorable Minutes cuts"
   source_video: https://www.youtube.com/watch?v=nsxoZXaYJSk
+  local_wrangling: ~/GroundUp/repo-show/
+  local_source: ~/GroundUp/repo-show/sources/1996-04-26-winograd-interfacing-to-microworlds/source.mp4
+  local_master: "~/Movies/Will Wright - Maxis - Interfacing to Microworlds - 1996-4-26.mp4"
   show_seed: ../../../../repo-shows/will-wright-adorable-minutes.yml
   target_length: "tiered — see format_tiers in short-form-clips.yml"
   format_tiers:
@@ -13,13 +16,24 @@ meta:
     quip: "20–45s (+ optional text card)"
     meme: "5–20s"
   end_card: "Question for Will? → WWSFF / HN thread"
+  captions: ../../../../process/post-production/captions.yml
+  captions_dir: captions/
+  ae_hub: ../../../../process/post-production/adorable-minutes-ae.yml
+  ae_wave_0: ~/GroundUp/repo-show/wave-ae-experiment-0.yml
   production_status_enum: [planned, in_cut, in_review, published, dropped]
+
+# Chop vs finish — Premiere not required
+#   extract: ffmpeg (~/GroundUp/repo-show/scripts/extract-clip.py) OR Premiere for ear-scrubbing
+#   finish:  After Effects — telecine jiggle end cards (preset from ~/GroundUp/pixie/)
+#   AE-only chop works for a few clips; painful on 87min source — use extract step for batch
 
 # Per-video checklist (repeat for each slot):
 #   [ ] In/out verified on YouTube (not just transcript)
+#   [ ] Captions: captions/<clip_id>.vtt canonical OR draft polished (see process/post-production/captions.yml)
 #   [ ] Title + hook line (HN / Shorts)
 #   [ ] Optional 1-line Don intro (voice or text card)
 #   [ ] End card → collect questions for Will async show
+#   [ ] Upload .vtt with YouTube publish (CC track on)
 #   [ ] Update short-form-clips.yml status + published_url
 
 waves:

@@ -22,9 +22,9 @@ This repo is a **public bud** grafted from a private archive: one-way export, ho
 | 8 | [**Host sync log**](../../characters/don-hopkins/sync-sources.yml) | What was pulled from moollm/DonHopkins; adventure fiction and correspondence excluded |
 | 9 | [**Terry Winograd forebear**](../../characters/terry-winograd/README.md) | CS547 open seminar — recorded conversation as public curriculum |
 | 10 | [**Browse characters**](../../characters/README.md) | Directories accumulate artifacts — self-edit or email Don with text, attachments, URLs |
-| 11 | [**Vision forebears**](../vision-and-ambition.yml) | Long arc girder — design-in-public lineage in yaml |
+| 11 | [**Vision — lineage & Long Now**](../VISION.md#long-now-and-later) · [girder](../vision-and-ambition.yml) | Long arc — design-in-public lineage |
 
-**Markup view:** [VISION.md](../VISION.md) · **Show context:** [will-wright SHOW.yml](../../repo-shows/will-wright/SHOW.yml) (provenance notes in yaml)
+**Markup view:** [**VISION.md**](../VISION.md) ([navigate](../VISION.md#navigate)) · **Show context:** [will-wright SHOW.yml](../../repo-shows/will-wright/SHOW.yml) (provenance notes in yaml)
 
 ---
 

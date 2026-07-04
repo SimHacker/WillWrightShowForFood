@@ -5,16 +5,19 @@ Deterministic markup facade generator — yaml girder → readable markdown dump
 Registry: process/markup-facades.yml
 Run: pnpm run facades | pnpm run facades:check
 
+POLICY: Important docs are hand-authored (render.mode llm). This script is a TEMPORARY
+FALLBACK for entries still on deterministic tree-walk until a quality instance exists.
+
 What this does (v0.1):
   - Reads each registry entry's source yaml (NOT merged depends_on content)
   - Walks the tree: prose keys → ## sections; scalars → bullets/tables; see_also → Link|Why
   - Prepends GENERATED banner + content sha256; uses depends_on only for staleness (mtime)
+  - Skips render.mode llm entries entirely
+  - Skips outputs without <!-- GENERATED banner (hand-authored — do not clobber)
 
 What this does NOT do:
+  - Replace hand-authored instance-first markdown (VISION, CRAZY-IDEA-JAM, ENTRYWAYS, …)
   - Call an LLM; apply tone/verbosity; merge dependency files into narrative
-  - Replace instance-first LLM-authored markdown for flagship views
-
-Future: hybrid mode, empathic templates in yaml, small-model blocks — see schemas/markup-facade.yml
 """
 
 from __future__ import annotations
@@ -95,16 +98,21 @@ def collect_deps(entry: dict, base_dir: Path) -> list[Path]:
     return paths
 
 
+def is_hand_authored(output: Path) -> bool:
+    if not output.exists():
+        return False
+    return "<!-- GENERATED" not in output.read_text(encoding="utf-8")
+
+
 def is_stale(entry: dict, base_dir: Path, output: Path) -> bool:
     if not output.exists():
         return True
+    if is_hand_authored(output):
+        return False
     out_mtime = output.stat().st_mtime
     for p in collect_deps(entry, base_dir):
         if p.exists() and p.stat().st_mtime > out_mtime:
             return True
-    body = output.read_text(encoding="utf-8")
-    if "<!-- GENERATED" not in body:
-        return True
     return False
 
 
@@ -342,9 +350,10 @@ def main(argv: list[str]) -> int:
     for entry in registry.get("facades", []):
         render = entry.get("render") or {}
         if render.get("mode") == "llm":
-            # Instance-first — authored by an LLM; never bulk-regenerated/clobbered by this script.
             continue
         output = (base_dir / entry["output"]).resolve()
+        if is_hand_authored(output) and "--force" not in argv:
+            continue
         if check_only:
             if is_stale(entry, base_dir, output):
                 stale.append(entry["output"])

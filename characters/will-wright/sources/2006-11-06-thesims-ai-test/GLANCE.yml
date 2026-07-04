@@ -1,0 +1,40 @@
+# THESIMS-AI-TEST — GLANCE
+
+title: "TheSimsAITest (Nov 2006 C# sketch)"
+iconic: "🧪 needs decay only"
+description: |
+  Third-party C# console reimplementation of the four core Sims motives — decay timer,
+  no smart objects, no utility AI. Email attachment Nov 2006; contrast with Motive.c and SimAntics.
+
+keywords:
+  - thesimsaitest
+  - sims ai test
+  - needs loop
+  - hunger bladder fun hygiene
+  - utility ai skeleton
+  - jamie doornbos
+  - simantics contrast
+
+card: CARD.yml
+provenance: PROVENANCE.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  siblings:
+    - ../2008-02-10-soul-of-the-sims/
+    - ../1998-06-04-sims-steering-committee-demo/
+
+read_order:
+  - README.md
+  - don-reply-to-mats-knutsen.md
+  - source/Needs.cs
+  - source/SimulationTimer.cs
+  - source/InteractionObject.cs
+
+see_also:
+  siblings:
+    - { path: ../2008-02-10-soul-of-the-sims/GLANCE.yml, why: "Will's 1997 Motive.c — the real substrate" }
+  across:
+    - { path: ../../../jamie-doornbos/GLANCE.md, why: "SimAntics architect — what's missing here" }
+    - { path: ../../../don-hopkins/don-will-mining-hub.yml, why: "sims_don_craft arc" }

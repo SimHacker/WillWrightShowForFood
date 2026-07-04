@@ -1,0 +1,57 @@
+# Bill Joy — DREAM-GUEST invitation portrayal. NOT Bill Joy.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: bill-joy
+  name: "Bill Joy"
+  type: invitation
+  signifier: "☀️"
+  status: living
+  field: "Sun co-founder; Berkeley Unix, vi; Joy's law; venture capital (KPCB)"
+  home: characters/bill-joy/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 1
+  authored_by: don-hopkins
+  note: |
+    DREAM GUEST. Public portrayal from published talks, Don's Medium article on Joy's law,
+    Educom 1988 public anecdote, and short sourced quotes — no private email threads or
+    contact info in this repo.
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: dream_guest
+  consent: not_yet_asked
+  document: invitation.md
+  quotes: quotes.md
+  show_seed: repo-shows/bill-joy/
+
+bio:
+  summary: |
+    **Bill Joy** co-founded **Sun Microsystems** (1982), shaped **Berkeley Unix** and **vi**,
+    and formulated **Joy's law**: peak computer speed ≈ **2^(Year−1984) MIPS**. He later joined
+    **Kleiner Perkins** as a venture partner. Don Hopkins knew him from the **NeWS / Sun** era
+    and from a legendary **Educom 1988** demo (pie menus, HyperTIES, Emacs — story in
+    [quotes.md](quotes.md)).
+
+why_a_dream_guest:
+  joys_law: "Moore's law with a Unix beard — the 2^(year−1984) formula is a perfect Repo Show abacus."
+  open_systems: "1991 Sun talk on open systems, innovation, and C++++-= — still reads fresh."
+  pie_menus: "He reached out in 2006 because he remembered pie menus — UI that scales with human attention."
+  micropolis: "Encouraged open-sourcing SimCity for OLPC — 'perhaps inspire another Will.'"
+  sun_lineage: "NeWS, PSIBER, Java's Oak era — connects Will, Gosling, Ungar, and the whole microworld stack."
+
+sources:
+  medium:
+    - title: "Bill Joy's Law: 2^(Year-1984) Million Instructions per Second"
+      url: https://donhopkins.medium.com/bill-joys-law-2-year-1984-million-instructions-per-second-3a8c92165cfe
+  wikipedia: https://en.wikipedia.org/wiki/Bill_Joy
+  quotes: quotes.md
+
+see_also:
+  - ../../repo-shows/bill-joy/
+  - ../don-hopkins/
+  - ../will-wright/
+  - ../james-gosling/
+  - ../will-wright/sources/simcity-open-source-saga/

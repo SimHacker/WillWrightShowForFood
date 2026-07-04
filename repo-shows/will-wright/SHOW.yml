@@ -10,7 +10,7 @@ show:
   guests: ["Will Wright"]
   character: characters/will-wright/    # represented, living, consent level 3
   topic: TOPIC-LESS                 # Will Wright is the topic — talk about anything he wants.
-  status: planted                   # accepted guest — crystallization anchor
+  status: accepted                   # Will accepted 2026-07 — kickoff guest confirmed
   guest_prototype: ../../characters/will-wright/guest-prototype.yml
 
 ensemble:

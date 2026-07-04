@@ -14,6 +14,8 @@ meta:
   one_line: "AI proposes; the PLAYER disposes — now let's get weird with it."
   idea_sources: "Ideas come from EVERYONE — not just AI. Humans, the audience, Will especially, Don even, famous over-reachers like Peter Molyneux, and you. Anyone can propose; the PLAYER disposes."
   human: CRAZY-IDEA-JAM.md
+  facade_mode: instance-first
+  facade_note: "Hand-authored — edit CRAZY-IDEA-JAM.md; sync this yaml girder"
   upstream_full: SimHacker/DonHopkins/projects/micropolis-moollm/crystallized/DESIGN-WISDOM.yml
 
 # THE CROWN JEWEL
@@ -100,8 +102,8 @@ ideas:
       Stupid Fun Club to create and edit expressive speech "Phonelopes." It takes CMU's Flite
       synthesizer, exports the diphone/pitch/timing as editable XML, and lets you DRAG the
       diphones around, bend the pitch and amplitude tracks, stretch durations, and even load an
-      audio file to "rotoscope" (phonescope) a natural pitch curve onto synthetic speech. Hold
-      the spacebar and it SINGS — accidental granular-synthesis musical instrument. Python +
+      audio file and "phonescope" synthetic speech over the real voice — tracing its natural
+      pitch curve. Hold the spacebar while dragging the pitch envelope and it SINGS — accidental granular-synthesis musical instrument. Python +
       Tkinter + SWIG + Flite + Edinburgh Speech Tools — a standalone expressive-speech toy,
       exactly the toy-first, play-to-discover spirit Will loves.
     not_the_slats_voice: |
@@ -118,21 +120,15 @@ ideas:
     emoji: "🍃"
     blurb: |
       An iPhone app Don built in 2009 with photos and info about every coffeeshop in Amsterdam,
-      hacked at the Bluebird coffeeshop on the way home from his TomTom day job — solo, for fun,
-      to teach himself iPhone and web-server programming. Complex, never released, decades out of
+      hacked at the Bluebird coffeeshop on the way home from his TomTom day job — solo
+      self-education in iPhone and web-server programming, pre-SFC. Complex, never released, decades out of
       date now — but a fun idea Don would love to REINCARNATE and reinvent. Behind it: a spreadsheet
       database of every Amsterdam coffeeshop that drove the app.
-    became_bongo_bingo: "The same database powered BONGO BINGO (see below) — and together they were the PROGENITOR of StoryMaker / Bar Karma / Urban Safari."
-    pivotal_moment: |
-      Don showed this app and his iLoci (Memory Palace) talk at an Amsterdam meetup where Will
-      Wright was present. Will looked at it and realized it was EXACTLY what he needed for what he
-      wanted to do with CurrentTV and other projects, and said: "Hey, by the way, I'm leaving EA —
-      want to work together again, remotely?" Don said yes, left TomTom, and went back to Stupid
-      Fun Club projects. They then built several client/server iterations together — including
-      MediaWiki plugins and a Unity app. (This is how Don rejoined Will.)
+    became_bongo_bingo: "The same database powered BONGO BINGO (see below) — together with iLoci, the TomTom pre-SFC trilogy that re-sparked Will."
+    tomtom_pre_sfc: true
     video: "https://www.youtube.com/watch?v=nG90XG3STz8"
     vibe: "No words — look-and-feel + Amsterdam coffeeshop ASMR (chatter, distorted music)"
-    leads_to: [bongo_bingo, creationtv_storymaker, urban_safari_gps_storytelling]
+    leads_to: [bongo_bingo, iloci_memory_palace, creationtv_storymaker, urban_safari_gps_storytelling]
     ties: [../characters/don-hopkins/career/stupid-fun-club.yml]
 
   bongo_bingo:
@@ -143,9 +139,32 @@ ideas:
       checking in at each one — GPS-verified by your phone's coordinates. At each check-in you say
       whatever you like about what you tried, feeding your notes back into the coffeeshop
       spreadsheet metadata. Geolocated, social, generative — and the true PROGENITOR of StoryMaker
-      / Bar Karma / Urban Safari. Built solo at TomTom for fun; ripe to reincarnate.
+      / Bar Karma / Urban Safari. Built solo at TomTom for fun, same self-education streak as the
+      Coffeeshops app and iLoci — pre-SFC, leveraging mobile/maps skills from the day job.
     progenitor_of: [creationtv_storymaker, urban_safari_gps_storytelling]
+    tomtom_pre_sfc: true
     ties: [../characters/don-hopkins/career/stupid-fun-club.yml]
+
+  iloci_memory_palace:
+    emoji: "🏛️"
+    blurb: |
+      iLoci — an iPhone app + server based on the **Method of Loci** (the ancient Memory Palace
+      technique): build a network of "locations" (rooms) instead of menus, edit by dragging and
+      "kissing" them together to connect/disconnect, attach images, notes, URLs, and a built-in
+      web browser. Really a **pie-menu network editor**. Don built it at TomTom/Bluebird (2008),
+      solo self-education on the job — same pre-SFC spirit as Coffeeshops and Bongo Bingo. Mobile
+      Dev Camp Amsterdam talk (Nov 28, 2008). Part of DreamScape (1995) → iLoci → MediaGraph →
+      Micropolis → MOOLLM.
+    pivotal_moment: |
+      Coffeeshops + Bongo Bingo + iLoci were Don's TomTom-era self-education projects — not SFC
+      work yet. Together they matched EXACTLY what Will was working on (CurrentTV, community GPS
+      storytelling); Don was leveraging TomTom mobile/maps experience straight into Will's problems.
+      Don showed them at an Amsterdam meetup — Will wasn't there — then sent Will the videos and
+      demos. Will looked at them and said: "Hey, by the way, I'm leaving EA — want to work together
+      again, remotely?" Don said yes, left TomTom, and went back to Stupid Fun Club projects.
+    video: "https://www.youtube.com/watch?v=03ddG3jWF98"
+    tomtom_pre_sfc: true
+    ties: [../characters/don-hopkins/career/stupid-fun-club.yml, ../characters/don-hopkins/career/work-history.yml]
 
   creationtv_storymaker:
     emoji: "📺"
@@ -194,27 +213,17 @@ ideas:
     video: "https://donhopkins.medium.com/mediagraph-demo-a7534add63e5"
     ties: [../characters/don-hopkins/career/stupid-fun-club.yml]
 
-  iloci_memory_palace:
-    emoji: "🏛️"
-    blurb: |
-      iLoci — an iPhone app + server based on the **Method of Loci** (the ancient Memory Palace
-      technique): build a network of "locations" (rooms) instead of menus, edit by dragging and
-      "kissing" them together to connect/disconnect, attach images, notes, URLs, and a built-in
-      web browser. Really a **pie-menu network editor**. Don built it BEFORE the Stupid Fun Club,
-      at TomTom, at the Bluebird, then gave a talk at Mobile Dev Camp Amsterdam (Nov 28, 2008).
-      Part of the through-line DreamScape (1995) → iLoci → MediaGraph → Micropolis → MOOLLM.
-    video: "https://www.youtube.com/watch?v=03ddG3jWF98"
-    ties: [../characters/don-hopkins/career/work-history.yml]
-
   dreamscape_scriptx:
     emoji: "🌀"
     blurb: |
       The ancestor of it all: DreamScape, Don's Kaleida Labs ScriptX demo at the **1995 Apple
       WWDC** — rooms + objects connected in an editable map (bump room icons together to link
       them), parts you plug together like Mr. Potato Head, dynamic physics, and a Netscape bridge
-      that publishes the live world as interlinked web pages. Demoed live without crashing. Origin
-      of Don's mantra **"a nurturing environment, not a killer app."** Rooms-that-kiss-to-connect
-      reappears in iLoci, MediaGraph, and MOOLLM.
+      that publishes the live world as interlinked web pages. Design goal: **link globally, interact
+      locally** — the Netscape bridge was global linking; the ScriptX world was local interaction.
+      That pairing runs through iLoci, StoryMaker, MOOLLM, and much else. Demoed live without
+      crashing. Origin of Don's mantra **"a nurturing environment, not a killer app."**
+      Rooms-that-kiss-to-connect reappears in iLoci, MediaGraph, and MOOLLM.
     video: "https://www.youtube.com/watch?v=5NytloOy7WM"
     ties: [../characters/don-hopkins/career/work-history.yml, vision-and-ambition.yml]
 
@@ -278,9 +287,10 @@ ideas:
   full_nutrient_cycle:
     emoji: "🌱"
     blurb: |
-      Land → Seed → Crop → Ingredient → Food → Body → Shit → Land. We cover the WHOLE loop as
+      Land → Seed → Crop → Ingredient → Food → Body → Mind → Shit → Land. We cover the WHOLE loop as
       cellular automatists (rules on cells and objects, cycling through different phases like
-      Chaim Gingold's SimCity diagrams illustrate in his book Making SimCity). 
+      Chaim Gingold's SimCity diagrams illustrate in his book Making SimCity). Body feeds mind;
+      mind feeds shit — the Simulator Effect runs on the brain in the loop, not just the body.
       Water = donations; fertilizer = tokens.
       A Nurturing Environment, not a Killer App — the Flower Child nurtures; the buyout extracts.
 
@@ -288,12 +298,17 @@ ideas:
     emoji: "📊"
     blurb: |
       Make the sim EXPORT its guts. Earth-science professor Upmanu Lall (Columbia) wanted SimCity
-      to spit out spreadsheets so students from any department would run experiments, analyze the
-      data, and learn science through a game they relate to. Modern version: Micropolis & Yoot
-      Tower stream raw + cooked telemetry and events into time-series DBs and d3 / Grafana
-      dashboards — the engaging hook that teaches general data-literacy. Don wrote the proposal
-      (OPTIMUS) in ~2002; it went nowhere until open-sourcing for OLPC finally made it possible.
-    ties: [../characters/don-hopkins/career/simcity-lineage.yml]
+      to spit out spreadsheets so students from any department would learn science through a game
+      they relate to. Modern version: Micropolis & Yoot Tower stream telemetry into d3 / Grafana.
+      Don's ~2002 OPTIMUS proposal — only possible after open-sourcing.
+    github_literacy: |
+      GitHub literacy — that's what this is all about. GitHub collaboration is an essential skill
+      for kids and grownups to learn and apply to all aspects of life: fork, branch, PR, review,
+      merge — the same muscle as scientific reproducibility, civic participation, and building
+      things together.
+    ties:
+      - ../characters/don-hopkins/career/simcity-lineage.yml
+      - github_as_mmorpg_multiverse
 
   scriptable_simulators:
     emoji: "🧩"
@@ -337,6 +352,11 @@ ideas:
       bought a license the cellular automata wake up and MELT your city. DRM as generative art — the
       same CA rules (heat diffusion, EcoLiBra, Life, Brian's Brain) that later became the hypnotic
       "Space Inventory" you can just watch for hours. Punishment and beauty from the same engine.
+    videos:
+      tile_sets_chill_resolve: "https://www.youtube.com/watch?v=319i7slXcbI"
+      tile_sets_chill_resolve_title: 'SimCity Micropolis Tile Sets — Space Inventory Cellular Automata to Jerry Martin''s "Chill Resolve"'
+      micropolis_web_music_1: "https://www.youtube.com/watch?v=BBVyCpmVQew"
+      micropolis_web_music_1_title: "Micropolis Web Space Inventory Cellular Automata Music 1"
 
   pie_menus_put_out_fires:
     emoji: "🥧🔥"
@@ -421,5 +441,6 @@ see_also:
   - { path: ../repo-shows/will-wright/slats-reincarnation.yml, why: "RoboResurrection quest in full" }
   - { path: ../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml, why: "Drain Hell soul/zombie bridge" }
   - { path: ../repo-shows/david-ungar-self-moollm.yml, why: "Self × MOOLLM seed" }
-  - { path: vision-and-ambition.yml, why: "The serious long arc these ideas serve" }
+  - { path: VISION.md, why: "Serious long arc — readable navigation layer" }
+  - { path: vision-and-ambition.yml, why: "Yaml girder for the long arc" }
   - { path: SimHacker/DonHopkins/projects/micropolis-moollm/crystallized/DESIGN-WISDOM.yml, why: "Upstream full principle set (private archive)" }

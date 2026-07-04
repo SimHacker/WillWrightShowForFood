@@ -201,7 +201,7 @@ Pair Crowd Sitter / Dumbold with live UCC in `[../../catalogs/simprov/](../../ca
 
 | Slug                                      | Link                                                                                                                            |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| Spore GDC 2005 — Future of Content (stub) | [2005-03-11-spore-gdc-future-of-content](sources/2005-03-11-spore-gdc-future-of-content/README.md) |
+| Spore GDC 2005 — Future of Content (Don notes + clips) | [2005-03-11-spore-gdc-future-of-content](sources/2005-03-11-spore-gdc-future-of-content/README.md) |
 | Yoot Tower open source                    | [2024-yoot-tower-open-source](sources/2024-yoot-tower-open-source/README.md)                       |
 | SimRefinery recovery                      | [simrefinery-recovery](sources/simrefinery-recovery/README.md)                                     |
 | Becky Heineman IIgs SimCity source hunt   | [2019-apple-iigs-simcity-becky-heineman](sources/2019-apple-iigs-simcity-becky-heineman/README.md) |
@@ -227,6 +227,6 @@ Pair Crowd Sitter / Dumbold with live UCC in `[../../catalogs/simprov/](../../ca
 
 ## Still to extract (tracked in sources README)
 
-Spore GDC full text · OLPC/Micropolis blog cluster · Transmogrifier 2.0 launch · original Sims site captures · 1996 raw Winograd notes. See [Still to extract](sources/README.md#still-to-extract-or-enrich) in the evidence room README.
+Spore GDC hand captions · OLPC/Micropolis blog cluster · Transmogrifier 2.0 launch · original Sims site captures · 1996 raw Winograd notes. See [Still to extract](sources/README.md#still-to-extract-or-enrich) in the evidence room README.
 
 → `[writing/INDEX.yml](../don-hopkins/writing/INDEX.yml)` · `[sync-sources.yml](../don-hopkins/sync-sources.yml)` · `[sources/README.md](sources/README.md)`

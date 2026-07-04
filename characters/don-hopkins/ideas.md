@@ -27,6 +27,10 @@
 | [`visual-programming-excel-and-dimensionality.md`](visual-programming-excel-and-dimensionality.md) | Excel as VPL, PSIBER, SimAntics evidence (HN 22978454) |
 | [`drakon-control-flow-vs-dataflow.md`](drakon-control-flow-vs-dataflow.md) | SimAntics vs Grasshopper vs Bounce — control vs data flow (HN 10100932) |
 | [`carmack-leaves-meta-hn.md`](carmack-leaves-meta-hn.md) | Meta departure wit + Dynabook tangent (HN 34022484) → [`../john-carmack/`](../john-carmack/README.md) |
+| [`spore-stats-hn-2023.md`](spore-stats-hn-2023.md) | Spore postmortem + GDC notes repost (HN 36279341) → [`../will-wright/sources/2005-03-11-spore-gdc-future-of-content/`](../will-wright/sources/2005-03-11-spore-gdc-future-of-content/README.md) |
+| [`demoscene-compression-hn-2023.md`](demoscene-compression-hn-2023.md) | Will on demoscene, LLMs/dreams/Dasher (HN 36597460) — compression hub |
+| [`sims-pixelation-censorship-hn-2022.md`](sims-pixelation-censorship-hn-2022.md) | Sims shimmer censorship + SimAntics bugs (HN 30350626) |
+| [`don-will-mining-hub.yml`](don-will-mining-hub.yml) | Don × Will arcs — compression, Spore retrospective, Sims craft, Kaleida, Long Now triangle |
 | [`levity-bounce-space-seed.md`](levity-bounce-space-seed.md) | Bounce @ Levity — patch-cord trail with [`../jaron-lanier/`](../jaron-lanier/README.md) + [`../david-levitt/`](../david-levitt/README.md) |
 | [`../will-wright/adorable-minutes.md`](../will-wright/adorable-minutes.md) | Async one-minute Q&A — [`will-wright-adorable-minutes.yml`](../../repo-shows/will-wright-adorable-minutes.yml) |
 | [`repo-shows/scott-adams/`](../../repo-shows/scott-adams/) | Adventure-as-data ancestor — portable VM + 16K worlds |

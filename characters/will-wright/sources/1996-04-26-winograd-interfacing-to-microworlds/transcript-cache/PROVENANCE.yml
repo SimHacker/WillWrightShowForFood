@@ -15,7 +15,6 @@ canonical:
   also: ../transcript-summary.md
   author: Don Hopkins
   method: hand-proofread from YouTube auto-captions + listening pass
-  status: authoritative_for_quotes
   footer: |
     Automatic closed captioning by YouTube, cleaned up and clarified by Don Hopkins.
     Report typos/sync problems to don@donhopkins.com.
@@ -31,7 +30,6 @@ reference_cache:
     - youtube-auto-en.en.json3
     - youtube-auto-en.timeline.tsv
   purpose: timestamp verification, clip cut discovery, diff against canonical
-  not_for: on-air quotes, publication without Don's transcript
 
 regenerate_timeline: |
   python3 -c "
@@ -53,7 +51,7 @@ regenerate_timeline: |
 sync_notes:
   - hand_transcript_uses_round_seconds; youtube_cache_subsecond
   - pivotal_moment_student_question_youtube: "1:08:19.600"
-  - pivotal_moment_oh_god_hand: "1:08:19–1:08:38 — speaker labels in canonical transcript"
-  - pivotal_moment_oh_god_youtube_auto: "~1:08:33–1:08:38 — caption merges speakers; use canonical text"
+  - pivotal_moment_oh_god_hand: "1:08:19–1:08:38"
+  - pivotal_moment_oh_god_youtube_auto: "~1:08:33–1:08:38"
   - cliffhanger_cut_before: "Let me show you something real quick — youtube ~1:09:55.120"
   - dollhouse_demo_start: "1:10:02 canonical / ~1:10:01.600 youtube"

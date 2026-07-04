@@ -1,0 +1,8 @@
+archive:
+  ingested: 2026-07-04
+  source: DonHopkins/temp/lots-of-chat.txt
+  subject: fw: [fwd: sim city in open source for $100 laptop?]
+  form: verbatim
+
+parts:
+  - email-thread.md

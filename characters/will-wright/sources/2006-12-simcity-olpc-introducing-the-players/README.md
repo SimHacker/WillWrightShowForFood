@@ -2,7 +2,7 @@
 
 Primary source for the EA ↔ OLPC ↔ Sugar negotiation after Will and Rod said yes.
 
-**Raw thread:** [`DonHopkins/temp/old-email/simcity-for-olpc----introducing-the-players.txt`](../../../../DonHopkins/temp/old-email/simcity-for-olpc----introducing-the-players.txt)
+**Verbatim mail:** [`2006-11-13-simcity-olpc-email-thread/`](../2006-11-13-simcity-olpc-email-thread/README.md) — especially [`03-olpc-port-and-sugar-dec-2006.md`](../2006-11-13-simcity-olpc-email-thread/03-olpc-port-and-sugar-dec-2006.md) (Gilmore "introducing the players", 19 Dec onward).
 
 ## Published
 
@@ -14,7 +14,7 @@ Primary source for the EA ↔ OLPC ↔ Sugar negotiation after Will and Rod said
 - [`../../../../repo-shows/walter-bender-olpc/SHOW.yml`](../../../../repo-shows/walter-bender-olpc/SHOW.yml) — show segments from this thread
 - [`../sugar-centralized-multiplayer-laszlo/`](../sugar-centralized-multiplayer-laszlo/README.md)
 
-*Harvested 2026-06-29 from old-email split.*
+*Harvested 2026-06-29; verbatim mail in [`2006-11-13-simcity-olpc-email-thread/`](../2006-11-13-simcity-olpc-email-thread/README.md) (2026-07-04).*
 
 ---
 

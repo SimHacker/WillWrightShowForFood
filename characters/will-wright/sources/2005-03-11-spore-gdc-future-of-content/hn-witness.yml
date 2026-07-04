@@ -1,0 +1,59 @@
+# Don Hopkins — Hacker News witness threads for GDC 2005 / Spore / compression hub
+
+host: don-hopkins
+canonical_notes: medium-article.md
+video: ofA6YWVTURU
+
+threads:
+  - story_id: 36279341
+    title: Spore Stats (spore.com)
+    date: 2023-06-11
+    archive: ../../../../don-hopkins/spore-stats-hn-2023.md
+    don_comments:
+      - 36280275  # GDC notes repost
+      - 36280690  # T-shaped design postmortem
+      - 36280831  # creators/community won
+
+  - story_id: 36597460
+    title: Demoscene accepted as UNESCO cultural heritage in The Netherlands
+    date: 2023-07-05
+    archive: ../../../../don-hopkins/demoscene-compression-hn-2023.md
+    don_comments:
+      - 36599415  # Will on demoscene + GDC compression
+      - 36613058  # LLMs, dreams, Dasher follow-up
+
+  - story_id: 30350626
+    title: Don't use text pixelation to redact sensitive information
+    date: 2022-02-16
+    archive: ../../../../don-hopkins/sims-pixelation-censorship-hn-2022.md
+    don_comments:
+      - 30359560  # Sims pixelation implementation
+      - 30359690  # PDF redaction tangent
+      - 30360424  # Medium / Sims video index reply
+    note: compression/synthesis tangent — Sims shimmer as procedural disguise
+
+retrospective_prompts:
+  - Was Spore's T-shaped design ever viable once per-level teams split?
+  - Creators and async exchange won — gameplay/story lost — agree?
+  - Demo scene vs Myst — same "algorithmic compression" Will pitched at GDC?
+  - Pixel bars on Barbie-doll bodies — honest censorship or UI lie?
+
+don_retrospective_beats:
+  - id: t-shaped-swoop-failed
+    hn: 36280690
+    clip: t-shaped-game-powers-of-ten
+    audience: repo-shows/will-wright/audience/fictional-spore-creature/questions.yml
+  - id: creators-won
+    hn: 36280831
+    clip: async-pollination-sims-exchange
+    audience: repo-shows/will-wright/audience/fictional-spore-creature/questions.yml
+  - id: demoscene-compression
+    hn: 36599415
+    clip: demo-scene-helsinki
+    long_now: ../2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml#amphetamine-ambient-acid-jazz
+  - id: pixelation-shimmer
+    hn: 30359560
+    clip: null
+    don_topic: ../../../../don-hopkins/sims-pixelation-censorship-hn-2022.md
+
+mining_hub: ../../../../don-hopkins/don-will-mining-hub.yml

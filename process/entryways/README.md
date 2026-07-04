@@ -14,7 +14,7 @@ Pick a **doorway** (ordered playlist) or leap **sideways** on a trail when one t
 
 | | Doorway | Call to action |
 |---|---------|----------------|
-| 1 | [**Guest — Will Wright**](guest-will.md) | Start with the invite, then the 1996 talk |
+| 1 | [**Guest — Will Wright**](guest-will.md) | Accepted — guest prototype, then the 1996 talk |
 | 2 | [**Guest — anyone invited**](guest-any.md) | Portrayal standards once, then your invitation and CARD |
 | 3 | [**Player — Sims / SimCity fan**](player.md) | 1996 talk then show pitch — no git required |
 | 4 | [**Watcher — stream / VOD**](watcher.md) | Read FORMAT first so overlay and audience bits parse |

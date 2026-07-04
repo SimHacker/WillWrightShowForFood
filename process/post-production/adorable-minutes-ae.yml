@@ -1,0 +1,61 @@
+# Post-production — Adorable Minutes AE hub
+# One .aep, shared _LIB, YAML-driven wave batches. Playful overlay experiments.
+
+meta:
+  id: adorable-minutes-ae
+  scope: repo_show_post_production
+  local_hub: ~/GroundUp/repo-show/projects/ae/AdorableMinutes-Hub.aep
+  pixie_lib: ~/GroundUp/pixie/Flight of the PIXIE.aep
+  wave_spec_local: ~/GroundUp/repo-show/wave-ae-experiment-0.yml
+  captions: process/post-production/captions.yml
+  telecine: process/post-production/cambridge-telecine-jiggle.yml
+
+format:
+  series: Adorable Will Wright Minutes (style)
+  reference: characters/will-wright/adorable-minutes.md
+  tiers:
+    flagship: "90–120s — thesis / cliffhanger"
+    jewel: "60–110s — self-contained arc"
+    quip: "20–45s — one idea + optional text card"
+    meme: "5–20s — punchline, hard cut"
+
+overlay_styles:
+  telecine_classic:
+    use: [flagship, jewel]
+    lib_comp: _LIB/CambridgeJiggleDriver
+    title: "ALL CAPS serif — Cambridge slate"
+    end_card: _LIB/EndCardQuestion
+  adorable_minute:
+    use: [quip, meme_when_whacky]
+    lib_comp: _LIB/AdorableTitleBounce
+    vibe: "2008 celesta920 one-minute lessons — bouncy, playful"
+  meme_punch:
+    use: [meme]
+    lib_comp: _LIB/MemeTextPunch
+    end_card: none
+  playful_spring:
+    use: [animation_experiment]
+    lib_comp: _LIB/PlayfulSpring
+    first_clip: rhythmic-mating-banned
+    notes: "Spring scale + optional wiggle on title; Spore gag energy"
+
+wave_0_experiment:
+  goal: "Mix tiers; test titling; one animation-forward clip"
+  slots: 12
+  local_manifest: ~/GroundUp/repo-show/wave-ae-experiment-0.yml
+  animation_experiment:
+    clip_id: rhythmic-mating-banned
+    source: longnow2006
+    overlay: playful_spring
+    ae_comp: W0/08-rhythmic-mating
+
+pipeline:
+  - extract: ~/GroundUp/repo-show/scripts/extract-wave.py
+  - ae_finish: import raw + overlay template per slot
+  - captions: sidecar VTT always; optional burn for Shorts
+  - publish: video + .vtt to YouTube
+
+see_also:
+  - characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/short-form-production-schedule.yml
+  - characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml
+  - repo-shows/will-wright-adorable-minutes.yml

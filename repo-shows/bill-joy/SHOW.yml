@@ -1,0 +1,25 @@
+id: bill-joy
+title: "Bill Joy — Joy's law × microworlds"
+status: seed
+guest: characters/bill-joy/
+invitation: characters/bill-joy/invitation.md
+
+anchor:
+  medium: https://donhopkins.medium.com/bill-joys-law-2-year-1984-million-instructions-per-second-3a8c92165cfe
+  formula: "S = 2^(Year - 1984) MIPS"
+
+segments:
+  - id: joys-law
+    title: "2^(year − 1984) — live abacus"
+  - id: c-plus-plus-plus-minus
+    title: "C++++-= vs Java vs 2026"
+  - id: open-systems
+    title: "Innovation elsewhere"
+  - id: pie-menus-educom
+    title: "Educom '88 → pie menus → Sims"
+  - id: micropolis-olpc
+    title: "Open SimCity / inspire another Will"
+
+related:
+  - repo-shows/will-wright/
+  - characters/will-wright/sources/simcity-open-source-saga/

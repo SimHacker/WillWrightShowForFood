@@ -1,6 +1,6 @@
 # Multiplayer SimCity — UI and network design
 
-*Don Hopkins, December 2006 OLPC pitch letter + SimCityNet product history. Primary harvest: [sim-city-in-open-source-for-100-laptop.txt](../../../../DonHopkins/temp/old-email/sim-city-in-open-source-for-100-laptop.txt). Republished in [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood).*
+*Don Hopkins, December 2006 OLPC pitch letter + SimCityNet product history. Verbatim: [`don-pitch-letter-2006-12-02.md`](../2006-11-13-simcity-olpc-email-thread/don-pitch-letter-2006-12-02.md). Republished in [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood).*
 
 ---
 

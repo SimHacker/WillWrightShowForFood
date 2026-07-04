@@ -16,6 +16,8 @@ meta:
     meme: "5–20s — punchline, reaction, or single quote"
   transcript_canonical: transcript.md
   transcript_cache: transcript-cache/youtube-auto-en.timeline.tsv
+  captions_dir: captions/
+  captions_policy: ../../../../process/post-production/captions.yml
 
 # status: verified = cut points checked on YouTube; draft = transcript sync only
 
@@ -42,6 +44,8 @@ clips:
       tags: [data-portability, dollhouse-teaser, student-question, project-thesis, cliffhanger]
       hn_pump: true
       pairs_with: dollhouse-load-simcity
+      captions: captions/oh-god-cliffhanger-data-portability.vtt
+      caption_status: canonical
       notes: |
         THE clip. Jump off the cliff — end on the hook, not the dive. Part 2 = Dollhouse demo.
         Canonical dialogue: transcript.md#data-portability. YouTube cut ~1:09:55.120 (cache).

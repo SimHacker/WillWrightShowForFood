@@ -45,9 +45,15 @@ Will's lifelong stance: simulations as **toys and microworlds** without a single
 Micropolis Class lens: a microworld as a *medium*, not a contest.
 
 ### 5. Generative systems & emergence
-The **Long Now "Playing with Time"** thread (with Brian Eno): simple rules → complex behavior;
-cellular automata; emergence as the shared DNA of SimCity, ambient music, and Spore. A natural
-bridge to the **Scott Draves** and **Brian Eno** shows.
+The **[2006 Long Now *Playing with Time* talk with Brian Eno](../../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/README.md)**
+([video](https://www.youtube.com/watch?v=Dfc-DQorohc)): simple rules → complex behavior; cellular
+automata scored live; full Spore demo. Don was **in the audience**. Natural bridge to **Scott Draves**
+and **Brian Eno** reunion shows.
+
+The **[2005 GDC *Future of Content* Spore reveal](../../characters/will-wright/sources/2005-03-11-spore-gdc-future-of-content/README.md)**
+([video](https://www.youtube.com/watch?v=ofA6YWVTURU)): Don's field notes, Will-reviewed — first public
+Spore demo, 5000:1 compression, the title lie. **Retrospective** gold: what was promised vs what shipped.
+Pair with Long Now for two Spore demos a year apart.
 
 ### 6. The powers-of-ten map — mostly *his own* games
 Home → **The Sims**, City → **SimCity**, Planet → **SimEarth** (Gaia), Cosmos → **Spore** — with
@@ -85,5 +91,5 @@ but the Winograd demo was when progress became unbelievable.
 ## Sources (real, public)
 - Primary sources map: [`primary-sources-evidence-room.md`](primary-sources-evidence-room.md)
 - 1996 Winograd talk: [source bundle](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) · video https://www.youtube.com/watch?v=nsxoZXaYJSk
-- Long Now "Playing with Time" (Eno + Wright): https://www.youtube.com/watch?v=Dfc-DQorohc
+- Long Now *Playing with Time* (Eno + Wright): [source bundle](../../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/README.md) · https://www.youtube.com/watch?v=Dfc-DQorohc
 - Show hub: [`repo-shows/will-wright/`](../../repo-shows/will-wright/README.md) · galleries: [`media/`](media/README.md)

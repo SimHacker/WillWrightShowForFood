@@ -1,0 +1,31 @@
+# CARD — 2006 Long Now: Playing with Time (Eno + Will)
+
+id: 2006-06-26-long-now-playing-with-time-eno-wright
+type: primary_source_video
+guests: [will-wright, brian-eno]
+host: stewart-brand
+venue: Long Now Foundation Seminar (San Francisco)
+
+one_line: |
+  Eno and Will on generative seeds, time elasticity, and possibility spaces — Life scored live,
+  Spore demo, Q&A on authorship and culture. Don was in the audience.
+
+video: https://www.youtube.com/watch?v=Dfc-DQorohc
+long_now: https://longnow.org/seminars/
+
+provenance:
+  preserved_by: Long Now Foundation (YouTube mirror, Apr 2020)
+  witness: Don Hopkins — audience member, June 26 2006
+  afterparty_thread: Don introduced Brian Eno to Scott Draves; see scott-draves/correspondence.yml
+
+interface:
+  summary: summary.md
+  clips: short-form-clips.yml
+  transcript_status: youtube_auto_only — needs hand cleanup like 1996 Winograd
+  captions: captions/ (when polished) · process/post-production/captions.yml
+
+pairs_with:
+  - 1996-04-26-winograd-interfacing-to-microworlds  # compression, mental model, toys
+  - 2005-03-11-spore-gdc-future-of-content
+  - repo-shows/brian-eno/
+  - repo-shows/scott-draves/

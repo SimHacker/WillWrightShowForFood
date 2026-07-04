@@ -1,0 +1,36 @@
+# Mats Knutsen — correspondence portrayal. NOT Mats Knutsen.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: mats-knutsen
+  name: "Mats Knutsen"
+  type: correspondence
+  signifier: "🧪"
+  status: unknown
+  field: "2006 correspondent — C# Sims AI reimplementation (TheSimsAITest)"
+  home: characters/mats-knutsen/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 1
+  authored_by: don-hopkins
+
+bio:
+  summary: |
+    **Mats Knutsen** emailed Don Hopkins in November 2006 with questions about The Sims AI,
+    attaching a C# prototype (`thesimsaitest.zip`) after studying Ken Forbus's
+    *Sims Under the Hood* lecture. Don replied with a detailed explanation of object threads,
+    advertisement scoring, top-5 random choice, and the favorite-bed relationship trick.
+
+connections:
+  don: "Asked Don (Maxis Sims contractor) for implementation help on a student-style C# simulation."
+  forbus: "Read Northwestern *Under the Hood* materials before writing."
+
+sources:
+  public:
+    - ../will-wright/sources/2006-11-06-thesims-ai-test/don-reply-to-mats-knutsen.md
+    - ../will-wright/sources/2006-11-06-thesims-ai-test/
+
+see_also:
+  - { path: ../jamie-doornbos/, why: "SimAntics architect — contrast with Mats's sketch" }
+  - { path: ../don-hopkins/, why: "Replied with Sims AI design tour" }

@@ -1,14 +1,15 @@
 # SimCity open source for the $100 laptop — how Micropolis happened
 
-*Primary source: Don Hopkins email to Rod Humble, Will Wright, Scott Evans — 1 December 2006. Harvested from [old-email archive](../../../../DonHopkins/temp/old-email/sim-city-in-open-source-for-100-laptop.txt). Republished in [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood).*
+*Primary source: Don Hopkins email to Rod Humble, Will Wright, Scott Evans — 1 December 2006. Verbatim archive: [`2006-11-13-simcity-olpc-email-thread/`](../2006-11-13-simcity-olpc-email-thread/README.md). Republished in [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood).*
 
 ---
 
-## Timeline (Nov–Dec 2006)
+## Timeline (Jun–Dec 2006)
 
 | Date | Who | What |
 |------|-----|------|
-| 13 Nov 2006 | **John Gilmore** → Don | OLPC needs learning games; SimCity Classic Unix port might be open-sourceable |
+| 26 Jun 2006 | **Dan Ancona + Mark Live** → Will (Long Now Q&A) | Open-source SimCity to remix political assumptions in the rules; Will **very open**; Don **in audience** |
+| 13 Nov 2006 | **John Gilmore** → Don | OLPC needs learning games; SimCity Classic Unix port might be open-sourceable — **140 days after Long Now** |
 | 17 Nov 2006 | Don → **Will Wright** | "Is it possible for EA to release SimCity classic for OLPC?" |
 | 18 Nov 2006 | Will → Don | "Let me check into it. I support the idea wholeheartedly." |
 | 1 Dec 2006 | Will → Rod Humble, Scott Evans | Worthwhile at no risk to EA; asks Rod to move it forward |
@@ -17,7 +18,7 @@
 | 1 Dec 2006 | Scott Evans → **Charles Normann** | "Chuck, can you please run with this?" |
 | 2–16 Dec 2006 | Chuck ↔ Don | Unix version history; DUX/Maxis contracts (expired July 2001) |
 
-Later threads (`simcity-for-olpc----introducing-the-players`) bring in **Walter Bender**, **Alan Kay**, EA QA sign-off, and the Sugar/Python path that became **Micropolis**.
+Later threads ([`03-olpc-port-and-sugar-dec-2006.md`](../2006-11-13-simcity-olpc-email-thread/03-olpc-port-and-sugar-dec-2006.md)) bring in **Walter Bender**, **Alan Kay**, EA QA sign-off, and the Sugar/Python path that became **Micropolis**.
 
 ---
 
