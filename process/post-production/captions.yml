@@ -60,7 +60,7 @@ style:
   max_lines: 2
   max_chars_per_line: 42
   speakers: [Student, Will Wright, Terry Winograd, Don Hopkins]
-  format: "Speaker: dialogue" in Q&A segments
+  format: '"Speaker: dialogue" in Q&A segments'
   end_cards: caption CTA text on telecine jiggle slate (~3s)
 
 checklist:

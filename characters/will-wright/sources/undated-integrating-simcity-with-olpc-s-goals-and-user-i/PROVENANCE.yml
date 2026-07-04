@@ -1,7 +1,7 @@
 archive:
   ingested: 2026-07-04
   source: DonHopkins/temp/lots-of-chat.txt
-  subject: integrating simcity with olpc's goals and user interface style
+  subject: "integrating simcity with olpc's goals and user interface style"
   form: verbatim
 
 parts:

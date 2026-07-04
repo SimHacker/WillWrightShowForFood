@@ -1,7 +1,7 @@
 archive:
   ingested: 2026-07-04
   source: DonHopkins/temp/lots-of-chat.txt
-  subject: openlaszlo youtube player
+  subject: "openlaszlo youtube player"
   form: verbatim
 
 parts:

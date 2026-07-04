@@ -1,7 +1,7 @@
 archive:
   ingested: 2026-07-04
   source: DonHopkins/temp/lots-of-chat.txt
-  subject: simcity for olpc -- sugar integration ideas
+  subject: "simcity for olpc -- sugar integration ideas"
   form: verbatim
 
 parts:

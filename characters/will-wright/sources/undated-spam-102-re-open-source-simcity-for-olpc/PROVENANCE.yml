@@ -1,7 +1,7 @@
 archive:
   ingested: 2026-07-04
   source: DonHopkins/temp/lots-of-chat.txt
-  subject: {{{spam -102 ???}}} re: open source simcity for olpc
+  subject: "{{{spam -102 ???}}} re: open source simcity for olpc"
   form: verbatim
 
 parts:
