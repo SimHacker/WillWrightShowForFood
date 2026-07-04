@@ -3,12 +3,6 @@
 
 character: james-gosling
 consent_note: Public respectful portrayal for invitation browsing; subject may request removal
-artifact_count: 1
+artifact_count: 0
 
-artifacts:
-  - file: from-mail/artifact-9780262547482.jpg
-    kind: thread
-    title: "9780262547482"
-    source_export: DonHopkins/temp/AlanKay/attachments/msg-11-Fwd_ Exciting News_ My New Book "Building SimCity" Launches Soon!--9780262547482.jpg
-    message_subject: 'Fwd: Exciting News: My New Book "Building SimCity" Launches Soon!'
-    message_date: "Monday, 29 June 2026 at 16:41:28"
+artifacts: []

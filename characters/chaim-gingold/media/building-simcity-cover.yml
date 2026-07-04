@@ -1,0 +1,29 @@
+# Sidecar — Building SimCity (MIT Press) book cover
+
+artifact:
+  file: from-mail/artifact-9780262547482.jpg
+  type: book_cover
+  isbn: "9780262547482"
+  title: "Building SimCity: How to Put the World in a Machine"
+  author: Chaim Gingold
+  publisher: MIT Press
+  year: 2024
+  provenance: DonHopkins/temp/AlanKay mail — Chaim launch announcement (2026-06-29 forward)
+  rights: "Cover art © MIT Press / author — fair use for invitation portrayal in repo context"
+
+blurb:
+  will_wright: |
+    "I learned more about the history and practice of simulation from this book than I ever knew."
+    — Will Wright, designer of SimCity and The Sims
+
+repo_show:
+  tie_in:
+    - Long Now open-source SimCity question — political assumptions in the rules
+    - Alan Kay SimCity Rules OLPC thread — articulate the rules in English
+    - MicropolisCore reverse diagrams · Chaim show seed
+  show_seed: ../../repo-shows/chaim-gingold/README.md
+
+see_also:
+  - from-mail/MANIFEST.yml
+  - ../README.md
+  - https://mitpress.mit.edu/9780262547482/building-simcity/

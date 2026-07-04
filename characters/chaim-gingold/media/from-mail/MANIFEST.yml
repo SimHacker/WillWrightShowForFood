@@ -37,8 +37,9 @@ artifacts:
     message_subject: 'Re: Suggestion: Micropolis''s Streets of SimCity feature'
     message_date: "Friday, 17 May 2024 at 00:03:07"
   - file: from-mail/artifact-9780262547482.jpg
-    kind: correspondence
-    title: "9780262547482"
+    kind: book_cover
+    title: 'Building SimCity — MIT Press cover (9780262547482)'
+    sidecar: ../building-simcity-cover.yml
     source_export: DonHopkins/temp/AlanKay/attachments/msg-11-Fwd_ Exciting News_ My New Book "Building SimCity" Launches Soon!--9780262547482.jpg
     message_subject: 'Fwd: Exciting News: My New Book "Building SimCity" Launches Soon!'
     message_date: "Monday, 29 June 2026 at 16:41:28"

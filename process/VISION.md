@@ -2,7 +2,7 @@
 
 > **Girder:** [`vision-and-ambition.yml`](vision-and-ambition.yml) · **Ideas reactor:** [CRAZY-IDEA-JAM.md](CRAZY-IDEA-JAM.md) · **Home:** [README.md](../README.md)
 
-**Start here in one breath:** [Don Hopkins](../characters/don-hopkins/README.md) and [Will Wright](../characters/will-wright/README.md) have talked for thirty years about closing a loop Will opened in [**1996 at Stanford**](../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) — not another talk *about* microworlds, but a **living** microworld you can enter, fork, breed, and show. **WillWrightShowForFood** is the first public seed of that conversation: small at the top, skills and shows growing downward.
+**Start here in one breath:** [Don Hopkins](../characters/don-hopkins/README.md) and [Will Wright](../characters/will-wright/README.md) have talked for thirty years about closing a loop Will opened in [**1996 at Stanford**](../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) — not another talk *about* microworlds, but a **living** microworld you can enter, fork, breed, and show. **WillWrightShowForFood** is the first public seed of that conversation: small at the tip, skills and shows building beneath.
 
 **Will is in.** He [accepted the invitation](../characters/will-wright/invitation.md) (July 2026) — excited, wants to participate, async repo-show at his pace. That unlocks the kickoff show and everything that flows from it.
 
@@ -12,15 +12,15 @@ Nothing else on this page is a contract, a greenlight, or a launch date.
 
 ## On this page
 
-Jump by topic. Each section maps to a **K-line** — a yaml key you can cite in issues and PRs; say the name, the frame loads.
+Jump by topic. Each section maps to a **[K-line](https://github.com/SimHacker/moollm/tree/main/skills/k-lines)** — [Marvin Minsky](../characters/marvin-minsky/README.md)'s wire from *Society of Mind*, used here as yaml anchors in a [constructionist microworld](trails/constructionist-lineage.md). Cite one in issues and PRs; say the name, the frame loads.
 
-| Read | K-line | In one line |
+| Read | [K-line](https://github.com/SimHacker/moollm/tree/main/skills/k-lines) | In one line |
 |------|--------|-------------|
 | [Lineage](#lineage) | `lineage` | 1996 anchor · forebears · the long arc |
-| [Pyramid](#pyramid) | `pyramid` | Small apex today; skills forest tomorrow |
+| [Pyramid](#pyramid) | `pyramid` | Stand on the apex; mass builds beneath |
 | [Rig culture](#rig-culture) | `rig_culture` | Declare your class; artisanal gets extra respect |
 | [Who this is for](#who-this-is-for) | `audiences_if_you_stumbled_here` | Doorways by interest |
-| [What we are not promising](#what-we-are-not-promising) | `what_we_are_not_promising` | No vapor launch fiction |
+| [What we are not doing](#what-we-are-not-doing) | `what_we_are_not_promising` | No deals, no launch fiction |
 | [What we are building](#what-we-are-building-in-public) | `what_we_are_building_in_public` | Artifacts you can clone today |
 | [Skills](#skills-the-real-harvest) | `skills` | Shows are stage; skills are stack |
 | [Curb appeal meets brutalism](#curb-appeal-meets-brutalism) | `curb_appeal_meets_brutalism` | Warm README; cold verify |
@@ -62,18 +62,18 @@ Trail: [constructionist lineage from Winograd 1996 to open Micropolis](../TRAILS
 
 ## Pyramid
 
-Picture an pyramid upside-down from the usual business slide: **the tip is where you are now** — the first public point of origin — and the mass grows **downward** into skills, shows, characters, code.
+Picture a pyramid the ordinary way — **point up**. **You are standing on the tip**: the first public point of origin. The mass — skills, shows, characters, code — is **everything beneath your feet**, still being built.
 
-**At the tip today:** one kickoff [show seed](../repo-shows/will-wright/README.md), a [ShowMaker graph](showmaker-network.yml) scaffold, verify CI, yaml indexes. [Curb appeal on the README](../README.md); [CARD.yml](../CARD.yml), [SHOW.yml](../schemas/), [MANIFEST](../MANIFEST.yml), and [`pnpm verify`](../SETUP.md) underneath.
+**On the tip today:** one kickoff [show seed](../repo-shows/will-wright/README.md), a [ShowMaker graph](showmaker-network.yml) scaffold, verify CI, yaml indexes. [Curb appeal on the README](../README.md); [CARD.yml](../CARD.yml), [SHOW.yml](../schemas/), [MANIFEST](../MANIFEST.yml), and [`pnpm verify`](../SETUP.md) under that.
 
-**Growing downward:**
+**Building beneath you:**
 
 1. More show objects and edges — [ShowMaker network](showmaker-network.yml).
 2. More [MOOLLM skills](../skills/README.md) — cauldron SCOOP after each show; [**131 upstream skills (and counting)**](https://github.com/SimHacker/moollm/tree/main/skills) in [SimHacker/moollm](https://github.com/SimHacker/moollm) today, plus show-born skills bred here (GLANCE → CARD → SKILL → README).
 3. More [characters](../characters/README.md), [apps](../apps/), [packages](../packages/) — all feeding the skill library.
 4. Live conversation → melt in the [cauldron](https://github.com/SimHacker/moollm/tree/main/skills/cauldron) → [SCOOP](https://github.com/SimHacker/moollm/blob/main/skills/cauldron/protocols/SCOOP.yml) skills and code → breed back via git PRs.
 
-**Shows are the stage; skills are the durable artifact.** Every [Repo Show](FORMAT.md) should leave inheritable technique — protocols and [SKILL.md](../skills/repo-show/SKILL.md) bodies agents and humans can run, not slide decks. That is how the [1996 microworlds talk](../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) becomes *runnable* thirty years later.
+**Shows are the stage; skills are the durable artifact.** Every [Repo Show](FORMAT.md) should leave inheritable technique — protocols and [SKILL.md](../skills/repo-show/SKILL.md) bodies agents and humans can run, not pitch decks. That is how the [1996 microworlds talk](../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) becomes *runnable* thirty years later.
 
 **Not vapor:** brutalist GitHub surface — rebar in [schemas/](../schemas/README.md), i-beams in `process/*.yml`, poured slab in verify CI. Browse without an account. Clone and break it. [Open an issue or PR](https://github.com/SimHacker/WillWrightShowForFood/issues).
 
@@ -156,16 +156,13 @@ Publication **network** — graph of shows, not a flat feed. We are not pitching
 
 ---
 
-## What we are not promising
+## What we are not doing
 
-Plain list. No hedge.
-
-- A greenlit series, stream, or distribution deal.
-- Viral scale, revenue, or timeline.
-- That AI is required — or forbidden.
-- A finished product. This is **origin point**, not launch day.
-
-**What changed:** [Will Wright accepted](../characters/will-wright/invitation.md) — the kickoff guest is confirmed; the show can proceed toward air on his schedule. Production and platform deals remain open.
+- **No** greenlit series, stream, or distribution deal.
+- **No** promised viral scale, revenue, or launch timeline.
+- **No** requirement to use AI — and **no** ban on AI either.
+- **Not** a finished product — an origin point, not launch day.
+- **Not** blocked on the guest: [Will Wright accepted](../characters/will-wright/invitation.md) (July 2026); kickoff confirmed; air on his schedule. **Still no** production deal or platform deal — those remain open.
 
 ---
 
@@ -204,7 +201,7 @@ Inheritable [MOOLLM](https://github.com/SimHacker/moollm) skills — protocols +
 
 **Compose:** breed show-born skills here; do not fork MOOLLM core.
 
-Over time this repo becomes a thick skill forest — repo-show, pray-to-play, soul-bridge, representation-ethics — each traced to a guest, a show, a PR. That forest is the downward mass of the [pyramid](#pyramid).
+Over time this repo becomes a thick skill forest — repo-show, pray-to-play, soul-bridge, representation-ethics — each traced to a guest, a show, a PR. That forest is the mass **under the apex** of the [pyramid](#pyramid).
 
 → [Skills README](../skills/README.md) · [repo-show skill](../skills/repo-show/SKILL.md) · [moollm compose trail](trails/moollm-compose.md) · [cauldron skill](https://github.com/SimHacker/moollm/tree/main/skills/cauldron)
 
@@ -230,7 +227,7 @@ If it is not in the repo yet, the yaml says **seed** or **roadmap**. No launch-d
 
 Don, paraphrased: *"I am in this for the LONG NOW and LATER game."*
 
-Brian Eno coined **The Long Now**; Stewart Brand co-founded the [Long Now Foundation](https://longnow.org/). The pun in our yaml key is intentional: not just the institution, not just the quarter — **and later**. Patience as strategy. Build a durable, attributed, forkable record — primary sources, old code revived, lineage from 1996 forward — so it is worth mirroring and stewarding decades from now. Non-extractive by design.
+Brian Eno coined **The Long Now**; Stewart Brand co-founded the [Long Now Foundation](https://longnow.org/). The pun is intentional: not just the institution, not just the quarter — **and later**. Patience as strategy. Build a durable, attributed, forkable record — primary sources, old code revived, lineage from 1996 forward — so it is worth mirroring and stewarding decades from now. Non-extractive by design.
 
 ### Facilitation credit (real, not claimed partnership)
 
@@ -260,7 +257,13 @@ The same Long Now talk is also the **documented seed of open-sourcing SimCity** 
 
 **At the talk (Q&A):** Two audience members — **Dan Ancona** and **Mark Live** — **submitted the same question** to the Long Now stack: would Will open-source SimCity so people could remix the **political assumptions baked into the rules**? Stewart Brand read it from the question pile. Will answered on stage that he was **very open to the idea** (arguing with the sim means it worked; SimHealth already exposed rules). Don was in the audience and heard it live.
 
+That is **[Alan Kay](../characters/alan-kay/README.md)'s critique**, restated by the audience: open the hood, make the rules legible, let learners change the assumptions instead of treating the sim as a black box. Don and Kay argued it on the OLPC list ([*SimCity Rules* thread, Nov 2007](../characters/will-wright/sources/2007-11-16-simcity-rules-alan-kay/article.md): *"Has anyone tried to articulate the SimCity rules (e.g. in English sentences)?"*); Kay has returned to the same point in talks and writing elsewhere. We cherish it and agree. **Micropolis** for OLPC was one answer; the long work since — [MicropolisCore](https://github.com/SimHacker/MicropolisCore), [MOOLLM](https://github.com/SimHacker/moollm), and **WillWrightShowForFood** as a living Repo Show — keeps answering it in public.
+
+→ [Alan Kay — OLPC glass-box SimCity](../characters/alan-kay/ideas.md) · [open-sourcing SimCity for OLPC](../characters/don-hopkins/open-sourcing-simcity-for-olpc.md)
+
 → [YouTube clip ~t=3929](https://youtu.be/Dfc-DQorohc?t=3929) · [clip card](../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml#open-source-simcity-audience-question)
+
+**Flagship short-form video:** Will's on-stage answer is the perfect cold open — audience asks, Will says he's **very open**, cut forward to **open-source Micropolis** as the direct documented result (Long Now → Gilmore → EA → OLPC → [MicropolisCore](https://github.com/SimHacker/MicropolisCore)). Not a montage of vibes; one question, one yes, one fork you can run. Production card: [`open-source-simcity-audience-question`](../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml#open-source-simcity-audience-question) · [Adorable Minutes AE](post-production/adorable-minutes-ae.yml)
 
 **Don did not plant it.** In his Nov 2006 email to Will he wrote explicitly that he was **not** the person who submitted the Long Now question — and **John Gilmore did not ask it either**. (The denial sounded insincere only for humorous effect; Don had already been burned by earlier EA dead-ends and did not want to put Will on the spot in public.)
 

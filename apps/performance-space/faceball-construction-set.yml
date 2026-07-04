@@ -454,7 +454,7 @@ guest_characters:
     Set attachments (mouth hole, googly eyes, nostril pins, accessories, grade). Stored in
     `characters/<id>/`. They **puppeteer live** on stream, or **record offline** and submit clips.
   exemplar:
-    name: "Game Gosling at the PDP-8"
+    name: "James Gosling at the PDP-8"
     character: james-gosling
     portrait: media/gosling-young-pdp8-hotrod.png
     sidecar: media/gosling-young-pdp8-hotrod.yml
@@ -498,7 +498,7 @@ memory_palace_tour:
     roster:
       what: "One puppet preset per stop — not one face for the whole show"
       examples:
-        - "Game Gosling at the PDP-8 — next to hotrod photo while talking NeWS"
+        - "James Gosling at the PDP-8 — next to hotrod photo while talking NeWS"
         - "Ben at the pie menu — CHI'88 paper on screen"
         - "Young Don at the yellow submarine bong — Amsterdam set beat"
     stops:

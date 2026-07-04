@@ -80,6 +80,18 @@ clips:
       pairs_with: simcity-open-source-saga
       format_tier: jewel
       caption_status: draft
+      short_form_video:
+        priority: flagship_intro_micropolis
+        pitch: |
+          Will's Long Now answer → open-source Micropolis as the direct documented result.
+          Two askers, Stewart reads the question, Will very open; cut to Micropolis / MicropolisCore.
+        arc:
+          - Long Now Q&A (t=3929)
+          - Gilmore spark (~140 days)
+          - EA clearance → Micropolis
+          - MicropolisCore playable today
+        payoff_url: https://github.com/SimHacker/MicropolisCore
+        production: ../../../../process/post-production/adorable-minutes-ae.yml
 
     - id: mental-model-compiler
       title: "The game is a compiler for the mental model"

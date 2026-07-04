@@ -19,5 +19,7 @@ invitation:
 see_also:
   - { path: contact-channels.yml, why: "Public contact protocol (email, phone, video)" }
   - { path: ../don-hopkins/media/pantomime/copyleft-envelope-1984.yml, why: "Copyleft (L) sticker 1984" }
+  - { path: ../james-gosling/media/gosling-hobees-lunch.yml, why: "James learned the kabuki-west natalism / doctor.el story (2026)" }
+  - { path: http://www.art.net/studios/hackers/hopkins/Don/text/rms-vs-doctor.html, why: "RMS -vs- Doctor — kabuki-west natalism flame + Don's doctor.el reply (1993)" }
   - { path: ../david-henkel-wallace/, why: "Cygnus / BFD" }
   - { path: ../walter-bender/, why: "OLPC Sugar / GPL games thread" }

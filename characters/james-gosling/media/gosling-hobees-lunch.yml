@@ -2,24 +2,43 @@
 
 artifact:
   file: gosling-hobees-lunch.png
-  what: "James Gosling at restaurant table — cropped portrait"
+  what: "James Gosling at Hobee's — James in frame, John Gilmore's shoulder only (face out)"
   venue: Hobee's
-  crop: "Left crop only — dining companions removed from frame for privacy"
-  original: "Not stored in repo"
+  original: gosling-hobees-lunch-original.png
+  crop:
+    from: gosling-hobees-lunch-original.png
+    box: "left 48% of width — James full figure; Gilmore olive-shirt shoulder/arm; no Gilmore face; third diner out"
 
 who:
   james_gosling:
     character: ../CHARACTER.yml
-    visible: "Left seat — black t-shirt, glasses, white beard"
+    visible: "Left seat — black t-shirt, glasses, white beard, looking back at camera"
+  john_gilmore:
+    character: ../../john-gilmore/CHARACTER.yml
+    visible: "Right shoulder and forearm only — olive shirt; face cropped out for privacy"
 
 visual:
   table: "Red laminate tabletop — ketchup, Tabasco, water glass, napkins"
   setting: "Wood-paneled casual restaurant booth"
+  sensory:
+    cinnamon_tea: |
+      Don (2026-07): "The smell of the cinnamon tea brought me back and triggered many old memories!"
 
 context:
   don_hopkins: Photographer
   jaunt_era: ../../don-hopkins/media/jaunt-vr/INDEX.yml
   news_orbit: "../CHARACTER.yml"
+
+show_thread:
+  rms_natalism_doctor:
+    when_shared: "2026-07 — while revisiting this photo"
+    james_gosling: "Had not heard the story yet — now he has."
+    what: |
+      kabuki-west baby-announcement flamage (Feb 1993) → Don ran RMS's post through Emacs doctor.el
+      → RMS replied "Funny." and asked if the replies were pure doctor or hand-enhanced.
+    primary_source: http://www.art.net/studios/hackers/hopkins/Don/text/rms-vs-doctor.html
+    cast: [Richard Stallman, Don Hopkins, kabuki-west list]
+    rms_character: ../../richard-stallman/README.md
 
 rights:
   note: "Private photo — confirm with James Gosling before redistribution beyond repo context"
@@ -28,5 +47,7 @@ see_also:
   - gosling-young-pdp8-hotrod.yml
   - ../../don-hopkins/media/jaunt-vr/INDEX.yml
   - ../../arthur-van-hoff/CHARACTER.yml
+  - ../../richard-stallman/README.md
+  - http://www.art.net/studios/hackers/hopkins/Don/text/rms-vs-doctor.html
 
 note: "Not AI Generated!"

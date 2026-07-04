@@ -61,7 +61,7 @@ lineage:
     - "Hacker/builder culture — Woz energy: show the schematic, ship the board"
 
 pyramid:
-  metaphor: "Tip of the pyramid — apex — first point of origin"
+  metaphor: "Point-up pyramid — you stand on the apex (first public origin); mass builds beneath"
   this_repo: |
     What you see here is deliberately small at the top: one kickoff show seed,
     a graph scaffold, verify CI, yaml indexes. Curb appeal on the README;
@@ -74,8 +74,8 @@ pyramid:
   skills_are_the_payoff: |
     Shows are the stage; skills are the durable artifact. Every Repo Show is meant to
     leave behind inheritable technique — MOOLLM skills you can compose with moollm,
-    fork, nest, and breed. Not slide decks: protocols, CARDs, SKILL.md bodies that
-    agents and humans can actually run. The pyramid grows downward mostly as skills.
+    fork, nest, and breed.     Not pitch decks: protocols, CARDs, SKILL.md bodies that
+    agents and humans can actually run. The pyramid widens beneath the apex — mostly as skills.
   not_vapor: |
     Brutalist GitHub surface: rebar (schemas), i-beams (process/*.yml), poured slab
     (monorepo verify). Browse without an account. Clone and break it. PR or issue.
@@ -198,11 +198,14 @@ audiences_if_you_stumbled_here:
     participate: "If this format interests you, start with the yaml — process/repo-show-format.yml"
 
 what_we_are_not_promising:
-  - "A greenlit series, stream, or distribution deal"
-  - "Viral scale, revenue, or timeline"
-  - "That AI is required — or forbidden"
-  - "A finished product — this is origin point, not launch day"
-  # Will Wright accepted 2026-07 — removed from not-promising; see meta.will_wright
+  section_title: "What we are not doing"
+  items:
+    - "No greenlit series, stream, or distribution deal"
+    - "No promised viral scale, revenue, or launch timeline"
+    - "No requirement to use AI — and no ban on AI either"
+    - "Not a finished product — origin point, not launch day"
+    - "Not blocked on Will (accepted July 2026); still no production or platform deal"
+  # Will Wright accepted 2026-07 — see meta.will_wright
 
 what_we_are_building_in_public:
   - "Kickoff Repo Show with Will Wright (accepted guest — repo-shows/will-wright/)"
@@ -272,6 +275,20 @@ long_now_and_later:
       witness: "Don Hopkins in audience; John Gilmore also at talk"
       clip: ../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml#open-source-simcity-audience-question
       video: "https://youtu.be/Dfc-DQorohc?t=3929"
+      short_form_video:
+        clip_id: open-source-simcity-audience-question
+        pitch: "Will's answer → Micropolis as direct documented result"
+        production: ../process/post-production/adorable-minutes-ae.yml
+    alan_kay_lineage:
+      same_critique: "Open-source / articulate SimCity rules so assumptions are visible and remixable"
+      kay_olpc_thread: ../characters/will-wright/sources/2007-11-16-simcity-rules-alan-kay/article.md
+      kay_quote: "Has anyone tried to articulate the SimCity rules (e.g. in English sentences)?"
+      show_ideas: ../characters/alan-kay/ideas.md
+      answers:
+        - ../characters/don-hopkins/open-sourcing-simcity-for-olpc.md
+        - https://github.com/SimHacker/MicropolisCore
+        - https://github.com/SimHacker/moollm
+        - ../README.md
     don_denial:
       what: "Don did NOT submit the Long Now question; Gilmore did not either"
       receipt: ../characters/will-wright/sources/2006-11-13-simcity-olpc-email-thread/01-spark-and-will-support-nov-2006.md

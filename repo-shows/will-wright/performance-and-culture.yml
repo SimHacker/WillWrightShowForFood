@@ -47,7 +47,7 @@ puppet_kinds:
     what: |
       **Modular face puppet per guest** — their photo + Faceball Construction Set attachments.
       Guest puppeteers **live** on stream, or **records offline** and submits clips. Exemplar:
-      **Game Gosling at the PDP-8** — young James, satisfied, hotrod iron behind him.
+      **James Gosling at the PDP-8** — young James, satisfied, hotrod iron behind him.
     spec: ../../apps/performance-space/faceball-construction-set.yml#guest_characters
     not: "Voice clone; host impersonation — guest drives their own mouth through the hole"
   voice_puppet:
