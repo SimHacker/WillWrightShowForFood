@@ -39,4 +39,6 @@ see_also:
   - { path: ideas.md, why: "Conversation hooks — topic menu for invitation browsing" }
   - { path: pie-menus-and-pop-ups.md, why: "Show prep — pop-up ↔ pie retrospective" }
   - { path: correspondence.yml, why: "Public-safe thread digest — pie menus, Fabrik, Lively/SqueakJS" }
+  - { path: from-alan-kay.yml, why: "What Alan Kay says about Dan — PARC hire, Fabrik, pie menus" }
+  - { path: ../alan-kay/people-index.yml, why: "Kay mentions cross-index" }
   - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses — self or assisted contribution" }

@@ -1,0 +1,49 @@
+# What Alan Kay says about Dan Ingalls — public sources only
+# Index: ../alan-kay/people-index.yml
+
+character: dan-ingalls
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Kay credits Ingalls as the implementer who turned Smalltalk from ideas into working systems —
+    hallway recruit with "stars in their eyes," impact "cannot be overstated." Ingalls built Smalltalk-72
+    from the "page of code" bet, invented BitBLT and pop-up menus, and later Fabrik at Apple. Alan introduced
+    Don to Dan via the Fabrik PE paper (2018), recalling **"swiped pie menus"** in Fabrik (~1986).
+
+sources:
+  quora:
+    - recap: ../alan-kay/media/quora-recaps/parc-vpri-how-research-worked.md
+      topics: [PARC hiring, hallway recruit, stars in their eyes]
+    - recap: ../alan-kay/media/quora-recaps/oop-messaging-and-what-comes-next.md
+      topics: [Smalltalk implementation with Chuck Thacker hardware]
+    - recap: ../alan-kay/media/quora-recaps/steps-nile-runnable-math.md
+      topics: [Ingalls readable syntax in STEPS/Nile context]
+  yoot_interview:
+    people_md: https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md#dan-ingalls
+  mail_digest:
+    - ../alan-kay/correspondence.yml  # Fabrik intro, pie menus
+
+quotes:
+  - text: "I recall 'swiped pie menus' being used at Apple in the mid-80s in the Fabrik visual language project."
+    source: correspondence.yml / Fabrik thread
+    use: invitation + pie-menu archaeology with Don
+
+artifacts:
+  - redirect: characters/dan-ingalls/media/from-mail/  # Fabrik PE paper — primary copy
+  - pending: characters/alan-kay/media/from-mail/  # wooden Dynabook photos — PARC era context
+
+show_hooks:
+  - "Alan → Don → Dan: the Fabrik paper as introduction"
+  - "Pop-up menus (Ingalls) ↔ pie menus (Don) — Alan as witness"
+  - "Smalltalk 50th — Kay warns story-form history removes Ingalls + Thacker richness"
+
+ideas:
+  - path: ideas.md
+    add: "Kay's Quora hiring story — Ingalls as the hire who made Dynabook real"
+  - path: pie-menus-and-pop-ups.md
+    add: "Alan Kay as third-party witness to Fabrik swiped pie menus"
+
+see_also:
+  - { path: ../alan-kay/correspondence.yml, why: "Fabrik / pie menu thread" }
+  - { path: ../alan-kay/ideas.md#4, why: "Yoot × Engelbart show pairs Dan on Smalltalk lineage" }

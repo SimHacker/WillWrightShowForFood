@@ -39,3 +39,8 @@ sources:
     - { title: "Yoot Saito × Alan Kay interview (OCR-restored by Don) — companion to his Engelbart interview", url: "https://github.com/YootTowerManagement/YootTower/tree/main/Yoot_Saito_Alan_Kay_Interview" }
   papers: []
   blogs: []
+
+see_also:
+  - { path: from-alan-kay.yml, why: "Alan reviewed the 1993 interview transcript; corrections in YootTower" }
+  - { path: ../alan-kay/people-index.yml, why: "Kay on people in characters/" }
+  - { path: ../alan-kay/media/quora-recaps/, why: "Quora recaps mined for Kay's public portraits of PARC people" }

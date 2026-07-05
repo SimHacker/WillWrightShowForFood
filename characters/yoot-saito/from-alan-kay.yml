@@ -1,0 +1,32 @@
+# What Alan Kay says about Yoot Saito — public sources only
+
+character: yoot-saito
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Yoot personally interviewed Alan Kay in Japan (~1993) for the 25th anniversary of Engelbart's 1968 demo.
+    Don OCR-restored the transcript; **Alan reviewed names, timeline, and corrections** (including People.md
+    entries for PARC figures). Alan's feedback improved the published companion in YootTower.
+
+sources:
+  mail_digest:
+    - ../alan-kay/correspondence.yml  # transcript review
+    - ../alan-kay/media/from-mail/REVIEW.yml  # yoot-transcript-review thread
+  yoot_interview:
+    transcript: https://github.com/YootTowerManagement/YootTower/tree/main/Yoot_Saito_Alan_Kay_Interview
+    people_md: https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md#yutaka-yoot-saito
+
+artifacts:
+  canonical_transcript: YootTower/Yoot_Saito_Alan_Kay_Interview/
+  working_scans: characters/yoot-saito/media/from-mail/  # page01–21 — not duplicated in alan-kay
+  private_note: YootTowerManagement/Content/AlanKayInterview/Kids-Reading-Performance.md
+
+show_hooks:
+  - "Alan reviewed the transcript — what he corrected and why"
+  - "Yoot as primary interviewer of Engelbart + Kay in Japan"
+  - "Kids-reading performance of the interview text"
+
+see_also:
+  - { path: ../douglas-engelbart/from-alan-kay.yml, why: "Engelbart 25th anniversary frame" }
+  - { path: ../alan-kay/ideas.md#5, why: "Show hook #5" }

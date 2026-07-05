@@ -1,8 +1,8 @@
-# james-gosling — media from mail exports
-# Private mail: see DonHopkins/characters/don-hopkins/email-archive/INDEX.yml
+# james-gosling — media from mail
 
 character: james-gosling
 consent_note: Public respectful portrayal for invitation browsing; subject may request removal
 artifact_count: 0
 
-artifacts: []
+artifacts:
+  []

@@ -1,0 +1,25 @@
+# heinz-lemke — media from mail
+
+character: heinz-lemke
+consent_note: Public respectful portrayal for invitation browsing; subject may request removal
+artifact_count: 6
+
+artifacts:
+  - file: from-mail/paper-datastructuresforanetworkdesignsystem.pdf
+    kind: paper
+    title: "paper-datastructuresforanetworkdesignsystem"
+  - file: from-mail/paper-designprinciplesofhandgestureinterfacesformicrointeractions.pdf
+    kind: paper
+    title: "paper-designprinciplesofhandgestureinterfacesformicrointeractions"
+  - file: from-mail/paper-pixie-a-new-approach-to-man-machine-communication.pdf
+    kind: paper
+    title: "paper-pixie-a-new-approach-to-man-machine-communication"
+  - file: from-mail/paper-univcambridge-colloquia-29th-june-1967-hulemke.pdf
+    kind: paper
+    title: "paper-univcambridge-colloquia-29th-june-1967-hulemke"
+  - file: from-mail/paper-univcambridge-seminar_2nd-dec-1970-hulemke.pdf
+    kind: paper
+    title: "paper-univcambridge-seminar_2nd-dec-1970-hulemke"
+  - file: from-mail/paper-wiseman-notes-on-radial-menus-in-pixie.pdf
+    kind: paper
+    title: "paper-wiseman-notes-on-radial-menus-in-pixie"

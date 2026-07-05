@@ -54,5 +54,7 @@ sources:
 see_also:
   - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
   - { path: eulogy-ted-nelson.md, why: "Ted Nelson's eulogy — primary source for the memorial segment" }
+  - { path: from-alan-kay.yml, why: "Kay on augmentation, inverse vandalism, PIXIE, Yoot interview" }
+  - { path: ../yoot-saito/from-alan-kay.yml, why: "Yoot interviewed Engelbart; Alan reviewed transcript" }
   - { path: ../ted-nelson/, why: "Hypertext peer + best friend who can discuss him on air" }
   - { path: ../../schemas/portrayal-standards.yml#memorial_mode, why: "How memorial guests are handled" }

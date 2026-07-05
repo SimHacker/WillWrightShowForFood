@@ -1,0 +1,25 @@
+# What Alan Kay says about Brian Harvey — public sources only
+
+character: brian-harvey
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Kay's public writing places **Snap!/Logo/Etoys-class systems** as the kind of end-user programmable
+    media HyperCard proved — and what browsers still lack ("live system underneath"). Brian's Berkeley Logo
+    → BJC → Snap! line is the living constructionist answer Kay points toward in Quora + show hooks.
+
+sources:
+  quora:
+    - recap: ../alan-kay/media/quora-recaps/hypercard-personal-computing-breakthrough.md
+    - recap: ../alan-kay/media/quora-recaps/microworlds-sure-and-ten-things-heuristic.md
+  mail_digest:
+    - ../alan-kay/media/from-mail/REVIEW.yml  # snap-simcity-cam6 — Alan CC quotes if any
+
+show_hooks:
+  - "HyperCard second pass with Snap! — Kay's criterion for real personal computing"
+  - "Pair show with Jens — Kay as elder witness to Logo lineage"
+
+see_also:
+  - { path: ../jens-monig/from-alan-kay.yml, why: "Snap! pair" }
+  - { path: ../seymour-papert/from-alan-kay.yml, why: "Logo/constructionism" }

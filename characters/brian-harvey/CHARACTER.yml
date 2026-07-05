@@ -33,3 +33,9 @@ sources:
     - https://snap.berkeley.edu/about
   papers: []
   blogs: []
+
+see_also:
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: from-alan-kay.yml, why: "Kay on Snap!/HyperCard bar for end-user programming" }
+  - { path: ../jens-monig/from-alan-kay.yml, why: "Pair show — Kay microworlds segment" }
+  - { path: ../alan-kay/people-index.yml, why: "Kay mentions cross-index" }

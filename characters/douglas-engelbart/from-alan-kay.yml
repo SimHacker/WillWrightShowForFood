@@ -1,0 +1,49 @@
+# What Alan Kay says about Douglas Engelbart — public sources only
+
+character: douglas-engelbart
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Engelbart is Kay's augmentation north star — not "tools" but **augmentation** of human intellect.
+    Kay saw the 1968 demo at Utah; NLS shaped PARC windows, menus, and collaboration. Kay repeats that
+    the web did not recover Engelbart's goals ("inverse vandalism"). PIXIE (light-pen menus on Engelbart-era
+    hardware) threads through Don's preservation mail with Alan.
+
+sources:
+  quora:
+    - recap: ../alan-kay/media/quora-recaps/engelbart-media-inverse-vandalism.md
+      topics: [augmentation vs tool, literacy, WWW vs NLS, inverse vandalism]
+    - recap: ../alan-kay/media/quora-recaps/hypercard-personal-computing-breakthrough.md
+      topics: [Engelbart 1962 proposal as central resource for personal computing]
+    - recap: ../alan-kay/media/quora-recaps/computer-revolution-not-yet.md
+      topics: [Illich literacy parallel]
+  yoot_interview:
+    people_md: https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md#douglas-engelbart
+    transcript: https://github.com/YootTowerManagement/YootTower/tree/main/Yoot_Saito_Alan_Kay_Interview
+  mail_digest:
+    - ../alan-kay/media/from-mail/REVIEW.yml  # pixie-preservation cluster
+
+quotes:
+  - text: "Engelbart's points … augmentation is not the same as 'tools'."
+    source: engelbart-media-inverse-vandalism recap (verify Quora)
+  - text: "Berners-Lee apologized for not knowing Engelbart — didn't fix ~30 years."
+    source: same recap
+
+artifacts:
+  - redirect: characters/douglas-engelbart/  # memorial primary
+  - pending: ../alan-kay/media/from-mail/  # PIXIE papers → also heinz-lemke, engelbart memorial show
+  - show: characters/yoot-saito/ + YootTower transcript (25th anniversary of 1968 demo)
+
+show_hooks:
+  - "Alan Kay + Yoot Saito + Engelbart memorial — the 1993 interview on air"
+  - "PIXIE preservation — Kay, Lemke, Ted Selker, Don"
+  - "Kids-reading the Yoot/Engelbart transcript — oral performance vs literacy loss Kay warns about"
+
+memorial:
+  who_can_discuss: alan-kay  # already in CHARACTER.yml — enriched here
+  draw_on: inverse vandalism recap + Yoot companion interview
+
+see_also:
+  - { path: ../yoot-saito/from-alan-kay.yml, why: "Interviewer of Engelbart + Kay in Japan" }
+  - { path: ../alan-kay/media/quora-recaps/engelbart-media-inverse-vandalism.md, why: "Primary recap" }

@@ -25,6 +25,7 @@ memorial:
   mode: represent_and_discuss
   rule: "Represent and discuss his documented work and stories. Do not interview, do not speak as him, invent no inner life or quotes."
   who_can_discuss:
+    - { who: alan-kay, why: "Apple Fellow co-productized HyperCard; Quora eyewitness account" }
     - { who: arthur-van-hoff, why: "Built HyperLook — a NeWS/PostScript reimagining of Atkinson's HyperCard" }
     - { who: don-hopkins, why: "HyperLook → SimCity lineage; HyperCard's influence on his work" }
   draw_on_for_shows:
@@ -45,5 +46,6 @@ sources:
 
 see_also:
   - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
+  - { path: from-alan-kay.yml, why: "Kay eyewitness — HyperCard productization, Magic Slate, 4M scripts" }
   - { path: ../arthur-van-hoff/, why: "HyperLook = a NeWS reimagining of HyperCard — Atkinson's idea, carried forward" }
   - { path: ../../schemas/portrayal-standards.yml#memorial_mode, why: "How memorial guests are handled" }

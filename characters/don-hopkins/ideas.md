@@ -33,6 +33,9 @@
 | [`don-will-mining-hub.yml`](don-will-mining-hub.yml) | Don × Will arcs — compression, Spore retrospective, Sims craft, Kaleida, Long Now triangle |
 | [`levity-bounce-space-seed.md`](levity-bounce-space-seed.md) | Bounce @ Levity — patch-cord trail with [`../jaron-lanier/`](../jaron-lanier/README.md) + [`../david-levitt/`](../david-levitt/README.md) |
 | [`../will-wright/adorable-minutes.md`](../will-wright/adorable-minutes.md) | Async one-minute Q&A — [`will-wright-adorable-minutes.yml`](../../repo-shows/will-wright-adorable-minutes.yml) |
+| [`hypercard-network-hyperlook-hn-2026.md`](hypercard-network-hyperlook-hn-2026.md) | Networked HyperCard fantasy → HyperLook on NeWS (HN Mar 2026) |
+| [`hyperlook-news-postscript-simcity.md`](hyperlook-news-postscript-simcity.md) | HyperLook SimCity — send-code microworld on NeWS |
+| [`logo-adventure-c64-terrapin.md`](logo-adventure-c64-terrapin.md) | Logo REPL as adventure parser (age 17, Terrapin C64) → MOOLLM adventure compiler |
 | [`repo-shows/scott-adams/`](../../repo-shows/scott-adams/) | Adventure-as-data ancestor — portable VM + 16K worlds |
 | [`repo-shows/walter-bender-olpc/`](../../repo-shows/walter-bender-olpc.yml) | Stone Soup, Sugar, open-sourcing SimCity |
 

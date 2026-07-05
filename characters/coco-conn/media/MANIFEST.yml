@@ -1,0 +1,12 @@
+# coco-conn — media
+
+character: coco-conn
+consent_note: Portrait of Coco Conn; confirm before public use beyond invitation stub
+
+artifacts:
+  - file: photo-amsterdam-small-talk-eating-house.jpeg
+    kind: photo
+    title: "photo-amsterdam-small-talk-eating-house"
+  - file: photo-amsterdam-visit-2024.jpeg
+    kind: photo
+    title: "photo-amsterdam-visit-2024"

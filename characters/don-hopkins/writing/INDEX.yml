@@ -6,6 +6,11 @@ writing_index:
   medium: https://donhopkins.medium.com
 
 featured_essays:
+  - title: "Logo Adventure for C64 Terrapin Logo"
+    url: https://medium.com/@donhopkins/logo-adventure-for-c64-terrapin-logo-4c684a240b53
+    date: 2018-04-27
+    wwsff: ../logo-adventure-c64-terrapin.md
+    note: "First commercial code (age 17) — Logo REPL as text-adventure parser; ancestor of MOOLLM adventure compiler"
   - title: "Open Sourcing SimCity"
     url: https://donhopkins.medium.com/open-sourcing-simcity-58470a275446
     wwsff: ../open-sourcing-simcity-for-olpc.md

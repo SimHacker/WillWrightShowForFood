@@ -1,0 +1,10 @@
+# david-levitt — media from mail
+
+character: david-levitt
+consent_note: Public respectful portrayal for invitation browsing; subject may request removal
+artifact_count: 1
+
+artifacts:
+  - file: from-mail/paper-pantomime-teaser.pdf
+    kind: paper
+    title: "paper-pantomime-teaser"

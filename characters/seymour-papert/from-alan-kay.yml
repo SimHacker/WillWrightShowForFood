@@ -1,0 +1,37 @@
+# What Alan Kay says about Seymour Papert — public sources only
+
+character: seymour-papert
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Papert shaped the Dynabook — Kay recruited PARC researchers while literally handwaving the **cardboard
+    Dynabook** model he built after meeting Papert. LOGO and children programming at MIT was the moment Kay
+    saw what personal computing was *for*. Papert's constructionism (on Piaget) → microworlds, Etoys, the
+    "Sure!" answer when asked about libraries adopting constructivism.
+
+sources:
+  quora:
+    - recap: ../alan-kay/media/quora-recaps/microworlds-sure-and-ten-things-heuristic.md
+      topics: [microworlds Sure!, 10/20 examples, VPRI Etoys in schools]
+    - recap: ../alan-kay/media/quora-recaps/parc-vpri-how-research-worked.md
+      topics: [cardboard Dynabook after Papert meeting]
+    - recap: ../alan-kay/media/quora-recaps/carnegie-libraries-and-literacy-vision.md
+      topics: [powerful ideas + literacy parallel]
+  yoot_interview:
+    people_md: https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md#seymour-papert
+
+quotes:
+  - text: "Only interested in people who got 'stars in their eyes'" — after cardboard Dynabook from Papert context
+    source: parc-vpri recap (verify Quora)
+
+show_hooks:
+  - "Microworlds 'Sure!' — Papert libraries + MOOLLM constructionist jam"
+  - "Dynabook ↔ Mindstorms — Kay as fellow constructionist discussant on memorial show"
+
+memorial:
+  who_can_discuss: alan-kay  # already in seymour-papert CHARACTER.yml
+
+see_also:
+  - { path: ../jean-piaget/from-alan-kay.yml, why: "Papert's Piaget root — Kay cites the chain" }
+  - { path: ../walter-bender/from-alan-kay.yml, why: "OLPC/Etoys as Papert line" }

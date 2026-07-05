@@ -37,3 +37,6 @@ Parallel to the official Sun **X11** port; ancestor of every later SimCity Unix 
 - Web — HTML/CSS/SVG/Canvas + **WebGPU holodeck** ([`porter-duff-postscript-to-webgpu.md`](porter-duff-postscript-to-webgpu.md))
 
 → [`career/simcity-lineage.yml`](career/simcity-lineage.yml) · [`../../characters/arthur-van-hoff/`](../../characters/arthur-van-hoff/) · [`../../process/trails/live-objects.md`](../../process/trails/live-objects.md)
+
+**HN (Mar 2026):** jandrese asks about networked HyperCard stacks; Don points to HyperLook's networking —
+[`hypercard-network-hyperlook-hn-2026.md`](hypercard-network-hyperlook-hn-2026.md).

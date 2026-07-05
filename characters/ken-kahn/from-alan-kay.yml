@@ -1,0 +1,20 @@
+# What Alan Kay says about Ken Kahn — public sources only
+
+character: ken-kahn
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Kay groups Logo-class, Etoys, and children's programmable media as the Dynabook mission — Kahn's **ToonTalk**
+    sits in that constructionist line (INDEX lists Ken as Papert memorial discussant). No direct Kay↔Kahn
+    quote in mined public corpus yet.
+
+sources:
+  quora:
+    - recap: ../alan-kay/media/quora-recaps/microworlds-sure-and-ten-things-heuristic.md
+
+show_hooks:
+  - "ToonTalk as microworld — Kay constructionist criteria applied"
+
+see_also:
+  - { path: ../seymour-papert/from-alan-kay.yml, why: "Constructionism memorial discussant chain" }

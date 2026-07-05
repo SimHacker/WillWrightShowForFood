@@ -1,0 +1,28 @@
+# What Alan Kay says about Arthur van Hoff — public sources only
+
+character: arthur-van-hoff
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Kay praised **NeWS** as "the right way to go (except it missed the live system underneath)" —
+    van Hoff's HyperLook/Bongo/HyperNeWS line is Don's continuation of that PostScript window-system bet.
+    Quora browsers/HyperCard thread links NeWS, send-a-program, and document models.
+
+sources:
+  quora:
+    - recap: ../alan-kay/media/quora-recaps/browsers-documents-news-hypercard-hyperlook.md
+  mail_digest:
+    - ../alan-kay/correspondence.yml  # on_news quote
+
+quotes:
+  - text: "I thought NeWS was 'the right way to go' (except it missed the live system underneath)."
+    source: correspondence.yml
+
+show_hooks:
+  - "HyperLook as HyperCard on NeWS — Kay's live-system critique as framing"
+  - "NeWS gang reunion — Gosling, Rosenthal, Owen, Arthur"
+
+see_also:
+  - { path: ../bill-atkinson/from-alan-kay.yml, why: "HyperCard → HyperLook" }
+  - { path: ../james-gosling/from-alan-kay.yml, why: "NeWS co-lineage" }

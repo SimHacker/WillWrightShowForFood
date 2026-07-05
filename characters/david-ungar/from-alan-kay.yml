@@ -1,0 +1,24 @@
+# What Alan Kay says about David Ungar — public sources only
+
+character: david-ungar
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Kay traces **live objects** and late-binding OS rethink to Self, Croquet, and Smalltalk lineage — Ungar's
+    Self is the modern branch Kay pairs with MOOLLM in Don's crazy-idea jam. Quora: successor-to-OOP,
+    late-binding, Croquet/Reed pseudotime threads.
+
+sources:
+  quora:
+    - recap: ../alan-kay/media/quora-recaps/oop-messaging-and-what-comes-next.md
+    - recap: ../alan-kay/media/quora-recaps/late-binding-and-rethinking-the-os.md
+  mail_digest:
+    - ../alan-kay/correspondence.yml  # MOOLLM / Self lineage
+
+show_hooks:
+  - "Self × MOOLLM — Kay as lineage elder"
+  - "Late binding vs browser lock-in — Ungar + Kay + Don"
+
+see_also:
+  - { path: ../../process/crazy-idea-jam.yml, why: "self_times_moollm" }

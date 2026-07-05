@@ -1,0 +1,24 @@
+# What Alan Kay says about Cynthia Solomon — public sources only
+
+character: cynthia-solomon
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Solomon co-created Logo with Feurzeig and Papert (1967) — Kay's Dynabook mission assumes that lineage.
+    Yoot People.md lists Feurzeig+Papert OO educational desktop; Kay's microworlds answers treat Logo-class
+    systems as the template for library-scale constructivism.
+
+sources:
+  yoot_interview:
+    people_md: https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md
+    note: "Feurzeig+Papert Logo genesis — Kay's PARC work continues the arc"
+  quora:
+    - recap: ../alan-kay/media/quora-recaps/microworlds-sure-and-ten-things-heuristic.md
+
+show_hooks:
+  - "Logo co-creator + Kay microworlds 'Sure!' — Snap!Con Barcelona connection (Don met Cynthia)"
+
+see_also:
+  - { path: ../seymour-papert/from-alan-kay.yml, why: "Logo/constructionism" }
+  - { path: ../brian-harvey/from-alan-kay.yml, why: "Logo → Snap! line" }

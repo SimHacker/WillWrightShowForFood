@@ -1,0 +1,22 @@
+# What Alan Kay says about Owen Densmore — public sources only
+
+character: owen-densmore
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Densmore built object-oriented PostScript (`class.ps`) for NeWS — the implementation side of Kay's
+    "NeWS was the right way to go" judgment. Alan Kay ideas hook #8 lists Owen with Gosling and Rosenthal
+    for send-code-not-commands / window-system segment.
+
+sources:
+  quora:
+    - recap: ../alan-kay/media/quora-recaps/browsers-documents-news-hypercard-hyperlook.md
+  mail_digest:
+    - ../alan-kay/correspondence.yml
+
+show_hooks:
+  - "NeWS OO PostScript — Kay's live-system critique applied to Owen's class.ps"
+
+see_also:
+  - { path: ../james-gosling/from-alan-kay.yml, why: "NeWS team" }

@@ -1,0 +1,36 @@
+# don-hopkins — mail-sourced evidence
+
+character: don-hopkins
+artifact_count: 10
+
+artifacts:
+  - file: from-mail/paper-screenshot-2023-07-16-at-174211.png
+    kind: artifact
+    title: "paper-screenshot-2023-07-16-at-174211"
+  - file: from-mail/paper-wiseman-page-466.pdf
+    kind: paper
+    title: "paper-wiseman-page-466"
+  - file: from-mail/screenshot-screen-shot-2018-07-16-at-223021.png
+    kind: artifact
+    title: "screenshot-screen-shot-2018-07-16-at-223021"
+  - file: from-mail/screenshot-screen-shot-2018-07-16-at-223044.png
+    kind: artifact
+    title: "screenshot-screen-shot-2018-07-16-at-223044"
+  - file: from-mail/screenshot-screen-shot-2018-07-16-at-223108.png
+    kind: artifact
+    title: "screenshot-screen-shot-2018-07-16-at-223108"
+  - file: from-mail/screenshot-screen-shot-2018-07-16-at-223127.png
+    kind: artifact
+    title: "screenshot-screen-shot-2018-07-16-at-223127"
+  - file: from-mail/screenshot-screen-shot-2018-07-16-at-231927.png
+    kind: artifact
+    title: "screenshot-screen-shot-2018-07-16-at-231927"
+  - file: from-mail/screenshot-screen-shot-2018-07-16-at-232003.png
+    kind: artifact
+    title: "screenshot-screen-shot-2018-07-16-at-232003"
+  - file: from-mail/screenshot-screen-shot-2018-07-16-at-232848.png
+    kind: artifact
+    title: "screenshot-screen-shot-2018-07-16-at-232848"
+  - file: from-mail/screenshot-screen-shot-2018-07-16-at-233006.png
+    kind: artifact
+    title: "screenshot-screen-shot-2018-07-16-at-233006"

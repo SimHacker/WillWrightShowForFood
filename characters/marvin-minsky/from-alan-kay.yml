@@ -1,0 +1,28 @@
+# What Alan Kay says about Marvin Minsky — public sources only
+
+character: marvin-minsky
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Minsky co-founded the MIT AI Lab with McCarthy; with Papert developed LOGO/turtle ideas Kay cites for
+    the Dynabook. Kay notes Minsky's **frames** grew from semantic-network ideas Kay saw in the late 1960s.
+    Minsky–Papert work with children influenced Kay's educational aims.
+
+sources:
+  yoot_interview:
+    people_md: https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md#marvin-minsky
+  quora:
+    - recap: ../alan-kay/media/quora-recaps/microworlds-sure-and-ten-things-heuristic.md
+      topics: [AI Lab / Logo orbit]
+
+memorial:
+  who_can_discuss: alan-kay  # add to marvin-minsky CHARACTER.yml
+
+show_hooks:
+  - "Frames + microworlds — Kay as contemporary witness"
+  - "Pair with Henry/Margaret Minsky on Society of Mind vs today's AI"
+
+see_also:
+  - { path: ../seymour-papert/from-alan-kay.yml, why: "Logo/turtle co-lineage" }
+  - { path: ../ken-kahn/from-alan-kay.yml, why: "AI Lab → Toontalk constructionist line" }

@@ -1,0 +1,24 @@
+# What Alan Kay says about Diana Merry-Shapiro — public sources only
+
+character: diana-merry-shapiro
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Kay recruited Diana Merry from the physics lab — she was doing a typing service but showed "programming
+    kind of thinking"; became one of the great PARC "bulldogs." At PARC she worked with Dan Ingalls on
+    **BitBLT** and Smalltalk text/windowing. Kay's Quora PARC hiring answer is a primary portrait.
+
+sources:
+  quora:
+    - recap: ../alan-kay/media/quora-recaps/parc-vpri-how-research-worked.md
+      topics: [physics-lab PA → bulldog programmer]
+  yoot_interview:
+    people_md: https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md#diana-merry-shapiro
+
+show_hooks:
+  - "Women & trans pioneers — Kay's hiring story as primary source"
+  - "BitBLT with Ingalls — technical credit from Kay's account"
+
+see_also:
+  - { path: ../dan-ingalls/from-alan-kay.yml, why: "BitBLT collaboration" }

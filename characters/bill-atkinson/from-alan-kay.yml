@@ -1,0 +1,39 @@
+# What Alan Kay says about Bill Atkinson — public sources only
+
+character: bill-atkinson
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Kay was Apple Fellow alongside Atkinson during HyperCard productization — eyewitness to Magic Slate →
+    Rolodex → Wild Card → HyperCard. Kay helped Bill get Sculley to champion it and insisted on end-user
+    **HyperTalk** programmability. Result: "masterpiece" with >4M scripted stacks — largest end-user programming
+    adoption Kay knows of. Atkinson wanted Dynabook-like symmetric authoring; HyperCard made a learnable slice
+    of PARC's vision for average users.
+
+sources:
+  quora:
+    - recap: ../alan-kay/media/quora-recaps/hypercard-personal-computing-breakthrough.md
+      topics: [Magic Slate, Sculley, HyperTalk, 4M scripts, masterpiece]
+    - recap: ../alan-kay/media/quora-recaps/browsers-documents-news-hypercard-hyperlook.md
+      topics: [HyperCard vs live system underneath]
+  yoot_interview:
+    people_md: https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md#bill-atkinson
+
+quotes:
+  - text: "HyperCard is an especially good example of a system that was finished and smoothed and documented beautifully."
+    source: correspondence.yml / public Kay writing
+  - text: ">4 million scripted applications … largest successful wide-scale adoption of an end-user media system with real programming in history."
+    source: hypercard-personal-computing-breakthrough recap (verify Quora)
+
+show_hooks:
+  - "Memorial segment: Kay + van Hoff — HyperCard → HyperLook → what 'live system underneath' means"
+  - "Second pass: HyperCard + Etoys/Snap! in 2026 — Atkinson's symmetric authoring vs today's browsers"
+
+memorial:
+  who_can_discuss: alan-kay  # add to bill-atkinson CHARACTER.yml who_can_discuss
+  pair_with: [arthur-van-hoff, brian-harvey, jens-monig]
+
+see_also:
+  - { path: ../arthur-van-hoff/from-alan-kay.yml, why: "HyperLook as NeWS reimagining of HyperCard" }
+  - { path: ../alan-kay/correspondence.yml, why: "on_hypercard quote" }

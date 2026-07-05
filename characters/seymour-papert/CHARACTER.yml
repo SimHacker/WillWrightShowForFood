@@ -58,6 +58,7 @@ sources:
 
 see_also:
   - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
+  - { path: from-alan-kay.yml, why: "Kay — cardboard Dynabook, microworlds Sure!, Dynabook mission" }
   - { path: ../jean-piaget/, why: "🕯️ His teacher in Geneva — constructivism, the root of constructionism" }
   - { path: ../marvin-minsky/, why: "🕯️ AI Lab co-founder; Perceptrons co-author" }
   - { path: ../walter-bender/, why: "OLPC — carries his constructionism forward (can discuss him)" }

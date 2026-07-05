@@ -34,9 +34,15 @@ sources:
 
 can_discuss:
   - { who: douglas-engelbart, why: "Recalled the 1968 demo's impact; memorial mode — represent + discuss, never speak as Doug" }
+  - { who: dan-ingalls, why: "PARC hire + Fabrik/pie-menu witness — see people-index.yml" }
+  - { who: bill-atkinson, why: "HyperCard co-productization eyewitness" }
+  - { who: seymour-papert, why: "Fellow constructionist; Dynabook ↔ Mindstorms" }
+  - { who: yoot-saito, why: "Reviewed 1993 interview transcript" }
 
 see_also:
   - { path: ideas.md, why: "Conversation hooks — long exchange + microworld show segments" }
+  - { path: people-index.yml, why: "Kay on everyone in characters/ — cross-ref hub" }
+  - { path: correspondence.yml, why: "Public-safe mail digest" }
   - { path: ../douglas-engelbart/, why: "Memorial — Alan is a discussant of Doug's work (two-way with Doug's who_can_discuss)" }
   - { path: ../douglas-engelbart/eulogy-ted-nelson.md, why: "Ted's eulogy for Doug — the memorial segment Alan can join" }
   - { path: ../yoot-saito/, why: "Yoot interviewed Alan (1993) for the 25th anniversary of Engelbart's demo" }

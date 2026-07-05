@@ -1,0 +1,105 @@
+# Alan Kay — attachment + thread review
+# review: approved | rejected on needs_don rows
+# Bulk approved 2026-07-06 (Don — approve all)
+
+meta:
+  character: alan-kay
+  updated: "2026-07-06"
+  attachments_on_disk: 13
+  decided_attachments: 13
+  needs_don_attachments: 0
+  decided_threads: 14
+  needs_don_threads: 0
+  bulk_approved: "2026-07-06"
+
+decided:
+  attachments_keep:
+    - id: wooden-dynabook-model
+      count: 5
+      files:
+        - artifact-14dcc4a2.jpg
+        - artifact-14dcc5ab.jpg
+        - artifact-14dcc619.jpg
+        - artifact-14dcc667.jpg
+        - artifact-14dcc6c5.jpg
+      review: approved
+    - id: dynabook-photos
+      count: 4
+      files:
+        - photo-1671293511762blob.jpg
+        - photo-1671293610377blob.jpg
+        - photo-1671293610377blob.png
+        - artifact-1582019912933blob.jpg
+      review: approved
+      note: "jpg+png pair kept both per bulk approve"
+    - id: pixie-film-still
+      count: 1
+      files:
+        - artifact-screen-shot-2018-05-17-at-95245-pm.png
+      review: approved
+    - id: pixie-yuja-wang
+      count: 1
+      files:
+        - photo-0wvl03notlmglj5fa.gif
+      review: approved
+    - id: olpc-etoys-papers
+      count: 2
+      files:
+        - paper-country-meeting-olpc-etoys-rfs1.pdf
+        - paper-multilingualetoys-smaller.jpg
+      review: approved
+
+  threads:
+    - id: yoot-transcript-corrections
+      disposition: skip
+      review: approved
+    - id: bbc-documentary
+      disposition: private
+      review: approved
+    - id: kodable-forward
+      disposition: skip
+      review: approved
+    - id: winograd-1996-talk
+      disposition: skip
+      review: approved
+    - id: open-yoot-tower
+      disposition: skip
+      review: approved
+    - id: aggregating-alan-writing
+      priority: P0
+      disposition: publish_literal
+      review: approved
+    - id: olpc-simcity
+      priority: P0
+      disposition: publish_literal
+      review: approved
+    - id: snap-simcity-cam6
+      priority: P0
+      disposition: digest_only
+      review: approved
+    - id: pie-menus-fabrik
+      priority: P1
+      disposition: publish_literal
+      review: approved
+    - id: pixie-preservation
+      priority: P1
+      disposition: keep
+      review: approved
+    - id: moollm-2026
+      priority: P1
+      disposition: digest_only
+      review: approved
+    - id: qwaq-2008
+      priority: P1
+      disposition: digest_only
+      review: approved
+    - id: news-hyperlook-bongo
+      priority: P2
+      disposition: publish_literal
+      review: approved
+    - id: wooden-dynabook-thread
+      priority: P1
+      disposition: keep
+      review: approved
+
+needs_don: {}

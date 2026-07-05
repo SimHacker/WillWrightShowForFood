@@ -1,0 +1,28 @@
+# What Alan Kay says about Jean Piaget — public sources only
+
+character: jean-piaget
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Kay treats Papert's Piaget years as the root of constructionism and the Dynabook mission — children build
+    models, not just use software. Kay's literacy / Illich / Carnegie library answers parallel Piaget's
+    developmental framing (powerful ideas at the right stage).
+
+sources:
+  quora:
+    - recap: ../alan-kay/media/quora-recaps/microworlds-sure-and-ten-things-heuristic.md
+    - recap: ../alan-kay/media/quora-recaps/carnegie-libraries-and-literacy-vision.md
+    - recap: ../alan-kay/media/quora-recaps/computer-revolution-not-yet.md
+  yoot_interview:
+    note: "Jeff Rulifson — Kay recalls discussing Piaget with him while designing language for kids"
+
+memorial:
+  who_can_discuss: alan-kay  # INDEX lists Piaget discussants including Alan
+
+show_hooks:
+  - "Genetic epistemology → Papert → Kay microworlds chain"
+  - "10 things / 20 examples heuristic — developmental staging of powerful ideas"
+
+see_also:
+  - { path: ../seymour-papert/from-alan-kay.yml, why: "Papert on Piaget in Geneva" }

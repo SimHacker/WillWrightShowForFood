@@ -13,3 +13,9 @@ Several facts are **to confirm** (role/titles, the "Dutch from Amsterdam" descri
 see [`CHARACTER.yml`](CHARACTER.yml).
 
 - Neighbor: [Don & David's history](../david-levitt/don-and-david-history.md)
+
+## Media
+
+| Artifact | Where |
+|----------|--------|
+| Amsterdam visit (May 2024) | [`media/photo-amsterdam-visit-2024.jpeg`](media/photo-amsterdam-visit-2024.jpeg) · [`media/MANIFEST.yml`](media/MANIFEST.yml) |

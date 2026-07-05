@@ -1,0 +1,25 @@
+# What Alan Kay says about Heinz Lemke — public sources only
+
+character: heinz-lemke
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    **PIXIE** preservation thread — Alan forwarded Cambridge colloquia papers (1967, 1970) on Wiseman's
+    PIXIE light-pen system; radial menus in PIXIE connect to Don's pie-menu archaeology. Kay engaged on
+    "Flight of the PIXIE with Yuja Wang" film still — Engelbart-era hardware history.
+
+sources:
+  mail_digest:
+    - ../alan-kay/media/from-mail/REVIEW.yml  # pixie-preservation cluster
+  artifacts:
+    - redirect: characters/alan-kay/media/from-mail/  # PIXIE papers — pending Don approval
+    - show: repo-shows/pixie-pie-menus-pdp7.yml
+
+show_hooks:
+  - "PIXIE trio — Lemke, Don, Ted Selker + Engelbart memorial"
+  - "Radial menus predating PARC — Kay as mail correspondent"
+
+see_also:
+  - { path: ../douglas-engelbart/from-alan-kay.yml, why: "PIXIE / Engelbart era" }
+  - { path: ../ted-selker/, why: "PIXIE thread co-guest" }

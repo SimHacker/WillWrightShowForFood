@@ -1,0 +1,115 @@
+# Alan Kay on people in characters/ — cross-reference index
+# Public sources only: Quora recaps, Yoot interview People.md, correspondence.yml digest.
+# Per-character detail: characters/<slug>/from-alan-kay.yml (when present)
+
+meta:
+  kay_hub: characters/alan-kay/
+  updated: "2026-07-06"
+  rule: |
+    Quotes from Quora OCR corpus — verify on live Quora before formal citation.
+    Mail bodies stay private; only correspondence.yml digests linked here.
+
+# --- WWSFF guests with from-alan-kay.yml ---
+
+enriched:
+  - dan-ingalls
+  - douglas-engelbart
+  - bill-atkinson
+  - seymour-papert
+  - yoot-saito
+  - marvin-minsky
+  - diana-merry-shapiro
+  - jean-piaget
+  - walter-bender
+  - brian-harvey
+  - jens-monig
+  - cynthia-solomon
+  - ken-kahn
+  - terry-winograd
+  - heinz-lemke
+  - david-ungar
+  - arthur-van-hoff
+  - james-gosling
+  - owen-densmore
+  - vanessa-freudenberg
+  - craig-latta
+
+# --- Mentioned in Kay sources; enrich next ---
+
+pending:
+  - slug: ted-selker
+    kay_on: "PIXIE preservation thread (Don mail); CS547 orbit"
+  - slug: david-rosenthal
+    kay_on: "NeWS 'right way to go' (correspondence.yml); window-system lineage"
+  - slug: bret-victor
+    kay_on: "PARC hiring culture cross-ref in parc-vpri recap"
+  - slug: brad-myers
+    kay_on: "UI canon (interaction techniques) in teitelman recap periphery"
+  - slug: chaim-gingold
+    kay_on: "SimCity black-box / constructionist thread (OLPC mail — digest only)"
+  - slug: will-wright
+    kay_on: "SimCity as black box vs open model (OLPC mail — digest); not direct Kay↔Will quote"
+  - slug: sam-arbesman
+    kay_on: "Complexity / CA orbit; no substantive Kay portrait yet"
+  - slug: jef-raskin
+    kay_on: "Yoot People.md — Macintosh/HyperCard era context"
+  - slug: ted-nelson
+    kay_on: "Engelbart augmentation thread; inverse vandalism recap"
+  - slug: gary-drescher
+    kay_on: "McCarthy Advice Taker / schema — teitelman + oop recaps periphery"
+  - slug: norman-margolus
+    kay_on: "CA machines book in Kay's historical canon periphery"
+  - slug: david-levitt
+    kay_on: "Pantomime teaser in Alan mail — redirect to david-levitt, not Kay portrait"
+
+# --- Kay names them; no WWSFF character dir yet ---
+
+kay_mentions_no_dir:
+  - name: Butler Lampson
+    wwsff_note: "Consider stub or fold into alan-kay show — quintessential CS (Quora + Yoot People.md)"
+    sources: [butler-lampson-significance.md, Yoot People.md, parc-vpri-how-research-worked.md]
+  - name: Warren Teitelman
+    sources: [teitelman-dwim-programming-as-interaction.md]
+  - name: John McCarthy
+    sources: [oop-messaging-and-what-comes-next.md, teitelman-dwim-programming-as-interaction.md]
+  - name: Bob Taylor
+    sources: [parc-vpri-how-research-worked.md, Yoot People.md]
+  - name: Chuck Thacker
+    sources: [oop-messaging-and-what-comes-next.md, Yoot People.md]
+  - name: Ted Kaehler
+    sources: [parc-vpri-how-research-worked.md, correspondence.yml halos]
+  - name: Adele Goldberg
+    sources: [parc-vpri-how-research-worked.md, Yoot People.md]
+  - name: Dave Reed
+    sources: [oop-messaging-and-what-comes-next.md]
+  - name: Ivan Sutherland
+    sources: [oop-messaging-and-what-comes-next.md, hypercard recap Sketchpad line]
+  - name: Doug Lenat
+    sources: [lenat-cyc-knowledge-and-slow-thinking.md]
+
+# --- Source map ---
+
+recaps_by_theme:
+  parc_people: media/quora-recaps/parc-vpri-how-research-worked.md
+  hypercard_atkinson: media/quora-recaps/hypercard-personal-computing-breakthrough.md
+  engelbart: media/quora-recaps/engelbart-media-inverse-vandalism.md
+  papert_microworlds: media/quora-recaps/microworlds-sure-and-ten-things-heuristic.md
+  oop_mccarthy_reed: media/quora-recaps/oop-messaging-and-what-comes-next.md
+  lampson: media/quora-recaps/butler-lampson-significance.md
+  teitelman: media/quora-recaps/teitelman-dwim-programming-as-interaction.md
+  mail_digest: correspondence.yml
+  yoot_people: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md"
+
+show_pairings:
+  - guests: [alan-kay, dan-ingalls]
+    hook: "Fabrik swiped pie menus + PARC hiring stars-in-their-eyes"
+  - guests: [alan-kay, douglas-engelbart, yoot-saito]
+    hook: "1968 demo 25th anniversary interview + inverse vandalism"
+  - guests: [alan-kay, bill-atkinson, arthur-van-hoff]
+    hook: "HyperCard masterpiece → HyperLook → live system underneath"
+  - guests: [alan-kay, seymour-papert, walter-bender, brian-harvey, jens-monig]
+    hook: "Microworlds Sure! + Etoys/Snap! as answers"
+  - guests: [alan-kay, heinz-lemke, douglas-engelbart]
+    hook: "PIXIE papers + radial menus preservation"
+  - guests: [alan-kay, craig-latta, vanessa-freudenberg, dan-ingalls]
+    hook: "Vanessa memorial — SqueakJS/Caffeine/Croquet line"

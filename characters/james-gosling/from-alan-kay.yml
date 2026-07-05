@@ -1,0 +1,24 @@
+# What Alan Kay says about James Gosling — public sources only
+
+character: james-gosling
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Gosling built **NeWS** at Sun — Kay's public praise/critique of NeWS (right document model, missing live
+    kernel) frames the window-system show with Gosling, Rosenthal, Densmore, van Hoff. Alan Kay ideas hook #8
+    names Gosling as co-guest for browser lock-in segment.
+
+sources:
+  quora:
+    - recap: ../alan-kay/media/quora-recaps/browsers-documents-news-hypercard-hyperlook.md
+  mail_digest:
+    - ../alan-kay/correspondence.yml
+
+show_hooks:
+  - "NeWS post-mortem with Kay in the room — what was right, what was missing"
+  - "PostScript as linguistic motherboard (Owen Densmore) + Kay's verdict"
+
+see_also:
+  - { path: ../owen-densmore/from-alan-kay.yml, why: "NeWS object-oriented PostScript" }
+  - { path: ../arthur-van-hoff/from-alan-kay.yml, why: "HyperLook continuation" }

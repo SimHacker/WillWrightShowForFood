@@ -1,0 +1,24 @@
+# What Alan Kay says about Jens Mönig — public sources only
+
+character: jens-monig
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Kay does not name Jens directly in the mined corpus yet; Jens's **Snap!** is the modern Morphic/
+    blocks-language line Kay classifies with Etoys/HyperCard as real end-user programmable media. Don's
+    Snap! × SimCity × CAM6 mail thread (Alan CC) is the private hook — digest Alan quotes only.
+
+sources:
+  quora:
+    - recap: ../alan-kay/media/quora-recaps/hypercard-personal-computing-breakthrough.md
+      topics: [end-user programming bar HyperCard set]
+  mail_digest:
+    - ../alan-kay/media/from-mail/REVIEW.yml  # snap-simcity-cam6
+
+show_hooks:
+  - "Snap! as Kay's 'live system underneath' answer in 2026"
+  - "Pair with Brian Harvey — Kay microworlds segment"
+
+see_also:
+  - { path: ../brian-harvey/from-alan-kay.yml, why: "Snap! pair show" }

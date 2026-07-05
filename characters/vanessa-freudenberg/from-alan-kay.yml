@@ -1,0 +1,27 @@
+# What Alan Kay says about Vanessa Freudenberg — public sources only
+
+character: vanessa-freudenberg
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Alan Kay **warmly invited** to the Vanessa memorial arc with Craig Latta and Dan Ingalls (INDEX +
+    remembering-vanessa-freudenberg show). Kay's Smalltalk/Squeak lineage is the intellectual frame for
+    SqueakJS → WASM → Caffeine work Vanessa and Craig carried forward.
+
+sources:
+  show:
+    - ../../repo-shows/remembering-vanessa-freudenberg.yml
+  mail_digest:
+    - ../alan-kay/correspondence.yml  # Croquet/Qwaq 2008 visit context
+
+memorial:
+  who_can_discuss: alan-kay
+  anchor: craig-latta
+
+show_hooks:
+  - "Vanessa memorial — Alan as elder of the Squeak/Croquet line"
+
+see_also:
+  - { path: ../craig-latta/from-alan-kay.yml, why: "Caffeine anchor + memorial" }
+  - { path: ../dan-ingalls/from-alan-kay.yml, why: "Smalltalk Zoo / Squeak lineage" }

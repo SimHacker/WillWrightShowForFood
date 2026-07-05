@@ -1,0 +1,23 @@
+# What Alan Kay says about Terry Winograd — public sources only
+
+character: terry-winograd
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Winograd CS547 hosted Croquet-era talks; Don's 1996 talk thread with Alan in mail (redirect to
+    terry-winograd + will-wright sources). Kay's Quora corpus treats language understanding / AI winters
+    adjacent to Winograd's SHRDLU legacy — cross-link CS547 archive.
+
+sources:
+  mail_digest:
+    - ../alan-kay/media/from-mail/REVIEW.yml  # winograd-1996 thread
+  media:
+    - ../terry-winograd/media/cs547-ARCHIVE.md  # Croquet 2003-04-25 cataloged under Terry
+
+show_hooks:
+  - "1996 talk thread — Alan's framing of Don's presentation"
+  - "CS547 Croquet session — Kay line through Terry's seminar series"
+
+see_also:
+  - { path: ../alan-kay/media/README.md, why: "CS547 Croquet cross-link" }

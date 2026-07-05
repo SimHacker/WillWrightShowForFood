@@ -32,7 +32,8 @@ That's the same world I care about. Different toolchain, same architecture.
 In 1978 you didn't ship a monolithic program for every machine — you shipped **adventure-as-data**
 and a tiny interpreter that could run it anywhere. A whole world in sixteen kilobytes. Verb. Noun.
 Legible. Portable. I followed that idea into Terrapin **Logo Adventure** (the Logo REPL as the
-parser) and, forty years later, into an **adventure compiler** and **MOOLLM** — a microworld OS
+parser — [Medium walkthrough](https://medium.com/@donhopkins/logo-adventure-for-c64-terrapin-logo-4c684a240b53),
+[repo recap](../../characters/don-hopkins/logo-adventure-c64-terrapin.md)) and, forty years later, into an **adventure compiler** and **MOOLLM** — a microworld OS
 where directories are rooms, YAML files are objects with behavior, and an LLM walks the palace
 with you instead of grepping blindly.
 

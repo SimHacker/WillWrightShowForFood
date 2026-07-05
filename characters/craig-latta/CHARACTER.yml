@@ -40,4 +40,6 @@ sources:
 
 see_also:
   - { path: keep.md, why: "Keep — reflective agent memory; Craig's Smalltalk whiteroom port" }
+  - { path: from-alan-kay.yml, why: "Qwaq 2008 intro via Alan; Vanessa memorial invite" }
+  - { path: ../alan-kay/people-index.yml, why: "Kay mentions cross-index" }
   - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses — self or assisted contribution" }

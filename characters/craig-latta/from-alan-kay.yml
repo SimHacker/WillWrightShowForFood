@@ -1,0 +1,26 @@
+# What Alan Kay says about Craig Latta — public sources only
+
+character: craig-latta
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Kay invited Don to **Qwaq** (Croquet spinoff) in 2008 — Craig's Caffeine/SqueakJS line continues the
+    live-objects mission Kay champions. Alan is front-of-line invite for Vanessa memorial alongside Craig
+    and Dan.
+
+sources:
+  mail_digest:
+    - ../alan-kay/correspondence.yml  # Qwaq visit 2008
+    - ../alan-kay/media/from-mail/REVIEW.yml  # qwaq-2008 thread
+  show:
+    - ../../repo-shows/remembering-vanessa-freudenberg.yml
+    - ../../repo-shows/craig-latta/
+
+show_hooks:
+  - "Qwaq 2008 — Alan's introduction, Craig's world"
+  - "Caffeine + Kay on what Smalltalk was supposed to become"
+
+see_also:
+  - { path: ../vanessa-freudenberg/from-alan-kay.yml, why: "Memorial arc" }
+  - { path: ../david-ungar/from-alan-kay.yml, why: "Self/Croquet/live objects" }
