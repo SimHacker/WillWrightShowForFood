@@ -114,6 +114,11 @@ and a chance to **memorialize Minsky** together, and recount the many places Don
 coexisted (Levity, Interval, ConnectedMedia, Pantomime). See [`../marvin-minsky/memorial.md`](../marvin-minsky/memorial.md),
 [`../cynthia-solomon/`](../cynthia-solomon/).
 
+**Don's firsthand history of Don ↔ David** — the **Music Hacker's Hangout** (office-mate Miller
+Puckette), **Harmony Grid** and **Hookup + MMP/Director**, VPL and the Body Electric rights chain,
+the **SIGGRAPH / Coco Conn SIGKids** serendipity ("HE did what I wanted to do!"), and the road stories
+(the **CES massage-chair vow**, the lampshade photo): [`don-and-david-history.md`](don-and-david-history.md).
+
 ## Sources (public)
 
 - **Sourced evidence hub (HN permalinks + videos, by project):** [`media/README.md`](media/README.md)

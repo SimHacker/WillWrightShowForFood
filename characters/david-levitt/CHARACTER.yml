@@ -76,6 +76,7 @@ rebounce:
   history: ../don-hopkins/body-electric-bounce-vr-stack.md
 
 see_also:
+  - { path: don-and-david-history.md, why: "Don's firsthand history of Don ↔ David: MIT Music Hacker's Hangout → Hookup/MMP → VPL → SIGGRAPH/Coco Conn → Levity/Interval/Kaleida (+ CES massage-chair vow)" }
   - { path: media/README.md, why: "Sourced evidence hub — HN permalinks + videos by project (Pantomime, Bounce, ConnectedTV, AI music)" }
   - { path: ../don-hopkins/body-electric-bounce-vr-stack.md, why: "Don's firsthand Bounce / Body Electric VR-stack history" }
   - { path: ../../repo-shows/rebounce/, why: "Rebounce — salute + hand+AI reimplementation jam, seeded by David + Don (+ Jaron)" }

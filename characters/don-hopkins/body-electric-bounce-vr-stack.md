@@ -17,10 +17,7 @@ stopping. **Live-coding mode** before the phrase existed: performing brain surge
 simulation, patching in new behavior while the video played and the world responded.
 
 The demo content was gloriously irreverent — live-editing simulated characters (including caricatures
-of public figures like **Rush Limbaugh** and **Jesse Jackson**: their "brains, DNA, and memories" as
-tweakable parameters) **in real time while the simulation ran**, the video played, and **closed
-captions matched patterns in JSON-like configuration data** — all read through COM component modules
-and flowing on the wires.
+of public figures like **Rush Limbaugh** and **Jesse Jackson**: their "brains, DNA, and memories" as tweakable structured simulation parameters and dialog trees) **in real time while the simulation ran**, the video played, and **closed captions matched patterns in JSON-like configuration data** — all read through COM component modules and flowing on the wires.
 
 ## The architecture: one real-time hub
 
@@ -29,14 +26,14 @@ the **Atlanta, GA hub** where everything met and was orchestrated in real time f
 editable patch:
 
 - **Inputs, all live:** MIDI, Ethernet, **Polhemus** trackers, **DataGlove**, VR headsets, and the
-  **Convolvotron** (real-time 3D spatialized audio). One nervous system, many senses.
+**Convolvotron** (real-time 3D spatialized audio). One nervous system, many senses.
 - **The skeleton as a data type — Swivel 3D.** The articulated body was an **integrated 3D
-  transform-tree data type**: literally **Swivel 3D save files** — a hierarchy of joints/transforms —
-  whose parameters were **projected in real time** by the running patch. The save file *was* the
-  skeleton; Bounce animated its parameters.
+transform-tree data type**: literally **Swivel 3D save files** — a hierarchy of joints/transforms —
+whose parameters were **projected in real time** by the running patch. The save file *was* the
+skeleton; Bounce animated its parameters.
 - **Stereo out over UDP.** **UDP packet modules** streamed the projected transform parameters to
-  **two SGI renderers at once — one per eye**, each with a **different perspective**. That's the
-  stereo VR view: the patch computes, the packets fly, both eyes render.
+**two SGI renderers at once — one per eye**, each with a **different perspective**. That's the
+stereo VR view: the patch computes, the packets fly, both eyes render.
 
 So the shape of it: **sensors → live patch (projecting the Swivel 3D transform tree) → UDP →
 dual-SGI stereo render**, all re-editable while running.
@@ -61,13 +58,15 @@ Typed colored wires carrying reflective JSON-ish objects, in ~1990s Bounce.
 ## Why it still matters
 
 - **Live coding a running world** — edit-while-running as the *normal* way to explore, not a party
-  trick. The target feel for any Bounce reincarnation.
+trick. The target feel for any Bounce reincarnation.
 - **The model is a data type** — Swivel 3D transform tree as a first-class, projectable value. Rig as
-  data, animation as parameter projection.
+data, animation as parameter projection.
 - **Whole objects on typed wires** — beat the arity limit by passing structured, self-describing
-  objects; the seed of Pantomime JSON → MOOLLM.
+objects; the seed of Pantomime JSON → MOOLLM.
 - **One hub, many devices** — a single real-time nervous system fusing MIDI/Ethernet/Polhemus/glove/
-  headset/Convolvotron; the patch is the conductor.
+headset/Convolvotron; the patch is the conductor.
+
+
 
 ## Salute → Rebounce
 
@@ -80,15 +79,15 @@ wire live streams).
 
 ## Sources & to-verify
 
-- Don's Bounce writeup: [Medium — *Bounce Stuff*](https://medium.com/@donhopkins/bounce-stuff-8310551a96e3) ·
-  [c2: BounceLanguage](https://wiki.c2.com/?BounceLanguage) ·
-  [bounce-notes.txt (LEV list 2000; Jaron thread)](https://www.donhopkins.com/home/archive/visual-programming/bounce-notes.txt)
+- Don's Bounce writeup: [Medium — *Bounce Stuff](https://medium.com/@donhopkins/bounce-stuff-8310551a96e3)* ·
+[c2: BounceLanguage](https://wiki.c2.com/?BounceLanguage) ·
+[bounce-notes.txt (LEV list 2000; Jaron thread)](https://www.donhopkins.com/home/archive/visual-programming/bounce-notes.txt)
 - Neighbors: [Levity / Bounce / Space Seed](levity-bounce-space-seed.md) ·
-  [David Levitt](../david-levitt/README.md) · [Jaron Lanier](../jaron-lanier/README.md) ·
-  [visual-programming taxonomy](visual-programming-taxonomy.md)
+[David Levitt](../david-levitt/README.md) · [Jaron Lanier](../jaron-lanier/README.md) ·
+[visual-programming taxonomy](visual-programming-taxonomy.md)
 - To confirm before citing as fact: exact SGI models, Convolvotron/Polhemus/DataGlove config, the
-  "Atlanta hub" installation details, and dates. This is Don's recollection — verify specifics with
-  Jaron and David on the show.
+"Atlanta hub" installation details, and dates. This is Don's recollection — verify specifics with
+Jaron and David on the show.
 
 *Status: firsthand oral history — vivid and true to Don's memory; treat hardware specifics and dates
 as pointers to confirm on air.*

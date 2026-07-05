@@ -1,0 +1,51 @@
+# Miller Puckette — invitation portrayal. NOT Miller Puckette.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: miller-puckette
+  name: "Miller Puckette"
+  type: invitation
+  signifier: "🎛️"
+  status: living
+  field: "Creator of Max (IRCAM) and Pure Data (Pd); real-time computer-music / dataflow programming; UC San Diego"
+  home: characters/miller-puckette/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: stub
+  consent: not_yet_asked
+  document: README.md
+
+bio:
+  summary: >
+    **Miller S. Puckette** — creator of **Max** (the graphical real-time music/dataflow environment,
+    built at **IRCAM**, named after Max Mathews) and of **Pure Data (Pd)**, his **open-source** (C)
+    real-time dataflow environment. The audio-DSP extension **MSP** (→ **Max/MSP**, commercialized by
+    Opcode then **Cycling '74** / David Zicarelli) puns on both "Max Signal Processing" and his initials,
+    **M**iller **S**. **P**uckette. Professor at **UC San Diego**. At MIT he was **office-mate of
+    [David Levitt](../david-levitt/)** in the Lisp machine's "Music Hacker's Hangout."
+
+connections:
+  david_levitt: "Office-mate of David Levitt at MIT (the 'Music Hacker's Hangout'); shared the AI Lab / NE43 / Atari Cambridge music-hacking milieu."
+  patch_cord_lineage: "Max/Pd are the mass-audience descendants of the patch-cord dataflow idea David Levitt's Hookup is credited with originating (per Mark Coniglio)."
+
+facts_to_confirm:
+  - "Whether Miller wants any involvement — mentioned as context in Don + David's history; not yet asked."
+  - "Exact Max vs Pd vs MSP history phrasing (Max @ IRCAM; MSP add-on; Pd open-source C; jMax = IRCAM's Java Max)."
+
+show_suggestions:
+  - { what: "A visual-programming / dataflow-music conversation on the Max ↔ Pd ↔ Hookup lineage — natural pairing with David Levitt." }
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Miller_Puckette"
+  web:
+    - "https://puredata.info/"
+    - "https://msp.ucsd.edu/"
+
+see_also:
+  - { path: ../david-levitt/don-and-david-history.md, why: "MIT office-mate; the Music Hacker's Hangout" }
+  - { path: ../../process/trails/visual-programming-patch-cord.md, why: "Patch-cord dataflow lineage (Hookup → Max/Pd)" }

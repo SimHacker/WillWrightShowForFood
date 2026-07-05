@@ -1,0 +1,47 @@
+# Coco Conn — invitation portrayal. NOT Coco Conn.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: coco-conn
+  name: "Coco Conn"
+  type: invitation
+  signifier: "🧒"
+  status: living
+  field: "SIGKIDS / SIGGRAPH kids programs; computer graphics community; collaborative virtual worlds for children (CitySpace)"
+  home: characters/coco-conn/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: stub
+  consent: not_yet_asked
+  document: README.md
+
+bio:
+  summary: >
+    **Coco Conn** — a beloved figure in the computer-graphics community, associated with the
+    **SIGKIDS / SIGGRAPH kids' programs** (where children — not allowed on the main show floor — got
+    to see and make cool things) and with early collaborative virtual-world-for-kids projects
+    (**CitySpace**). Don met her at SIGGRAPH's SIGKids area — the serendipitous spot where he ran into
+    **[David Levitt](../david-levitt/)** demoing Bounce's animated band. *(Don's affectionate framing:
+    "royalty and a goddess.")*
+
+facts_to_confirm:
+  - "Precise role/titles at SIGGRAPH / SIGKIDS and CitySpace (Homer & Associates? years?)."
+  - "Don's descriptor 'Dutch from Amsterdam' — CONFIRM; this is Don's recollection, not verified."
+  - "Best contact path and desired level of participation."
+
+show_suggestions:
+  - { what: "SIGKids & kids-in-computing story — running the space where children got to touch the future at SIGGRAPH; overlaps constructionist / kids-make-things themes." }
+
+sources:
+  wikipedia: ""
+  web: []
+  note: "Stub — sources to be gathered once invited."
+
+see_also:
+  - { path: ../david-levitt/don-and-david-history.md, why: "Don ran into David again at Coco's SIGKids area" }
+  - { path: ../cynthia-solomon/, why: "kids + computing / constructionist neighbors" }
