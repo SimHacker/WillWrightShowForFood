@@ -19,22 +19,30 @@ or ask for removal at any time.* · [Portrayal standards](../../schemas/portraya
 
 Norman —
 
-You and Tommaso wrote the book (*Cellular Automata Machines*, MIT Press, 1987) and built the machine (**CAM-6**). I read your book like a bible. I first played with a CAM-6 when Pete Dilworth brought one to a science fiction convention, and we hacked it in Forth all night. Later I made a pilgrimage to the MIT AI Lab as a tourist, and your wife walked in on Pete Dilworth and I playing in the dark on the CAM-6 in your office at NE43. Since I couldn't take it home with me I wrote a software simulation in C and compatible Forth rule table compiler / simulation orchestrator, and then spent years playing on top of it, porting it to different platforms, developing live performance interfaces for painting with overlapping CA. This is the guided tour of that — the demo I made **for you as the audience**, written down so it can be run, checked, and continued in the open.
+You and Tommaso wrote the book (*Cellular Automata Machines*, MIT Press, 1987) and built the machine (**CAM-6**). I read your book like a bible with color plates.
 
-- **Watch the demo (made for you):** [https://www.youtube.com/watch?v=LyLMHxRNuck](https://www.youtube.com/watch?v=LyLMHxRNuck)
-- **Run it live:** [https://donhopkins.com/home/CAM6](https://donhopkins.com/home/CAM6)
-- **Read the source:** `[CAM6.js](https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js)`
+I first played with a CAM-6 when Pete Dilworth brought one to a science fiction convention, and we hacked it in Forth all night. Later I made a pilgrimage as a tourist to the MIT AI Lab, and your wife walked in on Pete Dilworth and I playing in the dark on the CAM-6 in your office at NE43, our faces glued to the screen. Unflappable, she turned on the light to find something she needed, and said bye bye, and turned the light out when she left. She sure got it!
+
+Since I couldn't take it home with me, I wrote a software emulator in C, and compatible Forth rule table compiler / simulation orchestrator in Mitch Bradley's Sun Forth, and then spent years playing on top of it, porting it to different platforms, developing live performance interfaces for painting with overlapping CA, and rendering the cells as animated SimCity tiles as DRM.
+
+This is the guided tour of that — the demo I made **for you as the audience**, written down so it can be run, checked, and continued in the open.
+
+- **Watch the demo (made expressly for you, gets extremely deep and technical, and shows lots of FORTH code, which others may make of what they wish):** [https://www.youtube.com/watch?v=LyLMHxRNuck](https://www.youtube.com/watch?v=LyLMHxRNuck)
+- **Run it live:** [https://donhopkins.com/home/CAM6](https://donhopkins.com/home/CAM6) 
+- **Read the insane monolithic source with it's own object system:** `[CAM6.js](https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js)`
 - **Don-side writeup:** [cam6-cellular-automata-machine.md](../don-hopkins/cam6-cellular-automata-machine.md)
 
 ---
 
+
+
 ## The one-sentence version
 
-I built a **CAM6 simulator** that is **software-compatible with your CAM-6** — it runs the rules
-straight out of your book — and I kept re-implementing the *same idea* across four decades of
-languages, because the interesting part was never the language. It was the **lookup table**.
+I built a **CAM6 simulator** that is **software-compatible with your CAM-6 hardware and the code examples** — it runs the FORTH rules (now translated to JavaScript) straight out of your book — and I kept re-implementing the *same idea* across four decades of languages, because the interesting part was never the language. It was the **rules and lookup tables and hardware**.
 
 ---
+
+
 
 ## The trick, in your words
 
@@ -58,6 +66,8 @@ The middle box — the table — is the contract. Everything above it is fashion
 plumbing. **The table is the thing that stays true.**
 
 ---
+
+
 
 ## Layers of iteration (and reimplementation of the *idea*, not the code)
 
@@ -87,6 +97,8 @@ fd passing, Mach ports, and zero-copy GPU surfaces are exactly how you'd gang mo
 no copies.)*
 
 ---
+
+
 
 ## Show me the Forth (then show me the JS)
 
@@ -127,6 +139,8 @@ table. The executor never knows the difference.
 
 ---
 
+
+
 ## Who JITs the jitter? (a Connections detour)
 
 *Cut, James-Burke style, between the parts that don't know they're related.*
@@ -160,6 +174,8 @@ place to run this loop live.)*
 
 ---
 
+
+
 ## Your DLA is running right now
 
 Straight off **p. 167, §15.7** — the **Margolus-dendrite** rule — I have a
@@ -171,6 +187,8 @@ live-runnable Margolus artifact — and a natural bridge to my
 sticking event can fire a grain of sound so the crystal *sings itself*.
 
 ---
+
+
 
 ## A question for the room (and especially for Lars)
 
@@ -190,6 +208,8 @@ old machines is his native tongue) and you referee it. It's a great, live, white
 
 ---
 
+
+
 ## Where it wants to go: chapter playgrounds, built ground-up
 
 You already gave me your blessing to take **chapters from *Cellular Automata Machines*** and build
@@ -200,20 +220,27 @@ monolith.** The current code is a gnarly, honest **monolith** — lovely bones, 
 of the show is the design conversation**: what does a **modular, chapter-sized** CAM6 want to be?
 
 - **Pick a chapter, live.** We choose a section together and build the playground for it on stream. My
-  bias: the **physical simulations** — **billiard-ball logic**, **spin glasses / Ising-style energy
-  models**, lattice gases — *especially* the ones that live on your **Margolus neighborhood** (block
-  partitioning is what makes the momentum-conserving, reversible physics *work*). You explain **why
-  they're interesting**; I make them playable.
+bias: the **physical simulations** — **billiard-ball logic**, **spin glasses / Ising-style energy
+models**, lattice gases — *especially* the ones that live on your **Margolus neighborhood** (block
+partitioning is what makes the momentum-conserving, reversible physics *work*). You explain **why
+they're interesting**; I make them playable.
 - **Modular by construction.** Each rule/neighborhood is its own composable unit (the macro system,
-  grown up): a **type-safe, self-describing TypeScript dataflow visual programming system** in the
-  spirit of **[Sandspiel Studio](https://studio.sandspiel.club/)** — wire rules visually, every node
-  declares its own params and types, the graph compiles to the same **lookup tables**. A chapter
+  grown up), self-describing and type-safe, that compiles to the same **lookup tables**. A chapter
   playground becomes a *small graph + a page of prose*, not a fork of a monolith.
+- **The visual front end: Snap!, not from scratch.** Inspired by **eToys → Scratch →
+  [Snap!](https://snap.berkeley.edu/) → [Sandspiel Studio](https://studio.sandspiel.club/)**, I could
+  build a whole new visual CA language — but the **best solution is to just integrate the engine with
+  Snap!** (Jens Mönig & Brian Harvey). It's JavaScript, in the browser, extensible with custom blocks,
+  and a *real* language (first-class procedures, Scheme semantics) — so a CA rule becomes a **block
+  palette** a student can remix, and I get the whole editor for free. (This is one of four engines I
+  want behind Snap! — see [Snap! visual engines / fundable goals](../don-hopkins/snap-visual-engines-fundable-goals.md).)
 - **Gang the layers.** Multiple rule-planes as **connected layers** (the way you'd gang CAM-6 cards),
-  passed **zero-copy** between stages — see the
-  [streams-of-streams / zero-copy notes](../don-hopkins/streams-of-streams-fd-passing-zero-copy.md).
+passed **zero-copy** between stages — see the
+[streams-of-streams / zero-copy notes](../don-hopkins/streams-of-streams-fd-passing-zero-copy.md).
 
 ---
+
+
 
 ## For the show: weaving the archive
 
@@ -233,6 +260,8 @@ Movable Feast Machine, indefinitely scalable hardware — CA as *architecture*),
 **[Scott Draves](../scott-draves/README.md)**.
 
 ---
+
+
 
 ## Reference links (for anyone reading along)
 

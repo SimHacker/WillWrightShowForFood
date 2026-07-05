@@ -21,6 +21,7 @@ Real-time visual programming for music, video, and VR — the lineage Don docume
 | [**Don — Excel & dimensionality**](../../characters/don-hopkins/visual-programming-excel-and-dimensionality.md) | Excel as VPL; SimAntics shipped evidence; PSIBER (HN 22978454) |
 | [**Brad Myers**](../../characters/brad-myers/README.md) | Garnet, VPL taxonomy, PBD, C32 |
 | [**Jens Mönig / Brian Harvey**](../../characters/jens-monig/README.md) | Snap! — blocks without lines, macros, Scheme semantics |
+| [**Don — Snap! visual engines (fundable)**](../../characters/don-hopkins/snap-visual-engines-fundable-goals.md) | Integrate engines with Snap! instead of building from scratch — CAM6 + VitaMoo + Micropolis + Bounce, each a fundable goal |
 | [**Don — Levity Bounce**](../../characters/don-hopkins/levity-bounce-space-seed.md) | COM on wires, Space Seed demo |
 | [**Don — DRAKON / SimAntics**](../../characters/don-hopkins/drakon-control-flow-vs-dataflow.md) | Control flow vs data flow — Grasshopper, SimAntics, Bounce (HN 10100932) |
 | [**Steina Vasulka**](../../characters/steina-vasulka/README.md) | Image/ine co-creator |
