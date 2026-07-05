@@ -80,10 +80,10 @@ I have the receipts for this one:
    new machine, new Forth.
 3. **C + FORTH.** A CAM6 simulator emulating the hardware, with Forth defining rules and driving it.
 4. **C++, then Python.** It grew a life of its own and got re-hosted again.
-5. **JavaScript —** `CAM6.js` **(today).** The high-level rules are written in **JS**, but they generate
-  the **identical lookup tables** the Forth once produced. It *used to* embed a real Forth
-   interpreter (the JS-Forth — "do not stick your tongue into the power supply"); an off-the-shelf
-   WASM/JS Forth could be retrofitted anytime so people can define rules in Forth again, live.
+5. **JavaScript —** `CAM6.js` **(today).** Rules are defined in **JS** and compiled to the **identical
+   lookup tables** the Forth rule compiler produced. **No embedded Forth interpreter** — JS-Forth in
+   the repo is a **possible extension** ("do not stick your tongue into the power supply"); an
+   off-the-shelf WASM/JS Forth could be wired in later for live Forth rule authoring.
 6. **TypeScript — next.** A type-safe, self-describing rewrite (more on that below).
 
 The point isn't the ports. The point is **feedback and iteration of feedback and iteration itself** —

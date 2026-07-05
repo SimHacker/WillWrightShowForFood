@@ -25,7 +25,7 @@ arc:
   chapter_picks: "Don's bias — the physical simulations: billiard-ball logic, spin glasses / Ising energy models, lattice gases, especially on the Margolus neighborhood (block partitioning → reversible, momentum-conserving physics). Norman explains why they're interesting; Don makes them playable."
 
 dream_segments:
-  - "CAM-6, live: bring up Don's existing CAM6.js (C+FORTH heritage, now JS generating the identical FORTH-era lookup tables; JS-Forth retrofittable) and run classic rules from the book."
+  - "CAM-6, live: bring up Don's existing CAM6.js (C+FORTH heritage; rules in JS → lookup tables; optional Forth extension not shipped) and run classic rules from the book."
   - "DLA / dendrite: the Margolus-dendrite rule from p.167 §15.7 aggregating live on the Margolus-neighborhood engine — the exact FORTH-generated lookup table."
   - "Block CA + the Margolus neighborhood: how partitioning makes a rule reversible."
   - "Run it backward: reversible, universal CA and the Critters rule — no information lost."

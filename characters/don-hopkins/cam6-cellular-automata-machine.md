@@ -23,21 +23,21 @@ Demo (tailored for Norman as the audience): <https://www.youtube.com/watch?v=LyL
   at compile time, not in the inner loop.
 - It **evolved a life of its own**: translated to **C++** and **Python**, then rewritten from the
   ground up in **JavaScript** (`CAM6.js`).
-- **Today:** the high-level rules are written in **JS**, but they generate the **identical lookup
-  tables** the FORTH once produced. The engine is bit-for-bit faithful to the book's rules while
-  being readable and hackable.
+- **Today:** rules are defined in **JavaScript** and compiled to the **same lookup-table contract**
+  the Forth rule compiler used — bit-for-bit faithful to the book while readable and hackable.
 
-## The FORTH interpreter (then and now)
-- It **used to embed a real FORTH interpreter** (the JS-Forth in the same repo — "delivered as-is,
-  do not stick your tongue into the power supply").
-- That interpreter could be **retrofitted with an off-the-shelf WASM or JS Forth** anytime, to let
-  people define rules in FORTH again, live, exactly as the book teaches.
+## Optional Forth extension (not shipped)
+- CAM6.js **does not embed** a Forth interpreter. Rules are defined in **JS**, not interpreted in
+  Forth at runtime.
+- The repo includes **JS-Forth** ("delivered as-is, do not stick your tongue into the power supply")
+  as a **possible extension** — or an off-the-shelf WASM/JS Forth could be wired in later so people
+  can define rules in Forth live, the way the book teaches. That was never the shipped path.
 
 ## DLA — straight out of the book
 Don has a **Diffusion-Limited Aggregation** simulation running in it right now — the
 **Margolus-dendrite** rule, **p. 167, §15.7** of *Cellular Automata Machines*. It runs on the
-**Margolus-neighborhood** engine using the very **lookup table the FORTH generated**. Random walkers
-diffuse, stick, and grow branching coral-like crystals — a direct, live-runnable Margolus artifact,
+**Margolus-neighborhood** engine using the **same lookup-table contract** as the Forth rule compiler.
+Random walkers diffuse, stick, and grow branching coral-like crystals — a direct, live-runnable Margolus artifact,
 and a natural bridge to Don's [Musical Gas granular-CA synth](musical-gas-granular-ca-synth.md),
 where every stick/aggregation event can fire a grain of sound.
 

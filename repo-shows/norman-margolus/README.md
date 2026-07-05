@@ -19,9 +19,9 @@ on computation. **Milan and Henry Minsky** (MIT AI Lab) introduced Norman to Don
 
 ## What we'd get into
 
-- **CAM-6, live** — Don's CAM6.js: born in C+FORTH, now JS generating the identical FORTH-era lookup
-  tables (JS-Forth retrofittable), running classic rules straight from the book.
-- **DLA / dendrite** — the Margolus-dendrite rule aggregating live, off the same FORTH-generated table.
+- **CAM-6, live** — Don's CAM6.js: C+FORTH heritage; **rules defined in JS** → lookup tables (optional
+  Forth extension in repo, not embedded), running classic rules straight from the book.
+- **DLA / dendrite** — the Margolus-dendrite rule aggregating live on the same lookup-table contract.
 - **The Margolus neighborhood** — how partitioning the grid makes a rule **reversible**.
 - **Run it backward** — reversible, universal CA; the Critters rule; no information lost.
 - **Billiard-ball computers** — universal computation from elastic collisions; the "Flattop" chip.
