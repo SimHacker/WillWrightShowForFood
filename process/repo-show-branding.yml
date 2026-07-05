@@ -7,7 +7,8 @@ meta:
   scope: show_orchestration
   host_biography: ../characters/don-hopkins/portrayal/upbringing.yml
   performance: performance-space.yml
-  orchestrator: ../characters/don-philahue/CHARACTER.yml
+  orchestrator: ../characters/don-philahue/ORCHESTRATOR.yml
+  orchestrator_character: ../characters/don-philahue/CHARACTER.yml
 
 production_values:
   stance: "High production values. Low production costs."

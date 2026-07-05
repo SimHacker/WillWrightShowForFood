@@ -1,0 +1,167 @@
+# CARD — Mark Coniglio (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+# Hybrid deck: MTG spells · D&D sheet · WoW action bar · Sims advertisements · UI character sheet
+
+room:
+  id: mark-coniglio
+  name: Mark Coniglio
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+
+character_sheet:
+  class: Patch-Cord Historian / Performance Mage
+  spec: Isadora (real-time video) · off-spec Interactor (composition)
+  level: 14
+  alignment: Lawful Good Primary Source
+  stats:
+    patch_cord_lore: 19
+    live_performance: 18
+    dance_tech: 17
+    primary_source_citation: 20
+  passives:
+  - CREDIT-HOOKUP-ORIGIN
+  equipment:
+  - name: Isadora
+    slot: main_hand
+    rarity: legendary
+    note: Params visible on the wire — unlike Max hiding them in the patch
+
+card:
+  name: Mark Coniglio
+  title: Hookup's Historian · Isadora's Author
+  rarity: rare
+  signifier: "🎚️💃"
+  flavor: Both inherit the patch-cord metaphor from Hookup — but Isadora shows you the parameter names.
+
+abilities:
+- id: CREDIT-HOOKUP-ORIGIN
+  name: Credit Hookup Origin
+  type: static
+  mana: ""
+  conditions:
+  - segment_topic_in: [patch-cord, hookup, visual-programming, isadora, max, bounce]
+  - needs_primary_source_not_hearsay: true
+  advertisement:
+    method: creditHookupOrigin
+    signature: creditHookupOrigin() → traced genealogy on air
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.88
+    - trigger: segment_needs_patch_cord_origin_story
+      weight: 0.95
+    - trigger: co_guest_is_david_levitt
+      weight: 0.97
+    - trigger: relationship_matrix_edge_active
+      edge: mark-coniglio → david-levitt
+      weight: 0.92
+  effect: Invoke Coniglio's own Isadora history page — Hookup (David Levitt, MIT) as first patch-cord VPL.
+  verifiable: http://www.sdela.dds.nl/sfd/isadora.html
+  combos_with:
+  - DAVID-BOUNCE
+  - MILLER-MAX-MSP
+
+- id: STEIM-TO-ISADORA
+  name: STEIM to Isadora
+  type: triggered
+  mana: "{U}{G}"
+  cooldown: one_per_show_segment
+  conditions:
+  - segment_topic_in: [image-ine, steim, realtime-video, net-jamming]
+  - relationship_matrix:
+      any_co_guest: [tom-demeyer, steina-vasulka, netochka-nezvanova]
+  advertisement:
+    method: steimToIsadora
+    signature: steimToIsadora(residency) → Image/ine features absorbed into Isadora
+    score_when:
+    - trigger: steim_thread_on_air
+      weight: 0.9
+    - trigger: audience_sees_video_as_instrument
+      weight: 0.87
+    - trigger: trail_is_visual_programming_patch_cord
+      weight: 0.85
+  effect: Tell the 1996 Troika Ranch residency arc — saw Image/ine, grew Isadora out of Interactor.
+  verifiable: sdela.dds.nl/sfd/isadora.html; STEIM/Image-ine public history
+  combos_with:
+  - TOM-IMAGE-INE
+  - STEINA-VIDEO-ART
+
+- id: SHOW-PARAM-NAMES
+  name: Show Param Names
+  type: activated
+  mana: "{1}{U}"
+  conditions:
+  - segment_topic_in: [isadora, max, visual-programming, comparison]
+  - debate_frame: isadora_vs_max_design_choice
+  advertisement:
+    method: showParamNamesOnWire
+    signature: showParamNamesOnWire(module) → realtime graphic feedback per module
+    score_when:
+    - trigger: audience_learns_design_tradeoff
+      weight: 0.91
+    - trigger: co_guest_is_miller_puckette
+      weight: 0.88
+  effect: Demonstrate Isadora's design win — parameter names/values visible; patch-cord metaphor shared with Max.
+  verifiable: Coniglio Isadora history; public Isadora UI documentation
+  combos_with:
+  - MILLER-MAX-MSP
+
+- id: INTERACTOR-HUNGERS
+  name: Interactor · Hungers
+  type: legacy
+  mana: "{G}"
+  conditions:
+  - segment_topic_in: [morton-subotnick, composition, interactor, 1987]
+  advertisement:
+    method: interactorHungers
+    signature: interactorHungers(composition) → hardcoded Mort ideas become instrument
+    score_when:
+    - trigger: music_and_live_media_crossover
+      weight: 0.86
+    - trigger: audience_learns_something_true
+      weight: 0.84
+  effect: CalArts student hardcodes Subotnick's ideas → Interactor debuts in *Hungers* (1987).
+  verifiable: sdela.dds.nl/sfd/isadora.html
+  combos_with: []
+
+- id: TROIKA-RANCH
+  name: Troika Ranch
+  type: emote
+  mana: "{☕}"
+  conditions:
+  - segment_energy: performance_or_dance
+  advertisement:
+    method: troikaRanch
+    signature: troikaRanch() → dance + technology company on stage
+    score_when:
+    - trigger: show_needs_performance_energy
+      weight: 0.8
+  effect: Frame Troika Ranch as the living lab where Isadora was forged for the stage.
+  verifiable: troikatronix.com; public Troika Ranch history
+  combos_with:
+  - SHOW-PARAM-NAMES
+
+compose_with:
+  david-levitt: patch_cord_origin_ensemble
+  miller-puckette: max_vs_isadora_debate
+  tom-demeyer: steim_realtime_video_triangle
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+  on_show: Discuss ABOUT Coniglio's documented history — archive value even if he never appears.
+
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder
+- path: README.md
+  why: Public portrayal
+- path: ../david-levitt/CARD.yml
+  why: Hookup origin — combo partner
+- path: ../../process/trails/visual-programming-patch-cord.md
+  why: Trail this card serves

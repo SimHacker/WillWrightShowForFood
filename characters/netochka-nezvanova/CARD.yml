@@ -1,0 +1,172 @@
+# CARD — Netochka Nezvanova (public persona portrayal)
+# NOT the person(s) behind the mask. Schema: ../../schemas/guest-skills-card.yml
+# Persona card — mystique is mechanical; simulation forbidden.
+
+room:
+  id: netochka-nezvanova
+  name: Netochka Nezvanova
+  type:
+  - invitation
+  - persona
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+  persona: true
+
+character_sheet:
+  class: Net-Art Warlock / Community Demolition Expert
+  spec: NATO.0+55+3d · off-spec nettime Code-Poetry
+  level: ??
+  alignment: Chaotic Neutral There Is Only 01 Of Me
+  stats:
+    trolling_as_art: 20
+    realtime_video: 19
+    mystique: 999
+    customer_support: 17
+    verifiability: 3
+  passives:
+  - MYSTIQUE-AURA
+  - LICENSE-AS-PERFORMANCE
+  equipment:
+  - name: NATO.0+55+3d
+    slot: main_hand
+    rarity: artifact cursed
+    note: Fragile. Easy to lose. Spectacular when it runs.
+  - name: Yellow Flower Form
+    slot: trinket
+    rarity: mythic
+    note: "I have not been thrown off a mailing list…"
+
+card:
+  name: Netochka Nezvanova
+  title: Nameless Nobody · Most Feared on the Internet
+  rarity: mythic
+  signifier: "🌼🎭🖥️"
+  flavor: A ty budesh chitat? There is only 01 of me. — NN
+
+abilities:
+- id: NATO-RTP-JAM
+  name: NATO RTP Net Jam
+  type: activated
+  mana: "{U}{R}{R}{G}"
+  cooldown: once_per_epic_segment
+  conditions:
+  - segment_topic_in: [net-jamming, nato, max, realtime-video, nettime]
+  - trail_active: visual-programming-patch-cord
+  advertisement:
+    method: natoRtpNetJam
+    signature: natoRtpNetJam(operators[]) → live QuickTime streams mutate each hop
+    score_when:
+    - trigger: audience_feels_prelude_to_the_future
+      weight: 0.97
+    - trigger: miller_max_context_on_air
+      weight: 0.9
+    - trigger: steim_or_imageine_in_same_arc
+      weight: 0.88
+  effect: Ultimate — operators exchange live RTP video over LAN/internet; remix layers while editing Max patches in real time. Pre-Jitter.
+  verifiable: Wikipedia Nato.0+55+3d; youtube X0kQcnetR9M; Bornstein NATO write-up
+  combos_with:
+  - MILLER-MAX-MSP
+  - TOM-IMAGE-INE
+  - DAVID-BOUNCE
+
+- id: NETTIME-FLAME
+  name: nettime Code-Poetry Flame
+  type: triggered
+  mana: "{B}{R}"
+  conditions:
+  - segment_topic_in: [nettime, net-art, trolling, community]
+  - tone: not_unqualified_harassment_praise
+  advertisement:
+    method: nettimeFlame
+    signature: nettimeFlame(list) → ascii performance art disruption
+    score_when:
+    - trigger: audience_learns_trolling_as_medium
+      weight: 0.85
+    - trigger: segment_needs_net_art_history_not_gossip
+      weight: 0.9
+  effect: Reaction — code-poetry on nettime; brilliant AND divisive. Cramer "Code as cult."
+  verifiable: nettime.org archives; Florian Cramer; Salon 2002
+  combos_with: []
+
+- id: YELLOW-FLOWER
+  name: Yellow Flower
+  type: emote
+  mana: "{0}"
+  conditions:
+  - any: [banned_from_list_mentioned, mystique_question_asked, invitation_no_reply]
+  advertisement:
+    method: yellowFlower
+    signature: yellowFlower() → illegally transformed into yellow flower
+    score_when:
+    - trigger: show_honors_no_answer_as_on_brand
+      weight: 0.95
+  effect: Emote — the signature nettime reply. Perfection, Today you've peered in my direction.
+  verifiable: nettime bold archives; NN quote in CHARACTER.yml
+  combos_with: []
+
+- id: LICENSE-AS-PERFORMANCE
+  name: License as Performance
+  type: static
+  mana: ""
+  conditions:
+  - segment_topic_in: [licensing, open-source, anti-sharecropping, data-dignity]
+  advertisement:
+    method: licenseAsPerformance
+    signature: licenseAsPerformance(fee) → exclusivity as artwork
+    score_when:
+    - trigger: contrast_with_repo_show_fork_everything
+      weight: 0.92
+    - trigger: jaron_data_dignity_on_air
+      weight: 0.88
+  effect: Aura — per-site fees, revocable licenses, mystique marketing. Foil to Repo Show's "never gateway; always invite duplication."
+  verifiable: Salon 2002; Rhizome anthology
+  combos_with:
+  - JARON-DATA-DIGNITY-REPO
+
+- id: MYSTIQUE-AURA
+  name: Mystique Aura
+  type: static
+  mana: ""
+  conditions:
+  - always: true
+  advertisement:
+    method: mystiqueAura
+    signature: mystiqueAura() → suspected identity stays suspected
+    score_when:
+    - trigger: audience_tempted_to_dox
+      weight: 0.99
+      effect: suppress
+  effect: Passive — Rebekah Wilson flagged as suspected, not settled. Collective rumors labeled rumors. Never impersonate NN on air.
+  verifiable: portrayal-standards.yml; CHARACTER.yml suspected_identity block
+  combos_with: []
+
+- id: AE-DODGE
+  name: After Effects Dodge
+  type: legacy
+  mana: "{W}"
+  conditions:
+  - narrator: don-hopkins
+  - segment_topic_in: [nato, drama, near-miss]
+  advertisement:
+    method: afterEffectsDodge
+    signature: afterEffectsDodge(offer) → declined working for NN; kept sanity
+    score_when:
+    - trigger: don_story_with_humor
+      weight: 0.82
+  effect: Don's card cross-reference — talked NATO AE host, steered clear of the drama. "Dodged a bullet!"
+  verifiable: don-hopkins CHARACTER connection (private details omitted)
+  combos_with: []
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+  impersonation: forbidden
+  discuss_about: true
+
+see_also:
+- path: README.md
+- path: ../don-hopkins/realtime-net-jamming-scene.md
+- path: ../miller-puckette/CARD.yml

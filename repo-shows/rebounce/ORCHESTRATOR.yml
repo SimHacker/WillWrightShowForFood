@@ -1,0 +1,55 @@
+# Rebounce — Repo Show orchestrator hub (oral-history playset)
+# Schema: ../../schemas/orchestrator-hub.yml · ../../schemas/advertisement-dispatch.yml
+# Party roster: party-deck.yml
+
+orchestrator:
+  id: rebounce-show-seed
+  name: Rebounce Repo Show Hub
+  type: show_seed
+  path: .
+  roster_from: party-deck.yml
+
+  role: |
+    Oral-history mirror of SimProv / SliceCity hub pattern. Show seed merges character CARD
+    advertisements when patch-cord / live-coding / Body Electric topics match. Party deck
+    weights invoke_priority; character cards inject onto co-guest menus (e.g. Chuck on Jaron).
+    **Performed by:** Don Philahue orchestrator avatar — see characters/don-philahue/ORCHESTRATOR.yml
+
+  orchestrator_avatar: ../../characters/don-philahue/ORCHESTRATOR.yml
+
+  accepts_plugins_from:
+    - characters/david-levitt/CARD.yml
+    - characters/chuck-blanchard/CARD.yml
+    - characters/jaron-lanier/CARD.yml
+    - characters/mark-coniglio/CARD.yml
+    - characters/miller-puckette/CARD.yml
+    - characters/tom-demeyer/CARD.yml
+    - characters/steina-vasulka/CARD.yml
+    - characters/netochka-nezvanova/CARD.yml
+
+  compositions:
+    - id: rebounce_origin
+      source: party-deck.yml
+    - id: patch_cord_genealogy
+      source: party-deck.yml
+    - id: nettime_net_jam
+      source: party-deck.yml
+    - id: data_dignity_medium
+      source: party-deck.yml
+
+  inject_examples:
+    - ability: LEAD-BE-PROGRAMMER
+      owner: chuck-blanchard
+      menu_host: jaron-lanier
+      dispatch: inject
+      schema: advertisement-dispatch.yml
+
+  locked_ads_policy:
+    guidance_when_locked: confirm on air / consent before sensitive 1999 email details
+
+see_also:
+  - README.md
+  - party-deck.yml
+  - PARTY-DECK.md
+  - ../../designs/orchestrator-playsets/README.md
+  - ../simprov/ORCHESTRATOR.yml

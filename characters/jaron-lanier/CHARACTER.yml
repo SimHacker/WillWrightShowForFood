@@ -19,13 +19,13 @@ invitation:
   show_seed: repo-shows/rebounce/
 
 rebounce:
-  role: "Body Electric's original author — the superheroic rock-star legend of the VR patch-cord stack. Warmly invited to seed the Rebounce jam with the origin story (Don ↔ Jaron have had fascinating VPL/Bounce/Body Electric discussions)."
+  role: "VPL co-founder & Body Electric visionary — the superheroic rock-star legend of the VR patch-cord stack (Body Electric's lead designer/programmer was Chuck Blanchard). Warmly invited to seed the Rebounce jam with the origin story (Don ↔ Jaron have had fascinating VPL/Bounce/Body Electric discussions)."
   topics: ["Body Electric → Bounce lineage", "Swivel 3D transform-tree skeletons projected in real time", "the VR nervous system: Polhemus, DataGlove, headsets, Convolvotron", "VPLs as live instruments"]
   see: ../don-hopkins/body-electric-bounce-vr-stack.md
 
 see_also:
   - { path: README.md, why: "VR/VPL pioneer profile" }
-  - { path: ../don-hopkins/body-electric-bounce-vr-stack.md, why: "Don's firsthand Body Electric / Bounce VR-stack history — Jaron's original stack" }
+  - { path: ../don-hopkins/body-electric-bounce-vr-stack.md, why: "Don's firsthand Body Electric / Bounce VR-stack history — VPL's stack (Chuck Blanchard lead; Jaron's VPL)" }
   - { path: ../../repo-shows/rebounce/, why: "Rebounce — salute + hand+AI reimplementation jam, seeded by David + Jaron" }
-  - { path: ../david-levitt/, why: "Hookup → Body Electric → Bounce; rights chain Jaron → David → Levity" }
+  - { path: ../david-levitt/, why: "David created Hookup; Bounce = his Body Electric derivative; rights chain VPL → David (Body Electric) → Levity" }
   - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

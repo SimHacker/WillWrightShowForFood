@@ -4,8 +4,8 @@
 title: Don Philahue
 iconic: "🎙️ Phil"
 description: |
-  AI audience wrangler — surfaces TicketPR questions live, arbitrates scored advertisements,
-  Come On Down ritual. Orchestrator avatar; not Don Hopkins the person.
+  Virtual show orchestrator object — merges plugin CARD ads, arbitrates dispatch, surfaces
+  TicketPR, hands magazines, spawns gags. Hope Chest of Repo Show; not Don Hopkins.
 
 keywords:
   - don philahue
@@ -13,9 +13,13 @@ keywords:
   - audience wrangler
   - ticketpr
   - orchestrator
+  - orchestrator hub
   - phil donahue homage
+  - merge plugin ads
 
 card: CARD.yml
+orchestrator: ORCHESTRATOR.yml
+qa_protocol: qa-orchestration.yml
 
 navigation:
   up: ../GLANCE.yml
@@ -26,8 +30,10 @@ navigation:
 
 read_order:
   - README.md
+  - ORCHESTRATOR.yml
+  - qa-orchestration.yml
   - CARD.yml
-  - judge-rubric.yml
+  - CHARACTER.yml
 
 see_also:
   parent:
@@ -36,9 +42,13 @@ see_also:
     - { path: ../don-hopkins/GLANCE.yml, why: "Human host" }
     - { path: ../slats/GLANCE.yml, why: "Orchestra pit sidekick" }
   across:
+    - { path: ../../designs/orchestrator-playsets/README.md, why: "Hub + dispatch protocols" }
+    - { path: ../../schemas/advertisement-dispatch.yml, why: "inject / hub / magazine" }
     - { path: ../../repo-shows/will-wright/audience/GLANCE.yml, why: "TicketPR roster he serves" }
     - { path: ../../repo-shows/will-wright/venue/GLANCE.yml, why: "Seat map + mic line" }
     - { path: ../../process/ticket-pr.yml, why: "TicketPR constitution" }
     - { path: ../../repo-shows/will-wright/SIMULATION.yml, why: "Show runtime orchestrator" }
   deep:
-    - { path: CARD.yml, why: "SURFACE-QUESTION interface" }
+    - { path: qa-orchestration.yml, why: "Right Q, guest, time — ledger sweep" }
+    - { path: ORCHESTRATOR.yml, why: "Hub spec — plugin merge + state machine" }
+    - { path: CARD.yml, why: "ASK-NOW · QA-LEDGER-SWEEP · SURFACE-QUESTION" }

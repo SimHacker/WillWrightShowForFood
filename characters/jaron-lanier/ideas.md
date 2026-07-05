@@ -9,7 +9,13 @@ VPL's realtime VR/music visual language (Chuck Blanchard); David Levitt's deriva
 MMP player → Macromedia Shockwave on the web vs full interactive visual language on Mac.
 
 ### 2. Rights and handoffs
-Jaron → David: Hookup; VPL shutdown → Body Electric; Levity commercial Mac development with Don.
+David **created Hookup** at MIT (his own patch-cord language) and had it as a **Mac product**. He'd
+granted **VPL the rights to market his Hookup Mac product** (and possibly **HarmonyGrid** — unsure).
+When VPL was falling apart, **David was given the rights to develop Bounce** (a Mac product from **Body
+Electric**) — Don's best recollection: **compensation for losing the rights to his own Mac app(s)**
+(David may recall better — confirm). (Sun Microsystems also acquired Body Electric rights; Jaron did
+work on that with Sun.) Then Levity commercial Mac development with Don. Per the 1999 Jaron↔Don email in
+[bounce-notes.txt](https://www.donhopkins.com/home/archive/visual-programming/bounce-notes.txt).
 
 ### 3. Visual programming design (bounce-notes thread)
 Archived discussion with Don on language design — see [bounce-notes.txt](https://www.donhopkins.com/home/archive/visual-programming/bounce-notes.txt).

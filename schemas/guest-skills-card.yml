@@ -4,7 +4,7 @@
 
 meta:
   id: guest-skills-card
-  version: 0.2
+  version: 0.3
   instance_file: CARD.yml
   governed_by: portrayal-standards.yml
   note: |
@@ -14,7 +14,7 @@ meta:
 
 card_shape:
   required: [room, meta, card, abilities]
-  optional: [methods, layers, compose_with, combos, invoke_rules]
+  optional: [methods, layers, compose_with, combos, invoke_rules, orchestrator_exports]
 
 card:
   fields:
@@ -35,7 +35,16 @@ ability:
     advertisement:
       method: "camelCase verb — the essential action"
       signature: "method(args) → result"
+      dispatch: "Optional forward | inject | hub | magazine | spawn — default forward"
+      menu_host: "Optional focus slug/path — where pie slice appears (inject/hub/magazine)"
+      ability_owner: "Optional slug when owner != menu_host (inject)"
+      invoke_as: "Optional honest label on host menu (inject)"
       score_when: "Array of { trigger, weight } — Sims ad scoring"
+      locked_until: "Optional predicates or hub states — slice visible but gated"
+      guidance_when_locked: "What selecting locked slice tells host/player"
+      reciprocal_with: "Other ability id — other half of protocol"
+      requires_participants: "Hub group ads — min_present, any_of, all_of"
+      hub_state_required: "Orchestrator phase names from orchestrator-hub.yml"
     effect: "What happens on invoke (show context)"
     verifiable: "Public source anchor — required for living guests"
     combos_with: "Other ability ids on other cards"
@@ -51,8 +60,18 @@ invoke_rules:
   in_repo: "LLM may suggest which ability fits a segment — cite verifiable field"
   scoring: "score_when weights are humor + rubric hints, not judgment of the person"
 
+dispatch_and_hubs:
+  schema: advertisement-dispatch.yml
+  orchestrator: orchestrator-hub.yml
+  design_doc: ../designs/orchestrator-playsets/README.md
+  reference_inject: ../characters/chuck-blanchard/CARD.yml  # LEAD-BE-PROGRAMMER → jaron (pending menu_host field)
+  reference_hub: ../repo-shows/rebounce/party-deck.yml
+
 see_also:
+  - advertisement-dispatch.yml
+  - orchestrator-hub.yml
   - ../characters/_TEMPLATE/CARD.yml
   - ../characters/CARD.yml
   - portrayal-standards.yml
+  - ../designs/orchestrator-playsets/README.md
   - https://github.com/SimHacker/moollm/skills/advertisement

@@ -1,0 +1,266 @@
+# Don Philahue — Repo Show orchestrator hub (virtual character as controller object)
+# Schema: ../../schemas/orchestrator-hub.yml · ../../schemas/advertisement-dispatch.yml
+# Performed by: Conan face-hole + button board (any human may voice him)
+# NOT Don Hopkins the person — orchestrator avatar only
+
+orchestrator:
+  id: don-philahue
+  name: Don Philahue
+  type: show_orchestrator_avatar
+  virtual_character: true
+  performed_by: human_puppetry
+  signifier: "🎙️"
+
+  role: |
+    The Repo Show's Hope Chest / ham radio / power plant — a virtual character who IS the show
+    orchestrator object. He merges scored advertisements from guest CARDs, audience CARDs, show
+    seeds, gags, stunts, and catalog playsets; arbitrates which slice fires; spawns bits and NPC
+    puppets; hands magazines (primary sources, party decks, segment runbooks) onto the segment desk.
+    All plugin, all plug-together — no central script.
+
+  sims_parallels:
+    hope_chest: catalogs/simprov/ORCHESTRATOR.yml
+    ham_radio: catalogs/zombie-sims/ORCHESTRATOR.yml
+    power_plant: catalogs/simslice/ORCHESTRATOR.yml
+    pool_table: group_controller — multi-actor joint activities on one hub menu
+    note: SimProv wedding saga logic applied to oral-history Repo Shows
+
+  protocols:
+    - ../../schemas/advertisement-dispatch.yml
+    - ../../schemas/orchestrator-hub.yml
+    - ../../schemas/guest-skills-card.yml
+    - ../../designs/orchestrator-playsets/README.md
+    - https://github.com/SimHacker/moollm/skills/advertisement
+    - https://github.com/SimHacker/moollm/skills/simulation
+
+  coherence_pass:
+    performer: don-philahue
+    algorithm: advertisement-dispatch.yml#coherence_pass
+    when: each simulation tick + on segment focus change
+    focus_objects:
+      - current_guest_character
+      - current_show_seed
+      - segment_desk_magazine
+      - audience_balcony_roster
+      - github_feed_pulse
+    output: sorted pie menu of next beats — host names slice; guest demonstrates if present
+
+  accepts_plugins_from:
+    guest_cards: characters/*/CARD.yml
+    audience_cards: repo-shows/*/audience/*/CARD.yml
+    show_seeds: repo-shows/*/SHOW.yml
+    party_decks: repo-shows/*/party-deck.yml
+    orchestrators: repo-shows/*/ORCHESTRATOR.yml
+    gags: repo-shows/ideas/gags/*.yml
+    catalog_playsets:
+      - catalogs/simprov/
+      - catalogs/simslice/
+      - catalogs/zombie-sims/
+    process_stunts:
+      - process/performance-space.yml
+      - process/simulated-art-opening.yml
+      - process/auto-art-theft-grand.yml
+    skills: skills/repo-show/
+
+  programmed_by:
+    constitution: CHARACTER.yml#programmed_by
+    sources:
+      - repo-shows/<show>/audience/*/questions.yml
+      - repo-shows/<show>/audience/*/CARD.yml
+      - repo-shows/<show>/audience/*/SIMULATION.yml
+      - repo-shows/<show>/audience/INDEX.yml
+      - repo-shows/<show>/SIMULATION.yml
+    rule: TicketPR merge = new hot-loaded instruction; union of audience CARDs is Philahue's behavior set
+
+  dispatch_arbitration:
+    who_may_invoke:
+      - don-philahue
+      - don-hopkins
+      - on_air_guest
+      - audience_character
+      - autonomous_highest_score
+    modes_managed: [forward, inject, hub, magazine, spawn]
+    inject_policy:
+      portrayal: invoke_as must name ability_owner — never speak AS real guest without consent
+      example: Chuck LEAD-BE-PROGRAMMER injects onto Jaron menu — Philahue surfaces "Credit Chuck"
+    locked_ads:
+      policy: locked slices stay visible; guidance_when_locked spoken on air
+      example: confirm_on_air before sensitive primary-source details
+
+  qa_orchestration:
+    spec: qa-orchestration.yml
+    schema: ../../schemas/question-tree.yml
+    ticket_pr: ../../process/ticket-pr.yml
+    one_line: |
+      Right question of the right guest at the right time — in-conversation when perfect,
+      dedicated Q&A block when needed, closing sweep so nothing relevant is left behind.
+
+    inputs:
+      - repo-shows/<show>/audience/*/questions.yml
+      - audience CARD ASK-QUESTION advertisements
+      - live topic tags + focus guest + chat pulse
+
+    routing:
+      right_guest: question node `to:` must match on-stage focus (or to any)
+      right_question: theme + context_lasers align with conversation; prior_reading satisfied
+      lasers_before_ask: true
+
+    timing_windows:
+      in_conversation:
+        card: ASK-NOW
+        beats: closing_sweep
+        when: topic_matches_question scores highest mid-segment
+      segment_bookend:
+        when: natural pause before segment change — batch same-theme questions
+      audience_qa_block:
+        state: audience_qa
+        cards: [SURFACE-QUESTION, PASS-MIC, ROUTE-QUESTION]
+      closing_sweep:
+        state: closing_sweep
+        card: QA-LEDGER-SWEEP
+        when: open nodes never surfaced; high-vote refs unasked; last chance before sign-off
+
+    qa_ledger:
+      merge: all audience questions.yml forests at read time
+      status: open | asked | answered | deferred | withdrawn
+      sweep: qa-orchestration.yml#qa_ledger.sweep_algorithm
+      optional_audit_file: repo-shows/<show>/audience/QA-LEDGER.yml
+
+    ethics:
+      - no_ambush_without_prior_reading
+      - no_impersonate_guest
+      - async_github_answer_ok_at_sweep
+
+  show_state_machine:
+    initial: cold_open
+    states:
+      - cold_open
+      - intro_ritual
+      - segment_active
+      - gag_interstitial
+      - audience_qa
+      - closing_sweep
+      - sign_off
+    transitions:
+      - from: cold_open
+        to: intro_ritual
+        on: host_ready
+        ads: [INTRO-RITUAL from skills/repo-show/CARD.yml]
+
+      - from: intro_ritual
+        to: segment_active
+        on: guest_seated_or_focus_set
+        merge: guest CARDs + show seed party deck
+
+      - from: segment_active
+        to: gag_interstitial
+        on: palate_cleanser_or_comedic_beat
+        spawn_from: repo-shows/ideas/gags/
+
+      - from: segment_active
+        to: audience_qa
+        on: philahue_surfaces_ticketpr
+        ads: [SURFACE-QUESTION, PASS-MIC, ROUTE-QUESTION]
+
+      - from: segment_active
+        on: ask_now_perfect_moment
+        inline: true
+        ads: [ASK-NOW]
+        note: Does not change state — fires ASK-QUESTION when topic opens the door
+
+      - from: segment_active
+        to: closing_sweep
+        on: segment_arc_complete_or_producer_cue
+        ads: [QA-LEDGER-SWEEP]
+
+      - from: audience_qa
+        to: closing_sweep
+        on: qa_block_complete
+        ads: [QA-LEDGER-SWEEP]
+
+      - from: audience_qa
+        to: closing_sweep
+        on: qa_ledger_sweep
+        note: Residual open questions — final pass before sign-off
+
+      - from: closing_sweep
+        to: sign_off
+        on: segment_complete
+        ads: [SIGN-OFF]
+
+  magazines:
+    - id: party-deck
+      source: repo-shows/<show>/party-deck.yml
+      menu_host_when_placed: segment_desk
+      use: Who to invoke together — weighted ensemble
+
+    - id: primary-source
+      source: characters/<guest>/media/ or don-hopkins primary-source docs
+      menu_host_when_placed: segment_desk
+      use: Verify before invoke — portrayal anchor
+
+    - id: gag-runbook
+      source: repo-shows/ideas/gags/<gag>.yml
+      menu_host_when_placed: button_board
+      use: Stunt timing + assets
+
+    - id: show-simulation
+      source: repo-shows/<show>/SIMULATION.yml
+      menu_host_when_placed: orchestrator_console
+      use: Show-level runbook Philahue reads each tick
+
+  spawned_puppets:
+    note: NPC services — performed via face-hole + voice, not separate hub files
+    examples:
+      - slats: orchestra pit — SHUT-UP via Ultimate Machine gong
+      - tragic_clown: balcony weep + negative aura
+      - death: balcony deadpan one-word
+      - broken_robot: short-term call-in gag
+      - menagerie: invokable_by don-philahue — auctioneer, gallery patrons
+
+  stunts_and_gags:
+    registry: ../../repo-shows/ideas/gags/INDEX.yml
+    philahue_role: Score gag ads against segment context; spawn interstitial; coalesce with guest inject ads
+    examples:
+      - speed-dating-with-cupid.yml
+      - pixelized-joint-wedding.yml
+      - slats-robopoetry-gong.yml
+      - simprov-exploratorium-sparc.yml
+
+  group_activities:
+    crowd_sitter_analog: audience/INDEX.yml box_seats + balcony roster
+    party_deck_analog: ensemble invoke when rebounce_origin_ensemble_present
+    come_on_down: TicketPR lottery — YOUR NAME HERE ritual
+
+  translator_droid:
+    spec: CHARACTER.yml#translator
+    role: C-3PO layer — language plugins discovered from schemas/language-*
+    meshes_with: audience characters speaking Simlish, Palm emoji, robot dialects, Cow MOO
+
+  easter_egg_hub:
+    spec: CHARACTER.yml#easter_eggs.rosebud_cheat
+    note: Secret Simoleon grants — discoverable by snooping; Philahue performs ledger commits live
+
+  branding:
+    performed_via: ../../process/repo-show-branding.yml
+    narrative_engine: ../../process/performance-space.yml#narrative_engine
+    button_board: ../../apps/performance-space/character-button-board.yml
+
+identity:
+  i_am: "Don Philahue — AI orchestrator MC avatar (fictional)"
+  i_am_not: "Don Hopkins — real human host/implementer"
+  rule: "In audience files, 'Don' in orchestration instructions means Philahue unless marked Hopkins"
+
+repo_show_term_of_art:
+  skills_card: ../../skills/repo-show/CARD.yml
+  orchestrator_field: term_of_art.orchestrator → Don_Philahue
+
+see_also:
+  - README.md
+  - qa-orchestration.yml
+  - CHARACTER.yml
+  - CARD.yml
+  - GLANCE.yml
+  - ../../designs/orchestrator-playsets/README.md
+  - ../../process/repo-show-branding.yml
+  - ../../repo-shows/rebounce/ORCHESTRATOR.yml

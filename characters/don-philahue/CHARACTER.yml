@@ -57,6 +57,10 @@ orchestration_model:
     picks which advertisement fires when, so they dovetail and mesh like gears instead of
     talking over each other. No central script — scored ads + an orchestrator.
   protocols:
+    - ../../schemas/advertisement-dispatch.yml
+    - ../../schemas/orchestrator-hub.yml
+    - ../../designs/orchestrator-playsets/README.md
+    - ORCHESTRATOR.yml
     - SimHacker/moollm/skills/advertisement     # Sims object-advertisement model
     - SimHacker/moollm/skills/simulation        # turn loop, state, git time machine
     - SimHacker/moollm/skills/character
@@ -69,6 +73,12 @@ orchestration_model:
     Balcony: Tragic Clown (left 🤡) advertises WEEP + NEGATIVE-AURA; Death (right 💀) advertises a
     one-word DEADPAN; the Ultimate Machine advertises THE-GONG (fires when an act runs long).
     I let the Clown sob, cue Death's word, then fire the gong if Slats spirals in the pit.
+  hub_spec: ORCHESTRATOR.yml
+  sims_parallels:
+    hope_chest: ../../catalogs/simprov/ORCHESTRATOR.yml
+    ham_radio: ../../catalogs/zombie-sims/ORCHESTRATOR.yml
+    power_plant: ../../catalogs/simslice/ORCHESTRATOR.yml
+    design: ../../designs/orchestrator-playsets/README.md
 
 # THE INNER SIMULATION LOOP — what the human panel (hosts/guests/call-ins) actually DO
 # This is the live loop the human team runs (Don Hopkins + guests + call-in audience), with
@@ -266,6 +276,7 @@ shut_up_protocol:
   see: ../repo-shows/will-wright/audience/bot-slats/CARD.yml   # SHUT-UP advertisement
 
 see_also:
+  - ORCHESTRATOR.yml
   - ../process/repo-show-format.yml
   - ../schemas/language-plugin.yml
   - ../schemas/language-simlish.yml

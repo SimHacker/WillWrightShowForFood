@@ -12,6 +12,25 @@ meta:
   schema: ../../schemas/guest-skills-card.yml
   governed_by: ../../schemas/portrayal-standards.yml
   card_type: guest_skills
+
+character_sheet:
+  class: Patch-Cord VR Architect
+  spec: Bounce / Hookup · off-spec Pantomime JSON
+  level: 17
+  alignment: Chaotic Good Live Coder
+  stats:
+    patch_cord_craft: 20
+    vr_worlds: 18
+    ai_music: 17
+    json_on_wires: 19
+  passives:
+  - BOUNCE
+  equipment:
+  - name: Hookup (Mac product)
+    slot: relic
+    rarity: legendary
+    note: First patch-cord metaphor — Coniglio's primary source
+
 card:
   name: David Levitt
   title: AI Music & VR
@@ -96,6 +115,75 @@ abilities:
   combos_with:
   - AI-MUSIC
   - VPL-VR
+  - MARK-CREDIT-HOOKUP-ORIGIN
+  - CHUCK-LIVE-CODE-VR-WORLD
+
+- id: LIVE-CODE-WORLD
+  name: Live Code Running World
+  type: activated
+  mana: "{U}{U}{G}{G}"
+  cooldown: rebounce_flagship
+  conditions:
+  - show_seed: repo-shows/rebounce/
+  - segment_topic_in: [bounce, live-coding, com-on-wires, jsonic]
+  advertisement:
+    method: liveCodeRunningWorld
+    signature: liveCodeRunningWorld(patch) → edit VR world while it runs
+    score_when:
+    - trigger: audience_feels_groove
+      weight: 0.96
+    - trigger: rebounce_origin_ensemble_present
+      weight: 0.93
+    - trigger: relationship_matrix_ensemble
+      guests: [david-levitt, chuck-blanchard, jaron-lanier]
+      weight: 0.97
+  effect: Flagship spell — Bounce's superpower; ancestor of Repo Show repo-jam energy.
+  verifiable: body-electric-bounce-vr-stack.md; rebounce README
+  combos_with:
+  - CHUCK-LIVE-CODE-VR-WORLD
+  - REBOUNCE-JAM
+
+- id: HOOKUP-MAC-RIGHTS
+  name: Hookup Mac Rights Story
+  type: triggered
+  mana: "{W}{U}"
+  conditions:
+  - segment_topic_in: [rights-chain, hookup, vpl, levity, bounce]
+  - needs_don_recollection_flag: confirm_with_david
+  advertisement:
+    method: hookupMacRightsStory
+    signature: hookupMacRightsStory() → compensation arc told honestly
+    score_when:
+    - trigger: primary_source_honesty_on_air
+      weight: 0.94
+    - trigger: jaron_present_for_sun_thread
+      weight: 0.88
+  effect: Reaction — David created Hookup Mac product; granted VPL marketing rights; Bounce-for-Mac dev rights as compensation when VPL fell apart (Don's best recollection).
+  verifiable: don-and-david-history.md; jaron ideas.md; bounce-notes.txt
+  combos_with:
+  - JARON-DATA-DIGNITY-REPO
+
+- id: REBOUNCE-JAM
+  name: Rebounce Jam
+  type: activated
+  mana: "{G}{U}{U}"
+  conditions:
+  - show_seed: repo-shows/rebounce/
+  - segment_format: hand_and_ai_rewrite
+  advertisement:
+    method: rebounceJam
+    signature: rebounceJam(source, contributors[]) → modern TS/web Bounce reincarnation
+    score_when:
+    - trigger: best_of_n_energy
+      weight: 0.92
+    - trigger: never_gateway_always_fork
+      weight: 0.9
+  effect: Seed the Rebounce jam — check in Pascal/C source; many parallel rewrites; David + Don seed design.
+  verifiable: repo-shows/rebounce/; don-hopkins/rebounce.md
+  combos_with:
+  - JENS-SNAP-BOUNCE-HALF
+  - WILL-DATA-PORTABILITY
+
 invoke_rules:
   consent: not_yet_asked
   simulation: false

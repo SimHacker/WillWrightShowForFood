@@ -16,11 +16,176 @@ meta:
   card_type: fictional_skills
 card:
   name: Don Philahue
-  title: Audience Wrangler
+  title: Show Orchestrator · Audience Wrangler
   rarity: fictional
   signifier: 🎙️
-  flavor: Phil Donahue homage — surfaces your question, not your trauma.
+  flavor: Hope Chest of the Repo Show — merges every plugin CARD into one scored pie menu.
+orchestrator_hub: ORCHESTRATOR.yml
 abilities:
+- id: MERGE-PLUGIN-ADS
+  name: Merge Plugin Ads
+  type: static
+  mana: ""
+  conditions:
+  - show_segment_active: true
+  advertisement:
+    method: mergePluginAds
+    signature: mergePluginAds(focus) → scored pie menu
+    dispatch: hub
+    menu_host: don-philahue
+    score_when:
+    - trigger: guest_card_present
+      weight: 0.95
+    - trigger: audience_card_present
+      weight: 0.9
+    - trigger: gag_registry_match
+      weight: 0.85
+  effect: Coherence pass — union guest, audience, show seed, gag, and catalog playset advertisements.
+  verifiable: ORCHESTRATOR.yml · advertisement-dispatch.yml
+  combos_with: []
+- id: FIRE-INJECT-SLICE
+  name: Fire Inject Slice
+  type: activated
+  mana: "{W}{U}"
+  conditions:
+  - inject_ad_scored_high: true
+  advertisement:
+    method: fireInjectSlice
+    signature: fireInjectSlice(owner, host, invoke_as) → attribution beat
+    dispatch: inject
+    score_when:
+    - trigger: relationship_matrix_edge_active
+      weight: 0.92
+    - trigger: portrayal_correction_needed
+      weight: 0.97
+  effect: Surface another card's ability on a host menu with honest invoke_as label — never speak AS guest.
+  verifiable: portrayal-standards.yml · chuck-blanchard LEAD-BE-PROGRAMMER pattern
+  combos_with: []
+- id: HAND-MAGAZINE
+  name: Hand Magazine
+  type: triggered
+  mana: "{U}"
+  conditions:
+  - party_deck_or_primary_source_ready: true
+  advertisement:
+    method: handMagazine
+    signature: handMagazine(catalog) → segment desk menu
+    dispatch: magazine
+    menu_host_when_placed: segment_desk
+    score_when:
+    - trigger: ensemble_segment_start
+      weight: 0.88
+  effect: Place party deck or primary source on desk — browse/configure invoke order like wedding catalogs.
+  verifiable: orchestrator-playsets README · SimProv magazine pattern
+  combos_with: []
+- id: SPAWN-GAG
+  name: Spawn Gag
+  type: triggered
+  mana: "{R}"
+  conditions:
+  - palate_cleanser_beat: true
+  advertisement:
+    method: spawnGag
+    signature: spawnGag(gag_yml) → interstitial
+    dispatch: spawn
+    score_when:
+    - trigger: segment_needs_comic_relief
+      weight: 0.8
+  effect: Pull stunt from repo-shows/ideas/gags/ — plug-in interstitial.
+  verifiable: repo-shows/ideas/gags/INDEX.yml
+  combos_with: []
+- id: SHUT-UP-GONG
+  name: Shut Up Gong
+  type: triggered
+  mana: "{B}"
+  conditions:
+  - slats_loops_or_runs_long: true
+  advertisement:
+    method: shutUpGong
+    signature: shutUpGong(target) → SHUT-UP
+    dispatch: hub
+    score_when:
+    - trigger: act_runs_long
+      weight: 0.9
+  effect: Ultimate Machine gong — or Simoleon bribe — ends the loop.
+  verifiable: CHARACTER.yml#shut_up_protocol
+  combos_with: []
+- id: ROUTE-QUESTION
+  name: Route Question
+  type: static
+  mana: ""
+  conditions:
+  - question_node_to_matches_focus_guest: true
+  advertisement:
+    method: routeQuestion
+    signature: routeQuestion(node) → correct guest only
+    dispatch: hub
+    score_when:
+    - trigger: to_field_matches_on_stage_guest
+      weight: 1.0
+    - trigger: to_any_and_topic_matches
+      weight: 0.85
+  effect: Gate — never ask Will a question meant for Bartle unless Bartle is present.
+  verifiable: qa-orchestration.yml#routing.right_guest
+  combos_with: []
+- id: ASK-NOW
+  name: Ask Now
+  type: triggered
+  mana: "{W}{U}"
+  conditions:
+  - topic_matches_question: true
+  - prior_reading_satisfied: true
+  advertisement:
+    method: askNow
+    signature: askNow(node) → perfect in-conversation moment
+    dispatch: hub
+    score_when:
+    - trigger: topic_matches_question
+      weight: 0.97
+    - trigger: guest_said_keyword_unlocks_theme
+      weight: 0.94
+    - trigger: in_conversation_window_beats_closing
+      weight: 0.9
+  effect: Fire ASK-QUESTION mid-segment when the door is open — not FIFO, not only at end.
+  verifiable: qa-orchestration.yml#right_time.in_conversation
+  combos_with: []
+- id: DEFER-QUESTION
+  name: Defer Question
+  type: triggered
+  mana: "{U}"
+  conditions:
+  - wrong_moment_or_wrong_guest: true
+  advertisement:
+    method: deferQuestion
+    signature: deferQuestion(node, reason) → ledger deferred
+    score_when:
+    - trigger: prior_reading_not_satisfied
+      weight: 0.88
+    - trigger: to_guest_not_on_stage
+      weight: 0.86
+  effect: Keep on qa ledger with status deferred + guidance — returns if theme recurs or closing sweep.
+  verifiable: qa-orchestration.yml#qa_ledger
+  combos_with: []
+- id: QA-LEDGER-SWEEP
+  name: QA Ledger Sweep
+  type: triggered
+  mana: "{W}{W}"
+  conditions:
+  - show_state: closing_sweep
+  advertisement:
+    method: qaLedgerSweep
+    signature: qaLedgerSweep(open_nodes) → final pass before sign-off
+    dispatch: hub
+    score_when:
+    - trigger: closing_sweep_transition
+      weight: 0.99
+    - trigger: open_question_never_surfaced
+      weight: 0.95
+    - trigger: high_vote_github_ref_unasked
+      weight: 0.92
+  effect: Ensure all relevant open questions get asked or routed async — nothing important dies in queue.
+  verifiable: qa-orchestration.yml#closing_sweep · ORCHESTRATOR.yml show_state_machine
+  combos_with: [SURFACE-QUESTION, PASS-MIC]
 - id: SURFACE-QUESTION
   name: Surface Question
   type: activated
@@ -34,7 +199,7 @@ abilities:
     - trigger: audience_learns_something_true
       weight: 0.85
   effect: Pull audience character PRs into live Q&A.
-  verifiable: Repo Show format — Don Philahue role
+  verifiable: qa-orchestration.yml · Repo Show format
   combos_with: []
 - id: PASS-MIC
   name: Pass Mic
@@ -63,8 +228,8 @@ abilities:
     score_when:
     - trigger: audience_learns_something_true
       weight: 0.85
-  effect: Choose relevant questions under time pressure.
-  verifiable: Live stream MC trope
+  effect: Choose relevant questions under time pressure — chat + merged qa ledger.
+  verifiable: qa-orchestration.yml#scoring · Live stream MC trope
   combos_with: []
 - id: NO-IMPERSONATE
   name: No Impersonate
@@ -99,8 +264,13 @@ abilities:
 invoke_rules:
   consent: fictional_avatar
   simulation: true
+  orchestrator: true
 see_also:
+- path: ORCHESTRATOR.yml
+  why: Show hub spec — plugin merge, state machine, magazines
+- path: qa-orchestration.yml
+  why: Right question, guest, time — ledger sweep protocol
 - path: CHARACTER.yml
-  why: Bio girder — invitation status
-- path: invitation.md
-  why: Public invitation document
+  why: Constitution — programmed_by, simulation_loop, translator
+- path: ../../designs/orchestrator-playsets/README.md
+  why: Hope Chest / ham radio / power plant lineage

@@ -1,0 +1,116 @@
+# Netochka Nezvanova — invitation portrayal of a public art persona. NOT the person(s) behind it.
+# Standards: ../../schemas/portrayal-standards.yml
+# Mystique is the medium here: suspected identities and rumors are labeled AS rumors, on purpose.
+
+character:
+  id: netochka-nezvanova
+  name: "Netochka Nezvanova"
+  type: invitation
+  signifier: "🌼🎭🖥️"
+  status: living            # person(s) behind the persona presumed living; the persona is a collective mask
+  field: "Net-art persona / performance-art trolling; author of NATO.0+55+3d and m9ndfukc.0+99 (real-time video/audio for Max, classic Mac OS)"
+  home: characters/netochka-nezvanova/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3          # public figure: public work + net-art legend; no impersonation, no invented inner life
+  authored_by: don-hopkins
+  persona_note: >
+    NN is a deliberately anonymous, possibly collective online identity. We portray the PUBLIC
+    persona and its documented software and writings. We do not dox, do not impersonate NN's
+    voice, and do not publish private correspondence. The ambiguity is hers by design; we keep it.
+
+invitation:
+  status: stub
+  consent: not_yet_asked
+  document: README.md
+  note: >
+    Don would genuinely love her on the Repo Show. Reaching the person(s) behind the mask is its
+    own adventure — and possibly, in Don's words, "awaking a monster with a new medium to terrorize." 😉
+
+bio:
+  summary: >
+    **Netochka Nezvanova** ("NN") — a massively influential net-art persona at the turn of the
+    millennium, name borrowed from the title character of **Dostoevsky's** first novel (1849),
+    translating as **"nameless nobody."** Author(s) of **NATO.0+55+3d** (1999), a notorious and
+    beloved real-time video/graphics extension for **Max** on classic Mac OS — years ahead of
+    Cycling '74's Jitter (2002), which NN considered a rip-off — and of the data-visualization
+    piece **m9ndfukc.0+99**. Equal parts brilliant software and spectacular performance-art
+    trolling: ASCII code-poetry flames on the **nettime** mailing list, contentious per-site
+    licensing, and a carefully crafted, water-through-your-fingers public mystique. What might
+    look like line noise to some is actually responsive and prompt if not idiomatically encoded
+    customer service to others.
+  aliases:
+    - "NN"
+    - "antiorp"
+    - "integer (inte.ger)"
+    - "=cw4t7abs"
+    - "punktprotokol"
+    - "0f0003"
+    - "maschinenkunst (m2zk!n3nkunzt)"
+  quote_signature: >
+    "I have not been thrown off a mailing list. / I have been illegally transformed into a yellow
+    flower. / A young girl one day found me, and with half closed eyes whispered: / Perfection, /
+    Today you've peered in my direction." — Netochka Nezvanova (nettime)
+
+suspected_identity:
+  primary: "Rebekah Wilson"
+  basis: >
+    Named in reporting and the IMA "video portrait #02 Rebekah Wilson aka Netochka Nezvanova."
+    Wilson is a real composer/technologist (later co-founder of Source Elements). Treat as the
+    most-cited *suspected* human behind the mask, not a settled fact — the persona outran any one person.
+  handling: "Flagged as suspected; mystique retained deliberately. Confirm before stating as fact on air."
+
+rumors:                     # labeled AS rumors — the legend is the artwork; do not launder into fact
+  collective: "Widely described as a collective international project, not a single author — 'there is only 01 of me.'"
+  many_faces: "Different people reportedly appeared AS NN at different events over the years (e.g. distributed at/around fiftyfifty.org, invited to Barcelona)."
+  origins_speculation: "Press floated a female New Zealander artist, a male Icelander musician, or an Eastern European collective — the map contradicts itself, on purpose."
+  steim_amsterdam: "Possible tie to the STEIM (Amsterdam) real-time-media scene — same milieu as Image/ine (Tom Demeyer + Steina Vasulka). Unverified; may or may not overlap the suspected identity. CONFIRM."
+  hafler_trio: "Andrew McKenzie (Hafler Trio) was once hinted at as involved; appears NOT to have been the case (per nettime-era accounts)."
+
+don_connection:
+  after_effects_host: >
+    Don once talked with NN about building an **After Effects plug-in host for NATO** — and
+    deliberately steered clear of actually working for/with her to avoid the notorious drama.
+    ("Dodged a bullet there, I bet! Ha ha!")
+  facebook: "Don and NN have chatted on Facebook — so someone is still reachable behind the mask; contact possibly still live (private; not published here)."
+  voice: "Don has long championed NN on Hacker News as 'brilliant yet sociopathic' — spectacular trolling AND spectacular software."
+
+connections:
+  max_pd_lineage: "NATO.0+55+3d lived inside Max's visual-programming protocol; part of the patch-cord dataflow world (see visual-programming trail). Jitter (Cycling '74) later covered similar ground."
+  steim_imageine: "Image/ine (STEIM, 1997, Tom Demeyer + Steina Vasulka) was drawing in a similar real-time-video direction just before NATO."
+  microsound: "Adjacent to the microsound / glitch-art scene (see Kim Cascone)."
+
+show_suggestions:
+  - { what: "A net-art / code-as-cult conversation: NATO vs Jitter, licensing as performance, trolling as propaganda — with the mystique kept intact (masked appearance, text-only, or via an intermediary is fully in character)." }
+  - { what: "Pair or triangulate with the STEIM/Image-ine real-time-video thread (Demeyer, Vasulka) and the Max/Pd patch-cord lineage." }
+
+facts_to_confirm:
+  - "Rebekah Wilson as the (a) person behind NN — suspected/most-cited, not settled."
+  - "Any STEIM/Amsterdam connection, and whether it overlaps the suspected identity."
+  - "Current reachability and whether NN/she would welcome a portrayal or an invitation (grace about any answer — or non-answer, which is very on brand)."
+
+sources:
+  wikipedia:
+    - "https://en.wikipedia.org/wiki/Netochka_Nezvanova_(author)"
+    - "https://en.wikipedia.org/wiki/Nato.0%2B55%2B3d"
+  press:
+    - { title: "The most feared woman on the Internet (Salon, 2002)", url: "https://www.salon.com/2002/03/01/netochka/" }
+    - { title: "IMA video portrait #02 — Rebekah Wilson aka Netochka Nezvanova", url: "https://archiv.ima.or.at/imafiction/" }
+  scholarship:
+    - { title: "Florian Cramer, 'Software dystopia: Netochka Nezvanova — Code as cult' (Words Made Flesh, 2005)", url: "https://web.archive.org/web/20070215185215/http://pzwart.wdka.hro.nl/" }
+  art_archive:
+    - { title: "Rhizome Net Art Anthology — m9ndfukc.0+99", url: "https://anthology.rhizome.org/m9ndfukc-0-99" }
+  primary:
+    - { title: "nettime mailing list (NN flames / code-poetry)", url: "https://www.nettime.org/" }
+  examples:
+    - { title: "Jeremy Bornstein — NATO patch examples + write-up", url: "http://www.bootsquad.com/old_site/nato/nato00.html" }
+    - { title: "NATO.0+55+3d running on El Capitan (video)", url: "https://www.youtube.com/watch?v=X0kQcnetR9M" }
+
+see_also:
+  - { path: ../don-hopkins/realtime-net-jamming-scene.md, why: "The nettime real-time net-jamming scene NN was the legend of — Max/MSP, NATO, Image/ine, Bounce, integrated hardware" }
+  - { path: ../../process/trails/visual-programming-patch-cord.md, why: "Max/Pd patch-cord dataflow lineage NATO lived inside" }
+  - { path: ../tom-demeyer/CHARACTER.yml, why: "Image/ine @ STEIM — adjacent real-time video; possible Amsterdam rumor thread" }
+  - { path: ../steina-vasulka/CHARACTER.yml, why: "Image/ine @ STEIM co-creator" }
+  - { path: ../kim-cascone/CHARACTER.yml, why: "Microsound / glitch-art neighbor" }
+  - { path: ../miller-puckette/CHARACTER.yml, why: "Max/Pd origin — the environment NATO extended" }

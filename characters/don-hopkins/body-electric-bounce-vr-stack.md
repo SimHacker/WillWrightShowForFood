@@ -2,9 +2,10 @@
 
 *Don's firsthand account of the **Body Electric / Bounce** real-time visual-programming VR stack —
 the groove, the wires, and the architecture. Told partly out of Don's long, wonderful conversations
-with **[Jaron Lanier](../jaron-lanier/README.md)** (Body Electric's original author) and
-**[David Levitt](../david-levitt/README.md)** (Hookup → Bounce). Firsthand recollection; a warm salute,
-not a spec.*
+with **[Jaron Lanier](../jaron-lanier/README.md)** (VPL co-founder & Body Electric visionary — its
+**lead designer/programmer was Chuck Blanchard**) and **[David Levitt](../david-levitt/README.md)**
+(created Hookup at MIT; built Bounce as a derivative of Body Electric). Firsthand recollection; a warm
+salute, not a spec.*
 [Portrayal standards](../../schemas/portrayal-standards.yml) ·
 Trail: [visual-programming-patch-cord](../../process/trails/visual-programming-patch-cord.md)
 
@@ -52,8 +53,16 @@ That's **passing a whole structured object by reference through one connection**
 cousin of "streams of streams / a file description through a file descriptor"
 ([streams-of-streams / zero-copy](streams-of-streams-fd-passing-zero-copy.md)). And it's the direct
 ancestor of the **Pantomime JSON object system** David and I built later, which became **Don's
-JSON/YAML config system → MOOLLM** ("[slots all the way down](../david-rosenthal/slots-all-the-way-down.md)").
-Typed colored wires carrying reflective JSON-ish objects, in ~1990s Bounce.
+JSON/YAML config system → MOOLLM** ("[slots all the way down](../david-rosenthal/slots-all-the-way-down.md)"). Typed colored wires carrying reflective JSON-ish objects, in ~1990s Bounce at Interval Research.
+
+**How we got COM on the Mac:** we adapted an early **ATL (ActiveX Template Library)** to work with
+**Metrowerks CodeWarrior** (Microsoft was bringing **Internet Explorer 6** to the Mac and needed COM;
+Metrowerks added pragmas so C++ vtables matched COM's layout). That let us define **COM interfaces**
+for Bounce plug-in modules — and those modules introduced **IMOADict / IMOAArray**-style tree-structured
+types (polymorphic dict/array/int/boolean — we pre-invented JSON), with readers/writers/indexers on
+**colored typed wires**. Build a model of the world, run the simulation, pass **object references** between
+modules instead of fanning out six scalars. Jaron and I argued whether Swivel3D alone was general enough
+or you needed a non-visual config language; his answer — **make objects visible** — is the design jewel.
 
 ## Why it still matters
 
@@ -79,9 +88,14 @@ wire live streams).
 
 ## Sources & to-verify
 
+- **Credit where due — Chuck Blanchard.** Body Electric's lead designer/programmer was **Chuck
+Blanchard**, not Jaron. Per the **1999 Jaron↔Don email** (in bounce-notes.txt): "Chuck Blanchard
+wasn't credited as the lead designer/programmer of BE/Bounce when David brought the program to
+Interval. Chuck's name was reduced in stature…" Jaron founded VPL and drove the vision; Chuck wrote
+the custom tools (e.g. the Swivel 3D transform-tree editor). *(To do: a `chuck-blanchard/` character.)*
 - Don's Bounce writeup: [Medium — *Bounce Stuff](https://medium.com/@donhopkins/bounce-stuff-8310551a96e3)* ·
 [c2: BounceLanguage](https://wiki.c2.com/?BounceLanguage) ·
-[bounce-notes.txt (LEV list 2000; Jaron thread)](https://www.donhopkins.com/home/archive/visual-programming/bounce-notes.txt)
+[bounce-notes.txt (LEV list 2000; 1999 Jaron thread)](https://www.donhopkins.com/home/archive/visual-programming/bounce-notes.txt)
 - Neighbors: [Levity / Bounce / Space Seed](levity-bounce-space-seed.md) ·
 [David Levitt](../david-levitt/README.md) · [Jaron Lanier](../jaron-lanier/README.md) ·
 [visual-programming taxonomy](visual-programming-taxonomy.md)

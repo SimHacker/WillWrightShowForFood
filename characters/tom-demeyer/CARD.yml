@@ -1,0 +1,105 @@
+# CARD — Tom Demeyer (public portrayal)
+# NOT Tom Demeyer. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: tom-demeyer
+  name: Tom Demeyer
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+
+character_sheet:
+  class: Realtime Video Artificer
+  spec: Image/ine · off-spec STEIM Plugins
+  level: 15
+  alignment: Neutral Good Amsterdam Hardware Hacker
+  stats:
+    realtime_video: 19
+    plugin_architecture: 18
+    steim_lore: 17
+    performance_readiness: 16
+  passives:
+  - STEIM-RESIDENCY-BUFF
+  equipment:
+  - name: Image/ine
+    slot: main_hand
+    rarity: legendary
+    note: Mac PowerPC 8600 was the dream machine
+
+card:
+  name: Tom Demeyer
+  title: Image/ine @ STEIM
+  rarity: uncommon
+  signifier: "📹"
+  flavor: Real-time video manipulation on the Mac — plug-ins, before NATO made Max the video hub.
+
+abilities:
+- id: IMAGE-INE
+  name: Image/ine
+  type: activated
+  mana: "{G}{U}{U}"
+  conditions:
+  - segment_topic_in: [image-ine, steim, realtime-video, net-jamming]
+  advertisement:
+    method: imageIne
+    signature: imageIne(plugins[]) → live video instrument on Mac
+    score_when:
+    - trigger: audience_sees_video_before_jitter
+      weight: 0.91
+    - trigger: co_guest_is_steina_vasulka
+      weight: 0.94
+    - trigger: trail_net_jamming_scene_active
+      weight: 0.9
+  effect: Cast — Image/ine (1996–2001) realtime video instrument; features later absorbed into Isadora.
+  verifiable: image-ine.org; v2.nl archive
+  combos_with:
+  - STEINA-IMAGE-INE
+  - MARK-STEIM-TO-ISADORA
+  - NN-NATO-RTP-JAM
+
+- id: STEIM-PLUGIN-ARCH
+  name: STEIM Plugin Architecture
+  type: static
+  mana: ""
+  conditions:
+  - segment_topic_in: [steim, plugins, live-performance, hardware]
+  advertisement:
+    method: steimPluginArch
+    signature: steimPluginArch() → instrument not app
+    score_when:
+    - trigger: performance_culture_on_air
+      weight: 0.87
+  effect: Passive — STEIM ethos; realtime media as playable instrument with extensible plugins.
+  verifiable: steim.org; Image/ine documentation
+  combos_with:
+  - JARON-VR-AS-INSTRUMENT
+
+- id: POWERPC-DREAM-MACHINE
+  name: PowerPC 8600 Dream
+  type: emote
+  mana: "{1}"
+  conditions:
+  - segment_mood: retro_computing_nostalgia
+  advertisement:
+    method: powerpc8600Dream
+    signature: powerpc8600Dream() → the Mac that could finally push live video
+    score_when:
+    - trigger: retro_guests_real_wire_trail
+      weight: 0.8
+  effect: Emote — the PowerPC 8600 as "the dream machine" for Image/ine era artists.
+  verifiable: Don's Image/ine HN/thread notes; body-electric-1999-jaron-email.md
+  combos_with: []
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+- path: ../steina-vasulka/CARD.yml
+- path: ../mark-coniglio/CARD.yml
+- path: ../don-hopkins/realtime-net-jamming-scene.md

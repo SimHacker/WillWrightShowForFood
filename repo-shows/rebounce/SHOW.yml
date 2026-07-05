@@ -17,7 +17,7 @@ why_this:
   the_salute: "Bounce/Body Electric was one of the most productive, delightful visual programming languages Don ever used — live-coding a running VR world before the phrase existed. Rebounce honors it by bringing it back."
   the_source: "Don has the old Bounce source (Pascal → machine-mangled C, Mac heritage). Check it in as the seed artifact; it's the reference, not the destination."
   the_jam: "Many people rewrite it in parallel — by hand, with AI, and hybrid — competing AND cooperating, cross-pollinating ideas. Best-of-N energy: many attempts, shared learnings, no single 'winner' required."
-  the_seeds: "David Levitt (Hookup → Body Electric → Bounce) and Don seed the design discussion; Jaron Lanier (Body Electric's original author, VR legend) warmly invited to riff on the origins."
+  the_seeds: "David Levitt (created Hookup; built Bounce from VPL's Body Electric) and Don seed the design discussion; Jaron Lanier (VPL co-founder & Body Electric visionary — lead designer/programmer was Chuck Blanchard; VR legend) warmly invited to riff on the origins."
 
 seed_history:
   from: ../../characters/don-hopkins/body-electric-bounce-vr-stack.md

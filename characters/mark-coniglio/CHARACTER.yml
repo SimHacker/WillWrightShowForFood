@@ -1,0 +1,66 @@
+# Mark Coniglio — invitation portrayal. NOT Mark Coniglio.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: mark-coniglio
+  name: "Mark Coniglio"
+  type: invitation
+  signifier: "🎚️💃"
+  status: living
+  field: "Composer/media artist; creator of Interactor and Isadora (real-time interactive media); co-founder of Troika Ranch"
+  home: characters/mark-coniglio/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: stub
+  consent: not_yet_asked
+  document: README.md
+
+bio:
+  summary: >
+    **Mark Coniglio** — composer, media artist, and programmer; co-founder of the dance-and-technology
+    company **Troika Ranch**. As a CalArts composition student he hardcoded interactive ideas for
+    **Morton Subotnick** that grew into **Interactor** (used in Subotnick's 1987 *Hungers*), and later
+    created **Isadora**, the real-time interactive media/video environment widely used in live
+    performance. Coniglio is also a key *historian* of the patch-cord lineage: he documents **David
+    Levitt's Hookup** (MIT) as the first "patch-cord" visual language — the metaphor **Max** and
+    **Isadora** both inherit.
+
+what_he_said:
+  hookup_first_patchcord: "Coniglio credits David Levitt's Hookup as the first 'patch-cord' visual language — the shared ancestor of Max and Isadora."
+  timeline: >
+    1986 — Morton Subotnick used Hookup at MIT; Coniglio hardcoded Mort's ideas → Interactor (1987,
+    *Hungers*). 1996 — a Troika Ranch STEIM residency, where he saw Image/ine → Isadora grew out of
+    Interactor.
+  isadora_vs_max: "Both inherit the patch-cord metaphor from Hookup, but Isadora shows parameter names/values plus real-time graphic feedback per module."
+  source: "http://www.sdela.dds.nl/sfd/isadora.html"
+
+connections:
+  hookup_david_levitt: "Documents Hookup (David Levitt) as the patch-cord origin — the through-line of this repo's visual-programming trail."
+  steim_imageine: "1996 STEIM residency; saw Image/ine (Tom Demeyer + Steina Vasulka) — real-time video lineage into Isadora."
+  patch_cord_family: "Isadora ↔ Max ↔ Pure Data (Miller Puckette) ↔ Bounce/Body Electric — the dataflow patch-cord family."
+
+facts_to_confirm:
+  - "Exact CalArts/Subotnick timeline and Interactor → Isadora phrasing — verify with Coniglio."
+  - "Whether Mark would welcome a portrayal or invitation (not yet asked)."
+
+show_suggestions:
+  - { what: "A patch-cord-lineage conversation — Hookup → Interactor/Isadora vs Max/Pd — pairing with David Levitt, Miller Puckette, and the STEIM/Image-ine thread (Demeyer, Vasulka)." }
+
+sources:
+  primary:
+    - { title: "Coniglio on Isadora / Hookup / Interactor history", url: "http://www.sdela.dds.nl/sfd/isadora.html" }
+  web:
+    - "https://troikatronix.com/"
+    - "https://en.wikipedia.org/wiki/Isadora_(software)"
+
+see_also:
+  - { path: ../../process/trails/visual-programming-patch-cord.md, why: "Patch-cord lineage he documents (Hookup → Max/Isadora)" }
+  - { path: ../david-levitt/README.md, why: "Hookup — the patch-cord origin Coniglio credits" }
+  - { path: ../miller-puckette/CHARACTER.yml, why: "Max/Pd — the sibling patch-cord environments" }
+  - { path: ../tom-demeyer/CHARACTER.yml, why: "Image/ine @ STEIM — real-time video into Isadora" }
+  - { path: ../don-hopkins/body-electric-1999-jaron-email.md, why: "Where Coniglio's Hookup history is gathered" }

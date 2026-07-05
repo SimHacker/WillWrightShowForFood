@@ -14,7 +14,7 @@ Real-time visual programming for music, video, and VR — the lineage Don docume
 | Stop | Role |
 |------|------|
 | [**David Levitt**](../../characters/david-levitt/README.md) | **Hookup** (first patch-cord metaphor, MIT) → **Bounce** @ Levity (Don serial contract) → ConnectedTV → Pantomime |
-| [**Jaron Lanier**](../../characters/jaron-lanier/README.md) | **VPL Research** — **Body Electric** (original Bounce); rights to Hookup/Body Electric |
+| [**Jaron Lanier**](../../characters/jaron-lanier/README.md) | **VPL Research** co-founder — VPL's **Body Electric** (lead designer/programmer **Chuck Blanchard**), ancestor of Bounce; David later got the Bounce-for-Mac dev rights (compensation for his Hookup Mac-product rights — confirm) |
 | [**Tom Demeyer**](../../characters/tom-demeyer/README.md) | **Image/ine** @ STEIM (1996–2001) — realtime video instrument; plugin architecture |
 | [**Don — VPL taxonomy comment**](../../characters/don-hopkins/visual-programming-taxonomy.md) | Boxes/lines ≠ one model — control vs data flow, Snap!, Max/MSP, Petri nets (HN 40842599) |
 | [**Don — Yahoo Pipes successors**](../../characters/don-hopkins/yahoo-pipes-successors.md) | pipes.digital — data-flow RSS blocks; puzzle-piece VPLs (HN 40841980) |
@@ -27,6 +27,8 @@ Real-time visual programming for music, video, and VR — the lineage Don docume
 | [**Rebounce (show)**](../../repo-shows/rebounce/README.md) | Salute Bounce — check in the source, rewrite it together (hand + AI), seeded by David + Don + Jaron |
 | [**Don — DRAKON / SimAntics**](../../characters/don-hopkins/drakon-control-flow-vs-dataflow.md) | Control flow vs data flow — Grasshopper, SimAntics, Bounce (HN 10100932) |
 | [**Steina Vasulka**](../../characters/steina-vasulka/README.md) | Image/ine co-creator |
+| [**Netochka Nezvanova**](../../characters/netochka-nezvanova/README.md) | **NATO.0+55+3d** (1999) — live networked video inside Max; the nettime legend |
+| [**Don — real-time net-jamming scene**](../../characters/don-hopkins/realtime-net-jamming-scene.md) | The nettime moment when it all worked — Max/MSP + NATO + Image/ine + Bounce + integrated hardware |
 
 ## Patch-cord genealogy (compressed)
 

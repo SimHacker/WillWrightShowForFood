@@ -88,7 +88,7 @@ trails:
       - { path: model-branching.yml, why: "Fork chat at bubble — compare trajectories" }
       - { path: orchestration-gold.yml, why: "Multi-LLM traces as training gold" }
       - { path: ../apps/stream-gateway/, why: "Future deployable brain bus app" }
-      - { path: ../characters/don-philahue/, why: "Audience wrangler — surfaces question PRs live" }
+      - { path: ../characters/don-philahue/ORCHESTRATOR.yml, why: "Repo Show hub avatar — merges all plugin CARDs" }
 
   constructionist_lineage:
     k_line: "Piaget → Papert → Minsky → 1996 microworlds → living organism"
@@ -285,6 +285,8 @@ trails:
       - { path: ../catalogs/simfreaks/, why: "Heather Alvey — ~26-year brand" }
       - { path: ../catalogs/simslice/, why: "Steve Alvey — SliceCity shipped data portability" }
       - { path: ../catalogs/simprov/, why: "Wedding playset + composable orchestration" }
+      - { path: ../designs/orchestrator-playsets/README.md, why: "Dispatch + hub protocols — Hope Chest, power plant, ham radio" }
+      - { path: ../schemas/advertisement-dispatch.yml, why: "forward / inject / hub / magazine / spawn" }
       - { path: ../catalogs/zombie-sims/, why: "Current magnum-opus pack — Afterlife bridge" }
       - { path: ../repo-shows/will-wright/INTRO-NARRATIVE.md, why: "Mission + proof" }
       - { path: ../repo-shows/heather-and-steve-alvey/, why: "First platform users" }
@@ -295,6 +297,8 @@ trails:
     why: "Every guest CARD is MTG-style invokable verbs; combos link cards across guests; Slats judges"
     nodes:
       - { path: ../schemas/guest-skills-card.yml, why: "SCREAMING-KEBAB ability schema — advertisement scoring" }
+      - { path: ../schemas/advertisement-dispatch.yml, why: "Inject + hub dispatch — reciprocal services on menus" }
+      - { path: ../designs/orchestrator-playsets/README.md, why: "Pool table / Hope Chest / power plant hub model" }
       - { path: ../characters/_TEMPLATE/CARD.yml, why: "Copy-me ability card — declare your verbs" }
       - { path: ../characters/will-wright/CARD.yml, why: "Flagship — DOLLHOUSE-TO-SIMS combos with CHAIM-REVERSE-ENGINEER" }
       - { path: ../characters/don-hopkins/CARD.yml, why: "Host — DON-PROGRAM-ROBOT-BRAIN combos into STUPID-FUN-CLUB" }

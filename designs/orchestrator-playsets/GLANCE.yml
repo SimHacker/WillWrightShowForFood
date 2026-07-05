@@ -1,0 +1,21 @@
+# Orchestrator playsets — dispatch + hub protocols (glance)
+
+what: CARD abilities as advertised services; hub objects merge plugin ads; magazines on tables; locked slices teach unlock path
+
+schemas:
+  - ../../schemas/advertisement-dispatch.yml
+  - ../../schemas/orchestrator-hub.yml
+  - ../../schemas/guest-skills-card.yml
+
+prose: README.md
+
+playsets:
+  simprov_wedding: ../catalogs/simprov/ORCHESTRATOR.yml
+  slicecity: ../catalogs/simslice/ORCHESTRATOR.yml
+  zombie_sims: ../catalogs/zombie-sims/ORCHESTRATOR.yml
+  rebounce_party: ../../repo-shows/rebounce/party-deck.yml
+  repo_show_hub: ../../characters/don-philahue/ORCHESTRATOR.yml
+
+dispatch_modes: [forward, inject, hub, magazine, spawn]
+
+lineage: [SimAntics, Sims pie menus, MOOLLM advertisement, CLOS multimethod concept]

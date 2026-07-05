@@ -28,6 +28,11 @@ interview_prompts:
 platform:
   hosted_on: ../micropolis-home/
 
+orchestrator:
+  path: ORCHESTRATOR.yml
+  hub: ham-radio
+  design: ../../designs/orchestrator-playsets/README.md
+
 related_catalogs:
   - ../simfreaks/
   - ../simslice/

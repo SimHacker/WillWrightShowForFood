@@ -95,6 +95,53 @@ abilities:
   effect: Remove the IT department from the first hour of class.
   verifiable: Snap! deployment model
   combos_with: []
+
+- id: SNAP-BOUNCE-HALF
+  name: Snap! × Bounce Half
+  type: static
+  mana: ""
+  conditions:
+  - trail_active: visual-programming-patch-cord
+  - segment_topic_in: [snap, bounce, rebounce, visual-engines]
+  advertisement:
+    method: snapBounceHalf
+    signature: snapBounceHalf() → blocks author rules; patch-cords wire live streams
+    score_when:
+    - trigger: rebounce_jam_active
+      weight: 0.94
+    - trigger: co_guest_is_david_levitt
+      weight: 0.9
+    - trigger: audience_learns_modern_home_for_bounce_ideas
+      weight: 0.92
+  effect: Passive aura — Snap! is the best platform for Bounce ideas now; blocks + live patch-cord engines (see snap-visual-engines-fundable-goals.md).
+  verifiable: don-hopkins/snap-visual-engines-fundable-goals.md; rebounce README
+  combos_with:
+  - DAVID-REBOUNCE-JAM
+  - BRIAN-SNAP-CONTINUATIONS
+
+- id: TURTLESTITCH-EMBROIDERY
+  name: TurtleStitch Embroidery
+  type: activated
+  mana: "{G}{G}{W}"
+  conditions:
+  - segment_topic_in: [turtlestitch, embroidery, constructionism, snapcon]
+  - show_seed: repo-shows/turtlestitch/
+  advertisement:
+    method: turtleStitchEmbroidery
+    signature: turtleStitchEmbroidery(blocks) → thread on real machine
+    score_when:
+    - trigger: audience_sees_code_become_fabric
+      weight: 0.95
+    - trigger: constructionism_not_slogan
+      weight: 0.93
+    - trigger: don_snapcon_barcelona_story
+      weight: 0.88
+  effect: Spell — Snap! fork whose turtle is a needle; low threshold, high ceiling; Don embroidered felt at Snap!Con.
+  verifiable: repo-shows/turtlestitch/; turtlestitch.org
+  combos_with:
+  - SEYMOUR-LOGO-TURTLE
+  - CYNTHIA-SNAP-FRIEND
+
 invoke_rules:
   consent: not_yet_asked
   simulation: false

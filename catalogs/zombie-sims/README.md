@@ -8,6 +8,8 @@
 
 Artisanal zombie suites: IFF objects, SimAntics behaviors, interchangeable skins. Still actively shipping — not archive nostalgia.
 
+**Orchestrator protocol:** [`ORCHESTRATOR.yml`](ORCHESTRATOR.yml) — ham radio wave controller (parallel to Hope Chest / power plant). [`orchestrator-playsets`](../../designs/orchestrator-playsets/README.md).
+
 - Hosted on: [Micropolis Home](../micropolis-home/README.md)
 - Sister catalogs: [SimFreaks](../simfreaks/README.md) · [SimSlice](../simslice/README.md)
 
@@ -25,6 +27,7 @@ On-air prompt for Heather: *"Where do you source your zombies? Artisanal? Farm-g
 
 | Kind | Link |
 |------|------|
+| Orchestrator | [ORCHESTRATOR.yml](ORCHESTRATOR.yml) — ham radio hub |
 | Show seed | [afterlife-zombie-bridge.yml](../../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml) |
 | Characters | [Heather](../../characters/heather-alvey/README.md) · [Steve](../../characters/steve-alvey/README.md) |
 | Audience seats | [heather-alvey audience](../../repo-shows/will-wright/audience/heather-alvey/README.md) · [steve-alvey](../../repo-shows/will-wright/audience/steve-alvey/README.md) |

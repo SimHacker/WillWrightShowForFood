@@ -1,0 +1,161 @@
+# CARD — Jaron Lanier (public portrayal)
+# NOT Jaron Lanier. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: jaron-lanier
+  name: Jaron Lanier
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+
+character_sheet:
+  class: VR Bard / Data-Dignity Paladin
+  spec: Body Electric Visionary · off-spec Rare-Instrument Collector
+  level: 20
+  alignment: Chaotic Good Anti-Siren-Server
+  stats:
+    vr_vision: 20
+    live_instrument: 19
+    data_dignity: 20
+    primary_source_honesty: 18
+  passives:
+  - COINED-VR
+  - BODY-REMEMBERS
+  equipment:
+  - name: DataGlove
+    slot: hands
+    rarity: legendary
+  - name: Convolvotron
+    slot: trinket
+    rarity: epic
+
+card:
+  name: Jaron Lanier
+  title: VPL Co-Founder · VR Rock-Star Legend
+  rarity: mythic
+  signifier: "🥽🎼"
+  flavor: User interface all the way to the bottom — the virtual world and the knowledge base are the same thing.
+
+abilities:
+- id: COINED-VR
+  name: Coined Virtual Reality
+  type: static
+  mana: ""
+  conditions:
+  - segment_topic_in: [vr, vpl, history]
+  advertisement:
+    method: coinedVirtualReality
+    signature: coinedVirtualReality() → passive legend aura
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Passive — VPL co-founder; coined "virtual reality." Does not grant Body Electric programming credit (see Chuck).
+  verifiable: jaronlanier.com/vpl.html; public interviews
+  combos_with:
+  - CHUCK-LEAD-BE-PROGRAMMER
+
+- id: UI-ALL-THE-WAY
+  name: UI All the Way Down
+  type: activated
+  mana: "{U}{U}{U}{G}"
+  conditions:
+  - segment_topic_in: [body-electric, bounce, scenegraph, knowledge-base, rebounce]
+  - quote_ready: 1999_jaron_don_email
+  advertisement:
+    method: uiAllTheWayToTheBottom
+    signature: uiAllTheWayToTheBottom(scenegraph) → world and knowledge base unified
+    score_when:
+    - trigger: audience_grasps_grabbable_concepts
+      weight: 0.94
+    - trigger: repo_show_medium_explained
+      weight: 0.92
+    - trigger: co_guest_is_chuck_blanchard
+      weight: 0.97
+  effect: Cast — extend the scenegraph until it's as powerful a knowledge base as you'd want. Repo Show = same idea in git.
+  verifiable: bounce-notes.txt 1999 thread
+  combos_with:
+  - CHUCK-SWIVEL-3D-TREE
+  - DATA-DIGNITY-REPO
+
+- id: DATA-DIGNITY-REPO
+  name: Data Dignity · Repo Show
+  type: activated
+  mana: "{W}{W}"
+  conditions:
+  - segment_topic_in: [data-dignity, repossession, repo-show, anti-sharecropping]
+  - audience_ready_for: medium_not_just_topic
+  advertisement:
+    method: dataDignityRepoShow
+    signature: dataDignityRepoShow(signedCommit) → authorship in the file format
+    score_when:
+    - trigger: siren_server_named_and_countered
+      weight: 0.95
+    - trigger: audience_understands_why_repo_is_stage
+      weight: 0.93
+    - trigger: relationship_matrix_edge_active
+      edge: jaron-lanier → will-wright
+      theme: data_portability
+      weight: 0.88
+  effect: Spell — signed commits = data dignity concrete. No siren server. Instruments you fork, not apps you rent.
+  verifiable: Who Owns the Future?; invitation.md repo-medium paragraph
+  combos_with:
+  - WILL-DATA-PORTABILITY
+
+- id: VR-AS-INSTRUMENT
+  name: VR as Instrument
+  type: activated
+  mana: "{G}{G}{U}"
+  conditions:
+  - segment_topic_in: [generative-performance, music, vr-input, eno, laurie-anderson]
+  - performance_space_active: true
+  advertisement:
+    method: vrAsLiveInstrument
+    signature: vrAsLiveInstrument(controller) → post-symbolic expression
+    score_when:
+    - trigger: audience_sees_instrument_not_app
+      weight: 0.91
+    - trigger: avant_garde_ensemble_present
+      weight: 0.89
+  effect: Play VR/input devices as expressive instruments — DataGlove, rare acoustics, ensemble generative performance.
+  verifiable: Dawn of the New Everything; public performance history
+  combos_with:
+  - BRIAN-GENERATIVE
+
+- id: BODY-REMEMBERS
+  name: The Body Remembers
+  type: emote
+  mana: "{1}"
+  conditions:
+  - segment_topic_in: [pie-menus, muscle-memory, gestural-ui]
+  advertisement:
+    method: bodyRemembers
+    signature: bodyRemembers(gesture) → muscle memory quote
+    score_when:
+    - trigger: pie_menu_thread_on_air
+      weight: 0.9
+    - trigger: don_pie_menu_story_active
+      weight: 0.92
+  effect: Emote — "The mind may forget, but the body remembers." Cross-link gestural UI to performance culture.
+  verifiable: Jaron quote in Don's pie-menu materials
+  combos_with:
+  - DON-PIE-MENU
+
+compose_with:
+  chuck-blanchard: rebounce_origin_ensemble
+  david-levitt: rights_chain_and_bounce
+  brian-eno: generative_performance
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+  dream_guest: true
+
+see_also:
+- path: invitation.md
+- path: ../chuck-blanchard/CARD.yml
+- path: ../../repo-shows/rebounce/

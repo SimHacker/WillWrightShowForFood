@@ -1,0 +1,56 @@
+# Chuck Blanchard — invitation portrayal. NOT Chuck Blanchard.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: chuck-blanchard
+  name: "Chuck Blanchard"
+  type: invitation
+  signifier: "🥽🛠️"
+  status: living
+  field: "Lead designer/programmer of Body Electric at VPL Research — the real-time VR/music visual-programming language behind Bounce"
+  home: characters/chuck-blanchard/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: stub
+  consent: not_yet_asked
+  document: README.md
+  note: "Don: 'absolutely add Chuck and invite him! Hope he's still doing well.' The overdue credit is the whole point."
+
+bio:
+  summary: >
+    **Chuck Blanchard** — the **lead designer/programmer of Body Electric** at **VPL Research**, the
+    real-time visual-programming language for VR, music, and hardware that Jaron Lanier's VPL used to
+    build virtual worlds and instruments, and the direct ancestor of David Levitt's **Bounce**. Per
+    Jaron's own 1999 email to Don, Chuck's authorship "wasn't credited… when David brought the program
+    to Interval," and his name "was reduced in stature." This repo credits him plainly: Body Electric's
+    tools — including the Swivel 3D transform-tree editor built into the environment — were Chuck's work.
+
+why_here:
+  correction: "The central historical correction of the Body Electric / Bounce story: Chuck was lead, not Jaron. See ../don-hopkins/body-electric-1999-jaron-email.md."
+  1999_email: "Jaron's email (bounce-notes.txt) is the primary source crediting Chuck as lead designer/programmer of BE/Bounce."
+
+facts_to_confirm:
+  - "Current whereabouts and whether Chuck would welcome a portrayal or an invitation. Don: 'hope he's still doing well.'"
+  - "Exact scope of Chuck's authorship of Body Electric's tools (Swivel 3D editor, scenegraph, etc.) — confirm with Chuck / Jaron / David on air."
+  - "Personal history in the 1999 thread (SF, MS, health insurance, treatment at Interval) — sensitive; do not publish specifics without consent."
+
+show_suggestions:
+  - { what: "Guest of honor alongside Jaron + David for the Rebounce origin story — finally crediting the lead designer/programmer of Body Electric in his own words." }
+
+sources:
+  primary:
+    - { title: "1999 Jaron↔Don email (Chuck-as-lead credit)", url: "https://www.donhopkins.com/home/archive/visual-programming/bounce-notes.txt" }
+  web:
+    - "http://www.jaronlanier.com/vpl.html"
+
+see_also:
+  - { path: ../don-hopkins/body-electric-1999-jaron-email.md, why: "Primary source: the 1999 email + the Chuck Blanchard correction" }
+  - { path: ../don-hopkins/body-electric-bounce-vr-stack.md, why: "The VR stack Chuck's tools drove" }
+  - { path: ../jaron-lanier/README.md, why: "VPL co-founder; credited Chuck in the 1999 email" }
+  - { path: ../david-levitt/README.md, why: "Brought Body Electric → Bounce to Interval" }
+  - { path: ../../repo-shows/rebounce/, why: "Rebounce — the salute + reimplementation jam" }

@@ -10,12 +10,15 @@ SimSlice ships object suites and deep integrations. The headline proof:
 
 **SliceCity** — a fully functional SimCity nested inside a Sims lot. Will Wright described games-in-games and data portability in his [1996 Winograd talk](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md); Steve **shipped it**.
 
+**Orchestrator protocol:** [`ORCHESTRATOR.yml`](ORCHESTRATOR.yml) — power plant seed spawner; modular airport chain; planes → skydivers → tiny ground critters (cockroach-clone AI); red blood stains vs green roach slime. [`orchestrator-playsets`](../../designs/orchestrator-playsets/README.md).
+
 - Hosted on: [Micropolis Home](../micropolis-home/README.md)
 
 ## In this repo
 
 | Kind | Link |
 |------|------|
+| Orchestrator | [ORCHESTRATOR.yml](ORCHESTRATOR.yml) — power plant pageant chain |
 | Gallery | [SliceCity screenshots](../../characters/will-wright/media/sims-simslice-README.md) |
 | Winograd lineage | [1996 talk + Medium](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) |
 | Character | [Steve Alvey](../../characters/steve-alvey/README.md) |

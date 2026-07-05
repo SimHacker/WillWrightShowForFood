@@ -9,9 +9,9 @@ the runtime: **plugin COM datatypes**, **objects on wires**, **plugin components
 
 | Step | What |
 |------|------|
-| **VPL Research** | David worked with **Jaron Lanier** on **Body Electric** — the original name of **Bounce** |
-| **Hookup** | Jaron gave David rights to **Hookup** (David's earlier patch-cord visual language at MIT) |
-| **VPL shutdown** | VPL gave David rights to **Body Electric** |
+| **VPL Research** | David worked with **Jaron Lanier** on **Body Electric** (lead designer/programmer **Chuck Blanchard**); **Bounce** was David's derivative of it |
+| **Hookup (Mac product)** | David **created Hookup** (his patch-cord language at MIT) as a **Mac product**, and **granted VPL the rights to market it** (and possibly **HarmonyGrid** — unsure) |
+| **VPL falling apart** | David given rights to **develop Bounce for Mac** (from Body Electric) — Don's best recollection: **compensation for losing his own Mac-app rights** (confirm with David) |
 | **Levity** | Levity got rights to **develop and sell Bounce for the Mac** |
 | **Don + David** | Serial contract — productize, dogfood, COM/plugin reinvention |
 

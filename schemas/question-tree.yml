@@ -346,6 +346,8 @@ examples:
 
 see_also:
   - ../process/ticket-pr.yml
+  - ../characters/don-philahue/qa-orchestration.yml
+  - ../characters/don-philahue/ORCHESTRATOR.yml
   - question-provenance.yml
   - audience-character.yml
   - ../repo-shows/_TEMPLATE/audience/CHARACTER.md

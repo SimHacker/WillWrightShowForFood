@@ -1,0 +1,129 @@
+# ADVERTISEMENT DISPATCH — how CARD abilities surface and who invokes them
+# Extends guest-skills-card.yml · SimAntics / Sims pie-menu heritage · MOOLLM advertisement skill
+# Engine status: schema + human/LLM rubric — not parsed by runtime yet
+
+meta:
+  id: advertisement-dispatch
+  version: 0.1
+  extends: guest-skills-card.yml
+  lineage:
+    - SimAntics object advertisements (The Sims)
+    - HyperCard event bubbling (MOOLLM advertisement skill)
+    - CLOS multimethods and :around methods (conceptual mapping)
+    - ScriptX object registration on host objects (conceptual mapping)
+  note: |
+    Objects and character CARDs publish protocols. Dispatch decides WHERE a pie slice
+    appears (menu_host) and WHO executes (ability_owner). Natural-language score_when
+    triggers — no semantics tree required.
+
+dispatch_modes:
+  forward:
+    what: Default. Ability owned by card C; menu slice appears when focus is C.
+    menu_host: self
+    invoke: ability_owner executes
+    sims_analog: Click fridge → fridge offers food
+
+  inject:
+    what: Ability owned by card A; menu slice appears when focus is B (another character/object).
+    menu_host: required — slug or path of focus object
+    ability_owner: required — slug of card that owns verifiable + effect
+    invoke_as: required — honest label on host menu ("Credit Chuck (Body Electric)")
+    sims_analog: Social correction / attribution — celebrate owner, surface in famous context
+    portrayal: Never speak AS menu_host; invoke names ability_owner
+
+  hub:
+    what: Ability merges into orchestrator hub menu when hub state + roster match.
+    menu_host: orchestrator hub id or path (show seed, playset controller)
+    requires_participants: optional — min_present, any_of, all_of guest slugs
+    hub_state_required: optional — state machine phase from orchestrator-hub.yml
+    sims_analog: Pool table group play; Hope Chest wedding saga; ham radio zombie waves
+
+  magazine:
+    what: Portable catalog — when placed on a surface, surface becomes temporary menu_host.
+    menu_host_when_placed: surface object id (dining-table, hope-chest-top, repo-show-desk)
+    hands_off_from: optional NPC or hub that spawned the magazine
+    sims_analog: Wedding planner hands magazines; browse venue/staff/schedule on table
+
+  spawn:
+    what: Hub transition spawns NPC or object card; spawned entity exports its own ads onto hub.
+    spawns: slug or object id
+    exports_onto: hub id
+    sims_analog: Apex wedding planner walks in; priest hired for ceremony beat
+
+reciprocal_services:
+  what: |
+    Both sides of a protocol may live on one CARD (colocated) or split across hub + plugins.
+    Client invokes through hub; server CARD owns verifiable anchor.
+  fields:
+    reciprocal_with: ability id on another card — other half of protocol
+    protocol: optional named handshake (fall-in-love, credit-authorship, hire-staff)
+  example:
+    cupid: fallInLove(actor, target) — service card
+    hope_chest: loveGate() — hub checks state, unlocks planning ads when reciprocal satisfied
+
+locked_ads:
+  what: |
+    Menu items visible before prerequisites met. Selecting locked slice returns guidance —
+    pie menu IS the quest tree, not a separate tutorial UI.
+  fields:
+    locked_until: array of predicates or hub states
+    guidance_when_locked: human string — what player/host must do first
+    score_when_locked: often high — surface locked items so they teach
+  simantics: Failed precondition dialog elevated to first-class advertisement type
+
+coherence_pass:
+  description: Single merge + score pass when building pie menu for focus F
+  algorithm: |
+    ads(F) =
+      own_abilities(F).advertisements where dispatch forward or default
+      ∪ { ad | ad.menu_host == F ∧ conditions(ad) ∧ segment_context }
+      ∪ { ad | ad.dispatch == hub ∧ hub == F ∧ hub_state_ok ∧ roster_ok }
+      ∪ { ad | magazine placed on F }
+      ∪ edge_injections(relationship_matrix, F)
+    score all with score_when weights; sort descending; pie menu; highest at center
+
+ability_advertisement_extensions:
+  optional_fields_on_guest_skills_card:
+    dispatch: [forward, inject, hub, magazine, spawn]
+    menu_host: slug or repo path
+    ability_owner: slug when dispatch inject and owner != menu_host
+    invoke_as: display string on host menu
+    menu_host_when_placed: for magazine dispatch
+    requires_participants:
+      min_present: integer
+      any_of: [slugs]
+      all_of: [slugs]
+    hub_state_required: [state names]
+    hub_state_unlocks: [state names]
+    locked_until: [predicates or states]
+    guidance_when_locked: string
+    reciprocal_with: ability id
+    protocol: string
+    spawns: slug
+    hands_off: magazine or catalog id
+    exports_onto: hub id
+
+relationship_matrix:
+  role: Edge-weighted inject + hub roster scoring
+  triggers:
+    relationship_matrix_edge_active: { edge: owner → host, weight }
+    relationship_matrix_ensemble: { guests: [...], weight }
+  note: Avoid YAML colons inside unquoted trigger values — use named triggers
+
+repo_show_mapping:
+  orchestrator_avatar: characters/don-philahue/ORCHESTRATOR.yml
+  character_card: Service provider, magazine, spawned NPC
+  show_seed: Orchestrator hub (rebounce/, simprov wedding, alvey zombie bridge)
+  party_deck: Hub roster + weighted invoke_priority
+  primary_source_doc: Magazine placed on segment desk
+  locked_ad: confirm_on_air / consent gates with guidance_when_locked
+  performer: Don Philahue merges ads; Don Hopkins pulls levers; guests demonstrate
+
+see_also:
+  - orchestrator-hub.yml
+  - guest-skills-card.yml
+  - ../designs/orchestrator-playsets/README.md
+  - ../catalogs/simprov/ORCHESTRATOR.yml
+  - ../catalogs/simslice/ORCHESTRATOR.yml
+  - ../catalogs/zombie-sims/ORCHESTRATOR.yml
+  - https://github.com/SimHacker/moollm/skills/advertisement

@@ -49,6 +49,11 @@ platform:
   hosted_on: ../micropolis-home/
   note: "Playset + composable objects publish as hosted CARD collections"
 
+orchestrator:
+  path: ORCHESTRATOR.yml
+  hub: hope-chest
+  design: ../../designs/orchestrator-playsets/README.md
+
 related_catalogs:
   - ../simfreaks/
   - ../simslice/

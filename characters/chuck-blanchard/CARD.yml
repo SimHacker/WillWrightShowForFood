@@ -1,0 +1,149 @@
+# CARD — Chuck Blanchard (public portrayal)
+# NOT Chuck Blanchard. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: chuck-blanchard
+  name: Chuck Blanchard
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+
+character_sheet:
+  class: Body Electric Artificer
+  spec: Swivel 3D Engineer · off-spec Live-Coding Surgeon
+  level: 16
+  alignment: Neutral Good Overdue Credit
+  stats:
+    visual_programming: 20
+    vr_tooling: 19
+    scenegraph_craft: 18
+    credit_restoration: 20
+  passives:
+  - LEAD-BE-PROGRAMMER
+  equipment:
+  - name: Swivel 3D Transform Tree Editor
+    slot: main_hand
+    rarity: artifact
+    note: Built into Body Electric — the skeleton IS the save file
+
+card:
+  name: Chuck Blanchard
+  title: Lead Designer/Programmer · Body Electric
+  rarity: mythic
+  signifier: "🥽🛠️"
+  flavor: Jaron's own 1999 email — Chuck wasn't credited when David brought BE to Interval.
+
+abilities:
+- id: LEAD-BE-PROGRAMMER
+  name: Lead BE Programmer
+  type: static
+  mana: ""
+  conditions:
+  - always_active_when: body_electric_or_bounce_on_air
+  advertisement:
+    method: leadBodyElectricProgrammer
+    signature: leadBodyElectricProgrammer() → permanent historical correction buff
+    score_when:
+    - trigger: segment_mentions_body_electric_authorship
+      weight: 0.99
+    - trigger: jaron_on_air_without_chuck_credit
+      weight: 0.95
+      note: Auto-suggest this passive before segment ends
+  effect: Aura — Body Electric's lead designer/programmer was Chuck, not Jaron. Jaron founded VPL; Chuck built the tools.
+  verifiable: bounce-notes.txt 1999 Jaron↔Don email
+  combos_with:
+  - JARON-UI-ALL-THE-WAY
+  - DAVID-BOUNCE
+
+- id: SWIVEL-3D-TREE
+  name: Swivel 3D Tree
+  type: activated
+  mana: "{G}{G}{U}"
+  conditions:
+  - segment_topic_in: [bounce, body-electric, vr-stack, swivel, scenegraph]
+  advertisement:
+    method: swivel3dTransformTree
+    signature: swivel3dTransformTree(saveFile) → skeleton as first-class data type
+    score_when:
+    - trigger: audience_sees_model_as_data
+      weight: 0.93
+    - trigger: co_guest_is_jaron_lanier
+      weight: 0.9
+    - trigger: relationship_matrix_edge_active
+      edge: chuck-blanchard → jaron-lanier
+      weight: 0.88
+  effect: Project Swivel 3D save files as the articulated body — parameters streamed live over UDP to stereo SGI eyes.
+  verifiable: body-electric-bounce-vr-stack.md; bounce-notes.txt
+  combos_with:
+  - JARON-UI-ALL-THE-WAY
+
+- id: LIVE-CODE-VR-WORLD
+  name: Live Code VR World
+  type: activated
+  mana: "{U}{U}{G}"
+  cooldown: flagship_segment
+  conditions:
+  - segment_topic_in: [live-coding, rebounce, vr, patch-cord]
+  - show_seed: repo-shows/rebounce/
+  advertisement:
+    method: liveCodeRunningWorld
+    signature: liveCodeRunningWorld(patch) → edit while simulation never stops
+    score_when:
+    - trigger: audience_feels_groove_of_live_coding
+      weight: 0.96
+    - trigger: rebounce_jam_active
+      weight: 0.94
+    - trigger: rebounce_origin_ensemble_present
+      weight: 0.92
+  effect: The north star Chuck's stack enabled — brain surgery on a running VR simulation.
+  verifiable: don-hopkins/body-electric-bounce-vr-stack.md
+  combos_with:
+  - DAVID-BOUNCE
+  - REBOUNCE-JAM
+
+- id: CREDIT-RESTORED
+  name: Credit Restored
+  type: triggered
+  mana: "{W}"
+  conditions:
+  - trigger_event: historical_inaccuracy_corrected_on_air
+  - mentions: chuck_blanchard_as_lead
+  advertisement:
+    method: creditRestored
+    signature: creditRestored(name) → party buff, all allies +2 primary_source
+    score_when:
+    - trigger: overdue_credit_finally_said_plainly
+      weight: 0.98
+  effect: Reaction — when the show finally says Chuck's name as lead, the whole Rebounce segment levels up.
+  verifiable: body-electric-1999-jaron-email.md
+  combos_with:
+  - LEAD-BE-PROGRAMMER
+
+- id: INTERVAL-SENSITIVE
+  name: Interval Sensitive
+  type: emote
+  mana: ""
+  conditions:
+  - host_discretion: true
+  - never_without_consent: true
+  advertisement:
+    method: intervalSensitive
+    signature: intervalSensitive() → warm reconnect only
+    score_when: []
+  effect: Emote — personal history from 1999 thread stays off-air until Chuck consents. Invite first; details later.
+  verifiable: portrayal-standards.yml subject_rights
+  combos_with: []
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+- path: CHARACTER.yml
+- path: ../don-hopkins/body-electric-1999-jaron-email.md
+- path: ../../repo-shows/rebounce/README.md

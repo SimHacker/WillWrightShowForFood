@@ -1,6 +1,9 @@
-🥽 **Jaron Lanier** *(dream guest)* — VPL Research co-founder; coined "virtual reality"; **Body Electric**
-visual programming (original name of **Bounce**). Gave David Levitt rights to **Hookup**; VPL shutdown →
-**Body Electric** rights → **Levity** Mac product (with Don). Also a **performing musician** with a vast
+🥽 **Jaron Lanier** *(dream guest)* — VPL Research co-founder; coined "virtual reality". VPL's **Body
+Electric** visual-programming language — **led by Chuck Blanchard** (lead designer/programmer); Jaron
+founded VPL and drove the vision — was the ancestor of David Levitt's **Bounce**. David **created
+Hookup** at MIT (a Mac product); when VPL broke up, **David got the rights to develop Bounce for Mac**
+from Body Electric — Don's belief: to compensate him for the Hookup Mac-product rights (maybe also
+HarmonyGrid) he'd granted VPL → **Levity** (with Don). Also a **performing musician** with a vast
 collection of **rare instruments**, and a lifelong champion of **VR + input devices as live musical
 instruments** — instruments, not apps. His **"data dignity" / "Who Owns the Future?"** anti-extraction
 argument is the intellectual godfather of RepoShow's **repossession** thesis.

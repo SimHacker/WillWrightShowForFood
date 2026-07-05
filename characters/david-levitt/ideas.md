@@ -72,8 +72,12 @@ David's visual-programming line is a genuine jewel. **Hookup** (David at MIT, of
 Puckette**) is credited by **Mark Coniglio** as **the first "patch-cord" visual language** — ancestor of
 **Interactor/Isadora** and the metaphor **Max** inherits.
 
-**VPL Research:** David worked with **Jaron Lanier** on **Body Electric** — the original name of **Bounce**.
-Jaron gave David rights to **Hookup**; when VPL shut down, David received rights to **Body Electric**.
+**VPL Research:** David worked at VPL with **Jaron Lanier** on **Body Electric** (VPL's real-time visual
+language, lead designer/programmer **Chuck Blanchard**); **Bounce** was David's derivative of it. David
+**created Hookup** at MIT and had it as a **Mac product**; he'd **granted VPL the rights to market his
+Hookup Mac product** (and possibly **HarmonyGrid** — unsure). When VPL was falling apart, **David was
+given the rights to develop Bounce** (a Mac product from Body Electric) — Don's best recollection:
+**compensation for losing the rights to his own Mac app(s)** (David may recall better — confirm).
 
 **Levity** (Hip Software / Levity Novelty) got rights to **develop and sell Bounce for the Mac**. Don
 **serial-contracted** there with David — shippable product, dogfooded, reinvented with **plugin COM

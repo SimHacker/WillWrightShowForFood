@@ -27,8 +27,9 @@ Full firsthand backstory: [Body Electric / Bounce VR stack](body-electric-bounce
    stack — **by hand, with AI, and hybrid** — **competing AND cooperating**, cross-pollinating ideas.
    Best-of-N energy: many parallel attempts, shared learnings, every attempt published; no single
    "winner" required.
-3. **Seeded by the originals.** **David** and **Don** seed the design discussion; **Jaron** — Body
-   Electric's original author — is the guest of honor for the origin story.
+3. **Seeded by the originals.** **David** and **Don** seed the design discussion; **Jaron** — VPL
+   co-founder & Body Electric visionary (its lead designer/programmer was **Chuck Blanchard**) — is the
+   guest of honor for the origin story.
 
 ## The targets to recapture (what made Bounce special)
 
@@ -67,9 +68,10 @@ Full firsthand backstory: [Body Electric / Bounce VR stack](body-electric-bounce
 
 ## Who to invite
 
-- **Seeds/hosts:** [David Levitt](../david-levitt/README.md) (Hookup → Body Electric → Bounce),
-  Don Hopkins (Levity/Interval Bounce, COM-on-wires, Space Seed).
-- **Guest of honor:** [Jaron Lanier](../jaron-lanier/README.md) (Body Electric's original author).
+- **Seeds/hosts:** [David Levitt](../david-levitt/README.md) (created Hookup; built Bounce from Body
+  Electric), Don Hopkins (Levity/Interval Bounce, COM-on-wires, Space Seed).
+- **Guest of honor:** [Jaron Lanier](../jaron-lanier/README.md) (VPL co-founder & Body Electric
+  visionary; lead designer/programmer was Chuck Blanchard).
 - **Visual-programming neighbors:** [Jens Mönig](../jens-monig/README.md) +
   [Brian Harvey](../brian-harvey/README.md) (Snap!), [Tom Demeyer](../tom-demeyer/README.md) +
   [Steina Vasulka](../steina-vasulka/README.md) (Image/ine), and anyone from the Max/Isadora/patch-cord

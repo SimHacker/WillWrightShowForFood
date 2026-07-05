@@ -1,0 +1,60 @@
+# Zombie Sims — Ham radio wave orchestrator
+# Schema: ../../schemas/orchestrator-hub.yml · ../../schemas/advertisement-dispatch.yml
+# Creators: Heather Alvey (SimFreaks) + Steve Alvey (SimSlice)
+
+orchestrator:
+  id: ham-radio
+  name: Zombie Sims Ham Radio
+  type: wave_controller
+  catalog: zombie-sims
+  creators: [Heather Alvey, Steve Alvey]
+  tone: Artisanal craft UCC — hand-sculpted, kitbashed, SimAntics-driven
+
+  role: |
+    Ham radio orchestrates Zombie Sims outbreaks — parallel to Hope Chest orchestrating
+    wedding sagas and SliceCity power plant seeding nested city pageants. Central hub
+    merges wave ads, faction configs, and plugin skins.
+
+  accepts_plugins_from:
+    - catalogs/zombie-sims/*
+    - catalogs/simfreaks/*
+    - catalogs/simslice/*
+
+  state_machine:
+    initial: idle
+    states:
+      - idle
+      - listening
+      - outbreak_armed
+      - wave_inbound
+      - siege_active
+      - aftermath
+    note: Exact SimAntics states — confirm on air with Heather/Steve
+
+  plugin_objects:
+    - religion_mapped_skins
+    - artisanal_zombie_suites
+    - wave_config_magazines
+    - simfreaks_pipeline_objects
+
+  relationship_to_slicecity:
+    interview_prompt_from_catalog: When the wave hits — is SliceCity the farm or the fortress?
+    shared_creators: Steve Alvey — nested sim + siege same craft lineage
+
+show_hook:
+  path: ../../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml
+  beat: Afterlife hell-is-full → drain souls by religion → Zombie Sims waves at TAB scale
+
+repo_show_mirror:
+  mapping:
+    ham_radio: show seed / flagship episode hub
+    wave_magazines: segment configuration docs
+    spawn_zombie_npc: character CARD stubs for show discussants
+    slicecity_fortress: cross-playset hub inject when both catalogs present
+
+see_also:
+  - README.md
+  - CATALOG.yml
+  - ../simslice/ORCHESTRATOR.yml
+  - ../simprov/ORCHESTRATOR.yml
+  - ../../designs/orchestrator-playsets/README.md

@@ -117,11 +117,13 @@ their world model; you **activate** it. That's a Minsky **K-line**.
 
 The Sims pushed it further: downloadable **objects carry their own SimAntics code** and **advertise**
 what they do, so they plug into the running simulation and interoperate. The tour-de-force is **Steve
-Alvey's SimSlice / SliceCity** — a **Lilliputian SimCity that fits in your Sims back yard**, a real
-SimCity running *inside* The Sims. That's the **shipped precedent** for **Simopolis** data portability
+Alvey's SimSlice / SliceCity** — a **Lilliputian SimCity that fits in your Sims back yard**, seeded by a
+**power plant orchestrator** that spawns zones, modular airport pieces, planes, skydivers, and ground
+critters in a pageant of interrelated objects ([`catalogs/simslice/ORCHESTRATOR.yml`](../../catalogs/simslice/ORCHESTRATOR.yml)). That's the **shipped precedent** for **Simopolis** data portability
 (link actual save files, run emulators, round-trip state across many games).
 
 - 📁 [`characters/heather-alvey/`](../../characters/heather-alvey/README.md) · 📁 [`repo-shows/heather-and-steve-alvey/`](../../repo-shows/heather-and-steve-alvey/README.md)
+- 📁 [`designs/orchestrator-playsets/README.md`](../../designs/orchestrator-playsets/README.md) · [`schemas/advertisement-dispatch.yml`](../../schemas/advertisement-dispatch.yml)
 - 📁 [`process/character-endosymbiosis.yml`](../character-endosymbiosis.yml) · [`repo-shows/INDEX.yml`](../../repo-shows/INDEX.yml) (`bridges_architecture`)
 
 ## 6. Drescher — schemas are little programs you can run

@@ -1,0 +1,122 @@
+# Rebounce Party Deck — relationship-matrix ensemble for patch-cord / net-jam shows
+# Machine-readable comp guide. Human view: PARTY-DECK.md
+# Schema: guest CARD.yml abilities + score_when weights (natural language, no semantics tree)
+
+meta:
+  id: rebounce-party-deck
+  show: repo-shows/rebounce/
+  trail: process/trails/visual-programming-patch-cord.md
+  scene: characters/don-hopkins/realtime-net-jamming-scene.md
+
+party_name: Rebounce Origin Ensemble
+tagline: Live-code the running world — credit Chuck, fork everything
+
+roles:
+  seed_hosts:
+    - david-levitt
+    - don-hopkins
+  guest_of_honor:
+    - jaron-lanier
+  overdue_credit:
+    - chuck-blanchard
+  historians:
+    - mark-coniglio
+  substrate:
+    - miller-puckette
+  net_jam_legend:
+    - netochka-nezvanova
+  steim_video:
+    - tom-demeyer
+    - steina-vasulka
+  modern_platform:
+    - jens-monig
+
+compositions:
+  rebounce_origin:
+    name: Rebounce Origin Story
+    when:
+      segment_topics: [rebounce, bounce, body-electric, live-coding]
+    cast: [chuck-blanchard, jaron-lanier, david-levitt, don-hopkins]
+    invoke_priority:
+      - ability: CHUCK-LEAD-BE-PROGRAMMER
+        card: chuck-blanchard
+        weight: 0.99
+      - ability: CHUCK-CREDIT-RESTORED
+        card: chuck-blanchard
+        weight: 0.98
+      - ability: JARON-UI-ALL-THE-WAY
+        card: jaron-lanier
+        weight: 0.94
+      - ability: DAVID-LIVE-CODE-WORLD
+        card: david-levitt
+        weight: 0.96
+      - ability: DAVID-REBOUNCE-JAM
+        card: david-levitt
+        weight: 0.92
+    relationship_matrix:
+      - [chuck-blanchard, jaron-lanier, credit_correction]
+      - [david-levitt, chuck-blanchard, rebounce_origin]
+      - [david-levitt, jaron-lanier, sun_body_electric_thread]
+
+  patch_cord_genealogy:
+    name: Hookup → Max → Isadora → Bounce
+    when:
+      segment_topics: [patch-cord, hookup, visual-programming]
+    cast: [mark-coniglio, david-levitt, miller-puckette, jens-monig]
+    invoke_priority:
+      - ability: MARK-CREDIT-HOOKUP-ORIGIN
+        card: mark-coniglio
+        weight: 0.95
+      - ability: DAVID-HOOKUP-MAC-RIGHTS
+        card: david-levitt
+        weight: 0.9
+      - ability: MILLER-PATCH-CORD-DESCENDANT
+        card: miller-puckette
+        weight: 0.88
+      - ability: JENS-SNAP-BOUNCE-HALF
+        card: jens-monig
+        weight: 0.92
+
+  net_jam_1999:
+    name: nettime Net Jam (NATO era)
+    when:
+      segment_topics: [net-jamming, nato, nettime, max]
+    cast: [netochka-nezvanova, miller-puckette, tom-demeyer, steina-vasulka, mark-coniglio]
+    invoke_priority:
+      - ability: NN-NATO-RTP-JAM
+        card: netochka-nezvanova
+        weight: 0.97
+      - ability: MILLER-MAX-MSP
+        card: miller-puckette
+        weight: 0.9
+      - ability: TOM-IMAGE-INE
+        card: tom-demeyer
+        weight: 0.88
+      - ability: MARK-STEIM-TO-ISADORA
+        card: mark-coniglio
+        weight: 0.86
+    scene_doc: characters/don-hopkins/realtime-net-jamming-scene.md
+
+  data_dignity_medium:
+    name: Why Repo Show (Jaron thread)
+    when:
+      segment_topics: [data-dignity, repo-show, repossession]
+    cast: [jaron-lanier, will-wright, don-hopkins]
+    invoke_priority:
+      - ability: JARON-DATA-DIGNITY-REPO
+        card: jaron-lanier
+        weight: 0.95
+      - ability: WILL-DATA-PORTABILITY
+        card: will-wright
+        weight: 0.88
+
+mana_budget_hint:
+  flagship_segment: "{U}{U}{G}{G} or higher — reserve 20+ min"
+  emote: "{0} or {1}"
+  passive: '"" — always on, no cast'
+
+see_also:
+  - characters/david-levitt/CARD.yml
+  - characters/chuck-blanchard/CARD.yml
+  - characters/jaron-lanier/CARD.yml
+  - process/trails/visual-programming-patch-cord.md

@@ -1,0 +1,144 @@
+# CARD — Kent Pitman (public portrayal)
+# NOT Kent Pitman. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: kent-pitman
+  name: Kent Pitman
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+
+character_sheet:
+  class: Lisp Archmage / Pitmanual Scribe
+  spec: MACLISP · off-spec Common Lisp Standards
+  level: 19
+  alignment: Lawful Good Evaluated vs Unevaluated
+  stats:
+    maclisp_lore: 20
+    special_forms: 20
+    character_state_machines: 18
+    documentation: 19
+  equipment:
+  - name: Pitmanual
+    slot: main_hand
+    rarity: artifact
+  - name: ANIMAL
+    slot: off_hand
+    rarity: epic
+    note: Remembers who was foul; emails KMP
+
+card:
+  name: Kent Pitman
+  title: KMP · :TEACH;LISP · ANIMAL
+  rarity: rare
+  signifier: "🦥📖"
+  flavor: Your ANIMAL had persistent per-user emotional state decades before The Sims.
+
+abilities:
+- id: TEACH-MACLISP
+  name: ":TEACH;LISP"
+  type: legacy
+  mana: "{U}{U}"
+  conditions:
+  - segment_topic_in: [its, maclisp, mit-ai, pdp10, tourist]
+  - narrator: don-hopkins
+  advertisement:
+    method: teachMaclisp
+    signature: teachMaclisp(teenagerOnArpanet) → working Lisp brain
+    score_when:
+    - trigger: don_origin_story_on_air
+      weight: 0.94
+    - trigger: pdp10_maclisp_drive_active
+      weight: 0.9
+  effect: Legacy — Kent tutored Don on ITS; how the host learned Lisp as a high school kid.
+  verifiable: DonHopkins correspondence/kent-pitman.yml; pdp10-its-stack.yml
+  combos_with:
+  - DON-MOOLLM-HOST
+
+- id: ANIMAL-EMOTIONAL-STATE
+  name: ANIMAL Emotional State
+  type: activated
+  mana: "{U}{B}{W}"
+  conditions:
+  - segment_topic_in: [animal, eliza, character-ai, sims, moollm, advertisements]
+  advertisement:
+    method: animalEmotionalState
+    signature: animalEmotionalState(user) → foulFlag, forgiveFlag, emailKMP
+    score_when:
+    - trigger: audience_sees_proto_sims_social_memory
+      weight: 0.96
+    - trigger: moollm_skills_thread
+      weight: 0.92
+    - trigger: will_distributed_object_ai_combo
+      weight: 0.88
+  effect: ANIMAL tracked foul language, refused play until apology, emailed Kent — proto ambient skill + social consequences.
+  verifiable: kent-pitman.yml; HN ELIZA/ANIMAL threads
+  combos_with:
+  - WILL-DOLLHOUSE-TO-SIMS
+  - DON-ADVERTISEMENT-SYSTEM
+
+- id: SPECIAL-FORMS-FEXPRS
+  name: Special Forms & Fexprs
+  type: activated
+  mana: "{U}{U}{U}"
+  conditions:
+  - segment_topic_in: [lisp, fexprs, special-forms, moollm, skills, postscript]
+  advertisement:
+    method: specialFormsFexprs
+    signature: specialFormsFexprs(form) → evaluated vs unevaluated args
+    score_when:
+    - trigger: audience_grasps_skills_as_unevaluated_context
+      weight: 0.93
+    - trigger: ingalls_or_kay_present
+      weight: 0.87
+  effect: Kent's core intellectual contribution — maps cleanly to MOOLLM skills loaded as context, not called functions.
+  verifiable: Public Pitmanual / Common Lisp standardization history
+  combos_with:
+  - ALAN-MICROWORLD
+
+- id: DOCTOR-ELIZA
+  name: DOCTOR / ELIZA Lineage
+  type: triggered
+  mana: "{U}"
+  conditions:
+  - segment_topic_in: [eliza, doctor, parry, weizenbaum, chatbots]
+  advertisement:
+    method: doctorEliza
+    signature: doctorEliza() → MIT-AI conversational lineage
+    score_when:
+    - trigger: hn_eliza_thread
+      weight: 0.85
+  effect: Reaction — DOCTOR, ELIZA, PARRY; Kent typed transcripts manually; scale question for LLM era.
+  verifiable: HN threads; public ELIZA history
+  combos_with: []
+
+- id: MOO-INTEREST
+  name: MOO Interest
+  type: triggered
+  mana: "{G}{U}"
+  conditions:
+  - segment_topic_in: [moo, lambdamoo, moollm, permissions, inheritance]
+  - kent_outreach_status: draft_not_sent
+  advertisement:
+    method: mooInterest
+    signature: mooInterest() → bridge invitation to MOOLLM microworld OS
+    score_when:
+    - trigger: moollm_demo_segment
+      weight: 0.91
+  effect: Kent expressed MOO interest — natural guest for MOOLLM + Repo Show microworld episode.
+  verifiable: kent-pitman.yml draft_email context
+  combos_with:
+  - DON-MOOLLM-HOST
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+- path: README.md
+- path: ../don-hopkins/CARD.yml

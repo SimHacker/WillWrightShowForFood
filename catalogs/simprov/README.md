@@ -18,6 +18,8 @@ The emotional center of the Micropolis Home mission. An orchestration kit — no
 
 Built when marriage equality was still a fight in the real world. Republishing for the Steam Sims 1 generation is deliberate **inclusion procedural rhetoric** — see [procedural-rhetoric-inclusion-agitprop.md](../../characters/will-wright/media/sims-series-procedural-rhetoric-inclusion-agitprop.md) and [Ian Bogost show seed](../../repo-shows/will-wright/ian-bogost-procedural-rhetoric/SHOW.yml).
 
+**Orchestrator protocol:** [`ORCHESTRATOR.yml`](ORCHESTRATOR.yml) — Hope Chest state machine, Cupid reciprocal services, wedding planner magazines on the dining table, locked menu guidance, spawned NPC staff. Design doc: [`orchestrator-playsets`](../../designs/orchestrator-playsets/README.md).
+
 **Performance gag (show seed):** [SimProv Wedding — Double Pre-Game](../../repo-shows/ideas/gags/pixelized-joint-wedding.yml) — bride's friends and groom's friends each sneak off to calm nerves before the ceremony; neither knows the other is doing it; aisle reveal with both heads pixelized (original Sims mesh censorship: hand on pass, head after hit). Kimmel *Unnecessary Censorship* homage; Steve & Gerri ad-lib already jokes about hot-tub pixelation on the same engine.
 
 Also in the SimProv lineage (different register): [Dumbold Voting Machine](../../characters/will-wright/sources/2018-04-24-dumbold-voting-machine/README.md) — procedural rhetoric, 2004 time capsule.
@@ -26,6 +28,7 @@ Also in the SimProv lineage (different register): [Dumbold Voting Machine](../..
 
 | Kind | Link |
 |------|------|
+| Orchestrator | [ORCHESTRATOR.yml](ORCHESTRATOR.yml) — Hope Chest saga, magazines, NPC services |
 | Narration | [INTRO-NARRATIVE — wedding playset](../../repo-shows/will-wright/INTRO-NARRATIVE.md#the-magnum-opus-simprov-wedding-playset) |
 | Family motivation | [family manifesto](../../characters/will-wright/media/sims-series-family-manifesto.md) |
 | SimAntics toolkit | [simantics-objects gallery](../../characters/will-wright/media/sims-simantics-objects-README.md) |

@@ -1,0 +1,163 @@
+# SimProv Wedding Playset — Hope Chest orchestrator
+# Schema: ../../schemas/orchestrator-hub.yml · ../../schemas/advertisement-dispatch.yml
+# Catalog: CATALOG.yml · README.md
+
+orchestrator:
+  id: hope-chest
+  name: SimProv Hope Chest
+  type: saga_controller
+  catalog: simprov
+  creators: [Don Hopkins, SimFreaks, SimBabes, Donna]
+  flagship: SimProv Wedding Playset
+
+  state_machine:
+    initial: single
+    states:
+      - single
+      - flirting
+      - in_love
+      - engaged
+      - planning
+      - rehearsal
+      - ceremony
+      - reception
+
+    transitions:
+      - from: single
+        to: flirting
+        on: summon_cupid_or_social_play
+        unlocks: [FLIRT-ADS]
+
+      - from: flirting
+        to: in_love
+        on: cupid_fall_in_love_satisfied
+        reciprocal_protocol: fall-in-love
+        unlocks: [PLAN-WEDDING, HIRE-PLANNER, BROWSE-MAGAZINES]
+        guidance: Hope Chest menu gains planning tier
+
+      - from: in_love
+        to: engaged
+        on: propose_or_equivalent
+        unlocks: [ORDER-OBJECTS, SCHEDULE-CEREMONY]
+
+      - from: engaged
+        to: planning
+        on: open_wedding_planner
+        spawns: wedding-planner-npc
+        hands_off: [magazine-venue, magazine-staff, magazine-schedule]
+
+      - from: planning
+        to: rehearsal
+        on: schedule_locked_and_staff_hired
+
+      - from: rehearsal
+        to: ceremony
+        on: crowd_seated
+        requires: [crowd-sitter, priest-or-officiant]
+
+      - from: ceremony
+        to: reception
+        on: vows_complete
+        spawns: [photographer-npc, reception-objects]
+
+  accepts_plugins_from:
+    - characters/*/CARD.yml
+    - catalogs/simprov/*
+    - catalogs/simfreaks/*
+
+  locked_ads_policy:
+    visible_before_unlock: true
+    score_when_locked: high
+    example:
+      ad: PLAN-WEDDING
+      locked_until: [in_love]
+      guidance_when_locked: Summon Cupid from the Hope Chest and complete fall-in-love first
+
+nodes:
+  hub:
+    id: hope-chest
+    role: saga_controller
+    pie_menu: documented in transmogrifier-hope-chest-pie-menu-intro
+    media:
+      - ../../characters/don-hopkins/media/sims-transmogrifier/transmogrifier-hope-chest-pie-menu-intro.yml
+      - ../../characters/don-hopkins/media/sims-transmogrifier/transmogrifier-hope-chest-simone-simbabe.yml
+
+  services:
+    - id: cupid
+      dispatch: hub
+      protocol: fall-in-love
+      reciprocal_with: hope-chest-love-gate
+      demo: ../../repo-shows/ideas/gags/speed-dating-with-cupid.yml
+      role: Prerequisite romance — unlocks planning tier on chest
+
+    - id: crowd-sitter
+      type: group_controller
+      min_participants: 2
+      role: Gather and seat wedding guests; manage overflow
+      source: ../../characters/will-wright/sources/2018-04-23-sims-crowd-sitter/
+
+    - id: buddha-statue
+      role: Suppress needs for large wedding crowds
+
+  spawned_npcs:
+    - id: wedding-planner-npc
+      spawn_at: planning
+      hands_off: [magazine-venue, magazine-staff, magazine-schedule]
+      role: Apex planner — configures ceremony parameters
+
+    - id: priest-npc
+      spawn_at: ceremony
+      hire_via: magazine-staff
+      role: Officiant service
+
+    - id: photographer-npc
+      spawn_at: ceremony
+      hire_via: magazine-staff
+      role: Ceremony documentation
+
+  magazines:
+    - id: magazine-venue
+      menu_host_when_placed: dining-table
+      configures: [venue, decor, carriage]
+      browse_ads: [select_venue, preview_layout, order_carriage]
+
+    - id: magazine-staff
+      menu_host_when_placed: dining-table
+      configures: [planner, priest, photographer, catering]
+      browse_ads: [hire_staff, review_contracts]
+
+    - id: magazine-schedule
+      menu_host_when_placed: dining-table
+      configures: [rehearsal_time, ceremony_time, reception_time]
+      browse_ads: [pick_dates, lock_timeline]
+
+  craft_layer:
+    - id: donna-set-pieces
+      role: Beds, buffet, tables, dolls — premium objects from magazine orders
+      resolves_from: [magazine-venue, magazine-staff]
+
+  unrelated_same_brand:
+    - id: dumbold-voting-machine
+      note: Procedural rhetoric time capsule — not part of wedding kit
+      source: ../../characters/will-wright/sources/2018-04-24-dumbold-voting-machine/
+
+composition_tree:
+  root: hope-chest
+  flow: |
+    Cupid → in_love unlocks chest → planner spawns → magazines on table →
+    configure/hire/schedule → Crowd Sitter seats guests → ceremony → reception
+
+repo_show_mirror:
+  show_seed: ../../repo-shows/will-wright/ian-bogost-procedural-rhetoric/
+  mapping:
+    hope_chest: show seed + segment structure
+    cupid: inject attribution / prerequisite beat
+    magazines: CARD.md + primary sources on desk
+    crowd_sitter: audience seats
+    locked_ads: confirm_on_air gates
+
+see_also:
+  - README.md
+  - CATALOG.yml
+  - ../../designs/orchestrator-playsets/README.md
+  - ../../schemas/advertisement-dispatch.yml

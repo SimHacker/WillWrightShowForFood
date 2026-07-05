@@ -61,8 +61,10 @@ VPL to the projects he and Don shared. Primary source: [HN 22788773](https://new
   Levitt + **Jaron Lanier**). Original name of **Bounce**. Drove DataGlove, Body Suit, Flock of Birds,
   Polhemus, Spaceball, Convolvotron 3D audio, SGI *Isaac* to EyePhones.
   ([Jaron Lanier / VPL](http://www.jaronlanier.com/vpl.html))
-- **Rights chain (Don firsthand):** Jaron → David rights to **Hookup**; VPL shutdown → David rights to
-  **Body Electric**; **Levity** → rights to develop/sell **Bounce for Mac**.
+- **Rights chain (Don's best recollection — confirm with David):** David **created Hookup** as a **Mac
+  product** → granted **VPL** the rights to market it (and possibly **HarmonyGrid** — unsure); as VPL
+  fell apart, **David got the rights to develop Bounce for Mac** (from **Body Electric**) — compensation
+  for losing the rights to his own Mac app(s); **Levity** → the vehicle to develop/sell **Bounce for Mac**.
 - **Bounce @ Levity** — Don serial-contracted with David; shippable Mac product, dogfooded, reinvented
   with **plugin COM datatypes**, **objects on wires**, **plugin components with COM**, new **multimedia
   video renderer**. Don co-developed; demo **"Space Seed."** Writeups:

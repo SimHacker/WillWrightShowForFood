@@ -1,0 +1,61 @@
+# SHOW — Brian Harvey & Jens Mönig — Snap!, Logo, and the Joy of Computing
+# Collegial creative partners — "not married but joined at the heart" (Snap!).
+# Interview TOGETHER for the shared work. See process/couple-and-solo-shows.yml
+
+show:
+  id: snap-logo-brian-jens
+  title: "A Repo Show with Brian Harvey & Jens Mönig — Snap!, Logo, and the Joy of Computing"
+  type: group
+  host: Don Hopkins
+  guests: ["Brian Harvey", "Jens Mönig"]
+  character: [characters/brian-harvey/, characters/jens-monig/]
+  topic: "Snap! and the Logo→Scheme→Smalltalk lineage — first-class everything, and computing made teachable for everyone"
+  status: seed
+  consent: not_yet_asked
+  joined_at_the_heart: "Colleagues, not a couple — but their shared work (Snap!) is a genuine partnership; interview as a pair for the shared story."
+
+why_them:
+  brian: "**Brian Harvey** — UC Berkeley Teaching Professor Emeritus; Berkeley Logo; *Computer Science Logo Style* (3 vols) + *Simply Scheme*; taught SICP-based CS 61A; design + documentation for Snap!."
+  jens: "**Jens Mönig** — architect + lead programmer of **Snap!** (formerly BYOB) on his own **Morphic.js**; first-class lists, procedures, and continuations (the Y combinator in blocks) + prototype objects; ex-Scratch; GP under Alan Kay; SAP."
+  the_partnership: "Snap! is the shared work: Jens builds it, Brian shapes and documents it. The 2024 ACM Karl V. Karlstrom Outstanding Educator Award to Brian (with Dan Garcia, for BJC) cites Snap! and names Jens as principal developer."
+  bjc: "**Beauty and Joy of Computing** — the CSforALL curriculum Snap! powers; 1,000+ teachers trained, Spanish edition, BJC Sparks; Berkeley's BJC course has exceeded 50% (once 70%) female enrollment."
+  kay_lineage: "Both sit in Alan Kay's orbit — Jens worked on GP under Kay; the whole lineage runs Logo (Papert) → Smalltalk (Kay) → Scratch → Snap!."
+  don_orbit: "Don's 2018 thread with Brian + Jens: wire **Micropolis** (open SimCity) and **CAM6** cellular automata into Snap! blocks — an open, modifiable simulator for the classroom."
+  pair_not_solo: |
+    Default interview is **this pair show** — the shared Snap!/BJC/Logo story told once, together.
+    Optional solo verticals remain (Jens on Snap! internals/schemas/actors; Brian on his books) —
+    for depth that would dilute or repeat if forced into the pair episode.
+
+episodes:
+  - id: pair-kickoff
+    what: "Snap! live — build something real in blocks; the Logo→Scheme→Smalltalk→Snap! lineage told by the two people who carried it forward."
+  - id: first-class-everything
+    what: "Jens on Snap! internals: first-class procedures, lists, continuations (the Y combinator), prototype objects, Morphic.js — how far blocks go without losing beginners."
+  - id: the-books-and-teaching
+    what: "Brian on *CS Logo Style*, *Simply Scheme*, and teaching CS 61A/SICP — what makes a hard idea teachable."
+  - id: bjc-for-everyone
+    what: "BJC as CSforALL — the Karlstrom-cited work; reaching kids who were never invited to computing before."
+  - id: micropolis-in-snap
+    what: "Drive Micropolis + CAM6 cellular automata from Snap! blocks — a city sim and CA rules you reprogram live (from Don's 2018 thread)."
+
+scheduling:
+  primary: snap-logo-brian-jens
+  optional_solo:
+    - jens-monig
+    - brian-harvey
+  async_ok: "No synchronized sitting required — two one-on-ones at each guest's best time, woven in post, is fine (couple-and-solo-shows.yml)."
+
+format:
+  live: true
+  run_code: true
+  audience_qa: true
+
+ties_to:
+  - ../../characters/brian-harvey/
+  - ../../characters/jens-monig/
+  - ../../characters/brian-harvey/correspondence.yml
+  - ../../characters/alan-kay/
+  - ../../characters/seymour-papert/
+  - ../../characters/cynthia-solomon/
+  - ../../process/couple-and-solo-shows.yml
+  - ../turtlestitch/

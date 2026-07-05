@@ -1,0 +1,50 @@
+# Kent Pitman — invitation portrayal. NOT Kent Pitman.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: kent-pitman
+  name: "Kent Pitman"
+  type: invitation
+  signifier: "🦥📖"
+  status: living
+  field: "MACLISP / Common Lisp standardization; Pitmanual; ANIMAL & DOCTOR; special forms & fexprs; MIT-AI Lab oral history"
+  home: characters/kent-pitman/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: stub
+  consent: not_yet_asked
+  document: README.md
+  note: "Don: Kent and his :TEACH;LISP helped me learn Lisp on ITS as a high school kid. Expressed MOO interest (HN/Mastodon). Draft outreach in DonHopkins correspondence."
+
+bio:
+  summary: >
+    **Kent Pitman (KMP)** — central figure in **MACLISP** and **Common Lisp** standardization; author of
+    the **Pitmanual** (Revised Maclisp Manual). Creator of **ANIMAL** (the guessing game with emotional
+    state, foul-language tracking, and email tattling to KMP) and **DOCTOR** (Eliza lineage). Deep work
+    on **special forms**, **fexprs**, and evaluated vs unevaluated arguments. Taught Don Maclisp on **ITS**
+    at the MIT AI Lab when Don was a high school ARPANET tourist — old friends from the AI Lab days.
+
+don_connection:
+  teach_lisp: "Kent's :TEACH;LISP tutoring on ITS — how Don learned Maclisp as a teenager."
+  animal_incident: "Don's ANIMAL was the Pope; foul-language flag; KMP got emailed; Don had to apologize — proto Sims social memory."
+  moo_interest: "Kent expressed interest in MOO — permissions, inheritance, in-band programming; bridge to MOOLLM."
+
+show_suggestions:
+  - { what: "ITS/MACLISP oral history + ANIMAL's emotional state machine as proto-character system — bridge to MOOLLM skills and Sims advertisements." }
+  - { what: "Fexprs, special forms, and LLM skills as unevaluated context — with Alan Kay / Dan Ingalls / MOOLLM thread." }
+
+sources:
+  web:
+    - "HN ELIZA/ANIMAL threads (Don posts)"
+  correspondence:
+    - path: ../../../DonHopkins/characters/don-hopkins/correspondence/kent-pitman.yml
+      note: "Draft outreach — not sent; private email bodies stay there"
+
+see_also:
+  - { path: ../don-hopkins/CARD.yml, why: "Host — ITS tourist, MOOLLM, Micropolis" }
+  - { path: ../../process/pdp10-its-stack.yml, why: "MACLISP / ITS stack trail" }

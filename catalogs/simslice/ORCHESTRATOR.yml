@@ -1,0 +1,93 @@
+# SliceCity — Power plant seed orchestrator
+# Schema: ../../schemas/orchestrator-hub.yml · ../../schemas/advertisement-dispatch.yml
+# Creator: Steve Alvey (SimSlice) · see CATALOG.yml
+
+orchestrator:
+  id: slicecity-power-plant
+  name: SliceCity Power Plant
+  type: seed_spawner
+  catalog: simslice
+  creator: Steve Alvey
+  claim: Real SimCity nested inside a Sims lot — games-in-games shipped precedent
+
+  spawn_policy:
+    seed_object: power-plant
+    placement: dynamic_nearby
+    description: |
+      Power plant is the seed orchestrator. It dynamically spawns and automatically
+      places nearby new zones and items — the Lilliputian city grows from the seed,
+      not from a single static prefab.
+
+  accepts_plugins_from:
+    - catalogs/simslice/*
+    - catalogs/simfreaks/*
+
+pageant_chain:
+  description: |
+    A pageant of interacting interrelated objects — each link advertises to the next.
+    Same composable SimAntics architecture as SimProv; different genre (nested sim + spectacle).
+
+  stages:
+    - id: power-plant
+      role: Seed hub — spawns zones and items nearby
+      dispatch: hub
+      type: seed_spawner
+
+    - id: zones-and-items
+      role: Auto-placed city fabric from seed
+      spawned_by: power-plant
+      ads: [zone_residential, zone_commercial, zone_industrial, place_item]
+
+    - id: modular-airport
+      role: Multi-object airport — components snap together
+      type: modular_component
+      modular: true
+      components: [runway, gate, tower, terminal_pieces]
+      absorb: [airplanes]
+
+    - id: airplanes
+      role: Spawned/absorbed by airport; transit objects
+      emit: [skydivers]
+      ads: [land, taxi, drop_skydivers]
+
+    - id: skydivers
+      role: Dropped from airplanes; scatter on landing
+      emit: [tiny-ground-people]
+
+    - id: tiny-ground-people
+      role: Critters running on the ground
+      implementation_note: Clone of cockroach critter AI — same locomotion pattern, different skin/scale
+      stomp_result: red_blood_stains
+      contrast: Green cockroach slime when stomping normal roaches
+
+  stomp_palette:
+    cockroach: green_slime
+    slicecity_tiny_people: red_blood_stains
+    design_note: Same interaction verb (stomp), different procedural consequence — dark comedy pageant beat
+
+group_activities:
+  pool_table_analog: |
+    Airport + planes + skydivers + ground critters = group hub chain like pool table group play —
+    multi-object orchestration with joint behaviors and spectator consequences.
+
+data_portability:
+  will_wright_1996: ../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
+  steve_character: ../../characters/steve-alvey/
+  show: ../../repo-shows/heather-and-steve-alvey/
+
+assets:
+  - ../../characters/will-wright/media/sims-simslice-README.md
+  - ../../characters/will-wright/sources/2004-02-05-sims-proposals-and-documentation/
+
+repo_show_mirror:
+  mapping:
+    power_plant: show seed or demo segment that bootstraps nested content
+    modular_airport: party deck ensemble (multi-card snap-in)
+    magazines: configuration CARDs placed on segment desk
+    tiny_people_stomp: gag beat / procedural rhetoric — consequences of scale
+
+see_also:
+  - README.md
+  - CATALOG.yml
+  - ../../designs/orchestrator-playsets/README.md
+  - ../simprov/ORCHESTRATOR.yml

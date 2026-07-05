@@ -1,0 +1,118 @@
+# ORCHESTRATOR HUB — seed objects that run sagas via merged advertisements
+# SimProv Hope Chest · SliceCity power plant · Zombie Sims ham radio · Repo Show seeds
+
+meta:
+  id: orchestrator-hub
+  version: 0.1
+  pairs_with: advertisement-dispatch.yml
+  engine_status: schema + documentation — runtime scoring TBD (mooco ambient_injection bar)
+
+hub:
+  required:
+    - id
+    - type
+  optional:
+    - state_machine
+    - accepts_plugins_from
+    - group_controller
+    - spawn_policy
+    - magazines
+
+types:
+  saga_controller:
+    what: Multi-phase story (wedding, romance, ceremony) — Hope Chest
+    state_machine: required
+
+  seed_spawner:
+    what: Seed object dynamically places zones/items nearby — SliceCity power plant
+    spawn_policy: required
+
+  wave_controller:
+    what: Faction/outbreak orchestration — ham radio + Zombie Sims
+    state_machine: optional
+
+  group_controller:
+    what: Multi-actor joint activities — pool table, Crowd Sitter, party deck
+    min_participants: integer
+    max_participants: integer
+
+  show_seed:
+    what: Repo Show segment hub — rebounce/, heather-and-steve-alvey/
+    roster_from: party-deck.yml or INDEX ensemble
+    avatar: characters/don-philahue/ORCHESTRATOR.yml
+
+state_machine:
+  fields:
+    states: ordered list of phase names
+    initial: starting state
+    transitions: array of { from, to, on, unlocks, spawns }
+  on_enter:
+    unlock_hub_ads: ability ids or plugin patterns now eligible on hub menu
+    spawn_npc: character slug or object id
+    hands_off: magazine id to player inventory or table
+    guidance: optional host-facing beat copy
+  locked_hub_ads:
+    visible_before_unlock: true
+    guidance_when_locked: string per ad or per state
+
+plugin_acceptance:
+  accepts_plugins_from:
+    - glob patterns (characters/*/CARD.yml, catalogs/simprov/*)
+  rule: |
+    Plugin CARDs export advertisements with dispatch hub or inject.
+    Hub merge pass collects them when conditions + hub_state match.
+    No hub recompile when new character card drops — expansion-pack model.
+
+spawn_policy:
+  seed_spawner_fields:
+    seed_object: id of orchestrator (power-plant)
+    placement: nearby automatic — zones, items, modular components
+    modular_components: objects that snap together (airport runways, gates, towers)
+    absorb: target types this hub or child consumes (airplanes into airport)
+    emit: what child objects drop or spawn (skydivers from planes)
+
+magazine:
+  fields:
+    id: catalog slug
+    menu_host_when_placed: surface object
+    configures: hub state keys (venue, staff, schedule, orders)
+    browse_ads: list of configuration verbs
+  flow: |
+    NPC or hub hands magazine → player places on table →
+    table menu = magazine catalog ads → orders write back to hub.state
+
+npc_service:
+  spawned_by: hub state transition or magazine order
+  role: [wedding-planner, priest, photographer, cupid, apex-planner]
+  exports: advertisements onto hub + may hand_off magazines
+  card_surface: characters/<slug>/CARD.yml or catalogs/*/services/
+
+node_kinds:
+  service_card: Cupid, priest, Chuck correction — protocol others invoke
+  orchestrator_hub: Hope Chest, power plant, ham radio, show seed
+  magazine: Portable config UI on placed surface
+  spawned_npc: Planner walks in at planning phase
+  craft_object: Donna buffet, wedding cake — orders from magazine resolve to placed objects
+  modular_component: Airport piece — snaps to hub, participates in absorb/emit chain
+
+composition_tree_example:
+  name: SimProv Wedding (see catalogs/simprov/ORCHESTRATOR.yml)
+  root: hope-chest
+  children:
+    - cupid
+    - wedding-planner-npc
+    - magazines: [venue, staff, schedule]
+    - crowd-sitter
+    - buddha-statue
+    - donna-set-pieces
+
+coherence_with_cards:
+  guest_skills_card: Character abilities may dispatch hub, inject, magazine, spawn
+  party_deck: roster + invoke_priority weights for show_seed hubs
+  portrayal: Hub orchestrates celebration of documented skills — not impersonation
+
+see_also:
+  - advertisement-dispatch.yml
+  - guest-skills-card.yml
+  - ../designs/orchestrator-playsets/README.md
+  - ../repo-shows/rebounce/party-deck.yml

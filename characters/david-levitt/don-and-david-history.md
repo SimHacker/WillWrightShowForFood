@@ -55,11 +55,13 @@ There he worked on and used **Body Electric** to build VR simulations on the exp
 he still wanted the **multimedia** simulations he'd done in Hookup, so he **added MMP to Body Electric
 too.** The same instinct, carried into VR.
 
-**The rights chain** *(as Don recalls — confirm with David + [Jaron](../jaron-lanier/README.md)):*
-when VPL broke up, **David ended up with the rights to Body Electric** — Don believes as compensation
-for giving VPL the rights to **Hookup**. **Sun** also acquired rights to Body Electric, and **Jaron
-did some work on that with Sun** — a thread Don and Jaron have discussed and can show and dig into more
-with Jaron on the [Rebounce](../../repo-shows/rebounce/README.md) show.
+**The rights chain** *(as Don recalls — David may recall better; confirm with David +
+[Jaron](../jaron-lanier/README.md)):* David had **Hookup** as a **Mac product** and had **granted VPL
+the rights to market it** (and possibly **HarmonyGrid** — Don is unsure). As VPL fell apart, **David was
+given the rights to develop Bounce for Mac** — a Mac product based on **Body Electric** — **to
+compensate him for losing the rights to his own Mac app(s).** **Sun** also acquired rights to Body
+Electric, and **Jaron did some work on that with Sun** — a thread Don and Jaron have discussed and can
+show and dig into more with Jaron on the [Rebounce](../../repo-shows/rebounce/README.md) show.
 
 ## SIGGRAPH — serendipity at Coco Conn's SIGKids
 

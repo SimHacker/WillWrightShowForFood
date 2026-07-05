@@ -1,0 +1,103 @@
+# CARD — Steina Vasulka (public portrayal)
+# NOT Steina Vasulka. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: steina-vasulka
+  name: Steina Vasulka
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+
+character_sheet:
+  class: Video Artist / Instrument Builder
+  spec: Image/ine Co-Creator · off-spec Vasulka Video Lineage
+  level: 17
+  alignment: True Neutral Art Before Apps
+  stats:
+    video_art: 20
+    live_instrument: 18
+    steim_collab: 17
+    archive_depth: 19
+  equipment:
+  - name: Image/ine (with Tom Demeyer)
+    slot: main_hand
+    rarity: legendary
+
+card:
+  name: Steina Vasulka
+  title: Image/ine · Video Instrument Pioneer
+  rarity: rare
+  signifier: "🎥"
+  flavor: Real-time video as something you play — not something you render overnight.
+
+abilities:
+- id: IMAGE-INE-COCREATE
+  name: Image/ine Co-Create
+  type: activated
+  mana: "{G}{G}{U}"
+  conditions:
+  - segment_topic_in: [image-ine, steim, steina, video-art, net-jamming]
+  - relationship_matrix:
+      co_guest_boost: tom-demeyer
+  advertisement:
+    method: imageIneCoCreate
+    signature: imageIneCoCreate(steina, tom) → realtime Mac video instrument
+    score_when:
+    - trigger: steim_triangle_on_air
+      weight: 0.93
+    - trigger: audience_learns_pre_nato_video_path
+      weight: 0.9
+  effect: Cast — Steina + Tom Demeyer build Image/ine at STEIM; Vimeo archive shows the work.
+  verifiable: vimeo.com/41196405; v2.nl; image-ine.org
+  combos_with:
+  - TOM-IMAGE-INE
+  - MARK-STEIM-TO-ISADORA
+
+- id: VIDEO-ART-LINEAGE
+  name: Video Art Lineage
+  type: legacy
+  mana: "{G}"
+  conditions:
+  - segment_topic_in: [video-synthesizers, vasulka, avant-garde, performance]
+  advertisement:
+    method: videoArtLineage
+    signature: videoArtLineage() → decades of instrument-grade video
+    score_when:
+    - trigger: laurie_anderson_or_avant_garde_thread
+      weight: 0.85
+  effect: Legacy spell — Vasulka video art context for the net-jam / performance ensemble shows.
+  verifiable: Public Vasulka archives and STEIM history
+  combos_with:
+  - LAURIE-INVENTED-INSTRUMENT
+
+- id: STEIM-RESIDENCY-SEED
+  name: STEIM Residency Seed
+  type: triggered
+  mana: "{U}"
+  conditions:
+  - co_guest_present: mark-coniglio
+  - segment_topic_in: [isadora, steim, 1996]
+  advertisement:
+    method: steimResidencySeed
+    signature: steimResidencySeed(troika) → Coniglio sees Image/ine → Isadora grows
+    score_when:
+    - trigger: patch_cord_and_video_threads_merge
+      weight: 0.92
+  effect: Reaction — 1996 Troika Ranch residency; Image/ine seeds Isadora's video features.
+  verifiable: Coniglio Isadora history
+  combos_with:
+  - MARK-STEIM-TO-ISADORA
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+- path: ../tom-demeyer/CARD.yml
+- path: ../mark-coniglio/CARD.yml
+- path: ../don-hopkins/realtime-net-jamming-scene.md

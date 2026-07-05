@@ -31,6 +31,11 @@ sources:
 platform:
   hosted_on: ../micropolis-home/
 
+orchestrator:
+  path: ORCHESTRATOR.yml
+  hub: slicecity-power-plant
+  design: ../../designs/orchestrator-playsets/README.md
+
 related_catalogs:
   - ../simfreaks/
   - ../zombie-sims/

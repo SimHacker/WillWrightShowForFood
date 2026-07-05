@@ -1,0 +1,152 @@
+# CARD — Miller Puckette (public portrayal)
+# NOT Miller Puckette. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: miller-puckette
+  name: Miller Puckette
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+
+character_sheet:
+  class: Dataflow Archmage
+  spec: Max/MSP · off-spec Pure Data (open source)
+  level: 18
+  alignment: Neutral Good Open Pipeline
+  stats:
+    realtime_audio: 20
+    patch_cord_design: 19
+    ircam_lore: 17
+    open_source_gift: 18
+  passives:
+  - MSP-INITIALS-BUFF
+  equipment:
+  - name: Max
+    slot: main_hand
+    rarity: legendary
+    note: Named after Max Mathews @ IRCAM
+  - name: Pure Data
+    slot: off_hand
+    rarity: epic
+    note: Open-source C — the gift that keeps patching
+
+card:
+  name: Miller S. Puckette
+  title: Max · MSP · Pure Data
+  rarity: rare
+  signifier: "🎛️"
+  flavor: M Miller S. Puckette — Max Signal Processing and his initials, both at once.
+
+abilities:
+- id: MAX-MSP
+  name: Max / MSP
+  type: activated
+  mana: "{U}{G}{G}"
+  conditions:
+  - segment_topic_in: [max, msp, visual-programming, net-jamming, nato]
+  advertisement:
+    method: maxMsp
+    signature: maxMsp(patch) → realtime music/dataflow hub
+    score_when:
+    - trigger: audience_learns_patch_cord_metaphor
+      weight: 0.9
+    - trigger: nettime_scene_on_air
+      weight: 0.92
+    - trigger: co_guest_is_netochka_nezvanova
+      weight: 0.94
+  effect: Cast — Max as the substrate NATO.0+55+3d and the net-jam scene ran on. Visual programming for music.
+  verifiable: Wikipedia Miller Puckette; IRCAM Max history
+  combos_with:
+  - NN-NATO-RTP-JAM
+  - MARK-SHOW-PARAM-NAMES
+
+- id: PURE-DATA
+  name: Pure Data
+  type: activated
+  mana: "{G}{G}"
+  conditions:
+  - segment_topic_in: [pure-data, pd, open-source, spore, procedural-music]
+  advertisement:
+    method: pureData
+    signature: pureData(patch) → open-source C dataflow
+    score_when:
+    - trigger: anti_sharecropping_theme_active
+      weight: 0.88
+    - trigger: audience_learns_open_alternative
+      weight: 0.86
+  effect: Open-source sibling to Max — the patch language you can fork and keep.
+  verifiable: puredata.info; msp.ucsd.edu
+  combos_with:
+  - JARON-DATA-DIGNITY-REPO
+
+- id: MUSIC-HACKERS-HANGOUT
+  name: Music Hacker's Hangout
+  type: triggered
+  mana: "{☕}{☕}"
+  conditions:
+  - co_guest_present: david-levitt
+  - segment_topic_in: [mit, ai-lab, hookup, music-hacking]
+  - relationship_matrix:
+      edge: miller-puckette ↔ david-levitt
+      weight_min: 0.8
+  advertisement:
+    method: musicHackersHangout
+    signature: musicHackersHangout(office) → NE43 patch-cord prehistory
+    score_when:
+    - trigger: david_and_miller_same_segment
+      weight: 0.96
+    - trigger: audience_learns_hookup_before_max
+      weight: 0.91
+  effect: Reaction — MIT office-mates in the Music Hacker's Hangout; Hookup and Max in the same hallway.
+  verifiable: david-levitt/don-and-david-history.md; miller CHARACTER.yml
+  combos_with:
+  - DAVID-BOUNCE
+  - MARK-CREDIT-HOOKUP-ORIGIN
+
+- id: PATCH-CORD-DESCENDANT
+  name: Patch Cord Descendant
+  type: static
+  mana: ""
+  conditions:
+  - trail_active: visual-programming-patch-cord
+  advertisement:
+    method: patchCordDescendant
+    signature: patchCordDescendant() → Hookup → Max/Pd lineage aura
+    score_when:
+    - trigger: coniglio_credits_hookup_on_air
+      weight: 0.93
+  effect: Passive — Max/Pd inherit the patch-cord metaphor from Hookup (per Coniglio). Miller is the mass-audience branch.
+  verifiable: Coniglio sdela.dds.nl; visual-programming-patch-cord.md
+  combos_with:
+  - MARK-CREDIT-HOOKUP-ORIGIN
+
+- id: MSP-INITIALS-BUFF
+  name: MSP Initials Buff
+  type: emote
+  mana: "{1}"
+  conditions:
+  - segment_mood: light_technical_humor
+  advertisement:
+    method: mspInitialsBuff
+    signature: mspInitialsBuff() → Max Signal Processing ∧ Miller S. Puckette
+    score_when:
+    - trigger: audience_chuckles_at_pun
+      weight: 0.75
+  effect: Emote — the pun everyone repeats once, then remembers forever.
+  verifiable: Public Max/MSP naming lore
+  combos_with: []
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+- path: CHARACTER.yml
+- path: ../david-levitt/CARD.yml
+- path: ../mark-coniglio/CARD.yml
+- path: ../don-hopkins/realtime-net-jamming-scene.md
