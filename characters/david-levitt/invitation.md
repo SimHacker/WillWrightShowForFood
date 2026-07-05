@@ -43,16 +43,37 @@ to working code and credited ideas, in the open.
 - **Remembering Marvin Minsky** — together.
 
 ## The guests you're perfect alongside
-Dream-guest dirs + show proposals are already going: **Drew Carey** and **Brian Eno** (Will may be able
-to reach Brian), and we'd love **Laurie Anderson**. You'd fit half a dozen of these.
+Dream-guest dirs + show proposals are already going, and I need your help reaching some of them:
+- **[Laurie Anderson](../laurie-anderson/)** — I'd love her; do you know *anyone* from her Interval circle?
+- **[Brian Eno](../brian-eno/)** — Will may be able to reach him.
+- **[Drew Carey](../drew-carey/)** — Sims mythology + *Whose Line* improv, a live-show natural.
+
+You'd fit half a dozen of these. There are also **memorial directories** for beloved people we've lost —
+topics each of us who knew them can speak to, woven together into a shared memorial video.
 
 **A question only you might answer:** who at **Interval** worked on the **granular-synthesis "talking
 stick"** that **Laurie Anderson and Bob Bielecki** built? **Rachel Strickland**, perhaps? Any real thread
 you have into Laurie's Interval circle is gold *(offered as a question, not an assertion)*.
 
-**Old friends in the room:** we're also inviting **Marc Canter** — MacroMind/Macromedia/Director founder,
-**People Aggregator** (a.k.a. "People Aggrivator" 😉). You, Marc, and Don go way back; outrageous stories,
-many from Amsterdam. He will love the puppets. See [`../marc-canter/`](../marc-canter/).
+**Old friends in the room:** we're also inviting **[Marc Canter](../marc-canter/)** — MacroMind/Macromedia/
+Director founder, **People Aggregator** (a.k.a. "People Aggrivator" 😉). You, Marc, and Don go way back;
+outrageous stories, many from Amsterdam. He will love the puppets.
+
+## Help me reach the others — you're a connector
+We both know **so many** people who'd be perfect. **Who else should be here — and would you help me
+contact and gently persuade them?** The ask can be **as light as they like**; there's a whole
+[participation ladder](../../process/guest-participation-ladder.yml):
+
+- **Record a solo video** about whatever they want — phone, laptop, one take or ten.
+- **Browse the repo**, get ideas, answer a question or two.
+- **A relaxed one-on-one** interview, at a time in *their* time zone.
+- **Several people conferencing** at once.
+- **A live Twitch broadcast** — the holy grail, for anyone game.
+
+And **full valet + concierge service**: if they don't want to touch GitHub plumbing or video editing,
+they don't have to — **email / phone / a video file, and Don does the rest** (commits, transcribes,
+links, weaves it together). No git account required, no marathon, no pressure — **many short passes beat
+one big sit-down.**
 
 ## Do NOT miss this: the Acapella Pink Trombone Sing-Along 🎺
 A bunch of us, live, singing through **[Pink Trombone](https://dood.al/pinktrombone/)** — the playable
