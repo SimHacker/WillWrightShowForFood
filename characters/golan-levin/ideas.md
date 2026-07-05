@@ -13,7 +13,7 @@ Golan Levin — Interactive/computational media artist, engineer, and educator (
 
 *Topics that connect Golan Levin's work to this repo — public themes only.*
 
-- Creative coding / 'Code as Creative Medium' as a teaching practice (kin to Micropolis Class)
+- Creative coding / 'Code as Creative Medium' as a teaching practice (kin to Repo Show Class)
 - Gestural + audiovisual interfaces (AVES, Messa di Voce, Manual Input Workstation)
 - Rouen Revisited (1996) — dual interview with Paul Debevec on image-based interactive media
 - **Mouther** (1996) — vector faces in Tom Ngo's [**ECG**](../don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md) editor at Interval; drag eyes/mouth, solve barycentric blends
@@ -24,7 +24,7 @@ Golan Levin — Interactive/computational media artist, engineer, and educator (
 ### 1. Show seed: `repo-shows/golan-levin/`
 walk the repo on air and build from the seed.
 
-### 2. Creative coding / 'Code as Creative Medium' as a teaching practice (kin to Micropolis Class)
+### 2. Creative coding / 'Code as Creative Medium' as a teaching practice (kin to Repo Show Class)
 
 ### 3. Gestural + audiovisual interfaces (AVES, Messa di Voce, Manual Input Workstation)
 

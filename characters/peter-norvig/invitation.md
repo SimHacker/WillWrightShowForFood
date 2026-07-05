@@ -32,4 +32,4 @@ in modern AI is right in the middle of all this.
 
 No pressure, no homework. Accepted, delayed, declined, or no reply — all honored gracefully.
 
-— Don Hopkins, Micropolis Class
+— Don Hopkins, Repo Show Class

@@ -40,4 +40,4 @@ worked with **Will Wright at Gallium Studios** (Proxi).
 Guests: [`characters/heather-alvey/`](../../characters/heather-alvey/README.md) ·
 [`characters/steve-alvey/`](../../characters/steve-alvey/README.md). Consent **not yet asked**.
 
-— Don Hopkins, Micropolis Class
+— Don Hopkins, Repo Show Class

@@ -5,7 +5,7 @@ status: public_live
 home: https://github.com/SimHacker/WillWrightShowForFood
 
 what: |
-  The SHOW orchestrator for Micropolis Class. Git-native stage: seed → plant → RTFR →
+  The SHOW orchestrator for Repo Show Class. Git-native stage: seed → plant → RTFR →
   air → harvest. "So you have a Repo to Show us?" This copy is the **public live**
   instance — compose with SimHacker/moollm + this repo.
 

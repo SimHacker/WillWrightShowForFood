@@ -18,8 +18,8 @@ Alan —
 We've been writing for years — **Fabrik** and the intro to **Dan Ingalls**, **PIXIE** and Smalltalk
 **halos**, your review of the **Yoot Saito** interview transcript, **NeWS** ("the right way to go —
 except it missed the live system underneath"), **HyperCard** done beautifully, and my **MOOLLM**
-note this January. I'd like to turn that thread into a **Repo Show** — a Micropolis Class
-conversation whose stage is a public GitHub repo, following through to working code and credited
+note this January. I'd like to turn that thread into a **Repo Show** — a conversation whose
+stage is a public GitHub repo, following through to working code and credited
 ideas in public. **Show, don't tell.**
 
 **Remembering Vanessa — with Craig, Dan, and me.**

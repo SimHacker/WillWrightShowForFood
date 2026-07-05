@@ -105,6 +105,6 @@ Browse without a GitHub account — start at the [README](https://github.com/Sim
 **Zero homework** — I do the setup; what we record and publish is entirely your call. **Your response:**
 accepted, delayed, too busy, declined, or no reply — all honored gracefully.
 
-— Don Hopkins, Micropolis Class
+— Don Hopkins, Repo Show Class
 
 `🪞 ambigram live` · `👁️ Viewpoint: pixels are the state` · `🎮 Amy Jo: Game Thinking` · `🧩 the designed aha`

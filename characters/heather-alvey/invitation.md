@@ -102,6 +102,6 @@ straight to your stores and subscriptions.
 
 **Your response:** accepted, delayed, too busy, declined, or no reply — all honored gracefully.
 
-— Don Hopkins, Micropolis Class
+— Don Hopkins, Repo Show Class
 
 `🧟 26 years of SimFreaks` · `🧵 object suites + SimAntics` · `🏙️ Steve: SliceCity` · `🛍️ send fans your way`

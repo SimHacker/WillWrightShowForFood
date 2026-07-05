@@ -19,7 +19,7 @@ rig_dna:
 > **CTA:** Email this file to a friend. Paste it into your LLM. *You* decide whether to run the
 > install protocol below.
 
-**Micropolis Class · Repo Show ·** declare [`rig_classes`](./brain-stream-dual-laptop.rig.yml) honestly.
+**Repo Show Class · Repo Show ·** declare [`rig_classes`](./brain-stream-dual-laptop.rig.yml) honestly.
 
 This is the first **multi-computer `stage` rig** (rig-schema 0.2). The `stage` block describes the
 machines, capture, NDI transport, OBS scenes, overlay layout, and stream targets — fork it for any

@@ -7,7 +7,7 @@
 
 ## Pitch
 
-When Micropolis Class deploys to classrooms, teachers need something better than
+When Repo Show Class deploys to classrooms, teachers need something better than
 'did the code compile?' Homefun submissions are git commits + PRs with
 thoughtful-commitment messages linked to cursor-mirror thinking blocks. The killer
 audit question — for students, ai-offs judges, and future orchestrator training:

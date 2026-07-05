@@ -35,4 +35,4 @@ real work and then build on it in the open (transcripts, notes, and runnable cod
 
 No pressure, no homework. Accepted, delayed, declined, or no reply — all honored gracefully.
 
-— Don Hopkins, Micropolis Class
+— Don Hopkins, Repo Show Class

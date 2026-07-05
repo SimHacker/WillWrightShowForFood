@@ -17,4 +17,4 @@ show_seed: repo-shows/scott-adams/
 
 [`repo-shows/scott-adams/invitation.md`](../../repo-shows/scott-adams/invitation.md)
 
-— Don Hopkins, Micropolis Class
+— Don Hopkins, Repo Show Class

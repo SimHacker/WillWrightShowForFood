@@ -21,7 +21,7 @@ restoration, pie menus in IoT and smart kitchens. You ran **NPUC** at IBM Almade
 Nelson** talk video. I last saw Ted Nelson at your house — basement reading — and I'd love to honor
 that friendship on air.
 
-I'd like to invite you to a **Repo Show** — a Micropolis Class conversation whose stage is a public
+I'd like to invite you to a **Repo Show** — a Repo Show Class conversation whose stage is a public
 GitHub repo, following through to working code anyone can browse without an account. **Show,
 don't tell.**
 

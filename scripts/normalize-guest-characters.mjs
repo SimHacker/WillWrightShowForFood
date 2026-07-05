@@ -140,7 +140,7 @@ ${meta.web.length ? meta.web.map((u) => `    - ${u}`).join("\n") : "    []"}
 *Historical constructionist lineage — not a living invitation.*
 [Portrayal standards](../../schemas/portrayal-standards.yml)
 
-Respectful portrayal of public legacy and published work for Micropolis Class attribution.
+Respectful portrayal of public legacy and published work for Repo Show Class attribution.
 `
 		: `---
 status: draft
@@ -155,7 +155,7 @@ show_seed: ${meta.show_seed}
 *Public draft — not sent. ${meta.name} may edit, decline, delay, or request removal at any time.*
 [Portrayal standards](../../schemas/portrayal-standards.yml)
 
-We would respectfully invite **${meta.name}** to a **Repo Show** — a Micropolis Class
+We would respectfully invite **${meta.name}** to a **Repo Show** — a Repo Show Class
 conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood),
 following through to working code and credited ideas in public.
 
@@ -167,7 +167,7 @@ Browse without a GitHub account — [README](https://github.com/SimHacker/WillWr
 
 **Your response:** Accepted, delayed, too busy, declined, or no reply — all honored gracefully.
 
-— Don Hopkins, Micropolis Class
+— Don Hopkins, Repo Show Class
 `;
 
 	const readme = `# ${meta.name}

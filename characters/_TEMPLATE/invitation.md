@@ -11,7 +11,7 @@ show_seed: repo-shows/guest-slug/
 *Public draft — not sent. The person portrayed may edit, decline, delay, or request removal at any time.*
 [Portrayal standards](../../schemas/portrayal-standards.yml)
 
-We would respectfully invite you to a **Repo Show** — a Micropolis Class conversation whose
+We would respectfully invite you to a **Repo Show** — a Repo Show Class conversation whose
 stage is [this public GitHub repository](https://github.com/SimHacker/WillWrightShowForFood),
 following through to working code and credited ideas in public.
 
@@ -23,4 +23,4 @@ Browse without a GitHub account — start at the [README](https://github.com/Sim
 
 **Your response:** Accepted, delayed, too busy, declined, or no reply — all honored gracefully.
 
-— Don Hopkins, Micropolis Class
+— Don Hopkins, Repo Show Class

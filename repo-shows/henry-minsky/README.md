@@ -20,4 +20,4 @@ playing in the children's computer lab while grad students watched children lear
 See [`SHOW.yml`](SHOW.yml). Consent **not yet asked** —
 [`invitation`](../../characters/henry-minsky/invitation.md).
 
-— Don Hopkins, Micropolis Class
+— Don Hopkins, Repo Show Class

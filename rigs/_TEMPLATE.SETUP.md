@@ -15,7 +15,7 @@ rig_dna:
 > **What:** Host orchestration + target platform + languages — your driver costume.  
 > **CTA:** Email this file to a friend. Paste it into your LLM. *You* decide whether to run the install protocol below.
 
-**Micropolis Class · Repo Show ·** declare [`rig_classes`](./your-rig-slug.rig.yml) honestly.
+**Repo Show Class · Repo Show ·** declare [`rig_classes`](./your-rig-slug.rig.yml) honestly.
 
 ---
 

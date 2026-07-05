@@ -17,4 +17,4 @@ schema mechanism and the [constructionist lineage](../../process/trails/construc
 
 See [`SHOW.yml`](SHOW.yml). Consent **not yet asked** — [`invitation`](../../characters/steve-kommrusch/invitation.md).
 
-— Don Hopkins, Micropolis Class
+— Don Hopkins, Repo Show Class

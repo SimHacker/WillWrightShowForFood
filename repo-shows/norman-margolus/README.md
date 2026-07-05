@@ -27,4 +27,4 @@ on computation.
 Guest: [`characters/norman-margolus/`](../../characters/norman-margolus/README.md). Consent **not yet asked** —
 the natural bridge is [Henry Minsky](../../characters/henry-minsky/README.md).
 
-— Don Hopkins, Micropolis Class
+— Don Hopkins, Repo Show Class

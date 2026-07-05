@@ -29,7 +29,7 @@ As conventional and valuable to tool vendors (Cursor-class) as PBD was to UI res
 - **what:** It takes human taste and experience to learn which models to shift between for
 different tasks — not fully specifiable upfront. The sport captures expert routing
 as labeled segments: task type, model chosen, outcome, spend — orchestration gold.
-- **learned_by_doing:** Manual Transmission + Micropolis Class homefun — many drivers, many laps
+- **learned_by_doing:** Manual Transmission + Repo Show Class homefun — many drivers, many laps
 - **see:** stick-shift-protocol.yml
 
 ## Training By Demonstration
@@ -131,7 +131,7 @@ see stick-shift-protocol.yml#gear_commitment
 
 - **flagship:** homefun-grading.yml#flagship_question
 - **examples:**
-  - Does the commit message match the thinking blocks? — Micropolis Class homefun grading
+  - Does the commit message match the thinking blocks? — Repo Show Class homefun grading
   - Why did you add that image — where did it come from?
   - Which model wrote this yaml vs this prose?
   - What file selections drove this tool call?

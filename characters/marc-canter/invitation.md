@@ -13,7 +13,7 @@ consent: not_yet_asked
 Marc —
 
 Your character directory is open, and we'd be delighted to have you on a **Repo Show** — a
-Micropolis-Class conversation staged in
+Repo Show Class conversation staged in
 [this public repository](https://github.com/SimHacker/WillWrightShowForFood), with **David Levitt** and
 Don in the room and a whole trove of stories to tell (many, of course, from **Amsterdam**).
 
@@ -35,4 +35,4 @@ Low-pressure and **time-shifted**: record a solo bit whenever you like, and/or a
 
 **Your response:** Accepted, delayed, too busy, declined, or no reply — all honored gracefully.
 
-— Don Hopkins, Micropolis Class
+— Don Hopkins, Repo Show Class

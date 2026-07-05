@@ -1,7 +1,7 @@
 # SHOWS — one document per show proposal
 #
 # Each show is a streamed conversation that FOLLOWS THROUGH to implementation
-# (Micropolis Class methodology). Two axes:
+# (Repo Show Class methodology). Two axes:
 #   solo:  one person × one topic (a person can do SEVERAL shows on different
 #          topics — especially Will Wright).
 #   group: multiple people × one topic.
@@ -28,7 +28,7 @@ shows:
     phil-salvador-simrefinery/SHOW.yml: "Phil Salvador — SimRefinery archivist; MBS history; finding + playing the lost refinery sim."
     walter-bender-olpc/SHOW.yml: "Walter Bender — OLPC introducing-the-players; Sugar roadmap; Eben Moglen GPL; View Source."
     steve-wozniak/:            "Topic-less kickoff with Steve Wozniak. Apple II, 6502, open hardware, and browser-based emulators."
-    terry-winograd/:           "★ FOREBEAR SHOW. Terry Winograd as the dragon with the treasure trove of videos (CS547 archive). Stands explicitly on Terry's shoulders + the shoulders of all his great guests (Will 1996, Gosling Java 1995, Joy Mountford 1994, Raskin, Norman, etc.). Archive recovery, modern runnable seeds, Micropolis Class continuation, Connections series spine. (Pie menus = Don's own thread, not Joy Mountford's — corrected.)"
+    terry-winograd/:           "★ FOREBEAR SHOW. Terry Winograd as the dragon with the treasure trove of videos (CS547 archive). Stands explicitly on Terry's shoulders + the shoulders of all his great guests (Will 1996, Gosling Java 1995, Joy Mountford 1994, Raskin, Norman, etc.). Archive recovery, modern runnable seeds, Repo Show Class continuation, Connections series spine. (Pie menus = Don's own thread, not Joy Mountford's — corrected.)"
   seeds:
     group:
       building-the-sims.yml:    "The Sims team reunion: Jamie Doornbos, Eric Bowman, Patrick Barrett, Don (programmers) + Jim Mackraz (manager) + Will. Designers Chris/Claire may join. Flagship episode: will-wright/sims-team-steering-committee-playthrough/ (PLAY the 1998 build)."
@@ -62,7 +62,7 @@ shows:
       david-ungar-self-moollm.yml: "DREAM GUEST David Ungar — Reflecting on Self: Narcissa's Mirror; Self × MOOLLM; mirrors; self-interest!; Stage Magic; rig culture."
       philip-rosedale-hifi-moollm.yml: "Philip Rosedale — SL now; YAML Jazz + GitHub-as-MMORPG collaboration stack; SL soul import/export; HiFi worklist history; VR DLA jam; Dan comparison."
       design-by-accretion.yml:  "Chris Trottier — 'Design by Accretion' ↔ the cauldron method. FLAGSHIP."
-      alan-kay-microworld.yml:  "Micropolis Class with Alan Kay — microworld-as-medium; warmly invited Vanessa memorial arc w/ Craig + Dan. DREAM GUEST."
+      alan-kay-microworld.yml:  "Repo Show Class with Alan Kay — microworld-as-medium; warmly invited Vanessa memorial arc w/ Craig + Dan. DREAM GUEST."
       will-wright-series.yml:   "Will Wright — SERIES seed. PLANTED → will-wright/."
       yoot-saito-series.yml:    "Yoot Saito — SERIES; clean-room successor (YOOT BOOT / Building / Seaman) + frontier AI."
       ben-shneiderman-series.yml: "Ben Shneiderman — SERIES; HyperTIES, hypermedia, direct manipulation, pie menus, info-viz."
@@ -76,7 +76,7 @@ shows:
       thomas-cherryhomes/: "Thomas Cherryhomes (@tschak) — FujiNet (putting the internet on retro machines), IRATA.ONLINE/PLATO, 'Bus-over-IP', fish/TNFS, Fujisan+FujiNet-PC, the Game Lobby. Repo-native + real-hardware/network path for Apple ][ stack + Lars Brinkhoff pair. Holds SHOW.yml + README + ideas.md. 'Argue to gain insight.'"
       terry-winograd: "Terry Winograd — The forebear. The dragon with the treasure trove (CS547 archive). Standing on his shoulders + the shoulders of Will Wright, James Gosling, Joy Mountford, and all the other guests. Archive as curriculum and series material."
       ted-selker-input-languages.yml: "Ted Selker — TrackPoint, gesture languages, NPUC (+ the IBM-Burger/SunBurger story). Input as little languages."
-      brad-myers-garnet-vpl.yml: "Brad Myers — Garnet lab, All the Widgets, Pick Click Flick, Watch What I Do/PBD in the LLM era, VPL taxonomy, C32, 05-640 guest-lecture series. Don worked there ~1992–93 (GLASS). Includes Micropolis Class exercises for students/builders."
+      brad-myers-garnet-vpl.yml: "Brad Myers — Garnet lab, All the Widgets, Pick Click Flick, Watch What I Do/PBD in the LLM era, VPL taxonomy, C32, 05-640 guest-lecture series. Don worked there ~1992–93 (GLASS). Includes Repo Show Class exercises for students/builders."
       brad-myers/pbd-in-llm-era.yml: "Narrow vertical: PBD in the LLM Era. Watch What I Do (Cypher + Brad) chapter-by-chapter modern reimplementations as simple playable demo seeds + exercises. Explicit open courseware for CMU and others."
       ted-nelson-intertwingled.yml: "Ted Nelson — Xanalinks vs jumplinks, intertwingling, MOOLLM, transcribe-the-vision. DREAM GUEST (warm lead). Optional co-guest Ted Selker for NPUC resurrection."
       phoneloper-speech-synthesis.yml: "Kevin Lenzo — open-source Phoneloper Repo Show (Flite/Cepstral; SFC talking toys; phonoscoping → web vocal jam + Pink Trombone)."
@@ -115,7 +115,7 @@ backlog_ideas:
   - "Yoot Saito solo — SimTower → clean-room Yoot Tower (see design-in-public.yml yoot_tower)."
   - "Bret Victor — legibility / explorable simulation."
   - "Ted Nelson — intertwingled documents (seed exists: ted-nelson-intertwingled.yml; warm lead Nov 2021)."
-  - "Alan Kay — microworld-as-medium ('Micropolis Class with Alan Kay!')."
+  - "Alan Kay — microworld-as-medium ('Repo Show Class with Alan Kay!')."
   - "Ben Shneiderman / Jack Callahan — pie menu origins (direct manipulation)."
   - "Chaim Gingold — Building SimCity as executable scholarship (seed exists: building-simcity-chaim-gingold.yml)."
   - "Edd Coates — Game UI Database and ethical AI licensing (seed exists: edd-coates-game-ui-database.yml)."

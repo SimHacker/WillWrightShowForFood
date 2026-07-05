@@ -42,7 +42,7 @@ as design tools — why under-simulating (and trusting the player's imagination)
 
 ### 4. Toys, not games — microworlds
 Will's lifelong stance: simulations as **toys and microworlds** without a single win state. The
-Micropolis Class lens: a microworld as a *medium*, not a contest.
+Repo Show Class lens: a microworld as a *medium*, not a contest.
 
 ### 5. Generative systems & emergence
 The **[2006 Long Now *Playing with Time* talk with Brian Eno](../../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/README.md)**

@@ -213,7 +213,7 @@ what_we_are_building_in_public:
   - "Cauldron SCOOP pipeline — live jam → lift skills out of the melt (see repo-show-format.yml)"
   - "Repo Show format (process/repo-show-format.yml)"
   - "ShowMaker graph (process/showmaker-network.yml)"
-  - "Micropolis Class — credited ideas from people who were there"
+  - "Repo Show Class — credited ideas from people who were there"
   - "Polyglot monorepo — MOOLLM microworld + pnpm packages + verify CI"
   - "Automation to scaffold show CARDs, skill CARDs, and link PRs (roadmap, not shipped)"
 

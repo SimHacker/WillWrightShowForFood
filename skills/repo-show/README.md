@@ -47,4 +47,4 @@ Compose with [`SimHacker/moollm`](https://github.com/SimHacker/moollm).
 
 Fork a show seed, plant it, link into [`process/showmaker-network.yml`](../../process/showmaker-network.yml). Declare your rig in [`rigs/`](../../rigs/README.md) + [`SETUP.md`](../../rigs/_TEMPLATE.SETUP.md).
 
-— Don Hopkins, Micropolis Class
+— Don Hopkins, Repo Show Class

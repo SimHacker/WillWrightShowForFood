@@ -80,7 +80,7 @@ pnpm run facades:check  # CI — stale fallback facades with GENERATED banner
 
 ### Education & training signal
 
-- [`HOMEFUN.md`](HOMEFUN.md) — Micropolis Class grading
+- [`HOMEFUN.md`](HOMEFUN.md) — Repo Show Class grading
 - [`ORCHESTRATION-GOLD.md`](ORCHESTRATION-GOLD.md) — multi-LLM traces as gold
 
 ### Live production

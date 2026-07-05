@@ -34,4 +34,4 @@ A **Minsky-sibling session** with [Margaret](../margaret-minsky/README.md) is on
 
 **Your response:** Accepted, delayed, too busy, declined, or no reply — all honored gracefully.
 
-— Don Hopkins, Micropolis Class
+— Don Hopkins, Repo Show Class

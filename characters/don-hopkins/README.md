@@ -154,7 +154,7 @@ Each blurb below is **one beat long** (~24 words). Read in order; each line **op
 | [`self-interest-narcissas-mirror-david-ungar.md`](self-interest-narcissas-mirror-david-ungar.md) | Dream Repo Show with David Ungar — Self pun stack, *Narcissa's Mirror*, representation ethics guardrails spelled out. | [`moollm-microworld-os-talk.md`](moollm-microworld-os-talk.md) |
 | [`moollm-microworld-os-talk.md`](moollm-microworld-os-talk.md) | Flagship talk — *The Sims for your filesystem*; microworld OS thesis distilled for stage and README visitors. | [`talks/moollm-microworld-os.yml`](talks/moollm-microworld-os.yml) |
 | [`talks/moollm-microworld-os.yml`](talks/moollm-microworld-os.yml) | Talk package yaml — slides spine, demo hooks, cross-links to lineage and MOOLLM repo; export-safe from DonHopkins archive. | [`repo-show-host-facet.md`](repo-show-host-facet.md) |
-| [`repo-show-host-facet.md`](repo-show-host-facet.md) | Repo Show host facet — Micropolis Class, RTFR, GitHub as MMORPG; design in public without job-hunt signaling. | [`ideas.md`](ideas.md) |
+| [`repo-show-host-facet.md`](repo-show-host-facet.md) | Repo Show host facet — Repo Show Class, RTFR, GitHub as MMORPG; design in public without job-hunt signaling. | [`ideas.md`](ideas.md) |
 | [`ideas.md`](ideas.md) | Dream guests and show hooks — Will, Ungar, Bender, Adams, Yoot; episodes Don would build on air next. | [`talks/INDEX.yml`](talks/INDEX.yml) |
 | [`talks/README.md`](talks/README.md) · [`talks/INDEX.yml`](talks/INDEX.yml) | Talk portfolio index — flagships, verified past talks, seeds to develop; pairs with portrayal presentations. | [`career/lineage.yml`](career/lineage.yml) |
 
@@ -181,7 +181,7 @@ Each blurb below is **one beat long** (~24 words). Read in order; each line **op
 
 ## Now
 
-Porting **Micropolis** to the web — WASM + SvelteKit. Running **Micropolis Class** /
+Porting **Micropolis** to the web — WASM + SvelteKit. Running **Repo Show Class** /
 **Repo Show** — live conversations whose stage is a GitHub repo that follows through to
 working code. Building the **Sims content stack** in the browser (Transmogrifier, RugOMatic,
 Wig-O-Matic lineage).

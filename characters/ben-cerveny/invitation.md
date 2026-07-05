@@ -13,7 +13,7 @@ warm_contact: true
 *Public draft — not sent. Ben Cerveny may edit, decline, delay, or request removal at any time.*
 [Portrayal standards](../../schemas/portrayal-standards.yml)
 
-We would respectfully invite **Ben Cerveny** to a **Repo Show** — a Micropolis Class
+We would respectfully invite **Ben Cerveny** to a **Repo Show** — a Repo Show Class
 conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood),
 following through to working code and credited ideas in public.
 
@@ -37,4 +37,4 @@ Browse without a GitHub account — [README](https://github.com/SimHacker/WillWr
 
 **Your response:** Accepted, delayed, too busy, declined, or no reply — all honored gracefully.
 
-— Don Hopkins, Micropolis Class
+— Don Hopkins, Repo Show Class

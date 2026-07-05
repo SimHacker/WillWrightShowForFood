@@ -1,6 +1,6 @@
-# Repo Show host — Micropolis Class, GitHub as MMORPG
+# Repo Show host — Repo Show Class, GitHub as MMORPG
 
-Don hosts **Micropolis Class** / **Repo Show**: conversations whose **stage is a GitHub repo** that follows through to working code.
+Don hosts **Repo Show Class** / **Repo Show**: conversations whose **stage is a GitHub repo** that follows through to working code.
 
 ## Host facets
 

@@ -89,7 +89,7 @@ capabilities:
       - "Machinima video storytelling tools (impractical in 2000; practical now)"
       - "Real-time capture, compression, screencasting"
       - "OBS, YouTube, Twitch integration"
-      - "Repo Show / Micropolis Class stream rig shares DNA with stream-gateway (broadcast tier)"
+      - "Repo Show / Repo Show Class stream rig shares DNA with stream-gateway (broadcast tier)"
 
   chat_with_god:
     playful_name: "Chatting with God"

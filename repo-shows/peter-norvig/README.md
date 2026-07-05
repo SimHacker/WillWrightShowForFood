@@ -21,4 +21,4 @@ useful as source material.
 See [`SHOW.yml`](SHOW.yml). Consent **warm lead** —
 [`invitation`](../../characters/peter-norvig/invitation.md).
 
-— Don Hopkins, Micropolis Class
+— Don Hopkins, Repo Show Class

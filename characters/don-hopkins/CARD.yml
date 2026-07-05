@@ -234,7 +234,7 @@ connections_index:
           blurb: Talk package yaml — slides spine, demo hooks, cross-links to lineage and MOOLLM repo; export-safe archive distill.
           opens: repo-show-host-facet.md
         - path: repo-show-host-facet.md
-          blurb: Repo Show host facet — Micropolis Class, RTFR, GitHub as MMORPG; design in public without job-hunt signaling.
+          blurb: Repo Show host facet — Repo Show Class, RTFR, GitHub as MMORPG; design in public without job-hunt signaling.
           opens: ideas.md
         - path: ideas.md
           blurb: Dream guests and show hooks — Will, Ungar, Bender, Adams, Yoot; episodes Don would build on air next.
@@ -322,7 +322,7 @@ see_also:
 - path: ../../rigs/stick-shift-composer-moollm.rig.yml
   why: Don host rig seed
 - path: repo-show-host-facet.md
-  why: Host facet — Micropolis Class (invitation N/A for self-sovereign host)
+  why: Host facet — Repo Show Class (invitation N/A for self-sovereign host)
 meta:
   schema: ../../schemas/guest-skills-card.yml
   governed_by: ../../schemas/portrayal-standards.yml

@@ -15,7 +15,7 @@ Dear David,
 
 Your character directory is open. Right now it's an invitation stub with a starter list — **please
 verify and elaborate every item, and add the millions more we both know are missing.** We'd be honored
-to have you on a **Repo Show**: a Micropolis-Class conversation staged in
+to have you on a **Repo Show**: a Repo Show Class conversation staged in
 [this public repository](https://github.com/SimHacker/WillWrightShowForFood), carried all the way through
 to working code and credited ideas, in the open.
 
@@ -95,4 +95,4 @@ Browse without a GitHub account — [README](https://github.com/SimHacker/WillWr
 
 **Your response:** Accepted, delayed, too busy, declined, or no reply — all honored gracefully.
 
-— Don Hopkins, Micropolis Class
+— Don Hopkins, Repo Show Class

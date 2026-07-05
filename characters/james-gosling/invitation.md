@@ -26,7 +26,7 @@ We go back a long way — **Gosling Emacs** at UniPress, **NeWS** at Sun (your 1
 in my archive), the fight to make NeWS free, pie menus in PostScript, the lunar lander demo,
 **HyperLook** with Arthur, your **CS547** talk in Terry's class (I was in the room; you may remember
 the Java-security questions on camera). I'd like to turn that hallway into a **Repo Show** — a
-Micropolis Class conversation whose stage is a public GitHub repo, following through to working code
+Repo Show Class conversation whose stage is a public GitHub repo, following through to working code
 anyone can browse without an account. **Show, don't tell.**
 
 **Proposed episode:** *From NeWS to Java* — extension languages, network window systems, and what

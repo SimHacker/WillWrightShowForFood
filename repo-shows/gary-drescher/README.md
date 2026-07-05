@@ -19,4 +19,4 @@ using **marginal attribution** and **synthetic items** — Piagetian constructiv
 See [`SHOW.yml`](SHOW.yml). Consent **not yet asked** —
 [`invitation`](../../characters/gary-drescher/invitation.md).
 
-— Don Hopkins, Micropolis Class
+— Don Hopkins, Repo Show Class

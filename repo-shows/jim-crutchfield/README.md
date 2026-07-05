@@ -26,4 +26,4 @@ mechanics** (ε-machines). He was one of the UC Santa Cruz **Dynamical Systems C
 
 Guest: [`characters/jim-crutchfield/`](../../characters/jim-crutchfield/README.md). Consent **not yet asked**.
 
-— Don Hopkins, Micropolis Class
+— Don Hopkins, Repo Show Class

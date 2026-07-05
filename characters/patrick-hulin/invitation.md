@@ -34,4 +34,4 @@ made it multiplayer. I'd love to have you on.
 
 No pressure, no homework. Accepted, delayed, declined, or no reply — all honored gracefully.
 
-— Don Hopkins, Micropolis Class
+— Don Hopkins, Repo Show Class

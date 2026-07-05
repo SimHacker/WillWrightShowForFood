@@ -44,7 +44,7 @@ trails:
       - { path: manual-transmission.yml, why: "Smallest model that works — CODE THAT SPEC" }
       - { path: stick-shift-protocol.yml, why: "Every model shift = commit in git" }
       - { path: code-that-spec.yml, why: "Audience chant game — bid tokens or time" }
-      - { path: homefun-grading.yml, why: "Micropolis Class — commit message vs thinking blocks" }
+      - { path: homefun-grading.yml, why: "Repo Show Class — commit message vs thinking blocks" }
       - { path: ../characters/robots/slats/judge-rubric.yml, why: "Celebrity judge — flair vs spreadsheet" }
       - { path: ../repo-shows/micropolis-ai-drag-race.yml, why: "Show seed for drag race episodes" }
 

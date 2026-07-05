@@ -16,7 +16,7 @@ why_him:
   its_restoration: "Top contributor to PDP-10/its — ITS rebuilt from source, runs on KA10/KL10/KS10 emulators. The authority for 'boot the AI Lab on stream.'"
   show_challenge: "pdp10-maclisp-drive names him — contestants declare rig; Lars is the dream guest to validate boot path or roast GOTO 20."
   logo_history: "Don ↔ Lars ↔ Margaret Minsky thread on MIT AI films, Banks CA, programs preserved to run on PDP-10 emulator (ITS #1866)."
-  values_fit: "Preservation made runnable — same Micropolis Class ethos as repo-native harvest."
+  values_fit: "Preservation made runnable — same Repo Show Class ethos as repo-native harvest."
 
 why_pair_thomas:
   complementary: "Lars — emulated ITS/MACLISP on SIMH. Thomas — FujiNet, IRATA.ONLINE, real retro on the network."
@@ -26,7 +26,7 @@ why_pair_thomas:
 threads:
   make_it_so: "Live: build/boot ITS from PDP-10/its — prove pdp10-maclisp-drive is not cosplay"
   pixie_pdp7_340: "Co-guest on heinz-lemke pixie-pie-menus-pdp7 — Type 340 vector display + light pen emulation; boot path + SETUP.md"
-  maclisp_spec_card: "Define + eval one Micropolis Class function in MACLISP on ITS — template for contestants"
+  maclisp_spec_card: "Define + eval one Repo Show Class function in MACLISP on ITS — template for contestants"
   simh_toolchain: "Which emulator, which image, reproducible rig yaml for rigs/pdp10-maclisp-flair-lap.rig.yml"
   heritage_films: "What from MIT AI Lab films is runnable today — CA constructor arm, Logo lineage"
   paired_with_ts: "Joint call or episode arc with Thomas Cherryhomes — emulated × networked retro"

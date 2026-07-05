@@ -103,6 +103,6 @@ straight to your stores/subscriptions.
 
 **Your response:** accepted, delayed, too busy, declined, or no reply — all honored gracefully.
 
-— Don Hopkins, Micropolis Class
+— Don Hopkins, Repo Show Class
 
 `🏙️ SliceCity` · `🌀 Simopolis round-tripping` · `🧟 Heather: SimFreaks` · `🛍️ send subscribers your way`

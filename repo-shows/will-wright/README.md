@@ -39,7 +39,7 @@ stars, flowers at his feet. Cozy, psychedelic, generous. Not a suit.)*
 
 A **Repo Show**: a collaborative, GitHub-native, live conversation whose
 artifact and stage is *this repo*, and which **follows through to working
-code**. Part of **Micropolis Class** — the open methodology of going to the
+code**. Part of **Repo Show Class** — the open methodology of going to the
 people who actually invented this stuff, capturing their credited ideas in
 public, and letting AI implement them. The product is the methodology + the
 knowledge; the game is the proof. *Show, don't tell.*

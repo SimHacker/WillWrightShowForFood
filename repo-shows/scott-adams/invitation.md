@@ -37,7 +37,7 @@ where directories are rooms, YAML files are objects with behavior, and an LLM wa
 with you instead of grepping blindly.
 
 You said you're **also thinking about MOOLLM** now. I'd love to make that thinking *visible* — not
-as a pitch, but as a **Repo Show**: a Micropolis Class conversation whose stage is a public GitHub
+as a pitch, but as a **Repo Show**: a Repo Show Class conversation whose stage is a public GitHub
 repo, following through to working code anyone can browse without an account. **Show, don't tell.**
 
 **What I'd love to explore with you — your pick, any order, skip whatever bores you:**

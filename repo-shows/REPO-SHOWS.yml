@@ -11,7 +11,7 @@
 
 collection:
   name: micropolis-moollm-repo-shows
-  of: Micropolis Class
+  of: Repo Show Class          # renamed from "Micropolis Class"; naming note: ../process/repo-show-class-naming.md
   instance_of: repo-show          # the skill every member instantiates
   status: seeding                 # most shows are still seeds (single files)
   last_reviewed: 2026-06-26
@@ -38,7 +38,7 @@ states:
 planted_shows:
   will-wright/: "★ First planted show. Topic-less kickoff with Will Wright (Will IS the topic; topical shows flow from it). Seed: will-wright-series.yml."
   steve-wozniak/: "Topic-less kickoff with Steve Wozniak. Apple II, 6502, open hardware, and browser-based emulators."
-  terry-winograd/: "★ Forebear show. Terry Winograd (the dragon) + the CS547 treasure trove archive. Stands on his shoulders and the shoulders of all his guests (Will 1996, Gosling 1995, Joy Mountford 1994, etc.). Archive recovery, runnable seeds, Micropolis Class, Connections series. (Pie menus = Don's own thread.)"
+  terry-winograd/: "★ Forebear show. Terry Winograd (the dragon) + the CS547 treasure trove archive. Stands on his shoulders and the shoulders of all his guests (Will 1996, Gosling 1995, Joy Mountford 1994, etc.). Archive recovery, runnable seeds, Repo Show Class, Connections series. (Pie menus = Don's own thread.)"
   david-rosenthal/: "Solo: DSHR — NeWS/X11/LOCKSS bridge; async PIXIE segment; MOOLLM demo + literary thread (Lem, coprophagia, PKD)."
   moollm-readings/: "Performance: Don's YouTube readings — primer/canon for Palm, Dasher, Tog, yaml jazz microworld."
 naming: "Planted directories use symbolic BIG-ENDIAN names (category-first) for coherent browsing. Seeds may be renamed to big-endian when planted."
@@ -79,7 +79,7 @@ seeds:
   game-show-wigcercize.yml:     "Wigcercize! — a wig GAME SHOW (MC: Boogaloo Stu). A VARIETY format, not an interview — the collection holds multiple show TYPES."
   game-show-gong.yml:           "The Gong Show — a VARIETY game-show format: oddball acts, hook-yanked when they bomb. The Ultimate Machine IS the gong (its one function, switch off, ends an act — then gongs itself first). Pairs with Wigcercize as the game-show lineup; Slats can host/heckle."
   micropolis-ai-drag-race.yml:  "★ MICROPOLIS AI DRAG RACE — rig personas, ai-offs challenges, spend-log judges, merge or sashay. See process/micropolis-ai-drag-race.yml"
-  alan-kay-microworld.yml:      "Solo: Micropolis Class with Alan Kay — DREAM GUEST."
+  alan-kay-microworld.yml:      "Solo: Repo Show Class with Alan Kay — DREAM GUEST."
   ben-and-heinz-pie-menus.yml:  "Group: Ben Shneiderman + Heinz U. Lemke — pie menus + HCI history."
   news-postscript-window-system.yml: "Group/flagship: NeWS reunion — Gosling + Rosenthal + van Hoff (+ Densmore, Mak). 'Send a program, not a data structure', made runnable in the browser."
   james-gosling-news-java.yml:  "Solo: James Gosling — Emacs → NeWS → Java (cheesy little extension languages). Feeds the NeWS reunion."

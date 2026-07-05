@@ -2,7 +2,7 @@
 
 *Conversation hooks for a Repo Show — grounded in Thomas's public FujiNet/IRATA work,
 the Feb 2026 VCF SoCal "State of FujiNet" talk, and the repo's Retrocomputing Drive /
-Apple ][ / Micropolis Class stacks. Proposed topics Don would love to riff on **with**
+Apple ][ / Repo Show Class stacks. Proposed topics Don would love to riff on **with**
 Thomas; not quotes, not claims about what he thinks.*
 
 [Portrayal standards](../../schemas/portrayal-standards.yml) · invitation draft — not yet sent
@@ -100,7 +100,7 @@ a vendor. Chris Osborne's refactor + regression tests; Rich Stevens "came in off
 Shunichi Kitahara quietly porting Battleship to Apple II. How open source + open hardware
 scales without a single company gatekeeping.
 
-### 10. Repo Show integration — Micropolis Class × retro bridges
+### 10. Repo Show integration — Repo Show Class × retro bridges
 
 Concrete episode angles for this repo:
 
@@ -258,7 +258,7 @@ archival breadth. No single center of gravity like Fujisan is becoming for Atari
 
 ### 18. apple2js — is it the right direction?
 
-**For Micropolis Class (disk I/O, hot-write, Mind Mirror, character bridges): YES.**
+**For Repo Show Class (disk I/O, hot-write, Mind Mirror, character bridges): YES.**
 
 - MIT license, **TypeScript**, ~500 stars, last push **Apr 2026**
 - Don's stack doc explicitly chose it over MAME-wasm: *"hackable TS lib we can drive + write into"*

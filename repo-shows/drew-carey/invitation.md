@@ -56,4 +56,4 @@ without your consent.
 
 **Accepted, delayed, too busy, declined, or no reply — all honored gracefully.**
 
-— Don Hopkins, Micropolis Class
+— Don Hopkins, Repo Show Class

@@ -18,7 +18,7 @@ Game-show formats inside Repo Show — declare class honestly; Slats judges; ai-
 | [**manual-transmission.yml**](../manual-transmission.yml) | Smallest model that works — CODE THAT SPEC |
 | [**stick-shift-protocol.yml**](../stick-shift-protocol.yml) | Every model shift = commit in git |
 | [**code-that-spec.yml**](../code-that-spec.yml) | Audience chant game — bid tokens or time |
-| [**homefun-grading.yml**](../homefun-grading.yml) | Micropolis Class — commit message vs thinking blocks |
+| [**homefun-grading.yml**](../homefun-grading.yml) | Repo Show Class — commit message vs thinking blocks |
 | [**Slats judge rubric**](../../characters/robots/slats/judge-rubric.yml) | Celebrity judge — flair vs spreadsheet |
 | [**Drag race show seed**](../../repo-shows/micropolis-ai-drag-race.yml) | Show seed for drag race episodes |
 

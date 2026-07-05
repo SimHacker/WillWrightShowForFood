@@ -41,7 +41,7 @@ SIMH toolchains, nocrew.org rabbit holes, Emacs history, the MIT AI Lab film thr
 my Bumblebee edit became possible — but film archaeology isn't the end state. Someone needs to map
 **PDP-7 + Type 340 + light pen** to emulators we can **boot on stream**. That's you.
 
-I'd like to invite you to a **Repo Show** — a Micropolis Class conversation whose stage is a
+I'd like to invite you to a **Repo Show** — a Repo Show Class conversation whose stage is a
 public GitHub repo, recorded as a relaxed video call. **Show, don't tell** — runnable iron on
 screen, forkable rig yaml and **SETUP.md** in the repo when we get there.
 

@@ -29,7 +29,7 @@ layers:
     - "Sims Exchange revival — stories + downloadable lots/objects"
     - "Storefront syndication — simfreaks.com, simslice.com as federated nodes"
     - "Repo Show artifacts — audience homefun merges back into catalogs"
-    - "Micropolis Class streams — show, don't tell"
+    - "Repo Show Class streams — show, don't tell"
 
 steam_community_guides:
   spec: steam-community-guide.yml

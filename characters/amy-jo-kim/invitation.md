@@ -103,6 +103,6 @@ Browse without a GitHub account — start at the [README](https://github.com/Sim
 straight to your work. **Your response:** accepted, delayed, too busy, declined, or no reply — all honored
 gracefully.
 
-— Don Hopkins, Micropolis Class
+— Don Hopkins, Repo Show Class
 
 `🎮 Game Thinking` · `🫂 community without extraction` · `🪞 Scott: ambigrams + Viewpoint` · `🌱→🌳 the member ladder`

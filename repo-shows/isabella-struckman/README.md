@@ -21,4 +21,4 @@ natural pairing for a Leela / vision-AI episode.
 See [`SHOW.yml`](SHOW.yml). Consent **not yet asked** —
 [`invitation`](../../characters/isabella-struckman/invitation.md).
 
-— Don Hopkins, Micropolis Class
+— Don Hopkins, Repo Show Class

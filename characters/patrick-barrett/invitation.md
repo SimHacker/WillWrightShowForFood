@@ -18,4 +18,4 @@ The Sims worked, from the original through Hot Date and Vacation. Whatever you'd
 
 No pressure, no homework. Accepted, delayed, declined, or no reply — all honored gracefully.
 
-— Don Hopkins, Micropolis Class
+— Don Hopkins, Repo Show Class
