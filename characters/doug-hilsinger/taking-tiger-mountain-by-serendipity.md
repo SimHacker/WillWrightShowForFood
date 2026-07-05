@@ -127,6 +127,27 @@ the whole serendipity.** Thank you. 🕰️
 - **Scenius** — a Bay Area scene (Waycross, the ENORCHESTRA, Caroleen's Mekons ties) doing it for
   love, not money.
 
+## The segment — even without Doug 🎧
+
+Doug (and Brian) joining live is the dream — but **the segment stands on its own even if neither can.**
+Nobody's participation is required except the show's own:
+
+1. **Tell the story** — this page is the script: the self-imposed "no keyboards" rule, the Chinatown
+   Mao postcard, the late-night tracking, the Eagle, the sincerity-all-the-way-down twist.
+2. **Play Eno's blessing** — his own [phone message](../brian-eno/audio/TakingTigerMountainBrianEnoPhoneMessageToDougHilsinger.mp3)
+   calling it *"beautiful music"* from his *"cold experiments"* (*"I am a swan!"*). It's **published**
+   (yourmusiclawyer.com, saucefaucet) — Eno endorsing a track-for-track, hand-made repossession, in
+   his own voice.
+3. **A/B the versions** — play as much as rights allow of **Doug's hand-made track**, then **Eno's
+   1974 original**, side by side — and do it for **several songs** across the album. The comparison
+   *is* the thesis: honor by transformation, made audible.
+
+Doug uploaded the whole album himself ([SoundCloud](https://soundcloud.com/doug-hilsinger/sets/brian-enos-taking-tiger),
+[YouTube](https://www.youtube.com/watch?v=kZ5szyqkAHQ&list=PLED572AC3412407F4)); the show plays fair,
+keeps excerpts comparative, links out so viewers can buy/stream **both** records, and credits everyone.
+If Doug or Brian *do* want to call in or join, the segment becomes the reunion — but it never has to
+wait on a reply.
+
 ## Don's wish
 
 Don and Doug met just that once, in 2006, and haven't been in touch since; Don has **reached out and

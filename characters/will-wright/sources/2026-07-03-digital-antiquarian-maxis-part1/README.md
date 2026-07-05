@@ -40,6 +40,7 @@ Don Hopkins (user **DonHopkins**) posted two comments:
 | HN user | Question | Queue / routing |
 |---------|----------|-----------------|
 | **nanna** ([profile](https://news.ycombinator.com/user?id=nanna)) | Ökolopoly influence? Cybernetics / **Wiener**? | [`hn-nanna/questions.yml`](../../../repo-shows/will-wright/audience/hn-nanna/questions.yml) — git · email · video · interview · Twitch · [HN reply](https://news.ycombinator.com/item?id=48780477) |
+| **vor_** ([profile](https://news.ycombinator.com/user?id=vor_)) | Unexplored frontiers? Science ed for kids? AI + culture? What is he playing? | [`hn-vor/questions.yml`](../../../repo-shows/will-wright/audience/hn-vor/questions.yml) — git · email · video · interview · Twitch · [HN reply](https://news.ycombinator.com/item?id=48781412) |
 
 Provenance spec: [`../../../schemas/question-provenance.yml`](../../../schemas/question-provenance.yml). Amplify on HN or 👍 GitHub issue once open.
 

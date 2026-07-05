@@ -1,0 +1,152 @@
+# Guest participation ladder — constitutional default for every invite
+# Learned July 2026 from David Rosenthal + Lars Brinkhoff responses (time zones kill sync).
+# Initial ask MUST lead with the easy tiers. Stretch goals are optional, never required.
+# Girder: couple-and-solo-shows.yml · Archetype: characters/will-wright/guest-prototype.yml
+
+meta:
+  id: guest-participation-ladder
+  status: constitutional
+  applies_to: [characters/, repo-shows/, schemas/invitation-workflow.yml]
+
+constitutional_law:
+  time_zones: |
+    Guests live in different time zones. Coordinating more than one person for a live call gets
+    exponentially harder — David (Amsterdam +9h, grandparent duty) and Lars (Swedish July offline)
+    both said so plainly. **Default: solo async.** Weave in post. Never insist on synchronized arrival.
+  accretion: |
+    Iterative and accumulated — design by accretion applies to production too. Round one: solo clips
+    or one-on-one chats. After weave (even before public publish, via private production repo):
+    guests reply to questions, comment on each other's threads, summarize email they had elsewhere.
+    Many rounds normal; no one-and-done finale pressure.
+  full_service: |
+    Don bends over backwards — especially for older guests with grandchildren, farm houses, and
+    better things to do than git. No GitHub account required. Email/phone/video file → Don commits.
+    Curate, transcribe, link, yaml — full-service repo show for anyone who prefers it.
+
+franchise:
+  what: |
+    WillWrightShowForFood is **Will's** show — his ideas, audience, guests. The format is a
+    **franchise**: any guest can spin their own public repo + private green room (BrianEnoRepoShow,
+    DrewCareyRepoShow, …) for their orbit, ideas, and fan base. Shared Repo Show infrastructure;
+    owned show per host. See showmaker-network.yml#show_repos.franchises.
+  deep_involvement: |
+    People like Brian Eno and Drew Carey may "get it" immediately — generative systems, improv,
+    audience participation — and want to apply the pattern to their own work. That is the stretch
+    vision, not the first ask.
+
+participation_tiers:
+  tier_0_orient:
+    label: "Get familiar (zero commitment)"
+    ask: |
+      Read a few documents and watch existing videos — invitation, BROWSE landing, one short
+      clip (Adorable Minutes, robot movies, 1996 talk excerpt). Skim your character directory if
+      Don pre-researched. No recording yet.
+    effort: minimal
+
+  tier_1_solo_video:
+    label: "Easiest contribution — record yourself"
+    ask: |
+      Record one or more short videos on phone, laptop, or whatever — walk the repo bundle on
+      screen, tell a story, react to an artifact, correct Don's portrayal. Send files; Don adds
+      to the repo (or you PR if you prefer git). Try a few takes; keep the best.
+    effort: low
+    default: true   # THIS goes in the initial invitation
+
+  tier_2_one_on_one:
+    label: "One-on-one video chat"
+    ask: |
+      Pick a time that suits you — any time zone. Don rotates schedule (powerful coffee supplied).
+      One guest, one host, one recording window. Don breaks into clips and weaves with others
+      time-shifted in post-production.
+    effort: medium
+
+  tier_3_rounds:
+    label: "Accretive follow-up rounds"
+    ask: |
+      After first weave — or while watching private production repo — reply to audience questions,
+      comment on what another guest said, add artifacts, summarize side-channel email. Same tiers
+      (solo clip or 1-on-1) apply per round.
+    effort: ongoing
+    when: after tier_1 or tier_2 material exists
+
+  tier_4_group_sync:
+    label: "Stretch — multi-person live"
+    ask: |
+      Group video call or synchronized table read. Harder to schedule; only when guests want it
+      and logistics work. Not the default ask.
+    effort: high
+
+  tier_5_live_twitch:
+    label: "Holy grail — live Repo Show + audience call-in"
+    ask: |
+      Twitch (or similar) with direct audience interaction, TicketPR chime-ins, play-along.
+      Performance-space.yml territory. Special events — not required for participation.
+    effort: highest
+    see: couple-and-solo-shows.yml#show_tiers.special_events
+
+initial_ask_template: |
+  **Easy path (pick any):**
+  1. Skim the repo + a short video or two — see if the format clicks.
+  2. Record solo clip(s) on your phone or computer — send to Don; he'll put them in git for you.
+  3. Or: one-on-one video chat at a time that works for your time zone — Don adapts.
+
+  No synchronized group call required. No git required. Many short passes beat one marathon.
+  After the first weave we can do more rounds — reply to questions, riff on other guests, go deeper.
+
+production:
+  don_weaves: |
+    Don records host narrative in production after guests submit solo video or 1-on-1 sessions.
+    Break clips, interlink yaml + transcripts + sources, shotgun-blast ensemble — guest-prototype.yml#ensemble_medium.
+  private_repo: |
+    Guests with access can watch production repo while artifacts land — questions, edits, raw
+    footage — before public publish. Same accretive rounds apply inside the green room.
+  assisted_commit: invitation-workflow.yml#contributions.assisted
+
+warm_intro_via_will:
+  policy: |
+    Will Wright accepted July 2026. He knows people who would love this (Brian Eno, Drew Carey, …).
+    **Do not ask Will to make warm intros until Don has ducks in a row** — a few interviews done,
+    ladder proven, production rhythm established. Then Will's introduction carries weight.
+  deferred_targets:
+    - slug: brian-eno
+      why: "Generative art/music; Scott Draves 2006 evening; scenius + surrender"
+    - slug: drew-carey
+      why: "Sims mythology + Whose Line improv = live Repo Show native"
+  prerequisite: "At least one completed async guest arc (solo + weave) before Will outreach"
+
+early_guests_july_2026:
+  note: "Honest pipeline — update as replies land"
+  guests:
+    - slug: david-rosenthal
+      status: responsive_helpful
+      responded: "2026-07-02"
+      contributed: "PDP-7/340 Hex draft (pdp7.html) ingested — media/pdp7-hex-let-machine-win.yml"
+      tier: tier_1_solo_video + tier_2_one_on_one async
+      constraint: "Grandparent duty until ~2026-08-17; +9h Amsterdam; no sync trio"
+    - slug: lars-brinkhoff
+      status: yes_later
+      responded: "2026-07-02"
+      tier: tier_1_solo_video preferred (unprepared rambling OK)
+      constraint: "Swedish July vacation — much of Sweden offline"
+    - slug: heinz-lemke
+      status: out_of_office
+      responded: null
+      tier: tier_1_solo_video when back
+      constraint: "Black Forest farmhouse — traveling / OOO; expect back in a few days"
+    - slug: scott-draves
+      status: in_conversation
+      responded: "2026-07 (ongoing)"
+      tier: tier_1_solo_video or tier_2_one_on_one
+      note: "Old friend; generative-art show; Brian Eno thread"
+    - slug: will-wright
+      status: accepted
+      accepted: "2026-07"
+      role: kickoff_guest + future warm_introducer (after pipeline ready)
+
+see_also:
+  - couple-and-solo-shows.yml
+  - ../characters/will-wright/guest-prototype.yml
+  - showmaker-network.yml
+  - invitation-workflow.yml
+  - live-repo.yml
+  - performance-space.yml

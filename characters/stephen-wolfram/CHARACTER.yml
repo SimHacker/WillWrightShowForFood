@@ -4,11 +4,11 @@
 character:
   id: stephen-wolfram
   name: "Stephen Wolfram"
-  aliases: ["Steven Wolfram"]  # common misspelling — legal name is Stephen
   type: invitation
-  signifier: "🔷"
+  signifier: "🔁"
   status: living
-  field: "Mathematica, Wolfram Language, A New Kind of Science, computational universe"
+  beloved: false
+  field: "Computation & science — cellular automata, A New Kind of Science, Wolfram Language, multiway systems / the ruliad"
   home: characters/stephen-wolfram/
 
 representation:
@@ -20,26 +20,31 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  show_seed: null
-  reading_show: repo-shows/moollm-readings/
-  note: "Invite for MOOLLM Readings episode and/or solo on cellular automata + computational irreducibility"
+  show_seed: repo-shows/stephen-wolfram/
+  supporting_artifact: MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md   # the heavy analysis, kept out of the invite
 
 bio:
-  summary: |
-    **Stephen Wolfram** (b. 1959) is a physicist, computer scientist, and entrepreneur — creator of
-    **Mathematica** and the **Wolfram Language**, author of ***A New Kind of Science*** (2002) on
-    simple programs and cellular automata as fundamental science, and founder of the **Wolfram
-    Physics Project**. His CA and complexity work connects naturally to Norman Margolus, Jim
-    Crutchfield, and the Repo Show's emulated-runtime / organelle bridges.
+  summary: "**Stephen Wolfram** (b. 1959) — British-American physicist, computer scientist, and entrepreneur. PhD in theoretical physics from Caltech at 20 (1979); youngest cohort of the MacArthur Fellowship (1981). Founder/CEO of **Wolfram Research** (1987), creator of **Mathematica**, **Wolfram|Alpha**, and the **Wolfram Language**. Author of ***A New Kind of Science*** (2002), arguing that **simple programs (cellular automata) generate the complexity of nature** — home of **Rule 30**, **Rule 110** (Turing-complete), the four **behavior classes**, **computational irreducibility**, and the **Principle of Computational Equivalence**. Since 2020 leads the **Wolfram Physics Project** — hypergraph rewriting, **multiway systems**, and the **ruliad** (the entangled limit of all possible computations)."
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Stephen_Wolfram"
+  web:
+    - { title: "Stephen Wolfram — writings", url: "https://writings.stephenwolfram.com" }
+    - { title: "A New Kind of Science (full text online)", url: "https://www.wolframscience.com/nks/" }
+    - { title: "The Wolfram Physics Project", url: "https://www.wolframphysics.org" }
 
 show_suggestions:
-  - "MOOLLM Readings — guest table-read or commentary on a generated CA / science thread"
-  - "Cellular automata as organelles — round-trip with Mind Mirror and Sims personality diffusion"
-  - "Computational irreducibility vs. LLM summarization — what models can and cannot shortcut"
-  - "Wolfram Language as a rig — live notebook alongside MOOLLM yaml skills"
+  - "Heizronyms as multiway systems — is 'one name, many context-selected meanings' a rulial coordinate patch? (see the artifact)"
+  - "MOOLLM as a substitution system over a filesystem — skills as rules, the tree as state, evolution as a multiway graph"
+  - "Computational irreducibility as a product decision — why you PLAY a microworld instead of predicting it (the Will Wright bridge)"
+  - "The semantic image pyramid as renormalization / coarse-graining of a knowledge base"
+  - "Wolfram Language live — NestList / SubstitutionSystem / MultiwaySystem over the acronym zoo and the skill tree"
 
 see_also:
-  - { path: ../../repo-shows/moollm-readings/, why: "Reading-show onboarding — low-friction first appearance" }
-  - { path: ../norman-margolus/, why: "CAM-6 / Margolus neighborhood — CA summit" }
-  - { path: ../jim-crutchfield/, why: "Edge of chaos + evolving CA" }
-  - { path: ../peter-norvig/, why: "AIMA / PAIP — AI pedagogy peers" }
+  - { path: invitation.md, why: "The short public invitation draft" }
+  - { path: MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md, why: "Supporting artifact — the full argument, linkable by URL" }
+  - { path: CARD.yml, why: "Universal CARD — invokable abilities for show segments" }
+  - { path: ../../repo-shows/stephen-wolfram/, why: "Show seed" }
+  - { path: ../will-wright/, why: "Irreducible microworlds you understand by playing — the deepest bridge" }
+  - { path: ../../designs/chatgpt-research-review/nomenclature/NOMENCLATURE-HEISENBERGIAN-ACRONYMS.md, why: "The acronym field theory (its Wolfram corner) the artifact grew from" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses — self or assisted contribution" }

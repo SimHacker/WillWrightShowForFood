@@ -14,6 +14,10 @@ status:
     replied: "They responded — see invitation_note"
     accepted: "Yes — scheduling"
     delayed: "Interested but later / too busy — honor it"
+    yes_later: "Alias for delayed — e.g. Lars Swedish July vacation (see guest-participation-ladder.yml)"
+    interested_async: "Engaged — prefers async solo or 1-on-1 (David Rosenthal pattern)"
+    in_conversation: "Active dialogue — not yet formal accept (Scott Draves pattern)"
+    out_of_office: "Temporarily unreachable — honor timing (Heinz farmhouse OOO)"
     declined: "No — respect; do not re-pitch without new reason"
     rejected: "Explicit no"
     ghosted: "No reply after reasonable time — no blame; status only"
@@ -38,15 +42,39 @@ transitions:
 
 contributions:
   principle: "The guest directory grows — not a frozen invitation snapshot"
+  full_service: |
+    **Full-service repo** — guest sends email, attachments, video files, URLs, corrections.
+    Don curates into characters/<slug>/ and repo-shows/<slug>/: sources, media, correspondence.yml,
+    transcripts. No GitHub account or git literacy required. Especially for older guests — Don
+    handles commit, yaml, links. See process/guest-participation-ladder.yml#constitutional_law.full_service.
   channels:
     self: "Edit characters/<slug>/ — PR or commit when guest has repo access and consent"
     assisted: |
-      Email Don Hopkins — text, attachments, URLs. We curate into the public directory:
-      sources, bio corrections, show artifacts, links the guest wants cited.
+      Email Don Hopkins — text, attachments, URLs, **solo video files**. We curate into the public
+      directory: sources, bio corrections, show artifacts, links the guest wants cited. Don commits
+      on guest's behalf when preferred.
     public_issue: "GitHub issue on WillWrightShowForFood for corrections without email"
   placement: |
     CHARACTER.yml + invitation.md for status; README.md for human facade; optional
     ../../characters/will-wright/sources/, portrayal/, ../../characters/will-wright/media/ as material arrives. Never commit private email threads.
+
+publication_pattern:
+  principle: "Public abstract in the repo; the real pitch + strategy in the private green room."
+  rule: |
+    TWO artifacts per guest, hard wall between them:
+      1. PUBLIC invitation — repo-shows/<guest>/invitation.md (+ short summary characters/<guest>/invitation.md).
+         The "why was I invited, and how did they convince me" ABSTRACT: only what we AND the guest are
+         happy to publish. Two framings:
+           - proposal: vague-but-compelling, clearly NOT-yet-sent/accepted (a dream, no presumption).
+           - accepted: once they say yes (with blessing to publish), a BOLD, confident, ACCEPTED
+             showpiece that cheekily proposes the things they've already agreed to. Primes future guests.
+      2. PRIVATE green room — the personal pitch(es), all drafts/revisions, strategy, and the FINAL email
+         that doubles as cliff-notes + agenda for the phone/video call. Lives OUTSIDE this repo
+         (DonHopkins/projects/willwrightshowforfood/green-room/). Never committed here.
+  scrub_from_public: [money, leverage, fundraising, "same boat", monetization, contact logistics, private correspondence]
+  choreography: "public proposal -> draft/revise pitch in green room -> send email -> call after they've read -> on yes, upgrade public invite to ACCEPTED showpiece (guest blessing on what's shown)."
+  flagship: "repo-shows/will-wright/invitation.md — the accepted showpiece; template for every invite after."
+  superseded_drafts: "If model-suffixed cuts were ever shared publicly, keep them as redirect stubs -> invitation.md; move full text to the green room."
 
 legacy_mapping:
   not_yet_asked: draft
@@ -54,3 +82,4 @@ legacy_mapping:
 see_also:
   - portrayal-standards.yml
   - guest-invitation-status.yml
+  - ../process/guest-participation-ladder.yml

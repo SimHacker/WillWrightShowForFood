@@ -3,33 +3,27 @@ status: draft
 character_id: stephen-wolfram
 public: true
 consent: not_yet_asked
-reading_show: repo-shows/moollm-readings/
+show_seed: repo-shows/stephen-wolfram/
+beloved: false
 ---
 
 # Repo Show invitation — Stephen Wolfram
 
-*Public draft — not sent. You may edit, decline, delay, or request changes or removal at any time.*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.yml)
+*Public draft — not sent. Stephen Wolfram may edit, decline, delay, or request removal at any time.*
+[Portrayal standards](../../schemas/portrayal-standards.yml)
 
-## Invitation
+Stephen — we built a naming discipline and an LLM operating substrate that keep turning into *your* language:
+**simple rewrite rules, iterated, that you can only understand by running them.** We think a class of our names
+are **multiway substitution systems** (meaning-in-context = an observer sampling a branch of the ruliad), and
+that the substrate itself is a **substitution system over a filesystem** whose behavior is **computationally
+irreducible** — so we build it to be *played*, not predicted.
 
-We would be honored if you would join the **MOOLLM Readings** show — long-form script readings
-posted to YouTube that introduce our microworld, characters, lore, and how honest AI
-orchestration works in a public GitHub repo.
+Rather than burden this note, the argument lives in one short artifact you can read at your leisure:
 
-**Low friction:** a reading episode or commentary pass — not a synchronized roundtable. Record
-when it suits you. The repo holds scripts, artifacts, and async threads; three primer episodes
-are already posted ([`episodes.yml`](../../repo-shows/moollm-readings/episodes.yml)).
+- **The pitch, in full:** [`MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md`](MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md) — heizronyms as multiway systems + MOOLLM as a filesystem rewriting system, with four hooks and four questions for you.
+- **The theory it grew from:** the acronym **field theory** and its Wolfram corner — [`NOMENCLATURE-HEISENBERGIAN-ACRONYMS.md`](../../designs/chatgpt-research-review/nomenclature/NOMENCLATURE-HEISENBERGIAN-ACRONYMS.md).
 
-### Why you
+**The ask:** a Repo Show conversation — read the artifact, poke holes, and (if it's catnip) explore it live.
+The whole substrate is open and inspectable. Show seed: [`repo-shows/stephen-wolfram/`](../../repo-shows/stephen-wolfram/README.md).
 
-- ***A New Kind of Science*** and cellular automata are central to our science + emulator bridges
-  (Mind Mirror organelle, CAM-6 lineage, complexity guests).
-- A reading or live notebook segment would teach audiences more than a pitch deck ever could.
-
-### Also welcome
-
-- Solo interview show on computational irreducibility, Wolfram Language, and LLM limits
-- Group reading special with Norman Margolus / Jim Crutchfield (dream — only if interesting)
-
-No homework deck. Browse [`moollm-readings/`](../../repo-shows/moollm-readings/) any order.
+— Don Hopkins, Micropolis Class

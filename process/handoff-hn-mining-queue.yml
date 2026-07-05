@@ -34,6 +34,7 @@ priorities:
     - carmack-leaves-meta-hn.md + characters/john-carmack/ stub (HN 34022484)
     - will-wright/sources/2026-07-03-digital-antiquarian-maxis-part1/ (HN 48776525)
     - repo-shows/will-wright/audience/hn-nanna/questions.yml (nanna queue)
+    - repo-shows/will-wright/audience/hn-vor/questions.yml (vor_ queue)
 
   p1_done_iteration_4:
     - characters/don-hopkins/don-will-mining-hub.yml

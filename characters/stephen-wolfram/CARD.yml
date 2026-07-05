@@ -1,0 +1,93 @@
+# CARD — Stephen Wolfram (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: stephen-wolfram
+  name: Stephen Wolfram
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: Stephen Wolfram
+  title: The Rulemaker
+  rarity: rare
+  signifier: 🔁
+  flavor: Run the simple rule. Discover you cannot shortcut the answer.
+abilities:
+- id: SIMPLE-RULES-COMPLEX-BEHAVIOR
+  name: Simple Rules, Complex Behavior
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: cellularAutomaton
+    signature: cellularAutomaton(rule) → unbounded structure from a one-line law
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Show how a trivial rewrite rule (Rule 30, M→MOO) grows irreducible structure.
+  verifiable: A New Kind of Science (2002); Rule 30 / Rule 110
+  combos_with:
+  - WILL-POSSIBILITY-SPACE
+- id: COMPUTATIONAL-IRREDUCIBILITY
+  name: Computational Irreducibility
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: irreducibility
+    signature: irreducibility(system) → no shortcut; you must run it
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Explain why some systems can only be understood by simulating them — the case for PLAY.
+  verifiable: A New Kind of Science; Principle of Computational Equivalence
+  combos_with:
+  - WILL-POSSIBILITY-SPACE
+- id: MULTIWAY-RULIAD
+  name: Multiway / Ruliad
+  type: activated
+  mana: '{U}{R}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: multiway
+    signature: multiway(state) → the branching graph of all rule applications
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Model a heizronym (many co-valid expansions) as a branch space an observer samples.
+  verifiable: Wolfram Physics Project (2020– ); multiway systems, the ruliad
+  combos_with: []
+- id: WOLFRAM-LANGUAGE
+  name: Wolfram Language
+  type: activated
+  mana: '{1}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: symbolicCompute
+    signature: 'symbolicCompute(idea) → NestList / SubstitutionSystem / MultiwaySystem'
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Turn a hand-wave into a runnable one-liner over the acronym zoo or the skill tree.
+  verifiable: Mathematica (1988); Wolfram Language; Wolfram|Alpha
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document
+- path: MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md
+  why: Supporting artifact — the full argument

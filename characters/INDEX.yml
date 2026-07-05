@@ -94,7 +94,7 @@ guests:
   ben-shneiderman: { invitation_status: draft, show_seed: repo-shows/ben-shneiderman-series.yml, priority: send_now, note: "CHI'88 pie-menu co-author; direct manipulation; group seed ben-and-heinz-pie-menus.yml" }
   bret-victor: { invitation_status: not_yet_asked }
   brian-harvey: { invitation_status: not_yet_asked, show_seed: repo-shows/brian-harvey/ }
-  brian-eno: { invitation_status: dream_guest, show_seed: repo-shows/brian-eno/, note: "DREAM GUEST: musician/producer/visual artist; ambient + generative music/art; simulated opening totally Eno (77 Million Paintings, scenius); 2006 Long Now with Will; Don introduced him to Scott Draves" }
+  brian-eno: { invitation_status: dream_guest, show_seed: repo-shows/brian-eno/, note: "Generative art/music; warm intro via Will after first weave; Scott Draves 2006 evening" }
   brad-myers: { invitation_status: draft, show_seed: repo-shows/brad-myers-garnet-vpl.yml, priority: send_now, note: "Garnet lab ~1992–93 (GLASS); All the Widgets; 2019 05-640 guest lecture; 2023 Interaction Techniques book thread" }
   bill-atkinson: { invitation_status: memorial, note: "deceased (1951–2025) — MEMORIAL MODE: HyperCard/MacPaint/QuickDraw; HyperCard → HyperLook lineage; discussants: Arthur van Hoff, Don" }
   bill-budge: { invitation_status: not_yet_asked, note: "LIVING (b. 1954, retired 2022, active GitHub 2026) — INVITATION, not memorial. Raster Blaster + Pinball Construction Set: the construction-set genre / user-generated content; lifelong tools & frameworks builder. Tribute: apps/performance-space/faceball-construction-set.yml (Pinball Construction Set for faces). PCS = an artifactory; upstream of Will Wright construction-set design. Discussants: Will Wright, Apple II/early-EA peers, Don." }
@@ -115,16 +115,16 @@ guests:
   david-levitt: { invitation_status: draft, path: characters/david-levitt/, show_seed: repo-shows/REPO-SHOWS.yml#music-and-theory.yml, note: "Don's good friend + collaborator. Co-founder/CEO Pantomime Corp (Don = Chief Architect; Pantomime's JSON object system → Don's JSON/YAML config → MOOLLM); ConnectedTV (ConnectedMedia); Bounce + Interval Research; VPL Research (VR birth); MIT PhD on AI music/jazz improv (advised by Marvin Minsky); Lynn Conway VLSI class (w/ James Clark, Guy L. Steele); in Cynthia Solomon's video trove. Shows: music-and-theory w/ Jerry Martin + a Pantomime/Interval episode" }
   david-ahl: { invitation_status: facebook_friend, note: "Creative Computing founder; Don's Facebook friend; patron saint of wonderful compilations — Best of CC Vol. 2 (Gilbert Shelton cover) in characters/david-ahl/media/" }
   david-henkel-wallace: { invitation_status: draft, note: "Cygnus co-founder (Gumby, BFD/binutils); TLGnet w/ Tom Jennings; Leela AI — characters/david-henkel-wallace/" }
-  david-rosenthal: { invitation_status: not_yet_asked }
+  david-rosenthal: { invitation_status: interested_async, show_seed: repo-shows/david-rosenthal/, note: "Responsive July 2026 — PDP-7/340 Hex draft ingested; async solo/1-on-1; grandparent duty until ~Aug 17" }
   david-ungar: { invitation_status: draft, show_seed: repo-shows/david-ungar-self-moollm.yml, priority: send_now, note: "Reflecting on Self: Narcissa's Mirror; Self × MOOLLM; Conscientious Objectors (ScriptX × Self at Kaleida)" }
-  drew-carey: { invitation_status: dream_guest, note: "DREAM GUEST: Whose Line + Price Is Right + Sims NPC mythology; public-figure sketch only" }
+  drew-carey: { invitation_status: dream_guest, note: "Whose Line + Sims mythology; warm intro via Will after first guest weave — guest-participation-ladder.yml" }
   edd-coates: { invitation_status: not_yet_asked, show_seed: repo-shows/edd-coates/ }
   eric-bowman: { invitation_status: draft, show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml, note: "Programmer on the original The Sims team (Maxis), core systems; later reunited with Don at TomTom" }
   eric-hedman: { invitation_status: not_yet_asked, show_seed: repo-shows/eric-hedman/ }
   gary-drescher: { invitation_status: draft, show_seed: repo-shows/gary-drescher/, note: "Made-Up Minds — the schema mechanism (constructivist AI); Good and Real; MIT AI Lab/Minsky orbit; Leela adviser + Henry's friend (Python schema-factory reimpl); remake it for the LLM era" }
   golan-levin: { invitation_status: not_yet_asked }
   heather-alvey: { invitation_status: draft, show_seed: repo-shows/heather-and-steve-alvey/, note: "SimFreaks founder (née Castello) — ~26-year Sims content brand; w/ Steve Alvey (SimSlice/SliceCity); Zombie Sims; worked with Will at Gallium (Proxi); Don's SimProv + Micropolis-publishing collaborator. Independent creator — drive fans/subscriptions." }
-  heinz-lemke: { invitation_status: draft, show_seed: repo-shows/pixie-pie-menus-pdp7.yml, priority: send_now, note: "ASAP — PIXIE 1969 co-author (Wiseman/Lemke/Hiles); CARS/model-guided medicine; warm correspondence; preserve first-hand history" }
+  heinz-lemke: { invitation_status: out_of_office, show_seed: repo-shows/pixie-pie-menus-pdp7.yml, note: "PIXIE 1969 co-author; OOO/traveling Black Forest farmhouse early July 2026 — async solo video when back" }
   steve-alvey: { invitation_status: draft, show_seed: repo-shows/heather-and-steve-alvey/, note: "SimSlice / SliceCity — SimCity running INSIDE The Sims (the shipped precedent for Will's data-portability/nested-games vision); ~26-year Sims content brand; Zombie Sims w/ Heather; worked with Will at Gallium (Proxi); Don's SimProv + Micropolis-publishing collaborator. Independent creator — drive fans/subscriptions." }
   hugh-daniel: { invitation_status: memorial, note: "deceased (1962–2013) — MEMORIAL MODE: early WELL sysop; Xanadu; GoodNeWS→HyperNeWS→HyperLook; NeWS; FreeS/WAN; discussants: Ted Nelson, Don" }
   james-gosling: { invitation_status: not_yet_asked }
@@ -135,18 +135,21 @@ guests:
   jef-raskin: { invitation_status: memorial, show_seed: repo-shows/remembering-jef-raskin.yml, note: "deceased (1943–2005) — MEMORIAL MODE for Jef only. who_can_discuss = documented connections, NOT invitations" }
   jens-monig: { invitation_status: not_yet_asked, show_seed: repo-shows/jens-monig/ }
   jennell-jaquays: { invitation_status: memorial, note: "MEMORIAL MODE (1949–2024): D&D legend, id Software level design. Friend-phone clips from colleagues welcome — no live interview required." }
-  jaron-lanier: { invitation_status: not_yet_asked, note: "VPL co-founder; Body Electric → Bounce rights chain w/ David Levitt; patch-cord trail — characters/jaron-lanier/" }
+  jeff-adkins: { invitation_status: accepted, path: characters/jeff-adkins/, show_seed: repo-shows/jeff-adkins/, consent: granted, warm_contact: true, channel: Messenger, note: "Accepted 2026-07. GitHub DnfJeff — creator of SimObliterator Suite + VitaMoo (Sims 1 save/object IFF-FAR parsing, GUID/OBJD analysis, WebGL character renderer vitamoo.space). FOUNDATIONAL: the save read/write layer under the soul mover; makes Will's 1996 data-portability holy grail runnable. Built it with AI from Don's documented code + open-source Sims-family reimpls; Don reimplements into WWSFF TypeScript with AI + FULL CREDIT — feedback loop (stone soup/cauldron/CA/Wolfram/Eno). Volunteered to help across the board; low-pressure time-shifted (solo video + 1-on-1 edited). Credit stands regardless." }
+  jaron-lanier: { invitation_status: dream_guest, path: characters/jaron-lanier/, note: "VPL co-founder; coined 'virtual reality'; Body Electric → Bounce rights chain w/ David Levitt (patch-cord trail). DREAM GUEST on 2 more counts: performing musician + rare-instrument collector who treats VR/input devices as LIVE MUSICAL INSTRUMENTS (generative-performance ensemble w/ Eno, Laurie Anderson, Nina Hagen); and 'data dignity'/Who Owns the Future? = intellectual godfather of the RepoShow repossession thesis." }
   john-carmack: { invitation_status: draft, note: "id/Oculus; Meta departure HN 34022484 — Don wit + Dynabook/GRiD tangent; light show value — characters/john-carmack/" }
   jason-shankel: { invitation_status: not_yet_asked, show_seed: repo-shows/jason-shankel/ }
   jean-piaget: { invitation_status: memorial, note: "MEMORIAL MODE (1896–1980): genetic epistemology; constructivism + stages of cognitive development; the developmental root of Papert's constructionism. Discussants: Alan Kay, Walter Bender, Brian Harvey, Ken Kahn, Don" }
   ken-kahn: { invitation_status: not_yet_asked, show_seed: repo-shows/ken-kahn/ }
   ken-perlin: { invitation_status: not_yet_asked }
   kim-cascone: { invitation_status: not_yet_asked, note: "Ambient/microsound; Csound essay w/ Eno quote — Don HN 22787566; pair w/ Brian Eno dream guest + David Levitt music thread" }
+  laurie-anderson: { invitation_status: dream_guest, path: characters/laurie-anderson/, note: "Don's long-time avant-garde north star. Performance art; O Superman; invented instruments (tape-bow violin) + voice tech (Voice of Authority = voice puppet); VR (Chalkroom); NEA-era anti-censorship. Briefly met at Interval (per Don, she collaborated there) — possible warm intro via Interval alumni, independent of Will/Eno. Pairs w/ Brian Eno (generative performance) + the avant-garde/video-puppet thread." }
+  nina-hagen: { invitation_status: dream_guest, path: characters/nina-hagen/, note: "Godmother of Punk (b. 1955, East Berlin); classically-trained multi-octave voice → punk theatre; Wolf Biermann's stepdaughter, left GDR 1976. Club 2 (1979) on-air anti-censorship scandal = twin emblem to Bowie's video puppet in FRAMING-REPOSHOW-AS-NEW-MEDIUM.md. Operatic-punk sibling to Klaus Nomi; one of Don's avant-garde north stars. Pairs w/ Eno/Nomi/Arias Berlin-'79 thread." }
   lars-brinkhoff:
-    invitation_status: not_yet_asked
+    invitation_status: yes_later
     show_seed: repo-shows/lars-brinkhoff/
     paired_guest: thomas-cherryhomes
-    note: "PDP-10/ITS — challenge make it so for pdp10-maclisp-drive; pair with Thomas Cherryhomes; PIXIE trio co-bud; retrocomputing t-shirt emporium github.com/larsbrinkhoff/t-shirts — Don wears one on stream"
+    note: "Likes idea — Swedish July vacation; async solo preferred; PDP-10/ITS + PIXIE trio co-bud; t-shirts on stream"
   lynn-conway: { invitation_status: memorial, note: "MEMORIAL MODE (1938–2024): VLSI revolution; Mead–Conway; fired from IBM for transitioning. Friend-phone clips welcome." }
   margaret-minsky: { invitation_status: draft, show_seed: repo-shows/margaret-minsky/, note: "Haptics (Sandpaper force-feedback), Atari Cambridge / MIT Media Lab; daughter of Marvin, sister of Henry; 1993 CS547 talk" }
   marvin-minsky: { invitation_status: memorial, note: "MEMORIAL MODE (1927–2016): MIT AI Lab co-founder; Society of Mind / frames / K-lines / Perceptrons; SNARC, confocal microscope, HAL advisor, Turing 1969; father of Margaret & Henry. Discussants: Henry & Margaret Minsky, Alan Kay, Ken Kahn, Walter Bender, Don" }
@@ -172,7 +175,7 @@ guests:
   richard-bartle: { invitation_status: not_yet_asked, show_seed: repo-shows/richard-bartle/ }
   richard-stallman: { invitation_status: draft, note: "Copyleft envelope 1984 — characters/richard-stallman/" }
   seymour-papert: { invitation_status: memorial, note: "MEMORIAL MODE (1928–2016): worked with Piaget; MIT AI Lab co-founder; Logo + the turtle; coined constructionism; Mindstorms (1980) → Scratch/OLPC/LEGO Mindstorms. Discussants: Walter Bender, Brian Harvey, Ken Kahn, Jens Mönig, Alan Kay, Don" }
-  scott-draves: { invitation_status: draft, show_seed: repo-shows/scott-draves/, note: "Electric Sheep, Fractal Flame (1992); simulated art opening invite in invitation.md; media/ — 6Heads photos + flam3 paper TODO (Don has PDF)" }
+  scott-draves: { invitation_status: in_conversation, show_seed: repo-shows/scott-draves/, note: "Talking with Don July 2026 — Electric Sheep, Fractal Flame; Brian Eno 2006 thread; async solo or 1-on-1" }
   scott-adams: { invitation_status: draft, show_seed: repo-shows/scott-adams/, priority: send_now, note: "Warm verified — HN + Jan 2026 MOOLLM; adventure-as-data → compiler; NOT Dilbert" }
   amy-jo-kim:
     name: Amy Jo Kim
@@ -190,6 +193,7 @@ guests:
     optional_solo_show: repo-shows/scott-kim/
     note: "Ambigrams, Viewpoint, puzzle craft; Shufflebrain w/ Amy Jo Kim — pair show primary"
   scott-mccloud: { invitation_status: draft, show_seed: repo-shows/scott-mccloud/, note: "Cartoonist/comics theorist — Understanding Comics (closure, masking, amplification through simplification); design bible for The Sims; patron-saint guest + Sims reunion" }
+  stephen-wolfram: { invitation_status: draft, show_seed: repo-shows/stephen-wolfram/, note: "A New Kind of Science; cellular automata; multiway systems / the ruliad; Wolfram Language. Hook: heizronyms as multiway systems + MOOLLM as a filesystem substitution system (computationally irreducible → play it). Artifact: characters/stephen-wolfram/MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md; pair w/ Will Wright" }
   sophie-wilson: { invitation_status: not_yet_asked, note: "Women & trans pioneers — interview while living: ARM architecture — in every smartphone" }
   steve-wozniak: { invitation_status: not_yet_asked, show_seed: repo-shows/steve-wozniak/ }
   stephen-wolfram: { invitation_status: draft, reading_show: repo-shows/moollm-readings/, note: "Mathematica, NKS, Wolfram Language, Wolfram Physics Project — invite for MOOLLM Readings + CA/complexity threads; peers Margolus, Crutchfield, Norvig" }

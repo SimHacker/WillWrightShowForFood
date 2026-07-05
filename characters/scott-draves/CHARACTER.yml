@@ -19,8 +19,9 @@ representation:
   subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
-  status: draft
+  status: in_conversation
   consent: not_yet_asked
+  responded: "2026-07 (ongoing)"
   document: ../../repo-shows/scott-draves/invitation.md   # invites live in the repo-show dir, not the character dir
   show_seed: repo-shows/scott-draves/
   likelihood: "high — long-time friend; collaborated with Don on the Electric Sheep Unity client (2020–2023)"

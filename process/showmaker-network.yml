@@ -24,6 +24,7 @@ show_repos:
     spin_off: |
       Start as episode in an existing repo; migrate to own franchise when guest hosts their orbit.
       Shared RepoShow infrastructure; owned fan base and private green room per franchise.
+      Constitutional default for how to participate: guest-participation-ladder.yml (solo video first).
   audience: |
     TicketPR characters are per-episode under audience/<you>/; optional but encouraged as
     subscribe + memorialize. Prototype in characters/; migrate between episodes by forking dirs.

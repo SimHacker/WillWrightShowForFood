@@ -174,8 +174,8 @@ inspect the yaml, run verify, then talk. No NDAs to understand the shape.
 |------|--------|
 | Repo | **Public** — `SimHacker/WillWrightShowForFood` |
 | Monorepo scaffold | pnpm + Python venv + verify CI |
-| Will invitation | Draft ready — not sent (`consent: not_yet_asked`) |
-| Phone call | 2026-06-24 |
+| Will invitation | **Accepted** (July 2026) — confirmed kickoff guest · [`invitation.md`](characters/will-wright/invitation.md) |
+| Phone call | 2026-06-24 — pitch call; written follow-up sent; accepted July 2026 |
 
 ## Sibling repos
 

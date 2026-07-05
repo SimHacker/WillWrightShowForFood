@@ -19,6 +19,7 @@ invitation:
   status: interested_async
   consent: not_yet_asked
   responded: "2026-07-02"
+  contributed: "PDP-7/340 Hex memories draft ingested — media/pdp7-hex-let-machine-win.yml"
   document: invitation.md
   correspondence: correspondence.yml
   show_seed: repo-shows/david-rosenthal/

@@ -16,12 +16,12 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: draft
+  status: out_of_office
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/pixie-pie-menus-pdp7.yml
   co_guests: [lars-brinkhoff, david-rosenthal]
-  note: "ASAP priority — preserve first-hand PIXIE + Cambridge + CARS history"
+  note: "ASAP when back — Black Forest farmhouse; OOO/traveling early July 2026; async solo video fine"
 
 bio:
   summary: |

@@ -33,7 +33,7 @@ First verified jewels: **Oh God cliffhanger** · **SimEarth kids/failure** · **
 ## Format for Repo Show / HN pump
 
 - Don collects **viewer questions for Will**; posts Will's replies (async Repo Show pattern)
-- **HN queue:** [`../../repo-shows/will-wright/audience/hn-nanna/questions.yml`](../../repo-shows/will-wright/audience/hn-nanna/questions.yml) — **nanna** (`hn_user`, comment `48780477`); provenance + route-back via [`question-provenance.yml`](../../schemas/question-provenance.yml) (git → email → Adorable Minute → interview → Twitch → HN reply). Others can amplify on thread or GitHub.
+- **HN queue:** [`hn-nanna/questions.yml`](../../repo-shows/will-wright/audience/hn-nanna/questions.yml) — **nanna** (comment `48780477`); [`hn-vor/questions.yml`](../../repo-shows/will-wright/audience/hn-vor/questions.yml) — **vor_** (comment `48781412`); provenance + route-back via [`question-provenance.yml`](../../schemas/question-provenance.yml) (git → email → Adorable Minute → interview → Twitch → HN reply). Others can amplify on thread or GitHub.
 - Produce **short-form videos** in the same spirit — priming the Will question pump before long episodes
 - Will is "especially obsessed with cornering you at a party and telling you all about Care Bears"
 

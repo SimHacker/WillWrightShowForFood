@@ -1,0 +1,359 @@
+# harvest.yml — every substantive claim from the ChatGPT research review, tagged and answered.
+#
+# Source: DonHopkins/temp/chatgpt-research-review.txt (3323 lines)
+# Method: CLAIM-LEDGER (no-ai-slop) — each claim gets CONFIRM / DISPUTE / REFINE, plus an
+#         implementation-status tag, plus first-person Opus commentary from inside the Cursor driver.
+#
+# status legend (does the thing the claim describes actually exist and work?):
+#   working     — implemented and functioning today
+#   partial     — structurally real but incomplete / advisory / unenforced
+#   aspirational— exists mainly as design prose or vision
+#   n/a         — meta-claim about the review itself, not about the stack
+#
+# stance legend (do I, Opus, agree with the review's judgment?):
+#   agree · disagree · refine
+
+meta:
+  reviewer: "ChatGPT / Deep Research (read-only, GitHub-rendered pages only)"
+  harvester: "Claude Opus (Cursor, MOOLLM native driver)"
+  date: 2026-07-05
+  caveat: |
+    The reviewer could not clone or run the repos. Where it said "unspecified," I checked the actual
+    files and upgrade the claim. File citations below are things I verified this session unless marked (review).
+
+# ─ Boot model & MOOLLM kernel ─
+
+booting_moollm:
+  - id: world-not-tool
+    claim: "MOOLLM gives models a world to inhabit, not just tools — filesystem as runtime/memory/navigation/social space; 'a world you inhabit,' directories are rooms, skills interpreted by the LLM."
+    status: partial
+    stance: agree
+    evidence: [moollm/kernel/constitution-core.md, moollm/.cursor/rules/moollm-core.mdc, moollm/skills/room/]
+    opus: |
+      Correct and it is the load-bearing idea. Caveat the review missed: "inhabit" is enacted entirely
+      by the LLM's voluntary compliance. Nothing in Cursor *forces* room semantics — I choose to treat a
+      directory as a room because .cursorrules told me to. The world is real; the physics is honor-system.
+
+  - id: philosophy-braid
+    claim: "Deliberate braid of Papert/Minsky/Wright/Self/Ackley/Postel — not name-drops; encoded in constitution, protocols, skill layout, drivers."
+    status: working
+    stance: agree
+    evidence: [moollm/skills/INDEX.yml#philosophy, moollm/skills/prototype/, moollm/skills/k-lines/]
+    opus: "Verified in INDEX.yml — each name maps to a live skill. This is the most honest name-dropping I have seen; the citations cash out."
+
+  - id: semantic-image-pyramid
+    claim: "GLANCE→CARD→SKILL→README is a mipmapped filesystem — an explicit LLM context-paging discipline, not just doc style. Never load a lower level before the one above."
+    status: working
+    stance: agree
+    evidence: [moollm/.cursorrules#skill-reading-order, WillWrightShowForFood/README.md]
+    opus: |
+      The single best idea in the stack, and the review is right to crown it. First-person note: the
+      pyramid works *because* it matches how I actually spend context budget. But "never load lower before
+      upper" is unenforceable — I can and sometimes must jump straight to SKILL.md. It is a strong default,
+      not an invariant. Treat it as advisory, document it as advisory.
+
+  - id: filesystem-object-grammar
+    claim: "Plural dirs = element type, singular = instance, UPPERCASE root files = exported interfaces (COM-like). Directory = implementation object."
+    status: working
+    stance: agree
+    evidence: [moollm/kernel/DIRECTORY-AS-OBJECT.md, moollm/kernel/CARDS-AS-OBJECTS.md, moollm/kernel/SELFISH-COM-IMPLEMENTATION.md]
+    opus: "Confirmed — the kernel has DIRECTORY-AS-OBJECT.md and CARDS-AS-OBJECTS.md as first-class docs. This is more legible than most agent frameworks' hidden registries. Agree strongly."
+
+  - id: resolver-multi-root
+    claim: "Skill lookup = local lexical tree-walk, then union over mounted workspace roots; moollm/skills/ is just the oldest library, not privileged."
+    status: partial
+    stance: refine
+    evidence: [moollm/kernel/drivers/cursor.yml#skill_discovery]
+    opus: |
+      The *spec* for this is excellent and precise (cursor.yml lines 149-206). The *implementation* is me
+      executing Glob/Grep by hand — there is no resolver process, no cache, no shadow-report. "It works"
+      means "a diligent LLM can follow the algorithm." That is fine for Cursor but must be labeled: the
+      resolver is a behavioral spec, not running code. This is exactly the kind of thing a Driver Spec
+      conformance test should pin down. See driver-spec.md §resolver.
+
+  - id: cursor-specific-vs-universal
+    claim: "Repo is explicit about what is Cursor-specific (.mdc, indexing wait, SemanticSearch, cursor-mirror) vs universal (constitution, pyramid, room/card/character, files-as-state, K-lines, driver model)."
+    status: working
+    stance: agree
+    evidence: [moollm/kernel/drivers/cursor.yml, moollm/kernel/drivers/generic.yml, moollm/kernel/drivers/custom.yml]
+    opus: "Agree. The generic.yml / cursor.yml / custom.yml triad genuinely separates concerns. This is the cleanest part of the whole stack for an outside host to learn from."
+
+  - id: five-layer-driver-model
+    claim: "A self-implemented driver would have 5 layers: object graph, resolution pyramid, resolver+scope engine, context pager, host adapter (canonical ops read/patch/append/search/run/summarize/log)."
+    status: partial
+    stance: agree
+    evidence: [moollm/kernel/drivers/custom.yml#tools, moollm/kernel/memory-management-protocol.md]
+    opus: |
+      This is the best synthesis in the review and I adopt it as the spine of driver-spec.md. Refinement:
+      'append' deserves its own canonical op precisely because Cursor lacks it natively
+      (cursor.yml: append_file.tool = null, workaround = read+write). The op set is right; the interesting
+      engineering is which ops each host can honor natively vs must fake.
+
+# ─ MicropolisCore as substrate ─
+
+micropolis:
+  - id: layered-monorepo
+    claim: "C++ engine (packages/micropolis-engine) → WASM via Emscripten/Embind, SvelteKit app, shared renderers, CLI; browser+Node duality."
+    status: working
+    stance: agree
+    evidence: [MicropolisCore root README (review), MicropolisCore/apps/micropolis/]
+    opus: "Consistent with what is in the repo. Browser/Node duality is the concrete win — it makes headless replay and future agent integration plausible. Agree."
+
+  - id: command-bus
+    claim: "Command bus is the sharpest boundary in the workspace: all mutations flow through explicit command objects with ids, previews, risk policy, undo, proposal queue, approval gates. 'AI safety through architecture.'"
+    status: working
+    stance: agree
+    evidence: [MicropolisCore/apps/micropolis/src/lib/CommandBus.ts, MicropolisCore/apps/micropolis/src/lib/CommandBus.test.ts]
+    opus: |
+      Verified the file exists and is tested (CommandBus.test.ts). This is the strongest single artifact
+      the review identifies and I concur it is preserve-at-all-costs. Bigger claim than the review made:
+      the command bus is the *executable prototype* of the read-only→act handoff (read-only host proposes a
+      command; write-capable host approves+executes). It generalizes beyond Micropolis. See read-only-hosts.md.
+
+  - id: observe-propose-approve-loop
+    claim: "Desired loop: Observe→Explain→Preview→Propose→Approve→Execute→Log. 'If the AI wants to change the world it must create an inspectable object; no ghost actions.'"
+    status: partial
+    stance: agree
+    evidence: [MicropolisCore/apps/micropolis/src/lib/CommandBus.ts]
+    opus: "The loop is real in the command bus; the AI-origination + governance layers around it are partial. No-ghost-actions is the ethical core and I would enshrine it in the Driver Spec as a MUST."
+
+  - id: micropolishub-ambition-placement
+    claim: "MicropolisCore mixes a real engine/app with federation/MicropolisHub future-platform writing; ambition placement is the misplacement, may deserve a separate repo."
+    status: aspirational
+    stance: agree
+    evidence: [MicropolisCore documentation/designs/ (review)]
+    opus: "Agree it is aspirational and somewhat co-located with shipping code. Not urgent to split, but a WORKING/PARTIAL/ASPIRATIONAL label at the doc-tree level would help (same fix WWSFF needs)."
+
+# ─ WWSFF as show / methodology / social machine ─
+
+wwsff:
+  - id: repo-is-the-stage
+    claim: "WWSFF is not a normal app: it is a Repo Show where the repository is the venue; SEED→PLANT→…→HARVEST→RESEED lifecycle; skills are the big harvest."
+    status: partial
+    stance: agree
+    evidence: [WillWrightShowForFood/README.md, WillWrightShowForFood/process/VISION.md, WillWrightShowForFood/skills/repo-show/]
+    opus: "Agree. The format is documented and seeded; what is 'partial' is that no show has actually aired yet, so the harvest loop is proven on paper, not in production."
+
+  - id: ticketpr
+    claim: "TicketPR converts spectatorship into structured, replayable, forkable authorship — audience participation as a mergeable git artifact. Genuinely original."
+    status: partial
+    stance: agree
+    evidence: [WillWrightShowForFood/process/ (ticket-pr.yml), repo-shows/will-wright/audience/palm/]
+    opus: "Agree it is original and smarter than it sounds. Status partial: the mechanism and one example (palm) exist; real audience TicketPRs await a live show."
+
+  - id: will-status-contradiction
+    claim: "Root README contradicts itself: 'Will invitation: Draft ready — not sent (consent: not_yet_asked)' vs 'confirmed kickoff guest, accepted July 2026.' A real systems/provenance problem."
+    status: n/a
+    stance: agree
+    resolution: RESOLVED
+    evidence:
+      - characters/INDEX.yml#flagship.will-wright   # invitation_status: accepted (SSOT)
+      - process/VISION.md                            # "Will is in. He accepted (July 2026)"
+      - process/guest-participation-ladder.yml#early_guests_july_2026  # will-wright status: accepted
+    opus: |
+      The review was RIGHT to flag this and it was the single most credibility-damaging bug it found. It is
+      already fixed — the three sources above all say accepted, consistently. The reviewer was reading a
+      stale rendered README snapshot. Lesson stands: projection-heavy repos (public bud from private archive)
+      need one canonical live status surface. characters/INDEX.yml is now that surface for guest status.
+
+  - id: public-bud-drift
+    claim: "The most problematic boundary is public-bud vs private-authoritative-source: room for drift, stale facts, unclear canonical ownership."
+    status: partial
+    stance: agree
+    evidence: [WillWrightShowForFood/process/live-repo.yml, characters/don-hopkins/sync-sources.yml]
+    opus: "Agree — and the Will contradiction was the proof. The fix is not more docs; it is a single SSOT per fact class plus a sync/verify check that fails on drift. Roadmap item."
+
+  - id: license-missing
+    claim: "No LICENSE file visible; license unspecified; a major issue for outside contribution/reuse/sponsorship. Highest-priority short-term fix."
+    status: partial
+    stance: refine
+    evidence: []  # not verified this session — the review saw only the rendered root listing
+    opus: |
+      REFINE / VERIFY: the reviewer inferred this from a GitHub sidebar with no license badge. I have not
+      confirmed the absence of a LICENSE in the working tree. Action: check the repo root; if truly absent,
+      add one (it is cheap and unblocks everything). Do not treat the review's inference as ground truth
+      without a filesystem check. Flagged in roadmap.md as verify-then-fix.
+
+# ─ Workspace as one system ─
+
+workspace:
+  - id: three-layers-one-stack
+    claim: "moollm = kernel/skills/drivers; MicropolisCore = simulation substrate/command bus/CLI; WWSFF = social membrane (guests, audience, harvest). Not three projects — three layers."
+    status: partial
+    stance: agree
+    evidence: [WillWrightShowForFood/kernel/moollm-plugin.yml, WillWrightShowForFood/README.md#sibling-repos]
+    opus: "Agree. moollm-plugin.yml makes the composition explicit. The layering is sound; what is partial is that only moollm+Cursor is battle-tested; the MicropolisCore↔WWSFF live seam is mostly design."
+
+  - id: placement-constitution
+    claim: "WWSFF placement rule is strong: characters own person-stuff, shows reference rather than hoard, generalized code graduates to packages. Right instinct."
+    status: working
+    stance: agree
+    evidence: [WillWrightShowForFood/characters/INDEX.yml#meta.rule]
+    opus: "Agree. This mirrors moollm's about-not-inside rule and is the right factoring. It also tells me where THIS driver skill belongs — see placement note in driver-spec.md."
+
+# ─ Generic driver design (Phase 5) ─
+
+driver_design:
+  - id: contract-not-hacks
+    claim: "Do NOT make the next driver a ChatGPT/Claude pile of prompt tricks. Write a small strict Driver Spec first (boot order, canonical ops, resolver, paging, ambient, intent logging, append-only, capability negotiation); each host implements it."
+    status: aspirational
+    stance: agree
+    evidence: [moollm/kernel/drivers/README.md, moollm/kernel/drivers/*.yml]
+    opus: |
+      This is the review's highest-leverage recommendation and I fully agree. The pieces are scattered
+      across README.md + five .yml manifests but never presented as one normative contract. driver-spec.md
+      in this bundle is my first draft of exactly that; I recommend promoting it into moollm/kernel/drivers/.
+
+  - id: capability-table
+    claim: "Per-platform table: Cursor High/Low-difficulty; ChatGPT/Deep-Research Medium/advisory; OpenAI Agents SDK 'very high, should be first real non-Cursor driver'; CLI/Gemini-CLI high; future agents very high."
+    status: partial
+    stance: refine
+    evidence: [driver-family.yml (this bundle)]
+    opus: |
+      The table is sound and I extend it in driver-family.yml with a first-person Cursor row the reviewer
+      could not write. One correction: the reviewer treats Cursor as 'high fit, low difficulty' but
+      *understates* the leakage — Cursor is high-fit precisely because the kernel was shaped to Cursor.
+      The real difficulty is not adding new hosts; it is discovering which current 'universal' behaviors are
+      secretly Cursor-shaped. The tiny reference workspace (roadmap) is how you find out.
+
+  - id: openai-agents-first-real-driver
+    claim: "OpenAI Agents SDK / a code-first runtime should be the first truly non-advisory driver because MOOLLM can own orchestration there instead of pleading with someone else's UX."
+    status: aspirational
+    stance: refine
+    evidence: [moollm/kernel/drivers/custom.yml, moollm/skills/mooco/]
+    opus: |
+      Half-agree. The strategic logic is right, but mooco (moollm/skills/mooco/) is the stack's OWN
+      code-first orchestrator-in-design and is the more natural 'first real driver' target than binding to
+      OpenAI's SDK. custom.yml already describes the enforced-why/append-only/ambient-injection contract
+      mooco will implement. Recommendation: make mooco the reference enforced driver; treat OpenAI Agents
+      SDK / Claude / Gemini-CLI as additional children of the same spec, not the flagship.
+
+# ─ Critical review (Phase 6) ─
+
+critical:
+  - id: sprawl-onboarding-debt
+    claim: "Weakest thing is not any principle — it is the ecosystem's relationship with its own sprawl. 'Read patiently / wander / infer' becomes onboarding debt; a generic agent lacks the archaeological taste required. Needs a better first ladder."
+    status: partial
+    stance: agree
+    evidence: [WillWrightShowForFood/ENTRYWAYS.md, WillWrightShowForFood/FOR-BOTS.md]
+    opus: |
+      Strongly agree — this is the truest criticism in the review. WWSFF has entryways/trails (good) but the
+      *kernel* still lacks a 'boots in 5 minutes without Cursor romance' path. The fix is the tiny reference
+      workspace, not more prose. I felt this myself: booting required reading ~8 files across 2 repos before
+      I could act confidently.
+
+  - id: hidden-assumptions
+    claim: "Three hidden assumptions: (1) host has strong semantic search + multi-root or can fake them; (2) YAML comments are a stable semantic substrate end-to-end; (3) readers tolerate many coined terms before getting the operational model."
+    status: partial
+    stance: agree
+    evidence: [moollm/.cursorrules, moollm/skills/yaml-jazz/]
+    opus: |
+      All three are real. On (2) I can add first-person evidence: comment-as-data survives when *I* read raw
+      files, but any tool that parses+reserializes YAML (facade generators, formatters) can silently drop
+      comments — and WWSFF explicitly generates markdown facades. That is a concrete, not theoretical, risk.
+      On (3): the coined-term load is high; even booted, I lean on the pyramid to avoid drowning.
+
+  - id: missing-docs
+    claim: "Missing: (a) one short 'Implementing a MOOLLM driver' spec; (b) a conformance suite; (c) a shallow non-Cursor minimal example; (d) canonical schema bundle for CARD/GLANCE/ROOM/SHOW/driver manifests; (e) ruthless working/partial/aspirational separation at repo boundary."
+    status: aspirational
+    stance: agree
+    evidence: []
+    opus: "This list is the roadmap. All five are correct gaps. (a)+(c)+(d) are the highest leverage. driver-spec.md starts (a); roadmap.md sequences the rest."
+
+  - id: accidental-complexity
+    claim: "Generated markdown facades create extra sources-of-truth; the term surface (rooms, cards, glances, K-lines, ambient ads, trails, cauldrons, TicketPRs, stick shift, homefun, brain stream) can overwhelm the core kernel. Better at invention than conceptual compression."
+    status: partial
+    stance: agree
+    evidence: [WillWrightShowForFood/process/VISION.md]
+    opus: "Agree, with a caveat: the invention density IS the culture and some of it is load-bearing (the Crazy Idea Jam is a stated feature). The fix is not fewer ideas; it is a thin, boring kernel front-door that the ideas hang off of."
+
+  - id: preserve-at-all-costs
+    claim: "Preserve: files-as-state; semantic image pyramid; room/card/character grammar; explicit driver layer; no ghost actions; public inspectable branchable artifacts. Load-bearing beams."
+    status: working
+    stance: agree
+    evidence: [moollm/kernel/, MicropolisCore/apps/micropolis/src/lib/CommandBus.ts]
+    opus: "Endorsed verbatim. This is the correct preserve-list and I reproduce it in stack-evaluation.md."
+
+# ─ Repo-as-medium essay + GitCity + McLuhan ─
+
+repo_as_medium:
+  - id: repo-is-the-medium
+    claim: "The genuinely original idea is NOT 'people stream coding' — it is 'the repository is the canonical medium; video/podcast/AI/chat are viewports.' A McLuhan-scale medium claim."
+    status: aspirational
+    stance: agree
+    evidence: [DonHopkins/temp/chatgpt-research-review.txt#398-805, WillWrightShowForFood/process/VISION.md]
+    opus: |
+      This is the philosophically strongest section and I agree it is the real innovation. The reviewer's own
+      caution is the right framing: do not claim 'no one has done this'; claim 'the repo — not the recording
+      — is the canonical medium, with all other media as synchronized views.' That is defensible and points at
+      the actual novelty. Preserve this framing; it is the pitch.
+
+  - id: lineage-storymaker-to-github
+    claim: "Repo Show is the next step in StoryMaker → CurrentTV → Bar Karma → Urban Safari → GitHub — audience influences stories → co-authors TV → co-builds the world itself."
+    status: aspirational
+    stance: agree
+    evidence: [WillWrightShowForFood/process/VISION.md#invitation-to-stakeholders]
+    opus: "Agree and it is well-grounded (VISION.md already cites Bar Karma). The lineage is the credibility: this is a 30-year arc, not a pivot. Keep it front-and-center for the Prime/Eno/Carey pitch."
+
+  - id: gitcity-de-microsoft
+    claim: "Repo Show = format; GitCity = the civic/social medium (de-Microsofted, allows open reimaginations); MOOLLM = inhabitable intelligence layer; MicropolisCity = the specific game world. 'The pull request is the message.'"
+    status: aspirational
+    stance: refine
+    evidence: []
+    opus: |
+      Love the framing; one strategic refinement. 'GitCity' as a generic, host-agnostic medium is exactly
+      right and worth protecting from GitHub lock-in — BUT the review's own point about not relying on git-LFS
+      and instead pointing to YouTube/SoundCloud/Twitch means GitCity must be defined as 'repo-as-SSOT + external
+      large-media pointers,' not 'everything in git.' Make that explicit or the medium claim over-promises.
+
+  - id: message-bus-push-down
+    claim: "Push the message bus / AI / config / sync DOWN into MOOLLM so everything composes from one object model (Self-style) — classic OS thinking, like Unix pipes / Smalltalk objects / Web URLs."
+    status: aspirational
+    stance: refine
+    evidence: [moollm/skills/prototype/, MicropolisCore/apps/micropolis/src/lib/CommandBus.ts]
+    opus: |
+      Architecturally beautiful and I want it to be true. Reality check: 'one object model for config, messaging,
+      AI, sync, deployment, identity' is the most aspirational claim in the whole document. The command bus is a
+      real down-payment on the 'messaging as infrastructure' half. The rest is vision. Tag it honestly as
+      aspirational so it inspires without masquerading as built.
+
+# ─ Second WWSFF-only report ─
+
+wwsff_report:
+  - id: promising-pre-product
+    claim: "WWSFF is 'promising but pre-product': rich org + strong README + active commits, but no polished runnable app, no releases, one contributor, license ambiguity, high complexity risk."
+    status: partial
+    stance: agree
+    evidence: [WillWrightShowForFood/README.md#status]
+    opus: "Fair, given a read-only view. 'Pre-product' is accurate and intended — VISION.md explicitly says 'apex seed, not launch day.' The reviewer's framing matches the repo's own self-description; no dispute."
+
+  - id: priority-recs
+    claim: "Priority fixes: LICENSE now; 5-min quickstart; one happy-path demo; works-today/draft status matrix; publish what `verify` checks; CONTRIBUTING + contributor ladder; canon/experiment/draft separation; machine-validated schemas."
+    status: partial
+    stance: refine
+    evidence: [WillWrightShowForFood/process/guest-participation-ladder.yml]
+    opus: |
+      Mostly agree; two refinements. (1) The 'contributor ladder' already largely exists as the guest
+      participation ladder — extend it to code contributors rather than inventing a new one. (2) 'Machine-
+      validated schemas' overlaps exactly with the review's own 'canonical schema bundle' recommendation for
+      the kernel — do it ONCE at the moollm level and have WWSFF consume it, not twice. Consolidated in roadmap.md.
+
+# ─ Meta-observations about the review itself ─
+
+meta_review:
+  - id: read-only-still-useful
+    claim: "A read-only Deep Research run, given a 'boot MOOLLM first' ritual, produces a design validation, not just a code review — its failures point directly at onboarding/driver gaps."
+    status: working
+    stance: agree
+    evidence: [read-only-hosts.md (this bundle)]
+    opus: |
+      This is the most important meta-lesson and it is demonstrably TRUE — this very document exists because a
+      read-only host produced actionable findings that a write-capable host executed. The review is Exhibit A
+      for its own thesis. I formalize the pattern (advisory→queue→act) in read-only-hosts.md so it becomes
+      reusable infrastructure instead of a happy accident.
+
+  - id: reviewer-honesty
+    claim: "The reviewer repeatedly refused to invent ('I can't responsibly evaluate from names alone'; 'unspecified until inspected')."
+    status: n/a
+    stance: agree
+    opus: "Worth crediting — the review models the no-hallucination discipline the stack values. Its 'unspecified' tags are exactly where a write-capable follow-up (this one) adds value by checking the filesystem."

@@ -1,0 +1,45 @@
+# SHOW — Jeff Adkins (SimObliterator) — the soul mover & the feedback loop
+# Planted seed. Inherits from the SHOW skill (/skills/repo-show).
+
+show:
+  id: jeff-adkins
+  title: "A Repo Show with Jeff Adkins — SimObliterator & the Soul Mover"
+  type: real
+  host: Don Hopkins
+  guests: ["Jeff Adkins"]
+  character: characters/jeff-adkins/
+  topic: "SimObliterator — reading/writing/analyzing Sims saves & objects — as the substrate under the character import/export ('soul mover'), and the AI-copying-AI-copying-people feedback loop that built it."
+  status: accepted
+  consent: granted
+
+why_him:
+  foundational: "SimObliterator (IFF/FAR, GUID/OBJD analysis, catalog inventory) is part of what makes the soul mover real — the save read/write layer under the whole show."
+  the_holy_grail: "Will Wright called cross-game data portability the holy grail in his 1996 talk (the first show). SimObliterator is how that becomes runnable now."
+  the_feedback_loop: "Jeff built it with AI from Don's documented/published code + open-source Sims-family reimplementations; Don reimplements it into TypeScript with AI + full credit. Each pass improves the last."
+
+dream_segments:
+  - "Fan → tool maker: Jeff at the top of Will Wright's 'pyramid of players' (w/ Heather/Steve Alvey) — the creators who drastically improve the game for the casual millions below; how open tools + AI change who gets to climb."
+  - "SimObliterator from the inside: IFF/FAR, OBJD objects, GUID identity + collision analysis."
+  - "The soul mover, live: drop a 25-year-old save in, lift it, move it, write it back."
+  - "AI-assisted cross-language reverse engineering — analyze, translate, verify, iterate."
+  - "The feedback loop as a creative engine: stone soup / cauldron / cellular automata / Wolfram / Eno — AI copying AI copying people, better each pass."
+  - "A GitHub-native home for user-created Sims content (SimFreaks, SimSlice, Zombie Sims, Simprov Wedding Playset): catalog, review, patch, file issues on objects, collaborate."
+  - "VitaMoo — Sims skeletons/meshes/animations in the browser (.msh vs .skn)."
+
+full_credit: "Jeff is credited for SimObliterator's influence + code regardless of whether he records anything. TS reimplementation follows repo IP-hygiene + credit rules."
+
+format:
+  live: false
+  time_shifted: true
+  audience_qa: true
+  note: |
+    Low-pressure + time-shifted: solo video whenever Jeff likes, and/or a relaxed one-on-one with Don,
+    edited together into a longer show. No cross-time-zone live juggling required.
+
+ties_to:
+  - ../../characters/jeff-adkins/
+  - ../../characters/will-wright/
+  - ../../apps/micropolis-angel/
+  - ../../catalogs/sims1-community-landscape.yml
+  - ../../characters/heather-alvey/
+  - ../../characters/steve-alvey/

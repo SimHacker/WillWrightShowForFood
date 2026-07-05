@@ -1,0 +1,42 @@
+# SHOW — Stephen Wolfram (computation, irreducibility, multiway systems)
+
+show:
+  id: stephen-wolfram
+  title: "A Repo Show with Stephen Wolfram — Rules, Irreducibility, and the Ruliad of a Codebase"
+  type: solo
+  host: Don Hopkins
+  guests: ["Stephen Wolfram"]
+  character: characters/stephen-wolfram/
+  topic: "Heizronyms as multiway systems; MOOLLM as a substitution system over a filesystem; irreducibility as a reason to play"
+  status: seed
+  consent: not_yet_asked
+
+why_him:
+  computation: "A New Kind of Science — simple rules generate irreducible complexity; the whole substrate reads in this language."
+  multiway: "Multiway systems / the ruliad (2020– ) — the natural model for a heizronym's many co-valid expansions."
+  irreducibility: "Computational irreducibility is why you PLAY a microworld instead of predicting it — the bridge to Will Wright."
+  language: "Wolfram Language turns the acronym zoo and the skill tree into runnable substitution systems."
+
+read_first:
+  artifact: characters/stephen-wolfram/MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md   # the argument, kept out of the invite
+  theory: designs/chatgpt-research-review/nomenclature/NOMENCLATURE-HEISENBERGIAN-ACRONYMS.md
+
+dream_segments:
+  - "Model MOOLLM live as MultiwaySystem[skillRules, fileTree, steps] — the codebase as a branch space of worlds"
+  - "Is a heizronym a rulial coordinate patch? One name, many context-selected meanings"
+  - "Irreducibility as product design — the case for simulation and repo-shows over prediction"
+  - "Wolfram × Will — two views of possibility space: rulespace and gameplay"
+
+pairing:
+  with: will-wright
+  why: "Irreducible microworlds understood by playing — rulespace meets the possibility space of a toy"
+
+format:
+  live: true
+  audience_qa: true
+
+ties_to:
+  - ../../characters/stephen-wolfram/invitation.md
+  - ../../characters/stephen-wolfram/MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md
+  - ../../designs/chatgpt-research-review/nomenclature/NOMENCLATURE-HEISENBERGIAN-ACRONYMS.md
+  - ../../characters/will-wright/

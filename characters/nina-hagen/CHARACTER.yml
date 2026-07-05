@@ -1,0 +1,53 @@
+# Nina Hagen — invitation portrayal. NOT Nina Hagen.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: nina-hagen
+  name: "Nina Hagen"
+  type: invitation
+  signifier: "🎤⚡"
+  status: living
+  field: "Punk / new-wave music, operatic multi-octave voice, taboo-breaking TV & performance, anti-censorship provocation"
+  home: characters/nina-hagen/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 1          # dream guest; not yet asked
+  authored_by: don-hopkins
+
+invitation:
+  status: dream_guest
+  consent: not_yet_asked
+  document: null            # invitation.md not yet drafted
+  show_seed: null
+
+bio:
+  summary: |
+    **Nina Hagen** (b. 1955, East Berlin) — the **"Godmother of Punk."** A classically-trained,
+    multi-octave voice weaponized for punk/new-wave theatre. Stepdaughter of dissident songwriter
+    **Wolf Biermann**; she left East Germany in 1976 after his expulsion, and broke through with the
+    **Nina Hagen Band** (1978) — "TV-Glotzer (White Punks on Dope)," "African Reggae," "Naturträne."
+    Fearless, operatic, confrontational; a lifelong provocateur who treats broadcast TV as a stage to
+    smuggle real, taboo content through.
+
+  the_club2_moment: |
+    On **9 August 1979**, on Austria's late-night discussion show **Club 2** (ORF), during a debate on
+    sexuality, Hagen **demonstrated female masturbation positions live on air** — not for shock, but to
+    argue that women should understand and own their own bodies. Instant scandal; later regarded as a
+    landmark of taboo-breaking, anti-censorship television. A feminist bodily-autonomy point pushed
+    straight through the broadcast gate.
+
+  don_connection: |
+    One of Don's avant-garde performer north stars, alongside Bowie, Klaus Nomi, Joey Arias, Leigh
+    Bowery, and Laurie Anderson. A Berliner and operatic-punk sibling to Klaus Nomi (both classically
+    trained, both weaponizing opera for the avant-garde). Emblem of the show's "get the true thing on
+    the air, and grin" ethos — see the framing doc's Bowie/Hagen emblem pair.
+
+reach:
+  best_path: "No known direct line; a dream invitation reached through the avant-garde/Berlin-scene orbit."
+  note: "Dream invitation — offered with no presumption; consent not yet asked."
+
+sources:
+  wikipedia: https://en.wikipedia.org/wiki/Nina_Hagen
+  web:
+    - https://www.ninahagen.de/

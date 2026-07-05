@@ -1,0 +1,52 @@
+# Laurie Anderson — invitation portrayal. NOT Laurie Anderson.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: laurie-anderson
+  name: "Laurie Anderson"
+  type: invitation
+  signifier: "🎻🗣️"
+  status: living
+  field: "Performance art, experimental music, storytelling, invented instruments, immersive & VR art, spoken-word technology"
+  home: characters/laurie-anderson/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 1          # dream guest; not yet asked
+  authored_by: don-hopkins
+
+invitation:
+  status: dream_guest
+  consent: not_yet_asked
+  document: null            # invitation.md not yet drafted
+  show_seed: null
+
+bio:
+  summary: |
+    **Laurie Anderson** (b. 1947) — American avant-garde artist, composer, and musician; a defining
+    figure of performance art. Best known for the unexpected 1981 hit **"O Superman"** and the
+    epic multimedia work **United States I–IV**. A relentless **inventor of instruments and voice
+    technology**: the **tape-bow violin** (playing recorded tape with a bow instead of horsehair), the
+    **talking stick**, and the **"Voice of Authority"** — a pitch-shifted male vocal filter she uses as
+    a recurring persona. NEA-controversy-era **anti-censorship** voice; longtime partner of **Lou Reed**.
+    Later works push into **VR/immersive** storytelling (*Chalkroom*, *Aloft*). Her whole practice is
+    **spoken word + technology + generative systems on stage** — the exact register the Repo Show performs in.
+
+  don_connection: |
+    **Don's long-time avant-garde north star.** Don briefly met Laurie Anderson during his time at
+    **Interval Research** (Paul Allen's lab, mid-1990s), where — per Don's recollection — she
+    collaborated with the lab. She sits squarely in Don's performer pantheon alongside Bowie, Klaus
+    Nomi, Joey Arias, Leigh Bowery, and Nina Hagen. (Interval detail is Don's account; treat the
+    collaboration specifics as recollection until confirmed.)
+
+reach:
+  # Public-safe summary only; specific names/contacts live in the private roster.
+  best_path: "Possible warm intro via Interval Research alumni Don knows who worked with her."
+  fallback: "Also reachable in the same avant-garde/generative orbit as Will Wright and Brian Eno."
+  private_roster: DonHopkins/characters/don-hopkins/contacts/interval-alumni.yml
+  note: "Dream invitation — offered with no presumption; consent not yet asked."
+
+sources:
+  wikipedia: https://en.wikipedia.org/wiki/Laurie_Anderson
+  web:
+    - https://laurieanderson.com/

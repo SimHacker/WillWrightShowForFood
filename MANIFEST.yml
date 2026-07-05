@@ -14,7 +14,7 @@ bundles:
     priority: 1
     source: projects/micropolis-moollm/repo-shows/will-wright/
     target: repo-shows/will-wright/
-    include: [README.md, SHOW.yml, GLANCE.yml, invitation.md, invitation-opus-draft.md, episodes.yml, suggested-questions.yml, slats-reincarnation.yml, venue/, audience/]
+    include: [README.md, SHOW.yml, GLANCE.yml, invitation.md, invitation-opus-draft.md, invitation-gpt55-draft.md, episodes.yml, suggested-questions.yml, slats-reincarnation.yml, venue/, audience/]
     exclude: [.work/, sources/, assets/, catalogs/]
     note: "sources + media on characters/will-wright/; catalogs at repo root — show links only"
 
@@ -47,7 +47,7 @@ bundles:
     exclude_dirs: [expat, correspondence, email, persona-imports]
     special:
       don-hopkins: "Project to characters/don-hopkins/ — career/ only; coalesce master-of-ceremonies"
-      will-wright: "Full public portrayal OK (consent level 3; invitation pending)"
+      will-wright: "Full public portrayal OK (consent level 3; invitation accepted July 2026 — kickoff guest)"
 
   process_crystallized:
     priority: 4

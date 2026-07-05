@@ -35,7 +35,7 @@ and we do not speak as him without consent.
 | If you want… | Go |
 |--------------|-----|
 | **The invitation** (short) | [`invitation.md`](invitation.md) |
-| **Long drafts** (email follow-ups) | [`repo-shows/will-wright/`](../../repo-shows/will-wright/README.md) — [sent](../../repo-shows/will-wright/invitation.md) · [opus](../../repo-shows/will-wright/invitation-opus-draft.md) · [gpt55](../../repo-shows/will-wright/invitation-gpt55-draft.md) |
+| **The official invitation** (the one Will accepted) | [`repo-shows/will-wright/invitation.md`](../../repo-shows/will-wright/invitation.md) *(earlier drafts archived privately in the green room)* |
 | **Ideas to explore** (conversation hooks) | [`ideas.md`](ideas.md) |
 | **Browse any order** | [`repo-shows/will-wright/BROWSE.md`](../../repo-shows/will-wright/BROWSE.md) |
 | **Suggested sequence** | [`guest-will playlist`](../../process/entryways/guest-will.md) |
@@ -102,8 +102,8 @@ save-game data; no mind-mirror layer. Will can replace or remove it.
 ## Subject rights
 
 Will may request **correction, edit, reduction, or deletion** of this portrayal anytime.
-Invitation status: **draft**, `consent: not_yet_asked`. Accepted, delayed, declined, or silence
-— all honored. [`schemas/portrayal-standards.yml`](../../schemas/portrayal-standards.yml)
+Invitation status: **[accepted](invitation.md)** (July 2026) — Will loves the idea and is ready to go.
+He may request correction, edit, reduction, or deletion anytime.
 
 ---
 

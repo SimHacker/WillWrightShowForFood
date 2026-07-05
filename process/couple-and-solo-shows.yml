@@ -94,6 +94,7 @@ scheduling:
     **Default interview shape:** one guest, one session, at whatever time works for them.
     Do not overreach by insisting everyone arrive at the same moment — a huge ask even
     within one time zone. Mix guests together in post-production instead.
+    Constitutional ladder: guest-participation-ladder.yml (tiers 0–5; tier_1 solo video is the initial ask).
   solo_when:
     - "Deep vertical on one person's solo body of work (e.g. Scott Viewpoint dissertation)"
     - "Guest prefers a second focused episode after the pair show"

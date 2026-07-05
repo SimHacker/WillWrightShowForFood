@@ -13,6 +13,8 @@ kinds:
   voice_puppet:
     instruments: [pink_trombone, phoneloper]
   puppet:
+    also_called: video_puppet   # low-tech composited body (chroma-key / drawn / scrubbed), human-voiced
     amplitude_scrub: "David Levitt technique — voice drives video scrub"
+    canonical_ancestor: "Bowie's chroma-key marionette on SNL, 'Boys Keep Swinging,' 1979 — see performance-and-culture.yml#puppet_kinds (puppet.canonical_ancestor)"
 
 reading: ../../will-wright/performance-and-culture.yml#the_reading

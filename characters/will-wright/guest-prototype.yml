@@ -26,6 +26,7 @@ respect_time:
     - "No prep deck — warm conversation; Don primes the repo so Will can skim or skip"
     - "Episodes, not a finale — return visits normal; no pressure to 'complete' in one sitting"
     - "Optional everything — Slats, live Twitch, AI slide play: opt-in segments only"
+  participation_ladder: ../../process/guest-participation-ladder.yml
   don_does_the_work:
     - "Prime repo with 1996 talk + catalogs before he records"
     - "Gather research bundle from private archive — artifacts, links, HN, Don's essays, email excerpts — for Will to review and organize"
@@ -161,4 +162,5 @@ see_also:
   - ../../repo-shows/will-wright/SHOW.yml
   - ../../process/moollm-stage.yml
   - ../../process/couple-and-solo-shows.yml
+  - ../../process/guest-participation-ladder.yml
   - ../../process/entryways/guest-will.md

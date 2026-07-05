@@ -50,6 +50,31 @@ A few things I'd love to build or riff on, live (no homework — only if they sp
 speculative provocations in [`speculative-jams.md`](../../characters/brian-eno/speculative-jams.md) —
 fuel to jam on, build a toy of live, and turn loose for others to remix.)
 
+## Where I'd love to start — that 1979 SNL night 📺
+
+Here's a thread I think you'll enjoy, because you were *in the room* for part of it. On **Saturday
+Night Live, December 15, 1979**, David Bowie did three songs backed by **Klaus Nomi and Joey Arias** —
+and the finale was **"Boys Keep Swinging," which you co-wrote** (from *Lodger*). For that one, Bowie
+sang live while his head was **chroma-keyed onto a crude, hand-drawn marionette body** — a gloriously
+low-tech **video puppet** — and at the very end the puppet **"whipped it out"** and Bowie flashed a
+cherubic little grin at having slipped it past the NBC censors on live TV. (It's G-rated silliness; the
+tape only ever got pulled offline over *copyright*, never the gag.)
+
+That bit turns out to be the **origin of a performance technique the whole show is built on** — I call
+it the **video puppet**: a human voicing/driving a character through a cheap, seams-showing composited
+body. So I'd love to ask you the real questions, since no one else can answer them: **what was "Boys
+Keep Swinging" actually *saying*** — then, now, and reinterpreted for today? (My read: not sexist at
+all — a wink at the carte-blanche boys get, that they can literally whip it out and grin about getting
+away with it. The drag-and-wig-rip video seems to agree.) And: **did you know about the puppet gag —
+did Bowie ever mention it, or were you watching?** I genuinely don't know if that reveal is famous or
+forgotten.
+
+And here's the mischief I can't resist floating: it might make a wonderful **on-air reveal** — you,
+Will, and me each **"whipping it out" with our own video puppets**, G-rated, as loving homage. Show,
+don't tell. (Full write-up of the songs, the Nomi/Arias story, and the questions:
+[`bowie-snl-1979.md`](../../characters/brian-eno/bowie-snl-1979.md).) **I have all three performances
+and can point you and Will straight at them** so we're all looking at the same thing.
+
 ## The heart of it
 
 I'm listening to **Doug Hilsinger & Caroleen Beatty's *Taking Tiger Mountain*** right now. Doug's

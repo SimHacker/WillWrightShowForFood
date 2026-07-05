@@ -26,6 +26,8 @@ trails:
       - { path: showmaker-network.yml, why: "Shows breed shows — graph of linked episodes" }
       - { path: ../repo-shows/will-wright/, why: "Flagship planted show — Will kickoff arc" }
       - { path: ../repo-shows/REPO-SHOWS.yml, why: "Implicit SHOW inheritance for whole collection" }
+      - { path: couple-and-solo-shows.yml, why: "Async default — solo + weave, not sync roundtable" }
+      - { path: guest-participation-ladder.yml, why: "Constitutional tiers — solo video first; full-service repo; franchise" }
       - { path: live-repo.yml, why: "Public WWSFF vs DonHopkins private — export ethics" }
       - { path: ../README.md, why: "Two-layer navigation — brutalist listing + humane README overlay" }
       - { path: ../characters/jef-raskin/, why: "🕯️ Humane Interface memorial — philosophical anchor for README overlay" }

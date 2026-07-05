@@ -1,0 +1,71 @@
+# Jeff Adkins — collaborator + guest portrayal. NOT Jeff Adkins.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: jeff-adkins
+  name: "Jeff Adkins"
+  type: invitation
+  signifier: "🪓🧬"
+  status: living
+  handle: DnfJeff
+  field: "Sims save-file & object reverse-engineering; AI-assisted tooling; web development. Creator of SimObliterator / VitaMoo."
+  home: characters/jeff-adkins/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3          # real collaborator, active dialogue, enthusiastic — named + credited with consent
+  authored_by: don-hopkins
+  note: "Real collaborator + friend-of-the-project. Jeff may shape, delay, decline, or delete anytime."
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: accepted
+  accepted: 2026-07
+  consent: granted
+  document: ../../repo-shows/jeff-adkins/invitation.md
+  show_seed: repo-shows/jeff-adkins/
+  note: |
+    Accepted 2026-07 — enthusiastic yes to take part + full credit for SimObliterator's influence, and
+    volunteered to help across the board (interviews, grunt work, deep-dives). Low-pressure,
+    time-shifted format (solo video + 1-on-1 edited together). Timing at his pace; credit stands
+    regardless of whether he records anything.
+
+bio:
+  summary: |
+    **Jeff Adkins** (GitHub **DnfJeff**) is the creator of **SimObliterator** (the *SimObliterator
+    Suite*) and **VitaMoo** — AI-assisted, open tools for reading, writing, analyzing, and rendering
+    **The Sims 1** save files, objects, and characters: IFF/FAR parsing, GUID/object (OBJD) analysis,
+    catalog inventory, and an in-browser WebGL character/skeleton/mesh renderer (vitamoo.space). His
+    work is the concrete substrate under the show's **character import/export** — the "soul mover" —
+    the thing that turns Will Wright's 1996 "data-portability holy grail" into something you can
+    actually run today.
+  known_for:
+    - "SimObliterator Suite — Sims 1 save/object tooling (IFF/FAR, GUID analysis, catalog inventory)"
+    - "VitaMoo — in-browser WebGL Sims character/skeleton/mesh renderer (vitamoo.space)"
+    - "AI-assisted reverse engineering across languages — analyze, translate, verify, iterate"
+
+why_a_guest:
+  foundational: "SimObliterator is part of what made the show technically possible — the save-file read/write layer under the soul mover."
+  the_feedback_loop: |
+    Jeff built SimObliterator with AI by studying Don's documented, published code plus open-source
+    Sims-family reimplementations (different languages, analyzed + translated + verified by AI). Don
+    is now reimplementing it in WWSFF-owned TypeScript, also with AI — each iteration feeding the
+    other and improving every pass. AI copying AI copying people, all the way down: stone soup,
+    cauldron, cellular automata, Wolfram, and Eno's generative systems, made literal in a codebase.
+  full_credit: "Jeff gets full credit for SimObliterator's influence and code — interview or not. The TypeScript reimplementation follows the repo's IP-hygiene + credit rules (apps/micropolis-angel/, CREDITS)."
+
+contact:
+  channel: "Direct + warm, ongoing (private)."
+  note: "Real collaborator; contact specifics + outreach kept in the green room, not the public files."
+
+sources:
+  github: https://github.com/DnfJeff/SimObliterator_Suite
+  vitamoo: https://github.com/DnfJeff/SimObliterator_Suite/tree/main/vitamoo
+  demo: https://vitamoo.space
+  designs: https://github.com/SimHacker/moollm/tree/main/designs/sim-obliterator
+
+see_also:
+  - { path: ideas.md, why: "Conversation hooks — grounded in Jeff's real work + the soul-mover thread" }
+  - { path: ../../repo-shows/jeff-adkins/, why: "The show proposal + invitation" }
+  - { path: ../will-wright/, why: "The 1996 data-portability holy grail SimObliterator helps deliver" }
+  - { path: ../../apps/micropolis-angel/, why: "Catalog/object tooling that credits + builds on SimObliterator" }

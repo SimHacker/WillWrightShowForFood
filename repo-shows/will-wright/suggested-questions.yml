@@ -111,6 +111,35 @@ hn_filfre_maxis_2026_07:
       hn_comment: https://news.ycombinator.com/item?id=48780477
       routing: [git, email_to_will, adorable_minutes, repo_show, twitch, hn_reply]
       q: "How much cybernetics beyond Gaia Theory? Norbert Wiener?"
+    - id: hn-vor-frontiers
+      from: vor_
+      hn_user: vor_
+      hn_profile: https://news.ycombinator.com/user?id=vor_
+      audience: audience/hn-vor/questions.yml
+      hn_comment: https://news.ycombinator.com/item?id=48781412
+      routing: [git, email_to_will, adorable_minutes, repo_show, twitch, hn_reply]
+      q: "What unexplored frontiers should game developers pay more attention to?"
+    - id: hn-vor-science-ed
+      from: vor_
+      hn_user: vor_
+      audience: audience/hn-vor/questions.yml
+      hn_comment: https://news.ycombinator.com/item?id=48781412
+      routing: [git, email_to_will, adorable_minutes, repo_show, twitch, hn_reply]
+      q: "State of science education for children — schooling, TV, toys, internet?"
+    - id: hn-vor-ai-culture
+      from: vor_
+      hn_user: vor_
+      audience: audience/hn-vor/questions.yml
+      hn_comment: https://news.ycombinator.com/item?id=48781412
+      routing: [git, email_to_will, adorable_minutes, repo_show, twitch, hn_reply]
+      q: "Effects of current AI trends on culture and education?"
+    - id: hn-vor-playing-lately
+      from: vor_
+      hn_user: vor_
+      audience: audience/hn-vor/questions.yml
+      hn_comment: https://news.ycombinator.com/item?id=48781412
+      routing: [git, email_to_will, adorable_minutes, repo_show, twitch, hn_reply]
+      q: "What games has he been playing lately?"
   thread_seeds:
     - id: hn-fallinditch-widget-workshop
       from: fallinditch

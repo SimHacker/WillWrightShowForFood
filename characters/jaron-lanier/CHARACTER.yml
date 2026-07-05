@@ -2,7 +2,9 @@ character:
   id: jaron-lanier
   name: "Jaron Lanier"
   type: invitation
+  signifier: "🥽🎼"
   status: living
+  field: "VR pioneer (coined 'virtual reality'); VPL Research; performing musician & rare-instrument collector; VR/input devices as live instruments; 'data dignity' / anti-extraction thinker & author"
   home: characters/jaron-lanier/
 
 representation:
@@ -11,5 +13,5 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: draft
+  status: dream_guest
   consent: not_yet_asked

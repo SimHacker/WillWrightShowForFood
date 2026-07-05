@@ -61,6 +61,7 @@ puppet_kinds:
       See schemas/language-cow.yml#performance_instruments.
   puppet:
     what: "Full embodiment of the character on screen — NOT the performer's face. Options:"
+    also_called: "VIDEO PUPPET — a character embodied as low-tech COMPOSITED video (chroma-key body, drawn/scrubbed limbs) that a human voices/drives live, rather than the performer's own face."
     options:
       - "full-screen short video (pre-made or AI-generated)"
       - "real-time AI-generated character video"
@@ -72,6 +73,27 @@ puppet_kinds:
         Cheap, fast, hilarious — the next cheesy step past Conan's still photo.
       credit: "Technique Don did with David Levitt — scrubbing Jesse Jackson / Rush Limbaugh clips to voice amplitude."
       fancier: "Viseme tracking (mouth shapes from phonemes) when we want lip-sync; amplitude-scrub is the 80/20."
+    canonical_ancestor:
+      # The north-star for the whole VIDEO PUPPET idea. Don posted this clip; it was his most-viewed video.
+      what: "David Bowie's 'Boys Keep Swinging' finale — Saturday Night Live, Dec 15, 1979 (host Martin Sheen), with Klaus Nomi & Joey Arias performing alongside him."
+      the_puppet: |
+        Bowie sang live while his real head was chroma-keyed onto a crude, flailing hand-drawn
+        MARIONETTE body — a low-tech VIDEO PUPPET. At the finale the puppet 'whipped it out' (an
+        erection drawn on the puppet's crotch) and Bowie flashed a cherubic grin at having slipped it
+        past the NBC censors on live national TV.
+      why_north_star: |
+        The entire video-puppet thesis in one 1979 bit: a human performs live THROUGH a cheap
+        composited body, the low-tech seams ARE the charm, and the joy is subversive — real art past
+        the gatekeepers. Our 'puppet' kind is the same move with today's tools (chroma key, amplitude
+        scrub, AI video). 'A Repo Show is always intense.'
+      eno_co_write: "'Boys Keep Swinging' was co-written by Bowie and BRIAN ENO (from Lodger, 1979 — third of the Eno 'Berlin Trilogy'). Direct hook for the Eno dream show → ../../characters/brian-eno/ideas.md."
+      avant_garde_lineage: "Don's performance north-stars — Klaus Nomi, Joey Arias, Leigh Bowery, Nina Hagen: avant-garde performers who make the artifice the art."
+      dons_archive_and_repossession: |
+        Don uploaded this clip ('Bowie Whips It Out On Live TV', https://youtu.be/5yrXg3zTseY) — his
+        MOST-VIEWED video (~125k) — until NBC BLOCKED it. The network repossessed the culture; the
+        RepoShow answer is preservation (Internet Archive / LOCKSS — see the archive-and-provenance
+        trail and ../../characters/david-rosenthal/). Censor-subversion ties to
+        ../../repo-shows/ideas/traditions/unnecessary-censorship.yml.
 
 the_reading:
   what: |

@@ -17,6 +17,7 @@ Jump by topic. Each section maps to a **[K-line](https://github.com/SimHacker/mo
 | Read | [K-line](https://github.com/SimHacker/moollm/tree/main/skills/k-lines) | In one line |
 |------|--------|-------------|
 | [Lineage](#lineage) | `lineage` | 1996 anchor · forebears · the long arc |
+| [RepoShow — the medium](#reposhow-the-medium) | `reposhow_the_medium` | A new medium — *reposhowing* — and its soul: repossession |
 | [Pyramid](#pyramid) | `pyramid` | Stand on the apex; mass builds beneath |
 | [Rig culture](#rig-culture) | `rig_culture` | Declare your class; artisanal gets extra respect |
 | [Who this is for](#who-this-is-for) | `audiences_if_you_stumbled_here` | Doorways by interest |
@@ -57,6 +58,49 @@ The long arc since: Will and Don kept returning to the same question — when do
 - **Hacker/builder culture** — show the schematic, ship the board. Exemplar: [James Gosling](../characters/james-gosling/) young with a [PDP-8 hotrod](../characters/james-gosling/media/gosling-young-pdp8-hotrod.yml).
 
 Trail: [constructionist lineage from Winograd 1996 to open Micropolis](../TRAILS.md) · [cs547_seminar_lineage](trails/cs547-seminar-lineage.md)
+
+---
+
+## RepoShow — the medium
+
+**K-line:** `reposhow_the_medium`
+
+Blogging, podcasting, video, streaming — each is a **medium**, and you can tell because each earned a
+**verb**. You blog. You podcast. You stream. **RepoShow claims the next slot — and its verb is
+*reposhowing*.** You don't just *watch* a Repo Show; you **enter, fork, and improve** it. The artifact isn't
+a post, a clip, or a livestream — it's a **living, forkable, runnable repository**. (The structure of that
+claim: [repo-as-medium](../designs/chatgpt-research-review/framing/FRAMING-REPO-AS-MEDIUM.md); the full
+argument: [RepoShow as a new medium](../designs/chatgpt-research-review/framing/FRAMING-REPOSHOW-AS-NEW-MEDIUM.md); the mechanics: [FORMAT.md](FORMAT.md).)
+
+**Why the name carries weight.** *Repo* = repository, but also **repossession** — *repo-session*, a session
+in a repo where you take something back. RepoShow arrives against this moment's real anxiety: that platforms
+and AI quietly **repossess authorship** — scraping the work, stripping the byline, laundering where it came
+from. Reposhowing **flips the repossession.** git is, structurally, an **authorship ledger**: every commit
+signed, dated, attributed, permanent. To reposhow is to **repossess your own authorship, provenance, and
+autonomy** — and to put AI *on the record* as a credited character in the repo, the opposite of the
+anonymous scrape. *A RepoShow is always intense.*
+
+**Values by example, not by lecture.** This work is welcoming, credited, non-extractive, and plainly **not
+racist** — and it shows that by **doing** it (attribution, open doors, forkable everything, no strip-mining),
+not by preaching. Same spirit as [Long Now](#long-now-and-later)'s non-extractive ethos and the
+[Micropolis Class](#what-we-are-building-in-public) habit of crediting public ideas: the politics live in the
+behavior.
+
+### Save your soul
+
+The medium's repossession thesis, made concrete and shippable today: **put your game saves and characters in
+git — not locked in Steam Cloud, a USB stick, or a proprietary silo.** Here a character is a **soul** — a
+[`CHARACTER.yml`](../characters/README.md) plus its per-game history — kept in git, where every save is a
+commit: versioned, diffable, forkable, and **yours**. It works because a soul is *text*, not an opaque blob,
+so git actually understands it (history, branch, merge, fork).
+
+**"Save your soul."** Three readings, all true: the **save file**, the **salvation**, and the literal
+`git commit` that makes a character **immortal** — a proprietary save dies when the servers, the studio, or
+the format die; a soul in git outlives any single game. Characters **sync across worlds** (git-merge over
+identity) rather than being copied or trapped. That is repossession delivered as a feature, not a manifesto:
+**you keep your characters because you keep the repo.** The long-promised
+[data portability between games](crazy-idea-jam.yml#data_portability_crown_jewel) — Will's still-unshipped
+1996 crown jewel — starts here, with the smallest durable unit: one soul you can never lose.
 
 ---
 

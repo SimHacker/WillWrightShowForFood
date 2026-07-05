@@ -1,16 +1,38 @@
-# Ideas — Stephen Wolfram
+# Ideas to explore with Stephen Wolfram 🔁
 
-## MOOLLM Readings (low-friction first)
+*The full written argument is the artifact
+[`MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md`](MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md) — this file holds show hooks only.*
+[Portrayal standards](../../schemas/portrayal-standards.yml)
 
-- Guest reading episode — voice a MOOLLM character or react to a CA / science script
-- Commentary track on primer episode 3 (Apple ][ + science) or a new CA-focused reading
+## What Stephen has done
 
-## Solo / interview show (if desired later)
+Stephen Wolfram (b. 1959) — physicist and computer scientist. *A New Kind of Science* (2002); Rule 30 / Rule
+110; computational irreducibility; the Principle of Computational Equivalence. Founder of Wolfram Research;
+Mathematica, Wolfram|Alpha, the Wolfram Language. Since 2020 the Wolfram Physics Project — hypergraph
+rewriting, multiway systems, the ruliad.
 
-- *A New Kind of Science* ↔ Repo Show organelle model — emulated runtimes, property diffusion
-- Wolfram Language notebook live alongside MOOLLM yaml — two rigs, one conversation
-- Computational irreducibility — what LLMs can summarize vs. what needs simulation
+## Hooks (each maps to the artifact)
 
-## Network
+### 1. Heizronyms as multiway systems
+One name, many co-valid expansions, selected by context = an observer sampling a branch. Is there a cleaner
+object than "multiway system" — a rulial coordinate patch?
 
-- CA summit with Margolus + Crutchfield + Scott Draves (dream group reading special)
+### 2. MOOLLM as a filesystem rewriting system
+Skills are rules, the tree is state, `MultiwaySystem[skillRules, tree, steps]` is the evolution; the
+append-only log is one causal path; an approval gate is the observer choosing an edge.
+
+### 3. Irreducibility as a product decision
+Why we PLAY a microworld (Micropolis, the repo show) instead of predicting it — the deep bridge to
+[Will Wright](../will-wright/ideas.md).
+
+### 4. The pyramid as renormalization
+GLANCE→CARD→SKILL→README is multi-resolution coarse-graining of a knowledge base.
+
+### 5. Wolfram Language live
+Run the acronym zoo and the skill tree as substitution systems on air.
+
+## Sources
+
+- [`invitation.md`](invitation.md) · [`MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md`](MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md)
+- [`NOMENCLATURE-HEISENBERGIAN-ACRONYMS.md`](../../designs/chatgpt-research-review/nomenclature/NOMENCLATURE-HEISENBERGIAN-ACRONYMS.md)
+- [writings.stephenwolfram.com](https://writings.stephenwolfram.com) · [wolframscience.com/nks](https://www.wolframscience.com/nks/)

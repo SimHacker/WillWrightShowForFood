@@ -20,6 +20,8 @@ representation:
 invitation:
   status: dream_guest
   consent: not_yet_asked
+  warm_intro_via: will-wright
+  warm_intro_when: after_first_guest_weave   # guest-participation-ladder.yml#warm_intro_via_will
   document: ../../repo-shows/brian-eno/invitation.md   # invite lives in the show dir
   show_seed: repo-shows/brian-eno/
 bio:

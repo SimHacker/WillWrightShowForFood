@@ -228,6 +228,16 @@ hn_curated:
       status: "2 questions queued — route back via HN + git + email + async + live"
       questions: hn-nanna/questions.yml
       routing: [git_queue, github_issue, email_to_guest, adorable_minutes, repo_show_interview, twitch_live, hacker_news]
+    - id: hn-vor
+      name: vor_
+      type: hn_commenter
+      hn_user: vor_
+      hn_profile: https://news.ycombinator.com/user?id=vor_
+      hn_comment: https://news.ycombinator.com/item?id=48781412
+      thread: https://news.ycombinator.com/item?id=48776525
+      status: "4 questions queued — route back via HN + git + email + async + live"
+      questions: hn-vor/questions.yml
+      routing: [git_queue, github_issue, email_to_guest, adorable_minutes, repo_show_interview, twitch_live, hacker_news]
 
 forbidden:
   - "Deceased humans as audience speakers (memorial mode only in characters/)"

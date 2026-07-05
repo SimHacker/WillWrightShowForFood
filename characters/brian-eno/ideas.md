@@ -76,8 +76,23 @@ Brian coined **"The Long Now"** and helped found the Long Now Foundation. A grou
 the whole show: what do generative systems, open repos, and AI look like on a **10,000-year**
 timescale — what erodes, what persists, what's worth seeding now?
 
+### 9. "Boys Keep Swinging" & the Bowie SNL night → the video-puppet lineage
+Brian **co-wrote "Boys Keep Swinging"** with Bowie (from *Lodger*, 1979 — third of the Berlin Trilogy).
+On **SNL, Dec 15, 1979**, Bowie performed it (with **Klaus Nomi and Joey Arias**) as a low-tech
+**chroma-key video puppet** that "whipped it out" at the end — the got-away-with-it grin that's the
+**canonical ancestor of the show's ["video puppet"](../../repo-shows/will-wright/performance-and-culture.yml)
+performance kind**. That same night held two more extraordinary performances (a carried-on, immobilized
+"The Man Who Sold the World"; the girlfriend-eaten-by-a-TV "TVC 15"), and a heavy retrospective ache
+around Klaus Nomi. The real thing to ask Brian — who was *in the room* writing it — is **what "Boys Keep
+Swinging" was *saying*** (then / now / reinterpreted for today): Don reads it not as sexist but as a
+**satire of male carte-blanche** (boys can whip it out on live TV and grin), which the drag-and-wig-rip
+official video makes explicit. Full thread, songs, story, and questions:
+[`bowie-snl-1979.md`](bowie-snl-1979.md). (Don posted the finale clip — his most-viewed video — until NBC
+blocked it: [youtu.be/5yrXg3zTseY](https://youtu.be/5yrXg3zTseY).)
+
 ## Sources (real, public)
 - Oblique Strategies (Eno & Peter Schmidt); "scenius" (Eno's coinage)
 - *Music for Airports* (1978), *Thursday Afternoon*, *Bloom* app (with Peter Chilvers), *77 Million Paintings*
 - *Taking Tiger Mountain (By Strategy)* (1974); *Taking Tiger Mountain Revisited* — Doug Hilsinger & Caroleen Beatty (2004)
+- *Lodger* (1979) — Bowie/Eno; "Boys Keep Swinging" (Bowie/Eno co-write); Bowie on *Saturday Night Live*, Dec 15, 1979 (with Klaus Nomi & Joey Arias)
 - Long Now Foundation — "The Long Now"; Long Now talk *Playing with Time* with Will Wright (2006): https://www.youtube.com/watch?v=Dfc-DQorohc

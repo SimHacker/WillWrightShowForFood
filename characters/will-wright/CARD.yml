@@ -178,7 +178,7 @@ abilities:
   verifiable: Repo Show invitation — Proxi as discussion thread
   combos_with: []
 invoke_rules:
-  consent: not_yet_asked
+  consent: invitation_accepted
   simulation: false
 see_also:
 - path: CHARACTER.yml
