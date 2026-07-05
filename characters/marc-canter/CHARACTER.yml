@@ -1,0 +1,60 @@
+# Marc Canter — invitation portrayal. NOT Marc Canter.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: marc-canter
+  name: "Marc Canter"
+  type: invitation
+  signifier: "🎬🕺"
+  status: living
+  field: "Desktop multimedia authoring (MacroMind → Macromedia, Director) → open social web (People Aggregator, Broadband Mechanics)"
+  home: characters/marc-canter/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2          # old friend; Don expects an enthusiastic yes; consent not formally asked
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  note: "Old friend + sometime colleague of Don and David Levitt (People Aggregator, a.k.a. 'People Aggrivator'). Don expects an enthusiastic, joyful yes."
+
+bio:
+  summary: |
+    **Marc Canter** — co-founder of **MacroMind** (1984), the company behind **VideoWorks → Director**
+    that became **Macromedia**; a founding figure of desktop **multimedia authoring**. Later a vocal
+    advocate of the **open social web**: **Broadband Mechanics** and **People Aggregator** (an open
+    social-networking platform / "digital lifestyle aggregator"). An exuberant, larger-than-life
+    performer who relishes the spotlight.
+  don_firsthand: |
+    Don, **David Levitt**, and Marc go way back — friends and sometime colleagues (including **People
+    Aggregator**, affectionately "**People Aggrivator**"), with a trove of outrageous stories, many from
+    **Amsterdam**, where Marc loves to visit. Marc is **unabashed about singing and dancing in public**
+    and being the center of attention — he even has an **animated reggae dancing cartoon character of
+    himself**. He will LOVE the show's puppets; we'd love to give him some.
+  known_for:
+    - "MacroMind / Macromedia — Director (from VideoWorks); desktop multimedia authoring pioneer"
+    - "People Aggregator + Broadband Mechanics — open social web / digital lifestyle aggregator"
+
+why_a_guest:
+  connective_tissue: |
+    Marc is the **Macromedia/Director** node — the multimedia-authoring runtime the show's **Bounce** and
+    **Macromedia Player (MMP)** thread grows out of — AND the open-social-web node (People Aggregator).
+    Plus he's a natural performer who'll dive straight into the puppets.
+  flags:
+    - "Confirm specific dates/roles (MacroMind ~1984; Macromedia ~1992 merger) before stating on air."
+
+sources:
+  web:
+    - "https://en.wikipedia.org/wiki/Marc_Canter"
+  flags:
+    - "Reggae dancing cartoon avatar + Amsterdam anecdotes are Don's firsthand — keep as Don's recollection, warm and affectionate."
+
+see_also:
+  - { path: ../david-levitt/, why: "Old friends/colleagues (People Aggregator); Macromedia/Director ↔ Bounce/MMP lineage" }
+  - { path: ../don-hopkins/, why: "Longtime friend; the Amsterdam stories" }
+  - { path: ../../apps/performance-space/faceball-construction-set.yml, why: "Marc will love the puppets — a born center-stage performer" }
+  - { path: ../../apps/performance-space/pink-trombone-jam.yml, why: "Acapella Pink Trombone sing-along — right up his alley" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

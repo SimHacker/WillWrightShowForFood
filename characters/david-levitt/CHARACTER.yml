@@ -74,6 +74,7 @@ see_also:
   - { path: media/README.md, why: "Sourced evidence hub — HN permalinks + videos by project (Pantomime, Bounce, ConnectedTV, AI music)" }
   - { path: ../don-hopkins/media/pantomime/, why: "Pantomime media (Bug Farm, soccer, Levitt calls) — Don was Chief Architect" }
   - { path: ../david-rosenthal/slots-all-the-way-down.md, why: "Pantomime's JSON object system → Don's JSON/YAML config → MOOLLM" }
+  - { path: ../marc-canter/, why: "old friends/colleagues (People Aggregator); Macromedia/Director ↔ Bounce/MMP" }
   - { path: ../jerry-martin/, why: "music-and-theory show pairing (Sims/SimCity composer)" }
   - { path: ../marvin-minsky/, why: "PhD advisor — AI music; memorial discussant" }
   - { path: ../cynthia-solomon/, why: "appears in Cynthia's video trove" }
