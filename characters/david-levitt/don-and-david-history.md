@@ -8,6 +8,14 @@ Neighbors: [levity-bounce-space-seed](../don-hopkins/levity-bounce-space-seed.md
 [body-electric-bounce-vr-stack](../don-hopkins/body-electric-bounce-vr-stack.md) ·
 [Rebounce](../../repo-shows/rebounce/README.md)
 
+## How we first met — spaghetti and jazz piano
+
+The very first time Don met David was during one of Don's **MIT AI Lab tourist pilgrimages**, when
+**Devon McCullough** brought Don over to David's for a **spaghetti dinner.** What Don remembers most:
+David was **noticeably obsessed with — and delighted by — playing jazz on the piano.** It made a
+**strong impression.** So years later, bumping into each other again at SIGGRAPH, they **instantly
+clicked** — this wasn't two strangers meeting, it was old kindred spirits picking right back up.
+
 ## MIT — the Music Hacker's Hangout
 
 At MIT, David was **office-mates with [Miller Puckette](../miller-puckette/README.md)** in what their
@@ -65,8 +73,9 @@ sprites, sounds, and animation**, with an **animated band of simulated character
 **solo.** *(From memory — David explains; Don thinks David built it for a **contract in New York with a
 TV network**.)*
 
-Don's honest reaction: **immediate envy** — *"HE did what I wanted to do!"* — so he **immediately
-forgave him.** David asked if Don wanted to **work with him.** Don definitely did. David was heading
+Because they'd already met over spaghetti and jazz piano years earlier, they **instantly clicked** —
+so Don's honest reaction was pure kinship plus **immediate envy** — *"HE did what I wanted to do!"* — so
+he **immediately forgave him.** David asked if Don wanted to **work with him.** Don definitely did. David was heading
 back to California to work at **Interval Research** (where Don had just given a talk), and could keep
 developing **Bounce on the side with Don's help** — while Don went to **Kaleida** to work on
 **DreamScape**, and played with Bounce on the side for David's company **"Levity."**
