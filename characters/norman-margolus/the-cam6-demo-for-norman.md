@@ -1,14 +1,16 @@
 ---
-status: draft
+
+## status: draft
+
 character_id: norman-margolus
 public: true
 audience: "Norman Margolus (as the intended audience) — and anyone who wants to learn"
 about: "Don's CAM6 simulator: what it is, its Forth heritage, and what Don made with Norman's magic"
 see_also:
-  - ../don-hopkins/cam6-cellular-automata-machine.md   # Don-side firsthand writeup
-  - ../../repo-shows/norman-margolus/SHOW.yml
-  - invitation.md
----
+
+- ../don-hopkins/cam6-cellular-automata-machine.md   # Don-side firsthand writeup
+- ../../repo-shows/norman-margolus/SHOW.yml
+- [invitation.md](http://invitation.md)
 
 # What I Made With Your Magic — the CAM6 Demo, for Norman
 
@@ -17,14 +19,11 @@ or ask for removal at any time.* · [Portrayal standards](../../schemas/portraya
 
 Norman —
 
-You and Tommaso wrote the book (*Cellular Automata Machines*, MIT Press, 1987) and built the
-machine (**CAM-6**). I read the book, simulated the machine, and then spent years playing on top of
-it. This is the guided tour of that — the demo I made **for you as the audience**, written down so
-it can be run, checked, and continued in the open.
+You and Tommaso wrote the book (*Cellular Automata Machines*, MIT Press, 1987) and built the machine (**CAM-6**). I read your book like a bible. I first played with a CAM-6 when Pete Dilworth brought one to a science fiction convention, and we hacked it in Forth all night. Later I made a pilgrimage to the MIT AI Lab as a tourist, and your wife walked in on Pete Dilworth and I playing in the dark on the CAM-6 in your office at NE43. Since I couldn't take it home with me I wrote a software simulation in C and compatible Forth rule table compiler / simulation orchestrator, and then spent years playing on top of it, porting it to different platforms, developing live performance interfaces for painting with overlapping CA. This is the guided tour of that — the demo I made **for you as the audience**, written down so it can be run, checked, and continued in the open.
 
-- **Watch the demo (made for you):** <https://www.youtube.com/watch?v=LyLMHxRNuck>
-- **Run it live:** <https://donhopkins.com/home/CAM6>
-- **Read the source:** [`CAM6.js`](https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js)
+- **Watch the demo (made for you):** [https://www.youtube.com/watch?v=LyLMHxRNuck](https://www.youtube.com/watch?v=LyLMHxRNuck)
+- **Run it live:** [https://donhopkins.com/home/CAM6](https://donhopkins.com/home/CAM6)
+- **Read the source:** `[CAM6.js](https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js)`
 - **Don-side writeup:** [cam6-cellular-automata-machine.md](../don-hopkins/cam6-cellular-automata-machine.md)
 
 ---
@@ -65,14 +64,14 @@ plumbing. **The table is the thing that stays true.**
 I have the receipts for this one:
 
 1. **x86 Forth on the CAM6 floppies.** I still have **disk images of the CAM6 floppies** with the
-   original **x86 Forth** — your and Toffoli's software stack, the way it shipped.
+  original **x86 Forth** — your and Toffoli's software stack, the way it shipped.
 2. **My own reimplementation in Mitch Bradley's Sun Forth.** I re-hosted that tech stack on a Sun
-   workstation using **Mitch Bradley's Forth** (the lineage that became Open Firmware). Same idea,
+  workstation using **Mitch Bradley's Forth** (the lineage that became Open Firmware). Same idea,
    new machine, new Forth.
 3. **C + FORTH.** A CAM6 simulator emulating the hardware, with Forth defining rules and driving it.
 4. **C++, then Python.** It grew a life of its own and got re-hosted again.
-5. **JavaScript — `CAM6.js` (today).** The high-level rules are written in **JS**, but they generate
-   the **identical lookup tables** the Forth once produced. It *used to* embed a real Forth
+5. **JavaScript —** `CAM6.js` **(today).** The high-level rules are written in **JS**, but they generate
+  the **identical lookup tables** the Forth once produced. It *used to* embed a real Forth
    interpreter (the JS-Forth — "do not stick your tongue into the power supply"); an off-the-shelf
    WASM/JS Forth could be retrofitted anytime so people can define rules in Forth again, live.
 6. **TypeScript — next.** A type-safe, self-describing rewrite (more on that below).
@@ -81,7 +80,11 @@ The point isn't the ports. The point is **feedback and iteration of feedback and
 each layer reads the previous one, keeps the table contract, and passes the description forward.
 **A file description through a file descriptor. Streams of streams.** The rule flows from your book,
 through Forth, through a table, through C, through JS, out to a screen, into a video made for you,
-back into this repo, and out again to whoever runs it next.
+back into this repo, and out again to whoever runs it next. *(That "streams of streams / handles on
+handles" idea is a whole OS design space — I mapped it out in
+[streams-of-streams-fd-passing-zero-copy.md](../don-hopkins/streams-of-streams-fd-passing-zero-copy.md):
+fd passing, Mach ports, and zero-copy GPU surfaces are exactly how you'd gang modular CA layers with
+no copies.)*
 
 ---
 
@@ -105,7 +108,7 @@ it over *every* neighborhood to bake the lookup table:
 
 And here is the **same idea** in `CAM6.js` — a JS "neighborhood function" plays the role of the Forth
 rule word, and the engine runs it across all neighborhoods to generate the **identical table**
-(representative — the real code is in [`CAM6.js`](https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js)):
+(representative — the real code is in `[CAM6.js](https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js)`):
 
 ```js
 // Conway's Life as a neighborhood function; the engine bakes it into the same lookup table.
@@ -175,11 +178,11 @@ Is my CAM6 engine an **emulator** or a **simulator**?
 
 - The **hardware** was a *simulator* — it simulates a cellular universe, no emulation involved.
 - My engine **emulates that simulator**, so it's an *emulator of a simulator* — which makes it a
-  simulator too. At what level does the distinction even matter?
+simulator too. At what level does the distinction even matter?
 - And the **Forth layer** is its own onion: the Forth DSL + table compiler is *simulating the ability
-  to (efficiently) program CA rules in Forth*. The **lookup table** is the output that the real
-  hardware and the software executor both run efficiently. I then **replaced the Forth DSL and
-  compiler with JS** — same table, different front end.
+to (efficiently) program CA rules in Forth*. The **lookup table** is the output that the real
+hardware and the software executor both run efficiently. I then **replaced the Forth DSL and
+compiler with JS** — same table, different front end.
 
 I think the honest answer is "**yes, all of the above, and the table is where the argument
 dissolves**" — but I'd love to hear **[Lars Brinkhoff](../lars-brinkhoff/README.md)** (emulation of
@@ -187,14 +190,28 @@ old machines is his native tongue) and you referee it. It's a great, live, white
 
 ---
 
-## Where it wants to go: TypeScript + visual dataflow
+## Where it wants to go: chapter playgrounds, built ground-up
 
-The current code is a gnarly, honest **monolith** — ugly, but with lovely bones to *cauldron out*. I
-want to revisit the rule/macro system as a **type-safe, self-describing TypeScript dataflow visual
-programming system**, in the spirit of **[Sandspiel Studio](https://studio.sandspiel.club/)** —
-where you *wire up* rules visually, each node self-describes its parameters and types, and the graph
-compiles to the same lookup tables. That's **Act 2** of the show: design the modern version together,
-on stream, in the open.
+You already gave me your blessing to take **chapters from *Cellular Automata Machines*** and build
+**interactive playgrounds** around particular sections and rules — thank you for that. I could do it
+by **stripping down, focusing, and repainting** the existing CAM6 code around one section at a
+time... but honestly, I think it's **easier to do it right from the ground up than to break down the
+monolith.** The current code is a gnarly, honest **monolith** — lovely bones, ugly joints. So **Act 2
+of the show is the design conversation**: what does a **modular, chapter-sized** CAM6 want to be?
+
+- **Pick a chapter, live.** We choose a section together and build the playground for it on stream. My
+  bias: the **physical simulations** — **billiard-ball logic**, **spin glasses / Ising-style energy
+  models**, lattice gases — *especially* the ones that live on your **Margolus neighborhood** (block
+  partitioning is what makes the momentum-conserving, reversible physics *work*). You explain **why
+  they're interesting**; I make them playable.
+- **Modular by construction.** Each rule/neighborhood is its own composable unit (the macro system,
+  grown up): a **type-safe, self-describing TypeScript dataflow visual programming system** in the
+  spirit of **[Sandspiel Studio](https://studio.sandspiel.club/)** — wire rules visually, every node
+  declares its own params and types, the graph compiles to the same **lookup tables**. A chapter
+  playground becomes a *small graph + a page of prose*, not a fork of a monolith.
+- **Gang the layers.** Multiple rule-planes as **connected layers** (the way you'd gang CAM-6 cards),
+  passed **zero-copy** between stages — see the
+  [streams-of-streams / zero-copy notes](../don-hopkins/streams-of-streams-fd-passing-zero-copy.md).
 
 ---
 
@@ -204,15 +221,16 @@ A lot of this is already on the record — we don't have to start cold. The plan
 async**: recent solo/dual/group clips plus archival video, contextualized into one coherent story,
 then re-opened as a **Repo Show anyone can contribute to and learn from**:
 
-- **The demo I made for you** — <https://www.youtube.com/watch?v=LyLMHxRNuck> (the spine of the story).
+- **The demo I made for you** — [https://www.youtube.com/watch?v=LyLMHxRNuck](https://www.youtube.com/watch?v=LyLMHxRNuck) (the spine of the story).
 - **Archival threads to locate + verify** (candidates, not confirmed citations): an early-1990s CAM6
-  demo and a **Long Now**-style talk on computation-as-physics. *(Norman / Long Now can confirm exact
-  links; flagged so we don't cite from memory.)*
+demo and a **Long Now**-style talk on computation-as-physics. *(Norman / Long Now can confirm exact
+links; flagged so we don't cite from memory.)*
 - **A CA looping fest** with the neighbors: **[Stephen Wolfram](../stephen-wolfram/README.md)** (a new
-  kind of science, the ruliad), **[Dave Tristram](../dave-tristram/README.md)** (graphics + CA
-  hacking), and of course **[Will Wright](../will-wright/README.md)** and **[Brian Eno](../brian-eno/README.md)**
-  (generative systems as an art medium), plus **[Jim Crutchfield](../jim-crutchfield/README.md)** and
-  **[Scott Draves](../scott-draves/README.md)**.
+kind of science, the ruliad), **[Dave Ackley](../dave-ackley/README.md)** (robust-first computing, the
+Movable Feast Machine, indefinitely scalable hardware — CA as *architecture*), **[Dave Tristram](../dave-tristram/README.md)**
+(graphics + CA hacking), and of course **[Will Wright](../will-wright/README.md)** and **[Brian Eno](../brian-eno/README.md)**
+(generative systems as an art medium), plus **[Jim Crutchfield](../jim-crutchfield/README.md)** and
+**[Scott Draves](../scott-draves/README.md)**.
 
 ---
 
@@ -236,8 +254,8 @@ then re-opened as a **Repo Show anyone can contribute to and learn from**:
 [Bit slicing](https://en.wikipedia.org/wiki/Bit_slicing) ·
 [Connections (James Burke)](https://en.wikipedia.org/wiki/Connections_(British_TV_series))
 
-**This project:** live app <https://donhopkins.com/home/CAM6> ·
-source [`CAM6.js`](https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js) ·
-demo <https://www.youtube.com/watch?v=LyLMHxRNuck>
+**This project:** live app [https://donhopkins.com/home/CAM6](https://donhopkins.com/home/CAM6) ·
+source `[CAM6.js](https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js)` ·
+demo [https://www.youtube.com/watch?v=LyLMHxRNuck](https://www.youtube.com/watch?v=LyLMHxRNuck)
 
 — Don Hopkins *(the User Interface Flower Child)* 🌀🔲

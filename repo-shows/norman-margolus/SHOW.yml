@@ -7,7 +7,7 @@ show:
   type: solo   # solo anchor with Norman; scales up to a "CA looping fest" if co-guests join
   host: Don Hopkins
   guests: ["Norman Margolus"]
-  with: ["Stephen Wolfram", "Dave Tristram", "Will Wright", "Brian Eno", "Jim Crutchfield", "Scott Draves"]   # dream co-guests for a CA looping fest
+  with: ["Stephen Wolfram", "Dave Ackley", "Dave Tristram", "Will Wright", "Brian Eno", "Jim Crutchfield", "Scott Draves"]   # dream co-guests for a CA looping fest
   character: characters/norman-margolus/
   topic: "Cellular automata machines, reversible computing, and the physics of computation — CAM-6, the Margolus neighborhood, billiard-ball computers, DLA/dendrite, and the Margolus–Levitin limit. Two acts: PLAY with Don's existing CAM6.js live, then DESIGN a modern version together."
   status: seed
@@ -20,7 +20,9 @@ why_him:
 
 arc:
   act_1_play: "Bring up the existing CAM6.js live and run the classic rules from the book, with Norman narrating — including the DLA/Margolus-dendrite rule (p.167, §15.7)."
-  act_2_design: "The current code is an honest 'ugly monolith' with great designs to cauldron out. Sketch, with Norman, what a modern web version wants to be."
+  act_2_design: "Norman has ALREADY granted permission to turn book chapters into interactive playgrounds. Design conversation: build it ground-up modular (easier than breaking down the monolith) — each rule a composable, self-describing unit. Pick a chapter live and design its playground."
+  permission: "Norman gave Don permission to take chapters from *Cellular Automata Machines* and make interactive playgrounds around particular sections and rules."
+  chapter_picks: "Don's bias — the physical simulations: billiard-ball logic, spin glasses / Ising energy models, lattice gases, especially on the Margolus neighborhood (block partitioning → reversible, momentum-conserving physics). Norman explains why they're interesting; Don makes them playable."
 
 dream_segments:
   - "CAM-6, live: bring up Don's existing CAM6.js (C+FORTH heritage, now JS generating the identical FORTH-era lookup tables; JS-Forth retrofittable) and run classic rules from the book."
@@ -33,7 +35,8 @@ dream_segments:
   - "Emulator or simulator? A live whiteboard argument — hardware simulator, emulated in software, with a Forth DSL that simulates programming CA rules efficiently. Ask Lars Brinkhoff to referee."
   - "'Who JITs the jitter?' — a James-Burke Connections cut: Forth-as-shader on Radio Shack TTL, the 256-byte lookup table (all you need for huge CA spaces, video tracking, ganged parallel layers), now V8 JIT-compiling the JS — and V8's speed tracing back to Self (Ungar/Smith) → HotSpot/Strongtalk (Lars Bak) → V8. Pairs with the David Ungar / Self show."
   - "Design act: cauldron the good bones out of the monolith into a modern web CAM6 — a type-safe, self-describing TypeScript dataflow visual programming system (Sandspiel Studio spirit) that compiles rule graphs to lookup tables."
-  - "CA looping fest: weave async with Stephen Wolfram (NKS/ruliad), Dave Tristram (graphics+CA), Will Wright + Brian Eno (generative systems as art), Jim Crutchfield (edge of chaos) + Scott Draves (generative art)."
+  - "Chapter playgrounds (permission granted): pick a chapter of the book and build an interactive playground live — physical sims first (billiard balls, spin glasses/Ising, lattice gases on the Margolus neighborhood). Modular, self-describing units, not a monolith fork."
+  - "CA looping fest: weave async with Stephen Wolfram (NKS/ruliad), Dave Ackley (robust-first / Movable Feast Machine / indefinitely scalable hardware), Dave Tristram (graphics+CA), Will Wright + Brian Eno (generative systems as art), Jim Crutchfield (edge of chaos) + Scott Draves (generative art)."
 
 archive_weave:
   approach: "A lot is already on the record — weave it async, contextualized into one coherent story, then re-open as a Repo Show anyone can contribute to."
@@ -51,6 +54,7 @@ ties_to:
   - ../../characters/norman-margolus/invitation.md
   - ../../characters/norman-margolus/the-cam6-demo-for-norman.md
   - ../../characters/stephen-wolfram/
+  - ../../characters/dave-ackley/
   - ../../characters/dave-tristram/
   - ../../characters/will-wright/
   - ../../characters/brian-eno/

@@ -54,6 +54,9 @@ Heat-diffusion overlays, echo trails, pie-menu control, and script record/playba
 2. **Design.** The code is a gnarly, honest **monolith** — "ugly, but with some nice designs to
    cauldron out." Sketch, with Norman, what a **modern web version** wants to be: sim in **WASM** or
    a **shader**, a clean rule/neighborhood API, an optional embedded Forth, shareable presets/scripts.
+   Norman has already OK'd turning **book chapters into interactive playgrounds** — build it
+   **ground-up modular** (each rule a self-describing unit) rather than break down the monolith, and
+   gang layers **zero-copy** ([streams-of-streams notes](streams-of-streams-fd-passing-zero-copy.md)).
 
 ## Credits & connections
 - **Source material:** Tommaso Toffoli & **Norman Margolus**, *Cellular Automata Machines* (MIT

@@ -1,0 +1,56 @@
+# Dave Ackley — invitation portrayal. NOT Dave Ackley.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: dave-ackley
+  name: "Dave Ackley"
+  type: invitation
+  signifier: "🧱🦋"
+  status: living
+  field: "Computer scientist — robust-first computing, indefinitely scalable architecture; the Movable Feast Machine + T2 Tile Project; Prof. Emeritus, University of New Mexico"
+  home: characters/dave-ackley/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+  note: "Public-source portrayal + Don's own extensive writing about Ackley's work (Hacker News). Dave may edit, reduce, or delete anytime."
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/dave-ackley/
+
+bio:
+  summary: "**Dave Ackley** (David H. Ackley) — computer scientist and **Professor Emeritus at the University of New Mexico**, best known for **robust-first computing** and **indefinitely scalable** (best-effort, tile-based) computer architecture. He built the **Movable Feast Machine** — a spatial computing substrate where programs are living, self-repairing patterns rather than fragile deterministic code — and the **T2 Tile Project**, physical hardware you can literally bolt together edge-to-edge to grow a computer with no global clock and no single point of failure. Decades earlier he co-authored the classic **Boltzmann machine** learning paper (Ackley, Hinton & Sejnowski, 1985). His mantra — *'a crashed system is infinitely wrong'* — inspired MOOLLM's **robust-first** ambient skill."
+  don_epithets: "Don's affectionate handles for him (Don's words, not titles): 'Patron Saint of Robust-First Architecture,' 'Moveable Feast Machine' maker, 'Emacs hacker,' 'Infinitely Scalable Hardware Maker,' and 'T2 Tile Project Borg Queen.'"
+
+why_him:
+  robust_first: "Reframes the whole field: correctness and efficiency are luxuries; SURVIVAL comes first. A system that crashes is infinitely wrong. This is a genuinely different value system for computing — and a direct sibling to Margolus's physics-respecting, locality-first CA."
+  movable_feast_machine: "The MFM: cellular-automata-descended spatial computing where code is a self-repairing pattern that diffuses, heals, and reproduces. CA as an *architecture for real machines*, not just a model."
+  t2_tiles: "Indefinitely scalable HARDWARE — tiles with only local, asynchronous communication; add tiles to add compute, forever, with no global coordination. The physical answer to 'what if the hardware were as local as the CA?'"
+  neural_roots: "Co-author of the 1985 Boltzmann machine paper with Geoffrey Hinton and Terry Sejnowski — a founding document of the neural-net revival."
+  don_connection: "Don has written about Ackley's work extensively and often on Hacker News; robust-first is an ambient skill in Don's MOOLLM."
+
+show_suggestions:
+  - { seed: ../../repo-shows/dave-ackley/, what: "Solo — robust-first computing: why survival beats correctness, live Movable Feast Machine demos, the T2 tiles" }
+  - { seed: ../../repo-shows/norman-margolus/, what: "CA looping fest — Ackley + Margolus + Wolfram: locality, reversibility, and indefinitely scalable spatial computing" }
+
+sources:
+  wikipedia: null
+  web:
+    - { title: "Robust-first computing / Movable Feast Machine (project site)", url: "https://movablefeastmachine.org/" }
+    - { title: "T2 Tile Project", url: "https://t2tile.com/" }
+    - { title: "Dave Ackley — YouTube (robust-first talks, MFM + T2 demos)", url: "https://www.youtube.com/@DaveAckley" }
+  papers:
+    - { title: "A Learning Algorithm for Boltzmann Machines (Cognitive Science, 1985)", authors: "Ackley, Hinton, Sejnowski" }
+    - { title: "Beyond Efficiency (Communications of the ACM, 2013)", authors: "David H. Ackley" }
+  blogs: []
+
+see_also:
+  - { path: CARD.yml, why: "Invokable abilities for show segments" }
+  - { path: ../norman-margolus/, why: "CA looping fest co-guest — locality/reversibility ↔ robust-first spatial computing" }
+  - { path: ../stephen-wolfram/, why: "CA looping fest co-guest" }
+  - { path: ../don-hopkins/, why: "Host — wrote about Ackley on HN; robust-first is a MOOLLM ambient skill" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

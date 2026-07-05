@@ -47,8 +47,13 @@ I picture **two acts**:
 - **Act 1 — Play.** Fire up the existing thing and run the classic rules: the **Margolus
   neighborhood** (how partitioning makes a rule **reversible**, live), **Critters** and billiard-ball
   computers running **backward**, and the **dendrite/DLA** rule aggregating in real time.
-- **Act 2 — Design.** The code is a gnarly, honest **monolith** — but there are lovely bones in there
-  to *cauldron out*. I'd love to sketch, with you, what a **modern web version** wants to be.
+- **Act 2 — Design.** You've already given me your blessing to turn **chapters of the book** into
+  **interactive playgrounds** — thank you. I could strip-down-and-repaint the old monolith around one
+  section at a time, but I think it's **easier to build it right from the ground up**: a **modular,
+  chapter-sized** CAM6 where each rule is a composable, self-describing unit. So Act 2 is us picking a
+  chapter live and designing its playground — my bias is the **physical simulations** (**billiard
+  balls**, **spin glasses / Ising energy models**, lattice gases) *especially on your Margolus
+  neighborhood*, with you explaining **why they're interesting** while I make them playable.
 
 Other threads, your pick:
 
