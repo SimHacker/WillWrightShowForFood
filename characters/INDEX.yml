@@ -91,7 +91,7 @@ guests:
   arthur-van-hoff: { invitation_status: not_yet_asked }
   audrey-tang: { invitation_status: not_yet_asked, note: "Women & trans pioneers — interview while living: Taiwan Digital Minister, g0v, radical transparency" }
   ben-cerveny: { invitation_status: not_yet_asked, show_seed: repo-shows/ben-cerveny.yml, warm_contact: true, channel: Signal }
-  ben-shneiderman: { invitation_status: draft, show_seed: repo-shows/ben-shneiderman-series.yml, priority: send_now, note: "CHI'88 pie-menu co-author; direct manipulation; group seed ben-and-heinz-pie-menus.yml" }
+  ben-shneiderman: { invitation_status: draft, show_seed: repo-shows/ben-shneiderman-series.yml, priority: send_now, note: "CHI'88 pie-menu co-author; direct manipulation; group seed ben-and-heinz-pie-menus.yml. HyperTIES director (UMD HCIL) — Don built the NeWS/PostScript version; living-emulator reincarnation proposal at characters/don-hopkins/hyperties-reincarnation.md (Don has Forth/MockLisp/C/markup/docs/NeWS PostScript + XML-converted DBs; documenting-our-work angle)." }
   bret-victor: { invitation_status: not_yet_asked }
   brian-harvey: { invitation_status: not_yet_asked, show_seed: repo-shows/brian-harvey/ }
   brian-eno: { invitation_status: dream_guest, show_seed: repo-shows/brian-eno/, note: "Generative art/music; warm intro via Will after first weave; Scott Draves 2006 evening" }

@@ -17,7 +17,7 @@ Ben —
 You co-authored the **CHI'88** pie-menu study with me, Mark Weiser, and John Callahan — the empirical
 paper that turned radial menus from a neat idea into something we could **measure** (Fitts, errors,
 direct manipulation). I've been shipping pie menus ever since — SimCity, The Sims, NeWS, MOOLLM —
-always knowing **PIXIE (1969)** came first. I'd like to invite you to a **Repo Show**: a Micropolis
+always knowing **PIXIE (1969)** came first. I'd like to invite you to a **Repo Show**: a Repo Show
 Class conversation whose stage is a public GitHub repo, following through to working code anyone
 can browse without an account. **Show, don't tell.**
 
@@ -30,6 +30,12 @@ can browse without an account. **Show, don't tell.**
   spans 1969 → 1988 → today. Optional; solo with you is plenty.
 - **Direct manipulation lineage** — HyperTIES, HCIL, calm/considerate computing kinship (Mark Weiser
   memorial discussant thread).
+- **Reincarnate HyperTIES — a living emulator.** This is the one I think you'd love: I still have the
+  whole stack — **Forth, MockLisp, C, the HyperTIES markup language, the docs, the NeWS PostScript**,
+  and I even **converted the databases to XML**. All I need to bring it back **pixel-perfect in the
+  web browser** — a *living* emulator, embedded PostScript applets and all. We talked about
+  **documenting our work**; a running system is the best documentation there is. Full plan:
+  [`../don-hopkins/hyperties-reincarnation.md`](../don-hopkins/hyperties-reincarnation.md).
 - **Implement on air** — pie-menu slices on the Micropolis command bus; data to back the rhetoric.
 
 **Format:** Remote is fine; in-person if we overlap. **Zero homework.** Warm room, not gotcha-podcast.
@@ -39,6 +45,7 @@ can browse without an account. **Show, don't tell.**
 | Topic | Link |
 | --- | --- |
 | **Show series seed** | [`repo-shows/ben-shneiderman-series.yml`](../../repo-shows/INDEX.yml) |
+| **HyperTIES living emulator** | [`../don-hopkins/hyperties-reincarnation.md`](../don-hopkins/hyperties-reincarnation.md) · media [`../don-hopkins/media/hyperties/`](../don-hopkins/media/hyperties/) |
 | **Group seed (you + Heinz)** | [`repo-shows/ben-and-heinz-pie-menus.yml`](../../repo-shows/ben-and-heinz-pie-menus.yml) |
 | **Don's pie-menu thread** (PIXIE credited) | [`../don-hopkins/pie-menus-chi-88-and-beyond.md`](../don-hopkins/pie-menus-chi-88-and-beyond.md) |
 | **CHI'88 paper** | [`../don-hopkins/portrayal/presentations.yml`](../don-hopkins/portrayal/presentations.yml) |

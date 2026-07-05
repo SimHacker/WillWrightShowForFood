@@ -23,11 +23,24 @@ invitation:
 
 
 bio:
-  summary: "**Ben Shneiderman** — HCI pioneer who coined \"**direct manipulation**,\" invented embedded/highlighted hyperlinks, and founded the University of Maryland HCIL."
+  summary: "**Ben Shneiderman** — HCI pioneer who coined \"**direct manipulation**,\" invented embedded/highlighted hyperlinks, and founded the University of Maryland HCIL. Director of **HyperTIES** (from TIES, The Interactive Encyclopedia System) — an early hypermedia system whose highlighted, selectable embedded links are the ancestor of the modern hyperlink."
+
+hyperties:
+  role: "Director of HyperTIES at UMD HCIL. Don built the NeWS/PostScript version (embedded PostScript applets on hypermedia pages). Ben & Don discussed documenting the work — a living, pixel-perfect browser emulator would be the ideal documentation."
+  reincarnation: ../don-hopkins/hyperties-reincarnation.md
+  media: ../don-hopkins/media/hyperties/
+  collaborators: ["Catherine Plaisant (HCIL)", "don-hopkins (NeWS/PostScript version)"]
 
 sources:
   wikipedia: null
   web:
-    []
+    - { title: "UMD HCIL — HyperTIES history", url: "http://www.cs.umd.edu/hcil/hyperties/" }
   papers: []
   blogs: []
+
+see_also:
+  - { path: ../don-hopkins/hyperties-reincarnation.md, why: "HyperTIES pixel-perfect living-emulator reincarnation proposal (documenting the work together)" }
+  - { path: ../don-hopkins/media/hyperties/, why: "HyperTIES media — road-pizza diagram, NeWS tape, NeMACS shell, Hubble demo" }
+  - { path: ../../repo-shows/news-postscript-window-system.yml, why: "NeWS reunion — HyperTIES rode on NeWS PostScript" }
+  - { path: ../../process/trails/augmentation-and-hypertext.md, why: "Hypertext lineage trail" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }
