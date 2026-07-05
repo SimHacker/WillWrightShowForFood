@@ -71,8 +71,12 @@ city; expose the sim's variables and policies for constructionist play — the t
 ### 4. Bounce — objects-on-wires dataflow
 A merciful **TypeScript reincarnation** of **David Levitt**'s Bounce (Pascal → mangled C → TS), the
 patch-cord/data-flow complement to Snap!'s blocks — and a live-media wiring layer for the other three.
+The reincarnation has a home: **[Rebounce](../../repo-shows/rebounce/README.md)** — check in the source
+and rewrite it together (hand + AI), seeded by David, Don, and **Jaron Lanier**.
 - Audience/funders: media/VR heritage (VPL/Body Electric), realtime-media artists.
-- Docs: [Levity / Bounce / Space Seed](levity-bounce-space-seed.md).
+- Docs: [Rebounce](../../repo-shows/rebounce/README.md) ·
+  [Body Electric / Bounce VR stack](body-electric-bounce-vr-stack.md) ·
+  [Levity / Bounce / Space Seed](levity-bounce-space-seed.md).
 
 ## Why "fundable, each"
 
@@ -86,7 +90,8 @@ patch-cord/data-flow complement to Snap!'s blocks — and a live-media wiring la
 ## Collaborators & shows
 
 - **Snap!:** [Jens Mönig](../jens-monig/README.md) + [Brian Harvey](../brian-harvey/README.md) —
-  integration partners and dream co-hosts for the visual-CA episode.
+  integration partners and dream co-hosts for the visual-CA episode (they already have a headline show
+  seed: [`repo-shows/snap-logo-brian-jens.yml`](../../repo-shows/snap-logo-brian-jens.yml)).
 - **Bounce:** [David Levitt](../david-levitt/README.md) — Hookup/Body Electric/Bounce; TS reincarnation.
 - **CAM6:** [Norman Margolus](../norman-margolus/README.md) — chapter playgrounds (permission granted).
 - **VitaMoo:** [Jeff Adkins](../jeff-adkins/README.md) — Sims character rendering/animation.

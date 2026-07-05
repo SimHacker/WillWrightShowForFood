@@ -1,0 +1,52 @@
+# SHOW — Rebounce — a salute to Bounce / Body Electric (collective hand + AI reimplementation jam)
+# Planted seed. Inherits from the SHOW skill (/skills/repo-show).
+
+show:
+  id: rebounce
+  title: "Rebounce — Saluting Bounce / Body Electric, Rewritten Together"
+  type: group   # open jam — solo attempts + pairs + a live group session
+  host: Don Hopkins
+  guests: ["David Levitt", "Jaron Lanier"]
+  with: ["Jens Mönig", "Brian Harvey", "Tom Demeyer", "Steina Vasulka"]   # visual-programming neighbors, open to many
+  character: characters/david-levitt/
+  topic: "A nominal salute to Bounce (né Body Electric): check in Don's old Bounce source, and invite many people to reimplement it — by hand and with AI, competing, cooperating, and exchanging ideas — chasing the live-coding groove in a modern (TypeScript/web) stack. Seeded by David & Don's discussions, and Jaron's."
+  status: seed
+  consent: not_yet_asked
+
+why_this:
+  the_salute: "Bounce/Body Electric was one of the most productive, delightful visual programming languages Don ever used — live-coding a running VR world before the phrase existed. Rebounce honors it by bringing it back."
+  the_source: "Don has the old Bounce source (Pascal → machine-mangled C, Mac heritage). Check it in as the seed artifact; it's the reference, not the destination."
+  the_jam: "Many people rewrite it in parallel — by hand, with AI, and hybrid — competing AND cooperating, cross-pollinating ideas. Best-of-N energy: many attempts, shared learnings, no single 'winner' required."
+  the_seeds: "David Levitt (Hookup → Body Electric → Bounce) and Don seed the design discussion; Jaron Lanier (Body Electric's original author, VR legend) warmly invited to riff on the origins."
+
+seed_history:
+  from: ../../characters/don-hopkins/body-electric-bounce-vr-stack.md
+  highlights:
+    - "Live-coding a running simulation — edit while it runs, it keeps going (weird when buggy)."
+    - "Swivel 3D transform-tree data type as the skeleton; parameters projected in real time."
+    - "UDP packet modules driving TWO SGI renderers, one per eye (stereo VR); the Atlanta hub."
+    - "One real-time nervous system: MIDI, Ethernet, Polhemus, DataGlove, headsets, Convolvotron."
+    - "Typed, colored wires carrying whole JSON-like ('jsonic') COM objects — pass a whole object as one, beating the max-6-parameters nested-module limit. Ancestor of Pantomime JSON → MOOLLM."
+
+format:
+  live: true
+  audience_qa: true
+  structure: "Open, forkable jam — anyone can submit an attempt (by-hand, AI-assisted, or hybrid). Live group session with David + Jaron seeding; solo/pair attempts welcome async."
+  competition_and_cooperation: "Compete on approach, cooperate on ideas — publish every attempt, diff them, lift the best patterns. See process/ai-offs.yml + best-of-N."
+  ground_rules: "NEVER gateway; ALWAYS invite duplication. Full credit to originals (David, Jaron) and to every contributor."
+
+deliverables:
+  - "repo-shows/rebounce/source/ — Don's original Bounce source (to be checked in by Don)."
+  - "A modern (TypeScript/web) patch-cord dataflow core with typed, structured-object wires and live-coding."
+  - "Bridge to the Snap! visual-engines vision (Bounce = the patch-cord half)."
+
+ties_to:
+  - ../../characters/don-hopkins/body-electric-bounce-vr-stack.md
+  - ../../characters/don-hopkins/levity-bounce-space-seed.md
+  - ../../characters/don-hopkins/snap-visual-engines-fundable-goals.md
+  - ../../characters/david-levitt/
+  - ../../characters/jaron-lanier/
+  - ../../characters/jens-monig/
+  - ../../characters/brian-harvey/
+  - ../../process/trails/visual-programming-patch-cord.md
+  - ../../process/ai-offs.yml

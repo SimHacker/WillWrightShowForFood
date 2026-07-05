@@ -23,6 +23,8 @@ Real-time visual programming for music, video, and VR — the lineage Don docume
 | [**Jens Mönig / Brian Harvey**](../../characters/jens-monig/README.md) | Snap! — blocks without lines, macros, Scheme semantics |
 | [**Don — Snap! visual engines (fundable)**](../../characters/don-hopkins/snap-visual-engines-fundable-goals.md) | Integrate engines with Snap! instead of building from scratch — CAM6 + VitaMoo + Micropolis + Bounce, each a fundable goal |
 | [**Don — Levity Bounce**](../../characters/don-hopkins/levity-bounce-space-seed.md) | COM on wires, Space Seed demo |
+| [**Don — Body Electric / Bounce VR stack**](../../characters/don-hopkins/body-electric-bounce-vr-stack.md) | Swivel 3D transform tree, dual-SGI stereo over UDP, live-coding, typed colored wires carrying whole JSON-ish COM objects |
+| [**Rebounce (show)**](../../repo-shows/rebounce/README.md) | Salute Bounce — check in the source, rewrite it together (hand + AI), seeded by David + Don + Jaron |
 | [**Don — DRAKON / SimAntics**](../../characters/don-hopkins/drakon-control-flow-vs-dataflow.md) | Control flow vs data flow — Grasshopper, SimAntics, Bounce (HN 10100932) |
 | [**Steina Vasulka**](../../characters/steina-vasulka/README.md) | Image/ine co-creator |
 

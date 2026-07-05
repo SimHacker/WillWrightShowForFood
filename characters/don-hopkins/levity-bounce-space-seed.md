@@ -40,7 +40,10 @@ lab era (parallel threads, not one port of the other).
 ## Reincarnation note
 
 Don still has **Bounce source** (Pascal → machine-mangled C, Mac heritage) — candidate for merciful
-**TypeScript** reimplementation on a future Repo Show.
+**TypeScript** reimplementation on a future Repo Show. That show has a name and a plan:
+**[Rebounce](../../repo-shows/rebounce/README.md)** — check in the source and rewrite it together, by
+hand and with AI, competing and cooperating, seeded by David + Don (+ Jaron). See also Don's firsthand
+[Body Electric / Bounce VR-stack history](body-electric-bounce-vr-stack.md).
 
 ## TODO (sourcing)
 

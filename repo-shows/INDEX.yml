@@ -29,6 +29,7 @@ shows:
     walter-bender-olpc/SHOW.yml: "Walter Bender — OLPC introducing-the-players; Sugar roadmap; Eben Moglen GPL; View Source."
     steve-wozniak/:            "Topic-less kickoff with Steve Wozniak. Apple II, 6502, open hardware, and browser-based emulators."
     terry-winograd/:           "★ FOREBEAR SHOW. Terry Winograd as the dragon with the treasure trove of videos (CS547 archive). Stands explicitly on Terry's shoulders + the shoulders of all his great guests (Will 1996, Gosling Java 1995, Joy Mountford 1994, Raskin, Norman, etc.). Archive recovery, modern runnable seeds, Repo Show Class continuation, Connections series spine. (Pie menus = Don's own thread, not Joy Mountford's — corrected.)"
+    rebounce/:                 "★ REBOUNCE. Salute to Bounce (né Body Electric): check in Don's original Bounce source, and invite many people to rewrite it — by hand AND with AI, competing + cooperating + exchanging ideas. Seeded by David Levitt + Don's discussions; Jaron Lanier (Body Electric's original author) guest of honor for the origin story. The patch-cord/dataflow half of the Snap! visual-engines vision. History: ../characters/don-hopkins/body-electric-bounce-vr-stack.md."
   seeds:
     group:
       building-the-sims.yml:    "The Sims team reunion: Jamie Doornbos, Eric Bowman, Patrick Barrett, Don (programmers) + Jim Mackraz (manager) + Will. Designers Chris/Claire may join. Flagship episode: will-wright/sims-team-steering-committee-playthrough/ (PLAY the 1998 build)."

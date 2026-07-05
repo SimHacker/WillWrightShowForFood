@@ -70,8 +70,15 @@ sources:
     - "ConnectedTV XML-based custom-UI editor; IR-code capture + community sharing site"
     - "Bounce 'Space Seed' demo; MediaFlow at Interval — confirm public links"
 
+rebounce:
+  role: "Co-creator of the Bounce lineage (Hookup → Body Electric → Bounce); with Don, seeds the Rebounce design discussion and the source check-in."
+  see: ../../repo-shows/rebounce/
+  history: ../don-hopkins/body-electric-bounce-vr-stack.md
+
 see_also:
   - { path: media/README.md, why: "Sourced evidence hub — HN permalinks + videos by project (Pantomime, Bounce, ConnectedTV, AI music)" }
+  - { path: ../don-hopkins/body-electric-bounce-vr-stack.md, why: "Don's firsthand Bounce / Body Electric VR-stack history" }
+  - { path: ../../repo-shows/rebounce/, why: "Rebounce — salute + hand+AI reimplementation jam, seeded by David + Don (+ Jaron)" }
   - { path: ../don-hopkins/media/pantomime/, why: "Pantomime media (Bug Farm, soccer, Levitt calls) — Don was Chief Architect" }
   - { path: ../david-rosenthal/slots-all-the-way-down.md, why: "Pantomime's JSON object system → Don's JSON/YAML config → MOOLLM" }
   - { path: ../marc-canter/, why: "old friends/colleagues (People Aggregator); Macromedia/Director ↔ Bounce/MMP" }
