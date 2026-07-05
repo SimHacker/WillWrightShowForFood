@@ -1,16 +1,14 @@
 ---
-
-## status: draft
-
+status: draft
 character_id: norman-margolus
 public: true
 audience: "Norman Margolus (as the intended audience) — and anyone who wants to learn"
 about: "Don's CAM6 simulator: what it is, its Forth heritage, and what Don made with Norman's magic"
 see_also:
-
-- ../don-hopkins/cam6-cellular-automata-machine.md   # Don-side firsthand writeup
-- ../../repo-shows/norman-margolus/SHOW.yml
-- [invitation.md](http://invitation.md)
+  - ../don-hopkins/cam6-cellular-automata-machine.md
+  - ../../repo-shows/norman-margolus/SHOW.yml
+  - ../../repo-shows/norman-margolus/invitation.md
+---
 
 # What I Made With Your Magic — the CAM6 Demo, for Norman
 
@@ -29,7 +27,7 @@ This is the guided tour of that — the demo I made **for you as the audience**,
 
 - **Watch the demo (made expressly for you, gets extremely deep and technical, and shows lots of FORTH code, which others may make of what they wish):** [https://www.youtube.com/watch?v=LyLMHxRNuck](https://www.youtube.com/watch?v=LyLMHxRNuck)
 - **Run it live:** [https://donhopkins.com/home/CAM6](https://donhopkins.com/home/CAM6) 
-- **Read the insane monolithic source with it's own object system:** `[CAM6.js](https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js)`
+- **Read the insane monolithic source with its own object system:** [CAM6.js](https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js)
 - **Don-side writeup:** [cam6-cellular-automata-machine.md](../don-hopkins/cam6-cellular-automata-machine.md)
 
 ---
@@ -73,18 +71,14 @@ plumbing. **The table is the thing that stays true.**
 
 I have the receipts for this one:
 
-1. **x86 Forth on the CAM6 floppies.** I still have **disk images of the CAM6 floppies** with the
-  original **x86 Forth** — your and Toffoli's software stack, the way it shipped.
-2. **My own reimplementation in Mitch Bradley's Sun Forth.** I re-hosted that tech stack on a Sun
-  workstation using **Mitch Bradley's Forth** (the lineage that became Open Firmware). Same idea,
-   new machine, new Forth.
-3. **C + Mitch Bradley's Sun Forth.** CAM6 hardware emulator in **C**; **book-compatible Forth rules**
-   compiled in Sun Forth → **saved lookup tables** (the artifact that matters).
-4. **C++, then Python.** Re-hosted again; same table contract.
-5. **JavaScript —** `CAM6.js` **(today).** First **imported the Forth-compiled lookup tables** into
-   JS. Then rewrote **rules and the rule compiler in JS** — easier and better. **No embedded Forth**
-   in the shipped browser stack; JS-Forth in the repo is only a **possible extension**.
-6. **TypeScript — next.** A type-safe, self-describing rewrite (more on that below).
+1. **x86 Forth on the CAM6 floppies.** Disk images of Toffoli & Margolus's shipped stack.
+2. **C emulator + Mitch Bradley's Sun Forth.** Book-compatible Forth rules compiled to **saved lookup
+   tables**; C runs the hardware simulation (Open Firmware lineage Forth).
+3. **C++, then Python.** Re-hosted; same table contract.
+4. **JavaScript —** `CAM6.js` **(today).** **Imported** the Forth-compiled lookup tables, then rewrote
+   **rules and the rule compiler in JS** — easier and better. No embedded Forth in the shipped browser
+   stack; JS-Forth in the repo is only a **possible extension**.
+5. **TypeScript — next.** A type-safe, self-describing rewrite (more on that below).
 
 The point isn't the ports. The point is **feedback and iteration of feedback and iteration itself** —
 each layer reads the previous one, keeps the table contract, and passes the description forward.
@@ -120,7 +114,7 @@ it over *every* neighborhood to bake the lookup table:
 
 And here is the **same idea** in `CAM6.js` — a JS "neighborhood function" plays the role of the Forth
 rule word, and the engine runs it across all neighborhoods to generate the **identical table**
-(representative — the real code is in `[CAM6.js](https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js)`):
+(representative — the real code is in [CAM6.js](https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js)):
 
 ```js
 // Conway's Life as a neighborhood function; the engine bakes it into the same lookup table.
@@ -284,7 +278,7 @@ Movable Feast Machine, indefinitely scalable hardware — CA as *architecture*),
 [Connections (James Burke)](https://en.wikipedia.org/wiki/Connections_(British_TV_series))
 
 **This project:** live app [https://donhopkins.com/home/CAM6](https://donhopkins.com/home/CAM6) ·
-source `[CAM6.js](https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js)` ·
+source [CAM6.js](https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js) ·
 demo [https://www.youtube.com/watch?v=LyLMHxRNuck](https://www.youtube.com/watch?v=LyLMHxRNuck)
 
 — Don Hopkins *(the User Interface Flower Child)* 🌀🔲
