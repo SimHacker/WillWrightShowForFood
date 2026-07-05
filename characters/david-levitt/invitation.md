@@ -42,6 +42,20 @@ to working code and credited ideas, in the open.
   Martin** for the *music-and-theory* show.
 - **Remembering Marvin Minsky** — together.
 
+## Rebounce — let's salute Bounce, together 🔌🌀
+The one I'm most excited to build with you: **[Rebounce](../../repo-shows/rebounce/README.md)** — a
+nominal salute to **Bounce** (né **Body Electric**). I'd **check in the old source** (I still have it —
+Pascal → machine-mangled C), and we'd invite **many people to rewrite it together — by hand and with
+AI, competing, cooperating, exchanging ideas** — chasing that live-coding groove in a modern
+(TypeScript/web) stack. **You and I seed the design discussion**; **Jaron** is the guest of honor for
+the origin story. I wrote up the stack as I remember it — the **Swivel 3D transform-tree skeleton**
+projected in real time, **UDP to two SGI renderers (one per eye)**, the Atlanta input hub
+(Polhemus / DataGlove / Convolvotron), and those **typed, colored wires carrying whole JSON-like COM
+objects** to beat the 6-parameter limit — for you to correct and enrich:
+[Body Electric / Bounce VR stack](../don-hopkins/body-electric-bounce-vr-stack.md) · full proposal:
+[rebounce.md](../don-hopkins/rebounce.md). (Bounce is also the **patch-cord half** of the
+[Snap! visual-engines vision](../don-hopkins/snap-visual-engines-fundable-goals.md).)
+
 ## The guests you're perfect alongside
 Dream-guest dirs + show proposals are already going, and I need your help reaching some of them:
 - **[Laurie Anderson](../laurie-anderson/)** — I'd love her; do you know *anyone* from her Interval circle?

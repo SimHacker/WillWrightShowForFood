@@ -85,6 +85,16 @@ reincarnation candidate.
 threads, not one port of the other). Don calls Bounce *"one of the most productive, delightful visual
 programming languages I've used."*
 
+**Rebounce — the salute + reimplementation jam.** The show that brings it back:
+[**Rebounce**](../../repo-shows/rebounce/README.md) — check in the old Bounce source and invite many
+people to rewrite it **by hand and with AI, competing and cooperating**, seeded by **David + Don**
+(and **Jaron** for the origin story). Don's firsthand stack writeup — the **Swivel 3D transform-tree
+skeleton** projected in real time, **UDP → two SGI renderers (one per eye)**, the Atlanta input hub
+(MIDI / Polhemus / DataGlove / Convolvotron), live-coding while running, and **typed colored wires
+carrying whole JSON-like COM objects** (beating the 6-parameter limit; ancestor of Pantomime JSON →
+MOOLLM): [`../don-hopkins/body-electric-bounce-vr-stack.md`](../don-hopkins/body-electric-bounce-vr-stack.md).
+Full proposal: [`../don-hopkins/rebounce.md`](../don-hopkins/rebounce.md).
+
 Sourced: [`media/README.md`](media/README.md#bounce--body-electric--hookup-visual-programming-for-vr--music) ·
 Trail: [`../../process/trails/visual-programming-patch-cord.md`](../../process/trails/visual-programming-patch-cord.md) ·
 Don: [`../don-hopkins/levity-bounce-space-seed.md`](../don-hopkins/levity-bounce-space-seed.md)

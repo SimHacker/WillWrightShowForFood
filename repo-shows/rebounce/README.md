@@ -40,6 +40,7 @@ credit to the originals and to every contributor.
 Part of the [Snap! visual-engines vision](../../characters/don-hopkins/snap-visual-engines-fundable-goals.md)
 — Bounce is the **patch-cord / dataflow** half (blocks author rules; patch-cords wire live streams).
 
-See [`SHOW.yml`](SHOW.yml). Consent **not yet asked**.
+Full proposal: [`rebounce.md`](../../characters/don-hopkins/rebounce.md). See [`SHOW.yml`](SHOW.yml).
+Consent **not yet asked**.
 
 — Don Hopkins, Repo Show Class

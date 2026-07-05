@@ -41,6 +41,7 @@ deliverables:
   - "Bridge to the Snap! visual-engines vision (Bounce = the patch-cord half)."
 
 ties_to:
+  - ../../characters/don-hopkins/rebounce.md
   - ../../characters/don-hopkins/body-electric-bounce-vr-stack.md
   - ../../characters/don-hopkins/levity-bounce-space-seed.md
   - ../../characters/don-hopkins/snap-visual-engines-fundable-goals.md
