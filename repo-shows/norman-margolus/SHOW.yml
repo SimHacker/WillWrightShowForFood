@@ -31,6 +31,7 @@ dream_segments:
   - "The Margolus–Levitin limit: how fast can anything compute? Energy as the bound."
   - "Layers of iteration: x86 Forth on the CAM6 floppies → Don's reimpl in Mitch Bradley's Sun Forth → C → JS (identical tables) → TypeScript next. The lookup table is the constant; 'streams of streams.'"
   - "Emulator or simulator? A live whiteboard argument — hardware simulator, emulated in software, with a Forth DSL that simulates programming CA rules efficiently. Ask Lars Brinkhoff to referee."
+  - "'Who JITs the jitter?' — a James-Burke Connections cut: Forth-as-shader on Radio Shack TTL, the 256-byte lookup table (all you need for huge CA spaces, video tracking, ganged parallel layers), now V8 JIT-compiling the JS — and V8's speed tracing back to Self (Ungar/Smith) → HotSpot/Strongtalk (Lars Bak) → V8. Pairs with the David Ungar / Self show."
   - "Design act: cauldron the good bones out of the monolith into a modern web CAM6 — a type-safe, self-describing TypeScript dataflow visual programming system (Sandspiel Studio spirit) that compiles rule graphs to lookup tables."
   - "CA looping fest: weave async with Stephen Wolfram (NKS/ruliad), Dave Tristram (graphics+CA), Will Wright + Brian Eno (generative systems as art), Jim Crutchfield (edge of chaos) + Scott Draves (generative art)."
 
@@ -56,6 +57,7 @@ ties_to:
   - ../../characters/jim-crutchfield/
   - ../../characters/scott-draves/
   - ../../characters/lars-brinkhoff/
+  - ../../characters/david-ungar/     # Self → V8 JIT lineage ("who jits the jitter?")
   - ../../characters/henry-minsky/
   - ../../characters/don-hopkins/
   - ../../characters/don-hopkins/cam6-cellular-automata-machine.md

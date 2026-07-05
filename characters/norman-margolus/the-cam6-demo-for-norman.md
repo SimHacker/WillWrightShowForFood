@@ -124,6 +124,39 @@ table. The executor never knows the difference.
 
 ---
 
+## Who JITs the jitter? (a Connections detour)
+
+*Cut, James-Burke style, between the parts that don't know they're related.*
+
+In this world, **Forth is a shader language.** The rule you write is the shader; the **TTL circuitry
+on the CAM-6's PC card — chips you could buy at Radio Shack — executed it like a GPU**, through a
+**lookup table that mapped directly to the hardware**, the way **bitslice microcode** or parallel GPU
+instructions do. The topology and scale were just wildly different: *much* smaller and simpler. In
+its essence, a **256-byte lookup table** — 8 bits of neighborhood in, 8 bits of state out — and
+**that's ALL you need** to capture a huge space of general-purpose CA rules, including **tracking
+video** and **ganging multiple CAM-6 cards in parallel as connected layers.** (That framing is mine —
+the essential kernel, not the whole CAM-6 datapath.)
+
+Now the "shader" is **JavaScript**, and here's the punchline: **V8 JITs it into machine code.** The
+readable rule compiles to a table; the loop that reads the table gets compiled, at runtime, to native
+instructions. So — **who JITs the jitter?**
+
+Pull that thread and it runs straight back to work you know the neighborhood of. V8 is fast because of
+techniques born in **Self** (David Ungar & Randall Smith, Sun/Stanford): **maps / hidden classes**,
+**polymorphic inline caches**, **adaptive optimization with dynamic deoptimization**, and
+**generational GC**. Self → **Strongtalk/Animorphic** (Urs Hölzle, **Lars Bak**) → Sun's **HotSpot**
+JVM; Lars Bak then carried the lineage into **V8**. The same ideas seeded **Java's HotSpot** and
+**.NET's CLR**. So my CA "shader" runs at speed today because a 1980s **Smalltalk-descended object
+VM** learned how to compile dynamic code on the fly.
+
+The cut closes where it opened: **Radio Shack TTL → GPU shaders → Forth threaded code → microcode →
+V8's JIT → Self's inline caches → back to a 256-byte table a kid could wire up.** The **table is the
+still point**; everything orbiting it — hardware, Forth, JS, a JIT descended from Self — is the *same
+idea* wearing the costume of its era. *(Don's [David Ungar](../david-ungar/README.md) show is the
+place to run this loop live.)*
+
+---
+
 ## Your DLA is running right now
 
 Straight off **p. 167, §15.7** — the **Margolus-dendrite** rule — I have a
@@ -194,6 +227,14 @@ then re-opened as a **Repo Show anyone can contribute to and learn from**:
 [Forth](https://en.wikipedia.org/wiki/Forth_(programming_language)) ·
 [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) ·
 [A New Kind of Science](https://en.wikipedia.org/wiki/A_New_Kind_of_Science)
+
+**Who-JITs-the-jitter thread:** [Self (programming language)](https://en.wikipedia.org/wiki/Self_(programming_language)) ·
+[V8 JavaScript engine](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) ·
+[HotSpot (JVM)](https://en.wikipedia.org/wiki/HotSpot_(virtual_machine)) ·
+[Inline caching](https://en.wikipedia.org/wiki/Inline_caching) ·
+[Just-in-time compilation](https://en.wikipedia.org/wiki/Just-in-time_compilation) ·
+[Bit slicing](https://en.wikipedia.org/wiki/Bit_slicing) ·
+[Connections (James Burke)](https://en.wikipedia.org/wiki/Connections_(British_TV_series))
 
 **This project:** live app <https://donhopkins.com/home/CAM6> ·
 source [`CAM6.js`](https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js) ·
