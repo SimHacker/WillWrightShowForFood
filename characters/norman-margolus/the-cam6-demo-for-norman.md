@@ -38,7 +38,7 @@ This is the guided tour of that — the demo I made **for you as the audience**,
 
 ## The one-sentence version
 
-I built a **CAM6 simulator** that is **software-compatible with your CAM-6 hardware and the code examples** — it runs the FORTH rules (now translated to JavaScript) straight out of your book — and I kept re-implementing the *same idea* across four decades of languages, because the interesting part was never the language. It was the **rules and lookup tables and hardware**.
+I built a **CAM6 simulator** that is **software-compatible with your CAM-6 hardware and the code examples** — book Forth rules compiled to lookup tables in Sun Forth, those tables imported into JS, then rules and compiler rewritten in JS — and I kept re-implementing the *same idea* across four decades of languages, because the interesting part was never the language. It was the **rules and lookup tables and hardware**.
 
 ---
 
@@ -78,12 +78,12 @@ I have the receipts for this one:
 2. **My own reimplementation in Mitch Bradley's Sun Forth.** I re-hosted that tech stack on a Sun
   workstation using **Mitch Bradley's Forth** (the lineage that became Open Firmware). Same idea,
    new machine, new Forth.
-3. **C + FORTH.** A CAM6 simulator emulating the hardware, with Forth defining rules and driving it.
-4. **C++, then Python.** It grew a life of its own and got re-hosted again.
-5. **JavaScript —** `CAM6.js` **(today).** Rules are defined in **JS** and compiled to the **identical
-   lookup tables** the Forth rule compiler produced. **No embedded Forth interpreter** — JS-Forth in
-   the repo is a **possible extension** ("do not stick your tongue into the power supply"); an
-   off-the-shelf WASM/JS Forth could be wired in later for live Forth rule authoring.
+3. **C + Mitch Bradley's Sun Forth.** CAM6 hardware emulator in **C**; **book-compatible Forth rules**
+   compiled in Sun Forth → **saved lookup tables** (the artifact that matters).
+4. **C++, then Python.** Re-hosted again; same table contract.
+5. **JavaScript —** `CAM6.js` **(today).** First **imported the Forth-compiled lookup tables** into
+   JS. Then rewrote **rules and the rule compiler in JS** — easier and better. **No embedded Forth**
+   in the shipped browser stack; JS-Forth in the repo is only a **possible extension**.
 6. **TypeScript — next.** A type-safe, self-describing rewrite (more on that below).
 
 The point isn't the ports. The point is **feedback and iteration of feedback and iteration itself** —
@@ -179,8 +179,8 @@ place to run this loop live.)*
 ## Your DLA is running right now
 
 Straight off **p. 167, §15.7** — the **Margolus-dendrite** rule — I have a
-**diffusion-limited aggregation** running live on the **Margolus-neighborhood** engine, using the
-very lookup table the Forth generated. Gas particles random-walk via block partitioning; when a
+**diffusion-limited aggregation** running live on the **Margolus-neighborhood** engine, on the
+same lookup-table contract Sun Forth compiled from the book. Gas particles random-walk via block partitioning; when a
 walker touches the aggregate, it **sticks**; branching, coral-like crystals grow. It's a direct,
 live-runnable Margolus artifact — and a natural bridge to my
 [Musical Gas granular-CA synth](../don-hopkins/musical-gas-granular-ca-synth.md), where every

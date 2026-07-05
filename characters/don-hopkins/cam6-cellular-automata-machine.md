@@ -13,25 +13,30 @@ Live app: <https://donhopkins.com/home/CAM6> · Source:
 [`CAM6.js`](https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js) ·
 Demo (tailored for Norman as the audience): <https://www.youtube.com/watch?v=LyLMHxRNuck>
 
-## The lineage: C + FORTH → C++ → Python → JavaScript
-- **Started** as a CAM6 simulator in **C and FORTH**, emulating the original CAM-6 hardware and
-  compatible with the brilliant FORTH software Toffoli & Margolus wrote. FORTH is great at exactly
-  this: defining rules and orchestrating the hardware.
-- The FORTH ran the rule over **every possible neighborhood combination** to generate a **lookup
-  table** — the same trick the CAM-6 hardware uses, concatenating neighbor bits into an index into
-  the rule table. Rule *definition* can be as slow and high-level as you like, because it only runs
-  at compile time, not in the inner loop.
-- It **evolved a life of its own**: translated to **C++** and **Python**, then rewritten from the
-  ground up in **JavaScript** (`CAM6.js`).
-- **Today:** rules are defined in **JavaScript** and compiled to the **same lookup-table contract**
-  the Forth rule compiler used — bit-for-bit faithful to the book while readable and hackable.
+## The lineage: C + Sun Forth → lookup tables → JavaScript
 
-## Optional Forth extension (not shipped)
-- CAM6.js **does not embed** a Forth interpreter. Rules are defined in **JS**, not interpreted in
-  Forth at runtime.
-- The repo includes **JS-Forth** ("delivered as-is, do not stick your tongue into the power supply")
-  as a **possible extension** — or an off-the-shelf WASM/JS Forth could be wired in later so people
-  can define rules in Forth live, the way the book teaches. That was never the shipped path.
+### C era — Mitch Bradley's Sun Forth
+- **C emulator** for the CAM-6 hardware, plus a **Forth rule compiler / orchestrator** in **Mitch
+  Bradley's Sun Forth** (Open Firmware lineage) — **compatible with the Forth rules in the book**.
+- Forth ran each rule over **every possible neighborhood combination** and **compiled + saved lookup
+  tables** — the same contract the CAM-6 hardware uses: neighbor bits → index → new cell state. Rule
+  *definition* is compile-time luxury; the inner loop is always a table read.
+
+### Ports in between
+- **C++** and **Python** re-hosts along the way — same table contract, new platforms.
+
+### JavaScript — `CAM6.js` (today)
+1. **Bootstrap:** imported the **Forth-compiled lookup tables** into the JS codebase — faithful to
+   what Sun Forth had already baked.
+2. **Then:** rewrote **rules and the rule compiler in JS** — easier and better than carrying Forth
+   forward in the browser stack. New rules compile to the **same lookup-table contract**; book rules
+   still match bit-for-bit.
+
+### Optional Forth extension (not shipped)
+- CAM6.js **does not embed** a Forth interpreter at runtime. Rules live in **JS source**.
+- **JS-Forth** in the repo ("delivered as-is, do not stick your tongue into the power supply") is a
+  **possible extension** — or wire in WASM/JS Forth later for live Forth authoring like the book.
+  Never the path Don took for the shipped JS version.
 
 ## DLA — straight out of the book
 Don has a **Diffusion-Limited Aggregation** simulation running in it right now — the
