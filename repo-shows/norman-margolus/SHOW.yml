@@ -9,27 +9,33 @@ show:
   guests: ["Norman Margolus"]
   with: ["Jim Crutchfield", "Scott Draves"]   # dream co-guests for a CA summit
   character: characters/norman-margolus/
-  topic: "Cellular automata machines, reversible computing, and the physics of computation — CAM-6, the Margolus neighborhood, billiard-ball computers, and the Margolus–Levitin limit. Don's CAM6 emulator (built from Norman's book) running live."
+  topic: "Cellular automata machines, reversible computing, and the physics of computation — CAM-6, the Margolus neighborhood, billiard-ball computers, DLA/dendrite, and the Margolus–Levitin limit. Two acts: PLAY with Don's existing CAM6.js live, then DESIGN a modern version together."
   status: seed
   consent: not_yet_asked
 why_him:
-  cam6: "With Tommaso Toffoli, built the CAM-6 machine and wrote *Cellular Automata Machines* (MIT Press, 1987) — the book Don's CAM6 emulator follows."
+  cam6: "With Tommaso Toffoli, built the CAM-6 machine and wrote *Cellular Automata Machines* (MIT Press, 1987) — the book Don's CAM6 simulator follows."
   reversible: "Invented the block cellular automaton + Margolus neighborhood; built reversible, universal CA (billiard-ball computers, the Critters rule)."
   physics_of_computation: "Margolus–Levitin theorem (physical speed limit of computation); computronium / programmable matter; the Fredkin–Toffoli–Knight reversible-computing lineage."
-  personal: "Friend of Henry Minsky; Don met him in Boston (visiting Henry) and talked through all of this."
+  personal: "Introduced to Don by Milan and Henry Minsky from the AI Lab; Don made a long-form CAM6 demo tailored for Norman as the audience (youtube.com/watch?v=LyLMHxRNuck)."
+
+arc:
+  act_1_play: "Bring up the existing CAM6.js live and run the classic rules from the book, with Norman narrating — including the DLA/Margolus-dendrite rule (p.167, §15.7)."
+  act_2_design: "The current code is an honest 'ugly monolith' with great designs to cauldron out. Sketch, with Norman, what a modern web version wants to be."
 
 dream_segments:
-  - "CAM-6, live: bring up Don's CAM6 emulator (a CAM6-software-compatible FORTH orchestrator + LUT rule compiler) and run classic rules from the book."
+  - "CAM-6, live: bring up Don's existing CAM6.js (C+FORTH heritage, now JS generating the identical FORTH-era lookup tables; JS-Forth retrofittable) and run classic rules from the book."
+  - "DLA / dendrite: the Margolus-dendrite rule from p.167 §15.7 aggregating live on the Margolus-neighborhood engine — the exact FORTH-generated lookup table."
   - "Block CA + the Margolus neighborhood: how partitioning makes a rule reversible."
   - "Run it backward: reversible, universal CA and the Critters rule — no information lost."
   - "Billiard-ball computers: universal computation from elastic collisions; the 'Flattop' chip with Tom Knight."
   - "The Margolus–Levitin limit: how fast can anything compute? Energy as the bound."
+  - "Design act: cauldron the good bones out of the monolith into a modern web CAM6."
   - "Computronium & programmable matter — and a CA summit with Jim Crutchfield (edge of chaos) + Scott Draves (generative art)."
 
 format:
   live: true
   audience_qa: true
-  note: "Good odds via Henry. Consent not yet asked."
+  note: "Good odds via Milan and Henry Minsky. Consent not yet asked."
 
 ties_to:
   - ../../characters/norman-margolus/
@@ -38,4 +44,5 @@ ties_to:
   - ../../characters/scott-draves/
   - ../../characters/henry-minsky/
   - ../../characters/don-hopkins/
+  - ../../characters/don-hopkins/cam6-cellular-automata-machine.md
   - ../jim-crutchfield/

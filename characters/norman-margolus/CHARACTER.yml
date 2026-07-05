@@ -15,7 +15,7 @@ representation:
   governed_by: ../../schemas/portrayal-standards.yml
   consent_level: 3
   authored_by: don-hopkins
-  note: "Public-source portrayal. Friend of Henry Minsky; Don met him in Boston (visiting Henry) and talked CA. Consent not yet asked."
+  note: "Public-source portrayal. Introduced to Don by **Milan and Henry Minsky** from the MIT AI Lab; Don talked CA with Norman and made a long-form CAM6 demo tailored for Norman as the audience. Consent not yet asked."
   subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
@@ -48,19 +48,23 @@ bio:
     - "Reversible computing; computronium / programmable matter; Permabit"
 
 connections:
-  cam6_kinship: "The direct link: Don built a **CAM6 emulator** — a CAM6-software-compatible (per the *Cellular Automata Machines* book) FORTH-programmable CAM orchestrator + lookup-table rule compiler on the Sun (NeWS + C), later ported widely. Norman & Toffoli's CAM-6 and book are literally the source Don's work follows."
-  henry_minsky: "A good friend of **Henry Minsky** (MIT). Don met Norman a few years ago while visiting Henry in **Boston**, and they talked through exactly this web of ideas — cellular automata, reversible computing, the physics of computation. Henry is the natural bridge."
-  mit_nexus: "MIT CSAIL; the Fredkin–Toffoli–Knight reversible-computing lineage — part of the broader MIT AI/CS nexus Henry connects into."
+  cam6_kinship: "The direct link: Don built a **CAM6 simulator** — CAM6-software-compatible (straight out of the *Cellular Automata Machines* book) — that started life in **C + FORTH** emulating the CAM-6 hardware, and has since been rewritten in **JavaScript** (CAM6.js). The high-level rules are now written in JS but generate the **identical lookup tables** the original FORTH produced. It once embedded a real **JS-Forth** interpreter (could be retrofitted with any off-the-shelf WASM/JS Forth). Norman & Toffoli's CAM-6 and book are literally the source Don's work follows."
+  minsky_brothers: "**Milan and Henry Minsky** — from the **MIT AI Lab** — introduced Don to Norman. They are the natural bridge for the invitation, and the doorway into the whole Fredkin–Toffoli–Knight / AI-Lab nexus."
+  tailored_demo: "Don made a **long-form CAM6 demo tailored for Norman as the audience** — narrating what he did with Norman's book and his emulation of Norman's hardware, taking the rules into the storytelling realm. Video: https://www.youtube.com/watch?v=LyLMHxRNuck"
+  dla: "**Diffusion-Limited Aggregation** — Don has a working **DLA** simulation right out of the book (*Cellular Automata Machines* p. 167, §15.7), the **Margolus-dendrite** rule, running on Don's Margolus-neighborhood engine with the identical FORTH-generated lookup table. A direct, live-runnable Margolus artifact to show Norman."
+  mit_nexus: "MIT CSAIL; the Fredkin–Toffoli–Knight reversible-computing lineage — part of the broader MIT AI/CS nexus the Minskys connect into."
   generative_kinship: "Cellular automata as a shared language with Scott Draves (generative art) and Jim Crutchfield (edge of chaos, evolving CA)."
 
 show_suggestions:
-  - { seed: ../../repo-shows/norman-margolus/, what: "Cellular Automata Machines, live: CAM-6 and the book, block CA / Margolus neighborhood / Critters, reversible & billiard-ball computing, and the Margolus–Levitin limit — with Don's CAM6 emulator running on stream." }
+  - { seed: ../../repo-shows/norman-margolus/, what: "Two acts. Act 1: PLAY — bring up the existing CAM6.js live, run the classic rules from the book (block CA / Margolus neighborhood / Critters, the DLA/Margolus-dendrite rule from p.167), with Norman narrating. Act 2: DESIGN — cauldron out the good bones of the 'ugly monolith' and sketch a modern web version together." }
   - { seed: ../../repo-shows/jim-crutchfield/, what: "Joint CA show with Jim Crutchfield — reversible cellular-automata machines meet the edge of chaos." }
 
 sources:
   wikipedia: "https://en.wikipedia.org/wiki/Norman_Margolus"
   web:
     - "https://people.csail.mit.edu/nhm/   # MIT CSAIL page"
+    - "https://www.youtube.com/watch?v=LyLMHxRNuck   # Don's long-form CAM6 demo, tailored for Norman as the audience"
+    - "https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js   # Don's CAM6.js source"
   books:
     - "Toffoli, T. & Margolus, N. (1987). *Cellular Automata Machines: A New Environment for Modeling*. MIT Press."
   papers:
@@ -72,5 +76,7 @@ see_also:
   - { path: ../jim-crutchfield/, why: "Cellular automata / edge of chaos — joint CA show" }
   - { path: ../scott-draves/, why: "Generative art + cellular automata kinship" }
   - { path: ../henry-minsky/, why: "Norman's friend; the bridge to invite him; MIT nexus" }
-  - { path: ../don-hopkins/, why: "Host — built a CAM6 emulator from the Margolus/Toffoli book" }
+  - { path: ../don-hopkins/, why: "Host — built a CAM6 simulator from the Margolus/Toffoli book" }
+  - { path: ../don-hopkins/cam6-cellular-automata-machine.md, why: "Don's CAM6.js writeup — FORTH→JS lineage, DLA, and the modern-rewrite plan" }
+  - { path: ../don-hopkins/musical-gas-granular-ca-synth.md, why: "Don's granular-CA synth — sibling CA project, same engine lineage" }
   - { path: ../../repo-shows/norman-margolus/, why: "Show seed" }
