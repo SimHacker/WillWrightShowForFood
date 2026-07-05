@@ -38,6 +38,10 @@ with **no presumption**.
 ## Ideas to explore
 
 Conversation hooks — taboo TV & anti-censorship, the operatic-punk voice as instrument, art under a
-censoring state (GDR / Biermann), and punk reappropriation — are in [`ideas.md`](ideas.md). Each is
-grounded in Nina's own public work and offered as a topic to explore *with* her, not as a claim about
+censoring state (GDR / Biermann), punk reappropriation, the **Herman Brood / _Cha Cha_ / Lene Lovich**
+Amsterdam orbit, a live hunt for a rumored **Brood portrait of Nina**, the **double-drag** (bio queen
+*and* drag king) persona thread, and the **cover chain** (Tubes → Nina's "TV-Glotzer" → Suppositori
+Spelling's Trannyshack drag cover) as the show's [**riff loop**](../../repo-shows/ideas/themes/the-riff-loop.yml)
+in music — are in [`ideas.md`](ideas.md). Each is grounded in Nina's own public work (or clearly
+attributed as Don's lead/framing) and offered as a topic to explore *with* her, not as a claim about
 what she thinks.

@@ -14,6 +14,12 @@ a cheap, legible hack that turns *playback into an instrument*, seams showing. S
 [`../../schemas/language-cow.yml`](../../schemas/language-cow.yml)). A live segment: rebuild the
 tape-bow idea in the browser (scrub audio with a gesture) and let the audience fork it.
 
+**The Interval bridge — the Talking Stick.** Anderson built the **Talking Stick** (a ~6-foot MIDI baton
+that granularizes and replays audio in real time) with **Bob Bielecki and Interval Research** (c. 1999)
+— **the same lab where Don worked**, so this is a *shared-history* door, not just a fan's admiration.
+It's also literally a **resampling** instrument: chop audio into grains, replay them any which way —
+the show's [**riff loop**](../../repo-shows/ideas/themes/the-riff-loop.yml) in the palm of a hand.
+
 ### 2. The "Voice of Authority" as a voice puppet
 Laurie's pitch-shifted male persona is a **voice puppet** — hiding the performer to speak *as* a
 character — decades before the show's own puppet taxonomy
@@ -44,6 +50,8 @@ voluntary comedy, never timid euphemism; we don't bowdlerize real names.
 
 ## Sources (real, public)
 - "O Superman" (1981); *United States I–IV*; *Big Science* (1982)
-- Tape-bow violin; the talking stick; the "Voice of Authority" persona
+- Tape-bow violin; the "Voice of Authority" persona
+- **Talking Stick** — MIDI audio-granulator built with **Bob Bielecki + Interval Research** (c. 1999);
+  debuted in *Songs and Stories from Moby Dick*. Interval Research Corp. founded by Paul Allen & David Liddle.
 - *Chalkroom* / *Aloft* (VR, w/ Hsin-Chien Huang); *Home of the Brave* (1986 concert film)
 - https://laurieanderson.com/ · https://en.wikipedia.org/wiki/Laurie_Anderson

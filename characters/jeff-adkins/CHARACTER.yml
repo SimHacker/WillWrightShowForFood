@@ -8,7 +8,7 @@ character:
   signifier: "🪓🧬"
   status: living
   handle: DnfJeff
-  field: "Sims save-file & object reverse-engineering; AI-assisted tooling; web development. Creator of SimObliterator / VitaMoo."
+  field: "Sims save-file & object reverse-engineering; AI-assisted tooling; web development. Creator of SimObliterator."
   home: characters/jeff-adkins/
 
 representation:
@@ -26,23 +26,25 @@ invitation:
   show_seed: repo-shows/jeff-adkins/
   note: |
     Accepted 2026-07 — enthusiastic yes to take part + full credit for SimObliterator's influence, and
-    volunteered to help across the board (interviews, grunt work, deep-dives). Low-pressure,
-    time-shifted format (solo video + 1-on-1 edited together). Timing at his pace; credit stands
-    regardless of whether he records anything.
+    volunteered to help across the board (interviews, grunt work, deep-dives). Also asked to help
+    PRODUCE + MANAGE the show behind the scenes (repo wrangling, guest/segment coordination, keeping
+    the interview+edit pipeline moving). Low-pressure, time-shifted format (solo video + 1-on-1 edited
+    together). Timing at his pace; credit stands regardless of whether he records anything. Practical
+    terms (incl. anything beyond the show itself) sorted offline.
 
 bio:
   summary: |
-    **Jeff Adkins** (GitHub **DnfJeff**) is the creator of **SimObliterator** (the *SimObliterator
-    Suite*) and **VitaMoo** — AI-assisted, open tools for reading, writing, analyzing, and rendering
-    **The Sims 1** save files, objects, and characters: IFF/FAR parsing, GUID/object (OBJD) analysis,
-    catalog inventory, and an in-browser WebGL character/skeleton/mesh renderer (vitamoo.space). His
-    work is the concrete substrate under the show's **character import/export** — the "soul mover" —
-    the thing that turns Will Wright's 1996 "data-portability holy grail" into something you can
-    actually run today.
+    **Jeff Adkins** (GitHub **DnfJeff**) is the creator of the **SimObliterator Suite** — AI-assisted,
+    open tools for reading, writing, and analyzing **The Sims 1** save files and objects: IFF/FAR
+    parsing, GUID/object (OBJD) analysis, and catalog inventory. His work is the concrete substrate
+    under the show's **character import/export** — the "soul mover" — the thing that turns Will
+    Wright's 1996 "data-portability holy grail" into something you can actually run today. (**VitaMoo**,
+    the in-browser character/skeleton/mesh renderer, is **Don's** TypeScript reimplementation that grew
+    up alongside — SimObliterator is what inspired it; see why_a_guest.the_build.)
   known_for:
     - "SimObliterator Suite — Sims 1 save/object tooling (IFF/FAR, GUID analysis, catalog inventory)"
-    - "VitaMoo — in-browser WebGL Sims character/skeleton/mesh renderer (vitamoo.space)"
     - "AI-assisted reverse engineering across languages — analyze, translate, verify, iterate"
+    - "The tooling that inspired Don's VitaMoo (Don's own TypeScript character renderer)"
 
 why_a_guest:
   foundational: "SimObliterator is part of what made the show technically possible — the save-file read/write layer under the soul mover."
@@ -53,16 +55,27 @@ why_a_guest:
     other and improving every pass. AI copying AI copying people, all the way down: stone soup,
     cauldron, cellular automata, Wolfram, and Eno's generative systems, made literal in a codebase.
   full_credit: "Jeff gets full credit for SimObliterator's influence and code — interview or not. The TypeScript reimplementation follows the repo's IP-hygiene + credit rules (apps/micropolis-angel/, CREDITS)."
+  the_build: |
+    Concrete engineering role: his solid, well-organized Python (incl. SimAntics analysis) is being
+    ported to the browser (via Claude, credited) to power a content 'file cop' / 'virus scanner' —
+    detect missing objects + broken UCC, repair, and locate sources in the catalog. Jeff best placed
+    to lead the content-management features + back-end site. (Parallel + separate — **VitaMoo**: Don's
+    own clean-room Sims character-animation system. Don had ALREADY hand-written a compatible VitaBoy
+    implementation for **Unity3D (C#)** from decades-public designs; VitaMoo is that C# **AI-translated
+    to TypeScript** for the browser — a translation of his OWN prior work, not generation from scratch.
+    Independent IP lineage. Unity3D C# zip sources: TODO link.)
 
 contact:
   channel: "Direct + warm, ongoing (private)."
   note: "Real collaborator; contact specifics + outreach kept in the green room, not the public files."
 
 sources:
-  github: https://github.com/DnfJeff/SimObliterator_Suite
-  vitamoo: https://github.com/DnfJeff/SimObliterator_Suite/tree/main/vitamoo
-  demo: https://vitamoo.space
+  github: https://github.com/DnfJeff/SimObliterator_Suite   # Jeff's SimObliterator Suite
   designs: https://github.com/SimHacker/moollm/tree/main/designs/sim-obliterator
+  # VitaMoo is DON's (TS reimpl of his own Unity3D C#). These URLs currently sit under DnfJeff's repo —
+  # CONFIRM WITH DON: is VitaMoo hosted inside Jeff's Suite, or does it need its own home + attribution?
+  vitamoo_FLAG_confirm_owner: https://github.com/DnfJeff/SimObliterator_Suite/tree/main/vitamoo
+  vitamoo_demo_FLAG_confirm_owner: https://vitamoo.space
 
 see_also:
   - { path: ideas.md, why: "Conversation hooks — grounded in Jeff's real work + the soul-mover thread" }

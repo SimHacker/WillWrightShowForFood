@@ -34,17 +34,26 @@ bio:
 
   don_connection: |
     **Don's long-time avant-garde north star.** Don briefly met Laurie Anderson during his time at
-    **Interval Research** (Paul Allen's lab, mid-1990s), where — per Don's recollection — she
-    collaborated with the lab. She sits squarely in Don's performer pantheon alongside Bowie, Klaus
-    Nomi, Joey Arias, Leigh Bowery, and Nina Hagen. (Interval detail is Don's account; treat the
-    collaboration specifics as recollection until confirmed.)
+    **Interval Research** (Paul Allen & David Liddle's lab, 1992–2000). Her Interval tie is confirmed
+    on the public record: she built the **Talking Stick** — a ~6-foot MIDI baton that granularizes and
+    replays audio in real time — with **Bob Bielecki and Interval Research (c. 1999)**, debuting it on
+    the *Songs and Stories from Moby Dick* tour. She sits squarely in Don's performer pantheon alongside
+    Bowie, Klaus Nomi, Joey Arias, Leigh Bowery, and Nina Hagen.
 
 reach:
-  # Public-safe summary only; specific names/contacts live in the private roster.
-  best_path: "Possible warm intro via Interval Research alumni Don knows who worked with her."
+  # Public-safe summary only; specific names/contacts + reconnection strategy live in the private green room.
+  best_path: "Possible warm intro via Interval Research alumni Don knows from the Talking Stick era."
   fallback: "Also reachable in the same avant-garde/generative orbit as Will Wright and Brian Eno."
   private_roster: DonHopkins/characters/don-hopkins/contacts/interval-alumni.yml
+  green_room: DonHopkins/projects/willwrightshowforfood/green-room/laurie-anderson/
   note: "Dream invitation — offered with no presumption; consent not yet asked."
+
+interval_research:
+  confirmed: true
+  what: "Talking Stick — ~6-foot MIDI baton that granularizes/replays audio in real time."
+  with: "Bob Bielecki + Interval Research Corporation (Paul Allen & David Liddle's lab)"
+  when: "c. 1999; debuted in Songs and Stories from Moby Dick"
+  ties: [../don-hopkins/history/interval-research.yml, "resampling / the-riff-loop theme"]
 
 sources:
   wikipedia: https://en.wikipedia.org/wiki/Laurie_Anderson

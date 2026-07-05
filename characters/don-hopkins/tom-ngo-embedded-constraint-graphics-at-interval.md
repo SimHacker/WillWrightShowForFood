@@ -97,6 +97,22 @@ Don's later [**breakfast simplex**](breakfast-simplex-barycentric-direct-manipul
 
 ---
 
+## Application — Faceball parameterized parts + puppet faces (reimplementation target)
+
+Don's pick for what to build with a re-implemented ECG (patent's expired — it's free now):
+
+- **Parameterized cartoon parts.** The [Faceball](../../apps/performance-space/faceball-construction-set.yml)
+  soft-body parts — the componentized, Spore-count cartoon "ta-tas", dongs, and custom shapes — are
+  exactly **example-based blend shapes**: draw a few example states, drag to interpolate. Don's words:
+  *"reimplement Tom Ngo's ECG to animate parameterized boobie cartoons — perfect application."*
+- **Facial expression interpolation** for the video puppets (the Mouther job, brought forward): drag
+  the mouth/eyes on the drawing; solve the blend — feeding ARKit-style blend-shape coefficients or a
+  **Blender FaceIt** rig instead of hand-tuned sliders.
+- **The through-line:** same barycentric machinery as the [Bounce](interval-research-pluggers-and-mediaflow.md)
+  scrub-puppets and the pie-menu-as-simplex UI — direct manipulation, no AI required (AI's a bonus).
+
+*Status: noted as the design target — not prototyped yet ("hold your horses").*
+
 ## See also
 
 | Link | Why |

@@ -1,0 +1,65 @@
+# Sims open-source reimplementations, tools, and file-format references
+# The community, open-source, and publicly-documented prior art the soul mover / SimObliterator work
+# stands on. Reference + credit hygiene: WWSFF reimplements in its OWN code, cites where knowledge
+# comes from, ships no copyrighted assets, and (like FreeSO) requires users bring their own game files.
+
+meta:
+  id: sims-open-source-and-formats
+  purpose: |
+    Where Sims file-format + engine knowledge is publicly documented, and the open-source projects
+    that reimplement it. Feeds the SimObliterator/VitaMoo TypeScript port and the content "file cop"
+    (missing-object + broken-UCC detection, repair, catalog source-location).
+  see_also:
+    - sims1-community-landscape.yml
+    - ../characters/jeff-adkins/
+    - ../repo-shows/jeff-adkins/
+    - ../apps/micropolis-angel/
+
+open_source_reimplementations:
+  freeso:
+    what: "Full reimplementation of The Sims Online engine (C#, MonoGame). Includes a SimAntics VM, HIT VM, and content system supporting BOTH TSO and TS1 files. Requires original EA game files; ships no copyrighted assets."
+    author: "Rhys Simpson (riperiperi) + FreeSO team"
+    license: MPL-2.0
+    url: https://github.com/riperiperi/FreeSO
+    home: http://freeso.org
+    note: "Now a technology base for community-run TSO servers (see LegacySO, NewSO)."
+  simitone:
+    what: "The Sims 1 reimplementation built on the FreeSO base (requires a legit TS1 Complete Collection). Modern lighting; 3D meshes generated from the 2D art."
+    url: https://github.com/riperiperi/Simitone
+  volcanic:
+    what: "FreeSO's Edith-style IDE — view/modify/debug objects + SimAntics against a live VM; generates .piff patch files rather than editing original .iff assets."
+    note: "Named in the spirit of Maxis' internal 'Edith' object editor."
+  legacyso: { what: "Community fork / server of FreeSO", author: vennbot, url: https://github.com/vennbot/LegacySO }
+  newso:    { what: "Reference fork of FreeSO", author: tonytins, url: https://github.com/tonytins/NewSO }
+  niotso:
+    what: "Open-source reimplementation effort for The Sims 1; its wiki is the deepest public file-format reference."
+    wiki: http://wiki.niotso.org
+  misc_riperiperi:
+    - "TSO-Version-Patcher — BsDiff-based filesystem patcher"
+    - "FreeSO-Launcher — Electron launcher"
+    - "Breakin-In — The Sims Bustin' Out (PS2) online lobby emulator"
+
+file_format_wikis:
+  niotso_wiki:
+    url: http://wiki.niotso.org
+    covers: [IFF, FAR, DBPF, SPR2, "asset type IDs", "SimAntics / BHAV"]
+  mod_the_sims_wiki:
+    url: https://modthesims.info/wiki.php
+    covers: [DBPF, Packages, SimAntics, BHAV, "modding tutorials"]
+    note: "Absorbed much of the historical SimsWiki content."
+  simstek_wiki: { url: "https://simstek.fandom.com/wiki/", covers: [IFF, "format mirrors"] }
+
+format_notes:   # publicly documented on the wikis above; summarized for orientation
+  iff: "Interchange File Format. 64-byte header; chunk PARAMS big-endian, chunk DATA little-endian (TS1/TSO). v2.0/2.5 (2.5 adds the rsmp resource-map offset). Chunk types incl. OBJD, OBJf, BHAV, CTSS, STR#, SPR2."
+  far: "File Archive (Alex Zvenigorodsky, Maxis). v1a = TS1 (uncompressed), v1b/v3 = TSO (adds compression)."
+  dbpf: "DatabasePackedFile. First used in TSO (v1.0 / index 7.0); then SimCity 4, TS2, Spore, TS3, TS4. Header + data + index table (regular / trash / DIR)."
+  simantics: "Bytecode behavior language stored in BHAV chunks. OpCode ranges: Primitives 0x0000-0x00FF (engine built-ins), Globals 0x0100-0x0FFF, Locals 0x1000-0x1FFF, SemiGlobals 0x2000-0x2FFF."
+
+why_this_matters:
+  soul_mover: "IFF/FAR/DBPF + OBJD/BHAV are exactly what SimObliterator reads/writes — the substrate the character import/export stands on."
+  file_cop: "SimAntics/BHAV + OBJD/GUID knowledge powers the content 'file cop': detect missing objects + broken user-created content, repair, and locate catalog sources."
+  ip_hygiene: |
+    Community reverse-engineering + open documentation are the KNOWLEDGE base; WWSFF reimplements in
+    its own TypeScript with credit. Cite sources; ship no copyrighted assets; require users bring their
+    own legit game files (the FreeSO model). This file references only public, community/open-source
+    resources.

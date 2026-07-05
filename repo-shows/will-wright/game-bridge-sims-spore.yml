@@ -1,0 +1,49 @@
+# Game bridge — Sims ↔ Spore ↔ VitaMoo (a soul bridge to Will's work)
+# Public creative concept. Fundraising/monetization mechanics ("Save Spore Souls!") are PRIVATE —
+# see the strategy folder, not here.
+
+meta:
+  id: game-bridge-sims-spore
+  type: bridge
+  status: seed
+  one_line: "Import and reincarnate Spore creatures — another concrete bridge into Will Wright's work, and a live animation challenge we can actually code."
+
+thesis: |
+  Spore is an important **soul bridge**: creatures made in the Creature Creator are little souls people
+  authored and love. Letting people **import and reincarnate** their Spore creatures — into the show's
+  toys, and alongside Sims 1 characters via VitaMoo — turns Will's procedural-creature work into a live,
+  playable thread instead of a museum piece. Same ethic as the whole show: **carry the work forward,
+  credited, not strip-mined.**
+
+reincarnate_spore_creatures:
+  what: "Read a Spore creature (its parts, proportions, animations) and bring it back to life as a puppet/avatar."
+  where_it_plugs_in:
+    - "Faceball Construction Set — Spore-style parts + soft-body physics (you're not limited to two of anything)."
+    - "VitaMoo (Don's TS character renderer, AI-translated from his Unity C#) — animate reincarnated creatures beside Sims 1 characters."
+  animation_challenges: |
+    The interesting graphical/animation problems are the point, not a chore: rigging arbitrary
+    procedural anatomy, retargeting gaits/gestures onto odd body plans, blending expressions. Good
+    territory for example-based blends — see Tom Ngo's ECG:
+    ../../characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md
+  code_sharing: "Can share code and integrate with the Sims 1 VitaMoo pipeline — one renderer, many soul sources."
+
+bridge_to_will: |
+  A direct, respectful hook into Will's Spore + procedural-life work — and a companion to the
+  Spore procedural-mating / procreation demo (Long Now 'Playing with Time', 2006) already flagged as a
+  north-star bit. Discuss WITH Will: how would he want creatures imported/reincarnated? What did Spore's
+  creature soul mean to him?
+  see: ../../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/
+
+save_spore_souls:
+  rallying_cry: "\"Save Spore Souls!\""
+  public_framing: "A campaign to rescue and reincarnate the creatures people made — give those souls a new home."
+  private_note: |
+    The actual fundraising mechanics (deliverable products, exclusive-content backer rewards — the
+    American McGee crowd-funding model) are STRATEGY and live in the private supporters/anti-sharecropping
+    doc, NOT in this public file.
+
+ties:
+  - ../ideas/gags/vice-not-ice-puppet.yml            # references this bridge (spore_tie)
+  - ../../apps/performance-space/faceball-construction-set.yml   # spore_creature_avatars + soft-body parts
+  - ../../characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md  # ECG blend engine
+  - ../ideas/crazy-idea-jam.yml                      # character_endosymbiosis + data_portability

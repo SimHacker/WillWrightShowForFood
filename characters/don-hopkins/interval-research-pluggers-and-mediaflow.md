@@ -29,6 +29,21 @@ Don did **not** port Bounce to Mac Common Lisp. On Bounce he:
 
 Also worked on **Director plug-ins** in the same period — same Macromedia multimedia orbit as the custom compositor that replaced the Director **player** for live video.
 
+#### Character architecture — the swan song with David Levitt
+
+The Bounce characters (**Jesse**, **Rush**, and a **house fly**) were **JSON-like text files** that declared:
+
+- **Media metadata** — sprites and **audio clips** (e.g. Rush: *"Bunch of cows!"*; Jesse: *"I do not like green eggs and ham, Sam I am!"*)
+- **State machines** plus **sequential and random selection grammars** and **decision trees** — the behavior that drove the visually-programmed Bounce simulation
+
+The characters were **video clips with the background removed**, each with a **corresponding audio clip**. The key trick: Don **repurposed and remapped spectacular video gestures** (raising and shaking a fist, waving arms) as **scrubbable back-and-forth by audio amplitude** — so the gesture's frames scrub up and down with the loudness of the audio. That means you can **play any audio clip with any gesture**. This is the direct ancestor of the [Faceball Construction Set](../../apps/performance-space/faceball-construction-set.yml)'s **`amplitude_scrub` / scrub-puppet** mode.
+
+So Don was **all over video puppets and character simulation BEFORE Maxis** — Bounce (character sim + live-video compositing + caption tracking) and [ECG](tom-ngo-embedded-constraint-graphics-at-interval.md) (direct-manipulation blend faces) at the same time. This Bounce work was, in effect, Don's **Interval swan song**. It happened **before Laurie Anderson visited** — they *probably* showed it to her (**David Levitt might remember**; flagged as recollection, not fact).
+
+#### Design thesis — make-your-own cheezy viral animation (even without AI)
+
+All of these Bounce ideas apply directly to the show's tools: **high-production-value, low-production-cost, South-Park-cheezy animation anybody can make** (Canadian split-heads are hilarious). The payoff isn't the animation — it's that the **tools to make your own are super easy to make and use, so they go viral.** **Direct manipulation**, and **no AI required** (AI is a bonus, not a prerequisite). This is the design brief under the Faceball Construction Set and the video-puppet format.
+
 ### Tom Ngo — Embedded Constraint Graphics (simplicial complexes)
 
 [**ECG**](tom-ngo-embedded-constraint-graphics-at-interval.md): example poses at simplex vertices; drag features on screen → **barycentric blends** in a **simplicial complex**. [**Golan Levin**](https://www.flong.com/archive/projects/mouther/) built **Mouther** face cartoons in the ECG editor. Patent [US5933150](https://patents.google.com/patent/US5933150) (Aug 1996).

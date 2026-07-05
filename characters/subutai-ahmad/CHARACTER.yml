@@ -1,0 +1,62 @@
+# Subutai Ahmad — invitation portrayal. NOT Subutai Ahmad.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: subutai-ahmad
+  name: "Subutai Ahmad"
+  type: invitation
+  signifier: "🧠📹"
+  status: living
+  field: "Real-time computer vision (motion tracking / background removal) → neuroscience-based AI (neocortex, Thousand Brains)"
+  home: characters/subutai-ahmad/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 1          # dream/lead guest; consent NOT yet asked
+  authored_by: don-hopkins
+
+invitation:
+  status: lead
+  consent: not_yet_asked
+  note: "Will knows him too. Topics Don wants: video (motion tracking + background removal, then→now), AI (neocortex vs LLMs), and Proxi."
+
+bio:
+  summary: |
+    **Subutai Ahmad** — Chief Scientist at **Numenta** and an initiator of the **Thousand Brains
+    Project** (neuroscience-based AI: cortical columns, reference frames, **sparse distributed
+    representations**, active dendrites). Before the brain work he was a **real-time computer-vision**
+    researcher: **Interval Research** (1993–97 — one of the first DVRs / TV-news indexing, foundational
+    CV, patents), then co-founded **ePlanet** (1997–99, an Interval spin-off) which shipped the first
+    consumer computer-vision product — the **IntelPlay Me2Cam** (Mattel & Intel, 1999): real-time
+    body/head/arm tracking + a **"Virtual Blue Screen"** background-removal effect on a plain USB webcam.
+    Then co-founded **YesVideo** (1999–2005, automated DVD authoring / scene detection). Cornell BS;
+    UIUC MS/PhD (PhD research at UC Berkeley's ICSI). Advisors: **Gerald Tesauro** (TD-Gammon) and
+    **Steve Omohundro**.
+  don_connection: |
+    Don **helped Subutai with real-time video motion tracking + background removal on Windows** at
+    Interval (late '90s), then went on to do **his own on the PowerPC Mac**. **Intel bought the Interval
+    spin-off (ePlanet)** and turned the tech into a consumer **webcam with background removal** (the
+    Me2Cam). Direct ancestor of the show's browser **video motion tracking** puppet input (Bounce /
+    Faceball motion-drive lineage).
+  will_connection: |
+    Will Wright was **working with Subutai's AI company on Proxi** (Will's AI/memory project). FLAG:
+    confirm the company (Numenta?) and the nature/dates of the collaboration before stating on air.
+
+sources:
+  web:
+    - { title: "Subutai Ahmad — personal site (bio, career, publications)", url: "https://subutai.me/" }
+    - { title: "Numenta", url: "https://numenta.com/" }
+    - { title: "Thousand Brains Project", url: "https://thousandbrainsproject.org/" }
+  papers:
+    - "S. Ahmad, 'A usable real-time 3D hand tracker' (Asilomar, 1994)"
+    - "S. Ahmad, 'VISIT: A neural model of covert visual attention' (NIPS, 1991)"
+    - "Bregler, Omohundro, Covell, Slaney, Ahmad, Forsyth et al., 'Probabilistic models of verbal and body gestures' (1998)"  # ties to Malcolm Slaney (repo)
+  flags:
+    - "Proxi ↔ Will ↔ Subutai's company: CONFIRM company name + collaboration specifics before publishing."
+
+see_also:
+  - { path: ../don-hopkins/interval-research-pluggers-and-mediaflow.md, why: "Interval 'Camelot' circle — Don helped on the CV work; Bounce motion lineage" }
+  - { path: ../golan-levin/README.md, why: "Interval colleague; Malcolm Slaney shared orbit" }
+  - { path: ../will-wright/, why: "Will knows him; Proxi collaboration (flag)" }
+  - { path: ../../apps/performance-space/pink-trombone-jam.yml, why: "browser_and_motion — video motion tracking input lineage" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

@@ -428,6 +428,41 @@ ideas:
       MIND=BLOWN.* Virtual junk auction — JUNK-{slug} deeds.
     ties: [../characters/don-hopkins/media/rolf/INDEX.yml, ../repo-shows/ideas/gags/rolf-junk-auction.yml, moola.yml]
 
+  animated_intro_repossession:
+    emoji: "📽️♻️"
+    blurb: |
+      The show's animated intro — honestly AI-GENERATED (embrace AI exactly where it belongs: the
+      intro, the manifesto). Open TIGHT on the human↔computer feedback loop in ONE medium, then the
+      next — vocal, visual, text, structure, emotion — with **YAML JAZZ scrolling as overlay**: earnest
+      "TV technobabble" that describes the scene in terms the audience (viewer / LLM / author / reader)
+      actually understands, plus an **Arrested-Development narration** side-band (hilarious). Then PULL
+      THE CAMERA BACK: hackers on every kind of rig (retro, emulators + hardware, modern IDEs, AI tools,
+      agent swarms) watching each other, copying, feeding back, excerpting, quoting, summarizing — and
+      CREDITING — each spinning up their own Repo Show franchise and diffusing audience to the others.
+      (And yes, the slutty stereotypical YouTube title frames too — expected; do them with a wink.)
+    repossession_thesis: |
+      Reframes "AI vs people" as "people AND AI in a loop" — authorship neither lost to nor withheld
+      from the machine, continuously RE-STEERED by whoever jumps in. "Repossess the government,
+      information, and AI" as a revolutionary cry — a swag theme and a social-welfare campaign.
+    ties: [../repo-shows/ideas/themes/the-riff-loop.yml, ../designs/chatgpt-research-review/framing/FRAMING-REPOSHOW-AS-NEW-MEDIUM.md]
+
+  pyramid_swag_and_apex_toolmakers:
+    emoji: "👕🔺"
+    blurb: |
+      A cross-cutting user-created-content SWAG line — high-production-VALUE, low-production-COST,
+      artisanal craft. Flagship: the **pyramid-of-players tee** (casual players at the base up to TOOL
+      CREATORS at the apex) — bold black-and-white, DESIGNED FOR end-user customization (checkboxes,
+      input fields, sliders, buttons, little graphics-editor boxes, even nipple-ring affordances) so you
+      color in your own tiers with permanent marker for the cheesy custom look. Also: Will's diagrams,
+      PowerPoint slides, and space-junk; **Proxi** tees. Give one FREE to every Sims tool creator.
+    apex_toolmaker_interviews: |
+      Interview the 'Apex tool makers' at the top of the pyramid: Jeff Adkins, Heather (SimFreaks),
+      Steve (SimSlice), the IFFPencil 2 author, and Patrick Barrett III. *(Exact names/credits to
+      confirm before publishing.)*
+    will_approval: "Uses Will's art — Will has full right of review, refusal, and improvement (that's the great part). Family-friendly WillWrightCodeForFood storefront."
+    monetization_is_private: "Revenue / print-vendor / support mechanics live in the PRIVATE strategy (green room: supporters-and-anti-sharecropping), not here."
+    ties: [../repo-shows/ideas/gags/lightpenisland-net.yml, showmaker-network.yml]
+
 graduation:
   note: "Ideas leave the jam by becoming something runnable."
   paths:

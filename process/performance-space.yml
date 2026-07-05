@@ -146,6 +146,16 @@ performance_modes:
     emoji: "🎛️👥"
     prompt: "Remote voice streams steer Slats robopoetry loop or jam Pink Trombone together."
     spec: ../repo-shows/will-wright/performance-and-culture.yml#speech_feedback_loop_instrument
+    group_activity: ../apps/performance-space/pink-trombone-jam.yml   # 4 people accompany/follow/lead/ridicule/parody their own voices
+
+  sims_3d_puppet:
+    id: vitamoo-3d-puppet
+    emoji: "🧍‍♂️🎮"
+    prompt: "Drive a real 3D Sims 1 character LIVE — VitaMoo renders skeleton/mesh/animation in-browser; human voices + controls it."
+    inputs: [vitamoo_webgl_character, live_voice, mic_amplitude_scrub, pose_controls]
+    engine: "VitaMoo (Jeff Adkins) — vitamoo.space; already shipped + improving"
+    spec: ../repo-shows/ideas/traditions/puppet-taxonomy.yml#kinds.sims_3d_puppet
+    note: "3D sibling of face/video puppets — on-brand: our own Sims-1 tooling, real characters on stage."
 
 lineage_index:
   primary_sources:
@@ -211,7 +221,7 @@ proof_of_concept_roadmap:
   p1_web_toys:
     - amplitude-scrub-puppet demo page
     - play-along clip submit + queue UI (TicketPR helper)
-    - Pink Trombone side-by-side jam URL for chat
+    - Pink Trombone side-by-side jam URL for chat → ../apps/performance-space/pink-trombone-jam.yml (Croquet-synced 4-player)
   p2_obs_plugin:
     note: "Native OBS filter optional — v1 is Browser Source + obs-websocket scene cues from stream-gateway."
     see: ../apps/stream-gateway/overlay-viewer.yml
@@ -229,6 +239,8 @@ episode_ideas:
   - title: "Phoneloper vs Pink Trombone"
     modes: [voice_puppet, audience_chorus]
     show: ../repo-shows/phoneloper/SHOW.yml
+    group_activity: ../apps/performance-space/pink-trombone-jam.yml
+    note: "Climax = 4-player Pink Trombone Jam: accompany / follow / lead / ridicule / parody your own voice."
   - title: "SimProv Wedding — Double Pre-Game"
     modes: [play_along_narration, machinima_bumper]
     segment: ../repo-shows/ideas/gags/pixelized-joint-wedding.yml

@@ -13,6 +13,11 @@ navigation:
 read_order:
   - README.md
   - conan-face-puppet.yml
+  - faceball-construction-set.yml   # face/creature puppet kit — soft-body parts, adult section, presets
+  - pink-trombone-jam.yml   # group activity — 4-player vocal-tract choir
+
+see_also_designs:
+  - { path: ../../characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md, why: "Tom Ngo's ECG — example-based blend engine (design target for parameterized parts + faces)" }
 
 see_also:
   parent:

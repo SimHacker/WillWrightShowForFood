@@ -15,6 +15,14 @@ variants:
   sims_gameplay:
     what: "In-engine bone-mesh pixelization over recorded machinima."
     gag: ../gags/pixelized-joint-wedding.yml
+  faceball_live_pixelization:
+    what: |
+      Live, in the Faceball kit: a **bounding box** on any part (boobs, dongs, joint, head) drives a
+      **Sims-1-style pixelization mosaic** on the screen layer beneath it — **pixelated by DEFAULT**,
+      with a local opt-in **"cheat code"** to lift it. Exactly how The Sims 1 self-censored.
+    why_it_matters: "This is the PLATFORM-SAFE default: the uploadable cut is already self-censored, so it survives TikTok/Facebook moderation. The mosaic IS the joke."
+    bit: "Pass a pixelated joint → it pixelates your head (mosaic follows the contraband)."
+    engine: ../../../apps/performance-space/faceball-construction-set.yml#modifiers   # sims1_pixelization
 
 anti_rule: |
   We do NOT censor real names. Conan's Masturbating Bear stays Masturbating Bear.

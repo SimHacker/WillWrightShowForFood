@@ -1,0 +1,72 @@
+# Don's cats — recurring stars, talking cat faces, interstitials & interruptions 🐱
+# The host's personal cast. Makes full shows PERSONAL: cat cameos between segments, talking-cat-face
+# faceballs, and the real-life interruptions that happen when you film at home with cats.
+# Talking cat faces are a Faceball `talking_selfies` application (photo → posed talking face).
+
+meta:
+  id: don-hopkins-cats
+  kind: recurring_cast
+  owner: don-hopkins
+  tone: warm, cheesy-on-purpose, genuinely fond — never maudlin
+  media_home: ./media/cats/          # TODO Don: drop photos (talking cat faces) + video clips here
+
+one_line: |
+  Make the cats STARS. Don has years of great cat photos (talking-cat-face material) and videos
+  (interstitials + real interruptions). They're the personal, warm signature that makes the full
+  shows feel like they're filmed in a real home — because they are.
+
+the_cast:
+  note: "Don to fill in names, photos, and personalities. One entry per cat; Napoleon seeded below."
+  napoleon:
+    status: in_memoriam           # the cat we lost
+    treatment: |
+      A gentle recurring tribute, not a sad beat. Napoleon gets to keep being a star from the archive:
+      old photos become talking-cat-face faceballs; a warm little "and here's Napoleon" cameo. Handle
+      with affection and a light touch — a beloved regular who still shows up, not a grief segment.
+    media: "Pull the best archive photos/videos into ./media/cats/napoleon/ (Don to select)."
+  # others:
+  #   <name>: { status: current, personality: "...", signature_bit: "...", media: ./media/cats/<name>/ }
+
+media_kinds:
+  talking_cat_faces:
+    what: "Cat photos → talking faces (googly eyes + lip-synced mouth) — a Faceball `talking_selfies` application."
+    source: hand_picked_cat_photos
+    faceball: ../../apps/performance-space/faceball-construction-set.yml#talking_selfies
+    use: "Cat 'comments' on a segment, reads a viewer letter, or deadpan-reacts to the guest."
+  interstitials:
+    what: "Short cat video clips between segments — palate cleanser, scene transition, cold-open charm."
+    feeds: ../../process/repo-show-format.yml#directors_cuts    # short-form between-segment content
+  interruptions:
+    what: "The real thing: a cat walks across the desk / knocks something over / demands attention mid-take."
+    stance: "DON'T cut them — they're the best part. Lean into the live-at-home authenticity; caption + keep."
+  b_roll: "Ambient cat footage for backgrounds, lower-thirds, loading/waiting moments."
+
+roles_in_show:
+  - "Between-segment interstitials (the cat 'bumper')"
+  - "Talking-cat-face reactions/commentary via faceball"
+  - "Cold-open charm + sign-off cuddle"
+  - "Unscripted interruptions kept in, not edited out (authenticity > polish)"
+  - "Cameo in the panel as audience-balls / extra face puppets when it fits"
+
+the_running_gag:
+  bit: |
+    Don's long-standing joke: make the cats YouTube stars and MONETIZE them to **pay for all the food
+    they eat.** Play it as a recurring gag — the cats have a 'contract', a 'per-cameo rate', an
+    escalating 'food budget' — deadpan mock-business around very good cats.
+  keep_it_a_joke: |
+    This is the PUBLIC running gag, played for warmth and laughs. The show's actual monetization
+    thinking is private (DonHopkins strategy), not built on the cats. The cats earn their keep in
+    CHARM; the 'paying for cat food' framing is the joke, not a business plan.
+
+production:
+  photos: "Curate the best cat photos → faceball talking-cat-face presets (per cat, per mood)."
+  videos: "Cut interstitials + keep the good interruptions; short is good (attention atoms)."
+  edit_pipeline: "Same cut/re-cut flow as everything else — cheap to splice a cat bump into any Director's Cut."
+  where: "Assets under ./media/cats/<name>/; presets can live beside the faceball guest puppets."
+
+see_also:
+  - ./README.md
+  - ./ideas.md
+  - ../../apps/performance-space/faceball-construction-set.yml   # talking_selfies → talking cat faces
+  - ../../process/repo-show-branding.yml                          # interstitials in show orchestration
+  - ../../process/repo-show-format.yml                            # directors_cuts: short-form between-segment

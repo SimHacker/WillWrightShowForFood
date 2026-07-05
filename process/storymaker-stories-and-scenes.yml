@@ -1,0 +1,71 @@
+# StoryMaker — stories & scenes file-system representation (DESIGN SPEC)
+#
+# The story/scene layer of the StoryMaker substrate that ShowMaker inherits (see
+# showmaker-network.yml#storymaker_inheritance). This captures Don's spec for the card-based story FS.
+# NOTE: this is the STORY/SCENE layer. The larger tenants/worlds/projects + per-realm taxonomy layer is
+# still a separate note-for-later (see showmaker-network.yml#future_design_story_fs).
+# Lineage: Don's SFC iPhone StoryMaker (Bar Karma progenitor) — characters/don-hopkins/media/storymaker/.
+
+meta:
+  id: storymaker-stories-and-scenes
+  status: design_spec        # specified by Don; not built yet (no code — capture the shape)
+  type: [file_system, schema, storymaker]
+
+thesis: |
+  Treat stories as **lightweight, card-based** things. **A scene is the universal card of StoryMaker** —
+  a container with well-defined default/standard (but still **optional**) properties, plus arbitrary
+  JSON and files. A card can **evolve**: it starts as a written scene description, gets **shot**
+  (possibly multiple shots), and **takes get uploaded into the card**.
+
+scene_card:
+  is: "The universal StoryMaker card — the atom of a story."
+  standard_properties:        # well-defined defaults; all OPTIONAL
+    - title
+    - text
+    - photo
+    - gps_coords              # already added
+    - metadata                # arbitrary
+  planned_properties: [links, embedded_video, other_content_types]
+  also_holds: "Arbitrary JSON + files — either in the scene's directory or out-of-band (see storage_modes)."
+  lifecycle:
+    - "Written scene description (the seed card)."
+    - "Shot — one or more shots."
+    - "Takes uploaded into the card."
+  video: "TikTok-length or longer; hosted ANYWHERE (link out) or stored in the card."
+
+story:
+  is: "An ordered collection of scenes."
+  interface_file: STORY.yml
+  contains:
+    scenes: "A PLURAL typed-object-array container of scenes (order matters — see ordering)."
+
+directory_layout:
+  top_level: "A single FLAT `stories/` directory (NOT nested)."
+  per_story: "`stories/<slug>/` — slug-named sub-dir holding that story's data + a `STORY.yml`."
+  scenes: "Numbered scene sub-dirs inside the story, e.g. `000-the-sun-rises/` — SCENES HAVE ORDER."
+  ordering:
+    stories: "Alphabetical by slug."
+    scenes: "Numeric **big-endian prefix** (`000-`, `010-`, …) so they sort in narrative order."
+  sub_stories: |
+    Implied by **big-endian prefix sharing** in the SAME flat dir — related stories/sub-stories group by
+    shared slug prefix, WITHOUT nesting. Flat, always flat.
+  all_resource_types: "Same flat + numbered/prefixed sub-dir pattern for every resource type."
+
+storage_modes:
+  inline_in_main: "Scene content lives directly in the scene's directory on the main branch."
+  out_of_band_scene_branch:
+    what: "A `Scene_<id>` branch holds that scene's data out-of-band."
+    donnie_darko: |
+      A **Donnie-Darko pocket-universe polymorphic typed container with full git history** — versioned,
+      forkable, mergeable (same pattern as StoryMaker `FamilyAlbum_<id>` branches).
+    where: "Can live in a **different or the same repo** — including the **owner's own repo they control**."
+  repository_repositories: "Totally free-form: repos of repos, owner-controlled — whatever structure the author wants."
+
+relationship:
+  showmaker: "ShowMaker's shows are a graph-walk over this story/scene content (see showmaker-network.yml#storymaker_inheritance)."
+  still_pending: "The tenants/worlds/projects + per-realm taxonomy-tag-tree layer above this — see showmaker-network.yml#future_design_story_fs."
+  lineage: ../characters/don-hopkins/media/storymaker/storymaker.yml   # the SFC iPhone progenitor
+
+ties:
+  - showmaker-network.yml
+  - ../characters/don-hopkins/media/storymaker/storymaker.yml

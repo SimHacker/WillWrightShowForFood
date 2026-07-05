@@ -35,6 +35,21 @@ the_bit:
   easter: "Do it on EASTER SUNDAY if possible. (Roboresurrection. Start a cult. 'It seemed to be the thing to do at the time.')"
   tone: "Joyful, irreverent, a little blasphemous — Stupid Fun Club energy. Keep it kind."
 
+speech_feedback_loop:
+  what: |
+    Slats' voice-synth stream-of-thought runs as a FEEDBACK LOOP — output feeds back as input,
+    mutating every pass. It's the embodied example of the show's RIFF LOOP: people can talk INTO,
+    OVER, AFTER, and BEFORE the loop to steer and mutate it. A human is IN the loop, not outside
+    pushing buttons — and that's the whole toy.
+  the_four_ways_in:
+    into:   "Seed it — speak/prompt the material Slats chews on."
+    over:   "Talk OVER it live while it runs — your voice joins the mix it feeds back on."
+    after:  "React AFTER a pass and feed that reaction back in as the next input."
+    before: "Prime the NEXT pass — reprogram/pre-load between rounds to bend where he goes."
+  why: "The diff between passes is the drama; steering the loop live is the act."
+  frame: ../ideas/themes/the-riff-loop.yml   # canonical theme: AI+people riffing off AI+people, steerable
+  siblings: "Jeff Adkins' SimObliterator recursion + Eno's play-against-the-system generativity — same loop, other media."
+
 robopoetry_ceremony:
   status: TODO — awaiting voice-synth log files from Don
   what: |
@@ -60,6 +75,7 @@ after_robo_resurrection:
 
 ties:
   - ./SHOW.yml
+  - ../ideas/themes/the-riff-loop.yml
   - ../PATTER.yml#slats_call_in_menu
   - ../../../../characters/don-hopkins/stupid-fun-club/STORY.yml
   - ../../process/apple2-emulator-stack.yml

@@ -1,0 +1,33 @@
+# SHOW — The Nomi Song (hosted-video-wrapper + memorial)
+# A wrapper show: we don't own the film; we point at it, bookmark it, and augment it live.
+
+meta:
+  id: the-nomi-song
+  type: hosted_video_wrapper
+  status: seed
+  one_line: "Wrap Andrew Horn's Klaus Nomi documentary — play it, bookmark it, and honor Nomi as part of the Bowie/SNL lineage."
+
+wraps:
+  work: "The Nomi Song"
+  director: "Andrew Horn"
+  year: 2004
+  about: "Klaus Nomi (1944–1983) — operatic-countertenor new-wave alien; sang beside Bowie on SNL 1979; one of the first public figures lost to AIDS."
+  hosting_url_FLAG_confirm: "Find/confirm the canonical hosted copy (YouTube or elsewhere) + rights before airing; reference + re-create, never rip masters."
+
+why_a_show: |
+  Nomi is the most poignant tape in the show's Bowie/SNL orbit. Wrapping the doc lets us play it, react,
+  and splice in commentary from guests who knew that scene — a memorial by TRANSFORMATION, not eulogy.
+
+card_todo:   # what the wrapper CARD will hold (bookmarks + TOC + playlists) — fill during a pass
+  bookmarks: []      # timestamped: SNL '79 appearance, the countertenor arias, the final period
+  toc: []
+  playlists: []
+
+memorial: ../ideas/traditions/in-memoriam.yml   # klaus_nomi + david_bowie
+
+ties:
+  - ../../characters/brian-eno/bowie-snl-1979.md
+  - ../../process/showmaker-network.yml   # hosted_video_wrapper
+  - ../ideas/traditions/in-memoriam.yml
+
+note: "Artifacts (clips, stills) belong in a character dir once Nomi gets one; this show only DRAWS on them."

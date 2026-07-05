@@ -32,11 +32,13 @@ She is **Don's long-time avant-garde north star.**
 ## How to reach her
 
 Don **briefly met Laurie Anderson during his years at [Interval Research](../don-hopkins/history/interval-research.yml)**
-(Paul Allen's lab, mid-1990s), where — by Don's recollection — she collaborated with the lab. So unlike
-most dream guests, there may be a **real warm-intro path here**: Interval alumni Don knows who worked
-with her (kept in the private roster), independent of the Will Wright / Brian Eno orbit. *(The Interval
-collaboration detail is Don's account; treat specifics as recollection until confirmed.)* This is a
-dream invitation — offered with no presumption.
+(Paul Allen & David Liddle's lab, 1992–2000). And her tie to Interval is now **confirmed on the public
+record**, not just recollection: Anderson developed the **Talking Stick** — a ~6-foot MIDI baton that
+granularizes and replays audio in real time — **with Bob Bielecki and Interval Research (c. 1999)**,
+debuting it in her *Songs and Stories from Moby Dick* tour. So unlike most dream guests, there may be a
+**real warm-intro path here**: Interval alumni Don knows who worked with her (kept in the private
+roster), independent of the Will Wright / Brian Eno orbit. This is a dream invitation — offered with no
+presumption.
 
 ## Ideas to explore
 

@@ -93,6 +93,18 @@ attention_atoms:
     - characters/will-wright/guest-prototype.yml#attention_economy
     - characters/don-hopkins/portrayal/voice.yml#writing_philosophy
 
+interstitials:
+  note: "Between-segment bumpers + palate cleansers that make full shows feel personal and lived-in."
+  the_cats:
+    what: |
+      Don's CATS as recurring stars — talking-cat-face faceballs, interstitial bumpers, and the real
+      at-home INTERRUPTIONS (cat crosses the desk mid-take) kept in, not cut. Includes a gentle
+      recurring tribute to **Napoleon** (the cat we lost) from the photo/video archive.
+    running_gag: "Monetize the cats to pay for the food they eat — deadpan mock-business (a PUBLIC gag, not the real monetization plan)."
+    spec: ../characters/don-hopkins/cats.yml
+    faceball: ../apps/performance-space/faceball-construction-set.yml#talking_selfies
+    feeds: repo-show-format.yml#directors_cuts     # short-form between-segment content
+
 participation_rituals:
   note: "Local kids-TV participation → Repo Show orchestration (TicketPR, audience/, live call-on)"
   map:

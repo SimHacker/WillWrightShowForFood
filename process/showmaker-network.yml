@@ -44,6 +44,96 @@ edges:
   storage: "yaml links in INDEX.yml + REPO-SHOWS.yml + per-show ties_to"
   pr_adds_edge: "Contributor PR adds node + one or more edges — we merge into index"
 
+storymaker_inheritance:
+  one_line: "ShowMaker is a SPECIALIZATION of StoryMaker — same substrate, one more layer."
+  storymaker: |
+    **StoryMaker** is the base: down-to-earth **directories + files in a git repo** (NOT an SQL
+    database) that hold stories and their content — Sims **family albums**, plus arbitrary media, in a
+    **`FamilyAlbum_<id>`** branch: metadata, images, videos, audio, captions. Git gives us **"Donnie
+    Darko pocket-universe" polymorphic typed containers with full history** — every object is versioned,
+    forkable, mergeable. (Well documented in MOOLLM; see storymaker media below.)
+  showmaker: |
+    **ShowMaker** inherits StoryMaker and adds the **show layer** on the same objects: a `shows/`
+    directory of human-readable **show-slug** subdirs, each with a **`SHOW.yml`** show interface +
+    state file (standard MOOLLM show objects) — GLANCE/CARD/README as usual. A show is a **graph walk**
+    over StoryMaker content, not a new datastore.
+  selfish_inheritance: "This IS the moollm selfish-inheritance pattern: ShowMaker declares StoryMaker as parent and overrides/extends only what it needs."
+  see:
+    - ../characters/don-hopkins/media/storymaker/storymaker.yml
+    - ../characters/don-hopkins/media/storymaker-urban-safari/storymaker-urban-safari.yml
+
+future_design_story_fs:
+  status: PARTIALLY-SPECIFIED   # story/scene card layer now designed; tenant/taxonomy layer still pending.
+  one_line: "Design the story file-system representation so ShowMaker can publish NETWORKS of shows — ours, our guests', and videos we recommend."
+  need: |
+    ShowMaker should publish networks of **our and other people's shows**, videos we recommend, our own
+    videos, and our friends' and guests' videos. To organize that at scale we need a real
+    file-system representation for stories/shows — the layer above individual SHOW.yml objects.
+  story_scene_layer_DONE: |
+    The story/scene CARD layer is now specified — flat `stories/` dir, slug sub-dirs + STORY.yml, ordered
+    numbered scene sub-dirs (scene = universal card), inline-or-`Scene_<id>`-branch storage, owner-controlled
+    repos. See storymaker-stories-and-scenes.yml.
+  tenant_layer_STILL_PENDING: "The tenants/worlds/projects + per-realm taxonomy-tag-tree layer ABOVE the story/scene layer is still note-for-later (below)."
+  shape_to_reinvent:
+    tenants_worlds_projects: |
+      Like StoryMaker: top-level **tenants** (a.k.a. **worlds** or **projects**) — an owner's realm. Each
+      guest/franchise/collaborator gets a realm.
+    per_realm_organization: |
+      Inside each realm: organizational structures — **folders**, and **taxonomy trees of tags** you can
+      apply to the shows in THAT realm (per-realm taxonomies, not one global schema).
+    networks: "Realms + tags + typed edges (see edges above) let ShowMaker render browsable, forkable NETWORKS of shows and recommended videos."
+  provenance: "There is a big, battle-tested design behind this that Don wants to discuss and REINVENT cleanly in MOOLLM — not cargo-culted. Hold for that session."
+  do_not_build_yet: true
+
+hosted_video_wrapper:
+  one_line: "A show can be a WRAPPER around an existing video we didn't produce — we pull it in and augment it."
+  how: |
+    We don't have to produce a video to make a show of it. Point a **`SHOW.yml`** at an existing hosted
+    video, add a **CARD** of **bookmarks to important events/segments, a TOC, and playlists**, then
+    **play it, talk about it, and augment it** live on a show — overlays, commentary, reactions, splices.
+  artifacts_live_in_character_dirs: |
+    Rule: the **video artifacts belong in the CHARACTER directory** (`characters/<id>/media/`), NOT in
+    the show dir — shows merely **draw on** them. One video can feed many shows.
+  attribution_is_inheritance: |
+    Wrapping + linking a source with attribution **is literally a moollm selfish-inheritance
+    declaration** — the show inherits the video as parent content and credits it by pointing at it.
+  examples:
+    - "Nina Hagen Band 'TV-Glotzer' (White Punks on Dope) — wrap + annotate + splice"
+    - "The Tubes 'White Punks on Dope' (Old Grey Whistle Test) — the parent in the cover chain"
+    - "Suppositori Spelling's Trannyshack drag cover — the cover-of-a-cover"
+    - "Doug Hilsinger's Taking Tiger Mountain (Doug's own uploads) — A/B against Eno's original"
+    - "The Nomi Song (Andrew Horn, 2004) — memorial wrapper (see repo-shows/the-nomi-song/)"
+    - "Leigh Bowery documentary — memorial wrapper (see repo-shows/leigh-bowery/; confirm exact doc)"
+  seeds:
+    - ../repo-shows/the-nomi-song/SHOW.yml
+    - ../repo-shows/leigh-bowery/SHOW.yml
+  see:
+    - ../repo-shows/ideas/themes/the-riff-loop.yml   # cover_chain + tribute_before_attribution
+    - ../repo-shows/ideas/traditions/in-memoriam.yml
+    - ../characters/nina-hagen/ideas.md
+
+show_path_as_playlist:
+  one_line: "Publish the path you walked through the show network during a show AS a playlist of that show."
+  how: |
+    A ShowMaker session is a **walk** through the graph. Record the traversal and publish it as the
+    show's **playlist** — the ordered path becomes a shareable artifact.
+  branching: "The path can BRANCH — a 'see also' outline / branching-merging story-path structure, not just a line."
+  ties: [showmaker_network.nodes, showmaker_network.edges]
+
+generic_show_skill:
+  one_line: "Build a GENERIC `show` skill in MOOLLM; the Repo Show INHERITS from it and adds its own layer."
+  plan: |
+    Factor the reusable show machinery (SHOW.yml interface, graph walk, playlist, wrapper) into a
+    **generic MOOLLM `show` skill**. The Repo Show then **inherits** that skill and adds all of OUR
+    stuff from the RepoShow repo — demonstrating **selfish cross-repo inheritance** and
+    **play-lift-learn, instance-first programming** with **class refactoring on need**.
+  mantra: |
+    Our SW-dev mantra, provable on camera: build the INSTANCE first (play), notice the reusable pattern
+    (lift), generalize into a class/skill only when a second instance needs it (learn) — and refactor
+    the shared parent out of the working children, never speculatively. A live demo to bring to the
+    AI-programmer YouTube crowd with glee and proof.
+  see: ../repo-shows/ideas/themes/the-riff-loop.yml
+
 your_show:
   steps:
     - "Fork or branch"

@@ -7,10 +7,11 @@ consent granted · authored by Don Hopkins
 ## Who
 
 **Jeff Adkins** (GitHub **[DnfJeff](https://github.com/DnfJeff/SimObliterator_Suite)**) is the creator
-of **SimObliterator** and **VitaMoo** — AI-assisted, open tools for reading, writing, analyzing, and
-rendering **The Sims 1** save files, objects, and characters. SimObliterator does the unglamorous,
-essential work: **IFF/FAR parsing, GUID and object (OBJD) analysis, catalog inventory**; VitaMoo
-renders Sims skeletons, meshes, and animations right in the browser ([vitamoo.space](https://vitamoo.space)).
+of the **SimObliterator Suite** — AI-assisted, open tools for reading, writing, and analyzing **The
+Sims 1** save files and objects. It does the unglamorous, essential work: **IFF/FAR parsing, GUID and
+object (OBJD) analysis, catalog inventory.** (It's also what inspired **VitaMoo** — **Don's** own
+TypeScript character/skeleton/mesh renderer, an AI-translation of Don's prior hand-written Unity3D C#;
+see [the feedback loop](#the-feedback-loop-the-beautiful-part) and `ideas.md`.)
 
 ## Why he's foundational
 

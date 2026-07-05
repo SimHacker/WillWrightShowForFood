@@ -7,6 +7,7 @@ meta:
   last_reviewed: 2026-06-30
   steam_game: https://store.steampowered.com/app/3314070/The_Sims/
   buy_first: get-the-sims-on-steam.md
+  see_also: sims-open-source-and-formats.yml  # open engines (FreeSO/Simitone/Niotso) + format wikis
 
 # EA / LICENSE — what actually constrains you
 legal_layers:

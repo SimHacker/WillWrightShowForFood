@@ -1,0 +1,164 @@
+# Pink Trombone Jam — group activity 🎺👥🗣️
+# A bunch of people pink-trombone-ing and singing together, live.
+# Home: ../../process/performance-space.yml (audience_chorus mode) · Human view: performance-space/README.md
+# Lineage: articulatory synthesis (physical vocal-tract model) — NOT a voice clone of any person.
+
+meta:
+  id: pink-trombone-jam
+  status: active_design
+  kind: group_activity           # audience/guest participation, multiplayer
+  tagline: "A bunch of people pink-trombone-ing and singing together."
+  one_line: |
+    Everyone drives a Pink Trombone (a playable model of the human vocal tract) while singing with
+    their own voice — using the instrument to **accompany, follow, and lead** that voice, and to make a
+    gleeful **karaoke fool** of yourself: affectionately impersonate and send up voices and styles.
+    Keep it NICE. Four people doing it at once is chaos and joy.
+  physical_model_not_clone: |
+    Pink Trombone is ARTICULATORY synthesis — a physical model of a vocal tract (a tube of varying
+    diameter), not a recording or clone of anyone's voice. So it fits the show's no-voice-clones rule
+    cleanly: you're playing an instrument, not impersonating a person.
+
+# ── The core play ────────────────────────────────────────────────────
+
+the_activity:
+  players: "2–4+ at once (4 is the sweet-spot chaos)"
+  each_player_has:
+    - "a Pink Trombone (tongue position + constriction + pitch + voicing/aspiration)"
+    - "their own singing/speaking voice, live on mic"
+  the_verbs:                     # what you DO with the trombone against your own (or others') voice
+    accompany: "Trombone drones/harmonizes under your real singing — a second voice you conduct."
+    follow:    "Trombone chases your pitch/vowels a beat behind — call-and-response with yourself."
+    lead:      "You sing to MATCH the trombone — the instrument sets the line, you're the cover."
+    karaoke_fool: "Make a glorious karaoke fool of YOURSELF — ham it up, no dignity required. The edge points at you."
+    affectionate_send_up: "Impersonate and send up other people's voices and styles — gently, as homage."
+  keep_it_nice: |
+    We eased OFF ridicule and hard parody. Send-ups are affectionate, never mockery; aim the silliness at
+    yourself. Keep it nice.
+  ensemble_fun:
+    - "Four trombones + four voices = an instant absurd choir; pick a round (e.g. Row Row Row)."
+    - "Phantom tones: multiple sustained voices in tune produce interference beats — hair-raising."
+    - "One player leads, three follow — musical Simon Says with vocal tracts."
+
+group_session:
+  name: "We Are the Weird"
+  what: |
+    Do a Pink Trombone session on **each guest's own show**, then **edit them together** into one mass
+    choir — or get **as many people trombone-singing together at once as possible**, live. Anthem energy:
+    **"We Are the Weird."**
+  as_many_as_possible: "Croquet-synced (see multiplayer) — the more tracts in sync, the wilder and better."
+  edit_together: |
+    Time-shifted contributions spliced into one number across shows — same async accretion as the
+    Director's-Cuts model (see ../../process/repo-show-format.yml#iteration_model).
+  dream_choir: [laurie_anderson, brian_eno, nina_hagen, craig_latta, alan_kay, kevin_lenzo, zack_qattan]
+
+# ── Multiplayer / sync ───────────────────────────────────────────────
+
+multiplayer:
+  model: "Each player's tract state streams to a shared session; everyone hears the mix."
+  prior_art: |
+    A **Collaborative Pink Trombone** already exists (Croquet-synced) — see building_blocks.zack_qattan.
+  croquet_tie: |
+    Croquet / Multisynq synchronized simulation — the same lineage as the
+    ../../characters/vanessa-freudenberg/ memorial arc (SqueakJS, Croquet, Multisynq) and
+    ../../characters/philip-rosedale/ (shared virtual presence). Deterministic shared state = many
+    hands on many tracts, all in sync.
+  low_friction: "Browser + mic; join by URL; no install. OBS Browser Source for the broadcast mix."
+
+# ── Inputs (play it however you can) ─────────────────────────────────
+
+inputs:
+  pointer:      "Mouse / touch — drag the tongue, pinch the constriction (the original UI)."
+  midi:         "MIDI keyboard/controller drives pitch + vowel targets (Qattan MIDI demo)."
+  gamepad:      "Gamepad sticks = tongue X/Y + pitch (Qattan gamepad demo) — party-friendly."
+  variable_tract_length: "Longer/shorter tract = bigger/smaller 'body' of voice (Qattan variable tract)."
+  voice_to_params:
+    what: "Sing/speak → a model maps your speech to Pink Trombone parameters → the tract mimics you."
+    why:  "This is the magic that makes 'follow / ridicule / parody your own voice' work automatically."
+    built_by: building_blocks.zack_qattan
+
+# ── Why it belongs on the show ───────────────────────────────────────
+
+thesis:
+  cheezy_viral: |
+    Same design brief as Faceball and the Bounce lineage: **high production value, low production
+    cost.** The instrument is silly, legible, and anybody can play it — which is exactly why clips of
+    four people trombone-singing go viral. Direct manipulation; no AI required (voice→params is a
+    bonus, not a prerequisite).
+  direct_manipulation: "You grab a tongue and move it and a voice comes out. That's the whole pitch."
+  ties:
+    - ../../characters/don-hopkins/interval-research-pluggers-and-mediaflow.md  # Bounce: play any audio with any gesture
+    - faceball-construction-set.yml#amplitude_scrub                            # scrub-puppet sibling
+    - ../../process/performance-space.yml#audience_chorus                       # the mode this fills
+    - ../../repo-shows/phoneloper/SHOW.yml                                      # Don's SFC expressive-speech toy
+    - ../../schemas/language-cow.yml                                            # vocal-tract instruments
+
+# ── Building blocks (public creators — cite & build on, don't replace) ──
+
+building_blocks:
+  neil_thapen:
+    what: "Original **Pink Trombone** — the browser vocal-tract instrument everyone forks."
+    url: https://dood.al/pinktrombone/
+  zack_qattan:
+    what: |
+      Did a huge amount of Pink Trombone work — most relevant here: **trained models to map human
+      speech to Pink Trombone parameters** (phoneme classifier via Edge Impulse; KNN voice classifier;
+      "Vocap"), plus **Collaborative Pink Trombone (Croquet)**, MIDI + gamepad control, variable tract
+      length, a rhyming dictionary, and text-to-speech.
+    channel: https://www.youtube.com/@ZackQattan
+    confidence: |
+      ~0.9 this is the person Don meant ("the guy who trained a model to map human speech to pink
+      trombone parameters"). CONFIRM with Don before treating as settled. Outreach = private
+      green-room (see ../../../DonHopkins/.../green-room). His work is public; inviting him is not.
+  paul_batchelor:
+    what: "Singing synth w/ automatic 3-part harmony (Trio) + voxbox DSP crate — richer voice models."
+    urls: [https://pbat.ch/, https://github.com/PaulBatchelor/Trio, https://github.com/PaulBatchelor/voxbox]
+  giulio_moro:
+    what: "Pink Trombone ported to C++ / Bela (Eurorack module) — hardware/embedded path."
+    url: https://github.com/giuliomoro/pink-trombone
+
+# ── Cross-links / guest hooks ────────────────────────────────────────
+
+guest_hooks:
+  laurie_anderson:
+    what: "Clicking the leftmost part of a singing-synth tract sounds like Laurie Anderson's 'O Superman.'"
+    tie: ../../characters/laurie-anderson/ideas.md   # invented-instruments hook; dream guest
+  brian_eno: "Voice + generative-music elder; a natural for the choir (Bowie/Eno history conversation separately)."
+  nina_hagen: "Extreme vocal-tract control incarnate — the trombone as a cartoon of what she does live."
+  voice_and_music_tech_leads:
+    craig_latta: |
+      Live-coding / networked music (Squeak/Smalltalk lineage; real-time collaborative performance). A
+      natural for the Croquet-synced multiplayer jam. Private lead; consent not asked; flag details.
+    alan_kay: |
+      Smalltalk / Croquet / Etoys elder — ties the multiplayer-sync substrate (Croquet) to the whole
+      lineage. Dream guest; consent not asked.
+    kevin_lenzo: |
+      Speech-synthesis / voice person (Festival/CMU orbit; PyCon founder). Voice-tech conversation +
+      choir. Private lead; consent not asked; flag details before treating as settled.
+  invite_lead: "Zack Qattan (Pink Trombone tooling) — private lead; consent not asked."
+
+browser_and_motion:
+  runs_in_browser: |
+    All of this runs in the **browser** — including **Zack Qattan's neural-net voice→Pink-Trombone**
+    mapping (see voice_to_params) — plus **video motion tracking** as another live input.
+  motion_tracking_lineage: |
+    Real-time video motion tracking + background removal has a direct show ancestor: **Subutai Ahmad**'s
+    Interval-era computer vision (hand/body tracking, virtual blue screen → the IntelPlay Me2Cam), which
+    **Don helped with**. Same "play any gesture / any body movement drives the puppet" idea as Bounce and
+    Faceball's amplitude_scrub + motion drive.
+  see:
+    - ../../characters/subutai-ahmad/README.md
+    - faceball-construction-set.yml#anonymizing_puppet_and_reveal   # motion_drive
+    - ../../characters/don-hopkins/interval-research-pluggers-and-mediaflow.md
+
+ethics:
+  - "Articulatory synthesis = an instrument (a physical tract model), not a clone of anyone's voice."
+  - "Human puppetry / human performance only — consistent with performance-space.yml#ethics."
+  - "Credit the ecosystem (Thapen, Qattan, Batchelor, Moro); build on, don't rebrand."
+
+see_also:
+  - ../../process/performance-space.yml
+  - ../../process/performance-space/README.md
+  - ../../repo-shows/phoneloper/SHOW.yml
+  - ../../schemas/language-cow.yml
+  - faceball-construction-set.yml
+  - ../../characters/vanessa-freudenberg/README.md

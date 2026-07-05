@@ -1,0 +1,34 @@
+# SHOW — Leigh Bowery documentary (hosted-video-wrapper + memorial)
+# A wrapper show: point at the doc, bookmark it, augment it live.
+
+meta:
+  id: leigh-bowery
+  type: hosted_video_wrapper
+  status: seed
+  one_line: "Wrap a Leigh Bowery documentary — play it, bookmark it, and honor Bowery in the persona/mask/living-sculpture lineage (with Nomi + Bowie)."
+
+wraps:
+  about: "Leigh Bowery (1961–1994) — performance artist, club legend, living sculpture; muse to Lucian Freud; the persona/mask/gender-play lineage."
+  work_FLAG_confirm: |
+    Confirm WHICH documentary before building the CARD. Candidate: 'The Legend of Leigh Bowery' (dir.
+    Charles Atlas, 2002) — verify title/year/director and the canonical hosted copy + rights. (A newer
+    doc/retrospective may also exist; pick the one Don means.)
+  hosting_url_FLAG_confirm: "Find/confirm hosted copy + rights before airing; reference + re-create, never rip masters."
+
+why_a_show: |
+  Bowery pairs directly with Nomi and Bowie — mask, transformation, the body as sculpture. Wrapping the
+  doc gives the show a third pillar of the persona lineage to play, react to, and splice.
+
+card_todo:
+  bookmarks: []
+  toc: []
+  playlists: []
+
+memorial: ../ideas/traditions/in-memoriam.yml   # leigh_bowery
+
+ties:
+  - ../../characters/brian-eno/bowie-snl-1979.md   # companion-viewing note already points here
+  - ../../process/showmaker-network.yml            # hosted_video_wrapper
+  - ../ideas/traditions/in-memoriam.yml
+
+note: "Artifacts belong in a character dir once Bowery gets one; this show only DRAWS on them."

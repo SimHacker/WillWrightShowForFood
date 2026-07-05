@@ -148,6 +148,38 @@ keeps excerpts comparative, links out so viewers can buy/stream **both** records
 If Doug or Brian *do* want to call in or join, the segment becomes the reunion — but it never has to
 wait on a reply.
 
+## Questions for Brian — the before/after listening 🎧
+
+*If Brian joins (or records a reply), this is the heart of the segment: sit him down with **both**
+versions and let him talk. Offered as prompts, not scripted answers.*
+
+- **A/B, in his own ears.** Play Doug's hand-made take and Brian's **1974 original** back to back —
+  across **several songs**, not just one. Ask him to describe, in **musical *and* emotional** terms:
+  what changed, what surprised him, what Doug **found in the songs that he'd missed or left cold**, and
+  what the warmth/rock-heaviness *does* to material he made machine-tinged on purpose.
+- **Expand the answering-machine message.** His phone message already says it — *"beautiful music"* from
+  *"cold experiments,"* *"I am a swan!"* — but ask him to **put more words to it**: what, exactly, is
+  beautiful about hearing your own **discarded / abandoned / "cold"** work come back **warm** through
+  someone else's *appreciating, reinterpreting* ears? The specific feeling of seeing work you'd walked
+  away from **valued and transformed** by another person.
+- **The voice.** Don's honest first reaction, not knowing whose record it was: it was **the voice** — and
+  then, underneath it, *Brian's own notes, phrasing, and composure* still showing through Doug's singing.
+  A heavier, rockier reinterpretation that **still carries Brian**. (And the street cred is real: Doug, a
+  **gay bear leather bartender** who worked **The Eagle** in San Francisco.)
+
+### The parallel Don draws — passthrough that preserves intent
+This is why the story matters to Don beyond music. It's **exactly what he does with Will's SimCity**:
+faithfully **pass through the original design** into a new interface **without spoiling it** — and, at
+the same time, **change many things in ways that preserve the intent**, adding layers **never originally
+imagined that still fit** (multiplayer **cooperative** play, **voting**, a collaborative planning
+**whiteboard overlay**, **chat**). Honoring by transforming; a loving cover in another medium. It's
+**Papert's constructionist philosophy** projected forward — the same *honor-by-transformation* move at
+the heart of the whole Repo Show. (See the [riff loop](../../repo-shows/ideas/themes/the-riff-loop.yml).)
+
+*(Companion viewing Don recommends: **Bowie's "The Man Who Sold the World"** hits especially hard after
+**_The Nomi Song_**, and pairs with the **Leigh Bowery** documentary — see
+[`../brian-eno/bowie-snl-1979.md`](../brian-eno/bowie-snl-1979.md).)*
+
 ## Don's wish
 
 Don and Doug met just that once, in 2006, and haven't been in touch since; Don has **reached out and

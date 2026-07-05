@@ -62,6 +62,16 @@ We could produce short-form videos just like these — async Q&A primers before 
 
 → Stupid Fun Club: [`../don-hopkins/stupid-fun-club-empathy-and-servitude.md`](../don-hopkins/stupid-fun-club-empathy-and-servitude.md) · sources [`sources/stupid-fun-club-one-minute-movies/`](sources/stupid-fun-club-one-minute-movies/README.md)
 
+## Anecdotes to identify (help wanted 🕵️)
+
+- **"My brain is very compact" (Japanese anime, Maxis Sims skunkworks era).** Don's memory: while
+  developing **The Sims** in the small skunkworks office, **Will brought in a Japanese anime** whose
+  title Don doesn't recall. The hero gets his **head smashed in**, comes back later, everyone's amazed
+  he survived — and he explains, matter-of-factly (proudly, even), **"My brain is very compact."** It
+  saved his life. *Title UNIDENTIFIED — a quick search surfaced only unrelated "empty brain" gags (e.g.
+  FLCL), not this line. If you can name the anime, file an issue. (Don, any more details — era ~1997–2000,
+  genre, dub vs sub — would help pin it down.)*
+
 ## Show seed
 
 | Show seed | Hook |

@@ -1,0 +1,91 @@
+# VICE NOT ICE — the balloon-physics drag puppet (a segment concept)
+# A joyful, trans-inclusive video-puppet bit: celebrate gender play, skewer the hypocrisy + cruelty of
+# an anti-trans / anti-immigrant DHS-ICE regime. Celebrate, don't shame. Aim the edge at power.
+
+id: vice-not-ice-puppet
+type: gag
+status: seed
+
+the_bit: |
+  A video puppet (the show's chroma-key / low-tech kind) rigged with EXAGGERATED soft-body physics —
+  giant jiggly balloon "boobs," and (per the puppet-me-consent grant) dongs too — for the bimbos, drag
+  queens, faux/bio queens, drag kings, and girls — and TRANS GIRLS ARE GIRLS. A dance number where
+  dongs and boobies bounce together, physics played for pure joy. Slogan: **VICE NOT ICE** — choose
+  harmless, joyful vice over state cruelty.
+
+what_its_really_about: |
+  The joke is NOT "ha, a man in fake boobs" — the show LOVES drag and gender play; that's the opposite
+  of shame. The target is HYPOCRISY + STATE CRUELTY: a DHS/ICE regime that persecutes immigrants and
+  trans people while (per tabloid reporting) its own household privately plays dress-up. Celebrate the
+  gender play; point the mockery at the cruelty and the double standard, not at anyone's cross-dressing.
+
+source_caveat: |
+  **Don's position:** it's **real** — it happened, and the neighbor who said the images "must have been
+  AI" was mistaken. The public sourcing is thin (NY Post relaying the Daily Mail, dated April 1, 2026,
+  with that "must have been AI" quote), so the repo won't stamp it as neutral, settled fact in its own
+  voice — but per Don we treat it as a **real thing being satirized**, not a hoax. And here's the joke
+  Don wants front and center: the real-vs-AI ambiguity is the whole gag. We build a **proudly, obviously
+  AI-coded** interactive boob-physics sim on top of it — **Crocodile Dundee style: "That's not AI. THIS
+  is AI."** We still do NOT republish the tabloid photo (copyright), and we keep it as **satire of a
+  public political figure** (a DHS/ICE regime and its household), not the outing of a private individual.
+
+care: |
+  Consistent with puppet-me-consent#scope_and_care: satire of PUBLIC officials and their hypocrisy is
+  fair game; gleefully punching DOWN at a private individual for gender-nonconformity is not the point
+  (and cuts against our own pro-drag ethos). Keep the edge on power — the anti-trans/anti-immigrant
+  posture of DHS/ICE and the absurd double standard — and keep the gender play a celebration.
+
+the_song: |
+  Open casting call: the PERFECT song to dance dongs + boobies to together — bouncy, joyful, a little
+  filthy, ideally a cover-chain candidate (resample it, cover it, transcend it — see the riff loop).
+  Audience / homefun can nominate and fork.
+
+dance_off:
+  what: |
+    A **dance off** built from **Faceball Construction Kit** puppets — dongs and boobies bouncing
+    together on Sanspiel jiggle physics. Show a guest the puppets others have made, then invite them to
+    build their own and join the floor.
+  build_with: ../../../apps/performance-space/faceball-construction-set.yml#soft_body_anatomy
+  cast:
+    # NOTE: we do NOT presume Brian participates in this bit. He's a conversation guest about the
+    # Bowie/Eno history; he was shown the tools + warned about the ADULT section earlier, and any
+    # involvement is entirely his call — no expectation. See ../../../characters/brian-eno/bowie-snl-1979.md.
+    will_wright: |
+      Dances with a **Spore penis monster** — the emergent "**Sporn**" his own creature editor made
+      inevitable. Will, of all people, knows you can't stop the players from building one.
+    everyone: "Bimbos, drag queens, bio/faux queens, drag kings, girls — trans girls are girls — audience balls too."
+  mythic_quest_ttp: |
+    Screen the **Mythic Quest "Time To Penis"** beat (its penis-building storyline) as the cold open:
+    every creation tool becomes a penis generator. Faceball agrees — so we make it a **dance number**,
+    not a bug report. TTP as a feature, celebrated.
+  spore_tie: ../../will-wright/game-bridge-sims-spore.yml
+
+the_reveal:
+  what: |
+    The comedic climax. The balloon-boob / dong puppet is a **full-screen anonymizing mask** the dancer
+    performs behind — driven by their whole-body motion. After a spectacular number, **with their
+    explicit up-front consent**, we show the raw "behind-the-scenes" video WITHOUT the overlay. The
+    unmask is the punchline.
+  consent_first: |
+    Opt-in agreed BEFORE the dance, revocable up to air; the performer owns both cuts (masked + raw).
+    No non-consensual reveal, ever.
+  blackmail_trope_inverted: |
+    Deliberately evokes the kompromat / "Epstein tapes" blackmail vibe — then INVERTS it: real kompromat
+    is nonconsensual coercion; ours is consensual celebration. Same tension, opposite ethics; the
+    consent is the joke. The "Bryon Noem" peg is treated per source_caveat (Don: real, not a hoax; the
+    sim is proudly AI — "That's not AI. THIS is AI.") — satire of a public political figure, never
+    outing a private person.
+  engine: ../../../apps/performance-space/faceball-construction-set.yml#anonymizing_puppet_and_reveal
+
+physics_note: |
+  Real, buildable: soft-body / jiggle physics on a puppet rig is a legible, funny tech demo — the
+  seams-showing, low-tech spirit of the video puppet. A forkable browser toy in its own right.
+
+lineage:
+  - ../traditions/puppet-taxonomy.yml        # the video-puppet kind + soft-body physics variant
+  - ../../../characters/don-hopkins/portrayal/puppet-me-consent.yml  # dongs-and-all, celebrate-don't-shame
+  - ../traditions/unnecessary-censorship.yml
+
+ties:
+  - ../themes/the-riff-loop.yml              # the perfect-song search = resample / cover / transcend
+  - ../../../characters/nina-hagen/ideas.md  # drag lineage: bio queen / drag king / Trannyshack
