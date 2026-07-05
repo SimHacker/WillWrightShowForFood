@@ -40,6 +40,8 @@ connector:
 
 show_suggestions:
   - { seed: ../../repo-shows/henry-minsky/, what: "Solo — Society of Mind ideas in modern AI (Leela AI), declarative UI (OpenLaszlo), and authoring agent skills as constructionism / PBD" }
+  - { seed: ../../repo-shows/leela-ai/, what: "Group — the Leela AI crew show-and-tell (with Milan, Cyrus Shaoul, Steve Kommrusch, Isabella Struckman, Art Medlar)" }
+  - { seed: ../../repo-shows/leela-ai/, what: "Couple — Milan + Henry together: product & architecture as a partnership (first-wired-family thread)" }
   - { seed: ../../repo-shows/openlaszlo/, what: "Group — OpenLaszlo reunion with David Temkin + Oliver Steele + Don; Henry was a Laszlo software architect and relayed David's AI-revival news" }
 
 sources:

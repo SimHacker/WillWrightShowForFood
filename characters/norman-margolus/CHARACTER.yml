@@ -73,6 +73,7 @@ sources:
     - "Margolus, N. (1987). *Physics and Computation* (MIT PhD thesis)."
 
 see_also:
+  - { path: the-cam6-demo-for-norman.md, why: "'What I made with your magic' — the demo explained TO Norman: Forth-vs-JS code, floppy/Sun-Forth heritage, iteration layers, emulator-vs-simulator question, TS/Sandspiel future" }
   - { path: ../jim-crutchfield/, why: "Cellular automata / edge of chaos — joint CA show" }
   - { path: ../scott-draves/, why: "Generative art + cellular automata kinship" }
   - { path: ../henry-minsky/, why: "Norman's friend; the bridge to invite him; MIT nexus" }

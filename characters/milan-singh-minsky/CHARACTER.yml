@@ -30,7 +30,12 @@ family:
   relation: "Marvin Minsky's daughter-in-law"
 
 leela_colleagues:
-  with: ["henry-minsky", "isabella-struckman", "Steve Kommrusch", "don-hopkins"]
+  with: ["henry-minsky", "isabella-struckman", "Steve Kommrusch", "cyrus-shaoul", "art-medlar", "don-hopkins"]
+
+show_suggestions:
+  - { seed: ../../repo-shows/leela-ai/, what: "Group — the Leela AI crew show-and-tell (with Henry, Cyrus Shaoul, Steve Kommrusch, Isabella Struckman, Art Medlar)" }
+  - { seed: ../../repo-shows/leela-ai/, what: "Couple — Milan + Henry together: product & architecture as a partnership" }
+  - { seed: ../../repo-shows/isabella-struckman/, what: "Solo / vision-AI episode space — product leadership in AI" }
 
 sources:
   wikipedia: null
@@ -43,4 +48,7 @@ sources:
 see_also:
   - { path: ../henry-minsky/, why: "Her husband; Leela co-founder/CTO" }
   - { path: ../isabella-struckman/, why: "Leela colleague — vision-AI episode space" }
+  - { path: ../cyrus-shaoul/, why: "Leela co-founder; grid-world paper co-author" }
+  - { path: ../art-medlar/, why: "Leela AI collaborator" }
+  - { path: ../../repo-shows/leela-ai/, why: "Leela AI group / couple show" }
   - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

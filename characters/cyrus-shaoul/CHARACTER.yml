@@ -1,0 +1,52 @@
+# Cyrus Shaoul — invitation portrayal. NOT Cyrus Shaoul.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: cyrus-shaoul
+  name: "Cyrus Shaoul"
+  type: invitation
+  signifier: "🧩"
+  status: living
+  field: "Co-founder, Leela AI; computational learning / psycholinguistics background (to confirm specifics)"
+  home: characters/cyrus-shaoul/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+  note: "Host-authored from public sources + colleague knowledge (Don's Leela crew). Cyrus may edit, reduce, or delete anytime. Some background flagged to confirm."
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/leela-ai/
+
+bio:
+  summary: "**Cyrus Shaoul** — a **co-founder of Leela AI** and co-author on Leela's self-supervised grid-world learning paper (Kommrusch, H. Minsky, M. Minsky, Shaoul, 2020). Background in computational models of learning."
+  facts_to_confirm:
+    - "Exact title/role at Leela AI"
+    - "Prior affiliations + a public link (site / Google Scholar / LinkedIn)"
+    - "Computational-linguistics / learning-model background (confirm before citing specifics)"
+
+why_invited:
+  leela_cofounder: "A founder's-eye view of Leela AI — how the visual-intelligence system learns, and the ideas it carries forward."
+  learning_models: "Computational models of learning — a bridge between the Society-of-Mind / schema-learning lineage and modern ML."
+
+show_suggestions:
+  - { seed: ../../repo-shows/leela-ai/, what: "Group — the Leela AI crew showing what they do (with Henry + Milan Minsky, Art Medlar, Steve Kommrusch, Isabella Struckman)" }
+  - { seed: ../../repo-shows/leela-ai/, what: "Solo / 1-on-1 — founding Leela AI + how the system learns" }
+
+sources:
+  wikipedia: null
+  web: []       # TODO: add a verified public link (Scholar / site) before citing specifics
+  papers:
+    - { title: "Self-Supervised Learning for Multi-Goal Grid World: Comparing Leela and Deep Q Network (PMLR 131, 2020)", authors: "Kommrusch, H. Minsky, M. Minsky, Shaoul" }
+  blogs: []
+
+see_also:
+  - { path: CARD.yml, why: "Invokable abilities for show segments" }
+  - { path: ../../repo-shows/leela-ai/, why: "Leela AI group/solo show" }
+  - { path: ../henry-minsky/, why: "Leela AI co-founder/CTO" }
+  - { path: ../milan-singh-minsky/, why: "Leela AI VP Product; grid-world paper co-author" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

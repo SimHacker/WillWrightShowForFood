@@ -1,0 +1,51 @@
+# Art Medlar — invitation portrayal. NOT Art Medlar.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: art-medlar
+  name: "Art Medlar"
+  type: invitation
+  signifier: "🔎"
+  status: living
+  field: "Software engineer & systems builder — WAIS + early Internet Archive; Thinking Machines, Xerox PARC, Brightmail; a Leela AI collaborator (per Don)"
+  home: characters/art-medlar/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+  note: "Host-authored from public sources (Local Power bio) + colleague knowledge — Don works with Art at Leela AI. Art may edit, reduce, or delete anytime."
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/leela-ai/
+
+bio:
+  summary: "**Art Medlar** — a veteran software engineer with a rare résumé of foundational systems. He **co-developed WAIS** (Wide Area Information Servers, an early internet search system) and the **early Internet Archive**; began at **Thinking Machines** in the late 1980s programming massively parallel **Connection Machines**; did **operating-systems R&D at Xerox PARC** in the 1990s; and was **principal engineer at Brightmail** (San Francisco anti-spam), taking it from a napkin sketch through full-scale deployment to its 2004 acquisition by Symantec. Later **CIO at Local Power** (community-choice-aggregation modeling). Don works with Art at **Leela AI**."
+  don_note: "Don: 'Art Medlar, who I work with at Leela and is awesome.' A builder's builder — great at making things and understanding large complex systems."
+
+why_invited:
+  builder: "Firsthand across four eras of infrastructure — massively parallel computing, PARC OS research, one of the internet's first search systems, the early Internet Archive, and shipping a product to acquisition."
+  internet_history: "A living primary source on WAIS and the early Internet Archive — how search and preservation on the internet actually started."
+  leela: "A current Leela AI collaborator — part of the crew showing what modern visual-intelligence AI looks like in practice."
+
+show_suggestions:
+  - { seed: ../../repo-shows/leela-ai/, what: "Group — the Leela AI crew showing what they do (with Henry + Milan Minsky, Cyrus Shaoul, Steve Kommrusch, Isabella Struckman)" }
+  - { seed: ../../repo-shows/leela-ai/, what: "Solo — 'building things & understanding big systems': WAIS, early Internet Archive, Connection Machines, PARC, Brightmail" }
+
+sources:
+  wikipedia: null
+  web:
+    - { title: "Art Medlar bio — Local Power (CIO; co-developed WAIS + early Internet Archive; Thinking Machines, Xerox PARC, Brightmail)", url: "https://localpower.com/MedlarBio.html" }
+    - { title: "WAIS (Wide Area Information Servers) — background", url: "https://en.wikipedia.org/wiki/Wide_area_information_server" }
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: CARD.yml, why: "Invokable abilities for show segments" }
+  - { path: ../../repo-shows/leela-ai/, why: "Leela AI group/solo show" }
+  - { path: ../henry-minsky/, why: "Leela AI co-founder/CTO" }
+  - { path: ../cyrus-shaoul/, why: "Leela AI co-founder" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

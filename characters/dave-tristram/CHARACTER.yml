@@ -1,0 +1,49 @@
+# Dave Tristram — invitation portrayal. NOT Dave Tristram.
+# Standards: ../../schemas/portrayal-standards.yml
+# STUB: placeholder — Don to verify/fill bio. Do NOT cite unverified facts as fact.
+
+character:
+  id: dave-tristram
+  name: "Dave Tristram"
+  type: invitation
+  signifier: "👤"
+  status: living
+  field: "Graphics + cellular-automata hacking (details to confirm with Don)"
+  home: characters/dave-tristram/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+  note: "STUB. Host-authored placeholder from Don's memory only. Bio unverified — fill from a real source before publishing/citing. Dave may edit, reduce, or delete anytime."
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/norman-margolus/   # invited to the CA looping fest
+
+bio:
+  summary: "PLACEHOLDER — Don's friend from the graphics / cellular-automata world; invited to the CA looping fest with Norman Margolus, Stephen Wolfram, Will Wright, and Brian Eno."
+  facts_to_confirm:
+    - "Full name / preferred name and any middle initial"
+    - "Where Don knows him from (SGI? graphics community? CA/Forth scene?) — confirm"
+    - "Notable work / projects to credit accurately (graphics tools, CA, screensavers, demos?)"
+    - "Current affiliation + a public link (personal site / GitHub / LinkedIn)"
+    - "Whether he prefers solo async video, 1-on-1, or the group looping fest"
+
+why_invited:
+  ca_looping_fest: "A CA + graphics voice for the Norman Margolus 'looping fest' — cellular automata as a live, visual, generative medium."
+
+sources:
+  wikipedia: null
+  web: []       # TODO: add a verified public link before citing anything
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: CARD.yml, why: "Invokable abilities for show segments (fill after bio confirmed)" }
+  - { path: ../norman-margolus/, why: "CA looping fest co-guest" }
+  - { path: ../stephen-wolfram/, why: "CA looping fest co-guest" }
+  - { path: ../../repo-shows/norman-margolus/, why: "Show he's invited to" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

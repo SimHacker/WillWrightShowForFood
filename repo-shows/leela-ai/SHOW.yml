@@ -1,0 +1,57 @@
+# SHOW — Leela AI — visual intelligence, Society of Mind, running
+# Planted seed. Inherits from the SHOW skill (/skills/repo-show).
+# TONE: celebratory. Showcase the work and the people. No hardship framing.
+
+show:
+  id: leela-ai
+  title: "A Repo Show with the Leela AI Crew — Visual Intelligence, Running"
+  type: group   # scales down to couple / solo / small 'Leela chat' sessions
+  host: Don Hopkins
+  guests: ["Henry Minsky", "Milan Singh Minsky", "Cyrus Shaoul", "Steve Kommrusch", "Isabella Struckman", "Art Medlar"]
+  character: characters/henry-minsky/
+  topic: "What we do at Leela AI — visual intelligence that reads activity in video, learning systems in the Society-of-Mind lineage, and turning research into a real product. A friendly show-and-tell by the people who build it."
+  status: seed
+  consent: not_yet_asked
+
+why_this_show:
+  the_work: "Leela AI builds visual intelligence that understands what's happening in video — carrying MIT-AI-Lab ideas (Society of Mind, schema learning) into modern, explainable AI for the real world."
+  the_people: "A genuinely deep bench: an MIT-AI-Lab lineage (Henry + Milan Minsky), a co-founder in learning models (Cyrus Shaoul), program-repair + verifiable-ML (Steve Kommrusch), vision-model eval + AI policy (Isabella Struckman), and a builder's builder (Art Medlar: WAIS, early Internet Archive, Connection Machines, PARC)."
+  the_hook: "It's fun and it's real — bring up the system live, learn how it learns, and meet the crew. Great AI work deserves a great, open show."
+
+formats:
+  group: "The whole crew — a show-and-tell tour of Leela's visual intelligence and the ideas behind it."
+  couple: "Milan + Henry Minsky together — product & architecture as a partnership (and a first-wired-family thread)."
+  solo: "Individual episodes — each person on what they're passionate about (see per-person show seeds)."
+  leela_chat: "A relaxed round-table 'Leela chat' — Steve Kommrusch, Isabella Struckman, Art Medlar, Cyrus Shaoul (+ Henry/Milan) riffing on how it all fits together."
+
+dream_segments:
+  - "Bring the system up live — visual intelligence reading activity in video, honest and explainable."
+  - "Society of Mind, running — many small agents / schema learning as it shows up in a shipping product."
+  - "How it learns — self-supervised grid-world learning (the 2020 Leela paper) and what came next."
+  - "Builder's war stories — WAIS + the early Internet Archive + Connection Machines + PARC (Art), program repair + verifiable equivalence (Steve), vision-model eval + AI policy (Isabella)."
+  - "Product ↔ research — Milan + Henry on turning research into something people use."
+
+crew:
+  - { who: henry-minsky, role: "Co-founder / CTO", solo: ../../repo-shows/henry-minsky/ }
+  - { who: milan-singh-minsky, role: "VP Product", solo: ../../repo-shows/isabella-struckman/ }   # shares the Leela / vision-AI episode space
+  - { who: cyrus-shaoul, role: "Co-founder", solo: ../../repo-shows/leela-ai/ }
+  - { who: steve-kommrusch, role: "Sr AI Scientist", solo: ../../repo-shows/steve-kommrusch/ }
+  - { who: isabella-struckman, role: "Vision-model eval/training; AI policy", solo: ../../repo-shows/isabella-struckman/ }
+  - { who: art-medlar, role: "Software engineer / systems builder", solo: ../../repo-shows/leela-ai/ }
+
+format:
+  live: true
+  audience_qa: true
+  note: "Consent not yet asked. Warm path via Don's Leela colleagues (Henry + Milan)."
+
+ties_to:
+  - ../../characters/henry-minsky/
+  - ../../characters/milan-singh-minsky/
+  - ../../characters/cyrus-shaoul/
+  - ../../characters/steve-kommrusch/
+  - ../../characters/isabella-struckman/
+  - ../../characters/art-medlar/
+  - ../../characters/gary-drescher/       # schema mechanism — Leela adviser / Henry's friend
+  - ../isabella-struckman/
+  - ../steve-kommrusch/
+  - ../henry-minsky/
