@@ -20,6 +20,14 @@ that granularizes and replays audio in real time) with **Bob Bielecki and Interv
 It's also literally a **resampling** instrument: chop audio into grains, replay them any which way —
 the show's [**riff loop**](../../repo-shows/ideas/themes/the-riff-loop.yml) in the palm of a hand.
 
+**Don's granular-CA companion piece — "Musical Gas."** Don built a **granular cellular-automata
+synthesizer**: a colliding gas-lattice CA where each **particle collision fires a grain of sound** —
+braiding **one voice with another's pitch**, with a particle's **x-position panning** the grain
+left↔right (originally on DirectSound; still has the source). It's the *same granular instinct as the
+Talking Stick*, emergent from a CA — and **great with diffusion-limited aggregation (DLA)** too (each
+stick-event sings as the crystal grows). Don would love to **reimplement it on web tech with Laurie and
+friends**. Full spec + web-port plan: [`../don-hopkins/musical-gas-granular-ca-synth.md`](../don-hopkins/musical-gas-granular-ca-synth.md).
+
 ### 2. The "Voice of Authority" as a voice puppet
 Laurie's pitch-shifted male persona is a **voice puppet** — hiding the performer to speak *as* a
 character — decades before the show's own puppet taxonomy
