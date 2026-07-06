@@ -46,6 +46,14 @@ A direct, meaty conversation: what does *data dignity* look like when every cont
 attributed git commit? (Books: *You Are Not a Gadget*; *Who Owns the Future?*; *Dawn of the New
 Everything*.)
 
+### 7. OLPC 2007 — Rebounce convergence *(primary source)*
+Will's xmas party → Don has SimCity on XO → Jaron (2 Jan 2007): converge with **Keith McMillen** (robot dance at Will's party) + **Mary Lou Jepsen** (OLPC display). Jaron + Keith reviving **Body Electric**-class performances; frustrated with **Max/Jitter** — *"cook up a scheme to make a best-of architecture… important for the future of culture."*  
+→ [`sources/2007-01-02-olpc-rebounce-keith-mcmillen.md`](sources/2007-01-02-olpc-rebounce-keith-mcmillen.md) · Don's Sugar manifesto: [`../don-hopkins/sources/2006-12-28-sugar-hyperlook-simcity-ideas.md`](../don-hopkins/sources/2006-12-28-sugar-hyperlook-simcity-ideas.md)
+
+### 8. Engelbart vs Minsky — Dormouse Said (2023 reopen)
+Don quotes Jaron's [American Scientist review](https://web.archive.org/web/20110312232514/https://www.americanscientist.org/bookshelf/pub/early-computings-long-strange-trip) of Markoff's *What the Dormouse Said*: Engelbart to Minsky — *"You're going to do all that for the machines? What are you going to do for the people?"* Bay Area visit ping.  
+→ [`sources/2023-01-24-dormouse-engelbart-minsky.md`](sources/2023-01-24-dormouse-engelbart-minsky.md)
+
 ## Sources
 
 - [jaronlanier.com/vpl.html](http://www.jaronlanier.com/vpl.html)

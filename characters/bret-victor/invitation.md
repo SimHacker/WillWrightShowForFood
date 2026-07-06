@@ -4,23 +4,44 @@ character_id: bret-victor
 public: true
 consent: not_yet_asked
 show_seed: repo-shows/bret-victor/
+format: remote_or_in_person
+priority: send_ready
 ---
 
 # Repo Show invitation — Bret Victor
 
-*Public draft — not sent. Bret Victor may edit, decline, delay, or request removal at any time.*
+*Send-ready draft — not yet sent. Bret Victor may edit, decline, delay, or request removal at any time.*
 [Portrayal standards](../../schemas/portrayal-standards.yml)
 
-We would respectfully invite **Bret Victor** to a **Repo Show** — a Repo Show Class
-conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood),
-following through to working code and credited ideas in public.
+Bret —
 
-**Proposed focus:** Interface researcher — explorable explanations, Dynamicland
+I'm building a **Repo Show** — a live conversation whose stage is a **public GitHub repository** people
+can browse and build on. Instead of flattening people's work into slop, we talk in public and follow
+through to **runnable artifacts**: explorable overlays, microworlds, tools you can fork. **Show, don't tell.**
 
-**Materials:** [`repo-shows/bret-victor/`](../../repo-shows/bret-victor/README.md)
+Your work is one of the clearest voices on what that ought to *feel* like — **media for thought**, not
+apps that fight you.
 
-Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
+I'd be honored if you'd join one. No homework trap. You'd help set the bar. Threads I'd love to explore
+— your pick, skip whatever doesn't spark:
 
-**Your response:** Accepted, delayed, too busy, declined, or no reply — all honored gracefully.
+- **Explorable explanations for Micropolis** — make the simulation's hidden state *legible* (RCI demand,
+  land value, pollution, traffic). Reactive documents you think **inside**, not slides about thinking.
+- **Inventing on Principle, applied** — immediate connection between editing and result; pie menus and
+  direct manipulation without modes (the show's oldest obsession).
+- **Patronage vs shipping — honest beat** — **Dynamicland** as both inspiration and cautionary tale.
+  Not hero-worship: per your [Engelbart essay](https://worrydream.com/Engelbart/), ask what world the
+  work was *for*, and how it actually reaches people.
+- **Engelbart memorial thread** — you read Doug's **intent** (augmenting collective intellect), not his
+  invention list. Natural participant alongside Ted Nelson, Alan Kay, Yoot Saito if you're open to a
+  group tribute — or solo is fine.
+
+More hooks in [`ideas.md`](ideas.md). Accepted, delayed, declined, or no reply — all honored gracefully.
 
 — Don Hopkins, Repo Show Class
+
+| | |
+|---|---|
+| **Show seed** | [`repo-shows/bret-victor/`](../../repo-shows/bret-victor/README.md) |
+| **Your guest page** | [`characters/bret-victor/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/bret-victor) |
+| **Engelbart tribute** | [A few words on Doug Engelbart](https://worrydream.com/Engelbart/) |

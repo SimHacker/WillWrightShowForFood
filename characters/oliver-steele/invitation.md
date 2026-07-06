@@ -26,7 +26,12 @@ You designed **LZX** and built the compilers and runtime — so I'd especially l
 
 No agenda, no pressure — war stories and design philosophy equally welcome.
 
+There's also a narrower **solo Instance-First show** seeded at
+[`repo-shows/oliver-steele/`](../../repo-shows/oliver-steele/README.md) if you'd rather go deep on
+that thread alone.
+
 **Materials:** [`repo-shows/openlaszlo/`](../../repo-shows/openlaszlo/README.md) ·
+[`repo-shows/oliver-steele/`](../../repo-shows/oliver-steele/README.md) ·
 [your guest page](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/oliver-steele)
 
 Accepted, delayed, declined, or no reply — all honored gracefully.

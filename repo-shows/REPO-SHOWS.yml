@@ -41,6 +41,10 @@ planted_shows:
   terry-winograd/: "★ Forebear show. Terry Winograd (the dragon) + the CS547 treasure trove archive. Stands on his shoulders and the shoulders of all his guests (Will 1996, Gosling 1995, Joy Mountford 1994, etc.). Archive recovery, runnable seeds, Repo Show Class, Connections series. (Pie menus = Don's own thread.)"
   david-rosenthal/: "Solo: DSHR — NeWS/X11/LOCKSS bridge; async PIXIE segment; MOOLLM demo + literary thread (Lem, coprophagia, PKD)."
   moollm-readings/: "Performance: Don's YouTube readings — primer/canon for Palm, Dasher, Tog, yaml jazz microworld."
+  placeholder/: "★ PAIR: Brenda Laurel + Rob Tow — Placeholder VR; Computers as Theatre; Interval reunion. send_ready."
+  postscript-distillery-to-pdf/: "★ PAIR: Glenn Reid + Brian Reid — Distillery, graphbind, PostNews; 1985 PostScript history; PDF/imaging-model lineage. Don participant-historian. send_ready."
+  glenn-edens-grid-interval/: "★ SOLO: Glenn Edens — GRiD Compass (Dynabook laptop), bullet myth, PARC mouse→Lisa, Interval/broadband, Engelbart hardware consult. interval-reunion-2026 batch. send_ready."
+  ben-shneiderman/: "★ SERIES: Ben Shneiderman — HyperTIES living emulator, light blue links, CHI'88 pie menus, Eyes Have It, Mark Weiser memorial. hci-pie-hyperties-2026 batch. send_ready."
 naming: "Planted directories use symbolic BIG-ENDIAN names (category-first) for coherent browsing. Seeds may be renamed to big-endian when planted."
 
 templates:
@@ -49,21 +53,20 @@ templates:
 # CURRENT SEEDS (single files; plant when ready)
 seeds:
   building-the-sims.yml:        "Group: The Sims team reunion — Will Wright + Jamie Doornbos (lead/SimAntics) + Chris Trottier & Claire Curtin (design) + Eric Bowman + Jim Mackraz + Patrick J. Barrett III + Eric Hedman (animation) + Jerry Martin (music) + Don. How the simulation actually worked."
-  david-ungar-self-moollm.yml: "DREAM GUEST solo: David Ungar — Reflecting on Self: Narcissa's Mirror; Self × MOOLLM; mirrors; self-interest!; prototype inheritance; Stage Magic + Idea Scavenging."
+  david-ungar/: "★ DREAM GUEST solo: David Ungar — Reflecting on Self: Narcissa's Mirror; Self × MOOLLM; Power of Simplicity; maps/PICs→V8; Conscientious Objectors. Jan 2026 warm correspondence. PLANTED."
   design-by-accretion.yml:      "Solo: Chris Trottier — design by accretion ↔ cauldron. FLAGSHIP."
   music-and-theory.yml:         "Group: David Levitt (MIT PhD on AI music/jazz improvisation under Minsky; Atari Cambridge) + Jerry Martin (The Sims/SimCity 3000 composer) — music + theory."
   will-and-yoot.yml:            "Group: Will Wright + Yoot Saito — open-ended."
   will-wright-series.yml:       "Series: Will Wright — multiple topics. PLANTED → will-wright/ (first show = topic-less kickoff)."
-  ben-shneiderman-series.yml:   "Series: Ben Shneiderman — HyperTIES, direct manipulation, etc."
   ted-selker-input-languages.yml:"Solo: Ted Selker — input as little languages."
   ted-nelson-intertwingled.yml:  "Series: Ted Nelson — Xanalinks, intertwingling, MOOLLM, documents of the future. DREAM GUEST (warm lead Nov 2021)."
   phoneloper-speech-synthesis.yml: "Kevin Lenzo — Phoneloper open source + Flite/Cepstral Repo Show (SFC talking toys; web vocal jam)."
   pixie-pie-menus-pdp7.yml:     "Group: Heinz U. Lemke + Lars Brinkhoff + David Rosenthal — PIXIE (1969); PDP-7/340 emulation."
   pie-menus-retrospective.yml:  "Solo: Don (host-as-expert) — pie menus from scratch."
-  edd-coates-pie-menus-piecraft.yml: "Edd Coates — Pie/radial menus in games, what worked and what didn't, ultimate editable pies, and PieCraft as UI literacy game."
+  clint-basinger/: "★ Solo: Clint Basinger (LGR) — Maxis/Micropolis reaction; preservation ethos; audience bridge. send_now. PLANTED."
   lambdamoo-pavel-curtis.yml:   "Solo: Pavel Curtis — LambdaMOO → MOOLLM."
   walter-bender-olpc.yml:       "Solo: Walter Bender — OLPC Stone Soup + open-sourcing SimCity."
-  bret-victor-explorable.yml:   "Solo: Bret Victor — explorable explanations + Micropolis legibility; patronage-vs-shipping cautionary tale (Dynamicland). Design counsel."
+  bret-victor-explorable.yml: "Legacy seed — see bret-victor/ (planted). Explorable explanations + Micropolis legibility; patronage-vs-shipping (Dynamicland)."
   yoot-saito-series.yml:        "Series: Yoot Saito — clean-room successor (YOOT BOOT / Building / Seaman)."
   # SIMOPOLIS HUB: every bridge below is a SPOKE — "A ⇔ B" is shorthand for A ⇔ Simopolis ⇔ B.
   # Simopolis is the git-checked-in hub of hi-fidelity, round-trippable character facets; game-to-game
@@ -97,6 +100,7 @@ seeds:
   remembering-the-constructionists.yml: "★ Group/memorial: Remembering the Constructionists — Piaget → Papert → Minsky (memorial mode); discussants Alan Kay, Walter Bender, Brian Harvey, Cynthia Solomon, Ken Kahn, Jens Mönig, Henry & Margaret Minsky, David Levitt, Gary Drescher, Steve Kommrusch. Minds are built, not filled. PLANTED."
   margaret-minsky/: "Solo: Margaret Minsky — haptics (the Sandpaper force-feedback system), Atari Cambridge / MIT Media Lab, the first wired family. Daughter of Marvin. PLANTED."
   henry-minsky/: "Solo: Henry Minsky — Society of Mind in modern AI (Leela AI), OpenLaszlo declarative UI, skill-authoring as constructionism. Son of Marvin; skill-creation candidate. PLANTED."
+  oliver-steele/: "Solo: Oliver Steele — Instance-First Development + Instance Substitution Principle; LZX proof; slots-all-the-way-down pole. Also openlaszlo/ reunion. PLANTED."
   isabella-struckman/: "Solo: Isabella Struckman — computer-vision model evaluation & training (Leela AI), ML explainability + AI policy / AI supply chains (MIT CSAIL Mądry Lab), AI skills + teaching. Don's Leela colleague. PLANTED."
   openlaszlo/: "★ Group: OpenLaszlo Reunion — David Temkin + Oliver Steele + Henry Minsky + Don. The RIA-before-its-time (LZX), revived with AI (Temkin got the Java compiling again) and run live. PLANTED."
   patrick-hulin/: "Solo: Patrick Hulin — AI-assisted reverse engineering; SimTower → tick-for-tick TypeScript (towers.world); the warm Yoot Tower reimplementation lead. PLANTED."

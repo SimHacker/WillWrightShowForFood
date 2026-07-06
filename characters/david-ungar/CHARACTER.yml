@@ -19,26 +19,36 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  show_seed: repo-shows/david-ungar-self-moollm.yml
-  note: "DREAM GUEST — Reflecting on Self: Narcissa's Mirror; Self × MOOLLM; self-interest!; Kaleida Conscientious Objectors meetup (ScriptX × Self)"
+  show_seed: repo-shows/david-ungar/
+  priority: send_now
+  note: "DREAM GUEST — Reflecting on Self: Narcissa's Mirror; Self × MOOLLM; Jan 2026 warm correspondence; Kaleida Conscientious Objectors"
 
 bio:
-  summary: "**David Ungar** — co-creator (with Randall Smith) of **Self**, the prototype-based object language that dropped classes entirely. Pioneered **generation-scavenging** GC and **adaptive/dynamic JIT** (direct HotSpot lineage); **mirrors**, Stage Magic Principle, Idea Scavenging. Very open and influential — Don credits him with a huge share of where we are. Self doesn't run on everybody's phone; **in spirit it does** (JS object model, MOOLLM directories-as-prototypes, modern VMs). Kaleida **Conscientious Objectors** meetup with ScriptX object-system team. **self-interest!** mailing list (Don was on it). Proposed show: **Self × MOOLLM** — *Reflecting on Self: Narcissa's Mirror*."
+  summary: "**David Ungar** — co-creator (with Randall B. Smith) of **Self**, the prototype-based object language that dropped classes entirely. **Multiple named `parent*` slots**, dynamic reparenting, **mirrors**. Thesis: **The Power of Simplicity** (OOPSLA 1987). Pioneered **generation-scavenging** GC and **adaptive JIT** — **maps/PICs** → HotSpot → **V8**. Very open and influential — Don credits him with a huge share of where we are. Self doesn't run on everybody's phone; **in spirit it does** (JS object model, MOOLLM `# import self from self`). Kaleida **Conscientious Objectors** meetup; **self-interest!** mailing list. Jan 2026 correspondence with Don about MOOLLM."
   don_credit: |
-    David was generous, open, and cross-pollinating — Conscientious Objectors, mailing lists,
+    David was generous, open, and cross-pollinating — Conscientious Objectors, self-interest!,
     papers, humor (Self: The Movie). Don: huge credit owed even if Self never shipped on every device;
-    the ideas did.
+    the ideas did — and the VMs (V8) borrowed the speed without the simplicity.
+
+show_suggestions:
+  - { seed: ../../repo-shows/david-ungar/, what: "Solo — Reflecting on Self: Narcissa's Mirror; Self × MOOLLM; slots-all-the-way-down pole; build live" }
+  - { seed: ../david-rosenthal/slots-all-the-way-down.md, what: "Co-thread — Self as clean prototype pole in Rosetta table (with David Rosenthal anchor)" }
 
 sources:
   wikipedia: "https://en.wikipedia.org/wiki/David_Ungar"
-  web: []
+  web:
+    - { title: "Self: The Power of Simplicity (Ungar & Smith, OOPSLA 1987)", url: "https://bibliography.selflanguage.org/" }
   papers:
-    - { title: "Self: The Power of Simplicity (Ungar & Smith, OOPSLA 1987)", url: "https://en.wikipedia.org/wiki/Self_(programming_language)" }
+    - { title: "Self: The Power of Simplicity", url: "https://en.wikipedia.org/wiki/Self_(programming_language)" }
+    - { title: "Organizing Programs Without Classes (1991)", url: "https://en.wikipedia.org/wiki/Self_(programming_language)" }
   blogs: []
 
 see_also:
-  - { path: ../../repo-shows/david-ungar-self-moollm.yml, why: "Self × MOOLLM show seed — directories as prototypes, Stage Magic Principle" }
-  - { path: ../alan-kay/, why: "Smalltalk → Self lineage (true OO, late binding)" }
-  - { path: ../dan-ingalls/, why: "Smalltalk/Squeak — the live-object substrate Self grew from" }
+  - { path: reflecting-on-self.md, why: "North star — episode menu + Self × MOOLLM mapping" }
+  - { path: ../../repo-shows/david-ungar/, why: "Planted show — Reflecting on Self" }
+  - { path: ../david-rosenthal/slots-all-the-way-down.md, why: "Self pole — slots, MI, JS critique" }
+  - { path: ../don-hopkins/import-self-from-self.md, why: "MOOLLM constitution — import self from self" }
+  - { path: ../alan-kay/, why: "Smalltalk → Self lineage (messaging, late binding)" }
+  - { path: ../dan-ingalls/, why: "Smalltalk/Squeak — live-object substrate" }
+  - { path: ../oliver-steele/, why: "Instance-first — LZX obeys what JS violates" }
   - { path: ../../process/trails/live-objects.md, why: "Self in the live-object lineage" }
-  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

@@ -1,0 +1,51 @@
+# Clint Basinger (LGR) — invitation portrayal. NOT Clint Basinger.
+# Standards: ../../schemas/portrayal-standards.yml
+# Note: public/legal name is **Clint Basinger**; channel brand **LGR** (@LGR on YouTube).
+
+character:
+  id: clint-basinger
+  name: "Clint Basinger (LGR)"
+  aliases: [LGR, Lazy Game Reviews]
+  type: invitation
+  signifier: "🕹️📼"
+  status: living
+  field: "Retro computing + games YouTuber; deep The Sims / Maxis-era coverage; audience bridge"
+  home: characters/clint-basinger/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/clint-basinger/
+  priority: send_now
+  note: "Don: 'invite the LGR guy! he loves SimCity and Maxis and Will!' Audience bridge to retro-PC/Sims fandom."
+
+bio:
+  summary: |
+    **Clint Basinger** — creator of **LGR** (*Lazy Game Reviews*), one of YouTube's best-loved
+    **retro-computing, vintage PC, and games** channels (~1.8M subscribers). Deep, affectionate
+    **The Sims** and **Maxis-era** coverage (plus *LGR Oddware*, *Tech Tales*, *LGR Thrifts*).
+    SimsVIP interview (2013). Perfect **audience bridge**: celebrates Will Wright's catalog with
+    genuine craft — connects the Repo Show to the retro-games community that already loves SimCity.
+
+show_suggestions:
+  - { seed: ../../repo-shows/clint-basinger/, what: "Solo — Micropolis reaction, preservation ethos, Maxis fandom on-ramp" }
+  - { seed: ../will-wright/, what: "Bridge episode — Will kickoff audience crossover" }
+
+sources:
+  web:
+    - { title: "LGR — YouTube (@LGR)", url: "https://www.youtube.com/@LGR" }
+    - { title: "Wikipedia — Lazy Game Reviews / Clint Basinger", url: "https://en.wikipedia.org/wiki/Lazy_Game_Reviews" }
+    - { title: "SimsVIP interview (2013)", url: "https://simsvip.com/2013/08/09/simsvip-interviews-lazy-game-reviews/" }
+  flags:
+    - "Confirm specific Sims/SimCity video titles before citing on air."
+
+see_also:
+  - { path: ../../repo-shows/clint-basinger/, why: "Planted show" }
+  - { path: ../will-wright/, why: "Loves SimCity/Maxis/Will" }
+  - { path: ../../process/party-roster.yml, why: "Party pipeline tracker" }

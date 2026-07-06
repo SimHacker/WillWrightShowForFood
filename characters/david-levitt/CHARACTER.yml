@@ -16,10 +16,16 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: draft
-  consent: not_yet_asked
+  status: in_conversation
+  consent: pending_response
+  contacted: 2026-07-06
+  contacted_via: phone
+  sent_links: true
   document: invitation.md
-  show_seed: repo-shows/REPO-SHOWS.yml#music-and-theory.yml
+  show_seed:
+    - repo-shows/REPO-SHOWS.yml#music-and-theory.yml
+    - repo-shows/rebounce/
+  next: "await scheduling — Pantomime + music w/ Jerry + Rebounce"
 
 bio:
   summary: >
@@ -80,6 +86,8 @@ see_also:
   - { path: media/README.md, why: "Sourced evidence hub — HN permalinks + videos by project (Pantomime, Bounce, ConnectedTV, AI music)" }
   - { path: ../don-hopkins/body-electric-bounce-vr-stack.md, why: "Don's firsthand Bounce / Body Electric VR-stack history" }
   - { path: ../../repo-shows/rebounce/, why: "Rebounce — salute + hand+AI reimplementation jam, seeded by David + Don (+ Jaron)" }
+  - { path: ../ron-reisman/, why: "Late friend — Convolvotron/Body Electric/Ames VR; memorial discussant" }
+  - { path: ../eric-hedman/, why: "Pantomime Corporation colleague; Sims animator → AR/VR; natural three-hander" }
   - { path: ../don-hopkins/media/pantomime/, why: "Pantomime media (Bug Farm, soccer, Levitt calls) — Don was Chief Architect" }
   - { path: ../david-rosenthal/slots-all-the-way-down.md, why: "Pantomime's JSON object system → Don's JSON/YAML config → MOOLLM" }
   - { path: ../marc-canter/, why: "old friends/colleagues (People Aggregator); Macromedia/Director ↔ Bounce/MMP" }

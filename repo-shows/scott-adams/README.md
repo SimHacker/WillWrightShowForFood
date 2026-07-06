@@ -20,8 +20,10 @@ Adventure** (Logo REPL as the parser) and of Don's **adventure compiler** and **
 
 A conversation across four decades of the same idea: adventure-as-data, constraints as craft,
 the two-word parser vs. the LLM, and — since Scott is diving into **AI** now — where a founding
-adventure author takes language models next. The best version: **Don builds adventure-compiler
-tooling live** that Scott can actually use. Mutual seed exchange, real code in public.
+adventure author takes language models next. The best version: **both careers as interactive
+adventure** — Scott's biography rooms + Don's memory palace, compiled live to playable browser
+pages. See [`moollm-dual-palace.md`](../../characters/scott-adams/moollm-dual-palace.md) ·
+[`correspondence-digest.md`](../../characters/scott-adams/correspondence-digest.md).
 
 ## Trail
 

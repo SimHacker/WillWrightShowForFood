@@ -9,9 +9,9 @@ how_it_works:
   shape: "Per episode: explain WHY the design works → implement it live (MOOLLM + Cursor)."
 
 the_shows:
-  planted: "will-wright/ ★ — the FIRST planted show (topic-less kickoff, centered on the 1996 Winograd video; full dir w/ sources + suggested-questions + invitation)."
+  planted: "will-wright/ ★ — the FIRST planted show (topic-less kickoff, centered on the 1996 Winograd video; full dir w/ sources + suggested-questions + invitation). ben-shneiderman/ ★ — HyperTIES living emulator series; send_ready."
   flagship_seeds: [design-by-accretion (Chris Trottier ↔ cauldron), alan-kay-microworld (DREAM GET), yoot-saito-series (YOOT BOOT)]
-  series:   [will-wright-series (→planted), ben-shneiderman-series, yoot-saito-series]
+  series:   [will-wright-series (→planted), yoot-saito-series]
   group:    [building-the-sims, music-and-theory, will-and-yoot, ben-and-heinz-pie-menus]
   bridges:  [game-bridge-sims-stardew, game-bridge-proxi-sims]   # the data-portability CROWN JEWEL
   solo:     [pie-menus-retrospective, ted-selker-input-languages, pixie-pie-menus-pdp7, lambdamoo-pavel-curtis, walter-bender-olpc]

@@ -4,7 +4,7 @@ Invitation portrayal — **not** David Levitt. [Standards](../../schemas/portray
 
 **Field:** AI music (MIT/Minsky), VR (VPL Research), Interval Research, ConnectedTV, Pantomime AR/VR
 
-[Invitation](invitation.md) · [Ideas](ideas.md) · [GLANCE](GLANCE.md) · [Card](CARD.yml) · [Media & sources](media/README.md)
+[Invitation](invitation.md) *(phone 2026-07-06; links sent — in conversation)* · [Ideas](ideas.md) · [GLANCE](GLANCE.md) · [Card](CARD.yml) · [Media & sources](media/README.md)
 
 Dr. David Levitt — cognitive scientist, entrepreneur, and musician; Don's **dear friend** and longtime
 collaborator. Co-founder & CEO of **Pantomime Corporation**, where **Don was Chief Architect** and

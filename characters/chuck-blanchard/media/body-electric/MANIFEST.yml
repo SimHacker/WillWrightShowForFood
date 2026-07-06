@@ -1,0 +1,18 @@
+# Body Electric screenshots — Chuck Blanchard, Feb 2020
+# From Chuck's reply to Don's "Body Electric / Bounce / VPL" thread.
+# Body Electric 6.0.1a8 on Mac OS 9; Isaac OpenGL renderer; circa-2001 MacBook dev system.
+
+artifacts:
+  - file: redgreen-dm-3d-viewport.png
+    caption: "redgreen.DM — 3D viewport (Isaac/OpenGL) + dataflow patch (Clock, Scale/Offset, Register, SetField)"
+    window: redgreen.DM
+    notes: "Log shows Body Electric 6.0.1a8; 'One packet holds 30 nodes'"
+
+  - file: move-flock-nested-dm.png
+    caption: "Nested DMs — Move Flock + Move one bird (flocking: vector toward flock center)"
+    windows:
+      - Move Flock.NestedDM
+      - Move one bird.NestedDM
+    notes: "HookupAllDMs for flock1.DM / butterflies.DM; While loop + GetField/3Minus/3Plus on bird vectors"
+
+source: ../../sources/2020-02-17-body-electric-dev-system.md

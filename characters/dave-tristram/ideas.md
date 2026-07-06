@@ -57,6 +57,12 @@ looping fest alongside **Stephen Wolfram**, **Dave Ackley**, **Jim Crutchfield**
 **Will Wright**, and **Brian Eno** — Dave as the **live graphics performance** voice in a room full
 of rule-makers. Async clips welcome; Dave + Don + a grid is already a show.
 
+### 6. Adobe live painting R&D (PRIVATE — withheld until Dave clears)
+Don beta-tested **pre-release interactive filter / liquid-simulation** work Dave was doing at Adobe
+(~2022 Feature Camp focus group). Don called it *essential playfulness* in the same breath as Glenn
+Reid's NeXT **Font Appreciation Tool**. **Do not cite product name or demo on air** until cleared.
+Public stub only: [`sources/live-canvas-effects-stub.md`](sources/live-canvas-effects-stub.md).
+
 ## Sources (public)
 
 - [`raster-masters-panel-library.md`](raster-masters-panel-library.md)

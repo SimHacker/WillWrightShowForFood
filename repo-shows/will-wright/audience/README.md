@@ -73,7 +73,7 @@ audience/<github-username>/
   GLANCE.yml        # recommended — one-screen sniff
   SIMULATION.yml    # optional — your brain/algorithm/runbook (during + after show)
   costume.yml       # optional — Come On Down rig
-  images/           # recommended — headshot, 128² avatar, with-guest (any style!)
+  images/           # recommended — headshot, 128² avatar, with-will (any style!)
   <anything else>   # drop in artifacts you want to show Will (see §7)
 ```
 

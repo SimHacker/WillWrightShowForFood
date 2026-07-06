@@ -23,8 +23,8 @@ a decades-long collaboration.
 ## In this directory
 
 - [`SHOW.yml`](SHOW.yml) — the show seed.
-- [`invitation.md`](invitation.md) — the draft invitation.
+- [`invitation.md`](invitation.md) — invitation (**sent 2026-07-06 via Facebook**; awaiting reply).
 
-Guest: [`characters/coco-conn/`](../../characters/coco-conn/README.md). Consent **not yet asked**.
+Guest: [`characters/coco-conn/`](../../characters/coco-conn/README.md). Invite **sent**; consent pending.
 
 — Don Hopkins, Repo Show Class

@@ -11,7 +11,7 @@ show:
   character: characters/coco-conn/
   topic: "HOMER & Assoc. real-time visual mixing console (Charles Moore, Forth, Z80/PolyForth in 32K); music-video & film FX (Atomic Dog, Abracadabra, RoboCop, Total Recall); Flying Logos at SIGGRAPH 1989; SIGKids serendipity with Don & David Levitt; Hackers Conference VHS highlights watch party (Rudy Rucker, Scott Kim, dream-guest lattice)."
   status: seed
-  consent: not_yet_asked
+  consent: pending_response
 
 why_her:
   homer_forth: "Hired Charles Moore / Forth, Inc. to program Homer II — PolyForth multitasking in 32K; 24 Z80 visual channels; performance UI played with hands."
@@ -31,7 +31,7 @@ dream_segments:
 format:
   live: true
   audience_qa: true
-  note: "Warm invite; consent not yet asked. Solo or paired with david-levitt SIGKids episode."
+  note: "Invite sent Facebook 2026-07-06; awaiting reply. Solo or paired with david-levitt SIGKids episode."
 
 ties_to:
   - ../../characters/coco-conn/

@@ -21,7 +21,7 @@ Brad sent a low-res draft PDF by email and offered a high-res Google Drive copy 
 
 ## Don's likely chapter topics (from related mail)
 
-Cross-reference [2022-cam-6-pie-menus-visual-programming](../2022-cam-6-pie-menus-visual-programming/README.md):
+Cross-reference [2022-cam-6-pie-menus-visual-programming](../2022-cam-6-pie-menus-visual-programming/README.md) and [`characters/michael-mcguffin/sources/2022-10-08-don-visual-programming-letter.md`](../../../michael-mcguffin/sources/2022-10-08-don-visual-programming-letter.md):
 
 | Technique | Where |
 |-----------|-------|

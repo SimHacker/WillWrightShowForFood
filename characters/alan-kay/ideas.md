@@ -29,6 +29,12 @@ Alan Kay's lifelong argument: powerful ideas belong in **learner's microworlds**
 apps. Walk [`repo-shows/alan-kay-microworld.yml`](../../repo-shows/alan-kay-microworld.yml) and
 build a glass-box segment live — SimCity, Snap!, CAM6 as examples, not sermons.
 
+Kay's **"Sure!"** + **10 things / 20 examples** protocol for microworld libraries — compare Don's
+**HAR 2009 Micropolis lightning talk** (constructionist open-source SimCity pitch) and ask Alan if
+that's what he means:
+[`media/quora-recaps/microworlds-sure-and-ten-things-heuristic.md`](media/quora-recaps/microworlds-sure-and-ten-things-heuristic.md#repo-show-connection--har-2009-micropolis-lightning-talk-dons-guess).
+Transcript: [Medium](https://donhopkins.medium.com/har-2009-lightning-talk-transcript-constructionist-educational-open-source-simcity-by-don-3a9e010bf305).
+
 ### 2. Pie menus ↔ Fabrik "swiped pie menus"
 Alan recalled gesture menus in **Fabrik** (~1986 Apple). Don's pie menus (1986 UMD → CHI '88).
 A direct-manipulation archaeology segment with **Dan Ingalls** as the natural co-guest.
@@ -118,11 +124,20 @@ Catalog?"*, *"Has the real computer revolution happened yet?"* This is the throu
 performance idea and constructionism. Co-guests: **Seymour Papert** (memorial), **Cynthia Solomon**, **Walter
 Bender**, **Jens Mönig / Brian Harvey**.
 
-### 17. Trust, NCANIPs, and why copilots fail the classroom
-Kay's LLM answer centers **trust** — from multiprogramming through Harari's "hacking language." Teaching
-programming with today's copilots: **not a good idea at all**; correlation = superstition; need grounded
-knowledge systems + "special humans." Live segment: compare LLM-generated "explanation" vs kids-reading a
-primary source. Recap: [`llms-copilots-trust-and-teaching.md`](media/quora-recaps/llms-copilots-trust-and-teaching.md).
+### 17. MOOLLM × trust × teaching — is this what you meant?
+
+Kay's Quora answer: copilots for teaching programming — **not a good idea at all**; trust, NCANIPs, correlation
+as superstition; need expert systems + special humans + grounded knowledge. We built **MOOLLM** as a microworld
+OS (not a copilot) and wrote a **full draft artifact** — our question, guess, architecture, show segments,
+and the lead question to ask Alan on air:
+
+**[`moollm-trust-and-teaching-guess.md`](moollm-trust-and-teaching-guess.md)** (canonical)
+
+Quora source recap: [`media/quora-recaps/llms-copilots-trust-and-teaching.md`](media/quora-recaps/llms-copilots-trust-and-teaching.md).
+
+Live segment: side-by-side — LLM explanation vs learner mutates inspectable state vs **kids-reading** a primary
+source. Pair **Lenat/Cyc** thread · **Carnegie literacy** hook (#18) · **Dan Ingalls** (Etoys) · **Brian Harvey /
+Jens Mönig** (Snap!).
 
 ### 18. Carnegie libraries — the two rooms the web forgot
 ARPA-PARC wanted to extend **Carnegie's children's room + reading room**, not imitate books on screens. Web =
@@ -155,6 +170,13 @@ Post-PARC UI: **views as watchers** (non-mutating), input watchers, **projection
 automatic **inverter**; Morphic vs MVC; HyperCard as ad hoc view composer; direct manipulation (Shneiderman).
 Don↔Alan email on HN. Discussion:
 [`media/discussions/hn-mvc-morphic-watchers-2015.md`](media/discussions/hn-mvc-morphic-watchers-2015.md).
+
+### 24. White space, gutter, two computers — Lenat × McCloud × Will
+Lenat: automate encyclopedia **white space**, not all the words. LLMs did the opposite. Same architecture as
+**McCloud closure** (gutter between frames) and Will's **two computers** (1996 Winograd talk) — sparse
+download into commonsense-saturated audience who completes the simulation. Tie to MOOLLM + Kay trust critique:
+[`media/quora-recaps/lenat-cyc-knowledge-and-slow-thinking.md`](media/quora-recaps/lenat-cyc-knowledge-and-slow-thinking.md#repo-show-connection--white-space-gutter-two-computers-dons-guess).
+Co-guests: **Scott McCloud** · **Will Wright** · **Ken Kahn** (Cyc comment Kay copied).
 
 ## Open questions to ask Alan (from the Quora threads)
 
@@ -195,8 +217,9 @@ Don↔Alan email on HN. Discussion:
   ([`carnegie-libraries-and-literacy-vision.md`](media/quora-recaps/carnegie-libraries-and-literacy-vision.md))
 - **ML + Cyc-style symbolic** — enough for trustworthy tools, or still missing **pseudotime**?
   ([`lenat-cyc-knowledge-and-slow-thinking.md`](media/quora-recaps/lenat-cyc-knowledge-and-slow-thinking.md))
-- Is **MOOLLM** late-bound enough — or early-bound paths with skill dressing?
-  ([`late-binding-and-rethinking-the-os.md`](media/quora-recaps/late-binding-and-rethinking-the-os.md))
+- **MOOLLM × trust × teaching** — is a microworld OS what you meant by an expert teaching system, or still
+  a copilot in disguise? Full draft: [`moollm-trust-and-teaching-guess.md`](moollm-trust-and-teaching-guess.md).
+  Quora source: [`llms-copilots-trust-and-teaching.md`](media/quora-recaps/llms-copilots-trust-and-teaching.md).
 - **Kids-reading** primary sources vs LLM summaries — does oral performance restore trust Harari says language
   lost?
 - Will you finish the **Butler Lampson Quora answer** — or is YootTower `People.md` the continuation?
@@ -209,6 +232,7 @@ Don↔Alan email on HN. Discussion:
 ## Sources (public)
 
 - [`correspondence.yml`](correspondence.yml) · [`invitation.md`](invitation.md)
+- **MOOLLM × trust × teaching (draft artifact):** [`moollm-trust-and-teaching-guess.md`](moollm-trust-and-teaching-guess.md)
 - **Kay on people in characters/**: [`people-index.yml`](people-index.yml) — per-guest [`../<slug>/from-alan-kay.yml`](../dan-ingalls/from-alan-kay.yml)
 - **Quora corpus map** (~620 answers): [`media/quora-recaps/quora-corpus-2023-index.md`](media/quora-recaps/quora-corpus-2023-index.md) — [archive.org/details/alan-kay-quora-2023-11](https://archive.org/details/alan-kay-quora-2023-11)
 - Quora recaps: [`media/quora-recaps/README.md`](media/quora-recaps/README.md) — **17 summaries** (see hub table)

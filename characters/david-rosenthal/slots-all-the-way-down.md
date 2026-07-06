@@ -33,12 +33,44 @@ Read any row as: *bag of named things + "not here? ask my parent."* That's it. T
 
 ## Subset / superset (some for good reasons, some terrible)
 
-- **JavaScript ⊂ Self, watered down.** Brendan Eich took Self's prototypes (and some Scheme) and
-  shipped them in ten days — then **grafted a fake class model on top**: `new`, constructor
-  functions, `this` that rebinds depending on *how* you call, and eventually `class` sugar that
-  hides the prototype it's still made of. Two mental models fighting in one language. Self had
-  *one* clean idea (delegate to a parent slot); JS kept the idea and added the confusion. **Looking
-  at you, JavaScript.**
+### JavaScript ⊂ Self, watered down
+
+**JavaScript ⊂ Self, watered down.** The 1995 Netscape implementation took Self's prototypes (and
+some Scheme) and shipped them in ten days — then **grafted a fake class model on top**: `new`, constructor functions,
+`this` that rebinds depending on *how* you call, and eventually `class` sugar that hides the prototype
+it's still made of. Two mental models fighting in one language. Self had *one* clean idea (delegate to
+a parent slot); JS kept the idea and added the confusion. **Looking at you, JavaScript.**
+
+What got lost besides the veneer:
+
+- **Multiple inheritance.** Self objects can have **multiple parent slots** — each a uniquely named
+  slot ending in `*`, each pointing at a parent object. Reparent at runtime; assignable slots; no
+  special-case syntax. JavaScript gives you **one** prototype chain. Want MI? Factory hacks, mixins,
+  `Object.assign`, or pretend interfaces exist elsewhere. **Oops.** (See lineage `(oops)` triple pun —
+  JS mistake; Owen's **OOPS** Object Oriented PostScript actually *has* MI on a dict stack.)
+
+- **`this` is dynamic when it should be lexical.** `this` rebinds on every call depending on call site,
+  `new`, `bind`, arrow wrappers — dynamic scoping dressed up as an object model. Arrow functions
+  (`=>`) finally gave us **lexical** `this`… so now there are **two kinds of functions**, and you
+  still have to remember which one you wrote. Self didn't need the split; messages find the receiver.
+
+- **One constructor, or hack factories.** `new` only works cleanly with one constructor function per
+  "class." Multiple initialization paths? Factory functions, IIFEs, `Symbol.hasInstance` games.
+  Self: clone a prototype, assign slots, done.
+
+- **`prototype` vs `__proto__`.** Why both? Why different spellings and punctuation? The constructor's
+  `.prototype` is the template object; the instance's `[[Prototype]]` is what you actually delegate
+  to — exposed as `__proto__` (deprecated) or `Object.getPrototypeOf`. Two names for one delegation
+  edge because the language couldn't commit to a single representation. Self: a parent **slot**. One
+  mechanism.
+
+- **Simplicity — the thing Self actually taught.** Ungar & Smith's first paper isn't "Self: The Power
+  of Prototypes." It's **"Self: The Power of Simplicity."** Prototypes were the *means*; simplicity
+  was the lesson. JavaScript inherited the prototypes and **missed the simplicity** — then MOOLLM's
+  answer is to import Self **from Self** (`# import self from self`): multiple inheritance back,
+  mix-ins, serializable parent lists, one mental model. See
+  [`../don-hopkins/import-self-from-self.md`](../don-hopkins/import-self-from-self.md).
+
 - **Lua got it right where JavaScript got it wrong.** Lua kept the *pure* Self idea and refused the
   class veneer: one data structure (the **table**), and a **metatable** whose `__index` is either a
   table (**delegate to a parent** — Self exactly) or a function (**compute the slot on demand** —
@@ -166,10 +198,10 @@ following it.* The **medium** (pointer / hash / list / parsed string), the **sha
 many overlaid trees), and the **direction** (one-way / two-way) are all free parameters — and each
 choice trades traversal power against serializability.
 
-### The instance/class line is a refactor away — Oliver Steele's instance-first
+### The instance/class line is a refactor away — [Oliver Steele](../oliver-steele/)'s instance-first
 
 If slots go all the way down, then **the line between an instance and a class is not a wall — it's a
-seam you refactor across.** Oliver Steele named the discipline **Instance-First Development**
+seam you refactor across.** [Oliver Steele](../oliver-steele/) named the discipline **Instance-First Development**
 ([*Classes and Prototypes*](https://blog.osteele.com/2004/03/classes-and-prototypes/), 2004): build
 functionality for a *single instance*, then refactor that instance into a *class* once a second case
 appears. It dodges **premature abstraction** — *"it's easier to generalize from two examples than
@@ -561,7 +593,7 @@ world? And does CRDT-merge (Automerge) or git-merge better fit an LLM-driven con
 
 ### Dave Ungar — Self's simplicity, and *relativistic* time
 
-Dave (with **Randall Smith**) built **Self** — the clean prototype pole of the Rosetta table — and
+[Dave](../david-ungar/) (with **Randall Smith**) built **Self** — the clean prototype pole of the Rosetta table — and
 two threads of his work bear directly on this discussion:
 
 - **The implementation vindicated the idea.** Self's **maps** and **polymorphic inline caches**
@@ -579,6 +611,9 @@ two threads of his work bear directly on this discussion:
 *Questions to explore **with** Dave:* Is prototype delegation (clone + override a few slots) the
 right base for an LLM constructor over class instantiation? And does his "abandon global
 synchronization" argument endorse the many-worlds/local-time cosmology — or warn against it?
+
+**Repo Show:** [*Reflecting on Self: Narcissa's Mirror*](../../repo-shows/david-ungar/) — invitation
+[`send_now`](../../characters/david-ungar/invitation.md).
 
 ## The MOOLLM / artifactory connection
 
@@ -689,15 +724,14 @@ explore *with* David (open questions, not positions Don is assigning to him):
 |-----|------|
 | [David Rosenthal](./) | NeWS / PostScript `class.ps`; the anchor |
 | [Owen Densmore](../owen-densmore/) | **Wrote the NeWS class system** — object-oriented PostScript |
-| [David Ungar](../david-ungar/) | **Self** — prototypes, slots, delegation (the clean prototype pole); maps/PICs → V8; "relativistic" parallelism |
-| Alan Kay | **Dream guest** — messaging over objects; late binding of *everything*; "the big idea is messaging," if reachable |
+| [David Ungar](../david-ungar/) | **Self** — prototypes, slots, delegation, **Power of Simplicity**; maps/PICs → V8; show: [`Reflecting on Self`](../../repo-shows/david-ungar/) |
+| [Alan Kay](../alan-kay/) | **Dream guest** — messaging over objects; late binding of *everything*; "the big idea is messaging" |
 | [Dan Ingalls](../dan-ingalls/) | **Smalltalk** — *Design Principles*, BitBlt, self-hosting Squeak, live/malleable **Lively**; kin to Ink & Switch's local-first work |
 | [James Gosling](../james-gosling/) | NeWS co-author; PostScript engine |
 | [Arthur van Hoff](../arthur-van-hoff/) | **Invite to the NeWS reunion** — GoodNeWS → HyperNeWS → HyperLook; **PdB** (OO **C → PostScript** compiler); Don's Turing-Institute collaborator (HyperLook + SimCity) |
 | Gregor Kiczales | *(not a guest)* — **CLOS MOP** / *AMOP*; metaprogramming as a reified protocol, if reachable |
 | Roberto Ierusalimschy | *(not a guest)* — **Lua**; metatables as the minimal MOP, if reachable |
-| Oliver Steele | **Instance-First Development** / Instance Substitution Principle; OpenLaszlo (LZX); prototype+constraint UI, if reachable |
-| Brendan Eich | *(not a guest)* — JavaScript's prototypes-plus-class-veneer, if reachable |
+| [Oliver Steele](../oliver-steele/) | **Instance-First Development** / Instance Substitution Principle; **LZX** / OpenLaszlo; prototype+constraint UI — solo + [OpenLaszlo reunion](../../repo-shows/openlaszlo/) |
 
 ## Credit where due — the groups, not just the front names
 
@@ -713,8 +747,8 @@ These weren't lone geniuses; each is a lab and a crew. Naming the groups on purp
   **PdB** at the Turing Institute — the HyperCard-on-NeWS branch).
 - **Unix / the tree** — **Ken Thompson & Dennis Ritchie**; **Rob Pike & the Plan 9 team** for
   per-process namespaces and the everything-is-a-file endgame.
-- **JavaScript** — **Brendan Eich** (who has always been candid that prototypes came from Self and
-  the class veneer came later under pressure).
+- **JavaScript** — Netscape's 1995 implementation (prototypes from Self; the class veneer bolted on
+  later under browser-market pressure).
 
 *If Don named a person and skipped their collaborators, that's a gap to fix, not a verdict — add
 the missing names via PR or issue.*
@@ -728,7 +762,7 @@ the missing names via PR or issue.*
 - Ungar & Smith, "Self: The Power of Simplicity" (OOPSLA 1987); "Organizing Programs Without Classes" (1991)
 - Ungar et al., **SOAR — "Smalltalk On A RISC"** (Berkeley, 1980s) — the RISC-minimalism reflex that runs through Self
 - **Densmore & Rosenthal, US Patent 5,187,786** — "…class hierarchy of objects in a hierarchical file system" (Sun, 1993): messages `cd` to a class dir and set `$PATH` from a `PATH` file; pseudo-classes `Self` and `Super`. [Google Patents](https://patents.google.com/patent/US5187786A/en)
-- **Oliver Steele, "Classes and Prototypes" / Instance-First Development** ([blog.osteele.com, 2004](https://blog.osteele.com/2004/03/classes-and-prototypes/)) — implement the instance, refactor the class out of it; avoids *premature abstraction*; the **Instance Substitution Principle** (instance ≡ its own definition; class/instance syntax parallel), realized in **OpenLaszlo (LZX)**; kin to CMU's **Garnet**
+- **Oliver Steele, "Classes and Prototypes" / Instance-First Development** ([blog.osteele.com, 2004](https://blog.osteele.com/2004/03/classes-and-prototypes/)) — implement the instance, refactor the class out of it; avoids *premature abstraction*; the **Instance Substitution Principle** (instance ≡ its own definition; class/instance syntax parallel), realized in **OpenLaszlo (LZX)**; guest: [`../oliver-steele/`](../oliver-steele/); kin to CMU's **Garnet**
 - **Hierarchy-by-naming-convention** — **Tcl** namespaces (`::a::b::c`, `namespace eval`; objects/classes by convention pre-TclOO); **classic PHP / Drupal** class names (`views_handler_field_node`) with **PSR-0/PSR-4** autoloading mapping `_`/`\` → directories; **Java packages → dirs** — the *string is the tree*. Contrast **CLOS class-precedence list / C3 linearization** (MI as a DAG you linearize, not a tree you walk)
 - **Kiczales, des Rivières & Bobrow, *The Art of the Metaobject Protocol* (AMOP)** — CLOS MOP; dispatch you can specialize
 - **Ierusalimschy et al., Lua** — *Programming in Lua*; metatables / `__index` as a minimal, orthogonal MOP (Self's simplicity kept); the small **C API** for embedding/extending; **lgi** (Lua ↔ GObject-Introspection) and **SWIG** (auto-generated wrappers) as bridging exemplars

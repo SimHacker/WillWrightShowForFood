@@ -38,11 +38,20 @@ Brad's interaction-techniques book
 ### 6. Visual programming taxonomy
 spreadsheets as VPL (CHI '86 / JVLC 1990)
 
+### 7. Buxton 12-item clock vs Don's 8-item compass case (1991)
+Don's mail to **Bill Buxton** after PARC experiments — 12-item clock layout beat 11 items; Don argues
+**8-item** menus win on symmetry, keypad mapping, and **spiral-staircase** scrolling metaphor. Empirical
+design debate predates marking-menu patent friction.
+→ [`../don-hopkins/sources/1991-09-pie-menus-buxton-ddj-draft.md`](../don-hopkins/sources/1991-09-pie-menus-buxton-ddj-draft.md)
+
 ### 7. C32
 spreadsheet constraints by demonstration (Garnet-based, 1991)
 
 ### 8. HN metaobject thread — Excel vs Ruby popularity contest
 Don's dimensionality definition + C32 cite on [HN 22978454](https://news.ycombinator.com/item?id=22978454) — live debate material with Brad
+
+### 9. Michael McGuffin triangle
+Oct 2022 letter recipient — moderate **Excel-as-VPL** / text-vs-graph debate with Brad + Don. [`../michael-mcguffin/`](../michael-mcguffin/)
 
 ## Sources (public)
 

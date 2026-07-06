@@ -5,42 +5,95 @@ character:
   id: ben-shneiderman
   name: "Ben Shneiderman"
   type: invitation
-  signifier: "👤"
+  signifier: "👆"
   status: living
-  field: "HCI researcher — UMD HCIL, direct manipulation, embedded/highlighted hyperlinks"
+  field: "HCI — UMD HCIL founder; direct manipulation; embedded hyperlinks; info viz; human-centered AI"
   home: characters/ben-shneiderman/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.yml
   consent_level: 3
   authored_by: don-hopkins
+  subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
-  status: draft
+  status: send_ready
   consent: not_yet_asked
-  document: invitation.md
+  document: ../../repo-shows/ben-shneiderman/invitation.md   # invites live in the repo-show dir, not the character dir
   show_seed: repo-shows/ben-shneiderman/
-
+  send_batch: hci-pie-hyperties-2026
+  likelihood: "warm — CHI'88 co-author; Jan 2022 HyperTIES mail; documenting-our-work alignment"
 
 bio:
-  summary: "**Ben Shneiderman** — HCI pioneer who coined \"**direct manipulation**,\" invented embedded/highlighted hyperlinks, and founded the University of Maryland HCIL. Director of **HyperTIES** (from TIES, The Interactive Encyclopedia System) — an early hypermedia system whose highlighted, selectable embedded links are the ancestor of the modern hyperlink."
+  summary: |
+    **Ben Shneiderman** — HCI pioneer who coined **"direct manipulation,"** invented **embedded /
+    highlighted hyperlinks**, and founded the **University of Maryland HCIL**. Director of **HyperTIES**
+    (from TIES — The Interactive Encyclopedia System): early hypermedia with highlighted selectable
+    embedded links — ancestor of the modern hyperlink. **CACM July 1988** shipped *Hypertext on Hypertext*
+    as an electronic journal (4000+ copies). Berners-Lee's **1989 Web proposal** cited Hyperties for
+    **"hot spots"** and adopted **light blue link color** from Ben's user studies.
+
+    Co-author of the **CHI'88** empirical **pie vs linear menu** study with **John Callahan**, **Don
+    Hopkins**, and **Mark Weiser** — Fitts, error rates, direct manipulation made measurable. Known for
+    **Dynamic Queries**, **The Eyes Have It** (info visualization), *Leonardo's Laptop*, and **human-
+    centered AI** — human control in high-stakes automation.
+
+    **Don** built the **NeWS/PostScript HyperTIES** (embedded PostScript applets on hypermedia pages).
+    **Jan 2022:** Don sent Ben HN threads on Ted Nelson, Xanadu, self-revealing UI, HyperTIES→Web lineage.
+    **Proposal:** reincarnate HyperTIES **pixel-perfect in the browser** — living emulator as documentation.
+
+  known_for:
+    - "Coined 'direct manipulation' (1980s HCIL)"
+    - "Embedded / highlighted hyperlinks — Shneiderman + Dan Ostroff (1983–1986)"
+    - "HyperTIES + CACM July 1988 electronic journal"
+    - "CHI'88 pie menu study — Callahan, Hopkins, Weiser, Shneiderman"
+    - "Dynamic Queries — sliders for instant database insight"
+    - "The Eyes Have It — info visualization (CS547 1998)"
+    - "Leonardo's Laptop (CS547 2000)"
+    - "Human-centered AI — oversight affordances"
+
+connections:
+  don_hopkins: |
+    CHI'88 co-author; Don built NeWS/PostScript HyperTIES under Ben's HyperTIES direction. Jan 2022
+    mail on HyperTIES reincarnation, Computer Lib, light blue links, self-revealing UI.
+  mark_weiser: "CHI'88 co-author; memorial discussant for Remembering Mark Weiser show"
+  heinz-lemke: "Group show ben-and-heinz-pie-menus — PIXIE 1969 prehistory + Ben's CHI'88 lineage"
+  catherine-plaisant: "HCIL collaborator — HyperTIES road-pizza architecture diagram (public)"
+  terry-winograd: "CS547 guest — The Eyes Have It (1998); Leonardo's Laptop (2000)"
 
 hyperties:
-  role: "Director of HyperTIES at UMD HCIL. Don built the NeWS/PostScript version (embedded PostScript applets on hypermedia pages). Ben & Don discussed documenting the work — a living, pixel-perfect browser emulator would be the ideal documentation."
+  role: "Director of HyperTIES at UMD HCIL. Don built the NeWS/PostScript version."
   reincarnation: ../don-hopkins/hyperties-reincarnation.md
   media: ../don-hopkins/media/hyperties/
+  source_2022: sources/2022-01-13-hyperties-computer-lib.md
   collaborators: ["Catherine Plaisant (HCIL)", "don-hopkins (NeWS/PostScript version)"]
 
+show_suggestions:
+  - { seed: ../../repo-shows/ben-shneiderman/, what: "Series — HyperTIES emulator flagship + CHI'88 + info viz" }
+  - { seed: ../../repo-shows/ben-and-heinz-pie-menus.yml, what: "Group — Ben + Heinz Lemke (PIXIE → CHI'88)" }
+  - { seed: ../../repo-shows/remembering-mark-weiser.yml, what: "Memorial discussant — CHI'88 table" }
+
 sources:
-  wikipedia: null
+  wikipedia: "https://en.wikipedia.org/wiki/Ben_Shneiderman"
   web:
     - { title: "UMD HCIL — HyperTIES history", url: "http://www.cs.umd.edu/hcil/hyperties/" }
-  papers: []
-  blogs: []
+    - { title: "Eager Eyes — influences (Ted Nelson / Computer Lib)", url: "https://eagereyes.org/influences/ben-shneiderman" }
+    - { title: "Berners-Lee 1989 proposal (Hyperties citation)", url: "https://www.w3.org/History/1989/proposal.html" }
+  papers:
+    - "Callahan, Hopkins, Weiser, Shneiderman — CHI'88 pie menus (see media/from-mail/)"
+  in_repo:
+    - sources/2022-01-13-hyperties-computer-lib.md
+    - media/from-mail/paper-callahan-hopkins-pie-menus-chi1988.pdf
+    - media/from-mail/artifact-2-homefinder.gif
 
 see_also:
-  - { path: ../don-hopkins/hyperties-reincarnation.md, why: "HyperTIES pixel-perfect living-emulator reincarnation proposal (documenting the work together)" }
-  - { path: ../don-hopkins/media/hyperties/, why: "HyperTIES media — road-pizza diagram, NeWS tape, NeMACS shell, Hubble demo" }
-  - { path: ../../repo-shows/news-postscript-window-system.yml, why: "NeWS reunion — HyperTIES rode on NeWS PostScript" }
-  - { path: ../../process/trails/augmentation-and-hypertext.md, why: "Hypertext lineage trail" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: ../don-hopkins/hyperties-reincarnation.md, why: "Living emulator proposal" }
+  - { path: ../don-hopkins/media/hyperties/, why: "Road-pizza diagram, NeWS tape, NeMACS, Hubble" }
+  - { path: ../don-hopkins/pie-menus-chi-88-and-beyond.md, why: "CHI'88 + PIXIE credit" }
+  - { path: ../mark-weiser/, why: "Memorial co-author thread" }
+  - { path: ../heinz-lemke/, why: "Group pie-menu history show" }
+  - { path: ../../repo-shows/ben-shneiderman/, why: "Planted series SHOW.yml" }
+  - { path: ../../repo-shows/terry-winograd/, why: "CS547 archive — 1998 + 2000 talks" }
+  - { path: ../../process/trails/direct-manipulation.md, why: "Trail anchor node" }
   - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

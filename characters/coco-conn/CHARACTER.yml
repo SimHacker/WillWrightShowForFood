@@ -27,7 +27,7 @@ known_for:
   - "Flying Logos — SIGGRAPH 1989 Electronic Theater; Niccograph of Japan"
   - "SIGGRAPH SIGKids — kids' area off the main floor; Don met David Levitt there"
   - "CitySpace — collaborative virtual worlds for children (stub)"
-  - "Hackers Conference video tapes — speakers, demos, mind-blowers; Repo Show highlight reel with Coco (Don's proposal)"
+  - "Hackers Conference video tapes — speakers, demos; Repo Show highlight reel with Coco narrating (Don's proposal)"
 
 connections:
   - id: peter-conn
@@ -48,6 +48,9 @@ connections:
     note: Dream guest — Viewpoint, ambigrams; pair show with Amy Jo Kim
   - id: dave-tristram
     relation: parallel orbit — live generative performance / Raster Masters era
+  - id: ron-reisman
+    relation: memorial — knew and loved Ron
+    note: "NASA Ames / performance-technology orbit (Don's note)"
 
 sources:
   - type: hn
@@ -73,9 +76,12 @@ sources:
     path: ../david-levitt/don-and-david-history.md
 
 invitation:
-  status: draft
+  status: in_conversation
+  sent: 2026-07-06
+  sent_via: facebook
   show_seed: repo-shows/coco-conn/
   path: ../../repo-shows/coco-conn/invitation.md
+  next: "await reply — Hackers Conference tape catalog + clip rights"
 
 facts_to_confirm:
   - "Hackers Conference tapes — years, format, speaker index, clip rights for Repo Show"

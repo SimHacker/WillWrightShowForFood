@@ -31,7 +31,7 @@ comments_for_guest: |
 
 media:
   avatar: images/avatar.png
-  with_guest: images/with-guest.png
+  with_will: images/with-will.png
 
 meta:
   moollm_stack:

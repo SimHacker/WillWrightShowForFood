@@ -41,7 +41,10 @@ bio:
     *Infrared Roses*), and with **Herbie Hancock** and **Graham Nash** (*Wired*, 1994–1995). Shared
     **Panel Library + Electropaint source** freely — Dead-scene taping ethos applied to code.
     **NASA Ames → SGI → Adobe**; **Viviography** / **Tristram Visual** (Electropaint™). Still
-    performing (2025): **Resolume Avenue**, **TouchDesigner**. Generative influences he has
+    performing (2025): **Resolume Avenue**, **TouchDesigner**. At Adobe: interactive live-painting /
+    filter R&D (Don beta-tested ~2022; **pre-release — public details withheld** until Dave clears).
+    See [`sources/live-canvas-effects-stub.md`](sources/live-canvas-effects-stub.md).
+    Generative influences he has
     cited publicly include CelLab, *Chaos*, reaction-diffusion, feedback, and Toffoli & **Norman
     Margolus**'s *Cellular Automata Machines*.
   known_for:
@@ -99,6 +102,7 @@ sources:
 
 see_also:
   - { path: raster-masters-panel-library.md, why: "USENIX Monterey 1989 meetup (Panel Library + PSIBER); Raster Masters; Electropaint — Don's firsthand" }
+  - { path: sources/live-canvas-effects-stub.md, why: "Adobe pre-release beta — public stub only; private digest gitignored" }
   - { path: ../don-hopkins/visual-programming-excel-and-dimensionality.md, why: "PSIBER Space Deck — Don's paper from same USENIX workshop" }
   - { path: CARD.yml, why: "Invokable abilities for show segments" }
   - { path: ideas.md, why: "Conversation hooks" }
@@ -106,6 +110,7 @@ see_also:
   - { path: ../don-hopkins/cam6-cellular-automata-machine.md, why: "Don's CAM6 — shared CA lineage" }
   - { path: ../don-hopkins/musical-gas-granular-ca-synth.md, why: "Granular CA synth — sibling live-synthesis toy" }
   - { path: ../norman-margolus/, why: "CA looping fest anchor guest" }
+  - { path: ../ron-reisman/, why: "NASA Ames colleague era — Ron's flight sim / ATM lab" }
   - { path: ../../repo-shows/dave-tristram/, why: "Show seed" }
   - { path: ../../repo-shows/norman-margolus/, why: "Group CA fest he's invited to" }
   - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

@@ -1,0 +1,33 @@
+# Laurie Anderson — invented instruments, voice puppets, and forkable storytelling
+# Dream guest seed — consent not yet asked.
+
+show:
+  id: laurie-anderson
+  title: "Laurie Anderson — Instruments, Voices, and the Talking Stick"
+  type: dream
+  host: Don Hopkins
+  guests: ["Laurie Anderson"]
+  character: characters/laurie-anderson/
+  topic: "Invented instruments, voice technology, granular/resampling performance, and live storytelling that commits to git."
+  status: dream_seed
+  consent: not_yet_asked
+  warm_intro: "Interval Research alumni — Talking Stick era (Bob Bielecki + IRC, c. 1999)"
+
+why_her:
+  interval_bridge: "Don worked at Interval Research; Laurie built the Talking Stick there — shared-history door, not fan mail."
+  instruments: "Tape-bow violin, Talking Stick, Voice of Authority — performance-hacks that turn playback into instruments."
+  medium_kinship: "Spoken-word architecture (*United States I–IV*) meets a show whose stage is a public repo."
+
+dream_segments:
+  - "Rebuild the tape-bow idea in the browser — scrub audio with a gesture; audience forks it."
+  - "Talking Stick ↔ Musical Gas — granular CA synth as sibling instrument (Don's companion piece)."
+  - "Voice of Authority as voice puppet — authority, persona, and who gets to speak."
+  - "VR/immersive storytelling (*Chalkroom*, *Aloft*) vs forkable live narrative in git."
+  - "Anti-censorship performance — get the true thing on the air, on purpose."
+
+related:
+  - characters/laurie-anderson/
+  - characters/don-hopkins/musical-gas-granular-ca-synth.md
+  - repo-shows/ideas/themes/the-riff-loop.yml
+  - characters/brian-eno/
+  - characters/nina-hagen/

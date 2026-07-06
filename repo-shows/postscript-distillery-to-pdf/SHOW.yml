@@ -1,0 +1,81 @@
+id: postscript-distillery-to-pdf
+title: "PostScript Distillery → PDF — the Reid brothers"
+format: pair
+status: planted
+send_batch: postscript-lineage-2026
+
+guests:
+  - glenn-reid
+  - brian-reid
+
+host_participants:
+  - don-hopkins
+
+related_shows:
+  - news-postscript-window-system.yml
+  - james-gosling-news-java.yml
+
+tags:
+  - postscript
+  - pdf
+  - distillery
+  - interpress
+  - history
+  - partial-evaluation
+  - linguistic-motherboard
+
+logline: |
+  The million-dollar question that led to PDF — asked of the person who wrote The Distillery,
+  alongside the author of the definitive 1985 laser-lovers history. Don as participant-historian:
+  NeWS re-distillery, PostNews, CyberSpace-deck debugging, Porter/Duff lineage to WebGPU.
+
+segments:
+  - id: opening-question
+    title: "Flat enough to trust"
+    notes: Don frames Distillery vs PDF vs Preview; Glenn's "no real relationship" nuance.
+
+  - id: graphbind-to-still
+    title: "Warnock's graphbind → Distillery"
+    notes: Glenn generalizes operator redefinition; save/restore hacks; DPS vs printer vs NeWS.
+
+  - id: brian-1985
+    title: "Laser-lovers definitive history"
+    notes: JAM → Interpress → PostScript; guarantee vs empower; Bob Sproull vantage.
+
+  - id: linguistic-motherboard
+    title: "Slots and cards"
+    notes: Warnock quote → Owen Densmore → MOOLLM CARD.yml; optional Owen clip or async.
+
+  - id: don-news-distillery
+    title: "NeWS re-distillery"
+    notes: setbindoverride; grouping; selectable text canvases; 1989 paper + HN threads.
+
+  - id: postnews-1990
+    title: "PostScript as netnews body"
+    notes: Constrained distilled PS; readps.c; security on DPS/NeWS; Jamie Zawinski gag.
+
+  - id: touchtype-appliances
+    title: "TouchType → washing machines"
+    notes: |
+      "128-point string with 1 glyph"; NeXT → Adobe rebrand; Don 2015 VR pitch (Pantomime cc Levitt/Hedman) declined.
+      Glenn on motors/solenoids/appliances. Source: characters/glenn-reid/sources/2015-01-31-touchtype-vr-correspondence.md
+
+  - id: lineage-forward
+    title: "Imaging model to the browser"
+    notes: Quartz, Canvas, Porter/Duff, don-hopkins/porter-duff-postscript-to-webgpu.md; NeWS reunion tease.
+
+artifacts:
+  - characters/glenn-reid/
+  - characters/brian-reid/
+  - characters/don-hopkins/sources/distillery-pdf-correspondence.md
+  - characters/don-hopkins/porter-duff-postscript-to-webgpu.md
+  - moollm/designs/postscript/BRIAN-REID-POSTSCRIPT-HISTORY.md
+  - moollm/designs/postscript/LINGUISTIC-MOTHERBOARD.md
+
+demo_ideas:
+  - Run still.ps / distilled output side-by-side in browser
+  - Double-distill to strip redundant setfont (Glenn's whiskey joke)
+  - Extract text with readps.c logic on a PostNews sample
+  - Show Warnock sort.ps / 3d.ps as "PostScript as general language"
+
+invitation_status: send_ready

@@ -40,6 +40,13 @@ Game Neverending → Flickr lineage — thumbs-up'd this as the **starting point
 *"The player imagines more than we simulate."* Abstraction, masking, and **Scott McCloud's closure**
 as design tools — why under-simulating (and trusting the player's imagination) often wins.
 
+**Lenat rhyme:** Doug's **"white space"** (commonsense between encyclopedia words) is the same architectural
+move as McCloud's **gutter** and Will's **two computers** — sparse explicit frames downloaded into a
+commonsense-saturated audience who **fills the gaps**. LLMs that train on *all the words* automate the wrong
+part. Alan Kay thread:
+[`../alan-kay/media/quora-recaps/lenat-cyc-knowledge-and-slow-thinking.md`](../alan-kay/media/quora-recaps/lenat-cyc-knowledge-and-slow-thinking.md#repo-show-connection--white-space-gutter-two-computers-dons-guess).
+1996 source: [`sources/1996-04-26-winograd-interfacing-to-microworlds/README.md`](sources/1996-04-26-winograd-interfacing-to-microworlds/README.md).
+
 ### 4. Toys, not games — microworlds
 Will's lifelong stance: simulations as **toys and microworlds** without a single win state. The
 Repo Show Class lens: a microworld as a *medium*, not a contest.

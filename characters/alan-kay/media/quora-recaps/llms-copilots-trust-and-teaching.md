@@ -62,12 +62,50 @@ The issue exceeds computing disasters: humans cooperate with limited trust, then
 society exists to be strip-mined. Scaling makes this a **Spaceship Earth** problem. Heinlein: "The bull wears
 itself out on the cape and fails to see the sword."
 
-## Questions for Alan (show fodder)
+---
+
+## Our guess — MOOLLM as partial answer (draft; not Alan's words)
+
+*Canonical full analysis:*
+[`../../moollm-trust-and-teaching-guess.md`](../../moollm-trust-and-teaching-guess.md)
+
+**Short answer:** [MOOLLM](https://github.com/SimHacker/moollm) is **half** what Kay seems to mean — microworld
+OS for constructionist learning, **not** a GitHub Copilot — but **not yet trustworthy** by his bar. Make the LLM
+**the least trusted component in the loop**. See the artifact for copilot-vs-MOOLLM table, architecture diagram,
+roadmap, show segments, and agent analysis.
+
+---
+
+## Question to pose to Alan
+
+**Lead question (MOOLLM):**
+
+> We built **MOOLLM** as a microworld OS — directories as rooms, skills as inspectable programs, the LLM as
+> `eval()`, constructionism not copilot autocomplete. Reading your answer on copilots and teaching
+> programming: is that **anything like** what you mean by an expert system that creates understanding
+> "between the ears"? If not, what would we have to add or **forbid** to get there — and would a Cyc-class
+> commonsense layer be enough, or is the "special human" irreplaceable?
+
+*Review protocol:* show Alan the recap + [`../../moollm-trust-and-teaching-guess.md`](../../moollm-trust-and-teaching-guess.md);
+fold his reply back in (see
+[`../../../david-rosenthal/slots-all-the-way-down.md`](../../../david-rosenthal/slots-all-the-way-down.md)).
+
+## Further questions for Alan (show fodder)
+
+See full question bank in [`../../moollm-trust-and-teaching-guess.md`](../../moollm-trust-and-teaching-guess.md#question-to-pose-to-alan). Highlights:
 
 - Could a **Cyc-class commonsense layer + LLM** ever be trustworthy enough for learners — or is the "special
   human" irreplaceable?
-- Is the Internet's **bits-not-commands** design the right pattern for LLM tool-calling protocols?
+- Is the Internet's **bits-not-commands** design the right pattern for LLM tool-calling protocols — and does
+  **MOOAM**-style declared permissions get anywhere close?
 - What would an **expert teaching system** look like that creates understanding between the ears — Etoys?
-  A microworld with a skeptical tutor?
+  A microworld with a **skeptical tutor**? What would you *not* let it do?
 - NCANIPs hacking language — does that make **kids-reading real transcripts** (human voices, verifiable
   sources) more important, not less?
+- If you rebuilt **MOOLLM** with a Cyc-class layer, what stays **late-bound** vs what must stay **human-only**?
+- **ML + symbolic** — trustworthy copilots, or still missing pseudotime/fluents and "active knowledge" of
+  dependencies?
+- Lenat's **"white space"** vs training on all the words — did we automate the wrong part of the encyclopedia?
+  (McCloud **gutter** + Will **two computers** —
+  [`lenat-cyc-knowledge-and-slow-thinking.md`](lenat-cyc-knowledge-and-slow-thinking.md#repo-show-connection--white-space-gutter-two-computers-dons-guess).)
+- Should the first job of semi-AI be **free learn-to-read** (Carnegie vision) rather than copilots for coders?

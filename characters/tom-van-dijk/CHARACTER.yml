@@ -1,0 +1,63 @@
+# Tom van Dijk — invitation portrayal. NOT Tom van Dijk.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: tom-van-dijk
+  name: "Tom van Dijk"
+  type: invitation
+  signifier: "✏️"
+  status: living
+  field: "Sims 1 modding pioneer — IFF Pencil author; SimAntics reverse-engineering; Netherlands"
+  home: characters/tom-van-dijk/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: warm_reconnect
+  document: invitation.md
+  show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml
+
+contact:
+  email: t.vandijk@gmail.com
+  work: t.vandijk@utwente.nl
+  location: Deventer, NL (Don: Badhoevedorp — one train ride)
+
+bio:
+  summary: |
+    **Tom van Dijk** wrote **IFF Pencil** as a teenager — the tool that helped the early Sims 1
+    modding community decipher **SimAntics** and object formats. He reverse-engineered from hex dumps
+    on family holidays; **Behavior.iff** (or similar shipped IFF) puzzled him — accidental modding
+    aid or intentional? **EA Legal** (via PJB3, Feb 2002) forced removal of SimAntics material from
+    his site. Nickname **mazelord2000**. Reconnected with Don **Jun 2024** after a LUCPIX request
+    for steering-committee-era tools; recovered dusty archives; reflected on how modding/open
+    source culture matured since the early 2000s.
+
+aliases:
+  - mazelord2000
+
+show_topics:
+  iff_pencil:
+    what: "IFF Pencil → IFF Pencil 2; community still using it (Heather/Steve SimSlice, ZombieSim)"
+    link: https://zombiesims.com/
+  behavior_iff:
+    what: "Why was Behavior.iff in the shipping game? Will's modding intent vs EA Legal"
+  ea_legal:
+    what: "Feb 2002 takedown; open vs closed Edith/SimAntics politics (Tom recovered old mail with Don)"
+  steering_committee:
+    what: "LUCPIX hunt for FARx/XAbatch — Tom recompiled in modern VC++ (2024)"
+
+sources:
+  primary:
+    - sources/2024-06-van-dijk-sims-modding-reconnect.md
+  related:
+    - ../will-wright/sources/2004-02-05-sims-proposals-and-documentation/
+    - ../jamie-doornbos/
+    - ../eric-bowman/
+
+see_also:
+  - { path: ../heather-alvey/, why: "SimFreaks/SimSlice — IFF Pencil 2 still in use" }
+  - { path: ../don-hopkins/, why: "Sims teammate; Edith/SimAntics UI" }

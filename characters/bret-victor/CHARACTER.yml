@@ -19,7 +19,8 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  show_seed: repo-shows/bret-victor-explorable.yml
+  show_seed: repo-shows/bret-victor/
+  priority: send_ready
 
 bio:
   summary: "**Bret Victor** — interface researcher inventing better *media for thought*: \"explorable explanations,\" \"Inventing on Principle,\" and Dynamicland. (Note: \"Bret,\" one t.)"
@@ -31,7 +32,7 @@ engelbart:
   joins_memorial: ../../repo-shows/remembering-douglas-engelbart.yml
 
 show_suggestions:
-  - { seed: ../../repo-shows/bret-victor-explorable.yml, what: "Solo — explorable explanations applied to Micropolis legibility + honest patronage-vs-shipping (Dynamicland)" }
+  - { seed: ../../repo-shows/bret-victor/, what: "Solo — explorable explanations + Micropolis legibility + patronage-vs-shipping" }
   - { seed: ../../repo-shows/remembering-douglas-engelbart.yml, what: "Group tribute to Doug Engelbart with Ted Nelson, Alan Kay, Yoot Saito" }
 
 sources:
@@ -45,4 +46,5 @@ sources:
 
 see_also:
   - { path: ../douglas-engelbart/, why: "🕯️ Engelbart — the vision Bret reads + defends (memorial)" }
-  - { path: ../douglas-engelbart/memorial.md, why: "Group tribute home" }
+  - { path: ideas.md, why: "Micropolis legibility, Dynamicland, Engelbart intent" }
+  - { path: ../../repo-shows/bret-victor/, why: "Planted show" }

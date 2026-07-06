@@ -1,0 +1,70 @@
+# Brenda Laurel — invitation portrayal. NOT Brenda Laurel.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: brenda-laurel
+  name: "Brenda Laurel"
+  type: invitation
+  signifier: "🎭"
+  status: living
+  field: "HCI dramaturgy (Computers as Theatre) · Interval Research · Purple Moon · games for girls"
+  home: characters/brenda-laurel/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/placeholder/
+  priority: send_ready
+  pair_with: rob-tow
+  send_batch: interval-reunion-2026
+  note: "Interval circle; Placeholder VR w/ Rob Tow + Rachel Strickland; Purple Moon; Don saw games-for-girls research before Maxis."
+
+bio:
+  summary: |
+    **Brenda Laurel** — interaction designer, researcher, and writer. Author of **_Computers as
+    Theatre_** (dramatic theory applied to HCI). At **Interval Research** she led multi-year **gender +
+    technology** research that spun off **Purple Moon** (1996) — narrative CD-ROM games for girls
+    (e.g. Rockett's New School). Also known for **_Utopian Entrepreneur_** and design-research advocacy.
+  don_firsthand: |
+    Don worked at **Interval Research** (~mid-1990s) in the same Camelot-era circle. Before joining
+    **Maxis** and **The Sims**, he watched Brenda's **games-for-girls** research and found it
+    **enlightening** — worth doing even when the market was brutal (see Don's note on Henry Jenkins's
+    *Barbie to Mortal Kombat* reflection). Don compares Purple Moon's research-driven "pink pill" to
+    Will's **Simulator Effect** path: The Sims didn't follow focus groups; it shipped ambiguity and
+    user-created content.
+  known_for:
+    - "Computers as Theatre — HCI as dramatic experience"
+    - "Interval Research → Purple Moon — gender-inclusive game design research"
+    - "Placeholder VR — landscape and narrative (with Rob Tow, Rachel Strickland); CS547 1993"
+
+why_a_guest:
+  connective_tissue: |
+    Brenda is the **dramatic interface + narrative** node from Interval → **The Sims storytelling**
+    lineage. Natural **pair** with **Rob Tow** (Placeholder, psychophysics) and bridge to **Will Wright**
+    (Purple Moon vs Maxis design philosophy), **Scott McCloud** (closure/gutter), and **Interval reunion**.
+  flags:
+    - "Purple Moon commercial outcome ≠ research value — frame Don's view as firsthand, not verdict on Brenda."
+
+sources:
+  web:
+    - "https://en.wikipedia.org/wiki/Brenda_Laurel"
+  cs547:
+    - "../../terry-winograd/media/cs547-archive.yml"
+  don_essay:
+    - "../will-wright/sources/2004-01-10-barbie-mortalkombat-jenkins/article.md"
+
+see_also:
+  - { path: ../rob-tow/, why: "Married; Placeholder VR co-creators; natural pair show" }
+  - { path: ../don-hopkins/history/interval-research.yml, why: "Interval Camelot roster" }
+  - { path: ../don-hopkins/interval-research-pluggers-and-mediaflow.md, why: "Interval reunion vein" }
+  - { path: ../will-wright/, why: "Purple Moon vs Sims — Jenkins comparison" }
+  - { path: ../scott-mccloud/, why: "Closure/gutter — Sims design bible rhymes with dramatic participation" }
+  - { path: ../../repo-shows/placeholder/, why: "Planted pair show" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

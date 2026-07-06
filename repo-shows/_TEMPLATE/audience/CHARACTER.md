@@ -58,7 +58,7 @@ audience/<you>/
   GLANCE.yml         # recommended — copy as-is, tweak one line
   SIMULATION.yml     # optional — MSPO RPG + after-show
   costume.yml        # optional — stream rig
-  images/            # recommended — headshot, avatar (128²), with-guest
+  images/            # recommended — headshot, avatar (128²), with-will
 ```
 
 See [`images/README.md`](images/README.md). **Examples:** [`../../will-wright/audience/bot-slats/`](../../will-wright/audience/bot-slats/README.md), [`../../will-wright/audience/fictional-bob-newbie/`](../../will-wright/audience/fictional-bob-newbie/README.md).

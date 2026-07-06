@@ -60,13 +60,13 @@ groups:
         verify: https://donhopkins.com/home/resume.html
         character: ../../../don-hopkins/
 
-      - id: patrick-barrett
+      - id: patrick-j-barrett-iii
         name: Patrick J. Barrett III
         also: Patrick Barrett
         epithet: "Sim Brains"
         role: SimAntics engineer; vast majority of object & Sim behavior code
         verify: https://www.mobygames.com/person/70265/patrick-j-barrett-iii/
-        character: ../../../patrick-barrett/
+        character: ../../../patrick-j-barrett-iii/
 
       - id: eric-bowman
         name: Eric Bowman

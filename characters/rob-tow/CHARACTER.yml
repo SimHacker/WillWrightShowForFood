@@ -1,0 +1,64 @@
+# Rob Tow — invitation portrayal. NOT Rob Tow.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: rob-tow
+  name: "Rob Tow"
+  type: invitation
+  signifier: "🔬🌲"
+  status: living
+  field: "Visual psychophysics · Interval Research · Placeholder VR (landscape + narrative)"
+  home: characters/rob-tow/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/placeholder/
+  priority: send_ready
+  pair_with: brenda-laurel
+  send_batch: interval-reunion-2026
+  note: "Interval circle; Placeholder w/ Brenda + Rachel Strickland; CS547 psychophysics + narrative VR."
+
+bio:
+  summary: |
+    **Rob Tow** — researcher at **Interval Research Corporation** (Paul Allen's lab). Known in the
+    Terry Winograd **CS547** archive for **visual psychophysics** applied to scanning, printing, and
+    video (1993), and for **Placeholder** — *Landscape and Narrative in a Virtual Environment* — presented
+    with **Brenda Laurel** and **Rachel Strickland** (1993). Married to Brenda Laurel.
+  don_firsthand: |
+    Don was at Interval in the same era — the **Camelot** atmosphere of visiting speakers, live experiments,
+    and cross-disciplinary projects. Placeholder sits on the show's **Interval reunion** spine: narrative
+    VR, landscape, and the hippie-era Silicon Valley lab Don wants to **reignite with NEW shared videos**
+    (see Interval reunion vision in Don's green-room notes).
+  known_for:
+    - "Placeholder — pioneering VR narrative / virtual landscape (Interval)"
+    - "Visual psychophysics — CS547 talk (1993)"
+    - "Interval Research circle — paired with Brenda Laurel"
+
+why_a_guest:
+  connective_tissue: |
+    Rob is the **Placeholder / psychophysics** node — early **narrative VR** and perception science from
+    Interval, archived in Terry's **CS547** tapes. Pairs naturally with **Brenda Laurel**; connects to
+    **Repo Show** as dramatic medium + **Micropolis** explorable city as landscape.
+  flags:
+    - "Confirm current contact path before send — Interval alumni roster; spelling Rob Tow (not Toe)."
+
+sources:
+  web:
+    - "https://en.wikipedia.org/wiki/Placeholder_(virtual_reality)"
+  cs547:
+    - "../../terry-winograd/media/cs547-archive.yml"
+
+see_also:
+  - { path: ../brenda-laurel/, why: "Married; Placeholder co-creators" }
+  - { path: ../don-hopkins/history/interval-research.yml, why: "Interval roster" }
+  - { path: ../terry-winograd/, why: "CS547 archive — Placeholder + psychophysics talks on tape" }
+  - { path: ../../repo-shows/placeholder/, why: "Planted pair show" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

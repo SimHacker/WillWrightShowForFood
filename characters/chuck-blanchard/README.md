@@ -18,6 +18,17 @@ straight in a **1999 email** to Don (see the [primary source](../don-hopkins/bod
 
 This repo credits Chuck plainly. Jaron founded VPL and dreamed the vision; **Chuck built the thing.**
 
+## Artifacts (Feb 2020)
+
+Chuck still had a **Mac OS 9 + CodeWarrior** dev system with compiling Body Electric source and attached **screenshots** of live patches:
+
+| Image | Patch |
+|-------|-------|
+| [`media/body-electric/redgreen-dm-3d-viewport.png`](media/body-electric/redgreen-dm-3d-viewport.png) | `redgreen.DM` — 3D scene + dataflow (BE 6.0.1a8) |
+| [`media/body-electric/move-flock-nested-dm.png`](media/body-electric/move-flock-nested-dm.png) | Flocking — nested `Move Flock` / `Move one bird` DMs |
+
+→ [`sources/2020-02-17-body-electric-dev-system.md`](sources/2020-02-17-body-electric-dev-system.md) · **Barry Threw** holds a separate **1a1 archive** (SheepShaver resurrection attempt)
+
 ## The invitation
 
 Don's words: *"Absolutely add Chuck and invite him! Hope he's still doing well."*

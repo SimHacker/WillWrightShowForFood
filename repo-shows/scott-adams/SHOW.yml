@@ -27,6 +27,7 @@ threads:
   adventure_plus_ai: "LLMs that help AUTHOR adventures, not just play them; world models; procedural interactive fiction."
   build_live: "The payoff: Don develops adventure-compiler tooling on air that Scott can actually use -- real code, public repo."
   biography_adventures: "Scott's NotebookLM corpus -> mini-adventures on the web; compile with MOOLLM adventure skill; HN thread as a room."
+  dual_palace: "Scott biography rooms + Don career memory palace — same adventure compiler; mutual YAML seeds; live Repo Show compile."
 
 format:
   live: true
@@ -38,6 +39,9 @@ ties_to:
   - ideas.md
   - IDEAS.yml
   - ../../characters/scott-adams/invitation.md
+  - ../../characters/scott-adams/moollm-dual-palace.md
+  - ../../characters/scott-adams/correspondence-digest.md
+  - ../../characters/scott-adams/artifacts.yml
   - ../../characters/scott-adams/ideas.md
   - ../../characters/scott-adams/CHARACTER.yml
   - ../../characters/don-hopkins/career/lineage.yml

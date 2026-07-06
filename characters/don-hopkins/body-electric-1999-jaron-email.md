@@ -29,6 +29,8 @@ person who ran Interval over how Chuck was treated, and David was still upset wi
 fuss. **[confirm on air]** — this is sensitive personal history; treat gently and confirm with those
 involved.
 
+**Also in:** Don's Oct 2022 letter to **Michael McGuffin** — same Jaron quotes curated for the visual-programming lineage essay. [`../michael-mcguffin/sources/2022-10-08-don-visual-programming-letter.md`](../michael-mcguffin/sources/2022-10-08-don-visual-programming-letter.md)
+
 ## The rights chain (Don's recollection — [confirm on air])
 
 - **[David Levitt](../david-levitt/README.md) created Hookup** at MIT — his own patch-cord visual

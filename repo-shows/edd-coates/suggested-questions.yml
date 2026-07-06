@@ -1,0 +1,64 @@
+# SUGGESTED QUESTIONS — Edd Coates show seeds
+# Copy a question into CHARACTER.yml to vote + fork.
+
+meta:
+  status: seed-list
+  show: edd-coates/SHOW.yml
+  centerpiece:
+    - "Game UI Database (73,000+ screens)"
+    - "Ethical AI Data Licensing (anti-slop defense)"
+    - "The Game UI Bible (500+ page book, Lost in Cult 2026)"
+    - "Pie menus + PieCraft (episode 2: pie-menus-piecraft.yml)"
+  voting: "Copy a question into your character = a vote + a fork you can edit."
+
+game_ui_database:
+  - id: building-the-archive
+    q: "You started the Game UI Database during the 2020 lockdown, and now it holds a Guinness World Record with over 73,000 screens. How did you design the taxonomy to make that massive amount of data actually searchable and useful for working designers?"
+  - id: ui-trends-over-time
+    q: "Looking across 1,800+ games, what are the biggest shifts you've seen in UI design over the last decade? Are we moving toward or away from skeuomorphism?"
+  - id: pie-menus-in-the-wild
+    q: "Where do radial/pie menus fit into the modern console and PC landscape? Are there specific games in your database that nailed pie menu execution?"
+
+ethical_ai_licensing:
+  - id: the-anti-slop-defense
+    q: "Your site explicitly prohibits AI scraping. As an independent archivist, how do you enforce that boundary in practice while keeping the resource open for human designers?"
+  - id: the-truffle-model
+    q: "If AI companies are starving for high-density, expert-verified data, how can independent creators build ethical licensing models where they actually get paid fairly for their life's work?"
+  - id: protecting-curation
+    q: "The value of the Game UI Database isn't just the raw images — it's the curation and metadata. How do we ensure human categorization labor isn't strip-mined by LLMs?"
+
+the_game_ui_bible:
+  - id: translating-screens-to-print
+    q: "You're writing a 500+ page physical book, The Game UI Bible, with Lost in Cult. What's the challenge of translating interactive screens into static print?"
+  - id: preserving-history
+    q: "Why a physical tome for game UI history in an era where interfaces change with every patch?"
+
+padcrafter_and_tools:
+  - id: standardizing-controllers
+    q: "With PadCrafter 2.0, you're helping designers build gamepad layouts. Why is controller iconography so hard to standardize across platforms?"
+  - id: toolmaker-mindset
+    q: "You transitioned from making UI to making tools for UI designers. What pain points drove PadCrafter and the GUIDB?"
+
+micropolis_integration:
+  - id: mapping-micropolis-ui
+    q: "If we mapped Micropolis or The Sims UI into the Game UI Database taxonomy, what categories would they fall under — and what makes them unique historically?"
+  - id: executable-archives
+    q: "I'm building the Repo Show to turn computing history into executable artifacts. How do visual archives like yours relate to runnable, interactive archives?"
+
+pie_menus_and_piecraft:
+  - id: pies-in-the-database
+    q: "How many pie/radial examples have you catalogued? What tags would make them more useful?"
+  - id: sims-pies
+    q: "The Sims famously used pie menus (I helped design and implement them). How do they show up in your archive — and what made them work?"
+  - id: monster-hunter-success
+    q: "Monster Hunter World's radial menus are praised for high-skill play. What makes them successful in your analysis?"
+  - id: what-sucked
+    q: "Common failure modes for radial/pie menus — moving targets, too many slices, poor feedback?"
+  - id: ultimate-editable-pies
+    q: "Designing the ultimate flexible, user-editable pie menu today — loadouts, sharing, accessibility?"
+  - id: piecraft-concept
+    q: "PieCraft — pies as craftable, damageable objects; good layout wins fights. Useful for teaching UI literacy through play?"
+  - id: piecrafter-and-padcrafter
+    q: "Could there be a PieCrafter companion to PadCrafter for building and sharing pie layouts?"
+  - id: anti-slop-pies
+    q: "Expert-annotated pie examples as ethical licensing corpus — would you want GUIDB examples included under attribution terms?"

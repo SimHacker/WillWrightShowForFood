@@ -7,7 +7,7 @@
 #   group: multiple people × one topic.
 #
 # Add a show: copy _TEMPLATE.yml → <slug>.yml, fill it in, list it here.
-# Roster + consent: ../process/collaborators.yml. Method: ../process/design-in-public.yml.
+# Roster + consent: ../process/collaborators.yml · Party pipeline: ../process/party-roster.yml. Method: ../process/design-in-public.yml.
 #
 # Creative inventory (gags, themes, traditions): ideas/ — see ideas/README.md
 
@@ -30,9 +30,21 @@ shows:
     steve-wozniak/:            "Topic-less kickoff with Steve Wozniak. Apple II, 6502, open hardware, and browser-based emulators."
     terry-winograd/:           "★ FOREBEAR SHOW. Terry Winograd as the dragon with the treasure trove of videos (CS547 archive). Stands explicitly on Terry's shoulders + the shoulders of all his great guests (Will 1996, Gosling Java 1995, Joy Mountford 1994, Raskin, Norman, etc.). Archive recovery, modern runnable seeds, Repo Show Class continuation, Connections series spine. (Pie menus = Don's own thread, not Joy Mountford's — corrected.)"
     rebounce/:                 "★ REBOUNCE. Salute to Bounce (né Body Electric): check in Don's original Bounce source, and invite many people to rewrite it — by hand AND with AI, competing + cooperating + exchanging ideas. Seeded by David Levitt + Don's discussions; Jaron Lanier (VPL co-founder & Body Electric visionary — lead designer/programmer was Chuck Blanchard) guest of honor for the origin story. The patch-cord/dataflow half of the Snap! visual-engines vision. History: ../characters/don-hopkins/body-electric-bounce-vr-stack.md."
+    edd-coates/:                "★ Edd Coates — Game UI Database (Guinness); Game UI Bible; ethical AI licensing; friend of Don. Ep.2 pies/PieCraft. send_now."
+    clint-basinger/:        "★ Clint Basinger (LGR) — Maxis/Micropolis/preservation; audience bridge to Sims fandom. send_now. (was lgr/)"
+    marc-canter/:              "★ Marc Canter — Director/Macromedia → People Aggregator; puppets + Pink Trombone; three-hander w/ David Levitt. send_ready."
+    bret-victor/:               "★ Bret Victor — explorable explanations + Micropolis legibility; Dynamicland honest beat. send_ready."
+    placeholder/:                "★ PAIR Brenda Laurel + Rob Tow — Placeholder VR; Computers as Theatre; Interval reunion. send_ready."
+    postscript-distillery-to-pdf/: "★ PAIR Glenn Reid + Brian Reid — Distillery → PDF; 1985 laser-lovers history; Don NeWS re-distillery + PostNews. send_ready."
+    glenn-edens-grid-interval/: "★ SOLO Glenn Edens — GRiD Compass, bullet story, Lisa mouse/PARC, Interval Camelot. NOT Glenn Reid. send_ready."
+    laurie-anderson/:           "★ DREAM. Laurie Anderson — Talking Stick / Interval bridge; invented instruments; voice puppets; forkable storytelling."
+    nina-hagen/:                "★ DREAM. Nina Hagen — operatic punk; Club 2 anti-censorship; voice as weapon."
+    brian-eno/:                 "★ DREAM. Brian Eno — generative systems; Long Now 2006 w/ Will; Scott Draves reunion."
+    drew-carey/:                "★ DREAM. Drew Carey — improv + Sims mythology (House Party, Drew Carey Show in-game)."
+    openlaszlo/:                "★ REUNION. OpenLaszlo — David Temkin + Oliver Steele + Henry Minsky + Don. LZX RIA before its time; David AI-revived the Java toolchain; run old LZX apps live. Oliver solo: oliver-steele/ (Instance-First)."
   seeds:
     group:
-      building-the-sims.yml:    "The Sims team reunion: Jamie Doornbos, Eric Bowman, Patrick Barrett, Don (programmers) + Jim Mackraz (manager) + Will. Designers Chris/Claire may join. Flagship episode: will-wright/sims-team-steering-committee-playthrough/ (PLAY the 1998 build)."
+      building-the-sims.yml:    "The Sims team reunion: Jamie Doornbos, Eric Bowman, Patrick J. Barrett III, Don (programmers) + Jim Mackraz (manager) + Will. Designers Chris/Claire may join. Flagship episode: will-wright/sims-team-steering-committee-playthrough/ (PLAY the 1998 build)."
       music-and-theory.yml:     "David Levitt + Jerry Martin — music and theory."
       will-and-yoot.yml:        "Will Wright + Yoot Saito — whatever they want."
       ben-and-heinz-pie-menus.yml:  "Ben Shneiderman + Heinz U. Lemke — pie menus, HCI, history (1969 PIXIE → CHI '88 → now)."
@@ -51,10 +63,13 @@ shows:
       game-bridge-afterlife-soul.yml: "Simopolis Soul Bridge ⇔ LucasArts Afterlife (1996) — rescue souls FROM hell, send TO hell; hell-is-full → ZombieSims waves; They Are Billions scale (process/crazy-idea-jam.yml#hell_is_full_zombie_sims)."
       heather-and-steve-alvey/afterlife-zombie-bridge.yml: "Heather Alvey (SimFreaks) + Steve Alvey (SimSlice) — drain hell into ZombieSims; religion skin mapping; catalog + authoring tool integration. (FLAGSHIP EPISODE of the whole-career Alvey show — see heather-and-steve-alvey/SHOW.yml.)"
     solo_and_series:
+      placeholder/: "★ PAIR PLANTED. Brenda Laurel + Rob Tow — Placeholder VR (1993 CS547); Computers as Theatre; Purple Moon; Interval reunion. send_ready."
       scott-draves/: "Scott Draves ('Spot') — generative & evolutionary art: Fractal Flame → Electric Sheep → Dreams in High Fidelity → Infinidream. Open source, collective intelligence, AI image-gen. Old CMU friend; Electric Sheep Unity collaborator. Holds SHOW.yml + README + invitation.md. Reunion variant with Brian Eno + Will (the 2006 Long Now evening)."
       brian-eno/: "★ DREAM GUEST. Brian Eno — generative systems across media (ambient/generative music + visual art) meeting simulation. Coined 'The Long Now'; 2006 Long Now 'Playing with Time' with Will. Contact via Will + Scott Draves. Holds SHOW.yml + README + invitation.md (dream)."
       jim-crutchfield/: "Jim Crutchfield ('Chaos') — edge of chaos: video feedback, evolving cellular automata that compute, computational mechanics (ε-machines). UC Davis / SFI; Santa Cruz Dynamical Systems Collective (Eudaemonic Pie). The 'feedback' jam alongside Don's CAM6; dream co-guests Scott Draves + Norman Margolus. Holds SHOW.yml + README + invitation.md."
+      ben-shneiderman/: "★ Ben Shneiderman — HyperTIES living emulator flagship; light blue links; CHI'88 pie menus (Don co-author); The Eyes Have It / Dynamic Queries; Mark Weiser memorial discussant; human-centered AI. Jan 2022 mail. send_ready (hci-pie-hyperties-2026). Holds SHOW.yml + README + invitation.md."
       dave-tristram/: "David A. Tristram — Electropaint + Raster Masters live generative graphics (Grateful Dead, Herbie Hancock, Graham Nash); NASA Ames → SGI → Adobe; CA/reaction-diffusion/feedback performance code. Don's old friend; CAM book lineage; CA looping fest co-guest + solo show. Holds SHOW.yml + README + invitation.md."
+      oliver-steele/: "Oliver Steele — Instance-First Development + Instance Substitution Principle; LZX/OpenLaszlo as proof; slots-all-the-way-down pole; MOOLLM LIFT kinship. Also OpenLaszlo reunion (openlaszlo/). Holds SHOW.yml + README + invitation.md."
       norman-margolus/: "Norman Margolus — Cellular Automata Machines: CAM-6 + the MIT-Press book Don's CAM6 emulator follows; block CA / Margolus neighborhood; reversible & billiard-ball computing; Margolus–Levitin limit. MIT CSAIL; reached via Henry Minsky. CA summit with Crutchfield + Scott Draves. Holds SHOW.yml + README + invitation.md."
       heather-and-steve-alvey/: "★ Heather Alvey (SimFreaks, née Castello) + Steve Alvey (SimSlice/SliceCity = SimCity inside The Sims; the shipped precedent for Will's data-portability vision). Whole-career group show about both + ALL their projects (26-year brands; Zombie Sims; Gallium/Will/Proxi), framed as a NON-EXTRACTIVE LIFT to drive fans + subscriptions, plus the Micropolis publishing system. Holds SHOW.yml + README + the afterlife-zombie-bridge flagship episode. Independent creators — support them."
       remembering-vanessa-freudenberg.yml: "Memorial arc — Vanessa Freudenberg (d. 2025). Craig Latta anchor (Caffeine live); Dan Ingalls + Alan Kay warmly invited w/ Don. SqueakJS → WASM insights → live objects in browser. represent + discuss — never speak as her."
@@ -62,16 +77,14 @@ shows:
       craig-latta/: "Craig Latta — Caffeine (SqueakJS + WASM livecoding); Keep; Vanessa memorial anchor; Dan + Alan warmly invited; Cursor vs liveness; remote screencast OK. Holds SHOW.yml + README + invitation.md."
       dan-ingalls/: "★ Dan Ingalls — Ink & Switch Livelymerge: YAML Jazz + GitHub-as-MMORPG vs Automerge; Zoo; pop-up ↔ pie; Vanessa memorial w/ Craig. SHOW.yml + invitation.md."
       scott-adams/: "★ Scott Adams (the ADVENTURE pioneer — Adventureland / Adventure International, NOT the Dilbert cartoonist). The data-driven adventure engine as the original 'adventure compiler' → Don's Logo Adventure → adventure compiler → MOOLLM; a world in 16K; two-word parser vs. LLMs; adventure + AI (Scott is diving into AI now). Payoff: Don builds adventure-compiler tooling LIVE that Scott can use — mutual seed exchange. Holds SHOW.yml + README + invitation.md."
-      david-ungar-self-moollm.yml: "DREAM GUEST David Ungar — Reflecting on Self: Narcissa's Mirror; Self × MOOLLM; mirrors; self-interest!; Stage Magic; rig culture."
+      david-ungar/: "★ DREAM GUEST David Ungar — Reflecting on Self: Narcissa's Mirror; Self × MOOLLM; Power of Simplicity; maps/PICs→V8; slots pole; Jan 2026 correspondence. Holds SHOW.yml + README + invitation (send_now)."
       philip-rosedale-hifi-moollm.yml: "Philip Rosedale — SL now; YAML Jazz + GitHub-as-MMORPG collaboration stack; SL soul import/export; HiFi worklist history; VR DLA jam; Dan comparison."
       design-by-accretion.yml:  "Chris Trottier — 'Design by Accretion' ↔ the cauldron method. FLAGSHIP."
       alan-kay-microworld.yml:  "Repo Show Class with Alan Kay — microworld-as-medium; warmly invited Vanessa memorial arc w/ Craig + Dan. DREAM GUEST."
       will-wright-series.yml:   "Will Wright — SERIES seed. PLANTED → will-wright/."
       yoot-saito-series.yml:    "Yoot Saito — SERIES; clean-room successor (YOOT BOOT / Building / Seaman) + frontier AI."
-      ben-shneiderman-series.yml: "Ben Shneiderman — SERIES; HyperTIES, hypermedia, direct manipulation, pie menus, info-viz."
       building-simcity-chaim-gingold.yml: "Chaim Gingold — Building SimCity; turn the book's scholarship, diagrams, and reverse diagrams into executable Micropolis artifacts."
-      edd-coates-game-ui-database.yml: "Edd Coates — Game UI Database, The Game UI Bible, and strategies for ethical AI data licensing."
-      edd-coates/pie-menus-piecraft.yml: "Edd Coates — Pie menus & radials across games, success/failure cases, ultimate editable pies, and PieCraft as UI design literacy game."
+      edd-coates/pie-menus-piecraft.yml: "Edd Coates ep.2 — pie/radial menus, ultimate editable pies, PieCraft (see planted edd-coates/)."
       amy-jo-and-scott-kim/: "★ Amy Jo Kim + Scott Kim — Shufflebrain, Game Thinking × puzzle craft; beloved pair; Sims social design + Viewpoint; CS547 double feature. Solo scott-kim/ optional."
       ben-cerveny.yml: "Ben Cerveny — GNE/Flickr × public code × browser Simopolis; Signal warm contact; data-portability spine for Will ep.1; Lane Neverending/Habitat."
       jens-monig: "Jens Mönig — Snap! (BYOB) architect. Solo on integrating Micropolis City with Snap!, Snap! internals + the Y combinator, schemas for Snap! (Don's Barcelona talk), and distributed messaging/dataflow/actor systems in Snap!. (Joint headline: snap-logo-brian-jens.yml.)"
@@ -91,7 +104,9 @@ shows:
       selfish-config-typescript.yml: "LATER — port central worker_config fragment composition to MicropolisCore packages/selfish-config (C3 merge + provenance)."
       lambdamoo-pavel-curtis.yml: "Pavel Curtis — LambdaMOO's influence on MOOLLM (direct-source lineage)."
       walter-bender-olpc.yml:   "Walter Bender — OLPC Stone Soup, open-sourcing SimCity, constructionist playgrounds."
-      bret-victor-explorable.yml: "Bret Victor — explorable explanations applied LIVE to Micropolis legibility, PLUS an honest patronage-vs-shipping conversation (Dynamicland = the cautionary tale). Design counsel + cautionary tale."
+      marc-canter/: "Marc Canter — Director/Macromedia → People Aggregator; Faceball puppets + Pink Trombone; three-hander w/ David Levitt. Holds SHOW.yml + README + invitation.md. send_ready."
+      bret-victor/: "Bret Victor — explorable explanations + Micropolis legibility LIVE; Inventing on Principle; Dynamicland honest beat; Engelbart intent. Holds SHOW.yml + README + invitation.md. send_ready."
+      bret-victor-explorable.yml: "Legacy seed — see bret-victor/ (planted). Explorable explanations + Micropolis legibility; patronage-vs-shipping (Dynamicland)."
       james-gosling-news-java.yml: "James Gosling (solo) — Emacs → NeWS → Java as one idea: cheesy little extension languages. Old friend/colleague. Feeds the NeWS reunion."
       arthur-van-hoff-hyperlook.yml: "Arthur van Hoff (solo) — HyperLook (NeWS HyperCard), PdB, the Axis of Eval; how NeWS influenced Java. Long-time friend. Feeds the NeWS reunion."
     game_show:   # a VARIETY format (not an interview) — the collection holds multiple TYPES
@@ -121,8 +136,7 @@ backlog_ideas:
   - "Alan Kay — microworld-as-medium ('Repo Show Class with Alan Kay!')."
   - "Ben Shneiderman / Jack Callahan — pie menu origins (direct manipulation)."
   - "Chaim Gingold — Building SimCity as executable scholarship (seed exists: building-simcity-chaim-gingold.yml)."
-  - "Edd Coates — Game UI Database and ethical AI licensing (seed exists: edd-coates-game-ui-database.yml)."
-  - "Edd Coates — Pie menus in games, editable pie design, and PieCraft (seed exists: edd-coates/pie-menus-piecraft.yml)."
+  - "Edd Coates — PLANTED → repo-shows/edd-coates/ (Game UI Database + pies/PieCraft). send_now."
   - "Brad Myers — Garnet constraints, All the Widgets, VPL taxonomy (seed exists: brad-myers-garnet-vpl.yml; warm CMU history)."
   - "Scott Adams — interactive fiction; mutual seed exchange. PLANTED → repo-shows/scott-adams/ + characters/scott-adams/ (adventure engine → adventure compiler → MOOLLM; adventure + AI)."
   - "Eric Barone (ConcernedApe) — Stardew Valley; solo-dev success + farming-game resonance."

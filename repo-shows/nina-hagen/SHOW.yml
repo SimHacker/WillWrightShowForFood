@@ -1,0 +1,32 @@
+# Nina Hagen — operatic punk, taboo TV, and voice as weapon
+# Dream guest seed — consent not yet asked.
+
+show:
+  id: nina-hagen
+  title: "Nina Hagen — Get the True Thing on the Air"
+  type: dream
+  host: Don Hopkins
+  guests: ["Nina Hagen"]
+  character: characters/nina-hagen/
+  topic: "Operatic-punk voice as instrument; anti-censorship performance; GDR/Berlin scene; taboo TV and bodily autonomy."
+  status: dream_seed
+  consent: not_yet_asked
+
+why_her:
+  club2: "Club 2 (1979) — landmark taboo-breaking broadcast; twin emblem to Bowie's video puppet."
+  voice: "Classically-trained multi-octave voice weaponized for punk theatre — sibling to Klaus Nomi."
+  ethos: "Get the true thing on the air, on purpose — matches the show's repossession-of-authorship thesis."
+
+dream_segments:
+  - "Club 2 & anti-censorship TV — voluntary comedy vs timid euphemism; repossess the medium."
+  - "Operatic-punk voice as instrument — Pink Trombone / Phoneloper / voice-puppet taxonomy."
+  - "GDR, Biermann, leaving East Berlin — art under a censoring state."
+  - "Amsterdam orbit — Herman Brood, *Cha Cha*, Lene Lovich; the Brood portrait lead."
+  - "Berlin '79 avant-garde thread — pairs with Nomi, Bowie, Eno orbit."
+
+related:
+  - characters/nina-hagen/
+  - characters/klaus-nomi/
+  - characters/laurie-anderson/
+  - characters/brian-eno/
+  - repo-shows/ideas/traditions/unnecessary-censorship.yml

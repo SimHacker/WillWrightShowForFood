@@ -13,4 +13,4 @@ David was **very open and influential** — generous in person, on **self-intere
 - Self × MOOLLM — directories as prototypes, Stage Magic Principle → GLANCE/CARD/SKILL pyramid
 - Artisanal vs vibe coding — rig culture from the Conscientious Objectors meetup and after
 
-→ [`../david-ungar/invitation.md`](../david-ungar/invitation.md) · [`../../repo-shows/david-ungar-self-moollm.yml`](../../repo-shows/david-ungar-self-moollm.yml)
+→ [`../david-ungar/invitation.md`](../david-ungar/invitation.md) · [`../../repo-shows/david-ungar/`](../../repo-shows/david-ungar/) · [`../david-ungar/reflecting-on-self.md`](../david-ungar/reflecting-on-self.md)

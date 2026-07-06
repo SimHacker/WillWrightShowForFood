@@ -50,9 +50,9 @@ running_gags:
 media:
   headshot: images/headshot.png
   avatar: images/avatar.png
-  with_guest: images/with-guest.png
+  with_will: images/with-will.png
   gallery:
-    - { file: images/with-guest-crew.png, caption: "Oakland crew + Will + Slats" }
+    - { file: images/with-will-crew.png, caption: "Oakland crew + Will + Slats" }
 
 see_also:
   - questions.yml

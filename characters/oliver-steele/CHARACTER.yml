@@ -29,7 +29,8 @@ family:
   provenance: "Per Don. Which Minsky daughter he married is not stated here."
 
 show_suggestions:
-  - { seed: ../../repo-shows/openlaszlo/, what: "Group — OpenLaszlo reunion with Don + David Temkin + Henry Minsky; LZX architecture, instance-first/reactive design, the road not taken" }
+  - { seed: ../../repo-shows/oliver-steele/, what: "Solo — Instance-First Development + Instance Substitution Principle; LZX as proof; ties to slots-all-the-way-down + MOOLLM LIFT" }
+  - { seed: ../../repo-shows/openlaszlo/, what: "Group — OpenLaszlo reunion with Don + David Temkin + Henry Minsky; LZX architecture, AI-revived toolchain, old demos live" }
 
 sources:
   wikipedia: null
@@ -42,7 +43,9 @@ sources:
 
 see_also:
   - { path: CARD.yml, why: "Invokable abilities for show segments" }
+  - { path: ../david-rosenthal/slots-all-the-way-down.md, why: "Instance-first sharpens the slots-all-the-way-down thesis" }
   - { path: ../david-temkin/, why: "Laszlo founder — OpenLaszlo reunion" }
   - { path: ../henry-minsky/, why: "Laszlo colleague; brother-in-law" }
   - { path: ../marvin-minsky/, why: "🕯️ Father-in-law (memorial)" }
-  - { path: ../../repo-shows/openlaszlo/, why: "The OpenLaszlo reunion show seed" }
+  - { path: ../../repo-shows/oliver-steele/, why: "Solo — Instance-First show seed" }
+  - { path: ../../repo-shows/openlaszlo/, why: "OpenLaszlo reunion show seed" }

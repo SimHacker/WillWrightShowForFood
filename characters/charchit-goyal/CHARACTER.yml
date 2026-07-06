@@ -1,0 +1,31 @@
+id: charchit-goyal
+name: Charchit Goyal
+slug: charchit-goyal
+also_known_as: themotionguy
+role: field_contact
+status: active
+
+affiliations:
+  - Wedge (After Effects context-aware pie menu plugin)
+
+tags:
+  - pie-menus
+  - after-effects
+  - motion-design
+  - context-aware-ui
+  - blender
+  - maya
+
+connections:
+  - don-hopkins
+
+invitation_status: none
+
+contact:
+  web: https://charchitgoyal.com/plugins/wedge
+  reddit: u/themotionguy
+
+notes: |
+  Building Wedge — selection-aware radial menu for Adobe After Effects (beta Jul 2026).
+  r/AfterEffects thread routed to Don via u/eye-flying ("pie menu central").
+  Not a Repo Show invite yet — field discovery / possible builder segment.

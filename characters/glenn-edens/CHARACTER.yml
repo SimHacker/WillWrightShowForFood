@@ -1,0 +1,50 @@
+id: glenn-edens
+name: Glenn Edens
+slug: glenn-edens
+role: guest
+status: active
+
+affiliations:
+  - GRiD Systems (GRiD Compass — early laptop)
+  - Interval Research Corporation
+  - Avio Digital (post-Interval broadband work)
+  - ASU Thunderbird (teaching, Santa Fe era per 2021 mail)
+
+tags:
+  - grid-compass
+  - laptop
+  - dynabook
+  - smalltalk
+  - interval-research
+  - paul-allen
+  - portable-computing
+  - computer-history
+
+connections:
+  - don-hopkins
+  - alan-kay
+  - dan-ingalls
+  - brenda-laurel
+  - david-levitt
+  - douglas-engelbart
+
+show_seeds:
+  - repo-shows/glenn-edens-grid-interval/
+
+invitation_status: send_ready
+
+contact:
+  email: glennedens@me.com
+
+notes: |
+  GRiD Compass co-creator — often cited as first clamshell laptop (1982); Dynabook-inspired;
+  Smalltalk on 8086; Alan Kay and Dan Ingalls played with it. Bullet-stopped-laptop story (US agency,
+  not Mossad — returned units with shrapnel). 1982 mouse crisis: Tat Lam sole producer, Xerox took
+  all; Glenn "appropriated" PARC mouse for Apple Lisa (Xerox was Apple investor). First GRiD to
+  Steve Jobs (a bet); second to William F. Buckley; Larry Ellison sailing race computer.
+  Interval Research circle (broadband → Avio Digital). Don's FMC Motor Home parked at Interval.
+  Oct 2021 LinkedIn exchange; Dec 2022 Engelbart mouse consultation (glennedens@me.com).
+  NOT Glenn Reid (PostScript Distillery) — different person.
+
+sync:
+  donhopkins: DonHopkins/characters/don-hopkins/correspondence/glenn-edens.yml

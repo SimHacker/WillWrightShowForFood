@@ -34,9 +34,12 @@ navigation:
 
 read_order:
   - README.md
+  - moollm-dual-palace.md
+  - correspondence-digest.md
   - CARD.yml
   - invitation.md
   - ideas.md
+  - artifacts.yml
   - CHARACTER.yml
 
 see_also:

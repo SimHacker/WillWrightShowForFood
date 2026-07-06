@@ -202,7 +202,7 @@ rituals:
 
 images:
   template: ../../_TEMPLATE/audience/images/README.md
-  required_for_examples: [headshot.png, avatar.png, with-guest.png]
+  required_for_examples: [headshot.png, avatar.png, with-will.png]
 
 simlish:
   schema: ../../../schemas/language-simlish.yml

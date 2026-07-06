@@ -5,8 +5,8 @@
 meta:
   character: alan-kay
   updated: "2026-07-06"
-  attachments_on_disk: 13
-  decided_attachments: 13
+  attachments_on_disk: 12
+  decided_attachments: 12
   needs_don_attachments: 0
   decided_threads: 14
   needs_don_threads: 0
@@ -37,17 +37,18 @@ decided:
       files:
         - artifact-screen-shot-2018-05-17-at-95245-pm.png
       review: approved
-    - id: pixie-yuja-wang
-      count: 1
-      files:
-        - photo-0wvl03notlmglj5fa.gif
-      review: approved
     - id: olpc-etoys-papers
       count: 2
       files:
         - paper-country-meeting-olpc-etoys-rfs1.pdf
         - paper-multilingualetoys-smaller.jpg
       review: approved
+
+  attachments_removed:
+    - id: pixie-yuja-wang
+      files:
+        - photo-0wvl03notlmglj5fa.gif
+      reason: "Don's PSIBER paper artwork — not Alan Kay from-mail; deleted from repo"
 
   threads:
     - id: yoot-transcript-corrections

@@ -10,7 +10,7 @@
 | [`questions.yml`](questions.yml) | TicketPR questions |
 | [`CARD.yml`](CARD.yml) | Stream abilities |
 | [`SIMULATION.yml`](SIMULATION.yml) | Brain / runbook (if present) |
-| [`images/`](images/README.md) | headshot, avatar (128²), with-guest |
+| [`images/`](images/README.md) | headshot, avatar (128²), with-will |
 
 ---
 
@@ -32,8 +32,8 @@
 |------|--------|
 | `images/headshot.png` | Slats face panel |
 | `images/avatar.png` | 128×128 chat badge |
-| `images/with-guest.png` | Will + Slats at SFC workshop |
-| `images/with-guest-crew.png` | Oakland crew + Will (balcony group shot) |
+| `images/with-will.png` | Will + Slats at SFC workshop |
+| `images/with-will-crew.png` | Oakland crew + Will (balcony group shot) |
 
 ---
 

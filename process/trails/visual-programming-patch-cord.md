@@ -19,6 +19,8 @@ Real-time visual programming for music, video, and VR — the lineage Don docume
 | [**Don — VPL taxonomy comment**](../../characters/don-hopkins/visual-programming-taxonomy.md) | Boxes/lines ≠ one model — control vs data flow, Snap!, Max/MSP, Petri nets (HN 40842599) |
 | [**Don — Yahoo Pipes successors**](../../characters/don-hopkins/yahoo-pipes-successors.md) | pipes.digital — data-flow RSS blocks; puzzle-piece VPLs (HN 40841980) |
 | [**Don — Excel & dimensionality**](../../characters/don-hopkins/visual-programming-excel-and-dimensionality.md) | Excel as VPL; SimAntics shipped evidence; PSIBER (HN 22978454) |
+| [**Chuck Blanchard**](../../characters/chuck-blanchard/README.md) | Body Electric lead; Feb 2020 screenshots; OS9 dev system |
+| [**Michael McGuffin**](../../characters/michael-mcguffin/README.md) | Oct 2022 letter — VPL definition debate; Brad Myers triangle; marking-menu prior-art thread |
 | [**Brad Myers**](../../characters/brad-myers/README.md) | Garnet, VPL taxonomy, PBD, C32 |
 | [**Jens Mönig / Brian Harvey**](../../characters/jens-monig/README.md) | Snap! — blocks without lines, macros, Scheme semantics |
 | [**Don — Snap! visual engines (fundable)**](../../characters/don-hopkins/snap-visual-engines-fundable-goals.md) | Integrate engines with Snap! instead of building from scratch — CAM6 + VitaMoo + Micropolis + Bounce, each a fundable goal |

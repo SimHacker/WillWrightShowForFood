@@ -20,6 +20,16 @@ or/AI (SimAntics); Don's Sims teammate
 ### 3. TheSimsAITest contrast walkthrough
 [`2006-11-06-thesims-ai-test`](../will-wright/sources/2006-11-06-thesims-ai-test/README.md) — Mats Knutsen's Nov 2006 C# sketch with four motives and an **empty** `InteractionObject.cs`. Pair with Don's [`don-reply-to-mats-knutsen.md`](../will-wright/sources/2006-11-06-thesims-ai-test/don-reply-to-mats-knutsen.md): top-5 random choice, advertisement scoring, favorite-bed trick. Walk what's missing vs SimAntics; pair with Will's [`Motive.c`](../will-wright/sources/2008-02-10-soul-of-the-sims/Motive.c).
 
+### 4. Swimming pools: objects or rooms?
+Don's proposed Metaweb interview question (Nov 2007) — Sims architecture folklore. Pair with Will on air.
+
+→ [`sources/2007-metaweb-linkedin-recommendation.md`](sources/2007-metaweb-linkedin-recommendation.md)
+
+### 5. Tom van Dijk — modder who reverse-engineered your SimAntics
+IFF Pencil author; **Behavior.iff** mystery; EA Legal 2002. NL neighbor (Deventer ↔ Badhoevedorp).
+
+→ [`../tom-van-dijk/`](../tom-van-dijk/)
+
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)

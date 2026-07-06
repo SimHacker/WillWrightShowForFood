@@ -1,0 +1,42 @@
+# SHOW — Oliver Steele (solo)
+# Planted seed. Inherits from the SHOW skill (/skills/repo-show).
+
+show:
+  id: oliver-steele
+  title: "A Repo Show with Oliver Steele — Instance-First"
+  type: solo
+  host: Don Hopkins
+  guests: ["Oliver Steele"]
+  character: characters/oliver-steele/
+  topic: "Instance-First Development and the Instance Substitution Principle — build the instance, refactor the class when a second case appears; LZX/OpenLaszlo as the working proof; what JavaScript got wrong and MOOLLM's LIFT gate got right."
+  status: seed
+  consent: not_yet_asked
+
+why_him:
+  instance_first: "Named the discipline in 'Classes and Prototypes' (2004) — implement functionality for a single instance, generalize only when a second example forces it. Avoids premature abstraction."
+  instance_substitution_principle: "An instance of a class can be replaced by the definition of the instance without changing program semantics — because class-member and instance-member definitions are syntactically parallel."
+  lzx_proof: "Chief Software Architect at Laszlo Systems — designed LZX so `<class>` tags and instance markup read the same way; you slide between instance and class without a mental-model switch."
+  slots_connection: "Sharpens the 'slots all the way down' thesis — no privileged class layer, only slots you may hoist into a shared parent. See characters/david-rosenthal/slots-all-the-way-down.md."
+  don_firsthand: "Don shipped a lot of OpenLaszlo (pie menus, Micropolis, SimFaux, constraints) and vouches for instance-first as method — kin to Garnet, now Svelte/MOOLLM."
+
+dream_segments:
+  - "Walk Instance-First on a real widget — start with one pie menu / one LZX view, refactor into a reusable class live."
+  - "Instance Substitution Principle vs JavaScript — why JS 1.x violates it and LZX obeys it."
+  - "Reactive constraints in LZX — Garnet's declarative idea on the web, years early."
+  - "MOOLLM LIFT gate as instance-first method — dogfood the instance, hoist the skill only when a second caller earns it."
+
+pairings:
+  - { with: openlaszlo/, why: "Group reunion — David Temkin + Henry Minsky + Don; AI-revived toolchain" }
+  - { with: brad-myers-garnet-vpl.yml, why: "Garnet constraints — the CMU ancestor of LZX's reactive UI" }
+  - { with: david-rosenthal/slots-all-the-way-down.md, why: "Rosetta-table pole — instance/class as refactorable seam" }
+
+format:
+  live: true
+  audience_qa: true
+
+ties_to:
+  - ../../characters/oliver-steele/
+  - ../../characters/oliver-steele/invitation.md
+  - ../../characters/david-rosenthal/slots-all-the-way-down.md
+  - ../../repo-shows/openlaszlo/
+  - ../../characters/don-hopkins/career/lineage.yml

@@ -3,7 +3,7 @@ status: draft
 character_id: david-ungar
 public: true
 consent: not_yet_asked
-show_seed: repo-shows/david-ungar-self-moollm.yml
+show_seed: repo-shows/david-ungar/
 format: remote_or_in_person
 ---
 
@@ -30,6 +30,9 @@ the **self-interest!** pun stack, and what we'd build if we sat down with a blan
 
 **What I'd love to explore with you — your pick, any order, skip whatever bores you:**
 
+- **The Power of Simplicity** — your thesis wasn't "prototypes" but **simplicity**; what JavaScript
+  kept vs what it threw away (multiple `parent*` slots, one mental model). Walk the
+  [`slots-all-the-way-down`](../david-rosenthal/slots-all-the-way-down.md) Rosetta table with me.
 - **Conscientious Objectors** — the Kaleida meetup where the **ScriptX object-system design team**
   and the **Self team** bounced ideas off each other. What stuck? What would you teach a room full
   of LLM authors today?
@@ -40,8 +43,8 @@ the **self-interest!** pun stack, and what we'd build if we sat down with a blan
   *Self: The Movie*. Don enumerates more live; you get veto power.
 - **Artisanal vs intentional craft** — the ethic those Kaleida sessions stood for, applied to AI
   orchestration without vibe-slop or fake certainty.
-- **Where the lineage went** — generation scavenging, dynamic deoptimization, mirrors — and what
-  you'd steal back from the stacks that forgot they borrowed from you.
+- **Where the lineage went** — generation scavenging, dynamic deoptimization, **maps/PICs → V8** —
+  and what you'd steal back from the stacks that forgot they borrowed from you.
 
 **Format:** Remote is fine; in-person if we're ever in the same city. **Zero homework.** No slides
 required. Warm room, not gotcha-podcast.
@@ -50,7 +53,9 @@ required. Warm room, not gotcha-podcast.
 
 | If you're curious about… | Link |
 | --- | --- |
-| **Show seed** (segment ideas) | [`repo-shows/david-ungar-self-moollm.yml`](../../repo-shows/david-ungar-self-moollm.yml) |
+| **Show** (segment ideas) | [`repo-shows/david-ungar/`](../../repo-shows/david-ungar/README.md) |
+| **North star doc** | [`reflecting-on-self.md`](reflecting-on-self.md) |
+| **Slots all the way down** | [`../david-rosenthal/slots-all-the-way-down.md`](../david-rosenthal/slots-all-the-way-down.md) |
 | **Your guest page** | [`characters/david-ungar/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/david-ungar) |
 | **Conversation hooks** | [`ideas.md`](ideas.md) |
 | **Don's `# import self from self` thread** | [`../don-hopkins/import-self-from-self.md`](../don-hopkins/import-self-from-self.md) |

@@ -1,6 +1,13 @@
 # import self from self — MOOLLM's Self object model
 
-The MOOLLM constitution effectively declares:`import self from self`-- import Self's prototype-based object model **from Self itself**, not from Java's or JavaScript's castrated projections.
+The MOOLLM constitution effectively declares:`import self from self`— import Self's prototype-based object model **from Self itself**, not from Java's or JavaScript's castrated projections.
+
+**Why not JavaScript?** The 1995 implementation shipped Self's prototypes in ten days, then piled on `new`, constructor
+functions, dynamic `this`, `class` sugar, `prototype` vs `__proto__`, and **single** prototype
+chains — two mental models, one language. Self had **multiple named parent slots**, dynamic
+reparenting, and **simplicity** as the actual thesis (Ungar & Smith, OOPSLA 1987). JS kept the
+prototypes and dropped MI and simplicity. MOOLLM puts MI back. Rant with receipts:
+[`../david-rosenthal/slots-all-the-way-down.md`](../david-rosenthal/slots-all-the-way-down.md#javascript--self-watered-down).
 
 **Credit:** **David Ungar** (with Randall Smith) was very open and influential — Don says he deserves a huge amount of credit for where we are. Self doesn't run on everybody's phone; **in spirit it does** — prototype objects, adaptive JIT, mirrors, and simplicity live in JS, HotSpot, MOOLLM, and the stacks we actually ship.
 

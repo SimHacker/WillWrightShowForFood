@@ -1,14 +1,18 @@
 ---
-status: draft
+status: sent
 character_id: david-levitt
 public: true
-consent: not_yet_asked
+consent: pending_response
 show_seed: repo-shows/REPO-SHOWS.yml#music-and-theory.yml
+also_show: repo-shows/rebounce/
+contacted_at: 2026-07-06
+contacted_via: phone
+sent_links: true
 ---
 
 # Repo Show invitation — David Levitt 🎹
 
-*Public draft — not sent. David Levitt may edit, decline, delay, or request removal at any time.*
+*Phone call 2026-07-06; invite links sent — awaiting scheduling. David Levitt may edit, decline, delay, or request removal at any time.*
 [Portrayal standards](../../schemas/portrayal-standards.yml)
 
 Dear David,

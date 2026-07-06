@@ -34,7 +34,7 @@ relationship: |
 media:
   headshot: images/headshot.png
   avatar: images/avatar.png
-  with_guest: images/with-guest.png
+  with_will: images/with-will.png
   note: "Replace headshot with Bella portrait — see images/README.md"
 
 see_also:

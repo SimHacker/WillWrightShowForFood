@@ -1,0 +1,108 @@
+# SHOW — Ben Shneiderman — HyperTIES, direct manipulation & measured UI (series)
+# Planted show dir. Inherits from the SHOW skill (/skills/repo-show).
+
+show:
+  id: ben-shneiderman
+  title: "A Repo Show Series with Ben Shneiderman — HyperTIES, Direct Manipulation & Measured UI"
+  type: series
+  host: Don Hopkins
+  guests: ["Ben Shneiderman"]
+  with: ["Heinz U. Lemke", "Catherine Plaisant"]   # optional co-guests
+  character: characters/ben-shneiderman/
+  topic: |
+    HCI pioneer — direct manipulation, embedded highlighted hyperlinks, Dynamic Queries, info viz,
+    human-centered AI. HyperTIES director; CHI'88 pie-menu co-author. Flagship: living HyperTIES
+    emulator in the browser with Don.
+  status: planted
+  consent: not_yet_asked
+  invitation_status: send_ready
+  send_batch: hci-pie-hyperties-2026
+
+why_ben:
+  chi_88: "Empirical pie vs linear menus — Fitts, errors, direct manipulation made measurable."
+  hyperties: "Director of HyperTIES; CACM July 1988 Hypertext on Hypertext electronic journal; Berners-Lee cited Hyperties for hot spots + light blue link color."
+  dm_coiner: "Coined 'direct manipulation' — HCIL program that named a field."
+  don_partner: "Jan 2022 mail — HyperTIES reincarnation + documenting-our-work; Don has full stack + XML databases."
+  cs547: "Terry Winograd CS547 — The Eyes Have It (1998); Leonardo's Laptop (2000)."
+
+related_shows:
+  - ../ben-and-heinz-pie-menus.yml
+  - ../pixie-pie-menus-pdp7.yml
+  - ../pie-menus-retrospective.yml
+  - ../news-postscript-window-system.yml
+  - ../remembering-mark-weiser.yml
+  - ../terry-winograd/
+
+episodes:
+  - id: hyperties-living-emulator
+    title: "Reincarnate HyperTIES — living browser emulator"
+    flagship: true
+    notes: |
+      Road-pizza architecture with Catherine Plaisant; NeWS tape browser; NeMACS shell; Hubble demo.
+      Don has Forth, MockLisp, C, markup, docs, NeWS PostScript, XML-converted DBs.
+      Implement on air — running system IS the documentation.
+    artifacts:
+      - ../../characters/don-hopkins/hyperties-reincarnation.md
+      - ../../characters/don-hopkins/media/hyperties/
+      - ../../characters/ben-shneiderman/sources/2022-01-13-hyperties-computer-lib.md
+
+  - id: light-blue-links
+    title: "Light blue links — HCIL studies → the Web"
+    notes: |
+      Embedded menus / highlighted links (1983–1986); Hyperties electronic journal; Berners-Lee Spring 1989
+      proposal cites Hyperties. Ben's fair Ted Nelson critique (impact vs vision) from Jan 2022 thread.
+    artifacts:
+      - ../../characters/ben-shneiderman/sources/2022-01-13-hyperties-computer-lib.md
+      - ../../process/trails/augmentation-and-hypertext.md
+
+  - id: chi-88-pie-menus
+    title: "CHI'88 — measure the menu on air"
+    notes: |
+      Callahan, Hopkins, Weiser, Shneiderman. PIXIE (1969) credited honestly — Heinz optional co-guest.
+      Fitts on the Micropolis command bus; gestural verb-pickers for modeled worlds.
+      Cross-ref 1991 DDJ self-revealing draft.
+    artifacts:
+      - ../../characters/don-hopkins/pie-menus-chi-88-and-beyond.md
+      - ../../characters/don-hopkins/sources/1991-09-pie-menus-buxton-ddj-draft.md
+      - ../../characters/ben-shneiderman/media/from-mail/paper-callahan-hopkins-pie-menus-chi1988.pdf
+      - ../ben-and-heinz-pie-menus.yml
+
+  - id: eyes-have-it
+    title: "The Eyes Have It — info viz + dynamic queries"
+    notes: |
+      CS547 Winograd 1998 — overview + dynamic queries lineage; HomeFinder demo artifact in repo media.
+      Drag sliders → instant insight; database exploration as direct manipulation.
+    artifacts:
+      - ../../characters/terry-winograd/media/cs547-archive.yml
+      - ../../characters/ben-shneiderman/media/from-mail/artifact-2-homefinder.gif
+
+  - id: mark-weiser-memorial
+    title: "Remembering Mark Weiser — CHI'88 table reunion"
+    notes: |
+      Memorial mode — Ben as documented co-author discusses Mark's pie-menu work, ubicomp, calm tech
+      vs direct manipulation framing. Async clips OK.
+    artifacts:
+      - ../remembering-mark-weiser.yml
+      - ../../characters/mark-weiser/ideas.md
+
+  - id: human-centered-ai
+    title: "Human-centered AI — oversight affordances today"
+    notes: |
+      Ben's recent HCIL themes — human control in high-stakes automation; Repo Show as executable
+      documentation vs screenshot museum. Optional bridge to Leela cluster if Ben is curious.
+
+format:
+  live: true
+  remote_ok: true
+  audience_qa: true
+  implement_on_air: true
+  zero_homework: true
+
+ties_to:
+  - ../../characters/ben-shneiderman/
+  - invitation.md
+  - ../../characters/ben-shneiderman/ideas.md
+  - ../../characters/heinz-lemke/
+  - ../../characters/don-hopkins/hyperties-reincarnation.md
+  - ../../characters/mark-weiser/
+  - ../../process/trails/direct-manipulation.md

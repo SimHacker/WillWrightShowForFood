@@ -1,0 +1,67 @@
+id: glenn-edens-grid-interval
+title: "Glenn Edens — GRiD Compass & Interval Camelot"
+format: solo
+status: planted
+send_batch: interval-reunion-2026
+
+guests:
+  - glenn-edens
+
+host_participants:
+  - don-hopkins
+
+related_shows:
+  - placeholder/
+  - repo-shows/remembering-douglas-engelbart.yml
+
+tags:
+  - grid-compass
+  - laptop
+  - dynabook
+  - smalltalk
+  - interval-research
+  - portable-computing
+  - engelbart-mouse
+
+logline: |
+  Interview Glenn Edens on the GRiD Compass (first laptop that shipped the Dynabook dream),
+  the bullet-stopped-laptop truth, the PARC mouse that fed Lisa, and Paul Allen's Interval
+  Camelot — plus Don's Engelbart hardware and FMC Motor Home in the parking lot.
+
+segments:
+  - id: grid-compass-origin
+    title: "GRiD Compass — Dynabook in magnesium"
+    notes: Smalltalk on 8086; Kay/Ingalls; Jobs bet; Buckley; Ellison sailing; 75% banks not military.
+
+  - id: bullet-story
+    title: "The bullet that wasn't Mossad"
+    notes: US agency; returned units with shrapnel; Glenn authoritative vs internet myth.
+
+  - id: mouse-1982
+    title: "Tat Lam, Xerox, and the Lisa mouse"
+    notes: PARC appropriation; ties engelbart-mouse-and-keyset.md; Trip Hawkins parallel tell.
+
+  - id: interval-camelot
+    title: "Interval Research"
+    notes: Broadband → Avio Digital; cross-link brenda-laurel, rob-tow, david-levitt, mediaflow, bounce.
+
+  - id: fmc-motor-home
+    title: "FMC Motor Home in the parking lot"
+    notes: Don's RV at Interval; GDC era — Glenn memory; light touch.
+
+  - id: engelbart-hardware
+    title: "Engelbart mouse consultation"
+    notes: Dec 2022 mail; optional Dave Maynard beat; 2028 MoAD timing.
+
+  - id: portable-lineage
+    title: "Dynabook → GRiD → OLPC → today"
+    notes: Alan Kay cardboard model; carmack-leaves-meta-hn Dynabook tangent.
+
+artifacts:
+  - characters/glenn-edens/
+  - characters/don-hopkins/history/interval-research.yml
+  - characters/don-hopkins/interval-research-pluggers-and-mediaflow.md
+  - characters/douglas-engelbart/engelbart-mouse-and-keyset.md
+  - DonHopkins/characters/don-hopkins/correspondence/glenn-edens.yml
+
+invitation_status: send_ready

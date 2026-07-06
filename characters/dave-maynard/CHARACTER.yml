@@ -1,0 +1,40 @@
+id: dave-maynard
+name: David Maynard
+slug: dave-maynard
+also_known_as: Dave Maynard
+role: guest
+status: active
+
+affiliations:
+  - software-artist.com
+  - Internet Old Farts Club (Facebook)
+  - Harold C. Hohbach History of Science & Technology collection (Stanford) — keyset donor
+
+tags:
+  - engelbart
+  - mouse
+  - keyset
+  - nls
+  - sri
+  - preservation
+  - history
+
+connections:
+  - don-hopkins
+  - douglas-engelbart
+  - ted-nelson
+
+show_seeds:
+  - repo-shows/remembering-douglas-engelbart.yml
+
+invitation_status: draft
+
+contact:
+  web: https://www.software-artist.com/
+  keyset: https://www.software-artist.com/keyset/
+
+notes: |
+  Internet Old Farts Club (2022): posted photo of his 50-year-old Engelbart mouse;
+  donated chord keyset to Stanford Hohbach collection; still misses the keyset.
+  Alerted Don to RR Auction ~$54k mouse/keyset sale. Attended Ted Nelson's Engelbart tribute.
+  Recommended What the Dormouse Said. Private correspondence with Don on hardware provenance.

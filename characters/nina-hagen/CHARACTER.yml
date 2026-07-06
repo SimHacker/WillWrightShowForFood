@@ -18,8 +18,8 @@ representation:
 invitation:
   status: dream_guest
   consent: not_yet_asked
-  document: null            # invitation.md not yet drafted
-  show_seed: null
+  document: ../../repo-shows/nina-hagen/invitation.md
+  show_seed: repo-shows/nina-hagen/
 
 bio:
   summary: |

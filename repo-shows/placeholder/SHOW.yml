@@ -1,0 +1,45 @@
+# SHOW — Placeholder — Brenda Laurel & Rob Tow (Interval reunion)
+# Pair show. Landscape + narrative VR; Computers as Theatre; Interval Camelot.
+
+show:
+  id: placeholder
+  title: "A Repo Show — Placeholder: Landscape, Narrative & Interval Reunion"
+  type: pair
+  host: Don Hopkins
+  guests: ["Brenda Laurel", "Rob Tow"]
+  character: characters/brenda-laurel/
+  also: characters/rob-tow/
+  topic: "Placeholder VR (1993) + Computers as Theatre + Purple Moon research + Interval reunion — recover CS547 tapes, make NEW shared videos."
+  status: seed
+  format: remote_or_in_person
+  consent: not_yet_asked
+  send_batch: interval-reunion-2026
+
+why_them:
+  placeholder: "Pioneering Interval VR — landscape and narrative (CS547 1993 w/ Rachel Strickland)."
+  brenda: "Computers as Theatre; gender + technology → Purple Moon; dramatic HCI."
+  rob: "Visual psychophysics; Placeholder co-creator; perception + display lineage."
+  interval: "Don's Camelot year — reignite community; publish conversations this time."
+  sims_bridge: "Don saw Purple Moon research before Maxis — compare to Sims design ethics (optional Will segment)."
+
+threads:
+  - "Placeholder — what's on Terry's CS547 tapes; 2026 rebuild in browser/Micropolis"
+  - "Computers as Theatre — Repo Show as dramatic medium"
+  - "Purple Moon vs Simulator Effect — honest design comparison (Don's Jenkins note)"
+  - "Interval reunion — lost tapes; who else to invite (Levitt, Coco, Laurie Anderson circle)"
+  - "Landscape as microworld — narrative paths through explorable space"
+
+pairings:
+  optional:
+    - { with: ../../characters/will-wright/, why: "Purple Moon vs Sims — careful, generous framing" }
+    - { with: ../../characters/scott-mccloud/, why: "Closure/gutter — dramatic participation" }
+    - { with: ../../characters/terry-winograd/, why: "CS547 archive recovery" }
+    - { with: ../../characters/david-levitt/, why: "Interval memory keeper; Bounce swan song" }
+
+ties_to:
+  - ../../characters/brenda-laurel/
+  - ../../characters/brenda-laurel/invitation.md
+  - ../../characters/rob-tow/
+  - ../../characters/rob-tow/invitation.md
+  - ../../characters/don-hopkins/history/interval-research.yml
+  - ../../characters/terry-winograd/media/cs547-archive.yml

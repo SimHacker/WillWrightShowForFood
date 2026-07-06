@@ -1,0 +1,45 @@
+# SHOW — Edd Coates: Pie Menus, Radials, and PieCraft (episode 2)
+# Deep technical + design session — radial menus through the Game UI Database lens.
+
+show:
+  id: edd-coates-pie-menus-piecraft
+  title: "Pie Menus, Radials, and PieCraft — Learning UI Design by Crafting Pies"
+  type: solo
+  host: Don Hopkins
+  guests: ["Edd Coates"]
+  character: characters/edd-coates/
+  topic: "Pie and radial menus across 1800+ games; success and failure cases from GUIDB; designing the ultimate runtime-editable pie; PieCraft as constructionist UI literacy through combat pressure."
+  status: seed
+  parent_show: edd-coates/
+  consent: not_yet_asked
+
+the_core_idea: |
+  Edd's Game UI Database is the world's largest curated collection of game interfaces.
+  Don has shipped pie menus since the 1980s (PIXIE prehistory, CHI '88, The Sims, OLPC, MicropolisCore
+  PieCraft). Working session: browse real GUIDB examples, analyze hits and misses, co-design the
+  next generation of flexible user-editable pies — and whether PieCraft can turn players into
+  interface designers through play.
+
+candidate_topics:
+  - "GUIDB radial taxonomy — how many pie/wheel examples; tags that would help designers"
+  - "The Sims pies — landmark case (Don's firsthand)"
+  - "Monster Hunter World — high-skill customizable radials"
+  - "Failure modes — moving targets, too many slices, controller vs mouse mismatch"
+  - "Stable slice directions — muscle memory that survives item churn"
+  - "Ultimate editable pie spec — loadouts, sharing, context overrides, accessibility"
+  - "PieCraft — craftable/damageable pies; Fitts's law as gameplay"
+  - "PieCrafter companion to PadCrafter?"
+  - "PIXIE (1969) → CHI '88 → now — continuous thread vs reinvention"
+  - "Expert-annotated pie corpus for ethical licensing"
+
+format:
+  live: true
+  screen_share_heavy: true
+  notes: "Browse gameuidatabase.com live; whiteboard Target/Pie/Slice/Item model; MicropolisCore piecraft/ docs"
+
+ties_to:
+  - SHOW.yml
+  - pie-menus-discussion-notes.md
+  - suggested-questions.yml#pie_menus_and_piecraft
+  - ../../characters/don-hopkins/pie-menus-chi-88-and-beyond.md
+  - https://github.com/SimHacker/MicropolisCore/tree/main/documentation/designs/piecraft

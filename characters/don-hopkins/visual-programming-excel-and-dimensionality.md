@@ -2,6 +2,8 @@
 
 Don's thread on Brad Myers's 1989 VPL critique ([HN 22978454](https://news.ycombinator.com/item?id=22978454), Apr 2020 — metaobject.com).
 
+**Primary letter:** [`../michael-mcguffin/sources/2022-10-08-don-visual-programming-letter.md`](../michael-mcguffin/sources/2022-10-08-don-visual-programming-letter.md) (Don → Michael McGuffin, Oct 2022)
+
 Companion to [`visual-programming-taxonomy.md`](visual-programming-taxonomy.md) (boxes/lines models) and
 [`drakon-control-flow-vs-dataflow.md`](drakon-control-flow-vs-dataflow.md) (SimAntics control flow).
 
@@ -67,6 +69,7 @@ Don cited Bret Victor's "Future of Programming" and "Inventing on Principle" ([H
 
 | Pairing | Topic |
 |---------|-------|
+| **Michael McGuffin** | Oct 2022 letter recipient; VPL debate moderator candidate | [`../michael-mcguffin/README.md`](../michael-mcguffin/README.md) |
 | **Brad Myers** | C32 + Garnet + 1989 vs 2020 VPL debate — live Excel-as-VPL demo |
 | **Will Wright** | SimAntics shipped — "evidence" argument with sales numbers |
 | **Jamie Doornbos** | SimAntics architecture from the architect |

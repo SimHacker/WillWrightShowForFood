@@ -1,22 +1,54 @@
 # Ideas to explore with Bret Victor 👤
 
-*Conversation hooks for a Repo Show — **Don's proposed topics**, each grounded in Bret's
-public work and documented connections to this repository. Things Don would love to follow
-**with** Bret Victor; not quotes, not claims about what they think.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · invitation guest · consent not_yet_asked
+*Conversation hooks — Don's proposed topics, grounded in Bret's public work and documented connections.
+Not quotes from Bret.*
+[Portrayal standards](../../schemas/portrayal-standards.yml) · consent not yet asked
 
-## What Bret has done
+## What Bret has done (public record)
 
-Bret Victor — interface researcher inventing better *media for thought*: "explorable explanations," "Inventing on Principle," and Dynamicland. (Note: "Bret," one t.)
+Interface researcher inventing better *media for thought*: **explorable explanations**, **Inventing on
+Principle** (CUSEC 2012), **Dynamicland**, and essays at [worrydream.com](https://worrydream.com/).
+Author of [**A few words on Doug Engelbart**](https://worrydream.com/Engelbart/) — the plea to understand
+Engelbart's **intent** (augmenting collective human intellect), not reduce him to mouse + hypertext.
+
+*(Spelling: **Bret**, one t.)*
 
 ## The hooks
 
-### 1. Show seed: `repo-shows/bret-victor-explorable.yml`
-walk the repo on air and build from the seed.
+### 1. Micropolis legibility — explorable explanations LIVE
+Build reactive overlays on **Micropolis** so viewers *think inside* the simulation: RCI demand, land value,
+pollution, traffic flow. Not a dashboard — an **explorable explanation** you scrub and question. The Repo
+Show's whole "show, don't tell" ethic meets Bret's medium.
 
-## Sources (public)
+### 2. Inventing on Principle — direct manipulation without modes
+Immediate connection between change and result. Natural tie to **pie menus**, live coding in public repos,
+and [`../../process/trails/direct-manipulation.md`](../../process/trails/direct-manipulation.md). Scott
+Kim's **Viewpoint** / visibility kinship.
 
-- [`invitation.md`](invitation.md)
-- Show seed: [`repo-shows/bret-victor-explorable.yml`](../../repo-shows/bret-victor-explorable.yml)
-- [`media/from-mail/MANIFEST.yml`](media/from-mail/MANIFEST.yml) — mail-sourced artifacts
-- [`CHARACTER.yml`](CHARACTER.yml)
+### 3. Dynamicland — patronage vs shipping (honest beat)
+Admire the vision **and** hold the distribution problem plainly. Design counsel **and** funding reality —
+not hero-worship. Per Bret's own Engelbart point: what world was it trying to create?
+
+### 4. Engelbart memorial — intent over invention lists
+Join [`remembering-douglas-engelbart.yml`](../../repo-shows/remembering-douglas-engelbart.yml) with Ted
+Nelson, Alan Kay, Yoot Saito — or solo beat on the same theme. See [`../douglas-engelbart/`](../douglas-engelbart/).
+
+### 5. Jef Raskin / humane interface lineage
+Listed discussant for [`remembering-jef-raskin.yml`](../../repo-shows/remembering-jef-raskin.yml) — explorable
+explanations + protecting the user's thinking.
+
+### 6. Repo Show as medium
+Is a **public git repo** a workable *medium for thought* — forkable, time-shifted, audience-editable —
+or does it fight Bret's principles? Worth asking on air, not asserting.
+
+## Show seeds
+
+- Planted: [`repo-shows/bret-victor/`](../../repo-shows/bret-victor/)
+- Legacy seed file: [`repo-shows/bret-victor-explorable.yml`](../../repo-shows/bret-victor-explorable.yml)
+
+## Sources
+
+- [worrydream.com](https://worrydream.com/)
+- [Dynamicland](https://dynamicland.org/)
+- [Engelbart essay](https://worrydream.com/Engelbart/)
+- [`invitation.md`](invitation.md) · [`CHARACTER.yml`](CHARACTER.yml)

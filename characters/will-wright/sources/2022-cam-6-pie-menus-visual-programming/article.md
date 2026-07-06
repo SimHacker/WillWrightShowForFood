@@ -1,6 +1,6 @@
 # CAM-6, pie menus, and the visual programming lineage
 
-*Don Hopkins → Michael McGuffin, 8 Oct 2022. Raw: [`re-cam-6-pie-menus-info-visualization-etc.txt`](../../../../DonHopkins/temp/old-email/re-cam-6-pie-menus-info-visualization-etc.txt).*
+*Don Hopkins → Michael McGuffin, 8 Oct 2022. Primary source: [`characters/michael-mcguffin/sources/2022-10-08-don-visual-programming-letter.md`](../../../michael-mcguffin/sources/2022-10-08-don-visual-programming-letter.md).*
 
 Don connects **cellular automata hardware (CAM-6)**, **NeWS/PostScript PSIBER**, **VPL Body Electric → Bounce**, and **The Sims SimAntics** as one thread: making program structure visible and manipulable.
 
@@ -30,14 +30,16 @@ Visual debugger/editor for PostScript in the NeWS window system — pie menus, l
 
 ## Body Electric → Bounce → Interval
 
-**Chuck Blanchard**'s VPL **Body Electric** — VR instruments, Data Glove, dual-SGI eyephone rendering. **David Levitt** added Macromedia Director (MMP) support; Don cleaned UI and shipped **Bounce** on Mac.
+**David Levitt's Hookup** (MIT patch-cord language) → VPL **Body Electric** (**Chuck Blanchard**) — VR instruments, Data Glove, dual-SGI eyephone rendering. David added Macromedia Director (MMP) support; Don cleaned UI and shipped **Bounce** on Mac. MMP library → **Shockwave** in browser.
 
 Interval Research "swan song": closed-caption TV drives **Rush Limbaugh / Jesse Jackson** puppets arguing — housefly tickles them into gesticulating:
 
 - https://www.youtube.com/watch?v=A1mqg4C0awA
 - [Bounce notes](https://www.donhopkins.com/home/archive/visual-programming/bounce-notes.txt)
 
-Don ↔ **Jaron Lanier** (1999) on Swivel3D trees vs dictionary-shaped knowledge in Bounce; Sun owning VPL patents; BE community still building interactive 3D worlds.
+Don ↔ **Jaron Lanier** (1999): Swivel3D trees vs dictionary-shaped knowledge; Sun owning VPL patents; **Chuck Blanchard credit tension at Interval** — see [`body-electric-1999-jaron-email.md`](../../../don-hopkins/body-electric-1999-jaron-email.md).
+
+Jaron (*Programmers at Work*, 1986): mold the program visually instead of simulating enormous structure in your head. Scientific American Sep 1984 cover — Jaron's musical visual program; Scott Kim cited it in Viewpoint.
 
 ---
 
@@ -69,7 +71,13 @@ Thesis claim: *"Only by treating the screen itself as a first class citizen will
 
 Don argues **Excel** is a visual programming language (2D grid, continuous recalc) — extending Brad Myers' 1989 critique with 31 years of follow-on work (Garnet, Amulet, programming by demonstration).
 
+**HN thread:** [22978454](https://news.ycombinator.com/item?id=22978454) · [metaobject.com essay](https://blog.metaobject.com/2020/04/maybe-visual-programming-is-answer.html)
+
+**Text vs graph:** Don endorsed an HN comment that the real dichotomy is not text vs visual but **text vs graph** (nodes-and-wires VPLs vs grids and other topologies).
+
 Chaim's survey: [Gadget Background Survey (HARC, 2017)](http://chaim.io/download/Gingold%20(2017)%20Gadget%20(1)%20Survey.pdf)
+
+→ Full digest: [`visual-programming-excel-and-dimensionality.md`](../../../don-hopkins/visual-programming-excel-and-dimensionality.md)
 
 ---
 
@@ -83,7 +91,9 @@ Brad's acronym page: http://www.cs.cmu.edu/~bam/acronyms.html (Don contributed *
 
 ## Show seeds
 
-- Don + Henry Minsky on CAM-6 and CA hardware
-- Visual programming debate show: Excel vs SimAntics vs Body Electric
+- **Michael McGuffin** — moderator for VPL definition debate ([`characters/michael-mcguffin/`](../../../michael-mcguffin/))
+- Don + **Brad Myers** + McGuffin — Excel-as-VPL live demo
+- Don + **Henry Minsky** on CAM-6 and CA hardware
+- **Rebounce** — Hookup → Bounce lineage with David Levitt + Jaron
 - Scott Kim *Viewpoint* resurrection segment
 

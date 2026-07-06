@@ -1,0 +1,63 @@
+# SHOW — Edd Coates (Game UI Database & ethical archives)
+# Planted seed. Inherits from the SHOW skill (/skills/repo-show).
+
+show:
+  id: edd-coates
+  title: "A Repo Show with Edd Coates — The Game UI Database & Ethical AI Archives"
+  type: solo
+  host: Don Hopkins
+  guests: ["Edd Coates"]
+  character: characters/edd-coates/
+  topic: "Preserving game UI history at Guinness World Record scale; The Game UI Bible; ethical AI data licensing; and where pie menus fit in 1,800+ games of interface archaeology."
+  status: seed
+  format: remote_or_in_person
+  consent: not_yet_asked
+
+the_core_idea: |
+  Edd Coates built the Guinness World Record-holding Game UI Database — the industry's leading
+  reference tool for game UI/UX (73k+ screens, 1800+ games, used by Insomniac, Arkane, Double Fine,
+  Ubisoft Montreal, and more). His site explicitly bans AI scraping. Don is building the Repo Show
+  to preserve computing history as executable artifacts. Two UI archivists geeking out — and a
+  strategic conversation about how creators protect, monetize, and ethically license their life's
+  work in the LLM era.
+
+why_him:
+  guidb: "Creator of the [Game UI Database](https://www.gameuidatabase.com/) — Guinness World Record (Nov 2022, 42,706+ screens; now 73k+). Game UI Database 2.0 (Aug 2024): video, colour filtering, image inspector."
+  game_ui_bible: "*The Game UI Bible* — 500+ page historical reference, Lost in Cult, 2026."
+  padcrafter: "PadCrafter 2.0 — widely used tool for controller-layout / button UX problems."
+  awards: "Pocket Gamer Best Tools Provider 2021; Game Dev Heroes — Game Design Hero 2021."
+  don_friend: "Friend of Don Hopkins — natural pairing for pie-menu archaeology + ethical corpus strategy."
+
+threads:
+  - "Pandemic project → Guinness World Record — taxonomy and architecture of 73k screens"
+  - "The anti-slop defense — GUIDB bans AI scraping; opt-in licensing where creators get paid"
+  - "The Game UI Bible — translating interactive screens to print"
+  - "UI trends across 1,800 games — what shifted; where radials/pie menus land today"
+  - "Executable archives vs screenshot archives — Repo Show + GUIDB complementarity"
+  - "Micropolis / The Sims UI in GUIDB taxonomy — what makes them historically unique"
+
+dream_segments:
+  - "Browse GUIDB live — pull up pie/radial standouts and failures side by side."
+  - "Whiteboard ethical data licensing — Truffle-style expert-verified corpora with attribution."
+  - "Map The Sims pie menus into GUIDB categories with Don's firsthand context."
+
+pairings:
+  - { with: pie-menus-piecraft.yml, why: "Second episode — ultimate editable pies + PieCraft UI literacy" }
+  - { with: pie-menus-retrospective.yml, why: "Don reimplements pies from scratch" }
+  - { with: ben-and-heinz-pie-menus.yml, why: "PIXIE → CHI'88 historical spine" }
+  - { with: brad-myers-garnet-vpl.yml, why: "CMU pie-menu guest lecture lineage" }
+
+format:
+  live: true
+  audience_qa: true
+  screen_share_heavy: true
+
+ties_to:
+  - ../../characters/edd-coates/
+  - ../../characters/edd-coates/invitation.md
+  - ../../characters/edd-coates/game-ui-archive.md
+  - pie-menus-piecraft.yml
+  - suggested-questions.yml
+  - pie-menus-discussion-notes.md
+  - ../../characters/don-hopkins/pie-menus-chi-88-and-beyond.md
+  - ../../process/design-in-public.yml

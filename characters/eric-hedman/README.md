@@ -3,8 +3,8 @@
 Invitation portrayal — **not** Eric Hedman. [Standards](../../schemas/portrayal-standards.yml)
 
 **Field:** Animator, artist & game designer — character animation on the **original The Sims**;
-design lead on Sims expansion packs (House Party, Livin' Large, Unleashed); later **Disney, Jim
-Henson, Nickelodeon**; now an **independent creator** making visual novels, games, and VR/AR/MR.
+design lead on Sims expansion packs (House Party, Livin' Large, Unleashed); **Pantomime Corporation**
+(w/ David Levitt & Don Hopkins); later **Disney, Jim Henson, Nickelodeon**; now an **independent creator** making visual novels, games, and VR/AR/MR.
 
 ## Watch / support his work
 

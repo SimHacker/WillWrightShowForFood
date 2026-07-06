@@ -49,11 +49,15 @@ Collaborative **virtual worlds for children** (stub — confirm scope and years 
 **constructionist** neighbors **[Cynthia Solomon](../cynthia-solomon/)**, **SIGKids** ethos.
 
 ### 9. Hackers Conference — watch the tapes together
-Coco's **video tapes** from **Hackers Conference** — people **speaking**, **giving demos**, **blowing
-minds. Repo Show segment: **highlights on air** with Coco narrating the room. Don's first picks:
-**Rudy Rucker** (CA / cyberpunk orbit), **[Scott Kim](../scott-kim/)** (Hackers logo, *Viewpoint*,
-(Hackers logo, *Viewpoint*, ambigrams) — plus **many other dream guests** already seeded in the repo.
-Not CS547 — the **Whole Earth / Stewart Brand** gathering. See [`hackers-conference-tapes.md`](hackers-conference-tapes.md).
+Coco's **video tapes** from **Hackers Conference** — speakers, demos, minds blown. Repo Show segment:
+**highlights on air** with Coco narrating the room.
+
+First picks when we roll tape: **Rudy Rucker** (cellular automata / cyberpunk orbit);
+**[Scott Kim](../scott-kim/)** (designed the Hackers Conference logo; *Viewpoint*, ambigrams). Many
+other **dream guests** already seeded in this repo — confirm who's actually on Coco's shelf.
+
+Not **[Terry Winograd's CS547](../terry-winograd/)** — the **Whole Earth / Stewart Brand** invitation
+gathering. See [`hackers-conference-tapes.md`](hackers-conference-tapes.md).
 
 ## Sources (public)
 

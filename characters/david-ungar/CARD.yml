@@ -62,7 +62,7 @@ abilities:
     - trigger: audience_learns_something_true
       weight: 0.85
   effect: Explore marrying Self ideas with MOOLLM orchestration.
-  verifiable: repo-shows/david-ungar-self-moollm.yml
+  verifiable: repo-shows/david-ungar/
   combos_with: []
 - id: PROTOTYPE-NOT-CLASS
   name: Prototype Not Class

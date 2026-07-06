@@ -45,6 +45,11 @@ guests:
     provenance: "Per Yoot, directly to Don; corroborated by the Alan Kay companion transcript ('we would like to put Mr. Engelbart's interviews for a special issue')."
     source: "https://github.com/YootTowerManagement/YootTower/tree/main/Yoot_Saito_Alan_Kay_Interview"
     in_repo: ../characters/yoot-saito/correspondence.yml
+  - name: "David Maynard"
+    character: characters/dave-maynard/
+    connection: "Internet Old Farts Club (2022): fifty-year-old Engelbart mouse photo; donated chord keyset to Stanford Hohbach collection; alerted Don to $54k auction; attended Ted Nelson's Engelbart tribute."
+    verified: true
+    in_repo: ../characters/dave-maynard/sources/internet-old-farts-mouse-thread-2022.md
   - name: "Bret Victor"
     character: characters/bret-victor/
     connection: "Wrote 'A few words on Doug Engelbart' (2013) — the definitive plea to read Engelbart's INTENT, not his feature list. The conscience of this tribute's framing."
@@ -55,6 +60,7 @@ guests:
 centerpieces:
   ted_eulogy: "Screen / read from Ted Nelson's CHM eulogy (in repo) — joy and tears at once."
   yoot_engelbart_and_alan: "Yoot interviewed BOTH Doug and Alan in Japan in the early '90s. Revisit his own Engelbart interview on air, and pair Yoot + Alan to revisit the companion Alan Kay interview (also the spine of alan-kay-microworld.yml)."
+  engelbart_mouse_and_keyset: "Don + David Maynard — feel the wheels, chord alphabet, Stanford donation, auction economics, 3D-scan reproduction plan. See ../characters/douglas-engelbart/engelbart-mouse-and-keyset.md"
   bret_reframe: "Open and close on Bret's question — what world was Doug trying to create, and how do WE build it?"
 
 threads:
@@ -72,7 +78,10 @@ format:
 ties_to:
   - ../characters/douglas-engelbart/
   - ../characters/douglas-engelbart/memorial.md
+  - ../characters/douglas-engelbart/engelbart-mouse-and-keyset.md
   - ../characters/douglas-engelbart/eulogy-ted-nelson.md
+  - ../characters/dave-maynard/
+  - ../characters/don-hopkins/sources/2022-2023-engelbart-mouse-alan-kay.md
   - ../characters/ted-nelson/
   - ../characters/alan-kay/
   - ../characters/yoot-saito/

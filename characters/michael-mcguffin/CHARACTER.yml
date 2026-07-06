@@ -1,0 +1,55 @@
+# Michael McGuffin — invitation portrayal. NOT Michael McGuffin.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: michael-mcguffin
+  name: "Michael McGuffin"
+  type: invitation
+  signifier: "📊"
+  status: living
+  field: "HCI — information visualization, marking menus, visual programming discourse"
+  home: characters/michael-mcguffin/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed:
+    - repo-shows/rebounce/
+    - repo-shows/brad-myers/
+
+contact:
+  email: michael.mcguffin@gmail.com
+
+bio:
+  summary: |
+    **Michael McGuffin** — HCI researcher (information visualization, interaction techniques).
+    In Don's orbit via **Brad Myers'** student/network circle and **marking-menu prior-art**
+    discussions (Alias/Autodesk patent search — see bill-buxton correspondence).
+    Oct 2022: Don sent the long **CAM-6 / PSIBER / Body Electric / SimAntics / Viewpoint / Excel-as-VPL**
+    letter that became the canonical visual-programming lineage essay in this repo.
+
+show_topics:
+  visual_programming_debate:
+    what: "Excel-as-VPL dimensionality thesis; text vs graph; HN 22978454 curated paste"
+    source: sources/2022-10-08-don-visual-programming-letter.md
+  patch_cord_lineage:
+    what: "Hookup → Bounce → SimAntics; Rebounce show context"
+    trail: ../../process/trails/visual-programming-patch-cord.md
+  brad_myers_triangle:
+    what: "McGuffin + Brad Myers + Don — Pick Click Flick Ch.33; C32; Garnet/PBD"
+  marking_menus:
+    what: "Prior-art thread w/ Don (pie menus vs Kurtenbach marking menus) — Alias/Autodesk patent search per Bill Buxton correspondence"
+
+sources:
+  primary:
+    - sources/2022-10-08-don-visual-programming-letter.md
+  related:
+    - ../will-wright/sources/2022-cam-6-pie-menus-visual-programming/
+    - ../don-hopkins/visual-programming-excel-and-dimensionality.md
+    - ../don-hopkins/body-electric-1999-jaron-email.md

@@ -4,6 +4,6 @@ Invitation portrayal — **not** Alan Kay. [Standards](../../schemas/portrayal-s
 
 **Field:** Computer scientist — Smalltalk, Dynabook, constructionism
 
-[Invitation](invitation.md) · [Correspondence](correspondence.yml) · [Kay on people in characters/](people-index.yml) · [Show seed](../../repo-shows/alan-kay-microworld.yml)
+[Invitation](invitation.md) · [MOOLLM × trust × teaching (draft)](moollm-trust-and-teaching-guess.md) · [Correspondence](correspondence.yml) · [Kay on people in characters/](people-index.yml) · [Show seed](../../repo-shows/alan-kay-microworld.yml)
 
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

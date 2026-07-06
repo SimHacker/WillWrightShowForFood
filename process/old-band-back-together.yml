@@ -36,7 +36,7 @@ bands:
     spotlight: "Jerry Martin especially — the Sims / SimCity 3000 composer promotes his own EXCELLENT music on his website; he'll benefit from real exposure, sincere praise, and appreciation. See ../characters/jerry-martin/ (boost)."
     show: ../repo-shows/REPO-SHOWS.yml#building-the-sims.yml
     also: [../repo-shows/REPO-SHOWS.yml#design-by-accretion.yml, ../repo-shows/REPO-SHOWS.yml#music-and-theory.yml]
-    characters: [../characters/will-wright/, ../characters/jim-mackraz/, ../characters/jamie-doornbos/, ../characters/eric-bowman/, ../characters/eric-hedman/, ../characters/patrick-barrett/, ../characters/chris-trottier/, ../characters/claire-curtin/, ../characters/jerry-martin/]
+    characters: [../characters/will-wright/, ../characters/jim-mackraz/, ../characters/jamie-doornbos/, ../characters/eric-bowman/, ../characters/eric-hedman/, ../characters/patrick-j-barrett-iii/, ../characters/chris-trottier/, ../characters/claire-curtin/, ../characters/jerry-martin/]
     don_role: "Sims programmer + teammate"
 
   david_levitt_crew:
@@ -49,9 +49,10 @@ bands:
 
   openlaszlo_team:
     what: "OpenLaszlo / LZX reunion — AI-revived so the toolchain compiles again."
-    roll_call: "David Temkin, Oliver Steele"
+    roll_call: "David Temkin, Oliver Steele, Henry Minsky, Don Hopkins"
     show: ../repo-shows/openlaszlo/
-    characters: [../characters/david-temkin/, ../characters/oliver-steele/]
+    also: [../repo-shows/oliver-steele/]
+    characters: [../characters/david-temkin/, ../characters/oliver-steele/, ../characters/henry-minsky/, ../characters/don-hopkins/]
 
   eno_2006_circle:
     what: "The 2006 Long Now circle — generative systems across media."

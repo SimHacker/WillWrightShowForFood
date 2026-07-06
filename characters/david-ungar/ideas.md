@@ -5,49 +5,81 @@ public work and documented connections to this repository. Things Don would love
 **with** David Ungar; not quotes, not claims about what they think.*
 [Portrayal standards](../../schemas/portrayal-standards.yml) · invitation guest · consent not_yet_asked
 
+## Show
+
+| | |
+|---|---|
+| **Planted show** | [`repo-shows/david-ungar/`](../../repo-shows/david-ungar/) |
+| **North star** | [`reflecting-on-self.md`](reflecting-on-self.md) |
+| **Episode title** | *Reflecting on Self: Narcissa's Mirror* |
+
 ## What David has done
 
-David Ungar — co-creator (with Randall Smith) of Self, the prototype-based object language that dropped classes entirely (objects are unique individuals that inherit from other objects). His work pioneered generation-scavenging garbage collection (UC Berkeley PhD) and the adaptive/dynamic JIT compilation that directly influenced Java's HotSpot VM; he also explored reflection via mirrors. Stanford faculty, then Sun Microsystems Labs (Self), then IBM Research. Known for the wry 'Self: The Movie' and the Dahl–Nygaard Prize. In this show: Self × MOOLLM — directories as prototypes — and the Kaleida **Conscientious Objectors** meetup where the **ScriptX object-system design team** and the **Self team** bounced ideas off each other.
+**David Ungar** — co-creator (with **Randall B. Smith**) of **Self**: prototype-based objects,
+no classes, **multiple named `parent*` slots**, dynamic reparenting. Pioneered **generation-scavenging**
+GC (Berkeley PhD) and **adaptive/dynamic JIT** — **maps** and **polymorphic inline caches** with
+Chambers, Hölzle, **Lars Bak** → HotSpot → **V8**. **Mirrors** for reflection. **Stage Magic
+Principle** and **Idea Scavenging**. Stanford → Sun Labs → IBM Research. Dahl–Nygaard Prize.
+*Self: The Movie*. Jan 2026: Don wrote about MOOLLM building on Self — warm correspondence thread.
 
-## Shared ground
-
-*Topics that connect David Ungar's work to this repo — public themes only.*
-
-- Self language: prototype-based OOP; influenced JavaScript
-- **self-interest!** — original Self mailing list (Don was on it); pun stack: self-ish, import self from self, (oops), Self: The Movie
-- Generation scavenging: GC innovation; Ungar's thesis
-- Dynamic deoptimization: undo optimizations when assumptions break
-- Stage Magic Principle: show simple view, reveal complexity on demand
-- Idea Scavenging: focus compute on persistent ideas
 ## The hooks
 
-### 1. Show seed: `repo-shows/david-ungar-self-moollm.yml`
-Working episode title: **Reflecting on Self: Narcissa's Mirror** (dream guest). Walk the repo on air and build from the seed.
+### 1. Self × MOOLLM — `# import self from self`
 
-### 2. Self pun stack — self-interest!, and more
-Don was on the original **self-interest!** mailing list. Live enumeration: self-ish, `# import self from self`, (oops)/OOPS, Conscientious Objectors (Kaleida), MOOLLM name echo.
+Directories as prototypes; skills clone + delegate; serializable parent lists restore **multiple
+inheritance** JavaScript threw away. Build one small fragment live. See
+[`import-self-from-self.md`](../don-hopkins/import-self-from-self.md).
 
-### 3. Conscientious Objectors — Kaleida meetup (ScriptX × Self)
+### 2. The Power of Simplicity (not just prototypes)
 
-The **ScriptX object-system design team** and the **Self team** held a meetup called **Conscientious Objectors** — prototype OO from two directions, ideas bounced both ways. On air: what stuck? What would they build now?
+Ungar & Smith, OOPSLA 1987 — the thesis is **simplicity**. Prototypes are the means. JS ⊂ Self,
+watered down: kept prototypes, lost MI and simplicity. Full Rosetta table:
+[`slots-all-the-way-down.md`](../david-rosenthal/slots-all-the-way-down.md).
 
-### 4. Self × MOOLLM
+### 3. Narcissa's Mirror — Self mirrors + pun stack
 
-### 5. Self language: prototype-based OOP; influenced JavaScript
+Working episode title. **self-interest!** mailing list (Don was on it). Live enumeration: self-ish,
+(oops)/OOPS, *Self: The Movie*, Conscientious Objectors. David gets veto power on air.
 
-### 5. Generation scavenging: GC innovation; Ungar's thesis
+### 4. Conscientious Objectors — Kaleida (ScriptX × Self)
 
-### 6. Dynamic deoptimization: undo optimizations when assumptions break
+Meetup where **ScriptX object-system design team** and **Self team** bounced prototype OO ideas.
+Don coined the name. Ethic: artisanal, intentional craft vs opaque automation — applied to LLM
+orchestration. [`kaleida-scriptx-...`](../don-hopkins/kaleida-scriptx-dreamscape-multimedia-lisp-machine.md).
 
-### 7. Stage Magic Principle: show simple view, reveal complexity on demand
+### 5. Maps/PICs → V8 — the implementation vindication
 
-### 8. Idea Scavenging: focus compute on persistent ideas
+Self made delegation **fast** — and that lineage runs into the VMs that run the web. Delicious
+irony: JavaScript runs fast today **because of Self's implementation tech** while keeping a
+broken object model. Pairs with [`norman-margolus`](../norman-margolus/) "who JITs the jitter?"
 
-### 9. Dynamic Depessimization: MOOLLM's optimistic simplification
+### 6. Stage Magic → GLANCE / CARD / SKILL
+
+Show simple view; reveal complexity on demand. MOOLLM's semantic image pyramid is the operational
+form. Build a skill advertisement live using the pyramid.
+
+### 7. Idea Scavenging → persistent characters
+
+Focus compute on persistent ideas — characters and skills that survive sessions. Repo Show guest
+directories as the scavenging substrate.
+
+### 8. Relativistic parallelism
+
+*"Everything You Know (About Parallel Programming) Is Wrong!"* — tolerate approximate, race-y
+computation. Fun argument: is git's causal-DAG partial order the disciplined version, or a warning?
+
+### 9. Pairings
+
+- **[Alan Kay](../alan-kay/)** — messaging over objects; Self as live-object branch
+- **[Dan Ingalls](../dan-ingalls/)** — Smalltalk substrate Self grew from
+- **[Oliver Steele](../oliver-steele/)** — instance-first; LZX obeys what JS violates
+- **[David Rosenthal](../david-rosenthal/slots-all-the-way-down.md)** — NeWS/fs pole vs Self pole
 
 ## Sources (public)
 
-- [`invitation.md`](invitation.md)
-- [`correspondence.yml`](correspondence.yml) — public-safe thread digest
-- Show seed: [`repo-shows/david-ungar-self-moollm.yml`](../../repo-shows/david-ungar-self-moollm.yml)
-- [`CHARACTER.yml`](CHARACTER.yml)
+- [`invitation.md`](invitation.md) · [`reflecting-on-self.md`](reflecting-on-self.md)
+- [`correspondence.yml`](correspondence.yml) — Jan 2026 digest
+- [`from-alan-kay.yml`](from-alan-kay.yml) — Kay lineage quotes
+- [`repo-shows/david-ungar/`](../../repo-shows/david-ungar/)
+- [Wikipedia — David Ungar](https://en.wikipedia.org/wiki/David_Ungar)
+- [Self language](https://en.wikipedia.org/wiki/Self_(programming_language))

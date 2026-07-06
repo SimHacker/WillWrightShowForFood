@@ -1,0 +1,47 @@
+id: glenn-reid
+name: Glenn Reid
+slug: glenn-reid
+role: guest
+status: active
+
+affiliations:
+  - Adobe Systems (employee #40; PostScript books, Distillery)
+  - NeXT (TouchType, PostNews / PostScript mail experiments)
+  - Independent (consulting, appliance hacking — per 2015 mail to Don)
+
+tags:
+  - postscript
+  - distillery
+  - pdf-lineage
+  - touchtype
+  - news
+  - display-postscript
+  - adobe
+
+connections:
+  - don-hopkins
+  - brian-reid
+  - john-warnock
+  - james-gosling
+  - owen-densmore
+  - paul-asente
+
+show_seeds:
+  - repo-shows/postscript-distillery-to-pdf/
+  - repo-shows/news-postscript-window-system.yml
+
+invitation_status: send_ready
+
+contact:
+  email: glenn@glennreid.com
+  web: https://glennreid.blogspot.com/
+
+notes: |
+  Wrote The Distillery (still.ps) — partial evaluation of PostScript by redefining
+  imaging operators; Don ported it to NeWS/OpenWindows and extended it for selectable
+  text and structural grouping. Warnock's early "graphbind" prototype was the seed.
+  Glenn: "No real relationship" between Distillery and PDF product line, but same insight —
+  value is in the imaging model, not the programming language. macOS Preview as distillery.
+  TouchType (NeXT → Adobe); 2015: declined Don's VR pitch — "washing machines, motors, solenoids";
+  design kernel: "128-point string with 1 glyph."
+  Brother of Brian Reid (1985 laser-lovers PostScript history).

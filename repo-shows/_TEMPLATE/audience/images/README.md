@@ -7,13 +7,13 @@ tools use these paths.
 |------|-----------|---------|
 | `headshot.png` | any; face/object centered | CARD, PR review, Come On Down lower-third |
 | `avatar.png` | **128×128** square | Twitch/YouTube chat badge, MSPO RPG |
-| `with-guest.png` | any | You with the guest — photo, screenshot, cosplay, rig |
+| `with-will.png` | any | You with **Will** — photo, screenshot, cosplay, rig |
 
 Optional:
 
 | File | Purpose |
 |------|---------|
-| `with-guest-*.png` | Extra angles (eating the sim trilogy, crew photo, …) |
+| `with-will-*.png` | Extra angles (eating the sim trilogy, crew photo, …) |
 | `costume.png` | Stream rig reference — also set in [`../costume.yml`](../costume.yml) |
 
 ## Any kind of image is welcome — have fun! 🎨
@@ -35,7 +35,7 @@ Wire in [`../CHARACTER.yml`](../CHARACTER.yml):
 media:
   headshot: images/headshot.png
   avatar: images/avatar.png
-  with_guest: images/with-guest.png
+  with_will: images/with-will.png
 ```
 
 Wire in [`../questions.yml`](../questions.yml):
@@ -54,7 +54,7 @@ Copy structure from these — they are **templates you can steal**:
 
 | Example | Path |
 |---------|------|
-| Bot + real photo with Will | [`../../../will-wright/audience/bot-slats/`](../../../will-wright/audience/bot-slats/README.md) |
+| Bot + real photo with **Will** | [`../../../will-wright/audience/bot-slats/`](../../../will-wright/audience/bot-slats/README.md) |
 | Sim in Will's hand (Bob Newbie bit) | [`../../../will-wright/audience/fictional-bob-newbie/`](../../../will-wright/audience/fictional-bob-newbie/README.md) |
 | Fictional game character | [`../../../will-wright/audience/fictional-bella-goth/`](../../../will-wright/audience/fictional-bella-goth/README.md) |
 | Balcony regular (🤡💀) | [`../../../will-wright/audience/fictional-tragic-clown/`](../../../will-wright/audience/fictional-tragic-clown/README.md) |

@@ -82,7 +82,7 @@ images:
   required_for_examples:
     - images/headshot.png
     - images/avatar.png
-    - images/with-guest.png
+    - images/with-will.png
   template: repo-shows/_TEMPLATE/audience/images/
 
 during_show:

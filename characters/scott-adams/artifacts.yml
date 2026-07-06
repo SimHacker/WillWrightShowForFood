@@ -1,0 +1,55 @@
+# Scott Adams — show artifacts & correspondence pointers
+# Private email lives in DonHopkins repo; public-safe digest below.
+
+character: scott-adams
+consent: correspondence_verified
+artifact_count: 6
+
+correspondence:
+  digest: correspondence-digest.md
+  private_ref: DonHopkins/characters/don-hopkins/correspondence/scott-adams.yml
+  email: msadams@msadams.com
+  verified_dates: ["2025-06 (HN/Messenger)", "2026-01-04", "2026-01-07", "2026-02-22"]
+
+artifacts:
+  - id: hn-29330901
+    kind: thread
+    title: "Hacker News — method of loci / memory palace"
+    url: https://news.ycombinator.com/item?id=29330901
+    note: "Reconnection thread; compile as Room One candidate (ideas B3)"
+
+  - id: moollm-repo
+    kind: repo
+    title: MOOLLM microworld OS
+    url: https://github.com/SimHacker/moollm
+    note: "Jan 2026 email intro; Scott — 'sucked me in,' 'tremendous potential'"
+
+  - id: adventure-compiler-vision
+    kind: design
+    title: "PR-ADVENTURE-COMPILER-VISION"
+    url: https://github.com/SimHacker/moollm/blob/main/designs/PR-ADVENTURE-COMPILER-VISION.md
+    note: "Don's Jan 2026 follow-up email — adventure compiler + memory palaces meet LLMs"
+
+  - id: adventure-skill
+    kind: skill
+    title: "MOOLLM skills/adventure"
+    url: https://github.com/SimHacker/moollm/blob/main/skills/adventure/SKILL.md
+    note: "Room graph protocol — live walk on Repo Show"
+
+  - id: dual-palace-brief
+    kind: internal
+    file: moollm-dual-palace.md
+    title: "Two careers, one compiler — interactive adventure show brief"
+    note: "North star for the Repo Show — Scott biography rooms + Don memory palace"
+
+  - id: logo-adventure
+    kind: article
+    title: "Logo Adventure for C64 (Terrapin)"
+    url: https://medium.com/@donhopkins/logo-adventure-for-c64-terrapin-logo-4c684a240b53
+    local: ../don-hopkins/logo-adventure-c64-terrapin.md
+    note: "Missing link in lineage — Scott engine → Logo REPL parser → MOOLLM"
+
+see_also:
+  - ../../repo-shows/scott-adams/invitation.md
+  - ../../repo-shows/scott-adams/ideas.md
+  - ../don-hopkins/career/lineage.yml

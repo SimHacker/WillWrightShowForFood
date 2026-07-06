@@ -18,8 +18,10 @@ default:
 naming:
   rule: |
     Each person gets exactly one directory: `characters/<first-last>/` — hyphenated slug,
-    no suffixes like `-simfreaks`, `-simslice`, `-ambigrams`. Some people would need dozens
-    of suffixes; names stay clean and single.
+    no role suffixes like `-simfreaks`, `-simslice`, `-lgr`, `-ambigrams`. Some people would
+    need dozens of suffixes; names stay clean and single. Roles live in CHARACTER.yml, not slugs.
+  exceptions:
+    - "Legal name suffixes only — e.g. `patrick-j-barrett-iii` because Patrick J. Barrett III is his name."
   where_roles_live:
     - "CHARACTER.yml → field, bio, connections, aliases[]"
     - "ideas.md → show hooks tied to public work"

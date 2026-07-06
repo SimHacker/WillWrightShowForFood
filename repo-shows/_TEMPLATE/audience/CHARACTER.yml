@@ -73,5 +73,5 @@ see_also:
   - { path: questions.yml, why: "TicketPR — numbered questions for air" }
   - { path: SIMULATION.yml, why: "Your brain/algorithm/runbook (during + after show)" }
   - { path: CHARACTER.md, why: "Prose companion (superposition) + how to fill this in" }
-  - { path: images/README.md, why: "headshot / 128² avatar / with-guest — any image style" }
+  - { path: images/README.md, why: "headshot / 128² avatar / with-will — any image style" }
   - { path: ../../../process/ticket-pr.yml, why: "TicketPR spec — Master ⇒ PR" }

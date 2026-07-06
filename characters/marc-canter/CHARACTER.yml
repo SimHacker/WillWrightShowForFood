@@ -19,7 +19,10 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  note: "Old friend + sometime colleague of Don and David Levitt (People Aggregator, a.k.a. 'People Aggrivator'). Don expects an enthusiastic, joyful yes."
+  show_seed: repo-shows/marc-canter/
+  priority: send_ready
+  pair_with: david-levitt
+  note: "Old friend + colleague of Don and David Levitt; Don expects an enthusiastic yes."
 
 bio:
   summary: |
@@ -57,4 +60,6 @@ see_also:
   - { path: ../don-hopkins/, why: "Longtime friend; the Amsterdam stories" }
   - { path: ../../apps/performance-space/faceball-construction-set.yml, why: "Marc will love the puppets — a born center-stage performer" }
   - { path: ../../apps/performance-space/pink-trombone-jam.yml, why: "Acapella Pink Trombone sing-along — right up his alley" }
+  - { path: ideas.md, why: "Conversation hooks — Director, People Aggregator, puppets" }
+  - { path: ../../repo-shows/marc-canter/, why: "Planted show" }
   - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

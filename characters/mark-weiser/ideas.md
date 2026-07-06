@@ -52,6 +52,11 @@ repo.
 **Draw in:** Don, Ben Shneiderman, Brad Myers, Jack Callahan (documented co-author).
 Source: [`../don-hopkins/career/work-history.yml`](../don-hopkins/career/work-history.yml).
 
+**1991 mail — tape, alphabet pies, stylus:** Don's demo tape (*"work of art"*) shown to **Bill Buxton**;
+Mark's **6×6 / 6×8 alphabetic pie trees** and **26-quadrant stylus word shapes** (PARC, no handwriting
+recognition); bill demos as **artworks** not tech pitches.
+→ [`../don-hopkins/sources/1991-03-mark-weiser-pie-menu-tape-stylus.md`](../don-hopkins/sources/1991-03-mark-weiser-pie-menu-tape-stylus.md)
+
 ### 5. Instructions per joule — the low-power argument
 Mark pushed measuring performance by energy, not MIPS — prescient for the battery-bound,
 carbon-bound computing we live in. A short, sharp segment.

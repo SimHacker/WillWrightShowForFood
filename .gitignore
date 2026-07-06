@@ -15,3 +15,5 @@ dist/
 LaunchSettings.json.user
 appsettings.local.json
 **/catalog.sqlite
+# Private source digests — NDA / pre-release / correspondence bodies (see portrayal-standards.yml)
+**/sources/private/

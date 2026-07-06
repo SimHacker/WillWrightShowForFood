@@ -54,12 +54,12 @@ Same for living humans: no impersonating guests or fans without consent.
 
 ## Seeded roster
 
-⭐ = filled `images/` (headshot, 128² avatar, with-guest) — copy these as your starting point.
+⭐ = filled `images/` (headshot, 128² avatar, with-will) — copy these as your starting point.
 
 | Directory | Who | Tone |
 |-----------|-----|------|
 | [bot-slats/](bot-slats/README.md) ⭐ | Slats + Will photos | **Example** — copy this |
-| [fictional-bob-newbie/](fictional-bob-newbie/README.md) ⭐ | Bob in Will's hand | **Example** — promo trilogy |
+| [fictional-bob-newbie/](fictional-bob-newbie/README.md) | Bob in Will's hand | **Example** — with-Will promo trilogy (headshot/avatar TBD) |
 | [palm/](palm/README.md) | Palm 🐒✋ (self-aware AI) | What's it like to be a Sim? |
 | [fictional-bella-goth/](fictional-bella-goth/README.md) | Bella Goth | Missing-poster energy |
 | [fictional-tragic-clown/](fictional-tragic-clown/README.md) | Tragic Clown 🤡 | Balcony left — weeping heckler |

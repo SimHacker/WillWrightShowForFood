@@ -106,6 +106,8 @@ Dave brought it to **SGI**; it became demo/screensaver source (later **IGL** dis
 - **Recursive texture-map feedback** — high-end SGI only; Don recalls Raster Masters describing this
   in performance (HN Psychedelic Graphics thread, 2025).
 
+Full HN compendium: [`../don-hopkins/sources/2025-01-psychedelic-graphics-hn-compendium.md`](../don-hopkins/sources/2025-01-psychedelic-graphics-hn-compendium.md)
+
 Dave's own words on EP (darkside archive): *"Electro-Paint responds, but in ways that are hard to
 describe… It will reward attention… Try a little 'wrst', with some 'zoom'…"*
 

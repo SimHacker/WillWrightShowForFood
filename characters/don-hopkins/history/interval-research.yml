@@ -103,11 +103,13 @@ repo_show_nexus:
     - characters/golan-levin/
     - characters/terry-winograd/
     - characters/david-levitt/
+    - characters/brenda-laurel/
+    - characters/rob-tow/
+    - characters/glenn-edens/
     - characters/don-hopkins/interval-research-pluggers-and-mediaflow.md
   strong_candidates:  # Grokipedia + DonHopkins/contacts/interval-alumni.yml
     - paul-debevec     # Rouen Revisited dual w/ Golan
     - caterina_fake    # Interval → Flickr; braid w/ Ben Cerveny / Game Neverending
-    - brenda_laurel    # Purple Moon; Computers as Theatre
     - marc_davis       # MediaFlow / garage theatre (semantic video before vision AI)
     - dan-ingalls      # Smalltalk at Interval
   consent: not_yet_asked

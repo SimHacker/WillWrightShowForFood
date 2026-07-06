@@ -24,7 +24,7 @@ The ["get the old band back together"](../../../process/old-band-back-together.y
 |------|-------------------|------|
 | [Jamie Doornbos](../../../characters/jamie-doornbos/README.md) | Soul of the Sims | Lead programmer; SimAntics & Edith |
 | [Don Hopkins](../../../characters/don-hopkins/README.md) | — | UI, tools, Transmogrifier, inclusivity |
-| [Patrick J. Barrett III](../../../characters/patrick-barrett/README.md) | Sim Brains | SimAntics; most object & Sim code |
+| [Patrick J. Barrett III](../../../characters/patrick-j-barrett-iii/README.md) | Sim Brains | SimAntics; most object & Sim code |
 | [Eric Bowman](../../../characters/eric-bowman/README.md) | Bobo | Programmer; Sims 1.0 |
 | [Eric Hedman](../../../characters/eric-hedman/README.md) | Irk | Lead character animator |
 | [Jim Mackraz](../../../characters/jim-mackraz/README.md) | Tricky Bit | CTG Team Leader; Will Whisperer |

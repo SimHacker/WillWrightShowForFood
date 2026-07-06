@@ -15,16 +15,16 @@ representation:
   example_ticketpr: true
   note: |
     **Copy this directory** to see a complete MOOLLM TicketPR with images.
-    Headshot cropped from Will holding sim; trilogy photos with guest.
+    Promo trilogy: Bob with **Will** (not guest) — headshot and 128² avatar TBD.
 
 media:
-  headshot: images/headshot.png
-  avatar: images/avatar.png
-  with_guest: images/with-guest.png
+  headshot: null   # removed — wrong crop; replace later
+  avatar: null     # removed — wrong crop; replace later
+  with_will: images/with-will-holding.png
   gallery:
-    - { file: images/with-guest-holding.png, caption: "Will holds me — original EA promo" }
-    - { file: images/with-guest-nose.png, caption: "Don Hopkins photoshop — nose pick" }
-    - { file: images/with-guest-eating.png, caption: "Don Hopkins photoshop — the payoff" }
+    - { file: images/with-will-holding.png, caption: "Will holds me — original EA promo" }
+    - { file: images/with-will-nose.png, caption: "Don Hopkins photoshop — nose pick" }
+    - { file: images/with-will-eating.png, caption: "Don Hopkins photoshop — the payoff" }
 
 relationship: |
   Tutorial sim. Standing in Will's hand. Picking his nose. Being eaten. Still asking questions.

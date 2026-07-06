@@ -1,0 +1,37 @@
+# SHOW — Clint Basinger (LGR)
+# Audience bridge — retro-PC / Maxis / Sims fandom meets Micropolis Repo Show.
+
+show:
+  id: clint-basinger
+  title: "A Repo Show with Clint Basinger (LGR) — Maxis, Micropolis, and the Preservation Ethos"
+  type: solo
+  host: Don Hopkins
+  guests: ["Clint Basinger"]
+  character: characters/clint-basinger/
+  topic: "LGR meets the Repo Show — react to open-source Micropolis in the browser, retro preservation, and the Maxis catalog Clint already celebrates; audience on-ramp for Sims/SimCity fandom."
+  status: seed
+  format: remote_or_in_person
+  consent: not_yet_asked
+
+why_him:
+  audience_bridge: "Don: 'invite the LGR guy! he loves SimCity and Maxis and Will!' — direct path from YouTube retro community to Repo Show."
+  sims_maxis: "Long-running, affectionate The Sims + Maxis-era coverage; SimsVIP interview; knows the catalog."
+  preservation: "Vintage hardware/software restoration ethos aligns with executable archives + Micropolis revival."
+  micropolis: "Natural reaction segment — open-source SimCity in the browser, WASM, pie menus, taartmenu."
+
+threads:
+  - "Live Micropolis / MicropolisCore demo — Clint reacts as a Maxis fan who knows the originals"
+  - "Preservation vs emulation vs open reimplementation — what's worth keeping alive"
+  - "The Sims tooling ecosystem — SimSlice precedent, mods, independent creators (Alvey thread)"
+  - "Retro-PC audience Q&A — bridge HN/YouTube community into the repo"
+
+format:
+  live: true
+  audience_qa: true
+  reaction_friendly: true
+
+ties_to:
+  - ../../characters/clint-basinger/
+  - ../../characters/will-wright/
+  - ../../repo-shows/heather-and-steve-alvey/
+  - SimHacker/MicropolisCore

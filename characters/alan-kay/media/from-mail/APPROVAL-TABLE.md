@@ -49,12 +49,13 @@
 | `photo-1671293610377blob.png` | [open](photo-1671293610377blob.png) | **Dupe candidate** vs `.jpg` | ☐ keep ☐ delete |
 | `artifact-1582019912933blob.jpg` | [open](artifact-1582019912933blob.jpg) | Unclassified | ☐ keep ☐ delete |
 
-### B3 — PIXIE (`pixie-film-still` + `pixie-yuja-wang`)
+### B3 — PIXIE (`pixie-film-still`)
 
 | Group | File | Link | Your call |
 |-------|------|------|-----------|
 | pixie-film-still | `artifact-screen-shot-2018-05-17-at-95245-pm.png` | [open](artifact-screen-shot-2018-05-17-at-95245-pm.png) | ☐ keep ☐ delete |
-| pixie-yuja-wang | `photo-0wvl03notlmglj5fa.gif` | [open](photo-0wvl03notlmglj5fa.gif) · [Flight of the PIXIE (YouTube)](https://www.youtube.com/watch?v=jDrqR9XssJI) | ☐ keep ☐ delete |
+
+*Removed:* `photo-0wvl03notlmglj5fa.gif` — Don's PSIBER paper artwork, not Alan Kay mail.
 
 ### B4 — OLPC Etoys (moved from walter-bender — **not in REVIEW yet**)
 

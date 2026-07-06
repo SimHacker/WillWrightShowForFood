@@ -28,6 +28,9 @@ Don ↔ Arthur: **Sun** (Arthur visits to design **HyperNeWS 2.0** in PdB; Sun d
 
 Walk the repo on air. Strong fit for [**NeWS reunion**](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/REPO-SHOWS.yml) with Gosling, Rosenthal, Owen Densmore — or solo **`arthur-van-hoff-hyperlook.yml`**.
 
+**Jun 1991 — `linkget` / parent scope:** Arthur's `/&` scoped-variable prefix, `linkwhere` backstops, and Tim Niblett's **COOL Plan A vs B** memo — the bridge from TNT widgets to HyperLook persistence.
+→ [`sources/1991-06-linkget-parent-scope.md`](sources/1991-06-linkget-parent-scope.md)
+
 ### 2. HyperLook → Bongo — one thread, two languages
 
 On air, walk the lineage Arthur actually shipped:

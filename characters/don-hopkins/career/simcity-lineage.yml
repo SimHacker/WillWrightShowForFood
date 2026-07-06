@@ -12,7 +12,9 @@ simcity_lineage:
     runs_on: [NeWS, HyperLook]
     media: ../media/micropolis-gallery/hyperlook-simcity-sun.png
     note: |
-      Parallel to official Sun X11 port; Carol Adams 'SimCity NeWS' opportunity. HyperLook
+      Parallel to official Sun X11 port; Carol Adams 'SimCity NeWS' showcase offer (Jul–Aug 1991).
+      → [`../sources/1991-07-simcity-tnt-showcase-offer.md`](../sources/1991-07-simcity-tnt-showcase-offer.md).
+      HyperLook
       (HyperCard on NeWS) — reimagined simulation environment: integrated scalable PostScript
       visualizations, UI editor, graphics editors, and PostScript tile renderer for DUX.
       Ancestor of later PyGTK/Pango Micropolis rendering.

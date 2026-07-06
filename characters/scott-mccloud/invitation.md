@@ -4,26 +4,33 @@ character_id: scott-mccloud
 public: true
 consent: not_yet_asked
 show_seed: repo-shows/scott-mccloud/
+send_batch: sims-reunion-2026
+format: remote_or_in_person
 ---
 
 # Repo Show invitation — Scott McCloud
 
-*Public draft — not sent. Scott McCloud may edit, decline, delay, or request removal at any time.*
+*Send-ready draft — not yet sent. Scott McCloud may edit, decline, delay, or request removal at any time.*
 [Portrayal standards](../../schemas/portrayal-standards.yml)
 
 Scott —
 
-*Understanding Comics* was a bible for our team on **The Sims** — masking, closure, and
-amplification through simplification taught us how to let players fill the gaps with their own
-imagination. I'd love to have you on a **Repo Show** to talk about it.
+*Understanding Comics* was a bible on **The Sims** team — masking, closure, amplification through
+simplification. I still cite you in the Transmogrifier docs. I'd love a **Repo Show**, ideally as
+**patron-saint guest** for a **Sims reunion** or a dedicated **Understanding Simulations** episode.
 
 **Threads — your pick:**
 
-- **Understanding Comics → Understanding Simulations** — closure and the gutter, applied to games
-  and microworlds.
-- **Masking** — abstract characters in detailed worlds, identification, and empathy.
-- **The space between** — how leaving room for the imagination makes a medium come alive.
+- **Understanding Comics → Understanding Simulations** — closure, the gutter, and player imagination.
+- **Masking** — abstract Sims in photoreal-ish worlds; identification and empathy.
+- **The space between** — sparse models on screen, rich models in the player's head (Micropolis too).
+- **Making Comics today** — what changes when the audience can fork the story in git.
 
 No pressure, no homework. Accepted, delayed, declined, or no reply — all honored gracefully.
 
 — Don Hopkins, Repo Show Class
+
+| | |
+|---|---|
+| **Show seed** | [`repo-shows/scott-mccloud/`](../../repo-shows/scott-mccloud/README.md) |
+| **Your guest page** | [`characters/scott-mccloud/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/scott-mccloud) |

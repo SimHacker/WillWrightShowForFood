@@ -1,44 +1,10 @@
-# SEED — David Ungar: Self × MOOLLM reimagination
-# Proposed solo Repo Show. Consent not yet asked.
+# PLANTED → repo-shows/david-ungar/
+# This seed file is retained as an alias for cross-links. Canonical show: david-ungar/SHOW.yml
 
 show:
   id: david-ungar-self-moollm
-  status: seed
-  type: solo
-  guest: david-ungar
-  character: characters/david-ungar/
-  dream_guest: true
+  planted_at: david-ungar/
+  status: planted
+  redirect: david-ungar/
 
-episode:
-  working_title: "Reflecting on Self: Narcissa's Mirror"
-  title_spelling_note: "Don recalled 'Narcisca's Mirror' -- confirm spelling with David on air if needed"
-  subtitle: "Self × MOOLLM — mirrors, prototypes, import self from self, self-interest!"
-
-pitch: |
-  David Ungar co-created Self — prototype objects, adaptive JIT, generation scavenging, mirrors.
-  He was very open and influential; Don says he deserves huge credit for where we are. Self
-  doesn't run on everybody's phone — in spirit it does (JavaScript, HotSpot, MOOLLM). Build
-  Self × MOOLLM live: directories as prototypes, Stage Magic as GLANCE/CARD/SKILL, Idea
-  Scavenging as persistent characters. Honor the **Conscientious Objectors** Kaleida meetup
-  (ScriptX object-system team × Self team) and artisanal vs intentional AI craft.
-
-topics:
-  - "Self doesn't run on every phone — in spirit it does: JS, HotSpot, MOOLLM (trace on air)"
-  - "Conscientious Objectors — Kaleida meetup: ScriptX object-system design × Self team"
-  - "Episode title riff: Reflecting on Self — Narcissa's Mirror (Self mirrors + pun stack)"
-  - "Self pun stack: self-interest!, self-ish, import self from self, (oops), Self: The Movie"
-  - "Self prototype model → MOOLLM directory inheritance"
-  - "Stage Magic Principle → GLANCE / CARD / SKILL / README pyramid"
-  - "Idea Scavenging → character and skill persistence"
-  - "Dynamic deoptimization / Dynamic Depessimization — when to reveal complexity"
-  - "Artisanal, intentional, and conscientious coders — rig culture (no AI to orchestrated)"
-  - "ScriptX, Kaleida, Link Globally Interact Locally — distributed object lineage"
-
-ties_to:
-  - ../characters/david-ungar/
-  - ../process/vision-and-ambition.yml
-  - ../process/repo-show-format.yml
-  - SimHacker/moollm
-  - SimHacker/DonHopkins/characters/don-hopkins/correspondence/david-ungar.yml
-
-invitation_status: not_yet_asked
+note: "See repo-shows/david-ungar/ — Reflecting on Self: Narcissa's Mirror (Self × MOOLLM)"

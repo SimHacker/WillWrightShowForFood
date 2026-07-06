@@ -84,7 +84,7 @@ Optional donations → recognition + call-on priority — never required. See `t
 | [`SIMULATION.yml`](SIMULATION.yml) | During/after show hooks |
 | [`costume.yml`](costume.yml) | Stream identity |
 | [`PLANTED-AUDIENCE.md`](PLANTED-AUDIENCE.md) | Guest-primed plants, running gags, late-night ethics |
-| [`images/README.md`](images/README.md) | Headshot, chat avatar, photo with guest |
+| [`images/README.md`](images/README.md) | Headshot, chat avatar, photo with Will |
 
 ## Filled-out examples (Will Wright show)
 

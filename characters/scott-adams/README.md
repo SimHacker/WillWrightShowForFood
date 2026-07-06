@@ -21,9 +21,15 @@ could ship across the TRS-80, Apple ][, Atari, VIC-20, and C64 — a whole world
 two-word parser. He later wrote the Marvel **Questprobe** adventures.
 
 That "**compile the adventure to portable data + a tiny VM**" idea is the direct ancestor of
-Don's **adventure compiler** and of Don's Terrapin **Logo Adventure**. Per Don, Scott wants to
-build this *now*, is diving deeply into **AI**, and Don wants to develop the tooling for Scott
-to use as well as himself — which makes for a perfect Repo Show: adventure, engines, and AI.
+Don's **adventure compiler** and of Don's Terrapin **Logo Adventure**. Jan 2026 email: Scott on
+MOOLLM — **"sucked me in,"** biography as **playable mini-adventures**, **"also thinking about MOOLLM."**
+The Repo Show north star: **both careers as interactive adventure** — compile live, ship a browser
+page, swap YAML seeds. See [`moollm-dual-palace.md`](moollm-dual-palace.md).
+
+## Artifacts
+
+[`artifacts.yml`](artifacts.yml) · [`correspondence-digest.md`](correspondence-digest.md) ·
+[`moollm-dual-palace.md`](moollm-dual-palace.md)
 
 ## Deeper
 

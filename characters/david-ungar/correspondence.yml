@@ -32,7 +32,8 @@ threads:
 
 connects_in_repo:
   - { path: CHARACTER.yml, why: "Bio + invitation status" }
-  - { path: ../../repo-shows/david-ungar-self-moollm.yml, why: "The Self × MOOLLM show seed this feeds" }
+  - { path: ../../repo-shows/david-ungar/, why: "Planted show — Self × MOOLLM" }
+  - { path: reflecting-on-self.md, why: "North star doc" }
   - { path: ../alan-kay/, why: "Shared Smalltalk/Self lineage" }
   - { path: ../../process/trails/live-objects.md, why: "Smalltalk → Self → live systems trail" }
   - { path: ../../process/crazy-idea-jam.yml#self_times_moollm, why: "The wacky/forward framing" }

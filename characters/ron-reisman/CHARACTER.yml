@@ -1,0 +1,90 @@
+# Ronald J. Reisman — memorial portrayal (in memoriam). NOT Ron Reisman.
+# Memorial mode: represent + discuss, never interview. No invented quotes or inner life.
+# Standards: ../../schemas/portrayal-standards.yml#memorial_mode
+
+character:
+  id: ron-reisman
+  name: "Ronald J. Reisman"
+  aliases: [Ron Reisman]
+  type: memorial
+  signifier: "🕯️✈️"
+  status: deceased
+  field: "NASA Ames — air traffic management (CTAS/TFAS/NextGen); flight simulation; Convolvotron 3D audio; dolphin-language research; AR tower tools"
+  home: characters/ron-reisman/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 5
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  consent: not_applicable
+  document: memorial.md
+  note: "deceased (d. 2019) — represent + discuss; Don's late friend; many Ames-era colleagues knew and loved him"
+
+memorial:
+  mode: represent_and_discuss
+  rule: "Represent and discuss his documented work and stories. Do not interview, do not speak as him, invent no inner life, dialogue, or quotes."
+  who_can_discuss:
+    - { who: don-hopkins, why: "Late friend — Ames tour, USEnix Monterey 1989 air-traffic talk; defends Ron's FAA/ATM legacy on HN (2023–2024)" }
+    - { who: coco-conn, why: "Knew and loved Ron (Don's note); Ames / SIGGRAPH / performance-technology orbit" }
+    - { who: david-levitt, why: "VPL / Body Electric / Convolvotron orbit; knew Ron in the Ames VR/simulation years" }
+    - { who: dave-tristram, why: "NASA Ames colleague — Panel Library, Electropaint, live GL performance era" }
+    - { who: jaron-lanier, why: "Body Electric stack used Convolvotron (Ames 3D audio); shared VR/simulation milieu" }
+  draw_on_for_shows:
+    - "CTAS / TFAS / NextGen air traffic — methodological safety engineering vs 'move fast and break things'"
+    - "Reagan PATCO firings (1981) — Ron hired fired controllers and taught them to program ('easier to teach a controller to program than a programmer to control air traffic')"
+    - "USEnix Monterey Graphics 1989 + Ames tour — flight simulators, ATM decision-support tools"
+    - "Convolvotron — NASA Ames 3D spatial audio; sibling to Body Electric / Bounce VR stack"
+    - "Dolphin Research Center — Apple ][ speech synthesis; 'What is AI?' → 'What is I?'"
+    - "Marvin Minsky at Ames — flight simulator, early AR headset, hydraulic lifts (video)"
+
+bio:
+  summary: |
+    **Ronald J. Reisman** (Ron Reisman; d. **7 November 2019**, pancreatic cancer) — computer engineer
+    at **NASA Ames Research Center** on **air traffic management** and **flight safety**. BA Philosophy &
+    Classical Greek (Dickinson); MS Computer Science (Miami). Joined Ames **1988** on the original
+    **Center TRACON Automation System (CTAS)** team; later **traffic flow management** and **NextGen**
+    research (**TFAS**). Patents on automated traffic management and surface-traffic advisories. Also:
+    **Convolvotron** 3D audio at Ames (used in **Body Electric** VR simulations), **flight simulation**
+    art, **Dolphin Research Center** research (Apple ][ talking to dolphins), and **AR tower** tools
+    built on live CTAS feeds. **Don Hopkins's late friend** — Don toured Ames simulators and ATC labs
+    after Ron's 1989 USEnix talk; has publicly defended Ron's legacy against glib FAA-bashing on
+    Hacker News.
+
+  don_on_ron: |
+    After the 1989 USEnix Monterey Graphics Conference Ron gave Don a tour of NASA Ames flight
+    simulators and air-traffic systems. Don's 2023 HN thread on the FAA NOTAM outage memorialized Ron:
+    hiring **PATCO controllers Reagan fired**, teaching them to program, and the line that safety-critical
+    ATM is not a web app — insulting Ron's memory to preach 'move fast and break things' when lives are
+    at stake.
+
+sources:
+  wikipedia: null
+  web:
+    - { title: "NASA 50th — CTAS/TFAS bio snippet", url: "https://www.nasa.gov/50th/Folklife/biosPropulsion.html" }
+    - { title: "USEnix 2002 — Introduction to Air Traffic Management Systems (Reisman, Murphy, Savoye)", url: "https://www.usenix.org/legacy/events/usenix02/usenix02.pdf" }
+    - { title: "NASA NTRS — Augmented Reality Tower Technology Assessment (Reisman)", url: "https://ntrs.nasa.gov/citations/20110014045" }
+    - { title: "NASA Spinoff — Convolvotron", url: "https://spinoff.nasa.gov/node/8965" }
+    - { title: "NASA Watch — obituary note (Nov 2019)", url: "https://nasawatch.com/personnel-news/ron-reisman/" }
+  video:
+    - { title: "Marvin Minsky — Ames flight simulator, VR goggles, hydraulic lifts", url: "https://www.youtube.com/watch?v=mOKENF_-z8Y" }
+    - { title: "Vertical Motion Simulator", url: "https://www.youtube.com/watch?v=5-lHcv_olkE" }
+    - { title: "Apple ][ at Dolphin Research Center — Ron on intelligence (from ~6:32)", url: "https://www.youtube.com/watch?v=CWHCTNztnwQ&t=392s" }
+  hn_don_memorial:
+    - { title: "Don on Ron — FAA NOTAM / PATCO / Ames (Jan 2023)", url: "https://news.ycombinator.com/item?id=34338373", note: "search DonHopkins in FAA ground-stoppage thread" }
+    - { title: "Don on Ron — Convolvotron / Ames tour invite (Dec 2024)", url: "https://news.ycombinator.com/item?id=24266722", note: "Apple M5 UMA thread; convolvatron user" }
+    - { title: "Don on Ron — dolphin intelligence / Apple ][ (Aug 2022)", url: "https://news.ycombinator.com/item?id=32039126" }
+  internal:
+    - sources/hacker-news-memorial.md
+
+see_also:
+  - { path: memorial.md, why: "Tribute — represent + discuss" }
+  - { path: ../don-hopkins/, why: "Late friend; HN memorial voice" }
+  - { path: ../coco-conn/, why: "Knew and loved Ron" }
+  - { path: ../david-levitt/, why: "Convolvotron / Body Electric orbit" }
+  - { path: ../dave-tristram/, why: "NASA Ames colleague era" }
+  - { path: ../marvin-minsky/, why: "Flies Ron's Ames simulator in documented video" }
+  - { path: ../don-hopkins/body-electric-bounce-vr-stack.md, why: "Convolvotron in the VR nervous system" }
+  - { path: ../../schemas/portrayal-standards.yml#memorial_mode, why: "Memorial handling" }

@@ -36,6 +36,9 @@ for linked segments if you're willing — or we honor her in the microworld show
 
 **What I'd love to explore with you — your pick, any order:**
 
+- **MOOLLM × trust × teaching** — microworld OS vs copilot; is this what you meant? Draft artifact:
+  [`moollm-trust-and-teaching-guess.md`](moollm-trust-and-teaching-guess.md). Quora recap:
+  [`media/quora-recaps/llms-copilots-trust-and-teaching.md`](media/quora-recaps/llms-copilots-trust-and-teaching.md).
 - **Microworlds and constructionism** — Dynabook, Logo, Etoys, MOOLLM as filesystem microworld.
   Proposed show seed: [`alan-kay-microworld.yml`](../../repo-shows/alan-kay-microworld.yml).
 - **Pie menus ↔ Fabrik** — your memory of "swiped pie menus" at Apple; direct-manipulation
@@ -53,6 +56,7 @@ for linked segments if you're willing — or we honor her in the microworld show
 | --- | --- |
 | **Microworld show seed** | [`repo-shows/alan-kay-microworld.yml`](../../repo-shows/alan-kay-microworld.yml) |
 | **Vanessa memorial arc** | [`repo-shows/remembering-vanessa-freudenberg.yml`](../../repo-shows/remembering-vanessa-freudenberg.yml) |
+| **MOOLLM × trust × teaching** | [`moollm-trust-and-teaching-guess.md`](moollm-trust-and-teaching-guess.md) |
 | **Conversation hooks** | [`ideas.md`](ideas.md) · [`correspondence.yml`](correspondence.yml) |
 | **Mail-sourced artifacts** | [`media/from-mail/`](media/from-mail/MANIFEST.yml) |
 | **Repo Show project** | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |

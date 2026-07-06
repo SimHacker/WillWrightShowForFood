@@ -65,6 +65,8 @@ sources:
     - "https://scholar.google.com/citations?user=D37XAbIAAAAJ"
   papers:
     - "Crutchfield, J.P. (1984). 'Space-time dynamics in video feedback.' Physica D 10:229–245."
+  correspondence:
+    - sources/2025-01-25-psychedelic-graphics-hn.md
     - "Packard, Crutchfield, Farmer, Shaw (1980). 'Geometry from a Time Series.' Phys. Rev. Lett. 45:712."
     - "Crutchfield & Mitchell (1995). 'The evolution of emergent computation.' PNAS 92:10742."
     - "Mitchell, Hraber, Crutchfield (1993). 'Revisiting the Edge of Chaos: Evolving Cellular Automata to Perform Computations.' SFI / arXiv:adap-org/9303003."

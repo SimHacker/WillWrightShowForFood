@@ -140,7 +140,7 @@ directory_layout:
       - costume.yml
       - images/
     images:
-      recommended: [images/headshot.png, images/avatar.png, images/with-guest.png]
+      recommended: [images/headshot.png, images/avatar.png, images/with-will.png]
       avatar_size: "128x128"
   why_moollm: |
     Teaches audience members MOOLLM character creation by doing. Self-authored characters

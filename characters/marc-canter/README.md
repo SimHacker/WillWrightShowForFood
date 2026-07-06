@@ -33,5 +33,5 @@ outrageous stories, many from **Amsterdam**, where Marc loves to visit.
 ## Sources
 - [Marc Canter — Wikipedia](https://en.wikipedia.org/wiki/Marc_Canter) *(confirm specifics)*
 
-*See also:* [`CHARACTER.yml`](CHARACTER.yml) · [`invitation.md`](invitation.md) ·
-[`../david-levitt/`](../david-levitt/)
+*See also:* [`CHARACTER.yml`](CHARACTER.yml) · [`invitation.md`](invitation.md) · [`ideas.md`](ideas.md) ·
+[`../david-levitt/`](../david-levitt/) · [`../../repo-shows/marc-canter/`](../../repo-shows/marc-canter/)

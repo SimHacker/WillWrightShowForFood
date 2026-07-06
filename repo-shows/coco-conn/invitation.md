@@ -1,14 +1,16 @@
 ---
-status: draft
+status: sent
 character_id: coco-conn
 public: true
 consent: not_yet_asked
 show_seed: repo-shows/coco-conn/
+sent_at: 2026-07-06
+sent_via: facebook
 ---
 
 # Repo Show invitation — Coco Conn
 
-*Public draft — not sent. Coco may edit, decline, delay, or request removal at any time.*
+*Sent 2026-07-06 via Facebook — awaiting reply. Coco may edit, decline, delay, or request removal at any time.*
 [Portrayal standards](../../schemas/portrayal-standards.yml)
 
 Coco —
@@ -40,10 +42,11 @@ What I'd love to hear, your pick:
   to add that I never knew.
 - **Forth thread** — your shop with **Charles** beside my **Mitch Bradley** / **Open Firmware** summer
   at Sun and the **CAM6** Forth lineage. Not academic — **P-Funk meets boot ROM**.
-- **Hackers Conference tapes** — I'd love to **watch highlights with you on air**: your **video tapes**
-  of people **speaking**, **giving demos**, **blowing minds**. **Rudy Rucker**, **[Scott Kim](../../characters/scott-kim/)**,
-  and a whole shelf of **dream guests** I already want on Repo Show — you narrate, we timestamp forks
-  in the repo. (See [`hackers-conference-tapes.md`](../../characters/coco-conn/hackers-conference-tapes.md).)
+- **Hackers Conference tapes** — watch **highlights on air** from your video archive: speakers, demos,
+  minds blown. First names on Don's list: **Rudy Rucker**, **[Scott Kim](../../characters/scott-kim/)**
+  (Hackers Conference logo, *Viewpoint*, ambigrams) — plus a shelf of **dream guests** already in
+  this repo. You narrate; we timestamp forks. See
+  [`hackers-conference-tapes.md`](../../characters/coco-conn/hackers-conference-tapes.md).
 
 Pair naturally with **[David Levitt](../../characters/david-levitt/)** (SIGKids serendipity) or solo —
 your call. Warm overlap with **[Dave Tristram](../../characters/dave-tristram/)**'s **live generative

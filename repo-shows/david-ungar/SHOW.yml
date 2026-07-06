@@ -1,0 +1,68 @@
+# SHOW — David Ungar (Self × MOOLLM)
+# Planted seed. Inherits from the SHOW skill (/skills/repo-show).
+# DREAM GUEST — Jan 2026 correspondence; invitation send_now.
+
+show:
+  id: david-ungar
+  title: "A Repo Show with David Ungar — Reflecting on Self: Narcissa's Mirror"
+  type: solo
+  host: Don Hopkins
+  guests: ["David Ungar"]
+  character: characters/david-ungar/
+  topic: "Self × MOOLLM — prototypes, mirrors, multiple parent slots, the Power of Simplicity; maps/PICs → V8; Conscientious Objectors; build something small on air that imports Self from Self."
+  status: warm_contact
+  dream_guest: true
+  format: remote_or_in_person
+  consent: not_yet_asked
+
+episode:
+  working_title: "Reflecting on Self: Narcissa's Mirror"
+  title_spelling_note: "Confirm 'Narcissa' spelling with David on air if needed"
+  subtitle: "Self × MOOLLM — `# import self from self`"
+
+why_him:
+  self: "Co-creator (with Randall B. Smith) of **Self** — prototype objects, no classes; multiple named `parent*` slots; dynamic reparenting. The clean prototype pole of 'slots all the way down.'"
+  power_of_simplicity: "Ungar & Smith's thesis wasn't 'The Power of Prototypes' — it was **The Power of Simplicity.** Prototypes were the means; simplicity was the lesson JavaScript missed."
+  implementation_lineage: "**Maps** and **polymorphic inline caches** (Chambers, Hölzle, Lars Bak) — how you make delegation fast; lineage runs Self → Strongtalk/HotSpot → **V8**. JS threw away Self's clean model but runs fast because of Self's implementation tech."
+  generosity: "Very open and influential — **self-interest!** mailing list, Kaleida **Conscientious Objectors** meetup (ScriptX × Self), papers, humor (*Self: The Movie*). Don: huge credit owed even if Self never shipped on every device."
+  in_spirit: "Self doesn't run on everybody's phone — **in spirit it does**: JavaScript's object model, HotSpot/V8, MOOLLM's directories-as-prototypes."
+  jan_2026: "Don wrote Jan 2026 about MOOLLM building on Self; warm thread in correspondence.yml."
+
+threads:
+  - "Self × MOOLLM live — directories as prototypes, skills as inheritable behavior, `# import self from self`"
+  - "**Narcissa's Mirror** — Self mirrors + narcissus wordplay + MOOLLM reflection"
+  - "**Conscientious Objectors** — Kaleida meetup: ScriptX object-system design team × Self team; artisanal vs vibe coding"
+  - "**Stage Magic Principle** → MOOLLM GLANCE / CARD / SKILL / README pyramid"
+  - "**Idea Scavenging** → persistent characters and skills"
+  - "**Dynamic deoptimization / Dynamic Depessimization** — when to reveal complexity"
+  - "**Slots all the way down** — Self as RISC/CHON of objects; multiple inheritance; what JS ⊂ Self lost"
+  - "**Relativistic parallelism** — 'Everything You Know (About Parallel Programming) Is Wrong!' vs git's many-worlds cosmology"
+  - "Self pun stack — self-interest!, self-ish, (oops)/OOPS, *Self: The Movie* (Don enumerates; David vetoes)"
+
+dream_segments:
+  - "Clone a MOOLLM skill from a prototype directory live — Self delegation in YAML on air."
+  - "Walk maps/PICs → V8 — the implementation story JavaScript borrowed without the model."
+  - "Multiple `parent*` slots in MOOLLM config — MI back, serializable parent lists."
+  - "Build one small microworld fragment with David — document in the open repo."
+
+pairings:
+  - { with: david-rosenthal/slots-all-the-way-down.md, why: "Rosetta table — Self as clean prototype pole; Dave Ungar section" }
+  - { with: alan-kay-microworld.yml, why: "Kay lineage — messaging + late binding; Ungar as Self branch" }
+  - { with: oliver-steele/, why: "Instance-first / LZX — prototype without class veneer" }
+  - { with: dan-ingalls/, why: "Smalltalk live objects → Self" }
+
+format:
+  live: true
+  audience_qa: true
+  zero_homework: true
+
+ties_to:
+  - ../../characters/david-ungar/
+  - ../../characters/david-ungar/invitation.md
+  - ../../characters/david-ungar/reflecting-on-self.md
+  - ../../characters/david-ungar/correspondence.yml
+  - ../../characters/david-rosenthal/slots-all-the-way-down.md
+  - ../../characters/don-hopkins/import-self-from-self.md
+  - ../../characters/don-hopkins/self-interest-narcissas-mirror-david-ungar.md
+  - ../../process/vision-and-ambition.yml
+  - SimHacker/moollm

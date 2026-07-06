@@ -16,10 +16,11 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: stub
+  status: draft
   consent: not_yet_asked
   document: README.md
-  note: "Don: 'absolutely add Chuck and invite him! Hope he's still doing well.' The overdue credit is the whole point."
+  contact: chuck@chuckbl.com
+  note: "Feb 2020: confirmed address; offered help; sent BE screenshots from OS9 dev Mac. Don: 'absolutely add Chuck and invite him!'"
 
 bio:
   summary: >
@@ -45,6 +46,9 @@ show_suggestions:
 sources:
   primary:
     - { title: "1999 Jaron↔Don email (Chuck-as-lead credit)", url: "https://www.donhopkins.com/home/archive/visual-programming/bounce-notes.txt" }
+    - sources/2020-02-17-body-electric-dev-system.md
+  media:
+    - media/body-electric/MANIFEST.yml
   web:
     - "http://www.jaronlanier.com/vpl.html"
 

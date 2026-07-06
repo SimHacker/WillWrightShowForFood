@@ -2,14 +2,20 @@
 
 Invitation portrayal — **not** David Ungar. [Standards](../../schemas/portrayal-standards.yml)
 
-**Field:** Self × MOOLLM; Kaleida **Conscientious Objectors** meetup (ScriptX × Self)
+**Field:** Self — The Power of Simplicity; Self × MOOLLM; maps/PICs → V8
 
-David Ungar was **very open and influential** — generous with ideas, patient with cross-pollination
-(Conscientious Objectors, **self-interest!**, decades of public work). Don's view: he deserves
-**a huge amount of credit** for where interactive computing is today. Self doesn't run on
-everybody's phone — **in spirit it does**: prototype objects, adaptive JIT, mirrors, and
-simplicity-under-complexity live in JavaScript, HotSpot, MOOLLM, and half the stacks we touch.
+**David Ungar** (with **Randall B. Smith**) co-created **Self** — prototype objects, **multiple
+`parent*` slots**, **mirrors**, no classes. His thesis was **simplicity**, not prototypes-as-end.
+He pioneered **generation-scavenging** GC and **adaptive JIT** (**maps**, polymorphic inline caches)
+— lineage into **HotSpot** and **V8**. He was **very open and influential**: **self-interest!**,
+Kaleida **Conscientious Objectors**, *Self: The Movie*, decades of generous cross-pollination.
+Don wrote in **Jan 2026** about MOOLLM building on Self.
 
-[Invitation](invitation.md) · [Correspondence](correspondence.yml) · [Show seed](../../repo-shows/david-ungar-self-moollm.yml) · Don's thread: [`../don-hopkins/import-self-from-self.md`](../don-hopkins/import-self-from-self.md)
+Self doesn't run on everybody's phone — **in spirit it does**.
+
+[Invitation](invitation.md) · [Reflecting on Self](reflecting-on-self.md) · [Show](../../repo-shows/david-ungar/README.md) · [Ideas](ideas.md) · [Correspondence](correspondence.yml)
+
+Don's threads: [`import-self-from-self`](../don-hopkins/import-self-from-self.md) ·
+[`slots-all-the-way-down`](../david-rosenthal/slots-all-the-way-down.md)
 
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

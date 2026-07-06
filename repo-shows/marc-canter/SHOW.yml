@@ -1,0 +1,39 @@
+# SHOW — Marc Canter — Director, People Aggregator, performer
+# Planted seed. Old friend of Don + David Levitt.
+
+show:
+  id: marc-canter
+  title: "A Repo Show with Marc Canter — Director, People Aggrivator & Puppets"
+  type: solo
+  host: Don Hopkins
+  guests: ["Marc Canter"]
+  with: ["David Levitt"]
+  character: characters/marc-canter/
+  topic: "MacroMind/Macromedia Director lineage → Bounce/MMP; open social web (People Aggregator); Amsterdam stories; live puppets + Pink Trombone."
+  status: seed
+  format: remote_or_in_person
+  consent: not_yet_asked
+
+why_him:
+  director_lineage: "Co-founded MacroMind (1984) → VideoWorks/Director → Macromedia — the desktop multimedia runtime Don + David's Bounce/MMP thread grew from."
+  open_social: "People Aggregator + Broadband Mechanics — open social web, digital identity, own-your-data (affectionately 'People Aggrivator')."
+  performer: "Born center-stage — reggae dancing cartoon avatar; will love Faceball puppets and Acapella Pink Trombone."
+  old_friends: "Don + David Levitt + Marc — decades of stories, many from Amsterdam."
+
+threads:
+  - "Director → Macromedia Player → Bounce — full-circle with David Levitt"
+  - "People Aggregator — what we got right early; what's still missing in 2026"
+  - "Amsterdam stories — Don, David, Marc (their pick on what's tellable on air)"
+  - "Faceball Construction Set — hand Marc puppets; reggae avatar meets repo puppets"
+  - "Acapella Pink Trombone sing-along — live vocal-tract jam"
+
+pairings:
+  - { with: ../../characters/david-levitt/, why: "Natural three-hander — MMP/Bounce + People Aggregator era" }
+  - { with: ../../repo-shows/rebounce/, why: "Director runtime lineage → Rebounce jam" }
+
+ties_to:
+  - ../../characters/marc-canter/
+  - ../../characters/marc-canter/invitation.md
+  - ../../characters/david-levitt/
+  - ../../apps/performance-space/faceball-construction-set.yml
+  - ../../apps/performance-space/pink-trombone-jam.yml

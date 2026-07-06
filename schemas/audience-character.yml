@@ -45,7 +45,7 @@ directory:
     recommended:
       - images/headshot.png
       - images/avatar.png
-      - images/with-guest.png
+      - images/with-will.png
     avatar_size: "128x128"
     template: repo-shows/_TEMPLATE/audience/images/README.md
 

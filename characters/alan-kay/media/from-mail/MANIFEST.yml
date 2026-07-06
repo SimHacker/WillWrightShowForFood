@@ -2,7 +2,7 @@
 
 character: alan-kay
 consent_note: Public respectful portrayal for invitation browsing; subject may request removal
-artifact_count: 13
+artifact_count: 12
 
 artifacts:
   - file: from-mail/artifact-14dcc4a2.jpg
@@ -32,9 +32,6 @@ artifacts:
   - file: from-mail/paper-multilingualetoys-smaller.jpg
     kind: artifact
     title: "paper-multilingualetoys-smaller"
-  - file: from-mail/photo-0wvl03notlmglj5fa.gif
-    kind: artifact
-    title: "photo-0wvl03notlmglj5fa"
   - file: from-mail/photo-1671293511762blob.jpg
     kind: artifact
     title: "photo-1671293511762blob"

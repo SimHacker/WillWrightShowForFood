@@ -49,10 +49,19 @@ show_suggestions:
   - "How you fit a whole world in 16K -- constraints as a design tool"
   - "The two-word parser vs. modern LLM natural-language parsing -- what's gained and lost"
   - "Adventure + AI: what LLMs mean for interactive fiction, world models, and adventure authoring (Scott is diving into AI now)"
-  - "Building the tools TOGETHER, live: a Repo Show where Don develops adventure-compiler tooling Scott can actually use"
+  - "Building the tools TOGETHER, live: compile biography + memory palace rooms; ship browser pages on air"
+  - "Two palaces one compiler — Scott biography rooms + Don career palace; mutual YAML seed exchange (MOOLLM north star)"
   - "Adventure International origin story; Questprobe and the Marvel license; the 1980s IF business"
 
+artifacts:
+  manifest: artifacts.yml
+  digest: correspondence-digest.md
+  dual_palace: moollm-dual-palace.md
+
 see_also:
+  - { path: artifacts.yml, why: "HN thread, MOOLLM, adventure compiler vision, correspondence pointers" }
+  - { path: correspondence-digest.md, why: "Public-safe Jan 2026 email themes" }
+  - { path: moollm-dual-palace.md, why: "Two careers one compiler — Repo Show north star" }
   - { path: CARD.yml, why: "Invokable abilities for show segments" }
   - { path: invitation.md, why: "Public invitation draft" }
   - { path: ../../repo-shows/scott-adams/ideas.md, why: "Full segment catalog for the show" }

@@ -28,7 +28,8 @@ memorial:
     - { who: ted-nelson, why: "Xanadu/hypertext peer; Engelbart officiated Ted's wedding to Marlene" }
     - { who: alan-kay, why: "PARC lineage; recalled the 1968 demo's impact (Yoot Saito interview)" }
     - { who: yoot-saito, why: "Interviewed Alan Kay for the 25th anniversary of Engelbart's 1968 demo" }
-    - { who: don-hopkins, why: "Cherishes an Engelbart keyset; augmentation thesis underlies the show's PITM" }
+    - { who: dave-maynard, why: "Fifty-year-old mouse collector; donated chord keyset to Stanford Hohbach; Old Farts Club thread with Don" }
+    - { who: don-hopkins, why: "SRI mouse + keyset from Mark Lottor; reproduction scan plan; augmentation thesis underlies PITM" }
   draw_on_for_shows:
     - "The Mother of All Demos (Dec 9, 1968) — NLS, the mouse, hypertext, video conferencing, collaborative editing in one sitting"
     - "'Augmenting Human Intellect: A Conceptual Framework' (1962) — bootstrapping, the augmentation thesis"
@@ -53,6 +54,7 @@ sources:
 
 see_also:
   - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
+  - { path: engelbart-mouse-and-keyset.md, why: "Mouse + chord keyset provenance, Maynard, Lottor, reproduction plan" }
   - { path: eulogy-ted-nelson.md, why: "Ted Nelson's eulogy — primary source for the memorial segment" }
   - { path: from-alan-kay.yml, why: "Kay on augmentation, inverse vandalism, PIXIE, Yoot interview" }
   - { path: ../yoot-saito/from-alan-kay.yml, why: "Yoot interviewed Engelbart; Alan reviewed transcript" }

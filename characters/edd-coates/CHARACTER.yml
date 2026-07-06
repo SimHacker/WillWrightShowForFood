@@ -7,7 +7,7 @@ character:
   type: invitation
   signifier: "👤"
   status: living
-  field: "UI Artist, Digital Designer, Creator of the Game UI Database"
+  field: "UI Artist; creator of the Game UI Database; author of The Game UI Bible; PadCrafter"
   home: characters/edd-coates/
 
 representation:
@@ -20,15 +20,32 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/edd-coates/
-
+  priority: send_now
+  note: "Friend of Don — GUIDB Guinness record; Game UI Bible (Lost in Cult 2026); ethical AI licensing; pie menus + PieCraft episode 2"
 
 bio:
-  summary: "**Edd Coates** — UI Artist, Digital Designer, and creator of the Game UI Database. Guinness World Record holder for the largest digital archive of video game interfaces. Author of *The Game UI Bible*. Friend of Don Hopkins; potential collaborator on ethical AI data licensing and UI preservation strategies."
+  summary: "**Edd Coates** — UI artist and digital designer; creator of the **[Game UI Database](https://www.gameuidatabase.com/)** (Guinness World Record — largest digital archive of video game interfaces; 73k+ screens, 1800+ games; used by Insomniac, Arkane, Double Fine, Ubisoft Montreal, and more). Author of ***The Game UI Bible*** (500+ pages, Lost in Cult, 2026). Creator of **PadCrafter 2.0**. Pocket Gamer Best Tools Provider 2021; Game Dev Heroes 2021. **Friend of Don Hopkins** — collaborator on ethical AI data licensing, UI preservation, and pie-menu archaeology."
+
+relationship:
+  don: "Friend — natural pairing for GUIDB + Repo Show ethical corpus strategy and PieCraft episode."
+
+show_suggestions:
+  - { seed: ../../repo-shows/edd-coates/, what: "Solo ep.1 — Game UI Database, Game UI Bible, ethical AI archives, anti-slop licensing" }
+  - { seed: ../../repo-shows/edd-coates/pie-menus-piecraft.yml, what: "Solo ep.2 — pie/radial menus in GUIDB; ultimate editable pies; PieCraft UI literacy" }
 
 sources:
   wikipedia: null
   web:
-    - https://www.gameuidatabase.com/
-    - https://www.eddcoatesdesign.com/
+    - { title: "Game UI Database", url: "https://www.gameuidatabase.com/" }
+    - { title: "Edd Coates Design", url: "https://www.eddcoatesdesign.com/" }
+    - { title: "Guinness World Record — largest digital archive of videogame interfaces", url: "https://www.guinnessworldrecords.com/world-records/726866-largest-collection-of-videogame-interfaces" }
+    - { title: "Animex speaker bio", url: "https://animex.tees.ac.uk/speaker_page.cfm?speaker=844" }
   papers: []
   blogs: []
+
+see_also:
+  - { path: game-ui-archive.md, why: "North star — two archivists, ethical licensing, two episodes" }
+  - { path: ../../repo-shows/edd-coates/, why: "Planted show" }
+  - { path: ../../repo-shows/edd-coates/pie-menus-piecraft.yml, why: "Pie menus + PieCraft episode" }
+  - { path: ../don-hopkins/pie-menus-chi-88-and-beyond.md, why: "Don's pie lineage — PIXIE → CHI'88 → Sims → PieCraft" }
+  - { path: CARD.yml, why: "Invokable abilities for show segments" }

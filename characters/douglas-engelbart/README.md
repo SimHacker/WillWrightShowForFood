@@ -6,6 +6,8 @@
 
 [Tribute](memorial.md)
 
-**Memorial mode:** we represent and *discuss* him — we do not interview him or speak as him. Episodes invite living people who knew him: [Ted Nelson](../ted-nelson/README.md) (Engelbart officiated Ted's wedding), [Alan Kay](../alan-kay/README.md), [Yoot Saito](../yoot-saito/README.md) (whose Alan Kay interview marked the 1968 demo's 25th anniversary).
+**Memorial mode:** we represent and *discuss* him — we do not interview him or speak as him. Episodes invite living people who knew him: [Ted Nelson](../ted-nelson/README.md) (Engelbart officiated Ted's wedding), [Alan Kay](../alan-kay/README.md), [Yoot Saito](../yoot-saito/README.md) (whose Alan Kay interview marked the 1968 demo's 25th anniversary), [David Maynard](../dave-maynard/README.md) (mouse collector; keyset at Stanford).
+
+**Hardware:** [`engelbart-mouse-and-keyset.md`](engelbart-mouse-and-keyset.md) — Don's SRI set, Maynard's donation, auction economics, tactile reproduction plan.
 
 His **augmentation, not automation** thesis is the spine of the [Crazy Idea Jam](../../process/CRAZY-IDEA-JAM.md)'s Player-in-the-Middle. Verifiable sources in `CHARACTER.yml`.

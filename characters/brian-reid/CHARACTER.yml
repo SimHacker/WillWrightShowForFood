@@ -1,0 +1,38 @@
+id: brian-reid
+name: Brian Reid
+slug: brian-reid
+role: guest
+status: active
+
+affiliations:
+  - Stanford University / CMU (Scribe; thesis advisor Bob Sproull)
+  - Xerox PARC consultant (Interpress era)
+  - Digital / DEC Research (Gatekeeper, Usenet backbone maps)
+
+tags:
+  - postscript
+  - interpress
+  - scribe
+  - laser-lovers
+  - history
+  - usenet
+
+connections:
+  - glenn-reid
+  - john-warnock
+  - bob-sproull
+  - butler-lampson
+  - don-hopkins
+  - owen-densmore
+
+show_seeds:
+  - repo-shows/postscript-distillery-to-pdf/
+
+invitation_status: send_ready
+
+notes: |
+  March 2, 1985 fa.laser-lovers post "PostScript and Interpress: a comparison" —
+  definitive first-person history from JAM through Adobe; Bob Sproull was thesis advisor.
+  Key philosophical split: Interpress guarantees properties; PostScript provides means.
+  Warnock's "linguistic motherboard" quote (via Owen Densmore → Don) inspired MOOLLM CARD.yml.
+  Brother of Glenn Reid (Distillery, Adobe PostScript books, TouchType).

@@ -31,8 +31,7 @@ comments_for_guest: |
   Loving chaos. Promo photos are primary sources in characters/will-wright/media/.
 
 media:
-  avatar: images/avatar.png
-  with_guest: images/with-guest-eating.png
+  with_will: images/with-will-eating.png
 
 costume_ref: costume.yml
 

@@ -1,11 +1,11 @@
 ---
-
-## status: warm
+status: warm
 character_id: scott-adams
 public: true
 consent: correspondence_verified
 show_seed: repo-shows/scott-adams/
 format: remote_or_in_person
+---
 
 # Repo Show invitation — Scott Adams
 
@@ -29,6 +29,12 @@ it not as one flat scroll, but as **mini-adventures on webpages** — the reader
 
 That's the same world I care about. Different toolchain, same architecture.
 
+**This is what MOOLLM is about for us:** your **biography** and my **career memory palace** — two
+lifetimes of material — represented as **interactive adventures** you can **walk and play**, not
+scroll. You said you're **also thinking about MOOLLM** now. I'd love to **show it to you live** on
+a **Repo Show**: compile a room together, ship a browser page, swap YAML seeds in the open repo.
+Not me talking *about* the adventure compiler — **running it with you on air.**
+
 In 1978 you didn't ship a monolithic program for every machine — you shipped **adventure-as-data**
 and a tiny interpreter that could run it anywhere. A whole world in sixteen kilobytes. Verb. Noun.
 Legible. Portable. I followed that idea into Terrapin **Logo Adventure** (the Logo REPL as the
@@ -37,12 +43,11 @@ parser — [Medium walkthrough](https://medium.com/@donhopkins/logo-adventure-fo
 where directories are rooms, YAML files are objects with behavior, and an LLM walks the palace
 with you instead of grepping blindly.
 
-You said you're **also thinking about MOOLLM** now. I'd love to make that thinking *visible* — not
-as a pitch, but as a **Repo Show**: a Repo Show Class conversation whose stage is a public GitHub
-repo, following through to working code anyone can browse without an account. **Show, don't tell.**
-
 **What I'd love to explore with you — your pick, any order, skip whatever bores you:**
 
+- **Two palaces, one compiler.** Your biography rooms + my career memory palace — same YAML grammar,
+  swap seeds as PRs. This is the heart of the show: **both our stories as interactive adventure.**
+  Brief: [`moollm-dual-palace.md`](../../characters/scott-adams/moollm-dual-palace.md).
 - **The engine was always a compiler.** Adventure-as-database + portable driver → Logo Adventure →
 adventure compiler → MOOLLM. Same idea, four decades; we trace it on air and make it *run* in a
 browser before the stream ends.
@@ -69,6 +74,9 @@ if we ever overlap. **Zero homework.** No slides required. If homeplay (instead 
 | **This show** (segment ideas)    | [repo-shows/scott-adams/](SHOW.yml)                                                                                                      |
 | **Your guest page**              | [characters/scott-adams/](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/scott-adams)                           |
 | **Conversation hooks**           | [ideas.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-adams/ideas.md)                                 |
+| **Dual palace brief**            | [moollm-dual-palace.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-adams/moollm-dual-palace.md)       |
+| **Jan 2026 correspondence**      | [correspondence-digest.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-adams/correspondence-digest.md) |
+| **Artifacts index**              | [artifacts.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-adams/artifacts.yml)                       |
 | **The adventure-compiler trail** | [don-hopkins/career/lineage.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/career/lineage.yml) |
 | **MOOLLM** (the repo itself)     | [github.com/SimHacker/moollm](https://github.com/SimHacker/moollm)                                                                       |
 | **The whole Repo Show project**  | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood)                                                              |

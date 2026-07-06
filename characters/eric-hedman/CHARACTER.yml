@@ -7,7 +7,7 @@ character:
   type: invitation
   signifier: "👤"
   status: living
-  field: "Animator, artist & game designer — original The Sims (character animation); design lead on Sims expansion packs; later Disney/Henson/Nickelodeon; now indie creator (irkinteraction — Aether HeXXen)"
+  field: "Animator, artist & game designer — original The Sims (character animation); design lead on Sims expansion packs; Pantomime Corporation (w/ David Levitt & Don Hopkins); later Disney/Henson/Nickelodeon; now indie creator (irkinteraction — Aether HeXXen)"
   home: characters/eric-hedman/
 
 representation:
@@ -23,15 +23,22 @@ invitation:
 
 
 bio:
-  summary: "**Eric Hedman (\"Irk\")** — animator, artist, and game designer. A **character animator on the original The Sims** (hand-tuned walk cycles, idles, and gestures for the vitaboy pipeline; the legendary canWiggle incident — Don checked in the debug; they're still great buddies), he went on to **design Sims expansion packs** (House Party, Livin' Large, Hot Date, Unleashed, and more) — building objects like the **mechanical bull** ('my baby'), the love bed, and the hot tub, and helping develop the cross-discipline **object-prototyping pipeline** (simplified 3D-Studio-Max objects rendered as stand-ins, then handed off and refined across artist → animator → programmer, iterated daily in the sandbox build). He animated vignettes and a laser blaster for the **Drew Carey Show** tie-in. Later he worked at **Disney, Jim Henson, Nickelodeon**, and others. Today he's an **independent creator** making adventures, visual novels, games, and VR/AR/MR — including **Aether HeXXen** (a 'space witch' visual novel) — mostly hand-crafted 2D/3D art and animation. His YouTube channel **@irkinteraction** is full of warm, funny, detailed Sims-development stories."
+  summary: "**Eric Hedman (\"Irk\")** — animator, artist, and game designer. A **character animator on the original The Sims** (hand-tuned walk cycles, idles, and gestures for the vitaboy pipeline; the legendary canWiggle incident — Don checked in the debug; they're still great buddies), he went on to **design Sims expansion packs** (House Party, Livin' Large, Hot Date, Unleashed, and more) — building objects like the **mechanical bull** ('my baby'), the love bed, and the hot tub, and helping develop the cross-discipline **object-prototyping pipeline** (simplified 3D-Studio-Max objects rendered as stand-ins, then handed off and refined across artist → animator → programmer, iterated daily in the sandbox build). He animated vignettes and a laser blaster for the **Drew Carey Show** tie-in. He later worked at **Pantomime Corporation** with **David Levitt** and **Don Hopkins** (Levitt CEO, Don Chief Architect). After that: **Disney, Jim Henson, Nickelodeon**, and others. Today he's an **independent creator** making adventures, visual novels, games, and VR/AR/MR — including **Aether HeXXen** (a 'space witch' visual novel) — mostly hand-crafted 2D/3D art and animation. His YouTube channel **@irkinteraction** is full of warm, funny, detailed Sims-development stories."
+
+connections:
+  the_sims: "Character animator on the original The Sims; design lead on expansion packs (House Party, Hot Date, Unleashed, etc.)."
+  pantomime: "Worked at Pantomime Corporation with David Levitt (CEO) and Don Hopkins (Chief Architect) — Sims-era colleagues reunited in AR/VR."
+  david_levitt: "Pantomime Corporation teammates; Levitt CEO, Don Chief Architect."
+  don: "Sims teammate and Pantomime colleague; canWiggle legend; still great buddies."
+  drew_carey: "Animated Sims vignettes + laser blaster for the Drew Carey Show tie-in (House Party)."
 
 why_invite: |
   Eric is an **independent contractor artist** (project- and hourly-based; not looking for 9-to-5
   work), so exposure is welcome — Don wants to **drive people to his YouTube channel
   (@irkinteraction)** and his indie projects. And the substance is gold: hand-crafted character
   animation is a huge part of what gives The Sims its soul, and Eric's stories — the vitaboy
-  pipeline, the canWiggle incident, the expansion packs, the Drew Carey Show tie-in, his years at
-  Disney / Henson / Nickelodeon — are funny, specific, and full of craft. There are **easily
+  pipeline, the canWiggle incident, the expansion packs, the Drew Carey Show tie-in, **Pantomime**
+  with David and Don, his years at Disney / Henson / Nickelodeon — are funny, specific, and full of craft. There are **easily
   several Repo Shows' worth** here, and he'd likely love it. His call on what's shared.
 
 indie_work:
@@ -62,6 +69,7 @@ story_seeds:
 show_suggestions:
   - { seed: ../../repo-shows/eric-hedman/, what: "The Sims animation up close — vitaboy walk cycles/idles/gestures, broad 'pantomime' animation under frame-budget constraints, the canWiggle incident; the craft behind the little Sims." }
   - { seed: ../../repo-shows/eric-hedman/, what: "Designing the Sims expansion packs — House Party (incl. the Drew Carey Show tie-in: vignette animations + laser blaster), Livin' Large, Unleashed — plus the years at Disney/Henson/Nick." }
+  - { seed: ../../repo-shows/eric-hedman/, what: "Pantomime reunion — Eric + David Levitt + Don; Sims animation craft meets AR/VR character work." }
   - { seed: ../../repo-shows/eric-hedman/, what: "Indie creator spotlight — Aether HeXXen visual novel + his hand-made 2D/3D art/animation pipeline. (Several shows' worth of stories.)" }
 
 sources:
@@ -76,6 +84,8 @@ sources:
   blogs: []
 
 see_also:
+  - { path: ../david-levitt/, why: "Pantomime Corporation colleagues; natural three-hander or paired episode" }
+  - { path: ../don-hopkins/media/pantomime/, why: "Pantomime era — Don Chief Architect" }
   - { path: ../will-wright/, why: "The Sims — Will's game; Eric on the original team" }
   - { path: ../jerry-martin/, why: "Fellow Sims-era indie creator who welcomes exposure" }
   - { path: ../../process/old-band-back-together.yml, why: "The original Sims team reunion" }

@@ -5,20 +5,53 @@ public work and documented connections to this repository. Things Don would love
 **with** Oliver Steele; not quotes, not claims about what they think.*
 [Portrayal standards](../../schemas/portrayal-standards.yml) · invitation guest · consent not_yet_asked
 
-## What Oliver has done
+## Shows
 
-Oliver Steele — Chief Software Architect at Laszlo Systems (2002–2007): designed the LZX XML interface language, implemented the XML + JavaScript compilers and runtime, and launched the OpenLaszlo open-source project (founding its Boston office). Known for instance-first development and reactive-programming ideas, and open-source work like Functional JavaScript and PyWordNet. Later at Apple (QuickDraw GX), Nest (Learning Thermostat backend), and teaching at NYU Shanghai and Olin College. Don worked with him on OpenLaszlo.
+| Show | Seed |
+|------|------|
+| **Solo — Instance-First** | [`repo-shows/oliver-steele/`](../../repo-shows/oliver-steele/) |
+| **Group — OpenLaszlo reunion** | [`repo-shows/openlaszlo/`](../../repo-shows/openlaszlo/) |
 
 ## The hooks
 
-### 1. Show seed: `repo-shows/openlaszlo/`
-walk the repo on air and build from the seed.
+### 1. Instance-First Development (2004)
 
-### 2. Laszlo chief architect (designed LZX, launched OpenLaszlo); instanc...
-irst/reactive; Marvin Minsky's son-in-law; OpenLaszlo reunion show
+[*Classes and Prototypes*](https://blog.osteele.com/2004/03/classes-and-prototypes/) — implement
+functionality for a **single instance**, refactor into a **class** only when a second case appears.
+*"It's easier to generalize from two examples than from one."* Don's MOOLLM **LIFT** gate is the
+same method: dogfood the instance, hoist the shared parent when a second real caller earns it.
+
+### 2. Instance Substitution Principle
+
+An instance of a class can be replaced by the **definition of the instance** without changing
+program semantics — because class-member and instance-member definitions are **syntactically
+parallel**. **LZX** had it: define a `<class>` and its name becomes a tag; an instance and its class
+read the same way. JavaScript 1.x violates this (Steele's own critique) — the "prototypes with a
+class veneer" complaint in [`slots-all-the-way-down`](../david-rosenthal/slots-all-the-way-down.md).
+
+### 3. LZX architecture — compilers, runtime, constraints
+
+Chief Software Architect at Laszlo Systems: XML + JavaScript → Flash *or* DHTML/Ajax; reactive
+state; data binding; animation. **Garnet** (Brad Myers, CMU) as ancestor — declare relationships,
+system keeps them true; OpenLaszlo as that idea on the web. Don's lineage:
+[`don-hopkins/career/lineage.yml`](../don-hopkins/career/lineage.yml).
+
+### 4. OpenLaszlo reunion — bring the apps back
+
+David Temkin AI-revived the Java toolchain (June 2026, per Henry Minsky). Run Don's old LZX demos
+live — Micropolis nl-NL taartmenu, PacBot, SimFaux, pie menus, von Neumann CA — on the resurrected
+stack. [`repo-shows/openlaszlo/`](../../repo-shows/openlaszlo/).
+
+### 5. Minsky family connection
+
+Marvin Minsky's son-in-law (per Don) — brother-in-law to [Henry](../henry-minsky/) and
+[Margaret](../margaret-minsky/). Optional bridge to Society-of-Mind / constructionism threads
+(Henry's solo show, skill-creation group) without speaking as Marvin ([memorial](../marvin-minsky/)).
 
 ## Sources (public)
 
-- [`invitation.md`](invitation.md)
-- Show seed: [`repo-shows/openlaszlo/`](../../repo-shows/openlaszlo/)
-- [`CHARACTER.yml`](CHARACTER.yml)
+- [Oliver Steele — personal site](https://osteele.com/)
+- [Classes and Prototypes / Instance-First (2004)](https://blog.osteele.com/2004/03/classes-and-prototypes/)
+- [Laszlo Presentation Server](https://osteele.com/products/laszlo-presentation-server/)
+- [`invitation.md`](invitation.md) · [`CHARACTER.yml`](CHARACTER.yml)
+- [`slots-all-the-way-down.md`](../david-rosenthal/slots-all-the-way-down.md) — instance/class seam

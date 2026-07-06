@@ -22,8 +22,9 @@ format:
 
 ties_to:
   - characters/heinz-lemke/
+  - characters/ben-shneiderman/
+  - repo-shows/ben-shneiderman/
   - repo-shows/pixie-pie-menus-pdp7.yml
-  - repo-shows/ben-shneiderman-series.yml
   - repo-shows/pie-menus-retrospective.yml
 
 consent: not_yet_asked

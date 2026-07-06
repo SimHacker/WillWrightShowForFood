@@ -20,13 +20,13 @@ Deep dive: [`homer-forth-flying-logos.md`](homer-forth-flying-logos.md) · hooks
 | Era | Thread |
 |-----|--------|
 | **1980s–90s HOMER** | Don reposted Coco & **Paul Rother**'s history on **Hacker News** (with permission) |
-| **Hackers Conference** | Coco's **video tapes** — speakers, demos, mind-blowers; proposed **watch-party** segment with **[Scott Kim](../scott-kim/)**, **Rudy Rucker**, more → [`hackers-conference-tapes.md`](hackers-conference-tapes.md) |
+| **Hackers Conference** | Video archive — speakers, demos, minds blown; highlight reel with Coco narrating → [`hackers-conference-tapes.md`](hackers-conference-tapes.md) |
 | **SIGKids** | Don: Coco is **"royalty and a goddess"** — kids off the main floor **make** the future; met **David Levitt** / **Bounce** there |
 | **Later** | **CitySpace** — collaborative virtual worlds for kids (stub); **2024** — Tapestry / Internet Archive intro via Bob Stein |
 
 ## Repo Show
 
-Draft invitation: [`repo-shows/coco-conn/invitation.md`](../../repo-shows/coco-conn/invitation.md) ·
+Draft invitation: [`repo-shows/coco-conn/invitation.md`](../../repo-shows/coco-conn/invitation.md) *(sent 2026-07-06 via Facebook)* ·
 seed: [`repo-shows/coco-conn/`](../../repo-shows/coco-conn/)
 
 Consent **not yet asked**.

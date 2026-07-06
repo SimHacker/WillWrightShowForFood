@@ -25,6 +25,9 @@ rebounce:
 
 see_also:
   - { path: README.md, why: "VR/VPL pioneer profile" }
+  - { path: sources/2007-01-02-olpc-rebounce-keith-mcmillen.md, why: "OLPC SimCity → Keith McMillen + Mary Lou Jepsen convergence; Max/Jitter → best-of architecture" }
+  - { path: sources/2023-01-24-dormouse-engelbart-minsky.md, why: "Engelbart vs Minsky quote; Bay Area reopen" }
+  - { path: ../don-hopkins/sources/2006-12-28-sugar-hyperlook-simcity-ideas.md, why: "Sugar mailing-list manifesto naming Body Electric + HyperLook" }
   - { path: ../don-hopkins/body-electric-bounce-vr-stack.md, why: "Don's firsthand Body Electric / Bounce VR-stack history — VPL's stack (Chuck Blanchard lead; Jaron's VPL)" }
   - { path: ../../repo-shows/rebounce/, why: "Rebounce — salute + hand+AI reimplementation jam, seeded by David + Jaron" }
   - { path: ../david-levitt/, why: "David created Hookup; Bounce = his Body Electric derivative; rights chain VPL → David (Body Electric) → Levity" }

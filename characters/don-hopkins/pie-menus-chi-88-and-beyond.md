@@ -40,7 +40,8 @@ Primary sources in mail archive: Wiseman notes on radial menus in PIXIE; Cambrid
 ## Primary sources
 
 - CHI'88 paper (linked from [`portrayal/presentations.yml`](portrayal/presentations.yml))
-- Dr. Dobb's Journal pie menu implementation article
+- Dr. Dobb's Journal — Ray Valdes pitch, draft outline, Buxton 12-item experiment (Sep 1991): [`sources/1991-09-pie-menus-buxton-ddj-draft.md`](sources/1991-09-pie-menus-buxton-ddj-draft.md)
+- Mark Weiser — demo tape, 6×6 alphabetic pies, stylus 26-quadrant hack (Mar 1991): [`sources/1991-03-mark-weiser-pie-menu-tape-stylus.md`](sources/1991-03-mark-weiser-pie-menu-tape-stylus.md)
 - [`career/lineage.yml`](career/lineage.yml) — bundle entry + `pie_menus_prehistory`
 - DonHopkins `talks/past/pie-menus-chi88.yml` (full talk package in private archive)
 
@@ -63,3 +64,11 @@ MicropolisCore design: [PieCraft](https://github.com/SimHacker/MicropolisCore/tr
 
 Museum stack for declarative pie menus on Internet Explorer 5 — ancestor of ConnectedTV Skin Editor.
 → [`ie-jscript-htc-xslt-pie-menus.md`](ie-jscript-htc-xslt-pie-menus.md)
+
+## Living lineage — Wedge for After Effects (Jul 2026)
+
+**Wedge** (Charchit Goyal / u/themotionguy) — context-aware pie menu **inside** After Effects: one shortcut, menu at cursor, verbs scoped to selection (keyframes, masks, shapes, text, comps). Inspired by Blender/Maya; beta via [charchitgoyal.com/plugins/wedge](https://charchitgoyal.com/plugins/wedge).
+
+Reddit: [r/AfterEffects thread](https://www.reddit.com/r/AfterEffects/comments/1uomg6a/im_building_a_contextaware_pie_menu_for_after/) — u/eye-flying: *"i will let don hopkins know. pie menu central."*
+
+Archive: [`media/pie-menus/2026-07-reddit-wedge-after-effects.md`](media/pie-menus/2026-07-reddit-wedge-after-effects.md) · field contact: [`../charchit-goyal/`](../charchit-goyal/)

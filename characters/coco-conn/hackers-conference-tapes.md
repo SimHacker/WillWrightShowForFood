@@ -6,9 +6,9 @@ TBD. Public anchor: [The Hackers Conference](https://en.wikipedia.org/wiki/The_H
 
 ## The hook
 
-Coco holds **video tapes** from **Hackers Conference** — people **speaking**, **giving demos**,
-**blowing minds**. A Coco show is not only **HOMER / Forth / Flying Logos**; we can **watch highlights
-together** on air, with Coco narrating what the room felt like.
+Coco holds **video tapes** from **Hackers Conference** — speakers, demos, minds blown. A Coco show is
+not only **HOMER / Forth / Flying Logos**; we can **watch highlights together** on air, with Coco
+narrating what the room felt like.
 
 Don's dream picks from the shelf (confirm what's actually on Coco's tapes):
 

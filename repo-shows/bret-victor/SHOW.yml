@@ -1,0 +1,44 @@
+# SHOW — Bret Victor — explorable explanations; media for thought
+# Planted from repo-shows/bret-victor-explorable.yml (seed kept in sync).
+
+show:
+  id: bret-victor
+  title: "A Repo Show with Bret Victor — Media for Thinking"
+  type: solo
+  host: Don Hopkins
+  guests: ["Bret Victor"]
+  character: characters/bret-victor/
+  topic: "Explorable explanations applied LIVE to Micropolis legibility — plus honest patronage-vs-shipping (Dynamicland)."
+  status: seed
+  format: remote_or_in_person
+  consent: not_yet_asked
+  alias_seed: bret-victor-explorable
+
+why_him:
+  explorable_explanations: "Reactive documents you think INSIDE of — natural medium for explaining and debugging a simulation like Micropolis."
+  inventing_on_principle: "Immediate connection between creation and result (CUSEC 2012); direct-manipulation gospel."
+  dynamicland: "Computing as physical, communal, humane medium — boldest living attempt at Engelbart's collective-intelligence vision."
+  engelbart_conscience: "Author of 'A few words on Doug Engelbart' — reads intent, not invention lists. Natural discussant for Engelbart memorial."
+
+threads:
+  - "Make Micropolis LEGIBLE — explorable overlays for RCI, land value, pollution, traffic"
+  - "Media for thinking the unthinkable — what a city sim teaches if you can see inside it"
+  - "Patronage vs shipping — Dynamicland as cautionary tale (honest, not hero-worship)"
+  - "Direct manipulation done right — pie menus, immediate feedback, no modes"
+  - "Engelbart memorial beat — what world was Doug trying to create, and how do we actually build it?"
+
+cautionary_tale:
+  honest_beat: "Dynamicland's brilliance AND its distribution problem are both the lesson."
+  not_hero_worship: "Per Bret's Engelbart essay — ask what world the work was for, not worship the achievement."
+
+group_shows:
+  - ../../repo-shows/remembering-douglas-engelbart.yml
+  - ../../repo-shows/remembering-jef-raskin.yml
+
+ties_to:
+  - ../../characters/bret-victor/
+  - ../../characters/bret-victor/invitation.md
+  - ../../characters/bret-victor/ideas.md
+  - ../../characters/douglas-engelbart/
+  - ../../process/trails/direct-manipulation.md
+  - ../../process/trails/augmentation-and-hypertext.md

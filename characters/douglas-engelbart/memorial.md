@@ -31,7 +31,9 @@ world was he trying to create?' By asking that question, you put yourself in a p
 that world yourself."*
 
 The group tribute is seeded here: [**Remembering Douglas Engelbart**](../../repo-shows/remembering-douglas-engelbart.yml)
-(Ted Nelson · Alan Kay · Yoot Saito · Bret Victor).
+(Ted Nelson · Alan Kay · Yoot Saito · Bret Victor · **David Maynard** on tactile hardware).
+
+**Hardware thread:** Don holds an SRI mouse + keyset (from Mark Lottor); **David Maynard** posted his fifty-year-old mouse on the Internet Old Farts Club and donated his chord keyset to Stanford's Hohbach collection. See [`engelbart-mouse-and-keyset.md`](engelbart-mouse-and-keyset.md).
 
 We celebrate his documented public work; we do not speak as him.
 

@@ -25,6 +25,8 @@ olpc:
 
 har_constructionist:
   talk: "HAR (Hacking at Random) — constructionist education Micropolis demo"
+  transcript: "https://donhopkins.medium.com/har-2009-lightning-talk-transcript-constructionist-educational-open-source-simcity-by-don-3a9e010bf305"
+  alan_kay_10_20: "../../alan-kay/media/quora-recaps/microworlds-sure-and-ten-things-heuristic.md#repo-show-connection--har-2009-micropolis-lightning-talk-dons-guess"
   photos:
     - har-talk-olpc-handheld.png
     - har-constructionist-talk-podium.png

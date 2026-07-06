@@ -3,36 +3,49 @@ status: draft
 character_id: marc-canter
 public: true
 consent: not_yet_asked
+show_seed: repo-shows/marc-canter/
+format: remote_or_in_person
+priority: send_ready
+pair_with: david-levitt
 ---
 
 # Repo Show invitation — Marc Canter 🎬🕺
 
-*Public draft — not sent. Marc Canter may edit, decline, delay, or request removal at any time.*
+*Send-ready draft — not yet sent. Marc Canter may edit, decline, delay, or request removal at any time.*
 [Portrayal standards](../../schemas/portrayal-standards.yml)
 
 Marc —
 
-Your character directory is open, and we'd be delighted to have you on a **Repo Show** — a
-Repo Show Class conversation staged in
-[this public repository](https://github.com/SimHacker/WillWrightShowForFood), with **David Levitt** and
-Don in the room and a whole trove of stories to tell (many, of course, from **Amsterdam**).
+Your character directory is open. We'd be **delighted** to have you on a **Repo Show** — a live,
+friendly conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood).
+**Show, don't tell:** ideas become running code, puppets, and playable moments on stream.
 
-## What we'd get into
-- **MacroMind → Macromedia → Director** — you helped invent **desktop multimedia authoring**. That
-  runtime lineage (VideoWorks → Director → **Macromedia Player / MMP**) is exactly what Don + David's
-  **Bounce** was built on. Full-circle conversation.
-- **People Aggregator / Broadband Mechanics** — the **open social web**, digital identity, owning your
-  own data. (Yes, we'll affectionately call it "**People Aggrivator**" at least once. 😉)
-- **The stories** — old friends and colleagues, decades of them.
-- **The puppets** — you're a born center-stage performer with your **own reggae dancing cartoon
-  character**, so you're going to *love* the **[Faceball Construction Set](../../apps/performance-space/faceball-construction-set.yml)**.
-  We'd love to give you some puppets to drive.
-- **The Acapella [Pink Trombone](https://dood.al/pinktrombone/) Sing-Along** — a bunch of us singing
-  through a playable vocal tract, live. This has your name on it.
+**David Levitt** and I would love you in the room — old friends, decades of stories (many from
+**Amsterdam**), and a full-circle thread from **Director** to **Bounce**.
 
-Low-pressure and **time-shifted**: record a solo bit whenever you like, and/or a relaxed one-on-one
-(or three-way with David and Don), edited together into a longer show.
+**Threads — your pick:**
 
-**Your response:** Accepted, delayed, too busy, declined, or no reply — all honored gracefully.
+- **MacroMind → Macromedia → Director** — you helped invent desktop multimedia authoring. That runtime
+  lineage (VideoWorks → Director → **Macromedia Player / MMP**) is exactly what David and I built
+  **Bounce** on. Let's trace it live.
+- **People Aggregator / Broadband Mechanics** — the open social web, portable identity, own your data.
+  (Yes, we'll affectionately call it **"People Aggrivator"** at least once.)
+- **The Amsterdam stories** — your call on what's tellable on air.
+- **The puppets** — you're a born center-stage performer with your **reggae dancing cartoon character**,
+  so you're going to love the **[Faceball Construction Set](../../apps/performance-space/faceball-construction-set.yml)**.
+  We'd love to hand you puppets to drive.
+- **Acapella [Pink Trombone](https://dood.al/pinktrombone/) sing-along** — a bunch of us singing through
+  a playable vocal tract. This has your name on it.
+
+Low-pressure and **time-shifted**: solo bit whenever you like, and/or a relaxed one-on-one or
+three-way with David and me.
+
+No homework trap. Accepted, delayed, declined, or no reply — all honored gracefully.
 
 — Don Hopkins, Repo Show Class
+
+| | |
+|---|---|
+| **Show seed** | [`repo-shows/marc-canter/`](../../repo-shows/marc-canter/README.md) |
+| **Your guest page** | [`characters/marc-canter/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/marc-canter) |
+| **David Levitt** | [`characters/david-levitt/`](../../characters/david-levitt/) |

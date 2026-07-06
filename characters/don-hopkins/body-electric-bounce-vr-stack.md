@@ -9,7 +9,9 @@ salute, not a spec.*
 [Portrayal standards](../../schemas/portrayal-standards.yml) ·
 Trail: [visual-programming-patch-cord](../../process/trails/visual-programming-patch-cord.md)
 
-## The groove
+**Eric Hosick VPL collection** — "All the Widgets for VPLs" (2014): [`sources/2014-vpl-snapshots-eric-hosick-thread.md`](sources/2014-vpl-snapshots-eric-hosick-thread.md)
+
+**Chuck Blanchard screenshots** (Feb 2020): [`../chuck-blanchard/media/body-electric/`](../chuck-blanchard/media/body-electric/)
 
 This was the **grooviest groove** I have ever gotten into — the flow of programming and exploring
 interactive-simulation possibility space in real time, **while it was running.** You'd reach into a
@@ -31,7 +33,9 @@ editable patch:
 - **The skeleton as a data type — Swivel 3D.** The articulated body was an **integrated 3D
 transform-tree data type**: literally **Swivel 3D save files** — a hierarchy of joints/transforms —
 whose parameters were **projected in real time** by the running patch. The save file *was* the
-skeleton; Bounce animated its parameters.
+skeleton; Bounce animated its parameters. Jaron (2020): Swivel 3D was **written in FORTH** by
+"young Harvill" — hard to scale; namespace ran out → lost to other modelers.
+→ [`sources/2020-06-swivel3d-forth-jaron.md`](sources/2020-06-swivel3d-forth-jaron.md)
 - **Stereo out over UDP.** **UDP packet modules** streamed the projected transform parameters to
 **two SGI renderers at once — one per eye**, each with a **different perspective**. That's the
 stereo VR view: the patch computes, the packets fly, both eyes render.
