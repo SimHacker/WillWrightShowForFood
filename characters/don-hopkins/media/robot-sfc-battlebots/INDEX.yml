@@ -14,5 +14,3 @@ artifacts:
     sidecar: robot-sfc-battlebots-stupid-fun-club-wedge-pair.yml
   - file: robot-sfc-battlebots-treaded-wheel-warning-sticker.png
     sidecar: robot-sfc-battlebots-treaded-wheel-warning-sticker.yml
-
-note: "Not AI Generated!"

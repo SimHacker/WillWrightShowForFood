@@ -18,5 +18,3 @@ artifacts:
     sidecar: olpc-dinner-suits-formal-table-demo.yml
   - file: olpc-dinner-will-wright-wine-glasses.png
     sidecar: olpc-dinner-will-wright-wine-glasses.yml
-
-note: "Not AI Generated!"

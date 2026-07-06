@@ -20,5 +20,3 @@ artifacts:
     sidecar: software-simcity-tcl-tk-multiplayer-talk-nuke.yml
   - file: software-simcity-tcl-tk-overlay-maps-graph.png
     sidecar: software-simcity-tcl-tk-overlay-maps-graph.yml
-
-note: "Not AI Generated!"

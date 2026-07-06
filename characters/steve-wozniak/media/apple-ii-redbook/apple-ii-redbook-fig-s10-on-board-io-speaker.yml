@@ -21,5 +21,3 @@ hardware:
   speaker: "2 1/4 inch 8 ohm speaker jack B14A"
   cassette: [CASSETTE IN K12, CASSETTE OUT]
   circuit: "74LS74 → MPSA13 Darlington → speaker"
-
-note: "Not AI Generated!"

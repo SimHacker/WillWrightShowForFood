@@ -21,5 +21,3 @@ auto_art_theft_grand:
   spec: ../../process/auto-art-theft-grand.yml
   slats_ledger: ../../characters/robots/slats/auto-stolen-collection.yml
   batch_runs: []
-
-note: "Not AI Generated!"

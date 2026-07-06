@@ -6,7 +6,6 @@ artifact:
   type: screenshot
   format: png
   era: "~1989"
-  note: "Not AI Generated!"
 
 what_it_is:
   stack: NeMACS + HyperTIES on NeWS

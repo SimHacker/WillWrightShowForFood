@@ -1,7 +1,11 @@
 # coco-conn — media
 
 character: coco-conn
-consent_note: Portrait of Coco Conn; confirm before public use beyond invitation stub
+consent_note: Portrait of Coco Conn; confirm before public use beyond invitation draft
+
+related_docs:
+  - ../homer-forth-flying-logos.md
+  - ../../repo-shows/coco-conn/invitation.md
 
 artifacts:
   - file: photo-amsterdam-small-talk-eating-house.jpeg

@@ -46,5 +46,3 @@ artifacts:
     sidecar: travel-amsterdam-space-invader-mosaic-stone.yml
   - file: travel-amsterdam-space-invader-sticker.png
     sidecar: travel-amsterdam-space-invader-sticker.yml
-
-note: "Not AI Generated!"

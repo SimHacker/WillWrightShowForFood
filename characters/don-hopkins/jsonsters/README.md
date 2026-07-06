@@ -2,7 +2,7 @@
 
 **JSON Monsters.** Unity3D structural graphs of JSON data — nodes, arcs, rainbow bows, hex islands, then creatures named Blob, Bloop, and Bleep. Built at Facebook, inspired by the PseudoScientific Visualizer, stress-tested until it screamed for pie menus.
 
-**Not AI Generated!**
+**Not AI Generated Art! Just AI Generated Patrons.**
 
 This is not a white-cube show in Chelsea. But on third Thursday, eight fictional patrons behave as if it were — and that simulation is the other half of the artwork.
 

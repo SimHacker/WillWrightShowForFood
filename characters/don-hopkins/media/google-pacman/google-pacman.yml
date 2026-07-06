@@ -19,5 +19,3 @@ maps:
 
 repo_orbit:
   gallium_pacman: ../../../will-wright/media/gallium-gdc-alameda-pacman-will-wright.yml
-
-note: "Not AI Generated!"

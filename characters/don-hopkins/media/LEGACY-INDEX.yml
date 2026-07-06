@@ -1,11 +1,10 @@
-# Don Hopkins media — legacy rooms index (batch-6 sidecars complete 2026-07)
-# Themed directories predating category-first reorg; each PNG now has co-located .yml sidecar.
+# Don Hopkins media — legacy rooms index
+# Themed directories predating category-first reorg; each PNG has a co-located .yml sidecar.
 
 meta:
   png_count: 387
   sidecar_count: 387
   completed: "2026-07"
-  generator: _tools/generate_legacy_sidecars.py
 
 legacy_rooms:
   sims-transmogrifier:
@@ -90,8 +89,8 @@ legacy_rooms:
   olpc-gdc:
     count: 1
 
-batch6_rooms:
-  note: "Category-first dirs from batch-6 reorg — see CATALOG-INDEX.yml"
+category_first_rooms:
+  note: "Category-first dirs from media reorg — see CATALOG-INDEX.yml"
   count: 120
 
 gag_index: ../../../repo-shows/ideas/gags/INDEX.yml

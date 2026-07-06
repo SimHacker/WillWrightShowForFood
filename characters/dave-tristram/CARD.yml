@@ -1,0 +1,91 @@
+# CARD — David A. Tristram (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: dave-tristram
+  name: David A. Tristram
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.yml
+  card_type: guest_skills
+card:
+  name: David A. Tristram
+  title: The Raster Master
+  rarity: rare
+  signifier: 🎸
+  flavor: Triangles on an Onyx — until the crowd rejoices.
+abilities:
+- id: PANEL-LIBRARY
+  name: Panel Library
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: panelLibrary
+    signature: panelLibrary(GL, sliders) → 3D performance UI for a live image generator
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.9
+  effect: Beveled 3D GL widgets on animated objects; bouncing slider banks scrub Electropaint in real time.
+  verifiable: "Tristram (1989). Controlling Virtual Worlds with the Panel Library. USENIX Fifth Computer Graphics Workshop, Monterey, pp. 83–92."
+  combos_with:
+  - ELECTROPAINT
+- id: ELECTROPAINT
+  name: Electropaint
+  type: activated
+  mana: '{U}{R}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: electropaint
+    signature: electropaint(triangles, rules) → screensaver that became a stage instrument
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.9
+  effect: Simple geometry, complex motion — the NASA Ames screensaver that taught a generation what live GL could feel like.
+  verifiable: "Electropaint (TM) — David A. Tristram / Tristram Visual; SGI IGL / Panel Library distribution"
+  combos_with:
+  - DON-PORTER-DUFF-WEBGPU
+- id: RASTER-MASTERS
+  name: Raster Masters
+  type: activated
+  mana: '{R}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: rasterMasters
+    signature: rasterMasters(MIDI, Onyx) → visual music ensemble behind live bands
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Lug the million-dollar rig, plug into the board, improvise psychedelic graphics to live music — Dead, Hancock, Nash.
+  verifiable: "Wired 2.06 (1994) — 'Raster Masters'"
+  combos_with:
+  - MUSICAL-GAS
+  - BRIAN-ENO-AMBIENT
+- id: CA-FEEDBACK-PERFORM
+  name: CA Feedback Performance
+  type: activated
+  mana: '{U}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: caFeedbackPerform
+    signature: caFeedbackPerform(rules, feedback) → reaction-diffusion + CA + video mix, live
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: CelLab, *Chaos*, and Margolus's book — generative rules wired for the stage, not the lab bench.
+  verifiable: "HN Psychedelic Graphics thread — David Tristram on CelLab + CAM book influences"
+  combos_with:
+  - DON-CELLULAR-AUTOMATA
+  - VIDEO-FEEDBACK
+see_also:
+  - ../don-hopkins/cam6-cellular-automata-machine.md
+  - ../norman-margolus/
+  - ../../repo-shows/dave-tristram/

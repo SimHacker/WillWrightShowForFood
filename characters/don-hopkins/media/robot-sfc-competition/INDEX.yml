@@ -18,5 +18,3 @@ artifacts:
     sidecar: robot-sfc-competition-rc-transmitter-pit-bench.yml
   - file: robot-sfc-competition-treaded-battlebot-side-profile.png
     sidecar: robot-sfc-competition-treaded-battlebot-side-profile.yml
-
-note: "Not AI Generated!"

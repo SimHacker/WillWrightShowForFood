@@ -14,5 +14,3 @@ artifacts:
     sidecar: computing-vintage-tape-drive-console-bw.yml
   - file: computing-vintage-will-wright-circuit-board-lab.png
     sidecar: computing-vintage-will-wright-circuit-board-lab.yml
-
-note: "Not AI Generated!"

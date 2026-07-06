@@ -16,5 +16,3 @@ artifacts:
     sidecar: software-openlaszlo-pie-menus-graphic.yml
   - file: software-openlaszlo-von-neumann-29-state-ca.png
     sidecar: software-openlaszlo-von-neumann-29-state-ca.yml
-
-note: "Not AI Generated!"

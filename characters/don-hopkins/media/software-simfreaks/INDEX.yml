@@ -14,5 +14,3 @@ artifacts:
     sidecar: software-simfreaks-nuit-bleu-catalog.yml
   - file: software-simfreaks-nuit-bleu-catalog-dup.png
     sidecar: software-simfreaks-nuit-bleu-catalog-dup.yml
-
-note: "Not AI Generated!"

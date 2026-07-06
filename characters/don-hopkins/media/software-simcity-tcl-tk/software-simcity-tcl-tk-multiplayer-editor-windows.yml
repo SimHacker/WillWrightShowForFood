@@ -7,5 +7,3 @@ artifact:
   subcategory: simcity-tcl-tk
   what: "Multiple editor windows on one X11 desktop"
   sidecar_of: software-simcity-tcl-tk-multiplayer-editor-windows.png
-
-note: "Not AI Generated!"

@@ -28,5 +28,3 @@ repo_orbit:
   nemacs_hubble: ../../nemacs-hyperties-news-hubble.yml
   ben_shneiderman: ../../../ben-shneiderman/CHARACTER.yml
   reincarnation: ../../hyperties-reincarnation.md   # pixel-perfect living-emulator plan (Forth/MockLisp/C/markup/docs/NeWS PS + XML DBs)
-
-note: "Not AI Generated!"

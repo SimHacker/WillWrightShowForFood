@@ -4,7 +4,6 @@
 
 Critics: [`critics.yml`](critics.yml) · Reviews: [`reviews.yml`](reviews.yml) · Series: [`series.yml`](series.yml)
 
-**Not AI Generated!**
 
 ---
 

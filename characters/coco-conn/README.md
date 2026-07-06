@@ -1,21 +1,35 @@
-# Coco Conn 🧒
+# Coco Conn 🎛️
 
-*Invitation stub — Don wants Coco invited to talk about SIGKids and more. Not yet asked. See
-[`CHARACTER.yml`](CHARACTER.yml).*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+**HOMER & Assoc.** — real-time visual mixing, **Forth**, **Charles Moore**, ***Atomic Dog***,
+***Flying Logos***. **SIGGRAPH SIGKids** — where Don met **[David Levitt](../david-levitt/)**.
 
-**Coco Conn** — a beloved figure in the computer-graphics world, tied to the **SIGKIDS / SIGGRAPH
-kids' programs** and early collaborative virtual worlds for children (**CitySpace**). Don met her at
-SIGGRAPH's SIGKids area — the same happy accident where he ran into **David Levitt** showing Bounce's
-animated band. Don's words: "royalty and a goddess."
+## The HOMER story (public)
 
-Several facts are **to confirm** (role/titles, the "Dutch from Amsterdam" descriptor, contact path) —
-see [`CHARACTER.yml`](CHARACTER.yml).
+Peter and Coco Conn ran **HOMER & Assoc.** at **Sunset Gower Studios** (1977–1997). Their **Homer II**
+console — **16 slide projectors**, **4 film projectors**, **24 Z80 channels**, touch **faders**, **joystick
+bumper** — was **performed live** like an audio mixer, then recorded to **IP film** on Peter's **optical
+printer**. They **hired Forth, Inc.**; **Charles Moore** programmed the host in **PolyForth** (**32K**).
+Out of that pipeline: ***Atomic Dog***, ***Abracadabra***, **RoboCop**, **Total Recall**, and ***Flying
+Logos*** at **SIGGRAPH 1989**.
 
-- Neighbor: [Don & David's history](../david-levitt/don-and-david-history.md)
+Deep dive: [`homer-forth-flying-logos.md`](homer-forth-flying-logos.md) · hooks:
+[`ideas.md`](ideas.md) · [`CHARACTER.yml`](CHARACTER.yml)
+
+## Don ↔ Coco
+
+| Era | Thread |
+|-----|--------|
+| **1980s–90s HOMER** | Don reposted Coco & **Paul Rother**'s history on **Hacker News** (with permission) |
+| **SIGKids** | Don: Coco is **"royalty and a goddess"** — kids off the main floor **make** the future; met **David Levitt** / **Bounce** there |
+| **Later** | **CitySpace** — collaborative virtual worlds for kids (stub) |
+
+## Repo Show
+
+Draft invitation: [`repo-shows/coco-conn/invitation.md`](../../repo-shows/coco-conn/invitation.md) ·
+seed: [`repo-shows/coco-conn/`](../../repo-shows/coco-conn/)
+
+Consent **not yet asked**.
 
 ## Media
 
-| Artifact | Where |
-|----------|--------|
-| Amsterdam visit (May 2024) | [`media/photo-amsterdam-visit-2024.jpeg`](media/photo-amsterdam-visit-2024.jpeg) · [`media/MANIFEST.yml`](media/MANIFEST.yml) |
+[`media/MANIFEST.yml`](media/MANIFEST.yml) — portrait placeholder; Amsterdam visit photo (2024).

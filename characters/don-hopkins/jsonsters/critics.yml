@@ -146,5 +146,3 @@ tour_projection:
 scope:
   active_tours: [jsonsters]
   pending_galleries: [nemacs-hyperties-news-hubble, turing-institute/robot-olympics-cardiff-1990]
-
-note: "Not AI Generated!"

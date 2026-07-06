@@ -7,5 +7,3 @@ artifact:
   subcategory: sfc-competition
   what: "Combat chassis internals — motors battery wiring"
   sidecar_of: robot-sfc-competition-chassis-internals-workbench.png
-
-note: "Not AI Generated!"

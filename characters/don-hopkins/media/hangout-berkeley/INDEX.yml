@@ -16,5 +16,3 @@ artifacts:
     sidecar: hangout-berkeley-espresso-check-in.yml
   - file: hangout-berkeley-stupid-fun-club-lounge-bar.png
     sidecar: hangout-berkeley-stupid-fun-club-lounge-bar.yml
-
-note: "Not AI Generated!"

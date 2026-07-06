@@ -16,5 +16,3 @@ artifacts:
     sidecar: robot-sfc-telepresence-extrusion-sandwich-shop-demo.yml
   - file: robot-sfc-telepresence-stupid-fun-club-medallion.png
     sidecar: robot-sfc-telepresence-stupid-fun-club-medallion.yml
-
-note: "Not AI Generated!"

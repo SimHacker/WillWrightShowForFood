@@ -10,5 +10,3 @@ room:
 artifacts:
   - file: software-blabber-character-network-graph.png
     sidecar: software-blabber-character-network-graph.yml
-
-note: "Not AI Generated!"

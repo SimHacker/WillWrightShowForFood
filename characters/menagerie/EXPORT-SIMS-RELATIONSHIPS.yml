@@ -94,5 +94,3 @@ import_protocol: |
   On uplift: merge exports[N] into character SIMS-UPLIFT.yml relationships block.
   On homecoming: write relationships from SIMS-UPLIFT back into matrix sims scores only.
   Narrative, type, symbolic edges remain MOOLLM-only.
-
-note: "Not AI Generated!"

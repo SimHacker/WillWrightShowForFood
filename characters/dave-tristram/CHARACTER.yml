@@ -1,49 +1,111 @@
 # Dave Tristram — invitation portrayal. NOT Dave Tristram.
 # Standards: ../../schemas/portrayal-standards.yml
-# STUB: placeholder — Don to verify/fill bio. Do NOT cite unverified facts as fact.
 
 character:
   id: dave-tristram
-  name: "Dave Tristram"
+  name: "David A. Tristram"
   type: invitation
-  signifier: "👤"
+  signifier: "🎸"
   status: living
-  field: "Graphics + cellular-automata hacking (details to confirm with Don)"
+  field: "Live generative graphics — Electropaint, Raster Masters visual-music ensemble, reaction-diffusion, video feedback, and cellular-automata-inspired performance"
   home: characters/dave-tristram/
+  aliases: ["Dave Tristram", "David Tristram", "Tristram Visual"]
 
 representation:
   governed_by: ../../schemas/portrayal-standards.yml
-  consent_level: 2
+  consent_level: 3
   authored_by: don-hopkins
-  note: "STUB. Host-authored placeholder from Don's memory only. Bio unverified — fill from a real source before publishing/citing. Dave may edit, reduce, or delete anytime."
+  note: "Public-source portrayal + Don's firsthand friendship (SGI/graphics/CA orbit). Consent not yet asked."
+  subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
   status: draft
   consent: not_yet_asked
-  document: invitation.md
-  show_seed: repo-shows/norman-margolus/   # invited to the CA looping fest
+  document: ../../repo-shows/dave-tristram/invitation.md
+  show_seed: repo-shows/dave-tristram/
+  likelihood: "warm — old friend; shared turf (live CA/feedback graphics, CAM book lineage) is the in"
 
 bio:
-  summary: "PLACEHOLDER — Don's friend from the graphics / cellular-automata world; invited to the CA looping fest with Norman Margolus, Stephen Wolfram, Will Wright, and Brian Eno."
-  facts_to_confirm:
-    - "Full name / preferred name and any middle initial"
-    - "Where Don knows him from (SGI? graphics community? CA/Forth scene?) — confirm"
-    - "Notable work / projects to credit accurately (graphics tools, CA, screensavers, demos?)"
-    - "Current affiliation + a public link (personal site / GitHub / LinkedIn)"
-    - "Whether he prefers solo async video, 1-on-1, or the group looping fest"
+  summary: |
+    **David A. Tristram** is a pioneer of **real-time graphics for live performance**. Don met Dave in
+    the **mid–late 1980s** at the **USENIX Fifth Computer Graphics Workshop**, **Monterey** (16–17 Nov
+    1989) — Dave presenting the **Panel Library**, Don presenting the **PSIBER Space Deck** (visual
+    PostScript programming and debugger for **NeWS**). At **NASA Ames** Dave (with **Eric Raible**)
+    had built that **3D GL user-interface toolkit** (beveled widgets in GL, some attached to animated
+    3D objects) for interactive visualization. The toolkit became **Electropaint**'s **live performance
+    console** (banks of bouncing sliders — value, min, max, speed, wrap — scrubbed in real time). Electropaint became the legendary **SGI/IRIX**
+    screensaver/demo; extended versions powered **Raster Masters**, the 1990s **visual-music
+    ensemble** Dave co-founded with **Creon Levit** and **Ron Fischer** — **Maggie Hoppe** (video
+    switcher), **Johnathan Nelson** (sound) — **MIDI-reactive, multi-operator psychedelic graphics**
+    on **Onyx** rigs at **Shoreline Amphitheatre**, on tour with the **Grateful Dead** (footage on
+    *Infrared Roses*), and with **Herbie Hancock** and **Graham Nash** (*Wired*, 1994–1995). Shared
+    **Panel Library + Electropaint source** freely — Dead-scene taping ethos applied to code.
+    **NASA Ames → SGI → Adobe**; **Viviography** / **Tristram Visual** (Electropaint™). Still
+    performing (2025): **Resolume Avenue**, **TouchDesigner**. Generative influences he has
+    cited publicly include CelLab, *Chaos*, reaction-diffusion, feedback, and Toffoli & **Norman
+    Margolus**'s *Cellular Automata Machines*.
+  known_for:
+    - "USENIX Monterey 1989 — Panel Library paper; met Don Hopkins (PSIBER Space Deck) same workshop"
+    - "Sent Don Panel Library + Electropaint SGI source — Don hacked tree-shaped s-expr viz at UMD"
+    - "Panel Library + Panel Editor (Eric Raible) — 3D GL UI toolkit at NASA Ames"
+    - "Electropaint — Panel Library demo → SGI screensaver; live slider-bank performance UI"
+    - "Raster Masters — SGI-sponsored visual-music ensemble (Levit, Fischer, Tristram, Hoppe, Nelson); Onyx rigs; Dead/Shoreline/Hancock/Nash; *Infrared Roses*"
+    - "Electroslate, EP2, Squish — extended Electropaint performance stack; recursive texture-map feedback"
+    - "Reaction-diffusion, video feedback, and CA-inspired generative imagery in performance"
+    - "Viviography — art in motion; Resolume + TouchDesigner (HN 2025)"
+    - "Open-source / share-the-tape culture — Panel Library + EP source before SGI demo bundle; IGL lineage"
 
-why_invited:
-  ca_looping_fest: "A CA + graphics voice for the Norman Margolus 'looping fest' — cellular automata as a live, visual, generative medium."
+connections:
+  don_hopkins: |
+    **Old friends since the mid–late 1980s** — Don and Dave met at **USENIX Monterey 1989**: Dave's
+    **Panel Library** paper, Don's **PSIBER Space Deck** (visual PostScript / NeWS debugger). Dave
+    then sent Don **Panel Library + Electropaint source**; Don hacked Electropaint on an **SGI at UMD**
+    to render **recursive s-expr trees** (transforms between nodes, not linear histories) — a **3D
+    Pseudo Scientific Visualizer** parallel to PSIBER's **2D** object browser from Monterey. In the
+    **1990s SGI era** Don saw **Raster Masters** at **Shoreline** and **Grateful Dead** shows. Don calls
+    those **"Grateful Dead Conferences"** — same Silicon Valley / Free Software crowd (public HN, 2022).
+    Same live-generative orbit as
+    Don's **CAM6**, **HyperLook**, and **Musical Gas** — and **[Scott Draves](../scott-draves/)**
+    ("Spot"): **Fractal Flame** (flam3), **Electric Sheep**, **Dreams in High Fidelity** — evolutionary,
+    feedback-driven generative art in the same psychedelic-performance family. Deep dive:
+    [`raster-masters-panel-library.md`](raster-masters-panel-library.md).
+  generative_performance: "Sibling thread to **[Scott Draves](../scott-draves/)** (Fractal Flame, Electric Sheep, collective breeding), **[Brian Eno](../brian-eno/)** (generative ambient/systems), and the CA looping fest — generative imagery *performed* live, not just rendered offline."
+  ca_looping_fest: "Natural co-guest for **[Norman Margolus](../norman-margolus/)**'s CA looping fest — with **Scott Draves**, Wolfram, Crutchfield, Ackley; Dave has publicly credited the *Cellular Automata Machines* book; Don built **CAM6** from it."
+  video_feedback: "Same feedback family as **[Jim Crutchfield](../jim-crutchfield/)** — iterated graphical systems, camera/screen loops, reaction-diffusion."
+
+show_suggestions:
+  - { seed: ../../repo-shows/dave-tristram/, what: "Electropaint → browser: live generative-graphics performance on stream — Raster Masters energy, WebGPU/CAM6 toolchain." }
+  - { seed: ../../repo-shows/norman-margolus/, what: "CA looping fest co-guest — graphics + CA hacking beside Norman, Wolfram, Crutchfield, Draves." }
 
 sources:
   wikipedia: null
-  web: []       # TODO: add a verified public link before citing anything
-  papers: []
-  blogs: []
+  web:
+    - "https://www.wired.com/1994/06/raster-masters/"
+    - "https://www.wired.com/1995/08/hear-it-with-your-eyes/"
+    - "https://news.ycombinator.com/item?id=33105030   # Don — Dead/tapers thread: Raster Masters mega-comment (Oct 2022)"
+    - "https://news.ycombinator.com/item?id=42804566   # David Tristram + Don — Psychedelic Graphics (Jan 2025)"
+    - "https://news.ycombinator.com/item?id=7700340    # Electroportis decompilation; i_am_ralpht OpenGL port at SGI"
+    - "https://donhopkins.com/home/code/igl_0.1.8/     # Don mirror — IGL + Electropaint + mslider source"
+    - "https://github.com/sgi-demos/igl"
+    - "https://ntrs.nasa.gov/citations/19920000697"
+    - "https://en.wikipedia.org/wiki/Infrared_Roses"
+    - "https://www.tristram.com/   # Tristram Visual (Electropaint™ — verify current site)"
+  papers:
+    - "Tristram, D.A. (1989). Controlling Virtual Worlds with the Panel Library. USENIX Fifth Computer Graphics Workshop, Monterey, CA, 16–17 Nov 1989, pp. 83–92. NASA Ames Research Center."
+    - "Hopkins, D. (1989). The Shape of PSIBER Space: PostScript Interactive Bug Eradication Routines. USENIX Fifth Computer Graphics Workshop, Monterey, CA, 16–17 Nov 1989. (PSIBER Space Deck — visual PostScript programming and debugger for NeWS.)"
+  press:
+    - "Wired 2.06 (1994) — 'Raster Masters'"
+    - "Wired (1995) — 'Hear It With Your Eyes' (Herbie Hancock + Raster Masters)"
 
 see_also:
-  - { path: CARD.yml, why: "Invokable abilities for show segments (fill after bio confirmed)" }
-  - { path: ../norman-margolus/, why: "CA looping fest co-guest" }
-  - { path: ../stephen-wolfram/, why: "CA looping fest co-guest" }
-  - { path: ../../repo-shows/norman-margolus/, why: "Show he's invited to" }
+  - { path: raster-masters-panel-library.md, why: "USENIX Monterey 1989 meetup (Panel Library + PSIBER); Raster Masters; Electropaint — Don's firsthand" }
+  - { path: ../don-hopkins/visual-programming-excel-and-dimensionality.md, why: "PSIBER Space Deck — Don's paper from same USENIX workshop" }
+  - { path: CARD.yml, why: "Invokable abilities for show segments" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: ../scott-draves/, why: "Fractal Flame, Electric Sheep — same generative-performance orbit" }
+  - { path: ../don-hopkins/cam6-cellular-automata-machine.md, why: "Don's CAM6 — shared CA lineage" }
+  - { path: ../don-hopkins/musical-gas-granular-ca-synth.md, why: "Granular CA synth — sibling live-synthesis toy" }
+  - { path: ../norman-margolus/, why: "CA looping fest anchor guest" }
+  - { path: ../../repo-shows/dave-tristram/, why: "Show seed" }
+  - { path: ../../repo-shows/norman-margolus/, why: "Group CA fest he's invited to" }
   - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }

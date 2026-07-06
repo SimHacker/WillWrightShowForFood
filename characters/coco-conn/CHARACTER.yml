@@ -1,47 +1,78 @@
-# Coco Conn — invitation portrayal. NOT Coco Conn.
-# Standards: ../../schemas/portrayal-standards.yml
+# Coco Conn — HOMER & Assoc., SIGKids, CitySpace
+# Public sources only. Consent not yet asked for Repo Show.
 
-character:
-  id: coco-conn
-  name: "Coco Conn"
-  type: invitation
-  signifier: "🧒"
-  status: living
-  field: "SIGKIDS / SIGGRAPH kids programs; computer graphics community; collaborative virtual worlds for children (CitySpace)"
-  home: characters/coco-conn/
+id: coco-conn
+name: Coco Conn
+signifier: "🎛️"
+status: active
+consent_level: 2
 
-representation:
-  governed_by: ../../schemas/portrayal-standards.yml
-  consent_level: 2
-  authored_by: don-hopkins
+bio: |
+  **Coco Conn** (with **Peter Conn** and in-house programmer **Paul Rother**) co-ran **HOMER & Assoc.**
+  at **Sunset Gower Studios** (1977–1997) — music videos, commercials, and film FX. **HOMER** (Hybrid
+  Optical Montage Electronically Reproduced) was a **real-time visual mixing console** built 1978–1981;
+  Coco helped **solder LEDs** and **run cables**. They **hired Forth, Inc.** and **Charles Moore**
+  programmed the host; **PolyForth** ran in **32K** on the master **Z80** with **24 channel Z80s**.
+  Public credits include **George Clinton — Atomic Dog**, **Steve Miller — Abracadabra / Bongo Bongo**,
+  **RoboCop** (1986), **Total Recall** x-ray (1989), and ***Flying Logos*** (SIGGRAPH **1989**
+  Electronic Theater). Later: **SIGGRAPH SIGKids** (where Don met **[David Levitt](../david-levitt/)**
+  demoing **Bounce**) and **CitySpace** collaborative virtual worlds for kids (details to confirm).
 
-invitation:
-  status: stub
-  consent: not_yet_asked
-  document: README.md
+known_for:
+  - "HOMER & Assoc. — real-time visual mixing console (Hybrid Optical Montage Electronically Reproduced)"
+  - "Hired Charles Moore / Forth, Inc. to program Homer II; learned Forth from Moore (public HN account)"
+  - "Music videos — Atomic Dog, Abracadabra, Bongo Bongo; film FX — RoboCop, Total Recall"
+  - "Flying Logos — SIGGRAPH 1989 Electronic Theater; Niccograph of Japan"
+  - "SIGGRAPH SIGKids — kids' area off the main floor; Don met David Levitt there"
+  - "CitySpace — collaborative virtual worlds for children (stub)"
 
-bio:
-  summary: >
-    **Coco Conn** — a beloved figure in the computer-graphics community, associated with the
-    **SIGKIDS / SIGGRAPH kids' programs** (where children — not allowed on the main show floor — got
-    to see and make cool things) and with early collaborative virtual-world-for-kids projects
-    (**CitySpace**). Don met her at SIGGRAPH's SIGKids area — the serendipitous spot where he ran into
-    **[David Levitt](../david-levitt/)** demoing Bounce's animated band. *(Don's affectionate framing:
-    "royalty and a goddess.")*
-
-facts_to_confirm:
-  - "Precise role/titles at SIGGRAPH / SIGKIDS and CitySpace (Homer & Associates? years?)."
-  - "Don's descriptor 'Dutch from Amsterdam' — CONFIRM; this is Don's recollection, not verified."
-  - "Best contact path and desired level of participation."
-
-show_suggestions:
-  - { what: "SIGKids & kids-in-computing story — running the space where children got to touch the future at SIGGRAPH; overlaps constructionist / kids-make-things themes." }
+connections:
+  - id: peter-conn
+    relation: co-founder / spouse (HOMER & Assoc.)
+    note: Built optical printer; wrote Flying Logos narrative for SIGGRAPH '89
+  - id: paul-rother
+    relation: in-house programmer
+    note: Homer II Forth/CAT-700; co-authored public HN history with Coco
+  - id: charles-moore
+    relation: Forth, Inc. — hired to program console host
+    note: Not a character file yet; inventor of Forth
+  - id: don-hopkins
+    relation: SIGKids host; HN indexer of HOMER story (with permission)
+  - id: david-levitt
+    relation: SIGKids serendipity — Don met David at Coco's SIGKids area
+  - id: dave-tristram
+    relation: parallel orbit — live generative performance / Raster Masters era
 
 sources:
-  wikipedia: ""
-  web: []
-  note: "Stub — sources to be gathered once invited."
+  - type: hn
+    url: https://news.ycombinator.com/item?id=29261868
+    note: Coco Conn & Paul Rother HOMER/Forth write-up; Don reposted with permission
+  - type: web
+    url: http://leftbrain.us/rotherHistory/homer.html
+    note: Paul Rother — Homer & Associates history
+  - type: archive
+    url: https://oac.cdlib.org/findaid/ark:/13030/c8n303pn/entire_text/
+    note: Peter Conn Papers — Stanford Special Collections
+  - type: video
+    url: https://www.youtube.com/watch?v=9hIOfEiy4lc
+    note: Flying Logos — SIGGRAPH 1989 Electronic Theater
+  - type: video
+    url: https://www.youtube.com/watch?v=LMVZ36VA0wg
+    note: George Clinton — Atomic Dog
+  - type: internal
+    path: homer-forth-flying-logos.md
+  - type: internal
+    path: ../david-levitt/don-and-david-history.md
 
-see_also:
-  - { path: ../david-levitt/don-and-david-history.md, why: "Don ran into David again at Coco's SIGKids area" }
-  - { path: ../cynthia-solomon/, why: "kids + computing / constructionist neighbors" }
+invitation:
+  status: draft
+  show_seed: repo-shows/coco-conn/
+  path: ../../repo-shows/coco-conn/invitation.md
+
+facts_to_confirm:
+  - "CitySpace — scope, years, and public links"
+  - "SIGKids — specific years Coco hosted; any public program descriptions"
+  - "Descriptor 'Dutch from Amsterdam' — Don's note; portrait visit 2024 in media/ only"
+
+media:
+  manifest: media/MANIFEST.yml

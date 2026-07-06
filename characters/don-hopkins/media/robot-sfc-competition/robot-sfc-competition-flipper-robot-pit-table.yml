@@ -7,5 +7,3 @@ artifact:
   subcategory: sfc-competition
   what: "Flipper arm combat robot on pit table"
   sidecar_of: robot-sfc-competition-flipper-robot-pit-table.png
-
-note: "Not AI Generated!"

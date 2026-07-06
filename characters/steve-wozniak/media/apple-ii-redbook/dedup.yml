@@ -8,5 +8,3 @@ dedup:
       reason: duplicate_figure
       duplicate_of: apple-ii-redbook-fig-s01-system-diagram.png
       note: "Same FIG S-1 system diagram — different scan/crop; kept b1bf82f5"
-
-note: "Not AI Generated!"

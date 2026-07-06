@@ -1,0 +1,39 @@
+# SHOW — Coco Conn — HOMER, Forth, Charles Moore, Flying Logos, SIGKids
+# Planted seed. Inherits from the SHOW skill (/skills/repo-show).
+
+show:
+  id: coco-conn
+  title: "A Repo Show with Coco Conn — HOMER, Forth & Flying Logos"
+  type: solo
+  host: Don Hopkins
+  guests: ["Coco Conn"]
+  with: ["David Levitt", "Paul Rother"]   # natural co-guests — SIGKids / HOMER history
+  character: characters/coco-conn/
+  topic: "HOMER & Assoc. real-time visual mixing console (Charles Moore, Forth, Z80/PolyForth in 32K); music-video & film FX (Atomic Dog, Abracadabra, RoboCop, Total Recall); Flying Logos at SIGGRAPH 1989; SIGKids serendipity with Don & David Levitt."
+  status: seed
+  consent: not_yet_asked
+
+why_her:
+  homer_forth: "Hired Charles Moore / Forth, Inc. to program Homer II — PolyForth multitasking in 32K; 24 Z80 visual channels; performance UI played with hands."
+  music_video_film: "Public credits thread — George Clinton Atomic Dog, Steve Miller Abracadabra/Bongo Bongo; RoboCop; Total Recall x-ray scene."
+  flying_logos: "SIGGRAPH 1989 Electronic Theater — demo reel smuggled in as narrative; Niccograph of Japan; Don's Flying Logo Heaven."
+  sigkids: "SIGGRAPH SIGKids host — where Don met David Levitt / Bounce; 'royalty and a goddess' (Don's words)."
+
+dream_segments:
+  - "Charles Moore at HOMER — hiring Forth, Inc.; learning Forth from the inventor; 32K OS + paint + printer."
+  - "Homer II performance — joystick bumper, touch faders, hero floppy → optical printer passes."
+  - "Flying Logos — Peter Conn's SIGGRAPH '89 hack; forkable logo cinema / screensaver in repo?"
+  - "SIGKids + CitySpace — kids, collaborative virtual worlds; David Levitt two-hander optional."
+  - "Forth lineage jam — Moore (HOMER) vs Mitch Bradley (Open Firmware) vs Don's CAM6 Forth."
+
+format:
+  live: true
+  audience_qa: true
+  note: "Warm invite; consent not yet asked. Solo or paired with david-levitt SIGKids episode."
+
+ties_to:
+  - ../../characters/coco-conn/
+  - ../../characters/coco-conn/homer-forth-flying-logos.md
+  - ../../characters/coco-conn/ideas.md
+  - ../../characters/david-levitt/don-and-david-history.md
+  - ../../characters/dave-tristram/

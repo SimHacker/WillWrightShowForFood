@@ -32,5 +32,3 @@ artifacts:
 spec:
   - apple-ii-redbook.yml
   - dedup.yml
-
-note: "Not AI Generated!"

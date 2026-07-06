@@ -16,5 +16,3 @@ artifacts:
     sidecar: computing-sun-4-200-runway-moffett-field.yml
   - file: computing-sun-4-200-stone-neon-cables.png
     sidecar: computing-sun-4-200-stone-neon-cables.yml
-
-note: "Not AI Generated!"

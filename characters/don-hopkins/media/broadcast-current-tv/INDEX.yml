@@ -10,5 +10,3 @@ room:
 artifacts:
   - file: broadcast-current-tv-sf-headend-racks.png
     sidecar: broadcast-current-tv-sf-headend-racks.yml
-
-note: "Not AI Generated!"

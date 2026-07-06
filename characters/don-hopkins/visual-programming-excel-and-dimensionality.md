@@ -52,6 +52,10 @@ Visual debugger/UI for **NeWS** PostScript — not a visual *language*, a visual
 
 - [The Shape of PSIBER Space (Medium)](https://medium.com/@donhopkins/the-shape-of-psiber-space-october-1989-6bcdf7a3a1f5)
 - NeWS = multitasking object-oriented PostScript; PSIBER navigates live heap, processes, and programs
+- **Pseudo Scientific Visualizer** — 2D object browser inside PSIBER (Monterey); Don later hacked a
+  **3D GL** version into Dave Tristram's **Electropaint** on an **SGI at UMD** (recursive **s-expr**
+  trees, not linear histories). See [`../dave-tristram/raster-masters-panel-library.md`](../dave-tristram/raster-masters-panel-library.md)
+  · [JSONsters](jsonsters/README.md) lineage
 
 Same distinction as Visual Studio vs C++: representation of the language ≠ skin you edit it with.
 

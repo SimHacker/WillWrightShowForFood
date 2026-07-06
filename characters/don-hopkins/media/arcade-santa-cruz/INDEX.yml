@@ -16,5 +16,3 @@ artifacts:
     sidecar: arcade-santa-cruz-star-wars-vector-game-over.yml
   - file: arcade-santa-cruz-street-fighter-anniversary.png
     sidecar: arcade-santa-cruz-street-fighter-anniversary.yml
-
-note: "Not AI Generated!"

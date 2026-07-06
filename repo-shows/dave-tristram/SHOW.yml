@@ -1,0 +1,40 @@
+# SHOW — David Tristram — Live Generative Graphics (Electropaint, Raster Masters, CA performance)
+# Planted seed. Inherits from the SHOW skill (/skills/repo-show).
+
+show:
+  id: dave-tristram
+  title: "A Repo Show with David Tristram — Live Generative Graphics"
+  type: solo
+  host: Don Hopkins
+  guests: ["David A. Tristram"]
+  with: ["Norman Margolus", "Jim Crutchfield", "Scott Draves", "Brian Eno"]   # dream co-guests — CA/feedback/generative performance weave
+  character: characters/dave-tristram/
+  topic: "Electropaint, Raster Masters, and CA-inspired live performance graphics — improvisational generative imagery to music, ported to the browser era beside Don's CAM6."
+  status: seed
+  consent: not_yet_asked
+
+why_him:
+  electropaint: "Author of Electropaint — the legendary SGI/IRIX screensaver and demo (NASA Ames → SGI Panel Library); grew into live performance instruments."
+  raster_masters: "Founding member of Raster Masters — MIDI-reactive visual-music ensemble (Onyx rigs, custom code) behind Grateful Dead, Herbie Hancock, Graham Nash."
+  ca_lineage: "Publicly cites CelLab, *Chaos*, and Toffoli & Margolus's *Cellular Automata Machines* — same book Don's CAM6 follows."
+  live_performance: "Generative graphics as *ensemble performance*, not offline renders — natural sibling to Eno/Draves generative-art thread."
+
+dream_segments:
+  - "Electropaint → WebGPU: resurrect the moving-triangle magic as a forkable browser instrument."
+  - "Raster Masters redux: MIDI-reactive generative layer on stream — the repo is the band."
+  - "CA + reaction-diffusion jam: Don's CAM6 grid meets Dave's performance rule-sets."
+  - "Video feedback / iterated graphics — close the loop camera→screen→camera (Crutchfield kinship)."
+  - "CA looping fest weave with Norman Margolus + Wolfram + Crutchfield + Draves — Dave as the live-graphics voice."
+
+format:
+  live: true
+  audience_qa: true
+  note: "Warm old-friend invite; consent not yet asked. Solo or woven into norman-margolus CA fest."
+
+ties_to:
+  - ../../characters/dave-tristram/
+  - ../../characters/dave-tristram/ideas.md
+  - ../../characters/don-hopkins/cam6-cellular-automata-machine.md
+  - ../../characters/don-hopkins/musical-gas-granular-ca-synth.md
+  - ../../characters/norman-margolus/
+  - ../norman-margolus/

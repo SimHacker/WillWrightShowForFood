@@ -7,5 +7,3 @@ artifact:
   subcategory: demos
   what: "Don shows OLPC to Dutch politicians"
   sidecar_of: olpc-demo-dutch-politicians.png
-
-note: "Not AI Generated!"

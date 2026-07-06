@@ -30,5 +30,3 @@ artifacts:
     sidecar: olpc-demo-xo-simcity-handheld-closeup.yml
   - file: olpc-demo-xo-simcity-workshop-desk.png
     sidecar: olpc-demo-xo-simcity-workshop-desk.yml
-
-note: "Not AI Generated!"

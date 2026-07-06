@@ -15,5 +15,3 @@ hardware_labels:
 
 repo_orbit:
   simfaux: ../simfaux/INDEX.yml
-
-note: "Not AI Generated!"

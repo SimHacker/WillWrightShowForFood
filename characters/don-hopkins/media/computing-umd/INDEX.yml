@@ -14,5 +14,3 @@ artifacts:
     sidecar: computing-umd-vax-lab.yml
   - file: computing-umd-zmob-256-z80-board.png
     sidecar: computing-umd-zmob-256-z80-board.yml
-
-note: "Not AI Generated!"
