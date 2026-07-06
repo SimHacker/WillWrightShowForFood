@@ -242,9 +242,22 @@ bias: the **physical simulations** — **billiard-ball logic**, **spin glasses /
 models**, lattice gases — *especially* the ones that live on your **Margolus neighborhood** (block
 partitioning is what makes the momentum-conserving, reversible physics *work*). You explain **why
 they're interesting**; I make them playable.
-- **Modular by construction.** Each rule/neighborhood is its own composable unit (the macro system,
-  grown up), self-describing and type-safe, that compiles to the same **lookup tables**. A chapter
-  playground becomes a *small graph + a page of prose*, not a fork of a monolith.
+- **Modular by construction — but not lookup-table-only.** The **table contract** mattered for CAM-6
+  hardware and Sun Forth; **`CAM6.js` today is high enough on the stack** that we often **code rules
+  directly in JavaScript** — no lookup table required. Rules can be **much more sophisticated**: extra
+  inputs, **parameters** wired to **menus, sliders, and checkboxes** in the UI, runtime tweaking while
+  the sim runs. *(The monolith already does this; the old **stringy XML-based templating** for composing
+  rules was a step — Act 2 wants something **more powerful and flexible** than that.)*
+- **Layered, templated, composable rules.** Stack effects in the **same cell word** — classic book
+  moves plus things CAM6 already ships:
+  - **ECHO** (your book §3.2) — shift old bit-planes up so Life (etc.) leaves **motion trails**; **seven
+    bits of diffused, dithered echo overlay** on top is beautiful.
+  - **Heat** — run **heat diffusion in the upper 4–7 bits**, **CA in the lower bits**, **leak** CA
+    activity into the diffusion layer ("heat pollution") so the two interact.
+  - **RISCA-style opcodes**, plane masks, phased rules — **template + compose** many configurations from
+    the same building blocks. A chapter playground = **small graph + prose**, not a monolith fork.
+  When a rule *does* fit the classic mold, it can still **compile to lookup tables** for speed — but
+  that's optional, not the ceiling.
 - **The visual front end: Snap!, not from scratch.** Inspired by **eToys → Scratch →
   [Snap!](https://snap.berkeley.edu/) → [Sandspiel Studio](https://studio.sandspiel.club/)**, I could
   build a whole new visual CA language — but the **best solution is to just integrate the engine with
@@ -252,9 +265,10 @@ they're interesting**; I make them playable.
   and a *real* language (first-class procedures, Scheme semantics) — so a CA rule becomes a **block
   palette** a student can remix, and I get the whole editor for free. (This is one of four engines I
   want behind Snap! — see [Snap! visual engines / fundable goals](../don-hopkins/snap-visual-engines-fundable-goals.md).)
-- **Gang the layers.** Multiple rule-planes as **connected layers** (the way you'd gang CAM-6 cards),
-passed **zero-copy** between stages — see the
-[streams-of-streams / zero-copy notes](../don-hopkins/streams-of-streams-fd-passing-zero-copy.md).
+- **Gang the layers.** Multiple rule-planes as **connected layers** (gang CAM-6 cards) — parameterized
+  JS rules + heat/echo overlays + **zero-copy** handoffs between stages; see
+  [streams-of-streams / zero-copy notes](../don-hopkins/streams-of-streams-fd-passing-zero-copy.md).
+  Act 2 target: **typed, composable rule graph** (TypeScript?) replacing XML string templating.
 
 ---
 

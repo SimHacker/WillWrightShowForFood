@@ -64,11 +64,13 @@ Heat-diffusion overlays, echo trails, pie-menu control, and script record/playba
 1. **Play.** Bring up the existing thing live and run the classic rules with **Norman narrating** —
    Margolus neighborhood, Critters running backward, the DLA/dendrite rule aggregating in real time.
 2. **Design.** The code is a gnarly, honest **monolith** — "ugly, but with some nice designs to
-   cauldron out." Sketch, with Norman, what a **modern web version** wants to be: sim in **WASM** or
-   a **shader**, a clean rule/neighborhood API, an optional embedded Forth, shareable presets/scripts.
-   Norman has already OK'd turning **book chapters into interactive playgrounds** — build it
-   **ground-up modular** (each rule a self-describing unit) rather than break down the monolith, and
-   gang layers **zero-copy** ([streams-of-streams notes](streams-of-streams-fd-passing-zero-copy.md)).
+   cauldron out." Sketch, with Norman, what a **modern web version** wants to be: **JS rules with
+   parameters and layered overlays** (ECHO trails, heat diffusion in upper bits) when that's easier
+   than tables; lookup tables when speed demands it; something **better than XML templating** for
+   composition; optional Forth; Snap! front end; shareable presets. Norman has already OK'd turning
+   **book chapters into interactive playgrounds** — build **ground-up modular** rather than break down
+   the monolith; gang layers **zero-copy**
+   ([streams-of-streams notes](streams-of-streams-fd-passing-zero-copy.md)).
 
 ## Credits & connections
 - **Source material:** Tommaso Toffoli & **Norman Margolus**, *Cellular Automata Machines* (MIT
