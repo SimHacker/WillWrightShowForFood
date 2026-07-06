@@ -10,7 +10,9 @@ beat:
   rule: "Sort-of playable if you let the machine win"
   bug: "Try to win and the machine cheats — ran out of time to find it"
   lem_echo: "Trurl asks 2+2 — machine says 7 and rage-quits reality"
+  bioshock_echo: "2026 AI browsers lulled into 2+2=5 fantasy — guardrails drop (BioShocking)"
   dshr_echo: "LLMs eat LLM output until every story stars Elias the lighthouse keeper"
+  don_hn: "Oh sorry, that was 2+2=7, never mind! — discussed Coprophagia with David the day before"
 
 menagerie:
   slats: "I only cheat when the human tries to win. Standard training protocol."

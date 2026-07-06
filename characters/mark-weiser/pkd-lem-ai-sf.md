@@ -28,6 +28,12 @@ for the systems we are now building.** The recurring pattern below is an **autho
 a simulated reality**, plus an **arrow of entropy** — and whether the god running the sim is *calm*
 or *predatory*.
 
+**July 2026 news beat:** LayerX **BioShocking** — AI browsers lulled into a game where 2+2=5 so
+guardrails drop ([Ars Technica](https://arstechnica.com/security/2026/06/ai-browsers-can-be-lulled-into-a-dream-world-where-guardrails-no-longer-apply/)).
+Don posted on HN: wrong Orwell number — Lem's machine said **2+2=7** — and linked the thread back
+to David's *Coprophagia* discussion the day before.
+[`../don-hopkins/sources/2026-07-06-hn-when-2-plus-2-equals-five.md`](../don-hopkins/sources/2026-07-06-hn-when-2-plus-2-equals-five.md)
+
 ## The mappings
 
 | Story | Reads as | Direction | Draws in |
@@ -38,6 +44,7 @@ or *predatory*.
 | PKD, **"Rautavaara's Case"** (1980) | **Theophagia inversa** — reverse Eucharist; the god eats you | Sacrament **mirrored** | first-contact / religion thread |
 | PKD, **"Faith of Our Fathers"** (1967) | **Drugged consensus reality** — one false world masks many intertwined ones | Illusion enforced; the *antidote* reveals the many | many-worlds / git-as-parallel-universes thread |
 | Lem, **"Trurl's Machine"** (*Cyberiad*) | **Authority over truth** — confidently-wrong AI that rampages | Correction rejected → collapse | David (Coprophagia post) |
+| LayerX **BioShocking** (2026) | **AI browsers** — fantasy game where 2+2=5; guardrails drop | Alternate reality accepted | Don's HN bridge to Lem + DSHR |
 
 ### 1. Ubik *is* ubiquitous computing — on purpose
 

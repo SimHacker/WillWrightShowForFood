@@ -74,7 +74,10 @@ Palm, Dasher, Tog, and the yaml jazz microworld. Discussion pack + demo walkthro
 
 ### 7. Literary thread — authority without truth
 Lem's 2+2=7 machine + [Coprophagia Is Bad For You](https://blog.dshr.org/2026/06/coprophagia-is-bad-for-you.html)
-+ PKD *Rautavaara's Case* (gods eating worshippers ↔ yaml jazz). See
++ PKD *Rautavaara's Case* (gods eating worshippers ↔ yaml jazz). **July 2026:** Don and David
+continued this thread; next day HN's [BioShocking / 2+2=5](https://arstechnica.com/security/2026/06/ai-browsers-can-be-lulled-into-a-dream-world-where-guardrails-no-longer-apply/)
+story — Don corrected the headline number (*"Oh sorry, that was 2+2=7, never mind!"*).
+See [`../don-hopkins/sources/2026-07-06-hn-when-2-plus-2-equals-five.md`](../don-hopkins/sources/2026-07-06-hn-when-2-plus-2-equals-five.md).
 [`literary/`](literary/) and gag [`gods-eat-worshippers`](../../repo-shows/ideas/gags/gods-eat-worshippers.yml).
 
 ### 8. Slots all the way down — Self ≈ Smalltalk ≈ NeWS `class.ps` ≈ Unix FS (≈ JS, sigh)
@@ -92,6 +95,7 @@ concept: [`../../process/artifactory.yml`](../../process/artifactory.yml)
 
 - [`invitation.md`](invitation.md)
   - [`correspondence.yml`](correspondence.yml)
+- [`sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md`](sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md) — [pdp7.html](https://www.abitare.org/~dshr/tmp/pdp7.html) → Hex → Lem → Rautavaara → MOOLLM
   - [`literary/`](literary/)
   - [`window-systems-lineage.yml`](window-systems-lineage.yml)
 - Show seed: [`repo-shows/david-rosenthal/`](../../repo-shows/david-rosenthal/)

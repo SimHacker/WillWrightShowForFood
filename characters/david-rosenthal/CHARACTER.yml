@@ -52,6 +52,7 @@ see_also:
   - { path: window-systems-lineage.yml, why: "PIXIE→Andrew→NeWS→X11 through-line + Alvey papers" }
   - { path: slots-all-the-way-down.md, why: "Self ≈ Smalltalk ≈ NeWS class.ps ≈ Unix FS (≈ JS) — namespace+delegation equivalence; David's NeWS/PostScript seat; draws in Densmore, Ungar, Ingalls, Gosling" }
   - { path: correspondence.yml, why: "July 2026 async pivot + MOOLLM demo thread" }
+  - { path: sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md, why: "Full thread — pdp7.html, Hex, Lem, Coprophagia, Rautavaara, MOOLLM readings" }
   - { path: ../../repo-shows/david-rosenthal/discussion-pack.yml, why: "July 2026 MOOLLM + literary discussion brief" }
   - { path: ../../repo-shows/moollm-readings/, why: "Primer readings — Palm, Dasher, Tog" }
   - { path: literary/authority-without-truth.yml, why: "Lem + coprophagia + Hex thread" }

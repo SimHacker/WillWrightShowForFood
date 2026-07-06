@@ -6,8 +6,7 @@ meta:
   with: david-rosenthal
   curated_by: don-hopkins
   consent: not_yet_asked
-  span: "2026-07 — PIXIE invitation, Hex draft, MOOLLM demo readings"
-  provenance_private: DonHopkins email (dshr@abitare.org)
+  span: "2026-07 — PIXIE invitation, Hex draft, MOOLLM demo readings, Lem/BioShocking HN thread"
 
 gist: |
   David finds the trio idea interesting but flagged **logistics**: hard to get everyone online at
@@ -21,33 +20,24 @@ gist: |
   **separate solo episode** while keeping PIXIE focused on PDP-7/340 + Cambridge ~1970.
 
 threads:
-  pdp7_hex_draft:
-    date: "2026-07-03"
-    from: David S. H. Rosenthal
-    to: Don Hopkins
+  pixie_jul_2026_thread:
+    date: "2026-07-02 — 2026-07-03"
     subject: "Re: Invitation to PIXIE Repo Show interview"
+    transcript: sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md
     draft: https://www.abitare.org/~dshr/tmp/pdp7.html
-    permission: "Don may send draft to Lars and Heins"
-    punchline: "Let the machine win — Hex on PDP-7/340 cheats if you try to win"
-    dshr_lem: |
-      Favorite Lem *Cyberiad* story — Trurl's machine answers 2+2=7, rage-quits truth.
-      Satire on intelligence without humility; prescient today.
-    don_response: |
-      Connected Lem to DSHR blog Coprophagia Is Bad For You — model collapse / authority over truth.
-      Tangentially PKD "Rautavaara's Case" — gods eating worshippers; yaml jazz symmetry.
-      MOOLLM demo pitch — three YouTube readings link to object network behind generated text.
+    order:
+      - dshr_0703_0221_pdp7_html_link
+      - don_0703_1044_hex_permission
+      - dshr_0703_1955_lem_coprophagia
+      - don_0703_2032_rautavaara_moollm
     artifacts:
+      - sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md
       - media/pdp7-hex-let-machine-win.yml
       - literary/authority-without-truth.yml
       - literary/rautavaaras-case-pkd.yml
   moollm_demo_readings:
     date: "2026-07-03"
-    from: Don Hopkins
-    to: David S. H. Rosenthal
-    subject: "Re: Invitation to PIXIE Repo Show interview"
-    pitch: |
-      MOOLLM — yaml jazz orchestration (LambdaMOO × Sims) for Repo Shows. Demo and discuss.
-      Readings recorded with links to characters, places, journals, skills, constitutional rules.
+    transcript: sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md
     videos:
       - title: "✋💜🌊 Palm Love Wave"
         url: https://www.youtube.com/watch?v=4GS8Xx0ZTZI
@@ -61,6 +51,25 @@ threads:
         episode: ../../repo-shows/moollm-readings/episodes/dasher-palm-tog-monkeys.yml
     discussion_pack: ../../repo-shows/david-rosenthal/discussion-pack.yml
     moollm_demo: ../../repo-shows/david-rosenthal/moollm-demo.yml
+  lem_bioshock_hn_2026:
+    date: "2026-07-05"
+    what: |
+      Don and David continued the Trurl's Machine / Coprophagia thread — authority without truth,
+      model collapse, Hex-that-cheats. Next day Don posted on HN's "When 2+2=5" thread (LayerX
+      BioShocking AI-browser jailbreak): pivoted to Lem's 2+2=7 ending and linked back to David's
+      Coprophagia post.
+    don_hn:
+      date: "2026-07-06"
+      thread: "When 2+2=5 (arstechnica.com)"
+      punchline: "Oh sorry, that was 2+2=7, never mind!"
+      quote_closing: "SEVEN." — Trurl's smashed machine, last word
+    artifacts:
+      - ../don-hopkins/sources/2026-07-06-hn-when-2-plus-2-equals-five.md
+      - literary/authority-without-truth.yml
+    external:
+      ars: https://arstechnica.com/security/2026/06/ai-browsers-can-be-lulled-into-a-dream-world-where-guardrails-no-longer-apply/
+      layerx: https://layerxsecurity.com/blog/bioshocking-ai-gaming-the-ai-agents-context/
+      coprophagia: https://blog.dshr.org/2026/06/coprophagia-is-bad-for-you.html
   scifi_ai_reading_group:
     date: "2026-07-03"
     what: |

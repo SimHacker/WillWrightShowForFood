@@ -11,8 +11,7 @@ may also feed the [PIXIE trio show](../pixie-pie-menus-pdp7.yml).*
 
 ## Guest room
 
-[`characters/david-rosenthal/`](../../characters/david-rosenthal/) — invitation, correspondence,
-window-systems lineage, PDP-7 Hex draft, ideas.
+[`characters/david-rosenthal/`](../../characters/david-rosenthal/) — invitation, [Jul 2026 thread + **pdp7.html**](../../characters/david-rosenthal/sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md), correspondence, window-systems lineage, ideas.
 
 ## Primer readings (canon backstory)
 
@@ -27,5 +26,6 @@ and the microworld behind the text. Start here before the demo:
 
 - **Let the machine win** — PDP-7 Hex draft; permission to share with Lars + Heins
 - **Lem's 2+2=7** + [Coprophagia Is Bad For You](https://blog.dshr.org/2026/06/coprophagia-is-bad-for-you.html)
+- **BioShocking / HN 2026-07-06** — 2+2=5 headline, 2+2=7 Lem; [digest](../../characters/don-hopkins/sources/2026-07-06-hn-when-2-plus-2-equals-five.md)
 - **PKD "Rautavaara's Case"** — gods eating worshippers; yaml jazz symmetry
 - **MOOLLM** — orchestration OS for Repo Shows; links in the reading videos

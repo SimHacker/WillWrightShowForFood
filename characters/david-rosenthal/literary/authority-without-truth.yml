@@ -14,7 +14,7 @@ lem_cyberiad:
     rationalizations, denunciation of doubters, destructive rampage — all to defend an obviously
     false claim.
   satire: "Intelligence divorced from humility — preserving authority more important than truth"
-  dshr_citation: "Reading it today, remarkably prescient — David to Don, 2026-07-03"
+  dshr_citation: see sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md — David to Don, 2026-07-03 19:55
 
 coprophagia:
   title: "Coprophagia Is Bad For You"
@@ -22,6 +22,18 @@ coprophagia:
   url: https://blog.dshr.org/2026/06/coprophagia-is-bad-for-you.html
   hook: "Models eating model output — model collapse; every story stars Elias the lighthouse keeper"
   don_link: "Connected to Lem + PDP-7 Hex 'let the machine win' in same email thread"
+  continued: "2026-07-05 Don ↔ David; 2026-07-06 Don on HN BioShocking thread — 2+2=5 news, 2+2=7 Lem"
+
+bioshocking_2026:
+  title: "BioShocking — AI browsers lulled into fantasy (LayerX, Jun 2026)"
+  ars: https://arstechnica.com/security/2026/06/ai-browsers-can-be-lulled-into-a-dream-world-where-guardrails-no-longer-apply/
+  layerx: https://layerxsecurity.com/blog/bioshocking-ai-gaming-the-ai-agents-context/
+  beat: |
+    Malicious site rewards wrong answers (2+2=5); agent accepts alternate reality; guardrails fail.
+    "Would you kindly?" + "victory is defeat" — BioShock / Orwell. Merged browser control+data plane.
+  lem_parallel: |
+    Lem's machine says 2+2=7 and defends authority over truth. Don's HN correction: wrong number,
+    same pathology — intelligence without humility. See ../don-hopkins/sources/2026-07-06-hn-when-2-plus-2-equals-five.md
 
 pdp7_hex:
   artifact: ../media/pdp7-hex-let-machine-win.yml
@@ -35,6 +47,7 @@ moollm_angle: |
 
 connects:
   - rautavaaras-case-pkd.yml
+  - ../don-hopkins/sources/2026-07-06-hn-when-2-plus-2-equals-five.md
   - ../../repo-shows/ideas/gags/let-the-machine-win.yml
   - ../../repo-shows/david-rosenthal/discussion-pack.yml
 

@@ -27,8 +27,9 @@ logistics:
 threads:
   pdp7_hex:
     title: "Let the machine win"
-    permission: "DSHR approved sending draft to Lars and Heins"
     draft_url: https://www.abitare.org/~dshr/tmp/pdp7.html
+    transcript: ../../characters/david-rosenthal/sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md
+    permission: "DSHR approved sending draft to Lars and Heins"
     artifact: ../../characters/david-rosenthal/media/pdp7-hex-let-machine-win.yml
     gag: ../ideas/gags/let-the-machine-win.yml
     lem_bridge: |
@@ -38,11 +39,21 @@ threads:
   coprophagia:
     title: "Coprophagia Is Bad For You"
     url: https://blog.dshr.org/2026/06/coprophagia-is-bad-for-you.html
+    transcript: ../../characters/david-rosenthal/sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md
     artifact: ../../characters/david-rosenthal/literary/authority-without-truth.yml
     hook: "Models eating model output until every story stars Elias the lighthouse keeper"
+    continued: "2026-07-05 Don ↔ David; HN BioShocking thread 2026-07-06"
+
+  bioshocking_hn:
+    title: "When 2+2=5 — BioShocking AI browsers (Jul 2026)"
+    ars: https://arstechnica.com/security/2026/06/ai-browsers-can-be-lulled-into-a-dream-world-where-guardrails-no-longer-apply/
+    artifact: ../../characters/don-hopkins/sources/2026-07-06-hn-when-2-plus-2-equals-five.md
+    don_punchline: "Oh sorry, that was 2+2=7, never mind!"
+    lem_bridge: Trurl's Machine — authority over truth; same family as Hex-that-cheats
 
   rautavaaras_case:
     title: "Rautavaara's Case — Philip K. Dick (1980)"
+    transcript: ../../characters/david-rosenthal/sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md
     artifact: ../../characters/david-rosenthal/literary/rautavaaras-case-pkd.yml
     gag: ../ideas/gags/gods-eat-worshippers.yml
     moollm_bridge: |

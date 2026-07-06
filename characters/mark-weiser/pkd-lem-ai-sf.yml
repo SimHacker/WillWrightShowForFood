@@ -89,6 +89,13 @@ mappings:
     entropy: "correction rejected -> collapse"
     draw_in: david-rosenthal
     deep_file: ../david-rosenthal/literary/authority-without-truth.yml
+  bioshocking_2026:
+    work: "LayerX BioShocking PoC (Jun 2026)"
+    reads_as: "AI-browser jailbreak — fantasy context where 2+2=5; guardrails no longer apply"
+    entropy: "merged control+data plane; prompt injection as alternate reality"
+    draw_in: don-hopkins
+    deep_file: ../don-hopkins/sources/2026-07-06-hn-when-2-plus-2-equals-five.md
+    lem_note: "Don on HN: Lem said 2+2=7, not 5 — same pathology, wrong headline number"
 
 reflexive_punchline: |
   MOOLLM (LambdaMOO x The Sims) makes the PKD premise literal: gods edit the minds of simulated
