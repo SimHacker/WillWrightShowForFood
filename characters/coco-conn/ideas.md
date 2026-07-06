@@ -48,6 +48,13 @@ shops** that shipped **Atomic Dog** and **boot ROMs**.
 Collaborative **virtual worlds for children** (stub — confirm scope and years with Coco). Overlaps
 **constructionist** neighbors **[Cynthia Solomon](../cynthia-solomon/)**, **SIGKids** ethos.
 
+### 9. Hackers Conference — watch the tapes together
+Coco's **video tapes** from **Hackers Conference** — people **speaking**, **giving demos**, **blowing
+minds. Repo Show segment: **highlights on air** with Coco narrating the room. Don's first picks:
+**Rudy Rucker** (CA / cyberpunk orbit), **[Scott Kim](../scott-kim/)** (Hackers logo, *Viewpoint*,
+(Hackers logo, *Viewpoint*, ambigrams) — plus **many other dream guests** already seeded in the repo.
+Not CS547 — the **Whole Earth / Stewart Brand** gathering. See [`hackers-conference-tapes.md`](hackers-conference-tapes.md).
+
 ## Sources (public)
 
 - [`homer-forth-flying-logos.md`](homer-forth-flying-logos.md)
@@ -55,4 +62,5 @@ Collaborative **virtual worlds for children** (stub — confirm scope and years 
 - [HN item 29261868 — HOMER / Forth / Charles Moore](https://news.ycombinator.com/item?id=29261868)
 - [Paul Rother — homer.html](http://leftbrain.us/rotherHistory/homer.html)
 - [Peter Conn Papers — Stanford](https://oac.cdlib.org/findaid/ark:/13030/c8n303pn/entire_text/)
+- [`hackers-conference-tapes.md`](hackers-conference-tapes.md) — Don's tape-watch segment (confirm with Coco)
 - Show seed: [`repo-shows/coco-conn/`](../../repo-shows/coco-conn/)

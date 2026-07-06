@@ -5,7 +5,17 @@ consent_note: Portrait of Coco Conn; confirm before public use beyond invitation
 
 related_docs:
   - ../homer-forth-flying-logos.md
+  - ../hackers-conference-tapes.md
   - ../../repo-shows/coco-conn/invitation.md
+
+archive:
+  hackers_conference_tapes:
+    status: held_by_coco_not_in_repo
+    note: "VHS (or digitized?) — speakers, demos; confirm years and clip rights with Coco"
+    dream_clips:
+      - scott-kim
+      - rudy-rucker
+      - "many other Repo Show dream guests — index TBD with Coco"
 
 artifacts:
   - file: photo-amsterdam-small-talk-eating-house.jpeg

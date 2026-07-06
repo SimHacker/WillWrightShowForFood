@@ -9,7 +9,7 @@ show:
   guests: ["Coco Conn"]
   with: ["David Levitt", "Paul Rother"]   # natural co-guests — SIGKids / HOMER history
   character: characters/coco-conn/
-  topic: "HOMER & Assoc. real-time visual mixing console (Charles Moore, Forth, Z80/PolyForth in 32K); music-video & film FX (Atomic Dog, Abracadabra, RoboCop, Total Recall); Flying Logos at SIGGRAPH 1989; SIGKids serendipity with Don & David Levitt."
+  topic: "HOMER & Assoc. real-time visual mixing console (Charles Moore, Forth, Z80/PolyForth in 32K); music-video & film FX (Atomic Dog, Abracadabra, RoboCop, Total Recall); Flying Logos at SIGGRAPH 1989; SIGKids serendipity with Don & David Levitt; Hackers Conference VHS highlights watch party (Rudy Rucker, Scott Kim, dream-guest lattice)."
   status: seed
   consent: not_yet_asked
 
@@ -18,6 +18,7 @@ why_her:
   music_video_film: "Public credits thread — George Clinton Atomic Dog, Steve Miller Abracadabra/Bongo Bongo; RoboCop; Total Recall x-ray scene."
   flying_logos: "SIGGRAPH 1989 Electronic Theater — demo reel smuggled in as narrative; Niccograph of Japan; Don's Flying Logo Heaven."
   sigkids: "SIGGRAPH SIGKids host — where Don met David Levitt / Bounce; 'royalty and a goddess' (Don's words)."
+  hackers_conference_tapes: "Coco's video tapes from Hackers Conference — live highlight reel with commentary; Scott Kim, Rudy Rucker, many Repo Show dream guests."
 
 dream_segments:
   - "Charles Moore at HOMER — hiring Forth, Inc.; learning Forth from the inventor; 32K OS + paint + printer."
@@ -25,6 +26,7 @@ dream_segments:
   - "Flying Logos — Peter Conn's SIGGRAPH '89 hack; forkable logo cinema / screensaver in repo?"
   - "SIGKids + CitySpace — kids, collaborative virtual worlds; David Levitt two-hander optional."
   - "Forth lineage jam — Moore (HOMER) vs Mitch Bradley (Open Firmware) vs Don's CAM6 Forth."
+  - "Hackers Conference tape night — Coco narrates highlights; fork timestamps; cross-invite Scott Kim, Rudy Rucker, others on the shelf."
 
 format:
   live: true
@@ -35,5 +37,7 @@ ties_to:
   - ../../characters/coco-conn/
   - ../../characters/coco-conn/homer-forth-flying-logos.md
   - ../../characters/coco-conn/ideas.md
+  - ../../characters/coco-conn/hackers-conference-tapes.md
+  - ../../characters/scott-kim/
   - ../../characters/david-levitt/don-and-david-history.md
   - ../../characters/dave-tristram/

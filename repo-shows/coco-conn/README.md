@@ -16,6 +16,9 @@ a decades-long collaboration.
 - **Homer II as live instrument** — faders, joystick **bumps**, hero take → film → MTV.
 - **Flying Logos** — demo reel as story; Don's **Flying Logo Heaven**.
 - **SIGKids & CitySpace** — kids, virtual worlds, serendipity.
+- **Hackers Conference tapes** — watch **highlights from Coco's video archive** on air: speakers,
+  demos, mind-blowers — **Scott Kim**, **Rudy Rucker**, and a lattice of other dream guests.
+  [`hackers-conference-tapes.md`](../../characters/coco-conn/hackers-conference-tapes.md)
 
 ## In this directory
 

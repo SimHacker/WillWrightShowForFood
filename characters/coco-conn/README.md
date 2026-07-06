@@ -20,8 +20,9 @@ Deep dive: [`homer-forth-flying-logos.md`](homer-forth-flying-logos.md) · hooks
 | Era | Thread |
 |-----|--------|
 | **1980s–90s HOMER** | Don reposted Coco & **Paul Rother**'s history on **Hacker News** (with permission) |
+| **Hackers Conference** | Coco's **video tapes** — speakers, demos, mind-blowers; proposed **watch-party** segment with **[Scott Kim](../scott-kim/)**, **Rudy Rucker**, more → [`hackers-conference-tapes.md`](hackers-conference-tapes.md) |
 | **SIGKids** | Don: Coco is **"royalty and a goddess"** — kids off the main floor **make** the future; met **David Levitt** / **Bounce** there |
-| **Later** | **CitySpace** — collaborative virtual worlds for kids (stub) |
+| **Later** | **CitySpace** — collaborative virtual worlds for kids (stub); **2024** — Tapestry / Internet Archive intro via Bob Stein |
 
 ## Repo Show
 

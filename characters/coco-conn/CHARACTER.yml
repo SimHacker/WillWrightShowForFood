@@ -17,6 +17,8 @@ bio: |
   **RoboCop** (1986), **Total Recall** x-ray (1989), and ***Flying Logos*** (SIGGRAPH **1989**
   Electronic Theater). Later: **SIGGRAPH SIGKids** (where Don met **[David Levitt](../david-levitt/)**
   demoing **Bounce**) and **CitySpace** collaborative virtual worlds for kids (details to confirm).
+  Don proposes a Repo Show segment watching **highlights from her Hackers Conference video tapes** —
+  speakers and demos (**Scott Kim**, **Rudy Rucker**, others) with Coco narrating.
 
 known_for:
   - "HOMER & Assoc. — real-time visual mixing console (Hybrid Optical Montage Electronically Reproduced)"
@@ -25,6 +27,7 @@ known_for:
   - "Flying Logos — SIGGRAPH 1989 Electronic Theater; Niccograph of Japan"
   - "SIGGRAPH SIGKids — kids' area off the main floor; Don met David Levitt there"
   - "CitySpace — collaborative virtual worlds for children (stub)"
+  - "Hackers Conference video tapes — speakers, demos, mind-blowers; Repo Show highlight reel with Coco (Don's proposal)"
 
 connections:
   - id: peter-conn
@@ -40,6 +43,9 @@ connections:
     relation: SIGKids host; HN indexer of HOMER story (with permission)
   - id: david-levitt
     relation: SIGKids serendipity — Don met David at Coco's SIGKids area
+  - id: scott-kim
+    relation: likely on Hackers Conference tapes; designed conference logo (public)
+    note: Dream guest — Viewpoint, ambigrams; pair show with Amy Jo Kim
   - id: dave-tristram
     relation: parallel orbit — live generative performance / Raster Masters era
 
@@ -62,6 +68,8 @@ sources:
   - type: internal
     path: homer-forth-flying-logos.md
   - type: internal
+    path: hackers-conference-tapes.md
+  - type: internal
     path: ../david-levitt/don-and-david-history.md
 
 invitation:
@@ -70,6 +78,7 @@ invitation:
   path: ../../repo-shows/coco-conn/invitation.md
 
 facts_to_confirm:
+  - "Hackers Conference tapes — years, format, speaker index, clip rights for Repo Show"
   - "CitySpace — scope, years, and public links"
   - "SIGKids — specific years Coco hosted; any public program descriptions"
   - "Descriptor 'Dutch from Amsterdam' — Don's note; portrait visit 2024 in media/ only"

@@ -40,6 +40,10 @@ What I'd love to hear, your pick:
   to add that I never knew.
 - **Forth thread** — your shop with **Charles** beside my **Mitch Bradley** / **Open Firmware** summer
   at Sun and the **CAM6** Forth lineage. Not academic — **P-Funk meets boot ROM**.
+- **Hackers Conference tapes** — I'd love to **watch highlights with you on air**: your **video tapes**
+  of people **speaking**, **giving demos**, **blowing minds**. **Rudy Rucker**, **[Scott Kim](../../characters/scott-kim/)**,
+  and a whole shelf of **dream guests** I already want on Repo Show — you narrate, we timestamp forks
+  in the repo. (See [`hackers-conference-tapes.md`](../../characters/coco-conn/hackers-conference-tapes.md).)
 
 Pair naturally with **[David Levitt](../../characters/david-levitt/)** (SIGKids serendipity) or solo —
 your call. Warm overlap with **[Dave Tristram](../../characters/dave-tristram/)**'s **live generative
