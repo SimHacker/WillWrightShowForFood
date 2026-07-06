@@ -18,9 +18,9 @@ Built on **DirectSound** (Windows-era) for real-time grain playback.
 One axis is **voice** (timbre/source material); the other is **pitch** (just a number — not somebody's
 voice).
 
-### Voice = 17 samples
-A **voice** is a **set of 17 sounds** — not necessarily speech. Could be a human voice (David Levitt
-**scat** sounds), or just **farts, laughs, burps**. Seventeen source grains to draw from.
+### Voice = 16 samples
+A **voice** is a **set of 16 sounds** — not necessarily speech. Could be a human voice (David Levitt
+**scat** sounds), or just **farts, laughs, burps**. Sixteen source grains to draw from.
 
 ### Note index = 16-way selection
 The other dimension works like **MIDI notes**: each collision picks **one of 16 voice samples** (note
@@ -31,8 +31,7 @@ and various combinations.
 Think of **static (frozen) particles** as **microphones**: each holds a **fixed note selection** — one
 of 16 slots, like a mic tuned to a particular note.
 
-**Moving particles** are the **voices** — each carries its own 16-note palette (which of the 17
-samples to use per note index).
+**Moving particles** are the **voices** — each carries its own **16 samples**, one per note index.
 
 When a **moving voice particle hits a frozen mic particle**, the collision **triggers the moving
 voice's sample at the frozen particle's note index** — the mic picks the note; the voice supplies the

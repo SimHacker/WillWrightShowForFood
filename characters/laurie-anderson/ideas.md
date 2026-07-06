@@ -21,7 +21,7 @@ It's also literally a **resampling** instrument: chop audio into grains, replay 
 the show's [**riff loop**](../../repo-shows/ideas/themes/the-riff-loop.yml) in the palm of a hand.
 
 **Don's granular-CA companion piece — "Musical Gas."** Don built a **granular cellular-automata
-synthesizer**: colliding gas-lattice CA; each collision fires a grain. A **voice** = 17 samples (scat,
+synthesizer**: colliding gas-lattice CA; each collision fires a grain. A **voice** = 16 samples (scat,
 farts, laughs — e.g. David Levitt); **pitch** = a number + 16-note index. **Frozen particles** = mics;
 **moving particles** = voice banks — hit a mic, play that note from the mover's voice. Two people
 braided into every grain. Same granular instinct as the Talking Stick — great with **DLA** too. Web
