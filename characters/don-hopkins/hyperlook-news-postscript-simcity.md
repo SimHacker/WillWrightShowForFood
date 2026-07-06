@@ -20,6 +20,16 @@ author** in place — scalable vector tiles and chrome, not a bolt-on UI around 
 | **PostScript tile renderer** | Scalable city graphics — Porter/Duff stencil-paint in the window server |
 | **PostScript UI + pie menus** | Gestural tools integrated with the simulation |
 | **HyperLook authoring** | UI and graphics editing in the same object stack as the running city |
+| **Shared-memory raster library** | NeWS client/server lib Don wrote — **C writes pixels**, **PostScript renders**; used by SimCity *and* the CAM-6 lab |
+
+## Shared memory (NeWS + X11)
+
+Don's **NeWS client/server library** let C backends (**SimCity**, **CAM-6 simulator**) **bang on
+pixels in shared memory** while **PostScript in the NeWS server** painted them — paste CA cells into
+HyperLook graphics, clip live CA into shaped windows, etc. SimCity forced that library into shape.
+
+The later **X11/Tcl-Tk** port used **MIT-SHM** when available locally; **plain X protocol fallback**
+when SHM was missing or the display was remote.
 
 Parallel to the official Sun **X11** port; ancestor of every later SimCity Unix UI and of the
 **Cairo / Pango / Canvas / WebGPU** imaging braid.

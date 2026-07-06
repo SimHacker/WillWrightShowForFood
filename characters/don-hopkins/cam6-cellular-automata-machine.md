@@ -46,6 +46,13 @@ Random walkers diffuse, stick, and grow branching coral-like crystals — a dire
 and a natural bridge to Don's [Musical Gas granular-CA synth](musical-gas-granular-ca-synth.md),
 where every stick/aggregation event can fire a grain of sound.
 
+## Shared memory — same library as HyperLook SimCity
+
+The C-era CAM stack and **HyperLook SimCity** both used Don's **NeWS client/server shared-memory
+raster library**: C backends write pixel planes; PostScript in the NeWS server renders them. See
+[`hyperlook-news-postscript-simcity.md`](hyperlook-news-postscript-simcity.md) and
+[`../norman-margolus/the-cam6-demo-for-norman.md`](../norman-margolus/the-cam6-demo-for-norman.md).
+
 ## Rules & neighborhoods (a sampler)
 Marble/Flower (anisotropic convolution kernels + heat diffusion), Life / Brain / Eco, **Margolus**
 (HV-Gas, Critters, Wavers, Tron, **Dendrite**), Moore & VonNeumann lookup-table rules,

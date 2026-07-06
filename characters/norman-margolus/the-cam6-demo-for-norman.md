@@ -96,21 +96,30 @@ no copies.)*
 
 ## Show me the Forth (then show me the JS)
 
-Here is the shape of a CAM6 rule the way your book teaches it — **representative CAM6-style Forth**,
-written to read like the book's idiom (see the book / floppy images for the canonical words). A rule
-is a **Forth word** that, given the neighbor states, returns the new center state; `make-table` runs
-it over *every* neighborhood to bake the lookup table:
+From your book (§3.1) — **Life uses `8SUM`**, not `9SUM`. **`8SUM`** counts the eight Moore
+neighbors (excluding `CENTER`); **`9SUM`** includes the center cell and shows up in other rules
+(Brain, Vote, etc.). The book defines `8SUM` explicitly, then picks the new state from a
+**nine-entry table** indexed by neighbor count:
 
 ```forth
-\ Conway's Life, CAM-6 style: a Forth word run over every neighborhood to build the table.
-: life  ( -- )
-    &/moore   \ sum of the 8 Moore neighbors -> stack
-    center @  \ current center cell
-    if   dup 2 = swap 3 = or      \ alive: survives on 2 or 3
-    else 3 =                       \ dead: born on exactly 3
-    then ;
-' life  make-table                 \ compile the rule into the lookup table
+\ 8SUM — count live Moore neighbors (book §3.1)
+: 8SUM  ( -- count )
+  NORTH SOUTH WEST EAST
+  N.WEST N.EAST S.WEST S.EAST
+  + + + + + + + ;
+
+\ LIFE — two tables: dead center vs live center
+: LIFE
+  CENTER 0= IF
+    8SUM { 0 0 0 1 0 0 0 0 0 }   \ dead: born only when count = 3
+  ELSE
+    8SUM { 0 0 1 1 0 0 0 0 0 }   \ live: survive when count = 2 or 3
+  THEN
+  >PLNO ;
 ```
+
+*(The book also uses **`MAKE-TABLE`** with procedural rule words — e.g. `: PARITY ... ;` passed to
+`MAKE-TABLE` — a different idiom from Life's declarative `8SUM { ... }` tables. See §7.6.)*
 
 And here is the **same idea** in `CAM6.js` — a JS "neighborhood function" plays the role of the Forth
 rule word, and the engine runs it across all neighborhoods to generate the **identical table**
@@ -181,6 +190,21 @@ live-runnable Margolus artifact — and a natural bridge to my
 sticking event can fire a grain of sound so the crystal *sings itself*.
 
 ---
+
+## Shared memory — C bangs pixels, PostScript paints them
+
+**HyperLook SimCity** and the **CAM-6 engine** both sat on the same **NeWS client/server library**
+I wrote: **C code writes the framebuffer** (SimCity tiles, CA cell planes) into **shared memory**;
+**PostScript in the NeWS server** reads that memory and **renders** it — cut/paste between the live
+simulation and the HyperLook graphics editor, lava-lamp windows, the works. SimCity drove that
+library into existence (pie menus, sound mixer, multi-display TCL/Tk came along for the ride).
+
+**X11 SimCity** later used the **X Shared Memory Extension** when available (local, same machine) and
+**fell back to plain X11 protocol** when SHM wasn't there or the display was remote — still playable
+over the network, just without the local SHM fast path.
+
+→ [`../don-hopkins/hyperlook-news-postscript-simcity.md`](../don-hopkins/hyperlook-news-postscript-simcity.md) ·
+[`../will-wright/sources/2006-12-28-ideas-for-sugar-development-environment-from-hyp/email-thread.md`](../will-wright/sources/2006-12-28-ideas-for-sugar-development-environment-from-hyp/email-thread.md)
 
 
 
