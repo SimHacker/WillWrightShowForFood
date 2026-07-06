@@ -4,14 +4,17 @@ artifact:
   file: hyperlook-cam-intro-simulator.png
   slug: hyperlook-cam-intro-simulator
   room: simprov-exploratorium
-  what: HyperLook Exploratorium demo — cam intro simulator
+  what: "HyperLook Exploratorium demo — cam intro simulator"
+  venue: "Exploratorium, San Francisco"
   era: early 1990s
+  not: "Not SimProv — HyperLook/NeWS demo"
   sidecar_of: hyperlook-cam-intro-simulator.png
 
 gags:
   - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
 
 see_also:
+  - ../../hyperlook-news-postscript-simcity.md
   - ../pie-menus/INDEX.yml
   - ../cellular-automata-tiles/INDEX.yml
 

@@ -4,14 +4,17 @@ artifact:
   file: hyperlook-cam-happytool-melting-face.png
   slug: hyperlook-cam-happytool-melting-face
   room: simprov-exploratorium
-  what: HyperLook Exploratorium demo — cam happytool melting face
+  what: "HyperLook Exploratorium demo — cam happytool melting face"
+  venue: "Exploratorium, San Francisco"
   era: early 1990s
+  not: "Not SimProv — HyperLook/NeWS demo"
   sidecar_of: hyperlook-cam-happytool-melting-face.png
 
 gags:
   - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
 
 see_also:
+  - ../../hyperlook-news-postscript-simcity.md
   - ../pie-menus/INDEX.yml
   - ../cellular-automata-tiles/INDEX.yml
 

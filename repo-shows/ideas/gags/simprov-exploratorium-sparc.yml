@@ -1,12 +1,15 @@
-# Gag — SimProv Exploratorium demo on SPARCstation 2
+# Gag — HyperLook Exploratorium demo on SPARCstation 2
+# Gag id simprov-exploratorium-sparc is legacy — not The Sims SimProv.
 
 gag:
   id: simprov-exploratorium-sparc
   title: "Melting Happy Faces with CA — It's Not a Schooner"
   source: characters/don-hopkins/media/simprov-exploratorium/simprov-exploratorium.yml
+  venue: "Exploratorium, San Francisco"
+  not: "HyperLook/NeWS demo — not SimProv (Sims)"
 
 beat:
-  setup: "Don records a video demo at the Exploratorium on his SPARCstation 2"
+  setup: "Don records a HyperLook video demo at the Exploratorium on his SPARCstation 2"
   demos:
     - "CAM melts a Little Trees air freshener"
     - "Happytool smileys dissolve under cellular automata rules"
@@ -15,7 +18,7 @@ beat:
   punchline: "Send code not commands — every UI element is a live PostScript drawing"
 
 repo_show:
-  lineage: "HyperLook → SimProv → Repo Show — modular stacks, live video overlays later in SimFaux"
+  lineage: "HyperLook / NeWS → Repo Show — modular stacks, live video overlays"
 
 menagerie:
   slats: "I trained on tube worms AND happy faces. You're welcome."
@@ -23,5 +26,6 @@ menagerie:
 
 see_also:
   - ../../../characters/don-hopkins/media/simprov-exploratorium/INDEX.yml
+  - ../../../characters/don-hopkins/hyperlook-news-postscript-simcity.md
   - ../../../characters/don-hopkins/media/pie-menus/INDEX.yml
   - cellular-automata-simcity-tiles.yml

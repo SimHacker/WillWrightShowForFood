@@ -1,0 +1,23 @@
+# Sidecar — travel-amsterdam-hardwareweg-sign-tuindorp-oostzaan.png
+
+artifact:
+  file: travel-amsterdam-hardwareweg-sign-tuindorp-oostzaan.png
+  slug: travel-amsterdam-hardwareweg-sign-tuindorp-oostzaan
+  category: travel
+  subcategory: amsterdam
+  what: "Street sign — HARDWAREWEG, TUINDORP OOSTZAAN (Amsterdam-Noord / NDSM)"
+  venue: "Tuindorp Oostzaan, Amsterdam-Noord"
+  sign_text:
+    street: HARDWAREWEG
+    district: TUINDORP OOSTZAAN
+  not: "Not Berlin; not Waag dissection paintings — was misfiled as travel-berlin-waag-dissection-paintings"
+  sidecar_of: travel-amsterdam-hardwareweg-sign-tuindorp-oostzaan.png
+
+see_also:
+  - travel-amsterdam.yml
+  - travel-amsterdam-programmeurstraat-hardwareweg-map.yml
+  - travel-amsterdam-modemstraat-sign-bus134.yml
+  - travel-amsterdam-disketteweg-sign.yml
+  - travel-amsterdam-scannerstraat-sign.yml
+
+note: "Not AI Generated!"

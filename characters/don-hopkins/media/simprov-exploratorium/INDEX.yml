@@ -1,9 +1,12 @@
-# SimProv — Exploratorium SPARCstation 2 Demo
+# HyperLook demo — Exploratorium SF (legacy folder id simprov-exploratorium)
 
 room:
   id: simprov-exploratorium
-  name: SimProv — Exploratorium SPARCstation 2 Demo
+  name: HyperLook — Exploratorium, San Francisco
   parent: ../../media.md
+  venue: "Exploratorium, San Francisco"
+  era: "early 1990s — NeWS / HyperLook"
+  not: "Not SimProv (Sims) — HyperLook/NeWS demo on SPARCstation 2"
 
 artifacts:
   - hyperlook-alan-turing-clock-editor.png
@@ -42,9 +45,9 @@ spec:
   - simprov-exploratorium.yml
 
 see_also:
+  - ../../hyperlook-news-postscript-simcity.md
   - ../../career/simcity-lineage.yml
   - ../cellular-automata-tiles/INDEX.yml
   - ../pie-menus/INDEX.yml
-  - ../../../will-wright/CHARACTER.yml
 
 note: "Not AI Generated!"

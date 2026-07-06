@@ -4,11 +4,15 @@ artifact:
   file: storymaker-keyboard-cat-cross-nav.png
   slug: storymaker-keyboard-cat-cross-nav
   room: storymaker
-  what: storymaker keyboard cat cross nav
-  era: ~2010
+  what: "Early StoryMaker iPhone prototype — green cross-nav; Keyboard Cat center; 'The first episode'"
+  platform: iPhone
+  era: "early prototype (~2010)"
+  phase: "Pre-CurrentTV / pre-Bar Karma"
+  ui: "Cross navigation — up/down/left/right; thumbnail carousel; red + button"
   sidecar_of: storymaker-keyboard-cat-cross-nav.png
 
 see_also:
-  - INDEX.yml
+  - storymaker-first-episode-branching.yml
+  - storymaker.yml
 
 note: "Not AI Generated!"

@@ -196,7 +196,9 @@ sticking event can fire a grain of sound so the crystal *sings itself*.
 **HyperLook SimCity** and the **CAM-6 engine** both sat on the same **NeWS client/server library**
 I wrote: **C code writes the framebuffer** (SimCity tiles, CA cell planes) into **shared memory**;
 **PostScript in the NeWS server** reads that memory and **renders** it — cut/paste between the live
-simulation and the HyperLook graphics editor, lava-lamp windows, the works. SimCity drove that
+simulation and the HyperLook graphics editor. The **CAM-6 playground** on HyperLook went further:
+**multiple zooming views** of the same running field, garish tiled backgrounds from live cells, and a
+**lava-lamp window** — live bubbling CA clipped into a lamp-shaped PostScript mask. SimCity drove that
 library into existence (pie menus, sound mixer, multi-display TCL/Tk came along for the ride).
 
 **X11 SimCity** later used the **X Shared Memory Extension** when available (local, same machine) and

@@ -4,14 +4,17 @@ artifact:
   file: hyperlook-happytool-purple-face-hyperdraw.png
   slug: hyperlook-happytool-purple-face-hyperdraw
   room: simprov-exploratorium
-  what: HyperLook Exploratorium demo — happytool purple face hyperdraw
+  what: "HyperLook Exploratorium demo — happytool purple face hyperdraw"
+  venue: "Exploratorium, San Francisco"
   era: early 1990s
+  not: "Not SimProv — HyperLook/NeWS demo"
   sidecar_of: hyperlook-happytool-purple-face-hyperdraw.png
 
 gags:
   - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
 
 see_also:
+  - ../../hyperlook-news-postscript-simcity.md
   - ../pie-menus/INDEX.yml
   - ../cellular-automata-tiles/INDEX.yml
 

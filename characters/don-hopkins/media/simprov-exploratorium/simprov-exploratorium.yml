@@ -1,7 +1,9 @@
-# SimProv — Exploratorium video demo on SPARCstation 2
+# HyperLook demo — Exploratorium, San Francisco (SPARCstation 2 video stills)
+# Legacy folder id simprov-exploratorium — NOT The Sims SimProv project.
 
 artifact:
-  what: "HyperLook / CAM / SimCity UI stills from Don's Exploratorium demo recording"
+  what: "HyperLook / NeWS demo at the Exploratorium, San Francisco — video stills from SPARCstation 2"
+  not: "Not SimProv (Sims) — HyperLook only"
   machine: "Sun SPARCstation 2"
   venue: "Exploratorium, San Francisco"
   era: "early 1990s — NeWS / OpenWindows / HyperLook"
@@ -10,7 +12,7 @@ demo_beats:
   cam:
     title: "Cellular Automata Machine (CAM6)"
     intro: hyperlook-cam-intro-simulator.png
-    note: "Copyright © 1992 Don Hopkins — 128×128 wrap-around array; Toffoli & Margolis"
+    note: "Copyright © 1992 Don Hopkins — 256×256 wrap-around array; Toffoli & Margolus; multiple zooming views; lava-lamp window"
     melting_faces:
       - hyperlook-cam-melting-face-happytool.png
       - hyperlook-cam-melting-face-neutral.png
@@ -60,6 +62,7 @@ demo_beats:
       - hyperlook-cam-editor-melting-speckle.png
 
 repo_orbit:
+  hyperlook: ../../hyperlook-news-postscript-simcity.md
   cellular_automata_tiles: ../cellular-automata-tiles/INDEX.yml
   pie_menus: ../pie-menus/INDEX.yml
   micropolis_gallery: ../micropolis-gallery/INDEX.yml

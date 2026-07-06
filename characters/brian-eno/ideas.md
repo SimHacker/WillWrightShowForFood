@@ -39,6 +39,12 @@ generative **visual art** (*77 Million Paintings*), evolutionary **images** (Ele
 **simulation** (SimCity/Spore) are the same idea in different clothes. Map the family on stream;
 build the smallest working example of each.
 
+### 3½. "Ambient gas" — Don's Musical Gas
+Don's **Musical Gas** granular-CA synth: colliding lattice particles fire grains into an emergent,
+listenable atmosphere — literal **gas** that plays **ambient**. Same gardener-not-architect move as
+*Music for Airports*: define the collision rules, let the gas score itself. Web reimplementation
+target: [`../don-hopkins/musical-gas-granular-ca-synth.md`](../don-hopkins/musical-gas-granular-ca-synth.md).
+
 ### 4. The 77 Million Paintings method, as a build
 *77 Million Paintings* layers slowly shifting elements so the combination never repeats. A fun
 live build: a layered generative composition (background field → structural form → motif →

@@ -5,7 +5,7 @@ room:
   category: travel
   subcategory: amsterdam
   parent: ../INDEX.yml
-  count: 17
+  count: 19
 
 artifacts:
   - file: travel-amsterdam-c-base-club-mate-fridge.png
@@ -18,6 +18,10 @@ artifacts:
     sidecar: travel-amsterdam-disketteweg-sign.yml
   - file: travel-amsterdam-garden-gnome-flipping-bird-yoda.png
     sidecar: travel-amsterdam-garden-gnome-flipping-bird-yoda.yml
+  - file: travel-amsterdam-hardwareweg-sign-tuindorp-oostzaan.png
+    sidecar: travel-amsterdam-hardwareweg-sign-tuindorp-oostzaan.yml
+  - file: travel-amsterdam-i-amsterdam-space-invader-sticker.png
+    sidecar: travel-amsterdam-i-amsterdam-space-invader-sticker.yml
   - file: travel-amsterdam-lost-turtle-george-poster.png
     sidecar: travel-amsterdam-lost-turtle-george-poster.yml
   - file: travel-amsterdam-melkweg-ps-cover-2007.png

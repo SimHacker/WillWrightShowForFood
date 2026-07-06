@@ -4,14 +4,17 @@ artifact:
   file: hyperlook-cam-melting-face-bw-editor.png
   slug: hyperlook-cam-melting-face-bw-editor
   room: simprov-exploratorium
-  what: HyperLook Exploratorium demo — cam melting face bw editor
+  what: "HyperLook Exploratorium demo — cam melting face bw editor"
+  venue: "Exploratorium, San Francisco"
   era: early 1990s
+  not: "Not SimProv — HyperLook/NeWS demo"
   sidecar_of: hyperlook-cam-melting-face-bw-editor.png
 
 gags:
   - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
 
 see_also:
+  - ../../hyperlook-news-postscript-simcity.md
   - ../pie-menus/INDEX.yml
   - ../cellular-automata-tiles/INDEX.yml
 

@@ -1,0 +1,19 @@
+# Sidecar — travel-amsterdam-i-amsterdam-space-invader-sticker.png
+
+artifact:
+  file: travel-amsterdam-i-amsterdam-space-invader-sticker.png
+  slug: travel-amsterdam-i-amsterdam-space-invader-sticker
+  category: travel
+  subcategory: amsterdam
+  what: "I amsterdam sticker — Space Invader replaces the m (red I and a, black sterdam)"
+  venue: Amsterdam
+  not: "Not Berlin zoo lion cage — was misfiled as travel-berlin-zoo-lion-cage-warning"
+  sidecar_of: travel-amsterdam-i-amsterdam-space-invader-sticker.png
+
+see_also:
+  - travel-amsterdam.yml
+  - travel-amsterdam-lost-turtle-george-poster.yml
+  - travel-amsterdam-space-invader-building-window.yml
+  - travel-amsterdam-space-invader-linnaeusstraat-mosaic.yml
+
+note: "Not AI Generated!"

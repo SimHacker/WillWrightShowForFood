@@ -28,6 +28,14 @@ Don's **NeWS client/server library** let C backends (**SimCity**, **CAM-6 simula
 pixels in shared memory** while **PostScript in the NeWS server** painted them — paste CA cells into
 HyperLook graphics, clip live CA into shaped windows, etc. SimCity forced that library into shape.
 
+The **CAM-6 laboratory playground** on HyperLook was the other major customer: **multiple zooming
+views** of the same live sim (pan/zoom PostScript views over the shared cell plane), cut/paste between
+the **HyperDraw** graphics editor and running automata, garish seamlessly tiled screen backgrounds —
+and a live bubbling CA view **clipped into a lava-lamp-shaped window**. Exploratorium demo stills in
+[`media/simprov-exploratorium/`](media/simprov-exploratorium/simprov-exploratorium.yml) (HyperLook — not Sims SimProv); Don's catalog
+[CAM.gif](http://www.donhopkins.com/home/catalog/hyperlook/CAM.gif) ·
+[HyperLook demo video](http://www.donhopkins.com/home/movies/HyperLookDemo.mov).
+
 The later **X11/Tcl-Tk** port used **MIT-SHM** when available locally; **plain X protocol fallback**
 when SHM was missing or the display was remote.
 

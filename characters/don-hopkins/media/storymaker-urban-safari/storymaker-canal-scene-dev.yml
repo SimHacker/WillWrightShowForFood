@@ -4,12 +4,13 @@ artifact:
   file: storymaker-canal-scene-dev.png
   slug: storymaker-canal-scene-dev
   room: storymaker-urban-safari
-  what: storymaker canal scene dev
-  era: 2011
+  what: "StoryMaker Urban Safari dev — TurboGears Layar API; canal scene 'Down the canal... This is my first edit!'"
+  platform: Layar
+  era: "2011"
   sidecar_of: storymaker-canal-scene-dev.png
 
 see_also:
-  - ../storymaker/INDEX.yml
-  - ../amsterdam-tile-art/INDEX.yml
+  - storymaker-ar-thumbnails.yml
+  - ../amsterdam-coffeeshops-layar/INDEX.yml
 
 note: "Not AI Generated!"

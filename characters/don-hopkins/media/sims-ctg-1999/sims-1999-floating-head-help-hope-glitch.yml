@@ -1,14 +1,20 @@
 # Sidecar — sims-1999-floating-head-help-hope-glitch.png
+# Filename says "glitch" — intentional floating-head pie menu, not a bug.
 
 artifact:
   file: sims-1999-floating-head-help-hope-glitch.png
   slug: sims-1999-floating-head-help-hope-glitch
   room: sims-ctg-1999
-  what: Sims 1999 dev screenshot — floating head help hope glitch
-  era: ~1999
+  project: SimProv
+  what: "Floating head in pie menu — Help and Hope (designed behavior)"
+  era: "~2000–2001 post ship"
+  not: "Not a glitch; Don designed and implemented floating heads in pie menus"
+  partners: [SimBabes, SimFreaks, SimSlice]
   sidecar_of: sims-1999-floating-head-help-hope-glitch.png
 
 see_also:
-  - ../sims-transmogrifier/INDEX.yml
+  - ../sims-transmogrifier/transmogrifier-hope-chest-pie-menu-intro.png
+  - ../../../../catalogs/simprov/README.md
+  - ../../pie-menus-chi-88-and-beyond.md
 
 note: "Not AI Generated!"

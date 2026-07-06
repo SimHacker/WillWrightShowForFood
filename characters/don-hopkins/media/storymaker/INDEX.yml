@@ -1,9 +1,11 @@
-# StoryMaker — Stupid Fun Club / Bar Karma iPhone UI
+# StoryMaker — early iPhone prototype (pre-CurrentTV / pre-Bar Karma)
 
 room:
   id: storymaker
-  name: StoryMaker Screenshots
+  name: StoryMaker — early iPhone prototype
   parent: ../../media.md
+  era: "early prototype (~2010)"
+  phase: "Pre-CurrentTV / pre-Bar Karma"
 
 artifacts:
   - storymaker-first-episode-branching.png

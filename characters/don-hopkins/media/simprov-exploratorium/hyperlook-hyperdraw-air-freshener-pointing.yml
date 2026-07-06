@@ -4,14 +4,17 @@ artifact:
   file: hyperlook-hyperdraw-air-freshener-pointing.png
   slug: hyperlook-hyperdraw-air-freshener-pointing
   room: simprov-exploratorium
-  what: HyperLook Exploratorium demo — hyperdraw air freshener pointing
+  what: "HyperLook Exploratorium demo — hyperdraw air freshener pointing"
+  venue: "Exploratorium, San Francisco"
   era: early 1990s
+  not: "Not SimProv — HyperLook/NeWS demo"
   sidecar_of: hyperlook-hyperdraw-air-freshener-pointing.png
 
 gags:
   - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
 
 see_also:
+  - ../../hyperlook-news-postscript-simcity.md
   - ../pie-menus/INDEX.yml
   - ../cellular-automata-tiles/INDEX.yml
 

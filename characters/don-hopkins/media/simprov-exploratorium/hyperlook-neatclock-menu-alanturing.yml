@@ -4,14 +4,17 @@ artifact:
   file: hyperlook-neatclock-menu-alanturing.png
   slug: hyperlook-neatclock-menu-alanturing
   room: simprov-exploratorium
-  what: HyperLook Exploratorium demo — neatclock menu alanturing
+  what: "HyperLook Exploratorium demo — neatclock menu alanturing"
+  venue: "Exploratorium, San Francisco"
   era: early 1990s
+  not: "Not SimProv — HyperLook/NeWS demo"
   sidecar_of: hyperlook-neatclock-menu-alanturing.png
 
 gags:
   - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
 
 see_also:
+  - ../../hyperlook-news-postscript-simcity.md
   - ../pie-menus/INDEX.yml
   - ../cellular-automata-tiles/INDEX.yml
 

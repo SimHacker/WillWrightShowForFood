@@ -4,11 +4,14 @@ artifact:
   file: sims-1999-tuxedo-flamingo-thought.png
   slug: sims-1999-tuxedo-flamingo-thought
   room: sims-ctg-1999
-  what: Sims 1999 dev screenshot — tuxedo flamingo thought
-  era: ~1999
+  project: Transmogrifier tutorial
+  what: "Tuxedo Sim rejecting green flamingo — thought bubble with X"
+  era: "~2000–2001 post ship"
+  not: "Not 1999 Maxis dev pre-release"
   sidecar_of: sims-1999-tuxedo-flamingo-thought.png
 
 see_also:
   - ../sims-transmogrifier/INDEX.yml
+  - ../../../the-sims-transmogrifier-mod-tools.md
 
 note: "Not AI Generated!"

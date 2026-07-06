@@ -1,9 +1,10 @@
-# StoryMaker / Urban Safari — location-based AR storytelling (SFC era)
+# StoryMaker / Urban Safari — location-based AR storytelling (SFC era, 2011)
 
 artifact:
-  what: "Stupid Fun Club iPhone app — geotagged scenes, Layar-era AR thumbnails, TurboGears backend"
+  what: "Stupid Fun Club StoryMaker Urban Safari — geotagged Layar scenes, TurboGears backend"
   era: "2011"
   stack: "Objective-C / Three20 / TurboGears / Layar"
+  progenitor: "../amsterdam-coffeeshops-layar/INDEX.yml"
 
 urban_safari:
   title_card: urban-safari-title-card.png
@@ -13,20 +14,16 @@ screenshots:
   - file: storymaker-canal-scene-dev.png
     scene: "Down the canal... This is my first edit!"
     location: Amsterdam canal
-    stack_visible: "TurboGears + Apache logs + scene layer API"
+    stack_visible: "TurboGears + Apache logs + Layar scene layer API"
   - file: storymaker-ar-thumbnails.png
-    what: "Floating scene thumbnails in room — Layar-style"
-  - file: storymaker-smoking-papers-notification.png
-    item: "Smoking Papers — A pack of slim smoking papers"
-  - file: storymaker-amsterdam-street-scene.png
-    location: "1e Helmersstraat / Alberdingk Thijmstraat"
-    author: Rene Bennekers
+    what: "Layar AR — floating scene thumbnails; canal scene dev overlay on server logs"
 
 amsterdam_tile_art:
   note: "Don developing iPhone app while documenting Invader mosaics — see ../amsterdam-tile-art/"
   path: ../amsterdam-tile-art/INDEX.yml
 
 repo_orbit:
+  amsterdam_coffeeshops_layar: ../amsterdam-coffeeshops-layar/INDEX.yml
   storymaker: ../storymaker/INDEX.yml
   stupid_fun_club: ../../career/stupid-fun-club.yml
   will_youtube: ../../../will-wright/sources/don-youtube-storymaker-demo/README.md

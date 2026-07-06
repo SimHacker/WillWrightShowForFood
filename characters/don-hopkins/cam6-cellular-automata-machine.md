@@ -6,8 +6,9 @@
 
 ## What it is
 A **CAM6 simulator** — software-compatible with the **CAM-6** hardware described in Toffoli &
-Margolus's ***Cellular Automata Machines*** (MIT Press, 1987). It runs the classic rules straight
-out of the pages of the book, plus many rules and image-processing effects Don added over the years.
+Margolus's ***Cellular Automata Machines*** (MIT Press, 1987). **256×256** wrap-around cell array.
+Runs the classic rules straight out of the pages of the book, plus many rules and image-processing
+effects Don added over the years.
 
 Live app: <https://donhopkins.com/home/CAM6> · Source:
 [`CAM6.js`](https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js) ·
@@ -49,7 +50,10 @@ where every stick/aggregation event can fire a grain of sound.
 ## Shared memory — same library as HyperLook SimCity
 
 The C-era CAM stack and **HyperLook SimCity** both used Don's **NeWS client/server shared-memory
-raster library**: C backends write pixel planes; PostScript in the NeWS server renders them. See
+raster library**: C backends write pixel planes; PostScript in the NeWS server renders them. The
+**HyperLook CAM-6 playground** paired the C simulator with **HyperDraw** — **multiple zooming views**
+of one live field, cut/paste between PostScript art and running cells, and a **lava-lamp window**
+(bubbling CA clipped to a lamp-shaped mask). See
 [`hyperlook-news-postscript-simcity.md`](hyperlook-news-postscript-simcity.md) and
 [`../norman-margolus/the-cam6-demo-for-norman.md`](../norman-margolus/the-cam6-demo-for-norman.md).
 

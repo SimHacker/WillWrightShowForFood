@@ -21,6 +21,7 @@ legacy_rooms:
   simprov-exploratorium:
     count: 31
     era: "early 1990s"
+    note: "HyperLook Exploratorium SF — not Sims SimProv"
     gags: [simprov-exploratorium-sparc.yml]
   cellular-automata-tiles:
     count: 24
@@ -54,10 +55,13 @@ legacy_rooms:
     gags: [simprov-exploratorium-sparc.yml]
   sims-ctg-1999:
     count: 5
-    era: "~1999"
+    era: "~2000–2001 post ship"
   storymaker-urban-safari:
-    count: 5
+    count: 3
     era: "2011"
+  amsterdam-coffeeshops-layar:
+    count: 2
+    era: "2009"
   news-tshirts:
     count: 4
     era: "late 1980s-1990s"

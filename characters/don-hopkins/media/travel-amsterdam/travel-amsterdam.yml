@@ -9,10 +9,17 @@ room:
 themes:
   computer_streets:
     note: "Tuindorp Oostzaan / NDSM — Programmeurstraat, Hardwareweg, Modemstraat, Disketteweg, Scannerstraat"
+    hardwareweg_sign: travel-amsterdam-hardwareweg-sign-tuindorp-oostzaan.png
     see_also: ../robot-collection/van-leer-leather-press.yml
   c_base:
     club_mate: "A full fridge full of CLUB-MATE at C-Base. (Klub Mahtay as the German hackers call it.)"
   street_art:
+    i_amsterdam_invader:
+      file: travel-amsterdam-i-amsterdam-space-invader-sticker.png
+      what: "I amsterdam — Space Invader for the m"
+    lost_turtle_george:
+      file: travel-amsterdam-lost-turtle-george-poster.png
+      what: "Gezocht — lost red-eared slider George; georgeisdeklutskwijt@gmail.com"
     turtle_joke:
       - author: David Den Ouden
         text: "Don, this is no space invader. Just some lost turtle..."

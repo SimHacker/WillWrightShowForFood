@@ -2,18 +2,19 @@ room:
   id: storymaker-urban-safari
   name: StoryMaker Urban Safari
   parent: ../../media.md
+  era: "2011"
+  count: 3
 
 artifacts:
   - urban-safari-title-card.png
   - storymaker-canal-scene-dev.png
   - storymaker-ar-thumbnails.png
-  - storymaker-smoking-papers-notification.png
-  - storymaker-amsterdam-street-scene.png
 
 spec:
   - storymaker-urban-safari.yml
 
 see_also:
+  - ../amsterdam-coffeeshops-layar/INDEX.yml
   - ../storymaker/INDEX.yml
   - ../amsterdam-tile-art/INDEX.yml
   - ../../career/stupid-fun-club.yml

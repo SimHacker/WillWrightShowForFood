@@ -4,11 +4,15 @@ artifact:
   file: sims-1999-redhead-sheer-skirt-pond.png
   slug: sims-1999-redhead-sheer-skirt-pond
   room: sims-ctg-1999
-  what: Sims 1999 dev screenshot — redhead sheer skirt pond
-  era: ~1999
+  project: SimProv
+  what: "Redhead Sim by lily pond — sheer-skirt outfit test"
+  era: "~2000–2001 post ship"
+  not: "Not 1999 Maxis dev pre-release"
+  partners: [SimBabes, SimFreaks, SimSlice]
   sidecar_of: sims-1999-redhead-sheer-skirt-pond.png
 
 see_also:
-  - ../sims-transmogrifier/INDEX.yml
+  - sims-1999-redhead-pond-sidewalk.yml
+  - ../../../../catalogs/simprov/README.md
 
 note: "Not AI Generated!"

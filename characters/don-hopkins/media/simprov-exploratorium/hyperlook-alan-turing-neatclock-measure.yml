@@ -4,14 +4,17 @@ artifact:
   file: hyperlook-alan-turing-neatclock-measure.png
   slug: hyperlook-alan-turing-neatclock-measure
   room: simprov-exploratorium
-  what: HyperLook Exploratorium demo — alan turing neatclock measure
+  what: "HyperLook Exploratorium demo — alan turing neatclock measure"
+  venue: "Exploratorium, San Francisco"
   era: early 1990s
+  not: "Not SimProv — HyperLook/NeWS demo"
   sidecar_of: hyperlook-alan-turing-neatclock-measure.png
 
 gags:
   - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
 
 see_also:
+  - ../../hyperlook-news-postscript-simcity.md
   - ../pie-menus/INDEX.yml
   - ../cellular-automata-tiles/INDEX.yml
 

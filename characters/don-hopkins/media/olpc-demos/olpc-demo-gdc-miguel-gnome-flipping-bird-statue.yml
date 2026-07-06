@@ -1,0 +1,18 @@
+# Sidecar — olpc-demo-gdc-miguel-gnome-flipping-bird-statue.png
+
+artifact:
+  file: olpc-demo-gdc-miguel-gnome-flipping-bird-statue.png
+  slug: olpc-demo-gdc-miguel-gnome-flipping-bird-statue
+  category: olpc
+  subcategory: demos
+  what: "Miguel de Icaza's cement garden gnome flipping the bird — close-up of the statue"
+  venue: "San Francisco — GDC"
+  made_by: Miguel de Icaza
+  not: "Not Prague gargoyles — was misfiled as travel-prague-don-hopkins-gargoyles-bracketed"
+  sidecar_of: olpc-demo-gdc-miguel-gnome-flipping-bird-statue.png
+
+see_also:
+  - olpc-demo-gdc-gnome-flipping-bird-yoda.yml
+  - olpc-demos.yml
+
+note: "Not AI Generated!"

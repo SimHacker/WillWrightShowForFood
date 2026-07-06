@@ -4,15 +4,17 @@ artifact:
   file: hyperlook-alan-turing-clock-editor.png
   slug: hyperlook-alan-turing-clock-editor
   room: simprov-exploratorium
-  what: HyperLook Exploratorium demo — alan turing clock editor
+  what: "HyperLook NeatClock — Alan Turing clock editor (Exploratorium demo)"
+  venue: "Exploratorium, San Francisco"
   era: early 1990s
+  not: "Not SimProv — HyperLook/NeWS demo"
   sidecar_of: hyperlook-alan-turing-clock-editor.png
 
 gags:
   - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
 
 see_also:
+  - ../../hyperlook-news-postscript-simcity.md
   - ../pie-menus/INDEX.yml
-  - ../cellular-automata-tiles/INDEX.yml
 
 note: "Not AI Generated!"

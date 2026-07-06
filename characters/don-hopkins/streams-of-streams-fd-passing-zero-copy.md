@@ -122,6 +122,15 @@ passes **handles**, not pixels, exactly like the compositor and video stack alre
 [TypeScript dataflow / visual programming](cam6-cellular-automata-machine.md) rebuild is a graph of
 such stages; this doc is the OS substrate that makes the edges free.
 
+**Already shipped once:** the C-era **CAM-6 simulator** and **HyperLook SimCity** shared Don's
+**NeWS client/server shared-memory raster library** — C backends **write pixel planes in shared
+memory**; **PostScript in the NeWS server** renders them (paste CA cells into HyperLook graphics,
+clip live CA into shaped windows — the CAM playground had **multiple zooming views** and a
+**lava-lamp window**). SimCity forced that library into shape; CAM-6 rode the same zero-copy path.
+The later **X11/Tcl-Tk** port used **MIT-SHM** locally, **plain X protocol** when remote or SHM
+unavailable. See
+[HyperLook / NeWS / PostScript — SimCity](hyperlook-news-postscript-simcity.md).
+
 ## Quick reference links
 
 fd passing (`SCM_RIGHTS`) · [dma-buf](https://docs.kernel.org/driver-api/dma-buf.html) ·

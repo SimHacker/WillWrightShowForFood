@@ -4,11 +4,15 @@ artifact:
   file: storymaker-first-episode-branching.png
   slug: storymaker-first-episode-branching
   room: storymaker
-  what: storymaker first episode branching
-  era: ~2010
+  what: "Early StoryMaker iPhone prototype — 'The first episode' branching thumbnail tree"
+  platform: iPhone
+  era: "early prototype (~2010)"
+  phase: "Pre-CurrentTV / pre-Bar Karma"
+  ui: "Yellow diamond arrows; branching storyboard thumbnails; no-peeing sign decision node"
   sidecar_of: storymaker-first-episode-branching.png
 
 see_also:
-  - INDEX.yml
+  - storymaker-keyboard-cat-cross-nav.yml
+  - storymaker.yml
 
 note: "Not AI Generated!"

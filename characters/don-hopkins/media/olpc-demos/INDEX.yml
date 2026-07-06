@@ -5,7 +5,7 @@ room:
   category: olpc
   subcategory: demos
   parent: ../INDEX.yml
-  count: 10
+  count: 11
 
 artifacts:
   - file: olpc-demo-devon-mccullough-big-eyeballs.png
@@ -18,6 +18,8 @@ artifacts:
     sidecar: olpc-demo-dutch-politicians.yml
   - file: olpc-demo-gdc-gnome-flipping-bird-yoda.png
     sidecar: olpc-demo-gdc-gnome-flipping-bird-yoda.yml
+  - file: olpc-demo-gdc-miguel-gnome-flipping-bird-statue.png
+    sidecar: olpc-demo-gdc-miguel-gnome-flipping-bird-statue.yml
   - file: olpc-demo-gdc-miyamoto-talking.png
     sidecar: olpc-demo-gdc-miyamoto-talking.yml
   - file: olpc-demo-gdc-teaching-world-to-play-justin-hall.png

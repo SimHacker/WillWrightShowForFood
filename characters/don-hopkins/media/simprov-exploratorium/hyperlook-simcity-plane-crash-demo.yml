@@ -4,14 +4,17 @@ artifact:
   file: hyperlook-simcity-plane-crash-demo.png
   slug: hyperlook-simcity-plane-crash-demo
   room: simprov-exploratorium
-  what: HyperLook Exploratorium demo — simcity plane crash demo
+  what: "HyperLook Exploratorium demo — simcity plane crash demo"
+  venue: "Exploratorium, San Francisco"
   era: early 1990s
+  not: "Not SimProv — HyperLook/NeWS demo"
   sidecar_of: hyperlook-simcity-plane-crash-demo.png
 
 gags:
   - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
 
 see_also:
+  - ../../hyperlook-news-postscript-simcity.md
   - ../pie-menus/INDEX.yml
   - ../cellular-automata-tiles/INDEX.yml
 

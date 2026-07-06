@@ -1,0 +1,17 @@
+# Sidecar — amsterdam-coffeeshops-layar-smoking-papers.png
+
+artifact:
+  file: amsterdam-coffeeshops-layar-smoking-papers.png
+  slug: amsterdam-coffeeshops-layar-smoking-papers
+  room: amsterdam-coffeeshops-layar
+  what: "Layar POI — Smoking brand slim rolling papers; coffeeshop database entry"
+  platform: "Layar · iPhone"
+  era: "2009"
+  not: "Not StoryMaker Urban Safari — was misfiled as storymaker-smoking-papers-notification"
+  sidecar_of: amsterdam-coffeeshops-layar-smoking-papers.png
+
+see_also:
+  - amsterdam-coffeeshops-layar.yml
+  - ../storymaker-urban-safari/INDEX.yml
+
+note: "Not AI Generated!"

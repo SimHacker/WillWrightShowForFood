@@ -1,0 +1,19 @@
+# Sidecar — amsterdam-coffeeshops-layar-helmersstraat-scene.png
+
+artifact:
+  file: amsterdam-coffeeshops-layar-helmersstraat-scene.png
+  slug: amsterdam-coffeeshops-layar-helmersstraat-scene
+  room: amsterdam-coffeeshops-layar
+  what: "Layar AR on iPhone — coffeeshop database scene at Helmersstraat / Alberdingk Thijmstraat"
+  platform: "Layar · iPhone"
+  era: "2009"
+  location: "1e Helmersstraat / Alberdingk Thijmstraat, Amsterdam"
+  author: Rene Bennekers
+  not: "Not StoryMaker Urban Safari — was misfiled as storymaker-amsterdam-street-scene"
+  sidecar_of: amsterdam-coffeeshops-layar-helmersstraat-scene.png
+
+see_also:
+  - amsterdam-coffeeshops-layar.yml
+  - ../storymaker-urban-safari/INDEX.yml
+
+note: "Not AI Generated!"

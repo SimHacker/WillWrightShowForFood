@@ -1,23 +1,38 @@
-# Sims CTG 1999 — bugs, glitches, and dev-era screenshots
+# Sims 1 screenshots — Transmogrifier tutorial + SimProv (not Maxis dev 1999)
 
 artifact:
-  what: "Original Sims screenshots from CTG / Maxis development era (~1999)"
-  era: "1999"
+  what: "Sims 1 screenshots — Transmogrifier tutorial and SimProv community content"
+  era: "~2000–2001 (post ship)"
+  not: "Not 1999 Maxis / CTG pre-release dev shots — legacy folder name is misleading"
 
 photos:
-  - file: sims-1999-floating-head-help-hope-glitch.png
-    what: "Disembodied floating head — Help and Hope thought bubbles"
-  - file: sims-1999-graveyard-skeleton-scientist.png
-    what: "Graveyard with green skeleton and fleeing scientist Sim"
   - file: sims-1999-tuxedo-flamingo-thought.png
-    what: "Tuxedo Sim rejecting pink flamingo in thought bubble"
+    project: Transmogrifier tutorial
+    what: "Tuxedo Sim rejecting green flamingo — thought bubble with X"
+    era: "~2000–2001 post ship"
+  - file: sims-1999-floating-head-help-hope-glitch.png
+    project: SimProv
+    what: "Floating head in pie menu — Help and Hope labels (by design, not a glitch)"
+    partners: [SimBabes, SimFreaks, SimSlice]
+    note: "Don designed and implemented floating heads in pie menus"
+  - file: sims-1999-graveyard-skeleton-scientist.png
+    project: SimProv
+    what: "Graveyard scene — green skeleton, fleeing scientist, red-dress Sim"
+    partners: [SimBabes, SimFreaks, SimSlice]
   - file: sims-1999-redhead-sheer-skirt-pond.png
-    what: "Redhead Sim by lily pond — sheer skirt outfit"
+    project: SimProv
+    what: "Redhead Sim by lily pond — sheer-skirt outfit test"
+    partners: [SimBabes, SimFreaks, SimSlice]
   - file: sims-1999-redhead-pond-sidewalk.png
-    what: "Same character near sidewalk and pond"
+    project: SimProv
+    what: "Same redhead character near sidewalk and pond"
+    partners: [SimBabes, SimFreaks, SimSlice]
 
 repo_orbit:
   transmogrifier: ../sims-transmogrifier/INDEX.yml
+  simprov: ../../../../catalogs/simprov/README.md
+  simfreaks: ../../../../catalogs/simfreaks/README.md
+  simslice: ../../../../catalogs/simslice/README.md
   sims_series: ../../../will-wright/media/sims-series-README.md
 
 note: "Not AI Generated!"

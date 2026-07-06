@@ -183,10 +183,11 @@ Screenshot archive: **HyperLook SimCity on Sun** (Arthur van Hoff) · original b
 
 ![Micropolis Facebook app](media/micropolis-gallery/micropolis-facebook-app.png)
 
-## SimProv — Exploratorium SPARCstation 2 demo
+## HyperLook — Exploratorium, San Francisco
 
-Video demo stills — **HyperLook**, **CAM** (Cellular Automata Machine), **happytool** melting smileys,
-**Little Trees** air freshener CA, **Alan Turing NeatClock**, **SimCity** Object Properties with rotated RESET button.
+Video demo stills from Don's **HyperLook / NeWS** demo at the **Exploratorium, SF** (SPARCstation 2) —
+**CAM**, **happytool** melting smileys, **Little Trees** air freshener CA, **Alan Turing NeatClock**,
+**SimCity** Object Properties with rotated RESET button. *Not* The Sims **SimProv** project.
 
 [`media/simprov-exploratorium/`](media/simprov-exploratorium/INDEX.yml)
 
@@ -222,9 +223,11 @@ Video demo stills — **HyperLook**, **CAM** (Cellular Automata Machine), **happ
 
 [`media/connectedtv-palm/`](media/connectedtv-palm/INDEX.yml)
 
-## Sims CTG 1999 — bugs and glitches
+## Sims 1 — Transmogrifier tutorial & SimProv
 
-Floating head **Help/Hope** glitch · graveyard skeleton · dev-era outfit tests.
+**Transmogrifier tutorial** (~2000–2001 post ship): tuxedo Sim vs green flamingo. **SimProv** with
+**SimBabes / SimFreaks / SimSlice**: graveyard skeleton scene, outfit tests — and **floating heads in
+pie menus** (Help/Hope — designed behavior, not a glitch). *Not* 1999 Maxis pre-release dev shots.
 
 [`media/sims-ctg-1999/`](media/sims-ctg-1999/INDEX.yml)
 
@@ -260,10 +263,16 @@ and **Soyuz Globus** consoles for the same project.
 
 ![SimFaux dashboard](media/simfaux/simfaux-dashboard-full.png)
 
-## StoryMaker Urban Safari — Amsterdam AR
+## Amsterdam Coffeeshops — Layar AR (2009)
 
-**Stupid Fun Club** location-based storytelling — TurboGears backend, Layar-era AR thumbnails,
-canal scenes. Same era as **Invader** mosaics and **Objectionable C** iPhone dev.
+**TomTom-era side project** — spreadsheet database of every Amsterdam coffeeshop as a **Layar layer on iPhone**. Progenitor Will saw before StoryMaker / Urban Safari. [YouTube demo](https://www.youtube.com/watch?v=nG90XG3STz8).
+
+[`media/amsterdam-coffeeshops-layar/`](media/amsterdam-coffeeshops-layar/INDEX.yml)
+
+## StoryMaker Urban Safari — Amsterdam AR (2011)
+
+**Stupid Fun Club** location-based storytelling — TurboGears backend, Layar scenes (canal edit dev).
+Same era as **Invader** mosaics and **Objectionable C** iPhone dev. *Not* the 2009 coffeeshop layer.
 
 [`media/storymaker-urban-safari/`](media/storymaker-urban-safari/INDEX.yml) · [`media/amsterdam-tile-art/`](media/amsterdam-tile-art/INDEX.yml)
 
@@ -373,7 +382,7 @@ Free **STL/STEP** downloads and **lightpenisland.net** SWAG — clicky toys, cat
   Oakland shoot, SFC Emeryville).
 - [**Micropolis gallery**](media/micropolis-gallery/INDEX.yml) — Don's screenshots from HyperLook
   through OLPC, HAR, OpenLaszlo, PacBot, Facebook.
-- [**SimProv Exploratorium demo**](media/simprov-exploratorium/INDEX.yml) — SPARCstation 2 video stills; CAM, happytool, NeatClock.
+- [**HyperLook Exploratorium demo**](media/simprov-exploratorium/INDEX.yml) — SPARCstation 2 video stills; CAM, NeatClock, HyperDraw (not SimProv).
 - [**Pie menus**](media/pie-menus/INDEX.yml) — SimCity HyperLook, Sims Online, Fitts Law promo.
 - [**Sims Transmogrifier**](media/sims-transmogrifier/INDEX.yml) — Logo artwork, Green Flamingo, SimProv Theatre wedding pack.
 - [**Media catalog (big-endian)**](media/CATALOG-INDEX.yml) — category dirs + per-file sidecars ([GLANCE](media/GLANCE.yml)):

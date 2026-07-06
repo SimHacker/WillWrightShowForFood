@@ -5,7 +5,18 @@ artifact:
   slug: travel-amsterdam-lost-turtle-george-poster
   category: travel
   subcategory: amsterdam
-  what: "Gezocht — George the red-eared slider"
+  what: "Lost-pet flyer — Gezocht: George the turtle (red-eared slider)"
+  venue: Amsterdam
+  text:
+    header: "Gezocht:"
+    subhead: "Wij zijn onze George kwijt!"
+    contact: georgeisdeklutskwijt@gmail.com
+  note_on_file: "Taped to a street bin; Dutch flyer with turtle photo"
+  not: "Not Berlin; not CCC Pac-Man jacket — was misfiled as travel-berlin-ccc-pacman-jacket-ghost-shirt"
   sidecar_of: travel-amsterdam-lost-turtle-george-poster.png
+
+see_also:
+  - travel-amsterdam.yml
+  - travel-amsterdam-i-amsterdam-space-invader-sticker.yml
 
 note: "Not AI Generated!"

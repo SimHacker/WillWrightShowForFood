@@ -1,0 +1,23 @@
+# Amsterdam Coffeeshops — Layar AR (iPhone)
+
+room:
+  id: amsterdam-coffeeshops-layar
+  name: Amsterdam Coffeeshops — Layar AR
+  parent: ../../media.md
+  era: "2009"
+  count: 2
+
+artifacts:
+  - file: amsterdam-coffeeshops-layar-helmersstraat-scene.png
+    sidecar: amsterdam-coffeeshops-layar-helmersstraat-scene.yml
+  - file: amsterdam-coffeeshops-layar-smoking-papers.png
+    sidecar: amsterdam-coffeeshops-layar-smoking-papers.yml
+
+spec:
+  - amsterdam-coffeeshops-layar.yml
+
+see_also:
+  - ../storymaker-urban-safari/INDEX.yml
+  - ../../career/stupid-fun-club.yml
+
+note: "Not AI Generated!"

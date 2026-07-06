@@ -6,8 +6,9 @@ artifact:
 
 photos:
   gdc_olpc_gnome:
-    file: gdc-olpc-gnome-flipping-bird-yoda.png
-    caption: "Miguel and cement garden gnome flipping the bird"
+    statue: olpc-demo-gdc-miguel-gnome-flipping-bird-statue.png
+    group_photo: olpc-demo-gdc-gnome-flipping-bird-yoda.png
+    caption: "Miguel de Icaza made the cement garden gnome; posed with it at GDC (parking garage Level 6)"
     with: ["Chris Toshok", "Miguel de Icaza"]
     location: San Francisco
   devon_eyeballs:

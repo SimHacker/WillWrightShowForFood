@@ -28,9 +28,9 @@ ROOM_META = {
     },
     "simprov-exploratorium": {
         "era": "early 1990s",
-        "what": "HyperLook / CAM / SimCity UI on Sun SPARCstation 2 — Exploratorium demo stills",
+        "what": "HyperLook/NeWS demo at Exploratorium SF — SPARCstation 2 video stills (not Sims SimProv)",
         "gags": ["../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml"],
-        "see_also": ["../pie-menus/INDEX.yml", "../cellular-automata-tiles/INDEX.yml"],
+        "see_also": ["../../hyperlook-news-postscript-simcity.md", "../pie-menus/INDEX.yml"],
     },
     "cellular-automata-tiles": {
         "era": "~2010-2011",
@@ -87,16 +87,22 @@ ROOM_META = {
         "see_also": ["pie-menus.yml", "../news-tnt/INDEX.yml"],
     },
     "sims-ctg-1999": {
-        "era": "~1999",
-        "what": "Original Sims CTG/Maxis dev-era bugs, glitches, and screenshots",
+        "era": "~2000–2001 post ship",
+        "what": "Sims 1 Transmogrifier tutorial + SimProv (SimBabes/SimFreaks/SimSlice) — not Maxis 1999 dev",
         "gags": [],
-        "see_also": ["../sims-transmogrifier/INDEX.yml"],
+        "see_also": ["../sims-transmogrifier/INDEX.yml", "../../../../catalogs/simprov/README.md"],
     },
     "storymaker-urban-safari": {
         "era": "2011",
-        "what": "Stupid Fun Club Urban Safari — geotagged AR storytelling in Amsterdam",
+        "what": "Stupid Fun Club StoryMaker Urban Safari — Layar geotagged scenes (2011)",
         "gags": [],
-        "see_also": ["../storymaker/INDEX.yml", "../amsterdam-tile-art/INDEX.yml"],
+        "see_also": ["../amsterdam-coffeeshops-layar/INDEX.yml", "../storymaker/INDEX.yml"],
+    },
+    "amsterdam-coffeeshops-layar": {
+        "era": "2009",
+        "what": "Amsterdam coffeeshop database as Layar AR layer on iPhone — progenitor of Urban Safari",
+        "gags": [],
+        "see_also": ["../storymaker-urban-safari/INDEX.yml", "../../career/stupid-fun-club.yml"],
     },
     "news-tshirts": {
         "era": "late 1980s-1990s",
@@ -178,11 +184,6 @@ ROOT_META = {
         "era": "archival reference",
         "room": "simprov-exploratorium",
     },
-    "don-anonymous-behind-bars.png": {
-        "what": "Don in Anonymous mask behind bars — GDC 2010 / OLPC orbit",
-        "era": "2010",
-        "room": "olpc-gdc",
-    },
 }
 
 BUG_FARM_HINTS = {
@@ -214,7 +215,7 @@ def guess_what(slug: str, room: str) -> str:
     if slug.startswith("ca-"):
         return f"SimCity-tile cellular automata — {slug_to_title(slug.replace('ca-', ''))}"
     if slug.startswith("sims-1999-"):
-        return f"Sims 1999 dev screenshot — {slug_to_title(slug.replace('sims-1999-', ''))}"
+        return f"Sims 1 Transmogrifier/SimProv — {slug_to_title(slug.replace('sims-1999-', ''))}"
     if slug.startswith("jaunt-"):
         return f"Jaunt VR camera rig — {slug_to_title(slug.replace('jaunt-', ''))}"
     if slug.startswith("van-leer-"):

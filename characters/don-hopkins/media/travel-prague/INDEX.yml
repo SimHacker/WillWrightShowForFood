@@ -5,10 +5,9 @@ room:
   category: travel
   subcategory: prague
   parent: ../INDEX.yml
-  count: 1
+  count: 0
+  note: "Prior artifact was misfiled — Miguel's GDC gnome (San Francisco), moved to olpc-demos/"
 
-artifacts:
-  - file: travel-prague-don-hopkins-gargoyles-bracketed.png
-    sidecar: travel-prague-don-hopkins-gargoyles-bracketed.yml
+artifacts: []
 
 note: "Not AI Generated!"

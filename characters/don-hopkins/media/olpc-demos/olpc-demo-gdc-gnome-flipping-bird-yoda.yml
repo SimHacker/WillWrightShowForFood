@@ -5,7 +5,13 @@ artifact:
   slug: olpc-demo-gdc-gnome-flipping-bird-yoda
   category: olpc
   subcategory: demos
-  what: "GDC — gnome flipping bird with Yoda plush"
+  what: "GDC — Miguel de Icaza with his gnome and Yoda plush; parking garage Level 6"
+  venue: "San Francisco — GDC"
+  with: [Miguel de Icaza, Chris Toshok]
   sidecar_of: olpc-demo-gdc-gnome-flipping-bird-yoda.png
+
+see_also:
+  - olpc-demo-gdc-miguel-gnome-flipping-bird-statue.yml
+  - olpc-demos.yml
 
 note: "Not AI Generated!"

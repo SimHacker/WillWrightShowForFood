@@ -1,0 +1,18 @@
+# Sidecar — travel-berlin-ccc-teufelsberg-don-anonymous-behind-bars.png
+
+artifact:
+  file: travel-berlin-ccc-teufelsberg-don-anonymous-behind-bars.png
+  slug: travel-berlin-ccc-teufelsberg-don-anonymous-behind-bars
+  category: travel
+  subcategory: berlin
+  room: travel-berlin
+  what: "Don in Guy Fawkes bandana behind orange bars — CCC trip, Teufelsberg"
+  venue: "Teufelsberg, Berlin"
+  event: "Chaos Computer Club (CCC) trip"
+  not: "Not GDC 2010 — was mislabeled at media/don-anonymous-behind-bars.png"
+  sidecar_of: travel-berlin-ccc-teufelsberg-don-anonymous-behind-bars.png
+
+see_also:
+  - INDEX.yml
+
+note: "Not AI Generated!"
