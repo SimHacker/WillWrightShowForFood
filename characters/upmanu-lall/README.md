@@ -29,21 +29,29 @@ That is the founding precedent of the show's
 its `data_lab` format: Micropolis metrics streaming into **Google Sheets**, which sits high on the
 enable-educational-uses unlock path. What Lall's students did by hand, every classroom could do live.
 
-The paper trail survives. OPTIMUS — the **Open Platform for Teaching Integrated Modeling and Urban
-Simulation** (Columbia CEEM/EEE + CCNMTL, prototype released September 2003; the anchor course
-*Resources & Environment* launched spring 2002) — is documented in Garvin, Smyth, Sommer & Lall's
-conference paper, and the prototype code sits in a public GitHub archive
-([`ccnmtl/optimus`](https://github.com/ccnmtl/optimus)). The paper names the exact blocker of its
-era:
+The paper trail survives — including the **original 2002 NSF proposal itself**, preserved in
+[`media/`](media/) and digested in
+[`sources/nsf-2002-proposal-digest.md`](sources/nsf-2002-proposal-digest.md). OPTIMUS — the
+**Open Platform for Teaching Integrated Modeling and Urban Simulation** (Columbia CEEM/EEE +
+CCNMTL; PIs Lall, Garvin, Smyth) — also lives on in a conference paper and a public GitHub archive
+of the prototype code ([`ccnmtl/optimus`](https://github.com/ccnmtl/optimus)). The proposal names
+the exact blocker of its era, and its solution, in consecutive sentences:
 
-> "Currently, SimCity lacks the open architecture to add modules and extract state variables."
+> "SimCity lacks the open architecture to add modules and extract state variables. However, Hopkins
+> has demonstrated how to make this game extensible to a multi-player, multi-platform setting, and
+> to make the state variables accessible."
 
-That sentence, written around 2002, is the requirement MicropolisCore + MOOLLM finally fulfills:
-open architecture, addable modules, extractable state. It even asked for **multiple roles** so
-student teams could play a city's departments (the federation/multiplayer design), called computers
-"a **conversational environment** in which the learner can apply knowledge to problems" (now
-literal, with an LLM), and wanted **cellular automata** as the early teaching formalism (Micropolis
-*is* a CA city). His 2002 wishlist is the 2026 feature set.
+**Don Hopkins and David Levitt are named consultants in the proposal** — "Don has collaborated
+extensively with Will Wright, the designer of SimCity, and David Levitt, the creator of the visual
+programming language Bounce." So this isn't a citation relationship; it's an unfinished
+collaboration with the paperwork still on file. The proposal asked for a "**LEGO like ability** to
+add features," students who "**add functional modules** … using a high-level programming
+language," **multiple roles** so student teams play a city's departments, computers as "a
+**conversational environment**" (now literal, with an LLM), and **cellular automata** as the early
+teaching formalism (Micropolis *is* a CA city). By 2002 he had already run the method live:
+SimEarth CO₂ experiments in Earth Science, and SimCity in the freshman class with "data abstracted
+from the simulations … analyzed offline to introduce basic statistical and model fitting concepts."
+His 2002 wishlist is the 2026 feature set.
 
 ## The correspondence
 
@@ -61,8 +69,8 @@ Back into the fold **with love and respect** — as a guide, not a grant ornamen
 current funding, no students, and no bandwidth for this, his guidance is critical: OPTIMUS was the
 rubber hitting the road on applying constructionist theory in a real classroom, inside a
 traditional university, with real curriculum committees. Standing invitation, first look, zero
-obligation — and one concrete ask that doubles as the reconnection: *your 2002 blocker is fixed;
-may we see the original proposals?*
+obligation. And the reconnection note writes itself: *the proposal you wrote in 2002 — with Don as
+named consultant — is finally buildable, and largely built.*
 
 ## Why invite him
 

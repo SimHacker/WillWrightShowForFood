@@ -42,9 +42,15 @@ bio:
 
 quotable:
   reply_2008: "Fantastic to hear from you and learn what you are working on -- sounds very cool … perhaps i can be listed as a collaborator? and I could then say I will use in my classes"   # verbatim, 9 Dec 2008 email to Don
-  optimus_blocker: "Currently, SimCity lacks the open architecture to add modules and extract state variables."   # Garvin/Smyth/Sommer/Lall paper, ~2002 — the requirement MicropolisCore+MOOLLM fulfills
+  optimus_blocker: "SimCity lacks the open architecture to add modules and extract state variables. However, Hopkins has demonstrated how to make this game extensible to a multi-player, multi-platform setting, and to make the state variables accessible."   # 2002 NSF proposal, p.11 — blocker + solution in consecutive sentences
+  don_and_david_named: "Don has collaborated extensively with Will Wright, the designer of SimCity, and David Levitt, the creator of the visual programming language Bounce, who has also plans to assist Don in this project."   # 2002 NSF proposal, p.6 — Don + David Levitt are named consultants
 
-approach: "Back into the fold with love and respect — guide, not grant ornament. Standing invitation, first look, zero obligation. Reconnection ask: 'your 2002 blocker is fixed; may we see the original OPTIMUS proposals?'"
+primary_source:
+  what: "The original 2002 NSF Engineering Education proposal (Lall/Garvin/Smyth, Columbia CEEM+EEE+CCNMTL) — 15-page description + 1-page summary + Word original (metadata: author Upmanu Lall, Dec 2001–Jan 2002)."
+  files: media/   # nsf2002engeduc_final.pdf, nsf2002engeduc-sum_final.pdf, nsf2002engeduc-sum.doc
+  digest: sources/nsf-2002-proposal-digest.md
+
+approach: "Back into the fold with love and respect — guide, not grant ornament. Standing invitation, first look, zero obligation. Reconnection note writes itself: the 2002 proposal (Don as named consultant) is finally buildable, and largely built."
 
 sources:
   web:

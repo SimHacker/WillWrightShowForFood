@@ -40,14 +40,14 @@ Sixteen years later: it's the future, and the crazy concepts with Will Wright ar
 ## Why reactivate him
 
 - **He took the wreck and built something.** The Eduverse collapse cost everyone, but Sergio walked
-  out with the 9-box team, school pilots, and eventually a published book on teaching game
-  development to kids. That's the resilient half of the story, and he owns it.
+out with the 9-box team, school pilots, and eventually a published book on teaching game
+development to kids. That's the resilient half of the story, and he owns it.
 - **Triple-fit for the [educators' track](../../repo-shows/ideas/themes/educators-track.yml):**
-  HKU alum (the exact Dutch game-jam host school the track names), Scratch teaching (bridges
-  straight to the Brian Harvey / Jens Mönig Snap! bench), and lived Eduverse experience — he ran
-  the teacher-plus-open-source-city-sim experiment before the tooling existed.
-- **He closed with an open door.** "Perhaps we'll meet again sometime in the future" is the easiest
-  reactivation in the roster: no repair needed, just news.
+HKU alum (the exact Dutch game-jam host school the track names), Scratch teaching (bridges
+straight to the Brian Harvey / Jens Mönig Snap! bench), and lived Eduverse experience — he ran
+the teacher-plus-open-source-city-sim experiment before the tooling existed.
+- **He closed with an open door.** "Perhaps we'll meet again sometime in the future" is the easiest  
+reactivation in the roster: no repair needed, just news.
 
 ## The approach
 
@@ -60,3 +60,4 @@ old).
 
 - [LinkedIn](https://www.linkedin.com/in/sergiovanpul) · [Scratch 2.0 Game Development Hotshot](https://www.packtpub.com/game-development/scratch-20-game-development-hotshot)
 - Don's mail archive: 2 Oct 2010 reply (quoted verbatim); 2008–10 Eduverse meeting threads
+
