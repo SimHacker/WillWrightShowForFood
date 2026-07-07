@@ -36,7 +36,7 @@ seat. Shared ground: Don's published sources, overlapping guest roster (Phil, Je
 Maxis veterans), and the recording ethic Tim's passing taught both of them — talk to people while
 you can.
 
-Full synergy map: [`../synergy/willwrightshowforfood.md`](../synergy/willwrightshowforfood.md)
+Full synergy map: [Two documenting endeavours](../synergy/willwrightshowforfood.md)
 
 ---
 
