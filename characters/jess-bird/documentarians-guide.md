@@ -13,8 +13,12 @@ violinist.
 
 You asked: *"tell me what I'm looking at here???"*
 
-You're looking at a **show that lives in a repository**. Instead of shooting footage and locking a cut, Don is building the show's world in public: every guest or personal discussion topic or memorial gets a room (`[characters/](../README.md)`), every episode idea gets a seed
-(`[repo-shows/](../../repo-shows/README.md)`), and every primary source — 1996 lecture transcripts,
+You're looking at a **show that lives in a repository**. Instead of shooting footage and locking a
+cut, Don is building the show's world in public: every **character** gets a room
+([characters/](../README.md)) — guests and hosts, people whose life and work the show celebrates,
+memorials to the departed, and the occasional historical, fictional, or game-born persona (SimEarth
+has opinions, and speaks as Gaia). Every episode idea gets a seed
+([repo-shows/](../../repo-shows/README.md)), and every primary source — 1996 lecture transcripts,
 Will Wright's original Sims motive code, design documents, community archives — gets **filed where
 anyone can cite it**.
 
