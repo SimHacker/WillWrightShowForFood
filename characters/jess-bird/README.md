@@ -24,7 +24,7 @@ Machine-readable companion: [`reading-list.yml`](reading-list.yml).
 
 ## Mission
 
-Full framing: [`mission/documentary.yml`](mission/documentary.yml)
+Full framing: [**The mission — a broadcast history of The Sims**](mission/documentary.md)
 
 In one line: **document the Sims lineage** — Maxis veterans, preservation archivists, modders and tool
 makers, and the design culture Will opened — so it survives on screen the way Phil Salvador's
@@ -42,13 +42,20 @@ SimRefinery work survived on the page.
 | **Repo Show curiosity** | July 2026 — browsed [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood); wants to keep things moving together   |
 
 
-Latest excerpt: [`sources/2026-07-07-email-excerpt.md`](sources/2026-07-07-email-excerpt.md)
+Latest excerpt: [`sources/2026-07-07-email-excerpt.md`](sources/2026-07-07-email-excerpt.md) ·
+full timeline: [**correspondence**](correspondence.md)
 
 ## Synergy with this repo
 
-[`synergy/willwrightshowforfood.yml`](synergy/willwrightshowforfood.yml) — Don documents by **coding
+[**Two documenting endeavours**](synergy/willwrightshowforfood.md) — Don documents by **coding
 and interviewing** on a public timeline; Jess documents at **broadcast scale**. Same sources, same
 people worth honoring, different containers.
+
+---
+
+*Machine-readable girders:* [`CHARACTER.yml`](CHARACTER.yml) · [`correspondence.yml`](correspondence.yml) ·
+[`mission/documentary.yml`](mission/documentary.yml) · [`synergy/willwrightshowforfood.yml`](synergy/willwrightshowforfood.yml) ·
+[`reading-list.yml`](reading-list.yml)
 
 
 

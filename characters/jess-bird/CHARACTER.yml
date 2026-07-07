@@ -46,7 +46,8 @@ bio:
     be the other.
 
 mission:
-  document: mission/documentary.yml
+  document: mission/documentary.md
+  girder: mission/documentary.yml
   framing: |
     Document the cultural and technical story of The Sims and its people — Maxis veterans,
     community archivists, modders, and the design lineage Will Wright opened — with the care
@@ -61,7 +62,8 @@ correspondence:
     not all correspondence is public.
 
 synergy:
-  with_repo_show: synergy/willwrightshowforfood.yml
+  with_repo_show: synergy/willwrightshowforfood.md
+  girder: synergy/willwrightshowforfood.yml
   don_position: |
     Don codes and interviews on a public timeline; Jess documents at broadcast scale. Shared
     sources, shared guests-in-common, no requirement that either project wait for the other.
@@ -85,7 +87,9 @@ see_also:
   - { path: README.md, why: "Public-facing overview" }
   - { path: documentarians-guide.md, why: "The repo through a producer's eyes — arcs, people, sources, footage" }
   - { path: reading-list.yml, why: "Machine-readable companion to the guide" }
-  - { path: mission/documentary.yml, why: "Mission — what she's documenting and why" }
+  - { path: mission/documentary.md, why: "Mission — what she's documenting and why" }
+  - { path: correspondence.md, why: "Timeline — how the collaboration grew" }
+  - { path: synergy/willwrightshowforfood.md, why: "Two documenting endeavours — the split and the shared ground" }
   - { path: ../will-wright/, why: "Primary subject of both projects" }
   - { path: ../don-hopkins/, why: "Host — research partner and introduction hub" }
   - { path: ../../repo-shows/will-wright-premiere/, why: "Repo Show flagship Jess can draw from" }
