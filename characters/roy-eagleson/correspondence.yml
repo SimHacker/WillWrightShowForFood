@@ -1,0 +1,27 @@
+# Roy Eagleson — correspondence digest (public-safe)
+# Primary transcript lives under Heinz's sources/.
+
+meta:
+  with: roy-eagleson
+  curated_by: don-hopkins
+  consent: not_yet_asked
+  span: "2026-07 — PIXIE thread (Cc)"
+  email: eagleson@uwo.ca
+
+gist: |
+  Heinz's friend at Western University. Teaches history of computer graphics in CS courses.
+  Discussed PIXIE with Heinz in Nagoya; asked to join PIXIE/graphics exchanges. Not a Repo Show
+  invitation — thread participant and classroom bridge.
+
+threads:
+  pixie_thread_2026_07_07:
+    transcript: ../heinz-lemke/sources/2026-07-07-pixie-trio-thread.md
+    what: |
+      HCI lecture pivot Sketchpad → PIXIE; Buxton patent page synchronicity; asked to play
+      Flight of the Bumblebee — Heinz sent YouTube link.
+    show_use: "Educator actively teaching the lineage — classroom proof the history is alive"
+
+connects_in_repo:
+  - { path: README.md, why: "Educator room" }
+  - { path: sketchpad-to-pixie-lineage.md, why: "Sketchpad → GSP → PIXIE essay" }
+  - { path: ../heinz-lemke/correspondence.yml, why: "roy_eagleson_uwo_2026 thread" }

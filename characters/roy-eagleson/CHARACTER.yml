@@ -1,0 +1,44 @@
+# Roy Eagleson — educator portrayal. NOT Roy Eagleson.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: roy-eagleson
+  name: "Roy Eagleson"
+  type: correspondent
+  signifier: "🎓"
+  status: living
+  field: "Computer science education — history of computer graphics; HCI; UWO"
+  home: characters/roy-eagleson/
+  affiliation: "Western University (UWO), London, Ontario"
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 2
+  authored_by: don-hopkins
+
+relationship:
+  to_project: friend_of_the_thread
+  to_heinz: "Good friend; discussed PIXIE in Nagoya (CARS 40th, July 2026)"
+  to_show: |
+    Cc'd on PIXIE trio invitation thread — not a Repo Show bud unless separately invited.
+    Active educator: teaches graphics history; Sketchpad → PIXIE lecture pivot (7 Jul 2026).
+
+bio:
+  summary: |
+    **Roy Eagleson** teaches computer science at **Western University**, including the **history
+    of computer graphics** in his courses. Friend of **Heinz U. Lemke**; joined the PIXIE
+    correspondence after Nagoya. July 2026: pivoted an HCI lecture from **Sutherland's Sketchpad**
+    to **PIXIE** the same morning Heinz revealed the complete PDP-7 listing — synchronicity while
+    reading Don's Buxton patent page.
+
+sources:
+  email: eagleson@uwo.ca
+  transcript: ../heinz-lemke/sources/2026-07-07-pixie-trio-thread.md
+
+see_also:
+  - { path: sketchpad-to-pixie-lineage.md, why: "Sketchpad north star → Geometer's Sketchpad → PIXIE in the classroom" }
+  - { path: ../heinz-lemke/, why: "PIXIE co-author; source-listing email; Flight of the PIXIE link" }
+  - { path: ../ivan-sutherland/, why: "Hero + north star — Sketchpad (1963)" }
+  - { path: ../heinz-lemke/pixie-source-recovery.md, why: "Listing recovery + Roy lecture synchronicity" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "friends_of_the_thread" }
+  - { path: ../don-hopkins/sources/2008-2023-pixie-buxton-patent-thread.md, why: "Roy reading when Heinz email arrived" }

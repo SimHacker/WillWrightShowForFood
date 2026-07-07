@@ -54,20 +54,33 @@ prose and the code implements for real.
   listing and corrected a plausible-but-wrong architecture story within four days. Recording
   season is now.
 
-## New friend of the thread: Roy Eagleson
+## Roy Eagleson — lecture synchronicity (7 July 2026)
 
 In Nagoya, Heinz discussed PIXIE with his friend **Roy Eagleson** (Western University / UWO),
-who teaches the history of computer graphics in his CS courses and asked to be included in the
-PIXIE and graphics exchanges — interested in the beginnings of computer graphics at MIT and
-Cambridge. A natural discussant (and audience-of-experts voice) for the show.
+who teaches the history of computer graphics in his CS courses. Heinz Cc'd Roy on the trio thread.
+
+Same morning Heinz sent the source-listing email, Roy was preparing an HCI lecture — normally
+**Sutherland's Sketchpad**, now **PIXIE** — and reading Don's page on **Buxton's patent-system
+abuse** when the login-code prompt and Heinz's message arrived in the same breath. *"What a small
+world."* He asked whether to play the video to **Flight of the Bumblebee** in class; Heinz replied
+with [the YouTube link](https://www.youtube.com/watch?v=jDrqR9XssJI).
+
+Primary source: [`sources/2026-07-07-pixie-trio-thread.md`](sources/2026-07-07-pixie-trio-thread.md).
+Roy is on the correspondence thread — see [`../roy-eagleson/`](../roy-eagleson/) for his educator
+room (Sketchpad → [**Geometer's Sketchpad**](https://en.wikipedia.org/wiki/The_Geometer%27s_Sketchpad)
+line → PIXIE). [**Ivan Sutherland**](../ivan-sutherland/) — hero / north star.
 
 ## Next steps
 
 1. Heinz prepares a copy of the listing (his offer — "in due course," no pressure).
-2. Scan/receive → file under `media/` here with provenance, mirror to the show's evidence room.
-3. Lars: assess against the Type 340 manual — what's needed to assemble/run under SIMH.
+2. Scan/receive → file under `media/` here with provenance — **evidence room before interview**
+   (Don 7 Jul 2026: papers, magazine articles, films, **especially source code**).
+3. Lars: assess against Type 340 manual — assemble/run under SIMH; **virtual light pen drivers**
+   from listing interrupt handler; test on emulator.
 4. Fold the "not a dumb terminal" correction into the show's interview beats (done — see
    [the show seed](../../repo-shows/pixie-pie-menus-pdp7.yml)).
+5. Post-production: [Cambridge telecine jiggle house style](../../process/post-production/cambridge-telecine-jiggle.yml)
+   — B&W grain + motion-tracked credits (Don's *Flight of the PIXIE* AE pipeline).
 
 ---
 

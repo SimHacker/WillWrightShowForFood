@@ -20,11 +20,21 @@ gist: |
   **separate solo episode** while keeping PIXIE focused on PDP-7/340 + Cambridge ~1970.
 
 threads:
+  pixie_terminal_reading_2026:
+    date: "2026-07-04"
+    what: |
+      DSHR replied to Don's "Cambridge software probably lost" note: PIXIE PDP-7 was "simply a
+      display terminal" per p.465 diagram — app-specific primitives on 8K vs Blit/Alto/CDC274.
+      Light pen: beam-pass interrupt; software tracks what was drawing. Heinz (7 Jul) corrected:
+      NOT a dumb terminal — 5000 w interaction + 3000 w graph model on PDP-7. Show beat: reasonable
+      inference vs author + listing.
+    transcript: ../heinz-lemke/sources/2026-07-07-pixie-trio-thread.md
   pixie_jul_2026_thread:
     date: "2026-07-02 — 2026-07-03"
     subject: "Re: Invitation to PIXIE Repo Show interview"
     transcript: sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md
     draft: https://www.abitare.org/~dshr/tmp/pdp7.html
+    projection: pdp7-cambridge-memories.md
     order:
       - dshr_0703_0221_pdp7_html_link
       - don_0703_1044_hex_permission
@@ -123,5 +133,6 @@ connects_in_repo:
   - { path: literary/authority-without-truth.yml, why: "Lem + coprophagia + Hex thread" }
   - { path: literary/rautavaaras-case-pkd.yml, why: "PKD gods-eat-worshippers" }
   - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Async PIXIE tapestry" }
+  - { path: ../heinz-lemke/sources/2026-07-07-pixie-trio-thread.md, why: "DSHR terminal reading + Heinz correction" }
   - { path: ../heinz-lemke/correspondence.yml, why: "Rosenthal same-machine thread" }
   - { path: ../lars-brinkhoff/correspondence.yml, why: "Emulation segment + async pivot" }

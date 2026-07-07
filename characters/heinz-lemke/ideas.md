@@ -34,6 +34,13 @@ preservation toolchain — *make PIXIE runnable again on stream*. Heinz remember
 Lars maps the manual to emulators. [`../lars-brinkhoff/`](../lars-brinkhoff/) ·
 [Type 340 manual](http://bitsavers.trailing-edge.com/pdf/dec/graphics/7-13_340_Display_Programming_Manual.pdf)
 
+### 0e. Roy Eagleson — educator teaching Sketchpad → PIXIE
+**Roy Eagleson** (UWO) — Heinz's friend; teaches **history of computer graphics**. Normally opens
+with [**Ivan Sutherland's Sketchpad**](../ivan-sutherland/) (north star) and the [**Geometer's
+Sketchpad**](../roy-eagleson/sketchpad-to-pixie-lineage.md) educational line; pivoted to PIXIE the
+same hour as Heinz's listing email (7 Jul 2026). Classroom proof the lineage is alive.
+[`../roy-eagleson/`](../roy-eagleson/)
+
 ### 1. Neil Wiseman — the person behind the citation
 Lab culture, leadership, design judgment. Don't let Wiseman collapse into a paper header.
 

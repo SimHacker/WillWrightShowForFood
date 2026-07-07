@@ -3,7 +3,7 @@
 **Subject:** Re: Invitation to PIXIE Repo Show interview  
 [Portrayal standards](../../../schemas/portrayal-standards.yml)
 
-David's PDP-7/340 draft Don liked: **[pdp7.html](https://www.abitare.org/~dshr/tmp/pdp7.html)** — Cambridge ~1970, Piet Hein *Hex* on the 340, **"let the machine win"** (cheats if you try to win).
+David's PDP-7/340 draft Don liked: **[pdp7.html](https://www.abitare.org/~dshr/tmp/pdp7.html)** · full text in repo: [`../pdp7-cambridge-memories.md`](../pdp7-cambridge-memories.md) — Cambridge ~1970, Piet Hein *Hex* on the 340, **"let the machine win"** (cheats if you try to win).
 
 ---
 
@@ -72,7 +72,7 @@ The narrator (an Approximation) is genuinely puzzled by the outrage, arguing the
 
 | What | Where |
 |------|-------|
-| PDP-7 Hex draft | [pdp7.html](https://www.abitare.org/~dshr/tmp/pdp7.html) · [`../media/pdp7-hex-let-machine-win.yml`](../media/pdp7-hex-let-machine-win.yml) |
+| PDP-7 Hex draft | [pdp7.html](https://www.abitare.org/~dshr/tmp/pdp7.html) · [`../pdp7-cambridge-memories.md`](../pdp7-cambridge-memories.md) · [`../media/pdp7-hex-let-machine-win.yml`](../media/pdp7-hex-let-machine-win.yml) |
 | Lem + coprophagia | [`../literary/authority-without-truth.yml`](../literary/authority-without-truth.yml) |
 | Rautavaara notes | [`../literary/rautavaaras-case-pkd.yml`](../literary/rautavaaras-case-pkd.yml) |
 | MOOLLM discussion pack | [`../../../repo-shows/david-rosenthal/discussion-pack.yml`](../../../repo-shows/david-rosenthal/discussion-pack.yml) |

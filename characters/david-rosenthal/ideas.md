@@ -95,7 +95,8 @@ concept: [`../../process/artifactory.yml`](../../process/artifactory.yml)
 
 - [`invitation.md`](invitation.md)
   - [`correspondence.yml`](correspondence.yml)
-- [`sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md`](sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md) — [pdp7.html](https://www.abitare.org/~dshr/tmp/pdp7.html) → Hex → Lem → Rautavaara → MOOLLM
+- [`pdp7-cambridge-memories.md`](pdp7-cambridge-memories.md) — [pdp7.html](https://www.abitare.org/~dshr/tmp/pdp7.html) → Hex → Lem → Rautavaara → MOOLLM
+- [`sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md`](sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md) — email thread around the draft
   - [`literary/`](literary/)
   - [`window-systems-lineage.yml`](window-systems-lineage.yml)
 - Show seed: [`repo-shows/david-rosenthal/`](../../repo-shows/david-rosenthal/)

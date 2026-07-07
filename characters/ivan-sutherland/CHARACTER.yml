@@ -1,0 +1,36 @@
+# Ivan Sutherland — hero portrayal (cite, do not impersonate)
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: ivan-sutherland
+  name: "Ivan Sutherland"
+  type: hero
+  signifier: "✏️"
+  status: living
+  field: "Computer graphics pioneer — Sketchpad (1963); VR; computer architecture"
+  home: characters/ivan-sutherland/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 1
+  authored_by: don-hopkins
+  note: "Hero/north-star room — citation and lineage, not interview portrayal"
+
+north_star:
+  system: Sketchpad
+  year: 1963
+  why: |
+    Light pen + constraints + direct manipulation — the textbook GUI before the word GUI.
+    North star for Roy Eagleson's teaching, PIXIE's pen era, and the Geometer's Sketchpad
+    educational line.
+
+sources:
+  wikipedia: https://en.wikipedia.org/wiki/Sketchpad
+  turing: https://amturing.acm.org/award_winners/sutherland_3467782.cfm
+
+see_also:
+  - { path: sketchpad-and-descendants.md, why: "Sketchpad → GSP → PIXIE lineage essay" }
+  - { path: ../roy-eagleson/sketchpad-to-pixie-lineage.md, why: "Educator actively teaching Sketchpad → PIXIE" }
+  - { path: ../heinz-lemke/, why: "PIXIE — Cambridge 1969, six years after Sketchpad" }
+  - { path: ../alan-kay/media/quora-recaps/declarative-whats-vs-hows.md, why: "Kay on Sketchpad constraints" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "PIXIE show — same light-pen era" }

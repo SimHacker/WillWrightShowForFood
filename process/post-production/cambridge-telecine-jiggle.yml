@@ -77,8 +77,11 @@ shows:
       - "Type 340 manual joke lower-thirds during Lars segment"
       - "CARS bridge title — same drift as Heinz film memories"
       - "Gag credits roll — Department of Research Simulation, Light Pen Bureau, Ground Up Software consulting division, …"
-  any_repo_show:
-    rule: "Optional skin — not mandatory format-wide; strongest when episode cites Cambridge/PIXIE/archive"
+  house_style:
+    don_2026_07_07: |
+      Extend Flight of the PIXIE AE techniques — B&W film grain, modern subtitles, motion-tracked
+      credits matching Chapman telecine — as reusable Repo Show retro packaging.
+    transcript: characters/heinz-lemke/sources/2026-07-07-pixie-trio-thread.md
 
 see_also:
   - repo-shows/ideas/gags/cambridge-gag-credits.yml

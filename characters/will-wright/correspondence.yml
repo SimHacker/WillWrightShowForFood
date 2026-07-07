@@ -30,6 +30,14 @@ threads:
     what: "Robotics, Slats, One Minute Movies — constructionism as theater"
   sims_reunion:
     what: "Original Sims team — SimAntics, Exchange, design-by-accretion"
+  pixie_thread_cc_2026:
+    date: "2026-07-07"
+    what: |
+      Don Cc'd Will on PIXIE trio thread reply — async Repo Show format, evidence-room pre-upload,
+      source listing excitement, telecine house style. Will not a PIXIE bud; observer on deep
+      prehistory lane touching microworlds / constructionist preservation.
+    transcript: ../heinz-lemke/sources/2026-07-07-pixie-trio-thread.md
+    show: ../../repo-shows/pixie-pie-menus-pdp7.yml
 
 connects_in_repo:
   - { path: ideas.md, why: "Flagship topic menu" }
@@ -37,6 +45,8 @@ connects_in_repo:
   - { path: ../chaim-gingold/, why: "Maxis history book vs building now" }
   - { path: ../heather-alvey/, why: "SliceCity / SimFreaks / Gallium" }
   - { path: ../../repo-shows/will-wright-premiere/, why: "Flagship show seed" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Cc on PIXIE thread 2026-07-07" }
+  - { path: ../heinz-lemke/sources/2026-07-07-pixie-trio-thread.md, why: "Don reply — async evidence room" }
 
 show_hooks:
   - "1996 talk decode live — Will reads his own prediction of The Sims"

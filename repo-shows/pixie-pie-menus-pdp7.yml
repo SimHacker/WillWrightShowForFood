@@ -82,6 +82,24 @@ history:
     Assembler/Machine code for PDP-7 + DEC 340 Display, covering light pen handling, interrupt
     management, and interactive model building. Preparing a copy. Story + architecture
     correction: characters/heinz-lemke/pixie-source-recovery.md
+  evidence_room:
+    model: |
+      Upload ALL evidence to the repo BEFORE the interview — papers, newspaper/magazine articles
+      (Electronics 1969 PIXIE piece, etc.), Chapman digitized films, Flight of the PIXIE + long
+      form originals, and ESPECIALLY source code. Review on air; brainstorm revival designs;
+      extend existing emulator (Lars segment).
+    transcript: characters/heinz-lemke/sources/2026-07-07-pixie-trio-thread.md
+    pull_in: characters/heinz-lemke/pull-in-gaps.yml
+    priority:
+      - pixie_complete_source_listing
+      - electronics_magazine_1969_pdf
+      - wiseman_radial_menu_notes
+  virtual_light_pen:
+    goal: |
+      Use Heinz listing light-pen handler + interrupt code to implement and TEST virtual light
+      pen drivers on PDP-7/340 emulator — mouse → pen interpolation; label-target radial menus.
+    lars_segment: characters/lars-brinkhoff/
+    don_reply: "2026-07-07 — see heinz-lemke/sources/2026-07-07-pixie-trio-thread.md"
   architecture_correction: |
     Per Heinz (2026-07-07): the PDP-7 was NOT simply a display terminal for Titan. The 5000
     instructions interactively built graph-theoretic data structures (fitting the remaining
@@ -98,11 +116,23 @@ history:
 friends_of_the_thread:
   roy_eagleson:
     who: "Roy Eagleson — Western University (UWO); teaches history of computer graphics in his CS courses"
-    how: "Heinz's good friend; discussed PIXIE together in Nagoya at the CARS 40th anniversary (July 2026); asked to join the PIXIE/graphics exchanges"
-    interest: "Beginnings of computer graphics at MIT and Cambridge"
+    room: characters/roy-eagleson/
+    email: eagleson@uwo.ca
+    how: "Heinz's good friend; discussed PIXIE in Nagoya at CARS 40th; Cc'd on trio thread 7 Jul 2026"
+    educator: |
+      Active classroom bridge — HCI unit normally anchored on Ivan Sutherland's Sketchpad (north star);
+      pivoted to PIXIE same day as Heinz's source-listing email. Essay: sketchpad-to-pixie-lineage.md
+    interest: "MIT and Cambridge beginnings of computer graphics"
+    synchronicity_2026_07_07: |
+      Preparing HCI lecture (normally Sketchpad → PIXIE) when Heinz's source-listing email arrived;
+      was on Don's Buxton patent page; asked to play Flight of the Bumblebee in class — Heinz sent
+      the YouTube link same hour.
+    transcript: characters/heinz-lemke/sources/2026-07-07-pixie-trio-thread.md
+    lineage: characters/roy-eagleson/sketchpad-to-pixie-lineage.md
+    hero: characters/ivan-sutherland/
     possible_roles: [discussant, expert_audience_voice, classroom_bridge]
     consent: not_yet_asked
-    note: "Interested correspondent — joining the email exchanges is not a show invitation until offered and accepted."
+    note: "On the email thread — not a show bud unless separately invited."
 
 why_these_buds:
   lars_brinkhoff:
@@ -203,7 +233,9 @@ format:
       After Effects — reuse the exact motion track + blur/glow from Don's *Flight of the PIXIE*
       Bumblebee edit on Repo Show titles, credits, bud slates, segment cards, jokes, and
       dedication blocks. Match Chapman digitized 1969 film jiggle so packaging looks like the
-      same old Cambridge University reel as the archival inserts.
+      same old Cambridge University reel as the archival inserts. Don (7 Jul 2026): extend to
+      old-school B&W film grain + modern subtitles — **house style** for retro Repo Show videos;
+      motion-tracked credits were his proudest Bumblebee moment.
     applies_to: [opening_title, bud_slates, introductions, segment_cards, lower_thirds, jokes, dedication, end_credits, gag_credits]
     gag_credits: repo-shows/ideas/gags/cambridge-gag-credits.yml
     gag_credits_anchor: "Department of Research Simulation"
@@ -218,6 +250,8 @@ format:
 
 ties_to:
   - characters/heinz-lemke/
+  - characters/roy-eagleson/
+  - characters/ivan-sutherland/
   - characters/heinz-lemke/invitation.md
   - characters/lars-brinkhoff/
   - characters/lars-brinkhoff/invitation.md

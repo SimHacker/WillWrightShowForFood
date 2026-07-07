@@ -9,6 +9,6 @@ correspondence (~2020–present): Chapman film recovery, *Flight of the PIXIE*, 
 Black Forest visits. **ASAP Repo Show:** Heinz + **Lars Brinkhoff** (PDP-7/340 emulation) + **David Rosenthal** (same Cambridge stack ~1970) —
 [`invitation.md`](invitation.md) *(send-ready draft)*.
 
-[Invitation](invitation.md) · [Correspondence](correspondence.yml) · [Cambridge films → Bumblebee](cambridge-films-flight-of-the-bumblebee.md) · [Pull-in gaps](pull-in-gaps.yml) · [Show seed](../../repo-shows/pixie-pie-menus-pdp7.yml) · Don's thread: [`../don-hopkins/pie-menus-chi-88-and-beyond.md`](../don-hopkins/pie-menus-chi-88-and-beyond.md)
+[Invitation](invitation.md) · [Correspondence](correspondence.yml) · [Source listing thread (7 Jul 2026)](sources/2026-07-07-pixie-trio-thread.md) · [PIXIE source recovery](pixie-source-recovery.md) · [Roy Eagleson — educator](../roy-eagleson/) · [Cambridge films → Bumblebee](cambridge-films-flight-of-the-bumblebee.md) · [Pull-in gaps](pull-in-gaps.yml) · [Show seed](../../repo-shows/pixie-pie-menus-pdp7.yml) · Don's thread: [`../don-hopkins/pie-menus-chi-88-and-beyond.md`](../don-hopkins/pie-menus-chi-88-and-beyond.md)
 
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

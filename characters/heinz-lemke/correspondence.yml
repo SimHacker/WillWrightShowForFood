@@ -71,11 +71,23 @@ threads:
       interrupt management, interactive model building; offers to prepare a copy. Also corrects
       the record: the PDP-7 was NOT a dumb display terminal for Titan — the 5000 instructions
       interactively built graph-theoretic models (in the remaining 3000 words) for circuits,
-      syntax graphs, control systems, then sent them to Titan for simulation. DSHR contributed
-      light-pen interrupt mechanics in the same thread. Roy Eagleson (UWO; teaches computer
-      graphics history) joined the exchanges after discussing PIXIE with Heinz in Nagoya.
+      syntax graphs, control systems, then sent them to Titan for simulation. DSHR (4 Jul) had
+      reasonably read p.465 as a dumb terminal; Heinz's author memory + listing supersede the
+      diagram. DSHR contributed light-pen interrupt mechanics in the same thread.
     doc: pixie-source-recovery.md
+    transcript: sources/2026-07-07-pixie-trio-thread.md
     pull_in: pull-in-gaps.yml#pixie_complete_source_listing
+  roy_eagleson_uwo_2026:
+    what: |
+      Roy Eagleson (Western University / UWO) — Heinz's friend; teaches history of computer
+      graphics in CS courses. Discussed PIXIE in Nagoya at CARS 40th; Heinz Cc'd him on the trio
+      thread. 7 Jul: preparing an HCI lecture (normally Sketchpad) pivoted to PIXIE; synchronicity
+      — reading Don's Buxton patent page when Heinz's email arrived; asked whether to play
+      *Flight of the PIXIE* in class. Heinz sent the YouTube link same day.
+    transcript: sources/2026-07-07-pixie-trio-thread.md
+    interest: "MIT and Cambridge beginnings of computer graphics"
+    consent: not_yet_asked
+    note: "On the email thread — not a Repo Show bud unless invited separately"
 
   pixie_trio_invitation_2026:
     what: |
@@ -86,9 +98,24 @@ threads:
       - ../lars-brinkhoff/correspondence.yml
       - ../david-rosenthal/correspondence.yml
       - ../../repo-shows/pixie-pie-menus-pdp7.yml#format
+  don_reply_evidence_room_2026_07_07:
+    date: "2026-07-07 16:34"
+    transcript: sources/2026-07-07-pixie-trio-thread.md
+    what: |
+      Don replies giddy about Heinz listing + Roy/Heinz from Japan. Repo Show model: upload ALL
+      evidence (papers, magazine articles, ESPECIALLY source code) BEFORE interview; discuss on
+      air; brainstorm revival on extended emulator. Virtual light pen drivers from listing.
+      Async default (voice/face/screen/code); optional multi-person or Twitch. AE telecine jiggle
+      as retro house style (B&W grain, motion-tracked credits). Cc: Will Wright.
+    show_refs:
+      - ../../repo-shows/pixie-pie-menus-pdp7.yml
+      - ../../process/post-production/cambridge-telecine-jiggle.yml
 
 connects_in_repo:
   - { path: CHARACTER.yml, why: "Bio + invitation status" }
+  - { path: sources/2026-07-07-pixie-trio-thread.md, why: "Primary source — listing, correction, Roy Eagleson" }
+  - { path: ../roy-eagleson/, why: "Educator friend — Sketchpad → PIXIE lecture; see_also sketchpad-to-pixie-lineage.md" }
+  - { path: ../ivan-sutherland/, why: "North star — Sketchpad hero room" }
   - { path: cambridge-films-flight-of-the-bumblebee.md, why: "Chapman + Rosenthal + production + HN index" }
   - { path: pull-in-gaps.yml, why: "Heinz assets to pull in (magazine PDFs, Cambridge doc, Wiseman notes)" }
   - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "PIXIE show — Heinz + Lars Brinkhoff PDP-7/340 emulation" }
@@ -99,7 +126,8 @@ connects_in_repo:
 show_hooks:
   - "Neil Wiseman — lab culture, design judgment, personal memory"
   - "Lars Brinkhoff — PDP-7 + Type 340 + light pen; emulate PIXIE on stream"
-  - "David Rosenthal — same Cambridge PDP-7/Titan ~1970; PIXIE → NeWS/X11; CHM oral history"
+  - "David Rosenthal — same Cambridge PDP-7/Titan ~1970; p.465 dumb-terminal reading vs Heinz correction on air"
+  - "Roy Eagleson — UWO HCI lecture pivoted Sketchpad → PIXIE same hour as source-listing email"
   - "Cambridge late 1960s + US research-lab trip"
   - "PIXIE → CARS continuity — graphical interaction to model-guided medicine"
   - "CARS 2025 Berlin — game thinking for healthcare interfaces"
