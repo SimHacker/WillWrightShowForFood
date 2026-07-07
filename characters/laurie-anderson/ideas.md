@@ -49,7 +49,20 @@ performance**: systems you set running and then *play against*, live.
 **repo you can walk into and edit** (the MicropolisCore/venue direction)? What persists, what's
 authored, what's grown.
 
-### 6. Art vs. censorship
+### 6. Songs from the Bardo — the illusory city
+On ***Songs from the Bardo*** (2019, with **Tenzin Choegyal** and **Jesse Paris Smith**) — a guided
+meditation through the **Tibetan Book of the Dead** — the track **"Moon in the Water"** recites the
+classic catalog of illusions: *"like dreams, like illusions, like echoes, like **cities of
+Gandharvas**, like mirages… like the moon and water."* The **Gandharva city** is Sanskrit's ancient
+term for a **mirage city** — an illusory metropolis hanging in the air. For a show whose stage is a
+**city simulator**, that's not decoration, it's thesis: every Micropolis is a Gandharva city — a
+city that is *only* image, conjured and dissolved at will, real in its effects on the mind of the
+player. Laurie spent an album in the bardo, the **between-state**; the show lives in one too —
+between code and performance, human and AI, live and committed-to-git. A conversation about
+**illusory cities, between-states, and what simulations do to the minds that inhabit them** —
+Buddhism and city simulators on one stage.
+
+### 7. Art vs. censorship
 Laurie was a clear voice in the **NEA culture wars**. Ties directly to the show's
 **getting-away-with-it** lineage (Bowie's video puppet slipping past the NBC censors) and its
 [`unnecessary-censorship`](../../repo-shows/ideas/traditions/unnecessary-censorship.yml) tradition —
@@ -61,4 +74,6 @@ voluntary comedy, never timid euphemism; we don't bowdlerize real names.
 - **Talking Stick** — MIDI audio-granulator built with **Bob Bielecki + Interval Research** (c. 1999);
   debuted in *Songs and Stories from Moby Dick*. Interval Research Corp. founded by Paul Allen & David Liddle.
 - *Chalkroom* / *Aloft* (VR, w/ Hsin-Chien Huang); *Home of the Brave* (1986 concert film)
+- *Songs from the Bardo* (2019, w/ Tenzin Choegyal & Jesse Paris Smith) — Tibetan Book of the Dead;
+  track 13 "Moon in the Water" ("like cities of Gandharvas, like mirages… like the moon and water")
 - https://laurieanderson.com/ · https://en.wikipedia.org/wiki/Laurie_Anderson

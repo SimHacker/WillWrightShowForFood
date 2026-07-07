@@ -1,0 +1,63 @@
+# Albert Hofkamp — invitation portrayal. NOT Albert Hofkamp.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: albert-hofkamp
+  name: "Albert Hofkamp"
+  type: invitation
+  signifier: "🧹⚙️"
+  status: living
+  field: "Software craftsman — Micropolis C++ cleanup & Doxygen documentation (2008–09); OpenTTD GUI expert ('Alberth', 0.7–1.9); Eclipse ESCET supervisory control toolkit; TU Eindhoven"
+  home: characters/albert-hofkamp/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2            # real correspondent; recent emails with Don
+  authored_by: don-hopkins
+
+contact:
+  channel: email
+  warm_contact: true
+  note: "Recent email exchanges with Don; 2008–09 collaboration was direct and extensive."
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: README.md
+  correspondence: correspondence.yml
+
+bio:
+  summary: >
+    **Albert Theo Hofkamp** (b. 25 July 1967, Leeuwarden) — software craftsman at
+    **TU Eindhoven** (Mechanical Engineering, Systems Engineering group; PhD track on real-time
+    systems and the **Chi** language from 1997), co-author of the
+    **Eclipse ESCET** supervisory control engineering toolkit (TACAS 2023). In open source: **OpenTTD**
+    developer **"Alberth"** — the project's **GUI expert from 0.7 through 1.9**. In 2008–09,
+    right after the SimCity GPL release, he volunteered on **Micropolis**: methodical cleanup
+    of the TCL/Tk-era code through the C++ transition, renaming and normalizing variables and
+    functions, **Doxygen** comments throughout, deep build-system and architecture analysis,
+    and bug fixes — the groundwork the MicropolisCore codebase still stands on.
+
+  don_connection: >
+    Immensely helpful volunteer collaborator in the 2008–09 Micropolis push for Kennisnet/IBM.
+    Don at the time: "such high quality work, prioritizing your efforts well." Credited
+    "Coding and Documentation" in the design-era thanks file; now added to the Micropolis
+    manual credits. When Don mentioned grant money, Albert's whole reply was **"We need money?"**
+    — the volunteer spirit in three words.
+
+quotable:   # verbatim from the 2008–09 email threads (Don's archive)
+  build_systems: "In general, build and install is one *big* *mess*. … In other words, you can safely give up trying to understand it all. Nobody does."
+  money: "We need money?"
+  doxygen: "In OpenTTD I have found out that writing a few lines documentation is worth whole functions :)"
+
+sources:
+  web:
+    - { title: "TU/e research profile", url: "https://research.tue.nl/en/persons/albert-t-hofkamp/" }
+    - { title: "OpenTTD CREDITS — 'Alberth', GUI expert 0.7–1.9", url: "https://github.com/OpenTTD/OpenTTD/blob/master/CREDITS.md" }
+    - { title: "Eclipse ESCET (TACAS 2023 co-author)", url: "https://eclipse.dev/escet/" }
+  repo:
+    - { title: "HAR 2009 transcript credit", path: "MicropolisCore/documentation/talks/har-2009/HAR2009Transcript.html" }
+  email_digest: sources/2008-2009-collaboration-digest.md
+
+see_also:
+  - { path: ../../repo-shows/ideas/themes/educators-track.yml, why: "the volunteer-contributor archetype the educators' track wants to grow more of" }

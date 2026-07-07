@@ -162,6 +162,8 @@ guests:
   nina-hagen: { invitation_status: dream_guest, show_seed: repo-shows/nina-hagen/, path: characters/nina-hagen/, note: "Club 2 anti-censorship emblem; invitation drafted. Operatic-punk sibling to Nomi; Berlin '79 thread w/ Eno." }
   netochka-nezvanova: { invitation_status: stub, path: characters/netochka-nezvanova/, note: "Net-art persona — NATO.0+55+3d + m9ndfukc; AntiORP/nettime; public sources/ (AntiORP, politics, Smalltalk, Don timeline); full archive DonHopkins/characters/netochka-nezvanova/. Mystique kept; no impersonation." }
   brewster-kahle: { invitation_status: draft, path: characters/brewster-kahle/, note: "Internet Archive; WAIS; TLG ISP co-founder w/ Tom Jennings et al.; 1996 early-web-dreams interview." }
+  albert-hofkamp: { invitation_status: draft, path: characters/albert-hofkamp/, consent: not_yet_asked, warm_contact: true, channel: email, note: "TU Eindhoven software craftsman (Eclipse ESCET); OpenTTD 'Alberth' GUI expert 0.7–1.9; 2008–09 Micropolis volunteer — C++ cleanup, Doxygen docs, deep analysis ('We need money?'). Now in manual credits. OpenTTD × Micropolis stewardship show; volunteer archetype of the educators' track." }
+  upmanu-lall: { invitation_status: draft, path: characters/upmanu-lall/, consent: not_yet_asked, note: "Water scientist — ASU Water Institute director (2024–), ex-Columbia Water Center; Darcy Medal. Project OPTIMUS: SimCity as classroom data lab (controlled experiments → spreadsheet export → data literacy) — founding precedent of educators-track + Sheets unlock. 2008: 'I will use in my classes.' In Micropolis credits." }
   lars-brinkhoff:
     invitation_status: invited  # responded yes-later
     show_seed: repo-shows/lars-brinkhoff/
@@ -204,7 +206,7 @@ guests:
   paul-debevec: { invitation_status: not_yet_asked }
   peter-norvig: { invitation_status: draft, show_seed: repo-shows/peter-norvig/, note: "Director of Research @ Google; AIMA (w/ Stuart Russell) + PAIP; 'Teach Yourself Programming in Ten Years'; Don's friend, writing an AI book + offered a chapter on Don's work; open-topic show (MOOLLM/skills/AI) with Henry + Leela colleagues" }
   rebecca-heineman: { invitation_status: not_yet_asked, note: "Women & trans pioneers — interview while living: Space Invaders champion, Interplay co-founder; Don's Apple IIgs SimCity source thread" }
-  richard-bartle: { invitation_status: not_yet_asked, show_seed: repo-shows/richard-bartle/ }
+  richard-bartle: { invitation_status: not_yet_asked, show_seed: repo-shows/richard-bartle/, note: "MUD co-creator; assigned students to play MUD2 critically — the assignable-show precedent; player-type taxonomy = audience-role theory. Development-side educator invite — repo-shows/ideas/themes/educators-track.yml. Retired: time, no institutional agenda." }
   rob-tow: { invitation_status: send_ready, show_seed: repo-shows/placeholder/, path: characters/rob-tow/, pair_with: brenda-laurel, send_batch: interval-reunion-2026, note: "Placeholder VR + visual psychophysics; Interval reunion w/ Brenda; CS547 tapes." }
   ron-reisman: { invitation_status: memorial, path: characters/ron-reisman/, note: "deceased (d. 2019) — NASA Ames CTAS/TFAS/NextGen; Convolvotron; dolphin/Apple ][; Don's late friend. Discussants: Don, Coco Conn, David Levitt, Dave Tristram. HN memorial threads archived." }
   richard-stallman: { invitation_status: draft, note: "Copyleft envelope 1984 — characters/richard-stallman/" }

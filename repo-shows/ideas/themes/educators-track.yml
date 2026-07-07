@@ -1,0 +1,76 @@
+# The Educators' Track — teachers and students on the DEVELOPMENT side of Repo Shows
+# Not "educational outreach" bolted on afterward: educators as co-producers, classrooms as
+# contributor pipelines, coursework as PRs. Decades in the brewing — Lall proved it with SimCity
+# in the 1990s, Bartle proved it with MUD2, Eagleson is doing it with PIXIE right now.
+
+id: educators-track
+type: theme
+status: brewing
+shows: [richard-bartle, roy-eagleson, snap-logo-brian-jens, walter-bender-olpc]
+tagline: "Assign the fork. Grade the PR. The repo show is the classroom and the classroom is the cast."
+
+the_pattern: |
+  A Repo Show is a live, forkable, git-native performance. That makes it ASSIGNABLE. A teacher
+  doesn't book a field trip to watch it — they assign students to participate in it:
+  fork the repo, create audience characters, ask questions via PR, implement features as coursework,
+  and watch their commits land (or get lovingly reviewed and bounced) on the show.
+  GitHub-collaborative open source development is basic literacy now — for game devs, professional
+  devs, writers, designers, and researchers — especially with tools like Cursor and nurturing
+  environments like MOOLLM. The show teaches it by being made of it.
+
+precedents:   # each one already happened; none of this is hypothetical
+  bartle_mud2: |
+    Richard Bartle didn't just teach ABOUT MUD2 — he assigned students to PLAY it critically and
+    write about it. That maps one-to-one onto Repo Shows: play the show's world, critique it in
+    writing, then graduate to changing it via PR. And his player-type taxonomy (achievers,
+    explorers, socializers, killers) is literally a THEORY OF AUDIENCE ROLES — direct design input
+    for the audience-character system. Retired means time and no institutional agenda.
+    see: ../../../characters/richard-bartle/
+  lall_simcity_data_lab: |
+    Upmanu Lall at Columbia got it decades ago: use SimCity to draw students from OTHER departments
+    into environmental engineering — a fun multidisciplinary class using SimCity as a simulation
+    tool for CONTROLLED EXPERIMENTS: run the city, gather data, export and analyze it as
+    spreadsheets, learn data analysis and spreadsheet wrangling on the way. The game is the bait;
+    the data literacy is the catch. In 2008 he offered to be listed as a collaborator and to use
+    Micropolis in his classes. see: ../../../characters/upmanu-lall/
+  eagleson_pixie: |
+    Roy Eagleson took the PIXIE repo show and pivoted his graphics-history lecture around it —
+    the first spontaneous classroom adoption of a Repo Show artifact, within days of its existence.
+    see: ../../../characters/roy-eagleson/
+  hofkamp_the_volunteer: |
+    Albert Hofkamp is the archetype of what the pipeline produces at the top end: a skilled outside
+    contributor who did deep Micropolis cleanup work for the love of it ("We need money?").
+    A classroom or game jam produces many small Alberts, with a teacher curating quality.
+    see: ../../../characters/albert-hofkamp/
+  kennisnet_2008: |
+    Kennisnet's very first ask in 2008–09 was classroom application of Micropolis. The Micropolis
+    Eduverse project delivered a working web version; the educator lane picks that thread back up
+    with sixteen more years of tooling. Sergio van Pul (Eduverse core; later co-author of a Scratch
+    game-development book) belongs in the catch-up-interview queue for this thread.
+  constructionist_bench: |
+    The show's character roster already holds the constructionist lineage: Brian Harvey + Jens Mönig
+    (Snap!), Ken Kahn (ToonTalk), Cynthia Solomon (Logo), Doreen Nelson (Design-Based Learning),
+    Walter Bender (OLPC/Sugar). The educators' track is their pedagogy applied to the show itself.
+
+formats:
+  critical_play: "Bartle-style: play a show/world, write the critique, discuss it on-show. Entry level; no code required."
+  audience_characters: "Students create audience characters — a persona directory + PR — and inhabit them during live shows. Player-type taxonomy as rubric."
+  homefun_pr: "Questions and small contributions arrive as PRs between shows; the show reviews some on air. (The riff loop, with a syllabus.)"
+  feature_coursework: "A semester project = a feature branch: new Micropolis overlay, a MOOLLM skill, a tile set, a data exporter. Teacher grades the branch; show merges the best."
+  game_jam: "Weekend jams seeded from the repo — HKU Utrecht and Breda University of Applied Sciences are the natural Dutch hosts; jam results feed the show and the codebase."
+  data_lab: |
+    The Lall format, modernized: run controlled experiments in Micropolis, stream metrics out,
+    analyze in Google Sheets. GOOGLE SHEETS INTEGRATION is high on the enable-educational-uses
+    unlock path — one exporter unlocks every spreadsheet-based curriculum on earth, and it is
+    exactly what Lall was doing by hand decades ago.
+
+why_it_matters:
+  labor_ethics: "Educators solve the contribution-throughput problem ethically: real GPL code, real credit, real review — coursework, not spec work."
+  institutional_bridge: "Teachers and their institutions are the co-applicants and hosts that public funding (NWO/SIA-shaped grants) requires. The educator lane IS the funding lane."
+  literacy: "Git, PRs, code review, and AI-assisted development are basic literacy. A show made of them teaches them by osmosis."
+  decades_brewing: "None of this is new to the project — SimCity-in-education designs have been stewing since the OLPC/Kennisnet era and before. The tooling finally caught up."
+
+next:
+  - "Invitation drafts for Bartle and Eagleson framed around DEVELOPMENT-SIDE participation (assign the fork), not guest appearances."
+  - "Catch-up interview note to Sergio van Pul — no ask, just 'it's on' + what's he building now."
+  - "Sheets/CSV metrics exporter spec for Micropolis (the data_lab enabler)."

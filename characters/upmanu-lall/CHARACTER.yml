@@ -1,0 +1,55 @@
+# Upmanu Lall — invitation portrayal. NOT Upmanu Lall.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: upmanu-lall
+  name: "Upmanu Lall"
+  type: invitation
+  signifier: "💧📊"
+  status: living
+  field: "Hydrology, climate dynamics, water sustainability; SimCity-as-classroom-data-lab pioneer (Project OPTIMUS, Columbia)"
+  home: characters/upmanu-lall/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2            # past correspondent; already in the Micropolis credits
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: README.md
+
+bio:
+  summary: >
+    **Upmanu Lall** — one of the world's leading water scientists. Inaugural director of the
+    **Water Institute** at Arizona State University's Julie Ann Wrigley Global Futures Laboratory
+    (since January 2024) and professor in ASU's School of Complex Adaptive Systems. Before that,
+    the Alan & Carol Silberstein Professor of Engineering at **Columbia University** and director
+    of the **Columbia Water Center** (Earth & Environmental Engineering). B.Tech IIT Kanpur (1976),
+    PhD UT Austin (1981). AGU Fellow (2017), AAAS Fellow (2018), EGU **Henry Darcy Medal** (2014),
+    Reuters "Hot List" of the world's top 1,000 climate scientists (2021).
+
+  don_connection: >
+    Decades-long thread. At Columbia, Lall ran **Project OPTIMUS**, using simulation games —
+    SimCity included — to teach science and engineering. As Don recalls it, his move was to use
+    SimCity to draw students from OTHER departments into environmental engineering classes: a fun
+    multidisciplinary course where students ran controlled experiments in the game, gathered and
+    exported the data as spreadsheets, and learned data analysis and spreadsheet wrangling along
+    the way. When Don wrote him in December 2008 about GPL Micropolis, he replied: "Fantastic to
+    hear from you … perhaps i can be listed as a collaborator? and I could then say I will use in
+    my classes." He is in the Micropolis manual credits (Special Thanks) to this day.
+
+quotable:   # verbatim, 9 Dec 2008 email to Don
+  reply_2008: "Fantastic to hear from you and learn what you are working on -- sounds very cool … perhaps i can be listed as a collaborator? and I could then say I will use in my classes"
+
+sources:
+  web:
+    - { title: "ASU profile — Water Institute director", url: "https://search.asu.edu/profile/4823918" }
+    - { title: "Columbia Water Center", url: "https://water.columbia.edu/people/upmanu-lall" }
+    - { title: "Columbia homepage", url: "https://www.columbia.edu/~ula2/" }
+  repo:
+    - { title: "Micropolis manual credits — Special Thanks", path: "MicropolisCore/documentation/manual/credits.html" }
+
+see_also:
+  - { path: ../../repo-shows/ideas/themes/educators-track.yml, why: "his SimCity data-lab pedagogy is the track's founding precedent" }
