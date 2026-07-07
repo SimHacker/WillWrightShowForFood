@@ -42,6 +42,16 @@ the_photographer: |
   literacy smuggled in as a staff job: the kid with the camera learns that a chart
   is a photograph of something you can't see with your eyes.
 
+walter_bender_mandate: |
+  The constructionist charter this seed executes: Walter Bender's OLPC-era appeal
+  to game developers — make FREE GAMES as examples kids can learn from, view
+  source, and build on top of, factored into reusable modules, tools, and
+  libraries of code and content. That appeal recruited Don to OLPC (Stone Soup,
+  the GDC booth Don manned), got SimCity freed as Micropolis, and is the mandate
+  behind every schema in this repo: the newspaper, the civic ladder, and the
+  soul bridges are Walter's reusable-modules dream with twenty more years of
+  tooling.
+
 why_it_matters: |
   It's constructionist literacy hiding inside a city builder: reporting teaches
   evidence (the save file is the source of record), editorials teach argument,

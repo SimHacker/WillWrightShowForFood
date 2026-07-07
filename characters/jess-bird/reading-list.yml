@@ -50,9 +50,13 @@ arcs:
       build open-source Sims content editing/management tools → 140 days later John Gilmore
       connects OLPC to the charge (the two askers' spark plus Don's old lightning bolts)
       → EA clearance → SimCity free on the OLPC XO-1 by New Year's. Credit where the work was:
-      Walter Bender — Stone Soup, the OLPC booth at GDC (Don manned it), recruiting developers
-      to the cause — carried far more of the load than the connecting email. The ball that
-      became Micropolis — and the tool proposals Don is now building for real.
+      WALTER BENDER — Stone Soup, the OLPC booth at GDC (Don manned it), and the explicit
+      appeal to game developers to make FREE GAMES as examples kids can learn from, view
+      source, and build on top of — factored into reusable modules, tools, and libraries of
+      code and content. That appeal recruited Don to OLPC, and it is exactly what
+      WillWrightShowForFood executes on today. The hard work, brilliant practical inspiration,
+      and leadership were Walter's; the connecting email was John's. The ball that became
+      Micropolis — and the tool proposals Don is now building for real.
 
   show_born_in_public:
     logline: "The Repo Show assembling itself — a present-tense production thread."
