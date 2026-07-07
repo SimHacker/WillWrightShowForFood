@@ -43,7 +43,6 @@ Wall text they never read:
 
 ---
 
-
 ## Room I — Bridge Studies
 
 *Studies in Serialized Ontology*
@@ -58,7 +57,6 @@ By the time Julian finds the hummus table, Mimsy has already bought frame 01. Gr
 
 *Actually: Two nodes, one Arc. Black ribbon, orange selection, lavender Inspector.*
 
-
 > **Mimsy:** Two orbs and a sigh of graphite. The restraint is *aggressive*. I bought it before finishing my sentence.
 
 > **Gregory:** Source node, sink node, one conduit. This is how I wish my books looked.
@@ -66,7 +64,6 @@ By the time Julian finds the hummus table, Mimsy has already bought frame 01. Gr
 > **Helena:** Something here remembers being chosen. I stood a long time.
 
 > **Bunny:** Two balls and a stick! Is it sports? I'd live between them.
-
 
 ---
 
@@ -84,7 +81,6 @@ Mimsy calls the flame strip "combusting semiotics." Margot, who has been quiet, 
 
 *Actually: Layered ribbon arc between spheres — texture experiments begin.*
 
-
 > **Mimsy:** The second conduit *apologizes* to the first. Diptych energy. Sancerre.
 
 > **Gregory:** Second tranche, same counterparty. I'm adding to position.
@@ -93,13 +89,11 @@ Mimsy calls the flame strip "combusting semiotics." Margot, who has been quiet, 
 
 > **Bunny:** Double spaghetti! More room to live underneath.
 
-
 ### Conduit No. 3 — Layered Accretion
 
 ![Conduit No. 3 — Layered Accretion](jsonsters-evolution-03.png)
 
 *Actually: Multi-layer ribbon stack on single arc.*
-
 
 > **Mimsy:** Accretion as *policy*. The stack is a manifesto.
 
@@ -109,13 +103,11 @@ Mimsy calls the flame strip "combusting semiotics." Margot, who has been quiet, 
 
 > **Bunny:** Like cake! Can the board approve cake?
 
-
 ### Conduit No. 4 — Violet Noise
 
 ![Conduit No. 4 — Violet Noise](jsonsters-evolution-04.png)
 
 *Actually: Purple/violet textured ribbon layer on arc.*
-
 
 > **Mimsy:** Violet noise — the color of *withheld* disclosure. Whitney, wake up.
 
@@ -125,13 +117,11 @@ Mimsy calls the flame strip "combusting semiotics." Margot, who has been quiet, 
 
 > **Bunny:** Pretty purple streamers! Festive.
 
-
 ### Conduit No. 5 — Flame and Mesh
 
 ![Conduit No. 5 — Flame and Mesh](jsonsters-evolution-05.png)
 
 *Actually: Flame strip, purple noise, mesh textures on layered arc.*
-
 
 > **Mimsy:** Flame strip! The work is *combusting* semiotics!
 
@@ -141,13 +131,11 @@ Mimsy calls the flame strip "combusting semiotics." Margot, who has been quiet, 
 
 > **Bunny:** Ooh, campfire! Can we roast broccoli?
 
-
 ### Twin Conduits — Sphere Pair I
 
 ![Twin Conduits — Sphere Pair I](jsonsters-evolution-06.png)
 
 *Actually: Multi-ribbon arcs between two sphere nodes.*
-
 
 > **Mimsy:** Twin conduits — *dialogue*! The spheres are in couples therapy.
 
@@ -157,13 +145,11 @@ Mimsy calls the flame strip "combusting semiotics." Margot, who has been quiet, 
 
 > **Bunny:** Two bridges! I'd live on the left one.
 
-
 ### Twin Conduits — Sphere Pair II
 
 ![Twin Conduits — Sphere Pair II](jsonsters-evolution-07.png)
 
 *Actually: Variant multi-ribbon arc materials between spheres.*
-
 
 > **Mimsy:** Variant two — the couple has *fought*. Still married in graphite.
 
@@ -173,13 +159,11 @@ Mimsy calls the flame strip "combusting semiotics." Margot, who has been quiet, 
 
 > **Bunny:** They made up! Happy ending.
 
-
 ### Twin Conduits — Sphere Pair III
 
 ![Twin Conduits — Sphere Pair III](jsonsters-evolution-08.png)
 
 *Actually: Further multi-ribbon material variants.*
-
 
 > **Mimsy:** Triptych energy in a diptych room. *Illegal* and I love it.
 
@@ -189,13 +173,11 @@ Mimsy calls the flame strip "combusting semiotics." Margot, who has been quiet, 
 
 > **Bunny:** Three bridges means three bedrooms. Board?
 
-
 ### Twin Conduits — Sphere Pair IV
 
 ![Twin Conduits — Sphere Pair IV](jsonsters-evolution-09.png)
 
 *Actually: Late liquidity-stream variant before tendril phase.*
-
 
 > **Mimsy:** The last conduit before the room turns. *Aggressive* cliffhanger.
 
@@ -204,7 +186,6 @@ Mimsy calls the flame strip "combusting semiotics." Margot, who has been quiet, 
 > **Helena:** Goodbye to the simple bridges. I'm ready.
 
 > **Bunny:** Bye-bye spaghetti! What's next room?
-
 
 ---
 
@@ -222,7 +203,6 @@ Bucky Jr. approves the tensile homework. Bunny declares the noodles family-sized
 
 *Actually: Five textured tendrils fan node-to-node; LineRenderer experiments.*
 
-
 > **Mimsy:** Five tendrils — pentecostal *graph*! I'm vibrating off-label.
 
 > **Gregory:** Five-way split — special situations fund in one frame.
@@ -231,13 +211,11 @@ Bucky Jr. approves the tensile homework. Bunny declares the noodles family-sized
 
 > **Bunny:** Five noodles! Family-sized.
 
-
 ### Five Tendrils (Fan Study II)
 
 ![Five Tendrils (Fan Study II)](jsonsters-evolution-11.png)
 
 *Actually: Tendril fan variant — width curves, tiled textures.*
-
 
 > **Mimsy:** Variant fan — the tendrils *disagree*. Drama!
 
@@ -246,7 +224,6 @@ Bucky Jr. approves the tensile homework. Bunny declares the noodles family-sized
 > **Helena:** They disagree but stay connected. Lesson.
 
 > **Bunny:** Some noodles thicker. More filling.
-
 
 ---
 
@@ -264,7 +241,6 @@ Helena says they left the ribs showing. Margot says surgical UI makes violence l
 
 *Actually: Rainbow + Bow4 LineRenderer Inspector — width curves, Update Always.*
 
-
 > **Mimsy:** SURGERY! The Inspector is the *altar*! I need a medic.
 
 > **Gregory:** Update Always checked — that's my trading desk at 3 a.m.
@@ -273,13 +249,11 @@ Helena says they left the ribs showing. Margot says surgical UI makes violence l
 
 > **Bunny:** Rainbow with buttons! Can I press them?
 
-
 ### Bow4 — LineRenderer Autopsy
 
 ![Bow4 — LineRenderer Autopsy](jsonsters-evolution-13.png)
 
 *Actually: Bow4 LineRenderer detail — tiled textures, per-edge materials.*
-
 
 > **Mimsy:** Autopsy of the bow! *Posthumous* and hot.
 
@@ -288,7 +262,6 @@ Helena says they left the ribs showing. Margot says surgical UI makes violence l
 > **Helena:** They named the ribs Bow0 through Bow4. Naming is mercy.
 
 > **Bunny:** Bow like hair bow? Cute.
-
 
 ---
 
@@ -306,7 +279,6 @@ Bunny asks if the pillars are broccoli. Gregory explains GME for land use. Mimsy
 
 *Actually: Hex pillars + multi-ribbon Rainbow bows — island nodes.*
 
-
 > **Mimsy:** Sedimentary node versus gravel — class allegory with *trees*!
 
 > **Gregory:** Hex grid is GME for land use. Arch is carry trade.
@@ -317,13 +289,11 @@ Bunny asks if the pillars are broccoli. Gregory explains GME for land use. Mimsy
 
 > **Bunny:** Are those broccoli stems? Adorable. I'd live under the arch.
 
-
 ### Gravel Node — Archipelago II
 
 ![Gravel Node — Archipelago II](jsonsters-evolution-15.png)
 
 *Actually: Hex island variant — sediment vs gravel node materials.*
-
 
 > **Mimsy:** Gravel node — the *proletariat* hex! I'm openly commissioning a catalog.
 
@@ -335,13 +305,11 @@ Bunny asks if the pillars are broccoli. Gregory explains GME for land use. Mimsy
 
 > **Bunny:** Gravel is crunchy. Like paths in the garden.
 
-
 ### Multi-Bow Harbor
 
 ![Multi-Bow Harbor](jsonsters-evolution-16.png)
 
 *Actually: Multiple Rainbow bows between hex island nodes.*
-
 
 > **Mimsy:** Harbor of bows! Maritime semiotics! *Nautical*!
 
@@ -353,13 +321,11 @@ Bunny asks if the pillars are broccoli. Gregory explains GME for land use. Mimsy
 
 > **Bunny:** Boats? I love harbors. Do we get boats in Room VI?
 
-
 ### Hex Lattice — Five-Bow Crossing
 
 ![Hex Lattice — Five-Bow Crossing](jsonsters-evolution-17.png)
 
 *Actually: Dense hex lattice with five bow ribbons crossing.*
-
 
 > **Mimsy:** Five-bow crossing — *intersectionality* literalized! Wine.
 
@@ -371,13 +337,11 @@ Bunny asks if the pillars are broccoli. Gregory explains GME for land use. Mimsy
 
 > **Bunny:** Five rainbows at once! Lucky.
 
-
 ### Archipelago Dusk
 
 ![Archipelago Dusk](jsonsters-evolution-18.png)
 
 *Actually: Late hex-island phase — multi-ribbon over pillar field.*
-
 
 > **Mimsy:** Dusk on the archipelago — *melancholy* liquidity! Acquired.
 
@@ -388,7 +352,6 @@ Bunny asks if the pillars are broccoli. Gregory explains GME for land use. Mimsy
 > **Helena:** Dusk prayer. The islands sleep.
 
 > **Bunny:** Pretty sunset broccoli forest.
-
 
 ---
 
@@ -406,7 +369,6 @@ Gregory calls the tunnel a structured product with ribs as coupon payments. Bunn
 
 *Actually: Hex terrain map — water, grass, rock; graph over biome.*
 
-
 > **Mimsy:** Coastline! The suburbs *discovered* water shaders!
 
 > **Gregory:** Coastal property graph. Water shader is rising sea level risk.
@@ -417,13 +379,11 @@ Gregory calls the tunnel a structured product with ribs as coupon payments. Bunn
 
 > **Bunny:** Beach! Can the board approve beach houses?
 
-
 ### Terrain Graph — Biome Patchwork
 
 ![Terrain Graph — Biome Patchwork](jsonsters-evolution-20.png)
 
 *Actually: Grass, rock, snow biome tiles with graph edges.*
-
 
 > **Mimsy:** Patchwork biome — *quilt* of colonial extraction!
 
@@ -435,13 +395,11 @@ Gregory calls the tunnel a structured product with ribs as coupon payments. Bunn
 
 > **Bunny:** Snow and grass! Four seasons in one picture.
 
-
 ### Terrain Graph — Inland Variant
 
 ![Terrain Graph — Inland Variant](jsonsters-evolution-21.png)
 
 *Actually: Inland terrain graph variant.*
-
 
 > **Mimsy:** Inland — away from the *coastal metaphor*! Brave.
 
@@ -453,13 +411,11 @@ Gregory calls the tunnel a structured product with ribs as coupon payments. Bunn
 
 > **Bunny:** No beach but still cute hills.
 
-
 ### Ribcage Tunnel — Portal I
 
 ![Ribcage Tunnel — Portal I](jsonsters-evolution-22.png)
 
 *Actually: Parallel arch tunnel over biome graph — ribcage structure.*
-
 
 > **Mimsy:** RIBCAGE TUNNEL! The body politic *exhales*!
 
@@ -471,13 +427,11 @@ Gregory calls the tunnel a structured product with ribs as coupon payments. Bunn
 
 > **Bunny:** Ribcage! Is that a dinosaur? I'd live in the tunnel.
 
-
 ### Ribcage Tunnel — Portal II
 
 ![Ribcage Tunnel — Portal II](jsonsters-evolution-23.png)
 
 *Actually: Ribcage tunnel variant over terrain.*
-
 
 > **Mimsy:** Portal two — the ribs *inhale*! Medical gothic!
 
@@ -489,13 +443,11 @@ Gregory calls the tunnel a structured product with ribs as coupon payments. Bunn
 
 > **Bunny:** Dinosaur hallway still available for lease.
 
-
 ### Ribcage Tunnel — Exit Light
 
 ![Ribcage Tunnel — Exit Light](jsonsters-evolution-24.png)
 
 *Actually: Late terrain ribcage — exit from hex biome graph phase.*
-
 
 > **Mimsy:** Exit light at the ribcage — *redemption* shader!
 
@@ -506,7 +458,6 @@ Gregory calls the tunnel a structured product with ribs as coupon payments. Bunn
 > **Helena:** Light at the end. I believed it. Still do.
 
 > **Bunny:** Bright end! Like a fridge light. Home.
-
 
 ---
 
@@ -524,7 +475,6 @@ The room is too loud for Helena, who lowers her eyes at the multiplied peacock e
 
 *Actually: Plaid peacock ribs, checkered arcs — stress test goes feral.*
 
-
 > **Mimsy:** (screaming softly) PLAID PEACOCK OF CAPITAL! The Unity gizmo is the eye of God!
 
 > **Gregory:** Stress test successful. I'm short the plaid. Long the water shader.
@@ -533,13 +483,11 @@ The room is too loud for Helena, who lowers her eyes at the multiplied peacock e
 
 > **Bunny:** Pretty bird pattern! Is it Thanksgiving?
 
-
 ### Plaid Peacock — Ribs II
 
 ![Plaid Peacock — Ribs II](jsonsters-evolution-26.png)
 
 *Actually: Checkered arc variants on peacock rib structure.*
-
 
 > **Mimsy:** Variant peacock — the bird *multiplies*! Whitney regrets!
 
@@ -549,13 +497,11 @@ The room is too loud for Helena, who lowers her eyes at the multiplied peacock e
 
 > **Bunny:** Two peacocks! One for me, one for board.
 
-
 ### Plaid Peacock — Landscape Backdrop
 
 ![Plaid Peacock — Landscape Backdrop](jsonsters-evolution-27.png)
 
 *Actually: Plaid ribs with landscape backdrop shader.*
-
 
 > **Mimsy:** Landscape backdrop — *pastoral* capital! Criminal and lush!
 
@@ -565,13 +511,11 @@ The room is too loud for Helena, who lowers her eyes at the multiplied peacock e
 
 > **Bunny:** Nice wallpaper behind the bird!
 
-
 ### Plaid Peacock — Terminal Stress
 
 ![Plaid Peacock — Terminal Stress](jsonsters-evolution-28.png)
 
 *Actually: Maximal baroque stress-test — plaid peacock over hex terrain, landscape.*
-
 
 > **Mimsy:** TERMINAL! The work *screams* for pie menus! I scream with it!
 
@@ -580,7 +524,6 @@ The room is too loud for Helena, who lowers her eyes at the multiplied peacock e
 > **Helena:** End of the tunnel, beginning of something. Sermon later.
 
 > **Bunny:** Biggest bird! I'd live in the tail feathers if board says yes.
-
 
 ---
 
@@ -598,7 +541,6 @@ Bunny asks to adopt all the little singing friends. The Facebook chorus heckles 
 
 *Actually: Nested JSON as Blob/Bleep/Bloop — Facebook thread; pie-menu jokes land.*
 
-
 > **Mimsy:** Terracotta Blob is pre-oedipal id — kiln of consciousness. Silver beads are superego. Sancerre tears.
 
 > **Gregory:** Central illiquid asset, satellite holdings, green tickers like distressed ESG. Six figures if shadow longer.
@@ -607,13 +549,11 @@ Bunny asks to adopt all the little singing friends. The Facebook chorus heckles 
 
 > **Bunny:** Big orange friend with little silver pets! Adorable.
 
-
 ### Covenant Bridge (Rainbow Variant)
 
 ![Covenant Bridge (Rainbow Variant)](jsonsters-02-rainbow-bridge.png)
 
 *Actually: Rainbow bridge between JSON creature nodes — multi-bow ribbon.*
-
 
 > **Mimsy:** Rainbow bridge — covenant after the flood of metadata! Literally vibrating.
 
@@ -623,13 +563,11 @@ Bunny asks to adopt all the little singing friends. The Facebook chorus heckles 
 
 > **Bunny:** Rainbow bridge to the orange friend! I'd walk it.
 
-
 ### Pearl Collar Presentation
 
 ![Pearl Collar Presentation](jsonsters-03-pearl-collar.png)
 
 *Actually: Pearl collar on nested JSON creature — orange nucleus presented.*
-
 
 > **Mimsy:** Pearl collar — court dress! Orange nucleus presented to society. Deceased. Wine.
 
@@ -639,13 +577,11 @@ Bunny asks to adopt all the little singing friends. The Facebook chorus heckles 
 
 > **Bunny:** Necklace on the blob! Fancy.
 
-
 ### Bleep Swarm (Choir Study)
 
 ![Bleep Swarm (Choir Study)](jsonsters-04-bleep-swarm.png)
 
 *Actually: Bleep swarm around Bloop — JSON tree as creature choir.*
-
 
 > **Mimsy:** BLEEP SWARM IS THE CHOIR! Whitney will regret not funding this!
 
@@ -654,7 +590,6 @@ Bunny asks to adopt all the little singing friends. The Facebook chorus heckles 
 > **Helena:** (to the room) We were always the Bloop. I am moved beyond speech.
 
 > **Bunny:** Little friends singing! Can I adopt all of them?
-
 
 ---
 

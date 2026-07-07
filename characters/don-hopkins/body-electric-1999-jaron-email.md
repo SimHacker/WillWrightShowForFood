@@ -26,8 +26,7 @@ Jaron himself makes the point:
 
 Per that thread: Chuck lived in San Francisco, had MS, and needed health insurance; Jaron yelled at the
 person who ran Interval over how Chuck was treated, and David was still upset with Jaron for making a
-fuss. **[confirm on air]** — this is sensitive personal history; treat gently and confirm with those
-involved.
+fuss. **[Confirm on air]** with Chuck and David before airing.
 
 **Also in:** Don's Oct 2022 letter to **Michael McGuffin** — same Jaron quotes curated for the visual-programming lineage essay. [`../michael-mcguffin/sources/2022-10-08-don-visual-programming-letter.md`](../michael-mcguffin/sources/2022-10-08-don-visual-programming-letter.md)
 
@@ -137,6 +136,5 @@ moment, see [Real-time net jamming — the nettime scene](realtime-net-jamming-s
 - **NATO.0+55+3d on El Capitan** (see [Netochka Nezvanova](../netochka-nezvanova/README.md)).
 
 *Status: sourced consolidation of Don's notes + the 1999 email + Coniglio/STEIM history. Quotes are
-transcribed from the archived thread and Coniglio's page; verify exact wording against the sources, and
-confirm the sensitive personal details (Chuck's treatment at Interval) with the people involved before
-airing.*
+transcribed from the archived thread and Coniglio's page; verify exact wording against the sources
+before airing.*

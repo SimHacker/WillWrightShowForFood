@@ -37,4 +37,4 @@ That makes Coniglio the connective tissue between **David Levitt** (Hookup), **M
 A natural fit for a **patch-cord-lineage** conversation — Hookup → Interactor/Isadora vs Max/Pd —
 paired with David Levitt, Miller Puckette, and the STEIM thread (Tom Demeyer, Steina Vasulka).
 
-*Status: stub / not yet asked. Any answer honored.*
+*[Portrayal standards](../../schemas/portrayal-standards.md)*

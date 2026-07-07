@@ -17,7 +17,7 @@ format: remote_or_in_person
 └──────────────────────────────────────────────────────────────────────────┘
 ```
 
-*Public draft — not sent. James Gosling may edit, decline, delay, or request removal at any time.*  
+*James Gosling may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*  
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 James —

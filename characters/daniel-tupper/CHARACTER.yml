@@ -22,9 +22,6 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/daniel-tupper/
-  note: |
-    Correspondence since at least August 2013 (Facebook Messenger); ongoing for more than a
-    decade. Invitation not sent yet — enrich from shared history first, then ask warmly.
 
 bio:
   summary: |
@@ -43,9 +40,6 @@ correspondence:
   channel: Facebook Messenger (primary logged thread); ongoing
   since: "2013-08-01 (first excerpt on file)"
   public_excerpt: sources/2013-08-01-facebook-messenger-excerpt.md
-  private_archive: |
-    DonHopkins/projects/willwrightshowforfood/green-room/daniel-tupper/ — decade+ of personal
-    and project discussion; not all public.
 
 projects:
   - projects/freeta.yml
@@ -63,7 +57,6 @@ why_a_guest:
 
 contact:
   channel: "Direct + warm, ongoing."
-  note: "Longtime correspondent; specifics in the green room."
 
 sources:
   messenger_2013: sources/2013-08-01-facebook-messenger-excerpt.md

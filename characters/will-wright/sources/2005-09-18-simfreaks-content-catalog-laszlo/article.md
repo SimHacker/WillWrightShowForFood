@@ -19,8 +19,6 @@ The front-end is implemented in OpenLaszlo, and the back-end is implemented in P
 
 It also includes an administrative database interface for browsing and editing the SQL database that is used to model the site, and keep track of the users, objects, collections, pictures, etc. It's extensible by plugging in customizable Laszlo widgets for displaying and editing special data types, like pictures, checkboxes, color selectors, date pickers, pie menus, OPML editors, etc.
 
-
-
 The image above shows the user's view of the system (the administrator also has a database interface).
 
 Along the top edge are the main site navigation buttons, which switch pages and reconfigure the inteface for different tasks, by smoothly resizing the panels and scaling the views.

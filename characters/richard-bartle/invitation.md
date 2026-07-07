@@ -8,7 +8,7 @@ show_seed: repo-shows/richard-bartle/
 
 # Repo Show invitation — Richard Bartle
 
-*Public draft — not sent. Richard Bartle may edit, decline, delay, or request removal at any time.*
+*Richard Bartle may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 We would respectfully invite **Richard Bartle** to a **Repo Show** — a Repo Show Class

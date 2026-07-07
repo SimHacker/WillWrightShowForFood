@@ -1,7 +1,7 @@
 # Miller Puckette 🎛️
 
 *Invitation stub — mentioned as context in [Don & David's history](../david-levitt/don-and-david-history.md);
-not yet asked. See [`CHARACTER.yml`](CHARACTER.yml).*
+See [`CHARACTER.yml`](CHARACTER.yml).*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 **Miller S. Puckette** created **Max** (real-time graphical music/dataflow environment, built at

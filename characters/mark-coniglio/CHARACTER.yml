@@ -46,7 +46,6 @@ connections:
 
 facts_to_confirm:
   - "Exact CalArts/Subotnick timeline and Interactor → Isadora phrasing — verify with Coniglio."
-  - "Whether Mark would welcome a portrayal or invitation (not yet asked)."
 
 show_suggestions:
   - { what: "A patch-cord-lineage conversation — Hookup → Interactor/Isadora vs Max/Pd — pairing with David Levitt, Miller Puckette, and the STEIM/Image-ine thread (Demeyer, Vasulka)." }

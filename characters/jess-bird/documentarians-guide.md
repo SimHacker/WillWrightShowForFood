@@ -33,8 +33,6 @@ If you read nothing else, read the **evidence room** and the **people roster** b
 
 ---
 
-
-
 ## Part 1 — The story arcs (what a commissioner would call "the film")
 
 These are the narrative spines the repo has already assembled, each backed by sources you can verify.
@@ -44,7 +42,6 @@ These are the narrative spines the repo has already assembled, each backed by so
 Will pitched a "dollhouse game" for years and nearly nobody at Maxis wanted it. The repo holds the
 receipts of it becoming The Sims:
 
-
 | Read                                                                                                                        | Why it matters to the doc                                                                                                                        |
 | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [1996 Winograd talk — *Interfacing to Microworlds](../will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/)* | Will on stage, **four years before The Sims shipped**, demoing the dollhouse prototype and the design philosophy. The founding text.             |
@@ -53,14 +50,10 @@ receipts of it becoming The Sims:
 | [The Soul of The Sims](../will-wright/sources/2008-02-10-soul-of-the-sims/)                                                 | **Will's own Motive.c code, January 1997** — the emotional engine of the Sims, printed and scanned. A prop, a document, and a story beat in one. |
 | [Naming lore](../will-wright/media/sims-series-maxis-people.md)                                                             | Project X → Dollhouse → Jefferson → The Sims. You have the private canonical of this from Don's 2025 emails; this is the public projection.      |
 
-
-
-
 ### Arc B: The players who became the studio
 
 Will's **pyramid of players**: millions play, thousands mod, a few build the tools everyone else
 stands on. The community *is* the second act of any honest Sims documentary:
-
 
 | Read                                                                                                                                                            | Why                                                                                                                      |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
@@ -70,13 +63,9 @@ stands on. The community *is* the second act of any honest Sims documentary:
 | [Daniel Tupper](../daniel-tupper/README.md)                                                                                                                     | A decade-long correspondent's climb from fan to builder — the pyramid in one person.                                     |
 | [Transmogrifier story](../will-wright/media/sims-series-transmogrifier-story.md) · [naming saga](../will-wright/sources/2000-05-17-transmogrifier-naming-saga/) | The tool Don built at Maxis that opened user-created content — the hinge between Arc A and Arc B.                        |
 
-
-
-
 ### Arc C: Preservation, loss, and getting people on record
 
 The arc you and Don already live: **talk to people while we can**.
-
 
 | Read                                                                                                                    | Why                                                                                                                  |
 | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
@@ -86,14 +75,10 @@ The arc you and Don already live: **talk to people while we can**.
 | [Long Now: Eno & Wright, *Playing with Time*](../will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/) | The generative-systems conversation that frames both men's careers — and **the evening that started the ball rolling on making SimCity free**. Two audience members — neither Don, nor planted by him — ask Will about open-sourcing SimCity; Will says he's very open to it, on tape. Don, in the audience, had already written proposals years earlier to open-source SimCity and to build open-source Sims content editing and management tools — and now he's doing it. Great archival footage lead. |
 | [SimCity → free: the OLPC email thread](../will-wright/sources/2006-11-13-simcity-olpc-email-thread/)                   | The receipts, 140 days after Long Now: John Gilmore connects the OLPC project to the charge — the two askers' spark plus the lightning bolts Don had written years before — then Will's yes, EA's clearance, and SimCity running on the XO-1 children's laptop by New Year's. The hard work, practical inspiration, and leadership belong to **Walter Bender**: Stone Soup, the OLPC GDC booth (which Don manned), and his explicit appeal to game developers — **make free games kids can learn from, view the source of, and build on top of, factored into reusable modules, tools, and libraries of code and content**. That appeal is what recruited Don to OLPC, and it's exactly what this repo is executing on today. Verbatim emails plus photos. Narrative cut: [the open-source saga](../will-wright/sources/simcity-open-source-saga/). |
 
-
-
-
 ### Arc D: The show being born in public (the repo itself as subject)
 
 If your documentary wants a **present-tense thread** — not just archaeology — this repo is a
 production you can film *while it assembles itself*:
-
 
 | Read                                                                                   | Why                                                                                                                              |
 | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
@@ -102,17 +87,13 @@ production you can film *while it assembles itself*:
 | [Soul City namesake](../../repo-shows/will-wright-premiere/soul-city-namesake.md)      | House style in action: honoring Floyd McKissick's Soul City while building a game world.                                         |
 | [Format](../../process/FORMAT.md) · [Vision](../../process/VISION.md)                  | What the show *is* — one-minute movies, guest ladder, AI backstage / humans on camera.                                           |
 
-
 ---
-
-
 
 ## Part 2 — The people (your interview universe)
 
 Everyone below has a public room in this repo. **Status is tracked honestly** — nobody is listed as
 "confirmed" who isn't. The machine-readable roster is
 the [characters catalog](../README.md) (machine registry: [`INDEX.yml`](../INDEX.yml)); the short version:
-
 
 | Person                    | Room                                                                              | Documentary angle                                                                                                                                |
 | ------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -124,15 +105,12 @@ the [characters catalog](../README.md) (machine registry: [`INDEX.yml`](../INDEX
 | **Drew Carey**            | `[drew-carey/](../drew-carey/)`                                                   | Dream guest — he's *in the Sims lore* (House Party, 2000) and a master of the live-audience form.                                                |
 | **Maxis team roster**     | `[sims-series-maxis-people.md](../will-wright/media/sims-series-maxis-people.md)` | Don's epithet roster — Jamie Doornbos, Ocean Quigley, Roxy & Claire, Jim Mackraz, and the rest — with your April 2025 email as the cited source. |
 
-
 A word on how this repo treats people, because it matters to your compliance folks:
 **[portrayal standards](../../schemas/portrayal-standards.md)** — no impersonation, no invented
 quotes, sourced claims only, and **every portrayed person can edit or delete their page at any
 time**. Your own page here works the same way.
 
 ---
-
-
 
 ## Part 3 — Visuals and footage leads
 
@@ -148,8 +126,6 @@ Sims object with a full screenshot archive; a self-contained "objects had politi
 character animation, SimCity), catalogued with context.
 - **The 1996 talk** — video exists and is indexed with Don's annotated article in
 [the Winograd source room](../will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/).
-
-
 
 ## Part 4 — How the documentary and the Repo Show fit together
 
@@ -171,8 +147,7 @@ This directory — `[characters/jess-bird/](README.md)` — is yours to shape:
 
 - Tell Don what to add, cut, or fix, and it changes same-day; **or**
 - Get a free GitHub account and edit it yourself; **and**
-- There's a private backstage planning space (the "green room") for anything that shouldn't be
-public — agreements, strategy, works in progress.
+- There's a backstage planning space for anything that shouldn't be public — agreements, strategy, works in progress.
 
 Your page says what you choose for it to say — nothing more.
 

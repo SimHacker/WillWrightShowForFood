@@ -1,8 +1,7 @@
 # Daniel Tupper 🗽🛠️🎮 *(artist-programmer fan & longtime correspondent)*
 
 *Portrayal of a real correspondent, written by Don — not Daniel, and not his words. Daniel may correct,
-shape, delay, or delete any of it.* [Portrayal standards](../../schemas/portrayal-standards.md) ·
-consent not yet asked · authored by Don Hopkins
+shape, delay, or delete any of it.* [Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## Who
 
@@ -30,13 +29,6 @@ and fewer as you climb who **build tools** that lift everyone below. Same ladder
 
 The repo grows from correspondents like him: every thread becomes files, demos, and session beats.
 
-## Invitation
+## Further reading
 
-Draft letter: [`invitation.md`](invitation.md) — not sent yet.
-
-Conversation hooks: [`ideas.md`](ideas.md)
-
-## Private context
-
-Personal and strategic notes live in Don's green room (not public):
-`DonHopkins/projects/willwrightshowforfood/green-room/daniel-tupper/`
+Letter: [`invitation.md`](invitation.md) · Conversation hooks: [`ideas.md`](ideas.md)

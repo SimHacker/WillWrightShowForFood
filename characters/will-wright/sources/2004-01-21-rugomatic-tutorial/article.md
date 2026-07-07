@@ -7,8 +7,6 @@
 
 ---
 
-
-
 I've written some documentation and a tutorial for RugOMatic!
 
 RugOMatic uses another tool called The Sims Transmogrifier 2.0 to create Sims objects. It's a lot easier than using Transmogrfier directly: you just drag and drop images and text, and press a button! Soon I'll release RugOMatic along with The Sims Transmogrifier 2.0, as soon as Maxis's legal department finishes reviewing it (soon now, I hope).

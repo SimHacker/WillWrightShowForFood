@@ -31,7 +31,7 @@ Invitation portrayal — **not** James Gosling. [Standards](../../schemas/portra
 
 | → | |
 |---|---|
-| **Invitation** | [invitation.md](invitation.md) *(draft — not sent)* |
+| **Invitation** | [invitation.md](invitation.md) |
 | **Show prep** | [ideas.md](ideas.md) · [window-systems-lineage.yml](window-systems-lineage.yml) |
 | **Media** | [media/README.md](media/README.md) |
 | **Show seed** | [repo-shows/james-gosling/](../../repo-shows/james-gosling/README.md) |

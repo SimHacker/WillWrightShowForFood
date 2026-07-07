@@ -59,9 +59,9 @@ Memorial mode examples — represent and discuss **the deceased only**; never vo
 | 🎟️ **Invitation** | living guests | A standing, public **invitation** to a Repo Show, plus a portrayal drawn from their documented public work. They can accept, decline, delay, ignore, edit, or delete it. |
 | 🕯️ **Memorial** | people who have passed | A tribute in **memorial mode**: we *represent and discuss* their documented work and the stories friends tell — we do **not** interview them, speak as them, or invent words. We invite living people who knew them to remember them on air. |
 
-**Ethical framing.** Everything here is sourced and public-safe (no private contact info, no
-fabricated quotes). It exists to honor people's documented work and, for the living, to invite a
-conversation — never to put words in anyone's mouth. See [portrayal standards](../schemas/portrayal-standards.md)
+**Ethical framing.** Everything here is sourced from documented public work — no fabricated quotes.
+It exists to honor people's documented work and, for the living, to invite a conversation — never
+to put words in anyone's mouth. See [portrayal standards](../schemas/portrayal-standards.md)
 and, for the deceased, [memorial mode](../schemas/portrayal-standards.md#memorial-mode).
 
 **We will edit or remove any portrayal — promptly and respectfully — on request from the person,
@@ -112,7 +112,7 @@ More names appear as you list this folder — or follow links from [`../repo-sho
 | `README.md` | Markdown facade |
 | `invitation.md` | Public invitation — link from email |
 | `ideas.md` | Topic menu for browsing guests — career, shared ground, show hooks |
-| `correspondence.yml` | Optional public-safe thread digest (no private email bodies) |
+| `correspondence.yml` | Optional public-safe thread digest |
 
 Normalize from DonHopkins sources: `pnpm run normalize:characters` · Scaffold cards: `pnpm run scaffold:cards` · Scaffold ideas: `python3 scripts/scaffold-guest-ideas.py`
 

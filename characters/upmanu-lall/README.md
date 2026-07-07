@@ -1,8 +1,7 @@
 # Upmanu Lall 💧📊
 
-*Invitation portrayal of a past correspondent — not Upmanu Lall, and not his words except where
-quoted verbatim from email he sent Don.* [Portrayal standards](../../schemas/portrayal-standards.md) ·
-consent level 2 · authored by Don Hopkins
+*About Upmanu Lall — for Repo Show invitations and attribution.*
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## Who
 
@@ -63,15 +62,11 @@ Lall replied the same week:
 
 He has been in the Micropolis manual credits (**Special Thanks**) ever since the OLPC era.
 
-## Why invite him
+## Why he matters
 
-**With love and respect, first of all.** OPTIMUS was the rubber hitting the road on applying
-constructionist ideas in a real classroom — inside a traditional university, with real curriculum
-committees and real freshmen — and his guidance on what worked and what broke is invaluable
-whether or not he ever writes another line of curriculum. The proposal he wrote in 2002, with Don
-as named consultant, is finally buildable — and largely built.
-
-Also:
+OPTIMUS was the rubber hitting the road on applying constructionist ideas in a real classroom —
+inside a traditional university, with real curriculum committees and real freshmen. The proposal
+he wrote in 2002, with Don as named consultant, is finally buildable — and largely built.
 
 - **He proved the pedagogy before the tooling existed.** A conversation about what he wanted SimCity
   to do for his students then, versus what an AI-instrumented, spreadsheet-exporting Micropolis can

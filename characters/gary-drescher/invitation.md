@@ -8,7 +8,7 @@ show_seed: repo-shows/gary-drescher/
 
 # Repo Show invitation — Gary Drescher
 
-*Public draft — not sent. Gary Drescher may edit, decline, delay, or request removal at any time.*
+*Gary Drescher may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 Gary —

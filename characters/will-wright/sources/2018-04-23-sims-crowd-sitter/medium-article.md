@@ -6,7 +6,6 @@
 
 ---
 
-
 ![Figure](images/001-0-6jth5sstyqzxnmzi-jpg.jpeg)
 
 It turns out you can get a whole lot of The Sims 1 characters on the screen at once! But then you need some crowd control and coordination.

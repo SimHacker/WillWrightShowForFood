@@ -22,7 +22,6 @@ interval_research:
   sources:
     grokipedia: https://grokipedia.com/page/interval_research_corporation
     wikipedia: https://en.wikipedia.org/wiki/Interval_Research_Corporation
-    private_roster: DonHopkins/characters/don-hopkins/contacts/interval-alumni.yml
 
 don_projects:
   pluggers_survey:

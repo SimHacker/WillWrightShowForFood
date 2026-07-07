@@ -3,7 +3,7 @@
 *Conversation hooks for a dream Repo Show — **Don's proposed topics**, each grounded in Brian's
 own publicly documented work. These are things Don would love to riff on **with** Brian; they are
 **not** quotes from Brian and not claims about what he thinks.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · dream guest · consent not yet asked
+[Portrayal standards](../../schemas/portrayal-standards.md) · dream guest
 
 > Want the wild, **speculative/aspirational** what-ifs (the musical spider-web pie menu, the
 > Oblique-Strategy pie menu, the venue-as-web, imagined dream collaborators)? Those live in

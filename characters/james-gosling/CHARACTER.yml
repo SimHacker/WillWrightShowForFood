@@ -21,7 +21,6 @@ invitation:
   document: invitation.md
   show_seed: repo-shows/james-gosling/
 
-
 bio:
   summary: "**James Gosling** (b. 1955, Calgary; CMU PhD 1983) — the **father of Java**. Before Java he wrote **Gosling Emacs** (the first Unix Emacs, sold by UniPress — RMS's \"Evil Software Hoarder Emacs\", which spurred GNU Emacs), co-designed the **Andrew** window system (CMU, with David Rosenthal), and architected **NeWS/SunDew** at Sun — a PostScript-programmable network window system years ahead of its time (an AJAX architecture avant la lettre). Self-described record-holder for \"the largest number of cheesy little extension languages.\" Later Chief Software Architect at **Liquid Robotics** (Wave Glider ocean robots). Order of Canada; ACM Fellow; IEEE John von Neumann Medal."
 

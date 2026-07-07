@@ -21,7 +21,6 @@ invitation:
   document: invitation.md
   show_seed: repo-shows/chaim-gingold/
 
-
 bio:
   summary: "**Chaim Gingold** — designer & historian who reverse-engineered SimCity and wrote *Building SimCity* (MIT Press, 2024), creator of the famous reverse diagrams."
 

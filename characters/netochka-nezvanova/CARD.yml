@@ -157,7 +157,7 @@ abilities:
     - trigger: don_story_with_humor
       weight: 0.82
   effect: Don's card cross-reference — talked NATO AE host, steered clear of the drama. "Dodged a bullet!"
-  verifiable: don-hopkins CHARACTER connection (private details omitted)
+  verifiable: don-hopkins CHARACTER connection
   combos_with: []
 
 invoke_rules:

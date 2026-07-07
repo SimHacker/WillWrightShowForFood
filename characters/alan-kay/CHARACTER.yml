@@ -21,7 +21,6 @@ invitation:
   document: invitation.md
   show_seed: repo-shows/alan-kay-microworld.yml
 
-
 bio:
   summary: "**Alan Kay** — computing visionary: Smalltalk, the Dynabook, true object-orientation, and \"the best way to predict the future is to invent it.\""
 

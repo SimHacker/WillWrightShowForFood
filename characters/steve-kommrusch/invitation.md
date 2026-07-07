@@ -8,7 +8,7 @@ show_seed: repo-shows/steve-kommrusch/
 
 # Repo Show invitation — Steve Kommrusch
 
-*Public draft — not sent. Steve Kommrusch may edit, decline, delay, or request removal at any time.*
+*Steve Kommrusch may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 Steve —

@@ -21,7 +21,6 @@ invitation:
   document: invitation.md
   show_seed: repo-shows/terry-winograd/
 
-
 bio:
   summary: "**Terry Winograd** — Stanford HCI professor and host of the legendary open public CS547 \"People, Computers, and Design\" seminar series (1990s). Each week a different luminary spoke plainly to students and the public, answered real questions, and left a VHS record. The direct forebear of the Repo Show format: one guest, open access, recorded for posterity, real back-and-forth."
 

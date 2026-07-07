@@ -2,7 +2,6 @@
 
 *A Repo Show lecture — JSONsters gallery premiere. Performable segment; ~12–18 minutes with tour highlights.*
 
-
 ---
 
 ## Cold open

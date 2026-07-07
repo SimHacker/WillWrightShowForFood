@@ -8,7 +8,7 @@ show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml
 
 # Repo Show invitation — Jim Mackraz
 
-*Public draft — not sent. Jim Mackraz may edit, decline, delay, or request removal at any time.*
+*Jim Mackraz may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 Jim —

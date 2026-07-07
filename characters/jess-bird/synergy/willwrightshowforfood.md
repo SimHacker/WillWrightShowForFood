@@ -4,13 +4,11 @@ Two projects, one subject, mutual credibility, reinforcing without competing —
 
 ## The split
 
-
 |               | Jess's documentary                                       | Will Wright Show For Food                                               |
 | ------------- | -------------------------------------------------------- | ----------------------------------------------------------------------- |
 | **Container** | Broadcast / commissioned television                      | Public GitHub repo show                                                 |
 | **Strength**  | Production craft, archival breadth, broadcast legitimacy | Runnable code, async guest ladder, open artifacts, interview pipeline   |
 | **Start**     | [The mission](../mission/documentary.md)                  | [The premiere tour](../../../repo-shows/will-wright-premiere/BROWSE.md) |
-
 
 Don's position, in one line: he'd rather **Jess do the documenting at TV scale** while he **codes and interviews** people she can draw from and participate with — not duplicate a rival doc crew in his home studio.
 

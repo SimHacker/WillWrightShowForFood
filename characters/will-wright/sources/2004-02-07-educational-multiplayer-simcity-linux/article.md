@@ -7,15 +7,11 @@
 
 ---
 
-
-
 Back in March 2002, Maxis told me they were interested in supporting the educational use of products like SimCity. Earlier, I had developed a multi player version of SimCity, which runs on Linux/X11, and was scriptable in TCL. Educators and researchers from Columbia University, MIT, IBM, Xerox and other educational and commercial institutions were excited about gaining access to this version of SimCity, and adapting it to teach and stimulate students' interest in urban planning, computer simulation and game programming.
 
 So I wrote this proposal and presented it to Maxis, but nothing ever became of it. But recently, Will Wright has been pushing EA to relicense SimCity under the GPL, so the OLPC project can use it. So it may eventually see the light of day!
 
 SimCity.edu Proposal to Maxis
-
-
 
 Don Hopkins ported SimCity to Unix in 1991, working as a contractor for DUX Software, who licensed it from Maxis for a ten-year duration. He developed a cooperative networked multi player version of SimCity, released in 1993. He subsequently worked with Will Wright for Maxis/EA, developing The Sims character animation system, content pipeline, programming tools and user interface. Hopkins ported SimCity to Linux and optimized it, so it's a viable product as well as an engaging educational tool.
 
@@ -23,15 +19,11 @@ Hopkins has demonstrated Multi Player SimCity at ACM's InterCHI Conference, IBM'
 
 The ten-year contract between Maxis and DUX Software to distribute the Unix version of SimCity has expired, so it's not currently available as a product. Hopkins would like to license the rights from Maxis/EA directly, to develop an educational version of SimCity Classic. It can be distributed and played over the Internet like the popular ActiveX SimCity Classic, and extended to support educational uses.
 
-
-
 Columbia University uses SimCity and SimEarth to help teach Civil and Environmental Engineering. They are actively redesigning the curriculum to incorporate simulation games like SimCity and SimEarth, as well as developing a new simulation platform. Professor Upmanu Lall has applied for an NFS grant to develop an open system called OPTIMUS (Open Platform for Teaching Integrated Modeling and Urban Simulation). Don Hopkins is collaborating with Columbia University to develop simulation tools for education and research.
 
 The educators at Columbia University are excited about and willing to financially support the development of educational versions of SimCity and SimEarth. Hopkins hopes to make Multi Player SimCity for Linux available at low cost for educational use, while also selling it commercially to the small but enthusiastic Linux gaming community. The NFS grant can fund the development of the current Multi Player SimCity Classic into an educational tool, for Columbia and other universities to use in their Civil and Environmental Engineering curricula.
 
 This project doesn't require funding or work from Maxis/EA, and will support itself by generating a positive stream of royalties from commercial sales. The long-term benefits to Maxis, EA and society are quite positive: Columbia University will measure the effect of SimCity and other simulation tools on their goals of improving student enrolment and test scores. They will publish the results at conferences and in research papers, and make them available for other schools to use.
-
-
 
 Maxis's intellectual property and time will be protected, because Hopkins will insulate Columbia from the SimCity source code, and will also insulate Maxis from supporting the educational version of SimCity. Multi Player SimCity is already extensible through the TCL/Tk scripting language, and Hopkins will provide the hooks necessary for Columbia to use SimCity educationally, though scripting languages and component technology, without releasing any proprietary Maxis source code.
 

@@ -57,9 +57,6 @@ correspondence:
   since: "2025-04 (Jami Becker intro)"
   channel: email
   public_excerpt: sources/2026-07-07-email-excerpt.md
-  private_archive: |
-    DonHopkins/projects/willwrightshowforfood/green-room/jess-bird/ — backstage planning;
-    not all correspondence is public.
 
 synergy:
   with_repo_show: synergy/willwrightshowforfood.md
@@ -80,8 +77,6 @@ referrals_made_via_don:
 
 sources:
   july_2026_reply: sources/2026-07-07-email-excerpt.md
-  private_canonical: |
-    DonHopkins/projects/willwrightshowforfood/research/sources/jess-bird-bbc-email-2025.yml
 
 see_also:
   - { path: README.md, why: "Public-facing overview" }

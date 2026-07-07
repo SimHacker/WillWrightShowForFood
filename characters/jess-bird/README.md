@@ -32,7 +32,6 @@ SimRefinery work survived on the page.
 
 ## What Jess has been doing
 
-
 | Thread                  | Notes                                                                                                                                   |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | **Archival depth**      | SimRefinery / MBS history via [Phil Salvador](../phil-salvador/); Don's published *Soul of The Sims* source                             |
@@ -40,7 +39,6 @@ SimRefinery work survived on the page.
 | **Maxis veterans**      | Don's epithet roster + naming lore (Project X → The Sims); Understanding Comics / smart-objects lineage                                 |
 | **Tim LeTourneau**      | Interviewed Tim before his passing — Don shares Jess's wish that **Tim's words live on** in the history                                 |
 | **Repo Show curiosity** | July 2026 — browsed [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood); wants to keep things moving together   |
-
 
 Latest excerpt: [`sources/2026-07-07-email-excerpt.md`](sources/2026-07-07-email-excerpt.md) ·
 full timeline: [**correspondence**](correspondence.md)
@@ -56,6 +54,4 @@ people worth honoring, different containers.
 *Machine-readable girders:* [`CHARACTER.yml`](CHARACTER.yml) · [`correspondence.yml`](correspondence.yml) ·
 [`mission/documentary.yml`](mission/documentary.yml) · [`synergy/willwrightshowforfood.yml`](synergy/willwrightshowforfood.yml) ·
 [`reading-list.yml`](reading-list.yml)
-
-
 

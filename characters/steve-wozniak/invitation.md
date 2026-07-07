@@ -8,7 +8,7 @@ show_seed: repo-shows/steve-wozniak/
 
 # Repo Show invitation — Steve Wozniak
 
-*Public draft — not sent. Steve Wozniak may edit, decline, delay, or request removal at any time.*
+*Steve Wozniak may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 We would respectfully invite **Steve Wozniak** to a **Repo Show** — a Repo Show Class

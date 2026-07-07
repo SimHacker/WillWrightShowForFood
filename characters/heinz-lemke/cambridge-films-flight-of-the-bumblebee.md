@@ -81,10 +81,7 @@ Pull-in gaps (assets not yet in repo): [`pull-in-gaps.yml`](pull-in-gaps.yml)
 - **Show segment** — Ask Heinz: what was it like to see the films surface again after 50 years? Who is in the film? What did the light pen + radial "lightbuttons" feel like?
 - **Don's layer** — The Bumblebee edit is commentary, not the original film; pie menus as "rapid flight."
 
-
-
 ## Key people
-
 
 | Person          | Role                                                                    |
 | --------------- | ----------------------------------------------------------------------- |
@@ -102,9 +99,6 @@ Pull-in gaps (assets not yet in repo): [`pull-in-gaps.yml`](pull-in-gaps.yml)
 **Lars Brinkhoff** maps Type 340 + light pen to emulators; **David Rosenthal** holds Cambridge
 ~1970 memory on the same stack. Goal: radial menus demonstrably runnable on stream — not just
 film archaeology. See [`../lars-brinkhoff/`](../lars-brinkhoff/) · [`../david-rosenthal/`](../david-rosenthal/).
-
-
-
 
 ## Hardware: PDP-7 + Type 340
 

@@ -20,7 +20,7 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/philip-rosedale-hifi-moollm.yml
-  note: "Warm prior contact — Caitlyn intro 2016; worklist contractor 2017 (voting box, text chat); Philip QA'd and approved. MOOLLM follow-up drafted in DonHopkins email/ — now Repo Show invitation."
+  note: "Warm prior contact — Caitlyn intro 2016; worklist contractor 2017 (voting box, text chat); Philip QA'd and approved."
 
 bio:
   summary: |

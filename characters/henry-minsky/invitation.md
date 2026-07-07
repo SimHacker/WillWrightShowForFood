@@ -8,7 +8,7 @@ show_seed: repo-shows/henry-minsky/
 
 # Repo Show invitation — Henry Minsky
 
-*Public draft — not sent. Henry Minsky may edit, decline, delay, or request removal at any time.*
+*Henry Minsky may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 We would respectfully invite **Henry Minsky** to a **Repo Show** — a conversation whose stage is

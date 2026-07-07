@@ -2,7 +2,7 @@
 
 *Portrayal of a real author, written by Don — not David, and not his words. David may correct,
 shape, reduce, or delete any of it.* [Portrayal standards](../../schemas/portrayal-standards.md) ·
-invitation drafted, not sent · authored by Don Hopkins
+*[Portrayal standards](../../schemas/portrayal-standards.md)*
 
 ## Who
 

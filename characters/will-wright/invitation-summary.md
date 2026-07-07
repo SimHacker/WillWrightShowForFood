@@ -35,12 +35,9 @@ has the code. If it sounds fun, we'd pursue it as a live **RoboResurrection** qu
 read the old code together, revive him, call-in sidekick, reprogram, iterate. Stupid Fun Club
 energy — not a required topic. Details: [slats-reincarnation.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright/slats-reincarnation.yml).
 
-
-
 ### Browse — any order
 
 **Landing page:** [repo-shows/will-wright/BROWSE.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright/BROWSE.md) · **[Guest playlist](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/entryways/guest-will.md)**
-
 
 | What                          | Link                                                                                                                                                                                                                                       |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -48,9 +45,6 @@ energy — not a required topic. Details: [slats-reincarnation.yml](https://gith
 | Show hub                      | [repo-shows/will-wright/README.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright/README.md)                                                                                                          |
 | 1996 talk (centerpiece)       | [source bundle](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds) · [YouTube](https://www.youtube.com/watch?v=nsxoZXaYJSk)                       |
 | Root README                   | [github.com/SimHacker/WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood#readme)                                                                                                                                    |
-
-
-
 
 ### Your call
 

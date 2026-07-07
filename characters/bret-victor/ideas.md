@@ -2,7 +2,7 @@
 
 *Conversation hooks — Don's proposed topics, grounded in Bret's public work and documented connections.
 Not quotes from Bret.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · consent not yet asked
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## What Bret has done (public record)
 

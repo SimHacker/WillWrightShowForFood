@@ -1,5 +1,5 @@
 # Talks — public portfolio index (distilled from DonHopkins/talks/)
-# Full packages live in private archive; these are export-safe summaries + links.
+# Export-safe summaries + links to full talk packages.
 
 talks_portfolio:
   source_archive: SimHacker/DonHopkins/talks/

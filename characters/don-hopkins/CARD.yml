@@ -17,7 +17,7 @@ layers:
   career_backbone: career/
   portrayal: portrayal/
   moollm_adventure: examples/adventure-4/characters/real-people/don-hopkins/ — extend, do not merge blindly
-  donhopkins_private: DonHopkins/characters/don-hopkins/ — archive; export via sync manifest
+  donhopkins_upstream: DonHopkins/characters/don-hopkins/ — upstream archive
 
 # Connections index — James Burke thread (human mirror: README.md)
 # Uniform ~24-word blurbs; each entry opens the next. Read clusters in order.
@@ -76,7 +76,7 @@ connections_index:
           blurb: Filename advertisement index — semantic clusters for machines; narrative order lives in README and here.
           opens: gestural_verbs
         - path: sync-sources.yml
-          blurb: Upstream sync manifest — dedupe rules, public-safe exports from adventure-4 and DonHopkins private archive.
+          blurb: Upstream sync manifest — dedupe rules, public-safe exports from adventure-4 and DonHopkins upstream archive.
           opens: career/INDEX.yml
 
     - id: gestural_verbs

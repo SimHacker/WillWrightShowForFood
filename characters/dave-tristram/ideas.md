@@ -3,7 +3,7 @@
 *Conversation hooks for a Repo Show — **Don's proposed topics**, grounded in Dave's publicly
 documented work and Don's firsthand friendship. Things Don would love to riff on **with** Dave;
 not quotes from Dave and **not** claims about what he thinks.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · consent not yet asked
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## The hooks
 
@@ -57,7 +57,7 @@ looping fest alongside **Stephen Wolfram**, **Dave Ackley**, **Jim Crutchfield**
 **Will Wright**, and **Brian Eno** — Dave as the **live graphics performance** voice in a room full
 of rule-makers. Async clips welcome; Dave + Don + a grid is already a show.
 
-### 6. Adobe live painting R&D (PRIVATE — withheld until Dave clears)
+### 6. Adobe live painting R&D
 Don beta-tested **pre-release interactive filter / liquid-simulation** work Dave was doing at Adobe
 (~2022 Feature Camp focus group). Don called it *essential playfulness* in the same breath as Glenn
 Reid's NeXT **Font Appreciation Tool**. **Do not cite product name or demo on air** until cleared.

@@ -21,7 +21,6 @@ invitation:
   document: invitation.md
   show_seed: repo-shows/arthur-van-hoff/
 
-
 bio:
   summary: "**Arthur van Hoff** — Dutch programmer; great long-time friend of Don. Turing Institute (Glasgow): GoodNeWS → HyperNeWS → HyperLook, PdB. Sun: Java compiler in Java, AWT, HotJava. Marimba: Castanet + Bongo (Danny Goodman — HyperCard handbook **and** Bongo book). Later: TiVo, Flipboard, Jaunt VR, Apple."
 

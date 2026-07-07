@@ -37,5 +37,4 @@ The natural spot is **guest of honor alongside Jaron and David** for the
 **[Rebounce](../../repo-shows/rebounce/README.md)** origin story — the salute-and-reimplement jam for
 Bounce (né Body Electric). Finally, the lead designer/programmer tells it in his own words.
 
-*Status: stub / not yet asked. We don't publish the sensitive personal details from the 1999 thread; a
-warm reconnect comes first. Any answer — including no answer — is honored.*
+*[Portrayal standards](../../schemas/portrayal-standards.md)*

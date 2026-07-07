@@ -115,7 +115,7 @@ abilities:
     - trigger: audience_learns_something_true
       weight: 0.9
   effect: Where a founding adventure author takes LLMs, world models, and authoring -- live.
-  verifiable: Per Don (consent not yet asked) -- confirm before airing.
+  verifiable: Per Don — confirm before airing.
   combos_with:
   - DATA-DRIVEN-ENGINE
   - DON-ADVENTURE-COMPILER

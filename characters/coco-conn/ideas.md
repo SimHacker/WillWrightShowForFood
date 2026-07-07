@@ -3,7 +3,7 @@
 *Conversation hooks for a Repo Show — **Don's proposed topics**, grounded in Coco & Paul's public HN
 account, Paul Rother's history page, and Don's SIGGRAPH firsthand notes. Not quotes from Coco unless
 sourced; not claims about what she thinks today.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · consent not yet asked
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## The hooks
 

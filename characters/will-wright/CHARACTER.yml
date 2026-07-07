@@ -26,7 +26,7 @@ invitation:
   accepted: "2026-07 — pitched; loves the idea, gets it, hot to trot"
   guest_prototype: guest-prototype.yml
   document: invitation.md
-  official_invitation: repo-shows/will-wright-premiere/invitation.md   # accepted showpiece; earlier cuts archived privately (green room)
+  official_invitation: repo-shows/will-wright-premiere/invitation.md
   browse_landing: repo-shows/will-wright-premiere/BROWSE.md
   show_seed: repo-shows/will-wright-premiere/
   segments: [slats-reincarnation]

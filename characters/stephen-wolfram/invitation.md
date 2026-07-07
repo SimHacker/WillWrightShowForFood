@@ -9,7 +9,7 @@ beloved: false
 
 # Repo Show invitation — Stephen Wolfram
 
-*Public draft — not sent. Stephen Wolfram may edit, decline, delay, or request removal at any time.*
+*Stephen Wolfram may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 Stephen — we built a naming discipline and an LLM operating substrate that keep turning into *your* language:

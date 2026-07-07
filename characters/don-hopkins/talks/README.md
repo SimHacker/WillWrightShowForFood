@@ -1,7 +1,7 @@
 # Talk packages (public distill)
 
 Reusable talk spines exportable to donhopkins.com and Repo Shows. Source of truth for full
-YAML: **DonHopkins** `talks/` (private archive, `public_safe: true`).
+YAML: **DonHopkins** `talks/` (`public_safe: true`).
 
 | File | Talk |
 |------|------|

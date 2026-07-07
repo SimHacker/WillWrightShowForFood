@@ -68,7 +68,6 @@ if we ever overlap. **Zero homework.** No slides required. If homeplay (instead 
 
 **Materials already waiting for you:**
 
-
 | If you're curious about…         | Link                                                                                                                                     |
 | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | **This show** (segment ideas)    | [repo-shows/scott-adams/](../../repo-shows/scott-adams/SHOW.yml)                                                                                                      |
@@ -80,7 +79,6 @@ if we ever overlap. **Zero homework.** No slides required. If homeplay (instead 
 | **The adventure-compiler trail** | [don-hopkins/career/lineage.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/career/lineage.yml) |
 | **MOOLLM** (the repo itself)     | [github.com/SimHacker/moollm](https://github.com/SimHacker/moollm)                                                                       |
 | **The whole Repo Show project**  | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood)                                                              |
-
 
 Browse without a GitHub account — start at the [README](https://github.com/SimHacker/WillWrightShowForFood).
 

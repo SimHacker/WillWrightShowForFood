@@ -9,7 +9,7 @@ format: live_or_async
 
 # Repo Show invitation — Antoni Sawicki 🖥️🏙️📟
 
-*Public draft — not sent. Antoni may edit, decline, delay, or request removal at any time.*
+*Antoni may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 Antoni —

@@ -10,7 +10,6 @@ in that README.
 
 ## Canonical hub
 
-
 | Room                             | Link                                                                                                               | Role                                                   |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------ |
 | **Evidence room README**         | `[sources/README.md](sources/README.md)`                 | Navigation spine — start here for any slug             |
@@ -18,11 +17,7 @@ in that README.
 | **Flagship Repo Show**           | `[../../repo-shows/will-wright-premiere/README.md](../../repo-shows/will-wright-premiere/README.md)`                                 | Episode room — orbits the sources                      |
 | **Terry Winograd CS547 archive** | `[../../characters/terry-winograd/media/cs547-ARCHIVE.md](../../characters/terry-winograd/media/cs547-ARCHIVE.md)` | Full Stanford talk catalog (cross-linked from sources) |
 
-
-
-
 ## Bouquet → evidence (Don's topic files)
-
 
 | Don-hopkins topic                                                                                      | Primary sources cluster                                                                                                                                                                                                                                                                                                                                                                                   |
 | ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -34,13 +29,9 @@ in that README.
 | `[hyperlook-news-postscript-simcity.md](../don-hopkins/hyperlook-news-postscript-simcity.md)`                         | [multiplayer-simcity-ui-network](sources/multiplayer-simcity-ui-network/README.md), [simcity-unix-rights-history](sources/simcity-unix-rights-history/README.md)                                                                                                                                                                                |
 | `[career/contracts/README.md](../don-hopkins/career/contracts/README.md)`                                             | [maxis-licenses-chain-of-custody](sources/maxis-licenses-chain-of-custody/README.md), [simcity-unix-rights-history](sources/simcity-unix-rights-history/README.md)                                                                                                                                                                              |
 
-
 ---
 
-
-
 ## Start here — the centerpiece
-
 
 | Artifact                             | Link                                                                                                                                            | Why it matters                                                                                                                                   |
 | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -48,13 +39,9 @@ in that README.
 | **Soul of The Sims (Motive.c)**      | [2008-02-10-soul-of-the-sims](sources/2008-02-10-soul-of-the-sims/README.md)                                       | Will's January 1997 motive substrate — scans + [transcribed Motive.c](sources/2008-02-10-soul-of-the-sims/Motive.c) |
 | **Winograd essay (2004 pre-Medium)** | [2004-01-12-winograd-ui-simulation-games](sources/2004-01-12-winograd-ui-simulation-games/README.md)               | Compare to 1996 centerpiece                                                                                                                      |
 
-
 ---
 
-
-
 ## SimCity open source → Micropolis
-
 
 | Slug                                                | Link                                                                                                                                                |
 | --------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -68,11 +55,7 @@ in that README.
 | Chaim MIT Press intro thread                        | [2024-building-simcity-chaim-intro](sources/2024-building-simcity-chaim-intro/README.md)                               |
 | Educational multiplayer SimCity (Linux)             | [2004-02-07-educational-multiplayer-simcity-linux](sources/2004-02-07-educational-multiplayer-simcity-linux/README.md) |
 
-
-
-
 ### OLPC email arc (2006–2007)
-
 
 | Slug                                  | Link                                                                                                                                        |
 | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -84,13 +67,9 @@ in that README.
 | SimCity rules (Alan Kay thread)       | [2007-11-16-simcity-rules-alan-kay](sources/2007-11-16-simcity-rules-alan-kay/README.md)                       |
 | OLPC visual programming / PSIBER      | [2007-11-16-olpc-visual-programming-psiber](sources/2007-11-16-olpc-visual-programming-psiber/README.md)       |
 
-
 ---
 
-
-
 ## The Sims — birth, prototypes, preservation
-
 
 | Slug                                            | Link                                                                                                                                      |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -105,13 +84,9 @@ in that README.
 | Sims Internet Museum preservation ask           | [2022-sims-internet-museum-questions](sources/2022-sims-internet-museum-questions/README.md)                 |
 | Proposals hub (SliceCity, TSO, community tools) | [2004-02-05-sims-proposals-and-documentation](sources/2004-02-05-sims-proposals-and-documentation/README.md) |
 
-
 ---
 
-
-
 ## Transmogrifier — name, docs, tutorials
-
 
 | Slug                                     | Link                                                                                                                                      |
 | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -123,13 +98,9 @@ in that README.
 | Renovation plan                          | [2004-02-05-transmogrifier-renovation-plan](sources/2004-02-05-transmogrifier-renovation-plan/README.md)     |
 | SafeTMog — restricted authoring          | [2004-02-05-safetmog-transmogrifier-plan](sources/2004-02-05-safetmog-transmogrifier-plan/README.md)         |
 
-
 ---
 
-
-
 ## UCC, Exchange, content-creation stack
-
 
 | Slug                                    | Link                                                                                                                                            |
 | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -144,13 +115,9 @@ in that README.
 | Computer game design index              | [2005-09-18-computer-game-design-index](sources/2005-09-18-computer-game-design-index/README.md)                   |
 | Halloween tombstones (originalsims.com) | [2005-09-22-halloween-tombstones-original-sims](sources/2005-09-22-halloween-tombstones-original-sims/README.md)   |
 
-
 ---
 
-
-
 ## Character animation pipeline
-
 
 | Slug                               | Link                                                                                                                                              |
 | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -160,13 +127,9 @@ in that README.
 | MaxScript export pipeline          | [2004-02-19-maxscript-animation-pipeline](sources/2004-02-19-maxscript-animation-pipeline/README.md)                 |
 | Promised exporter hub links (2020) | [2020-promised-links-maxscript-pipeline](sources/2020-promised-links-maxscript-pipeline/README.md)                   |
 
-
 ---
 
-
-
 ## Procedural rhetoric — inclusion vs institutional farce
-
 
 | Slug                                    | Link                                                                                                                                  |
 | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -175,29 +138,21 @@ in that README.
 | Chris Trottier — tuned emergence        | [2004-02-21-chris-trottier-tuned-emergence](sources/2004-02-21-chris-trottier-tuned-emergence/README.md) |
 | Henry Jenkins — Barbie to Mortal Kombat | [2004-01-10-barbie-mortalkombat-jenkins](sources/2004-01-10-barbie-mortalkombat-jenkins/README.md)       |
 
-
 Pair Crowd Sitter / Dumbold with live UCC in `[../../catalogs/simprov/](../../catalogs/simprov/README.md)`.
 
 ---
 
-
-
 ## Stupid Fun Club & one-minute movies
-
 
 | Slug                             | Link                                                                                                                  |
 | -------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | *Servitude* and *Empathy* robots | [stupid-fun-club-one-minute-movies](sources/stupid-fun-club-one-minute-movies/README.md) |
 
-
 → Don's talk distill: `[talks/empathy-and-servitude.yml](../don-hopkins/talks/empathy-and-servitude.yml)` · Sidekick `[../slats/](../slats/)`
 
 ---
 
-
-
 ## Spore, Yoot, preservation threads
-
 
 | Slug                                      | Link                                                                                                                            |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -207,23 +162,16 @@ Pair Crowd Sitter / Dumbold with live UCC in `[../../catalogs/simprov/](../../ca
 | Becky Heineman IIgs SimCity source hunt   | [2019-apple-iigs-simcity-becky-heineman](sources/2019-apple-iigs-simcity-becky-heineman/README.md) |
 | SC3K 3D preservation notes                | [2026-simcity-3000-3d-preservation](sources/2026-simcity-3000-3d-preservation/README.md)           |
 
-
 ---
 
-
-
 ## Video / demo index
-
 
 | Slug                                                  | Link                                                                                                                |
 | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | Don Hopkins YouTube playlist index                    | [don-youtube-playlist-index](sources/don-youtube-playlist-index/README.md)             |
 | Brad Myers — Pick-Click-Flick (pie menus ACM chapter) | [2023-brad-myers-pick-click-flick](sources/2023-brad-myers-pick-click-flick/README.md) |
 
-
 ---
-
-
 
 ## Still to extract (tracked in sources README)
 

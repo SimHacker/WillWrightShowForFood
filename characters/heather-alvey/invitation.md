@@ -11,7 +11,7 @@ format: live_or_async
 
 # Repo Show invitation — Heather Alvey 🧟
 
-*Public draft — not sent. Heather may edit, decline, delay, or request removal at any time.*
+*Heather may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 **Today I'm sending two matching invitations** — yours and **Steve's** ([Steve's invitation](../steve-alvey/invitation.md)) — for one **pair show**. Each letter is written for the person receiving it; both describe the same show from your two angles, and each of you can read the other's.

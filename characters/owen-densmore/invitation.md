@@ -8,7 +8,7 @@ show_seed: repo-shows/REPO-SHOWS.yml#news-postscript-window-system.yml
 
 # Repo Show invitation — Owen Densmore
 
-*Public draft — not sent. Owen may edit, decline, delay, or request removal at any time.*
+*Owen may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 Owen —

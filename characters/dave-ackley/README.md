@@ -21,6 +21,6 @@ Don has written about his work **extensively on Hacker News**, and his mantra po
 - **CA looping fest** — a natural co-guest with [Norman Margolus](../norman-margolus/README.md)
   (locality/reversibility) and [Stephen Wolfram](../stephen-wolfram/README.md): CA as *architecture*.
 
-See [`CHARACTER.yml`](CHARACTER.yml) and the [invitation](invitation.md). Consent **not yet asked**.
+See [`CHARACTER.yml`](CHARACTER.yml) and the [invitation](invitation.md). 
 
 *Portrayal from public sources + Don's own writing; Dave may edit or remove anytime.*

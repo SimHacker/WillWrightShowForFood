@@ -2,7 +2,7 @@
 
 *Portrayal of a real correspondent, written by Don — not Antoni, and not his words. Antoni may
 correct, shape, reduce, or delete any of it.* [Portrayal standards](../../schemas/portrayal-standards.md) ·
-invitation drafted, not sent · authored by Don Hopkins
+*[Portrayal standards](../../schemas/portrayal-standards.md)*
 
 ## Who
 

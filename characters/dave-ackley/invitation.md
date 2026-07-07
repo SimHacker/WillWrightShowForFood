@@ -8,7 +8,7 @@ show_seed: repo-shows/dave-ackley/
 
 # Repo Show invitation — Dave Ackley
 
-*Public draft — not sent. Dave may edit, decline, delay, or request removal at any time.*
+*Dave may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 Dave —

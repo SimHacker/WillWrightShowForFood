@@ -21,7 +21,6 @@ invitation:
   document: invitation.md
   show_seed: repo-shows/paul-debevec/
 
-
 bio:
   summary: "Light Stage, image-based lighting, photogrammetry, Rouen Revisited (with Golan Levin at Interval), now Director of Research, Creative Algorithms and Technology at Netflix"
 

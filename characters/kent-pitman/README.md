@@ -13,4 +13,4 @@ sent yet.
 
 → [`CARD.yml`](CARD.yml) · [`CARD.md`](CARD.md) · [`../don-hopkins/`](../don-hopkins/README.md)
 
-*Status: stub / not yet asked.*
+*[Portrayal standards](../../schemas/portrayal-standards.md)*

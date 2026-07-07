@@ -43,7 +43,6 @@ sources:
     - "HN ELIZA/ANIMAL threads (Don posts)"
   correspondence:
     - path: ../../../DonHopkins/characters/don-hopkins/correspondence/kent-pitman.yml
-      note: "Draft outreach — not sent; private email bodies stay there"
 
 see_also:
   - { path: ../don-hopkins/CARD.yml, why: "Host — ITS tourist, MOOLLM, Micropolis" }

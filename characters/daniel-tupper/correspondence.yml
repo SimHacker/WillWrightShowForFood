@@ -2,16 +2,12 @@
 
 meta:
   character: daniel-tupper
-  note: "Public timeline only; private threads in DonHopkins green-room"
 
 threads:
   - id: facebook-messenger-2013
     start: 2013-08-01
     channel: Facebook Messenger
     public_excerpt: sources/2013-08-01-facebook-messenger-excerpt.md
-    private_full: |
-      DonHopkins/projects/willwrightshowforfood/green-room/daniel-tupper/sources/
-      2013-08-01-facebook-messenger.txt
     beats:
       - date: 2013-08-01
         topic: first_contact
@@ -30,6 +26,4 @@ threads:
         summary: "Studio name SWRSgaming — founders' initials"
 
 ongoing:
-  note: |
-    More than a decade of correspondence since this excerpt — personal and project
-    material archived privately; public repo grows as Daniel consents to each artifact.
+  note: "More than a decade of correspondence since this excerpt — public repo grows as Daniel consents to each artifact."

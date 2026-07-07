@@ -10,7 +10,7 @@ format: remote_or_in_person
 
 # Repo Show invitation — Dan Ingalls
 
-*Public draft — not sent. The person portrayed may edit, decline, delay, or request removal at any time.*  
+*The person portrayed may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*  
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Dan —

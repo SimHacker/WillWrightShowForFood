@@ -1,8 +1,7 @@
 # Tom Tjon A Loi 🎨🏙️
 
-*Invitation portrayal of a past collaborator — not Tom Tjon A Loi, and not his words except where
-quoted from documents Don wrote about him at the time.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · consent level 2 · authored by Don Hopkins
+*About Tom Tjon A Loi — for Repo Show invitations and attribution.*
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## Who
 

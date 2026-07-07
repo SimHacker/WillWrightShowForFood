@@ -1,8 +1,7 @@
 # Albert Hofkamp 🧹⚙️
 
-*Invitation portrayal of a real correspondent — not Albert Hofkamp, and not his words except where
-quoted verbatim from email he sent Don.* [Portrayal standards](../../schemas/portrayal-standards.md) ·
-consent level 2 · authored by Don Hopkins
+*About Albert Hofkamp — for Repo Show invitations and attribution.*
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## Who
 
@@ -38,21 +37,19 @@ And when Don mentioned applying for grant money to support development, his enti
 
 > "We need money?"
 
-Three words that define the volunteer archetype the whole
-[educators' track](../../repo-shows/ideas/themes/educators-track.yml) wants to cultivate.
+Three words that capture the volunteer spirit behind open-source classic sims.
 
-## Why we'd love to work with him again
+## What he brings
 
 - **He's done this twice.** Micropolis cleanup *and* fifteen years of OpenTTD GUI work. Nobody in the
   Netherlands knows more about the long game of keeping a liberated classic sim alive and clean.
-- **Overhauling Micropolis/SimCity code is the show.** MicropolisCore is the C++ he cleaned up,
-  now compiled to WebAssembly and driven by AI. A Repo Show walking from his 2008 Doxygen comments to
-  today's LLM-navigable codebase would be a perfect before/after arc — his documentation instinct
-  ("the first step towards understanding the program") is exactly what makes code legible to AI agents.
+- **Documentation is the gift.** MicropolisCore is the C++ he cleaned up, now compiled to WebAssembly
+  and driven by AI. A walk from his 2008 Doxygen comments to today's LLM-navigable codebase would
+  be a perfect before/after arc — his instinct ("the first step towards understanding the program")
+  is exactly what makes code legible to the next generation of contributors.
 - **OpenTTD × Micropolis.** Two GPL'd classics, two communities, one conversation about open-source
   game stewardship — with someone who's a credited developer on both sides.
-- **TU Eindhoven.** A Dutch university affiliation on the educators' bench, and living proof that
-  serious engineering careers and volunteer game work feed each other.
+- **TU Eindhoven.** Serious engineering careers and volunteer game work feeding each other.
 
 ## Sources
 

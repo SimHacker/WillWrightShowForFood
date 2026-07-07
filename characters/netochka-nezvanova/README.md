@@ -76,4 +76,4 @@ Don would genuinely love NN on the **Repo Show**. A masked appearance, a text-on
 or an intermediary would all be completely in character. Any answer — including no answer, or
 a yellow flower — is honored. That, too, is on brand.
 
-*Status: stub / not yet asked. [ideas.md](ideas.md) · [sources/](sources/README.md) · full archive in DonHopkins.*
+*[Portrayal standards](../../schemas/portrayal-standards.md)* · [ideas.md](ideas.md) · [sources/](sources/README.md)

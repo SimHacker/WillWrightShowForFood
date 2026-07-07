@@ -8,7 +8,7 @@ show_seed: repo-shows/stone-librande/
 
 # Repo Show invitation — Stone Librande
 
-*Public draft — not sent. Stone Librande may edit, decline, delay, or request removal at any time.*
+*Stone Librande may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 We would respectfully invite **Stone Librande** to a **Repo Show** — a Repo Show Class

@@ -41,12 +41,7 @@ bio:
     Bowie, Klaus Nomi, Joey Arias, Leigh Bowery, and Nina Hagen.
 
 reach:
-  # Public-safe summary only; specific names/contacts + reconnection strategy live in the private green room.
-  best_path: "Possible warm intro via Interval Research alumni Don knows from the Talking Stick era."
-  fallback: "Also reachable in the same avant-garde/generative orbit as Will Wright and Brian Eno."
-  private_roster: DonHopkins/characters/don-hopkins/contacts/interval-alumni.yml
-  green_room: DonHopkins/projects/willwrightshowforfood/green-room/laurie-anderson/
-  note: "Dream invitation — offered with no presumption; consent not yet asked."
+  note: "Dream invitation — offered with no presumption."
 
 interval_research:
   confirmed: true

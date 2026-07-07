@@ -72,7 +72,6 @@ other_projects:
 
 contact:
   channel: "Direct email to Don (warm; July 2026 ttycity note)"
-  note: "Address in the green room, not here."
 
 sources:
   ttycity_email: sources/2026-07-07-ttycity-email.md
@@ -84,7 +83,7 @@ sources:
 
 see_also:
   - { path: README.md, why: "Public-facing overview" }
-  - { path: invitation.md, why: "Draft invitation — not sent" }
+  - { path: invitation.md, why: "Invitation letter" }
   - { path: ../../repo-shows/antoni-sawicki-ttycity.yml, why: "Show seed — interview the dev, play the city, show Will" }
   - { path: ../will-wright/, why: "SimCity's designer — ttycity's README credits him by name" }
   - { path: ../../characters/will-wright/sources/simcity-open-source-saga/, why: "How the code Antoni forked got freed" }

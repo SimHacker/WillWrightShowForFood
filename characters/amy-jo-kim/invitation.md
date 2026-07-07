@@ -11,7 +11,7 @@ beloved: true
 
 # Repo Show invitation — Amy Jo Kim 🎮
 
-*Public draft — not sent. Amy Jo Kim may edit, decline, delay, or request removal at any time.*
+*Amy Jo Kim may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 **Today I'm sending two matching invitations** — yours and **Scott's** ([Scott's invitation](../scott-kim/invitation.md)) — for one **pair show**. Each letter is written for the person receiving it; both describe the same show from your two angles, and each of you can read the other's.

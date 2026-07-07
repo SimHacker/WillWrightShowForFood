@@ -11,7 +11,7 @@ role: flagship_public_invitation
 
 *This is the public, published version of the invitation Will accepted in July 2026 — shared with his
 blessing as the **flagship**: the show's first guest, and the template for every invite after. The
-personal drafts, the phone-call follow-up, and the backstage strategy live in the green room, offline.
+
 What's here is the part we're both happy for the world to read — so you can see **why Will's in**, and
 decide you want in too.*
 

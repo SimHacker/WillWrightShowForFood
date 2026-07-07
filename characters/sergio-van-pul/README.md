@@ -1,8 +1,7 @@
 # Sergio van Pul 🎮🐱
 
-*Invitation portrayal of a past collaborator — not Sergio van Pul, and not his words except where
-quoted verbatim from email he sent Don.* [Portrayal standards](../../schemas/portrayal-standards.md) ·
-consent level 2 · authored by Don Hopkins
+*About Sergio van Pul — for Repo Show invitations and attribution.*
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## Who
 
@@ -37,15 +36,14 @@ And he signed off:
 
 Sixteen years later: it's the future, and the crazy concepts with Will Wright are a repo.
 
-## Why we'd love to work with him again
+## What he brings
 
 - **He builds through adversity.** Out of a project that fizzled, he carried forward a team, school
   pilots of the 9-box game, and eventually a published book teaching game development to kids.
   That's the constructive spirit this project runs on.
 - **He was right early.** Teaching children game design with Scratch, testing educational games in
-  real schools, treating game-making as literacy — in 2010 that was niche; in 2026 it's the heart
-  of the [educators' track](../../repo-shows/ideas/themes/educators-track.yml). Sergio has been
-  doing what we're planning, for longer than we've been planning it.
+  real schools, treating game-making as literacy — in 2010 that was niche; in 2026 it's mainstream.
+  Sergio has been doing this work for longer than most of us have been talking about it.
 - **He connects the worlds.** HKU game design, Scratch education (kin to the Snap!/Logo lineage of
   Brian Harvey and Jens Mönig), Dutch broadcast games, and hands-on craft — a rare combination,
   and exactly the mix the show celebrates.
@@ -54,3 +52,4 @@ Sixteen years later: it's the future, and the crazy concepts with Will Wright ar
 
 - [LinkedIn](https://www.linkedin.com/in/sergiovanpul) · [Scratch 2.0 Game Development Hotshot](https://web.archive.org/web/20190313201144/https://www.packtpub.com/game-development/scratch-20-game-development-hotshot) (Packt's live page is gone; the Wayback Machine remembers — [salvaged copy](sources/packt-book-page-2019-archive.md))
 - Don's mail archive: 2 October 2010 (quoted verbatim, with gratitude); 2008–10 Eduverse meeting threads
+

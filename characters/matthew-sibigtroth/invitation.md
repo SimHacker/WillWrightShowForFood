@@ -8,7 +8,7 @@ show_seed: repo-shows/matthew-sibigtroth/
 
 # Repo Show invitation — Matthew Sibigtroth
 
-*Public draft — not sent. Matthew Sibigtroth may edit, decline, delay, or request removal at any time.*
+*Matthew Sibigtroth may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 We would respectfully invite **Matthew Sibigtroth** to a **Repo Show** — a Repo Show Class

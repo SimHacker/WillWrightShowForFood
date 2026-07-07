@@ -8,7 +8,7 @@ show_seed: repo-shows/doreen-nelson/
 
 # Repo Show invitation — Doreen Nelson
 
-*Public draft — not sent. Doreen Nelson may edit, decline, delay, or request removal at any time.*
+*Doreen Nelson may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 We would respectfully invite **Doreen Nelson** to a **Repo Show** — a Repo Show Class conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood), following through to working code and credited ideas in public.

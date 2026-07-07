@@ -3,7 +3,6 @@
 *Submitted by Don Hopkins · Fri, 2007-11-16 05:33*
 *Tags: HyperTIES · Markup Language · Lisp · NeWS · OLPC · PostScript · Python · SimCity · Visual*
 
-
 ---
 
 Simon Forman's stuff about xerblin is fascinating, and I'm excited about where it's heading, and how we can incorporate ideas from eToys into Python! I like the idea of having visual meta-languages that are compiled into Python, which avoids the problems of editing Python text or parse trees directly, and can support simplified "kindergarten" languages as well as more advanced forms.

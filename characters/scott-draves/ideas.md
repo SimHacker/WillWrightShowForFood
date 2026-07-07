@@ -14,8 +14,6 @@ Sheep as **Infinidream**. Perfect timing for a generative-art show with running 
 
 ## The hooks
 
-
-
 ### 1. The whole arc, end to end
 
 **fnord** (Brown, 1990 — the functional geometry language he co-wrote with Nick Thompson) →

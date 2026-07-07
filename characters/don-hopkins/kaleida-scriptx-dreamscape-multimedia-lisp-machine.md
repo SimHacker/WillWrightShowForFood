@@ -36,7 +36,7 @@ power-of-simplicity rig; mirrors, inheritance, and live objects argued in good f
 ## Talks & receipts
 
 - DreamScape @ WWDC 1995 — [`portrayal/presentations.yml`](portrayal/presentations.yml)
-- Talk package (private archive): DonHopkins `talks/past/dreamscape-wwdc-1995.yml`
+- Talk package: DonHopkins `talks/past/dreamscape-wwdc-1995.yml`
 - [`talks/INDEX.yml`](talks/INDEX.yml) · [`career/stupid-fun-club.yml`](career/stupid-fun-club.yml) (MediaGraph lineage)
 
 → [`career/lineage.yml`](career/lineage.yml) (`bundle` DreamScape entry) · [`career/work-history.yml`](career/work-history.yml) · [`../../process/trails/live-objects.md`](../../process/trails/live-objects.md)

@@ -8,7 +8,7 @@ show_seed: repo-shows/isabella-struckman/
 
 # Repo Show invitation — Isabella Struckman
 
-*Public draft — not sent. Isabella Struckman may edit, decline, delay, or request removal at any time.*
+*Isabella Struckman may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 Isabella —

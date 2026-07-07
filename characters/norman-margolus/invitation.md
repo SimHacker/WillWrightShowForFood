@@ -8,7 +8,7 @@ show_seed: repo-shows/norman-margolus/
 
 # Repo Show invitation — Norman Margolus
 
-*Public draft — not sent. Norman may edit, decline, delay, or request removal at any time.*
+*Norman may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 Norman —

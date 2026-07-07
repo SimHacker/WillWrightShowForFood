@@ -79,8 +79,6 @@ objects; the seed of Pantomime JSON → MOOLLM.
 - **One hub, many devices** — a single real-time nervous system fusing MIDI/Ethernet/Polhemus/glove/
 headset/Convolvotron; the patch is the conductor.
 
-
-
 ## Salute → Rebounce
 
 This is exactly what the **[Rebounce](../../repo-shows/rebounce/README.md)** homage is for: check in the

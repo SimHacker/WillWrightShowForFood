@@ -27,6 +27,6 @@ job hunt: I'm **available for hire (2026)** — see [`hire-me.md`](hire-me.md).
 | Voice + frobisms | [`portrayal/voice.yml`](portrayal/voice.yml) |
 | Verified talks | [`portrayal/presentations.yml`](portrayal/presentations.yml) |
 
-Canonical site: [donhopkins.com](https://donhopkins.com) · Private archive distilled per [`sync-sources.yml`](sync-sources.yml)
+Canonical site: [donhopkins.com](https://donhopkins.com) · Distilled per [`sync-sources.yml`](sync-sources.yml)
 
 *Distilled from DonHopkins `master-of-ceremonies/about-host.yml` — public projection only.*

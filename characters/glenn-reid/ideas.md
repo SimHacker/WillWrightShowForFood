@@ -40,7 +40,7 @@ Primary source: [`sources/2015-01-31-touchtype-vr-correspondence.md`](sources/20
 
 Glenn's third Adobe stint (~2007, **Advanced Technology Group**): **David Tristram** was *"just down the hall."*
 Don's Jan 2023 mail connected Glenn to Dave's **pre-release live liquid-painting** Photoshop work (Don
-beta-tested; details **withheld** — [`../dave-tristram/sources/live-canvas-effects-stub.md`](../dave-tristram/sources/live-canvas-effects-stub.md)).
+beta-tested — [`../dave-tristram/sources/live-canvas-effects-stub.md`](../dave-tristram/sources/live-canvas-effects-stub.md)).
 Glenn noted **Fractal Design** liquid painting (Tom Hedges, Mark Zimmer) predated Adobe's surface scratch.
 
 ## Warnock fan mail

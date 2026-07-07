@@ -2,7 +2,7 @@
 
 *Conversation hooks — Don's proposed topics, grounded in Marc's public record and Don's firsthand
 friendship. Not quotes from Marc.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · consent not yet asked
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## The hooks
 

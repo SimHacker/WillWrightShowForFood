@@ -8,7 +8,7 @@ show_seed: repo-shows/jim-crutchfield/
 
 # Repo Show invitation — Jim Crutchfield
 
-*Public draft — not sent. Jim may edit, decline, delay, or request removal at any time.*
+*Jim may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 Jim —

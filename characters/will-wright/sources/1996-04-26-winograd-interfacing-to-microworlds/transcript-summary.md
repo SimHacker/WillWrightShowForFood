@@ -5,11 +5,7 @@ Source: <https://www.youtube.com/watch?v=nsxoZXaYJSk> · Stanford Archives: <htt
 Auto-captions cleaned + clarified by Don Hopkins. Stanford Archives materials are open for research use and may be used freely for non-commercial purposes with attribution.
 *Same text as [transcript.md](transcript.md), without table of contents or section headers. Demo walkthroughs abbreviated in bracketed editorial notes.*
 
-
-
 ---
-
-
 
 **[0:14] Terry Winograd (intro):** Welcome to the seminar on People, Computers, and Design. I will do a brief introduction today, we started a touch late. I guess Will Wright, who's our speaker today, is one of these people who makes me uncomfortably aware of the generation gap. And that's not because of him — he's sort of in between my generation and the next one — but because the things that he's done, in particular he was the inventor of SimCity and a whole series of innovative programs and games since then, are things which I discovered as a computer science professor learning about interface design. And when I look out into a classroom full of students nowadays, they're people who discovered it the way that I discovered model cars, right? They grew up with it. The kind of tools and games and whatever you want to call them he's producing have really been a major part of life with computers — what it means to be computers and use computers — for the generation that's just now appearing in college. And my own intuition, which I of course can't validate since I'm in the wrong generation, is that that's going to lead over time to a real shift in the way not just that people think about games but people think about computers and computing in general. And today he's going to be talking about his experience and his ideas along those lines.
 
@@ -56,9 +52,6 @@ Auto-captions cleaned + clarified by Don Hopkins. Stanford Archives materials ar
 **[53:48] (the Calvin Syndrome)** When we showed the original SimCity, the first thing people did was find the bulldozer and blow something up — "hey that's cool" — then attack the city. Like poking an ant colony with a stick to see what happens. They had to perturb the system to see: is it fragile? Is this a painting, or is it really a simulation? Kids and adults, almost universal. So we named that the **Calvin Syndrome**, and that's when we put in the disaster menu — tornado, earthquake, monster, or everything all at once. People like seeing the thing go down in ruins — Nero on the fiddle. But it's funny: people have to see how fragile a system is before they really appreciate building it. They'd get the destruction out of their system first, then start rebuilding, invest 10–20 hours, and really empathize — when an earthquake hit, they'd say "**I've** been hit by an earthquake," not "my city's been hit."
 
 **[57:21]** SimEarth was too hard, SimAnt too easy, **SimCity 2000 was just right.** The only real criticism was from educators who wanted the model more explicit — the algorithms for crime, traffic, pollution. That maybe needs a different design.
-
-
-
 
 ## Q&A
 
@@ -120,8 +113,5 @@ Most of the game industry right now is built on kind of the movie model: you spe
 **Will Wright:** I'm surprised there seems to be a shift away from deeper games — this happened with Doom (which I've played enough that I can't criticize it for not being fun; it's a very different thing than SimCity). Related is the **distribution system** — that's probably going to be the biggest change in our industry over the next few years, hopefully a network-based alternative distribution system. Right now a lot of really creative, cool things are filtered out in the distribution process because they won't get on the shelf, nobody can afford to develop them. On the technology side, 3D immersive stuff seems to actually have staying power, which surprised me — I thought 3D would come and go as a fad. A whole new generation of kids is being weaned on the 3D paradigm through Doom and the consoles (PlayStation, the new Nintendo Ultra 64).
 
 **[1:26:14] Will Wright:** So we finished right on time! More questions?
-
-
-
 
 *Automatic closed captioning by YouTube, cleaned up and clarified by Don Hopkins. Report typos/sync problems to don@donhopkins.com. Use and reproduction: open for research use, freely for non-commercial purposes with attribution; commercial requests → Stanford University Archives (universityarchives@stanford.edu). Source: <https://searchworks.stanford.edu/view/yj113jt5999>. Don Hopkins' notes: <https://donhopkins.medium.com/designing-user-interfaces-to-simulation-games-bd7a9d81e62d>*

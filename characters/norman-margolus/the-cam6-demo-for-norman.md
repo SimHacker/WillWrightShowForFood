@@ -32,15 +32,11 @@ This is the guided tour of that — the demo I made **for you as the audience**,
 
 ---
 
-
-
 ## The one-sentence version
 
 I built a **CAM6 simulator** that is **software-compatible with your CAM-6 hardware and the code examples** — book Forth rules compiled to lookup tables in Sun Forth, those tables imported into JS, then rules and compiler rewritten in JS — and I kept re-implementing the *same idea* across four decades of languages, because the interesting part was never the language. It was the **rules and lookup tables and hardware**.
 
 ---
-
-
 
 ## The trick, in your words
 
@@ -64,8 +60,6 @@ The middle box — the table — is the contract. Everything above it is fashion
 plumbing. **The table is the thing that stays true.**
 
 ---
-
-
 
 ## Layers of iteration (and reimplementation of the *idea*, not the code)
 
@@ -91,8 +85,6 @@ fd passing, Mach ports, and zero-copy GPU surfaces are exactly how you'd gang mo
 no copies.)*
 
 ---
-
-
 
 ## Show me the Forth (then show me the JS)
 
@@ -142,8 +134,6 @@ table. The executor never knows the difference.
 
 ---
 
-
-
 ## Who JITs the jitter? (a Connections detour)
 
 *Cut, James-Burke style, between the parts that don't know they're related.*
@@ -177,8 +167,6 @@ place to run this loop live.)*
 
 ---
 
-
-
 ## Your DLA is running right now
 
 Straight off **p. 167, §15.7** — the **Margolus-dendrite** rule — I have a
@@ -207,8 +195,6 @@ over the network, just without the local SHM fast path.
 
 → [`../don-hopkins/hyperlook-news-postscript-simcity.md`](../don-hopkins/hyperlook-news-postscript-simcity.md)
 
-
-
 ## A question for the room (and especially for Lars)
 
 Is my CAM6 engine an **emulator** or a **simulator**?
@@ -226,8 +212,6 @@ dissolves**" — but I'd love to hear **[Lars Brinkhoff](../lars-brinkhoff/READM
 old machines is his native tongue) and you referee it. It's a great, live, whiteboard-able argument.
 
 ---
-
-
 
 ## Where it wants to go: chapter playgrounds, built ground-up
 
@@ -273,8 +257,6 @@ they're interesting**; I make them playable.
 
 ---
 
-
-
 ## For the show: weaving the archive
 
 A lot of this is already on the record — we don't have to start cold. The plan is to **weave it
@@ -293,8 +275,6 @@ Movable Feast Machine, indefinitely scalable hardware — CA as *architecture*),
 **[Scott Draves](../scott-draves/README.md)**.
 
 ---
-
-
 
 ## Reference links (for anyone reading along)
 

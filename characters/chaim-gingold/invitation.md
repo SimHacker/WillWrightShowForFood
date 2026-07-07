@@ -8,7 +8,7 @@ show_seed: repo-shows/chaim-gingold/
 
 # Repo Show invitation — Chaim Gingold
 
-*Public draft — not sent. Chaim Gingold may edit, decline, delay, or request removal at any time.*
+*Chaim Gingold may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 We would respectfully invite **Chaim Gingold** to a **Repo Show** — a Repo Show Class

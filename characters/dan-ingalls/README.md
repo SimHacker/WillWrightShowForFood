@@ -6,7 +6,7 @@ Invitation portrayal — **not** Dan Ingalls. [Standards](../../schemas/portraya
 
 | | → |
 |--|---|
-| **Invitation** | [invitation.md](invitation.md) *(draft — not sent)* |
+| **Invitation** | [invitation.md](invitation.md) |
 | **Show prep** | [pie-menus-and-pop-ups.md](pie-menus-and-pop-ups.md) |
 | **Correspondence** | [correspondence.yml](correspondence.yml) |
 | **Show seed** | [repo-shows/dan-ingalls/](../../repo-shows/dan-ingalls/README.md) |

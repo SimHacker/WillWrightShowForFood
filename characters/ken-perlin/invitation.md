@@ -8,7 +8,7 @@ show_seed: repo-shows/ken-perlin/
 
 # Repo Show invitation — Ken Perlin
 
-*Public draft — not sent. Ken Perlin may edit, decline, delay, or request removal at any time.*
+*Ken Perlin may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 We would respectfully invite **Ken Perlin** to a **Repo Show** — a Repo Show Class

@@ -8,7 +8,7 @@ show_seed: repo-shows/peter-norvig/
 
 # Repo Show invitation — Peter Norvig
 
-*Public draft — not sent. Peter Norvig may edit, decline, delay, or request removal at any time.*
+*Peter Norvig may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 Peter —

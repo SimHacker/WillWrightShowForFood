@@ -231,7 +231,6 @@ Opening segment material; seeds Slats robopoetry + Broken Robot gags.
 
 ## Spore, Yoot, preservation threads
 
-
 **[2024-yoot-tower-open-source/](2024-yoot-tower-open-source/README.md)**  
 Yoot Saito + Phil Salvador VGHF — open-source tower game discussion.
 

@@ -29,8 +29,6 @@ Deep dive: [`homer-forth-flying-logos.md`](homer-forth-flying-logos.md) · hooks
 Invitation: [`invitation.md`](invitation.md) *(sent 2026-07-06 via Facebook)* ·
 seed: [`repo-shows/coco-conn/`](../../repo-shows/coco-conn/)
 
-Consent **not yet asked**.
-
 ## Media
 
 [`media/MANIFEST.yml`](media/MANIFEST.yml) — portrait placeholder; Amsterdam visit photo (2024).

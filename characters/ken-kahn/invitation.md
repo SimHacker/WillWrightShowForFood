@@ -8,7 +8,7 @@ show_seed: repo-shows/ken-kahn/
 
 # Repo Show invitation — Ken Kahn
 
-*Public draft — not sent. Ken Kahn may edit, decline, delay, or request removal at any time.*
+*Ken Kahn may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 We would respectfully invite **Ken Kahn** to a **Repo Show** — a Repo Show Class

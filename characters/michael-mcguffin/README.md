@@ -25,4 +25,4 @@ Also appears in Don's **marking-menu prior-art** thread (Alias/Autodesk; see
 
 Trail: [`../../process/trails/visual-programming-patch-cord.md`](../../process/trails/visual-programming-patch-cord.md)
 
-*Status: draft invitation — warm mail contact (2022); not yet asked for show.*
+*[Portrayal standards](../../schemas/portrayal-standards.md)*

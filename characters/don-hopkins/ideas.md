@@ -39,7 +39,7 @@
 | [`repo-shows/scott-adams/`](../../repo-shows/scott-adams/) | Adventure-as-data ancestor — portable VM + 16K worlds |
 | [`repo-shows/walter-bender-olpc/`](../../repo-shows/walter-bender-olpc.yml) | Stone Soup, Sugar, open-sourcing SimCity |
 
-## Dream guests (consent not yet asked unless noted)
+## Dream guests
 
 | Guest | Episode / topic |
 |-------|-----------------|

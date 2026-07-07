@@ -8,7 +8,7 @@ show_seed: repo-shows/REPO-SHOWS.yml#design-by-accretion.yml
 
 # Repo Show invitation — Chris Trottier
 
-*Public draft — not sent. Chris Trottier may edit, decline, delay, or request removal at any time.*
+*Chris Trottier may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 Chris —

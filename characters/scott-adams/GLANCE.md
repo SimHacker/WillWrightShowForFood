@@ -2,4 +2,3 @@
 
 The reason he belongs here: his "compile the adventure to portable data + a little VM" idea is the **direct ancestor of Don's adventure compiler** — and of Terrapin **Logo Adventure**. Per Don, Scott wants to build this *now*, is diving deeply into **AI**, and Don wants to develop the tooling for Scott to use as well as himself. A perfect Repo Show guest: adventure, engines, and AI — anything and everything.
 
-*Invitation portrayal — consent not yet asked. Subject may correct, delay, decline, or request removal anytime.*

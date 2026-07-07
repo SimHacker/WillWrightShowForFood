@@ -8,7 +8,7 @@ show_seed: repo-shows/rebounce/
 
 # Repo Show invitation — Jaron Lanier
 
-*Public draft — not sent. Jaron may edit, decline, delay, or request removal at any time.*
+*Jaron may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 Jaron —

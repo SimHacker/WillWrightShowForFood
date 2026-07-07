@@ -8,7 +8,7 @@ show_seed: repo-shows/patrick-hulin/
 
 # Repo Show invitation — Patrick Hulin
 
-*Public draft — not sent. Patrick Hulin may edit, decline, delay, or request removal at any time.*
+*Patrick Hulin may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 Patrick —

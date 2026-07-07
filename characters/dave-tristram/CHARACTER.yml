@@ -15,7 +15,7 @@ representation:
   governed_by: ../../schemas/portrayal-standards.md
   consent_level: 3
   authored_by: don-hopkins
-  note: "Public-source portrayal + Don's firsthand friendship (SGI/graphics/CA orbit). Consent not yet asked."
+  note: "Public-source portrayal + Don's firsthand friendship (SGI/graphics/CA orbit). "
   subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
@@ -42,7 +42,7 @@ bio:
     **Panel Library + Electropaint source** freely — Dead-scene taping ethos applied to code.
     **NASA Ames → SGI → Adobe**; **Viviography** / **Tristram Visual** (Electropaint™). Still
     performing (2025): **Resolume Avenue**, **TouchDesigner**. At Adobe: interactive live-painting /
-    filter R&D (Don beta-tested ~2022; **pre-release — public details withheld** until Dave clears).
+    filter R&D (Don beta-tested ~2022).
     See [`sources/live-canvas-effects-stub.md`](sources/live-canvas-effects-stub.md).
     Generative influences he has
     cited publicly include CelLab, *Chaos*, reaction-diffusion, feedback, and Toffoli & **Norman

@@ -13,8 +13,6 @@ Currently it's up and running, built into the Sims Content Catalog Laszlo applic
 
 Laszlo is ideal for implementing specialized user interface components for editing custom data types, like checkboxes, pie menus, color selectors, date pickers, OPML editors, picture viewers, map browsers, etc.
 
-
-
 » Login or register to post comments
 What about Python ?
 Submitted by l0gin on Tue, 2006-06-06 17:15.

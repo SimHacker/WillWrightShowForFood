@@ -8,7 +8,7 @@ show_seed: repo-shows/cynthia-solomon/
 
 # Repo Show invitation — Cynthia Solomon
 
-*Public draft — not sent. Cynthia Solomon may edit, decline, delay, or request removal at any time.*
+*Cynthia Solomon may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 Cynthia —

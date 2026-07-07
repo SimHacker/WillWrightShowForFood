@@ -1,7 +1,7 @@
 # Subutai Ahmad 🧠📹 — video, AI, and Proxi (a guest lead)
 
 *Invitation portrayal — **NOT** Subutai Ahmad, and not claims about what he thinks. Dream/lead guest,
-**consent not yet asked.*** [Portrayal standards](../../schemas/portrayal-standards.md)
+* [Portrayal standards](../../schemas/portrayal-standards.md)
 
 **Why him, why now:** two eras in one guest — the **real-time computer vision** Don worked alongside at
 Interval, and the **neuroscience-based AI** he does now. And **Will knows him too**, with a live thread:

@@ -4,9 +4,6 @@ meta:
   character: jess-bird
   channel: email
   since: 2025-04
-  private_full: |
-    DonHopkins/projects/willwrightshowforfood/research/sources/jess-bird-bbc-email-2025.yml
-    DonHopkins/projects/willwrightshowforfood/green-room/jess-bird/
 
 milestones:
   - date: 2025-04
@@ -22,7 +19,7 @@ milestones:
     public:
       - Don's Will Wright UI/simulation article (Understanding Comics thread)
       - Soul of The Sims primary source publication
-      - Maxis team epithet roster (private canonical → public projections in maxis-people.yml)
+      - Maxis team epithet roster (published in maxis-people.yml)
 
   - date: 2025-06
     event: tim_letourneau_memorial

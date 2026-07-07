@@ -12,7 +12,7 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 1          # dream/lead guest; consent NOT yet asked
+  consent_level: 1
   authored_by: don-hopkins
 
 invitation:
