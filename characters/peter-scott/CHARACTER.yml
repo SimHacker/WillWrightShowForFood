@@ -1,0 +1,86 @@
+# Peter Scott — invitation portrayal. NOT Peter Scott.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: peter-scott
+  name: Peter Scott
+  type: invitation
+  signifier: "🏙️🐝📺"
+  status: living
+  field: "BBC Micro/Acorn Electron games programmer; SimCity (Superior/Infogrames) port; Last Ninja, Barbarian, Predator conversions; later TV (Gamesmaster, Live TV, Channel 4 animation)"
+  home: characters/peter-scott/
+  location: "Northumberland → London (TV career); Bedlington roots"
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  note: |
+    Public-source portrayal from ABug 13 talk (2021 recording, 2022 release) and Acorn scene
+    history. Peter may shape, delay, reduce, or delete any of this portrayal at any time.
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  show_seed: repo-shows/will-wright-premiere/
+
+bio:
+  summary: |
+    **Peter Scott** — Acorn legend who wrote original Electron/BBC games (Thunderstruck,
+    Ransack, Pandemonium, the Peter Scott Trilogy) and became Superior Software's conversion
+    specialist under the pseudonym **Dylan** after leaving Audiogenic. His **SimCity** port
+    (~1989, ~9–12 months) is the show's anchor: he squeezed Will Wright's simulation into
+    **~20K** on the BBC Micro, spoke with the original developer by phone, received Infogrames'
+    full algorithm dump, and deliberately softened American tax politics for European players.
+    Predator sold best; SimCity sold steady for years and is what he points to with pride.
+
+simcity_bbc:
+  publisher: Superior Software (UK); Infogrames (European rights)
+  memory: "~20K BBC Micro — entire game 'a tenth of a Mac icon' in his telling"
+  duration: "~9–12 months development; last major BBC game he shipped"
+  source_material: "Box files, algorithms, drawings from Infogrames; Amiga + C64 references"
+  phone_call: |
+    Called original developer Will Wright: 'BBC Micro has 20K.' Wright: 'Seriously?' Scott:
+    promised not to write a cut-down C64-style port.
+  design_tweaks: |
+    Adjusted tax/service assumptions so low-tax and high-tax strategies could both succeed;
+    noted American default bias in original model.
+  technical: |
+    Mostly 6502 assembly with BBC BASIC core for menus/high scores; screen blanked for
+    year-end calculations; multi-load on disk.
+  reception: "Good reviews; long-tail royalties; Richard Hanson (Superior) praised conversion quality"
+
+career_arc:
+  early: "ZX81 1982; magazine type-ins; Electron then BBC; Gary Partis schoolmate"
+  audiogenic: "Peter Scott Trilogy; Thunderstruck; exclusive ~20-year contract (signed young)"
+  superior_dylan: "Spycat, Barbarian, Last Ninja 1&2, SimCity, Hostages — pseudonym for contract gap"
+  tv: "Gamesmaster researcher → producer; Games World; Live TV 'head of stupid ideas'; Channel 4 animation studio (~100 staff); now freelance + planned YouTube channel"
+
+design_philosophy:
+  fair_play: "Games playable by average buyers — not curry-eating difficulty contests"
+  electron_first: "Letterbox screen trick doubled working memory; Electron + BBC from one design"
+  title_first: "Needs catchy title page before code — same brain as TV pitch names (Propportunities, sid.com)"
+  reuse: "Sprite/screen routines recycled across games; screen compression (32 bytes per full screen in Ransack)"
+
+connections:
+  will_wright: "SimCity original developer — phone consult during BBC port"
+  don: "SimCity/Micropolis open-source lineage; 6502 craft; long-tail port culture"
+  antoni_sawicki: "Modern Micropolis porter — ttycity/wintown parallel lane"
+  gary_partis: "School friend; Positron inspiration; Audiogenic colleague"
+  richard_hanson: "Superior Software — praised Scott's coding on air during ABug 13 Q&A"
+  clint_basinger: "Audience bridge — LGR SimCity/retro Maxis thread"
+
+sources:
+  primary:
+    - sources/abug-13-simcity-bbc-port.yml
+  web:
+    - https://www.youtube.com/watch?v=ShZB5Rm62fs
+    - https://stardot.org.uk/forums/
+
+see_also:
+  - { path: README.md, why: "Public overview" }
+  - { path: ideas.md, why: "Show beats and pairings" }
+  - { path: ../antoni-sawicki/, why: "2026 Micropolis terminal port — same lineage, different decade" }
+  - { path: ../will-wright/, why: "SimCity designer" }
+  - { path: ../will-wright/sources/2026-07-03-digital-antiquarian-maxis-part1/, why: "BBC Micro listed among SimCity ports" }

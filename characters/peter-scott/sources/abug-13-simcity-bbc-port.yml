@@ -1,0 +1,116 @@
+# ABug 13 — Peter Scott (+ Dylan pseudonym era)
+# Structured digest from talk transcript; not a substitute for watching the full video.
+
+source:
+  title: "ABug 13 - Peter Scott ... and Dylan (BBC Micro/Acorn Electron games programmer) Last Ninja Sim City"
+  url: https://www.youtube.com/watch?v=ShZB5Rm62fs
+  simcity_deep_dive: "https://www.youtube.com/watch?v=ShZB5Rm62fs&t=7097s"
+  channel: ABug - The Acorn and BBC Micro User Group
+  recorded: 2021-04-03
+  published: 2022-12-27
+  hosts: [Colin Hoad, Dom Beesley]
+  guests_on_call: [Daryl Still, Joe Myers]
+  length: "~4h 10m"
+  coordinator: "Eye Design / Acorn: A World in Pixels"
+
+person:
+  name: Peter Scott
+  era: "1980s Acorn scene → 1990s TV → animation → freelance (2021 talk)"
+  base: Bedlington, Northumberland (Front Street — "25 pubs")
+  contemporaries:
+    gary_partis: "School computer studies; Positron earnings inspired Scott; technical mentor"
+    daryl_still: "Audiogenic publisher; Peter Scott Trilogy; contract over pub lunch"
+    richard_hanson: "Superior Software — praised Scott on Q&A; source archive surfaced on eBay"
+
+career_timeline:
+  - year: 1982
+    event: ZX81 Christmas; typed lunar lander listing; first machine
+  - year: mid-80s
+    event: Electron then BBC; magazine type-ins (Millipede, Haunted House); Argus Press listings
+  - year: mid-80s
+    event: Originals shelved — Yo-yo, Gladwell, Pandemonium → Peter Scott Trilogy (Audiogenic)
+  - year: late-80s
+    event: Thunderstruck, Thunderstruck 2, Ransack (Audiogenic exclusive)
+  - year: ~1988
+    event: Leaves Audiogenic; Superior as Dylan (12-month non-compete); Spycat first
+  - year: 1988-1990
+    event: Barbarian, Last Ninja 1&2, Ballistics, Superior Soccer, Predator, SimCity, Hostages
+  - year: ~1993
+    event: Gamesmaster TV (researcher → development producer); Games World; Live TV; animation co.
+
+simcity_port:
+  pride: "Most proud technical achievement; better than C64 version in his view"
+  duration: "~9–12 months (vs 6 weeks for Predator)"
+  memory: "~20K BBC Micro"
+  quote_size: "Entire game a tenth the size of a Mac icon — young people don't get the constraint"
+  publisher: Superior Software
+  licensor: Infogrames (European rights); French contacts occasionally
+  materials_received: "Box files, algorithms, drawings, every city tile — 'kitchen sink'"
+  phone:
+    who: Will Wright (original developer)
+    exchange: "BBC has 20K memory" / "Seriously?" — don't do a cut-down C64-style job
+  implementation:
+    weeks_on_algorithms: "~2 weeks before graphics"
+    language: "Mostly 6502 assembly; BBC BASIC core for game loop edges, high scores"
+    year_end: "Screen goes black — reuses display memory for calculations"
+    multi_load: true
+  design_adjustments:
+    american_assumptions: "Low tax good / high tax bad defaults noted"
+    scott_tweak: "Equilibrium where services + taxes both matter; European fairness"
+  ai_quote: "Not artificial intelligence — connections emerge from programmed rules"
+  sales: "Steady long tail; royalties years after; not Predator launch numbers"
+  reviews: "Strong; feedback from America surprised him (BBC logo abroad)"
+
+other_superior_ports:
+  predator:
+    time: "~6 weeks after license delay"
+    sales: "Best seller; cover star Arnold"
+    quality: "Technically OK scrolling; gameplay unfair in original — Scott softened"
+  last_ninja:
+    map: "Printed on bedroom floor; started from magazine maps not source disks"
+    cheat: "Infinite lives keys removed before ship — Richard Hanson"
+  barbarian:
+    controversy: "Acorn User advert yellow markers on cover — not manufactured per Richard Hansen (2026 Stardot thread)"
+  spycat:
+    note: "Spycatcher satire; polished animation as first Superior impression"
+
+pseudonym_dylan:
+  reason: "Audiogenic 12-month non-compete after leaving"
+  bank: "Checkbook signature stamp — paw print took ages at signings"
+  superior_knew: "Open secret; contractual caution"
+
+design_craft:
+  electron_bbc_unified: "21-line letterbox hides data — doubles effective RAM on Electron"
+  fair_games: "£7.95 games shouldn't kill player on screen one"
+  title_first: "Title page + slogan before code — TV pitch habit (Propportunities, sid.com, Mecca Nick)"
+  tools: "Custom sprite editor; block-based level editor; graph paper for Last Ninja"
+  piracy_watch: "User group observation — write-protect tab detection simpler than Gary Partis protection"
+
+post_games:
+  tv_highlights:
+    - Gamesmaster — cheat file "research" (kids read magazines aloud)
+    - Games World — million viewers/night 1993; Vidiators; David Walliams early work
+    - Live TV — bouncing dwarf weather, topless darts, goldfish newsreader (died on air)
+    - Channel 4 — late night animation → preschool (160 episodes Mecca Nick)
+  now_2021: "Freelance; HTML/CSS customization; considering Electron emulator return; YouTube channel planned"
+
+show_hooks:
+  micropolis_lineage: "1989 BBC SimCity → 2008 GPL Micropolis → 2026 ttycity/browser ecosystem"
+  will_wright: "Direct phone consult — rare primary-source port story"
+  compression_epic: "19.9K machine code vs 150K Mac icon — same talk as CSS/HTML rant"
+  fair_play: "Anti hard-man designer ethos — aligns with Micropolis Home UX goals"
+
+quotes:
+  - text: "SimCity conversion would fit into a tenth of the size of an icon on my Mac — the entire game."
+    approx_time: "12:34"
+  - text: "BBC maker has 20K of memory. — Seriously? — I'll do my best."
+    approx_time: "1:59:15"
+  - text: "One of those Mac icons is often 150K… that was 19.9K worth of code."
+    approx_time: "2:05:00"
+  - text: "Predator… six weeks… SimCity… nine months… I'm very proud I got SimCity to work at all."
+    approx_time: "2:03:48"
+
+q_and_a:
+  richard_hansen: "Coding absolutely top class — which game most enjoyed? Thunderstruck 2 finish; Spycat most polished"
+  xeroxcode: "Modern Electron dev — multi-platform binary question; Scott used separate Electron/BBC builds sharing core data"
+  tricky: "Predator vs Commando confusion; praised technical scrolling"
