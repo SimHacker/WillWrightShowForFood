@@ -1,0 +1,90 @@
+# Antoni Sawicki (Tenox) — invitation portrayal. NOT Antoni Sawicki.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: antoni-sawicki
+  name: "Antoni Sawicki"
+  aka: Tenox
+  type: invitation
+  signifier: "🖥️🏙️📟"
+  status: living
+  field: "Retrocomputing engineer; terminal and legacy-platform ports; ttycity (Micropolis for terminals); VirtuallyFun"
+  home: characters/antoni-sawicki/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+  note: |
+    Warm contact — Antoni emailed Don about ttycity directly (July 2026). Antoni may shape,
+    delay, reduce, or delete any of this portrayal at any time.
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/antoni-sawicki-ttycity.yml
+
+bio:
+  summary: |
+    **Antoni Sawicki**, aka **Tenox** — retrocomputing engineer and prolific porter of software
+    to places software was never supposed to go. His personal site (tenox.net) has run since
+    **1994**; he's a mainstay contributor to the **VirtuallyFun** blog and ships a steady stream
+    of tools from **github.com/tenox7**: ttyplot (terminal plotting), the Web Rendering Proxy
+    (browse the modern web from vintage browsers), NT Games (public-domain game remakes for
+    Windows NT RISC), and OpenTTD builds for Alpha, MIPS, and PowerPC.
+
+    He is a **serial Micropolis porter**: **wintown** put SimCity Classic on Windows NT RISC
+    machines (Alpha AXP, MIPS, PowerPC, Itanium, ARM — targeting NT 4.0 and working toward
+    NT 3.1), and in July 2026 he shipped **ttycity** — Micropolis for the terminal, ncurses,
+    with the original simulation engine preserved as-is and four rendering modes from
+    7-bit vt100 ASCII to full **Unicode emoji tiles**. A city you can play over ssh,
+    down to 80×24.
+
+    He also works the way this show works: for the OpenTTD NT RISC port he used LLMs — his
+    phrase: "a tireless army of robots" — to downgrade modern code to compile on Visual C 4.0.
+    Humans author, robots do the code rewrites, old machines live again.
+
+ttycity:
+  repo: https://github.com/tenox7/ttycity
+  what: |
+    Port of Micropolis Activity to the terminal using ncurses; simulation engine untouched.
+    Assets (scenarios, cities) baked into the binary — one file, no installs. Themes (tan,
+    grass, dark); graphics modes: standard curses (8 colors), unicode/emoji, 7-bit ASCII
+    vt100, optional aalib. hjkl or arrows, mouse support, resizable, works down to 80×24.
+  lineage: |
+    "Fork of Open Source Micropolis, based on SimCity Classic from Maxis, by Will Wright —
+    https://github.com/SimHacker/micropolis/" — GPL v3. The freed 2008 code, still sprouting
+    new heads eighteen years later.
+  why_the_show_cares: |
+    A repo show about a repo — the exact same medium. ttycity is living proof of the Walter
+    Bender mandate (free games as viewable, buildable, reusable source) and of the Long Now →
+    OLPC → Micropolis thread: Don freed the code; Antoni keeps planting it in new soil. The
+    emoji tile set is also the funniest possible answer to "how portable is a city?"
+
+other_projects:
+  wintown: "SimCity/Micropolis for Windows NT RISC — Alpha, MIPS, PowerPC, Itanium, ARM (github.com/tenox7/wintown)"
+  ttyplot: "Real-time plotting for the terminal"
+  web_rendering_proxy: "Browse the modern web from vintage browsers"
+  ntgames: "Public-domain remakes of classic games for NT RISC"
+  openttd_nt_risc: "LLM-assisted downgrade of OpenTTD to Visual C 4.0 for Alpha/MIPS/PowerPC"
+
+contact:
+  channel: "Direct email to Don (warm; July 2026 ttycity note)"
+  note: "Address in the green room, not here."
+
+sources:
+  ttycity_email: sources/2026-07-07-ttycity-email.md
+  web:
+    - https://www.tenox.net/
+    - https://github.com/tenox7/ttycity
+    - https://github.com/tenox7
+    - https://virtuallyfun.com/author/tenox/
+
+see_also:
+  - { path: README.md, why: "Public-facing overview" }
+  - { path: invitation.md, why: "Draft invitation — not sent" }
+  - { path: ../../repo-shows/antoni-sawicki-ttycity.yml, why: "Show seed — interview the dev, play the city, show Will" }
+  - { path: ../will-wright/, why: "SimCity's designer — ttycity's README credits him by name" }
+  - { path: ../../characters/will-wright/sources/simcity-open-source-saga/, why: "How the code Antoni forked got freed" }
