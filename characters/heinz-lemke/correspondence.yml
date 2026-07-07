@@ -64,6 +64,19 @@ threads:
     what: |
       Digitized Cambridge films; CHM oral history for Heinz while first-hand PIXIE + Cambridge
       memory remains — honor Wiseman and Hiles through Heinz's voice
+  pixie_source_listing_2026:
+    what: |
+      2026-07-07 (from Nagoya, CARS 40th anniversary) — Heinz reveals he has the COMPLETE PIXIE
+      program: ~5000 words Assembler/Machine code, PDP-7 + DEC 340, with light pen handling,
+      interrupt management, interactive model building; offers to prepare a copy. Also corrects
+      the record: the PDP-7 was NOT a dumb display terminal for Titan — the 5000 instructions
+      interactively built graph-theoretic models (in the remaining 3000 words) for circuits,
+      syntax graphs, control systems, then sent them to Titan for simulation. DSHR contributed
+      light-pen interrupt mechanics in the same thread. Roy Eagleson (UWO; teaches computer
+      graphics history) joined the exchanges after discussing PIXIE with Heinz in Nagoya.
+    doc: pixie-source-recovery.md
+    pull_in: pull-in-gaps.yml#pixie_complete_source_listing
+
   pixie_trio_invitation_2026:
     what: |
       July 2026 — Don sent matching PIXIE trio invitations (Heinz, Lars, David). David flagged

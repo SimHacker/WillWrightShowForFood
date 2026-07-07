@@ -77,12 +77,32 @@ history:
   flight_of_pixie: "Don's Bumblebee edit — only possible after Chapman published the digitized films."
   youtube: "https://www.youtube.com/watch?v=jDrqR9XssJI"
   evidence_room: characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md
+  source_listing: |
+    RECOVERED (offered 2026-07-07): Heinz holds the COMPLETE PIXIE program — ~5000 words of
+    Assembler/Machine code for PDP-7 + DEC 340 Display, covering light pen handling, interrupt
+    management, and interactive model building. Preparing a copy. Story + architecture
+    correction: characters/heinz-lemke/pixie-source-recovery.md
+  architecture_correction: |
+    Per Heinz (2026-07-07): the PDP-7 was NOT simply a display terminal for Titan. The 5000
+    instructions interactively built graph-theoretic data structures (fitting the remaining
+    3000 words of the 8K) representing electronic circuits, syntax graphs, control systems —
+    then sent them to Titan for simulation. A smart model-building satellite, not a remote
+    framebuffer.
   type_340_manual: "characters/lars-brinkhoff/media/reference/dec-7-13-type-340-display-programming-manual.pdf"
   type_340_manual_bitsavers: "http://bitsavers.trailing-edge.com/pdf/dec/graphics/7-13_340_Display_Programming_Manual.pdf"
   type_340_manual_sidecar: "characters/lars-brinkhoff/media/reference/dec-7-13-type-340-display-programming-manual.yml"
   pdp7_handbooks_index: "http://bitsavers.trailing-edge.com/pdf/dec/pdp7/"
   living_pdp7_340: "https://www.youtube.com/watch?v=V4oRHv-Svwc"
   living_pdp7_340_archive: "Web archive copy if YouTube link dead — see lars-brinkhoff/correspondence.yml"
+
+friends_of_the_thread:
+  roy_eagleson:
+    who: "Roy Eagleson — Western University (UWO); teaches history of computer graphics in his CS courses"
+    how: "Heinz's good friend; discussed PIXIE together in Nagoya at the CARS 40th anniversary (July 2026); asked to join the PIXIE/graphics exchanges"
+    interest: "Beginnings of computer graphics at MIT and Cambridge"
+    possible_roles: [discussant, expert_audience_voice, classroom_bridge]
+    consent: not_yet_asked
+    note: "Interested correspondent — joining the email exchanges is not a show invitation until offered and accepted."
 
 why_these_buds:
   lars_brinkhoff:
@@ -100,6 +120,15 @@ why_these_buds:
     correspondence: characters/david-rosenthal/correspondence.yml
 
 interview_center:
+  the_source_listing:
+    ask: "Heinz, you kept the complete PIXIE listing for 57 years — walk us through it. What do the light pen handler and interrupt code actually do? What did 5000 instructions of interaction + 3000 words of model feel like to budget?"
+    doc: characters/heinz-lemke/pixie-source-recovery.md
+    prompts:
+      - "The correction on air: NOT a dumb terminal for Titan — an interactive graph-model builder. Let Heinz set the record straight, with DSHR responding (his p.465 reading was the reasonable inference; the author's memory + listing beat the diagram)"
+      - "Graph-theoretic models in 3000 words — circuits, syntax graphs, control systems; what got cut?"
+      - "DSHR's light-pen mechanics (beam-pass interrupt, 'figure out what you were drawing') vs the actual handler in the listing"
+      - "Lars: from listing to SIMH — assemble it? Run it against the Type 340 emulation? What's missing?"
+    segment_goal: "Turn the recovered listing from a scan into a runnable artifact on stream — telecine to source to emulator."
   chapman_films_bumblebee:
     ask: "What was it like when the 1969 films surfaced again? Who is in the footage? How did the light pen + radial menus feel?"
     doc: characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md

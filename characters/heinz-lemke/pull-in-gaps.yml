@@ -7,6 +7,16 @@ meta:
   consent: not_yet_asked
 
 gaps:
+  pixie_complete_source_listing:
+    what: |
+      THE CROWN JEWEL — complete PIXIE program, ~5000 words of Assembler/Machine code for
+      PDP-7 + DEC 340 Display: light pen handling, interrupt management, interactive model
+      building. Heinz has it and offered to prepare a copy (email, 2026-07-07).
+    status: offered
+    pull_in: "Heinz preparing copy 'in due course' — receive, scan, file under media/ with provenance; mirror to show evidence room"
+    show_use: "Lars assembles/runs against Type 340 manual under SIMH; walk the interrupt handler on air"
+    doc: pixie-source-recovery.md
+
   electronics_magazine_1969_pdf:
     what: "McGraw-Hill Electronics (Apr 28 1969) PIXIE article; Gilmore scan"
     status: gap
