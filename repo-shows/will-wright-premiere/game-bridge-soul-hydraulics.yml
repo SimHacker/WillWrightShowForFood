@@ -111,6 +111,32 @@ the_role_gate:  # Don's ruling, 2026-07-07 — how NAMED characters cross into S
     clicked away, now demanding a moment of YOUR time).
   conservation_note: "Roles obey conservation too: one Mayor per city. Import a new one and the old one has to go somewhere."
 
+one_protocol_two_populations:  # Don's ruling, 2026-07-07 — the deep reason the bridge matters
+  insight: |
+    Constructionist multiplayer collaboration slots into the SAME interfaces,
+    schemas, protocols, APIs, and portable data we're building for soul bridges
+    between games. A Sim crossing into SimCity as Mayor and a KID taking the
+    Mayor's seat in a shared classroom city use the same visa, the same role
+    schema, the same save-file citizenship. The newspaper masthead is one API
+    with two kinds of callers: imported characters get bylines, and so do real
+    ten-year-olds.
+  why_it_compounds: |
+    Build the role gate once and you get both products: game-to-game character
+    transport (the soul mover's dream) AND human participation scaffolding (the
+    constructionist classroom's dream). Every schema decision pays twice. Will's
+    1996 holy grail — data moving between games — turns out to be the same
+    plumbing as kids collaborating IN games: portability of souls and
+    participation are one engineering problem wearing two costumes.
+  the_test: |
+    A good bridge schema is one where you can't tell from the API whether the
+    new Police Chief is a fictional import or a fourth-grader. The city treats
+    both as citizens; consent and safety live at the rim (who gets a passport),
+    not in the pipe.
+  ties:
+    - ../ideas/kids-city-newspaper.yml
+    - ../../process/guest-participation-ladder.yml
+    - ../../characters/will-wright/sources/multiplayer-simcity-ui-network/README.md
+
 soul_city_tie: |
   Hydraulics is the freight layer under Soul City: Depot moves the soul-files,
   Station bridges the games, and measure/drain/squirt is what actually happens to
