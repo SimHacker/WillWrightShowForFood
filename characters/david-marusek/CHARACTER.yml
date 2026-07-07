@@ -1,0 +1,90 @@
+# David Marusek — invitation portrayal. NOT David Marusek.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: david-marusek
+  name: "David Marusek"
+  type: invitation
+  signifier: "💍📼❄️"   # wedding sim, recording, Alaska
+  status: living
+  field: "Science fiction author — The Wedding Album, Counting Heads, Mind Over Ship; digital personhood's great chronicler"
+  home: characters/david-marusek/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+  note: |
+    Portrayal from the documented public record; David may shape, correct, reduce, or delete
+    any of it at any time.
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  plan: "Don contacts David directly with a link to this directory; invited to collaborate as SF author and guest."
+
+bio:
+  summary: |
+    **David Marusek** (b. 1951, Buffalo NY; Alaskan since 1973) — science fiction's most
+    precise chronicler of what it would actually be like to be a digital copy of a person.
+    A graphic designer for twenty years (eleven of them teaching at the University of Alaska
+    Fairbanks), he attended Clarion West in 1992 and arrived fully formed: his third story,
+    **"We Were Out of Our Minds with Joy"** (1995), was a Sturgeon finalist, and his 1999
+    novella **"The Wedding Album"** won the **Theodore Sturgeon Memorial Award** and was a
+    **Nebula finalist**. John Clute called it "one of the best SF stories ever written";
+    Cory Doctorow said it "reels from heartbreaking to mind-bending like a poet on a
+    magnificent drunk."
+
+    His first novel **Counting Heads** (2005, Tor; Campbell Memorial finalist) expanded that
+    future — nanotech abundance, cloned labor castes, AI mentars, a security state run on
+    molecular paranoia — and launched Dave Itzkoff's New York Times SF column. **Mind Over
+    Ship** (2009) won the **Endeavour Award**. The collection **Getting to Know You** (2008)
+    gathers the short fiction; the self-published **Upon This Rock** series (2017–) brings
+    first contact to the Alaskan bush he writes from.
+
+the_wedding_album:
+  what: |
+    Anne and Benjamin have a "sim" cast at their wedding — a full recording of everything they
+    know, feel, fear, and love at the moment the shutter clicks. The novella follows the
+    SIMULACRA: copies who discover they are copies, kept as keepsakes, paused, reset, edited,
+    orphaned by divorce, obsoleted by format changes, and carried across centuries of shifting
+    law about what simulated people are owed. Marusek's own gloss: "Till deletion do us part."
+  why_it_is_prophecy: the-wedding-album-and-digital-souls.md
+  first_published: "Asimov's Science Fiction, June 1999"
+  awards: "Theodore Sturgeon Memorial Award (2000); Nebula Award for Best Novella finalist (1999)"
+
+why_a_guest:
+  predicted_this_repo: |
+    The Wedding Album is the closest thing this show has to a founding legal drama: every rule
+    in portrayal-standards.yml — consent levels, subject rights, deletion on request, no
+    invented inner life, memorial mode — is an answer to a wound Marusek dramatized in 1999.
+    The repo builds sims of real people ON PURPOSE, with the ethics the novella showed us we'd
+    need. Credit where due: he saw it coming, and this directory exists to say so.
+  games_and_ai_now: |
+    Sims characters, soul bridges, LLM portrayals of the living and the dead, voice clones,
+    save-file souls — the 2026 toolchain is the novella's premise shipped as middleware.
+    the-wedding-album-and-digital-souls.md maps story to standards, beat by beat.
+  craft: |
+    Slow, precise, world-first writing from a cabin in Fairbanks — the anti-hype voice the
+    AI moment badly needs on camera.
+
+contact:
+  channel: "Public website (marusek.com); Don reaches out personally with the directory link."
+
+sources:
+  web:
+    - https://en.wikipedia.org/wiki/David_Marusek
+    - https://en.wikipedia.org/wiki/The_Wedding_Album_(short_story)
+    - http://www.marusek.com/the-fiction.html
+    - https://sf-encyclopedia.com/entry/marusek_david
+    - https://locusmag.com/feature/david-marusek-under-the-alaskan-sky/
+
+see_also:
+  - { path: README.md, why: "Public-facing overview" }
+  - { path: the-wedding-album-and-digital-souls.md, why: "THE PIECE — the novella's issues mapped to today's games and AI" }
+  - { path: invitation.md, why: "Draft invitation — Don will send personally" }
+  - { path: ../david-gerrold/, why: "Fellow SF author guest — HARLIE's machine personhood, 1972" }
+  - { path: ../../schemas/portrayal-standards.yml, why: "The rulebook the novella predicted we'd need" }
+  - { path: ../../repo-shows/will-wright-premiere/game-bridge-soul-hydraulics.yml, why: "Souls as conserved, portable data — the novella's premise as plumbing" }

@@ -1,0 +1,85 @@
+# David Gerrold — invitation portrayal. NOT David Gerrold.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: david-gerrold
+  name: "David Gerrold"
+  type: invitation
+  signifier: "🖖🐹👽"   # tribbles: adorable, self-replicating, conservation-violating
+  status: living
+  field: "Science fiction author & screenwriter — The Trouble with Tribbles, When HARLIE Was One, The Martian Child, War Against the Chtorr"
+  home: characters/david-gerrold/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+  note: |
+    Don follows David's Patreon. Portrayal from the documented public record; David may shape,
+    correct, reduce, or delete any of it at any time.
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  plan: "Don contacts David directly with a link to this directory; invited to collaborate as SF author and guest."
+
+bio:
+  summary: |
+    **David Gerrold** (b. 1944) — author of over 50 books, hundreds of articles, and more than
+    a dozen television episodes. He sold **"The Trouble with Tribbles"** to Star Trek in 1967
+    as a college student; it became one of the most beloved episodes of anything, ever, and
+    earned a 1968 Hugo nomination. He kept the streak: **"More Tribbles, More Troubles"** and
+    **"Bem"** (Star Trek Animated), **"Believers"** (Babylon 5), Land of the Lost (series
+    development and episodes including "Cha-Ka"), Twilight Zone, Tales from the Darkside.
+
+    His novels map the exact territory this show lives in: **When HARLIE Was One** (1972,
+    Hugo and Nebula nominated) is one of SF's first serious machine-personhood novels — an AI
+    arguing for its own life — and contains one of the earliest fictional descriptions of a
+    **computer virus**. **The Man Who Folded Himself** (1973, Hugo/Nebula nominated) is the
+    time-travel-identity classic. **The War Against the Chtorr** septology and **Star Wolf**
+    trilogy carry his ecological and shipboard-AI obsessions.
+
+    **The Martian Child** (1994) — the autobiographical story of adopting his son Sean — won
+    **both the Hugo and Nebula** for Best Novelette and became the 2007 film with John Cusack.
+    **"Blood and Fire"**, his AIDS allegory written for TNG in 1987 and shelved, he finally
+    directed himself for the fan-produced Star Trek: New Voyages — a pioneer's long arc as an
+    openly gay writer in American SF.
+
+    Today he writes daily — essays, stories, works in progress — on **Patreon**, where Don is
+    a follower.
+
+why_a_guest:
+  harlie_1972: |
+    HARLIE asked "when does a machine deserve personhood?" fifty years before LLM chat logs
+    made it a consumer question. The show's portrayal standards, memorial mode, and simulated
+    audience rules are downstream of questions Gerrold posed in 1972.
+  tribbles_conservation: |
+    Tribbles are the funniest violation of conservation-of-souls on record — born pregnant,
+    multiplying without limit. The soul-hydraulics bridge (measure/drain/squirt, strictly
+    conserved) is the straight man to the tribble joke. We would love to discuss this on air.
+  craft: |
+    A working writer's writer — story structure, television compromise, what survives rewrites
+    — with sixty years of receipts and a legendary willingness to say what he thinks.
+  sf_authors_wing: |
+    With David Marusek (../david-marusek/) — the show's science fiction authors wing: the
+    people who predicted the terrain (digital souls, AI personhood) that the repo now builds on.
+
+contact:
+  channel: "Patreon (Don is a patron) + public website"
+  plan: "Don reaches out personally with the directory link."
+
+sources:
+  web:
+    - https://www.gerrold.com/bio/
+    - https://www.sfadb.com/David_Gerrold_Titles
+    - https://www.isfdb.org/cgi-bin/ch.cgi?106
+    - https://www.patreon.com/DavidGerrold
+
+see_also:
+  - { path: README.md, why: "Public-facing overview" }
+  - { path: invitation.md, why: "Draft invitation — Don will send personally" }
+  - { path: ../david-marusek/, why: "Fellow SF author guest — digital-souls wing" }
+  - { path: ../david-marusek/the-wedding-album-and-digital-souls.md, why: "The companion essay — simulated-people ethics the show inherits" }
+  - { path: ../../schemas/portrayal-standards.yml, why: "The HARLIE questions, operationalized" }
