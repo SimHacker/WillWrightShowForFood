@@ -7,6 +7,7 @@ meta:
   type: bridge
   status: seed
   one_line: "Souls as a conserved fluid between games: measure how many, drain them all, squirt them into another game."
+  two_gates: "Population crosses as fluid (hydraulics); named characters cross as roles (the role gate)."
 
 the_primitive:  # the whole API — three verbs on a save file
   measure: "How many souls are in this save?"
@@ -60,6 +61,29 @@ bridges:
       Perfect inversion: the game about 60,000 bodies coming AT your walls becomes
       60,000 residents moving INTO your towers. Same crowd, opposite valence.
       Salvation at scale, measured in occupancy rates.
+
+the_role_gate:  # Don's ruling, 2026-07-07 — how NAMED characters cross into SimCity
+  insight: |
+    SimCity does not directly represent citizens. Population is statistical — a
+    hydraulic quantity, not a crowd of individuals. So the bridge into SimCity has
+    TWO gates: souls move by the thousand as population (hydraulics, above), but a
+    NAMED character crosses as a ROLE — Mayor, Adviser, City Planner, Police Chief,
+    the voice that signs the budget instead of a face in the skyline.
+  import: |
+    A Sim stepping into SimCity doesn't become one of 60,000 residents; she takes
+    office. Her name goes on the city, her personality colors the advice stream,
+    her signature on the ordinances. The city becomes her biography for a term.
+  export: |
+    And the roles can step OUT: the Mayor, the nagging Advisor, the Planner leave
+    SimCity as full characters — move them into The Sims and they need a house, a
+    salary, a bathroom, and suddenly forty years of 'Mayor, the citizens demand a
+    stadium' has a face that has to sleep.
+  precedent: |
+    SimCity's own fiction already does this — the mayor and the advisors are the
+    only 'people' the game names. The role gate just makes that personification
+    portable. Cast exemplar: audience/fictional-simcity-advisor/ (the pop-up you
+    clicked away, now demanding a moment of YOUR time).
+  conservation_note: "Roles obey conservation too: one Mayor per city. Import a new one and the old one has to go somewhere."
 
 soul_city_tie: |
   Hydraulics is the freight layer under Soul City: Depot moves the soul-files,
