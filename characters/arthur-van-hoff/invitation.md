@@ -9,7 +9,7 @@ show_seed: repo-shows/arthur-van-hoff/
 # Repo Show invitation — Arthur van Hoff
 
 *Public draft — not sent. Arthur van Hoff may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 We would respectfully invite **Arthur van Hoff** to a **Repo Show** — a Repo Show Class
 conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood),

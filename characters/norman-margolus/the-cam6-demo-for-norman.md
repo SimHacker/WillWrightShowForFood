@@ -13,7 +13,7 @@ see_also:
 # What I Made With Your Magic — the CAM6 Demo, for Norman
 
 *A public draft written **to** Norman Margolus, and readable by anyone. Norman may edit, correct,
-or ask for removal at any time.* · [Portrayal standards](../../schemas/portrayal-standards.yml)
+or ask for removal at any time.* · [Portrayal standards](../../schemas/portrayal-standards.md)
 
 Norman —
 

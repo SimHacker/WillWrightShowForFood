@@ -11,7 +11,7 @@ format: remote_or_in_person
 # Repo Show invitation — Ben Shneiderman
 
 *Public send-ready draft — not sent. Ben may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 **Subject:** Repo Show series — HyperTIES living emulator + CHI'88 pie menus (+ whatever you pick)  
 **Show:** [ben-shneiderman](README.md) · group option [ben-and-heinz-pie-menus](../ben-and-heinz-pie-menus.yml)

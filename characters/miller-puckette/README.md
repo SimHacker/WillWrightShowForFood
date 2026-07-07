@@ -2,7 +2,7 @@
 
 *Invitation stub — mentioned as context in [Don & David's history](../david-levitt/don-and-david-history.md);
 not yet asked. See [`CHARACTER.yml`](CHARACTER.yml).*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 **Miller S. Puckette** created **Max** (real-time graphical music/dataflow environment, built at
 **IRCAM**, named after Max Mathews) and **Pure Data (Pd)**, his open-source C reimagining. The audio

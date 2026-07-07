@@ -3,7 +3,7 @@
 *A summary artifact, part of [Mark Weiser's legacy](legacy.yml). Gregory Abowd read Weiser's 1991
 paper when he arrived at Georgia Tech in 1994 and it redirected his whole career; this 2019 talk is
 that legacy still compounding, three decades on. We summarize public work — we do not speak for
-Abowd or Weiser. Memorial standards: [`portrayal-standards.yml`](../../schemas/portrayal-standards.yml#memorial_mode).*
+Abowd or Weiser. Memorial standards: [`portrayal-standards.md`](../../schemas/portrayal-standards.md#memorial-mode).*
 
 - **Talk:** UC Berkeley EECS Colloquium, December 5, 2019
 - **Video:** https://www.youtube.com/watch?v=qko_wzQeP20

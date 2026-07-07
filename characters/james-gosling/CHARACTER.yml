@@ -1,5 +1,5 @@
 # James Gosling — invitation portrayal. NOT James Gosling.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: james-gosling
@@ -11,7 +11,7 @@ character:
   home: characters/james-gosling/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 2
   authored_by: don-hopkins
 
@@ -55,7 +55,7 @@ see_also:
   - { path: ../david-rosenthal/window-systems-lineage.yml, why: "Shared Alvey workshop — Andrew papers with Rosenthal" }
   - { path: ../david-rosenthal/, why: "Andrew window system co-designer; NeWS / ICCCM" }
   - { path: ../../process/trails/live-objects.md, why: "NeWS in the live-object / network-window lineage" }
-  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses — self or assisted contribution" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses — self or assisted contribution" }
 
 face_puppet:
   spec: ../../apps/performance-space/faceball-construction-set.yml#guest_characters

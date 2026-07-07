@@ -4,7 +4,7 @@
 public work (anchored on the 1996 Stanford/Winograd talk). Things Don would love to follow **with**
 Will; not quotes, not claims about what he thinks. The show is topic-less by design — **Will is the
 topic** — so treat this as a menu, not an agenda.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · flagship guest
+[Portrayal standards](../../schemas/portrayal-standards.md) · flagship guest
 
 ## The anchor
 

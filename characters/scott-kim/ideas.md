@@ -3,7 +3,7 @@
 *Primary interview: **together** with [Amy Jo Kim](../amy-jo-kim/ideas.md) on
 [`repo-shows/amy-jo-and-scott-kim/`](../../repo-shows/amy-jo-and-scott-kim/README.md).*
 This file holds **solo** hooks only — use when scheduling optional `scott-kim/` deep-dive.
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## What Scott has done
 

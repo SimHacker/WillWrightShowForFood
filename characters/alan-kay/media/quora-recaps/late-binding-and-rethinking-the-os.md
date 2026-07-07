@@ -9,7 +9,7 @@
 - *"What does Alan Kay think about the harmony-oriented programming paradigm?"* (LINDA, Croquet scaling)
 
 **Nature:** Summary with **short verbatim quotes**; verify against Quora. Credit: **Quora**. Governed by
-[`portrayal-standards.yml`](../../../../schemas/portrayal-standards.yml).
+[`portrayal-standards.md`](../../../../schemas/portrayal-standards.md).
 
 > **Project tie-in:** Croquet/Don correspondence, **Dave Reed**, **LINDA**, MOOLLM encapsulation, send-a-program
 > vs. tiny kernel. Pairs with browsers/NeWS recap.

@@ -9,7 +9,7 @@ mode: represent_and_discuss
 
 *Memorial mode: we represent and discuss her documented work and the stories friends tell; we do not
 interview her or speak as her, and we invent no quotes or inner life.*
-[Memorial standards](../../schemas/portrayal-standards.yml#memorial_mode)
+[Memorial standards](../../schemas/portrayal-standards.md#memorial-mode)
 
 Danielle Bunten Berry believed, long before the industry caught up, that the best thing a game could
 do was **bring people together in the same room**. At Ozark Softscape she designed **M.U.L.E.**

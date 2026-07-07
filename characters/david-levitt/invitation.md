@@ -13,7 +13,7 @@ sent_links: true
 # Repo Show invitation — David Levitt 🎹
 
 *Phone call 2026-07-06; invite links sent — awaiting scheduling. David Levitt may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 Dear David,
 

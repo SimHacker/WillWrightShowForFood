@@ -1,6 +1,6 @@
 # Steve Kommrusch
 
-Invitation portrayal — **not** Steve Kommrusch. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Steve Kommrusch. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Senior AI Scientist at Leela AI — ML for program repair & verifiable program equivalence; former CPU/chip architect (HP, National Semiconductor, AMD)
 

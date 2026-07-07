@@ -1,6 +1,6 @@
 # Netochka Nezvanova 🌼🎭🖥️
 
-*A public portrayal of a net-art persona. This is NOT the person(s) behind the mask, and it does not try to be. See [portrayal-standards](../../schemas/portrayal-standards.yml).*
+*A public portrayal of a net-art persona. This is NOT the person(s) behind the mask, and it does not try to be. See [portrayal-standards](../../schemas/portrayal-standards.md).*
 
 ## Who (or what) is NN?
 
@@ -45,14 +45,28 @@ NN was the legend at the center of a whole moment — the turn-of-the-millennium
 scene**, when live video and musical performance over the network first started to actually *work*.
 Don paints that whole picture here: [Real-time net jamming — the nettime scene](../don-hopkins/realtime-net-jamming-scene.md).
 
+## Sources (public)
+
+| Doc | Topic |
+|-----|--------|
+| [Classic AntiORP (2000)](sources/classic-antiorp-boulanger-2000.md) | Boulanger / CSound / `my` plantation critique |
+| [Smalltalk, Squeak, Lua (2006)](sources/smalltalk-squeak-lua-2006.md) | Technical thread with Don |
+| [Political views (2006–2009)](sources/political-views-2006-2009.md) | Midterms, faith, US return |
+| [Don correspondence digest](sources/don-hopkins-correspondence-digest.md) | Timeline — orkut, SimFaux, Amsterdam |
+
+Full thread archive: Don Hopkins private repo (`DonHopkins/characters/netochka-nezvanova/`).
+
 ## Don's angle
 
 Don has championed NN on Hacker News for years — "brilliant yet sociopathic," spectacular
-trolling *and* spectacular software. There's a personal near-miss, too: Don once talked with NN
-about building an **After Effects plug-in host for NATO**, and deliberately steered clear of
-actually working *for* her to avoid the legendary drama. ("Dodged a bullet there, I bet! Ha ha!")
+trolling *and* spectacular software. Personal threads:
 
-They've also chatted on Facebook over the years — so someone is still reachable behind the mask.
+- **After Effects NATO host** — discussed, intrigued, **declined** (open-ended + temperament; Don was also on PowerPC live video / AE CA plugins — Subutai Ahmad / Jim Crutchfield lineage)
+- **Orkut 2006** — politics, Lua, Smalltalk via Squeak, SimFaux/FauxCast links
+- **Amsterdam 2010** — tea invitation; Forth code gift
+- **HN 2014–2021** — nettime, Jitter rivalry, Rebekah Wilson IMA portrait
+
+They've also chatted on Facebook over the years — someone is still reachable behind the mask.
 Which raises the delicious risk that inviting her is, as Don puts it, "awaking a monster with a
 new medium to terrorize." 😉
 
@@ -62,5 +76,4 @@ Don would genuinely love NN on the **Repo Show**. A masked appearance, a text-on
 or an intermediary would all be completely in character. Any answer — including no answer, or
 a yellow flower — is honored. That, too, is on brand.
 
-*Status: stub / not yet asked. Directory grows as Don's promised "deluge" of material (emails,
-Facebook messages, links) arrives.*
+*Status: stub / not yet asked. [ideas.md](ideas.md) · [sources/](sources/README.md) · full archive in DonHopkins.*

@@ -4,7 +4,7 @@
 NeWS/PostScript version Don built — **pixel-perfect in the web browser**, as a living emulator. A
 salute + documentation project with **[Ben Shneiderman](../ben-shneiderman/README.md)**, who'd love it:
 we've talked about documenting our work, and a living emulator is the best documentation there is.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) ·
+[Portrayal standards](../../schemas/portrayal-standards.md) ·
 Media: [hyperties/](media/hyperties/) · Trail: [augmentation-and-hypertext](../../process/trails/augmentation-and-hypertext.md)
 
 ## Why

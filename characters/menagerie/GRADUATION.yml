@@ -28,7 +28,7 @@ graduation:
   portrayal_tier: game_and_fictional
   rule: |
     NOT real people. Always labeled fictional gallery patrons. OK to simulate per
-    schemas/portrayal-standards.yml#simulation.tiers.game_and_fictional.
+    schemas/portrayal-standards.md#simulation.tiers.game_and_fictional.
 
   on_graduate:
     - Copy wallet from jsonsters/simoleon-auctions.yml patron_wallets → CHARACTER.yml simoleons
@@ -97,5 +97,5 @@ see_also:
   - INDEX.yml
   - ../../don-hopkins/jsonsters/critics.yml
   - ../../don-hopkins/jsonsters/simoleon-auctions.yml
-  - ../../schemas/portrayal-standards.yml#simulation
+  - ../../schemas/portrayal-standards.md#simulation
   - ../../repo-shows/will-wright-premiere/audience/FICTIONAL-AUDIENCE.md

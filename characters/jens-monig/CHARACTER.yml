@@ -1,5 +1,5 @@
 # Jens Mönig — invitation portrayal. NOT Jens Mönig.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: jens-monig
@@ -11,7 +11,7 @@ character:
   home: characters/jens-monig/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 2
   authored_by: don-hopkins
 

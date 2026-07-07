@@ -1,5 +1,5 @@
 # Ben Cerveny — invitation portrayal. NOT Ben Cerveny.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: ben-cerveny
@@ -11,7 +11,7 @@ character:
   home: characters/ben-cerveny/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 2
   authored_by: don-hopkins
 

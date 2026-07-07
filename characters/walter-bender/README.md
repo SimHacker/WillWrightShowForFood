@@ -1,6 +1,6 @@
 # Walter Bender
 
-Invitation portrayal — **not** Walter Bender. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Walter Bender. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** OLPC Stone Soup, open-sourcing SimCity, skill-creation show
 

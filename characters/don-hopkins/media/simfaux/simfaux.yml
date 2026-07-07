@@ -29,6 +29,7 @@ screenshots:
 repo_orbit:
   dumbold: ../../../will-wright/media/sims-series-dumbold-voting-machine.md
   micropolis_dialogs: ../micropolis-gallery/INDEX.yml
+  fauxcast_essay: fauxcast-on-freedom.md
   gags:
     - ../../../../repo-shows/ideas/gags/simfaux-repo-show-prototype.yml
 

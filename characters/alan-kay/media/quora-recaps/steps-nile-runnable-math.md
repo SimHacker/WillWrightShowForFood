@@ -9,7 +9,7 @@
 - Literacy/graphics thread (Nile replacing 50K–100K lines C++)
 
 **Nature:** Summary with **short verbatim quotes**; verify against Quora. Credit: **Quora**. Governed by
-[`portrayal-standards.yml`](../../../../schemas/portrayal-standards.yml).
+[`portrayal-standards.md`](../../../../schemas/portrayal-standards.md).
 
 > **Project tie-in:** VPRI lineage, **Alex Warth/OMeta**, **Dan Amelang**, MOOLLM inter-module coordination,
 > [`late-binding-and-rethinking-the-os.md`](late-binding-and-rethinking-the-os.md) (LINDA, CYC-about-systems).

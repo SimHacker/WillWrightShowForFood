@@ -1,6 +1,6 @@
 # Mark Coniglio 🎚️💃
 
-*A public portrayal for a Repo Show invitation. NOT Mark Coniglio. See [portrayal-standards](../../schemas/portrayal-standards.yml).*
+*A public portrayal for a Repo Show invitation. NOT Mark Coniglio. See [portrayal-standards](../../schemas/portrayal-standards.md).*
 
 ## Who is he?
 

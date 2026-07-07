@@ -1,7 +1,7 @@
 # Seymour Papert 🕯️
 
 Memorial portrayal — **not** Seymour Papert. We *represent and discuss*; we never speak as him.
-[Memorial standards](../../schemas/portrayal-standards.yml#memorial_mode)
+[Memorial standards](../../schemas/portrayal-standards.md#memorial-mode)
 
 **Field:** Mathematician & educator — constructionism, Logo and the turtle; co-founder of the MIT AI Lab
 

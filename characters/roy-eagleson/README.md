@@ -1,7 +1,7 @@
 # Roy Eagleson 🎓🖥️ *(educator · computer graphics history)*
 
 *Portrayal of a real correspondent, written by Don — not Roy, and not his words. Roy may correct,
-shape, reduce, or delete any of it.* [Portrayal standards](../../schemas/portrayal-standards.yml) ·
+shape, reduce, or delete any of it.* [Portrayal standards](../../schemas/portrayal-standards.md) ·
 on the PIXIE email thread, not a Repo Show bud · authored by Don Hopkins
 
 ## Who

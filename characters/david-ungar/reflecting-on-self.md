@@ -2,7 +2,7 @@
 
 North star for the **David Ungar** Repo Show. Don's framing from public work and Jan 2026
 correspondence — not quotes put in David's mouth.
-[Portrayal standards](../../schemas/portrayal-standards.yml) · consent not_yet_asked
+[Portrayal standards](../../schemas/portrayal-standards.md) · consent not_yet_asked
 
 ## The headline
 

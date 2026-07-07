@@ -8,7 +8,7 @@ mode: represent_and_discuss
 # In memoriam — Douglas Engelbart (1925–2013)
 
 *Memorial mode: we represent and discuss his work; we do not interview him or speak as him.*
-[Memorial standards](../../schemas/portrayal-standards.yml#memorial_mode)
+[Memorial standards](../../schemas/portrayal-standards.md#memorial-mode)
 
 Douglas Engelbart spent his life on a single idea: **augmenting human intellect**. At SRI he
 invented the **mouse**, pioneered **hypertext** and on-screen collaboration, and showed the world

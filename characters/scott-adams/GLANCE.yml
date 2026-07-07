@@ -49,7 +49,7 @@ see_also:
     - { path: ../don-hopkins/GLANCE.yml, why: "Host; Logo Adventure + the adventure compiler he wants to build with/for Scott" }
   across:
     - { path: ../../repo-shows/scott-adams/README.md, why: "Show seed" }
-    - { path: ../../schemas/portrayal-standards.yml, why: "Portrayal ethics + subject rights" }
+    - { path: ../../schemas/portrayal-standards.md, why: "Portrayal ethics + subject rights" }
   deep:
     - { path: CARD.yml, why: "Adventure-engine abilities" }
     - { path: invitation.md, why: "Public invitation draft" }

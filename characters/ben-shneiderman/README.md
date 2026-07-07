@@ -1,6 +1,6 @@
 # Ben Shneiderman 👆
 
-Invitation portrayal — **not** Ben Shneiderman. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Ben Shneiderman. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** HCI — UMD HCIL; **direct manipulation**; **embedded hyperlinks**; HyperTIES; CHI'88 pie
 menus; info viz; human-centered AI.

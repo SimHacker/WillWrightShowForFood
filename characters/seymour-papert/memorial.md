@@ -9,7 +9,7 @@ mode: represent_and_discuss
 
 *Memorial mode: we represent and discuss his documented work; we do not interview him or speak as
 him, and we invent no quotes or inner life.*
-[Memorial standards](../../schemas/portrayal-standards.yml#memorial_mode)
+[Memorial standards](../../schemas/portrayal-standards.md#memorial-mode)
 
 Seymour Papert changed the question from *"what can computers teach children?"* to *"what can
 children make with computers?"* Born in Pretoria and shaped as an anti-apartheid activist, he worked

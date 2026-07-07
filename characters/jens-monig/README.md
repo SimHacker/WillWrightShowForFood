@@ -1,6 +1,6 @@
 # Jens Mönig
 
-Invitation portrayal — **not** Jens Mönig. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Jens Mönig. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Visual/block programming languages; architect + lead programmer of Snap! (Build Your Own Blocks). Morphic.js. Research Expert at SAP; consultant at UC Berkeley.
 

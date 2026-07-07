@@ -11,7 +11,7 @@ format: remote_or_in_person
 
 *Public invitation — written after our January correspondence. Scott Adams may edit, decline,
 delay, or request removal at any time.*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.yml)
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 *(Scott Adams the **adventure-game pioneer** — Adventureland, Adventure International — not the anti-vax cartoonist.)*
 

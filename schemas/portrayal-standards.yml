@@ -1,4 +1,5 @@
 # PORTRAYAL STANDARDS — applies to ALL invitation characters (read once here)
+# Human view: portrayal-standards.md (link guests here, not this file)
 # Host (Don Hopkins) is self-sovereign — see characters/don-hopkins/CHARACTER.yml
 # MOOLLM: SimHacker/moollm/skills/representation-ethics
 
@@ -120,7 +121,7 @@ per_character_files:
     numbered show segments. For long-documented relationships (e.g. Will Wright, Alan Kay),
     a factual Shared ground section is OK if it adds value without boastfulness.
   grows: "Add files as responses and show prep warrant — not a fixed template checklist"
-  do_not_repeat: "This standards file — reference governed_by: portrayal-standards.yml"
+  do_not_repeat: "This standards file — reference governed_by: portrayal-standards.md"
   couple_shows:
     doc: ../../process/couple-and-solo-shows.yml
     rule: |

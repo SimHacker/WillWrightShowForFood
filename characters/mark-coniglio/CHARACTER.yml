@@ -1,5 +1,5 @@
 # Mark Coniglio — invitation portrayal. NOT Mark Coniglio.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: mark-coniglio
@@ -11,7 +11,7 @@ character:
   home: characters/mark-coniglio/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 2
   authored_by: don-hopkins
 

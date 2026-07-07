@@ -1,7 +1,7 @@
 # Doug Hilsinger 🐅
 
 *Invitation portrayal — a respectful, source-grounded sketch. Not Doug Hilsinger, not his words.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · consent level 1 · authored by Don
+[Portrayal standards](../../schemas/portrayal-standards.md) · consent level 1 · authored by Don
 Hopkins · *dream guest — consent not yet asked*
 
 ## Who

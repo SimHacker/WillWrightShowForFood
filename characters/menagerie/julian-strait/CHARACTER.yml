@@ -1,6 +1,6 @@
 # Provocateur — fictional gallery patron (Lower Chelsea Eight)
 # MOOLLM soul file — Sims traits + Mind Mirror + relationship matrix
-# NOT a real person. portrayal-standards.yml#simulation.tiers.game_and_fictional
+# NOT a real person. portrayal-standards.md#simulation.tiers.game_and_fictional
 
 inherits:
   moollm_skills: [character, mind-mirror]

@@ -1,5 +1,5 @@
 # David Marusek — invitation portrayal. NOT David Marusek.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: david-marusek
@@ -11,7 +11,7 @@ character:
   home: characters/david-marusek/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 3
   authored_by: don-hopkins
   note: |
@@ -58,7 +58,7 @@ the_wedding_album:
 why_a_guest:
   predicted_this_repo: |
     The Wedding Album is the closest thing this show has to a founding legal drama: every rule
-    in portrayal-standards.yml — consent levels, subject rights, deletion on request, no
+    in portrayal-standards.md — consent levels, subject rights, deletion on request, no
     invented inner life, memorial mode — is an answer to a wound Marusek dramatized in 1999.
     The repo builds sims of real people ON PURPOSE, with the ethics the novella showed us we'd
     need. Credit where due: he saw it coming, and this directory exists to say so.
@@ -86,5 +86,5 @@ see_also:
   - { path: the-wedding-album-and-digital-souls.md, why: "THE PIECE — the novella's issues mapped to today's games and AI" }
   - { path: invitation.md, why: "Draft invitation — Don will send personally" }
   - { path: ../david-gerrold/, why: "Fellow SF author guest — HARLIE's machine personhood, 1972" }
-  - { path: ../../schemas/portrayal-standards.yml, why: "The rulebook the novella predicted we'd need" }
+  - { path: ../../schemas/portrayal-standards.md, why: "The rulebook the novella predicted we'd need" }
   - { path: ../../repo-shows/will-wright-premiere/game-bridge-soul-hydraulics.yml, why: "Souls as conserved, portable data — the novella's premise as plumbing" }

@@ -2,7 +2,7 @@
 
 *Conversation hooks for a Repo Show — grounded in Ben's public work and the **2026-07-03 Signal
 thread** with Don. Don's proposed topics; not quotes attributed to Ben unless marked.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · [correspondence.yml](correspondence.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md) · [correspondence.yml](correspondence.yml)
 
 ## What Ben has done
 

@@ -3,7 +3,7 @@
 *Conversation hooks for a Repo Show — **Don's proposed topics**, each grounded in Terry's
 public CS547 archive and verified preservation work. Things Don would love to follow **with**
 Terry; not quotes, not claims about what he thinks.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · invitation guest
+[Portrayal standards](../../schemas/portrayal-standards.md) · invitation guest
 
 ## What Terry has done
 

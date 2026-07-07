@@ -16,7 +16,7 @@
 
 **Nature:** Summary of Alan's public Quora writing with **short verbatim quotes** in quotation marks;
 elisions marked `[…]`. Verify wording against Quora before citing formally. Credit: **Quora**.
-Governed by [`portrayal-standards.yml`](../../../../schemas/portrayal-standards.yml).
+Governed by [`portrayal-standards.md`](../../../../schemas/portrayal-standards.md).
 
 > **Project tie-in:** this cluster feeds hooks **#13** (systems vs. data), **#14** (successor to OOP), and
 > **MOOLLM**'s relational/messaging debate. Pairs with

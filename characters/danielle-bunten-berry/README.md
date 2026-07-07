@@ -1,6 +1,6 @@
 # Danielle Bunten Berry 🕯️
 
-*In memoriam (1949–1998).* Legacy portrayal — **not** Danielle Bunten Berry. [Standards](../../schemas/portrayal-standards.yml)
+*In memoriam (1949–1998).* Legacy portrayal — **not** Danielle Bunten Berry. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Game designer — M.U.L.E., The Seven Cities of Gold; pioneer of multiplayer social games
 

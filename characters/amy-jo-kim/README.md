@@ -1,6 +1,6 @@
 # Amy Jo Kim
 
-Invitation portrayal — **not** Amy Jo Kim. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Amy Jo Kim. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Social game design, community architecture, Game Thinking
 

@@ -9,7 +9,7 @@ show_seed: repo-shows/golan-levin/
 # Repo Show invitation — Golan Levin
 
 *Public draft — not sent. Golan Levin may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 We would respectfully invite **Golan Levin** to a **Repo Show** — a Repo Show Class
 conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood),

@@ -1,6 +1,6 @@
 # Steve Wozniak
 
-Invitation portrayal — **not** Steve Wozniak. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Steve Wozniak. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Computer Engineer, Apple Co-founder, Creator of the Apple I and Apple II
 

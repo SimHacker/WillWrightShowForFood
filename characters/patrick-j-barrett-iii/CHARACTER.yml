@@ -1,5 +1,5 @@
 # Patrick J. Barrett III — invitation portrayal. NOT Patrick Barrett.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: patrick-j-barrett-iii
@@ -11,7 +11,7 @@ character:
   home: characters/patrick-j-barrett-iii/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 3
   authored_by: don-hopkins
 

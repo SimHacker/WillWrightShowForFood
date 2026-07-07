@@ -4,7 +4,7 @@
 documented work; we do **not** interview him, speak as him, or invent his inner life or quotes.
 People listed as "draw in" are **documented connections for planning**, not invitations — anyone
 living joins only with their own consent.*
-[Memorial standards](../../schemas/portrayal-standards.yml#memorial_mode) · show seed:
+[Memorial standards](../../schemas/portrayal-standards.md#memorial-mode) · show seed:
 [`../../repo-shows/remembering-mark-weiser.yml`](../../repo-shows/remembering-mark-weiser.yml)
 
 ## What Mark did

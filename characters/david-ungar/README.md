@@ -1,6 +1,6 @@
 # David Ungar
 
-Invitation portrayal — **not** David Ungar. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** David Ungar. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Self — The Power of Simplicity; Self × MOOLLM; maps/PICs → V8
 

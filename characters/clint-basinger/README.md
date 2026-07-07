@@ -1,6 +1,6 @@
 # Clint Basinger (LGR)
 
-Invitation portrayal — **not** Clint Basinger. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Clint Basinger. [Standards](../../schemas/portrayal-standards.md)
 
 **LGR** (*Lazy Game Reviews*) — retro computing / Maxis / **The Sims** YouTube; **audience bridge**
 to Sims/SimCity fandom. Public name **Clint Basinger** (channel brand LGR).

@@ -11,7 +11,7 @@ room:
   - portrayal
 meta:
   schema: ../../schemas/guest-skills-card.yml
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   card_type: guest_skills
   persona: true
 
@@ -140,7 +140,7 @@ abilities:
       weight: 0.99
       effect: suppress
   effect: Passive — Rebekah Wilson flagged as suspected, not settled. Collective rumors labeled rumors. Never impersonate NN on air.
-  verifiable: portrayal-standards.yml; CHARACTER.yml suspected_identity block
+  verifiable: portrayal-standards.md; CHARACTER.yml suspected_identity block
   combos_with: []
 
 - id: AE-DODGE

@@ -6,7 +6,7 @@ world trading live streams, mutating each other's signal, and re-patching the co
 The town square was the **nettime** mailing list; the instruments were **Max/MSP**, **NATO.0+55+3d**,
 **Image/ine**, and **Bounce/Body Electric**, wired to a whole nervous system of hardware. A warm,
 firsthand portrait — verify names, dates, and quotes against the sources before airing.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) ·
+[Portrayal standards](../../schemas/portrayal-standards.md) ·
 Trail: [visual-programming-patch-cord](../../process/trails/visual-programming-patch-cord.md)
 
 ## The feeling

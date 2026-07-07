@@ -1,6 +1,6 @@
 # Alan Kay
 
-Invitation portrayal — **not** Alan Kay. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Alan Kay. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Computer scientist — Smalltalk, Dynabook, constructionism
 

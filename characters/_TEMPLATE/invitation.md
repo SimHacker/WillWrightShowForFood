@@ -9,7 +9,7 @@ show_seed: repo-shows/guest-slug/
 # Repo Show invitation — Full Name
 
 *Public draft — not sent. The person portrayed may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 We would respectfully invite you to a **Repo Show** — a Repo Show Class conversation whose
 stage is [this public GitHub repository](https://github.com/SimHacker/WillWrightShowForFood),

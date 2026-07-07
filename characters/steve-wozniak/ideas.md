@@ -3,7 +3,7 @@
 *Conversation hooks for a Repo Show — **Don's proposed topics**, each grounded in Steve's
 public work and documented connections to this repository. Things Don would love to follow
 **with** Steve Wozniak; not quotes, not claims about what they think.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · invitation guest · consent not_yet_asked
+[Portrayal standards](../../schemas/portrayal-standards.md) · invitation guest · consent not_yet_asked
 
 ## What Steve has done
 

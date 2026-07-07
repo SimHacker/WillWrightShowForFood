@@ -3,7 +3,7 @@
 *Pair with [Scott Kim](../scott-kim/ideas.md) on
 [`repo-shows/amy-jo-and-scott-kim/`](../../repo-shows/amy-jo-and-scott-kim/README.md) — interview
 together for shared work.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## What Amy Jo has done
 

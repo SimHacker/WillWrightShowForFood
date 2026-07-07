@@ -2,7 +2,7 @@
 
 *Conversation hooks for a Repo Show — **invitation mode**. Bill is **living**; we represent and
 discuss his **public work** and warmly invite him and people who know him. We do **not** speak as
-him or invent his words. Standards: [`portrayal-standards.yml`](../../schemas/portrayal-standards.yml).*
+him or invent his words. Standards: [`portrayal-standards.md`](../../schemas/portrayal-standards.md).*
 
 ---
 

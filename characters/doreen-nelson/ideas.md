@@ -1,7 +1,7 @@
 # Ideas to explore with Doreen Nelson 📐
 
 *Conversation hooks for a Repo Show — grounded in documented public work and the Dec 2006 OLPC primary source.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## What Doreen has done
 

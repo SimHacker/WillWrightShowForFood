@@ -1,6 +1,6 @@
 # Ronald J. Reisman (Ron Reisman) 🕯️✈️
 
-*Memorial portrayal — **not** Ron Reisman.* [Standards](../../schemas/portrayal-standards.yml#memorial_mode)
+*Memorial portrayal — **not** Ron Reisman.* [Standards](../../schemas/portrayal-standards.md#memorial-mode)
 
 **NASA Ames** — air traffic management (**CTAS**, **TFAS**, **NextGen**), flight simulation,
 **Convolvotron** 3D audio, dolphin-language research, AR tower tools. Died **7 Nov 2019**.

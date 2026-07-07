@@ -2,7 +2,7 @@
 # A tight, public-safe digest of a real exchange. NOT the full private thread.
 # Full text lives in the private archive (provenance below). Published with the same care
 # as the rest of this directory: factual, polite, revocable. Subject may correct or remove.
-# Standards: ../../schemas/portrayal-standards.yml | Exemplar format — see characters/README.md
+# Standards: ../../schemas/portrayal-standards.md | Exemplar format — see characters/README.md
 
 meta:
   with: yoot-saito

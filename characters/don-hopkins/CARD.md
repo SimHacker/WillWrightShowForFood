@@ -31,4 +31,4 @@ Set: Micropolis Founders  ·  Living · dealer of this deck
 
 > "The best interface is no interface, but if you need one, it should be a pie menu."
 
-→ [`DESCRIPTION`](../../schemas/portrayal-standards.yml) via [`CHARACTER.yml`](CHARACTER.yml) · Full card: [`CARD.yml`](CARD.yml) · Story: [`README.md`](README.md)
+→ [`DESCRIPTION`](../../schemas/portrayal-standards.md) via [`CHARACTER.yml`](CHARACTER.yml) · Full card: [`CARD.yml`](CARD.yml) · Story: [`README.md`](README.md)

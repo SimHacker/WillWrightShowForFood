@@ -2,7 +2,7 @@
 
 *Conversation hooks for the show — **Don's proposed topics**, grounded in Jeff's real work on
 SimObliterator (which inspired Don's VitaMoo). Things to riff on **with** Jeff; not quotes from him.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · consent granted
+[Portrayal standards](../../schemas/portrayal-standards.md) · consent granted
 
 ## The hooks
 

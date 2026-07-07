@@ -8,7 +8,7 @@ mode: represent_and_discuss
 # In memoriam — Jef Raskin (1943–2005)
 
 *Memorial mode: we represent and discuss his work; we do not interview him or speak as him.*
-[Memorial standards](../../schemas/portrayal-standards.yml#memorial_mode)
+[Memorial standards](../../schemas/portrayal-standards.md#memorial-mode)
 
 Jef Raskin started the **Macintosh** project at Apple and named it — then spent decades arguing that
 what shipped was not the computer he meant. His life's work was the **humane interface**: not

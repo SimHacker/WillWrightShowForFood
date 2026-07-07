@@ -1,5 +1,5 @@
 # Douglas Engelbart — memorial portrayal (in memoriam). NOT Douglas Engelbart.
-# Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.yml#memorial_mode
+# Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
 character:
   id: douglas-engelbart
@@ -11,7 +11,7 @@ character:
   home: characters/douglas-engelbart/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 5
   authored_by: don-hopkins
 
@@ -59,4 +59,4 @@ see_also:
   - { path: from-alan-kay.yml, why: "Kay on augmentation, inverse vandalism, PIXIE, Yoot interview" }
   - { path: ../yoot-saito/from-alan-kay.yml, why: "Yoot interviewed Engelbart; Alan reviewed transcript" }
   - { path: ../ted-nelson/, why: "Hypertext peer + best friend who can discuss him on air" }
-  - { path: ../../schemas/portrayal-standards.yml#memorial_mode, why: "How memorial guests are handled" }
+  - { path: ../../schemas/portrayal-standards.md#memorial-mode, why: "How memorial guests are handled" }

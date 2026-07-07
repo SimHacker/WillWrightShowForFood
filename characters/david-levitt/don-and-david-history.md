@@ -3,7 +3,7 @@
 *Don's firsthand telling of how he and **David Levitt** kept crossing paths, from MIT to VPL to a
 SIGGRAPH kids' booth to Levity — the work, the products, and the road stories. Warm and true to Don's
 memory; **David to confirm and enrich** (several bits are flagged "David explains").*
-[Portrayal standards](../../schemas/portrayal-standards.yml) ·
+[Portrayal standards](../../schemas/portrayal-standards.md) ·
 Neighbors: [levity-bounce-space-seed](../don-hopkins/levity-bounce-space-seed.md) ·
 [body-electric-bounce-vr-stack](../don-hopkins/body-electric-bounce-vr-stack.md) ·
 [Rebounce](../../repo-shows/rebounce/README.md)

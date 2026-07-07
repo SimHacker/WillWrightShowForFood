@@ -1,5 +1,5 @@
 # Brenda Laurel — invitation portrayal. NOT Brenda Laurel.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: brenda-laurel
@@ -11,7 +11,7 @@ character:
   home: characters/brenda-laurel/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 2
   authored_by: don-hopkins
 
@@ -67,4 +67,4 @@ see_also:
   - { path: ../scott-mccloud/, why: "Closure/gutter — Sims design bible rhymes with dramatic participation" }
   - { path: ../../repo-shows/placeholder/, why: "Planted pair show" }
   - { path: ideas.md, why: "Conversation hooks" }
-  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

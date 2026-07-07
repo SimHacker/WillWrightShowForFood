@@ -4,7 +4,7 @@
 and rewrite it together — by hand and with AI, competing, cooperating, exchanging ideas. Seeded by
 **[David Levitt](../david-levitt/README.md)** and Don; **[Jaron Lanier](../jaron-lanier/README.md)**
 guest of honor.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) ·
+[Portrayal standards](../../schemas/portrayal-standards.md) ·
 Show: [repo-shows/rebounce/](../../repo-shows/rebounce/README.md) ·
 Trail: [visual-programming-patch-cord](../../process/trails/visual-programming-patch-cord.md)
 

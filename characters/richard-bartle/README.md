@@ -1,6 +1,6 @@
 # Richard Bartle
 
-Invitation portrayal — **not** Richard Bartle. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Richard Bartle. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Virtual worlds — MUD1 (1978, with Roy Trubshaw), Bartle taxonomy of player types,
 

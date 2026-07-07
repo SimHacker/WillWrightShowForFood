@@ -15,7 +15,7 @@ personal drafts, the phone-call follow-up, and the backstage strategy live in th
 What's here is the part we're both happy for the world to read — so you can see **why Will's in**, and
 decide you want in too.*
 
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.yml)
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 · [Guest prototype](guest-prototype.yml) (how we respect your time)
 · Short summary: [`invitation-summary.md`](invitation-summary.md)
 

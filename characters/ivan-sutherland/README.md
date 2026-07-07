@@ -1,7 +1,7 @@
 # Ivan Sutherland ✏️🖥️ *(hero · Sketchpad north star)*
 
 *Hero portrayal — we honor and cite Ivan Sutherland; we do not speak as him.* [Portrayal
-standards](../../schemas/portrayal-standards.yml)
+standards](../../schemas/portrayal-standards.md)
 
 ## Why this room exists
 

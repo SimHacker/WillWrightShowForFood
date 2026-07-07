@@ -5,7 +5,7 @@ Workshop** in **Monterey** (Nov 1989): Dave's **Panel Library** paper, Don's **P
 (visual PostScript programming and debugger for **NeWS**). Don later saw **Raster Masters** at
 **Shoreline** and **Grateful Dead** shows in the **1990s SGI era**. Public HN comments indexed
 below, not private mail.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## Don ↔ Dave (firsthand)
 

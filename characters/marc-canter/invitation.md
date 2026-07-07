@@ -12,7 +12,7 @@ pair_with: david-levitt
 # Repo Show invitation — Marc Canter 🎬🕺
 
 *Send-ready draft — not yet sent. Marc Canter may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 Marc —
 

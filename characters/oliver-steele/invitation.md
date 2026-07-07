@@ -9,7 +9,7 @@ show_seed: repo-shows/openlaszlo/
 # Repo Show invitation — Oliver Steele (OpenLaszlo reunion)
 
 *Public draft — not sent. Oliver Steele may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 Oliver —
 

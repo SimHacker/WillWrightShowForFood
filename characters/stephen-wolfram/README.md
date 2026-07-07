@@ -1,6 +1,6 @@
 # Stephen Wolfram
 
-Invitation portrayal — **not** Stephen Wolfram. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Stephen Wolfram. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Computation & science — cellular automata, *A New Kind of Science*, Wolfram Language, multiway systems / the ruliad.
 

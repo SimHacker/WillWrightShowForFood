@@ -24,7 +24,7 @@ send_batch: pixie-trio-2026
 ```
 
 *Send-ready draft — not yet sent. Heinz U. Lemke may edit, decline, delay, or request removal at any time.*  
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.yml)
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 **Today I'm sending three matching invitations** — yours, **David Rosenthal's**, and **Lars Brinkhoff's** — for **one group episode**. Each letter is written for the person receiving it; all three describe the same show from different angles.
 

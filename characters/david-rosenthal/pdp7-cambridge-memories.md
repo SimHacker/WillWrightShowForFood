@@ -7,7 +7,7 @@
 
 Same **PDP-7 + Type 340 + Titan** stack as [**PIXIE**](https://www.donhopkins.com/home/documents/PIXIE%20a%20new%20approach%20to%20man-machine%20communication.pdf) (~1969, [Heinz Lemke](../heinz-lemke/README.md)); David was at Cambridge ~1970. Show: [PIXIE trio](../../repo-shows/pixie-pie-menus-pdp7.yml).
 
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 ---
 

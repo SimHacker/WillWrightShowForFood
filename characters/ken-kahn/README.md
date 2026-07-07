@@ -1,6 +1,6 @@
 # Ken Kahn
 
-Invitation portrayal — **not** Ken Kahn. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Ken Kahn. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** AI + visual programming for kids — ToonTalk; AI blocks for Snap! (eCraft2Learn)
 

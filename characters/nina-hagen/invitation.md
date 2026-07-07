@@ -9,7 +9,7 @@ show_seed: repo-shows/nina-hagen/
 # Repo Show invitation — Nina Hagen *(dream guest)*
 
 *Dream invitation — not sent. Nina Hagen may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 Dear Nina,
 

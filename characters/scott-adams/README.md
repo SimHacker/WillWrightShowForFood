@@ -2,7 +2,7 @@
 
 *Sniff:* [`CARD.yml`](CARD.yml) · [`GLANCE.yml`](GLANCE.yml)
 
-Invitation portrayal — **not** Scott Adams. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Scott Adams. [Standards](../../schemas/portrayal-standards.md)
 
 > **Disambiguation:** Scott Adams the **adventure-game pioneer** (Adventureland, Adventure
 > International) — **not** the Dilbert cartoonist of the same name. Different person entirely.

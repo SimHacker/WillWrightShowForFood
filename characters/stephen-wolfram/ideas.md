@@ -2,7 +2,7 @@
 
 *The full written argument is the artifact
 [`MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md`](MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md) — this file holds show hooks only.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## What Stephen has done
 

@@ -45,6 +45,6 @@ Trail: [`../../process/trails/repo-show-spine.md`](../../process/trails/repo-sho
 Memorial mode applies to **Jef only**. `CHARACTER.yml` → `memorial.who_can_discuss` records
 **factual ties** to living characters who *might* speak about his work on a future episode — Terry
 (CS547 host), HCI peers, Mac-era contemporaries, View Source lineage, Don as host. **Listing ≠
-asking.** Consent first; see [`../../schemas/portrayal-standards.yml#memorial_mode`](../../schemas/portrayal-standards.yml#memorial_mode).
+asking.** Consent first; see [`../../schemas/portrayal-standards.md#memorial-mode`](../../schemas/portrayal-standards.md#memorial-mode).
 
 Show hooks: [`ideas.md`](ideas.md)

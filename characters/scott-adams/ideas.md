@@ -3,7 +3,7 @@
 *Short hooks up top; **full segment catalog** (30+ seeds, episode shapes, live builds) below.*
 Machine-readable: [`IDEAS.yml`](IDEAS.yml)
 
-[Portrayal standards](../../schemas/portrayal-standards.yml) · consent: correspondence_verified
+[Portrayal standards](../../schemas/portrayal-standards.md) · consent: correspondence_verified
 
 *(The adventure-game pioneer — not the Dilbert cartoonist.)*
 

@@ -1,5 +1,5 @@
 # Golan Levin — invitation portrayal. NOT Golan Levin.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: golan-levin
@@ -11,7 +11,7 @@ character:
   home: characters/golan-levin/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 2
   authored_by: don-hopkins
 

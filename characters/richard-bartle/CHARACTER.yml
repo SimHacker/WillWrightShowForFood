@@ -1,5 +1,5 @@
 # Richard Bartle — invitation portrayal. NOT Richard Bartle.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: richard-bartle
@@ -11,7 +11,7 @@ character:
   home: characters/richard-bartle/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 2
   authored_by: don-hopkins
 

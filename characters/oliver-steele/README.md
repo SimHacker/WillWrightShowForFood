@@ -1,6 +1,6 @@
 # Oliver Steele
 
-Invitation portrayal — **not** Oliver Steele. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Oliver Steele. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Chief Software Architect of Laszlo Systems (designed LZX / OpenLaszlo); instance-first & reactive programming; tools for creativity & learning
 

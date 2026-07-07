@@ -1,7 +1,7 @@
 # Ideas to explore with Edd Coates 👤
 
 *Conversation hooks — **Don's proposed topics**, grounded in Edd's public work. Not quotes.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · friend · consent not_yet_asked
+[Portrayal standards](../../schemas/portrayal-standards.md) · friend · consent not_yet_asked
 
 ## Shows
 

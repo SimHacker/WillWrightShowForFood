@@ -1,5 +1,5 @@
 # Norman Margolus — invitation portrayal. NOT Norman Margolus.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: norman-margolus
@@ -12,7 +12,7 @@ character:
   aliases: ["Norm Margolus"]
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 3
   authored_by: don-hopkins
   note: "Public-source portrayal. Introduced to Don by **Milan and Henry Minsky** from the MIT AI Lab; Don talked CA with Norman and made a long-form CAM6 demo tailored for Norman as the audience. Consent not yet asked."

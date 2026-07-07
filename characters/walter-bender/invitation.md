@@ -9,7 +9,7 @@ show_seed: repo-shows/walter-bender-olpc.yml
 # Repo Show invitation — Walter Bender
 
 *Public draft — not sent. Walter Bender may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 We would respectfully invite **Walter Bender** to a **Repo Show** — a Repo Show Class
 conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood),

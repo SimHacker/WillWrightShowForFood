@@ -9,7 +9,7 @@ show_seed: repo-shows/drew-carey/
 # Repo Show invitation — Drew Carey
 
 *Public draft — not sent. Drew Carey may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 ---
 

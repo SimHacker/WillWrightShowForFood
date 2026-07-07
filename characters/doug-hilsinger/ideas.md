@@ -3,7 +3,7 @@
 *Conversation hooks for a Repo Show — **Don's proposed topics**, each grounded in Doug's
 public work and documented connections to this repository. Things Don would love to follow
 **with** Doug Hilsinger; not quotes, not claims about what they think.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · dream guest · consent not_yet_asked
+[Portrayal standards](../../schemas/portrayal-standards.md) · dream guest · consent not_yet_asked
 
 ## What Doug has done
 

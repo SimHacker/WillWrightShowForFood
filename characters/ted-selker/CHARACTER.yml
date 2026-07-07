@@ -1,5 +1,5 @@
 # Ted Selker — invitation portrayal. NOT Ted Selker.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: ted-selker
@@ -11,7 +11,7 @@ character:
   home: characters/ted-selker/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 3
   authored_by: don-hopkins
 
@@ -44,4 +44,4 @@ see_also:
   - { path: ../don-hopkins/, why: "Don demoed Multiplayer SimCity at IBM Almaden's NPUC workshop" }
   - { path: ../mark-weiser/, why: "Calm / context-aware computing kinship (memorial)" }
   - { path: ../ben-shneiderman/, why: "HCI lineage — input + interface research" }
-  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses — self or assisted contribution" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses — self or assisted contribution" }

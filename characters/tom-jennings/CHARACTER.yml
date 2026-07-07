@@ -7,7 +7,7 @@ character:
   home: characters/tom-jennings/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 2
   authored_by: don-hopkins
 
@@ -20,4 +20,5 @@ bio:
 
 see_also:
   - { path: ../david-henkel-wallace/, why: "TLGnet co-founder" }
+  - { path: ../brewster-kahle/, why: "TLG co-founder; Internet Archive / WAIS" }
   - { path: ../hugh-daniel/, why: "WELL / Bay Area hacker social graph — parallel community-building lineage" }

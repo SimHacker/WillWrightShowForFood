@@ -1,6 +1,6 @@
 # Ted Selker
 
-Invitation portrayal — **not** Ted Selker. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Ted Selker. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** HCI inventor — the TrackPoint pointing stick; considerate / context-aware computing; voting technology
 

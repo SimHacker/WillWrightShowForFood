@@ -23,6 +23,6 @@ Mirror key tables in **`CHARACTER.yml`** (`ticketpr_seats`, `shows`, `dreams`, `
 - [`invitation.md`](invitation.md) — the draft Repo Show invitation.
 - [`ideas.md`](ideas.md) — conversation hooks (public work + abstracted shared ground + show segments).
 
-All portrayals follow [`schemas/portrayal-standards.yml`](../../schemas/portrayal-standards.yml):
+All portrayals follow [`schemas/portrayal-standards.md`](../../schemas/portrayal-standards.md):
 public sources only, no impersonation, no fabricated quotes, subject rights honored. Scaffolding is
 also automated — see [`scripts/scaffold-invitation-characters.mjs`](../../scripts/scaffold-invitation-characters.mjs).

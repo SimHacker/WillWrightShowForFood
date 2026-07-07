@@ -1,5 +1,5 @@
 # Scott Draves ("Spot") — invitation portrayal. NOT Scott Draves.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: scott-draves
@@ -12,7 +12,7 @@ character:
   aliases: ["Spot", "spot"]
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 2
   authored_by: don-hopkins
   note: "Old friend of Don's — likely to say yes. Portrayal drawn from public work + Don's own correspondence; Scott may edit, reduce, or delete anytime."

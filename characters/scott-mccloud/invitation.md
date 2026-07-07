@@ -11,7 +11,7 @@ format: remote_or_in_person
 # Repo Show invitation — Scott McCloud
 
 *Send-ready draft — not yet sent. Scott McCloud may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 Scott —
 

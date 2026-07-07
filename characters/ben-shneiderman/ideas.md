@@ -3,7 +3,7 @@
 *Conversation hooks for a Repo Show — **Don's proposed topics**, grounded in Ben's public work and
 documented connections. Things Don would love to follow **with** Ben; not quotes, not claims about
 what he thinks.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · invitation **invited** (sent 2026-07)
+[Portrayal standards](../../schemas/portrayal-standards.md) · invitation **invited** (sent 2026-07)
 
 ## What Ben has done
 

@@ -1,5 +1,5 @@
 # Steve Alvey — invitation portrayal. NOT Steve Alvey.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: steve-alvey
@@ -12,7 +12,7 @@ character:
   aliases: ["SimSlice", "SliceCity"]
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 3
   authored_by: don-hopkins
   note: "Don's longtime friend + collaborator. Independent creator — promote his work, drive fans to his subscriptions/content (non-extractively)."

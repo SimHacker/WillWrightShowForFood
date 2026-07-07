@@ -9,7 +9,7 @@ mode: represent_and_discuss
 
 *Memorial mode: we represent and discuss his documented work; we do not interview him or speak as
 him, and we invent no quotes or inner life.*
-[Memorial standards](../../schemas/portrayal-standards.yml#memorial_mode)
+[Memorial standards](../../schemas/portrayal-standards.md#memorial-mode)
 
 Ron Reisman died **7 November 2019**. Don Hopkins's **late friend** — and **Coco Conn**, **David
 Levitt**, and many others in the Ames / VR / simulation orbit **knew and loved him**.

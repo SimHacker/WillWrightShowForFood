@@ -58,5 +58,5 @@ it is a **readability reformat of Alan's public Quora writing** — not an edit 
   readers can verify against the source.
 - Reformatting changes **layout only** (flatten threads, fix ordering, add headings/links) — **never
   the wording**. Mark any elision with `[…]`.
-- Governed by [`../../../../schemas/portrayal-standards.yml`](../../../../schemas/portrayal-standards.yml);
+- Governed by [`../../../../schemas/portrayal-standards.md`](../../../../schemas/portrayal-standards.md);
   Alan may request changes or removal at any time.

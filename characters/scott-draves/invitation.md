@@ -9,7 +9,7 @@ show_seed: repo-shows/scott-draves/
 # Repo Show invitation — Scott Draves ("Spot")
 
 *Public draft — not sent. Scott may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 Hey Spot,
 

@@ -10,7 +10,7 @@
 - P.S. on *"What happened to Doug Engelbart's real insights and goals?"* (same response family as schooling)
 
 **Nature:** Summary with **short verbatim quotes**; verify against Quora. Credit: **Quora**. Governed by
-[`portrayal-standards.yml`](../../../../schemas/portrayal-standards.yml).
+[`portrayal-standards.md`](../../../../schemas/portrayal-standards.md).
 
 > **Project tie-in:** Yoot interview, kids-reading, [`computer-revolution-not-yet.md`](computer-revolution-not-yet.md),
 > [`carnegie-libraries-and-literacy-vision.md`](carnegie-libraries-and-literacy-vision.md). Engelbart memorial mode.

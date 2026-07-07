@@ -1,7 +1,7 @@
 # Patrick J. Barrett III 🧩
 
 *Invitation portrayal. A respectful, source-grounded sketch — not Patrick Barrett, and not his words.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · consent level 3 · authored by Don Hopkins
+[Portrayal standards](../../schemas/portrayal-standards.md) · consent level 3 · authored by Don Hopkins
 
 ## Who
 

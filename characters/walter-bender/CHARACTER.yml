@@ -1,5 +1,5 @@
 # Walter Bender — invitation portrayal. NOT Walter Bender.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: walter-bender
@@ -11,7 +11,7 @@ character:
   home: characters/walter-bender/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 3
   authored_by: don-hopkins
 

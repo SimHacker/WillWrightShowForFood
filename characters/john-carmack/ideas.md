@@ -1,7 +1,7 @@
 # Ideas to explore with John Carmack
 
 *Conversation hooks — Don's proposed topics from public HN thread only. Not quotes; consent not_yet_asked.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## Shared ground (public)
 

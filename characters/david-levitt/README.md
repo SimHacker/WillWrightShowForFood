@@ -1,6 +1,6 @@
 # David Levitt
 
-Invitation portrayal — **not** David Levitt. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** David Levitt. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** AI music (MIT/Minsky), VR (VPL Research), Interval Research, ConnectedTV, Pantomime AR/VR
 

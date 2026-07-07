@@ -1,5 +1,5 @@
 # Chris Trottier — invitation portrayal. NOT Chris Trottier.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: chris-trottier
@@ -11,7 +11,7 @@ character:
   home: characters/chris-trottier/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 2
   authored_by: don-hopkins
 

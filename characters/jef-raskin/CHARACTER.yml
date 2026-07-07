@@ -1,5 +1,5 @@
 # Jef Raskin — memorial portrayal (in memoriam). NOT Jef Raskin.
-# Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.yml#memorial_mode
+# Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
 character:
   id: jef-raskin
@@ -11,7 +11,7 @@ character:
   home: characters/jef-raskin/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 5
   authored_by: don-hopkins
 
@@ -61,4 +61,4 @@ see_also:
   - { path: humane-interface-and-this-repo.md, why: "Two-layer navigation + Raskin synthesis" }
   - { path: ../../process/character-colocation.yml, why: "github_ux — directory listing vs README-only URL" }
   - { path: ../../repo-shows/remembering-jef-raskin.yml, why: "Group memorial show seed" }
-  - { path: ../../schemas/portrayal-standards.yml#memorial_mode, why: "How memorial guests are handled" }
+  - { path: ../../schemas/portrayal-standards.md#memorial-mode, why: "How memorial guests are handled" }

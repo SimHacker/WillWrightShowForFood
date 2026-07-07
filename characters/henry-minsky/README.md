@@ -1,6 +1,6 @@
 # Henry Minsky
 
-Invitation portrayal — **not** Henry Minsky. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Henry Minsky. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Software architect / AI engineer — Leela AI (co-founder, CTO), Laszlo Systems (OpenLaszlo), MIT AI Lab
 

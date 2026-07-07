@@ -325,7 +325,7 @@ see_also:
   why: Host facet — Repo Show Class (invitation N/A for self-sovereign host)
 meta:
   schema: ../../schemas/guest-skills-card.yml
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   card_type: host_skills
 card:
   name: Don Hopkins

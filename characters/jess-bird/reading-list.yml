@@ -69,7 +69,7 @@ arcs:
 
 interview_universe:
   roster_machine: ../INDEX.yml
-  portrayal_ethics: ../../schemas/portrayal-standards.yml
+  portrayal_ethics: ../../schemas/portrayal-standards.md
   people:
     - { id: will-wright, room: ../will-wright/, status: accepted }
     - { id: don-hopkins, room: ../don-hopkins/, status: host }

@@ -1,7 +1,7 @@
 # Ideas to explore with Richard M. Stallman
 
 *Conversation hooks from public record. Consent not_yet_asked.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## Shared ground (documented)
 

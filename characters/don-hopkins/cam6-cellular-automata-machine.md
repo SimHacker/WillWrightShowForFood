@@ -2,7 +2,7 @@
 
 *Don's own work — source still exists and runs. The centerpiece of the
 [Norman Margolus Repo Show](../../repo-shows/norman-margolus/). Not a claim about anyone else's work.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## What it is
 A **CAM6 simulator** — software-compatible with the **CAM-6** hardware described in Toffoli &

@@ -1,6 +1,6 @@
 # Phil Salvador 🛢️
 
-Invitation portrayal — **not** Phil Salvador. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Phil Salvador. [Standards](../../schemas/portrayal-standards.md)
 
 **Phil Salvador** — game historian (*The Obscuritory*), **Video Game History Foundation**, and the
 scholar who turned **SimRefinery** from an Ars comment into a global preservation story.

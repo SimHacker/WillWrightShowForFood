@@ -27,7 +27,7 @@ curb appeal up top, **brutalist GitHub underneath** (yaml girders, verify CI, re
 | **1996 Winograd talk** (centerpiece) | [`characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/`](characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) |
 | **Will — accepted invitation** | [`characters/will-wright/invitation.md`](characters/will-wright/invitation.md) · [**BROWSE any order**](repo-shows/will-wright-premiere/BROWSE.md) |
 | **Guest directories** | [`characters/`](characters/README.md) · [`characters/README.md`](characters/README.md) |
-| **Portrayal standards** | [`schemas/portrayal-standards.yml`](schemas/portrayal-standards.yml) |
+| **Portrayal standards** | [`schemas/portrayal-standards.md`](schemas/portrayal-standards.md) |
 | **Live repo policy** | [`process/live-repo.yml`](process/live-repo.yml) |
 | **AI-offs** (spend proof + thoughtful commits) | [`process/ai-offs.yml`](process/ai-offs.yml) |
 | **Rig schema** | [`schemas/rig-schema.yml`](schemas/rig-schema.yml) · [`rigs/`](rigs/README.md) (+ **SETUP.md** per rig) |

@@ -10,7 +10,7 @@
 (browsers thread — NeWS, HyperLook, send-a-program); Don's Medium reformat linked there.
 
 **Nature:** Summary with **short verbatim quotes**; verify against Quora before formal citation. Credit:
-**Quora**. Governed by [`portrayal-standards.yml`](../../../../schemas/portrayal-standards.yml).
+**Quora**. Governed by [`portrayal-standards.md`](../../../../schemas/portrayal-standards.md).
 
 > **Project tie-in:** hooks **#3** (live system underneath), **#10** (HyperTalk's real lesson), kids-reading
 > performance, **Bill Atkinson** (memorial), **Snap!/Etoys** lineage. Alan was Apple Fellow during

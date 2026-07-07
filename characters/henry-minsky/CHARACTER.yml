@@ -1,5 +1,5 @@
 # Henry Minsky — invitation portrayal. NOT Henry Minsky.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: henry-minsky
@@ -11,7 +11,7 @@ character:
   home: characters/henry-minsky/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 3
   authored_by: don-hopkins
 
@@ -57,4 +57,4 @@ see_also:
   - { path: ../marvin-minsky/, why: "🕯️ His father — Society of Mind, MIT AI Lab (memorial)" }
   - { path: ../margaret-minsky/, why: "His sister — haptics / MIT Media Lab" }
   - { path: ../../process/vision-and-ambition.yml, why: "Connector hub (connectors_and_legacy#brokering) — MIT-AI-Lab nexus" }
-  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

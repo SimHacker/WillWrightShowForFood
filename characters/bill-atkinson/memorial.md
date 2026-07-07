@@ -8,7 +8,7 @@ mode: represent_and_discuss
 # In memoriam — Bill Atkinson (1951–2025)
 
 *Memorial mode: we represent and discuss his work; we do not interview him or speak as him.*
-[Memorial standards](../../schemas/portrayal-standards.yml#memorial_mode)
+[Memorial standards](../../schemas/portrayal-standards.md#memorial-mode)
 
 Bill Atkinson gave the Macintosh its graphical soul — QuickDraw, MacPaint, and **HyperCard**,
 the hypermedia "stacks of cards" that let non-programmers build and link software, years before

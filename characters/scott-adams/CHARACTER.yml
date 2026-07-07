@@ -1,6 +1,6 @@
 # Scott Adams — invitation portrayal. NOT Scott Adams.
 # The ADVENTURE-GAME PIONEER (Adventureland, Adventure International), NOT the Dilbert cartoonist.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: scott-adams
@@ -13,7 +13,7 @@ character:
   home: characters/scott-adams/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 2
   authored_by: don-hopkins
 
@@ -68,4 +68,4 @@ see_also:
   - { path: ideas.md, why: "Quick hooks (points to show catalog)" }
   - { path: ../don-hopkins/career/lineage.yml, why: "Logo Adventure + adventure-map grammar + the adventure compiler" }
   - { path: ../don-hopkins/GLANCE.yml, why: "The career memory palace -> compiled by the adventure compiler (future)" }
-  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with the subject's own responses" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with the subject's own responses" }

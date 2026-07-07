@@ -1,5 +1,5 @@
 # Jeff Adkins — collaborator + guest portrayal. NOT Jeff Adkins.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: jeff-adkins
@@ -12,7 +12,7 @@ character:
   home: characters/jeff-adkins/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 3          # real collaborator, active dialogue, enthusiastic — named + credited with consent
   authored_by: don-hopkins
   note: "Real collaborator + friend-of-the-project. Jeff may shape, delay, decline, or delete anytime."

@@ -13,7 +13,7 @@
 - *"What became of the work done at VPRI?"*
 
 **Nature:** Summary with **short verbatim quotes**; verify against Quora before formal citation. Credit:
-**Quora**. Governed by [`portrayal-standards.yml`](../../../../schemas/portrayal-standards.yml).
+**Quora**. Governed by [`portrayal-standards.md`](../../../../schemas/portrayal-standards.md).
 
 > **Project tie-in:** feeds hook **#15**, the Repo-Show thesis on *how to run a lab*, and cross-links to
 > **Bob Taylor**, **Butler Lampson**, **Dan Ingalls**, **Yoshiki Ohshima**, **Alex Warth**, **Bret Victor**.

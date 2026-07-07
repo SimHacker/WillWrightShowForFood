@@ -1,5 +1,5 @@
 # Mats Knutsen — correspondence portrayal. NOT Mats Knutsen.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: mats-knutsen
@@ -11,7 +11,7 @@ character:
   home: characters/mats-knutsen/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 1
   authored_by: don-hopkins
 

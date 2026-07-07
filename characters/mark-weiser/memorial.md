@@ -8,7 +8,7 @@ mode: represent_and_discuss
 # In memoriam — Mark Weiser (1952–1999)
 
 *Memorial mode: we represent and discuss his work; we do not interview him or speak as him.*
-[Memorial standards](../../schemas/portrayal-standards.yml#memorial_mode)
+[Memorial standards](../../schemas/portrayal-standards.md#memorial-mode)
 
 Mark Weiser named the future we live in — **ubiquitous computing** — and argued for **calm
 technology** that informs without demanding our attention. As CTO of Xerox PARC he shaped a

@@ -10,3 +10,4 @@ BBS networks as social organism.
 | Archive | [sensitiveresearch.com](https://www.sensitiveresearch.com/) |
 | TLGnet history | [TLG archive](https://www.sensitiveresearch.com/Archive/TLG/TLG.html) |
 | TLG co-founder | [`../david-henkel-wallace/`](../david-henkel-wallace/README.md) |
+| TLG / Archive | [`../brewster-kahle/`](../brewster-kahle/README.md) |

@@ -1,5 +1,5 @@
 # Netochka Nezvanova — invitation portrayal of a public art persona. NOT the person(s) behind it.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 # Mystique is the medium here: suspected identities and rumors are labeled AS rumors, on purpose.
 
 character:
@@ -12,7 +12,7 @@ character:
   home: characters/netochka-nezvanova/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 3          # public figure: public work + net-art legend; no impersonation, no invented inner life
   authored_by: don-hopkins
   persona_note: >
@@ -70,11 +70,15 @@ rumors:                     # labeled AS rumors — the legend is the artwork; d
 
 don_connection:
   after_effects_host: >
-    Don once talked with NN about building an **After Effects plug-in host for NATO** — and
-    deliberately steered clear of actually working for/with her to avoid the notorious drama.
-    ("Dodged a bullet there, I bet! Ha ha!")
-  facebook: "Don and NN have chatted on Facebook — so someone is still reachable behind the mask; contact possibly still live (private; not published here)."
-  voice: "Don has long championed NN on Hacker News as 'brilliant yet sociopathic' — spectacular trolling AND spectacular software."
+    Don discussed an **After Effects plug-in host for NATO** — intrigued, **declined**.
+    Parallel work: PowerPC Mac live video, background removal, video feedback (Subutai Ahmad /
+    Jim Crutchfield inspired), AE plugins for CA, Warpomatic, 8-bit channel colorization.
+    Public: sources/smalltalk-squeak-lua-2006.md
+  orkut_2006: "Politics, Lua, Smalltalk/Squeak, SimFaux — sources/political-views-2006-2009.md"
+  amsterdam_2010: "Don rebooted in Amsterdam; tea invite; Forth code — DonHopkins archive"
+  facebook: "Ongoing contact possible; details not published here."
+  voice: "Don has long championed NN on Hacker News — spectacular trolling AND spectacular software."
+  full_archive: DonHopkins/characters/netochka-nezvanova/sources/
 
 connections:
   max_pd_lineage: "NATO.0+55+3d lived inside Max's visual-programming protocol; part of the patch-cord dataflow world (see visual-programming trail). Jitter (Cycling '74) later covered similar ground."
@@ -103,11 +107,17 @@ sources:
     - { title: "Rhizome Net Art Anthology — m9ndfukc.0+99", url: "https://anthology.rhizome.org/m9ndfukc-0-99" }
   primary:
     - { title: "nettime mailing list (NN flames / code-poetry)", url: "https://www.nettime.org/" }
+  public_room:
+    - { path: sources/classic-antiorp-boulanger-2000.md, why: "LEV AntiORP vs Boulanger" }
+    - { path: sources/political-views-2006-2009.md, why: "Documented political views" }
+    - { path: sources/smalltalk-squeak-lua-2006.md, why: "Smalltalk/Squeak/Lua thread" }
+    - { path: sources/don-hopkins-correspondence-digest.md, why: "Don timeline" }
   examples:
     - { title: "Jeremy Bornstein — NATO patch examples + write-up", url: "http://www.bootsquad.com/old_site/nato/nato00.html" }
     - { title: "NATO.0+55+3d running on El Capitan (video)", url: "https://www.youtube.com/watch?v=X0kQcnetR9M" }
 
 see_also:
+  - { path: sources/README.md, why: "Public evidence index" }
   - { path: ../don-hopkins/realtime-net-jamming-scene.md, why: "The nettime real-time net-jamming scene NN was the legend of — Max/MSP, NATO, Image/ine, Bounce, integrated hardware" }
   - { path: ../../process/trails/visual-programming-patch-cord.md, why: "Max/Pd patch-cord dataflow lineage NATO lived inside" }
   - { path: ../tom-demeyer/CHARACTER.yml, why: "Image/ine @ STEIM — adjacent real-time video; possible Amsterdam rumor thread" }

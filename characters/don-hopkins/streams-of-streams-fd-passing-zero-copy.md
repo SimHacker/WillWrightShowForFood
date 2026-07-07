@@ -2,7 +2,7 @@
 
 *A firsthand design-space map by Don. The OS-plumbing behind the "streams of streams / a file
 description through a file descriptor" idea — and how you'd gang modular CA layers with no copies.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## The one idea
 

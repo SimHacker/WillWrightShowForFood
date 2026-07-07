@@ -12,7 +12,7 @@ room:
   - portrayal
 meta:
   schema: ../../schemas/guest-skills-card.yml
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   card_type: fictional_skills
 card:
   name: Don Philahue
@@ -59,7 +59,7 @@ abilities:
     - trigger: portrayal_correction_needed
       weight: 0.97
   effect: Surface another card's ability on a host menu with honest invoke_as label — never speak AS guest.
-  verifiable: portrayal-standards.yml · chuck-blanchard LEAD-BE-PROGRAMMER pattern
+  verifiable: portrayal-standards.md · chuck-blanchard LEAD-BE-PROGRAMMER pattern
   combos_with: []
 - id: HAND-MAGAZINE
   name: Hand Magazine
@@ -244,7 +244,7 @@ abilities:
     - trigger: audience_learns_something_true
       weight: 0.85
   effect: Refuse to speak as real guests without consent.
-  verifiable: portrayal-standards.yml
+  verifiable: portrayal-standards.md
   combos_with: []
 - id: SIGN-OFF
   name: Sign Off

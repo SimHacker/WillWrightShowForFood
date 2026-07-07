@@ -1,6 +1,6 @@
 # Ken Perlin
 
-Invitation portrayal — **not** Ken Perlin. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Ken Perlin. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Procedural graphics, Perlin noise, interactive Java demos, NYU, constructionist-adjacent teaching through runnable artifacts
 

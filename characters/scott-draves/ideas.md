@@ -3,7 +3,7 @@
 *Conversation hooks for a Repo Show — **Don's proposed topics**, each grounded in Scott's own
 public work or in their documented friendship. Things Don would love to riff on **with** Scott;
 not quotes, not claims about what he thinks.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · old friend — likely yes
+[Portrayal standards](../../schemas/portrayal-standards.md) · old friend — likely yes
 
 ## Why these ideas fit
 

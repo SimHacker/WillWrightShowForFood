@@ -1,6 +1,6 @@
 # Stone Librande
 
-Invitation portrayal — **not** Stone Librande. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Stone Librande. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Game designer — one-page designs
 

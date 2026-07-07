@@ -1,5 +1,5 @@
 # Laurie Anderson — invitation portrayal. NOT Laurie Anderson.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: laurie-anderson
@@ -11,7 +11,7 @@ character:
   home: characters/laurie-anderson/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 1          # dream guest; not yet asked
   authored_by: don-hopkins
 

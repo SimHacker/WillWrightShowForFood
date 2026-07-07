@@ -1,6 +1,6 @@
 # Edd Coates
 
-Invitation portrayal — **not** Edd Coates. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Edd Coates. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Game UI Database · *The Game UI Bible* · PadCrafter · ethical AI archives
 

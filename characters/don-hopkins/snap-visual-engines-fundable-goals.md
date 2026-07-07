@@ -2,7 +2,7 @@
 
 *Don's design + funding vision. Four real engines, one visual programming host. Each is a standalone
 **fundable goal**; together they're a constructionist play-and-learn platform.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) ·
+[Portrayal standards](../../schemas/portrayal-standards.md) ·
 Trail: [visual-programming-patch-cord](../../process/trails/visual-programming-patch-cord.md)
 
 ## The insight

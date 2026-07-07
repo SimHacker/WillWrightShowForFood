@@ -9,7 +9,7 @@ mode: represent_and_discuss
 
 *Memorial mode: we represent and discuss his documented work; we do not interview him or speak as
 him, and we invent no quotes or inner life.*
-[Memorial standards](../../schemas/portrayal-standards.yml#memorial_mode)
+[Memorial standards](../../schemas/portrayal-standards.md#memorial-mode)
 
 Jean Piaget spent his life watching children think — closely, patiently, often his own — and in
 doing so founded **genetic epistemology**: the study of knowledge through the study of how it

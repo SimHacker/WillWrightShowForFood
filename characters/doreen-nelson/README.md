@@ -1,7 +1,7 @@
 # Doreen Nelson 📐
 
 *Invitation portrayal — not Doreen Nelson, and not her words unless sourced and marked.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · consent level 3 · authored by Don Hopkins
+[Portrayal standards](../../schemas/portrayal-standards.md) · consent level 3 · authored by Don Hopkins
 
 **Sniff:** [`CARD.yml`](CARD.yml) · [`GLANCE.yml`](GLANCE.yml)
 

@@ -1,5 +1,5 @@
 # lars-brinkhoff — reference media (PDP-7 + Type 340 / Cambridge PIXIE stack)
-# Standards: ../../../../schemas/portrayal-standards.yml
+# Standards: ../../../../schemas/portrayal-standards.md
 
 character: lars-brinkhoff
 purpose: "PIXIE emulation segment — local DEC manuals + Cambridge hardware map"

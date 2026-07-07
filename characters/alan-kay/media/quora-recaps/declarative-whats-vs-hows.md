@@ -9,7 +9,7 @@ technical answers in the corpus (Sketchpad → DWIM → spreadsheets → Nile �
 Sketchpad); [`steps-nile-runnable-math.md`](steps-nile-runnable-math.md); [`teitelman-dwim-programming-as-interaction.md`](teitelman-dwim-programming-as-interaction.md).
 
 **Nature:** Summary with **short verbatim quotes**; verify against Quora. Credit: **Quora**. Governed by
-[`portrayal-standards.yml`](../../../../schemas/portrayal-standards.yml).
+[`portrayal-standards.md`](../../../../schemas/portrayal-standards.md).
 
 ---
 

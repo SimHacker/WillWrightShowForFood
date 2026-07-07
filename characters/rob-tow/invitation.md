@@ -13,7 +13,7 @@ send_batch: interval-reunion-2026
 # Repo Show invitation — Rob Tow 🔬🌲
 
 *Send-ready draft — not yet sent. Rob Tow may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 Rob —
 

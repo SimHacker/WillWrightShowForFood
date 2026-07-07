@@ -8,7 +8,7 @@ mode: represent_and_discuss
 # In memoriam — Vanessa Freudenberg (d. 2025)
 
 *Memorial mode: we represent and discuss her work and the stories friends tell; we do not interview her or speak as her.*
-[Memorial standards](../../schemas/portrayal-standards.yml#memorial_mode)
+[Memorial standards](../../schemas/portrayal-standards.md#memorial-mode)
 
 Vanessa Freudenberg wrote **SqueakJS**, bringing a live Squeak Smalltalk virtual machine into
 the web browser — the foundation that Craig Latta's **Caffeine** builds on, and a cornerstone of

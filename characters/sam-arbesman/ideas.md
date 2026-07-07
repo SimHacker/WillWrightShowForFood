@@ -3,7 +3,7 @@
 *Conversation hooks for a Repo Show — **Don's proposed topics**, each grounded in Sam's
 public work and the Maxis/complexity thread Chaim Gingold opened. Things Don would love to
 follow **with** Sam; not quotes, not claims about what he thinks.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · invitation guest
+[Portrayal standards](../../schemas/portrayal-standards.md) · invitation guest
 
 ## What Sam has done
 

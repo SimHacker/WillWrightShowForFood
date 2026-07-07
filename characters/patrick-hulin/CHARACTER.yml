@@ -1,5 +1,5 @@
 # Patrick Hulin — invitation portrayal. NOT Patrick Hulin.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: patrick-hulin
@@ -11,7 +11,7 @@ character:
   home: characters/patrick-hulin/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 3
   authored_by: don-hopkins
 
@@ -44,4 +44,4 @@ sources:
 
 see_also:
   - { path: ../yoot-saito/yoot-tower-discussion.yml, why: "Where this lead lives — Yoot Tower reimplementation path" }
-  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

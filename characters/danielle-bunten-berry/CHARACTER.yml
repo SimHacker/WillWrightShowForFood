@@ -1,5 +1,5 @@
 # Danielle Bunten Berry — legacy portrayal (in memoriam). NOT Danielle Bunten Berry.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: danielle-bunten-berry
@@ -11,7 +11,7 @@ character:
   home: characters/danielle-bunten-berry/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 5
   authored_by: don-hopkins
 
@@ -47,4 +47,4 @@ see_also:
   - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
   - { path: ../will-wright/, why: "Dedicated The Sims to her; close friend and admirer" }
   - { path: ../don-hopkins/, why: "EA/Maxis lineage; multiplayer, play-together values" }
-  - { path: ../../schemas/portrayal-standards.yml#memorial_mode, why: "How memorial guests are handled" }
+  - { path: ../../schemas/portrayal-standards.md#memorial-mode, why: "How memorial guests are handled" }

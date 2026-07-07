@@ -9,7 +9,7 @@ show_seed: repo-shows/openlaszlo/
 # Repo Show invitation — David Temkin (OpenLaszlo reunion)
 
 *Public draft — not sent. David Temkin may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 David —
 

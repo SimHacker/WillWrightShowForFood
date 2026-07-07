@@ -1,6 +1,6 @@
 # Vanessa Freudenberg 🕯️
 
-*In memoriam (d. 2025).* Legacy portrayal — **not** Vanessa Freudenberg. [Standards](../../schemas/portrayal-standards.yml)
+*In memoriam (d. 2025).* Legacy portrayal — **not** Vanessa Freudenberg. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Smalltalk in the browser — SqueakJS, Croquet/Multisynq, Etoys, Plopp
 

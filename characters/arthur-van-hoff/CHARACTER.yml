@@ -1,5 +1,5 @@
 # Arthur van Hoff — invitation portrayal. NOT Arthur van Hoff.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: arthur-van-hoff
@@ -11,7 +11,7 @@ character:
   home: characters/arthur-van-hoff/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 2
   authored_by: don-hopkins
 
@@ -40,4 +40,4 @@ see_also:
   - { path: ../don-hopkins/, why: "HyperLook (where Don built SimCity's UI), NeWS, PdB — longtime collaborator" }
   - { path: ../bill-atkinson/, why: "HyperCard → HyperLook lineage (van Hoff's NeWS reimagining) — memorial" }
   - { path: ../../process/trails/live-objects.md, why: "NeWS / HyperLook in the live-object lineage" }
-  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

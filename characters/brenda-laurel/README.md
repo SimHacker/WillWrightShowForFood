@@ -1,6 +1,6 @@
 # Brenda Laurel
 
-Invitation portrayal — **not** Brenda Laurel. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Brenda Laurel. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Computers as Theatre · Interval · Purple Moon · gender + technology research
 

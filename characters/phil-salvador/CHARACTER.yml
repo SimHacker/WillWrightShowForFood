@@ -1,5 +1,5 @@
 # Phil Salvador — invitation portrayal. NOT Phil Salvador.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: phil-salvador
@@ -11,7 +11,7 @@ character:
   home: characters/phil-salvador/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 3
   authored_by: don-hopkins
 

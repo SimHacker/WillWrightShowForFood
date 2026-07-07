@@ -2,7 +2,7 @@
 
 North star for the **Edd Coates** Repo Show. Don's framing from public work and friendship —
 not quotes put in Edd's mouth.
-[Portrayal standards](../../schemas/portrayal-standards.yml) · consent not_yet_asked
+[Portrayal standards](../../schemas/portrayal-standards.md) · consent not_yet_asked
 
 ## The headline
 

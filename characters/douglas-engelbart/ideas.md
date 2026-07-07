@@ -2,7 +2,7 @@
 
 *Memorial mode — we **represent and discuss** Doug's documented work; we do not interview him or
 speak as him. Living guests who knew him remember on air.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · memorial
+[Portrayal standards](../../schemas/portrayal-standards.md) · memorial
 
 ## What Douglas did
 

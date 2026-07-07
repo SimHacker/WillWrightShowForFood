@@ -1,6 +1,6 @@
 # Golan Levin
 
-Invitation portrayal — **not** Golan Levin. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Golan Levin. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Interactive / computational media art, creative coding, gestural & audiovisual interfaces, generative systems, critical making, art-as-research education
 

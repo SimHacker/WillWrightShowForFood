@@ -9,7 +9,7 @@ show_seed: repo-shows/paul-debevec/
 # Repo Show invitation — Paul Debevec
 
 *Public draft — not sent. Paul Debevec may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 We would respectfully invite **Paul Debevec** to a **Repo Show** — a Repo Show Class
 conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood),

@@ -1,5 +1,5 @@
 # David S. H. Rosenthal — invitation portrayal. NOT David S. H. Rosenthal.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: david-rosenthal
@@ -11,7 +11,7 @@ character:
   home: characters/david-rosenthal/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 2
   authored_by: don-hopkins
 

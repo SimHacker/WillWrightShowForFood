@@ -2,7 +2,7 @@
 
 *Conversation hooks for a Repo Show — Don's proposed topics, grounded in PIXIE, correspondence,
 and public materials. Not quotes, not claims about what Heinz thinks.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · consent not_yet_asked
+[Portrayal standards](../../schemas/portrayal-standards.md) · consent not_yet_asked
 
 ## What Heinz has done
 

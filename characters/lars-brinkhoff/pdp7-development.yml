@@ -1,5 +1,5 @@
 # PDP-7 development — manuals, toolchain, Lars Brinkhoff repos
-# For PIXIE emulation segment. Standards: ../../schemas/portrayal-standards.yml
+# For PIXIE emulation segment. Standards: ../../schemas/portrayal-standards.md
 
 meta:
   character: lars-brinkhoff

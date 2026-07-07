@@ -11,7 +11,7 @@ paired_guest: ted-nelson
 # Repo Show invitation — Ted Selker
 
 *Send-ready draft — not yet sent. Ted Selker may edit, decline, delay, or request removal at any time.*  
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.yml)
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Ted —
 

@@ -1,5 +1,5 @@
 # Kent Pitman — invitation portrayal. NOT Kent Pitman.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: kent-pitman
@@ -11,7 +11,7 @@ character:
   home: characters/kent-pitman/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 2
   authored_by: don-hopkins
 

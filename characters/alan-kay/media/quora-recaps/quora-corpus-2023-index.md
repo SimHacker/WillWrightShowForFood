@@ -21,7 +21,7 @@ source below.
 > source before citing.** Nothing here should be quoted as Kay's exact words without checking the original.
 
 Credit: **Quora** (Alan Kay's answers) and the **Internet Archive** (natecull's capture). Governed by
-[`portrayal-standards.yml`](../../../../schemas/portrayal-standards.yml); represents *about* Alan — no
+[`portrayal-standards.md`](../../../../schemas/portrayal-standards.md); represents *about* Alan — no
 impersonation, sourced-only quoting.
 
 ---

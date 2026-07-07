@@ -1,6 +1,6 @@
 # Douglas Engelbart 🕯️
 
-*In memoriam (1925–2013).* Memorial portrayal — **not** Douglas Engelbart. [Memorial mode](../../schemas/portrayal-standards.yml#memorial_mode)
+*In memoriam (1925–2013).* Memorial portrayal — **not** Douglas Engelbart. [Memorial mode](../../schemas/portrayal-standards.md#memorial-mode)
 
 **Field:** Augmenting human intellect — NLS, the mouse, hypertext, the Mother of All Demos (1968)
 

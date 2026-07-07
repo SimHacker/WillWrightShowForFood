@@ -13,7 +13,7 @@ send_batch: interval-reunion-2026
 # Repo Show invitation — Brenda Laurel 🎭
 
 *Send-ready draft — not yet sent. Brenda Laurel may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 Brenda —
 

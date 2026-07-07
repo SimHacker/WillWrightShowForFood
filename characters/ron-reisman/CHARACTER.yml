@@ -1,6 +1,6 @@
 # Ronald J. Reisman — memorial portrayal (in memoriam). NOT Ron Reisman.
 # Memorial mode: represent + discuss, never interview. No invented quotes or inner life.
-# Standards: ../../schemas/portrayal-standards.yml#memorial_mode
+# Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
 character:
   id: ron-reisman
@@ -13,7 +13,7 @@ character:
   home: characters/ron-reisman/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 5
   authored_by: don-hopkins
 
@@ -87,4 +87,4 @@ see_also:
   - { path: ../dave-tristram/, why: "NASA Ames colleague era" }
   - { path: ../marvin-minsky/, why: "Flies Ron's Ames simulator in documented video" }
   - { path: ../don-hopkins/body-electric-bounce-vr-stack.md, why: "Convolvotron in the VR nervous system" }
-  - { path: ../../schemas/portrayal-standards.yml#memorial_mode, why: "Memorial handling" }
+  - { path: ../../schemas/portrayal-standards.md#memorial-mode, why: "Memorial handling" }

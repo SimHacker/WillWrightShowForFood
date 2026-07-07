@@ -4,7 +4,7 @@
 *A topic Don would love to chase **with** David S. H. Rosenthal — grounded in David's public work
 (co-author of *The NeWS Book* with James Gosling). Don's framing, not a claim about what David
 thinks. Open in the git-in-the-open spirit: disagree in an issue, send a PR, add a system we missed.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · invitation guest · consent not_yet_asked
+[Portrayal standards](../../schemas/portrayal-standards.md) · invitation guest · consent not_yet_asked
 
 ---
 

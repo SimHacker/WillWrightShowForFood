@@ -1,5 +1,5 @@
 # Ted Nelson — invitation portrayal. NOT Ted Nelson.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: ted-nelson
@@ -11,7 +11,7 @@ character:
   home: characters/ted-nelson/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 2
   authored_by: don-hopkins
 
@@ -52,4 +52,4 @@ see_also:
   - { path: ../douglas-engelbart/eulogy-ted-nelson.md, why: "Ted's eulogy for Doug — primary source" }
   - { path: ../ted-selker/, why: "Friend; the 'Têd-à-Têd Talk' pairing (two hyperactive Teds)" }
   - { path: ../hugh-daniel/, why: "Hugh worked with Ted on Xanadu" }
-  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

@@ -1,5 +1,5 @@
 # Brian Eno — DREAM-GUEST invitation portrayal. NOT Brian Eno.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: brian-eno
@@ -11,7 +11,7 @@ character:
   home: characters/brian-eno/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 1                  # dream guest, public-figure sketch — no relationship beyond a 2006 meeting
   authored_by: don-hopkins
   note: "DREAM GUEST. Public-figure portrayal only. Brian may shape, delay, decline, or delete anytime."

@@ -1,7 +1,7 @@
 # David A. Tristram 🎸
 
 *Invitation portrayal — a respectful, source-grounded sketch, not Dave Tristram and not his words.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · consent level 3 · authored by Don Hopkins
+[Portrayal standards](../../schemas/portrayal-standards.md) · consent level 3 · authored by Don Hopkins
 
 ## Who
 

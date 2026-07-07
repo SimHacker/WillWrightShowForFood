@@ -1,6 +1,6 @@
 # Thomas Cherryhomes
 
-Invitation portrayal — **not** Thomas Cherryhomes. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Thomas Cherryhomes. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Retrocomputing hacker/engineer; firmware developer + co-founder of FujiNet; IRATA.ONLINE (PLATO). Cross-platform C; community-builder; preservationist.
 

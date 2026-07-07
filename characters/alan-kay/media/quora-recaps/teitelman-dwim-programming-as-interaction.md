@@ -9,7 +9,7 @@
 - Lisp history thread (Teitelman's **Pilot** thesis, BBN/Interlisp)
 
 **Nature:** Summary with **short verbatim quotes**; verify against Quora. Credit: **Quora**. Governed by
-[`portrayal-standards.yml`](../../../../schemas/portrayal-standards.yml).
+[`portrayal-standards.md`](../../../../schemas/portrayal-standards.md).
 
 > **Project tie-in:** MOOLLM live editing, Don's NeWS/HyperLook lineage, **Warren Teitelman** as under-credited
 > UI pioneer. Pairs with [`declarative-whats-vs-hows.md`](declarative-whats-vs-hows.md).

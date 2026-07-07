@@ -11,7 +11,7 @@ priority: send_now
 # Repo Show invitation — Edd Coates
 
 *Send-ready draft — not yet sent. Edd Coates may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 Edd —
 

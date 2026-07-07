@@ -1,5 +1,5 @@
 # David Levitt — invitation portrayal. NOT David Levitt.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: david-levitt
@@ -11,7 +11,7 @@ character:
   home: characters/david-levitt/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 2
   authored_by: don-hopkins
 
@@ -95,4 +95,4 @@ see_also:
   - { path: ../marvin-minsky/, why: "PhD advisor — AI music; memorial discussant" }
   - { path: ../cynthia-solomon/, why: "appears in Cynthia's video trove" }
   - { path: ../don-hopkins/, why: "Pantomime Chief Architect; longtime friend + collaborator" }
-  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

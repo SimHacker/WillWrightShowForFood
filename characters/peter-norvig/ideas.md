@@ -3,7 +3,7 @@
 *Conversation hooks for a Repo Show — **Don's proposed topics**, each grounded in Peter's
 public work and documented connections to this repository. Things Don would love to follow
 **with** Peter Norvig; not quotes, not claims about what they think.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · invitation guest · consent warm_lead
+[Portrayal standards](../../schemas/portrayal-standards.md) · invitation guest · consent warm_lead
 
 ## What Peter has done
 

@@ -1,7 +1,7 @@
 # Marvin Minsky 🕯️
 
 Memorial portrayal — **not** Marvin Minsky. We *represent and discuss*; we never speak as him.
-[Memorial standards](../../schemas/portrayal-standards.yml#memorial_mode)
+[Memorial standards](../../schemas/portrayal-standards.md#memorial-mode)
 
 **Field:** AI pioneer — co-founder of the MIT AI Lab; Society of Mind, frames, K-lines, Perceptrons
 

@@ -2,7 +2,7 @@
 
 *Conversation hooks for a dream Repo Show — **Don's proposed topics**, each grounded in Nina's own
 publicly documented work. Things Don would love to riff on **with** her; **not** quotes from Nina and
-**not** claims about what she thinks.* [Portrayal standards](../../schemas/portrayal-standards.yml) ·
+**not** claims about what she thinks.* [Portrayal standards](../../schemas/portrayal-standards.md) ·
 dream guest · consent not yet asked
 
 ## The hooks

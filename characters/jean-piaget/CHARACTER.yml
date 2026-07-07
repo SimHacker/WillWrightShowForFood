@@ -1,6 +1,6 @@
 # Jean Piaget — memorial portrayal (in memoriam). NOT Jean Piaget.
 # Memorial mode: represent + discuss, never interview. No invented quotes or inner life.
-# Standards: ../../schemas/portrayal-standards.yml#memorial_mode
+# Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
 character:
   id: jean-piaget
@@ -12,7 +12,7 @@ character:
   home: characters/jean-piaget/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 5
   authored_by: don-hopkins
 
@@ -59,4 +59,4 @@ see_also:
   - { path: ../seymour-papert/, why: "🕯️ His student in Geneva — turned constructivism into constructionism + Logo" }
   - { path: ../marvin-minsky/, why: "🕯️ AI Lab — the developmental view met machine intelligence" }
   - { path: ../../process/trails/constructionist-lineage.md, why: "Piaget → Papert → the show's learning spine" }
-  - { path: ../../schemas/portrayal-standards.yml#memorial_mode, why: "How memorial guests are handled" }
+  - { path: ../../schemas/portrayal-standards.md#memorial-mode, why: "How memorial guests are handled" }

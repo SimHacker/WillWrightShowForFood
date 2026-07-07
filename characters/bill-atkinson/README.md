@@ -1,6 +1,6 @@
 # Bill Atkinson 🕯️
 
-*In memoriam (1951–2025).* Legacy portrayal — **not** Bill Atkinson. [Standards](../../schemas/portrayal-standards.yml)
+*In memoriam (1951–2025).* Legacy portrayal — **not** Bill Atkinson. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Apple GUI pioneer — QuickDraw, MacPaint, HyperCard, Atkinson dithering, marching ants
 

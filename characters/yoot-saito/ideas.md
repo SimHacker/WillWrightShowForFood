@@ -3,7 +3,7 @@
 *Conversation hooks for a Repo Show — **Don's proposed topics**, each grounded in Yoot's
 public games and his unique role as an interviewer of computing pioneers. Things Don would love
 to follow **with** Yoot; not quotes, not claims about what he thinks.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · invitation guest
+[Portrayal standards](../../schemas/portrayal-standards.md) · invitation guest
 
 ## What Yoot has done
 

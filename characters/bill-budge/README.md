@@ -12,7 +12,7 @@ Bill upstream of Will Wright's construction-set design and of MOOLLM itself.
 
 Bill Budge is **alive** (retired from Google in 2022; still shipping editor frameworks on GitHub in
 2026). This directory is an **invitation to a living person**, governed by
-[`portrayal-standards.yml`](../../schemas/portrayal-standards.yml):
+[`portrayal-standards.md`](../../schemas/portrayal-standards.md):
 
 - We represent his **public work** and cite public sources. We do **not** speak as him, invent his
   words, or run him as a simulation.

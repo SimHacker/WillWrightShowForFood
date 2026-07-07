@@ -3,13 +3,13 @@
 
 meta:
   schema: ../schemas/invitation-workflow.yml
-  portrayal: ../schemas/portrayal-standards.yml
+  portrayal: ../schemas/portrayal-standards.md
   card_surface: CARD.yml
   card_schema: ../schemas/guest-skills-card.yml
   rule: |
     OK to list dream guests before asking. Track invitation.status honestly in each directory.
     Subject may edit or delete anytime. Directories grow with responses and show artifacts —
-    see portrayal-standards.yml guest_directory.
+    see portrayal-standards.md guest_directory.
 
 flagship:
   will-wright:
@@ -160,7 +160,8 @@ guests:
   kim-cascone: { invitation_status: not_yet_asked, note: "Ambient/microsound; Csound essay w/ Eno quote — Don HN 22787566; pair w/ Brian Eno dream guest + David Levitt music thread" }
   laurie-anderson: { invitation_status: dream_guest, show_seed: repo-shows/laurie-anderson/, path: characters/laurie-anderson/, note: "Interval Talking Stick bridge; invitation drafted. Performance art; invented instruments + voice tech; VR. Pairs w/ Eno + avant-garde thread." }
   nina-hagen: { invitation_status: dream_guest, show_seed: repo-shows/nina-hagen/, path: characters/nina-hagen/, note: "Club 2 anti-censorship emblem; invitation drafted. Operatic-punk sibling to Nomi; Berlin '79 thread w/ Eno." }
-  netochka-nezvanova: { invitation_status: stub, path: characters/netochka-nezvanova/, note: "Net-art persona/collective — author of NATO.0+55+3d (1999, real-time video for Max, pre-Jitter) + m9ndfukc.0+99; nettime code-poetry trolling ('most feared woman on the Internet', Salon 2002; Cramer 'Code as cult'). Suspected identity Rebekah Wilson (flagged, mystique kept); rumors of collective / STEIM-Amsterdam / many faces. Don: talked NATO After-Effects host, dodged the drama, chats on Facebook — would love her on the show. Portrayed ABOUT (consent_level 3), no impersonation." }
+  netochka-nezvanova: { invitation_status: stub, path: characters/netochka-nezvanova/, note: "Net-art persona — NATO.0+55+3d + m9ndfukc; AntiORP/nettime; public sources/ (AntiORP, politics, Smalltalk, Don timeline); full archive DonHopkins/characters/netochka-nezvanova/. Mystique kept; no impersonation." }
+  brewster-kahle: { invitation_status: draft, path: characters/brewster-kahle/, note: "Internet Archive; WAIS; TLG ISP co-founder w/ Tom Jennings et al.; 1996 early-web-dreams interview." }
   lars-brinkhoff:
     invitation_status: invited  # responded yes-later
     show_seed: repo-shows/lars-brinkhoff/
@@ -233,7 +234,7 @@ guests:
   stone-librande: { invitation_status: not_yet_asked }
   tom-van-dijk: { invitation_status: draft, path: characters/tom-van-dijk/, show_seed: building-the-sims, contact: private, location: Deventer NL, note: "IFF Pencil author (mazelord2000); SimAntics reverse-engineering; Behavior.iff mystery; EA Legal 2002. Jun 2024 reconnect w/ Don + Eric Bowman; LUCPIX/FARx archaeology. Pair Jamie + Heather/Steve." }
   tom-demeyer: { invitation_status: not_yet_asked, note: "Image/ine @ STEIM w/ Steina Vasulka; realtime video instrument; Isadora lineage — characters/tom-demeyer/" }
-  tom-jennings: { invitation_status: draft, note: "FidoNet; TLGnet ISP w/ David Henkel-Wallace; Phoenix BIOS; Wired web; artist — characters/tom-jennings/" }
+  tom-jennings: { invitation_status: draft, note: "FidoNet; TLGnet ISP w/ David Henkel-Wallace + Brewster Kahle; Phoenix BIOS; Wired web; artist — characters/tom-jennings/" }
   ted-nelson: { invitation_status: finished, show_seed: repo-shows/ted-nelson/, note: "Têd-à-Têd Talk — public invitation ready to send, tag-team with Ted Selker; Hypertext/Xanadu; discussant for Engelbart + Hugh Daniel memorials" }
   ted-selker: { invitation_status: draft, show_seed: repo-shows/ted-selker/, priority: send_now, note: "TrackPoint, considerate computing, NPUC Multiplayer SimCity; PIXIE; pair w/ Ted Nelson Têd-à-Têd; resurrect NPUC '96 Nelson tape" }
   terry-winograd: { invitation_status: not_yet_asked, show_seed: repo-shows/terry-winograd/, media: "characters/terry-winograd/media/ — CS547 339-talk catalog (cs547-ARCHIVE.md)" }

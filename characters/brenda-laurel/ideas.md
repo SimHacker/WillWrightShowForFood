@@ -1,7 +1,7 @@
 # Ideas to explore with Brenda Laurel 🎭
 
 *Conversation hooks for a Repo Show — Don's proposed topics, grounded in public work and Interval history.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · invitation guest
+[Portrayal standards](../../schemas/portrayal-standards.md) · invitation guest
 
 ## What Brenda has done
 

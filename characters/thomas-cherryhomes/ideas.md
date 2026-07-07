@@ -5,7 +5,7 @@ the Feb 2026 VCF SoCal "State of FujiNet" talk, and the repo's Retrocomputing Dr
 Apple ][ / Repo Show Class stacks. Proposed topics Don would love to riff on **with**
 Thomas; not quotes, not claims about what he thinks.*
 
-[Portrayal standards](../../schemas/portrayal-standards.yml) · invitation draft — not yet sent
+[Portrayal standards](../../schemas/portrayal-standards.md) · invitation draft — not yet sent
 
 ## Why these ideas fit
 

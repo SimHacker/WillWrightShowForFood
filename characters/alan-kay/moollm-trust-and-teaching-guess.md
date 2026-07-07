@@ -5,7 +5,7 @@
 
 **Nature:** Don's working hypothesis + Cursor-agent analysis — **not Alan Kay's words**. Draft artifact to
 show Alan, fold his reply back in, iterate. Governed by
-[`portrayal-standards.yml`](../../schemas/portrayal-standards.yml).
+[`portrayal-standards.md`](../../schemas/portrayal-standards.md).
 
 **Status:** draft · `consent: not_yet_asked` · for Repo Show invite + live segment
 

@@ -9,7 +9,7 @@
 (CYC-like "expert system about systems").
 
 **Nature:** Summary with **short verbatim quotes**; verify against Quora. Credit: **Quora** (+ Ken Kahn comment
-Kay copied). Governed by [`portrayal-standards.yml`](../../../../schemas/portrayal-standards.yml).
+Kay copied). Governed by [`portrayal-standards.md`](../../../../schemas/portrayal-standards.md).
 
 ---
 

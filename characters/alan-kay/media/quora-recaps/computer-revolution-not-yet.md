@@ -12,7 +12,7 @@
 - *"Do you think that Alan Kay was more focused on children than education? Why?"*
 
 **Nature:** Summary with **short verbatim quotes**; verify against Quora before formal citation. Credit:
-**Quora**. Governed by [`portrayal-standards.yml`](../../../../schemas/portrayal-standards.yml).
+**Quora**. Governed by [`portrayal-standards.md`](../../../../schemas/portrayal-standards.md).
 
 > **Project tie-in:** Repo-Show **thesis** (microworlds), hook **#16**, **kids-reading performance**
 > (YootTowerManagement), constructionism guests (**Papert**, **Solomon**, **Bender**, **Jens/Brian**).

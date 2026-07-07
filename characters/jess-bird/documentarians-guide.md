@@ -126,7 +126,7 @@ the [characters catalog](../README.md) (machine registry: [`INDEX.yml`](../INDEX
 
 
 A word on how this repo treats people, because it matters to your compliance folks:
-**[portrayal standards](../../schemas/portrayal-standards.yml)** — no impersonation, no invented
+**[portrayal standards](../../schemas/portrayal-standards.md)** — no impersonation, no invented
 quotes, sourced claims only, and **every portrayed person can edit or delete their page at any
 time**. Your own page here works the same way.
 

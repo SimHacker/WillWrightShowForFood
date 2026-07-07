@@ -1,7 +1,7 @@
 # PIXIE trio thread — source listing, architecture correction, Roy Eagleson (4–7 July 2026)
 
 **Subject:** Re: Invitation to PIXIE Repo Show interview  
-[Portrayal standards](../../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../../schemas/portrayal-standards.md)
 
 Participants: Heinz U. Lemke, David S. H. Rosenthal, Don Hopkins, Lars Brinkhoff, Roy Eagleson (Cc), Franziska Schweikert (Cc), **Will Wright** (Cc on Don's 16:34 reply).
 

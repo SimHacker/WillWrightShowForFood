@@ -1,6 +1,6 @@
 # Jason Shankel
 
-Invitation portrayal — **not** Jason Shankel. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Jason Shankel. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Games + AI — Maxis / Stupid Fun Club alumnus; procedural/AI in games
 

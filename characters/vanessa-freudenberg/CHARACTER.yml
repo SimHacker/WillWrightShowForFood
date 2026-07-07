@@ -1,5 +1,5 @@
 # Vanessa Freudenberg — legacy portrayal (in memoriam). NOT Vanessa Freudenberg.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: vanessa-freudenberg
@@ -11,7 +11,7 @@ character:
   home: characters/vanessa-freudenberg/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 5
   authored_by: don-hopkins
 
@@ -52,4 +52,4 @@ see_also:
   - { path: ../dan-ingalls/, why: "Squeak lineage; Smalltalk Zoo; warmly invited memorial discussant" }
   - { path: ../alan-kay/, why: "Constructionist microworld lineage; warmly invited memorial discussant" }
   - { path: ../../repo-shows/remembering-vanessa-freudenberg.yml, why: "Memorial show arc — Craig anchor, Dan + Alan warmly invited" }
-  - { path: ../../schemas/portrayal-standards.yml#memorial_mode, why: "How memorial guests are handled" }
+  - { path: ../../schemas/portrayal-standards.md#memorial-mode, why: "How memorial guests are handled" }

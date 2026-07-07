@@ -11,7 +11,7 @@ format: remote_or_in_person
 # Repo Show invitation — Alan Kay
 
 *Send-ready draft — not yet sent. Alan Kay may edit, decline, delay, or request removal at any time.*  
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.yml)
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Alan —
 

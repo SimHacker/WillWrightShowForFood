@@ -1,5 +1,5 @@
 # Clint Basinger (LGR) — invitation portrayal. NOT Clint Basinger.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 # Note: public/legal name is **Clint Basinger**; channel brand **LGR** (@LGR on YouTube).
 
 character:
@@ -13,7 +13,7 @@ character:
   home: characters/clint-basinger/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 2
   authored_by: don-hopkins
 

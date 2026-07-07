@@ -10,7 +10,7 @@ and step in — open an issue to disagree, drop a comment, send a PR, add a stor
 something we got wrong. No login needed to matter here; email Don and he'll wire your words in with
 credit. **Memorial ground rule:** we represent and discuss Mark's documented work — we don't speak
 as him or invent his inner life. Where a claim comes from someone's memory, we say whose.*
-[Portrayal standards](../../schemas/portrayal-standards.yml#memorial_mode) · companion data:
+[Portrayal standards](../../schemas/portrayal-standards.md#memorial-mode) · companion data:
 [`pkd-lem-ai-sf.yml`](pkd-lem-ai-sf.yml)
 
 ## Where this came from

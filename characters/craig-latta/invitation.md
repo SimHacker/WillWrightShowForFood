@@ -11,7 +11,7 @@ format: remote_or_in_person
 # Repo Show invitation — Craig Latta
 
 *Send-ready draft — not yet sent. Craig Latta may edit, decline, delay, or request removal at any time.*  
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.yml)
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Craig —
 

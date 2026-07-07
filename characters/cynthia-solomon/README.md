@@ -1,7 +1,7 @@
 # Cynthia Solomon 📼
 
 *Invitation portrayal. This is a respectful, source-grounded sketch — not Cynthia Solomon, and not her words.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · consent level 2 · authored by Don Hopkins
+[Portrayal standards](../../schemas/portrayal-standards.md) · consent level 2 · authored by Don Hopkins
 
 ## Who
 

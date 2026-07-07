@@ -9,7 +9,7 @@
   (osoco.es — same heuristic)
 
 **Nature:** Summary; verify against Quora. Credit: **Quora**. Governed by
-[`portrayal-standards.yml`](../../../../schemas/portrayal-standards.yml).
+[`portrayal-standards.md`](../../../../schemas/portrayal-standards.md).
 
 > **Project tie-in:** Repo Show thesis, hook **#1**, **Snap!/Etoys/Micropolis**, MOOLLM skills as microworlds,
 > [`computer-revolution-not-yet.md`](computer-revolution-not-yet.md).

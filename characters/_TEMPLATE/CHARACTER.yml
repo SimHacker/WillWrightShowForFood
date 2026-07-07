@@ -1,5 +1,5 @@
 # CHARACTER.yml — copy to characters/<id>/CHARACTER.yml
-# Standards: ../../schemas/portrayal-standards.yml (read once — do not repeat per character)
+# Standards: ../../schemas/portrayal-standards.md (read once — do not repeat per character)
 
 character:
   id: guest-slug
@@ -11,7 +11,7 @@ character:
   home: characters/guest-slug/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 3
   authored_by: don-hopkins
 
@@ -32,4 +32,4 @@ sources:
 
 see_also:
   - { path: CARD.yml, why: "Universal CARD — MTG invokable abilities for show segments" }
-  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses — self or assisted contribution" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses — self or assisted contribution" }

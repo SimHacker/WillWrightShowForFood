@@ -11,7 +11,7 @@ format: remote_or_in_person
 # Repo Show invitation — Patrick J. Barrett III
 
 *Send-ready draft — not yet sent. Patrick J. Barrett III may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 Patrick —
 

@@ -3,7 +3,7 @@
 *Invitation portrayal — grounded in Coco Conn and Paul Rother's public HN account (Don reposted with
 Coco's permission), Paul Rother's history page, and Don's SIGGRAPH anecdotes. Not Coco's words
 unless quoted and sourced.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · consent level 2 · authored by Don Hopkins
+[Portrayal standards](../../schemas/portrayal-standards.md) · consent level 2 · authored by Don Hopkins
 
 ## Who & where
 

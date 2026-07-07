@@ -2,7 +2,7 @@
 
 *Invitation portrayal — **NOT** Marc Canter, and not claims about his views. Old friend of Don + David
 Levitt; consent not formally asked (Don expects a joyful yes).*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 **Who:** **Marc Canter** — co-founder of **MacroMind** (1984), the company behind **VideoWorks →
 Director** that became **Macromedia**; a founding figure of desktop **multimedia authoring**. Later a

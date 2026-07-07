@@ -1,6 +1,6 @@
 # David Temkin
 
-Invitation portrayal — **not** David Temkin. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** David Temkin. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Founder/CEO/CTO of Laszlo Systems — created OpenLaszlo (LZX RIA platform); later co-founded Cola
 

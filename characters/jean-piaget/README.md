@@ -1,7 +1,7 @@
 # Jean Piaget 🕯️
 
 Memorial portrayal — **not** Jean Piaget. We *represent and discuss*; we never speak as him.
-[Memorial standards](../../schemas/portrayal-standards.yml#memorial_mode)
+[Memorial standards](../../schemas/portrayal-standards.md#memorial-mode)
 
 **Field:** Developmental psychologist & genetic epistemologist — constructivism, stages of cognitive development
 

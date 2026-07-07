@@ -9,7 +9,7 @@ show_seed: repo-shows/will-wright/
 # Repo Show invitation — Will Wright
 
 *Accepted — Will loves the idea and is ready to go. He may edit, delay episodes, or request changes anytime.*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.yml) · [**Guest prototype**](guest-prototype.yml) (how we respect your time)
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) · [**Guest prototype**](guest-prototype.yml) (how we respect your time)
 
 ## Invitation
 

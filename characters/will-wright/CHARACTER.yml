@@ -1,5 +1,5 @@
 # Will Wright — invitation portrayal (flagship guest)
-# NOT Will Wright. Standards: ../../schemas/portrayal-standards.yml
+# NOT Will Wright. Standards: ../../schemas/portrayal-standards.md
 # First full CHARACTER.yml in WWSFF — template for co-authored guest files later.
 
 character:
@@ -13,7 +13,7 @@ character:
   aliases: ["Klapaucius"]
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 3
   authored_by: don-hopkins
   primed_by: don-hopkins

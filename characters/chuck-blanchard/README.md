@@ -1,6 +1,6 @@
 # Chuck Blanchard 🥽🛠️
 
-*A public portrayal for a Repo Show invitation. NOT Chuck Blanchard. See [portrayal-standards](../../schemas/portrayal-standards.yml).*
+*A public portrayal for a Repo Show invitation. NOT Chuck Blanchard. See [portrayal-standards](../../schemas/portrayal-standards.md).*
 
 ## Who
 

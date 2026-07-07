@@ -1,6 +1,6 @@
 # Yoot Saito
 
-Invitation portrayal — **not** Yoot Saito. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Yoot Saito. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Game designer — The Tower / SimTower, Yoot Tower, Seaman, Odama; founder of OPeNBooK (1993) & Vivarium (1996)
 

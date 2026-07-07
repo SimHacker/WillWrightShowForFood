@@ -1,6 +1,6 @@
 # Seymour Papert — memorial portrayal (in memoriam). NOT Seymour Papert.
 # Memorial mode: represent + discuss, never interview. No invented quotes or inner life.
-# Standards: ../../schemas/portrayal-standards.yml#memorial_mode
+# Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
 character:
   id: seymour-papert
@@ -12,7 +12,7 @@ character:
   home: characters/seymour-papert/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 5
   authored_by: don-hopkins
 
@@ -64,4 +64,4 @@ see_also:
   - { path: ../walter-bender/, why: "OLPC — carries his constructionism forward (can discuss him)" }
   - { path: ../brian-harvey/, why: "Logo educator who can discuss him on air" }
   - { path: ../../process/trails/constructionist-lineage.md, why: "Piaget → Papert → the show's learning spine" }
-  - { path: ../../schemas/portrayal-standards.yml#memorial_mode, why: "How memorial guests are handled" }
+  - { path: ../../schemas/portrayal-standards.md#memorial-mode, why: "How memorial guests are handled" }

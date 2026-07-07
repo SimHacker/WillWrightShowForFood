@@ -9,7 +9,7 @@ show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml
 # Repo Show invitation — Claire Curtin
 
 *Public draft — not sent. Claire Curtin may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 Claire —
 

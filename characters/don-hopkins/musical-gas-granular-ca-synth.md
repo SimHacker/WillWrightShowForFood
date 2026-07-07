@@ -3,7 +3,7 @@
 *Don's own work — source still exists. A reimplementation target for the show (web port). Thematic
 overlap with Laurie Anderson's granular instruments — a segment idea **if** she's interested, not
 assumed. Not a claim about anyone else's work.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## What it was
 Don built a **"Musical Gas"** cellular automaton — a gas-lattice CA where particles move and **collide** on

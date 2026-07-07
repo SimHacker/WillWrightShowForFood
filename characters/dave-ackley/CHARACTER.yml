@@ -1,5 +1,5 @@
 # Dave Ackley — invitation portrayal. NOT Dave Ackley.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: dave-ackley
@@ -11,7 +11,7 @@ character:
   home: characters/dave-ackley/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 3
   authored_by: don-hopkins
   note: "Public-source portrayal + Don's own extensive writing about Ackley's work (Hacker News). Dave may edit, reduce, or delete anytime."
@@ -53,4 +53,4 @@ see_also:
   - { path: ../norman-margolus/, why: "CA looping fest co-guest — locality/reversibility ↔ robust-first spatial computing" }
   - { path: ../stephen-wolfram/, why: "CA looping fest co-guest" }
   - { path: ../don-hopkins/, why: "Host — wrote about Ackley on HN; robust-first is a MOOLLM ambient skill" }
-  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

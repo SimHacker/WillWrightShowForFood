@@ -8,7 +8,7 @@ character:
   home: characters/jaron-lanier/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 2
   authored_by: don-hopkins
 
@@ -31,4 +31,4 @@ see_also:
   - { path: ../don-hopkins/body-electric-bounce-vr-stack.md, why: "Don's firsthand Body Electric / Bounce VR-stack history — VPL's stack (Chuck Blanchard lead; Jaron's VPL)" }
   - { path: ../../repo-shows/rebounce/, why: "Rebounce — salute + hand+AI reimplementation jam, seeded by David + Jaron" }
   - { path: ../david-levitt/, why: "David created Hookup; Bounce = his Body Electric derivative; rights chain VPL → David (Body Electric) → Levity" }
-  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

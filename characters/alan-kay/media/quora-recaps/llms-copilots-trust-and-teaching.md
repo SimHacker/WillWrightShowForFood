@@ -7,7 +7,7 @@
 - *"What are the most advanced programming languages?"* (addendum on LLMs + knowledge systems)
 
 **Nature:** Summary with **short verbatim quotes**; verify against Quora before formal citation. Credit:
-**Quora**. Governed by [`portrayal-standards.yml`](../../../../schemas/portrayal-standards.yml).
+**Quora**. Governed by [`portrayal-standards.md`](../../../../schemas/portrayal-standards.md).
 
 > **Project tie-in:** MOOLLM, constructionism (trust in teachers/microworlds), pairs with
 > [`lenat-cyc-knowledge-and-slow-thinking.md`](lenat-cyc-knowledge-and-slow-thinking.md) and

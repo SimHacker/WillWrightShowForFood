@@ -10,7 +10,7 @@ warm_intro_via: interval-alumni
 # Repo Show invitation — Laurie Anderson *(dream guest)*
 
 *Dream invitation — not sent. Laurie Anderson may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 Dear Laurie,
 

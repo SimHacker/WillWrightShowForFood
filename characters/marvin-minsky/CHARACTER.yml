@@ -1,6 +1,6 @@
 # Marvin Minsky — memorial portrayal (in memoriam). NOT Marvin Minsky.
 # Memorial mode: represent + discuss, never interview. No invented quotes or inner life.
-# Standards: ../../schemas/portrayal-standards.yml#memorial_mode
+# Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
 character:
   id: marvin-minsky
@@ -12,7 +12,7 @@ character:
   home: characters/marvin-minsky/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 5
   authored_by: don-hopkins
 
@@ -73,4 +73,4 @@ see_also:
   - { path: ../jean-piaget/, why: "🕯️ Constructivism — the developmental root of the lab's learning work" }
   - { path: ../ron-reisman/, why: "🕯️ Flies Ron's Ames flight simulator in documented video — memorial pairing" }
   - { path: ../../process/trails/constructionist-lineage.md, why: "Piaget → Papert → Minsky → the show's learning spine" }
-  - { path: ../../schemas/portrayal-standards.yml#memorial_mode, why: "How memorial guests are handled" }
+  - { path: ../../schemas/portrayal-standards.md#memorial-mode, why: "How memorial guests are handled" }

@@ -8,7 +8,7 @@ mode: represent_and_discuss
 # In memoriam — Hugh Daniel (1962–2013)
 
 *Memorial mode: we represent and discuss his work and the stories friends tell; we do not interview him or speak as him.*
-[Memorial standards](../../schemas/portrayal-standards.yml#memorial_mode)
+[Memorial standards](../../schemas/portrayal-standards.md#memorial-mode)
 
 Hugh Daniel was the connective tissue of a whole scene. He was an early **sysop of The WELL**
 (c. 1985) — one of the people who proved an online community could have real heart — worked closely

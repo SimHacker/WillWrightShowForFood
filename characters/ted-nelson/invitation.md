@@ -9,7 +9,7 @@ show_seed: repo-shows/ted-nelson/
 # Repo Show invitation — Ted Nelson (a "Têd-à-Têd Talk")
 
 *Public invitation — ready to send. Ted Nelson may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.yml)
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Ted —
 

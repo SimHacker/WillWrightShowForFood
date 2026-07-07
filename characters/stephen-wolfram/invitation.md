@@ -10,7 +10,7 @@ beloved: false
 # Repo Show invitation — Stephen Wolfram
 
 *Public draft — not sent. Stephen Wolfram may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 Stephen — we built a naming discipline and an LLM operating substrate that keep turning into *your* language:
 **simple rewrite rules, iterated, that you can only understand by running them.** We think a class of our names

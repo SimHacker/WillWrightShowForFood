@@ -9,7 +9,7 @@ mode: represent_and_discuss
 
 *Memorial mode: we represent and discuss his documented work; we do not interview him or speak as
 him, and we invent no quotes or inner life.*
-[Memorial standards](../../schemas/portrayal-standards.yml#memorial_mode)
+[Memorial standards](../../schemas/portrayal-standards.md#memorial-mode)
 
 Marvin Minsky helped invent the very idea that a machine could be made to think. With **John
 McCarthy** he co-founded the **MIT AI Lab** in 1959, and for decades — often alongside **Seymour

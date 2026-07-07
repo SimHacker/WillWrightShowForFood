@@ -1,6 +1,6 @@
 # Craig Latta
 
-Invitation portrayal — **not** Craig Latta. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Craig Latta. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Livecoding the web — Caffeine (SqueakJS + WebAssembly), Context, Catalyst; Black Page Digital, Amsterdam/Berkeley
 

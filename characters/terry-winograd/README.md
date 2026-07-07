@@ -2,7 +2,7 @@
 
 *Sniff:* [`CARD.yml`](CARD.yml) · [`GLANCE.yml`](GLANCE.yml) · [`GLANCE.md`](GLANCE.md)
 
-Invitation portrayal — **not** Terry Winograd. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Terry Winograd. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** HCI, interaction design, constructionist-adjacent education, Stanford CS547 seminar series, SHRDLU legacy, Interval Research alum
 

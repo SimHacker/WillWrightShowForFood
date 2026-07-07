@@ -1,6 +1,6 @@
 # David Levitt — media & sources 🎹
 
-*Guest hub:* [`../README.md`](../README.md) · [Portrayal standards](../../../schemas/portrayal-standards.yml) · invitation guest · consent `not_yet_asked`
+*Guest hub:* [`../README.md`](../README.md) · [Portrayal standards](../../../schemas/portrayal-standards.md) · invitation guest · consent `not_yet_asked`
 
 Sourced evidence for the [ideas](../ideas.md) and [invitation](../invitation.md), organized by project.
 Most primary links below are **Don Hopkins's own public Hacker News comments** (accounts `DonHopkins`
@@ -117,4 +117,4 @@ Primary sources: [HN 7262676](https://news.ycombinator.com/item?id=7262676) (Sim
 
 *All HN links are Don's public comments (primary/firsthand). Reformatting/collection only — no words of
 David's are quoted here without a source. Governed by
-[`../../../schemas/portrayal-standards.yml`](../../../schemas/portrayal-standards.yml).*
+[`../../../schemas/portrayal-standards.md`](../../../schemas/portrayal-standards.md).*

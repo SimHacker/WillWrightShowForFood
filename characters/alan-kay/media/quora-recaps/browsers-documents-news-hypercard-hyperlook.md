@@ -16,7 +16,7 @@ viewers?' and a discussion of Smalltalk, HyperCard, NeWS, and HyperLook"*](https
 **Nature:** This is a **summary** of Alan's public Quora writing and the threaded discussion, with short
 **verbatim quotes** in quotation marks; elisions marked `[…]`. It is **not** an edit of his words.
 Credit: **Quora** (original answers + comments), **DSHR's Blog**, **The Register**, **Hacker News**. Governed by
-[`portrayal-standards.yml`](../../../../schemas/portrayal-standards.yml); Alan may request changes or removal anytime.
+[`portrayal-standards.md`](../../../../schemas/portrayal-standards.md); Alan may request changes or removal anytime.
 
 ---
 

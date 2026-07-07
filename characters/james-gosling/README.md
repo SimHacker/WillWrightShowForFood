@@ -25,7 +25,7 @@ contrast with Cambridge **PDP-7/Titan** PIXIE: [`../heinz-lemke/cambridge-films-
 
 *Sniff:* [`CARD.yml`](CARD.yml) · [`GLANCE.yml`](GLANCE.yml) · [`GLANCE.md`](GLANCE.md)
 
-Invitation portrayal — **not** James Gosling. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** James Gosling. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Network window systems (Andrew, NeWS/SunDew), Gosling/UniPress Emacs, Java; extension-language lineage; Liquid Robotics
 

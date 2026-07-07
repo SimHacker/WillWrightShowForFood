@@ -1,6 +1,6 @@
 # Ted Nelson
 
-Invitation portrayal — **not** Ted Nelson. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Ted Nelson. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Hypertext & hypermedia (coined the terms), Project Xanadu, Computer Lib / Dream Machines, transclusion, intertwingularity
 

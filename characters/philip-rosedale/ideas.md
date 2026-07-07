@@ -3,7 +3,7 @@
 *Conversation hooks for a Repo Show — **Don's proposed topics**, grounded in Philip's public work
 and documented correspondence. Things Don would love to follow **with** Philip; not quotes, not
 claims about what he thinks.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · invitation guest
+[Portrayal standards](../../schemas/portrayal-standards.md) · invitation guest
 
 ## What Philip has done
 

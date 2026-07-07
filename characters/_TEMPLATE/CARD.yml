@@ -8,7 +8,7 @@ room:
 
 meta:
   schema: ../../schemas/guest-skills-card.yml
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
 
 card:
   name: "Full Name"

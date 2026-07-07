@@ -2,7 +2,7 @@
 
 *Conversation hooks for the Eno dream show — **Don's proposed topics**, grounded in the public record.
 These are things Don would love to riff on **with** Brian; they are **not** quotes from Brian and not
-claims about what he thinks.* [Portrayal standards](../../schemas/portrayal-standards.yml) · dream guest ·
+claims about what he thinks.* [Portrayal standards](../../schemas/portrayal-standards.md) · dream guest ·
 consent not yet asked
 
 On **Saturday Night Live, December 15, 1979** (host Martin Sheen), David Bowie performed **three

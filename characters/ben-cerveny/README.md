@@ -1,6 +1,6 @@
 # Ben Cerveny
 
-Invitation portrayal — **not** Ben Cerveny. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Ben Cerveny. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Public code, Game Neverending/Flickr, Stamen, Foundation for Public Code (Amsterdam)
 

@@ -1,7 +1,7 @@
 # Jess Bird 📺🎮📚 *(documentary writer & Sims history researcher)*
 
 *Portrayal of a real collaborator, written by Don — not Jess, and not her words. Jess may correct,
-shape, reduce, or delete any of it.* [Portrayal standards](../../schemas/portrayal-standards.yml) ·
+shape, reduce, or delete any of it.* [Portrayal standards](../../schemas/portrayal-standards.md) ·
 no Repo Show invite published · authored by Don Hopkins
 
 ## Who

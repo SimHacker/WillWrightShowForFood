@@ -9,7 +9,7 @@ show_seed: repo-shows/dave-tristram/
 # Repo Show invitation — David Tristram
 
 *Public draft — not sent. Dave may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 Dave —
 

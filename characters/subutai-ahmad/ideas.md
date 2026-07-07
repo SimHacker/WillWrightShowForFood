@@ -1,7 +1,7 @@
 # Subutai Ahmad — ideas to explore (with Will)
 
 *Don's proposed topics — not quotes from Subutai, not claims about his views. Consent not asked.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 1. **Background removal, then → now.** The Windows/Interval real-time tracking Don helped with, the
    PowerPC-Mac version he did next, and the Me2Cam Intel shipped — vs. doing it all in the **browser**

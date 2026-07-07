@@ -192,6 +192,6 @@ Two wishes remain — gifts, not loans. Rules: no twisting, no selfish waste, no
 | Will Wright TicketPR | [`audience/palm/`](../../repo-shows/will-wright-premiere/audience/palm/README.md) |
 | Slats (robot cousin) | [`slats/`](../slats/README.md) |
 | Palm emoji language | [`language-palm-emoji.yml`](../../schemas/language-palm-emoji.yml) |
-| Portrayal ethics | [`portrayal-standards.yml`](../../schemas/portrayal-standards.yml) |
+| Portrayal ethics | [`portrayal-standards.md`](../../schemas/portrayal-standards.md) |
 
 *Raw directory:* [browse files in this folder](./)

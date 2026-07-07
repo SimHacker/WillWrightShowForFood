@@ -4,14 +4,14 @@ room:
   id: characters
   name: "Guest portrayals & invitations"
   registry: INDEX.yml
-  standards: ../schemas/portrayal-standards.yml
+  standards: ../schemas/portrayal-standards.md
 
 flagship: will-wright/
 retro_pair: [lars-brinkhoff, thomas-cherryhomes]
 host_sync: don-hopkins/sync-sources.yml
 
 read_first:
-  - ../schemas/portrayal-standards.yml
+  - ../schemas/portrayal-standards.md
   - ../schemas/invitation-workflow.yml
   - https://github.com/SimHacker/moollm/skills/representation-ethics
 

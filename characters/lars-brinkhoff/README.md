@@ -1,6 +1,6 @@
 # Lars Brinkhoff
 
-Invitation portrayal — **not** Lars Brinkhoff. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Lars Brinkhoff. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** PDP-10/ITS preservation; Emacs/Lisp/Forth; nocrew.org
 

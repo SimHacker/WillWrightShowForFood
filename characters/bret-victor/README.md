@@ -1,6 +1,6 @@
 # Bret Victor
 
-Invitation portrayal — **not** Bret Victor. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Bret Victor. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Interface researcher — explorable explanations, Dynamicland
 

@@ -6,7 +6,7 @@ co-authored [**PIXIE**](https://www.donhopkins.com/home/documents/PIXIE%20a%20ne
 (1969, Cambridge PDP-7/Titan). This project treats both as one continuous story — not competing
 origin myths.
 
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 ---
 

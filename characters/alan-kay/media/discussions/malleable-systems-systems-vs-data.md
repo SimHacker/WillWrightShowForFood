@@ -10,7 +10,7 @@ Kay text here is **short verbatim quotes from his public Quora answers** (in quo
 question named); everything else is the forum participants' own argument, attributed by handle. Credit:
 **Malleable Systems Forum** and **Quora**. natecull also archived Kay's Quora corpus as a PDF on the
 **Internet Archive** (*"Alan Kay Quora 2023 11"*). Governed by
-[`portrayal-standards.yml`](../../../../schemas/portrayal-standards.yml).
+[`portrayal-standards.md`](../../../../schemas/portrayal-standards.md).
 
 > Why it lives here: exactly the "discussion fodder" the [`../quora-recaps/README.md`](../quora-recaps/README.md)
 > describes — a clean recap of a sharp critique to bring *back* to Alan and ask "what do you think now?"

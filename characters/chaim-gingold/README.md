@@ -2,7 +2,7 @@
 
 *Sniff:* [`CARD.yml`](CARD.yml) · [`GLANCE.yml`](GLANCE.yml)
 
-Invitation portrayal — **not** Chaim Gingold. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Chaim Gingold. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Designer & historian — Building SimCity, reverse diagrams
 

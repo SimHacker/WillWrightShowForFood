@@ -9,7 +9,7 @@ show_seed: repo-shows/richard-bartle/
 # Repo Show invitation — Richard Bartle
 
 *Public draft — not sent. Richard Bartle may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 We would respectfully invite **Richard Bartle** to a **Repo Show** — a Repo Show Class
 conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood),

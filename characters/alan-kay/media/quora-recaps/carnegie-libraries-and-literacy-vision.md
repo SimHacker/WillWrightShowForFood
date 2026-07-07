@@ -9,7 +9,7 @@
 - (related) Engelbart knowledge-loss thread — Carnegie children's rooms vs. the web
 
 **Nature:** Summary with **short verbatim quotes**; verify against Quora. Credit: **Quora**. Governed by
-[`portrayal-standards.yml`](../../../../schemas/portrayal-standards.yml).
+[`portrayal-standards.md`](../../../../schemas/portrayal-standards.md).
 
 > **Project tie-in:** Repo Show thesis, hook **#16**, [`computer-revolution-not-yet.md`](computer-revolution-not-yet.md),
 > **kids-reading performance**, MOOLLM as "modern Carnegie room."

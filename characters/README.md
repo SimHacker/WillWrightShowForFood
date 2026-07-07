@@ -48,7 +48,7 @@ creators; front-row audience + catalog cross-links.
 **[phil-salvador/](phil-salvador/README.md)** — VGHF / Obscuritory; SimRefinery recovery; librarian box seat.
 
 **[douglas-engelbart/](douglas-engelbart/README.md)** · **[jef-raskin/](jef-raskin/README.md)** · **[mark-weiser/](mark-weiser/README.md)** · **[hugh-daniel/](hugh-daniel/README.md)** —
-Memorial mode examples — represent and discuss **the deceased only**; never voice them. Living people appear only as **possible discussants** after consent — see each `memorial.md` and `portrayal-standards.yml#memorial_mode`.
+Memorial mode examples — represent and discuss **the deceased only**; never voice them. Living people appear only as **possible discussants** after consent — see each `memorial.md` and [portrayal-standards.md#memorial-mode](../schemas/portrayal-standards.md#memorial-mode).
 
 *Every other name:* list this folder or follow links from [`../repo-shows/`](../repo-shows/README.md).
 
@@ -61,8 +61,8 @@ Memorial mode examples — represent and discuss **the deceased only**; never vo
 
 **Ethical framing.** Everything here is sourced and public-safe (no private contact info, no
 fabricated quotes). It exists to honor people's documented work and, for the living, to invite a
-conversation — never to put words in anyone's mouth. See [portrayal standards](../schemas/portrayal-standards.yml)
-and, for the deceased, [memorial mode](../schemas/portrayal-standards.yml#memorial_mode).
+conversation — never to put words in anyone's mouth. See [portrayal standards](../schemas/portrayal-standards.md)
+and, for the deceased, [memorial mode](../schemas/portrayal-standards.md#memorial-mode).
 
 **We will edit or remove any portrayal — promptly and respectfully — on request from the person,
 or, for a memorial, from their family or estate.** Open a GitHub issue or contact Don Hopkins
@@ -72,7 +72,7 @@ through any public channel. No reason needed; no questions asked.
 
 | Doc | Purpose |
 |-----|---------|
-| [**Portrayal standards**](../schemas/portrayal-standards.yml) | Tone, citations, subject rights, directory growth, contributions |
+| [**Portrayal standards**](../schemas/portrayal-standards.md) | Tone, citations, subject rights, directory growth, contributions |
 | [**Invitation workflow**](../schemas/invitation-workflow.yml) | `draft` → `sent` → `replied` / `accepted` / `delayed` / `declined` / … |
 
 ## How directories grow
@@ -87,7 +87,7 @@ Each `characters/<slug>/` folder fills in as we prepare the show and hear back:
 
 **Contributions:** guests may edit their own directory (PR or commit, per consent). We are also glad to assist — email Don Hopkins with text, attachments, or URLs; we place public-safe material with attribution. No GitHub account required.
 
-**Memorial mode** 🕯️ — deceased forebears get full directories too, but we *represent and discuss* them; we never interview or speak as them. Each carries a `memorial:` block (who can discuss them, what shows can draw on) and a `memorial.md` tribute. See [memorial mode](../schemas/portrayal-standards.yml#memorial_mode). Examples: [douglas-engelbart/](douglas-engelbart/README.md), [mark-weiser/](mark-weiser/README.md), [hugh-daniel/](hugh-daniel/README.md).
+**Memorial mode** 🕯️ — deceased forebears get full directories too, but we *represent and discuss* them; we never interview or speak as them. Each carries a `memorial:` block (who can discuss them, what shows can draw on) and a `memorial.md` tribute. See [memorial mode](../schemas/portrayal-standards.md#memorial-mode). Examples: [douglas-engelbart/](douglas-engelbart/README.md), [mark-weiser/](mark-weiser/README.md), [hugh-daniel/](hugh-daniel/README.md).
 
 Template: [`_TEMPLATE/`](_TEMPLATE/README.md) · Schema: [`../schemas/guest-skills-card.yml`](../schemas/guest-skills-card.yml)
 

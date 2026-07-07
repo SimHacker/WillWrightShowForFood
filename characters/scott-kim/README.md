@@ -1,6 +1,6 @@
 # Scott Kim
 
-Invitation portrayal — **not** Scott Kim. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Scott Kim. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Puzzle design, ambigrams, visual thinking
 

@@ -10,7 +10,7 @@ format: live_or_async
 # Repo Show invitation — Daniel Tupper 🗽🛠️🎮
 
 *Public draft — not sent. Daniel may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 Daniel —
 

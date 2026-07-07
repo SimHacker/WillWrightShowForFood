@@ -9,7 +9,7 @@ format: live_or_async
 # Repo Show invitation — David Marusek 💍📼❄️
 
 *Public draft — not sent. David may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 David —
 

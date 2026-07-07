@@ -6,7 +6,7 @@ with **[Jaron Lanier](../jaron-lanier/README.md)** (VPL co-founder & Body Electr
 **lead designer/programmer was Chuck Blanchard**) and **[David Levitt](../david-levitt/README.md)**
 (created Hookup at MIT; built Bounce as a derivative of Body Electric). Firsthand recollection; a warm
 salute, not a spec.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) ·
+[Portrayal standards](../../schemas/portrayal-standards.md) ·
 Trail: [visual-programming-patch-cord](../../process/trails/visual-programming-patch-cord.md)
 
 **Eric Hosick VPL collection** — "All the Widgets for VPLs" (2014): [`sources/2014-vpl-snapshots-eric-hosick-thread.md`](sources/2014-vpl-snapshots-eric-hosick-thread.md)

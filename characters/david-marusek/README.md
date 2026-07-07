@@ -1,7 +1,7 @@
 # David Marusek 💍📼❄️ *(the man who married us to our copies)*
 
 *Portrayal of a real author, written by Don — not David, and not his words. David may correct,
-shape, reduce, or delete any of it.* [Portrayal standards](../../schemas/portrayal-standards.yml) ·
+shape, reduce, or delete any of it.* [Portrayal standards](../../schemas/portrayal-standards.md) ·
 invitation drafted, not sent · authored by Don Hopkins
 
 ## Who
@@ -29,7 +29,7 @@ people are owed. Marusek's own tagline: **"Till deletion do us part."**
 
 This show builds portrayals of real people, moves characters between games as portable souls, and
 keeps memorial rooms for the dead. Every safeguard in our
-[portrayal standards](../../schemas/portrayal-standards.yml) — consent levels, the right to edit
+[portrayal standards](../../schemas/portrayal-standards.md) — consent levels, the right to edit
 or delete your own portrayal, no invented inner life, memorial mode that discusses but never
 impersonates — is an answer to a wound *The Wedding Album* dramatized **in 1999**, before the
 Sims shipped, before LLMs, before voice clones.

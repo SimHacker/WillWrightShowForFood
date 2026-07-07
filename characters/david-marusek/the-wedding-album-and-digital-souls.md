@@ -53,7 +53,7 @@ with rules — and the rules read like a settlement of *Marusek v. The Future*:
 
 | The Album's wound | The repo's rule |
 |---|---|
-| The sim never consented to existing | [Portrayal standards](../../schemas/portrayal-standards.yml): consent levels tracked per person; invitations honest about status; "not_yet_asked" is a real state, not a loophole |
+| The sim never consented to existing | [Portrayal standards](../../schemas/portrayal-standards.md): consent levels tracked per person; invitations honest about status; "not_yet_asked" is a real state, not a loophole |
 | The sim is property; deletion is the owner's whim | **Subject rights**: any portrayed person may demand correction, reduction, or deletion at any time — and the *subject*, not the file's creator, holds that right |
 | The sim believes it's Anne | We **never impersonate**: portrayals are explicitly *about* people, labeled as authored by Don, never speaking *as* the person without explicit consent |
 | Sims of the dead, ventriloquized | **Memorial mode**: represent and discuss, never interview; no invented inner life, dialogue, or quotes for the deceased |
@@ -91,4 +91,4 @@ June 1999. Till deletion do us part — and here, deletion is the subject's call
 
 ---
 
-↑ [David's room](README.md) · [character girder](CHARACTER.yml) · [portrayal standards](../../schemas/portrayal-standards.yml) · [Gerrold's HARLIE, the 1972 half of the argument](../david-gerrold/README.md)
+↑ [David's room](README.md) · [character girder](CHARACTER.yml) · [portrayal standards](../../schemas/portrayal-standards.md) · [Gerrold's HARLIE, the 1972 half of the argument](../david-gerrold/README.md)

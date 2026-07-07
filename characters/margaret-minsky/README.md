@@ -1,6 +1,6 @@
 # Margaret Minsky
 
-Invitation portrayal — **not** Margaret Minsky. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Margaret Minsky. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Haptics / force-feedback; Atari Cambridge Research Lab; MIT Media Lab
 

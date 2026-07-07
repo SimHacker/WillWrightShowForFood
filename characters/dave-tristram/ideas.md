@@ -3,7 +3,7 @@
 *Conversation hooks for a Repo Show — **Don's proposed topics**, grounded in Dave's publicly
 documented work and Don's firsthand friendship. Things Don would love to riff on **with** Dave;
 not quotes from Dave and **not** claims about what he thinks.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · consent not yet asked
+[Portrayal standards](../../schemas/portrayal-standards.md) · consent not yet asked
 
 ## The hooks
 

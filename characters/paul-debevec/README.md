@@ -1,6 +1,6 @@
 # Paul Debevec
 
-Invitation portrayal — **not** Paul Debevec. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Paul Debevec. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Light Stage, image-based lighting, photogrammetry, Rouen Revisited (with Golan Levin at Interval), now Director of Research, Creative Algorithms and Technology at Netflix
 

@@ -3,7 +3,7 @@
 *A true story Don loves to tell — and would love to tell properly **with** Doug, Brian, Scott, and
 Will. Album facts are public record (sources below); the San Francisco encounter is Don's own
 recollection; Doug's account is quoted from his own site.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 > **Why this is gold for the show:** Doug's record is a **tangible example of "honor by
 > transformation" that Brian Eno already publicly loves** — Eno called it *"beautiful music"* made

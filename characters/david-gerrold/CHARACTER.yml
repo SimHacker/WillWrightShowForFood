@@ -1,5 +1,5 @@
 # David Gerrold — invitation portrayal. NOT David Gerrold.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: david-gerrold
@@ -11,7 +11,7 @@ character:
   home: characters/david-gerrold/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 3
   authored_by: don-hopkins
   note: |
@@ -82,4 +82,4 @@ see_also:
   - { path: invitation.md, why: "Draft invitation — Don will send personally" }
   - { path: ../david-marusek/, why: "Fellow SF author guest — digital-souls wing" }
   - { path: ../david-marusek/the-wedding-album-and-digital-souls.md, why: "The companion essay — simulated-people ethics the show inherits" }
-  - { path: ../../schemas/portrayal-standards.yml, why: "The HARLIE questions, operationalized" }
+  - { path: ../../schemas/portrayal-standards.md, why: "The HARLIE questions, operationalized" }

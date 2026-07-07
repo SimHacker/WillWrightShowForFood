@@ -11,7 +11,7 @@ priority: send_ready
 # Repo Show invitation — Bret Victor
 
 *Send-ready draft — not yet sent. Bret Victor may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 Bret —
 

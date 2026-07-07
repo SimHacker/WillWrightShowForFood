@@ -1,5 +1,5 @@
 # Terry Winograd — invitation portrayal. NOT Terry Winograd.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: terry-winograd
@@ -11,7 +11,7 @@ character:
   home: characters/terry-winograd/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 2
   authored_by: don-hopkins
 

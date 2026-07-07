@@ -1,6 +1,6 @@
 # Dan Ingalls
 
-Invitation portrayal — **not** Dan Ingalls. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Dan Ingalls. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Smalltalk architect — BitBlt, pop-up menus, Squeak, Fabrik, the Lively Kernel, [Smalltalk Zoo](https://smalltalkzoo.thechm.org/)
 

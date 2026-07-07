@@ -1,5 +1,5 @@
 # Isabella Struckman — invitation portrayal. NOT Isabella Struckman.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: isabella-struckman
@@ -12,7 +12,7 @@ character:
   home: characters/isabella-struckman/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 2
   authored_by: don-hopkins
   note: "Host-authored from public profiles + colleague knowledge (Don and Isabella are colleagues at Leela AI). She may edit, reduce, or delete anytime."
@@ -57,4 +57,4 @@ see_also:
   - { path: ../henry-minsky/, why: "Leela AI co-founder/CTO — colleague" }
   - { path: ../steve-kommrusch/, why: "Leela AI colleague" }
   - { path: ../../process/vision-and-ambition.yml, why: "Current-colleagues showcase (connectors_and_legacy) — present work, not a reunion" }
-  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

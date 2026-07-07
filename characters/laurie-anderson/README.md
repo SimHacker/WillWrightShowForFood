@@ -1,7 +1,7 @@
 # Laurie Anderson 🎻🗣️ *(dream guest)*
 
 *Dream-guest invitation portrayal. A respectful, public-figure sketch — not Laurie Anderson, and not
-her words.* [Portrayal standards](../../schemas/portrayal-standards.yml) · consent level 1 · authored
+her words.* [Portrayal standards](../../schemas/portrayal-standards.md) · consent level 1 · authored
 by Don Hopkins
 
 ## Who

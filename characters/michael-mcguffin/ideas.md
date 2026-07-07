@@ -2,7 +2,7 @@
 
 *Conversation hooks — Don's Oct 2022 letter is the primary source. Not quotes attributed to McGuffin
 unless he says them on air.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## Why McGuffin
 

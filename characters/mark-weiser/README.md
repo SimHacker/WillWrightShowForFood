@@ -1,6 +1,6 @@
 # Mark Weiser 🕯️
 
-*In memoriam (1952–1999).* Memorial portrayal — **not** Mark Weiser. [Memorial mode](../../schemas/portrayal-standards.yml#memorial_mode)
+*In memoriam (1952–1999).* Memorial portrayal — **not** Mark Weiser. [Memorial mode](../../schemas/portrayal-standards.md#memorial-mode)
 
 **Field:** Ubiquitous computing, calm technology — Xerox PARC CTO; co-author of Don's CHI'88 pie-menu paper
 

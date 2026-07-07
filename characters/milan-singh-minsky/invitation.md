@@ -9,7 +9,7 @@ show_seed: repo-shows/isabella-struckman/
 # Repo Show invitation — Milan Singh Minsky
 
 *Public draft — not sent. Milan Singh Minsky may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 Milan —
 

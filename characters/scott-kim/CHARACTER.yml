@@ -1,5 +1,5 @@
 # Scott Kim — invitation portrayal. NOT Scott Kim.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: scott-kim
@@ -12,7 +12,7 @@ character:
   home: characters/scott-kim/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 3
   authored_by: don-hopkins
 
@@ -58,4 +58,4 @@ see_also:
   - { path: ../ben-shneiderman/, why: "Direct manipulation — seeing and touching state directly" }
   - { path: ../ken-perlin/, why: "Playful math + visual/procedural thinking kinship" }
   - { path: ../stone-librande/, why: "Dense, legible design — one-page systems / puzzle clarity" }
-  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses — self or assisted contribution" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses — self or assisted contribution" }

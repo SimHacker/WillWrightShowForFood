@@ -21,6 +21,7 @@ Live simulated **Fox News** parody — pie menus driving talking heads, video mi
 
 ## Related
 
+- [FauxCast on Freedom (2006 essay)](../../../../characters/don-hopkins/media/simfaux/fauxcast-on-freedom.md) — [Wayback](https://web.archive.org/web/20110611164446/http://www.donhopkins.com/drupal/node/121)  
 - [`../sugar-centralized-multiplayer-laszlo/`](../sugar-centralized-multiplayer-laszlo/README.md)  
 - OpenLaszlo reunion show seeds in [`repo-shows/openlaszlo/`](../../../../repo-shows/openlaszlo/README.md)
 

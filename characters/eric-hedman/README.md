@@ -1,6 +1,6 @@
 # Eric Hedman ("Irk") 🎞️
 
-Invitation portrayal — **not** Eric Hedman. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Eric Hedman. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Animator, artist & game designer — character animation on the **original The Sims**;
 design lead on Sims expansion packs (House Party, Livin' Large, Unleashed); **Pantomime Corporation**

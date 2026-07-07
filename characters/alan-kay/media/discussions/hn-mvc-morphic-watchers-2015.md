@@ -10,7 +10,7 @@ exchange with Alan Kay** about MVC, Morphic, projection, and direct manipulation
 **Nature:** Alan's words below are **verbatim quotes from Don's HN comment** (email correspondence, 2015).
 Don's HN text is attributed to Don. Forum reply attributed to **doublec**. Not Quora; not a live interview.
 Credit: **Hacker News**. Governed by
-[`portrayal-standards.yml`](../../../../schemas/portrayal-standards.yml).
+[`portrayal-standards.md`](../../../../schemas/portrayal-standards.md).
 
 > **Why it lives here:** complements the Quora MVC origin thread in
 > [`../quora-recaps/oop-messaging-and-what-comes-next.md`](../quora-recaps/oop-messaging-and-what-comes-next.md)

@@ -1,6 +1,6 @@
 # Isabella Struckman
 
-Invitation portrayal — **not** Isabella Struckman. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Isabella Struckman. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** AI/ML researcher — computer-vision model evaluation & training (Leela AI); ML explainability & AI policy (MIT CSAIL, Mądry Lab)
 

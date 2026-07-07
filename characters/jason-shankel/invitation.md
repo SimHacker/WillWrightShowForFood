@@ -9,7 +9,7 @@ show_seed: repo-shows/jason-shankel/
 # Repo Show invitation — Jason Shankel
 
 *Public draft — not sent. Jason Shankel may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 We would respectfully invite **Jason Shankel** to a **Repo Show** — a Repo Show Class
 conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood),

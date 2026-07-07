@@ -3,7 +3,7 @@
 *Conversation hooks for a Repo Show — **Don's proposed topics**, each grounded in Chaim's
 published scholarship and Don's primary-source role in Maxis history. Things Don would love to
 follow **with** Chaim; not quotes, not claims about what he thinks.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · invitation guest
+[Portrayal standards](../../schemas/portrayal-standards.md) · invitation guest
 
 ## What Chaim has done
 

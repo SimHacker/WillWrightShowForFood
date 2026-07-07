@@ -1,7 +1,7 @@
 # Jerry Martin 🎵
 
 *Invitation portrayal. A respectful, source-grounded sketch — not Jerry Martin, and not his words.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · consent level 2 · authored by Don Hopkins
+[Portrayal standards](../../schemas/portrayal-standards.md) · consent level 2 · authored by Don Hopkins
 
 ## Who
 

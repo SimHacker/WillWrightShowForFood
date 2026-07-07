@@ -1,7 +1,7 @@
 # Ideas to explore with Tom Jennings
 
 *Conversation hooks — Don's proposed topics from public record. Not quotes; consent not_yet_asked.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## What Tom has done (public)
 

@@ -6,7 +6,7 @@ email**, the **Hookup → Bounce → Shockwave** lineage, **Mark Coniglio's** ac
 patch-cord origins, **Image/ine** at **STEIM**, and the Jaron ephemera worth citing on air. Don's
 oral history is warm and largely from memory — items marked **[confirm on air]** are pointers to
 verify with the people who were there.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) ·
+[Portrayal standards](../../schemas/portrayal-standards.md) ·
 Trail: [visual-programming-patch-cord](../../process/trails/visual-programming-patch-cord.md)
 
 ## The correction that matters: Chuck Blanchard

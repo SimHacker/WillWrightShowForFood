@@ -1,7 +1,7 @@
 # Jeff Adkins 🪓🧬 *(SimObliterator — collaborator & guest)*
 
 *Portrayal of a real collaborator, written by Don — not Jeff, and not his words. Jeff may correct,
-shape, delay, or delete any of it.* [Portrayal standards](../../schemas/portrayal-standards.yml) ·
+shape, delay, or delete any of it.* [Portrayal standards](../../schemas/portrayal-standards.md) ·
 consent granted · authored by Don Hopkins
 
 ## Who

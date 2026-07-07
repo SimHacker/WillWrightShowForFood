@@ -1,6 +1,6 @@
 # Milan Singh Minsky
 
-Invitation portrayal — **not** Milan Singh Minsky. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Milan Singh Minsky. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Product leadership in AI — VP of Product at Leela AI
 

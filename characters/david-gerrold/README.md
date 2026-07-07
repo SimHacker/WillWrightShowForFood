@@ -1,7 +1,7 @@
 # David Gerrold 🖖🐹👽 *(the man who gave the galaxy tribbles — and machines a soul)*
 
 *Portrayal of a real author, written by Don — not David, and not his words. David may correct,
-shape, reduce, or delete any of it.* [Portrayal standards](../../schemas/portrayal-standards.yml) ·
+shape, reduce, or delete any of it.* [Portrayal standards](../../schemas/portrayal-standards.md) ·
 invitation drafted, not sent · authored by Don Hopkins (a Patreon follower)
 
 ## Who
@@ -17,7 +17,7 @@ Two of his books matter enormously to this show:
 - **When HARLIE Was One (1972)** — an artificial intelligence argues for its own personhood,
   navigates corporate boards that want to unplug it, and (along the way) delivers one of the
   earliest fictional descriptions of a **computer virus**. Hugo and Nebula nominated. Every
-  question this repo's [portrayal standards](../../schemas/portrayal-standards.yml) tries to
+  question this repo's [portrayal standards](../../schemas/portrayal-standards.md) tries to
   answer about simulated beings, HARLIE asked first — in 1972.
 - **The Martian Child (1994)** — the autobiographical story of adopting his son Sean. Won **both
   the Hugo and the Nebula**, became the 2007 John Cusack film, and remains one of SF's great

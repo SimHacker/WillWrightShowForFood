@@ -1,5 +1,5 @@
 # Mark Weiser — memorial portrayal (in memoriam). NOT Mark Weiser.
-# Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.yml#memorial_mode
+# Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
 character:
   id: mark-weiser
@@ -11,7 +11,7 @@ character:
   home: characters/mark-weiser/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 5
   authored_by: don-hopkins
 
@@ -60,4 +60,4 @@ see_also:
   - { path: ../don-hopkins/career/work-history.yml, why: "CHI'88 pie menus — Callahan, Hopkins, Weiser, Shneiderman" }
   - { path: ../don-hopkins/sources/1991-03-mark-weiser-pie-menu-tape-stylus.md, why: "1991 mail — demo tape, alphabetic pies, stylus experiments" }
   - { path: ../ben-shneiderman/, why: "Co-author who can discuss him on air" }
-  - { path: ../../schemas/portrayal-standards.yml#memorial_mode, why: "How memorial guests are handled" }
+  - { path: ../../schemas/portrayal-standards.md#memorial-mode, why: "How memorial guests are handled" }

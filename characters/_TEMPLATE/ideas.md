@@ -3,7 +3,7 @@
 *Conversation hooks for a Repo Show — **Don's proposed topics**, each grounded in {Name}'s
 public work (and, where noted below, in documented shared interests). Things Don would love to
 follow **with** {Name}; not quotes, not claims about what they think.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · invitation guest
+[Portrayal standards](../../schemas/portrayal-standards.md) · invitation guest
 
 ## What {Name} has done
 

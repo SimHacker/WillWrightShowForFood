@@ -1,7 +1,7 @@
 # Ideas to explore with David Henkel-Wallace
 
 *Conversation hooks — Don's proposed topics from public record. Leela colleague — consent not_yet_asked.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## What David has done (public)
 

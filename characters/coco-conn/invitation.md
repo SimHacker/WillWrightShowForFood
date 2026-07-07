@@ -11,7 +11,7 @@ sent_via: facebook
 # Repo Show invitation — Coco Conn
 
 *Sent 2026-07-06 via Facebook — awaiting reply. Coco may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 Coco —
 

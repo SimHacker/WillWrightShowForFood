@@ -1,5 +1,5 @@
 # Cyrus Shaoul — invitation portrayal. NOT Cyrus Shaoul.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: cyrus-shaoul
@@ -11,7 +11,7 @@ character:
   home: characters/cyrus-shaoul/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 2
   authored_by: don-hopkins
   note: "Host-authored from public sources + colleague knowledge (Don's Leela crew). Cyrus may edit, reduce, or delete anytime. Some background flagged to confirm."
@@ -49,4 +49,4 @@ see_also:
   - { path: ../../repo-shows/leela-ai/, why: "Leela AI group/solo show" }
   - { path: ../henry-minsky/, why: "Leela AI co-founder/CTO" }
   - { path: ../milan-singh-minsky/, why: "Leela AI VP Product; grid-world paper co-author" }
-  - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

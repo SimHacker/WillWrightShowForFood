@@ -1,6 +1,6 @@
 # Rob Tow
 
-Invitation portrayal — **not** Rob Tow. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Rob Tow. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Visual psychophysics · Interval Research · Placeholder VR
 

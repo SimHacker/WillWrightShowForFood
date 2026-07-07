@@ -1,5 +1,5 @@
 # Brad A. Myers — invitation portrayal. NOT Brad A. Myers.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: brad-myers
@@ -11,7 +11,7 @@ character:
   home: characters/brad-myers/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 3
   authored_by: don-hopkins
 

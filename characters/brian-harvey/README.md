@@ -1,6 +1,6 @@
 # Brian Harvey
 
-Invitation portrayal — **not** Brian Harvey. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Brian Harvey. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Computer science education; UC Berkeley (Teaching Professor Emeritus). Logo, Scheme, Snap!. Author; co-creator of The Beauty and Joy of Computing.
 

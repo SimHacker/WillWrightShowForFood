@@ -1,5 +1,5 @@
 # Lars Brinkhoff — invitation portrayal. NOT Lars Brinkhoff.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: lars-brinkhoff
@@ -11,7 +11,7 @@ character:
   home: characters/lars-brinkhoff/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 2
   authored_by: don-hopkins
 

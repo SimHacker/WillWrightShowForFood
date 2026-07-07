@@ -1,7 +1,7 @@
 # Memorial show hooks — Ronald J. Reisman
 
 *Represent + discuss only. Living guests tell stories; we do not speak as Ron.*
-[Memorial standards](../../schemas/portrayal-standards.yml#memorial_mode)
+[Memorial standards](../../schemas/portrayal-standards.md#memorial-mode)
 
 ## 1. Safety-critical engineering vs "move fast and break things"
 

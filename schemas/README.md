@@ -6,7 +6,7 @@
 
 | Schema | Purpose | Used by |
 |--------|---------|---------|
-| [`portrayal-standards.yml`](portrayal-standards.yml) | Public-safe guest portrayals — tone, citations, subject rights | [`../characters/`](../characters/README.md) |
+| [`portrayal-standards.md`](portrayal-standards.md) · [`portrayal-standards.yml`](portrayal-standards.yml) | Public-safe guest portrayals — tone, citations, subject rights | [`../characters/`](../characters/README.md) |
 | [`audience-character.yml`](audience-character.yml) | Self-authored TicketPR MOOLLM characters — per show, not guest portrayal | [`../repo-shows/_TEMPLATE/audience/`](../repo-shows/_TEMPLATE/audience/README.md) |
 | [`fictional-audience.yml`](fictional-audience.yml) | Sims characters, repo bots, tool-ghosts — ethics for seeded fictional TicketPRs | [`../repo-shows/will-wright-premiere/audience/`](../repo-shows/will-wright-premiere/audience/README.md) |
 | [`audience-ethics-experiments.yml`](audience-ethics-experiments.yml) | Spectrum: game chars · consented real self-author · self-aware AI · family · historical · theological | audience/ |
@@ -28,7 +28,7 @@
 ## Read order
 
 1. [`GLANCE.yml`](GLANCE.yml)
-2. [`portrayal-standards.yml`](portrayal-standards.yml) — once, before reading guests
+2. [`portrayal-standards.md`](portrayal-standards.md) — once, before reading guests
 3. [`rig-schema.yml`](rig-schema.yml) — if submitting a rig
 
 ## Orchestrator playsets

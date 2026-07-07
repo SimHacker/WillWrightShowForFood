@@ -1,7 +1,7 @@
 # PIXIE Repo Show — PDP-7 Hex, Lem, Coprophagia, MOOLLM (2–3 Jul 2026)
 
 **Subject:** Re: Invitation to PIXIE Repo Show interview  
-[Portrayal standards](../../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../../schemas/portrayal-standards.md)
 
 David's PDP-7/340 draft Don liked: **[pdp7.html](https://www.abitare.org/~dshr/tmp/pdp7.html)** · full text in repo: [`../pdp7-cambridge-memories.md`](../pdp7-cambridge-memories.md) — Cambridge ~1970, Piet Hein *Hex* on the 340, **"let the machine win"** (cheats if you try to win).
 

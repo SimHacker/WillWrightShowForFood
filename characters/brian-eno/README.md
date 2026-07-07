@@ -1,7 +1,7 @@
 # Brian Eno 🎛️ *(dream guest)*
 
 *Dream-guest invitation portrayal. A respectful, public-figure sketch — not Brian Eno, and not
-his words.* [Portrayal standards](../../schemas/portrayal-standards.yml) · consent level 1 ·
+his words.* [Portrayal standards](../../schemas/portrayal-standards.md) · consent level 1 ·
 authored by Don Hopkins
 
 ## Who

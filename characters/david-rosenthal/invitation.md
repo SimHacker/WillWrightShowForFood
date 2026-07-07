@@ -28,7 +28,7 @@ production_note: |
 ```
 
 *Send-ready draft — not yet sent. David S. H. Rosenthal may edit, decline, delay, or request removal at any time.*  
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.yml)
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 **Today I'm sending three matching invitations** — yours, **Heinz Lemke's**, and **Lars Brinkhoff's** — for **one group episode**. Each letter is written for the person receiving it; all three describe the same show from different angles.
 

@@ -1,6 +1,6 @@
 # Jef Raskin 🕯️
 
-*In memoriam (1943–2005).* Memorial portrayal — **not** Jef Raskin. [Memorial mode](../../schemas/portrayal-standards.yml#memorial_mode)
+*In memoriam (1943–2005).* Memorial portrayal — **not** Jef Raskin. [Memorial mode](../../schemas/portrayal-standards.md#memorial-mode)
 
 **Field:** *The Humane Interface* — locus of attention, modelessness, cognetics; Macintosh origin; Canon Cat; Archy
 

@@ -1,6 +1,6 @@
 # Patrick Hulin
 
-Invitation portrayal — **not** Patrick Hulin. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Patrick Hulin. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** Software engineer — AI-assisted reverse engineering; tower-together / towers.world (a tick-for-tick TypeScript SimTower)
 

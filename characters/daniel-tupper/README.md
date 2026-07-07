@@ -1,7 +1,7 @@
 # Daniel Tupper 🗽🛠️🎮 *(artist-programmer fan & longtime correspondent)*
 
 *Portrayal of a real correspondent, written by Don — not Daniel, and not his words. Daniel may correct,
-shape, delay, or delete any of it.* [Portrayal standards](../../schemas/portrayal-standards.yml) ·
+shape, delay, or delete any of it.* [Portrayal standards](../../schemas/portrayal-standards.md) ·
 consent not yet asked · authored by Don Hopkins
 
 ## Who

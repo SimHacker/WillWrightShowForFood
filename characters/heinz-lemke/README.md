@@ -1,6 +1,6 @@
 # Heinz U. Lemke
 
-Invitation portrayal — **not** Heinz U. Lemke. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Heinz U. Lemke. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** PIXIE (1969) — earliest known radial/pie menus on PDP-7/Titan; CARS / model-guided medicine
 

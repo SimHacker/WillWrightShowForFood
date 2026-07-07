@@ -1,6 +1,6 @@
 # Arthur van Hoff
 
-Invitation portrayal — **not** Arthur van Hoff. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Arthur van Hoff. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** NeWS/HyperLook, PdB compiler, early Java (compiler-in-Java, AWT, HotJava), Marimba (Castanet/Bongo), TiVo, Flipboard, Jaunt VR
 

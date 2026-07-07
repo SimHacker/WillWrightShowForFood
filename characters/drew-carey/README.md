@@ -19,7 +19,7 @@ If someone sent you this link, these pages are **for you** (browse without a Git
 | [Show hub](../../repo-shows/drew-carey/README.md) | Segments, links, machine-readable specs |
 
 **Your response:** accepted, delayed, too busy, declined, or no reply — all honored gracefully.
-[Portrayal standards](../../schemas/portrayal-standards.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 ---
 

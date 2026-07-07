@@ -1,6 +1,6 @@
 # Kent Pitman 🦥📖
 
-*Public portrayal — NOT Kent Pitman. See [portrayal-standards](../../schemas/portrayal-standards.yml).*
+*Public portrayal — NOT Kent Pitman. See [portrayal-standards](../../schemas/portrayal-standards.md).*
 
 **Kent Pitman (KMP)** — MACLISP / Common Lisp standardization, the **Pitmanual**, **ANIMAL** and
 **DOCTOR**, special forms and **fexprs**. Don learned Maclisp on **ITS** from Kent's **:TEACH;LISP**

@@ -1,6 +1,6 @@
 # Hugh Daniel 🕯️
 
-*In memoriam (~2013).* Memorial portrayal — **not** Hugh Daniel. [Memorial mode](../../schemas/portrayal-standards.yml#memorial_mode)
+*In memoriam (~2013).* Memorial portrayal — **not** Hugh Daniel. [Memorial mode](../../schemas/portrayal-standards.md#memorial-mode)
 
 **Field:** Xanadu, NeWS, FreeS/WAN — hacker, social connector, Don's dear friend
 

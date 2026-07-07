@@ -1,6 +1,6 @@
 # Luc Barthelet ⛵
 
-Invitation portrayal — **not** Luc Barthelet. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Luc Barthelet. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** GM Maxis (EA era); The Sims shipping; SimShow pre-launch; The Sims Online; Apple ][ veteran
 

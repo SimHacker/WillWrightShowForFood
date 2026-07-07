@@ -1,5 +1,5 @@
 # Hugh Daniel — memorial portrayal (in memoriam). NOT Hugh Daniel.
-# Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.yml#memorial_mode
+# Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
 
 character:
   id: hugh-daniel
@@ -11,7 +11,7 @@ character:
   home: characters/hugh-daniel/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 5
   authored_by: don-hopkins
 
@@ -52,4 +52,4 @@ see_also:
   - { path: ../ted-nelson/, why: "Xanadu collaborator who can discuss him on air" }
   - { path: ../arthur-van-hoff/, why: "GoodNeWS → HyperNeWS → HyperLook lineage Hugh helped seed" }
   - { path: ../../process/trails/live-objects.md, why: "NeWS lineage" }
-  - { path: ../../schemas/portrayal-standards.yml#memorial_mode, why: "How memorial guests are handled" }
+  - { path: ../../schemas/portrayal-standards.md#memorial-mode, why: "How memorial guests are handled" }

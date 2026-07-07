@@ -10,7 +10,7 @@
 [`parc-vpri-how-research-worked.md`](parc-vpri-how-research-worked.md).
 
 **Nature:** Summary of the Quora thread as it stood in 2023; verify quotes against Quora. Credit: **Quora**.
-Governed by [`portrayal-standards.yml`](../../../../schemas/portrayal-standards.yml).
+Governed by [`portrayal-standards.md`](../../../../schemas/portrayal-standards.md).
 
 ---
 

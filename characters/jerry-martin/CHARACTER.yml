@@ -1,5 +1,5 @@
 # Jerry Martin — invitation portrayal. NOT Jerry Martin.
-# Standards: ../../schemas/portrayal-standards.yml
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: jerry-martin
@@ -11,7 +11,7 @@ character:
   home: characters/jerry-martin/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.yml
+  governed_by: ../../schemas/portrayal-standards.md
   consent_level: 2
   authored_by: don-hopkins
 

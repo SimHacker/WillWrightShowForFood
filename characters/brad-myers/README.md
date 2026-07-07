@@ -1,6 +1,6 @@
 # Brad A. Myers
 
-Invitation portrayal — **not** Brad A. Myers. [Standards](../../schemas/portrayal-standards.yml)
+Invitation portrayal — **not** Brad A. Myers. [Standards](../../schemas/portrayal-standards.md)
 
 **Field:** CMU HCI — Garnet, PBD, visual programming taxonomies, UI software tools
 

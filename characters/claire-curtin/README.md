@@ -1,7 +1,7 @@
 # Claire Curtin 🏡
 
 *Invitation portrayal. A respectful, source-grounded sketch — not Claire Curtin, and not her words.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · consent level 3 · authored by Don Hopkins
+[Portrayal standards](../../schemas/portrayal-standards.md) · consent level 3 · authored by Don Hopkins
 
 ## Who
 
