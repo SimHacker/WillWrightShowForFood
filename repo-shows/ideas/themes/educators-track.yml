@@ -32,7 +32,12 @@ precedents:   # each one already happened; none of this is hypothetical
     tool for CONTROLLED EXPERIMENTS: run the city, gather data, export and analyze it as
     spreadsheets, learn data analysis and spreadsheet wrangling on the way. The game is the bait;
     the data literacy is the catch. In 2008 he offered to be listed as a collaborator and to use
-    Micropolis in his classes. see: ../../../characters/upmanu-lall/
+    Micropolis in his classes. The OPTIMUS paper (~2002) names its blocker in one sentence:
+    "Currently, SimCity lacks the open architecture to add modules and extract state variables."
+    MicropolisCore + MOOLLM is that open architecture — his 2002 wishlist (extractable state,
+    multiple student-team roles, computers as "a conversational environment", CA as teaching
+    formalism) is the 2026 feature set. Prototype code survives: github.com/ccnmtl/optimus.
+    see: ../../../characters/upmanu-lall/
   eagleson_pixie: |
     Roy Eagleson took the PIXIE repo show and pivoted his graphics-history lecture around it —
     the first spontaneous classroom adoption of a Repo Show artifact, within days of its existence.

@@ -40,14 +40,20 @@ bio:
     hear from you … perhaps i can be listed as a collaborator? and I could then say I will use in
     my classes." He is in the Micropolis manual credits (Special Thanks) to this day.
 
-quotable:   # verbatim, 9 Dec 2008 email to Don
-  reply_2008: "Fantastic to hear from you and learn what you are working on -- sounds very cool … perhaps i can be listed as a collaborator? and I could then say I will use in my classes"
+quotable:
+  reply_2008: "Fantastic to hear from you and learn what you are working on -- sounds very cool … perhaps i can be listed as a collaborator? and I could then say I will use in my classes"   # verbatim, 9 Dec 2008 email to Don
+  optimus_blocker: "Currently, SimCity lacks the open architecture to add modules and extract state variables."   # Garvin/Smyth/Sommer/Lall paper, ~2002 — the requirement MicropolisCore+MOOLLM fulfills
+
+approach: "Back into the fold with love and respect — guide, not grant ornament. Standing invitation, first look, zero obligation. Reconnection ask: 'your 2002 blocker is fixed; may we see the original OPTIMUS proposals?'"
 
 sources:
   web:
     - { title: "ASU profile — Water Institute director", url: "https://search.asu.edu/profile/4823918" }
     - { title: "Columbia Water Center", url: "https://water.columbia.edu/people/upmanu-lall" }
     - { title: "Columbia homepage", url: "https://www.columbia.edu/~ula2/" }
+    - { title: "OPTIMUS — CCNMTL portfolio (prototype Sept 2003, archived)", url: "https://ccnmtl.columbia.edu/portfolio/engineering/optimus_earth_scienc.html" }
+    - { title: "Garvin/Smyth/Sommer/Lall OPTIMUS paper (PDF)", url: "https://ccnmtl.columbia.edu/dr/papers/garvin.pdf" }
+    - { title: "ccnmtl/optimus — archived prototype code (Python, 2013)", url: "https://github.com/ccnmtl/optimus" }
   repo:
     - { title: "Micropolis manual credits — Special Thanks", path: "MicropolisCore/documentation/manual/credits.html" }
 
