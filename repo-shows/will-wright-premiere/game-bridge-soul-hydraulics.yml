@@ -80,6 +80,19 @@ the_role_gate:  # Don's ruling, 2026-07-07 — how NAMED characters cross into S
     The dream behind the masthead — kids publishing their own paper into the game,
     grown from the SimCityNet scrolling chat window — is planted at
     ../ideas/kids-city-newspaper.yml.
+  the_civic_ladder: |
+    Between the mayor's office and the letters page runs the whole ladder of
+    citizen participation, every rung an importable role at its own scope:
+    CITY COUNCIL members voting district by district, elected REPRESENTATIVES
+    carrying a neighborhood's grievances uptown, the SCHOOL BOARD fighting over
+    one building's budget, planning commissions, zoning boards of appeal,
+    neighborhood associations, the PTA, the poll workers. Real cities govern at
+    many dimensions and scopes at once — geographic (block, district, city),
+    institutional (schools, transit, parks), and temporal (a term, a hearing,
+    one angry public comment). The bridge honors all of them: a character can
+    cross as big as a mayor or as small as three minutes at the microphone
+    during the open comment period. Scope is the price of the visa; every scope
+    is a seat.
   import: |
     A Sim stepping into SimCity doesn't become one of 60,000 residents; she takes
     office. Her name goes on the city, her personality colors the advice stream,
