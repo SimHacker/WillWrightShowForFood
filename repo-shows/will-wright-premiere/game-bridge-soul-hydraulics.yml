@@ -69,6 +69,14 @@ the_role_gate:  # Don's ruling, 2026-07-07 — how NAMED characters cross into S
     TWO gates: souls move by the thousand as population (hydraulics, above), but a
     NAMED character crosses as a ROLE — Mayor, Adviser, City Planner, Police Chief,
     the voice that signs the budget instead of a face in the skyline.
+  the_press_gallery: |
+    The city hall roles aren't the only door. SimCity 2000's newspaper is a whole
+    masthead of importable roles: the JOURNALIST filing city-desk stories about your
+    zoning decisions, the ADVICE COLUMNIST answering troubled Sims by mail, and the
+    LETTERS TO THE EDITOR page — where any imported character can cross as a byline
+    and a grievance instead of a body. A Sim doesn't need an apartment to live in
+    your city; a weekly column will do. Letters are the cheapest visa the bridge
+    issues: one voice, one complaint, printed and archived in the save.
   import: |
     A Sim stepping into SimCity doesn't become one of 60,000 residents; she takes
     office. Her name goes on the city, her personality colors the advice stream,
