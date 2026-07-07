@@ -44,9 +44,12 @@ arcs:
       - ../will-wright/sources/2006-11-13-simcity-olpc-email-thread/
       - ../will-wright/sources/simcity-open-source-saga/
     long_now_thread: |
-      Long Now (Jun 2006) → audience asks Will about open-sourcing SimCity, Will very open, on
-      tape, Don in the audience → Gilmore's spark 140 days later → EA clearance → SimCity free
-      on the OLPC XO-1 by New Year's. The ball that became Micropolis.
+      Long Now (Jun 2006) → TWO audience members (Dan Ancona + Mark Live — neither Don, nor
+      planted by him) ask Will about open-sourcing SimCity; Will very open, on tape; Don in the
+      audience, having already written proposals years earlier to open-source SimCity and to
+      build open-source Sims content editing/management tools → Gilmore's spark 140 days later
+      → EA clearance → SimCity free on the OLPC XO-1 by New Year's. The ball that became
+      Micropolis — and the tool proposals Don is now building for real.
 
   show_born_in_public:
     logline: "The Repo Show assembling itself — a present-tense production thread."
