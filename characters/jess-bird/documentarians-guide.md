@@ -83,7 +83,8 @@ The arc you and Don already live: **talk to people while we can**.
 | [SimRefinery recovery](../will-wright/sources/simrefinery-recovery/)                                                    | The lost-floppy story — Phil Salvador's scholarship turned a Chevron training sim into a global preservation moment. |
 | [Phil Salvador](../phil-salvador/README.md)                                                                             | Your archivist bridge — SimRefinery + Maxis Business Simulations history.                                            |
 | [Primary sources evidence room](../will-wright/primary-sources-evidence-room.md)                                        | Don's index of what's on the record, what's scanned, what's published where.                                         |
-| [Long Now: Eno & Wright, *Playing with Time](../will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/)* | The generative-systems conversation that frames both men's careers — great archival footage lead.                    |
+| [Long Now: Eno & Wright, *Playing with Time*](../will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/) | The generative-systems conversation that frames both men's careers — and **the evening that started the ball rolling on making SimCity free**. An audience member asks Will about open-sourcing SimCity; Will says he's very open to it, on tape. Don was in the audience. Great archival footage lead. |
+| [SimCity → free: the OLPC email thread](../will-wright/sources/2006-11-13-simcity-olpc-email-thread/)                   | The receipts, 140 days after Long Now: John Gilmore's spark, Will's yes, EA's clearance, and SimCity running on the XO-1 children's laptop by New Year's — verbatim emails plus photos. Narrative cut: [the open-source saga](../will-wright/sources/simcity-open-source-saga/). |
 
 
 

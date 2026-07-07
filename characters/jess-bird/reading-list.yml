@@ -41,6 +41,12 @@ arcs:
       - ../phil-salvador/README.md
       - ../will-wright/primary-sources-evidence-room.md
       - ../will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/
+      - ../will-wright/sources/2006-11-13-simcity-olpc-email-thread/
+      - ../will-wright/sources/simcity-open-source-saga/
+    long_now_thread: |
+      Long Now (Jun 2006) → audience asks Will about open-sourcing SimCity, Will very open, on
+      tape, Don in the audience → Gilmore's spark 140 days later → EA clearance → SimCity free
+      on the OLPC XO-1 by New Year's. The ball that became Micropolis.
 
   show_born_in_public:
     logline: "The Repo Show assembling itself — a present-tense production thread."
