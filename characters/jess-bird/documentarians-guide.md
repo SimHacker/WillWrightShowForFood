@@ -86,7 +86,7 @@ production you can film *while it assembles itself*:
 
 ---
 
-## Part 2 — The people (your interview universe, public-safe)
+## Part 2 — The people (your interview universe)
 
 Everyone below has a public room in this repo. **Status is tracked honestly** — nobody is listed as
 "confirmed" who isn't. The machine-readable roster is
@@ -147,8 +147,7 @@ This directory — [`characters/jess-bird/`](README.md) — is yours to shape:
 - There's a private backstage planning space (the "green room") for anything that shouldn't be
   public — agreements, strategy, works in progress.
 
-Nothing about funding, negotiations, or production schedules appears in this public repo unless you
-put it here yourself.
+Your page says what you choose for it to say — nothing more.
 
 ---
 

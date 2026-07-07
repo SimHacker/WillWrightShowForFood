@@ -30,17 +30,19 @@ In one line: **document the Sims lineage** — Maxis veterans, preservation arch
 makers, and the design culture Will opened — so it survives on screen the way Phil Salvador's
 SimRefinery work survived on the page.
 
-## What Jess has been doing (public-safe)
+## What Jess has been doing
 
-| Thread | Notes |
-|--------|--------|
-| **Archival depth** | SimRefinery / MBS history via [Phil Salvador](../phil-salvador/); Don's published *Soul of The Sims* source |
-| **Community voices** | Introductions toward [Heather](../heather-alvey/) & [Steve](../steve-alvey/) (SimFreaks / SimSlice), Alex Avila's Sims documentary work |
-| **Maxis veterans** | Don's epithet roster + naming lore (Project X → The Sims); Understanding Comics / smart-objects lineage |
-| **Tim LeTourneau** | Interviewed Tim before his passing — Don shares Jess's wish that **Tim's words live on** in the history |
-| **Repo Show curiosity** | July 2026 — browsed [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood); wants to keep things moving together |
 
-Latest public excerpt: [`sources/2026-07-07-email-excerpt.md`](sources/2026-07-07-email-excerpt.md)
+| Thread                  | Notes                                                                                                                                   |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| **Archival depth**      | SimRefinery / MBS history via [Phil Salvador](../phil-salvador/); Don's published *Soul of The Sims* source                             |
+| **Community voices**    | Introductions toward [Heather](../heather-alvey/) & [Steve](../steve-alvey/) (SimFreaks / SimSlice), Alex Avila's Sims documentary work |
+| **Maxis veterans**      | Don's epithet roster + naming lore (Project X → The Sims); Understanding Comics / smart-objects lineage                                 |
+| **Tim LeTourneau**      | Interviewed Tim before his passing — Don shares Jess's wish that **Tim's words live on** in the history                                 |
+| **Repo Show curiosity** | July 2026 — browsed [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood); wants to keep things moving together   |
+
+
+Latest excerpt: [`sources/2026-07-07-email-excerpt.md`](sources/2026-07-07-email-excerpt.md)
 
 ## Synergy with this repo
 
@@ -48,7 +50,5 @@ Latest public excerpt: [`sources/2026-07-07-email-excerpt.md`](sources/2026-07-0
 and interviewing** on a public timeline; Jess documents at **broadcast scale**. Same sources, same
 people worth honoring, different containers.
 
-## Private context
 
-Production notes and reply drafts live in Don's green room (not public):
-`DonHopkins/projects/willwrightshowforfood/green-room/jess-bird/`
+

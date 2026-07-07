@@ -47,7 +47,7 @@ bio:
 
 mission:
   document: mission/documentary.yml
-  public_framing: |
+  framing: |
     Document the cultural and technical story of The Sims and its people — Maxis veterans,
     community archivists, modders, and the design lineage Will Wright opened — with the care
     broadcast history deserves.
@@ -57,8 +57,8 @@ correspondence:
   channel: email
   public_excerpt: sources/2026-07-07-email-excerpt.md
   private_archive: |
-    DonHopkins/projects/willwrightshowforfood/green-room/jess-bird/ — production strategy,
-    agreements, and threads not for the public repo.
+    DonHopkins/projects/willwrightshowforfood/green-room/jess-bird/ — backstage planning;
+    not all correspondence is public.
 
 synergy:
   with_repo_show: synergy/willwrightshowforfood.yml

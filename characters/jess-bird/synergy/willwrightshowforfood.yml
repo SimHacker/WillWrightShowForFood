@@ -1,4 +1,4 @@
-# Jess Bird ↔ Will Wright Show For Food — public synergy map
+# Jess Bird ↔ Will Wright Show For Food — synergy map
 # Two documenting endeavors; mutual credibility; not a merger.
 
 projects:
@@ -32,6 +32,5 @@ lend_each_other:
   jess_to_repo: broadcast credibility; veteran access; research depth
   repo_to_jess: working demos; published primary sources; community guests already warmed
 
-boundaries:
-  public_repo_avoids: [fundraising, deal terms, exclusivity, production delays]
-  no_requirement: either project waiting on the other's green light
+independence:
+  note: Neither project waits on the other's green light — each ships on its own clock.

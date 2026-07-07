@@ -1,7 +1,5 @@
 # Email excerpt — Jess Bird → Don Hopkins (7 July 2026)
 
-*Public-safe excerpt. Production and deal details omitted by request.*
-
 ---
 
 **From:** Jess Bird  
@@ -24,6 +22,3 @@
 [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) repo — code and interviews
 on a public timeline, with room for Jess's documentary work to draw from and participate without
 Don duplicating a rival production.
-
-**Why this excerpt is public:** Jess asked what the repo is; affirmed synergy; honored Tim LeTourneau
-after Don's reminder to record people while we can. No private contact info; no deal terms.
