@@ -77,6 +77,9 @@ the_role_gate:  # Don's ruling, 2026-07-07 — how NAMED characters cross into S
     and a grievance instead of a body. A Sim doesn't need an apartment to live in
     your city; a weekly column will do. Letters are the cheapest visa the bridge
     issues: one voice, one complaint, printed and archived in the save.
+    The dream behind the masthead — kids publishing their own paper into the game,
+    grown from the SimCityNet scrolling chat window — is planted at
+    ../ideas/kids-city-newspaper.yml.
   import: |
     A Sim stepping into SimCity doesn't become one of 60,000 residents; she takes
     office. Her name goes on the city, her personality colors the advice stream,

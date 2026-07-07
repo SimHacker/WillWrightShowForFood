@@ -1,0 +1,69 @@
+# Kids' City Newspaper — players publish a paper INTO the game, ABOUT the game
+# A dream Don has carried for years, born in the multiplayer SimCity scrolling
+# chat window: what if the chat grew up into a newsroom?
+
+meta:
+  id: kids-city-newspaper
+  status: seed
+  host: don-hopkins
+  dreamed: "early 1990s, SimCityNet era"
+  lineage: ../../characters/will-wright/sources/multiplayer-simcity-ui-network/README.md
+
+premise: |
+  Kids playing a shared city publish their own newspaper — INTO the game, ABOUT
+  the game. Not a feed bolted on the side: the paper is a civic organ of the city
+  itself, written by the players, archived in the save, read by the citizens
+  (and the advisors, and the next class to load the city).
+
+origin: |
+  Multiplayer X11 SimCityNet had a scrolling chat window. Watching kids argue,
+  brag, negotiate, and report in that little strip of text — "who bulldozed my
+  airport", "vote YES on the stadium" — Don saw a newsroom trying to be born.
+  The chat window was already the city's paper; it just had no masthead, no
+  bylines, no archive, no front page. The dream has been compelling him ever
+  since: promote the chat into journalism.
+
+what_kids_publish:
+  city_desk: "Reporting — what happened, who did it, what it cost. The disaster reconstructed from the save timeline."
+  editorials: "Argument — the stadium vote, the tax rate, the nuclear plant next to the school. Procedural rhetoric practiced by ten-year-olds."
+  advice_column: "Troubled Sims write in; a kid answers. Empathy drills disguised as a gag."
+  letters_to_the_editor: "The open door — every player and every imported character gets standing to complain in print."
+  classifieds_and_comics: "The fun margins — zone listings, lost llamas, hand-drawn strips about the mayor."
+
+why_it_matters: |
+  It's constructionist literacy hiding inside a city builder: reporting teaches
+  evidence (the save file is the source of record), editorials teach argument,
+  the advice column teaches empathy, and the masthead teaches roles and
+  deadlines — a civics class that thinks it's a game. The paper is also the
+  city's MEMORY: load an old save and read what its citizens were fighting
+  about. Games mostly simulate space; a player-published newspaper simulates
+  HISTORY.
+
+implementation_today: |
+  Micropolis Home federation is the modern rail: shared city state, voting
+  hooks, kid-safe collaboration — the newspaper is the publishing layer on top.
+  LLMs backstage (never bylined) can do the paste-up: layout, archive indexing,
+  pulling the save-file receipts a kid reporter asks for. Kids author; the
+  machine does the printing press. Same division of labor as the whole show.
+
+role_gate_tie: |
+  The press gallery of the role gate (../will-wright-premiere/
+  game-bridge-soul-hydraulics.yml#the_role_gate) is this dream's character door:
+  journalist, advice columnist, letters page. The kids' paper is what happens
+  when REAL kids take those roles instead of imported characters — the cheapest
+  visa in the bridge becomes the most valuable seat in the classroom.
+
+show_segment: |
+  Live on the show: load a federated Micropolis city, hand the audience the
+  masthead, and publish issue #1 during the episode — front page written by
+  viewers, disaster photo from the save, advice column answered by a guest.
+  Will has been making games about cities since 1989; let the cities finally
+  print their own paper about HIM.
+
+ties:
+  - ../../characters/will-wright/sources/multiplayer-simcity-ui-network/README.md
+  - ../will-wright-premiere/game-bridge-soul-hydraulics.yml
+  - ../../catalogs/micropolis-home/README.md
+  - ../../characters/will-wright/sources/2007-11-16-simcity-rules-alan-kay/README.md
+  - ../../characters/will-wright/media/sims-dumbold-voting-machine-README.md
+  - ideas/themes/procedural-rhetoric.yml

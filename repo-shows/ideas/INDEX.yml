@@ -132,3 +132,8 @@ shows:
     host: don-hopkins
     status: seed
     note: "2011 StoryMaker Urban Safari performed for real — Don + Parker in Amsterdam; Parker video-calls Will from the street; clips from other European cities join the playlists"
+  kids-city-newspaper:
+    file: kids-city-newspaper.yml
+    host: don-hopkins
+    status: seed
+    note: "Kids publish a newspaper INTO the game ABOUT the game — the SimCityNet scrolling chat window grown into a newsroom; Micropolis Home federation as the modern rail"
