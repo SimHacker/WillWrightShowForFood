@@ -50,6 +50,11 @@ show_and_network:
     topic: "Public WWSFF vs DonHopkins private — no backfill"
   sync-with-donhopkins.yml:
     topic: "Export/sync bundle from DonHopkins"
+  email-attachment-curation.yml:
+    topic: "Mail attachment audit 2026-07-07 — dupes, k-line rename, Phase A–D decision tree; temp is source of truth; export gate before next wave"
+    status: decision_pending
+  maxis-history-collaborators.yml:
+    topic: "Parallel Maxis/SimCity documentarians — Jess, Jimmy Maher, Phil Salvador, Chaim, community leads; outreach hold until video"
   repo-show-format:
     skill: ../skills/repo-show/
 

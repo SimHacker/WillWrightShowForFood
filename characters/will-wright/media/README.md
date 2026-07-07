@@ -87,6 +87,14 @@ Don Hopkins **photoshop** — the Sim picking Will's nose. [`sim-picking-wills-n
 
 Payoff photoshop — Will eating the Sim. [`will-wright-eating-sim.png`](will-wright-eating-sim.png)
 
+## The Sims — satire (The Onion)
+
+![The Onion meme — fake 1977 caption about Will Wright and The Sims origin](the-onion-will-wright-sims-origin-meme-1977.png)
+
+**The Onion** fake historical photo — dark gag on the *real* 1991 Oakland fire → dollhouse/Sims
+origin story. Archive only.
+[`the-onion-will-wright-sims-origin-meme-1977.png`](the-onion-will-wright-sims-origin-meme-1977.png) · [`the-onion-will-wright-sims-origin-meme-1977.yml`](the-onion-will-wright-sims-origin-meme-1977.yml)
+
 ## The Sims — development art & tools
 
 ![The Sims programmer art / scrapbook screenshot from development](sims-programmer-art-1.png)

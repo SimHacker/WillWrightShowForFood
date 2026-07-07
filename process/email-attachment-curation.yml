@@ -1,0 +1,120 @@
+# Email attachment curation — scope, dupes, naming, export gate
+# Audit: 2026-07-07 (public WWSFF only; DonHopkins/temp = source of truth, not scanned)
+# Status: decision_pending — pick phase before next bulk export
+
+meta:
+  id: email-attachment-curation
+  audited: 2026-07-07
+  scope: WillWrightShowForFood public only
+  source_of_truth: DonHopkins/temp/  # gitignored; ~5158 .eml; do not bulk-export without Phase C
+  related:
+    - sync-with-donhopkins.yml
+    - live-repo.yml
+    - character-colocation.yml
+    - trails/archive-and-provenance.md
+  gold_standard: characters/will-wright/sources/2006-11-13-simcity-olpc-email-thread/
+
+inventory_public:
+  from_mail_binaries: 41
+  olpc_thread_images: 5
+  total_files: 46
+  total_mb: ~50
+  manifest_yml_stubs: 22
+  placeholder_manifests_no_files: 11
+  cross_character_md5_dupes: 0
+  files_floating_manifest_only: ~36  # cited outside MANIFEST/REVIEW in ~5 files only
+  manifest_thread_slug_fields: 0    # no email_slug / source_thread yet
+
+naming_target:
+  pattern: "{date}-{thread-slug}-{kind}-{descriptive-title}.{ext}"
+  example: 2018-07-16-engelbart-mouse-screenshot-03-mouse-chord-diagram.png
+  rename_candidates_heuristic: ~32 of 46
+  buckets:
+    gmail_blob: 12          # photo-*blob, artifact-14dcc*
+    timestamp_screenshot: 8 # don-hopkins Engelbart series
+    paper_prefix_minimal: 12
+    already_good: 5         # olpc-simcity-01.png … 05.png
+    acceptable_semantic: 9
+
+duplicates:
+  public_now:
+    identical_md5_across_characters: none
+    same_filename_across_characters: none
+    risk: |
+      Mis-filed duplicate attachments are common in Gmail export pipelines.
+      Current public slice is clean. Future exports from temp without dedupe
+      will likely repeat PDFs under wrong character folders (see alan-kay REVIEW.yml
+      — OLPC Etoys papers moved from walter-bender).
+  policy_when_scaling:
+    - md5 index before export
+    - one canonical owner per attachment; others get canonical_ref only
+    - block gmail-blob names at export time
+
+phases:
+  A_rename_and_manifest:
+    label: "Phase A — clean public face"
+    effort: "1–2 focused sessions (~4–8h human judgment + git mv batch)"
+    scope: ~46 files today
+    tasks:
+      - rename to descriptive k-line slugs
+      - update MANIFEST.yml file + title fields
+      - add source_thread where known from REVIEW.yml / context
+      - fix hard links (CHARACTER.yml, building-simcity-cover.yml, cross-refs)
+      - dedupe alan-kay photo jpg/png pair (keep one)
+    pilot_options:
+      - characters/don-hopkins/media/from-mail/  # 10 files; Engelbart screenshots; single thread
+      - characters/alan-kay/media/from-mail/     # 12 files; REVIEW.yml has rich metadata
+
+  B_provenance_tool:
+    label: "Phase B — thread traceability"
+    effort: "~1 day tool + half day apply"
+    depends_on: read-only index from DonHopkins/temp .eml (Message-ID, Date, attachment name)
+    tasks:
+      - backfill source_thread on all manifests
+      - optional move to sources/<slug>/attachments/ instead of flat from-mail/
+    why: documentary / legal traceability; map attachment ↔ email thread slug
+
+  C_dedupe_gate:
+    label: "Phase C — export gate (do before next wave)"
+    effort: "1–2 days tooling"
+    blocks: bulk attachment mess
+    tasks:
+      - md5 dedupe across export candidates
+      - canonical owner rule
+      - reject gmail-blob filenames at export
+    when: before any new export from temp
+
+  D_full_mirror:
+    label: "Phase D — full archive mirror"
+    effort: multi-week; separate project
+    note: temp ~3.4GB / ~5158 eml — unknown attachment count; defer; temp stays private
+
+decision_tree:
+  clean_public_invitations: A
+  documentary_legal_traceability: A_and_B
+  scale_without_mess: C_before_more_export
+  full_archive_mirror: D
+
+next_step:
+  status: awaiting_choice
+  options:
+    - A_pilot_don_hopkins
+    - A_pilot_alan_kay
+    - A_whole_repo
+    - B_provenance_tool
+    - C_dedupe_gate_first
+  prompt: "Which depth — A pilot, A whole repo, B provenance tool, or C dedupe gate before more exports?"
+
+related_audit:
+  email_text:
+    wwsff_email_thread_md: 3
+    donhopkins_email_thread_md_on_disk: 191
+    donhopkins_email_thread_mb: ~1.1
+    retracted_batch: characters/will-wright/sources/README.md  # July 2026 raw threads pending curation
+  nsfw_from_mail: none_found
+  yuja_wang_tribute: characters/yuja-wang/  # added 2026-07-07 — Flight of the PIXIE citation
+
+see_also:
+  - { path: characters/alan-kay/media/from-mail/REVIEW.yml, why: "Bulk-approved attachments + thread dispositions" }
+  - { path: characters/will-wright/sources/2006-11-13-simcity-olpc-email-thread/PROVENANCE.yml, why: "Exemplar curated email bundle" }
+  - { path: schemas/portrayal-standards.md, why: "No private contact in public; subject correction rights" }

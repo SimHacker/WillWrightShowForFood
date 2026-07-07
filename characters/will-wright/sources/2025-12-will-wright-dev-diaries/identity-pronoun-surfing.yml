@@ -1,0 +1,58 @@
+# Third / first person identity surfing — Will Wright Dev Diaries (Dec 2025)
+# Source: https://www.youtube.com/watch?v=u73_yZyuDS0
+# Captured: 2026-07-07 (Don Hopkins, from on-camera interview)
+
+meta:
+  title: "Players pop between third and first person when describing play"
+  video: https://www.youtube.com/watch?v=u73_yZyuDS0
+  video_label: "Will Wright Dev Diaries (Dec 2025)"
+  captured: "2026-07-07"
+  captured_by: don-hopkins
+  verbatim_status: paraphrase_pending_transcript
+
+will_framing:
+  don_summary: |
+    Will pointed out how **users describe what they did in the game** by **popping between third
+    and first person** — surfing between different identities mid-sentence. ("I built the city" /
+    "my Sim got hungry" / "she fell in love" — the pronoun shifts are the tell.)
+  design_read: |
+    Players don't hold one stable subject position in simulation toys. Identity is **negotiated in
+    speech**, not fixed at avatar creation — which is why portable characters, heirlooms, and
+    multi-perspective memory (Proxi) aren't edge cases; they're how people already talk about play.
+
+pronoun_surfing:
+  pattern: third_person ↔ first_person mid-narration
+  examples_placeholder:
+    - "I bulldozed the industrial zone" (player as god/hand)
+    - "My Sim got promoted" (player owns avatar)
+    - "She refused to date him" (player as storyteller watching a character)
+  note: "Replace with verbatim clips from transcript when available."
+
+show_connections:
+  proxi_heirloom:
+    path: proxi-software-heirloom.yml
+    why: "Each family member's partial memory = another identity lens on the same person"
+  bartle_types:
+    path: bartle-player-types.yml
+    why: "Achiever/Explorer/Socializer/Killer may correlate with which pronoun mode players favor"
+  data_portability_1996:
+    path: ../1996-04-26-winograd-interfacing-to-microworlds/
+    why: "Train-set model — character as detachable identity across worlds"
+  minecraft_cluster:
+    path: proxi-minecraft-export.yml
+    why: "Block avatar (third-person body) + Proxi/Numenta agent voice + player 'I' in same sandbox"
+  sims_motives:
+    why: "Needs/wants system — players routinely split agency between self and Sim"
+
+show_beats:
+  - "Will reads back player interview quotes — mark the pronoun flips live on a timeline"
+  - "Bartle + pronoun surfing — do Explorers narrate in third person more often?"
+  - "Proxi heirloom session — family members each surf identities when telling grandma stories"
+  - "Repo Show meta — audience questions surf 'I asked Will' vs 'Don's show asked'"
+
+see_also:
+  - README.md
+  - proxi-software-heirloom.yml
+  - bartle-player-types.yml
+  - ../../ideas.md
+  - ../../../../repo-shows/will-wright-premiere/audience/richard-bartle/

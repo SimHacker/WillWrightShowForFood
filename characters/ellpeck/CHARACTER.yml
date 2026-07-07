@@ -1,0 +1,114 @@
+# Ell (Ellpeck) — invitation portrayal. NOT Ell.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: ellpeck
+  name: "Ell (Ellpeck)"
+  also_known_as: [Ellpeck, "Ell of Ellpeck Games"]
+  type: invitation
+  signifier: "🏡🌱"
+  status: living
+  field: |
+    Solo indie developer — Tiny Life (MonoGame, isometric pixel life sim, Early Access);
+    Ellpeck Games; published by Top Hat Studios; queer-led inclusive design; no GenAI
+  home: characters/ellpeck/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 1
+  authored_by: don-hopkins
+  note: |
+    Warm friend — prior Don conversation (recover to correspondence.yml). Praise quote on
+    tinylifegame.com with Don's consent implied by public site citation; re-confirm before filming.
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: ../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml
+  bridge_narrative: bridge/soul-city-bridge.md
+
+bio:
+  summary: |
+    **Ell** (handle **Ellpeck**) built [**Tiny Life**](https://tinylifegame.com/) as a project of love:
+    households, needs, skills, relationships, and an open world where off-screen Tinies keep living.
+    Visual lineage cites RollerCoaster Tycoon 2; gameplay cites The Sims 4; player memory cites The Sims 1.
+    Sharing is first-class — export/import, embedded story descriptions, Steam Workshop, C# mod API —
+    while EA's Sims 1 Legacy Collection removed the Exchange.
+
+  don_connection: |
+    Don quoted Tiny Life on Twitter (now on the game's Praise page). Don reports talking with Ell
+    before — channel and date to recover. Natural Repo Show guest for **Sims ⇔ Soul City ⇔ Tiny Life**:
+    Soul City as liminal waystation (Will's invitation framing), soul-file compiles to Sims 1 content
+    injection — sibling to Soul City procreation bridge.
+
+contact:
+  warm_contact: true
+  recover_thread: correspondence.yml
+  channels:
+    site: https://tinylifegame.com/
+    bluesky_dev: https://bsky.app/profile/ellpeck.bsky.social
+    bluesky_game: https://bsky.app/profile/tinylifegame.bsky.social
+    discord: "Linked from tinylifegame.com"
+    wiki: https://wiki.tinylifegame.com/
+    docs: https://docs.tinylifegame.com/
+    devlogs: https://tinylifegame.com/ (Posts — 0.50.0 gardening Jun 2026)
+
+soul_city_bridge:
+  path: "Sims ⇔ Soul City ⇔ Tiny Life"
+  not: Simopolis
+  definition: |
+    Soul City — liminal heaven where souls lay over between worlds; soul-file is source of truth;
+    each game re-renders (Will Wright Repo Show invitation: Proxi ⇔ Soul City ⇔ The Sims).
+  spec: ../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml
+  sibling: ../../repo-shows/will-wright-premiere/game-bridge-soul-city-procreation.yml
+
+tiny_life:
+  engine: MonoGame
+  share:
+    - Export/import households and lots with descriptions
+    - Steam Workshop (lots, households, worlds, mods)
+    - Manual install paths documented on docs.tinylifegame.com
+  modding: C# API; community tutorials via docs PRs
+  latest_devlog: "0.50.0 Gardening, foraging — Jun 2026"
+  inclusivity: Queer dev; Safe In Our World; Team Diversity; pronoun update dev post Apr 2023
+
+quotable:
+  don_on_site:
+    path: sources/don-praise.yml
+  ell_paralives:
+    text: |
+      paralives looks shockingly amazing … as a game dev i'm getting more and more worried that no
+      one will like or care about tiny life anymore
+    source: "@ellpeck.bsky.social — verify date before on-air"
+  plumbella_on_site:
+    text: "makes me feel the way that The Sims 1 did"
+    path: sources/praise-quotes.yml
+
+show_angles:
+  - "Read Don's Praise quote to Ell — build Soul City facet export live"
+  - "Tiny Life has sharing; Legacy Collection doesn't — Exchange revival ethics"
+  - "Plumbella + James Turner praised Tiny Life; Creator Network exodus solidarity"
+  - "Workshop + GitHub CARD federation — lift Ell, don't replace Workshop"
+  - "Ell vs Paralives — inspired games grow the row (Stardew lesson)"
+
+synergy:
+  map: synergy/willwrightshowforfood.yml
+  readme: synergy/willwrightshowforfood.md
+
+sources:
+  index: sources/README.md
+  site: sources/tinylife-site-snapshot.yml
+  don_quote: sources/don-praise.yml
+  praise: sources/praise-quotes.yml
+
+see_also:
+  - README.md
+  - GLANCE.yml
+  - CARD.yml
+  - ideas.md
+  - bridge/soul-city-bridge.md
+  - ../don-hopkins/
+  - ../will-wright/invitation.md
+  - ../../characters/will-wright/sources/sims1-legacy-collection-exchange-gap/
+  - ../../catalogs/micropolis-home/github-distribution-model.yml

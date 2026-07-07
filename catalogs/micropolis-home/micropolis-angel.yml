@@ -82,7 +82,12 @@ capabilities:
     sources:
       - ../../characters/will-wright/sources/2005-09-18-simfreaks-content-catalog-laszlo/
       - ../../characters/will-wright/sources/2004-01-12-sims-exchange/
+      - ../../characters/will-wright/sources/sims1-legacy-collection-exchange-gap/
       - ../simfreaks/
+    export_folder_watcher: |
+      Dream workflow from community research: tray app watches UserData/Houses + Web Pages export →
+      auto-upload to Micropolis Home / optional SFS → clipboard link. Replaces alt-tab browser upload
+      the 2025 Steam release never restored.
 
   machinima_and_streaming:
     items:

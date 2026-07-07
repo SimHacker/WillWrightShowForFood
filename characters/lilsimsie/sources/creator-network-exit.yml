@@ -1,0 +1,27 @@
+# lilsimsie — Creator Network exit (press snapshot)
+
+meta:
+  verify_before_on_air: true
+  timing: Oct 2025
+
+scale: "~2M YouTube subscribers (press, 2025)"
+
+reported:
+  left_ea_creator_network: true
+  prior_ea_collab: "Creator pack with EA — January 2025 (verify)"
+  no_creator_code: true
+  shift_other_games: true
+
+press_quotes_verify:
+  - source: The Verge
+    theme: "Cannot maintain direct association under new ownership"
+  - source: IGN / NME
+    theme: "Nightmare for our community; devastated by acquisition"
+
+community:
+  - "Block The EA Deal petition visibility (reported)"
+  - "Maxwell Frost stream (reported)"
+
+press_urls:
+  - https://www.theverge.com/games/816750/the-sims-ea-buyout-content-creator-program-departures-lilsimsie
+  - https://www.ign.com/articles/the-sims-creators-quit-ea-partnerships-amid-buyout-concerns

@@ -58,3 +58,6 @@ sync_cadence:
 visibility:
   now: public
   later: "May flip private pre-publication OR stay open — Will can browse without GitHub account via raw/README URLs"
+
+see_also:
+  - { path: email-attachment-curation.yml, why: "2026-07-07 attachment audit — Phase A–D; run Phase C before next from-mail export from temp" }

@@ -1,0 +1,86 @@
+# Community sharing today — SimFileShare, hubs, workflow gaps
+# Post-Exchange decentralized fan economy (2025–2026 snapshot)
+
+meta:
+  updated: "2026-07-08"
+  verify_before_on_air: true
+  official_sfs: simfileshare-official.yml
+
+principles:
+  - "Exchange is dead — sharing is manual zip + link"
+  - "SimFileShare = centralized host, not catalog — discovery on Tumblr/Discord/blogs"
+  - "ModTheSims + TSR = museums; Discord/Tumblr = live trading"
+  - "Micropolis Home = searchable index + tray upload on top of SFS permanent links"
+
+simfileshare:
+  url: https://simfileshare.net/
+  entity: SimFileShare Ltd
+  operator: "Nysha (Delphy/ModTheSims lineage — verify current operator on-air)"
+  model: |
+    Dropbox for Simmers — invite-gated upload, free unlimited download, permanent URLs, no public browse.
+    Full official FAQ/Tumblr capture: simfileshare-official.yml
+  open_source: false
+  links: "simfil.es/##### and folder URLs — paste on Simblr posts"
+  uploaders:
+    signup: Redeem code at /redeemcode/ OR Google Form (weekly codes, usually Monday)
+    barrier_why: Sims-only content; block spambots and non-Sims abuse
+    sims1_gap: Official docs cover TS2/3/4 paths only — TS1 = zip from UserData, ask creator to install
+  downloaders:
+    strength: No login; no filesize/bandwidth caps; minimal host ads vs AdFly era
+    heart: Click Love to thank creator (community etiquette)
+  limitations:
+    - No public search — must have creator link (FAQ confirms)
+    - Bulk folder download — official to-do list; Tampermonkey scripts are community workaround
+    - Umlauts / special chars in filenames — historically 404; stick to ASCII
+    - Version updates = new link unless file replaced in place
+  end_of_life_promise: Public files to Sims 2 Graveyard, Simscave before shutdown
+  security_2025:
+    note: "Apr 2025 — compromised creator accounts uploaded malware; verify extensions"
+    rule: ".package / .iff / .fam only from trusted creators; never .exe"
+
+other_hubs:
+  modthesims: { url: https://www.modthesims.info/f/662/, role: "Sims 1 forum branch + indexed downloads" }
+  thesimsresource: { url: https://www.thesimsresource.com/downloads/browse/category/sims1/, role: "Legacy category; VIP ad-free tier" }
+  sneakysims: { url: https://sneakysims.net/, role: "2025 Legacy Collection preservation spike" }
+  tumblr: { tag: "#sims1", role: "Simblr active; SFS links alongside MediaFire/Dropbox" }
+  discord: { role: "CC-finding channels; dead site recovery from personal backups" }
+
+manual_share_workflow_today:
+  build: Create lot/family in game
+  locate: "Steam …/The Sims Legacy Collection/UserData/Houses/House##.iff"
+  package: Zip file → SFS drag-and-drop OR Google Drive
+  share: Copy SFS download link → Tumblr/Discord (triple-host pattern still common for TS4 CC)
+  catch: "Walls/furniture only — custom objects need shopping list; missing GUID placeholders"
+  leave_game: true — 100% browser or file manager; no in-game upload button
+
+dream_tools_gap:
+  browser_ecosystem: |
+    **Micropolis Home** — full browser-native stack: auto-read UserData saves, install/publish with
+    consent, catalog server, virus scan, GUID collision manager, file cop, graveyard manager, offline PWA.
+    Replaces zip + Explorer + dead Share button. Spec: ../../../../catalogs/micropolis-home/browser-ecosystem.yml
+  tray_watcher: |
+    MicropolisAngel watches export folder → same publish pipeline via WebView2 + FileBridge.
+  federate_sfs: |
+    Don't replace SFS for external creators — index simfil.es in CARD metadata.
+  github_native:
+    spec: ../../../../catalogs/micropolis-home/github-distribution-model.yml
+    what: |
+      Free Sims objects + playsets + round-trip saves live in GitHub (WillWrightShowForFood catalogs/).
+      MOOLLM skills + Soul City bridge payloads in moollm repo. Searchable CARD index replaces TSR
+      browse for repo lane; binaries in-tree when not for pay.
+  simopolis_hub: |
+    Git-checked-in character facets + round-trip saves — Exchange storytelling at Simopolis layer.
+    See repo-shows/INDEX.yml#bridges_architecture
+
+creator_allies:
+  - characters/heather-alvey/
+  - characters/steve-alvey/
+  - catalogs/zombie-sims/
+  - catalogs/simslice/
+
+see_also:
+  - simfileshare-official.yml
+  - reddit-legacy-edition-community.yml
+  - ../../../../catalogs/sims1-community-landscape.yml
+  - ../2004-01-12-sims-exchange/
+  - ea-ownership-representation-creators.yml

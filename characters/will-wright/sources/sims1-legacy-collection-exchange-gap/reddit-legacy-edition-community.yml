@@ -1,0 +1,59 @@
+# r/thesims1 — Legacy edition community observations
+# Primary thread: Ellie_Rulze18, ~1y before 2026-07 (Jan 2025 release window)
+
+meta:
+  updated: "2026-07-08"
+  subreddit: r/thesims1
+  thread_title: "Sims 1 Legacy edition changes."
+  author: Ellie_Rulze18
+  verify_before_on_air: false
+
+internet_button_removed:
+  observation: |
+    Far-right UCP button that opened the Sims website is gone in Legacy Collection.
+    Original game (2000–2011): talk to players, free items (some never in expansions), player houses,
+    expansion news, user-made content downloads.
+  community_wish: |
+    "The website should have been brought back in all its 2000 glory for the legacy edition.
+    Imagine the mods we could see on it now."
+  old_copies: |
+    Pre-Legacy installs still show the button; connection attempts fail with a get-information-style
+    message and never connect.
+
+offline_web_pages:
+  thread_consensus: |
+    The button workflow generated local HTML — family profiles, photo albums, house/pets info — viewable
+    offline without an internet connection. Upload/sync to thesims.com was a separate step when online.
+  commenters:
+    moralhora: "Generate a webpage for The Sims dot com with your screen shots"
+    jjackesr: "Offline page, created by the game itself … HTML files and images in the game folder"
+    PenicillinAntiTonsil: |
+      Offline by default; online only when actively exchanging/updating lots, families, superstar,
+      commercial lots via account on thesims.com — "transmit files," not Sims 2/3-style in-game browser.
+  legacy_collection: |
+    PenicillinAntiTonsil recommends checking for Web Pages folder in revised Sims 1 install; may differ
+    from Complete Collection behavior.
+
+other_legacy_changes:
+  sims_creator_omitted:
+    note: "Sims Creator tool not included — separate community complaint (lizardthewizard69, OP agrees)"
+  bulldoze_empty_lots:
+    note: "Can no longer bulldoze nothing on empty lots — harmless gag removed"
+
+storytelling_memory:
+  Monetliketheart: "People would upload their stories on the sims website … very compelling"
+  McchonkyArt: Childhood Lifetime-TV-inspired family stories — generational player memory
+
+wayback:
+  thesims_ea_com: https://web.archive.org/web/20010306164547/http://thesims.ea.com/index.phtml?language=us
+  posted_by: Eurofutur
+
+show_beats:
+  - "Reddit player who was little when Exchange launched — sister used the website; nostalgia + loss"
+  - "Offline album HTML still worked locally — Exchange was publish step, not always-on MMO"
+  - "Community explicitly asks EA to restore Exchange for mod era — Micropolis Home answers that ask"
+
+see_also:
+  - exchange-history-and-ui.yml
+  - legacy-collection-steam-changes.yml
+  - community-sharing-today.yml

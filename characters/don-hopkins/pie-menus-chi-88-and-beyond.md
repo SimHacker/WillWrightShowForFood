@@ -17,7 +17,7 @@ Don does **not** claim to have invented pie/radial menus. That honor belongs ear
 | Group — Ben Shneiderman + Heinz | `ben-and-heinz-pie-menus.yml` |
 | Don's hook list | [`ideas.md`](ideas.md) |
 
-Primary sources in mail archive: Wiseman notes on radial menus in PIXIE; Cambridge colloquia PDFs (see Alan Kay / Engelbart / Brad Myers `media/from-mail/` manifests). Original 1969 film: Cambridge Univ Library archives, digitized by **David Chapman** (credited on YouTube). Don's homage edit: [*Flight of the PIXIE*](https://www.youtube.com/watch?v=jDrqR9XssJI) — clips from that film to Yuja Wang's *Flight of the Bumblebee*; pie-menu interaction as rapid bumblebee flight; homage to Wiseman, Lemke, and Hiles.
+Primary sources in mail archive: Wiseman notes on radial menus in PIXIE; Cambridge colloquia PDFs (see Alan Kay / Engelbart / Brad Myers `media/from-mail/` manifests). Original 1969 film: Cambridge Univ Library archives, digitized by **David Chapman** (credited on YouTube). Don's homage edit: [*Flight of the PIXIE*](https://www.youtube.com/watch?v=jDrqR9XssJI) — clips from that film to [**Yuja Wang**'s *Flight of the Bumblebee*](../../characters/yuja-wang/README.md) (Verbier Festival era; Cziffra arrangement); pie-menu interaction as rapid bumblebee flight; homage to Wiseman, Lemke, and Hiles. Tribute pointer + Instagram share links: [`characters/yuja-wang/`](../../characters/yuja-wang/README.md).
 
 ## CHI'88 — cooking them up at UMD HCIL
 

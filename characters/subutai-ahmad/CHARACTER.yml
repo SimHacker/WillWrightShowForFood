@@ -39,24 +39,27 @@ bio:
     Me2Cam). Direct ancestor of the show's browser **video motion tracking** puppet input (Bounce /
     Faceball motion-drive lineage).
   will_connection: |
-    Will Wright was **working with Subutai's AI company on Proxi** (Will's AI/memory project). FLAG:
-    confirm the company (Numenta?) and the nature/dates of the collaboration before stating on air.
+    Will Wright knows Subutai. Gallium/Proxi AI partner = **Numenta** (NuPIC).
+    GamesBeat Summit 2024 panel; joint Numenta×Gallium blog. See sources/numenta-proxi-partnership.yml
 
 sources:
   web:
     - { title: "Subutai Ahmad — personal site (bio, career, publications)", url: "https://subutai.me/" }
     - { title: "Numenta", url: "https://numenta.com/" }
     - { title: "Thousand Brains Project", url: "https://thousandbrainsproject.org/" }
+  repo:
+    - sources/numenta-proxi-partnership.yml
   papers:
     - "S. Ahmad, 'A usable real-time 3D hand tracker' (Asilomar, 1994)"
     - "S. Ahmad, 'VISIT: A neural model of covert visual attention' (NIPS, 1991)"
     - "Bregler, Omohundro, Covell, Slaney, Ahmad, Forsyth et al., 'Probabilistic models of verbal and body gestures' (1998)"  # ties to Malcolm Slaney (repo)
-  flags:
-    - "Proxi ↔ Will ↔ Subutai's company: CONFIRM company name + collaboration specifics before publishing."
+  flags: []
 
 see_also:
+  - { path: sources/numenta-proxi-partnership.yml, why: "Numenta ↔ Proxi partnership" }
+  - { path: ../will-wright/sources/2025-12-will-wright-dev-diaries/proxi-minecraft-export.yml, why: "Will shipped Proxi characters to Minecraft" }
   - { path: ../don-hopkins/interval-research-pluggers-and-mediaflow.md, why: "Interval 'Camelot' circle — Don helped on the CV work; Bounce motion lineage" }
   - { path: ../golan-levin/README.md, why: "Interval colleague; Malcolm Slaney shared orbit" }
-  - { path: ../will-wright/, why: "Will knows him; Proxi collaboration (flag)" }
+  - { path: ../will-wright/, why: "Will knows him; Proxi + Numenta" }
   - { path: ../../apps/performance-space/pink-trombone-jam.yml, why: "browser_and_motion — video motion tracking input lineage" }
   - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

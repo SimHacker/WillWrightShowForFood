@@ -1,0 +1,105 @@
+# SimFileShare — official site docs, FAQ, Tumblr Q&A
+# Primary sources captured 2026-07-08. Not affiliated with SFS; cite URLs on-air.
+
+meta:
+  updated: "2026-07-08"
+  entity: SimFileShare Ltd
+  site: https://www.simfileshare.net/
+  tumblr: https://simfileshare.tumblr.com/
+  twitter: https://x.com/simfileshare
+  email: simfileshare@gmail.com
+  launched: "~2015 (site copyright 2015–2026)"
+
+tagline: "File hosting designed for simmers. No more hosting roulette!"
+
+model:
+  not: [open_source, distributed, browsable_catalog]
+  is: |
+    Centralized Dropbox/Mediafire-style host. Creators store files; discovery happens on Tumblr,
+    blogs, forums — not on SFS itself. FAQ: "You can't browse all files … even if logged in."
+  sims_only: |
+    Invite gate keeps non-Simmers out; form rejects applicants who won't upload sims-related content.
+
+features_official:
+  free_unlimited:
+    - No filesize limits
+    - No bandwidth limits
+    - No premium tier
+    - No login required to download
+  stats_loves_folders:
+    - Organize files in folders
+    - Download stats for creators
+    - "Love" / heart to thank creators (community norm — squeezleprime on Tumblr)
+  permanent_urls:
+    - Original file URLs never stop working
+  no_purges:
+    - Files not deleted for age, low downloads, or inactive login
+    - Removed only on confirmed copyright complaint
+  end_of_life:
+    - If site closes, public files shared with Sims 2 Graveyard, Simscave, other rehosters first
+
+signup:
+  redeem: https://www.simfileshare.net/redeemcode/
+  options:
+    invite_from_friend: Unlimited invites per existing user
+    google_form: Request account if no friend — codes sent ~weekly (usually Monday)
+  tumblr_howto: https://simfileshare.tumblr.com/post/150814997618/how-do-we-actually-use-simfileshare
+
+upload_workflow:
+  ui: Log in → drag-and-drop or click "Drop files here" → click filename for download links
+  tumblr_upload_sim: https://simfileshare.tumblr.com/post/148151599979/im-new-to-simfileshare-how-do-i-upload-a-sim-i
+  by_game:
+    sims_2: "Bodyshop → Package Sim to File → desktop"
+    sims_3: "Documents/EA Games/The Sims 3/SavedSims"
+    sims_4: |
+      Documents/EA Games/The Sims 4/Tray — five most recent files by date:
+      .householdbinary, .trayitem, .sgi, two .hhi
+    sims_1: |
+      **Not documented in official SFS guides.** FAQ install help links MTS wikis for TS2/3/4 only;
+      "if you're still playing Sims 1 like some kind of admirably tenacious fossil, ask the creator."
+      Community path: zip House##.iff / .fam from UserData → upload manually.
+
+download_workflow:
+  steps:
+    - Creator posts SFS link on blog (e.g. Anvo TS4 eyes — MediaFire, Dropbox, SimFileShare triple)
+    - Click SimFileShare link → big blue Download button
+    - Optional heart to thank creator
+  example_creator_post: https://anvosims.tumblr.com/post/141183380400/emotionaleyes-red-itchy-watery-eyes-cc
+
+faq_highlights:
+  no_account_to_download: true
+  no_public_browse: true
+  adfly: Creators may use ad.fly elsewhere; SFS disables its own ads when traffic arrives via ad.fly
+  charge_for_cc: "Allowed off-site — SFS doesn't police creator monetization elsewhere"
+  bulk_download:
+    official: |
+      FAQ faq9: "Most-requested feature … firmly on the to-do list" — not shipped as of FAQ capture.
+      Will announce on Tumblr/Twitter when done.
+    community_workaround: Tampermonkey "Download as ZIP" scripts (not official)
+  username_change: Contact support from registered email
+  sims1_install: Ask creator — no MTS wiki link for TS1 in FAQ
+
+operations:
+  downtime_history: Frequent Tumblr/Twitter maintenance posts (2017–2021 server moves, key-not-found fixes)
+  contact:
+    - simfileshare@gmail.com (screenshots, broken links, account delete)
+    - Tumblr Ask (may publish Q&A)
+    - Twitter DM @SimFileShare
+  stack_signals: Bootstrap 3, jQuery 1.10, Django-style CSRF, static.simfileshare.net CDN
+
+micropolis_home_contrast:
+  sfs_strength: Permanent links, no adfly on host, creator loves, Sims-only trust model
+  sfs_gaps:
+    - No search/discovery index
+    - No Sims 1 official path docs
+    - No bulk folder download (official backlog)
+    - No version lineage on file replace
+    - Browser-only — alt-tab from game
+  angel_opportunity: |
+    Tray watcher + Micropolis Home catalog CARD = searchable index + attribution layer **on top of**
+    SFS links — federate, don't replace. **Repo-native free lane:** metadata + .iff in GitHub
+    (github-distribution-model.yml) — TSR browse replacement; moollm repo for skills/Soul City payloads.
+
+see_also:
+  - community-sharing-today.yml
+  - ../../../../catalogs/sims1-community-landscape.yml

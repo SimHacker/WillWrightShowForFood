@@ -1,0 +1,77 @@
+# Game bridge — The Sims ⇔ Soul City ⇔ Tiny Life
+# Friend project: Ell (Ellpeck) — https://tinylifegame.com/
+# Soul City = liminal waystation (Will invitation). NOT Simopolis.
+
+meta:
+  id: game-bridge-sims-tiny-life
+  type: bridge
+  status: seed
+  guest: characters/ellpeck/
+  one_line: |
+    Tiny Life exports households and lots with story text — lay over in Soul City, compile to Sims 1
+    content; lift Ell's Workshop, don't replace it.
+
+hub_path: "Sims ⇔ Soul City ⇔ Tiny Life"
+
+soul_city:
+  definition: |
+    Liminal heaven where souls lay over between worlds — the waystation in Will's Repo Show invitation
+    (Proxi ⇔ Soul City ⇔ The Sims). The soul-file travels; each world re-renders in its own medium.
+  not_simopolis: |
+    Guest-facing copy and facet compiler use **Soul City** only. Simopolis is a separate git-hub
+    naming lane elsewhere in the repo — do not conflate in Ell episode materials.
+  sibling: game-bridge-soul-city-procreation.yml
+  compiler: Soul events → Sims 1 pure content injection (objects, skins, album pages)
+
+why_ell:
+  friend: "Don talked with Ell previously; Don quote on game's Praise page"
+  handle: "Ell — online Ellpeck (@ellpeck.bsky.social); studio Ellpeck Games"
+  character_room: characters/ellpeck/
+  project: |
+    Solo queer dev; no GenAI; hand pixelart + C#; Early Access life sim with full open-world
+    simulation off-screen — indie answer to corporate life-sim churn.
+
+already_aligned:
+  tiny_life_share:
+    - Export/import households and lots
+    - Story descriptions embedded in shared content
+    - Steam Workshop + C# mod API
+  sims_gap:
+    source: ../../characters/will-wright/sources/sims1-legacy-collection-exchange-gap/
+    missing: Exchange, Internet button, Sims Creator on Legacy Collection
+  github_distribution:
+    spec: ../../catalogs/micropolis-home/github-distribution-model.yml
+    posture: |
+      CARD metadata in WillWrightShowForFood + MOOLLM skills in moollm repo; federate Tiny Life
+      Workshop links and mod repos — searchable index, attribution, install notes; traffic to Ell.
+
+bridge_beats:
+  demo_happy_path:
+    - "Export Walden household from Tiny Life — lot description + Tiny bios"
+    - "Soul City layover — soul-file facet (names, relationships, skills, story markdown)"
+    - "Optional: procreation/memorial beat from soul-city-procreation seed"
+    - "Compile to Sims 1 .fam / house bundle OR Micropolis Home git drop for Legacy Collection players"
+  reverse:
+    - "Family Album yaml in git → soul-file → Tiny Life household import json"
+  live_show:
+    - "Ell + Don pair-program Soul City facet schema from Tiny Life export format"
+    - "Workshop vs git PR — complementary rails"
+    - "Pronoun update technicalities vs Will Dev Diaries identity pronoun surfing"
+
+show_beats:
+  - "Don's site quote read back to Ell — then build the bridge live"
+  - "Plumbella + James Turner praised Tiny Life; EA Creator Network exodus — indie solidarity"
+  - "Ell's Paralives anxiety — Stardew lesson: inspired games lift the genre"
+  - "Workshop + GitHub federation — two permanent URL cultures, one Soul City soul-file"
+
+non_goals:
+  - Replace Steam Workshop or Ell's Discord community
+  - Use Simopolis in guest-facing bridge copy
+  - Imply EA/Tiny Life endorsement without consent
+  - Ship bridge without Ell's export format cooperation
+
+see_also:
+  - ../../characters/ellpeck/bridge/soul-city-bridge.md
+  - ../../characters/ellpeck/invitation.md
+  - game-bridge-proxi-sims.yml
+  - ../../catalogs/micropolis-home/github-distribution-model.yml

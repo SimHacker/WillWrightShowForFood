@@ -1,0 +1,74 @@
+# Gap analysis — Steam Legacy Collection vs original Exchange + fill plan
+# "The Sims Complete" community name ≈ Legacy Collection bundle (Jan 2025 Steam)
+
+meta:
+  id: gap-analysis-steam-complete
+  updated: "2026-07-08"
+  product: The Sims Legacy Collection
+  steam: https://store.steampowered.com/app/3314070/The_Sims/
+  implementation: ../../../../catalogs/micropolis-home/browser-ecosystem.yml
+
+steam_what_shipped:
+  kept: [widescreen, scroll zoom, bug fixes, modern Windows port]
+  removed:
+    - Exchange / thesims.ea.com upload
+    - UCP Internet button
+    - Cloud family/house sync
+    - Sims Creator (bundle complaint)
+  broken_legacy:
+    - Auto Generate Web Pages — local HTML still debated; no upload path
+    - Program Files write restrictions on modern Windows
+
+community_ecosystem_today:
+  hosts: [SimFileShare, ModTheSims, TSR, Tumblr, Discord, Google Drive]
+  workflow: Build in game → find UserData path → zip → upload → paste link on social
+  pain:
+    - Leave game; file manager literacy required
+    - No in-game Share button replacement
+    - SFS permanent links but no search
+    - Missing objects on shared lots — manual shopping lists
+    - GUID collisions when merging CC
+    - Malware via compromised upload accounts (2025)
+  see: community-sharing-today.yml, simfileshare-official.yml
+
+gaps_we_fill:
+  convenience_parity:
+    target: "At least as easy as clicking the old Internet button"
+    how: Browser hub + Angel tray — Share from current save context without alt-tab archaeology
+  power_beyond_2000:
+    - Automatic save parse and local catalog index
+    - GUID collision manager + file cop between neighborhoods
+    - Virus scan + compatibility before install
+    - Search across git + federated SFS + MTS metadata
+    - Graveyard / urn management from save data
+    - Offline catalog browse and install
+  medium_restoration:
+    - Family Album publish (picture + text) — Exchange storytelling lane
+    - Playset composer — SimFreaks Laszlo lineage
+    - Round-trip saves in git — Simopolis hub layer
+
+what_we_do_not_claim:
+  - Official EA Exchange server
+  - Hosting EA game files
+  - Replacing paid creator storefronts
+  - In-engine patch of Sims 1 binary for new UCP button (companion + browser instead)
+
+action_items:
+  engineering:
+    - FileBridge default paths for Legacy Collection UserData
+    - IFF/FAM parser coverage tests on real saves
+    - Catalog API MVP — search + download + publish queue
+    - PWA offline cache for CARD indexes
+  community:
+    - Steam guide v2 — browser hub as Share replacement
+    - Heather/Steve/ZombieSims federation cards
+    - Creator Network exodus panel — Exchange gap + ethical revival
+  legal_posture:
+    - Requires owned game on Steam
+    - Transmogrifier-era fan distribution framing — see sims1-community-landscape.yml
+
+see_also:
+  - README.md
+  - legacy-collection-steam-changes.yml
+  - exchange-history-and-ui.yml
+  - ../../../../catalogs/micropolis-home/browser-ecosystem.yml

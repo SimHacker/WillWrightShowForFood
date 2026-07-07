@@ -72,8 +72,11 @@ seeds:
   # Simopolis is the git-checked-in hub of hi-fidelity, round-trippable character facets; game-to-game
   # paths route THROUGH it ("fly through Atlanta"). Generic hub/spoke first; later, shortcut
   # optimizations + mutual schema recognition for compatible games. Full note: INDEX.yml#bridges_architecture
-  game-bridge-sims-stardew.yml: "Group: Eric Barone — Sims ⇔ Simopolis ⇔ Stardew two-way bridge."
   game-bridge-proxi-sims.yml:   "Will — Proxi ⇔ Soul City ⇔ Sims bridge (data-portability payoff + Mind Mirror layer). NOT YET WRITTEN."
+  game-bridge-proxi-minecraft.yml: "Will — Proxi ⇔ Simopolis ⇔ Minecraft. SHIPPED: Proxi characters already exported to Minecraft (Dev Diaries 2025)."
+  game-bridge-sims-stardew.yml: "Group: Eric Barone — Sims ⇔ Simopolis ⇔ Stardew two-way bridge."
+  game-bridge-sims-tiny-life.yml: "Ell (Ellpeck) — Sims ⇔ Soul City ⇔ Tiny Life."
+  creator-network-exodus.yml: "Group — lilsimsie, Plumbella, James Turner + peers; EA Creator Network exit; Tiny Life praise; Exchange gap."
   game-bridge-sims-shattered.yml: "Evan Debenham — Sims ⇔ Simopolis ⇔ Shattered Pixel Dungeon (GPLv3 repo; roguelike contrast; funding exemplar)."
   game-bridge-sims-spore.yml:   "Will + Spore team — Sims ⇔ Simopolis ⇔ Spore creatures. CAPSTONE/big-ambition bridge: clean-room web re-creation of the creature renderer/animator/editor/builder, designed from interviews. Likely a multi-episode ARC."
   game-bridge-mind-mirror.yml:  "Sims ⇔ Simopolis ⇔ Timothy Leary's Mind Mirror (1986 EA) — first EMULATED-RUNTIME organelle (real Apple ][ binary in a web emulator) + cross-organelle property diffusion."

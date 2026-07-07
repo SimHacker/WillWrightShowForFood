@@ -1,0 +1,95 @@
+# Maxis / SimCity history — parallel documentarians, archivists, and warm leads
+# Policy: ../characters/contact-queue.yml#public_outreach_policy
+# Synergy model: characters/jess-bird/synergy/willwrightshowforfood.yml
+
+meta:
+  updated: "2026-07-07"
+  purpose: |
+    Remember who is documenting Maxis and SimCity in parallel with Will Wright Show For Food.
+    Invite synergistic collaboration (like Jess) — not repo dumps or competing claims.
+  public_stance: |
+    Until Repo Show videos ship: tease contact + forthcoming video only. No social posts
+    driving deep GitHub primary-source traffic. filfre.net blog reply (Jul 2026) is the exception.
+
+parallel_historians:
+  - id: jess-bird
+    role: broadcast documentary writer/researcher
+    container: commissioned TV / BBC lineage
+    status: correspondent_warm
+    path: characters/jess-bird/
+    synergy: characters/jess-bird/synergy/willwrightshowforfood.yml
+    note: "Real-TV anchor; mutual credibility; shared guests and sources."
+
+  - id: jimmy-maher
+    role: long-form computer-history writer (The Digital Antiquarian)
+    container: filfre.net essay series
+    status: contact_next
+    path: characters/jimmy-maher/
+    about: characters/jimmy-maher/sources/about-me.yml
+    synergy: characters/jimmy-maher/synergy/willwrightshowforfood.yml
+    contact: maher@filfre.net
+    trigger: |
+      Maxis Part 1 (2026-07-03) + HN thread + Don's filfre reply to Rowan Lipkovits (2026-07-07).
+      Invite parallel work like Jess — cite each other, share beats, no merger.
+    beats_they_own:
+      - SimCity through SimCity 2000 (Part 1)
+      - software-toy / subsidized-catalog thesis
+      - SimEarth–SimAnt–SimLife–SimFarm lineage
+    beats_we_own:
+      - Micropolis / OLPC open source (2006–2008)
+      - Don primary sources + Will on camera (forthcoming)
+      - SimRefinery footnote bridge to Phil Salvador
+
+archivists_and_scholarship:
+  - id: phil-salvador
+    role: game historian; preservation scholarship
+    org: "The Obscuritory; Video Game History Foundation"
+    path: characters/phil-salvador/
+    show_seed: repo-shows/phil-salvador-simrefinery/
+    topics: [SimRefinery, Maxis Business Simulations, Yoot Tower VGHF source release]
+    jess_bridge: true
+
+  - id: chaim-gingold
+    role: author / researcher
+    path: characters/chaim-gingold/
+    topics: [Building SimCity book, Tale of Two SimCities thread]
+    note: "Separate Maxis history book from Phil's preservation work — both cited on Maher Part 1."
+
+  - id: rebecca-heineman
+    role: developer / source holder
+    path: characters/rebecca-heineman/
+    topics: [Apple IIgs SimCity near-complete source; EA clearance thread]
+    status: not_yet_asked
+
+community_leads:
+  - id: rowan-lipkovits
+    where: filfre.net comment on Maxis Part 1 (2026-07-04)
+    interests: [SimRefinery, Micropolis on OLPC, delightful dead ends]
+    don_replied: "2026-07-07 on filfre — SimRefinery (Phil), Micropolis saga tease, Lauren Elliott thread, Will Dev Diaries link"
+    follow_up: email if Rowan reaches out; no public repo push yet
+
+  - id: hn-nanna
+    where: HN on Maher Part 1
+    queue: repo-shows/will-wright-premiere/audience/hn-nanna/
+
+  - id: hn-vor
+    where: HN on Maher Part 1
+    queue: repo-shows/will-wright-premiere/audience/hn-vor/
+
+maher_cited_sources:
+  note: "Secondary sources Jimmy already trusts — potential cross-citation or guest intros"
+  items:
+    - { name: Phil Salvador, url: https://obscuritory.com/sim/maxis-business-simulations/ }
+    - { name: Matt Barton, topic: Jeff Tunnell interview }
+    - { name: Tristan Donovan, topic: Will Wright Gamasutra interview }
+
+filfre_touchpoints:
+  article: https://www.filfre.net/2026/07/the-life-and-times-of-maxis-part-1-simeverything/
+  source_room: characters/will-wright/sources/2026-07-03-digital-antiquarian-maxis-part1/
+  don_comment_posted: "2026-07-07"
+  teaser_file: characters/will-wright/sources/2026-07-03-digital-antiquarian-maxis-part1/micropolis-olpc-teaser.yml
+
+see_also:
+  - characters/contact-queue.yml
+  - characters/jess-bird/documentarians-guide.md
+  - characters/will-wright/sources/simrefinery-recovery/README.md

@@ -1,0 +1,54 @@
+# Bartle player types — Will Wright Dev Diaries (Dec 2025)
+# Source: https://www.youtube.com/watch?v=u73_yZyuDS0
+# Captured: 2026-07-07 (Don Hopkins, from on-camera interview)
+
+meta:
+  title: "Will cites Bartle player types"
+  video: https://www.youtube.com/watch?v=u73_yZyuDS0
+  video_label: "Will Wright Dev Diaries (Dec 2025)"
+  captured: "2026-07-07"
+  captured_by: don-hopkins
+  verbatim_status: paraphrase_pending_transcript
+
+will_framing:
+  don_summary: |
+    In the same Dev Diaries interview, **Will brings up Bartle's player types** — the
+    Achiever / Explorer / Socializer / Killer taxonomy from MUD design (Richard Bartle).
+    Exact application TBD on transcript (Proxi? software toys? audience design?) — but Will
+    explicitly name-checks the framework.
+  note: "Don flagged this as a natural bridge to Richard Bartle (consented MOOLLM + audience seat)."
+
+bartle_taxonomy_refresher:
+  axes: "Player vs World × Acting vs Interacting"
+  types: [Achiever, Explorer, Socializer, Killer]
+  symbols: "♠️ Achiever · ♥️ Socializer · ♦️ Explorer · ♣️ Killer"
+  origin: "MUD1 (1978) — Richard Bartle & Roy Trubshaw"
+  canonical: ../../../richard-bartle/README.md
+
+show_hypotheses:
+  proxi_heirloom: |
+    Family members contributing memories might map to different player lenses — each relative
+    tells grandma stories from their own Bartle-typed engagement with her. **Hypothesis only**
+    until Will confirms on transcript or on show.
+  sims_contrast: |
+    Existing audience draft: Bartle taxonomy vs Sims motives — Will citing Bartle in 2025
+    validates the dialogue thread in repo-shows/will-wright-premiere/audience/richard-bartle/
+  three_way_beat: |
+    Will (cites Bartle on camera) + Bartle (consented, self-authoring) + Don host — MUD1 ↔ Sims
+    ↔ Proxi lineage in one segment.
+
+connections:
+  richard_bartle:
+    path: ../../../richard-bartle/
+    show_seed: ../../../../repo-shows/richard-bartle/
+    audience_seat: ../../../../repo-shows/will-wright-premiere/audience/richard-bartle/
+    consent: explicit
+  game_design_trail: ../../../../process/trails/game-design-lineage.md
+  sibling_beat: proxi-software-heirloom.yml
+  identity_surfing: identity-pronoun-surfing.yml
+
+see_also:
+  - README.md
+  - proxi-software-heirloom.yml
+  - identity-pronoun-surfing.yml
+  - ../../ideas.md

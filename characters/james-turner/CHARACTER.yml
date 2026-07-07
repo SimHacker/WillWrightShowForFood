@@ -1,0 +1,56 @@
+# James Turner — portrayal. NOT James.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: james-turner
+  name: James Turner
+  also_known_as: ["The Sim Supply", TheSimSupply]
+  type: invitation
+  signifier: "🔨📺"
+  status: living
+  field: "Sims builder/YouTuber; formerly The Sim Supply; EA Creator Network resigner Oct 2025"
+  home: characters/james-turner/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 1
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: ../../repo-shows/will-wright-premiere/creator-network-exodus.yml
+
+bio:
+  summary: |
+    **James Turner** built a legendary Sims **building** audience as **The Sim Supply** — tutorials,
+    speed builds, and community trust over years. In **October 2025** he left the **EA Creator
+    Network** after the reported Saudi-backed EA acquisition, planning to shift toward more content
+    variety and asking to remove his creator code (Digital Spy / IGN coverage — verify quotes).
+
+  tiny_life: |
+    On [Tiny Life Praise](https://tinylifegame.com/): "I enjoyed playing it! It's kind of what we
+    know and what we love." — builder's eye on indie sim craft; pairs with Exchange/Legacy gap story.
+
+ea_creator_network_exit:
+  timing: Oct 2025
+  reported_actions:
+    - Left EA Creator Network
+    - Remove creator code
+    - Broaden content beyond Sims-only EA promotion
+
+quotable:
+  tiny_life:
+    text: "I enjoyed playing it! It's kind of what we know and what we love."
+    source: https://tinylifegame.com/
+
+sources:
+  - sources/creator-network-exit.yml
+  - ../../process/sims-creator-network-exodus.yml
+
+see_also:
+  - README.md
+  - ../plumbella/
+  - ../lilsimsie/
+  - ../ellpeck/

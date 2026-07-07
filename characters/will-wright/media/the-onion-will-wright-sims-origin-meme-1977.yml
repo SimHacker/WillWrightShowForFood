@@ -1,0 +1,30 @@
+# The Onion — fake historical photo meme (The Sims origin satire)
+
+artifact:
+  file: the-onion-will-wright-sims-origin-meme-1977.png
+  source: The Onion
+  format: "Fake 'On This Day' historical photo — The Sims box art collage + caption bar"
+
+caption:
+  year_shown: "1977"
+  text: |
+    Will Wright gets a great idea for a video game while watching a family burn to death in their home.
+
+satire:
+  what: "Dark Onion gag on Sims origin myth — swaps empathy/rebuilding narrative for voyeur punchline"
+  real_context: |
+    Will Wright often cites losing his home in the 1991 Oakland Hills firestorm as inspiration for
+    the domestic dollhouse simulator that became The Sims — rebuilding what was lost, not spectacle.
+
+visual:
+  top: "The Sims box-art character grid"
+  bottom: "Black bar — year, caption, The Onion logo"
+
+provenance:
+  saved_by: Don Hopkins
+  saved: "2026-07-08"
+  note: "User-shared meme — archive only, not endorsement"
+
+see_also:
+  - README.md
+  - ../sources/1996-04-26-winograd-interfacing-to-microworlds/README.md

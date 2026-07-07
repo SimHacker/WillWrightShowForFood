@@ -1,0 +1,26 @@
+# Third-party praise on tinylifegame.com (selected)
+# Full list: https://tinylifegame.com/
+
+quotes:
+  - source: Lauren Morton, PC Gamer
+    text: "The best game like The Sims to play right now."
+  - source: Katharine Castle, Rock Paper Shotgun
+    text: "You'll be in your nostalgic element with this delightful little indie."
+  - source: Plumbella, YouTube
+    text: "I had a really great time playing with this. This very much makes me feel the way that The Sims 1 did."
+    room: ../../plumbella/
+    show_tie: Left EA Creator Network Oct 2025
+  - source: James Turner, formerly The Sim Supply, YouTube
+    text: "I enjoyed playing it! It's kind of what we know and what we love."
+    room: ../../james-turner/
+    show_tie: Creator Network exit Oct 2025
+
+exodus_registry: ../../../process/sims-creator-network-exodus.yml
+
+negative_cited_on_site:
+  source: Woke Content Detector, Steam
+  text: "Contains overtly pro-LGBTQ+ messaging. Not recommended."
+  show_tie: Ell's FAQ — queer-led inclusivity is explicit design; Safe In Our World partner
+
+see_also:
+  - don-praise.yml

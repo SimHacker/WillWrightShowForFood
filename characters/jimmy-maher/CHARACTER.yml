@@ -1,0 +1,79 @@
+# Jimmy Maher — collaborator portrayal. NOT Jimmy Maher.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: jimmy-maher
+  name: Jimmy Maher
+  type: collaborator
+  signifier: "📜🕹️"
+  status: living
+  field: "Computer entertainment historian; interactive fiction author; The Digital Antiquarian"
+  home: characters/jimmy-maher/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  note: |
+    Public historian — portrayal from filfre.net About Me + public articles/comments only.
+    Contact via maher@filfre.net until he opts into deeper collaboration. No private mail in repo.
+
+invitation:
+  status: not_offered
+  note: |
+    Parallel collaboration invite (like Jess Bird) — not a public Repo Show guest pitch.
+    Private email first: synergistic Maxis history, cross-citation, shared leads, no merger.
+    Optional future on-camera historian segment once consent is explicit.
+
+bio:
+  summary: |
+    **Jimmy Maher** lives with his wife **Dorte** in a village near **Billund, Denmark** (he moved
+    from **Dallas, Texas** in 2009). Since the early 2010s he has written **The Digital Antiquarian**
+    (filfre.net) — a chronological chronicle of interactive entertainment and digital culture he
+    describes as a journey that can never be truly completed. Articles stay **free to read**;
+    optional **Patreon** and PayPal support keep the work sustainable. Since 2019 he also writes
+    **The Analog Antiquarian** (world-history wonders).
+
+    He is also an **interactive fiction** author (*The King of Shreds and Patches*), builder of the
+    **Filfre** IF interpreter, and author of **MIT Press** books including *The Future Was Here:
+    The Commodore Amiga* and *Let's Tell a Story Together: A History of Interactive Fiction*.
+    Public thread on his About Me page shows a historian who **reaches out to living subjects**,
+    **welcomes insider corrections**, and **points researchers to primary sources** (Internet Archive
+    magazines, etc.) — the same ethic Don wants in the Repo Show.
+
+    **Jul 2026:** *The Life and Times of Maxis, Part 1: SimEverything* — SimCity through SimCity 2000,
+    citing Phil Salvador's Obscuritory work. Don engaged on HN and filfre (Rowan Lipkovits asked about
+    Micropolis/OLPC; Don replied with SimRefinery + OLPC footnotes + Will Dev Diaries link).
+
+personal:
+  spouse: Dorte
+  location: "Near Billund, Denmark"
+  former_home: "Dallas, Texas (until 2009)"
+  source: sources/about-me.yml
+
+sites:
+  digital_antiquarian: https://www.filfre.net/
+  analog_antiquarian: https://www.analogantiquarian.com/
+  patreon: https://www.patreon.com/DigitalAntiquarian
+  social: [Bluesky DigiAntiquarian, Mastodon DigiAntiquarian]
+
+contact:
+  email: maher@filfre.net
+  source: https://www.filfre.net/about-me/
+
+synergy:
+  map: synergy/willwrightshowforfood.yml
+  readme: synergy/willwrightshowforfood.md
+  registry: ../../process/maxis-history-collaborators.yml
+
+connections:
+  jess_bird: "../jess-bird/synergy/willwrightshowforfood.yml"
+  phil_salvador: "../phil-salvador/"
+  chaim_gingold: "../chaim-gingold/"
+  will_wright: "../will-wright/"
+  walter_bender: "../walter-bender/"
+  source_room: "../will-wright/sources/2026-07-03-digital-antiquarian-maxis-part1/"
+
+correspondence: correspondence.yml
+ideas: ideas.md
+sources: sources/about-me.yml

@@ -1,0 +1,54 @@
+# Proxi — software heirloom beat
+# Source: Will Wright Dev Diaries (Dec 2025) — https://www.youtube.com/watch?v=u73_yZyuDS0
+# Captured: 2026-07-07 (Don Hopkins, from on-camera interview)
+
+meta:
+  title: "Proxi as software heirloom"
+  video: https://www.youtube.com/watch?v=u73_yZyuDS0
+  video_label: "Will Wright Dev Diaries (Dec 2025)"
+  captured: "2026-07-07"
+  captured_by: don-hopkins
+  verbatim_status: paraphrase_pending_transcript
+
+will_framing:
+  metaphor: software_heirloom
+  don_summary: |
+    Will described Proxi as a kind of **software heirloom**: memorialize someone you love
+    (e.g. your grandmother) with family members contributing — each tells stories they know
+    from their own perspective; together you discover things you didn't know.
+  mechanics_implied:
+    - central figure (e.g. grandmother) as shared subject
+    - multiple contributors — each partial, personal viewpoint
+    - emergent discovery — gaps filled by others' memories
+    - intergenerational preservation — pass down like an heirloom object, but living
+    - identity_pronoun_surfing: |
+        Each relative may narrate grandma in first person ("I remember…") or third ("she always…")
+        — same pattern Will cites when players describe game play. See identity-pronoun-surfing.yml
+
+contrast_with_other_proxi_threads:
+  data_portability_1996:
+    note: "CS547 talk — train-set hobby model; character travels between games"
+    path: ../1996-04-26-winograd-interfacing-to-microworlds/
+  uber_character_ai:
+    note: "Gallium-era — AI model of a person crossing game worlds (ideas.md §7)"
+    path: ../../ideas.md
+
+show_connections:
+  - path: ../../../jess-bird/mission/documentary.yml
+    why: "Record people while we can; memorial interviews honored"
+  - path: ../../../jimmy-maher/correspondence.yml
+    why: "filfre comment tied Lauren Elliott / Gallium / Proxi to this video"
+  - path: ../../../../repo-shows/will-wright-premiere/
+    why: "Discussion thread — not launch promise"
+
+gallium:
+  studio: Gallium Studios (Will Wright + Lauren Elliott, CEO)
+  note: "Heather & Steve Alvey worked on Proxi at Gallium — Unity AI life-sim"
+
+see_also:
+  - README.md
+  - bartle-player-types.yml
+  - identity-pronoun-surfing.yml
+  - proxi-minecraft-export.yml
+  - ../../correspondence.yml#proxi_gallium
+  - ../../ideas.md

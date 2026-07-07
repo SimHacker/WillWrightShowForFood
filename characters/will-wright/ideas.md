@@ -67,9 +67,28 @@ Home → **The Sims**, City → **SimCity**, Planet → **SimEarth** (Gaia), Cos
 **Proxi** as the character/AI layer cutting across all scales. A whole compatible universe to
 federate, plus Spore's own internal cell→creature→tribe→civ→space ladder.
 
-### 7. Proxi — the character that is *you*, across worlds
-What Will is into now: an AI model of a person. The über-character that travels through every game
-you play, picking up abilities, syncing back. The "why" under data portability.
+### 7. Proxi — software heirloom *and* the character that is *you*, across worlds
+
+**Heirloom lane (Dec 2025 Dev Diaries):** Will described Proxi as a **software heirloom** —
+memorialize someone (e.g. your grandmother) with family members each contributing stories from
+their own perspective; you discover things you didn't know.
+[`sources/2025-12-will-wright-dev-diaries/proxi-software-heirloom.yml`](sources/2025-12-will-wright-dev-diaries/proxi-software-heirloom.yml)
+
+**Portability lane (1996 + Gallium):** What Will is also building — an AI model of a person, the
+über-character that travels through every game you play, picking up abilities, syncing back. The
+"why" under data portability.
+
+**Bartle types (same Dev Diaries):** Will **brings up Bartle's player types** — hook for a
+three-way with [Richard Bartle](../../richard-bartle/README.md) (consented audience seat).
+[`bartle-player-types.yml`](sources/2025-12-will-wright-dev-diaries/bartle-player-types.yml)
+
+**Identity surfing (same Dev Diaries):** Players describe play by **popping between third and first
+person** — surfing identities mid-story. Ties Proxi heirloom + Bartle + Sims agency.
+[`identity-pronoun-surfing.yml`](sources/2025-12-will-wright-dev-diaries/identity-pronoun-surfing.yml)
+
+**Minecraft (shipped):** Will **already exported Proxi characters into Minecraft** — major bridge
+spoke, not vapor. [`proxi-minecraft-export.yml`](sources/2025-12-will-wright-dev-diaries/proxi-minecraft-export.yml)
+· [`game-bridge-proxi-minecraft.yml`](../../repo-shows/will-wright-premiere/game-bridge-proxi-minecraft.yml)
 
 ### 8. Reincarnate Slats — RoboResurrection
 The **Stupid Fun Club** robot brain Don programmed (the One Minute Movies: *Servitude*, *Empathy*).

@@ -12,7 +12,7 @@ Designers across genres — simulation toys, MUDs, one-page systems, reverse-eng
 
 | Stop | Why wander here |
 |------|-----------------|
-| [**Will Wright**](../../characters/will-wright/README.md) | Toys not games — possibility space, the Simulator Effect |
+| [**Will Wright**](../../characters/will-wright/README.md) | Toys not games — possibility space, the Simulator Effect; **cites Bartle types** in Dev Diaries Dec 2025 ([beat](../../characters/will-wright/sources/2025-12-will-wright-dev-diaries/bartle-player-types.yml)) |
 | [**Yoot Saito**](../../characters/yoot-saito/README.md) | The Tower/SimTower, Seaman, Odama — Japanese sim toys |
 | [**Stone Librande**](../../characters/stone-librande/README.md) | One-page designs — a whole system on one dense page |
 | [**Richard Bartle**](../../characters/richard-bartle/README.md) | MUD1 (1978) + the Bartle taxonomy of player types |

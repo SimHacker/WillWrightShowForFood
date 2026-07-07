@@ -164,6 +164,9 @@ Renovation and SafeTMog — restricted Transmogrifier for safer community author
 **[2004-01-12-sims-exchange/](2004-01-12-sims-exchange/README.md)**  
 The Sims Exchange — storytelling objects + downloadable user content. The hobby-model train set.
 
+**[sims1-legacy-collection-exchange-gap/](sims1-legacy-collection-exchange-gap/README.md)**  
+2025 Steam Legacy Collection omits Exchange (UCP Internet button, Generate Web Pages hooks). SimFileShare + manual zip today; Micropolis Home revival thesis. EA buyout + creator-network context (verify before on-air).
+
 **[2004-01-08-showntell-activex-preview/](2004-01-08-showntell-activex-preview/README.md)**  
 ShowNTell ActiveX — live Sims object preview in the browser (2004 web ambitions).
 
@@ -327,6 +330,7 @@ CAM-6 pie menus as visual programming — YouTube + essay cross-link.
 | [2004-01-08-showntell-activex-preview](2004-01-08-showntell-activex-preview/README.md) | ShowNTell ActiveX — live Sims object preview on the web |
 | [2004-01-08-rss-mysim-radio-userland](2004-01-08-rss-mysim-radio-userland/README.md) | RSS 2.0 Sims Module + MySim tool for Radio UserLand |
 | [2004-01-12-sims-exchange](2004-01-12-sims-exchange/README.md) | The Sims Exchange — storytelling + downloadable UCC |
+| [sims1-legacy-collection-exchange-gap](sims1-legacy-collection-exchange-gap/README.md) | Legacy Collection Steam gap — Exchange UI, SFS, revival design |
 | [2004-01-21-rugomatic-tutorial](2004-01-21-rugomatic-tutorial/README.md) | RugOMatic — drag-and-drop Sims objects |
 | [2004-02-05-third-party-content-authoring-tools](2004-02-05-third-party-content-authoring-tools/README.md) | Proposal: third-party content authoring tools for The Sims |
 | [2004-02-05-transmogrifier-renovation-plan](2004-02-05-transmogrifier-renovation-plan/README.md) | Transmogrifier renovation plan |
@@ -370,6 +374,7 @@ CAM-6 pie menus as visual programming — YouTube + essay cross-link.
 | [stupid-fun-club-one-minute-movies](stupid-fun-club-one-minute-movies/README.md) | Servitude & Empathy robots |
 | [2024-building-simcity-chaim-intro](2024-building-simcity-chaim-intro/README.md) | Chaim MIT Press book + Sam Arbesman intro |
 | [2026-07-03-digital-antiquarian-maxis-part1](2026-07-03-digital-antiquarian-maxis-part1/README.md) | Jimmy Maher Maxis history (SimEverything) + HN question-pump thread |
+| [2025-12-will-wright-dev-diaries](2025-12-will-wright-dev-diaries/README.md) | Dev Diaries — Proxi heirloom, Bartle types, identity pronoun surfing, Proxi→Minecraft, software toys |
 | [2013-tale-of-two-simcities](2013-tale-of-two-simcities/README.md) | Charles Normann — EA CEO sign-off inside story |
 | [2019-apple-iigs-simcity-becky-heineman](2019-apple-iigs-simcity-becky-heineman/README.md) | Becky Heineman IIgs source · Phil/Chaim books |
 | [2023-turd-polishing-talk](2023-turd-polishing-talk/README.md) | Sims shipping / "worse is better" |

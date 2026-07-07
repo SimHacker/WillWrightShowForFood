@@ -12,7 +12,9 @@ Micropolis Home rebuilds the Sims 1 content-creation stack as a **web-native pla
 |-------|----------|
 | **Create** | Transmogrifier, RugOMatic, WigOMatic, SimShow preview, MOOLLM-assisted authoring |
 | **Publish** | Hosted CARD dirs, git repos, branching dialog objects, round-trippable saves |
+| **GitHub distribution** | Metadata catalogs **and** free content in public repos — [spec](github-distribution-model.yml); MOOLLM skills + Soul City in [moollm](https://github.com/SimHacker/moollm); TSR/SFS replacement lane for repo-native work |
 | **Share** | Exchange revival, family albums, federated storefronts, Repo Show homefun |
+| **Browser ecosystem** | Save read/write, no zip/Explorer, Share-button replacement — [spec](browser-ecosystem.yml) |
 
 ## Steam Community Guides
 

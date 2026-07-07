@@ -66,7 +66,7 @@ RoboResurrection, and whatever threads Will wants to pull. See
 | **SimEarth · SimAnt · SimCity 2000** | Scale experiments — too hard, too easy, just right |
 | **The Sims** (2000) | Dollhouse → household life sim; object-centric AI; modding culture |
 | **Spore** (2008) | Procedural content; player as world-builder |
-| **Proxi** | Current research thread — memory / personal simulation (discussion, not launch promise) |
+| **Proxi** | Gallium research — **software heirloom**, **Minecraft export (shipped)**, Bartle types; data-portability über-character. Dev Diaries: [`sources/2025-12-will-wright-dev-diaries/`](sources/2025-12-will-wright-dev-diaries/README.md) |
 | **Stupid Fun Club** | Think-tank era — robots, hidden-camera learning (incl. **Slats**) |
 
 Sources: [Wikipedia](https://en.wikipedia.org/wiki/Will_Wright_(game_designer)), 1996 transcript in this repo, public interviews cited in [`CARD.md`](CARD.md).

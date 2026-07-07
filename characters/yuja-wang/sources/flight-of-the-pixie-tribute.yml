@@ -1,0 +1,56 @@
+# Flight of the PIXIE — Yuja Wang performance citation
+# Machine-readable provenance for tribute sharing (Instagram, show notes, HN)
+
+meta:
+  character: yuja-wang
+  kind: tribute_citation
+  updated: "2026-07-07"
+
+video:
+  title: "Flight of the PIXIE - Yuja Wang"
+  url: https://www.youtube.com/watch?v=jDrqR9XssJI
+  youtube_id: jDrqR9XssJI
+  channel: Don Hopkins
+  published: 2020-03-17
+  views_note: "~900+ (2026); non-commercial homage"
+
+editor:
+  name: Don Hopkins
+  tool: Adobe After Effects
+  intent: Sync 1969 PIXIE film highlights to piano tempo — radial menus as bumblebee flight
+
+visual_sources:
+  - label: PIXIE demonstration films (1969)
+    custodian: Cambridge University Library
+    digitizer: David Chapman
+    archive_portal: https://www.cl.cam.ac.uk/library/archives.html
+  - label: PIXIE paper scan (Don Hopkins)
+    url: https://www.donhopkins.com/home/documents/PIXIE%20a%20new%20approach%20to%20man-machine%20communication.pdf
+
+audio_performance:
+  piece: "Flight of the Bumblebee"
+  composer: Nikolai Rimsky-Korsakov
+  arrangement: György Cziffra
+  performer: Yuja Wang
+  context: "Verbier Festival era; on Verbier Festival highlights DVD (2008) per public biographies"
+  note: "Archival concert footage — credited in YouTube description; not re-recorded for this edit"
+
+dedication_block: |
+  Dedication and Thanks to:
+  Neil E. Wiseman, Heinz U. Lemke, John O. Hiles,
+  PIXIE: A New Approach to Graphical Man-Machine Communication,
+  Proceedings of 1969 CAD Conference Southampton
+  IEEE Conference Publication 51, pp. 463–471.
+  David Chapman, Cambridge University Library
+
+share:
+  instagram:
+    handle: "@yujawangofficial"
+    url: https://www.instagram.com/yujawangofficial/
+    use: "Tag when posting a Reel/Story clip of the edit — tribute only, no commercial ask"
+  repo_pointer: characters/yuja-wang/README.md
+
+related_repo:
+  - ../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md
+  - ../don-hopkins/pie-menus-chi-88-and-beyond.md
+  - ../../repo-shows/pixie-pie-menus-pdp7.yml

@@ -45,9 +45,11 @@ Status quo (MTS, SimFreaks, subscriptions) is not a signed release from EA Legal
 | Catalog | Role |
 |---------|------|
 | [`maxis/`](maxis/README.md) | Metadata for base + expansion + killer downloads — pointers to Steam / IA |
-| **Exchange / originalsims history** | Saves, family albums, characters — IA + Simopolis hub ([source bundle](../characters/will-wright/sources/2004-01-12-sims-exchange/)) |
+| **Exchange / originalsims history** | Saves, family albums, characters — IA + Simopolis hub ([2004 essay](../characters/will-wright/sources/2004-01-12-sims-exchange/); [2025 Steam gap](../characters/will-wright/sources/sims1-legacy-collection-exchange-gap/)) |
+| **SimFileShare** | Post-Exchange shortlink host (`simfil.es`) — browser-only upload; invite-gated creators ([research](../characters/will-wright/sources/sims1-legacy-collection-exchange-gap/community-sharing-today.yml)) |
 | **IA import pipeline** (`tornado_importer` working name) | Harvest Wayback → CARD records (URL, creator, install notes) — **index**, don't blindly re-host whole dead sites |
-| **Simopolis** | Deep hub for round-trippable saves and cross-game facets ([bridge architecture](../repo-shows/INDEX.yml)) |
+| **Simopolis** | Deep hub for round-trippable saves and cross-game facets ([bridge architecture](../repo-shows/INDEX.yml); [GitHub distribution](micropolis-home/github-distribution-model.yml)) |
+| **GitHub object repo** | Free UCC + metadata CARDs in [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) + MOOLLM/Soul City in [moollm](https://github.com/SimHacker/moollm) — TSR browse replacement for repo-native lane |
 
 Federated **brand** catalogs: [SimFreaks](simfreaks/), [SimSlice](simslice/), [SimProv](simprov/), [Zombie Sims](zombie-sims/).
 
@@ -61,7 +63,7 @@ Federated **brand** catalogs: [SimFreaks](simfreaks/), [SimSlice](simslice/), [S
 |-----|------|
 | **Catalogs & tools** | Links to Micropolis Home web — SimFreaks, SimSlice, SimProv, Zombie Sims, MTS, IA index, web Transmogrifier/SimShow |
 | **Repo Shows channel** | Discover & promote Repo Show Class shows — **Will Wright flagship**, guests, live/VOD, GitHub, TicketPR |
-| **Sims & bridges** | Episodes about The Sims + **Simopolis bridges** to other games (Stardew, Proxi, Spore, …) |
+| **Sims & bridges** | Episodes about The Sims + **Simopolis bridges** to other games (Minecraft, Stardew, Proxi, Spore, …) |
 | **EA alignment** | Requires owned Sims on Steam; fan-guide disclaimer; drives sales; revives Exchange |
 
 The guide is the **front door to the show** for players who just bought Legacy Collection and want to know what this 26-year culture is about — without downloading another app.

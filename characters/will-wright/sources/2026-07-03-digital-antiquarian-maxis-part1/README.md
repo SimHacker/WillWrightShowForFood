@@ -55,6 +55,26 @@ Community topics worth chasing (potential guests / show tangents):
 | **SG-** | Original Mac versions at higher resolution — preservation angle |
 | **drayfield** | SimEarth's inscrutable manuals as tantalizing ecological mystery |
 
+## Blog comments — Micropolis / OLPC teaser
+
+**Rowan Lipkovits** (Jul 4, 2026) on Maher's post:
+
+> It would be awesome if we ever see a note about how the de-branded "Micropolis" was bundled with
+> the similarly quixotic One Laptop Per Child initiative.
+
+Don replied on filfre.net (**2026-07-07**) — SimRefinery (Phil Salvador), Micropolis/OLPC saga,
+Lauren Elliott / Gallium / Proxi thread, [Will Dev Diaries](https://www.youtube.com/watch?v=u73_yZyuDS0).
+Tease contact + forthcoming video; **no social repo-link campaign until show ships.**
+
+**Parallel historian invite:** [Jimmy Maher](../../../jimmy-maher/README.md) — Jess Bird synergy model.
+Registry: [`process/maxis-history-collaborators.yml`](../../../../process/maxis-history-collaborators.yml).
+
+**Outreach copy (on hold):** [`micropolis-olpc-teaser.yml`](micropolis-olpc-teaser.yml). Primary sources
+in repo for production; not promoted on social yet:
+
+- [`../2006-11-13-simcity-olpc-email-thread/`](../2006-11-13-simcity-olpc-email-thread/README.md)
+- [`../simcity-open-source-saga/`](../simcity-open-source-saga/README.md)
+
 ## Related
 
 - [1996-04-26-winograd-interfacing-to-microworlds](../1996-04-26-winograd-interfacing-to-microworlds/README.md) — the Dollhouse seed talk Don linked on HN

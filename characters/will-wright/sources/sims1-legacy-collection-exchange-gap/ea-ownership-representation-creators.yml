@@ -1,0 +1,68 @@
+# EA ownership, representation updates, creator network exodus
+# Sensitive — verify figures and quotes before on-air; portrayal standards apply.
+
+meta:
+  updated: "2026-07-07"
+  verify_before_on_air: true
+  tone: |
+    Document community reaction for Exchange-revival context — not partisan commentary.
+    Respect creators who resigned; don't speak for them.
+
+sims4_medical_wearables:
+  date: "2023-01-31"
+  what: |
+    Free base-game update — CGMs (Continuous Glucose Monitors), hearing aids, top surgery scars,
+    binders, shapewear. CAS → Body → Medical Wearables subcategory; children through elders;
+    cosmetic only unless community mods (e.g. healthcare overhaul).
+  partners: Breakthrough T1D charity streams cited in press
+  gameplay: Visual representation — not functional diabetes simulation in base game
+  show_tie: |
+    Procedural rhetoric of inclusivity + player storytelling — same franchise lineage as Exchange
+    and Family Album. Contrast with fears after 2025 ownership change.
+
+ea_private_buyout:
+  note: "Public reporting late 2025 — verify exact closing date, PIF %, CFIUS outcome before citing"
+  reported:
+    deal_size: "~$55B leveraged buyout"
+    lead_investors: [Silver Lake, Affinity Partners (Jared Kushner reported in press)]
+    saudi_pif_stake: "Press cited ~93% PIF funding — verify SEC/regulatory filings"
+    ceo: Andrew Wilson remains (reported)
+    hq: Redwood City CA — no studio relocation reported
+  community_fears:
+    - Representation rollbacks for global market censorship
+    - User data under foreign sovereign wealth fund scrutiny (CFIUS press coverage)
+    - Heavier monetization to service deal debt (reported analyst concern)
+  dev_team_public: |
+    Sims team statement (Oct 2025 press): game "will always be a space where you can express your
+    authentic self" — community skeptical; track actions not slogans.
+
+ea_creator_network_exodus:
+  program: EA Creator Network (formerly Game Changers)
+  registry: ../../../../process/sims-creator-network-exodus.yml
+  show_seed: ../../../../repo-shows/will-wright-premiere/creator-network-exodus.yml
+  reported_departures:
+    headline:
+      - { id: lilsimsie, name: Kayla Sims, room: ../../../../characters/lilsimsie/ }
+      - { id: plumbella, name: Jesse McNamara, room: ../../../../characters/plumbella/ }
+      - { id: james-turner, name: James Turner, room: ../../../../characters/james-turner/ }
+    also_reported:
+      - { id: devon-bumpkin, name: Devon Bumpkin, room: ../../../../characters/devon-bumpkin/ }
+      - { id: vixella, name: Vixella, room: ../../../../characters/vixella/ }
+      - { id: steph0sims, name: Steph0Sims, room: ../../../../characters/steph0sims/ }
+      - { id: syd-mac, name: Syd Mac, room: ../../../../characters/syd-mac/ }
+  tiny_life_praise:
+    plumbella: "makes me feel the way that The Sims 1 did"
+    james_turner: "what we know and what we love"
+    source: https://tinylifegame.com/
+  community_actions:
+    - Block The EA Deal petition (~67k signatures cited in press)
+    - Rep Maxwell Frost + lilsimsie stream (reported) — played Stardew Valley as protest
+  wwsff_stance: |
+    Respect creator solidarity. Micropolis Home positions as **fan infrastructure + attribution** —
+    lift Heather/Steve/subscription creators first; not competing with resigned ambassadors.
+
+
+see_also:
+  - community-sharing-today.yml
+  - ../../../../catalogs/get-the-sims-on-steam.md
+  - ../2025-12-will-wright-dev-diaries/identity-pronoun-surfing.yml

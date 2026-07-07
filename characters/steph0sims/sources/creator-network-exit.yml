@@ -1,0 +1,9 @@
+# Steph0Sims — exit snapshot
+
+meta:
+  verify_before_on_air: true
+
+press:
+  - outlet: Digital Spy
+    url: https://www.digitalspy.com/tech/a69156522/sims-statement-backlash-ea-sale/
+    theme: "Comfort in Sims; cannot support opposing values; act now before sale finalizes"

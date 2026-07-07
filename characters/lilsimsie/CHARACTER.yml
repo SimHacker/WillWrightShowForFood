@@ -1,0 +1,53 @@
+# Kayla Sims (lilsimsie) — portrayal. NOT Kayla.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: lilsimsie
+  name: Kayla Sims
+  also_known_as: [lilsimsie, LilSimsie]
+  type: invitation
+  signifier: "💛📺"
+  status: living
+  field: "Sims YouTuber (~2M subs); EA Creator Network; Jan 2025 EA collab pack; resigner Oct 2025"
+  home: characters/lilsimsie/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 1
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: ../../repo-shows/will-wright-premiere/creator-network-exodus.yml
+
+bio:
+  summary: |
+    **Kayla Sims** (**lilsimsie**) is among the largest Sims creators on YouTube (~2M subscribers).
+    She collaborated with EA on a **creator pack (January 2025)** — then in **October 2025**
+    publicly left the **EA Creator Network** over the reported acquisition, calling the situation
+    a "nightmare for our community" and saying new ownership's values were at odds with hers
+    (The Verge, IGN, NME — verify verbatim quotes before on-air).
+
+  political_visibility:
+    note: "Rep Maxwell Frost + lilsimsie stream reported (Stardew Valley protest) — verify before booking"
+
+ea_creator_network_exit:
+  timing: Oct 2025
+  reported_actions:
+    - Removed self from EA Creator Network
+    - No early access; no creator code
+    - Shift content toward other games over time
+  quotable_paraphrase: |
+    "Under this new ownership I feel I cannot maintain a direct association to the company" — verify
+
+sources:
+  - sources/creator-network-exit.yml
+  - ../../process/sims-creator-network-exodus.yml
+
+see_also:
+  - README.md
+  - ../plumbella/
+  - ../james-turner/
+  - ../ellpeck/

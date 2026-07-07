@@ -1,0 +1,57 @@
+# EA Creator Network exodus — Oct 2025 (registry)
+# Verify quotes and dates before on-air. Respect creators; don't speak for them.
+
+meta:
+  updated: "2026-07-08"
+  verify_before_on_air: true
+  program: EA Creator Network (formerly Game Changers)
+  trigger: "~$55B EA acquisition — Saudi PIF, Silver Lake, Affinity Partners (press, late 2025)"
+
+wwsff_stance: |
+  Interview solidarity — Tiny Life praise + Legacy Exchange gap + indie/git sharing rails.
+  Lift creators who left; no judgment on those who stayed (Plumbella's public framing).
+
+character_rooms:
+  headline:
+    - id: lilsimsie
+      name: Kayla Sims
+      path: ../../characters/lilsimsie/
+      note: "~2M YouTube; EA collab pack Jan 2025; early high-profile resigner"
+    - id: plumbella
+      name: Jesse McNamara
+      path: ../../characters/plumbella/
+      note: "UK; advocacy history; Tiny Life praise on ellpeck site; won't buy future packs"
+    - id: james-turner
+      name: James Turner
+      path: ../../characters/james-turner/
+      note: "Legendary builder; formerly The Sim Supply; shift variety + remove creator code"
+  also_reported:
+    - id: devon-bumpkin
+      name: Devon Bumpkin
+      path: ../../characters/devon-bumpkin/
+    - id: vixella
+      name: Vixella
+      path: ../../characters/vixella/
+    - id: steph0sims
+      name: Steph0Sims
+      path: ../../characters/steph0sims/
+    - id: syd-mac
+      name: Syd Mac
+      path: ../../characters/syd-mac/
+
+press:
+  - { outlet: PC Gamer, url: "https://www.pcgamer.com/games/the-sims/as-the-sims-content-creators-depart-over-eas-usd55-billion-saudi-backed-buyout-the-dev-team-promises-the-game-will-always-be-a-space-where-you-can-express-your-authentic-self/" }
+  - { outlet: The Verge, url: "https://www.theverge.com/games/816750/the-sims-ea-buyout-content-creator-program-departures-lilsimsie" }
+  - { outlet: IGN, url: "https://www.ign.com/articles/the-sims-creators-quit-ea-partnerships-amid-buyout-concerns" }
+  - { outlet: NME, url: "https://www.nme.com/news/gaming-news/the-sims-saudi-streamers-quit-youtube-twitch-3902000" }
+  - { outlet: Digital Spy, url: "https://www.digitalspy.com/tech/a69156522/sims-statement-backlash-ea-sale/" }
+
+community_actions:
+  - Block The EA Deal petition (~67k signatures cited in press)
+  - Rep Maxwell Frost + lilsimsie stream (reported) — Stardew Valley protest play
+
+show_seed: ../../repo-shows/will-wright-premiere/creator-network-exodus.yml
+
+see_also:
+  - ../../characters/will-wright/sources/sims1-legacy-collection-exchange-gap/ea-ownership-representation-creators.yml
+  - ../../characters/ellpeck/sources/praise-quotes.yml

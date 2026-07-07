@@ -1,0 +1,9 @@
+# Devon Bumpkin — exit snapshot
+
+meta:
+  verify_before_on_air: true
+
+press:
+  - outlet: NME
+    url: https://www.nme.com/news/gaming-news/the-sims-saudi-streamers-quit-youtube-twitch-3902000
+    theme: "Built career on Sims; won't financially promote under new ownership"

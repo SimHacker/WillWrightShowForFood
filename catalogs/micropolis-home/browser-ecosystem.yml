@@ -1,0 +1,140 @@
+# Micropolis Home — browser-native Sims 1 ecosystem (Exchange replacement)
+# Fills gaps in Steam Legacy Collection; replaces zip + file manager + dead Share/Network button.
+
+meta:
+  id: browser-ecosystem
+  updated: "2026-07-08"
+  status: spec
+  parent: CATALOG.yml
+  game: https://store.steampowered.com/app/3314070/The_Sims/
+  research: ../../characters/will-wright/sources/sims1-legacy-collection-exchange-gap/
+
+one_line: |
+  Fully browser-based local UI + optional catalog server — reads/writes UserData saves with consent,
+  replaces the UCP Internet button with something at least as convenient and far more capable.
+
+problem_statement:
+  steam_legacy_collection:
+    release: "2025-01-31"
+    missing:
+      - Exchange server and upload pipeline
+      - UCP Internet / Share button (dead link avoided)
+      - Auto Generate Web Pages → cloud storytelling sync
+      - Sims Creator in bundle
+    community_workaround: Manual zip, SimFileShare, Tumblr, Discord — leave game, use file manager
+  gap: |
+    EA shipped a playable port without the **medium** — no in-game path from lot/family/album to
+    community. Fans re-learned 2005 workflows with worse discovery and no official hook.
+
+vision:
+  no_zip_no_explorer: |
+    User never hunts UserData paths in Explorer. Browser app (PWA or embedded WebView2 in Angel)
+    mounts the save tree via File System Access API / native FileBridge — same UX on web and Windows.
+  replaces_internet_button: |
+    One-click from companion tray OR bookmark: "Share this lot" = parse IFF/FAM → validate → consent
+    dialog → publish to catalog OR copy federated SFS link OR open PR to GitHub catalog branch.
+  offline_first: |
+    Service worker + IndexedDB/SQLite cache: browse catalogs, install objects, edit Family Album yaml,
+    run compatibility checks without network. Sync when online.
+  consent_everywhere: |
+    No upload without explicit per-item consent (lot, family, album page, object set). Granular:
+    public / unlisted link / federate-only metadata / local-only draft.
+
+architecture:
+  layers:
+    local_ui:
+      what: SvelteKit Micropolis Home — runs in browser tab OR Angel WebView2
+      reads: UserData via FileBridge (native) or showDirectoryPicker (PWA where supported)
+      writes: Install objects, merge families, inject album pages — always save-before-mutate
+    catalog_server:
+      what: Central API — search, download, publish, virus scan queue, compatibility graph
+      not: Game binaries; not EA-hosted Exchange resurrection
+      hosts: Metadata CARD indexes, free iff/fam in git releases, federated simfil.es pointers
+    git_backing:
+      spec: github-distribution-model.yml
+      role: Permanent URLs, PR workflow, attribution, version history for free lane
+
+capabilities:
+  save_file_intelligence:
+    auto_read: |
+      On folder grant: index Neighborhoods/, Houses/, Characters/, Web Pages/, Downloads/, Objects/
+      Parse IFF headers, GUID tables, family trees, lot metadata — build searchable local catalog.
+    file_cop: |
+      Copy lot/family/object between neighborhoods with GUID remap preview; shopping list for missing deps.
+    guid_collision_manager: |
+      Detect duplicate GUIDs on install; offer remap, skip, or merge; log provenance for catalog publish.
+    compatibility_engine: |
+      Expansion flags, object requirements, engine version; block install or warn with shopping list.
+    graveyard_manager: |
+      Enumerate urns/tombstones from save parse; resurrection/kill/clone flows with operator consent;
+      ties Death/Satan NPC story objects — orchestrate save → reload when game requires it.
+
+  sharing_and_exchange:
+    publish_pipeline:
+      steps: [parse, validate, virus_scan, compatibility_report, consent, upload, catalog_entry]
+      outputs: [Micropolis catalog page, optional SFS mirror, optional git release asset, Family Album html+yaml]
+    download_pipeline:
+      steps: [search_or_browse, preview SimShow metadata, virus_scan_pass, install_to_UserData, verify_in_game]
+    federation:
+      simfileshare: Index simfil.es in CARD — don't replace Nysha's host for external creators
+      modthesims_tsr: Metadata + deep links; VIP lanes stay theirs
+      github: Free objects in-tree; PR as modern "Exchange upload"
+
+  safety:
+    virus_scanning: |
+      Server-side ClamAV + extension allowlist (.iff .fam .far .zip without .exe); quarantine queue;
+      community report flag; Apr 2025 SFS compromise lesson — never trust account alone.
+    malware_policy: Reject executables; sandbox parse only; show creator attribution chain
+
+  tools_local:
+    run_offline: Object browser, shopping list builder, album editor, playset composer (2D sticker stage)
+    run_online: Publish, sync favorites, Repo Show stream hooks, cross-player discover
+    angel_upgrade: |
+      MicropolisAngel = same TS platform in WebView2 + FileBridge + OBS/stream — not a separate codebase.
+
+gap_fill_matrix:
+  - gap: "No UCP Internet button"
+    fill: "Browser hub + tray hotkey — Share opens Micropolis Home on current lot/family"
+  - gap: "No Generate Web Pages cloud sync"
+    fill: "Local album generator + one-click publish to catalog (yaml + html export)"
+  - gap: "Manual zip + path knowledge"
+    fill: "FileBridge auto-locate Steam Legacy Collection UserData"
+  - gap: "SFS no search"
+    fill: "Micropolis searchable CARD index federating SFS + git + MTS"
+  - gap: "Missing custom objects on shared lots"
+    fill: "Shopping list + one-click fetch missing GUIDs from catalog"
+  - gap: "GUID collisions on install"
+    fill: "GUID collision manager with remap"
+  - gap: "No Sims Creator"
+    fill: "Out of scope for v1 — federate Transmogrifier docs; object tools via catalog not Creator"
+  - gap: "4K microscopic UI"
+    fill: "Document Magpie/DDrawCompat in steam guide; Angel accessibility TTS/Simplifier lane"
+
+rollout:
+  phase_1_web:
+    - Browse git-backed CARD catalogs + install docs
+    - Steam Community Guide → repo roots
+    - Read-only save parse in browser (demo)
+  phase_2_local_write:
+    - FileBridge / directory picker — install objects, file cop
+    - Family Album yaml editor + export
+  phase_3_publish:
+    - Consent upload → catalog server + optional SFS
+    - Virus scan + compatibility gate
+  phase_4_angel:
+    - WebView2 shell, tray watcher, stream integration
+    - Graveyard manager + Chat-with-God assist (optional API)
+
+what_else:
+  - Creator solidarity — attribution-first; drive paid traffic to Heather/Steve/SimFreaks
+  - Repo Show harvest — audience homefun → git PR
+  - Soul City bridge — soul-file facets compile to Sims iff injection (parallel lane)
+  - Educators track — OPTIMUS-style classroom data export from neighborhoods
+  - Verify Legacy Collection paths on real Steam install before shipping FileBridge defaults
+
+see_also:
+  - micropolis-angel.yml
+  - github-distribution-model.yml
+  - steam-community-guide.yml
+  - ../../characters/will-wright/sources/sims1-legacy-collection-exchange-gap/README.md
+  - ../../apps/micropolis-angel/ARCHITECTURE.yml

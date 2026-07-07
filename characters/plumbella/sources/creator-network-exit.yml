@@ -1,0 +1,26 @@
+# Plumbella — EA Creator Network exit (press snapshot)
+# Verify quotes before on-air.
+
+meta:
+  verify_before_on_air: true
+  timing: Oct 2025
+
+reported:
+  left_ea_creator_network: true
+  no_future_pack_content: true
+  advocacy: "Public history of inclusive Sims commentary"
+
+press:
+  - outlet: NME
+    note: Privilege framing; hopes sale falls through or pressure on inclusivity
+  - outlet: IGN
+    note: Asked to leave network; won't buy future releases
+  - outlet: Digital Spy
+    note: Named among high-profile quitters
+
+tiny_life_praise:
+  quote: "I had a really great time playing with this. This very much makes me feel the way that The Sims 1 did."
+  url: https://tinylifegame.com/
+
+see_also:
+  - ../../../process/sims-creator-network-exodus.yml

@@ -1,0 +1,30 @@
+# Vixella — portrayal. NOT Vixella.
+
+character:
+  id: vixella
+  name: Vixella
+  type: invitation
+  signifier: "✨📺"
+  status: living
+  field: "Sims YouTuber; EA Creator Network resigner Oct 2025"
+  home: characters/vixella/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 1
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+
+bio:
+  summary: |
+    **Vixella** — Sims YouTuber named among creators who left the **EA Creator Network** following
+    the Oct 2025 buyout news (PC Gamer, IGN — verify post).
+
+sources:
+  - ../../process/sims-creator-network-exodus.yml
+
+see_also:
+  - ../../repo-shows/will-wright-premiere/creator-network-exodus.yml

@@ -4,7 +4,44 @@
 meta:
   note: "Priority order for finishing invitations — not pressure on guests"
 
+public_outreach_policy:
+  updated: "2026-07-07"
+  rule: |
+    Until Repo Show videos ship: public comments tease get-in-touch + forthcoming video only.
+    Do NOT post social copy driving deep GitHub primary-source traffic. Internal repo planning OK.
+  posted:
+    filfre_rowan_reply: "2026-07-07 — Don replied on Digital Antiquarian (SimRefinery, Micropolis/OLPC, Gallium/Proxi, Will Dev Diaries)"
+    heather_burns_simcity_bluesky: "2025-06-20 — @heatherburns.bsky.social SimCity for son; Don → micropolisweb.com + Patreon (private: don-hopkins/sources/private/2025-06-20-heather-burns-simcity-bluesky.yml)"
+  hold:
+    - bluesky_x
+    - youtube_pinned_comment
+    - hn_repo_link_drops
+  see_also: ../process/maxis-history-collaborators.yml
+
 next:
+  - id: ellpeck
+    why: "Warm — Tiny Life; Sims ⇔ Soul City ⇔ Tiny Life interview"
+    path: characters/ellpeck/
+  creator_network_exodus:
+    why: "Panel — Tiny Life praise + EA exit + Exchange gap (verify quotes before outreach)"
+    show: repo-shows/will-wright-premiere/creator-network-exodus.yml
+    registry: process/sims-creator-network-exodus.yml
+    priority:
+      - id: plumbella
+        path: characters/plumbella/
+      - id: james-turner
+        path: characters/james-turner/
+      - id: lilsimsie
+        path: characters/lilsimsie/
+    also:
+      - devon-bumpkin
+      - vixella
+      - steph0sims
+      - syd-mac
+  - id: jimmy-maher
+    why: "Parallel historian invite (Jess model) — Maxis Part 1 + filfre thread; maher AT filfre DOT net"
+    path: characters/jimmy-maher/
+    synergy: characters/jimmy-maher/synergy/willwrightshowforfood.yml
   - id: craig-latta
     why: "TIME-SENSITIVE — in Amsterdam now; Caffeine (SqueakJS+WASM) live-web Smalltalk; reach out while in town"
   - id: will-wright
@@ -57,3 +94,22 @@ wanted_artifacts:
 see_also:
   - INDEX.yml
   - ../schemas/invitation-workflow.yml
+
+maxis_history_parallel:
+  note: "Documentarians and archivists — synergistic, not competing. Full registry in process/maxis-history-collaborators.yml"
+  peers:
+    - { id: jess-bird, status: correspondent_warm, synergy: characters/jess-bird/synergy/willwrightshowforfood.yml }
+    - { id: jimmy-maher, status: contact_next, synergy: characters/jimmy-maher/synergy/willwrightshowforfood.yml }
+    - { id: phil-salvador, status: draft_invite, show: repo-shows/phil-salvador-simrefinery/ }
+    - { id: chaim-gingold, status: not_yet_asked, note: Building SimCity book }
+  community_leads:
+    - { id: rowan-lipkovits, where: filfre comment 2026-07-04, don_replied: 2026-07-07 }
+
+social_teasers:
+  note: "Draft copy on hold — filfre posted; no repo-link social until videos ship"
+  items:
+    - id: micropolis-olpc-after-maher
+      file: characters/will-wright/sources/2026-07-03-digital-antiquarian-maxis-part1/micropolis-olpc-teaser.yml
+      why: "Rowan thread; bridge Maher Part 1 → OLPC/Micropolis — use contact/tease tone only until video"
+      status: hold_until_video
+      posted: { filfre: "2026-07-07" }

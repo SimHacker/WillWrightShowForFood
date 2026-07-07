@@ -79,6 +79,17 @@ sites:
       model: "Free; archives EA **Get Cool Stuff** + ts1depot creations + tool directory"
       tie: "Killer downloads / official Maxis web objects — see ../maxis/"
 
+    - id: simfileshare
+      url: https://simfileshare.net/
+      model: "Centralized shortlink host (simfil.es); invite-only uploaders; no public browse (FAQ)"
+      tumblr: https://simfileshare.tumblr.com/
+      note: |
+        Not open source; permanent URLs; end-of-life handoff to Sims 2 Graveyard/Simscave promised.
+        Official docs omit Sims 1 install path — "ask the creator." Full capture in research bundle.
+      research:
+        - ../../characters/will-wright/sources/sims1-legacy-collection-exchange-gap/community-sharing-today.yml
+        - ../../characters/will-wright/sources/sims1-legacy-collection-exchange-gap/simfileshare-official.yml
+
   tools_and_wikis:
     - { name: IFF Pencil 2, role: SimAntics editing }
     - { name: SimPose, role: posing }
@@ -117,7 +128,10 @@ virtual_catalogs:
   ea_exchange_history:
     what: "originalsims.com / Exchange saves, family albums, characters — Internet Archive + Simopolis hub"
     source: ../../characters/will-wright/sources/2004-01-12-sims-exchange/
-    status: seed
+    legacy_collection_gap: ../../characters/will-wright/sources/sims1-legacy-collection-exchange-gap/
+    status: |
+      seed — Steam Legacy Collection (2025-01-31) ships without Exchange button, web hooks, or upload path;
+      community uses SFS + manual zip. Micropolis Home / Angel = revival infrastructure.
 
   internet_archive_import:
     working_name: tornado_importer  # IA harvest → Simopolis catalog entries
@@ -131,6 +145,7 @@ virtual_catalogs:
   simopolis_hub:
     what: "Git-checked-in + web hub for round-trippable saves, albums, cross-game facets"
     architecture: ../../repo-shows/INDEX.yml#bridges_architecture
+    distribution: ../micropolis-home/github-distribution-model.yml
 
 # STEAM COMMUNITY GUIDES — Micropolis Home discovery (web hub + Repo Shows)
 steam_community_guides:
@@ -150,7 +165,7 @@ steam_community_guides:
     repo_shows_channel:
       - "Discover + promote Repo Show Class Repo Shows — flagship Will Wright kickoff + guest network"
       - "Live/VOD, GitHub repo browse, TicketPR audience ingress, episode harvest (skills, code, homefun)"
-      - "Sims history + bridge episodes (Simopolis hub → Stardew, Proxi, Spore, Mind Mirror, …)"
+      - "Sims history + bridge episodes (Simopolis hub → Minecraft, Stardew, Proxi, Spore, Mind Mirror, …)"
     not: "A game; a warez bundle; implied EA endorsement; a replacement for creator storefronts; an Electron wrapper"
 
   what_to_avoid:

@@ -1,0 +1,63 @@
+# Jesse McNamara (Plumbella) — portrayal. NOT Jesse.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: plumbella
+  name: "Jesse McNamara"
+  also_known_as: [Plumbella]
+  type: invitation
+  signifier: "🟠📺"
+  status: living
+  field: "Sims YouTuber (Plumbella); advocacy; EA Creator Network resigner Oct 2025"
+  home: characters/plumbella/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 1
+  authored_by: don-hopkins
+  note: Public statements from buyout coverage + tinylifegame.com Praise only until consent.
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: ../../repo-shows/will-wright-premiere/creator-network-exodus.yml
+
+bio:
+  summary: |
+    **Jesse McNamara** (**Plumbella**) is one of The Sims 4's best-known UK creators — history,
+    commentary, and advocacy with a large YouTube following. In **October 2025** she was among the
+    first high-profile resignations from the **EA Creator Network** after EA's reported ~$55B
+    acquisition involving Saudi Arabia's Public Investment Fund. Public posts: asked to leave the
+    network; will not buy or make content around future releases; values at odds with new ownership.
+
+  tiny_life: |
+    Quoted on [Tiny Life's Praise page](https://tinylifegame.com/): "I had a really great time
+    playing with this. This very much makes me feel the way that The Sims 1 did." — indie sim
+    solidarity thread with Ell (Ellpeck) and Legacy Collection Exchange gap.
+
+ea_creator_network_exit:
+  timing: "Oct 2025 (verify exact post date before on-air)"
+  reported_actions:
+    - Left EA Creator Network
+    - Will not buy or showcase future EA Sims releases
+  public_framing: |
+    Acknowledged privilege to leave easily; won't judge creators who stay; hopes sale falls through
+    or remaining creators pressure EA on inclusivity (NME/IGN paraphrase — verify quote)
+
+quotable:
+  tiny_life:
+    text: "I had a really great time playing with this. This very much makes me feel the way that The Sims 1 did."
+    source: https://tinylifegame.com/ (Praise)
+    path: ../ellpeck/sources/praise-quotes.yml
+
+sources:
+  - sources/creator-network-exit.yml
+  - ../../process/sims-creator-network-exodus.yml
+
+see_also:
+  - README.md
+  - ../james-turner/
+  - ../lilsimsie/
+  - ../ellpeck/
+  - ../../repo-shows/will-wright-premiere/creator-network-exodus.yml

@@ -1,0 +1,52 @@
+# The Sims Legacy Collection (Steam) — Jan 2025 re-release changes
+# App: https://store.steampowered.com/app/3314070/The_Sims/
+
+meta:
+  release: "2025-01-31"
+  product: The Sims Legacy Collection (Steam / EA App)
+  platform: Windows only — Sims 1 does not run on Mac in this release
+
+exchange_omissions:
+  no_server: Standalone offline — no Exchange endpoint
+  ucp_internet_button: Removed — avoids dead links / 404
+  auto_web_pages: Disabled / non-functional in Legacy Collection (verify Web Pages folder behavior)
+  upload_hooks: Removed — nothing to receive .FAM / house files
+
+also_omitted_or_changed:
+  sims_creator: Not included in Legacy Collection — community complaint on r/thesims1
+  bulldoze_empty_lots: Removed — could previously bulldoze nothing on empty lots (harmless gag)
+
+community_reaction:
+  source: reddit-legacy-edition-community.yml
+  theme: "Bring back the Exchange in all its 2000 glory — imagine the mods now"
+
+quality_of_life_added:
+  - Native modern resolution / widescreen support
+  - Mouse scroll wheel camera zoom (not in original 2000 release)
+  - Bug fixes — e.g. Maxis-made Sims interests data
+  - EA intro video locked 4:3 with letterboxing; gameplay fills screen
+
+known_pain_points:
+  tiny_ui:
+    issue: UI renders at fixed pixel size — microscopic on 1080p/4K
+    community_fixes:
+      - Temporary lower desktop resolution before play
+      - Magpie upscaling (windowed + Alt+F11) — community preferred
+      - DDrawCompat.ini DisplayResolution override
+    refs: [EA Forums Mar 2025 patch thread, r/thesims1]
+
+medical_wearables_sims4_parallel:
+  note: |
+    Sims **4** base game added CGMs + hearing aids + top surgery scars + binders (2023-01-31)
+    — same representation ethos as Sims 1 Exchange storytelling; different franchise moment.
+  see: ea-ownership-representation-creators.yml
+
+micropolis_home_posture:
+  requires_owned_game: true
+  steam_guide: ../../../../catalogs/micropolis-home/steam-community-guide.yml
+  companion: ../../../../catalogs/micropolis-home/micropolis-angel.yml
+  strategy: ../../../../catalogs/sims1-community-landscape.yml
+
+see_also:
+  - exchange-history-and-ui.yml
+  - community-sharing-today.yml

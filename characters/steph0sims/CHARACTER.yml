@@ -1,0 +1,28 @@
+# Steph0Sims — portrayal. NOT Steph.
+
+character:
+  id: steph0sims
+  name: Steph0Sims
+  type: invitation
+  signifier: "🎀📺"
+  status: living
+  field: "Sims creator; EA Creator Network resigner Oct 2025"
+  home: characters/steph0sims/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 1
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+
+bio:
+  summary: |
+    **Steph0Sims** — confirmed leaving **EA Creator Network** (Digital Spy Oct 2025): Sims as comfort
+    space; cannot support company that "directly opposes" inclusive values — verify quote.
+
+sources:
+  - sources/creator-network-exit.yml
+  - ../../process/sims-creator-network-exodus.yml

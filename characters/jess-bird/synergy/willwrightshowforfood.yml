@@ -16,6 +16,10 @@ projects:
 shared_ground:
   subject: Will Wright, Maxis, The Sims lineage
   ethic: record people while they're here; honor memorial interviews
+  proxi_heirloom: |
+    Will (Dev Diaries Dec 2025): Proxi as software heirloom — family members' partial memories,
+    collective discovery. Same lane as Tim LeTourneau and memorial interviews.
+    characters/will-wright/sources/2025-12-will-wright-dev-diaries/proxi-software-heirloom.yml
   sources:
     - ../sources/2026-07-07-email-excerpt.md
     - ../../will-wright/sources/
@@ -34,3 +38,7 @@ lend_each_other:
 
 independence:
   note: Neither project waits on the other's green light — each ships on its own clock.
+
+parallel_peers:
+  registry: ../../process/maxis-history-collaborators.yml
+  jimmy_maher: ../../jimmy-maher/synergy/willwrightshowforfood.yml

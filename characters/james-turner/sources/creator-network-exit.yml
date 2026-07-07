@@ -1,0 +1,18 @@
+# James Turner — Creator Network exit (press snapshot)
+
+meta:
+  verify_before_on_air: true
+  timing: Oct 2025
+
+reported:
+  left_ea_creator_network: true
+  remove_creator_code: true
+  content_shift: "More variety beyond Sims EA promotion"
+
+press:
+  - { outlet: Digital Spy, note: "Leave network; shift focus; remove creator code" }
+  - { outlet: IGN, note: "Named among quitters with Plumbella, lilsimsie, Vixella" }
+
+tiny_life_praise:
+  quote: "I enjoyed playing it! It's kind of what we know and what we love."
+  url: https://tinylifegame.com/

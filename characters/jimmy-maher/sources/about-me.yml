@@ -1,0 +1,78 @@
+# About Me — primary source (filfre.net)
+# Archived excerpt: about-me.md
+
+meta:
+  url: https://www.filfre.net/about-me/
+  title: "About Me — The Digital Antiquarian"
+  fetched: "2026-07-07"
+
+person:
+  name: Jimmy Maher
+  spouse: Dorte
+  residence:
+    current: "Village near Billund, Denmark (Lego country)"
+    former: "Dallas, Texas (until 2009)"
+  education_note: |
+    UTDallas connection — Dene Grigar (WSU Vancouver) and John Barber knew him there; he credits
+    early kindness from academic colleagues when easing into writing about games (filfre comments).
+
+sites:
+  digital_antiquarian:
+    url: https://www.filfre.net/
+    tagline: "A history of computer entertainment and digital culture"
+    since: "2011+ (15+ years per reader comments, 2026)"
+    format: Chronological essay chronicle; Table of Contents; Hall of Fame; ebook compilations; RSS
+  analog_antiquarian:
+    url: https://www.analogantiquarian.com/
+    started: 2019
+    theme: "Wonders of the World — wide-angle world history"
+
+mission_in_his_words: |
+  Historical chronicle of interactive entertainment and digital culture — never truly complete;
+  enjoying the journey. Wants to be read; grateful for readers; tries to keep content worthy of time.
+
+support_model:
+  articles: always_free
+  optional: [Patreon, PayPal one-time]
+  patreon: https://www.patreon.com/DigitalAntiquarian
+  note: Patreon patrons get email notifications of new posts (per filfre comments)
+
+contact:
+  email: maher@filfre.net
+  public_form: filfre.net right-hand gutter / article footers
+
+social:
+  bluesky: DigiAntiquarian
+  mastodon: DigiAntiquarian
+
+published_books:
+  - title: "The Future Was Here: The Commodore Amiga"
+    publisher: MIT Press
+    note: "Jaroslav Švelch (Prague) praised European scene coverage"
+  - title: "Let's Tell a Story Together: A History of Interactive Fiction"
+  - title: "His Majesty's Ship Impetuous"
+
+interactive_fiction:
+  - name: "The King of Shreds and Patches"
+    url: http://maher.filfre.net/King
+  - name: Filfre
+    note: Windows IF interpreter (his namesake project)
+
+historian_practice:
+  note: "Observed from public About Me thread — not claims about private process"
+  patterns:
+    - Reaches out to living subjects before writing when possible (e.g. Jason Scott → Ron Martinez)
+    - Welcomes corrections from insiders; updates articles (Jim Levy, Brian Kerslake, Dene Grigar)
+    - Points researchers to Internet Archive magazine scans for image rights (Sarah Fairhurst, Pandora Monnas)
+    - Separates factual correction from critical opinion (Ron Martinez thread, 2018)
+    - Patient, civil public voice under hostile commenters
+
+wwsff_touchpoints:
+  - characters/will-wright/sources/2026-07-03-digital-antiquarian-maxis-part1/
+  - process/maxis-history-collaborators.yml
+  - Don HN question-pump + filfre reply to Rowan Lipkovits (2026-07-07)
+
+see_also:
+  - about-me.md
+  - ../CHARACTER.yml
+  - ../synergy/willwrightshowforfood.yml

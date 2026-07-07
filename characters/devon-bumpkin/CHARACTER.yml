@@ -1,0 +1,33 @@
+# Devon Bumpkin — portrayal. NOT Devon.
+
+character:
+  id: devon-bumpkin
+  name: Devon Bumpkin
+  type: invitation
+  signifier: "🌿📺"
+  status: living
+  field: "Sims creator; EA Creator Network resigner Oct 2025"
+  home: characters/devon-bumpkin/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 1
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+
+bio:
+  summary: |
+    **Devon Bumpkin** — Sims content creator who publicly left the **EA Creator Network** in Oct 2025.
+    NME quoted: built career on The Sims but uncomfortable continuing to financially promote EA under
+    new ownership — "honesty and alignment with my values" (verify verbatim).
+
+sources:
+  - sources/creator-network-exit.yml
+  - ../../process/sims-creator-network-exodus.yml
+
+see_also:
+  - ../plumbella/
+  - ../../repo-shows/will-wright-premiere/creator-network-exodus.yml

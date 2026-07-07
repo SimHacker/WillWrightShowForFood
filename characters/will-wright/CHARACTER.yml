@@ -53,6 +53,31 @@ bio:
   relation_to_show: |
     First invited Repo Show guest — topic-less kickoff orbiting the 1996 Stanford
     Winograd talk (Dollhouse preview). Crown jewel thread: data portability.
+    Proxi (Gallium): also **software heirloom** — family members' partial memories of a
+    loved one; discover what you didn't know (Dev Diaries Dec 2025).
+
+proxi:
+  studio: Gallium Studios
+  co_founders: [Will Wright, Lauren Elliott]
+  heirloom_metaphor:
+    source: sources/2025-12-will-wright-dev-diaries/proxi-software-heirloom.yml
+    summary: |
+      Software heirloom — memorialize e.g. grandmother; each family member contributes stories
+      from their perspective; collective discovery of unknown facets.
+    video: https://www.youtube.com/watch?v=u73_yZyuDS0
+  dev_diaries_2025:
+    video: https://www.youtube.com/watch?v=u73_yZyuDS0
+    beats:
+      - sources/2025-12-will-wright-dev-diaries/proxi-software-heirloom.yml
+      - sources/2025-12-will-wright-dev-diaries/bartle-player-types.yml
+      - sources/2025-12-will-wright-dev-diaries/proxi-minecraft-export.yml
+      - sources/2025-12-will-wright-dev-diaries/identity-pronoun-surfing.yml
+    bartle_types: |
+      Will cites Richard Bartle's player-type taxonomy in the same interview — bridge to
+      richard-bartle (consented audience seat).
+    minecraft_export: |
+      Will already exported Proxi characters into Minecraft — shipped bridge precedent.
+      Seed: repo-shows/will-wright-premiere/game-bridge-proxi-minecraft.yml
 
 design_traditions:
   - toys_not_games

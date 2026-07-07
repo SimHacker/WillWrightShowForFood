@@ -44,6 +44,9 @@ clusters:
     - will-wright-holding-sim.png
     - sim-picking-wills-nose.png
     - will-wright-eating-sim.png
+  sims_satire:
+    - the-onion-will-wright-sims-origin-meme-1977.png
+    - the-onion-will-wright-sims-origin-meme-1977.yml
   computer_history_museum:
     - computer-history-museum-maxis-display.png
     - computer-history-museum-maxis-display.yml

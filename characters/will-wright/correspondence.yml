@@ -25,7 +25,8 @@ threads:
   olpc_micropolis:
     what: "Open SimCity for children; EA licensing; Micropolis activity on OLPC Sugar"
   proxi_gallium:
-    what: "Character-as-AI across games; Gallium Studios; Proxi as über-character"
+    what: "Character-as-AI across games; Gallium Studios; Proxi as über-character + software heirloom (family memory)"
+    public: characters/will-wright/sources/2025-12-will-wright-dev-diaries/proxi-software-heirloom.yml
   stupid_fun_club:
     what: "Robotics, Slats, One Minute Movies — constructionism as theater"
   sims_reunion:
@@ -50,6 +51,6 @@ connects_in_repo:
 
 show_hooks:
   - "1996 talk decode live — Will reads his own prediction of The Sims"
-  - "Data portability demo — Proxi ⇔ Sims ⇔ SimCity federation"
+  - "Data portability demo — Proxi ⇔ Sims ⇔ SimCity federation; Proxi → Minecraft (shipped)"
   - "Slats RoboResurrection — Stupid Fun Club code on air"
   - "Sims 1 post-mortem from Will's 1996 words"

@@ -1,0 +1,51 @@
+# Creator Network exodus — group interview seed
+# Plumbella, James Turner, lilsimsie + peers who left EA Creator Network (Oct 2025)
+
+meta:
+  id: creator-network-exodus
+  type: group
+  status: seed
+  verify_before_on_air: true
+
+one_line: |
+  The voices who praised Tiny Life, left EA's Creator Network over the buyout, and understand what
+  Legacy Collection removed — solidarity + Exchange revival + indie sims.
+
+registry: ../../process/sims-creator-network-exodus.yml
+
+guests_priority:
+  - characters/plumbella/
+  - characters/james-turner/
+  - characters/lilsimsie/
+  optional:
+    - characters/devon-bumpkin/
+    - characters/vixella/
+    - characters/steph0sims/
+
+threads:
+  tiny_life_praise:
+    site: https://tinylifegame.com/
+    quotes: ../../characters/ellpeck/sources/praise-quotes.yml
+    ell_interview: ../../characters/ellpeck/
+  exchange_gap:
+    source: ../../characters/will-wright/sources/sims1-legacy-collection-exchange-gap/
+  ea_buyout:
+    source: ../../characters/will-wright/sources/sims1-legacy-collection-exchange-gap/ea-ownership-representation-creators.yml
+  indie_rails:
+    spec: ../../catalogs/micropolis-home/github-distribution-model.yml
+    soul_city: game-bridge-sims-tiny-life.yml
+
+show_beats:
+  - "Read Tiny Life Praise quotes back — then Legacy Collection without Exchange"
+  - "Why leaving Creator Network was strongest action (lilsimsie framing)"
+  - "Plumbella — won't judge who stayed; privilege to walk away easily"
+  - "James Turner — variety content + creator code removed"
+  - "Panel: what would real sharing infrastructure look like now?"
+
+non_goals:
+  - Harass creators who stayed in EA network
+  - Partisan Saudi politics lecture — document functional impact on LGBTQ+ Sims community
+
+see_also:
+  - game-bridge-sims-tiny-life.yml
+  - ../../characters/ellpeck/bridge/soul-city-bridge.md

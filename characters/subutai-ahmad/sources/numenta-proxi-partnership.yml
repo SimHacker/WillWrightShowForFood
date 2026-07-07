@@ -1,0 +1,36 @@
+# Gallium / Proxi — Numenta partnership
+
+meta:
+  updated: "2026-07-08"
+
+people:
+  subutai_ahmad:
+    site: https://subutai.me/
+    roles:
+      - Chief Scientist, Numenta
+      - CEO, Thousand Brains Project (nonprofit spin-out Jan 2025)
+    proxi: NuPIC partner; GamesBeat 2024 panel with Will Wright
+    don: Interval motion tracking + background removal → Me2Cam → browser puppet lineage
+
+companies:
+  gallium_studios:
+    site: https://galliumstudios.com/
+    proxi: unshipped; Oct 2024 layoffs; skeleton crew; waitlist "late 2026"
+  numenta:
+    site: https://www.numenta.com/
+    proxi: NuPIC — on-prem memory analysis for Proxi
+
+partnership:
+  joint_blog: https://galliumstudios.medium.com/powering-proxi-with-a-brain-based-ai-platform-905418f873c7
+  gamesbeat_2024: https://gamesbeat.com/gamesbeat-summit-2024-will-wright-on-his-new-game-proxi-and-the-future-of-ai/
+
+show_focus:
+  - Subutai Interval CV → browser motion input
+  - Subutai + Will — neocortex vs LLMs, Thousand Brains
+  - NuPIC — Proxi memory clustering on-prem
+  - Proxi → Minecraft export — will-wright Dev Diaries source
+
+see_also:
+  - ../README.md
+  - ../CHARACTER.yml
+  - ../../will-wright/sources/2025-12-will-wright-dev-diaries/proxi-minecraft-export.yml

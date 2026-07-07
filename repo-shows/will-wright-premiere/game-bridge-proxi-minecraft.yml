@@ -1,0 +1,48 @@
+# Game bridge — Proxi ⇔ Simopolis ⇔ Minecraft
+# Will already exported Proxi characters into Minecraft (Dev Diaries Dec 2025) — build FROM that precedent.
+
+meta:
+  id: game-bridge-proxi-minecraft
+  type: bridge
+  status: seed
+  one_line: "Proxi characters already walk in Minecraft — extend the export into Simopolis round-trip and a live Repo Show demo."
+
+thesis: |
+  **Minecraft is a major bridge** — not hypothetical. Will Wright said on camera that he **already
+  exported Proxi characters into Minecraft**. That makes Minecraft a shipped spoke on the same
+  data-portability arc as SliceCity (SimCity inside The Sims): characters authored in one world,
+  playable in another.
+
+shipped_precedent:
+  who: Will Wright / Gallium Studios (Proxi)
+  what: Proxi character export → Minecraft (done)
+  source: ../../characters/will-wright/sources/2025-12-will-wright-dev-diaries/proxi-minecraft-export.yml
+  video: https://www.youtube.com/watch?v=u73_yZyuDS0
+  contrast: |
+    SliceCity = Steve Alvey's deep nested SimCity-in-Sims (community precedent).
+    Proxi→Minecraft = Will's own cross-world character export (Gallium precedent).
+
+show_beats:
+  - "Will demos or explains the export on air — how Proxi souls map to blocks/skins/behaviors"
+  - "Round-trip through Simopolis hub — generic facet store before Minecraft-specific shortcuts"
+  - "Heirloom Proxi + Minecraft build session — memorialize a person as a shared world family builds"
+  - "Bartle types — which Minecraft play styles map to which family memory contributors?"
+  - "Identity pronoun surfing — players pop third↔first person when describing play; mark it live in interview quotes"
+
+hub_path: "Proxi ⇔ Simopolis ⇔ Minecraft (⇔ Sims, Stardew, Spore, … via hub)"
+
+ties:
+  - game-bridge-proxi-sims.yml
+  - ../../characters/will-wright/sources/2025-12-will-wright-dev-diaries/
+  - ../../characters/subutai-ahmad/sources/numenta-proxi-partnership.yml
+  - ../../characters/subutai-ahmad/
+  - ../../characters/heather-alvey/
+  - ../INDEX.yml#bridges_architecture
+  - ../../process/character-endosymbiosis.yml
+
+guests:
+  will_wright: required
+  optional: [subutai-ahmad, heather-alvey, steve-alvey, ben-cerveny]
+
+see_also:
+  - ../../repo-shows/INDEX.yml

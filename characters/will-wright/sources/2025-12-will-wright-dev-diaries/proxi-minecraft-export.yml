@@ -1,0 +1,46 @@
+# Proxi → Minecraft — shipped export beat
+# Source: Will Wright Dev Diaries (Dec 2025) — https://www.youtube.com/watch?v=u73_yZyuDS0
+# Captured: 2026-07-07 (Don Hopkins, from on-camera interview)
+
+meta:
+  title: "Proxi characters exported to Minecraft"
+  video: https://www.youtube.com/watch?v=u73_yZyuDS0
+  video_label: "Will Wright Dev Diaries (Dec 2025)"
+  captured: "2026-07-07"
+  captured_by: don-hopkins
+  verbatim_status: paraphrase_pending_transcript
+
+will_framing:
+  don_summary: |
+    Will said he **already exported Proxi characters into Minecraft** — not a future pitch, a done
+    bridge. Same Dev Diaries session as software-heirloom Proxi and Bartle player types.
+  export_mechanics: pending_transcript
+  note: "Capture mod/API/save format on transcript review — treat as shipped precedent until corrected."
+  numenta_proxi: |
+    Gallium/Proxi AI stack = **Numenta NuPIC** (Subutai Ahmad). See
+    characters/subutai-ahmad/sources/numenta-proxi-partnership.yml
+  subutai_interval: |
+      Don + **Subutai Ahmad** @ Interval — real-time video background removal (Windows; Don's PowerPC Mac
+      follow-on) → Me2Cam lineage → show browser puppet motion.
+
+why_it_matters:
+  data_portability: |
+    Second **shipped** precedent for Will's cross-game character vision (after Steve Alvey's
+    SliceCity). Proxi souls can leave Gallium and walk in another world's sandbox.
+  simopolis_spoke: |
+    Hub-and-spoke framing: Proxi ⇔ Simopolis ⇔ Minecraft — Minecraft joins Stardew, Spore, Sims,
+    Mind Mirror as a named bridge target.
+  minecraft_audience: |
+    Massive constructionist sandbox — natural show audience; pairs with educators track and
+    Micropolis-as-toy lineage.
+
+bridge_seed: ../../../../repo-shows/will-wright-premiere/game-bridge-proxi-minecraft.yml
+
+sibling_beats:
+  - proxi-software-heirloom.yml
+  - bartle-player-types.yml
+
+see_also:
+  - README.md
+  - ../../ideas.md
+  - ../../../../repo-shows/INDEX.yml#bridges_architecture

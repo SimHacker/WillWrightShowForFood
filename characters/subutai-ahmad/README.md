@@ -24,11 +24,13 @@ columns, **reference frames**, **sparse distributed representations**, active de
 neuroscience-first bet that reads as a pointed counterpoint to today's LLMs. Perfect three-way with Will
 about how minds and models actually work.
 
-## Proxi (flag before airing)
+## Proxi (Numenta)
 
-Don's memory: **Will was working with Subutai's AI company on Proxi.** Note for later — **confirm the
-company (Numenta?) and the collaboration's nature/dates** before we state it on the show. Until then it's
-a lead, not an asserted fact.
+**Gallium/Proxi AI partner = Numenta (NuPIC)** — joint blog, GamesBeat 2024 panel with Will.
+[`numenta-proxi-partnership.yml`](sources/numenta-proxi-partnership.yml)
+
+**Will shipped Proxi → Minecraft** (Dev Diaries Dec 2025):
+[`proxi-minecraft-export.yml`](../will-wright/sources/2025-12-will-wright-dev-diaries/proxi-minecraft-export.yml)
 
 ## Interval "Camelot" ties
 Same lab and era as Don's [Interval work](../don-hopkins/interval-research-pluggers-and-mediaflow.md),
@@ -40,7 +42,8 @@ Omohundro), and [Golan Levin](../golan-levin/README.md). Advisors **Gerald Tesau
 - Real-time background removal **then (Windows/Interval, Me2Cam) → now (browser)** — what got easy, what's still hard.
 - **Body/gesture tracking → puppet drive**: same idea as the show's motion-driven Faceball puppets.
 - **Neocortex vs. LLMs**: sparsity, reference frames, Thousand Brains — with Will in the room.
-- **Proxi** (once confirmed): what Will was after, and how brain-style AI fits.
+- **Proxi + Numenta** — NuPIC, memory analysis, on-prem privacy; Will on stage with Subutai (GamesBeat 2024).
+- **Proxi → Minecraft** — Will's shipped export (Dev Diaries); separate source under will-wright/.
 
 ## Sources (real, public)
 - [subutai.me](https://subutai.me/) — bio, career journey, publications

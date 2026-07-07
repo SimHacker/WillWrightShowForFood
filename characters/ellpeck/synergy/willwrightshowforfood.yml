@@ -1,0 +1,39 @@
+# Synergy — Ellpeck × WillWrightShowForFood
+
+meta:
+  id: ellpeck-wwsff-synergy
+  bridge: ../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml
+  hub: "Sims ⇔ Soul City ⇔ Tiny Life"
+
+relationship:
+  type: warm_friend_guest_candidate
+  don: prior_conversation_recover_to_correspondence_yml
+  ell: solo_dev_project_of_love
+
+shared_ground:
+  exchange_ethos:
+    tiny_life: "Export/import + story descriptions + Workshop"
+    sims_legacy_gap: "Exchange button removed Jan 2025 — see will-wright/sources/sims1-legacy-collection-exchange-gap/"
+    soul_city: "Liminal layover + soul-file compiler — Will invitation Proxi ⇔ Soul City ⇔ Sims"
+  indie_vs_corporate:
+    note: "Plumbella + James Turner praised Tiny Life; same voices left EA Creator Network post-buyout"
+  github_distribution:
+    spec: ../../catalogs/micropolis-home/github-distribution-model.yml
+    posture: federate_workshop_and_git_cards_lift_ell
+
+show_offer:
+  format: repo_show_build_session
+  topics:
+    - Soul City facet schema for household export
+    - Workshop vs git PR — complementary permanent URLs
+    - Pronoun update technicalities vs Will Dev Diaries identity pronoun surfing
+    - Paralives anxiety — genre lifts genre (Stardew / Harvest Moon lesson)
+
+non_goals:
+  - Replace Steam Workshop
+  - Use Simopolis naming in guest-facing copy — Soul City only
+
+see_also:
+  - willwrightshowforfood.md
+  - ../bridge/soul-city-bridge.md
+  - ../invitation.md

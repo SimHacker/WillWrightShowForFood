@@ -1,0 +1,24 @@
+# Ell (Ellpeck) — GLANCE
+# Tiny Life creator; warm friend; Soul City bridge guest candidate.
+
+title: "Ell (Ellpeck) — Tiny Life"
+signifier: "🏡🌱"
+description: |
+  Solo indie dev of Tiny Life — pixel life sim with Workshop, export, and C# mods. Don quote on
+  site; prior conversation. Repo Show bridge: Sims ⇔ Soul City ⇔ Tiny Life (not Simopolis).
+
+keywords: [ellpeck, ell, tiny life, soul city, life sim, workshop, indie, bridge]
+
+card: CARD.yml
+invitation: invitation.md
+bridge: ../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml
+
+contact:
+  bluesky: https://bsky.app/profile/ellpeck.bsky.social
+  game: https://bsky.app/profile/tinylifegame.bsky.social
+  site: https://tinylifegame.com/
+
+see_also:
+  - README.md
+  - CHARACTER.yml
+  - bridge/soul-city-bridge.md

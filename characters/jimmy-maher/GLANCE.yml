@@ -1,0 +1,11 @@
+# Jimmy Maher — glance
+
+id: jimmy-maher
+signifier: "📜🕹️"
+one_line: "The Digital Antiquarian — filfre.net chronicle; MIT Press + IF author; parallel Maxis historian (Jess synergy model)."
+home: characters/jimmy-maher/
+invite: not_offered
+contact: maher@filfre.net
+location: "Near Billund, Denmark (ex-Dallas)"
+start: README.md → sources/about-me.yml → synergy/willwrightshowforfood.md → ideas.md
+girders: [CHARACTER.yml, correspondence.yml, sources/about-me.yml, synergy/willwrightshowforfood.yml, ideas.md]

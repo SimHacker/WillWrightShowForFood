@@ -1,0 +1,20 @@
+# Don Hopkins quote on Tiny Life Praise page
+# Source: https://tinylifegame.com/ — Praise section (2026-07-08)
+
+meta:
+  attributed_to: Don Hopkins
+  context: "Designer on The Sims — Twitter (as cited on site)"
+  verify_before_on_air: false
+
+quote_full: |
+  An awesome indie game that's a retro pixel graphics deeply moddable modern re-interpretation of
+  The Sims 1, but is also highly unique with its own style, and stands on its own, with a
+  mesmerizing soundtrack.
+
+use_on_show:
+  - Open episode — read back to Ell, then design / build Soul City bridge live
+  - Contrast with EA Legacy Collection removing Exchange while Tiny Life ships sharing
+
+see_also:
+  - praise-quotes.yml
+  - tinylife-site-snapshot.yml

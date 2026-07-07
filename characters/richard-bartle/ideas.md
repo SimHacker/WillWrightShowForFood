@@ -14,6 +14,15 @@ Richard Bartle — co-creator of MUD1 (1978) and originator of the Bartle taxono
 ### 1. Show seed: `repo-shows/richard-bartle/`
 walk the repo on air and build from the seed.
 
+### 2. Will cites Bartle on camera (Dev Diaries Dec 2025)
+Will Wright **name-checks the Bartle taxonomy** in the same interview where he describes Proxi
+as a software heirloom. Don's capture:
+[`will-wright/sources/2025-12-will-wright-dev-diaries/bartle-player-types.yml`](../will-wright/sources/2025-12-will-wright-dev-diaries/bartle-player-types.yml)
+
+**Show beat:** Will (on tape) → Bartle (consented, self-authoring) → taxonomy vs Sims motives vs
+Proxi family perspectives. Existing draft questions in
+[`audience/richard-bartle/questions.yml`](../../repo-shows/will-wright-premiere/audience/richard-bartle/questions.yml).
+
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)

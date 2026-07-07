@@ -24,6 +24,13 @@ invitation:
 bio:
   summary: "**Richard Bartle** — co-creator of **MUD1** (1978) and originator of the **Bartle taxonomy** of player types; author of *Designing Virtual Worlds*. (Incarnated with his explicit permission.)"
 
+will_wright_touchpoint:
+  dev_diaries_2025:
+    note: "Will Wright name-checks Bartle player types on camera (Dev Diaries Dec 2025)"
+    source: ../will-wright/sources/2025-12-will-wright-dev-diaries/bartle-player-types.yml
+    video: https://www.youtube.com/watch?v=u73_yZyuDS0
+    show_hook: "Will cites Bartle → natural three-way with consented Bartle audience seat"
+
 sources:
   wikipedia: null
   web:

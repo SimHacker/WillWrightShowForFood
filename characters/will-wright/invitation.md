@@ -95,7 +95,8 @@ call, the chat; the show **is** the joining. (And yes — the repo's called **Si
 
 ## The bigger mission (none of it required for show one)
 
-1. **Bridging characters between worlds** — your 1996 dream, for real: Proxi ↔ The Sims ↔ Stardew and
+1. **Bridging characters between worlds** — your 1996 dream, for real: Proxi ↔ The Sims ↔ **Minecraft**
+   (you already exported Proxi characters there) ↔ Stardew and beyond, a character picking up a little
    beyond, a character picking up a little Timothy-Leary-*Mind-Mirror* read along the way (run as the
    actual 1986 EA binary in an emulator, in the browser). Powers-of-ten across your own universe of
    games — home (Sims) → city (SimCity/Micropolis) → planet (SimEarth) → cosmos (Spore) — with Proxi as

@@ -55,8 +55,9 @@ shows:
       remembering-douglas-engelbart.yml: "★ MEMORIAL TRIBUTE. Remembering Doug Engelbart with Ted Nelson (eulogy — Doug officiated his wedding), Alan Kay (1968-demo lineage), Yoot Saito (1993 anniversary interview), and Bret Victor (author of 'A few words on Doug Engelbart' — read the intent, not the feature list). Memorial mode; consent not_yet_asked."
       remembering-jef-raskin.yml: "★ MEMORIAL SEED for Jef Raskin (d. 2005) only. possible_discussants = documented connections — NOT invitations; consent not_yet_asked for all."
     bridges:   # the data-portability CROWN JEWEL (crystallized/DESIGN-WISDOM)
-      game-bridge-sims-stardew.yml: "Eric Barone — Sims ⇔ Simopolis ⇔ Stardew two-way bridge (parallel synchronized lives)."
       game-bridge-proxi-sims.yml:   "Will — Proxi ⇔ Soul City ⇔ Sims bridge (the crown-jewel payoff; Mind Mirror layer; the Wig-O-Matic worked example). Flows from the Will kickoff. NOT YET WRITTEN."
+      game-bridge-proxi-minecraft.yml: "Will — Proxi ⇔ Simopolis ⇔ Minecraft. SHIPPED PRECEDENT: Will already exported Proxi characters into Minecraft (Dev Diaries Dec 2025). Extend to Simopolis round-trip on air."
+      game-bridge-sims-stardew.yml: "Eric Barone — Sims ⇔ Simopolis ⇔ Stardew two-way bridge (parallel synchronized lives)."
       game-bridge-sims-shattered.yml: "Evan Debenham (00-Evan) — Sims ⇔ Simopolis ⇔ Shattered Pixel Dungeon (GPLv3 repo to show; brutal-roguelike contrast world; + the funding model)."
       game-bridge-sims-spore.yml:   "Will + Spore team — Sims ⇔ Simopolis ⇔ Spore creatures. The CAPSTONE/big-ambition bridge: not just creature-DATA IO but a clean-room, web-native re-creation of the creature RENDERER/ANIMATOR/EDITOR/BUILDER, designed live from interviews (likely a multi-episode ARC). Will's last Maxis game; closes the lineage loop."
       game-bridge-mind-mirror.yml:  "Sims ⇔ Simopolis ⇔ Timothy Leary's Mind Mirror (1986 EA) — the FIRST emulated-runtime organelle: run the real Apple ][ binary in a web emulator, round-trip a character through it, diffuse its personality readings into sibling organelles. Proves emulated runtimes + cross-organelle diffusion (process/character-endosymbiosis.yml)."
@@ -125,7 +126,14 @@ bridges_architecture:
     - "2. Then shortcut optimizations + mutual schema recognition between compatible games (direct fast paths, special-cased imports)."
   note: "So the bridge seeds below are all spokes on this hub; the ⇔ in each is shorthand for ⇔ Simopolis ⇔."
   the_frame: "The deep frame for all of this is biological: ../process/character-endosymbiosis.yml (games as cells, content as organelles in permeable membranes, Simopolis as the shared cytoplasm, schema mapping as currency exchange). Life builds complexity by merger — so do we."
-  precedent: "NOT hypothetical — **Steve Alvey's SimSlice / SliceCity** already shipped the deep version years ago: **SimCity running *inside* The Sims**, fully integrated. That's Will Wright's long-aspired data-portability / games-nested-in-games idea (stated in his 1996 Winograd 'Interfacing to Microworlds' talk) made real. See characters/heather-alvey/ + repo-shows/heather-and-steve-alvey/."
+  precedent: |
+    NOT hypothetical — shipped deep bridges already exist:
+    - **Steve Alvey's SimSlice / SliceCity** — SimCity running *inside* The Sims* (community precedent).
+      See characters/heather-alvey/ + repo-shows/heather-and-steve-alvey/.
+    - **Will Wright's Proxi → Minecraft export** — Proxi characters already exported into Minecraft
+      (Gallium; Dev Diaries Dec 2025). See characters/will-wright/sources/2025-12-will-wright-dev-diaries/proxi-minecraft-export.yml
+      + game-bridge-proxi-minecraft.yml.
+    Will's 1996 Winograd data-portability train-set model is the thesis; these are receipts.
   shallow_vs_deep: "SHALLOW = a cosmetic 'computer in The Sims plays a toy SimCity' (decorative; done before). DEEP = real nested simulations with data flowing between games — link actual SAVE FILES, run EMULATORS, edit save files to round-trip state. Simopolis is the deep version, generalized across as many games as possible (cf. game-bridge-mind-mirror.yml's emulated Apple ][ runtime)."
 
 axes_note: "A person appears in multiple shows (solo + group + bridge). Will especially anchors several. The collection holds multiple FORMATS: design-interview, series, group, bridge, game-show, and REUNION ('get the old band back together' — see ../process/old-band-back-together.yml: NeWS gang, Sims team, David Levitt crew, OpenLaszlo, the 2006 Eno circle)."

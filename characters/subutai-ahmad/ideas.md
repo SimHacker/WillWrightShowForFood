@@ -14,8 +14,8 @@
    frames, Thousand Brains — a substantive counterpoint to transformer-era AI. Will + Subutai + Don is a
    great three-way.
 
-4. **Proxi** — *flag/confirm first.* What Will was building, and where Subutai's company fit. Don't
-   assert the company or the collaboration until confirmed.
+4. **Proxi + Numenta (with Will).** NuPIC on-prem memory analysis; public partnership and GamesBeat 2024 panel.
+   Will's Proxi→Minecraft export is a separate beat under will-wright/ Dev Diaries sources.
 
 5. **The Camelot circle.** Interval stories: Malcolm Slaney (co-author, 1998 gesture paper), Bregler,
    Omohundro, Golan Levin, David Levitt — the "PARC without a Xerox" era.

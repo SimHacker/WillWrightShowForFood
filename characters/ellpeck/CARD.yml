@@ -1,0 +1,31 @@
+# Ell (Ellpeck) — CARD (interface sniff)
+
+id: ellpeck
+name: "Ell (Ellpeck)"
+role: guest_candidate
+game: Tiny Life
+studio: Ellpeck Games
+publisher: Top Hat Studios
+
+one_line: "Friend who already ships Exchange-era sharing — bridge his Tinies through Soul City to Sims 1."
+
+warm_contact: true
+consent: not_yet_asked
+
+handles:
+  dev: "@ellpeck.bsky.social"
+  game: "@tinylifegame.bsky.social"
+
+bridge:
+  path: "Sims ⇔ Soul City ⇔ Tiny Life"
+  spec: ../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml
+  narrative: bridge/soul-city-bridge.md
+
+don_on_record:
+  quote: sources/don-praise.yml
+  site: https://tinylifegame.com/ (Praise section)
+
+see_also:
+  - GLANCE.yml
+  - CHARACTER.yml
+  - invitation.md

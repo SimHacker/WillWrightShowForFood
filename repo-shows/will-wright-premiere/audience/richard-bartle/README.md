@@ -26,6 +26,10 @@ questions** on his avatar's behalf. He may optionally attend the live stream.
 | Players-as-people (♠️♥️♦️♣️) | People-as-players (needs/wants motives) |
 | Gave MUD away freely | Data-portability vision |
 
+**Jul 2026 hook:** Will **cites Bartle's player types on camera** in Dev Diaries (Dec 2025) —
+same interview as Proxi software-heirloom beat. Source:
+[`bartle-player-types.yml`](../../../../characters/will-wright/sources/2025-12-will-wright-dev-diaries/bartle-player-types.yml)
+
 ## Canonical avatar
 
 Richard's full MOOLLM incarnation (with consent, study, taxonomy artifacts):

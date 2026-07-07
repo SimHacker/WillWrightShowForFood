@@ -14,6 +14,7 @@ Historians and archivists: export policy, primary sources, sync logs, honest inv
 |------|-----------------|
 | [**live-repo.yml**](../live-repo.yml) | Public bud vs DonHopkins archive — on hold when projected |
 | [**sync-with-donhopkins.yml**](../sync-with-donhopkins.yml) | SELECT → FILTER → EXPORT pipeline |
+| [**email-attachment-curation.yml**](../email-attachment-curation.yml) | **2026-07-07 audit** — 46 public attachments; rename/dedupe phases A–D; decision pending |
 | [**MANIFEST.yml**](../../MANIFEST.yml) | Bundle manifest — what maps from private source |
 | [**sync-sources.yml**](../../characters/don-hopkins/sync-sources.yml) | Inclusion/exclusion log for host portrayal |
 | [**1996 source README**](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) | Anchor artifact — Stanford, YouTube, Medium, attribution |

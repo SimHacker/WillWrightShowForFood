@@ -1,0 +1,43 @@
+# Jimmy Maher ↔ Will Wright Show For Food — synergy map
+# Model: ../../jess-bird/synergy/willwrightshowforfood.yml
+
+projects:
+  digital_antiquarian:
+    container: filfre.net essay series
+    strength: narrative synthesis, catalog framing, loyal readership
+    current: "Life and Times of Maxis — Part 1 SimEverything (2026-07-03)"
+
+  willwrightshowforfood:
+    container: public GitHub repo show + video
+    strength: primary sources, runnable Micropolis lineage, async Will interviews
+    url: https://github.com/SimHacker/WillWrightShowForFood
+    flagship: ../../repo-shows/will-wright-premiere/
+
+shared_ground:
+  subject: early Maxis — SimCity lineage, software toys, subsidized catalog
+  ethic: honor sources; footnote each other's dead ends (SimRefinery, OLPC, business sims)
+  touchpoints:
+    - ../../will-wright/sources/2026-07-03-digital-antiquarian-maxis-part1/
+    - ../../will-wright/sources/simrefinery-recovery/
+    - ../../will-wright/sources/2006-11-13-simcity-olpc-email-thread/
+
+don_split:
+  jimmy: "Essay-scale Maxis history — Jimmy's voice and pacing."
+  don: "Repo interviews + artifacts + code — ship video when ready; tease contact until then."
+  quote_intent: |
+    Don wants Jimmy as a parallel historian (like Jess at TV scale): cite, cross-link, share beats —
+    not scoop, not duplicate, not drive repo traffic before the show exists on video.
+
+lend_each_other:
+  jimmy_to_repo: narrative frame; reader trust; Part 2+ beats we should not rewrite
+  repo_to_jimmy: Don's OLPC/Micropolis primary sources; Will on camera; Phil Salvador bridges
+
+outreach:
+  status: contact_next
+  channel: maher@filfre.net
+  tone: parallel invitation — Jess Bird precedent; Rowan thread as opener
+  avoid: public Repo Show guest pitch; deep GitHub link dumps in social until video ships
+  bio_source: ../sources/about-me.yml
+
+independence:
+  note: Neither project waits on the other's green light.

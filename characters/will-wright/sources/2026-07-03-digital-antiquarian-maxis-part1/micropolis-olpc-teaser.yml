@@ -1,0 +1,114 @@
+# Micropolis / OLPC — outreach copy (2026-07-07)
+# Trigger: Jimmy Maher Maxis Part 1 + Rowan Lipkovits blog comment + Will Wright Dev Diaries (Dec 2025)
+# Policy: HOLD social/repo-link posts until Repo Show video ships — tease contact + forthcoming video only.
+# Posted: filfre.net reply to Rowan (2026-07-07). See contact-queue.yml#public_outreach_policy
+
+meta:
+  title: "SimCity → Micropolis → OLPC — outreach"
+  hook: |
+    Maher's Part 1 stops at SimCity 2000. Rowan asked about Micropolis on OLPC. Don replied on
+    filfre; full saga + Will on camera forthcoming via Repo Show — not a public GitHub push campaign yet.
+  status: hold_until_video
+  public_tone: "Get in touch; videos coming — not deep repo link dumps on social"
+  updated: "2026-07-07"
+
+anchors:
+  maher_article: https://www.filfre.net/2026/07/the-life-and-times-of-maxis-part-1-simeverything/
+  olpc_email_thread: https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/will-wright/sources/2006-11-13-simcity-olpc-email-thread/README.md
+  open_source_saga: https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/will-wright/sources/simcity-open-source-saga/README.md
+  maher_source_room: https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/will-wright/sources/2026-07-03-digital-antiquarian-maxis-part1/README.md
+  will_dev_diaries: https://www.youtube.com/watch?v=u73_yZyuDS0
+  long_now_clip: https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml
+  proposal_2002_wayback: https://web.archive.org/web/20110611185928/http://www.donhopkins.com/drupal/node/24
+  hn_proposal_context: https://news.ycombinator.com/item?id=38160682
+
+blog_comment:
+  context: |
+    Rowan Lipkovits (Jul 4, 2026) on Maher's post — asked for a note on Micropolis bundled with OLPC.
+    Don replied on filfre.net offering deeper follow-up by mail. This teaser is the public-facing
+    version of that promise — no ask, just "here's where the story lives."
+  posted_filfre:
+    date: "2026-07-07"
+    note: "Don finished posting on filfre — SimRefinery, Micropolis/OLPC, Lauren/Gallium, Will Dev Diaries"
+    draft_url: https://www.filfre.net/2026/07/the-life-and-times-of-maxis-part-1-simeverything/?unapproved=1064416&moderation-hash=e39ff321e459dfb466dc32df08f0e0de#comment-1064416
+  rowan_reply_full: |
+    Rowan — you're right that the delightful dead ends never fit. Two you named:
+
+    **SimRefinery** — Phil Salvador at The Obscuritory did the definitive archaeology when an Ars reader
+    surfaced the Chevron training floppy in 2020:
+    https://obscuritory.com/sim/simrefinery-analysis/
+    (Same family of odd Maxis Business Simulations prototypes Jimmy's catalog barely had room for.)
+
+    **Micropolis on the OLPC XO** — Jimmy's Part 1 stops at SimCity 2000; the open-source chapter is
+    the next one: Long Now audience question → John Gilmore → Will's yes → EA relicensing → GPLv3
+    release renamed Micropolis (EA kept the SimCity trademark). I'm publishing the 2006–2008 primary
+    sources — verbatim mail, XO-1 photos, pitch letters, show prep with Will:
+    https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/will-wright/sources/2006-11-13-simcity-olpc-email-thread/README.md
+
+    Funnily enough, Lauren Elliott — who created the Carmen Sandiego series — was also Will's project
+    manager at Broderbund on *Raid on Bungeling Bay*, the game that led to SimCity. We all worked
+    together at Will's Stupid Fun Club, and Lauren is now CEO of Will's company **Gallium Studios**,
+    where they work together on **Proxi** — Will calls it a kind of software heirloom: family members
+    each contribute memories of someone you love; you discover things you didn't know. Forty-plus years
+    of collaboration.
+
+    Will on the "software toy" lineage (same design thread that eventually went open for OLPC) and Proxi:
+    https://www.youtube.com/watch?v=u73_yZyuDS0
+  short_follow_up: |
+    Update for anyone following Rowan's thread: the Micropolis / OLPC open-source saga is now being
+    documented in public — verbatim 2006 email, XO-1 photos, contracts, and show prep with Will.
+    Start here: {olpc_email_thread}
+    (Jimmy's Part 1 ends at SimCity 2000; this is the next chapter.)
+
+bluesky_or_x:
+  hold: true
+  tease_only: |
+    Loved Jimmy Maher's Maxis Part 1. Don Hopkins was on the OLPC Micropolis port — documenting it
+    with Will Wright on camera for Will Wright Show For Food. Get in touch if you want in early; video
+    forthcoming. (No repo link dump until then.)
+  short: |
+    Jimmy Maher's Maxis history (Part 1) ends at SimCity 2000. The next chapter is stranger: SimCity
+    Classic → GPLv3 → renamed Micropolis → shipped on the OLPC XO laptop. Don Hopkins is publishing
+    the 2006–2008 email thread + photos + interviews with Will Wright.
+    {olpc_email_thread}
+  with_maher: |
+    Loved @filfre's Maxis Part 1 — SimCity as the software toy that subsidized everything else.
+    Footnote Rowan Lipkovits asked for: how de-branded Micropolis landed on the OLPC laptop.
+    Public primary sources + Will on camera:
+    {olpc_email_thread}
+    {maher_article}
+
+youtube_comment:
+  video: https://www.youtube.com/watch?v=u73_yZyuDS0
+  pinned_candidate: true
+  text: |
+    Will talking about SimCity as a "software toy" with no win state — this is the same design lineage
+    that eventually went open source for the One Laptop Per Child project (GPL, renamed Micropolis
+    because EA kept the SimCity trademark). Don Hopkins documented the whole 2006–2008 saga from
+    Long Now audience questions → John Gilmore → Will's yes → EA clearance → SimCity on the XO-1:
+    https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/will-wright/sources/2006-11-13-simcity-olpc-email-thread/README.md
+    More video with Will on that arc coming via Will Wright Show For Food.
+
+hn:
+  when: after next video drop or Maher Part 2
+  style: comment_on_existing_thread_preferred
+  text: |
+    Re Rowan Lipkovits's comment on Jimmy Maher's Maxis Part 1 — the Micropolis / OLPC thread is
+    now indexed in public with primary sources (Nov–Dec 2006 mail, XO photos, pitch letters):
+    https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/will-wright/sources/2006-11-13-simcity-olpc-email-thread/README.md
+    Context: Long Now Jun 2006 audience Q about open-sourcing SimCity → Gilmore Nov 2006 → Will
+    endorses → EA relicensing → GPLv3 release Jan 2008. Don's 2002 Linux/education proposal:
+    https://news.ycombinator.com/item?id=38160682
+
+story_beats_one_liner:
+  - "Jun 2006 Long Now — audience asks Will + Eno about open-source SimCity (Don in the room; not his question)"
+  - "Nov 2006 — John Gilmore forwards the spark; Will replies yes"
+  - "Dec 2006 — EA clearance, Walter Bender / OLPC cast, Don's pitch letter to Rod Humble"
+  - "Dec 2006 — SimCity on XO-1 beta over wireless (webcam photos in repo)"
+  - "Jan 2008 — GPLv3 Micropolis (EA kept SimCity name for QA)"
+
+see_also:
+  - ../2006-11-13-simcity-olpc-email-thread/README.md
+  - ../simcity-open-source-saga/README.md
+  - ../2006-06-26-long-now-playing-with-time-eno-wright/README.md
+  - README.md

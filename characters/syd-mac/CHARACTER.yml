@@ -1,0 +1,27 @@
+# Syd Mac — portrayal. NOT Syd.
+
+character:
+  id: syd-mac
+  name: Syd Mac
+  type: invitation
+  signifier: "🎬📺"
+  status: living
+  field: "Sims YouTuber; EA Creator Network resigner Oct 2025"
+  home: characters/syd-mac/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 1
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+
+bio:
+  summary: |
+    **Syd Mac** — Sims creator who announced leaving the **EA Creator Network** after the buyout
+    (PC Gamer cited YouTube post — verify).
+
+sources:
+  - ../../process/sims-creator-network-exodus.yml

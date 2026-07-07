@@ -1,0 +1,64 @@
+# Original Sims 1 Exchange — UI, data flow, shutdown timeline
+# Primary Don source: ../2004-01-12-sims-exchange/article.md
+
+meta:
+  updated: "2026-07-07"
+  verify_before_on_air: true
+
+timeline:
+  launch_era: "~2000 — Exchange at thesims.ea.com; in-game Internet button on UCP"
+  soft_shift: "2004-09 — The Sims 2 launch; EA focus moves; Exchange deprioritized"
+  final_shutdown: "~2011-08 — Site offline; in-game hooks already broken for many players"
+
+in_game_ui:
+  control_panel: Universal Control Panel (UCP) — blue bar bottom of screen (Live / Buy / Build / Options)
+  button_position: Far right of mode buttons
+  icon: Globe / TheSims.com logo
+  tooltip_labels: ["The Sims Exchange", "Get Cool Stuff"]
+  behavior: Minimizes game; launches default browser to thesims.ea.com — not background upload
+
+export_hooks:
+  options_menu: F5 Options
+  checkbox: "Automatically Generate Web Pages"
+  on_save_or_snapshot: |
+    When checked, save/snapshot triggers local HTML + JPG generation — a browseable "family website"
+    on disk (not cloud upload). r/thesims1 consensus: viewable **offline**; upload to thesims.com is
+    a separate sync step when exchanging lots/families/albums online.
+  local_paths:
+    - "UserData/Web Pages/ (typical Maxis install path)"
+    - "Program Files\\Maxis\\The Sims\\UserData\\Web Pages\\ (era-typical)"
+  offline_profile: |
+    Family profile with albums, house, pets info — generated locally; browser launch for upload only.
+  upload_workflow:
+    steps:
+      - Player clicks Exchange button → browser
+      - Log in on website
+      - Manual file pick — .FAM (family), .PUB / .IFF (house/lot)
+      - Upload to EA server
+    note: File-based manual pipeline — async exchange, not seamless cloud sync
+
+storytelling_features:
+  family_album: Picture + text chapters
+  exchange_categories:
+    - Highest Rated Family Albums
+    - Best Family Stories / Romances / Tragedies / Historical
+    - Search by Family / House / Album
+    - Most Valuable Houses
+  don_1996_seed: |
+    Winograd UI class story — city as shared story web with hyperlinked neighborhoods.
+    Exchange implemented that vision for homes and families.
+
+legacy_collection_2025:
+  exchange_supported: false
+  internet_button: removed from UCP
+  upload_on_save_hooks: disabled — no destination server
+  generate_web_pages: deprecated — modern OS blocks unrestricted writes under Program Files
+  see: legacy-collection-steam-changes.yml
+
+community_sources:
+  reddit: reddit-legacy-edition-community.yml
+  wayback: https://web.archive.org/web/20010306164547/http://thesims.ea.com/index.phtml?language=us
+
+see_also:
+  - ../2004-01-12-sims-exchange/README.md
+  - community-sharing-today.yml
