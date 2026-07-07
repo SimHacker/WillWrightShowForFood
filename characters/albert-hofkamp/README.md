@@ -41,7 +41,7 @@ And when Don mentioned applying for grant money to support development, his enti
 Three words that define the volunteer archetype the whole
 [educators' track](../../repo-shows/ideas/themes/educators-track.yml) wants to cultivate.
 
-## Why invite him
+## Why we'd love to work with him again
 
 - **He's done this twice.** Micropolis cleanup *and* fifteen years of OpenTTD GUI work. Nobody in the
   Netherlands knows more about the long game of keeping a liberated classic sim alive and clean.
@@ -59,5 +59,5 @@ Three words that define the volunteer archetype the whole
 - [TU/e research profile](https://research.tue.nl/en/persons/albert-t-hofkamp/)
 - [OpenTTD CREDITS](https://github.com/OpenTTD/OpenTTD/blob/master/CREDITS.md) — "Albert Hofkamp (Alberth) - GUI expert (0.7 - 1.9)"
 - [Eclipse ESCET](https://eclipse.dev/escet/) — TACAS 2023 paper co-author
-- [2008–09 email digest](sources/2008-2009-collaboration-digest.md) (Don's archive)
-- MicropolisCore HAR 2009 transcript credit
+- Don's mail archive, 2008–09 (quoted verbatim, with gratitude)
+- MicropolisCore HAR 2009 transcript credit; Micropolis manual credits

@@ -57,7 +57,7 @@ sources:
     - { title: "Eclipse ESCET (TACAS 2023 co-author)", url: "https://eclipse.dev/escet/" }
   repo:
     - { title: "HAR 2009 transcript credit", path: "MicropolisCore/documentation/talks/har-2009/HAR2009Transcript.html" }
-  email_digest: sources/2008-2009-collaboration-digest.md
+  email: "Don's mail archive, 2008–09 (digest in the private green room)"
 
 see_also:
   - { path: ../../repo-shows/ideas/themes/educators-track.yml, why: "the volunteer-contributor archetype the educators' track wants to grow more of" }

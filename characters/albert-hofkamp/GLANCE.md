@@ -5,4 +5,4 @@
 **Spirit:** asked "We need money?" when grants came up — pure volunteer
 **Invite:** draft · consent not_yet_asked · warm email contact
 
-**Read:** [README](README.md) · [2008–09 digest](sources/2008-2009-collaboration-digest.md)
+**Read:** [README](README.md)

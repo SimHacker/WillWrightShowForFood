@@ -63,16 +63,15 @@ Lall replied the same week:
 
 He has been in the Micropolis manual credits (**Special Thanks**) ever since the OLPC era.
 
-## The approach
-
-Back into the fold **with love and respect** — as a guide, not a grant ornament. Even if he has no
-current funding, no students, and no bandwidth for this, his guidance is critical: OPTIMUS was the
-rubber hitting the road on applying constructionist theory in a real classroom, inside a
-traditional university, with real curriculum committees. Standing invitation, first look, zero
-obligation. And the reconnection note writes itself: *the proposal you wrote in 2002 — with Don as
-named consultant — is finally buildable, and largely built.*
-
 ## Why invite him
+
+**With love and respect, first of all.** OPTIMUS was the rubber hitting the road on applying
+constructionist ideas in a real classroom — inside a traditional university, with real curriculum
+committees and real freshmen — and his guidance on what worked and what broke is invaluable
+whether or not he ever writes another line of curriculum. The proposal he wrote in 2002, with Don
+as named consultant, is finally buildable — and largely built.
+
+Also:
 
 - **He proved the pedagogy before the tooling existed.** A conversation about what he wanted SimCity
   to do for his students then, versus what an AI-instrumented, spreadsheet-exporting Micropolis can

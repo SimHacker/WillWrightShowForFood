@@ -52,12 +52,25 @@ precedents:   # each one already happened; none of this is hypothetical
     Eduverse project delivered a working web version; the educator lane picks that thread back up
     with sixteen more years of tooling. Sergio van Pul (Eduverse core; HKU game-design MA; Scratch
     workshop coach; co-author of Scratch 2.0 Game Development Hotshot) parted warmly in 2010 —
-    "perhaps we'll meet again sometime in the future" — and is the easiest reactivation in the
-    roster. see: ../../../characters/sergio-van-pul/
+    "perhaps we'll meet again sometime in the future." see: ../../../characters/sergio-van-pul/
+  tjon_a_loi_the_intern: |
+    Tom Tjon A Loi, Gerrit Rietveld Academie DesignLAB student, interned with Don from July 2009:
+    storyboarded the multiplayer/social-networking vision of Micropolis, redesigned UI and graphics,
+    translated to Dutch, wrote courseware — and Don proudly presented his work at HAR 2009. He even
+    pitched Micropolis to the Architectuurfonds ("urbanism for the next generation," Nov 2009).
+    The original proof that a student internship inside the project produces real design vision:
+    everything he storyboarded is now the federation + MOOLLM roadmap.
+    see: ../../../characters/tom-tjon-a-loi/
   constructionist_bench: |
     The show's character roster already holds the constructionist lineage: Brian Harvey + Jens Mönig
-    (Snap!), Ken Kahn (ToonTalk), Cynthia Solomon (Logo), Doreen Nelson (Design-Based Learning),
-    Walter Bender (OLPC/Sugar). The educators' track is their pedagogy applied to the show itself.
+    (Snap!), Ken Kahn (ToonTalk — Minsky's friend and intellectual heir in the teach-kids-AI line),
+    Cynthia Solomon (Logo), Doreen Nelson (Design-Based Learning), Walter Bender (OLPC/Sugar).
+    The educators' track is their pedagogy applied to the show itself.
+  snapcon_barcelona_dutch_bench: |
+    Don met Dutch educators at the Snap! conference in Barcelona — names to recover by asking Jens
+    Mönig, including the TurtleStitch community ("the sewing machine people": Andrea Mayr-Stalder's
+    turtle-graphics embroidery — Snap! programs driving physical sewing machines, constructionism
+    you can wear). Natural Dutch-classroom allies for the track and the NWO/Kennisnet-lineage lane.
 
 formats:
   critical_play: "Bartle-style: play a show/world, write the critique, discuss it on-show. Entry level; no code required."
@@ -90,3 +103,5 @@ next:
   - "Invitation drafts for Bartle and Eagleson framed around DEVELOPMENT-SIDE participation (assign the fork), not guest appearances."
   - "Send the Sergio van Pul catch-up (drafted: ../../../characters/sergio-van-pul/ — LinkedIn; no ask, just 'it's on' + what happened with 9-box)."
   - "Sheets/CSV metrics exporter spec for Micropolis (the data_lab enabler)."
+  - "Ask Jens Mönig for the Snap!Con Barcelona names: Dutch educators + TurtleStitch folks."
+  - "Recover the HAR 2009 slides with Tom Tjon A Loi's storyboards into characters/tom-tjon-a-loi/media/."
