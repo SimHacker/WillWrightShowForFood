@@ -1,0 +1,67 @@
+# Sergio van Pul — invitation portrayal. NOT Sergio van Pul.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: sergio-van-pul
+  name: "Sergio van Pul"
+  type: invitation
+  signifier: "🎮🐱"        # game design + Scratch cat
+  status: living
+  field: "Game designer & educator — Scratch 2.0 Game Development Hotshot co-author; Stichting Scratchweb workshop coach; HKU game-design MA; Micropolis Eduverse veteran (2008–10)"
+  home: characters/sergio-van-pul/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2            # past correspondent; parted warmly in 2010
+  authored_by: don-hopkins
+
+contact:
+  channel: LinkedIn           # msn address is 16 years old; LinkedIn profile is live (Hilversum)
+  warm_contact: true
+  reactivation: catch-up interview, no ask — "hey, it's on"
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: README.md
+
+bio:
+  summary: >
+    **Sergio van Pul** — Dutch game designer and educator, Hilversum. **HKU (Hogeschool voor de
+    Kunsten Utrecht) MA in Game Design and Development**. Freelance interactive/media designer
+    (2007–2012) with clients including the **Eduverse Foundation**, **University of Utrecht**,
+    Deltion College, and the **Scratchweb Foundation**, where he was webmaster/office manager and
+    **workshop coach teaching children programming with Scratch**. Co-author (with Jessica Chiang)
+    of **"Scratch 2.0 Game Development Hotshot"** (Packt, 2014) — ten complete game projects in
+    Scratch. Later game developer at Talpa Digital and designer at Gamica. Also paints and
+    scratch-builds tabletop miniatures.
+
+  don_connection: >
+    Core participant in the **Micropolis Eduverse Project** (2008–10) with Don, Kennisnet, and IBM —
+    one of the named regulars at the ABC Treehouse meetings. When Don announced the split from
+    Robert Shepherd (1 Oct 2010), Sergio replied warmly within a day: the Eduverse Foundation had
+    "evaporated" from his perspective too, but the lasting connection he took away was **Helen
+    (Fermate) and the 9-box development team** — testing the game in schools and building a game
+    design studio around educational games. He signed off: "Have lots of stupid fun creating some
+    crazy concepts with Will Wright. And perhaps we'll meet again sometime in the future." His book
+    acknowledgments later thanked Helen Fermate — the 9-box thread continued.
+
+quotable:   # verbatim, 2 Oct 2010 email to Don
+  evaporation: "From my perspective the Eduverse Foundation evaporated around the same time…"
+  lasting_connection: "The only lasting connection I took away from it was meeting Helen and the rest of the 9-box development team."
+  signoff: "Have lots of stupid fun creating some crazy concepts with Will Wright. And perhaps we'll meet again sometime in the future."
+
+educators_track_fit:
+  hku: "Alum of the exact Dutch game-dev school the track names as a game-jam host."
+  scratch: "Taught kids game-making with Scratch — bridges to the Snap!/Logo bench (Brian Harvey, Jens Mönig) and constructionist lineage."
+  eduverse: "Already lived the teacher-plus-open-source-city-sim experiment once, sixteen years early."
+
+sources:
+  web:
+    - { title: "LinkedIn (Hilversum)", url: "https://www.linkedin.com/in/sergiovanpul" }
+    - { title: "Scratch 2.0 Game Development Hotshot (Packt, 2014)", url: "https://www.packtpub.com/game-development/scratch-20-game-development-hotshot" }
+  email: "Don's archive — 2 Oct 2010 reply, quoted verbatim; 2008–10 Eduverse meeting threads"
+
+see_also:
+  - { path: ../../repo-shows/ideas/themes/educators-track.yml, why: "queued there as the catch-up interview; triple-fit (HKU + Scratch + Eduverse)" }
+  - { path: ../albert-hofkamp/CHARACTER.yml, why: "the other key volunteer of the 2008–09 era" }

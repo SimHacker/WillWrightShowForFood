@@ -45,8 +45,10 @@ precedents:   # each one already happened; none of this is hypothetical
   kennisnet_2008: |
     Kennisnet's very first ask in 2008–09 was classroom application of Micropolis. The Micropolis
     Eduverse project delivered a working web version; the educator lane picks that thread back up
-    with sixteen more years of tooling. Sergio van Pul (Eduverse core; later co-author of a Scratch
-    game-development book) belongs in the catch-up-interview queue for this thread.
+    with sixteen more years of tooling. Sergio van Pul (Eduverse core; HKU game-design MA; Scratch
+    workshop coach; co-author of Scratch 2.0 Game Development Hotshot) parted warmly in 2010 —
+    "perhaps we'll meet again sometime in the future" — and is the easiest reactivation in the
+    roster. see: ../../../characters/sergio-van-pul/
   constructionist_bench: |
     The show's character roster already holds the constructionist lineage: Brian Harvey + Jens Mönig
     (Snap!), Ken Kahn (ToonTalk), Cynthia Solomon (Logo), Doreen Nelson (Design-Based Learning),
@@ -66,11 +68,20 @@ formats:
 
 why_it_matters:
   labor_ethics: "Educators solve the contribution-throughput problem ethically: real GPL code, real credit, real review — coursework, not spec work."
+  idea_guy_antidote: |
+    The Eduverse era's failure mode was the IDEA-GUY BARGAIN: an organizer contributes vision and
+    connections, the builders contribute everything else, and everyone submits to a certain amount
+    of mutual exploitation in exchange for enablement along other dimensions. That trade can work —
+    until the enablement stops arriving and only the extraction remains (the foundation
+    "evaporated"; the code, credits, and Helen's 9-box team were what survived). The educators'
+    track structures the same energy exchange with the exploitation priced honestly: teachers get
+    curriculum and shows, students get credit and literacy, the project gets contributions — and
+    everything is in git, where the ledger of who did what is public and automatic.
   institutional_bridge: "Teachers and their institutions are the co-applicants and hosts that public funding (NWO/SIA-shaped grants) requires. The educator lane IS the funding lane."
   literacy: "Git, PRs, code review, and AI-assisted development are basic literacy. A show made of them teaches them by osmosis."
   decades_brewing: "None of this is new to the project — SimCity-in-education designs have been stewing since the OLPC/Kennisnet era and before. The tooling finally caught up."
 
 next:
   - "Invitation drafts for Bartle and Eagleson framed around DEVELOPMENT-SIDE participation (assign the fork), not guest appearances."
-  - "Catch-up interview note to Sergio van Pul — no ask, just 'it's on' + what's he building now."
+  - "Send the Sergio van Pul catch-up (drafted: ../../../characters/sergio-van-pul/ — LinkedIn; no ask, just 'it's on' + what happened with 9-box)."
   - "Sheets/CSV metrics exporter spec for Micropolis (the data_lab enabler)."
