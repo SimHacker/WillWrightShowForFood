@@ -26,11 +26,26 @@ bio:
     Romkey, Steve Crocker, and Tom Jennings. Famous for preserving early web culture and arguing we
     should live up to the **first dreams** of the medium, not only what technicians later shipped.
 
+synergies:
+  wikimedia_partnership: >
+    The Internet Archive and Wikimedia are formal, working partners: InternetArchiveBot repaired
+    over a million broken Wikipedia links by pointing them at the Wayback Machine (2016), and the
+    book-weaving program turned 130,000+ Wikipedia book references into live links to digitized
+    Internet Archive books (2019) — Brewster quoted in Wikimedia's own announcements both times.
+  kennisnet_wikimedia_amsterdam: >
+    Kennisnet — the Dutch public educational ICT organization that funded Micropolis in 2008–09 —
+    hosted roughly fifty Wikimedia Foundation servers from June 2005 to 2009 at SARA in Science
+    Park Amsterdam: Wikimedia's European cluster ran on Dutch public-education infrastructure
+    during the exact years Kennisnet backed Micropolis. Dutch public-interest hosting of global
+    knowledge commons is not a hypothetical; it's recent history with a direct Micropolis overlap.
+
 sources:
   video:
     - { title: "Tim Pozar & Brewster Kahle interview (Marc Weber, 1996)", url: "https://www.youtube.com/watch?v=u2h2LHRFbNA" }
   org:
     - { title: "Internet Archive", url: "https://archive.org/" }
+    - { title: "Wikimedia + IA: one million broken links fixed (2016)", url: "https://wikimediafoundation.org/news/2016/10/26/internet-archive-broken-links/" }
+    - { title: "Weaving Books into the Web, starting with Wikipedia (2019)", url: "https://blog.archive.org/2019/10/29/weaving-books-into-the-web-starting-with-wikipedia/" }
 
 see_also:
   - { path: ../tom-jennings/CHARACTER.yml, why: "TLG / FidoNet neighbor" }

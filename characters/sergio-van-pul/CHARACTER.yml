@@ -59,7 +59,8 @@ educators_track_fit:
 sources:
   web:
     - { title: "LinkedIn (Hilversum)", url: "https://www.linkedin.com/in/sergiovanpul" }
-    - { title: "Scratch 2.0 Game Development Hotshot (Packt, 2014)", url: "https://www.packtpub.com/game-development/scratch-20-game-development-hotshot" }
+    - { title: "Scratch 2.0 Game Development Hotshot (Packt, 2014) — Wayback capture; live page gone", url: "https://web.archive.org/web/20190313201144/https://www.packtpub.com/game-development/scratch-20-game-development-hotshot" }
+    - { title: "Salvaged book page: description, author bio, all ten games", path: sources/packt-book-page-2019-archive.md }
   email: "Don's archive — 2 Oct 2010 reply, quoted verbatim; 2008–10 Eduverse meeting threads"
 
 see_also:

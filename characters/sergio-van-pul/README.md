@@ -52,5 +52,5 @@ Sixteen years later: it's the future, and the crazy concepts with Will Wright ar
 
 ## Sources
 
-- [LinkedIn](https://www.linkedin.com/in/sergiovanpul) · [Scratch 2.0 Game Development Hotshot](https://www.packtpub.com/game-development/scratch-20-game-development-hotshot)
+- [LinkedIn](https://www.linkedin.com/in/sergiovanpul) · [Scratch 2.0 Game Development Hotshot](https://web.archive.org/web/20190313201144/https://www.packtpub.com/game-development/scratch-20-game-development-hotshot) (Packt's live page is gone; the Wayback Machine remembers — [salvaged copy](sources/packt-book-page-2019-archive.md))
 - Don's mail archive: 2 October 2010 (quoted verbatim, with gratitude); 2008–10 Eduverse meeting threads
