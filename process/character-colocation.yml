@@ -123,7 +123,7 @@ topologies:
       examples: [repo-shows/INDEX.yml, showmaker-network.yml, episodes.yml]
     map:
       what: "Room graph with exits — venue, lobby, balconies"
-      examples: [repo-shows/will-wright/venue/VENUE.yml, venue/ROOM.yml]
+      examples: [repo-shows/will-wright-premiere/venue/VENUE.yml, venue/ROOM.yml]
     grid:
       what: "Quadrant grids — ne/nw/sw/se cells, sparse OK"
       spec: https://github.com/SimHacker/moollm/tree/main/skills/room/TOPOLOGY.yml
@@ -151,7 +151,7 @@ cross_reference:
 migration:
   done:
     - "CS547 catalog → characters/terry-winograd/media/cs547-*"
-    - "Will Wright sources/ → characters/will-wright/sources/ (from repo-shows/will-wright/)"
+    - "Will Wright sources/ → characters/will-wright/sources/ (from repo-shows/will-wright-premiere/)"
     - "Will Wright assets/ → characters/will-wright/media/ (flattened; big-endian; no type subdirs)"
     - "Will Wright catalogs/ → top-level catalogs/ (syndicated feeds; get-the-sims-on-steam.md)"
     - "Media stubs — Gosling, Shneiderman, Myers, Kay, Gingold, Phil Salvador, Scott flam3 TODO"

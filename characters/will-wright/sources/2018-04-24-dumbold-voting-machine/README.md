@@ -20,7 +20,7 @@ Also in [1996 Medium gallery](../1996-04-26-winograd-interfacing-to-microworlds/
 
 ---
 
-↑ [sources](../README.md) · [show](../../../repo-shows/will-wright/README.md) · [portrayal](../../README.md)
+↑ [sources](../README.md) · [show](../../../repo-shows/will-wright-premiere/README.md) · [portrayal](../../README.md)
 
 *Raw directory:* [browse files in this folder](./)
 

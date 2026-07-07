@@ -1,0 +1,87 @@
+# Game bridge — Soul City procreation (cross-game conception, delivered as pure Sims 1 content)
+# Public creative concept. Sibling of game-bridge-sims-spore.yml.
+# Don's bathtub scenario, 2026-07-06 — captured verbatim in spirit, engineered in the notes.
+
+meta:
+  id: game-bridge-soul-city-procreation
+  type: bridge
+  status: seed
+  one_line: "Your Sim gets pregnant in Soul City — by anyone, from anywhere — and the bridge delivers the whole pregnancy back into The Sims as generated objects. No engine changes."
+
+scenario: |
+  Your Sim goes to Soul City (the liminal heaven between games) and gets pregnant by
+  having sex with another character — could be from ANYWHERE. They go back to The Sims.
+  The bridge exports:
+
+    1. A NEW CHILD CHARACTER with generated skins and meshes — genetics computed at
+       conception. If you fucked Satan, they have red skin and horns.
+    2. A BABY BASKET object.
+    3. An invisible PREGNANCY object — placed somewhere on the lot, hidden, with a
+       countdown timer.
+
+  When the timer expires, the baby basket materializes next to you. When that baby
+  grows up to a mobile child, the basket deletes itself and creates the generated
+  child character — whose stats were generated on conception and rendered into
+  Sims 1 objects at the moment of crossing the Soul City ⇒ Sims bridge.
+
+  The bridge also generates or UPDATES existing objects: family album coffee-table
+  books, TVs that show photos of your vacation, and other memorabilia of the trip.
+
+why_it_works:  # the engineering insight under the joke
+  pure_content_injection: |
+    Every stage of the mechanic is expressible as Sims 1 CONTENT — no engine changes.
+    The pregnancy is an invisible object with a SimAntics countdown (classic Sims 1
+    modding technique: hidden state objects as lot-resident state machines). The baby
+    basket is an object. The child is skins + meshes + person data. The memorabilia
+    are objects. The bridge is a compiler: soul events in, Sims 1 content out.
+  conception_time_genetics: |
+    Stats and genetics are fixed AT CONCEPTION in Soul City — cross-universe gene
+    mixing happens in the liminal space where both parents' soul-files are readable,
+    regardless of which game each parent came from. The Sims bridge only RENDERS the
+    already-decided child into Sims 1 form at crossing time.
+  save_file_or_catalog: |
+    Generated objects can be placed directly into your house save file, or just added
+    to the catalog to buy any number of. (Yes: any number. The catalog does not judge.)
+  memorabilia_as_sync: |
+    Updating existing objects — the family album gains pages, the TV gains vacation
+    footage — means the bridge isn't just an importer, it's a MEMORY sync. Your lot
+    accumulates evidence of your soul's travels.
+
+happy_path_first:  # Don, 2026-07-06 — the demo to build FIRST
+  pairing: "The Sims × Little Computer People"
+  what: |
+    A Sims character mates with a Little Computer People character in Soul City. The
+    child inherits the LCP parent's NAME + "Jr" and some of their attributes, mapped
+    onto Sims character attributes. One-way: the child renders into The Sims only.
+  why_less_work: |
+    No full two-way bridge required. The LCP side only needs a READER (extract name +
+    attributes from an LCP save — a tiny, well-understood 8-bit format), not a writer.
+    All the generative machinery (child export, objects, catalog) already targets The
+    Sims. Happy path: one soul-file in, one baby out.
+  origin_story: |
+    This is lineage made literal. Little Computer People (Activision, 1985) is The
+    Sims' acknowledged ancestor — so the FIRST cross-game baby makes the ancestor
+    game an actual ancestor. The family tree of the medium becomes a family tree in
+    the medium. And the "Jr" naming convention means the child carries provenance in
+    its name: everyone who meets little "Marvin Jr" knows a house-dweller from 1985
+    is in the blood.
+  audience_tie: "The Little Computer Person is already in the premiere audience — see audience/fictional-little-computer-person/ — so the demo has a character who can react on air."
+
+sub_soul_tie: |
+  Gestation is a sub-soul: the pregnancy is a sub-directory of the parent's soul,
+  membranes within membranes, until delivery splits it into its own soul-file. Same
+  family as the Stardew Valley variant — a soul deposited into an egg and laid into
+  a nest in a chicken coop on a farm. Oviposition is just pregnancy with a different
+  export target; the Station bridges carry eggs.
+
+bridge_to_will: |
+  Direct rhyme with Will's Spore procedural-mating / procreation demo (Long Now
+  'Playing with Time', 2006) — already flagged as a north-star bit. Spore demonstrated
+  procedural mating WITHIN a game; Soul City procreation is procedural mating BETWEEN
+  games. Ask Will on air: what should happen when a Spore creature and a Sim have a kid?
+  see: ../../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/
+
+see_also:
+  - game-bridge-sims-spore.yml
+  - ../../characters/ben-cerveny/correspondence.yml  # the liminal-space concept lineage (as "Simopolis")
+  - soul-city-namesake.md  # the real Soul City, NC — not to be confused with, but inspired by

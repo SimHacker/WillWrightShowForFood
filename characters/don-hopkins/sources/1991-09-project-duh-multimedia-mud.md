@@ -1,6 +1,6 @@
 # Project DUH — multimedia MUD on LambdaMOO (21 Sep 1991)
 
-Don Hopkins → **Kent** (`kent@parc.xerox.com`), cc self.
+Don Hopkins → **Kent** (`[email redacted]`), cc self.
 
 ## Idea
 

@@ -21,7 +21,7 @@ invitation:
   status: dream_guest
   consent: not_yet_asked
   stretch_goal: "Invite Doug to the Spot / Brian / Will reunion Repo Show — honoring music by transforming it."
-  document: ../../repo-shows/brian-eno/invitation.md
+  document: ../../characters/brian-eno/invitation.md
   show_seed: repo-shows/brian-eno/
 
 bio:

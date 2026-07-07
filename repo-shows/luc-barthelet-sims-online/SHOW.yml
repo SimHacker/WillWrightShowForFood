@@ -32,7 +32,7 @@ segments:
   - id: steering_committee_crossover
     topic: "Sims team reunion cross-over — play the 1998 steering committee build"
     ties:
-      - repo-shows/will-wright/sims-team-steering-committee-playthrough/SHOW.yml
+      - repo-shows/will-wright-premiere/sims-team-steering-committee-playthrough/SHOW.yml
 
 related:
   - characters/luc-barthelet/

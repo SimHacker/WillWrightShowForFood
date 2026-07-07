@@ -84,6 +84,6 @@ Classification is a first pass — captions in each theme README can be refined 
 
 ---
 
-↑ [media](README.md) · [sources](../sources/README.md) · [show](../../../repo-shows/will-wright/README.md) · [`sims-series-GLANCE.yml`](sims-series-GLANCE.yml)
+↑ [media](README.md) · [sources](../sources/README.md) · [show](../../../repo-shows/will-wright-premiere/README.md) · [`sims-series-GLANCE.yml`](sims-series-GLANCE.yml)
 
 *Raw directory:* [browse files in this folder](./)

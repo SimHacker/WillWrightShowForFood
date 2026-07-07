@@ -311,7 +311,7 @@ spore_creature_avatars:
     creature editor: yaml parts list, fiduciary snap points, physics mass per limb.
   lineage:
     - Will Wright Spore creature editor — cell → parts → behavior
-    - repo-shows/will-wright/game-bridge-sims-spore.yml
+    - repo-shows/will-wright-premiere/game-bridge-sims-spore.yml
     - characters/will-wright/audience/fictional-spore-creature/
   builder:
     base: distinguished_portrait_or_procedural_face
@@ -838,7 +838,7 @@ see_also:
   - character-button-board.yml
   - ../../characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md
   - ../../characters/don-hopkins/career/lineage.yml
-  - ../../repo-shows/will-wright/game-bridge-sims-spore.yml
+  - ../../repo-shows/will-wright-premiere/game-bridge-sims-spore.yml
   - ../../repo-shows/ideas/gags/vice-not-ice-puppet.yml   # soft-body anatomy dance-off
   - ../../characters/don-hopkins/portrayal/puppet-me-consent.yml
   - ../../apps/stream-gateway/SPEC.yml

@@ -61,7 +61,7 @@ placement_constitution:
       optional: [ROOM.yml, SIMULATION.yml, SEGMENTS.yml, venue/, audience/]
     template: repo-shows/_TEMPLATE/audience/   # audience chars
     show_template: repo-shows/_TEMPLATE/       # show-room CARD + ROOM + SIMULATION
-    example: repo-shows/will-wright/venue/ROOM.yml
+    example: repo-shows/will-wright-premiere/venue/ROOM.yml
 
   topologies:
     note: |
@@ -517,7 +517,7 @@ see_also:
   - { path: brain-stream.yml, why: "Live thinking overlay" }
   - { path: micropolis-ai-drag-race.yml, why: "Flagship game-show format" }
   - { path: challenges/retrocomputing-drive.yml, why: "Retro AI drag race family" }
-  - { path: ../repo-shows/will-wright/README.md, why: "Flagship show pitch" }
+  - { path: ../repo-shows/will-wright-premiere/README.md, why: "Flagship show pitch" }
   - { path: ../repo-shows/REPO-SHOWS.yml, why: "SHOW inheritance" }
   - { path: ../skills/repo-show/SKILL.md, why: "Orchestrator protocol" }
   - { path: ../skills/INDEX.yml, why: "Harvest + upstream moollm skills" }

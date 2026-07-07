@@ -30,7 +30,7 @@ right_away:
 
   sims_team_reunion:
     - { id: jamie-doornbos, show: building-the-sims, invite: send_ready, send_batch: sims-reunion-2026, next: batch send w/ reunion — ask swimming pools objects vs rooms" }
-    - { id: tom-van-dijk, show: building-the-sims, invite: draft, contact: t.vandijk@gmail.com, location: Deventer, next: "NL meet — IFF Pencil + Behavior.iff + pair Jamie/Heather" }
+    - { id: tom-van-dijk, show: building-the-sims, invite: draft, contact: [email redacted], location: Deventer, next: "NL meet — IFF Pencil + Behavior.iff + pair Jamie/Heather" }
     - { id: eric-bowman, show: building-the-sims, invite: send_ready, send_batch: sims-reunion-2026, next: batch send w/ reunion" }
     - { id: patrick-j-barrett-iii, show: building-the-sims, invite: send_ready, send_batch: sims-reunion-2026, next: batch send w/ reunion" }
     - { id: eric-hedman, show: repo-shows/eric-hedman/, invite: send_ready, send_batch: sims-reunion-2026, also: pantomime w/ david-levitt, next: batch send — Sims + Pantomime three-hander option" }
@@ -59,9 +59,9 @@ right_away:
     - { id: jens-monig, show: [repo-shows/snap-logo-brian-jens/, repo-shows/jens-monig/], invite: draft, send_batch: snap-logo-pair-2026, next: paired send w/ Brian" }
 
   visual_programming_lineage:
-    - { id: michael-mcguffin, show: [repo-shows/rebounce/, repo-shows/brad-myers/], invite: draft, contact: michael.mcguffin@gmail.com, next: "Oct 2022 letter synced — VPL debate w/ Brad Myers triangle" }
+    - { id: michael-mcguffin, show: [repo-shows/rebounce/, repo-shows/brad-myers/], invite: draft, contact: [email redacted], next: "Oct 2022 letter synced — VPL debate w/ Brad Myers triangle" }
     - { id: brad-myers, show: repo-shows/brad-myers/, invite: draft, pair_with: michael-mcguffin, next: "Pick Click Flick Ch.33 + Excel-as-VPL + C32 acronym jam" }
-    - { id: chuck-blanchard, show: repo-shows/rebounce/, invite: draft, contact: chuck@chuckbl.com, next: "BE screenshots ingested — invite for origin story w/ Jaron + David" }
+    - { id: chuck-blanchard, show: repo-shows/rebounce/, invite: draft, contact: [email redacted], next: "BE screenshots ingested — invite for origin story w/ Jaron + David" }
     - { id: david-levitt, show: repo-shows/rebounce/, invite: in_conversation, also: visual_programming_lineage, next: "Rebounce + Hookup→Bounce origin (see McGuffin letter)" }
 
   news_postscript_gang:
@@ -81,7 +81,7 @@ right_away:
     - { id: margaret-minsky, show: repo-shows/margaret-minsky/, invite: draft, next: haptics + sibling session w/ Henry (optional couple: no — siblings)" }
 
   complexity_ca_cluster:
-    - { id: jim-crutchfield, show: repo-shows/jim-crutchfield/, invite: draft, contact: chaos@ucdavis.edu, next: "Jan 2025 Psychedelic Graphics HN — video feedback + CAM6 + WebGPU sim jam" }
+    - { id: jim-crutchfield, show: repo-shows/jim-crutchfield/, invite: draft, contact: [email redacted], next: "Jan 2025 Psychedelic Graphics HN — video feedback + CAM6 + WebGPU sim jam" }
     - { id: dave-tristram, show: repo-shows/dave-tristram/, invite: draft, next: "Raster Masters @ Dead/Shoreline — pair Crutchfield; Live Canvas beta PRIVATE until Dave clears" }
     - { id: stephen-wolfram, show: repo-shows/stephen-wolfram/, invite: draft, next: MOOLLM readings + NKS" }
 
@@ -148,7 +148,7 @@ no_invite:
     - don-philahue
 
   fictional_audience:
-    note: "repo-shows/will-wright/audience/* — TicketPR personas, not living guests"
+    note: "repo-shows/will-wright-premiere/audience/* — TicketPR personas, not living guests"
     examples: [fictional-bob-newbie, fictional-bella-goth, fictional-tragic-clown, bot-slats, palm]
 
   audience_ticketpr_living:

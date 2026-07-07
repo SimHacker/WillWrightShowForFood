@@ -93,7 +93,7 @@ Verbatim from Don Hopkins forwarded-mail archive.
 
 > Hello Normann. Thanks for your help!
 > John Gilmore is a great person to talk with about it. He can explain everything you need to know.
-> Here's his phone number: (415) 221-6520. His email address is gnu@toad.com.
+> Here's his phone number: (415) 221-6520. His email address is [email redacted].
 > We really appreciate you running with this!
 >
 > -Don

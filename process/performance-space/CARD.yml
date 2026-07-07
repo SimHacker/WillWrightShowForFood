@@ -34,5 +34,5 @@ abilities:
 
 compose_with:
   - ../sims-play-along-narration.yml
-  - ../../repo-shows/will-wright/performance-and-culture.yml
+  - ../../repo-shows/will-wright-premiere/performance-and-culture.yml
   - ../../apps/performance-space/CARD.yml

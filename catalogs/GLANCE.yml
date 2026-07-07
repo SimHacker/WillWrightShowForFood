@@ -61,7 +61,7 @@ see_also:
     - { path: ../GLANCE.yml, why: "Repo root" }
   siblings:
     - { path: ../characters/will-wright/sources/GLANCE.yml, why: "Primary sources" }
-    - { path: ../repo-shows/will-wright/GLANCE.yml, why: "Flagship show — links here" }
+    - { path: ../repo-shows/will-wright-premiere/GLANCE.yml, why: "Flagship show — links here" }
   children:
     - { path: get-the-sims-on-steam.md, why: "Buy The Sims on Steam — EA-facing stance" }
     - { path: micropolis-home/README.md, why: "Federation platform" }

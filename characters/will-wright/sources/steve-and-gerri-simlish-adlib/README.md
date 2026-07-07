@@ -21,7 +21,7 @@ session as audio on his catalog; this bundle indexes it for the show.
 - **Not SimAntics programming** — voice/session artifact, not Edith. Thematic link: objects advertise
   behavior; **voice carries feeling** while icons/thoughts carry legible meaning.
 - **Show segment:** pair with [`schemas/language-simlish.yml`](../../../../schemas/language-simlish.yml),
-  Claire Curtin / Jerry Martin guest arcs, [`sims-play-along-narration`](../../../../repo-shows/will-wright/sims-play-along-narration.yml),
+  Claire Curtin / Jerry Martin guest arcs, [`sims-play-along-narration`](../../../../repo-shows/will-wright-premiere/sims-play-along-narration.yml),
   and the [**Performance Space**](../../../../process/performance-space/README.md) design doc.
 
 ## Ethics

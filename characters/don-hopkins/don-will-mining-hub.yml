@@ -36,7 +36,7 @@ arcs:
         summary: Direct-manipulation editors + async exchange (Sims Exchange model) were the durable win; gameplay/story less so.
         ask_will: Creators and community won — agree?
     audience:
-      - repo-shows/will-wright/audience/fictional-spore-creature/questions.yml
+      - repo-shows/will-wright-premiere/audience/fictional-spore-creature/questions.yml
 
   sims_don_craft:
     thesis: Don's SimAntics / Transmogrifier / pixelation war stories × Will's object-advertising design.

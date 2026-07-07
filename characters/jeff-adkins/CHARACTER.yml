@@ -22,7 +22,7 @@ invitation:
   status: accepted
   accepted: 2026-07
   consent: granted
-  document: ../../repo-shows/jeff-adkins/invitation.md
+  document: ../../characters/jeff-adkins/invitation.md
   show_seed: repo-shows/jeff-adkins/
   note: |
     Accepted 2026-07 — enthusiastic yes to take part + full credit for SimObliterator's influence, and

@@ -18,7 +18,7 @@ representation:
 invitation:
   status: dream_guest
   consent: not_yet_asked
-  document: ../../repo-shows/nina-hagen/invitation.md
+  document: ../../characters/nina-hagen/invitation.md
   show_seed: repo-shows/nina-hagen/
 
 bio:

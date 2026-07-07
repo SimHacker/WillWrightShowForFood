@@ -185,13 +185,13 @@ see_also:
   why: Bio girder — invitation status
 - path: invitation.md
   why: Public invitation document (short)
-- path: ../../repo-shows/will-wright/README.md
+- path: ../../repo-shows/will-wright-premiere/README.md
   why: Long invitation drafts (sent skyscraper + opus + gpt55)
 - path: CARD.md
   why: Human-readable trading card
-- path: ../../repo-shows/will-wright/BROWSE.md
+- path: ../../repo-shows/will-wright-premiere/BROWSE.md
   why: Wander landing — start anywhere
-- path: ../../repo-shows/will-wright/README.md
+- path: ../../repo-shows/will-wright-premiere/README.md
   why: Show hub — SHOW.yml, episodes, 1996 sources
 - path: ../../process/entryways/guest-will.md
   why: Guest playlist — ordered 1..8

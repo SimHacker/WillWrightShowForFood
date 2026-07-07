@@ -1,8 +1,0 @@
-archive:
-  ingested: 2026-07-04
-  source: DonHopkins/temp/lots-of-chat.txt
-  subject: "[sugar] ideas for sugar development environment from hyperlook simcity"
-  form: verbatim
-
-parts:
-  - email-thread.md

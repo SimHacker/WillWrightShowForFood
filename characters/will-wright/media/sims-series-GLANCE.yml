@@ -26,6 +26,6 @@ see_also:
     - { path: ../../../catalogs/README.md, why: "Brand catalogs these assets illustrate" }
     - { path: ../sources/2018-04-24-dumbold-voting-machine/README.md, why: "Dumbold Medium source" }
     - { path: ../sources/1996-04-26-winograd-interfacing-to-microworlds/README.md#image-gallery, why: "167-figure centerpiece gallery" }
-    - { path: ../../../repo-shows/will-wright/venue/README.md, why: "Orchestra pit — Slats + Transmogrifier" }
+    - { path: ../../../repo-shows/will-wright-premiere/venue/README.md, why: "Orchestra pit — Slats + Transmogrifier" }
   deep:
     - { path: sims-series-README.md, why: "Human theme index" }

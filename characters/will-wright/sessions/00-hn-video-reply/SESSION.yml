@@ -1,0 +1,47 @@
+# Session 00 — Will Answers Hacker News (video reply)
+# IMMEDIATE priority: get Will's initial response out to start the feedback loop.
+# Named + indexed in ../../videos.yml; the rich content lives HERE.
+
+meta:
+  id: session-00-hn-video-reply
+  show: will-wright-premiere
+  status: planned
+  priority: now
+  participants: [don-hopkins, will-wright]
+  index: ../../videos.yml#hn_video_reply
+
+purpose: |
+  Will responds on camera to the early Hacker News questions — several, all good.
+  He can go on for AS LONG AS HE WANTS. Low pressure, multiple takes fine.
+
+the_questions:
+  nanna:
+    file: ../../../../repo-shows/will-wright-premiere/audience/hn-nanna/questions.yml
+    asks: "Was Ökolopoly (the West German cybernetic environment game) an influence? How far did you read into cybernetics beyond Gaia Theory — Norbert Wiener?"
+  vor:
+    file: ../../../../repo-shows/will-wright-premiere/audience/hn-vor/questions.yml
+    asks: "Unexplored frontiers for game devs? State of science education for kids? AI's effects on culture and education? What games are you playing lately?"
+
+flow:
+  - "Record Will's video reply — long as he likes"
+  - "Publish to YouTube"
+  - "Drop the YouTube URL on HN as a reply to the thread — people can watch right away"
+  - "Replies come back via HN, YouTube comments, or repo issues/comments/PRs — all valid channels"
+  - "Fold answers + ensuing discussion into each asker's question tree (quick_answer blocks)"
+
+framing: |
+  This is the first instance of the TIME-SHIFTED CALL-IN frame: Don plays the
+  caller who knows Will and reads him other people's questions down the phone —
+  the proxy for everyone who submits by HN, GitHub issue, or comment instead of
+  video. See ../01-mic-check/SESSION.yml#answering_machine_gag.the_caller_role;
+  the answering machine gag is the universal cold open that sets this contract.
+
+why_immediately: |
+  Get Will's initial response out there NOW to attract more feedback — then layer on
+  more and more as we iterate and transform through different media: HN text, YouTube
+  video, repo threads, teaser cuts, eventually live follow-ups on stream. Each medium
+  adds a layer; the question tree accumulates all of it. The askers stay eligible for
+  time-shifted one-on-one Q&A teasers and for being called on live by Don Philahue.
+
+takes: []
+published: []   # { form: short|long, url, cut_notes } — the YouTube reply URL lands here AND in the question trees

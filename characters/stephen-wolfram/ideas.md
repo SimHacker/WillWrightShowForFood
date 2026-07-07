@@ -34,5 +34,4 @@ Run the acronym zoo and the skill tree as substitution systems on air.
 ## Sources
 
 - [`invitation.md`](invitation.md) · [`MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md`](MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md)
-- [`NOMENCLATURE-HEISENBERGIAN-ACRONYMS.md`](../../designs/chatgpt-research-review/nomenclature/NOMENCLATURE-HEISENBERGIAN-ACRONYMS.md)
 - [writings.stephenwolfram.com](https://writings.stephenwolfram.com) · [wolframscience.com/nks](https://www.wolframscience.com/nks/)

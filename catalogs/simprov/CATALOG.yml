@@ -42,7 +42,7 @@ assets:
     note: "Pie menus, master controllers — orchestration toolkit"
 
 narrative:
-  - ../../repo-shows/will-wright/INTRO-NARRATIVE.md
+  - ../../repo-shows/will-wright-premiere/INTRO-NARRATIVE.md
   - ../characters/will-wright/media/sims-series-family-manifesto.md
 
 platform:

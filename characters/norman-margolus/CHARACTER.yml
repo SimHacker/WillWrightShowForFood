@@ -21,7 +21,7 @@ representation:
 invitation:
   status: draft
   consent: not_yet_asked
-  document: ../../repo-shows/norman-margolus/invitation.md
+  document: ../../characters/norman-margolus/invitation.md
   show_seed: repo-shows/norman-margolus/
   likelihood: "good — friend of Henry's; Don already met him in Boston and discussed exactly this"
 

@@ -1,0 +1,184 @@
+# One-Minute Intense — the 60-second hook format
+# Format contributed by WILL WRIGHT (2026-07-06, via Don): "We need something to hook
+# average people really fast, 1 minute!" Lineage: the Stupid Fun Club one-minute
+# movies about robots (Empathy, Servitude) — but NOT wrapped around ads.
+
+meta:
+  id: one-minute-intense
+  type: format
+  status: adopted
+  by: will-wright   # first recorded format design from Will post-acceptance
+  tagline: "A Repo Show IS ALWAYS INTENSE!"
+
+shape:
+  total: 60s
+  idea: "~45s — ONE idea, told hot. No preamble, no logos, no 'hey guys'. Cold open into the thing itself."
+  break: "~15s — hard break into a CALL TO ACTION. Direct address: we need YOU to do a specific thing, right now, with a link."
+  rule: "One idea. One ask. Sixty seconds. Intensity is the format, not a garnish."
+
+call_to_action:
+  always_participatory: "The ask is always something the viewer can DO — upload, PR, issue, record, roar. Never just 'subscribe'."
+  channels: [github_issue, github_pr, youtube_comment, upload]
+
+lineage:
+  one_minute_movies: |
+    Stupid Fun Club's one-minute robot movies — Servitude and Empathy — proved the
+    length: a complete emotional beat in sixty seconds. Difference here: those were
+    wrapped around ads; these are wrapped around PARTICIPATION. The ad slot becomes
+    the call to action.
+  soupy_a_minute: |
+    Soupy Sales, New Year's Day 1965: the director told him "when we come out
+    you're going to have A MINUTE — what do you want to do?" He ad-libbed the
+    green-pieces-of-paper bit — "the greatest minute ad-lib in the history of
+    television" ($80,000 and a week's suspension). A MINUTE is our BEAT: the 1MM,
+    Will's suggested length for any video. One minute is enough to make history —
+    Soupy proved it live. (House gag: one-minute-movie-sandwich.yml
+    #found_commercials.soupy_green_paper.)
+  max_headroom_blipverts: |
+    *Max Headroom* (1987–88, "20 minutes into the future"): **blipverts** — ads
+    compressed to sub-second bursts, dropped anywhere in the feed. The show
+    coined the word; we use it for the same atom — seconds-long, self-contained,
+    droppable between segments with no wrapper. Quarry and reference:
+    - [Max Headroom — Blipverts](https://www.youtube.com/watch?v=LHPOgDdlMvk)
+    - [300 Zik-Zak commercials in 60 minutes](https://www.youtube.com/watch?v=yR4K4UpkuKw)
+      ("I only make the bomb, I don't drop it" at 0:00; the Zik-Zak! chant at 1:00)
+    We take clips from these and refer to them on air — found retro-TV seasoning,
+    provenance linked — and our fake sandwich commercials are blipvert-shaped in
+    the same spirit (Ronco, Zik-Zak, Head On: repetition, psychic damage, eight
+    seconds that mean something). Satire stays satire: our blipverts ask you to
+    participate or support open source, not buy a bomb.
+  see: ../repo-shows/will-wright-premiere/SEGMENTS.yml#opening_one_minute_movies
+
+first_instances:
+  upload_roars:
+    idea_45s: "The [NOT GODZILLA] monster needs a voice. Jeff Braun got sued; our monster roars by MOOD — angry in traffic, mournful in ruins — and kids will program its brain in Snap!."
+    cta_15s: "Hey — we need you ALL to upload ROARS!!! Record yourself roaring — angry, sad, hungry, polite — and send it in. Your roar ships in Micropolis, credited."
+    feeds: ../characters/will-wright/sessions/01-mic-check/SESSION.yml   # audience roars join Will's in the mood-tagged library
+    submit: "GitHub issue or PR with the audio file + a mood tag; details in the mic-check session doc"
+    standing_issue: |
+      One PINNED STANDING ISSUE per feedback genre — the roars issue is the model:
+      instructions for recording, uploading, and contributing roars, explaining WHY
+      we want them and HOW we use them (mood-tagged library, monster's voice, kids
+      program the brain in Snap!). Same pattern as the answering machine issue
+      (one-minute-movie-sandwich.yml#show_is_a_playlist.answering_machine_link):
+      every kind of participation gets its own well-lit front door, linked from
+      video ends. Each issue states the license grant (contributions ship in a
+      GPL-3 game) and the credit policy up front.
+    drive_video:   # the LONG-FORM roar drive appeal — the 60s cut above is mined from this
+      beats:
+        - "Will tells the Godzilla story — the Jeff Braun lawsuit, why the monster is [NOT GODZILLA]."
+        - "Will explains Micropolis: the GPL-3 FREE OPEN SOURCE version of SimCity we're developing."
+        - "Asks for support — implicitly money, but EXPLICITLY: contribute ROARS for the monster."
+        - "Play video of the ORIGINAL monster roaring — listen... yeah, we need better."
+        - "Show Will and Don ROARING AT EACH OTHER (mic-check session takes are the quarry)."
+        - "The appeal: donate your roars to the game — FREE — your content gets into an open
+           source game, shipped and credited!"
+        - "And sure, you can donate money too if you want. But WE NEED YOUR ROARS!"
+      money_note: |
+        The money ask stays IMPLICIT until the last beat, and even there it's the
+        afterthought — the explicit, repeated, all-caps ask is ROARS. Participation
+        is the currency of the drive; cash is the optional tip jar. Inverting the
+        usual fundraising appeal IS the joke, and also the honest priority.
+      support_framing: "Roars are ROARS OF SUPPORT — full framing (Hate Man spirit, imply-don't-accuse) in participation-funnels.yml#roars_of_support; monster sprite-art ask in #artist_ask."
+      origin_story: "The GPL-3 beat threads into the two-answering-machines story arc — one-minute-movie-sandwich.yml#two_answering_machines (two audience members at Long Now set the ball rolling; ask your question)."
+      deliverable: "Long-form drive video + the 60s One-Minute Intense cut, both feeding the same GitHub submission funnel."
+    roar_engine:
+      roar_off: "Will & Don ROAR-OFF — a series of ESCALATING roars; the session footage doubles as the drive video's beat 5."
+      how_it_works: |
+        The monster evaluates a RUBRIC per roar to parameterize which roar to
+        make. Roarers TAG their roars with emotive, expressive interpretations —
+        the sky's the limit. Selection: map game state + monster position =>
+        tags => an APPROPRIATE but NOT RECENTLY PLAYED roar. An LLM can do the
+        mapping — but we don't even need one in the loop: simple tag matching
+        and fuzzy scoring. It doesn't need to be perfect, just SURPRISING.
+        Many roars => lots of personality. THAT is why we want LOTS and LOTS
+        of roars.
+      simlish_lineage: |
+        Draws straight from SIMLISH: no literal meaning, pure emotive
+        vocalization — so ANY person, animal, or machine can roar. (Same design
+        fix as the Julie doll → Peanuts → Simlish arc: meaning read in by the
+        listener, never spoken by the toy.)
+      license: "Monster roars are explicitly licensed GPL-3 — stated in the funnel issue; totally in the clear, very safe."
+    submission_windows:
+      modes: |
+        TAKE-EVERYTHING mode first, then PICKY mode. Time limits on open calls
+        (changeable depending on how things go): during the take-everything
+        window, respond quickly and you're SURE to get your stuff in — that's
+        the reward for speed. After the window closes we go picky: politely
+        turn down long-tail PRs, or warmly accept late ones that are good
+        enough. The LONG-TAIL PROMISE stays open forever: really great content
+        gets in whenever it arrives.
+      self_prs: |
+        Contributors are invited to PR THEIR OWN CONTENT: a better version,
+        better or more metadata, more tags as tags standardize over time. Your
+        roar is a living object in the repo, not a one-shot upload.
+    the_contest: |
+      Judge ALL the submitted roars during the free-for-all: best in each
+      CATEGORY plus runners-up — including judging the VIDEO (Price Is Right
+      costumes and scenes, beautiful cool-looking pets) — and the TOP-N in each
+      category are USED BY THE GAME. For those we mark up the metadata with
+      what the runtime engine needs to decide which roar plays in which
+      situation: earthquake, flood, nuclear meltdown...
+    roar_gameplay:
+      what: |
+        As we develop interpreters for the metadata, ROARS DRIVE GAMEPLAY:
+        roars trigger BUFFS! Summon other characters and disasters! EARTHQUAKE
+        CAUSING ROAR!!!! Roars are weapons, spells, buffs. Money roar (positive
+        or negative). Roars can operate ANY control in the UI — raise and
+        lower taxes, road and rail funds — triggering any command through the
+        COMMAND BUS. Even sending prompts to AI agents.
+      dsr: "ROARS as a fundamental command language: DOMAIN SPECIFIC ROAR — DSR. You are the roar of your domain."
+    roar_recognition:
+      what: |
+        In-browser ROAR RECOGNITION: build a library of distinct roars, train a
+        classifier, cluster them into COMMAND CLUSTERS, perform real-time roar
+        recognition and tracking.
+      voystick: |
+        Continuous pitch + vowel + timbre tracking => the VOYSTICK — voice as
+        joystick, a long-term project Don wants to do, fund, and incorporate
+        into all of this. The Phoneloper demo is part of that story and draws
+        from Simlish too; so does the Slats loop: speech recognition =>
+        synthesis => noise feedback.
+    moderation_and_trust:
+      how: |
+        The roar format SOLVES most of the user-content curation problem: of
+        course we listen to every roar before merging to main, but the vast
+        majority will be just fine, and it's easy to filter the fucks and
+        n-word roars (AI could do it, but NO — we want the HUMAN TOUCH in our
+        moderation loop). Offenders get their GitHub users banned from the repo.
+      github_gives_us: |
+        Curation, accountability, and community self-policing for free:
+        membership privileges, delegation of authority, PR review/approve/merge
+        workflow. Enthusiastic community volunteers would love to help moderate.
+      recognition: "Contributors who submit lots of great content are TRUSTED and ADMIRED: leaderboards, badges, credits, your name in the game — all that stuff."
+    video_roars:
+      what: |
+        A roar can be just audio — or YOU in a costume, or your PET, on video.
+        Trickier moderation layer but not rocket science (volunteers + the PR
+        workflow above handle it).
+      splicing: |
+        Video roars are GREAT to splice together in sequence — escalating, or
+        musically autotuned and time-warped to SING A SONG. Lineage: Captain
+        Chesapeake showing kids' mailed-in photos on screen; Soupy Sales's
+        little green pieces of paper (one-minute-movie-sandwich.yml
+        #found_commercials.soupy_green_paper).
+    example_blipverts:
+      what: |
+        Seed the drive with EXAMPLE ROARS as BLIPVERTS — independent, super-short
+        standalone clips dropped straight into playlists, no wrapper, no context:
+        - Don's extremely loud cat NELSON roaring (HE IS LOUD!!!)
+        - Will's cat too
+      why: |
+        Example clips lower the bar for contributors — if a CAT can submit a roar,
+        so can you — and prove the "any roar, credited" promise before the first
+        human upload arrives. Cats join the mood-tagged manifest like everyone else.
+      blipvert_rule: |
+        Blipverts are first-class playlist atoms: seconds long, self-contained,
+        droppable into ANY playlist anywhere in a sandwich (see
+        one-minute-movie-sandwich.yml#show_is_a_playlist). A roar between two
+        segments needs no explanation — that's the format working as intended.
+        The word comes from *Max Headroom* — see #lineage.max_headroom_blipverts.
+
+production_note: |
+  Cut these from session takes (see characters/will-wright/videos.yml) or shoot them
+  standalone. Every session should be mined for at least one One-Minute Intense.

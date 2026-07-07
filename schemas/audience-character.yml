@@ -103,7 +103,7 @@ card:
     invokable_by:
       values: [self, don-philahue, guest, don-hopkins, other_characters]
       note: "Autonomous (self) OR pulled by the orchestrator / guest / host / another character."
-    worked_example: ../repo-shows/will-wright/audience/fictional-bella-goth/CARD.yml
+    worked_example: ../repo-shows/will-wright-premiere/audience/fictional-bella-goth/CARD.yml
 
 seating:
   principle: |

@@ -26,9 +26,9 @@ invitation:
   accepted: "2026-07 — pitched; loves the idea, gets it, hot to trot"
   guest_prototype: guest-prototype.yml
   document: invitation.md
-  official_invitation: repo-shows/will-wright/invitation.md   # accepted showpiece; earlier cuts archived privately (green room)
-  browse_landing: repo-shows/will-wright/BROWSE.md
-  show_seed: repo-shows/will-wright/
+  official_invitation: repo-shows/will-wright-premiere/invitation.md   # accepted showpiece; earlier cuts archived privately (green room)
+  browse_landing: repo-shows/will-wright-premiere/BROWSE.md
+  show_seed: repo-shows/will-wright-premiere/
   segments: [slats-reincarnation]
 
 simulation:
@@ -125,7 +125,7 @@ content:
   card: CARD.yml
   card_md: CARD.md
   description: DESCRIPTION.md
-  show: ../../repo-shows/will-wright/
+  show: ../../repo-shows/will-wright-premiere/
 
 media:
   gallery: media/README.md
@@ -145,9 +145,9 @@ see_also:
   - { path: CARD.yml, why: "Invokable abilities — show segments" }
   - { path: invitation.md, why: "Public invitation (short elevator pitch)" }
   - { path: ideas.md, why: "Conversation hooks — grounded topic menu for the show" }
-  - { path: ../../repo-shows/will-wright/, why: "Long invitation drafts live here (sent skyscraper + opus + gpt55)" }
+  - { path: ../../repo-shows/will-wright-premiere/, why: "Long invitation drafts live here (sent skyscraper + opus + gpt55)" }
   - { path: ../../process/entryways/guest-will.md, why: "Suggested playlist" }
-  - { path: ../../repo-shows/will-wright/BROWSE.md, why: "Pick-any-order landing" }
+  - { path: ../../repo-shows/will-wright-premiere/BROWSE.md, why: "Pick-any-order landing" }
   - { path: ../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "1996 centerpiece" }
   - { path: media/russian-space-junk.md, why: "Will's Soviet space-hardware collection (photos by Don)" }
   - { path: media/artwork.md, why: "Will's mixed-media relief artwork" }

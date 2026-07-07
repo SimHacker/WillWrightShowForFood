@@ -22,7 +22,7 @@ the SimAntics live-programming/debugging environment switched on.**
 
 **Run locally (from IA readme):** extract; shortcut to `DATA/Sims.exe` with `-w`, 16-bit color, administrator. Installer optional. **Not compatible** with retail Sims 1. Compare later build: [1999-01-06 alpha](../1999-01-06-sims-alpha-prototype/README.md).
 
-**Show:** [Sims team reunion — play it live](../../../../repo-shows/will-wright/sims-team-steering-committee-playthrough/SHOW.yml) with Jamie, Bobo, Irk, Patrick, Don (+ Will?).
+**Show:** [Sims team reunion — play it live](../../../../repo-shows/will-wright-premiere/sims-team-steering-committee-playthrough/SHOW.yml) with Jamie, Bobo, Irk, Patrick, Don (+ Will?).
 
 - The full machine-generated transcript is available on the video; cleaned highlights below.
 

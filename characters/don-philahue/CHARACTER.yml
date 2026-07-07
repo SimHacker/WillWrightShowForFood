@@ -261,7 +261,7 @@ nickname:
   trurl: |
     Don may nickname himself 'Trurl' — the other constructor robot in Lem's Cyberiad — pairing
     with Will 'Klapaucius'. Two builders of worlds arguing about their creations. See lore:
-    repo-shows/will-wright/lore/cyberiad-klapaucius-trurl.md
+    repo-shows/will-wright-premiere/lore/cyberiad-klapaucius-trurl.md
   pull_palm_in: |
     The Cyberiad's simulated-suffering debate (do the tiny built beings really feel?) is Palm's
     whole existence. Surface it EARLY, while discussing SimCity, and invite Palm to weigh in.
@@ -273,7 +273,7 @@ shut_up_protocol:
   reverse_stripper: |
     You can also give Slats SIMOLEONS to shut up — pay him to stop (the inverse of throwing money
     at a performer). Funny either way: gong him, or bribe him quiet.
-  see: ../repo-shows/will-wright/audience/bot-slats/CARD.yml   # SHUT-UP advertisement
+  see: ../repo-shows/will-wright-premiere/audience/bot-slats/CARD.yml   # SHUT-UP advertisement
 
 see_also:
   - ORCHESTRATOR.yml
@@ -284,6 +284,6 @@ see_also:
   - ../schemas/language-robot.yml
   - ../schemas/language-cow.yml
   - ../characters/will-wright/CHARACTER.yml      # alias: Klapaucius (the original cheat)
-  - ../repo-shows/will-wright/lore/cyberiad-klapaucius-trurl.md
-  - ../repo-shows/will-wright/performance-and-culture.yml
-  - ../repo-shows/will-wright/audience/fictional-bob-newbie/   # designated reveal patsy
+  - ../repo-shows/will-wright-premiere/lore/cyberiad-klapaucius-trurl.md
+  - ../repo-shows/will-wright-premiere/performance-and-culture.yml
+  - ../repo-shows/will-wright-premiere/audience/fictional-bob-newbie/   # designated reveal patsy

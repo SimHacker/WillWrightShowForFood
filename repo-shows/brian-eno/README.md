@@ -30,7 +30,7 @@ music generation have caught up to where the three of them were each pointing.
 ## In this directory
 
 - [`SHOW.yml`](SHOW.yml) — the show seed (segments, buildable prototypes, ties).
-- [`invitation.md`](invitation.md) — the draft invitation to Brian (sent gently via Will + Scott).
+- [`invitation.md`](../../characters/brian-eno/invitation.md) — the draft invitation to Brian (sent gently via Will + Scott).
 
 More on the guest: [`characters/brian-eno/`](../../characters/brian-eno/README.md) — with
 [`ideas.md`](../../characters/brian-eno/ideas.md) (grounded hooks) and

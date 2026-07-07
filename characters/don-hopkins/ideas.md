@@ -18,7 +18,7 @@
 
 | Show | Hook |
 |------|------|
-| [`repo-shows/will-wright/`](../../repo-shows/will-wright/) | Flagship — Sims birth, Micropolis saga, procedural worlds |
+| [`repo-shows/will-wright-premiere/`](../../repo-shows/will-wright-premiere/) | Flagship — Sims birth, Micropolis saga, procedural worlds |
 | [`gesture-space.md`](gesture-space.md) | Multitouch constraints, self-revealing vs graffiti — [`gesture-space-self-revealing-ui.yml`](../../repo-shows/gesture-space-self-revealing-ui.yml) |
 | [`connectedtv-touch-tuning-finger-pies.md`](connectedtv-touch-tuning-finger-pies.md) | Touch Tuning + Finger Pies — calm tech in the dark — [`connectedtv-calm-technology.yml`](../../repo-shows/connectedtv-calm-technology.yml) |
 | [`ie-jscript-htc-xslt-pie-menus.md`](ie-jscript-htc-xslt-pie-menus.md) | Punkemon + ConnectedTV Skin Editor — XSLT-native web on IE5 (HN 44393817) |

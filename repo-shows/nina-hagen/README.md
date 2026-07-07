@@ -8,7 +8,7 @@ north stars alongside Bowie, Nomi, and Laurie Anderson.
 | | |
 |---|---|
 | **Guest page** | [`characters/nina-hagen/`](../../characters/nina-hagen/) |
-| **Invitation** | [`invitation.md`](invitation.md) |
+| **Invitation** | [`invitation.md`](../../characters/nina-hagen/invitation.md) |
 | **Hooks** | [`ideas.md`](../../characters/nina-hagen/ideas.md) |
 | **Show spec** | [`SHOW.yml`](SHOW.yml) |
 

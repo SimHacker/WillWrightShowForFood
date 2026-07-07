@@ -28,7 +28,7 @@ beauty from simple rules, a crowd of minds, and a lot of machines?
 
 | What | Link |
 |------|------|
-| **The invitation** | [`invitation.md`](invitation.md) |
+| **The invitation** | [`invitation.md`](../../characters/scott-draves/invitation.md) |
 | **Simulated art opening** | [`simulated-opening.yml`](simulated-opening.yml) — menagerie buys your work for § |
 | **Guest ritual (all shows)** | [`process/simulated-art-opening.yml`](../../process/simulated-art-opening.yml) |
 | **Scott (character)** | [`characters/scott-draves/`](../../characters/scott-draves/README.md) |

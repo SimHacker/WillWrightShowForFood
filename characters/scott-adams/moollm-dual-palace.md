@@ -48,4 +48,4 @@ Colossal Cave → Infocom luxury → **Scott's portable VM (16K)** → MUD → M
 
 ## Segment picks
 
-Full catalog: [`../../repo-shows/scott-adams/ideas.md`](../../repo-shows/scott-adams/ideas.md) — especially **B2**, **B5**, **G1**, **G5**, **A2**, **A4**.
+Full catalog: [`../../characters/scott-adams/ideas.md`](../../characters/scott-adams/ideas.md) — especially **B2**, **B5**, **G1**, **G5**, **A2**, **A4**.

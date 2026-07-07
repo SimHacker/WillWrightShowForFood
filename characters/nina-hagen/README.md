@@ -24,9 +24,8 @@ of anti-censorship performance — a feminist bodily-autonomy argument pushed st
 She pairs naturally with the rest of Don's avant-garde pantheon — **Bowie, Klaus Nomi, Joey Arias,
 Leigh Bowery, Laurie Anderson** — and is an **operatic-punk sibling to Klaus Nomi** (both classically
 trained, both weaponizing opera for the avant-garde). She's cited as the twin emblem to **Bowie's video
-puppet** in the medium framing:
-[`FRAMING-REPOSHOW-AS-NEW-MEDIUM.md`](../../designs/chatgpt-research-review/framing/FRAMING-REPOSHOW-AS-NEW-MEDIUM.md)
-("The emblem: Bowie's video puppet").
+puppet** in the show's medium framing ("The emblem: Bowie's video puppet" — see
+[`VISION.md`](../../process/VISION.md)).
 
 She is one of **Don's long-time avant-garde north stars.**
 

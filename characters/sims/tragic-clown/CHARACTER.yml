@@ -86,7 +86,7 @@ representation:
   not_official_ea: true
 
 audience_fork:
-  path: repo-shows/will-wright/audience/fictional-tragic-clown/
+  path: repo-shows/will-wright-premiere/audience/fictional-tragic-clown/
   role: planted_ticketpr
 
 relationships:

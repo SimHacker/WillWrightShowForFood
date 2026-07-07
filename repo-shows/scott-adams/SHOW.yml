@@ -35,8 +35,8 @@ format:
   homeplay: "Author a tiny adventure as data; compile it; share the self-contained web page or a PR."
 
 ties_to:
-  - invitation.md
-  - ideas.md
+  - ../../characters/scott-adams/invitation.md
+  - ../../characters/scott-adams/ideas.md
   - IDEAS.yml
   - ../../characters/scott-adams/invitation.md
   - ../../characters/scott-adams/moollm-dual-palace.md

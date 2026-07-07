@@ -22,7 +22,7 @@ balcony_duos:
     seats:
       left: fictional-tragic-clown   # 🤡 Tragic Clown (painting)
       right: fictional-grim-reaper   # 💀 Death
-    home: repo-shows/will-wright/audience/
+    home: repo-shows/will-wright-premiere/audience/
     emoji_pair: "🤡💀"
     homage: "Statler & Waldorf — Sims culture"
     vibe: |
@@ -118,4 +118,4 @@ forbidden:
 see_also:
   - ticket-pr.yml
   - ../schemas/fictional-audience.yml
-  - ../repo-shows/will-wright/audience/FICTIONAL-AUDIENCE.md
+  - ../repo-shows/will-wright-premiere/audience/FICTIONAL-AUDIENCE.md

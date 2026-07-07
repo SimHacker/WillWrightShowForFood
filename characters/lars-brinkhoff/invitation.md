@@ -1,5 +1,5 @@
 ---
-status: yes_later
+status: invited  # responded yes-later — Swedish July vacation
 character_id: lars-brinkhoff
 public: true
 consent: not_yet_asked

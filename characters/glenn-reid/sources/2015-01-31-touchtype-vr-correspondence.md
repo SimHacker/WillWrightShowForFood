@@ -4,9 +4,9 @@ Primary source: forwarded email thread. Portrayal: Glenn's words verbatim; Don's
 
 | Field | Value |
 |-------|-------|
-| **From** | Glenn Reid \<glenn@glennreid.com\> |
+| **From** | Glenn Reid \<[email redacted]\> |
 | **To** | Don Hopkins \<don@DonHopkins.com\> |
-| **Cc** | dhopkins@DonHopkins.com, David Levitt \<dlevitt@sonic.net\>, Eric Hedman \<irktiki@gmail.com\> |
+| **Cc** | dhopkins@DonHopkins.com, David Levitt \<[email redacted]\>, Eric Hedman \<[email redacted]\> |
 | **Subject** | Re: 3D VR Touch Type??! |
 | **Date** | 31 January 2015, 02:05:56 GMT+1 |
 

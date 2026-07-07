@@ -338,11 +338,11 @@ playback:
     Reads merged questions.yml forests only — refs tell him where to look on GitHub when needed.
 
 examples:
-  worked: ../repo-shows/will-wright/audience/palm/questions.yml
-  hn_provenance: ../repo-shows/will-wright/audience/hn-nanna/questions.yml
+  worked: ../repo-shows/will-wright-premiere/audience/palm/questions.yml
+  hn_provenance: ../repo-shows/will-wright-premiere/audience/hn-nanna/questions.yml
   template: ../repo-shows/_TEMPLATE/audience/questions.yml
   hn_curation_snippet: ../repo-shows/_TEMPLATE/audience/hn-curation-snippet.yml
-  draft_menu: ../repo-shows/will-wright/audience/richard-bartle/questions.yml
+  draft_menu: ../repo-shows/will-wright-premiere/audience/richard-bartle/questions.yml
 
 see_also:
   - ../process/ticket-pr.yml

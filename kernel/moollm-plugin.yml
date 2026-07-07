@@ -20,7 +20,7 @@ activation:
       - GLANCE.yml
       - .moollm/hot.yml          # local only, gitignored — copy from moollm bootstrap template
       - characters/INDEX.yml
-      - repo-shows/will-wright/SHOW.yml
+      - repo-shows/will-wright-premiere/SHOW.yml
   bootstrap: "Read moollm skills/bootstrap/GLANCE.yml first; then this repo's GLANCE.yml"
 
 paths:

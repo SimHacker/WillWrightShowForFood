@@ -33,7 +33,7 @@ show_seeds:
 invitation_status: send_ready
 
 contact:
-  email: glenn@glennreid.com
+  email: private  # on file with Don; open replies welcome via GitHub issue or PR
   web: https://glennreid.blogspot.com/
 
 notes: |

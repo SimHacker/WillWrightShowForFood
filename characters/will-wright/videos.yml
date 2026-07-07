@@ -1,0 +1,78 @@
+# Will Wright videos — character-level content plan (creation first, show second)
+# Public plan. Content gets planned and created HERE, at the character level; deciding
+# what goes into a show comes later. All of it promotes, previews, and seeds the show.
+# Every video manufactures real assets (audio, footage, stories) that land in the repo
+# and ship in Micropolis. The show makes the game while making the show.
+
+meta:
+  id: will-wright-videos
+  character: will-wright
+  status: planned
+  show_model: |
+    The show may CULMINATE in a live Twitch stream — the apex of real-time audience
+    participation with Will's direct attention and feedback. If it works well, more
+    of them: with Will and without, some hosted by Don. The stream is the apex, not
+    the container; these videos are the mountain under it.
+  see_also: [../../repo-shows/will-wright-premiere/SEGMENTS.yml, ../../repo-shows/will-wright-premiere/SHOW.yml, adorable-minutes.md]
+
+principle: |
+  Never record a "test" that's only a test. The mic check produces game audio. The
+  Cursor tour produces the tutorial. Every teaser leaves artifacts in the repo with
+  provenance — repo-as-medium means the rehearsals are releases.
+
+production: |
+  Lots of LOW-PRESSURE TAKES. Keep the best ones, publish them. Cut both directions:
+  short-form excerpts and memes, AND long-form James Burke Connections-style
+  narrative-arc storytelling — documentaries, design expositions, fundraising
+  appeals — edited together with other videos and other people. Takes are logged
+  and tagged in sessions/, never discarded: today's take is a scene in arcs we
+  haven't written yet.
+
+artifacts: sessions/   # one dir per session — SESSION.yml, takes log, published links, transcripts
+
+videos:  # index only — name, one line, pointer. Rich content lives in each session dir.
+
+  hn_video_reply:
+    name: "Will Answers Hacker News (video reply)"
+    order: 0
+    priority: now
+    one_line: "Will answers the early HN questions on camera, as long as he wants; YouTube URL drops on the HN thread; feedback layers across media."
+    session: sessions/00-hn-video-reply/SESSION.yml
+
+  mic_check:
+    name: "Mic Check: Is This Thing On?"
+    order: 1
+    one_line: "A/V shakedown that becomes a recording session: the answering-machine gag opener ('Hey — I'm the Sim!'), SimCopter One, talking pie menus, tool vowel vocals + UH UH!, and mood-tagged [NOT GODZILLA] roars — every beat shot Goldilocks-style (too A / too B / just right), all three takes used, cut into playlist timelines."
+    session: sessions/01-mic-check/SESSION.yml
+
+  souls_and_palm_readings:
+    name: "Souls & the Three Palm Readings"
+    order: 2
+    one_line: "Palm (Don's voice) explains himself first — three readings already on YouTube — then Don & Will discuss souls in response."
+    session: sessions/02-souls-and-palm-readings/SESSION.yml
+
+  moollm_show_and_tell:
+    name: "MOOLLM Show-and-Tell"
+    order: 3
+    one_line: "Don explains MOOLLM; Will's newcomer questions ARE the tutorial. Rehearses the premiere's will_drives_cursor role reversal."
+    session: sessions/03-moollm-show-and-tell/SESSION.yml
+
+  portable_data_1996:
+    name: "Portable Game Data: 1996 Asked, Soul City Answers"
+    order: 4
+    one_line: "The 1996 Winograd talk's data-portability question, answered thirty years later by Soul City and the game bridges. That's all for that chat."
+    session: sessions/04-portable-data-1996-to-soul-city/SESSION.yml
+
+  cold_call_pitch:
+    name: "The Cold Call (solo video pitch)"
+    order: 5
+    priority: now
+    one_line: "Don, solo, leaves Will a video message out of the blue: MOOLLM, Micropolis City, Soul City, the game bridges (wide not high), the repo show, and the 30-year SimCopter favor — ends with 'Oh yeah — I'm a recording.' Self-explanatory for any stranger."
+    session: sessions/05-cold-call-pitch/SESSION.yml
+    script: sessions/05-cold-call-pitch/SCRIPT.md
+
+  cursor_tour:
+    name: "Will Drives: Cursor on the Repos (pre-show tour)"
+    order: 6
+    one_line: "Don gives Will the pre-show tour of the repos in Cursor; the live role reversal happens in the premiere."
+    spec: ../../repo-shows/will-wright-premiere/SEGMENTS.yml#will_drives_cursor

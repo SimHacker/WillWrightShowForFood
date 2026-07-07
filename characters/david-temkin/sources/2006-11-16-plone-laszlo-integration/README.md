@@ -1,7 +1,0 @@
-# Plone/Laszlo Integration...
-
-Verbatim Laszlo/OpenLaszlo thread (1 messages).
-
-| [`email-thread.md`](email-thread.md) | Full thread |
-
-↑ [`../../README.md`](../../README.md)

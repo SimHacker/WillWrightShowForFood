@@ -64,7 +64,7 @@ attention_atoms:
     repo_show_flip: |
       **TicketPR is free.** Merged PR = crew member. Optional donations buy recognition (box seats),
       not the right to speak. We charge for **less** text only as comedy — never as gatekeeping.
-    see: repo-shows/will-wright/performance-and-culture.yml#participation_economy
+    see: repo-shows/will-wright-premiere/performance-and-culture.yml#participation_economy
   forms:
     one_quote_one_link:
       what: "One quote. No explanation. Just a link."

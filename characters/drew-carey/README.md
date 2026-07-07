@@ -14,7 +14,7 @@ If someone sent you this link, these pages are **for you** (browse without a Git
 
 | Page | What it is |
 |------|------------|
-| [**Invitation**](../../repo-shows/drew-carey/invitation.md) | Short invite — join the show, maybe with Will; no homework |
+| [**Invitation**](../../characters/drew-carey/invitation.md) | Short invite — join the show, maybe with Will; no homework |
 | [**AI & audience participation note**](../../repo-shows/drew-carey/ai-contrast-framing.md) | Your 2023 radio experiment, our Bar Karma / StoryMaker / MOOLLM learnings, *Whose Voice Is It Anyway?* |
 | [Show hub](../../repo-shows/drew-carey/README.md) | Segments, links, machine-readable specs |
 
@@ -46,7 +46,7 @@ a great conversation.
 | Artifact | Path |
 |----------|------|
 | Show seed | [`repo-shows/drew-carey/SHOW.yml`](../../repo-shows/drew-carey/SHOW.yml) |
-| Invitation | [`repo-shows/drew-carey/invitation.md`](../../repo-shows/drew-carey/invitation.md) |
+| Invitation | [`characters/drew-carey/invitation.md`](../../characters/drew-carey/invitation.md) |
 | AI framing (markdown) | [`repo-shows/drew-carey/ai-contrast-framing.md`](../../repo-shows/drew-carey/ai-contrast-framing.md) |
 | AI framing (YAML) | [`repo-shows/drew-carey/ai-contrast-framing.yml`](../../repo-shows/drew-carey/ai-contrast-framing.yml) |
 | Character card | [`CHARACTER.yml`](CHARACTER.yml) |

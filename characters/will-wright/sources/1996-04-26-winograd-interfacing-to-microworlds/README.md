@@ -121,7 +121,7 @@ published article.
 
 ## Navigation
 
-↑ [sources](../README.md) · [show](../../../../repo-shows/will-wright/README.md) · [portrayal](../../../README.md) · [`GLANCE.yml`](GLANCE.yml)
+↑ [sources](../README.md) · [show](../../../../repo-shows/will-wright-premiere/README.md) · [portrayal](../../../README.md) · [`GLANCE.yml`](GLANCE.yml)
 
 | Sibling | → |
 |---------|---|

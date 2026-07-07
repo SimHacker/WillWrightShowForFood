@@ -61,7 +61,7 @@ relationship: |
   create → publish → share rails. Start here; grow from there.
 
 ties_to:
-  - path: ../repo-shows/will-wright/INTRO-NARRATIVE.md
+  - path: ../repo-shows/will-wright-premiere/INTRO-NARRATIVE.md
     why: "Proof + mission — family UCC, wedding playset, federation"
   - path: ../characters/will-wright/media/sims-series-micropolis-publishing-vision.md
     why: "OpenLaszlo CMS lineage → Micropolis Federation"

@@ -1,0 +1,108 @@
+# Participation Funnels — pinned GitHub issues as the show's switchboard (DESIGN SPEC)
+# Grew out of the answering-machine funnel (one-minute-movie-sandwich.yml
+# #show_is_a_playlist.answering_machine_link) — the funnel system is now its own design.
+
+meta:
+  id: participation-funnels
+  status: design_spec
+  type: [participation, onboarding, github]
+
+thesis: |
+  Issues with calls to action and participation, ONE TOPIC PER ISSUE — pinned,
+  linkable from every video with a stable URL, accumulating like an answering
+  machine tape. Every kind of participation gets its own well-lit front door,
+  and the doors are arranged in a LADDER: easy leading to hard, each rung
+  demonstrated on camera before anyone is asked to climb it.
+
+funnel_types:
+  reusable: "One funnel feeding MANY shows (the roars issue, the answering machine issue)."
+  special_purpose: "One funnel for ONE show or series (a specific episode's ask)."
+  general: "The suggestion box + viewer call-in funnel — catch-all for everything without a door yet."
+
+onboarding_funnel:
+  first: |
+    The FIRST funnel is the onboarding issue: to participate in a Repo Show you
+    need a GitHub account — here's how to make one — and SAY HI once you do!
+    Reply to this very issue to immediately participate: introduce yourself.
+    Stuff to do once you have an account: upload a video to YouTube introducing
+    yourself — cat and dog videos, anything — then post a reply here linking it.
+    Participation starts the minute the account exists.
+  video: |
+    The companion video is the github_onboarding_tutorial (one-minute-movie-
+    sandwich.yml): Don and Will talking ENTHUSIASTICALLY together — Don
+    explaining GitHub to Will and persuading him to join, step by step, even
+    making his account for him, then opening an issue and commenting. One of
+    the FIRST videos we make; it unlocks all the rest.
+  show_and_tell: |
+    Same session's show-and-tell arc, Don to Will: (1) Cursor, (2) MOOLLM,
+    (3) Micropolis City, (4) Soul Saver — then the conversation opens out:
+    Proxi Soul Saver, Spore Soul Saver, and the lineage of games that keep
+    souls: Little Computer People, Afterlife, Stardew Valley, etc.
+
+participation_ladder:
+  rungs:
+    - "SAY HI — reply to the onboarding issue. (Account + comment. That's it.)"
+    - "LEAVE A MESSAGE — the answering machine issue; text or a linked video clip."
+    - "CONTRIBUTE A ROAR — audio/video + mood tag (one-minute-intense.yml#upload_roars)."
+    - "DRAW A MONSTER — sprite sets + rights grant (artist_ask below)."
+    - "MAKE A TicketPR — the git tutorial tier (ticket-pr.yml): PR your way into the show."
+    - "CREATE YOUR AUDIENCE CHARACTER — add and edit questions, customize your
+       character: personality AND costume, whatever about yourself you want to
+       present to the show, Will, the guests, and the other audience — including
+       the simulated characters (Slats, the Sims regulars)."
+    - "GO DEEPER — code, content, skills; the repo is open all the way down."
+  pedagogy: |
+    A progressive MASTER CLASS in GitHub participation BY EXAMPLE — every rung
+    demonstrated on camera with obvious motivating forces: why you'd want to,
+    and how fucking awesome it is when you do. Easy leads to hard; nobody is
+    asked to climb a rung they haven't watched somebody enjoy.
+  motivating_forces: |
+    Say it plainly in the funnels and the videos: this skill and this account
+    will serve you your WHOLE LIFE — help you get a job, meet and collaborate
+    with awesome people and projects. A GitHub account is your PASSPORT into
+    the free open source development community. The show is the fun excuse;
+    the passport is real.
+
+inverted_hollywood:
+  contract: "The intro is the contract: you're calling in, we call back."
+  the_term: |
+    This INVERTS the Hollywood Principle — "don't call us, we'll call you" —
+    the computer-science term behind dependency injection / inversion of
+    control. Ours is: DO call us, and we'll call you BACK. Say this on camera
+    in one of the technical discussions: the show's feedback loop, named with
+    a CS in-joke that's also literally true of the format.
+
+roars_of_support:
+  framing: |
+    Your roars are ROARS OF SUPPORT: the monster's voice, and the audience's.
+    The implication (never the accusation) is that a project like this needs a
+    crowd around it — both scary roars from fans who would be outraged if
+    anyone hurt it, and financial support for NEW DEVELOPMENT (not legal
+    defense, hopefully, because we are being careful). The roar drive stays a
+    drive FOR something, never against anyone by name.
+  hate_man: |
+    The spirit is the I HATE YOU man of Berkeley (Hate Man, Mark Hawthorne):
+    once you've gotten over expressing your hate for each other, you can have
+    an interesting, respectful conversation. Roar first, talk after — the roar
+    clears the air. Tell Tom's story about him, and link to an article about
+    Hate Man when the beat runs.
+
+artist_ask:
+  what: |
+    The ADVANCED ask for graphical artists — and squarely in the wheelhouse of
+    YOUNGER KIDS: draw SPRITE SETS for YOUR OWN MONSTERS. Draw 8 monsters!
+    Grant us the rights to use your roars (yours and your pets') and your
+    monster drawings, and they ship in the game, credited.
+  why_it_matters: |
+    Beautifully hand-drawn, anti-AI-slop human work — respected and shared.
+    The story this tells about our approach to AI/human collaboration is
+    priceless: humans draw the monsters and voice the roars; the machines do
+    the plumbing. Forefronting and centering human art is not a disclaimer,
+    it's the FEATURE.
+  license_note: "Same license-grant + credit policy as the roar funnel (one-minute-intense.yml#upload_roars.standing_issue) — stated up front, in the issue template."
+
+ties:
+  - one-minute-movie-sandwich.yml     # answering_machine_link, github_onboarding_tutorial, messages_for_will
+  - one-minute-intense.yml            # upload_roars funnel + standing_issue pattern
+  - ticket-pr.yml                     # the TicketPR tier of the ladder
+  - ../characters/will-wright/sessions/01-mic-check/SESSION.yml   # leave_a_message_funnel

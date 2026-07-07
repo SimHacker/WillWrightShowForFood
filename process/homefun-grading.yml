@@ -16,7 +16,7 @@ pitch: |
 
 homefun_not_homework:
   line: "No homework — but as much homefun as you like."
-  see: ../repo-shows/will-wright/SHOW.yml#audience_homefun
+  see: ../repo-shows/will-wright-premiere/SHOW.yml#audience_homefun
   loop: "Do homefun → check into repo → show originators → best work discussed in later episode"
   vs_homework: |
     Homework optimizes for completion. Homefun optimizes for exploration, taste,
@@ -90,7 +90,7 @@ student_artifact:
 ties_to:
   - orchestration-gold.yml#audit_questions
   - orchestration-gold.yml#since_last_commit
-  - ../repo-shows/will-wright/SHOW.yml
+  - ../repo-shows/will-wright-premiere/SHOW.yml
   - vision-and-ambition.yml
   - repo-show-format.yml
   - SimHacker/moollm/skills/thoughtful-commitment

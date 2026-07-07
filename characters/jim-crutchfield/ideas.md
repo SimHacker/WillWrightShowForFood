@@ -29,7 +29,7 @@ walk the repo on air and build from the seed.
 ### 2. James P. Crutchfield ('Chaos')
 UC Davis physicist of complexity; video feedback, edge of chaos + evolving cellular automata, computational mechanics (ε-machines); Santa Cruz Dynamical Systems Collective (Eudaemonic Pie). The 'in': video feedback + CA jam with Don's CAM6 + Scott Draves + Norman Margolus.
 
-**Jan 2025 mail:** Don → `chaos@ucdavis.edu` citing Psychedelic Graphics HN [42804566](https://news.ycombinator.com/item?id=42804566); WebGPU feedback simulator prompt.
+**Jan 2025 mail:** Don → `[email redacted]` citing Psychedelic Graphics HN [42804566](https://news.ycombinator.com/item?id=42804566); WebGPU feedback simulator prompt.
 
 → [`sources/2025-01-25-psychedelic-graphics-hn.md`](sources/2025-01-25-psychedelic-graphics-hn.md) · [`../don-hopkins/sources/2025-01-psychedelic-graphics-hn-compendium.md`](../don-hopkins/sources/2025-01-psychedelic-graphics-hn-compendium.md)
 

@@ -2,12 +2,8 @@
 
 character: will-wright
 consent_note: Public respectful portrayal for invitation browsing; subject may request removal
-artifact_count: 2
+artifact_count: 0
 
-artifacts:
-  - file: from-mail/artifact-photo-on-5-3-24-at-1241-pm-2.jpeg
-    kind: artifact
-    title: "artifact-photo-on-5-3-24-at-1241-pm-2"
-  - file: from-mail/artifact-photo-on-5-3-24-at-1241-pm.jpeg
-    kind: artifact
-    title: "artifact-photo-on-5-3-24-at-1241-pm"
+# Two personal photos from 2024 correspondence were retracted 2026-07-06
+# pending explicit review and consent; originals remain in Don's private archive.
+artifacts: []

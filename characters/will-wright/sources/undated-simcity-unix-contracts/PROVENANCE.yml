@@ -1,8 +1,0 @@
-archive:
-  ingested: 2026-07-04
-  source: DonHopkins/temp/lots-of-chat.txt
-  subject: "simcity unix (contracts!)"
-  form: verbatim
-
-parts:
-  - email-thread.md

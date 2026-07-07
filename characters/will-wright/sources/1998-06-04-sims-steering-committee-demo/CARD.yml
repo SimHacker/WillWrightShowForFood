@@ -32,7 +32,7 @@ abilities:
           weight: 1.0
     effect: "Best segment for Jamie/Bobo/Irk/Patrick reunion — not the kickoff video."
     combos_with:
-      - ../../../../repo-shows/will-wright/sims-team-steering-committee-playthrough/SHOW.yml
+      - ../../../../repo-shows/will-wright-premiere/sims-team-steering-committee-playthrough/SHOW.yml
       - ../1996-04-26-winograd-interfacing-to-microworlds/CARD.yml
 
 compose_with:

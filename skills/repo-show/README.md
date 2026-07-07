@@ -25,7 +25,7 @@ A **Repo Show** is a collaborative, GitHub-native, live-streamed design conversa
 | Guests + invitations | [`characters/`](../../characters/README.md) |
 | Harvest landing | [`skills/`](../README.md) |
 | Rig personas | [`rigs/`](../../rigs/README.md) |
-| Flagship planted show | [`repo-shows/will-wright/`](../../repo-shows/will-wright/README.md) |
+| Flagship planted show | [`repo-shows/will-wright-premiere/`](../../repo-shows/will-wright-premiere/README.md) |
 
 ## Lifecycle (short)
 

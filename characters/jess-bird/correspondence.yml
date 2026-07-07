@@ -1,0 +1,40 @@
+# Jess Bird — correspondence timeline (public milestones only)
+
+meta:
+  character: jess-bird
+  channel: email
+  since: 2025-04
+  private_full: |
+    DonHopkins/projects/willwrightshowforfood/research/sources/jess-bird-bbc-email-2025.yml
+    DonHopkins/projects/willwrightshowforfood/green-room/jess-bird/
+
+milestones:
+  - date: 2025-04
+    event: jami_becker_intro
+    note: Jami Becker connected Jess and Don for BBC Sims documentary research.
+
+  - date: 2025-04-17
+    event: video_call
+    note: Research call — Don shared archivist and community leads (Phil Salvador, Alex Avila, Heather/Steve).
+
+  - date: 2025-04
+    event: source_exchange
+    public:
+      - Don's Will Wright UI/simulation article (Understanding Comics thread)
+      - Soul of The Sims primary source publication
+      - Maxis team epithet roster (private canonical → public projections in maxis-people.yml)
+
+  - date: 2025-06
+    event: tim_letourneau_memorial
+    note: |
+      Jess interviewed Tim LeTourneau about The Sims before his passing. Both correspondents want
+      his words preserved in whatever documentary form ships.
+
+  - date: 2026-06-29
+    event: repo_shared
+    note: Don pointed Jess to WillWrightShowForFood — code-first public documenting lane.
+
+  - date: 2026-07-07
+    event: jess_reply
+    public_excerpt: sources/2026-07-07-email-excerpt.md
+    note: Jess curious about the repo; wants to keep collaborating; honored Tim; affirmed recording ethic.

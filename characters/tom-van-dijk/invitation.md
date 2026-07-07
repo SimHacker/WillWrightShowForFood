@@ -1,6 +1,6 @@
 # Tom van Dijk — invitation (draft)
 
-**To:** Tom van Dijk \<t.vandijk@gmail.com\>  
+**To:** Tom van Dijk *(email on file privately — or reply in the open via a GitHub issue or PR so everybody can read)*  
 **Subject:** Repo Show — IFF Pencil, Behavior.iff, and the Sims modding origin story  
 **Show:** [building-the-sims](../../repo-shows/REPO-SHOWS.yml)
 

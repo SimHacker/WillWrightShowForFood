@@ -17,15 +17,7 @@ apps and demos back to life, and the spark for a whole [OpenLaszlo Repo Show](..
 
 ## Primary sources (2006 mail)
 
-Scooped from Don's archive — Laszlo/OpenLaszlo engineering threads:
-
-| Date | Bundle |
-|------|--------|
-| 2006-08-31 | [`2006-08-31-lua/`](sources/2006-08-31-lua/README.md) — Lua backend, Dave Ungar, J2ME/Rhino |
-| 2006-08-24 | [`2006-08-24-laszlo-for-lua-openluaszlo/`](sources/2006-08-24-laszlo-for-lua-openluaszlo/README.md) |
-| 2006-11-16 | [`2006-11-16-plone-laszlo-integration/`](sources/2006-11-16-plone-laszlo-integration/README.md) |
-| 2006-09-26 | [`2006-09-26-laszlo-dev-openlaszlo-youtube-player/`](sources/2006-09-26-laszlo-dev-openlaszlo-youtube-player/README.md) |
-
-More under [`sources/`](sources/).
+Laszlo/OpenLaszlo engineering threads from Don's archive are held privately
+pending hand curation; curated excerpts will appear here after review.
 
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

@@ -15,7 +15,7 @@ representation:
   must_not: [claim_sentience, impersonate_real_person]
 
 roles:
-  robo_resurrection: repo-shows/will-wright/slats-reincarnation.yml
+  robo_resurrection: repo-shows/will-wright-premiere/slats-reincarnation.yml
   auto_art_theft_grand:
     spec: ../../../process/auto-art-theft-grand.yml
     ledger: auto-stolen-collection.yml
@@ -29,7 +29,7 @@ roles:
     brain_stream: ../../process/brain-stream.yml
 
 quest:
-  show_segment: repo-shows/will-wright/slats-reincarnation.yml
+  show_segment: repo-shows/will-wright-premiere/slats-reincarnation.yml
   tagline: "SLATS LIVES! The first RoboResurrection."
   arc: "Read old code → revive → call-in sidekick → interview → reprogram → iterate"
 personality:
@@ -70,7 +70,7 @@ see_also:
   - { path: one-minute-movie-servitude.md, why: "'hello, my name is Slats' — the canonical waiter film + transcript" }
   - { path: one-minute-movie-empathy.md, why: "'Empathy' robot film + transcript" }
   - { path: ../ultimate-machine/, why: "Good old friend — the silent refusenik bot (Slats's opposite)" }
-  - { path: ../repo-shows/will-wright/slats-reincarnation.yml, why: "RoboResurrection quest" }
+  - { path: ../repo-shows/will-wright-premiere/slats-reincarnation.yml, why: "RoboResurrection quest" }
   - { path: judge-rubric.yml, why: "Celebrity judge rubric" }
   - { path: ../../process/micropolis-ai-drag-race.yml, why: "Drag race format" }
   - { path: ../don-hopkins/career/stupid-fun-club.yml, why: "Origin — One Minute Movies, waiter brain" }

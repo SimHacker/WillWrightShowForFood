@@ -1,6 +1,6 @@
 # Swivel 3D — written in FORTH (Jaron, Jun 2020)
 
-**From:** Jaron Lanier \<jaron@jaronlanier.com\>  
+**From:** Jaron Lanier \<[email redacted]\>  
 **To:** Don Hopkins, David Levitt  
 **Date:** 13 June 2020  
 **Subject:** Re: Was Swivel 3D written in FORTH?

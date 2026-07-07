@@ -1,6 +1,6 @@
 # Fictional & autonomous audience members — ethics for TicketPR
-# Seeded examples: repo-shows/will-wright/audience/fictional-*/
-# Policy prose: repo-shows/will-wright/audience/FICTIONAL-AUDIENCE.md
+# Seeded examples: repo-shows/will-wright-premiere/audience/fictional-*/
+# Policy prose: repo-shows/will-wright-premiere/audience/FICTIONAL-AUDIENCE.md
 
 meta:
   id: fictional-audience
@@ -96,7 +96,7 @@ heckling:
 see_also:
   - portrayal-standards.yml
   - audience-character.yml
-  - ../repo-shows/will-wright/audience/FICTIONAL-AUDIENCE.md
+  - ../repo-shows/will-wright-premiere/audience/FICTIONAL-AUDIENCE.md
   - ../repo-shows/_TEMPLATE/audience/PLANTED-AUDIENCE.md
   - audience-ethics-experiments.yml
-  - ../repo-shows/will-wright/audience/AUDIENCE-ROSTER-IDEAS.md
+  - ../repo-shows/will-wright-premiere/audience/AUDIENCE-ROSTER-IDEAS.md

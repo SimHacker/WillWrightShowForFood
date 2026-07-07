@@ -1,0 +1,25 @@
+# Daniel Tupper — GLANCE
+
+title: Daniel Tupper
+iconic: "🗽🛠️🎮 Daniel"
+description: |
+  Artist-programmer fan; decade+ correspondence with Don. FreeTA, SWRSgaming, own-engine dreams;
+  Transmogrifier modernization ally. Pyramid-of-players exemplar.
+
+one_line: "FreeTA, SWRS, and the climb from fan to tool maker — ten years of letters"
+signifier: "🗽🛠️🎮"
+
+card: CARD.yml
+invitation: invitation.md
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+
+read_order:
+  - README.md
+  - CHARACTER.yml
+  - invitation.md
+  - projects/freeta.yml
+  - projects/swrs-gaming.yml
+  - sources/2013-08-01-facebook-messenger-excerpt.md

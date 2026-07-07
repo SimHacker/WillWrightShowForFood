@@ -1,5 +1,5 @@
 ---
-status: sent
+status: invited  # phone 2026-07-06, links sent
 character_id: david-levitt
 public: true
 consent: pending_response

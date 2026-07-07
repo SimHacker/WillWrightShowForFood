@@ -1,0 +1,8 @@
+# Jess Bird — glance
+
+id: jess-bird
+signifier: "📺🎮📚"
+one_line: "Documentary writer researching Sims / Will Wright / Maxis history — real TV production anchor; Repo Show synergy."
+home: characters/jess-bird/
+invite: not_offered
+start: README.md → documentarians-guide.md → mission/documentary.yml → synergy/willwrightshowforfood.yml

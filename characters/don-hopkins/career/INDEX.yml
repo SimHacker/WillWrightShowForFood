@@ -50,7 +50,7 @@ career_index:
   related_characters:
     - ../don-philahue/
     - ../slats/
-    - ../../repo-shows/will-wright/
+    - ../../repo-shows/will-wright-premiere/
 
 see_also:
   - { path: ../sync-sources.yml, why: "Upstream sync + dedupe rules" }

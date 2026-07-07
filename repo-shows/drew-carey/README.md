@@ -10,7 +10,7 @@ honestly.
 
 | Doc | Who it's for |
 |-----|----------------|
-| [**Invitation**](invitation.md) | Short invite — appear on the show, maybe with Will |
+| [**Invitation**](../../characters/drew-carey/invitation.md) | Short invite — appear on the show, maybe with Will |
 | [**AI contrast framing**](ai-contrast-framing.md) | Your 2023 experiment vs our Bar Karma / MOOLLM stack — human-readable |
 | [SHOW.yml](SHOW.yml) | Segment list (machine-readable) |
 | [ai-contrast-framing.yml](ai-contrast-framing.yml) | Same framing as YAML (for agents / harvest) |

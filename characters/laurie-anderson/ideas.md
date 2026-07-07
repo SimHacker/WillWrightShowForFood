@@ -30,7 +30,7 @@ reimplementation target: [`../don-hopkins/musical-gas-granular-ca-synth.md`](../
 ### 2. The "Voice of Authority" as a voice puppet
 Laurie's pitch-shifted male persona is a **voice puppet** — hiding the performer to speak *as* a
 character — decades before the show's own puppet taxonomy
-([`../../repo-shows/will-wright/performance-and-culture.yml`](../../repo-shows/will-wright/performance-and-culture.yml)
+([`../../repo-shows/will-wright-premiere/performance-and-culture.yml`](../../repo-shows/will-wright-premiere/performance-and-culture.yml)
 `#puppet_kinds`). A natural thread on **voice, persona, and authority** — who gets to speak, and in
 whose voice, when a machine can shift yours.
 

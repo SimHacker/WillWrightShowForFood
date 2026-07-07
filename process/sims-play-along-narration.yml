@@ -74,7 +74,7 @@ submission:
 
 shows:
   will_wright:
-    segment: repo-shows/will-wright/sims-play-along-narration.yml
+    segment: repo-shows/will-wright-premiere/sims-play-along-narration.yml
     when: "Simlish origins segment; Claire Curtin / Jerry Martin beat; general chaos interlude"
   drew_carey:
     segment: repo-shows/drew-carey/SHOW.yml#sims_play_along_narration
@@ -91,7 +91,7 @@ see_also:
   - performance-space/README.md
   - schemas/language-simlish.yml
   - repo-shows/drew-carey/SHOW.yml
-  - repo-shows/will-wright/sims-play-along-narration.yml
+  - repo-shows/will-wright-premiere/sims-play-along-narration.yml
   - characters/drew-carey/
   - characters/eric-hedman/
   - play-along-skills.yml

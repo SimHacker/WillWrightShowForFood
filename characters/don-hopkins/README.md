@@ -44,7 +44,8 @@ Each blurb below is **one beat long** (~24 words). Read in order; each line **op
 
 | File | What it is | Opens → |
 |------|------------|---------|
-| [`about-host.md`](about-host.md) | Resume reimagined as a repo room — portfolio, not pitch; one-screen map of the whole career. | [`media.md`](media.md) |
+| [`about-host.md`](about-host.md) | Resume reimagined as a repo room — one-screen map of the whole career. | [`media.md`](media.md) |
+| [`hire-me.md`](hire-me.md) | **Available for hire (2026)** — the LinkedIn page, except it runs; references: Will Wright, Henry Minsky. | [`career/work-history.yml`](career/work-history.yml) |
 | [`media.md`](media.md) | Photos and screenshots — Queen's Day LISP shirt, Sims era, Micropolis demos; the face behind the frob panel. | [`career/lineage.yml`](career/lineage.yml) |
 | [`GLANCE.md`](GLANCE.md) · [`CARD.md`](CARD.md) · [`CARD.yml`](CARD.yml) · [`CHARACTER.yml`](CHARACTER.yml) | Sniff card, trading card, machine schema, host registry — same person at four resolutions. | [`pie-menus-chi-88-and-beyond.md`](pie-menus-chi-88-and-beyond.md) |
 | [`browse-the-bouquet.yml`](browse-the-bouquet.yml) | Machine index of topic filenames — filenames are advertisements; pairs with this narrative order. | Cluster II |

@@ -40,7 +40,7 @@ see_also:
     - { path: ../1996-04-26-winograd-interfacing-to-microworlds/GLANCE.yml, why: "Dollhouse preview → this substrate" }
   across:
     - { path: ../../../will-wright/GLANCE.yml, why: "Author" }
-    - { path: ../../../../repo-shows/will-wright/sims-team-steering-committee-playthrough/SHOW.yml, why: "Reunion with Jamie" }
+    - { path: ../../../../repo-shows/will-wright-premiere/sims-team-steering-committee-playthrough/SHOW.yml, why: "Reunion with Jamie" }
   deep:
     - { path: Motive.c, why: "Compilable OCR transcription" }
     - { path: CARD.yml, why: "Run-standalone interface" }

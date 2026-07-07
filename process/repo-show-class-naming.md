@@ -1,34 +1,39 @@
-# Naming the "class" — Repo Show Class (with a pin in it)
+# Naming the "class" — label retired, idea kept
 
-*Branding note. Decision for now + candidates parked for later. Don's call.*
+*Branding note. Decision history preserved; current ruling on top.*
 
-## Decision (now)
-The methodology term is **Repo Show Class** — the old **"Micropolis Class"** wording is retired
-repo-wide (renamed everywhere). Rationale: align the *class* brand with the **Repo Show** brand rather
-than the **Micropolis** brand, so the two don't compete. Not the most mellifluous phrase — but neither
-was "Micropolis Class," and this one at least pulls in one direction.
+## Decision (July 2026)
 
-**Note on Alan Kay's invitation:** we deliberately **dropped the label entirely** there — it just says
-"a **Repo Show** — a conversation…" His invitation is sleek; it doesn't need the branding word.
+**Drop the "Class" label from the branding.** Don't lead with **"Repo Show Class"**
+(and never revive "Micropolis Class") — it sounds like we're competing with
+MasterClass, and we're not. The Alan Kay invitation had it right all along:
+just say **"a Repo Show — a conversation…"** The center of gravity for naming
+is **Repo Show** and **Soul Saver**; the class *nature* needs no brand word.
 
-## The load-bearing idea
-**Every Repo Show is meant to be an interactive educational class.** Whatever we call it, the *class*
-nature is the point: go to the people who had the ideas, capture them in public, build on stream,
-credit everyone — teaching by doing, forkable by the audience.
+Where existing files still say "Repo Show Class," de-emphasize on next touch —
+no urgent repo-wide rename; just stop coining new uses.
 
-## Candidates parked (pin — revisit later)
-- **Repo Show University** — takes a page from the Trump-U branding instinct, but honestly it has a
-  ring, and it rhymes with the **university in SimCity**. Grandiose in a fun, on-brand way. *(Leading
-  alternate.)*
-- **Repo Show Learning** / **Repo Show Growth** — plainer; "growth" nods to the accretion/production-
-  system model.
-- **Master Class** — considered and rejected (generic; also collides with Will Wright's actual
-  MasterClass course, which we still reference literally and must NOT rename).
+## The load-bearing idea (unchanged)
 
-## Open question
-Is **"education"** a worn-out / hard-to-monetize word? Probably yes as a headline (you can't easily sell
-"education"), but **online classes** absolutely are a thing people pay for. So: keep the *class* framing
-in the product, stay cautious about leading with the word "education" in the pitch.
+**Every Repo Show is meant to be an interactive educational experience.**
+Whatever we call it, that nature is the point: go to the people who had the
+ideas, capture them in public, build on stream, credit everyone — teaching by
+doing, forkable by the audience.
 
-*Status: going with **Repo Show Class** for now; **Repo Show University** is the parked front-runner if
-we want more swagger.*
+## History
+
+- **"Micropolis Class"** — retired 2026 (competed with the Micropolis brand;
+  also the Micropolis open license bars monetizing under the Micropolis mark).
+- **"Repo Show Class"** — used briefly, retired July 2026 (MasterClass-adjacent,
+  reads weird).
+- **"Repo Show University" / "Repo Show Learning" / "Master Class"** — parked
+  candidates, all passed over. MasterClass in particular collides with Will
+  Wright's actual MasterClass course, which we reference literally and must
+  NOT rename.
+
+## Open question (still open)
+
+Is **"education"** a worn-out / hard-to-monetize headline word? Probably yes as
+a pitch lead; **online classes** are still a thing people pay for. Keep the
+learning framing in the product; stay cautious about leading with "education"
+in the pitch.

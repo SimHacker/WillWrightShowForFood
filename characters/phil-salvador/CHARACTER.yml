@@ -30,8 +30,9 @@ bio:
 connections:
   simrefinery: "Primary scholar — analysis, Tour Book context, IA play instructions"
   maxis_business_sims: "MBS division history — SimHealth, refinery sims, corporate training"
-  vghf_source_project: "Yoot Tower / SimTower open source — Rich Whitehouse; phil@gamehistory.org (Jan 2024)"
-  don: "Cited in Jess Bird BBC email roster; mutual preservation interest"
+  vghf_source_project: "Yoot Tower / SimTower open source — Rich Whitehouse; [email redacted] (Jan 2024)"
+  don: "Cited in Jess Bird BBC research roster; mutual preservation interest"
+  jess_bird: "../jess-bird/"
 
 show_suggestions:
   - { seed: repo-shows/phil-salvador-simrefinery/SHOW.yml, what: "Finding SimRefinery + MBS deep dive" }

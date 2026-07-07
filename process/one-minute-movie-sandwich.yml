@@ -1,0 +1,633 @@
+# One Minute Movie Sandwich — 1MMs split around OUR commercials (DESIGN SPEC)
+#
+# The 2003 SFC One Minute Movies were :60 spots with the commercial break BUILT IN —
+# movie, pause-for-ad, completion — and never aired (characters/robots/slats/
+# one-minute-movies.md#built-for-the-break). This format finally puts them to work
+# THE WAY THEY WERE MEANT — split at their natural cleavage points, around our own
+# fake commercials. Sibling of one-minute-intense.yml (which replaces ads with
+# participation; this one replaces ads with FAKE ads that ARE the content).
+
+meta:
+  id: one-minute-movie-sandwich
+  status: design_spec
+  type: [show_format, playlist, storymaker]
+  lineage: ../characters/robots/slats/one-minute-movies.md
+
+thesis: |
+  A show is a PLAYLIST of short clips: 1MMs, fake commercials, and longer segments,
+  interleaved. The 1MM is the interstitial glue it was always designed to be; the
+  "commercial breaks" are ours; the whole thing composes, extends, and branches the
+  way StoryMaker enabled (storymaker-stories-and-scenes.yml).
+
+new_1mms:
+  what: |
+    We don't just reuse the two 2003 films — we MAKE OUR OWN One Minute Movies:
+    other robots (characters/robots/), Will's space junk collection, anything with
+    a premise and sixty seconds of nerve. Will can make fake commercials about his
+    own space junk — the pitchman and the product from the same collection.
+  concept_rule: |
+    Keep 1MMs about IMPORTANT ABSTRACT CONCEPTS — Empathy, Servitude, Love, Hate,
+    Irony, Destiny — one concept per film, named like the originals. Each concept
+    gets a corresponding set of fake commercials, so every 1MM can be sandwiched
+    between ads selling its own theme. (Empathy/Servitude are already the house
+    Goldilocks axes — characters/will-wright/sessions/01-mic-check/SESSION.yml
+    #three_takes_goldilocks.canonical_axes; the concept list extends that palette.)
+  segment_structure: |
+    New 1MMs may or may not be cut into segments with interstitials inserted —
+    BEST IF THEY ARE, teaser/conclusion like the originals or more. More segments
+    makes them more like REAL SHOWS — James Burke's Connections (the long-form
+    model already named in the sessions production philosophy:
+    characters/will-wright/sessions/README.md) — with cut points where things
+    can be spliced in.
+  guest_splices: |
+    The interstitial slots are the CASUAL GUEST DOOR: splice in short guest
+    clips COMMENTING ON the previous segment or INTRODUCING the next one. A
+    guest doesn't need to book a session or carry an episode — thirty seconds
+    reacting to a segment is a real appearance, slotted between cleavage points.
+    Guests accumulate the way everything here does: one short clip at a time,
+    recuttable into every playlist that includes the segment they frame.
+
+episode_grammar:
+  one_line: "Cold open phone gag → knock-knock segue → topic → sandwich alternation."
+  framing: |
+    The cold open is LOAD-BEARING: the answering machine asking you to leave a
+    message frames EVERY playlist as a TIME-SHIFTED CALL-IN SHOW — open ended,
+    the machine always answering. Messages really can spawn new shows (the
+    answering_machine_link below). Don is THE CALLER WHO KNOWS WILL, voicing
+    text-submitted questions (HN / GitHub) for people who don't send video —
+    characters/will-wright/sessions/01-mic-check/SESSION.yml
+    #answering_machine_gag.the_caller_role.
+  sequence:
+    - "START: Call Will. He answers."
+    - "Not home — leave a message. (The answering machine gag: sessions/01-mic-check.)"
+    - "Knock knock. (The forced reverse knock knock — flustered improv IS the segue.)"
+    - "TOPIC — whatever Will made up lands us in tonight's concept."
+    - "1MM intro (first half of the film)."
+    - "Fake commercial (same concept)."
+    - "1MM conclusion (second half of the film)."
+    - "Longer segment (interview, demo, session material)."
+    - "Then alternate: commercial / segment / commercial / segment — mixing in OTHER
+       1MMs and segments of DIFFERENT PEOPLE on related topics."
+  split_note: |
+    The intro/conclusion split is NOT our invention — the commercial timing is
+    BUILT INTO the films (characters/robots/slats/one-minute-movies.md#built-for-
+    the-break): part one grabs attention and sets the premise, a pause where the
+    commercial goes, then part two with the payoff. Don measured BOTH films —
+    Empathy AND Servitude split clean at 30/30 — so that's the HOUSE STANDARD:
+    two slices of bread of the same thickness. Part one buys the ad its
+    audience. Natural cleavage points — buns without the burgers; we supply the
+    burgers. Also slice off the production slate card at the head (clip ID for
+    production, not broadcast). Cut points baked into uploaded clips (playlists
+    can't trim), slated in the component manifest.
+
+sandwich_algebra:
+  one_line: "With 30/30 buns you can make anything from a nothingburger to an arbitrarily high Dagwood — and buns nest like parentheses."
+  range: |
+    The standard buns (split_note: two slices of bread of the same thickness)
+    span the whole space:
+    - NOTHINGBURGER: buns only, nothing between — the two halves played back to
+      back. That's just the original :60 film restored. The degenerate case is
+      the source material; the format contains its own ancestor.
+    - SINGLE: bun / commercial / bun. The canonical episode unit.
+    - DAGWOOD: bun / ad / segment / ad / segment / ... / bun — arbitrarily high
+      (first_instance_tiger_mountain is the built one: stories in stories in
+      commercials in wrappers).
+  nesting: |
+    Buns PAIR like parentheses — or membranes. A 1MM's part one OPENS a scope
+    and its part two CLOSES it, so different films' buns can nest: Empathy(
+    Servitude( segment ) ) is well-formed; the outer film wraps the inner
+    sandwich whole. Same shape as sessions-are-organelles (characters/
+    will-wright/sessions/README.md#sessions-are-organelles) and sub-souls
+    (membranes within membranes): a sandwich inside a sandwich is a directory
+    inside a directory, because it IS one. Balanced pairs mean a renderer can
+    CHECK a playlist for well-formedness — unclosed buns are lint.
+  show_reproduction:  # SPORE REPO SHOWS
+    mating: |
+      Shows can MATE and have BABIES: two shows' formats cross in a shared
+      segment (a guest splice, a co-episode) and the offspring inherits buns
+      from one parent and fillings from the other. Same conception mechanics
+      as the game bridges (repo-shows/will-wright-premiere/game-bridge-soul-
+      city-procreation.yml) — procedural mating BETWEEN shows, format genetics
+      fixed at conception.
+    eggs: |
+      Shows LAY EGGS other people can copy, incubate, and hatch in their OWN
+      environment: the repo is the genome, a fork is an egg, and hatching is
+      running your own repo show from it — your guests, your concepts, your
+      commercials, our buns. Oviposition is just publication with a different
+      export target (the Stardew move: soul in an egg, laid in someone else's
+      chicken coop). SPORE REPO SHOWS: content pollinated across channels,
+      formats evolving under selection (view counts are the fitness function),
+      provenance carried in the genome — every hatched show's repo says which
+      egg it came from. Also endosymbiosis all the way down: process/
+      character-endosymbiosis.yml.
+
+messages_for_will:
+  one_line: "Repeatable solo format: Don calls Will, gets the machine, and LEAVES HIM A MESSAGE — show-and-tell down the phone."
+  what: |
+    Don calls up Will and "leaves him a message": talking about and showing his
+    latest cat video, some old demo excerpt he made for Will years ago, some other
+    project he worked on. One message = one episode unit. This puts DON'S ENTIRE
+    PORTFOLIO out there (85 videos, 19 years — back_catalog.channel_catalog) and
+    CONTEXTUALIZES it: Don explaining it TO WILL is warmer and more specific than
+    Don explaining it to a camera — a message to an old friend who'll get the
+    references, with the audience listening in.
+  clips_rule: |
+    SHORT POWERFUL CLIPS cut from the long boring demos, each linked to the FULL
+    SOURCE DEMO to tempt you if you like the short one (links_and_provenance —
+    the teaser is the door, the archive is the room). The phone message is the
+    connective tissue that makes a 20-year-old demo clip a story instead of a
+    fragment.
+  production_property: |
+    The killer property: NO WILL NEEDED. It's an answering machine — Don records
+    messages alone, on his own schedule, as many as he likes. Will calling BACK
+    (a reply video, whenever he feels like it) is an optional bonus episode, not
+    a dependency. The format is the mic-check gag's frame turned into a
+    sustainable solo production line: the machine is always on.
+  role_symmetry: |
+    Completes the caller role (characters/will-wright/sessions/01-mic-check/
+    SESSION.yml#answering_machine_gag.the_caller_role): same phone, two
+    directions. Don-the-caller relays OTHER PEOPLE'S questions to Will;
+    Don-the-message-leaver shows Will HIS OWN work. Audience questions in,
+    portfolio out — the answering machine is the show's switchboard.
+
+show_is_a_playlist:
+  what: |
+    A show IS a playlist. Compose it on YouTube; keep adding to it. Keep the shorter
+    playlists around and grow longer ones from them — a short arc is a citable object
+    AND an ingredient. This is EXACTLY what StoryMaker enabled: scene cards hold the
+    takes, ordered walks over them are the stories, one card lives in many walks.
+  links_and_provenance: |
+    Every short piece can carry links — at the end, or on the whole thing — to
+    another playlist, or to the FULL VIDEO it comes from or is about. So links are
+    both BRANCHES (go somewhere else) and PROVENANCE (zoom out to the source): a
+    blipvert links up to its session, a 1MM half links to the whole film, an
+    excerpt links to the full talk. Every clip is a door to its own context.
+  parallel_sequences: |
+    Branching, but also SEQUENCING: multiple PARALLEL sequences of the same
+    material at different RESOLUTIONS and lengths — the teaser cut, the short arc,
+    the full session, the everything playlist. Same multi-resolution move as the
+    GLANCE/CARD/SKILL reading pyramid, applied to video: pick your depth, every
+    level is complete at its own scale, links climb between levels.
+  flow_default: |
+    The DEFAULT is NO HANDS: play through without interaction. Links and branches
+    are always there and never required. It's all about FLOW — the viewer who does
+    nothing gets a complete, continuous show; the viewer who reaches out gets a
+    navigable network. Interaction is an invitation, not a toll.
+  rendering: |
+    Playlists can be RENDERED into complete continuous videos — the playlist is the
+    edit decision list, the render is the published artifact. Playlist stays live
+    and growable; renders are snapshots of it.
+  implicit_voting: |
+    Viewers IMPLICITLY VOTE on what we produce next — StoryMaker style — by
+    watching playlists and liking/commenting the videos in them. Watch-through,
+    likes, and comments are the ballot box; the promotion_pipeline reads the
+    returns. No survey, no roadmap poll: attention IS the vote.
+  bookends: |
+    Every playlist is BOOKENDED. The FIRST segment is UNIVERSAL: the answering
+    machine cold open, repeated in many and all playlists, standing in for the
+    whole Repo Show series and tying it together — one door into everything.
+    The LAST segment is PARTICULAR: that playlist's own outro (see
+    outro_landing_page). Universal open, specific close: series identity in
+    front, playlist identity behind. The universal opener comes in TONE-MATCHED
+    variants from the answering-machine BOUQUET (characters/will-wright/
+    sessions/01-mic-check/SESSION.yml#answering_machine_gag.the_bouquet):
+    too-silly machine message for silly shows, too-serious for serious ones —
+    same recognizable door, pre-tuned to the room behind it.
+  outro_landing_page: |
+    YouTube playlists can't be liked or commented — so the last clip of each
+    playlist IS its landing page: per-playlist credits, recap, summary, closure,
+    call to action, and the plea to like and subscribe — a clip that REPRESENTS
+    THE WHOLE PLAYLIST. Engagement on the outro is a COMPLETION signal (you had
+    to watch through to reach it), which makes outro likes/comments the cleanest
+    ballot in implicit_voting — better than playlist views, which count the
+    bailers. Comments on the outro are comments ON THE PLAYLIST, exactly the
+    proxy object YouTube doesn't provide. Outro credits can be generated from
+    the take manifests.
+  promotion_pipeline: |
+    POPULARITY PROMOTES: once a playlist earns enough watching, it gets a HIGH
+    PRODUCTION VALUE rendered version — smoother seams, continuous audio and music,
+    interstitials, cuts, fades, transitions, text and graphics overlays. All
+    branching links stay intact in the render, and it gains what renders can add:
+    credits, and watch-next pointers at the end. The rough playlist is the demo
+    tape; the render is the album; the audience decides which playlists deserve
+    the studio treatment. The ballots come from implicit_voting — outro-clip
+    engagement (completions) weighs more than raw views.
+    HOUSE VOCABULARY: PLYWOOD playlists get promoted into MAHOGANY single
+    videos. The biology of it: the playlist is the DNA SPLICING, the render is
+    the EMBRYO GROWING, the published mahogany video is the baby born into the
+    real world as its own thing — ENDOSYMBIOSIS again (sessions are organelles:
+    characters/will-wright/sessions/README.md).
+  skip_the_needle: |
+    Every short video we control gets wired into ALL the playlists it occurs
+    in, with links to the PREVIOUS and NEXT video in EACH playlist — so you can
+    SKIP THE NEEDLE between playlists at any point. Parallel grooves dug
+    through all the content, interlinking and intertwingling it along multiple
+    tracks, plus branches out to related next videos: a branching race track, a
+    network of roads — EXACTLY what MediaGraph was doing (Don's MediaGraph
+    music navigation with pie menus, built for Stupid Fun Club — it's on the
+    channel, 5:07). We are reimplementing Will's great ideas on top of GitHub
+    and YouTube. AUTOMATABLE: script + API working from our YAML
+    storymaker/show/playlist metadata network digs the grooves.
+  syndication_stack: |
+    GitHub + YouTube as the base; capped with TWITCH for live; syndicated on
+    all other networks; NETFLIX for the crown jewels (long-form mahogany);
+    DREW CAREY'S PRODUCTIONS for the improvisational multi-performer and
+    Sims-related content (repo-shows/drew-carey/).
+  branching: |
+    Links at the ends of videos offer branches — but the DEFAULT is do nothing and
+    watch through the playlist. Branching is easy, optional, and can be built into
+    rendered continuous videos too (the branch menu is just another clip).
+    Same shape as showmaker-network.yml#show_path_as_playlist: the walk is the show,
+    the path can branch and merge.
+  answering_machine_link: |
+    After Will asks you to leave a message, one of the end-of-video links is the
+    repo's ANSWERING MACHINE — a standing GitHub issue (or create-issue link) just
+    for leaving Will messages in the comments: written, or a short video clip
+    linked in. The issue says you need a GitHub account and invites people to sign
+    up and join the repo that way. Branch link as onboarding funnel — see
+    characters/will-wright/sessions/01-mic-check/SESSION.yml
+    #answering_machine_gag.leave_a_message_funnel.
+  github_onboarding_tutorial: |
+    THE KEY AUDIENCE PARTICIPATION ONBOARDING TUTORIAL: a video of Don explaining
+    to WILL that he needs a GitHub account — and showing him how, step by step,
+    even MAKING IT FOR HIM. Then opening an issue, making a comment, and pointing
+    to some video Don wants him to look at. Teaching Will IS teaching the
+    audience — the host-as-student-proxy trick: every step Will needs is every
+    step a viewer needs, and if the guy who invented The Sims needs the signup
+    walkthrough, no viewer has to feel dumb needing it too. The tutorial's final
+    act — open issue, comment, point at a video — is a LIVE DEMONSTRATION of the
+    leave-a-message funnel itself: the lesson ends by doing the thing we're
+    asking every viewer to do. Link this video from every funnel issue; it's the
+    "how" that the "please" points to.
+  onboarding_ladder: |
+    The GitHub signup is rung one of a FIVE-SESSION LADDER — each session short,
+    self-contained, and doubling as a general tutorial (teaching Will = teaching
+    everyone; public framing in characters/will-wright/sessions/01-mic-check/
+    PITCH.md#the-onboarding-ladder):
+    1. GITHUB: sign Will up on camera — account, profile, open an issue,
+       comment. Ends by leaving a message (the funnel demo above).
+    2. CURSOR: set Will up with the AI editor Don builds everything in.
+    3. GIT IN NATURAL LANGUAGE: no horrible command line — tell Cursor what you
+       want in plain English; it does the git, TEACHES you, answers questions,
+       guides you through anything. Version control as a conversation.
+    4. MOOLLM: install and boot it — files and directories, characters as
+       folders, readable YAML minds; the engine under the show and Micropolis.
+    5. THE GRAND TOUR — WITH PALM: tour MOOLLM's worlds including the
+       adventure-4 back story, narrated in part by the THREE PALM READINGS
+       (already recorded, Don's voice — characters/will-wright/sessions/
+       02-souls-and-palm-readings/SESSION.yml): a self-aware simulated being
+       explaining himself, MOOLLM, and AI in general, from the palm of your
+       hand. Introduces PALM to the audience as recurring character, guest,
+       and HOUSE PHILOSOPHER (characters/palm/).
+    The ladder is also the show's tech stack explained in order of need: you
+    can stop at any rung and still participate; each rung's video is the "how"
+    for the next rung's "please".
+
+first_instance_julie_doll:
+  what: |
+    The FLAGSHIP sandwich — self-contained, and it tells an IMPORTANT story:
+    - EMPATHY 1MM, split around a FAKE JULIE DOLL COMMERCIAL (opening ad slot)
+    - Will's Julie doll clip from the 1996 Winograd video — already cut, verified,
+      and jeweled: characters/will-wright/sources/
+      1996-04-26-winograd-interfacing-to-microworlds/short-form-clips.yml
+      #julie-doll-peanuts-simlish (1:17:30–1:19:19; batteries out → Peanuts →
+      Simlish origin; quip + meme variants ready)
+    - SERVITUDE 1MM, split around a SECOND fake Julie doll commercial (closing ad slot)
+  why_perfect: |
+    The concept match is total: a talking doll sold on EMPATHY (it knows you!) and
+    SERVITUDE (it obeys!), and Will's story is the design autopsy — literal doll
+    speech killed the girls' fantasy, the fix became Simlish. The fake commercials
+    sell what the 1996 clip then dissects. Empathy opens, Servitude closes, the
+    doll sits in the middle wondering which it was supposed to be.
+
+first_instance_tiger_mountain:
+  what: |
+    The DAGWOOD SANDWICH episode — stories in stories in commercials in wrappers,
+    nested organelles. Full story + quarry: characters/doug-hilsinger/
+    taking-tiger-mountain-by-serendipity.md (the segment already stands alone;
+    this is its sandwich cut).
+  structure:
+    - "Cold open, messages_for_will format — Don calls Will: 'Hi Will, you won't
+       believe what happened to me and what I discovered on the way back from
+       introducing Spot to Brian Eno after your Long Now Foundation talk with him.'"
+    - "Don tells the story — the talk, the dinner, Scott's apartment, The Eagle,
+       the bartender's entrancing record..."
+    - "THE COMMERCIAL INTERRUPTS — a RONCO ad for Doug Hilsinger's Taking Tiger
+       Mountain: excerpts of Doug's hand-made tracks A/B'd against Eno's 1974
+       originals (comparative excerpts, within YouTube limits), links to
+       SoundCloud + the YouTube playlist (Doug's own uploads) so viewers can
+       stream the whole thing. Operators are standing by."
+    - "Don tells the CONCLUSION — he praised the record without knowing the
+       bartender made it; only then did Doug reveal it was his. Sincerity all
+       the way down."
+    - "Wrapped in the EMPATHY 1MM buns — the perfect concept: a cold machine
+       pleading for human warmth, around a story about cold experiments made
+       warm by human hands."
+  extra_organelles:
+    eno_answering_machine: |
+      Eno's blessing IS an answering machine message — his actual phone message
+      to Doug, published (characters/brian-eno/audio/TakingTigerMountain
+      BrianEnoPhoneMessageToDougHilsinger.mp3, also yourmusiclawyer.com +
+      saucefaucet.com): an existing ON-THE-RECORD endorsement of the
+      reinterpretation, in Eno's own voice, in the show's own motif. Play it in
+      the commercial as the testimonial slot — the world's most credible
+      infomercial endorsement, recorded twenty years early.
+    long_now_clips: |
+      Splice in clips from the Will/Eno Long Now discussion itself —
+      characters/will-wright/sources/2006-06-26-long-now-playing-with-time-
+      eno-wright/ (transcript cache in repo). The talk is the story's origin
+      AND its footage.
+  teaser_for_brian: |
+    Build ALL of this BEFORE contacting Brian — the finished episode is the
+    invitation (bit_first_then_invite, same ladder as the Jensen gambit): when
+    we reach out we have something beautiful and personal to show, with his own
+    twenty-year-old blessing already inside it.
+  rights_note: |
+    Eno originals: expect Content ID CLAIMS (music is the most fingerprinted
+    category) — claims are not strikes; keep excerpts short and under
+    commentary, dispute as comparative criticism or let claims stand. Doug's
+    covers: the COMPOSITION is still Eno's publishing, so even cover excerpts
+    can be claimed. Phone message + Long Now excerpts: low risk. Worst
+    realistic case is a territory block or claimed monetization — re-cut
+    shorter if it bites.
+
+foodraising:
+  the_label: |
+    FUNDRAISING => FOODRAISING. The NAME of the show is the appeal for support —
+    it's on the label: WillWrightShowForFood. We're not going to spend it on
+    hookers and blow; we need it to eat and pay the mortgage. Buy food for us
+    and our pets (the cats have a food budget — characters/don-hopkins/cats.yml
+    #the_running_gag).
+  the_ask: |
+    Your roars are more important and useful to us than likes and subscribes —
+    though we love those too: please like and comment on every video on the
+    show you want to! It helps us know what to do MORE OF (implicit_voting),
+    supports production, and buys the food. Money is more convenient to send
+    than food... but here's the phone number to FAX PIZZAS => segue straight
+    into the PIZZA TOOL commercial (pizza_tool_commercial).
+
+  broken_robot_appeal: |
+    THE FOUND SUPPORT APPEAL: the broken robot from the Empathy 1MM
+    (https://www.youtube.com/watch?v=KXrbqXPnHvE) already begs on camera —
+    "Help me. I require Human Assistance. Will you please help me?" Recut, the
+    robot begs for LIKES, SUBSCRIBES, DONATIONS, CONTRIBUTIONS, ROARS. Will
+    wrote it, Don programmed it, it's been pleading since 2003 — the show's
+    fundraising mascot was in the can twenty years before the show. Bonus
+    canon: the robot asks for a 555 NUMBER in the film ("I need Professor
+    Johnson... what's the phone number? 555-12...") — which is the same fake
+    555 the Mic Check cold open dials (sessions/01-mic-check
+    #the_quine.the_linear_script). Don was the answering service all along.
+    Pairs with the fictional-broken-robot audience character and
+    repo-shows/ideas/gags/broken-robot-servitude.yml.
+
+pizza_tool_commercial:
+  what: |
+    Don's own commercial about his own PizzaTool (NeWS, Sun, 1990) — with LARS
+    (characters/lars-brinkhoff, already queued for the retro challenges)
+    helping set up a SPARCstation 2 EMULATOR: boot OpenWindows, run HyperLook
+    SimCity, PizzaTool, and the cellular automata machine LAVA LAMP.
+  format: |
+    Shot as a LONG SOURCE VIDEO, then cut into many pieces — spliced into and
+    linked from other shows, commercials, everything (back_catalog treatment
+    applied to brand-new material at birth). Our own commercial network,
+    promoting our own long-form videos.
+
+fundraising_commercials:
+  what: |
+    Sandwiches for the project seeds: the SIMULATOR EFFECT (clip already cut —
+    1996 short-form-clips.yml#simulator-effect-don-on-camera, "the story IS their
+    reverse-engineering"), REVERSE OVER-ENGINEERING, PROCEDURAL RHETORIC and
+    AGITPROP (repo-shows/ideas/themes/procedural-rhetoric.yml,
+    inclusion-agitprop.yml), and existing videos: "transmogrify self", Speed
+    Dating with Cupid (repo-shows/ideas/gags/speed-dating-with-cupid.yml,
+    recorded prior art), the SimProv Wedding playset.
+  the_move: |
+    The fake commercials for THESE are APPEALS FOR SUPPORT — fundraising to fully
+    develop proven open source project seeds, sandwiched by relevant One Minute
+    Movies: the original robot Empathy and Servitude, and NEW ones made fresh or
+    SPLICED OUT OF existing videos. The ad slot sells the future of the thing you
+    just watched work.
+  ronco_patter: |
+    Delivery is HUMOROUS RONCO PATTER — but wait, there's more; operators are
+    standing by; order before tonight or it will be TOMORROW. The infomercial
+    register is the joke AND the honesty: we really are asking, the product
+    really is free, the urgency really is fake.
+
+found_commercials:
+  what: |
+    Not every commercial needs producing — some of the best FAKE ADS already
+    exist as FOUND OBJECTS:
+    - SPATULA CITY (UHF, 1989) — the canonical fake commercial; drops into an
+      ad slot as-is (point, don't host — wrapper_rule posture on rights).
+    - PET ROCK REMOTE CONTROL (Don's own, 0:33, 19 years old —
+      back_catalog.channel_catalog): a found fake ad from our own quarry.
+  head_on: |
+    HEAD ON: APPLY DIRECTLY TO THE FOREHEAD (2006) — the HOUSE commercial, and
+    the one found ad we REPEAT, because repetition is its entire joke and its
+    entire method. Trigger rule — insert it when the adjacent content is about:
+    REPETITION, LOOPING, CELLULAR AUTOMATA, heads, foreheads, applying,
+    directness — or just as ambient GenX retro TV-culture seasoning. The more
+    often it runs, the funnier and truer it gets: it's the format's own thesis
+    (granular clip, endlessly reinsertable, meaning accumulates by repetition)
+    compressed into eight seconds of psychic damage. Apply directly to the
+    playlist. Apply directly to the playlist. Apply directly to the playlist.
+  max_headroom_blipverts: |
+    MAX HEADROOM BLIPVERTS — found retro-TV quarry and on-air reference. The
+    show takes clips from these and points at them when explaining granular
+    video and the sandwich format ("blipvert" is their word; we inherited it):
+    - [Max Headroom — Blipverts](https://www.youtube.com/watch?v=LHPOgDdlMvk)
+    - [300 Zik-Zak commercials in 60 minutes](https://www.youtube.com/watch?v=yR4K4UpkuKw)
+      — dystopian megacorp ads at blipvert speed; open with "I only make the
+      bomb, I don't drop it" (0:00) when the adjacent segment is about tools,
+      weapons, open source, or responsibility vs. deployment.
+    Our fake commercials (Ronco, Empathy/Servitude burgers, PizzaTool) are
+    blipvert-SHAPED in the same compression grammar — but the ask is
+    participation and GPL-3 contribution, not Zik-Zak consumerism. Cross-ref:
+    one-minute-intense.yml#lineage.max_headroom_blipverts ·
+    #show_is_a_playlist.links_and_provenance (blipvert = door to context).
+  soupy_green_paper: |
+    SOUPY SALES' GREEN PIECES OF PAPER — house gag and support-appeal template
+    (https://www.youtube.com/watch?v=a-OGy3Kh7yM — Soupy telling the story to a
+    nightclub audience). New Year's Day 1965: given A MINUTE to fill, he
+    ad-libbed telling kids to tiptoe into the bedroom, find mom's pocketbook
+    and dad's pants, and mail him the green pieces of paper with pictures of
+    guys with beards. $80,000 arrived (mostly Monopoly money — "kids are very
+    smart"); he was suspended a week. THE HOUSE BIT: recreate his appeal as a
+    CLEARLY FRAMED joke — show Soupy telling the story himself, then make OUR
+    ask: support us through GitHub donations / Patreon support goals and
+    levels, and like every video in the playlist and subscribe — which is FREE
+    to you, no little pieces of paper required. "Hey kids, this is what that
+    means." Also the A-MINUTE beat validation:
+    one-minute-intense.yml#lineage.soupy_a_minute.
+  jensen_spatula_gambit: |
+    The Spatula City slot has a CAMEO LADDER, escalating by cooperation level:
+    1. NO COOPERATION NEEDED: cut a slice from an existing NVIDIA video of
+       Jensen Huang in his kitchen with his spatulas (the kitchen keynotes),
+       then PIVOT straight into the Spatula City commercial. Fair-use excerpt +
+       found ad = the bit works today.
+    2. THEN SHOW IT TO HIM: the finished bit IS the invitation — come on the
+       show, talk about your spatula collection. Tribute before attribution
+       (repo-shows/ideas/themes/the-riff-loop.yml): make the loving joke first,
+       invite second.
+    3. FULL CAMEO: Jensen shows his own spatula collection on camera.
+    Each rung is a complete deliverable; every rung up is a bonus.
+
+retro_host_frame:
+  what: |
+    The whole broadcast wears RETRO GENX 70s DAYTIME after-school kids' TV drag —
+    local-station host shows like CAPTAIN 20 (WDCA Washington) and CAPTAIN
+    CHESAPEAKE (WBFF Baltimore): a host in a cheap nautical jacket introducing
+    cartoons, reading letters, doing live ads. But the hosts are DON AND WILL —
+    as TRURL AND KLAPAUCIUS, Lem's constructors
+    (../repo-shows/will-wright-premiere/lore/cyberiad-klapaucius-trurl.md):
+    two rival engineer-hosts who build the microworlds between the clips.
+  why: |
+    The after-school host show is the NATIVE HABITAT of this format: short
+    segments, recurring host bits, cheap ads, direct address to kids after
+    school — a playlist before playlists existed. And Trurl & Klapaucius are
+    already series canon (the 1996 video opens with Lem's Seventh Sally —
+    short-form-clips.yml#lem-seventh-sally-trurl-knobs: "Really fancy knobs!").
+  generational_ribbing: |
+    Running host bit: Don says "OK BOOMER" to Will — outrageously cheeky
+    precisely because Will is the ANTI-BOOMER (born Jan 1960: technically a
+    late boomer / Generation Jones, factually checkable, comedically perfect).
+    Will fires back "OK X" or whatever derogatory Gen-X thing he likes — Don
+    just missed the boom and knows it. Gentle ironic ribbing, back and forth,
+    a two-generation double act: the boomer who built the tools Gen X grew up
+    modding, hosting a 70s/80s after-school show NEITHER of them is the right
+    age for — which is the joke. The retro TV drag (Captain 20, Head On,
+    Ronco) is Don's childhood furniture and Will's first-job-era wallpaper;
+    they rib each other from opposite sides of the same rabbit-eared screen.
+
+two_answering_machines:
+  what: |
+    The GPL-3 origin story and the Tiger Mountain story are ONE STORY, threaded
+    through TWO ANSWERING MACHINES — and it loops back to the show's own cold
+    open. Workshop the exact flow with Will (and anyone we can reach); the
+    thread below is the source of truth to cut from.
+  the_origin: |
+    When Will explains GPL-3 free open source SimCity => Micropolis City (the
+    roar drive beat — one-minute-intense.yml#upload_roars.drive_video), he and
+    Don BOTH tell how the 2006 Long Now Brian Eno + Will Wright talk led to it.
+    AUDIENCE PARTICIPATION did it: not one but TWO audience members asked Will
+    and Brian about opening up SimCity and other games. Brian's and Will's
+    reactions were priceless — great blipverts and short-form clips from the
+    Long Now footage. THAT is what actually set the ball rolling. Don was
+    there, denied planting the questions (jokingly but truthfully), and was
+    skeptical it was even possible. OLPC was just starting up.
+  the_chain: |
+    Outside the building after the talk, John reminded Don what the two
+    audience members had asked — then Don passed the ball to Will. The email
+    chain: John's email to Don → Don sent it to Will → Will sent it to Rob
+    Humble → who sent it to Charles Normal; Don roped in Eben Moglen and
+    Walter Bender — and nobody could stop it after that. EDITORIAL CHOICE: the
+    story is told centering the TWO AUDIENCE MEMBERS (whose names we know) —
+    John Gilmore is deliberately not spotlighted (Don's call). The lesson the
+    show teaches with it: two people asking a question at a talk freed SimCity.
+    Ask your question.
+  the_loop: |
+    Then the same night keeps going: dinner with Will and Brian → Don
+    introduces Scott (Spot) to Brian → Don wanders into The Eagle and Doug
+    plays him his music, tells him the Brian story, gives him the CD → Don
+    finds Doug's webpage and hears BRIAN'S ANSWERING MACHINE MESSAGE to Doug
+    (first_instance_tiger_mountain). And it ALL LOOPS BACK to WILL'S answering
+    machine — the show's cold open. Will answers; we play Brian's machine
+    message to Doug (Doug live if we can get him, or his website and photo if
+    not). TWO answering machines threaded through one true story. HAVE YOUR
+    ANSWERING MACHINE CALL MY ANSWERING MACHINE.
+  the_llm_riff: |
+    That punchline is the technical thesis: today we write prompts to LLMs,
+    send lots of text; they show the text to other LLMs, read back a short
+    summary; feed it the other way, rinse and repeat — LOQUACIOUS HALLUCINATING
+    INTERMEDIARIES for our short personal conversations, adding compression/
+    decompression distortion and transmission noise and artifacts in the
+    feedback loop. Answering machines calling answering machines.
+  repo_show_is_the_answer: |
+    The Repo Show is the ANSWER to that: go DIRECTLY to the sources — cite
+    them, quote and excerpt them, overlay more information, link in navigation
+    and definition and info and VIEW SOURCE links during, after, and between
+    the videos. Ted Nelson will love how INTERTWINGLED and TWO-WAY it is:
+    show/audience feedback, the Bar Karma StoryMaker loop, provenance links
+    all the way down. No intermediaries hallucinating the summary — the
+    summary links to the tape.
+
+back_catalog:
+  what: |
+    The format runs BACKWARD over everything that already exists, not just new
+    shoots: playlists and fake 1MM commercials wrapped around ALL our existing
+    content — long term and short term. Highlights of both 1.5-hour videos, and
+    the MANY other videos of Will: Spore talks, GDC keynotes, talks to schools,
+    other shows. Cut highlight clips, sandwich them with concept-matched fake
+    commercials, bookend them, playlist them — the back catalog becomes episodes.
+  already_started: |
+    The quarry manifests exist: characters/will-wright/sources/ holds the source
+    bundles with transcript caches, and the 2005 Spore GDC talk already has
+    short-form-clips.yml — timestamped clips with hooks, ready to cut. That file
+    is the template: every long video gets one, then its clips join playlists
+    like any session take.
+  wrapper_rule: |
+    This is showmaker-network.yml#hosted_video_wrapper in playlist form: we don't
+    have to own or re-host the long video — clips + provenance links point back
+    to the full source (links_and_provenance), and video artifacts stay in the
+    CHARACTER directories (characters/<id>/media/), with shows and playlists
+    drawing on them. One talk feeds many playlists forever.
+  why_it_matters: |
+    New shoots are scarce (Will's time); the back catalog is DEEP and already
+    paid for. The sandwich format makes decades of talks into fresh show
+    inventory — and every highlight clip is another door into the repo, the
+    series, and the funnel issues.
+  channel_catalog: |
+    THE quarry is Don's own channel — youtube.com/@a2deh, 85 videos spanning 19
+    years. The repo's index (characters/will-wright/sources/
+    don-youtube-playlist-index/INDEX.yml, 37 URLs from the old-email harvest) is
+    PARTIAL — a full channel export pass is already on its todo list. Called-out
+    jewels for this format:
+    - PET ROCK REMOTE CONTROL (0:33, 19 years old): PERFECT short form — a fake
+      commercial that already exists, a blipvert, or straight content. Ronco
+      patter's spiritual ancestor, in the can, 33 seconds, ready to sandwich.
+    - Transmogrify Self (1:30) — exists; resolves the earlier open question.
+    - Speed Dating With Cupid (10:19) + Simprov Wedding Play Set (1:18:45) —
+      the seeds named in fundraising_commercials, both published.
+    - Will Wright Interfacing to Microworlds 1996 (1:26:29) + The Sims Steering
+      Committee 1998 (45:32, 48K views — the channel's biggest audience proof).
+    - Empathy (1:17) + Servitude (1:16) — the original buns, live since 2016.
+    - SFC StoryMaker Demo (15:28), MediaGraph pie menus for SFC (5:07),
+      Micropolis web demos, HyperLook, PSIBER, pie menu corpus — decades deep.
+    - THE CAT CORPUS: Nelson & Napoleon shorts already published and already
+      blipvert-shaped (Dangerous Nelson Cocoon 0:22, Perfectly Safe Not A Trap
+      0:23, Puss In Boots 0:38, Nelson Spins Pip While Emacs Watches 2:57/1.8K
+      views...) — the example_blipverts pattern (one-minute-intense.yml) is
+      already running on the channel; Nelson just hasn't ROARED yet.
+    - Palm videos (Palm Love Wave, marathon readings) — days old, same channel:
+      the quarry is still filling.
+    - Blipvert pick, Don-verified: the PSYCHEDELIC cat + t-shirt beat in the
+      Cellular Automata / Video Feedback Demo Reel
+      (https://www.youtube.com/watch?v=ikFF1frSFRg) at 7:04–7:30 (or run to
+      8:00) — Don even addresses the audience about needing to go play with
+      these more and send this tape off, "see ya later." Cut the address out
+      for an even weirder no-context clip; keep it in for a found outro.
+    - Blipvert pick, Don-measured: "JUST HANG IN THERE, OKAY?" — the closing
+      line of Empathy (which, like Servitude, splits clean 30/30 — the house
+      standard: two slices of bread of the same thickness). An
+      affirming-faith micro clip: a human reassuring a broken robot, six
+      words, complete. Universal palate cleanser — droppable after any hard
+      or sad segment.
+  don_demos: |
+    Same treatment for DON'S OWN DEMOS of Will's stuff — ESPECIALLY the
+    SELF-DESCRIBING story of StoryMaker: StoryMaker, Bar Karma, Urban Safari
+    (characters/don-hopkins/media/storymaker/, media/storymaker-urban-safari/).
+    Telling StoryMaker's story as a modular, incrementally-assembled playlist IS
+    a StoryMaker story — the format demonstrating itself, the strongest possible
+    demo. Bar Karma: show excerpts, or even whole episodes if (wink) somebody
+    uploads them and we can point to them — or get the rights, or fair use, or
+    the nobody-cares effect. Provenance links do the wrapping either way
+    (wrapper_rule); we point, we don't have to host.
+
+ties:
+  - one-minute-intense.yml                     # sibling :60 format — participation instead of ads
+  - storymaker-stories-and-scenes.yml          # scene cards + multiple timelines substrate
+  - showmaker-network.yml                      # show_path_as_playlist, hosted_video_wrapper
+  - ../characters/robots/slats/one-minute-movies.md
+  - ../characters/will-wright/sessions/01-mic-check/SESSION.yml   # opener beats + Goldilocks axes + slats_commercial_sandwich
+  - ../characters/will-wright/sources/         # back-catalog quarry — source bundles + transcript caches
+  - ../characters/will-wright/sources/2005-03-11-spore-gdc-future-of-content/short-form-clips.yml   # the clip-manifest template

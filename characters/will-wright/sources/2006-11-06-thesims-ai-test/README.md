@@ -69,6 +69,6 @@ The gap between row 2 and row 3 is the whole show: *why* smart objects + SimAnti
 
 ---
 
-↑ [sources](../README.md) · [Motive.c](../2008-02-10-soul-of-the-sims/README.md) · [show](../../../../repo-shows/will-wright/README.md)
+↑ [sources](../README.md) · [Motive.c](../2008-02-10-soul-of-the-sims/README.md) · [show](../../../../repo-shows/will-wright-premiere/README.md)
 
 *Raw directory:* [browse files in this folder](./)

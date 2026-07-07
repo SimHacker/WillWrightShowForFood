@@ -23,6 +23,14 @@ show_and_network:
     topic: "MOOLLM-core Play Along skills (Anthropic-format wrappers) + preloaded per-show runtime — the show as MOOLLM's distribution hook; Embrace/Extend/Share"
   sims-play-along-narration.yml:
     topic: "Sims Play-Along Narration — audience screen recordings + live guest voice-over improv (Drew Carey Show × Foreign Poet × TicketPR)"
+  one-minute-intense.yml:
+    topic: "One-Minute Intense — 60s hook format from WILL (45s one hot idea + 15s call to action; SFC one-minute-movies lineage, participation instead of ads). First instance: upload ROARS!!!"
+  one-minute-movie-sandwich.yml:
+    topic: "1MM Sandwich — shows as playlists: 1MMs (old + NEW, one abstract concept each: Empathy/Servitude/Love/Hate/Irony/Destiny) interleaved with matching fake commercials + longer segments; phone-gag cold open; render playlists to continuous videos; optional branching"
+  participation-funnels.yml:
+    topic: "Participation Funnels — pinned issues as switchboard: funnel taxonomy (reusable/special/general), onboarding issue + ladder (say hi → message → roar → monster art → TicketPR → audience character → code), inverted Hollywood Principle contract, roars-of-support framing, anti-AI-slop artist ask"
+  youtube-bridge-skill.yml:
+    topic: "YouTube Bridge MOOLLM skill (dev TODO) — sync metadata/comments/stats/transcripts, cut long→short and remix, render descriptions with link networks + CTAs, dig per-playlist prev/next grooves from YAML show network"
   performance-space.yml:
     topic: "Performance Space — top-level live participation design (play-along, script reading, Conan face-puppet, OBS/webcam toys)"
     room: performance-space/README.md
@@ -113,9 +121,6 @@ methodology:
     topic: "WWSFF↔MOOLLM lift pipeline — dogfood concrete here, then LIFT proven core down into public MOOLLM skills. Use before abstract; concrete (repo-show) before generic (show); intentional dogfooding scheduling."
     ties_to: ../skills/repo-show/
     skill: https://github.com/SimHacker/moollm/tree/main/skills/play-learn-lift
-  handoff-hn-mining-queue.yml:
-    topic: "Session handoff — HN thread mining queue, prioritized artifacts, open sourcing tasks"
-
 vision:
   vision-and-ambition.yml:
     markup: VISION.md

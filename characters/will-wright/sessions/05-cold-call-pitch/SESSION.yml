@@ -1,0 +1,61 @@
+# Session 05 — The Cold Call: Don's solo video pitch to Will
+# One performer, one camera, one message. The show's front door, in video form.
+
+meta:
+  id: session-05-cold-call-pitch
+  status: scripted  # SCRIPT.md is the apex artifact; shoot next
+  participants: [don-hopkins]  # solo — Will appears only as the silence on the line
+  script: SCRIPT.md  # the performance
+  written_pitch: ../01-mic-check/PITCH.md  # the recap letter Don promised Will on the call
+
+framing: |
+  The phone call happened — voice only, not recorded. PITCH.md
+  (01-mic-check) is the recap letter Don promised on the call: "Hi Will, I
+  promised to send you a recap of our phone call, so here it is" — a real
+  letter, filed in the repo where everyone reads along. SCRIPT.md here
+  restages the pitch on camera: the video message replays the call and
+  everything it flowed into, all together at once, as one coherent one-way
+  narrative from Don to Will+public. In the fiction, no prior call
+  happened — cold call to an old friend, out of the blue. Addressed to
+  Will but self-explanatory for any stranger: every term (repo show, 
+  MOOLLM, Soul City, granular video) gets one sentence, no deep dives. 
+  Doubles as the honest-fake call-in tradition's origin clip: it ends 
+  by admitting it's a recording.
+
+precedent_cam6: |
+  The house style has a proven prior instance: Don's CAM6 demo
+  (https://www.youtube.com/watch?v=LyLMHxRNuck). It hinges on the Toffoli &
+  Margolus book and their Forth code at the very start, addressed DIRECTLY
+  to Norm Margolus — hard-core, no dumbing down — yet explaining things
+  Norm already knows, so everyone else can follow along. Credit runs the
+  right direction (the book inspired years of Don's work; the demo shows
+  the authors their harvest), and it ends in fantastic whimsical
+  storytelling — painting a universe, planets, clouds and skies with
+  cellular automata — PERFORMING what the first half explained. The cold
+  call uses the exact same shape: address Will directly, credit him,
+  explain for the room, then perform the thing itself.
+
+credit_direction: |
+  NEVER willsplain Will his own ideas. The explanations are for the audience;
+  to Will they are credit, not tutorial. The stance: Don got these ideas
+  working WITH Will, carried them into other domains, and comes back with a
+  harvest we need to cook into something new. Apex image, in the script:
+  "I'm returning your lost child to you. Healthy, grown, and with a family of
+  its own" — Micropolis City come home, Soul City as the family it made.
+
+beats:  # each is a cut point; full text in SCRIPT.md
+  - cold_open: "555 touch tones, Lily Tomlin ringy-dingies, 'leaving you a message'"
+  - catch_up: "MOOLLM in one sentence; dogfooding at Leela AI; Micropolis City (GPL-3 SimCity, Long Now origin); Soul City (the 1996 portable-data question, answered)"
+  - possible_bridges: "wide not high — (a) Little Computer People happy path, (b) Afterlife soul hydraulics, (c) Stardew Valley oviposition; plus Proxi/Spore, Mind Mirror, They Are Billions; Sims 1-4 named as the boring vertical path"
+  - the_show: "repo show defined; WillWrightShowForFood name as fundraising plan; granular video + playlists-as-timelines; plywood-to-mahogany; fake commercials as support appeals; GitHub participation + roar drive"
+  - open_door: "the repo's open; the front door is a pinned issue that says hi"
+  - the_favor: "SimCopter One re-record, 30 years in the asking; pie menu labels, failure vowels, Godzilla story, roar duet, bye-bye roars last"
+  - reveal: "'Oh yeah — I'm a recording.' — smash to broken robot 555 splice + GitHub onboarding card"
+
+bridge_refs:
+  - ../../../../repo-shows/will-wright-premiere/game-bridge-soul-city-procreation.yml
+  - ../../../../repo-shows/will-wright-premiere/game-bridge-soul-hydraulics.yml
+  - ../../../../repo-shows/will-wright-premiere/game-bridge-sims-spore.yml
+
+takes: []
+published: []

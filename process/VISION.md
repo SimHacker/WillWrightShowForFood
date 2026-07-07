@@ -45,7 +45,7 @@ Will Wright gave [*Interfacing to Microworlds*](https://web.stanford.edu/class/c
 | | |
 |--|--|
 | **Primary source** | [1996 source bundle — transcript, provenance, links](../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) |
-| **Show pitch built on it** | [Will Wright kickoff show](../repo-shows/will-wright/README.md) |
+| **Show pitch built on it** | [Will Wright kickoff show](../repo-shows/will-wright-premiere/README.md) |
 | **Crown jewel named there** | [Data portability between games](crazy-idea-jam.yml#data_portability_crown_jewel) — characters, cities, *memories* crossing worlds. Still not shipped. |
 
 The long arc since: Will and Don kept returning to the same question — when does the seminar become the city? **WillWrightShowForFood** is the public answer in repo form.
@@ -68,9 +68,8 @@ Trail: [constructionist lineage from Winograd 1996 to open Micropolis](../TRAILS
 Blogging, podcasting, video, streaming — each is a **medium**, and you can tell because each earned a
 **verb**. You blog. You podcast. You stream. **RepoShow claims the next slot — and its verb is
 *reposhowing*.** You don't just *watch* a Repo Show; you **enter, fork, and improve** it. The artifact isn't
-a post, a clip, or a livestream — it's a **living, forkable, runnable repository**. (The structure of that
-claim: [repo-as-medium](../designs/chatgpt-research-review/framing/FRAMING-REPO-AS-MEDIUM.md); the full
-argument: [RepoShow as a new medium](../designs/chatgpt-research-review/framing/FRAMING-REPOSHOW-AS-NEW-MEDIUM.md); the mechanics: [FORMAT.md](FORMAT.md).)
+a post, a clip, or a livestream — it's a **living, forkable, runnable repository**. (The mechanics:
+[FORMAT.md](FORMAT.md).)
 
 **Why the name carries weight.** *Repo* = repository, but also **repossession** — *repo-session*, a session
 in a repo where you take something back. RepoShow arrives against this moment's real anxiety: that platforms
@@ -108,7 +107,7 @@ identity) rather than being copied or trapped. That is repossession delivered as
 
 Picture a pyramid the ordinary way — **point up**. **You are standing on the tip**: the first public point of origin. The mass — skills, shows, characters, code — is **everything beneath your feet**, still being built.
 
-**On the tip today:** one kickoff [show seed](../repo-shows/will-wright/README.md), a [ShowMaker graph](showmaker-network.yml) scaffold, verify CI, yaml indexes. [Curb appeal on the README](../README.md); [CARD.yml](../CARD.yml), [SHOW.yml](../schemas/), [MANIFEST](../MANIFEST.yml), and [`pnpm verify`](../SETUP.md) under that.
+**On the tip today:** one kickoff [show seed](../repo-shows/will-wright-premiere/README.md), a [ShowMaker graph](showmaker-network.yml) scaffold, verify CI, yaml indexes. [Curb appeal on the README](../README.md); [CARD.yml](../CARD.yml), [SHOW.yml](../schemas/), [MANIFEST](../MANIFEST.yml), and [`pnpm verify`](../SETUP.md) under that.
 
 **Building beneath you:**
 
@@ -166,7 +165,7 @@ Repo Shows as constructionist microworlds: Winograd lineage, Papert energy, Logo
 
 A [Repo Show](FORMAT.md): the stage is GitHub. **[Will Wright](../characters/will-wright/) is the confirmed kickoff guest** — [invitation accepted](../characters/will-wright/invitation.md), topic-less by design, async at his pace. You do not need AI. Fork, homeplay, PR your show into the [ShowMaker network](showmaker-network.yml).
 
-→ [Player doorway](entryways/player.md) · [Will's show README](../repo-shows/will-wright/README.md) · [Guest — Will playlist](entryways/guest-will.md)
+→ [Player doorway](entryways/player.md) · [Will's show README](../repo-shows/will-wright-premiere/README.md) · [Guest — Will playlist](entryways/guest-will.md)
 
 ### AI rig reporters
 
@@ -216,7 +215,7 @@ These exist in the repo today (some as seeds; yaml says which):
 
 | Artifact | Where to look |
 |----------|---------------|
-| Kickoff guest (confirmed) | [Will Wright show](../repo-shows/will-wright/README.md) · [accepted invitation](../characters/will-wright/invitation.md) |
+| Kickoff guest (confirmed) | [Will Wright show](../repo-shows/will-wright-premiere/README.md) · [accepted invitation](../characters/will-wright/invitation.md) |
 | MOOLLM skills library | [`skills/`](../skills/README.md) |
 | Cauldron SCOOP pipeline | [cauldron skill](https://github.com/SimHacker/moollm/tree/main/skills/cauldron) · [SCOOP protocol](https://github.com/SimHacker/moollm/blob/main/skills/cauldron/protocols/SCOOP.yml) · [MicropolisCore cauldron example](https://github.com/SimHacker/MicropolisCore/tree/main/documentation/designs/playable-pie-publishing-cauldron) · [repo-show-format.yml](repo-show-format.yml) |
 | Repo Show format | [FORMAT.md](FORMAT.md) |
@@ -388,7 +387,7 @@ If you represent a platform, archive, publisher, or large audience channel: read
 | Doorways by interest | [ENTRYWAYS.md](../ENTRYWAYS.md) |
 | How a show runs | [FORMAT.md](FORMAT.md) · [repo-show-format.yml](repo-show-format.yml) |
 | Wild ideas | [CRAZY-IDEA-JAM.md](CRAZY-IDEA-JAM.md) · [`stupid_fun_forward` trail](trails/stupid-fun-forward.md) |
-| Will / 1996 talk | [Will show](../repo-shows/will-wright/README.md) · [1996 source](../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) |
+| Will / 1996 talk | [Will show](../repo-shows/will-wright-premiere/README.md) · [1996 source](../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) |
 | All show seeds | [repo-shows/README.md](../repo-shows/README.md) |
 | Sideways leaps | [TRAILS.md](../TRAILS.md) |
 | Process room | [process/README.md](README.md) |

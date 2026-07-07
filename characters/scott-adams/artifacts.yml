@@ -8,7 +8,7 @@ artifact_count: 6
 correspondence:
   digest: correspondence-digest.md
   private_ref: DonHopkins/characters/don-hopkins/correspondence/scott-adams.yml
-  email: msadams@msadams.com
+  email: [email redacted]
   verified_dates: ["2025-06 (HN/Messenger)", "2026-01-04", "2026-01-07", "2026-02-22"]
 
 artifacts:
@@ -50,6 +50,6 @@ artifacts:
     note: "Missing link in lineage — Scott engine → Logo REPL parser → MOOLLM"
 
 see_also:
-  - ../../repo-shows/scott-adams/invitation.md
-  - ../../repo-shows/scott-adams/ideas.md
+  - ../../characters/scott-adams/invitation.md
+  - ../../characters/scott-adams/ideas.md
   - ../don-hopkins/career/lineage.yml

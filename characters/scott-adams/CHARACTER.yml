@@ -19,8 +19,8 @@ representation:
 
 invitation:
   status: warm_contact   # HN reconnect + Jan 2026 email; likes MOOLLM; biography/adventure parallel
-  consent: correspondence_verified   # confirm before long on-air quotes; msadams@msadams.com
-  document: ../../repo-shows/scott-adams/invitation.md
+  consent: correspondence_verified   # confirm before long on-air quotes; [email redacted]
+  document: ../../characters/scott-adams/invitation.md
   show_seed: repo-shows/scott-adams/
   correspondence: DonHopkins/characters/don-hopkins/correspondence/scott-adams.yml
 
@@ -64,7 +64,7 @@ see_also:
   - { path: moollm-dual-palace.md, why: "Two careers one compiler — Repo Show north star" }
   - { path: CARD.yml, why: "Invokable abilities for show segments" }
   - { path: invitation.md, why: "Public invitation draft" }
-  - { path: ../../repo-shows/scott-adams/ideas.md, why: "Full segment catalog for the show" }
+  - { path: ../../characters/scott-adams/ideas.md, why: "Full segment catalog for the show" }
   - { path: ideas.md, why: "Quick hooks (points to show catalog)" }
   - { path: ../don-hopkins/career/lineage.yml, why: "Logo Adventure + adventure-map grammar + the adventure compiler" }
   - { path: ../don-hopkins/GLANCE.yml, why: "The career memory palace -> compiled by the adventure compiler (future)" }

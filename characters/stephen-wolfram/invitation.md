@@ -21,7 +21,7 @@ irreducible** — so we build it to be *played*, not predicted.
 Rather than burden this note, the argument lives in one short artifact you can read at your leisure:
 
 - **The pitch, in full:** [`MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md`](MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md) — heizronyms as multiway systems + MOOLLM as a filesystem rewriting system, with four hooks and four questions for you.
-- **The theory it grew from:** the acronym **field theory** and its Wolfram corner — [`NOMENCLATURE-HEISENBERGIAN-ACRONYMS.md`](../../designs/chatgpt-research-review/nomenclature/NOMENCLATURE-HEISENBERGIAN-ACRONYMS.md).
+- **The theory it grew from:** the acronym **field theory** and its Wolfram corner — in Don's research notes, and fair game on the show.
 
 **The ask:** a Repo Show conversation — read the artifact, poke holes, and (if it's catnip) explore it live.
 The whole substrate is open and inspectable. Show seed: [`repo-shows/stephen-wolfram/`](../../repo-shows/stephen-wolfram/README.md).

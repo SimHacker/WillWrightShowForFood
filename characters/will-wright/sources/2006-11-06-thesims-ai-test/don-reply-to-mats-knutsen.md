@@ -3,7 +3,7 @@
 *Email, 7 November 2006. Mats attached `thesimsaitest.zip`; Don replied with a plain-language tour of SimAntics-level design without requiring byte-code emulation.*
 
 **From:** Don Hopkins  
-**To:** Mats Knutsen (afr088@hotmail.com)  
+**To:** Mats Knutsen ([email redacted])  
 **Subject:** Re: Questions about The Sims AI [Implementation details]  
 **Date:** 7 November 2006
 

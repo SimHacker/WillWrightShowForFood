@@ -1,5 +1,5 @@
 ---
-status: interested_async
+status: invited  # responded interested — async solo/1-on-1
 character_id: david-rosenthal
 public: true
 consent: not_yet_asked

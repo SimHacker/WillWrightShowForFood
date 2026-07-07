@@ -11,7 +11,7 @@ Arias**. It is one of the strangest, most beautiful art-performances ever smuggl
 TV — and one of it, "Boys Keep Swinging," is a **Bowie/Eno co-write**, so it's a real, warm door into
 a conversation with Brian about that whole period.
 
-It's also the origin of the show's **["video puppet"](../../repo-shows/will-wright/performance-and-culture.yml)**
+It's also the origin of the show's **["video puppet"](../../repo-shows/will-wright-premiere/performance-and-culture.yml)**
 performance kind (`#puppet_kinds` → `puppet.canonical_ancestor`): a human performing live through a
 cheap, seams-showing composited body.
 
@@ -130,5 +130,5 @@ Two small threads to widen the conversation beyond the one night (Don wanted bot
 - "Boys Keep Swinging" music video (dir. David Mallet, 1979)
 
 *See also:* [`ideas.md`](ideas.md) (hook #9 points here) ·
-[`../../repo-shows/will-wright/performance-and-culture.yml`](../../repo-shows/will-wright/performance-and-culture.yml) (`#puppet_kinds`) ·
+[`../../repo-shows/will-wright-premiere/performance-and-culture.yml`](../../repo-shows/will-wright-premiere/performance-and-culture.yml) (`#puppet_kinds`) ·
 [`../../repo-shows/ideas/traditions/unnecessary-censorship.yml`](../../repo-shows/ideas/traditions/unnecessary-censorship.yml)

@@ -6,7 +6,7 @@
 
 ## Who
 
-**Paulette Dropinsky** (`paulydropins@gmail.com`) — Sims Internet Museum Project, fan group preserving official Maxis and fan custom content for an "inside look" at franchise history. Questions from a Sims-related chatroom.
+**Paulette Dropinsky** (`[email redacted]`) — Sims Internet Museum Project, fan group preserving official Maxis and fan custom content for an "inside look" at franchise history. Questions from a Sims-related chatroom.
 
 **Status:** No Don reply in paste dump. **Don to resolve:** respond or decline; policy on sharing unreleased tools.
 

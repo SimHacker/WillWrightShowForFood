@@ -23,7 +23,7 @@ Automata Machines*, the same ground Don's **CAM6** stands on.
 ## In this directory
 
 - [`SHOW.yml`](SHOW.yml) — the show seed.
-- [`invitation.md`](invitation.md) — the draft invitation.
+- [`invitation.md`](../../characters/dave-tristram/invitation.md) — the draft invitation.
 
 Guest: [`characters/dave-tristram/`](../../characters/dave-tristram/README.md). Consent **not yet asked**.
 

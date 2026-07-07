@@ -18,8 +18,7 @@ why_him:
   language: "Wolfram Language turns the acronym zoo and the skill tree into runnable substitution systems."
 
 read_first:
-  artifact: characters/stephen-wolfram/MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md   # the argument, kept out of the invite
-  theory: designs/chatgpt-research-review/nomenclature/NOMENCLATURE-HEISENBERGIAN-ACRONYMS.md
+  artifact: characters/stephen-wolfram/MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md   # the argument, kept out of the invite; grew from the acronym field theory in Don's research notes
 
 dream_segments:
   - "Model MOOLLM live as MultiwaySystem[skillRules, fileTree, steps] — the codebase as a branch space of worlds"
@@ -38,5 +37,4 @@ format:
 ties_to:
   - ../../characters/stephen-wolfram/invitation.md
   - ../../characters/stephen-wolfram/MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md
-  - ../../designs/chatgpt-research-review/nomenclature/NOMENCLATURE-HEISENBERGIAN-ACRONYMS.md
   - ../../characters/will-wright/

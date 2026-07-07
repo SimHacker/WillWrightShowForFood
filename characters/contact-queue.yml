@@ -8,7 +8,7 @@ next:
   - id: craig-latta
     why: "TIME-SENSITIVE — in Amsterdam now; Caffeine (SqueakJS+WASM) live-web Smalltalk; reach out while in town"
   - id: will-wright
-    why: "Flagship kickoff — invitation.md draft ready for review → finished → sent"
+    why: "Flagship kickoff — ACCEPTED (July 2026). Next: schedule 1-on-1 video chats, async-by-design; repo is the production"
   - id: lars-brinkhoff
     why: "PDP-10/ITS make-it-so challenge — pair with Thomas Cherryhomes for retro drag race"
   - id: thomas-cherryhomes
@@ -23,6 +23,28 @@ next:
     why: "Forebear archive — CS547 treasure trove"
 
 later: "Remaining guests invitation.status: draft — enrich sources then review"
+
+elders_priority:
+  note: "We always prioritize elders — reach them while we can, speak their own language, don't waste their time."
+  queue:
+    - id: ted-nelson
+      why: |
+        DREAM GUEST. Intertwingled two-way media is what the whole show is built
+        on (one-minute-movie-sandwich.yml#two_answering_machines
+        .repo_show_is_the_answer names him); the Bar Karma StoryMaker loop and
+        provenance-links-all-the-way-down are his ideas walking around. He paid
+        beautiful respect to Doug Engelbart; the show pays the same respect
+        forward while he can enjoy it.
+      approach: |
+        Coordinate PRIVATELY with Will Wright and Ted Selker (close to Ted
+        Nelson) to frame the invitation in Ted's own language — separately or
+        all together. Prepare before contact; don't waste his time. Framing
+        notes are in the green room, not here.
+
+long_shots:
+  - id: jensen-huang
+    why: "Spatula collection cameo — the Spatula City gambit (../process/one-minute-movie-sandwich.yml#found_commercials.jensen_spatula_gambit). Bit works without him (kitchen-keynote excerpt + UHF pivot); finished bit doubles as the invitation."
+    status: bit_first_then_invite
 
 wanted_artifacts:
   note: "Archival leads worth chasing — ask gracefully; rights/ownership may block them"

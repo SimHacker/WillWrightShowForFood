@@ -45,7 +45,7 @@ read_order:
 
 structure:
   centerpiece: sources/1996-04-26-winograd-interfacing-to-microworlds/
-  show: ../../repo-shows/will-wright/
+  show: ../../repo-shows/will-wright-premiere/
   consent: invitation_accepted
 
 see_also:
@@ -59,7 +59,7 @@ see_also:
     - { path: sources/GLANCE.yml, why: "Evidence room — treasure trove" }
     - { path: media/GLANCE.yml, why: "Flat media — Flower Child + sims-series" }
   across:
-    - { path: ../../repo-shows/will-wright/GLANCE.yml, why: "Flagship show room" }
+    - { path: ../../repo-shows/will-wright-premiere/GLANCE.yml, why: "Flagship show room" }
     - { path: sources/1996-04-26-winograd-interfacing-to-microworlds/GLANCE.yml, why: "THE seed artifact" }
     - { path: ../../process/entryways/guest-will.md, why: "Guest playlist" }
   deep:

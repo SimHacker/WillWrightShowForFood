@@ -22,7 +22,7 @@ invitation:
   status: in_conversation
   consent: not_yet_asked
   responded: "2026-07 (ongoing)"
-  document: ../../repo-shows/scott-draves/invitation.md   # invites live in the repo-show dir, not the character dir
+  document: ../../characters/scott-draves/invitation.md   # canonical: invitations live with the character
   show_seed: repo-shows/scott-draves/
   likelihood: "high — long-time friend; collaborated with Don on the Electric Sheep Unity client (2020–2023)"
 
@@ -71,7 +71,7 @@ career_arc:   # public (LinkedIn + scottdraves.com/about) — the engineering ca
 connections:
   don_first_met: "Don and Scott **met in the Bay Area in the early 1990s through Don's housemate Nick Thompson** — who knew Spot from Brown (they co-wrote *fnord*) and was then at **SGI** (1990–92). Nick brought Scott home and introduced him to Don, and the three hung out regularly. Don, at Sun, ran Scott's early Fractal Flame work on his SparcStation II and talked interactive performance-art graphics while building his CAM6 cellular-automata platform. *(Scott also used SGI machines as an intern in Tokyo in 1991 and at NTT-Data in 1993; exact dates to confirm with Scott.)*"
   nick_thompson_fnord: "**Nick Thompson** (Brown '90) — Don's housemate c.1990–92 and the bridge to Scott (he brought Scott home and introduced them) — worked in **Andy van Dam's** Brown Graphics Group and for **Thomas Banchoff**, **co-wrote `fnord` with Scott**, then built **Open Inventor** at SGI. ('fnord' is Scott's Brown thesis title; it ran Banchoff's 4D-geometry artwork — even an animation on *Star Trek: TNG*.) Nick's SGI software made the rendered/cover imagery for Banchoff's **_Beyond the Third Dimension_** (1990). Verified: math.brown.edu/tbanchof."
-  flame_screensaver: "Before the open-source algorithm paper, **Flame first spread as a screen saver** — the `flame` hack in **xlock** and then **Jamie Zawinski's xscreensaver** (man page credits 'Scott Graves [sic] <spot@cs.cmu.edu>, 06-Jun-91'; xscreensaver port by jwz, 18-Oct-93). That's very likely how Don first saw it (on his SparcStation II). Don also knew **jwz** from that era — the CMU/Lucid Lisp world, the UNIX-HATERS book (Don wrote the X-Windows Disaster chapter), and xscreensaver itself."
+  flame_screensaver: "Before the open-source algorithm paper, **Flame first spread as a screen saver** — the `flame` hack in **xlock** and then **Jamie Zawinski's xscreensaver** (man page credits 'Scott Graves [sic] <[email redacted]>, 06-Jun-91'; xscreensaver port by jwz, 18-Oct-93). That's very likely how Don first saw it (on his SparcStation II). Don also knew **jwz** from that era — the CMU/Lucid Lisp world, the UNIX-HATERS book (Don wrote the X-Windows Disaster chapter), and xscreensaver itself."
   fnord_lineage: "**`fnord`** — Scott's 1990 Brown BS thesis, *'fnord (visualization of mathematics and geometry)'* — a **functional language for describing form** (co-written with Nick Thompson; the workhorse for Banchoff's 4D art). It's the deep root of Scott's whole arc: **fnord → Fractal Flame → Electric Sheep → Infinidream** — *describe generative form as data, then let it render and evolve*. The name is the perfect Discordian in-joke: a **fnord** (Shea & Wilson's *Illuminatus!*) is the word you're conditioned **not to see** — fittingly, even Don had forgotten Scott named it that. ('That's how fnords work.')"
   don_cmu: "They reconnected at **Carnegie Mellon** (early–mid 1990s) — Scott in his CS PhD (Andy Witkin & Dana Scott early, then Peter Lee; thesis *Automatic Program Specialization for Interactive Media*, 1997), Don working with Brad Myers on Lisp UI (and learning X11 well enough to write the unix-haters X-Windows chapter while porting SimCity from NeWS to Tcl/Tk)."
   brian_eno_intro: "In June 2006, after the **Long Now Foundation** talk *Playing with Time* by **Brian Eno and Will Wright**, Don introduced Brian Eno to Scott; the three met at Scott's San Francisco apartment and bounced ideas around. Brian saw Electric Sheep and the HiFiDreams HD work (an hour per frame to render)."
@@ -81,7 +81,7 @@ connections:
 show_suggestions:
   - { seed: ../../repo-shows/scott-draves/, what: "A generative-art Repo Show: Flame → Electric Sheep → Dreams in High Fidelity → Infinidream — evolution, collective intelligence, open source, and where AI image-gen fits. Read old Flame papers, run the Sheep live, riff on what's next." }
   - { seed: ../../repo-shows/scott-draves/simulated-opening.yml, what: "Simulated art opening — menagerie buys your work for §; start buried in worthless Simoleons for Twitch" }
-  - { seed: ../../repo-shows/will-wright/, what: "A reunion thread: Don, Scott and (ideally) Brian Eno + Will, recalling the 2006 Long Now evening and talking generative systems, simulation, and AI." }
+  - { seed: ../../repo-shows/will-wright-premiere/, what: "A reunion thread: Don, Scott and (ideally) Brian Eno + Will, recalling the 2006 Long Now evening and talking generative systems, simulation, and AI." }
 
 sources:
   web:

@@ -8,7 +8,7 @@ meta:
   consent: not_yet_asked
   show: SHOW.yml
   rendered_for_drew: ai-contrast-framing.md
-  invitation: invitation.md
+  invitation: ../../characters/drew-carey/invitation.md
 
 # WHAT HAPPENED (public record — April 2023)
 reference_experiment:
@@ -171,4 +171,4 @@ see_also:
   - ../../characters/will-wright/sources/don-youtube-storymaker-demo/
   - ../../catalogs/micropolis-home/micropolis-angel.yml
   - ai-contrast-framing.md
-  - invitation.md
+  - ../../characters/drew-carey/invitation.md

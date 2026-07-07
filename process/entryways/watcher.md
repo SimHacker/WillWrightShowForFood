@@ -17,7 +17,7 @@ The show is the repo. Live overlay may show Cursor thinking; Don Philahue surfac
 | 3 | [**Don Philahue**](../../characters/don-philahue/CARD.yml) | Audience wrangler — surfaces question PRs without requiring GitHub accounts |
 | 4 | [**Code That Spec**](../code-that-spec.yml) | When chat yells CODE THAT SPEC — token bids vs time |
 | 5 | [**Drag Race**](../DRAG-RACE.md) | Variety-show beats — werk, commit, flair lap |
-| 6 | [**Flagship context**](../../repo-shows/will-wright/README.md) | What the kickoff episode is about — Will, 1996, topic-less |
+| 6 | [**Flagship context**](../../repo-shows/will-wright-premiere/README.md) | What the kickoff episode is about — Will, 1996, topic-less |
 | 7 | [**Homefun**](../HOMEFUN.md) | Repo Show Class rubric — did the commit message match the thinking? |
 
 ---

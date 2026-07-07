@@ -16,7 +16,7 @@ flyer_text:
   prescreen: "Are you 21 or over? Have you tried using cannabis when programming? Are you familiar with Python?"
   sessions: "Two 1.5-hour Zoom sessions — one high, one sober — coding questions"
   survey: "https://bit.ly/3RixZl3"
-  contact: [endremad@umich.edu, wenxinhe@umich.edu]
+  contact: [[email redacted], [email redacted]]
 
 visual:
   background: "Faint green Python source (tweets/JSON parsing snippets)"

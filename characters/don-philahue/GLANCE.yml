@@ -44,10 +44,10 @@ see_also:
   across:
     - { path: ../../designs/orchestrator-playsets/README.md, why: "Hub + dispatch protocols" }
     - { path: ../../schemas/advertisement-dispatch.yml, why: "inject / hub / magazine" }
-    - { path: ../../repo-shows/will-wright/audience/GLANCE.yml, why: "TicketPR roster he serves" }
-    - { path: ../../repo-shows/will-wright/venue/GLANCE.yml, why: "Seat map + mic line" }
+    - { path: ../../repo-shows/will-wright-premiere/audience/GLANCE.yml, why: "TicketPR roster he serves" }
+    - { path: ../../repo-shows/will-wright-premiere/venue/GLANCE.yml, why: "Seat map + mic line" }
     - { path: ../../process/ticket-pr.yml, why: "TicketPR constitution" }
-    - { path: ../../repo-shows/will-wright/SIMULATION.yml, why: "Show runtime orchestrator" }
+    - { path: ../../repo-shows/will-wright-premiere/SIMULATION.yml, why: "Show runtime orchestrator" }
   deep:
     - { path: qa-orchestration.yml, why: "Right Q, guest, time — ledger sweep" }
     - { path: ORCHESTRATOR.yml, why: "Hub spec — plugin merge + state machine" }

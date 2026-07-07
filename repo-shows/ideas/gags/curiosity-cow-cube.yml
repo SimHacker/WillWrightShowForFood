@@ -45,7 +45,7 @@ sources:
       expired: 2011-09-07
       bogost_line: "It wasn't very fun before."
     don_hn: "https://news.ycombinator.com/item?id=27324466"
-  bogost_show: repo-shows/will-wright/ian-bogost-procedural-rhetoric/SHOW.yml
+  bogost_show: repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml
   deconstruct_the_cube: how-to-deconstruct-the-cube.yml
   pantomime_squish_parallel: pantomime-gallery.yml#bug_farm
   face_puppet_parallel: "../../characters/don-hopkins/media/don-high-score-space-invaders.yml"

@@ -2,7 +2,7 @@
 
 Extracted from Don Hopkins's working notes (`DonHopkins/temp/big-prompts.txt`, 2026).
 
-**Audience-facing narration:** [INTRO-NARRATIVE.md](../../../repo-shows/will-wright/INTRO-NARRATIVE.md) — how this vision maps to Micropolis + WillWrightShowForFood Repo Shows, the wedding playset, and preserved agitprop.
+**Audience-facing narration:** [INTRO-NARRATIVE.md](../../../repo-shows/will-wright-premiere/INTRO-NARRATIVE.md) — how this vision maps to Micropolis + WillWrightShowForFood Repo Shows, the wedding playset, and preserved agitprop.
 
 ## Core idea
 
@@ -23,7 +23,7 @@ Objects developed with SimBabes, SimSlice, and SimFreaks for the **SimProv Weddi
 | Crowd Sitter | Gather guests, seat them on chairs |
 | Cupid | Instant romance / speed-dating cheat (prerequisite for marriage) |
 | Buddha statue | Suppress hunger, bladder, hygiene, sadness — manage large wedding crowds |
-| Dumbold Voting Machine | Agitprop demo of procedural rhetoric — **2004 time capsule**; see framing in [INTRO-NARRATIVE.md](../../../repo-shows/will-wright/INTRO-NARRATIVE.md) |
+| Dumbold Voting Machine | Agitprop demo of procedural rhetoric — **2004 time capsule**; see framing in [INTRO-NARRATIVE.md](../../../repo-shows/will-wright-premiere/INTRO-NARRATIVE.md) |
 
 Each solves a practical orchestration problem; the player conducts the wedding using them together.
 

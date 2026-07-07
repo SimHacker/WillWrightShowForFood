@@ -19,7 +19,7 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: README.md
-  contact: chuck@chuckbl.com
+  contact: private  # on file with Don; open replies welcome via GitHub issue or PR
   note: "Feb 2020: confirmed address; offered help; sent BE screenshots from OS9 dev Mac. Don: 'absolutely add Chuck and invite him!'"
 
 bio:

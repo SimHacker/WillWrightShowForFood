@@ -1,6 +1,6 @@
 # linkget, parent scope, COOL plans (Jun 1991)
 
-**Arthur van Hoff** (`arthur@turing.ac.uk`) → Rafael Bracho / TNT core, cc Tim Niblett, Jim Rudolf, Cathy Waite.
+**Arthur van Hoff** (`[email redacted]`) → Rafael Bracho / TNT core, cc Tim Niblett, Jim Rudolf, Cathy Waite.
 
 ## Parent-scope / linkget design
 

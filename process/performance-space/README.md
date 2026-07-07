@@ -93,7 +93,7 @@ Late-night tradition: a **still photo of a face with the mouth cut out**; the pe
 mouth shows through while they do the voice (Arnold, etc.). We call this **`conan-face-puppet`**
 in the repo — affectionate homage, not affiliation.
 
-- Spec: [`performance-and-culture.yml#puppet_kinds.face_puppet`](../../repo-shows/will-wright/performance-and-culture.yml)
+- Spec: [`performance-and-culture.yml#puppet_kinds.face_puppet`](../../repo-shows/will-wright-premiere/performance-and-culture.yml)
 - Web toy (P0): [`apps/performance-space/conan-face-puppet.yml`](../../apps/performance-space/conan-face-puppet.yml)
 - Curate canonical Conan clips into `lineage_index` in [`performance-space.yml`](../performance-space.yml) as we pick proof episodes.
 
@@ -101,13 +101,13 @@ in the repo — affectionate homage, not affiliation.
 
 Performers stream (or hide) and **voice live-generated character speech** — table-read energy,
 rotating pantheon (Sad Clown, Death, Bob, Bella, Slats). See
-[`performance-and-culture.yml#the_reading`](../../repo-shows/will-wright/performance-and-culture.yml).
+[`performance-and-culture.yml#the_reading`](../../repo-shows/will-wright-premiere/performance-and-culture.yml).
 
 ### Vocal-tract instruments
 
 - **Pink Trombone** — https://dood.al/pinktrombone — and the **[Pink Trombone Jam](../../apps/performance-space/pink-trombone-jam.yml)** group activity: 4 people accompany / follow / lead / ridicule / parody their own voices together (Croquet-synced; voice→params model).
 - **Phoneloper** — Don's SFC expressive-speech toy; show seed: [`repo-shows/phoneloper/SHOW.yml`](../../repo-shows/phoneloper/SHOW.yml)
-- **Slats robopoetry loop** — speech synth ↔ recognition feedback; audience steers by voice: [`performance-and-culture.yml#speech_feedback_loop_instrument`](../../repo-shows/will-wright/performance-and-culture.yml)
+- **Slats robopoetry loop** — speech synth ↔ recognition feedback; audience steers by voice: [`performance-and-culture.yml#speech_feedback_loop_instrument`](../../repo-shows/will-wright-premiere/performance-and-culture.yml)
 
 ---
 
@@ -125,7 +125,7 @@ Detailed definitions live in [`performance-space.yml`](../performance-space.yml)
 | Audience chorus | 🎛️👥 | Chat voice streams steer a feedback loop |
 
 Show-level culture (Rocky Horror cues, TicketPR economy, third space): still in
-[`repo-shows/will-wright/performance-and-culture.yml`](../../repo-shows/will-wright/performance-and-culture.yml) — this document is the **cross-show** umbrella.
+[`repo-shows/will-wright-premiere/performance-and-culture.yml`](../../repo-shows/will-wright-premiere/performance-and-culture.yml) — this document is the **cross-show** umbrella.
 
 ---
 
@@ -174,6 +174,6 @@ Episode seeds: [`performance-space.yml#episode_ideas`](../performance-space.yml)
 |----|-----|
 | Girder | [`performance-space.yml`](../performance-space.yml) |
 | Play-along format | [`sims-play-along-narration.yml`](../sims-play-along-narration.yml) |
-| Will show culture | [`performance-and-culture.yml`](../../repo-shows/will-wright/performance-and-culture.yml) |
+| Will show culture | [`performance-and-culture.yml`](../../repo-shows/will-wright-premiere/performance-and-culture.yml) |
 | Web toys | [`apps/performance-space/`](../../apps/performance-space/) |
 | Trail | [`cross-links.yml`](../cross-links.yml) `#performance_space` |

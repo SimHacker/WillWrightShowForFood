@@ -1,6 +1,6 @@
 # Michael McGuffin — invitation (draft)
 
-**To:** Michael McGuffin \<michael.mcguffin@gmail.com\>  
+**To:** Michael McGuffin *(email on file privately — or reply in the open via a GitHub issue or PR so everybody can read)*  
 **Subject:** Repo Show — visual programming lineage (CAM-6 → PSIBER → Bounce → SimAntics)  
 **Shows:** [Rebounce](../../repo-shows/rebounce/) · [Brad Myers](../../repo-shows/brad-myers/)
 

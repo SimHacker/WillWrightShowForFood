@@ -132,7 +132,7 @@ Constitution: [`CHARACTER.yml`](../../characters/don-philahue/CHARACTER.yml) (`p
 
 ## Engine status
 
-Schemas are **human + LLM rubric** today (like mana DSL). Future: mooco `ambient_injection` bar — parse CARD + hub YAML, score dynamically, inject until budget spent ([`designs/chatgpt-research-review/mooco/MOOCO-CAPABILITY-BAR.yml`](../../designs/chatgpt-research-review/mooco/MOOCO-CAPABILITY-BAR.yml)).
+Schemas are **human + LLM rubric** today (like mana DSL). Future: mooco `ambient_injection` bar — parse CARD + hub YAML, score dynamically, inject until budget spent (capability-bar design in Don's planning notes).
 
 ## Related
 

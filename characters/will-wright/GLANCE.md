@@ -4,7 +4,7 @@
 |---|---|
 | **Role here** | Flagship invited guest — topic-less Repo Show kickoff |
 | **Anchor** | [1996 Winograd talk](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds) — Dollhouse → The Sims |
-| **Invitation** | [`invitation.md`](invitation.md) (short) · long drafts in [`repo-shows/will-wright/`](../../repo-shows/will-wright/README.md) · [`BROWSE.md`](../../repo-shows/will-wright/BROWSE.md) |
+| **Invitation** | [`invitation.md`](invitation.md) (short) · long drafts in [`repo-shows/will-wright-premiere/`](../../repo-shows/will-wright-premiere/README.md) · [`BROWSE.md`](../../repo-shows/will-wright-premiere/BROWSE.md) |
 | **Card** | [`CARD.yml`](CARD.yml) · [`CARD.md`](CARD.md) |
 | **Playlist** | [`guest-will`](../../process/entryways/guest-will.md) |
 | **Galleries** | [`media/`](media/README.md) · [Russian Space Junk](media/russian-space-junk.md) · [Artwork](media/artwork.md) |

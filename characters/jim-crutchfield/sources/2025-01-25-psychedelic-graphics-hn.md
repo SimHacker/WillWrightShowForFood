@@ -1,8 +1,8 @@
 # Don → Jim Crutchfield — psychedelic graphics HN (25 Jan 2025)
 
 **From:** Don Hopkins \<simhacker@gmail.com\>  
-**To:** Jim Crutchfield \<chaos@ucdavis.edu\>  
-**Cc:** Ben Cerveny \<ben@neb.me\>  
+**To:** Jim Crutchfield \<[email redacted]\>  
+**Cc:** Ben Cerveny \<[email redacted]\>  
 **Date:** 25 January 2025  
 **Subject:** Psychedelic Graphics HN Discussion
 

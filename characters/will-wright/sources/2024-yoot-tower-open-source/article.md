@@ -15,7 +15,7 @@ HN thread on elevator algorithms → Don cold-called **Yoot Saito** (Jack Daniel
 Phil (Obscuritory + **Video Game History Foundation**) offered formal help via **Video Game Source Project**:
 
 - Conservation head **Rich Whitehouse** — emulation, source release patterns  
-- Work email: **phil@gamehistory.org**  
+- Work email: **[email redacted]**  
 - License advice for responsible release  
 
 Don also looping **Rebecca Heineman** for retro port expertise; **browser modern Yoot Tower** with JP-only content; **Seaman + ChatGPT** joke became serious brainstorm.

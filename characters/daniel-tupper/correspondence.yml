@@ -1,0 +1,35 @@
+# Correspondence index — Daniel Tupper (public-safe)
+
+meta:
+  character: daniel-tupper
+  note: "Public timeline only; private threads in DonHopkins green-room"
+
+threads:
+  - id: facebook-messenger-2013
+    start: 2013-08-01
+    channel: Facebook Messenger
+    public_excerpt: sources/2013-08-01-facebook-messenger-excerpt.md
+    private_full: |
+      DonHopkins/projects/willwrightshowforfood/green-room/daniel-tupper/sources/
+      2013-08-01-facebook-messenger.txt
+    beats:
+      - date: 2013-08-01
+        topic: first_contact
+        summary: "Friend request accepted; Daniel wants to talk about his game."
+      - date: 2013-08-01
+        topic: freeta_pitch
+        summary: "FreeTA — GTA no missions, full NYC; mgismafia.webs.com"
+      - date: 2013-08-01
+        topic: engine_advice
+        summary: "Don — WebGL/Unity feasible; Daniel wants own engine"
+      - date: 2013-08-01
+        topic: sims_lore
+        summary: "Three stories in Sims 1 or original only?"
+      - date: 2013-08-11
+        topic: swrs_gaming
+        summary: "Studio name SWRSgaming — founders' initials"
+
+ongoing:
+  note: |
+    More than a decade of correspondence since this excerpt — personal and project
+    material archived privately; public repo grows as Daniel consents to each artifact.

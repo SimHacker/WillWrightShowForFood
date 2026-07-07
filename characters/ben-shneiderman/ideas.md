@@ -3,7 +3,7 @@
 *Conversation hooks for a Repo Show — **Don's proposed topics**, grounded in Ben's public work and
 documented connections. Things Don would love to follow **with** Ben; not quotes, not claims about
 what he thinks.*
-[Portrayal standards](../../schemas/portrayal-standards.yml) · invitation **send_ready** · consent not_yet_asked
+[Portrayal standards](../../schemas/portrayal-standards.yml) · invitation **invited** (sent 2026-07)
 
 ## What Ben has done
 
@@ -94,7 +94,7 @@ HyperTIES PostScript applets = "send a program, not a data structure." Tag-team 
 
 ## Sources (public)
 
-- [`repo-shows/ben-shneiderman/invitation.md`](../../repo-shows/ben-shneiderman/invitation.md) — send-ready
+- [`invitation.md`](invitation.md) — invited (sent 2026-07)
 - [`CHARACTER.yml`](CHARACTER.yml)
 - [`media/from-mail/MANIFEST.yml`](media/from-mail/MANIFEST.yml)
 - [`CARD.yml`](CARD.yml) — Direct Manipulation, Embedded Link, Measure UI abilities

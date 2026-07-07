@@ -19,7 +19,7 @@ and we do not speak as him without consent.
 | Room | → | Why |
 |------|---|-----|
 | **Up** | [characters](../README.md) | Guest registry |
-| **Show** | [will-wright show](../../repo-shows/will-wright/README.md) | Flagship Repo Show room |
+| **Show** | [will-wright show](../../repo-shows/will-wright-premiere/README.md) | Flagship Repo Show room |
 | **Sources** | [sources](sources/README.md) | Evidence — 1996 centerpiece lives here |
 | **Primary sources map** | [primary-sources-evidence-room.md](primary-sources-evidence-room.md) | Curated slug index + cross-links |
 | **Adorable Minutes** | [adorable-minutes.md](adorable-minutes.md) | 2008 one-minute Q&A format; async show seed |
@@ -35,9 +35,9 @@ and we do not speak as him without consent.
 | If you want… | Go |
 |--------------|-----|
 | **The invitation** (short) | [`invitation.md`](invitation.md) |
-| **The official invitation** (the one Will accepted) | [`repo-shows/will-wright/invitation.md`](../../repo-shows/will-wright/invitation.md) *(earlier drafts archived privately in the green room)* |
+| **The official invitation** (the one Will accepted) | [`repo-shows/will-wright-premiere/invitation.md`](../../repo-shows/will-wright-premiere/invitation.md) *(earlier drafts archived privately in the green room)* |
 | **Ideas to explore** (conversation hooks) | [`ideas.md`](ideas.md) |
-| **Browse any order** | [`repo-shows/will-wright/BROWSE.md`](../../repo-shows/will-wright/BROWSE.md) |
+| **Browse any order** | [`repo-shows/will-wright-premiere/BROWSE.md`](../../repo-shows/will-wright-premiere/BROWSE.md) |
 | **Suggested sequence** | [`guest-will playlist`](../../process/entryways/guest-will.md) |
 | **Trading card / abilities** | [`CARD.md`](CARD.md) · [`CARD.yml`](CARD.yml) |
 | **Photos & media** (SimCity/Sims history, robots) | [`media/`](media/README.md) · [`media/GLANCE.yml`](media/GLANCE.yml) |
@@ -56,7 +56,7 @@ Stanford class (the first public **Dollhouse** preview). That talk is why Don we
 **Will Wright Show For Food** is the public apex of a Repo Show invitation: topic-less by design
 (**Will is the topic**), anchored on that 1996 artifact, open to **Proxi**, **Slats**
 RoboResurrection, and whatever threads Will wants to pull. See
-[`repo-shows/will-wright/README.md`](../../repo-shows/will-wright/README.md).
+[`repo-shows/will-wright-premiere/README.md`](../../repo-shows/will-wright-premiere/README.md).
 
 ## What he is known for (verifiable)
 

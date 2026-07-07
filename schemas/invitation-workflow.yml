@@ -73,7 +73,7 @@ publication_pattern:
          (DonHopkins/projects/willwrightshowforfood/green-room/). Never committed here.
   scrub_from_public: [money, leverage, fundraising, "same boat", monetization, contact logistics, private correspondence]
   choreography: "public proposal -> draft/revise pitch in green room -> send email -> call after they've read -> on yes, upgrade public invite to ACCEPTED showpiece (guest blessing on what's shown)."
-  flagship: "repo-shows/will-wright/invitation.md — the accepted showpiece; template for every invite after."
+  flagship: "repo-shows/will-wright-premiere/invitation.md — the accepted showpiece; template for every invite after."
   superseded_drafts: "If model-suffixed cuts were ever shared publicly, keep them as redirect stubs -> invitation.md; move full text to the green room."
 
 legacy_mapping:

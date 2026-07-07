@@ -50,6 +50,6 @@ Mirrored from [donhopkins.com/home/images/Sims/](https://www.donhopkins.com/home
 
 ---
 
-↑ [sources](../README.md) · [1996 centerpiece](../1996-04-26-winograd-interfacing-to-microworlds/README.md) · [show](../../../../repo-shows/will-wright/README.md) · [`GLANCE.yml`](GLANCE.yml)
+↑ [sources](../README.md) · [1996 centerpiece](../1996-04-26-winograd-interfacing-to-microworlds/README.md) · [show](../../../../repo-shows/will-wright-premiere/README.md) · [`GLANCE.yml`](GLANCE.yml)
 
 *Raw directory:* [browse files in this folder](./)

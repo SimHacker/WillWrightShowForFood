@@ -1,0 +1,56 @@
+# YouTube Bridge — repo show MOOLLM skill (PRODUCTION DEV TODO)
+# Manage and bridge back and forth between the repo's YAML show network and YouTube.
+
+meta:
+  id: youtube-bridge-skill
+  status: todo
+  type: [moollm_skill, tooling, production]
+  lift: "Dogfood here first, then LIFT into a public MOOLLM skill (lift-pipeline.yml)."
+
+render_pipeline: |
+  Tools that make it VERY EASY to render playlists as full videos with FFMPEG —
+  automatically composing and enhancing layers and tracks: music, closed
+  captions, link overlays, chapters and sections. All configured with YAML JAZZ
+  metadata. Bootstrap: CURSOR runs the utils by hand first, watches what
+  happens, then PLAY-LEARN-LIFT scripts it into a deterministic CLI-driven
+  pipeline — systematize the flow for the show. This is the plywood→mahogany
+  promotion machine (one-minute-movie-sandwich.yml#show_is_a_playlist
+  .promotion_pipeline) — and the answer to the discovery weak link: every
+  render is an individually discoverable video the algorithm CAN surface,
+  carrying its playlist inside it.
+
+what: |
+  A repo show MOOLLM skill for managing and bridging back and forth to YouTube:
+  - SYNC metadata, comments, statistics, and transcripts both ways.
+  - CUT long videos into short clips and mix them back in — linked to their
+    sources, playlists, and the consolidated shows that use them.
+  - RENDER video descriptions and comments with rich link networks: related
+    links, calls to action, what the video is about and why you want to watch
+    it — driving people back into our own content and other people's
+    recommended content.
+  - DIG THE GROOVES: from the YAML storymaker/show/playlist metadata network,
+    write per-playlist previous/next links into every video we control
+    (one-minute-movie-sandwich.yml#show_is_a_playlist.skip_the_needle).
+
+simfaux_lineage: |
+  The architecture has SIMFAUX'S FINGERPRINTS ALL OVER IT — Don's 2006
+  OpenLaszlo interactive character simulator / video mixing demo
+  (https://www.youtube.com/watch?v=gRodlxUZ9SQ · source bundle:
+  ../characters/will-wright/sources/don-youtube-gRodlxUZ9SQ-simfaux/):
+  video clips WRAPPED IN METADATA; tagging + fuzzy scoring + matching driving
+  the SEQUENCING of multiple video streams; simulated characters COMMENTING on
+  the videos (the Interval Bounce / David Levitt lineage); graphs, statistics,
+  scaling word clouds of hot keywords; interactive chat simulations — totally
+  PIE MENU DRIVEN. See the line and where it points: the same design,
+  reimplemented on GitHub + YouTube + MOOLLM and tools we create, orchestrated.
+  (The roar engine's tag-matching + fuzzy scoring — one-minute-intense.yml
+  #upload_roars.roar_engine — is the same machinery pointed at audio.)
+
+feeds_on:
+  - ../characters/will-wright/sources/don-youtube-playlist-index/INDEX.yml   # the partial index; full channel export is its todo
+  - one-minute-movie-sandwich.yml    # playlist/show grammar this skill automates
+  - storymaker-stories-and-scenes.yml
+
+ties:
+  - lift-pipeline.yml
+  - participation-funnels.yml        # funnel links belong in every rendered description

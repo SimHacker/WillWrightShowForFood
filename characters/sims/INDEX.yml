@@ -16,7 +16,7 @@ roster:
     signifier: "👗🔥👁️🌙👻"
     tagline: "Present in the data. Absent from the world."
     gallery_opening: always
-    audience_fork: ../../repo-shows/will-wright/audience/fictional-bella-goth/
+    audience_fork: ../../repo-shows/will-wright-premiere/audience/fictional-bella-goth/
   mortimer-goth:
     path: mortimer-goth/
     signifier: "🔭🏚️💔📚🔬"
@@ -29,7 +29,7 @@ roster:
     tagline: "Negative aura object — always at gallery openings"
     gallery_opening: always
     balcony: balcony_left
-    audience_fork: ../../repo-shows/will-wright/audience/fictional-tragic-clown/
+    audience_fork: ../../repo-shows/will-wright-premiere/audience/fictional-tragic-clown/
 
 soul_stack:
   per_character: CHARACTER.yml

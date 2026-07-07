@@ -74,7 +74,7 @@ see_also:
   across:
     - { path: ../../don-hopkins/career/simcity-lineage.yml, why: "Timeline girder" }
     - { path: ../../terry-winograd/media/cs547-ARCHIVE.md, why: "Seminar catalog" }
-    - { path: ../../../../repo-shows/will-wright/GLANCE.yml, why: "Flagship show" }
+    - { path: ../../../../repo-shows/will-wright-premiere/GLANCE.yml, why: "Flagship show" }
   deep:
     - { path: README.md, why: "Complete slug index" }
     - { path: README.md#complete-slug-index, why: "Complete slug tables" }

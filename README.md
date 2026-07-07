@@ -10,7 +10,7 @@ this **GitHub repo** is the **first public point of origin** (tip of the pyramid
 curb appeal up top, **brutalist GitHub underneath** (yaml girders, verify CI, real monorepo).
 → [**Vision**](process/VISION.md) ([sections](process/VISION.md#on-this-page)) · [yaml girder](process/vision-and-ambition.yml) · [Crazy Idea Jam](process/CRAZY-IDEA-JAM.md)
 
-[![The User Interface Flower Child](characters/will-wright/media/DonHopkinsSimsCreditsIcon.jpg)](repo-shows/will-wright/README.md)
+[![The User Interface Flower Child](characters/will-wright/media/DonHopkinsSimsCreditsIcon.jpg)](repo-shows/will-wright-premiere/README.md)
 
 ## The cream (start here)
 
@@ -22,10 +22,10 @@ curb appeal up top, **brutalist GitHub underneath** (yaml girders, verify CI, re
 | **Repo Show format** | [`process/FORMAT.md`](process/FORMAT.md) · [`process/repo-show-format.yml`](process/repo-show-format.yml) · [**TicketPR**](process/ticket-pr.yml) |
 | **ShowMaker network** | [`process/showmaker-network.yml`](process/showmaker-network.yml) |
 | **Setup (dev)** | [**SETUP.md**](SETUP.md) |
-| **The show pitch** | [`repo-shows/will-wright/README.md`](repo-shows/will-wright/README.md) · [**Will: browse any order**](repo-shows/will-wright/BROWSE.md) |
-| **🤖 Slats / RoboResurrection** | [`slats-reincarnation.yml`](repo-shows/will-wright/slats-reincarnation.yml) · [`characters/robots/slats/`](characters/robots/slats/README.md) |
+| **The show pitch** | [`repo-shows/will-wright-premiere/README.md`](repo-shows/will-wright-premiere/README.md) · [**Will: browse any order**](repo-shows/will-wright-premiere/BROWSE.md) |
+| **🤖 Slats / RoboResurrection** | [`slats-reincarnation.yml`](repo-shows/will-wright-premiere/slats-reincarnation.yml) · [`characters/robots/slats/`](characters/robots/slats/README.md) |
 | **1996 Winograd talk** (centerpiece) | [`characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/`](characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) |
-| **Will — accepted invitation** | [`characters/will-wright/invitation.md`](characters/will-wright/invitation.md) · [**BROWSE any order**](repo-shows/will-wright/BROWSE.md) |
+| **Will — accepted invitation** | [`characters/will-wright/invitation.md`](characters/will-wright/invitation.md) · [**BROWSE any order**](repo-shows/will-wright-premiere/BROWSE.md) |
 | **Guest directories** | [`characters/`](characters/README.md) · [`characters/README.md`](characters/README.md) |
 | **Portrayal standards** | [`schemas/portrayal-standards.yml`](schemas/portrayal-standards.yml) |
 | **Live repo policy** | [`process/live-repo.yml`](process/live-repo.yml) |
@@ -82,7 +82,7 @@ live in **Twitch and YouTube chat** — and **Don Philahue** surfaces the good o
 
 **Want to attend live?** Submit a **TicketPR** — a pun on TicketMaster where **Master ⇒ PR**
 (pull request): free, public, in git at
-[`repo-shows/<show>/audience/<your-github-username>/`](repo-shows/will-wright/audience/README.md) with
+[`repo-shows/<show>/audience/<your-github-username>/`](repo-shows/will-wright-premiere/audience/README.md) with
 `questions.yml` (see [`process/ticket-pr.yml`](process/ticket-pr.yml)). Easier paths: comment on
 the HN announcement or [open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues).
 A TicketPR is the high-value signal — your questions visible to the guest **before** they even
@@ -162,7 +162,7 @@ participants won't; that's fine.
 **[Open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues)** or submit a PR.
 
 **Want a seat at the live show?** Read [**TicketPR**](process/ticket-pr.yml) — fork, add
-`repo-shows/will-wright/audience/<your-github-username>/questions.yml`, pull request. Free;
+`repo-shows/will-wright-premiere/audience/<your-github-username>/questions.yml`, pull request. Free;
 not TicketMaster.
 
 Platforms, archives, publishers, production shops: read [**VISION.md**](process/VISION.md) first —

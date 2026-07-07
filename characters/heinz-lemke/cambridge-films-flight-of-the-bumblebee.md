@@ -7,7 +7,7 @@ films — and why that made Don's *Flight of the PIXIE* edit possible.
 
 ## The chain
 
-1. **Bill Buxton's dead end (2008–2019)** — Dave Fleck (`dfleck@computer.org`) asked Don about PIXIE; Don connected him to Buxton, who said he had references and promised scans + digitized film to both. Buxton sent notes to Fleck, not Don; the film stayed inaccessible for more than a decade.
+1. **Bill Buxton's dead end (2008–2019)** — Dave Fleck (`[email redacted]`) asked Don about PIXIE; Don connected him to Buxton, who said he had references and promised scans + digitized film to both. Buxton sent notes to Fleck, not Don; the film stayed inaccessible for more than a decade.
 2. **Don goes direct to Cambridge (2019)** — Reference ticket `#91692` / `#43348`. Don contacted **David Chapman**, Reference Department, Cambridge University Library (`reference@lib.cam.ac.uk`).
 3. **Chapman's detective work** — Chapman traced the films through the Computing Laboratory Rainbow group (copies in a member's office), St John's College biographical librarians (William Newman status), and the lab's own librarian. He coordinated digitisation via the University Libraries Digital Content Unit. Holdups through May–July 2019; films published July 2019.
 4. **What came online** — Two PIXIE demonstration films (1969, Southampton CAD Conference paper accompaniment) plus scanned paper, at [cl.cam.ac.uk/library/archives.html](https://www.cl.cam.ac.uk/library/archives.html).

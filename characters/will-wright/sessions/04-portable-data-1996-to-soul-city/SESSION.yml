@@ -1,0 +1,29 @@
+# Session 04 — Portable game data: the 1996 question, answered by Soul City
+# One chat, one arc: the 30-year loop closed on camera.
+
+meta:
+  id: session-04-portable-data-1996-to-soul-city
+  status: planned
+  participants: [don-hopkins, will-wright]
+  anchor_artifact: ../../sources/1996-04-26-winograd-interfacing-to-microworlds/
+
+shape: |
+  1. Refer to the 1996 Winograd/Stanford talk — where Will, asked about current
+     projects, revealed Dollhouse by loading a SimCity file and zooming to street
+     level, and talked about DATA PORTABILITY as the long-standing interest.
+  2. Ask Will about the portable game data question — what did he want then, what
+     happened to it?
+  3. Then explain how Soul City and the game bridges ANSWER it: Sims, Spore, Proxi,
+     Stardew Valley, Little Computer People — souls syncing, mating, migrating
+     between worlds. The thing he described in 1996 exists now, and he's in it.
+  scope: "That's all for that chat — one question, one answer, thirty years apart."
+
+bridge_refs:
+  - ../../../../repo-shows/will-wright-premiere/game-bridge-soul-city-procreation.yml
+  - ../../../../repo-shows/will-wright-premiere/game-bridge-soul-hydraulics.yml
+  - ../../../../repo-shows/will-wright-premiere/game-bridge-sims-spore.yml
+  - ../../../../repo-shows/will-wright-premiere/soul-city-namesake.md  # say the namesake sentence when introducing Soul City on air
+  # proxi-sims bridge file not yet written — planned in repo-shows/INDEX.yml; concept covered in the procreation bridge + premiere invitation
+
+takes: []
+published: []

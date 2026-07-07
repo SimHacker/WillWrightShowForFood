@@ -64,7 +64,7 @@ see_also:
   - { path: process/for-bots.yml, why: "Bot reading thread girder" }
   - { path: ENTRYWAYS.md, why: "Front door playlists — pick your interest" }
   - { path: process/entryways.yml, why: "Ordered sequences yaml girder" }
-  - { path: repo-shows/will-wright/BROWSE.md, why: "Will guest landing" }
+  - { path: repo-shows/will-wright-premiere/BROWSE.md, why: "Will guest landing" }
   - { path: process/cross-links.yml, why: "Thematic trails graph" }
   - { path: repo-shows/INDEX.yml, why: "All show seeds and plants" }
   - { path: characters/README.md, why: "Guest directories — browse the tree; each slug is a room" }

@@ -8,7 +8,7 @@ Paulette Dropinsky (Sims Internet Museum Project) asks Don about steering commit
 
 ---
 
-↑ [sources](../README.md) · [show](../../../repo-shows/will-wright/README.md) · [portrayal](../../README.md)
+↑ [sources](../README.md) · [show](../../../repo-shows/will-wright-premiere/README.md) · [portrayal](../../README.md)
 
 *Raw directory:* [browse files in this folder](./)
 

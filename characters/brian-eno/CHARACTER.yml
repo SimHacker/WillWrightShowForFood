@@ -22,7 +22,7 @@ invitation:
   consent: not_yet_asked
   warm_intro_via: will-wright
   warm_intro_when: after_first_guest_weave   # guest-participation-ladder.yml#warm_intro_via_will
-  document: ../../repo-shows/brian-eno/invitation.md   # invite lives in the show dir
+  document: ../../characters/brian-eno/invitation.md   # canonical: invitations live with the character
   show_seed: repo-shows/brian-eno/
 bio:
   born: 1948

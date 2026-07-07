@@ -1,7 +1,7 @@
 # Don → Michael McGuffin — visual programming lineage (8 Oct 2022)
 
 **From:** Don Hopkins \<don@donhopkins.com\>  
-**To:** Michael McGuffin \<michael.mcguffin@gmail.com\>  
+**To:** Michael McGuffin \<[email redacted]\>  
 **Subject:** Re: CAM-6, pie menus, info visualization, etc  
 **Date:** 8 October 2022
 

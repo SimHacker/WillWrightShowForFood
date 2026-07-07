@@ -2,7 +2,7 @@
 
 This directory is a **walkable bouquet** — filenames advertise the topic. Start anywhere interesting; follow links into [`career/`](career/INDEX.yml) YAML backbone or [`talks/`](talks/README.md) / [`writing/`](writing/README.md).
 
-**Sniff:** [`CARD.md`](CARD.md) · [`ideas.md`](ideas.md) · [`about-host.md`](about-host.md) · [`sync-sources.yml`](sync-sources.yml)
+**Sniff:** [`CARD.md`](CARD.md) · [`ideas.md`](ideas.md) · [`about-host.md`](about-host.md) · [`hire-me.md`](hire-me.md) ← **available for hire (2026)** · [`sync-sources.yml`](sync-sources.yml)
 
 **Sibling repos:** [MicropolisCore index](micropoliscore-design-docs-packages-code-content.md) · [Yoot Tower + Alan Kay interview](yoot-tower-open-source-and-alan-kay-interview.md)
 

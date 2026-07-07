@@ -1,6 +1,6 @@
 # Chuck Blanchard — Body Electric dev system & screenshots (Feb 2020)
 
-**From:** Chuck Blanchard \<chuck@chuckbl.com\>  
+**From:** Chuck Blanchard \<[email redacted]\>  
 **To:** Don Hopkins  
 **Date:** 17 February 2020  
 **Subject:** Re: Body Electric / Bounce / Visual Programming Languages  

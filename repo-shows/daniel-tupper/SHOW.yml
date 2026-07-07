@@ -1,0 +1,44 @@
+# SHOW — Daniel Tupper — FreeTA, SWRS & the pyramid of players
+# Planted seed. Inherits from the SHOW skill (/skills/repo-show).
+
+show:
+  id: daniel-tupper
+  title: "A Repo Show with Daniel Tupper — City Dreams & the Tool-Maker Climb"
+  type: real
+  host: Don Hopkins
+  guests: ["Daniel Tupper"]
+  character: characters/daniel-tupper/
+  topic: |
+    More than a decade of correspondence — FreeTA (open-world NYC, no missions), SWRSgaming,
+    engine ambition, Sims lore, and Transmogrifier modernization — as another face of Will
+    Wright's pyramid of players (fan → builder → tool maker).
+  status: draft
+  consent: not_yet_asked
+
+why_him:
+  longtime: "Ten+ years of real correspondence — not a cold invite; the repo grows from threads already happening."
+  pyramid: "Parallel to Jeff Adkins (SimObliterator) and Heather/Steve Alvey (SimFreaks/SimSlice) — Daniel's climb is city-scale dreams + pipeline tools."
+  artifacts: "Every answer spawns files: freeta.yml, swrs-gaming.yml, lore Q&A with Will, TMOG/browser beats."
+
+dream_segments:
+  - "FreeTA then and now — GTA without missions, full New York; engine choice (own vs Unity/WebGL/Godot)."
+  - "SWRSgaming — naming the studio; founders' initials; WPS as pattern."
+  - "The three-stories question — fan lore clinic; Will answers on camera if Daniel wants."
+  - "Fan → tool maker — Daniel's offer on Transmogrifier modernization meets Jeff's parsers and Don's browser pipeline."
+  - "Old Maxis pics — visual quarry; what epic looked like to a fan in 2013."
+
+format:
+  live: false
+  time_shifted: true
+  note: |
+    Low-pressure: solo video, one-on-one with Don, or keep corresponding — camera optional.
+    Friendship not contingent on appearance.
+
+ties_to:
+  - ../../characters/daniel-tupper/
+  - ../../characters/don-hopkins/
+  - ../../characters/will-wright/
+  - ../../characters/jeff-adkins/
+  - ../../characters/heather-alvey/
+  - ../../characters/steve-alvey/
+  - ../../catalogs/sims1-community-landscape.yml

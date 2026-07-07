@@ -17,7 +17,7 @@ Built with SimFreaks, SimSlice, SimBabes, and Don when **marriage equality was s
 
 Not nostalgia — **agitprop of inclusion and family play**, opposite the Dumbold's institutional-failure satire. Same dialog stack; opposite emotional pole.
 
-See [INTRO-NARRATIVE.md](../../../repo-shows/will-wright/INTRO-NARRATIVE.md).
+See [INTRO-NARRATIVE.md](../../../repo-shows/will-wright-premiere/INTRO-NARRATIVE.md).
 
 ## Soul of The Sims — where the rules started
 
@@ -43,4 +43,4 @@ Ask Bogost to react to:
 
 Related: [sims-series-micropolis-publishing-vision.md](sims-series-micropolis-publishing-vision.md) · [inclusivity-paper-draft.md](inclusivity-paper-draft.md)
 
-Show seed: [ian-bogost-procedural-rhetoric.yml](../../../repo-shows/will-wright/ian-bogost-procedural-rhetoric/SHOW.yml)
+Show seed: [ian-bogost-procedural-rhetoric.yml](../../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml)

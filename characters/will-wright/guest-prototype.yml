@@ -40,7 +40,7 @@ respect_time:
     - "Re-pitch after yes"
 
 show_shape:
-  show: repo-shows/will-wright/
+  show: repo-shows/will-wright-premiere/
   tier: ongoing_one_on_one   # couple-and-solo-shows.yml
   episodes: "Many passes on one show — data portability, Sims post-mortem, Proxi, Slats, whatever opens"
   special_tier: "Live Twitch / group reading only if Will wants it — not the default ask"
@@ -120,7 +120,7 @@ research_bundle:
   will_already_has:
     - characters/will-wright/sources/   # dozens of article bundles, YouTube indexes
     - characters/will-wright/media/
-    - repo-shows/will-wright/audience/
+    - repo-shows/will-wright-premiere/audience/
   private_first: "../../process/live-repo.yml — DonHopkins authoritative; WWSFF is live bud"
 
 video_walkthrough:
@@ -159,7 +159,7 @@ see_also:
   - invitation.md
   - sources/README.md
   - ../../process/live-repo.yml
-  - ../../repo-shows/will-wright/SHOW.yml
+  - ../../repo-shows/will-wright-premiere/SHOW.yml
   - ../../process/moollm-stage.yml
   - ../../process/couple-and-solo-shows.yml
   - ../../process/guest-participation-ladder.yml

@@ -1,7 +1,7 @@
 # Sugar development ideas — HyperLook, NeWS, visual programming (Dec 2006)
 
 **From:** Don Hopkins \<dhopkins@DonHopkins.com\>  
-**To:** sugar@laptop.org, Walter Bender, gnu@toad.com  
+**To:** sugar@laptop.org, Walter Bender, [email redacted]  
 **Date:** 28 December 2006  
 **Context:** SimCity running on OLPC beta laptop; EA open-source negotiations; Sugar/Python/GTK pivot.
 

@@ -1,5 +1,5 @@
 ---
-status: draft
+status: invited  # sent 2026-07; OOO Black Forest early July
 character_id: heinz-lemke
 public: true
 consent: not_yet_asked

@@ -2,7 +2,7 @@
 
 *From Don Hopkins archival prompts (`big-prompts.txt`, ~2008). Context for the SimFreaks CMS / Original Sims work.*
 
-**Full narration** (Micropolis + Repo Shows + wedding playset + agitprop framing): [**INTRO-NARRATIVE.md**](../../../repo-shows/will-wright/INTRO-NARRATIVE.md)
+**Full narration** (Micropolis + Repo Shows + wedding playset + agitprop framing): [**INTRO-NARRATIVE.md**](../../../repo-shows/will-wright-premiere/INTRO-NARRATIVE.md)
 
 ---
 
@@ -20,7 +20,7 @@ The content management system Don was making for Heather first — real life int
 
 The unreleased **SimProv Wedding Playset** (Don, Heather, Steve, SimBabes, Donna) is the magnum opus in that drawer: Crowd Sitter, Cupid, Buddha, Hope Chest, premium craft objects — composable tools for staging a wedding together. It was built when marriage equality was still a fight in the real world. Republishing it for the Steam Sims 1 generation — families who grew up on The Sims and now play with their kids — is deliberate: proof that inclusive family play was always the point.
 
-See [INTRO-NARRATIVE.md](../../../repo-shows/will-wright/INTRO-NARRATIVE.md) and [sims-series-micropolis-publishing-vision.md](sims-series-micropolis-publishing-vision.md).
+See [INTRO-NARRATIVE.md](../../../repo-shows/will-wright-premiere/INTRO-NARRATIVE.md) and [sims-series-micropolis-publishing-vision.md](sims-series-micropolis-publishing-vision.md).
 
 ## Related
 

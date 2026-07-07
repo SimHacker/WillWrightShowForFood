@@ -32,7 +32,7 @@ jobs:
     what: |
       Guide sections promote Repo Show Class Repo Shows — where Legacy Collection buyers find
       the living conversation, archives, and follow-through code.
-    flagship: ../../repo-shows/will-wright/
+    flagship: ../../repo-shows/will-wright-premiere/
     network: ../../repo-shows/INDEX.yml
     surfaces:
       - "Episode hub — Will kickoff, topical shows, guest index"

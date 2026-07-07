@@ -21,7 +21,7 @@ Micropolis Home rebuilds the Sims 1 content-creation stack as a **web-native pla
 Four jobs the guides cover:
 
 1. **Create · publish · share** — web tools + federated UCC (above)
-2. **Repo Shows channel** — discover and promote Repo Show Class episodes ([Will Wright flagship](../../repo-shows/will-wright/), guest network, live/VOD, GitHub, TicketPR)
+2. **Repo Shows channel** — discover and promote Repo Show Class episodes ([Will Wright flagship](../../repo-shows/will-wright-premiere/), guest network, live/VOD, GitHub, TicketPR)
 3. **Sims & bridges** — show archive for The Sims history + Simopolis bridge episodes (other games)
 4. **Requires Sims on Steam** — drives Legacy Collection sales; EA-friendly fan-guide disclaimer
 
@@ -49,7 +49,7 @@ Each keeps its brand and storefront; Micropolis Home is the shared rails:
 
 Don's OpenLaszlo SimFreaks CMS was built for love, not rent — life interrupted before it shipped. The Steam Sims 1 window, federation tooling, and the Alveys' permission to republish make **now** the moment to finish the job.
 
-See [INTRO-NARRATIVE.md](../../repo-shows/will-wright/INTRO-NARRATIVE.md) and [family manifesto](../../characters/will-wright/media/sims-series-family-manifesto.md).
+See [INTRO-NARRATIVE.md](../../repo-shows/will-wright-premiere/INTRO-NARRATIVE.md) and [family manifesto](../../characters/will-wright/media/sims-series-family-manifesto.md).
 
 ## Proof it already worked
 

@@ -115,7 +115,7 @@ have a local master. Same pipeline as Winograd: extract → **captions** → AE 
 
 ## Navigation
 
-↑ [sources](../README.md) · [Will show](../../../../repo-shows/will-wright/README.md) ·
+↑ [sources](../README.md) · [Will show](../../../../repo-shows/will-wright-premiere/README.md) ·
 [Eno show](../../../../repo-shows/brian-eno/README.md) · [Scott Draves](../../../../characters/scott-draves/README.md)
 
 | Sibling | → |

@@ -16,14 +16,36 @@ one_line: |
   shows feel like they're filmed in a real home — because they are.
 
 the_cast:
-  note: "Don to fill in names, photos, and personalities. One entry per cat; Napoleon seeded below."
+  note: "Don to fill in names, photos, and personalities. One entry per cat; Napoleon + Nelson seeded."
   napoleon:
     status: in_memoriam           # the cat we lost
     treatment: |
       A gentle recurring tribute, not a sad beat. Napoleon gets to keep being a star from the archive:
       old photos become talking-cat-face faceballs; a warm little "and here's Napoleon" cameo. Handle
       with affection and a light touch — a beloved regular who still shows up, not a grief segment.
+      Honor by TRANSFORMATION (the in-memoriam ethos): his published clips keep joining new playlists —
+      the archive star who never stops working.
     media: "Pull the best archive photos/videos into ./media/cats/napoleon/ (Don to select)."
+    published_clips:   # already on youtube.com/@a2deh — playlist-ready as-is
+      - "Napoleon Make Biscuits (1:26)"
+      - "Napoleon and Nelson Licking (4:28)"
+      - "Low Contrast Nelson Licks High Contrast Napoleon's Head (0:34)"
+      - "Head Licking + Love Bite (0:53)"
+    memorial: ../../repo-shows/ideas/traditions/in-memoriam.yml#napoleon_the_cat
+  nelson:
+    status: current
+    personality: "EXTREMELY LOUD (HE IS LOUD!!!) — the roar drive's first example contributor"
+    signature_bit: "Nelson's roar seeds the upload-ROARS!!! drive as a blipvert: if a cat can submit, so can you (../../process/one-minute-intense.yml#upload_roars.example_blipverts)."
+    media: ./media/cats/nelson/
+    published_clips:   # already on youtube.com/@a2deh — blipvert-shaped and proven
+      - "Nelson Spins Pip While Emacs Watches (2:57, 1.8K views)"
+      - "Dangerous Nelson Cocoon (0:22)"
+      - "Perfectly Safe Not A Trap (0:23)"
+      - "Puss In Boots (0:38)"
+      - "Nelson Licks His Fur (3:32)"
+      - "This Is Why We Can't Have Nice Strings (1:04)"
+      - "Furniture Vandal (1:10)"
+      - "Maine Coons Meow at Amsterdam Birds to Westerkerk Clarrion (0:25)"
   # others:
   #   <name>: { status: current, personality: "...", signature_bit: "...", media: ./media/cats/<name>/ }
 
@@ -63,6 +85,11 @@ production:
   videos: "Cut interstitials + keep the good interruptions; short is good (attention atoms)."
   edit_pipeline: "Same cut/re-cut flow as everything else — cheap to splice a cat bump into any Director's Cut."
   where: "Assets under ./media/cats/<name>/; presets can live beside the faceball guest puppets."
+  already_live: |
+    A dozen+ cat clips are ALREADY PUBLISHED on youtube.com/@a2deh and blipvert-shaped
+    (0:22–3:32) — no production needed to start dropping them into sandwich playlists
+    (../../process/one-minute-movie-sandwich.yml). The cats are the first proof of the
+    whole granular-clips strategy: shot casually, published cheaply, reusable forever.
 
 see_also:
   - ./README.md

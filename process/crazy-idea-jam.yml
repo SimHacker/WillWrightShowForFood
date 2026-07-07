@@ -93,7 +93,7 @@ ideas:
       says shit, gets interviewed, gets reprogrammed, gets interviewed AGAIN. The diff is the
       drama. Do it on EASTER SUNDAY. Start a cult. "It seemed to be the thing to do at the time."
     robopoetry_ceremony: "Interpret Slats' recorded voice-synth stream-of-thought as lyrical robopoetry and sing along — a seriously, respectfully presented religious ceremony with Stupid Fun Club irreverence."
-    ties: [../repo-shows/will-wright/slats-reincarnation.yml, ../characters/robots/slats/CARD.yml]
+    ties: [../repo-shows/will-wright-premiere/slats-reincarnation.yml, ../characters/robots/slats/CARD.yml]
 
   phoneloper:
     emoji: "🗣️"
@@ -114,7 +114,7 @@ ideas:
       Phoneloper happens to ride on Flite for its diphones, but it's an editor, not Slats' voice.
     video: "https://www.youtube.com/watch?v=qy5cqV8ypIs"
     status: "Source releasable — Don will add it to this monorepo soon"
-    ties: [../characters/don-hopkins/career/stupid-fun-club.yml, ../repo-shows/will-wright/slats-reincarnation.yml]
+    ties: [../characters/don-hopkins/career/stupid-fun-club.yml, ../repo-shows/will-wright-premiere/slats-reincarnation.yml]
 
   amsterdam_coffeeshops_app:
     emoji: "🍃"
@@ -391,7 +391,7 @@ ideas:
       cow JPEG is duplicable. Berkeley coda: [Cows In Berkeley? Moooo](https://www.youtube.com/watch?v=10JSPdTDFsI)
       — Mediterraneum Cafe, shirtless horse up Telegraph, deadpan "that's a cow." Don: "It's a cow."
       *It wasn't very fun before.*
-    ties: [../repo-shows/ideas/gags/curiosity-cow-cube.yml, ../repo-shows/ideas/gags/how-to-deconstruct-the-cube.yml, moola.yml, ../repo-shows/will-wright/ian-bogost-procedural-rhetoric/SHOW.yml]
+    ties: [../repo-shows/ideas/gags/curiosity-cow-cube.yml, ../repo-shows/ideas/gags/how-to-deconstruct-the-cube.yml, moola.yml, ../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml]
 
   how_to_deconstruct_the_cube:
     emoji: "📖🚀🐄"
@@ -444,7 +444,7 @@ ideas:
       Reframes "AI vs people" as "people AND AI in a loop" — authorship neither lost to nor withheld
       from the machine, continuously RE-STEERED by whoever jumps in. "Repossess the government,
       information, and AI" as a revolutionary cry — a swag theme and a social-welfare campaign.
-    ties: [../repo-shows/ideas/themes/the-riff-loop.yml, ../designs/chatgpt-research-review/framing/FRAMING-REPOSHOW-AS-NEW-MEDIUM.md]
+    ties: [../repo-shows/ideas/themes/the-riff-loop.yml, VISION.md]
 
   pyramid_swag_and_apex_toolmakers:
     emoji: "👕🔺"
@@ -473,7 +473,7 @@ graduation:
 
 see_also:
   - { path: cross-links.yml#stupid_fun_forward, why: "The wacky trail that wanders these ideas" }
-  - { path: ../repo-shows/will-wright/slats-reincarnation.yml, why: "RoboResurrection quest in full" }
+  - { path: ../repo-shows/will-wright-premiere/slats-reincarnation.yml, why: "RoboResurrection quest in full" }
   - { path: ../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml, why: "Drain Hell soul/zombie bridge" }
   - { path: ../repo-shows/david-ungar-self-moollm.yml, why: "Self × MOOLLM seed" }
   - { path: VISION.md, why: "Serious long arc — readable navigation layer" }

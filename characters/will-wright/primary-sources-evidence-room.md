@@ -15,7 +15,7 @@ in that README.
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------ |
 | **Evidence room README**         | `[sources/README.md](sources/README.md)`                 | Navigation spine — start here for any slug             |
 | **Will Wright portrayal**        | `[README.md](README.md)`                                 | Guest hub                                              |
-| **Flagship Repo Show**           | `[../../repo-shows/will-wright/README.md](../../repo-shows/will-wright/README.md)`                                 | Episode room — orbits the sources                      |
+| **Flagship Repo Show**           | `[../../repo-shows/will-wright-premiere/README.md](../../repo-shows/will-wright-premiere/README.md)`                                 | Episode room — orbits the sources                      |
 | **Terry Winograd CS547 archive** | `[../../characters/terry-winograd/media/cs547-ARCHIVE.md](../../characters/terry-winograd/media/cs547-ARCHIVE.md)` | Full Stanford talk catalog (cross-linked from sources) |
 
 

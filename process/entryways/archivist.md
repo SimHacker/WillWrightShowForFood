@@ -24,7 +24,7 @@ This repo is a **public bud** grafted from a private archive: one-way export, ho
 | 10 | [**Browse characters**](../../characters/README.md) | Directories accumulate artifacts — self-edit or email Don with text, attachments, URLs |
 | 11 | [**Vision — lineage & Long Now**](../VISION.md#long-now-and-later) · [girder](../vision-and-ambition.yml) | Long arc — design-in-public lineage |
 
-**Markup view:** [**VISION.md**](../VISION.md) ([navigate](../VISION.md#navigate)) · **Show context:** [will-wright SHOW.yml](../../repo-shows/will-wright/SHOW.yml) (provenance notes in yaml)
+**Markup view:** [**VISION.md**](../VISION.md) ([navigate](../VISION.md#navigate)) · **Show context:** [will-wright SHOW.yml](../../repo-shows/will-wright-premiere/SHOW.yml) (provenance notes in yaml)
 
 ---
 

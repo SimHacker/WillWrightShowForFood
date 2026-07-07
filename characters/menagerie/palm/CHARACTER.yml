@@ -102,7 +102,7 @@ wwsff_overlay:
     beat: "Watches the § auction in emoji — asks what bidding feels like when your body is YAML"
     speaks: emoji_soul_tongue
   audience_fork:
-    path: repo-shows/will-wright/audience/palm/
+    path: repo-shows/will-wright-premiere/audience/palm/
 
 relationships:
   don-hopkins:

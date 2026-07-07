@@ -39,7 +39,7 @@ Suggested layout (matches Don Hopkins dev machine):
 ## Quick start (content only — no Node/Python)
 
 1. Open https://github.com/SimHacker/WillWrightShowForFood
-2. Start at [README.md](README.md) → [repo-shows/will-wright/](repo-shows/will-wright/README.md)
+2. Start at [README.md](README.md) → [repo-shows/will-wright-premiere/](repo-shows/will-wright-premiere/README.md)
 
 No account required.
 

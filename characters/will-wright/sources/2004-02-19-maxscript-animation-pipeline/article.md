@@ -7,7 +7,7 @@
 
 ---
 
-From: johnw@lyric.com (John Wainwright)
+From: [email redacted] (John Wainwright)
 Sent: Tuesday, May 05, 1998 1:31 PM
 To: dhopkins@maxis.com (Don Hopkins)
 Subject: CGDC talk

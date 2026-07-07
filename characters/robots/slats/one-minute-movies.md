@@ -41,7 +41,7 @@ could perform the robot live, in real time:
 
 That hybrid — fast canned reactions on radial menus *plus* real-time improv typing — is exactly the
 playground the **RoboResurrection** wants to rebuild and play with again
-([`slats-reincarnation`](../../repo-shows/will-wright/slats-reincarnation.yml)).
+([`slats-reincarnation`](../../repo-shows/will-wright-premiere/slats-reincarnation.yml)).
 
 ## The films
 
@@ -49,6 +49,28 @@ playground the **RoboResurrection** wants to rebuild and play with again
 |------|-------|-----------|
 | **Empathy** | Robot empathy — a fallen robot pleading for human assistance | [`one-minute-movie-empathy.md`](one-minute-movie-empathy.md) |
 | **Servitude** | Robot servitude — Slats the waiter, desperate for a perfect rating | [`one-minute-movie-servitude.md`](one-minute-movie-servitude.md) |
+
+## Built for the break (the anatomy of a 1MM)
+
+The commercial timing is **built into the films** — they aren't just standalone `:60` spots that sat
+*between* ads, they're structured to be **split around one**:
+
+1. **Production slate card** at the head — identifies the clip for production, **not for broadcast**.
+   Slice it off.
+2. **PART ONE (:30)** — grabs your attention, sets the premise...
+3. **...then a pause** — that's where the commercial goes —
+4. **then PART TWO (:30)** — the payoff after the break.
+
+Hook up front, commercial, payoff behind: part one buys the ad its audience. Natural cleavage
+points: **these are the buns, without the burgers inserted.** Using them split around an ad is
+using them **exactly as they were meant** — see the 1MM Sandwich format
+([`../../../process/one-minute-movie-sandwich.yml`](../../../process/one-minute-movie-sandwich.yml)),
+which supplies its own burgers: fake commercials on each film's concept.
+
+**Measured** (Don, 2026-07-07): both films split clean at **30/30** — *Empathy* and *Servitude*
+alike. So that's the house standard: **two slices of bread of the same thickness.** And *Empathy*'s
+closing line — the passerby's *"just hang in there, okay?"* — is excellent standalone
+micro-content: an affirming-faith blipvert. A human reassuring a broken robot, six words, complete.
 
 ## Credits (both films)
 

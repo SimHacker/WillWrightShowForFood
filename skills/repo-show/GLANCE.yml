@@ -19,7 +19,7 @@ wwsff_anchors:
   shows: ../../repo-shows/
   characters: ../../characters/
   harvest: ../
-  flagship: ../../repo-shows/will-wright/
+  flagship: ../../repo-shows/will-wright-premiere/
 
 k_lines: [SHOW, REPO-SHOW, RTFR, HOMEFUN, REPO-MAN, SEED, PLANT, HARVEST]
 
@@ -33,7 +33,7 @@ see_also:
   - { path: ../../process/repo-show-branding.yml, why: "Orchestration + branding — rituals, cultural excerpts" }
   - { path: ../../process/FORMAT.md, why: "Generated markup" }
   - { path: ../../repo-shows/README.md, why: "Show collection" }
-  - { path: ../../repo-shows/will-wright/README.md, why: "Flagship" }
+  - { path: ../../repo-shows/will-wright-premiere/README.md, why: "Flagship" }
   - { path: ../../characters/don-hopkins/README.md, why: "Host portrayal" }
   - { path: ../../characters/don-philahue/README.md, why: "Audience wrangler MC" }
   - { path: ../INDEX.yml, why: "Skills harvest registry" }

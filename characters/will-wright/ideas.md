@@ -11,7 +11,7 @@ topic** — so treat this as a menu, not an agenda.*
 The **1996 talk to Terry Winograd's Stanford class** — the "Oh, God…" moment where Will loads a
 SimCity file into **Dollhouse** and previews what becomes The Sims. Everything below can start
 there. ([source bundle](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) ·
-[invitation](../../repo-shows/will-wright/invitation.md))
+[invitation](../../repo-shows/will-wright-premiere/invitation.md))
 
 ## Shared ground
 
@@ -74,7 +74,7 @@ you play, picking up abilities, syncing back. The "why" under data portability.
 ### 8. Reincarnate Slats — RoboResurrection
 The **Stupid Fun Club** robot brain Don programmed (the One Minute Movies: *Servitude*, *Empathy*).
 Read the old code together, revive him, call-in sidekick, reprogram live. Constructionism as
-theater. ([slats-reincarnation.yml](../../repo-shows/will-wright/slats-reincarnation.yml))
+theater. ([slats-reincarnation.yml](../../repo-shows/will-wright-premiere/slats-reincarnation.yml))
 
 ### 9. Spore — the capstone bridge
 Not just creature-data IO, but a clean-room, web-native re-creation of the creature
@@ -99,4 +99,4 @@ but the Winograd demo was when progress became unbelievable.
 - Primary sources map: [`primary-sources-evidence-room.md`](primary-sources-evidence-room.md)
 - 1996 Winograd talk: [source bundle](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) · video https://www.youtube.com/watch?v=nsxoZXaYJSk
 - Long Now *Playing with Time* (Eno + Wright): [source bundle](../../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/README.md) · https://www.youtube.com/watch?v=Dfc-DQorohc
-- Show hub: [`repo-shows/will-wright/`](../../repo-shows/will-wright/README.md) · galleries: [`media/`](media/README.md)
+- Show hub: [`repo-shows/will-wright-premiere/`](../../repo-shows/will-wright-premiere/README.md) · galleries: [`media/`](media/README.md)

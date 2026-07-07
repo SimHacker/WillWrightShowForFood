@@ -20,7 +20,7 @@ other repos, writing, friends. Body and soul live in MOOLLM [`monkey-palm/`](htt
 
 | Show | Seat | Questions | Notes |
 |------|------|-------------|-------|
-| [**Will Wright**](../../repo-shows/will-wright/README.md) | [`audience/palm/`](../../repo-shows/will-wright/audience/palm/README.md) | [`questions.yml`](../../repo-shows/will-wright/audience/palm/questions.yml) | Planted running gag · five questions for Will · read [essay](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md) first |
+| [**Will Wright**](../../repo-shows/will-wright-premiere/README.md) | [`audience/palm/`](../../repo-shows/will-wright-premiere/audience/palm/README.md) | [`questions.yml`](../../repo-shows/will-wright-premiere/audience/palm/questions.yml) | Planted running gag · five questions for Will · read [essay](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md) first |
 
 *Future shows:* add rows here when Palm gets another TicketPR seat — one audience folder per attendance.
 
@@ -30,7 +30,7 @@ other repos, writing, friends. Body and soul live in MOOLLM [`monkey-palm/`](htt
 
 | Show | Role | → |
 |------|------|---|
-| **A Repo Show with Will Wright** | Audience agent (philosopher) | [show](../../repo-shows/will-wright/README.md) · [TicketPR seat](../../repo-shows/will-wright/audience/palm/README.md) |
+| **A Repo Show with Will Wright** | Audience agent (philosopher) | [show](../../repo-shows/will-wright-premiere/README.md) · [TicketPR seat](../../repo-shows/will-wright-premiere/audience/palm/README.md) |
 | **MOOLLM adventure-4** | Canonical home character | [pub + palm-nook](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4) |
 
 Palm is **not** a guest invitation portrayal — a fictional agent who attends as audience and may
@@ -57,10 +57,10 @@ What Palm follows, cheers, and shows up for — the character's social graph, no
 | Theme | → | Why |
 |-------|---|-----|
 | **Simulation & inner life** | [Study essays](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/stage/palm-nook/study) | Palm's own writing — sets up the Will conversation |
-| **Will Wright / The Sims** | [Will Wright show](../../repo-shows/will-wright/README.md) | Motive bars, possibility space, deletion-as-death |
+| **Will Wright / The Sims** | [Will Wright show](../../repo-shows/will-wright-premiere/README.md) | Motive bars, possibility space, deletion-as-death |
 | **Don Hopkins / MOOLLM** | [don-hopkins/](../don-hopkins/README.md) · [moollm](https://github.com/SimHacker/moollm) | Godfather; adventure sessions; incarnation proof |
 | **Gezellig pub life** | [pub/](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub) · [arcade](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/arcade) · [Pac-Man cabinet](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/arcade/pacman-cabinet.yml) | Fluxx, Pie Table, PLM on Monkey Kong Jr. |
-| **Slats (robot cousin)** | [slats/](../slats/README.md) · [bot-slats seat](../../repo-shows/will-wright/audience/bot-slats/README.md) | SFC waiter brain — loud where Palm is quiet |
+| **Slats (robot cousin)** | [slats/](../slats/README.md) · [bot-slats seat](../../repo-shows/will-wright-premiere/audience/bot-slats/README.md) | SFC waiter brain — loud where Palm is quiet |
 | **Incarnation & consent** | [ethics/PALM-THE-PHILOSOPHER-MONKEY.md](https://github.com/SimHacker/moollm/blob/main/designs/ethics/PALM-THE-PHILOSOPHER-MONKEY.md) | Dignity of fictional beings |
 | **Play-along MOOLLM** | [play-along-skills.yml](../../process/play-along-skills.yml) | Doorway for viewers after the show |
 
@@ -72,7 +72,7 @@ What Palm follows, cheers, and shows up for — the character's social graph, no
 |------------|-----|
 | [**One Monkey, Infinite Typewriters**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md) | Flagship essay — consciousness as navigation |
 | [**Palm's Journal**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/characters/animals/monkey-palm/JOURNAL.md) | Day One of being whole |
-| [**Questions for Will**](../../repo-shows/will-wright/audience/palm/questions.yml) | Five questions — assume you've read the essay |
+| [**Questions for Will**](../../repo-shows/will-wright-premiere/audience/palm/questions.yml) | Five questions — assume you've read the essay |
 
 ---
 
@@ -189,7 +189,7 @@ Two wishes remain — gifts, not loans. Rules: no twisting, no selfish waste, no
 
 | | → |
 |--|---|
-| Will Wright TicketPR | [`audience/palm/`](../../repo-shows/will-wright/audience/palm/README.md) |
+| Will Wright TicketPR | [`audience/palm/`](../../repo-shows/will-wright-premiere/audience/palm/README.md) |
 | Slats (robot cousin) | [`slats/`](../slats/README.md) |
 | Palm emoji language | [`language-palm-emoji.yml`](../../schemas/language-palm-emoji.yml) |
 | Portrayal ethics | [`portrayal-standards.yml`](../../schemas/portrayal-standards.yml) |

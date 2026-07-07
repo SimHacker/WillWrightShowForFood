@@ -1,0 +1,30 @@
+# SWRSgaming — Daniel Tupper's studio name (seed)
+
+meta:
+  id: swrs-gaming
+  author: daniel-tupper
+  status: seed
+  first_mentioned: 2013-08-11
+  source: ../sources/2013-08-01-facebook-messenger-excerpt.md
+
+naming: |
+  **SWRSgaming** — studio name built from the **founders' initials** (Daniel asked Don what Don
+  thought of the name and meaning). Don compared it to a friend's **WPS.com — World Power Systems**:
+  "Makes sense! Easy to remember."
+
+pattern: |
+  Initialism studio names as world-building — opaque until you know the founders, then obvious.
+  Same family as Maxis (McDonough + Willis? — actually Maxis has its own origin) and WPS.
+
+show_use: |
+  Fake-commercial or blipvert slot: "SWRSgaming presents..." — Daniel's fictional studio branding
+  as real repo files. Grows with logo, mission statement, and project list (FreeTA as flagship).
+
+spawn_artifacts:
+  - "Logo / wordmark when Daniel shares"
+  - "Founders' story — public only what Daniel wants on air"
+  - "Cross-link FreeTA as first title"
+
+see_also:
+  - freeta.yml
+  - ../CHARACTER.yml

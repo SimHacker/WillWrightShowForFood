@@ -14,4 +14,4 @@ consent:
   default: not_yet_asked
 
 fields:
-  show_seed: { type: path, example: "repo-shows/will-wright/" }
+  show_seed: { type: path, example: "repo-shows/will-wright-premiere/" }

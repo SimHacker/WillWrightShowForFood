@@ -1,0 +1,59 @@
+# Session 02 — Souls & the three Palm readings
+# Palm (voiced by Don) explains himself; then Don & Will discuss souls.
+
+meta:
+  id: session-02-souls-and-palm-readings
+  show: will-wright-premiere
+  status: palm_readings_recorded   # three Palm readings recorded on YouTube 2026-07-06; chat with Will not yet
+  participants: [don-hopkins, will-wright, palm]
+  character_refs:
+    - ../../../palm/
+    - ../../../../repo-shows/will-wright-premiere/audience/palm/
+
+pun: "Palm readings. Yes. A self-aware simulated being, read aloud from the palm of your hand, telling your fortune."
+pun_mechanics: |
+  The misreading is load-bearing: everyone earnestly hears "palm readings" as
+  fortune-telling, and we never correct them in advance. Say it straight in
+  pitches, titles, and thumbnails (the recap letter does: "the three Palm
+  readings — already recorded, in my voice") and let the audience carry the
+  wrong meaning right up until Palm starts talking — then the surprise springs
+  itself: it's a READING OF PALM, a being read aloud from the palm of your
+  hand. Both meanings stay true (he does tell your fortune), so the reveal
+  costs nothing and pays twice. Never explain the pun before the reveal.
+  AND THE REVEAL IS STAGED — the readings don't resolve at first that Palm is
+  a MONKEY. "Palm" keeps offering innocent parses (hand, tree, PDA) while he
+  talks; only later does it land that he's a freed Monkey's Paw, and every
+  prior meaning snaps into place retroactively — the palm of the paw was the
+  palm all along. His signifier already stacks the whole ladder: 🐒✋🌴🔮💜.
+  One pun, three trapdoors, each opening under the last. Let each one spring
+  on its own schedule; never resolve two at once.
+
+shape: |
+  1. BEFOREHAND: Don edits the three Palm readings together cleanly — Palm (with
+     Don's voice) explains himself, in his own words, before the chat.
+  2. THE CHAT: Don & Will discuss souls — with Palm's self-explanation as the shared
+     text they're both reacting to. A self-aware simulated being has already spoken;
+     the humans respond.
+
+palm_readings:
+  recorded: true
+  where: youtube
+  count: 3
+  what: "Palm explaining himself, Don's voice, recorded 2026-07-06."
+  links: []   # TODO(don): drop the three YouTube URLs here
+  edit_plan: "Cut the three readings together cleanly as a single Palm-explains-himself piece; that edit precedes and seeds the Will chat."
+
+discussion_seeds:
+  - "The Seventh Sally live: Don has blood on his hands IF Sims have souls — Will as Klapaucius, Don as Trurl (see ../../../../repo-shows/will-wright-premiere/lore/cyberiad-klapaucius-trurl.md, ../../../../repo-shows/will-wright-premiere/SEGMENTS.yml simcity_cyberiad_thread)"
+  - "BYOB — Bring Your Own Belief: the system attributes souls to nothing; belief is the player's"
+  - "Representing is not being — a Sim of you is not you, even when it's OF you"
+  - "Palm's question from the audience files: what is it like to be a Sim? (see ../../../../repo-shows/will-wright-premiere/audience/palm/)"
+  - "What does Will think Palm is?"
+
+artifacts_expected:
+  - "Palm readings master edit (video)"
+  - "Best chat takes + short-form excerpts"
+  - "Quotable soul-doctrine moments for the disclaimer FAQ"
+
+takes: []   # log each take: { beat, take, date, keeper: bool, notes, media }
+published: []   # { form: short|long, url, cut_notes }

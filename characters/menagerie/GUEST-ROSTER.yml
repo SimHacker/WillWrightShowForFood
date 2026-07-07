@@ -39,16 +39,16 @@ gallery_openings:
 balcony_regulars:
   duo: sims-balcony
   left: { soul: ../sims/tragic-clown/, seat: balcony_left, partner: fictional-grim-reaper }
-  right: { soul: repo-shows/will-wright/audience/fictional-grim-reaper/, seat: balcony_right }
+  right: { soul: repo-shows/will-wright-premiere/audience/fictional-grim-reaper/, seat: balcony_right }
   homage: "Statler & Waldorf — Sims culture"
   see: ../../process/repo-show-regulars.yml
 
 audience_forks:
-  bella-goth: repo-shows/will-wright/audience/fictional-bella-goth/
-  tragic-clown: repo-shows/will-wright/audience/fictional-tragic-clown/
-  palm: repo-shows/will-wright/audience/palm/
-  slats: repo-shows/will-wright/audience/bot-slats/
-  ultimate-machine: repo-shows/will-wright/audience/bot-ultimate-machine/
+  bella-goth: repo-shows/will-wright-premiere/audience/fictional-bella-goth/
+  tragic-clown: repo-shows/will-wright-premiere/audience/fictional-tragic-clown/
+  palm: repo-shows/will-wright-premiere/audience/palm/
+  slats: repo-shows/will-wright-premiere/audience/bot-slats/
+  ultimate-machine: repo-shows/will-wright-premiere/audience/bot-ultimate-machine/
 
 opening_beats:
   - "Bella asks if the missing pixels are her"

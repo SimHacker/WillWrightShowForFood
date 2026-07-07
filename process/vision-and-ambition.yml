@@ -19,7 +19,7 @@ nav:
     - { path: FORMAT.md, why: "How a Repo Show runs" }
     - { path: ../ENTRYWAYS.md, why: "Doorways by interest" }
     - { path: ../TRAILS.md, why: "Sideways leaps" }
-    - { path: ../repo-shows/will-wright/README.md, why: "Kickoff show pitch" }
+    - { path: ../repo-shows/will-wright-premiere/README.md, why: "Kickoff show pitch" }
 
 meta:
   id: vision-and-ambition
@@ -39,7 +39,7 @@ meta:
     accepted: "2026-07 — invitation accepted; excited to participate; async repo-show"
     unlocks: "Kickoff show and ShowMaker network — guest prototype for all future invites"
     invitation: ../characters/will-wright/invitation.md
-    show: ../repo-shows/will-wright/
+    show: ../repo-shows/will-wright-premiere/
 
 lineage:
   before_1996: |
@@ -208,7 +208,7 @@ what_we_are_not_promising:
   # Will Wright accepted 2026-07 — see meta.will_wright
 
 what_we_are_building_in_public:
-  - "Kickoff Repo Show with Will Wright (accepted guest — repo-shows/will-wright/)"
+  - "Kickoff Repo Show with Will Wright (accepted guest — repo-shows/will-wright-premiere/)"
   - "MOOLLM skills library (skills/) — harvested, credited, composable; the main long-term stack"
   - "Cauldron SCOOP pipeline — live jam → lift skills out of the melt (see repo-show-format.yml)"
   - "Repo Show format (process/repo-show-format.yml)"

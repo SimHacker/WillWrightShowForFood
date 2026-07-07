@@ -87,5 +87,5 @@ invoke_rules:
 see_also:
 - path: CHARACTER.yml
   why: Bio girder — invitation status
-- path: ../../repo-shows/norman-margolus/invitation.md
+- path: ../../characters/norman-margolus/invitation.md
   why: Public invitation document (in the show dir)

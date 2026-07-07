@@ -8,7 +8,7 @@
 
 | Build | Status (Mar 2026) | Notes |
 |-------|-------------------|-------|
-| Steering committee **Jun 1998** | Public (Hidden Palace Oct 2024) | [IA](https://archive.org/details/the-sims-steering-committee) · [playthrough show](../../../../repo-shows/will-wright/sims-team-steering-committee-playthrough/SHOW.yml) |
+| Steering committee **Jun 1998** | Public (Hidden Palace Oct 2024) | [IA](https://archive.org/details/the-sims-steering-committee) · [playthrough show](../../../../repo-shows/will-wright-premiere/sims-team-steering-committee-playthrough/SHOW.yml) |
 | **Jan 1999** alpha | Thrift store Seattle find | No music in build; furniture from intro video |
 | **E3 1999** | Missing | **Music especially wanted** — Jerry Martin era |
 | **Jefferson 1997** | Missing | Post-Dollhouse name |

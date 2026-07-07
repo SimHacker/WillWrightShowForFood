@@ -46,5 +46,4 @@ see_also:
   - { path: CARD.yml, why: "Universal CARD — invokable abilities for show segments" }
   - { path: ../../repo-shows/stephen-wolfram/, why: "Show seed" }
   - { path: ../will-wright/, why: "Irreducible microworlds you understand by playing — the deepest bridge" }
-  - { path: ../../designs/chatgpt-research-review/nomenclature/NOMENCLATURE-HEISENBERGIAN-ACRONYMS.md, why: "The acronym field theory (its Wolfram corner) the artifact grew from" }
   - { path: ../../schemas/portrayal-standards.yml#guest_directory, why: "Directory grows with responses — self or assisted contribution" }

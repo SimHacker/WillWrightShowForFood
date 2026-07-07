@@ -1,0 +1,75 @@
+# Jess Bird — documentarian reading list (machine-readable companion to documentarians-guide.md)
+# Audience: documentary producers, researchers, and anyone taking Jess's perspective on the repo.
+
+meta:
+  for: jess-bird
+  prose: documentarians-guide.md
+  lens: "story arcs + interviewees + primary sources + footage leads (not code)"
+
+one_cup_of_tea:
+  - ../will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
+  - ../will-wright/sources/2008-02-10-soul-of-the-sims/
+  - ../will-wright/media/sims-series-maxis-people.md
+  - ../../catalogs/sims1-community-landscape.md
+  - ../../repo-shows/will-wright-premiere/BROWSE.md
+
+arcs:
+  dollhouse_that_almost_wasnt:
+    logline: "Will pitched the dollhouse for years before The Sims shipped — the repo holds the receipts."
+    sources:
+      - ../will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
+      - ../will-wright/sources/1998-06-04-sims-steering-committee-demo/
+      - ../will-wright/sources/1999-01-06-sims-alpha-prototype/
+      - ../will-wright/sources/2008-02-10-soul-of-the-sims/
+      - ../will-wright/media/sims-series-maxis-people.md
+
+  players_became_the_studio:
+    logline: "The pyramid of players — fans who became tool makers; the community as second act."
+    sources:
+      - ../../catalogs/sims1-community-landscape.md
+      - ../heather-alvey/README.md
+      - ../steve-alvey/README.md
+      - ../jeff-adkins/README.md
+      - ../daniel-tupper/README.md
+      - ../will-wright/media/sims-series-transmogrifier-story.md
+      - ../will-wright/sources/2000-05-17-transmogrifier-naming-saga/
+
+  preservation_and_loss:
+    logline: "Talk to people while we can — recovery stories and the on-the-record archive."
+    sources:
+      - ../will-wright/sources/simrefinery-recovery/
+      - ../phil-salvador/README.md
+      - ../will-wright/primary-sources-evidence-room.md
+      - ../will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/
+
+  show_born_in_public:
+    logline: "The Repo Show assembling itself — a present-tense production thread."
+    sources:
+      - ../will-wright/sessions/README.md
+      - ../../repo-shows/will-wright-premiere/BROWSE.md
+      - ../../repo-shows/will-wright-premiere/soul-city-namesake.md
+      - ../../process/FORMAT.md
+      - ../../process/VISION.md
+
+interview_universe:
+  roster_machine: ../INDEX.yml
+  portrayal_ethics: ../../schemas/portrayal-standards.yml
+  people:
+    - { id: will-wright, room: ../will-wright/, status: accepted }
+    - { id: don-hopkins, room: ../don-hopkins/, status: host }
+    - { id: jeff-adkins, room: ../jeff-adkins/, status: accepted }
+    - { id: heather-alvey, room: ../heather-alvey/, status: draft }
+    - { id: steve-alvey, room: ../steve-alvey/, status: draft }
+    - { id: phil-salvador, room: ../phil-salvador/, status: draft }
+    - { id: drew-carey, room: ../drew-carey/, status: dream_guest }
+
+footage_leads:
+  - { what: "Will's media room — photos, artwork, programmer art", path: ../will-wright/media/README.md }
+  - { what: "Dumbold Voting Machine screenshot archive", path: ../will-wright/media/sims-dumbold-voting-machine-README.md }
+  - { what: "Don's annotated YouTube demo index", path: ../will-wright/videos.yml }
+  - { what: "1996 Winograd talk video + article", path: ../will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/ }
+
+fit_with_documentary:
+  synergy: synergy/willwrightshowforfood.yml
+  lift_freely: [primary sources, community landscape, consent-tracked roster]
+  ask_don_for: [introductions, scans, interview footage as it accumulates]

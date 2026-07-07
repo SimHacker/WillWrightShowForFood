@@ -1,6 +1,6 @@
 # Glenn Reid — invitation (send-ready)
 
-**To:** Glenn Reid \<glenn@glennreid.com\>  
+**To:** Glenn Reid *(email on file privately — or reply in the open via a GitHub issue or PR so everybody can read)*  
 **Subject:** Repo Show invite — Distillery, PDF, and the PostScript mail experiments  
 **Show:** [postscript-distillery-to-pdf](../../repo-shows/postscript-distillery-to-pdf/) (with your brother Brian)
 

@@ -8,7 +8,7 @@ May 2000 email thread: Chris Baena orders name removed; Don cites Merriam-Webste
 
 ---
 
-↑ [sources](../README.md) · [show](../../../repo-shows/will-wright/README.md) · [portrayal](../../README.md)
+↑ [sources](../README.md) · [show](../../../repo-shows/will-wright-premiere/README.md) · [portrayal](../../README.md)
 
 *Raw directory:* [browse files in this folder](./)
 

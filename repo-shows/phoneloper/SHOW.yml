@@ -46,7 +46,7 @@ segments:
     topic: "Drop the links; audience opens Pink Trombone and plays/sings along live"
 
 related:
-  - repo-shows/will-wright/
+  - repo-shows/will-wright-premiere/
   - characters/robots/slats/                       # SFC lineage (Phoneloper sibling)
-  - repo-shows/will-wright/performance-and-culture.yml
+  - repo-shows/will-wright-premiere/performance-and-culture.yml
   - "DonHopkins seed: projects/micropolis-moollm/repo-shows/phoneloper-speech-synthesis.yml"

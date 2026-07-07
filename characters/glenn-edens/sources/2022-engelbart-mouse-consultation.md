@@ -1,7 +1,7 @@
 # Engelbart mouse consultation (Dec 2022)
 
 **From:** Don Hopkins → Glenn Edens  
-**To:** glennedens@me.com  
+**To:** [email redacted]  
 **Date:** 17 December 2022  
 **Subject:** Re: Hi Glenn!
 

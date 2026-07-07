@@ -78,7 +78,7 @@ ties_to:
   - ../stick-shift-protocol.yml
   - ../manual-transmission.yml
   - ../homefun-grading.yml
-  - ../../repo-shows/will-wright/slats-reincarnation.yml
+  - ../../repo-shows/will-wright-premiere/slats-reincarnation.yml
   - ../../characters/robots/slats/judge-rubric.yml
   - ../../characters/thomas-cherryhomes/
   - ../../characters/steve-wozniak/
@@ -93,7 +93,7 @@ see_also:
   - { path: ../cross-links.yml#retro_guests_real_wire, why: "Thomas Cherryhomes — real iron on wire" }
   - { path: ../../characters/thomas-cherryhomes/, why: "FujiNet / IRATA guest — network retro segments" }
   - { path: ../../characters/steve-wozniak/, why: "][ lineage — INTEGER BASIC heritage" }
-  - { path: ../../repo-shows/will-wright/slats-reincarnation.yml, why: "Slats on ][ — show seed crossover" }
+  - { path: ../../repo-shows/will-wright-premiere/slats-reincarnation.yml, why: "Slats on ][ — show seed crossover" }
   - { path: ../stick-shift-protocol.yml, why: "Host orchestration while target is ][" }
   - { path: ../code-that-spec.yml, why: "Audience chant — spec on declared platform" }
   - { path: https://github.com/Apple2-OSS/apple2js, why: "Reference emulator upstream" }

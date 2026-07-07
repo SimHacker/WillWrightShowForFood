@@ -1,0 +1,39 @@
+# Daniel Tupper — guest skills card (invitation portrayal)
+
+meta:
+  id: daniel-tupper
+  name: Daniel Tupper
+  signifier: "🗽🛠️🎮"
+  home: characters/daniel-tupper/
+  invitation_status: draft
+
+abilities:
+  - id: FREETA-DREAM
+    name: FreeTA Dream
+    type: activated
+    mana: "{R}{G}"
+    effect: "Pitch an open-world city with no missions — GTA's freedom, your own rules."
+    verifiable: projects/freeta.yml
+  - id: OWN-ENGINE
+    name: Own Engine
+    type: activated
+    mana: "{U}{U}"
+    effect: "Commit to building the engine, not just the game — WebGL, Unity, or yours."
+    verifiable: sources/2013-08-01-facebook-messenger-excerpt.md
+  - id: TMOG-MODERNIZE
+    name: TMOG Modernize
+    type: activated
+    mana: "{G}{U}"
+    effect: "Offer to help translate the Sims content pipeline toward the browser."
+    verifiable: CHARACTER.yml#sources.transmogrifier_thread
+  - id: LORE-QUESTION
+    name: Lore Question
+    type: static
+    effect: "Ask the question that only a decade-deep fan asks — three stories or one?"
+    verifiable: sources/2013-08-01-facebook-messenger-excerpt.md
+
+combos_with:
+  - path: ../jeff-adkins/CARD.yml
+    why: "Fan → tool maker — parallel climbs"
+  - path: ../will-wright/CARD.yml
+    why: "Pyramid of players — Will names the ladder Daniel is on"

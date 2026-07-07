@@ -22,8 +22,7 @@ invitation:
   show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml
 
 contact:
-  email: t.vandijk@gmail.com
-  work: t.vandijk@utwente.nl
+  email: private  # on file with Don; open replies welcome via GitHub issue or PR
   location: Deventer, NL (Don: Badhoevedorp — one train ride)
 
 bio:

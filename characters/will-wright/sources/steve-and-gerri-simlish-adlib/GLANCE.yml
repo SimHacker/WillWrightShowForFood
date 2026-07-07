@@ -38,7 +38,7 @@ see_also:
     - { path: ../1998-06-04-sims-steering-committee-demo/GLANCE.yml, why: "Same era — Edith demo" }
   across:
     - { path: ../../../../schemas/language-simlish.yml, why: "Simlish origins schema" }
-    - { path: ../../../../repo-shows/will-wright/sims-play-along-narration.yml, why: "Foreign Poet segment" }
+    - { path: ../../../../repo-shows/will-wright-premiere/sims-play-along-narration.yml, why: "Foreign Poet segment" }
     - { path: ../../media/steve-and-gerri-simlish-adlib.wav, why: "Audio artifact" }
   deep:
     - { path: TRANSCRIPT-DRAFT.md, why: "Proofread target" }

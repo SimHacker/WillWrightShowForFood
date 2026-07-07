@@ -1,6 +1,6 @@
 # Tom van Dijk — Sims modding reconnect (Jun 2024)
 
-**Contact:** t.vandijk@gmail.com · Deventer, NL  
+**Contact:** [email redacted] · Deventer, NL  
 **Thread:** LinkedIn → email with Don Hopkins; Eric Bowman in CC (Jun 2024)
 
 ---

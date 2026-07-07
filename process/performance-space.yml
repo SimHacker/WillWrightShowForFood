@@ -14,7 +14,7 @@ meta:
     **Core engine:** one host, a button board, Conan face-holes on distinguished portraits,
     improv voice acting live — weaving all short clips into one show.
   room: process/performance-space/README.md
-  show_culture: ../repo-shows/will-wright/performance-and-culture.yml
+  show_culture: ../repo-shows/will-wright-premiere/performance-and-culture.yml
 
 production_values:
   branding: repo-show-branding.yml
@@ -89,11 +89,11 @@ convergence:
       show: ../repo-shows/drew-carey/SHOW.yml#sims_play_along_narration
     script_reading:
       what: "Repo Show as live reading — performers voice MOOLLM-generated character lines (face visible, hidden, or puppet)."
-      spec: ../repo-shows/will-wright/performance-and-culture.yml#the_reading
+      spec: ../repo-shows/will-wright-premiere/performance-and-culture.yml#the_reading
     conan_face_puppet:
       what: "Late-night homage — still photo of a face with mouth cut out; performer speaks through the hole (Arnold, etc.)."
       canonical_name: conan-face-puppet
-      spec: ../repo-shows/will-wright/performance-and-culture.yml#puppet_kinds.face_puppet
+      spec: ../repo-shows/will-wright-premiere/performance-and-culture.yml#puppet_kinds.face_puppet
       ethics: "Affectionate fan portrayals of game characters OK; living celebrities need consent; deceased = memorial mode only."
     mona_eyes:
       what: "NeWS Mona Eyes — paste-on googly eyeballs track focus; asleep = frozen lids + nostril ZZZ particles."
@@ -110,28 +110,28 @@ performance_modes:
     inputs: [audience_screen_recording, live_guest_voice, optional_simlish_flavor]
     lineage: [foreign_poet_on_tape, drew_carey_sims]
     spec: sims-play-along-narration.yml
-    segment: ../repo-shows/will-wright/sims-play-along-narration.yml
+    segment: ../repo-shows/will-wright-premiere/sims-play-along-narration.yml
 
   live_script_reading:
     id: live-script-reading
     emoji: "📜🎭"
     prompt: "Generated character text read aloud — table-read energy, no prep on exact lines."
     inputs: [moollm_character_output, performer_rotation, don_philahue_facilitation]
-    spec: ../repo-shows/will-wright/performance-and-culture.yml#the_reading
+    spec: ../repo-shows/will-wright-premiere/performance-and-culture.yml#the_reading
 
   face_puppet:
     id: conan-face-puppet
     emoji: "🕳️👄"
     prompt: "Webcam mouth through a face-hole overlay — perform lips + voice simultaneously."
     inputs: [webcam, png_mask_with_mouth_hole, optional_amplitude_scrub_video]
-    spec: ../repo-shows/will-wright/performance-and-culture.yml#puppet_kinds.face_puppet
+    spec: ../repo-shows/will-wright-premiere/performance-and-culture.yml#puppet_kinds.face_puppet
     web_toy: ../apps/performance-space/conan-face-puppet.yml
 
   voice_puppet:
     id: voice-puppet
     emoji: "🎤👻"
     prompt: "Off-screen voice only — lowest friction; Pink Trombone / Phoneloper as instruments."
-    spec: ../repo-shows/will-wright/performance-and-culture.yml#puppet_kinds.voice_puppet
+    spec: ../repo-shows/will-wright-premiere/performance-and-culture.yml#puppet_kinds.voice_puppet
     instruments: ../schemas/language-cow.yml#performance_instruments
 
   amplitude_puppet:
@@ -139,13 +139,13 @@ performance_modes:
     emoji: "📈🤡"
     prompt: "Short character clip scrubbed by mic amplitude — cheesy step past the still photo."
     credit: "Don Hopkins + David Levitt — Jesse Jackson / Rush Limbaugh clip scrub technique."
-    spec: ../repo-shows/will-wright/performance-and-culture.yml#puppet_kinds.puppet.voice_to_motion
+    spec: ../repo-shows/will-wright-premiere/performance-and-culture.yml#puppet_kinds.puppet.voice_to_motion
 
   audience_chorus:
     id: audience-chorus
     emoji: "🎛️👥"
     prompt: "Remote voice streams steer Slats robopoetry loop or jam Pink Trombone together."
-    spec: ../repo-shows/will-wright/performance-and-culture.yml#speech_feedback_loop_instrument
+    spec: ../repo-shows/will-wright-premiere/performance-and-culture.yml#speech_feedback_loop_instrument
     group_activity: ../apps/performance-space/pink-trombone-jam.yml   # 4 people accompany/follow/lead/ridicule/parody their own voices
 
   sims_3d_puppet:
@@ -177,8 +177,8 @@ lineage_index:
       - { label: "Conan celebrity face cutout (curate canonical clip)", url: "https://www.youtube.com/results?search_query=conan+face+cutout+impression" }
       - { label: "Conan Arnold impression (reference)", url: "https://www.youtube.com/results?search_query=conan+arnold+schwarzenegger+impression" }
     in_repo:
-      - ../repo-shows/will-wright/performance-and-culture.yml#puppet_kinds.face_puppet
-      - ../repo-shows/will-wright/SEGMENTS.yml  # Masturbating Bear cadence — separate running-gag lineage
+      - ../repo-shows/will-wright-premiere/performance-and-culture.yml#puppet_kinds.face_puppet
+      - ../repo-shows/will-wright-premiere/SEGMENTS.yml  # Masturbating Bear cadence — separate running-gag lineage
   hn_citation:
     - { label: "Don Hopkins — NaturalSpeech thread (Simlish / DECTalk / Simlish links)", url: "https://news.ycombinator.com/item?id=31430802" }
 
@@ -214,7 +214,7 @@ proof_of_concept_roadmap:
       assets: [../apps/performance-space/conan-face-puppet.yml]
     - id: script-reading-block
       what: "10-minute table read — two performers rotate face-puppet / voice-puppet on MOOLLM lines."
-      assets: [../repo-shows/will-wright/performance-and-culture.yml#the_reading]
+      assets: [../repo-shows/will-wright-premiere/performance-and-culture.yml#the_reading]
     - id: unnecessary-censorship-sims
       what: "Recorded Sims gameplay — mesh pixelization gag (hand on joint pass, head after hit); SimProv wedding double pre-game."
       assets: [../repo-shows/ideas/gags/pixelized-joint-wedding.yml, ../catalogs/simprov/README.md]
@@ -262,8 +262,8 @@ ethics:
 
 see_also:
   - sims-play-along-narration.yml
-  - ../repo-shows/will-wright/performance-and-culture.yml
-  - ../repo-shows/will-wright/sims-play-along-narration.yml
+  - ../repo-shows/will-wright-premiere/performance-and-culture.yml
+  - ../repo-shows/will-wright-premiere/sims-play-along-narration.yml
   - ../repo-shows/drew-carey/SHOW.yml
   - ../schemas/language-simlish.yml
   - ../apps/performance-space/

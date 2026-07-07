@@ -33,9 +33,7 @@ show_suggestions:
   - { seed: ../../repo-shows/openlaszlo/, what: "Group — OpenLaszlo reunion: Don + David Temkin + Henry Minsky + Oliver Steele; the LZX RIA platform, the road not taken, and David's AI-powered code revival" }
 
 sources:
-  mail_2006:
-    - sources/2006-08-31-lua/
-    - sources/2006-11-16-plone-laszlo-integration/
+  mail_2006: private  # 2006 Laszlo threads held in Don's archive pending hand curation
   wikipedia: null
   web:
     - { title: "OpenLaszlo — Wikipedia", url: "https://en.wikipedia.org/wiki/OpenLaszlo" }

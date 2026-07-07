@@ -26,7 +26,7 @@ Deep dive: [`homer-forth-flying-logos.md`](homer-forth-flying-logos.md) · hooks
 
 ## Repo Show
 
-Draft invitation: [`repo-shows/coco-conn/invitation.md`](../../repo-shows/coco-conn/invitation.md) *(sent 2026-07-06 via Facebook)* ·
+Invitation: [`invitation.md`](invitation.md) *(sent 2026-07-06 via Facebook)* ·
 seed: [`repo-shows/coco-conn/`](../../repo-shows/coco-conn/)
 
 Consent **not yet asked**.

@@ -21,7 +21,7 @@ representation:
 invitation:
   status: draft
   consent: not_yet_asked
-  document: ../../repo-shows/jim-crutchfield/invitation.md
+  document: ../../characters/jim-crutchfield/invitation.md
   show_seed: repo-shows/jim-crutchfield/
   likelihood: "open — aspirational; shared turf (video feedback, CA, edge of chaos) is the in"
 

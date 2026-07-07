@@ -1,0 +1,368 @@
+# Session 01 — Mic Check: Is This Thing On?
+# A/V shakedown that rolls straight into a recording session Don has needed for DECADES.
+# Named + indexed in ../../videos.yml; the rich content lives HERE.
+
+meta:
+  id: session-01-mic-check
+  show: will-wright-premiere
+  status: planned
+  participants: [don-hopkins, will-wright]
+  index: ../../videos.yml#mic_check
+  pitch: PITCH.md   # "Hi Will, I promised to send you a recap of our phone call, so here it is." — the recap letter, filed in the repo where everyone reads along. Performed on camera as ../05-cold-call-pitch/SCRIPT.md
+
+purpose: |
+  Set up and test whatever video-conferencing hardware and software we're going to
+  use — on camera, as content. Once it works, roll straight into the recording beats.
+  The shakedown is the show. Playful, low pressure, lots of takes; we keep the best.
+
+priority: |
+  DO THE APEX GENERATIVE ANSWERING MACHINE GAG FIRST, as part of the first
+  one-on-one video recording session, SOON. All will flow from that.
+
+the_quine: |
+  The Mic Check is a SELF-RECURSIVE QUINE at the top of the whole show: play the
+  raw video and it explains ITSELF. Workshop a LINEAR SCRIPT that is totally
+  watchable raw, then break it down into many pieces with many uses. Every "I'll
+  explain that later" + pause-to-breathe in the call is a deliberate BRANCHING
+  AND INSERTION POINT for material spliced in afterward. THAT is the Mic Check —
+  pilot episode and DNA seed for the whole show.
+  the_linear_script:
+    - "COLD OPEN: Don DIALS a fake 555 number in TOUCH TONES, and channels LILY
+       TOMLIN (Ernestine) while he waits: 'one ringy dingy... two ringy
+       dingies... [snort]' — then: hello?"
+    - "THE 555 SPLICE: the fake number cuts to/from a short clip of the BROKEN
+       ROBOT from the Empathy 1MM (https://www.youtube.com/watch?v=KXrbqXPnHvE)
+       — the robot literally asks for a 555 number IN THE FILM: 'I need
+       Professor Johnson... what's the phone number? 555-12...' The canon
+       provides its own wrong number."
+    - "Don calls Will. Gets his answering machine."
+    - "Don DOESN'T GIVE UP — tries to interact with the machine..."
+    - "...it turns out to be LIVE WILL. (Or does it? Leave the question open.)"
+    - "Don pitches the show to him — but FIRST: 'you need to do me a favor I've
+       been needing for 30 years' — re-record that damned scratchy SimCopter One
+       reporting heavy traffic clip, high resolution, in his own voice."
+    - "Then Don RELENTLESSLY presses and drags him into a whole recording
+       session: pie menu labels; uh-uh / uh-oh / yeah! in gradations."
+    - "Segue seed: the Phoneloper demo — Don sculpts and plays music with 'fuck'
+       and 'dude'. Have Will do some dudes; he can give a fuck or two if he
+       likes. Atomic expressions usable in all contexts and games."
+    - "Don explains drawing vowels + granular synthesis — mentions (insertion
+       points, spliced later): the Wikipedia page, a good granular demo, Laurie
+       Anderson's talking stick from Interval (find a demo of it?)."
+    - "Show the SimCity X11 demo where you can HEAR the drawing."
+    - "'People are tired of MY voice in the talking pie menus — they want Will':
+       he recites the pie menu titles. All SimCity text is internationalized;
+       this is the first pass of WILLIFIED voice pie menu labels."
+    - "Escalating failure expressions: no, oops, oh shit... each tool-refusal
+       reason gets its OWN expression."
+    - "Mid-call, naturally: Don asks Will about the GODZILLA STORY. Will tells
+       it — and then WILL HIMSELF makes the ask for roars. Don and Will explain
+       what Micropolis City is (GPL-3 free open source) and why it needs them.
+       It flows straight out of the session's own question: what are we doing
+       with all this audio, and how can other people help?"
+    - "FINALE — THE ROARING TWENTIES: Don and Will roar AT each other and IN
+       RESPONSE to each other — escalating aggressive roars, silly roars,
+       whiney roars, questioning roars... finally BYE-BYE ROARS. A whole
+       roaring subset of Simlish, performed as a duet."
+    - "Then appended: the onboarding 'ad' segments — sign up for GitHub, join
+       the show, make a TicketPR, ask questions; how can you support the
+       project and what do you get from it? Separate REUSABLE video segments
+       appended to the long-form raw footage."
+  drew_carey_catnip: |
+    The Roaring Twenties duet is DREW CAREY'S CATNIP — improvised call-and-
+    response performance in a made-up emotional language is Whose Line energy
+    exactly. The clip is the pitch that proves to him he wants in on this, and
+    that we need him (repo-shows/drew-carey/).
+  brutalist_first: |
+    The long-form raw footage of the initial shooting and audio capture session
+    SHIPS AS-IS: we are showing our process, tools, and technique — BRUTALIST
+    at first, then iterating, refined, and polished (plywood → mahogany:
+    one-minute-movie-sandwich.yml#show_is_a_playlist.promotion_pipeline). The
+    roughness is the tutorial.
+
+production_pattern:
+
+  three_takes_goldilocks:
+    what: |
+      Every beat gets (at least) three takes, Goldilocks Three Bears style, like the
+      Maxis run of SimAnt / SimEarth / SimCity 2000: #1 TOO A, #2 TOO B, #3 JUST RIGHT.
+      What A and B are is chosen per beat (too deadpan vs too unhinged, too fast vs
+      too slow, too sincere vs too hammy) — but the extremes are the point: lean INTO
+      them, make them OUTRAGEOUSLY too A and too B. Not warm-ups, not failures —
+      deliberately overcooked performances that are usable content in their own right.
+    why: |
+      We can use ALL THREE. The extremes are funnier than the middle in the right
+      context, and the middle is only legibly "just right" because the extremes exist.
+      Three takes = three parallel versions of every component in the manifest.
+    canonical_axes: |
+      The house A/B pair is EMPATHY vs SERVITUDE — the actual titles of the two SFC
+      One Minute Movies (../../../robots/slats/one-minute-movies.md). Too A = TOO
+      EMPATHIC (feeling everything, helping no one); Too B = TOO SERVILE (obeying
+      everything, feeling nothing). Beats can pick other axes when they want, but
+      empathy/servitude is the default — it keys every take to the Slats canon and
+      to the fake commercials (see slats_commercial_sandwich).
+    slating: "Slate each take with its Goldilocks position (too-a / too-b / just-right) plus the axis if not the default empathy/servitude, plus the usual beat + take number — playlist assembly is a sort, not a search."
+
+  playlists_as_timelines:
+    what: |
+      All takes get cut into component clips (see remixable_components per beat) and
+      composed into YOUTUBE PLAYLISTS. A playlist is a timeline: ordered, reorderable,
+      and one clip can appear in many playlists at once — the same multiple-timelines
+      move as StoryMaker (../../../../process/storymaker-stories-and-scenes.yml), with
+      YouTube as the substrate instead of the story FS. Scene cards hold the takes;
+      playlists are the graph-walks over them.
+    constraint: "Playlists can't trim inside a video — cut points must be baked into the uploaded clips. Already handled: components are slated separately with legal cut points in the manifest."
+    three_versions: |
+      The Goldilocks pattern lifts to whole playlists: a TOO A cut, a TOO B cut, and a
+      JUST RIGHT cut of the same material — three parallel timelines of the session,
+      each internally consistent, each watchable, each funny for a different reason.
+    apex_keystone: |
+      The JUST RIGHT take of the answering machine gag ("hello — oh yeah, I'm a
+      recording") is the APEX KEYSTONE: the clip a whole series of playlists builds
+      toward and pivots around. Playlists approach it from different directions —
+      sound-check arcs, soul-doctrine arcs, phone-bit arcs — and it caps them all.
+    why_it_opens_everything: |
+      And it's the PERFECT INTRO for ALL playlists, because the answering machine
+      thinking it's a real person and then asking you to leave a message FRAMES THE
+      SHOW ITSELF: every playlist is a TIME-SHIFTED CALL-IN show. Open ended — the
+      machine is always answering, the tape never fills up. And the frame is LOAD-
+      BEARING, not just a bit: you can actually leave a message (the
+      leave_a_message_funnel), and a message can SPAWN A NEW SHOW — a question
+      becomes a reply video becomes a segment becomes an arc. The intro is the
+      contract: you're calling in, we call back.
+    the_caller_role: |
+      Don plays THE CALLER WHO KNOWS WILL — the recurring on-mic character who gets
+      past the answering machine. For everyone who doesn't make their own video
+      question, Don reads them THEIR questions down the phone: submitted via HN,
+      GitHub issue, or comment. The caller is the proxy for the whole audience —
+      time-shifted call-in with a human switchboard. Will answering the Hacker News
+      questions (../00-hn-video-reply/SESSION.yml) is the first instance: Don calls,
+      Will answers (or the machine does), Don says "I've got some questions for you
+      from Hacker News..." and the reply session IS the show. Video questioners get
+      played straight into the show; text questioners get voiced by the caller.
+
+  slats_commercial_sandwich:
+    what: |
+      Cut up the Slats One Minute Movies THE WAY THEY WERE INTENDED TO BE CUT: the
+      1MMs were :60 NBC spots built to hold viewers through ad breaks
+      (../../../robots/slats/one-minute-movies.md). So wrap the segments around
+      annoying commercials — except we insert OUR OWN annoying fake SNL-style
+      commercials, each one about EMPATHY or SERVITUDE.
+    the_inversion: |
+      NBC made the movies to keep people watching the real commercials; the movies
+      never aired. Twenty-odd years later the commercials are fake, thematic, and
+      the actual point — the ad break becomes the content, and the movies finally
+      get the broadcast format they were designed for.
+    axis_tie_in: |
+      Empathy and Servitude aren't just the two film titles — they're the house
+      Goldilocks axes (three_takes_goldilocks.canonical_axes). A TOO-EMPATHY fake ad
+      (a product that feels your pain and does nothing about it) and a TOO-SERVITUDE
+      fake ad (a product that obeys so hard it's useless) bracket each Slats segment;
+      the just-right is Slats himself, who was both at once.
+    entry_point: "Reachable via the knock-knock segue engine — one of Will's flustered improvised punchlines drops us into a Slats segment, commercials included."
+    deliverable: "Fake commercial scripts (empathy set + servitude set), recorded ad takes, and a cut list interleaving 1MM segments with ad slots for playlist assembly."
+    show_format: |
+      The full episode grammar built on this — cold open phone gag, knock-knock
+      segue, 1MM-intro / fake-commercial / 1MM-conclusion / longer-segment
+      alternation, NEW 1MMs (space junk! Love! Hate! Irony! Destiny!), shows as
+      renderable branching playlists — is specced at
+      ../../../../process/one-minute-movie-sandwich.yml. This session records the
+      opener beats that grammar starts every episode with.
+
+beats:
+
+  answering_machine_gag:
+    order_note: "Natural OPENER — it's a phone bit, and the session is called Mic Check."
+    the_history: |
+      Will used to have an answering machine message where he'd answer the phone,
+      say hello, and pretend he was live for long enough to trick you into starting
+      to talk to him — then he'd "realize" he was a recording and interrupt you to
+      tell you to leave a message.
+    the_bit: |
+      Recreate it, then escalate:
+      1. Don pretends to call: says "ring ring."
+      2. Will does the answering machine bit — hello, pretends to be live.
+      3. Don starts to talk... then PAUSES so as not to talk over him.
+      4. Will does the "oh yeah, I'm a recording" interrupt.
+      5. Don: "Say knock knock." Will: "Knock knock." Don: "Who's there?"
+      6. Will is DUMBFOUNDED — he did not have a knock knock joke prepared.
+         (The REVERSE knock knock joke gag: the setup machine asked to improvise
+         its own punchline.)
+      7. He hesitates... then does the Wedding Album bit: "Hey — I'm the Sim!"
+    shoot_script_v1: |
+      The script for the FIRST mic-check source video improv performance and
+      audio capture session:
+      1. Don calls Will. Will answers — pretends to be an answering machine.
+      2. Don gets fooled by it. CAREFUL NOT TO TALK OVER — leave editing cut
+         space around every beat; the pauses are where the cuts live.
+      3. Don GRADES the take, on mic: "too tired." "too excited." "too
+         empathic." "too servile." "too slow." "too fast."
+      4. Will has a LIST of which exaggerated bad takes to perform; Don has the
+         SYNCHRONIZED list of ratings and reactions. Two scripts, one clock.
+      5. Loose script, totally open to improvisation, multiple takes. The
+         outtakes ARE the show — classic behind-the-scenes production, kept.
+    the_bouquet: |
+      Deliverable: a BOUQUET of OPPOSITE-PAIR too-X answering machine messages
+      and their graded reactions — tired/excited, empathic/servile (the house
+      axes), slow/fast, and whatever pairs emerge in the room. This generalizes
+      the Goldilocks three (three_takes_goldilocks) into a full palette: many
+      axes, both poles performed, all keepers.
+    tone_matched_openers: |
+      The bouquet serves ALL the shows: the universal cold open
+      (../../../../process/one-minute-movie-sandwich.yml#show_is_a_playlist
+      .bookends) comes in TONE-MATCHED VARIANTS — the too-silly machine message
+      opens silly shows; the too-serious one opens serious shows (tours behind
+      the tech, programming, game design, social issues). Same door into
+      everything, but the door already knows what room it opens onto. Don's
+      graded reaction doubles as the tone-setting first line of the episode.
+    why_it_lands: |
+      The whole soul doctrine as a phone gag: a recording passing as live, then a
+      live man passing as a simulation. Representing is not being — performed in
+      ninety seconds without saying any of those words. (Wedding Album: Marusek's
+      novella — the sim who realizes he's the sim — already canon via Ben Cerveny's
+      correspondence.)
+    the_open_question: |
+      Play it so the question STAYS open: is whoever answered the phone real, a
+      simulation, or a recording? Never fully resolve it. "Is the answering
+      machine alive?" activates Lem's and PKD's entire bodies of work in one
+      ring tone — and it's the question AI just made everyone's daily life:
+      we all now build representations of ourselves (assistants, screeners,
+      auto-repliers) that answer in character on our behalf.
+    remixable_components: |
+      Every step lays down CLEAN VOICE we can cut into blipverts — reusable,
+      remixable components, each usable alone or in subsequences:
+      - just Will's answering machine message (usable as... an answering machine message)
+      - just the "oh yeah I'm a recording" interrupt
+      - just the reverse knock knock (Don's ask / Will's dumbfounded beat)
+      - "Hey — I'm the Sim!" (the golden clip)
+      - full subsequences: ring-ring through interrupt; knock-knock through Sim
+    leave_a_message_funnel: |
+      The gag ends with Will asking you to leave a message — so LET THEM. One of
+      the end-of-video links goes to the repo's ANSWERING MACHINE: a GitHub
+      "create issue" link, or better, one standing pinned issue that exists just
+      for leaving messages to Will in the comments. The issue body says it plainly:
+      you need a GitHub account — sign up, join the repo, and leave Will a message
+      by writing a comment or by recording a short video clip and linking to it.
+      The answering machine bit IS the onboarding: the same funnel shape as the
+      roar drive (../../../../process/one-minute-intense.yml — participation
+      instead of ads), but       the ask is the oldest one in telephony: leave a message
+      after the beep. Video-clip messages are quarry too — the best ones can be
+      cut into playlists, answered on camera, or become segments. The HOW is a
+      video of its own: Don walks WILL through getting a GitHub account, opening
+      an issue, and leaving a comment — the onboarding tutorial disguised as a
+      buddy bit (../../../../process/one-minute-movie-sandwich.yml
+      #show_is_a_playlist.github_onboarding_tutorial).
+    segue_engine: |
+      The forced reverse knock knock is a SUB-ROUTINE, not a one-off: run it again
+      and again. Each time, Will gets flustered, doesn't know what to say — then
+      makes something up, and whatever he improvises IS the key intro to the next
+      routine. The flustered improv is a branch point: one take his punchline lands
+      him in Care Bears (the party-cornering obsession — ../../adorable-minutes.md),
+      another launches a Slats video (Empathy or Servitude —
+      ../../../robots/slats/one-minute-movies.md), another whatever falls out of his
+      mouth. Slate each knock-knock instance with its DESTINATION routine: the same
+      setup component fans out into N different intros, so playlists can enter any
+      routine through the same door.
+    deliverable: "Clean takes of each component, slated separately; a manifest listing components + legal cut points; knock-knock segue takes tagged with destination routine."
+
+  simcopter_one:
+    what: |
+      A new "SimCopter One reporting heavy traffic!" audio file — high resolution,
+      Will's own voice. Play him the OLD SCRATCHY ONE first (the artifact is the
+      warm-up: listen, laugh, remember). Discuss how to make chopper sounds
+      foley-style — what does a helicopter sound like when a mouth makes it? Do a
+      few takes, see what works — then Don drops it into Micropolis.
+    why: "Micropolis doesn't have sound yet — but we really want GOOD sounds waiting for it."
+    deliverable: "High-res takes, best pick + alternates, committed to the repo with provenance."
+
+  talking_pie_menus:
+    what: |
+      Will reads the names of ALL the pie menu items and submenus — "talking pie
+      menus." Replaces Don's own voice from the older talking-pie-menus versions of
+      SimCity, which nobody (per Don) wants to listen to. Walk the actual menu tree
+      on screen while recording so each name is read in context, not off a list.
+    deliverable: "One clean take per menu item + submenu; a manifest mapping item -> audio file."
+
+  tool_vowel_vocals:
+    what: |
+      Soft organic vocal sounds for tools: uh uh uh, ee ee ee, oo oo oo — different
+      nice vowel textures that can repeat and OVERLAP via granular synthesis. Don
+      demonstrates with clips from videos; Will performs variations. Recorded DRY —
+      granular synthesis wants clean grains.
+    grain_spec: |
+      No pitch or modulation over time needed — no diphthongs (diphones between
+      vowels). Just a RICH SPECTRUM of SHORT FLAT VOWELS. Post: cut to the same
+      duration, fade in/out, level amplitude. Related demos to splice near this
+      beat: granular synthesis (Wikipedia + a good demo), Laurie Anderson's
+      talking stick at Interval (find footage), Don's Phoneloper demo (sculpting
+      music from "fuck" and "dude" — same atomic-expression idea).
+    voice_variants: "Same expressions in different voices as the library grows: girl, boy, man, woman, cat."
+    why: "Tool feedback that's human, warm, and loopable at any density — a handful of vowels becomes a whole instrument."
+    the_refusal: |
+      Can't draw that there sound: "UH UH!" — the negative. Same vowel family as the
+      tool grains (it IS an uh), but emphatic, finger-wagging, unmistakable. The game
+      disagreeing with you should sound like a person, not a buzzer. Record several
+      intensities: gentle "uh-uh", firm "UH UH!", exasperated "UH! UH!!" for the
+      third try in the same spot. Escalating series of stronger and stronger "uh-uh"s.
+    failure_expressions_plugin: |
+      Generalize the refusal into a PLUG-IN CONTENT SYSTEM: escalating no / oops /
+      oh shit / other expressive reactions to failure modes — each reason a tool
+      refuses to build gets its OWN failure expression. Users submit more; each is
+      classified with TAGS and WEIGHTS that help select which to play at any given
+      moment. Same engine as the roar library (../../../../process/
+      one-minute-intense.yml#upload_roars.roar_engine): tag matching + fuzzy
+      scoring, surprising beats perfect.
+    deliverable: "A vowel bank per tool family + the UH UH! refusal set at several intensities."
+
+  monster_roars:
+    story_first: |
+      Recount the story Jeff Braun told Don about getting sued — the reason the
+      monster is [NOT GODZILLA]. The lawsuit story is the on-camera setup; the roars
+      are the punchline. IN THE MIC CHECK CALL: Don asks, Will tells it, and then
+      WILL makes the roar ask himself (the_quine.the_linear_script) — the drive's
+      most credible pitchman, mid-session, unprompted-feeling.
+    what: |
+      Then: let Will ROAR. And roar and roar and roar — expressively, like Godzilla
+      (BUT NOT GODZILLA) — as much as he feels like. No script, no quota, no "that's
+      enough": angry roars, sad roars, hungry roars, curious roars, roars at traffic,
+      roars at zoning decisions, tiny polite roars. LOTS of monster sounds, so the
+      game can pick between them based on the monster's MOOD, the state of the city
+      around the monster, and whatever else the simulation knows. Don will contribute
+      his own counter roars to the library too. We can also ask users to contribute 
+      roars. And write a moollm roar skill that is driven by a yaml jazz file and a 
+      directories of audio files and scoring functions on each roar.
+    why: |
+      A mood-indexed roar library is a simulation feature, not a sound effect. The
+      roar becomes an OUTPUT of city analysis — angry in traffic, mournful in ruins,
+      delighted at an airport to stomp.
+    deliverable: "Roar library tagged with mood/context metadata — YAML manifest per take."
+    north_star: |
+      Integrate Micropolis city into Snap! so kids can program the monster — its city
+      analysis, targeting, crushing, and roaring — in a visual block programming
+      language as powerful as Scheme. The roar library is the monster's voice API;
+      the kids write the brain.
+    audience_roars: |
+      The roar library is CROWDSOURCED too — the "upload ROARS!!!" One-Minute Intense
+      (../../../../process/one-minute-intense.yml) asks everyone to record and submit
+      their own roars via GitHub issue or PR, with a mood tag. Audience roars join
+      Will's in the same mood-tagged manifest, credited. The monster speaks with
+      everyone's voice. The full ROAR DRIVE appeal video (beats specced at
+      one-minute-intense.yml#upload_roars.drive_video) opens with Will telling the
+      Godzilla story and the GPL-3 pitch, plays the original scratchy monster roar,
+      then shows Will and Don roaring at each other — THIS SESSION's takes are that
+      footage. Money implicit, roars explicit: WE NEED YOUR ROARS! Example
+      contributions seed the drive as BLIPVERTS (Don's extremely loud cat Nelson;
+      Will's cat) — see one-minute-intense.yml#upload_roars.example_blipverts.
+
+sound_catalog:  # the catalog Don wants to walk Will through PLAYFULLY — seed list, grows on contact
+  how: "Not a checklist to grind — a toy box to rummage. Play the old sound (where one exists), giggle, try a version, move on. Anything skipped is a reason for another session."
+  seeds:
+    voice_lines: [simcopter_one_heavy_traffic, pie_menu_items_and_submenus, monster_roars_by_mood]
+    tool_vocals: [bulldozer_uh, road_rail_wire_draw_grains, zone_plop_vowels, uh_uh_refusal_set]
+    city_life: [traffic_murmur, siren, explosion_disaster, church_bells, airport_seaport_ambience]
+    ui: [click_confirm, budget_open, message_ticker_chirp]
+  note: "Seed list only — grow it from the actual Micropolis tool + event inventory when the sound pass starts."
+
+takes: []   # log each take: { beat, take, goldilocks: too-a|too-b|just-right, date, keeper: bool, notes, media }
+published: []   # { form: short|long|playlist, url, cut_notes, goldilocks_cut: too-a|too-b|just-right|mixed }
+assets_produced: []   # audio files committed to the repo with provenance

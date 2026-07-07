@@ -1,6 +1,6 @@
 # Glenn Edens — invitation (send-ready)
 
-**To:** Glenn Edens \<glennedens@me.com\>  
+**To:** Glenn Edens *(email on file privately — or reply in the open via a GitHub issue or PR so everybody can read)*  
 **Subject:** Repo Show interview — GRiD Compass, Interval Camelot, and whatever else you want  
 **Show:** [glenn-edens-grid-interval](../../repo-shows/glenn-edens-grid-interval/)
 

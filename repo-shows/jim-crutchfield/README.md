@@ -22,7 +22,7 @@ mechanics** (ε-machines). He was one of the UC Santa Cruz **Dynamical Systems C
 ## In this directory
 
 - [`SHOW.yml`](SHOW.yml) — the show seed.
-- [`invitation.md`](invitation.md) — the draft invitation.
+- [`invitation.md`](../../characters/jim-crutchfield/invitation.md) — the draft invitation.
 
 Guest: [`characters/jim-crutchfield/`](../../characters/jim-crutchfield/README.md). Consent **not yet asked**.
 

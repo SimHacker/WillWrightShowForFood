@@ -37,6 +37,6 @@ One of the deepest artisanal catalogs in Sims 1 history.
 
 ---
 
-↑ [catalogs](../README.md) · [show](../../repo-shows/will-wright/README.md)
+↑ [catalogs](../README.md) · [show](../../repo-shows/will-wright-premiere/README.md)
 
 *Raw directory:* [browse files in this folder](./)

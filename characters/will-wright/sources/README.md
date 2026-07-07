@@ -17,7 +17,7 @@ Cross-link freely — e.g. Terry's full CS547 catalog is in [`terry-winograd/med
 | Room | → | Why |
 |------|---|-----|
 | **Up** | [will-wright](../README.md) | Guest portrayal hub |
-| **Show** | [flagship show](../../../repo-shows/will-wright/README.md) | Episode room — orbits here |
+| **Show** | [flagship show](../../../repo-shows/will-wright-premiere/README.md) | Episode room — orbits here |
 | **Centerpiece** | [1996 Winograd](1996-04-26-winograd-interfacing-to-microworlds/README.md) | THE seed artifact |
 | **Sibling** | [media](../media/README.md) | Screenshots + essays (flat filenames) |
 | **Across** | [catalogs](../../../catalogs/README.md) | Live UCC brands we syndicate |
@@ -62,16 +62,9 @@ The saga belongs in the public repo — primary sources, not backstage scheming.
 **[2006-11-13-simcity-olpc-email-thread/](2006-11-13-simcity-olpc-email-thread/README.md)**  
 Verbatim Nov–Dec 2006 forwarded mail: Gilmore spark → Will support → **Long Now denial** (19 Nov) → EA clearance → OLPC B1 laptop → SimCity on XO photos → Tk 2.3 single-window Sugar rework (31 Dec).
 
-**Additional verbatim threads** (mined from Don's mail archive, Jul 2026):
-
-| Bundle | What |
-|--------|------|
-| [`2006-12-20-simcity-for-olpc-introducing-the-players/`](2006-12-20-simcity-for-olpc-introducing-the-players/README.md) | Gilmore cast intro; Walter Bender response |
-| [`2006-12-21-simcity-for-olpc-sugar-integration-ideas/`](2006-12-21-simcity-for-olpc-sugar-integration-ideas/README.md) | Don's Sugar roadmap reply |
-| [`2006-12-28-ideas-for-sugar-development-environment-from-hyp/`](2006-12-28-ideas-for-sugar-development-environment-from-hyp/README.md) | HyperLook → Sugar dev env |
-| [`2006-12-29-pictures-of-simcity-on-olpc/`](2006-12-29-pictures-of-simcity-on-olpc/README.md) | XO-1 photos thread (Gettys, Selker, …) |
-| [`2006-12-27-olpc-b1-machine-on-its-way/`](2006-12-27-olpc-b1-machine-on-its-way/README.md) | B1 laptop shipment |
-| [`2006-12-04-integrating-simcity-with-olpc-s-goals-and-user-i/`](2006-12-04-integrating-simcity-with-olpc-s-goals-and-user-i/README.md) | Integration pitch |
+*A batch of additional raw threads mined from Don's mail archive in July 2026
+was retracted pending hand curation — the curated highlights above tell the
+story; more will return here as they are individually reviewed and edited.*
 
 **[simcity-open-source-saga/](simcity-open-source-saga/README.md)**  
 Timeline from Don's December 2006 pitch letter to Rod Humble — SimCityNet screenshots, OLPC

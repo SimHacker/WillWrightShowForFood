@@ -6,7 +6,7 @@
 radio experiment, our own TV experiments with Will Wright, and what we think we'd enjoy talking about
 on air. Warm conversation, not a lecture.*
 
-[Portrayal standards](../../schemas/portrayal-standards.yml) · [Show seed](SHOW.yml) · [Invitation](invitation.md)
+[Portrayal standards](../../schemas/portrayal-standards.yml) · [Show seed](SHOW.yml) · [Invitation](../../characters/drew-carey/invitation.md)
 
 ---
 

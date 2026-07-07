@@ -7,7 +7,7 @@ about: "Don's CAM6 simulator: what it is, its Forth heritage, and what Don made 
 see_also:
   - ../don-hopkins/cam6-cellular-automata-machine.md
   - ../../repo-shows/norman-margolus/SHOW.yml
-  - ../../repo-shows/norman-margolus/invitation.md
+  - ../../characters/norman-margolus/invitation.md
 ---
 
 # What I Made With Your Magic — the CAM6 Demo, for Norman
@@ -205,8 +205,7 @@ library into existence (pie menus, sound mixer, multi-display TCL/Tk came along 
 **fell back to plain X11 protocol** when SHM wasn't there or the display was remote — still playable
 over the network, just without the local SHM fast path.
 
-→ [`../don-hopkins/hyperlook-news-postscript-simcity.md`](../don-hopkins/hyperlook-news-postscript-simcity.md) ·
-[`../will-wright/sources/2006-12-28-ideas-for-sugar-development-environment-from-hyp/email-thread.md`](../will-wright/sources/2006-12-28-ideas-for-sugar-development-environment-from-hyp/email-thread.md)
+→ [`../don-hopkins/hyperlook-news-postscript-simcity.md`](../don-hopkins/hyperlook-news-postscript-simcity.md)
 
 
 

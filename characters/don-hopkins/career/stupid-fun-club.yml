@@ -69,8 +69,8 @@ stupid_fun_club:
   connects_to:
     - maxis_sims thread in project-threads.yml
     - moollm_repo_show — live coding and character federation today
-    - repo-shows/will-wright/ — Repo Show invitation context
-    - repo-shows/will-wright/slats-reincarnation.yml — RoboResurrection quest
+    - repo-shows/will-wright-premiere/ — Repo Show invitation context
+    - repo-shows/will-wright-premiere/slats-reincarnation.yml — RoboResurrection quest
 
   public_artifacts:
     - https://donhopkins.com

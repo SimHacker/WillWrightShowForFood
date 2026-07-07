@@ -36,7 +36,7 @@ Name lineage: **GoodNeWS → HyperNeWS → HyperLook**.
 | [`../alan-kay/media/quora-recaps/browsers-documents-news-hypercard-hyperlook.md`](../alan-kay/media/quora-recaps/browsers-documents-news-hypercard-hyperlook.md) | Kay + Don thread — Hypertalk regret, send-a-program |
 | [`../alan-kay/media/quora-recaps/hypercard-personal-computing-breakthrough.md`](../alan-kay/media/quora-recaps/hypercard-personal-computing-breakthrough.md) | HyperCard as end-user programming breakthrough |
 | [`../arthur-van-hoff/`](../arthur-van-hoff/) | HyperLook author (Turing Institute) |
-| [`../will-wright/sources/2006-12-16-fwd-re-simcity-unix/email-thread.md`](../will-wright/sources/2006-12-16-fwd-re-simcity-unix/email-thread.md) | HyperLook SimCity port history |
+| [`../will-wright/sources/2006-11-13-simcity-olpc-email-thread/`](../will-wright/sources/2006-11-13-simcity-olpc-email-thread/README.md) | HyperLook SimCity port history (curated OLPC thread) |
 
 ---
 

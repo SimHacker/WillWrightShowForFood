@@ -51,7 +51,7 @@ structure:
 see_also:
   parent:
     - { path: ../GLANCE.yml, why: "Sources evidence room" }
-    - { path: ../../../../repo-shows/will-wright/GLANCE.yml, why: "Show root — orbits here" }
+    - { path: ../../../../repo-shows/will-wright-premiere/GLANCE.yml, why: "Show root — orbits here" }
   siblings:
     - { path: ../2008-02-10-soul-of-the-sims/GLANCE.yml, why: "Motive.c — Sims substrate" }
     - { path: ../1998-06-04-sims-steering-committee-demo/GLANCE.yml, why: "Steering committee proto" }

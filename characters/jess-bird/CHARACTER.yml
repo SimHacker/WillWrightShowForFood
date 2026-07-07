@@ -1,0 +1,91 @@
+# Jess Bird — collaborator portrayal. NOT Jess Bird.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: jess-bird
+  name: "Jess Bird"
+  type: collaborator
+  signifier: "📺🎮📚"
+  status: living
+  field: "Documentary writer/researcher; Sims / Will Wright / Maxis history; BBC Studios lineage"
+  home: characters/jess-bird/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+  note: |
+    Warm production correspondent — not a Repo Show guest invite (yet). Jess may shape, delay,
+    reduce, or delete any portrayal at any time. No private contact info in this public repo.
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: not_offered
+  note: |
+    No show invitation published. Relationship lane is documentary ↔ Repo Show synergy —
+    mutual credibility, shared interviews, and archival depth — not competing pitches.
+
+bio:
+  summary: |
+    **Jess Bird** is a writer and documentary researcher building a **television history of
+    The Sims, Will Wright, and Maxis** — the kind of long-form, sourced, broadcast-scale work
+    that needs years of interviews, archives, and community trust. **Jami Becker** connected
+    Jess and Don in 2025; they've been in steady correspondence since — video calls, deep
+    reading lists, and introductions across the preservation and fan-builder worlds.
+
+    Jess does the hard part most hobby projects skip: **finding the right people**, honoring
+    their stories on camera, and holding the thread from **Project X** naming lore through
+    **SimRefinery recovery**, **SimFreaks / SimSlice**, and the **Soul of The Sims** primary
+    sources Don has been publishing. She interviewed **Tim LeTourneau** before his passing —
+    Don shares her wish that Tim's words live on in whatever form the history takes.
+
+    For **Will Wright Show For Food**, Jess is a **real-TV production anchor**: someone who
+    knows how commissioned documentary actually gets made, while Don's repo show ships code,
+    interviews, and artifacts in public. The projects **lend each other credibility** — her
+    broadcast rigor, our runnable demos and guest ladder — without either side pretending to
+    be the other.
+
+mission:
+  document: mission/documentary.yml
+  public_framing: |
+    Document the cultural and technical story of The Sims and its people — Maxis veterans,
+    community archivists, modders, and the design lineage Will Wright opened — with the care
+    broadcast history deserves.
+
+correspondence:
+  since: "2025-04 (Jami Becker intro)"
+  channel: email
+  public_excerpt: sources/2026-07-07-email-excerpt.md
+  private_archive: |
+    DonHopkins/projects/willwrightshowforfood/green-room/jess-bird/ — production strategy,
+    agreements, and threads not for the public repo.
+
+synergy:
+  with_repo_show: synergy/willwrightshowforfood.yml
+  don_position: |
+    Don codes and interviews on a public timeline; Jess documents at broadcast scale. Shared
+    sources, shared guests-in-common, no requirement that either project wait for the other.
+
+referrals_made_via_don:
+  paths:
+    - ../phil-salvador/
+    - ../jeff-adkins/
+    - ../heather-alvey/
+    - ../steve-alvey/
+  note: |
+    Don introduced Jess to archivists and community builders (Phil Salvador, Alex Avila's
+    Sims documentary work, Heather & Steve) — the same roster the Repo Show celebrates.
+
+sources:
+  july_2026_reply: sources/2026-07-07-email-excerpt.md
+  private_canonical: |
+    DonHopkins/projects/willwrightshowforfood/research/sources/jess-bird-bbc-email-2025.yml
+
+see_also:
+  - { path: README.md, why: "Public-facing overview" }
+  - { path: documentarians-guide.md, why: "The repo through a producer's eyes — arcs, people, sources, footage" }
+  - { path: reading-list.yml, why: "Machine-readable companion to the guide" }
+  - { path: mission/documentary.yml, why: "Mission — what she's documenting and why" }
+  - { path: ../will-wright/, why: "Primary subject of both projects" }
+  - { path: ../don-hopkins/, why: "Host — research partner and introduction hub" }
+  - { path: ../../repo-shows/will-wright-premiere/, why: "Repo Show flagship Jess can draw from" }

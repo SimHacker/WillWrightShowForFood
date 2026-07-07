@@ -34,7 +34,7 @@ graphics to music** on stream — the Dead-at-Shoreline energy, forkable.
 ## Browse
 
 - Show seed: [`repo-shows/dave-tristram/`](../../repo-shows/dave-tristram/README.md)
-- Hooks: [`ideas.md`](ideas.md) · [`invitation.md`](../../repo-shows/dave-tristram/invitation.md)
+- Hooks: [`ideas.md`](ideas.md) · [`invitation.md`](../../characters/dave-tristram/invitation.md)
 - Don ↔ Dave thread: [`../don-hopkins/media/computing-sun-brochure/`](../don-hopkins/media/computing-sun-brochure/computing-sun-brochure.yml) (Sun 4/200 brochure comments)
 - Public sources: [Wired — Raster Masters](https://www.wired.com/1994/06/raster-masters/) · [HN — Dead/tapers (Don, 2022)](https://news.ycombinator.com/item?id=33105030) · [HN — Psychedelic Graphics (Dave + Don, 2025)](https://news.ycombinator.com/item?id=42804566)
 

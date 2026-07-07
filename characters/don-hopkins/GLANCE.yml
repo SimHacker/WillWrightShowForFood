@@ -104,7 +104,7 @@ see_also:
     - { path: career/simcity-lineage.yml, why: "Open-source saga timeline" }
     - { path: career/contracts/README.md, why: "DUX/Maxis/EA/OLPC papers" }
   across:
-    - { path: ../../repo-shows/will-wright/GLANCE.yml, why: "Flagship show" }
+    - { path: ../../repo-shows/will-wright-premiere/GLANCE.yml, why: "Flagship show" }
     - { path: ../../skills/repo-show/SKILL.md, why: "Host protocol" }
     - { path: ../will-wright/primary-sources-evidence-room.md, why: "Curated map to all Will Wright primary sources" }
     - { path: ../../characters/will-wright/sources/README.md, why: "Evidence room spine + complete slug index" }

@@ -1,0 +1,33 @@
+# Daniel Tupper — pyramid of players (spawn artifact for Will's show)
+
+meta:
+  id: daniel-tupper-pyramid-of-players
+  type: spawn
+  for_session: will-wright-premiere
+  character: ../daniel-tupper/
+
+one_line: |
+  Daniel Tupper — ten years of letters — another climb on Will's pyramid: fan → city dreamer →
+  engine builder → Transmogrifier pipeline ally.
+
+will_quote_context: |
+  Will has praised for decades the **pyramid of players**: millions who play, fewer who mod, even
+  fewer who **build tools** — and those at the top improve the game for everyone below. Name Daniel
+  alongside Jeff Adkins (SimObliterator), Heather & Steve Alvey (SimFreaks / SimSlice).
+
+daniel_angle: |
+  Not save-file parsing — **open-world city dreams** (FreeTA: GTA without missions, full NYC),
+  **studio identity** (SWRSgaming), **own engine** ambition, and the **Sims 1 three-stories**
+  question only a deep fan asks. Also: offered to help modernize **Transmogrifier** toward the
+  browser — tool maker energy pointed at the whole community's pipeline.
+
+on_air_beats:
+  - "Daniel asked in 2013 whether Sims 1 had three stories or only the original — Will, what's the answer?"
+  - "FreeTA vs Micropolis — different scale, same joy of city as toy"
+  - "SWRSgaming — naming your studio from founders' initials (Daniel + friends)"
+
+see_also:
+  - ../../daniel-tupper/CHARACTER.yml
+  - ../../daniel-tupper/projects/freeta.yml
+  - ../../jeff-adkins/CHARACTER.yml
+  - ../sessions/04-portable-data-1996-to-soul-city/SESSION.yml

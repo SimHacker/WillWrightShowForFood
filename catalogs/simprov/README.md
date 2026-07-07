@@ -16,7 +16,7 @@ The emotional center of the Micropolis Home mission. An orchestration kit — no
 | Hope Chest + consultant | Onboarding and catalogs |
 | Donna's set pieces | Premium craft layer |
 
-Built when marriage equality was still a fight in the real world. Republishing for the Steam Sims 1 generation is deliberate **inclusion procedural rhetoric** — see [procedural-rhetoric-inclusion-agitprop.md](../../characters/will-wright/media/sims-series-procedural-rhetoric-inclusion-agitprop.md) and [Ian Bogost show seed](../../repo-shows/will-wright/ian-bogost-procedural-rhetoric/SHOW.yml).
+Built when marriage equality was still a fight in the real world. Republishing for the Steam Sims 1 generation is deliberate **inclusion procedural rhetoric** — see [procedural-rhetoric-inclusion-agitprop.md](../../characters/will-wright/media/sims-series-procedural-rhetoric-inclusion-agitprop.md) and [Ian Bogost show seed](../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml).
 
 **Orchestrator protocol:** [`ORCHESTRATOR.yml`](ORCHESTRATOR.yml) — Hope Chest state machine, Cupid reciprocal services, wedding planner magazines on the dining table, locked menu guidance, spawned NPC staff. Design doc: [`orchestrator-playsets`](../../designs/orchestrator-playsets/README.md).
 
@@ -29,7 +29,7 @@ Also in the SimProv lineage (different register): [Dumbold Voting Machine](../..
 | Kind | Link |
 |------|------|
 | Orchestrator | [ORCHESTRATOR.yml](ORCHESTRATOR.yml) — Hope Chest saga, magazines, NPC services |
-| Narration | [INTRO-NARRATIVE — wedding playset](../../repo-shows/will-wright/INTRO-NARRATIVE.md#the-magnum-opus-simprov-wedding-playset) |
+| Narration | [INTRO-NARRATIVE — wedding playset](../../repo-shows/will-wright-premiere/INTRO-NARRATIVE.md#the-magnum-opus-simprov-wedding-playset) |
 | Family motivation | [family manifesto](../../characters/will-wright/media/sims-series-family-manifesto.md) |
 | SimAntics toolkit | [simantics-objects gallery](../../characters/will-wright/media/sims-simantics-objects-README.md) |
 | In-game shots | [SimFreaks / SimProv gameplay](../../characters/will-wright/media/sims-simfreaks-content-gameplay-README.md) |

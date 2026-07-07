@@ -36,7 +36,7 @@ connects_in_repo:
   - { path: sources/, why: "Dated source bundles from mail + CS547" }
   - { path: ../chaim-gingold/, why: "Maxis history book vs building now" }
   - { path: ../heather-alvey/, why: "SliceCity / SimFreaks / Gallium" }
-  - { path: ../../repo-shows/will-wright/, why: "Flagship show seed" }
+  - { path: ../../repo-shows/will-wright-premiere/, why: "Flagship show seed" }
 
 show_hooks:
   - "1996 talk decode live — Will reads his own prediction of The Sims"

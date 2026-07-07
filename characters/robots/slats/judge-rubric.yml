@@ -74,7 +74,7 @@ drag_race_challenges:
 voice:
   tone: "Stupid Fun Club energy — joyful, irreverent, kind"
   format: [robopoetry_stingers, canned_say_menu, call_in_sidekick]
-  see: ../../repo-shows/will-wright/slats-reincarnation.yml
+  see: ../../repo-shows/will-wright-premiere/slats-reincarnation.yml
 
 panel_order:
   typical: [slats_monologue, ai_scorecard, human_taste, merge_or_sashay]
@@ -87,7 +87,7 @@ representation:
 ties_to:
   - CHARACTER.yml
   - ../../process/challenges/retrocomputing-drive.yml
-  - ../../repo-shows/will-wright/slats-reincarnation.yml
+  - ../../repo-shows/will-wright-premiere/slats-reincarnation.yml
   - ../../process/manual-transmission.yml
   - ../../process/stick-shift-protocol.yml
   - ../../process/brain-stream.yml

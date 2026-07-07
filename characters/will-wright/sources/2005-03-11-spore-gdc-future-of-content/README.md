@@ -113,7 +113,7 @@ Same pipeline as Winograd / Long Now: extract → captions → AE finish → pub
 
 ## Navigation
 
-↑ [sources](../README.md) · [Will show](../../../../repo-shows/will-wright/README.md) · [INTRO-NARRATIVE](../../../../repo-shows/will-wright/INTRO-NARRATIVE.md)
+↑ [sources](../README.md) · [Will show](../../../../repo-shows/will-wright-premiere/README.md) · [INTRO-NARRATIVE](../../../../repo-shows/will-wright-premiere/INTRO-NARRATIVE.md)
 
 | Sibling | → |
 |---------|---|

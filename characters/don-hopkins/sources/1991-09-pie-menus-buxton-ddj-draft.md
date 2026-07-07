@@ -4,7 +4,7 @@ Primary correspondence: Don Hopkins ↔ Bill Buxton (Xerox PARC), Ramiro Valdes 
 
 ## Buxton experiment — 8 vs 12 items (26 Sep 1991)
 
-Don → **Bill Buxton** (`buxton.xrcc@xerox.com`):
+Don → **Bill Buxton** (`[email redacted]`):
 
 - Buxton's **12-item** pie (numbers laid out **like a clock**) was **very fast — even faster than 11 items**.
 - Don asks how much the **clock metaphor** and numeric labels drove results vs words, colors, or non-clock number order.

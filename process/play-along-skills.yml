@@ -78,7 +78,7 @@ why_github:
   durable_and_forkable: "Everything is inspectable, forkable, and permanent — come for the show, fork the repo, run your own."
 
 see_also:
-  - ../repo-shows/will-wright/audience/README.md   # the welcome packet introduces Play Along
+  - ../repo-shows/will-wright-premiere/audience/README.md   # the welcome packet introduces Play Along
   - ../skills/README.md
   - ../skills/repo-show/SKILL.md
   - ticket-pr.yml

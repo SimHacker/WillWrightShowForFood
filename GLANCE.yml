@@ -6,8 +6,8 @@ what: "SimHacker/WillWrightShowForFood — polyglot MOOLLM microworld + pnpm mon
 status:
   repo: public
   monorepo: scaffolded
-  will_invitation: draft_ready_not_sent
-  consent: not_yet_asked
+  will_invitation: accepted  # SSOT: characters/INDEX.yml#flagship.will-wright
+  consent: accepted
 
 read_order:
   - README.md
@@ -18,7 +18,7 @@ read_order:
   - skills/repo-show/GLANCE.yml
   - process/README.md
   - process/VISION.md
-  - repo-shows/will-wright/README.md
+  - repo-shows/will-wright-premiere/README.md
   - characters/will-wright/sources/README.md
   - catalogs/README.md
   - catalogs/get-the-sims-on-steam.md
@@ -38,7 +38,7 @@ dev_quickstart: "nvm use && corepack enable && pnpm install && pnpm run verify"
 
 cream_on_top:
   - characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
-  - repo-shows/will-wright/README.md
+  - repo-shows/will-wright-premiere/README.md
   - characters/don-hopkins/README.md
 
 moollm:
@@ -60,11 +60,11 @@ see_also:
   - { path: catalogs/GLANCE.yml, why: "Syndicated UCC feeds + Steam recommendation" }
   - { path: catalogs/get-the-sims-on-steam.md, why: "Buy the game — EA-facing stance" }
   - { path: characters/will-wright/media/README.md, why: "Will photo pyramids" }
-  - { path: repo-shows/will-wright/BROWSE.md, why: "Will guest landing" }
+  - { path: repo-shows/will-wright-premiere/BROWSE.md, why: "Will guest landing" }
   - { path: process/cross-links.yml, why: "Thematic trails — leap sideways" }
   - { path: skills/repo-show/GLANCE.yml, why: "Show orchestrator sniff" }
   - { path: process/cross-links.yml, why: "Narrative trails — rabbit holes welcome" }
   - { path: process/VISION.md, why: "Long arc — 1996 microworlds → living organism" }
-  - { path: repo-shows/will-wright/README.md, why: "Flagship human pitch" }
+  - { path: repo-shows/will-wright-premiere/README.md, why: "Flagship human pitch" }
   - { path: characters/don-hopkins/README.md, why: "Host deep context" }
   - { path: SETUP.md, why: "Dev setup — monorepo verify" }

@@ -1,0 +1,80 @@
+# Daniel Tupper — collaborator portrayal. NOT Daniel Tupper.
+# Standards: ../../schemas/portrayal-standards.yml
+
+character:
+  id: daniel-tupper
+  name: "Daniel Tupper"
+  type: invitation
+  signifier: "🗽🛠️🎮"
+  status: living
+  field: "Artist-programmer fan; game dreams (FreeTA, SWRSgaming); long correspondence with Don; tool-maker climb"
+  home: characters/daniel-tupper/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.yml
+  consent_level: 3
+  authored_by: don-hopkins
+  note: "Real longtime correspondent + friend-of-the-project. Daniel may shape, delay, decline, or delete anytime."
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/daniel-tupper/
+  note: |
+    Correspondence since at least August 2013 (Facebook Messenger); ongoing for more than a
+    decade. Invitation not sent yet — enrich from shared history first, then ask warmly.
+
+bio:
+  summary: |
+    **Daniel Tupper** — a super-apex **artist, programmer, and fan** who has been in
+    correspondence with Don for **more than a decade** (first logged Facebook thread,
+    August 2013). He dreams in full cities and own engines: **FreeTA** (GTA with no
+    missions — a free-roam full New York), **SWRSgaming** (founders'-initials studio name,
+    in the spirit of WPS / World Power Systems), and a custom engine of his own. He asks
+    the good lore questions (did The Sims 1 ship with three stories, or only the original?),
+    collects old Maxis imagery, and keeps showing up with new designs. He also stepped up
+    pipeline through LLM-assisted translation toward the browser (Transmogrifier / TMOG
+    modernization thread — see catalogs/sims1-community-landscape.yml clean_room_tools).
+    Daniel is another face of Will Wright's **pyramid of players**: fan → builder → tool maker.
+
+correspondence:
+  channel: Facebook Messenger (primary logged thread); ongoing
+  since: "2013-08-01 (first excerpt on file)"
+  public_excerpt: sources/2013-08-01-facebook-messenger-excerpt.md
+  private_archive: |
+    DonHopkins/projects/willwrightshowforfood/green-room/daniel-tupper/ — decade+ of personal
+    and project discussion; not all public.
+
+projects:
+  - projects/freeta.yml
+  - projects/swrs-gaming.yml
+
+why_a_guest:
+  pyramid: |
+    Same ladder Jeff Adkins, Heather Alvey, and Steve Alvey climbed — play → dream → build →
+    tools. Daniel's side is **open-world city dreams + Sims toolchain modernization**; the
+    show names that climb for everyone watching.
+  stories_spawn: |
+    Daniel's threads enrich Don's story, Will's lore answers, and the repo's artifact graph:
+    FreeTA, SWRS, engine ambition, TMOG/browser pipeline — each a file that can grow into
+    demos, blipverts, and session beats.
+
+contact:
+  channel: "Direct + warm, ongoing."
+  note: "Longtime correspondent; specifics in the green room."
+
+sources:
+  messenger_2013: sources/2013-08-01-facebook-messenger-excerpt.md
+  transmogrifier_thread: |
+    DonHopkins/characters/don-hopkins/notes/hacker-news/simobliterator-deep-dive.yml
+    #transmogrifier_modernization (Daniel offered TMOG → modern code via LLM)
+
+see_also:
+  - { path: ideas.md, why: "Conversation hooks — FreeTA, SWRS, engine dreams, Sims lore, TMOG" }
+  - { path: ../../repo-shows/daniel-tupper/, why: "Show seed + invitation" }
+  - { path: ../don-hopkins/, why: "Host — decade+ correspondence" }
+  - { path: ../will-wright/spawn/daniel-tupper-pyramid-of-players.yml, why: "Will's pyramid — Daniel as exemplar fan→tool-maker" }
+  - { path: ../jeff-adkins/, why: "Parallel climb — fan to save-file tool maker" }
+  - { path: ../../catalogs/sims1-community-landscape.yml, why: "Community tool + UCC landscape Daniel fits into" }

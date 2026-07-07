@@ -73,7 +73,7 @@ seeds:
   # paths route THROUGH it ("fly through Atlanta"). Generic hub/spoke first; later, shortcut
   # optimizations + mutual schema recognition for compatible games. Full note: INDEX.yml#bridges_architecture
   game-bridge-sims-stardew.yml: "Group: Eric Barone — Sims ⇔ Simopolis ⇔ Stardew two-way bridge."
-  game-bridge-proxi-sims.yml:   "Will — Proxi ⇔ Simopolis ⇔ Sims bridge (data-portability payoff + Mind Mirror layer)."
+  game-bridge-proxi-sims.yml:   "Will — Proxi ⇔ Soul City ⇔ Sims bridge (data-portability payoff + Mind Mirror layer). NOT YET WRITTEN."
   game-bridge-sims-shattered.yml: "Evan Debenham — Sims ⇔ Simopolis ⇔ Shattered Pixel Dungeon (GPLv3 repo; roguelike contrast; funding exemplar)."
   game-bridge-sims-spore.yml:   "Will + Spore team — Sims ⇔ Simopolis ⇔ Spore creatures. CAPSTONE/big-ambition bridge: clean-room web re-creation of the creature renderer/animator/editor/builder, designed from interviews. Likely a multi-episode ARC."
   game-bridge-mind-mirror.yml:  "Sims ⇔ Simopolis ⇔ Timothy Leary's Mind Mirror (1986 EA) — first EMULATED-RUNTIME organelle (real Apple ][ binary in a web emulator) + cross-organelle property diffusion."

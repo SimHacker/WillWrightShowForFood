@@ -148,7 +148,7 @@ composition_tree:
     configure/hire/schedule → Crowd Sitter seats guests → ceremony → reception
 
 repo_show_mirror:
-  show_seed: ../../repo-shows/will-wright/ian-bogost-procedural-rhetoric/
+  show_seed: ../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/
   mapping:
     hope_chest: show seed + segment structure
     cupid: inject attribution / prerequisite beat

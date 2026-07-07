@@ -32,7 +32,7 @@ on computation. **Milan and Henry Minsky** (MIT AI Lab) introduced Norman to Don
 ## In this directory
 
 - [`SHOW.yml`](SHOW.yml) — the show seed.
-- [`invitation.md`](invitation.md) — the draft invitation (reached via Milan and Henry Minsky).
+- [`invitation.md`](../../characters/norman-margolus/invitation.md) — the draft invitation (reached via Milan and Henry Minsky).
 
 Guest: [`characters/norman-margolus/`](../../characters/norman-margolus/README.md). Consent **not yet asked** —
 the natural bridge is [Milan and Henry Minsky](../../characters/henry-minsky/README.md). See also Don's

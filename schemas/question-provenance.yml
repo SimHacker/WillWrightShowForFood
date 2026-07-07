@@ -1,6 +1,6 @@
 # Question provenance + routing — trace asks from ephemeral channels back to humans
 # Pairs with question-tree.yml (orchestration) and ticket-pr.yml (TicketPR lifecycle).
-# Worked example: repo-shows/will-wright/audience/hn-nanna/questions.yml
+# Worked example: repo-shows/will-wright-premiere/audience/hn-nanna/questions.yml
 
 meta:
   id: question-provenance
@@ -106,4 +106,4 @@ lifecycle:
 see_also:
   - question-tree.yml
   - ../process/ticket-pr.yml
-  - ../repo-shows/will-wright/audience/hn-nanna/questions.yml
+  - ../repo-shows/will-wright-premiere/audience/hn-nanna/questions.yml

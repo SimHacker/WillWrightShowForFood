@@ -18,7 +18,7 @@ representation:
 invitation:
   status: dream_guest
   consent: not_yet_asked
-  document: ../../repo-shows/laurie-anderson/invitation.md
+  document: ../../characters/laurie-anderson/invitation.md
   show_seed: repo-shows/laurie-anderson/
 
 bio:

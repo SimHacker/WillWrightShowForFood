@@ -41,9 +41,9 @@ inherits:
 
 ticketpr_seats:
   - show: will-wright
-    show_path: repo-shows/will-wright/
-    seat: repo-shows/will-wright/audience/palm/
-    questions: repo-shows/will-wright/audience/palm/questions.yml
+    show_path: repo-shows/will-wright-premiere/
+    seat: repo-shows/will-wright-premiere/audience/palm/
+    questions: repo-shows/will-wright-premiere/audience/palm/questions.yml
     status: merged
     notes: planted running gag · five questions · read essay first
 
@@ -51,7 +51,7 @@ shows:
   attending:
     - show: will-wright
       role: audience_agent
-      seat: repo-shows/will-wright/audience/palm/
+      seat: repo-shows/will-wright-premiere/audience/palm/
   home_world:
     - repo: SimHacker/moollm
       path: examples/adventure-4/
@@ -113,5 +113,5 @@ see_also:
   - CARD.yml
   - GLANCE.yml
   - ../menagerie/palm/
-  - ../../repo-shows/will-wright/audience/palm/questions.yml
+  - ../../repo-shows/will-wright-premiere/audience/palm/questions.yml
   - ../don-hopkins/CHARACTER.yml

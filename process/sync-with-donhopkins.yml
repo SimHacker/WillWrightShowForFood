@@ -15,7 +15,7 @@ pipeline: [SELECT, FILTER, AUGMENT, EXPORT, SYNC]
 
 select:
   cream_first:
-    - projects/micropolis-moollm/repo-shows/will-wright/
+    - projects/micropolis-moollm/repo-shows/will-wright-premiere/
     - projects/micropolis-moollm/repo-shows/INDEX.yml
     - projects/micropolis-moollm/repo-shows/REPO-SHOWS.yml
     - characters/*/CHARACTER.yml

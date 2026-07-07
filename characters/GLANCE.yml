@@ -75,7 +75,7 @@ see_also:
     - { path: philip-rosedale/GLANCE.yml, why: "Second Life / HiFi — worklist JSON plugins × MOOLLM" }
   across:
     - { path: ../schemas/portrayal-standards.yml, why: "Ethics + subject rights" }
-    - { path: ../repo-shows/will-wright/audience/README.md, why: "Per-show audience" }
+    - { path: ../repo-shows/will-wright-premiere/audience/README.md, why: "Per-show audience" }
     - { path: ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/GLANCE.yml, why: "Centerpiece source" }
   deep:
     - { path: README.md, why: "Human facade article" }

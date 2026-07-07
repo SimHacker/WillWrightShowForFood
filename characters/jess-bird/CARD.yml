@@ -1,0 +1,41 @@
+# Jess Bird — skills card (collaborator portrayal; not a guest invite)
+
+meta:
+  id: jess-bird
+  name: Jess Bird
+  signifier: "📺🎮📚"
+  home: characters/jess-bird/
+  relationship: documentary_collaborator
+  invitation_status: not_offered
+
+abilities:
+  - id: BROADCAST-HISTORY
+    name: Broadcast History
+    type: static
+    effect: "Hold the Sims / Maxis story at television scale — sourced, patient, commissioned."
+    verifiable: mission/documentary.yml
+  - id: ARCHIVIST-BRIDGE
+    name: Archivist Bridge
+    type: activated
+    mana: "{W}{U}"
+    effect: "Connect documentary research to preservation scholars and community builders."
+    verifiable: correspondence.yml#milestones
+  - id: VETERAN-VOICES
+    name: Veteran Voices
+    type: activated
+    mana: "{W}{W}"
+    effect: "Interview the people who were there — honor memorial footage with care."
+    verifiable: sources/2026-07-07-email-excerpt.md
+  - id: REPO-SYNERGY
+    name: Repo Synergy
+    type: static
+    effect: "Lend broadcast credibility to the repo show; draw from its code and interviews."
+    verifiable: synergy/willwrightshowforfood.yml
+
+combos_with:
+  - path: ../will-wright/CARD.yml
+    why: "Shared subject — Will's pyramid and primary sources"
+  - path: ../phil-salvador/CARD.yml
+    why: "SimRefinery / MBS archivist Jess met through Don"
+  - path: ../don-hopkins/CARD.yml
+    why: "Introduction hub + published sources"

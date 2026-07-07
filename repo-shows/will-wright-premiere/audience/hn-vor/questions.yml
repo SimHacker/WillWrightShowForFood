@@ -1,0 +1,227 @@
+# vor_ — HN questions for Will (async Adorable Minutes / Repo Show queue)
+# Schema: ../../../../schemas/question-tree.yml
+# Provenance + routing: ../../../../schemas/question-provenance.yml
+
+ticket:
+  show: will-wright
+  github: null
+  attend_live: optional
+  merged: false
+  submitted: 2026-07-04
+  character_ref: null
+
+lifecycle:  # Don's pipeline, 2026-07-06 — every stage folds back into this tree
+  stages:
+    - quick: "Will's initial VIDEO reply (as long as he wants) -> YouTube -> URL dropped on the HN thread as a reply; short per-question answers recorded in quick_answer; responses come back via HN, YouTube, or repo issues/PRs"
+    - teaser: "asker stays eligible for a one-on-one time-shifted Q&A-from-the-audience teaser video (Adorable Minutes)"
+    - full: "Don Philahue calls on the audience character simulator at the right moment; Will gives the full considered answer; original asker + others follow up"
+    - fold_back: "answers, follow-ups, and discussions stimulated all append to this question tree as children — the asker's participation record"
+  current: quick   # Don asking Will now
+
+provenance:
+  source: hacker_news
+  captured_at: 2026-07-04
+  curator:
+    github: DonHopkins
+    hn: DonHopkins
+  hn:
+    user: vor_
+    user_url: https://news.ycombinator.com/user?id=vor_
+    thread_id: 48776525
+    comment_id: 48781412
+    parent_id: 48780144
+    thread_url: https://news.ycombinator.com/item?id=48776525
+    comment_url: https://news.ycombinator.com/item?id=48781412
+    parent_url: https://news.ycombinator.com/item?id=48780144
+  article:
+    title: "The Life and Times of Maxis, Part 1: SimEverything"
+    url: https://www.filfre.net/2026/07/the-life-and-times-of-maxis-part-1-simeverything/
+    hn_submission: https://news.ycombinator.com/item?id=48776525
+  repo_source_pack: ../../../../characters/will-wright/sources/2026-07-03-digital-antiquarian-maxis-part1/
+
+routing:
+  asker:
+    hn_user: vor_
+    hn_profile: https://news.ycombinator.com/user?id=vor_
+    github: null
+    email: null
+    note: "Route back via HN reply until vor_ opens TicketPR or shares contact."
+  reply_channels:
+    - channel: git_queue
+      action: questions.yml SSOT
+      target: repo-shows/will-wright-premiere/audience/hn-vor/questions.yml
+      status: done
+      posed_at: 2026-07-04
+    - channel: github_issue
+      action: open_or_bind_issue
+      target: https://github.com/SimHacker/WillWrightShowForFood
+      status: planned
+    - channel: email_to_guest
+      action: don_forwards_batch_to_will
+      via: don-hopkins
+      status: planned
+    - channel: quick_answer_via_don
+      action: will_video_reply_to_youtube_url_posted_on_hn
+      status: in_progress   # Don telling Will 2026-07-06; quick answers land in each question's quick_answer block, then HN reply
+      requested: 2026-07-06
+    - channel: adorable_minutes
+      action: async_short_video
+      status: planned
+    - channel: repo_show_interview
+      action: on_air_segment
+      status: planned
+    - channel: twitch_live
+      action: mic_line_or_chat_callout
+      status: planned
+    - channel: hacker_news
+      action: reply_on_comment
+      target: https://news.ycombinator.com/item?id=48781412
+      status: planned
+
+pose:
+  email_to_guest:
+    status: draft
+    subject: "HN questions for you — vor_ (frontiers, science ed, AI, what you're playing)"
+    body: |
+      Will — four questions from HN user **vor_** on Jimmy Maher's Maxis history thread.
+      We're collecting replies for Adorable Minutes + the Repo Show. Answer in any form
+      (voice memo, email, on camera — whatever's easy).
+
+      1. What **unexplored frontiers** do you wish game developers would pay more attention to?
+
+      2. How do you feel about the state of **science education for children** today — schooling,
+         television, toys, internet, and so forth?
+
+      3. What are your thoughts on the effects of **current AI trends** on culture and education?
+
+      4. What **games**, if any, have you been playing lately?
+
+      Git queue: WillWrightShowForFood/repo-shows/will-wright-premiere/audience/hn-vor/questions.yml
+      HN: https://news.ycombinator.com/item?id=48781412
+
+  hn_reply_when_answered:
+    status: template
+    body: |
+      @vor_ — Will replied (Adorable Minutes / Repo Show). [link to video or issue]
+      Short version: …
+
+  on_air_intro:
+    status: template
+    body: |
+      This batch came from **vor_** on Hacker News — frontiers for devs, kids' science education,
+      AI and culture, and what Will's been playing lately.
+
+  twitch_callout:
+    status: template
+    body: "Question from HN user vor_ — four in the queue; Will, take them when you're ready."
+
+amplification:
+  events:
+    - by: DonHopkins
+      channel: hacker_news
+      action: question_pump_parent
+      ref: https://news.ycombinator.com/item?id=48780144
+      date: 2026-07-04
+  invite: |
+    Anyone can amplify — reply on the HN thread, 👍 the GitHub issue once open, add a me_too
+    child here, or message Don. Tie amplifications to hn.comment_id 48781412.
+
+relationship: |
+  HN commenter on Jimmy Maher's Maxis history (filfre.net). Replied to Don's "collecting
+  questions for Will Wright" post with four open questions.
+
+questions:
+  - id: unexplored-frontiers
+    to: will-wright
+    status: open
+    quick_answer:   # stage 1 — Will's offhand short answer, via Don
+      status: requested   # requested 2026-07-06 -> answered when the reply lands
+      video: null         # YouTube URL of Will's video reply (may cover several questions)
+      text: null          # short text distillation for the HN reply / this tree
+      hn_reply: null      # url of Don's HN reply once posted
+    theme: game_design_frontiers
+    question: |
+      What unexplored frontiers do you wish game developers would pay more attention to?
+    provenance:
+      verbatim: |
+        What unexplored frontiers does he wish game developers would pay more attention to?
+      hn:
+        user: vor_
+        comment_id: 48781412
+    discussion:
+      repo: https://github.com/SimHacker/WillWrightShowForFood
+    children: []
+
+  - id: science-education-children
+    to: will-wright
+    status: open
+    quick_answer:   # stage 1 — Will's offhand short answer, via Don
+      status: requested   # requested 2026-07-06 -> answered when the reply lands
+      video: null         # YouTube URL of Will's video reply (may cover several questions)
+      text: null          # short text distillation for the HN reply / this tree
+      hn_reply: null      # url of Don's HN reply once posted
+    theme: science_education
+    question: |
+      How do you feel about the state of science education for children today in terms of
+      schooling, television, toys, internet, and so forth?
+    provenance:
+      verbatim: |
+        How does he feel about the state of science education for children today in terms of
+        schooling, television, toys, internet, and so forth?
+      hn:
+        user: vor_
+        comment_id: 48781412
+    discussion:
+      repo: https://github.com/SimHacker/WillWrightShowForFood
+    children: []
+
+  - id: ai-culture-education
+    to: will-wright
+    status: open
+    quick_answer:   # stage 1 — Will's offhand short answer, via Don
+      status: requested   # requested 2026-07-06 -> answered when the reply lands
+      video: null         # YouTube URL of Will's video reply (may cover several questions)
+      text: null          # short text distillation for the HN reply / this tree
+      hn_reply: null      # url of Don's HN reply once posted
+    theme: ai_culture
+    question: |
+      What are your thoughts on the effects of current AI trends on culture and education?
+    provenance:
+      verbatim: |
+        What are his thoughts on the effects of current AI trends on culture and education?
+      hn:
+        user: vor_
+        comment_id: 48781412
+    discussion:
+      repo: https://github.com/SimHacker/WillWrightShowForFood
+    children: []
+
+  - id: games-playing-lately
+    to: will-wright
+    status: open
+    quick_answer:   # stage 1 — Will's offhand short answer, via Don
+      status: requested   # requested 2026-07-06 -> answered when the reply lands
+      video: null         # YouTube URL of Will's video reply (may cover several questions)
+      text: null          # short text distillation for the HN reply / this tree
+      hn_reply: null      # url of Don's HN reply once posted
+    theme: what_will_plays
+    question: |
+      What games, if any, have you been playing lately?
+    provenance:
+      verbatim: |
+        What games, if any, has he been playing lately?
+      hn:
+        user: vor_
+        comment_id: 48781412
+    discussion:
+      repo: https://github.com/SimHacker/WillWrightShowForFood
+    children: []
+
+comments_for_guest: |
+  vor_ tossed four questions on HN 2026-07-04 — frontiers, science ed for kids, AI effects,
+  and what you're playing. We'll route answers back on HN, GitHub, and async video.
+
+meta:
+  question_tree_schema: ../../../../schemas/question-tree.yml
+  question_provenance_schema: ../../../../schemas/question-provenance.yml
+  show_format: [adorable-minutes, repo-show-async, twitch_live]

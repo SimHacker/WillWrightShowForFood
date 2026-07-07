@@ -5,7 +5,7 @@ Each room has a **CARD.yml** door — Sims-style advertisement of what's inside.
 | Room | Door | What's inside |
 |------|------|----------------|
 | **Root** | [`CARD.yml`](../../CARD.yml) · [`GLANCE.yml`](../../GLANCE.yml) | Plugin map, FIND-GUEST, museum map |
-| **Shows** | [`repo-shows/CARD.yml`](../../repo-shows/CARD.yml) | Planted episodes — [will-wright flagship](../../repo-shows/will-wright/README.md) |
+| **Shows** | [`repo-shows/CARD.yml`](../../repo-shows/CARD.yml) | Planted episodes — [will-wright flagship](../../repo-shows/will-wright-premiere/README.md) |
 | **Guests** | [`characters/CARD.yml`](../../characters/CARD.yml) | One directory per person — browse the tree |
 | **Process** | [`process/CARD.yml`](../CARD.yml) | Format, drag race, retro, vision — [INDEX](../INDEX.yml) |
 | **Rigs** | [`rigs/CARD.yml`](../../rigs/CARD.yml) | Personas + SETUP DNA — [README](../../rigs/README.md) |

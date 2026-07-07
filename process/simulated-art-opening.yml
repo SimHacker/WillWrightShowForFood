@@ -104,7 +104,7 @@ instances:
   scott_draves:
     guest: scott-draves
     path: repo-shows/scott-draves/simulated-opening.yml
-    invitation: repo-shows/scott-draves/invitation.md
+    invitation: characters/scott-draves/invitation.md
     status: draft_invite
   brian_eno:
     guest: brian-eno

@@ -80,7 +80,7 @@ invitation:
   sent: 2026-07-06
   sent_via: facebook
   show_seed: repo-shows/coco-conn/
-  path: ../../repo-shows/coco-conn/invitation.md
+  path: ../../characters/coco-conn/invitation.md
   next: "await reply — Hackers Conference tape catalog + clip rights"
 
 facts_to_confirm:

@@ -8,7 +8,7 @@ Don's long-time avant-garde north star — and a **shared Interval Research** hi
 | | |
 |---|---|
 | **Guest page** | [`characters/laurie-anderson/`](../../characters/laurie-anderson/) |
-| **Invitation** | [`invitation.md`](invitation.md) |
+| **Invitation** | [`invitation.md`](../../characters/laurie-anderson/invitation.md) |
 | **Hooks** | [`ideas.md`](../../characters/laurie-anderson/ideas.md) |
 | **Show spec** | [`SHOW.yml`](SHOW.yml) |
 

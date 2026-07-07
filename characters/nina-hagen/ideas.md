@@ -12,15 +12,14 @@ Her 1979 *Club 2* moment is the twin emblem to Bowie's video puppet: **get the t
 air, on purpose, for a reason.** Direct tie to the show's
 [`unnecessary-censorship`](../../repo-shows/ideas/traditions/unnecessary-censorship.yml) tradition
 (voluntary comedy, never timid euphemism; we don't bowdlerize real names) and the medium's
-get-it-past-the-gate-then-repossess-it thesis
-([`FRAMING-REPOSHOW-AS-NEW-MEDIUM.md`](../../designs/chatgpt-research-review/framing/FRAMING-REPOSHOW-AS-NEW-MEDIUM.md)).
+get-it-past-the-gate-then-repossess-it thesis (see [`VISION.md`](../../process/VISION.md)).
 
 ### 2. The operatic-punk voice as instrument (the Nomi sibling)
 A classically-trained, multi-octave voice turned into punk theatre — sibling to **Klaus Nomi's**
 countertenor. A natural thread on **voice as instrument**, pairing with the show's vocal-tract toys
 (**Pink Trombone**, **Phoneloper** — [`../../schemas/language-cow.yml`](../../schemas/language-cow.yml))
 and the voice-puppet performance kind
-([`../../repo-shows/will-wright/performance-and-culture.yml`](../../repo-shows/will-wright/performance-and-culture.yml)
+([`../../repo-shows/will-wright-premiere/performance-and-culture.yml`](../../repo-shows/will-wright-premiere/performance-and-culture.yml)
 `#puppet_kinds`).
 
 ### 3. Art under a censoring state — GDR, Biermann, and repossession

@@ -12,15 +12,15 @@ meta:
 bundles:
   will_wright_show:
     priority: 1
-    source: projects/micropolis-moollm/repo-shows/will-wright/
-    target: repo-shows/will-wright/
+    source: projects/micropolis-moollm/repo-shows/will-wright-premiere/
+    target: repo-shows/will-wright-premiere/
     include: [README.md, SHOW.yml, GLANCE.yml, invitation.md, invitation-opus-draft.md, invitation-gpt55-draft.md, episodes.yml, suggested-questions.yml, slats-reincarnation.yml, venue/, audience/]
     exclude: [.work/, sources/, assets/, catalogs/]
     note: "sources + media on characters/will-wright/; catalogs at repo root — show links only"
 
   catalogs_syndication:
     priority: 1
-    source: projects/micropolis-moollm/repo-shows/will-wright/catalogs/
+    source: projects/micropolis-moollm/repo-shows/will-wright-premiere/catalogs/
     target: catalogs/
     include: ["**/*"]
     note: "Repo-level UCC feeds — syndicated across shows; get-the-sims-on-steam.md"

@@ -21,7 +21,7 @@ segments:
     topic: "Drew in The Sims — the House Party cameo (arrive by limo), the Drew Carey Show episode set in The Sims, being a fan"
     ties:
       - characters/eric-hedman/      # animated the House Party Drew Carey Show tie-in
-      - repo-shows/will-wright/
+      - repo-shows/will-wright-premiere/
 
   - id: improv_craft
     topic: "Whose Line Is It Anyway? — how live improvisation works; performing within a format; reading a room"
@@ -40,7 +40,7 @@ segments:
   - id: meet_the_audience
     topic: "Meet the Sims characters who grew up around him — Bella, Bob, the Sad Clown, Slats, Death"
     ties:
-      - repo-shows/will-wright/audience/
+      - repo-shows/will-wright-premiere/audience/
 
   - id: sims_play_along_narration
     topic: |
@@ -49,7 +49,7 @@ segments:
       and the Foreign Poet improv game that became Simlish — without needing a custom Maxis build.
     format: process/sims-play-along-narration.yml
     ties:
-      - repo-shows/will-wright/sims-play-along-narration.yml
+      - repo-shows/will-wright-premiere/sims-play-along-narration.yml
       - schemas/language-simlish.yml
       - characters/eric-hedman/
     sources:
@@ -68,7 +68,7 @@ segments:
     ties:
       - repo-shows/ideas/themes/human-control-and-authorship.yml
       - repo-shows/ideas/traditions/make-play-tools-show.yml#television_lineage
-      - repo-shows/will-wright/performance-and-culture.yml
+      - repo-shows/will-wright-premiere/performance-and-culture.yml
       - process/crazy-idea-jam.yml#player_in_the_middle
       - process/crazy-idea-jam.yml#creationtv_storymaker
 
@@ -79,7 +79,7 @@ framing:
 
 related:
   - characters/drew-carey/
-  - repo-shows/drew-carey/invitation.md
+  - characters/drew-carey/invitation.md
   - repo-shows/drew-carey/ai-contrast-framing.md
-  - repo-shows/will-wright/
+  - repo-shows/will-wright-premiere/
   - characters/eric-hedman/

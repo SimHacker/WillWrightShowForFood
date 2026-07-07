@@ -96,7 +96,7 @@ What got lost besides the veneer:
 
 The idea that the **linguistic substrate shapes the object system** isn't a retro-fitted thesis — it
 has a named origin, and it's sitting in Don's own archive. **John Warnock** called PostScript a
-**"linguistic motherboard."** The source is a 1990 email from **Owen Densmore** (`owen@Sun.COM`) to
+**"linguistic motherboard."** The source is a 1990 email from **Owen Densmore** (`[email redacted]`) to
 Don (`don@cs.UMD.EDU`), recounting a LaserWriter-era lunch with Warnock at Adobe
 ([archived](https://donhopkins.com/home/archive/NeWS/linguistic-motherboard-owen.txt)):
 

@@ -279,7 +279,7 @@ donations:
     organic_advantages: [more_camera_time, called_on_first, guest_eye_contact, named_in_roll]
     not_a_gate: "You can ask the best question from the back row for free and still get picked."
     simoleons_note: "In-show § (Simoleons) are play-money only — NOT a way to buy seats. Real seating nods to real (optional) donations."
-    spec: ../repo-shows/will-wright/audience/INDEX.yml#box_seats
+    spec: ../repo-shows/will-wright-premiere/audience/INDEX.yml#box_seats
 
 relation_to_character_prs:
   characters: |

@@ -24,7 +24,7 @@ trails:
       - { path: repo-show-format.yml, why: "Canonical girder — rig spectrum, cauldron, clocks" }
       - { path: FORMAT.md, why: "Generated human view — pnpm run facades" }
       - { path: showmaker-network.yml, why: "Shows breed shows — graph of linked episodes" }
-      - { path: ../repo-shows/will-wright/, why: "Flagship planted show — Will kickoff arc" }
+      - { path: ../repo-shows/will-wright-premiere/, why: "Flagship planted show — Will kickoff arc" }
       - { path: ../repo-shows/REPO-SHOWS.yml, why: "Implicit SHOW inheritance for whole collection" }
       - { path: couple-and-solo-shows.yml, why: "Async default — solo + weave, not sync roundtable" }
       - { path: guest-participation-ladder.yml, why: "Constitutional tiers — solo video first; full-service repo; franchise" }
@@ -269,7 +269,7 @@ trails:
       - { path: ../characters/will-wright/, why: "SimCity, the Dollhouse demo, The Sims, Spore" }
       - { path: ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "Primary source — Dollhouse → Sims screenshots (167 images)" }
       - { path: ../characters/will-wright/sources/1998-06-04-sims-steering-committee-demo/, why: "Primary source — pre-release Sims build (Edith/SimAntics live, pie menus, scenario system) demoed to EA, June 4 1998" }
-      - { path: ../repo-shows/will-wright/slats-reincarnation.yml, why: "Stupid Fun Club robot resurrection — shared SFC lineage" }
+      - { path: ../repo-shows/will-wright-premiere/slats-reincarnation.yml, why: "Stupid Fun Club robot resurrection — shared SFC lineage" }
       - { path: ../characters/chaim-gingold/, why: "Building SimCity — history + reverse diagrams" }
       - { path: ../characters/jason-shankel/, why: "Maxis / SFC alumnus — games + AI" }
       - { path: ../characters/don-hopkins/career/stupid-fun-club.yml, why: "Robots among humans — the post-Maxis lab" }
@@ -279,7 +279,7 @@ trails:
     why: "Legacy artisanal catalogs + the create/publish/share platform that hosts them"
     nodes:
       - { path: ../catalogs/, why: "Catalog hub — CATALOGS.yml + five entries" }
-      - { path: ../repo-shows/will-wright/ian-bogost-procedural-rhetoric/SHOW.yml, why: "Bogost — inclusion agitprop vs Dumbold farce" }
+      - { path: ../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml, why: "Bogost — inclusion agitprop vs Dumbold farce" }
       - { path: ../characters/will-wright/media/sims-series-procedural-rhetoric-inclusion-agitprop.md, why: "Wedding playset phoenix + Motive.c lineage" }
       - { path: ../catalogs/micropolis-home/, why: "Platform — not just a shelf" }
       - { path: ../catalogs/simfreaks/, why: "Heather Alvey — ~26-year brand" }
@@ -288,7 +288,7 @@ trails:
       - { path: ../designs/orchestrator-playsets/README.md, why: "Dispatch + hub protocols — Hope Chest, power plant, ham radio" }
       - { path: ../schemas/advertisement-dispatch.yml, why: "forward / inject / hub / magazine / spawn" }
       - { path: ../catalogs/zombie-sims/, why: "Current magnum-opus pack — Afterlife bridge" }
-      - { path: ../repo-shows/will-wright/INTRO-NARRATIVE.md, why: "Mission + proof" }
+      - { path: ../repo-shows/will-wright-premiere/INTRO-NARRATIVE.md, why: "Mission + proof" }
       - { path: ../repo-shows/heather-and-steve-alvey/, why: "First platform users" }
 
   the_card_game:
@@ -314,7 +314,7 @@ trails:
     nodes:
       - { path: crazy-idea-jam.yml, why: "The reactor — every wacky idea in one girder" }
       - { path: CRAZY-IDEA-JAM.md, why: "Human view — tight blurbs, grouped" }
-      - { path: ../repo-shows/will-wright/slats-reincarnation.yml, why: "SLATS LIVES — RoboResurrection on Easter, robopoetry ceremony" }
+      - { path: ../repo-shows/will-wright-premiere/slats-reincarnation.yml, why: "SLATS LIVES — RoboResurrection on Easter, robopoetry ceremony" }
       - { path: ../characters/robots/slats/CARD.yml, why: "Robot waiter abilities — SEEK-GENETIC-MATERIAL, ROBO-RESURRECT" }
       - { path: ../characters/don-hopkins/career/stupid-fun-club.yml, why: "Robots among humans — One Minute Movies" }
       - { path: ../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml, why: "Drain Hell — artisanal ZombieSims, soul ledger" }
@@ -330,7 +330,7 @@ trails:
       - { path: performance-space/README.md, why: "Top-level human design doc" }
       - { path: performance-space.yml, why: "Canonical girder — modes, lineage, POC roadmap" }
       - { path: sims-play-along-narration.yml, why: "Drew Carey × Foreign Poet format" }
-      - { path: ../repo-shows/will-wright/performance-and-culture.yml, why: "Will show puppetry + participation culture" }
+      - { path: ../repo-shows/will-wright-premiere/performance-and-culture.yml, why: "Will show puppetry + participation culture" }
       - { path: ../characters/will-wright/sources/steve-and-gerri-simlish-adlib/, why: "Kearin/Lawlor ad-lib — origin tape" }
       - { path: ../repo-shows/drew-carey/SHOW.yml, why: "Drew in The Sims — TV lineage" }
       - { path: ../apps/performance-space/, why: "Web toys — Conan face-puppet P0" }

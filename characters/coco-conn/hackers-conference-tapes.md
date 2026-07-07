@@ -42,5 +42,5 @@ there"** Repo Show family.
 ## See also
 
 - [`ideas.md`](ideas.md) · [`CHARACTER.yml`](CHARACTER.yml)
-- [`repo-shows/coco-conn/invitation.md`](../../repo-shows/coco-conn/invitation.md)
+- [`characters/coco-conn/invitation.md`](../../characters/coco-conn/invitation.md)
 - [Hackers: Wizards of the Electronic Age — Internet Archive](https://archive.org/details/Hackers_201808) (1984 KQED documentary — related public footage, not Coco's tapes)

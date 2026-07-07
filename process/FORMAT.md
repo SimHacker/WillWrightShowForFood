@@ -88,7 +88,7 @@ ROOM.yml optional compass; SIMULATION.yml runtime. README renders GLANCE nav for
 
 - **template:** repo-shows/_TEMPLATE/audience/
 - **show_template:** repo-shows/_TEMPLATE/
-- **example:** repo-shows/will-wright/venue/ROOM.yml
+- **example:** repo-shows/will-wright-premiere/venue/ROOM.yml
 
 ### Topologies
 
@@ -467,7 +467,7 @@ MELT/STIR grows the soup; SCOOP selects what leaves the pot and in what form.
 | [`brain-stream.yml`](brain-stream.yml) | Live thinking overlay |
 | [`micropolis-ai-drag-race.yml`](micropolis-ai-drag-race.yml) | Flagship game-show format |
 | [`retrocomputing-drive.yml`](challenges/retrocomputing-drive.yml) | Retro AI drag race family |
-| [`README.md`](../repo-shows/will-wright/README.md) | Flagship show pitch |
+| [`README.md`](../repo-shows/will-wright-premiere/README.md) | Flagship show pitch |
 | [`REPO-SHOWS.yml`](../repo-shows/REPO-SHOWS.yml) | SHOW inheritance |
 | [`SKILL.md`](../skills/repo-show/SKILL.md) | Orchestrator protocol |
 | [`INDEX.yml`](../skills/INDEX.yml) | Harvest + upstream moollm skills |

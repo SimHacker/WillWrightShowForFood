@@ -8,7 +8,7 @@ meta:
   show: repo-shows/scott-draves/
   host: don-hopkins
   auctioneer: don-philahue
-  invite: invitation.md#simulated-opening
+  invite: ../../characters/scott-draves/invitation.md#simulated-opening
   play_along: true
   consent: not_yet_asked
 

@@ -5,8 +5,8 @@
 > ("heizronyms") as multiway substitution systems; **Part II** applies the same lens to MOOLLM-the-system. The
 > "how Wolfram thinks" framings are affectionate reconstructions from his published work, not quotes.
 >
-> Grew out of the acronym **field theory** in the research bundle:
-> [`NOMENCLATURE-HEISENBERGIAN-ACRONYMS.md`](../../designs/chatgpt-research-review/nomenclature/NOMENCLATURE-HEISENBERGIAN-ACRONYMS.md).
+> Grew out of the acronym **field theory** in Don's research notes (its Wolfram corner);
+> this artifact is the self-contained public version.
 
 ## Why this might interest you
 
@@ -147,6 +147,5 @@ the show. — Don Hopkins
 ## See also
 
 - [`invitation.md`](invitation.md) — the (short) Repo Show invitation this supports.
-- [`NOMENCLATURE-HEISENBERGIAN-ACRONYMS.md`](../../designs/chatgpt-research-review/nomenclature/NOMENCLATURE-HEISENBERGIAN-ACRONYMS.md) — the full field theory this grew out of (its Wolfram corner).
-- [`MOOCO-LIVE-CONTROL-SURFACES.md`](../../designs/chatgpt-research-review/mooco/MOOCO-LIVE-CONTROL-SURFACES.md) — the `/proc`-style "filesystem is the API" substrate.
-- [`MOOCO-CAPABILITY-BAR.yml`](../../designs/chatgpt-research-review/mooco/MOOCO-CAPABILITY-BAR.yml) — advisory-vs-enforced across drivers.
+- The full acronym field theory, the `/proc`-style "filesystem is the API" substrate, and the
+  advisory-vs-enforced capability bar live in Don's research notes — bring them up on the show.

@@ -37,6 +37,6 @@ in **Berkeley** — and the home base for the street shoots was **Au Coquelet Ca
 
 Full gallery (incl. his slatted **face** and the SFC seal): [`photos.md`](photos.md).
 
-See [`../../repo-shows/will-wright/slats-reincarnation.yml`](../../repo-shows/will-wright/slats-reincarnation.yml) · [Browse for Will](../../repo-shows/will-wright/BROWSE.md)
+See [`../../repo-shows/will-wright-premiere/slats-reincarnation.yml`](../../repo-shows/will-wright-premiere/slats-reincarnation.yml) · [Browse for Will](../../repo-shows/will-wright-premiere/BROWSE.md)
 
 Will will love this. ⛪🤖

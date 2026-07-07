@@ -4,7 +4,7 @@
 
 SFC robot waiter demos — the origin of **Slats** and the ROBORESURRECTION show segment.
 
-*Parent feed:* [`../README.md`](../README.md) · *Slats portrayal:* [`../../../slats/README.md`](../../../slats/README.md) · *Show segment:* [`../../../../repo-shows/will-wright/slats-reincarnation.yml`](../../../../repo-shows/will-wright/slats-reincarnation.yml)
+*Parent feed:* [`../README.md`](../README.md) · *Slats portrayal:* [`../../../slats/README.md`](../../../slats/README.md) · *Show segment:* [`../../../../repo-shows/will-wright-premiere/slats-reincarnation.yml`](../../../../repo-shows/will-wright-premiere/slats-reincarnation.yml)
 
 ## In this directory
 
@@ -15,13 +15,13 @@ SFC robot waiter demos — the origin of **Slats** and the ROBORESURRECTION show
 
 ## Related
 
-- [Slats CARD](../../../slats/CARD.yml) · [bot-slats audience example](../../../../repo-shows/will-wright/audience/bot-slats/README.md)
+- [Slats CARD](../../../slats/CARD.yml) · [bot-slats audience example](../../../../repo-shows/will-wright-premiere/audience/bot-slats/README.md)
 - [1996 Winograd talk](../1996-04-26-winograd-interfacing-to-microworlds/README.md) — robotics + learning themes
 - [Soul of The Sims](../2008-02-10-soul-of-the-sims/README.md) — motive loop prototype
 - [robot-combat meetup photos](../../media/README.md)
 
 ---
 
-↑ [sources](../README.md) · [Slats](../../../slats/README.md) · [show segment](../../../../repo-shows/will-wright/slats-reincarnation.yml) · [`GLANCE.yml`](GLANCE.yml)
+↑ [sources](../README.md) · [Slats](../../../slats/README.md) · [show segment](../../../../repo-shows/will-wright-premiere/slats-reincarnation.yml) · [`GLANCE.yml`](GLANCE.yml)
 
 *Raw directory:* [browse files in this folder](./)

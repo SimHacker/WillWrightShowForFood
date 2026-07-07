@@ -74,7 +74,7 @@ Don **Philahue** harvests HN + issues + TicketPRs into the show directory as air
 
 Live ritual: *YOUR NAME HERE: COME ON DOWN to the QUESTION IS RIGHT!*
 
-Template: [`repo-shows/_TEMPLATE/audience/`](../../repo-shows/_TEMPLATE/audience/README.md) · Flagship: [`repo-shows/will-wright/audience/`](../../repo-shows/will-wright/audience/README.md)
+Template: [`repo-shows/_TEMPLATE/audience/`](../../repo-shows/_TEMPLATE/audience/README.md) · Flagship: [`repo-shows/will-wright-premiere/audience/`](../../repo-shows/will-wright-premiere/audience/README.md)
 
 Miss live? Your merged TicketPR question can still get asked; Q+A memorialized in repo + YouTube.
 
@@ -149,7 +149,7 @@ After AIR:
 | Vision | [`process/VISION.md`](../../process/VISION.md) |
 | ShowMaker network | [`process/showmaker-network.yml`](../../process/showmaker-network.yml) |
 | Live repo policy | [`process/live-repo.yml`](../../process/live-repo.yml) |
-| Will kickoff | [`repo-shows/will-wright/`](../../repo-shows/will-wright/README.md) |
+| Will kickoff | [`repo-shows/will-wright-premiere/`](../../repo-shows/will-wright-premiere/README.md) |
 | Lars + Thomas retro | [`characters/lars-brinkhoff/`](../../characters/lars-brinkhoff/README.md) · [`characters/thomas-cherryhomes/`](../../characters/thomas-cherryhomes/README.md) |
 
 ## Methods (invoke)

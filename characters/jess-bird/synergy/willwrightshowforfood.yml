@@ -1,0 +1,37 @@
+# Jess Bird ↔ Will Wright Show For Food — public synergy map
+# Two documenting endeavors; mutual credibility; not a merger.
+
+projects:
+  jess_documentary:
+    container: broadcast / commissioned documentary
+    strength: production craft, archival breadth, broadcast legitimacy
+    path: ../mission/documentary.yml
+
+  willwrightshowforfood:
+    container: public GitHub repo show
+    strength: runnable code, async guest ladder, open artifacts, interview pipeline
+    url: https://github.com/SimHacker/WillWrightShowForFood
+    flagship: ../../repo-shows/will-wright-premiere/
+
+shared_ground:
+  subject: Will Wright, Maxis, The Sims lineage
+  ethic: record people while they're here; honor memorial interviews
+  sources:
+    - ../sources/2026-07-07-email-excerpt.md
+    - ../../will-wright/sources/
+    - ../../will-wright/media/sims-series-maxis-people.yml
+
+don_split:
+  jess: "Broadcast-scale documentary — Jess leads production."
+  don: "Code + repo interviews + public artifacts — Don ships first, documents in the open."
+  quote_intent: |
+    Don would rather Jess do the documenting at TV scale while he codes and interviews people
+    she can draw from and participate with — not duplicate a rival doc crew in his basement.
+
+lend_each_other:
+  jess_to_repo: broadcast credibility; veteran access; research depth
+  repo_to_jess: working demos; published primary sources; community guests already warmed
+
+boundaries:
+  public_repo_avoids: [fundraising, deal terms, exclusivity, production delays]
+  no_requirement: either project waiting on the other's green light

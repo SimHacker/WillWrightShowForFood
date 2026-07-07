@@ -19,7 +19,7 @@ representation:
 invitation:
   status: send_ready
   consent: not_yet_asked
-  document: ../../repo-shows/ben-shneiderman/invitation.md   # invites live in the repo-show dir, not the character dir
+  document: ../../characters/ben-shneiderman/invitation.md   # canonical: invitations live with the character
   show_seed: repo-shows/ben-shneiderman/
   send_batch: hci-pie-hyperties-2026
   likelihood: "warm — CHI'88 co-author; Jan 2022 HyperTIES mail; documenting-our-work alignment"

@@ -10,7 +10,7 @@ show hook: **reincarnate HyperTIES** as a living browser emulator — [`hypertie
 
 | | |
 |---|---|
-| **Invitation** | [`repo-shows/ben-shneiderman/invitation.md`](../../repo-shows/ben-shneiderman/invitation.md) — **send_ready** |
+| **Invitation** | [`invitation.md`](invitation.md) — **invited** (sent 2026-07) |
 | **Show series** | [`repo-shows/ben-shneiderman/`](../../repo-shows/ben-shneiderman/README.md) |
 | **Group option** | [`ben-and-heinz-pie-menus.yml`](../../repo-shows/ben-and-heinz-pie-menus.yml) |
 | **Hooks** | [`ideas.md`](ideas.md) |

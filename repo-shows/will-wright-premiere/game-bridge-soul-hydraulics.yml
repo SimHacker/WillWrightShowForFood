@@ -1,0 +1,75 @@
+# Game bridge — soul hydraulics: add and drain souls on any save file
+# Public creative concept. Sibling of game-bridge-sims-spore.yml and
+# game-bridge-soul-city-procreation.yml. Don's spec, 2026-07-06.
+
+meta:
+  id: game-bridge-soul-hydraulics
+  type: bridge
+  status: seed
+  one_line: "Souls as a conserved fluid between games: measure how many, drain them all, squirt them into another game."
+
+the_primitive:  # the whole API — three verbs on a save file
+  measure: "How many souls are in this save?"
+  drain: "Pump souls OUT — population leaves the save, counted and carried."
+  squirt: "Pump souls IN — the save is edited so the city can hold and employ them."
+  conservation: |
+    Souls are conserved across the pipe. Nothing is created or destroyed at the
+    bridge — just moved. That single constraint is what makes it feel like plumbing
+    real people instead of editing numbers.
+  implementation: |
+    Super easy hack, in the best sense. An LLM could do it directly on the save
+    files (Postel-style: read messily, write cleanly) — but we make a deterministic
+    script to do it (or try) on ANY save file. LLM for exploration and odd formats,
+    script for repeatability. The script is the sister-script of the LLM session
+    that figured the format out.
+
+the_squirt_mechanic:  # Don's SimCity/Micropolis spec — the key restraint
+  scenario: |
+    Take a low-developed SimCity save file. Import 60,000 dead souls from an
+    Afterlife save file. The script edits the city to have enough residential
+    skyscrapers and enough developed commercial and industrial zones for them all
+    to live AND work.
+  restraint: |
+    It does NOT create zones. It only fake-simulates EXISTING zones up (and down) in
+    population and growth — the same tile-evolution the simulator itself performs,
+    applied instantly. The player's city plan is sacred; the bridge respects zoning
+    the way weather respects geography. If the city hasn't zoned enough land for the
+    incoming souls, that's a real constraint — souls wait at the Station.
+  drain_symmetry: "Draining runs the same edit downward: zones devolve toward empty as their population departs for another world."
+
+bridges:
+
+  lucasarts_afterlife:
+    game: "Afterlife (LucasArts, 1996)"
+    why_important: |
+      THE afterlife city-builder — its population units literally ARE souls, its
+      map IS heaven and hell as urban planning. A natural sibling of Soul City and
+      an important game to bridge: the joke and the architecture were already
+      aligned in 1996. And it's abandonware territory — its save files are full of
+      stranded souls nobody can visit anymore.
+    rallying_cry: "Repossessing lost souls!"
+    demo: "Drain 60,000 dead souls from an Afterlife save; squirt them into a sleepy Micropolis town; watch the skyline jump. Resurrection as re-zoning."
+
+  they_are_billions:
+    game: "They Are Billions (Numantian Games, 2017)"
+    what: |
+      The zombie-swarm survival RTS. Every zombie in the horde was a person.
+      DEZOMBIFY them — the bridge is the cure — and export them to live in
+      high-rise apartments in SimCity. The horde becomes housing demand.
+    why_it_sings: |
+      Perfect inversion: the game about 60,000 bodies coming AT your walls becomes
+      60,000 residents moving INTO your towers. Same crowd, opposite valence.
+      Salvation at scale, measured in occupancy rates.
+
+soul_city_tie: |
+  Hydraulics is the freight layer under Soul City: Depot moves the soul-files,
+  Station bridges the games, and measure/drain/squirt is what actually happens to
+  a save when a crowd of souls passes through. The procreation bridge moves souls
+  one at a time with names and genetics; hydraulics moves them by the thousand as
+  population. Both obey conservation.
+
+see_also:
+  - game-bridge-soul-city-procreation.yml
+  - game-bridge-sims-spore.yml
+  - ../game-bridge-proxi-sims.yml
+  - soul-city-namesake.md  # the real Soul City, NC — not to be confused with, but inspired by

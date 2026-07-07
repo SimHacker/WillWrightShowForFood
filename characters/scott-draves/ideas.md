@@ -54,7 +54,7 @@ aren't — what's gained, what's lost, what's the hybrid?
 
 It started humble: Scott's flame was a **screen hack** — first in **xlock**, then ported into
 **Jamie Zawinski's xscreensaver** (the man page still credits *"Scott Graves [sic]
-&lt;spot@cs.cmu.edu&gt;, 06-Jun-91"* and *"xscreensaver port by jwz, 18-Oct-93"*). That same
+&lt;[email redacted]&gt;, 06-Jun-91"* and *"xscreensaver port by jwz, 18-Oct-93"*). That same
 "pretty idle-screen toy" idea grew up into **Electric Sheep** (1999) — idle machines turned into
 distributed compute decades before "cloud GPU" was a phrase. Revisit it now: crowd compute, fair
 attribution, and the **derived-DB / proof** angle from the brain-stream work (who contributed which

@@ -74,7 +74,7 @@ see_also:
   siblings:
     - { path: ../sources/GLANCE.yml, why: "Primary sources treasure trove" }
   across:
-    - { path: ../../../repo-shows/will-wright/GLANCE.yml, why: "Flagship show references here" }
+    - { path: ../../../repo-shows/will-wright-premiere/GLANCE.yml, why: "Flagship show references here" }
     - { path: ../../../catalogs/README.md, why: "Live UCC brands" }
     - { path: ../sources/1996-04-26-winograd-interfacing-to-microworlds/README.md, why: "167-figure Medium gallery" }
   deep:

@@ -86,7 +86,7 @@ timescale — what erodes, what persists, what's worth seeding now?
 Brian **co-wrote "Boys Keep Swinging"** with Bowie (from *Lodger*, 1979 — third of the Berlin Trilogy).
 On **SNL, Dec 15, 1979**, Bowie performed it (with **Klaus Nomi and Joey Arias**) as a low-tech
 **chroma-key video puppet** that "whipped it out" at the end — the got-away-with-it grin that's the
-**canonical ancestor of the show's ["video puppet"](../../repo-shows/will-wright/performance-and-culture.yml)
+**canonical ancestor of the show's ["video puppet"](../../repo-shows/will-wright-premiere/performance-and-culture.yml)
 performance kind**. That same night held two more extraordinary performances (a carried-on, immobilized
 "The Man Who Sold the World"; the girlfriend-eaten-by-a-TV "TVC 15"), and a heavy retrospective ache
 around Klaus Nomi. The real thing to ask Brian — who was *in the room* writing it — is **what "Boys Keep

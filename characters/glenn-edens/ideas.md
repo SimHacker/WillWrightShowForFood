@@ -53,7 +53,7 @@ Don's year (~mid-1990s): Bounce, MediaFlow, ECG, Director plug-ins — "oompa lo
 
 ## 5. Engelbart mouse (Dec 2022)
 
-Don emailed Glenn (`glennedens@me.com`) for advice on SRI **mouse + keyset** provenance, $54k auction, 3D-scan reproduction plan, 2028 MoAD timing.
+Don emailed Glenn (`[email redacted]`) for advice on SRI **mouse + keyset** provenance, $54k auction, 3D-scan reproduction plan, 2028 MoAD timing.
 
 → [`sources/2022-engelbart-mouse-consultation.md`](sources/2022-engelbart-mouse-consultation.md)
 

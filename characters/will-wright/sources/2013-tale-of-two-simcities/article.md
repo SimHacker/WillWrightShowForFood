@@ -37,7 +37,7 @@ This complements the Nov–Dec 2006 timeline in [simcity-open-source-saga](../si
 | **Charles Normann** | EA internal champion; contract clearance |
 | **Will Wright** | Endorsed OLPC release to Rod Humble |
 | **Chaim Gingold** | Interviewing Don; book research |
-| **John Gilmore** | OLPC / gnu@toad.com side of the pitch |
+| **John Gilmore** | OLPC / [email redacted] side of the pitch |
 | **Josh Siegel** | CC on permission thread |
 
 Charles offered follow-up by phone (512-948-5200 in 2013 mail — verify before publish).

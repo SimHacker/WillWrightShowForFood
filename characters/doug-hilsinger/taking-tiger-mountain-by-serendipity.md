@@ -105,7 +105,7 @@ regularly in the SF Bay Area — and **Scott**, with whom he still collaborates.
 **reunion** inviting **Brian**, **Will**, and **Doug** is the dream.)
 
 *(Don's personal note about that night — a warm, no-big-deal aside and a hopeful what-if — is
-written directly to Brian in the invitation: [`repo-shows/brian-eno/invitation.md`](../../repo-shows/brian-eno/invitation.md).)*
+written directly to Brian in the invitation: [`characters/brian-eno/invitation.md`](../../characters/brian-eno/invitation.md).)*
 
 ## Credit where it's due
 
@@ -147,6 +147,13 @@ Doug uploaded the whole album himself ([SoundCloud](https://soundcloud.com/doug-
 keeps excerpts comparative, links out so viewers can buy/stream **both** records, and credits everyone.
 If Doug or Brian *do* want to call in or join, the segment becomes the reunion — but it never has to
 wait on a reply.
+
+**The sandwich cut:** this segment also has a Dagwood-sandwich episode spec — Don phones Will and
+tells the Eagle story, a Ronco commercial for Doug's album interrupts (with Eno's phone message as
+the testimonial), the story concludes, all wrapped in the *Empathy* 1MM — built as the **teaser to
+show Brian before contacting him**. See
+[`process/one-minute-movie-sandwich.yml`](../../process/one-minute-movie-sandwich.yml)
+`#first_instance_tiger_mountain`.
 
 ## Questions for Brian — the before/after listening 🎧
 

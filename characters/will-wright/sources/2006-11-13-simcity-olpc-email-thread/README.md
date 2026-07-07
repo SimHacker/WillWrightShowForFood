@@ -26,4 +26,4 @@ SimCity on OLPC XO-1 (Dec 2006): **[`images/SLIDESHOW.md`](images/SLIDESHOW.md)*
 
 ---
 
-↑ [sources](../README.md) · [show](../../../repo-shows/will-wright/README.md)
+↑ [sources](../README.md) · [show](../../../repo-shows/will-wright-premiere/README.md)

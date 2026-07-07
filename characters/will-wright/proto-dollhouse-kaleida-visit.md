@@ -12,7 +12,7 @@ Don was at **Kaleida (1993–1996)** on ScriptX / DreamScape — separate from B
 
 → Centerpiece talk: [`sources/1996-04-26-winograd-interfacing-to-microworlds/`](sources/1996-04-26-winograd-interfacing-to-microworlds/README.md)
 
-→ Flagship show: [`../../repo-shows/will-wright/`](../../repo-shows/will-wright/)
+→ Flagship show: [`../../repo-shows/will-wright-premiere/`](../../repo-shows/will-wright-premiere/)
 
 → Full sources map: [`primary-sources-evidence-room.md`](primary-sources-evidence-room.md)
 

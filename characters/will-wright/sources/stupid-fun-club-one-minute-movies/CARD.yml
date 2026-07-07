@@ -30,7 +30,7 @@ abilities:
     effect: "SFC demos → Slats sidekick → audience bot-slats."
     combos_with:
       - ../../../slats/CARD.yml
-      - ../../../../repo-shows/will-wright/slats-reincarnation.yml
+      - ../../../../repo-shows/will-wright-premiere/slats-reincarnation.yml
 
 compose_with:
   - ../../../slats/CARD.yml

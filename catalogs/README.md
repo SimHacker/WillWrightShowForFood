@@ -21,7 +21,7 @@ any show can recommend, not Will Wright's personal archive. **Get the base game 
 | **Micropolis Home** | [micropolis-home/README.md](micropolis-home/README.md) | Federation platform |
 | **Maxis metadata** | [maxis/README.md](maxis/README.md) | Archivist layer |
 | **Community index** | [sims1-community-landscape.md](sims1-community-landscape.md) | Sites, subscriptions, Steam companion strategy |
-| **Across** | [sources](../characters/will-wright/sources/README.md) · [show](../repo-shows/will-wright/README.md) | Primary evidence + flagship show |
+| **Across** | [sources](../characters/will-wright/sources/README.md) · [show](../repo-shows/will-wright-premiere/README.md) | Primary evidence + flagship show |
 
 ---
 
@@ -91,7 +91,7 @@ SimFreaks, SimSlice, SimProv, and Zombie Sims federate **into** Micropolis Home.
 
 ## Start reading
 
-- Mission + proof: [INTRO-NARRATIVE.md](../repo-shows/will-wright/INTRO-NARRATIVE.md)
+- Mission + proof: [INTRO-NARRATIVE.md](../repo-shows/will-wright-premiere/INTRO-NARRATIVE.md)
 - CMS lineage: [micropolis-publishing-vision.md](../characters/will-wright/media/sims-series-micropolis-publishing-vision.md)
 - Primary sources: [../characters/will-wright/sources/README.md](../characters/will-wright/sources/README.md) · [1996 centerpiece](../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md)
 - Screenshot themes: [../characters/will-wright/media/](../characters/will-wright/media/README.md)

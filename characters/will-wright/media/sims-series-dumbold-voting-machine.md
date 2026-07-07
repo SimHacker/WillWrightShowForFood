@@ -17,7 +17,7 @@ Includes period parodies (**"Vote or Die!"** P. Diddy branch, accidental Pat Buc
 
 ## How we frame it
 
-Read [INTRO-NARRATIVE.md](../../../repo-shows/will-wright/INTRO-NARRATIVE.md#the-dumbold-voting-machine--dated-agitprop-preserved-honestly).
+Read [INTRO-NARRATIVE.md](../../../repo-shows/will-wright-premiere/INTRO-NARRATIVE.md#the-dumbold-voting-machine--dated-agitprop-preserved-honestly).
 
 **In short:** satire of broken e-voting UX and vendor opacity — **not** election denial, **not** usable as support for any modern politician's ideology. Several real-world issues it raised have since been partly addressed; the object stays in the repo as proof that interactive civic media was already possible in The Sims, and as a dated laugh.
 
@@ -29,5 +29,5 @@ See [dumbold-voting-machine/images/](dumbold-voting-machine/images/README.md) �
 
 - Ian Bogost — procedural rhetoric
 - Micropolis publishing — branching hypertext cards use the same dialog machinery
-- [SimProv Wedding Playset](../../../repo-shows/will-wright/INTRO-NARRATIVE.md#the-magnum-opus-simprov-wedding-playset) — same engine, opposite emotional register (love vs institutional farce)
+- [SimProv Wedding Playset](../../../repo-shows/will-wright-premiere/INTRO-NARRATIVE.md#the-magnum-opus-simprov-wedding-playset) — same engine, opposite emotional register (love vs institutional farce)
 - Will Wright show — simulator effect meets civic education, honestly dated

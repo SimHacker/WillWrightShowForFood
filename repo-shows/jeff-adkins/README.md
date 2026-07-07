@@ -41,7 +41,7 @@ and upgraded in the open: **file an issue on a Sims object**, discuss what's wro
 ## Files
 
 - [`SHOW.yml`](SHOW.yml) — the show instance.
-- [`invitation.md`](invitation.md) — the public invitation.
+- [`invitation.md`](../../characters/jeff-adkins/invitation.md) — the public invitation.
 - Guest portrayal + hooks: [`characters/jeff-adkins/`](../../characters/jeff-adkins/README.md) ·
   [`ideas.md`](../../characters/jeff-adkins/ideas.md).
 
