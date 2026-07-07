@@ -52,4 +52,4 @@ buildable. It's buildable.
 - Don's mail archive: "Internship Info!" (30 Jul 2009), internship review + Rietveld assessment
   form (30 Nov 2009), Architectuurfonds proposal (12 Nov 2009)
 - [Rietveld DesignLAB final work, 2012](https://oldschool.rietveldacademie.nl/en/final-works/2012/designlab/tom-tjon-a-loi)
-- HAR 2009 talk materials (slides with his storyboards — to be added to `media/`)
+- Don's HAR 2009 talk slides, featuring his storyboards

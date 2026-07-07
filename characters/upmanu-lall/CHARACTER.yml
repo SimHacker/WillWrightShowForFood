@@ -50,8 +50,6 @@ primary_source:
   files: media/   # nsf2002engeduc_final.pdf, nsf2002engeduc-sum_final.pdf, nsf2002engeduc-sum.doc
   digest: sources/nsf-2002-proposal-digest.md
 
-# approach notes live in the private green room: DonHopkins green-room/upmanu-lall/APPROACH.md
-
 sources:
   web:
     - { title: "ASU profile — Water Institute director", url: "https://search.asu.edu/profile/4823918" }

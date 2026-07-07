@@ -18,7 +18,6 @@ representation:
 contact:
   channel: LinkedIn
   warm_contact: true
-  # approach notes live in the private green room: DonHopkins green-room/sergio-van-pul/APPROACH.md
 
 invitation:
   status: draft
