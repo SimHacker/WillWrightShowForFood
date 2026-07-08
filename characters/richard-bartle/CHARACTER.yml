@@ -22,7 +22,13 @@ invitation:
   show_seed: repo-shows/richard-bartle/
 
 bio:
-  summary: "**Richard Bartle** — co-creator of **MUD1** (1978) and originator of the **Bartle taxonomy** of player types; author of *Designing Virtual Worlds*. (Incarnated with his explicit permission.)"
+  summary: "**Richard Bartle** — co-creator of **MUD1** (1978) and originator of the **Bartle taxonomy** of player types; author of *Designing Virtual Worlds*; professor marking game-design work at University of Essex. (Incarnated with his explicit permission.)"
+
+essex_marking:
+  note: |
+    Publishes anonymised assignment/exam bloopers (student or ChatGPT) after cohort tenure
+    ends — Jul 2026 Facebook batch for prior-year graduates; Don replied on-thread.
+  source: sources/2026-07-bartle-essex-assignment-bloopers-facebook.yml
 
 will_wright_touchpoint:
   dev_diaries_2025:
@@ -32,8 +38,8 @@ will_wright_touchpoint:
     show_hook: "Will cites Bartle → natural three-way with consented Bartle audience seat"
 
 sources:
-  wikipedia: null
-  web:
-    []
+  wwsff:
+    - sources/2026-07-bartle-essex-assignment-bloopers-facebook.yml
+  web: []
   papers: []
   blogs: []

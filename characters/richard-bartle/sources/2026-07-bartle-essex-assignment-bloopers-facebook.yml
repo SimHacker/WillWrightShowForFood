@@ -1,0 +1,91 @@
+# Richard Bartle — Essex assignment bloopers (Facebook, Jul 2026)
+# Public post + Don Hopkins replies. Anonymised student work; Bartle's own framing.
+
+source:
+  platform: Facebook
+  author: Richard A. Bartle
+  captured: 2026-07-08
+  context: |
+    Bartle marks game-design student work at University of Essex. He keeps a running list of
+    bizarre lines from assignments and exams — attributed to students or ChatGPT. He only
+    publishes after students' tenure ends, waits an extra year in case of resits, and
+    anonymises so he cannot know who failed. This batch: cohort who finished last academic
+    year. A larger set for students graduating this year stays private until next year.
+
+publication_policy:
+  wait: "Until tenure ends + one year (resit buffer)"
+  anonymised: true
+  attribution: "students and/or ChatGPT — Bartle does not distinguish in the post"
+
+don_hopkins_replies:
+  - on_quote: "This component has the power to build suspense and engorges players to interact"
+    text: "+4 Stamina Fleshlight of Holding"
+    approx_when: "2026-07-08 (~1m after post)"
+  - on_quote: "The face of humanity hangs in the balance"
+    text: |
+      Is that what the face eating leopards are doing with them before eating: weighing them
+      out? Is there a butcher for face eating leopards who sells them by the pound?
+    edited: true
+    approx_when: "2026-07-08 (~3m after post)"
+
+other_comments:
+  - author: Max Brandon
+    text: "Very well observed professor... Most of the above referred narrations sound funny!"
+    approx_when: "2026-07-08 (~1h after post)"
+
+out_takes:
+  - "Succumbing to theses temptations carries dire consequences"
+  - "This component has the power to build suspense and engorges players to interact"
+  - "The face of humanity hangs in the balance"
+  - "Just starting out on your carer, your arsenal and skills are limited"
+  - "He is faced with a number of ethnical decisions"
+  - "Alfred finishes his evil plot to plunge the world into nuclear winter by dating nuclear bombs."
+  - "In the yeah 2102, he reigned supreme as the criminal Mastermind of Cynic City"
+  - "by doing so, he is proving his innocents in a framed murder"
+  - "Cars do not move without a someone."
+  - "One of his bullets fits my arm as I hide behind the tractor"
+  - "Players may choose from three very unique races: orcs, elves, or humans."
+  - "He was born with exceptional skills in digital forensics and ethical hacking"
+  - "The player's main objective is to whip out the entire group."
+  - "Players navigate through a society on the brick of collapse, where danger lurks around every cornea."
+  - "They were going to have to learn to survive in the harsh outlook of Australia."
+  - "he embraced a lifestyle cantered around holistic wellness"
+  - "A thought bouble above my head shows a milkshake that my character wants."
+  - "As im walking on the wooden flooring of the hallway it is making creeking noises."
+  - "I find a chest of draws with a pair of fluffy socks in it"
+  - "Some games don't find ways to allow users who unfortunately suffer from Colour Blindness and Being Deaf."
+  - "They need to test that the vehicle can move and break."
+  - "Attention is good wether good or bad."
+  - "the people that were behind him began to look at him with vengeful and glutinous eyes"
+  - "each turn throughout the mines lead to forgotten passages that were long used."
+  - "they are individuals who suffer from Xenophobia which is people who fear strangers that they don't know."
+  - "His father is cryptid and doesn't spend much time with his son, causing issues with their relationship."
+  - "The doctor gives him a neckless that will help him activate the portal back once he has found the cure for the illness"
+  - "in an instance he is transferred too somewhere unknown"
+  - "He loses his way in the underground ladyrinth"
+  - "he presents her with an enchanted compass that reacts to the map's location and teaches her basic swordplay."
+  - "WHERE THE HEAL IS THE POTION?!"
+  - "Some major events will appear on the screen, while some smaller events will appear on the screen."
+
+highlight_blooper_categories:
+  malapropism: [engorges, carer, ethnical, dating nuclear bombs, yeah, innocents, brick, cornea, outlook, cantered, bouble, creeking, draws, wether, glutinous, neckless, ladyrinth]
+  game_design_garble: [three very unique races orcs elves humans, whip out the entire group, move and break, major and smaller events both on screen]
+  ai_slop_tells: [digital forensics and ethical hacking born with, holistic wellness lifestyle, thought bubble milkshake UI]
+  accidental_comedy: [Alfred dating nuclear bombs, cryptid father, Xenophobia defined as fear of strangers, Cars do not move without a someone]
+
+show_hooks:
+  educators_track: |
+    Same Bartle who assigns critical MUD2 play — now marking Essex submissions and cataloguing
+    ChatGPT-era prose. Segment: assignable games vs unassignable slop; what a repo-show rubric
+    would look like.
+  will_bartle_bridge: |
+    Will cites Bartle types on Dev Diaries; Bartle publishes what happens when types meet
+    autocomplete — Achievers write "whip out the entire group," Explorers get ladyrinths.
+  don_beat: |
+    Don's Facebook replies on Bartle's thread — warm public voice before formal invite; D&D
+    item joke on "engorges players"; face-eating-leopard callback (political meme → game copy).
+
+see_also:
+  - ../ideas.md
+  - ../../will-wright/sources/2025-12-will-wright-dev-diaries/bartle-player-types.yml
+  - ../../../repo-shows/ideas/themes/educators-track.yml
