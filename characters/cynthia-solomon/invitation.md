@@ -8,8 +8,8 @@ show_seed: repo-shows/cynthia-solomon/
 
 # Repo Show invitation — Cynthia Solomon
 
-*Cynthia Solomon may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Cynthia Solomon may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Cynthia —
 

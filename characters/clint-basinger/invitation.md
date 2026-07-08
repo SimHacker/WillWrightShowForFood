@@ -11,7 +11,7 @@ priority: send_now
 # Repo Show invitation — Clint Basinger (LGR)
 
 *Send-ready draft — not yet sent. Clint Basinger may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Clint —
 
@@ -38,7 +38,7 @@ No script — browse, react, argue, demo.
 
 | | |
 |---|---|
-| **Show** | [`repo-shows/clint-basinger/`](../../repo-shows/clint-basinger/README.md) |
+| **Show** | [`repo-shows/clint-basinger/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/clint-basinger/README.md) |
 | **Your guest page** | [`characters/clint-basinger/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/clint-basinger) |
 | **MicropolisCore** | [github.com/SimHacker/MicropolisCore](https://github.com/SimHacker/MicropolisCore) |
 | **The project** | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |

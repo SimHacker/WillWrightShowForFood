@@ -47,7 +47,7 @@ screen, forkable rig yaml and **SETUP.md** in the repo when we get there.
 
 **This invitation is for a group episode with Heinz and David** (details below). I still want a
 **separate ITS episode** with you — ideally paired with **Thomas Cherryhomes** (FujiNet,
-IRATA.ONLINE) and the [`pdp10-maclisp-drive`](../../process/challenges/pdp10-maclisp-drive.yml)
+IRATA.ONLINE) and the [`pdp10-maclisp-drive`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/challenges/pdp10-maclisp-drive.yml)
 challenge. No pressure to commit to both; this PIXIE trio is the ask for today.
 
 **Proposed episode:** *PIXIE: Pie Menus on the PDP-7 (1969)* — Heinz's lived history, David's
@@ -73,7 +73,7 @@ and your emulator window when iron boots.
 
 **Make-it-so goal for your segment:** boot the closest faithful **PDP-7/340** stack (or honest
 stepping stone); capture at least one radial-menu interaction on stream; ship rig notes in
-[`repo-shows/lars-brinkhoff/`](../../repo-shows/lars-brinkhoff/README.md) when ready.
+[`repo-shows/lars-brinkhoff/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/lars-brinkhoff/README.md) when ready.
 
 ---
 
@@ -88,7 +88,7 @@ stepping stone); capture at least one radial-menu interaction on stream; ship ri
 - Living hardware vs emulator — [Munching Squares on PDP-7/340](https://www.youtube.com/watch?v=V4oRHv-Svwc);
   what transfers to PIXIE-like interaction.
 - **Titan link** as distributed CAD — emulate the graphics satellite first, batch link later?
-- Deliverable: rig yaml + [`SETUP.md`](../../rigs/_TEMPLATE.SETUP.md) forkable from the repo.
+- Deliverable: rig yaml + [`SETUP.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/rigs/_TEMPLATE.SETUP.md) forkable from the repo.
 
 ### Heinz's segment — what you need from the historian
 
@@ -111,9 +111,9 @@ stepping stone); capture at least one radial-menu interaction on stream; ship ri
 
 ### Optional later (separate episode)
 
-- **PDP-10/ITS** — boot ITS, **MACLISP** on emulated iron, [`pdp10-maclisp-drive`](../../process/challenges/pdp10-maclisp-drive.yml);
+- **PDP-10/ITS** — boot ITS, **MACLISP** on emulated iron, [`pdp10-maclisp-drive`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/challenges/pdp10-maclisp-drive.yml);
   tag-team with [**Thomas Cherryhomes**](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/thomas-cherryhomes/invitation.md).
-  Seed: [`repo-shows/lars-brinkhoff/`](../../repo-shows/lars-brinkhoff/README.md).
+  Seed: [`repo-shows/lars-brinkhoff/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/lars-brinkhoff/README.md).
 
 ---
 
@@ -136,9 +136,9 @@ how **Heinz** and **David** see your contribution, and how they describe theirs.
 
 | Guest | Invitation | Their angle on this show |
 | --- | --- | --- |
-| **Heinz U. Lemke** 🥧 | [invitation.md](../heinz-lemke/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/invitation.md) | Lived PIXIE, 1969 film, Wiseman & Hiles, CARS arc |
-| **David S. H. Rosenthal** 🗄️ | [invitation.md](../david-rosenthal/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/invitation.md) | Same PDP-7/340 + Titan ~1970; NeWS/X11 lineage; LOCKSS |
-| **Lars Brinkhoff** 🖥️ | [invitation.md](invitation.md) *(this letter)* · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/lars-brinkhoff/invitation.md) | Type 340 + light pen → SIMH; runnable radial menus on stream |
+| **Heinz U. Lemke** 🥧 | [invitation.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/invitation.md) | Lived PIXIE, 1969 film, Wiseman & Hiles, CARS arc |
+| **David S. H. Rosenthal** 🗄️ | [invitation.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/invitation.md) | Same PDP-7/340 + Titan ~1970; NeWS/X11 lineage; LOCKSS |
+| **Lars Brinkhoff** 🖥️ | [invitation.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/lars-brinkhoff/invitation.md) *(this letter)* · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/lars-brinkhoff/invitation.md) | Type 340 + light pen → SIMH; runnable radial menus on stream |
 
 ---
 
@@ -152,38 +152,38 @@ optional solo shows later).
 | | |
 | --- | --- |
 | **On this episode** | PIXIE co-author; Chapman film recovery; light pen; Titan link; PIXIE → CARS |
-| **Invitation** (his view) | [`../heinz-lemke/invitation.md`](../heinz-lemke/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/invitation.md) |
-| **Guest README** | [`../heinz-lemke/README.md`](../heinz-lemke/README.md) |
-| **Conversation hooks** | [`../heinz-lemke/ideas.md`](../heinz-lemke/ideas.md) |
-| **Portrait / sources** | [`../heinz-lemke/CHARACTER.yml`](../heinz-lemke/CHARACTER.yml) · [`../heinz-lemke/GLANCE.md`](../heinz-lemke/GLANCE.md) |
-| **Evidence room** | [`../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md`](../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md) |
-| **Correspondence digest** | [`../heinz-lemke/correspondence.yml`](../heinz-lemke/correspondence.yml) |
-| **Pull-in gaps** | [`../heinz-lemke/pull-in-gaps.yml`](../heinz-lemke/pull-in-gaps.yml) |
+| **Invitation** (his view) | [`../heinz-lemke/invitation.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/invitation.md) |
+| **Guest README** | [`../heinz-lemke/README.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/README.md) |
+| **Conversation hooks** | [`../heinz-lemke/ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/ideas.md) |
+| **Portrait / sources** | [`../heinz-lemke/CHARACTER.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/CHARACTER.yml) · [`../heinz-lemke/GLANCE.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/GLANCE.md) |
+| **Evidence room** | [`../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md) |
+| **Correspondence digest** | [`../heinz-lemke/correspondence.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/correspondence.yml) |
+| **Pull-in gaps** | [`../heinz-lemke/pull-in-gaps.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/pull-in-gaps.yml) |
 
 ### David S. H. Rosenthal 🗄️
 
 | | |
 | --- | --- |
 | **On this episode** | Same stack ~1970; met Wiseman; PIXIE → Andrew → NeWS → X11; LOCKSS meets archive |
-| **Invitation** (his view) | [`../david-rosenthal/invitation.md`](../david-rosenthal/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/invitation.md) |
-| **Guest README** | [`../david-rosenthal/README.md`](../david-rosenthal/README.md) |
-| **Conversation hooks** | [`../david-rosenthal/ideas.md`](../david-rosenthal/ideas.md) |
-| **Portrait / sources** | [`../david-rosenthal/CHARACTER.yml`](../david-rosenthal/CHARACTER.yml) · [`../david-rosenthal/GLANCE.md`](../david-rosenthal/GLANCE.md) |
-| **Card** | [`../david-rosenthal/CARD.yml`](../david-rosenthal/CARD.yml) |
-| **Solo show seed** (optional later) | [`repo-shows/david-rosenthal/`](../../repo-shows/david-rosenthal/README.md) |
+| **Invitation** (his view) | [`../david-rosenthal/invitation.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/invitation.md) |
+| **Guest README** | [`../david-rosenthal/README.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/README.md) |
+| **Conversation hooks** | [`../david-rosenthal/ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/ideas.md) |
+| **Portrait / sources** | [`../david-rosenthal/CHARACTER.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/CHARACTER.yml) · [`../david-rosenthal/GLANCE.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/GLANCE.md) |
+| **Card** | [`../david-rosenthal/CARD.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/CARD.yml) |
+| **Solo show seed** (optional later) | [`repo-shows/david-rosenthal/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/david-rosenthal/README.md) |
 
 ### Lars Brinkhoff 🖥️
 
 | | |
 | --- | --- |
 | **On this episode** | PDP-7 + Type 340 emulation; Type 340 manual; SIMH; runnable radial menus on stream |
-| **Invitation** (his view) | [`invitation.md`](invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/lars-brinkhoff/invitation.md) |
-| **Guest README** | [`README.md`](README.md) |
-| **Conversation hooks** | [`ideas.md`](ideas.md) |
-| **Portrait / sources** | [`CHARACTER.yml`](CHARACTER.yml) · [`GLANCE.md`](GLANCE.md) |
-| **Card** | [`CARD.yml`](CARD.yml) |
+| **Invitation** (his view) | [`invitation.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/lars-brinkhoff/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/lars-brinkhoff/invitation.md) |
+| **Guest README** | [`README.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/lars-brinkhoff/README.md) |
+| **Conversation hooks** | [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/lars-brinkhoff/ideas.md) |
+| **Portrait / sources** | [`CHARACTER.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/lars-brinkhoff/CHARACTER.yml) · [`GLANCE.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/lars-brinkhoff/GLANCE.md) |
+| **Card** | [`CARD.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/lars-brinkhoff/CARD.yml) |
 | **T-shirt emporium** | [github.com/larsbrinkhoff/t-shirts](https://github.com/larsbrinkhoff/t-shirts) — PDP-10, Lisp Machine, Interlisp, … (Don already wears one of yours on stream) |
-| **ITS show seed** (optional later) | [`repo-shows/lars-brinkhoff/`](../../repo-shows/lars-brinkhoff/README.md) · [`SHOW.yml`](../../repo-shows/lars-brinkhoff/SHOW.yml) |
+| **ITS show seed** (optional later) | [`repo-shows/lars-brinkhoff/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/lars-brinkhoff/README.md) · [`SHOW.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/lars-brinkhoff/SHOW.yml) |
 
 ---
 
@@ -191,8 +191,8 @@ optional solo shows later).
 
 | If you're curious about… | Link |
 | --- | --- |
-| **Show seed** (full outline + `guest_roles`) | [`repo-shows/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7.yml) |
-| **Evidence room** — Chapman → films → Bumblebee | [`../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md`](../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md) |
+| **Show seed** (full outline + `guest_roles`) | [`repo-shows/pixie-pie-menus-pdp7.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/pixie-pie-menus-pdp7.yml) |
+| **Evidence room** — Chapman → films → Bumblebee | [`../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md) |
 | ***Flight of the PIXIE*** (YouTube) | [youtube.com/watch?v=jDrqR9XssJI](https://www.youtube.com/watch?v=jDrqR9XssJI) |
 | **PIXIE paper** (PDF) | [donhopkins.com — PIXIE](https://www.donhopkins.com/home/documents/PIXIE%20a%20new%20approach%20to%20man-machine%20communication.pdf) |
 | **Type 340 manual** (bitsavers) | [7-13 Display Programming Manual](http://bitsavers.trailing-edge.com/pdf/dec/graphics/7-13_340_Display_Programming_Manual.pdf) |

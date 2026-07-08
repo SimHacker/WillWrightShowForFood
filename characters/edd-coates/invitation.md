@@ -11,7 +11,7 @@ priority: send_now
 # Repo Show invitation — Edd Coates
 
 *Send-ready draft — not yet sent. Edd Coates may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Edd —
 
@@ -55,12 +55,12 @@ GUIDB live, whiteboard pie specs, argue about Fitts's law — whatever's fun.
 
 | If you're curious about… | Link |
 | --- | --- |
-| **Show** | [`repo-shows/edd-coates/`](../../repo-shows/edd-coates/README.md) |
-| **Pie episode seed** | [`pie-menus-piecraft.yml`](../../repo-shows/edd-coates/pie-menus-piecraft.yml) |
-| **Discussion notes (pies)** | [`pie-menus-discussion-notes.md`](../../repo-shows/edd-coates/pie-menus-discussion-notes.md) |
-| **Suggested questions** | [`suggested-questions.yml`](../../repo-shows/edd-coates/suggested-questions.yml) |
-| **North star doc** | [`game-ui-archive.md`](game-ui-archive.md) |
-| **Don's pie lineage** | [`../don-hopkins/pie-menus-chi-88-and-beyond.md`](../don-hopkins/pie-menus-chi-88-and-beyond.md) |
+| **Show** | [`repo-shows/edd-coates/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/edd-coates/README.md) |
+| **Pie episode seed** | [`pie-menus-piecraft.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/edd-coates/pie-menus-piecraft.yml) |
+| **Discussion notes (pies)** | [`pie-menus-discussion-notes.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/edd-coates/pie-menus-discussion-notes.md) |
+| **Suggested questions** | [`suggested-questions.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/edd-coates/suggested-questions.yml) |
+| **North star doc** | [`game-ui-archive.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/edd-coates/game-ui-archive.md) |
+| **Don's pie lineage** | [`../don-hopkins/pie-menus-chi-88-and-beyond.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/pie-menus-chi-88-and-beyond.md) |
 | **Your guest page** | [`characters/edd-coates/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/edd-coates) |
 | **The whole project** | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |
 

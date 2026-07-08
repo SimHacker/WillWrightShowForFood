@@ -8,8 +8,8 @@ show_seed: repo-shows/chaim-gingold/
 
 # Repo Show invitation — Chaim Gingold
 
-*Chaim Gingold may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Chaim Gingold may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 We would respectfully invite **Chaim Gingold** to a **Repo Show** — a Repo Show Class
 conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood),
@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** Designer & historian — Building SimCity, reverse diagrams
 
-**Materials:** [`repo-shows/chaim-gingold/`](../../repo-shows/chaim-gingold/README.md)
+**Materials:** [`repo-shows/chaim-gingold/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/chaim-gingold/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

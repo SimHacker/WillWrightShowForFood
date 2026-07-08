@@ -8,8 +8,8 @@ format: live_or_async
 
 # Repo Show invitation — David Marusek 💍📼❄️
 
-*David may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*David may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 David —
 
@@ -24,7 +24,7 @@ premise on purpose*: portrayals of real people (with consent machinery), memoria
 dead (discuss, never impersonate), and characters moved between games as portable souls. We wrote
 our rulebook with your novella open on the desk, and I've published the acknowledgment:
 
-**[The Wedding Album and the rights of digital souls](the-wedding-album-and-digital-souls.md)** —
+**[The Wedding Album and the rights of digital souls](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-marusek/the-wedding-album-and-digital-souls.md)** —
 your story's issues mapped onto today's games and AI, with credit where it's due.
 
 I'd love to have you on — as a science fiction author, a collaborator, and frankly as the
@@ -45,7 +45,7 @@ Format is low pressure: a solo video whenever you like, a relaxed one-on-one edi
 just correspondence — the repo grows either way. Accepted, delayed, too busy, declined, or no
 reply: all honored.
 
-Your room here is yours: [`README.md`](README.md) · [`CHARACTER.yml`](CHARACTER.yml) · tell me
+Your room here is yours: [`README.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-marusek/README.md) · [`CHARACTER.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-marusek/CHARACTER.yml) · tell me
 anything to add, fix, or remove and it's done — or edit it yourself if you like.
 
 — Don Hopkins

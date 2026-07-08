@@ -8,8 +8,8 @@ show_seed: repo-shows/doreen-nelson/
 
 # Repo Show invitation — Doreen Nelson
 
-*Doreen Nelson may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Doreen Nelson may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 We would respectfully invite **Doreen Nelson** to a **Repo Show** — a Repo Show Class conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood), following through to working code and credited ideas in public.
 
@@ -28,10 +28,10 @@ You pioneered teaching the whole curriculum by having students **build model cit
 
 ## Materials
 
-- Your [Dec 2006 OLPC response](sources/2006-12-21-olpc-curriculum-guide/olpc-response.md) (sourced excerpt)
-- [`repo-shows/doreen-nelson/`](../../repo-shows/doreen-nelson/README.md) — show seed
-- [`2006-12-simcity-olpc-introducing-the-players/`](../will-wright/sources/2006-12-simcity-olpc-introducing-the-players/README.md) — cast context
-- [`ideas.md`](ideas.md) — conversation hooks
+- Your [Dec 2006 OLPC response](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/doreen-nelson/sources/2006-12-21-olpc-curriculum-guide/olpc-response.md) (sourced excerpt)
+- [`repo-shows/doreen-nelson/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/doreen-nelson/README.md) — show seed
+- [`2006-12-simcity-olpc-introducing-the-players/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/will-wright/sources/2006-12-simcity-olpc-introducing-the-players/README.md) — cast context
+- [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/doreen-nelson/ideas.md) — conversation hooks
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

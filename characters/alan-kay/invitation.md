@@ -31,16 +31,16 @@ credits SqueakJS on the Smalltalk Zoo welcome page. Your constructionist microwo
 Croquet, the live system underneath — runs through the same lineage. Memorial mode: we *represent
 and discuss*; we never speak as her. Craig anchors a live episode; Dan and you are warmly invited
 for linked segments if you're willing — or we honor her in the microworld show itself. See
-[`../vanessa-freudenberg/memorial.md`](../vanessa-freudenberg/memorial.md) and
-[`../../repo-shows/remembering-vanessa-freudenberg.yml`](../../repo-shows/remembering-vanessa-freudenberg.yml).
+[`../vanessa-freudenberg/memorial.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/vanessa-freudenberg/memorial.md) and
+[`../../repo-shows/remembering-vanessa-freudenberg.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/remembering-vanessa-freudenberg.yml).
 
 **What I'd love to explore with you — your pick, any order:**
 
 - **MOOLLM × trust × teaching** — microworld OS vs copilot; is this what you meant? Draft artifact:
-  [`moollm-trust-and-teaching-guess.md`](moollm-trust-and-teaching-guess.md). Quora recap:
-  [`media/quora-recaps/llms-copilots-trust-and-teaching.md`](media/quora-recaps/llms-copilots-trust-and-teaching.md).
+  [`moollm-trust-and-teaching-guess.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/alan-kay/moollm-trust-and-teaching-guess.md). Quora recap:
+  [`media/quora-recaps/llms-copilots-trust-and-teaching.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/alan-kay/media/quora-recaps/llms-copilots-trust-and-teaching.md).
 - **Microworlds and constructionism** — Dynabook, Logo, Etoys, MOOLLM as filesystem microworld.
-  Proposed show seed: [`alan-kay-microworld.yml`](../../repo-shows/alan-kay-microworld.yml).
+  Proposed show seed: [`alan-kay-microworld.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/alan-kay-microworld.yml).
 - **Pie menus ↔ Fabrik** — your memory of "swiped pie menus" at Apple; direct-manipulation
   archaeology with Don's CHI'88 work (PIXIE credited — Don does not claim invention).
 - **NeWS and the live system underneath** — send code, not commands; what the browser lineage
@@ -54,11 +54,11 @@ for linked segments if you're willing — or we honor her in the microworld show
 
 | Topic | Link |
 | --- | --- |
-| **Microworld show seed** | [`repo-shows/alan-kay-microworld.yml`](../../repo-shows/alan-kay-microworld.yml) |
-| **Vanessa memorial arc** | [`repo-shows/remembering-vanessa-freudenberg.yml`](../../repo-shows/remembering-vanessa-freudenberg.yml) |
-| **MOOLLM × trust × teaching** | [`moollm-trust-and-teaching-guess.md`](moollm-trust-and-teaching-guess.md) |
-| **Conversation hooks** | [`ideas.md`](ideas.md) · [`correspondence.yml`](correspondence.yml) |
-| **Mail-sourced artifacts** | [`media/from-mail/`](media/from-mail/MANIFEST.yml) |
+| **Microworld show seed** | [`repo-shows/alan-kay-microworld.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/alan-kay-microworld.yml) |
+| **Vanessa memorial arc** | [`repo-shows/remembering-vanessa-freudenberg.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/remembering-vanessa-freudenberg.yml) |
+| **MOOLLM × trust × teaching** | [`moollm-trust-and-teaching-guess.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/alan-kay/moollm-trust-and-teaching-guess.md) |
+| **Conversation hooks** | [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/alan-kay/ideas.md) · [`correspondence.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/alan-kay/correspondence.yml) |
+| **Mail-sourced artifacts** | [`media/from-mail/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/alan-kay/media/from-mail/MANIFEST.yml) |
 | **Repo Show project** | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).

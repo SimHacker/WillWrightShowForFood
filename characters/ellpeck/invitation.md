@@ -24,5 +24,5 @@ Want to pick up the thread?
 
 — Don
 
-↑ [CHARACTER.yml](CHARACTER.yml) · [Soul City bridge](bridge/soul-city-bridge.md) ·
-[spec](../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml)
+↑ [CHARACTER.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ellpeck/CHARACTER.yml) · [Soul City bridge](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ellpeck/bridge/soul-city-bridge.md) ·
+[spec](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml)

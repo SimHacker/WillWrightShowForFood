@@ -8,8 +8,8 @@ show_seed: repo-shows/walter-bender-olpc.yml
 
 # Repo Show invitation — Walter Bender
 
-*Walter Bender may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Walter Bender may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 We would respectfully invite **Walter Bender** to a **Repo Show** — a Repo Show Class
 conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood),
@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** OLPC Stone Soup, open-sourcing SimCity, skill-creation show
 
-**Materials:** [`repo-shows/walter-bender-olpc.yml`](../../repo-shows/walter-bender-olpc.yml)
+**Materials:** [`repo-shows/walter-bender-olpc.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/walter-bender-olpc.yml)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

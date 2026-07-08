@@ -11,7 +11,7 @@ priority: send_ready
 # Repo Show invitation — Bret Victor
 
 *Send-ready draft — not yet sent. Bret Victor may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Bret —
 
@@ -36,12 +36,12 @@ I'd be honored if you'd join one. No homework trap. You'd help set the bar. Thre
   invention list. Natural participant alongside Ted Nelson, Alan Kay, Yoot Saito if you're open to a
   group tribute — or solo is fine.
 
-More hooks in [`ideas.md`](ideas.md). Accepted, delayed, declined, or no reply — all honored gracefully.
+More hooks in [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/bret-victor/ideas.md). Accepted, delayed, declined, or no reply — all honored gracefully.
 
 — Don Hopkins, Repo Show Class
 
 | | |
 |---|---|
-| **Show seed** | [`repo-shows/bret-victor/`](../../repo-shows/bret-victor/README.md) |
+| **Show seed** | [`repo-shows/bret-victor/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/bret-victor/README.md) |
 | **Your guest page** | [`characters/bret-victor/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/bret-victor) |
 | **Engelbart tribute** | [A few words on Doug Engelbart](https://worrydream.com/Engelbart/) |

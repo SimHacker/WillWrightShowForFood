@@ -8,8 +8,8 @@ format: live_or_async
 
 # Repo Show invitation — David Gerrold 🖖🐹👽
 
-*David may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*David may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 David —
 
@@ -29,7 +29,7 @@ downstream of your novel, and I'd rather say that on camera than in a footnote.
 Conversation could include (your pick):
 
 - **HARLIE → LLMs** — what the 1972 argument got right about 2026; what everyone gets wrong.
-- **Tribbles vs. conservation of souls** — our [soul bridges](../../repo-shows/will-wright-premiere/game-bridge-soul-hydraulics.yml)
+- **Tribbles vs. conservation of souls** — our [soul bridges](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/game-bridge-soul-hydraulics.yml)
   enforce strict conservation; tribbles are born pregnant. I want to hear you prosecute the case.
 - **Sixty years of shipping stories through institutions** — Trek to *Blood and Fire* to Patreon;
   what survives the rewrite machine.
@@ -41,7 +41,7 @@ Conversation could include (your pick):
 Format is low pressure: a solo video whenever you like, a relaxed one-on-one edited together, or
 just correspondence. Accepted, delayed, too busy, declined, or no reply — all honored.
 
-Your room here is yours: [`README.md`](README.md) · [`CHARACTER.yml`](CHARACTER.yml) — tell me
+Your room here is yours: [`README.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-gerrold/README.md) · [`CHARACTER.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-gerrold/CHARACTER.yml) — tell me
 anything to add, fix, or remove and it's done same day, or edit it yourself.
 
 — Don Hopkins

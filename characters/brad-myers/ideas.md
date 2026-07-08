@@ -53,6 +53,9 @@ Don's dimensionality definition + C32 cite on [HN 22978454](https://news.ycombin
 ### 9. Michael McGuffin triangle
 Oct 2022 letter recipient — moderate **Excel-as-VPL** / text-vs-graph debate with Brad + Don. [`../michael-mcguffin/`](../michael-mcguffin/)
 
+### 10. Watch What I Do → LLMs — PBD's forty-year IOU paid
+*Watch What I Do* (Cypher ed., 1993; Brad's Peridot chapter) dreamed show-the-machine programming and hit the **generalization wall** — inferring intent from examples with brittle heuristics. LLMs are the missing intent-inference engine; Don's trainable-worms doctrine (examples → NL instructions → lifted code → LLM callback) is the book finally running. [Palm's field notebook — worms are trainable](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md#worms-are-trainable)
+
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)

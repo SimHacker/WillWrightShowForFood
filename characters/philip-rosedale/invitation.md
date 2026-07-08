@@ -38,7 +38,7 @@ through to working artifacts anyone can browse without an account.
   overlay of intent and annotations, accessible and generatable by humans and LLMs. Durable world
   state via **[GitHub-as-MMORPG](https://github.com/SimHacker/moollm/blob/main/designs/GITHUB-AS-MMORPG.md)**;
   live session on stream. Trail:
-  [`yaml-jazz-collaboration-stack.md`](../../process/trails/yaml-jazz-collaboration-stack.md).
+  [`yaml-jazz-collaboration-stack.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/trails/yaml-jazz-collaboration-stack.md).
 - **Worlds as address space** — Second Life, **LambdaMOO**, and **MOOLLM**: rooms as directories,
   paths not `#42`, [GitHub-as-MMORPG](https://github.com/SimHacker/moollm/blob/main/designs/GITHUB-AS-MMORPG.md)
   as durable world state under real-time channels.
@@ -52,8 +52,8 @@ through to working artifacts anyone can browse without an account.
 
 **Format:** Remote stream is fine. No homework — homeplay only if fun.
 
-**Materials:** [`repo-shows/philip-rosedale-hifi-moollm.yml`](../../repo-shows/philip-rosedale-hifi-moollm.yml) ·
-[ideas](ideas.md) · [correspondence](correspondence.yml) ·
+**Materials:** [`repo-shows/philip-rosedale-hifi-moollm.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/philip-rosedale-hifi-moollm.yml) ·
+[ideas](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/philip-rosedale/ideas.md) · [correspondence](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/philip-rosedale/correspondence.yml) ·
 [MOO heritage](https://github.com/SimHacker/moollm/blob/main/designs/MOO-HERITAGE.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).

@@ -11,7 +11,7 @@ format: remote_or_in_person
 # Repo Show invitation — Jerry Martin
 
 *Send-ready draft — not yet sent. Jerry Martin may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Jerry —
 
@@ -32,5 +32,5 @@ No pressure, no homework. Accepted, delayed, declined, or no reply — all honor
 
 | | |
 |---|---|
-| **Music show seed** | [`music-and-theory`](../../repo-shows/REPO-SHOWS.yml) |
+| **Music show seed** | [`music-and-theory`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/REPO-SHOWS.yml) |
 | **Your guest page** | [`characters/jerry-martin/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/jerry-martin) |

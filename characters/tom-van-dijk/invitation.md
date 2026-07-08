@@ -2,7 +2,7 @@
 
 **To:** Tom van Dijk *(email on file privately — or reply in the open via a GitHub issue or PR so everybody can read)*  
 **Subject:** Repo Show — IFF Pencil, Behavior.iff, and the Sims modding origin story  
-**Show:** [building-the-sims](../../repo-shows/REPO-SHOWS.yml)
+**Show:** [building-the-sims](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/REPO-SHOWS.yml)
 
 ---
 

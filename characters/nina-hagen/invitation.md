@@ -8,8 +8,8 @@ show_seed: repo-shows/nina-hagen/
 
 # Repo Show invitation — Nina Hagen *(dream guest)*
 
-*Nina Hagen may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Nina Hagen may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Dear Nina,
 
@@ -34,12 +34,12 @@ pick, skip whatever doesn't spark:
   portrait of you** I'd love to see on air if it exists.
 - **Performance persona** — drag king / bio-queen framing as live character work, not biography.
 
-More in [`ideas.md`](../../characters/nina-hagen/ideas.md). No pressure — accepted, delayed, declined,
+More in [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/nina-hagen/ideas.md). No pressure — accepted, delayed, declined,
 or no reply all honored gracefully.
 
 — Don Hopkins, Repo Show Class
 
 | | |
 |---|---|
-| **Show seed** | [`repo-shows/nina-hagen/`](README.md) |
-| **Your guest page** | [`characters/nina-hagen/`](../../characters/nina-hagen/) |
+| **Show seed** | [`repo-shows/nina-hagen/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/nina-hagen/README.md) |
+| **Your guest page** | [`characters/nina-hagen/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/nina-hagen) |

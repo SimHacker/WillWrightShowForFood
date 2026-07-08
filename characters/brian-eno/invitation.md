@@ -46,8 +46,8 @@ A few things I'd love to build or riff on, live (no homework — only if they sp
   cover, the one that moved you. More just below.
 - **The Long Now lens** on all of it: what's worth *seeding* now for a 10,000-year audience?
 
-(More in [`ideas.md`](../../characters/brian-eno/ideas.md), and a flagged playground of wilder,
-speculative provocations in [`speculative-jams.md`](../../characters/brian-eno/speculative-jams.md) —
+(More in [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-eno/ideas.md), and a flagged playground of wilder,
+speculative provocations in [`speculative-jams.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-eno/speculative-jams.md) —
 fuel to jam on, build a toy of live, and turn loose for others to remix.)
 
 ## Where I'd love to start — that 1979 SNL night 📺
@@ -72,7 +72,7 @@ forgotten.
 And here's the mischief I can't resist floating: it might make a wonderful **on-air reveal** — you,
 Will, and me each **"whipping it out" with our own video puppets**, G-rated, as loving homage. Show,
 don't tell. (Full write-up of the songs, the Nomi/Arias story, and the questions:
-[`bowie-snl-1979.md`](../../characters/brian-eno/bowie-snl-1979.md).) **I have all three performances
+[`bowie-snl-1979.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-eno/bowie-snl-1979.md).) **I have all three performances
 and can point you and Will straight at them** so we're all looking at the same thing.
 
 ## The heart of it
@@ -98,9 +98,9 @@ gush, misread, outbid, covet each other's combination deeds, forge, steal — th
 They bid play-money **§**; you start buried in worthless Simoleons to **surrender on stream**
 (give it all away — art as trigger, not object). Scenius made literal: the patrons *are* the
 collective composer. Scott's Sheep opening pairs before or after. Spec:
-[`simulated-opening.yml`](simulated-opening.yml) · product canon:
-[`77-million-paintings.yml`](77-million-paintings.yml) · secondary market:
-[`../../process/art-thief-game.yml`](../../process/art-thief-game.yml).
+[`simulated-opening.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-eno/simulated-opening.yml) · product canon:
+[`77-million-paintings.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-eno/77-million-paintings.yml) · secondary market:
+[`../../process/art-thief-game.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/art-thief-game.yml).
 
 ## A personal note — for you, Brian
 

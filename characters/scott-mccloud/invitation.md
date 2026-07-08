@@ -11,7 +11,7 @@ format: remote_or_in_person
 # Repo Show invitation — Scott McCloud
 
 *Send-ready draft — not yet sent. Scott McCloud may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Scott —
 
@@ -32,5 +32,5 @@ No pressure, no homework. Accepted, delayed, declined, or no reply — all honor
 
 | | |
 |---|---|
-| **Show seed** | [`repo-shows/scott-mccloud/`](../../repo-shows/scott-mccloud/README.md) |
+| **Show seed** | [`repo-shows/scott-mccloud/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/scott-mccloud/README.md) |
 | **Your guest page** | [`characters/scott-mccloud/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/scott-mccloud) |

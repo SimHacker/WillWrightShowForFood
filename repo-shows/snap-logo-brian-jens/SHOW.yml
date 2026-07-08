@@ -21,6 +21,9 @@ why_them:
   bjc: "**Beauty and Joy of Computing** — the CSforALL curriculum Snap! powers; 1,000+ teachers trained, Spanish edition, BJC Sparks; Berkeley's BJC course has exceeded 50% (once 70%) female enrollment."
   kay_lineage: "Both sit in Alan Kay's orbit — Jens worked on GP under Kay; the whole lineage runs Logo (Papert) → Smalltalk (Kay) → Scratch → Snap!."
   don_orbit: "Don's 2018 thread with Brian + Jens: wire **Micropolis** (open SimCity) and **CAM6** cellular automata into Snap! blocks — an open, modifiable simulator for the classroom."
+  snapcon_2025: |
+    Snap!Con 2025 Karlstrom address (https://www.youtube.com/watch?v=pDK2PE_pkqQ) — Jens introduces Brian;
+    CCUS/no-grades friendship vs curriculum assessment; Brian's lambda contribution to Snap!; skeptical AI-in-K-12 take.
   pair_not_solo: |
     Default interview is **this pair show** — the shared Snap!/BJC/Logo story told once, together.
     Optional solo verticals remain (Jens on Snap! internals/schemas/actors; Brian on his books) —
@@ -35,8 +38,16 @@ episodes:
     what: "Brian on *CS Logo Style*, *Simply Scheme*, and teaching CS 61A/SICP — what makes a hard idea teachable."
   - id: bjc-for-everyone
     what: "BJC as CSforALL — the Karlstrom-cited work; reaching kids who were never invited to computing before."
+  - id: karlstrom-ccus
+    what: "Snap!Con 2025 Karlstrom address — CCUS, no grades, keys to the room, 'my friend' naming; curriculum vs friendship; Jens hosts, Dutch teacher Q&A."
   - id: micropolis-in-snap
     what: "Drive Micropolis + CAM6 cellular automata from Snap! blocks — a city sim and CA rules you reprogram live (from Don's 2018 thread)."
+  - id: rings-macros-metaprogramming
+    what: "Gray rings as visible quote; split/join/define AST; Lisp-family macros (honest partial scorecard); Palm audience Q&A — Brian pedagogy, Jens ship status."
+  - id: morphic-heritage
+    what: "Self UI → Ingalls' Lively Kernel → Morphic.js → Snap! — and why MVC got cargo-culted into everything while Morphic never got the love (Palm question id 10)."
+  - id: people-to-remember
+    what: "Community memorial — who Brian and Jens miss from Logo/blocks/BJC/Snap!Con, and lessons still worth learning (Palm question id 11); the harmonious-disagreement closer."
 
 scheduling:
   primary: snap-logo-brian-jens
@@ -49,6 +60,8 @@ format:
   live: true
   run_code: true
   audience_qa: true
+  audience_seats:
+    - audience/palm/questions.yml
 
 ties_to:
   - ../../characters/brian-harvey/

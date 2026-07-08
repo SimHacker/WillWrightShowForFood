@@ -14,4 +14,4 @@ shaming anyone who stayed?
 
 — Don
 
-↑ [CHARACTER.yml](CHARACTER.yml)
+↑ [CHARACTER.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/lilsimsie/CHARACTER.yml)

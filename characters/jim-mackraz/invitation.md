@@ -8,8 +8,8 @@ show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml
 
 # Repo Show invitation — Jim Mackraz
 
-*Jim Mackraz may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Jim Mackraz may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Jim —
 

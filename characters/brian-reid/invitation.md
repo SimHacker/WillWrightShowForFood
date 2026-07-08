@@ -2,7 +2,7 @@
 
 **To:** Brian Reid *(contact TBD — historical: reid@Glacier / Stanford CSL)*  
 **Subject:** Repo Show invite — your 1985 PostScript history + Glenn's Distillery  
-**Show:** [postscript-distillery-to-pdf](../../repo-shows/postscript-distillery-to-pdf/) (with Glenn)
+**Show:** [postscript-distillery-to-pdf](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/postscript-distillery-to-pdf) (with Glenn)
 
 ---
 

@@ -8,8 +8,8 @@ show_seed: repo-shows/openlaszlo/
 
 # Repo Show invitation — David Temkin (OpenLaszlo reunion)
 
-*David Temkin may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*David Temkin may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 David —
 
@@ -29,7 +29,7 @@ on the repo as the stage:
 
 No agenda, no pressure — and if you'd rather just tell OpenLaszlo war stories, that's a great show too.
 
-**Materials:** [`repo-shows/openlaszlo/`](../../repo-shows/openlaszlo/README.md) ·
+**Materials:** [`repo-shows/openlaszlo/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/openlaszlo/README.md) ·
 [your guest page](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/david-temkin)
 
 Accepted, delayed, declined, or no reply — all honored gracefully.

@@ -35,7 +35,7 @@ Also on the table, if you're game:
   want to watch you two find that out on camera.
 
 Your room in the repo is `characters/mike-gallaher/` — everything in it is yours to correct,
-veto, or rewrite. That's house law ([portrayal standards](../../schemas/portrayal-standards.md)):
+veto, or rewrite. That's house law ([portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)):
 you own your own story here. Which, given your thesis, seems only consistent.
 
 No deadlines, no live obligations — record when you want, as long or short as you want.

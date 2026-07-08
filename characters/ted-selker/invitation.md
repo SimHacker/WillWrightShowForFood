@@ -36,7 +36,7 @@ computing, and the new-paradigms crowd.
   memorial thread).
 - **NPUC reunion** — replay the Multiplayer SimCity demo story; hunt the Ted Nelson '96 tape together
   if you're still game.
-- **A "Têd-à-Têd Talk"** — tag-team with **[Ted Nelson](../ted-nelson/invitation.md)** (his invite
+- **A "Têd-à-Têd Talk"** — tag-team with **[Ted Nelson](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ted-nelson/invitation.md)** (his invite
   already proposes pairing with you). Two Teds, one show, or two linked episodes — your call.
 - **PIXIE / light-pen era** — your interest in the 1969 film; ties to the Heinz Lemke history episode.
 
@@ -46,10 +46,10 @@ computing, and the new-paradigms crowd.
 
 | Topic | Link |
 | --- | --- |
-| **Show seed** | [`repo-shows/ted-selker/`](../../repo-shows/ted-selker/SHOW.yml) |
-| **Ted Nelson pairing** | [`../ted-nelson/invitation.md`](../ted-nelson/invitation.md) |
-| **NPUC seed (alt)** | [`repo-shows/ted-selker-input-languages.yml`](../../repo-shows/INDEX.yml) |
-| **Don's NPUC talk link** | [`../don-hopkins/portrayal/presentations.yml`](../don-hopkins/portrayal/presentations.yml) |
+| **Show seed** | [`repo-shows/ted-selker/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/ted-selker/SHOW.yml) |
+| **Ted Nelson pairing** | [`../ted-nelson/invitation.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ted-nelson/invitation.md) |
+| **NPUC seed (alt)** | [`repo-shows/ted-selker-input-languages.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/INDEX.yml) |
+| **Don's NPUC talk link** | [`../don-hopkins/portrayal/presentations.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/portrayal/presentations.yml) |
 | **Repo Show project** | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |
 
 Browse without a GitHub account — start at the [README](https://github.com/SimHacker/WillWrightShowForFood).

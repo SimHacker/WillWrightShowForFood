@@ -13,7 +13,7 @@ send_batch: interval-reunion-2026
 # Repo Show invitation — Brenda Laurel 🎭
 
 *Send-ready draft — not yet sent. Brenda Laurel may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Brenda —
 
@@ -43,7 +43,7 @@ No homework trap. Remote is fine. Accepted, delayed, declined, or no reply — a
 
 | | |
 |---|---|
-| **Pair show seed** | [`repo-shows/placeholder/`](../../repo-shows/placeholder/README.md) |
+| **Pair show seed** | [`repo-shows/placeholder/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/placeholder/README.md) |
 | **Your guest page** | [`characters/brenda-laurel/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/brenda-laurel) |
-| **Rob Tow** | [`characters/rob-tow/`](../../characters/rob-tow/) |
-| **Interval thread** | [`don-hopkins/history/interval-research.yml`](../don-hopkins/history/interval-research.yml) |
+| **Rob Tow** | [`characters/rob-tow/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/rob-tow) |
+| **Interval thread** | [`don-hopkins/history/interval-research.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/history/interval-research.yml) |

@@ -38,18 +38,25 @@ sources:
     - sources/beauty-and-joy-of-computing.yml
     - sources/berkeley-logo-and-cs61a.yml
     - sources/micropolis-snap-2018.yml
+    - sources/snapcon-2025-karlstrom-address.yml
+    - sources/snap-macros-metaprogramming.yml
   field_notebook: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md
   papers: []
   blogs: []
 
 connections:
   pair_show: "Default interview with Jens Mönig — Snap! is shared work; Karlstrom 2024 cites both"
+  snapcon_2025_karlstrom: "Snap!Con 2025 evening address — CCUS, no grades, curriculum critique; introduced by Jens"
   micropolis_2018: "Don's thread — wire open SimCity + CAM6 into Snap! blocks; Brian looped in Jens"
   kay_lineage: "Snap! as Kay's end-user programmable media answer — HyperCard bar"
   palm_field_notebook: "Theo the Logo Turtle in Palm's worm census"
   snapcon_barcelona: "TurtleStitch, Cynthia Solomon, inclusive constructionism Don witnessed live"
+  birthright: "Computing is your birthright as a human being — Jens recalled Brian at MIT Sloan"
+  hci_naming: "ACM Machinery vs Shneiderman Human-first HCIL — same accident, opposite corrections"
+  macros_metaprogramming: "Rings as quote; Ch. 11 AST; Lisp-family macros partial — digest + Palm audience questions"
 
 see_also:
+  - { path: ../../repo-shows/snap-logo-brian-jens/audience/palm/questions.yml, why: "Palm audience questions — rings, macros, SICP scorecard" }
   - { path: ideas.md, why: "Conversation hooks" }
   - { path: sources/README.md, why: "Source artifacts" }
   - { path: from-alan-kay.yml, why: "Kay on Snap!/HyperCard bar for end-user programming" }

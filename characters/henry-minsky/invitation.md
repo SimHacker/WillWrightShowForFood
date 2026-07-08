@@ -8,8 +8,8 @@ show_seed: repo-shows/henry-minsky/
 
 # Repo Show invitation — Henry Minsky
 
-*Henry Minsky may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Henry Minsky may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 We would respectfully invite **Henry Minsky** to a **Repo Show** — a conversation whose stage is
 [this public repository](https://github.com/SimHacker/WillWrightShowForFood), following through to
@@ -27,10 +27,10 @@ working code and credited ideas in public.
 - **The first wired family.** Growing up *inside* the AI Lab — playing in the children's computer
   lab while grad students took notes — with your sister Margaret and twin Juliana.
 
-**Materials:** [`repo-shows/henry-minsky/`](../../repo-shows/henry-minsky/README.md) ·
+**Materials:** [`repo-shows/henry-minsky/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/henry-minsky/README.md) ·
 [your guest page](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/henry-minsky)
 
-A **Minsky-sibling session** with [Margaret](../margaret-minsky/README.md) is on the table too, if you'd both enjoy it.
+A **Minsky-sibling session** with [Margaret](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/margaret-minsky/README.md) is on the table too, if you'd both enjoy it.
 
 **Your response:** Accepted, delayed, too busy, declined, or no reply — all honored gracefully.
 

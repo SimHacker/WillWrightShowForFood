@@ -13,11 +13,12 @@ the_hook: |
   on a canvas; the IDE itself is malleable Morphic-style, inheriting Smalltalk's live-system ethos
   without requiring Squeak on every student's laptop.
 
-heritage: "Logo → Smalltalk (Kay) → Scratch morphic UI → Morphic.js → Snap!"
+heritage: "Self Morphic → Squeak/Scratch morphs → Dan Ingalls Lively Kernel → Morphic.js → Snap!"
 
 show_hooks:
   - "Morphic.js demo — edit the IDE while you're teaching in it"
   - "Kay's 'live system underneath' criterion — Snap! as the browser answer"
+  - "Morphic heritage vs MVC cargo-cult — why textbooks teach controllers, not morphs"
   - "Pair with Brian — the turtle (Logo) and the morph (Smalltalk) in one classroom tool"
 
 see_also:

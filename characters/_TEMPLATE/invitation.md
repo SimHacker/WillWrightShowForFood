@@ -8,7 +8,7 @@ show_seed: repo-shows/guest-slug/
 
 # Repo Show invitation — Full Name
 
-*The person portrayed may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
+*The person portrayed may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
 
 We would respectfully invite you to a **Repo Show** — a Repo Show Class conversation whose
 stage is [this public GitHub repository](https://github.com/SimHacker/WillWrightShowForFood),
@@ -16,7 +16,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** *(topic from show seed — verifiable public work)*
 
-**Materials:** [`repo-shows/...`](../../repo-shows/README.md)
+**Materials:** [`repo-shows/...`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/README.md)
 
 Browse without a GitHub account — start at the [README](https://github.com/SimHacker/WillWrightShowForFood).
 

@@ -18,7 +18,7 @@ delay, or request removal at any time.*
 Scott —
 
 I'm still smiling about your note back in January — that MOOLLM **sucked you in**, that you see
-**tremendous potential** in it. That meant a lot. We'd already found each other before on that Hacker News thread about memory palaces (`[29330901](https://news.ycombinator.com/item?id=29330901)`); your reply there was warm and
+**tremendous potential** in it. That meant a lot. We'd already found each other before on that Hacker News thread about memory palaces ([29330901](https://news.ycombinator.com/item?id=29330901)); your reply there was warm and
 generous, and the email thread that followed felt like picking up a conversation that should
 never have paused.
 
@@ -39,7 +39,7 @@ In 1978 you didn't ship a monolithic program for every machine — you shipped *
 and a tiny interpreter that could run it anywhere. A whole world in sixteen kilobytes. Verb. Noun.
 Legible. Portable. I followed that idea into Terrapin **Logo Adventure** (the Logo REPL as the
 parser — [Medium walkthrough](https://medium.com/@donhopkins/logo-adventure-for-c64-terrapin-logo-4c684a240b53),
-[repo recap](../don-hopkins/logo-adventure-c64-terrapin.md)) and, forty years later, into an **adventure compiler** and **MOOLLM** — a microworld OS
+[repo recap](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/logo-adventure-c64-terrapin.md)) and, forty years later, into an **adventure compiler** and **MOOLLM** — a microworld OS
 where directories are rooms, YAML files are objects with behavior, and an LLM walks the palace
 with you instead of grepping blindly.
 
@@ -47,7 +47,7 @@ with you instead of grepping blindly.
 
 - **Two palaces, one compiler.** Your biography rooms + my career memory palace — same YAML grammar,
   swap seeds as PRs. This is the heart of the show: **both our stories as interactive adventure.**
-  Brief: [`moollm-dual-palace.md`](moollm-dual-palace.md).
+  Brief: [`moollm-dual-palace.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-adams/moollm-dual-palace.md).
 - **The engine was always a compiler.** Adventure-as-database + portable driver → Logo Adventure →
 adventure compiler → MOOLLM. Same idea, four decades; we trace it on air and make it *run* in a
 browser before the stream ends.
@@ -70,7 +70,7 @@ if we ever overlap. **Zero homework.** No slides required. If homeplay (instead 
 
 | If you're curious about…         | Link                                                                                                                                     |
 | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| **This show** (segment ideas)    | [repo-shows/scott-adams/](../../repo-shows/scott-adams/SHOW.yml)                                                                                                      |
+| **This show** (segment ideas)    | [repo-shows/scott-adams/](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/scott-adams/SHOW.yml)                                                                                                      |
 | **Your guest page**              | [characters/scott-adams/](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/scott-adams)                           |
 | **Conversation hooks**           | [ideas.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-adams/ideas.md)                                 |
 | **Dual palace brief**            | [moollm-dual-palace.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-adams/moollm-dual-palace.md)       |

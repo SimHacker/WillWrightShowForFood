@@ -16,4 +16,4 @@ No EA bashing theater — functional impact on the community you built.
 
 — Don
 
-↑ [CHARACTER.yml](CHARACTER.yml)
+↑ [CHARACTER.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/plumbella/CHARACTER.yml)

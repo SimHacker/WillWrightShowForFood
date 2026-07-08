@@ -8,8 +8,8 @@ show_seed: repo-shows/terry-winograd/
 
 # Repo Show invitation — Terry Winograd
 
-*Terry Winograd may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Terry Winograd may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 We would respectfully invite **Terry Winograd** to a **Repo Show** — a Repo Show Class
 conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood),
@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** HCI, interaction design, constructionist-adjacent education, Stanford CS547 seminar series, SHRDLU legacy
 
-**Materials:** [`repo-shows/terry-winograd/`](../../repo-shows/terry-winograd/README.md)
+**Materials:** [`repo-shows/terry-winograd/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/terry-winograd/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

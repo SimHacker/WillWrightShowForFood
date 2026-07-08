@@ -26,6 +26,10 @@ only.
 
 **2018 thread:** Don's Micropolis × Snap! correspondence ([digest](../../characters/brian-harvey/sources/micropolis-snap-2018.yml)) — still an open demo beat.
 
+**Snap!Con 2025:** Brian's [Karlstrom evening address](https://www.youtube.com/watch?v=pDK2PE_pkqQ) — introduced by Jens — is the pair show's emotional spine: CCUS and no grades vs curriculum hoops; lambda in Snap!; "computing is your birthright." Digests: [Brian](../../characters/brian-harvey/sources/snapcon-2025-karlstrom-address.yml) · [Jens hosts](../../characters/jens-monig/sources/snapcon-2025-karlstrom-intro.yml).
+
+**Metaprogramming / macros:** [technical digest](../../characters/brian-harvey/sources/snap-macros-metaprogramming.yml) — rings as quote, AST since v8, Lisp-family macros (partial). [Palm audience questions (readable)](audience/palm/questions.md) · [YAML SSOT](audience/palm/questions.yml) for the pair interview.
+
 ## Episode seeds
 
 See [`SHOW.yml`](SHOW.yml).

@@ -13,7 +13,7 @@ sent_links: true
 # Repo Show invitation — David Levitt 🎹
 
 *Phone call 2026-07-06; invite links sent — awaiting scheduling. David Levitt may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Dear David,
 
@@ -47,7 +47,7 @@ to working code and credited ideas, in the open.
 - **Remembering Marvin Minsky** — together.
 
 ## Rebounce — let's salute Bounce, together 🔌🌀
-The one I'm most excited to build with you: **[Rebounce](../../repo-shows/rebounce/README.md)** — a
+The one I'm most excited to build with you: **[Rebounce](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/rebounce/README.md)** — a
 nominal salute to **Bounce** (né **Body Electric**). I'd **check in the old source** (I still have it —
 Pascal → machine-mangled C), and we'd invite **many people to rewrite it together — by hand and with
 AI, competing, cooperating, exchanging ideas** — chasing that live-coding groove in a modern
@@ -56,15 +56,15 @@ the origin story. I wrote up the stack as I remember it — the **Swivel 3D tran
 projected in real time, **UDP to two SGI renderers (one per eye)**, the Atlanta input hub
 (Polhemus / DataGlove / Convolvotron), and those **typed, colored wires carrying whole JSON-like COM
 objects** to beat the 6-parameter limit — for you to correct and enrich:
-[Body Electric / Bounce VR stack](../don-hopkins/body-electric-bounce-vr-stack.md) · full proposal:
-[rebounce.md](../don-hopkins/rebounce.md). (Bounce is also the **patch-cord half** of the
-[Snap! visual-engines vision](../don-hopkins/snap-visual-engines-fundable-goals.md).)
+[Body Electric / Bounce VR stack](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/body-electric-bounce-vr-stack.md) · full proposal:
+[rebounce.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/rebounce.md). (Bounce is also the **patch-cord half** of the
+[Snap! visual-engines vision](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/snap-visual-engines-fundable-goals.md).)
 
 ## The guests you're perfect alongside
 Dream-guest dirs + show proposals are already going, and I need your help reaching some of them:
-- **[Laurie Anderson](../laurie-anderson/)** — I'd love her; do you know *anyone* from her Interval circle?
-- **[Brian Eno](../brian-eno/)** — Will may be able to reach him.
-- **[Drew Carey](../drew-carey/)** — Sims mythology + *Whose Line* improv, a live-show natural.
+- **[Laurie Anderson](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/laurie-anderson)** — I'd love her; do you know *anyone* from her Interval circle?
+- **[Brian Eno](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-eno)** — Will may be able to reach him.
+- **[Drew Carey](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/drew-carey)** — Sims mythology + *Whose Line* improv, a live-show natural.
 
 You'd fit half a dozen of these. There are also **memorial directories** for beloved people we've lost —
 topics each of us who knew them can speak to, woven together into a shared memorial video.
@@ -73,14 +73,14 @@ topics each of us who knew them can speak to, woven together into a shared memor
 stick"** that **Laurie Anderson and Bob Bielecki** built? **Rachel Strickland**, perhaps? Any real thread
 you have into Laurie's Interval circle is gold *(offered as a question, not an assertion)*.
 
-**Old friends in the room:** we're also inviting **[Marc Canter](../marc-canter/)** — MacroMind/Macromedia/
+**Old friends in the room:** we're also inviting **[Marc Canter](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/marc-canter)** — MacroMind/Macromedia/
 Director founder, **People Aggregator** (a.k.a. "People Aggrivator" 😉). You, Marc, and Don go way back;
 outrageous stories, many from Amsterdam. He will love the puppets.
 
 ## Help me reach the others — you're a connector
 We both know **so many** people who'd be perfect. **Who else should be here — and would you help me
 contact and gently persuade them?** The ask can be **as light as they like**; there's a whole
-[participation ladder](../../process/guest-participation-ladder.yml):
+[participation ladder](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/guest-participation-ladder.yml):
 
 - **Record a solo video** about whatever they want — phone, laptop, one take or ten.
 - **Browse the repo**, get ideas, answer a question or two.
@@ -96,7 +96,7 @@ one big sit-down.**
 ## Do NOT miss this: the Acapella Pink Trombone Sing-Along 🎺
 A bunch of us, live, singing through **[Pink Trombone](https://dood.al/pinktrombone/)** — the playable
 model of the human vocal tract. Group chaos and joy; working title *"We Are the Weird."* You **cannot**
-miss it. ([the jam](../../apps/performance-space/pink-trombone-jam.yml))
+miss it. ([the jam](https://github.com/SimHacker/WillWrightShowForFood/blob/main/apps/performance-space/pink-trombone-jam.yml))
 
 ## Logistics — early days, rapid prototyping
 Don is hot-dogging it solo right now: **pushing straight to `main`**, skipping the whole
@@ -105,9 +105,9 @@ your GitHub handle and you get write access** — just clean up your own merge c
 happens. The full PR ceremony arrives when we go public and any random can fire a swarm of rogue AI bots
 at us — complexity is good *then*.
 
-**Materials:** [`ideas.md`](ideas.md) · [`media/README.md`](media/README.md) ·
-Pantomime media [`../don-hopkins/media/pantomime/`](../don-hopkins/media/pantomime/) ·
-object-model lineage [`../david-rosenthal/slots-all-the-way-down.md`](../david-rosenthal/slots-all-the-way-down.md)
+**Materials:** [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-levitt/ideas.md) · [`media/README.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-levitt/media/README.md) ·
+Pantomime media [`../don-hopkins/media/pantomime/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/media/pantomime) ·
+object-model lineage [`../david-rosenthal/slots-all-the-way-down.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/slots-all-the-way-down.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

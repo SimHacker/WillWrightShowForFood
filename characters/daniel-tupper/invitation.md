@@ -9,8 +9,8 @@ format: live_or_async
 
 # Repo Show invitation — Daniel Tupper 🗽🛠️🎮
 
-*Daniel may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Daniel may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Daniel —
 
@@ -21,8 +21,8 @@ your **own engine**. You weren't performing fandom; you were **building toward s
 
 I'd love you on the **Repo Show** — not as a prop, as a **peer on the ladder** Will Wright has talked
 about for decades: players at the bottom, modders and tool makers near the top, each lift making the
-game better for everyone below. You're on that climb. So are [Jeff](../jeff-adkins/) (SimObliterator),
-[Heather](../heather-alvey/) & [Steve](../steve-alvey/) (SimFreaks / SimSlice). Your angle is
+game better for everyone below. You're on that climb. So are [Jeff](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jeff-adkins) (SimObliterator),
+[Heather](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey) & [Steve](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey) (SimFreaks / SimSlice). Your angle is
 different and just as real: **city-scale open worlds**, **studio identity**, and the offer to help
 drag **Transmogrifier** into the modern browser — the same toolchain thread I've been on since
 Maxis days.
@@ -60,10 +60,10 @@ If nothing here fits right now, say so. The friendship isn't contingent on the s
 
 | | |
 | --- | --- |
-| **Character** | [`CHARACTER.yml`](CHARACTER.yml) · [`README.md`](README.md) |
-| **Projects** | [`projects/freeta.yml`](projects/freeta.yml) · [`projects/swrs-gaming.yml`](projects/swrs-gaming.yml) |
-| **First thread** | [`sources/2013-08-01-facebook-messenger-excerpt.md`](sources/2013-08-01-facebook-messenger-excerpt.md) |
-| **Hooks** | [`ideas.md`](ideas.md) |
-| **Show seed** | [`../../repo-shows/daniel-tupper/`](../../repo-shows/daniel-tupper/) |
+| **Character** | [`CHARACTER.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/daniel-tupper/CHARACTER.yml) · [`README.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/daniel-tupper/README.md) |
+| **Projects** | [`projects/freeta.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/daniel-tupper/projects/freeta.yml) · [`projects/swrs-gaming.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/daniel-tupper/projects/swrs-gaming.yml) |
+| **First thread** | [`sources/2013-08-01-facebook-messenger-excerpt.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/daniel-tupper/sources/2013-08-01-facebook-messenger-excerpt.md) |
+| **Hooks** | [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/daniel-tupper/ideas.md) |
+| **Show seed** | [`../../repo-shows/daniel-tupper/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/daniel-tupper) |
 
 — Don

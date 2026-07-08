@@ -10,7 +10,7 @@ format: live_or_async
 # Repo Show invitation — Antoni Sawicki 🖥️🏙️📟
 
 *Antoni may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Antoni —
 
@@ -82,10 +82,10 @@ Accepted, delayed, too busy, declined, or no reply — all honored.
 
 | | |
 | --- | --- |
-| **Start here** | [`README.md`](README.md) — overview + emoji UI |
-| **Interview beats** | [`ideas.md`](ideas.md) |
-| **Emoji UI spec** | [`sources/ttycity-emoji-graphics-ui.yml`](sources/ttycity-emoji-graphics-ui.yml) |
-| **Email thread** | [`sources/2026-07-08-ttycity-email-thread.yml`](sources/2026-07-08-ttycity-email-thread.yml) |
-| **Show seed** | [`../../repo-shows/antoni-sawicki-ttycity.yml`](../../repo-shows/antoni-sawicki-ttycity.yml) |
+| **Start here** | [`README.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/antoni-sawicki/README.md) — overview + emoji UI |
+| **Interview beats** | [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/antoni-sawicki/ideas.md) |
+| **Emoji UI spec** | [`sources/ttycity-emoji-graphics-ui.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/antoni-sawicki/sources/ttycity-emoji-graphics-ui.yml) |
+| **Email thread** | [`sources/2026-07-08-ttycity-email-thread.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/antoni-sawicki/sources/2026-07-08-ttycity-email-thread.yml) |
+| **Show seed** | [`../../repo-shows/antoni-sawicki-ttycity.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/antoni-sawicki-ttycity.yml) |
 
 — Don

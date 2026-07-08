@@ -10,7 +10,7 @@ interview_planned: true
 # Repo Show invitation — Gary Drescher 👤
 
 *Gary may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Gary —
 
@@ -21,7 +21,7 @@ lot of us think about learning agents — and it feels newly urgent in the LLM e
 
 **https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/gary-drescher**
 
-Start with [**Made-Up Minds**](made-up-minds.md) — the essay on your pun, Will Wright's parallel
+Start with [**Made-Up Minds**](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/gary-drescher/made-up-minds.md) — the essay on your pun, Will Wright's parallel
 project, Leela, and MOOLLM.
 
 ## Why now
@@ -35,7 +35,7 @@ learning forward. At MOOLLM we've operationalized the same ideas as **Anthropic/
 LLM world-knowledge finally **grounds** the symbolic items that stalled the original Lisp implementation.
 
 We've also been digesting a real **2024–2026 thread** between you and the Leela crew —
-[`schemas-vectors-and-llms.md`](schemas-vectors-and-llms.md) — vectors, Schema Networks, the
+[`schemas-vectors-and-llms.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/gary-drescher/schemas-vectors-and-llms.md) — vectors, Schema Networks, the
 200-foot car wash. That's live show material.
 
 ## The Will Wright connection

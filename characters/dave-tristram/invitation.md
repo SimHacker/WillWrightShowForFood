@@ -8,8 +8,8 @@ show_seed: repo-shows/dave-tristram/
 
 # Repo Show invitation — David Tristram
 
-*Dave may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Dave may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Dave —
 
@@ -32,16 +32,16 @@ What I'd love to get into, your pick:
 - **Raster Masters redux** — the repo as the band: MIDI in, generative layer out, multiple operators
   mixing feeds — but forkable.
 - **CA + reaction-diffusion + feedback** — you've said CelLab and Toffoli & **[Norman
-  Margolus](../../characters/norman-margolus/README.md)**'s book shaped your thinking. I built a
+  Margolus](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/norman-margolus/README.md)**'s book shaped your thinking. I built a
   **CAM6 simulator** from that same book and I'd love to **jam your performance rules against my
   grid** live.
 - **Musical Gas** — my granular cellular-automata synth (collisions → grains). Weird sibling to
   what you were doing with live visual music.
 
 If a **cellular-automata looping fest** sounds fun, I'm gathering neighbors for Norman — you,
-**[Stephen Wolfram](../../characters/stephen-wolfram/README.md)**, **[Dave
-Ackley](../../characters/dave-ackley/README.md)**, **[Jim Crutchfield](../../characters/jim-crutchfield/README.md)**
-(feedback / edge of chaos), **[Scott Draves](../../characters/scott-draves/README.md)**, **Will**, and
+**[Stephen Wolfram](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/stephen-wolfram/README.md)**, **[Dave
+Ackley](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/dave-ackley/README.md)**, **[Jim Crutchfield](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jim-crutchfield/README.md)**
+(feedback / edge of chaos), **[Scott Draves](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-draves/README.md)**, **Will**, and
 **Brian Eno** — but **you and me and a generative layer** is already a great show. We can weave it
 async (your clips + mine + CAM6 running) or do it 1-on-1.
 

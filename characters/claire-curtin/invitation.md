@@ -8,8 +8,8 @@ show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml
 
 # Repo Show invitation — Claire Curtin
 
-*Claire Curtin may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Claire Curtin may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Claire —
 

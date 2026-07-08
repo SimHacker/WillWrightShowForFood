@@ -8,8 +8,8 @@ show_seed: repo-shows/scott-draves/
 
 # Repo Show invitation — Scott Draves ("Spot")
 
-*Scott may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Scott may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Hey Spot,
 
@@ -38,7 +38,7 @@ visuals, the self-aware image pipeline I've been building. We've been circling t
 thirty years from different angles. (Wild idea: pull in **Jim Crutchfield** — *Chaos* — to digress,
 recurse, and iterate about **video feedback** and the edge of chaos, and maybe **Norman Margolus**
 of **CAM-6** fame for a proper cellular-automata summit. Their dirs:
-[`jim-crutchfield`](../../characters/jim-crutchfield/README.md) · [`norman-margolus`](../../characters/norman-margolus/README.md).)
+[`jim-crutchfield`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jim-crutchfield/README.md) · [`norman-margolus`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/norman-margolus/README.md).)
 
 **The 2006 reunion thread (optional, but oh man).** Remember a few days after Brian Eno and Will's
 Long Now talk, when I brought Brian over to your apartment and we bounced ideas around until late,
@@ -60,13 +60,13 @@ Toadstool, Palm…) misreads Flame and Electric Sheep, bids **Simoleons (§)** f
 and you start the show with a **huge pile of worthless §** to spend or give away on Twitch.
 Two magnificent pieces per series get a brisk hammer; everything else is quick red-dot delight.
 Gregory will call your flock a DAO. Bunny will try to adopt a sheep. Totally optional — redirect
-the voices, shorten, or skip. Spec: [`simulated-opening.yml`](simulated-opening.yml) ·
-protocol: [`process/simulated-art-opening.yml`](../../process/simulated-art-opening.yml).
+the voices, shorten, or skip. Spec: [`simulated-opening.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-draves/simulated-opening.yml) ·
+protocol: [`process/simulated-art-opening.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/simulated-art-opening.yml).
 
 Got up-to-date versions of your portfolio, papers, and the latest Sheep/Infinidream builds we
 could drop into the repo and talk through? Send them over and I'll wire them up. (I've jotted some
-starting-point threads in [`ideas.md`](../../characters/scott-draves/ideas.md) and the
-[show seed](README.md) — none of it homework, all of it yours to redirect.)
+starting-point threads in [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-draves/ideas.md) and the
+[show seed](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-draves/README.md) — none of it homework, all of it yours to redirect.)
 
 It'd mean a lot to do one with you.
 

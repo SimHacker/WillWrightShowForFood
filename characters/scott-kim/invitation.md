@@ -12,17 +12,17 @@ beloved: true
 
 # Repo Show invitation — Scott Kim 🪞
 
-*Scott Kim may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Scott Kim may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
-**Today I'm sending two matching invitations** — yours and **Amy Jo's** ([Amy Jo's invitation](../amy-jo-kim/invitation.md)) — for one **pair show**. Each letter is written for the person receiving it; both describe the same show from your two angles, and each of you can read the other's.
+**Today I'm sending two matching invitations** — yours and **Amy Jo's** ([Amy Jo's invitation](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/amy-jo-kim/invitation.md)) — for one **pair show**. Each letter is written for the person receiving it; both describe the same show from your two angles, and each of you can read the other's.
 
 Scott —
 
 I'd love to have you on a **Repo Show** — a friendly, low-friction conversation whose stage is a public
 GitHub repo people can clone, run, and build on. You and **Amy Jo** are both invited; I've written her her own
-letter alongside this one ([Amy Jo's invitation](../amy-jo-kim/invitation.md)), and since so much of
-Shufflebrain is shared, the **default is a pair show** — [`amy-jo-and-scott-kim`](../../repo-shows/amy-jo-and-scott-kim/README.md).
+letter alongside this one ([Amy Jo's invitation](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/amy-jo-kim/invitation.md)), and since so much of
+Shufflebrain is shared, the **default is a pair show** — [`amy-jo-and-scott-kim`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/amy-jo-and-scott-kim/README.md).
 No synchronized sitting required — record whenever suits you; we weave it together in post.
 
 **What I'd love to draw out from you:**
@@ -36,7 +36,7 @@ No synchronized sitting required — record whenever suits you; we weave it toge
 - **The craft of the designed "aha"** — Heaven & Earth, puzzle columns, difficulty as a shaped curve (a lovely
   neighbor to Will's possibility space).
 
-**A solo option, if you want it:** a second focused episode — [`scott-kim`](../../repo-shows/scott-kim/README.md) —
+**A solo option, if you want it:** a second focused episode — [`scott-kim`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/scott-kim/README.md) —
 for a Viewpoint/inversions deep-dive, so we don't cram it into the pair show. Only if it appeals.
 
 ---
@@ -61,8 +61,8 @@ angles. **Read either or both** before you reply — including how **Amy Jo** de
 
 | Guest | Invitation | Their angle on this show |
 | --- | --- | --- |
-| **Scott Kim** 🪞 | [invitation.md](invitation.md) *(this letter)* · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-kim/invitation.md) | Ambigrams/inversions, Viewpoint, designed "aha" |
-| **Amy Jo Kim** 🎮 | [invitation.md](../amy-jo-kim/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/amy-jo-kim/invitation.md) | Game Thinking, community lifecycle, community without extraction |
+| **Scott Kim** 🪞 | [invitation.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-kim/invitation.md) *(this letter)* · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-kim/invitation.md) | Ambigrams/inversions, Viewpoint, designed "aha" |
+| **Amy Jo Kim** 🎮 | [invitation.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/amy-jo-kim/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/amy-jo-kim/invitation.md) | Game Thinking, community lifecycle, community without extraction |
 
 ---
 
@@ -73,21 +73,21 @@ angles. **Read either or both** before you reply — including how **Amy Jo** de
 | | |
 | --- | --- |
 | **On this show** | Ambigram designed live; Viewpoint (pixels are the state); puzzle-design craft |
-| **Invitation** (his view) | [`invitation.md`](invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-kim/invitation.md) |
-| **Guest README** | [`README.md`](README.md) |
-| **Conversation hooks** | [`ideas.md`](ideas.md) |
-| **Portrait / sources** | [`CHARACTER.yml`](CHARACTER.yml) · [`GLANCE.md`](GLANCE.md) · [`CARD.yml`](CARD.yml) |
-| **Solo show seed** (optional later) | [`repo-shows/scott-kim/`](../../repo-shows/scott-kim/README.md) · [`SHOW.yml`](../../repo-shows/scott-kim/SHOW.yml) |
+| **Invitation** (his view) | [`invitation.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-kim/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-kim/invitation.md) |
+| **Guest README** | [`README.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-kim/README.md) |
+| **Conversation hooks** | [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-kim/ideas.md) |
+| **Portrait / sources** | [`CHARACTER.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-kim/CHARACTER.yml) · [`GLANCE.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-kim/GLANCE.md) · [`CARD.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-kim/CARD.yml) |
+| **Solo show seed** (optional later) | [`repo-shows/scott-kim/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/scott-kim/README.md) · [`SHOW.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/scott-kim/SHOW.yml) |
 
 ### Amy Jo Kim 🎮
 
 | | |
 | --- | --- |
 | **On this show** | Game Thinking; player/member journey; community without extraction; Soul City/Exchange revival |
-| **Invitation** (her view) | [`../amy-jo-kim/invitation.md`](../amy-jo-kim/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/amy-jo-kim/invitation.md) |
-| **Guest README** | [`../amy-jo-kim/README.md`](../amy-jo-kim/README.md) |
-| **Conversation hooks** | [`../amy-jo-kim/ideas.md`](../amy-jo-kim/ideas.md) |
-| **Portrait / sources** | [`../amy-jo-kim/CHARACTER.yml`](../amy-jo-kim/CHARACTER.yml) · [`../amy-jo-kim/GLANCE.md`](../amy-jo-kim/GLANCE.md) · [`../amy-jo-kim/CARD.yml`](../amy-jo-kim/CARD.yml) |
+| **Invitation** (her view) | [`../amy-jo-kim/invitation.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/amy-jo-kim/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/amy-jo-kim/invitation.md) |
+| **Guest README** | [`../amy-jo-kim/README.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/amy-jo-kim/README.md) |
+| **Conversation hooks** | [`../amy-jo-kim/ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/amy-jo-kim/ideas.md) |
+| **Portrait / sources** | [`../amy-jo-kim/CHARACTER.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/amy-jo-kim/CHARACTER.yml) · [`../amy-jo-kim/GLANCE.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/amy-jo-kim/GLANCE.md) · [`../amy-jo-kim/CARD.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/amy-jo-kim/CARD.yml) |
 
 ---
 
@@ -95,7 +95,7 @@ angles. **Read either or both** before you reply — including how **Amy Jo** de
 
 | If you're curious about… | Link |
 | --- | --- |
-| **Show seed** (full outline + roles) | [`repo-shows/amy-jo-and-scott-kim/`](../../repo-shows/amy-jo-and-scott-kim/README.md) · [`SHOW.yml`](../../repo-shows/amy-jo-and-scott-kim/SHOW.yml) |
+| **Show seed** (full outline + roles) | [`repo-shows/amy-jo-and-scott-kim/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/amy-jo-and-scott-kim/README.md) · [`SHOW.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/amy-jo-and-scott-kim/SHOW.yml) |
 | **The whole Repo Show project** | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |
 
 Browse without a GitHub account — start at the [README](https://github.com/SimHacker/WillWrightShowForFood).

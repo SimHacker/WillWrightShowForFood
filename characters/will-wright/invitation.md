@@ -16,8 +16,8 @@ What's here is the part we're both happy for the world to read — so you can se
 decide you want in too.*
 
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-· [Guest prototype](guest-prototype.yml) (how we respect your time)
-· Short summary: [`invitation-summary.md`](invitation-summary.md)
+· [Guest prototype](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/will-wright/guest-prototype.yml) (how we respect your time)
+· Short summary: [`invitation-summary.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/will-wright/invitation-summary.md)
 
 ---
 
@@ -39,7 +39,7 @@ Like a blog is a *web log*, a **Repo Show** is a show whose whole stage is a **p
 can enter, fork, and improve.** It's the opposite of AI slop: instead of letting a model regurgitate a
 flattened echo of people's work, I go straight to the people who **actually invented this stuff**, we
 talk in public, and the AI does the part it's good at — turning ideas into **working code, live**.
-**Show, don't tell.** (The medium, in full: [`VISION.md`](../../process/VISION.md).)
+**Show, don't tell.** (The medium, in full: [`VISION.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/VISION.md).)
 
 **You're the first guest — and there's no assigned topic. You're the topic.** We start from that 1996
 video and follow wherever you want to go.
@@ -59,14 +59,14 @@ video and follow wherever you want to go.
   accretes worlds without losing itself — **serial endosymbiosis** (Margulis — who, delightfully,
   co-wrote the Gaia hypothesis with your SimEarth advisor Lovelock): each game a character passes
   through is kept as a nested organelle with its own DNA, all running in parallel, the soul-file the
-  source of truth. This is the [**RepoShow Soul**](../../process/VISION.md) idea: *you repossess your
-  character from the walled gardens.* ([crown-jewel theme](../../repo-shows/ideas/themes/data-portability-crown-jewel.yml).)
+  source of truth. This is the [**RepoShow Soul**](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/VISION.md) idea: *you repossess your
+  character from the walled gardens.* ([crown-jewel theme](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/ideas/themes/data-portability-crown-jewel.yml).)
 - **Reincarnate Slats.** **Slats** — the robot brain I programmed at your **Stupid Fun Club**, who
   showed up in the One Minute Movies (*Servitude*, *Empathy*). I still have the code (and a laptop that
   might run it — emulation if not). We make **bringing Slats back** a live quest: read the old code
   together, revive him, have him **call into the chat**, interview him, reprogram him, interview him
   again. **RoboResurrection** — constructionism as theater.
-  ([slats-reincarnation.yml](../../repo-shows/will-wright-premiere/slats-reincarnation.yml).)
+  ([slats-reincarnation.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/slats-reincarnation.yml).)
 
 ## How it works — and the small, real ask
 

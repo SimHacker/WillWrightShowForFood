@@ -11,7 +11,7 @@ format: remote_or_in_person
 # Repo Show invitation — Eric Bowman
 
 *Send-ready draft — not yet sent. Eric Bowman may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Eric —
 
@@ -31,5 +31,5 @@ No pressure, no homework. Accepted, delayed, declined, or no reply — all honor
 
 | | |
 |---|---|
-| **Reunion seed** | [`building-the-sims`](../../repo-shows/REPO-SHOWS.yml) |
+| **Reunion seed** | [`building-the-sims`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/REPO-SHOWS.yml) |
 | **Your guest page** | [`characters/eric-bowman/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/eric-bowman) |

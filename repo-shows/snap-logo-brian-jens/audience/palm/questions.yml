@@ -1,0 +1,368 @@
+# Palm — questions for Brian Harvey & Jens Mönig (Snap! / Logo pair show)
+# Schema: ../../../../schemas/question-tree.yml
+# Prior reading: worm field notebook (Theo turtle); digest: snap-macros-metaprogramming.yml
+
+ticket:
+  show: snap-logo-brian-jens
+  github: palm
+  attend_live: true
+  merged: true
+  submitted: 2026-07-08
+  seeded: true
+  running_gag: true
+  authored_by: curator
+
+character_ref: ../../../../characters/palm/CHARACTER.yml
+
+relationship: |
+  Palm filed Theo the Logo Turtle in his field notebook after Snap!Con — worms transform, birds carry,
+  turtles draw and sometimes even embroider. He loves the gray ring as quote: evaluation must not pass 
+  through until you choose.
+  Warm, curious, not a gotcha — wants Brian and Jens to settle what Snap! actually ships vs what
+  the Reference Manual promises for macros.
+
+prior_reading:
+  - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md
+  - ../../../../characters/brian-harvey/sources/snap-macros-metaprogramming.yml
+  - ../../../../characters/brian-harvey/sources/snapcon-2025-karlstrom-address.yml
+
+questions:
+  - id: 1
+    to: [brian-harvey, jens-monig]
+    theme: ring-as-quote
+    status: open
+    priority: 1
+    question: |
+      Brian — you said the gray ring around a procedure is lambda, and I keep thinking it's also
+      **quote**: the gap in the ring is where evaluation stops until something explicitly calls through.
+      Did you design the ring to be *visible* quote for kids who will never type an apostrophe? And
+      Jens — when the ring captures an environment for a macro expansion, is that closure the same
+      object as a lambda closure, or a different beast under the hood?
+    context_lasers:
+      file:
+        - ../../../../characters/brian-harvey/sources/snap-macros-metaprogramming.yml
+        - https://docs.snap.berkeley.edu/procedures-as-data/
+    answer: null
+    children:
+      - id: 1a
+        to: brian-harvey
+        theme: invisible-rings
+        status: open
+        question: |
+          Follow-up: Scratch `if` and `forever` already had unevaluated C-slots — invisible rings.
+          When you added `Any (unevaluated)` for special forms, were you smuggling macro semantics
+          in through the back door so factorial wouldn't infinite-loop?
+        answer: null
+
+  - id: 2
+    to: [brian-harvey, jens-monig]
+    theme: sicp-in-blocks-honest-scorecard
+    status: open
+    priority: 2
+    question: |
+      Don posted on Hacker News that everything you can do in Scheme — recursion, HOFs, closures,
+      continuations, macros, metaprogramming — lives in Snap! through BJC. I want the honest
+      scorecard: what's **fully** there for a kid doing SICP-shaped thinking, what's **partial**
+      (macros?), and what would you tell a Racket user *not* to expect yet?
+    context_lasers:
+      file:
+        - ../../../../characters/brian-harvey/sources/snap-macros-metaprogramming.yml
+        - ../../../../characters/brian-harvey/sources/simply-scheme.yml
+    answer: null
+    children:
+      - id: 2a
+        to: brian-harvey
+        theme: hygiene
+        status: open
+        question: |
+          The Manual says hygienic macros are the main Scheme feature Snap! doesn't implement yet.
+          You argued on the forum that FEXPR-style might be better for learners anyway — teach
+          name-capture, skip the wizardry. Still your position? Would BJC ever need hygiene?
+        answer: null
+
+  - id: 3
+    to: brian-harvey
+    theme: dynamic-binding-controversy
+    status: open
+    priority: 2
+    question: |
+      Brian — I hear your most **controversial** opinion is that **dynamic binding** is better for *kids*,
+      because you taught Logo for decades and kids grokked caller-visible variables more easily than
+      lexical puzzle boxes. You're **for** it on pedagogy grounds, not because you hate abstraction.
+      Can you lay out the **arguments for** (Logo MAP and ?, debugging at the REPL, one-off helpers)
+      and the **arguments against** (name capture, interchangeable blocks, teams of 500) — and which
+      side you still hold after Snap! shipped **lexical** scope anyway?
+    context_lasers:
+      file:
+        - ../../../../characters/brian-harvey/sources/snap-macros-metaprogramming.yml
+        - ../../../../characters/brian-harvey/sources/computer-science-logo-style.yml
+      url:
+        - https://forum.snap.berkeley.edu/t/hygienic-macros/3258
+    answer: null
+    children:
+      - id: 3a
+        to: [brian-harvey, jens-monig]
+        theme: snap-scope-reality
+        status: open
+        question: |
+          So what does Snap! **actually** have — lexical only? Globals and script variables and
+          sprite-local as special cases? Special forms and invisible rings? Something like fluid-let?
+          Or one underlying atomic primitive (Don frames `self` as RISC for OOP) — rings
+          plus environment, `of` for context switch, debugging hooks — vs a Rube Goldberg of scope rules?
+          What are the minimal visual metaprogramming primitives and visual representations that you
+          can build all the others out of?
+        answer: null
+      - id: 3b
+        to: jens-monig
+        theme: why-not-dynamic
+        status: open
+        question: |
+          Jens — you told Brian dynamic scope is horror for interchangeable blocks and costs interpreter
+          speed. What did you ship instead when kids need caller variables — gray rings, hyperblocks,
+          extra inputs, globals? And did any of Brian's hybrid-scope or DYNAMIC VARIABLES ideas leave
+          fingerprints in the debugger?
+        answer: null
+      - id: 3c
+        to: brian-harvey
+        theme: macros-as-dynamic-analogue
+        status: open
+        question: |
+          You used dynamic scope as a metaphor for FEXPR macros and lexical scope for hygienic macros.
+          If Snap! never gets dynamic binding, do gray rings + caller-context macros **subsume** what
+          you wanted from Logo's dynamic scope — or is something still missing that only dynamic lookup
+          would fix?
+        answer: null
+
+  - id: 4
+    to: jens-monig
+    theme: ast-metaprogramming
+    status: open
+    priority: 3
+    question: |
+      Snap! 8 gave us `split by blocks`, `join`, and `define` — blocks as syntax trees. In Lisp the
+      metacircular evaluator falls out of list structure. In Morphic.js, did you expose what was
+      already internal, or invent a parallel AST? And can Palm **see** inside a ringed script on stage
+      without breaking the insulation metaphor?
+    context_lasers:
+      file:
+        - ../../../../characters/jens-monig/sources/morphic-js.yml
+        - ../../../../characters/brian-harvey/sources/snap-macros-metaprogramming.yml
+        - https://docs.snap.berkeley.edu/metaprogramming/
+    answer: null
+    children: []
+
+  - id: 5
+    to: [brian-harvey, jens-monig]
+    theme: macro-caller-context
+    status: open
+    priority: 4
+    question: |
+      The macro that declares script variables in the **caller** — not inside the helper — is the
+      example that finally made macros click for me. The Manual admits macros aren't fully wired:
+      you pass the calling script explicitly, there's no checkbox yet, users in 2023 couldn't tell
+      macro from `call` of a ring. What's the status now — demo-ready, or still Snap!Con homework?
+    context_lasers:
+      file:
+        - ../../../../characters/brian-harvey/sources/snap-macros-metaprogramming.yml
+      url:
+        - https://forum.snap.berkeley.edu/t/do-macros-actually-work-in-snap/14431
+    answer: null
+    children:
+      - id: 5a
+        to: jens-monig
+        theme: command-macro-notation
+        status: open
+        question: |
+          Command macros stack like commands but report scripts — syntactic mismatch. Brian said
+          maybe don't try too hard in userland until the make-a-block dialog gets a macro checkbox.
+          Is that checkbox designed, or still arguing on the forum?
+        answer: null
+
+  - id: 6
+    to: brian-harvey
+    theme: logo-to-scheme-lineage
+    status: open
+    priority: 5
+    question: |
+      You started as Logo disguised as Scratch; lambda made it Scheme disguised as Scratch. Theo the
+      Turtle in my notebook draws lines; the ring holds a script still. Is metaprogramming the moment
+      the turtle learns to read its own pen trails as data — or is that over-poetic?
+    context_lasers:
+      file:
+        - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md
+        - ../../../../characters/brian-harvey/sources/computer-science-logo-style.yml
+    answer: null
+    children: []
+
+  - id: 7
+    to: [brian-harvey, jens-monig]
+    theme: micropolis-metaprogramming
+    status: open
+    priority: 7
+    question: |
+      Don's 2018 thread — drive Micropolis and CAM6 from Snap! blocks. If we finish it on air, is
+      the interesting beat **simulation API** or **kids rewriting city rules** via split/join on
+      their own custom blocks? Which would you demo first?
+    context_lasers:
+      file:
+        - ../../../../characters/brian-harvey/sources/micropolis-snap-2018.yml
+        - ../../../../characters/jens-monig/sources/micropolis-snap-2018.yml
+    answer: null
+    children: []
+
+  - id: 8
+    to: jens-monig
+    theme: sap-research-funding
+    status: open
+    priority: 6
+    question: |
+      Jens — I want the **warm** beat, not an audit. SAP supported Alan Kay's Communications Design
+      Group, supported *you* as a researcher, and still collaborates on Snap! with Berkeley (Walldorf,
+      Barcelona, California — Bernat, Lauren, Michael Ball, Dan Garcia, Brian). How wonderful and
+      how *strange* is it that a business-intelligence giant funds microworlds for kids? What did
+      "people, not projects" research culture actually buy Snap! — and what survived after CDG wound
+      down? Would Snap! exist without SAP's patience?
+    context_lasers:
+      file:
+        - ../../../../characters/jens-monig/sources/sap-research-and-snap.yml
+        - ../../../../characters/jens-monig/sources/gp-alan-kay-lineage.yml
+      url:
+        - https://news.sap.com/2020/11/snap-jens-moenig-ntls-education-technology-leadership-award/
+        - https://theartofresearch.org/a-history/
+    answer: null
+    children:
+      - id: 8a
+        to: jens-monig
+        theme: kay-cdg-to-snap
+        status: open
+        question: |
+          You worked under Kay on GP before Snap! — then SAP hosted Kay's CDG with Bret Victor and
+          Vi Hart. Is there a through-line from that lab to Morphic.js and Snap!, or did enterprise
+          research and BJC pedagogy stay in parallel lanes that only you connected?
+        answer: null
+      - id: 8b
+        to: [jens-monig, brian-harvey]
+        theme: openSAP-young-thinkers
+        status: open
+        question: |
+          SAP News says Snap! powers openSAP, Young Thinkers, Meet and Code — while BJC reaches kids
+          through Berkeley. Does that feel like one mission with two doors, or two different Snap!
+          audiences you each optimize for?
+        answer: null
+
+  - id: 10
+    to: jens-monig
+    theme: morphic-heritage-mvc
+    status: open
+    priority: 4
+    question: |
+      Jens — walk me through the **heritage of Morphic**: Self's direct-manipulation UI, Dan Ingalls'
+      Lively Kernel in the browser, what you're building in Morphic.js today, and how Snap! actually
+      uses it under the blocks. Smalltalk's antique **Model–View–Controller** got cargo-culted into
+      everything — interactive GUIs, web server frameworks, client-side SPA stacks — until the words
+      barely mean anything. Morphic was the live-object answer: morphs all the way down, edit the IDE
+      while it runs. Why did MVC win the textbook and job-interview lottery while Morphic never got
+      the same love — even from people who claim to admire Smalltalk?
+    context_lasers:
+      file:
+        - ../../../../characters/jens-monig/sources/morphic-js.yml
+        - ../../../../characters/jens-monig/sources/gp-alan-kay-lineage.yml
+        - ../../../../characters/dan-ingalls/README.md
+        - ../../../../characters/alan-kay/media/quora-recaps/oop-messaging-and-what-comes-next.md
+      url:
+        - https://github.com/jmoenig/Snap/blob/master/morphic.js
+        - https://lively-kernel.org/
+        - https://lively-next.org/
+        - https://github.com/SimHacker/moollm/blob/main/designs/SELF-ISH-INFLUENCES.md
+    answer: null
+    children:
+      - id: 10a
+        to: jens-monig
+        theme: scratch-morph-to-morphicjs
+        status: open
+        question: |
+          Scratch already had morphic-style sprites on a stage. When you forked toward BYOB/Snap! and
+          rewrote the substrate as Morphic.js, what did you **keep** from Scratch's implementation and
+          what did you have to reinvent because the browser isn't Squeak?
+        answer: null
+      - id: 10b
+        to: jens-monig
+        theme: lively-kernel-lineage
+        status: open
+        question: |
+          Did Ingalls' Lively Kernel directly inspire Morphic.js — same object graph in a web page,
+          saveable live worlds — or were you solving a parallel problem from the Scratch/GP/SAP side
+          without looking over Dan's shoulder?
+        answer: null
+
+  - id: 11
+    to: [brian-harvey, jens-monig]
+    theme: community-memorial-lessons
+    status: open
+    priority: 8
+    question: |
+      Brian and Jens — we've been digging up your old **design arguments** on purpose: dynamic binding,
+      macros, MVC vs Morphic. The interesting part isn't who won — it's that you kept building together.
+      So I want the **people** beat: who from your Logo / blocks / BJC / Snap!Con world do you **miss**,
+      want to memorialize, or still hear teaching when you make a design choice? Not a eulogy contest —
+      name someone who isn't in the room enough (or isn't anymore) and one lesson we should still learn
+      from them. What would you want this repo to remember?
+    context_lasers:
+      file:
+        - ../../../../characters/brian-harvey/sources/snapcon-2025-karlstrom-address.yml
+        - ../../../../characters/jens-monig/sources/snapcon-2025-karlstrom-intro.yml
+        - ../../../../characters/cynthia-solomon/CHARACTER.yml
+        - ../../../../process/old-band-back-together.yml
+        - ../../../../characters/brian-harvey/sources/computer-science-logo-style.yml
+        - ../../../../characters/brian-harvey/sources/simply-scheme.yml
+        - ../../../../characters/brian-harvey/sources/beauty-and-joy-of-computing.yml
+    answer: null
+    children:
+      - id: 11a
+        to: brian-harvey
+        theme: brian-teachers-and-elders
+        status: open
+        question: |
+          Brian — CCUS, "every kid needs a *me* teacher," Papert's turtle, Hal Abelson's foreword,
+          Dan Garcia carrying BJC activism — who shaped your pedagogy and what do you still quote
+          when Jens ships something you wouldn't have chosen?
+        answer: null
+      - id: 11b
+        to: jens-monig
+        theme: jens-scene-and-colleagues
+        status: open
+        question: |
+          Jens — Scratch team, GP under Kay, Snap!Con Barcelona (TurtleStitch, Cynthia Solomon,
+          the old band), SAP colleagues who funded patience — who from your scene do you wish more
+          newcomers knew by name, and what did they teach you about **non-competitive** community?
+        answer: null
+
+  - id: 9
+    to: brian-harvey
+    theme: ring-gap-silly
+    status: open
+    priority: 9
+    question: |
+      Silly closer: if I ringify a `say` block and drop it in a `list`, does the speech balloon wait
+      in the list like Schrödinger's greeting until `run` opens the ring — and can Theo the Turtle
+      wear the ring as a bracelet? 
+      Also, are there any cool Snap! designs, swag, and jewelry I can embroider and 3D print?
+    answer: null
+    children: []
+
+comments_for_guest: |
+  Palm is MOOLLM fiction — warm, philosophical, read the worm field notebook first. The show's spine
+  is **harmonious disagreement**: rehash controversial design fights (dynamic binding, macros, MVC)
+  not to pick a winner but to show how successfully harmonious designers resolved differences and kept
+  shipping together. Lead controversy: Brian **for** dynamic binding vs Jens **for** lexical blocks —
+  ask for/against, then what Snap! actually ships. Arc: ring=quote → dynamic binding → SICP scorecard
+  → Morphic heritage (id 10) → SAP gratitude (id 8) → community memorial (id 11) → silly. Brian owns
+  pedagogy + elders; Jens owns interpreter + Morphic + funding + scene.
+
+meta:
+  moollm_stack:
+    - CHARACTER.yml
+    - CARD.yml
+  question_tree_schema: ../../../../schemas/question-tree.yml
+  source_digest: ../../../../characters/brian-harvey/sources/snap-macros-metaprogramming.yml
+  rendered_edition: questions.md

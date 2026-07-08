@@ -25,7 +25,7 @@ if you're not in Amsterdam when we record; in-person on camera if we overlap. **
   persistent changes to a running page; the JS bridge; Catalyst and LLM-assisted method translation.
   Bring your laptop — let's livecode something on air.
 - **MicropolisCore + MOOLLM** — Smalltalk-grade liveness applied to a city simulator and AI tutors.
-- **Keep** — your Smalltalk whiteroom port of Hugh Pyle's graph memory for agents. See [`keep.md`](keep.md).
+- **Keep** — your Smalltalk whiteroom port of Hugh Pyle's graph memory for agents. See [`keep.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/craig-latta/keep.md).
 - **Cursor vs live systems** — you and I bitching together about IDE chrome while the real object
   stays alive in the browser. Two people who care about liveness, one screencast.
 
@@ -41,9 +41,9 @@ linked segments with them if they're willing — or we start with just us and le
 
 Memorial mode in this repo: we *represent and discuss* — we never speak as her. See
 [`characters/vanessa-freudenberg/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/vanessa-freudenberg)
-and [`repo-shows/remembering-vanessa-freudenberg.yml`](../../repo-shows/remembering-vanessa-freudenberg.yml).
+and [`repo-shows/remembering-vanessa-freudenberg.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/remembering-vanessa-freudenberg.yml).
 
-**Materials:** [`repo-shows/craig-latta/`](../../repo-shows/craig-latta/) · [Keep notes](keep.md) ·
+**Materials:** [`repo-shows/craig-latta/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/craig-latta) · [Keep notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/craig-latta/keep.md) ·
 [live_objects trail](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/trails/live-objects.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).

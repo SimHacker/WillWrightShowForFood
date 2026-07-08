@@ -11,12 +11,12 @@ sent_via: facebook
 # Repo Show invitation — Coco Conn
 
 *Sent 2026-07-06 via Facebook — awaiting reply. Coco may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Coco —
 
 You are **royalty and a goddess** in my book — and not just for **SIGKids**, though that room changed
-my life. I ran into **[David Levitt](../../characters/david-levitt/)** there with his **Bounce** animated
+my life. I ran into **[David Levitt](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-levitt)** there with his **Bounce** animated
 band and the next twenty years of friendship started on the spot. But I've also been telling your **HOMER
 & Assoc.** story on Hacker News for years — with your permission — because it's one of the great
 untold **Forth** legends: you **hired Charles Moore** to write the software for a **real-time visual
@@ -43,13 +43,13 @@ What I'd love to hear, your pick:
 - **Forth thread** — your shop with **Charles** beside my **Mitch Bradley** / **Open Firmware** summer
   at Sun and the **CAM6** Forth lineage. Not academic — **P-Funk meets boot ROM**.
 - **Hackers Conference tapes** — watch **highlights on air** from your video archive: speakers, demos,
-  minds blown. First names on Don's list: **Rudy Rucker**, **[Scott Kim](../../characters/scott-kim/)**
+  minds blown. First names on Don's list: **Rudy Rucker**, **[Scott Kim](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-kim)**
   (Hackers Conference logo, *Viewpoint*, ambigrams) — plus a shelf of **dream guests** already in
   this repo. You narrate; we timestamp forks. See
-  [`hackers-conference-tapes.md`](../../characters/coco-conn/hackers-conference-tapes.md).
+  [`hackers-conference-tapes.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/coco-conn/hackers-conference-tapes.md).
 
-Pair naturally with **[David Levitt](../../characters/david-levitt/)** (SIGKids serendipity) or solo —
-your call. Warm overlap with **[Dave Tristram](../../characters/dave-tristram/)**'s **live generative
+Pair naturally with **[David Levitt](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-levitt)** (SIGKids serendipity) or solo —
+your call. Warm overlap with **[Dave Tristram](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/dave-tristram)**'s **live generative
 performance** show too (different decade, same **play the console** religion).
 
 **Format:** live (thinking Twitch), announced ahead, audience in the repo. Warm and curious, not

@@ -8,8 +8,8 @@ show_seed: repo-shows/dave-ackley/
 
 # Repo Show invitation — Dave Ackley
 
-*Dave may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Dave may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Dave —
 
@@ -31,9 +31,9 @@ What I'd love to get into, your pick:
   what you kept, what you threw away, and why.
 
 There's a beautiful **cellular-automata** throughline here. I built a **CAM6 simulator** from Toffoli
-& **[Norman Margolus](../norman-margolus/README.md)**'s book, and Norman's already up for a
+& **[Norman Margolus](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/norman-margolus/README.md)**'s book, and Norman's already up for a
 **CA looping fest**. Your Movable Feast Machine is CA grown into an *architecture* — I'd love to put
-you, Norman, and **[Stephen Wolfram](../stephen-wolfram/README.md)** in one room and talk locality,
+you, Norman, and **[Stephen Wolfram](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/stephen-wolfram/README.md)** in one room and talk locality,
 reversibility, and what happens when the hardware is as local as the rule.
 
 **Format:** live (thinking Twitch), announced ahead, audience follows along in the repo and can

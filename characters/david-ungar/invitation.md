@@ -32,7 +32,7 @@ the **self-interest!** pun stack, and what we'd build if we sat down with a blan
 
 - **The Power of Simplicity** — your thesis wasn't "prototypes" but **simplicity**; what JavaScript
   kept vs what it threw away (multiple `parent*` slots, one mental model). Walk the
-  [`slots-all-the-way-down`](../david-rosenthal/slots-all-the-way-down.md) Rosetta table with me.
+  [`slots-all-the-way-down`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/slots-all-the-way-down.md) Rosetta table with me.
 - **Conscientious Objectors** — the Kaleida meetup where the **ScriptX object-system design team**
   and the **Self team** bounced ideas off each other. What stuck? What would you teach a room full
   of LLM authors today?
@@ -53,13 +53,13 @@ required. Warm room, not gotcha-podcast.
 
 | If you're curious about… | Link |
 | --- | --- |
-| **Show** (segment ideas) | [`repo-shows/david-ungar/`](../../repo-shows/david-ungar/README.md) |
-| **North star doc** | [`reflecting-on-self.md`](reflecting-on-self.md) |
-| **Slots all the way down** | [`../david-rosenthal/slots-all-the-way-down.md`](../david-rosenthal/slots-all-the-way-down.md) |
+| **Show** (segment ideas) | [`repo-shows/david-ungar/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/david-ungar/README.md) |
+| **North star doc** | [`reflecting-on-self.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-ungar/reflecting-on-self.md) |
+| **Slots all the way down** | [`../david-rosenthal/slots-all-the-way-down.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/slots-all-the-way-down.md) |
 | **Your guest page** | [`characters/david-ungar/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/david-ungar) |
-| **Conversation hooks** | [`ideas.md`](ideas.md) |
-| **Don's `# import self from self` thread** | [`../don-hopkins/import-self-from-self.md`](../don-hopkins/import-self-from-self.md) |
-| **Kaleida / Conscientious Objectors** | [`../don-hopkins/kaleida-scriptx-dreamscape-multimedia-lisp-machine.md`](../don-hopkins/kaleida-scriptx-dreamscape-multimedia-lisp-machine.md) |
+| **Conversation hooks** | [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-ungar/ideas.md) |
+| **Don's `# import self from self` thread** | [`../don-hopkins/import-self-from-self.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/import-self-from-self.md) |
+| **Kaleida / Conscientious Objectors** | [`../don-hopkins/kaleida-scriptx-dreamscape-multimedia-lisp-machine.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/kaleida-scriptx-dreamscape-multimedia-lisp-machine.md) |
 | **MOOLLM** (the repo itself) | [github.com/SimHacker/moollm](https://github.com/SimHacker/moollm) |
 | **The whole Repo Show project** | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |
 

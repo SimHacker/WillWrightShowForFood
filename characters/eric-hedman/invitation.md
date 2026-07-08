@@ -11,7 +11,7 @@ format: remote_or_in_person
 # Repo Show invitation — Eric Hedman
 
 *Send-ready draft — not yet sent. Eric Hedman may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Eric (Irk) —
 
@@ -36,6 +36,6 @@ No pressure, no homework. Accepted, delayed, declined, or no reply — all honor
 
 | | |
 |---|---|
-| **Show seed** | [`repo-shows/eric-hedman/`](../../repo-shows/eric-hedman/README.md) |
+| **Show seed** | [`repo-shows/eric-hedman/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/eric-hedman/README.md) |
 | **Your guest page** | [`characters/eric-hedman/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/eric-hedman) |
 | **Your channel** | [@irkinteraction](https://www.youtube.com/@irkinteraction) |

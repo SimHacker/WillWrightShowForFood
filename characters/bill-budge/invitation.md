@@ -7,7 +7,7 @@ PR, correct something we got wrong. Email Don and he'll credit your words in.*
 
 ## Why we're writing
 
-We built a thing called the **[Faceball Construction Set](../../apps/performance-space/faceball-construction-set.yml)**
+We built a thing called the **[Faceball Construction Set](https://github.com/SimHacker/WillWrightShowForFood/blob/main/apps/performance-space/faceball-construction-set.yml)**
 — snap parts onto a face, wire up how they behave, play the physics. The name is not subtle: it's
 **Pinball Construction Set for faces**. We should say out loud who we're standing on the shoulders
 of. That's you.
@@ -31,11 +31,11 @@ a good north star for this whole repo.
 - If you *are* up for it: a **memory-palace tour** works great as short async selfie clips — one
   minute per stop, filmed beside the thing you're talking about (an old table, the glove photo, a
   line of 6502). No three-hour obligation. See the Faceball
-  [talking-selfies](../../apps/performance-space/faceball-construction-set.yml) mode.
+  [talking-selfies](https://github.com/SimHacker/WillWrightShowForFood/blob/main/apps/performance-space/faceball-construction-set.yml) mode.
 
 ## Things we'd love to hear about (only if you want)
 
-See **[ideas.md](ideas.md)** for the full list — construction sets as a genre, PCS as an
+See **[ideas.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/bill-budge/ideas.md)** for the full list — construction sets as a genre, PCS as an
 "artifactory," the mini-paint / mini-sound / save-load engineering inside PCS, the EA Software
 Artists era, and what you're building now.
 

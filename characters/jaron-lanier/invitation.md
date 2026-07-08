@@ -8,8 +8,8 @@ show_seed: repo-shows/rebounce/
 
 # Repo Show invitation — Jaron Lanier
 
-*Jaron may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Jaron may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Jaron —
 
@@ -23,12 +23,12 @@ one running patch you could edit while it ran. That work stuck with me.
 I'd like to put some of that in public, on a **Repo Show** — a live session whose stage is a public
 GitHub repo people can clone, run, and build on.
 
-The first episode that wants you is **[Rebounce](../../repo-shows/rebounce/README.md).** I plan to
+The first episode that wants you is **[Rebounce](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/rebounce/README.md).** I plan to
 **check in the old Bounce source** and invite people to **rewrite it together — by hand and with AI,
-competing and cooperating** — in a modern web stack. **[David Levitt](../david-levitt/README.md)** and
+competing and cooperating** — in a modern web stack. **[David Levitt](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-levitt/README.md)** and
 I would seed the design discussion; you'd be welcome for the **origin story** — where Body Electric came
 from, and what it was for. (I wrote down the stack as I remember it, for you to correct:
-[Body Electric / Bounce VR stack](../don-hopkins/body-electric-bounce-vr-stack.md).)
+[Body Electric / Bounce VR stack](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/body-electric-bounce-vr-stack.md).)
 
 **Why a repo, not just a video.** The artifact and the stage are the same thing — clone it, run it,
 fork it. Contributions land as **signed commits**; authorship travels with the work. That matches a lot

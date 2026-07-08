@@ -8,8 +8,8 @@ show_seed: repo-shows/patrick-hulin/
 
 # Repo Show invitation — Patrick Hulin
 
-*Patrick Hulin may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Patrick Hulin may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Patrick —
 
@@ -26,10 +26,10 @@ made it multiplayer. I'd love to have you on.
 - **Where it meets Yoot Tower** — you mentioned you'd love to see Yoot Tower recreated, and the
   Tower II "Tower Kit" plug-in system. Yoot sent Don a code drop; there's a real path here
   (permissions + authorship respected throughout — Yoot Tower's licensing is still unresolved).
-- **Same spirit as [David Temkin](../david-temkin/README.md)** reviving OpenLaszlo with AI — a little
+- **Same spirit as [David Temkin](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-temkin/README.md)** reviving OpenLaszlo with AI — a little
   retrocomputing-revival summit.
 
-**Materials:** [`repo-shows/patrick-hulin/`](../../repo-shows/patrick-hulin/README.md) ·
+**Materials:** [`repo-shows/patrick-hulin/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/patrick-hulin/README.md) ·
 [your guest page](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/patrick-hulin)
 
 No pressure, no homework. Accepted, delayed, declined, or no reply — all honored gracefully.

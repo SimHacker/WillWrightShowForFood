@@ -13,7 +13,7 @@ send_batch: interval-reunion-2026
 # Repo Show invitation — Rob Tow 🔬🌲
 
 *Send-ready draft — not yet sent. Rob Tow may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Rob —
 
@@ -41,7 +41,7 @@ No homework trap. Remote is fine. Accepted, delayed, declined, or no reply — a
 
 | | |
 |---|---|
-| **Pair show seed** | [`repo-shows/placeholder/`](../../repo-shows/placeholder/README.md) |
+| **Pair show seed** | [`repo-shows/placeholder/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/placeholder/README.md) |
 | **Your guest page** | [`characters/rob-tow/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/rob-tow) |
-| **Brenda Laurel** | [`characters/brenda-laurel/`](../../characters/brenda-laurel/) |
-| **CS547 archive** | [`terry-winograd/media/cs547-archive.yml`](../terry-winograd/media/cs547-archive.yml) |
+| **Brenda Laurel** | [`characters/brenda-laurel/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brenda-laurel) |
+| **CS547 archive** | [`terry-winograd/media/cs547-archive.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/terry-winograd/media/cs547-archive.yml) |

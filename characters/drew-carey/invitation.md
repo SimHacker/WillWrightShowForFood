@@ -8,8 +8,8 @@ show_seed: repo-shows/drew-carey/
 
 # Repo Show invitation — Drew Carey
 
-*Drew Carey may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Drew Carey may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 ---
 
@@ -34,17 +34,17 @@ compare-and-contrast on **AI** after your 2023 radio experiment.
   On Down*.
 - **AI (optional topic):** You ran the experiment; your fans told you the answer. We built on the
   same lesson from the TV side ([Bar Karma](https://en.wikipedia.org/wiki/Bar_Karma), StoryMaker,
-  Urban Safari). See [**AI contrast note for Drew**](ai-contrast-framing.md) — includes the
+  Urban Safari). See [**AI contrast note for Drew**](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/drew-carey/ai-contrast-framing.md) — includes the
   *Whose Voice Is It Anyway?* joke and zero preachiness.
 
 ### Browse — start anywhere
 
 | What | Link |
 |------|------|
-| **AI note (for you)** | [ai-contrast-framing.md](ai-contrast-framing.md) |
-| Show segments | [SHOW.yml](SHOW.yml) |
-| Your character portrait | [characters/drew-carey/README.md](../../characters/drew-carey/README.md) |
-| Sims play-along format | [sims-play-along-narration.yml](../../process/sims-play-along-narration.yml) |
+| **AI note (for you)** | [ai-contrast-framing.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/drew-carey/ai-contrast-framing.md) |
+| Show segments | [SHOW.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/drew-carey/SHOW.yml) |
+| Your character portrait | [characters/drew-carey/README.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/drew-carey/README.md) |
+| Sims play-along format | [sims-play-along-narration.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/sims-play-along-narration.yml) |
 | Root README | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |
 
 Browse without a GitHub account — the links above render in any browser.

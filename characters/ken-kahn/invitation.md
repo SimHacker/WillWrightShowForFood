@@ -8,8 +8,8 @@ show_seed: repo-shows/ken-kahn/
 
 # Repo Show invitation — Ken Kahn
 
-*Ken Kahn may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Ken Kahn may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 We would respectfully invite **Ken Kahn** to a **Repo Show** — a Repo Show Class
 conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood),
@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** AI + visual programming for kids — ToonTalk; AI blocks for Snap! (eCraft2Learn)
 
-**Materials:** [`repo-shows/ken-kahn/`](../../repo-shows/ken-kahn/README.md)
+**Materials:** [`repo-shows/ken-kahn/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/ken-kahn/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

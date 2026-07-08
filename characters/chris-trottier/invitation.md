@@ -9,7 +9,7 @@ show_seed: repo-shows/design-by-accretion.yml
 # Repo Show invitation — Chris Trottier 🪶
 
 *Chris may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Chris —
 
@@ -34,7 +34,7 @@ live Twitch when we're lucky. GitHub has the community tools.
 
 **https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/chris-trottier**
 
-Read [**What is a Repo Show?**](repo-show.md) · flagship proposal [**Design by Accretion**](design-by-accretion.md)
+Read [**What is a Repo Show?**](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/chris-trottier/repo-show.md) · flagship proposal [**Design by Accretion**](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/chris-trottier/design-by-accretion.md)
 
 ## Why you
 
@@ -47,9 +47,9 @@ The Sims is the perfect case study, and you were right in the middle of it.
 
 ## What works well with you
 
-- Pointer to your public writing — we already have your [2004 essay](tuned-emergence.md) in the repo
+- Pointer to your public writing — we already have your [2004 essay](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/chris-trottier/tuned-emergence.md) in the repo
 - Videos: design philosophy, Sims war stories, whatever you choose — prime the show, pause-and-watch
-- The [Jan 2007 career map](sources/2007-01-10-leaving-maxis/career-memories.md) as a scene list
+- The [Jan 2007 career map](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/chris-trottier/sources/2007-01-10-leaving-maxis/career-memories.md) as a scene list
 - Audience questions submitted ahead of time (TicketPR or email)
 
 **See Chris Trottier's "Design by Accretion" interview** — that's the model for the growing YouTube

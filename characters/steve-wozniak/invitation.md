@@ -8,8 +8,8 @@ show_seed: repo-shows/steve-wozniak/
 
 # Repo Show invitation — Steve Wozniak
 
-*Steve Wozniak may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Steve Wozniak may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 We would respectfully invite **Steve Wozniak** to a **Repo Show** — a Repo Show Class
 conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood),
@@ -17,7 +17,7 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** Computer Engineer, Apple Co-founder, Creator of the Apple I and Apple II
 
-**Materials:** [`repo-shows/steve-wozniak/`](../../repo-shows/steve-wozniak/README.md)
+**Materials:** [`repo-shows/steve-wozniak/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/steve-wozniak/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

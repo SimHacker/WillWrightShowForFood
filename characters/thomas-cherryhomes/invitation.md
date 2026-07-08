@@ -8,8 +8,8 @@ show_seed: repo-shows/thomas-cherryhomes/
 
 # Repo Show invitation — Thomas Cherryhomes
 
-*Thomas Cherryhomes may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Thomas Cherryhomes may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 We would respectfully invite **Thomas Cherryhomes** to a **Repo Show** — a Repo Show Class
 conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood),
@@ -19,7 +19,7 @@ following through to working code and credited ideas in public.
 
 **Paired guest:** [**Lars Brinkhoff**](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/lars-brinkhoff/invitation.md) — PDP-10/ITS restoration; we challenge him to **make it so** for MACLISP on emulated iron. Your FujiNet/IRATA tree fort meets his AI Lab boot — natural tag-team for **Retrocomputing Drive**.
 
-**Materials:** [`repo-shows/thomas-cherryhomes/`](../../repo-shows/thomas-cherryhomes/README.md)
+**Materials:** [`repo-shows/thomas-cherryhomes/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/thomas-cherryhomes/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

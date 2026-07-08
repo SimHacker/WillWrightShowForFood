@@ -9,8 +9,8 @@ warm_intro_via: interval-alumni
 
 # Repo Show invitation — Laurie Anderson *(dream guest)*
 
-*Laurie Anderson may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Laurie Anderson may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Dear Laurie,
 
@@ -39,12 +39,12 @@ keep coming back to (your pick, skip whatever bores you):
 - **VR/immersive work** (*Chalkroom*, *Aloft*) meeting a show built for an audience that can edit
   the story.
 
-More hooks in [`ideas.md`](../../characters/laurie-anderson/ideas.md). No pressure — accepted,
+More hooks in [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/laurie-anderson/ideas.md). No pressure — accepted,
 delayed, declined, or no reply all honored gracefully.
 
 — Don Hopkins, Repo Show Class
 
 | | |
 |---|---|
-| **Show seed** | [`repo-shows/laurie-anderson/`](README.md) |
-| **Your guest page** | [`characters/laurie-anderson/`](../../characters/laurie-anderson/) |
+| **Show seed** | [`repo-shows/laurie-anderson/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/laurie-anderson/README.md) |
+| **Your guest page** | [`characters/laurie-anderson/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/laurie-anderson) |

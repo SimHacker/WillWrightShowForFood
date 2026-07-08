@@ -36,18 +36,24 @@ sources:
     - sources/gp-alan-kay-lineage.yml
     - sources/y-combinator-in-blocks.yml
     - sources/micropolis-snap-2018.yml
+    - sources/snapcon-2025-karlstrom-intro.yml
+    - sources/sap-research-and-snap.yml
   field_notebook: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md
   papers: []
   blogs: []
 
 connections:
   pair_show: "Default interview with Brian Harvey — Jens builds, Brian documents Snap!"
+  snapcon_2025_karlstrom: "Hosted Brian's Karlstrom address — birthright line, Dutch teacher Q&A"
   micropolis_2018: "Brian forwarded Don's Micropolis × Snap! proposal"
   kay_lineage: "Scratch → GP under Alan Kay → Morphic.js → Snap!"
   snapcon_barcelona: "TurtleStitch, Cynthia Solomon, old band"
   palm_field_notebook: "Computational zoo field notes — Logo/turtle lineage"
+  macros_metaprogramming: "AST + caller-context macros — implementation side of Brian's digest"
 
 see_also:
+  - { path: ../brian-harvey/sources/snap-macros-metaprogramming.yml, why: "Shared technical digest — Brian docs, Jens ships" }
+  - { path: ../../repo-shows/snap-logo-brian-jens/audience/palm/questions.yml, why: "Palm audience questions for pair show" }
   - { path: ideas.md, why: "Conversation hooks" }
   - { path: sources/README.md, why: "Source artifacts" }
   - { path: correspondence.yml, why: "2018 Micropolis thread" }

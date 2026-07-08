@@ -8,8 +8,8 @@ show_seed: repo-shows/jim-crutchfield/
 
 # Repo Show invitation — Jim Crutchfield
 
-*Jim may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Jim may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Jim —
 
@@ -28,8 +28,8 @@ From there the whole family opens up:
 
 I come at this from the toymaker's side: I built a **CAM6** cellular-automata performance platform
 (NeWS + C + a FORTH rule-compiler) and I've spent years on iterated graphical systems and
-live performance graphics. My friend **[Scott Draves](../../characters/scott-draves/README.md)** (Electric
-Sheep) lives in the same feedback family, and **[Norman Margolus](../../characters/norman-margolus/README.md)**
+live performance graphics. My friend **[Scott Draves](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-draves/README.md)** (Electric
+Sheep) lives in the same feedback family, and **[Norman Margolus](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/norman-margolus/README.md)**
 (the CAM-6 / reversible CA) would make it a proper cellular-automata summit. If a multi-way is fun,
 I'd love that; if not, just you and me and a feedback loop is already a great show.
 

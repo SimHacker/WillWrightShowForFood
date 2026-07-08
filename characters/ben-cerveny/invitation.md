@@ -10,8 +10,8 @@ warm_contact: true
 
 # Repo Show invitation — Ben Cerveny
 
-*Ben Cerveny may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Ben Cerveny may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 We would respectfully invite **Ben Cerveny** to a **Repo Show** — a Repo Show Class
 conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood),
@@ -31,7 +31,7 @@ following through to working code and credited ideas in public.
 - **Lane Neverending** — MOOLLM's spliceable circular street as homage to GNE/Habitat geometry
 - **OpenLaszlo lineage** — SimProv Wedding Playset / SimFreaks plumbing vs the new LLM uplift layer
 
-**Materials:** [`repo-shows/ben-cerveny.yml`](../../repo-shows/ben-cerveny.yml) · [`ideas.md`](ideas.md) · [`correspondence.yml`](correspondence.yml)
+**Materials:** [`repo-shows/ben-cerveny.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/ben-cerveny.yml) · [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-cerveny/ideas.md) · [`correspondence.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-cerveny/correspondence.yml)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

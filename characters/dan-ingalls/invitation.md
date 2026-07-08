@@ -10,7 +10,7 @@ format: remote_or_in_person
 
 # Repo Show invitation — Dan Ingalls
 
-*The person portrayed may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*  
+*The person portrayed may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*  
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Dan —
@@ -29,8 +29,8 @@ thread he carried forward. She was universally loved in the Squeak community. Me
 repo: we *represent and discuss* her documented work and the stories friends tell — we never speak
 as her. I'm inviting **Craig** for a live anchor episode and **Alan Kay** to join the memorial arc
 if he's willing; your voice matters enormously — Zoo, Lively, the live-object lineage only you can
-name properly on air. See [`../vanessa-freudenberg/memorial.md`](../vanessa-freudenberg/memorial.md)
-and [`../../repo-shows/remembering-vanessa-freudenberg.yml`](../../repo-shows/remembering-vanessa-freudenberg.yml).
+name properly on air. See [`../vanessa-freudenberg/memorial.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/vanessa-freudenberg/memorial.md)
+and [`../../repo-shows/remembering-vanessa-freudenberg.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/remembering-vanessa-freudenberg.yml).
 
 **What I'd especially like to explore with you at Ink & Switch**
 
@@ -51,12 +51,12 @@ Don's proposal to explore **with you** (not at you):
 
 The show question: can a saved **Lively page** become a **yaml-jazz repo commit** without losing
 liveness? What belongs in Automerge vs git? Trail:
-[`yaml-jazz-collaboration-stack.md`](../../process/trails/yaml-jazz-collaboration-stack.md).
+[`yaml-jazz-collaboration-stack.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/trails/yaml-jazz-collaboration-stack.md).
 
 **What I'd love to talk about (your pick, any order)**
 
 - **Pop-up menus ↔ pie menus** — you invented one cousin; I baked the other. Not a contest — a
-  direct-manipulation retrospective with live demos. [`pie-menus-and-pop-ups.md`](pie-menus-and-pop-ups.md).
+  direct-manipulation retrospective with live demos. [`pie-menus-and-pop-ups.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/dan-ingalls/pie-menus-and-pop-ups.md).
 - **The live-object lineage** — BitBlt, Squeak-in-itself, **Fabrik**, the **Lively Kernel**, and
   the **Smalltalk Zoo** at CHM, Morphic, inspiring Snap!'s spectacular success. Walk one exhibit on air; change the system while it runs.
 - **Where the browser lineage went** — Vanessa's **SqueakJS**, **Craig Latta**'s **Caffeine**
@@ -72,7 +72,7 @@ liveness? What belongs in Automerge vs git? Trail:
 its own short episode or part of a longer Zoo walk — your call. No homework — homeplay only if fun.
 
 **Materials:** [`repo-shows/dan-ingalls/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/dan-ingalls) ·
-[ideas](ideas.md) · [correspondence](correspondence.yml) ·
+[ideas](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/dan-ingalls/ideas.md) · [correspondence](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/dan-ingalls/correspondence.yml) ·
 [live_objects trail](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/trails/live-objects.md)
 (you, Alan, Vanessa, Craig)
 

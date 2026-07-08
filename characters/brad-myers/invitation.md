@@ -29,7 +29,7 @@ stage is a public GitHub repo, following through to working code and credited id
 
 - **Garnet → Svelte** — KR constraints, prototypes, declare relationships and let the system keep
   them true. Don rode Garnet, OpenLaszlo, TurboGears, and now SvelteKit/MOOLLM — same braid,
-  different decades. [`../don-hopkins/garnet-to-svelte-constraint-ui-lineage.md`](../don-hopkins/garnet-to-svelte-constraint-ui-lineage.md)
+  different decades. [`../don-hopkins/garnet-to-svelte-constraint-ui-lineage.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/garnet-to-svelte-constraint-ui-lineage.md)
 - **All the Widgets + pie menus** — your CHI '90 widget history video; my clips in context; what's
   still missing from the catalog.
 - **PBD in the LLM era** — *Watch What I Do*, C32, VPL taxonomy (spreadsheets as VPL — still
@@ -43,9 +43,9 @@ stage is a public GitHub repo, following through to working code and credited id
 
 | Topic | Link |
 | --- | --- |
-| **Show seed** | [`repo-shows/brad-myers-garnet-vpl.yml`](../../repo-shows/INDEX.yml) |
+| **Show seed** | [`repo-shows/brad-myers-garnet-vpl.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/INDEX.yml) |
 | **PBD vertical seed** | `brad-myers/pbd-in-llm-era.yml` |
-| **Don's Garnet thread** | [`../don-hopkins/garnet-to-svelte-constraint-ui-lineage.md`](../don-hopkins/garnet-to-svelte-constraint-ui-lineage.md) |
+| **Don's Garnet thread** | [`../don-hopkins/garnet-to-svelte-constraint-ui-lineage.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/garnet-to-svelte-constraint-ui-lineage.md) |
 | **Repo Show project** | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |
 
 Browse without a GitHub account — start at the [README](https://github.com/SimHacker/WillWrightShowForFood).

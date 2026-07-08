@@ -1,7 +1,7 @@
 # Dear Jared (and Laurie!) — an invitation to a Repo Show
 
 *Draft from Don. Consent not yet asked. This page is yours to edit, prune, or delete —
-[portrayal standards](../../schemas/portrayal-standards.md).*
+[portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md).*
 
 Jared!
 
@@ -32,8 +32,8 @@ the LifeStar, a team of your friends — to see just how deep you could dig.
 
 **So here's the show.** Will and I are making **Repo Shows** — the product and stage is a public
 GitHub repo, not just a video: sources, code, questions, and artifacts accumulate before, during,
-and forever after the conversation ([how it works](../../process/FORMAT.md), or see the
-[vision](../../process/VISION.md)). **Will has already accepted** and kicks off the series — which
+and forever after the conversation ([how it works](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/FORMAT.md), or see the
+[vision](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/VISION.md)). **Will has already accepted** and kicks off the series — which
 feels right, since he kicked off our friendship. I'd love a show with you: your arc from
 **levitated.net → Complexification → Etsy → the Toy Factory** is the cleanest story I know of
 *generative code becoming a life* — the gems mined from math, then manufactured into wood you can
@@ -45,7 +45,7 @@ which is exactly what this repo now does with its characters.
 room for the tidepool reunion.
 
 No deadlines, no live obligation — async at your pace, time-shifted like everything here. Your
-directory in this repo is yours: [characters/jared-tarbell/](README.md). Edit anything. Delete
+directory in this repo is yours: [characters/jared-tarbell/](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jared-tarbell/README.md). Edit anything. Delete
 anything. Or just tell me a story about the wilderness and we'll put it on the show.
 
 Come back during warmer times. We'll rent a boat.

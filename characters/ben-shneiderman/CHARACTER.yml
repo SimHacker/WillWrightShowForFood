@@ -82,6 +82,7 @@ sources:
   papers:
     - "Callahan, Hopkins, Weiser, Shneiderman — CHI'88 pie menus (see media/from-mail/)"
   in_repo:
+    - sources/hcil-human-first-naming.yml
     - sources/2022-01-13-hyperties-computer-lib.md
     - media/from-mail/paper-callahan-hopkins-pie-menus-chi1988.pdf
     - media/from-mail/artifact-2-homefinder.gif

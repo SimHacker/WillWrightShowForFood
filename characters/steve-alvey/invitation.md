@@ -11,10 +11,10 @@ format: live_or_async
 
 # Repo Show invitation — Steve Alvey 🏙️
 
-*Steve may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Steve may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
-**Today I'm sending two matching invitations** — yours and **Heather's** ([Heather's invitation](../heather-alvey/invitation.md)) — for one **pair show**. Each letter is written for the person receiving it; both describe the same show from your two angles, and each of you can read the other's.
+**Today I'm sending two matching invitations** — yours and **Heather's** ([Heather's invitation](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/invitation.md)) — for one **pair show**. Each letter is written for the person receiving it; both describe the same show from your two angles, and each of you can read the other's.
 
 Steve —
 
@@ -56,8 +56,8 @@ angles. **Read either or both** before you reply — including how **Heather** d
 
 | Guest | Invitation | Their angle on this show |
 | --- | --- | --- |
-| **Steve Alvey** 🏙️ | [invitation.md](invitation.md) *(this letter)* · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/invitation.md) | SliceCity, Simopolis, save round-tripping, games-in-games |
-| **Heather Alvey** 🧟 | [invitation.md](../heather-alvey/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/invitation.md) | SimFreaks catalog, object suites, Zombie Sims, community, publishing revival |
+| **Steve Alvey** 🏙️ | [invitation.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/invitation.md) *(this letter)* · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/invitation.md) | SliceCity, Simopolis, save round-tripping, games-in-games |
+| **Heather Alvey** 🧟 | [invitation.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/invitation.md) | SimFreaks catalog, object suites, Zombie Sims, community, publishing revival |
 
 ---
 
@@ -68,20 +68,20 @@ angles. **Read either or both** before you reply — including how **Heather** d
 | | |
 | --- | --- |
 | **On this show** | SliceCity (SimCity in The Sims); Simopolis; save round-tripping; games-in-games; Gallium with Will |
-| **Invitation** (his view) | [`invitation.md`](invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/invitation.md) |
-| **Guest README** | [`README.md`](README.md) |
-| **Conversation hooks** | [`ideas.md`](ideas.md) |
-| **Portrait / sources** | [`CHARACTER.yml`](CHARACTER.yml) · [`GLANCE.md`](GLANCE.md) · [`CARD.yml`](CARD.yml) |
+| **Invitation** (his view) | [`invitation.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/invitation.md) |
+| **Guest README** | [`README.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/README.md) |
+| **Conversation hooks** | [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/ideas.md) |
+| **Portrait / sources** | [`CHARACTER.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/CHARACTER.yml) · [`GLANCE.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/GLANCE.md) · [`CARD.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/CARD.yml) |
 
 ### Heather Alvey 🧟
 
 | | |
 | --- | --- |
 | **On this show** | SimFreaks catalog live; object suites & SimAntics; Zombie Sims; community leadership; publishing revival |
-| **Invitation** (her view) | [`../heather-alvey/invitation.md`](../heather-alvey/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/invitation.md) |
-| **Guest README** | [`../heather-alvey/README.md`](../heather-alvey/README.md) |
-| **Conversation hooks** | [`../heather-alvey/ideas.md`](../heather-alvey/ideas.md) |
-| **Portrait / sources** | [`../heather-alvey/CHARACTER.yml`](../heather-alvey/CHARACTER.yml) · [`../heather-alvey/GLANCE.md`](../heather-alvey/GLANCE.md) · [`../heather-alvey/CARD.yml`](../heather-alvey/CARD.yml) |
+| **Invitation** (her view) | [`../heather-alvey/invitation.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/invitation.md) |
+| **Guest README** | [`../heather-alvey/README.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/README.md) |
+| **Conversation hooks** | [`../heather-alvey/ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/ideas.md) |
+| **Portrait / sources** | [`../heather-alvey/CHARACTER.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/CHARACTER.yml) · [`../heather-alvey/GLANCE.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/GLANCE.md) · [`../heather-alvey/CARD.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/CARD.yml) |
 
 ---
 
@@ -89,8 +89,8 @@ angles. **Read either or both** before you reply — including how **Heather** d
 
 | If you're curious about… | Link |
 | --- | --- |
-| **Show seed** (full outline + roles) | [`repo-shows/heather-and-steve-alvey/`](../../repo-shows/heather-and-steve-alvey/README.md) · [`SHOW.yml`](../../repo-shows/heather-and-steve-alvey/SHOW.yml) |
-| **Afterlife / Zombie bridge** (shared idea room) | [`afterlife-zombie-bridge.yml`](../../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml) |
+| **Show seed** (full outline + roles) | [`repo-shows/heather-and-steve-alvey/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/heather-and-steve-alvey/README.md) · [`SHOW.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/heather-and-steve-alvey/SHOW.yml) |
+| **Afterlife / Zombie bridge** (shared idea room) | [`afterlife-zombie-bridge.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml) |
 | **The whole Repo Show project** | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |
 
 Browse without a GitHub account — start at the [README](https://github.com/SimHacker/WillWrightShowForFood).

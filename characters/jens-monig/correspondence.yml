@@ -28,3 +28,8 @@ connects_in_repo:
 show_hooks:
   - "Finish what we started in 2018 — Micropolis live in Snap!"
   - "Schemas for Snap! + Snap!Con Barcelona stories"
+  - "Snap!Con 2025 — Jens hosts Brian's Karlstrom address; Dutch teacher Q&A"
+
+sources_in_repo:
+  - sources/micropolis-snap-2018.yml
+  - sources/snapcon-2025-karlstrom-intro.yml

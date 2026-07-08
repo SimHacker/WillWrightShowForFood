@@ -10,11 +10,11 @@ format: remote_or_in_person
 
 # Repo Show invitation — Ben Shneiderman
 
-*Ben may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Ben may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 **Subject:** Repo Show series — HyperTIES living emulator + CHI'88 pie menus (+ whatever you pick)  
-**Show:** [ben-shneiderman](README.md) · group option [ben-and-heinz-pie-menus](../ben-and-heinz-pie-menus.yml)
+**Show:** [ben-shneiderman](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-shneiderman/README.md) · group option [ben-and-heinz-pie-menus](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-and-heinz-pie-menus.yml)
 
 ---
 
@@ -64,11 +64,11 @@ One episode or a short series — you steer.
 
 | Topic | Link |
 | --- | --- |
-| **Show series** | [`SHOW.yml`](SHOW.yml) · [`README.md`](README.md) |
-| **HyperTIES reincarnation plan** | [`hyperties-reincarnation.md`](../../characters/don-hopkins/hyperties-reincarnation.md) · [`media/hyperties/`](../../characters/don-hopkins/media/hyperties/) |
-| **Jan 2022 thread digest** | [`2022-01-13-hyperties-computer-lib.md`](../../characters/ben-shneiderman/sources/2022-01-13-hyperties-computer-lib.md) |
-| **Group seed (you + Heinz)** | [`ben-and-heinz-pie-menus.yml`](../ben-and-heinz-pie-menus.yml) |
-| **Pie-menu lineage (PIXIE credited)** | [`pie-menus-chi-88-and-beyond.md`](../../characters/don-hopkins/pie-menus-chi-88-and-beyond.md) |
+| **Show series** | [`SHOW.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-shneiderman/SHOW.yml) · [`README.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-shneiderman/README.md) |
+| **HyperTIES reincarnation plan** | [`hyperties-reincarnation.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/hyperties-reincarnation.md) · [`media/hyperties/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/media/hyperties) |
+| **Jan 2022 thread digest** | [`2022-01-13-hyperties-computer-lib.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-shneiderman/sources/2022-01-13-hyperties-computer-lib.md) |
+| **Group seed (you + Heinz)** | [`ben-and-heinz-pie-menus.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-and-heinz-pie-menus.yml) |
+| **Pie-menu lineage (PIXIE credited)** | [`pie-menus-chi-88-and-beyond.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/pie-menus-chi-88-and-beyond.md) |
 | **Repo Show project** | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |
 
 Browse without a GitHub account — start at the [README](https://github.com/SimHacker/WillWrightShowForFood).

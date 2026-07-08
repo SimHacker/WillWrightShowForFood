@@ -12,4 +12,4 @@ replacing the communities you already built?
 
 — Don
 
-↑ [CHARACTER.yml](CHARACTER.yml)
+↑ [CHARACTER.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/james-turner/CHARACTER.yml)

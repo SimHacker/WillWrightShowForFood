@@ -8,7 +8,7 @@ show_seed: repo-shows/peter-norvig/
 
 # Repo Show invitation — Peter Norvig
 
-*Peter Norvig may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
+*Peter Norvig may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
 
 Peter —
 
@@ -41,4 +41,4 @@ No pressure, no homework. Accepted, delayed, declined, or no reply — all honor
 
 — Don Hopkins, Repo Show Class
 
-↑ [sources/](sources/README.md) · [ideas](ideas.md) · [show seed](../../repo-shows/peter-norvig/README.md)
+↑ [sources/](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/peter-norvig/sources/README.md) · [ideas](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/peter-norvig/ideas.md) · [show seed](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/peter-norvig/README.md)

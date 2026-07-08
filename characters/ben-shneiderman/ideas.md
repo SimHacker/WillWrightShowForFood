@@ -35,7 +35,10 @@ archaeology from scratch. **Running system = documentation** — the show writes
 [`../don-hopkins/media/hyperties/`](../don-hopkins/media/hyperties/) ·
 [`sources/2022-01-13-hyperties-computer-lib.md`](sources/2022-01-13-hyperties-computer-lib.md)
 
-### 2. Light blue links — HCIL user studies → the Web
+### 2. Human first — HCIL not CHIL, HCI not CHI
+[sources/hcil-human-first-naming.yml](sources/hcil-human-first-naming.yml) — Shneiderman insisted on **human-computer interaction** when ACM chose **computer-human** so SIGCHI would pronounce as CHI. Same accident Brian Harvey names in his Snap!Con 2025 Karlstrom talk: ACM embarrassed that **Machinery** centers machines. Ben answered with a lab name; Brian answers with CCUS and no grades.
+
+### 3. Light blue links — HCIL user studies → the Web
 
 Embedded menus (1983); IJMMS + CACM papers (1986); **Hyperties** electronic journal (**CACM July 1988**);
 Berners-Lee **Spring 1989** cites Hyperties for hot spots + link color. Ben's *Eager Eyes* read on Ted
@@ -44,7 +47,7 @@ Nelson: wish he'd link to **practical impact** — fair critique Don forwarded i
 → [`sources/2022-01-13-hyperties-computer-lib.md`](sources/2022-01-13-hyperties-computer-lib.md) ·
 [`../don-hopkins/sources/2020-ted-nelson-klavs-landberg-self-revealing.md`](../don-hopkins/sources/2020-ted-nelson-klavs-landberg-self-revealing.md)
 
-### 3. CHI'88 pie menus — Fitts on the command bus
+### 4. CHI'88 pie menus — Fitts on the command bus
 
 Empirical study in repo (`media/from-mail/paper-callahan-hopkins-pie-menus-chi1988.pdf`). Don credits
 **PIXIE (1969)** honestly — optional group with **Heinz U. Lemke**. Implement pie slices on Micropolis;
@@ -54,7 +57,7 @@ Empirical study in repo (`media/from-mail/paper-callahan-hopkins-pie-menus-chi19
 [`../../repo-shows/ben-and-heinz-pie-menus.yml`](../../repo-shows/ben-and-heinz-pie-menus.yml) ·
 [`../don-hopkins/sources/1991-09-pie-menus-buxton-ddj-draft.md`](../don-hopkins/sources/1991-09-pie-menus-buxton-ddj-draft.md)
 
-### 4. The Eyes Have It + Dynamic Queries
+### 5. The Eyes Have It + Dynamic Queries
 
 **CS547 Winograd** (1998-02-20) — info viz overview. **HomeFinder** demo artifact in repo. Dynamic
 Queries — drag sliders, database answers instantly — direct manipulation applied to exploration at scale.
@@ -62,24 +65,24 @@ Queries — drag sliders, database answers instantly — direct manipulation app
 → [`../terry-winograd/media/cs547-archive.yml`](../terry-winograd/media/cs547-archive.yml) ·
 [`media/from-mail/artifact-2-homefinder.gif`](media/from-mail/artifact-2-homefinder.gif)
 
-### 5. Leonardo's Laptop (CS547 2000)
+### 6. Leonardo's Laptop (CS547 2000)
 
 Human needs and humane computing — bridge to calm-tech vs direct-manipulation debate with memorial
 [**Mark Weiser**](../mark-weiser/) thread.
 
-### 6. Remembering Mark Weiser — memorial discussant
+### 7. Remembering Mark Weiser — memorial discussant
 
 Ben co-authored CHI'88 with Mark; can discuss ubicomp, calm technology, Severe Tire Damage, and the
 empirical HCI tradition **without inventing quotes**. Async clips OK.
 
 → [`../../repo-shows/remembering-mark-weiser.yml`](../../repo-shows/remembering-mark-weiser.yml)
 
-### 7. Human-centered AI today
+### 8. Human-centered AI today
 
 Ben's recent HCIL themes — oversight affordances, human control. Repo Show as **executable archive**
 vs screenshot scraping — pairs naturally with GUIDB anti-slop ethos ([**Edd Coates**](../edd-coates/)).
 
-### 8. NeWS reunion crossover
+### 9. NeWS reunion crossover
 
 HyperTIES PostScript applets = "send a program, not a data structure." Tag-team episode or segment with
 [**James Gosling**](../james-gosling/), [**David Rosenthal**](../david-rosenthal/), [**Arthur van Hoff**](../arthur-van-hoff/).

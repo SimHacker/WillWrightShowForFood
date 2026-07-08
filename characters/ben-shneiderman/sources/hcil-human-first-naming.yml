@@ -1,0 +1,51 @@
+# HCIL — Human first, not Computer first
+# Ben Shneiderman insisted on the lab name when founding HCIL (1983).
+# Public: ACM Interactions retrospective; Shneiderman Software Psychology lineage.
+
+meta:
+  topic: hcil-human-first-naming
+  year_founded: 1983
+  founder: Ben Shneiderman
+  lab: Human-Computer Interaction Laboratory
+  acronym: HCIL
+  kind: public_principle
+  consent: public
+
+the_accident:
+  acm: "Association for Computing **Machinery** — machines, not people (Brian Harvey, Snap!Con 2025 Karlstrom address)"
+  sigchi: |
+    ACM chose **computer-human interaction** so the conference acronym would pronounce as **CHI**
+    — computer still leads the phrase.
+  hcil_counter: |
+    Shneiderman insisted on **human-computer interaction** and named the lab **HCIL**, not CHIL —
+    human first, deliberately.
+
+shneiderman_in_his_words:
+  source: "ACM Interactions — 30 Years at HCIL (Sep/Oct 2013); echoed in Software Psychology lineage"
+  quote: |
+    The term human-computer interaction (HCI) was still novel, but I insisted on putting the human
+    first, as opposed to the ACM's choice of computer-human interaction to make a more pronounceable
+    name, "CHI."
+  thesis: |
+    Much of computer science forgets humans exist — quest for abstract algorithmic purity.
+    Real power comes when computation **augments human thought**; you have to understand human
+    thought to do that.
+
+don_orbit:
+  hcil_years: "Don worked at UMD HCIL with Shneiderman and Weiser — CHI'88 pie menus, HyperTIES"
+  chi88_venue: "CHI '88 (SIGCHI) — the acronym preserves computer-first ordering even at the human-interface conference"
+  brian_parallel: |
+    Brian Harvey (Snap!Con 2025) notes ACM has been embarrassed since the 1960s that its name
+    centers machines; Shneiderman answered that embarrassment with a lab name, not a rebranding
+    campaign.
+
+show_hooks:
+  - "CHI vs HCIL — same field, opposite word order; pronunciation vs priority"
+  - "Pair with Brian's Karlstrom ACM aside — machines first is the accident both men named"
+  - "Centaur vs reverse centaur — who leads the compound noun matters"
+
+see_also:
+  - ../CHARACTER.yml
+  - ../../brian-harvey/sources/snapcon-2025-karlstrom-address.yml
+  - ../../don-hopkins/pie-menus-chi-88-and-beyond.md
+  - ../../../repo-shows/ben-shneiderman/README.md

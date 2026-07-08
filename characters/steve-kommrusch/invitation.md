@@ -8,8 +8,8 @@ show_seed: repo-shows/steve-kommrusch/
 
 # Repo Show invitation — Steve Kommrusch
 
-*Steve Kommrusch may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Steve Kommrusch may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Steve —
 

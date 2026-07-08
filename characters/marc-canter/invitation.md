@@ -12,7 +12,7 @@ pair_with: david-levitt
 # Repo Show invitation — Marc Canter 🎬🕺
 
 *Send-ready draft — not yet sent. Marc Canter may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Marc —
 
@@ -32,7 +32,7 @@ friendly conversation whose stage is [this public repository](https://github.com
   (Yes, we'll affectionately call it **"People Aggrivator"** at least once.)
 - **The Amsterdam stories** — your call on what's tellable on air.
 - **The puppets** — you're a born center-stage performer with your **reggae dancing cartoon character**,
-  so you're going to love the **[Faceball Construction Set](../../apps/performance-space/faceball-construction-set.yml)**.
+  so you're going to love the **[Faceball Construction Set](https://github.com/SimHacker/WillWrightShowForFood/blob/main/apps/performance-space/faceball-construction-set.yml)**.
   We'd love to hand you puppets to drive.
 - **Acapella [Pink Trombone](https://dood.al/pinktrombone/) sing-along** — a bunch of us singing through
   a playable vocal tract. This has your name on it.
@@ -46,6 +46,6 @@ No homework trap. Accepted, delayed, declined, or no reply — all honored grace
 
 | | |
 |---|---|
-| **Show seed** | [`repo-shows/marc-canter/`](../../repo-shows/marc-canter/README.md) |
+| **Show seed** | [`repo-shows/marc-canter/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/marc-canter/README.md) |
 | **Your guest page** | [`characters/marc-canter/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/marc-canter) |
-| **David Levitt** | [`characters/david-levitt/`](../../characters/david-levitt/) |
+| **David Levitt** | [`characters/david-levitt/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-levitt) |

@@ -8,8 +8,8 @@ show_seed: repo-shows/norman-margolus/
 
 # Repo Show invitation — Norman Margolus
 
-*Norman may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
-[Portrayal standards](../../schemas/portrayal-standards.md)
+*Norman may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Norman —
 
@@ -28,7 +28,7 @@ rewritten it in **JavaScript** — the high-level rules now live in JS, but they
 retrofit an off-the-shelf WASM/JS Forth anytime.) So your and Toffoli's **CAM-6** and book are
 literally the ground I've been standing on.
 
-I wrote the whole story down for you — **[What I Made With Your Magic](../../characters/norman-margolus/the-cam6-demo-for-norman.md)** —
+I wrote the whole story down for you — **[What I Made With Your Magic](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/norman-margolus/the-cam6-demo-for-norman.md)** —
 with the actual Forth-vs-JS code side by side, and the receipts: I still have **disk images of the
 CAM6 floppies** with the original **x86 Forth**, *and* my own reimplementation of that stack in
 **Mitch Bradley's Sun Forth**. Layers of iteration and reimplementation — **Forth → C → JavaScript,
@@ -61,12 +61,12 @@ Other threads, your pick:
 - **Computronium & programmable matter** — computing as physics, physics as computing.
 
 If a **cellular-automata looping fest** sounds fun, I'd love to gather the neighbors:
-**[Stephen Wolfram](../../characters/stephen-wolfram/README.md)** (a new kind of science, the ruliad),
-my old friend **[Dave Tristram](../../characters/dave-tristram/README.md)** (graphics + CA hacking),
-and of course **[Will Wright](../../characters/will-wright/README.md)** and
-**[Brian Eno](../../characters/brian-eno/README.md)** (generative systems as an art medium), with
-**[Jim Crutchfield](../../characters/jim-crutchfield/README.md)** (edge of chaos, evolving CA) and
-**[Scott Draves](../../characters/scott-draves/README.md)** (Electric Sheep) — but just you and a grid
+**[Stephen Wolfram](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/stephen-wolfram/README.md)** (a new kind of science, the ruliad),
+my old friend **[Dave Tristram](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/dave-tristram/README.md)** (graphics + CA hacking),
+and of course **[Will Wright](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/will-wright/README.md)** and
+**[Brian Eno](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-eno/README.md)** (generative systems as an art medium), with
+**[Jim Crutchfield](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jim-crutchfield/README.md)** (edge of chaos, evolving CA) and
+**[Scott Draves](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-draves/README.md)** (Electric Sheep) — but just you and a grid
 running forwards and backwards is already a great show. We can **weave it async** — recent solo/dual
 clips plus archival video (your demos, computation-as-physics talks) — contextualized into one
 coherent story, then re-opened as a Repo Show anyone can join.
