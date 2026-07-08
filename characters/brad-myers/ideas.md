@@ -32,8 +32,8 @@ CHI '90 widget history video; Don's pie menu clips
 ### 4. CMU 05-640 Interaction Techniques
 guest lectures, Panopto archive
 
-### 5. Pick, Click, Flick! (ixtbook.com)
-Brad's interaction-techniques book
+### 5. Pick, Click, Flick! (ixtbook.com) — the pie menus section
+Brad's interaction-techniques bible — the whole history of how we point, select, and gesture, cataloged the way only Brad catalogs. It includes a **section on pie menus**: Don's own corner of the catalog, written by the historian he already traded 2023 email with about getting pie-vs-marking-menu history right (accuracy, Buxton FUD). Show beat: open the book to that section on air and let the subject annotate the history live — what the section gets right, what the community still gets wrong, and what belongs in the second edition.
 
 ### 6. Visual programming taxonomy
 spreadsheets as VPL (CHI '86 / JVLC 1990)

@@ -32,6 +32,10 @@ stage is a public GitHub repo, following through to working code and credited id
   different decades. [`../don-hopkins/garnet-to-svelte-constraint-ui-lineage.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/garnet-to-svelte-constraint-ui-lineage.md)
 - **All the Widgets + pie menus** — your CHI '90 widget history video; my clips in context; what's
   still missing from the catalog.
+- **Pick, Click, Flick! — the pie menus section** — your interaction-techniques bible has my corner
+  of the catalog in it, and I'd love to open the book to that page on air: what the section gets
+  right, what the community still gets wrong, what belongs in the second edition. The 2023 thread,
+  continued on camera. [ixtbook.com](https://www.ixtbook.com/)
 - **PBD in the LLM era** — *Watch What I Do*, C32, VPL taxonomy (spreadsheets as VPL — still
   the argument I cite on HN). Open courseware segment for your students if you want it.
 - **Acronym jam (optional)** — your [acronym scoreboard](https://www.cs.cmu.edu/~bam/acronyms.html),
