@@ -9,48 +9,72 @@ format: live_or_async
 
 # Repo Show invitation — Antoni Sawicki 🖥️🏙️📟
 
-*Antoni may edit, decline, delay, or request removal at any time. [Portrayal standards](../../schemas/portrayal-standards.md)*
+*Antoni may edit, decline, delay, or request removal at any time.*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 Antoni —
 
-You emailed me a link — *"you may be interested in this"* — and I replied as if you'd found
-someone else's project. Your next mail set me straight: **ttycity is your own making**, not on
-Hacker News yet, emoji mode *surprisingly pretty*, more platform binaries on the way. Thank you
-for the correction and for the work.
+Well done! I'm also working on something before announcing it publicly, but would love to include you.
 
-**ttycity** is wonderful: Micropolis engine untouched, one binary, a rendering ladder from vt100
-ASCII up to emoji skyscrapers. I freed that code in 2008 hoping people would do exactly this —
-you've now done it **twice** (wintown on NT RISC, ttycity on any TTY).
+## What is a Repo Show?
 
-This directory is **your room in the show repo** — point here when you want to see how we're
-holding your portrayal, sources, and interview plan:
+The center of gravity is a **GitHub repo**, not just an mp3 or mp4. I announce a show and open the
+repo: questions, artifacts, code, papers, links to other repos, videos, podcasts. The audience can
+participate and learn *before* the conversation, follow along live or time-shifted, and keep
+contributing forever after.
+
+**Will Wright** has agreed enthusiastically to the first show (and more). I hope for a whole series
+— with him, with other guests, and with tributes to amazing people we've lost, talking with those who
+knew them and showing their work in the repo.
+
+Because guests and audiences are busy and scattered in time zones, we embrace **time shifting**: solo
+videos when you like, one-on-one chats edited together, multi-person discussions when we can, live
+Twitch when we're lucky. GitHub has the community tools — PRs, issues, forks.
+
+**Your room in the repo:**
 
 **https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/antoni-sawicki**
 
-I host a show that lives in the same medium as your work: a **GitHub repo**
-([WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood)) about developing and
-playing games and tools — humans author, AI orchestrates, everything cited and forkable. A repo
-show about a repo. I'd love to have you on.
+*(The repo is in stealth mode for now so guests without GitHub accounts — like Will — can browse.
+We'll also make a video on setting up GitHub and Cursor; your account becomes a passport to submit
+TicketPRs in the audience directory.)*
+
+## Why ttycity is a perfect fit
+
+You emailed me a link — *"you may be interested in this"* — and I replied as if you'd found someone
+else's project. Your next mail set me straight: **ttycity is your own making**, not on Hacker News
+yet, emoji mode *surprisingly pretty*, more platform binaries on the way. Thank you for the
+correction and for the work.
+
+**ttycity** is wonderful: Micropolis engine untouched, one binary, a rendering ladder from vt100
+ASCII up to emoji skyscrapers. I freed that code in 2008 hoping people would do exactly this —
+you've now done it **twice** (wintown on NT RISC, ttycity on any TTY). Naturally your reinterpretation
+of SimCity's user interface is super interesting and a great topic for an interview!
+
+## What works well with you
+
+- **Pointer to [tenox7/ttycity](https://github.com/tenox7/ttycity)** — docs and code to discuss in the repo
+- **Videos** — you talking about it, screen recordings, whatever you want; prime the show so people
+  can pause the interview and watch
+- **Growing YouTube playlist** — cut between your clips and others; audience submits video questions
+  before and after; one polished cut when the dust settles
+- **See Chris Trottier's "Design by Accretion" interview** — same playlist model
+
+Then we talk, point at what's in the repo, and the playlist keeps accumulating.
 
 ## What we'd explore (your pick)
 
-- **ttycity, live** — build a city over ssh on air; cycle the graphics modes; let the audience
-  vote zones through the terminal.
-- **The porter's craft** — wintown, NT Games, OpenTTD on Alpha/MIPS/PowerPC, the Web Rendering
-  Proxy; why dead platforms deserve living software.
-- **The tireless army of robots** — your LLM-assisted downgrade of OpenTTD to Visual C 4.0;
-  AI as the mechanical rewriter that lets one person keep whole architectures alive.
-- **Show it to Will** — the README credits Will Wright by name. I'd love to put ttycity in front
-  of him — SimCity rendered in emojis in a terminal, thirty-seven years on.
-- **Retrocomputing Drive** — ttycity as a vehicle in the [Micropolis AI Drag Race](../../repo-shows/micropolis-ai-drag-race.yml)
-  variety format, alongside the Apple ][ and PDP-10 stacks.
+- **ttycity, live** — build a city over ssh; cycle graphics modes; audience votes zones
+- **The porter's craft** — wintown, NT Games, OpenTTD on Alpha/MIPS/PowerPC; dead platforms deserve living software
+- **The tireless army of robots** — LLM-assisted downgrade of OpenTTD to Visual C 4.0
+- **Show it to Will** — README credits Will Wright; SimCity in emojis in a terminal, thirty-seven years on
+- **Retrocomputing Drive** — ttycity in the Micropolis AI Drag Race variety format
 
 ## Format — low pressure
 
-- Record a **solo video** whenever suits — demo, war stories, whatever you like.
-- Or a relaxed **one-on-one** with me, edited together.
-- Or just **keep emailing repos**. That works too.
+- Record a **solo video** whenever suits
+- Or a relaxed **one-on-one** with me, edited together
+- Or just **keep emailing repos** — that works too
 
 Accepted, delayed, too busy, declined, or no reply — all honored.
 
@@ -59,7 +83,6 @@ Accepted, delayed, too busy, declined, or no reply — all honored.
 | | |
 | --- | --- |
 | **Start here** | [`README.md`](README.md) — overview + emoji UI |
-| **Character** | [`CHARACTER.yml`](CHARACTER.yml) |
 | **Interview beats** | [`ideas.md`](ideas.md) |
 | **Emoji UI spec** | [`sources/ttycity-emoji-graphics-ui.yml`](sources/ttycity-emoji-graphics-ui.yml) |
 | **Email thread** | [`sources/2026-07-08-ttycity-email-thread.yml`](sources/2026-07-08-ttycity-email-thread.yml) |

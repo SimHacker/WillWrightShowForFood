@@ -11,7 +11,7 @@ Chris Trottier was Lead Designer at Maxis (1997–2008) — The Sims, Sims Onlin
 
 ## The hooks
 
-### 1. Show seed: `repo-shows/REPO-SHOWS.yml#design-by-accretion.yml`
+### 1. Flagship show: [design-by-accretion.md](design-by-accretion.md)
 Walk the repo on air; use the Jan 2007 career map as a scene list.
 
 ### 2. Simlish invention day
@@ -24,7 +24,7 @@ Yoyo Mama, pinata-gate, in-game mafias, Will's black-tie launch warning — comm
 "If Chris can figure out the interface, anyone can" — usability as design ritual.
 
 ### 5. Tuned emergence (2004)
-[`../will-wright/sources/2004-02-21-chris-trottier-tuned-emergence/`](../will-wright/sources/2004-02-21-chris-trottier-tuned-emergence/README.md) — essay republished for the show.
+[tuned-emergence.md](tuned-emergence.md) — summary + link to [full essay](../will-wright/sources/2004-02-21-chris-trottier-tuned-emergence/README.md).
 
 ### 6. Sims team reunion
 Flagship design-by-accretion seed + building-the-sims reunion with Will, Jamie, and the rest.
@@ -34,5 +34,5 @@ Flagship design-by-accretion seed + building-the-sims reunion with Will, Jamie, 
 - [`sources/2007-01-10-leaving-maxis/career-memories.md`](sources/2007-01-10-leaving-maxis/career-memories.md)
 - [`correspondence.yml`](correspondence.yml)
 - [`invitation.md`](invitation.md)
-- Show seed: [`repo-shows/REPO-SHOWS.yml#design-by-accretion.yml`](../../repo-shows/REPO-SHOWS.yml#design-by-accretion.yml)
+- Flagship show: [`design-by-accretion.md`](design-by-accretion.md) · [`repo-show.md`](repo-show.md) · [`suggested-questions.md`](suggested-questions.md)
 - [`CHARACTER.yml`](CHARACTER.yml)

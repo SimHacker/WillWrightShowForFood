@@ -26,12 +26,12 @@ highlights:
 in_repo:
   digest: sources/2007-01-10-leaving-maxis/career-memories.md
   tuned_emergence: ../will-wright/sources/2004-02-21-chris-trottier-tuned-emergence/
-  show_seed: ../../repo-shows/REPO-SHOWS.yml#design-by-accretion.yml
+  show_seed: ../../repo-shows/design-by-accretion.yml
 
 connects_in_repo:
   - { path: sources/2007-01-10-leaving-maxis/, why: "Primary-source career digest" }
   - { path: ../will-wright/sources/2004-02-21-chris-trottier-tuned-emergence/, why: "Tuned emergence essay" }
-  - { path: ../../repo-shows/REPO-SHOWS.yml#design-by-accretion.yml, why: "Flagship show seed" }
+  - { path: ../../repo-shows/design-by-accretion.yml, why: "Flagship show seed" }
   - { path: ../../repo-shows/REPO-SHOWS.yml#building-the-sims.yml, why: "Sims reunion seed" }
   - { path: CHARACTER.yml, why: "Invitation portrayal" }
 

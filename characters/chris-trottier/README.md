@@ -1,18 +1,32 @@
-# Chris Trottier 🪶
+# Chris Trottier 🪶 *(Lead Designer · Maxis · design by accretion)*
 
-*Invitation portrayal. A respectful, source-grounded sketch — not Chris Trottier, and not her words.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · consent level 2 · authored by Don Hopkins
+*Portrayal of a real colleague, written by Don — not Chris, and not her words. Chris may correct,
+shape, reduce, or delete any of it.* [Portrayal standards](../../schemas/portrayal-standards.md)
+
+**Point Chris here:** this directory is her room in the repo — career digest, 2004 essay, flagship
+show proposal, interview hooks, and draft invitation.
 
 ## Who
 
 **Chris Trottier** was **Lead Designer at Maxis (1997–2008)** — a key designer on **The Sims**,
 **The Sims Online** (producer; alter ego Yoyo Mama), and early **Spore**. Don associates her with
-**"design by accretion"**: building a design up layer by layer, detail by detail, until the whole
+**design by accretion**: building a design up layer by layer, detail by detail, until the whole
 thing comes alive.
+
+## Start here (linkable pages)
+
+| Page | What |
+|------|------|
+| [**Design by Accretion**](design-by-accretion.md) | ★ Flagship show proposal — method + cauldron demo |
+| [**What is a Repo Show?**](repo-show.md) | Format, TicketPR, playlists, time shifting |
+| [**Tuned emergence (2004)**](tuned-emergence.md) | Chris’s interview essay — accretion in her own words |
+| [**Suggested questions**](suggested-questions.md) | Audience seeds |
+| [**Conversation hooks**](ideas.md) | Simlish, TSO, Spore, reunion |
+| [**Invitation**](invitation.md) | Draft outreach |
 
 ## Career map (Jan 2007 farewell)
 
-Nine years at Maxis — Orinda intern through franchise lead. Her [Jan 2007 leaving memo](sources/2007-01-10-leaving-maxis/career-memories.md) is organized by project:
+Nine years at Maxis — Orinda intern through franchise lead. [Career memoir digest](sources/2007-01-10-leaving-maxis/career-memories.md) by project:
 
 | Era | Beats |
 |-----|-------|
@@ -22,13 +36,30 @@ Nine years at Maxis — Orinda intern through franchise lead. Her [Jan 2007 leav
 | **Sims Online** | Yoyo Mama; community storms; Will's launch warning |
 | **Spore** | Village-idiot usability; Stinson Beach offsite; Guillaume as rising tuner |
 
-Full digest: [`sources/2007-01-10-leaving-maxis/`](sources/2007-01-10-leaving-maxis/README.md) · [`correspondence.yml`](correspondence.yml)
+Full source folder: [`sources/2007-01-10-leaving-maxis/`](sources/2007-01-10-leaving-maxis/README.md)
 
-## Why a Repo Show
+## Design by accretion (one paragraph)
 
-Flagship seed — [design by accretion](../../repo-shows/REPO-SHOWS.yml) — about how a Sims-scale
-design grows in dialogue with the "cauldron." Natural voice for the Sims team reunion.
+Microworlds like The Sims reach critical mass as separate components accrete, then become fun only
+after **tuned emergence** — late balance passes that EA’s playbook said shouldn’t exist. Chris lived
+that process. The flagship show names the method and demonstrates it live. See
+[tuned-emergence.md](tuned-emergence.md) and [design-by-accretion.md](design-by-accretion.md).
 
-Also: [`2004 tuned emergence essay`](../will-wright/sources/2004-02-21-chris-trottier-tuned-emergence/README.md).
+## Artifacts
 
-Credits: [MobyGames](https://www.mobygames.com/search/?q=Chris+Trottier).
+| | Path |
+|---|------|
+| Character | [`CHARACTER.yml`](CHARACTER.yml) |
+| Correspondence summary | [`correspondence.yml`](correspondence.yml) |
+| Show seed (YAML) | [`../../repo-shows/design-by-accretion.yml`](../../repo-shows/design-by-accretion.yml) |
+| Sims reunion seed | [`../../repo-shows/REPO-SHOWS.yml`](../../repo-shows/REPO-SHOWS.yml) (building-the-sims) |
+| Full 2004 essay | [`../will-wright/sources/2004-02-21-chris-trottier-tuned-emergence/`](../will-wright/sources/2004-02-21-chris-trottier-tuned-emergence/) |
+
+## Related
+
+- [Will Wright](../will-wright/README.md) — created The Sims; premiere series
+- [Jamie Doornbos](../jamie-doornbos/) — SimAntics engineering
+- [Claire Curtin](../claire-curtin/) — Sims design; Simlish VOX
+- [Don Hopkins](../don-hopkins/) — Sims teammate; host
+
+Credits: [MobyGames](https://www.mobygames.com/search/?q=Chris+Trottier)
