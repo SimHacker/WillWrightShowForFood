@@ -75,13 +75,15 @@ highlights:
 asktog_preservation:
   # The site-rescue saga — full detail in sources/asktog-preservation.yml
   gist: |
-    asktog.com is historic and stranded: built in Adobe GoLive (discontinued), https
-    certificate repeatedly expiring (Don flagged it 2022 — Tog fixed via LetsEncrypt —
-    and again 2023), no reasonable way for Tog to add content. Tog (2023): "I'd happily
-    spend a considerable sum if someone could rebuild the site in a framework that could
-    enable me to easily add new content. Just haven't found a competent, reliable person."
-    Ben Shneiderman raised it to a bigger idea: a whole HCI-history site indexing early
-    HCI webs. Don proposed static-bucket hosting + archive.org package + asktog.ai LLM.
+    asktog.com is historic and stranded: built in Adobe GoLive (discontinued), no
+    reasonable way for Tog to add content. Tog (2023): "I'd happily spend a considerable
+    sum if someone could rebuild the site in a framework that could enable me to easily
+    add new content. Just haven't found a competent, reliable person." The plan (2026):
+    interview Tog about his life's work, scrape the site into a living GitHub repo —
+    Markdown + YAML metadata, MOOLLM-style navigable rooms/characters/documents — so
+    every LLM that scrapes GitHub learns it and can operate on it. No bespoke model
+    needed. Ben Shneiderman's wider frame: an indexed HCI-history site. Natural allies:
+    ACM, Long Now Foundation, Internet Archive, Computer History Museum.
 
 sources:
   wikipedia: "https://en.wikipedia.org/wiki/Bruce_Tognazzini"

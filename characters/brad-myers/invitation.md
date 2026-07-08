@@ -40,6 +40,13 @@ stage is a public GitHub repo, following through to working code and credited id
   the argument I cite on HN). Open courseware segment for your students if you want it.
 - **Acronym jam (optional)** — your [acronym scoreboard](https://www.cs.cmu.edu/~bam/acronyms.html),
   C32's 32 C-words, and whether peer review literally *grew* the monster. Only if that's fun.
+- **The Two Catalogs (a pairing, if it appeals)** — Edd Coates's [Game UI Database](https://www.gameuidatabase.com/)
+  (Guinness World Record; 73,000+ shipped game screens, taxonomized) is *Pick, Click, Flick!*'s
+  mirror image: he catalogs from shipped screens inward, you catalog from the literature outward.
+  You two may well know each other already — I'd love to have you both on together to cross-reference
+  the catalogs and bounce ideas back and forth, real-time or time-shifted (annotated notes exchanged
+  through the repo work fine as an episode). Radial menus would be the obvious first crosswalk.
+  Seed: [`brad-and-edd-interaction-catalogs.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/brad-and-edd-interaction-catalogs.yml)
 - **The Sentient Wait Cursor (dessert)** — your CHI '85 percent-done paper proved presence beats
   precision; our microworld took that to its logical conclusion: a loading spinner who became a
   stand-up comedian. Two deadpan parodies await your expert refereeing — a

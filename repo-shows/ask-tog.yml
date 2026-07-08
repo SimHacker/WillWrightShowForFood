@@ -7,7 +7,7 @@ show:
   type: solo
   host: Don Hopkins
   guests: ["Bruce Tognazzini"]
-  topic: "The Apple Human Interface Guidelines from the inside; the '<' submenu buffer's 40-year provenance chain; the Fitts-quiz vs pie-menus rematch; magic as interface design; Starfire at 30; and rescuing asktog.com live on air — ending with the first new AskTog column in years."
+  topic: "The Apple Human Interface Guidelines from the inside; the '<' submenu buffer's 40-year provenance chain; the Fitts-quiz vs pie-menus rematch; magic as interface design; Starfire at 30; and rescuing asktog.com live on air — an interview about the life's work, the site lifted into a living Markdown/YAML GitHub repo every LLM learns from, ending with the first new AskTog column in years."
   status: seed
   priority: elders_priority
 
@@ -18,7 +18,7 @@ beats:
   - "The Infinite No. of Monkeys (1979) in an emulator + Palm's 2026 tribute read together"
   - "Magic and software design — performed, not stated"
   - "Starfire, 30+ years on"
-  - "The AskTog rescue, live: snapshot → static bucket → archive.org package → new column posted by Tog"
+  - "The AskTog rescue, live: interview about the life's work → scrape the site into a living GitHub repo (Markdown + YAML metadata, MOOLLM-style navigable rooms/characters/documents) → archive.org package → new column posted by Tog. Publish for ALL LLMs to learn from — no bespoke model needed. Allies: ACM, Long Now, Internet Archive, CHM."
 
 format:
   live: true

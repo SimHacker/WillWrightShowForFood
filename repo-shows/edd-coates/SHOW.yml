@@ -46,6 +46,7 @@ pairings:
   - { with: pie-menus-retrospective.yml, why: "Don reimplements pies from scratch" }
   - { with: ben-and-heinz-pie-menus.yml, why: "PIXIE → CHI'88 historical spine" }
   - { with: brad-myers-garnet-vpl.yml, why: "CMU pie-menu guest lecture lineage" }
+  - { with: brad-and-edd-interaction-catalogs.yml, why: "PAIR — The Two Catalogs: GUIDB × Pick Click Flick cross-referenced (real-time or time-shifted note exchange)" }
 
 format:
   live: true

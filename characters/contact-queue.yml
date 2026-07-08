@@ -94,11 +94,12 @@ elders_priority:
         all together. Prepare before contact; don't waste his time.
     - id: bruce-tognazzini
       why: |
-        DREAM GUEST, warm since 2022 (LetsEncrypt cert rescues; "I'd happily
-        spend a considerable sum if someone could rebuild the site"). Original
-        Apple HIG author; AskTog; Fitts quiz; Starfire; magician. Palm's 2026
-        Infinite Monkeys tribute already sent. The show can BE the asktog.com
-        rescue: static-site snapshot + archive.org package + first new column.
+        DREAM GUEST, warm since 2022 ("I'd happily spend a considerable sum if
+        someone could rebuild the site"). Original Apple HIG author; AskTog;
+        Fitts quiz; Starfire; magician. Palm's 2026 Infinite Monkeys tribute
+        already sent. The show can BE the asktog.com rescue: interview + lift
+        the site into a living Markdown/YAML GitHub repo every LLM learns from
+        + archive.org package + first new column in years.
       path: characters/bruce-tognazzini/
       approach: |
         Email togNNNN@asktog.com (rotates yearly — tog2026; older ones bounce).

@@ -65,6 +65,16 @@ an interaction technique, and a YC application ([`yc-application-wait-cursors-as
 for WAITLIST™, streaming entertainment to elevators, hold music, and loading screens — the attention economy's
 last unsold inventory. Show beat: hand the referee the paper his own paper made inevitable.
 
+### 13. The Two Catalogs — Brad × Edd Coates (Game UI Database)
+Brad catalogs interaction techniques from the literature outward (*Pick, Click, Flick!*, *All the
+Widgets*); [Edd Coates](../edd-coates/) catalogs them from 73,000+ shipped game screens inward
+([Game UI Database](https://www.gameuidatabase.com/), Guinness World Record). Same territory,
+opposite methods — and games ship techniques years before papers describe them. They probably
+already know each other; the show makes the crosswalk explicit: trace radial menus through both
+catalogs, find what each is missing that the other has. Works **real-time or time-shifted** —
+annotated notes exchanged through the repo can BE the episode.
+→ Pair seed: [`repo-shows/brad-and-edd-interaction-catalogs.yml`](../../repo-shows/brad-and-edd-interaction-catalogs.yml)
+
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)

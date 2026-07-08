@@ -1,0 +1,48 @@
+# SHOW SEED — Brad Myers + Edd Coates: The Two Catalogs
+# Seed. A great PAIR — the academic taxonomist and the industry archivist,
+# cataloging the same territory from opposite ends.
+
+show:
+  id: brad-and-edd-interaction-catalogs
+  title: "The Two Catalogs — Brad Myers + Edd Coates"
+  type: group
+  host: Don Hopkins
+  guests: ["Brad A. Myers", "Edd Coates"]
+  topic: "Pick, Click, Flick! meets the Game UI Database: the academic taxonomy of interaction techniques and the industry's 73,000-screen visual archive, cross-referenced live. Where the literature and the shipping record agree, where they contradict, and what each catalog is missing that the other one has."
+  status: seed
+
+why_a_great_pair:
+  - "Brad A. Myers — Pick, Click, Flick! (ixtbook.com) is the interaction-techniques bible: the whole history of how we point, select, and gesture, with citations. All the Widgets (CHI '90) was the video catalog before video catalogs."
+  - "Edd Coates — the Game UI Database (Guinness World Record; 73k+ screens) is the largest curated catalog of shipped game interfaces: what the industry actually built, taxonomized and searchable."
+  - "Same territory, opposite methods: Brad catalogs from the literature outward; Edd catalogs from shipped screens inward. Games ship interaction techniques years before papers describe them — and papers describe techniques games never discover."
+  - "They probably already know of each other; the show makes the crosswalk explicit and public."
+  - "Don bridges: pie menus live in BOTH catalogs — the Pick, Click, Flick! section (p. 171 territory) and GUIDB's radial-menu taxonomy — and he shipped the Sims pies both catalogs cite."
+
+beats:
+  - "Show and tell: each guest walks the other through his catalog — taxonomy design, what counts as an entry, what gets rejected"
+  - "The crosswalk: pick one technique (radial menus is the obvious first) and trace it through both catalogs — literature lineage vs shipping record"
+  - "What games knew first — techniques GUIDB has that the academic literature missed or lagged (and vice versa)"
+  - "All the Widgets (1990) → GUIDB 2.0 video (2024): the 34-year arc of cataloging interfaces in motion"
+  - "Second editions: what belongs in the next Pick, Click, Flick! from the GUIDB record; what GUIDB taxonomy could borrow from the VPL/interaction-techniques literature"
+  - "Ethical archives — GUIDB's no-AI-scraping stance meets academic citation culture; who gets credit and who gets paid"
+
+format:
+  live: true
+  audience_qa: true
+  time_shifted_ok: true
+  notes: |
+    Real-time is ideal (Pittsburgh + UK + Amsterdam all exist on the internet), but this
+    pair works TIME-SHIFTED too: the repo is the shared stage, so Brad and Edd can exchange
+    annotated notes asynchronously — Brad marks up a GUIDB taxonomy branch, Edd marks up a
+    book section, each records a reaction pass, and the splice becomes the episode. The
+    exchange-of-notes IS the show; live conversation is the bonus.
+
+ties_to:
+  - characters/brad-myers/
+  - characters/edd-coates/
+  - repo-shows/brad-myers-garnet-vpl.yml
+  - repo-shows/edd-coates/
+  - repo-shows/edd-coates/pie-menus-piecraft.yml
+  - characters/don-hopkins/pie-menus-chi-88-and-beyond.md
+
+consent: not_yet_asked

@@ -1,10 +1,10 @@
-# The AskTog Preservation Saga — 2022–2023 email record (public-safe digest)
-# Why asktog.com matters, why it's stranded, and the rescue plans on the table.
+# The AskTog Preservation Saga — public-safe digest
+# Why asktog.com matters, why it's stranded, and the living-repo rescue plan.
 
 meta:
   character: bruce-tognazzini
   curated_by: don-hopkins
-  span: "Sep 2022 – Nov 2023 (ongoing)"
+  span: "2022 – 2026 (ongoing)"
   participants: [don-hopkins, bruce-tognazzini, ben-shneiderman, ted-selker, al-kossow, arthur-van-hoff]
 
 the_site:
@@ -18,24 +18,31 @@ the_site:
 
 the_strandedness:
   built_in: "Adobe GoLive — discontinued; Tog lost all reasonable edit access"
-  certs: |
-    https certificate expired Sep 2022 (Don flagged via Ben Shneiderman; Tog fixed with
-    LetsEncrypt Oct 2022) and again Nov 2023 (site was on paid Sectigo certs; the
-    LetsEncrypt renewal cron apparently never stuck).
   tog_verbatim_2023:
     - "I no longer have any reasonable access to my site since Adobe discontinued GoLive."
     - "I also tired of having to spend ten times as much time formatting new material as I did writing it."
     - "I'd happily spend a considerable sum if someone could rebuild the site in a framework that could enable me to easily add new content. Just haven't found a competent, reliable person to do that task."
 
 the_plans:
-  static_rescue:
+  the_living_repo:   # THE plan (2026) — supersedes the 2023 sketches below
     who: don-hopkins
     what: |
-      Snapshot → static bucket (AWS/GCS): auto-renewing certs, trivially cheap, survives
-      HN hugs; replace the broken search box with Google search; package the whole site
-      for archive.org so anyone can browse offline. Long-lived host preferred (ACM) over
-      any startup cloud. Jim Paradis identified as the competent, reliable builder Tog
-      gave up looking for.
+      Interview Tog about the site and his life's work, then scrape asktog.com into a
+      GitHub repo: every column in clean Markdown with a YAML metadata skeleton,
+      organized MOOLLM-style as a navigable world — rooms, characters, documents, mind
+      maps, memory palaces, adventures, dragons, treasures. Live, simulatable, forkable.
+      The same treatment Scott Adams and Don want for their own life's accumulated
+      data — exactly what a Repo Show is meant to produce. Static hosting and an
+      archive.org package fall out of the repo for free; Google search replaces the
+      broken search box; Jim Paradis remains the competent, reliable builder Tog gave
+      up looking for.
+  forget_training_an_llm:
+    who: don-hopkins
+    what: |
+      The 2023 "asktog.ai" idea (train an LLM on the corpus) is obsolete. The goal is
+      to publish ALL the information in a GitHub repo that WILL be scraped by every
+      LLM — formatted so models can learn from it AND operationalize it. You don't
+      train your own model; you feed them all, forever, with attribution baked in.
   hci_history_site:
     who: ben-shneiderman
     what: |
@@ -43,20 +50,18 @@ the_plans:
       early days of HCI and provide some kind of index to them... a nicely done HCI
       history page would be helpful." Wayback has pieces but is awkward for a site
       DEDICATED to usability.
-  asktog_ai:
-    who: [don-hopkins, ben-shneiderman]
-    what: |
-      Train an open LLM on the AskTog corpus + early HCI sites: interactive Q&A,
-      summarization, trend analysis, simulated historical dialogues, research-gap
-      spotting. Working name: asktog.ai. Possible partners: CHM, ACM SIGCHI.
-  advice_sought:
+  natural_allies:
+    - "ACM / SIGCHI — long-lived institutional host"
+    - "Long Now Foundation — this is exactly a 10,000-year-library problem"
+    - "Internet Archive — the offline-browsable package"
+    - "Computer History Museum — the life's-work interview"
     - "Al Kossow (bitsavers.org) — computer-history preservation practice"
     - "Arthur van Hoff — could Apple help? Tog wrote their original HIG"
 
 status: |
-  Open as of the last thread. The Repo Show invitation proposes doing the rescue AS the
-  show: snapshot, bucket, archive.org package, and the first new AskTog column in years —
-  posted by Tog himself through a framework he can actually use.
+  Open. The Repo Show invitation proposes doing the rescue AS the show: the interview,
+  the scrape, the Markdown + YAML repo, the archive.org package, and the first new
+  AskTog column in years — posted by Tog himself through a framework he can actually use.
 
 links:
   - https://asktog.com

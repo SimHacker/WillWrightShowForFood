@@ -29,9 +29,10 @@ Manager, NeXT regressed it, Amazon resurrected it, Brad Myers canonized it on p.
 
 ### 3. A Quiz Designed to Give You Fitts — the friendly rematch
 
-Mile-high menu bar vs pie menus: both are Fitts' Law plays, and Don has argued the
-geometry with Tog's article for decades (EduCom '88 Steve Jobs demo, NPUC Don Norman
-demo, Blender's adoption). Settle it amiably, with demos.
+Mile-high menu bar vs pie menus: both are Fitts' Law plays, two geometries of the same
+law, in friendly conversation for decades (EduCom '88 Steve Jobs demo, NPUC Don Norman
+demo, Blender's adoption). Compare them amiably, with demos — and celebrate Fitts' Law
+together.
 
 ### 4. The Infinite No. of Monkeys (1979) → Palm (2026)
 
@@ -54,11 +55,17 @@ LLM-everywhere moment would look like shot in the Starfire style.
 
 ### 7. The AskTog rescue — do it AS the show
 
-GoLive stranded the site; certs kept expiring; Tog wants to WRITE, not format. The
-episode: snapshot → static bucket → archive.org package → first new AskTog column in
-years, posted by Tog through a framework he can actually use. Ben Shneiderman's bigger
-frame: an indexed HCI-history site; Don's addendum: **asktog.ai**, an LLM trained on
-the corpus. [Sources](sources/asktog-preservation.yml)
+GoLive stranded the site; Tog wants to WRITE, not format. The episode: interview Tog
+about the site and his life's work, then lift asktog.com into a **living GitHub repo** —
+every column in clean Markdown with a YAML metadata skeleton, organized MOOLLM-style as
+navigable rooms, characters, documents, mind maps, memory palaces. The same treatment
+Scott Adams and Don want for their own life's accumulated data; exactly what a Repo Show
+is meant to produce. Forget training a bespoke LLM — publish the corpus so **every** LLM
+that scrapes GitHub learns it and can operationalize it. Ben Shneiderman's bigger frame
+(an indexed HCI-history site) still applies; ACM, the Long Now Foundation, the Internet
+Archive, and the Computer History Museum are natural allies. Payoff: the first new AskTog
+column in years, posted by Tog through a framework he can actually use.
+[Sources](sources/asktog-preservation.yml)
 
 ### 8. Crediting the invisible — Kristee Kreitman and friends
 
