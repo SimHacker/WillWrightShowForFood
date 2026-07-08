@@ -15,7 +15,7 @@ format: remote_or_in_person
 Brad —
 
 We traded email in 2023 about the **Interaction Techniques** book chapter — pie menus vs marking
-menus, accuracy, Buxton FUD — and you were generous about getting the history right. Before that:
+menus, getting the history and accuracy right — and you were generous about it. Before that:
 I worked in your **Garnet** lab (~1992–93), built the PostScript printing driver, coined **GLASS**
 (Graphical Layer and Server Simplifier — my own strained acronym in your gem-themed family), and
 sent pie-menu demos to **All the Widgets**. I guest-lectured your **05-640** class in 2019 on pie
