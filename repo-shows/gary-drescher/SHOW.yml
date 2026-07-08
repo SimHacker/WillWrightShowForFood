@@ -24,6 +24,11 @@ readable:
   essay: ../../characters/gary-drescher/made-up-minds.md
   invitation: ../../characters/gary-drescher/invitation.md
 
+show_question: >
+  Where does the making-up happen — in the mechanism, the author, the observer, or the grammar?
+  (For Gary AND Will. Palm asks it first, live, from the audience of Will's premiere:
+  repo-shows/will-wright-premiere/audience/palm/questions.yml, question 6 — priority 1.)
+
 dream_segments:
   - "Made-Up Minds — the pun: Drescher ↔ Will Wright ↔ soul-files ↔ LLM characters (see made-up-minds.md)."
   - "Who makes up a mind? — the presupposition trap: schema mechanism as a mind making ITSELF up (no homunculus); Will authors conditions, players complete the Sim; LLM personas as made-up minds making up made-up minds. 'Existing minds make themselves up; other minds can only persuade' — portrayal ethics in one line."

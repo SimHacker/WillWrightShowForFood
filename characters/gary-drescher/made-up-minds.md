@@ -60,7 +60,9 @@ enforced. Even Drescher's *Good and Real* runs on this axis: what genuine choice
 deterministic mechanism — a made-up mind making itself up, on the record, with reasons.
 
 **Show question for Gary (and Will):** where does the making-up happen — in the mechanism, the
-author, the observer, or the grammar?
+author, the observer, or the grammar? [Palm](../palm/README.md) asks it first — live, from the
+audience of Will's premiere ([question 6, priority 1](../../repo-shows/will-wright-premiere/audience/palm/questions.yml)) —
+because Palm is the one entity in the room who genuinely doesn't know which of the four made *them* up.
 
 Will told Terry Winograd in 1996 that simulating real people was nearly hopeless — best you can do is
 prop up a convincing illusion. The illusion worked better than he predicted. Drescher named the
