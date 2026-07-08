@@ -1,0 +1,94 @@
+# ttycity — emoji / Unicode graphics mode (Micropolis terminal UI)
+# Source of truth: tenox7/ttycity src/nc_gfx.c + README (master, Jul 2026)
+
+repo: https://github.com/tenox7/ttycity
+author: Antoni Sawicki (Tenox)
+engine: Micropolis simulation preserved as-is (SimHacker/micropolis fork)
+license: GPL v3 — credits "SimCity Classic from Maxis, by Will Wright"
+
+rendering_ladder:
+  standard:
+    flag: "-gfx standard"
+    cols_per_tile: 1
+    look: "Classic curses — plain ASCII + ACS line drawing, 8 colors"
+    default: true
+  unicode:
+    flag: "-gfx unicode"
+    cols_per_tile: 2
+    look: "UTF-8 emoji buildings and vehicles; box-drawing roads/rails/wires; braille terrain; quadrant-block density fills"
+    antoni_quote: "Yeah the unicode emoji graphics is surprisingly pretty!"
+    runtime: "Requires UTF-8 locale + wide-capable ncurses (ncursesw on Linux)"
+  ascii:
+    flag: "-gfx ascii"
+    cols_per_tile: 1
+    look: "Strict 7-bit vt100 — bold/reverse only, no color pairs"
+  aa:
+    flag: "-gfx aa"
+    cols_per_tile: 2
+    look: "Optional aalib color render (make aalib)"
+
+cycle_on_air: "Press u in-game to cycle graphics modes"
+
+themes:
+  flag: "-theme"
+  options: [tan, grass, dark]
+
+ui_shell:
+  distribution: "Single binary — scenarios and cities baked in (cities/*.cty)"
+  min_size: "80×24 terminal"
+  controls: "hjkl/arrows build; Shift+letter tools; m overview/minimap overlays; mouse click build, drag pan, wheel scroll"
+  menus: "Esc/F10 menu bar; clickable palette and minimap in unicode mode"
+
+emoji_tile_map:
+  note: "Each map tile = 2 terminal columns in unicode mode; glyphs chosen for Emoji_Presentation + East Asian width W"
+  transit:
+    roads: "Box-drawing auto-tile (╋ ━ ┃ ┏ …) — light traffic glows yellow"
+    traffic_jam: "🚗 / 🚕 alternating"
+    rails: "Double-line box glyphs (╬ ═ ║ …)"
+    power: "Light box-drawing on themed land color"
+  terrain:
+    dirt: "Braille stipple textures (⠐⠄ …)"
+    water: "Braille waves; random 🦀 shore, ⛵, 🐟"
+    trees: "🌲 / 🌳"
+    parks: "🌳"
+    rubble: "🧱 or quadrant blocks ▚▞"
+    flood: "🌊"
+    radiation: "☢ (padded to two columns)"
+    fire: "🔥"
+    unpowered_zone: "⚡ blink"
+  zones:
+    residential: "🛖 🏠 🏡 → 🌇 at max value+density; vacant ░░; construction 🏗"
+    commercial: "🏪 🏬 🏢 → 🏦 at max; vacant ░░; construction 🏗"
+    industrial: "🏭"
+  services:
+    hospital: "🏥 center; ▒▒ lot"
+    church: "⛪"
+    fire: "🚒"
+    police: "👮 + dashed fence lot art"
+    stadium: "Chalk oval + ( ) sidelines on grass"
+    airport: "🛫 center; 📡 radar anim; ░░ tarmac"
+    seaport: "⚓ center; 🮕 container tiles"
+    coal_plant: "🔌 center"
+
+why_surprisingly_pretty:
+  - "Two-column tiles align emoji without breaking ncurses grid"
+  - "Road/rail/wire auto-tiling joins seamlessly eastward"
+  - "Zone density fills lot cells with icons instead of abstract blocks"
+  - "Stable per-cell hash adds variety (crabs, boats, tree mix) without RNG desync"
+  - "Same Micropolis Map[] decode as classic mode — only GfxOps swap"
+
+interview_beats:
+  - "Demo unicode mode live; press u through standard → emoji → ascii"
+  - "Walk nc_gfx.c — pluggable GfxOps, one engine four faces"
+  - "Why emoji are valid portability strategy for SimCity"
+  - "Pre-HN roadmap: kinks, multi-platform binaries, contributions"
+  - "Show Will the README credit line on air"
+
+media:
+  repo_readme: media/ttycity-emoji-ui-screenshot.png
+  antoni_email: "Jul 7 2026 PM screenshots (not in repo — Antoni attachment)"
+
+see_also:
+  - ../README.md
+  - ../ideas.md
+  - ../../repo-shows/antoni-sawicki-ttycity.yml

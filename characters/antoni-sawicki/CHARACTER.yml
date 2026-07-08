@@ -23,8 +23,16 @@ representation:
 invitation:
   status: draft
   consent: not_yet_asked
+  interview_planned: true
   document: invitation.md
   show_seed: repo-shows/antoni-sawicki-ttycity.yml
+
+correspondence:
+  jul_2026:
+    note: |
+      Antoni emailed ttycity link Jul 7; Don verklempt, asked about HN. Jul 8 Antoni clarified:
+      his own project, not on HN yet, emoji graphics "surprisingly pretty", binaries WIP.
+    source: sources/2026-07-08-ttycity-email-thread.yml
 
 bio:
   summary: |
@@ -48,6 +56,10 @@ bio:
 
 ttycity:
   repo: https://github.com/tenox7/ttycity
+  author: Antoni Sawicki
+  status_jul_2026: "Own project; not announced HN; polishing binaries for more platforms"
+  emoji_ui: sources/ttycity-emoji-graphics-ui.yml
+  screenshot: media/ttycity-emoji-ui-screenshot.png
   what: |
     Port of Micropolis Activity to the terminal using ncurses; simulation engine untouched.
     Assets (scenarios, cities) baked into the binary — one file, no installs. Themes (tan,
@@ -71,10 +83,14 @@ other_projects:
   openttd_nt_risc: "LLM-assisted downgrade of OpenTTD to Visual C 4.0 for Alpha/MIPS/PowerPC"
 
 contact:
-  channel: "Direct email to Don (warm; July 2026 ttycity note)"
+  email: antoni@sawicki.cc
+  channel: "Direct email to Don (warm; Jul 2026 — Antoni initiated)"
+  site: https://www.tenox.net/
 
 sources:
-  ttycity_email: sources/2026-07-07-ttycity-email.md
+  email_thread: sources/2026-07-08-ttycity-email-thread.yml
+  emoji_ui: sources/ttycity-emoji-graphics-ui.yml
+  first_contact: sources/2026-07-07-ttycity-email.md
   web:
     - https://www.tenox.net/
     - https://github.com/tenox7/ttycity
@@ -82,7 +98,8 @@ sources:
     - https://virtuallyfun.com/author/tenox/
 
 see_also:
-  - { path: README.md, why: "Public-facing overview" }
+  - { path: README.md, why: "Public-facing overview — point Antoni here" }
+  - { path: ideas.md, why: "Interview segment plan" }
   - { path: invitation.md, why: "Invitation letter" }
   - { path: ../../repo-shows/antoni-sawicki-ttycity.yml, why: "Show seed — interview the dev, play the city, show Will" }
   - { path: ../will-wright/, why: "SimCity's designer — ttycity's README credits him by name" }

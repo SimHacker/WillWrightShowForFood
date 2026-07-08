@@ -9,6 +9,10 @@ show:
   guest_room: ../characters/antoni-sawicki/
   repo_to_show: https://github.com/tenox7/ttycity
   consent: not_yet_asked
+  interview_planned: true
+
+correspondence_jul_2026:
+  note: "Antoni owns ttycity; pre-HN; emoji mode highlight — see ../characters/antoni-sawicki/sources/"
 
 pitch: |
   Antoni Sawicki (Tenox) forked the freed Micropolis code and put SimCity in the

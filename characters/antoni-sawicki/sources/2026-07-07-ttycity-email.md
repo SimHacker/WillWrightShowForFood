@@ -2,9 +2,8 @@
 
 ---
 
-**From:** Antoni Sawicki
+**From:** Antoni Sawicki <antoni@sawicki.cc>
 **To:** Don Hopkins
-**Subject:** Micropolis for the terminal with Unicode emojis
 **Date:** 7 July 2026
 
 > you may be interested in this:
@@ -13,7 +12,5 @@
 
 ---
 
-**Context:** The repo was three days old — a port of Micropolis Activity to ncurses, simulation
-engine preserved as-is, with graphics modes from vt100 ASCII to Unicode emoji tiles, forked from
-[SimHacker/micropolis](https://github.com/SimHacker/micropolis/) and crediting "SimCity Classic
-from Maxis, by Will Wright." Don was interested.
+**Follow-up:** [`2026-07-08-ttycity-email-thread.yml`](2026-07-08-ttycity-email-thread.yml) — Antoni
+clarifies ttycity is **his own project**; not on HN yet; emoji graphics "surprisingly pretty."

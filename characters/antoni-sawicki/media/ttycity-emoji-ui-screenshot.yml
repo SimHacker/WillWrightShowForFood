@@ -1,0 +1,18 @@
+# Sidecar — ttycity-emoji-ui-screenshot.png
+
+media:
+  file: ttycity-emoji-ui-screenshot.png
+  source: https://github.com/tenox7/ttycity/blob/master/ttycity.png
+  captured: 2026-07-08
+  what: "Official ttycity README screenshot — unicode/emoji graphics mode, full terminal UI with palette, minimap, and status bar"
+  project: tenox7/ttycity
+  author: Antoni Sawicki
+
+context: |
+  Antoni emailed Don Jul 8 2026 with his own screenshots and wrote: "Yeah the unicode emoji
+  graphics is surprisingly pretty!" Don had initially asked if Don found it on Hacker News;
+  Antoni clarified ttycity is his own project, not yet announced on HN.
+
+see_also:
+  - ../sources/ttycity-emoji-graphics-ui.yml
+  - ../sources/2026-07-08-ttycity-email-thread.yml

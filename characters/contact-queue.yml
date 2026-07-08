@@ -20,6 +20,9 @@ public_outreach_policy:
   see_also: ../process/maxis-history-collaborators.yml
 
 next:
+  - id: antoni-sawicki
+    why: "Warm — ttycity author (not a discovery); emoji UI interview; show Will; point him at characters/antoni-sawicki/"
+    path: characters/antoni-sawicki/
   - id: ellpeck
     why: "Warm — Tiny Life; Sims ⇔ Soul City ⇔ Tiny Life interview"
     path: characters/ellpeck/

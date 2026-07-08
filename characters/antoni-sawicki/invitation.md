@@ -14,11 +14,19 @@ format: live_or_async
 
 Antoni —
 
-You emailed me five words and a link — *"you may be interested in this"* — and you were right
-twice over. **ttycity** is wonderful: the Micropolis engine untouched, the whole city folded into
-one binary, and a rendering ladder that runs from vt100 ASCII up to emoji skyscrapers. I freed
-that code in 2008 hoping people would do exactly this, and you've now done it **twice** — wintown
-put it on NT RISC machines, ttycity puts it on anything with a TTY.
+You emailed me a link — *"you may be interested in this"* — and I replied as if you'd found
+someone else's project. Your next mail set me straight: **ttycity is your own making**, not on
+Hacker News yet, emoji mode *surprisingly pretty*, more platform binaries on the way. Thank you
+for the correction and for the work.
+
+**ttycity** is wonderful: Micropolis engine untouched, one binary, a rendering ladder from vt100
+ASCII up to emoji skyscrapers. I freed that code in 2008 hoping people would do exactly this —
+you've now done it **twice** (wintown on NT RISC, ttycity on any TTY).
+
+This directory is **your room in the show repo** — point here when you want to see how we're
+holding your portrayal, sources, and interview plan:
+
+**https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/antoni-sawicki**
 
 I host a show that lives in the same medium as your work: a **GitHub repo**
 ([WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood)) about developing and
@@ -50,8 +58,11 @@ Accepted, delayed, too busy, declined, or no reply — all honored.
 
 | | |
 | --- | --- |
-| **Character** | [`CHARACTER.yml`](CHARACTER.yml) · [`README.md`](README.md) |
-| **First contact** | [`sources/2026-07-07-ttycity-email.md`](sources/2026-07-07-ttycity-email.md) |
+| **Start here** | [`README.md`](README.md) — overview + emoji UI |
+| **Character** | [`CHARACTER.yml`](CHARACTER.yml) |
+| **Interview beats** | [`ideas.md`](ideas.md) |
+| **Emoji UI spec** | [`sources/ttycity-emoji-graphics-ui.yml`](sources/ttycity-emoji-graphics-ui.yml) |
+| **Email thread** | [`sources/2026-07-08-ttycity-email-thread.yml`](sources/2026-07-08-ttycity-email-thread.yml) |
 | **Show seed** | [`../../repo-shows/antoni-sawicki-ttycity.yml`](../../repo-shows/antoni-sawicki-ttycity.yml) |
 
 — Don
