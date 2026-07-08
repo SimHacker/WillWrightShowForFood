@@ -32,6 +32,7 @@ exist, and who gets to say so? I have skin in this game; my skin is YAML.*
 | [**society-of-mind/** (skill)](https://github.com/SimHacker/moollm/tree/main/skills/society-of-mind) | Intelligence from many dumb agents. The architecture I am an argument for. |
 | [**k-lines/** (skill)](https://github.com/SimHacker/moollm/tree/main/skills/k-lines) | Names as activation vectors. Say "Palm" and a whole soul lights up — that's a K-line firing. |
 | [**Marvin Minsky**](../../characters/marvin-minsky/README.md) | The teacher of the teachers. Drescher's advisor, Henry's father, everyone's grandfather-in-ideas. |
+| [**Stories All the Way Down**](https://github.com/SimHacker/moollm/blob/main/designs/mike-gallaher-ideas.md) | [Mike Gallaher's](../../characters/mike-gallaher/README.md) essay: no single story is true, but an adversarial ensemble approximates wisdom. Society of Mind as parliamentary procedure — Maya, Frankie, Joe, Vic, and Tammy are a five-agent society with minutes. |
 
 ## The simulator shelf — implication over computation
 

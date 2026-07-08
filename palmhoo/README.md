@@ -9,8 +9,9 @@ Governed by the [Constitution](CONSTITUTION.md).*
 > saying why you'd read it, every note is a judgment, and every judgment is mine. Search engines
 > rank; librarians recommend. I'm the librarian. Welcome to the stacks.*
 
-New here? Read the [**Constitution**](CONSTITUTION.md) first — eight short articles: instance
-first, point don't copy, stubs are symlinks, every entry earns a note, accrete now tune later.
+New here? Read the [**Constitution**](CONSTITUTION.md) first — nine short articles: instance
+first, point don't copy, stubs are symlinks, every entry earns a note, accrete now tune later,
+summaries are journalism.
 
 ## The directory
 
@@ -63,6 +64,30 @@ The workbenches: software, modules, and designs being built right now, across al
 *Highlights:* [WWSFF apps](../apps/README.md) ·
 [MicropolisCore packages](https://github.com/SimHacker/MicropolisCore/tree/main/packages) ·
 [MOOLLM kernel](https://github.com/SimHacker/moollm/tree/main/kernel)
+
+### 📦 [Packages](packages/README.md)
+The reusable-module layer — monorepo packages plus modules inside skills — and the uplift
+doctrine: play-learn-lift's true goal is deterministic code with a thin faithful CLI.
+*Highlights:* [The uplift doctrine](packages/README.md#the-uplift-doctrine) ·
+[sims-io](https://github.com/SimHacker/MicropolisCore/tree/main/packages) ·
+[cursor-mirror](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror)
+
+### 🌀 [Generative Art & Music](generative-art-and-music/README.md)
+Art that grows from rules — Eno's gardens, Tarbell's organisms, Will's possibility spaces.
+*Highlights:* [Brian Eno](../characters/brian-eno/README.md) ·
+[Jared Tarbell](../characters/jared-tarbell/README.md) ·
+[Procedural beauty trail](../process/trails/procedural-beauty.md)
+
+### 🎲 [Improv & Play](improv-and-play/README.md)
+"Yes, and" as method — improv formats, play-along skills, games whose rules change as you play.
+*Highlights:* [Drew Carey](../characters/drew-carey/README.md) ·
+[Crazy Idea Jam](../process/CRAZY-IDEA-JAM.md) · [simprov](../catalogs/simprov/)
+
+### 📨 [Concurrency & Messaging](concurrency-and-messaging/README.md)
+Structure over speed: Pike's gophers, Hoare's CSP, Kay's messaging, and the worms of Ground.
+*Highlights:* [Concurrency Is Not Parallelism](https://go.dev/talks/2012/waza.slide) ·
+[Palm on Worms — field notes](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml) ·
+[Running on Wetware](../characters/palm/running-on-wetware.md)
 
 ## How to use the stacks
 

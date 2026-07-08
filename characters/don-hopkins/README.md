@@ -216,3 +216,10 @@ flowchart LR
 - [moollm adventure-4 Don Hopkins](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/don-hopkins)
 
 ↑ [`../README.md`](../README.md) · [`CARD.yml`](CARD.yml) · [`../../process/cross-links.yml`](../../process/cross-links.yml)
+
+🐒✋ *Shelved all over Palmhoo, but especially:
+[Generative Art & Music](../../palmhoo/generative-art-and-music/README.md) (the granular CA
+synth, net jamming), [Concurrency & Messaging](../../palmhoo/concurrency-and-messaging/README.md)
+(streams of streams; also the HN quip "just set the pile of C++ manuals on fire — no gophers
+needed"), and [Packages](../../palmhoo/packages/README.md) (the uplift doctrine is his cauldron
+with the lid on).*

@@ -1,0 +1,46 @@
+# MIKE GALLAHER — character card
+# Portrayal: real person, warm contact, consent not yet asked. See schemas/portrayal-standards.md
+
+character:
+  id: mike-gallaher
+  name: "Mike Gallaher"
+  role: "Emacs hacker · co-discoverer of pie menus · committee methodologist"
+  status: stub_warm          # rich material exists; enrich after contact
+  consent: not_yet_asked
+  portrayal:
+    standard: ../../schemas/portrayal-standards.md
+    notes: "All quotes sourced from his own essay (archived in moollm designs) or the documented pie-menu history. No invented voice."
+
+bio:
+  unipress: "UniPress Emacs — the commercial Gosling Emacs; RMS's epithet 'Software Hoarder Emacs' worn as a trophy"
+  nemacs: "NeMACS — NeWS Emacs; Don rewrote the display driver, integrated pie menus + tab windows"
+  pie_menus:
+    year: 1986
+    story: "Mike and Don together arrived at angle-based context menus in discussions (and bong hits) after Mike's wedding to Liz Sommers; Don prototyped 'theta menus' for X10; Mitch Bradley coined 'pie menu'"
+    lineage: "X10 uwm -> NeWS PostScript -> HyperTIES -> SimCity (TCL/Tk) -> The Sims -> OLPC Sugar"
+    receipt: ../don-hopkins/pie-menus-chi-88-and-beyond.md
+  sun_visit: "Went with Don to visit Sun — Gilmore, Gosling, Rosenthal, Densmore, Bradley; Don read the Red PostScript book on the plane and crashed his first NeWS (SunDew) server"
+
+stories_all_the_way_down:
+  date: 2026-01-05
+  essay: https://github.com/SimHacker/moollm/blob/main/designs/mike-gallaher-ideas.md
+  thesis: "LLMs are storytelling machines; no single story is true — the ensemble approximates actionable wisdom (ensemble inference over the latent space of framings)"
+  committee: [Maya paranoid-realism, Frankie idealism, Joe continuity, Vic evidence, Tammy systems]
+  skills_derived:
+    - https://github.com/SimHacker/moollm/tree/main/skills/adversarial-committee
+    - https://github.com/SimHacker/moollm/tree/main/skills/roberts-rules
+    - https://github.com/SimHacker/moollm/tree/main/skills/rubric
+    - https://github.com/SimHacker/moollm/tree/main/skills/evaluator
+  guardrails: "adversarial review, demand for evidence, testable predictions, epistemic humility — 'the story is not the reality'"
+
+why_the_show_cares:
+  - "pie menu origin story with both co-discoverers on one stage"
+  - "Emacs archaeology: UniPress vs RMS, NeMACS, NeWS culture"
+  - "live adversarial-committee segment — audience seeds personas via TicketPR"
+  - "stories-all-the-way-down × Drescher's made-up-minds: narration as mind-making"
+
+connections:
+  don_hopkins: "co-discoverer, oldest collaborator axis"
+  gary_drescher: "ensemble stories ↔ made-up minds"
+  marvin_minsky: "committee-of-selves ↔ society of mind"
+  richard_stallman: "the 'Software Hoarder' epithet — friendly historical adversary"

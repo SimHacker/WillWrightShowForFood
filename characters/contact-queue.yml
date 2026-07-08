@@ -35,6 +35,9 @@ next:
   - id: paul-haeberli
     why: "Warm — ConMan/GRAFICA Obscura/SGI; resurrection hour ('F.U.N.'); stub to enrich before sending"
     path: characters/paul-haeberli/
+  - id: mike-gallaher
+    why: "Warm, decades — pie menu co-discoverer + Stories All the Way Down; his skills already run in moollm; memory-jogging invite drafted"
+    path: characters/mike-gallaher/
   creator_network_exodus:
     why: "Panel — Tiny Life praise + EA exit + Exchange gap (verify quotes before outreach)"
     show: repo-shows/will-wright-premiere/creator-network-exodus.yml

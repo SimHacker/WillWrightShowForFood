@@ -49,3 +49,9 @@ flagged as creative fiction: fuel for "homefun," not claims of fact.
 
 See the show seed: [`repo-shows/brian-eno/`](../../repo-shows/brian-eno/README.md), and the reunion variant
 in [`repo-shows/scott-draves/`](../../repo-shows/scott-draves/README.md).
+
+---
+
+🐒✋ *Shelved in Palmhoo under [Generative Art & Music](../../palmhoo/generative-art-and-music/README.md)
+(the grandmaster gardener) and [Improv & Play](../../palmhoo/improv-and-play/README.md) (Oblique
+Strategies as a constraint deck).*

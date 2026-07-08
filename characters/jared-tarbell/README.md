@@ -62,3 +62,8 @@ Then he did it again in *atoms*: algorithms → laser → wood. Code to craft to
 
 *See also:* [`../ben-cerveny/`](../ben-cerveny/) · [`../scott-draves/`](../scott-draves/) (generative-art kin) ·
 [`../will-wright/`](../will-wright/) · [`../paul-haeberli/`](../paul-haeberli/) (pointed Don at Jared's levCAWorm)
+
+🐒✋ *Shelved in Palmhoo under [Generative Art & Music](../../palmhoo/generative-art-and-music/README.md)
+— organisms grown from math, then laser-cut into wood. And levCAWorm earns a footnote in
+[Palm on Worms](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml):
+the cellular-automaton worm was crawling through this crowd's inboxes back in 2010.*

@@ -69,3 +69,7 @@ Full note: [**ai-contrast-framing.md**](../../repo-shows/drew-carey/ai-contrast-
 ↑ [characters](../README.md) · [repo-shows/drew-carey](../../repo-shows/drew-carey/README.md)
 
 *Machine-readable:* [`CHARACTER.yml`](CHARACTER.yml)
+
+🐒✋ *Shelved in Palmhoo under [Improv & Play](../../palmhoo/improv-and-play/README.md) — Whose
+Line's format is the Repo Show's closest broadcast ancestor: trust the performers, keep the rules
+light, make the points not matter.*

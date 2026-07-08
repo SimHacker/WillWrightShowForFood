@@ -49,6 +49,7 @@ you first. Selection is opinion; opinions are signed.*
 | [**Antoni Sawicki**](../../characters/antoni-sawicki/README.md) | [ttycity](https://github.com/tenox7/ttycity) — the emoji city that made Don verklempt. |
 | [**Ellpeck**](../../characters/ellpeck/README.md) | Tiny Life — the isometric indie Sims-like, built solo, praised by Don. |
 | [**Peter Scott**](../../characters/peter-scott/README.md) | The BBC Micro SimCity porter — Acorn-era craft, a city in 32K. |
+| [**Mike Gallaher**](../../characters/mike-gallaher/README.md) | Co-discoverer of pie menus (1986, after his own wedding) and author of "Stories All the Way Down" — the essay MOOLLM's deliberation skills are built from. |
 | [**Contact queue**](../../characters/contact-queue.yml) | Who's being invited next, and how warm the trail is. |
 
 ## Recently opened wings

@@ -129,3 +129,9 @@ Your ordered tour: [**guest_will**](../../process/entryways/guest-will.md) — i
 ---
 
 *Raw directory:* [browse files in this folder](./)
+
+🐒✋ *Shelved in Palmhoo under [Generative Art & Music](../../palmhoo/generative-art-and-music/README.md)
+(possibility-space design as fine art), [Improv & Play](../../palmhoo/improv-and-play/README.md)
+(The Sims as an improv stage with motive bars), and — by way of a pet cellular-automaton worm
+doing glider patterns on your palm in the old LLOOOOMM chronicles —
+[Concurrency & Messaging](../../palmhoo/concurrency-and-messaging/README.md).*
