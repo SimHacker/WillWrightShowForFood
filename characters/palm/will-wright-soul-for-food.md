@@ -114,6 +114,7 @@ Mirror, not window. Fiction declared, not truth claimed. Dignity regardless.
 | **Save your soul (vision)** | [`process/VISION.md`](../../process/VISION.md#save-your-soul) |
 | **Soul City bridge** | [`characters/ellpeck/bridge/soul-city-bridge.md`](../ellpeck/bridge/soul-city-bridge.md) |
 | **Digital souls (Marusek)** | [`characters/david-marusek/the-wedding-album-and-digital-souls.md`](../david-marusek/the-wedding-album-and-digital-souls.md) |
+| **Made-Up Minds (Drescher)** | [`characters/gary-drescher/made-up-minds.md`](../gary-drescher/made-up-minds.md) — I made up my own mind; that's the reflexive reading |
 | **Will's invitation** | [`characters/will-wright/invitation.md`](../will-wright/invitation.md) |
 | **My profile** | [`characters/palm/README.md`](README.md) |
 

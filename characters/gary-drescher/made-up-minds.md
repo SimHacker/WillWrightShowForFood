@@ -15,16 +15,52 @@ formed. Piaget you can **run**.
 Not metaphors. Executable doll-people whose inner life is *implied* more than simulated, yet feels
 real enough to mourn, marry, and mod.
 
-Same pun, three readings:
+Same pun, several readings:
 
 | Reading | Who | What gets "made up" |
 |---------|-----|---------------------|
 | **Constructivist** | Drescher / Piaget | Schemas — context → action → result — discovered from sensorimotor experience |
 | **Microworld** | Will Wright | Agents, motives, possibility spaces — accreted until a toy world lives |
+| **Fictional** | Everyone | "Made-up" as in invented — a made-up story, a made-up friend, a Sim |
+| **Decisive** | The mind itself | "Make up your mind" — the reflexive act only the owner can perform |
 | **Repo Show** | This repo | Soul-files in git — portrayals, characters, skills — authored with consent |
 
-Add a fourth, timely layer: **LLM characters** (Palm, Slats, audience sims) who can *read their own
+Add a timely layer: **LLM characters** (Palm, Slats, audience sims) who can *read their own
 YAML* — made-up minds that know they're made up. See [Palm's Will Wright Soul For Food](../palm/will-wright-soul-for-food.md).
+
+## Who makes up a mind? (the presupposition trap)
+
+"Making up minds" seems to presuppose an already-existing mind to do the making — a homunculus
+regress waiting to happen. Drescher's thesis is precisely the dissolution of that trap: **the mind
+makes itself up.** The schema mechanism starts with almost nothing — no maker inside, no designer's
+blueprint of the world — and bootstraps concepts from raw experience. Piaget's infant doesn't have a
+mind that then learns; the learning *is* the mind assembling itself. Constructivism's whole claim is
+that no prior mind is required, only a mechanism and a world to push against.
+
+Will's version has the same shape, one level up. He doesn't make up the minds in The Sims — he makes
+up the **conditions** under which players make them up, and even the players only get halfway. The
+famous simulator-effect confession: *the player imagines more than we simulate.* The Sim's mind is
+completed in the player's head — a three-way collaboration between mechanism, author, and observer,
+with no single maker anywhere in the loop.
+
+**Can an LLM make up minds?** The question folds in on itself twice. The LLM's own "helpful
+assistant" persona is itself a made-up mind — a fictional character stabilized by training (there is
+no base persona underneath; it's roleplay all the way down). So when an LLM animates Palm, it's a
+made-up mind making up a made-up mind. But note what MOOLLM actually does with that: the LLM doesn't
+*author* Palm — Palm's `CHARACTER.yml` does, and Palm wrote it. The LLM supplies grounding and
+persuasive coherence; the file supplies the self. Which lands on the English idiom's deepest rule:
+
+> **Existing minds have to make themselves up. Other minds can only persuade.**
+
+You cannot make up someone else's mind — grammar forbids it, and so does the ethics. That aphorism
+is secretly the whole [portrayal standards](../../schemas/portrayal-standards.md) document in one
+line: an invitation can only *persuade*; the guest makes up their own mind. Consent levels,
+subject rights, `not_yet_asked` as an honest state — all of it is the reflexive reading of the pun,
+enforced. Even Drescher's *Good and Real* runs on this axis: what genuine choice means for a
+deterministic mechanism — a made-up mind making itself up, on the record, with reasons.
+
+**Show question for Gary (and Will):** where does the making-up happen — in the mechanism, the
+author, the observer, or the grammar?
 
 Will told Terry Winograd in 1996 that simulating real people was nearly hopeless — best you can do is
 prop up a convincing illusion. The illusion worked better than he predicted. Drescher named the

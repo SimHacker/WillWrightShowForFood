@@ -15,10 +15,25 @@ PhD lineage, Leela, MOOLLM skills.
 
 - **Constructivist:** minds built from schemas, not filled from above (Piaget → Drescher)
 - **Will Wright:** players make up minds in Sims, Proxi, stories — hobby-scale constructivism
+- **Fictional:** made-up as in invented — a made-up story, a made-up friend, a Sim
+- **Decisive/reflexive:** "make up your mind" — the act only the owner can perform
 - **Repo Show:** soul-files in git — consented portrayals ([Palm](../palm/will-wright-soul-for-food.md))
 - **LLM era:** made-up minds that read their own CHARACTER.yml
 
 **Dream crossover:** Gary + Will on camera — mechanism vs microworld; Motive bars vs schemas.
+
+### 1b. The presupposition trap — who does the making?
+
+Does "making up minds" presuppose an existing mind to do the making? Drescher's answer is no: the
+schema mechanism is a mind **making itself up** from raw experience — no homunculus, no regress.
+Will's answer is also no, differently: he authors *conditions*, players complete the Sim's mind in
+their heads (the simulator effect). An LLM adds a twist — its own assistant persona is a made-up
+mind, so animating Palm is a made-up mind making up a made-up mind. And the idiom's rule holds the
+ethics: **existing minds make themselves up; other minds can only persuade** — which is
+[portrayal standards](../../schemas/portrayal-standards.md) in one sentence. Full argument:
+[`made-up-minds.md`](made-up-minds.md#who-makes-up-a-mind-the-presupposition-trap).
+
+**Show question:** where does the making-up happen — mechanism, author, observer, or grammar?
 
 ### 2. Made-Up Minds, remade (show seed)
 
