@@ -17,10 +17,10 @@ guests_priority:
   - characters/plumbella/
   - characters/james-turner/
   - characters/lilsimsie/
-  optional:
-    - characters/devon-bumpkin/
-    - characters/vixella/
-    - characters/steph0sims/
+guests_optional:
+  - characters/devon-bumpkin/
+  - characters/vixella/
+  - characters/steph0sims/
 
 threads:
   tiny_life_praise:

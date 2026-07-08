@@ -1,0 +1,34 @@
+# Don Hopkins → Peter Norvig — MOOLLM outreach thread (2025–2026)
+# Email summaries; paraphrase unless quoted.
+
+meta:
+  consent: warm_lead
+  portrayal: paraphrase_only
+
+timeline:
+  - date: 2020-05-01
+    what: Don celebrates Peter posting "I've Consed Every Pair" to Medium; HN discussion
+  - date: 2025-06-28
+    what: |
+      Don emails roll-up of Facebook conversations — HN posts, Pervert's Guide to Computer
+      Programming paper, Sims 4 synthetic vision work, Programming by Demonstration log cleanup,
+      permission request for Peter's AGI book chapter (LLMs beyond "write this essay for me").
+      Offers "Vulcan Screen Meld" Google Meet to demo character creation with publications.
+  - date: 2026-01-04
+    what: |
+      Don announces MOOLLM reboot from LLOOOOMM — focused, self-explanatory, portrayal-standards
+      fixes for representing real people. Asks Peter to read README + quickstart + PROTOCOLS.yml +
+      adventure examples. Link: https://github.com/SimHacker/moollm
+
+book_chapter_offer: |
+  Peter is writing an AI book and offered to include a chapter about Don's work. The Repo Show
+  is the natural other half — recorded conversation usable as source material.
+
+vulcan_screen_meld: |
+  Don's name for a collaborative Google Meet screen-share demo: create a Peter character with
+  favorite publications and writings, Coffee Talk style — Twitch-adjacent but for research.
+
+see_also:
+  - worms-ground-truth-conversation.yml
+  - ../invitation.md
+  - ../../../repo-shows/peter-norvig/README.md

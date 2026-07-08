@@ -1,0 +1,24 @@
+# Python for Lisp Programmers — Peter Norvig
+# Don forwarded this in 2007 to Devon and Nick Papadakis.
+
+meta:
+  author: Peter Norvig
+  url: https://norvig.com/python-lisp.html
+  kind: essay
+  forwarded_by: don-hopkins
+  forward_date: 2007-06-06
+  consent: public
+
+summary: |
+  Succinct comparison of Python and Lisp for people who already think in s-expressions — gets you
+  cooking in Python fast without condescending to either language. Don's cover note: "Sorry there's
+  no comparison of PHP and Lisp, but it would be laughable because Lisp is SOOOOOO much better than
+  PHP." (Don's voice, not Peter's.)
+
+show_hooks:
+  - "PAIP lineage — Peter as the teacher who already mapped paradigms for polyglot hackers"
+  - "Pairs with the 'I've Consed Every Pair' song — same author, different register"
+
+see_also:
+  - ive-consed-every-pair.yml
+  - teach-yourself-programming-in-ten-years.yml

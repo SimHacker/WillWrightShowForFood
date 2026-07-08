@@ -23,9 +23,9 @@ will_framing:
 pronoun_surfing:
   pattern: third_person ↔ first_person mid-narration
   examples_placeholder:
-    - "I bulldozed the industrial zone" (player as god/hand)
-    - "My Sim got promoted" (player owns avatar)
-    - "She refused to date him" (player as storyteller watching a character)
+    - "I bulldozed the industrial zone (player as god/hand)"
+    - "My Sim got promoted (player owns avatar)"
+    - "She refused to date him (player as storyteller watching a character)"
   note: "Replace with verbatim clips from transcript when available."
 
 show_connections:

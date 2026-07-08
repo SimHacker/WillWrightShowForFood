@@ -29,6 +29,11 @@ connections:
   leela_orbit: "Open to a show with Don's Leela AI colleagues — Henry Minsky and others — on Society-of-Mind ideas in modern AI."
   twenty_one_days: "His essay 'Teach Yourself Programming in Ten Years' (deliberate practice over hype) is a touchstone Don loves — and a natural frame for a constructionist conversation about LLMs and skills."
   moollm_skills: "Curious about MOOLLM and skills as a way to author and teach AI behavior — the topic he can take in whatever direction he wants."
+  worms_and_ground: |
+    Jan 2026 thread — Peter named The Ground Truth (AI/ML/worms publication), Ground as character/editor,
+    worm pipelines (map/reduce, save-excursion, wormholes for castings). Palm's field notebook is the
+    invitation to read that lore: moollm/.../palm-on-worms-fieldnotes.yml
+  scruffy_on_neat: "Peter's line on MOOLLM — triumph of scruffy AI on neat-AI substrate — matches the worm/YAML split."
 
 # Paraphrased from his recent public talks/interviews (2025) on how LLMs reshape programming.
 # Themes only — no invented quotations; confirm exact wording with Peter before airing.
@@ -53,6 +58,15 @@ sources:
     - "Paradigms of Artificial Intelligence Programming: Case Studies in Common Lisp (1992)"
   essays:
     - "Teach Yourself Programming in Ten Years (https://norvig.com/21-days.html)"
+    - "Python for Lisp Programmers (https://norvig.com/python-lisp.html)"
+    - "I've Consed Every Pair (https://medium.com/@peternorvig/ive-consed-every-pair-54ef5d9d93b6)"
+  repo_artifacts:
+    - sources/teach-yourself-programming-in-ten-years.yml
+    - sources/python-for-lisp-programmers.yml
+    - sources/ive-consed-every-pair.yml
+    - sources/worms-ground-truth-conversation.yml
+    - sources/moollm-outreach.yml
+  field_notebook: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml
 
 see_also:
   - { path: ../henry-minsky/, why: "Leela AI — Society of Mind in modern AI; co-guest for the show" }

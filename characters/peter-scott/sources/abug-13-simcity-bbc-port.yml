@@ -48,7 +48,7 @@ simcity_port:
   materials_received: "Box files, algorithms, drawings, every city tile — 'kitchen sink'"
   phone:
     who: Will Wright (original developer)
-    exchange: "BBC has 20K memory" / "Seriously?" — don't do a cut-down C64-style job
+    exchange: '"BBC has 20K memory" / "Seriously?" — don''t do a cut-down C64-style job'
   implementation:
     weeks_on_algorithms: "~2 weeks before graphics"
     language: "Mostly 6502 assembly; BBC BASIC core for game loop edges, high scores"

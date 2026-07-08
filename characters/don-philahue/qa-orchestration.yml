@@ -18,9 +18,10 @@ thesis: |
 
 inputs:
   question_forests:
-    - repo-shows/<show>/audience/*/questions.yml
-    - characters/*/questions.yml
-    merge: read_time union — orchestrator merges at read; see question-tree.yml#tree_shape
+    paths:
+      - repo-shows/<show>/audience/*/questions.yml
+      - characters/*/questions.yml
+    merge: "read_time union — orchestrator merges at read; see question-tree.yml#tree_shape"
   advertisements:
     - audience/*/CARD.yml ASK-QUESTION
     - guest CARD abilities (may outscore or defer Q&A)
@@ -114,7 +115,7 @@ scoring:
     - question node theme vs segment topic
     - github_discussion vote boost (question-tree.yml#github_discussion)
     - guest_already_read_ticketpr boost
-    - to: matches focus guest (required gate — score 0 if mismatch)
+    - "to: matches focus guest (required gate — score 0 if mismatch)"
     - prior_reading satisfied
   thresholds:
     ask_now: high — in-conversation window

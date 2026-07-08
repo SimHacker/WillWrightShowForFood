@@ -72,7 +72,7 @@ threads:
       date: "2026-07-06"
       thread: "When 2+2=5 (arstechnica.com)"
       punchline: "Oh sorry, that was 2+2=7, never mind!"
-      quote_closing: "SEVEN." — Trurl's smashed machine, last word
+      quote_closing: "SEVEN. — Trurl's smashed machine, last word"
     artifacts:
       - ../don-hopkins/sources/2026-07-06-hn-when-2-plus-2-equals-five.md
       - literary/authority-without-truth.yml
