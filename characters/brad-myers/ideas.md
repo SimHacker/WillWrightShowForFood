@@ -73,7 +73,7 @@ opposite methods — and games ship techniques years before papers describe them
 already know each other; the show makes the crosswalk explicit: trace radial menus through both
 catalogs, find what each is missing that the other has. Works **real-time or time-shifted** —
 annotated notes exchanged through the repo can BE the episode.
-→ Pair seed: [`repo-shows/brad-and-edd-interaction-catalogs.yml`](../../repo-shows/brad-and-edd-interaction-catalogs.yml)
+→ Pair seed: [The Two Catalogs](../../repo-shows/brad-and-edd-interaction-catalogs.md) ([yml](../../repo-shows/brad-and-edd-interaction-catalogs.yml))
 
 ## Sources (public)
 

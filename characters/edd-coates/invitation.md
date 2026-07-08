@@ -54,7 +54,7 @@ warm room, screen-share heavy, following through to something useful in the open
   cross-reference the catalogs and bounce ideas back and forth, real-time or time-shifted
   (annotated notes exchanged through the repo work fine as an episode). Radial menus would be
   the obvious first crosswalk.
-  Seed: [`brad-and-edd-interaction-catalogs.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/brad-and-edd-interaction-catalogs.yml)
+  Seed: [The Two Catalogs](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/brad-and-edd-interaction-catalogs.md)
 
 **Format:** Remote is fine; in-person if we're ever in the same city. **Zero homework — as much *homefun* as you are up to.** Browse
 GUIDB live, whiteboard pie specs, argue about Fitts's law — whatever's fun.

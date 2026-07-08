@@ -10,7 +10,7 @@ MIT Press, ACM, and Snap! unless marked as Don's paraphrase of a private thread.
 | [beauty-and-joy-of-computing.yml](beauty-and-joy-of-computing.yml) | BJC + 2024 Karlstrom award — CSforALL that actually reached new audiences |
 | [berkeley-logo-and-cs61a.yml](berkeley-logo-and-cs61a.yml) | UCBLogo and the legendary SICP-based CS 61A — decades of making hard ideas teachable |
 | [micropolis-snap-2018.yml](micropolis-snap-2018.yml) | Don's 2018 thread — open SimCity + CAM6 in Snap! blocks; Brian looped in Jens |
-| [snapcon-2025-karlstrom-address.yml](snapcon-2025-karlstrom-address.yml) | Snap!Con 2025 evening talk — CCUS, no grades, curriculum critique, lambda in Snap! ([video](https://www.youtube.com/watch?v=pDK2PE_pkqQ)) |
+| [snapcon-2025-karlstrom-address.md](snapcon-2025-karlstrom-address.md) ([yml girder](snapcon-2025-karlstrom-address.yml)) | Snap!Con 2025 evening talk — CCUS, no grades, curriculum critique, lambda in Snap! ([video](https://www.youtube.com/watch?v=pDK2PE_pkqQ)) |
 | [snapcon-2025-karlstrom-address-transcript.md](snapcon-2025-karlstrom-address-transcript.md) | Cleaned full transcript of the live talk + Q&A — the "my friend" answer, Hargreaves's unconditional positive regard, Buber, the seventh-grade algebra teacher tease |
 | [snap-macros-metaprogramming.yml](snap-macros-metaprogramming.yml) | Rings as quote; Ch. 11 AST; Lisp-family macros (partial); hygiene/FEXPR; Palm audience questions |
 | [../ben-shneiderman/sources/hcil-human-first-naming.yml](../ben-shneiderman/sources/hcil-human-first-naming.yml) | Human-first HCIL vs computer-first CHI — Shneiderman's answer to the same naming accident Brian names in the Karlstrom talk |

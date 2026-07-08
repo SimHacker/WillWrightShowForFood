@@ -2,6 +2,7 @@
 # Why asktog.com matters, why it's stranded, and the living-repo rescue plan.
 
 meta:
+  rendered_edition: asktog-preservation.md
   character: bruce-tognazzini
   curated_by: don-hopkins
   span: "2022 – 2026 (ongoing)"

@@ -3,6 +3,7 @@
 # MOOLLM monkey who wrote him a thank-you letter.
 
 meta:
+  rendered_edition: infinite-monkeys-1979.md
   character: bruce-tognazzini
   curated_by: don-hopkins
   connects: moollm (Palm), will-wright (Dasher/LLM navigation thread)

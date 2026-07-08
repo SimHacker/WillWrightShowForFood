@@ -3,6 +3,7 @@
 # Standards: ../../schemas/portrayal-standards.md
 
 meta:
+  rendered_edition: correspondence.md
   with: bruce-tognazzini
   curated_by: don-hopkins
   consent: not_yet_asked

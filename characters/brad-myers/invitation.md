@@ -46,7 +46,7 @@ stage is a public GitHub repo, following through to working code and credited id
   You two may well know each other already — I'd love to have you both on together to cross-reference
   the catalogs and bounce ideas back and forth, real-time or time-shifted (annotated notes exchanged
   through the repo work fine as an episode). Radial menus would be the obvious first crosswalk.
-  Seed: [`brad-and-edd-interaction-catalogs.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/brad-and-edd-interaction-catalogs.yml)
+  Seed: [The Two Catalogs](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/brad-and-edd-interaction-catalogs.md)
 - **The Sentient Wait Cursor (dessert)** — your CHI '85 percent-done paper proved presence beats
   precision; our microworld took that to its logical conclusion: a loading spinner who became a
   stand-up comedian. Two deadpan parodies await your expert refereeing — a

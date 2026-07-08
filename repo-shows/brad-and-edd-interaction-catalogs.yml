@@ -3,6 +3,7 @@
 # cataloging the same territory from opposite ends.
 
 show:
+  rendered_edition: brad-and-edd-interaction-catalogs.md
   id: brad-and-edd-interaction-catalogs
   title: "The Two Catalogs — Brad Myers + Edd Coates"
   type: group

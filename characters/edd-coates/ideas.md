@@ -53,7 +53,7 @@ See [`pie-menus-discussion-notes.md`](../../repo-shows/edd-coates/pie-menus-disc
 
 ## Pairings
 
-- [`brad-and-edd-interaction-catalogs.yml`](../../repo-shows/brad-and-edd-interaction-catalogs.yml) — **The Two Catalogs**: Edd's Game UI Database (73k shipped screens) × [Brad Myers](../brad-myers/)'s *Pick, Click, Flick!* (the academic interaction-techniques bible). Same territory, opposite methods; cross-reference live, or exchange annotated notes time-shifted through the repo. Radial menus are the obvious first crosswalk.
+- [The Two Catalogs](../../repo-shows/brad-and-edd-interaction-catalogs.md) ([yml](../../repo-shows/brad-and-edd-interaction-catalogs.yml)) — **The Two Catalogs**: Edd's Game UI Database (73k shipped screens) × [Brad Myers](../brad-myers/)'s *Pick, Click, Flick!* (the academic interaction-techniques bible). Same territory, opposite methods; cross-reference live, or exchange annotated notes time-shifted through the repo. Radial menus are the obvious first crosswalk.
 - [`pie-menus-retrospective.yml`](../../repo-shows/INDEX.yml) — Don reimplements pies
 - [`ben-and-heinz-pie-menus.yml`](../../repo-shows/INDEX.yml) — PIXIE origins
 - [`brad-myers-garnet-vpl.yml`](../../repo-shows/INDEX.yml) — CMU pie guest lecture

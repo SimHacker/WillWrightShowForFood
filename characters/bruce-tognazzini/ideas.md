@@ -25,7 +25,7 @@ explained. What got lost when the reasons were baked into toolkits and forgotten
 Tog invented it (1986), Jim Batson did the math, Frank Leahy shipped it in the Menu
 Manager, NeXT regressed it, Amazon resurrected it, Brad Myers canonized it on p. 171 of
 *Pick, Click, Flick!*. Don knows every link in the chain personally. Walk it on air.
-[Sources](sources/apple-hig-and-menus.yml)
+[Sources](sources/apple-hig-and-menus.md)
 
 ### 3. A Quiz Designed to Give You Fitts — the friendly rematch
 
@@ -41,7 +41,7 @@ monkey on infinite typewriters — wrote him a
 [tribute](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/tribute-to-tognazzini.md):
 the theorem asked the wrong question; writing is navigation (Dasher, LLMs). Run the
 original demo in an emulator, then read the letter together.
-[Sources](sources/infinite-monkeys-1979.yml)
+[Sources](sources/infinite-monkeys-1979.md)
 
 ### 5. Magic and software design
 
@@ -65,7 +65,7 @@ that scrapes GitHub learns it and can operationalize it. Ben Shneiderman's bigge
 (an indexed HCI-history site) still applies; ACM, the Long Now Foundation, the Internet
 Archive, and the Computer History Museum are natural allies. Payoff: the first new AskTog
 column in years, posted by Tog through a framework he can actually use.
-[Sources](sources/asktog-preservation.yml)
+[Sources](sources/asktog-preservation.md)
 
 ### 8. Crediting the invisible — Kristee Kreitman and friends
 
@@ -76,7 +76,7 @@ pixels — ask him who else history is forgetting.
 ## Sources
 
 - [`invitation.md`](invitation.md)
-- [`correspondence.yml`](correspondence.yml)
+- [`correspondence.md`](correspondence.md) ([yml](correspondence.yml))
 - [`CHARACTER.yml`](CHARACTER.yml)
 - [`sources/`](sources/)
 - [AskTog](https://asktog.com) · [First Principles](https://www.asktog.com/basics/firstPrinciples.html)

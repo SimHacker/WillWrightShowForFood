@@ -52,7 +52,7 @@ I are giving our own life's accumulated data. No bespoke LLM needed: published r
 frame (an indexed HCI-history site) still applies, and ACM, the Long Now Foundation, 
 the Internet Archive, and the Computer History Museum are natural allies. 
 Payoff: the first new AskTog column in years, posted by
-you through a framework you can actually use. [The saga so far](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/bruce-tognazzini/sources/asktog-preservation.yml)
+you through a framework you can actually use. [The saga so far](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/bruce-tognazzini/sources/asktog-preservation.md)
 
 **Format:** Remote is fine; your iPad Pro and Amsterdam both exist on the internet.
 **Zero homework — as much *homefun* as you are up to.**
@@ -61,11 +61,11 @@ you through a framework you can actually use. [The saga so far](https://github.c
 
 | Topic | Link |
 | --- | --- |
-| **Show seed** | `repo-shows/ask-tog.yml` |
-| **Preservation saga** | [sources/asktog-preservation.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/bruce-tognazzini/sources/asktog-preservation.yml) |
-| **Monkeys 1979 → Palm 2026** | [sources/infinite-monkeys-1979.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/bruce-tognazzini/sources/infinite-monkeys-1979.yml) |
+| **Show seed** | [ask-tog.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/ask-tog.md) |
+| **Preservation saga** | [asktog-preservation.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/bruce-tognazzini/sources/asktog-preservation.md) |
+| **Monkeys 1979 → Palm 2026** | [infinite-monkeys-1979.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/bruce-tognazzini/sources/infinite-monkeys-1979.md) |
 | **Don's reading video** (Palm's tribute + your Apple ][ program, narrated) | [youtube.com/watch?v=lL2sw2oYU98](https://www.youtube.com/watch?v=lL2sw2oYU98) |
-| **HIG + menus dossier** | [sources/apple-hig-and-menus.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/bruce-tognazzini/sources/apple-hig-and-menus.yml) |
+| **HIG + menus dossier** | [apple-hig-and-menus.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/bruce-tognazzini/sources/apple-hig-and-menus.md) |
 | **Repo Show project** | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |
 
 Browse without a GitHub account — start at the [README](https://github.com/SimHacker/WillWrightShowForFood).

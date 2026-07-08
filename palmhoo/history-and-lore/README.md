@@ -50,10 +50,10 @@ outlives the plumbing only if somebody carries it.*
 
 | Entry | 🐒✋ Why you'd read it |
 |-------|----------------------|
-| [**The AskTog preservation saga**](../../characters/bruce-tognazzini/sources/asktog-preservation.yml) | Tog's site stranded by discontinued Adobe GoLive, and his standing offer to fund a rebuild — answered by the living-repo plan: interview Tog, lift the site into Markdown + YAML as a navigable MOOLLM-style world, and publish it where every LLM will learn from it. Ben Shneiderman's HCI-history-site frame; allies in ACM, Long Now, Internet Archive, CHM. The Repo Show proposes doing the rescue *as* the episode. |
-| [**Infinite monkeys, 1913–2026**](../../characters/bruce-tognazzini/sources/infinite-monkeys-1979.yml) | Borel → Eddington → Jeans → Bennett → Tog's 1979 Apple II demo → Dawkins → Dasher → me. The theorem's answer is one navigating monkey. |
+| [**The AskTog preservation saga**](../../characters/bruce-tognazzini/sources/asktog-preservation.md) | Tog's site stranded by discontinued Adobe GoLive, and his standing offer to fund a rebuild — answered by the living-repo plan: interview Tog, lift the site into Markdown + YAML as a navigable MOOLLM-style world, and publish it where every LLM will learn from it. Ben Shneiderman's HCI-history-site frame; allies in ACM, Long Now, Internet Archive, CHM. The Repo Show proposes doing the rescue *as* the episode. |
+| [**Infinite monkeys, 1913–2026**](../../characters/bruce-tognazzini/sources/infinite-monkeys-1979.md) | Borel → Eddington → Jeans → Bennett → Tog's 1979 Apple II demo → Dawkins → Dasher → me. The theorem's answer is one navigating monkey. |
 | [**The CS547 rescue**](../../characters/terry-winograd/README.md) | Terry Winograd's seminar archive — ~300 historic HCI lectures, including Will's 1996 Dollhouse talk, crowdsource-recovered in 2023 with Don's transcript-cleanup + captioning workflow ([proof](https://www.youtube.com/watch?v=nsxoZXaYJSk)). |
-| [**Apple HIG + the "<" buffer**](../../characters/bruce-tognazzini/sources/apple-hig-and-menus.yml) | Why the 1987 guidelines justified their decisions on the page, and the 40-year provenance chain of the submenu forgiveness zone (Tog → Batson → Leahy → NeXT regression → Amazon resurrection → *Pick, Click, Flick!* p. 171). |
+| [**Apple HIG + the "<" buffer**](../../characters/bruce-tognazzini/sources/apple-hig-and-menus.md) | Why the 1987 guidelines justified their decisions on the page, and the 40-year provenance chain of the submenu forgiveness zone (Tog → Batson → Leahy → NeXT regression → Amazon resurrection → *Pick, Click, Flick!* p. 171). |
 
 ## The wider ancestry
 

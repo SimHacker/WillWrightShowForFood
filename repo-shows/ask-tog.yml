@@ -2,6 +2,7 @@
 # Seed. Elder priority — reach him while we can.
 
 show:
+  rendered_edition: ask-tog.md
   id: ask-tog
   title: "Ask Tog, Answered — Bruce Tognazzini"
   type: solo
