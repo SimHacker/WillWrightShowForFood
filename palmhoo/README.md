@@ -89,6 +89,13 @@ Structure over speed: Pike's gophers, Hoare's CSP, Kay's messaging, and the worm
 [Palm on Worms — field notes](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml) ·
 [Running on Wetware](../characters/palm/running-on-wetware.md)
 
+### 📷 [Palmr — the media wing](palmr/README.md)
+If Yahoo is Palmhoo, Flickr is Palmr: the gallery. Patron saint Palmer Eldritch (canon patron
+saint of The Sims), who delivers cans of Ubik — the refresh that keeps images and summaries from
+decaying into half-life.
+*Highlights:* [Palm's Portrait](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-portrait-session/SLIDESHOW.md) ·
+[PKD · Lem · AI · SF](../characters/mark-weiser/pkd-lem-ai-sf.md) · [the Ubik doctrine](palmr/README.md#the-ubik-doctrine--images-decay-spray-to-refresh)
+
 ## How to use the stacks
 
 - **Browse:** each topic page is an annotated reading list — canonical documents plus stub

@@ -190,6 +190,18 @@ summaries:
     volatility: medium
     note: "will spike when Palm on Worms ships — the fieldnotes are a declared dependency of the paper"
 
+  - summary: palmhoo/palmr/README.md
+    sources:
+      - characters/mark-weiser/pkd-lem-ai-sf.md
+      - process/artifactory.yml
+      - characters/will-wright/README.md
+      - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-portrait-session/SLIDESHOW.md
+      - https://github.com/SimHacker/MicropolisCore
+    beat: palm
+    last_verified: 2026-07-08
+    volatility: medium
+    note: "the media wing; Palmer Eldritch = Sims + Ubik = coherence engine, both sourced from the Weiser PKD reading"
+
 # CROSS-REPO EXEMPLARS — claims outside palmhoo that palmhoo pages repeat.
 # These are the canaries: when a source count/date changes, every dependent listed here is stale.
 tracked_claims:

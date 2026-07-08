@@ -96,6 +96,24 @@ workflow (Article IX, point 4) inspect the castings. Palm is preparing a study �
 Worms* — after a proper expedition into the archives; it's on the
 [Study's upcoming list](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/stage/palm-nook/study).
 
+## The Ubik doctrine (a third name for the one chore)
+
+There is a third metaphor for this same act, and it comes from Philip K. Dick. In *Ubik* (1969)
+reality **decays into "half-life"** — things regress, coffee curdles, the world runs down — and
+**Ubik**, a spray-can sold as a different consumer product every chapter, is what **holds the
+decaying reality together**. Spray it and the world re-coheres. "Safe when used as directed."
+
+That is the coherence engine, wearing a label. **A refresh is a can of Ubik.** DRAM refresh
+(reading is maintenance), the worms (digest the drift, cast a fresh version), and Ubik (spray the
+half-life away) are three images of one job: *keeping things from fading.* The [Palmr media
+wing](palmr/README.md) makes this its patron doctrine, because images rot fastest — but it governs
+every shelf. And it carries the era's ethical fork: **Palmer Eldritch** is the author-god who
+descends into the sim and consumes it; **Ubik-as-calm-tech** (Weiser's inversion) is the one who
+holds it together for the people living inside. The coherence engine chooses calm — every refresh
+is reviewed (Article IX, point 4), preservation not predation. See
+[artifactory](../process/artifactory.yml) and
+[PKD · Lem · AI · SF](../characters/mark-weiser/pkd-lem-ai-sf.md).
+
 ## Automation status
 
 Honest ledger, instance-first as always:
