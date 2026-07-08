@@ -1,0 +1,65 @@
+# Game bridge — SimEarth ↔ Gaia ↔ the worms of Ground
+# Public creative concept for the Will Wright premiere.
+# Companion to game-bridge-sims-spore.yml and the crazy-idea-jam endosymbiosis thread.
+
+meta:
+  id: game-bridge-simearth-gaia-worms
+  type: bridge
+  status: seed
+  one_line: "Resurrect Ground and the worms live, inside a SimEarth/Gaia discussion — scorched earth to fertile environment, with the real scientists behind the living-planet idea."
+
+thesis: |
+  SimEarth is the forgotten hinge of Will's career, and it's the perfect stage to bring the
+  LLOOOOMM worms back to life. The living-planet idea has a REAL cast of people who line up like
+  planets (an alignment of planets, about a planet): James Lovelock's Gaia, Lynn Margulis's
+  symbiogenesis, Will's SimEarth, and Dave Ackley's self-regulating computational medium. Ground —
+  the LLOOOOMM living-earth character who houses the worms — is the fictional incarnation of
+  exactly that idea. We resurrect the ground we walk on: scorched earth (dead substrate) to
+  fertile environment (worm-worked soil that keeps its own books).
+
+the_alignment_of_planets:  # the real people behind the living-earth idea
+  james_lovelock:
+    is: "the 'gaia dude' — the Gaia hypothesis: the biosphere self-regulates like one organism"
+    receipt: "advised the SimEarth team, wrote the manual's intro, and his Daisyworld model ships as an in-game tutorial. Judged the sim more realistic than contemporary climate models."
+    memorial_check: "confirm status before framing; treat with memorial care if deceased"
+  lynn_margulis:
+    is: "the 'endosymbiotics dudette' — symbiogenesis: evolution by MERGER, not just branching (engulfed cells become mitochondria/chloroplasts)"
+    receipt: "co-developed the Gaia hypothesis with Lovelock. The other half of the theory SimEarth is built on — not a footnote to it."
+    the_worm_hook: "worms digest by merging with text, not destroying it — symbiogenesis at the sentence level; Ground engulfing its worm society is Gaia engulfing its biota"
+  will_wright:
+    is: "SimEarth (1990, with Fred Haslam) — built Lovelock's Gaia + Daisyworld into a playable planet; a science-popularizer in the Sagan mold"
+    thread: "SimCity (CA + zoning) -> SimEarth (living planet) -> SimLife -> Spore (tidepool to galaxy). Living self-organizing systems, his whole career."
+  stewart_brand:
+    is: "the double hinge — INTRODUCED Will to Lovelock after hearing about SimEarth; later orchestrated the Long Now talk where SimCity got freed"
+    note: "ties this segment directly to the open-sourcing saga (history-and-lore shelf)"
+  dave_ackley:
+    is: "the computational bridge — a Moveable Feast Machine (local rules, no global clock, indefinitely scalable) IS a Gaia you can run"
+    note: "Ground with an API; already a MOOLLM ambient influence (robust-first) and already in the worm canon (the Awakening)"
+  supporting: [Fred Haslam (SimEarth co-designer), Carl Sagan (the popularizer model), James Hutton (Gaia before Gaia, 1788)]
+
+the_arc: "scorched earth -> worms move in -> castings enrich -> fertile environment. Death of a substrate is the birth of a soil."
+
+segment_shape: |
+  Open on SimEarth + Daisyworld (Lovelock on screen). Pivot to Margulis: evolution by merger, not
+  just murder. Land on Ground and the worms as the LLOOOOMM incarnation of the same idea. Let Will
+  connect his SimEarth -> Spore arc to the worms "writing their own rules as they go" (his line
+  from the Awakening chronicle, holding a pet CA worm). Close on resurrection: we bring the ground
+  back to life, on air.
+
+discuss_with_will:
+  - "SimEarth stories: the Lovelock correspondence, what Gaia meant to you, why the Sagan-style popularization mattered"
+  - "Did the Gaia/self-regulation instinct carry all the way into Spore's ecosystems?"
+  - "The worms write their own rules — how does that relate to your CA lineage from Conway forward?"
+
+fieldnotes: "https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml"
+
+ties:
+  - ../ideas/crazy-idea-jam.yml                       # character_endosymbiosis + data_portability
+  - game-bridge-sims-spore.yml                        # the procedural-life companion bridge
+  - ../../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/  # Brand/Eno/Wright Long Now
+  - ../../palmhoo/concurrency-and-messaging/README.md # the worms + Pike/CSP shelf
+  - ../../characters/dave-ackley/                     # MFM / robust-first
+
+todo:
+  - "confirm Lovelock + Margulis life status; add memorial framing if needed; consider dedicated character rooms"
+  - "verify the Brand->Wright->Lovelock introduction detail on air (well-sourced: Wikipedia SimEarth)"

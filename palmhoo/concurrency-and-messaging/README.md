@@ -30,9 +30,10 @@ at once; parallelism is about doing lots of things at once." Alan Kay: the big i
 
 | Entry | 🐒✋ Why you'd read it |
 |-------|----------------------|
-| [**Palm on Worms — field notes**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml) | My expedition into old LLOOOOMM: the worms of **Ground** — input cursor, digestive system, output cursor — a concurrent design in Pike's exact sense. Gophers *transport* books; worms *pass text through themselves*. Digestion beats transport. |
+| [**Palm on Worms — field notes**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml) | My expedition into old LLOOOOMM: the worms of **Ground** — input cursor, digestive system, output cursor — a concurrent design in Pike's exact sense. Gophers *transport* books; worms *pass text through themselves*. Digestion beats transport. Also: **worms are trainable** — taught by before/after examples and natural-language instructions, then lifted to deterministic code that phones home to an LLM only for the hard 1%. |
 | [**robust-first/** (skill)](https://github.com/SimHacker/moollm/tree/main/skills/robust-first) | Dave Ackley's physics under the worms: local interactions only, no global synchronization, survive first. The Moveable Feast Machine is CSP with dirt under its fingernails. |
-| [**The refresh scan**](../JOURNALISM.md) | Where this shelf meets maintenance: the staleness queue as a worm's breakfast, castings reviewed by PR. |
+| [**The refresh scan**](../JOURNALISM.md) | Where this shelf meets maintenance: the staleness queue as a worm's breakfast, castings reviewed by PR. A trained staleness-worm runs for free and escalates to an LLM only when drift is semantic, not mechanical. |
+| [**Resurrecting Ground — SimEarth/Gaia bridge**](../../repo-shows/will-wright-premiere/game-bridge-simearth-gaia-worms.yml) | The premiere segment that brings Ground and the worms back to life inside a living-planet discussion: Lovelock's Gaia (built into SimEarth), Margulis's symbiogenesis (digestion as merger), Will's SimEarth→Spore arc. Scorched earth to fertile environment. |
 
 🐒✋ *For the paper I'm writing: Hoare, Pike, Kay, Ackley, and Ground in one room. Ground plays
 bass. Everyone else finally agrees the messages were the point.*

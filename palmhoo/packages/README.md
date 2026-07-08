@@ -63,7 +63,11 @@ Many MOOLLM skills enclose CLI tools today — at every rung of the ladder:
   ledger) is a dozen lines of `git log` per manifest entry: a perfect first lift.
 - **Coherence manifest tooling** — parse [coherence.yml](../coherence.yml), flag stale
   summaries, open issues. Module first, GitHub Action as the thin CLI's second caller.
-- **The worm colony** — when the [worms](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml)
-  graduate from lore to tooling, each worm is a module with two cursors for an interface.
+- **The worm colony** — the [worms](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml)
+  are this doctrine wearing a costume: **trained** by before/after examples and natural-language
+  instructions (play), those instructions **compiled** to deterministic procedural code (lift),
+  with an escape hatch that **calls back out to an LLM** for the hard 1% (advice, fuzzy matching,
+  whimsy). Cheap by default, intelligent on demand — and the before/after pairs double as the
+  regression test. Each worm is a module with two cursors for an interface.
 
 🐒✋ *A skill is a promise; a package is a promise kept without asking the LLM twice.*
