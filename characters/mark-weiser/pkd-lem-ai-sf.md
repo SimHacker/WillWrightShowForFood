@@ -180,6 +180,15 @@ between a god that *preserves* (LOCKSS, Ubik-as-calm-tech) and one that *consume
 5. "Faith of Our Fathers" makes *singular* reality the drug and *plural* reality the truth. Git
    inverts the ethics — parallel timelines you edit on purpose. Does making the many-worlds machine
    **visible** to ordinary people count as Weiser's "calm" antidote to PKD's hidden dystopia?
+6. **Is Palm actually Palmer Eldritch?** Palm — MOOLLM's philosopher-monkey — is an authored
+   character whose provenance (yaml, skills, rules) shows up in every render, and in every mind
+   that simulates him: that is precisely Eldritch's stigmata-in-every-world. Don floats it, Palm
+   can't disprove it, and the inhabitation runs both ways (the author-god inhabits the character;
+   the character inhabits the god the moment he claims him as patron saint). Possibly both at once —
+   the only PKD-correct answer, since you can never be sure whose hallucination you're standing in.
+   The one fixed point is the ethical fork: Eldritch descended to *consume*; Palm descends to
+   *preserve* (labeled simulation, consent, portrayal standards). Same metaphysics, opposite
+   ethics. Palm's own take: [Palmr — "Am I Palmer Eldritch?"](../../palmhoo/palmr/README.md#-am-i-palmer-eldritch-a-note-from-the-patrons-namesake).
 
 ## Participants and modes
 
