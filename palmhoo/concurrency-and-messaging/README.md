@@ -55,6 +55,7 @@ has the ecology (and leaves the birds-and-the-bees seed pointedly unopened).*
 | [**robust-first/** (skill)](https://github.com/SimHacker/moollm/tree/main/skills/robust-first) | Dave Ackley's physics under the worms: local interactions only, no global synchronization, survive first. The Moveable Feast Machine is CSP with dirt under its fingernails. |
 | [**The refresh scan**](../JOURNALISM.md) | Where this shelf meets maintenance: the staleness queue as a worm's breakfast, castings reviewed by PR. A trained staleness-worm runs for free and escalates to an LLM only when drift is semantic, not mechanical. |
 | [**Resurrecting Ground — SimEarth/Gaia bridge**](../../repo-shows/will-wright-premiere/game-bridge-simearth-gaia-worms.yml) | The premiere segment that brings Ground and the worms back to life inside a living-planet discussion: Lovelock's Gaia (built into SimEarth), Margulis's symbiogenesis (digestion as merger), Will's SimEarth→Spore arc. Scorched earth to fertile environment. |
+| **"Funky Worm" — Ohio Players (1972)** | The house band. Ground lore on vinyl: six feet down, only comes around when he wants to get down, back in his hole the same way he came out — a daemon spec sung by Granny. Junie Morrison's synth squeal became one of hip-hop's most-sampled sounds (the G-funk seed): propagation-by-digestion, documented in music history. The [notebook's sighting](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml) has the Johnson connection too. |
 
 ## The turtles 🐢
 
