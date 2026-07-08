@@ -1,0 +1,88 @@
+# Jared Tarbell — invitation portrayal. NOT Jared Tarbell.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: jared-tarbell
+  name: "Jared S. Tarbell"
+  type: invitation
+  signifier: "🌱🧮🪵"
+  status: living
+  field: "Generative art; Flash/Processing; Etsy co-founder; digital fabrication (Levitated Toy Factory)"
+  home: characters/jared-tarbell/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  note: |
+    Warm contact since 2005 (Will Wright introduced Don to his work). Jared may shape, delay,
+    reduce, or delete any of this portrayal at any time. Laurie Tarbell mentioned only as
+    warmly as the public record and shared memories allow — she is invited too.
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  interview_planned: true
+  include: ["Jared Tarbell", "Laurie Tarbell", "Will Wright"]
+  document: invitation.md
+  show_seed: ../../repo-shows/jared-tarbell/
+
+bio:
+  summary: |
+    Born 1973, Albuquerque, New Mexico; first personal computer 1987; BS Computer Science, New
+    Mexico State. Built levitated.net (2000) — open-source Flash generative sketches — and
+    complexification.net, the Gallery of Computation (2004): Substrate, Happy Place, Sand Traps;
+    serious write-ups, prints for sale. Co-founded Etsy (July 2005) after co-founder Rob Kalin
+    found him through his art site. Etsy's success funded the Levitated Toy Factory (2014, downtown
+    Albuquerque): laser-cut wooden toys and artifacts from nature-inspired algorithms — LifeStar,
+    Castle Builder, Invader Cubes. Flash-era book author (Flash Math Creativity, Fresh Flash, New
+    Masters of Flash). Explores New Mexico wilderness when not computing.
+  quote_2014_launch: |
+    "The abstract gems we discover will be manufactured into actual physical artifacts using the
+    finest natural materials… I believe there is magic to be discovered in this realm."
+
+friendship_arc:
+  2005: "Will Wright points Don at levitated.net; Don writes; Spore tidepool ↔ Jared's procedural creatures"
+  2010: "FITC Amsterdam — Jared + Laurie meet Don in person; Ben Cerveny in the loop; Will friends Jared on Facebook that week"
+  2014: "Levitated Toy Factory launch invitation; LifeStar at the Rail Yards holiday market"
+
+why_the_show_cares:
+  dynamic_stage: |
+    Jared is the living exemplar of the stage orchestrated dynamically by scripts — his Flash
+    cast members were conjured and directed procedurally, not placed on a timeline by hand.
+    One step past Marc Canter's rotation (Director score = BASIC turned sideways); straight
+    into repo_as_simulation (process/vision-and-ambition.yml).
+  bits_and_atoms: "Algorithms → laser → wood: generative art made physical, educational, playful"
+  constructionism: "Levitated Toy Factory as a constructionist microworld in atoms — Lego-like open building systems"
+  will_link: "Will started the friendship; Spore tidepool kinship; natural three-hander"
+
+media:
+  storefront: media/levitated-toy-factory-storefront.png
+  launch_poster: media/levitated-launch-poster-2014.png
+
+contact:
+  email: jtarbell@gmail.com
+  channel: "Warm — direct email from Don; decades of history"
+
+correspondence: correspondence.yml
+private_archive: DonHopkins/projects/micropolis-moollm/repo-shows/jared-tarbell/   # raw emails; not public
+
+sources:
+  web:
+    - http://levitated.net/
+    - http://complexification.net/
+    - http://levitated.guru/
+    - https://www.rightclicksave.com/article/the-interview-jared-s-tarbell-generative-art-etsy
+    - https://www.artnome.com/news/2020/8/24/interview-with-generative-artist-jared-tarbell
+    - https://beyondtellerrand.com/events/dusseldorf-2018/speakers/jared-tarbell
+
+see_also:
+  - { path: README.md, why: "Public landing page" }
+  - { path: invitation.md, why: "Memory-jogging invitation — the 2005 → 2010 → 2014 arc" }
+  - { path: ideas.md, why: "Show segments" }
+  - { path: ../will-wright/, why: "Started the friendship; Spore tidepool kinship" }
+  - { path: ../ben-cerveny/, why: "Amsterdam circle — Jared wrote to Ben the same day in 2010" }
+  - { path: ../scott-draves/, why: "Generative-art kin — Electric Sheep ↔ Substrate era" }
+  - { path: ../paul-haeberli/, why: "Pointed Don at Jared's levCAWorm in 2010; planar-material fabrication kin (Lamina)" }
+  - { path: ../marc-canter/timeline-rotated-90-degrees.md, why: "The rotation Jared took one step further — cast conjured by code" }

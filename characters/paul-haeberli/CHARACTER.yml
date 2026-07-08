@@ -1,0 +1,88 @@
+# Paul Haeberli — invitation portrayal. NOT Paul Haeberli. STUB — enhance later.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: paul-haeberli
+  name: "Paul E. Haeberli"
+  type: invitation
+  signifier: "🎨🖥️✨"
+  status: living
+  stub: true   # seeded fast from email + web; enrich with Don's memories + more Grafica Obscura gems
+  field: "Computer graphics research (SGI 1983–1999); visual dataflow programming; image processing; free-form fabrication (Lamina Design)"
+  home: characters/paul-haeberli/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  note: "Warm contact. Paul may shape, delay, reduce, or delete any of this portrayal at any time."
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  interview_planned: true
+  document: invitation.md
+  show_seed: ../../repo-shows/paul-haeberli/
+
+bio:
+  summary: |
+    Computer graphics researcher at Silicon Graphics, February 1983 – August 1999 ("I did horribly
+    unpleasant stuff for about 6 years. Then I got a research position where I could explore
+    computer graphics full time."). Publisher of GRAFICA Obscura (1994→), the open web notebook of
+    his unpublished SGI research. Since 2004: Lamina Design — fabricating precise free-form
+    structures from planar material. Later iPhone/iPad apps (Explore 3D).
+  greatest_hits:
+    conman:
+      what: "ConMan: A Visual Programming Language for Interactive Graphics — SIGGRAPH 1988"
+      why: "Dataflow components connected live on an IRIS workstation; connection manager routes data"
+      money_quote: "we replace the usual user-machine dialog with a dynamic live performance that is orchestrated by the user"
+      paper: https://people.cs.vt.edu/~north/infoviz/conman.pdf
+    accumulation_buffer:
+      what: "The Accumulation Buffer: Hardware Support for High-Quality Rendering — SIGGRAPH 1990, with Kurt Akeley"
+    paint_by_numbers:
+      what: "Paint By Numbers: Abstract Image Representations — SIGGRAPH 1990"
+    dynadraw:
+      what: "DynaDraw (1989) — calligraphy with a physically modeled brush (mass, drag, spring)"
+    texture_mapping:
+      what: "Texture Mapping as a Fundamental Drawing Primitive — 1993, with Mark Segal"
+    grafica_obscura:
+      what: "GRAFICA Obscura — open research notebook, online since 1994"
+      url: https://graficaobscura.com/
+    lamina:
+      what: "Lamina Design (2004→) — precise free-form structures from planar material"
+
+don_thread:
+  aug_2010: |
+    Paul sent Don his iPad app Explore 3D; advised on OpenGL ES rendering for Don's cellular
+    automata toy — fillRectangle() code in the email, 'draw everything and let the hardware
+    cull' — and pointed at Jared Tarbell's levCAWorm for mapping CA onto 3D. On Don's animated
+    text fountain: 'I want to resurrect that code someday. it would be F.U.N.'
+  see: correspondence.yml
+
+why_the_show_cares:
+  patch_cord_lineage: "ConMan (1988) is a founding dataflow-orchestration document — process/trails/visual-programming-patch-cord.md"
+  proto_repo_show: "GRAFICA Obscura = research shared as browsable artifacts, decades before 'build in public'"
+  bits_and_atoms: "Lamina ↔ Jared Tarbell's Levitated — planar material, free-form computation"
+  resurrection: "'It would be F.U.N.' — reviving old code on air is a core show format"
+
+contact:
+  email: paulhaeberli@gmail.com   # 2010-era; verify
+  channel: "Warm — direct email from Don"
+
+correspondence: correspondence.yml
+private_archive: DonHopkins/projects/micropolis-moollm/repo-shows/paul-haeberli/
+
+sources:
+  web:
+    - https://graficaobscura.com/
+    - https://graficaobscura.com/paul/
+    - https://history.siggraph.org/person/paul-e-haeberli/
+    - https://people.cs.vt.edu/~north/infoviz/conman.pdf
+
+see_also:
+  - { path: README.md, why: "Public landing page" }
+  - { path: ../jared-tarbell/, why: "levCAWorm pointer; planar fabrication kin" }
+  - { path: ../david-levitt/, why: "Patch-cord dataflow lineage" }
+  - { path: ../don-hopkins/visual-programming-excel-and-dimensionality.md, why: "Don's VPL taxonomy — ConMan belongs in it" }
+  - { path: ../../process/trails/visual-programming-patch-cord.md, why: "The trail ConMan anchors" }

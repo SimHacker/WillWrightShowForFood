@@ -1,0 +1,43 @@
+# SHOW — Paul Haeberli — ConMan, GRAFICA Obscura, resurrection hour
+# Planted seed (stub — enhance later). Warm contact of Don's.
+
+show:
+  id: paul-haeberli
+  title: "A Repo Show with Paul Haeberli — A Dynamic Live Performance, Orchestrated by the User"
+  type: solo
+  host: Don Hopkins
+  guests: ["Paul Haeberli"]
+  character: characters/paul-haeberli/
+  topic: "ConMan and visual dataflow (1988), sixteen years of SGI graphics research, GRAFICA Obscura as proto-build-in-public, and resurrecting old code on air — F.U.N."
+  status: seed
+  consent: not_yet_asked
+  interview_planned: true
+
+why_him:
+  conman: "SIGGRAPH 1988 — visual dataflow for interactive graphics; abstract closes with the Repo Show thesis: 'we replace the usual user-machine dialog with a dynamic live performance that is orchestrated by the user.'"
+  grafica_obscura: "Unpublished SGI research opened to the web in 1994 — research in public, decades early."
+  sgi: "Feb 1983 – Aug 1999: accumulation buffer (with Kurt Akeley), Paint By Numbers, DynaDraw, texture mapping as fundamental drawing primitive (with Mark Segal)."
+  lamina: "Lamina Design (2004→) — free-form structures from planar material; kin to Jared Tarbell's Levitated."
+  don_thread: "Aug 2010 — Explore 3D app; OpenGL ES advice with code in the email; levCAWorm pointer; 'I want to resurrect that code someday. it would be F.U.N.'"
+
+threads:
+  - "ConMan on air — read the 1988 abstract, then walk the patch-cord trail (Hookup, Body Electric, Bounce, Max/MSP)"
+  - "GRAFICA Obscura — why he opened the notebook in 1994; what he'd publish now"
+  - "Resurrection hour — DynaDraw, Don's text fountain, maybe a ConMan-style panel; old code running again, PRs welcome"
+  - "SGI stories — Tom and Rocky and Dave and Kurt and Jim and Henry and Mark and Marc"
+  - "Bits & atoms — Lamina Design with Jared Tarbell"
+
+pairings:
+  - { with: ../../characters/jared-tarbell/, why: "levCAWorm pointer; planar-material fabrication two-hander" }
+  - { with: ../../characters/david-levitt/, why: "Patch-cord dataflow lineage" }
+
+readable:
+  landing: ../../characters/paul-haeberli/README.md
+  invitation: ../../characters/paul-haeberli/invitation.md
+  ideas: ../../characters/paul-haeberli/ideas.md
+  correspondence: ../../characters/paul-haeberli/correspondence.yml
+
+ties_to:
+  - ../../characters/paul-haeberli/
+  - ../../process/trails/visual-programming-patch-cord.md
+  - ../../process/trails/send-code-not-commands.md

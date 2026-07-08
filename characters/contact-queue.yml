@@ -29,6 +29,12 @@ next:
   - id: ellpeck
     why: "Warm — Tiny Life; Sims ⇔ Soul City ⇔ Tiny Life interview"
     path: characters/ellpeck/
+  - id: jared-tarbell
+    why: "Warm since 2005 (Will started it) — memory-jogging invite ready; Laurie + Will included; generative art → Etsy → Toy Factory arc"
+    path: characters/jared-tarbell/
+  - id: paul-haeberli
+    why: "Warm — ConMan/GRAFICA Obscura/SGI; resurrection hour ('F.U.N.'); stub to enrich before sending"
+    path: characters/paul-haeberli/
   creator_network_exodus:
     why: "Panel — Tiny Life praise + EA exit + Exchange gap (verify quotes before outreach)"
     show: repo-shows/will-wright-premiere/creator-network-exodus.yml

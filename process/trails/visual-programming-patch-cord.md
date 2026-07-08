@@ -13,6 +13,7 @@ Real-time visual programming for music, video, and VR — the lineage Don docume
 
 | Stop | Role |
 |------|------|
+| [**Paul Haeberli**](../../characters/paul-haeberli/README.md) | **ConMan** (SIGGRAPH 1988) — visual dataflow for interactive graphics on the IRIS; *"a dynamic live performance that is orchestrated by the user"* |
 | [**David Levitt**](../../characters/david-levitt/README.md) | **Hookup** (first patch-cord metaphor, MIT) → **Bounce** @ Levity (Don serial contract) → ConnectedTV → Pantomime |
 | [**Jaron Lanier**](../../characters/jaron-lanier/README.md) | **VPL Research** co-founder — VPL's **Body Electric** (lead designer/programmer **Chuck Blanchard**), ancestor of Bounce; David later got the Bounce-for-Mac dev rights (compensation for his Hookup Mac-product rights — confirm) |
 | [**Tom Demeyer**](../../characters/tom-demeyer/README.md) | **Image/ine** @ STEIM (1996–2001) — realtime video instrument; plugin architecture |
@@ -20,6 +21,7 @@ Real-time visual programming for music, video, and VR — the lineage Don docume
 | [**Don — Yahoo Pipes successors**](../../characters/don-hopkins/yahoo-pipes-successors.md) | pipes.digital — data-flow RSS blocks; puzzle-piece VPLs (HN 40841980) |
 | [**Don — Excel & dimensionality**](../../characters/don-hopkins/visual-programming-excel-and-dimensionality.md) | Excel as VPL; SimAntics shipped evidence; PSIBER (HN 22978454) |
 | [**Marc Canter — timeline rotated 90°**](../../characters/marc-canter/timeline-rotated-90-degrees.md) | Director score = BASIC turned sideways; PSIBER; repo `characters/` as cast window |
+| [**Jared Tarbell**](../../characters/jared-tarbell/README.md) | Flash cast **conjured by code** — dynamic stage orchestration; levitated.net → Levitated Toy Factory (bits & atoms) |
 | [**Chuck Blanchard**](../../characters/chuck-blanchard/README.md) | Body Electric lead; Feb 2020 screenshots; OS9 dev system |
 | [**Michael McGuffin**](../../characters/michael-mcguffin/README.md) | Oct 2022 letter — VPL definition debate; Brad Myers triangle; marking-menu prior-art thread |
 | [**Brad Myers**](../../characters/brad-myers/README.md) | Garnet, VPL taxonomy, PBD, C32 |

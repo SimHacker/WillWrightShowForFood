@@ -1,0 +1,63 @@
+# Jared Tarbell ↔ Don — correspondence timeline (public-safe summaries)
+# Raw emails: private archive (DonHopkins green room). Personal details withheld by design.
+
+meta:
+  id: jared-tarbell-correspondence
+  subject: Jared Tarbell
+  counterpart: Don Hopkins
+  privacy: "Summaries only — addresses, phone numbers, and personal gift details stay private"
+
+timeline:
+  2005-03-16:
+    thread: "awesome"
+    what: |
+      First contact era. Will Wright pointed Don at levitated.net; Don sent Jared notes from a
+      Will presentation. Jared had just seen an hour-long Will mini-bio; the word 'spore' in
+      Don's notes thrilled him. Don: Spore's tidepool level is reminiscent of Jared's
+      multi-legged procedural Flash creatures. Jared was in Seattle wrapping Boeing work.
+    gems:
+      - "Don: 'Will's the one who pointed me at your site, because he loved it and thought I would too!'"
+      - "Jared jokes about ordering them both a $270M plane"
+
+  2010-01_to_03:
+    thread: "Amsterdam in Feb / small gift at the Ambassade hotel"
+    what: |
+      Jared + wife Laurie visit Amsterdam Feb 19–28 for his FITC talk; wrote to Ben Cerveny the
+      same day. Don shows them the city. Will friends Jared on Facebook the week Don writes back.
+      Departing, Jared leaves a thank-you box at the hotel desk — including two laser-engraved
+      sandstones. 'Next time we come to Amsterdam, I'm going to pull every string I can find to
+      make sure there will be some sun.'
+    gems:
+      - "Will Wright friended Jared on Facebook the day Don replied — 'Maybe you had something to do with that?'"
+      - "Don was learning Unity at Stupid Fun Club — 'great for funky procedural and data driven graphics, the way you've always used Flash!'"
+      - "Laser-engraved sandstones — generative fabrication as a gift, four years before the Toy Factory"
+
+  2010-08-23:
+    thread: "(via Paul Haeberli)"
+    what: |
+      Paul Haeberli, advising Don on OpenGL ES rendering for a cellular automata toy, points at
+      Jared's levCAWorm (levitated.net/daily/levCAWorm.html) as the model for mapping CA onto 3D.
+    see: ../paul-haeberli/correspondence.yml
+
+  2014-08-13:
+    thread: "Levitated Launch event Sept 9"
+    what: |
+      Launch invitation for Levitated, 700 Silver Ave, downtown Albuquerque: 'I have used code to
+      explore the mysteries of mathematics and the beauty of geometry… I did it because it was
+      fun.' Etsy's success funds the pursuit full-time; abstract gems manufactured into physical
+      artifacts from the finest natural materials.
+    media: media/levitated-launch-poster-2014.png
+
+  2014-12-14:
+    thread: "Levitated Holiday Market"
+    what: |
+      LifeStar installation (spherical laser-cut voronoi spacemaker) + limited-edition natural
+      wood digital prototypes at the Rail Yards Holiday Market, Albuquerque.
+
+private_archive: "DonHopkins/projects/micropolis-moollm/repo-shows/jared-tarbell/ (raw threads)"
+
+see_also:
+  - { path: CHARACTER.yml, why: "Character card" }
+  - { path: invitation.md, why: "Memory-jogging invitation built from this timeline" }
+  - { path: ../ben-cerveny/, why: "In the 2010 Amsterdam loop" }
+  - { path: ../paul-haeberli/correspondence.yml, why: "The levCAWorm pointer" }

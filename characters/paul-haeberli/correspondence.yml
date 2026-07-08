@@ -1,0 +1,32 @@
+# Paul Haeberli ↔ Don — correspondence timeline (public-safe summaries)
+# Raw emails: private archive (DonHopkins green room).
+
+meta:
+  id: paul-haeberli-correspondence
+  subject: Paul Haeberli
+  counterpart: Don Hopkins
+  privacy: "Summaries + technical gems only"
+
+timeline:
+  2010-08-23:
+    thread: "Hi Don - Here's one of my iPad/iPhone apps."
+    what: |
+      Paul sends Explore 3D (sideload via iTunes). Don asks how to render an 8-bit 2D matrix of
+      cellular automata states fast on iPhone — open to wild out-of-the-box visualizations. Paul:
+      two triangles per cell, pack 256 tile images into one 512×512 texture, LUT 8-bit → 24-bit,
+      OpenGL ES does ~2M triangles/sec; displacement 'would be freeking cool. very doable.'
+      Includes fillRectangle() OpenGL ES code in the email body. Points at Jared Tarbell's
+      levCAWorm for mapping CA onto 3D. On terrain culling: draw everything, let the hardware do
+      hidden-surface work. On Don's animated text fountain ('little fluffy clouds'): 'I want to
+      resurrect that code someday. it would be F.U.N.'
+    gems:
+      - "Send code, not commands — working GL code pasted straight into email"
+      - "levCAWorm pointer — Paul connecting Don to Jared's work, five years into Don + Jared's friendship"
+      - "'It would be F.U.N.' — resurrection as a show format"
+
+private_archive: "DonHopkins/projects/micropolis-moollm/repo-shows/paul-haeberli/ (raw thread)"
+
+see_also:
+  - { path: CHARACTER.yml, why: "Character card" }
+  - { path: ../jared-tarbell/correspondence.yml, why: "The levCAWorm cross-pointer" }
+  - { path: ../../process/trails/send-code-not-commands.md, why: "The pedagogy this thread exemplifies" }

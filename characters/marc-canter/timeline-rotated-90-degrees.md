@@ -46,6 +46,14 @@ authored performance closer to the open substrate, until the browser itself was 
 Show continues the walk: the **repo** is the player now, and the performance is version-controlled,
 forkable, and inhabited.
 
+Two more turns of the same rotation, from the same circle: [**Paul Haeberli's ConMan**](../paul-haeberli/README.md)
+(SIGGRAPH 1988) connected live dataflow components on an IRIS — his abstract promised *"a dynamic
+live performance that is orchestrated by the user."* And [**Jared Tarbell**](../jared-tarbell/README.md)
+took Flash's cast/timeline/scripts and let **the script conjure the cast** — levitated.net's
+performances weren't arranged on the timeline, they were *grown* by code. Jared is the artist who
+opened Don's eyes to dynamically orchestrating the stage with scripts — the direct ancestor of this
+repo's characters directing themselves.
+
 ## Show segment this wants to be
 
 Marc on air, retelling the rotation joke himself — then Don rotates it once more, live: open
