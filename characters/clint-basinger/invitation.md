@@ -31,7 +31,7 @@ people still building on Will Wright's lineage.
 - **The Maxis catalog** — what still holds up; what independent creators are doing today
 - **Audience crossover** — bring your community's questions; HN-style issues in the repo
 
-**Format:** Remote is perfect (screen-share reaction videos are your superpower). Zero homework.
+**Format:** Remote is perfect (screen-share reaction videos are your superpower). Zero homework — as much *homefun* as you are up to.
 No script — browse, react, argue, demo.
 
 **Materials:**

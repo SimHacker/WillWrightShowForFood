@@ -50,7 +50,7 @@ the way.)
 
 **Format:** live (thinking Twitch), announced ahead, audience participates and can contribute to
 the repo. Warm and earnest, not gotcha-podcast. I run it all in Cursor, screen-shared, so people
-watch the ideas become real. **Zero homework** — I do the setup. Everything's open to discussion:
+watch the ideas become real. **Zero homework — as much *homefun* as you are up to.** I do the setup. Everything's open to discussion:
 what we record, what's public, all your call.
 
 **Simulated art opening (play along if you want).** Before we talk, we run a fun **simulated

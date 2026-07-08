@@ -55,7 +55,7 @@ Details: [`correspondence-digest.md`](correspondence-digest.md).
 ## How to use this file
 
 Each idea is a **segment seed**: a cold open, a live build, or a conversation beat. A single stream
-might use three; a mini-series might spread them across episodes. **Zero homework** for Scott —
+might use three; a mini-series might spread them across episodes. **Zero homework** for Scott — as much *homefun* as he's up to.
 Don prepares artifacts; Scott picks what sounds fun on the day.
 
 | Tag | Meaning |

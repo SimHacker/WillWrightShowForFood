@@ -102,7 +102,7 @@ Browse without a GitHub account — start at the [README](https://github.com/Sim
 
 ---
 
-**Zero homework** — I do the setup; what we record and publish is entirely your call. **Your response:**
+**Zero homework — as much *homefun* as you are up to.** I do the setup; what we record and publish is entirely your call. **Your response:**
 accepted, delayed, too busy, declined, or no reply — all honored gracefully.
 
 — Don Hopkins *(User Interface Flower Child)*

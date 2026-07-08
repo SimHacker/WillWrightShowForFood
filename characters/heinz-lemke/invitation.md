@@ -153,7 +153,7 @@ Remote is perfect — Bechtersbohl, Gothenburg, Menlo Park, and Amsterdam are al
 the internet. **David** and **Lars** join as co-guests on the **same call** (or short follow-ups
 if that's easier — your call). In-person if I ever get to visit the farmhouse properly.
 
-**Zero homework.** Warm room, not gotcha-journalism. English or German as you prefer; captions either way.
+**Zero homework — as much *homefun* as you are up to.** Warm room, not gotcha-journalism. English or German as you prefer; captions either way.
 
 ---
 

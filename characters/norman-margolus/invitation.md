@@ -73,7 +73,7 @@ coherent story, then re-opened as a Repo Show anyone can join.
 
 **Format:** live (thinking Twitch), announced ahead, audience follows along in the repo and can
 contribute. Warm and curious, not gotcha-podcast. I run it in Cursor, screen-shared, so people watch
-the ideas become real. **Zero homework** — I do the setup. What we record and publish is all your
+the ideas become real. **Zero homework — as much *homefun* as you are up to.** I do the setup. What we record and publish is all your
 call.
 
 I'll reach out gently through **Milan and Henry**. No pressure — accepted, delayed, declined, or no

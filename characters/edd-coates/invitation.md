@@ -48,7 +48,7 @@ warm room, screen-share heavy, following through to something useful in the open
 - **PieCraft** — pies as craftable, damageable objects; good layout wins fights. Constructionist UI
   literacy through play — sanity-check the idea with someone who's seen every radial in the catalog.
 
-**Format:** Remote is fine; in-person if we're ever in the same city. **Zero homework.** Browse
+**Format:** Remote is fine; in-person if we're ever in the same city. **Zero homework — as much *homefun* as you are up to.** Browse
 GUIDB live, whiteboard pie specs, argue about Fitts's law — whatever's fun.
 
 **Materials waiting for you:**

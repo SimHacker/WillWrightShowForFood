@@ -40,7 +40,7 @@ computing, and the new-paradigms crowd.
   already proposes pairing with you). Two Teds, one show, or two linked episodes — your call.
 - **PIXIE / light-pen era** — your interest in the 1969 film; ties to the Heinz Lemke history episode.
 
-**Format:** Remote is fine; in-person if we overlap. **Zero homework.** Warm room.
+**Format:** Remote is fine; in-person if we overlap. **Zero homework — as much *homefun* as you are up to.** Warm room.
 
 **Materials:**
 

@@ -135,7 +135,7 @@ Remote is perfect — Menlo Park, Bechtersbohl, Gothenburg, and Amsterdam are al
 the internet. **Heinz** and **Lars** join as co-guests on the **same call** (or short follow-ups
 if that's easier — your call).
 
-**Zero homework.** Warm room, not gotcha-journalism.
+**Zero homework — as much *homefun* as you are up to.** Warm room, not gotcha-journalism.
 
 ---
 

@@ -53,7 +53,7 @@ your call. Warm overlap with **[Dave Tristram](https://github.com/SimHacker/Will
 performance** show too (different decade, same **play the console** religion).
 
 **Format:** live (thinking Twitch), announced ahead, audience in the repo. Warm and curious, not
-gotcha-podcast. I run it in Cursor, screen-shared. **Zero homework** on your side — I do the setup.
+gotcha-podcast. I run it in Cursor, screen-shared. **Zero homework** on your side — as much *homefun* as you are up to. I do the setup.
 What we record and publish is your call.
 
 No pressure — accepted, delayed, declined, or no reply, all honored gracefully.

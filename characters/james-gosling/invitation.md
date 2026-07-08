@@ -58,7 +58,7 @@ Arthur van Hoff, David Rosenthal, Owen Densmore — your pick.
 - **CS547 1995** — *Bringing Behavior to the Internet*; Java as behavior on the wire; archive as
   curriculum ([Terry's catalog](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/terry-winograd/media/cs547-ARCHIVE.md)).
 
-**Format:** Remote is fine. In-person if we overlap. **Zero homework.** Warm room, not gotcha-podcast.
+**Format:** Remote is fine. In-person if we overlap. **Zero homework — as much *homefun* as you are up to.** Warm room, not gotcha-podcast.
 NeWS reunion can be one long episode or a short series — your call.
 
 **Materials (text + links only):**

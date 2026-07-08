@@ -33,8 +33,8 @@ modern, browser-native version could be. (There's a lot in MOOLLM to wire in.)
 
 **Format:** live (thinking Twitch), announced ahead, audience follows along in the repo and can
 contribute. Warm and curious, not gotcha-podcast. I run it in Cursor, screen-shared, so people watch
-the ideas become real — and we can bring old NeWS/HyperLook things back to life. **Zero homework** —
-I do the setup. What we record and publish is all your call.
+the ideas become real — and we can bring old NeWS/HyperLook things back to life. **Zero homework —
+as much *homefun* as you are up to.** I do the setup. What we record and publish is all your call.
 
 No pressure — accepted, delayed, declined, or no reply, all honored gracefully.
 

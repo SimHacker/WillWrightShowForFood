@@ -88,7 +88,7 @@ is a chance to do that on purpose: hear each other's work fresh and make new thi
 basically — your territory and Will's. Generosity, not nostalgia.
 
 If a four-way is fun, I'd love **you, Scott, and Will** together; if not, any shape you like.
-Recording, publicity — all your call. Zero homework; I do the setup.
+Recording, publicity — all your call. Zero homework — as much *homefun* as you are up to; I do the setup.
 
 **Simulated art opening — totally your thing.** Before we talk, a **simulated gallery opening**
 for generative work: our menagerie misreads ***77 Million Paintings*** (2006 DVD/software — 296

@@ -57,7 +57,7 @@ CHI'88 paper and HomeFinder-era artifacts in the repo.
 Memorial-mode segment if you're willing — you sat at the same CHI'88 table; Mark's ubicomp/calm-tech
 story deserves honest discussion from someone who knew him.
 
-**Format:** Remote is fine; in-person if we overlap. **Zero homework.** Warm room, not gotcha-podcast.
+**Format:** Remote is fine; in-person if we overlap. **Zero homework — as much *homefun* as you are up to.** Warm room, not gotcha-podcast.
 One episode or a short series — you steer.
 
 **Materials planted for you:**

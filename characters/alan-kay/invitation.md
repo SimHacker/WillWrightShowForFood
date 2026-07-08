@@ -48,7 +48,7 @@ for linked segments if you're willing — or we honor her in the microworld show
 - **Yoot Tower / Alan Kay interview 1993** — transcript cleanup thread; open-source tower revival.
 - **MOOLLM** — directories as rooms; skills as prototypes; `# import self from self` (Ungar lineage).
 
-**Format:** Remote is fine — teleintertwingle whenever you like. **Zero homework.** Warm room.
+**Format:** Remote is fine — teleintertwingle whenever you like. **Zero homework — as much *homefun* as you are up to.** Warm room.
 
 **Materials:**
 

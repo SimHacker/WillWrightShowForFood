@@ -38,7 +38,7 @@ reversibility, and what happens when the hardware is as local as the rule.
 
 **Format:** live (thinking Twitch), announced ahead, audience follows along in the repo and can
 contribute. Warm and curious, not gotcha-podcast. I run it in Cursor, screen-shared, so people watch
-the ideas become real. **Zero homework** — I do the setup. What we record and publish is all your
+the ideas become real. **Zero homework — as much *homefun* as you are up to.** I do the setup. What we record and publish is all your
 call — solo video, one-on-one, or the full looping fest.
 
 No pressure at all — accepted, delayed, declined, or no reply, all honored gracefully.

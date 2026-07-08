@@ -35,7 +35,7 @@ I'd love that; if not, just you and me and a feedback loop is already a great sh
 
 **Format:** live (thinking Twitch), announced ahead, audience follows along in the repo and can
 contribute. Warm and curious, not gotcha-podcast. I run it in Cursor, screen-shared, so people watch
-the ideas become real. **Zero homework** — I do the setup. What we record and publish is all your
+the ideas become real. **Zero homework — as much *homefun* as you are up to.** I do the setup. What we record and publish is all your
 call.
 
 No pressure — accepted, delayed, declined, or no reply, all honored gracefully.

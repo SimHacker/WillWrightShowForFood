@@ -41,7 +41,7 @@ stage is a public GitHub repo, following through to working code and credited id
 - **Acronym jam (optional)** — your [acronym scoreboard](https://www.cs.cmu.edu/~bam/acronyms.html),
   C32's 32 C-words, and whether peer review literally *grew* the monster. Only if that's fun.
 
-**Format:** Remote is fine; Pittsburgh and Amsterdam both exist on the internet. **Zero homework.**
+**Format:** Remote is fine; Pittsburgh and Amsterdam both exist on the internet. **Zero homework — as much *homefun* as you are up to.**
 
 **Materials:**
 

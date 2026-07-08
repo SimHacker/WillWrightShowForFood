@@ -99,7 +99,7 @@ Browse without a GitHub account — start at the [README](https://github.com/Sim
 
 ---
 
-**Zero homework** — I do the setup; what we record and publish is entirely your call, and we point people
+**Zero homework — as much *homefun* as you are up to.** I do the setup; what we record and publish is entirely your call, and we point people
 straight to your work. **Your response:** accepted, delayed, too busy, declined, or no reply — all honored
 gracefully.
 

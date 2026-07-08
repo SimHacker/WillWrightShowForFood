@@ -46,7 +46,7 @@ the **self-interest!** pun stack, and what we'd build if we sat down with a blan
 - **Where the lineage went** — generation scavenging, dynamic deoptimization, **maps/PICs → V8** —
   and what you'd steal back from the stacks that forgot they borrowed from you.
 
-**Format:** Remote is fine; in-person if we're ever in the same city. **Zero homework.** No slides
+**Format:** Remote is fine; in-person if we're ever in the same city. **Zero homework — as much *homefun* as you are up to.** No slides
 required. Warm room, not gotcha-podcast.
 
 **Materials already waiting for you:**

@@ -123,8 +123,8 @@ Remote is perfect — Gothenburg, Bechtersbohl, Menlo Park, and Amsterdam are al
 the internet. **Heinz** and **David** join as co-guests on the **same call** (or short follow-ups
 if that's easier — your call).
 
-**Zero homework** before the call — but if you want to poke at PDP-7/340 paths ahead of time,
-the show seed and Type 340 manual are linked below. Warm room, not gotcha-journalism.
+**Zero homework** before the call — but as much *homefun* as you are up to: if you want to poke
+at PDP-7/340 paths ahead of time, the show seed and Type 340 manual are linked below. Warm room, not gotcha-journalism.
 
 ---
 

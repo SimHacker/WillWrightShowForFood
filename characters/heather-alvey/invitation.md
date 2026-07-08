@@ -97,7 +97,7 @@ Browse without a GitHub account — start at the [README](https://github.com/Sim
 ---
 
 **Format:** live (thinking Twitch), announced ahead, audience follows along and can contribute.
-**Zero homework** — I do the setup. What we record and publish is all your call, and we point people
+**Zero homework — as much *homefun* as you are up to.** I do the setup. What we record and publish is all your call, and we point people
 straight to your stores and subscriptions.
 
 **Your response:** accepted, delayed, too busy, declined, or no reply — all honored gracefully.

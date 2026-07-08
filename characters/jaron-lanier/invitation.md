@@ -44,7 +44,7 @@ Other threads whenever you have appetite — your pick:
 - **Data dignity / *Who Owns the Future?*** — how repos, forks, and attribution relate to what you wrote.
 
 **Format:** live (thinking Twitch), announced ahead, audience can follow along and contribute. Warm
-and curious, not gotcha. **Zero homework** on your side — I do the setup. What we record and publish
+and curious, not gotcha. **Zero homework** on your side — as much *homefun* as you are up to. I do the setup. What we record and publish
 is your call: solo riff, a one-on-one with me and David, or the full Rebounce jam.
 
 No pressure — accepted, delayed, declined, or no reply, all fine.

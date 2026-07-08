@@ -64,7 +64,7 @@ helps an author; what makes a world model *trustworthy*; what you'd never let an
 about your story.
 
 **Format:** Remote is fine — Platteville and Amsterdam are both real places on the internet. In-person
-if we ever overlap. **Zero homework.** No slides required. If homeplay (instead of homework) sounds fun, we compile a tiny adventure together and ship the page; if not, we just talk. Warm room, not gotcha-podcast.
+if we ever overlap. **Zero homework — as much *homefun* as you are up to.** No slides required. If the homefun sounds appealing, we compile a tiny adventure together and ship the page; if not, we just talk. Warm room, not gotcha-podcast.
 
 **Materials already waiting for you:**
 
