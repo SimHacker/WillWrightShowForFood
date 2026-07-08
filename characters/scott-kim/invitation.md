@@ -35,6 +35,13 @@ No synchronized sitting required — record whenever suits you; we weave it toge
   tries to make state visible and editable.
 - **The craft of the designed "aha"** — Heaven & Earth, puzzle columns, difficulty as a shaped curve (a lovely
   neighbor to Will's possibility space).
+- **Game Thinking TV, meet the archive** — back in January 2023, when the Stanford CS547 treasure trove
+  surfaced (Will's 1996 "Interfacing to Microworlds" / Dollhouse talk!), you wrote that you and Amy Jo *"have
+  the production capacity and channel to publish videos"* on [Game Thinking TV](https://www.youtube.com/c/gamethinkingtv)
+  and *"would love to publish some or all of Will Wright's talk, and potentially other videos."* **Yes. Let's
+  DO this.** You two already have the whole pipeline figured out; I bring cleaned transcripts, captions, and
+  historical annotation (my [Interfacing to Microworlds upload](https://www.youtube.com/watch?v=nsxoZXaYJSk) is the
+  proof of concept). CS547 talks, Will Wright lectures, and Repo Show episodes could all find a home there.
 
 **A solo option, if you want it:** a second focused episode — [`scott-kim`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/scott-kim/README.md) —
 for a Viewpoint/inversions deep-dive, so we don't cram it into the pair show. Only if it appeals.
@@ -107,4 +114,4 @@ accepted, delayed, too busy, declined, or no reply — all honored gracefully.
 
 — Don Hopkins *(User Interface Flower Child)*
 
-`🪞 ambigram live` · `👁️ Viewpoint: pixels are the state` · `🎮 Amy Jo: Game Thinking` · `🧩 the designed aha`
+`🪞 ambigram live` · `👁️ Viewpoint: pixels are the state` · `🎮 Amy Jo: Game Thinking` · `🧩 the designed aha` · `📺 Game Thinking TV × CS547`

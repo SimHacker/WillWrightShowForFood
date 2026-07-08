@@ -35,6 +35,13 @@ No synchronized sitting required: two one-on-ones at each of your best times, wo
 - **The Sims & Will's orbit** — the social systems you helped shape, and where they point next.
 - **CS547, made runnable** — your Winograd-archive talk *The Network is the Game* (2004), turned from a
   slide deck into something people can open and poke.
+- **Game Thinking TV, meet the archive** — when the Stanford CS547 trove surfaced in January 2023 (including
+  Will's 1996 "Interfacing to Microworlds" / Dollhouse talk), Scott offered that
+  [Game Thinking TV](https://www.youtube.com/c/gamethinkingtv) has *"the production capacity and channel to
+  publish videos"* and would *"love to publish some or all of Will Wright's talk."* **Let's DO this.** You two
+  already have the pipeline; I bring cleaned transcripts, captions, and annotation (my
+  [Interfacing to Microworlds upload](https://www.youtube.com/watch?v=nsxoZXaYJSk) shows the workflow). CS547
+  talks, Will Wright lectures, and Repo Show episodes could all find a home there.
 
 ---
 
@@ -105,4 +112,4 @@ gracefully.
 
 — Don Hopkins *(User Interface Flower Child)*
 
-`🎮 Game Thinking` · `🫂 community without extraction` · `🪞 Scott: ambigrams + Viewpoint` · `🌱→🌳 the member ladder`
+`🎮 Game Thinking` · `🫂 community without extraction` · `🪞 Scott: ambigrams + Viewpoint` · `🌱→🌳 the member ladder` · `📺 Game Thinking TV × CS547`

@@ -1,0 +1,65 @@
+# The AskTog Preservation Saga — 2022–2023 email record (public-safe digest)
+# Why asktog.com matters, why it's stranded, and the rescue plans on the table.
+
+meta:
+  character: bruce-tognazzini
+  curated_by: don-hopkins
+  span: "Sep 2022 – Nov 2023 (ongoing)"
+  participants: [don-hopkins, bruce-tognazzini, ben-shneiderman, ted-selker, al-kossow, arthur-van-hoff]
+
+the_site:
+  url: https://asktog.com
+  what: |
+    "Interaction Design Solutions for the Real World" — decades of columns: the Fitts
+    quiz, First Principles of Interaction Design, Keyboard vs. The Mouse, Magic and
+    Software Design, The Third User, Intuitive Equals Familiar, the Self-Destruct
+    Switch, What Happened to John Denver. Regularly rediscovered on Hacker News:
+    https://news.ycombinator.com/from?site=asktog.com
+
+the_strandedness:
+  built_in: "Adobe GoLive — discontinued; Tog lost all reasonable edit access"
+  certs: |
+    https certificate expired Sep 2022 (Don flagged via Ben Shneiderman; Tog fixed with
+    LetsEncrypt Oct 2022) and again Nov 2023 (site was on paid Sectigo certs; the
+    LetsEncrypt renewal cron apparently never stuck).
+  tog_verbatim_2023:
+    - "I no longer have any reasonable access to my site since Adobe discontinued GoLive."
+    - "I also tired of having to spend ten times as much time formatting new material as I did writing it."
+    - "I'd happily spend a considerable sum if someone could rebuild the site in a framework that could enable me to easily add new content. Just haven't found a competent, reliable person to do that task."
+
+the_plans:
+  static_rescue:
+    who: don-hopkins
+    what: |
+      Snapshot → static bucket (AWS/GCS): auto-renewing certs, trivially cheap, survives
+      HN hugs; replace the broken search box with Google search; package the whole site
+      for archive.org so anyone can browse offline. Long-lived host preferred (ACM) over
+      any startup cloud. Jim Paradis identified as the competent, reliable builder Tog
+      gave up looking for.
+  hci_history_site:
+    who: ben-shneiderman
+    what: |
+      "A more comprehensive approach would be to grab more of the websites related to the
+      early days of HCI and provide some kind of index to them... a nicely done HCI
+      history page would be helpful." Wayback has pieces but is awkward for a site
+      DEDICATED to usability.
+  asktog_ai:
+    who: [don-hopkins, ben-shneiderman]
+    what: |
+      Train an open LLM on the AskTog corpus + early HCI sites: interactive Q&A,
+      summarization, trend analysis, simulated historical dialogues, research-gap
+      spotting. Working name: asktog.ai. Possible partners: CHM, ACM SIGCHI.
+  advice_sought:
+    - "Al Kossow (bitsavers.org) — computer-history preservation practice"
+    - "Arthur van Hoff — could Apple help? Tog wrote their original HIG"
+
+status: |
+  Open as of the last thread. The Repo Show invitation proposes doing the rescue AS the
+  show: snapshot, bucket, archive.org package, and the first new AskTog column in years —
+  posted by Tog himself through a framework he can actually use.
+
+links:
+  - https://asktog.com
+  - https://web.archive.org/web/*/asktog.com
+  - https://news.ycombinator.com/from?site=asktog.com
+  - https://www.asktog.com/columns/022DesignedToGiveFitts.html

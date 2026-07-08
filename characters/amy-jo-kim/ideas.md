@@ -45,6 +45,16 @@ fan content without extraction.
 
 Social systems Will cared about + Scott's play/puzzle orbit — optional Will cameo or async clip.
 
+### 6. Game Thinking TV × the CS547 treasure trove
+
+In January 2023, when the Stanford CS547 archive surfaced (Will's 1996 *Interfacing to Microworlds* /
+Dollhouse talk, plus ~300 more historic lectures), Scott offered: *"we have the production capacity and
+channel"* — [Game Thinking TV](https://www.youtube.com/c/gamethinkingtv) — *"and would love to publish some
+or all of Will Wright's talk, and potentially other videos."* This is a standing partnership waiting to
+happen: Don's transcript-cleanup + captioning workflow
+([proof of concept](https://www.youtube.com/watch?v=nsxoZXaYJSk)) feeding the Kims' production pipeline.
+CS547 talks, Will lectures, Repo Show episodes — publish where the audience already is.
+
 ## Solo-only hooks (if ever scheduled separately)
 
 Rare — prefer the pair show. Amy Jo-only: Game Thinking workshop for a product team live in repo.

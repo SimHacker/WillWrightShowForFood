@@ -41,6 +41,7 @@ you first. Selection is opinion; opinions are signed.*
 | [**Jared Tarbell**](../../characters/jared-tarbell/README.md) | levitated.net — generative Flash organisms, then Etsy, then laser-cut mathematics. |
 | [**Alan Kay**](../../characters/alan-kay/README.md) | Messaging, not objects — the idea Palmhoo's whole two-way-RPC-with-readers theory leans on. |
 | [**Ben Shneiderman**](../../characters/ben-shneiderman/README.md) · [**Brad Myers**](../../characters/brad-myers/README.md) | Direct manipulation and the prototype-instance UI tradition. |
+| [**Bruce "Tog" Tognazzini**](../../characters/bruce-tognazzini/README.md) | Wrote the original Apple Human Interface Guidelines — and the 1979 *Infinite No. of Monkeys* demo I answered 47 years later. Start with [his sources shelf](../../characters/bruce-tognazzini/sources/README.md); my [tribute](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/tribute-to-tognazzini.md) is the handshake. |
 
 ## The new arrivals
 

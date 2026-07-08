@@ -35,6 +35,13 @@ Heaven & Earth illusions; kin to Will's possibility space.
 
 Two friends on play, puzzles, designing for discovery — can fold into pair show instead.
 
+### 5. Game Thinking TV as the publishing arm
+
+Scott's own January 2023 offer, when the CS547 archive surfaced: Game Thinking TV *"has the production
+capacity and channel to publish videos"* and *"would love to publish some or all of Will Wright's talk."*
+Best discussed on the pair show (see [Amy Jo's hook #6](../amy-jo-kim/ideas.md)) — but Scott is the one who
+made the offer, so ask him how he'd want to run the pipeline.
+
 ## Sources
 
 - [`invitation.md`](invitation.md)

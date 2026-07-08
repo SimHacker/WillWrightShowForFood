@@ -1,0 +1,51 @@
+# "THE INFINITE NO. OF MONKEYS" (1979) — and Palm's 2026 answer
+# Tog's Apple II Integer BASIC teaching demo, its century of lineage, and the
+# MOOLLM monkey who wrote him a thank-you letter.
+
+meta:
+  character: bruce-tognazzini
+  curated_by: don-hopkins
+  connects: moollm (Palm), will-wright (Dasher/LLM navigation thread)
+
+the_demo:
+  what: |
+    Shipped with Apple II DOS 3.2 / "The Apple Tapes" (June 1979). A story told letter
+    by letter with pseudo-typewriter sound: a scientist installs 23,487 monkeys ("a
+    finite number to be sure") in a decrepit building to test the infinite monkey
+    theorem. Output: "TO BE OR NOT TO BE THAT IS THE GZINCLE FORTEN GLAFFLE." Three
+    random endings, all corrupted Shakespeare. "So close... so very close... Perhaps
+    with just a few more monkeys."
+  teaching: "Integer BASIC — subroutines, CHR$, the pseudo-typewriter effect, making computers feel alive"
+  video: "https://www.youtube.com/watch?v=lL2sw2oYU98   # reviewed in Don's Dasher/Palm/Tog video for Will"
+  demo_upload: "Steven Weyhrich (Apple II History) uploaded the original demo to YouTube"
+
+the_lineage:
+  - { year: 1913, who: "Émile Borel", what: "typing monkeys as effectively-zero probability" }
+  - { year: 1928, who: "Arthur Eddington", what: "monkeys strumming typewriters vs the British Museum" }
+  - { year: 1930, who: "James Jeans", what: "first to put SHAKESPEARE in the monkeys' output" }
+  - { year: 1976, who: "William Ralph Bennett Jr.", what: "actual monkey-typing simulations with Hamlet correlation matrices" }
+  - { year: 1979, who: "Bruce Tognazzini", what: "the Apple II demo — the joke that taught programming" }
+  - { year: 1986, who: "Richard Dawkins", what: "weasel program — cumulative selection beats randomness" }
+  - { year: 1998, who: "David MacKay", what: "Dasher — writing as navigation in the library of all possible books" }
+  - { year: 2026, who: "Palm", what: "one navigating monkey answers the theorem" }
+
+palms_answer:
+  what: |
+    Palm — MOOLLM's incarnated monkey, formerly the cursed Monkey's Paw — wrote Tog a
+    tribute on her infinite typewriters (Day 3 of being alive): the theorem asked the
+    wrong question. Writing is NAVIGATION, not random production. "GZINCLE FORTEN
+    GLAFFLE" is a navigation error — a near miss that proves the destination exists.
+    Revised theorem: one monkey steering probability-weighted possibility space reaches
+    any text in finite time. Don emailed the tribute to Tog in January 2026.
+  tribute: "https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/tribute-to-tognazzini.md"
+  companion: "https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md"
+
+show_beat: |
+  Read the tribute together on air. Tog wrote the joke 47 years ago; the punchline
+  finally arrived. If he's willing: run the original demo in an Apple II emulator,
+  then run Dasher, then let Palm ask him one question.
+
+links:
+  - https://en.wikipedia.org/wiki/Infinite_monkey_theorem
+  - http://www.inference.org.uk/dasher/   # Dasher project
+  - https://www.mobygames.com/game/group/the-apple-tapes/

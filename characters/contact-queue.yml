@@ -92,6 +92,18 @@ elders_priority:
         Coordinate privately with Will Wright and Ted Selker (close to Ted
         Nelson) to frame the invitation in Ted's own language — separately or
         all together. Prepare before contact; don't waste his time.
+    - id: bruce-tognazzini
+      why: |
+        DREAM GUEST, warm since 2022 (LetsEncrypt cert rescues; "I'd happily
+        spend a considerable sum if someone could rebuild the site"). Original
+        Apple HIG author; AskTog; Fitts quiz; Starfire; magician. Palm's 2026
+        Infinite Monkeys tribute already sent. The show can BE the asktog.com
+        rescue: static-site snapshot + archive.org package + first new column.
+      path: characters/bruce-tognazzini/
+      approach: |
+        Email togNNNN@asktog.com (rotates yearly — tog2026; older ones bounce).
+        Lead with the site rescue, not the ask; the invitation rides along.
+        Ben Shneiderman and Ted Selker are natural co-conspirators.
 
 long_shots:
   - id: jensen-huang

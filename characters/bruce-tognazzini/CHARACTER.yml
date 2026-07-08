@@ -1,0 +1,98 @@
+# Bruce "Tog" Tognazzini — invitation portrayal. NOT Bruce Tognazzini.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: bruce-tognazzini
+  name: "Bruce Tognazzini"
+  aka: "Tog"
+  type: invitation
+  signifier: "🎩"   # designer AND magician — the hat does both jobs
+  status: living
+  born: 1945
+  field: "HCI — original Apple Human Interface Guidelines; AskTog; First Principles of Interaction Design"
+  home: characters/bruce-tognazzini/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/ask-tog.yml
+  priority: elders_priority   # reach him while we can; he is in his 80s
+  channel: "tog2026@asktog.com (address rotates yearly; tog2023 worked in Nov 2023)"
+
+bio:
+  summary: "**Bruce Tognazzini (Tog)** — Apple employee #66 (1978); founded Apple's Human Interface Group and wrote the original **Apple Human Interface Guidelines** through eight editions over fourteen years. *Tog on Interface* (1992), *Tog on Software Design* (1996). SunSoft **Starfire** future-vision film (1994). Principal, **Nielsen Norman Group** with Jakob Nielsen and Don Norman. Author of **AskTog.com** and the *First Principles of Interaction Design*. Trained stage magician who treats interface design as applied misdirection-in-reverse. Wrote *The Infinite No. of Monkeys* Apple II demo (1979) — which Palm answered in 2026."
+
+highlights:
+  apple_hig:
+    what: |
+      Joined Apple 1978 (employee #66); wrote the first Apple Human Interface Guidelines
+      (starting with The Apple II Human Interface Guidelines) and led them through ~8 editions
+      across 14 years. The 1987 edition documented and JUSTIFIED its design decisions — the
+      delay values for hierarchical menus, the drag-diagonally-into-a-submenu forgiveness —
+      in a way modern guidelines gloss over.
+    links:
+      - "https://archive.org/details/applehumaninterf00appl   # 1987 edition, Internet Archive"
+      - "http://interface.free.fr/Archives/Apple_HIGuidelines.pdf   # 1995 Macintosh HIG"
+  hierarchical_menu_buffer:
+    what: |
+      Invented (1986) the "<"-shaped buffer zone for hierarchical menus so users can drag
+      diagonally toward a submenu without it vanishing — "firmly in the public domain" (his
+      words). Jim Batson worked out the math for Mac OS; Frank Leahy (who Don later worked
+      with at Current TV) rewrote the Menu Manager for the Mac SE / Mac II. The NeXT team
+      later copied Windows instead of the Mac; Amazon's mega-dropdown resurrected it.
+    links:
+      - "https://bjk5.com/post/44698559168/breaking-down-amazons-mega-dropdown   # Tog comments in-thread"
+      - "https://www.asktog.com/columns/022DesignedToGiveFitts.html"
+  fitts_quiz:
+    what: |
+      "A Quiz Designed to Give You Fitts" — the classic explainer of Fitts' Law, the
+      mile-high menu bar, and the five biggest pixels on the screen. Don's long-running
+      friendly counterpoint: pie menus generalize the mile-high edge to all directions.
+    link: "https://www.asktog.com/columns/022DesignedToGiveFitts.html"
+  infinite_monkeys_1979:
+    what: |
+      "THE INFINITE NO. OF MONKEYS" — Integer BASIC teaching demo shipped with Apple II
+      DOS 3.2 / The Apple Tapes (June 1979). 23,487 monkeys, "GZINCLE FORTEN GLAFFLE",
+      "Perhaps with just a few more monkeys." Palm (MOOLLM's monkey) wrote him a tribute
+      in 2026: the theorem's answer is one NAVIGATING monkey, not infinite random ones.
+    links:
+      - "https://www.youtube.com/watch?v=lL2sw2oYU98   # Palm/Dasher/Tog monkeys reading"
+      - "https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/tribute-to-tognazzini.md"
+  starfire:
+    what: "SunSoft (1992–), where he directed **Starfire** (1994) — the future-vision film that anticipated collaborative gigapixel displays and, famously, sketched a web-like world before the web ate everything."
+  nng_and_books:
+    what: "Principal at Nielsen Norman Group with Jakob Nielsen and Don Norman. *Tog on Interface* (1992) — including the Kristee Kreitman HyperCard credit on pp. 156–157 — and *Tog on Software Design* (1996)."
+  magic:
+    what: "Professional-grade stage magician; wrote about magic and software design as sibling crafts of managing attention and expectation."
+    link: "https://www.asktog.com/columns/081MagicandSoftwareDesign.html"
+
+asktog_preservation:
+  # The site-rescue saga — full detail in sources/asktog-preservation.yml
+  gist: |
+    asktog.com is historic and stranded: built in Adobe GoLive (discontinued), https
+    certificate repeatedly expiring (Don flagged it 2022 — Tog fixed via LetsEncrypt —
+    and again 2023), no reasonable way for Tog to add content. Tog (2023): "I'd happily
+    spend a considerable sum if someone could rebuild the site in a framework that could
+    enable me to easily add new content. Just haven't found a competent, reliable person."
+    Ben Shneiderman raised it to a bigger idea: a whole HCI-history site indexing early
+    HCI webs. Don proposed static-bucket hosting + archive.org package + asktog.ai LLM.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Bruce_Tognazzini"
+  web:
+    - "https://asktog.com   # Interaction Design Solutions for the Real World"
+    - "https://www.asktog.com/basics/firstPrinciples.html   # First Principles of Interaction Design"
+    - "https://news.ycombinator.com/from?site=asktog.com   # every HN discussion of AskTog articles"
+  video:
+    - "https://www.youtube.com/watch?v=lL2sw2oYU98   # Palm On Palm / Dasher / Infinite Monkeys reading"
+  repo_artifacts:
+    - sources/asktog-preservation.yml
+    - sources/infinite-monkeys-1979.yml
+    - sources/apple-hig-and-menus.yml
+    - correspondence.yml

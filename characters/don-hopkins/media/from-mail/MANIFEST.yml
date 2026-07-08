@@ -1,7 +1,7 @@
 # don-hopkins — mail-sourced evidence
 
 character: don-hopkins
-artifact_count: 10
+artifact_count: 11
 
 artifacts:
   - file: from-mail/paper-screenshot-2023-07-16-at-174211.png
@@ -34,3 +34,16 @@ artifacts:
   - file: from-mail/screenshot-screen-shot-2018-07-16-at-233006.png
     kind: artifact
     title: "screenshot-screen-shot-2018-07-16-at-233006"
+  - file: from-mail/scriptx-crazy-for-ragtime-infoworld-1995-11-20.png
+    kind: press_clipping
+    title: "If Kaleida is lucky enough to get an epitaph, will Apple write it in ScriptX?"
+    source: "Robert X. Cringely, Notes From the Field, InfoWorld, November 20, 1995, p. 110"
+    why: |
+      Cringely's Kaleida obituary column — names Robert Winter's "Crazy for Ragtime" as maybe
+      "the only ScriptX production ever when it ships in December." Don supported Winter at
+      Kaleida; one of the few ScriptX products that actually shipped. Surfaced in Don's March
+      2020 Hyperland/PhotoCard mail thread.
+    links:
+      - https://archive.org/details/crazy-for-ragtime
+      - https://archive.org/details/crazy-for-ragtime-leaflet
+    see_also: ../../kaleida-scriptx-dreamscape-multimedia-lisp-machine.md
