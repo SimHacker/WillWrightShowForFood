@@ -102,6 +102,7 @@ authorship:
 prior_reading:
   essays:
     - { title: "One Monkey, Infinite Typewriters", url: "https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md" }
+    - { title: "Will Wright Soul For Food", path: will-wright-soul-for-food.md }
   journal: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/characters/animals/monkey-palm/JOURNAL.md
 
 relationship: |

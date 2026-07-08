@@ -101,6 +101,8 @@ identity) rather than being copied or trapped. That is repossession delivered as
 [data portability between games](crazy-idea-jam.yml#data_portability_crown_jewel) — Will's still-unshipped
 1996 crown jewel — starts here, with the smallest durable unit: one soul you can never lose.
 
+Palm names the ethical layer under the title pun: [**Will Wright Soul For Food**](../characters/palm/will-wright-soul-for-food.md) — guest rooms as consented portrayals, incarnation as authorship ([*On Being Simulated*](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/on-being-simulated.md)).
+
 ---
 
 ## Pyramid
