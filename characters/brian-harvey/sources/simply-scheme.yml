@@ -2,6 +2,7 @@
 # Foreword by Hal Abelson. Public textbook.
 
 meta:
+  rendered_edition: simply-scheme.md
   authors: [Brian Harvey, Matthew Wright]
   foreword: Hal Abelson
   url: https://people.eecs.berkeley.edu/~bh/ss-toc.html

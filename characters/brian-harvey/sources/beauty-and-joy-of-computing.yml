@@ -2,6 +2,7 @@
 # CSforALL curriculum powered by Snap!. 2024 ACM Karlstrom Outstanding Educator Award.
 
 meta:
+  rendered_edition: beauty-and-joy-of-computing.md
   authors: [Brian Harvey, Dan Garcia]
   curriculum: Beauty and Joy of Computing
   url: https://bjc.berkeley.edu/

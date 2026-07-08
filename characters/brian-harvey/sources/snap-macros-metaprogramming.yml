@@ -4,6 +4,7 @@
 # Don's synthesis for Repo Show / HN accuracy — not attributed quotes unless marked.
 
 meta:
+  rendered_edition: snap-macros-metaprogramming.md
   title: "Snap! rings, AST metaprogramming, and macros"
   kind: technical_digest
   consent: public

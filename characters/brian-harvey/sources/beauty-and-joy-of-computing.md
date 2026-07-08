@@ -1,0 +1,36 @@
+# The Beauty and Joy of Computing — Brian Harvey & Dan Garcia (readable edition)
+
+*CSforALL curriculum powered by Snap!. 2024 ACM Karlstrom Outstanding Educator Award.
+**Source of truth:** [`beauty-and-joy-of-computing.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/beauty-and-joy-of-computing.yml) —
+this page is rendered for humans; the YAML drives the machines.*
+
+**Go there:** [bjc.berkeley.edu](https://bjc.berkeley.edu/) · [snap.berkeley.edu](https://snap.berkeley.edu/) ·
+[ACM Karlstrom Award](https://awards.acm.org/karlstrom)
+
+## The hook
+
+BJC is the course slogan made real: computing as beauty and joy, not a gatekeeping filter. Snap!
+is the language; Brian and Dan are the pedagogical architects. The Karlstrom citation names
+**Jens Mönig** as Snap!'s principal developer — so the award is already a pair story.
+
+## Highlights
+
+- 1,000+ teachers trained; Spanish edition; BJC Sparks for middle school.
+- Berkeley's BJC course has exceeded 50% female enrollment — once 70%.
+- CSforALL mission: especially students from historically underrepresented communities.
+
+## Show hooks
+
+- BJC for everyone — the Karlstrom-cited work, told by Brian.
+- Why [first-class everything in Snap!](../../jens-monig/sources/snap-first-class-everything.yml) is a *beginner* feature, not an advanced one.
+- Pair show beat: Jens builds, Brian documents — same curriculum, two roles.
+- [Karlstrom talk honesty](snapcon-2025-karlstrom-address.md) — CCUS over curriculum; assessment hoops vs constructionism.
+
+## Deeper into the multiverse
+
+- [Karlstrom address digest](snapcon-2025-karlstrom-address.md) · [full transcript](snapcon-2025-karlstrom-address-transcript.md) — including "jump through hoops questions"
+- [Brian's ideas — BJC](../ideas.md#4-the-beauty-and-joy-of-computing-bjc)
+- [Pair show](../../../repo-shows/snap-logo-brian-jens/SHOW.yml) · [Palm's questions](../../../repo-shows/snap-logo-brian-jens/audience/palm/questions.md)
+- [Snap! source](https://github.com/jmoenig/Snap)
+
+↑ [Sources index](README.md) · [Brian's room](../README.md) · [Invitation](../invitation.md) · [Ideas](../ideas.md)

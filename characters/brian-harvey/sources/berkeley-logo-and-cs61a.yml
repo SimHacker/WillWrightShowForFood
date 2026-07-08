@@ -2,6 +2,7 @@
 # Public career arc at UC Berkeley.
 
 meta:
+  rendered_edition: berkeley-logo-and-cs61a.md
   author: Brian Harvey
   berkeley_logo_url: https://people.eecs.berkeley.edu/~bh/logo.html
   cs61a_url: https://cs61a.org/

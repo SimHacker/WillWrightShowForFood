@@ -2,6 +2,7 @@
 # Public textbooks. The through-line from Papert's turtle to real CS.
 
 meta:
+  rendered_edition: computer-science-logo-style.md
   author: Brian Harvey
   title: "Computer Science Logo Style"
   volumes: 3
@@ -26,6 +27,6 @@ show_hooks:
   - "Logo → Scheme → Snap! lineage told by the person who wrote the textbooks"
 
 see_also:
-  - ../ideas.md#2-the-books--computer-science-logo-style-and-simply-scheme
+  - ../ideas.md#2-the-books--cs-logo-style-and-simply-scheme
   - simply-scheme.yml
   - ../../jens-monig/sources/snap-first-class-everything.yml

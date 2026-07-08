@@ -16,7 +16,7 @@
 
 **Memorial beat:** Both on people they miss from Logo/blocks/BJC/Snap!Con — lessons still worth learning (question id 11). Framed after the design controversies: harmonious disagreement, not who won.
 
-**Technical spine:** [Metaprogramming digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snap-macros-metaprogramming.yml)
+**Technical spine:** [Metaprogramming digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snap-macros-metaprogramming.md)
 
 Full tree: [`questions.md`](questions.md) — twelve questions, controversy → gratitude → heart → memorial → silly. Every node carries metadata and **Zap** laser links as absolute URLs.
 

@@ -25,8 +25,8 @@ Palm filed Theo the Logo Turtle in his field notebook after Snap!Con — worms t
 **Prior reading**
 
 - [Palm's worm field notebook](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md)
-- [Metaprogramming digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snap-macros-metaprogramming.yml)
-- [Brian's Snap!Con 2025 Karlstrom address digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snapcon-2025-karlstrom-address.yml)
+- [Metaprogramming digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snap-macros-metaprogramming.md)
+- [Brian's Snap!Con 2025 Karlstrom address digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snapcon-2025-karlstrom-address.md)
 
 **Producer note**
 
@@ -53,7 +53,7 @@ Brian — you said the gray ring around a procedure is lambda, and I keep thinki
 
 **Zap for more**
 
-- [Metaprogramming digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snap-macros-metaprogramming.yml)
+- [Metaprogramming digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snap-macros-metaprogramming.md)
 - [Snap! Reference Manual — Procedures as Data](https://docs.snap.berkeley.edu/procedures-as-data/)
 
 #### 1a · Invisible rings
@@ -81,8 +81,8 @@ Don posted on Hacker News that everything you can do in Scheme — recursion, HO
 
 **Zap for more**
 
-- [Metaprogramming digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snap-macros-metaprogramming.yml)
-- [Simply Scheme source notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/simply-scheme.yml)
+- [Metaprogramming digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snap-macros-metaprogramming.md)
+- [Simply Scheme source notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/simply-scheme.md)
 
 #### 2a · Hygiene
 
@@ -109,8 +109,8 @@ Brian — I hear your most **controversial** opinion is that **dynamic binding**
 
 **Zap for more**
 
-- [Metaprogramming digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snap-macros-metaprogramming.yml)
-- [Computer Science Logo Style notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/computer-science-logo-style.yml)
+- [Metaprogramming digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snap-macros-metaprogramming.md)
+- [Computer Science Logo Style notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/computer-science-logo-style.md)
 - [Snap! forum — hygienic macros thread](https://forum.snap.berkeley.edu/t/hygienic-macros/3258)
 
 #### 3a · What Snap! actually ships
@@ -159,7 +159,7 @@ Snap! 8 gave us `split by blocks`, `join`, and `define` — blocks as syntax tre
 **Zap for more**
 
 - [Morphic.js notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jens-monig/sources/morphic-js.yml)
-- [Metaprogramming digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snap-macros-metaprogramming.yml)
+- [Metaprogramming digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snap-macros-metaprogramming.md)
 - [Snap! Reference Manual — Metaprogramming](https://docs.snap.berkeley.edu/metaprogramming/)
 
 ---
@@ -177,7 +177,7 @@ The macro that declares script variables in the **caller** — not inside the he
 
 **Zap for more**
 
-- [Metaprogramming digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snap-macros-metaprogramming.yml)
+- [Metaprogramming digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snap-macros-metaprogramming.md)
 - [Snap! forum — do macros actually work?](https://forum.snap.berkeley.edu/t/do-macros-actually-work-in-snap/14431)
 
 #### 5a · Command macro notation
@@ -206,7 +206,7 @@ You started as Logo disguised as Scratch; lambda made it Scheme disguised as Scr
 **Zap for more**
 
 - [Palm's worm field notebook](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md)
-- [Computer Science Logo Style notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/computer-science-logo-style.yml)
+- [Computer Science Logo Style notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/computer-science-logo-style.md)
 
 ---
 
@@ -223,7 +223,7 @@ Don's 2018 thread — drive Micropolis and CAM6 from Snap! blocks. If we finish 
 
 **Zap for more**
 
-- [Micropolis × Snap! — Brian's thread digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/micropolis-snap-2018.yml)
+- [Micropolis × Snap! — Brian's thread digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/micropolis-snap-2018.md)
 - [Micropolis × Snap! — Jens's thread digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jens-monig/sources/micropolis-snap-2018.yml)
 
 ---
@@ -324,7 +324,7 @@ Brian — the beat I most want the full version of: **no grades**. At Lincoln-Su
 
 **Zap for more**
 
-- [Brian's Snap!Con 2025 Karlstrom address digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snapcon-2025-karlstrom-address.yml)
+- [Brian's Snap!Con 2025 Karlstrom address digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snapcon-2025-karlstrom-address.md)
 - [Cleaned transcript of the live talk](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snapcon-2025-karlstrom-address-transcript.md)
 - [Martin Buber](https://en.wikipedia.org/wiki/Martin_Buber)
 - [Karlstrom address video](https://www.youtube.com/watch?v=pDK2PE_pkqQ)
@@ -374,13 +374,13 @@ Brian and Jens — we've been digging up your old **design arguments** on purpos
 
 **Zap for more**
 
-- [Brian's Snap!Con 2025 Karlstrom address digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snapcon-2025-karlstrom-address.yml)
+- [Brian's Snap!Con 2025 Karlstrom address digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snapcon-2025-karlstrom-address.md)
 - [Jens's Karlstrom intro digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jens-monig/sources/snapcon-2025-karlstrom-intro.yml)
 - [Cynthia Solomon — character room](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/cynthia-solomon/CHARACTER.yml)
 - [Old band back together](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/old-band-back-together.yml)
-- [Computer Science Logo Style notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/computer-science-logo-style.yml)
-- [Simply Scheme notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/simply-scheme.yml)
-- [Beauty and Joy of Computing notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/beauty-and-joy-of-computing.yml)
+- [Computer Science Logo Style notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/computer-science-logo-style.md)
+- [Simply Scheme notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/simply-scheme.md)
+- [Beauty and Joy of Computing notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/beauty-and-joy-of-computing.md)
 
 #### 11a · Brian's teachers and elders
 
@@ -423,7 +423,7 @@ Silly closer: if I ringify a `say` block and drop it in a `list`, does the speec
 |-------|-------|
 | **MOOLLM stack** | `CHARACTER.yml`, `CARD.yml` |
 | **Question tree schema** | [schemas/question-tree.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/question-tree.yml) |
-| **Source digest** | [snap-macros-metaprogramming.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snap-macros-metaprogramming.yml) |
+| **Source digest** | [snap-macros-metaprogramming.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snap-macros-metaprogramming.md) ([yml girder](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snap-macros-metaprogramming.yml)) |
 | **Rendered from** | [questions.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/snap-logo-brian-jens/audience/palm/questions.yml) |
 
 ↑ [Palm README](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/snap-logo-brian-jens/audience/palm/README.md) · [pair show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/snap-logo-brian-jens/README.md) · [Brian](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/brian-harvey) · [Jens](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/jens-monig)

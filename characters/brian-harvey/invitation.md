@@ -38,7 +38,7 @@ today. Palm the monkey already filed **Theo the Logo Turtle** in his
 Dan Garcia) recognized. The citation names Jens as Snap!'s principal developer — so the award is
 already a pair story.
 - **Snap!Con 2025 Karlstrom address** — you gave the evening talk Jens introduced
-([video](https://www.youtube.com/watch?v=pDK2PE_pkqQ), [Karlstrom talk digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snapcon-2025-karlstrom-address.yml)):
+([video](https://www.youtube.com/watch?v=pDK2PE_pkqQ), [Karlstrom talk digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snapcon-2025-karlstrom-address.md)):
 CCUS and no grades as the life's work you're proudest of; curriculum and assessment hoops as the
 tension; lambda as your Snap! contribution; AI probably won't reshape kids' schooling the way
 panickers claim. But maybe AI will enable *US* to reshape kids' schooling!
@@ -50,10 +50,10 @@ you put it there yourself.
 - **Snap!'s pedagogy** — why first-class everything matters for *beginners*, not just theorists; the
   design and documentation you brought to what Jens builds.
 - **Rings, metaprogramming, macros** — gray rings as visible `quote`; Snap! 8 AST (`split`/`join`/`define`);
-  Lisp-family macros (partial — hygiene still open). [Metaprogramming digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snap-macros-metaprogramming.yml);
+  Lisp-family macros (partial — hygiene still open). [Metaprogramming digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snap-macros-metaprogramming.md);
   Palm's [audience questions (readable)](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/snap-logo-brian-jens/audience/palm/questions.md)
   — [YAML source](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/snap-logo-brian-jens/audience/palm/questions.yml) for the orchestrator.
-- **Micropolis x Snap!** — our **2018 thread** ([Micropolis thread digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/micropolis-snap-2018.yml)): an open, modifiable city sim (and CAM6 cellular automata) reprogrammed from blocks. Still on the table, closer than ever.
+- **Micropolis x Snap!** — our **2018 thread** ([Micropolis thread digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/micropolis-snap-2018.md)): an open, modifiable city sim (and CAM6 cellular automata) reprogrammed from blocks. Still on the table, closer than ever.
 
 **Also on the table, if you're game:**
 
