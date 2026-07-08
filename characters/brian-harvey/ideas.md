@@ -42,6 +42,11 @@ Default interview is the **pair show** — Brian on books + pedagogy, Jens on im
 
 [sources/snapcon-2025-karlstrom-address.yml](sources/snapcon-2025-karlstrom-address.yml) — Brian's evening talk (introduced by Jens): Lincoln-Sudbury Computer Center Users Society, no grades, keys to the room, "my friend" naming; curriculum/assessment critique; lambda as Snap! contribution; skeptical take on AI in K-12.
 
+**The standing ask: give us the director's cut.** A 44-minute version was announced alongside
+the public recording, and ACM's People of ACM interview cut the dinner-and-California material
+("So, I hate the 21st century. Thank you."). The Repo Show has no time slot and no editors —
+Brian delivers the 44 minutes, or longer; whatever the talk wants to be.
+
 ### 6. Teaching CS 61A and SICP at Berkeley
 
 The legendary course — what Brian kept, translated, and refused to dumb down.

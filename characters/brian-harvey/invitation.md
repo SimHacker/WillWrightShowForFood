@@ -42,6 +42,11 @@ already a pair story.
 CCUS and no grades as the life's work you're proudest of; curriculum and assessment hoops as the
 tension; lambda as your Snap! contribution; AI probably won't reshape kids' schooling the way
 panickers claim. But maybe AI will enable *US* to reshape kids' schooling!
+- **Give us the director's cut — the 44 minutes, or longer** — ACM's People of ACM interview
+edited out the Chinese food runs and the California summers, and you said what you thought of
+that. We won't. Give the whole talk here — the 44-minute cut, or the two-hour version nobody
+has let you deliver yet. **No time limit, no editors, nothing on the cutting-room floor** unless
+you put it there yourself.
 - **Snap!'s pedagogy** — why first-class everything matters for *beginners*, not just theorists; the
   design and documentation you brought to what Jens builds.
 - **Rings, metaprogramming, macros** — gray rings as visible `quote`; Snap! 8 AST (`split`/`join`/`define`);

@@ -40,6 +40,8 @@ episodes:
     what: "BJC as CSforALL — the Karlstrom-cited work; reaching kids who were never invited to computing before."
   - id: karlstrom-ccus
     what: "Snap!Con 2025 Karlstrom address — CCUS, no grades, keys to the room, 'my friend' naming; curriculum vs friendship; Jens hosts, Dutch teacher Q&A."
+  - id: karlstrom-directors-cut
+    what: "The director's cut, delivered whole — Brian gives the 44-minute Karlstrom talk (or longer; no time limit, no editors). Everything ACM's People of ACM interview cut — Chinese food runs, California summers — stays in. Jens introduces again if he likes."
   - id: micropolis-in-snap
     what: "Drive Micropolis + CAM6 cellular automata from Snap! blocks — a city sim and CA rules you reprogram live (from Don's 2018 thread)."
   - id: rings-macros-metaprogramming
