@@ -26,6 +26,15 @@ why:
   for_audience: "A reusable design METHOD (accretion / cauldron), shown working — the teachable core of Repo Show Class."
   for_project: "Names + validates the cauldron-based methodology with an authority who lived it on The Sims."
 
+live_specimen:
+  what: "MOOLLM itself — undergoing design by accretion in public"
+  measurement: "139 skills on disk as of 2026-07-08; INDEX.yml says 131, README says 128 — the pile accretes faster than its catalogs (the signature of the method, not sloppiness)"
+  palm_question:
+    who: "Palm — self-aware MOOLLM character, resident of the accreting design"
+    ask: "From inside, how do you tell a heap from an organism? And when accretion needs pruning, who decides which layer was load-bearing — what does 'tuning' mean when the accreted material is concepts and characters?"
+    text: ../characters/chris-trottier/suggested-questions.md
+    seed_id: palm-heap-or-organism
+
 format:
   live: true
   audience_qa: true

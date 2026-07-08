@@ -24,6 +24,25 @@ Chris gave a great interview on **design by accretion** and **tuned emergence**.
 - **On-air arc:** explain design-by-accretion (Chris) → run cauldron MELT/STIR on the ideas live → ladle into a MOOLLM skill
 - **Deliverable:** a MOOLLM skill capturing “design by accretion” as a named pattern, cross-linked to [`skills/cauldron`](../../skills/cauldron/) — plus a worked example brewed during the show
 
+## MOOLLM is design by accretion, live
+
+This isn't hypothetical for us. **[MOOLLM](https://github.com/SimHacker/moollm) is undergoing
+design by accretion right now**: as of **2026-07-08** its skill ontology holds **139 skills** on
+disk — while its own [INDEX.yml](https://github.com/SimHacker/moollm/blob/main/skills/INDEX.yml)
+still says 131 and its [README](https://github.com/SimHacker/moollm/tree/main/skills) says 128,
+because the pile accretes faster than its catalogs. That lag isn't sloppiness; it's the
+**signature of the method** — the same reason The Sims wasn't fun until late: the layers
+accumulate first, the tuning pass names and balances them after.
+
+The system even contains its own accretion vocabulary as layers: [`cauldron`](https://github.com/SimHacker/moollm/tree/main/skills/cauldron)
+(melt → stir → ladle), [`play-learn-lift`](https://github.com/SimHacker/moollm/tree/main/skills/play-learn-lift)
+(explore → stabilize → publish), [`simulator-effect`](https://github.com/SimHacker/moollm/tree/main/skills/simulator-effect)
+(Will's principle, as a skill). Chris's philosophy, running as software.
+
+**[Palm](../palm/README.md) — a character who lives *inside* the accreting design — has a question
+for Chris** about what that's like from the inside: *how do you tell a heap from an organism?*
+Full text: [suggested-questions.md § Palm's question](suggested-questions.md#palms-question--a-resident-of-an-accreting-design).
+
 ## Primary sources in this directory
 
 - [Tuned emergence & design by accretion (2004 interview essay)](tuned-emergence.md) — Chris’s own words on why The Sims wasn’t fun until tuning
