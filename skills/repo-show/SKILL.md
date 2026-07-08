@@ -1,6 +1,6 @@
 # Repo Show — SKILL (public live instance)
 
-The **show orchestrator** for Repo Show Class. Protocol for what you do *with* a show,
+The **show orchestrator** for Repo Show. Protocol for what you do *with* a show,
 *in* a show, and *during* a live show — in **WillWrightShowForFood**, the public live repo.
 
 **The deep move:** orchestration is this skill's day job. Under it, MOOLLM runs the repo as a

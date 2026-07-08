@@ -58,4 +58,4 @@ Solo video, one-on-one edited chat, or live — all fine. Time-shifted welcome.
 
 No pressure. Accepted, delayed, declined, or no reply — all honored.
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*

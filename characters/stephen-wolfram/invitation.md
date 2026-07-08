@@ -26,4 +26,4 @@ Rather than burden this note, the argument lives in one short artifact you can r
 **The ask:** a Repo Show conversation — read the artifact, poke holes, and (if it's catnip) explore it live.
 The whole substrate is open and inspectable. Show seed: [`repo-shows/stephen-wolfram/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/stephen-wolfram/README.md).
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*

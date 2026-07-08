@@ -4,4 +4,4 @@ Don attended multiple sessions (including Will Wright's April 26 1996 "Interfaci
 
 We call Terry "the dragon with the treasure trove of videos." We stand on his wide, generous shoulders — and on the shoulders of every great guest he hosted: Will Wright, James Gosling, S. Joy Mountford (HCI design leadership — *not* pie menus; that's Don's own work), [Jef Raskin](../jef-raskin/README.md) 🕯️, Donald Norman, and dozens of others whose ideas are the common heritage the Repo Show exists to lift, implement, attribute, and teach.
 
-The archive is the seed of a Connections-style series and the original Repo Show Class. Our job is to recover it, make it runnable, and pay it forward.
+The archive is the seed of a Connections-style series and the original Repo Show. Our job is to recover it, make it runnable, and pay it forward.

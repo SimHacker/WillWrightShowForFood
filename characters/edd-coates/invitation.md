@@ -21,7 +21,7 @@ scraping explicitly off the table. I'm building the **Repo Show** on the same in
 other side: preserve computing history as **executable, credited artifacts** in public repos, not
 as slop fodder.
 
-We're friends; I'd love to turn that shared obsession into a **Repo Show Class** conversation —
+We're friends; I'd love to turn that shared obsession into a friendly recorded **Repo Show** conversation —
 warm room, screen-share heavy, following through to something useful in the open repo. **Show, don't tell.**
 
 **Proposed episodes** (your pick — one, both, or neither):

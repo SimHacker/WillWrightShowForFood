@@ -39,6 +39,6 @@ whenever you want it.
 
 No pressure, no homework. Accepted, delayed, declined, or no reply — all honored gracefully.
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*
 
 ↑ [sources/](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/peter-norvig/sources/README.md) · [ideas](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/peter-norvig/ideas.md) · [show seed](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/peter-norvig/README.md)

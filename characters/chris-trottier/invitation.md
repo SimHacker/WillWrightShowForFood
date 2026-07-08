@@ -63,4 +63,4 @@ playlist: short clips before and after, one polished cut when the dust settles.
 
 No pressure, no homework. Accepted, delayed, declined, or no reply — all honored gracefully.
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*

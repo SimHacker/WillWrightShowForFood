@@ -39,7 +39,7 @@ own terms — and it still informs how I think about **The Sims**, **Purple Moon
 
 No homework trap. Remote is fine. Accepted, delayed, declined, or no reply — all honored gracefully.
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*
 
 | | |
 |---|---|

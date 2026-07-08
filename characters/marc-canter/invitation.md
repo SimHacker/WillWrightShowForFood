@@ -42,7 +42,7 @@ three-way with David and me.
 
 No homework trap. Accepted, delayed, declined, or no reply — all honored gracefully.
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*
 
 | | |
 |---|---|

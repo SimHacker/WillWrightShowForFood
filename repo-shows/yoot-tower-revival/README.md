@@ -27,4 +27,4 @@ is exploratory and abstract, no pressure on Yoot (see
 
 See [`SHOW.yml`](SHOW.yml). Consent **not yet asked** for any guest.
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*

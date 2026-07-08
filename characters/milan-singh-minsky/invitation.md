@@ -24,4 +24,4 @@ taking Leela's visual-intelligence research and turning it into something people
 
 No pressure, no homework. Accepted, delayed, declined, or no reply — all honored gracefully.
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*

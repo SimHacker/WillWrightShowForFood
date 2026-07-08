@@ -42,7 +42,7 @@ keep coming back to (your pick, skip whatever bores you):
 More hooks in [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/laurie-anderson/ideas.md). No pressure — accepted,
 delayed, declined, or no reply all honored gracefully.
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*
 
 | | |
 |---|---|

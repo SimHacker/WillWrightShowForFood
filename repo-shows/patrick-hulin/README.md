@@ -18,4 +18,4 @@ made it real-time multiplayer. Live at **[towers.world](https://towers.world)**;
 
 See [`SHOW.yml`](SHOW.yml). Consent **not yet asked** — [`invitation`](../../characters/patrick-hulin/invitation.md).
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*

@@ -27,7 +27,7 @@ how the thing actually got built.
 
 No pressure, no homework. Accepted, delayed, declined, or no reply — all honored gracefully.
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*
 
 | | |
 |---|---|

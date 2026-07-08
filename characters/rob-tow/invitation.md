@@ -37,7 +37,7 @@ the world should see again: **landscape, narrative, and VR** before the hype cyc
 
 No homework trap. Remote is fine. Accepted, delayed, declined, or no reply — all honored gracefully.
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*
 
 | | |
 |---|---|

@@ -36,7 +36,7 @@ curb appeal up top, **brutalist GitHub underneath** (yaml girders, verify CI, re
 | **Retrocomputing Drive** | [`process/challenges/RETROCOMPUTING.md`](process/challenges/RETROCOMPUTING.md) · Lars + Thomas |
 | **Manual Transmission** (fewest tokens to code the spec) | [`process/manual-transmission.yml`](process/manual-transmission.yml) |
 | **Orchestration gold** (training traces + thoughtful commits) | [`process/orchestration-gold.yml`](process/orchestration-gold.yml) |
-| **Homefun grading** (Repo Show Class — match commit to thinking) | [`process/homefun-grading.yml`](process/homefun-grading.yml) |
+| **Homefun grading** (Repo Show — match commit to thinking) | [`process/homefun-grading.yml`](process/homefun-grading.yml) |
 | **Model branching** (fork chat, compare trajectories) | [`process/model-branching.yml`](process/model-branching.yml) |
 | **Brain stream** (live Cursor on overlay) | [`process/brain-stream.yml`](process/brain-stream.yml) · [`apps/stream-gateway/`](apps/stream-gateway/README.md) |
 | **Slats** (judge + RoboResurrection) | [`characters/robots/slats/`](characters/robots/slats/README.md) |
@@ -51,7 +51,7 @@ curb appeal up top, **brutalist GitHub underneath** (yaml girders, verify CI, re
 ## What this is
 
 A **Repo Show**: live conversation whose stage is *this repo*, following through to working
-code and shared technique. **Repo Show Class** — real people, credited ideas in public.
+code and shared technique. **Repo Show** — real people, credited ideas in public.
 **Show, don't tell.** You do **not** need AI — bring your own rig.
 
 **Long-term ambition** Don and Will have discussed since the **1996 Winograd microworlds

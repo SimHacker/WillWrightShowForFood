@@ -19,7 +19,7 @@ I've wanted to reach out for a while. **LGR** is one of the channels I trust whe
 "what was it actually like?" — retro hardware, oddware, and a **Maxis / SimCity / The Sims**
 catalog you clearly love for real. Don's line in our notes: *"invite the LGR guy!"*
 
-I'm building the **Repo Show Class** — conversations whose stage is a **public GitHub repo**,
+I'm building **Repo Shows** — friendly conversations whose stage is a **public GitHub repo**,
 following through to **runnable code** (open-source **Micropolis** in the browser, Sims tooling,
 preservation). I'd love you as an **audience bridge**: the retro-PC and Sims fandom meeting the
 people still building on Will Wright's lineage.
@@ -45,6 +45,6 @@ No script — browse, react, argue, demo.
 
 **Your response:** yes, later, too busy, or no — all honored gracefully.
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*
 
 `🕹️ LGR` · `🏙️ Micropolis` · `📼 preservation`

@@ -29,4 +29,4 @@ See [`SHOW.yml`](SHOW.yml) · [`invitation`](../../characters/david-ungar/invita
 [`reflecting-on-self`](../../characters/david-ungar/reflecting-on-self.md). Consent **not yet asked**
 — invitation marked **send_now**.
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*

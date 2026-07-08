@@ -48,4 +48,4 @@ Full proposal: [`rebounce.md`](../../characters/don-hopkins/rebounce.md). See [`
 **Orchestrator hub:** [`ORCHESTRATOR.yml`](ORCHESTRATOR.yml) — Repo Show mirror of SimProv/SliceCity dispatch ([design doc](../../designs/orchestrator-playsets/README.md)).
 Consent **not yet asked**.
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*

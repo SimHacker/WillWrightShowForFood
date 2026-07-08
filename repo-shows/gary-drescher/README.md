@@ -24,4 +24,4 @@
 
 **Interview planned.** Consent not yet asked — [`invitation`](../../characters/gary-drescher/invitation.md).
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*

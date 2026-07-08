@@ -38,7 +38,7 @@ I'd be honored if you'd join one. No homework trap. You'd help set the bar. Thre
 
 More hooks in [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/bret-victor/ideas.md). Accepted, delayed, declined, or no reply — all honored gracefully.
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*
 
 | | |
 |---|---|

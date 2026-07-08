@@ -22,7 +22,7 @@ Polite · respectful · inclusive · biographical (not gossipy) · verifiable ·
 
 ## What this is
 
-A public portrayal **about** a real person — for Repo Show invitations and Repo Show Class attribution. It is **not** the person. We do not impersonate. We do not fabricate quotes.
+A public portrayal **about** a real person — for Repo Show invitations and Repo Show attribution. It is **not** the person. We do not impersonate. We do not fabricate quotes.
 
 ## What we publish
 

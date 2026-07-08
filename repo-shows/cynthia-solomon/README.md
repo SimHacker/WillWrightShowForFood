@@ -20,4 +20,4 @@ screening of that trove, narrated by someone who was there.
 See [`SHOW.yml`](SHOW.yml). Consent **not yet asked** —
 [`invitation`](../../characters/cynthia-solomon/invitation.md).
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*

@@ -26,4 +26,4 @@ Also on the **[OpenLaszlo reunion](../openlaszlo/README.md)** with David Temkin,
 See [`SHOW.yml`](SHOW.yml). Consent **not yet asked** —
 [`invitation`](../../characters/oliver-steele/invitation.md).
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*

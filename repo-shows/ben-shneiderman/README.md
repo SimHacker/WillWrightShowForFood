@@ -31,4 +31,4 @@ embedded-link invention.
 
 Guest: [`characters/ben-shneiderman/`](../../characters/ben-shneiderman/README.md). Consent **not yet asked**.
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*

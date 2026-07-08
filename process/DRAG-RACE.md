@@ -7,7 +7,7 @@
 
 ## Pitch
 
-A Repo Show Class variety show: contestants bring RIG PERSONAS (Let's Make a Deal
+A Repo Show variety show: contestants bring RIG PERSONAS (Let's Make a Deal
 costumes + rigs/*.rig.yml). Your rig declares languages, tools, platforms — emulators
 count as platforms. Retrocomputing AI drag races welcome. Prove with Cursor spend logs,
 lip-sync thoughtful commits, merge technique DNA back into the organism. Declare class

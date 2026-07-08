@@ -45,7 +45,7 @@ segment with Terry's curatorial eye.
 Terry's own AI/HCI lineage (blocks world) ↔ Will's microworld philosophy ↔ modern LLM agents —
 without hype: **what microworlds teach that chatbots don't**.
 
-### 6. Constructionist education — Repo Show Class
+### 6. Constructionist education — Repo Show
 Open tools, explorable rules, credited ideas in public repos. Terry as elder host blessing the
 format — or correcting it.
 

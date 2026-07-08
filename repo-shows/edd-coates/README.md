@@ -26,4 +26,4 @@ game. See [`pie-menus-discussion-notes.md`](pie-menus-discussion-notes.md).
 See [`SHOW.yml`](SHOW.yml) · [`invitation`](../../characters/edd-coates/invitation.md) ·
 [`suggested-questions.yml`](suggested-questions.yml). Consent **not yet asked**.
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*

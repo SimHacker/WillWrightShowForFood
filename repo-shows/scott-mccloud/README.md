@@ -18,4 +18,4 @@ ideas were a design bible for **The Sims**.
 See [`SHOW.yml`](SHOW.yml). Consent **not yet asked** —
 [`invitation`](../../characters/scott-mccloud/invitation.md).
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*

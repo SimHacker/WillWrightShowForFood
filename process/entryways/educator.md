@@ -2,7 +2,7 @@
 
 > **→** Start with Will's 1996 words, then Papert/Kay cards — grade with Homefun.
 
-Repo Show Class treats credited public ideas as curriculum. Will's talk is primary source; constructionist guests are K-lines; homefun matches git commits to thinking blocks.
+Repo Show treats credited public ideas as curriculum. Will's talk is primary source; constructionist guests are K-lines; homefun matches git commits to thinking blocks.
 
 **Girder:** [`entryways.yml`](../entryways.yml#educator) · **Map:** [Museum map](README.md)
 

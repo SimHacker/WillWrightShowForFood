@@ -11,7 +11,7 @@ show_seed: repo-shows/doreen-nelson/
 *Doreen Nelson may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
-We would respectfully invite **Doreen Nelson** to a **Repo Show** — a Repo Show Class conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood), following through to working code and credited ideas in public.
+We would respectfully invite **Doreen Nelson** to a **Repo Show** — a friendly recorded conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood), following through to working code and credited ideas in public.
 
 ## Proposed focus
 
@@ -37,4 +37,4 @@ Browse without a GitHub account — [README](https://github.com/SimHacker/WillWr
 
 **Your response:** Accepted, delayed, too busy, declined, or no reply — all honored gracefully.
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*

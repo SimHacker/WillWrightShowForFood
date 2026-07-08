@@ -22,7 +22,7 @@ message passing** — or our **design jam** on the **VR diffusion-limited aggreg
 (CAM6 lineage). HiFi is history now; you're back where the economy never left — **Second Life**. I'd
 like to turn the hallway into a **Repo Show**.
 
-A Repo Show Class conversation whose stage is a public GitHub repo — show, don't tell — following
+A friendly recorded conversation whose stage is a public GitHub repo — show, don't tell — following
 through to working artifacts anyone can browse without an account.
 
 **What I'd love to explore with you — your pick, any order:**

@@ -15,7 +15,7 @@ Chris gave a great interview on **design by accretion** and **tuned emergence**.
 | Audience | Payoff |
 |----------|--------|
 | **Chris** | Her design philosophy showcased and credited, applied to a live project — ideas implemented, not just talked about |
-| **Viewers** | A reusable design *method* (accretion / cauldron), shown working — the teachable core of Repo Show Class |
+| **Viewers** | A reusable design *method* (accretion / cauldron), shown working — the teachable core of Repo Show |
 | **The repo** | Names and validates cauldron-based methodology with someone who lived it on The Sims |
 
 ## Format

@@ -21,7 +21,7 @@ I worked in your **Garnet** lab (~1992–93), built the PostScript printing driv
 sent pie-menu demos to **All the Widgets**. I guest-lectured your **05-640** class in 2019 on pie
 menus — same semester Bill Atkinson and Dan Bricklin walked the room.
 
-I'd like to turn that long hallway into a **Repo Show** — a Repo Show Class conversation whose
+I'd like to turn that long hallway into a **Repo Show** — a friendly recorded conversation whose
 stage is a public GitHub repo, following through to working code and credited ideas in public.
 **Show, don't tell.**
 

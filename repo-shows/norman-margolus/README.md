@@ -38,4 +38,4 @@ Guest: [`characters/norman-margolus/`](../../characters/norman-margolus/README.m
 the natural bridge is [Milan and Henry Minsky](../../characters/henry-minsky/README.md). See also Don's
 [CAM6.js writeup](../../characters/don-hopkins/cam6-cellular-automata-machine.md).
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*

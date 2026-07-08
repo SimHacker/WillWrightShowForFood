@@ -1,4 +1,4 @@
-# HOMEFUN GRADING — how Repo Show Class teachers score the fun
+# HOMEFUN GRADING — how Repo Show teachers score the fun
 # Not homework. Show-your-work with receipts. Scooped: 2026-06-27
 
 meta:
@@ -8,7 +8,7 @@ meta:
   tagline: "No homework — but as much homefun as you like. Grade the receipts."
 
 pitch: |
-  When Repo Show Class deploys to classrooms, teachers need something better than
+  When Repo Show deploys to classrooms, teachers need something better than
   'did the code compile?' Homefun submissions are git commits + PRs with
   thoughtful-commitment messages linked to cursor-mirror thinking blocks. The killer
   audit question — for students, ai-offs judges, and future orchestrator training:

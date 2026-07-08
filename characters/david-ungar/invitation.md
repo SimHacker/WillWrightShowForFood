@@ -20,7 +20,7 @@ when it mattered: papers, humor, mailing lists, and that Kaleida meetup where pr
 systems argued in good faith. Self doesn't run on everybody's phone — **in spirit it does** — in
 JavaScript's object model, in HotSpot's lineage, and in MOOLLM's `# import self from self`.
 
-I'd like to turn that hallway into a **Repo Show** — a Repo Show Class conversation whose stage is
+I'd like to turn that hallway into a **Repo Show** — a friendly recorded conversation whose stage is
 a public GitHub repo, following through to working code and credited ideas anyone can browse
 without an account. **Show, don't tell.**
 

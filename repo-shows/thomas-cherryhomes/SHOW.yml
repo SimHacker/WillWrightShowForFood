@@ -19,7 +19,7 @@ why_him:
   cross_platform_games: "FujiNet Battleship (4-player head-to-head across unlike machines), fish (TNFS search shell), five card stud, Eric Carr's growing game library + Game Lobby."
   emulator_path: "FujiNet-PC + NetSIO in atari800/Fujisan/Altirra; AppleWin SPoverSLIP; CoCo Becker port in MAME/VCC — the repo's real-wire complement to browser WASM emulators."
   plato_irata: "IRATA.ONLINE PLATO service, PLATOTerm, Compute's Gazette 'FujiNet Report' column — cross-platform C evangelist."
-  values_fit: "'Giant tree fort' community; 'argue to gain insight'; open hardware + firmware anyone can vendor. Matches Repo Show Class design-in-public."
+  values_fit: "'Giant tree fort' community; 'argue to gain insight'; open hardware + firmware anyone can vendor. Matches Repo Show design-in-public."
 
 why_pair_lars:
   complementary: "Thomas — real retro on the network (FujiNet, IRATA). Lars — emulated ITS/MACLISP on SIMH."

@@ -20,7 +20,7 @@ beats:
       Design conversation + implementation in public. Explain WHY a mechanic works, then make it
       real in the repo (MOOLLM + Cursor). Micropolis, Sims objects, web tools, skills — the git
       history IS the making-of featurette.
-    lineage: Repo Show Class · design-in-public · repo-show-format
+    lineage: Repo Show · design-in-public · repo-show-format
   play:
     what: |
       Actually run the thing — Sims wedding with Cupid, play-along narration, SliceCity, Micropolis,

@@ -62,7 +62,7 @@ Federated **brand** catalogs: [SimFreaks](simfreaks/), [SimSlice](simslice/), [S
 | Job | What |
 |-----|------|
 | **Catalogs & tools** | Links to Soul City web — SimFreaks, SimSlice, SimProv, Zombie Sims, MTS, IA index, web Transmogrifier/SimShow |
-| **Repo Shows channel** | Discover & promote Repo Show Class shows — **Will Wright flagship**, guests, live/VOD, GitHub, TicketPR |
+| **Repo Shows channel** | Discover & promote Repo Shows — **Will Wright flagship**, guests, live/VOD, GitHub, TicketPR |
 | **Sims & bridges** | Episodes about The Sims + **Simopolis bridges** to other games (Minecraft, Stardew, Proxi, Spore, …) |
 | **EA alignment** | Requires owned Sims on Steam; fan-guide disclaimer; drives sales; revives Exchange |
 

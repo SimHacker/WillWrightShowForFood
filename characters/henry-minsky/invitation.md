@@ -34,4 +34,4 @@ A **Minsky-sibling session** with [Margaret](https://github.com/SimHacker/WillWr
 
 **Your response:** Accepted, delayed, too busy, declined, or no reply — all honored gracefully.
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*

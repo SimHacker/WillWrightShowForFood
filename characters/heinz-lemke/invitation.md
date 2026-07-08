@@ -43,7 +43,7 @@ I treasure that correspondence. I also know how much first-hand history still li
 memory — Neil Wiseman, John Hiles, the lab culture, the US trip, what the light pen actually
 felt like — and I don't want it to stay there.
 
-I'd like to invite you to a **Repo Show** — a Repo Show Class conversation whose stage is a
+I'd like to invite you to a **Repo Show** — a friendly recorded conversation whose stage is a
 public GitHub repo, recorded as a relaxed video call. Not a lecture from me: an interview where
 **you** tell the story, with the 1969 film and paper on screen when they help. **Show, don't tell**
 — but the show is *your* PIXIE, Cambridge, and CARS arc, told by the person who was there.

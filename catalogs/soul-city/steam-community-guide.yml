@@ -30,7 +30,7 @@ jobs:
 
   repo_shows_channel:
     what: |
-      Guide sections promote Repo Show Class Repo Shows — where Legacy Collection buyers find
+      Guide sections promote Repo Shows — where Legacy Collection buyers find
       the living conversation, archives, and follow-through code.
     flagship: ../../repo-shows/will-wright-premiere/
     network: ../../repo-shows/INDEX.yml

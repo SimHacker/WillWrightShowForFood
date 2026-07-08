@@ -18,4 +18,4 @@ Perfect **audience bridge** — people who already celebrate the catalog, meetin
 
 See [`SHOW.yml`](SHOW.yml) · [`invitation`](../../characters/clint-basinger/invitation.md). Consent **not yet asked** — **send_now**.
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*

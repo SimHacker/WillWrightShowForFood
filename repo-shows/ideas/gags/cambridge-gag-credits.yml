@@ -148,7 +148,7 @@ pixie_pie_menus_pdp7:
     ground_up_software.consulting_plugs; Engelbart alternates in light_pen_bureau_sponsor.engelbart.gag_credit_lines.
   roll:
     - line: "Department of Research Simulation"
-      note: "Anchor gag — Repo Show Class in 1969 university voice"
+      note: "Anchor gag — Repo Show in 1969 university voice"
     - line: "Computing Laboratory — Light Pen Bureau"
       sponsor_spot: light_pen_bureau_sponsor
     - line: "Rainbow Group — Distributed CAD"
@@ -213,7 +213,7 @@ repo_show_generic:
     - "Ultimate Machine — Stream Termination Services"
     - "Don Philahue — Audience Wrangling Unit"
     - "Cauldron — Harvest and Scoop Division"
-    - "Ground Up Software — Repo Show Class Advisory"
+    - "Ground Up Software — Repo Show Advisory"
     - "FROM THE GROUND UP — A CONSULTING ENGAGEMENT"
 
 see_also:

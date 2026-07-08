@@ -33,7 +33,7 @@ layers:
     - "TSR/SFS replacement lane for free git-native UCC; federate paid creator storefronts + external SFS links"
     - "Storefront syndication — simfreaks.com, simslice.com as federated nodes"
     - "Repo Show artifacts — audience homefun merges back into catalogs"
-    - "Repo Show Class streams — show, don't tell"
+    - "Repo Show streams — show, don't tell"
 
 steam_community_guides:
   spec: steam-community-guide.yml

@@ -41,7 +41,7 @@ threads:
 
   moollm_repo_show:
     span: "2024–"
-    artifacts: [moollm, Repo Show Class, Repo Show, WillWrightShowForFood]
+    artifacts: [moollm, Repo Show, Repo Show, WillWrightShowForFood]
     merges_with: [everything above]
 
   federation:

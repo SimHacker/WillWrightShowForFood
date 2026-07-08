@@ -33,4 +33,4 @@ the people behind it.
 
 See [`SHOW.yml`](SHOW.yml). Consent **not yet asked**. Great AI work deserves a great, open show.
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*

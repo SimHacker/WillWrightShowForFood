@@ -77,7 +77,7 @@ entryways:
       - { priority: 4, title: "Code That Spec", path: code-that-spec.yml, why: "When chat yells CODE THAT SPEC — token bids vs time" }
       - { priority: 5, title: "Drag Race", path: DRAG-RACE.md, why: "Variety-show beats — werk, commit, flair lap" }
       - { priority: 6, title: "Flagship context", path: ../repo-shows/will-wright-premiere/README.md, why: "What the kickoff episode is about — Will, 1996, topic-less" }
-      - { priority: 7, title: "Homefun", path: HOMEFUN.md, why: "Repo Show Class rubric — did the commit message match the thinking?" }
+      - { priority: 7, title: "Homefun", path: HOMEFUN.md, why: "Repo Show rubric — did the commit message match the thinking?" }
 
   for_bots:
     title: "Bot — browsing HTTP agent"
@@ -154,7 +154,7 @@ entryways:
     human: entryways/educator.md
     cta: "Start with Will's 1996 words, then Papert/Kay cards — grade with Homefun"
     pitch: |
-      Repo Show Class treats credited public ideas as curriculum. Will's talk is primary
+      Repo Show treats credited public ideas as curriculum. Will's talk is primary
       source; constructionist guests are K-lines; homefun matches git commits to thinking blocks.
     playlist:
       - { priority: 1, title: "1996 transcript", path: ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md, why: "Will's own words — post-mortems, Dollhouse, data portability goals" }

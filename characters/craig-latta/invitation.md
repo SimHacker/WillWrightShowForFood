@@ -15,7 +15,7 @@ format: remote_or_in_person
 
 Craig —
 
-I'd like to do a **Repo Show** with you — a Repo Show Class conversation whose stage is a public
+I'd like to do a **Repo Show** with you — a friendly recorded conversation whose stage is a public
 GitHub repo, following through to working, live-coded artifacts. **Remote screencast is perfect**
 if you're not in Amsterdam when we record; in-person on camera if we overlap. **Show, don't tell.**
 

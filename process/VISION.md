@@ -83,7 +83,7 @@ anonymous scrape. *A RepoShow is always intense.*
 **Values by example, not by lecture.** This work is welcoming, credited, non-extractive, and plainly **not
 racist** — and it shows that by **doing** it (attribution, open doors, forkable everything, no strip-mining),
 not by preaching. Same spirit as [Long Now](#long-now-and-later)'s non-extractive ethos and the
-[Repo Show Class](#what-we-are-building-in-public) habit of crediting public ideas: the politics live in the
+[Repo Show](#what-we-are-building-in-public) habit of crediting public ideas: the politics live in the
 behavior.
 
 ### Save your soul
@@ -261,7 +261,7 @@ These exist in the repo today (some as seeds; yaml says which):
 | Cauldron SCOOP pipeline | [cauldron skill](https://github.com/SimHacker/moollm/tree/main/skills/cauldron) · [SCOOP protocol](https://github.com/SimHacker/moollm/blob/main/skills/cauldron/protocols/SCOOP.yml) · [MicropolisCore cauldron example](https://github.com/SimHacker/MicropolisCore/tree/main/documentation/designs/playable-pie-publishing-cauldron) · [repo-show-format.yml](repo-show-format.yml) |
 | Repo Show format | [FORMAT.md](FORMAT.md) |
 | ShowMaker graph | [showmaker-network.yml](showmaker-network.yml) |
-| Repo Show Class — credited public ideas | [characters/](../characters/README.md) |
+| Repo Show — credited public ideas | [characters/](../characters/README.md) |
 | Polyglot monorepo + verify CI | [SETUP.md](../SETUP.md) |
 | Idea reactor | [CRAZY-IDEA-JAM.md](CRAZY-IDEA-JAM.md) |
 | Scaffold automation for CARDs and link PRs | Roadmap — not shipped yet |

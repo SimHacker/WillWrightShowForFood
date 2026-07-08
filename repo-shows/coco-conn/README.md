@@ -27,4 +27,4 @@ a decades-long collaboration.
 
 Guest: [`characters/coco-conn/`](../../characters/coco-conn/README.md). Invite **sent**; consent pending.
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*

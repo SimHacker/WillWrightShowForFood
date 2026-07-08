@@ -19,4 +19,4 @@ net address at 14, in 1971.
 See [`SHOW.yml`](SHOW.yml) for the seed. Consent **not yet asked** —
 [`invitation`](../../characters/margaret-minsky/invitation.md).
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*

@@ -27,4 +27,4 @@ Automata Machines*, the same ground Don's **CAM6** stands on.
 
 Guest: [`characters/dave-tristram/`](../../characters/dave-tristram/README.md). Consent **not yet asked**.
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*

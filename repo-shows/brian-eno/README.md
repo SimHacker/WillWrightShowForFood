@@ -38,4 +38,4 @@ More on the guest: [`characters/brian-eno/`](../../characters/brian-eno/README.m
 
 Consent **not yet asked** — a dream invitation, no presumption; Brian may shape, decline, or ignore it.
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*

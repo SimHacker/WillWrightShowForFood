@@ -10,7 +10,7 @@
 
 Will Wright named this in 1996: net-shared user content, plugin objects, data portability, the hobby model. Don Hopkins, Heather and Steve Alvey (SimFreaks / SimSlice), Donna and the SimBabes artists, and a whole community **already built it** for The Sims 1. Life interrupted. The work sat in drawers. **Now's the time** to raise it again — openly, republishably, on modern rails — for a generation that can finally marry whoever they love in the real world and wants to play that truth in the game world too.
 
-This document is the bridge between **proof** (the archived sources in this repo) and **plan** (Repo Show Class + the Repo Show constellation).
+This document is the bridge between **proof** (the archived sources in this repo) and **plan** (Repo Show + the Repo Show constellation).
 
 ---
 
@@ -52,7 +52,7 @@ Open-source descendant of SimCity — Don's lineage from the NeWS port through O
 
 - Branching pop-up dialogs (title, picture, text, pie-menu buttons) — the same machinery as family album readers and the Dumbold's illustrated agitprop
 - Federation-friendly content cards, hosted catalogs, round-trippable saves (see [Soul City](../../catalogs/soul-city/README.md) · [publishing vision](../../characters/will-wright/media/sims-series-micropolis-publishing-vision.md))
-- **Repo Show Class**: go to the people who invented the ideas, capture them in public, implement on stream — the product is methodology + knowledge; the game is the proof
+- **Repo Show**: go to the people who invented the ideas, capture them in public, implement on stream — the product is methodology + knowledge; the game is the proof
 
 ### WillWrightShowForFood (the show + corpus)
 
@@ -122,7 +122,7 @@ Valid issues remain (vendor lock-in, transparency, accessibility). The Dumbold i
 Will's [2005 GDC Spore demo](../../characters/will-wright/sources/2005-03-11-spore-gdc-future-of-content/README.md) ([Don's notes](../../characters/will-wright/sources/2005-03-11-spore-gdc-future-of-content/medium-article.md), [video](https://www.youtube.com/watch?v=ofA6YWVTURU)) marks the industry pivot toward **procedural content**. Our project holds **both** truths:
 
 - **Hand-authored artisanal UCC** (SimFreaks, SimProv, Heather and Steve's 26-year catalogs) — love, craft, family objects
-- **Procedural and AI-assisted creation** (Spore lineage, MOOLLM, Repo Show Class homefun) — scale, remix, new generations
+- **Procedural and AI-assisted creation** (Spore lineage, MOOLLM, Repo Show homefun) — scale, remix, new generations
 
 The wedding playset is the human magnum opus; Micropolis + federation publishing is how we **host, republish, and extend** that opus without losing the grandmother-with-Photoshop soul.
 
@@ -139,4 +139,4 @@ The wedding playset is the human magnum opus; Micropolis + federation publishing
 
 ---
 
-*Part of [A Repo Show with Will Wright](README.md). Repo Show Class — show, don't tell.*
+*Part of [A Repo Show with Will Wright](README.md). Repo Show — show, don't tell.*

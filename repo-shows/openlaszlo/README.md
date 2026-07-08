@@ -24,4 +24,4 @@ with AI, then bring the old **LZX** apps and demos back to life on it, live.
 
 See [`SHOW.yml`](SHOW.yml). Consent **not yet asked** for any guest.
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*

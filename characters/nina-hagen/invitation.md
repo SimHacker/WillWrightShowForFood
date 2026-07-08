@@ -37,7 +37,7 @@ pick, skip whatever doesn't spark:
 More in [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/nina-hagen/ideas.md). No pressure — accepted, delayed, declined,
 or no reply all honored gracefully.
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*
 
 | | |
 |---|---|

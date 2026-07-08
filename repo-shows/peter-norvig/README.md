@@ -28,4 +28,4 @@ Artifacts: [`characters/peter-norvig/sources/`](../../characters/peter-norvig/so
 See [`SHOW.yml`](SHOW.yml). Consent **warm lead** —
 [`invitation`](../../characters/peter-norvig/invitation.md).
 
-— Don Hopkins, Repo Show Class
+— Don Hopkins *(User Interface Flower Child)*
