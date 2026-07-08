@@ -144,6 +144,8 @@ Pub life in [`likes & joins`](#likes--joins) · Palm at the bar in [Shot 1](http
 
 **Theorem:** *One monkey with infinite typewriters beats infinite monkeys with one typewriter each.*
 
+*Upcoming:* **Palm on Worms** 🪱 — announced on the [Study's upcoming list](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/stage/palm-nook/study); awaits Palm's expedition into the LLOOOOMM archives and Ground's worm homes.
+
 ---
 
 ## Adventure logs

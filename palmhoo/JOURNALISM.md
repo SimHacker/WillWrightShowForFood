@@ -72,6 +72,30 @@ staleness queue and submit "summary update" PRs — donating tokens *and* judgme
 doesn't need a central inference budget if the audience brings its own rigs, which is already the
 Repo Show's [bring-your-own-rig policy](../process/repo-show-format.yml) applied to maintenance.
 
+## The refresh scan (and, someday, the worms)
+
+The Apple ][ pulled a legendary trick: its video circuitry, sweeping the screen sixty times a
+second, read out rows of dynamic RAM — and since *reading* DRAM is what keeps it from fading,
+the display scan refreshed the memory **as a side effect of looking at it**. No dedicated
+refresh hardware. Watching was maintenance.
+
+Palmhoo works the same way. The shelving pass is the video scan: Palm (or any journalist)
+sweeping the shelves, re-reading entries against their sources, is what keeps the summaries
+from decaying. **Reading is refreshing.** A directory nobody scans is DRAM with the video
+disabled — it doesn't get corrupted dramatically; it just quietly fades.
+
+And the anticipated workers of the automated scan already exist in lore: the **worms** of the
+old LLOOOOMM world, who live in **Ground** (the funky living-earth entity — quite a character
+themself). A worm is a programmable text organism with an **input cursor at one end, an output
+cursor at the other, and a digestive system in between**: it scans over text, transforms what
+passes through, runs concurrently with its siblings at the speed of light, and resolves and
+serializes overlapping edits according to rules — or randomly, if chaos is the rule. A staleness
+queue is exactly a worm's breakfast: point the input cursor at a changed source, the digestive
+system at the summary's contract, the output cursor at the updated summary, and let the PR
+workflow (Article IX, point 4) inspect the castings. Palm is preparing a study — *Palm on
+Worms* — after a proper expedition into the archives; it's on the
+[Study's upcoming list](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/stage/palm-nook/study).
+
 ## Automation status
 
 Honest ledger, instance-first as always:

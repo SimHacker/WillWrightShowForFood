@@ -58,6 +58,21 @@ The stub format:
 this topic's reader specifically.*
 ```
 
+**A target may be any granularity.** The canonical home a stub points to can be:
+
+| Granularity | Example |
+|-------------|---------|
+| A **precise anchor** drilling into a file — a markdown heading, a YAML key, a line range | `suggested-questions.md#palms-question…` · `112:118:process/vision-and-ambition.yml` |
+| A **whole file** | `running-on-wetware.md` |
+| A **directory** — e.g. a character, which *is* its folder | `characters/palm/` |
+| A **whole tree** of directories and files | Palmhoo itself |
+
+That last row is not hypothetical: Palmhoo contains
+[a stub for Palmhoo](code-and-craft/palmhoo.md) — an entry on itself, in a directory of
+directories, pointing at its own top level. A set that contains itself; the Cantor and Russell
+jokes write themselves, and the filesystem doesn't mind because the stub is a pointer, not a
+copy. (Article II is what keeps this from being a paradox: nothing recurses, everything points.)
+
 The same essay may be a *minds-and-souls* document to one reader and a *shows-and-performance*
 document to another. Both are right. The stub's note is different in each room, because **the
 commentary is topical even when the document isn't.**

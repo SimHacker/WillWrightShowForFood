@@ -42,3 +42,4 @@ it — per the wetware essay — runs on you.*
 | [**cursor-mirror**](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror) | Watch the agent think: introspection tooling over Cursor's own session history. The workshop has a mirror on the ceiling. |
 | [**GIT-AS-FOUNDATION**](https://github.com/SimHacker/moollm/blob/main/designs/GIT-AS-FOUNDATION.md) | Why git — not a database, not a platform — is the persistence layer for worlds. |
 | [**Palmhoo Constitution**](../CONSTITUTION.md) | 🐒✋ This directory is itself a piece of craft: instance-first, to be lifted into a skill once it has proven itself. You are inside the reference implementation. |
+| [**Palmhoo**](palmhoo.md) ⤷ | Stub — the catalog's entry on itself, pointing at its own top level. Cantor jokes included at no extra charge. |
