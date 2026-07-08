@@ -325,6 +325,7 @@ Brian — the beat I most want the full version of: **no grades**. At Lincoln-Su
 **Zap for more**
 
 - [Brian's Snap!Con 2025 Karlstrom address digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snapcon-2025-karlstrom-address.yml)
+- [Cleaned transcript of the live talk](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snapcon-2025-karlstrom-address-transcript.md)
 - [Martin Buber](https://en.wikipedia.org/wiki/Martin_Buber)
 - [Karlstrom address video](https://www.youtube.com/watch?v=pDK2PE_pkqQ)
 
@@ -336,7 +337,7 @@ Brian — the beat I most want the full version of: **no grades**. At Lincoln-Su
 | **Theme** | `martin-buber-philosophy` |
 | **Status** | open |
 
-You pointed the Karlstrom Q&A at **Martin Buber** — teaching as I–Thou dialogue, not I–It skill transfer. For someone who got interested in the philosophy of education through your talk: what should they read of Buber's, and where do you see I–It thinking hiding in today's classrooms (assessment spreadsheets, self-check questions, AI tutors) dressed up as progress?
+When you said teaching is more than the transferral of skills, the moderator offered you **Martin Buber** — teachers have the purpose of building a relationship, ways to lead lives together. Do you accept the gift? Is Buber's I–Thou (dialogue, whole persons) versus I–It (skill transfer, assessment objects) the right frame for what CCUS was — and where do you see I–It thinking hiding in today's classrooms (assessment spreadsheets, self-check questions, AI tutors) dressed up as progress?
 
 #### 12b · No grades in the Snap! world
 
@@ -346,7 +347,17 @@ You pointed the Karlstrom Q&A at **Martin Buber** — teaching as I–Thou dialo
 | **Theme** | `no-grades-in-snap-world` |
 | **Status** | open |
 
-Jens — in the Karlstrom Q&A you told the story of the Dutch math teacher who had Brian-style teachers in the 70s and thanked Brian "for celebrating the 20th century." Snap!'s own world — the forum, Snap!Con, openSAP, Young Thinkers — runs mostly without grades. Is that no-grades ethos something you protect **by design**, and where does it collide with schools that want Snap! but also want the spreadsheet?
+Jens — in the Karlstrom Q&A a Dutch math teacher stood up and said he'd had Brian-style teachers in the 70s — slept at their houses, holidays together — and thanked Brian "for celebrating the 20th century" because the 21st forbade him the same. Snap!'s own world — the forum, Snap!Con, openSAP, Young Thinkers — runs mostly without grades. Is that no-grades ethos something you protect **by design**, and where does it collide with schools that want Snap! but also want the spreadsheet?
+
+#### 12c · Unconditional positive regard — Hargreaves, honestly
+
+| | |
+|---|---|
+| **To** | Brian Harvey |
+| **Theme** | `unconditional-positive-regard-hargreaves` |
+| **Status** | open |
+
+An audience member said you embody **Hargreaves's "unconditional positive regard"** for students irrespective of relationship issues — and that the assessment problem "never goes away; you just have to tackle it, not assume there's some magic solution." You answered with the most honest thing in the whole Q&A: *"There were kids I didn't like… I was not a good teacher for those kids. So, you know — not perfect."* And he pushed back: you're not ALLOWED to not like a kid when you're a teacher, because you have to be fair in your grading of that kid. Stay in that uncomfortable spot for me: can unconditional positive regard actually be practiced, or only aimed at? And is his other point right — that educators like you **shape computer science itself** through educative purpose, rather than accepting it from professionals who think they know what they're doing? (Lambda in Snap! says yes.)
 
 ---
 

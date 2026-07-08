@@ -1,7 +1,9 @@
 # Snap!Con 2025 — Brian Harvey ACM Karlstrom Award Address
 # Evening talk, Sep 21, 2025. Introduced by Jens Mönig.
 # Public video: https://www.youtube.com/watch?v=pDK2PE_pkqQ
-# Director's cut (44 min): announced on Snap!Con site alongside this recording.
+# Director's cut (44 min): linked from the video description + Snap!Con site.
+# Contains the seventh-grade algebra teacher story the live talk only teases.
+# Cleaned transcript of the live talk: snapcon-2025-karlstrom-address-transcript.md
 
 meta:
   event: Snap!Con 2025
@@ -123,6 +125,9 @@ quotable:
   hate_21st_century: "So, I hate the 21st century. Thank you."
   jump_through_hoops: "It should really be called jump through hoops questions."
   institutions: "Everything conspires to make teachers the enemies of kids."
+  hurdle: "When you're giving somebody grades, you can't be their friend. You're not their friend — you're a hurdle they have to overcome."
+  not_perfect: "There weren't many kids I didn't like, but there were a few, and I was not a good teacher for those kids. So, you know — not perfect."
+  best_teacher: "My seventh grade algebra teacher, who was the best teacher I had, and who didn't actually teach me anything."
 
 qa_highlights:
   jens_dutch_teacher:
@@ -135,13 +140,42 @@ qa_highlights:
       35 years of mentorship; after-school clubs and Berkeley decals (student-taught courses)
       persist Lincoln-Sudbury spirit — kids own the space, no grades. Daytime hoop-jumping
       computers still exist alongside.
-  ykca_relationship:
+  relationship_over_content:
     what: |
-      Grades block honest relationship; teaching is more than skill transfer — holistic,
-      Martin Buber. One black teacher in twelve years vastly improves outcomes through
-      connection, not "black stuff."
-  hargreaves:
-    what: "Unconditional positive regard; assessment problem never goes away — tackle it, don't magic-wand it."
+      Moderator's "my friend [Name]" question → Brian: "Everything conspires to make teachers
+      the enemies of kids… when you're giving somebody grades, you can't be their friend.
+      You're not their friend — you're a hurdle they have to overcome." Teaching is more than
+      transferral of skills/competencies. One Black teacher in twelve years vastly improves a
+      Black kid's outcomes — through CONNECTION, not "Black stuff." The moderator's takeaway:
+      teachers have the purpose of building a relationship — holistic, not necessarily about
+      the content but about the ways to lead lives together — and pointed anyone interested
+      in the philosophy of education at **Martin Buber** (the questioner's pointer, offered
+      to Brian, not Brian's own citation).
+  seventh_grade_algebra_teacher:
+    what: |
+      Brian, on connection: "If you listen to the long version, I talk about my seventh grade
+      algebra teacher, who was the best teacher I had, and who didn't actually teach me
+      anything. There's a story about that." The story is IN THE DIRECTOR'S CUT only —
+      another reason to ask for the 44 minutes whole. Then the line: "Not every teacher has
+      to be me, but every kid has to have a ME teacher."
+  hargreaves_unconditional_positive_regard:
+    what: |
+      Audience member (a Hargreaves reader, on the DEI/EDI difficulty): Brian shows
+      "unconditional positive regard for your students, irrespective of any kind of
+      relationship issues" — Hargreaves's term. Hargreaves also recognizes the assessment
+      problem "never goes away — you just have to tackle it, and not assume there's some
+      magic solution." Brian's honest pushback: "In fairness, there were kids I didn't like…
+      I was not a good teacher for those kids. So, you know — not perfect." Questioner: you're
+      not ALLOWED to not like a kid when you're a teacher — you have to be fair in your
+      grading of that kid. Honesty on both sides; no theater.
+  educators_shape_cs:
+    what: |
+      Same audience member's second point: Brian is "the embodiment of somebody who has
+      shaped computer science ITSELF through your educative purpose" — educators can help
+      shape computer science, "not simply accept it from some professionals that think they
+      know what they're doing," because educators hold an ideal about how knowledge is
+      expressed within computing more effectively, excitingly, enjoyably. Lambda-in-Snap! is
+      the proof: pedagogy drove the language.
 
 show_hooks:
   - "THE STANDING ASK: deliver the director's cut whole — 44 minutes or longer, no time limit, no editors, nothing cut unless Brian cuts it"
@@ -154,6 +188,7 @@ show_hooks:
   - "Script piccies leaking solutions — assessment vs constructionism in BJC"
 
 see_also:
+  - snapcon-2025-karlstrom-address-transcript.md
   - beauty-and-joy-of-computing.yml
   - simply-scheme.yml
   - computer-science-logo-style.yml
