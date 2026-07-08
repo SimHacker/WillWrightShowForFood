@@ -12,6 +12,13 @@ friendship. Not quotes from Marc.*
 patch-cord visual-programming lineage. Live segment: trace one Lingo-era idea forward into a browser
 toy.
 
+### 1b. The timeline rotated 90° — Director's score meets the repo cast
+Marc's own self-effacing line (per Don's memory, watching a **Stewart Sharp** piece): *a Director
+timeline is just a BASIC program with line numbers rotated 90° clockwise.* Don got it via **PSIBER**;
+the Repo Show rotates it again — `characters/` as cast window, git history as score, MOOLLM as Lingo.
+Full anecdote + segment sketch: [`timeline-rotated-90-degrees.md`](timeline-rotated-90-degrees.md).
+Ties straight into the [repo-as-simulation deep move](../../process/VISION.md#the-deep-move--the-repo-is-a-simulation).
+
 ### 2. People Aggregator ("People Aggrivator")
 **Broadband Mechanics** and the **open social web** — digital lifestyle aggregator, own your graph,
 portable identity. What Marc saw early that Big Social still hasn't delivered. Pairs with the Repo

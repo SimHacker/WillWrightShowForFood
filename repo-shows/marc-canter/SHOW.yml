@@ -21,6 +21,7 @@ why_him:
   old_friends: "Don + David Levitt + Marc — decades of stories, many from Amsterdam."
 
 threads:
+  - "The timeline rotated 90° — Marc's line (Director score = BASIC turned sideways, per Don's memory of a Stewart Sharp drop); PSIBER; then rotate it again live: repo characters/ as cast window, git history as score, MOOLLM as Lingo — see ../../characters/marc-canter/timeline-rotated-90-degrees.md"
   - "Director → Macromedia Player → Bounce — full-circle with David Levitt"
   - "People Aggregator — what we got right early; what's still missing in 2026"
   - "Amsterdam stories — Don, David, Marc (their pick on what's tellable on air)"
@@ -33,6 +34,7 @@ pairings:
 
 ties_to:
   - ../../characters/marc-canter/
+  - ../../characters/marc-canter/timeline-rotated-90-degrees.md
   - ../../characters/marc-canter/invitation.md
   - ../../characters/david-levitt/
   - ../../apps/performance-space/faceball-construction-set.yml

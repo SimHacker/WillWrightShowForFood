@@ -81,6 +81,13 @@ repo_as_simulation:
     Will's talk was 'Interfacing to Microworlds'. The answer thirty years on: the interface to the
     microworld IS the microworld — git for physics, YAML for matter, the LLM for causality, every
     guest and viewer and character a resident. The show is played, the way a city is played.
+  lineage_rotation:
+    # Marc Canter, per Don's memory: "A Director timeline is just a BASIC program with line
+    # numbers rotated 90° clockwise." PSIBER = the same rotation in PostScript. Repo Show = next turn.
+    anecdote: ../characters/marc-canter/timeline-rotated-90-degrees.md
+    chain: "MacroMind Director → Shockwave → Flash → Dynamic HTML → the repo as player"
+    cast_window: "characters/ = Director cast — CHARACTER.yml + CARD.yml per performer; git history = score; MOOLLM = Lingo runtime"
+    psiber: ../characters/don-hopkins/visual-programming-excel-and-dimensionality.md
   where_it_runs: moollm-stage.yml   # adventure-4 pub, room graph, session-log episodes, cauldron harvest
 
 pyramid:

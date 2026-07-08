@@ -23,6 +23,8 @@ outrageous stories, many from **Amsterdam**, where Marc loves to visit.
 ## Talk-about menu
 - **MacroMind → Macromedia → Director**: the birth of desktop multimedia authoring (and the runtime
   under Bounce / MMP).
+- **[The timeline rotated 90°](timeline-rotated-90-degrees.md)** — Marc's line that a Director score
+  is a BASIC program turned sideways; PSIBER; the repo's `characters/` directory as the next cast window.
 - **People Aggregator / Broadband Mechanics**: the open social web, digital identity, "own your data."
 - **The Amsterdam stories** — with Don and David.
 - **The puppets + the reggae avatar** — a natural for the Faceball kit and the live floor.

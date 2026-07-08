@@ -123,6 +123,17 @@ and asks [where the making-up happens](../characters/gary-drescher/made-up-minds
 gimmick bolted onto a podcast — it's the simulation asking its own author a question **from inside the
 running world**. No prior medium could stage that scene.
 
+The move has a lineage. [Marc Canter](../characters/marc-canter/README.md) once explained, looking
+at a Director piece with its cast and timeline and scripts open, that **a Director timeline is just a
+BASIC program with line numbers rotated 90° clockwise** — an old program turned sideways so artists
+could inhabit it. Don recognized the rotation from **PSIBER**, his PostScript environment written in
+the same PostScript it rendered and edited. The Repo Show is the next turn: **the `characters/`
+directory is the cast window** — each performer a `CHARACTER.yml` + `CARD.yml`, the way Director cast
+members carried media and Lingo — git history the score, MOOLLM the runtime, written in the same
+substance it simulates. Director → Shockwave → Flash → Dynamic HTML moved the performance onto the
+open substrate; the repo is the player now. Full anecdote:
+[*The timeline rotated 90°*](../characters/marc-canter/timeline-rotated-90-degrees.md).
+
 And it closes the loop this repo exists to close. Will's [1996 talk](../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md)
 was *Interfacing to Microworlds*. The Repo Show's answer, thirty years on: **the interface to the
 microworld is the microworld** — git for physics, YAML for matter, the LLM for causality, and every
