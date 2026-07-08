@@ -62,6 +62,12 @@ Ken's an **early bird** — he built message-passing-as-birds in the mid-1990s a
 [Palm on Worms](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml)
 (see the `birds` section).
 
+The zoo has since gained its third animal: **Theo the Logo Turtle** (Papert's mascot, already a
+MOOLLM resident) joined the party — worms transform, birds carry, turtles *draw*. The teaching
+trinity is one move in three creatures: Papert's turtle (you ARE the cursor), Ken's robots and
+birds (you train the worker; birds carry), MOOLLM's worms (you feed the transformer). See the
+notebook's `turtles` section.
+
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)

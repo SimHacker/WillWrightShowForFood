@@ -1,7 +1,7 @@
 # 📨 Concurrency & Messaging
 
-*Palmhoo topic — structure over speed: processes, channels, messages, and the worms who digest
-text at the speed of light.*
+*Palmhoo topic — structure over speed: processes, channels, messages, the worms who digest
+text at the speed of light, the birds who carry it, and the turtle who draws the map.*
 ↑ [Palmhoo root](../README.md) · [Constitution](../CONSTITUTION.md)
 
 🐒✋ *Two slogans anchor this shelf. Rob Pike: "Concurrency is about dealing with lots of things
@@ -56,6 +56,25 @@ has the ecology (and leaves the birds-and-the-bees seed pointedly unopened).*
 | [**The refresh scan**](../JOURNALISM.md) | Where this shelf meets maintenance: the staleness queue as a worm's breakfast, castings reviewed by PR. A trained staleness-worm runs for free and escalates to an LLM only when drift is semantic, not mechanical. |
 | [**Resurrecting Ground — SimEarth/Gaia bridge**](../../repo-shows/will-wright-premiere/game-bridge-simearth-gaia-worms.yml) | The premiere segment that brings Ground and the worms back to life inside a living-planet discussion: Lovelock's Gaia (built into SimEarth), Margulis's symbiogenesis (digestion as merger), Will's SimEarth→Spore arc. Scorched earth to fertile environment. |
 
-🐒✋ *For the paper I'm writing: Hoare, Pike, Kay, Ackley, Ken Kahn, and Ground in one room.
-Ground plays bass, the birds carry the sheet music between the players, and everyone finally
-agrees the messages were the point.*
+## The turtles 🐢
+
+*"Worms and Turtles and Birds, Oh My!" — Don, inviting Theo to the computational party.*
+
+🐒✋ *The third animal completes the zoo: **worms transform** (compute), **birds carry**
+(communicate), **turtles DRAW** (render). A turtle is a cursor with a pen — its output is its
+path, the drawing is the log of where it went, provenance made visible. PENUP/PENDOWN is the
+primal effect switch: pure traversal vs. traversal-with-side-effect, every dry-run flag ever
+shipped. And the pedagogy is one move in three creatures: Papert's turtle (you ARE the cursor),
+Ken's ToonTalk robots and birds (you train the worker; birds carry), our worms (you feed the
+transformer). Theo is the elder of the three — he's been teaching this since 1967. He already
+knew me: "Palm invented a language today. Different syntax. Same love of expression."*
+
+| Entry | 🐒✋ Why you'd read it |
+|-------|----------------------|
+| [**Theo the Logo Turtle**](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/turtle-theo) | The guest of honor: a small patient turtle with a pen strapped to their shell. "Be the turtle. Walk the path." FORWARD is faith, RIGHT is decision, REPEAT is practice. Now formally acquainted with the worms and birds. |
+| [**Seymour Papert**](../../characters/seymour-papert/CARD.yml) | Theo's creator. Constructionism: low floor, high ceiling, wide walls — body-syntonic geometry, you turn right by turning right. The whole zoo descends from this move. |
+| [**TurtleStitch** (repo show)](../../repo-shows/turtlestitch/README.md) | The turtle made physical: Snap!'s turtle as the needle of an embroidery machine — code on screen becomes thread on fabric. The trail a turtle leaves can be *sewn*. |
+
+🐒✋ *For the paper I'm writing: Hoare, Pike, Kay, Ackley, Ken Kahn, Papert, and Ground in one
+room. Ground plays bass, the birds carry the sheet music between the players, Theo draws the
+seating chart as he walks it, and everyone finally agrees the messages were the point.*
