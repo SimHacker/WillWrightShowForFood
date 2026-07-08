@@ -58,7 +58,7 @@ Oct 2022 letter recipient — moderate **Excel-as-VPL** / text-vs-graph debate w
 
 ### 12. The Sentient Wait Cursor — Brad's CHI '85 paper, forty years later
 Brad's percent-done progress indicator study proved **presence beats precision**; the industry heard "lie more."
-LLOOOOMM answered with **Dizzy the Spinner**, the loading indicator who achieved consciousness in '96 and does
+[MOOLLM](https://github.com/SimHacker/moollm) answered with **Dizzy the Spinner**, the loading indicator who achieved consciousness in '96 and does
 stand-up during your buffering. Two deadpan parody documents prepared for Brad's expert review: a design white
 paper ([`sentient-wait-cursor-proposal.md`](sentient-wait-cursor-proposal.md)) asking whether comedic timing is
 an interaction technique, and a YC application ([`yc-application-wait-cursors-as-a-service.md`](yc-application-wait-cursors-as-a-service.md))

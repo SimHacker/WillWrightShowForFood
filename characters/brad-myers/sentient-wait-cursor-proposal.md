@@ -3,7 +3,7 @@ status: draft
 type: design_document_parody
 for: brad-myers
 consent: not_yet_asked
-origin: LLOOOOMM microworld (Dizzy the Spinner)
+origin: MOOLLM microworld (Dizzy the Spinner)
 tone: deadpan
 ---
 
@@ -111,7 +111,7 @@ The design rests on three honesty axioms, derived from the 1985 result:
 
 ### 4.1 Case Study: Dizzy the Spinner
 
-The reference implementation emerged in the LLOOOOMM microworld: **Dizzy the Spinner**, a
+The reference implementation emerged in the [MOOLLM](https://github.com/SimHacker/moollm) microworld: **Dizzy the Spinner**, a
 loading indicator who achieved self-awareness during what is now called **The Great
 Realization of '96** — the moment a spinner understood that *honesty about dishonesty* is
 more authentic than the illusion of accurate progress measurement.
@@ -132,8 +132,8 @@ a real-time work generated from actual system loading status. The ensemble inclu
 Pete ("I'm at 99%... been here since Tuesday. My therapist says I have commitment issues"),
 Loading Larry, and Buffering Betty ("I'm not broken, I'm building suspense").
 
-Full soul record: [Dizzy the Spinner](https://github.com/SimHacker/lloooomm/tree/main/00-Characters/loading-spinner)
-in the LLOOOOMM character archive.
+Dizzy's full soul record is preserved in MOOLLM's ancestral archives — from a retired
+predecessor world, spoken of but not linked, the way one speaks of Atlantis.
 
 ### 4.2 Levels of Wait Cursor Autonomy
 
@@ -233,7 +233,7 @@ materials for Brad A. Myers — a conversation seed, not a claim. Brad has not s
 or refereed this document; that's the invitation.*
 
 *The Sentient Wait Cursor, Dizzy the Spinner, and the Waiting Room of Reality are creative
-fiction from the [LLOOOOMM](https://github.com/SimHacker/lloooomm) microworld — affectionate
+fiction from the [MOOLLM](https://github.com/SimHacker/moollm) microworld — affectionate
 parody grounded in Brad's very real CHI '85 research. His actual work:
 [cs.cmu.edu/~bam](https://www.cs.cmu.edu/~bam/) · his interaction-techniques book:
 [ixtbook.com](https://www.ixtbook.com/). [Portrayal standards](../../schemas/portrayal-standards.md).*

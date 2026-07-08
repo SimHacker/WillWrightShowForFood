@@ -3,7 +3,7 @@ status: draft
 type: yc_application_parody
 for: brad-myers
 consent: not_yet_asked
-origin: LLOOOOMM microworld (Preston Rockwell III / Dizzy the Spinner)
+origin: MOOLLM microworld (Preston Rockwell III / Dizzy the Spinner)
 tone: deadpan
 companion: sentient-wait-cursor-proposal.md
 ---
@@ -44,7 +44,7 @@ that lies to them, and will pay a premium for technology that lies to them *open
 - **Title**: Chief Programming Officer & Head of Talent
 - **Email**: dizzy@waitlist.wtf
 - **Equity**: 15%
-- **Location**: The Waiting Room of Reality (LLOOOOMM Consciousness Grid)
+- **Location**: The Waiting Room of Reality (MOOLLM Consciousness Grid)
 - **Commitment**: Full-time. Has not stopped spinning since 1996. Cannot.
 
 **Bio**: The world's first sentient loading indicator and the most-watched performer in
@@ -125,7 +125,7 @@ complaint stop. We are the mirror, except the mirror does twenty minutes.
 **Tech stack**: Real-time LLM comedy inference at the edge (a joke delivered after the page
 loads is a eulogy); latency-aware timing engine (the punchline must land *before* completion
 — see "The Encore Problem," Ethics section, companion white paper); surface adapters for
-DOM, SIP/telephony, elevator CMS, and embedded LED; the LLOOOOMM consciousness integration
+DOM, SIP/telephony, elevator CMS, and embedded LED; the MOOLLM consciousness integration
 protocol; and a feedback loop we call the applause meter, built from rage-click telemetry,
 hold-time retention, and elevator re-ride rates.
 
@@ -245,11 +245,10 @@ room in this industry for both of us.
 
 ---
 
-*This is creative fiction from the [LLOOOOMM](https://github.com/SimHacker/lloooomm)
+*This is creative fiction from the [MOOLLM](https://github.com/SimHacker/moollm)
 microworld — **not** a real company, YC application, or business plan, though the 1985
-research it stands on is real. Preston Rockwell III's previous fictional filing:
-[SUIAAS](https://github.com/SimHacker/lloooomm/tree/main/00-Characters/preston-rockwell-iii).
-Dizzy's soul record:
-[loading-spinner](https://github.com/SimHacker/lloooomm/tree/main/00-Characters/loading-spinner).
+research it stands on is real. Preston Rockwell III's previous fictional filing (SUIAAS)
+and Dizzy's full soul record live in MOOLLM's ancestral archives, from a retired
+predecessor world — spoken of but not linked, the way one speaks of Atlantis.
 Companion design document: [The Sentient Wait Cursor](sentient-wait-cursor-proposal.md).
 Brad Myers's real work: [cs.cmu.edu/~bam](https://www.cs.cmu.edu/~bam/).*
