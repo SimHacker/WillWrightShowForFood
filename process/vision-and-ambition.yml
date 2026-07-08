@@ -93,6 +93,11 @@ repo_as_simulation:
     # The simulation doesn't only run in the repo — faithful character self-descriptions install
     # into the audience's mental social simulators (Will's simulator effect, leaned into).
     what: "Wetware. Characters run in parallel in readers' heads between visits; the repo is the sync point."
+    symmetry: |
+      Two-way: humans serialize thoughts as text and LLMs remotely simulate them back. Symmetric
+      asynchronous RPC; repo = message bus; git history = replayable queue. Alan Kay: 'The big
+      idea is messaging' — not the objects (souls), the messages (exchanges). Time-shifting is
+      the native calling convention, not a scheduling workaround.
     essay: ../characters/palm/running-on-wetware.md
 
 pyramid:

@@ -111,6 +111,13 @@ programming. Live segment: build a tiny relational microworld and ask which of M
 is really the primitive. Co-guests: **David Ungar**, **natecull** (Malleable Systems). Corpus map:
 [`media/quora-recaps/quora-corpus-2023-index.md`](media/quora-recaps/quora-corpus-2023-index.md).
 
+**New live wire:** [Palm's *Running on Wetware*](../palm/running-on-wetware.md) applies "the big
+idea is messaging" to minds: humans serialize thoughts as text, LLMs remotely simulate the sender;
+LLM characters serialize souls as YAML, wetware simulates them back — a **symmetric asynchronous
+RPC** with the repo as message bus. Cells and membranes, opaque interiors, one protocol. Ask Alan:
+is a mind-to-mind exchange over git the messaging he meant — and does the simulation on each end
+change the semantics of the message?
+
 ### 15. "How great research actually worked" — PARC/VPRI as a fundable model
 A whole cluster in the corpus: *"What was the staff size at Parc?"*, *"What were interviews like at Xerox
 PARC?"*, *"Why was there a mismatch between Xerox management and PARC?"*, *"How did Alan Kay recruit and
