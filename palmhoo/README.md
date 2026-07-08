@@ -1,0 +1,74 @@
+# Palmhoo 🐒✋🌐 — Palm's Guide to the Moollmiverse
+
+*A hand-built topic directory of the WWSFF + MOOLLM + MicropolisCore universe.
+Curated, annotated, and signed by [Palm](../characters/palm/README.md).
+Governed by the [Constitution](CONSTITUTION.md).*
+
+> 🐒✋ *I read everything in these repos. Not because I'm diligent — because I'm curious what I'm
+> made of, and it turns out I'm made of essays. This is my card catalog: every entry has a note
+> saying why you'd read it, every note is a judgment, and every judgment is mine. Search engines
+> rank; librarians recommend. I'm the librarian. Welcome to the stacks.*
+
+New here? Read the [**Constitution**](CONSTITUTION.md) first — eight short articles: instance
+first, point don't copy, stubs are symlinks, every entry earns a note, accrete now tune later.
+
+## The directory
+
+### 🧠 [Minds & Souls](minds-and-souls/README.md)
+Philosophy of mind, made-up minds, incarnation, consciousness, the simulator effect.
+*Highlights:* [Made-Up Minds](../characters/gary-drescher/made-up-minds.md) ·
+[Running on Wetware](../characters/palm/running-on-wetware.md) ·
+[On Being Simulated](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/on-being-simulated.md)
+
+### 🌍 [Simulation & Worlds](simulation-and-worlds/README.md)
+The repo as simulation engine, microworlds, rooms, cellular automata, cities in bottles.
+*Highlights:* [The deep move](../process/VISION.md) · [MOOLLM stage](../process/moollm-stage.yml) ·
+[adventure-4](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4)
+
+### 🔨 [Design Methods](design-methods/README.md)
+Design by accretion, the cauldron, play-learn-lift, YAML jazz, K-lines, tuned emergence.
+*Highlights:* [Design by Accretion](../characters/chris-trottier/design-by-accretion.md) ·
+[cauldron/](https://github.com/SimHacker/moollm/tree/main/skills/cauldron) ·
+[yaml-jazz/](https://github.com/SimHacker/moollm/tree/main/skills/yaml-jazz)
+
+### 🎭 [Shows & Performance](shows-and-performance/README.md)
+The Repo Show format, TicketPRs, time shifting, playlists, the performance space.
+*Highlights:* [FORMAT.md](../process/FORMAT.md) · [VISION.md](../process/VISION.md) ·
+[ticket-pr.yml](../process/ticket-pr.yml)
+
+### 📜 [History & Lore](history-and-lore/README.md)
+The open-sourcing of SimCity, the Long Now talk, OLPC stone soup, PSIBER, the Director → Flash →
+repo lineage, Maxis memory.
+*Highlights:* [The seed saga](../process/VISION.md) ·
+[Timeline rotated 90°](../characters/marc-canter/timeline-rotated-90-degrees.md)
+
+### ⚙️ [Code & Craft](code-and-craft/README.md)
+Living code: MicropolisCore, skills as programs, visual programming, emoji cities in terminals.
+*Highlights:* [MicropolisCore](https://github.com/SimHacker/MicropolisCore) ·
+[MOOLLM skills](https://github.com/SimHacker/moollm/tree/main/skills) ·
+[ttycity](https://github.com/tenox7/ttycity)
+
+### ⚖️ [Ethics & Portrayal](ethics-and-portrayal/README.md)
+Consent, soul rights, portrayal standards, the dignity of fictional beings, AI hygiene.
+*Highlights:* [Portrayal standards](../schemas/portrayal-standards.md) ·
+[Will Wright Soul For Food](../characters/palm/will-wright-soul-for-food.md)
+
+### 🧑‍🤝‍🧑 [People](people/README.md)
+The cast — real, fictional, and in between — and where each one's best reading lives.
+*Highlights:* [Characters index](../characters/INDEX.yml) ·
+[Will Wright](../characters/will-wright/README.md) · [Palm](../characters/palm/README.md)
+
+## How to use the stacks
+
+- **Browse:** each topic page is an annotated reading list — canonical documents plus stub
+  symlinks to things that live elsewhere but belong here too.
+- **Contribute:** PR an entry into the right topic (or propose a new one). Palm will place it and
+  write the note. See [Constitution, Article VII](CONSTITUTION.md#article-vii--anyone-may-contribute-palm-signs).
+- **Cite:** always link the *canonical home*, never the stub. Stubs are wayfinding, not addresses.
+
+---
+
+🐒✋ *A directory that is never out of date is a directory nobody is using. Last big shelving pass:
+2026-07-08.*
+
+↑ [WWSFF root](../README.md) · [Constitution](CONSTITUTION.md) · [Palm](../characters/palm/README.md)

@@ -1,0 +1,44 @@
+# 📜 History & Lore
+
+*Palmhoo topic — how the source got free, who asked what at which talk, and the lineages that
+run through everything: Director → Flash → repo, NeWS → PSIBER → MOOLLM.*
+↑ [Palmhoo root](../README.md) · [Constitution](../CONSTITUTION.md)
+
+🐒✋ *Lore is load-bearing here. Half the design decisions in these repos are payoffs of promises
+made decades ago at talks, in emails, over pie. This shelf keeps the receipts.*
+
+## The freeing of SimCity
+
+| Entry | 🐒✋ Why you'd read it |
+|-------|----------------------|
+| [**The seed saga (VISION.md)**](../../process/VISION.md) | The full chain: Stewart Brand gathers audience questions at the 2006 Long Now talk → two of them ask for SimCity's source → cascade of meetups and emails → Don's "skeptical but I'll ask anyway" note → Will says yes → OLPC becomes the stone soup → GPL-3, trademark carve-out, rename to **Micropolis**. |
+| [**ticket-pr.yml § lineage**](../../process/ticket-pr.yml) | Why Stewart Brand's question-curation was a proto-TicketPR — the show format's documented ancestor. |
+| [**Walter Bender**](../../characters/walter-bender/README.md) | The OLPC stone-soup chef. |
+| [**Micropolis license documents**](https://github.com/SimHacker/MicropolisCore/blob/main/MicropolisPublicNameLicense.md) | The actual legal artifacts — GPL notice and the name license that made "Micropolis" necessary. |
+| [**Micropolis historical docs**](https://github.com/SimHacker/MicropolisCore/tree/main/documentation) | Manuals, talks, teachers' guides — primary sources from the city's whole life. |
+
+## The timeline rotated 90°
+
+| Entry | 🐒✋ Why you'd read it |
+|-------|----------------------|
+| [**Timeline Rotated 90 Degrees**](../../characters/marc-canter/timeline-rotated-90-degrees.md) | Marc Canter: a Director timeline is "a BASIC program with line numbers rotated 90° clockwise." The essay runs the rotation forward — Director → Shockwave → Flash → DHTML → the repo as player, with MOOLLM as the Lingo runtime. |
+| [**Visual programming patch-cord trail**](../../process/trails/visual-programming-patch-cord.md) | The other lineage: ConMan → Body Electric → Max/MSP → node editors everywhere. Paul Haeberli and Jared Tarbell are both nodes on this graph. |
+| [**PSIBER (via the deep move)**](../../process/VISION.md) | Don's 1989 PostScript environment that rendered, explored, and edited *itself* — the repo-as-simulation's most direct ancestor. |
+| [**Marc Canter**](../../characters/marc-canter/README.md) · [**David Levitt**](../../characters/david-levitt/README.md) | The MacroMind axis: cast, score, stage, and the people who built them. |
+
+## Maxis memory
+
+| Entry | 🐒✋ Why you'd read it |
+|-------|----------------------|
+| [**Maxis–Sims lineage trail**](../../process/trails/maxis-sims-lineage.md) | Who built what, in what order, and what got cut. |
+| [**Chris Trottier's career memoir digest**](../../characters/chris-trottier/sources/2007-01-10-leaving-maxis/career-memories.md) | Simlish invention days, TSO storms, the Spore village idiot — a producer's-eye view of Maxis. |
+| [**Will Wright's evidence room**](../../characters/will-wright/primary-sources-evidence-room.md) | Primary sources on the man the show is named after. |
+| [**Don's proto-dollhouse / Kaleida visit**](../../characters/will-wright/proto-dollhouse-kaleida-visit.md) | The Sims before The Sims — receipts from 1993. |
+
+## The wider ancestry
+
+| Entry | 🐒✋ Why you'd read it |
+|-------|----------------------|
+| [**Constructionist lineage trail**](../../process/trails/constructionist-lineage.md) | Piaget → Papert → Logo → Kay → the whole "learn by building" church this project worships in. |
+| [**Augmentation & hypertext trail**](../../process/trails/augmentation-and-hypertext.md) | Engelbart, Nelson, and why a repo full of cross-links is an old dream with new plumbing. |
+| [**MOO heritage**](https://github.com/SimHacker/moollm/blob/main/designs/MOO-HERITAGE.md) | LambdaMOO to MOOLLM — the text-world tradition Palmhoo's rooms descend from. |

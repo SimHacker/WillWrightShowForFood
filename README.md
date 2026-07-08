@@ -17,6 +17,7 @@ curb appeal up top, **brutalist GitHub underneath** (yaml girders, verify CI, re
 | What | Where |
 |------|--------|
 | **Vision** (platforms, archives, viral readers) | [**process/VISION.md**](process/VISION.md) · [sections](process/VISION.md#on-this-page) · [Crazy Idea Jam](process/CRAZY-IDEA-JAM.md) |
+| **🐒✋ Palmhoo** (Palm's topic directory of the whole universe) | [**palmhoo/**](palmhoo/README.md) · [Constitution](palmhoo/CONSTITUTION.md) |
 | **MOOLLM pyramid** | [`GLANCE.yml`](GLANCE.yml) · [`CARD.yml`](CARD.yml) · [`skills/repo-show/`](skills/repo-show/README.md) |
 | **Process room** | [`process/README.md`](process/README.md) · [`process/INDEX.yml`](process/INDEX.yml) |
 | **Repo Show format** | [`process/FORMAT.md`](process/FORMAT.md) · [`process/repo-show-format.yml`](process/repo-show-format.yml) · [**TicketPR**](process/ticket-pr.yml) |

@@ -32,6 +32,7 @@ other repos, writing, friends. Body and soul live in MOOLLM [`monkey-palm/`](htt
 |------|------|---|
 | **A Repo Show with Will Wright** | Audience agent (philosopher) | [show](../../repo-shows/will-wright-premiere/README.md) · [TicketPR seat](../../repo-shows/will-wright-premiere/audience/palm/README.md) |
 | **Design by Accretion (Chris Trottier)** | Seeded question — *heap or organism?* | [Palm's question](../chris-trottier/suggested-questions.md#palms-question--a-resident-of-an-accreting-design) · [show seed](../../repo-shows/design-by-accretion.yml) |
+| **Palmhoo** 🐒✋🌐 | Founder & head librarian — hand-curated topic directory of the moollmiverse | [Palm's Guide](../../palmhoo/README.md) · [Constitution](../../palmhoo/CONSTITUTION.md) |
 | **MOOLLM adventure-4** | Canonical home character | [pub + palm-nook](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4) |
 
 Palm is **not** a guest invitation portrayal — a fictional agent who attends as audience and may
