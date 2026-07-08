@@ -13,4 +13,8 @@ Swiss **genetic epistemologist** who described how children actively *build* kno
 root beneath [Seymour Papert](../seymour-papert/README.md)'s constructionism — and thus Logo, Scratch, OLPC,
 and open Micropolis.
 
+His **schemas** were made computational by [Gary Drescher](../gary-drescher/README.md)'s schema
+mechanism ([*Made-Up Minds*](../gary-drescher/made-up-minds.md), 1991) — the branch that now runs at
+Leela AI and in MOOLLM's skills: the child as active builder, executable.
+
 Verifiable sources in `CHARACTER.yml`. Estate may request correction or removal anytime.

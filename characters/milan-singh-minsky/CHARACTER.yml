@@ -47,6 +47,7 @@ sources:
 
 see_also:
   - { path: ../henry-minsky/, why: "Her husband; Leela co-founder/CTO" }
+  - { path: ../gary-drescher/, why: "Leela adviser + family friend — Made-Up Minds underlies Leela's schema learning" }
   - { path: ../isabella-struckman/, why: "Leela colleague — vision-AI episode space" }
   - { path: ../cyrus-shaoul/, why: "Leela co-founder; grid-world paper co-author" }
   - { path: ../art-medlar/, why: "Leela AI collaborator" }

@@ -38,6 +38,11 @@ connector:
   role: "A superhero-nexus connector. Henry grew up in and around the MIT AI Lab (Marvin's son) and knows an extraordinary number of brilliant people from that world — a natural bridge both to great Repo Show guests and to opportunities. He's on it."
   see: ../../process/vision-and-ambition.yml   # connectors_and_legacy#brokering (henry_minsky_as_hub)
 
+drescher_thread:
+  friend: "Longtime friend of Gary Drescher (his father's PhD student); Gary advises Leela AI."
+  schema_factory: "Henry reimplemented Drescher's schema mechanism in Python (pyleela.brain) — the living substrate for the 'Made-Up Minds, remade' show and MOOLLM's schema-factory skill."
+  see: ../gary-drescher/made-up-minds.md
+
 show_suggestions:
   - { seed: ../../repo-shows/henry-minsky/, what: "Solo — Society of Mind ideas in modern AI (Leela AI), declarative UI (OpenLaszlo), and authoring agent skills as constructionism / PBD" }
   - { seed: ../../repo-shows/leela-ai/, what: "Group — the Leela AI crew show-and-tell (with Milan, Cyrus Shaoul, Steve Kommrusch, Isabella Struckman, Art Medlar)" }
@@ -55,6 +60,7 @@ sources:
 see_also:
   - { path: CARD.yml, why: "Invokable abilities for show segments" }
   - { path: ../marvin-minsky/, why: "🕯️ His father — Society of Mind, MIT AI Lab (memorial)" }
+  - { path: ../gary-drescher/, why: "Friend + Leela adviser; Henry's Python schema factory carries Made-Up Minds forward" }
   - { path: ../margaret-minsky/, why: "His sister — haptics / MIT Media Lab" }
   - { path: ../../process/vision-and-ambition.yml, why: "Connector hub (connectors_and_legacy#brokering) — MIT-AI-Lab nexus" }
   - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

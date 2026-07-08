@@ -32,6 +32,7 @@ memorial:
     - { who: ken-kahn, why: "MIT AI Lab lineage; Logo/ToonTalk constructionism" }
     - { who: walter-bender, why: "MIT Media Lab; OLPC — carried the lab's learning mission forward" }
     - { who: don-hopkins, why: "K-lines are a load-bearing concept in MOOLLM/this repo" }
+    - { who: gary-drescher, why: "His PhD student — Made-Up Minds (the schema mechanism); Minsky hailed it as a landmark in learning theory" }
   draw_on_for_shows:
     - "Co-founding the MIT AI Lab (1959, with John McCarthy) — and co-directing it with Seymour Papert"
     - "SNARC (1951, with Dean Edmonds) — one of the first randomly-wired neural-network learning machines"
@@ -70,6 +71,7 @@ see_also:
   - { path: ../henry-minsky/, why: "His son — can discuss him on air" }
   - { path: ../margaret-minsky/, why: "His daughter — can discuss him on air" }
   - { path: ../seymour-papert/, why: "🕯️ Co-director of the AI Lab; Perceptrons co-author; constructionism" }
+  - { path: ../gary-drescher/, why: "His PhD student — schema mechanism (Made-Up Minds); the constructivist branch of his lineage, alive at Leela + MOOLLM" }
   - { path: ../jean-piaget/, why: "🕯️ Constructivism — the developmental root of the lab's learning work" }
   - { path: ../ron-reisman/, why: "🕯️ Flies Ron's Ames flight simulator in documented video — memorial pairing" }
   - { path: ../../process/trails/constructionist-lineage.md, why: "Piaget → Papert → Minsky → the show's learning spine" }

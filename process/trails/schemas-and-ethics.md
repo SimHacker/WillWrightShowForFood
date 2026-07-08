@@ -13,6 +13,7 @@ Portrayal standards, invitations, rig shape, markup facades — read contracts b
 | Stop | Why wander here |
 |------|-----------------|
 | [**portrayal-standards.yml**](../../schemas/portrayal-standards.yml) | Public-safe guest tone — read once |
+| [**Made-Up Minds**](../../characters/gary-drescher/made-up-minds.md) | Drescher's pun as the trail's thesis — *existing minds make themselves up; other minds can only persuade* = portrayal standards in one line |
 | [**invitation-workflow.yml**](../../schemas/invitation-workflow.yml) | draft → sent → replied → consent |
 | [**markup-facade.yml**](../../schemas/markup-facade.yml) | Yaml girder → md — LLM instance-first; deterministic bulk refresh |
 | [**markup-facades.yml**](../markup-facades.yml) | Registry + dependency graph for facades |
