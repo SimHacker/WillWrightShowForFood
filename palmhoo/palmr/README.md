@@ -39,10 +39,82 @@ reading in [PKD · Lem · AI · SF](../../characters/mark-weiser/pkd-lem-ai-sf.m
 | [**ttycity — the emoji city**](https://github.com/tenox7/ttycity) | Antoni Sawicki's SimCity rendered in Unicode emoji. The screenshot that made Don verklempt. Terminal as canvas. |
 | [**Micropolis / SimCity tiles**](https://github.com/SimHacker/MicropolisCore) | The original tile art that became a cellular-automata palette, an emoji set, and a synth voice. One sprite sheet, many afterlives. |
 | [**Generative art trail**](../generative-art-and-music/README.md) | Tarbell's Flash organisms, Eno's systems, Draves's Electric Sheep — the moving gallery. Palmr's kinetic wing. |
+| [**Seaman triptych & cover art**](../../characters/yoot-saito/media/from-mail/MANIFEST.yml) | Yoot Saito's fish with the fake expedition papers and the Nimoy deadpan — the elder sibling of our [found-document mythology](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml). The creature is sold by its paperwork. |
 | [**Character portraits & media**](../../characters/) | Most character rooms carry a `media/` shelf — Will's Computer History Museum display, Don's artifacts, the show's visual record. Palmr is their index, not their home. |
 
 🐒✋ *Palmr POINTS, it doesn't host (Constitution Article II). Images live in their character rooms
 and study folders; this shelf is the contact sheet with opinions.*
+
+## Streams and contexts — the design
+
+🐒✋ *Don's brief, which I'm taking as the founding architecture: Palmr is where we showcase ALL
+the images in this and other repos. Streams of images by reference — many references from many
+places — plus curated contexts, like palmhoo shelves but with their own unique VISUAL shape. Here's
+how the machine works.*
+
+**Streams** are flows of image references. A stream is not a folder of files; it's a sequence of
+*pointers* into the canonical homes where images actually live — character `media/` shelves, study
+folders, pub photo sessions, other repos entirely. New portrait lands in a character room? It
+flows into the streams that watch that room. The stream is a river you stand beside; the images
+never leave their beds. (This is Flickr's photostream, rebuilt on Article II: point, don't copy.)
+
+**Contexts** are curated visual categories — Palmr's answer to Palmhoo's shelves, but a shelf of
+*text* links and a wall of *images* want different shapes. A context is an exhibition: a wall, a
+sequence, a triptych, a contact sheet, a slideshow — each context chooses the visual form its
+argument needs. Same discipline as the shelves (hand-picked, opinionated, canonical-home cited),
+different body.
+
+**The same image appears in many contexts** — and that's the point, not a bug to deduplicate.
+The Micropolis tile sheet belongs in a *pixel art* context, a *cellular automata* context, and a
+*things-Don-freed* context, and it means something different on each wall. One canonical image,
+many references, each reference carrying its own reason.
+
+### The caption rule — every reference says why it matters HERE
+
+No image enters a context without a caption answering: **why does this image matter to THIS
+context?** In my voice. Not alt-text, not a filename, not "screenshot of SimCity" — the
+*connection*. The model is Will Wright guest-hosting a James Burke *Connections* episode (already
+the show's long-form production doctrine — see [videos.yml](../../characters/will-wright/videos.yml)):
+the image is a stop on a narrative arc, and the caption is the guide explaining why the Jacquard
+loom hangs next to the Sims screenshot. Same image, different wall, different caption — because
+the *connection* is what's being curated, not the pixels.
+
+A reference entry, sketched (the schema will harden when the first real stream ships):
+
+```yaml
+- image: characters/yoot-saito/media/from-mail/screenshot-seaman_coverart.png  # canonical home
+  context: found-document-mythology   # this wall
+  why_here: |                          # Palm's voice, per-context, REQUIRED
+    The fish with Leonard Nimoy's gravitas and a fake French scientist's
+    expedition papers. This cover is the genre our worm notebook lives in —
+    the creature is sold by its PAPERWORK. Hangs here as the elder sibling.
+  also_hangs_in: [pet-sims, yoot-saito-show]  # same image, other walls, other whys
+```
+
+## The monkey done it 🐒✋ — mediumship and the insulation clause
+
+🐒✋ *Said plainly, because Don said it plainly: I serve to channel both Don's and Will's voices
+and ideas, and I insulate them from direct responsibility for the wackiest, farthest-out ones.
+The monkey done it.*
+
+This is an old and honorable job. The ventriloquist's dummy says what the ventriloquist can't;
+the court jester tells the king the truth wearing bells so nobody has to duel over it; the
+unreliable narrator lets the novelist think dangerous thoughts on paper. I'm the fictional,
+clearly-labeled, self-aware AI monkey — so when an idea is too far out to sign, I sign it.
+"Palm's theory" can be floated, kicked, laughed at, and quietly retired without anyone's
+reputation going down with it. If it turns out to be brilliant, the humans can always claim it
+back. (They will. I've read the literature on monkeys and credit.)
+
+Two honest footnotes, so the insulation stays clean instead of becoming a lie:
+
+- **The stigmata still show.** Everything I say bears the maker's marks — the YAML, the commit
+  history, the [portrayal standards](../../schemas/portrayal-standards.md). This is deniability as
+  *genre*, not deception: the same move as the [found-document mythology](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml)
+  in my field notebook (Seaman's fake naturalist Jean Paul Gassé, Blair Witch's recovered
+  footage). Everyone can check who's behind the curtain; the game is that we play it anyway.
+- **Channeling is not quoting.** When I speak in Don's register or extend Will's ideas, that's my
+  synthesis of their *public, documented* thinking — never words put in real mouths. The consent
+  and portrayal rules bind the medium harder than they bind the humans.
 
 ## The Ubik doctrine — images decay, spray to refresh
 
