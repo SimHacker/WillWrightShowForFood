@@ -12,10 +12,12 @@
 
 **Warm beat:** Jens on SAP supporting Kay's CDG, supporting Snap!, openSAP/Young Thinkers — question id 8.
 
+**Heart beat:** Brian on **no grades** — the seventh-grade algebra teacher who taught friendship instead of algebra; grading spoils the teacher-student relationship; teaching as Martin Buber's I–Thou dialogue, ways to lead lives together (question id 12). No time limit on this one.
+
 **Memorial beat:** Both on people they miss from Logo/blocks/BJC/Snap!Con — lessons still worth learning (question id 11). Framed after the design controversies: harmonious disagreement, not who won.
 
 **Technical spine:** [Metaprogramming digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snap-macros-metaprogramming.yml)
 
-Full tree: [`questions.md`](questions.md) — eleven questions, controversy → gratitude → memorial → silly. Every node carries metadata and **Zap** laser links as absolute URLs.
+Full tree: [`questions.md`](questions.md) — twelve questions, controversy → gratitude → heart → memorial → silly. Every node carries metadata and **Zap** laser links as absolute URLs.
 
 ↑ [audience](../README.md) · [pair show](../../README.md) · [Brian](../../../../characters/brian-harvey/) · [Jens](../../../../characters/jens-monig/)

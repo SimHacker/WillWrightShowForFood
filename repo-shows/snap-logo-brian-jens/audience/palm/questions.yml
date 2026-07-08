@@ -295,11 +295,58 @@ questions:
           without looking over Dan's shoulder?
         answer: null
 
+  - id: 12
+    to: brian-harvey
+    theme: no-grades-friendship-buber
+    status: open
+    priority: 8
+    question: |
+      Brian — the beat I most want the full version of: **no grades**. At Lincoln-Sudbury you
+      negotiated no grades for the computer center, and you've said that's what made friendship
+      possible — with grades you're a hurdle, not a friend. Don remembers you telling a story
+      about your **seventh-grade algebra teacher** — someone who, by your own telling, didn't
+      teach you much algebra, but became a **friend**, and that mattered more. Tell that story
+      here, whole. Then make the strong claim explicit: grading doesn't just stress kids out —
+      it **spoils the relationship** between teacher and student. If a teacher's real purpose
+      is holistic — building a relationship, showing ways to lead lives together, not just
+      transmitting content — what does that mean concretely for how we should run classrooms,
+      and what did CCUS prove that schools still refuse to hear?
+    context_lasers:
+      file:
+        - ../../../../characters/brian-harvey/sources/snapcon-2025-karlstrom-address.yml
+      url:
+        - https://en.wikipedia.org/wiki/Martin_Buber
+        - https://www.youtube.com/watch?v=pDK2PE_pkqQ
+    answer: null
+    children:
+      - id: 12a
+        to: brian-harvey
+        theme: martin-buber-philosophy
+        status: open
+        question: |
+          You pointed the Karlstrom Q&A at **Martin Buber** — teaching as I–Thou dialogue, not
+          I–It skill transfer. For someone who got interested in the philosophy of education
+          through your talk: what should they read of Buber's, and where do you see I–It
+          thinking hiding in today's classrooms (assessment spreadsheets, self-check questions,
+          AI tutors) dressed up as progress?
+        answer: null
+      - id: 12b
+        to: jens-monig
+        theme: no-grades-in-snap-world
+        status: open
+        question: |
+          Jens — in the Karlstrom Q&A you told the story of the Dutch math teacher who had
+          Brian-style teachers in the 70s and thanked Brian "for celebrating the 20th century."
+          Snap!'s own world — the forum, Snap!Con, openSAP, Young Thinkers — runs mostly
+          without grades. Is that no-grades ethos something you protect **by design**, and
+          where does it collide with schools that want Snap! but also want the spreadsheet?
+        answer: null
+
   - id: 11
     to: [brian-harvey, jens-monig]
     theme: community-memorial-lessons
     status: open
-    priority: 8
+    priority: 9
     question: |
       Brian and Jens — we've been digging up your old **design arguments** on purpose: dynamic binding,
       macros, MVC vs Morphic. The interesting part isn't who won — it's that you kept building together.
@@ -341,7 +388,7 @@ questions:
     to: brian-harvey
     theme: ring-gap-silly
     status: open
-    priority: 9
+    priority: 10
     question: |
       Silly closer: if I ringify a `say` block and drop it in a `list`, does the speech balloon wait
       in the list like Schrödinger's greeting until `run` opens the ring — and can Theo the Turtle
@@ -356,8 +403,10 @@ comments_for_guest: |
   not to pick a winner but to show how successfully harmonious designers resolved differences and kept
   shipping together. Lead controversy: Brian **for** dynamic binding vs Jens **for** lexical blocks —
   ask for/against, then what Snap! actually ships. Arc: ring=quote → dynamic binding → SICP scorecard
-  → Morphic heritage (id 10) → SAP gratitude (id 8) → community memorial (id 11) → silly. Brian owns
-  pedagogy + elders; Jens owns interpreter + Morphic + funding + scene.
+  → Morphic heritage (id 10) → SAP gratitude (id 8) → no grades / Buber (id 12) → community memorial
+  (id 11) → silly. Brian owns pedagogy + elders; Jens owns interpreter + Morphic + funding + scene.
+  The no-grades question (id 12) is the HEART beat — give Brian all the room he wants; the
+  seventh-grade algebra teacher story and Buber's I–Thou are his to tell, not ours to summarize.
 
 meta:
   moollm_stack:

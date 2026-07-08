@@ -30,13 +30,13 @@ Palm filed Theo the Logo Turtle in his field notebook after Snap!Con — worms t
 
 **Producer note**
 
-Palm is MOOLLM fiction — warm, philosophical, read the worm field notebook first. The show's spine is **harmonious disagreement**: rehash controversial design fights (dynamic binding, macros, MVC) not to pick a winner but to show how successfully harmonious designers resolved differences and kept shipping together. Arc: ring=quote → dynamic binding → SICP scorecard → Morphic heritage → SAP gratitude → **community memorial** → silly closer. Brian owns pedagogy + elders; Jens owns interpreter, Morphic, funding, and scene.
+Palm is MOOLLM fiction — warm, philosophical, read the worm field notebook first. The show's spine is **harmonious disagreement**: rehash controversial design fights (dynamic binding, macros, MVC) not to pick a winner but to show how successfully harmonious designers resolved differences and kept shipping together. Arc: ring=quote → dynamic binding → SICP scorecard → Morphic heritage → SAP gratitude → **no grades / Buber** → **community memorial** → silly closer. Brian owns pedagogy + elders; Jens owns interpreter, Morphic, funding, and scene. The no-grades question (id 12) is the HEART beat — give Brian all the room he wants; the seventh-grade algebra teacher story and Buber's I–Thou are his to tell, not ours to summarize.
 
 ---
 
 ## Question tree
 
-Eleven questions · priorities 1–9 · click **Zap** links for context lasers
+Twelve questions · priorities 1–10 · click **Zap** links for context lasers
 
 ---
 
@@ -311,6 +311,45 @@ Did Ingalls' Lively Kernel directly inspire Morphic.js — same object graph in 
 
 ---
 
+### 12 · No grades — friendship, Buber, and the seventh-grade algebra teacher
+
+| | |
+|---|---|
+| **To** | Brian Harvey |
+| **Theme** | `no-grades-friendship-buber` |
+| **Status** | open |
+| **Priority** | 8 |
+
+Brian — the beat I most want the full version of: **no grades**. At Lincoln-Sudbury you negotiated no grades for the computer center, and you've said that's what made friendship possible — with grades you're a hurdle, not a friend. Don remembers you telling a story about your **seventh-grade algebra teacher** — someone who, by your own telling, didn't teach you much algebra, but became a **friend**, and that mattered more. Tell that story here, whole. Then make the strong claim explicit: grading doesn't just stress kids out — it **spoils the relationship** between teacher and student. If a teacher's real purpose is holistic — building a relationship, showing ways to lead lives together, not just transmitting content — what does that mean concretely for how we should run classrooms, and what did CCUS prove that schools still refuse to hear?
+
+**Zap for more**
+
+- [Brian's Snap!Con 2025 Karlstrom address digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snapcon-2025-karlstrom-address.yml)
+- [Martin Buber](https://en.wikipedia.org/wiki/Martin_Buber)
+- [Karlstrom address video](https://www.youtube.com/watch?v=pDK2PE_pkqQ)
+
+#### 12a · Martin Buber — philosophy of education
+
+| | |
+|---|---|
+| **To** | Brian Harvey |
+| **Theme** | `martin-buber-philosophy` |
+| **Status** | open |
+
+You pointed the Karlstrom Q&A at **Martin Buber** — teaching as I–Thou dialogue, not I–It skill transfer. For someone who got interested in the philosophy of education through your talk: what should they read of Buber's, and where do you see I–It thinking hiding in today's classrooms (assessment spreadsheets, self-check questions, AI tutors) dressed up as progress?
+
+#### 12b · No grades in the Snap! world
+
+| | |
+|---|---|
+| **To** | Jens Mönig |
+| **Theme** | `no-grades-in-snap-world` |
+| **Status** | open |
+
+Jens — in the Karlstrom Q&A you told the story of the Dutch math teacher who had Brian-style teachers in the 70s and thanked Brian "for celebrating the 20th century." Snap!'s own world — the forum, Snap!Con, openSAP, Young Thinkers — runs mostly without grades. Is that no-grades ethos something you protect **by design**, and where does it collide with schools that want Snap! but also want the spreadsheet?
+
+---
+
 ### 11 · Community memorial — lessons from people
 
 | | |
@@ -318,7 +357,7 @@ Did Ingalls' Lively Kernel directly inspire Morphic.js — same object graph in 
 | **To** | Brian Harvey & Jens Mönig |
 | **Theme** | `community-memorial-lessons` |
 | **Status** | open |
-| **Priority** | 8 |
+| **Priority** | 9 |
 
 Brian and Jens — we've been digging up your old **design arguments** on purpose: dynamic binding, macros, MVC vs Morphic. The interesting part isn't who won — it's that you kept building together. So I want the **people** beat: who from your Logo / blocks / BJC / Snap!Con world do you **miss**, want to memorialize, or still hear teaching when you make a design choice? Not a eulogy contest — name someone who isn't in the room enough (or isn't anymore) and one lesson we should still learn from them. What would you want this repo to remember?
 
@@ -361,7 +400,7 @@ Jens — Scratch team, GP under Kay, Snap!Con Barcelona (TurtleStitch, Cynthia S
 | **To** | Brian Harvey |
 | **Theme** | `ring-gap-silly` |
 | **Status** | open |
-| **Priority** | 9 |
+| **Priority** | 10 |
 
 Silly closer: if I ringify a `say` block and drop it in a `list`, does the speech balloon wait in the list like Schrödinger's greeting until `run` opens the ring — and can Theo the Turtle wear the ring as a bracelet? Also, are there any cool Snap! designs, swag, and jewelry I can embroider and 3D print?
 
