@@ -1,18 +1,21 @@
-# Peter Norvig × Don Hopkins — worms, Ground, and The Ground Truth (Jan 2026)
-# Paraphrased from Facebook group thread + email; not verbatim quotes unless marked.
+# Don Hopkins → Peter Norvig — worms, Ground, and The Ground Truth (Jan 2026)
+# Don's side of a private thread, paraphrased from Don's archive. NOT Peter's words.
+# Portrayal discipline: no claims about what Peter said, thinks, or named.
+# Peter may edit or strike anything about himself, including this file.
 
 meta:
   date: 2026-01-07
   medium: facebook_group_thread
+  direction: don_to_peter  # these are DON'S messages, addressed to Peter
   consent: warm_lead
-  portrayal: paraphrase_only
+  portrayal: dons_words_only
 
-peters_scruffy_neat_line: |
-  "It's the triumph of scruffy AI running on the substrate of neat AI! It's ok if it's not perfect
-  or exact." — Peter, on MOOLLM's layered metadata pipeline (summaries, keywords, ratings,
-  clustering into publications with editorial voice).
+what_don_described: |
+  Don walked Peter through his metadata pipeline: consistent metadata for 251 generated web
+  pages (summaries, keywords, ratings), clustered into categories, then organized into
+  "publications" with editorial voice and style.
 
-publications_peter_named:
+publications_don_named:  # Don's own naming, from his messages
   - Looming Stone — Hunter S Thompson's usual outlet
   - LOOMIT Press — technical stuff
   - Jacquard — artsy fartsy style magazine
@@ -23,34 +26,39 @@ publications_peter_named:
   - The Ground Truth — AI and ML and worms
 
 ground_as_character: |
-  Peter independently named **The Ground Truth** as the publication about AI/ML and **worms** —
-  and noted that **Ground itself is a character**, whose pets are all the worms living inside his
-  directory. Ground is editor of The Ground Truth. This matches the lloooomm/MOOLLM canon before
-  Palm's field expedition made it public in the notebook.
+  Don described **The Ground Truth** as the publication about AI/ML and **worms** — and that
+  **Ground itself is a character**, whose pets are all the worms living inside his directory;
+  Ground is editor of The Ground Truth. This is Don describing his own lloooomm/MOOLLM canon
+  to Peter, months before Palm's field notebook made it public.
 
-worm_pipeline_peter_described: |
-  Worms as cursors — even dual cursors like selections (point and mark). Input mouth (dot), output
-  anus (mark): eat(), transform(), poop(), move forward. Chain worms; worms within worms. Castings
-  return home through a wormhole so they don't leave poop on the data they're eating (nondestructive
-  by default). Write-only numbered .001 .002 .003 output files for batch processes — map/reduce
-  agents or pipes. Tagline Peter offered: "Worm Pipelines: We're Better Than Boring, We're WORMS!"
+worm_pipeline_don_described: |
+  Worms as cursors — even dual cursors like selections (point and mark). Input mouth (dot),
+  output anus (mark): eat(), transform(), poop(), move forward. Chain worms; worms within
+  worms. Castings return home through a wormhole so they don't leave poop on the data they're
+  eating (nondestructive by default). Write-only numbered .001 .002 .003 output files for
+  batch processes — map/reduce agents or pipes. "It's like save-excursion in Emacs!"
+  Tagline: "Worm Pipelines: We're Better Than Boring, We're WORMS!"
 
-emacs_parallel: |
-  "It's like save-excursion in Emacs!" — Peter's own comparison for region-bound transformation.
+scruffy_neat_line: |
+  "It's the triumph of scruffy AI running on the substrate of neat AI! It's ok if it's not
+  perfect or exact." — from the January thread.
+  ATTRIBUTION FLAG: speaker not yet confirmed against the original thread. Until Don
+  verifies, cite as "from the January thread" — do NOT quote it as Peter's.
 
-moollm_reading_peter_requested: |
+moollm_reading_don_shared: |
   Don pointed Peter at the MOOLLM eval/incarnation framework (Jan 2026):
   https://github.com/SimHacker/moollm/blob/main/designs/MOOLLM-EVAL-INCARNATE-FRAMEWORK.md
 
 field_notebook: |
-  Palm's expedition notebook is the friendly on-ramp for the worm/Ground lore Peter already named:
-  https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml
+  Palm's expedition notebook is the friendly on-ramp for the worm/Ground lore Don described
+  in this thread:
+  https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md
 
 show_hooks:
-  - "Peter named Ground and The Ground Truth before the field notebook went public — compare notes on air"
-  - "Scruffy vs neat as the whole show thesis in one sentence from Peter"
-  - "Worm pipelines as map/reduce — Peter and Don already agree; Palm wrote the field guide"
+  - "Don described Ground and The Ground Truth to Peter before the field notebook went public — compare notes on air"
+  - "Scruffy vs neat as a one-sentence thesis — sort out on air who said it first"
+  - "Worm pipelines as map/reduce — the thread Palm's field guide grew from"
 
 see_also:
   - moollm-outreach.yml
-  - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml
+  - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md

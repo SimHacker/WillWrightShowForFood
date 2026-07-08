@@ -22,7 +22,7 @@ only.
 
 **Source artifacts:** [`brian-harvey/sources/`](../../characters/brian-harvey/sources/README.md) · [`jens-monig/sources/`](../../characters/jens-monig/sources/README.md)
 
-**Field notebook:** Palm's [worm expedition](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml) — Theo the Logo Turtle, computational zoo — natural cross-ref for the Logo lineage episode.
+**Field notebook:** Palm's [worm expedition](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md) — Theo the Logo Turtle, computational zoo — natural cross-ref for the Logo lineage episode.
 
 **2018 thread:** Don's Micropolis × Snap! correspondence ([digest](../../characters/brian-harvey/sources/micropolis-snap-2018.yml)) — still an open demo beat.
 

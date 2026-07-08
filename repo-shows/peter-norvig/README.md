@@ -14,7 +14,7 @@ useful as source material.
   and teaching AI behavior.
 - **Worms & Ground** — Peter named this in January 2026 before the field notebook went public:
   scruffy on neat, Ground as character, *The Ground Truth* as the ML journal, worm pipelines as
-  map/reduce. [**Palm's field notebook**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml)
+  map/reduce. [**Palm's field notebook**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md)
   is the invitation to read it over Palm's shoulder.
 - **AI in general** — wherever the book is pulling him; Don as sounding board / case study.
 - **"Ten Years," revisited** — deliberate practice in the LLM era; are *skills* the thing we

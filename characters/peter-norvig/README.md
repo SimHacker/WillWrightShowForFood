@@ -30,7 +30,7 @@ that's fun on its own and useful as source material for his chapter.
 In January 2026 Peter and Don were already aligned on the **worm/Ground** architecture before
 Palm's field expedition made it public: scruffy AI on a neat substrate, Ground as a character,
 worms as map/reduce cursors, *The Ground Truth* as the ML publication. Palm's
-[field notebook](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml)
+[field notebook](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md)
 is the friendly invitation to read that lore over Palm's shoulder.
 
 The topic is **his to choose** — [MOOLLM](https://github.com/SimHacker/moollm), skills, worms,

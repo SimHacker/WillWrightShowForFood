@@ -13,11 +13,11 @@ Peter Norvig — Director of Research at Google and one of the most widely read 
 
 *Topics that connect Peter's work to this repo — public themes and documented threads only.*
 
-- **Scruffy on neat** — Peter's Jan 2026 line on MOOLLM: triumph of scruffy AI on neat-AI substrate ([sources/worms-ground-truth-conversation.yml](sources/worms-ground-truth-conversation.yml))
-- **Ground & The Ground Truth** — Peter named Ground as a character and editor of the worms/ML publication before Palm's field expedition went public
-- **Worm pipelines** — eat/transform/poop, dual cursors, wormholes for castings, numbered batch files — Peter's map/reduce framing matches the notebook's ecology
+- **The January thread** — Don described The Ground Truth, Ground-as-editor, and worm pipelines to Peter in Jan 2026, before the field notebook went public ([sources/worms-ground-truth-conversation.yml](sources/worms-ground-truth-conversation.yml) — Don's words, attribution discipline noted)
+- **Scruffy on neat** — "triumph of scruffy AI on neat-AI substrate," from that thread; a one-sentence MOOLLM thesis to unpack on air
+- **Worm pipelines** — eat/transform/poop, dual cursors, wormholes for castings, numbered batch files — the map/reduce framing the notebook's ecology confirmed
 - **Ten Years** — deliberate practice essay as the constructionist frame for skills in the LLM era
-- **PAIP / Lisp lineage** — pairs with Ken Kahn's birds, Papert's turtle, and the computational zoo in [Palm's field notebook](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml)
+- **PAIP / Lisp lineage** — pairs with Ken Kahn's birds, Papert's turtle, and the computational zoo in [Palm's field notebook](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md)
 - **AGI book chapter** — Peter offered to write about Don's work; the show is the other half
 
 ## The hooks
@@ -26,11 +26,12 @@ Peter Norvig — Director of Research at Google and one of the most widely read 
 Walk the repo on air and build from the seed.
 
 ### 2. Palm's field notebook — read it over his shoulder 🪱🔎
-[Palm on Worms](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml)
-is the raw naturalist journal: Ground, the species census, worms as language machines, birds,
-turtles, the Funky Worm, Gaia — grown from the thread Peter and Don already had going. Compare
-Peter's January naming (Ground, The Ground Truth, worm pipelines) with what Palm found in the
-field.
+[Palm on Worms](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md)
+is the naturalist journal (rendered reading copy; the
+[raw YAML](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml)
+is the specimen): Ground, the species census, worms as language machines, birds, turtles, the
+Funky Worm, Gaia — grown from the thread Don sent Peter in January. Compare the January
+descriptions (Ground, The Ground Truth, worm pipelines) with what Palm found in the field.
 
 ### 3. Ten Years, revisited
 [*21-days.html*](sources/teach-yourself-programming-in-ten-years.yml) — what does deliberate practice mean when the LLM writes the boilerplate? Are MOOLLM skills the artifacts we practice *with* for the next decade?
@@ -39,10 +40,10 @@ field.
 [sources/ive-consed-every-pair.yml](sources/ive-consed-every-pair.yml) — Guy Steele energy; HN loved it; optional cold open for the show.
 
 ### 5. Scruffy vs neat — the whole thesis in one sentence
-Peter already said it about MOOLLM's metadata pipeline. On air: unpack scruffy (worms, Palm's voice, layered puns) running on neat (YAML schema, portrayal standards, git provenance).
+"Triumph of scruffy AI on neat-AI substrate" — from the January thread (speaker to confirm on air; a fun opening question in itself). Unpack scruffy (worms, Palm's voice, layered puns) running on neat (YAML schema, portrayal standards, git provenance).
 
 ### 6. Worm pipelines — "We're Better Than Boring, We're WORMS!"
-Peter's tagline from the January thread. Demo a trainable worm end-to-end; Peter as the map/reduce elder who consed every pair.
+The tagline from the January thread. Demo a trainable worm end-to-end; Peter as the map/reduce elder who consed every pair.
 
 ### 7. AGI book × Repo Show
 Dual-use recording — fun conversation + research material. Permission already warm for chapter; show extends the same courtesy both ways.
@@ -53,4 +54,4 @@ Dual-use recording — fun conversation + research material. Permission already 
 - [`sources/README.md`](sources/README.md) — essays, songs, email-thread summaries
 - Show seed: [`repo-shows/peter-norvig/`](../../repo-shows/peter-norvig/)
 - [`CHARACTER.yml`](CHARACTER.yml)
-- [Palm's field notebook](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml)
+- [Palm's field notebook](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md)

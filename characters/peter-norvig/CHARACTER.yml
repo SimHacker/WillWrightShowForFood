@@ -30,10 +30,12 @@ connections:
   twenty_one_days: "His essay 'Teach Yourself Programming in Ten Years' (deliberate practice over hype) is a touchstone Don loves — and a natural frame for a constructionist conversation about LLMs and skills."
   moollm_skills: "Curious about MOOLLM and skills as a way to author and teach AI behavior — the topic he can take in whatever direction he wants."
   worms_and_ground: |
-    Jan 2026 thread — Peter named The Ground Truth (AI/ML/worms publication), Ground as character/editor,
-    worm pipelines (map/reduce, save-excursion, wormholes for castings). Palm's field notebook is the
-    invitation to read that lore: moollm/.../palm-on-worms-fieldnotes.yml
-  scruffy_on_neat: "Peter's line on MOOLLM — triumph of scruffy AI on neat-AI substrate — matches the worm/YAML split."
+    Jan 2026 thread — DON described The Ground Truth (AI/ML/worms publication), Ground as
+    character/editor, and worm pipelines (map/reduce, save-excursion, wormholes for castings)
+    in messages addressed to Peter. Don's words, not Peter's — see
+    sources/worms-ground-truth-conversation.yml for the attribution discipline. Palm's field
+    notebook is the invitation to read that lore: moollm/.../palm-on-worms-fieldnotes.md
+  scruffy_on_neat: "'Triumph of scruffy AI on neat-AI substrate' — from the January thread; speaker to be confirmed by Don before quoting as Peter's."
 
 # Paraphrased from his recent public talks/interviews (2025) on how LLMs reshape programming.
 # Themes only — no invented quotations; confirm exact wording with Peter before airing.
@@ -66,7 +68,7 @@ sources:
     - sources/ive-consed-every-pair.yml
     - sources/worms-ground-truth-conversation.yml
     - sources/moollm-outreach.yml
-  field_notebook: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml
+  field_notebook: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md
 
 see_also:
   - { path: ../henry-minsky/, why: "Leela AI — Society of Mind in modern AI; co-guest for the show" }

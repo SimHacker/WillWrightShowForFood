@@ -29,7 +29,7 @@ Default interview is the **pair show** — Brian on books + pedagogy, Jens on im
 [sources/computer-science-logo-style.yml](sources/computer-science-logo-style.yml) · [sources/simply-scheme.yml](sources/simply-scheme.yml) — three volumes of real CS through Logo; Scheme with Hal Abelson's foreword. What makes a hard idea teachable?
 
 ### 3. Berkeley Logo and a lifetime of Logo for learners
-[sources/berkeley-logo-and-cs61a.yml](sources/berkeley-logo-and-cs61a.yml) — UCBLogo, CS 61A, the turtle as through-line. Compare with [Palm's Theo sighting](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml).
+[sources/berkeley-logo-and-cs61a.yml](sources/berkeley-logo-and-cs61a.yml) — UCBLogo, CS 61A, the turtle as through-line. Compare with [Palm's Theo sighting](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md).
 
 ### 4. The Beauty and Joy of Computing (BJC)
 [sources/beauty-and-joy-of-computing.yml](sources/beauty-and-joy-of-computing.yml) — CSforALL curriculum; 2024 Karlstrom award; 50%+ female enrollment at Berkeley; Spanish edition and BJC Sparks.
@@ -59,4 +59,4 @@ The heritage episode. Optional cold open: Berkeley Logo turtle next to Snap! blo
 - [`correspondence.yml`](correspondence.yml)
 - Show seed: [`repo-shows/snap-logo-brian-jens/`](../../repo-shows/snap-logo-brian-jens/)
 - [`CHARACTER.yml`](CHARACTER.yml)
-- [Palm's field notebook](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml)
+- [Palm's field notebook](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md)

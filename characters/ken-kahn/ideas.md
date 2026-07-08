@@ -59,7 +59,7 @@ MOOLLM has been growing **worms** — programmable text organisms that transform
 
 Ken's an **early bird** — he built message-passing-as-birds in the mid-1990s and is still at it
 (AI blocks for Snap!). Field notes where this is sketched:
-[Palm on Worms](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml)
+[Palm on Worms](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md)
 (see the `birds` section).
 
 The zoo has since gained its third animal: **Theo the Logo Turtle** (Papert's mascot, already a

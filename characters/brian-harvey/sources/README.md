@@ -11,4 +11,4 @@ MIT Press, ACM, and Snap! unless marked as Don's paraphrase of a private thread.
 | [berkeley-logo-and-cs61a.yml](berkeley-logo-and-cs61a.yml) | UCBLogo and the legendary SICP-based CS 61A — decades of making hard ideas teachable |
 | [micropolis-snap-2018.yml](micropolis-snap-2018.yml) | Don's 2018 thread — open SimCity + CAM6 in Snap! blocks; Brian looped in Jens |
 
-↑ [CHARACTER.yml](../CHARACTER.yml) · [invitation](../invitation.md) · [Jens's room](../../jens-monig/sources/README.md) · [pair show](../../../repo-shows/snap-logo-brian-jens/README.md) · [Palm's field notebook](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml)
+↑ [CHARACTER.yml](../CHARACTER.yml) · [invitation](../invitation.md) · [Jens's room](../../jens-monig/sources/README.md) · [pair show](../../../repo-shows/snap-logo-brian-jens/README.md) · [Palm's field notebook](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md)

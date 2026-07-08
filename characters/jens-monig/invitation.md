@@ -48,7 +48,7 @@ everything. Browse his room at [`../brian-harvey/`](../brian-harvey/) —
 [`sources/`](../brian-harvey/sources/README.md) and all.
 
 Palm the monkey keeps a naturalist's journal of the computational zoo — worms, birds, turtles, Ground.
-[**Read it over his shoulder**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml)
+[**Read it over his shoulder**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md)
 if you're curious what grew out of the Logo/Smalltalk orbit after Snap!Con.
 
 **Zero homework** — I do the setup; what we record and publish is your call, and we point people

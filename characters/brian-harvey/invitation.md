@@ -32,7 +32,7 @@ yours to correct, veto, or rewrite. That's house law.
   filtering people out.
 - **Berkeley Logo** and a lifetime of Logo for learners — the through-line from Papert's turtle to
   today. Palm the monkey already filed **Theo the Logo Turtle** in his
-  [field notebook](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml)
+  [field notebook](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md)
   — worms transform, birds carry, turtles draw. He'd love a real Logo elder to read it.
 - **The Beauty and Joy of Computing** — the CSforALL curriculum your **2024 Karlstrom award** (with
   Dan Garcia) recognized. The citation names Jens as Snap!'s principal developer — so the award is

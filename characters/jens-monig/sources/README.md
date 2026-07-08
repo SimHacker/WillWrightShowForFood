@@ -11,4 +11,4 @@ and verifiable bios unless marked as Don's paraphrase of a private thread.
 | [y-combinator-in-blocks.yml](y-combinator-in-blocks.yml) | The stunt that proves first-class continuations aren't just for theorists |
 | [micropolis-snap-2018.yml](micropolis-snap-2018.yml) | Don's 2018 thread — drive Micropolis + CAM6 from blocks; Jens on the build side |
 
-↑ [CHARACTER.yml](../CHARACTER.yml) · [invitation](../invitation.md) · [Brian's room](../../brian-harvey/sources/README.md) · [pair show](../../../repo-shows/snap-logo-brian-jens/README.md) · [Palm's field notebook](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml)
+↑ [CHARACTER.yml](../CHARACTER.yml) · [invitation](../invitation.md) · [Brian's room](../../brian-harvey/sources/README.md) · [pair show](../../../repo-shows/snap-logo-brian-jens/README.md) · [Palm's field notebook](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md)

@@ -51,7 +51,7 @@ discuss_with_will:
   - "Did the Gaia/self-regulation instinct carry all the way into Spore's ecosystems?"
   - "The worms write their own rules — how does that relate to your CA lineage from Conway forward?"
 
-fieldnotes: "https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml"
+fieldnotes: "https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md"
 
 ties:
   - ../ideas/crazy-idea-jam.yml                       # character_endosymbiosis + data_portability

@@ -11,4 +11,4 @@ published posts unless marked as Don's paraphrase of a private thread.
 | [worms-ground-truth-conversation.yml](worms-ground-truth-conversation.yml) | Jan 2026 thread — scruffy AI on neat substrate; Ground as character; worm pipelines |
 | [moollm-outreach.yml](moollm-outreach.yml) | Don's 2026 emails — MOOLLM reboot, portrayal ethics, Vulcan screen meld offer |
 
-↑ [CHARACTER.yml](../CHARACTER.yml) · [invitation](../invitation.md) · [Palm's field notebook](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml)
+↑ [CHARACTER.yml](../CHARACTER.yml) · [invitation](../invitation.md) · [Palm's field notebook](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md)

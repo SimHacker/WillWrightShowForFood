@@ -36,7 +36,7 @@ sources:
     - sources/gp-alan-kay-lineage.yml
     - sources/y-combinator-in-blocks.yml
     - sources/micropolis-snap-2018.yml
-  field_notebook: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml
+  field_notebook: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md
   papers: []
   blogs: []
 

@@ -50,7 +50,7 @@ Where blocks meet concurrency and message passing — Jens's research verticals 
 Don embroidered felt live; kids coded and sewed with zero self-consciousness. [`repo-shows/turtlestitch/`](../../repo-shows/turtlestitch/) · Cynthia Solomon · non-competitive Snap! community.
 
 ### 10. Palm's field notebook — read it over his shoulder
-[Palm on Worms](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml) — Theo the Logo Turtle, worms as language machines, Ground as playhouse. What grew in the repo after Snap!Con.
+[Palm on Worms](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md) — Theo the Logo Turtle, worms as language machines, Ground as playhouse. What grew in the repo after Snap!Con.
 
 ## Sources (public + documented threads)
 
@@ -59,4 +59,4 @@ Don embroidered felt live; kids coded and sewed with zero self-consciousness. [`
 - [`correspondence.yml`](correspondence.yml)
 - Show seed: [`repo-shows/snap-logo-brian-jens/`](../../repo-shows/snap-logo-brian-jens/)
 - [`CHARACTER.yml`](CHARACTER.yml)
-- [Palm's field notebook](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml)
+- [Palm's field notebook](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md)

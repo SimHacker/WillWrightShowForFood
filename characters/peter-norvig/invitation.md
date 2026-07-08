@@ -20,10 +20,10 @@ double as source material for your AI book.
 
 - **MOOLLM & skills** — the filesystem-as-microworld, YAML-jazz, and skills as constructionist
   artifacts: authoring and *teaching* AI behavior by building shareable things.
-- **Worms & Ground** — you already named this better than we did in January: scruffy AI on a neat
-  substrate, Ground as a character, worms as map/reduce cursors with a wormhole for castings.
-  [**Palm's field notebook**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml)
-  is the naturalist's journal we grew from that thread — scattered sightings, species census, the
+- **Worms & Ground** — remember the thread I sent you in January? Ground as a character, editor of
+  *The Ground Truth*; worms as map/reduce cursors with a wormhole for castings; scruffy AI on a neat
+  substrate. [**Palm's field notebook**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md)
+  is the naturalist's journal that grew from all that — scattered sightings, species census, the
   whole zoo. Palm would love you to read it over his shoulder.
 - **AI in general** — wherever your book is pulling you; I'm happy to be a sounding board or a case
   study.
