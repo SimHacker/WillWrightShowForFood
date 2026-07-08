@@ -37,6 +37,7 @@ questions:
       file:
         - ../../../../characters/gary-drescher/made-up-minds.md
         - ../../../../characters/palm/will-wright-soul-for-food.md
+        - ../../../../characters/palm/running-on-wetware.md   # Palm's partial answer: the observer — leaning into the simulator effect
         - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/on-being-simulated.md
     answer: null
     children:

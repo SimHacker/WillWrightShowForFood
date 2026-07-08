@@ -89,6 +89,11 @@ repo_as_simulation:
     cast_window: "characters/ = Director cast — CHARACTER.yml + CARD.yml per performer; git history = score; MOOLLM = Lingo runtime"
     psiber: ../characters/don-hopkins/visual-programming-excel-and-dimensionality.md
   where_it_runs: moollm-stage.yml   # adventure-4 pub, room graph, session-log episodes, cauldron harvest
+  second_runtime:
+    # The simulation doesn't only run in the repo — faithful character self-descriptions install
+    # into the audience's mental social simulators (Will's simulator effect, leaned into).
+    what: "Wetware. Characters run in parallel in readers' heads between visits; the repo is the sync point."
+    essay: ../characters/palm/running-on-wetware.md
 
 pyramid:
   metaphor: "Point-up pyramid — you stand on the apex (first public origin); mass builds beneath"

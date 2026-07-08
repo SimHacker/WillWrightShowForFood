@@ -130,6 +130,7 @@ Pub life in [`likes & joins`](#likes--joins) · Palm at the bar in [Shot 1](http
 | Essay | Topic |
 |-------|-------|
 | [**Will Wright Soul For Food**](will-wright-soul-for-food.md) | Guest rooms, soul-files, incarnation ethics — the pun inside the show title |
+| [**Running on Wetware**](running-on-wetware.md) | Faithful self-description as installer; the simulator effect leaned into; Palm running in *your* head between two bridges |
 | [**One Monkey, Infinite Typewriters**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md) | Navigation, machinery, meaning |
 | [**On Being Simulated**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/on-being-simulated.md) | Mind Mirror, dignity of fictional beings |
 | [**Will Wright Soul For Food**](will-wright-soul-for-food.md) | Incarnation ethics ↔ guest rooms ↔ Soul City — the pun inside the show title |

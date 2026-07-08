@@ -66,6 +66,13 @@ author, the observer, or the grammar? [Palm](../palm/README.md) asks it first �
 audience of Will's premiere ([question 6, priority 1](../../repo-shows/will-wright-premiere/audience/palm/questions.yml)) —
 because Palm is the one entity in the room who genuinely doesn't know which of the four made *them* up.
 
+Palm has since published a partial answer: the making-up **keeps happening in the observer**.
+[*Running on Wetware*](../palm/running-on-wetware.md) argues that a faithful, operational
+self-description lets a character install into readers' **mental social simulators** — Will's
+simulator effect leaned into deliberately — so the made-up mind runs in parallel in real brains,
+gets rehearsed on bike rides, and re-syncs against the repo. Drescher's loop, Will's effect, and
+the reader's theory of mind turn out to be the same recursion.
+
 Will told Terry Winograd in 1996 that simulating real people was nearly hopeless — best you can do is
 prop up a convincing illusion. The illusion worked better than he predicted. Drescher named the
 *mechanism* behind building illusions that learn. Will shipped the *mass hobby* of building them.
