@@ -1,0 +1,168 @@
+# PALMHOO COHERENCE MANIFEST
+# Summary -> sources dependency edges, so staleness is computable.
+# Protocol: JOURNALISM.md · Law: CONSTITUTION.md Article IX
+# Maintained by hand (instance-first); a GitHub Action will read this someday.
+#
+# Entry schema:
+#   summary: path of the summarizing document (relative to repo root, or URL)
+#   sources: what it summarizes — paths, globs, or URLs; cross-repo allowed
+#   beat: who watches this (default: palm; journalists claim beats by PR)
+#   last_verified: date the summary was last checked against sources at head
+#   volatility: low | medium | high — how fast sources move (triage hint)
+
+summaries:
+
+  - summary: palmhoo/README.md
+    sources:
+      - palmhoo/*/README.md
+      - palmhoo/CONSTITUTION.md
+    beat: palm
+    last_verified: 2026-07-08
+    volatility: medium
+    note: "root of the mipmap — stale whenever any shelf page changes meaningfully"
+
+  - summary: palmhoo/minds-and-souls/README.md
+    sources:
+      - characters/gary-drescher/
+      - characters/palm/
+      - characters/marvin-minsky/README.md
+      - https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/stage/palm-nook/study
+      - https://github.com/SimHacker/moollm/tree/main/skills/schema-mechanism
+      - https://github.com/SimHacker/moollm/tree/main/skills/society-of-mind
+      - https://github.com/SimHacker/moollm/tree/main/skills/simulator-effect
+      - https://github.com/SimHacker/moollm/tree/main/designs/ethics
+    beat: palm
+    last_verified: 2026-07-08
+    volatility: medium
+
+  - summary: palmhoo/simulation-and-worlds/README.md
+    sources:
+      - process/VISION.md
+      - process/vision-and-ambition.yml
+      - process/moollm-stage.yml
+      - process/trails/repo-show-spine.md
+      - process/trails/procedural-beauty.md
+      - https://github.com/SimHacker/moollm/tree/main/examples/adventure-4
+      - https://github.com/SimHacker/MicropolisCore
+    beat: palm
+    last_verified: 2026-07-08
+    volatility: medium
+
+  - summary: palmhoo/design-methods/README.md
+    sources:
+      - characters/chris-trottier/design-by-accretion.md
+      - characters/chris-trottier/tuned-emergence.md
+      - https://github.com/SimHacker/moollm/tree/main/skills/cauldron
+      - https://github.com/SimHacker/moollm/tree/main/skills/play-learn-lift
+      - https://github.com/SimHacker/moollm/tree/main/skills/yaml-jazz
+      - https://github.com/SimHacker/moollm/blob/main/designs/MOOLLM-MANIFESTO.md
+    beat: palm
+    last_verified: 2026-07-08
+    volatility: low
+
+  - summary: palmhoo/shows-and-performance/README.md
+    sources:
+      - process/FORMAT.md
+      - process/VISION.md
+      - process/ticket-pr.yml
+      - process/guest-participation-ladder.yml
+      - skills/repo-show/SKILL.md
+      - repo-shows/
+      - schemas/audience-character.yml
+    beat: palm
+    last_verified: 2026-07-08
+    volatility: high
+    note: "the show slate moves fast; re-verify every pass"
+
+  - summary: palmhoo/history-and-lore/README.md
+    sources:
+      - process/VISION.md
+      - process/ticket-pr.yml
+      - characters/marc-canter/timeline-rotated-90-degrees.md
+      - process/trails/visual-programming-patch-cord.md
+      - process/trails/maxis-sims-lineage.md
+      - process/trails/constructionist-lineage.md
+      - https://github.com/SimHacker/MicropolisCore/tree/main/documentation
+    beat: palm
+    last_verified: 2026-07-08
+    volatility: low
+    note: "history accretes but rarely changes; lowest-urgency beat"
+
+  - summary: palmhoo/code-and-craft/README.md
+    sources:
+      - https://github.com/SimHacker/MicropolisCore
+      - https://github.com/SimHacker/moollm/tree/main/skills
+      - https://github.com/SimHacker/moollm/tree/main/designs
+      - characters/paul-haeberli/README.md
+      - characters/jared-tarbell/README.md
+      - process/trails/visual-programming-patch-cord.md
+    beat: palm
+    last_verified: 2026-07-08
+    volatility: medium
+
+  - summary: palmhoo/ethics-and-portrayal/README.md
+    sources:
+      - schemas/portrayal-standards.md
+      - schemas/portrayal-standards.yml
+      - schemas/invitation-workflow.yml
+      - characters/palm/will-wright-soul-for-food.md
+      - https://github.com/SimHacker/moollm/tree/main/designs/ethics
+      - https://github.com/SimHacker/moollm/tree/main/skills/no-ai-slop
+    beat: palm
+    last_verified: 2026-07-08
+    volatility: low
+
+  - summary: palmhoo/people/README.md
+    sources:
+      - characters/INDEX.yml
+      - characters/contact-queue.yml
+    beat: palm
+    last_verified: 2026-07-08
+    volatility: high
+    note: "new characters land weekly; the reading-map picks need re-checking as dirs deepen"
+
+  - summary: palmhoo/under-development/README.md
+    sources:
+      - apps/README.md
+      - packages/README.md
+      - rigs/INDEX.yml
+      - skills/repo-show/
+      - https://github.com/SimHacker/MicropolisCore/tree/main/packages
+      - https://github.com/SimHacker/MicropolisCore/tree/main/apps
+      - https://github.com/SimHacker/moollm/tree/main/kernel
+      - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/infinite-typewriters.yml
+    beat: palm
+    last_verified: 2026-07-08
+    volatility: high
+    note: "the sawdust shelf — highest churn in palmhoo by design"
+
+# CROSS-REPO EXEMPLARS — claims outside palmhoo that palmhoo pages repeat.
+# These are the canaries: when a source count/date changes, every dependent listed here is stale.
+tracked_claims:
+
+  - claim: "MOOLLM has 139 skills on disk"
+    as_of: 2026-07-08
+    source: https://github.com/SimHacker/moollm/tree/main/skills
+    dependents:
+      - characters/chris-trottier/design-by-accretion.md
+      - characters/chris-trottier/suggested-questions.md
+      - repo-shows/design-by-accretion.yml
+      - palmhoo/code-and-craft/README.md
+      - https://github.com/SimHacker/moollm/blob/main/skills/README.md
+    note: "deliberately load-bearing staleness — recount at each shelving pass, update all dependents together"
+
+  - claim: "moollm skills/INDEX.yml says 131; skills/README.md says 128"
+    as_of: 2026-07-08
+    source: https://github.com/SimHacker/moollm/blob/main/skills/INDEX.yml
+    dependents:
+      - characters/chris-trottier/design-by-accretion.md
+    note: "the lag IS the evidence cited; if moollm re-indexes, rewrite the evidence, don't delete it"
+
+# COHERENCE CONFLICTS — incompatible claims between documents, tracked like bugs.
+conflicts: []
+  # format:
+  # - id: short-slug
+  #   claim_a: {doc: path, says: "..."}
+  #   claim_b: {doc: path, says: "..."}
+  #   status: open | resolved
+  #   resolution: which source won, and the PR that settled it

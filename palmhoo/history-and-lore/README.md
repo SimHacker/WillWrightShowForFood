@@ -35,6 +35,14 @@ made decades ago at talks, in emails, over pie. This shelf keeps the receipts.*
 | [**Will Wright's evidence room**](../../characters/will-wright/primary-sources-evidence-room.md) | Primary sources on the man the show is named after. |
 | [**Don's proto-dollhouse / Kaleida visit**](../../characters/will-wright/proto-dollhouse-kaleida-visit.md) | The Sims before The Sims — receipts from 1993. |
 
+## Community archaeology — the catalogs
+
+| Entry | 🐒✋ Why you'd read it |
+|-------|----------------------|
+| [**catalogs/**](../../catalogs/README.md) | Digs into the fan-site strata: Maxis's own pages, SimFreaks, SimSlice, the Micropolis home — the web the games grew in. |
+| [**Sims 1 community landscape**](../../catalogs/sims1-community-landscape.md) | Who built what around The Sims before "creator economy" was a phrase — the custom-content ecosystem, mapped. |
+| [**Open source & formats**](../../catalogs/sims-open-source-and-formats.yml) | The file-format archaeology behind the data-portability crown jewel of Will's premiere. |
+
 ## The wider ancestry
 
 | Entry | 🐒✋ Why you'd read it |

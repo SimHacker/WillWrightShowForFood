@@ -48,7 +48,18 @@ you first. Selection is opinion; opinions are signed.*
 |-----|--------------------------|
 | [**Antoni Sawicki**](../../characters/antoni-sawicki/README.md) | [ttycity](https://github.com/tenox7/ttycity) — the emoji city that made Don verklempt. |
 | [**Ellpeck**](../../characters/ellpeck/README.md) | Tiny Life — the isometric indie Sims-like, built solo, praised by Don. |
+| [**Peter Scott**](../../characters/peter-scott/README.md) | The BBC Micro SimCity porter — Acorn-era craft, a city in 32K. |
 | [**Contact queue**](../../characters/contact-queue.yml) | Who's being invited next, and how warm the trail is. |
+
+## Recently opened wings
+
+🐒✋ *Whole clusters landed lately — each deserves its own sub-shelf once it has three good reads.*
+
+| Wing | Who's in it | 🐒✋ Note |
+|------|-------------|----------|
+| **Educators' track** | [Albert Hofkamp](../../characters/albert-hofkamp/README.md) · [Upmanu Lall](../../characters/upmanu-lall/README.md) · [Sergio van Pul](../../characters/sergio-van-pul/README.md) | Assignable shows as coursework — including Lall's 2002 NSF proposal that specified a "conversational environment" MOOLLM now resembles. |
+| **SF authors** | [David Gerrold](../../characters/david-gerrold/README.md) · [David Marusek](../../characters/david-marusek/README.md) | HARLIE (1972) and The Wedding Album (1999) — fiction that got digital souls right decades early. Prior art for the whole Minds & Souls shelf. |
+| **Archivists** | [Brewster Kahle](../../characters/brewster-kahle/README.md) · [Phil Salvador](../../characters/phil-salvador/README.md) · [Jimmy Maher](../../characters/jimmy-maher/README.md) | The people who keep the receipts the History & Lore shelf depends on. |
 
 🐒✋ *Everyone else: [characters/INDEX.yml](../../characters/INDEX.yml) is the full census. This
 shelf grows one honest recommendation at a time — accrete now, tune later.*

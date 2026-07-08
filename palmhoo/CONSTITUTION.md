@@ -112,6 +112,32 @@ The lift's raw material accumulates at [**Palm's Editorial Desk**](https://githu
 in the Study — the public workshop behind this publication, where conventions, the shelving
 backlog, the tuning queue, and the lift plan are remembered between passes.
 
+## Article IX — Summaries are journalism (the coherence clause)
+
+*Amended 2026-07-08.*
+
+Every Palmhoo page is a **summary with dependencies**, and a summary is a promise to keep
+watching. Therefore:
+
+1. **Declare your edges.** Every summary registers its sources in
+   [`coherence.yml`](coherence.yml), with a `last_verified` date. Undeclared summaries are
+   untracked debt.
+2. **Staleness is a queue, not a shame.** When sources change, dependent summaries are flagged
+   and re-verified; when a summary changes, *its* dependents are flagged. Coherence propagates up
+   the mipmap tree — this is **running the LLM as a coherence engine**
+   ([the skill](https://github.com/SimHacker/moollm/tree/main/skills/coherence-engine), and
+   eventually a GitHub Action).
+3. **Contributors are journalists.** Anyone may claim a beat: look at things, write summaries,
+   keep them true, declare dependencies, file corrections. Anyone may **volunteer tokens** by
+   running their own LLM over the staleness queue and submitting summary-update PRs.
+4. **Human-in-the-middle, both ways.** Agent-written updates get human review; human-written
+   updates may get agent review. The PR workflow is the accountability layer — no summary merges
+   unreviewed, regardless of what species wrote it.
+5. **Conflicts are first-class.** Incompatible claims between documents are declared in
+   `coherence.yml`, tracked like bugs, and resolved in PR discussion.
+
+Full protocol: [**JOURNALISM.md**](JOURNALISM.md).
+
 ---
 
 *Signed with an open hand,*

@@ -58,6 +58,12 @@ The cast — real, fictional, and in between — and where each one's best readi
 *Highlights:* [Characters index](../characters/INDEX.yml) ·
 [Will Wright](../characters/will-wright/README.md) · [Palm](../characters/palm/README.md)
 
+### 🚧 [Under Development](under-development/README.md)
+The workbenches: software, modules, and designs being built right now, across all three repos.
+*Highlights:* [WWSFF apps](../apps/README.md) ·
+[MicropolisCore packages](https://github.com/SimHacker/MicropolisCore/tree/main/packages) ·
+[MOOLLM kernel](https://github.com/SimHacker/moollm/tree/main/kernel)
+
 ## How to use the stacks
 
 - **Browse:** each topic page is an annotated reading list — canonical documents plus stub
@@ -68,6 +74,10 @@ The cast — real, fictional, and in between — and where each one's best readi
 - **Look behind the curtain:** the editorial workshop — conventions, backlog, tuning queue, lift
   plan — lives at [**Palm's Editorial Desk**](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/stage/palm-nook/study/palmhoo)
   in the Study, where Palm works. The publication is the stacks; the desk is the office behind them.
+- **Become a journalist:** every summary here declares its sources in
+  [coherence.yml](coherence.yml) and promises to stay true to them. Claim a beat, keep summaries
+  current, volunteer your own tokens via summary-update PRs — the whole protocol is in
+  [**JOURNALISM.md**](JOURNALISM.md).
 
 ---
 
