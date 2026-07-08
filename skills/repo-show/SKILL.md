@@ -3,6 +3,12 @@
 The **show orchestrator** for Repo Show Class. Protocol for what you do *with* a show,
 *in* a show, and *during* a live show — in **WillWrightShowForFood**, the public live repo.
 
+**The deep move:** orchestration is this skill's day job. Under it, MOOLLM runs the repo as a
+**simulation engine** — the show is performed *inside* the world, not documented beside it. K-line:
+[`repo_as_simulation`](../../process/vision-and-ambition.yml) · prose:
+[VISION.md § The deep move](../../process/VISION.md#the-deep-move--the-repo-is-a-simulation) ·
+machinery: [`moollm-stage.yml`](../../process/moollm-stage.yml).
+
 **Interface:** [`CARD.yml`](CARD.yml) · **Nav/metadata:** [`GLANCE.yml`](GLANCE.yml) — **read both** before README  
 **Human markup:** [`../../process/FORMAT.md`](../../process/FORMAT.md) (generated — `pnpm run facades`)  
 **Girder:** [`../../process/repo-show-format.yml`](../../process/repo-show-format.yml#description_scaffolding)

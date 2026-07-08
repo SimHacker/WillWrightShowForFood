@@ -18,6 +18,7 @@ Jump by topic. Each section maps to a **[K-line](https://github.com/SimHacker/mo
 |------|--------|-------------|
 | [Lineage](#lineage) | `lineage` | 1996 anchor · forebears · the long arc |
 | [RepoShow — the medium](#reposhow-the-medium) | `reposhow_the_medium` | A new medium — *reposhowing* — and its soul: repossession |
+| [The deep move](#the-deep-move--the-repo-is-a-simulation) | `repo_as_simulation` | MOOLLM through the back door — the repo runs as a simulation; the show is performed inside it |
 | [Pyramid](#pyramid) | `pyramid` | Stand on the apex; mass builds beneath |
 | [Rig culture](#rig-culture) | `rig_culture` | Declare your class; artisanal gets extra respect |
 | [Who this is for](#who-this-is-for) | `audiences_if_you_stumbled_here` | Doorways by interest |
@@ -102,6 +103,33 @@ identity) rather than being copied or trapped. That is repossession delivered as
 1996 crown jewel — starts here, with the smallest durable unit: one soul you can never lose.
 
 Palm names the ethical layer under the title pun: [**Will Wright Soul For Food**](../characters/palm/will-wright-soul-for-food.md) — guest rooms as consented portrayals, incarnation as authorship ([*On Being Simulated*](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/on-being-simulated.md)).
+
+### The deep move — the repo is a simulation
+
+**K-line:** `repo_as_simulation`
+
+Everything above — repo as medium, social collaboration hub, living artifact — is true and it is the
+**surface projection** of a deeper move. [MOOLLM](https://github.com/SimHacker/moollm) comes in through
+the back door. Not merely as an authoring tool, a show orchestrator, or a coherence engine — those are
+its day jobs. Its night job is to bring the repo to **life** as a **simulation engine**: directories are
+rooms, characters have state and motives, [session logs are episodes](moollm-stage.yml), and the
+LLM runs the world the way SimAntics ran a Sims lot.
+
+That changes what kind of show this is. Not a time-shifted public-participation show *documented in* a
+repo — a show **performed inside a simulation environment**, where the set, the cast, the audience
+seats, and the props are all live objects the performance can read and write. When
+[Palm](../characters/palm/README.md) sits in [Will's audience](../repo-shows/will-wright-premiere/audience/palm/README.md)
+and asks [where the making-up happens](../characters/gary-drescher/made-up-minds.md), that isn't a
+gimmick bolted onto a podcast — it's the simulation asking its own author a question **from inside the
+running world**. No prior medium could stage that scene.
+
+And it closes the loop this repo exists to close. Will's [1996 talk](../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md)
+was *Interfacing to Microworlds*. The Repo Show's answer, thirty years on: **the interface to the
+microworld is the microworld** — git for physics, YAML for matter, the LLM for causality, and every
+guest, viewer, and character a resident. The seminar doesn't just become the city;
+**the show is played, the way a city is played.** Where discussions actually run:
+[`moollm-stage.yml`](moollm-stage.yml) — the [adventure-4 pub](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub)
+third place, room graph, session-log episodes, [cauldron](https://github.com/SimHacker/moollm/tree/main/skills/cauldron) harvest.
 
 ---
 

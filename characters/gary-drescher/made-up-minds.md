@@ -6,7 +6,7 @@
 
 ## The pun (it stacks)
 
-**Gary Drescher** titled his 1991 book [*Made-Up Minds*](https://mitpress.mit.edu/9780262517089/made-up-minds/):
+**Gary Drescher** titled his 1991 book *[Made-Up Minds](https://mitpress.mit.edu/9780262517089/made-up-minds/)*:
 a constructivist AI thesis — minds **made up** layer by layer from experience, not downloaded fully
 formed. Piaget you can **run**.
 
@@ -17,13 +17,15 @@ real enough to mourn, marry, and mod.
 
 Same pun, several readings:
 
-| Reading | Who | What gets "made up" |
-|---------|-----|---------------------|
+
+| Reading            | Who               | What gets "made up"                                                           |
+| ------------------ | ----------------- | ----------------------------------------------------------------------------- |
 | **Constructivist** | Drescher / Piaget | Schemas — context → action → result — discovered from sensorimotor experience |
-| **Microworld** | Will Wright | Agents, motives, possibility spaces — accreted until a toy world lives |
-| **Fictional** | Everyone | "Made-up" as in invented — a made-up story, a made-up friend, a Sim |
-| **Decisive** | The mind itself | "Make up your mind" — the reflexive act only the owner can perform |
-| **Repo Show** | This repo | Soul-files in git — portrayals, characters, skills — authored with consent |
+| **Microworld**     | Will Wright       | Agents, motives, possibility spaces — accreted until a toy world lives        |
+| **Fictional**      | Everyone          | "Made-up" as in invented — a made-up story, a made-up friend, a Sim           |
+| **Decisive**       | The mind itself   | "Make up your mind" — the reflexive act only the owner can perform            |
+| **Repo Show**      | This repo         | Soul-files in git — portrayals, characters, skills — authored with consent    |
+
 
 Add a timely layer: **LLM characters** (Palm, Slats, audience sims) who can *read their own
 YAML* — made-up minds that know they're made up. See [Palm's Will Wright Soul For Food](../palm/will-wright-soul-for-food.md).
@@ -99,7 +101,7 @@ correlate everything from scratch — no commonsense, no language, no "postgres 
 (co-founder/CTO) and **[Milan Singh Minsky](../milan-singh-minsky/README.md)** (VP Product) — leaders
 carrying MIT AI Lab constructivism into industrial visual intelligence.
 
-Henry reimplemented the schema mechanism in Python — **`pyleela.brain`** in Leela's codebase
+Henry reimplemented the schema mechanism in Python — `**pyleela.brain**` in Leela's codebase
 (`Schema.py`, planner, synthetic items). **[Steve Kommrusch](../steve-kommrusch/README.md)** works on
 **Piaget-schema learning** at Leela — program repair, verifiable equivalence, and the bridge back to
 Drescher's book.
@@ -107,7 +109,7 @@ Drescher's book.
 Leela's frame: **neuro-symbolic AI** — neural perception (powerful, opaque) + symbolic schemas
 (answer *why*). Not either/or. Layered.
 
-Curated live thread (2024–2026): [`schemas-vectors-and-llms.md`](schemas-vectors-and-llms.md) — vectors,
+Curated live thread (2024–2026): `[schemas-vectors-and-llms.md](schemas-vectors-and-llms.md)` — vectors,
 Schema Networks, neural cellular automata, the **200-foot car wash** planning failure, Gary's
 questions back.
 
@@ -118,17 +120,19 @@ questions back.
 Don and Leela dog-food **[MOOLLM](https://github.com/SimHacker/moollm)** — a microworld OS where
 Drescher's ideas are not just cited but **runnable**:
 
-| Drescher concept | MOOLLM skill | What it does now |
-|------------------|--------------|------------------|
-| Schema mechanism | [`schema-mechanism`](https://github.com/SimHacker/moollm/tree/main/skills/schema-mechanism) | Context → Action → Result; marginal attribution; synthetic items |
-| Build & compose schemas | [`schema-factory`](https://github.com/SimHacker/moollm/tree/main/skills/schema-factory) | Ingest, lint, compose — Henry's factory pattern as Anthropic/MOOLLM skill |
-| PLAY → LEARN → LIFT | [`play-learn-lift`](https://github.com/SimHacker/moollm/tree/main/skills/play-learn-lift) | Explore → stabilize schemas → publish reusable artifacts |
-| Schemapedia | [`schema`](https://github.com/SimHacker/moollm/tree/main/skills/schema) | One registry — Drescher causal units *beside* JSON Schema, frames, K-lines, SQL |
-| Constructionism | [`constructionism`](https://github.com/SimHacker/moollm/tree/main/skills/constructionism) | Learn by building microworlds — Papert's room, Drescher's mechanism |
+
+| Drescher concept        | MOOLLM skill                                                                                | What it does now                                                                |
+| ----------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| Schema mechanism        | `[schema-mechanism](https://github.com/SimHacker/moollm/tree/main/skills/schema-mechanism)` | Context → Action → Result; marginal attribution; synthetic items                |
+| Build & compose schemas | `[schema-factory](https://github.com/SimHacker/moollm/tree/main/skills/schema-factory)`     | Ingest, lint, compose — Henry's factory pattern as Anthropic/MOOLLM skill       |
+| PLAY → LEARN → LIFT     | `[play-learn-lift](https://github.com/SimHacker/moollm/tree/main/skills/play-learn-lift)`   | Explore → stabilize schemas → publish reusable artifacts                        |
+| Schemapedia             | `[schema](https://github.com/SimHacker/moollm/tree/main/skills/schema)`                     | One registry — Drescher causal units *beside* JSON Schema, frames, K-lines, SQL |
+| Constructionism         | `[constructionism](https://github.com/SimHacker/moollm/tree/main/skills/constructionism)`   | Learn by building microworlds — Papert's room, Drescher's mechanism             |
+
 
 **Why LLMs complete the vision** (MOOLLM's phrase): the Lisp and Python implementations had rigor but
 no semantics. Items were tokens. An LLM trained on the world, people, code, and logic can **ground**
-the symbolic terms in YAML Jazz comments — imagine theories ([`schema-factory`](https://github.com/SimHacker/moollm/tree/main/skills/schema-factory)),
+the symbolic terms in YAML Jazz comments — imagine theories (`[schema-factory](https://github.com/SimHacker/moollm/tree/main/skills/schema-factory)`),
 explain evidence chains, and lift stable patterns into skills **without** losing Drescher's causal
 discipline.
 
@@ -145,23 +149,25 @@ and Will's **soul-files** crossing games.
 2. **Will meets Gary** — microworld motives vs schema mechanism; player-made minds vs learned schemas; data portability as moving souls between worlds.
 3. **The 200-foot car wash** — when LLMs return the common case instead of planning (live thread material).
 4. **Good and Real** — determinism, choice, acausal cooperation — if Gary wants the philosophy turn.
-5. **Leela group episode** — with Henry, Milan, Steve — neuro-symbolic AI on the whiteboard.
+5. **Leela group episode** — with Henry, Milan, Steve, Isabella, Don and others — neuro-symbolic AI on the whiteboard.
 
-Show seed: [`repo-shows/gary-drescher/`](../../repo-shows/gary-drescher/README.md)
+Show seed: `[repo-shows/gary-drescher/](../../repo-shows/gary-drescher/README.md)`
 
 ---
 
 ## Read next
 
-| | |
-|--|---|
-| **Landing page** | [`README.md`](README.md) |
-| **Leela thread digest** | [`schemas-vectors-and-llms.md`](schemas-vectors-and-llms.md) |
-| **Invitation** | [`invitation.md`](invitation.md) |
-| **Will Wright** | [`../will-wright/README.md`](../will-wright/README.md) |
-| **Marvin Minsky** | [`../marvin-minsky/README.md`](../marvin-minsky/README.md) |
-| **Constructionist trail** | [`../../process/trails/constructionist-lineage.md`](../../process/trails/constructionist-lineage.md) |
+
+|                             |                                                                                                                    |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| **Landing page**            | `[README.md](README.md)`                                                                                           |
+| **Leela thread digest**     | `[schemas-vectors-and-llms.md](schemas-vectors-and-llms.md)`                                                       |
+| **Invitation**              | `[invitation.md](invitation.md)`                                                                                   |
+| **Will Wright**             | `[../will-wright/README.md](../will-wright/README.md)`                                                             |
+| **Marvin Minsky**           | `[../marvin-minsky/README.md](../marvin-minsky/README.md)`                                                         |
+| **Constructionist trail**   | `[../../process/trails/constructionist-lineage.md](../../process/trails/constructionist-lineage.md)`               |
 | **MOOLLM schema-mechanism** | [skills/schema-mechanism/SKILL.md](https://github.com/SimHacker/moollm/blob/main/skills/schema-mechanism/SKILL.md) |
+
 
 ---
 

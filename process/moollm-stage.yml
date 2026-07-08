@@ -5,6 +5,10 @@ meta:
   id: moollm-stage
   status: active
   thesis: "MOOLLM is the ideal environment for Repo Show discussions — navigable rooms, ongoing narrative, harvestable skills."
+  deep_move: |
+    This file is the machinery of the repo_as_simulation K-line (vision-and-ambition.yml):
+    MOOLLM's night job is to run the repo as a SIMULATION ENGINE — the show is performed
+    inside the world, not documented beside it. See VISION.md § "The deep move".
 
 third_place:
   pub: SimHacker/moollm/examples/adventure-4/pub/

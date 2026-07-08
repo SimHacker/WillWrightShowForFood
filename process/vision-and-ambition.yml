@@ -60,6 +60,29 @@ lineage:
     - "The Long Now (Brian Eno's coinage; Long Now Foundation) — 10,000-year thinking; see long_now_and_later"
     - "Hacker/builder culture — Woz energy: show the schematic, ship the board"
 
+repo_as_simulation:
+  # The deep move under reposhow_the_medium. Facade prose: VISION.md § "The deep move".
+  surface: "Repo as medium, social collaboration hub, living artifact — true, and only the projection"
+  deep_move: |
+    MOOLLM enters through the back door. Day jobs: authoring tool, show orchestrator, coherence
+    engine. Night job: bring the repo to LIFE as a SIMULATION ENGINE — directories are rooms,
+    characters have state and motives, session logs are episodes, the LLM runs the world the way
+    SimAntics ran a Sims lot.
+  consequence: |
+    Not a time-shifted participation show documented IN a repo — a show PERFORMED INSIDE a
+    simulation environment. Set, cast, audience seats, and props are live objects the performance
+    reads and writes. A totally new kind of show.
+  proof_scene:
+    what: "Palm — simulated audience member — asks Will where the making-up happens, from inside the running world"
+    seat: ../repo-shows/will-wright-premiere/audience/palm/questions.yml
+    essay: ../characters/gary-drescher/made-up-minds.md
+    why_it_matters: "No prior medium could stage that scene — the simulation questioning its author on the record"
+  closes_1996: |
+    Will's talk was 'Interfacing to Microworlds'. The answer thirty years on: the interface to the
+    microworld IS the microworld — git for physics, YAML for matter, the LLM for causality, every
+    guest and viewer and character a resident. The show is played, the way a city is played.
+  where_it_runs: moollm-stage.yml   # adventure-4 pub, room graph, session-log episodes, cauldron harvest
+
 pyramid:
   metaphor: "Point-up pyramid — you stand on the apex (first public origin); mass builds beneath"
   this_repo: |
