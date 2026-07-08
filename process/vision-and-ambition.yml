@@ -310,9 +310,23 @@ long_now_and_later:
       event: "Long Now Q&A — Playing with Time"
       askers: [Dan Ancona, Mark Live]
       submission: "Two audience members submitted the same question to the Long Now stack"
-      question: "Open-source SimCity so players can remix political assumptions in the rules"
-      will_on_stage: "Very open to the idea"
+      question: "Open-source SimCity (and other games) so players can see how the rules work and change them"
+      orchestrator:
+        who: Stewart Brand
+        what: "Gathered the audience's written questions, curated the pile, read the best to the guests on stage"
+        proto_ticketpr: "The exact mechanism TicketPR formalizes in git — see ticket-pr.yml#lineage"
+      will_on_stage: "Very open to the idea — put on the spot in the best way; Brian loved it too"
       witness: "Don Hopkins in audience; John Gilmore also at talk"
+    after_talk_cascade: |
+      The two questions triggered discussion OUTSIDE the talk — numerous people, meetups and demos,
+      emails and appointments, the post-talk dinner circle — over the following months. Don had
+      written proposals for an educational SimCity years earlier that never led to anything; now
+      the idea had a live public 'yes' from Will and a tangible justification (constructionist
+      educational game for OLPC). When Gilmore's email landed, Don sent Will a skeptical-but-I'll-
+      ask-anyway email (skeptical from earlier EA dead-ends) — and Will, primed at Long Now, loved it.
+    stone_soup:
+      what: "OLPC was the Stone Soup Walter Bender and others set boiling; EA persuaded to contribute SimCity as an ingredient"
+      relicensing: "GPL-3, with EA's trademark protected — hence the rename of the live open-source version to Micropolis (SimCity's original working title)"
       clip: ../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml#open-source-simcity-audience-question
       video: "https://youtu.be/Dfc-DQorohc?t=3929"
       short_form_video:

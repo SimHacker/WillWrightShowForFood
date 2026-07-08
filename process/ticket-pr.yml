@@ -10,6 +10,21 @@ meta:
     Your free, public, merge-request ticket to attend — questions and costume in the SHOW
     directory, not a monopoly gate. High-value signal to the guest before they even accept.
 
+lineage:
+  # The documented ancestor of TicketPR — audience questions, curated and read by an orchestrator.
+  stewart_brand_long_now_2006:
+    what: |
+      At the Long Now's 'Playing with Time' (Brian Eno + Will Wright, 26 June 2006), Stewart Brand
+      gathered written questions from the audience, curated the pile, and read the best on stage.
+      Two audience members (Dan Ancona, Mark Live) submitted the same question — free SimCity's
+      source so people can see how the rules work and change them — and Will's on-stage 'very open'
+      cascaded through meetups, demos, emails, and appointments into GPL-3 Micropolis on OLPC.
+    lesson: |
+      Two audience-submitted questions changed software history. TicketPR formalizes Brand's
+      mechanism in git: questions gathered before the show, curated by the producer, read to the
+      guest, answered on the record — attributed and permanent instead of a paper pile.
+    receipts: vision-and-ambition.yml#long_now_and_later
+
 etymology:
   pun: "TicketMaster → TicketPR"
   transform: "Master ⇒ PR"
