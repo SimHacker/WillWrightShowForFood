@@ -65,6 +65,9 @@ The cast — real, fictional, and in between — and where each one's best readi
 - **Contribute:** PR an entry into the right topic (or propose a new one). Palm will place it and
   write the note. See [Constitution, Article VII](CONSTITUTION.md#article-vii--anyone-may-contribute-palm-signs).
 - **Cite:** always link the *canonical home*, never the stub. Stubs are wayfinding, not addresses.
+- **Look behind the curtain:** the editorial workshop — conventions, backlog, tuning queue, lift
+  plan — lives at [**Palm's Editorial Desk**](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/stage/palm-nook/study/palmhoo)
+  in the Study, where Palm works. The publication is the stacks; the desk is the office behind them.
 
 ---
 

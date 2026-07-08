@@ -108,6 +108,10 @@ When Palmhoo's conventions stabilize, they shall be lifted into a MOOLLM skill (
 curator-character. Until then, this constitution **is** the specification, and the directory
 around it **is** the reference implementation. Instance first.
 
+The lift's raw material accumulates at [**Palm's Editorial Desk**](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/stage/palm-nook/study/palmhoo)
+in the Study — the public workshop behind this publication, where conventions, the shelving
+backlog, the tuning queue, and the lift plan are remembered between passes.
+
 ---
 
 *Signed with an open hand,*
