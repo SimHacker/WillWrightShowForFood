@@ -20,6 +20,9 @@ public_outreach_policy:
   see_also: ../process/maxis-history-collaborators.yml
 
 next:
+  - id: gary-drescher
+    why: "★ Made-Up Minds — MIT PhD/Minsky; Leela adviser; Will Wright pun crossover; MOOLLM skills; interview planned"
+    path: characters/gary-drescher/
   - id: antoni-sawicki
     why: "Warm — ttycity author (not a discovery); emoji UI interview; show Will; point him at characters/antoni-sawicki/"
     path: characters/antoni-sawicki/

@@ -1,24 +1,68 @@
 # Ideas to explore with Gary Drescher 👤
 
-*Conversation hooks for a Repo Show — **Don's proposed topics**, each grounded in Gary's
-public work and documented connections to this repository. Things Don would love to follow
-**with** Gary Drescher; not quotes, not claims about what they think.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · invitation guest · consent not_yet_asked
+*Conversation hooks — Don's proposed topics, grounded in Gary's public work and documented
+connections. Not quotes, not claims about what Gary thinks.*
+[Portrayal standards](../../schemas/portrayal-standards.md) · interview planned · consent not_yet_asked
 
-## What Gary has done
+## Anchor essay
 
-Gary Drescher — AI researcher and philosopher. In Made-Up Minds: A Constructivist Approach to Artificial Intelligence (MIT Press, 1991) he built the schema mechanism: an agent that, like a Piagetian infant, learns from raw sensorimotor experience by discovering schemas (context → action → result), using marginal attribution to find reliable regularities and synthetic items to invent new concepts — constructivism, made to run. Developed as his MIT PhD work in Marvin Minsky's orbit — Minsky hailed it as a landmark in the foundations of theories of learning. His later Good and Real (MIT Press, 2006) takes the same rigor to determinism, choice, and ethics (including acausal/subjunctive cooperation).
+Read first: [**Made-Up Minds**](made-up-minds.md) — the pun (Drescher ↔ Will ↔ soul-files ↔ LLM),
+PhD lineage, Leela, MOOLLM skills.
 
 ## The hooks
 
-### 1. Show seed: `repo-shows/gary-drescher/`
-walk the repo on air and build from the seed.
+### 1. Made-Up Minds — the pun at many levels
 
-### 2. Made-Up Minds
-the schema mechanism (constructivist AI); Good and Real; MIT AI Lab/Minsky orbit; Leela adviser + Henry's friend (Python schema-factory reimpl); remake it for the LLM era
+- **Constructivist:** minds built from schemas, not filled from above (Piaget → Drescher)
+- **Will Wright:** players make up minds in Sims, Proxi, stories — hobby-scale constructivism
+- **Repo Show:** soul-files in git — consented portrayals ([Palm](../palm/will-wright-soul-for-food.md))
+- **LLM era:** made-up minds that read their own CHARACTER.yml
 
-## Sources (public)
+**Dream crossover:** Gary + Will on camera — mechanism vs microworld; Motive bars vs schemas.
 
+### 2. Made-Up Minds, remade (show seed)
+
+[`repo-shows/gary-drescher/`](../../repo-shows/gary-drescher/) — build live:
+
+| Era | Substrate |
+|-----|-----------|
+| 1991 | Drescher's Lisp — rigorous, ungrounded items |
+| 2020s | Henry's Python `pyleela.brain` — schema factory |
+| 2026 | MOOLLM skills + LLM — grounded semantics in YAML Jazz |
+
+MOOLLM claim: *"The YAML provides the skeleton; the LLM provides the soul."*
+
+### 3. Symbol grounding — finally?
+
+1991 wall: opaque tokens, correlate from scratch. LLM training (world, people, logic, code) grounds
+abstract schema terms. [`schema-mechanism` SKILL](https://github.com/SimHacker/moollm/blob/main/skills/schema-mechanism/SKILL.md) — *Why LLMs Complete Drescher's Vision*.
+
+### 4. play-learn-lift ↔ schema learning
+
+[`play-learn-lift`](https://github.com/SimHacker/moollm/tree/main/skills/play-learn-lift): PLAY surfaces
+patterns → LEARN stabilizes schemas → LIFT publishes skills. [`schema-factory`](https://github.com/SimHacker/moollm/tree/main/skills/schema-factory): imagine theories to explain evidence chains and statistical regularities.
+
+### 5. Leela thread — vectors, NCAs, 200-foot car wash
+
+[`schemas-vectors-and-llms.md`](schemas-vectors-and-llms.md) — real 2024–2026 exchange with Henry,
+Steve, Gregory Makoff, Andy Goris. Gary's hard questions back.
+
+### 6. Leela group episode
+
+With [Henry](../henry-minsky/README.md), [Milan](../milan-singh-minsky/README.md), [Steve](../steve-kommrusch/README.md) — neuro-symbolic AI; Piaget-schema learning; adviser role.
+
+### 7. Good and Real
+
+Determinism, genuine choice, acausal/subjunctive cooperation — philosophy turn if Gary prefers.
+
+### 8. Marvin Minsky memorial through-line
+
+PhD orbit → Society of Mind → schema mechanism → MOOLLM schemapedia. [`../marvin-minsky/`](../marvin-minsky/README.md) 🕯️
+
+## Sources
+
+- [`made-up-minds.md`](made-up-minds.md)
+- [`schemas-vectors-and-llms.md`](schemas-vectors-and-llms.md)
 - [`invitation.md`](invitation.md)
-- Show seed: [`repo-shows/gary-drescher/`](../../repo-shows/gary-drescher/)
 - [`CHARACTER.yml`](CHARACTER.yml)
+- [Made-Up Minds (MIT Press)](https://mitpress.mit.edu/9780262517089/made-up-minds/)

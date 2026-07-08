@@ -1,0 +1,70 @@
+# CARD — Gary Drescher (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+glance: GLANCE.md
+
+room:
+  id: gary-drescher
+  name: Gary Drescher
+  type: [invitation, guest, advisor]
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+card:
+  name: Gary Drescher
+  title: Architect of Made-Up Minds
+  rarity: rare
+  signifier: "👤"
+  flavor: Minds are built, not filled. — constructivist through-line (Piaget → Drescher → Will → MOOLLM)
+
+abilities:
+  - id: SCHEMA-MECHANISM
+    name: Schema Mechanism
+    type: activated
+    mana: "{C}{U}"
+    conditions:
+      - "show_topic_matches_public_work: true"
+    advertisement:
+      method: discoverSchema
+      signature: discoverSchema(context, action) → result + reliability
+    effect: Learn context → action → result from experience; marginal attribution finds what matters.
+    verifiable: Made-Up Minds (MIT Press, 1991); MIT PhD under Marvin Minsky
+    combos_with: [henry-minsky, steve-kommrusch, jean-piaget, marvin-minsky]
+
+  - id: SYNTHETIC-ITEM
+    name: Synthetic Item
+    type: triggered
+    mana: "{U}"
+    conditions:
+      - "prediction_fails_repeatedly: true"
+    advertisement:
+      method: inventHiddenState
+      signature: inventHiddenState(unexplainedVariance) → syntheticItem
+    effect: When results don't fit, invent a new concept — don't patch ad hoc forever.
+    verifiable: Made-Up Minds — synthetic items chapter
+    combos_with: [schema-factory]
+
+  - id: GOOD-AND-REAL
+    name: Good and Real
+    type: static
+    mana: "{W}{W}"
+    conditions: []
+    advertisement:
+      method: subjunctiveCooperate
+      signature: subjunctiveCooperate(agent, counterfactual) → ethicalChoice
+    effect: Apply the same rigor to determinism, choice, and acausal cooperation.
+    verifiable: Good and Real (MIT Press, 2006)
+    combos_with: []
+
+compose_with:
+  - will-wright
+  - henry-minsky
+  - steve-kommrusch
+  - milan-singh-minsky
+
+see_also:
+  - made-up-minds.md
+  - ../../repo-shows/gary-drescher/
+  - https://github.com/SimHacker/moollm/tree/main/skills/schema-mechanism

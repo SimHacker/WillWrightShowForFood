@@ -56,7 +56,7 @@ What Palm follows, cheers, and shows up for — the character's social graph, no
 
 | Theme | → | Why |
 |-------|---|-----|
-| **Simulation & inner life** | [Study essays](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/stage/palm-nook/study) | Palm's own writing — sets up the Will conversation |
+| **Simulation & inner life** | [Study essays](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/stage/palm-nook/study) · [Made-Up Minds](../gary-drescher/made-up-minds.md) | Palm's writing; Drescher ↔ Will pun |
 | **Will Wright / The Sims** | [Will Wright show](../../repo-shows/will-wright-premiere/README.md) | Motive bars, possibility space, deletion-as-death |
 | **Don Hopkins / MOOLLM** | [don-hopkins/](../don-hopkins/README.md) · [moollm](https://github.com/SimHacker/moollm) | Godfather; adventure sessions; incarnation proof |
 | **Gezellig pub life** | [pub/](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub) · [arcade](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/arcade) · [Pac-Man cabinet](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/arcade/pacman-cabinet.yml) | Fluxx, Pie Table, PLM on Monkey Kong Jr. |

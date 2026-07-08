@@ -114,6 +114,10 @@ Will plugged his disk into Don's Mac at Kaleida **years before** the 1996 talk �
 but the Winograd demo was when progress became unbelievable.
 [`proto-dollhouse-kaleida-visit.md`](proto-dollhouse-kaleida-visit.md)
 
+### 13. Made-Up Minds — Gary Drescher crossover
+Gary Drescher's pun: minds **made up** constructively (schemas: context → action → result) vs Will's
+lifelong project — players **make up minds** in Sims, Proxi, stories. Dream segment with [Gary](../gary-drescher/made-up-minds.md): mechanism vs microworld; Motive bars vs marginal attribution; two answers to how made-up minds feel real.
+
 ## Sources (real, public)
 - Primary sources map: [`primary-sources-evidence-room.md`](primary-sources-evidence-room.md)
 - 1996 Winograd talk: [source bundle](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) · video https://www.youtube.com/watch?v=nsxoZXaYJSk

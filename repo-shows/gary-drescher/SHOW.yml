@@ -11,18 +11,27 @@ show:
   topic: "The schema mechanism (Made-Up Minds) as constructivist AI — and what happens when you give it a language model for grounding. Built live on Henry Minsky's Python schema factory."
   status: seed
   consent: not_yet_asked
+  interview_planned: true
 
 why_him:
-  schema_mechanism: "Made-Up Minds (1991): a Piagetian agent that learns schemas (context → action → result) from raw experience, via marginal attribution and synthetic items — constructivism made to run."
+  made_up_minds_pun: "Drescher's title + Will Wright's lifelong project — players make up minds in microworlds; schemas make up minds in constructivist AI."
+  schema_mechanism: "MIT PhD → Made-Up Minds (1991): Piagetian agent learns schemas (context → action → result) from raw experience."
   philosophy: "Good and Real (2006): determinism, choice, ethics, acausal cooperation — the same rigor applied to hard problems."
-  lineage: "MIT AI Lab / Minsky orbit; Leela adviser; friend of Henry Minsky, who reimplemented the schema mechanism in Python."
+  lineage: "MIT PhD / Marvin Minsky; Leela adviser; friend of Henry + Milan Minsky (Leela leaders)."
+  moollm: "schema-mechanism, schema-factory, play-learn-lift — LLM-grounded operationalization surpassing Lisp/Python implementations."
+
+readable:
+  essay: ../../characters/gary-drescher/made-up-minds.md
+  invitation: ../../characters/gary-drescher/invitation.md
 
 dream_segments:
+  - "Made-Up Minds — the pun: Drescher ↔ Will Wright ↔ soul-files ↔ LLM characters (see made-up-minds.md)."
+  - "Gary + Will crossover — schemas vs Motive bars; two answers to how made-up minds feel real."
   - "The schema mechanism from first principles — schemas, marginal attribution, synthetic items."
   - "The 200-foot car wash, live: LLMs returning the common case instead of planning (and CatAttack distractibility) — see characters/gary-drescher/schemas-vectors-and-llms.md."
   - "Made-Up Minds, remade: an LLM supplies grounding/world-knowledge the original learned from scratch — built live on Henry's Python schema factory."
   - "Vectors & emergence detour: hypervector/Schema-Network encodings and neural cellular automata, next to learned schemas."
-  - "The lineage on one whiteboard: Piaget → schema mechanism → Leela's Piaget-schema learning (with Henry Minsky, Steve Kommrusch)."
+  - "Leela group: Henry Minsky, Milan Singh Minsky, Steve Kommrusch — neuro-symbolic whiteboard."
   - "Optional philosophy turn: choice and cooperation from Good and Real."
 
 format:
@@ -30,7 +39,8 @@ format:
   audience_qa: true
 
 ties_to:
-  - ../../characters/gary-drescher/
+  - ../../characters/gary-drescher/made-up-minds.md
+  - ../../characters/will-wright/
   - ../../characters/gary-drescher/invitation.md
   - ../../characters/gary-drescher/schemas-vectors-and-llms.md   # curated thread digest — the live material
   - ../../characters/jean-piaget/

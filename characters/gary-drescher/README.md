@@ -1,29 +1,76 @@
-# Gary Drescher 👤
+# Gary Drescher 👤 *(Made-Up Minds · schema mechanism · Leela adviser)*
 
-*Invitation portrayal. This is a respectful, public-source profile — not the real person.*
+*Portrayal of a real researcher, written by Don — not Gary, and not his words. Gary may correct,
+shape, reduce, or delete any of it.* [Portrayal standards](../../schemas/portrayal-standards.md)
 
-**Gary Drescher** is an AI researcher and philosopher. His **Made-Up Minds: A Constructivist
-Approach to Artificial Intelligence** (MIT Press, 1991) is one of the boldest attempts to make Jean
-Piaget *run*: the **schema mechanism** is an agent that starts with almost nothing and learns about
-its world from raw sensorimotor experience, discovering **schemas** (context → action → result),
-using **marginal attribution** to notice which actions reliably matter and **synthetic items** to
-invent new concepts of its own. It learns the way a Piagetian infant does — by building, not by being
-told.
+**Point Gary here:**
 
-His later **Good and Real** (MIT Press, 2006) brings the same clarity to philosophy: determinism and
-genuine choice, ethics, and acausal/subjunctive cooperation.
+**https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/gary-drescher**
 
-**Why here.** Drescher sits at a live intersection of this repo's constructionist lineage:
-[Piaget](../jean-piaget/README.md) → the schema mechanism → [Leela AI's](../steve-kommrusch/README.md) Piaget-schema
-learning. He's an adviser to Leela AI and a longtime friend of [Henry Minsky](../henry-minsky/README.md), who
-has built a **Python implementation** of the schema mechanism — a working substrate to build on.
+## One sentence
 
-**The show dream:** *Made-Up Minds, remade.* Drescher's mechanism predates deep learning and had to
-learn its whole world from scratch. What happens if you give it a **language model** for grounding
-and world-knowledge — and build it live on Henry's Python schema factory? Constructivist AI, then and
-now. → [`invitation.md`](invitation.md) · [show seed](../../repo-shows/gary-drescher/README.md)
+Gary Drescher's **MIT PhD** under **Marvin Minsky** became [*Made-Up Minds*](https://mitpress.mit.edu/9780262517089/made-up-minds/) — Piaget's constructivism **made to run** — and that thesis still load-bears **Leela AI**'s technology and **MOOLLM**'s skills today.
 
-**Want the deep end?** [`schemas-vectors-and-llms.md`](schemas-vectors-and-llms.md) is a curated digest
-of a real 2024–2026 thread between Gary and the Leela crew — vector/hypervector schemas, Schema
-Networks, neural cellular automata, and the *"200-foot car wash"* planning failure — with the papers
-and screenshots in [`../../characters/will-wright/sources/`](../../characters/will-wright/sources/README.md). It's the live material the show would build on.
+## The pun that ties Will to Gary
+
+Will Wright teaches players to **make up minds** — Sims, motives, stories, Proxi souls. Drescher's
+title names the *mechanism*: minds **made up** from schemas (context → action → result), not filled
+from above. Same word, three layers — constructivist AI, microworld play, git soul-files.
+
+**Read the essay:** [**Made-Up Minds**](made-up-minds.md) — pun, lineage, LLM grounding, show plan.
+
+## Who
+
+**Gary Drescher** — AI researcher and philosopher.
+
+| Work | What |
+|------|------|
+| **Made-Up Minds** (MIT Press, 1991) | **Schema mechanism** — marginal attribution, synthetic items; constructivist AI from raw experience |
+| **Good and Real** (MIT Press, 2006) | Determinism, choice, ethics, acausal/subjunctive cooperation |
+| **MIT PhD** | Developed in **Marvin Minsky's** orbit — Minsky hailed it as a landmark in learning theory |
+
+## Leela AI
+
+- **Adviser** to [Leela AI](../isabella-struckman/README.md)
+- Longtime friend of **[Henry Minsky](../henry-minsky/README.md)** (co-founder/CTO) and **[Milan Singh Minsky](../milan-singh-minsky/README.md)** (VP Product)
+- Henry's **Python schema factory** (`pyleela.brain`) — living reimplementation to build on
+- **[Steve Kommrusch](../steve-kommrusch/README.md)** — Piaget-schema learning, program repair; Drescher bridge
+
+Live technical thread (2024–2026): [`schemas-vectors-and-llms.md`](schemas-vectors-and-llms.md)
+
+## MOOLLM — skills that surpass Lisp and Python
+
+MOOLLM operationalizes Drescher as [Anthropic/MOOLLM skills](https://github.com/SimHacker/moollm/tree/main/skills/schema-mechanism) — same causal discipline, **LLM-grounded** semantics:
+
+| Skill | Role |
+|-------|------|
+| [`schema-mechanism`](https://github.com/SimHacker/moollm/tree/main/skills/schema-mechanism) | Context → Action → Result; *Why LLMs Complete Drescher's Vision* |
+| [`schema-factory`](https://github.com/SimHacker/moollm/tree/main/skills/schema-factory) | Build, lint, ingest, compose schemas — Henry's factory pattern |
+| [`play-learn-lift`](https://github.com/SimHacker/moollm/tree/main/skills/play-learn-lift) | PLAY surfaces patterns → LEARN stabilizes schemas → LIFT publishes skills |
+| [`schema`](https://github.com/SimHacker/moollm/tree/main/skills/schema) | Schemapedia — Drescher units beside JSON Schema, frames, K-lines |
+
+The LLM's training (world, people, commonsense, logic, code) **grounds** otherwise abstract symbolic
+terms in YAML Jazz — so agents can explain *why*, not only correlate.
+
+## Interview planned ★
+
+Repo Show: **Made-Up Minds, remade** — build live on Henry's Python factory with LLM grounding; optional
+**Will Wright** crossover (*two answers to how made-up minds feel real*).
+
+| Page | Link |
+|------|------|
+| **★ Made-Up Minds essay** | [`made-up-minds.md`](made-up-minds.md) |
+| **Show seed** | [`../../repo-shows/gary-drescher/`](../../repo-shows/gary-drescher/README.md) |
+| **Conversation hooks** | [`ideas.md`](ideas.md) |
+| **Invitation** | [`invitation.md`](invitation.md) |
+| **Leela thread digest** | [`schemas-vectors-and-llms.md`](schemas-vectors-and-llms.md) |
+
+## Related
+
+- [Will Wright](../will-wright/README.md) — microworlds; player-made minds; soul-files
+- [Marvin Minsky](../marvin-minsky/README.md) — PhD advisor orbit 🕯️
+- [Jean Piaget](../jean-piaget/README.md) — constructivism root 🕯️
+- [Palm](../palm/will-wright-soul-for-food.md) — made-up minds that read their own soul files
+- [Constructionist trail](../../process/trails/constructionist-lineage.md)
+
+Wikipedia: [Gary Drescher](https://en.wikipedia.org/wiki/Gary_Drescher)

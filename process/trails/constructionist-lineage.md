@@ -16,7 +16,7 @@ The developmental + AI roots → Winograd interview → Will show → breed DNA 
 | 🕯️ [**Seymour Papert**](../../characters/seymour-papert/README.md) | Worked with Piaget; coined constructionism; Logo + the turtle; *Mindstorms* (memorial) |
 | 📼 [**Cynthia Solomon**](../../characters/cynthia-solomon/README.md) | Co-created Logo with Papert (BBN 1967); built the MIT Logo culture; keeper of the video treasure trove |
 | 🕯️ [**Marvin Minsky**](../../characters/marvin-minsky/README.md) | AI Lab co-founder with Papert; Society of Mind / K-lines (memorial) |
-| [**Gary Drescher**](../../characters/gary-drescher/README.md) | *Made-Up Minds* — Piaget's constructivism made to run (the schema mechanism); remade for the LLM era |
+| [Gary Drescher](../gary-drescher/made-up-minds.md) | *Made-Up Minds* — constructivist schemas; same pun as Will's player-made minds |
 | [**Steve Kommrusch**](../../characters/steve-kommrusch/README.md) | Leela AI's Piaget-schema learning — the modern bridge from the schema mechanism |
 | [**Don Hopkins**](../../characters/don-hopkins/README.md) | Host — yaml girder + career backbone |
 | [**sync-sources.yml**](../../characters/don-hopkins/sync-sources.yml) | Synced from moollm adventure-4 — deduped |
