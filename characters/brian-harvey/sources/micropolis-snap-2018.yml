@@ -1,0 +1,34 @@
+# Micropolis × Snap! — Don's 2018 thread with Brian Harvey & Jens Mönig
+# Public-safe digest. Full private thread: DonHopkins repo correspondence file.
+
+meta:
+  span: "2018"
+  first_contact: "2018-05-15"
+  participants: [Don Hopkins, Brian Harvey, Jens Mönig]
+  also_cc: [Yoshiki Ohshima]
+  kind: correspondence_digest
+  consent: not_yet_asked
+  provenance_private: DonHopkins/characters/don-hopkins/correspondence/brian-harvey-jens-moenig.yml
+
+gist: |
+  Don wrote Brian about wiring **SimCity / Micropolis** and **CAM6 cellular automata** into **Snap!**.
+  Brian looped in Jens. Don demoed **pie menus in an A-Frame 3D web scene** and discussed connecting
+  Snap! blocks to live simulation parameters — Logo/Scheme/Smalltalk-Morphic heritage meeting an open,
+  modifiable city simulator for the classroom.
+
+threads:
+  micropolis_in_snap:
+    what: "Drive SimCity/Micropolis + CAM6 CA rules from Snap! blocks — constructionist, open, modifiable"
+  pie_menus_in_aframe:
+    what: "Pie menus in an A-Frame 3D web environment — Don's gestural UI meets Snap! in the browser"
+
+show_hooks:
+  - "Wire Micropolis into Snap! live — a city sim you reprogram with blocks"
+  - "CAM6 cellular automata as a visual-programming lesson — Norman Margolus's demo reborn in blocks"
+  - "Soul City / open SimCity — the show's liminal city meets BJC's classroom microworld"
+
+see_also:
+  - ../correspondence.yml
+  - ../../jens-monig/sources/micropolis-snap-2018.yml
+  - ../../../characters/will-wright/
+  - ../../../process/trails/constructionist-lineage.md

@@ -11,43 +11,52 @@ Brian Harvey (he/him) — UC Berkeley CS educator (Teaching Professor Emeritus),
 
 ## Shared ground
 
-*Topics that connect Brian Harvey's work to this repo — public themes only.*
+*Topics that connect Brian's work to this repo — public themes and documented threads only.*
 
-- Snap!: visual programming with first-class procedures
-- SimCity/Micropolis integration with Snap! blocks
-- CAM6 cellular automata: visual programming for CA rules
-- A-Frame: 3D web environment with pie menus
-- Logo/Scheme/Smalltalk heritage in visual programming
+- **Pair show with Jens** — Snap! is shared work; Karlstrom citation names Jens as principal developer ([sources/beauty-and-joy-of-computing.yml](sources/beauty-and-joy-of-computing.yml))
+- **Micropolis × Snap! (2018)** — Don's thread; Brian looped in Jens ([sources/micropolis-snap-2018.yml](sources/micropolis-snap-2018.yml))
+- **Logo → Snap! lineage** — Papert's turtle through Berkeley Logo to BJC; Palm's field notebook names Theo the Logo Turtle
+- **Kay's HyperCard bar** — Snap! as end-user programmable media ([from-alan-kay.yml](from-alan-kay.yml))
+- **Snap!Con Barcelona / old band** — TurtleStitch, Cynthia Solomon, inclusive constructionism Don witnessed live
+- **Open SimCity / Soul City** — making Will's simulator teachable, not sealed
+
 ## The hooks
 
-### 1. Joint headline with Jens Mönig — the Snap!/Logo pair show
-Brian and Jens are colleagues joined at the heart by Snap!. The default interview is a **pair show** — [`repo-shows/snap-logo-brian-jens/`](../../repo-shows/snap-logo-brian-jens/README.md) — centered on Brian's books + lifelong Logo work, with Jens on the Snap! they built together.
+### 1. Show seed: `repo-shows/snap-logo-brian-jens/`
+Default interview is the **pair show** — Brian on books + pedagogy, Jens on implementation. Optional solo for Brian's books only if depth would dilute the pair episode.
 
-### 2. The books — *Computer Science Logo Style* and *Simply Scheme*
-Three volumes of *CS Logo Style* (MIT Press) and *Simply Scheme* (with Matthew Wright, foreword by Hal Abelson) — teaching real CS through Logo and Scheme.
+### 2. The books — *CS Logo Style* and *Simply Scheme*
+[sources/computer-science-logo-style.yml](sources/computer-science-logo-style.yml) · [sources/simply-scheme.yml](sources/simply-scheme.yml) — three volumes of real CS through Logo; Scheme with Hal Abelson's foreword. What makes a hard idea teachable?
 
 ### 3. Berkeley Logo and a lifetime of Logo for learners
-UCBLogo and decades of using computers in K–12 education; the through-line from Papert's turtle.
+[sources/berkeley-logo-and-cs61a.yml](sources/berkeley-logo-and-cs61a.yml) — UCBLogo, CS 61A, the turtle as through-line. Compare with [Palm's Theo sighting](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml).
 
 ### 4. The Beauty and Joy of Computing (BJC)
-The CSforALL curriculum (with Dan Garcia) the Karlstrom award recognized — "the beauty and joy of computing to all students, especially those from historically underrepresented communities." 1,000+ teachers trained, offered in Spanish, a middle-school BJC Sparks; the Berkeley course has exceeded 50% (once 70%) female enrollment.
+[sources/beauty-and-joy-of-computing.yml](sources/beauty-and-joy-of-computing.yml) — CSforALL curriculum; 2024 Karlstrom award; 50%+ female enrollment at Berkeley; Spanish edition and BJC Sparks.
 
 ### 5. Teaching CS 61A and SICP at Berkeley
-The legendary SICP-based course; what makes an idea teachable.
+The legendary course — what Brian kept, translated, and refused to dumb down.
 
-### 6. Snap! design + documentation — the pedagogy behind the blocks
-Brian's design input and documentation for Snap!; why first-class everything matters for learners, not just theorists.
+### 6. Snap! design + documentation — pedagogy behind the blocks
+Why first-class everything matters for *beginners*. Pair beat: Brian explains *why*, Jens shows *how* (Y combinator live).
 
 ### 7. Micropolis × Snap! in the classroom
-From Don's 2018 thread with Brian and Jens: an open, modifiable city simulator (and CAM6 cellular automata) reprogrammed from Snap! blocks — constructionism with a real simulator.
+[sources/micropolis-snap-2018.yml](sources/micropolis-snap-2018.yml) — finish the 2018 thread: open SimCity + CAM6 CA rules from blocks. Soul City meets BJC.
 
-### 8. Logo → Scheme → Smalltalk → Snap! lineage
-The heritage of visual and learner-first programming languages.
+### 8. Kay's criterion — HyperCard second pass with Snap!
+[from-alan-kay.yml](from-alan-kay.yml) — end-user programmable media with a live system underneath; Brian's line as Kay's constructionist answer.
 
-## Sources (public)
+### 9. Snap!Con Barcelona — constructionism for real
+TurtleStitch, Cynthia Solomon, kids of every background coding and sewing with zero self-consciousness. Not a slogan — a room Don was in.
+
+### 10. Logo → Scheme → Smalltalk → Snap! — tell it once, together
+The heritage episode. Optional cold open: Berkeley Logo turtle next to Snap! blocks next to Micropolis zoning.
+
+## Sources (public + documented threads)
 
 - [`invitation.md`](invitation.md)
-- [`correspondence.yml`](correspondence.yml) — public-safe thread digest
-- Show seed: [`repo-shows/brian-harvey/`](../../repo-shows/brian-harvey/)
-- [`media/from-mail/MANIFEST.yml`](media/from-mail/MANIFEST.yml) — mail-sourced artifacts
+- [`sources/README.md`](sources/README.md)
+- [`correspondence.yml`](correspondence.yml)
+- Show seed: [`repo-shows/snap-logo-brian-jens/`](../../repo-shows/snap-logo-brian-jens/)
 - [`CHARACTER.yml`](CHARACTER.yml)
+- [Palm's field notebook](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml)

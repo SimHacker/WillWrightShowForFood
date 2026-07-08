@@ -1,0 +1,26 @@
+# Morphic.js — Jens Mönig's live IDE substrate
+# The morphic world Snap! runs on.
+
+meta:
+  author: Jens Mönig
+  framework: Morphic.js
+  url: https://github.com/jmoenig/Snap/blob/master/morphic.js
+  kind: framework
+  consent: public
+
+the_hook: |
+  Direct-manipulation objects all the way down — in the browser, no install. Snap! isn't just blocks
+  on a canvas; the IDE itself is malleable Morphic-style, inheriting Smalltalk's live-system ethos
+  without requiring Squeak on every student's laptop.
+
+heritage: "Logo → Smalltalk (Kay) → Scratch morphic UI → Morphic.js → Snap!"
+
+show_hooks:
+  - "Morphic.js demo — edit the IDE while you're teaching in it"
+  - "Kay's 'live system underneath' criterion — Snap! as the browser answer"
+  - "Pair with Brian — the turtle (Logo) and the morph (Smalltalk) in one classroom tool"
+
+see_also:
+  - gp-alan-kay-lineage.yml
+  - ../from-alan-kay.yml
+  - ../../brian-harvey/from-alan-kay.yml

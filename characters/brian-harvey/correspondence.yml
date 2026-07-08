@@ -33,3 +33,7 @@ connects_in_repo:
 show_hooks:
   - "Wire Micropolis into Snap! live — a city sim you reprogram with blocks"
   - "CAM6 cellular automata as a visual-programming lesson"
+  - "Theo the Logo Turtle meets Brian — Palm's field notebook cross-ref"
+
+sources_in_repo:
+  - sources/micropolis-snap-2018.yml

@@ -1,0 +1,31 @@
+# Computer Science Logo Style — Brian Harvey (MIT Press, 3 volumes)
+# Public textbooks. The through-line from Papert's turtle to real CS.
+
+meta:
+  author: Brian Harvey
+  title: "Computer Science Logo Style"
+  volumes: 3
+  publisher: MIT Press
+  url: https://people.eecs.berkeley.edu/~bh/volumes.html
+  kind: book_series
+  consent: public
+
+the_hook: |
+  Logo as a serious language for serious ideas — not a toy prefix on "learning to code."
+  Volume by volume: procedures, data structures, recursion, compilers — the curriculum
+  Brian spent a career making legible.
+
+why_don_loves_it: |
+  Don's whole microworld stack — SimCity, pie menus, MOOLLM skills — assumes learners can
+  *reprogram the system they're inside*. Brian's books are the pedagogy that makes that assumption
+  honest instead of magical thinking.
+
+show_hooks:
+  - "What makes an idea teachable — Brian's answer across three volumes"
+  - "Pair with Jens — the books explain *why* first-class everything in Snap! matters for beginners"
+  - "Logo → Scheme → Snap! lineage told by the person who wrote the textbooks"
+
+see_also:
+  - ../ideas.md#2-the-books--computer-science-logo-style-and-simply-scheme
+  - simply-scheme.yml
+  - ../../jens-monig/sources/snap-first-class-everything.yml

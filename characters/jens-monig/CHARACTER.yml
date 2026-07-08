@@ -19,7 +19,8 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  show_seed: repo-shows/jens-monig/
+  show_seed: repo-shows/snap-logo-brian-jens/
+  pair_with: brian-harvey
 
 bio:
   summary: "**Jens Mönig** — Architect and lead programmer of **Snap!** (formerly BYOB, \"Build Your Own Blocks\"), the block-based visual language used in UC Berkeley's *Beauty and Joy of Computing* curriculum, with design input + documentation by Brian Harvey. Built it on his own **Morphic.js** framework; Snap! has first-class lists, procedures, AND continuations (enough for the Y combinator), plus prototype-based objects. Previously on the MIT **Scratch** team and worked under **Alan Kay** on the GP language (with John Maloney + Yoshiki Ohshima). Research Expert at **SAP**, consultant at UC Berkeley; a fully qualified German lawyer who returned to programming via Scratch/Squeak. Good friend of Don Hopkins; proposed guest — solo (Micropolis × Snap!, Snap! internals, schemas, distributed/actor systems) and joint with Brian Harvey (the Snap!/Logo pair show)."
@@ -29,5 +30,26 @@ sources:
   web:
     - https://www.linkedin.com/in/moenig
     - https://snap.berkeley.edu/about
+  repo_artifacts:
+    - sources/snap-first-class-everything.yml
+    - sources/morphic-js.yml
+    - sources/gp-alan-kay-lineage.yml
+    - sources/y-combinator-in-blocks.yml
+    - sources/micropolis-snap-2018.yml
+  field_notebook: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml
   papers: []
   blogs: []
+
+connections:
+  pair_show: "Default interview with Brian Harvey — Jens builds, Brian documents Snap!"
+  micropolis_2018: "Brian forwarded Don's Micropolis × Snap! proposal"
+  kay_lineage: "Scratch → GP under Alan Kay → Morphic.js → Snap!"
+  snapcon_barcelona: "TurtleStitch, Cynthia Solomon, old band"
+  palm_field_notebook: "Computational zoo field notes — Logo/turtle lineage"
+
+see_also:
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: sources/README.md, why: "Source artifacts" }
+  - { path: correspondence.yml, why: "2018 Micropolis thread" }
+  - { path: ../brian-harvey/correspondence.yml, why: "Same thread — Brian's angle" }
+  - { path: from-alan-kay.yml, why: "Kay orbit" }

@@ -1,0 +1,30 @@
+# Jens Mönig × Don Hopkins — correspondence summary (public-safe)
+# Same 2018 thread as Brian's digest — Jens's engineering angle.
+
+meta:
+  with: jens-monig
+  also: [brian-harvey]
+  curated_by: don-hopkins
+  consent: not_yet_asked
+  span: "2018"
+  provenance_private: SimHacker/DonHopkins/characters/don-hopkins/correspondence/brian-harvey-jens-moenig.yml
+
+gist: |
+  Brian forwarded Don's Micropolis × Snap! proposal to Jens. Don demoed pie menus in A-Frame 3D and
+  discussed binding Snap! blocks to live **Micropolis** and **CAM6** parameters — open, modifiable
+  simulators for the classroom, not black-box entertainment software.
+
+threads:
+  micropolis_in_snap:
+    what: "Engineering Snap! extensions to drive SimCity/Micropolis + CAM6 from blocks"
+  schemas_and_dataflow:
+    what: "Structured simulation data, distributed messaging, actor systems — Jens's verticals"
+
+connects_in_repo:
+  - { path: sources/micropolis-snap-2018.yml, why: "Full digest" }
+  - { path: ../brian-harvey/correspondence.yml, why: "Brian's pedagogy angle on same thread" }
+  - { path: ../../will-wright/, why: "SimCity/Micropolis lineage" }
+
+show_hooks:
+  - "Finish what we started in 2018 — Micropolis live in Snap!"
+  - "Schemas for Snap! + Snap!Con Barcelona stories"

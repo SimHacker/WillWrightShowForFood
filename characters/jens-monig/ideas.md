@@ -11,42 +11,52 @@ Jens Mönig — Architect and lead programmer of Snap! (formerly BYOB, "Build Yo
 
 ## Shared ground
 
-*Topics that connect Jens Mönig's work to this repo — public themes only.*
+*Topics that connect Jens's work to this repo — public themes and documented threads only.*
 
-- Snap!: visual programming with first-class procedures
-- SimCity/Micropolis integration with Snap! blocks
-- CAM6 cellular automata: visual programming for CA rules
-- A-Frame: 3D web environment with pie menus
-- Logo/Scheme/Smalltalk heritage in visual programming
+- **Pair show with Brian** — Jens builds, Brian documents; Karlstrom citation ties them ([../brian-harvey/sources/beauty-and-joy-of-computing.yml](../brian-harvey/sources/beauty-and-joy-of-computing.yml))
+- **Micropolis × Snap! (2018)** — Brian forwarded Don's proposal; Jens on implementation ([sources/micropolis-snap-2018.yml](sources/micropolis-snap-2018.yml))
+- **Morphic.js / Kay lineage** — GP under Alan Kay; live system in the browser ([sources/gp-alan-kay-lineage.yml](sources/gp-alan-kay-lineage.yml))
+- **Snap!Con Barcelona** — TurtleStitch, Cynthia Solomon, old band back together ([../../process/old-band-back-together.yml](../../process/old-band-back-together.yml))
+- **Palm's computational zoo** — worms/birds/turtles field notebook; Logo lineage after Snap!Con
+- **Pie menus in A-Frame** — Don's 2018 demo alongside the Micropolis thread
+
 ## The hooks
 
-### 1. Joint headline with Brian Harvey — the Snap!/Logo pair show
-Jens and Brian are colleagues joined at the heart by Snap!. The default interview is a **pair show** — [`repo-shows/snap-logo-brian-jens/`](../../repo-shows/snap-logo-brian-jens/README.md) — Brian on the books + lifelong Logo work, Jens on the Snap! they built. Optional solo deep-dive on Snap! internals afterward.
+### 1. Show seed: `repo-shows/snap-logo-brian-jens/`
+Default interview is the **pair show** with Brian. Optional solos: Snap! internals, schemas, actors — depth that would repeat if forced into the pair episode.
 
-### 2. Snap! internals: first-class everything
-First-class lists, procedures, and continuations — enough to build the Y combinator out of blocks — plus prototype-based objects. How far the blocks metaphor goes without leaving beginners behind.
+### 2. Snap! internals — first-class everything
+[sources/snap-first-class-everything.yml](sources/snap-first-class-everything.yml) — lists, procedures, continuations, prototype objects. How far blocks go without losing beginners.
 
-### 3. Morphic.js — a live, malleable IDE
-The morphic world Snap! runs on: direct-manipulation objects all the way down, in the browser, no install.
+### 3. The Y combinator in blocks — cold open
+[sources/y-combinator-in-blocks.yml](sources/y-combinator-in-blocks.yml) — the stunt that proves Brian's pedagogy isn't theoretical. Build it live; Guy Steele energy.
 
-### 4. Micropolis × Snap! — a city sim you reprogram with blocks
-From Don's 2018 thread with Brian and Jens: drive SimCity/Micropolis (and CAM6 cellular-automata rules) from Snap! blocks — open, modifiable, constructionist.
+### 4. Morphic.js — a live, malleable IDE
+[sources/morphic-js.yml](sources/morphic-js.yml) — direct manipulation all the way down; edit the IDE while teaching in it.
 
-### 5. Schemas for Snap! — Don's Snap!Con Barcelona talk
-Data schemas as a Snap! extension; structured data meeting blocks.
+### 5. Micropolis × Snap! — finish the 2018 thread
+[sources/micropolis-snap-2018.yml](sources/micropolis-snap-2018.yml) · [correspondence.yml](correspondence.yml) — drive open SimCity + CAM6 from blocks; pie menus in A-Frame on the side.
 
-### 6. Distributed messaging, dataflow, and actor systems in Snap!
-Where blocks meet concurrency and message passing.
+### 6. Schemas for Snap! — Snap!Con Barcelona talk
+Structured data meeting blocks — Don's Barcelona presentation as a solo vertical.
 
-### 7. Pie menus in an A-Frame 3D web scene
-Don's pie menus in a 3D web environment — gestural UI on the web.
+### 7. Distributed messaging, dataflow, and actor systems
+Where blocks meet concurrency and message passing — Jens's research verticals beyond the pair show.
 
-### 8. Logo → Scheme → Smalltalk → Snap! lineage
-The visual-programming heritage, and constructionism from Papert forward.
+### 8. GP → Scratch → Snap! — Kay orbit
+[sources/gp-alan-kay-lineage.yml](sources/gp-alan-kay-lineage.yml) — blocks languages with John Maloney and Yoshiki Ohshima; lawyer-to-programmer biography as inclusive ethos in one person.
 
-## Sources (public)
+### 9. Snap!Con Barcelona — TurtleStitch and the old band
+Don embroidered felt live; kids coded and sewed with zero self-consciousness. [`repo-shows/turtlestitch/`](../../repo-shows/turtlestitch/) · Cynthia Solomon · non-competitive Snap! community.
+
+### 10. Palm's field notebook — read it over his shoulder
+[Palm on Worms](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml) — Theo the Logo Turtle, worms as language machines, Ground as playhouse. What grew in the repo after Snap!Con.
+
+## Sources (public + documented threads)
 
 - [`invitation.md`](invitation.md)
-- Show seed: [`repo-shows/jens-monig/`](../../repo-shows/jens-monig/)
-- [`media/from-mail/MANIFEST.yml`](media/from-mail/MANIFEST.yml) — mail-sourced artifacts
+- [`sources/README.md`](sources/README.md)
+- [`correspondence.yml`](correspondence.yml)
+- Show seed: [`repo-shows/snap-logo-brian-jens/`](../../repo-shows/snap-logo-brian-jens/)
 - [`CHARACTER.yml`](CHARACTER.yml)
+- [Palm's field notebook](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml)

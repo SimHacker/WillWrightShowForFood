@@ -19,7 +19,8 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  show_seed: repo-shows/brian-harvey/
+  show_seed: repo-shows/snap-logo-brian-jens/
+  pair_with: jens-monig
 
 bio:
   summary: "**Brian Harvey** (he/him) — UC Berkeley CS educator (Teaching Professor Emeritus), a lifelong force in **computer science education**. Developed **Berkeley Logo**, co-developed **Snap!** (design + documentation) with Jens Mönig, and co-created **The Beauty and Joy of Computing (BJC)** curriculum with Dan Garcia. Author of *Computer Science Logo Style* (3 vols, MIT Press) and *Simply Scheme* (with Matthew Wright, foreword by Hal Abelson); taught the legendary SICP-based **CS 61A**. Won the 2024 ACM Karl V. Karlstrom Outstanding Educator Award (with Dan Garcia, for BJC) and Berkeley's Distinguished Teaching Award (1995). BS Math (MIT, 1969), MS CS (Stanford, 1975), PhD Science & Math Education (UC Berkeley, 1985). Good friend of Don Hopkins; proposed as a joint guest with Jens Mönig, centering his books + lifelong Logo work."
@@ -30,11 +31,27 @@ sources:
     - https://people.eecs.berkeley.edu/~bh/
     - https://www2.eecs.berkeley.edu/Faculty/Homepages/harvey.html
     - https://snap.berkeley.edu/about
+    - https://bjc.berkeley.edu/
+  repo_artifacts:
+    - sources/computer-science-logo-style.yml
+    - sources/simply-scheme.yml
+    - sources/beauty-and-joy-of-computing.yml
+    - sources/berkeley-logo-and-cs61a.yml
+    - sources/micropolis-snap-2018.yml
+  field_notebook: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml
   papers: []
   blogs: []
 
+connections:
+  pair_show: "Default interview with Jens Mönig — Snap! is shared work; Karlstrom 2024 cites both"
+  micropolis_2018: "Don's thread — wire open SimCity + CAM6 into Snap! blocks; Brian looped in Jens"
+  kay_lineage: "Snap! as Kay's end-user programmable media answer — HyperCard bar"
+  palm_field_notebook: "Theo the Logo Turtle in Palm's worm census"
+  snapcon_barcelona: "TurtleStitch, Cynthia Solomon, inclusive constructionism Don witnessed live"
+
 see_also:
   - { path: ideas.md, why: "Conversation hooks" }
+  - { path: sources/README.md, why: "Source artifacts" }
   - { path: from-alan-kay.yml, why: "Kay on Snap!/HyperCard bar for end-user programming" }
   - { path: ../jens-monig/from-alan-kay.yml, why: "Pair show — Kay microworlds segment" }
   - { path: ../alan-kay/people-index.yml, why: "Kay mentions cross-index" }

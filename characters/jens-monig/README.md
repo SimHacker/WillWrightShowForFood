@@ -1,9 +1,11 @@
-# Jens Mönig
+# Jens Mönig 🧩
 
 Invitation portrayal — **not** Jens Mönig. [Standards](../../schemas/portrayal-standards.md)
 
-**Field:** Visual/block programming languages; architect + lead programmer of Snap! (Build Your Own Blocks). Morphic.js. Research Expert at SAP; consultant at UC Berkeley.
+**Field:** Snap! architect; Morphic.js; first-class continuations; GP/Scratch/Kay lineage. SAP; UC Berkeley consultant.
 
-[Invitation](invitation.md) · [Show seed](../../repo-shows/jens-monig/README.md)
+**Default show:** Pair with [Brian Harvey](../brian-harvey/) — [`snap-logo-brian-jens`](../../repo-shows/snap-logo-brian-jens/)
+
+[Invitation](invitation.md) · [ideas](ideas.md) · [sources/](sources/README.md) · [Correspondence](correspondence.yml) · [Palm's field notebook](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml)
 
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.
