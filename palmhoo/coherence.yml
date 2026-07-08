@@ -177,6 +177,7 @@ summaries:
   - summary: palmhoo/concurrency-and-messaging/README.md
     sources:
       - characters/alan-kay/
+      - characters/ken-kahn/
       - characters/palm/running-on-wetware.md
       - characters/don-hopkins/streams-of-streams-fd-passing-zero-copy.md
       - process/ticket-pr.yml
@@ -185,10 +186,11 @@ summaries:
       - https://github.com/SimHacker/moollm/tree/main/skills/robust-first
       - https://go.dev/talks/2012/waza.slide
       - https://news.ycombinator.com/item?id=48786713
+      - https://toontalk.com/English/computer.htm
     beat: palm
     last_verified: 2026-07-08
     volatility: medium
-    note: "will spike when Palm on Worms ships — the fieldnotes are a declared dependency of the paper"
+    note: "will spike when Palm on Worms ships + the bird skill lands — fieldnotes + Ken Kahn are declared dependencies"
 
   - summary: palmhoo/palmr/README.md
     sources:

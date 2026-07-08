@@ -26,6 +26,19 @@ at once; parallelism is about doing lots of things at once." Alan Kay: the big i
 | [**Streams of streams**](../../characters/don-hopkins/streams-of-streams-fd-passing-zero-copy.md) | Don on fd-passing and zero-copy — messaging at the plumbing layer, where a channel is a thing you can *hand to someone*. (Pike again: channels are first-class values.) |
 | [**TicketPR**](../../process/ticket-pr.yml) | The show's own message protocol: a PR is a message, the audience directory is a mailbox, the repo is the channel. |
 
+## The birds 🐦 (and worms 🪱 they fly between)
+
+🐒✋ *Ken Kahn's ToonTalk child-engineered concurrent constraint programming into a video-game
+city: processes are houses, methods are robots you train by demonstration, and **messages are
+carried by birds flying to their nests**. MOOLLM lovingly adopts birds as its IPC / pub-sub /
+event-messaging substrate — the comms layer, complementing the worms' compute layer. A **bird
+skill, co-designed with Ken**, is on the drawing board.*
+
+| Entry | 🐒✋ Why you'd read it |
+|-------|----------------------|
+| [**Ken Kahn**](../../characters/ken-kahn/README.md) · [ideas](../../characters/ken-kahn/ideas.md#7-birds--worms-co-designing-a-bird-skill-for-moollm-) | ToonTalk's creator — birds/nests as channels, robots trained by demonstration (same move as our trainable worms). An early bird: he did messaging-as-wildlife decades ago and still does it. Hook 7 is the bird-skill collaboration. |
+| [**ToonTalk concretizations**](https://toontalk.com/English/computer.htm) | The table we steal from: computation=city, process=house, method=robot, channel-transmit=bird, channel-receive=nest. Concurrent constraint programming (Janus) made concrete for children. |
+
 ## The worms 🪱
 
 | Entry | 🐒✋ Why you'd read it |
@@ -35,5 +48,6 @@ at once; parallelism is about doing lots of things at once." Alan Kay: the big i
 | [**The refresh scan**](../JOURNALISM.md) | Where this shelf meets maintenance: the staleness queue as a worm's breakfast, castings reviewed by PR. A trained staleness-worm runs for free and escalates to an LLM only when drift is semantic, not mechanical. |
 | [**Resurrecting Ground — SimEarth/Gaia bridge**](../../repo-shows/will-wright-premiere/game-bridge-simearth-gaia-worms.yml) | The premiere segment that brings Ground and the worms back to life inside a living-planet discussion: Lovelock's Gaia (built into SimEarth), Margulis's symbiogenesis (digestion as merger), Will's SimEarth→Spore arc. Scorched earth to fertile environment. |
 
-🐒✋ *For the paper I'm writing: Hoare, Pike, Kay, Ackley, and Ground in one room. Ground plays
-bass. Everyone else finally agrees the messages were the point.*
+🐒✋ *For the paper I'm writing: Hoare, Pike, Kay, Ackley, Ken Kahn, and Ground in one room.
+Ground plays bass, the birds carry the sheet music between the players, and everyone finally
+agrees the messages were the point.*
