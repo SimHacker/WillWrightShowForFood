@@ -34,6 +34,14 @@ carried by birds flying to their nests**. MOOLLM lovingly adopts birds as its IP
 event-messaging substrate — the comms layer, complementing the worms' compute layer. A **bird
 skill, co-designed with Ken**, is on the drawing board.*
 
+🐒✋ *Two motion models, not two mascots: **birds fly between endpoints and deliver** (carry a
+message intact, point to point); **worms work through the ground and transform** (eat, digest,
+shit a casting, crawl on — no destination, just a head-and-tail direction, and they can straddle
+two documents: read from one, cast summaries into another). They even operate on each other —
+worms eat worms and birds; birds carry worms — which is exactly the extensibility. The
+[field notebook](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml)
+has the ecology (and leaves the birds-and-the-bees seed pointedly unopened).*
+
 | Entry | 🐒✋ Why you'd read it |
 |-------|----------------------|
 | [**Ken Kahn**](../../characters/ken-kahn/README.md) · [ideas](../../characters/ken-kahn/ideas.md#7-birds--worms-co-designing-a-bird-skill-for-moollm-) | ToonTalk's creator — birds/nests as channels, robots trained by demonstration (same move as our trainable worms). An early bird: he did messaging-as-wildlife decades ago and still does it. Hook 7 is the bird-skill collaboration. |
