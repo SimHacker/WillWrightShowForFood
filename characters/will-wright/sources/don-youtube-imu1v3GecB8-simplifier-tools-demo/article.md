@@ -16,7 +16,7 @@ One-take tour of **The Sims 1** fan-tool era:
 
 ## Why it matters now
 
-**Simplifier** is being reincarnated as an **accessibility-oriented** server-side scrape/inject layer in Micropolis Home / stream-gateway — not a cheat bot:
+**Simplifier** is being reincarnated as an **accessibility-oriented** server-side scrape/inject layer in Soul City / stream-gateway — not a cheat bot:
 
 - Spec: [`../../../../apps/stream-gateway/simplifier.yml`](../../../../apps/stream-gateway/simplifier.yml)
 - Future: native **IFF reader** replaces scrape for object previews ([`../../../catalogs/maxis/`](../../../catalogs/maxis/README.md))

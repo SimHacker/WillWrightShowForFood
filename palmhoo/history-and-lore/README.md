@@ -39,7 +39,7 @@ made decades ago at talks, in emails, over pie. This shelf keeps the receipts.*
 
 | Entry | 🐒✋ Why you'd read it |
 |-------|----------------------|
-| [**catalogs/**](../../catalogs/README.md) | Digs into the fan-site strata: Maxis's own pages, SimFreaks, SimSlice, the Micropolis home — the web the games grew in. |
+| [**catalogs/**](../../catalogs/README.md) | Digs into the fan-site strata: Maxis's own pages, SimFreaks, SimSlice, Soul City — the web the games grew in. |
 | [**Sims 1 community landscape**](../../catalogs/sims1-community-landscape.md) | Who built what around The Sims before "creator economy" was a phrase — the custom-content ecosystem, mapped. |
 | [**Open source & formats**](../../catalogs/sims-open-source-and-formats.yml) | The file-format archaeology behind the data-portability crown jewel of Will's premiere. |
 

@@ -29,7 +29,7 @@ sources:
   - ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
 
 platform:
-  hosted_on: ../micropolis-home/
+  hosted_on: ../soul-city/
 
 orchestrator:
   path: ORCHESTRATOR.yml

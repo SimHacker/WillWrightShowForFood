@@ -12,7 +12,7 @@ SimSlice ships object suites and deep integrations. The headline proof:
 
 **Orchestrator protocol:** [`ORCHESTRATOR.yml`](ORCHESTRATOR.yml) — power plant seed spawner; modular airport chain; planes → skydivers → tiny ground critters (cockroach-clone AI); red blood stains vs green roach slime. [`orchestrator-playsets`](../../designs/orchestrator-playsets/README.md).
 
-- Hosted on: [Micropolis Home](../micropolis-home/README.md)
+- Hosted on: [Soul City](../soul-city/README.md)
 
 ## In this repo
 

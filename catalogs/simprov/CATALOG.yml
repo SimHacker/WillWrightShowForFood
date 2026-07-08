@@ -46,7 +46,7 @@ narrative:
   - ../characters/will-wright/media/sims-series-family-manifesto.md
 
 platform:
-  hosted_on: ../micropolis-home/
+  hosted_on: ../soul-city/
   note: "Playset + composable objects publish as hosted CARD collections"
 
 orchestrator:

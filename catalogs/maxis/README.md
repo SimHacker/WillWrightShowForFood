@@ -25,7 +25,7 @@ This catalog points at objects and downloads; it does not replace EA's store.
 
 1. **Today:** ShowNTell-era scrapes + Simplifier screen-read ([`simplifier.yml`](../../apps/stream-gateway/simplifier.yml)) for live-game captures.
 2. **Next:** Native **IFF reader** — rotations, zooms, multi-state sprite compositions (Transmogrifier parity, no ActiveX).
-3. **Publish:** Previews on Micropolis Home federation; metadata in this catalog.
+3. **Publish:** Previews on Soul City federation; metadata in this catalog.
 
 ## Start
 
@@ -38,6 +38,6 @@ First article stub: **Killer Hamster** — TODO.
 
 ---
 
-↑ [catalogs](../README.md) · [Micropolis Home](../micropolis-home/README.md)
+↑ [catalogs](../README.md) · [Soul City](../soul-city/README.md)
 
 *Raw directory:* [browse files in this folder](./)

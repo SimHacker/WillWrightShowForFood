@@ -13,7 +13,7 @@ The educator who taught the whole curriculum by **building cities first** — an
 1. **DBL on air** — backwards thinking from model cities to any subject
 2. **Dec 2006 thread** — [sourced OLPC response](../../characters/doreen-nelson/sources/2006-12-21-olpc-curriculum-guide/olpc-response.md)
 3. **Free the guides** — Leslie Stoltz co-authorship, EA rights, classroom use stories
-4. **Micropolis Home** — scripting, spreadsheets, Sugar lineage vs 2026 tools
+4. **Soul City** — scripting, spreadsheets, Sugar lineage vs 2026 tools
 5. **Constructionist reunion** — Papert, physical models, digital microworlds
 
 ## Related

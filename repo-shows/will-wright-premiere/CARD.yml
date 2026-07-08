@@ -26,7 +26,7 @@ methods:
     signature: "browseSources() → ../../characters/will-wright/sources/ — essays, mail, OLPC saga, prototypes"
     advertisement: "Evidence room — SimCity open source, Transmogrifier, Sims birth strata."
   SHOP-CATALOGS:
-    signature: "shopCatalogs() → ../../catalogs/ — get-the-sims-on-steam.md first, then SimFreaks, SimProv, Micropolis Home"
+    signature: "shopCatalogs() → ../../catalogs/ — get-the-sims-on-steam.md first, then SimFreaks, SimProv, Soul City"
     advertisement: "Repo-level feeds we syndicate — buy The Sims on Steam, then install our UCC."
   PLAY-ALONG-NARRATE:
     signature: "playAlongNarrate() → sims-play-along-narration.yml"

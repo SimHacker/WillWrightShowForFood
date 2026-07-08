@@ -87,7 +87,7 @@ see_also:
     - { path: audience/GLANCE.yml, why: "TicketPR roster" }
     - { path: ../../characters/will-wright/sessions/README.md, why: "One-on-one session artifacts (takes, publishes) — content lives with the character" }
     - { path: venue/GLANCE.yml, why: "Theater map 🤡💀" }
-    - { path: ../../catalogs/GLANCE.yml, why: "UCC + Micropolis Home" }
+    - { path: ../../catalogs/GLANCE.yml, why: "UCC + Soul City" }
     - { path: ../../characters/will-wright/media/GLANCE.yml, why: "Flower-Child + gallery" }
   across:
     - { path: ../../characters/will-wright/GLANCE.yml, why: "Guest portrayal" }

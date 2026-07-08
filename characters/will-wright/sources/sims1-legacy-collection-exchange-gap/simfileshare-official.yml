@@ -87,7 +87,7 @@ operations:
     - Twitter DM @SimFileShare
   stack_signals: Bootstrap 3, jQuery 1.10, Django-style CSRF, static.simfileshare.net CDN
 
-micropolis_home_contrast:
+soul_city_contrast:
   sfs_strength: Permanent links, no adfly on host, creator loves, Sims-only trust model
   sfs_gaps:
     - No search/discovery index
@@ -96,7 +96,7 @@ micropolis_home_contrast:
     - No version lineage on file replace
     - Browser-only — alt-tab from game
   angel_opportunity: |
-    Tray watcher + Micropolis Home catalog CARD = searchable index + attribution layer **on top of**
+    Tray watcher + Soul City catalog CARD = searchable index + attribution layer **on top of**
     SFS links — federate, don't replace. **Repo-native free lane:** metadata + .iff in GitHub
     (github-distribution-model.yml) — TSR browse replacement; moollm repo for skills/Soul City payloads.
 

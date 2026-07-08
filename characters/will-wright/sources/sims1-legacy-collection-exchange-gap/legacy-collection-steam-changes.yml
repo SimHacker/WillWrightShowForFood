@@ -41,10 +41,10 @@ medical_wearables_sims4_parallel:
     — same representation ethos as Sims 1 Exchange storytelling; different franchise moment.
   see: ea-ownership-representation-creators.yml
 
-micropolis_home_posture:
+soul_city_posture:
   requires_owned_game: true
-  steam_guide: ../../../../catalogs/micropolis-home/steam-community-guide.yml
-  companion: ../../../../catalogs/micropolis-home/micropolis-angel.yml
+  steam_guide: ../../../../catalogs/soul-city/steam-community-guide.yml
+  companion: ../../../../catalogs/soul-city/micropolis-angel.yml
   strategy: ../../../../catalogs/sims1-community-landscape.yml
 
 see_also:

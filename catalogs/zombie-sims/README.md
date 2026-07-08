@@ -10,7 +10,7 @@ Artisanal zombie suites: IFF objects, SimAntics behaviors, interchangeable skins
 
 **Orchestrator protocol:** [`ORCHESTRATOR.yml`](ORCHESTRATOR.yml) — ham radio wave controller (parallel to Hope Chest / power plant). [`orchestrator-playsets`](../../designs/orchestrator-playsets/README.md).
 
-- Hosted on: [Micropolis Home](../micropolis-home/README.md)
+- Hosted on: [Soul City](../soul-city/README.md)
 - Sister catalogs: [SimFreaks](../simfreaks/README.md) · [SimSlice](../simslice/README.md)
 
 ## Show hook

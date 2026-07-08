@@ -2,7 +2,7 @@
 
 *YouTube: https://www.youtube.com/watch?v=Nzz0cFSmgiM*
 
-Browser-era **ActiveX** control previewing Sims character animation — ancestor of ShowNTell object previews and today's planned IFF renderer in Micropolis Home.
+Browser-era **ActiveX** control previewing Sims character animation — ancestor of ShowNTell object previews and today's planned IFF renderer in Soul City.
 
 ## Lineage
 

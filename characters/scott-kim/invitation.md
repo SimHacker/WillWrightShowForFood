@@ -83,7 +83,7 @@ angles. **Read either or both** before you reply — including how **Amy Jo** de
 
 | | |
 | --- | --- |
-| **On this show** | Game Thinking; player/member journey; community without extraction; Micropolis Home/Exchange revival |
+| **On this show** | Game Thinking; player/member journey; community without extraction; Soul City/Exchange revival |
 | **Invitation** (her view) | [`../amy-jo-kim/invitation.md`](../amy-jo-kim/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/amy-jo-kim/invitation.md) |
 | **Guest README** | [`../amy-jo-kim/README.md`](../amy-jo-kim/README.md) |
 | **Conversation hooks** | [`../amy-jo-kim/ideas.md`](../amy-jo-kim/ideas.md) |

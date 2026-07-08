@@ -13,7 +13,7 @@ exits:
   north: ../../characters/will-wright/sources/              # evidence — essays, mail, prototypes
   east: audience/              # TicketPR roster — join before air
   south: venue/                # theater map — seats, balcony, mic
-  west: ../../catalogs/              # UCC brands + Micropolis Home
+  west: ../../catalogs/              # UCC brands + Soul City
   up: ../../characters/will-wright/   # guest portrayal + media galleries
   down: ../../characters/will-wright/media/                # Flower-Child icon + sims-series gallery
   meta: ../../process/         # Repo Show constitution + protocols

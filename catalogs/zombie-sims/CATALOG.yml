@@ -26,7 +26,7 @@ interview_prompts:
   steve: "When the wave hits — is SliceCity the farm or the fortress?"
 
 platform:
-  hosted_on: ../micropolis-home/
+  hosted_on: ../soul-city/
 
 orchestrator:
   path: ORCHESTRATOR.yml

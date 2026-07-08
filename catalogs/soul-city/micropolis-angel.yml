@@ -1,6 +1,6 @@
 # MicropolisAngel — Windows Steam companion for The Sims Legacy Collection
 # Working title was SimAngel — use MicropolisAngel (no "Sim" in product name; EA trademark respect)
-# NOT a web wrapper — native helper while you play. Web hub (Micropolis Home) ships FIRST.
+# NOT a web wrapper — native helper while you play. Web hub (Soul City) ships FIRST.
 
 id: micropolis-angel
 status: planted
@@ -12,14 +12,14 @@ requires:
   doc: ../get-the-sims-on-steam.md
   note: |
     The Sims 1 runs on Windows only in Legacy Collection — not on Mac. MicropolisAngel targets
-    the PC where the game actually runs. Mac users browse catalogs and albums on Micropolis Home (web).
+    the PC where the game actually runs. Mac users browse catalogs and albums on Soul City (web).
 
 one_line: |
   Steam Software companion that watches over you playing Sims 1 — catalog, accessibility, machinima,
   streaming, and Exchange revival — supercharging storytelling without replacing the game.
 
 not:
-  - "Electron shell around Micropolis Home website"
+  - "Electron shell around Soul City website"
   - "Implied EA endorsement or Plumbob branding"
   - "Cheat bot or TSO economy exploit suite"
   - "Mac app (game does not run there)"
@@ -34,13 +34,13 @@ why_now:
     scenes, share object collections, revive Exchange-style publishing — plus Simplifier lineage
     (screen read, TTS, guided browse) and modern streaming stack.
   gateway: |
-    MicropolisAngel is the desktop gateway to Micropolis Home and the resurrection of EA's historic
+    MicropolisAngel is the desktop gateway to Soul City and the resurrection of EA's historic
     but expired web services (Sims Exchange storytelling + downloadable content culture).
 
 # ROLLOUT — web first, Angel second
 rollout:
   order:
-    1: "Micropolis Home web hub — create · publish · share; bootstrap audience (no install)"
+    1: "Soul City web hub — create · publish · share; bootstrap audience (no install)"
     2: "Steam Community Guides + MTS + YouTube + Repo Shows — promote web URL"
     3: "Announce MicropolisAngel on Steam Software when web hub + catalog sync are live"
   rule: |
@@ -67,9 +67,9 @@ capabilities:
   catalogs_and_sharing:
     items:
       - "Search, browse, favorite, share favorites lists online"
-      - "Share personal catalogs, curated lists, and save files via Micropolis Home federation"
+      - "Share personal catalogs, curated lists, and save files via Soul City federation"
       - "Playback shared lists — guided tour through someone else's picks"
-    web_sync: "Micropolis Home is source of truth for published lists; Angel is the in-game client"
+    web_sync: "Soul City is source of truth for published lists; Angel is the in-game client"
 
   storytelling:
     items:
@@ -86,7 +86,7 @@ capabilities:
       - ../simfreaks/
     export_folder_watcher: |
       Dream workflow from community research: tray app watches UserData/Houses + Web Pages export →
-      auto-upload to Micropolis Home / optional SFS → clipboard link. Replaces alt-tab browser upload
+      auto-upload to Soul City / optional SFS → clipboard link. Replaces alt-tab browser upload
       the 2025 Steam release never restored.
 
   machinima_and_streaming:
@@ -115,11 +115,11 @@ capabilities:
     playful_name: "Graveyard manager — Death, Satan, and the bodies"
     what: |
       Integrates with Sims 1 Death (Grim Reaper) and Satan NPCs; enumerates urns and tombstones
-      from **save-file parse** (Micropolis Home TS in embedded WebView2); guides resurrection,
+      from **save-file parse** (Soul City TS in embedded WebView2); guides resurrection,
       deliberate story kills, and cloning.
     data_path: |
       Primary: read neighborhood/lot saves via FileBridge — not screen scrape.
-      Angel runs full Micropolis Home content platform in WebView2; talks to central SvelteKit
+      Angel runs full Soul City content platform in WebView2; talks to central SvelteKit
       for publish/sync; local SQLite catalog cache; no local Svelte server required v1.
     sims1_objects: ["The Grim Reaper", "Satan", "Urn/Tombstone", Victorian and Cloisonne urns]
     requires_lifecycle: |
@@ -131,8 +131,8 @@ capabilities:
   unified_stream_gateway:
     what: |
       MicropolisAngel IS the Windows ship target for stream-gateway + Simplifier — one app:
-      embedded Micropolis Home TS platform, Twitch/YouTube/OBS, cursor-mirror, catalog crawl.
-    shell: "WinUI 3 + WebView2 → central Micropolis Home site + FileBridge (NOT local Svelte v1)"
+      embedded Soul City TS platform, Twitch/YouTube/OBS, cursor-mirror, catalog crawl.
+    shell: "WinUI 3 + WebView2 → central Soul City site + FileBridge (NOT local Svelte v1)"
     impl: ../../apps/micropolis-angel/ARCHITECTURE.yml
     simskit: ../../apps/micropolis-angel/SIMSKIT-LINEAGE.yml
     dev_setup: ../../apps/micropolis-angel/WINDOWS-DEV-SETUP.md
@@ -144,20 +144,20 @@ steam:
   platform: [windows]
   framing: |
     Fair assistant and creator tool for Legacy Collection players — catalog, accessibility,
-    machinima, streaming. Links to Micropolis Home and federated creator storefronts (SimFreaks,
+    machinima, streaming. Links to Soul City and federated creator storefronts (SimFreaks,
     SimSlice, …). Fan-made; not EA-endorsed.
   disclaimer: |
     Not endorsed by or affiliated with Electronic Arts, or its licensors. Trademarks are the
     property of their respective owners.
 
-# RELATION TO MICROPOLIS HOME
+# RELATION TO SOUL CITY
 relationship:
-  web_hub: micropolis-home (this directory)
+  web_hub: soul-city (this directory)
   guides: steam-community-guide.yml
   division: |
     Browser = create · publish · share · discover · Repo Shows · zero install.
     MicropolisAngel = Windows-native while-you-play: scrape, install, TTS showcase, stream, playset publish.
-  sync: "Favorites lists, catalogs, albums, saves round-trip through Micropolis Home federation APIs"
+  sync: "Favorites lists, catalogs, albums, saves round-trip through Soul City federation APIs"
 
 see_also:
   - README.md

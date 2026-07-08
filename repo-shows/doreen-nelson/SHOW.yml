@@ -28,8 +28,8 @@ segments:
   - id: free_the_guides
     topic: "Courseware rights — Leslie Stoltz, EA, Chuck Normann clearance arc"
 
-  - id: micropolis_home
-    topic: "Scriptable simulators — spreadsheets, Sugar vision, Micropolis Home today"
+  - id: soul_city
+    topic: "Scriptable simulators — spreadsheets, Sugar vision, Soul City today"
     links:
       - characters/will-wright/sources/simcity-open-source-saga/
 

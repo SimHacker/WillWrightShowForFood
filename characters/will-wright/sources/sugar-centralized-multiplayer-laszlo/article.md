@@ -49,7 +49,7 @@ Separate but related: **Python/SQLObject/MySQL** CMS for SimFreaks — centraliz
 - [`../2005-09-18-laszlo-database-interface/`](../2005-09-18-laszlo-database-interface/README.md)
 - [`../2005-09-18-simfreaks-content-catalog-laszlo/`](../2005-09-18-simfreaks-content-catalog-laszlo/README.md)
 
-**Convergence (2026):** Micropolis Home — git CARD metadata + stream-gateway derived DB + Simplifier live capture.
+**Convergence (2026):** Soul City — git CARD metadata + stream-gateway derived DB + Simplifier live capture.
 
 ---
 

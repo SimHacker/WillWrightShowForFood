@@ -62,7 +62,7 @@ abilities:
     score_when:
     - trigger: audience_learns_something_true
       weight: 0.85
-  effect: Connect Sims social systems to Micropolis Home revival.
+  effect: Connect Sims social systems to Soul City revival.
   verifiable: Public Sims consultancy credit
   combos_with:
   - WILL-PORTABILITY

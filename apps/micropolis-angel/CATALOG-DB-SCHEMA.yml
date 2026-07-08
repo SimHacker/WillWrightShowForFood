@@ -1,7 +1,7 @@
-# Micropolis Home — local catalog SQLite schema (v1)
+# Soul City — local catalog SQLite schema (v1)
 # Regenerate from owned Sims install + user roots — NOT third-party XML catalogs as truth.
 # Browser TypeScript (sql.js / wa-sqlite) + MicropolisAngel FileBridge; Node scan on server for heavy jobs.
-# Publish read-only snapshots via Datasette; federation sync → Postgres on central Micropolis Home.
+# Publish read-only snapshots via Datasette; federation sync → Postgres on central Soul City.
 
 meta:
   id: micropolis-catalog-db
@@ -22,7 +22,7 @@ lineage:
       IFF/FAR parsing, scan roots, GUID collision analysis, and catalog inventory patterns
       originate in the Sim Obliterator / vitamoo TypeScript port and Python `src/formats/iff/`.
     credit: |
-      Micropolis Home catalog tooling builds on ideas and code from the Sim Obliterator project.
+      Soul City catalog tooling builds on ideas and code from the Sim Obliterator project.
       Full credit in CREDITS.yml and package READMEs. We reimplement in WWSFF-owned TypeScript
       under our IP hygiene rules — we do not ship Obliterator as a dependency without license review.
     read_first:
@@ -60,7 +60,7 @@ runtime:
   local:
     host: "MicropolisAngel FileBridge OR browser File System Access API"
     engine: "sql.js / wa-sqlite — single .sqlite file per user machine"
-    path_default: "%APPDATA%/MicropolisHome/catalog.sqlite"
+    path_default: "%APPDATA%/SoulCity/catalog.sqlite"
   server:
     engine: postgres
     role: "Federated merge of uploaded metadata batches; public catalog CARD dirs; search"
@@ -501,7 +501,7 @@ workflows:
       - "For each missing: save_resolutions via catalog lookup + fuzzy fingerprint + archive search"
       - "LLM compares candidates — disposition logged, not silent"
       - "save_bundles — package custom .far + manifest + creator_claims + Patreon links"
-      - "Publish to Micropolis Home federation; credit artists in manifest"
+      - "Publish to Soul City federation; credit artists in manifest"
 
   creditcasting:
     steps:

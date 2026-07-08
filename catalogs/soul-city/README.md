@@ -1,12 +1,18 @@
-# Micropolis Home
+# Soul City
 
 *Sniff:* [`CATALOG.yml`](CATALOG.yml) · [`../GLANCE.yml`](../GLANCE.yml) · [`../README.md`](../README.md)
 
 **Create · publish · share** — the platform, not just another catalog shelf.
 
+*Formerly `micropolis-home` (rebranded 2026-07-08). Soul is the family name: less Micropolis
+coupling — Micropolis stays the city sim — and the platform takes the liminal city's own name.
+Creating, publishing, and sharing don't happen NEXT to Soul City; they happen IN it. Plaza
+(browse + make), Depot (upload/download), Station (bridges to other games), and Terminal (port
+of entry) are its districts.*
+
 ## What it is
 
-Micropolis Home rebuilds the Sims 1 content-creation stack as a **web-native platform** on Micropolis Federation rails:
+Soul City rebuilds the Sims 1 content-creation stack as a **web-native platform** on Micropolis Federation rails:
 
 | Layer | Examples |
 |-------|----------|
@@ -18,7 +24,7 @@ Micropolis Home rebuilds the Sims 1 content-creation stack as a **web-native pla
 
 ## Steam Community Guides
 
-**Not a separate Steam app** — official player guides on [The Sims Legacy Collection](https://store.steampowered.com/app/3314070/The_Sims/) Community Hub. Informational playbooks that link out to Micropolis Home (web) and Repo Shows. No install for readers.
+**Not a separate Steam app** — official player guides on [The Sims Legacy Collection](https://store.steampowered.com/app/3314070/The_Sims/) Community Hub. Informational playbooks that link out to Soul City (web) and Repo Shows. No install for readers.
 
 Four jobs the guides cover:
 
@@ -31,14 +37,14 @@ Four jobs the guides cover:
 
 | Phase | Surface |
 |-------|---------|
-| **Now** | [Micropolis Home](CATALOG.yml) web hub + [Steam Community Guides](steam-community-guide.yml) |
+| **Now** | [Soul City](CATALOG.yml) web hub + [Steam Community Guides](steam-community-guide.yml) |
 | **Later** | [**MicropolisAngel**](micropolis-angel.yml) — Windows Steam Software companion (Simplifier + catalog + machinima + streaming). Announced after web audience bootstraps. |
 
 Spec: [`steam-community-guide.yml`](steam-community-guide.yml) · [`micropolis-angel.yml`](micropolis-angel.yml) · landscape: [`../sims1-community-landscape.md`](../sims1-community-landscape.md)
 
 ## Federated catalogs
 
-Each keeps its brand and storefront; Micropolis Home is the shared rails:
+Each keeps its brand and storefront; Soul City is the shared rails:
 
 | Catalog | → |
 |---------|---|

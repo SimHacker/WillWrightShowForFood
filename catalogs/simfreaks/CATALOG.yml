@@ -34,7 +34,7 @@ sources:
   - ../characters/will-wright/sources/2005-09-18-player-created-content-index/
 
 platform:
-  hosted_on: ../micropolis-home/
+  hosted_on: ../soul-city/
   note: "First intended CMS customer — Don's Laszlo prototype was built for Heather"
 
 related_catalogs:

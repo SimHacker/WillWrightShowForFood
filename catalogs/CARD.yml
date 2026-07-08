@@ -18,9 +18,9 @@ methods:
     advertisement: "Heather's deep SimAntics suites — one of the richest Sims 1 catalogs."
   BROWSE-SIMPROV:
     signature: "browseSimProv() → simprov/"
-    advertisement: "Wedding playset lineage — SimProv CMS + Micropolis Home bridge."
-  OPEN-MICROPOLIS-HOME:
-    signature: "openMicropolisHome() → micropolis-home/"
+    advertisement: "Wedding playset lineage — SimProv CMS + Soul City bridge."
+  OPEN-SOUL-CITY:
+    signature: "openSoulCity() → soul-city/"
     advertisement: "Federation rails — where new catalogs plug in after the show harvests."
 
 abilities:
@@ -29,7 +29,7 @@ abilities:
     type: activated
     advertisement:
       method: portContent
-      signature: "portContent(legacyCatalog) → micropolis-home/"
+      signature: "portContent(legacyCatalog) → soul-city/"
       score_when:
         - trigger: data_portability_topic
           weight: 0.95

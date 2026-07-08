@@ -24,7 +24,7 @@ We are not pitching vapor. The evidence lives in [`../../characters/will-wright/
 | [SimSlice](../../catalogs/simslice/README.md) | Steve Alvey — SliceCity, nested SimCity |
 | [SimProv](../../catalogs/simprov/README.md) | Wedding playset + composable orchestration |
 | [Zombie Sims](../../catalogs/zombie-sims/README.md) | Current magnum-opus pack — still shipping |
-| [**Micropolis Home**](../../catalogs/micropolis-home/README.md) | **Create · publish · share** platform hosting all of the above |
+| [**Soul City**](../../catalogs/soul-city/README.md) | **Create · publish · share** platform hosting all of the above |
 
 **Before any of that:** [**get The Sims on Steam**](../../catalogs/get-the-sims-on-steam.md). We made this game; we want EA to see Steam sales and documented fan culture — not another 26-year hostility cycle.
 
@@ -51,7 +51,7 @@ Two repos, one arc:
 Open-source descendant of SimCity — Don's lineage from the NeWS port through OLPC to today's WASM/SvelteKit stack. Micropolis is where **simulation meets publishing**:
 
 - Branching pop-up dialogs (title, picture, text, pie-menu buttons) — the same machinery as family album readers and the Dumbold's illustrated agitprop
-- Federation-friendly content cards, hosted catalogs, round-trippable saves (see [Micropolis Home](../../catalogs/micropolis-home/README.md) · [publishing vision](../../characters/will-wright/media/sims-series-micropolis-publishing-vision.md))
+- Federation-friendly content cards, hosted catalogs, round-trippable saves (see [Soul City](../../catalogs/soul-city/README.md) · [publishing vision](../../characters/will-wright/media/sims-series-micropolis-publishing-vision.md))
 - **Repo Show Class**: go to the people who invented the ideas, capture them in public, implement on stream — the product is methodology + knowledge; the game is the proof
 
 ### WillWrightShowForFood (the show + corpus)
@@ -135,7 +135,7 @@ The wedding playset is the human magnum opus; Micropolis + federation publishing
 | Funder / producer | This file → [family manifesto](../../characters/will-wright/media/sims-series-family-manifesto.md) → [Crowd Sitter + Dumbold sources](../../characters/will-wright/sources/README.md) |
 | Will / design peer | [1996 Winograd medium article](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/medium-article.md) → [SHOW.yml](SHOW.yml) |
 | Heather / Steve / UCC veterans | [Catalogs hub](../../catalogs/README.md) → [SimFreaks](../../catalogs/simfreaks/README.md) → [afterlife-zombie-bridge](../heather-and-steve-alvey/afterlife-zombie-bridge.yml) |
-| Player / Steam Sims 1 fan | [Content catalogs](../../catalogs/README.md) → [../../characters/will-wright/media/](../../characters/will-wright/media/README.md) galleries → download via [Micropolis Home](../../catalogs/micropolis-home/README.md) |
+| Player / Steam Sims 1 fan | [Content catalogs](../../catalogs/README.md) → [../../characters/will-wright/media/](../../characters/will-wright/media/README.md) galleries → download via [Soul City](../../catalogs/soul-city/README.md) |
 
 ---
 

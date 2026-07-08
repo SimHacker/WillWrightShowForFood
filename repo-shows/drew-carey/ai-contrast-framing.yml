@@ -141,7 +141,7 @@ our_frame:
       same rule Drew learned on radio. Sympathize, don't preach.
 
   micropolis_angel_advice:
-    spec: ../../catalogs/micropolis-home/micropolis-angel.yml#chat_with_god
+    spec: ../../catalogs/soul-city/micropolis-angel.yml#chat_with_god
     one_line: |
       Screen + telemetry → ChatGPT advice → read aloud. "Chatting with God" — playful Sim Religion;
       not a host voice clone. Cross-game Angel; character models as souls. Optional token subscription.
@@ -169,6 +169,6 @@ see_also:
   - ../ideas/traditions/make-play-tools-show.yml
   - ../../characters/don-hopkins/career/stupid-fun-club.yml
   - ../../characters/will-wright/sources/don-youtube-storymaker-demo/
-  - ../../catalogs/micropolis-home/micropolis-angel.yml
+  - ../../catalogs/soul-city/micropolis-angel.yml
   - ai-contrast-framing.md
   - ../../characters/drew-carey/invitation.md

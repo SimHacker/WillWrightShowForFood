@@ -2,7 +2,7 @@
 
 *Machine index:* [`sims1-community-landscape.yml`](sims1-community-landscape.yml)
 
-Who still serves Sims 1 custom content, how they pay for it, and how **Micropolis Home** + a optional **free Steam companion** fit without fighting EA or vacuuming Heather and Steve.
+Who still serves Sims 1 custom content, how they pay for it, and how **Soul City** + a optional **free Steam companion** fit without fighting EA or vacuuming Heather and Steve.
 
 ## Buy the game first
 
@@ -18,7 +18,7 @@ The old **Transmogrifier** click-through license is still instructive ([full tex
 - Fan creations on a **noncommercial** site with EA's disclaimer block
 - No redistribution of EA's tool binary
 
-**Micropolis Home** is a **clean-room reimplementation** of SimShow / Transmogrifier / RugOMatic in the browser — not mirroring the 2000 `.exe`. SimProv and allied catalogs are **fan-authored objects**; players supply the game.
+**Soul City** is a **clean-room reimplementation** of SimShow / Transmogrifier / RugOMatic in the browser — not mirroring the 2000 `.exe`. SimProv and allied catalogs are **fan-authored objects**; players supply the game.
 
 Status quo (MTS, SimFreaks, subscriptions) is not a signed release from EA Legal. Strategy: **free UCC + disclaimer + drive Steam sales**, not paid wrappers around EA assets.
 
@@ -48,27 +48,27 @@ Status quo (MTS, SimFreaks, subscriptions) is not a signed release from EA Legal
 | **Exchange / originalsims history** | Saves, family albums, characters — IA + Simopolis hub ([2004 essay](../characters/will-wright/sources/2004-01-12-sims-exchange/); [2025 Steam gap](../characters/will-wright/sources/sims1-legacy-collection-exchange-gap/)) |
 | **SimFileShare** | Post-Exchange shortlink host (`simfil.es`) — browser-only upload; invite-gated creators ([research](../characters/will-wright/sources/sims1-legacy-collection-exchange-gap/community-sharing-today.yml)) |
 | **IA import pipeline** (`tornado_importer` working name) | Harvest Wayback → CARD records (URL, creator, install notes) — **index**, don't blindly re-host whole dead sites |
-| **Simopolis** | Deep hub for round-trippable saves and cross-game facets ([bridge architecture](../repo-shows/INDEX.yml); [GitHub distribution](micropolis-home/github-distribution-model.yml)) |
+| **Simopolis** | Deep hub for round-trippable saves and cross-game facets ([bridge architecture](../repo-shows/INDEX.yml); [GitHub distribution](soul-city/github-distribution-model.yml)) |
 | **GitHub object repo** | Free UCC + metadata CARDs in [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) + MOOLLM/Soul City in [moollm](https://github.com/SimHacker/moollm) — TSR browse replacement for repo-native lane |
 
 Federated **brand** catalogs: [SimFreaks](simfreaks/), [SimSlice](simslice/), [SimProv](simprov/), [Zombie Sims](zombie-sims/).
 
 ---
 
-## Steam Community Guides — Micropolis Home discovery
+## Steam Community Guides — Soul City discovery
 
-**Not a separate Steam app** — official player guides on The Sims Legacy Collection Community Hub. Informational playbooks that link to Micropolis Home (web) and Repo Shows. No install for readers.
+**Not a separate Steam app** — official player guides on The Sims Legacy Collection Community Hub. Informational playbooks that link to Soul City (web) and Repo Shows. No install for readers.
 
 | Job | What |
 |-----|------|
-| **Catalogs & tools** | Links to Micropolis Home web — SimFreaks, SimSlice, SimProv, Zombie Sims, MTS, IA index, web Transmogrifier/SimShow |
+| **Catalogs & tools** | Links to Soul City web — SimFreaks, SimSlice, SimProv, Zombie Sims, MTS, IA index, web Transmogrifier/SimShow |
 | **Repo Shows channel** | Discover & promote Repo Show Class shows — **Will Wright flagship**, guests, live/VOD, GitHub, TicketPR |
 | **Sims & bridges** | Episodes about The Sims + **Simopolis bridges** to other games (Minecraft, Stardew, Proxi, Spore, …) |
 | **EA alignment** | Requires owned Sims on Steam; fan-guide disclaimer; drives sales; revives Exchange |
 
 The guide is the **front door to the show** for players who just bought Legacy Collection and want to know what this 26-year culture is about — without downloading another app.
 
-Full spec: [`micropolis-home/steam-community-guide.yml`](micropolis-home/steam-community-guide.yml)
+Full spec: [`soul-city/steam-community-guide.yml`](soul-city/steam-community-guide.yml)
 
 | Do | Don't |
 |----|--------|
@@ -77,19 +77,19 @@ Full spec: [`micropolis-home/steam-community-guide.yml`](micropolis-home/steam-c
 | Promote Will show + bridge episodes + public repo | Replace ZombieSims **$9.99 lifetime** — lift creators |
 | Deep-link streams, issues, play-along submit | Plumbob branding / implied EA endorsement |
 
-**Rollout:** web Micropolis Home + public repo → Steam Community Guide + MTS + YouTube → **MicropolisAngel** (Windows Steam companion) → EA conversation after traction.
+**Rollout:** web Soul City + public repo → Steam Community Guide + MTS + YouTube → **MicropolisAngel** (Windows Steam companion) → EA conversation after traction.
 
 ---
 
 ## MicropolisAngel — Windows Steam companion (later)
 
-**Not a web wrapper** — native **Steam Software** for Windows (Sims 1 does not run on Mac). Watches over you playing: Simplifier TTS showcase, catalog capture, find/download/install, favorites lists you share and play back, machinima + OBS/Twitch, gateway to Exchange revival via Micropolis Home.
+**Not a web wrapper** — native **Steam Software** for Windows (Sims 1 does not run on Mac). Watches over you playing: Simplifier TTS showcase, catalog capture, find/download/install, favorites lists you share and play back, machinima + OBS/Twitch, gateway to Exchange revival via Soul City.
 
 Much of the catalog/playset UX already exists in Don's **SimFreaks prototype** — compose 2D scenes with room snapshot backgrounds, place objects and Sims like vinyl sticker playsets, publish installable collections.
 
 **Announce after** the web hub bootstraps an audience — guides and MTS first, Angel second.
 
-Full spec: [`micropolis-home/micropolis-angel.yml`](micropolis-home/micropolis-angel.yml)
+Full spec: [`soul-city/micropolis-angel.yml`](soul-city/micropolis-angel.yml)
 
 ---
 
@@ -99,4 +99,4 @@ Companion that **requires the game**, **recommends Steam purchase**, **revives E
 
 Short-term risk is highest when you look like a **store selling their IP** or **replacing their re-release's missing Exchange**. Lowest when you look like **infrastructure for the fan economy that already exists** — with Heather and Steve paid first.
 
-↑ [`README.md`](README.md) · [`micropolis-home/`](micropolis-home/README.md)
+↑ [`README.md`](README.md) · [`soul-city/`](soul-city/README.md)

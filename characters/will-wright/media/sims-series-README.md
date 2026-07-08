@@ -57,7 +57,7 @@ Ian Bogost episode seed.
 Name origin, EA legal stand-down, Will/Chris emails — the modder toolchain story.
 
 **[sims-series-micropolis-publishing-vision.md](sims-series-micropolis-publishing-vision.md)**  
-From SimFreaks CMS to Micropolis Home federation — publishing vision essay.
+From SimFreaks CMS to Soul City federation — publishing vision essay.
 
 **[sims-series-inclusivity-paper-draft.md](sims-series-inclusivity-paper-draft.md)**  
 QGCon paper seed — "How Inclusivity Saved The Sims."

@@ -10,7 +10,7 @@ Transmogrifier-era fan content.
 ## Why we say this out loud
 
 Don Hopkins and many contributors **made** this game — UI, tools, objects, inclusivity work, the
-Exchange culture that became SimFreaks and Micropolis Home. For twenty-six years fans have done
+Exchange culture that became SimFreaks and Soul City. For twenty-six years fans have done
 what Will Wright described in 1996: treat games as **train sets**, swap data, extend microworlds.
 That is the hobby model. It is not piracy cosplay.
 
@@ -34,5 +34,5 @@ lineage honestly. Trademark respect applies; so does giving credit where money s
 When we demo custom content on a Repo Show, say it plainly: **get The Sims on Steam first.**
 The catalogs we syndicate ([`README.md`](README.md)) sit on top of a game you should own.
 
-See also: [`maxis/`](maxis/README.md) · [`micropolis-home/`](micropolis-home/README.md) ·
+See also: [`maxis/`](maxis/README.md) · [`soul-city/`](soul-city/README.md) ·
 [`../characters/will-wright/sources/maxis-licenses-chain-of-custody/`](../characters/will-wright/sources/maxis-licenses-chain-of-custody/README.md)

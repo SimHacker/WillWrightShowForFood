@@ -6,7 +6,7 @@ Extracted from Don Hopkins's working notes (`DonHopkins/temp/big-prompts.txt`, 2
 
 ## Core idea
 
-Extend the **SimFreaks / SimProv content platform** into **Micropolis Home** — create · publish · share on federation rails:
+Extend the **SimFreaks / SimProv content platform** into **Soul City** — create · publish · share on federation rails:
 
 - Catalog stubs: [../../../catalogs/](../../../catalogs/README.md) (SimFreaks, SimSlice, SimProv, Zombie Sims + platform)
 
@@ -33,7 +33,7 @@ This is what **Ian Bogost** calls procedural rhetoric: ideology and argument enc
 
 ## Cross-links
 
-- [Content catalogs](../../catalogs/README.md) — SimFreaks, SimSlice, SimProv, Zombie Sims + Micropolis Home
+- [Content catalogs](../../catalogs/README.md) — SimFreaks, SimSlice, SimProv, Zombie Sims + Soul City
 - [Heather & Steve Alvey show](../../../heather-and-steve-alvey/README.md) — independent creators, first platform users
 - [afterlife-zombie-bridge.yml](../../../heather-and-steve-alvey/afterlife-zombie-bridge.yml) — Zombie Sims flagship episode
 - [send-code-not-commands trail](../../../../process/trails/send-code-not-commands.md)

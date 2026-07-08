@@ -17,7 +17,7 @@ playful systems (e.g. **Sandspiel**).
 Chaim's book draws on archives Don helped surface — including the **1991 Sun GIS memo** and the
 published account of **EA open-sourcing SimCity** ([Don's Medium excerpt](https://donhopkins.medium.com/open-sourcing-simcity-58470a275446)).
 Chaim introduced Don to **Sam Arbesman** (2024) after Sam interviewed him on the Maxis history
-podcast. Complementary shows: Chaim's historian lens vs Don's running **Micropolis Home** fork.
+podcast. Complementary shows: Chaim's historian lens vs Don's running **Soul City** fork.
 
 ## The hooks
 

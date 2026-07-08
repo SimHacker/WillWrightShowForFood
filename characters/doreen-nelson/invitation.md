@@ -17,7 +17,7 @@ We would respectfully invite **Doreen Nelson** to a **Repo Show** — a Repo Sho
 
 **Design-Based Learning meets open SimCity** — how city-building pedagogy and the classic Maxis teacher guides can live on in **Micropolis** and modern constructionist tools (Sugar lineage, scripting, View Source).
 
-You pioneered teaching the whole curriculum by having students **build model cities first**. Don Hopkins pushed to **open-source SimCity for OLPC** in 2006; you wrote back that the guides were **still relevant** and asked how you could help. That thread is still the throughline for Micropolis Home and classroom use today.
+You pioneered teaching the whole curriculum by having students **build model cities first**. Don Hopkins pushed to **open-source SimCity for OLPC** in 2006; you wrote back that the guides were **still relevant** and asked how you could help. That thread is still the throughline for Soul City and classroom use today.
 
 ## What we'd explore together
 

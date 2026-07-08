@@ -60,7 +60,7 @@ object_record_schema:
 pipeline:
   iff_reader:
     status: planned
-    host: "Micropolis Home TypeScript in Angel WebView2 + FileBridge to local .far"
+    host: "Soul City TypeScript in Angel WebView2 + FileBridge to local .far"
     note: "Read .iff directly; WebGPU render — Transmogrifier / ShowNTell parity without ActiveX"
   sqlite_catalog:
     status: spec

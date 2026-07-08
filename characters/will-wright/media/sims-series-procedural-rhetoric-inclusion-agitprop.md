@@ -32,7 +32,7 @@ Ask Bogost to react to:
 1. **Motive.c** — failure conditions as persuasive design (starvation, mandatory bath, temper)
 2. **Wedding playset** — inclusion encoded in orchestration tools, not a cutscene manifesto
 3. **Dumbold** — agitprop that aged; how procedural satire dates vs. inclusion playsets that **gain** force when republished
-4. **Micropolis Home** — federation publishing for artisanal UCC; procedural rhetoric as a **platform** feature, not one-off objects
+4. **Soul City** — federation publishing for artisanal UCC; procedural rhetoric as a **platform** feature, not one-off objects
 
 5. **How to Deconstruct the Cube** — optional segment with Ian:
    - [Curiosity + Cow Clicker parody](../../ideas/gags/curiosity-cow-cube.yml) — keep real Curiosity dead; center is Bogost's cow (or Berkeley horse — "that's a cow")

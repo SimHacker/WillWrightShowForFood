@@ -38,7 +38,7 @@ Maxis days.
   tell someone starting where you started in 2013.
 - **Sims lore you actually care about** — e.g. the three-stories question; we can ask Will on air
   if you want the canonical answer filed in the repo.
-- **TMOG / browser pipeline** — your modernization offer and where it meets Micropolis Home,
+- **TMOG / browser pipeline** — your modernization offer and where it meets Soul City,
   SimObliterator, and the soul mover.
 
 ---

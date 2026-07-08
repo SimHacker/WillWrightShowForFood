@@ -136,7 +136,7 @@ relationship:
 the_mission_grounded_in_the_invite:
   # The fuller mission the invitation lays out (so the show can stay focused/anything-goes).
   bridges: "Bridging characters between worlds — Proxi ↔ Sims ↔ Stardew + beyond (data-portability crown jewel + Mind Mirror). See ../game-bridge-proxi-sims.yml, ../game-bridge-sims-stardew.yml."
-  web_tools_platform: "Rebuilding the whole Sims content stack (render/read/write/edit/GENERATE) as a web-browser platform for content tools — Transmogrifier/RugOMatic/WigOMatic reborn web-native. = Micropolis Home (MODULES)."
+  web_tools_platform: "Rebuilding the whole Sims content stack (render/read/write/edit/GENERATE) as a web-browser platform for content tools — Transmogrifier/RugOMatic/WigOMatic reborn web-native. = Soul City (MODULES)."
   exchange_revival: "Reviving the Sims EXCHANGE (community save + story sharing) now that Sims 1 is on Steam without it — the piece that made The Sims a medium. (MODULES sims_exchange_revival.)"
   full_circle: "That 1996 talk was a Terry-Winograd public UI seminar (the Repo Show's direct forebear — see ../../process/design-in-public.yml#forebears). Don was in the audience asking Will questions; he later uploaded the video + wrote the transcript + Medium article. Doing the FIRST Repo Show with Will = closing that loop, 30 years on."
 
@@ -173,7 +173,7 @@ consent: invitation_accepted          # Will accepted July 2026 — kickoff gues
 files:
   README.md:     "Overview + framing + the Flower-Child icon."
   INTRO-NARRATIVE.md: "Micropolis + WWSFF mapping, wedding playset phoenix, agitprop framing — proof it worked."
-  ../../catalogs/: "SimFreaks, SimSlice, SimProv, Zombie Sims + Micropolis Home platform (create · publish · share)."
+  ../../catalogs/: "SimFreaks, SimSlice, SimProv, Zombie Sims + Soul City platform (create · publish · share)."
   invitation.md: "Long written follow-up sent after 2026-06-24 phone call — Will accepted July 2026."
   episodes.yml:  "The kickoff + the topical episodes that flow from it."
   ../../characters/will-wright/media/:       "DonHopkinsSimsCreditsIcon.jpg — the User Interface Flower Child."

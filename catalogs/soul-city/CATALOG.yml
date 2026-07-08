@@ -1,9 +1,10 @@
 catalog:
-  id: micropolis-home
-  title: Micropolis Home
+  id: soul-city
+  title: Soul City
   tagline: "Create · publish · share"
   kind: platform
   status: planted
+  formerly: micropolis-home  # rebranded 2026-07-08 — Soul is the family name; less Micropolis coupling (the name is licensed). The platform takes the liminal city's own name: create/publish/share happens IN Soul City. Plaza, Depot, Station, Terminal are its districts.
 
 what: |
   Web-browser platform for Sims-family user-created content — the whole stack
@@ -11,7 +12,7 @@ what: |
   reborn on Micropolis Federation rails. Hosts legacy catalogs AND new creator work.
 
 not_just_a_catalog: |
-  Catalogs list what exists. Micropolis Home is where you make it, ship it, and
+  Catalogs list what exists. Soul City is where you make it, ship it, and
   play it together — tools + publishing + sharing in one place.
 
 layers:
@@ -38,7 +39,7 @@ steam_community_guides:
   spec: steam-community-guide.yml
   summary: |
     Steam Community Guide(s) on Legacy Collection hub — link-rich fan guides channeling players to
-    Micropolis Home (web) and Repo Shows. Not a wrapper app; no install required.
+    Soul City (web) and Repo Shows. Not a wrapper app; no install required.
   requires: ../get-the-sims-on-steam.md
 
 micropolis_angel:

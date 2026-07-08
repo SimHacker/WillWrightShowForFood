@@ -6,7 +6,7 @@ meta:
   updated: "2026-07-08"
   product: The Sims Legacy Collection
   steam: https://store.steampowered.com/app/3314070/The_Sims/
-  implementation: ../../../../catalogs/micropolis-home/browser-ecosystem.yml
+  implementation: ../../../../catalogs/soul-city/browser-ecosystem.yml
 
 steam_what_shipped:
   kept: [widescreen, scroll zoom, bug fixes, modern Windows port]
@@ -71,4 +71,4 @@ see_also:
   - README.md
   - legacy-collection-steam-changes.yml
   - exchange-history-and-ui.yml
-  - ../../../../catalogs/micropolis-home/browser-ecosystem.yml
+  - ../../../../catalogs/soul-city/browser-ecosystem.yml

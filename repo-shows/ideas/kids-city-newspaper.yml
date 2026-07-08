@@ -62,7 +62,7 @@ why_it_matters: |
   HISTORY.
 
 implementation_today: |
-  Micropolis Home federation is the modern rail: shared city state, voting
+  Soul City federation is the modern rail: shared city state, voting
   hooks, kid-safe collaboration — the newspaper is the publishing layer on top.
   LLMs backstage (never bylined) can do the paste-up: layout, archive indexing,
   pulling the save-file receipts a kid reporter asks for. Kids author; the
@@ -100,7 +100,7 @@ show_segment: |
 ties:
   - ../../characters/will-wright/sources/multiplayer-simcity-ui-network/README.md
   - ../will-wright-premiere/game-bridge-soul-hydraulics.yml
-  - ../../catalogs/micropolis-home/README.md
+  - ../../catalogs/soul-city/README.md
   - ../../characters/will-wright/sources/2007-11-16-simcity-rules-alan-kay/README.md
   - ../../characters/will-wright/media/sims-dumbold-voting-machine-README.md
   - themes/procedural-rhetoric.yml

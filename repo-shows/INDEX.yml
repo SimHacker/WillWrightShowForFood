@@ -24,7 +24,7 @@ shows:
     will-wright/:              "★ FIRST PLANTED SHOW. Topic-less kickoff (Will IS the topic), centered on the 1996 Winograd video. Holds SHOW.yml + README + invitation.md (draft email) + episodes.yml + suggested-questions.yml + ../../characters/will-wright/sources/ + the Flower-Child icon. Topical shows flow from it. (Seed: will-wright-series.yml.)"
     moollm-readings/:          "★ READINGS SHOW. Long-form MOOLLM script readings on YouTube — primes guests on characters, lore, AI, Apple ][ nostalgia, science. Three primer episodes in episodes.yml; distinct from casual interviews and rare live Twitch specials."
     will-wright/sims-team-steering-committee-playthrough/: "★ PLAY the Jun 1998 steering committee build live with Jamie/Bobo/Irk/Patrick/Don (+ Will?) — Edith + SimAntics reunion. Link IA; do not host binary."
-    luc-barthelet-sims-online/SHOW.yml: "Luc Barthelet — shipping The Sims, SimShow, The Sims Online → Micropolis Home / Exchange revival."
+    luc-barthelet-sims-online/SHOW.yml: "Luc Barthelet — shipping The Sims, SimShow, The Sims Online → Soul City / Exchange revival."
     phil-salvador-simrefinery/SHOW.yml: "Phil Salvador — SimRefinery archivist; MBS history; finding + playing the lost refinery sim."
     walter-bender-olpc/SHOW.yml: "Walter Bender — OLPC introducing-the-players; Sugar roadmap; Eben Moglen GPL; View Source."
     steve-wozniak/:            "Topic-less kickoff with Steve Wozniak. Apple II, 6502, open hardware, and browser-based emulators."

@@ -10,7 +10,7 @@ public work and documented connections to this repository. Things Don would love
 Luc Barthelet — General Manager at Maxis during the EA acquisition era; credited with
 sewing early fan-tool seeds (SimShow, skins sites) before The Sims shipped; later The Sims
 Online; Apple ][ programmer from way back; worked at Unity; now sails. Don wants a long interview:
-shipping The Sims, TSO and its reincarnations, and how that lineage maps to Micropolis Home /
+shipping The Sims, TSO and its reincarnations, and how that lineage maps to Soul City /
 Exchange revival today.
 
 ## The hooks
@@ -19,7 +19,7 @@ Exchange revival today.
 walk the repo on air and build from the seed.
 
 ### 2. GM Maxis; SimShow pre-launch; The Sims Online; interview
-TSO → Micropolis Home
+TSO → Soul City
 
 ## Sources (public)
 

@@ -9,7 +9,7 @@
 
 ## Shared ground
 
-Dec 2006: John Gilmore introduced the OLPC SimCity cast; Doreen replied that curriculum guides were **still relevant** and offered to help — see [`olpc-response.md`](sources/2006-12-21-olpc-curriculum-guide/olpc-response.md). Don's Micropolis fork and **Micropolis Home** continue that open-courseware arc.
+Dec 2006: John Gilmore introduced the OLPC SimCity cast; Doreen replied that curriculum guides were **still relevant** and offered to help — see [`olpc-response.md`](sources/2006-12-21-olpc-curriculum-guide/olpc-response.md). Don's Micropolis fork and **Soul City** continue that open-courseware arc.
 
 ## The hooks
 

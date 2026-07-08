@@ -42,7 +42,7 @@ lifecycle:
   title_template: "[GUID 0xXXXXXXXX] {catalog_name} — {primary_symptom}"
   body_seed:
     - "GUID, fingerprint groups, install path hints (no PII)"
-    - "Link to Micropolis Home CARD if federated"
+    - "Link to Soul City CARD if federated"
     - "Creator notify contact from creator_claims"
   branch_bootstrap:
     - "Create issue_<n> from main"
@@ -92,7 +92,7 @@ upload_consent:
     metadata_plus:
       sends: "catalog_name, catalog_desc, price, BHAV tree names from error file"
     full_file:
-      checkbox: "Share this object file with Micropolis Home maintainers and listed creator"
+      checkbox: "Share this object file with Soul City maintainers and listed creator"
       sends: "iff/far bytes to federation blob or GitHub LFS on issue branch"
       requires: "Typed confirmation; show SHA256 before upload"
   ui_joke_ack: "We are not building Cambridge Analytica for bar stools — consent is per upload."
@@ -104,13 +104,13 @@ creator_notify:
     - "ZombieSims / SimSlice federated CARD → notify_contact field"
     - "Unknown → issue comment @ community; no cold spam"
   template: |
-    Object GUID 0x… triggered {n} error reports in Micropolis Home (user-consented telemetry).
+    Object GUID 0x… triggered {n} error reports in Soul City (user-consented telemetry).
     Issue: {github_url}. Fingerprints attached; full iff only if uploader opted in.
 
 # AI + HUMAN WORKFLOW
 workflow:
   bot_on_issue_open:
-    - "Fetch linked fingerprints from Micropolis Home API"
+    - "Fetch linked fingerprints from Soul City API"
     - "Post analysis comment — BHAV risk, collision summary"
     - "Suggest disposition action (keep | re-guid | merge | disable)"
   human_author:
@@ -119,7 +119,7 @@ workflow:
     - "Merge PR → update dispositions table via sync"
     - "Close issue; quality_score updated on catalog row"
 
-# CLIENT API (Angel / Micropolis Home)
+# CLIENT API (Angel / Soul City)
 client_api:
   endpoints:
     - "POST /api/v1/object-errors — ingest parsed report"

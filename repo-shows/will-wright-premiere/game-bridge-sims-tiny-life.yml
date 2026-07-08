@@ -40,7 +40,7 @@ already_aligned:
     source: ../../characters/will-wright/sources/sims1-legacy-collection-exchange-gap/
     missing: Exchange, Internet button, Sims Creator on Legacy Collection
   github_distribution:
-    spec: ../../catalogs/micropolis-home/github-distribution-model.yml
+    spec: ../../catalogs/soul-city/github-distribution-model.yml
     posture: |
       CARD metadata in WillWrightShowForFood + MOOLLM skills in moollm repo; federate Tiny Life
       Workshop links and mod repos — searchable index, attribution, install notes; traffic to Ell.
@@ -50,7 +50,7 @@ bridge_beats:
     - "Export Walden household from Tiny Life — lot description + Tiny bios"
     - "Soul City layover — soul-file facet (names, relationships, skills, story markdown)"
     - "Optional: procreation/memorial beat from soul-city-procreation seed"
-    - "Compile to Sims 1 .fam / house bundle OR Micropolis Home git drop for Legacy Collection players"
+    - "Compile to Sims 1 .fam / house bundle OR Soul City git drop for Legacy Collection players"
   reverse:
     - "Family Album yaml in git → soul-file → Tiny Life household import json"
   live_show:
@@ -74,4 +74,4 @@ see_also:
   - ../../characters/ellpeck/bridge/soul-city-bridge.md
   - ../../characters/ellpeck/invitation.md
   - game-bridge-proxi-sims.yml
-  - ../../catalogs/micropolis-home/github-distribution-model.yml
+  - ../../catalogs/soul-city/github-distribution-model.yml

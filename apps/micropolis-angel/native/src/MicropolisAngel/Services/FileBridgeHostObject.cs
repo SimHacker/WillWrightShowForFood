@@ -1,7 +1,7 @@
 namespace MicropolisAngel.Services;
 
 // w1 — CoreWebView2.AddHostObjectToScript("fileBridge", ...)
-// Exposes read-only UserData paths to embedded Micropolis Home TypeScript.
+// Exposes read-only UserData paths to embedded Soul City TypeScript.
 public sealed class FileBridgeHostObject
 {
     public string GetVersion() => "0.1.0-placeholder";

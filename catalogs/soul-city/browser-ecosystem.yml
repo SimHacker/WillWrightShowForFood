@@ -1,4 +1,4 @@
-# Micropolis Home — browser-native Sims 1 ecosystem (Exchange replacement)
+# Soul City — browser-native Sims 1 ecosystem (Exchange replacement)
 # Fills gaps in Steam Legacy Collection; replaces zip + file manager + dead Share/Network button.
 
 meta:
@@ -43,7 +43,7 @@ vision:
 architecture:
   layers:
     local_ui:
-      what: SvelteKit Micropolis Home — runs in browser tab OR Angel WebView2
+      what: SvelteKit Soul City — runs in browser tab OR Angel WebView2
       reads: UserData via FileBridge (native) or showDirectoryPicker (PWA where supported)
       writes: Install objects, merge families, inject album pages — always save-before-mutate
     catalog_server:
@@ -94,7 +94,7 @@ capabilities:
 
 gap_fill_matrix:
   - gap: "No UCP Internet button"
-    fill: "Browser hub + tray hotkey — Share opens Micropolis Home on current lot/family"
+    fill: "Browser hub + tray hotkey — Share opens Soul City on current lot/family"
   - gap: "No Generate Web Pages cloud sync"
     fill: "Local album generator + one-click publish to catalog (yaml + html export)"
   - gap: "Manual zip + path knowledge"

@@ -20,7 +20,7 @@ pitch: |
   leads the **Foundation for Public Code** in Amsterdam. Don's oldest surviving messenger thread
   moved to **Signal** (2026-07-03). Ben immediately grasped the crown jewel: **moving characters
   and data between game worlds** — Will's explicit 1986 thesis, now implemented as browser
-  TypeScript (`packages/sims-io`), **Simopolis** as liminal uplift space, and **Micropolis Home**
+  TypeScript (`packages/sims-io`), **Simopolis** as liminal uplift space, and **Soul City**
   craft shops (Head Shop, Wig-O-Matic) with explicit publish/credit gates.
 
   Repo Show: compare **Habitat / GNE spliceable worlds** to MOOLLM **Lane Neverending**; walk
@@ -29,7 +29,7 @@ pitch: |
 
 topics:
   - "Game Neverending → Flickr → Simopolis Exchange — social spatial play as infrastructure"
-  - "Foundation for Public Code × Micropolis Home — attribution, provenance, opt-in publish"
+  - "Foundation for Public Code × Soul City — attribution, provenance, opt-in publish"
   - "Lane Neverending (MOOLLM) ↔ Habitat ↔ GNE — circular streets, splice more segments"
   - "Will 1986 data portability — Ben validated as first-episode starting point (Signal 2026-07-03)"
   - "OpenLaszlo SimProv Wedding Playset + SimFreaks — what was prototyped vs what's new (LLM uplift)"

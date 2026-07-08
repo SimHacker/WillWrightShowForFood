@@ -4,7 +4,7 @@
 
 ## Why this matters
 
-Don Hopkins worked on cooperative multiplayer SimCity from the early 1990s through educational and OLPC-era visions. The UI and sync model are a through-line from **SimCityNet** → **Columbia/EA educational proposal** → **Micropolis** → **Sugar mesh networking** — and they inform Micropolis Home federation today (shared state, voting, newspapers, kid-safe collaboration).
+Don Hopkins worked on cooperative multiplayer SimCity from the early 1990s through educational and OLPC-era visions. The UI and sync model are a through-line from **SimCityNet** → **Columbia/EA educational proposal** → **Micropolis** → **Sugar mesh networking** — and they inform Soul City federation today (shared state, voting, newspapers, kid-safe collaboration).
 
 ## Source chain (start here)
 
@@ -25,7 +25,7 @@ Don Hopkins worked on cooperative multiplayer SimCity from the early 1990s throu
 3. **Network model** — What was implemented vs planned (authoritative server? peer sync? turn boundaries?).
 4. **UI patterns** — Pie menus, multi-user cursors, role separation, kid-friendly Sugar redesign (book mode, game pad).
 5. **Educational / Columbia thread** — Linux/X11 classroom deployment; tie to EA negotiation and open-source Micropolis.
-6. **Lessons for Micropolis Home** — Federation rails, operator consent, Simplifier as accessibility layer (not cheat bot).
+6. **Lessons for Soul City** — Federation rails, operator consent, Simplifier as accessibility layer (not cheat bot).
 
 ## Related show
 

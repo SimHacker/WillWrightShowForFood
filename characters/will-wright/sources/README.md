@@ -165,7 +165,7 @@ Renovation and SafeTMog — restricted Transmogrifier for safer community author
 The Sims Exchange — storytelling objects + downloadable user content. The hobby-model train set.
 
 **[sims1-legacy-collection-exchange-gap/](sims1-legacy-collection-exchange-gap/README.md)**  
-2025 Steam Legacy Collection omits Exchange (UCP Internet button, Generate Web Pages hooks). SimFileShare + manual zip today; Micropolis Home revival thesis. EA buyout + creator-network context (verify before on-air).
+2025 Steam Legacy Collection omits Exchange (UCP Internet button, Generate Web Pages hooks). SimFileShare + manual zip today; Soul City revival thesis. EA buyout + creator-network context (verify before on-air).
 
 **[2004-01-08-showntell-activex-preview/](2004-01-08-showntell-activex-preview/README.md)**  
 ShowNTell ActiveX — live Sims object preview in the browser (2004 web ambitions).
@@ -174,7 +174,7 @@ ShowNTell ActiveX — live Sims object preview in the browser (2004 web ambition
 RSS 2.0 Sims module + MySim tool for Radio UserLand — syndication before "platform."
 
 **[2004-01-21-rugomatic-tutorial/](2004-01-21-rugomatic-tutorial/README.md)**  
-RugOMatic — drag-and-drop Sims objects onto the floor. Direct ancestor of Micropolis Home editors.
+RugOMatic — drag-and-drop Sims objects onto the floor. Direct ancestor of Soul City editors.
 
 **[2004-02-05-third-party-content-authoring-tools/](2004-02-05-third-party-content-authoring-tools/README.md)**  
 Don's proposal for official third-party authoring tools at Maxis.

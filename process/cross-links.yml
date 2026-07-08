@@ -275,13 +275,13 @@ trails:
       - { path: ../characters/don-hopkins/career/stupid-fun-club.yml, why: "Robots among humans — the post-Maxis lab" }
 
   ucc_catalogs:
-    k_line: "SimFreaks · SimSlice · SimProv · Zombie Sims · Micropolis Home"
+    k_line: "SimFreaks · SimSlice · SimProv · Zombie Sims · Soul City"
     why: "Legacy artisanal catalogs + the create/publish/share platform that hosts them"
     nodes:
       - { path: ../catalogs/, why: "Catalog hub — CATALOGS.yml + five entries" }
       - { path: ../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml, why: "Bogost — inclusion agitprop vs Dumbold farce" }
       - { path: ../characters/will-wright/media/sims-series-procedural-rhetoric-inclusion-agitprop.md, why: "Wedding playset phoenix + Motive.c lineage" }
-      - { path: ../catalogs/micropolis-home/, why: "Platform — not just a shelf" }
+      - { path: ../catalogs/soul-city/, why: "Platform — not just a shelf" }
       - { path: ../catalogs/simfreaks/, why: "Heather Alvey — ~26-year brand" }
       - { path: ../catalogs/simslice/, why: "Steve Alvey — SliceCity shipped data portability" }
       - { path: ../catalogs/simprov/, why: "Wedding playset + composable orchestration" }
@@ -337,8 +337,8 @@ trails:
       - { path: ../apps/stream-gateway/, why: "Overlay bus + OBS integration" }
       - { path: ticket-pr.yml, why: "Audience clip + question ingress" }
       - { path: ../repo-shows/ideas/, why: "Gags, themes, traditions, show content catalog" }
-      - { path: ../catalogs/micropolis-home/steam-community-guide.yml, why: "Steam Community Guides — channel web hub + Repo Shows" }
-      - { path: ../catalogs/micropolis-home/micropolis-angel.yml, why: "MicropolisAngel — Windows Steam companion (Simplifier + catalog + machinima; after web bootstrap)" }
+      - { path: ../catalogs/soul-city/steam-community-guide.yml, why: "Steam Community Guides — channel web hub + Repo Shows" }
+      - { path: ../catalogs/soul-city/micropolis-angel.yml, why: "MicropolisAngel — Windows Steam companion (Simplifier + catalog + machinima; after web bootstrap)" }
 
 room_indexes:
   process: INDEX.yml

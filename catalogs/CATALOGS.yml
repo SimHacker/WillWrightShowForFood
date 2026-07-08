@@ -1,4 +1,4 @@
-# Content catalogs — Micropolis Home federation
+# Content catalogs — Soul City federation
 # Legacy artisanal brands + platform. Repo-level — not show-owned.
 
 steam_recommendation:
@@ -9,8 +9,8 @@ steam_recommendation:
     Steam revenue + documented fan culture — not the same hostility fans have weathered for 26 years.
 
 platform:
-  id: micropolis-home
-  path: micropolis-home/
+  id: soul-city
+  path: soul-city/
   role: create_publish_share
   summary: "Web-native content stack — author, publish, and share Sims-family UCC on federation rails."
 
@@ -55,7 +55,7 @@ catalogs:
     human: sims1-community-landscape.md
 
 relationship: |
-  Micropolis Home is not another shelf — it is the platform.
+  Soul City is not another shelf — it is the platform.
   SimFreaks, SimSlice, SimProv, and Zombie Sims are federated catalogs
   (storefronts + git CARD dirs + download paths) hosted on the same
   create → publish → share rails. Start here; grow from there.

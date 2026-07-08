@@ -6,7 +6,7 @@ meta:
   id: micropolis-angel-app
   status: spec
   platform: windows
-  parent_spec: ../../catalogs/micropolis-home/micropolis-angel.yml
+  parent_spec: ../../catalogs/soul-city/micropolis-angel.yml
   stream_gateway: ../stream-gateway/SPEC.yml
   simplifier: ../stream-gateway/simplifier.yml
   one_liner: |
@@ -38,24 +38,24 @@ shell:
   why_not_electron: "Chromium bundle bloat; Steam Software wants lean Windows-native; WebView2 uses system Edge."
   why_not_cef: "Same bloat; Microsoft maintains WebView2; better OS integration."
   layout:
-    main_webview: "Full Micropolis Home TypeScript platform — catalog, graveyard, albums, stream panels"
+    main_webview: "Full Soul City TypeScript platform — catalog, graveyard, albums, stream panels"
     dock_panels: "Optional secondary WebView2 regions — operator overlay, stream chat"
     native_chrome: "WinUI title bar, system tray, filesystem bridge, capture/inject services, TTS host"
-  embed_micropolis_home:
+  embed_soul_city:
     v1_default: |
-      WebView2 navigates the **central Micropolis Home SvelteKit site** (hosted server).
+      WebView2 navigates the **central Soul City SvelteKit site** (hosted server).
       Angel does NOT bundle or require a local SvelteKit server initially.
       Native host exposes FileBridge host object so in-browser TypeScript reads/writes local
       UserData, save files, Downloads, and the local SQLite catalog cache.
     optional_later:
       - "localhost sidecar for offline dev or LAN Repo Show without internet"
       - "bundled adapter-node for air-gapped catalog editing"
-    dev: "pnpm dev Micropolis Home OR stream-gateway → WebView2 for local iteration"
+    dev: "pnpm dev Soul City OR stream-gateway → WebView2 for local iteration"
 
-# MICROPOLIS HOME CONTENT PLATFORM (inside WebView2)
+# SOUL CITY CONTENT PLATFORM (inside WebView2)
 content_platform:
   what: |
-    Angel runs the **entire TypeScript Micropolis Home Sims content reading/writing platform**
+    Angel runs the **entire TypeScript Soul City Sims content reading/writing platform**
     in the embedded browser. That UI talks to the central SvelteKit server for federation,
     publish, share, Repo Shows — while **local save/.iff/.far parsing happens in-browser**
     with native filesystem access via WebView2 bridge (no second Svelte server required).
@@ -83,7 +83,7 @@ dev_stack:
       - "Windows App SDK 1.6+ (WinUI 3)"
       - "WebView2 SDK (Evergreen runtime — preinstalled Win11; bootstrapper for Win10)"
       - "VS Code — SvelteKit/TypeScript/Node (keep VS for native; VS Code for web tier)"
-      - "Node 22 LTS + pnpm — stream-gateway, Micropolis Home frontend"
+      - "Node 22 LTS + pnpm — stream-gateway, Soul City frontend"
       - "Windows 11 SDK (latest) — Graphics Capture, OCR, WinRT APIs"
     recommended:
       - "Git for Windows"
@@ -115,7 +115,7 @@ native_apis:
     obs_path: "OBS WebSocket + optional NDI — when OBS owns the encode graph"
   ocr:
     role: "Buy/build catalog panel — title, price, description when GUID unknown (CATALOG-SCREEN-MATCH.yml)"
-    primary_metadata: "Micropolis Home TS reads .iff STR# from owned install — not OCR"
+    primary_metadata: "Soul City TS reads .iff STR# from owned install — not OCR"
     bootstrap: "Windows.Media.Ocr OR port Simplifier glyph matcher for in-game panel during catalog crawl"
     supplement: "Preview pHash vs previews table — disambiguate duplicate titles"
   input_injection:
@@ -132,7 +132,7 @@ native_apis:
     - "Simplifier lineage: read object titles/descriptions aloud while browsing catalog"
   save_and_files:
     bridge: "FileBridge host object — WebView2 exposes read/write UserData paths to TS (with consent UI)"
-    parse_in_ts: "Neighborhood, lot, character, object placement — Micropolis Home iff/save reader"
+    parse_in_ts: "Neighborhood, lot, character, object placement — Soul City iff/save reader"
     sqlite_local: "Embedded catalog DB on disk — objects, wallpapers, floors, graveyard, crawl_state"
     seed: "Regenerate from owned install scan — SimsObjects.xml diff report only, not authoritative import"
     watch: "Folder watcher on save dirs + ObjectError_h*.txt when launcher enables debug_objects"
@@ -152,12 +152,12 @@ graveyard_manager:
   capabilities:
     enumerate:
       primary: |
-        **Save-file parse** — Micropolis Home TS reads lot/neighborhood files; lists every urn/tombstone,
+        **Save-file parse** — Soul City TS reads lot/neighborhood files; lists every urn/tombstone,
         deceased sim, tile position, linked household. No screen scrape required for graveyard index.
       also:
         - "Cross-reference local SQLite graveyard table + Family Album cards"
         - "Screen scrape / UIA — fallback when save format unknown or Legacy Collection path differs"
-      sync: "Published graveyard albums sync UP to central Micropolis Home when online"
+      sync: "Published graveyard albums sync UP to central Soul City when online"
     resurrect:
       - "Guide player through in-game resurrection flows (Grim Reaper, genie, etc.) via inject + TTS"
       - "Some paths require save → main menu → reload — Angel orchestrates and confirms each step"
@@ -210,7 +210,7 @@ launcher:
   launch:
     flags:
       - "-debug_objects  # ObjectError_h*.txt in known CWD — see OBJECT-ERROR-TELEMETRY.yml"
-    cwd: "Per-profile folder under %APPDATA%/MicropolisHome/sims-cwd/"
+    cwd: "Per-profile folder under %APPDATA%/SoulCity/sims-cwd/"
   preflight:
     - "GUID collision warnings from guid_collision_cases"
     - "Missing-object prediction from save parse (before generic in-game dialog)"
@@ -289,7 +289,7 @@ build_phases:
     ship: "OBS WebSocket + stream panels in same WebView2 shell"
     cost: zero
   - id: w6
-    ship: "Federation sync — local SQLite ↔ central Micropolis Home; Twitch/cursor-tap bus"
+    ship: "Federation sync — local SQLite ↔ central Soul City; Twitch/cursor-tap bus"
     cost: mini
   - id: w7
     ship: "WebGPU iff previews replace scrape; Death/Satan guided flows; Steam packaging"
@@ -299,7 +299,7 @@ build_phases:
 ethics:
   frame: "Fair assistant, accessibility, creator tool — not cheat bot or grief suite"
   graveyard: "Kill/resurrect/clone require explicit operator consent; narrated on stream"
-  steam: "Fan-made disclaimer; requires owned Legacy Collection; links Micropolis Home web hub"
+  steam: "Fan-made disclaimer; requires owned Legacy Collection; links Soul City web hub"
 
 see_also:
   - WINDOWS-DEV-SETUP.md
@@ -308,7 +308,7 @@ see_also:
   - CATALOG-SCREEN-MATCH.yml
   - GUID-ISSUE-HUB.yml
   - OBJECT-ERROR-TELEMETRY.yml
-  - ../../catalogs/micropolis-home/micropolis-angel.yml
+  - ../../catalogs/soul-city/micropolis-angel.yml
   - ../../catalogs/maxis/CATALOG.yml
   - ../stream-gateway/SPEC.yml
   - ../stream-gateway/simplifier.yml

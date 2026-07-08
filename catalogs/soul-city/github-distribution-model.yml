@@ -1,5 +1,5 @@
 # GitHub-backed distribution — metadata catalogs + free content + MOOLLM/Soul City
-# Micropolis Home rails: TSR/SFS replacement for repo-native work; federation for paid storefronts.
+# Soul City rails: TSR/SFS replacement for repo-native work; federation for paid storefronts.
 
 meta:
   id: github-distribution-model
@@ -29,10 +29,10 @@ what_we_replace:
   simfileshare_lane:
     partial: |
       SFS remains fine for Simblr creators — we index their simfil.es links in CARD metadata.
-      Repo-native free objects live **in** GitHub; no alt-tab upload for WWSFF/Micropolis Home drops.
+      Repo-native free objects live **in** GitHub; no alt-tab upload for WWSFF/Soul City drops.
   exchange_lane:
     old: "thesims.ea.com upload + Family Album HTML"
-    new: "Git PR + Micropolis Home publish + optional Angel tray watcher → repo path or release tag"
+    new: "Git PR + Soul City publish + optional Angel tray watcher → repo path or release tag"
 
 repos:
   willwrightshowforfood:
@@ -85,7 +85,7 @@ soul_city_and_moollm:
 
 federation_rules:
   non_extractive:
-    rule: "Send buyers to ZombieSims lifetime / SimFreaks — Micropolis Home is rails, not a loot box"
+    rule: "Send buyers to ZombieSims lifetime / SimFreaks — Soul City is rails, not a loot box"
     see: ../sims1-community-landscape.yml#non_extractive_lift
   paid_vs_free_split:
     free_on_github: [SimProv HN giveaway pattern, Don composable objects, show artifacts, MOOLLM examples]
@@ -94,7 +94,7 @@ federation_rules:
     requires_owned_game: ../get-the-sims-on-steam.md
     disclaimer: Transmogrifier EULA fan-posting clause pattern — see sims1-community-landscape.yml
 
-micropolis_home_implementation:
+soul_city_implementation:
   web_hub: Browse CARD indexes; deep-link to raw GitHub paths or releases; SimShow preview from metadata
   angel: Watch UserData → commit to local fork OR open PR template → clipboard link to tree path
   steam_guide: Points to repo catalog roots + install wiki — drives Steam sales

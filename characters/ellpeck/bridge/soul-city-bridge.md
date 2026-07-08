@@ -9,7 +9,7 @@ Ell's [**Tiny Life**](https://tinylifegame.com/) already speaks this language:
 | Tiny Life today | Soul City lane | Sims 1 Legacy Collection |
 |-----------------|----------------|---------------------------|
 | Export household + lot json | Soul-file facet (names, skills, relationships, descriptions) | Compile to `.fam` / house `.iff` bundle |
-| Story descriptions on Tinies and lots | Family Album markdown in git | Micropolis Home catalog CARD |
+| Story descriptions on Tinies and lots | Family Album markdown in git | Soul City catalog CARD |
 | Steam Workshop subscribe | Federated permanent link in CARD metadata | Install path docs for owned Steam copy |
 | C# mods | MOOLLM skills parallel (moollm repo) | Transmogrifier-era object injection |
 
@@ -17,7 +17,7 @@ Ell's [**Tiny Life**](https://tinylifegame.com/) already speaks this language:
 
 1. Export the **Walden household** from Tiny Life — bios and lot description intact.
 2. Lay over in **Soul City** — optional beat from [Soul City procreation](../../../repo-shows/will-wright-premiere/game-bridge-soul-city-procreation.yml) (pure content injection, no engine hacks).
-3. **Compile out** to Sims 1 — objects, skins, album pages, or a Micropolis Home git drop for players who lost the Exchange.
+3. **Compile out** to Sims 1 — objects, skins, album pages, or a Soul City git drop for players who lost the Exchange.
 
 Reverse: Sims Exchange-style Family Album yaml in GitHub → soul-file → Tiny Life household import.
 

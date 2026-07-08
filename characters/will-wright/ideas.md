@@ -18,7 +18,7 @@ there. ([source bundle](../../characters/will-wright/sources/1996-04-26-winograd
 Don and Will go back to **Maxis** — SimCity, The Sims, Core Technology Group — and a long mutual
 interest in **microworlds**, **data portability**, and tools players can extend. Don preserved and
 transcribed Will's **1996 CS547 talk**; the through-line continues in OLPC SimCity, Spore-era
-tooling conversations, and today's **Micropolis Home** / Repo Show work. Not score-keeping — a
+tooling conversations, and today's **Soul City** / Repo Show work. Not score-keeping — a
 steady respect for toys-as-systems and federation across games.
 
 ## The hooks

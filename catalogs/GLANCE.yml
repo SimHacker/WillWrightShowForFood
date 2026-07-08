@@ -5,7 +5,7 @@ title: "Sims Content Catalogs"
 iconic: "🏪🎨"
 description: |
   Repo-level catalog hub — feeds we sponsor, syndicate, and promote. SimFreaks, SimSlice,
-  SimProv, Zombie Sims, Maxis metadata, Micropolis Home platform. Not owned by any one show
+  SimProv, Zombie Sims, Maxis metadata, Soul City platform. Not owned by any one show
   or character; shows link here. Explicit Steam recommendation — buy the game we helped make.
 
 keywords:
@@ -13,7 +13,8 @@ keywords:
   - simslice
   - simprov
   - zombie sims
-  - micropolis home
+  - soul city
+  - micropolis home  # former name of soul-city (rebranded 2026-07-08) — kept as a search K-line
   - ucc
   - exchange
   - steam
@@ -31,7 +32,7 @@ navigation:
     - simslice/
     - simprov/
     - zombie-sims/
-    - micropolis-home/
+    - soul-city/
     - maxis/
   siblings:
     - ../characters/will-wright/sources/
@@ -45,12 +46,12 @@ read_order:
   - simslice/
   - simprov/
   - zombie-sims/
-  - micropolis-home/
+  - soul-city/
   - maxis/
 
 structure:
   legacy_brands: [simfreaks, simslice, simprov, zombie-sims]
-  platform: micropolis-home
+  platform: soul-city
   metadata: maxis
   steam_recommendation: get-the-sims-on-steam.md
 
@@ -64,7 +65,7 @@ see_also:
     - { path: ../repo-shows/will-wright-premiere/GLANCE.yml, why: "Flagship show — links here" }
   children:
     - { path: get-the-sims-on-steam.md, why: "Buy The Sims on Steam — EA-facing stance" }
-    - { path: micropolis-home/README.md, why: "Federation platform" }
+    - { path: soul-city/README.md, why: "Federation platform" }
     - { path: simfreaks/README.md, why: "Heather's deep catalog" }
   across:
     - { path: ../characters/heather-alvey/README.md, why: "SimFreaks founder" }

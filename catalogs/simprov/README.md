@@ -6,7 +6,7 @@
 
 ## Magnum opus: Wedding Playset
 
-The emotional center of the Micropolis Home mission. An orchestration kit — not one object but tools the player combines to conduct a ceremony:
+The emotional center of the Soul City mission. An orchestration kit — not one object but tools the player combines to conduct a ceremony:
 
 | Object | Job |
 |--------|-----|
@@ -35,7 +35,7 @@ Also in the SimProv lineage (different register): [Dumbold Voting Machine](../..
 | In-game shots | [SimFreaks / SimProv gameplay](../../characters/will-wright/media/sims-simfreaks-content-gameplay-README.md) |
 | Publishing vision | [micropolis-publishing-vision](../../characters/will-wright/media/sims-series-micropolis-publishing-vision.md) |
 
-Hosted on: [Micropolis Home](../micropolis-home/README.md)
+Hosted on: [Soul City](../soul-city/README.md)
 
 ## Related catalogs
 

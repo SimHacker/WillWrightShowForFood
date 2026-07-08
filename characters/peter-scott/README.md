@@ -8,7 +8,7 @@ Invitation portrayal — **not** Peter Scott. [Portrayal standards](../../schema
 
 Peter Scott is the person who proved SimCity could live on a **20K** school computer. Will Wright's simulation had already spread to Amiga, DOS, C64, and Spectrum; the [Digital Antiquarian](https://www.filfre.net/2026/07/maxis-part-1/) names the BBC Micro among those "aged refugees." Scott's version is the one British kids actually bought from Superior — fair-play design, multi-load disk, and a phone call to the original developer when the memory budget looked impossible.
 
-That lineage runs forward: Don freed Micropolis (2008); Antoni Sawicki ships **ttycity** and **wintown** in 2026; Micropolis Home targets browser-native play without zip files. Scott is the **1989 compression layer** in the chain — same game, impossible box, still royalty checks a decade later.
+That lineage runs forward: Don freed Micropolis (2008); Antoni Sawicki ships **ttycity** and **wintown** in 2026; Soul City targets browser-native play without zip files. Scott is the **1989 compression layer** in the chain — same game, impossible box, still royalty checks a decade later.
 
 ## Signature games
 

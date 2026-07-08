@@ -19,7 +19,7 @@ bio:
     **Sam Arbesman** — complexity scientist and author (*The Magic of Code*, *Overcomplicated*,
     *The Half-Life of Facts*). Chaim offered to intro Don after Sam interviewed Chaim on his podcast.
     Maxis 2.0 curiosity; VC scientist-in-residence. Potential guest for Maxis history × modern
-    federation / Micropolis Home angle (not competing with Chaim's *Building SimCity* book show).
+    federation / Soul City angle (not competing with Chaim's *Building SimCity* book show).
 
 sources:
   intro_email: DonHopkins/temp/old-email/intro.txt
@@ -27,7 +27,7 @@ sources:
   book: "Chaim Gingold — Building SimCity (MIT Press 2024)"
 
 show_suggestions:
-  - { with: chaim-gingold, what: "Maxis history book vs building Micropolis Home now" }
+  - { with: chaim-gingold, what: "Maxis history book vs building Soul City now" }
   - { with: will-wright, what: "Maxis 2.0 — what would Will build today?" }
 
 see_also:

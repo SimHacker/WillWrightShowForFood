@@ -1,6 +1,6 @@
 # Licenses & contracts — SimCity open source and Sims fan tools
 
-*Policy confirmed Don Hopkins, Jun 2026: publish primary legal documents that establish chain of custody. DUX Software is defunct; these records are historical evidence for WWSFF / Micropolis Home.*
+*Policy confirmed Don Hopkins, Jun 2026: publish primary legal documents that establish chain of custody. DUX Software is defunct; these records are historical evidence for WWSFF / Soul City.*
 
 ---
 

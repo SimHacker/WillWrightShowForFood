@@ -18,7 +18,7 @@ Don sat with **Ocean Quigley** (lead artist) to learn Biped / Character Studio w
 MaxScript sample (Turbo-Deluxe edition UI):  
 https://donhopkins.com/home/archive/maxscript/maxis-maxscript.ms.txt
 
-## Lineage to Micropolis Home
+## Lineage to Soul City
 
 | Then (1999) | Now (2026) |
 |-------------|------------|

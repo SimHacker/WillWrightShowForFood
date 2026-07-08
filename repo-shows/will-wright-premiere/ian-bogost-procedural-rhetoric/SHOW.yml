@@ -11,7 +11,7 @@ show:
     Procedural rhetoric in The Sims lineage: Will Wright's 1997 Motive.c (failure modes as design),
     the SimProv Wedding Playset (inclusion agitprop — who gets recognized in front of family),
     and the Dumbold Voting Machine (2004 institutional farce). Same SimAntics/dialog engine;
-    opposite poles. Micropolis Home as platform for more.
+    opposite poles. Soul City as platform for more.
   status: seed
   consent: not_yet_asked
 
@@ -30,7 +30,7 @@ discussion_prompts:
   - "Is the wedding playset quintessential intentional inclusion procedural rhetoric — and is that a useful category next to Persuasive Games?"
   - "How does procedural satire (Dumbold) age vs. procedural inclusion (playset) when republished 20+ years later?"
   - "Motive.c global variables vs. shipping Sims — does the *prototype* rhetoric differ from the *product* rhetoric?"
-  - "Federation publishing (Micropolis Home) — procedural rhetoric as infrastructure, not one object at a time"
+  - "Federation publishing (Soul City) — procedural rhetoric as infrastructure, not one object at a time"
   - "Deconstruct Curiosity (2012) without resurrecting it — Cow Clicker (2010) already argued on purpose; Molyneux argued by accident"
   - "Chip Morningstar's engineer deconstruction vs. procedural rhetoric — same immune system, different vocabulary?"
   - "Captain Ashford's homage essay How to Incarnate Almost Anything — invite a live read of How to Deconstruct the Cube"
@@ -50,7 +50,7 @@ curiosity_deconstruction:
 ties_to:
   - ../../characters/will-wright/media/sims-series-procedural-rhetoric-inclusion-agitprop.md
   - ../INTRO-NARRATIVE.md
-  - ../../../catalogs/micropolis-home/
+  - ../../../catalogs/soul-city/
   - ../../../characters/will-wright/sources/2008-02-10-soul-of-the-sims/
   - ../../ideas/gags/how-to-deconstruct-the-cube.yml
   - ../../ideas/gags/curiosity-cow-cube.yml

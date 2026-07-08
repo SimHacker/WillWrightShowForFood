@@ -10,7 +10,7 @@ principles:
   - "Exchange is dead — sharing is manual zip + link"
   - "SimFileShare = centralized host, not catalog — discovery on Tumblr/Discord/blogs"
   - "ModTheSims + TSR = museums; Discord/Tumblr = live trading"
-  - "Micropolis Home = searchable index + tray upload on top of SFS permanent links"
+  - "Soul City = searchable index + tray upload on top of SFS permanent links"
 
 simfileshare:
   url: https://simfileshare.net/
@@ -55,15 +55,15 @@ manual_share_workflow_today:
 
 dream_tools_gap:
   browser_ecosystem: |
-    **Micropolis Home** — full browser-native stack: auto-read UserData saves, install/publish with
+    **Soul City** — full browser-native stack: auto-read UserData saves, install/publish with
     consent, catalog server, virus scan, GUID collision manager, file cop, graveyard manager, offline PWA.
-    Replaces zip + Explorer + dead Share button. Spec: ../../../../catalogs/micropolis-home/browser-ecosystem.yml
+    Replaces zip + Explorer + dead Share button. Spec: ../../../../catalogs/soul-city/browser-ecosystem.yml
   tray_watcher: |
     MicropolisAngel watches export folder → same publish pipeline via WebView2 + FileBridge.
   federate_sfs: |
     Don't replace SFS for external creators — index simfil.es in CARD metadata.
   github_native:
-    spec: ../../../../catalogs/micropolis-home/github-distribution-model.yml
+    spec: ../../../../catalogs/soul-city/github-distribution-model.yml
     what: |
       Free Sims objects + playsets + round-trip saves live in GitHub (WillWrightShowForFood catalogs/).
       MOOLLM skills + Soul City bridge payloads in moollm repo. Searchable CARD index replaces TSR

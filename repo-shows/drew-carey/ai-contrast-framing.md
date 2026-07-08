@@ -137,7 +137,7 @@ people who've watched a Sim remove a pool ladder.
 Optional subscriptions pay for tokens. Same pattern scales to **other games** — a cross-game Angel,
 not a Sims impersonator.
 
-Spec (planted, not announced yet): [MicropolisAngel](../../catalogs/micropolis-home/micropolis-angel.yml)
+Spec (planted, not announced yet): [MicropolisAngel](../../catalogs/soul-city/micropolis-angel.yml)
 
 **The line:** AI advises **your** play in **your** game. It does not host the show pretending to
 be Drew Carey.

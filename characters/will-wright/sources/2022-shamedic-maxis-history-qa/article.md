@@ -34,7 +34,7 @@ Yes — testing, but also for fun with weird edge cases. Shipping burns you out,
 
 ## Sims legacy today
 
-The UCC ecosystem we seeded (Exchange, fan sites, SimFreaks/SimSlice lineage) mattered as much as the box. Micropolis Home is that federation idea with modern git + web tools.
+The UCC ecosystem we seeded (Exchange, fan sites, SimFreaks/SimSlice lineage) mattered as much as the box. Soul City is that federation idea with modern git + web tools.
 
 ## Biggest focus pre-ship (1999–2000)
 
@@ -62,7 +62,7 @@ EA marketing was EA; we fought for the game we built. Pre-launch fan tools helpe
 
 ## After Maxis
 
-Maxis taught me player tools, pipelines, and shipping inclusive sims — carried to Connected Media, Stupid Fun Club robots, OpenLaszlo, OLPC Micropolis, and now Micropolis Home.
+Maxis taught me player tools, pipelines, and shipping inclusive sims — carried to Connected Media, Stupid Fun Club robots, OpenLaszlo, OLPC Micropolis, and now Soul City.
 
 ---
 

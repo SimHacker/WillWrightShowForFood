@@ -89,7 +89,7 @@ Full invitation portrayal: [`characters/doreen-nelson/`](../../../../characters/
 1. Walter + Eben Moglen GPL path  
 2. Jim Gettys Cairo/Pango — Micropolis rendering lineage  
 3. Doreen curriculum + Constructionist courseware  
-4. "View Source" + Robot Odyssey vision → Micropolis Home today
+4. "View Source" + Robot Odyssey vision → Soul City today
 
 ---
 

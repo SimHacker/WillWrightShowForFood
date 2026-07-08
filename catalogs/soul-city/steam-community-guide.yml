@@ -1,8 +1,8 @@
-# Micropolis Home — Steam Community Guide strategy
+# Soul City — Steam Community Guide strategy
 # NOT a separate Steam store app — player-authored guides on The Sims Legacy Collection hub
 # Requires: legal The Sims 1 (Steam Legacy Collection)
 
-id: micropolis-home-steam-guide
+id: soul-city-steam-guide
 status: planted
 parent: CATALOG.yml
 private_strategy: |
@@ -11,7 +11,7 @@ private_strategy: |
 
 one_line: |
   Steam Community Guide(s) on The Sims hub — informational playbook that channels players to
-  Micropolis Home (web) and Repo Shows. Not a game; not EA-endorsed; no install required.
+  Soul City (web) and Repo Shows. Not a game; not EA-endorsed; no install required.
 
 requires:
   game: https://store.steampowered.com/app/3314070/The_Sims/
@@ -24,7 +24,7 @@ requires:
 jobs:
   catalogs_and_tools:
     - Federated UCC pointers: SimFreaks, SimSlice, SimProv, Zombie Sims, MTS, TSR, SneakySims, Maxis metadata
-    - Link to web tools: SimShow, Transmogrifier, RugOMatic, install helpers (Micropolis Home URL)
+    - Link to web tools: SimShow, Transmogrifier, RugOMatic, install helpers (Soul City URL)
     - Virtual catalogs: Exchange history, Internet Archive index → Simopolis
     - create · publish · share rails — primary CTA is the browser, not a downloaded app
 
@@ -57,15 +57,15 @@ jobs:
     avoid: [bundling EA assets, plumbob branding, implied endorsement, vacuuming creator subscriptions]
 
 implementation:
-  v1_web: "Micropolis Home SvelteKit site — primary product; any browser, no install"
+  v1_web: "Soul City SvelteKit site — primary product; any browser, no install"
   v2_steam_guides: "One or more Community Guides on Legacy Collection hub — link-rich sections"
   v3_micropolis_angel: |
     MicropolisAngel — Windows Steam Software companion (see micropolis-angel.yml). Native while-you-play
     helper: Simplifier, catalog/install, machinima, streaming. Announced AFTER web hub bootstraps audience.
-  not_planned: "Electron or Steam app shell wrapping Micropolis Home — rejected June 2026"
+  not_planned: "Electron or Steam app shell wrapping Soul City — rejected June 2026"
 
 rollout:
-  1: Web Micropolis Home + WWSFF public repo + catalog CARD dirs
+  1: Web Soul City + WWSFF public repo + catalog CARD dirs
   2: Steam Community Guide + MTS cross-links + YouTube (content + show clips)
   3: MicropolisAngel on Steam Software (Windows) — when web federation + catalog sync are live
   4: EA / platform conversations after traction

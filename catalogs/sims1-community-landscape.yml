@@ -1,5 +1,5 @@
 # Sims 1 community landscape & distribution strategy
-# Companion to Micropolis Home federation. Not legal advice — document facts + posture.
+# Companion to Soul City federation. Not legal advice — document facts + posture.
 
 meta:
   id: sims1-community-landscape
@@ -19,7 +19,7 @@ legal_layers:
     notes: ../../characters/don-hopkins/career/contracts/transmogrifier-distribution-license-notes.md
   clean_room_tools:
     summary: |
-      **Micropolis Home** reimplements SimShow / Transmogrifier / RugOMatic **clean-room in the
+      **Soul City** reimplements SimShow / Transmogrifier / RugOMatic **clean-room in the
       browser** — not redistribution of EA's Windows binary. Different legal object than mirroring
       the 2000 installer.
   ucc_objects:
@@ -72,7 +72,7 @@ sites:
     - id: sneakysims
       url: https://sneakysims.net/
       model: "Free hub; no account required; CC archive DB + SneakyLib modding tools; aggregates dead sites"
-      note: "2025 EA Legacy Collection spike; preservation-focused — parallel mission to Micropolis Home"
+      note: "2025 EA Legacy Collection spike; preservation-focused — parallel mission to Soul City"
 
     - id: thesimsdepot
       url: http://www.thesimsdepot.com/sims-1/downloads/
@@ -131,7 +131,7 @@ virtual_catalogs:
     legacy_collection_gap: ../../characters/will-wright/sources/sims1-legacy-collection-exchange-gap/
     status: |
       seed — Steam Legacy Collection (2025-01-31) ships without Exchange button, web hooks, or upload path;
-      community uses SFS + manual zip. Micropolis Home / Angel = revival infrastructure.
+      community uses SFS + manual zip. Soul City / Angel = revival infrastructure.
 
   internet_archive_import:
     working_name: tornado_importer  # IA harvest → Simopolis catalog entries
@@ -145,21 +145,21 @@ virtual_catalogs:
   simopolis_hub:
     what: "Git-checked-in + web hub for round-trippable saves, albums, cross-game facets"
     architecture: ../../repo-shows/INDEX.yml#bridges_architecture
-    distribution: ../micropolis-home/github-distribution-model.yml
+    distribution: ../soul-city/github-distribution-model.yml
 
-# STEAM COMMUNITY GUIDES — Micropolis Home discovery (web hub + Repo Shows)
+# STEAM COMMUNITY GUIDES — Soul City discovery (web hub + Repo Shows)
 steam_community_guides:
-  spec: micropolis-home/steam-community-guide.yml
+  spec: soul-city/steam-community-guide.yml
   model: valve_community_guide
   requires: "Legal copy of The Sims 1 (Steam Legacy Collection recommended); must own game to publish"
 
   one_line: |
-    Player-authored Steam Guides on The Sims hub — informational playbooks linking to Micropolis Home
+    Player-authored Steam Guides on The Sims hub — informational playbooks linking to Soul City
     (browser) and Repo Shows. Not a separate store app.
 
   what_it_is:
     catalogs_and_tools:
-      - "Micropolis Home web URL — create · publish · share (primary product, no install)"
+      - "Soul City web URL — create · publish · share (primary product, no install)"
       - "Federated UCC pointers: SimFreaks, SimSlice, SimProv, Zombie Sims, MTS, TSR, SneakySims, Maxis metadata, IA archives"
       - "Clean-room web tools: SimShow preview, Transmogrifier, install helpers, Exchange revival"
     repo_shows_channel:
@@ -180,14 +180,14 @@ steam_community_guides:
     long: get-the-sims-on-steam.md
 
   native_tools_later:
-    product: micropolis-home/micropolis-angel.yml
+    product: soul-city/micropolis-angel.yml
     name: MicropolisAngel
     note: |
       Windows Steam Software companion — Simplifier showcase, catalog capture, machinima, OBS/Twitch,
-      Exchange revival gateway. NOT a web wrapper. Announce after Micropolis Home bootstraps audience.
+      Exchange revival gateway. NOT a web wrapper. Announce after Soul City bootstraps audience.
 
   rollout_order:
-    1: "Web Micropolis Home + public Will Repo Show + catalog CARD dirs"
+    1: "Web Soul City + public Will Repo Show + catalog CARD dirs"
     2: "ModTheSims + Steam Community Guide + YouTube (UCC installs + show clips)"
     3: "MicropolisAngel on Steam Software (Windows) — Simplifier + catalog + streaming stack"
     4: "EA conversation only after traction + Heather/Steve/MTS relationships warm"
@@ -195,15 +195,15 @@ steam_community_guides:
   simprov_on_steam:
     sell: "Risky as paid SKU — fan objects, unclear EA tooling lineage for some assets"
     free: "Aligned — HN giveaway pattern; link from guide; disclaimer; buy-game-first"
-    wrap: "Guide + web hub list SimProv as federated catalog — downloads from Micropolis Home or creator CDN"
+    wrap: "Guide + web hub list SimProv as federated catalog — downloads from Soul City or creator CDN"
 
 # FEDERATION PRINCIPLE (Heather & Steve show)
 non_extractive_lift:
-  rule: "Send fans to SimFreaks / ZombieSims subscriptions — Micropolis Home is rails, not a loot box"
+  rule: "Send fans to SimFreaks / ZombieSims subscriptions — Soul City is rails, not a loot box"
   show: ../../repo-shows/heather-and-steve-alvey/SHOW.yml#support_them
 
 see_also:
-  - micropolis-home/README.md
+  - soul-city/README.md
   - CATALOGS.yml
   - ../characters/will-wright/sources/maxis-licenses-chain-of-custody/
   - ../../process/trails/send-code-not-commands.md

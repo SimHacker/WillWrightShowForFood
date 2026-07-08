@@ -1,4 +1,4 @@
-# SimsKit lineage — what to port into MicropolisAngel / Micropolis Home
+# SimsKit lineage — what to port into MicropolisAngel / Soul City
 # Source tree: TheSims/SimsKit/ (Don's Windows tooling, 2000–2004 era)
 # Target: TypeScript content platform in embedded WebView2 + native file bridge + SQLite catalog
 
@@ -7,7 +7,7 @@ meta:
   status: spec
   source_root: ../../../../Code/TheSims/SimsKit
   note: |
-    Legacy C++ bots proved the workflows. Micropolis Home reimplements the DATA paths in TypeScript.
+    Legacy C++ bots proved the workflows. Soul City reimplements the DATA paths in TypeScript.
     Screen scrape becomes a bootstrap shortcut, not the primary catalog reader.
 
 # ── SIMPLIFIER (Sims 1 catalog showcase) ────────────────────────────────────
@@ -36,11 +36,11 @@ simplifier:
   port_to:
     primary: |
       **Do NOT port glyph OCR as the long-term catalog reader.**
-      Micropolis Home TypeScript reads .iff / .far / save files directly (catalogs/maxis pipeline).
+      Soul City TypeScript reads .iff / .far / save files directly (catalogs/maxis pipeline).
     bootstrap_crawler: |
       Port **navigation state machine** + **SendClick inject** to walk every buy-mode category:
       objects, wallpapers, floor tiles, terrain paint — capture preview bitmap when item selected.
-      Store rows in **SQLite** (local Angel cache, sync to central Micropolis Home federation).
+      Store rows in **SQLite** (local Angel cache, sync to central Soul City federation).
       Stop using scrape for title/description once IFF metadata + SimsObjects.xml seed merge.
     files:
       - SimplifierDoc.cpp — UpdateView panel OCR, GrabClientWindow, InitClientWindows
@@ -63,7 +63,7 @@ transmogrifier:
   port_to:
     - "TypeScript/WASM iff reader replaces ActiveX preview (catalogs/maxis/CATALOG.yml#iff_reader)"
     - "Import SimsObjects.xml → SQLite object_records table (one-time + diff on new packs)"
-    - "Cloner GUID logic informs Micropolis Home 'publish collection' installer helpers"
+    - "Cloner GUID logic informs Soul City 'publish collection' installer helpers"
     - "Objectifier batch-export pattern → headless preview render job queue"
 
 # ── SIMSHOW (character / animation showcase) ──────────────────────────────────
@@ -73,7 +73,7 @@ simshow:
   key_files:
     SimShowDlg.cpp: "gCharacterTable, CTGFile, TimeBase — animation loop"
   port_to:
-    - "Micropolis Home vitaboy preview panel (WebGPU path)"
+    - "Soul City vitaboy preview panel (WebGPU path)"
     - "Stream-gateway machinima segment tooling"
 
 # ── RUGOMATIC + ShowNTell (web + ActiveX preview) ───────────────────────────
@@ -90,14 +90,14 @@ vitaboy:
   path: ../Sims/SimsBuild/Code/vitaboy/  # sibling under TheSims repo
   era: "Skeleton, BCF/CFP, suits, skills — Sims 1 character runtime"
   port_to:
-    - "Micropolis Home character preview + album cards"
+    - "Soul City character preview + album cards"
     - "Already documented in WWSFF vitaboy / VitaMoo lineage"
 
 # ── SQLITE CATALOG SCHEMA (target) ──────────────────────────────────────────
 sqlite_catalog:
   why_sqlite_not_server_sql: |
     Local embedded DB on the player's PC — catalog cache, crawl progress, graveyard index,
-    downloaded-object inventory. Syncs UP to central Micropolis Home (SvelteKit + Postgres)
+    downloaded-object inventory. Syncs UP to central Soul City (SvelteKit + Postgres)
     via federation API; Angel does not need a local SvelteKit server for v1.
   tables_sketch:
     objects:
@@ -117,7 +117,7 @@ sqlite_catalog:
 # ── PORT PRIORITY ─────────────────────────────────────────────────────────────
 port_priority:
   1: "Register scan_root → parse owned Legacy Collection install → objects + fingerprints"
-  2: "Micropolis Home TS save/.iff reader → graveyard + save_object_refs + missing GUID workflow"
+  2: "Soul City TS save/.iff reader → graveyard + save_object_refs + missing GUID workflow"
   3: "Optional validation diff vs SimsObjects.xml (never import as truth)"
   4: "Simplifier inject port — catalog crawl for preview images only (bootstrap)"
   5: "Transmogrifier preview render → WebGPU iff pipeline (replaces scrape entirely)"

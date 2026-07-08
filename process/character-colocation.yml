@@ -159,7 +159,7 @@ migration:
 
 catalogs_room:
   path: catalogs/
-  owns: "Syndicated UCC feeds — SimFreaks, SimSlice, SimProv, Micropolis Home, Maxis metadata"
+  owns: "Syndicated UCC feeds — SimFreaks, SimSlice, SimProv, Soul City, Maxis metadata"
   rule: "Repo-level; shows and characters link through — not owned by will-wright show or character"
   steam: get-the-sims-on-steam.md
 

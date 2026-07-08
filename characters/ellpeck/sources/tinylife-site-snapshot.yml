@@ -29,7 +29,7 @@ distribution:
   workshop: Subscribe button → loads from Steam
   manual: Mods zip → Mods/; lots/households json → respective folders; maps zip → Custom Maps/
   github_federation: |
-    Micropolis Home indexes Workshop items + git-native mod repos as CARD metadata — federate through
+    Soul City indexes Workshop items + git-native mod repos as CARD metadata — federate through
     Soul City soul-file lane; does not replace Ell's Workshop; drives players to buy Tiny Life.
 
 see_also:

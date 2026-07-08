@@ -40,7 +40,7 @@ Paper: [SimCityNet: A Cooperative Multi User City Simulation](http://www.art.net
 
 > The intent of my design for the multi player SimCity user interface was to introduce **collaboration, conferencing, interpersonal politics and gridlock** into the game, but **not to change the way the simulation worked** in any way (don't mess with a good thing).
 
-Multiplayer is a **social layer** on an unchanged Micropolis engine — same rule as Micropolis Home today: federation and operator tools sit beside the sim, not inside it.
+Multiplayer is a **social layer** on an unchanged Micropolis engine — same rule as Soul City today: federation and operator tools sit beside the sim, not inside it.
 
 ---
 
@@ -109,11 +109,11 @@ Source: [`micropolis/PROGRESS.txt`](../../../../micropolis/PROGRESS.txt) (Future
 
 **City save tree:** immutable branch cities vs mutable leaf cities; players branch from each other's shared saves — parent pointers, snapshot-on-branch semantics (see email dump ~line 15255 in `old-email.txt` and TODO.txt).
 
-This is the **centralized server + rich web client** thread — precursor to Micropolis Home federation (MySQL/SQLObject Laszlo catalog → git CARD + stream-gateway derived DB).
+This is the **centralized server + rich web client** thread — precursor to Soul City federation (MySQL/SQLObject Laszlo catalog → git CARD + stream-gateway derived DB).
 
 ---
 
-## Lessons for Micropolis Home (2026)
+## Lessons for Soul City (2026)
 
 1. **Non-interruptive proposals** — good pattern for async collaboration (don't modal-lock operators)
 2. **Unanimous vs majority** — SimCityNet chose gridlock-by-design; modern federation may need configurable quorum

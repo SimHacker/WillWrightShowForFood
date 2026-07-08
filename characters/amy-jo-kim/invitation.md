@@ -29,7 +29,7 @@ No synchronized sitting required: two one-on-ones at each of your best times, wo
 - **Game Thinking** — social loops, retention, the player journey (visitor → novice → regular → leader →
   elder). That membership lifecycle is, honestly, the *guest-participation ladder* this whole project runs on,
   written years before I needed it — I'd love to walk it with you live.
-- **Community without extraction** — *Community Building on the Web* (2000) applied to a **Micropolis Home /
+- **Community without extraction** — *Community Building on the Web* (2000) applied to a **Soul City /
   Exchange** revival: attribution, opt-in publish, 25 years of fan content, community that supports creators
   instead of mining them.
 - **The Sims & Will's orbit** — the social systems you helped shape, and where they point next.
@@ -69,7 +69,7 @@ angles. **Read either or both** before you reply — including how **Scott** des
 
 | | |
 | --- | --- |
-| **On this show** | Game Thinking; player/member journey; community without extraction; Micropolis Home/Exchange revival |
+| **On this show** | Game Thinking; player/member journey; community without extraction; Soul City/Exchange revival |
 | **Invitation** (her view) | [`invitation.md`](invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/amy-jo-kim/invitation.md) |
 | **Guest README** | [`README.md`](README.md) |
 | **Conversation hooks** | [`ideas.md`](ideas.md) |

@@ -26,7 +26,7 @@
 
 ## Revival thread
 
-→ Micropolis Home **homefun** / GPS storytelling / [`process/crazy-idea-jam.yml`](../../../../process/crazy-idea-jam.yml)
+→ Soul City **homefun** / GPS storytelling / [`process/crazy-idea-jam.yml`](../../../../process/crazy-idea-jam.yml)
 
 ## Gaps
 

@@ -63,7 +63,7 @@ consent:
     include_stack_paths: { default: true }
     include_neighborhood_dump: { default: false }
     upload_matching_iff: { default: false, requires: "full_file tier from GUID-ISSUE-HUB.yml" }
-  retention: "User can delete all uploads from Micropolis Home account"
+  retention: "User can delete all uploads from Soul City account"
 
 # QUALITY SCORE (catalog row)
 quality_score:

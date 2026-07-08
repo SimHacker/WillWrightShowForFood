@@ -17,7 +17,7 @@ Co-founder **Shufflebrain** with Scott Kim.
 | Together | This repo |
 |----------|-----------|
 | Shufflebrain — social + brain games | Browser TS tools; player-in-the-middle publish |
-| Amy Jo: Sims social design | Micropolis Home / Exchange; community recovery |
+| Amy Jo: Sims social design | Soul City / Exchange; community recovery |
 | Scott: puzzle craft, Viewpoint | Transmogrifier platform; deterministic browser I/O |
 | Will Wright orbit | Data portability crown jewel; Will kickoff |
 
@@ -33,7 +33,7 @@ Walk from puzzle spec (Scott) to social loop (Amy Jo) to a shippable Micropolis-
 
 ### 3. The Sims Exchange reborn
 
-Amy Jo's community-design lens on **Micropolis Home** — attribution, opt-in publish, 25 years of
+Amy Jo's community-design lens on **Soul City** — attribution, opt-in publish, 25 years of
 fan content without extraction.
 
 ### 4. CS547 double feature

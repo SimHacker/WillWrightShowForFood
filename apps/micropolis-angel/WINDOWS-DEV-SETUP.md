@@ -2,7 +2,7 @@
 
 Target machine: **Lenovo Legion** (or any Windows 11 PC with The Sims Legacy Collection).
 
-MicropolisAngel is a **WinUI 3 + WebView2** shell around Micropolis Home / stream-gateway — not Electron.
+MicropolisAngel is a **WinUI 3 + WebView2** shell around Soul City / stream-gateway — not Electron.
 
 Native project: [`native/MicropolisAngel.sln`](native/MicropolisAngel.sln)
 
@@ -33,7 +33,7 @@ Optional: open repo in **two roots** if you also mount MicropolisCore / SimOblit
 | 2 | **.NET 8 SDK** | Often bundled with VS; verify with `dotnet --list-sdks` |
 | 3 | **WebView2 Runtime** | Preinstalled on Win11; [Evergreen bootstrapper](https://developer.microsoft.com/microsoft-edge/webview2/) on clean VMs |
 | 4 | **Git for Windows** | |
-| 5 | **Node 22 LTS + pnpm** | For stream-gateway / Micropolis Home when those apps land in-repo |
+| 5 | **Node 22 LTS + pnpm** | For stream-gateway / Soul City when those apps land in-repo |
 | 6 | **Cursor (Windows)** | Primary editor for YAML specs + TS; VS for native debug |
 
 Run preflight:
@@ -114,7 +114,7 @@ First WinUI + WebView2 build can take several minutes (NuGet + Windows App SDK).
   "Sims": {
     "LaunchExecutable": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Sims Legacy Collection\\...",
     "UserDataPath": "C:\\Users\\YOU\\Documents\\EA Games\\The Sims\\UserData",
-    "WorkingDirectory": "C:\\Users\\YOU\\AppData\\Local\\MicropolisHome\\sims-cwd",
+    "WorkingDirectory": "C:\\Users\\YOU\\AppData\\Local\\SoulCity\\sims-cwd",
     "ExtraArgs": "-debug_objects"
   }
 }
@@ -135,7 +135,7 @@ Leave `Sims` empty for w0. Fill after Legacy Collection install (phase w3b launc
 
 | Priority | API | Phase | Use |
 |----------|-----|-------|-----|
-| 1 | **WebView2** | w0 | Embed Micropolis Home; `AddHostObjectToScript` for FileBridge (w1) |
+| 1 | **WebView2** | w0 | Embed Soul City; `AddHostObjectToScript` for FileBridge (w1) |
 | 2 | **File system + JSON** | w1 | UserData read, appsettings, catalog.sqlite path |
 | 3 | **Windows.Graphics.Capture** | w3 | Catalog panel / preview scrape |
 | 4 | **Windows.Media.Ocr** | w3 | Title, price, description — [`CATALOG-SCREEN-MATCH.yml`](CATALOG-SCREEN-MATCH.yml) |
@@ -245,6 +245,6 @@ Do **not** commit:
 | [`ARCHITECTURE.yml`](ARCHITECTURE.yml) | Unified product plan |
 | [`CATALOG-DB-SCHEMA.yml`](CATALOG-DB-SCHEMA.yml) | SQLite schema |
 | [`../stream-gateway/README.md`](../stream-gateway/README.md) | Stream / OBS topology |
-| [`../../catalogs/micropolis-home/micropolis-angel.yml`](../../catalogs/micropolis-home/micropolis-angel.yml) | Product / Steam spec |
+| [`../../catalogs/soul-city/micropolis-angel.yml`](../../catalogs/soul-city/micropolis-angel.yml) | Product / Steam spec |
 
-Parent product: Micropolis Home · Will Wright Show For Food · public repo.
+Parent product: Soul City · Will Wright Show For Food · public repo.

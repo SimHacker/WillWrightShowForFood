@@ -8,7 +8,7 @@
 
 **Game Thinking** (Amy Jo) meets the **designed aha** (Scott). Co-founders of **Shufflebrain** —
 social loops + puzzle craft in one studio. Sims social-design lineage × Viewpoint/inversions ×
-Micropolis Home community revival.
+Soul City community revival.
 
 **Policy:** [`process/couple-and-solo-shows.yml`](../../process/couple-and-solo-shows.yml) — clean
 single names in `characters/`; pair shows for natural couples; solo `scott-kim/` optional for

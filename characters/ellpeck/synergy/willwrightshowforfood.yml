@@ -18,7 +18,7 @@ shared_ground:
   indie_vs_corporate:
     note: "Plumbella + James Turner praised Tiny Life; same voices left EA Creator Network post-buyout"
   github_distribution:
-    spec: ../../catalogs/micropolis-home/github-distribution-model.yml
+    spec: ../../catalogs/soul-city/github-distribution-model.yml
     posture: federate_workshop_and_git_cards_lift_ell
 
 show_offer:

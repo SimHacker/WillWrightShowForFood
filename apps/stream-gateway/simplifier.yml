@@ -7,7 +7,7 @@ meta:
   id: simplifier
   status: spec
   one_liner: "Read text/images off the screen, catalog app objects, and inject keys/clicks — one or many apps at once — from the gateway server."
-  product_home: ../../catalogs/micropolis-home/micropolis-angel.yml
+  product_home: ../../catalogs/soul-city/micropolis-angel.yml
   note: |
     Consumer-facing reincarnation ships as MicropolisAngel (Windows Steam companion).
     Stream-gateway server variant powers Repo Show broadcast rig — same lineage, different packaging.
@@ -33,7 +33,7 @@ capabilities:
       reuse: "OBS/NDI frames when OBS owns the graph"
     impl: ../micropolis-angel/ARCHITECTURE.yml#native_apis
   read:
-    text: "Primary: Micropolis Home TS reads .iff / save files — NOT screen OCR for metadata."
+    text: "Primary: Soul City TS reads .iff / save files — NOT screen OCR for metadata."
     catalog_panel: |
       **Buy/build mode — GUID unknown:** OCR title, price, description from catalog panel;
       fuzzy-match against installed objects; represent ambiguous candidate sets honestly.
@@ -57,7 +57,7 @@ targets:
     platform: "Windows only — run Steam Sims 1 performances on the PC (Legion)."
     note: "Mac can't run it; PC handles Sims segments; gateway drives over LAN."
   iff_pipeline:
-    platform: "Micropolis Home TypeScript — read .iff/.far, WebGPU render (replaces scrape for metadata)"
+    platform: "Soul City TypeScript — read .iff/.far, WebGPU render (replaces scrape for metadata)"
     ties:
       - "catalogs/maxis/CATALOG.yml#pipeline"
       - "apps/micropolis-angel/SIMSKIT-LINEAGE.yml"
@@ -95,4 +95,4 @@ ties_to:
   - overlay-viewer.yml
   - ../micropolis-angel/CATALOG-SCREEN-MATCH.yml
   - ../../process/brain-stream.yml
-  - ../../catalogs/micropolis-home/micropolis-angel.yml
+  - ../../catalogs/soul-city/micropolis-angel.yml

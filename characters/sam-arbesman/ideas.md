@@ -45,8 +45,8 @@ Don's CAM6 lineage, Dave Ackley's Movable Feast, Scott Draves' generative art â€
 Infernal Research thread: Interval, SFC, Gallium â€” the lab culture that fed Sims, Proxi, and
 modern VC deep-tech. Sam's Lux seat as the contemporary echo.
 
-### 6. Building SimCity vs building Micropolis Home now
-Chaim documented how EA open-sourced SimCity; Don is building **Micropolis Home** in public.
+### 6. Building SimCity vs building Soul City now
+Chaim documented how EA open-sourced SimCity; Don is building **Soul City** in public.
 Honest compare: historian's archive vs engineer's running fork.
 
 ### 7. Three-way with Chaim (optional episode)

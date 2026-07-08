@@ -10,7 +10,7 @@ Original object suites, sophisticated SimAntics, themed collections, and communi
 One of the deepest artisanal catalogs in Sims 1 history.
 
 - Storefront: [simfreaks.com](https://www.simfreaks.com/)
-- Hosted on: [Micropolis Home](../micropolis-home/README.md) (federation rails)
+- Hosted on: [Soul City](../soul-city/README.md) (federation rails)
 
 ## In this directory
 
@@ -33,7 +33,7 @@ One of the deepest artisanal catalogs in Sims 1 history.
 
 ## Related catalogs
 
-[SimProv](../simprov/README.md) · [Zombie Sims](../zombie-sims/README.md) · [SimSlice](../simslice/README.md) · [Micropolis Home](../micropolis-home/README.md)
+[SimProv](../simprov/README.md) · [Zombie Sims](../zombie-sims/README.md) · [SimSlice](../simslice/README.md) · [Soul City](../soul-city/README.md)
 
 ---
 

@@ -18,7 +18,7 @@ any show can recommend, not Will Wright's personal archive. **Get the base game 
 | **SimSlice** | [simslice/README.md](simslice/README.md) | SliceCity — SimCity inside Sims |
 | **SimProv** | [simprov/README.md](simprov/README.md) | Wedding playset agitprop |
 | **Zombie Sims** | [zombie-sims/README.md](zombie-sims/README.md) | Alvey magnum opus |
-| **Micropolis Home** | [micropolis-home/README.md](micropolis-home/README.md) | Federation platform |
+| **Soul City** | [soul-city/README.md](soul-city/README.md) | Federation platform |
 | **Maxis metadata** | [maxis/README.md](maxis/README.md) | Archivist layer |
 | **Community index** | [sims1-community-landscape.md](sims1-community-landscape.md) | Sites, subscriptions, Steam companion strategy |
 | **Across** | [sources](../characters/will-wright/sources/README.md) · [show](../repo-shows/will-wright-premiere/README.md) | Primary evidence + flagship show |
@@ -69,7 +69,7 @@ Archivist layer; not a replacement for EA's official stores.
 
 ---
 
-## Micropolis Home — [`micropolis-home/`](micropolis-home/README.md)
+## Soul City — [`soul-city/`](soul-city/README.md)
 
 **Create · publish · share** — federation platform underneath the legacy brands. Web-native
 Transmogrifier, RugOMatic, body editors, CARD dirs, Exchange revival. Where new releases and git
@@ -77,17 +77,17 @@ artifacts live while SimFreaks/SimSlice keep their storefronts.
 
 ---
 
-## Micropolis Home vs the legacy catalogs
+## Soul City vs the legacy catalogs
 
 The legacy brands are **catalogs**: curated bodies of work with their own fan bases.
 
-**Micropolis Home** is the **platform**:
+**Soul City** is the **platform**:
 
 1. **Create** — web-native authoring + MOOLLM-assisted tools
 2. **Publish** — federation CARD dirs, hosted content repos, round-trippable saves
 3. **Share** — Exchange revival, family album stories, composable playsets
 
-SimFreaks, SimSlice, SimProv, and Zombie Sims federate **into** Micropolis Home.
+SimFreaks, SimSlice, SimProv, and Zombie Sims federate **into** Soul City.
 
 ## Start reading
 
@@ -100,7 +100,7 @@ SimFreaks, SimSlice, SimProv, and Zombie Sims federate **into** Micropolis Home.
 
 ## Status
 
-**Planted** — catalog stubs + cross-links today; hosted CARD dirs and download paths as Micropolis Home modules ship.
+**Planted** — catalog stubs + cross-links today; hosted CARD dirs and download paths as Soul City modules ship.
 
 ---
 

@@ -13,7 +13,7 @@ SimFreaks/SimSlice skins, scale toward *They Are Billions* pressure — and play
 
 ## The bigger why — Micropolis publishing
 
-Underneath the fun: Don is building [**Micropolis Home**](../catalogs/micropolis-home/README.md) — create · publish · share — for the
+Underneath the fun: Don is building [**Soul City**](../catalogs/soul-city/README.md) — create · publish · share — for the
 Alveys' enormous **artisanal back-catalogs** and current streams (and his own). Federated catalogs:
 [SimFreaks](../catalogs/simfreaks/README.md), [SimSlice](../catalogs/simslice/README.md),
 [SimProv](../catalogs/simprov/README.md), [Zombie Sims](../catalogs/zombie-sims/README.md).

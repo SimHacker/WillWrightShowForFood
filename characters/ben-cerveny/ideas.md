@@ -86,7 +86,7 @@ Simopolis; export to other federation peers. [game-bridge-mind-mirror.yml](../..
 
 ### 10. Micropolis Federation naming
 
-MicropolisCity + MicropolisHome under [Micropolis Public Name License](https://github.com/SimHacker/MicropolisCore/blob/main/MicropolisPublicNameLicense.md).
+MicropolisCity + SoulCity under [Micropolis Public Name License](https://github.com/SimHacker/MicropolisCore/blob/main/MicropolisPublicNameLicense.md).
 Simopolis = umbrella fiction only. Git branch per city save: `MicropolisCity_<save-id>`.
 
 ## Sources (public)

@@ -210,7 +210,7 @@ guests:
   jimmy-maher: { relationship: history_collaborator, invitation_status: not_offered, path: characters/jimmy-maher/, consent: not_yet_asked, channel: maher@filfre.net, since: 2026-07, note: "The Digital Antiquarian — Billund DK; MIT Press Amiga + IF books; Maxis Part 1 Jul 2026. Full room: CHARACTER.yml, sources/about-me.yml, synergy/. Parallel invite like Jess. Registry: process/maxis-history-collaborators.yml." }
   steina-vasulka: { invitation_status: not_yet_asked, note: "Video artist; Image/ine @ STEIM w/ Tom Demeyer — characters/steina-vasulka/" }
   mark-weiser: { invitation_status: memorial, note: "deceased (1952–1999) — MEMORIAL MODE: ubicomp/calm tech; CHI'88 pie-menu co-author with Don; discussants: Don, Ben Shneiderman" }
-  luc-barthelet: { invitation_status: draft, show_seed: repo-shows/luc-barthelet-sims-online/, note: "GM Maxis; SimShow pre-launch; The Sims Online; interview — TSO → Micropolis Home" }
+  luc-barthelet: { invitation_status: draft, show_seed: repo-shows/luc-barthelet-sims-online/, note: "GM Maxis; SimShow pre-launch; The Sims Online; interview — TSO → Soul City" }
   phil-salvador: { invitation_status: draft, show_seed: repo-shows/phil-salvador-simrefinery/, note: "Obscuritory/VGHF; SimRefinery + MBS archivist; characters/phil-salvador/media/ + README" }
   philip-rosedale: { invitation_status: draft, show_seed: repo-shows/philip-rosedale-hifi-moollm.yml, priority: send_after_wave_1, note: "Warm 2017 worklist; VR DLA jam; YAML Jazz + GitHub-as-MMORPG collaboration stack; SL avatar import/export; HiFi historical, SL now" }
   matthew-sibigtroth: { invitation_status: not_yet_asked, show_seed: repo-shows/matthew-sibigtroth/ }

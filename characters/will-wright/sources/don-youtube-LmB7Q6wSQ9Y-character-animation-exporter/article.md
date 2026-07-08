@@ -10,7 +10,7 @@ The **VitaBoy / skeleton animation export** path Don built for The Sims 1 — Ma
 
 > I had to learn how real artists used the tools everyday… instead of imposing a pre-conceived design from the perspective of a programmer.
 
-That same pattern drives Micropolis Home: tools shaped around Heather/Steve's SimFreaks/SimSlice workflows, not generic CMS assumptions.
+That same pattern drives Soul City: tools shaped around Heather/Steve's SimFreaks/SimSlice workflows, not generic CMS assumptions.
 
 ## Technical notes
 

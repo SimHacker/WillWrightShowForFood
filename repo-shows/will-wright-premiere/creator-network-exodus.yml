@@ -32,7 +32,7 @@ threads:
   ea_buyout:
     source: ../../characters/will-wright/sources/sims1-legacy-collection-exchange-gap/ea-ownership-representation-creators.yml
   indie_rails:
-    spec: ../../catalogs/micropolis-home/github-distribution-model.yml
+    spec: ../../catalogs/soul-city/github-distribution-model.yml
     soul_city: game-bridge-sims-tiny-life.yml
 
 show_beats:

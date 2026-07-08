@@ -17,7 +17,7 @@ Live simulated **Fox News** parody — pie menus driving talking heads, video mi
 | SimFaux 2006 | OpenLaszlo / Flash |
 | SimFreaks catalog | Laszlo + Python/MySQL — [`../2005-09-18-simfreaks-content-catalog-laszlo/`](../2005-09-18-simfreaks-content-catalog-laszlo/README.md) |
 | Micropolis web | TurboGears + Laszlo + AMF — [`../multiplayer-simcity-ui-network/`](../multiplayer-simcity-ui-network/README.md) |
-| 2026 | Micropolis Home federation |
+| 2026 | Soul City federation |
 
 ## Related
 

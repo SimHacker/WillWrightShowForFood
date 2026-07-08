@@ -28,7 +28,7 @@
 
 **Analysis angles:**
 
-- Central server + thin rich client (Laszlo/Flash) as precursor to Micropolis Home federation
+- Central server + thin rich client (Laszlo/Flash) as precursor to Soul City federation
 - Custom field editors (pie menus, color pickers, OPML, map browsers) → modern component library
 - Multi-user editing: who was "multiplayer" here — concurrent CMS authors? live game state? (clarify with Don)
 - MySQL/SQLObject → today's git-backed CARD + derived DB in stream-gateway
@@ -37,7 +37,7 @@
 
 1. Sugar: Papert constructionism + mesh as *game* multiplayer (same city, many kids).
 2. Laszlo catalog: *content* multiplayer (many authors, one canonical DB, federated storefronts).
-3. Convergence in Micropolis Home — publish rails + optional live play (Simplifier, stream-gateway).
+3. Convergence in Soul City — publish rails + optional live play (Simplifier, stream-gateway).
 4. What we can run today vs museum pieces.
 
 ## Gaps

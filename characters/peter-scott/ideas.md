@@ -22,7 +22,7 @@
 ## Don segments
 
 - 6502 range: Scott's memory map on a Lewis board; tail buffer for high scores.
-- Micropolis Home: browser reads saves — Scott read magazine screenshots when originals sent useless disks.
+- Soul City: browser reads saves — Scott read magazine screenshots when originals sent useless disks.
 - Fair-play philosophy aligns with Exchange revival (don't punish buyers on screen one).
 
 ## Clips (timestamps from ABug 13)
