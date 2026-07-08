@@ -40,6 +40,12 @@ stage is a public GitHub repo, following through to working code and credited id
   the argument I cite on HN). Open courseware segment for your students if you want it.
 - **Acronym jam (optional)** — your [acronym scoreboard](https://www.cs.cmu.edu/~bam/acronyms.html),
   C32's 32 C-words, and whether peer review literally *grew* the monster. Only if that's fun.
+- **The Sentient Wait Cursor (dessert)** — your CHI '85 percent-done paper proved presence beats
+  precision; our microworld took that to its logical conclusion: a loading spinner who became a
+  stand-up comedian. Two deadpan parodies await your expert refereeing — a
+  [design white paper](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brad-myers/sentient-wait-cursor-proposal.md)
+  and a [YC application](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brad-myers/yc-application-wait-cursors-as-a-service.md)
+  for streaming comedians to elevators and hold music. Review harshly; it expects it.
 
 **Format:** Remote is fine; Pittsburgh and Amsterdam both exist on the internet. **Zero homework — as much *homefun* as you are up to.**
 

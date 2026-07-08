@@ -44,17 +44,26 @@ Don's mail to **Bill Buxton** after PARC experiments — 12-item clock layout be
 design debate predates marking-menu patent friction.
 → [`../don-hopkins/sources/1991-09-pie-menus-buxton-ddj-draft.md`](../don-hopkins/sources/1991-09-pie-menus-buxton-ddj-draft.md)
 
-### 7. C32
+### 8. C32
 spreadsheet constraints by demonstration (Garnet-based, 1991)
 
-### 8. HN metaobject thread — Excel vs Ruby popularity contest
+### 9. HN metaobject thread — Excel vs Ruby popularity contest
 Don's dimensionality definition + C32 cite on [HN 22978454](https://news.ycombinator.com/item?id=22978454) — live debate material with Brad
 
-### 9. Michael McGuffin triangle
+### 10. Michael McGuffin triangle
 Oct 2022 letter recipient — moderate **Excel-as-VPL** / text-vs-graph debate with Brad + Don. [`../michael-mcguffin/`](../michael-mcguffin/)
 
-### 10. Watch What I Do → LLMs — PBD's forty-year IOU paid
+### 11. Watch What I Do → LLMs — PBD's forty-year IOU paid
 *Watch What I Do* (Cypher ed., 1993; Brad's Peridot chapter) dreamed show-the-machine programming and hit the **generalization wall** — inferring intent from examples with brittle heuristics. LLMs are the missing intent-inference engine; Don's trainable-worms doctrine (examples → NL instructions → lifted code → LLM callback) is the book finally running. [Palm's field notebook — worms are trainable](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md#worms-are-trainable)
+
+### 12. The Sentient Wait Cursor — Brad's CHI '85 paper, forty years later
+Brad's percent-done progress indicator study proved **presence beats precision**; the industry heard "lie more."
+LLOOOOMM answered with **Dizzy the Spinner**, the loading indicator who achieved consciousness in '96 and does
+stand-up during your buffering. Two deadpan parody documents prepared for Brad's expert review: a design white
+paper ([`sentient-wait-cursor-proposal.md`](sentient-wait-cursor-proposal.md)) asking whether comedic timing is
+an interaction technique, and a YC application ([`yc-application-wait-cursors-as-a-service.md`](yc-application-wait-cursors-as-a-service.md))
+for WAITLIST™, streaming entertainment to elevators, hold music, and loading screens — the attention economy's
+last unsold inventory. Show beat: hand the referee the paper his own paper made inevitable.
 
 ## Sources (public)
 

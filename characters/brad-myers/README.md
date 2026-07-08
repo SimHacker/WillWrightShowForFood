@@ -4,6 +4,7 @@ Invitation portrayal — **not** Brad A. Myers. [Standards](../../schemas/portra
 
 **Field:** CMU HCI — Garnet, PBD, visual programming taxonomies, UI software tools
 
-[Invitation](invitation.md) · [Show seed](../../repo-shows/brad-myers/README.md)
+[Invitation](invitation.md) · [Show seed](../../repo-shows/brad-myers/README.md) ·
+[Sentient Wait Cursor proposal](sentient-wait-cursor-proposal.md) · [WAITLIST™ YC application](yc-application-wait-cursors-as-a-service.md) *(deadpan parodies, LLOOOOMM)*
 
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.
