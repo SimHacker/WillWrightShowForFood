@@ -16,8 +16,8 @@ contributor. Public voice on long-term software thinking, biologist-minded techn
 scientific organization types.
 
 **Chaim Gingold** introduced Don after Sam interviewed Chaim on *Building SimCity* (July 2024) —
-Sam "super into all things Maxis," curious about Maxis 2.0. Don congratulated Sam on *The Magic of
-Code* (2025). Video call planned, not held; Repo Show is the better venue.
+Sam "super into all things Maxis," curious about Maxis 2.0. **Warm email thread** since — CAM6, Snap!,
+Overedge, *Magic of Code* (2025). Video call discussed; Repo Show is the better venue. [Thread](sources/chaim-intro-thread-2024.md).
 
 ## Shared ground — deeply aligned
 
@@ -26,7 +26,7 @@ Code* (2025). Video call planned, not held; Repo Show is the better venue.
 | Microcosm Industries | **Maxis Labs 2** — lab that ships simulation toys |
 | Overedge Catalog | Repo Show as forkable institution format |
 | Lists of lists | `characters/`, `process/`, MOOLLM skills INDEX |
-| Long Now fellowship | Durable attributed record — git as the long now |
+| Long Now fellowship | [2006 Eno×Will seed](sources/long-now-thread.md) → git as long now; Sam's 2016 talk |
 | HyperCard kid | Director lineage → repo-as-simulation |
 | Complexity + wonder | Glass-box Micropolis, CAM6, operational runbooks |
 | Building new research institutions | "Happy to help" — Don is building one in public |
@@ -60,13 +60,33 @@ What Maxis "facts" decayed (Exchange, SliceCity promises) vs what git preserves.
 with city saves.
 
 ### 8. Interval / Infernal Research echo
-Mail thread lineage — labs that fed Sims culture. Sam's Lux seat as contemporary echo; honest compare.
+Mail thread — Interval Oompa-Loompa year, SFC robot films, Gallium, Bell Labs piece, *CAM Machines*.
+[Thread](sources/infernal-research-thread-2024.md). Sam's Lux seat as contemporary echo.
 
 ### 9. Humanistic Computation × resonant computing
 Manifesto energy meets MOOLLM cauldron harvest — PLAY → LEARN → LIFT after each show.
 
-### 10. Three-way with Chaim (optional)
+### 10. Three-way stack with Chaim (optional)
 *Building SimCity* historian + complexity scientist + toolchain author — Maxis Labs 2 from three necessary views.
+Will already interviewed Chaim live on [ROMchip, Jul 2024](../chaim-gingold/sources/romchip-will-wright-2024.md);
+Sam had Chaim on his podcast. Every edge of this triangle is warm.
+Chaim pacing: async, new-parent-friendly — [his invitation](../chaim-gingold/invitation.md).
+
+### 11. Maxis vision primary source
+Annual-report language on educational simulation — [archived excerpts](sources/maxis-corporate-vision.md).
+
+### 12. Epistemix / FRED vs home-cooked sim
+Sam flagged platform roots in intro mail — contrast institutional sim stacks with Robin Sloan meals.
+
+### 13. Long Now braid — were you in the room?
+Sam: **Research Fellow**; 2016 *Overcomplicated* seminar. Repo seed: **26 Jun 2006** Eno×Will
+[*Playing with Time*](sources/long-now-thread.md) — open-source SimCity Q&A; Don in audience.
+**Ask Sam** if he attended 2006 too. Show beat: 2006 → 2016 → Maxis Labs 2.
+
+### 14. Participation shapes
+**Solo** (default): Sam records **alone** — one video, send file. **Stack:** Sam + Will + Chaim each
+solo; Don weaves. **One-on-one** or **live** if scheduling allows. Sam suggests guests.
+[show-formats.md](show-formats.md) · [guest participation ladder](../../process/guest-participation-ladder.md).
 
 ## Sources (public)
 

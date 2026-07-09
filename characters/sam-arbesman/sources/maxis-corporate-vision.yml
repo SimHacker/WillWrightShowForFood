@@ -1,0 +1,16 @@
+# Maxis corporate vision — girder
+
+meta:
+  rendered_edition: maxis-corporate-vision.md
+  media:
+    - ../media/maxis-corporate-vision-jo-co.png
+    - ../media/maxis-corporate-vision-cdrom.png
+
+themes:
+  - educational simulation
+  - artificial life
+  - new way of thinking and seeing
+
+see_also:
+  - microcosm-maxis-labs.md
+  - ../../chaim-gingold/

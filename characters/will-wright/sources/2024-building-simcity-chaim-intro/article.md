@@ -25,6 +25,9 @@ Chaim offered to connect Don to **Sam Arbesman** — complexity scientist, Maxis
 
 **Status:** Invitation + show seed — [`characters/sam-arbesman/`](../../../sam-arbesman/README.md) · [`repo-shows/sam-arbesman-maxis-labs.yml`](../../../../repo-shows/sam-arbesman-maxis-labs.yml)
 
+**Ten days later:** Will interviewed Chaim live on ROMchip's Twitch (19 Jul 2024) about the book —
+[`romchip-will-wright-2024.md`](../../../chaim-gingold/sources/romchip-will-wright-2024.md)
+
 ---
 
 ## Related oral-history threads

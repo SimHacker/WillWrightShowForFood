@@ -106,7 +106,7 @@ guests:
   bill-atkinson: { invitation_status: memorial, note: "deceased (1951–2025) — MEMORIAL MODE: HyperCard/MacPaint/QuickDraw; HyperCard → HyperLook lineage; discussants: Arthur van Hoff, Don" }
   bill-budge: { invitation_status: not_yet_asked, note: "LIVING (b. 1954, retired 2022, active GitHub 2026) — INVITATION, not memorial. Raster Blaster + Pinball Construction Set: the construction-set genre / user-generated content; lifelong tools & frameworks builder. Tribute: apps/performance-space/faceball-construction-set.yml (Pinball Construction Set for faces). PCS = an artifactory; upstream of Will Wright construction-set design. Discussants: Will Wright, Apple II/early-EA peers, Don." }
   bill-joy: { invitation_status: dream_guest, show_seed: repo-shows/bill-joy/, note: "DREAM GUEST: Sun co-founder, Joy's law 2^(year-1984); Medium article + Educom '88 pie-menu story; 2006 reconnect; OLPC quote — public quotes only" }
-  chaim-gingold: { invitation_status: not_yet_asked, show_seed: repo-shows/chaim-gingold/ }
+  chaim-gingold: { invitation_status: draft, show_seed: repo-shows/chaim-gingold/, pair_with: sam-arbesman, note: "Warm invitation; async/new-parent pacing; delivered Sam intro Jul 2024; Will interviewed him live on ROMchip 2024-07-19 (sources/romchip-will-wright-2024.md); natural pair with Sam — solo clips stack" }
   charchit-goyal: { invitation_status: none, path: characters/charchit-goyal/, note: "Field contact — Wedge context-aware pie menu for After Effects (beta Jul 2026); r/AfterEffects → Don via eye-flying. charchitgoyal.com/plugins/wedge" }
   chris-trottier: { invitation_status: draft, show_seed: repo-shows/REPO-SHOWS.yml#design-by-accretion.yml, note: "Lead Designer at Maxis (1997–2008) — Sims, TSO, Spore; design by accretion; Jan 2007 career memoir digest; flagship design-by-accretion seed + Sims reunion" }
   claire-curtin: { invitation_status: draft, show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml, note: "Longtime game designer & producer at Maxis; designer on The Sims; Don's teammate; Sims reunion" }
@@ -258,7 +258,7 @@ guests:
   terry-winograd: { invitation_status: not_yet_asked, show_seed: repo-shows/terry-winograd/, media: "characters/terry-winograd/media/ — CS547 339-talk catalog (cs547-ARCHIVE.md)" }
   thomas-cherryhomes: { invitation_status: not_yet_asked, show_seed: repo-shows/thomas-cherryhomes/ }
   vanessa-freudenberg: { invitation_status: memorial, show_seed: repo-shows/remembering-vanessa-freudenberg.yml, note: "d. 2025 — memorial arc: Craig anchor; Dan Ingalls + Alan Kay warmly invited w/ Don; SqueakJS → WASM → Caffeine" }
-  sam-arbesman: { invitation_status: draft, show_seed: repo-shows/sam-arbesman-maxis-labs.yml, note: "Chaim intro 2024; Microcosm Industries; Maxis Labs 2 aligned; invitation + sources ready" }
+  sam-arbesman: { invitation_status: warm_correspondence, show_seed: repo-shows/sam-arbesman-maxis-labs.yml, note: "Chaim intro Jul 2024; warm Don mail thread; Maxis Labs 2; sources + media" }
   walter-bender: { invitation_status: not_yet_asked, show_seed: repo-shows/walter-bender-olpc/, note: "OLPC introducing-the-players thread harvested; Stone Soup + GPL" }
   yuja-wang: { type: tribute, path: characters/yuja-wang/, note: "Flight of the PIXIE — Verbier-era Flight of the Bumblebee synced to 1969 PIXIE films; Instagram-taggable tribute pointer; not a show invitation" }
   yoot-saito: { invitation_status: not_yet_asked, show_seed: repo-shows/yoot-saito/ }

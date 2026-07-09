@@ -109,8 +109,8 @@ More names appear as you list this folder — or follow links from [`../repo-sho
 | `CARD.yml` | Universal CARD — room interface + MTG invokable abilities |
 | `CHARACTER.yml` | Yaml girder — bio, sources, invitation.status |
 | `GLANCE.md` | One-screen sniff |
-| `README.md` | Markdown facade |
-| `invitation.md` | Public invitation — link from email |
+| `README.md` | Portrait **for** the public — who they are, why they matter here |
+| `invitation.md` | Letter **to** the guest — verify, consent, show ask |
 | `ideas.md` | Topic menu for browsing guests — career, shared ground, show hooks |
 | `correspondence.yml` | Optional public-safe thread digest |
 

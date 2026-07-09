@@ -20,15 +20,30 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/chaim-gingold/
+  pacing_note: "New parent — async-first; minimal prep; wee bit of time only"
+  intro_delivered:
+    character: sam-arbesman
+    date: "2024-07-09"
+    quality: impeccable
 
 bio:
   summary: "**Chaim Gingold** — designer & historian who reverse-engineered SimCity and wrote *Building SimCity* (MIT Press, 2024), creator of the famous reverse diagrams."
+
+lineage:
+  spore: "Apprenticed to Will Wright on Spore; designed the Spore Creature Creator"
+  romchip_2024: sources/romchip-will-wright-2024.md
+
+natural_pair:
+  character: sam-arbesman
+  why: "Chaim introduced Sam to Don (2024-07-09); historian × complexity scientist on the Maxis spine"
 
 sources:
   wikipedia: null
   web:
     - { title: "Building SimCity: How to Put the World in a Machine (MIT Press, 2024)", url: https://mitpress.mit.edu/9780262547482/building-simcity/ }
     - { title: "SimCity Reverse Diagrams", url: https://smalltalkzoo.thechm.org/users/Dan/uploads/SimCityReverseDiagrams.pdf }
+    - { title: "chaim.io", url: https://chaim.io }
+    - { title: "ROMchip: Will Wright interviews Chaim Gingold (2024-07-19)", url: https://www.youtube.com/@ROMchipJournal, local: sources/romchip-will-wright-2024.md }
   papers:
     - { title: "Play Design (Ph.D. dissertation, UC Santa Cruz, 2016)", url: https://www.proquest.com/docview/1806122688 }
   blogs:

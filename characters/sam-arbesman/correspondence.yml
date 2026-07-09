@@ -1,62 +1,46 @@
-# Samuel Arbesman × Don Hopkins — correspondence summary (public-safe)
-# Intro via Chaim Gingold, July 2024. Standards: ../../schemas/portrayal-standards.md
+# Samuel Arbesman — correspondence (Don Hopkins)
 
-meta:
-  with: sam-arbesman
-  curated_by: don-hopkins
-  consent: not_yet_asked
-  channel: email
-  intro_via: chaim-gingold
-  span: "2024-07 — 2025-04 (mail); video call planned, not held"
-  warm_contact: true
-  provenance_private: DonHopkins/temp/old-email/intro.txt (not checked in)
-
-gist: |
-  **Chaim Gingold** offered to connect Don to **Sam Arbesman** after Sam interviewed Chaim on
-  *Building SimCity* and Maxis history. Chaim reported Sam as "super into all things Maxis" and
-  curious what a **Maxis 2.0** fan reconstruction / next lab would look like.
-
-  Mail threads touched **Infernal Research** (Interval, Bell Labs, cellular automata lineage) and
-  Don's congratulations on ***The Magic of Code*** (April 2025). A video call was discussed but
-  never scheduled — the Repo Show is the proposed better venue: async repo accretion + live stream,
-  with Sam's complexity lens and institution-catalog instincts meeting Don's running Micropolis /
-  Soul City stack.
+# Warm thread since Chaim Gingold intro, July 2024. Video call discussed; Repo Show is the better venue.
 
 threads:
-  chaim_intro:
-    date: "2024-07"
+  - id: chaim-intro
+    date_start: "2024-07-09"
     via: chaim-gingold
-    chaim_note: "Super into all things Maxis; fantasizes about Maxis 2.0"
-    source: characters/will-wright/sources/2024-building-simcity-chaim-intro/
+    subject: "Don <> Sam"
+    summary: |
+      Chaim introduced Sam as Maxis-obsessed complexity scientist, Building SimCity podcast guest,
+      always fantasizing about Maxis 2.0. Sam loved Don's CAM6 demo immediately; proposed video call.
+    source: sources/chaim-intro-thread-2024.md
 
-  infernal_research:
-    date: "2024-07"
-    what: |
-      Shared thread on Interval Research lineage, Bell Labs culture, and cellular automata as
-      intellectual connective tissue between Sam's complexity writing and Don's CAM6 / microworld work.
+  - id: snap-hyperlook-micropolis
+    date: "2024-07-10"
+    summary: |
+      Don shared HyperLook SimCity + Snap!/Micropolis integration. Sam: Snap! melds Scratch and NetLogo;
+      friends with Sandspiel creators; noted Epistemix/FRED simulation roots.
+    source: sources/chaim-intro-thread-2024.md
 
-  magic_of_code_congrats:
-    date: "2025-04"
-    what: Don congratulated Sam on publication of The Magic of Code
+  - id: infernal-research
+    date_start: "2024-07-11"
+    subject: "Infernal Research Corporation"
+    summary: |
+      Overedge Catalog; Interval Research Oompa-Loompa year; SFC robot videos; SFC defunct → Gallium;
+      Bell Labs recreation article; Sam bought Cellular Automata Machines; Wuensche Global Dynamics.
+    source: sources/infernal-research-thread-2024.md
 
-  video_call_never_scheduled:
-    date: "2024-2025"
-    status: planned_not_held
-    repo_show_pitch: |
-      Async public repo + recorded conversation replaces one-off video chat; Sam can correct
-      portrayal anytime per invitation.md house law.
+  - id: magic-of-code
+    date: "2025-04-28"
+    summary: |
+      Sam announced The Magic of Code (June 10, 2025). Don congratulated; Kindle preorder.
+    source: sources/magic-of-code-2025.md
 
-connects_in_repo:
-  - { path: ideas.md, why: "Maxis Labs 2 hooks" }
-  - { path: sources/microcosm-maxis-labs.md, why: "Microcosm × Maxis Labs 2 alignment" }
-  - { path: ../chaim-gingold/, why: "Intro source; optional three-way show" }
-  - { path: ../../repo-shows/sam-arbesman-maxis-labs.yml, why: "Show seed" }
-  - { path: ../will-wright/invitation.md, why: "Accepted premiere guest — Maxis Labs 2 design partner" }
+status:
+  relationship: warm
+  video_call: discussed_not_scheduled
+  repo_show: preferred_venue
+  ensemble_proposal: seed
+  default_ask: solo_video
+  formats_doc: show-formats.md
 
-show_hooks:
-  - "Maxis Labs 2 — institution brief, not fanfiction"
-  - "Microcosm Industries spirit × running Soul City / Micropolis repo"
-  - "Overedge Catalog ↔ Repo Show as new knowledge-creation org type"
-  - "Chaim three-way — historian + complexity scientist + toolchain author"
-  - "Long Now patience × Will data-portability crown jewel"
-  - "HyperCard kid meets git-native simulation engine"
+introducer:
+  character: chaim-gingold
+  note: "Impeccable match — Sam already engaged with Don's work before any show pitch"

@@ -1,0 +1,50 @@
+# SHOW — Chaim Gingold — Building SimCity × running the code
+# Seed. Natural pair with sam-arbesman-maxis-labs; weave with Will where it fits.
+
+show:
+  id: chaim-gingold
+  title: "A Repo Show with Chaim Gingold — Building SimCity, Running SimCity"
+  type: real
+  host: Don Hopkins
+  guests: ["Chaim Gingold"]
+  character: characters/chaim-gingold/
+  topic: "Building SimCity (MIT Press 2024) read against the running Micropolis source — reverse diagrams meet executable history."
+  status: draft
+  consent: not_yet_asked
+  pacing: "New parent — async-first, tiny asks, no deadlines"
+  participation_ladder: process/guest-participation-ladder.md
+
+precedent:
+  romchip_2024: characters/chaim-gingold/sources/romchip-will-wright-2024.md
+  note: "Will interviewed Chaim live on Twitch (19 Jul 2024) about the book — the pairing is proven on air."
+
+natural_pair:
+  with: sam-arbesman
+  seed: repo-shows/sam-arbesman-maxis-labs.yml
+  why: |
+    Chaim introduced Sam to Don (Jul 2024). Historian × complexity scientist on the same Maxis
+    spine: Building SimCity documents what Maxis was; Maxis 2.0 / Maxis Labs 2 asks what comes
+    next. Solo clips stack into one weave — with Will and Don where it fits.
+
+format:
+  default_ask: solo_video
+  live: false
+  time_shifted: true
+  note: |
+    Solo clip whenever a window opens — phone or laptop, one person, one file; Don weaves.
+    Stack with Sam / Will solo clips. One-on-one or live only if it genuinely suits him.
+
+dream_segments:
+  - "Reverse diagrams live — one diagram against the running Micropolis source"
+  - "Building SimCity as show spine — a chapter per segment"
+  - "Open-sourcing SimCity — Chaim's published account × Don's primary sources"
+  - "Sandspiel ↔ CAM6 — falling sand meets cellular automata"
+  - "Spore Creature Creator — apprenticed to Will, designing the editor players loved"
+  - "Three-way stack with Sam — history / complexity / toolchain"
+
+ties_to:
+  - ../../characters/chaim-gingold/
+  - ../../characters/sam-arbesman/
+  - ../../characters/will-wright/
+  - ../sam-arbesman-maxis-labs.yml
+  - ../../characters/will-wright/sources/2024-building-simcity-chaim-intro/

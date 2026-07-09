@@ -69,7 +69,7 @@ Product of **HyperCard**, **Martin Gardner**, science fiction, and **LEGO**.
 |--------------|------------|
 | Microcosm Industries | [Maxis Labs 2](microcosm-maxis-labs.md) design brief |
 | Overedge Catalog | Repo Show as inspectable institution format |
-| Long Now | Durable attributed forkable record ([VISION](../../../process/VISION.md)) |
+| Long Now | [long-now-thread.md](long-now-thread.md) — Fellow; 2016 seminar; ↔ 2006 Eno×Will seed |
 | Complexity science | Glass-box Micropolis / CAM6 microworlds |
 | HyperCard lineage | Director → repo-as-simulation deep move |
 

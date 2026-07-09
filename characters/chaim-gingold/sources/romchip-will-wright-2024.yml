@@ -1,0 +1,35 @@
+# ROMchip stream 19 Jul 2024 — girder
+
+meta:
+  rendered_edition: romchip-will-wright-2024.md
+  kind: public_event
+  consent: public
+
+event:
+  date: "2024-07-19"
+  title: "ROMchip Presents: Chaim Gingold and Will Wright on Building SimCity"
+  host: "ROMchip: A Journal of Game Histories"
+  venue: https://www.twitch.tv/romchipjournal
+  recording: https://www.youtube.com/@ROMchipJournal
+  format: "Tables turned — Will Wright interviews Chaim Gingold"
+
+participants:
+  interviewer: will-wright
+  guest: chaim-gingold
+
+context:
+  book: "Building SimCity: How to Put the World in a Machine (MIT Press, 2024)"
+  lineage: "Chaim apprenticed to Will on Spore; designed Spore Creature Creator"
+  same_month: "Chaim introduced Sam Arbesman to Don 2024-07-09 — ten days before stream"
+  color: "Phil Salvador (VGHF podcast ep. 125): Will's first question — 'if you were a tree…'"
+
+sources:
+  - https://news.ycombinator.com/item?id=40699204
+  - http://lists.sigcis.org/pipermail/members-sigcis.org/2024-July/008592.html
+  - https://gamehistory.org/episode-125-romchip-whats-next/
+
+see_also:
+  - romchip-will-wright-2024.md
+  - ../correspondence.yml
+  - ../../sam-arbesman/sources/chaim-intro-thread-2024.md
+  - ../../will-wright/

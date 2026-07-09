@@ -135,6 +135,12 @@ invoke_rules:
   consent: not_yet_asked
   simulation: false
 see_also:
+- path: who-is-sam-arbesman.md
+  why: Discovery sheet for cast and crew
+- path: show-formats.md
+  why: Solo / stack / one-on-one / live tiers
+- path: sources/long-now-thread.md
+  why: Long Now Fellow × 2006 Playing with Time seed
 - path: CHARACTER.yml
   why: Bio girder — invitation status
 - path: invitation.md

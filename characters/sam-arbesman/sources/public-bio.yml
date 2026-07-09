@@ -21,6 +21,7 @@ catalogs:
     url: https://arbesman.net/
   - name: Microcosm Industries
     focus: "Simulation toys in the spirit of SimCity"
+    url: https://microcosm.arbesman.net/
   - name: Humanistic Computation Project
     focus: "Human-centered computing themes"
 

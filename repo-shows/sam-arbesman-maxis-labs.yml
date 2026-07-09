@@ -4,12 +4,37 @@
 show:
   id: sam-arbesman-maxis-labs
   status: seed
-  type: solo
+  type: solo_stack_or_live
   guest: sam-arbesman
   character: characters/sam-arbesman/
   dream_guest: false
   warm_contact: true
   intro_via: chaim-gingold
+  participation_ladder: process/guest-participation-ladder.md
+
+ensemble:
+  core_cast:
+    - sam-arbesman
+    - will-wright
+    - chaim-gingold
+    - don-hopkins
+  guest_suggestions_from: sam-arbesman
+  formats:
+    - id: solo
+      tier: 1
+      note: "One person, one video — guest alone; Don weaves in post"
+      doc: characters/sam-arbesman/show-formats.md#tier-1--solo-default-ask
+    - id: one_on_one
+      tier: 2
+      note: "Don + one guest on a scheduled call"
+      doc: characters/sam-arbesman/show-formats.md#tier-2--one-on-one
+    - id: stack
+      tier: 3
+      note: "Multiple solo clips edited together"
+      doc: characters/sam-arbesman/show-formats.md#tier-3--stack
+    - id: live
+      tier: 4
+      doc: characters/sam-arbesman/show-formats.md#tier-4--live
 
 episode:
   working_title: "Maxis Labs 2 — Adjacent Possible for Simulation Toys"
@@ -22,10 +47,12 @@ pitch: |
   Sam is deeply aligned on **Maxis Labs 2**: a research institution that ships forkable microworlds,
   not nostalgia.
 
+  **Default ask:** Sam records a **solo** video — one person, one file — on Maxis 2.0 / Microcosm /
+  whatever he chooses. Don weaves. Optional: Will and Chaim solo clips stacked in edit; one-on-one
+  calls; live Twitch. Sam suggests other guests.
+
   Repo Show: Sam names the institution design brief; Don demos what already runs (MicropolisCore,
-  Soul City, CAM6, character graph); connect Long Now patience to Will's accepted premiere and
-  data-portability crown jewel. Optional three-way with Chaim — historian + complexity scientist +
-  toolchain author.
+  Soul City, CAM6, character graph); Long Now thread from **2006 Eno×Will** seed → Sam's 2016 seminar.
 
 topics:
   - "Maxis Labs 2 — institution charter vs fan reconstruction"
@@ -36,12 +63,23 @@ topics:
   - "Will 1996 data portability — Long Now × premiere guest lens"
   - "Humanistic Computation & Resonant Computing Manifesto × MOOLLM harvest"
   - "HyperCard lineage — repo-as-simulation deep move"
+  - "Long Now braid — 2006 Playing with Time → 2016 Overcomplicated → git"
+  - "Solo stack — Sam / Will / Chaim each record alone; Don edits weave"
   - "Optional Chaim three-way — Building SimCity vs building it now"
+
+natural_pair:
+  with: chaim-gingold
+  seed: repo-shows/chaim-gingold/SHOW.yml
+  why: "Chaim delivered the Sam intro; historian × complexity scientist on the same Maxis spine; Will × Chaim proven live on ROMchip (2024-07-19)"
 
 see_also:
   - characters/sam-arbesman/invitation.md
+  - characters/sam-arbesman/show-formats.md
   - characters/sam-arbesman/ideas.md
+  - characters/sam-arbesman/sources/long-now-thread.md
   - characters/sam-arbesman/sources/microcosm-maxis-labs.md
   - characters/chaim-gingold/
+  - characters/chaim-gingold/sources/romchip-will-wright-2024.md
+  - repo-shows/chaim-gingold/
   - repo-shows/will-wright-premiere/
-  - process/VISION.md
+  - process/guest-participation-ladder.md

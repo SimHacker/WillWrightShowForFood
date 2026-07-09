@@ -1,0 +1,36 @@
+# Chaim intro thread July 2024 — girder
+
+meta:
+  rendered_edition: chaim-intro-thread-2024.md
+  span: "2024-07-09 — 2024-07-10"
+  channel: email
+  intro_via: chaim-gingold
+
+chaim_offer:
+  date: "2024-07-09"
+  quote: "super into all things Maxis … fantasizing about a Maxis 2.0"
+
+sam_first_reply:
+  date: "2024-07-10"
+  highlights:
+    - "CAM6 demo is amazing"
+    - "fan of your work"
+    - "Maxis 2.0 (a bit more here)"
+    - proposed video call
+
+don_topics_shared:
+  - CAM6 cellular automata demo
+  - HyperLook SimCity
+  - Snap! + Micropolis SnapView
+  - Sandspiel (Sam knows creators)
+
+sam_followups:
+  - Snap! "melds Scratch and NetLogo"
+  - Epistemix / FRED simulation platform
+  - "I love this!" on Snap! + live programming for SimCity
+
+see_also:
+  - chaim-intro-thread-2024.md
+  - infernal-research-thread.md
+  - ../correspondence.yml
+  - ../../chaim-gingold/

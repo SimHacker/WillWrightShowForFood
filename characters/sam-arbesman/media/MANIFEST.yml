@@ -1,0 +1,13 @@
+# sam-arbesman — media manifest
+
+character: sam-arbesman
+
+assets:
+  - file: maxis-corporate-vision-jo-co.png
+    title: "Maxis corporate vision (Jo Co... excerpt)"
+    source: "Maxis annual report / corporate materials (scanned excerpt)"
+    note: "Pizza founders vision — new way of playing and thinking; educational not just entertaining"
+  - file: maxis-corporate-vision-cdrom.png
+    title: "Maxis popular success (CD-ROM era excerpt)"
+    source: "Maxis annual report / corporate materials (scanned excerpt)"
+    note: "Artificial life, simulation, stunning graphics, intuitive interfaces"

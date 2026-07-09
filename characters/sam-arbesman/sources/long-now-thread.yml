@@ -1,0 +1,21 @@
+# Long Now thread — girder
+
+meta:
+  rendered_edition: long-now-thread.md
+
+sam_arbesman:
+  role: Long Now Research Fellow
+  talk_2016: "Technology at the Limits of Comprehension"
+  audience_2006_playing_with_time: unknown_ask_sam
+
+seed_event:
+  date: "2006-06-26"
+  title: "Playing with Time"
+  speakers: [brian-eno, will-wright]
+  open_source_simcity_qa: true
+  don_in_audience: true
+
+see_also:
+  - long-now-thread.md
+  - ../../../will-wright/sources/simcity-open-source-saga/README.md
+  - ../show-formats.md

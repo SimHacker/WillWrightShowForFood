@@ -22,10 +22,12 @@ contact:
   intro_via: chaim-gingold
 
 invitation:
-  status: draft
+  status: warm_correspondence
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/sam-arbesman-maxis-labs.yml
+  introduced_by: chaim-gingold
+  correspondence_since: "2024-07-09"
   correspondence: correspondence.yml
   intro: "Chaim Gingold intro July 2024 — Maxis enthusiast; Maxis Labs 2 aligned via Microcosm Industries"
 
@@ -50,7 +52,7 @@ sources:
     - The Half-Life of Facts
 
 show_suggestions:
-  - { solo: true, seed: repo-shows/sam-arbesman-maxis-labs.yml, what: "Maxis Labs 2 institution brief × running repo" }
+  - { solo: true, seed: repo-shows/sam-arbesman-maxis-labs.yml, what: "Solo video — Sam alone on Maxis Labs 2 / Microcosm; Don weaves" }
   - { with: chaim-gingold, what: "Historian + complexity scientist + engineer — complementary tracks" }
   - { with: will-wright, what: "Premiere guest lens on what a modern Maxis-like lab funds" }
 

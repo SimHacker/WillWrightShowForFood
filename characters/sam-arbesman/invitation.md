@@ -1,77 +1,55 @@
----
-status: draft
-character_id: sam-arbesman
-public: true
-consent: not_yet_asked
-show_seed: repo-shows/sam-arbesman-maxis-labs.yml
-intro_via: chaim-gingold
-format: live_or_async
----
+# Invitation — Samuel Arbesman
 
-# Repo Show invitation — Samuel Arbesman 🧬
+**To:** Samuel Arbesman  
+**From:** Don Hopkins — *Will Wright Show for Food* / MicropolisCore
 
-*Samuel Arbesman may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
+---
 
 Sam —
 
-**Chaim Gingold** offered to connect us in July 2024 — right after you interviewed him on
-*Building SimCity* — because you are, in his words, super into all things Maxis and curious what a
-next-generation lab might look like. We traded mail about **Infernal Research**, cellular automata,
-and I congratulated you on ***The Magic of Code***. A video call was on the calendar and never
-happened. I'd rather do the better venue: a **Repo Show** — a friendly recorded conversation whose
-stage is a public GitHub repo people can clone, run, and build on.
+Chaim's intro landed. You watched the CAM6 demo and wrote back the same night. We'd already
+traded HyperLook, Snap!, Micropolis, Sandspiel, Epistemix/FRED, Interval, the Stupid Fun Club
+robot films, *Cellular Automata Machines*, Wuensche's *Global Dynamics*, and *The Magic of Code*
+before anyone said "show."
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+You told Chaim you want **Maxis 2.0**. So do I — I'm calling it **Maxis Labs 2** here: simulation
+toys again, in the spirit of the old corporate vision.
 
-We are, I think, already pointed the same direction. You **catalyze the adjacent possible** — catalogs
-of ideas, unexpected collisions, the Linnaean instinct before a field knows its name. I compile
-microworlds in git: YAML for matter, the LLM for causality, characters as portable souls. Your
-[**Microcosm Industries**](sources/microcosm-maxis-labs.md) — simulation toys in the spirit of SimCity —
-and what I have been calling **Maxis Labs 2** are the same design brief wearing different hats:
-not nostalgia, a **research institution that ships toys**.
+I've written up what I know about you and our thread in [README.md](README.md) and the files it
+links to. Please read when you have a moment — correct anything that's wrong, tell me what to
+add or cut, and let me know if you're OK with it staying public.
 
-**What I'd love to explore with you — your pick, any order:**
+One Long Now connection I wanted to flag: [Brian Eno × Will Wright, *Playing with Time](https://longnow.org/talks/02006-eno-wright/)*
+(26 June 2006). I was in the audience; the Q&A that night is where open-source SimCity first hit
+the stage. [More context here](sources/long-now-thread.md). Were you there?
 
-- **Maxis Labs 2 as institution design** — Chaim documented how Maxis put the world in a machine;
-  you ask what *new types of scientific organizations* should exist ([Overedge Catalog](sources/public-bio.md));
-  I am building one in public. Compare historian's archive, complexity scientist's lens, and
-  engineer's running fork — on air, with commits.
-- **Microcosm × Soul City × Micropolis** — glass-box city rules, CAM6 cellular automata, federation
-  between game worlds. Complexity science meeting **operational runbooks** instead of black boxes.
-- **The holy grail Will still talks about** — data portability across games (1996 train-set model;
-  SliceCity as shipped precedent). Your Long Now patience + his crown jewel + browser TypeScript
-  uplift — [ideas](ideas.md) spell the stack.
-- **Catalogs as first-class media** — your lists-of-lists instinct ↔ this repo's `characters/`,
-  `process/`, skills pyramid. Repo Show as **Overedge-shaped** knowledge creation, not a podcast
-  with a PDF attached.
-- **Humanistic Computation & resonant computing** — where your manifesto energy meets MOOLLM skills
-  harvested after each show ([cauldron SCOOP](https://github.com/SimHacker/moollm/tree/main/skills/cauldron)).
-- **HyperCard as origin story** — you are a product of HyperCard, Martin Gardner, science fiction,
-  and LEGO; so is half this cast. Director timelines rotated 90°, the repo as player — [deep move](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/VISION.md#the-deep-move--the-repo-is-a-simulation).
-- **Technologists should think like biologists** — your Atlantic/HBR thread ↔ SimCity as petri dish;
-  CAM6, Sandspiel, Dave Ackley's Movable Feast, Scott Draves' Sheep — one CA family jam on stream.
-- **Optional three-way with Chaim** — book historian + complexity scientist + toolchain author.
-  Complementary shows, not competing narrators ([Chaim's invitation](../chaim-gingold/invitation.md)).
+I still haunt the place — hacking with a cocktail at The Interval:
 
-**Zero homework — as much *homefun* as you are up to.** Solo video on your phone, one-on-one at your
-best time, or async repo rounds — all fine. What we record and publish is your call; we point
-people straight to your work.
+![Don hacking at The Interval, Long Now's bar at Fort Mason](../don-hopkins/media/interval-long-now-hacking.png)
 
-| Topic | Link |
-| --- | --- |
-| **Show seed** | [sam-arbesman-maxis-labs.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/sam-arbesman-maxis-labs.yml) |
-| **Conversation hooks** | [ideas.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/sam-arbesman/ideas.md) |
-| **Public bio digest** | [public-bio.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/sam-arbesman/sources/public-bio.md) |
-| **Microcosm × Maxis Labs 2** | [microcosm-maxis-labs.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/sam-arbesman/sources/microcosm-maxis-labs.md) |
-| **Chaim intro thread** | [correspondence.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/sam-arbesman/correspondence.yml) |
-| **Building SimCity context** | [Chaim Gingold](../chaim-gingold/README.md) · [2024 intro source](../will-wright/sources/2024-building-simcity-chaim-intro/README.md) |
-| **Premiere guest** | [Will Wright accepted](../will-wright/invitation.md) |
+**Will Wright** has accepted the premiere. If a show sounds interesting, pick whatever fits:
 
-Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 
-**Your response:** yes, later, too busy, or no — all honored gracefully.
+| Shape          | What                                                                                                                                         |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Solo**       | **You alone** — record a short video on your phone or laptop (Maxis 2.0, Microcosm, whatever you want to say). Send the file; I weave it in. |
+| **One-on-one** | Video chat with me at a time that works — harder to schedule, but fine if you prefer                                                         |
+| **Stack**      | You, Will, Chaim, others each do **solo** clips; I edit into one piece                                                                       |
+| **Live**       | Whoever can make the slot — Twitch, audience in the loop                                                                                     |
+| **Your list**  | Names we should invite                                                                                                                       |
 
-— Don Hopkins *(User Interface Flower Child)* 🥧
 
-`🧬 adjacent possible` · `🏙️ Maxis Labs 2` · `📚 Linnaean catalogs` · `🔬 Overedge institutions` · `🎴 HyperCard kid`
+Topics if any appeal:
+
+- **Maxis Labs 2 / Maxis 2.0**
+- **Long Now** — that 2006 night, your 2016 seminar, this repo
+- **Overedge × this repo**
+- **Humanistic computation** — Snap! + glass-box Micropolis
+- **HyperCard for simulation**
+- **Home-cooked software**
+
+Reply with corrections on the write-up, whether public is OK, yes/maybe/not-now on a show, what you'd steer toward, and any people you recommend we invite or discuss.
+
+**Don Hopkins**
+
+[README.md](README.md) · [ideas.md](ideas.md)

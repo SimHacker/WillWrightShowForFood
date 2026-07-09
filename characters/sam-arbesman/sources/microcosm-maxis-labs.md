@@ -34,10 +34,10 @@ Chaim Gingold's July 2024 intro named Sam as "super into all things Maxis" and c
 
 ## Show beats
 
-1. Sam names the **design brief** — what a modern Maxis-like lab optimizes for
-2. Don demos **what already runs** — Micropolis in browser, character rooms, YAML cast
-3. Optional: Will on premiere arc — what he would fund if the lab were real
-4. Optional three-way with Chaim — history vs complexity vs toolchain
+1. **Sam solo video** — names the design brief; what a modern Maxis-like lab optimizes for
+2. **Don host weave** — demos what already runs (Micropolis, character rooms, YAML cast)
+3. Optional **Will solo** — premiere arc; what he would fund if the lab were real
+4. Optional **Chaim solo** — history vs complexity vs toolchain
 
 ## Not competing with Chaim's book show
 

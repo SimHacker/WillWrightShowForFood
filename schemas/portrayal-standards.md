@@ -75,6 +75,10 @@ Fields: `status: deceased` · `invitation_status: memorial` · `consent_level: 5
 
 - Path: `characters/<id>/invitation.md` (public)
 - Link in email: URL to this file — email body stays short; repo holds the durable invite
+- **No private email** in invitation headers or body — ever
+- **Audience:** `invitation.md` speaks **to** the guest (anyone may read over their shoulder). Do not mansplain their career back to them; mention shared alignment and the ask. `README.md` speaks **to** the public — paint who they are for readers who do not know them.
+- **No meta in invites or guest READMEs:** no strategy commentary, no disclaimers about what you are not doing, no "discovery artifacts," no "proposed not promised," no process narration. Just write the letter and the portrait. Process rules live here in portrayal standards, not in the guest-facing files.
+- **Solo means solo:** one guest, one recorded video, no host in the frame. Don weaves in post. One-on-one (Don + guest on a call) and live ensemble are separate, harder tiers — see [guest participation ladder](../process/guest-participation-ladder.md).
 - Strip from public: private email, phone, GitHub-account requirement, ephemeral private asides
 - Workflow: [invitation-workflow.yml](invitation-workflow.yml)
 

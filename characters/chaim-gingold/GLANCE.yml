@@ -22,6 +22,7 @@ navigation:
   parent: ../
   children:
     - media/
+    - sources/
   siblings:
     - ../will-wright/
     - ../phil-salvador/
@@ -41,6 +42,8 @@ see_also:
     - { path: ../../repo-shows/chaim-gingold/README.md, why: "Show seed" }
     - { path: ../../characters/will-wright/sources/2024-building-simcity-chaim-intro/README.md, why: "Intro article" }
     - { path: ../../characters/will-wright/sources/simcity-open-source-saga/GLANCE.yml, why: "Compare thesis to Don saga" }
+    - { path: ../sam-arbesman/GLANCE.md, why: "Natural pair — Chaim delivered the intro" }
+    - { path: sources/romchip-will-wright-2024.md, why: "Will × Chaim live stream precedent" }
   deep:
     - { path: README.md, why: "Portrayal" }
     - { path: CARD.yml, why: "Reverse-engineer abilities" }

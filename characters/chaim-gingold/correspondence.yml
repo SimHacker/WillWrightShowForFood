@@ -1,0 +1,25 @@
+# Chaim Gingold — correspondence (Don Hopkins)
+
+threads:
+  - id: sam-arbesman-intro
+    date: "2024-07-09"
+    subject: "Intro? / Don <> Sam"
+    summary: |
+      Chaim offered intro to Sam Arbesman — Maxis fan, Building SimCity podcast, complexity scientist,
+      "always fantasizing about a Maxis 2.0." Don accepted; Chaim connected same evening.
+    outcome: warm_ongoing_thread
+    beneficiary: sam-arbesman
+    source: ../sam-arbesman/sources/chaim-intro-thread-2024.md
+
+public_events:
+  - id: romchip-will-wright
+    date: "2024-07-19"
+    what: "Will Wright interviewed Chaim live on ROMchip Twitch about Building SimCity"
+    source: sources/romchip-will-wright-2024.md
+
+status:
+  relationship: warm_via_intro
+  pacing: async_first_new_parent
+  default_ask: solo_video
+  natural_pair: sam-arbesman
+  invitation: invitation.md

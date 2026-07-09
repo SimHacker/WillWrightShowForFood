@@ -16,8 +16,11 @@ playful systems (e.g. **Sandspiel**).
 
 Chaim's book draws on archives Don helped surface — including the **1991 Sun GIS memo** and the
 published account of **EA open-sourcing SimCity** ([Don's Medium excerpt](https://donhopkins.medium.com/open-sourcing-simcity-58470a275446)).
-Chaim introduced Don to **Sam Arbesman** (2024) after Sam interviewed him on the Maxis history
-podcast. Complementary shows: Chaim's historian lens vs Don's running **Soul City** fork.
+Chaim introduced Don to **Sam Arbesman** (July 2024) after Sam interviewed him — an impeccable match;
+Sam and Don have a warm ongoing thread ([sam-arbesman](../sam-arbesman/invitation.md)). Complementary
+shows: Chaim's historian lens vs Don's running **Soul City** fork.
+
+**Pacing:** Chaim is raising a new child — async-first, minimal prep; optional short live beat only.
 
 ## The hooks
 
@@ -41,13 +44,23 @@ aesthetic; live CA jam.
 Pair with **Chris Trottier** / Sims reunion guests: how features accumulated vs master-planned
 design. Chaim documents; veterans remember.
 
-### 6. Three-way with Sam Arbesman (optional)
+### 6. Three-way stack with Sam Arbesman (optional)
 Historian + complexity scientist + toolchain author — *Building SimCity* vs *Maxis 2.0* vs
-*building it now*.
+*building it now*. Solo clips, stacked in edit — [Sam's room](../sam-arbesman/README.md).
+
+### 7. ROMchip rematch — with running code this time
+Will interviewed Chaim on ROMchip's Twitch stream (19 Jul 2024) —
+[the tables-turned event](sources/romchip-will-wright-2024.md). Follow-up beat: the same
+conversation, but every diagram executes. Will's tree question gets an answer in Micropolis tiles.
+
+### 8. Spore Creature Creator — the editor as the game
+Chaim apprenticed to Will on *Spore*; the Creature Creator was the part players kept. Editor
+design as microworld design — straight line to construction-set lineage (Bill Budge, The Sims).
 
 ## Sources (public)
 
 - Book: [Building SimCity (MIT Press)](https://mitpress.mit.edu/9780262547482/building-simcity/)
 - Reverse diagrams: https://smalltalkzoo.thechm.org/users/Dan/uploads/SimCityReverseDiagrams.pdf
-- Show seed: [`repo-shows/chaim-gingold/`](../../repo-shows/chaim-gingold/)
+- ROMchip stream: [`sources/romchip-will-wright-2024.md`](sources/romchip-will-wright-2024.md)
+- Show seed: [`repo-shows/chaim-gingold/`](../../repo-shows/chaim-gingold/README.md)
 - [`media/from-mail/MANIFEST.yml`](media/from-mail/MANIFEST.yml) · [`invitation.md`](invitation.md)
