@@ -61,6 +61,11 @@ Rainbow Project, the PDP-7 vector display talking to Titan) is now being written
 down by Heinz himself, in installments — alongside the promised ~5000-word PIXIE
 source listing from the [7 July thread](2026-07-07-pixie-trio-thread.md).
 
+**Part 1 is here:** [**Back to the Roots (1967)**](1967-back-to-the-roots-part1.md)
+— the German-spy accusation at Plessey, the day trip to Maurice Wilkes, the talk
+that turned into a PhD offer on a medieval Cambridge statute, and Neil Wiseman's
+supervision through the 1972 thesis.
+
 ---
 
 ## What this adds

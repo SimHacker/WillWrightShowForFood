@@ -126,6 +126,7 @@ threads:
       Heinz (14:22) answers by starting to deliver it: attaches his 1967 origin story ("changed
       my life forever some 60 years ago"), first of installments over the coming weeks.
     pull_in: pull-in-gaps.yml#heinz_1967_origin_story
+    received: "sources/1967-back-to-the-roots-part1.md — Heinz's memoir 'Back to the Roots (Part 1, 1967)' arrived 2026-07-09 (.docx). Spy accusation → Wilkes → medieval-statute PhD → Wiseman → 1972 thesis. Private archive in DonHopkins."
     new_people:
       - "Kelly Booth (UBC) — Roy's HCI storytelling mentor; newly Cc'd"
     storyline_targets: ["Maurice Wilkes", "Neil Wiseman", "John Hiles", "Cheney", "Etherton", "Rainbow Project", "PDP-7 ↔ Titan"]

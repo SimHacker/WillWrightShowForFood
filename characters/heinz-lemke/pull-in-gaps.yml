@@ -37,13 +37,29 @@ gaps:
 
   heinz_1967_origin_story:
     what: |
-      Heinz's own memoir, first installment — a 1967 story he says "changed my life forever
-      some 60 years ago." Attached to his 2026-07-09 email; more installments promised over the
-      coming weeks, building the Cambridge/TRE storyline Roy Eagleson requested.
-    status: offered
-    pull_in: "Receive the 2026-07-09 attachment; scan/transcribe; file under media/ or sources/ with provenance; ask Heinz consent to publish"
+      Heinz's own memoir, first installment — "PIXIE History - Back to the Roots (Part 1, 1967)",
+      authored March 2020: the German-spy accusation at Plessey, Phil Cook, the day trip to
+      Maurice Wilkes, the 29 Jun 1967 talk, the medieval-statute PhD offer, Neil Wiseman's
+      supervision, through the 1972 thesis. Sets the authoritative PIXIE paper citation
+      (Wiseman/Lemke/Hiles, I.E.E. Intl CAD Conf, Southampton, 1969).
+    status: received   # 2026-07-09 (.docx)
+    filed:
+      public: sources/1967-back-to-the-roots-part1.md   # credited rendition
+      private_archive: SimHacker/DonHopkins/characters/don-hopkins/correspondence/attachments/heinz-lemke/ (.docx + .txt)
     show_use: "Opening act of the PIXIE interview — how Heinz got to Cambridge in the first place"
-    transcript: sources/2026-07-09-pixie-storyline-thread.md
+    more: "Heinz promised further installments over the coming weeks (Cambridge/TRE storyline)"
+
+  heinz_1967_talk_attachment1:
+    what: "Attachment 1 — announcement + list of participants for Heinz's 29 June 1967 Cambridge Math Lab talk (Wilkes invited colleagues from across the UK)"
+    status: gap
+    pull_in: "Referenced in Part-1 memoir but not embedded in the .docx — request from Heinz"
+    show_use: "Primary evidence of the talk that launched his Cambridge PhD"
+
+  heinz_1970_seminar_attachment2:
+    what: "Attachment 2 — Heinz's December 1970 PhD-thesis summary seminar (Wednesday afternoon, Wilkes & Wiseman present)"
+    status: gap
+    pull_in: "Referenced in Part-1 memoir but not embedded — request from Heinz"
+    show_use: "Bookend to the origin story — the send-off before returning to Plessey"
 
   cambridge_tre_storyline:
     what: |
