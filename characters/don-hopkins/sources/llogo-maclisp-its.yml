@@ -63,10 +63,10 @@ module_files:
     role: LLOGO music box primitives (ITS/Multics)
 
 allocator_prompts_its:
-  - "DO YOU WANT TO USE THE TV TURTLE?" → TVRTLE FASL
-  - "DO YOU WANT TO USE THE DISPLAY TURTLE?" → TURTLE FASL (GT40 vs 340)
-  - GERMLAND? → GERM FASL
-  - "MUSIC BOX?" → MUSIC FASL
+  - '"DO YOU WANT TO USE THE TV TURTLE?" → TVRTLE FASL'
+  - '"DO YOU WANT TO USE THE DISPLAY TURTLE?" → TURTLE FASL (GT40 vs 340)'
+  - 'GERMLAND? → GERM FASL'
+  - '"MUSIC BOX?" → MUSIC FASL'
 
 hardware_drivers_mentioned:
   - pots (joystick / dial inputs)

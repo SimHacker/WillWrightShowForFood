@@ -32,7 +32,7 @@ public_facts:
     name: Communications Design Group (CDG)
     sponsor: SAP — CTO Vishal Sikka facilitated (~2013)
     members: [Alan Kay, Bret Victor, Vi Hart, Dan Ingalls, ...]
-    ethos: "People, not projects" — long-horizon research
+    ethos: '"People, not projects" — long-horizon research'
     ended: "~2016 when pure-research funding climate tightened (Vi Hart account)"
   jens_kay_lineage:
     - GP language under Alan Kay (with John Maloney, Yoshiki Ohshima)
