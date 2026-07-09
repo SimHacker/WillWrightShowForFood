@@ -15,6 +15,8 @@ send_batch: interval-reunion-2026
 *Send-ready draft — not yet sent. Brenda Laurel may edit, decline, delay, or request removal at any time.*
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 Brenda —
 
 We'd be **honored** to have you (and **Rob**, if you're both up for it) on a **Repo Show** — a live,

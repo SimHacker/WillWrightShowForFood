@@ -19,6 +19,8 @@ The opposite of AI slop — I go straight to the people who actually invented th
 talk in public, and the AI does what it's good at: turning ideas into running code while we talk.
 **Show, don't tell.**
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 You're an easy yes in my head, so let me just sketch what I'd love to do.
 
 **The arc is your life's work, end to end.** It goes all the way back to **`fnord`** — yes, *that*

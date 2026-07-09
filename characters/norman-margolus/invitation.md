@@ -11,6 +11,8 @@ show_seed: repo-shows/norman-margolus/
 *Norman may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 Norman —
 
 It was a real pleasure talking cellular automata with you — **Milan and Henry Minsky** from the

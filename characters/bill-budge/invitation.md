@@ -15,8 +15,8 @@ of. That's you.
 **Pinball Construction Set** (1983) is, as far as we can tell, the moment the **construction set**
 stopped being a game and became a *genre* — a tool whose output is other people's creations. That
 idea runs straight through SimCity, The Sims, LittleBigPlanet, Minecraft, Roblox, and the whole
-user-generated-content world. Will Wright is a guest here and talks about construction sets as a
-design philosophy; you're upstream of that.
+user-generated-content world. **Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md). Will talks about construction sets as a
+design philosophy here; you're upstream of that.
 
 There's a second thread we'd love to pull on, because it's clearly still your thing: **tools and
 frameworks**. Raster Blaster → PCS → 3DO → Sony tools → Google → the editor frameworks you still

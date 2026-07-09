@@ -15,6 +15,8 @@ sent_links: true
 *Phone call 2026-07-06; invite links sent — awaiting scheduling. David Levitt may edit, decline, delay, or request removal at any time.*
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 Dear David,
 
 Your character directory is open. Right now it's an invitation stub with a starter list — **please

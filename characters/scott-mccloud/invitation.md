@@ -13,6 +13,8 @@ format: remote_or_in_person
 *Send-ready draft — not yet sent. Scott McCloud may edit, decline, delay, or request removal at any time.*
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 Scott —
 
 *Understanding Comics* was a bible on **The Sims** team — masking, closure, amplification through

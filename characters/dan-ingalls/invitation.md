@@ -13,6 +13,8 @@ format: remote_or_in_person
 *The person portrayed may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*  
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 Dan —
 
 We corresponded a few years back — Alan Kay introduced us around the **Fabrik** paper, and later

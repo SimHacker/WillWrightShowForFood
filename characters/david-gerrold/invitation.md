@@ -16,9 +16,8 @@ David —
 I'm one of your Patreon followers, and before that a lifetime reader — HARLIE, the Album of
 tribbles-related incidents, *The Man Who Folded Himself*, *The Martian Child*. I also worked at
 Maxis on The Sims, and I now host a show that lives in a GitHub repository:
-[WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) — Will Wright is the
-flagship guest — about developing and playing games and tools, with AI backstage and humans on
-camera.
+[WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) — about developing and playing games and tools, with AI backstage and humans on
+camera. **Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md); he is the flagship guest.
 
 Here's why I'm writing you specifically: **When HARLIE Was One asked the machine-personhood
 question in 1972**, and this repo spends every day answering it in miniature. We portray real

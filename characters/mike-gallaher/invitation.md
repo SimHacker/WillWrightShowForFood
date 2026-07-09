@@ -7,6 +7,8 @@ Mike!
 I'm building something you're already inside of, so you might as well come see it.
 
 Will Wright and I are doing a **Repo Show** — a show whose stage and product is a GitHub repo.
+
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
 Guests get a directory they own; the audience buys "tickets" by submitting PRs with questions;
 everything is time-shifted so nobody has to be awake at the same time as anybody else. Will's
 already in. And your fingerprints are all over the building:

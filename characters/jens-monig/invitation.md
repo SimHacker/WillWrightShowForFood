@@ -23,7 +23,11 @@ the work. No synchronized sitting required — two one-on-ones at each of your b
 post, is completely fine.
 
 I'm building a **Repo Show** — a friendly recorded conversation whose stage is a public GitHub repo
-people can clone, run, and build on. Your room is `characters/jens-monig/`; everything in it is yours to correct, veto, add to, or rewrite. That's house law.
+people can clone, run, and build on.
+
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
+Your room is `characters/jens-monig/`; everything in it is yours to correct, veto, add to, or rewrite. That's house law.
 
 **What I'd love to draw out from you:**
 

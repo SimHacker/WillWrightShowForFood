@@ -12,6 +12,8 @@ I'm Don Hopkins. We traded mail in **2021** about the GRiD Compass bullet story 
 
 I'm building **Will Wright Show For Food**: a repo-native talk show where the artifacts and correspondence *are* the set. I'd love a proper **interview** with you — not a single narrow topic, but the through-line you've lived:
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 **GRiD**
 - The Compass as Dynabook shipping early — Smalltalk on an 8086, Kay and Ingalls playing with it  
 - The bullet that wasn't Mossad — your version of the returned-units story  

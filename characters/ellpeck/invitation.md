@@ -3,7 +3,9 @@
 Dear Ell,
 
 We talked before — I hope you remember. I'm building the Will Wright Repo Show around the Sims 1
-content-creation stack I never finished shipping, and **Tiny Life** is the indie project of love that
+content-creation stack
+
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md). I never finished shipping, and **Tiny Life** is the indie project of love that
 already does it: export households, write stories on your Tinies, Workshop, C# mods — while EA's
 Legacy Collection removed the Exchange with a bone saw.
 

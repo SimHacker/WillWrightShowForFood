@@ -11,6 +11,8 @@ show_seed: repo-shows/isabella-struckman/
 *Isabella Struckman may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 Isabella —
 
 I'd love to have you on a **Repo Show** — a conversation whose stage is

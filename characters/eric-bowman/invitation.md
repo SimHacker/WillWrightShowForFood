@@ -13,6 +13,8 @@ format: remote_or_in_person
 *Send-ready draft — not yet sent. Eric Bowman may edit, decline, delay, or request removal at any time.*
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 Eric —
 
 We worked together on the original **Sims** team — and again later at **TomTom** in Amsterdam. I'd

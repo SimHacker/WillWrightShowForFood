@@ -25,6 +25,8 @@ repository** people can browse and build on. Instead of letting AI flatten peopl
 with the people who actually made things, we talk in public, and the tools turn ideas into something
 real while we go. **Show, don't tell.**
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 I'd be honored if you'd join one — and there's no homework trap. You'd be the topic. The threads I
 keep coming back to (your pick, skip whatever bores you):
 

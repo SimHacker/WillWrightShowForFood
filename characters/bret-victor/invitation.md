@@ -19,6 +19,8 @@ I'm building a **Repo Show** — a live conversation whose stage is a **public G
 can browse and build on. Instead of flattening people's work into slop, we talk in public and follow
 through to **runnable artifacts**: explorable overlays, microworlds, tools you can fork. **Show, don't tell.**
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 Your work is one of the clearest voices on what that ought to *feel* like — **media for thought**, not
 apps that fight you.
 

@@ -29,6 +29,8 @@ Since our **January 2022** thread on HyperTIES, Ted Nelson, and self-revealing i
 building **Will Wright Show For Food**: a repo-native talk show whose stage *is* a public GitHub repo
 — artifacts, correspondence, and working code anyone can browse. **Show, don't tell.**
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 **What I'd love to explore with you — your pick, any order, solo or spread across episodes:**
 
 **1. Reincarnate HyperTIES — a living emulator (the one I think you'd love)**  

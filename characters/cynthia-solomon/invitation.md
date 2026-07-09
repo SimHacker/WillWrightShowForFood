@@ -11,6 +11,8 @@ show_seed: repo-shows/cynthia-solomon/
 *Cynthia Solomon may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 Cynthia —
 
 It was a delight meeting you over video at **Snap!Con in Barcelona**. I'd love to have you on a

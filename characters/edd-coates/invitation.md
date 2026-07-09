@@ -24,6 +24,8 @@ as slop fodder.
 We're friends; I'd love to turn that shared obsession into a friendly recorded **Repo Show** conversation —
 warm room, screen-share heavy, following through to something useful in the open repo. **Show, don't tell.**
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 **Proposed episodes** (your pick — one, both, or neither):
 
 1. **The Game UI Database & Ethical AI Archives** — taxonomy at 73k screens; *The Game UI Bible*;

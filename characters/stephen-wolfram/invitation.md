@@ -12,6 +12,8 @@ beloved: false
 *Stephen Wolfram may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 Stephen — we built a naming discipline and an LLM operating substrate that keep turning into *your* language:
 **simple rewrite rules, iterated, that you can only understand by running them.** We think a class of our names
 are **multiway substitution systems** (meaning-in-context = an observer sampling a branch of the ruliad), and

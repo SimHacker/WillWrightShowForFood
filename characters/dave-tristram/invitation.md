@@ -19,6 +19,8 @@ We've been friends **since the mid–late 1980s** — we met at **USENIX Montere
 and **Dead** shows, you performing live on the code you wrote. I'd love to have you on a **Repo Show**:
 a live, friendly session whose whole stage is a public GitHub repo people can clone, run, and build on.
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 **Panel Library** is the deeper proof — your **USENIX Monterey 1989** paper (*Controlling Virtual
 Worlds with the Panel Library*) on **3D GL performance UI**, reused as **Electropaint**'s bouncing
 slider banks. Then the moving triangles became the SGI screensaver legend — and ***Infrared Roses***

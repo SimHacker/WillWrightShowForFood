@@ -14,6 +14,8 @@ We would respectfully invite you to a **Repo Show** — a friendly recorded conv
 stage is [this public GitHub repository](https://github.com/SimHacker/WillWrightShowForFood),
 following through to working code and credited ideas in public.
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 **Proposed focus:** *(topic from show seed — verifiable public work)*
 
 **Materials:** [`repo-shows/...`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/README.md)

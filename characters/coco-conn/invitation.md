@@ -13,6 +13,8 @@ sent_via: facebook
 *Sent 2026-07-06 via Facebook — awaiting reply. Coco may edit, decline, delay, or request removal at any time.*
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 Coco —
 
 You are **royalty and a goddess** in my book — and not just for **SIGKids**, though that room changed

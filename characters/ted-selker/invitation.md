@@ -13,6 +13,8 @@ paired_guest: ted-nelson
 *Send-ready draft — not yet sent. Ted Selker may edit, decline, delay, or request removal at any time.*  
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 Ted —
 
 We've been talking since 2020 — **TrackPoint**, self-revealing interfaces, **PIXIE** and the film

@@ -19,6 +19,8 @@ You built the heart of **The Sims** — the behavior engine, smart objects, the 
 love to have you on a **Repo Show**, ideally as part of a **Sims team reunion**. The stage is a
 public repo; we talk; ideas can become runnable artifacts on stream. **Show, don't tell.**
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 **Threads — your pick:**
 
 - **SimAntics & smart objects** — how advertised affordances produced autonomous, believable Sims.

@@ -22,7 +22,7 @@ repo: questions, artifacts, code, papers, links, videos. People participate and 
 conversation, follow along live or time-shifted, and keep contributing afterward. The repo is a living
 artifact.
 
-**Will Wright** has agreed enthusiastically to the first show (and more). I hope for a whole series —
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md). I hope for a whole series —
 with him, with other guests, and with tributes to amazing people we've lost, talking with those who
 knew them and showing their work in the repo.
 

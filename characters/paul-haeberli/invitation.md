@@ -11,7 +11,9 @@ pointed me at Jared Tarbell's levCAWorm for my cellular automata toy. And when m
 fountain came up, you wrote: *"I want to resurrect that code someday. it would be F.U.N."*
 
 That's the invitation, almost verbatim. Will Wright and I are making **Repo Shows** — the product
-and stage is a public GitHub repo: sources, code, questions, and artifacts accumulate before,
+and stage is a public GitHub repo:
+
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md). sources, code, questions, and artifacts accumulate before,
 during, and forever after the conversation ([format](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/FORMAT.md) ·
 [vision](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/VISION.md)). **Resurrecting old code on air is a core format.** The text
 fountain. DynaDraw. A ConMan-style patch panel running again. F.U.N. is the acceptance criterion.

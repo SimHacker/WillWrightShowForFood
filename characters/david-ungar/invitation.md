@@ -24,6 +24,8 @@ I'd like to turn that hallway into a **Repo Show** — a friendly recorded conve
 a public GitHub repo, following through to working code and credited ideas anyone can browse
 without an account. **Show, don't tell.**
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 **Proposed episode:** *Reflecting on Self: Narcissa's Mirror* — Self × MOOLLM; mirrors, prototypes,
 the **self-interest!** pun stack, and what we'd build if we sat down with a blank microworld again.
 (I may have the title spelling wrong — we'll fix that on air if you're game.)

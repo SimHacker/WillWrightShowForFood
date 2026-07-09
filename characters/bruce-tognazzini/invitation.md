@@ -21,6 +21,8 @@ the stakes and work for free: let's plan and execute the rescue **on camera**, a
 **Repo Show** — a friendly recorded conversation whose stage is a public GitHub repo. 
 **Show, don't tell.**
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 **What I'd love to explore with you — your pick, any order, skip whatever bores you:**
 
 - **Writing the Apple Human Interface Guidelines** — eight editions, fourteen years, and why

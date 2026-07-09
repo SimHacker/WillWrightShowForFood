@@ -6,6 +6,8 @@ I'm Don Hopkins — Sims tools, Exchange history, Will Wright Repo Show. You sai
 what players feel about that game feeling like **The Sims 1** — then you walked away from EA's
 Creator Network when the buyout landed. That combination is exactly the episode I want to build.
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 Would you talk with me (and maybe Ell from Tiny Life, or James Turner, or Kayla) about:
 
 - What **sharing infrastructure** should look like now that Legacy Collection dropped the Exchange

@@ -12,6 +12,8 @@ I'm Don Hopkins. We traded mail in **October 2022** — I sent you the long lett
 
 I'm building **Will Wright Show For Food** — a repo-native talk show where the correspondence and demos *are* the set. Your name keeps coming up as the right person to **moderate or co-host** a visual-programming episode because you sit in **Brad Myers'** orbit and actually care about **info visualization** and interaction techniques — not just boxes-and-lines aesthetics.
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 Topics I'd love to explore **with** you on air:
 
 **The definition fight**

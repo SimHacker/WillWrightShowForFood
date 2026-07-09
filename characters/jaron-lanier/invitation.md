@@ -23,6 +23,8 @@ one running patch you could edit while it ran. That work stuck with me.
 I'd like to put some of that in public, on a **Repo Show** — a live session whose stage is a public
 GitHub repo people can clone, run, and build on.
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 The first episode that wants you is **[Rebounce](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/rebounce/README.md).** I plan to
 **check in the old Bounce source** and invite people to **rewrite it together — by hand and with AI,
 competing and cooperating** — in a modern web stack. **[David Levitt](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-levitt/README.md)** and

@@ -15,15 +15,9 @@ beloved: true
 *Scott Kim may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
-**Today I'm sending two matching invitations** — yours and **Amy Jo's** ([Amy Jo's invitation](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/amy-jo-kim/invitation.md)) — for one **pair show**. Each letter is written for the person receiving it; both describe the same show from your two angles, and each of you can read the other's.
-
-Scott —
-
-I'd love to have you on a **Repo Show** — a friendly, low-friction conversation whose stage is a public
-GitHub repo people can clone, run, and build on. You and **Amy Jo** are both invited; I've written her her own
-letter alongside this one ([Amy Jo's invitation](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/amy-jo-kim/invitation.md)), and since so much of
-Shufflebrain is shared, the **default is a pair show** — [`amy-jo-and-scott-kim`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/amy-jo-and-scott-kim/README.md).
 No synchronized sitting required — record whenever suits you; we weave it together in post.
+
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
 
 **What I'd love to draw out from you:**
 

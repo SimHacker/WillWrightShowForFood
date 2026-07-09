@@ -23,6 +23,8 @@ tell: ideas can become running code and playable Sims moments on stream.
 the craft of **improv**, how an **audience becomes the show**, and (only if you want) an honest
 compare-and-contrast on **AI** after your 2023 radio experiment.
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 **Will Wright** may join for some or all of it — you're both part of the same Sims family album.
 
 ### Why you specifically

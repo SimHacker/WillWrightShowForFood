@@ -13,6 +13,8 @@ format: remote_or_in_person
 *Send-ready draft — not yet sent. Jerry Martin may edit, decline, delay, or request removal at any time.*
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 Jerry —
 
 Your **Sims** and **SimCity 3000/4** scores are why those worlds feel like *home* — and your track

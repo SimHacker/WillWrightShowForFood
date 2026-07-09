@@ -11,6 +11,8 @@ show_seed: repo-shows/doreen-nelson/
 *Doreen Nelson may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 We would respectfully invite **Doreen Nelson** to a **Repo Show** — a friendly recorded conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood), following through to working code and credited ideas in public.
 
 ## Proposed focus

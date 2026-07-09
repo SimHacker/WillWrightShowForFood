@@ -22,6 +22,8 @@ note this January. I'd like to turn that thread into a **Repo Show** — a conve
 stage is a public GitHub repo, following through to working code and credited
 ideas in public. **Show, don't tell.**
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 **Remembering Vanessa — with Craig, Dan, and me.**
 
 I'm also **warmly inviting you** to help **remember Vanessa Freudenberg** alongside **Craig Latta**

@@ -20,6 +20,8 @@ conversation, then use AI coding tools to actually *implement* the designs we ta
 Twitch. Everything ends up free on GitHub: transcripts, design documents, papers, and runnable,
 shareable code. **Show, don't tell.**
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 The deliverable isn't just an audio podcast or a video interview — it's all of that **plus a whole
 repo**. That's the whole point: reinventing blogging, YouTube, Twitch, and GitHub as **Repo Shows**.
 The conversation is the seed; the repo is the living thing that grows from it.

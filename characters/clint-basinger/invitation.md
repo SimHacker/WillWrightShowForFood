@@ -13,6 +13,8 @@ priority: send_now
 *Send-ready draft — not yet sent. Clint Basinger may edit, decline, delay, or request removal at any time.*
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 Clint —
 
 I've wanted to reach out for a while. **LGR** is one of the channels I trust when someone asks

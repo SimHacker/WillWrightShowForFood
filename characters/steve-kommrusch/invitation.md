@@ -11,6 +11,8 @@ show_seed: repo-shows/steve-kommrusch/
 *Steve Kommrusch may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 Steve —
 
 I'd love to have you on a **Repo Show**. Your path is a great arc — from designing CPUs at HP/AMD to

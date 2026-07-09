@@ -25,6 +25,8 @@ audio, and data than to a form to fill in. (I'm building web-based, AI-friendly 
 collaborative creation — together, in groups, in real time.) It's all play, really. **Show, don't
 tell.**
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 I'd be honored if you'd join one — and there's no set topic; you'd be the topic. The thread I keep
 coming back to is **generative systems across media** — yours, Scott's vote-and-genetics Electric
 Sheep, Will's possibility spaces: grow something vast from a few rules, then let it run. Now that AI

@@ -19,6 +19,8 @@ I'd like to do a **Repo Show** with you — a friendly recorded conversation who
 GitHub repo, following through to working, live-coded artifacts. **Remote screencast is perfect**
 if you're not in Amsterdam when we record; in-person on camera if we overlap. **Show, don't tell.**
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 **What I'd love to talk about**
 
 - **Caffeine** — livecoding the web with SqueakJS and dynamically generated WebAssembly. Live,

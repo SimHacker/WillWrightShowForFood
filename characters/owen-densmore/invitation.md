@@ -11,6 +11,8 @@ show_seed: repo-shows/REPO-SHOWS.yml#news-postscript-window-system.yml
 *Owen may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 Owen —
 
 First, a confession and a thank-you: I've been going around for years calling myself **"the User

@@ -29,6 +29,8 @@ the Java-security questions on camera). I'd like to turn that hallway into a **R
 Repo Show conversation whose stage is a public GitHub repo, following through to working code
 anyone can browse without an account. **Show, don't tell.**
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 **Proposed episode:** *From NeWS to Java* — extension languages, network window systems, and what
 carried when PostScript lost to X11. Can run **solo with you**, or as a **NeWS reunion** with
 Arthur van Hoff, David Rosenthal, Owen Densmore — your pick.

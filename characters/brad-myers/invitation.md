@@ -25,6 +25,8 @@ I'd like to turn that long hallway into a **Repo Show** — a friendly recorded 
 stage is a public GitHub repo, following through to working code and credited ideas in public.
 **Show, don't tell.**
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 **What I'd love to explore with you — your pick, any order, skip whatever bores you:**
 
 - **Garnet → Svelte** — KR constraints, prototypes, declare relationships and let the system keep

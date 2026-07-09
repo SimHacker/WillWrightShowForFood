@@ -10,6 +10,8 @@ show_seed: repo-shows/peter-norvig/
 
 *Peter Norvig may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 Peter —
 
 Thank you for offering to write a chapter about what I'm up to — that means a lot. I'd love to turn

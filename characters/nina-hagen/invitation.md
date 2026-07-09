@@ -22,6 +22,8 @@ It's called a **Repo Show** — a live conversation whose stage is a **public Gi
 We talk; tools (AI, procedural, hand-played instruments) turn ideas into runnable artifacts while
 we go. **Show, don't tell.**
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 I'd be honored if you'd join one. No homework. You'd be the topic. Threads I'd love to explore — your
 pick, skip whatever doesn't spark:
 

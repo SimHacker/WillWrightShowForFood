@@ -24,6 +24,8 @@ letter alongside this one ([Scott's invitation](https://github.com/SimHacker/Wil
 much of your best work is shared, the **default is a pair show** — [`amy-jo-and-scott-kim`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/amy-jo-and-scott-kim/README.md).
 No synchronized sitting required: two one-on-ones at each of your best times, woven together in post, is fine.
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 **What I'd love to draw out from you:**
 
 - **Game Thinking** — social loops, retention, the player journey (visitor → novice → regular → leader →

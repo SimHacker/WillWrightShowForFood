@@ -12,6 +12,8 @@ interview_planned: true
 *Gary may edit, decline, delay, or request removal at any time.*
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 Gary —
 
 I'd love to **interview you** on a Repo Show. *Made-Up Minds* has been quietly load-bearing for how a

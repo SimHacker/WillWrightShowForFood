@@ -4,6 +4,8 @@
 **Subject:** Repo Show invite — Distillery, PDF, and the PostScript mail experiments  
 **Show:** [postscript-distillery-to-pdf](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/postscript-distillery-to-pdf) (with your brother Brian)
 
+**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+
 ---
 
 Hi Glenn,
