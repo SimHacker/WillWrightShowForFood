@@ -11,7 +11,9 @@ single point of failure). Long before that, he co-authored the classic **Boltzma
 (Ackley, Hinton & Sejnowski, 1985).
 
 Don has written about his work **extensively on Hacker News**, and his mantra powers the
-**robust-first** ambient skill in Don's MOOLLM.
+**robust-first** ambient skill in Don's MOOLLM. Their years-long cellular-automata correspondence
+— with running screenshots, demo links, and the whole CA circle — is retold as a story in
+[**ca-correspondence-story.md**](ca-correspondence-story.md).
 
 ## Why a Repo Show
 
@@ -21,6 +23,16 @@ Don has written about his work **extensively on Hacker News**, and his mantra po
 - **CA looping fest** — a natural co-guest with [Norman Margolus](../norman-margolus/README.md)
   (locality/reversibility) and [Stephen Wolfram](../stephen-wolfram/README.md): CA as *architecture*.
 
-See [`CHARACTER.yml`](CHARACTER.yml) and the [invitation](invitation.md). 
+## Rooms
+
+| | |
+|--|--|
+| **Invitation** | [invitation.md](invitation.md) |
+| **Hooks** | [ideas.md](ideas.md) |
+| **CA correspondence (story)** | [ca-correspondence-story.md](ca-correspondence-story.md) — narrativized email + HN thread, embedded CAM6 images, categorized link vault |
+| **Media** | [media/](media/) — Don's CAM6 "Dendrite Heat" snapshots + provenance |
+| **CA looping fest** | [Norman Margolus](../norman-margolus/README.md) · [Stephen Wolfram](../stephen-wolfram/README.md) |
+
+See [`CHARACTER.yml`](CHARACTER.yml) and the [invitation](invitation.md).
 
 *Portrayal from public sources + Don's own writing; Dave may edit or remove anytime.*

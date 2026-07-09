@@ -1,0 +1,46 @@
+# Media — Dave Ackley room
+# Provenance for images shown in this room. Portrayal standards:
+# ../../../schemas/portrayal-standards.md
+
+meta:
+  room: characters/dave-ackley/
+  note: |
+    These are Don Hopkins' OWN cellular-automata screenshots — output of his
+    JavaScript CAM6 simulator (donhopkins.com/home/CAM6/) — that Don sent to Dave
+    Ackley and the CA circle as running examples during their correspondence
+    (2017–2020). Don authored the software and the images; they are shared here as
+    Don's own work, illustrating the conversation retold in
+    ca-correspondence-story.md. Not screenshots of Dave's Movable Feast Machine.
+
+images:
+  - file: cam6-dendrite-heat-01-eye-of-sauron.png
+    title: "CAM6 — Margolus 'Dendrite Heat' rule (the 'Eye of Sauron')"
+    author: don-hopkins
+    software: "JavaScript CAM6 simulator (donhopkins.com/home/CAM6/)"
+    rule: "Margolus Dendrite Heat — diffusion-limited aggregation (DLA) crystal growing in a heat-diffusion field"
+    what: |
+      A single dendrite crystal (blue/white) frozen at the center of concentric
+      red heat rings — the pattern Don nicknamed the 'Eye of Sauron.' The right
+      half shows the live SimCity-style tile palette the same engine drives.
+    dimensions: "1166x777"
+    sent_as: "Example screenshot shared with the CA circle (Ackley, Crutchfield) to show the JS CAM6 running Toffoli/Margolus rules live in a browser."
+    discussed_in: ca-correspondence-story.md
+
+  - file: cam6-dendrite-heat-02-annular-dendrite.png
+    title: "CAM6 — Margolus 'Dendrite Heat' rule (annular dendrite band)"
+    author: don-hopkins
+    software: "JavaScript CAM6 simulator (donhopkins.com/home/CAM6/)"
+    rule: "Margolus Dendrite Heat — DLA aggregation in a heat field, higher cell-change frob"
+    what: |
+      The same rule with the frob (interactive cell-change) tools turned up: the
+      dendrite has grown into a full ring of blue crystal inside a cyan band, red
+      heat radiating outward. The frob control panel (Rule / Frob Target / Frob /
+      Frob Scale) is open — the direct-manipulation editing Don loves to demo.
+    dimensions: "1158x773"
+    sent_as: "Companion example in the same thread — showing interactive 'frobbing' of a running CA."
+    discussed_in: ca-correspondence-story.md
+
+related:
+  cam6_live: "https://donhopkins.com/home/CAM6/"
+  cam6_code: "https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js"
+  cam6_book: "https://donhopkins.com/home/cam-book.pdf"

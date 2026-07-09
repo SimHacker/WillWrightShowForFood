@@ -33,6 +33,15 @@ why_him:
   neural_roots: "Co-author of the 1985 Boltzmann machine paper with Geoffrey Hinton and Terry Sejnowski — a founding document of the neural-net revival."
   don_connection: "Don has written about Ackley's work extensively and often on Hacker News; robust-first is an ambient skill in Don's MOOLLM."
 
+connections:
+  sfi_alife_nexus: "Intertwingled with the Santa Fe Institute / artificial-life crowd this repo worships — UNM (Albuquerque) sits an hour from Santa Fe, and Ackley & Littman's 'Interactions between learning and evolution' appeared in Artificial Life II (SFI Studies in the Sciences of Complexity, 1991). Robust-first / ALife is the same soil as Crutchfield, Reese Jones, and the CA jam."
+  norman-margolus: "Direct sibling: Margolus's physics-respecting, locality-first, reversible CA ↔ Ackley's Movable Feast Machine (CA grown into a real, self-healing architecture). Both say the hardware should be as local as the rule."
+  jim-crutchfield: "SFI cluster — edge of chaos / evolving CA / computational mechanics; robust-first and MFM are the engineering wing of the same complexity worldview. CA rules-and-art jam."
+  reese-jones: "SFI board trustee — agent-based modeling / ALife; simulation humility rhymes with 'a crashed system is infinitely wrong.'"
+  stephen-wolfram: "CA-as-computation; MFM is CA-as-architecture — the looping-fest triangle (Ackley + Margolus + Wolfram)."
+  scott-draves: "Generative/evolving art (Electric Sheep) ↔ MFM patterns as living organisms; rules-and-art jam."
+  don-hopkins: "Don has written about Ackley's work extensively on Hacker News; 'a crashed system is infinitely wrong' is the seed of MOOLLM's robust-first ambient skill (skills/robust-first/)."
+
 show_suggestions:
   - { seed: ../../repo-shows/dave-ackley/, what: "Solo — robust-first computing: why survival beats correctness, live Movable Feast Machine demos, the T2 tiles" }
   - { seed: ../../repo-shows/norman-margolus/, what: "CA looping fest — Ackley + Margolus + Wolfram: locality, reversibility, and indefinitely scalable spatial computing" }
@@ -43,12 +52,26 @@ sources:
     - { title: "Robust-first computing / Movable Feast Machine (project site)", url: "https://movablefeastmachine.org/" }
     - { title: "T2 Tile Project", url: "https://t2tile.com/" }
     - { title: "Dave Ackley — YouTube (robust-first talks, MFM + T2 demos)", url: "https://www.youtube.com/@DaveAckley" }
+    - { title: "Living Computation (retirement talk) — the 'why not 3D?' answer", url: "https://www.youtube.com/watch?v=YtzKgTxtVH8" }
+    - { title: "MFM — Distributed city generation demo", url: "https://www.youtube.com/watch?v=XkSXERxucPc" }
+    - { title: "MFM on GitHub", url: "https://github.com/DaveAckley/MFM" }
+    - { title: "robust.cs.unm.edu (robust-computing wiki)", url: "http://robust.cs.unm.edu/doku.php" }
+    - { title: "MFM-JS (Andrew Walpole, native TypeScript) — mfm.rocks", url: "https://mfm.rocks/" }
+    - { title: "Dialogues on Natural Code (Lu Wilson WITH Dave Ackley, Onward! 2024)", url: "https://todepond.com/code" }
   papers:
     - { title: "A Learning Algorithm for Boltzmann Machines (Cognitive Science, 1985)", authors: "Ackley, Hinton, Sejnowski" }
     - { title: "Beyond Efficiency (Communications of the ACM, 2013)", authors: "David H. Ackley" }
   blogs: []
 
+media:
+  provenance: media/MANIFEST.yml
+  images:
+    - { file: media/cam6-dendrite-heat-01-eye-of-sauron.png, author: don-hopkins, what: "Don's CAM6 running Margolus 'Dendrite Heat' — the 'Eye of Sauron'; sent to Dave as a running example" }
+    - { file: media/cam6-dendrite-heat-02-annular-dendrite.png, author: don-hopkins, what: "Don's CAM6 'Dendrite Heat', frobbed live into an annular dendrite" }
+
 see_also:
+  - { path: ca-correspondence-story.md, why: "The narrativized CA correspondence — embedded CAM6 images + full categorized link vault" }
+  - { path: media/, why: "Don's CAM6 snapshots sent to Dave + provenance manifest" }
   - { path: CARD.yml, why: "Invokable abilities for show segments" }
   - { path: ../norman-margolus/, why: "CA looping fest co-guest — locality/reversibility ↔ robust-first spatial computing" }
   - { path: ../stephen-wolfram/, why: "CA looping fest co-guest" }

@@ -85,6 +85,7 @@ right_away:
     - { id: dave-tristram, show: repo-shows/dave-tristram/, invite: draft, next: "Raster Masters @ Dead/Shoreline — pair Crutchfield; Live Canvas beta PRIVATE until Dave clears" }
     - { id: stephen-wolfram, show: repo-shows/stephen-wolfram/, invite: draft, next: "MOOLLM readings + NKS" }
     - { id: reese-jones, show: characters/reese-jones/, invite: draft, warm_contact: true, next: "SFI board trustee — agent-based modeling/ALife in the CA rules-and-art jam; earth-soul (SimEarth/Gaia/worms); filmed Sam's 2016 Overcomplicated launch" }
+    - { id: dave-ackley, show: repo-shows/dave-ackley/, invite: draft, next: "Robust-first / Movable Feast Machine / T2 tiles — CA grown into architecture; UNM↔SFI ALife lineage (ALife II, Ackley & Littman); Margolus locality/reversibility sibling; robust-first is a MOOLLM ambient skill" }
 
   preservation_archives:
     - { id: phil-salvador, show: repo-shows/phil-salvador-simrefinery/, invite: none, next: "write invitation + love" }

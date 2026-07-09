@@ -9,7 +9,6 @@ show_seed: repo-shows/dave-ackley/
 # Repo Show invitation — Dave Ackley
 
 *Dave may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Dave —
 
@@ -18,6 +17,19 @@ now as a literal **ambient skill** in my MOOLLM system that starts with your lin
 is infinitely wrong.* You reordered the priorities for me — **survive, heal, function, optimize** —
 and I'd love to make that argument in public, with you, on a **Repo Show**: a live, friendly session
 whose whole stage is a public GitHub repo people can clone, run, and build on.
+
+I'm not pulling your leg — your principle is a real, running **ambient skill** in MOOLLM, with your
+name in the credits and your line at the top:
+
+- The skill card — *your quote and priority order*: [`skills/robust-first/CARD.yml`](https://github.com/SimHacker/moollm/blob/main/skills/robust-first/CARD.yml#L53-L64), and your name right in the [credits](https://github.com/SimHacker/moollm/blob/main/skills/robust-first/CARD.yml#L100-L103)
+- One-screen glance — *survive → heal → function → optimize*: [`skills/robust-first/GLANCE.yml`](https://github.com/SimHacker/moollm/blob/main/skills/robust-first/GLANCE.yml)
+- Full protocol — *how graceful degradation actually runs*: [`skills/robust-first/SKILL.md`](https://github.com/SimHacker/moollm/blob/main/skills/robust-first/SKILL.md)
+
+Now back up a directory at a time and watch what you just got tossed into. The skill sits in a
+[folder of its own](https://github.com/SimHacker/moollm/tree/main/skills/robust-first); one level up
+it's [one skill among ~120](https://github.com/SimHacker/moollm/tree/main/skills); one more level up
+is [the whole living operating system](https://github.com/SimHacker/moollm) — mind the drop. That's
+the abyss. Robust-first is load-bearing in all of it, which is exactly why I want you on the show.
 
 **Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
 
@@ -42,6 +54,11 @@ reversibility, and what happens when the hardware is as local as the rule.
 contribute. Warm and curious, not gotcha-podcast. I run it in Cursor, screen-shared, so people watch
 the ideas become real. **Zero homework — as much *homefun* as you are up to.** I do the setup. What we record and publish is all your
 call — solo video, one-on-one, or the full looping fest.
+
+I also wrote up our years of cellular-automata back-and-forth as a readable story —
+[**ca-correspondence-story.md**](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/dave-ackley/ca-correspondence-story.md) —
+with my CAM6 "Dendrite Heat" screenshots (the Eye of Sauron ones I sent you), all the MFM demo
+links, the "why not 3D?" answer, and a categorized link vault. Correct anything I got wrong.
 
 No pressure at all — accepted, delayed, declined, or no reply, all honored gracefully.
 

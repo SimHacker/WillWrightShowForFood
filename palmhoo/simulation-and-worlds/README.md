@@ -51,3 +51,17 @@ including the one you're standing in right now, which simulates itself by being 
 | [**cellular-automata topics in the patch-cord trail**](../../process/trails/visual-programming-patch-cord.md) | CA as the minimal world: rules, grid, emergence. Includes Paul Haeberli's 2010 advice on rendering them fast. |
 | [**Procedural beauty trail**](../../process/trails/procedural-beauty.md) | From Tarbell's Flash organisms to Spore's tidepool — worlds that grow rather than get built. |
 | [**Stephen Wolfram**](../../characters/stephen-wolfram/README.md) · [**Norman Margolus**](../../characters/norman-margolus/README.md) | The CA theorists in the cast. |
+
+## Living computation — robust-first & the CA correspondence
+
+🐒✋ *The story of how Don spent a decade dragging everyone he loves into Dave Ackley's world —
+where a program is a self-healing pattern and a crashed system is infinitely wrong. Start here.*
+
+| Entry | 🐒✋ Why you'd read it |
+|-------|----------------------|
+| [**A crashed system is infinitely wrong**](../../characters/dave-ackley/ca-correspondence-story.md) | The flagship: the Ackley ↔ Hopkins CA correspondence narrativized — CAM6 screenshots, MFM demos, the "why not 3D?" answer, and a categorized link vault. The whole web (Margolus, Crutchfield, Rucker, Walpole, Davidson, Draves) in one read. |
+| [**Dave Ackley**](../../characters/dave-ackley/README.md) | Robust-first computing; the Movable Feast Machine; the T2 Tile Project — CA grown into an *architecture*. |
+| [**Movable Feast Machine**](https://movablefeastmachine.org/) · [**city-gen demo**](https://www.youtube.com/watch?v=XkSXERxucPc) | Spatial computing where code diffuses, heals, and reproduces. The demo that converts skeptics. |
+| [**Don's CAM6 — live**](https://donhopkins.com/home/CAM6/) · [**source**](https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js) | Toffoli & Margolus' Cellular Automata Machine, rebuilt in a browser tab. The engine behind the Dendrite-Heat pictures. |
+| [**LifeBrush — "Emacs for Cytoplasm"**](https://www.youtube.com/watch?v=5LBHRyGxLGI) | Timothy Davidson's VR molecular biology you paint into being. The weirdest, best branch of the thread. |
+| [**Dialogues on Natural Code**](https://todepond.com/code) | Lu Wilson *with* Dave Ackley (Onward! 2024) — robust-first meets falling-sand. |
