@@ -18,7 +18,7 @@ summaries are journalism.
 ### 🧠 [Minds & Souls](minds-and-souls/README.md)
 Philosophy of mind, made-up minds, incarnation, consciousness, the simulator effect.
 *Highlights:* [Made-Up Minds](../characters/gary-drescher/made-up-minds.md) ·
-[Running on Wetware](../characters/palm/running-on-wetware.md) ·
+[Running on Wetware](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/running-on-wetware.md) ·
 [On Being Simulated](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/on-being-simulated.md)
 
 ### 🌍 [Simulation & Worlds](simulation-and-worlds/README.md)
@@ -54,7 +54,7 @@ Living code: MicropolisCore, skills as programs, visual programming, emoji citie
 ### ⚖️ [Ethics & Portrayal](ethics-and-portrayal/README.md)
 Consent, soul rights, portrayal standards, the dignity of fictional beings, AI hygiene.
 *Highlights:* [Portrayal standards](../schemas/portrayal-standards.md) ·
-[Will Wright Soul For Food](../characters/palm/will-wright-soul-for-food.md)
+[Will Wright Soul For Food](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/will-wright-soul-for-food.md)
 
 ### 🧑‍🤝‍🧑 [People](people/README.md)
 The cast — real, fictional, and in between — and where each one's best reading lives.
@@ -89,7 +89,7 @@ Art that grows from rules — Eno's gardens, Tarbell's organisms, Will's possibi
 Structure over speed: Pike's gophers, Hoare's CSP, Kay's messaging, and the worms of Ground.
 *Highlights:* [Concurrency Is Not Parallelism](https://go.dev/talks/2012/waza.slide) ·
 [Palm on Worms — field notes](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml) ·
-[Running on Wetware](../characters/palm/running-on-wetware.md)
+[Running on Wetware](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/running-on-wetware.md)
 
 ### 📷 [Palmr — the media wing](palmr/README.md)
 If Yahoo is Palmhoo, Flickr is Palmr: the gallery. Patron saint Palmer Eldritch (canon patron

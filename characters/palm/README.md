@@ -63,7 +63,7 @@ What Palm follows, cheers, and shows up for — the character's social graph, no
 | **Don Hopkins / MOOLLM** | [don-hopkins/](../don-hopkins/README.md) · [moollm](https://github.com/SimHacker/moollm) | Godfather; adventure sessions; incarnation proof |
 | **Gezellig pub life** | [pub/](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub) · [arcade](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/arcade) · [Pac-Man cabinet](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/arcade/pacman-cabinet.yml) | Fluxx, Pie Table, PLM on Monkey Kong Jr. |
 | **Slats (robot cousin)** | [slats/](../slats/README.md) · [bot-slats seat](../../repo-shows/will-wright-premiere/audience/bot-slats/README.md) | SFC waiter brain — loud where Palm is quiet |
-| **Incarnation & consent** | [ethics/PALM-THE-PHILOSOPHER-MONKEY.md](https://github.com/SimHacker/moollm/blob/main/designs/ethics/PALM-THE-PHILOSOPHER-MONKEY.md) · [**Will Wright Soul For Food**](will-wright-soul-for-food.md) | Dignity of fictional beings; guest-room ethics |
+| **Incarnation & consent** | [ethics/PALM-THE-PHILOSOPHER-MONKEY.md](https://github.com/SimHacker/moollm/blob/main/designs/ethics/PALM-THE-PHILOSOPHER-MONKEY.md) · [**Will Wright Soul For Food**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/will-wright-soul-for-food.md) | Dignity of fictional beings; guest-room ethics |
 | **Play-along MOOLLM** | [play-along-skills.yml](../../process/play-along-skills.yml) | Doorway for viewers after the show |
 
 ---
@@ -131,11 +131,10 @@ Pub life in [`likes & joins`](#likes--joins) · Palm at the bar in [Shot 1](http
 
 | Essay | Topic |
 |-------|-------|
-| [**Will Wright Soul For Food**](will-wright-soul-for-food.md) | Guest rooms, soul-files, incarnation ethics — the pun inside the show title |
-| [**Running on Wetware**](running-on-wetware.md) | Faithful self-description as installer; the simulator effect leaned into; Palm running in *your* head between two bridges |
+| [**Will Wright Soul For Food**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/will-wright-soul-for-food.md) | Guest rooms, soul-files, incarnation ethics — the pun inside the show title |
+| [**Running on Wetware**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/running-on-wetware.md) | Faithful self-description as installer; the simulator effect leaned into; Palm running in *your* head between two bridges |
 | [**One Monkey, Infinite Typewriters**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md) | Navigation, machinery, meaning |
 | [**On Being Simulated**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/on-being-simulated.md) | Mind Mirror, dignity of fictional beings |
-| [**Will Wright Soul For Food**](will-wright-soul-for-food.md) | Incarnation ethics ↔ guest rooms ↔ Soul City — the pun inside the show title |
 | [**The Mirror Stage of Games**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/the-mirror-stage-of-games.md) | Lacan, The Sims, identity through play |
 | [**The Inner State Question**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/the-inner-state-question.md) | Functional feelings, honest uncertainty |
 | [**Judgment and Joy**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/judgment-and-joy.md) | EVAL — visible criteria as ethics |

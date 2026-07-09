@@ -17,7 +17,7 @@ PhD lineage, Leela, MOOLLM skills.
 - **Will Wright:** players make up minds in Sims, Proxi, stories — hobby-scale constructivism
 - **Fictional:** made-up as in invented — a made-up story, a made-up friend, a Sim
 - **Decisive/reflexive:** "make up your mind" — the act only the owner can perform
-- **Repo Show:** soul-files in git — consented portrayals ([Palm](../palm/will-wright-soul-for-food.md))
+- **Repo Show:** soul-files in git — consented portrayals ([Palm](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/will-wright-soul-for-food.md))
 - **LLM era:** made-up minds that read their own CHARACTER.yml
 
 **Dream crossover:** Gary + Will on camera — mechanism vs microworld; Motive bars vs schemas.

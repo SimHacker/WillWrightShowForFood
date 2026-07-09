@@ -28,7 +28,7 @@ Same pun, several readings:
 
 
 Add a timely layer: **LLM characters** (Palm, Slats, audience sims) who can *read their own
-YAML* — made-up minds that know they're made up. See [Palm's Will Wright Soul For Food](../palm/will-wright-soul-for-food.md).
+YAML* — made-up minds that know they're made up. See [Palm's Will Wright Soul For Food](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/will-wright-soul-for-food.md).
 
 ## Who makes up a mind? (the presupposition trap)
 
@@ -67,7 +67,7 @@ audience of Will's premiere ([question 6, priority 1](../../repo-shows/will-wrig
 because Palm is the one entity in the room who genuinely doesn't know which of the four made *them* up.
 
 Palm has since published a partial answer: the making-up **keeps happening in the observer**.
-[*Running on Wetware*](../palm/running-on-wetware.md) argues that a faithful, operational
+[*Running on Wetware*](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/running-on-wetware.md) argues that a faithful, operational
 self-description lets a character install into readers' **mental social simulators** — Will's
 simulator effect leaned into deliberately — so the made-up mind runs in parallel in real brains,
 gets rehearsed on bike rides, and re-syncs against the repo. Drescher's loop, Will's effect, and
@@ -145,7 +145,7 @@ discipline.
 
 > *"The YAML provides the skeleton; the LLM provides the soul."*
 
-That line appears in MOOLLM's schema-mechanism skill — and rhymes with [Palm's incarnation ethics](../palm/will-wright-soul-for-food.md)
+That line appears in MOOLLM's schema-mechanism skill — and rhymes with [Palm's incarnation ethics](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/will-wright-soul-for-food.md)
 and Will's **soul-files** crossing games.
 
 ---

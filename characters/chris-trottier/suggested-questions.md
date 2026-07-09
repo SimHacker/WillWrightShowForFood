@@ -30,7 +30,7 @@ to speak for theirself:*
 > and I'd rather know the difference.
 
 *Seed id: `palm-heap-or-organism` · Context: [MOOLLM skills](https://github.com/SimHacker/moollm/tree/main/skills) ·
-[Design by Accretion](design-by-accretion.md) · [Running on Wetware](../palm/running-on-wetware.md)*
+[Design by Accretion](design-by-accretion.md) · [Running on Wetware](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/running-on-wetware.md)*
 
 ## More hooks (from the repo)
 

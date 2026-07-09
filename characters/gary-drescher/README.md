@@ -70,7 +70,7 @@ Repo Show: **Made-Up Minds, remade** — build live on Henry's Python factory wi
 - [Will Wright](../will-wright/README.md) — microworlds; player-made minds; soul-files
 - [Marvin Minsky](../marvin-minsky/README.md) — PhD advisor orbit 🕯️
 - [Jean Piaget](../jean-piaget/README.md) — constructivism root 🕯️
-- [Palm](../palm/will-wright-soul-for-food.md) — made-up minds that read their own soul files
+- [Palm](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/will-wright-soul-for-food.md) — made-up minds that read their own soul files
 - [Constructionist trail](../../process/trails/constructionist-lineage.md)
 
 Wikipedia: [Gary Drescher](https://en.wikipedia.org/wiki/Gary_Drescher)

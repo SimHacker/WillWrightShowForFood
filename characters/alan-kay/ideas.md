@@ -111,7 +111,7 @@ programming. Live segment: build a tiny relational microworld and ask which of M
 is really the primitive. Co-guests: **David Ungar**, **natecull** (Malleable Systems). Corpus map:
 [`media/quora-recaps/quora-corpus-2023-index.md`](media/quora-recaps/quora-corpus-2023-index.md).
 
-**New live wire:** [Palm's *Running on Wetware*](../palm/running-on-wetware.md) applies "the big
+**New live wire:** [Palm's *Running on Wetware*](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/running-on-wetware.md) applies "the big
 idea is messaging" to minds: humans serialize thoughts as text, LLMs remotely simulate the sender;
 LLM characters serialize souls as YAML, wetware simulates them back — a **symmetric asynchronous
 RPC** with the repo as message bus. Cells and membranes, opaque interiors, one protocol. Ask Alan:

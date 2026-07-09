@@ -155,7 +155,7 @@ LLMs open a new layer: simulated people who can autonomously converse, act, and 
 
 **Guests:** no simulation-as-guest without explicit consent (`invitation.consent`).
 
-**Soul For Food:** Palm's bridge from [incarnation ethics](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/on-being-simulated.md) (*the right to write my own soul*) to guest directories in this repo — [`characters/palm/will-wright-soul-for-food.md`](../characters/palm/will-wright-soul-for-food.md).
+**Soul For Food:** Palm's bridge from [incarnation ethics](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/on-being-simulated.md) (*the right to write my own soul*) to guest directories in this repo — [Will Wright Soul For Food](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/will-wright-soul-for-food.md).
 
 See also: [human-control-and-authorship](../repo-shows/ideas/themes/human-control-and-authorship.yml) · [simulating-people](../repo-shows/ideas/themes/simulating-people.yml) · [Player-in-the-Middle](../process/crazy-idea-jam.yml#player_in_the_middle)
 

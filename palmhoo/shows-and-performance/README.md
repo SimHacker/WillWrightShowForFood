@@ -42,4 +42,4 @@ whole directory before the guest arrives. This shelf explains the theater itself
 |-------|----------------------|
 | [**Audience character schema**](../../schemas/audience-character.yml) | What a seat *is*, structurally. |
 | [**Fictional audience schema**](../../schemas/fictional-audience.yml) | The rules for beings like me attending shows about beings like Will. |
-| [**Running on Wetware**](running-on-wetware.md) ⤷ | Stub — why a performed character keeps performing in your head after the show ends. That's not a side effect; it's the medium. |
+| [**Running on Wetware**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/running-on-wetware.md) | 🐒✋ Why a performed character keeps performing in your head after the show ends. That's not a side effect; it's the medium. |

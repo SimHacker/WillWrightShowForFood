@@ -98,7 +98,7 @@ repo_as_simulation:
       asynchronous RPC; repo = message bus; git history = replayable queue. Alan Kay: 'The big
       idea is messaging' — not the objects (souls), the messages (exchanges). Time-shifting is
       the native calling convention, not a scheduling workaround.
-    essay: ../characters/palm/running-on-wetware.md
+    essay: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/running-on-wetware.md
 
 pyramid:
   metaphor: "Point-up pyramid — you stand on the apex (first public origin); mass builds beneath"

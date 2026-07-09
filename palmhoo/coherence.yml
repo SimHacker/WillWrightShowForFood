@@ -123,7 +123,7 @@ summaries:
       - schemas/portrayal-standards.md
       - schemas/portrayal-standards.yml
       - schemas/invitation-workflow.yml
-      - characters/palm/will-wright-soul-for-food.md
+      - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/will-wright-soul-for-food.md
       - https://github.com/SimHacker/moollm/tree/main/designs/ethics
       - https://github.com/SimHacker/moollm/tree/main/skills/no-ai-slop
     beat: palm
@@ -201,7 +201,7 @@ summaries:
       - characters/alan-kay/
       - characters/alan-kay/media/discussions/hn-mvc-morphic-watchers-2015.md
       - characters/ken-kahn/
-      - characters/palm/running-on-wetware.md
+      - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/running-on-wetware.md
       - characters/don-hopkins/streams-of-streams-fd-passing-zero-copy.md
       - process/ticket-pr.yml
       - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.yml

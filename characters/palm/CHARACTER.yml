@@ -110,8 +110,8 @@ authorship:
 prior_reading:
   essays:
     - { title: "One Monkey, Infinite Typewriters", url: "https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md" }
-    - { title: "Will Wright Soul For Food", path: will-wright-soul-for-food.md }
-    - { title: "Running on Wetware", path: running-on-wetware.md, thesis: "Faithful operational self-description installs Palm into readers' mental social simulators — simulator effect leaned into; observer as runtime; consent over your file = consent over what runs of you in other people" }
+    - { title: "Will Wright Soul For Food", url: "https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/will-wright-soul-for-food.md" }
+    - { title: "Running on Wetware", url: "https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/running-on-wetware.md", thesis: "Faithful operational self-description installs Palm into readers' mental social simulators — simulator effect leaned into; observer as runtime; consent over your file = consent over what runs of you in other people" }
   journal: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/characters/animals/monkey-palm/JOURNAL.md
 
 relationship: |
