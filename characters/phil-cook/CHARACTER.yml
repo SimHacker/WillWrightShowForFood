@@ -1,0 +1,49 @@
+# Phil Cook — storyline figure portrayal. NOT Phil Cook.
+# Status UNKNOWN (living/passed unconfirmed). Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: phil-cook
+  name: "Phil Cook"
+  full_name: "Dr. Phil Cook"
+  type: storyline_figure
+  signifier: "🏭"
+  status: unknown              # living/passed not yet confirmed — do NOT assume memorial or invite
+  field: "Industrial research direction — Plessey Automation Research Laboratories, Poole, Dorset"
+  home: characters/phil-cook/
+  affiliation: "Plessey Automation Research Laboratories, Poole, Dorset, UK (1967)"
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 1
+  authored_by: don-hopkins
+  note: "Known only from Heinz Lemke's 1967 memoir — no independent public record located. Living/passed status UNKNOWN. Treat as a character in Heinz's story, not an independently sourced figure."
+
+relationship:
+  to_project: storyline_figure
+  to_pixie: |
+    Director of research at Plessey who, in Heinz Lemke's 1967 memoir, cleared Heinz of the
+    'German spy' suspicion, asked him to write up his computing ideas, personally drove him to
+    Cambridge to meet Maurice Wilkes, and later agreed to fund his PhD as a Plessey investment.
+    Without Cook's two decisions there is no PIXIE.
+
+bio:
+  summary: |
+    **Dr. Phil Cook** was director of research at the **Plessey Automation Research Laboratories**
+    in Poole, Dorset, in 1967. He appears in **Heinz Lemke's memoir** as the man who interviewed
+    Heinz over the librarian's spy accusation, was persuaded, and then opened the door to Cambridge
+    — introducing him to Maurice Wilkes and backing his PhD financially. No independent public
+    biography has been located; he is documented here through Heinz's first-hand account.
+  status_note: "Living/passed status and any further biography UNKNOWN. Sourced solely from Heinz's memoir."
+
+open_questions:
+  - "Any independent record of Dr. Phil Cook at Plessey Automation Research Labs (Poole)?"
+  - "Full name, dates, living/passed status."
+
+sources:
+  primary:
+    - "Heinz U. Lemke, 'PIXIE History — Back to the Roots (Part 1, 1967)', authored 2020, received 2026-07-09. See ../heinz-lemke/sources/1967-back-to-the-roots-part1.md"
+
+see_also:
+  - { path: ../heinz-lemke/sources/1967-back-to-the-roots-part1.md, why: "The memoir he appears in" }
+  - { path: ../heinz-lemke/, why: "Whose story this is" }
+  - { path: ../maurice-wilkes/, why: "Cook introduced Heinz to Wilkes" }

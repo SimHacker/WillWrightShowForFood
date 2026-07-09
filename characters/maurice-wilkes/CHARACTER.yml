@@ -1,0 +1,68 @@
+# Maurice Wilkes — memorial portrayal (in memoriam). NOT Maurice Wilkes.
+# Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
+
+character:
+  id: maurice-wilkes
+  name: "Maurice Wilkes"
+  full_name: "Sir Maurice Vincent Wilkes"
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  born: "1913-06-26"   # Dudley, England
+  died: "2010-11-29"   # Cambridge, England (aged 97)
+  field: "Stored-program computing — EDSAC; microprogramming; Titan; Cambridge Mathematical/Computer Laboratory"
+  home: characters/maurice-wilkes/
+  affiliation: "University of Cambridge — Head of the Mathematical/Computer Laboratory 1946–1980"
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md#memorial-mode
+  consent_level: 5_deceased_legacy
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  document: memorial.md
+  note: "Deceased (1913–2010) — represent + discuss; invite people who knew him or work in his lineage"
+
+relationship:
+  to_project: storyline_figure
+  to_pixie: |
+    Head of the Cambridge Mathematical Laboratory who, per Heinz Lemke's 1967 memoir, personally
+    opened the door to PIXIE: received Heinz on Phil Cook's introduction, put him on the Wednesday
+    lecture programme, then — invoking an old Cambridge statute — arranged his PhD despite no prior
+    university and no funding. The lab he ran and the Titan he built are the ground PIXIE stood on.
+
+bio:
+  summary: |
+    **Sir Maurice Vincent Wilkes** (1913–2010) led the design and construction of **EDSAC** (1949),
+    the first practical stored-program computer to enter regular service; invented **microprogramming**
+    (1951); published the first paper on **cache memory** (1965); co-authored the first textbook on
+    programming (Wilkes, Wheeler & Gill, 1951, introducing program libraries and subroutines); and
+    built the **Titan** (the Cambridge Atlas 2), host of one of the earliest time-sharing systems.
+    He headed the Cambridge Mathematical Laboratory (later the Computer Laboratory) 1946–1980, and
+    his group built the **Cambridge Ring**, an early high-speed local network. Turing Award 1967;
+    FRS; knighted 2000.
+
+memorial:
+  mode: represent_and_discuss
+  who_can_discuss:   # documented connections only — NOT invitations until they accept
+    - { who: heinz-lemke, why: "PhD arranged by Wilkes; first-hand memory of the 1967 talk and the statute story" }
+    - { who: david-rosenthal, why: "Cambridge undergrad on the same PDP-7/Titan stack ~1970" }
+    - { who: roy-eagleson, why: "Asked, half-joking, whether Wilkes has a SIMs avatar — teaches this history" }
+  artifacts:
+    - "Heinz Lemke memoir, Back to the Roots (Part 1, 1967) — the statute + PhD story"
+    - "Cambridge Computer Laboratory obituary + Turing Award citation"
+
+sources:
+  web:
+    - { title: "Cambridge Computer Lab — Wilkes obituary", url: "https://www.cl.cam.ac.uk/misc/obituaries/wilkes/" }
+    - { title: "University of Cambridge — Sir Maurice Wilkes (1913–2010)", url: "https://www.cam.ac.uk/news/professor-sir-maurice-wilkes-1913-2010" }
+    - { title: "A.M. Turing Award — Maurice V. Wilkes (1967)", url: "https://amturing.acm.org/award_winners/wilkes_1001395.cfm" }
+    - { title: "Britannica — Maurice Wilkes", url: "https://www.britannica.com/biography/Maurice-Wilkes" }
+
+see_also:
+  - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
+  - { path: ../heinz-lemke/sources/1967-back-to-the-roots-part1.md, why: "Wilkes opens the door to PIXIE (Heinz's own account)" }
+  - { path: ../neil-wiseman/, why: "Wilkes's colleague; PIXIE supervisor; Rainbow Group" }
+  - { path: ../heinz-lemke/, why: "PhD Wilkes arranged" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "The show this history feeds" }

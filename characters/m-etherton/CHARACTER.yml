@@ -1,0 +1,45 @@
+# M. Etherton — storyline figure portrayal. NOT M. Etherton.
+# Status UNKNOWN (living/passed unconfirmed). Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: m-etherton
+  name: "M. Etherton"
+  full_name: "M. Etherton"   # given name not yet confirmed
+  type: storyline_figure
+  signifier: "🖥️"
+  status: unknown              # living/passed not yet confirmed — do NOT assume memorial or invite
+  field: "Computer-aided design / computer graphics — University of Cambridge Mathematical Laboratory (early 1970s)"
+  home: characters/m-etherton/
+  affiliation: "University of Cambridge Mathematical Laboratory (per RAINBOW 1972 paper)"
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 1
+  authored_by: don-hopkins
+  note: "Thinnest of the storyline figures — documented only from the RAINBOW co-authorship. Given name, living/passed status, and biography all UNKNOWN. Heinz Lemke is the source to flesh this out."
+
+relationship:
+  to_project: storyline_figure
+  to_pixie: "Co-author of RAINBOW (1972) with Wiseman, Cheney, Hiles, Lemke — the CAD system that followed PIXIE. The 'Etherton' Roy Eagleson named."
+
+bio:
+  summary: |
+    **M. Etherton** appears as a co-author of the **RAINBOW** CAD-system paper (Wiseman, Cheney,
+    Etherton, Hiles, Lemke, 1972) from the University of Cambridge Mathematical Laboratory. This is
+    the only firmly documented fact so far; given name and further biography are not yet confirmed.
+  status_note: "Everything beyond the RAINBOW byline is UNKNOWN — this room is a placeholder to fill from Heinz's memory and Cambridge records."
+
+open_questions:
+  - "Full given name (only 'M.' is on the paper)."
+  - "Living/passed status and whereabouts."
+  - "Role within RAINBOW / the Rainbow Group."
+
+sources:
+  papers:
+    - "Wiseman NE, Cheney CJ, Etherton M, Hiles JO, Lemke HU (1972): RAINBOW — a multi-purpose CAD system. Software — Practice and Experience, 2, pp. 359–375."
+
+see_also:
+  - { path: ../neil-wiseman/, why: "RAINBOW lead author / group leader" }
+  - { path: ../heinz-lemke/, why: "RAINBOW co-author; best source to identify Etherton" }
+  - { path: ../cj-cheney/, why: "RAINBOW co-author" }
+  - { path: ../john-hiles/, why: "RAINBOW co-author" }

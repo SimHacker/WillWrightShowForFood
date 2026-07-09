@@ -1,0 +1,51 @@
+# John Hiles — storyline figure portrayal. NOT John Hiles.
+# Status UNKNOWN (living/passed unconfirmed). Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: john-hiles
+  name: "John Hiles"
+  full_name: "John O. Hiles"   # "J.O. Hiles" on the PIXIE + RAINBOW papers
+  type: storyline_figure
+  signifier: "🖥️"
+  status: unknown              # living/passed not yet confirmed — do NOT assume memorial or invite
+  field: "Interactive computer graphics / CAD — Cambridge University Mathematical Laboratory (late 1960s–early 1970s)"
+  home: characters/john-hiles/
+  affiliation: "University of Cambridge Mathematical Laboratory (per PIXIE 1969 & RAINBOW 1972 papers)"
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 1
+  authored_by: don-hopkins
+  note: "Documented from published co-authorship only. Living/passed status UNKNOWN — confirm before memorial mode or any contact. Roy Eagleson named him in the storyline; Heinz Lemke can identify him."
+
+relationship:
+  to_project: storyline_figure
+  to_pixie: "Co-author of PIXIE (1969) and RAINBOW (1972) with Wiseman and Lemke — the third name on the founding PIXIE paper."
+
+bio:
+  summary: |
+    **J.O. Hiles** was a member of the University of Cambridge Mathematical Laboratory and a
+    co-author of the two papers at the center of this thread: **PIXIE** (Wiseman, Lemke, Hiles,
+    1969) and **RAINBOW** (Wiseman, Cheney, Etherton, Hiles, Lemke, 1972). Beyond this
+    co-authorship, biographical details are not yet confirmed.
+  status_note: |
+    Living-or-passed status UNKNOWN. Roy Eagleson listed "John Hiles" among the Cambridge/TRE
+    storyline people; Heinz Lemke is the best source to confirm his full name, whereabouts, and
+    what he worked on within PIXIE/RAINBOW.
+
+open_questions:
+  - "Confirm full name and current status (living/passed) via Heinz Lemke."
+  - "His specific contribution to PIXIE and RAINBOW (which subsystems?)."
+  - "UNCONFIRMED / speculative: any relation to the John Hiles later associated with agent-based simulation (Maxis Business Simulations / Thinking Tools)? Almost certainly a DIFFERENT person — do not assert; flagged only as a question to rule out given the Maxis adjacency of this project."
+
+sources:
+  papers:
+    - "Wiseman NE, Lemke HU, Hiles JO (1969): PIXIE — A New Approach to Graphical Man-Machine Communication. Proc. 1969 CAD Conf, Southampton, IEE Conf Pub 51, pp. 463–471."
+    - "Wiseman NE, Cheney CJ, Etherton M, Hiles JO, Lemke HU (1972): RAINBOW — a multi-purpose CAD system. Software — Practice and Experience, 2, pp. 359–375."
+
+see_also:
+  - { path: ../neil-wiseman/, why: "Lead author / group leader" }
+  - { path: ../heinz-lemke/, why: "Co-author; can identify Hiles" }
+  - { path: ../cj-cheney/, why: "RAINBOW co-author" }
+  - { path: ../m-etherton/, why: "RAINBOW co-author" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "The show this history feeds" }

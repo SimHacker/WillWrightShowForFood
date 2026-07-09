@@ -1,0 +1,72 @@
+# Neil Wiseman — memorial portrayal (in memoriam). NOT Neil Wiseman.
+# Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
+
+character:
+  id: neil-wiseman
+  name: "Neil Wiseman"
+  full_name: "Neil Ernest Wiseman"
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  born: "1934-05-19"   # Cowlinge, Suffolk, England
+  died: "1995-06-13"   # Cambridge, England (aged 61, cancer)
+  field: "Computer graphics; interactive CAD — Cambridge Computer Laboratory; founder of the Rainbow Group"
+  home: characters/neil-wiseman/
+  affiliation: "University of Cambridge Computer Laboratory — Reader in Computer Graphics (personal Readership, 1986); Fellow of Wolfson College (1983)"
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md#memorial-mode
+  consent_level: 5_deceased_legacy
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  document: memorial.md
+  note: "Deceased (1934–1995) — represent + discuss; Heinz Lemke (his student) can remember him on air"
+
+relationship:
+  to_project: storyline_figure
+  to_pixie: |
+    Heinz Lemke's PhD supervisor and PIXIE co-author. Wiseman designed the high-speed data-link
+    joining the DEC PDP-7 + Type 340 vector display to the Titan — described in his Cambridge
+    obituary as "probably the world's first distributed system," and the substrate PIXIE ran on.
+    Lead author of both the PIXIE (1969) and RAINBOW (1972) papers.
+
+bio:
+  summary: |
+    **Neil Ernest Wiseman** (1934–1995) founded and led the Cambridge Computer Laboratory's
+    **Rainbow Group** (1965–1995), contributing for 30 years to computer graphics, display
+    architectures, modelling, rendering, interaction techniques, CAD, graphic design, and
+    animation. He designed the **PDP-7 ↔ Titan** high-speed data-link (an early distributed
+    system), invented a **pen-following screen menu** that anticipated the pop-up menu, held three
+    patents and 70+ publications, and supervised 40+ PhDs (including Peter Robinson and Neil
+    Dodgson). In 1986 Cambridge created a personal **Readership in Computer Graphics** for him; he
+    repeatedly declined chairs elsewhere, preferring Cambridge. With David Kindersley he explored
+    the mathematics of letterforms and co-founded the consultancy Fendragon Ltd.
+
+memorial:
+  mode: represent_and_discuss
+  who_can_discuss:   # documented connections only — NOT invitations until they accept
+    - { who: heinz-lemke, why: "His PhD student (from 1967); PIXIE + RAINBOW co-author; first-hand memory" }
+    - { who: david-rosenthal, why: "Cambridge, same PDP-7/Titan stack ~1970; met Wiseman" }
+  artifacts:
+    - "Wiseman papers, Cambridge University Library (GBR/0012/MS Wiseman, 1959–2002)"
+    - "PIXIE paper (1969); RAINBOW paper (1972); 'Wiseman Notes on Radial Menus in PIXIE' (Buxton scan)"
+
+sources:
+  web:
+    - { title: "Cambridge Computer Lab — Neil Wiseman obituary (Peter Robinson)", url: "https://www.cl.cam.ac.uk/misc/obituaries/wiseman/" }
+    - { title: "Wikipedia — Neil Wiseman", url: "https://en.wikipedia.org/wiki/Neil_Wiseman" }
+    - { title: "Rainbow Group — Neil Wiseman", url: "https://www.cl.cam.ac.uk/research/rainbow/people/neilw.html" }
+    - { title: "Cambridge ArchiveSearch — Wiseman papers", url: "https://archivesearch.lib.cam.ac.uk/agents/people/13601" }
+  papers:
+    - "Wiseman NE, Lemke HU, Hiles JO (1969): PIXIE — A New Approach to Graphical Man-Machine Communication. Proc. 1969 CAD Conf, Southampton, IEE Conf Pub 51, pp. 463–471."
+    - "Wiseman NE, Cheney CJ, Etherton M, Hiles JO, Lemke HU (1972): RAINBOW — a multi-purpose CAD system. Software — Practice and Experience, 2, pp. 359–375."
+
+see_also:
+  - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
+  - { path: ../heinz-lemke/, why: "His PhD student; PIXIE co-author; can remember him on air" }
+  - { path: ../heinz-lemke/sources/1967-back-to-the-roots-part1.md, why: "Heinz starts under Wiseman, 1 Oct 1967" }
+  - { path: ../maurice-wilkes/, why: "Lab head; colleague" }
+  - { path: ../john-hiles/, why: "PIXIE + RAINBOW co-author" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "The show this history feeds" }

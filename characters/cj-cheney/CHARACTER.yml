@@ -1,0 +1,51 @@
+# C.J. Cheney — storyline figure portrayal. NOT C.J. Cheney.
+# Status UNKNOWN (living/passed unconfirmed). Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: cj-cheney
+  name: "C.J. Cheney"
+  full_name: "C. J. Cheney"
+  type: storyline_figure
+  signifier: "🖥️"
+  status: unknown              # living/passed not yet confirmed — do NOT assume memorial or invite
+  field: "Garbage collection / memory management; CAD — University of Cambridge Mathematical Laboratory"
+  home: characters/cj-cheney/
+  affiliation: "University of Cambridge Mathematical Laboratory (c. 1970–72)"
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 1
+  authored_by: don-hopkins
+  note: "Documented from publications only. Identified as the 'Cheney' in Roy Eagleson's storyline via the RAINBOW co-authorship (same Cambridge Math Lab, same era). Living/passed status UNKNOWN — confirm before memorial mode or contact."
+
+relationship:
+  to_project: storyline_figure
+  to_pixie: "Co-author of RAINBOW (1972) with Wiseman, Etherton, Hiles, Lemke — the CAD system that followed PIXIE. Almost certainly the 'Cheney' Roy Eagleson named."
+
+bio:
+  summary: |
+    **C. J. Cheney** worked at the University of Cambridge Mathematical Laboratory and is best known
+    for **Cheney's algorithm** — the elegant non-recursive, breadth-first **stop-and-copy garbage
+    collector** described in "A Nonrecursive List Compacting Algorithm," *Communications of the ACM*
+    13(11), November 1970, pp. 677–678. It splits the heap into two semispaces and copies live
+    objects with just two pointers (scan/free), avoiding recursion — foundational to copying and
+    generational garbage collectors ever since. He was also a co-author of the **RAINBOW** CAD-system
+    paper (1972), which is why he belongs to this Cambridge storyline.
+  status_note: "Living-or-passed status UNKNOWN — confirm via Heinz Lemke / Cambridge records before any memorial framing."
+
+open_questions:
+  - "Confirm full name, living/passed status, and whereabouts."
+  - "His role in RAINBOW vs. his GC work — were they related (data-structure management)?"
+
+sources:
+  papers:
+    - "Cheney CJ (Nov 1970): A Nonrecursive List Compacting Algorithm. Communications of the ACM 13(11), pp. 677–678. doi:10.1145/362790.362798."
+    - "Wiseman NE, Cheney CJ, Etherton M, Hiles JO, Lemke HU (1972): RAINBOW — a multi-purpose CAD system. Software — Practice and Experience, 2, pp. 359–375."
+  web:
+    - { title: "Wikipedia — Cheney's algorithm", url: "https://en.wikipedia.org/wiki/Cheney's_algorithm" }
+
+see_also:
+  - { path: ../neil-wiseman/, why: "RAINBOW lead author / group leader" }
+  - { path: ../heinz-lemke/, why: "RAINBOW co-author; can identify Cheney" }
+  - { path: ../john-hiles/, why: "RAINBOW co-author" }
+  - { path: ../m-etherton/, why: "RAINBOW co-author" }

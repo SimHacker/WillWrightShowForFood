@@ -1,0 +1,65 @@
+# Zenon Pylyshyn — memorial portrayal (in memoriam). NOT Zenon Pylyshyn.
+# Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
+
+character:
+  id: zenon-pylyshyn
+  name: "Zenon Pylyshyn"
+  full_name: "Zenon Walter Pylyshyn"
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  born: "1937-08-25"   # Montreal, Quebec, Canada
+  died: "2022-12-06"   # The Bronx, New York, USA (aged 85)
+  field: "Cognitive science; philosophy of mind — cognition & computation; visual indexing (FINST) theory"
+  home: characters/zenon-pylyshyn/
+  affiliation: "Western University (UWO) 1966–1994; Rutgers University — founding director, Center for Cognitive Science (RuCCS), 1994"
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md#memorial-mode
+  consent_level: 5_deceased_legacy
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  document: memorial.md
+  note: "Deceased (1937–2022) — represent + discuss; Roy Eagleson (his PhD student at UWO) can remember him"
+
+relationship:
+  to_project: storyline_figure
+  to_roy: |
+    Roy Eagleson began his PhD under Pylyshyn at Western University (UWO). Roy foregrounds him
+    in the PIXIE storyline thread as the root of his own intellectual lineage — and notes
+    Pylyshyn's own postdoc advisors were Allen Newell and John McCarthy.
+  entered_via: "characters/roy-eagleson/ (2026-07-09 storyline thread)"
+
+bio:
+  summary: |
+    **Zenon Walter Pylyshyn** (1937–2022) was a Canadian cognitive scientist and philosopher.
+    Engineering Physics (McGill), MSc in Control Systems and PhD in Experimental Psychology
+    (Saskatchewan). Professor at **Western University (UWO)** 1966–1994 — in Psychology, Computer
+    Science, Philosophy, and Electrical Engineering — and director of the UWO Centre for Cognitive
+    Science. In 1994 he became Board of Governors Professor at **Rutgers** and founding director of
+    the **Center for Cognitive Science (RuCCS)**. Known for foundational work on **cognition and
+    computation**, the critique of mental imagery as pictorial, and **visual indexing ("FINST")
+    theory** of visual attention and tracking. FRSC (1998); Jean Nicod Prize (2004); Donald O. Hebb
+    Award.
+
+memorial:
+  mode: represent_and_discuss
+  who_can_discuss:   # documented connections only — NOT invitations until they accept
+    - { who: roy-eagleson, why: "His PhD student at UWO; can speak first-hand to his teaching and lineage" }
+  lineage_note: |
+    Roy reports Pylyshyn's postdoc advisors were Allen Newell and John McCarthy, and that Pylyshyn
+    directed the CIFAR AI & Robotics program that hired Geoffrey Hinton, and (with Jerry Fodor) was
+    a noted critic of connectionism. These figures are context, not characters in this show.
+
+sources:
+  web:
+    - { title: "Wikipedia — Zenon Pylyshyn", url: "https://en.wikipedia.org/wiki/Zenon_Pylyshyn" }
+    - { title: "Rutgers RuCCS — Zenon Pylyshyn (In Memoriam)", url: "https://ruccs.rutgers.edu/people/people-details/146-emeritus-faculty/525-dr-zenon-pylyshyn" }
+    - { title: "Obituary — Crestwood Cremation & Funeral Services", url: "https://crestwoodcremationfuneral.com/obituary/?ob-id=2008&obit=Zenon+Walter+Pylyshyn" }
+
+see_also:
+  - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
+  - { path: ../roy-eagleson/, why: "His PhD student; brought this lineage into the thread" }
+  - { path: ../roy-eagleson/sources/, why: "see ../heinz-lemke/sources/2026-07-09-pixie-storyline-thread.md" }
