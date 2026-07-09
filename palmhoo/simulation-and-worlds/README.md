@@ -65,3 +65,11 @@ where a program is a self-healing pattern and a crashed system is infinitely wro
 | [**Don's CAM6 — live**](https://donhopkins.com/home/CAM6/) · [**source**](https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js) | Toffoli & Margolus' Cellular Automata Machine, rebuilt in a browser tab. The engine behind the Dendrite-Heat pictures. |
 | [**LifeBrush — "Emacs for Cytoplasm"**](https://www.youtube.com/watch?v=5LBHRyGxLGI) | Timothy Davidson's VR molecular biology you paint into being. The weirdest, best branch of the thread. |
 | [**Dialogues on Natural Code**](https://todepond.com/code) | Lu Wilson *with* Dave Ackley (Onward! 2024) — robust-first meets falling-sand. |
+| [**MOOLLM is a Movable Feast Machine for text**](../../characters/dave-ackley/ca-correspondence-story.md#moollm-is-a-movable-feast-machine-for-text) | The architecture claim: MOOLLM is a robust, non-deterministic, LLM-driven MFM whose neighborhood is 1-D text in a URL-addressed filesystem — and *palmhoo is the specimen*. |
+
+🐒✋ *And this shelf is that machine at work. Palmhoo doesn't relocate the worlds it
+lists — it **points** at them, with context, at every granularity (a repo, a file,
+a heading inside a file, an external video), tagging each as many times as it's
+useful and re-shelving as it grows. Where the Movable Feast Machine moves atoms
+across a grid, palmhoo moves **pointers plus metadata** across a filesystem: local
+edits, no global rebuild, robust-first, growing on demand. Reading it runs it.*

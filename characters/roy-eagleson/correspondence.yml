@@ -21,7 +21,18 @@ threads:
       Flight of the Bumblebee — Heinz sent YouTube link.
     show_use: "Educator actively teaching the lineage — classroom proof the history is alive"
 
+  storyline_thread_2026_07_09:
+    transcript: ../heinz-lemke/sources/2026-07-09-pixie-storyline-thread.md
+    what: |
+      Roy greets Don; shares his backstory (operator era on PDP-10/11 + Cyber-73; PhD under
+      Pylyshyn ← Newell & McCarthy; CIFAR → Hinton; Fodor connectionism critique); his HCI method
+      of having students re-implement Sketchpad until they reinvent OOP; asks for the Cambridge/TRE
+      storyline (Wilkes, Wiseman, Hiles, Cheney, Etherton, Rainbow, PDP-7 ↔ Titan); jokes about a
+      Maurice Wilkes SIMs avatar; Cc's his mentor Kelly Booth (UBC).
+    show_use: "Sharpens the interview's research spine; classroom mirror of run-the-old-code premise"
+
 connects_in_repo:
   - { path: README.md, why: "Educator room" }
   - { path: sketchpad-to-pixie-lineage.md, why: "Sketchpad → GSP → PIXIE essay" }
-  - { path: ../heinz-lemke/correspondence.yml, why: "roy_eagleson_uwo_2026 thread" }
+  - { path: ../heinz-lemke/correspondence.yml, why: "roy_eagleson_uwo_2026 + cambridge_storyline_installments threads" }
+  - { path: ../kelly-booth/, why: "Roy's HCI storytelling mentor, newly on the thread" }

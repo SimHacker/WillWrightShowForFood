@@ -245,6 +245,38 @@ load-bearing in the operating system that runs this whole show. That's the pitch
 for getting Dave on a Repo Show: not to explain his work from scratch, but to make
 the survival-first argument in public, live, on a stage anyone can clone and run.
 
+## MOOLLM is a Movable Feast Machine for text
+
+Here's the part that makes Dave's work more than an inspiration to us — it's the
+architecture.
+
+MOOLLM is, in effect, a **robust, non-deterministic, LLM-driven Movable Feast
+Machine** whose substrate is not a 2-D grid of atoms but a **hierarchical
+filesystem of 1-D text samples**, addressed by **URL pointers** that drill from
+directory → file → the internal structure *inside* a file. The LLM is the moving
+"feast" — the read/write head that lands somewhere, reads its neighborhood, and
+acts. Where the MFM diffuses atoms across space, MOOLLM diffuses *attention and
+edits* across a repo, and the git log is its clock.
+
+And like the MFM it is **robust-first by construction**: no global consistency is
+required, work happens locally, malformed input is interpreted charitably rather
+than fatally (`postel`), and a crashed run is simply resumed — the state lives in
+files, redundantly, recoverable from git. The same ambient skill that opens with
+Dave's line governs how the whole machine behaves under confusion.
+
+The twist is what it does with the neighborhood. The MFM *moves* atoms. MOOLLM
+mostly **refers** — it points, with metadata, instead of relocating. It *can* move
+things (rename and reorganize directories, package and unbundle archives, drive
+git, run scripts, compose Anthropic/MOO skills), but the default gesture is to add
+a **pointer plus context**. [Palmhoo](../../palmhoo/) is the clearest specimen: a
+directory that contextualizes internal and external objects at many granularities,
+each tagged as many times as it's useful, continuously refactored and rearranged as
+it grows — a live, hand-tended index that grows on demand rather than a fixed tree.
+Robust-first computing, applied to a knowledge base instead of a chip.
+
+That's why the Ackley thread isn't a side quest. It's the theory of the machine
+these files run on.
+
 ---
 
 ## The link vault

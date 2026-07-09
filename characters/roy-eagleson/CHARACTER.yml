@@ -30,13 +30,25 @@ bio:
     correspondence after Nagoya. July 2026: pivoted an HCI lecture from **Sutherland's Sketchpad**
     to **PIXIE** the same morning Heinz revealed the complete PDP-7 listing — synchronicity while
     reading Don's Buxton patent page.
+  background_in_his_words: |
+    (9 Jul 2026, attributed to Roy) Midnight-shift computer operator ~1979–mid-80s (PDP-10,
+    PDP-11 inkpen plotter, Cyber-73); first met computing on a high-school Honeywell GE-115. PhD
+    under Zenon Pylyshyn (whose postdoc advisors were Allen Newell & John McCarthy); Pylyshyn ran
+    the CIFAR AI&Robotics program that hired Geoffrey Hinton, co-critiqued connectionism with
+    Jerry Fodor, and founded Rutgers Cognitive Science. Has photos of Pylyshyn with Newell/McCarthy.
+  teaching_method: |
+    Assigns students to re-implement Sketchpad; they rediscover data structures and reinvent
+    object-oriented programming bottom-up (sometimes at assembly level). Carries the Sutherland →
+    Utah genealogy (Kay, Clark, Blinn, Phong, Gouraud, Fuchs, Catmull, Warnock).
 
 sources:
   email: eagleson@uwo.ca
   transcript: ../heinz-lemke/sources/2026-07-07-pixie-trio-thread.md
+  transcript_2: ../heinz-lemke/sources/2026-07-09-pixie-storyline-thread.md
 
 see_also:
   - { path: sketchpad-to-pixie-lineage.md, why: "Sketchpad north star → Geometer's Sketchpad → PIXIE in the classroom" }
+  - { path: ../kelly-booth/, why: "Roy's HCI storytelling mentor (UBC), newly Cc'd on the thread" }
   - { path: ../heinz-lemke/, why: "PIXIE co-author; source-listing email; Flight of the PIXIE link" }
   - { path: ../ivan-sutherland/, why: "Hero + north star — Sketchpad (1963)" }
   - { path: ../heinz-lemke/pixie-source-recovery.md, why: "Listing recovery + Roy lecture synchronicity" }

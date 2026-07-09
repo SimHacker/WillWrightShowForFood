@@ -1,0 +1,40 @@
+# Kelly Booth — correspondent portrayal. NOT Kelly Booth.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: kelly-booth
+  name: "Kelly Booth"
+  full_name: "Kellogg S. Booth"
+  type: correspondent
+  signifier: "🎓📽️"
+  status: living
+  field: "Human–computer interaction; computer graphics — University of British Columbia"
+  home: characters/kelly-booth/
+  affiliation: "University of British Columbia (UBC), Vancouver"
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 1
+  authored_by: don-hopkins
+  note: "Public-source portrayal only. Newly Cc'd on the PIXIE thread (2026-07-09); not yet contacted. May edit, reduce, or delete anytime."
+
+relationship:
+  to_project: cc_on_thread
+  to_roy: "Roy Eagleson's friend and mentor; inspired Roy's storytelling approach to HCI lectures"
+  to_show: "On the thread, not yet invited or contacted"
+
+bio:
+  summary: |
+    **Kelly Booth** (Kellogg S. Booth) — professor of computer science at the University of
+    British Columbia, in human–computer interaction and computer graphics. Introduced to the
+    project on 2026-07-09 when Roy Eagleson Cc'd him on the PIXIE storyline thread, crediting him
+    as the mentor who shaped Roy's storytelling style in HCI teaching.
+
+sources:
+  email: ksbooth@cs.ubc.ca
+  transcript: ../heinz-lemke/sources/2026-07-09-pixie-storyline-thread.md
+
+see_also:
+  - { path: ../roy-eagleson/, why: "Brought Kelly onto the thread; student who carries his storytelling method" }
+  - { path: ../heinz-lemke/, why: "PIXIE thread host" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "The show this thread feeds" }

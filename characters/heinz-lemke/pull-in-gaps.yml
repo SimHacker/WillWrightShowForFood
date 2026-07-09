@@ -34,3 +34,28 @@ gaps:
     status: gap
     pull_in: "Don has copy at donhopkins.com/home/Wiseman%20Notes... ; export SAVE-FAILED"
     show_use: "Radial menu prehistory evidence"
+
+  heinz_1967_origin_story:
+    what: |
+      Heinz's own memoir, first installment — a 1967 story he says "changed my life forever
+      some 60 years ago." Attached to his 2026-07-09 email; more installments promised over the
+      coming weeks, building the Cambridge/TRE storyline Roy Eagleson requested.
+    status: offered
+    pull_in: "Receive the 2026-07-09 attachment; scan/transcribe; file under media/ or sources/ with provenance; ask Heinz consent to publish"
+    show_use: "Opening act of the PIXIE interview — how Heinz got to Cambridge in the first place"
+    transcript: sources/2026-07-09-pixie-storyline-thread.md
+
+  cambridge_tre_storyline:
+    what: |
+      The named-people storyline Roy asked for: Maurice Wilkes, Neil Wiseman, John Hiles, Cheney,
+      Etherton; the Rainbow Project; the PDP-7 vector display ↔ Titan link; TRE (Telecommunications
+      Research Establishment) corporate history. Heinz is writing it in installments.
+    status: incoming
+    pull_in: "Collect installments as they arrive; cross-file to person stubs (wilkes, wiseman, hiles) as warranted; keep provenance"
+    show_use: "Research spine for the interview — who did what on PIXIE and Titan"
+
+  roy_eagleson_photos:
+    what: "Roy says he has photos of Zenon Pylyshyn with Allen Newell and John McCarthy"
+    status: gap
+    pull_in: "If Roy is willing, request scans + permission; would enrich the AI-history sidebar"
+    show_use: "Cognitive-science lineage visuals (Pylyshyn ← Newell/McCarthy; CIFAR → Hinton)"

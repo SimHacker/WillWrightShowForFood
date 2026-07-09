@@ -111,6 +111,28 @@ threads:
       - ../../repo-shows/pixie-pie-menus-pdp7.yml
       - ../../process/post-production/cambridge-telecine-jiggle.yml
 
+  cambridge_storyline_installments_2026_07_09:
+    date: "2026-07-09"
+    transcript: sources/2026-07-09-pixie-storyline-thread.md
+    what: |
+      Roy Eagleson (9 Jul 11:58) greets Don, jokes "does Maurice Wilkes have an avatar in the
+      SIMs milieu?", shares his own operator backstory (Honeywell GE-115 in HS; midnight shift
+      ~1979–mid-80s on PDP-10 / PDP-11 inkpen plotter / Cyber-73), his PhD under Zenon Pylyshyn
+      (whose postdoc advisors were Newell & McCarthy; CIFAR AI&Robotics director, hired Hinton;
+      Fodor connectionism critique; Rutgers CogSci), and his HCI teaching method — students
+      re-implement Sketchpad until they reinvent OOP. He asks Heinz + Don to collect the CAMBRIDGE
+      / TRE storyline: Maurice Wilkes, Neil Wiseman, John Hiles, Cheney, Etherton, the Rainbow
+      Project, PIXIE, PDP-7 vector display ↔ Titan. Cc's his mentor Kelly Booth (UBC).
+      Heinz (14:22) answers by starting to deliver it: attaches his 1967 origin story ("changed
+      my life forever some 60 years ago"), first of installments over the coming weeks.
+    pull_in: pull-in-gaps.yml#heinz_1967_origin_story
+    new_people:
+      - "Kelly Booth (UBC) — Roy's HCI storytelling mentor; newly Cc'd"
+    storyline_targets: ["Maurice Wilkes", "Neil Wiseman", "John Hiles", "Cheney", "Etherton", "Rainbow Project", "PDP-7 ↔ Titan"]
+    show_refs:
+      - ../roy-eagleson/
+      - ../../kelly-booth/
+
 connects_in_repo:
   - { path: CHARACTER.yml, why: "Bio + invitation status" }
   - { path: sources/2026-07-07-pixie-trio-thread.md, why: "Primary source — listing, correction, Roy Eagleson" }
@@ -128,6 +150,8 @@ show_hooks:
   - "Lars Brinkhoff — PDP-7 + Type 340 + light pen; emulate PIXIE on stream"
   - "David Rosenthal — same Cambridge PDP-7/Titan ~1970; p.465 dumb-terminal reading vs Heinz correction on air"
   - "Roy Eagleson — UWO HCI lecture pivoted Sketchpad → PIXIE same hour as source-listing email"
+  - "Cambridge/TRE storyline — Wilkes, Wiseman, Hiles, Cheney, Etherton, Rainbow Project, PDP-7 ↔ Titan (Heinz writing it up in installments, from the 1967 origin story)"
+  - "Kelly Booth (UBC) — Roy's HCI storytelling mentor, on the thread"
   - "Cambridge late 1960s + US research-lab trip"
   - "PIXIE → CARS continuity — graphical interaction to model-guided medicine"
   - "CARS 2025 Berlin — game thinking for healthcare interfaces"
