@@ -40,7 +40,28 @@ images:
     sent_as: "Companion example in the same thread — showing interactive 'frobbing' of a running CA."
     discussed_in: ca-correspondence-story.md
 
+documents:
+  - file: tsmall-local-routing-mfm.pdf
+    title: "Local Routing in a new Indefinitely Scalable Architecture"
+    author: "Trent R. Small (University of New Mexico), advised by Dave Ackley"
+    pages: 7
+    what: |
+      The paper behind the Movable Feast Machine 'Distributed City Generation'
+      demo: how a self-growing CA city routes cars to building TYPES with no
+      global map and no absolute addressing (41-site event windows, ~96 bits).
+      Compares Random / Sidewalk-Only / Intersection-Canalization routing.
+    provenance: |
+      Linked from the YouTube description of Ackley's 'Distributed City
+      Generation' video (via nm8.us/q). Mirrored here with attribution; also
+      hosted by the author at cs.unm.edu/~ackley/papers/paper_tsmall1_11_24.pdf.
+    source_url: "https://www.cs.unm.edu/~ackley/papers/paper_tsmall1_11_24.pdf"
+    code: "https://github.com/sixstring982/MFMv2-city"
+    summary_md: ../city-generation-routing.md
+    discussed_in: ../ca-correspondence-story.md
+
 related:
   cam6_live: "https://donhopkins.com/home/CAM6/"
   cam6_code: "https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js"
   cam6_book: "https://donhopkins.com/home/cam-book.pdf"
+  city_gen_video: "https://www.youtube.com/watch?v=XkSXERxucPc"
+  mfm_demo_playlist: "https://www.youtube.com/playlist?list=PLm5k2NUmpIP8qwttAS5Batnd7u2UpBtaL"

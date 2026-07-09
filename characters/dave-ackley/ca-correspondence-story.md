@@ -12,8 +12,6 @@ trim, or remove any of it.
 
 ---
 
-
-
 ## Start here — the map
 
 **Dave Ackley's work**
@@ -44,14 +42,25 @@ Jump to the [full categorized link vault](#the-link-vault) at the bottom.
 
 ---
 
-
-
 ## The two pictures
 
 Don sent these to Dave and the rest of the CA circle as running examples — proof
-that Toffoli & Margolus' 1980s hardware rules could live in a browser tab and be
-poked with a mouse. Both are the **Margolus "Dendrite Heat"** rule: a
-diffusion-limited-aggregation crystal growing inside a diffusing heat field.
+that [Tommaso Toffoli](https://en.wikipedia.org/wiki/Tommaso_Toffoli) &
+[Norman Margolus](https://en.wikipedia.org/wiki/Norman_Margolus)' 1980s
+[cellular-automata](https://en.wikipedia.org/wiki/Cellular_automaton) hardware
+rules could live in a browser tab and be poked with a mouse. **You can run it
+yourself right now:** this is Don's **[CAM6 simulator, live](https://donhopkins.com/home/CAM6/)**
+([source](https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js) ·
+[the Toffoli & Margolus book that defines the rules, PDF](https://donhopkins.com/home/cam-book.pdf) ·
+[video demo reel](https://www.youtube.com/watch?v=eCVJ08gK2o8) if you'd rather watch first).
+*(More CAM6 in these repos: [Norman Margolus' room](../norman-margolus/README.md) — Don showed
+this simulator to the man who co-designed the original — and the
+[visual-programming patch-cord trail](../../process/trails/visual-programming-patch-cord.md).)*
+Both frames run the **Margolus "Dendrite Heat"** rule — a
+[Margolus-neighborhood](https://en.wikipedia.org/wiki/Block_cellular_automaton)
+partitioning rule that grows a
+[diffusion-limited-aggregation](https://en.wikipedia.org/wiki/Diffusion-limited_aggregation)
+crystal inside a diffusing heat field.
 
 CAM6 running the Margolus Dendrite Heat rule: a single blue-white dendrite crystal frozen at the center of concentric red heat rings — the "Eye of Sauron."
 
@@ -67,17 +76,16 @@ dendrite. Nothing is paused; you're painting into physics while it runs.*
 
 ---
 
-
-
 ## How it started
 
-In 2017 Don cold-emailed Dave after watching one of his artificial-life talks.
-The hook was simple: Don had spent decades with the same rules Dave was building
-hardware for. He'd met the **CAM6** — Toffoli and Margolus' Cellular Automata
-Machine, a card that plugged into a PC and ran two-state, neighborhood-based
-physics at video speed — in the 1980s, and had been re-implementing it ever
-since, from Forth to C to C++ to JavaScript, so it could run in a browser with no
-special hardware at all.
+In 2017 Don cold-emailed Dave after watching one of his
+[artificial-life](https://en.wikipedia.org/wiki/Artificial_life) talks. The hook
+was simple: Don had spent decades with the same rules Dave was building hardware
+for. He'd met the **CAM6** — [Toffoli](https://en.wikipedia.org/wiki/Tommaso_Toffoli)
+and [Margolus](https://en.wikipedia.org/wiki/Norman_Margolus)' Cellular Automata Machine, a card that plugged into a PC and ran two-state, neighborhood-based physics at video speed — in the 1980s, and had been gleefully re-implementing and playing with it ever since, from [Forth](https://en.wikipedia.org/wiki/Forth_(programming_language)) to C to
+C++ to JavaScript, so it could [run in a browser](https://donhopkins.com/home/CAM6/)
+([source](https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js)) with
+no special hardware at all.
 
 That lineage matters, because it's the whole argument in miniature: the CAM6 put
 locality first — every cell only ever talks to its neighbors — and got rich,
@@ -129,13 +137,22 @@ loves:
 | **λ-Codons**                    | [youtube.com/watch?v=DauJ51CTIq8](https://www.youtube.com/watch?v=DauJ51CTIq8) |
 | Intercellular transport         | [youtube.com/watch?v=6YucCpYCWpY](https://www.youtube.com/watch?v=6YucCpYCWpY) |
 | Membrane robustness             | [youtube.com/watch?v=oq0uvF4mm7Y](https://www.youtube.com/watch?v=oq0uvF4mm7Y) |
+| **The whole demo playlist**     | [Movable Feast Machine demos (19 videos)](https://www.youtube.com/playlist?list=PLm5k2NUmpIP8qwttAS5Batnd7u2UpBtaL) |
 
 
-The city-generation demo became Don's go-to benchmark and party trick — a running
-CA that grows a road network and zones, robust-first, repairing itself as it
-sprawls. (When cyberpunk author **Rudy Rucker** got buried in Ackley links, the
-thing that finally landed was *"is there a video with pretty pictures of CAs, and
-not a guy talking?"* — and the answer was the city-gen video.)
+The [city-generation demo](https://www.youtube.com/watch?v=XkSXERxucPc) became
+Don's go-to benchmark and party trick — a running CA that grows a road network and
+zones, robust-first, repairing itself as it sprawls. And it's more than eye candy:
+the video quietly links a paper explaining exactly how it works, and it's a great
+read. **[Trent R. Small's *Local Routing in a new Indefinitely Scalable
+Architecture*](city-generation-routing.md)** shows how the self-grown city routes
+cars to building *types* with no global map and no absolute addressing — [full
+summary + PDF in this repo](city-generation-routing.md), [paper on the author's
+host](https://www.cs.unm.edu/~ackley/papers/paper_tsmall1_11_24.pdf), [source
+code](https://github.com/sixstring982/MFMv2-city). (When cyberpunk author
+**Rudy Rucker** got buried in Ackley links, the thing that finally landed was
+*"is there a video with pretty pictures of CAs, and not a guy talking?"* — and the
+answer was this city-gen video.)
 
 ## The T2 Tile Project: locality all the way to the silicon
 
@@ -230,8 +247,6 @@ the survival-first argument in public, live, on a stage anyone can clone and run
 
 ---
 
-
-
 ## The link vault
 
 Everything above, categorized for grabbing.
@@ -248,8 +263,6 @@ Everything above, categorized for grabbing.
 | [Cat vs. Emacs](https://www.youtube.com/watch?v=CURDEuQRktA)                                               | Because of course                              |
 
 
-
-
 ### Movable Feast Machine
 
 
@@ -257,11 +270,11 @@ Everything above, categorized for grabbing.
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
 | [movablefeastmachine.org](https://movablefeastmachine.org/) · [MFM (GitHub)](https://github.com/DaveAckley/MFM)                                                                                       | Substrate + source            |
 | [City generation](https://www.youtube.com/watch?v=XkSXERxucPc) · [Demon Horde Sort](https://www.youtube.com/watch?v=helScS3coAE)                                                                      | The demos that convert people |
+| [Full MFM demo playlist (19 videos)](https://www.youtube.com/playlist?list=PLm5k2NUmpIP8qwttAS5Batnd7u2UpBtaL)                                                                                        | Every demo in one place       |
+| [City-routing paper — summary + PDF](city-generation-routing.md) · [author's host](https://www.cs.unm.edu/~ackley/papers/paper_tsmall1_11_24.pdf) · [code](https://github.com/sixstring982/MFMv2-city) | *How* the city routes itself (Trent R. Small) |
 | [λ-Codons](https://www.youtube.com/watch?v=DauJ51CTIq8) · [Intercellular transport](https://www.youtube.com/watch?v=6YucCpYCWpY) · [Membrane robustness](https://www.youtube.com/watch?v=oq0uvF4mm7Y) | More patterns                 |
 | [ECAL 2015 / ULAM](https://www.youtube.com/watch?v=aR7o8GPgSLk)                                                                                                                                       | The MFM programming language  |
 | [mfm.rocks](https://mfm.rocks/) · [MFM-JS (Walpole)](https://github.com/walpolea/MFM-JS)                                                                                                              | Native-JS reimplementation    |
-
-
 
 
 ### Don's CAM6 (the images on this page)
@@ -275,8 +288,6 @@ Everything above, categorized for grabbing.
 | [CAM6 wiki](https://donhopkins.com/mediawiki/index.php/CAM6_Simulator)                                                       | Notes               |
 
 
-
-
 ### "Emacs for Cytoplasm" — Timothy Davidson / LifeBrush
 
 
@@ -287,16 +298,12 @@ Everything above, categorized for grabbing.
 | [All videos](https://www.youtube.com/user/11011001/videos)                                                                         | The channel                    |
 
 
-
-
 ### Visual programming by example
 
 
 | Link                                                                                                                            | What                                           |
 | ------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
 | [AgentSheets](https://en.wikipedia.org/wiki/AgentSheets) · [Stagecast Creator](https://en.wikipedia.org/wiki/Stagecast_Creator) | Rewrite-by-example lineage (SPLAT's ancestors) |
-
-
 
 
 ### Falling sand & natural code
@@ -306,8 +313,6 @@ Everything above, categorized for grabbing.
 | ----------------------------------------------------------------------------------------- | -------------------------------------------- |
 | [Sandspiel](https://sandspiel.club/) · [Sandspiel Studio](https://studio.sandspiel.club/) | Max Bittker                                  |
 | [Dialogues on Natural Code](https://todepond.com/code)                                    | Lu Wilson **with Dave Ackley**, Onward! 2024 |
-
-
 
 
 ### Complexity / SFI neighbors
@@ -323,8 +328,6 @@ Everything above, categorized for grabbing.
 
 ---
 
-
-
 ## Rooms
 
 
@@ -333,7 +336,8 @@ Everything above, categorized for grabbing.
 | **Invitation**      | [invitation.md](invitation.md)                                                                    |
 | **Portrait**        | [README.md](README.md)                                                                            |
 | **Hooks**           | [ideas.md](ideas.md)                                                                              |
-| **Media**           | [media/](media/) — the CAM6 snapshots + provenance                                                |
+| **Self-routing city** | [city-generation-routing.md](city-generation-routing.md) — Trent Small's MFM routing paper, summarized (PDF mirrored) |
+| **Media**           | [media/](media/) — the CAM6 snapshots, the routing PDF + provenance                               |
 | **CA looping fest** | [Norman Margolus](../norman-margolus/README.md) · [Stephen Wolfram](../stephen-wolfram/README.md) |
 
 

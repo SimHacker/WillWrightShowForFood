@@ -71,7 +71,8 @@ media:
 
 see_also:
   - { path: ca-correspondence-story.md, why: "The narrativized CA correspondence — embedded CAM6 images + full categorized link vault" }
-  - { path: media/, why: "Don's CAM6 snapshots sent to Dave + provenance manifest" }
+  - { path: city-generation-routing.md, why: "Trent Small's MFM city-generation routing paper, summarized; PDF mirrored in media/" }
+  - { path: media/, why: "Don's CAM6 snapshots + the routing PDF + provenance manifest" }
   - { path: CARD.yml, why: "Invokable abilities for show segments" }
   - { path: ../norman-margolus/, why: "CA looping fest co-guest — locality/reversibility ↔ robust-first spatial computing" }
   - { path: ../stephen-wolfram/, why: "CA looping fest co-guest" }
