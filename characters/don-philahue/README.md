@@ -44,7 +44,7 @@ Full protocol: [`qa-orchestration.yml`](qa-orchestration.yml)
 
 Constitution + simulation tick: [`CHARACTER.yml`](CHARACTER.yml) (`programmed_by`, `simulation_loop`, `orchestration_model`).
 
-Branding + DC host lineage: [`repo-show-branding.yml`](../../process/repo-show-branding.yml) · [`performance-space.yml`](../../process/performance-space.yml).
+Branding + DC host lineage: [`repo-show-branding.yml`](../../process/repo-show-branding.md) · [`performance-space.yml`](../../process/performance-space.md).
 
 ## Plugin plug-together
 
@@ -58,4 +58,4 @@ Nothing recompiles Philahue when a new card drops:
 
 Same expansion-pack model as Sims objects advertising into a running world.
 
-See [`../process/repo-show-format.yml`](../process/repo-show-format.yml).
+See [`../process/FORMAT.md`](../process/FORMAT.md).

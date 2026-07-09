@@ -23,7 +23,7 @@ Philosophy of mind, made-up minds, incarnation, consciousness, the simulator eff
 
 ### 🌍 [Simulation & Worlds](simulation-and-worlds/README.md)
 The repo as simulation engine, microworlds, rooms, cellular automata, cities in bottles.
-*Highlights:* [The deep move](../process/VISION.md) · [MOOLLM stage](../process/moollm-stage.yml) ·
+*Highlights:* [The deep move](../process/VISION.md) · [MOOLLM stage](../process/moollm-stage.md) ·
 [adventure-4](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4)
 
 ### 🔨 [Design Methods](design-methods/README.md)
@@ -35,7 +35,7 @@ Design by accretion, the cauldron, play-learn-lift, YAML jazz, K-lines, tuned em
 ### 🎭 [Shows & Performance](shows-and-performance/README.md)
 The Repo Show format, TicketPRs, time shifting, playlists, the performance space.
 *Highlights:* [FORMAT.md](../process/FORMAT.md) · [VISION.md](../process/VISION.md) ·
-[ticket-pr.yml](../process/ticket-pr.yml)
+[ticket-pr.yml](../process/ticket-pr.md)
 
 ### 📜 [History & Lore](history-and-lore/README.md)
 The open-sourcing of SimCity, the Long Now talk, OLPC stone soup, PSIBER, the Director → Flash →

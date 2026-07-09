@@ -10,4 +10,4 @@
 
 Theme: built career on Sims; won't financially promote under new ownership.
 
-↑ [Exodus registry](../../../process/sims-creator-network-exodus.yml) · [Devon's room](../README.md)
+↑ [Exodus registry](../../../process/sims-creator-network-exodus.md) · [Devon's room](../README.md)

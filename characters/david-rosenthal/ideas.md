@@ -89,7 +89,7 @@ co-built **NeWS** (*send code, not commands*), where the PostScript dict stack *
 chain. Converges with Don's MOOLLM (filesystem-as-prototype-object-system) from the opposite road.
 **Draw in:** Owen Densmore (wrote the NeWS class system), David Ungar (Self), Dan Ingalls (Smalltalk),
 James Gosling (NeWS). [`slots-all-the-way-down.md`](slots-all-the-way-down.md) ·
-concept: [`../../process/artifactory.yml`](../../process/artifactory.yml)
+concept: [`../../process/artifactory.md`](../../process/artifactory.md)
 
 ## Sources (public)
 

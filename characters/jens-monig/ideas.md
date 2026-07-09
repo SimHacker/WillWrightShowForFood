@@ -16,7 +16,7 @@ Jens Mönig — Architect and lead programmer of Snap! (formerly BYOB, "Build Yo
 - **Pair show with Brian** — Jens builds, Brian documents; Karlstrom citation ties them ([../brian-harvey/sources/beauty-and-joy-of-computing.yml](../brian-harvey/sources/beauty-and-joy-of-computing.yml))
 - **Micropolis × Snap! (2018)** — Brian forwarded Don's proposal; Jens on implementation ([sources/micropolis-snap-2018.yml](sources/micropolis-snap-2018.yml))
 - **Morphic.js / Kay lineage** — GP under Alan Kay; live system in the browser ([sources/gp-alan-kay-lineage.yml](sources/gp-alan-kay-lineage.yml))
-- **Snap!Con Barcelona** — TurtleStitch, Cynthia Solomon, old band back together ([../../process/old-band-back-together.yml](../../process/old-band-back-together.yml))
+- **Snap!Con Barcelona** — TurtleStitch, Cynthia Solomon, old band back together ([../../process/old-band-back-together.md](../../process/old-band-back-together.md))
 - **Palm's computational zoo** — worms/birds/turtles field notebook; Logo lineage after Snap!Con
 ## The hooks
 

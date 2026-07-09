@@ -2,6 +2,6 @@
 
 **Living — invitation, not memorial.** `consent: not_yet_asked`. We can invite Bill himself and people who know him. [Standards](../../schemas/portrayal-standards.md)
 
-**The in:** [Faceball Construction Set](../../apps/performance-space/faceball-construction-set.yml) is Pinball Construction Set for faces — the repo's tribute. PCS is a canonical [artifactory](../../process/artifactory.yml) (a construction set is an artifact factory), on the same lineage as [Will Wright](../will-wright/)'s design and MOOLLM.
+**The in:** [Faceball Construction Set](../../apps/performance-space/faceball-construction-set.yml) is Pinball Construction Set for faces — the repo's tribute. PCS is a canonical [artifactory](../../process/artifactory.md) (a construction set is an artifact factory), on the same lineage as [Will Wright](../will-wright/)'s design and MOOLLM.
 
 Read next: [ideas](ideas.md) · [invitation](invitation.md) · [CHARACTER.yml](CHARACTER.yml)

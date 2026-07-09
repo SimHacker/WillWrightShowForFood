@@ -32,7 +32,7 @@ we can rearrange the whole thing into theater-in-the-round whenever we like — 
 celebrity audience members as they arrive — then we make real-time edits to these room files,
 commit with a narrative message, and announce what just happened to the chat.
 
-See [`../performance-and-culture.yml`](../performance-and-culture.yml) · [`../../process/ticket-pr.yml`](../../process/ticket-pr.yml) · [`../audience/README.md`](../audience/README.md)
+See [`../performance-and-culture.yml`](../performance-and-culture.yml) · [`../../process/ticket-pr.md`](../../process/ticket-pr.md) · [`../audience/README.md`](../audience/README.md)
 
 ---
 

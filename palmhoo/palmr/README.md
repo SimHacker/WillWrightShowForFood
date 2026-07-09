@@ -192,7 +192,7 @@ have built. That's not a denial. It's a *choice about which god to be.*
 
 - [PKD · Lem · AI · SF](../../characters/mark-weiser/pkd-lem-ai-sf.md) — the reading group where all
   of this is sourced: Palmer Eldritch = The Sims, Ubik = ubicomp, the author-god fork.
-- [artifactory](../../process/artifactory.yml) — Ubik as "reality maintenance," the constructor
+- [artifactory](../../process/artifactory.md) — Ubik as "reality maintenance," the constructor
   that keeps building the world every tick. Calm vs. Eldritch, formalized.
 - [Will Wright](../../characters/will-wright/README.md) — the guest to run the Palmer Eldritch /
   Sims reading with; he built the dollhouse people actually inhabit.

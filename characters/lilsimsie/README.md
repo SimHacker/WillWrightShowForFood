@@ -11,4 +11,4 @@ Exchange gap + indie sims panel.
 
 [`invitation.md`](invitation.md) · [`creator-network-exodus.yml`](../../repo-shows/will-wright-premiere/creator-network-exodus.yml)
 
-↑ [registry](../../process/sims-creator-network-exodus.yml)
+↑ [registry](../../process/sims-creator-network-exodus.md)

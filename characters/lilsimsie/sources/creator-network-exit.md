@@ -27,4 +27,4 @@
 - [The Verge](https://www.theverge.com/games/816750/the-sims-ea-buyout-content-creator-program-departures-lilsimsie)
 - [IGN](https://www.ign.com/articles/the-sims-creators-quit-ea-partnerships-amid-buyout-concerns)
 
-↑ [Exodus registry](../../../process/sims-creator-network-exodus.yml) · [lilsimsie's room](../README.md)
+↑ [Exodus registry](../../../process/sims-creator-network-exodus.md) · [lilsimsie's room](../README.md)

@@ -1,0 +1,28 @@
+# process/ — CARD
+
+[README](README.md) · [GLANCE](GLANCE.md) · [INDEX](INDEX.md)
+
+---
+
+## Room
+
+**Process & protocols** — yaml girders, markup facades, show rules.
+
+## Methods
+
+| Method | Signature |
+|--------|-----------|
+| FIND-SPEC | INDEX.yml → yaml girder |
+| READ-MARKUP | Human markdown — instance-first or `pnpm facades` fallback |
+| READ-GIRDER | Raw yaml for implementation/automation |
+| REGENERATE-FACADES | `pnpm run facades` — see markup-facades.yml |
+| PICK-ENTRYWAY | entryways.yml → playlist — [ENTRYWAYS.md](../ENTRYWAYS.md) |
+| PICK-TRAIL | cross-links.yml → [TRAILS.md](../TRAILS.md) |
+
+## Key entries
+
+Format · MOOLA · Drag Race · Retro · AI-offs · Manual · Homefun · Brain stream · Orchestration · Vision
+
+Machine source: [CARD.yml](CARD.yml)
+
+↑ [process index](README.md) · Girder: `CARD.yml`

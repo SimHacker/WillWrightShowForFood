@@ -42,7 +42,7 @@ He lives with his wife **Dorte** near **Billund, Denmark** (formerly Dallas). Hi
 - [`CHARACTER.yml`](CHARACTER.yml) — portrayal girder
 - [`sources/about-me.yml`](sources/about-me.yml) — structured About Me facts
 - [`correspondence.yml`](correspondence.yml) — touchpoint status
-- Registry: [`process/maxis-history-collaborators.yml`](../../process/maxis-history-collaborators.yml)
+- Registry: [`process/maxis-history-collaborators.md`](../../process/maxis-history-collaborators.md)
 
 ---
 

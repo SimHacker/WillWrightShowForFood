@@ -3,13 +3,13 @@
 Public portrayals **about** real people — polite, verifiable, respectful. These are **not** the
 real people, and we never impersonate them or speak as them.
 
-*Sniff:* [`GLANCE.yml`](GLANCE.yml) · *Placement rule:* [`../process/character-colocation.yml`](../process/character-colocation.yml)
+*Sniff:* [`GLANCE.yml`](GLANCE.yml) · *Placement rule:* [`../process/character-colocation.md`](../process/character-colocation.md)
 
 **One person, one directory.** Papers, photos, catalogs live in `characters/<slug>/media/`.
 **Shows** in `repo-shows/` reference guest stuff — they don't duplicate it. **Packages/** hold
 reusable code. **Rooms** (MOOLLM `ROOM.yml`, CARD, SIMULATION) can live anywhere — show-rooms
 in `repo-shows/`, shared context in `process/`, `skills/`. Constitution:
-[`../process/repo-show-format.yml#placement_constitution`](../process/repo-show-format.yml#placement_constitution).
+[`../process/FORMAT.md#placement_constitution`](../process/FORMAT.md#placement_constitution).
 
 *Machine sync:* [`INDEX.yml`](INDEX.yml)
 
@@ -134,4 +134,4 @@ reason required. Declines, delays, and silence are all honored. See portrayal st
 
 This room: [`CARD.yml`](CARD.yml) · [`contact-queue.yml`](contact-queue.yml) (outreach order, not a public roster)
 
-Live repo: [`process/live-repo.yml`](../process/live-repo.yml)
+Live repo: [`process/live-repo.md`](../process/live-repo.md)

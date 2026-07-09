@@ -333,7 +333,7 @@ bridge organelles**; SIMH for **PDP-10/ITS**; AppleWin+SPoverSLIP for **FujiNet 
 
 ### 23. Decision — AppleWin vs apple2js vs WASM
 
-**Canonical plan:** [`process/apple2-fujinet-bridge.yml`](../../process/apple2-fujinet-bridge.yml)
+**Canonical plan:** [`process/apple2-fujinet-bridge.md`](../../process/apple2-fujinet-bridge.md)
 
 One network (TNFS, lobby, N:), three attachment styles. **Do not pick one emulator to rule them all.**
 

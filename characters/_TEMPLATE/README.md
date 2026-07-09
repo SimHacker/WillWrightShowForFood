@@ -6,14 +6,14 @@ as the portrayal grows.
 
 ## Layout
 
-- **`media/`** — flat room for PDFs, photos, catalogs (see [`will-wright/media/`](../will-wright/media/README.md) and [`../process/character-colocation.yml`](../../process/character-colocation.yml))
+- **`media/`** — flat room for PDFs, photos, catalogs (see [`will-wright/media/`](../will-wright/media/README.md) and [`../process/character-colocation.md`](../../process/character-colocation.md))
 - Person stuff stays here even if the guest appears on many shows under `repo-shows/`
 
 ## Character profile README
 
 The human **`README.md`** is the character's profile page — shows they attend, TicketPR seats,
 cross-repo dreams, likes & joins, plus writing/media. See [`palm/README.md`](../palm/README.md)
-and [`character-colocation.yml`](../../process/character-colocation.yml#character_profile).
+and [`character-colocation.yml`](../../process/character-colocation.md#character_profile).
 Mirror key tables in **`CHARACTER.yml`** (`ticketpr_seats`, `shows`, `dreams`, `likes_and_joins`) for agents.
 
 ## Files

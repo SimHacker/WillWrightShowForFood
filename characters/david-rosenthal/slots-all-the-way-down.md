@@ -414,7 +414,7 @@ necessities of life, assembled on demand from the four commonest atoms in a come
 A handful of dumb, universal primitives (slots + delegation), mined cheaply, from which every richer
 structure — classes, traits, mixins, whole object cuisines — is **synthesized on demand.** You don't
 ship a warehouse of pre-made classes; you ship the four elements and a constructor. That's precisely
-the [artifactory](../../process/artifactory.yml)'s **selfish inheritance**: don't instantiate from a
+the [artifactory](../../process/artifactory.md)'s **selfish inheritance**: don't instantiate from a
 class hierarchy, **clone a prototype and override a few slots** — CHON-food for objects, assembled
 fresh in each local world.
 
@@ -571,7 +571,7 @@ foundational:
   the rest. Two clean examples of the same taste, one for objects, one for pixels.
 - **Squeak is self-hosting** — Smalltalk written *in itself*, made portable by a Smalltalk→C
   translator. A system that **builds and reproduces itself**: von Neumann's constructor and the
-  [artifactory](../../process/artifactory.yml) in one breath.
+  [artifactory](../../process/artifactory.md) in one breath.
 - **Lively Kernel / Lively Web** — live objects in the browser that can **save new versions of
   *themselves* as web pages.** An object system that is its own artifactory: edit it while it runs,
   and it persists the result. (Dan's most recent research home for this was **Y Combinator Research /
@@ -620,7 +620,7 @@ synchronization" argument endorse the many-worlds/local-time cosmology — or wa
 This is also **exactly** what Don's MOOLLM runs on, from the opposite direction. MOOLLM treats the
 **filesystem tree as a prototype object system**: a character/skill directory is an object; its
 "upstream soul + local overlay" is a **`parent*` slot plus local slots** (Self delegation); cloning
-a prototype is `INSTANTIATE`. The [artifactory](../../process/artifactory.yml) skill calls this
+a prototype is `INSTANTIATE`. The [artifactory](../../process/artifactory.md) skill calls this
 **selfish inheritance**, and its **cosmology** says git is time flowing over that static namespace.
 So David arrives at "it's all one namespace with delegated lookup" from **NeWS/Sun**, and Don
 arrives at the same place from **MOOLLM** — two roads, one insight.
@@ -695,7 +695,7 @@ to poke holes in — the files are all upstream in the MOOLLM repo.)*
 
 ### Put the artifactory skill on the table
 
-The [`artifactory`](../../process/artifactory.yml) is a MOOLLM skill (the "Engine of Creation"):
+The [`artifactory`](../../process/artifactory.md) is a MOOLLM skill (the "Engine of Creation"):
 read / write / edit / destroy / persist artifacts across the filesystem and git, with prototype
 `INSTANTIATE` (clone + delegate) as its core. It's a concrete **object-to-think-with** — so it's
 worth handing to David and asking how it looks through each of these lenses. Don's questions to
@@ -779,4 +779,4 @@ the missing names via PR or issue.*
 - **Jonathan Rees, "Rees Re: OO"** ([reesoo.html](https://paulgraham.com/reesoo.html)) — the 9-item à la carte menu; OO as arbitrary subsets
 - **MOOLLM skill protocol** (extends Anthropic Agent Skills): `skills/skill/SKILL.md` — "What We Share with Anthropic" + "MOOLLM's Unique Contributions" §1–10 (the tangible, growing extension list)
 - **MOOLLM Self→prototype implementation**: `skills/skill/delegation-object-protocol.md`, `skill-instantiation-protocol.md`; `kernel/ARCHITECTURE.md`; `kernel/naming/` (K-lines, path variables, constellations); `kernel/DIRECTORY-AS-OBJECT.md`, `kernel/CARDS-AS-OBJECTS.md`, `kernel/SELFISH-COM-IMPLEMENTATION.md`
-- Related here: [`window-systems-lineage.yml`](window-systems-lineage.yml) · [`../../process/artifactory.yml`](../../process/artifactory.yml) · MOOLLM `artifactory` skill (*Selfish inheritance*)
+- Related here: [`window-systems-lineage.yml`](window-systems-lineage.yml) · [`../../process/artifactory.md`](../../process/artifactory.md) · MOOLLM `artifactory` skill (*Selfish inheritance*)

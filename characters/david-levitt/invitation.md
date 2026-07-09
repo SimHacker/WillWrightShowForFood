@@ -80,7 +80,7 @@ outrageous stories, many from Amsterdam. He will love the puppets.
 ## Help me reach the others — you're a connector
 We both know **so many** people who'd be perfect. **Who else should be here — and would you help me
 contact and gently persuade them?** The ask can be **as light as they like**; there's a whole
-[participation ladder](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/guest-participation-ladder.yml):
+[participation ladder](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/guest-participation-ladder.md):
 
 - **Record a solo video** about whatever they want — phone, laptop, one take or ten.
 - **Browse the repo**, get ideas, answer a question or two.

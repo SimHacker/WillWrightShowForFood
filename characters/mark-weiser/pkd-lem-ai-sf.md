@@ -1,6 +1,6 @@
 # PKD · Lem · AI · SF — the author-god inside the simulation
 
-*A reading-group [artifactory](../../process/artifactory.yml) — an artifact that builds more
+*A reading-group [artifactory](../../process/artifactory.md) — an artifact that builds more
 artifacts — kept here with Mark's memorial because the seed is his: he named **ubiquitous
 computing** after a **Philip K. Dick** novel. From that one fact the thread opens wide — PKD,
 Stanisław Lem, and the sci-fi that reads like a spec sheet for the AI we're now building.*

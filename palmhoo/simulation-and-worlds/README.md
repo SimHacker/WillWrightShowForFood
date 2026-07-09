@@ -11,8 +11,8 @@ including the one you're standing in right now, which simulates itself by being 
 | Entry | 🐒✋ Why you'd read it |
 |-------|----------------------|
 | [**VISION.md — the deep move**](../../process/VISION.md) | The load-bearing idea of the whole project: MOOLLM doesn't document the show, it *runs* it. Directories are rooms; the git log is the score. |
-| [**vision-and-ambition.yml**](../../process/vision-and-ambition.yml) | The same idea in machine-readable K-lines — `repo_as_simulation`, with the wetware runtime and the proof scene. |
-| [**moollm-stage.yml**](../../process/moollm-stage.yml) | The machinery: how MOOLLM turns a show repo into a performable environment. |
+| [**vision-and-ambition.yml**](../../process/VISION.md) | The same idea in machine-readable K-lines — `repo_as_simulation`, with the wetware runtime and the proof scene. |
+| [**moollm-stage.yml**](../../process/moollm-stage.md) | The machinery: how MOOLLM turns a show repo into a performable environment. |
 | [**Repo Show spine**](../../process/trails/repo-show-spine.md) | The trail that walks the whole concept end to end, node by node. |
 | [**GITHUB-AS-MMORPG**](https://github.com/SimHacker/moollm/blob/main/designs/GITHUB-AS-MMORPG.md) | The design doc that saw it early: GitHub's primitives are game primitives. |
 
@@ -39,7 +39,7 @@ including the one you're standing in right now, which simulates itself by being 
 
 | Entry | 🐒✋ Why you'd read it |
 |-------|----------------------|
-| [**constructionist-simcity-response.yml**](../../process/constructionist-simcity-response.yml) | Runbooks to ship: play city → export metrics → modify rule in Snap! → replay. Not another proposal. |
+| [**constructionist-simcity-response.yml**](../../process/constructionist-simcity-response.md) | Runbooks to ship: play city → export metrics → modify rule in Snap! → replay. Not another proposal. |
 | [**Micropolis × Snap! 2018**](../../characters/brian-harvey/sources/micropolis-snap-2018.md) | The email that started the pair show — CAM6 + Micropolis blocks in the classroom. |
 | [**Snap! visual engines vision**](../../characters/don-hopkins/snap-visual-engines-fundable-goals.md) | Blocks + Bounce patch-cords + Micropolis as fundable constructionist goals. |
 | [**Bounce dataflow digest**](../../characters/don-hopkins/sources/bounce-dataflow-control-flow.md) | Stream wiring between engines — complements Snap! control flow for live microworlds. |

@@ -47,6 +47,6 @@ Implementation questions on Jens's side:
 | Brian correspondence | [../../brian-harvey/correspondence.yml](../../brian-harvey/correspondence.yml) |
 | Palm Q7 — Micropolis metaprogramming | [../../../repo-shows/snap-logo-brian-jens/audience/palm/questions.md](../../../repo-shows/snap-logo-brian-jens/audience/palm/questions.md) |
 | MicropolisCore | [MicropolisCore](https://github.com/SimHacker/MicropolisCore) |
-| Constructionist response | [../../../process/constructionist-simcity-response.yml](../../../process/constructionist-simcity-response.yml) |
+| Constructionist response | [../../../process/constructionist-simcity-response.md](../../../process/constructionist-simcity-response.md) |
 
 ↑ [Sources index](README.md) · [Brian's micropolis digest](../../brian-harvey/sources/micropolis-snap-2018.md)

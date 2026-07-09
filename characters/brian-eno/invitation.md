@@ -100,7 +100,7 @@ They bid play-money **§**; you start buried in worthless Simoleons to **surrend
 collective composer. Scott's Sheep opening pairs before or after. Spec:
 [`simulated-opening.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-eno/simulated-opening.yml) · product canon:
 [`77-million-paintings.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-eno/77-million-paintings.yml) · secondary market:
-[`../../process/art-thief-game.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/art-thief-game.yml).
+[`../../process/art-thief-game.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/art-thief-game.md).
 
 ## A personal note — for you, Brian
 

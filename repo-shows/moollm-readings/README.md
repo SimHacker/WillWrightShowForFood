@@ -15,7 +15,7 @@ Watch a reading → browse the repo → chime in async → maybe guest on your o
 | [`topics/`](topics/) | Deferred ideas introduced in readings |
 | [`../david-rosenthal/discussion-pack.yml`](../david-rosenthal/discussion-pack.yml) | Discussion brief for DSHR + MOOLLM demo |
 
-↑ [`repo-shows/`](../README.md) · [`process/performance-space.yml`](../../process/performance-space.yml)
+↑ [`repo-shows/`](../README.md) · [`process/performance-space.md`](../../process/performance-space.md)
 
 ## Recorded episodes
 

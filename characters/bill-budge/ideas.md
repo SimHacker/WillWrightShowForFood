@@ -16,7 +16,7 @@ sets as a design philosophy. *Source: [Wikipedia](https://en.wikipedia.org/wiki/
 
 ### 2. Pinball Construction Set is an *artifactory*
 A construction set is literally an **artifact factory** — a tool whose product is other artifacts.
-That's the [`artifactory`](../../process/artifactory.yml) concept this repo (and MOOLLM) is built
+That's the [`artifactory`](../../process/artifactory.md) concept this repo (and MOOLLM) is built
 on: read/write/edit/play, and the output is more things to play with. PCS in 1983 is one of the
 cleanest early examples: not the artifact, the *engine that makes artifacts*. Bridges directly to
 the **[Faceball Construction Set](../../apps/performance-space/faceball-construction-set.yml)**.

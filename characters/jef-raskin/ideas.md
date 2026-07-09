@@ -57,7 +57,7 @@ work). Harvest: one cauldron note — *what would a humane MOOLLM skill loader l
 | Artifact | Path |
 |----------|------|
 | Two-layer navigation essay | [`humane-interface-and-this-repo.md`](humane-interface-and-this-repo.md) |
-| github_ux policy | [`../../process/character-colocation.yml`](../../process/character-colocation.yml) |
+| github_ux policy | [`../../process/character-colocation.md`](../../process/character-colocation.md) |
 | CS547 catalog | [`../terry-winograd/media/cs547-ARCHIVE.md`](../terry-winograd/media/cs547-ARCHIVE.md) |
 | Show seed | [`../../repo-shows/remembering-jef-raskin.yml`](../../repo-shows/remembering-jef-raskin.yml) |
 | Engelbart memorial (same "read intent" frame) | [`../../repo-shows/remembering-douglas-engelbart.yml`](../../repo-shows/remembering-douglas-engelbart.yml) |

@@ -26,7 +26,7 @@
 
 ## Revival thread
 
-→ Soul City **homefun** / GPS storytelling / [`process/crazy-idea-jam.yml`](../../../../process/crazy-idea-jam.yml)
+→ Soul City **homefun** / GPS storytelling / [`process/CRAZY-IDEA-JAM.md`](../../../../process/CRAZY-IDEA-JAM.md)
 
 ## Gaps
 

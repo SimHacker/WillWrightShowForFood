@@ -26,6 +26,6 @@ Source: [tinylifegame.com](https://tinylifegame.com/) — see [Ell's praise dige
 
 ## Registry
 
-[process/sims-creator-network-exodus.yml](../../../process/sims-creator-network-exodus.yml)
+[process/sims-creator-network-exodus.md](../../../process/sims-creator-network-exodus.md)
 
 ↑ [Plumbella's room](../README.md)

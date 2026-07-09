@@ -22,7 +22,7 @@ Don reports a **prior conversation** — recover thread into [`correspondence.ym
 
 EA's **Legacy Collection** removed the Exchange; **Tiny Life ships what we lost** — share, story, mods.
 **Plumbella** ([Jesse McNamara](../plumbella/)) and **James Turner** ([formerly The Sim Supply](../james-turner/)) said on that same Praise page what players feel —
-then both left EA's Creator Network after the buyout — with **[Kayla Sims (lilsimsie)](../lilsimsie/)** and others ([registry](../../process/sims-creator-network-exodus.yml)). Ell is the indie lane that keeps the hobby-model train set alive.
+then both left EA's Creator Network after the buyout — with **[Kayla Sims (lilsimsie)](../lilsimsie/)** and others ([registry](../../process/sims-creator-network-exodus.md)). Ell is the indie lane that keeps the hobby-model train set alive.
 
 Repo Show bridge: **`Sims ⇔ Soul City ⇔ Tiny Life`** — Soul City is Will's liminal waystation (soul-file
 travels; each world re-renders). Not Simopolis. Full narrative:

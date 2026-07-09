@@ -11,7 +11,7 @@
 
 ## Policy
 
-[`process/couple-and-solo-shows.yml`](../../process/couple-and-solo-shows.yml)
+[`process/couple-and-solo-shows.md`](../../process/couple-and-solo-shows.md)
 
 ---
 

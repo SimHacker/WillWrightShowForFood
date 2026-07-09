@@ -44,7 +44,7 @@ compare-and-contrast on **AI** after your 2023 radio experiment.
 | **AI note (for you)** | [ai-contrast-framing.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/drew-carey/ai-contrast-framing.md) |
 | Show segments | [SHOW.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/drew-carey/SHOW.yml) |
 | Your character portrait | [characters/drew-carey/README.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/drew-carey/README.md) |
-| Sims play-along format | [sims-play-along-narration.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/sims-play-along-narration.yml) |
+| Sims play-along format | [sims-play-along-narration.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/sims-play-along-narration.md) |
 | Root README | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |
 
 Browse without a GitHub account — the links above render in any browser.

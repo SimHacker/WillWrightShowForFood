@@ -39,7 +39,7 @@ proves Brian's "beauty and joy" thesis isn't marketing copy.
 | First-class everything | [snap-first-class-everything.md](snap-first-class-everything.md) |
 | SAP research backing | [sap-research-and-snap.md](sap-research-and-snap.md) |
 | Alan Kay room | [../../alan-kay/README.md](../../alan-kay/README.md) |
-| Old band back together | [../../../process/old-band-back-together.yml](../../../process/old-band-back-together.yml) |
+| Old band back together | [../../../process/old-band-back-together.md](../../../process/old-band-back-together.md) |
 | TurtleStitch show | [../../../repo-shows/turtlestitch/README.md](../../../repo-shows/turtlestitch/README.md) |
 | Pair show | [../../../repo-shows/snap-logo-brian-jens/README.md](../../../repo-shows/snap-logo-brian-jens/README.md) |
 

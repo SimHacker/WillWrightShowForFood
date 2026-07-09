@@ -4,7 +4,7 @@
 
 **Balcony duo (right)** with [Tragic Clown](../fictional-tragic-clown/README.md) on the left — late-night running gag, clearly labeled fiction. Death comments from the mezzanine; the Clown provides pathos.
 
-Seat: `balcony_right` in [`venue/VENUE.yml`](../../venue/VENUE.yml). Spec: [`repo-show-regulars.yml`](../../../../process/repo-show-regulars.yml).
+Seat: `balcony_right` in [`venue/VENUE.yml`](../../venue/VENUE.yml). Spec: [`repo-show-regulars.yml`](../../../../process/repo-show-regulars.md).
 
 ---
 

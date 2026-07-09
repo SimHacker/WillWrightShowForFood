@@ -18,7 +18,7 @@ Machine-readable: [maxis-people.yml](maxis-people.yml)
 
 ## The Sims core team
 
-The ["get the old band back together"](../../../process/old-band-back-together.yml) crew:
+The ["get the old band back together"](../../../process/old-band-back-together.md) crew:
 
 | Name | Nickname / epithet | Role |
 |------|-------------------|------|

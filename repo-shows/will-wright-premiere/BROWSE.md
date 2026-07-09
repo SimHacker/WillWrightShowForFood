@@ -23,7 +23,7 @@
 | **The whole repo** (cream at the top, yaml underneath) | [**Root README**](https://github.com/SimHacker/WillWrightShowForFood#readme) |
 | **Long-term ambition** (1996 lineage — no promises) | [**Vision**](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/VISION.md) |
 | **Don** (host — Flower Child, not a suit) | [**Don Hopkins**](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/README.md) · [Flower Child icon](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/will-wright/media/DonHopkinsSimsCreditsIcon.jpg) |
-| **How a Repo Show runs** (RTFR, no homework) | [**Repo Show format**](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/repo-show-format.yml) |
+| **How a Repo Show runs** (RTFR, no homework) | [**Repo Show format**](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/FORMAT.md) |
 | **Your trading card** (invokable abilities) | [`CARD.yml`](../../characters/will-wright/CARD.yml) · [`CARD.md`](../../characters/will-wright/CARD.md) |
 | **Other interests** (playlists) | [`ENTRYWAYS.md`](../../ENTRYWAYS.md) — player, retro, educator, … |
 | **Micropolis AI Drag Race** (Slats judges) | [`DRAG-RACE.md`](../../process/DRAG-RACE.md) |

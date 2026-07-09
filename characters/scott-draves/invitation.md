@@ -61,7 +61,7 @@ and you start the show with a **huge pile of worthless §** to spend or give awa
 Two magnificent pieces per series get a brisk hammer; everything else is quick red-dot delight.
 Gregory will call your flock a DAO. Bunny will try to adopt a sheep. Totally optional — redirect
 the voices, shorten, or skip. Spec: [`simulated-opening.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-draves/simulated-opening.yml) ·
-protocol: [`process/simulated-art-opening.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/simulated-art-opening.yml).
+protocol: [`process/simulated-art-opening.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/simulated-art-opening.md).
 
 Got up-to-date versions of your portfolio, papers, and the latest Sheep/Infinidream builds we
 could drop into the repo and talk through? Send them over and I'll wire them up. (I've jotted some

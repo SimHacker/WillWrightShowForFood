@@ -23,4 +23,4 @@ Same arc as **James Turner** and **Kayla Sims (lilsimsie)** — praised indie si
 
 Draft invite: [`invitation.md`](invitation.md) · Group show: [`creator-network-exodus.yml`](../../repo-shows/will-wright-premiere/creator-network-exodus.yml)
 
-↑ [exodus registry](../../process/sims-creator-network-exodus.yml) · [Ell](../ellpeck/)
+↑ [exodus registry](../../process/sims-creator-network-exodus.md) · [Ell](../ellpeck/)

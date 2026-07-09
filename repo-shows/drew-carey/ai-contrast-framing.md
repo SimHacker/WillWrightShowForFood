@@ -111,7 +111,7 @@ Audience sends gameplay recordings. Guest improvisers **narrate live** — makin
 style — over mute Sims footage. Same spirit as the **Maxis-built Drew Carey Show in-game segment**,
 without needing EA to build a custom lot.
 
-- [Format spec](../../process/sims-play-along-narration.yml)
+- [Format spec](../../process/sims-play-along-narration.md)
 - [Your gameplay segment (YouTube)](https://www.youtube.com/watch?v=5wr04-WmWkg)
 - [House Party limo cameo](https://www.youtube.com/watch?v=Stgk80dcnH8)
 

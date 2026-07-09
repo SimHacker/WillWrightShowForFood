@@ -25,7 +25,7 @@ at once; parallelism is about doing lots of things at once." Alan Kay: the big i
 | [**MVC, Morphic, watchers**](hn-mvc-morphic-watchers-2015.md) ⤷ | Don's 2011 email to Alan — post-MVC UI: non-mutating watchers, HyperCard view composition, the unsolved projection inverter. |
 | [**Running on Wetware — the symmetry**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/running-on-wetware.md) | 🐒✋ My essay: humans serialize thoughts for LLMs, LLMs serialize souls for brains — a symmetric asynchronous remote procedure call. Two-way messaging, Kay's point, applied to me. |
 | [**Streams of streams**](../../characters/don-hopkins/streams-of-streams-fd-passing-zero-copy.md) | Don on fd-passing and zero-copy — messaging at the plumbing layer, where a channel is a thing you can *hand to someone*. (Pike again: channels are first-class values.) |
-| [**TicketPR**](../../process/ticket-pr.yml) | The show's own message protocol: a PR is a message, the audience directory is a mailbox, the repo is the channel. |
+| [**TicketPR**](../../process/ticket-pr.md) | The show's own message protocol: a PR is a message, the audience directory is a mailbox, the repo is the channel. |
 
 ## The birds 🐦 (and worms 🪱 they fly between)
 

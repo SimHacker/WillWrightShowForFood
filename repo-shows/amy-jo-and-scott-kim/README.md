@@ -10,7 +10,7 @@
 social loops + puzzle craft in one studio. Sims social-design lineage × Viewpoint/inversions ×
 Soul City community revival.
 
-**Policy:** [`process/couple-and-solo-shows.yml`](../../process/couple-and-solo-shows.yml) — clean
+**Policy:** [`process/couple-and-solo-shows.md`](../../process/couple-and-solo-shows.md) — clean
 single names in `characters/`; pair shows for natural couples; solo `scott-kim/` optional for
 Viewpoint deep-dive only.
 

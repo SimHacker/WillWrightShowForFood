@@ -16,7 +16,7 @@ Outstanding Educator Award to Brian (with Dan Garcia, for BJC) cites Snap! and n
 principal developer — so a pair show tells the shared story once, together, instead of diluting it
 across two solo episodes.
 
-**Policy:** [`process/couple-and-solo-shows.yml`](../../process/couple-and-solo-shows.yml) — clean
+**Policy:** [`process/couple-and-solo-shows.md`](../../process/couple-and-solo-shows.md) — clean
 single names in `characters/`; pair shows for natural partnerships; optional solos for deep verticals
 only.
 

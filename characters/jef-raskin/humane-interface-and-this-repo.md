@@ -27,7 +27,7 @@ Every folder here has **two faces**:
 Same path; two projections. Listing = **view source** (inspectable yaml girders, verify CI). README =
 **human overlay** (museum prose, cross-links). On air: *view source → jump to README → museum.*
 
-Policy: [`../../process/character-colocation.yml`](../../process/character-colocation.yml) (`github_ux`).
+Policy: [`../../process/character-colocation.md`](../../process/character-colocation.md) (`github_ux`).
 
 ---
 

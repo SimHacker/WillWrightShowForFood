@@ -63,5 +63,5 @@ vocabulary maps one-to-one onto the repo on screen; Stewart Sharp's drop gets it
 
 *See also:* [`README.md`](README.md) · [`ideas.md`](ideas.md) ·
 [visual programming patch-cord trail](../../process/trails/visual-programming-patch-cord.md) ·
-[`moollm-stage.yml`](../../process/moollm-stage.yml) ·
+[`moollm-stage.yml`](../../process/moollm-stage.md) ·
 [David Levitt — Bounce/MMP lineage](../david-levitt/README.md)

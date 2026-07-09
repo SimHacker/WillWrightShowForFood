@@ -1,6 +1,6 @@
 # Will Wright show — content pack
 
-Ideas, gags, and themes **for this show specifically**. Cross-show traditions live in [`../../traditions/`](../../traditions/README.md); forward-tech bridges live in [`../../../process/crazy-idea-jam.yml`](../../../process/crazy-idea-jam.yml).
+Ideas, gags, and themes **for this show specifically**. Cross-show traditions live in [`../../traditions/`](../../traditions/README.md); forward-tech bridges live in [`../../../process/CRAZY-IDEA-JAM.md`](../../../process/CRAZY-IDEA-JAM.md).
 
 ## Canonical show docs (don't duplicate — link)
 
@@ -10,7 +10,7 @@ Ideas, gags, and themes **for this show specifically**. Cross-show traditions li
 | [`../../will-wright/episodes.yml`](../../will-wright/episodes.yml) | Kickoff + harvest-driven episode candidates |
 | [`../../will-wright/SEGMENTS.yml`](../../will-wright/SEGMENTS.yml) | Live flow, sidekicks, call-in |
 | [`../../will-wright/performance-and-culture.yml`](../../will-wright/performance-and-culture.yml) | Puppetry, participation, homages |
-| [`../../../process/performance-space.yml`](../../../process/performance-space.yml) | Live POC checklist |
+| [`../../../process/performance-space.md`](../../../process/performance-space.md) | Live POC checklist |
 
 ## This pack
 

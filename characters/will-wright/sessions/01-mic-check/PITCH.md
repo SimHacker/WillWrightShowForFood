@@ -73,7 +73,7 @@ We go way back — SimCity, The Sims, Stupid Fun Club, Maxis stories that deserv
 record. The show catches us up in public: old demos re-narrated, lost stories told onto tape, a
 30-year-old favor I'm finally going to ask you properly, and a city returned to its maker —
 healthy, grown, with a family of its own. There will be fake commercials in the sandwich breaks
-(that's a format — [`../../../../process/one-minute-movie-sandwich.yml`](../../../../process/one-minute-movie-sandwich.yml) —
+(that's a format — [`../../../../process/one-minute-movie-sandwich.md`](../../../../process/one-minute-movie-sandwich.md) —
 and yes, it's built out of out One Minute Movies and StoryMaker, used exactly as we built them). 
 There will be a **roar drive** — the Micropolis monster needs a voice, and everyone's qualifies, 
 including the cats'. There will be guests we won't name until they say yes.

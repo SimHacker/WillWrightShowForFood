@@ -73,7 +73,7 @@ live in the browser, we can drive them as a **new puppet kind — 3D Sims-1 char
 sibling of the 2D face/video puppets (Conan face-holes, Faceball). Real Sims characters on stage,
 voiced and posed live (mic amplitude scrub applies). On-brand and *already shipped + improving*. See
 [`puppet-taxonomy.yml#kinds.sims_3d_puppet`](../../repo-shows/ideas/traditions/puppet-taxonomy.yml) and
-[`performance-space.yml#sims_3d_puppet`](../../process/performance-space.yml).
+[`performance-space.yml#sims_3d_puppet`](../../process/performance-space.md).
 
 ## Sources (real, public)
 - SimObliterator Suite: https://github.com/DnfJeff/SimObliterator_Suite

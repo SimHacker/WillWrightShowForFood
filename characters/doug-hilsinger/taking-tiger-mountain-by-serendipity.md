@@ -152,7 +152,7 @@ wait on a reply.
 tells the Eagle story, a Ronco commercial for Doug's album interrupts (with Eno's phone message as
 the testimonial), the story concludes, all wrapped in the *Empathy* 1MM — built as the **teaser to
 show Brian before contacting him**. See
-[`process/one-minute-movie-sandwich.yml`](../../process/one-minute-movie-sandwich.yml)
+[`process/one-minute-movie-sandwich.md`](../../process/one-minute-movie-sandwich.md)
 `#first_instance_tiger_mountain`.
 
 ## Questions for Brian — the before/after listening 🎧

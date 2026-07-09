@@ -10,4 +10,4 @@
 
 Theme: comfort in Sims; cannot support opposing values; act now before sale finalizes.
 
-↑ [Exodus registry](../../../process/sims-creator-network-exodus.yml) · [Steph0's room](../README.md)
+↑ [Exodus registry](../../../process/sims-creator-network-exodus.md) · [Steph0's room](../README.md)

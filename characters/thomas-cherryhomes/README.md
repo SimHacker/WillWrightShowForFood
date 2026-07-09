@@ -6,6 +6,6 @@ Invitation portrayal — **not** Thomas Cherryhomes. [Standards](../../schemas/p
 
 **Paired guest:** [Lars Brinkhoff](../lars-brinkhoff/README.md) — PDP-10/ITS × FujiNet tag-team
 
-[Invitation](invitation.md) · [Ideas](ideas.md) · [Show seed](../../repo-shows/thomas-cherryhomes/README.md) · [Apple ][ + FujiNet bridge](../../process/apple2-fujinet-bridge.yml)
+[Invitation](invitation.md) · [Ideas](ideas.md) · [Show seed](../../repo-shows/thomas-cherryhomes/README.md) · [Apple ][ + FujiNet bridge](../../process/apple2-fujinet-bridge.md)
 
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

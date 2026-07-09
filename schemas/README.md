@@ -15,7 +15,7 @@
 | [`language-palm-emoji.yml`](language-palm-emoji.yml) | Palm's Emoji Soul Tongue — dense glyphs; links into MOOLLM | [`characters/palm/`](../characters/palm/README.md) |
 | [`language-robot.yml`](language-robot.yml) | Robolinguistics — dialects (beeps/glitch/wire); MCP endgame for Slats | bots |
 | [`language-cow.yml`](language-cow.yml) | The Cow Plant's MOO (knows no English — Don must interpret) | cow-plant |
-| [`../process/repo-show-regulars.yml`](../process/repo-show-regulars.yml) | Cross-show balcony regulars + recurring audience mascots | [`../repo-shows/will-wright-premiere/audience/`](../repo-shows/will-wright-premiere/audience/README.md) |
+| [`../process/repo-show-regulars.md`](../process/repo-show-regulars.md) | Cross-show balcony regulars + recurring audience mascots | [`../repo-shows/will-wright-premiere/audience/`](../repo-shows/will-wright-premiere/audience/README.md) |
 | [`invitation-workflow.yml`](invitation-workflow.yml) | draft → review → sent → replied | all invitations |
 | [`guest-invitation-status.yml`](guest-invitation-status.yml) | Status enum + consent fields | CHARACTER.yml |
 | [`rig-schema.yml`](rig-schema.yml) | rigs/*.rig.yml + **required SETUP.md** | [`../rigs/`](../rigs/README.md), drag race |

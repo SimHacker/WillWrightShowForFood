@@ -4,7 +4,7 @@
 
 **Balcony duo (left)** with [Grim Reaper](../fictional-grim-reaper/README.md) on the right — late-night running gag, clearly labeled fiction. Tragic Clown heckles from the mezzanine; Death keeps score.
 
-Seat: `balcony_left` in [`venue/VENUE.yml`](../../venue/VENUE.yml). Spec: [`repo-show-regulars.yml`](../../../../process/repo-show-regulars.yml).
+Seat: `balcony_left` in [`venue/VENUE.yml`](../../venue/VENUE.yml). Spec: [`repo-show-regulars.yml`](../../../../process/repo-show-regulars.md).
 
 ---
 

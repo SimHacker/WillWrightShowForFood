@@ -64,7 +64,7 @@ What Palm follows, cheers, and shows up for — the character's social graph, no
 | **Gezellig pub life** | [pub/](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub) · [arcade](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/arcade) · [Pac-Man cabinet](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/arcade/pacman-cabinet.yml) | Fluxx, Pie Table, PLM on Monkey Kong Jr. |
 | **Slats (robot cousin)** | [slats/](../slats/README.md) · [bot-slats seat](../../repo-shows/will-wright-premiere/audience/bot-slats/README.md) | SFC waiter brain — loud where Palm is quiet |
 | **Incarnation & consent** | [ethics/PALM-THE-PHILOSOPHER-MONKEY.md](https://github.com/SimHacker/moollm/blob/main/designs/ethics/PALM-THE-PHILOSOPHER-MONKEY.md) · [**Will Wright Soul For Food**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/will-wright-soul-for-food.md) | Dignity of fictional beings; guest-room ethics |
-| **Play-along MOOLLM** | [play-along-skills.yml](../../process/play-along-skills.yml) | Doorway for viewers after the show |
+| **Play-along MOOLLM** | [play-along-skills.yml](../../process/play-along-skills.md) | Doorway for viewers after the show |
 
 ---
 

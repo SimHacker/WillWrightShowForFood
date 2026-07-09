@@ -3,7 +3,7 @@
 When this show is **announced**, you are invited to participate **before** air date — even
 before the guest accepts or a stream is scheduled.
 
-**TicketPR spec:** [`../../process/ticket-pr.yml`](../../process/ticket-pr.yml)  
+**TicketPR spec:** [`../../process/ticket-pr.md`](../../process/ticket-pr.md)  
 **MOOLLM tutorial:** [`CHARACTER.md`](CHARACTER.md)  
 **Schema:** [`../../schemas/audience-character.yml`](../../schemas/audience-character.yml)
 

@@ -8,7 +8,7 @@
 ## Related in repo
 
 - [Maxis Part 1 source room](../../will-wright/sources/2026-07-03-digital-antiquarian-maxis-part1/README.md)
-- [Maxis historians registry](../../../process/maxis-history-collaborators.yml)
+- [Maxis historians registry](../../../process/maxis-history-collaborators.md)
 
 ---
 

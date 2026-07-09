@@ -5,7 +5,7 @@
 the **construction-set genre** and of **user-generated content**, and this repo's
 **[Faceball Construction Set](../../apps/performance-space/faceball-construction-set.yml)** is a
 direct tribute to it ("Pinball Construction Set for faces"). A construction set is an
-[artifactory](../../process/artifactory.yml) — a tool whose product is other artifacts — which puts
+[artifactory](../../process/artifactory.md) — a tool whose product is other artifacts — which puts
 Bill upstream of Will Wright's construction-set design and of MOOLLM itself.
 
 ## Living, not memorial

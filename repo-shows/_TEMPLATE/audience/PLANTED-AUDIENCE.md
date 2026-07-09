@@ -1,6 +1,6 @@
 # Planted audience — guests, curators, running gags
 
-**Spec:** [`../../../process/ticket-pr.yml`](../../../process/ticket-pr.yml) (`guest_primed_audience`, `planted_audience`)  
+**Spec:** [`../../../process/ticket-pr.md`](../../../process/ticket-pr.md) (`guest_primed_audience`, `planted_audience`)  
 **Ethics:** [`../../../schemas/fictional-audience.yml`](../../../schemas/fictional-audience.yml)
 
 ---
@@ -14,7 +14,7 @@ recurring characters — but keep it **honest in git**:
 |-----------|---------------------|
 | Celebrity in audience | Consented human TicketPR + costume.yml |
 | Recurring comedy character | `running_gag: true` + CARD abilities |
-| Talk-show balcony | [`process/repo-show-regulars.yml`](../../../process/repo-show-regulars.yml) + show `audience/` overlays |
+| Talk-show balcony | [`process/repo-show-regulars.md`](../../../process/repo-show-regulars.md) + show `audience/` overlays |
 | Price Is Right "Come On Down" | [`costume.yml`](costume.yml) + Don call-on |
 | Virtual / puppet plant | `fictional_*` type + `planted.disclosure: true` |
 
@@ -30,7 +30,7 @@ astroturfing, not fake fan letters.
 | **Fan** | `audience/<github-username>/` | Self-sovereign |
 | **Guest** | `audience/guest-primed-<slug>/` | Guest opens or approves PR |
 | **Curator** | `audience/fictional-<slug>/` or `guest-primed-*` | Guest welcome; disclose in README |
-| **Cross-show regular** | `process/repo-show-regulars.yml` + show `audience/` overlay | Show format; always disclosed |
+| **Cross-show regular** | `process/repo-show-regulars.md` + show `audience/` overlay | Show format; always disclosed |
 
 Guests **may merge fan TicketPRs** and **add their own** pre-primed virtual children, running
 gags, and costume plants before air.

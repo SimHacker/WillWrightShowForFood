@@ -43,7 +43,7 @@ Pie menus, master controllers, composable SimAntics objects — send-code-not-co
 
 **[sims-people-and-events-README.md](sims-people-and-events-README.md)**  
 Conference and community photos — faces behind the nicknames in [`sims-series-maxis-people.md`](sims-series-maxis-people.md).
-Includes the House Party Drew Carey crowd still (reference for [`Sims Play-Along Narration`](../../../process/sims-play-along-narration.yml)).
+Includes the House Party Drew Carey crowd still (reference for [`Sims Play-Along Narration`](../../../process/sims-play-along-narration.md)).
 
 ---
 

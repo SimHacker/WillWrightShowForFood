@@ -67,7 +67,7 @@ Lauren Elliott / Gallium / Proxi thread, [Will Dev Diaries](https://www.youtube.
 Tease contact + forthcoming video; **no social repo-link campaign until show ships.**
 
 **Parallel historian invite:** [Jimmy Maher](../../../jimmy-maher/README.md) — Jess Bird synergy model.
-Registry: [`process/maxis-history-collaborators.yml`](../../../../process/maxis-history-collaborators.yml).
+Registry: [`process/maxis-history-collaborators.md`](../../../../process/maxis-history-collaborators.md).
 
 **Outreach copy (on hold):** [`micropolis-olpc-teaser.yml`](micropolis-olpc-teaser.yml). Primary sources
 in repo for production; not promoted on social yet:

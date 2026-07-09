@@ -30,7 +30,7 @@ the humane overlay — same path, two projections. That is our synthesis of Rask
 to listing when you need to prove provenance.
 
 Read the framing in [`humane-interface-and-this-repo.md`](humane-interface-and-this-repo.md) and the policy in
-[`process/character-colocation.yml`](../../process/character-colocation.yml) (`github_ux`).
+[`process/character-colocation.md`](../../process/character-colocation.md) (`github_ux`).
 
 ## Show seed (if produced)
 

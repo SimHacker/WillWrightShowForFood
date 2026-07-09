@@ -70,7 +70,7 @@ a summary the way a reporter owns a beat. The work is:
 **Volunteering tokens:** automation costs compute. Anyone can run their own LLM over the
 staleness queue and submit "summary update" PRs — donating tokens *and* judgment. The repo
 doesn't need a central inference budget if the audience brings its own rigs, which is already the
-Repo Show's [bring-your-own-rig policy](../process/repo-show-format.yml) applied to maintenance.
+Repo Show's [bring-your-own-rig policy](../process/FORMAT.md) applied to maintenance.
 
 ## The refresh scan (and, someday, the worms)
 
@@ -111,7 +111,7 @@ every shelf. And it carries the era's ethical fork: **Palmer Eldritch** is the a
 descends into the sim and consumes it; **Ubik-as-calm-tech** (Weiser's inversion) is the one who
 holds it together for the people living inside. The coherence engine chooses calm — every refresh
 is reviewed (Article IX, point 4), preservation not predation. See
-[artifactory](../process/artifactory.yml) and
+[artifactory](../process/artifactory.md) and
 [PKD · Lem · AI · SF](../characters/mark-weiser/pkd-lem-ai-sf.md).
 
 ## Automation status

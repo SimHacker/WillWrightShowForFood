@@ -10,7 +10,7 @@ Creative inventory for Repo Shows: **formats you reuse**, **bits you perform**, 
 | [`../will-wright/episodes.yml`](../will-wright/episodes.yml) | Will kickoff + candidate episodes (harvest-driven) |
 | [`../will-wright/SEGMENTS.yml`](../will-wright/SEGMENTS.yml) | Will show *flow* (opening, sidekicks, call-in) |
 | [`../../process/performance-space/`](../../process/performance-space/) | Live production rig (OBS, toys, POC checklist) |
-| [`../../process/crazy-idea-jam.yml`](../../process/crazy-idea-jam.yml) | Forward-tech reactor (bridges, endosymbiosis, hell drain) |
+| [`../../process/CRAZY-IDEA-JAM.md`](../../process/CRAZY-IDEA-JAM.md) | Forward-tech reactor (bridges, endosymbiosis, hell drain) |
 | **This folder** | Scratchpad + index for **performable content** |
 
 **Rule:** Ideas *graduate* — a gag becomes a recorded POC; a theme becomes an episode; a tradition gets copied into another show's `SHOW.yml`. Until then it lives here.

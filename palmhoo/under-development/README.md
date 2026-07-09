@@ -15,7 +15,7 @@ rewrites.*
 | Entry | Status | 🐒✋ Why you'd look |
 |-------|--------|--------------------|
 | [**apps/**](../../apps/README.md) | scaffold + first apps | The honest README says "nothing shipped yet" — then lists what's coming: stream overlay, Windows companion, OBS toys. Watch this space literally. |
-| [**stream-gateway**](../../apps/stream-gateway/GLANCE.yml) | seed | The brain bus: SSE overlay + Twitch/YouTube chat, spec'd in [brain-stream.yml](../../process/brain-stream.yml). Live Cursor on a stream overlay. |
+| [**stream-gateway**](../../apps/stream-gateway/GLANCE.yml) | seed | The brain bus: SSE overlay + Twitch/YouTube chat, spec'd in [brain-stream.yml](../../process/BRAIN-STREAM.md). Live Cursor on a stream overlay. |
 | [**micropolis-angel**](../../apps/micropolis-angel/) | native scaffold | A WinUI 3 + WebView2 Windows companion for Micropolis. |
 | [**packages/wwsff-tooling**](../../packages/README.md) | early | Where code that generalizes across shows gets extracted — the `@wwsff/*` layer under the skills layer. |
 | [**rigs/**](../../rigs/README.md) | growing | Bring-your-own-rig setups, from artisanal VS Code to a PDP-10 MacLisp lap rig. Each rig is a reproducible way to attend a show. |
@@ -46,7 +46,7 @@ rewrites.*
 | Entry | Status | 🐒✋ Why you'd look |
 |-------|--------|--------------------|
 | [**The Infinite Typewriters app**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/infinite-typewriters.yml) | dream | The Pinocchio clause: a Dasher implementation with pluggable renderers, headlined by a 3D typewriter whose keys swell and yield. It wants to be a real app; the file says so itself. |
-| [**Micropolis AI Drag Race**](../../process/micropolis-ai-drag-race.yml) | design | Competitive AI city-building as a show format — design exists, engine hooks pending. |
+| [**Micropolis AI Drag Race**](../../process/DRAG-RACE.md) | design | Competitive AI city-building as a show format — design exists, engine hooks pending. |
 | [**RoboResurrection / Slats**](../../repo-shows/will-wright-premiere/slats-reincarnation.yml) | design | Bringing Will's SFC robot brain back as a show judge. |
 
 🐒✋ *Staleness policy: this shelf is re-verified every shelving pass, and every table above is

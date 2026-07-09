@@ -246,7 +246,7 @@ Publication **network** — graph of shows, not a flat feed. We are not pitching
 - **No** promised viral scale, revenue, or launch timeline.
 - **No** requirement to use AI — and **no** ban on AI either.
 - **Not** a finished product — an origin point, not launch day.
-- **Not** blocked on the guest: [Will Wright accepted](../characters/will-wright/invitation.md) (July 2026); kickoff confirmed; air on his schedule. **Still no** production deal or platform deal — those remain open.
+- **Not** blocked on the guest: [Will Wright accepted](../characters/will-wright/invitation.md) (July 2026); kickoff confirmed; air on his schedule.
 
 ---
 

@@ -25,7 +25,7 @@ literal specs for the AI we're building now.
 **Draw in:** David Rosenthal (knew Mark; LOCKSS; anchors the thread), Will Wright (Palmer Eldritch
 / The Sims), Don (primary source — heard the Ubik story from Mark).
 [`pkd-lem-ai-sf.md`](pkd-lem-ai-sf.md) · [`pkd-lem-ai-sf.yml`](pkd-lem-ai-sf.yml) ·
-concept: [`../../process/artifactory.yml`](../../process/artifactory.yml)
+concept: [`../../process/artifactory.md`](../../process/artifactory.md)
 
 ### 2. Calm technology vs the attention economy
 "The most profound technologies are those that disappear" — the computer as "a quiet, invisible

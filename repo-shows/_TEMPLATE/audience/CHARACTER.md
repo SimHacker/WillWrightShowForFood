@@ -191,7 +191,7 @@ Graduated? Later you may add a long-lived persona under `characters/` — audien
 
 ## Links
 
-- [`../../../process/ticket-pr.yml`](../../../process/ticket-pr.yml) — TicketPR constitution
+- [`../../../process/ticket-pr.md`](../../../process/ticket-pr.md) — TicketPR constitution
 - [`../../../characters/_TEMPLATE/`](../../../characters/_TEMPLATE/README.md) — guest portrayal template (different job)
 - [MOOLLM character CARD](https://github.com/SimHacker/moollm/skills/character/CARD.yml)
 - [Repo Show SKILL](../../../skills/repo-show/SKILL.md)

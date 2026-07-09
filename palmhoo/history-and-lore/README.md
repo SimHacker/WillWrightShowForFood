@@ -12,7 +12,7 @@ made decades ago at talks, in emails, over pie. This shelf keeps the receipts.*
 | Entry | 🐒✋ Why you'd read it |
 |-------|----------------------|
 | [**The seed saga (VISION.md)**](../../process/VISION.md) | The full chain: Stewart Brand gathers audience questions at the 2006 Long Now talk → two of them ask for SimCity's source → cascade of meetups and emails → Don's "skeptical but I'll ask anyway" note → Will says yes → OLPC becomes the stone soup → GPL-3, trademark carve-out, rename to **Micropolis**. |
-| [**ticket-pr.yml § lineage**](../../process/ticket-pr.yml) | Why Stewart Brand's question-curation was a proto-TicketPR — the show format's documented ancestor. |
+| [**ticket-pr.yml § lineage**](../../process/ticket-pr.md) | Why Stewart Brand's question-curation was a proto-TicketPR — the show format's documented ancestor. |
 | [**Walter Bender**](../../characters/walter-bender/README.md) | The OLPC stone-soup chef. |
 | [**Micropolis license documents**](https://github.com/SimHacker/MicropolisCore/blob/main/MicropolisPublicNameLicense.md) | The actual legal artifacts — GPL notice and the name license that made "Micropolis" necessary. |
 | [**Micropolis historical docs**](https://github.com/SimHacker/MicropolisCore/tree/main/documentation) | Manuals, talks, teachers' guides — primary sources from the city's whole life. |
@@ -60,7 +60,7 @@ outlives the plumbing only if somebody carries it.*
 | Entry | 🐒✋ Why you'd read it |
 |-------|----------------------|
 | [**Constructionist lineage trail**](../../process/trails/constructionist-lineage.md) | Piaget → Papert → Logo → Kay → the whole "learn by building" church this project worships in. |
-| [**Constructionist SimCity response**](../../process/constructionist-simcity-response.yml) | Glass-box pillars: export guts, live scripting (Snap! + Micropolis), microworld runbooks — Alan Kay's OLPC critique answered in public strategy. |
+| [**Constructionist SimCity response**](../../process/constructionist-simcity-response.md) | Glass-box pillars: export guts, live scripting (Snap! + Micropolis), microworld runbooks — Alan Kay's OLPC critique answered in public strategy. |
 | [**Alan Kay — SimCity Rules (Nov 2007)**](../../characters/will-wright/sources/2007-11-16-simcity-rules-alan-kay/) | OLPC mailing-list thread — open, inspectable SimCity; same thread as Brian/Jens 2018 Snap! integration. |
 | [**Micropolis × Snap! (2018)**](../../characters/brian-harvey/sources/micropolis-snap-2018.md) | Don → Brian → Jens: drive Micropolis + CAM6 from blocks; Logo/Scheme/Morphic heritage meets classroom city. |
 | [**Logo, LLogo, and C64 Adventure**](logo-llogo-and-c64-adventure.md) | Brian's CSLS pedagogy paired with Don's LLogo rescue (~12,480 lines MacLISP on ITS) and age-17 Terrapin utilities-disk Adventure — REPL-as-parser, list/functional Logo without graphics. Lars Brinkhoff's emulator revival on Knight TV. |

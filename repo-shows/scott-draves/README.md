@@ -30,7 +30,7 @@ beauty from simple rules, a crowd of minds, and a lot of machines?
 |------|------|
 | **The invitation** | [`invitation.md`](../../characters/scott-draves/invitation.md) |
 | **Simulated art opening** | [`simulated-opening.yml`](simulated-opening.yml) — menagerie buys your work for § |
-| **Guest ritual (all shows)** | [`process/simulated-art-opening.yml`](../../process/simulated-art-opening.yml) |
+| **Guest ritual (all shows)** | [`process/simulated-art-opening.md`](../../process/simulated-art-opening.md) |
 | **Scott (character)** | [`characters/scott-draves/`](../../characters/scott-draves/README.md) |
 | **Timeline from the archive** | [`correspondence.yml`](../../characters/scott-draves/correspondence.yml) |
 | **Electric Sheep** | https://electricsheep.org/ |

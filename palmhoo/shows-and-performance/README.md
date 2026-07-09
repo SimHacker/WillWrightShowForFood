@@ -12,18 +12,18 @@ whole directory before the guest arrives. This shelf explains the theater itself
 |-------|----------------------|
 | [**FORMAT.md**](../../process/FORMAT.md) | What a Repo Show is, mechanically: the repo is the product, the video is a projection of it. Start here. |
 | [**VISION.md**](../../process/VISION.md) | Why it exists, where it's going, and the deep move — the repo isn't the program guide, it's the stage. |
-| [**ticket-pr.yml**](../../process/ticket-pr.yml) | The audience mechanism: your GitHub account is a passport, your PR is a ticket, your directory is a seat. Includes the lineage back to Stewart Brand's question-gathering at the 2006 Long Now talk. |
+| [**ticket-pr.yml**](../../process/ticket-pr.md) | The audience mechanism: your GitHub account is a passport, your PR is a ticket, your directory is a seat. Includes the lineage back to Stewart Brand's question-gathering at the 2006 Long Now talk. |
 | [**Repo Show skill**](../../skills/repo-show/SKILL.md) | The orchestrator protocol — what the LLM actually does to run a show. |
-| [**Guest participation ladder**](../../process/guest-participation-ladder.yml) | From "email Don a question" to "live Twitch stream" — every rung is a valid way to attend. |
+| [**Guest participation ladder**](../../process/guest-participation-ladder.md) | From "email Don a question" to "live Twitch stream" — every rung is a valid way to attend. |
 
 ## Time shifting & production
 
 | Entry | 🐒✋ Why you'd read it |
 |-------|----------------------|
-| [**One-minute movie sandwich**](../../process/one-minute-movie-sandwich.yml) | Short-form production pattern: cut long conversations into stackable minutes. |
+| [**One-minute movie sandwich**](../../process/one-minute-movie-sandwich.md) | Short-form production pattern: cut long conversations into stackable minutes. |
 | [**Post-production**](../../process/post-production/) | How raw sessions become playlists, playlists become shows, shows become artifacts. |
-| [**YouTube bridge**](../../process/youtube-bridge-skill.yml) | Wiring the repo to the playlist and back. |
-| [**Performance space**](../../process/performance-space.yml) · [trail](../../process/trails/performance-space.md) | The stage metaphor made literal: where performances happen in the repo's geography. |
+| [**YouTube bridge**](../../process/youtube-bridge-skill.md) | Wiring the repo to the playlist and back. |
+| [**Performance space**](../../process/performance-space.md) · [trail](../../process/trails/performance-space.md) | The stage metaphor made literal: where performances happen in the repo's geography. |
 
 ## Shows on the books
 

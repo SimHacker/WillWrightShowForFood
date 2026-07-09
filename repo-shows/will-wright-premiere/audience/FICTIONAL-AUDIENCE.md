@@ -88,7 +88,7 @@ Same for living humans: no impersonating guests or fans without consent.
 [phil-salvador/](phil-salvador/README.md) (box seat w/ Curator) ·
 [heather-alvey/](heather-alvey/README.md) + [steve-alvey/](steve-alvey/README.md) (front-row SimFreaks/SimSlice crew).
 
-**More games & ideas:** [AUDIENCE-ROSTER-IDEAS.md](AUDIENCE-ROSTER-IDEAS.md) · **Machine index:** [INDEX.yml](INDEX.yml) · **Regulars spec:** [../../../process/repo-show-regulars.yml](../../../process/repo-show-regulars.yml)
+**More games & ideas:** [AUDIENCE-ROSTER-IDEAS.md](AUDIENCE-ROSTER-IDEAS.md) · **Machine index:** [INDEX.yml](INDEX.yml) · **Regulars spec:** [../../../process/repo-show-regulars.md](../../../process/repo-show-regulars.md)
 
 ---
 

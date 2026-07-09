@@ -21,6 +21,6 @@ Show tie: Ell's FAQ — queer-led inclusivity is explicit design; Safe In Our Wo
 
 ## Registry
 
-Exodus context: [sims-creator-network-exodus.yml](../../../process/sims-creator-network-exodus.yml)
+Exodus context: [sims-creator-network-exodus.yml](../../../process/sims-creator-network-exodus.md)
 
 ↑ [Don's quote](don-praise.md) · [Sources index](README.md)

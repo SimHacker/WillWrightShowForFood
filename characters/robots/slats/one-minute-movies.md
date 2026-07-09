@@ -64,7 +64,7 @@ The commercial timing is **built into the films** — they aren't just standalon
 Hook up front, commercial, payoff behind: part one buys the ad its audience. Natural cleavage
 points: **these are the buns, without the burgers inserted.** Using them split around an ad is
 using them **exactly as they were meant** — see the 1MM Sandwich format
-([`../../../process/one-minute-movie-sandwich.yml`](../../../process/one-minute-movie-sandwich.yml)),
+([`../../../process/one-minute-movie-sandwich.md`](../../../process/one-minute-movie-sandwich.md)),
 which supplies its own burgers: fake commercials on each film's concept.
 
 **Measured** (Don, 2026-07-07): both films split clean at **30/30** — *Empathy* and *Servitude*

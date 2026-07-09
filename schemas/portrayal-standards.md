@@ -84,7 +84,7 @@ Fields: `status: deceased` · `invitation_status: memorial` · `consent_level: 5
 
 **Grows with the show.** Each directory accumulates public-safe material as we hear back and gather artifacts for episodes: links, citations, PDFs, media, catalogs, corrected bios. One person, one home — even across many `repo-shows/<episode>/` appearances.
 
-**Media room:** `characters/<id>/media/` — flat general media room; big-endian names; prefer `media/` over scattering person files in `repo-shows/`. Spec: [character-colocation.yml](../process/character-colocation.yml)
+**Media room:** `characters/<id>/media/` — flat general media room; big-endian names; prefer `media/` over scattering person files in `repo-shows/`. Spec: [character-colocation.yml](../process/character-colocation.md)
 
 ### Contributions
 
@@ -106,7 +106,7 @@ Fields: `status: deceased` · `invitation_status: memorial` · `consent_level: 5
 
 **ideas.md:** conversation hooks for the guest browsing their invitation — public career, shared ground with the repo (abstracted), numbered show segments.
 
-**Couple shows:** one clean slug per person; natural couples get a pair show for shared work. [couple-and-solo-shows.yml](../process/couple-and-solo-shows.yml)
+**Couple shows:** one clean slug per person; natural couples get a pair show for shared work. [couple-and-solo-shows.yml](../process/couple-and-solo-shows.md)
 
 Do not repeat this standards file in every character room — link here instead.
 
@@ -157,7 +157,7 @@ LLMs open a new layer: simulated people who can autonomously converse, act, and 
 
 **Soul For Food:** Palm's bridge from [incarnation ethics](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/on-being-simulated.md) (*the right to write my own soul*) to guest directories in this repo — [Will Wright Soul For Food](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/will-wright-soul-for-food.md).
 
-See also: [human-control-and-authorship](../repo-shows/ideas/themes/human-control-and-authorship.yml) · [simulating-people](../repo-shows/ideas/themes/simulating-people.yml) · [Player-in-the-Middle](../process/crazy-idea-jam.yml#player_in_the_middle)
+See also: [human-control-and-authorship](../repo-shows/ideas/themes/human-control-and-authorship.yml) · [simulating-people](../repo-shows/ideas/themes/simulating-people.yml) · [Player-in-the-Middle](../process/CRAZY-IDEA-JAM.md#player_in_the_middle)
 
 ## See also
 

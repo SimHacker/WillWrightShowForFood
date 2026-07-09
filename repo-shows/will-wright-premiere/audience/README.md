@@ -24,7 +24,7 @@ as a **character** with questions, a costume, and a seat, all stored as files in
   surfaces your question live, renders Sims speech into Simlish, and runs the show's gears.
 - **You** show up in `audience/` — as yourself, or as a clearly-labeled fictional character.
 
-Full constitution: [`../../process/ticket-pr.yml`](../../process/ticket-pr.yml) · Format: [`../../process/repo-show-format.yml`](../../process/repo-show-format.yml)
+Full constitution: [`../../process/ticket-pr.md`](../../process/ticket-pr.md) · Format: [`../../process/FORMAT.md`](../../process/FORMAT.md)
 
 ---
 
@@ -107,7 +107,7 @@ We don't argue about it — the open, welcoming ecosystem is the whole statement
 > workflow the whole software industry runs on. Each show ships a **safe, focused, preloaded MOOLLM
 > subset** with exactly what you need to join and play (a doorway into the full microworld). You
 > don't need any of this to enjoy the show — but if you want to go deep, the real engine is right
-> here. Details: [`../../../process/play-along-skills.yml`](../../../process/play-along-skills.yml).
+> here. Details: [`../../../process/play-along-skills.md`](../../../process/play-along-skills.md).
 
 ---
 
@@ -148,7 +148,7 @@ audience member" gags are the late-night tradition, kept honest in git.
 
 - **Policy:** [`FICTIONAL-AUDIENCE.md`](FICTIONAL-AUDIENCE.md)
 - **Planted / running gags / guest-primed:** [`PLANTED-AUDIENCE.md`](../../_TEMPLATE/audience/PLANTED-AUDIENCE.md)
-- **Cross-show regulars:** [`../../../process/repo-show-regulars.yml`](../../../process/repo-show-regulars.yml) · Balcony 🤡💀: [`fictional-tragic-clown/`](fictional-tragic-clown/README.md) · [`fictional-grim-reaper/`](fictional-grim-reaper/README.md)
+- **Cross-show regulars:** [`../../../process/repo-show-regulars.md`](../../../process/repo-show-regulars.md) · Balcony 🤡💀: [`fictional-tragic-clown/`](fictional-tragic-clown/README.md) · [`fictional-grim-reaper/`](fictional-grim-reaper/README.md)
 - **Roster + ideas:** [`AUDIENCE-ROSTER-IDEAS.md`](AUDIENCE-ROSTER-IDEAS.md) · **Index:** [`INDEX.yml`](INDEX.yml)
 
 ---

@@ -377,7 +377,7 @@ Brian and Jens — we've been digging up your old **design arguments** on purpos
 - [Brian's Snap!Con 2025 Karlstrom address digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snapcon-2025-karlstrom-address.md)
 - [Jens's Karlstrom intro digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jens-monig/sources/snapcon-2025-karlstrom-intro.md)
 - [Cynthia Solomon — character room](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/cynthia-solomon/CHARACTER.yml)
-- [Old band back together](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/old-band-back-together.yml)
+- [Old band back together](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/old-band-back-together.md)
 - [Computer Science Logo Style notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/computer-science-logo-style.md)
 - [Simply Scheme notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/simply-scheme.md)
 - [Beauty and Joy of Computing notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/beauty-and-joy-of-computing.md)

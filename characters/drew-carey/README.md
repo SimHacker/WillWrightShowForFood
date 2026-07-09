@@ -55,8 +55,8 @@ a great conversation.
 
 - [Eric Hedman](../eric-hedman/README.md) — animated the House Party / *Drew Carey Show* tie-in
 - [Will Wright](../will-wright/README.md) — possible co-guest
-- [Sims Play-Along Narration](../../process/sims-play-along-narration.yml) — audience footage + live improv VO
-- [TicketPR / Question Is Right](../../process/ticket-pr.yml) — *Price Is Right* homage
+- [Sims Play-Along Narration](../../process/sims-play-along-narration.md) — audience footage + live improv VO
+- [TicketPR / Question Is Right](../../process/ticket-pr.md) — *Price Is Right* homage
 
 ## AI — one-line summary
 
