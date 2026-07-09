@@ -150,7 +150,7 @@ cars to building *types* with no global map and no absolute addressing — [full
 summary + PDF in this repo](city-generation-routing.md), [paper on the author's
 host](https://www.cs.unm.edu/~ackley/papers/paper_tsmall1_11_24.pdf), [source
 code](https://github.com/sixstring982/MFMv2-city). (When cyberpunk author
-**Rudy Rucker** got buried in Ackley links, the thing that finally landed was
+**[Rudy Rucker](../rudy-rucker/README.md)** got buried in Ackley links, the thing that finally landed was
 *"is there a video with pretty pictures of CAs, and not a guy talking?"* — and the
 answer was this city-gen video.)
 
@@ -191,7 +191,7 @@ repair and for engineering the machine that runs the flat physics. It's a
 robust-first answer to a performance question, which is exactly why Don loves it.
 
 *(A standing show idea: pose "why not 3D?" to a whole panel — Ackley, Norman
-Margolus, Scott Draves, Rudy Rucker, Henry Minsky — and collect the answers.)*
+Margolus, Scott Draves, [Rudy Rucker](../rudy-rucker/README.md), Henry Minsky — and collect the answers.)*
 
 ## The wider web: everyone Don dragged into this
 

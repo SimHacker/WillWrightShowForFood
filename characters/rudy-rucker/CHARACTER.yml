@@ -1,0 +1,64 @@
+# Rudy Rucker — invitation portrayal. NOT Rudy Rucker.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: rudy-rucker
+  name: "Rudy Rucker"
+  full_name: "Rudolf von Bitter Rucker"
+  type: correspondent
+  signifier: "🌀🐜"
+  status: living
+  born: "1946-03-22"   # Louisville, Kentucky
+  field: "Mathematics & set theory; cyberpunk SF; cellular automata; transrealism"
+  home: characters/rudy-rucker/
+  affiliation: "Professor emeritus, San José State University (CS, 1986–2004); formerly Autodesk (1988–1992)"
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3_warm_contact
+  authored_by: don-hopkins
+  note: "Warm, long-standing correspondent of Don's. Invitation drafted, not yet sent. He may edit, decline, delay, or remove anything."
+
+relationship:
+  to_project: warm_contact
+  to_don: |
+    Long, funny, affectionate CA correspondence (email; a documented exchange on Don's CAM6 wiki
+    where Rudy caught a scan-order-drift bug). Centerpiece: a May 2020 thread that began as
+    "History of Logo!" and turned into Don evangelizing Dave Ackley's Movable Feast Machine.
+  to_show: "Dream guest — CA jam, a co-designed MOOLLM CA skill, and a new 80s-infomercial plug for cellular automata"
+
+bio:
+  summary: |
+    **Rudolf von Bitter Rucker** (b. 1946) is a mathematician, computer scientist, and a founder of
+    the **cyberpunk** literary movement. PhD in mathematical logic/set theory (Rutgers); taught at
+    SUNY Geneseo, Heidelberg (Humboldt fellowship), and Randolph-Macon, then — inspired by an
+    interview with **Stephen Wolfram** — became a CS professor at **San José State University**
+    (1986–2004, emeritus). Best known for the **Ware Tetralogy** (*Software*, *Wetware*, *Freeware*,
+    *Realware*); *Software* and *Wetware* won the first two **Philip K. Dick Awards**. Pioneer of
+    **transrealism**; nonfiction includes *Infinity and the Mind*, *The Fourth Dimension*, and
+    *Mind Tools*. Four generations removed from the philosopher **G. W. F. Hegel**.
+  cellular_automata: |
+    Hired by **John Walker** of **Autodesk** after Hackers 2.0 (1987), Rucker worked there 1988–1992
+    and shipped three products: **CA Lab: Rudy Rucker's Cellular Automata Laboratory** (later free as
+    **CelLab**), **James Gleick's CHAOS: The Software**, and **BOPPERS: Artificial Life Laboratory**.
+    That work fed his novel *The Hacker and the Ants*. CelLab's illustrated manual and rule catalog
+    are, in Don's view, spectacular — a prime candidate to seed a MOOLLM CA skill.
+
+sources:
+  web:
+    - { title: "rudyrucker.com (blog / home)", url: "https://www.rudyrucker.com/" }
+    - { title: "Wikipedia — Rudy Rucker", url: "https://en.wikipedia.org/wiki/Rudy_Rucker" }
+    - { title: "CelLab (free, fourmilab)", url: "https://www.fourmilab.ch/cellab/" }
+    - { title: "Rucker biography (his own)", url: "https://rudyrucker.com/oldhomepage/biography.htm" }
+  media:
+    - { title: "CA Lab demo (Belousov–Zhabotinsky on 3D texture; 1-800 plug at end)", url: "https://www.youtube.com/watch?v=lyZUzakG3bE" }
+  books: ["Software (1982)", "Wetware (1988)", "Freeware (1997)", "Realware (2000)", "Infinity and the Mind", "The Fourth Dimension", "Mind Tools", "The Hacker and the Ants"]
+  provenance_private: SimHacker/DonHopkins/characters/don-hopkins/correspondence/rudy-rucker.yml
+
+see_also:
+  - { path: invitation.md, why: "Warm Repo Show invitation (draft)" }
+  - { path: ideas.md, why: "Show hooks — CA skill, the infomercial plug, why-not-3D, CA jam" }
+  - { path: ../dave-ackley/ca-correspondence-story.md, why: "The MFM thread Rudy got pulled into — 'pretty pictures, not a guy talking'" }
+  - { path: ../norman-margolus/, why: "CA looping fest co-guest" }
+  - { path: ../jim-crutchfield/, why: "Chaos / video feedback; CA-art jam" }
+  - { path: ../stephen-wolfram/, why: "The Wolfram interview that turned Rudy toward CS" }
