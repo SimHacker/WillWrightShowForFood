@@ -1,0 +1,18 @@
+# Reese Jones — correspondence (Don Hopkins)
+
+channels:
+  facebook:
+    status: warm_mutual_reading
+    note: "Don reads Reese's feed regularly; Reese likely reads Don's. Messenger thread exists. No private content in repo."
+
+feed_themes:
+  # Topics Reese posts about publicly on Facebook (observed by Don, 2025–2026)
+  - "Political economy — donor states vs welfare states"
+  - "Who makes the content you read on social media — provenance and authorship"
+  - "Spinoza's god = nature — naturalist theology"
+  - "Advanced manufacturing — mass timber (Sumitomo W350), CLT/glulam engineering"
+
+status:
+  relationship: warm
+  invitation: invitation.md
+  default_ask: solo_video

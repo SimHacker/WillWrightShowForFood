@@ -80,10 +80,11 @@ right_away:
   minsky_siblings:
     - { id: margaret-minsky, show: repo-shows/margaret-minsky/, invite: draft, next: "haptics + sibling session w/ Henry (optional couple: no — siblings)" }
 
-  complexity_ca_cluster:
-    - { id: jim-crutchfield, show: repo-shows/jim-crutchfield/, invite: draft, contact: [email redacted], next: "Jan 2025 Psychedelic Graphics HN — video feedback + CAM6 + WebGPU sim jam" }
+  complexity_ca_cluster:  # SFI nexus — the chaotic-CA/feedback/complexity universal hub
+    - { id: jim-crutchfield, show: repo-shows/jim-crutchfield/, invite: draft, contact: [email redacted], next: "Jan 2025 Psychedelic Graphics HN — video feedback + CAM6 + WebGPU sim jam; Art & Science Lab + Don's CA artwork storytelling (CAM6 demo finale); rules-and-art jam" }
     - { id: dave-tristram, show: repo-shows/dave-tristram/, invite: draft, next: "Raster Masters @ Dead/Shoreline — pair Crutchfield; Live Canvas beta PRIVATE until Dave clears" }
     - { id: stephen-wolfram, show: repo-shows/stephen-wolfram/, invite: draft, next: "MOOLLM readings + NKS" }
+    - { id: reese-jones, show: characters/reese-jones/, invite: draft, warm_contact: true, next: "SFI board trustee — agent-based modeling/ALife in the CA rules-and-art jam; earth-soul (SimEarth/Gaia/worms); filmed Sam's 2016 Overcomplicated launch" }
 
   preservation_archives:
     - { id: phil-salvador, show: repo-shows/phil-salvador-simrefinery/, invite: none, next: "write invitation + love" }

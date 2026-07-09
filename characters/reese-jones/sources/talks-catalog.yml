@@ -1,0 +1,40 @@
+# Reese Jones talks — girder
+
+meta:
+  rendered_edition: talks-catalog.md
+  kind: public_talks
+  consent: public
+  source: "Reese's own LinkedIn projects list, YouTube/SoundCloud channels"
+
+talks:
+  - { year: 2018, title: "Blockchains like Biology", venue: "APIdays Paris", url: "https://youtu.be/vSl-8Jj3pDY" }
+  - { year: 2018, title: "Darwinian Evolution of Blockchains", url: "https://youtu.be/4JEFGtsu0s4" }
+  - { year: 2018, title: "Computational Biology Entrepreneurship panel", venue: "UC Berkeley", url: "https://youtu.be/myzHOiZWZ6o" }
+  - { year: 2016, title: "Internet as Mirror (digital twin, privacy, data science)", venue: "TEDxCincinnati", url: "https://youtube.com/watch?v=3eM2gTgJZM4" }
+  - { year: 2016, title: "Hoover Institution talk to visiting CEOs", venue: "Stanford", url: "https://youtube.com/watch?v=vh0mrcabM1w" }
+  - { year: 2015, title: "Life Before Earth", venue: "Singularity University GSP15", url: "https://youtube.com/watch?v=skEfJ0-jv9o" }
+  - { year: 2015, title: "Complexity — What's Worth Doing? (Now Labs)", venue: "Fort Mason SF", url: "https://youtu.be/N-vbfvsDbhk" }
+  - { year: 2015, title: "Health Tech 2.0 keynote — biophysics, homebrew club, internet history", venue: "Plug and Play Sunnyvale", url: "https://soundcloud.com/reese-jones-3/reese-jones-health-tech-20-meetup-at-plug-n-play-june-16-2015" }
+  - { year: 2014, title: "Consciousness in the Cloud — ALife, multi-agent systems, agent-based modeling, complexity", venue: "Netflix HQ (Biota podcast)", url: "https://ia600404.us.archive.org/0/items/biota_podcasts/citc_022614.mp3" }
+  - { year: 2014, title: "Sex, Ego, Death, Internet and Singularities", venue: "SXSW Austin", url: "https://youtu.be/QxXdcGLpJxo" }
+  - { year: 2014, title: "Stanford MS&E 178 entrepreneurship talk", venue: "Stanford", url: "https://youtu.be/zPWA4hKFM_A" }
+  - { year: 2013, title: "DNA LaserPrinter — Cambrian Genomics", venue: "SemiSynBio Cambridge MA", url: "https://youtube.com/watch?v=HjR6hzAYygk" }
+  - { year: 2012, title: "Biology of Consciousness", venue: "Humanity+", url: "https://youtube.com/watch?v=cn5939lF6ME" }
+  - { year: 2012, title: "Are antibiotics making us fat?", venue: "TEDxSF UCSF Mission Bay", url: "https://youtube.com/watch?v=vj9IZ-yqAfI" }
+  - { year: 2012, title: "Singularities", venue: "METal International LA", url: "https://youtube.com/watch?v=FxmKuHH3h30" }
+
+theses:
+  everything_evolves: "Networks, blockchains, genomes, technologies — one substrate under natural selection"
+  internet_as_mirror: "Your data shadow is a digital twin"
+  simulation_humility: "Can't fold one protein in one neuron — whole-brain sim far away (rhymes with Will 1996 'prop up the illusion')"
+  alife_neighborhood: "Agent-based modeling / artificial life — SimEarth/SimLife/Spore kin"
+
+patents:
+  - { id: US4901342, what: "LAN over long telephone lines" }
+  - { id: US5003579, what: "System for connecting computers via telephone lines (PhoneNET)" }
+  - { id: US7539293, what: "Telephone controlled entertainment" }
+
+see_also:
+  - talks-catalog.md
+  - overcomplicated-2016-video.md
+  - ../CHARACTER.yml

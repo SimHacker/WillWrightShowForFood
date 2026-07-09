@@ -36,6 +36,27 @@ UC Davis physicist of complexity; video feedback, edge of chaos + evolving cellu
 ### 3. Raster Masters / Dave Tristram crossover
 Same HN cluster — Shoreline SGI rigs, Dead "conferences," Electropaint. Co-guest with [`../dave-tristram/`](../dave-tristram/).
 
+### 4. Art & Science Laboratory — CA as an art medium
+Jim is president of the **[Art & Science Laboratory](https://artscilab.com/)** (Santa Fe) — complexity
+science and art made in the same room. That's exactly the seam Don works: cellular automata not only
+as computation but as **performance and storytelling**. Segment: what does honest art-from-science
+look like when the science is chaos, feedback, and CA?
+
+### 5. Don's CA artwork storytelling — the CAM6 demo finale
+At the end of Don's [long-form CAM6 demo made for Norman Margolus](https://www.youtube.com/watch?v=LyLMHxRNuck)
+he turns the CAM6 platform from lab instrument into **narrative art** — painting with overlapping
+cellular automata layers, cells rendered as animated SimCity tiles, telling a story with the rules.
+It's the natural bring-your-own-artwork contribution to an Art & Science conversation with Jim.
+→ [`../norman-margolus/the-cam6-demo-for-norman.md`](../norman-margolus/the-cam6-demo-for-norman.md)
+
+### 6. The cellular automatists' rules-and-art jam
+Jim anchors the complexity end of the repo's CA gang: **video feedback** and **evolving CA that
+compute** alongside [Norman Margolus](../norman-margolus/README.md) (CAM-6 / reversible CA),
+[Scott Draves](../scott-draves/README.md) (Electric Sheep / generative art), Don's CAM6, and — from
+his SFI board seat — [Reese Jones](../reese-jones/README.md) (agent-based modeling / ALife). The
+Santa Fe Institute is the shared home for all of it. See the
+[Margolus CA looping fest](../../repo-shows/norman-margolus/SHOW.yml).
+
 ## Sources (public)
 
 - Show seed: [`repo-shows/jim-crutchfield/`](../../repo-shows/jim-crutchfield/)

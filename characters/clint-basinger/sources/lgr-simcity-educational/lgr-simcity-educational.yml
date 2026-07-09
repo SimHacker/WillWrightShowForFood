@@ -1,0 +1,79 @@
+# LGR — SimCity Educational Version Unboxing & Overview
+# Girder for machines; humans read README.md in this dir.
+# Lives in Clint Basinger's (LGR) room — a topic for the Repo Show, not a Don-room source.
+
+meta:
+  kind: youtube_video_source
+  title: "LGR - SimCity Educational Version Unboxing & Overview"
+  channel: "LGR (Lazy Game Reviews)"
+  creator_public_name: "Clint Basinger"
+  channel_url: https://www.youtube.com/@LGR
+  video_url: https://www.youtube.com/watch?v=edXRNtuAGTg
+  video_id: edXRNtuAGTg
+  published: "2011-04-22"
+  duration_seconds: 1172           # ~19m32s (from downloaded audio)
+  views_at_capture: 90827
+  captured: "2026-07-09"
+  channel_subscribers_at_capture: 1810000
+
+description_verbatim: |
+  An overview of the "School Edition" Lab Pack of SimCity Classic by Maxis. Unboxing,
+  first impressions of the package and testing of the radically rad software ensues.
+
+subject:
+  what: "The SimCity Classic 'School Edition' Lab Pack — Maxis's educational packaging of SimCity (Macintosh, ~1996)"
+  contents_shown: "Teacher's guide, slimline manual + terrain editor, Spanish addendum, license/site-license, Maxis Maxims sheet, 1996 educational software catalog, copyable student worksheets; runs SimCity v1.4C on an LC575"
+  why_show_topic: |
+    The educational edition is the classroom branch of the game Don wrote for Unix / NeWS / HyperLook
+    (multiplayer SimCity) and later open-sourced as Micropolis. It's a natural on-air topic WITH Clint:
+    Maxis's 'software toys that teach' meets Micropolis-in-the-browser and the preservation ethos.
+    LGR's own eBay-rescued primary source becomes a show segment.
+
+catalog_mentions:   # educational editions LGR shows in the Maxis catalog
+  - SimLife
+  - SimCity 2000
+  - Widget Workshop
+  - SimTown
+  - SimEarth
+  - SimFarm
+  - SimAnt
+  - SimCity Classic
+  - SimHealth
+
+transcript:
+  method: "whisper (openai-whisper) small.en, local, FP32/CPU"
+  source_audio: "yt-dlp bestaudio -> mp3 (audio NOT committed — big binaries stay out; Google Drive per production plan)"
+  files:
+    - transcript.md      # readable
+    - transcript.srt     # timestamped
+  status: machine_generated_unverified
+  caveat: "Clear audio but uncorrected; proper nouns/asides may be wrong. Not a quote source until proofread. YouTube had NO captions/auto-captions."
+
+comments:
+  files:
+    - comments.md        # curated wisdom-of-the-crowd analysis
+    - comments.yml       # structured girder
+  count_shown: 164
+  headline: "15 years of SimCity-in-the-classroom testimonials + 'please scan the catalogs' requests + Clint's own replies"
+  pitch_value: "Documented audience demand — evidence base for educator/library/institution outreach"
+
+don_connection:
+  documented:
+    - "Don Hopkins appears in the video's comment thread (visible in the comment list)."
+    - "Don wrote the Unix/NeWS/HyperLook and multiplayer SimCity, then open-sourced SimCity as Micropolis."
+  backstory: TODO_DON            # Don's backstory with the educational edition / this video — fill in README
+  promise_to_clint: TODO_DON     # the specific promise Don made to Clint (LGR) — fill in README
+
+show:
+  seed: ../../../../repo-shows/clint-basinger/
+  angle: "React to this artifact live; Maxis educational toys -> Micropolis in the browser -> preservation"
+
+ties:
+  - ../../invitation.md                          # Clint's invitation (LGR)
+  - ../../README.md
+  - ../../../../repo-shows/clint-basinger/README.md
+  - ../../../don-hopkins/career/simcity-lineage.yml   # Don's SimCity -> Micropolis lineage
+
+see_also:
+  - "MicropolisCore: https://github.com/SimHacker/MicropolisCore"
+  - "micropolisweb.com (browser Micropolis)"

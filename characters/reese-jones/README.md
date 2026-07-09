@@ -13,23 +13,36 @@ screen across the network — proto-screencasting, decades early. Farallon becam
 acquired by Motorola.
 
 Then he went back to biology — or rather, decided technology *is* biology. Associate founder and
-board trustee of **Singularity University**; chairman of **Cambrian Genomics** (the "DNA laser
-printer"); reported board trustee of the **Santa Fe Institute**; speaker on evolution, genomics,
-and why our overcomplicated systems should be studied the way field biologists study jungles.
-He records and publishes talks on [his YouTube channel](https://www.youtube.com/@ReeseJones1) —
-including [Sam Arbesman's 2016 *Overcomplicated* book event](sources/overcomplicated-2016-video.md).
+board trustee of **Singularity University**; **Santa Fe Institute board trustee** (2012–2015);
+**Facebook advisor** (2016–); chairman of **Cambrian Genomics** (the "DNA LaserPrinter").
+He's given [fifteen cataloged public talks](sources/talks-catalog.md) with one recurring thesis:
+networks, blockchains, genomes, and technologies are **one evolving substrate** — blockchains
+evolve by natural selection like DNA; the internet is a mirror holding your digital twin; and a
+computer that can't fold one protein in one neuron should stay humble about simulating minds.
+He records and publishes his own talks — including
+[Sam Arbesman's 2016 *Overcomplicated* book event](sources/overcomplicated-2016-video.md).
 
 ## Why he's here
 
-- **He filmed Sam first.** Reese recorded Sam's *Overcomplicated* launch in July 2016 — eight
-  years before Chaim introduced Sam to Don. The Don–Sam–Reese triangle closes itself.
-- **Santa Fe Institute orbit.** Maxis's SFI relationship is a documented thread in Chaim's
-  *Building SimCity*; Reese is reported SFI board — the institution edge of the complexity story.
-- **Biology of technology.** His thesis and Sam's *Overcomplicated* naturalist method are the
-  same lens Will pointed at SimEarth, SimLife, and Spore.
-- **User groups as proto-open-source.** BMUG's kit culture (wiring plans in the newsletter,
-  adapters at cost) is the ancestor of the fork-it-yourself repo this show lives in.
-- **Don knows him.** Warm contact.
+- **Agent-based modeling, by name.** His *Consciousness in the Cloud* session (Netflix HQ, 2014)
+  covered artificial life, multi-agent systems, evolutionary computation, and complexity theory —
+  the SimEarth/SimLife/Spore neighborhood, on the record.
+- **Simulation humility.** His one-protein-one-neuron argument is Will's 1996 "no hope — prop up
+  a convincing illusion," restated by a biophysicist.
+- **Santa Fe Institute, from the boardroom.** SFI is this repo's complexity/CA/feedback nexus —
+  [Jim Crutchfield](../jim-crutchfield/README.md) and [Owen Densmore](../owen-densmore/README.md)
+  both flow from it, and Maxis × SFI is a documented thread in Chaim's *Building SimCity*. Reese
+  served on SFI's **board**.
+- **Earth soul.** "Living organisms as applications platforms," an "internet of living things,"
+  astrobiology — the living-planet idea, right at home in the premiere's
+  [SimEarth ↔ Gaia ↔ worms-of-Ground](../../repo-shows/will-wright-premiere/game-bridge-simearth-gaia-worms.yml) bridge.
+- **He filmed Sam first.** July 2016, eight years before Chaim introduced Sam to Don. The
+  Don–Sam–Reese triangle closes itself.
+- **User groups as proto-open-source.** BMUG's kit culture — wiring plans in the newsletter,
+  adapters at cost — is the ancestor of the fork-it-yourself repo this show lives in.
+- **Timbuktu → Twitch.** He shipped screen sharing and Mac audio capture decades before
+  streaming; he even patented telephone-controlled entertainment.
+- **Don knows him.** Warm contact; they read each other on Facebook.
 
 ## Rooms
 
@@ -37,7 +50,9 @@ including [Sam Arbesman's 2016 *Overcomplicated* book event](sources/overcomplic
 |--|--|
 | **Invitation** | [invitation.md](invitation.md) |
 | **Hooks** | [ideas.md](ideas.md) |
-| **Sources** | [sources/overcomplicated-2016-video.md](sources/overcomplicated-2016-video.md) |
+| **Talks catalog** | [sources/talks-catalog.md](sources/talks-catalog.md) — 15 talks, 2012–2018 |
+| **The Sam recording** | [sources/overcomplicated-2016-video.md](sources/overcomplicated-2016-video.md) |
+| **Correspondence** | [correspondence.yml](correspondence.yml) |
 | **Sam's room** | [sam-arbesman](../sam-arbesman/README.md) — he filmed the book talk |
 | **SFI cluster** | [owen-densmore](../owen-densmore/README.md) · [jim-crutchfield](../jim-crutchfield/README.md) |
 

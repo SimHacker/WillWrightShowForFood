@@ -81,6 +81,38 @@ abilities:
   verifiable: Public talks; Cambrian Genomics; biophysics background
   combos_with:
   - PHONE-WIRE-NETWORK
+- id: ALIFE-COMPLEXITY
+  name: Consciousness in the Cloud
+  type: activated
+  mana: '{G}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: alifeComplexity
+    signature: alifeComplexity(system) → agent-based reading
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Artificial life, multi-agent systems, evolutionary computation, agent-based modeling, complexity theory — on the record since 2014.
+  verifiable: "Consciousness in the Cloud, Netflix HQ 2014 (Biota podcast); SFI board trustee 2012-2015 (his LinkedIn)"
+  combos_with:
+  - TECH-AS-BIOLOGY
+- id: SIMULATION-HUMILITY
+  name: Simulation Humility
+  type: static
+  mana: '{W}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: simulationHumility
+    signature: simulationHumility(claim) → honest scope
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: A computer can't fold one protein in one neuron — keep simulation claims honest (rhymes with Will Wright 1996 "prop up the illusion").
+  verifiable: Cryptopolitan blockchain-evolution interview
+  combos_with:
+  - ALIFE-COMPLEXITY
 - id: RECORD-THE-TALK
   name: Record the Talk
   type: activated
@@ -102,6 +134,8 @@ invoke_rules:
 see_also:
 - path: CHARACTER.yml
   why: Bio girder — invitation status
+- path: sources/talks-catalog.md
+  why: 15 public talks 2012-2018, recurring theses
 - path: invitation.md
   why: Letter to Reese
 - path: sources/overcomplicated-2016-video.md

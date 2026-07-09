@@ -48,10 +48,12 @@ bio:
     - "The Santa Cruz Dynamical Systems Collective (Eudaemonic Pie / roulette)"
     - "Art & Science Laboratory (Santa Fe)"
 
-connections:
   feedback_kinship: "The reason for the invite: **video feedback** and **iterated graphical systems** — point a camera at its own screen and you get spatiotemporal chaos. It's the same family Don plays in with his **CAM6** cellular-automata performance platform and Scott Draves's generative work. A natural 'digress, recurse, and iterate' jam."
   cellular_automata: "Crutchfield's edge-of-chaos / evolving-CA work sits right next to Don's CAM6 and Norman Margolus's CAM-6 hardware — complexity living between order and randomness."
   complexity_lineage: "Santa Fe Institute complexity science; the Santa Cruz chaos lineage (Farmer, Packard, Shaw) that James Gleick popularized."
+  art_and_science: "President of the **Art & Science Laboratory** (Santa Fe) — CA/chaos AS an art medium; the seam for Don's **CA artwork storytelling** at the finale of the CAM6 demo made for Norman Margolus (painting with overlapping CA layers, cells as animated SimCity tiles)."
+  sfi_nexus: "Santa Fe Institute is the repo's complexity/CA/feedback nexus — Owen Densmore (Complex Systems Summer School → Redfish) and Reese Jones (SFI board trustee) also flow from it."
+  rules_and_art_jam: "Anchors the cellular-automatists' rules-and-art jam: Don's CAM6 + Norman Margolus + Scott Draves + Reese Jones's agent-based modeling."
 
 show_suggestions:
   - { seed: ../../repo-shows/jim-crutchfield/, what: "Edge of Chaos: video feedback live, evolving cellular automata that compute, and computational mechanics — with Don's CAM6 and (dream) Scott Draves + Norman Margolus." }
@@ -77,5 +79,7 @@ sources:
 see_also:
   - { path: ../norman-margolus/, why: "Cellular-automata machines / reversible CA — joint CA show" }
   - { path: ../scott-draves/, why: "Generative art, feedback, edge of chaos — dream co-guest" }
-  - { path: ../don-hopkins/, why: "Host — CAM6 cellular-automata performance platform; video feedback" }
+  - { path: ../reese-jones/, why: "SFI board trustee; agent-based modeling / ALife — SFI nexus + art jam" }
+  - { path: ../don-hopkins/, why: "Host — CAM6 cellular-automata performance platform; video feedback; CA artwork storytelling" }
+  - { path: ../don-hopkins/cam6-cellular-automata-machine.md, why: "CAM6 writeup; demo finale is the CA artwork storytelling" }
   - { path: ../../repo-shows/jim-crutchfield/, why: "Show seed" }

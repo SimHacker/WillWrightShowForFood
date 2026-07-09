@@ -7,7 +7,7 @@ show:
   type: solo
   host: Don Hopkins
   guests: ["James P. Crutchfield"]
-  with: ["Scott Draves", "Norman Margolus"]   # dream co-guests for the CA/feedback jam
+  with: ["Scott Draves", "Norman Margolus", "Reese Jones"]   # dream co-guests for the CA/feedback/art jam (all SFI-adjacent)
   character: characters/jim-crutchfield/
   topic: "Video feedback, evolving cellular automata, and the edge of chaos — iterated systems that compute. Recurse, digress, iterate. Built live alongside Don's CAM6 platform."
   status: seed
@@ -24,7 +24,9 @@ dream_segments:
   - "Edge of chaos: evolve cellular automata until they actually compute — frozen vs. random vs. the sweet spot."
   - "Geometry from a time series: reconstruct a hidden attractor from one stream of measurements."
   - "Computational mechanics: ε-machines — the minimal model of a process's intrinsic computation."
-  - "CA jam with Don's CAM6 + (dream) Scott Draves's generative art + Norman Margolus's CAM-6 / reversible CA."
+  - "Art & Science Laboratory: CA and chaos AS an art medium — Jim's Santa Fe org, on turf Don shares."
+  - "Don's CA artwork storytelling: the finale of the CAM6 demo made for Norman Margolus — painting with overlapping CA layers, cells as animated SimCity tiles, telling a story with the rules (youtube.com/watch?v=LyLMHxRNuck)."
+  - "The cellular automatists' rules-and-art jam: Don's CAM6 + Norman Margolus's CAM-6/reversible CA + Scott Draves's generative art + Reese Jones's agent-based modeling — all under the SFI roof."
   - "Story turn: the Santa Cruz Chaos Cabal and the Eudaemonic Pie."
 
 format:

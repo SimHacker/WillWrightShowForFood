@@ -1,0 +1,103 @@
+# Comments analysis — girder for machines; humans read comments.md
+# Public YouTube comments on LGR's SimCity Educational Version, curated.
+
+meta:
+  kind: youtube_comments_analysis
+  video_id: edXRNtuAGTg
+  video_title: "LGR - SimCity Educational Version Unboxing & Overview"
+  comment_count_shown: 164
+  captured: "2026-07-09"
+  consent: public
+  rendered_edition: comments.md
+  caveat: "Quoted from the public comment thread as captured by Don. Handles are public YouTube names. Like counts included only where shown."
+
+themes:
+  simcity_in_school:
+    weight: primary
+    what: "Unprompted testimonials that SimCity was taught / played in classrooms"
+    voices:
+      - { who: "@invghost", likes: 71, quote: "You could use the latest Sim City in a business economics class to show what not to do" }
+      - { who: "@Zipzeolocke", quote: "high school computer lab teacher had SimCity 2000 installed... one month as part of the curriculum" }
+      - { who: "@Xanifur", quote: "We played SimCity in highschool economics class... graduated 2006" }
+      - { who: "@ZachHighwind", quote: "my high school used to teach that as a class" }
+      - { who: "@TriegaDN", quote: "introduced to simcity via SC2k in tech class middle school; teacher offered to burn copies" }
+      - { who: "@MonsiorTortoise", quote: "back in the 80s our school had BBC model B computers, and we got to play simcity, civilisation and repton" }
+      - { who: "@HagenFlachmann", quote: "Sim City was used in schools? Thats just awesome!" }
+      - { who: "@mokeimusic", likes: 3, quote: "You should teach a Sim City class, I'm sure some people would come" }
+      - { who: "@1Deltaforce1", quote: "I think I would have done better in school if they had this" }
+      - { who: "@JimPlaysGames", quote: "Wish I'd had this in my school... were there many other big games that had educational versions?" }
+    use: "Evidence of demand for outreach to educators, libraries, museums, funders"
+
+  preservation_requests:
+    weight: primary
+    what: "Crowd asked LGR to scan/archive the print materials — the project's mission, pre-stated"
+    voices:
+      - { who: "@jonathankleinow2073", likes: 4, quote: "Would you consider scanning some of the brochures and catalogs and uploading them somewhere so we can get a better look?" }
+      - { who: "@uyjulian", quote: "you should save all those pages on a computer with a scanner" }
+      - { who: "@Bruce-LeeLSA", quote: "old library in GA had a pc set up with this version... Found it with my old Tom Tom in its POI list" }
+    use: "Justifies a fundable scan + proofread + interlink deliverable"
+
+  lgr_replies:
+    weight: primary
+    what: "Clint Basinger (LGR) answering in the thread — warm, funny, preservation-minded"
+    quotes:
+      - "It was liberated from an old school computer lab several years ago."
+      - "Many of the sim games I've owned for years, some of them since 1992 or so... most came from eBay and local thrift stores."
+      - "About ten bucks with shipping included."
+      - "This Mac is from 1994 - as such it has a 3.5\" floppy drive :D"
+      - "Macs do crash! In fact I've probably had more Macs crash than PCs in recent years..."
+      - "yes, there was an educational version of SimCity 2000. You can see it in the Maxis catalog shown in the video ;)"
+      - "I'd sign up for classes again just to take a course that used this!"
+      - "Rome: Pathway to Power! ... Maxis published it in the US, but it was developed by Firstlight."
+    use: "The guest is already engaged in public — warms the invitation"
+
+  maxis_educational_facts:
+    weight: secondary
+    editions_named: [SimLife, SimCity 2000, Widget Workshop, SimTown, SimEarth, SimFarm, SimAnt, SimCity Classic, SimHealth]
+    details:
+      mortarboard: "The 'education hat' icon is a mortarboard (corrected by @DeinonychusCowboy, @Markell1991, @Hellwyck)"
+      zurks_learning_safari: "@someperson42 — bundled with Microsoft Bob"
+      rome_pathway_to_power: "Maxis-published, Firstlight-developed (per LGR)"
+      phone_800_99_MAXIS: "@sergeantpanther2000 (16 likes) dares LGR to call; @cpufreak101: 'now some dating hotline'"
+      pricing: { lab_pack_usd: 80, fifty_units_usd: 600, lgr_paid_usd: 10 }
+      isbn_on_software: "1-56754-090-2 (@AhmetwithaT noted ISBNs on software)"
+
+  aesthetic_love:
+    weight: secondary
+    voices:
+      - { who: "@Markell1991", quote: "I love the design and look of old Maxis products; the art deco kinda style" }
+      - { who: "@MadameSomnambule", quote: "90s graphic design, man. My aesthetic" }
+      - { who: "@Uiks55", quote: "the purple UFO shows up in a lot of maxis products... later Spore's Steve" }
+
+  nostalgia_hardware:
+    weight: secondary
+    voices:
+      - { who: "@JagOfTroy", quote: "That Macintosh brought back more memories than the actual game did" }
+      - { who: "@AceStrife", quote: "the disk activity noise... just how iconic" }
+      - { who: "@LintLoaf01", quote: "God I love that click the floppys made" }
+      - { who: "@CRodenbarger", quote: "reviewing a game on an old armchair 8 years later with over a million subs" }
+
+  humor:
+    weight: color
+    voices:
+      - { who: "@elbryan42", quote: "I NEED a jet powered donkey!" }
+      - { who: "@thepirategamerboy12", likes: 13, quote: "Does anybody else find the 'music' kind of creepy?" }
+      - { who: "@tifforo1", likes: 19, quote: "Teach kids that a city should have door to door rail and a police station in every block!" }
+
+show_hooks:
+  - "Constructionist case, told by the audience — SimCity in the classroom, then vs. Micropolis now"
+  - "Preservation ethic: 'liberating' software from dead computer labs (Clint's phrase)"
+  - "React-live to the artifact; scan the teacher's guide + worksheets + 1996 catalog on air"
+  - "Maxis educational line as a lost genre — the mortarboard icon tour"
+
+pitch_use:
+  audience_demand_evidence: [simcity_in_school, preservation_requests]
+  engaged_guest: lgr_replies
+  fundable_deliverable: "Scan + proofread + interlink (Yoot x Alan Kay treatment)"
+
+see_also:
+  - README.md
+  - transcript.md
+  - ../../invitation.md
+  - ../../../../repo-shows/clint-basinger/README.md
+  - ../../../yoot-saito/from-alan-kay.yml   # the interlinked-restoration standard to match
