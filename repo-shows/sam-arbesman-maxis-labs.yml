@@ -1,0 +1,47 @@
+# SEED — Samuel Arbesman: Maxis Labs 2 × Microcosm × adjacent possible
+# Intro via Chaim Gingold (2024). Consent not yet asked.
+
+show:
+  id: sam-arbesman-maxis-labs
+  status: seed
+  type: solo
+  guest: sam-arbesman
+  character: characters/sam-arbesman/
+  dream_guest: false
+  warm_contact: true
+  intro_via: chaim-gingold
+
+episode:
+  working_title: "Maxis Labs 2 — Adjacent Possible for Simulation Toys"
+  subtitle: "Microcosm Industries × Overedge institutions × glass-box Micropolis — complexity science meets runnable repo"
+
+pitch: |
+  **Samuel Arbesman** catalyzes the adjacent possible — catalogs of ideas (Overedge Catalog),
+  simulation toys in the spirit of SimCity (**Microcosm Industries**), books on code-as-magic and
+  overcomplicated systems. **Chaim Gingold** introduced Don after Sam's *Building SimCity* interview;
+  Sam is deeply aligned on **Maxis Labs 2**: a research institution that ships forkable microworlds,
+  not nostalgia.
+
+  Repo Show: Sam names the institution design brief; Don demos what already runs (MicropolisCore,
+  Soul City, CAM6, character graph); connect Long Now patience to Will's accepted premiere and
+  data-portability crown jewel. Optional three-way with Chaim — historian + complexity scientist +
+  toolchain author.
+
+topics:
+  - "Maxis Labs 2 — institution charter vs fan reconstruction"
+  - "Microcosm Industries spirit × browser Micropolis / Soul City"
+  - "Overedge Catalog ↔ Repo Show as inspectable knowledge-creation org"
+  - "Linnaean catalogs — lists of lists ↔ characters/ + skills pyramid"
+  - "Complexity science × glass-box city rules and CAM6 cellular automata"
+  - "Will 1996 data portability — Long Now × premiere guest lens"
+  - "Humanistic Computation & Resonant Computing Manifesto × MOOLLM harvest"
+  - "HyperCard lineage — repo-as-simulation deep move"
+  - "Optional Chaim three-way — Building SimCity vs building it now"
+
+see_also:
+  - characters/sam-arbesman/invitation.md
+  - characters/sam-arbesman/ideas.md
+  - characters/sam-arbesman/sources/microcosm-maxis-labs.md
+  - characters/chaim-gingold/
+  - repo-shows/will-wright-premiere/
+  - process/VISION.md

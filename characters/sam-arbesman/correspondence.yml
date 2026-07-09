@@ -1,0 +1,62 @@
+# Samuel Arbesman × Don Hopkins — correspondence summary (public-safe)
+# Intro via Chaim Gingold, July 2024. Standards: ../../schemas/portrayal-standards.md
+
+meta:
+  with: sam-arbesman
+  curated_by: don-hopkins
+  consent: not_yet_asked
+  channel: email
+  intro_via: chaim-gingold
+  span: "2024-07 — 2025-04 (mail); video call planned, not held"
+  warm_contact: true
+  provenance_private: DonHopkins/temp/old-email/intro.txt (not checked in)
+
+gist: |
+  **Chaim Gingold** offered to connect Don to **Sam Arbesman** after Sam interviewed Chaim on
+  *Building SimCity* and Maxis history. Chaim reported Sam as "super into all things Maxis" and
+  curious what a **Maxis 2.0** fan reconstruction / next lab would look like.
+
+  Mail threads touched **Infernal Research** (Interval, Bell Labs, cellular automata lineage) and
+  Don's congratulations on ***The Magic of Code*** (April 2025). A video call was discussed but
+  never scheduled — the Repo Show is the proposed better venue: async repo accretion + live stream,
+  with Sam's complexity lens and institution-catalog instincts meeting Don's running Micropolis /
+  Soul City stack.
+
+threads:
+  chaim_intro:
+    date: "2024-07"
+    via: chaim-gingold
+    chaim_note: "Super into all things Maxis; fantasizes about Maxis 2.0"
+    source: characters/will-wright/sources/2024-building-simcity-chaim-intro/
+
+  infernal_research:
+    date: "2024-07"
+    what: |
+      Shared thread on Interval Research lineage, Bell Labs culture, and cellular automata as
+      intellectual connective tissue between Sam's complexity writing and Don's CAM6 / microworld work.
+
+  magic_of_code_congrats:
+    date: "2025-04"
+    what: Don congratulated Sam on publication of The Magic of Code
+
+  video_call_never_scheduled:
+    date: "2024-2025"
+    status: planned_not_held
+    repo_show_pitch: |
+      Async public repo + recorded conversation replaces one-off video chat; Sam can correct
+      portrayal anytime per invitation.md house law.
+
+connects_in_repo:
+  - { path: ideas.md, why: "Maxis Labs 2 hooks" }
+  - { path: sources/microcosm-maxis-labs.md, why: "Microcosm × Maxis Labs 2 alignment" }
+  - { path: ../chaim-gingold/, why: "Intro source; optional three-way show" }
+  - { path: ../../repo-shows/sam-arbesman-maxis-labs.yml, why: "Show seed" }
+  - { path: ../will-wright/invitation.md, why: "Accepted premiere guest — Maxis Labs 2 design partner" }
+
+show_hooks:
+  - "Maxis Labs 2 — institution brief, not fanfiction"
+  - "Microcosm Industries spirit × running Soul City / Micropolis repo"
+  - "Overedge Catalog ↔ Repo Show as new knowledge-creation org type"
+  - "Chaim three-way — historian + complexity scientist + toolchain author"
+  - "Long Now patience × Will data-portability crown jewel"
+  - "HyperCard kid meets git-native simulation engine"

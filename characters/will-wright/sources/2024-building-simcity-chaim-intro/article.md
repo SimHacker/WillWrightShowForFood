@@ -23,7 +23,7 @@ Chaim offered to connect Don to **Sam Arbesman** — complexity scientist, Maxis
 | Chaim Gingold | [`characters/chaim-gingold/`](../../../../chaim-gingold/README.md) |
 | Sam Arbesman | [`characters/sam-arbesman/`](../../../../sam-arbesman/README.md) |
 
-**Status:** Stub — expand when Don accepts intro or records show.
+**Status:** Invitation + show seed — [`characters/sam-arbesman/`](../../../sam-arbesman/README.md) · [`repo-shows/sam-arbesman-maxis-labs.yml`](../../../../repo-shows/sam-arbesman-maxis-labs.yml)
 
 ---
 

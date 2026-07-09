@@ -258,7 +258,7 @@ guests:
   terry-winograd: { invitation_status: not_yet_asked, show_seed: repo-shows/terry-winograd/, media: "characters/terry-winograd/media/ — CS547 339-talk catalog (cs547-ARCHIVE.md)" }
   thomas-cherryhomes: { invitation_status: not_yet_asked, show_seed: repo-shows/thomas-cherryhomes/ }
   vanessa-freudenberg: { invitation_status: memorial, show_seed: repo-shows/remembering-vanessa-freudenberg.yml, note: "d. 2025 — memorial arc: Craig anchor; Dan Ingalls + Alan Kay warmly invited w/ Don; SqueakJS → WASM → Caffeine" }
-  sam-arbesman: { invitation_status: draft, note: "Chaim intro 2024; Maxis 2.0 fan; complexity scientist Lux Capital" }
+  sam-arbesman: { invitation_status: draft, show_seed: repo-shows/sam-arbesman-maxis-labs.yml, note: "Chaim intro 2024; Microcosm Industries; Maxis Labs 2 aligned; invitation + sources ready" }
   walter-bender: { invitation_status: not_yet_asked, show_seed: repo-shows/walter-bender-olpc/, note: "OLPC introducing-the-players thread harvested; Stone Soup + GPL" }
   yuja-wang: { type: tribute, path: characters/yuja-wang/, note: "Flight of the PIXIE — Verbier-era Flight of the Bumblebee synced to 1969 PIXIE films; Instagram-taggable tribute pointer; not a show invitation" }
   yoot-saito: { invitation_status: not_yet_asked, show_seed: repo-shows/yoot-saito/ }

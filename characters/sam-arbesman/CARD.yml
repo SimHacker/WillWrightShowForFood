@@ -1,0 +1,143 @@
+# CARD — Samuel Arbesman (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: sam-arbesman
+  name: Samuel Arbesman
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+card:
+  name: Samuel Arbesman
+  title: Adjacent Possible & Microworlds
+  rarity: rare
+  signifier: 🧬
+  flavor: Catalog the collision — then ship the simulation toy.
+abilities:
+- id: ADJACENT-POSSIBLE
+  name: Catalyze Adjacent Possible
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: adjacentPossible
+    signature: adjacentPossible(catalog, collision) → new institution
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.9
+  effect: Name the collision before the field does.
+  verifiable: Public writing on complex systems and wonder
+  combos_with:
+  - OVEREDGE-CATALOG
+- id: LINNAEAN-CATALOG
+  name: Linnaean Catalog
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: linnaeanCatalog
+    signature: linnaeanCatalog(theme) → lists of lists
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Compile ideas until a domain becomes legible.
+  verifiable: Overedge Catalog, list-of-lists projects
+  combos_with:
+  - HOST-REPO-SHOW
+- id: MICROCOSM-SIM
+  name: Microcosm Industries
+  type: activated
+  mana: '{W}{W}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: microcosmSim
+    signature: microcosmSim(SimCitySpirit) → simulation toy
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.95
+  effect: Propose simulation toys as institution output.
+  verifiable: Microcosm Industries (public project)
+  combos_with:
+  - MAXIS-LABS-2
+- id: OVEREDGE-CATALOG
+  name: Overedge Institution
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: overedgeInstitution
+    signature: overedgeInstitution(knowledge) → new org type
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Sketch research orgs that do not yet exist.
+  verifiable: Overedge Catalog
+  combos_with:
+  - ADJACENT-POSSIBLE
+- id: HALF-LIFE-FACTS
+  name: Half-Life of Facts
+  type: activated
+  mana: '{B}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: halfLifeFacts
+    signature: halfLifeFacts(claim) → decay curve
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.8
+  effect: Teach how knowledge rots and renews in software cities.
+  verifiable: The Half-Life of Facts (book)
+  combos_with: []
+- id: MAGIC-OF-CODE
+  name: Magic of Code
+  type: activated
+  mana: '{U}{B}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: magicOfCode
+    signature: magicOfCode(sorcery) → honest demystification
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Compare code-as-magic rhetoric to runnable microworlds.
+  verifiable: The Magic of Code (book)
+  combos_with:
+  - MICROCOSM-SIM
+- id: MAXIS-LABS-2
+  name: Maxis Labs 2 Brief
+  type: activated
+  mana: '{W}{U}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: maxisLabs2
+    signature: maxisLabs2(history, complexity, repo) → design brief
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.95
+  effect: Turn Maxis nostalgia into a buildable institution spec.
+  verifiable: Chaim Gingold intro thread; Microcosm Industries alignment
+  combos_with:
+  - MICROCOSM-SIM
+  - HOST-REPO-SHOW
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Public invitation document
+- path: sources/microcosm-maxis-labs.md
+  why: Maxis Labs 2 alignment digest

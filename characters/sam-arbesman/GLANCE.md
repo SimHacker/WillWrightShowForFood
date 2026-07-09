@@ -1,0 +1,1 @@
+🧬 **Samuel Arbesman** — complexity scientist, author (*The Magic of Code*, *Overcomplicated*, *Half-Life of Facts*); **Microcosm Industries** & **Overedge Catalog**; Long Now · Lux · xLab. Chaim intro **2024**; **Maxis Labs 2** aligned. Show: [`sam-arbesman-maxis-labs.yml`](../../repo-shows/sam-arbesman-maxis-labs.yml).

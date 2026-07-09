@@ -1,0 +1,55 @@
+# Samuel Arbesman — public bio (girder)
+# Summarized from arbesman.net public materials — not a quote dump.
+
+meta:
+  rendered_edition: public-bio.md
+  source: "Samuel Arbesman public website bio"
+  kind: public_portrait
+  consent: public
+
+identity: |
+  Scientist and writer. Catalyzes the adjacent possible — complex systems, eldritch technologies,
+  unexpected collisions between disparate ideas.
+
+linnaean_instinct: |
+  Catalogs ideas and trends as first step toward new domains. Lists-of-lists include Overedge Catalog,
+  Microcosm Industries, Humanistic Computation Project.
+
+catalogs:
+  - name: Overedge Catalog
+    focus: "New types of institutions for knowledge creation"
+    url: https://arbesman.net/
+  - name: Microcosm Industries
+    focus: "Simulation toys in the spirit of SimCity"
+  - name: Humanistic Computation Project
+    focus: "Human-centered computing themes"
+
+books:
+  - The Magic of Code
+  - Overcomplicated
+  - The Half-Life of Facts
+
+affiliations:
+  - "Adjunct Professor & xLab senior fellow, Case Western Reserve University (Weatherhead)"
+  - "Venture Partner, Lux Capital (formerly Scientist in Residence)"
+  - "Research Fellow, Long Now Foundation"
+  - "Resonant Computing Manifesto (group author)"
+
+origin_story: "HyperCard, Martin Gardner, science fiction, LEGO"
+
+contact:
+  email: samuel@arbesman.net
+  speaking: speaking@arbesman.net
+
+repo_alignment:
+  microcosm: microcosm-maxis-labs.md
+  overedge: "Repo Show as inspectable knowledge-creation institution"
+  long_now: process/VISION.md
+  complexity: "Glass-box Micropolis / CAM6 microworlds"
+
+see_also:
+  - public-bio.md
+  - microcosm-maxis-labs.md
+  - microcosm-maxis-labs.yml
+  - ../invitation.md
+  - ../ideas.md

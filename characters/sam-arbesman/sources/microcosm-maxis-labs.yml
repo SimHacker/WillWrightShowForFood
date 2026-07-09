@@ -1,0 +1,39 @@
+# Microcosm Industries × Maxis Labs 2 — alignment girder
+
+meta:
+  rendered_edition: microcosm-maxis-labs.md
+  kind: show_alignment
+  consent: public
+
+the_hook: |
+  Sam's Microcosm Industries (simulation toys in the spirit of SimCity) and Don's Maxis Labs 2 brief
+  are the same adjacent possible — institution that ships runnable microworlds, not nostalgia.
+
+intro:
+  via: chaim-gingold
+  date: "2024-07"
+  chaim_note: "Super into all things Maxis; Maxis 2.0 curiosity"
+
+three_lenses:
+  historian: { who: chaim-gingold, what: "Building SimCity — how Maxis put the world in a machine" }
+  complexity: { who: sam-arbesman, what: "Overcomplicated systems; Overedge institution catalogs" }
+  engineer: { who: don-hopkins, what: "MicropolisCore, Soul City, CAM6, federation on main" }
+
+maxis_labs_2_charter:
+  - "Glass-box simulation toys — rules readable, forkable, teachable"
+  - "Institution as repo — inspect, fork, contribute by PR"
+  - "Data portability as lab charter (Will 1996 crown jewel)"
+  - "Cauldron harvest — conversation → MOOLLM skills"
+
+show_beats:
+  - "Sam names the design brief — what a modern Maxis-like lab optimizes for"
+  - "Don demos running Micropolis / character graph / YAML cast"
+  - "Optional Will beat on premiere arc"
+  - "Optional Chaim three-way — complementary shows, not competing narrators"
+
+see_also:
+  - microcosm-maxis-labs.md
+  - public-bio.md
+  - ../../chaim-gingold/
+  - ../../will-wright/invitation.md
+  - ../../../repo-shows/sam-arbesman-maxis-labs.yml

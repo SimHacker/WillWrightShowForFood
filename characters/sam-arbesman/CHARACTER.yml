@@ -1,4 +1,5 @@
-# Sam Arbesman — invitation portrayal. NOT Sam Arbesman.
+# Samuel Arbesman — invitation portrayal. NOT Samuel Arbesman.
+# Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: sam-arbesman
@@ -6,30 +7,56 @@ character:
   type: invitation
   signifier: "🧬"
   status: living
-  field: "Complexity scientist, writer; Scientist in Residence Lux Capital; Maxis history enthusiast"
+  field: "Complexity scientist, writer; Microcosm Industries; Overedge Catalog; Long Now · Lux · xLab"
   home: characters/sam-arbesman/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2
+  authored_by: don-hopkins
+
+contact:
+  channel: email
+  email: samuel@arbesman.net
+  warm_contact: true
+  intro_via: chaim-gingold
 
 invitation:
   status: draft
   consent: not_yet_asked
-  intro: "Chaim Gingold intro email, July 2024 — 'super into all things Maxis'; fantasizes about Maxis 2.0"
+  document: invitation.md
+  show_seed: repo-shows/sam-arbesman-maxis-labs.yml
+  correspondence: correspondence.yml
+  intro: "Chaim Gingold intro July 2024 — Maxis enthusiast; Maxis Labs 2 aligned via Microcosm Industries"
 
 bio:
   summary: |
-    **Sam Arbesman** — complexity scientist and author (*The Magic of Code*, *Overcomplicated*,
-    *The Half-Life of Facts*). Chaim offered to intro Don after Sam interviewed Chaim on his podcast.
-    Maxis 2.0 curiosity; VC scientist-in-residence. Potential guest for Maxis history × modern
-    federation / Soul City angle (not competing with Chaim's *Building SimCity* book show).
+    **Samuel Arbesman** — complexity scientist and author (*The Magic of Code*, *Overcomplicated*,
+    *The Half-Life of Facts*). Catalyzes the adjacent possible; compiles catalogs (Overedge Catalog,
+    **Microcosm Industries** — simulation toys in the spirit of SimCity, Humanistic Computation).
+    Long Now Research Fellow; Lux Capital Venture Partner; Case Western xLab senior fellow.
+    HyperCard · Martin Gardner · SF · LEGO kid. Chaim introduced Don after Sam's *Building SimCity*
+    interview — deeply aligned on **Maxis Labs 2** as institution design, not nostalgia.
 
 sources:
-  intro_email: DonHopkins/temp/old-email/intro.txt
-  chaim: characters/chaim-gingold/
-  book: "Chaim Gingold — Building SimCity (MIT Press 2024)"
+  public_bio: characters/sam-arbesman/sources/public-bio.md
+  microcosm_alignment: characters/sam-arbesman/sources/microcosm-maxis-labs.md
+  chaim_intro: characters/will-wright/sources/2024-building-simcity-chaim-intro/
+  web:
+    - https://arbesman.net/
+  books:
+    - The Magic of Code
+    - Overcomplicated
+    - The Half-Life of Facts
 
 show_suggestions:
-  - { with: chaim-gingold, what: "Maxis history book vs building Soul City now" }
-  - { with: will-wright, what: "Maxis 2.0 — what would Will build today?" }
+  - { solo: true, seed: repo-shows/sam-arbesman-maxis-labs.yml, what: "Maxis Labs 2 institution brief × running repo" }
+  - { with: chaim-gingold, what: "Historian + complexity scientist + engineer — complementary tracks" }
+  - { with: will-wright, what: "Premiere guest lens on what a modern Maxis-like lab funds" }
 
 see_also:
-  - { path: ideas.md, why: "Conversation hooks — Maxis 2.0, complexity, federation" }
-  - { path: ../chaim-gingold/, why: "Intro source; complementary book show" }
+  - { path: invitation.md, why: "Public invitation — warm, send-ready draft" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: correspondence.yml, why: "Chaim intro thread (public-safe)" }
+  - { path: ../chaim-gingold/, why: "Intro source; book show complement" }
+  - { path: sources/README.md, why: "Read/Girder source index" }

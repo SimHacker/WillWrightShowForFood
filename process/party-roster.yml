@@ -95,7 +95,7 @@ right_away:
     - { id: ken-kahn, show: repo-shows/ken-kahn/, invite: draft, next: "ToonTalk / constructionism" }
     - { id: matthew-sibigtroth, show: repo-shows/matthew-sibigtroth/, invite: draft, next: "flesh show" }
     - { id: richard-bartle, show: repo-shows/richard-bartle/, invite: draft, next: "MUD / virtual worlds" }
-    - { id: sam-arbesman, show: none, invite: none, next: "plant show — Maxis 2.0 fan, Chaim intro" }
+    - { id: sam-arbesman, show: repo-shows/sam-arbesman-maxis-labs.yml, invite: draft, next: "send invitation — Maxis Labs 2 × Microcosm; Chaim intro fulfilled" }
     - { id: steve-wozniak, show: repo-shows/steve-wozniak/, invite: draft, next: "Apple II kickoff planted?" }
     - { id: terry-winograd, show: repo-shows/terry-winograd/, invite: draft, next: "CS547 dragon archive" }
     - { id: thomas-cherryhomes, show: repo-shows/thomas-cherryhomes/, invite: draft, next: "FujiNet + PLATO" }
