@@ -1,0 +1,58 @@
+# Reese Jones — invitation portrayal. NOT Reese Jones.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: reese-jones
+  name: "Reese Jones"
+  type: invitation
+  signifier: "🧬📞"
+  status: living
+  field: "Biophysicist, networking pioneer — BMUG, Farallon/PhoneNET, Netopia; Singularity University associate founder; biology-of-technology"
+  home: characters/reese-jones/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  warm_contact: true
+  note: "Don knows Reese personally. He recorded and published Sam Arbesman's 2016 Overcomplicated book event on his own channel."
+
+bio:
+  summary: "**Reese Jones** — biophysicist turned networking pioneer: co-founded BMUG (1984), founded Farallon Computing (1986 — PhoneNET, MacRecorder, Timbuktu), which became Netopia (acquired by Motorola). Associate founder and board trustee of Singularity University; reported board trustee of the Santa Fe Institute; chairman of Cambrian Genomics. Thinks about technology as evolved biology."
+
+career:
+  - { era: "1984", what: "Co-founded BMUG (Berkeley Macintosh Users Group) as a UC Berkeley biophysics grad student — became the largest computer user group of its kind" }
+  - { era: "1986–1998", what: "Founded Farallon Computing: PhoneNET (LocalTalk over phone wire, from BMUGNet), MacRecorder (first Mac audio input, later Macromedia), Timbuktu (cross-platform screen sharing / remote control)" }
+  - { era: "1998–2006", what: "Farallon → Netopia (founder/chairman/CEO); broadband gateways; acquired by Motorola" }
+  - { era: "2008–", what: "Singularity University — associate founder, board trustee" }
+  - { era: "2010s", what: "Cambrian Genomics (chairman — 'DNA laser printer'), Genome Compiler; genomics + synthetic biology infrastructure" }
+  - { era: "ongoing", what: "Biology-of-technology talks; long-range evolutionary forecasts; 'internet of living things'; records and publishes talks on his YouTube channel" }
+
+affiliations_reported:
+  - "Santa Fe Institute — board trustee (reported in interviews/speaker bios)"
+  - "Harvard Medical School Genetics Advisory Council (reported)"
+  - "Chabot Space & Science Center board"
+
+sources:
+  wikipedia: null
+  web:
+    - { title: "Lifeboat Foundation bio", url: "https://lifeboat.com/ex/bios.reese.jones" }
+    - { title: "Farallon Computing / Netopia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Farallon_Computing" }
+    - { title: "BMUG (Wikipedia)", url: "https://en.wikipedia.org/wiki/Berkeley_Macintosh_Users_Group" }
+    - { title: "YouTube channel (recorded talks incl. Sam Arbesman 2016)", url: "https://www.youtube.com/@ReeseJones1" }
+  patents:
+    - { title: "System for connecting computers via telephone lines (US 5003579A, 1991)", url: "https://patents.google.com/patent/US5003579A" }
+
+connections:
+  sam-arbesman: "Recorded/published Sam's 2016 Overcomplicated book event (Lux) — sources/overcomplicated-2016-video.md"
+  will-wright: "Santa Fe Institute orbit — Maxis's documented SFI relationship (Chaim Gingold, Building SimCity); biology-as-simulation kinship (SimEarth/SimLife/Spore)"
+  owen-densmore: "SFI complexity cluster in repo"
+  don-hopkins: "Personal acquaintance (warm); BMUG/homebrew-era user community culture"
+
+shows:
+  - { solo: true, what: "Solo video — biology of technology × Maxis's SFI thread × user groups as proto-open-source" }

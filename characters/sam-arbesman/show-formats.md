@@ -13,7 +13,9 @@ Internal notes — [guest participation ladder](../../process/guest-participatio
 | Complexity + institutions | Samuel Arbesman | warm correspondence |
 | Historian | [Chaim Gingold](../chaim-gingold/invitation.md) | async / new-parent pacing |
 
-**Ask Sam:** who else belongs in the circle.
+**Ask Sam:** who else belongs in the circle. First name already on Don's side:
+[Reese Jones](../reese-jones/README.md) — he filmed Sam's 2016 *Overcomplicated* launch; Don
+knows him; SFI / biology-of-technology.
 
 **Precedent:** Will interviewed Chaim live on [ROMchip, 19 Jul 2024](../chaim-gingold/sources/romchip-will-wright-2024.md)
 — the Will × Chaim pairing is already proven on stream. Chaim introduced Sam to Don ten days

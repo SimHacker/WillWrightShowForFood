@@ -1,0 +1,108 @@
+# CARD — Reese Jones (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: reese-jones
+  name: Reese Jones
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+card:
+  name: Reese Jones
+  title: Biology of Technology
+  rarity: uncommon
+  signifier: 🧬📞
+  flavor: Wired the Macs together with phone cord, then decided the network was alive.
+abilities:
+- id: PHONE-WIRE-NETWORK
+  name: Phone-Wire Network
+  type: activated
+  mana: '{1}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: phoneWireNetwork
+    signature: phoneWireNetwork(ordinary_infrastructure) → connected community
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Turn what's already in the walls into a network (BMUGNet → PhoneNET).
+  verifiable: Farallon PhoneNET; US patent 5003579A
+  combos_with:
+  - USER-GROUP-SEED
+- id: USER-GROUP-SEED
+  name: User Group Seed
+  type: activated
+  mana: '{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: userGroupSeed
+    signature: userGroupSeed(community) → kit culture
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Publish the wiring plans in the newsletter; sell adapters at cost (BMUG 1984).
+  verifiable: Berkeley Macintosh Users Group history
+  combos_with: []
+- id: SCREEN-SHARE-PIONEER
+  name: Screen Share Pioneer
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: screenSharePioneer
+    signature: screenSharePioneer(remote_mac) → live demo anywhere
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Timbuktu — watch and drive another computer decades before streaming.
+  verifiable: Farallon Timbuktu
+  combos_with: []
+- id: TECH-AS-BIOLOGY
+  name: Technology as Biology
+  type: activated
+  mana: '{G}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: techAsBiology
+    signature: techAsBiology(system) → evolutionary reading
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Read networks, blockchains, and genomes as one evolving substrate.
+  verifiable: Public talks; Cambrian Genomics; biophysics background
+  combos_with:
+  - PHONE-WIRE-NETWORK
+- id: RECORD-THE-TALK
+  name: Record the Talk
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: recordTheTalk
+    signature: recordTheTalk(event) → published primary source
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Film the room, publish the artifact — his channel is an archive of talks.
+  verifiable: youtube.com/@ReeseJones1 (incl. Sam Arbesman Overcomplicated, 2016)
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Letter to Reese
+- path: sources/overcomplicated-2016-video.md
+  why: The 2016 Sam recording — triangle edge

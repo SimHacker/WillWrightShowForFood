@@ -20,6 +20,9 @@ public_outreach_policy:
   see_also: ../process/maxis-history-collaborators.yml
 
 next:
+  - id: reese-jones
+    why: "Warm — Don knows him; filmed Sam Arbesman's 2016 Overcomplicated launch; SFI/biology-of-tech; natural stack with Sam/Will/Chaim"
+    path: characters/reese-jones/
   - id: gary-drescher
     why: "★ Made-Up Minds — MIT PhD/Minsky; Leela adviser; Will Wright pun crossover; MOOLLM skills; interview planned"
     path: characters/gary-drescher/

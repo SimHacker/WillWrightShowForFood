@@ -15,6 +15,7 @@ culture that hosted the **2006** talk that started the ball rolling on **freeing
 | People page | [longnow.org/people/arbesman](https://longnow.org/people/arbesman/) |
 | Own seminar | **Aug 23, 2016** — *Technology at the Limits of Comprehension* ([seminar listing](https://longnow.org/seminars/)) |
 | Book tie-in | *Overcomplicated* — technology exceeding human comprehension |
+| Same season | [Reese Jones filmed Sam's July 2016 *Overcomplicated* launch](../../reese-jones/sources/overcomplicated-2016-video.md) — Lux event; warm Don contact |
 
 Sam writes about **long-term thinking in software** (public essays; Cabinet of Wonders newsletter).
 

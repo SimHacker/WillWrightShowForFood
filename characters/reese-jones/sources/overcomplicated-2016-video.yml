@@ -1,0 +1,32 @@
+# Overcomplicated 2016 video — girder
+
+meta:
+  rendered_edition: overcomplicated-2016-video.md
+  kind: public_video
+  consent: public
+
+video:
+  title: "Sam Arbesman on Overcomplicated: Technology at the Limits of Comprehension"
+  url: https://www.youtube.com/watch?v=zPPN-C02u3U
+  channel: "Reese Jones (youtube.com/@ReeseJones1)"
+  published: "2016-07-14"
+  occasion: "Overcomplicated book event — Lux Capital family (Josh Wolfe, Peter Hébert thanked)"
+
+participants:
+  speaker: sam-arbesman
+  recorded_by: reese-jones
+
+thesis_quotes:
+  - "We should operate as outsiders to our own programs."
+  - "If they look like and behave in some ways like biological things, let's look to biologists."
+  - "Ecologists look at pairwise interactions … a slow iterative understanding of this really complex thing."
+
+repo_hooks:
+  triangle: "Reese filmed Sam in 2016; Chaim introduced Sam to Don in 2024 — last edge closed"
+  method: "Field-biologist epistemology = glass-box Micropolis dissection on air"
+  long_now: "Same material as Sam's Aug 2016 Long Now seminar — ../../sam-arbesman/sources/long-now-thread.yml"
+
+see_also:
+  - overcomplicated-2016-video.md
+  - ../../sam-arbesman/sources/long-now-thread.md
+  - ../../sam-arbesman/sources/public-bio.md
