@@ -60,5 +60,9 @@ outlives the plumbing only if somebody carries it.*
 | Entry | 🐒✋ Why you'd read it |
 |-------|----------------------|
 | [**Constructionist lineage trail**](../../process/trails/constructionist-lineage.md) | Piaget → Papert → Logo → Kay → the whole "learn by building" church this project worships in. |
+| [**Constructionist SimCity response**](../../process/constructionist-simcity-response.yml) | Glass-box pillars: export guts, live scripting (Snap! + Micropolis), microworld runbooks — Alan Kay's OLPC critique answered in public strategy. |
+| [**Alan Kay — SimCity Rules (Nov 2007)**](../../characters/will-wright/sources/2007-11-16-simcity-rules-alan-kay/) | OLPC mailing-list thread — open, inspectable SimCity; same thread as Brian/Jens 2018 Snap! integration. |
+| [**Micropolis × Snap! (2018)**](../../characters/brian-harvey/sources/micropolis-snap-2018.md) | Don → Brian → Jens: drive Micropolis + CAM6 from blocks; Logo/Scheme/Morphic heritage meets classroom city. |
+| [**Logo, LLogo, and C64 Adventure**](logo-llogo-and-c64-adventure.md) | Brian's CSLS pedagogy paired with Don's LLogo rescue (~12,480 lines MacLISP on ITS) and age-17 Terrapin utilities-disk Adventure — REPL-as-parser, list/functional Logo without graphics. Lars Brinkhoff's emulator revival on Knight TV. |
 | [**Augmentation & hypertext trail**](../../process/trails/augmentation-and-hypertext.md) | Engelbart, Nelson, and why a repo full of cross-links is an old dream with new plumbing. |
 | [**MOO heritage**](https://github.com/SimHacker/moollm/blob/main/designs/MOO-HERITAGE.md) | LambdaMOO to MOOLLM — the text-world tradition Palmhoo's rooms descend from. |

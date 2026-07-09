@@ -2,6 +2,7 @@
 # The stunt that proves continuations are for beginners too.
 
 meta:
+  rendered_edition: y-combinator-in-blocks.md
   author: Jens Mönig
   language: Snap!
   topic: first-class continuations
@@ -19,6 +20,8 @@ show_hooks:
   - "Brian + Jens pair beat: Brian explains *why*, Jens shows *how*"
 
 see_also:
-  - snap-first-class-everything.yml
-  - ../../brian-harvey/sources/beauty-and-joy-of-computing.yml
-  - ../../brian-harvey/CARD.yml  # SNAP-CONTINUATIONS ability
+  - y-combinator-in-blocks.md
+  - snap-first-class-everything.md
+  - ../../brian-harvey/sources/beauty-and-joy-of-computing.md
+  - ../../brian-harvey/sources/snap-macros-metaprogramming.md
+  - ../../brian-harvey/CARD.yml

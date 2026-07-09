@@ -2,6 +2,7 @@
 # The morphic world Snap! runs on.
 
 meta:
+  rendered_edition: morphic-js.md
   author: Jens Mönig
   framework: Morphic.js
   url: https://github.com/jmoenig/Snap/blob/master/morphic.js
@@ -22,6 +23,13 @@ show_hooks:
   - "Pair with Brian — the turtle (Logo) and the morph (Smalltalk) in one classroom tool"
 
 see_also:
-  - gp-alan-kay-lineage.yml
+  - morphic-js.md
+  - gp-alan-kay-lineage.md
+  - snap-first-class-everything.md
+  - ../../brian-harvey/sources/snap-macros-metaprogramming.md
+  - ../../don-hopkins/sources/micropolis-svelte-snap-constraint-bridge.md
+  - ../../alan-kay/media/discussions/hn-mvc-morphic-watchers-2015.md
   - ../from-alan-kay.yml
   - ../../brian-harvey/from-alan-kay.yml
+  - ../../../palmhoo/code-and-craft/README.md
+  - ../../../repo-shows/snap-logo-brian-jens/README.md

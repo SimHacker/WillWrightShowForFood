@@ -18,8 +18,6 @@ Jens Mönig — Architect and lead programmer of Snap! (formerly BYOB, "Build Yo
 - **Morphic.js / Kay lineage** — GP under Alan Kay; live system in the browser ([sources/gp-alan-kay-lineage.yml](sources/gp-alan-kay-lineage.yml))
 - **Snap!Con Barcelona** — TurtleStitch, Cynthia Solomon, old band back together ([../../process/old-band-back-together.yml](../../process/old-band-back-together.yml))
 - **Palm's computational zoo** — worms/birds/turtles field notebook; Logo lineage after Snap!Con
-- **Pie menus in A-Frame** — Don's 2018 demo alongside the Micropolis thread
-
 ## The hooks
 
 ### 1. Show seed: `repo-shows/snap-logo-brian-jens/`
@@ -32,10 +30,10 @@ Default interview is the **pair show** with Brian. Optional solos: Snap! interna
 [sources/y-combinator-in-blocks.yml](sources/y-combinator-in-blocks.yml) — the stunt that proves Brian's pedagogy isn't theoretical. Build it live; Guy Steele energy.
 
 ### 4. Morphic.js — a live, malleable IDE
-[sources/morphic-js.yml](sources/morphic-js.yml) — direct manipulation all the way down; edit the IDE while teaching in it. Palm question id 10: Self → Lively Kernel → Morphic.js → Snap!; why MVC got cargo-culted while Morphic didn't.
+[sources/morphic-js.md](sources/morphic-js.md) — direct manipulation all the way down; edit the IDE while teaching in it. Palm question id 10: Self → Lively Kernel → Morphic.js → Snap!; why MVC got cargo-culted while Morphic didn't.
 
 ### 5. Micropolis × Snap! — finish the 2018 thread
-[sources/micropolis-snap-2018.yml](sources/micropolis-snap-2018.yml) · [correspondence.yml](correspondence.yml) — drive open SimCity + CAM6 from blocks; pie menus in A-Frame on the side.
+[sources/micropolis-snap-2018.yml](sources/micropolis-snap-2018.yml) · [correspondence.yml](correspondence.yml) — drive open SimCity + CAM6 from blocks.
 
 ### 6. Schemas for Snap! — Snap!Con Barcelona talk
 Structured data meeting blocks — Don's Barcelona presentation as a solo vertical.

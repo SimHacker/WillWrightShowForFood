@@ -2,7 +2,7 @@
 
 | Source | What |
 |--------|------|
-| [`numenta-proxi-partnership.yml`](numenta-proxi-partnership.yml) | Gallium / Proxi ↔ Numenta (NuPIC) |
+| [`numenta-proxi-partnership.md`](numenta-proxi-partnership.md) | Gallium / Proxi ↔ Numenta (NuPIC) |
 
 ## Related
 

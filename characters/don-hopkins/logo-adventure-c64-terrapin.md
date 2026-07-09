@@ -1,5 +1,7 @@
 # Logo Adventure — C64 Terrapin Logo (first commercial code)
 
+Related: [llogo-maclisp-its.md](sources/llogo-maclisp-its.md) · [logo-archaeology-hn-digest.md](sources/logo-archaeology-hn-digest.md) · [sources/logo-adventure-c64-terrapin.md](sources/logo-adventure-c64-terrapin.md)
+
 **Apr 27, 2018** · Don Hopkins · [Medium](https://medium.com/@donhopkins/logo-adventure-for-c64-terrapin-logo-4c684a240b53)
 
 At **17**, Don shipped his **first paid commercial code** on Terrapin's **C64 Logo Utilities Disk**: a

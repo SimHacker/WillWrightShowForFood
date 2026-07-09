@@ -1,8 +1,4 @@
-# Berkeley Logo + CS 61A — Brian Harvey's teaching spine (readable edition)
-
-*Public career arc at UC Berkeley.
-**Source of truth:** [`berkeley-logo-and-cs61a.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/berkeley-logo-and-cs61a.yml) —
-this page is rendered for humans; the YAML drives the machines.*
+# Berkeley Logo + CS 61A — Brian Harvey's teaching spine
 
 **Go there:** [Berkeley Logo](https://people.eecs.berkeley.edu/~bh/logo.html) · [CS 61A](https://cs61a.org/)
 

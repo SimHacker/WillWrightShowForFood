@@ -158,7 +158,7 @@ Snap! 8 gave us `split by blocks`, `join`, and `define` — blocks as syntax tre
 
 **Zap for more**
 
-- [Morphic.js notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jens-monig/sources/morphic-js.yml)
+- [Morphic.js notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jens-monig/sources/morphic-js.md)
 - [Metaprogramming digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snap-macros-metaprogramming.md)
 - [Snap! Reference Manual — Metaprogramming](https://docs.snap.berkeley.edu/metaprogramming/)
 
@@ -224,7 +224,7 @@ Don's 2018 thread — drive Micropolis and CAM6 from Snap! blocks. If we finish 
 **Zap for more**
 
 - [Micropolis × Snap! — Brian's thread digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/micropolis-snap-2018.md)
-- [Micropolis × Snap! — Jens's thread digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jens-monig/sources/micropolis-snap-2018.yml)
+- [Micropolis × Snap! — Jens's thread digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jens-monig/sources/micropolis-snap-2018.md)
 
 ---
 
@@ -241,8 +241,8 @@ Jens — I want the **warm** beat, not an audit. SAP supported Alan Kay's Commun
 
 **Zap for more**
 
-- [SAP research & Snap! notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jens-monig/sources/sap-research-and-snap.yml)
-- [GP / Alan Kay lineage](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jens-monig/sources/gp-alan-kay-lineage.yml)
+- [SAP research & Snap! notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jens-monig/sources/sap-research-and-snap.md)
+- [GP / Alan Kay lineage](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jens-monig/sources/gp-alan-kay-lineage.md)
 - [SAP News — NTLS 2020 award](https://news.sap.com/2020/11/snap-jens-moenig-ntls-education-technology-leadership-award/)
 - [The Art of Research — CDG history](https://theartofresearch.org/a-history/)
 
@@ -281,8 +281,8 @@ Jens — walk me through the **heritage of Morphic**: Self's direct-manipulation
 
 **Zap for more**
 
-- [Morphic.js notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jens-monig/sources/morphic-js.yml)
-- [GP / Alan Kay lineage](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jens-monig/sources/gp-alan-kay-lineage.yml)
+- [Morphic.js notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jens-monig/sources/morphic-js.md)
+- [GP / Alan Kay lineage](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jens-monig/sources/gp-alan-kay-lineage.md)
 - [Dan Ingalls — Repo Show seed](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/dan-ingalls/README.md)
 - [Alan Kay — OOP, messaging, MVC origin](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/alan-kay/media/quora-recaps/oop-messaging-and-what-comes-next.md)
 - [morphic.js in Snap! repo](https://github.com/jmoenig/Snap/blob/master/morphic.js)
@@ -375,7 +375,7 @@ Brian and Jens — we've been digging up your old **design arguments** on purpos
 **Zap for more**
 
 - [Brian's Snap!Con 2025 Karlstrom address digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snapcon-2025-karlstrom-address.md)
-- [Jens's Karlstrom intro digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jens-monig/sources/snapcon-2025-karlstrom-intro.yml)
+- [Jens's Karlstrom intro digest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jens-monig/sources/snapcon-2025-karlstrom-intro.md)
 - [Cynthia Solomon — character room](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/cynthia-solomon/CHARACTER.yml)
 - [Old band back together](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/old-band-back-together.yml)
 - [Computer Science Logo Style notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/computer-science-logo-style.md)

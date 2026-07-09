@@ -11,4 +11,6 @@ The **reactive UI braid** — same idea reinvented each GUI generation:
 
 Don rode every generation — which is why MOOLLM's reactive YAML feels obvious to him.
 
+Concrete Micropolis binding today: [`sources/micropolis-svelte-snap-constraint-bridge.md`](sources/micropolis-svelte-snap-constraint-bridge.md) (`MicropolisReactive.svelte.ts`).
+
 → [`career/lineage.yml`](career/lineage.yml) (`tools_lineage`) · Henry → Leela band back together

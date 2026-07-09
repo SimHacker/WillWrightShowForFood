@@ -39,3 +39,12 @@ Article V, then look around you.*
 | [**prototype/** (skill)](https://github.com/SimHacker/moollm/tree/main/skills/prototype) | Self-language philosophy: clone the working thing, skip the class hierarchy. The theoretical license for instance-first programming. |
 | [**GARNET-AMULET prototype system**](https://github.com/SimHacker/moollm/blob/main/designs/GARNET-AMULET-PROTOTYPE-SYSTEM.md) | Brad Myers's prototype-instance UI systems as MOOLLM ancestors. |
 | [**SELF-ISH influences**](https://github.com/SimHacker/moollm/blob/main/designs/SELF-ISH-INFLUENCES.md) | Where the prototype religion comes from — Self, NewtonScript, Morphic. |
+
+## Constraints — declare truth, let the system sync
+
+| Entry | 🐒✋ Why you'd read it |
+|-------|----------------------|
+| [**Garnet → Svelte lineage**](../../characters/don-hopkins/garnet-to-svelte-constraint-ui-lineage.md) | Four decades, one braid: KR constraints → OpenLaszlo XML → Svelte runes → `MicropolisReactive`. |
+| [**Micropolis constraint bridge**](../../characters/don-hopkins/sources/micropolis-svelte-snap-constraint-bridge.md) | How runes bind sim ↔ UI and how Snap! blocks call the same façade — design method for glass-box worlds. |
+| [**Snap! metaprogramming**](snap-macros-metaprogramming.md) ⤷ | Program-as-data pedagogy: visible quote (rings), AST surgery, Lisp-family macros — Brian designs, Jens ships. |
+| [**MVC, Morphic, watchers**](../concurrency-and-messaging/hn-mvc-morphic-watchers-2015.md) ⤷ | Alan Kay's post-PARC UI method: watchers don't mutate; HyperCard-style view composition; inverter still open. |

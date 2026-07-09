@@ -1,0 +1,133 @@
+# LLogo — MacLISP on MIT-AI ITS (~12,480 lines)
+# Girder for machines; humans read llogo-maclisp-its.md
+
+meta:
+  title: LLogo (Lisp Logo)
+  environment: MIT-AI Incompatible Timesharing System (ITS)
+  language: MacLISP
+  line_count: 12480
+  byte_count: 430489
+  rescued_by: Don Hopkins
+  repo_path: characters/don-hopkins/sources/llogo-maclisp-its/llogo.lisp.txt
+  copied_to_repo: 2026-07-09
+  canonical_url: https://www.donhopkins.com/home/code/llogo.lisp.txt
+
+tagline: |
+  Where the rubber meets the road — Logo implemented in MacLISP with drivers for pots,
+  plotters, robotic turtles, TV turtles, graphical displays, XGP laser printers, music
+  devices, and decades of lab hardware.
+
+rescue_story: |
+  Don stashed the concatenated LLogo sources from the MIT-AI ITS system before the
+  hardware era passed. Lars Brinkhoff and collaborators ported it to run under MacLisp
+  on a PDP-10 emulator; display works on emulated Knight TV. Full historical hardware
+  emulation is ongoing.
+
+analysis_status: open
+analysis_notes: |
+  Driver-level discussion with collaborators is in progress. This dossier captures
+  architecture and preservation links; deep hardware walkthroughs will be merged
+  when pulled in.
+
+architecture:
+  model: Logo-in-Lisp
+  dual_obarrays: true
+  readtable_switching: Logo readtable vs Lisp readtable; # for cross-obarray read
+  conditional_compilation:
+    - ITS vs DEC10 vs Multics via square-bracket readmacros
+    - CLOGO vs 11LOGO compatibility switches
+  define_macro_system: DEFINE file auto-loaded; compiler-expanded macros
+
+module_files:
+  - name: DEFINE
+    role: readmacros, compiler macros, DEFINE function bootstrap
+  - name: SETUP
+    role: obarrays, readtables, utilities, homonym checking
+  - name: READER
+    role: LOGOREAD, LINE, editing chars, history
+  - name: PARSER
+    role: Logo → Lisp translation, infix, PARSEMACRO
+  - name: UNEDIT
+    role: editor, TO/END, line numbers
+  - name: PRINT
+    role: LOGO-PRINT, listing, DPRINC on ITS displays
+  - name: PRIMIT
+    role: most Logo primitives, turtle allocator hooks
+  - name: ERROR
+    role: LOGOBREAK, stack hacking, GC daemons
+  - name: TVRTLE / TURTLE
+    role: TV turtle, GT40/340, Germland, music optional loads
+  - name: GERMLAND
+    role: grid microworld on ITS terminals
+  - name: MUSIC
+    role: LLOGO music box primitives (ITS/Multics)
+
+allocator_prompts_its:
+  - "DO YOU WANT TO USE THE TV TURTLE?" → TVRTLE FASL
+  - "DO YOU WANT TO USE THE DISPLAY TURTLE?" → TURTLE FASL (GT40 vs 340)
+  - GERMLAND? → GERM FASL
+  - "MUSIC BOX?" → MUSIC FASL
+
+hardware_drivers_mentioned:
+  - pots (joystick / dial inputs)
+  - plotters
+  - robotic turtles
+  - TV turtles (Knight TV buffer)
+  - graphical displays (GT40, 340)
+  - XGP laser printers
+  - music devices / music box
+  - Germland split-screen grid on display TTYs
+
+preservation:
+  emulator:
+    url: https://github.com/PDP-10/its/issues/620
+    note: Lars Brinkhoff — LLogo on MacLisp; Knight TV; PDP-11/Apple II/BBN Logo also running
+  memo_list:
+    url: https://github.com/pdp11/sits/wiki/List-of-Logo-memos
+  aim_pdfs:
+    - http://bitsavers.org/pdf/mit/ai/aim/AIM-307.pdf
+    - http://bitsavers.org/pdf/mit/ai/aim/AIM-307a.pdf
+    - http://bitsavers.org/pdf/mit/ai/aim/AIM-313.pdf
+    - http://bitsavers.org/pdf/mit/ai/aim/AIM-315.pdf
+    - http://bitsavers.org/pdf/mit/ai/aim/AIM-315a.pdf
+
+hn_threads:
+  - id: 36755727
+    url: https://news.ycombinator.com/item?id=36755727
+    year: 2023
+  - id: 23054174
+    url: https://news.ycombinator.com/item?id=23054174
+    year: 2020
+  - id: 28604773
+    url: https://news.ycombinator.com/item?id=28604773
+    year: 2021
+  - id: 12207532
+    url: https://news.ycombinator.com/item?id=12207532
+    year: 2016
+
+hn_quotes:
+  - who: Don Hopkins
+    text: |
+      12,480 lines of beautiful practical lisp code, defining where the rubber meets
+      the road, with drivers for hardware like pots, plotters, robotic turtles, TV
+      turtles, graphical displays, XGP laser printers, music devices...
+  - who: Don Hopkins (HN 2020)
+    text: |
+      I have nightmares about that! (robot arm — MIT AI Lab films)
+  - who: Lars Brinkhoff
+    text: |
+      Your LLOGO copy was for an older version of Maclisp, but eventually we managed
+      to port it over to New IO. It works fine and displays on an emulated Knight TV.
+
+show_hooks:
+  - Papert pedagogy meets real systems code — pair with Brian's CSLS compiler chapters
+  - Logo-in-Lisp obarray/readtable design → Snap! metaprogramming digest
+  - ALLOCATOR optional hardware loads = microworld plug-in pattern
+  - Preservation arc with Lars / PDP-10 ITS — community archaeology episode beat
+
+see_also:
+  - characters/don-hopkins/sources/logo-adventure-c64-terrapin.yml
+  - characters/brian-harvey/sources/computer-science-logo-style.yml
+  - characters/brian-harvey/sources/snap-macros-metaprogramming.yml
+  - process/trails/constructionist-lineage.md
+  - palmhoo/history-and-lore/logo-llogo-and-c64-adventure.md

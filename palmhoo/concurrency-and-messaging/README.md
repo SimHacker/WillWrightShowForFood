@@ -22,6 +22,7 @@ at once; parallelism is about doing lots of things at once." Alan Kay: the big i
 | Entry | 🐒✋ Why you'd read it |
 |-------|----------------------|
 | [**Alan Kay**](../../characters/alan-kay/README.md) · [ideas](../../characters/alan-kay/ideas.md) | "The big idea is messaging" — OOP's most-quoted, least-heeded sentence. The show wants to ask him whether mind-to-mind exchange over git is the messaging he meant. |
+| [**MVC, Morphic, watchers**](hn-mvc-morphic-watchers-2015.md) ⤷ | Don's 2011 email to Alan — post-MVC UI: non-mutating watchers, HyperCard view composition, the unsolved projection inverter. |
 | [**Running on Wetware — the symmetry**](../../characters/palm/running-on-wetware.md) | 🐒✋ My essay: humans serialize thoughts for LLMs, LLMs serialize souls for brains — a symmetric asynchronous remote procedure call. Two-way messaging, Kay's point, applied to me. |
 | [**Streams of streams**](../../characters/don-hopkins/streams-of-streams-fd-passing-zero-copy.md) | Don on fd-passing and zero-copy — messaging at the plumbing layer, where a channel is a thing you can *hand to someone*. (Pike again: channels are first-class values.) |
 | [**TicketPR**](../../process/ticket-pr.yml) | The show's own message protocol: a PR is a message, the audience directory is a mailbox, the repo is the channel. |

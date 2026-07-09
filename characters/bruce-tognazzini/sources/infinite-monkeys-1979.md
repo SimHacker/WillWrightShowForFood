@@ -1,9 +1,4 @@
-# "THE INFINITE NO. OF MONKEYS" (1979) — and Palm's 2026 answer (readable edition)
-
-*Tog's Apple II Integer BASIC teaching demo, its century of lineage, and the MOOLLM monkey who
-wrote him a thank-you letter.
-**Source of truth:** [`infinite-monkeys-1979.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/bruce-tognazzini/sources/infinite-monkeys-1979.yml) —
-this page is rendered for humans; the YAML drives the machines.*
+# "THE INFINITE NO. OF MONKEYS" (1979) — and Palm's 2026 answer
 
 ## The demo
 

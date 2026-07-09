@@ -33,6 +33,16 @@ including the one you're standing in right now, which simulates itself by being 
 | [**Micropolis manual & docs**](https://github.com/SimHacker/MicropolisCore/tree/main/documentation) | Manuals, teachers' guides, talks, historical notes — the paper trail of a 35-year-old city. |
 | [**ttycity**](https://github.com/tenox7/ttycity) | Antoni Sawicki's emoji city in a terminal. Proof the simulation survives any display technology. See [his character page](../../characters/antoni-sawicki/README.md). |
 | [**How SimCity Got Free**](how-simcity-got-free.md) ⤷ | Stub — the Long Now → OLPC → GPL saga is shelved under [History & Lore](../history-and-lore/README.md), but it's a world-origin story too. |
+| [**Micropolis × Svelte × Snap! bridge**](micropolis-svelte-snap-constraint-bridge.md) ⤷ | Glass-box binding: WASM engine, runes HUD, Snap! `poke`/`getSnapshot` — the 2018 thread with a 2026 implementation. |
+
+## Glass-box microworlds (constructionist)
+
+| Entry | 🐒✋ Why you'd read it |
+|-------|----------------------|
+| [**constructionist-simcity-response.yml**](../../process/constructionist-simcity-response.yml) | Runbooks to ship: play city → export metrics → modify rule in Snap! → replay. Not another proposal. |
+| [**Micropolis × Snap! 2018**](../../characters/brian-harvey/sources/micropolis-snap-2018.md) | The email that started the pair show — CAM6 + Micropolis blocks in the classroom. |
+| [**Snap! visual engines vision**](../../characters/don-hopkins/snap-visual-engines-fundable-goals.md) | Blocks + Bounce patch-cords + Micropolis as fundable constructionist goals. |
+| [**Bounce dataflow digest**](../../characters/don-hopkins/sources/bounce-dataflow-control-flow.md) | Stream wiring between engines — complements Snap! control flow for live microworlds. |
 
 ## Cellular automata & procedural worlds
 

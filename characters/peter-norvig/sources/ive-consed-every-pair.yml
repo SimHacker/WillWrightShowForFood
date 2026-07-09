@@ -22,5 +22,5 @@ show_hooks:
   - "Pair with Don's XML song ('Twenty Twenty Twenty Four Escapes to Go') as the Repo Show's musical interlude tradition"
 
 see_also:
-  - python-for-lisp-programmers.yml
+  - python-for-lisp-programmers.md
   - ../../../characters/don-hopkins/

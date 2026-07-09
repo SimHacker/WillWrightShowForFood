@@ -2,6 +2,7 @@
 # Public language design. Jens builds; Brian shapes and documents.
 
 meta:
+  rendered_edition: snap-first-class-everything.md
   author: Jens Mönig
   language: Snap!
   formerly: "Build Your Own Blocks (BYOB)"
@@ -18,7 +19,7 @@ the_hook: |
 
 why_don_loves_it: |
   Don's 2018 thread with Brian and Jens assumed learners should *reprogram the simulator they're
-  studying* — Micropolis, CAM6, pie menus in A-Frame. Snap! is the blocks language honest enough
+  studying* — Micropolis, CAM6, modifiable simulators. Snap! is the blocks language honest enough
   to carry that constructionist bet.
 
 show_hooks:
@@ -27,6 +28,9 @@ show_hooks:
   - "Pair with Brian — pedagogy (books) meets implementation (Snap!)"
 
 see_also:
-  - y-combinator-in-blocks.yml
-  - morphic-js.yml
-  - ../../brian-harvey/sources/beauty-and-joy-of-computing.yml
+  - snap-first-class-everything.md
+  - y-combinator-in-blocks.md
+  - morphic-js.md
+  - micropolis-snap-2018.md
+  - ../../brian-harvey/sources/beauty-and-joy-of-computing.md
+  - ../../brian-harvey/sources/snap-macros-metaprogramming.md

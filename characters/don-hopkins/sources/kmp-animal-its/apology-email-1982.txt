@@ -1,0 +1,15 @@
+Date: 9 July 1982 03:49-EDT
+From: Donald E. Hopkins <A2DEH at MIT-MC>
+To: ANIMAL at MIT-MC
+cc: KMP at MIT-MC
+
+    Aww, gee... I'm sorry... I didn't realy mean it. I was just
+asking questions pertaining to popes and bears and woods, and you
+got all excited... Some AI program you are if you don't know what
+religion a bear is or where the Pope ... Ahem... As I was saying,
+I'm sorry and I will never do it again.
+    -Don
+
+Provenance: quoted in Don Hopkins HN comment, Feb 2024
+(https://news.ycombinator.com/item?id=39386175); original ITS mail file
+referenced as animal.b in same thread (not in current PDP-10/its tree listing).

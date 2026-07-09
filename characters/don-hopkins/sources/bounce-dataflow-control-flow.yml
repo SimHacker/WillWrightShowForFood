@@ -1,0 +1,93 @@
+# Bounce / Body Electric — dataflow conditionals and loops
+# Don's design notes (Interval / Levity era). Answers Brian Harvey's 2020 dataflow question
+# and spdegabrielle's Pure Data direction — without CPS.
+
+meta:
+  rendered_edition: bounce-dataflow-control-flow.md
+  title: "Bounce dataflow — switch, enable, while (not CPS)"
+  kind: design_digest
+  authors: [Don Hopkins]
+  david_levitt: "Bounce creator; quoted on enable-line latch discipline"
+  span: "1990s Bounce at Interval / Levity"
+  provenance:
+    - ../mediaflow-design-comments.md  # § Bounce control flow vs Max (lines ~377–399)
+    - ../drakon-control-flow-vs-dataflow.md
+    - ../body-electric-bounce-vr-stack.md
+    - ../levity-bounce-space-seed.md
+    - ../../david-levitt/don-and-david-history.md
+  external:
+    bounce_stuff: https://medium.com/@donhopkins/bounce-stuff-8310551a96e3
+    bounce_notes: https://www.donhopkins.com/home/archive/visual-programming/bounce-notes.txt
+    c2_bounce: https://wiki.c2.com/?BounceLanguage
+    hn_drakon: https://news.ycombinator.com/item?id=10100932
+
+gist: |
+  **Bounce** (David Levitt's derivative of VPL **Body Electric**) is a real-time patch-cord
+  dataflow language. Conditionals and loops do **not** need explicit continuation-passing style:
+  orthogonal mechanisms handle selection, sequencing, and iteration while the runtime computes a
+  **partial order** from wires. Brian Harvey (Sep 2020 Snap! forum): dataflow fits Snap!'s functional
+  paradigm but he gets stuck on conditional evaluation without CPS — Bounce is Don's worked example of
+  another answer.
+
+execution_model:
+  partial_order: "Icons execute once per frame in dependency order from wires — programmer thinks dataflow, not program-counter maze (contrast Max)"
+  against_the_flow: "Upstream wire from downstream output → last frame's value (one-frame delay); can build counters and velocity without explicit latch"
+  loops_via_delay: "Feedback wire delays one frame — `+` with constant 1 on one input, output to other = per-frame counter"
+
+conditionals:
+  switch_icon:
+    what: "Pure dataflow relay — third binary input selects between two data inputs"
+    reads_like: "Condition ? A : B on wires"
+  enable_line:
+    what: "Implicit input+output on every module — power switch / gate"
+    uses:
+      - "Turn nested modules or individual icons on/off (control flow)"
+      - "Sequence side-effecting icons when partial order is insufficient — chain enable wires for ordering dependency"
+      - "Implicit output latch when off (last value holds) — David discourages; prefer explicit latch icon"
+    david_levitt_note: "Discourages using enable-off as implicit latch; use explicit latch instead"
+
+loops:
+  while_encapsulation:
+    what: "Nested folder module; same input/output arity; one binary conditional input"
+    behavior: "While condition true, interior executes; outputs loop back to inputs — telescoping iteration"
+    limit: "Recursion not really supported this way (implementation); stateful modules like `smooth` break inside while — see stateful_modules problem"
+  frame_feedback: "Against-the-flow wires as alternative to while for some patterns"
+
+contrast_max:
+  max: "Explicit control-flow drawing — program counter navigates maze of icons"
+  bounce: "Dataflow switching + enable sequencing + telescoping while — orthogonal concepts, not both projected onto same 2D maze"
+  grasshopper: "Functional dataflow — Condition node, A, B (Don's HN 10100932 taxonomy)"
+  simantics: "Control flow — branch follows program counter (The Sims visual VM)"
+
+snap_forum_2020:
+  thread: "Snap! forum — macros / dataflow (Sep 2020)"
+  spdegabrielle:
+    date: "2020-09"
+    points:
+      - "Snap! light-years ahead of Blockly/Scratch"
+      - "Macros was curiosity not proposal — bridge too far for audience"
+      - "Hybrid lexical scope language (name not given) — uses feature, doesn't know Snap implications"
+      - "Dataflow more interesting than scope or macros; Pure Data fan"
+  brian_harvey:
+    response:
+      - "Asked which hybrid-scope language"
+      - "Thought about dataflow but hung up on conditional evaluation without explicit CPS"
+      - "Admits dataflow fits visual metaphor; will look into more"
+  don_answer: "Bounce switch + enable + while — conditional selection without CPS; Brian's hang-up is real for pure functional graphs but not universal"
+
+stateful_modules_caveat:
+  problem: "Modules like `smooth` store one previous value; inside while over many objects they share state (house-fly swarm bug)"
+  don_fix: "Manual per-object state in dict keys — not reusable without renaming"
+  open_question: "Dataflow equivalents of closures/continuations for stateful functions on wires (MediaFlow essay §)"
+
+see_also:
+  - ../../brian-harvey/sources/snap-macros-metaprogramming.yml
+  - ../../david-levitt/don-and-david-history.md
+  - ../../../repo-shows/rebounce/README.md
+  - ../../../process/trails/visual-programming-patch-cord.md
+  - ../yahoo-pipes-successors.md
+
+show_hooks:
+  - "Brian's CPS hang-up vs Bounce's three orthogonal control ideas — live on snap-logo-brian-jens"
+  - "spdegabrielle Pure Data → Miller Puckette / David Levitt Hookup lineage"
+  - "Rebounce rewrite: implement switch, enable, while in TypeScript and wire to Snap! blocks half"

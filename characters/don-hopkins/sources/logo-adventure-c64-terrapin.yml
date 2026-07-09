@@ -1,0 +1,84 @@
+# Logo Adventure — C64 Terrapin Logo (1983)
+# Girder for machines; humans read logo-adventure-c64-terrapin.md
+
+meta:
+  title: Logo Adventure for C64 Terrapin Logo
+  author: Don Hopkins
+  year: 1983
+  age_at_ship: 17
+  kind: commercial_first_sale
+  platform: Commodore 64
+  publisher: Terrapin Software
+  distribution: Terrapin Logo utilities disk
+
+hook: |
+  No separate parser — the Logo top-level read-eval-print loop *is* the adventure.
+  Words like LOOK, N, S, E, W, TAKE, EXAMINE extend the interpreter; list processing
+  and functional style do the work a text adventure engine would normally hide.
+
+why_terrapin_wanted_it: |
+  Terrapin wanted a simple non-graphical game on the utilities disk that showed off
+  Logo's list processing and functional programming — not another turtle demo.
+
+parser_design:
+  no_main_program: true
+  mechanism: extended Logo interpreter top level
+  cheat_friendly: true
+  pedagogy: examining and modifying world state teaches Logo, not just play
+
+sources:
+  medium:
+    url: https://donhopkins.medium.com/logo-adventure-for-c64-terrapin-logo-4c684a240b53
+    title: Logo Adventure for C64 Terrapin Logo
+  archive:
+    url: http://donhopkins.com/home/archive/logo/adventure.logo
+    note: original Logo source on Don's site
+  hn_threads:
+    - id: 12207532
+      url: https://news.ycombinator.com/item?id=12207532
+      context: Papert memorial thread; Leigh Klotz utilities-disk anecdote
+    - id: 36755727
+      url: https://news.ycombinator.com/item?id=36755727
+      context: 1974 Logo manual thread; Don links Adventure + LLogo rescue
+    - id: 38016554
+      url: https://news.ycombinator.com/item?id=38016554
+      context: Functions for kids video; Don on REPL-as-parser
+
+hn_quotes:
+  - who: Leigh Klotz
+    thread: 12207532
+    text: |
+      IIRC, I wrote "On the Utilities Disk is an Adventure program written by a typical
+      14-year-old using Logo." We all had a good chuckle over that. You used overlays
+      with LOAD to navigate across roomsets.
+  - who: Don Hopkins
+    thread: 12207532
+    text: |
+      The nice thing was that there was no "main program" or parser, it just extended
+      the Logo interpreter top level to be an adventure game!
+  - who: Don Hopkins
+    thread: 38016554
+    text: |
+      I wrote a Logo Adventure for Terrapin that they shipped on the C64, the point of
+      which was to show off Logo's list processing and functional features, because most
+      of the other examples were focused on turtle graphics.
+
+implementation_notes:
+  - CMD / TOPLEVEL pattern — commands as Logo words, not a separate grammar
+  - INITITEMS and world state as Logo data structures
+  - Room navigation via LOAD overlays across roomsets (per Leigh Klotz)
+  - Non-graphical by design — complements turtle-heavy Terrapin marketing
+
+show_hooks:
+  - REPL-as-parser → MOOLLM microworlds where the language *is* the game shell
+  - Cheat-friendly = constructionist honesty (Brian's "computing is your birthright")
+  - Pair with Brian's CSLS list/functional chapters and Snap! first-class data
+  - Scott Adams lineage — same adventure grammar, different implementation strategy
+
+see_also:
+  - characters/don-hopkins/logo-adventure-c64-terrapin.md
+  - characters/don-hopkins/career/lineage.yml
+  - characters/don-hopkins/sources/llogo-maclisp-its.yml
+  - characters/brian-harvey/sources/computer-science-logo-style.yml
+  - characters/scott-adams/artifacts.yml
+  - repo-shows/snap-logo-brian-jens/README.md

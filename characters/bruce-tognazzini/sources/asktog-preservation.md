@@ -1,8 +1,4 @@
-# The AskTog Preservation Saga (readable edition)
-
-*Why asktog.com matters, why it's stranded, and the living-repo rescue plan.
-**Source of truth:** [`asktog-preservation.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/bruce-tognazzini/sources/asktog-preservation.yml) —
-this page is rendered for humans; the YAML drives the machines.*
+# The AskTog Preservation Saga
 
 | Field | Value |
 |-------|-------|

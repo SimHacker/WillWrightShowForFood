@@ -1,8 +1,6 @@
-# Simply Scheme — Brian Harvey & Matthew Wright (readable edition)
+# Simply Scheme — Brian Harvey & Matthew Wright
 
-*Foreword by Hal Abelson.
-**Source of truth:** [`simply-scheme.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/simply-scheme.yml) —
-this page is rendered for humans; the YAML drives the machines.*
+Foreword by Hal Abelson.
 
 **Read it free:** [full text online](https://people.eecs.berkeley.edu/~bh/ss-toc.html) at Brian's
 Berkeley page.

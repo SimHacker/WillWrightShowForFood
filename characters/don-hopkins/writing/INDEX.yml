@@ -10,6 +10,9 @@ featured_essays:
     url: https://medium.com/@donhopkins/logo-adventure-for-c64-terrapin-logo-4c684a240b53
     date: 2018-04-27
     wwsff: ../logo-adventure-c64-terrapin.md
+    wwsff_sources:
+      girder: ../sources/logo-adventure-c64-terrapin.yml
+      readable: ../sources/logo-adventure-c64-terrapin.md
     note: "First commercial code (age 17) — Logo REPL as text-adventure parser; ancestor of MOOLLM adventure compiler"
   - title: "Open Sourcing SimCity"
     url: https://donhopkins.medium.com/open-sourcing-simcity-58470a275446
@@ -56,3 +59,5 @@ donhopkins_research_mirror:
 see_also:
   - { path: ../career/contracts/README.md, why: "Legal primary sources for SimCity OSS" }
   - { path: ../../will-wright/primary-sources-evidence-room.md, why: "Complete cross-link hub to Will sources" }
+  - { path: ../sources/llogo-maclisp-its.yml, why: "LLogo MacLISP rescue girder (~12,480 lines ITS)" }
+  - { path: ../sources/logo-archaeology-hn-digest.md, why: "HN thread harvest 2016–2026" }

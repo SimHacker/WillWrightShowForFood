@@ -147,11 +147,28 @@ dynamic_binding_and_scope:
       pause all / right-click suspended script — show watchers for script vars; Jens allows access to
       variables of all suspended scripts (Brian: 'Jens does understand you need dynamic scope for debugging')"
     macro_caller_context: "of block — run in another procedure/sprite context (not full dynamic scope)"
-    oo_primitive: "self in my block — Brian might compare to RISC for OOP; sprites first-class"
+    oo_primitive: "self in my block — Don's RISC-for-OOP metaphor; sprites first-class"
     not_in_snap: "fluid-let, full dynamic scope, hybrid scope, DYNAMIC VARIABLES primitive (as of manual/forum)"
   palm_question_hook: |
     Ask Brian to state for/against on air; ask Jens what shipped vs what was argued. Is there one atomic
     primitive (ring env? of? self?) or a pile of special cases?
+
+dataflow_forum_2020:
+  date: "2020-09"
+  participants: [spdegabrielle, brian-harvey]
+  spdegabrielle:
+    - "Snap! light-years ahead of Blockly/Scratch; macros was question not proposal"
+    - "Hybrid lexical-scope language (unnamed) — user not CSE expert"
+    - "Dataflow more interesting than scope or macros; Pure Data fan"
+  brian_harvey:
+    - "Thanks; asks which hybrid-scope language"
+    - "Thought about dataflow; hung up on conditional eval without explicit CPS"
+    - "Admits dataflow fits visual metaphor; will look into more"
+  don_counterexample: |
+    Bounce/Body Electric (David Levitt) — switch icon (pure dataflow if), enable line (gate/sequence),
+    while encapsulation (telescoping loop) — no CPS. Digest:
+    ../../don-hopkins/sources/bounce-dataflow-control-flow.yml
+  lineage: "spdegabrielle Pure Data → Miller Puckette; David Levitt Hookup/MIT Music Hacker's Hangout"
 
 scheme_sicp_scorecard:
   yes:
@@ -176,6 +193,7 @@ show_beats:
     - "Special forms — why Scratch if/forever already had invisible rings"
     - "FEXPR vs hygiene pedagogy — why learners aren't industrial macro shops"
     - "Dynamic binding — Brian's most controversial take; Logo decades vs Jens lexical commitment"
+    - "Dataflow vs CPS — Brian's 2020 hang-up; Bounce switch/enable/while as Don's counterexample"
     - "CSLS macro examples — what still missing for full faithfulness"
   jens:
     - "split/join/define live — hexagon from square block"
@@ -191,5 +209,6 @@ see_also:
   - snapcon-2025-karlstrom-address.yml
   - computer-science-logo-style.yml
   - simply-scheme.yml
-  - ../../jens-monig/sources/snap-first-class-everything.yml
-  - ../../jens-monig/sources/y-combinator-in-blocks.yml
+  - ../../don-hopkins/sources/bounce-dataflow-control-flow.yml
+  - ../../jens-monig/sources/snap-first-class-everything.md
+  - ../../jens-monig/sources/y-combinator-in-blocks.md

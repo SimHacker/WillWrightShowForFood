@@ -1,8 +1,4 @@
-# Apple HIG, the "<" submenu buffer, and the Fitts quiz (readable edition)
-
-*Verifiable design history — the technical spine of the Tog × Don conversation.
-**Source of truth:** [`apple-hig-and-menus.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/bruce-tognazzini/sources/apple-hig-and-menus.yml) —
-this page is rendered for humans; the YAML drives the machines.*
+# Apple HIG, the "<" submenu buffer, and the Fitts quiz
 
 ## The Apple Human Interface Guidelines
 

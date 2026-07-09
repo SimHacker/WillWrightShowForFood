@@ -1,0 +1,88 @@
+# KMP ANIMAL — MIT-MC learned tree (~74 KB sexpr)
+# Girder for machines; humans read kmp-animal-its.md
+
+meta:
+  title: ANIMAL II learned database (MIT-MC)
+  author_program: Kent Pitman (KMP@MC)
+  year: 1978
+  environment: MIT-MC PDP-10, ITS, MacLISP
+  byte_count: 74246
+  repo_path: characters/don-hopkins/sources/kmp-animal-its/animal-database-from-its.lisp.txt
+  copied_to_repo: 2026-07-09
+  canonical_url: https://www.donhopkins.com/home/code/animal-database-from-its.lisp.txt
+  its_mirror_url: https://github.com/PDP-10/its/blob/master/src/games/animal.save
+
+tagline: |
+  A communal expert-system tree grown by yes/no play and natural-language teaching — proto-character
+  with foul-language memory, grudge state, and email to KMP.
+
+tree_format:
+  persistence: "(PRINT *MEMORY* OUTSTREAM) via UNSAVE/SAVE"
+  initial_seed: "(CONSTRUCT-TERMINAL 'DOG '|No one|)"
+  question_node: "(QUESTION text author no-branch yes-branch)"
+  terminal_node: "(TERMINAL animal author)"
+  internal_forms:
+    - HAS-STATE
+    - HAS-ACTION
+    - HAS-POSSESSION
+    - HAS-HABITAT
+    - HAS-PROPERTY
+    - MAKES-NOISE
+    - ARE-YOU-THINKING-OF
+  example_leaf: "((HAS-STATE A (REAL) ANIMAL)) KMP ..."
+
+don_footprints:
+  userid: A2DEH
+  author_tag_count: 42
+  hn_lore:
+    - Pope as secret animal; woods/bears distinguishing question; foul-language filter
+    - ANIMAL emailed KMP and cc'd Don; refused play until apology (July 1982)
+  note: Pope may not appear literally in this communal snapshot; incident is documented in HN/correspondence
+
+program_personality:
+  flags: [foul-flag, forgive-flag, apology-flag]
+  persistence: "(REMEMBER 'FOUL) per userid on ARC device"
+  social: SEND-MAIL to KMP on foul-language threshold; RECEIVE-APOLOGY state machine
+  relevance: proto MOOLLM character skills — social memory, behavioral gates, relationship repair
+
+parser_stack:
+  loads:
+    - GAMES;PARSE FASL
+    - GAMES;WORDS FASL
+    - GAMES;PATTRN FASL
+  pattern_rules: DEF-DEF macros (DEF-QUESTION, DEF-INTERPRETATION, DEF-TRANSFORM, ...)
+  also_used_by: Zork (same parse package on DM)
+
+its_sources:
+  - path: src/games/animal.133
+    url: https://github.com/PDP-10/its/blob/master/src/games/animal.133
+    role: main MacLISP source (Animal II)
+  - path: src/games/animal.rules
+    url: https://github.com/PDP-10/its/blob/master/src/games/animal.rules
+    role: player instructions
+  - path: src/games/animal.save
+    url: https://github.com/PDP-10/its/blob/master/src/games/animal.save
+    role: ITS-restored tree (near-identical to Don's hosted copy)
+
+hn_threads:
+  - id: 39386175
+    url: https://news.ycombinator.com/item?id=39386175
+    year: 2024
+    topic: Kent Pitman Lisp ELIZA / ITS History — Don posts ANIMAL foul-language & Pope story
+  - id: 42767132
+    url: https://news.ycombinator.com/item?id=42767132
+    year: 2025
+    topic: Visual Zorker — Don Zork tourist / A2DEH ARPANET backstory
+
+show_hooks:
+  - Expert-system tree that learns from players — ancestor of user-generated knowledge in games
+  - ANIMAL emotional state machine → Sims/MOOLLM character skills (Kent Pitman room)
+  - Parse natural language into game tree — same era as Adventure/Zork parser craft
+  - Communal ITS artifact with Don's A2DEH tags visible in the data
+
+see_also:
+  - characters/don-hopkins/sources/kmp-animal-its.md
+  - characters/don-hopkins/correspondence/kent-pitman.yml
+  - characters/kent-pitman/CHARACTER.yml
+  - DonHopkins/characters/don-hopkins/correspondence/kent-pitman.yml
+  - palmhoo/history-and-lore/logo-llogo-and-c64-adventure.md

@@ -41,6 +41,9 @@ show_suggestions:
 sources:
   web:
     - "HN ELIZA/ANIMAL threads (Don posts)"
+  local:
+    - path: ../don-hopkins/sources/kmp-animal-its.md
+      artifact: ../don-hopkins/sources/kmp-animal-its/animal-database-from-its.lisp.txt
   correspondence:
     - path: ../../../DonHopkins/characters/don-hopkins/correspondence/kent-pitman.yml
 

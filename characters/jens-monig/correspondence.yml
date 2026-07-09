@@ -10,9 +10,9 @@ meta:
   provenance_private: SimHacker/DonHopkins/characters/don-hopkins/correspondence/brian-harvey-jens-moenig.yml
 
 gist: |
-  Brian forwarded Don's Micropolis × Snap! proposal to Jens. Don demoed pie menus in A-Frame 3D and
-  discussed binding Snap! blocks to live **Micropolis** and **CAM6** parameters — open, modifiable
-  simulators for the classroom, not black-box entertainment software.
+  Brian forwarded Don's Micropolis × Snap! proposal to Jens. Don discussed binding Snap! blocks to
+  live **Micropolis** and **CAM6** parameters — open, modifiable simulators for the classroom, not
+  black-box entertainment software.
 
 threads:
   micropolis_in_snap:

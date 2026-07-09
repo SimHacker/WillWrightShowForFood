@@ -1,8 +1,6 @@
-# Computer Science Logo Style — Brian Harvey (readable edition)
+# Computer Science Logo Style — Brian Harvey
 
-*Three volumes, MIT Press. The through-line from Papert's turtle to real CS.
-**Source of truth:** [`computer-science-logo-style.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/computer-science-logo-style.yml) —
-this page is rendered for humans; the YAML drives the machines.*
+Three volumes, MIT Press. The through-line from Papert's turtle to real CS.
 
 **Read the books free:** [all three volumes online](https://people.eecs.berkeley.edu/~bh/volumes.html)
 at Brian's Berkeley page.
@@ -23,8 +21,21 @@ honest instead of magical thinking.
 ## Show hooks
 
 - What makes an idea teachable — Brian's answer across three volumes.
-- Pair with Jens — the books explain *why* [first-class everything in Snap!](../../jens-monig/sources/snap-first-class-everything.yml) matters for beginners.
+- Pair with Jens — the books explain *why* [first-class everything in Snap!](../../jens-monig/sources/snap-first-class-everything.md) matters for beginners.
 - Logo → Scheme → Snap! lineage, told by the person who wrote the textbooks.
+- Pair with Don's artifacts — [C64 Logo Adventure](../../don-hopkins/sources/logo-adventure-c64-terrapin.md) (list/functional literacy, REPL-as-parser) and [LLogo MacLISP rescue](../../don-hopkins/sources/llogo-maclisp-its.md) (where turtle pedagogy met ITS hardware).
+
+## Don's artifacts (same lineage, different shelf)
+
+Brian's books teach Logo as curriculum. Don's dossiers hold **implementation** and **first commercial game**:
+
+| Artifact | Link |
+|----------|------|
+| C64 Logo Adventure (1983) | [sources](../../don-hopkins/sources/logo-adventure-c64-terrapin.md) · [girder](../../don-hopkins/sources/logo-adventure-c64-terrapin.yml) |
+| LLogo on ITS (~12,480 lines MacLISP) | [sources](../../don-hopkins/sources/llogo-maclisp-its.md) · [llogo.lisp.txt](../../don-hopkins/sources/llogo-maclisp-its/llogo.lisp.txt) |
+| Palmhoo shelf note | [logo-llogo-and-c64-adventure](../../../palmhoo/history-and-lore/logo-llogo-and-c64-adventure.md) |
+
+Leigh Klotz's utilities-disk blurb called it *"an Adventure program written by a typical 14-year-old"* — Don was 17; the joke is the pedigree, not the parser.
 
 ## Deeper into the multiverse
 

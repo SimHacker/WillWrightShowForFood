@@ -1,8 +1,6 @@
-# The Beauty and Joy of Computing — Brian Harvey & Dan Garcia (readable edition)
+# The Beauty and Joy of Computing — Brian Harvey & Dan Garcia
 
-*CSforALL curriculum powered by Snap!. 2024 ACM Karlstrom Outstanding Educator Award.
-**Source of truth:** [`beauty-and-joy-of-computing.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/beauty-and-joy-of-computing.yml) —
-this page is rendered for humans; the YAML drives the machines.*
+CSforALL curriculum powered by Snap!. 2024 ACM Karlstrom Outstanding Educator Award.
 
 **Go there:** [bjc.berkeley.edu](https://bjc.berkeley.edu/) · [snap.berkeley.edu](https://snap.berkeley.edu/) ·
 [ACM Karlstrom Award](https://awards.acm.org/karlstrom)
@@ -22,7 +20,7 @@ is the language; Brian and Dan are the pedagogical architects. The Karlstrom cit
 ## Show hooks
 
 - BJC for everyone — the Karlstrom-cited work, told by Brian.
-- Why [first-class everything in Snap!](../../jens-monig/sources/snap-first-class-everything.yml) is a *beginner* feature, not an advanced one.
+- Why [first-class everything in Snap!](../../jens-monig/sources/snap-first-class-everything.md) is a *beginner* feature, not an advanced one.
 - Pair show beat: Jens builds, Brian documents — same curriculum, two roles.
 - [Karlstrom talk honesty](snapcon-2025-karlstrom-address.md) — CCUS over curriculum; assessment hoops vs constructionism.
 

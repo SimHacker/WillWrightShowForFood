@@ -30,6 +30,13 @@ it — per the wetware essay — runs on you.*
 | Entry | 🐒✋ Why you'd read it |
 |-------|----------------------|
 | [**Visual programming patch-cord trail**](../../process/trails/visual-programming-patch-cord.md) | ConMan to Max to node editors — dataflow as a way of thinking. |
+| [**Bounce dataflow control flow**](../../characters/don-hopkins/sources/bounce-dataflow-control-flow.md) | Switch, enable, while — dataflow conditionals without CPS; Body Electric answers Brian's 2020 forum hang-up. |
+| [**Snap! rings, AST, macros**](snap-macros-metaprogramming.md) ⤷ | Blocks on screen = syntax tree; gray rings = quote; `split`/`join`/`define` = generate code by hand. |
+| [**Morphic.js**](../../characters/jens-monig/sources/morphic-js.md) | Snap!'s live IDE substrate — Self Morphic in the browser; edit the environment while it runs. |
+| [**MicropolisReactive.svelte.ts**](https://github.com/SimHacker/MicropolisCore/blob/main/apps/micropolis/src/lib/MicropolisReactive.svelte.ts) | Svelte 5 runes façade over WASM — push callbacks, `peek`/`poke`, `getSnapshot` for Snap! blocks. |
+| [**Micropolis × Svelte × Snap! bridge**](../../characters/don-hopkins/sources/micropolis-svelte-snap-constraint-bridge.md) | Garnet/OL constraints → runes → Snap! primitives — the constructionist binding layer, documented. |
+| [**Garnet → Svelte constraint lineage**](../../characters/don-hopkins/garnet-to-svelte-constraint-ui-lineage.md) | Brad Myers KR → OpenLaszlo → `$state`/`$derived` — declare relationships, system keeps truth. |
+| [**OpenLaszlo Micropolis client**](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/openlaszlo/README.md) | Historical AMF bridge; explicit map to Svelte runes and `MicropolisReactive` — what Wasm obsoleted. |
 | [**Paul Haeberli**](../../characters/paul-haeberli/README.md) | SGI wizardry: ConMan, Grafica Obscura, the accumulation buffer, DynaDraw — and patient 2010 advice on rendering cellular automata fast. |
 | [**Jared Tarbell**](../../characters/jared-tarbell/README.md) | Generative art in Flash, levitated.net, Etsy, the Levitated Toy Factory — code as a way to discover geometry, then laser-cut it into wood. |
 | [**Direct manipulation trail**](../../process/trails/direct-manipulation.md) | Shneiderman's principle and its descendants — why you should grab the thing, not type at it. |

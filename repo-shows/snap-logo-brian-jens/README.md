@@ -26,9 +26,11 @@ only.
 
 **2018 thread:** Don's Micropolis × Snap! correspondence ([digest](../../characters/brian-harvey/sources/micropolis-snap-2018.yml)) — still an open demo beat.
 
-**Snap!Con 2025:** Brian's [Karlstrom evening address](https://www.youtube.com/watch?v=pDK2PE_pkqQ) — introduced by Jens — is the pair show's emotional spine: CCUS and no grades vs curriculum hoops; lambda in Snap!; "computing is your birthright." Digests: [Brian](../../characters/brian-harvey/sources/snapcon-2025-karlstrom-address.yml) · [Jens hosts](../../characters/jens-monig/sources/snapcon-2025-karlstrom-intro.yml).
+**Snap!Con 2025:** Brian's [Karlstrom evening address](https://www.youtube.com/watch?v=pDK2PE_pkqQ) — introduced by Jens — is the pair show's emotional spine: CCUS and no grades vs curriculum hoops; lambda in Snap!; "computing is your birthright." Digests: [Brian](../../characters/brian-harvey/sources/snapcon-2025-karlstrom-address.md) · [Jens hosts](../../characters/jens-monig/sources/snapcon-2025-karlstrom-intro.md).
 
 **Metaprogramming / macros:** [technical digest](../../characters/brian-harvey/sources/snap-macros-metaprogramming.yml) — rings as quote, AST since v8, Lisp-family macros (partial). [Palm audience questions (readable)](audience/palm/questions.md) · [YAML SSOT](audience/palm/questions.yml) for the pair interview.
+
+**Logo archaeology (Don):** [LLogo MacLISP rescue](../../characters/don-hopkins/sources/llogo-maclisp-its.md) · [full source](../../characters/don-hopkins/sources/llogo-maclisp-its/llogo.lisp.txt) · [C64 Logo Adventure](../../characters/don-hopkins/sources/logo-adventure-c64-terrapin.md) · [HN digest](../../characters/don-hopkins/sources/logo-archaeology-hn-digest.md) · [Palmhoo shelf](../../palmhoo/history-and-lore/logo-llogo-and-c64-adventure.md) — Brian teaches Logo in CSLS; Don shipped the first commercial game and stashed the lab implementation. Lars Brinkhoff's [PDP-10/ITS#620](https://github.com/PDP-10/its/issues/620) revival is the preservation beat.
 
 ## Episode seeds
 

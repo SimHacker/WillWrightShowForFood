@@ -40,24 +40,32 @@ summaries:
       - process/VISION.md
       - process/vision-and-ambition.yml
       - process/moollm-stage.yml
+      - process/constructionist-simcity-response.yml
       - process/trails/repo-show-spine.md
       - process/trails/procedural-beauty.md
+      - characters/brian-harvey/sources/micropolis-snap-2018.yml
+      - characters/don-hopkins/sources/micropolis-svelte-snap-constraint-bridge.yml
+      - characters/don-hopkins/snap-visual-engines-fundable-goals.md
       - https://github.com/SimHacker/moollm/tree/main/examples/adventure-4
       - https://github.com/SimHacker/MicropolisCore
     beat: palm
-    last_verified: 2026-07-08
+    last_verified: 2026-07-09
     volatility: medium
 
   - summary: palmhoo/design-methods/README.md
     sources:
       - characters/chris-trottier/design-by-accretion.md
       - characters/chris-trottier/tuned-emergence.md
+      - characters/brian-harvey/sources/snap-macros-metaprogramming.yml
+      - characters/don-hopkins/garnet-to-svelte-constraint-ui-lineage.md
+      - characters/don-hopkins/sources/micropolis-svelte-snap-constraint-bridge.yml
+      - characters/alan-kay/media/discussions/hn-mvc-morphic-watchers-2015.md
       - https://github.com/SimHacker/moollm/tree/main/skills/cauldron
       - https://github.com/SimHacker/moollm/tree/main/skills/play-learn-lift
       - https://github.com/SimHacker/moollm/tree/main/skills/yaml-jazz
       - https://github.com/SimHacker/moollm/blob/main/designs/MOOLLM-MANIFESTO.md
     beat: palm
-    last_verified: 2026-07-08
+    last_verified: 2026-07-09
     volatility: low
 
   - summary: palmhoo/shows-and-performance/README.md
@@ -68,9 +76,11 @@ summaries:
       - process/guest-participation-ladder.yml
       - skills/repo-show/SKILL.md
       - repo-shows/
+      - repo-shows/snap-logo-brian-jens/
+      - repo-shows/brad-myers-garnet-vpl.yml
       - schemas/audience-character.yml
     beat: palm
-    last_verified: 2026-07-08
+    last_verified: 2026-07-09
     volatility: high
     note: "the show slate moves fast; re-verify every pass"
 
@@ -78,13 +88,16 @@ summaries:
     sources:
       - process/VISION.md
       - process/ticket-pr.yml
+      - process/constructionist-simcity-response.yml
       - characters/marc-canter/timeline-rotated-90-degrees.md
+      - characters/brian-harvey/sources/micropolis-snap-2018.yml
+      - characters/will-wright/sources/2007-11-16-simcity-rules-alan-kay/
       - process/trails/visual-programming-patch-cord.md
       - process/trails/maxis-sims-lineage.md
       - process/trails/constructionist-lineage.md
       - https://github.com/SimHacker/MicropolisCore/tree/main/documentation
     beat: palm
-    last_verified: 2026-07-08
+    last_verified: 2026-07-09
     volatility: low
     note: "history accretes but rarely changes; lowest-urgency beat"
 
@@ -95,9 +108,14 @@ summaries:
       - https://github.com/SimHacker/moollm/tree/main/designs
       - characters/paul-haeberli/README.md
       - characters/jared-tarbell/README.md
+      - characters/jens-monig/sources/morphic-js.yml
+      - characters/brian-harvey/sources/snap-macros-metaprogramming.yml
+      - characters/don-hopkins/sources/micropolis-svelte-snap-constraint-bridge.yml
+      - characters/don-hopkins/sources/bounce-dataflow-control-flow.yml
+      - characters/don-hopkins/garnet-to-svelte-constraint-ui-lineage.md
       - process/trails/visual-programming-patch-cord.md
     beat: palm
-    last_verified: 2026-07-08
+    last_verified: 2026-07-09
     volatility: medium
 
   - summary: palmhoo/ethics-and-portrayal/README.md
@@ -116,8 +134,12 @@ summaries:
     sources:
       - characters/INDEX.yml
       - characters/contact-queue.yml
+      - characters/brian-harvey/
+      - characters/jens-monig/
+      - characters/dan-ingalls/
+      - characters/david-ungar/
     beat: palm
-    last_verified: 2026-07-08
+    last_verified: 2026-07-09
     volatility: high
     note: "new characters land weekly; the reading-map picks need re-checking as dirs deepen"
 
@@ -177,6 +199,7 @@ summaries:
   - summary: palmhoo/concurrency-and-messaging/README.md
     sources:
       - characters/alan-kay/
+      - characters/alan-kay/media/discussions/hn-mvc-morphic-watchers-2015.md
       - characters/ken-kahn/
       - characters/palm/running-on-wetware.md
       - characters/don-hopkins/streams-of-streams-fd-passing-zero-copy.md
@@ -188,7 +211,7 @@ summaries:
       - https://news.ycombinator.com/item?id=48786713
       - https://toontalk.com/English/computer.htm
     beat: palm
-    last_verified: 2026-07-08
+    last_verified: 2026-07-09
     volatility: medium
     note: "will spike when Palm on Worms ships + the bird skill lands — fieldnotes + Ken Kahn are declared dependencies"
 

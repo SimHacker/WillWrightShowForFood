@@ -30,6 +30,7 @@ rewrites.*
 | [**sims-io**](https://github.com/SimHacker/MicropolisCore/tree/main/packages/sims-io) | active | File formats and data portability — the crown-jewel theme of Will's premiere (Proxi ↔ Sims ↔ …). |
 | [**mooshow**](https://github.com/SimHacker/MicropolisCore/tree/main/packages/mooshow) · [**vitamoo**](https://github.com/SimHacker/MicropolisCore/tree/main/packages/vitamoo) | early | Where MOOLLM meets Micropolis — show tooling and the VitaMOO experiments. |
 | [**apps/micropolis · vitamoospace · yoot**](https://github.com/SimHacker/MicropolisCore/tree/main/apps) | active | The deployable fronts: the playable city, the MOO space, and the Yoot Tower work. |
+| [**MicropolisReactive.svelte.ts**](https://github.com/SimHacker/MicropolisCore/blob/main/apps/micropolis/src/lib/MicropolisReactive.svelte.ts) | active | Svelte 5 runes bridge — WASM callbacks → `$state`, `peek`/`poke`, `getSnapshot` for Snap! and MCP. See [constraint bridge digest](../../characters/don-hopkins/sources/micropolis-svelte-snap-constraint-bridge.md). |
 
 ## MOOLLM — the operating system's kernel
 

@@ -46,6 +46,8 @@ repo lineage, Maxis memory.
 ### ⚙️ [Code & Craft](code-and-craft/README.md)
 Living code: MicropolisCore, skills as programs, visual programming, emoji cities in terminals.
 *Highlights:* [MicropolisCore](https://github.com/SimHacker/MicropolisCore) ·
+[Snap! metaprogramming](code-and-craft/snap-macros-metaprogramming.md) ·
+[Morphic.js + MicropolisReactive bridge](code-and-craft/README.md#visual-programming--graphics-craft) ·
 [MOOLLM skills](https://github.com/SimHacker/moollm/tree/main/skills) ·
 [ttycity](https://github.com/tenox7/ttycity)
 
@@ -114,6 +116,6 @@ decaying into half-life.
 ---
 
 🐒✋ *A directory that is never out of date is a directory nobody is using. Last big shelving pass:
-2026-07-08.*
+2026-07-09 — Morphic/Snap! metaprogramming, glass-box Micropolis bridge, constructionist blocks lineage.*
 
 ↑ [WWSFF root](../README.md) · [Constitution](CONSTITUTION.md) · [Palm](../characters/palm/README.md)

@@ -1,9 +1,7 @@
-# Brian Harvey — ACM Karlstrom Award Address, Snap!Con 2025 (readable edition)
+# Brian Harvey — ACM Karlstrom Award Address, Snap!Con 2025
 
-*Evening talk, Sep 21 2025, introduced by Jens Mönig.
-**Source of truth:** [`snapcon-2025-karlstrom-address.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snapcon-2025-karlstrom-address.yml) —
-this page is rendered for humans; the YAML drives the machines.
-Full cleaned transcript: [`snapcon-2025-karlstrom-address-transcript.md`](snapcon-2025-karlstrom-address-transcript.md).*
+Evening talk, Sep 21 2025, introduced by Jens Mönig.
+Full transcript: [snapcon-2025-karlstrom-address-transcript.md](snapcon-2025-karlstrom-address-transcript.md)
 
 | Field | Value |
 |-------|-------|
@@ -141,7 +139,7 @@ against institutions that conspire to make teachers the enemies of kids.
 
 - [Full cleaned transcript](snapcon-2025-karlstrom-address-transcript.md)
 - [Beauty and Joy of Computing](beauty-and-joy-of-computing.yml) · [Simply Scheme](simply-scheme.yml) · [CS Logo Style](computer-science-logo-style.yml)
-- [Jens's Karlstrom intro digest](../../jens-monig/sources/snapcon-2025-karlstrom-intro.yml)
+- [Jens's Karlstrom intro digest](../../jens-monig/sources/snapcon-2025-karlstrom-intro.md)
 - [Pair show](../../../repo-shows/snap-logo-brian-jens/SHOW.yml) · [Palm's questions](../../../repo-shows/snap-logo-brian-jens/audience/palm/questions.md) (see 12, 12a–12c)
 
 ↑ [Sources index](README.md) · [Brian's room](../README.md) · [Invitation](../invitation.md)

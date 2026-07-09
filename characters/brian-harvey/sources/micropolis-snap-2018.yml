@@ -13,15 +13,12 @@ meta:
 
 gist: |
   Don wrote Brian about wiring **SimCity / Micropolis** and **CAM6 cellular automata** into **Snap!**.
-  Brian looped in Jens. Don demoed **pie menus in an A-Frame 3D web scene** and discussed connecting
-  Snap! blocks to live simulation parameters — Logo/Scheme/Smalltalk-Morphic heritage meeting an open,
-  modifiable city simulator for the classroom.
+  Brian looped in Jens. Don discussed connecting Snap! blocks to live simulation parameters —
+  Logo/Scheme/Smalltalk-Morphic heritage meeting an open, modifiable city simulator for the classroom.
 
 threads:
   micropolis_in_snap:
     what: "Drive SimCity/Micropolis + CAM6 CA rules from Snap! blocks — constructionist, open, modifiable"
-  pie_menus_in_aframe:
-    what: "Pie menus in an A-Frame 3D web environment — Don's gestural UI meets Snap! in the browser"
 
 show_hooks:
   - "Wire Micropolis into Snap! live — a city sim you reprogram with blocks"
@@ -30,6 +27,6 @@ show_hooks:
 
 see_also:
   - ../correspondence.yml
-  - ../../jens-monig/sources/micropolis-snap-2018.yml
+  - ../../jens-monig/sources/micropolis-snap-2018.md
   - ../../../characters/will-wright/
   - ../../../process/trails/constructionist-lineage.md

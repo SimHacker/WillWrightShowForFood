@@ -145,7 +145,7 @@ questions:
       without breaking the insulation metaphor?
     context_lasers:
       file:
-        - ../../../../characters/jens-monig/sources/morphic-js.yml
+        - ../../../../characters/jens-monig/sources/morphic-js.md
         - ../../../../characters/brian-harvey/sources/snap-macros-metaprogramming.yml
         - https://docs.snap.berkeley.edu/metaprogramming/
     answer: null
@@ -206,7 +206,7 @@ questions:
     context_lasers:
       file:
         - ../../../../characters/brian-harvey/sources/micropolis-snap-2018.yml
-        - ../../../../characters/jens-monig/sources/micropolis-snap-2018.yml
+        - ../../../../characters/jens-monig/sources/micropolis-snap-2018.md
     answer: null
     children: []
 
@@ -224,8 +224,8 @@ questions:
       down? Would Snap! exist without SAP's patience?
     context_lasers:
       file:
-        - ../../../../characters/jens-monig/sources/sap-research-and-snap.yml
-        - ../../../../characters/jens-monig/sources/gp-alan-kay-lineage.yml
+        - ../../../../characters/jens-monig/sources/sap-research-and-snap.md
+        - ../../../../characters/jens-monig/sources/gp-alan-kay-lineage.md
       url:
         - https://news.sap.com/2020/11/snap-jens-moenig-ntls-education-technology-leadership-award/
         - https://theartofresearch.org/a-history/
@@ -265,7 +265,7 @@ questions:
       the same love — even from people who claim to admire Smalltalk?
     context_lasers:
       file:
-        - ../../../../characters/jens-monig/sources/morphic-js.yml
+        - ../../../../characters/jens-monig/sources/morphic-js.md
         - ../../../../characters/jens-monig/sources/gp-alan-kay-lineage.yml
         - ../../../../characters/dan-ingalls/README.md
         - ../../../../characters/alan-kay/media/quora-recaps/oop-messaging-and-what-comes-next.md
@@ -377,7 +377,7 @@ questions:
     context_lasers:
       file:
         - ../../../../characters/brian-harvey/sources/snapcon-2025-karlstrom-address.yml
-        - ../../../../characters/jens-monig/sources/snapcon-2025-karlstrom-intro.yml
+        - ../../../../characters/jens-monig/sources/snapcon-2025-karlstrom-intro.md
         - ../../../../characters/cynthia-solomon/CHARACTER.yml
         - ../../../../process/old-band-back-together.yml
         - ../../../../characters/brian-harvey/sources/computer-science-logo-style.yml

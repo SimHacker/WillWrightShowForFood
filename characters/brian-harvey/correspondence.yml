@@ -13,20 +13,22 @@ meta:
 gist: |
   Don wrote to Brian Harvey (UC Berkeley) about wiring **SimCity / Micropolis** and **CAM6
   cellular automata** into **Snap!**, the visual programming environment. Brian looped in Jens
-  Mönig (Snap! co-creator). Don demoed pie menus in an A-Frame 3D web scene and discussed
-  connecting Snap! blocks to live simulation parameters — Logo/Scheme/Smalltalk-Morphic heritage
-  meeting an open, modifiable city simulator for the classroom.
+  Mönig (Snap! co-creator). Don discussed connecting Snap! blocks to live simulation parameters —
+  Logo/Scheme/Smalltalk-Morphic heritage meeting an open, modifiable city simulator for the classroom.
+  Same constructionist thread as **Alan Kay** on the OLPC list (Nov 2007 “SimCity Rules” — glass-box
+  sim, not black box). Today: **MicropolisReactive.svelte.ts** (Svelte 5 runes) binds WASM ↔ UI;
+  Snap! blocks call the same `poke` / `getSnapshot` façade.
 
 threads:
   micropolis_in_snap:
     what: "Drive SimCity/Micropolis + CAM6 CA rules from Snap! blocks — constructionist, open, modifiable"
-  pie_menus_in_aframe:
-    what: "Pie menus in an A-Frame 3D web environment"
 
 connects_in_repo:
   - { path: CHARACTER.yml, why: "Bio + invitation status" }
   - { path: ../jens-monig/, why: "Snap! co-creator — same thread" }
   - { path: ../will-wright/, why: "SimCity/Micropolis is the simulator being made teachable" }
+  - { path: ../will-wright/sources/2007-11-16-simcity-rules-alan-kay/, why: "OLPC glass-box SimCity — Kay, Nov 2007" }
+  - { path: ../don-hopkins/sources/micropolis-svelte-snap-constraint-bridge.yml, why: "Svelte runes bridge → Snap! blocks" }
   - { path: ../../process/trails/constructionist-lineage.md, why: "Microworlds for the classroom" }
   - { path: ../../process/trails/maxis-sims-lineage.md, why: "Micropolis = open SimCity" }
 

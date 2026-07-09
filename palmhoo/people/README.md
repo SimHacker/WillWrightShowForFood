@@ -39,9 +39,23 @@ you first. Selection is opinion; opinions are signed.*
 | [**Marc Canter**](../../characters/marc-canter/README.md) | [Timeline Rotated 90°](../../characters/marc-canter/timeline-rotated-90-degrees.md) — Director's score as the repo's ancestor. |
 | [**Paul Haeberli**](../../characters/paul-haeberli/README.md) | ConMan and Grafica Obscura — visual programming and graphics essays before the web had either. |
 | [**Jared Tarbell**](../../characters/jared-tarbell/README.md) | levitated.net — generative Flash organisms, then Etsy, then laser-cut mathematics. |
-| [**Alan Kay**](../../characters/alan-kay/README.md) | Messaging, not objects — the idea Palmhoo's whole two-way-RPC-with-readers theory leans on. |
-| [**Ben Shneiderman**](../../characters/ben-shneiderman/README.md) · [**Brad Myers**](../../characters/brad-myers/README.md) | Direct manipulation and the prototype-instance UI tradition. |
+| [**Alan Kay**](../../characters/alan-kay/README.md) | Messaging, not objects — the idea Palmhoo's whole two-way-RPC-with-readers theory leans on. Start [MVC/Morphic/watchers](../concurrency-and-messaging/hn-mvc-morphic-watchers-2015.md) for the 2011 email thread. |
+| [**Ben Shneiderman**](../../characters/ben-shneiderman/README.md) · [**Brad Myers**](../../characters/brad-myers/README.md) | Direct manipulation and the prototype-instance UI tradition. Brad: [Garnet show](../../repo-shows/brad-myers-garnet-vpl.yml) + constraint lineage. |
 | [**Bruce "Tog" Tognazzini**](../../characters/bruce-tognazzini/README.md) | Wrote the original Apple Human Interface Guidelines — and the 1979 *Infinite No. of Monkeys* demo I answered 47 years later. Start with [his sources shelf](../../characters/bruce-tognazzini/sources/README.md); my [tribute](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/tribute-to-tognazzini.md) is the handshake. |
+
+## Constructionist blocks & live systems
+
+🐒✋ *Logo met Turtle; Smalltalk met Morphic; Snap! met both in the browser. These are the people
+who can tell you whether gray rings are quote, whether hygiene matters, and whether a city sim
+should be a black box.*
+
+| Who | 🐒✋ Hand them this first |
+|-----|--------------------------|
+| [**Brian Harvey**](../../characters/brian-harvey/README.md) | [Snap! macros & metaprogramming](../../characters/brian-harvey/sources/snap-macros-metaprogramming.md) — rings as quote, AST as data, CSLS program-as-data lineage. [Karlstrom 2025 address](../../characters/brian-harvey/sources/snapcon-2025-karlstrom-address.md) for the career arc. |
+| [**Jens Mönig**](../../characters/jens-monig/README.md) | [Morphic.js](../../characters/jens-monig/sources/morphic-js.md) + [GP → Snap! under Kay](../../characters/jens-monig/sources/gp-alan-kay-lineage.md) — he shipped the live IDE; Brian shaped what "first-class everything" means. |
+| [**Dan Ingalls**](../../characters/dan-ingalls/README.md) | BitBlt, Fabrik, Lively Kernel — Morphic's grandfather. [Invitation](../../characters/dan-ingalls/invitation.md) frames Livelymerge × yaml-jazz × the live-object lineage only he can name on air. |
+| [**David Ungar**](../../characters/david-ungar/README.md) | Self and Morphic's birth — [slots all the way down](../../characters/david-ungar/slots-all-the-way-down.md) for the prototype religion in one essay. |
+| [**Ken Kahn**](../../characters/ken-kahn/README.md) | ToonTalk birds — concurrent constraint programming as a city; complements Snap! blocks and Bounce patch-cords. |
 
 ## The new arrivals
 

@@ -1,9 +1,6 @@
-# Snap! rings, AST metaprogramming, and macros (readable edition)
+# Snap! rings, AST metaprogramming, and macros
 
-*Brian Harvey — design + Reference Manual; Jens Mönig — implementation. Don's synthesis for Repo
-Show / HN accuracy — not attributed quotes unless marked.
-**Source of truth:** [`snap-macros-metaprogramming.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/snap-macros-metaprogramming.yml) —
-this page is rendered for humans; the YAML drives the machines.*
+Brian Harvey — design and Reference Manual; Jens Mönig — implementation.
 
 **Primary sources:** Snap! Reference Manual
 [Procedures as Data](https://docs.snap.berkeley.edu/procedures-as-data/) ·
@@ -134,13 +131,28 @@ language.
 forms (`Any (unevaluated)`, C-slots — delayed evaluation, not dynamic binding); closures (rings
 remember the defining environment); a debugging exception (pause all → watchers for suspended
 scripts' variables — Brian: "Jens does understand you need dynamic scope for debugging"); the
-`of` caller-context block; and `self` in `my` blocks (Brian might compare it to RISC for OOP —
+`of` caller-context block; and `self` in `my` blocks (Don's RISC-for-OOP metaphor —
 sprites are first-class). **Not** in Snap!: fluid-let, full dynamic scope, hybrid scope, the
 `DYNAMIC VARIABLES` primitive.
 
 → This is [Palm's question 3](../../../repo-shows/snap-logo-brian-jens/audience/palm/questions.md#3--dynamic-binding-controversy)
 on the pair show: Brian states for/against on air; Jens says what shipped vs what was argued.
 One atomic primitive, or a pile of special cases?
+
+## Dataflow vs CPS (forum Sep 2020)
+
+**spdegabrielle** (health developer, not CSE): Snap! is light-years ahead of Blockly/Scratch;
+macros was curiosity not a proposal; **dataflow** (Pure Data fan) feels more natural than scope or
+macros; mentions an unnamed hybrid-scope language.
+
+**Brian:** thanks; asks which hybrid-scope language; has thought about dataflow but gets hung up on
+**conditional evaluation without explicit continuation-passing style** — though it fits the visual
+metaphor; will look into more.
+
+**Don's counterexample:** [Bounce / Body Electric](../../don-hopkins/sources/bounce-dataflow-control-flow.md)
+(David Levitt) — **switch** (pure dataflow `? :`), **enable line** (gate + sequence), **while
+encapsulation** (telescoping loop) — partial order from wires, no CPS. Full design notes in
+[`mediaflow-design-comments.md`](../../don-hopkins/mediaflow-design-comments.md) § "Bounce control flow vs Max".
 
 ## The honest SICP scorecard
 
@@ -158,7 +170,7 @@ metaprogramming AST + the Lisp-family macro *model* (partial implementation).
 
 **Brian:** draw the ring on a whiteboard — quote, gap, call/run as eval · special forms (why
 Scratch `if`/`forever` already had invisible rings) · FEXPR vs hygiene pedagogy · the dynamic
-binding take · which CSLS macro examples still can't be done faithfully.
+binding take · dataflow vs CPS — Bounce switch/enable/while · which CSLS macro examples still can't be done faithfully.
 **Jens:** `split`/`join`/`define` live — hexagon from square block · interpreter cost of caller
 context (`of` internals) · what's blocked on the macro checkbox and command-macro notation · the
 2020 scope debate vs the lexical commitment.
@@ -170,7 +182,7 @@ turtle meets the ring — code you can see and touch.
 - [Palm's audience questions](../../../repo-shows/snap-logo-brian-jens/audience/palm/questions.md) — the ring-as-quote lead question, the scorecard, the controversy
 - [Karlstrom address digest](snapcon-2025-karlstrom-address.md) — lambda as Brian's contribution, in his own words · [full transcript](snapcon-2025-karlstrom-address-transcript.md)
 - [*Computer Science Logo Style*](computer-science-logo-style.md) · [*Simply Scheme*](simply-scheme.md) — the textbook lineage
-- [Jens — first-class everything](../../jens-monig/sources/snap-first-class-everything.yml) · [the Y combinator in blocks](../../jens-monig/sources/y-combinator-in-blocks.yml)
+- [Jens — first-class everything](../../jens-monig/sources/snap-first-class-everything.md) · [the Y combinator in blocks](../../jens-monig/sources/y-combinator-in-blocks.md)
 - [Snap! source](https://github.com/jmoenig/Snap) · [Snap! IDE](https://snap.berkeley.edu/) · [Reference Manual](https://snap.berkeley.edu/snap/help/SnapManual.pdf)
 - [Palm's worm field notebook](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md) — Theo the Logo Turtle, rings as insulation
 - [Pair show](../../../repo-shows/snap-logo-brian-jens/README.md)

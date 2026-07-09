@@ -29,6 +29,7 @@ connects_in_repo:
   - { path: ../dan-ingalls/from-alan-kay.yml, why: "Alan introduced Don to Dan via the Fabrik paper" }
   - { path: ../yoot-saito/from-alan-kay.yml, why: "Alan reviewed the 1993 Yoot Saito interview transcript" }
   - { path: ../david-ungar/from-alan-kay.yml, why: "Self lineage → MOOLLM prototypes" }
+  - { path: media/discussions/hn-mvc-morphic-watchers-2015.md, why: "Private email Oct 2011 — MVC, Morphic, watchers (quoted on HN 2015)" }
   - { path: ../../process/trails/live-objects.md, why: "Smalltalk → NeWS → live systems" }
   - { path: ../../process/crazy-idea-jam.yml#self_times_moollm, why: "MOOLLM as the Smalltalk-lineage idea" }
 

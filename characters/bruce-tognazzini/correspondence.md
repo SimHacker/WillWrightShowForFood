@@ -1,9 +1,7 @@
-# Tog × Don — correspondence digest (readable edition)
+# Tog × Don — correspondence digest
 
-*Public-safe summary of the Bruce "Tog" Tognazzini × Don Hopkins correspondence, 2022–2026.
-**Source of truth:** [`correspondence.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/bruce-tognazzini/correspondence.yml) —
-this page is rendered for humans; the YAML drives the machines. NOT the full private thread.
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
+Public-safe summary of the Bruce "Tog" Tognazzini × Don Hopkins correspondence, 2022–2026.
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 | Field | Value |
 |-------|-------|
