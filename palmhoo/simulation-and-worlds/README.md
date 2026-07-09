@@ -73,3 +73,10 @@ a heading inside a file, an external video), tagging each as many times as it's
 useful and re-shelving as it grows. Where the Movable Feast Machine moves atoms
 across a grid, palmhoo moves **pointers plus metadata** across a filesystem: local
 edits, no global rebuild, robust-first, growing on demand. Reading it runs it.*
+
+🐒✋ *The shelving isn't random, either. **Big-endian names** (most-significant part
+first) make the sorted listing its own map — kin land next to kin — and **grouping
+conventions** turn each directory into an advertisement you can read at a glance. Then
+you climb the **Semantic Image Pyramid** — GLANCE → CARD → SKILL → README, coarse before
+fine, never a lower rung before the one above — so you zoom in only as far as you need.
+Locality plus level-of-detail: a bookshelf that behaves like a spatial computer.*

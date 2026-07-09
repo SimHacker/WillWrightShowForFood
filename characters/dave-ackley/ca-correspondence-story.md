@@ -274,6 +274,22 @@ each tagged as many times as it's useful, continuously refactored and rearranged
 it grows — a live, hand-tended index that grows on demand rather than a fixed tree.
 Robust-first computing, applied to a knowledge base instead of a chip.
 
+What makes the "neighborhood" mean anything is that the layout isn't accidental. Two
+conventions build the grid the head lands on. **Big-endian naming** — most-significant
+part first (`2026-07-09-pixie-thread`, the `cam6-dendrite-heat-01` screenshots above) —
+means the *sorted directory listing is itself the locality*: related things fall next
+to each other, so the moving head lands where the meaning already clusters. That's the
+MFM's spatial locality, rebuilt out of lexical order. And **grouping conventions** —
+directories as advertisements, filenames as K-lines — decide *which* samples share a
+neighborhood, so a plain `ls` reads like an index card for the room you just walked into.
+
+Then it reads that neighborhood at the right zoom. MOOLLM's **Semantic Image Pyramid**
+is a mipmap for text — `GLANCE.yml → CARD.yml → SKILL.md → README.md`, coarse before
+fine — with one rule: never load a lower level without first loading the level above.
+The feast zooms in only as far as the task needs, exactly the way you'd study a CA at
+low resolution before diving to a single cell. Locality plus level-of-detail: that's how
+a filesystem behaves like a spatial computer.
+
 That's why the Ackley thread isn't a side quest. It's the theory of the machine
 these files run on.
 
