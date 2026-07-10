@@ -8,7 +8,7 @@ show:
   guest: Brian Silverman
   character: characters/brian-silverman/
   status: proposed
-  warm_intro: "Henry + Milan Minsky visited Brian in Canada, July 2026"
+  warm_intro: "Leela / Logo / CA orbit; PDP-7 literacy for Heinz PIXIE listing"
 
 topic: |
   Brian Silverman — Brian's Brain, Logo/Scratch lineage, emulator craft, and reading Heinz Lemke's
@@ -28,8 +28,8 @@ segments:
   logo_scratch_constructionist:
     ask: "From Papert turtles to Scratch — what belongs in a public repo microworld?"
   canada_visit_debrief:
-    ask: "Henry and Milan just visited — what are you building at Playful Invention?"
-    with: [henry-minsky]
+    ask: "Playful Invention — Crickets, TurtleArt, what you're building in Montreal"
+    optional_with: [henry-minsky]
 
 format:
   async_one_on_one: true

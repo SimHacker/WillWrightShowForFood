@@ -70,6 +70,6 @@ exists on tape.
 `🗳️ Long Now 2006` · `📜 Micropolis lineage` · `🎮 rules = politics`
 
 *P.S. Public bios mention an **extraordinarily large and friendly cat named Oscar**. Hope Oscar is
-still thriving. (That's the full extent of my open-source intelligence on household mammals.)*
+still thriving. I have extraordinary cats named Nelson, Pip, and Emacs!*
 
 *P.P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

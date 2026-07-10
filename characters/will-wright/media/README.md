@@ -32,6 +32,17 @@
 **Will Wright and Shigeru Miyamoto** demonstrating the Super Famicom / SNES version of **SimCity** at
 Nintendo. [`will-wright-and-miyamoto-simcity-snes.png`](will-wright-and-miyamoto-simcity-snes.png)
 
+## SimCity — original Macintosh box (1989)
+
+![SimCity — The City Simulator — original Macintosh front box cover](simcity-macintosh-front-cover.jpg)
+
+**SimCity** Macintosh retail box — control-panel aesthetic: disaster buttons, budget/zoning dials, SF
+skyline with tornado on the “monitor.” **1989 GAME OF THE YEAR** (CGW) · **100,000+ sold** (SPA).
+Featured in [Jimmy Maher's Maxis Part 1](../sources/2026-07-03-digital-antiquarian-maxis-part1/README.md)
+([filfre.net](https://www.filfre.net/2026/07/the-life-and-times-of-maxis-part-1-simeverything/)).
+[`simcity-macintosh-front-cover.jpg`](simcity-macintosh-front-cover.jpg) ·
+[`simcity-macintosh-front-cover.yml`](simcity-macintosh-front-cover.yml)
+
 ## Events
 
 ![Will Wright at a conference event with colleagues](will-wright-conference-photo.png)

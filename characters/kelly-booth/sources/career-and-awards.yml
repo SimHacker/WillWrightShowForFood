@@ -7,15 +7,16 @@ subject:
   also_known_as: ["Kelly Booth", "Kelly"]
 
 education:
-  - degree: B.Sc. Mathematics
-    institution: California Institute of Technology
-    year: 1968
-  - degree: M.A. Computer Science
-    institution: University of California, Berkeley
-    year: 1970
-  - degree: Ph.D. Computer Science
-    institution: University of California, Berkeley
-    year: 1975
+  degrees:
+    - degree: B.Sc. Mathematics
+      institution: California Institute of Technology
+      year: 1968
+    - degree: M.A. Computer Science
+      institution: University of California, Berkeley
+      year: 1970
+    - degree: Ph.D. Computer Science
+      institution: University of California, Berkeley
+      year: 1975
   origin_story: |
     Palos Verdes High School — programming in a science club; field trip to Systems
     Development Corporation where he learned half the SAGE developers had math degrees and

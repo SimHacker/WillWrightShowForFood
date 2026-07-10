@@ -40,6 +40,9 @@ clusters:
     - DonHopkinsSimsCreditsIcon.jpg
   simcity_nintendo:
     - will-wright-and-miyamoto-simcity-snes.png
+  simcity_mac_box:
+    - simcity-macintosh-front-cover.jpg
+    - simcity-macintosh-front-cover.yml
   sims_promo:
     - will-wright-holding-sim.png
     - sim-picking-wills-nose.png

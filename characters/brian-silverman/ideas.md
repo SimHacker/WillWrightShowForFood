@@ -29,7 +29,7 @@
 
 - **PDP-1 Spacewar!** in Java — same preservation ethic as Lars's PDP-10/ITS
 - Transistor-level **6502** — teaching machines by reversing them
-- **Playful Invention** in Montreal — visit Henry + Milan made; Canada as hub
+- **Playful Invention** — Montreal, **Crickets**, **TurtleArt** — playful iron still shipping
 
 ## Cross-guests
 
@@ -39,7 +39,7 @@
 | **Lars Brinkhoff** | PDP-7 boot + listing |
 | **Norman Margolus** | *Cellular Automata Machines* shelf |
 | **Dave Tristram** | Brian's Brain as live visual music |
-| **Henry Minsky** | Canada visit debrief; Logo / Leela / CA |
+| **Henry Minsky** | Logo / Leela / CA orbit — optional duet when schedules align |
 | **Will Wright** | Microworlds children own |
 
 ## Infodump topics (Don ↔ Brian)

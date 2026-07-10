@@ -21,7 +21,7 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  warm_intro: "Henry Minsky + Milan Minsky visited Brian in Canada, July 2026"
+  warm_intro: "Leela / Logo / CA orbit (Henry + Milan); PDP-7 literacy for PIXIE listing"
   show_seeds:
     - repo-shows/pixie-pie-menus-pdp7.yml
     - repo-shows/norman-margolus/
@@ -49,7 +49,7 @@ bio:
 
 connections:
   henry_minsky_milan_minsky:
-    what: "Visited Brian in Canada, July 2026 — Leela / Logo / CA orbit"
+    what: "Leela / Logo / CA orbit — warm intro path when timing works"
     path: ../henry-minsky/
   heinz_lemke_pixie:
     what: "Don witness — Brian could understand PDP-7 PIXIE code; PIXIE show guest fit"

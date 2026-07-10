@@ -1,0 +1,55 @@
+# SimCity — original Macintosh retail box front cover
+# Featured in Jimmy Maher, "The Life and Times of Maxis, Part 1: SimEverything" (filfre.net, 2026-07-03)
+
+artifact:
+  file: simcity-macintosh-front-cover.jpg
+  what: "SimCity — The City Simulator — Macintosh front box art (control-panel aesthetic)"
+  platform: Macintosh
+  publisher: Maxis Software
+  distributor: Broderbund
+  release: 1989
+  dimensions: "800×1005 px (JPEG)"
+
+box_art:
+  concept: "Beige plastic control console — dials, gauges, disaster buttons framing a central monitor"
+  monitor_scene: "Nighttime San Francisco skyline (Transamerica Pyramid) struck by tornado"
+  disaster_buttons: [monster, fire, earthquake, tornado_lit, flood]
+  dials:
+    - DATE — 1990
+    - BUDGET
+    - zoning — RESIDENTIAL / COMMERCIAL / INDUSTRIAL
+    - ENERGY gauge
+  city_selector: "SAN FRANCISCO (selected) / NEW YORK"
+  awards:
+    - "Computer Gaming World — SimCity 1989 GAME OF THE YEAR"
+    - "Software Publishers Association — OVER 100,000 SOLD"
+  compatibility: |
+    Macintosh Monochrome 512e, +, SE, SE/30, Mac II, IIx, IIcx.
+    Not for IIci — includes printer option. No disk-based copy protection.
+
+provenance:
+  image_host: https://www.filfre.net/wp-content/uploads/2016/06/118655-simcity-macintosh-front-cover.jpg
+  jpeg_comment: MobyGames.com
+  saved_to_repo: 2026-07-10
+  saved_by: Don Hopkins (via WWSFF session)
+
+featured_in:
+  - title: "The Life and Times of Maxis, Part 1: SimEverything"
+    author: Jimmy Maher
+    site: The Digital Antiquarian
+    url: https://www.filfre.net/2026/07/the-life-and-times-of-maxis-part-1-simeverything/
+    published: 2026-07-03
+    repo_source: ../sources/2026-07-03-digital-antiquarian-maxis-part1/README.md
+
+show_beats:
+  - "Software toy as physical dashboard — disasters as red buttons, no win-state UI"
+  - "Mainstream hit that MobyGames nostalgia under-weights — Maher thesis anchor image"
+  - "Mac monochrome era + Broderbund distribution — preservation / port lineage"
+  - "Tornado over SF — spectacle disaster as marketing hero shot"
+
+see_also:
+  - computer-history-museum-maxis-display.yml
+  - will-wright-and-miyamoto-simcity-snes.png
+  - ../sources/2026-07-03-digital-antiquarian-maxis-part1/README.md
+  - ../../jimmy-maher/README.md
+  - ../../../repo-shows/will-wright-premiere/README.md

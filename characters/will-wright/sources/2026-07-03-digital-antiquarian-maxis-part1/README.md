@@ -6,6 +6,7 @@ Will Wright question pump.
 
 - **Article:** [filfre.net — SimEverything](https://www.filfre.net/2026/07/the-life-and-times-of-maxis-part-1-simeverything/)
 - **Archived copy:** [`article.md`](article.md)
+- **Box art (Mac 1989):** [`../../media/simcity-macintosh-front-cover.jpg`](../../media/simcity-macintosh-front-cover.jpg) · [`../../media/simcity-macintosh-front-cover.yml`](../../media/simcity-macintosh-front-cover.yml)
 - **HN thread:** [The Life and Times of Maxis, Part 1: SimEverything](https://news.ycombinator.com/from?site=filfre.net) (95 points, submitted by *doppp*)
 
 ## Why it matters
