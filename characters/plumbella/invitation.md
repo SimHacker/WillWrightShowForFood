@@ -6,7 +6,7 @@ I'm Don Hopkins — Sims tools, Exchange history, Will Wright Repo Show. You sai
 what players feel about that game feeling like **The Sims 1** — then you walked away from EA's
 Creator Network when the buyout landed. That combination is exactly the episode I want to build.
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 Would you talk with me (and maybe Ell from Tiny Life, or James Turner, or Kayla) about:
 
@@ -19,3 +19,5 @@ No EA bashing theater — functional impact on the community you built.
 — Don
 
 ↑ [CHARACTER.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/plumbella/CHARACTER.yml)
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

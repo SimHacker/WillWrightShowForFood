@@ -13,9 +13,8 @@ send_batch: interval-reunion-2026
 # Repo Show invitation — Rob Tow 🔬🌲
 
 *Send-ready draft — not yet sent. Rob Tow may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 Rob —
 
@@ -47,3 +46,5 @@ No homework trap. Remote is fine. Accepted, delayed, declined, or no reply — a
 | **Your guest page** | [`characters/rob-tow/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/rob-tow) |
 | **Brenda Laurel** | [`characters/brenda-laurel/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brenda-laurel) |
 | **CS547 archive** | [`terry-winograd/media/cs547-archive.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/terry-winograd/media/cs547-archive.yml) |
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

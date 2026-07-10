@@ -9,8 +9,7 @@ show_seed: repo-shows/design-by-accretion.yml
 # Repo Show invitation — Chris Trottier 🪶
 
 *Chris may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
 Chris —
 
 I'm working on something before announcing it publicly, but I'd love to include you.
@@ -22,7 +21,7 @@ repo: questions, artifacts, code, papers, links, videos. People participate and 
 conversation, follow along live or time-shifted, and keep contributing afterward. The repo is a living
 artifact.
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md). I hope for a whole series —
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.** I hope for a whole series —
 with him, with other guests, and with tributes to amazing people we've lost, talking with those who
 knew them and showing their work in the repo.
 
@@ -59,8 +58,10 @@ playlist: short clips before and after, one polished cut when the dust settles.
 
 - **Design by accretion ↔ the cauldron** — how layers accumulate into a coherent whole
 - **Sims content & systems** — decisions that made the world feel alive
-- **A Sims team reunion** — with Will, Jamie, Claire, and the rest
+- **A Sims team reunion** — Jamie, Claire, and the rest, with Will as schedules allow
 
 No pressure, no homework. Accepted, delayed, declined, or no reply — all honored gracefully.
 
 — Don Hopkins *(User Interface Flower Child)*
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

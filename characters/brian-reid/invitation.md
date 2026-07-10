@@ -4,7 +4,7 @@
 **Subject:** Repo Show invite — your 1985 PostScript history + Glenn's Distillery  
 **Show:** [postscript-distillery-to-pdf](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/postscript-distillery-to-pdf) (with Glenn)
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 ---
 
@@ -35,3 +35,5 @@ If you're reachable and curious, we'd be honored to record a conversation — as
 — Don
 
 *(Will Wright Show For Food)*
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

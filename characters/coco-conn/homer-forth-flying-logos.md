@@ -107,6 +107,10 @@ the console**, code behind the glass.
   **24 Z80s** each with **2K EPROM**.
 - **Perform the crossfade** — Homer II as **MIDI-less** ancestor of live generative mixing; joystick
   **bumps** through the **score**.
+- **HOMER → Faceball** — the performed-mix verbs (perform, record, overdub, hero take) reborn in the
+  **[Faceball Construction Kit](../../apps/performance-space/faceball-construction-set.yml)** — the
+  analog grandparent slot in its lineage table; via **Bounce** (David Levitt + Don at Interval) and
+  **SimFaux** (2006).
 - **Flying Logos → forkable repo** — corporate logo cinema as **open performance**; Don's **Flying Logo
   Heaven** as WebGPU screensaver?
 - **Forth vs Lisp vs PostScript** — Don's HN threads; **Mitch Bradley** Open Firmware vs **Charles
@@ -117,6 +121,7 @@ the console**, code behind the glass.
 ## Sources (public)
 
 - [HN — Forth vs Lisp — Coco Conn & Paul Rother thread (Don repost, with permission)](https://news.ycombinator.com/item?id=29261868)
+- [HN — Forth: The programming language that writes itself — 2023 repost](https://news.ycombinator.com/item?id=36751574)
 - [HN — Don on Flying Logos / logos (2023)](https://news.ycombinator.com/item?id=34134114) · [Feb 2023 Sun thread excerpt](https://news.ycombinator.com/item?id=29261868) (same HOMER block)
 - [Paul Rother — Homer & Associates history](http://leftbrain.us/rotherHistory/homer.html)
 - [Peter Conn Papers — Stanford Special Collections](https://oac.cdlib.org/findaid/ark:/13030/c8n303pn/entire_text/)

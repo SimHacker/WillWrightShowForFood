@@ -8,9 +8,8 @@ show_seed: repo-shows/dave-tristram/
 
 # Repo Show invitation — David Tristram
 
-*Dave may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
+*Dave may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers quiet mode and onboarding.*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
 Dave —
 
 We've been friends **since the mid–late 1980s** — we met at **USENIX Monterey 1989**, you presenting
@@ -19,7 +18,7 @@ We've been friends **since the mid–late 1980s** — we met at **USENIX Montere
 and **Dead** shows, you performing live on the code you wrote. I'd love to have you on a **Repo Show**:
 a live, friendly session whose whole stage is a public GitHub repo people can clone, run, and build on.
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 **Panel Library** is the deeper proof — your **USENIX Monterey 1989** paper (*Controlling Virtual
 Worlds with the Panel Library*) on **3D GL performance UI**, reused as **Electropaint**'s bouncing
@@ -55,3 +54,5 @@ call.
 No pressure — accepted, delayed, declined, or no reply, all honored gracefully.
 
 — Don Hopkins *(the User Interface Flower Child)* 🌀🎸
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

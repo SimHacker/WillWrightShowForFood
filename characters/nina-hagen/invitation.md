@@ -8,9 +8,8 @@ show_seed: repo-shows/nina-hagen/
 
 # Repo Show invitation — Nina Hagen *(dream guest)*
 
-*Nina Hagen may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
+*Nina Hagen may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers quiet mode and onboarding.*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
 Dear Nina,
 
 You've been one of my **avant-garde north stars** for decades — operatic training turned into punk
@@ -22,7 +21,7 @@ It's called a **Repo Show** — a live conversation whose stage is a **public Gi
 We talk; tools (AI, procedural, hand-played instruments) turn ideas into runnable artifacts while
 we go. **Show, don't tell.**
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 I'd be honored if you'd join one. No homework. You'd be the topic. Threads I'd love to explore — your
 pick, skip whatever doesn't spark:
@@ -45,3 +44,5 @@ or no reply all honored gracefully.
 |---|---|
 | **Show seed** | [`repo-shows/nina-hagen/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/nina-hagen/README.md) |
 | **Your guest page** | [`characters/nina-hagen/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/nina-hagen) |
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

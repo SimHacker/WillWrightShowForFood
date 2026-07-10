@@ -12,7 +12,7 @@ Great to hear from you again in **2024** — I'm still in **Badhoevedorp**, and 
 
 I'm building **Will Wright Show For Food**: a repo-native talk show where the modding tools and correspondence *are* the set. Your thread is one of the best untold Sims stories:
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 - **IFF Pencil** and holiday hex dumps decoding **SimAntics**
 - **Behavior.iff** — was it a gift to modders or an accident?
@@ -28,3 +28,5 @@ Still interested in putting your recovered tools on GitHub? The show repo is bui
 — Don
 
 *(Will Wright Show For Food)*
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

@@ -11,9 +11,8 @@ format: remote_or_in_person
 
 *Public invitation — written after our January correspondence. Scott Adams may edit, decline,
 delay, or request removal at any time.*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 *(Scott Adams the **adventure-game pioneer** — Adventureland, Adventure International — not the anti-vax cartoonist.)*
 
@@ -97,3 +96,5 @@ the industry how to fit a world in sixteen K help invent what comes next.
 
 *P.S. — When you're ready, we can start anywhere: your engine, your biography rooms, or a blank
 YAML file and see what the compiler makes of it.*
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

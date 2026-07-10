@@ -34,6 +34,18 @@ From Don's firsthand [Body Electric / Bounce VR-stack history](../../characters/
 - **Whole objects on typed, colored wires** — pass a structured JSON-like object as **one** thing,
   beating the max-6-parameters nested-module limit. (The seed of Pantomime JSON → MOOLLM.)
 
+## The story beat — Rush, Jesse, the Truth Fly, and Faceball
+
+Bounce's Interval demo put **Jesse Jackson, Rush Limbaugh, and a house fly** over live TV, driven by
+the synchronized **closed-caption track** — MST3K with political puppets, years before anyone named
+the format. That demo grew a **clearly-labeled-fiction** mythology in Don's LLOOOOMM tomb (the
+**Truth Fly**, the **Great Transformation**, comment-out-don't-delete), and David is the perfect
+person to excavate it with on air: real Interval history and labeled fiction, distinguished out loud.
+The payoff: **tell the story Bounce was trying to tell**, reimagined and reimplemented in the
+**[Faceball Construction Kit](../../apps/performance-space/faceball-construction-set.yml)** —
+with **SimFaux** (Don's 2006 OpenLaszlo Fox News parody, inspired by the Interval work —
+[video](https://www.youtube.com/watch?v=gRodlxUZ9SQ)) as the bridge demo between eras.
+
 ## How to play
 
 Anyone can submit an attempt — **by-hand**, **AI-assisted**, or **hybrid**. Publish it, diff it

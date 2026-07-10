@@ -1,0 +1,43 @@
+# Thomas Claburn — press contact. NOT an invitation portrayal.
+# Standards: ../../schemas/portrayal-standards.md — no private contact info in public repo.
+
+character:
+  id: thomas-claburn
+  name: "Thomas Claburn"
+  type: press_contact
+  signifier: "📰"
+  role: "Reporter, The Register (Situation Publishing) — San Francisco"
+  home: characters/thomas-claburn/
+
+relationship:
+  kind: fresh_press_contact
+  since: 2026-06-24   # replied to Don's brief (forwarded by Liam Proven): "if I can get an editor interested, will write something up"
+  invitation_status: not_offered
+  consent: correspondent_warm
+  channel: email
+
+why_him:
+  generative_agents_2023: |
+    Wrote "What if someone mixed The Sims with ChatGPT bots? It would look like this"
+    (The Register, 2023-04-11) — the Stanford/Google "Generative Agents: Interactive
+    Simulacra of Human Behavior" paper (Park et al.): memory streams, reflection, planning
+    bolted onto ChatGPT; 25 agents in a Sims-like Smallville; thousands of dollars in tokens
+    for two simulated days. https://www.theregister.com/2023/04/11/sims_ai_generation/
+  the_followup: |
+    MOOLLM is the working answer to that article's question — characters with personality,
+    memory, and relationships as plain text in git, human-authored and governed, running in
+    ordinary developer tools instead of a Heroku replay. His "This won't end well" section maps
+    directly onto the portrayal-standards consent/impersonation rulebook.
+
+story_now:
+  headline: "WillWrightShowForFood — Will accepted; MOOLLM underneath (LambdaMOO meets The Sims); MicropolisCore + Soul City bridge"
+  editor_pitch_caution: "His editor pitch was based on the Feb 2026 email — superseded; the coordinated update front-loads Will's acceptance"
+  offer: "Participate, not just report: write about whatever aspects he pleases; record the discussion as a show either direction (Don on a Register show, Tom on the Repo Show); Don available for hours + live demos. Will's time never promised, never foreclosed."
+  meta_angle: "MOOLLM is also the production tool — invitations, ethics enforcement, show seeds, and editorial workflow run as skills in the same public repos the audience browses."
+  freedom: "All free and open — MOOLLM free, WWSFF free, Micropolis GPL; Soul City = repossessing our souls from soulless giant corporations like EA (Repo = repository AND repossession)."
+  pitch_doc: private   # DonHopkins green room
+  quiet_mode: "Links shared for first look; publication timing coordinated with premiere (portrayal-standards.md#stealth-mode)"
+
+see_also:
+  - { path: ../liam-proven/, why: "Register colleague who forwarded Don's brief; coordinated pair outreach" }
+  - { path: ../jess-bird/, why: "Sibling pattern — real-media collaborator room, not a guest invite" }

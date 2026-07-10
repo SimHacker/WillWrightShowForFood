@@ -11,10 +11,9 @@ format: live_or_async
 
 # Repo Show invitation — Steve Alvey 🏙️
 
-*Steve may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+*Steve may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers quiet mode and onboarding.*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 **Today I'm sending two matching invitations** — yours and **Heather's** ([Heather's invitation](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/invitation.md)) — for one **pair show**. Each letter is written for the person receiving it; both describe the same show from your two angles, and each of you can read the other's.
 
@@ -108,3 +107,5 @@ straight to your stores/subscriptions.
 — Don Hopkins *(User Interface Flower Child)*
 
 `🏙️ SliceCity` · `🌀 Simopolis round-tripping` · `🧟 Heather: SimFreaks` · `🛍️ send subscribers your way`
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

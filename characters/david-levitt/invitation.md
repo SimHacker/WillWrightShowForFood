@@ -12,107 +12,28 @@ sent_links: true
 
 # Repo Show invitation — David Levitt 🎹
 
-*Phone call 2026-07-06; invite links sent — awaiting scheduling. David Levitt may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
-
+*[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — edit, decline, delay, or request removal anytime, or take direct edit access; also covers quiet mode and onboarding.*
 Dear David,
 
-Your character directory is open. Right now it's an invitation stub with a starter list — **please
-verify and elaborate every item, and add the millions more we both know are missing.** We'd be honored
-to have you on a **Repo Show**: a friendly recorded conversation staged in
-[this public repository](https://github.com/SimHacker/WillWrightShowForFood), carried all the way through
-to working code and credited ideas, in the open.
+**The ask:** join me for a **Repo Show** — a friendly recorded conversation staged in [this public repository](https://github.com/SimHacker/WillWrightShowForFood), carried through to working code and credited ideas in the open.
 
-## The gatling-gun list — what we need to talk about
-*(No bullshit, all real, and nowhere near complete.)*
+**Facts:** **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.** We spoke by phone **6 July** — this is the durable public version of those links. Your room is live and mostly stub — **please verify and correct everything.**
 
-- **Pantomime** — the whole thing. The **JSON object system**, plugin objects, the **multiplayer /
-  networked-physics protocol**, digital-twin AR/VR on any phone (headset optional), **Bug Farm**,
-  **Creatures AR**, the **Launch Silicon Valley World Cup** win, the AR patent. You CEO, Don Chief
-  Architect — and that JSON object model is the direct ancestor of Don's JSON/YAML config lineage and MOOLLM.
-- **ConnectedTV / ConnectedMedia** — the Palm-PDA personalized TV guide + universal remote; the
-  one-handed **stroke-vs-poke** interface you and Don invented together (bundled by **Sony on the CLIÉ**);
-  the XML custom-UI editor and the IR-code capture + community-sharing site.
-- **Bounce** — character simulation + live-video compositing, **COM-on-wires**, "play any audio with any
-  gesture." Don's Interval swan song, and a spine of the show's whole video-puppet toolkit.
-- **Body Electric** — the **VPL Research** real-time system from the team that invented VR (realistic
-  gravity, collisions, thrown-ball physics; the DataGlove / EyePhone era).
-- **Hookup** — credited (by **Mark Coniglio**) as the **first patch-cord visual programming language** —
-  ancestor of Interactor/Isadora and the metaphor **Max** inherited.
-- **Macromedia Player (MMP)** + the **Director** plug-in world — the multimedia runtime Bounce was built
-  on, and the perfect bridge to **Marc Canter** (below).
-- **AI music / computational jazz** — your MIT PhD under **Marvin Minsky** (*A Representation of Musical
-  Dialects*; co-editing *Machine Models of Music*), a natural pairing with SimCity/Sims composer **Jerry
-  Martin** for the *music-and-theory* show.
-- **Remembering Marvin Minsky** — together.
+**Three shows with your name on them — one, two, or all:**
 
-## Rebounce — let's salute Bounce, together 🔌🌀
-The one I'm most excited to build with you: **[Rebounce](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/rebounce/README.md)** — a
-nominal salute to **Bounce** (né **Body Electric**). I'd **check in the old source** (I still have it —
-Pascal → machine-mangled C), and we'd invite **many people to rewrite it together — by hand and with
-AI, competing, cooperating, exchanging ideas** — chasing that live-coding groove in a modern
-(TypeScript/web) stack. **You and I seed the design discussion**; **Jaron** is the guest of honor for
-the origin story. I wrote up the stack as I remember it — the **Swivel 3D transform-tree skeleton**
-projected in real time, **UDP to two SGI renderers (one per eye)**, the Atlanta input hub
-(Polhemus / DataGlove / Convolvotron), and those **typed, colored wires carrying whole JSON-like COM
-objects** to beat the 6-parameter limit — for you to correct and enrich:
-[Body Electric / Bounce VR stack](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/body-electric-bounce-vr-stack.md) · full proposal:
-[rebounce.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/rebounce.md). (Bounce is also the **patch-cord half** of the
-[Snap! visual-engines vision](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/snap-visual-engines-fundable-goals.md).)
+1. **[Rebounce](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/rebounce/README.md)** — the one I'm most excited about. Check in the old **Bounce** source (I still have it — Pascal → machine-mangled C) and invite people to rewrite it together, by hand and with AI, chasing that live-coding groove in a modern web stack. **You and I seed the design; Jaron is guest of honor for the origin story.**
+2. **Music and theory** — your MIT/Minsky computational-jazz line paired with **[Jerry Martin](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/jerry-martin/)** (Sims/SimCity 3000 composer).
+3. **Pantomime** — the JSON object system, the AR/VR stack, you CEO and me Chief Architect; optional three-hander with **[Eric Hedman](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/eric-hedman/)**.
 
-## The guests you're perfect alongside
-Dream-guest dirs + show proposals are already going, and I need your help reaching some of them:
-- **[Laurie Anderson](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/laurie-anderson)** — I'd love her; do you know *anyone* from her Interval circle?
-- **[Brian Eno](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-eno)** — Will may be able to reach him.
-- **[Drew Carey](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/drew-carey)** — Sims mythology + *Whose Line* improv, a live-show natural.
+**Your links:**
 
-You'd fit half a dozen of these. There are also **memorial directories** for beloved people we've lost —
-topics each of us who knew them can speak to, woven together into a shared memorial video.
+- **Your room:** https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/david-levitt/
+- **Conversation hooks** (the full gatling gun — Hookup, VPL, ConnectedTV, Bounce, Minsky): https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-levitt/ideas.md
+- **Deep dive** (our whole shared story, for you and the public): bottom of your [README](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-levitt/README.md)
+- **Also invited:** [Jaron Lanier](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/jaron-lanier/) · [Marc Canter](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/marc-canter/) · [Chuck Blanchard](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/chuck-blanchard/)
 
-**A question only you might answer:** who at **Interval** worked on the **granular-synthesis "talking
-stick"** that **Laurie Anderson and Bob Bielecki** built? **Rachel Strickland**, perhaps? Any real thread
-you have into Laurie's Interval circle is gold *(offered as a question, not an assertion)*.
-
-**Old friends in the room:** we're also inviting **[Marc Canter](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/marc-canter)** — MacroMind/Macromedia/
-Director founder, **People Aggregator** (a.k.a. "People Aggrivator" 😉). You, Marc, and Don go way back;
-outrageous stories, many from Amsterdam. He will love the puppets.
-
-## Help me reach the others — you're a connector
-We both know **so many** people who'd be perfect. **Who else should be here — and would you help me
-contact and gently persuade them?** The ask can be **as light as they like**; there's a whole
-[participation ladder](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/guest-participation-ladder.md):
-
-- **Record a solo video** about whatever they want — phone, laptop, one take or ten.
-- **Browse the repo**, get ideas, answer a question or two.
-- **A relaxed one-on-one** interview, at a time in *their* time zone.
-- **Several people conferencing** at once.
-- **A live Twitch broadcast** — the holy grail, for anyone game.
-
-And **full valet + concierge service**: if they don't want to touch GitHub plumbing or video editing,
-they don't have to — **email / phone / a video file, and Don does the rest** (commits, transcribes,
-links, weaves it together). No git account required, no marathon, no pressure — **many short passes beat
-one big sit-down.**
-
-## Do NOT miss this: the Acapella Pink Trombone Sing-Along 🎺
-A bunch of us, live, singing through **[Pink Trombone](https://dood.al/pinktrombone/)** — the playable
-model of the human vocal tract. Group chaos and joy; working title *"We Are the Weird."* You **cannot**
-miss it. ([the jam](https://github.com/SimHacker/WillWrightShowForFood/blob/main/apps/performance-space/pink-trombone-jam.yml))
-
-## Logistics — early days, rapid prototyping
-Don is hot-dogging it solo right now: **pushing straight to `main`**, skipping the whole
-clone → branch → PR → review → merge song-and-dance. Fine for this stage. **Want to edit directly? Send
-your GitHub handle and you get write access** — just clean up your own merge conflicts if one ever even
-happens. The full PR ceremony arrives when we go public and any random can fire a swarm of rogue AI bots
-at us — complexity is good *then*.
-
-**Materials:** [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-levitt/ideas.md) · [`media/README.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-levitt/media/README.md) ·
-Pantomime media [`../don-hopkins/media/pantomime/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/media/pantomime) ·
-object-model lineage [`../david-rosenthal/slots-all-the-way-down.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/slots-all-the-way-down.md)
-
-Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
-
-**Your response:** Accepted, delayed, too busy, declined, or no reply — all honored gracefully.
+**Next step:** reply with a rough week for scheduling, or "later" — accepted, delayed, too busy, declined, or no reply, all honored gracefully.
 
 — Don Hopkins *(User Interface Flower Child)*
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

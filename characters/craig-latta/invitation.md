@@ -11,15 +11,14 @@ format: remote_or_in_person
 # Repo Show invitation — Craig Latta
 
 *Send-ready draft — not yet sent. Craig Latta may edit, decline, delay, or request removal at any time.*  
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
 Craig —
 
 I'd like to do a **Repo Show** with you — a friendly recorded conversation whose stage is a public
 GitHub repo, following through to working, live-coded artifacts. **Remote screencast is perfect**
 if you're not in Amsterdam when we record; in-person on camera if we overlap. **Show, don't tell.**
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 **What I'd love to talk about**
 
@@ -57,3 +56,5 @@ Browse without a GitHub account — [README](https://github.com/SimHacker/WillWr
 `☕ Caffeine live` · `🕯️ Vanessa + SqueakJS` · `🌐💻 WASM on air` · `🖱️ Cursor vs liveness`
 
 *P.S. — Caffeine's on me — the molecule **and** the VM.*
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

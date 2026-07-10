@@ -9,9 +9,8 @@ warm_intro_via: interval-alumni
 
 # Repo Show invitation — Laurie Anderson *(dream guest)*
 
-*Laurie Anderson may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
+*Laurie Anderson may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers quiet mode and onboarding.*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
 Dear Laurie,
 
 We briefly crossed paths during the **Interval Research** years — I was there in the lab's heyday,
@@ -25,7 +24,7 @@ repository** people can browse and build on. Instead of letting AI flatten peopl
 with the people who actually made things, we talk in public, and the tools turn ideas into something
 real while we go. **Show, don't tell.**
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 I'd be honored if you'd join one — and there's no homework trap. You'd be the topic. The threads I
 keep coming back to (your pick, skip whatever bores you):
@@ -50,3 +49,5 @@ delayed, declined, or no reply all honored gracefully.
 |---|---|
 | **Show seed** | [`repo-shows/laurie-anderson/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/laurie-anderson/README.md) |
 | **Your guest page** | [`characters/laurie-anderson/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/laurie-anderson) |
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

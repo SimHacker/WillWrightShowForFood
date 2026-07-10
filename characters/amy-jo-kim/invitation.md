@@ -11,9 +11,8 @@ beloved: true
 
 # Repo Show invitation — Amy Jo Kim 🎮
 
-*Amy Jo Kim may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
+*Amy Jo Kim may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers quiet mode and onboarding.*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
 **Today I'm sending two matching invitations** — yours and **Scott's** ([Scott's invitation](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-kim/invitation.md)) — for one **pair show**. Each letter is written for the person receiving it; both describe the same show from your two angles, and each of you can read the other's.
 
 Amy Jo —
@@ -24,7 +23,7 @@ letter alongside this one ([Scott's invitation](https://github.com/SimHacker/Wil
 much of your best work is shared, the **default is a pair show** — [`amy-jo-and-scott-kim`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/amy-jo-and-scott-kim/README.md).
 No synchronized sitting required: two one-on-ones at each of your best times, woven together in post, is fine.
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 **What I'd love to draw out from you:**
 
@@ -115,3 +114,5 @@ gracefully.
 — Don Hopkins *(User Interface Flower Child)*
 
 `🎮 Game Thinking` · `🫂 community without extraction` · `🪞 Scott: ambigrams + Viewpoint` · `🌱→🌳 the member ladder` · `📺 Game Thinking TV × CS547`
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

@@ -39,6 +39,16 @@ where Don saw **[David Levitt](../david-levitt/)**'s **Bounce** animated band �
 to do!"* → **Levity**, **Interval**, **[Pantomime](../david-levitt/)**. Natural **two-hander** with
 David; Coco as the host who **held the space**.
 
+### 6b. HOMER → Bounce → SimFaux → Faceball — the performed-mix lineage
+Homer II is the **analog grandparent** of the show's whole performance toolkit: **perform the mix
+with your hands, record the performance, overdub until perfect** — exactly the verbs the
+**[Faceball Construction Kit](../../apps/performance-space/faceball-construction-set.yml)** runs on
+(now with face puppets, amplitude scrub, and Sanspiel physics instead of slide trays and IP film).
+The chain on air: **HOMER** (Forth, optical printer) → **Bounce** at Interval (David + Don's
+closed-caption commentary bots) → **SimFaux** (2006 OpenLaszlo Fox News parody) → **Faceball**.
+Coco's SIGKids room is literally where the chain's middle link got forged. Three-hander with David;
+Coco opens with the console story.
+
 ### 7. Forth lineage — Moore, Mitch Bradley, Don's CAM6
 Charles at **HOMER**; **Mitch Bradley** **Open Firmware** at Sun (Don's intern era); Don's **CAM6**
 Forth on IBM PC. Same HN orbit — **Forth vs Lisp vs PostScript**. Not abstract theology — **concrete

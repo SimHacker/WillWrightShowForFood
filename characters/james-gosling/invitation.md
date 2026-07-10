@@ -17,9 +17,8 @@ format: remote_or_in_person
 └──────────────────────────────────────────────────────────────────────────┘
 ```
 
-*James Gosling may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*  
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
+*James Gosling may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers quiet mode and onboarding.*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
 James —
 
 We go back a long way — **Gosling Emacs** at UniPress, **NeWS** at Sun (your 1990 email is still
@@ -29,7 +28,7 @@ the Java-security questions on camera). I'd like to turn that hallway into a **R
 Repo Show conversation whose stage is a public GitHub repo, following through to working code
 anyone can browse without an account. **Show, don't tell.**
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 **Proposed episode:** *From NeWS to Java* — extension languages, network window systems, and what
 carried when PostScript lost to X11. Can run **solo with you**, or as a **NeWS reunion** with
@@ -84,3 +83,5 @@ Browse without a GitHub account — [README](https://github.com/SimHacker/WillWr
 `☕ NeWS → Java` · `📜 send code not data` · `🖥️ PDP-8 hotrod` · `🌐💻 make it runnable again`
 
 *P.S. — Arthur is already in the repo with HyperLook material. If a three-way NeWS call is easier than solo, say the word.*
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

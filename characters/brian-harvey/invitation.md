@@ -11,8 +11,7 @@ send_batch: snap-logo-pair-2026
 
 # Repo Show invitation — Brian Harvey 🐢
 
-*Brian Harvey may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
-
+*Brian Harvey may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers quiet mode and onboarding.*
 Brian —
 
 You and Jens are getting **matching invitations** today — his is
@@ -25,7 +24,7 @@ is completely fine.
 I'm building a **Repo Show** — a friendly recorded conversation whose stage is a public GitHub repo
 people can clone, run, and build on.
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 Your room is `characters/brian-harvey/`; everything in it is yours to correct, veto, add to, or rewrite. That's house law.
 
@@ -77,3 +76,5 @@ straight to your work. Accepted, delayed, too busy, declined, or no reply — al
 -Don (User Interface Flower Child)
 
 [sources](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/sources/README.md) · [ideas](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-harvey/ideas.md) · [Palm's questions](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/snap-logo-brian-jens/audience/palm/questions.md) · [Jens's invitation](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jens-monig/invitation.md) · [pair show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/snap-logo-brian-jens/README.md)
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

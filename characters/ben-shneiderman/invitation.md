@@ -10,9 +10,7 @@ format: remote_or_in_person
 
 # Repo Show invitation — Ben Shneiderman
 
-*Ben may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
+*Ben may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers quiet mode and onboarding.*
 **Subject:** Repo Show series — HyperTIES living emulator + CHI'88 pie menus (+ whatever you pick)  
 **Show:** [ben-shneiderman](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-shneiderman/README.md) · group option [ben-and-heinz-pie-menus](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-and-heinz-pie-menus.yml)
 
@@ -29,7 +27,7 @@ Since our **January 2022** thread on HyperTIES, Ted Nelson, and self-revealing i
 building **Will Wright Show For Food**: a repo-native talk show whose stage *is* a public GitHub repo
 — artifacts, correspondence, and working code anyone can browse. **Show, don't tell.**
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 **What I'd love to explore with you — your pick, any order, solo or spread across episodes:**
 
@@ -81,3 +79,5 @@ portrayal in the repo anytime.
 — Don Hopkins *(the User Interface Flower Child)* 🥧🔗
 
 `👆 direct manipulation` · `🔗 HyperTIES emulator` · `📊 CHI'88 on air` · `💙 light blue links`
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

@@ -8,9 +8,8 @@ show_seed: repo-shows/peter-norvig/
 
 # Repo Show invitation — Peter Norvig
 
-*Peter Norvig may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
-
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+*Peter Norvig may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers quiet mode and onboarding.*
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 Peter —
 
@@ -44,3 +43,5 @@ No pressure, no homework. Accepted, delayed, declined, or no reply — all honor
 — Don Hopkins *(User Interface Flower Child)*
 
 ↑ [sources/](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/peter-norvig/sources/README.md) · [ideas](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/peter-norvig/ideas.md) · [show seed](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/peter-norvig/README.md)
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

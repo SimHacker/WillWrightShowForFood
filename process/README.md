@@ -78,6 +78,7 @@ Registry + priority queue: [`markup-facades.yml`](markup-facades.yml) · human i
 | [storymaker-stories-and-scenes.md](storymaker-stories-and-scenes.md) | [`storymaker-stories-and-scenes.yml`](storymaker-stories-and-scenes.yml) |
 | [lift-pipeline.md](lift-pipeline.md) | [`lift-pipeline.yml`](lift-pipeline.yml) |
 | [email-attachment-curation.md](email-attachment-curation.md) | [`email-attachment-curation.yml`](email-attachment-curation.yml) |
+| [invitation-email.md](invitation-email.md) | [`invitation-email.yml`](invitation-email.yml) |
 
 ### AI competition & rigs
 

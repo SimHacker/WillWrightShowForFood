@@ -8,8 +8,7 @@ show_seed: repo-shows/dave-ackley/
 
 # Repo Show invitation — Dave Ackley
 
-*Dave may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
-
+*Dave may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers quiet mode and onboarding.*
 Dave —
 
 I've been evangelizing **robust-first computing** for years — on Hacker News, in my own tools, and
@@ -31,7 +30,7 @@ it's [one skill among ~120](https://github.com/SimHacker/moollm/tree/main/skills
 is [the whole living operating system](https://github.com/SimHacker/moollm) — mind the drop. That's
 the abyss. Robust-first is load-bearing in all of it, which is exactly why I want you on the show.
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 What I'd love to get into, your pick:
 
@@ -63,3 +62,5 @@ links, the "why not 3D?" answer, and a categorized link vault. Correct anything 
 No pressure at all — accepted, delayed, declined, or no reply, all honored gracefully.
 
 — Don Hopkins *(the User Interface Flower Child)* 🌀🧱🦋
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

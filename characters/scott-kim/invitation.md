@@ -12,12 +12,11 @@ beloved: true
 
 # Repo Show invitation — Scott Kim 🪞
 
-*Scott Kim may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
+*Scott Kim may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers quiet mode and onboarding.*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
 No synchronized sitting required — record whenever suits you; we weave it together in post.
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 **What I'd love to draw out from you:**
 
@@ -109,3 +108,5 @@ accepted, delayed, too busy, declined, or no reply — all honored gracefully.
 — Don Hopkins *(User Interface Flower Child)*
 
 `🪞 ambigram live` · `👁️ Viewpoint: pixels are the state` · `🎮 Amy Jo: Game Thinking` · `🧩 the designed aha` · `📺 Game Thinking TV × CS547`
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

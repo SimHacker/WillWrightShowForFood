@@ -8,16 +8,15 @@ format: live_or_async
 
 # Repo Show invitation — David Gerrold 🖖🐹👽
 
-*David may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
+*David may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers quiet mode and onboarding.*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
 David —
 
 I'm one of your Patreon followers, and before that a lifetime reader — HARLIE, the Album of
 tribbles-related incidents, *The Man Who Folded Himself*, *The Martian Child*. I also worked at
 Maxis on The Sims, and I now host a show that lives in a GitHub repository:
 [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) — about developing and playing games and tools, with AI backstage and humans on
-camera. **Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md); he is the flagship guest.
+camera. **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more**; he is the flagship guest.
 
 Here's why I'm writing you specifically: **When HARLIE Was One asked the machine-personhood
 question in 1972**, and this repo spends every day answering it in miniature. We portray real
@@ -44,3 +43,5 @@ Your room here is yours: [`README.md`](https://github.com/SimHacker/WillWrightSh
 anything to add, fix, or remove and it's done same day, or edit it yourself.
 
 — Don Hopkins
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

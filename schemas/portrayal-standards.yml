@@ -37,12 +37,35 @@ what_we_avoid:
 
 subject_rights:
   rule: |
-    Any represented real person may request correction, edit, reduction, or deletion
-    of their portrayal at any time. We comply promptly and gracefully.
+    Any represented real person may request correction, edit, reduction, replacement,
+    addition, or deletion of their portrayal at any time. We comply promptly and gracefully.
+    Deletion is the floor, not the ceiling — preferred outcome: guest takes the keys
+    (direct repo access) and edits their own room. See onboarding below.
   how: "Open a GitHub issue on WillWrightShowForFood or contact Don Hopkins via public channels"
   declines: |
     All responses honored: accepted, delayed, too busy, later, declined, rejected, no reply.
     No pressure. No re-pitch without new reason. Status tracked honestly in invitation.md.
+
+stealth_mode:
+  now: |
+    QUIET MODE — repo technically public but unannounced: invited guests read invitations,
+    check portrayals, and join BEFORE any audience shows up. Do not post/link publicly:
+    no social media, no news sites, no blogs. GitHub detail: star/fork broadcasts to public
+    activity feeds — Watch instead (private). See ../process/onboarding-github.yml.
+  later: |
+    THE FLIP — once people have had a chance to respond and join, this working repo goes
+    PRIVATE (production green room). A separate public production website ships only
+    reviewed-and-approved "production" material. Nothing about a guest reaches the public
+    site without their review.
+  what_it_buys_guests: "Drafts, corrections, and workshop mess stay private; public sees only what the guest blessed."
+
+onboarding:
+  rule: "Invitations link portrayal-standards for all of this — never explain accounts or tools inline (no gitsplaining)."
+  tiers:
+    email: "Send text/files/URLs; Don commits with attribution. No account."
+    github: ../process/onboarding-github.yml
+    cursor_moollm: ../process/onboarding-cursor-moollm.yml
+  ladder: ../process/guest-participation-ladder.yml
 
 consent_levels:
   1_self_sovereign: "Subject controls their own directory (Don Hopkins)"

@@ -8,7 +8,7 @@ I'm building something you're already inside of, so you might as well come see i
 
 Will Wright and I are doing a **Repo Show** — a show whose stage and product is a GitHub repo.
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 Guests get a directory they own; the audience buys "tickets" by submitting PRs with questions;
 everything is time-shifted so nobody has to be awake at the same time as anybody else. Will's
 already in. And your fingerprints are all over the building:
@@ -47,3 +47,5 @@ No deadlines, no live obligations — record when you want, as long or short as 
 *P.S. The repo has a resident philosopher monkey who curates a Yahoo-style directory of the whole
 universe. He has already shelved your committee under "Minds & Souls." He would like to ask the
 committee a question. All five of them.*
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

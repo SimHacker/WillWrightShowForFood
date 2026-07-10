@@ -13,7 +13,7 @@ fountain came up, you wrote: *"I want to resurrect that code someday. it would b
 That's the invitation, almost verbatim. Will Wright and I are making **Repo Shows** — the product
 and stage is a public GitHub repo:
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md). sources, code, questions, and artifacts accumulate before,
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.** sources, code, questions, and artifacts accumulate before,
 during, and forever after the conversation ([format](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/FORMAT.md) ·
 [vision](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/VISION.md)). **Resurrecting old code on air is a core format.** The text
 fountain. DynaDraw. A ConMan-style patch panel running again. F.U.N. is the acceptance criterion.
@@ -36,3 +36,5 @@ comments. Your directory in this repo is yours: [characters/paul-haeberli/](http
 anything, delete anything, or send more graphics hacks; we'll add them to the pile.
 
 — Don
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

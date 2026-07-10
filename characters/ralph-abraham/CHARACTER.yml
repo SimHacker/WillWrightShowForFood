@@ -1,0 +1,45 @@
+# Ralph Abraham — memorial portrayal. NOT Ralph Abraham; we do not speak as him.
+# Standards: ../../schemas/portrayal-standards.md (memorial mode)
+
+character:
+  id: ralph-abraham
+  name: "Ralph Herman Abraham"
+  type: memorial
+  signifier: "🌀"
+  status: deceased
+  born: 1936-07-04
+  died: 2024-09-19   # at home, Santa Cruz County, age 88
+  field: "Mathematician — dynamical systems, chaos; visual mathematics; UCSC from 1968"
+  home: characters/ralph-abraham/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  mode: represent_and_discuss   # memorial — no interviews, no invented quotes or inner life
+  authored_by: don-hopkins
+  document: memorial.md
+
+known_for:
+  - "Foundations of Mechanics (with Jerrold Marsden) — the classic, from his Princeton lectures"
+  - "Dynamics: The Geometry of Behavior (with Christopher Shaw) — phase space made visible"
+  - "Visual Mathematics Library — computer graphics as a mathematical instrument"
+  - "'Simulation of cascades by video feedback' (Springer LNM 525, 1976) — the Crutchfield handoff"
+  - "Santa Cruz counterculture (Hip Santa Cruz); Trialogues with McKenna & Sheldrake; Chaos, Gaia, Eros"
+  - "The Web Empowerment Book (1995) — early web evangelism"
+
+repo_threads:
+  possibility_space: "Phase space as the map of what a system COULD do — Will Wright's design vocabulary; Will named Abraham on his 2026-07-09 look-up list"
+  video_feedback: ../jim-crutchfield/abraham-video-feedback-lineage.md
+  memorial_segment: ../../repo-shows/jim-crutchfield/   # Jim remembers Ralph on air
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Ralph_Abraham_(mathematician)"
+  web:
+    - "http://www.ralph-abraham.org/"
+    - "https://senate.universityofcalifornia.edu/in-memoriam/files/ralph-abraham.html"
+    - "https://lookout.co/ralph-abraham-chaos-theory-counterculture-uc-santa-cruz-from-math-to-mushrooms-intellectual-explorer-was-always-looking-for-the-big-picture/story"
+
+see_also:
+  - { path: ../jim-crutchfield/, why: "UCSC — the video feedback handoff; Jim carries the memorial segment" }
+  - { path: ../will-wright/, why: "Phase space → possibility space; Will's own look-up list" }
+  - { path: ../rudy-rucker/, why: "Santa Cruz chaos/cyberpunk orbit" }
+  - { path: ../marvin-minsky/, why: "Memorial-mode sibling — same represent-and-discuss pattern" }

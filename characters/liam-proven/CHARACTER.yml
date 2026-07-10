@@ -1,0 +1,37 @@
+# Liam Proven — press contact / long-running correspondent. NOT an invitation portrayal.
+# Standards: ../../schemas/portrayal-standards.md — no private contact info in public repo.
+
+character:
+  id: liam-proven
+  name: "Liam Proven"
+  type: press_contact
+  signifier: "📰"
+  role: "Linux and FOSS Reporter, The Register (Situation Publishing)"
+  base: "Isle of Man"
+  home: characters/liam-proven/
+
+relationship:
+  kind: warm_correspondent
+  since: 2023-01   # Liam contacted Don about the Alan Kay / NeWS Medium post; posted it to Reddit
+  invitation_status: not_offered   # press relationship, not a guest invite (yet)
+  consent: correspondent_warm
+  channel: email
+
+correspondence_threads:  # public-safe summaries; bodies stay offline
+  2023_01_contact: "Liam reached out after Don's Alan Kay 'browsers as document viewers' NeWS piece; interview interest."
+  2024_07_news_x40: "X Window System at 40 follow-up — Don's NeWS history links (PSIBER, HyperLook SimCity, pie menus, Axis of Eval); intro to Duncan Mak (NeWS-in-browser)."
+  2024_07_yoot_licensing: "Yoot Tower source-release licensing thread — Fair Core / Commons Clause / Polyform; Heather Meeker advice loop."
+  2026_02_moollm_brief: "Don's 'Sims meets ChatGPT — I have too!' brief: MOOLLM, speed-of-light sims, GitHub-as-MMORPG, Micropolis plans. Liam forwarded to Thomas Claburn 2026-06-24."
+
+story_now:
+  headline: "WillWrightShowForFood — Will accepted; MOOLLM underneath (LambdaMOO meets The Sims); MicropolisCore + Soul City bridge"
+  offer: "Participate, not just report: write about whatever aspects he pleases; record the discussion as a show either direction (Don on Liam's show, Liam on the Repo Show); Don available for hours + live demos. Will's time never promised, never foreclosed."
+  meta_angle: "MOOLLM is also the production tool — invitations, ethics enforcement, show seeds, and editorial workflow run as skills in the same public repos the audience browses."
+  freedom: "All free and open — MOOLLM free, WWSFF free, Micropolis GPL; Soul City = repossessing our souls from soulless giant corporations like EA (Repo = repository AND repossession)."
+  pitch_doc: private   # DonHopkins green room; strategy never in this repo
+  quiet_mode: "Links shared for first look; publication timing coordinated with premiere (portrayal-standards.md#stealth-mode)"
+
+see_also:
+  - { path: ../thomas-claburn/, why: "Register colleague — wrote the 2023 generative-agents piece; coordinated pair outreach" }
+  - { path: ../jess-bird/, why: "Sibling pattern — real-media collaborator room, not a guest invite" }
+  - { path: ../david-rosenthal/, why: "His X-at-40 retrospective prompted Liam's NeWS follow-up thread; Don also introduced Duncan Mak's NeWS-in-browser work to Liam (2024)" }

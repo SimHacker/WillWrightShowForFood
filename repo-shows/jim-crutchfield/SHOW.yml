@@ -20,7 +20,10 @@ why_him:
   chaos_lineage: "UC Santa Cruz Dynamical Systems Collective (Farmer, Packard, Shaw); 'Geometry from a Time Series' (1980); the Eudaemonic Pie roulette story; a centerpiece of Gleick's *Chaos*."
 
 dream_segments:
+  - "The director's cut, live — 'we're the robots': record the lost explanatory narration onto the clean 1984 film transfer on air, MST3K-style; Kathy Abelson's tape carries the source; finishes the 2013 thread (don-and-jim-history.md)."
+  - "The CA playground plan: Norman Margolus's permission to turn Cellular Automata Machines chapters into interactive web apps — rewrite CAM6 as modular TypeScript, design on air, check in, Jim's structural-complexity layer, students' homefun; picks up Jim's Dec 2013 co-development offer."
   - "Video feedback, live: close the camera→screen loop and steer spatiotemporal chaos in real time."
+  - "Remembering Ralph Abraham (1936–2024): Jim's UCSC teacher-generation colleague who published the camera-at-monitor loop as mathematics in 1976 — Jim tells the real stories; memorial characters/ralph-abraham/memorial.md; lineage abraham-video-feedback-lineage.md."
   - "Edge of chaos: evolve cellular automata until they actually compute — frozen vs. random vs. the sweet spot."
   - "Geometry from a time series: reconstruct a hidden attractor from one stream of measurements."
   - "Computational mechanics: ε-machines — the minimal model of a process's intrinsic computation."
@@ -35,6 +38,7 @@ format:
   note: "Aspirational; shared turf (feedback, CA, edge of chaos) is the in. Consent not yet asked."
 
 ties_to:
+  - ../../characters/ralph-abraham/   # memorial segment — Jim remembers Ralph
   - ../../characters/jim-crutchfield/
   - ../../characters/jim-crutchfield/invitation.md
   - ../../characters/norman-margolus/

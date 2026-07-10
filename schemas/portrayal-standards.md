@@ -2,9 +2,9 @@
 
 ## Copy for email
 
-Each link above is a **public portrayal about** you — for Repo Show invitations and attribution. It is **not** you, and we do not impersonate you or put words in your mouth. Everything is sourced from documented public work; you may **correct, reduce, or delete** your directory at any time (GitHub issue or email Don — no GitHub account required). Send plain text, attachments, or URLs and we will place vetted material in your room. All responses honored: accept, delay, decline, or silence.
+Each link above is a **public portrayal about** you — for Repo Show invitations and attribution. It is **not** you, and we do not impersonate you or put words in your mouth. Everything is sourced from documented public work; you may **correct, reduce, replace, add to, or delete** your directory at any time (GitHub issue or email Don — no GitHub account required), or ask for **direct edit access** and make it yours. Send plain text, attachments, or URLs and we will place vetted material in your room. All responses honored: accept, delay, decline, or silence. One ask: the repo is in **quiet mode** while invitations go out — please don't share links publicly yet.
 
-Full standards: https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md
+Full standards (also covers repo access, the quiet-mode publication plan, and easy onboarding): https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md
 
 ---
 
@@ -41,11 +41,31 @@ A public portrayal **about** a real person — for Repo Show invitations and Rep
 
 ## Subject rights {#subject-rights}
 
-Any represented real person may request **correction, edit, reduction, or deletion** of their portrayal at any time. We comply promptly and gracefully.
+Any represented real person may request **correction, edit, reduction, replacement, addition, or deletion** of their portrayal at any time. We comply promptly and gracefully. Deletion is the floor, not the ceiling — the preferred outcome is that you **take the keys**: ask for direct repo access (a free GitHub account is all it takes) and edit your own room yourself. See [Getting set up](#onboarding).
 
 **How:** open a GitHub issue on [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) or contact Don Hopkins via public channels.
 
 **Declines:** all responses honored — accepted, delayed, too busy, later, declined, rejected, no reply. No pressure. No re-pitch without new reason. Status tracked honestly in each guest's `invitation.md`.
+
+## Stealth mode & the publication path {#stealth-mode}
+
+**Now — quiet mode.** This repo is technically public but deliberately unannounced: it exists so invited guests can read their invitations, check their portrayals, and join **before any audience shows up**. Please **don't post or link it publicly** yet — no social media, no news sites, no blog posts. (GitHub detail: starring or forking broadcasts to your public activity feed — *Watch* instead, which is private. See [GitHub onboarding](../process/onboarding-github.md).)
+
+**Later — the flip.** Once people have had a chance to respond and join, this working repo **goes private** and becomes the production green room. In its place we publish a separate **public production website** carrying only *production* material — **reviewed and approved** by the people it's about. Nothing about you reaches the public site without that review.
+
+**What this buys guests:** the awkward drafts, the corrections, the "actually it happened like this" — all of that stays in the workshop. The public only ever sees what you've blessed.
+
+## Getting set up {#onboarding}
+
+Three tiers, all honored — pick your commitment level (details: [participation ladder](../process/guest-participation-ladder.md)):
+
+| Tier | What | How |
+|------|------|-----|
+| **Email** | Send text, files, URLs; Don commits with attribution | No account, nothing to learn |
+| **GitHub account** | Issues, browser edits, uploads — or direct access to your own room | [GitHub onboarding](../process/onboarding-github.md) |
+| **Cursor + MOOLLM** | Drive git in natural language, run skills, play the repo like an instrument | [Cursor + MOOLLM onboarding](../process/onboarding-cursor-moollm.md) |
+
+Invitations link **here** for all of this — they never explain accounts or tools inline.
 
 ## Consent levels
 
@@ -74,11 +94,12 @@ Fields: `status: deceased` · `invitation_status: memorial` · `consent_level: 5
 ## Invitation documents
 
 - Path: `characters/<id>/invitation.md` (public)
+- **Email protocol:** [invitation-email.md](../process/invitation-email.md) — BLUF first; **absolute GitHub URLs** (Apple Mail copy from rendered view); **no mermaid**; infodump lives in `README.md` § Deep dive
 - Link in email: URL to this file — email body stays short; repo holds the durable invite
 - **No private email** in invitation headers or body — ever
 - **Audience:** `invitation.md` speaks **to** the guest (anyone may read over their shoulder). Do not mansplain their career back to them; mention shared alignment and the ask. `README.md` speaks **to** the public — paint who they are for readers who do not know them.
 - **No meta in invites or guest READMEs:** no strategy commentary, no disclaimers about what you are not doing, no "discovery artifacts," no "proposed not promised," no process narration. Just write the letter and the portrait. Process rules live here in portrayal standards, not in the guest-facing files.
-- **The draw — Will Wright:** Will has accepted the premiere and his name is in the title; that's the honest reason people will want in. State it **cool and factual**, never braggadocio. When it fits the guest, it's fair to note plainly that Don and Will are longtime friends and collaborators across a wide range of work — audience-participation TV production (Bar Karma / StoryMaker / CurrentTV), Stupid Fun Club robots (Slats, Dents), and lots of cellular-automata work — because it's documented ([stupid-fun-club.yml](../characters/don-hopkins/career/stupid-fun-club.yml)). Don't oversell, don't list credits like a résumé, don't name-drop for its own sake. One or two grounded sentences; let the collaboration speak for itself.
+- **Will Wright, stated accurately:** one sentence, canonical wording ([invitation-email.md](../process/invitation-email.md)), cool and factual, never braggadocio. **Never promise Will's presence in a guest's episode or a one-on-one with him** — time-shifted videos are the baseline; one-on-ones, groups, and live streams happen as they fit his limited time. When it fits the guest, it's fair to note plainly that Don and Will are longtime friends and collaborators across a wide range of work — audience-participation TV production (Bar Karma / StoryMaker / CurrentTV), Stupid Fun Club robots (Slats, Dents), and lots of cellular-automata work — because it's documented ([stupid-fun-club.yml](../characters/don-hopkins/career/stupid-fun-club.yml)). Don't oversell, don't list credits like a résumé, don't name-drop for its own sake. One or two grounded sentences; let the collaboration speak for itself.
 - **Solo means solo:** one guest, one recorded video, no host in the frame. Don weaves in post. One-on-one (Don + guest on a call) and live ensemble are separate, harder tiers — see [guest participation ladder](../process/guest-participation-ladder.md).
 - Strip from public: private email, phone, GitHub-account requirement, ephemeral private asides
 - Workflow: [invitation-workflow.yml](invitation-workflow.yml)

@@ -10,8 +10,7 @@ format: remote_or_in_person
 # Repo Show invitation — Brad A. Myers
 
 *Send-ready draft — not yet sent. Brad A. Myers may edit, decline, delay, or request removal at any time.*  
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
 Brad —
 
 We traded email in 2023 about the **Interaction Techniques** book chapter — pie menus vs marking
@@ -25,7 +24,7 @@ I'd like to turn that long hallway into a **Repo Show** — a friendly recorded 
 stage is a public GitHub repo, following through to working code and credited ideas in public.
 **Show, don't tell.**
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 **What I'd love to explore with you — your pick, any order, skip whatever bores you:**
 
@@ -74,3 +73,5 @@ Browse without a GitHub account — start at the [README](https://github.com/Sim
 — Don Hopkins *(the User Interface Flower Child)* 💎🌀
 
 `💎 Garnet constraints` · `📼 All the Widgets` · `🥧 pie menus in the catalog` · `🤖 PBD × LLM`
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

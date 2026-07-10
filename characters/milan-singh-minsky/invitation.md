@@ -8,10 +8,9 @@ show_seed: repo-shows/isabella-struckman/
 
 # Repo Show invitation — Milan Singh Minsky
 
-*Milan Singh Minsky may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+*Milan Singh Minsky may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers quiet mode and onboarding.*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 Milan —
 
@@ -27,3 +26,5 @@ taking Leela's visual-intelligence research and turning it into something people
 No pressure, no homework. Accepted, delayed, declined, or no reply — all honored gracefully.
 
 — Don Hopkins *(User Interface Flower Child)*
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

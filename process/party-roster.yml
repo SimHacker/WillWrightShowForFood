@@ -3,11 +3,25 @@
 # Tiers: right_away (this party) → follow_later → no_invite (memorial / fictional / host).
 
 meta:
-  updated: 2026-07-06
+  updated: 2026-07-10
   legend:
     invite: none | stub | draft | send_ready | send_now | finished | in_conversation | dream | memorial
     show: none | seed | planted
     next: one-line action
+  email_protocol: invitation-email.yml   # BLUF top, absolute URLs, README deep dive
+  polish_pass_2026_07_10: |
+    Per invitation-email protocol: david-levitt refactored (gatling-gun -> README deep dive;
+    lean BLUF invitation for re-send); ted-selker + edd-coates + david-ungar + bret-victor
+    BLUF-ed with absolute link blocks; ben-shneiderman + jim-crutchfield duplicate
+    standards-line fixed. clint-basinger, marc-canter, ted-nelson already compliant.
+  will_line_pass_2026_07_10: |
+    ALL ~100 invitations upgraded to canonical front-loaded Will line:
+    "Will Wright is in — he's signed on to do the premiere and more."
+    One sentence, first in facts block; never promises Will in guest's episode or 1:1
+    (time-shifted baseline; 1:1s/groups/streams as they fit). Bespoke variants kept in
+    voice (rudy-rucker, reese-jones, chaim-gingold, david-gerrold, sam-arbesman);
+    chris-trottier Sims-reunion bullet hedged "with Will as schedules allow".
+    Protocol: process/invitation-email.md "The Will line" + portrayal-standards.md draw bullet.
 
 # ── RIGHT AWAY — the party (living guests; invites wanted) ─────────────────
 
@@ -81,7 +95,7 @@ right_away:
     - { id: margaret-minsky, show: repo-shows/margaret-minsky/, invite: draft, next: "haptics + sibling session w/ Henry (optional couple: no — siblings)" }
 
   complexity_ca_cluster:  # SFI nexus — the chaotic-CA/feedback/complexity universal hub
-    - { id: jim-crutchfield, show: repo-shows/jim-crutchfield/, invite: draft, contact: [email redacted], next: "Jan 2025 Psychedelic Graphics HN — video feedback + CAM6 + WebGPU sim jam; Art & Science Lab + Don's CA artwork storytelling (CAM6 demo finale); rules-and-art jam" }
+    - { id: jim-crutchfield, show: repo-shows/jim-crutchfield/, invite: draft, contact: [email redacted], next: "WARM, not cold — 17 yrs mail (2008 CAVE/Will ask; 2019 Amsterdam boat w/ Ben Cerveny; 2025 browser-dynamics reply). Jan 2025 Psychedelic Graphics HN — video feedback + CAM6 + WebGPU sim jam; director's-cut narration restore; CAM-8 software archaeology; dripping handrail browser sim. See characters/jim-crutchfield/don-and-jim-history.md" }
     - { id: dave-tristram, show: repo-shows/dave-tristram/, invite: draft, next: "Raster Masters @ Dead/Shoreline — pair Crutchfield; Live Canvas beta PRIVATE until Dave clears" }
     - { id: stephen-wolfram, show: repo-shows/stephen-wolfram/, invite: draft, next: "MOOLLM readings + NKS" }
     - { id: reese-jones, show: characters/reese-jones/, invite: draft, warm_contact: true, next: "SFI board trustee — agent-based modeling/ALife in the CA rules-and-art jam; earth-soul (SimEarth/Gaia/worms); filmed Sam's 2016 Overcomplicated launch" }

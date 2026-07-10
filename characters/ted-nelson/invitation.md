@@ -9,8 +9,7 @@ show_seed: repo-shows/ted-nelson/
 # Repo Show invitation — Ted Nelson (a "Têd-à-Têd Talk")
 
 *Public invitation — ready to send. Ted Nelson may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
 Ted —
 
 I'm building something I call a **Repo Show** — a reinvention of blogging, podcasting,
@@ -20,7 +19,7 @@ conversation, then use AI coding tools to actually *implement* the designs we ta
 Twitch. Everything ends up free on GitHub: transcripts, design documents, papers, and runnable,
 shareable code. **Show, don't tell.**
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 The deliverable isn't just an audio podcast or a video interview — it's all of that **plus a whole
 repo**. That's the whole point: reinventing blogging, YouTube, Twitch, and GitHub as **Repo Shows**.
@@ -80,3 +79,5 @@ No pressure, no homework — just *teleintertwingle* with me whenever you're up 
 — Don Hopkins *(the User Interface Flower Child)* 🌀🔗
 
 *P.S. — Links outside the file, the way Doug did it.* ⚇
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

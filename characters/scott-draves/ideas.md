@@ -42,6 +42,15 @@ The family Don and Scott keep trading: **CAM6** cellular automata, **Sandspiel**
 the **Moveable Feast Machine**, music-reactive visuals, Don's **self-aware image pipeline**. Build
 a tiny feedback loop on stream and watch it come alive.
 
+**Required reading for Spot:** the
+[Abraham → Crutchfield video-feedback lineage](../jim-crutchfield/abraham-video-feedback-lineage.md)
+— Ralph Abraham published the camera-at-monitor loop as mathematics at UCSC in **1976**;
+**Jim Crutchfield** turned it into the *Physica* 10D (1984) paper AND
+[the 16-minute film](https://www.youtube.com/watch?v=B4Kn3djJMCE) (Entropy Productions, Santa
+Cruz). A mutual friend's **VHS copy of that tape** is behind a lot of Don's work. Dream segment:
+Jim (the loop as math), Spot (the loop as art), Don (the loop as performance) — Spot would love
+to read it and talk with him.
+
 ### 5. Hand-authored math vs. learned models
 
 Infinidream brings AI image generation into the flock. The real question: what does AI **change**

@@ -118,6 +118,14 @@ but the Winograd demo was when progress became unbelievable.
 Gary Drescher's pun: minds **made up** constructively (schemas: context → action → result) vs Will's
 lifelong project — players **make up minds** in Sims, Proxi, stories. Dream segment with [Gary](../gary-drescher/made-up-minds.md): mechanism vs microworld; Motive bars vs marginal attribution; two answers to how made-up minds feel real.
 
+### 14. Next gen & documentary DNA (2026-07-09 conversation)
+Will's notes while Don records: **talk to John Romero** (Ireland, with Brenda — game-industry interview);
+mid-80s MIT / Berkeley orbit (**Ralph Abraham** phase space, **Jim Crutchfield** computational mechanics);
+**Mike Winter** weird Berkeley video; **Bo Burnham** meta-performance; **fiction vs non-fiction** must stay
+distinct; format stack = **James Burke** interpretation + **Philomena Cunk** mockumentary + **MST3K** riff +
+**Life on Earth** / Attenborough template. Full research brief:
+[`sources/2026-07-09-will-conversation-notes.md`](sources/2026-07-09-will-conversation-notes.md).
+
 ## Sources (real, public)
 - Primary sources map: [`primary-sources-evidence-room.md`](primary-sources-evidence-room.md)
 - 1996 Winograd talk: [source bundle](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) · video https://www.youtube.com/watch?v=nsxoZXaYJSk

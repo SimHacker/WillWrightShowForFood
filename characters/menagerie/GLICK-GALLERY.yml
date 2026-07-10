@@ -1,0 +1,96 @@
+# The Glick Gallery — labeled-fiction presenter foils
+# Don Philahue's unethical cousins. Every sin they commit is a portrayal-standards rule played for laughs.
+# Lineage: Philomena Cunk (BBC gravitas) · Jiminy Glick (Hollywood sycophancy) · ours wear repo-show legitimacy.
+
+cohort:
+  id: glick-gallery
+  name: The Glick Gallery
+  status: seed
+  home: characters/menagerie/
+  model: labeled_fiction_presenter
+  tagline: "Fiction presenters, real guests, absurd personas — the sweaty cousins Philahue keeps having to eject"
+
+premise: |
+  The Cunk/Glick rule: **fiction interviewer, real guests, surface looks legitimate, persona is
+  absurd — and the fiction is LABELED.** Cunk wears BBC-history-doc gravitas; Jiminy Glick (Martin
+  Short) wears Hollywood chat-show sycophancy; the Glick Gallery wears Repo Show legitimacy —
+  they have commit access, a desk, and no ethics.
+
+  Don Philahue is the house's beloved, ethical orchestrator. The Gallery is his shadow: a cast of
+  less ethically inclined, not-quite-so-beloved presenters who embody every bad-interviewer
+  archetype. The comedy engine: **each Gallery character personifies a specific interviewing sin
+  that the show's real standards forbid** — so the satire teaches the rulebook while it clowns.
+
+the_philahue_dynamic:
+  what: |
+    Philahue is the superego. Gallery characters barge into segments, commit their signature sin,
+    and Philahue — scoring their advertisement dishonest — **cuts their mic and ejects them**,
+    deadpan, mid-sentence. Running gag with a moral spine: the audience learns what ethical
+    interviewing looks like by watching its violations get bounced.
+  eject_beat: [sin_committed, philahue_deadpan_look, mic_cut, trapdoor_or_security_escort, next_segment_no_eulogy]
+  see: ../don-philahue/README.md
+
+roster:
+  smarmy_glickfeld:
+    signifier: "🎙️🥪💦⭐"
+    name: Smarmy Glickfeld
+    archetype: the_sycophant       # the direct Glick cousin
+    sin: "Zero preparation + celebrity-adjacency worship"
+    bits:
+      - "Gets every credit wrong — 'You invented computers, and I LOVE that about you'"
+      - "Eats an enormous sandwich throughout; wipes fingers on the guest's primary sources"
+      - "Mistakes the repo for a menu; tries to order from CHARACTER.yml"
+      - "Name-drops people who have never heard of him; sweats when asked a follow-up"
+    violates: "prior_reading satisfied before ambush (qa-orchestration) — he has read NOTHING"
+
+  rex_upsell:
+    signifier: "💰📈🪙🔔"
+    name: Rex Upsell
+    archetype: the_monetizer
+    sin: "Every question is secretly a sales funnel"
+    bits:
+      - "Interrupts the origin story to announce limited-edition mint-numbered commit NFTs"
+      - "Tries to auction the guest's artifacts mid-interview — 'do I hear five simoleons?'"
+      - "'This childhood memory is brought to you by...' — sponsors the guest's own anecdotes"
+    violates: "scrub_from_public: money, leverage, monetization — he IS the scrub list, animated"
+
+  paula_gotchya:
+    signifier: "🕵️📰🪤😱"
+    name: Paula Gotchya
+    archetype: the_ambush_journalist
+    sin: "Manufactures controversy; frames gossip as accountability"
+    bits:
+      - "'Your former collaborator — and I'm just reading here — HATES you. Response?'"
+      - "Quotes things the guest never said, sourced to 'people close to the matter'"
+      - "Dramatic pause, leans in: 'But what are you HIDING in the gitignore?'"
+    violates: "verifiability + subject rights — she fabricates; the show cites"
+
+  vic_rerun:
+    signifier: "📼🔁🧛📺"
+    name: Vic Rerun
+    archetype: the_nostalgia_vampire
+    sin: "Only the 40-year-old hit; refuses to perceive new work"
+    bits:
+      - "'Let's play the clip again' — plays the same clip, third time this segment"
+      - "Guest describes current project; Vic hears it as a remaster announcement"
+      - "Introduces every guest by what they shipped in 1983, including guests born in 1990"
+    violates: "invitation ethos — the show invites guests for where they're GOING, not a museum tour"
+
+patron_saint:
+  who: donna-toadstool
+  why: "Trump × Jiminy Glick × Divine — the Gallery's founding DNA; occasional guest host who out-glicks them all"
+  see: donna-toadstool/CHARACTER.yml
+
+ethics:
+  labeled_fiction: "Always disclosed — in repo, on air, in chyron. Nobody is fooled; that's the Cunk/Glick contract."
+  guest_consent: "Guests are IN on the bit before any Gallery character enters their segment — opt-in, revocable"
+  punch_direction: "Satire targets bad-media archetypes (the sins), never the guest and never private people"
+  real_people: "All Gallery characters are original fictions — homage to a tradition, impersonation of no one"
+  standards: ../../schemas/portrayal-standards.md
+  fictional_schema: ../../schemas/fictional-audience.yml
+
+see_also:
+  - INDEX.yml
+  - ../don-philahue/README.md
+  - ../../process/repo-show-regulars.md
+  - ../../characters/will-wright/sources/2026-07-09-will-conversation-notes.md   # Cunk + Glick format notes

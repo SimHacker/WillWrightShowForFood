@@ -40,6 +40,7 @@ Full protocol: [`qa-orchestration.yml`](qa-orchestration.yml)
 | **Ask** | `ASK-NOW` in-conversation · `QA-LEDGER-SWEEP` at close · route by `to:` field |
 | **Translate** | Language plugins (`schemas/language-*`) — Simlish, Palm, robot, Cow |
 | **Spawn** | Gags from [`repo-shows/ideas/gags/`](../../repo-shows/ideas/gags/INDEX.yml); menagerie puppets |
+| **Eject** | The [Glick Gallery](../menagerie/GLICK-GALLERY.yml) — his unethical presenter cousins commit their signature interviewing sin; he scores the ad dishonest, cuts the mic, deadpan escort out |
 | **Close** | Q&A ledger sweep + sign-off ritual |
 
 Constitution + simulation tick: [`CHARACTER.yml`](CHARACTER.yml) (`programmed_by`, `simulation_loop`, `orchestration_model`).

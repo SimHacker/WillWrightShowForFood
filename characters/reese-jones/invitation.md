@@ -8,7 +8,7 @@
 Reese —
 
 Small world, again. I've been building a public show-and-archive around **Will Wright** — he's
-accepted the premiere, so his name's on the marquee. Will and I have been friends and
+signed on to do the premiere and more, so his name's on the marquee. Will and I have been friends and
 collaborators for decades across a pretty wide range of stupid fun: audience-participation TV
 (Bar Karma / StoryMaker), the Stupid Fun Club robots, and a lot of cellular-automata work. While
 wiring up **Sam Arbesman's** room I landed on your channel — you filmed his *Overcomplicated*
@@ -58,3 +58,5 @@ Reply with corrections, whether public is OK, yes/maybe/not-now, and anyone else
 **Don Hopkins**
 
 [README.md](README.md) · [ideas.md](ideas.md)
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

@@ -27,7 +27,7 @@ I still haunt the place — hacking with a cocktail at The Interval:
 
 ![Don hacking at The Interval, Long Now's bar at Fort Mason](../don-hopkins/media/interval-long-now-hacking.png)
 
-**Will Wright** has accepted the premiere. If a show sounds interesting, pick whatever fits:
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.** If a show sounds interesting, pick whatever fits:
 
 
 | Shape          | What                                                                                                                                         |
@@ -53,3 +53,5 @@ Reply with corrections on the write-up, whether public is OK, yes/maybe/not-now 
 **Don Hopkins**
 
 [README.md](README.md) · [ideas.md](ideas.md)
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

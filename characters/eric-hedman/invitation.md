@@ -11,9 +11,8 @@ format: remote_or_in_person
 # Repo Show invitation — Eric Hedman
 
 *Send-ready draft — not yet sent. Eric Hedman may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 Eric (Irk) —
 
@@ -41,3 +40,5 @@ No pressure, no homework. Accepted, delayed, declined, or no reply — all honor
 | **Show seed** | [`repo-shows/eric-hedman/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/eric-hedman/README.md) |
 | **Your guest page** | [`characters/eric-hedman/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/eric-hedman) |
 | **Your channel** | [@irkinteraction](https://www.youtube.com/@irkinteraction) |
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

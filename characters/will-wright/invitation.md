@@ -15,7 +15,7 @@ blessing as the **flagship**: the show's first guest, and the template for every
 What's here is the part we're both happy for the world to read — so you can see **why Will's in**, and
 decide you want in too.*
 
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
 · [Guest prototype](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/will-wright/guest-prototype.yml) (how we respect your time)
 · Short summary: [`invitation-summary.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/will-wright/invitation-summary.md)
 
@@ -114,3 +114,5 @@ It means the world to do the first one with you.
 — Don Hopkins *(the User Interface Flower Child)* 🌸🌼🌻🌺🌷💐🌈✨🌀🍄🦋☮️💫🌿🪷🌞
 
 *P.S. — So you have a Repo to Show us? **Now you do.*** 🌻✨🌈🍄☮️🦋💐🌀🌸
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

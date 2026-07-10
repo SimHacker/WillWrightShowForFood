@@ -10,10 +10,9 @@ format: remote_or_in_person
 
 # Repo Show invitation — Dan Ingalls
 
-*The person portrayed may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*  
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+*The person portrayed may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers quiet mode and onboarding.*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 Dan —
 
@@ -87,3 +86,5 @@ Browse without a GitHub account — [README](https://github.com/SimHacker/WillWr
 `🪟 bitblt everything` · `🕯️ Vanessa + SqueakJS` · `🥧 pie menus are cousins` · `📜 Ink & Switch × YAML Jazz`
 
 *P.S. — The Smalltalk Zoo is the best possible set dressing for this show. If CHM is ever a co-host, even better.*
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

@@ -80,3 +80,5 @@ want it.
 — Don *(the User Interface Flower Child)* 🌀
 
 *P.S. — So you have a Repo to Show us? You already did.* 🪓
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

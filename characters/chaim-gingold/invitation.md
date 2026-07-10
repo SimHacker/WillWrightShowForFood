@@ -17,7 +17,7 @@ you — tree question and all. That hour is part of why this show exists: you an
 stream about *Building SimCity* already worked, in public, with an audience. I want to build on
 it, not repeat it.
 
-**Will has accepted the premiere.** I'm inviting you and Sam as a natural pair — historian and
+**Will is in — he's signed on to do the premiere and more.** I'm inviting you and Sam as a natural pair — historian and
 complexity scientist, *Building SimCity* and Maxis 2.0 — with Will and me in the weave where it
 fits. You're raising a new child; that's the right priority, so every shape below is sized for
 stolen moments:
@@ -43,3 +43,5 @@ With gratitude for the intro and respect for your family time,
 **Don Hopkins**
 
 [README.md](README.md) · [ideas.md](ideas.md)
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

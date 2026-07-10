@@ -23,7 +23,7 @@ invitation:
   consent: not_yet_asked
   document: ../../characters/jim-crutchfield/invitation.md
   show_seed: repo-shows/jim-crutchfield/
-  likelihood: "open — aspirational; shared turf (video feedback, CA, edge of chaos) is the in"
+  likelihood: "warm — NOT a cold call: 17 years of correspondence (2008–2025), a 2019 Amsterdam canal boat ride (Ben Cerveny's boat), a standing CA-pedagogy collaboration offer, and Jim asked Don how to reach Will Wright in 2008. See don-and-jim-history.md"
 
 bio:
   summary: |
@@ -54,6 +54,8 @@ bio:
   art_and_science: "President of the **Art & Science Laboratory** (Santa Fe) — CA/chaos AS an art medium; the seam for Don's **CA artwork storytelling** at the finale of the CAM6 demo made for Norman Margolus (painting with overlapping CA layers, cells as animated SimCity tiles)."
   sfi_nexus: "Santa Fe Institute is the repo's complexity/CA/feedback nexus — Owen Densmore (Complex Systems Summer School → Redfish) and Reese Jones (SFI board trustee) also flow from it."
   rules_and_art_jam: "Anchors the cellular-automatists' rules-and-art jam: Don's CAM6 + Norman Margolus + Scott Draves + Reese Jones's agent-based modeling."
+  directors_cut_live: "Finish the 2013 thread ON AIR: record the lost explanatory narration onto the clean 1984 film transfer, MST3K-style — 'we're the robots.' Source narration survives on Kathy Abelson's tape (Don's Sun office mate; wrote the NeWS manual Don reviewed/illustrated)."
+  ca_playground_plan: "Jim's Dec 2013 CA-intro co-development offer, now unlocked: Norman Margolus gave Don permission to build interactive instructional/artistic web apps from Cellular Automata Machines chapters. First cut: modular TypeScript rewrite of Don's monolithic CAM6; Jim's structural-complexity layer (excess entropy, ε-machines, 1+1D space-time diagrams); students get homefun; a thousand flowers bloom."
 
 show_suggestions:
   - { seed: ../../repo-shows/jim-crutchfield/, what: "Edge of Chaos: video feedback live, evolving cellular automata that compute, and computational mechanics — with Don's CAM6 and (dream) Scott Draves + Norman Margolus." }
@@ -67,7 +69,10 @@ sources:
     - "https://scholar.google.com/citations?user=D37XAbIAAAAJ"
   papers:
     - "Crutchfield, J.P. (1984). 'Space-time dynamics in video feedback.' Physica D 10:229–245."
+    - "Crutchfield & Kaneko (1988). 'Are Attractors Relevant to Turbulence?' Phys. Rev. Lett. 60:2715 — the 'dripping handrail' model Don loves."
+    - "Abraham, R. (1976). 'Simulation of cascades by video feedback.' Springer LNM 525:10–14 — the UCSC ancestor; see abraham-video-feedback-lineage.md"
   correspondence:
+    - don-and-jim-history.md   # 2008–2025 timeline: CAVE/Will (2008), Powers of Feedback (2013), CA pedagogy (2013), Amsterdam boat (2019), browser dynamics (2025)
     - sources/2025-01-25-psychedelic-graphics-hn.md
     - "Packard, Crutchfield, Farmer, Shaw (1980). 'Geometry from a Time Series.' Phys. Rev. Lett. 45:712."
     - "Crutchfield & Mitchell (1995). 'The evolution of emergent computation.' PNAS 92:10742."
@@ -77,7 +82,9 @@ sources:
     - "Thomas A. Bass, *The Eudaemonic Pie* (1985) — the roulette project."
 
 see_also:
-  - { path: ../norman-margolus/, why: "Cellular-automata machines / reversible CA — joint CA show" }
+  - { path: ../ralph-abraham/, why: "MEMORIAL (1936–2024) — UCSC teacher generation; 1976 cascades paper Jim formalized; Jim carries the memorial segment on his show" }
+  - { path: ../ben-cerveny/, why: "The Amsterdam boat — 2019 canal ride; cc'd on the 2025 browser-dynamics thread" }
+  - { path: ../norman-margolus/, why: "Cellular-automata machines / reversible CA — joint CA show; Jim has CAM-8 hardware missing its software (2019)" }
   - { path: ../scott-draves/, why: "Generative art, feedback, edge of chaos — dream co-guest" }
   - { path: ../reese-jones/, why: "SFI board trustee; agent-based modeling / ALife — SFI nexus + art jam" }
   - { path: ../don-hopkins/, why: "Host — CAM6 cellular-automata performance platform; video feedback; CA artwork storytelling" }

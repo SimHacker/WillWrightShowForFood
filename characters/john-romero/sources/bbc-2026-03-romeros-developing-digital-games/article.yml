@@ -1,0 +1,79 @@
+# BBC The Documentary Podcast — The Romeros: Developing digital games
+
+source:
+  id: bbc-2026-03-romeros-developing-digital-games
+  type: audio_documentary
+  series: "The Documentary Podcast"
+  network: BBC World Service
+
+  title: "The Romeros: Developing digital games"
+  date: "2026-03-23"
+  duration_minutes: 27
+  availability: "1+ year on BBC Sounds"
+
+  urls:
+    bbc_audio: https://www.bbc.com/audio/play/p0n7xpn6
+    bbc_sounds: https://www.bbc.co.uk/sounds/play/p0n7xpn6
+    programme_page: https://www.bbc.co.uk/programmes/p0n7xpn6
+
+  programme_id: p0n7xpn6
+  version_id: p0n7xnpd
+
+  transcript:
+    status: captured
+    location: ../private/bbc-2026-03-romeros-developing-digital-games/transcript.md
+    source: podscan.fm
+    url: https://podscan.fm/podcasts/documentaries/episodes/the-romeros-developing-digital-games-1
+
+  mp3:
+    url: https://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download-rss-low/proto/https/vpid/p0n7xnpd.mp3?p=rss
+    location: ../private/bbc-2026-03-romeros-developing-digital-games/p0n7xnpd-64kbps.mp3
+
+  alternate_broadcast:
+    title: "In the Studio — The Romeros"
+    date: "2026-03-24"
+    duration_minutes: 26
+    url: https://www.bbc.co.uk/sounds/play/w3ct6vvx
+
+  credits:
+    presenter: Kurt Brookes
+    producers: [Ashley Byrne, Kurt Brookes]
+    production_company: Made in Manchester
+    commissioned_by: BBC World Service
+
+  subjects:
+    - John Romero
+    - Brenda Romero
+  location: "Galway, Ireland (west coast)"
+  topic: "Studio access during major new game project — reinvention, scale, craft"
+
+  synopsis: |
+    Brenda and John Romero continue to push game development from Galway. Kurt Brookes
+    follows a large-team ambitious project — intensity, imagination, unpredictability
+    of building at scale after decades in the industry.
+
+  repo_show_hooks:
+    - will_conversation_2026_07_09
+    - next_gen_after_current_recording
+    - pair_with_will_wright
+    - ireland_studio_craft
+    - micro_team_after_scale_collapse
+    - indie_self_funding_2025_2026
+
+  topics_public_safe:
+    - Galway studio choice over Silicon Valley
+    - reinvention after legend status
+    - secrecy and scope discipline in FPS
+    - industry publisher pullback
+    - discovery as indie problem
+
+  related:
+    - path: ../../../../will-wright/sources/2026-07-09-will-conversation-notes.md
+      why: "Will pointed at Romero interview"
+    - url: https://www.kickstarter.com/projects/theresaloong/game-on-brenda-romero-documentary
+      why: "Brenda-focused documentary"
+
+  portrayal:
+    frame: third_party_documentary
+    not_guest_quotes: true
+    ethics: ../../../../schemas/portrayal-standards.md

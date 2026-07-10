@@ -59,22 +59,18 @@ contributions:
     ../../characters/will-wright/sources/, portrayal/, ../../characters/will-wright/media/ as material arrives. Never commit private email threads.
 
 publication_pattern:
-  principle: "Public abstract in the repo; the real pitch + strategy in the private green room."
+  principle: "Sharp public invitation; fat README; strategy stays private."
   rule: |
-    TWO artifacts per guest, hard wall between them:
-      1. PUBLIC invitation — repo-shows/<guest>/invitation.md (+ short summary characters/<guest>/invitation.md).
-         The "why was I invited, and how did they convince me" ABSTRACT: only what we AND the guest are
-         happy to publish. Two framings:
-           - proposal: vague-but-compelling, clearly NOT-yet-sent/accepted (a dream, no presumption).
-           - accepted: once they say yes (with blessing to publish), a BOLD, confident, ACCEPTED
-             showpiece that cheekily proposes the things they've already agreed to. Primes future guests.
-      2. PRIVATE green room — the personal pitch(es), all drafts/revisions, strategy, and the FINAL email
-         that doubles as cliff-notes + agenda for the phone/video call. Lives OUTSIDE this repo
-         (DonHopkins/projects/willwrightshowforfood/green-room/). Never committed here.
+    THREE layers (see process/invitation-email.md):
+      1. EMAIL — copy GitHub-rendered characters/<guest>/invitation.md into Apple Mail (~one screen).
+      2. invitation.md — public BLUF + absolute links + next step. NO infodump, NO mermaid, NO relative URLs.
+      3. README.md — birds-eye at top; § Deep dive at bottom (unlimited) for guest + public.
+    PRIVATE green room — pitch drafts, strategy, call cliff-notes. DonHopkins green-room/ only.
   scrub_from_public: [money, leverage, fundraising, "same boat", monetization, contact logistics, private correspondence]
-  choreography: "public proposal -> draft/revise pitch in green room -> send email -> call after they've read -> on yes, upgrade public invite to ACCEPTED showpiece (guest blessing on what's shown)."
-  flagship: "repo-shows/will-wright-premiere/invitation.md — the accepted showpiece; template for every invite after."
-  superseded_drafts: "If model-suffixed cuts were ever shared publicly, keep them as redirect stubs -> invitation.md; move full text to the green room."
+  choreography: "expand README deep dive -> draft short invitation.md -> GitHub preview -> copy to Mail -> call after they've read -> on yes, upgrade public invite if guest blesses (Will pattern)."
+  flagship: "characters/will-wright/invitation.md — accepted showpiece; longer exception."
+  template: "characters/_TEMPLATE/invitation.md — lean default for new sends."
+  refactor_before_send: "Long invitations (e.g. david-levitt) — move gatling-gun body to README § Deep dive first."
 
 legacy_mapping:
   not_yet_asked: draft

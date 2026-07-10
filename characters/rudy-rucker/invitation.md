@@ -8,8 +8,7 @@ show_seed: repo-shows/rudy-rucker/
 
 # Repo Show invitation — Rudy Rucker
 
-*Rudy may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
-
+*Rudy may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers quiet mode and onboarding.*
 Rudy —
 
 I want you on a **Repo Show**. It's a warm, live-ish session whose entire stage is a
@@ -48,7 +47,7 @@ of back-and-forth up as a readable story
 ([**ca-correspondence-story.md**](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/dave-ackley/ca-correspondence-story.md));
 correct anything I got wrong, and the private emails stay private.
 
-**Will Wright** has already signed on for the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) —
+**Will Wright** has signed on for the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more —
 his name's on the marquee, which is half the reason people keep saying yes.
 
 **Format:** async-first and zero-homework. You record whatever you're up for — voice,
@@ -60,3 +59,5 @@ Accepted, delayed, declined, or no reply — all honored gracefully. But I reall
 really hope you'll come play.
 
 — Don Hopkins *(the User Interface Flower Child)* 🌀🧱🦋
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

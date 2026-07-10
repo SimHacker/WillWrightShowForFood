@@ -10,21 +10,19 @@ format: remote_or_in_person
 # Repo Show invitation — David Ungar
 
 *Send-ready draft — not yet sent. David Ungar may edit, decline, delay, or request removal at any time.*  
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
 David —
 
-I wrote to you in January about **MOOLLM** — how much of what I'm building only makes sense because
-of **Self**. I meant every word of the credit in that note. You were **very open and influential**
-when it mattered: papers, humor, mailing lists, and that Kaleida meetup where prototype object
-systems argued in good faith. Self doesn't run on everybody's phone — **in spirit it does** — in
-JavaScript's object model, in HotSpot's lineage, and in MOOLLM's `# import self from self`.
+**The ask:** join me for a **Repo Show** — a friendly recorded conversation whose stage is a public
+GitHub repo, following through to working code and credited ideas anyone can browse without an
+account. **Show, don't tell.**
 
-I'd like to turn that hallway into a **Repo Show** — a friendly recorded conversation whose stage is
-a public GitHub repo, following through to working code and credited ideas anyone can browse
-without an account. **Show, don't tell.**
-
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+**Facts:** **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
+I wrote to you in January about **MOOLLM** — how much of what I'm building only makes sense
+because of **Self**. I meant every word of the credit in that note. You were **very open and
+influential** when it mattered: papers, humor, mailing lists, and that Kaleida meetup where prototype
+object systems argued in good faith. Self doesn't run on everybody's phone — **in spirit it does** —
+in JavaScript's object model, in HotSpot's lineage, and in MOOLLM's `# import self from self`.
 
 **Proposed episode:** *Reflecting on Self: Narcissa's Mirror* — Self × MOOLLM; mirrors, prototypes,
 the **self-interest!** pun stack, and what we'd build if we sat down with a blank microworld again.
@@ -78,3 +76,5 @@ how much of where we are traces back to work you gave away generously.
 `👤 Self × MOOLLM` · `🪞 Narcissa's Mirror` · `# import self from self` · `🧠 Conscientious Objectors`
 
 *P.S. — If the title pun lands wrong, we'll rename the episode together. The mirror is yours.*
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

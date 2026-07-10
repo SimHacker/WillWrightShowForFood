@@ -53,6 +53,15 @@ show_and_network:
   email-attachment-curation.yml:
     topic: "Mail attachment audit 2026-07-07 — dupes, k-line rename, Phase A–D decision tree; temp is source of truth; export gate before next wave"
     status: decision_pending
+  invitation-email.yml:
+    topic: "Invitation email protocol — BLUF invitation.md, absolute URLs, README deep dive, Apple Mail copy path"
+    markup: invitation-email.md
+  onboarding-github.yml:
+    topic: "Guest GitHub onboarding — zero-account → issues → pencil edits → collaborator access; stealth star/fork caution; no gitsplaining in invites"
+    markup: onboarding-github.md
+  onboarding-cursor-moollm.yml:
+    topic: "Guest Cursor+MOOLLM onboarding — mount moollm + MicropolisCore + WWSFF as one workspace; git in natural language, no CLI"
+    markup: onboarding-cursor-moollm.md
   maxis-history-collaborators.yml:
     topic: "Parallel Maxis/SimCity documentarians — Jess, Jimmy Maher, Phil Salvador, Chaim, community leads; outreach hold until video"
   repo-show-format:

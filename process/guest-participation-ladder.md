@@ -8,7 +8,9 @@
 
 **Constitutional default for every invite:** lead with the easy tiers. Stretch goals are optional, never required. Time zones kill sync — David Rosenthal (+9h Amsterdam, grandparent duty) and Lars Brinkhoff (Swedish July offline) said so plainly. **Default: solo async.** Don weaves in post. Never insist on synchronized arrival.
 
-Don bends over backwards — especially for older guests with grandchildren and better things to do than git. No GitHub account required. Email/phone/video file → Don commits.
+Don bends over backwards — especially for older guests with grandchildren and better things to do than git. No GitHub account required. Email/phone/video file → Don commits. For guests who *do* want their hands on the repo: [GitHub onboarding](onboarding-github.md) (browser edits, direct room access) and [Cursor + MOOLLM onboarding](onboarding-cursor-moollm.md) (git in natural language — no command line).
+
+The ladder cuts both ways: the easy rungs remove friction, and the top rung **legitimizes**. Cursor is the ordinary daily rig of working developers in 2026 — knowing the show runs on the same professional stack tells even a browse-only, never-signs-up guest that this is a real production, without asking anything of them.
 
 ## Participation tiers
 

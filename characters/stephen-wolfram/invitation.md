@@ -9,10 +9,9 @@ beloved: false
 
 # Repo Show invitation — Stephen Wolfram
 
-*Stephen Wolfram may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+*Stephen Wolfram may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers quiet mode and onboarding.*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 Stephen — we built a naming discipline and an LLM operating substrate that keep turning into *your* language:
 **simple rewrite rules, iterated, that you can only understand by running them.** We think a class of our names
@@ -29,3 +28,5 @@ Rather than burden this note, the argument lives in one short artifact you can r
 The whole substrate is open and inspectable. Show seed: [`repo-shows/stephen-wolfram/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/stephen-wolfram/README.md).
 
 — Don Hopkins *(User Interface Flower Child)*
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

@@ -12,7 +12,7 @@ I'm Don Hopkins. We met in the **Internet Old Farts Club** mouse thread in 2022 
 
 I'm building **Will Wright Show For Food** — a repo-native talk show where the artifacts *are* the set. We're planting a **Remembering Douglas Engelbart** tribute that refuses the feature-list reduction (mouse, hypertext, yay) and centers **intent**: augmentation, bootstrapping, collective intellect.
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 **I'd love you on for a segment on the hardware as lived experience:**
 
@@ -35,3 +35,5 @@ Would you be up for it?
 — Don
 
 *(Will Wright Show For Food)*
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

@@ -1,0 +1,22 @@
+# GitHub onboarding girder — human view: onboarding-github.md
+# Purpose: invitations never gitsplain; they link portrayal-standards → this.
+
+meta:
+  id: onboarding-github
+  audience: guests
+  linked_from: ../schemas/portrayal-standards.yml#onboarding
+
+ladder:  # increasing involvement; every rung fully honored
+  0_email_don: "No account. Plain text / attachments / URLs → Don commits with attribution. First-class default."
+  1_browse: "No account. Repo reads like a website."
+  2_issue: "Free account. Issues tab → New issue — corrections, questions, stories."
+  3_comment: "Join existing issue/PR threads."
+  4_pencil_edit: "Browser pencil icon → GitHub auto-forks + PRs invisibly; Don reviews and merges."
+  5_upload: "Add file → Upload files — photos, PDFs, clips, no tools."
+  6_collaborator: "Ask Don for direct access — edit your own room; subject rights self-service."
+
+stealth_caution: |
+  While in stealth mode (portrayal-standards.yml#stealth_mode): do NOT star, fork, or share
+  publicly — those appear in public activity feeds. Watch (All activity) is private.
+
+next_level: onboarding-cursor-moollm.yml

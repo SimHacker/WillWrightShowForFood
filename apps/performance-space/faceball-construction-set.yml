@@ -1,6 +1,7 @@
 # Faceball Construction Set — Pinball Construction Set for faces
 # Faceball like Pinball. Snap attachments, wire behaviors, play physics. Break the Brady Bunch frames.
-# Lineage: NeWS Mona Eyes → Tom Ngo ECG / Mouther → Squares in a Box panel dummies.
+# Lineage: HOMER visual mixing console → NeWS Mona Eyes → Tom Ngo ECG / Mouther → Bounce commentary bots → SimFaux → Squares in a Box panel dummies.
+# The name lunges toward "Facebook" then veers off at the last minute. Keep the near-miss; it's the joke.
 
 meta:
   id: faceball-construction-set
@@ -26,6 +27,19 @@ tribute:
   status: "Bill Budge is living (b. 1954, retired 2022, still shipping tools on GitHub). Invitation, not memorial — invite the man himself."
 
 lineage:
+  homer_visual_mixing:
+    what: |
+      **HOMER & Assoc.** (Peter + Coco Conn, Sunset Gower Studios 1977–1997) — **Homer II**, the
+      real-time visual mixing console you **performed with your hands**: touch faders, the
+      1964-Mustang "joy stick bumper" stepping through fade/cut/dissolve, record + overdub like
+      an audio mixer, hero take to optical printer. Host programmed in **PolyForth by Charles
+      Moore himself**. Out of that pipeline: *Atomic Dog*, *Abracadabra*, RoboCop, Total Recall,
+      *Flying Logos*. The analog grandparent of this whole kit: **perform the mix, record the
+      performance, overdub until perfect.** And Coco's SIGGRAPH **SIGKids** room is where Don
+      met David Levitt demoing Bounce — the serendipity that seeds the rest of this lineage.
+    see:
+      - ../../characters/coco-conn/homer-forth-flying-logos.md
+      - ../../characters/coco-conn/README.md
   mona_eyes:
     what: |
       Classic NeWS demo — Mona Lisa with paste-on **Eyeball** objects; pupils **track cursor /
@@ -46,6 +60,27 @@ lineage:
       **The Incredible Machine** / **Incredible Toons** energy — Sanspiel fluids and props;
       tears drench the panel below, vomit arcs, spit takes. Breaks the Brady Bunch grid.
     engine: sanspiel_simulation
+  bounce_commentary_bots:
+    what: |
+      **Bounce** at Interval Research (David Levitt + Don) — live TV plus a synchronized
+      **closed-caption feed** driving simulated character puppets: **Jesse Jackson, Rush
+      Limbaugh, and a house fly** arguing about the show, MST3K-style. Amplitude scrub
+      ("play any audio with any gesture") is the direct ancestor of
+      #expression_modes.amplitude_scrub. The story that demo was trying to tell gets
+      reimagined and reimplemented in this kit — brainstorm with David on Rebounce; the
+      clearly-labeled LLOOOOMM mythology (Truth Fly, the Great Transformation) is the backstory.
+    see:
+      - ../../characters/don-hopkins/interval-research-pluggers-and-mediaflow.md
+      - ../../characters/david-levitt/README.md
+      - ../../repo-shows/rebounce/README.md
+  simfaux:
+    what: |
+      **SimFaux** (2006) — Don's OpenLaszlo **Fox News parody**: pie menus driving live
+      simulated talking heads, video mixing, PiP, overlays. Inspired by the Interval Bounce
+      work with David Levitt; its DNA (simulated commentators over real media) flows straight
+      into this kit. Bridge demo to show on air.
+    video: https://www.youtube.com/watch?v=gRodlxUZ9SQ
+    see: ../../characters/will-wright/sources/don-youtube-gRodlxUZ9SQ-simfaux/article.md
 
 expression_modes:
   what: "Each puppet runs in a **mode** that decides what drives eyes, mouth, and face"

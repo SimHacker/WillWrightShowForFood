@@ -10,78 +10,35 @@ priority: send_now
 
 # Repo Show invitation — Edd Coates
 
-*Send-ready draft — not yet sent. Edd Coates may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
+*[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — edit, decline, delay, or request removal anytime, or take direct edit access; also covers quiet mode and onboarding.*
 Edd —
 
-You built something the whole industry actually uses — the **Game UI Database**, Guinness World
-Record and all — and you did it the hard way: curated, searchable, **human-first**, with AI
-scraping explicitly off the table. I'm building the **Repo Show** on the same instinct from the
-other side: preserve computing history as **executable, credited artifacts** in public repos, not
-as slop fodder.
+**The ask:** we're friends with the same obsession — I'd love to turn it into a **Repo Show**: a friendly recorded conversation, warm room, screen-share heavy, following through to something useful in a public GitHub repo. **Show, don't tell.**
 
-We're friends; I'd love to turn that shared obsession into a friendly recorded **Repo Show** conversation —
-warm room, screen-share heavy, following through to something useful in the open repo. **Show, don't tell.**
+**Facts:** **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.** You built the **Game UI Database** — Guinness World Record, 73k+ screens, industry-standard — the hard way: curated, human-first, **AI scraping explicitly off the table**. I'm building the Repo Show on the same instinct from the other side: computing history as **executable, credited artifacts**, not slop fodder.
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+**Proposed episodes** (one, both, or neither):
 
-**Proposed episodes** (your pick — one, both, or neither):
+1. **The Game UI Database & Ethical AI Archives** — taxonomy at 73k screens; *The Game UI Bible*; PadCrafter; the anti-slop defense; how independent archivists get paid fairly in the LLM era.
+2. **Pie Menus, Radials, and PieCraft** — browse GUIDB for what worked and what sucked; The Sims pies (my firsthand thread); co-design the ultimate user-editable pie; **PieCraft** as a game that teaches UI literacy through combat pressure.
 
-1. **The Game UI Database & Ethical AI Archives** — taxonomy at 73k screens; *The Game UI Bible*;
-   PadCrafter; the anti-slop defense; how independent archivists get paid fairly in the LLM era.
-2. **Pie Menus, Radials, and PieCraft** — browse GUIDB for what worked and what sucked; The Sims
-   pies (my firsthand thread); co-design the ultimate user-editable pie; **PieCraft** as a game
-   that teaches UI literacy through combat pressure.
+**A pairing, if it appeals:** Brad Myers's *Pick, Click, Flick!* is GUIDB's academic mirror image — you catalog from 73,000 shipped screens inward, he catalogs from the literature outward. I'd love you both on together to cross-reference the catalogs — real-time or time-shifted through the repo. Seed: [The Two Catalogs](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/brad-and-edd-interaction-catalogs.md)
 
-**What I'd love to explore — any order, skip whatever bores you:**
+**Format:** remote is fine; in-person if we're ever in the same city. **Zero homework — as much *homefun* as you are up to.** Browse GUIDB live, whiteboard pie specs, argue about Fitts's law — whatever's fun.
 
-- **Building the archive** — lockdown project → industry-standard tool. How you designed taxonomy
-  so 73,000 screens stay *useful*, not just impressive.
-- **The anti-slop defense** — GUIDB bans AI scraping. How you enforce it; what **ethical opt-in
-  licensing** could look like when creators' curation labor is the product.
-- **The Game UI Bible** — 500 pages of UI history in print. Translating interactive screens to a
-  tome without lying about motion.
-- **Executable vs screenshot archives** — your visual museum + my runnable Repo Show artifacts.
-  Complement, don't compete.
-- **Pie menus in the wild** — where radials win today (Monster Hunter, The Sims, others) and where
-  they fail (moving targets, controller mismatch, mystery meat). I bring forty years of shipping
-  pies; you bring the database lens.
-- **PieCraft** — pies as craftable, damageable objects; good layout wins fights. Constructionist UI
-  literacy through play — sanity-check the idea with someone who's seen every radial in the catalog.
-- **The Two Catalogs (a pairing, if it appeals)** — Brad Myers's *Pick, Click, Flick!*
-  ([ixtbook.com](https://www.ixtbook.com/)) is the academic interaction-techniques bible — GUIDB's
-  mirror image: you catalog from 73,000 shipped screens inward, he catalogs from the literature
-  outward. You two may well know each other already — I'd love to have you both on together to
-  cross-reference the catalogs and bounce ideas back and forth, real-time or time-shifted
-  (annotated notes exchanged through the repo work fine as an episode). Radial menus would be
-  the obvious first crosswalk.
-  Seed: [The Two Catalogs](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/brad-and-edd-interaction-catalogs.md)
+**Your links:**
 
-**Format:** Remote is fine; in-person if we're ever in the same city. **Zero homework — as much *homefun* as you are up to.** Browse
-GUIDB live, whiteboard pie specs, argue about Fitts's law — whatever's fun.
+- **Your room:** https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/edd-coates/
+- **Conversation hooks** (the full list): https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/edd-coates/ideas.md
+- **Show seed:** https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/edd-coates/README.md
+- **Pie episode seed:** https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/edd-coates/pie-menus-piecraft.yml
+- **Don's pie lineage:** https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/pie-menus-chi-88-and-beyond.md
+- **Browse without an account:** https://github.com/SimHacker/WillWrightShowForFood
 
-**Materials waiting for you:**
-
-| If you're curious about… | Link |
-| --- | --- |
-| **Show** | [`repo-shows/edd-coates/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/edd-coates/README.md) |
-| **Pie episode seed** | [`pie-menus-piecraft.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/edd-coates/pie-menus-piecraft.yml) |
-| **Discussion notes (pies)** | [`pie-menus-discussion-notes.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/edd-coates/pie-menus-discussion-notes.md) |
-| **Suggested questions** | [`suggested-questions.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/edd-coates/suggested-questions.yml) |
-| **North star doc** | [`game-ui-archive.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/edd-coates/game-ui-archive.md) |
-| **Don's pie lineage** | [`../don-hopkins/pie-menus-chi-88-and-beyond.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/pie-menus-chi-88-and-beyond.md) |
-| **Your guest page** | [`characters/edd-coates/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/edd-coates) |
-| **The whole project** | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |
-
-Browse without a GitHub account — start at the [README](https://github.com/SimHacker/WillWrightShowForFood).
-
-**Your response:** yes, later, too busy, or no — all honored gracefully. No debt — just an open
-door if a show sounds like fun.
-
-It would be a joy to geek out on interfaces with you on air — and to say plainly that the industry
-owes independent archivists like you more credit than it gives.
+**Next step:** reply with a rough week, or "later" — yes, later, too busy, or no, all honored gracefully. No debt — just an open door. It would be a joy to geek out on interfaces with you on air, and to say plainly that the industry owes independent archivists like you more credit than it gives.
 
 — Don Hopkins *(the User Interface Flower Child)* 👤🌀
 
 `🎮 Game UI Database` · `📖 The Game UI Bible` · `🥧 PieCraft` · `🛡️ anti-slop`
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

@@ -25,7 +25,7 @@ audio, and data than to a form to fill in. (I'm building web-based, AI-friendly 
 collaborative creation — together, in groups, in real time.) It's all play, really. **Show, don't
 tell.**
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 I'd be honored if you'd join one — and there's no set topic; you'd be the topic. The thread I keep
 coming back to is **generative systems across media** — yours, Scott's vote-and-genetics Electric
@@ -124,3 +124,5 @@ With great respect,
 — Don Hopkins *(the User Interface Flower Child)* 🌀
 
 *P.S. — The Long Now could use a Repo to Show.*
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

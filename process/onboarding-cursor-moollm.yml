@@ -1,0 +1,31 @@
+# Cursor + MOOLLM onboarding girder — human view: onboarding-cursor-moollm.md
+# Optional power tier; GitHub-only (onboarding-github.yml) or email is enough.
+
+meta:
+  id: onboarding-cursor-moollm
+  audience: guests_who_want_the_full_instrument
+  linked_from: ../schemas/portrayal-standards.yml#onboarding
+
+pitch: |
+  Cursor = editor with AI agent → git in natural language ("commit my edits", "pull latest").
+  No notorious command line. MOOLLM = the skill OS the repos run on; if you install Cursor,
+  mount MOOLLM — that's where the manual lives.
+
+setup:
+  1_install: "cursor.com — sign in, free tier fine"
+  2_clone_together:   # designed to be mounted side by side in one workspace
+    - https://github.com/SimHacker/moollm            # skill OS
+    - https://github.com/SimHacker/MicropolisCore    # SimCity/Micropolis running code
+    - https://github.com/SimHacker/WillWrightShowForFood  # the show
+  3_open_folder_as_workspace: true
+  4_boot: "Ask agent: read moollm skills/INDEX.yml + repo README → give me a tour"
+
+unlocks:
+  - "Edit characters/<you>/ → 'commit and push my changes'"
+  - "Walk research bundle on camera — the Repo Show's native stage"
+  - "Run play-along skills; check portrayal against standards"
+  - "Build and launch Micropolis"
+
+honest_framing: |
+  Real commitment. Participation ladder starts at phone-video-by-email; every lower rung
+  fully honored. This tier is the workaround for 30 years of CLI avoidance.

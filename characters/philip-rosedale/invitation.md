@@ -10,9 +10,8 @@ format: remote_or_in_person
 # Repo Show invitation — Philip Rosedale
 
 *Send-ready draft — not yet sent. Philip Rosedale may edit, decline, delay, or request removal at any time.*  
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 Philip —
 
@@ -67,3 +66,5 @@ Browse without a GitHub account — [README](https://github.com/SimHacker/WillWr
 `🌐 JSON plugins that shipped` · `🏝️ Second Life returns` · `📜 YAML Jazz` · `🎮 GitHub-as-MMORPG`
 
 *P.S. — I owe you a proper follow-up on MOOLLM; this invitation is the public, credited version.*
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

@@ -8,9 +8,8 @@ show_seed: repo-shows/rebounce/
 
 # Repo Show invitation — Jaron Lanier
 
-*Jaron may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
+*Jaron may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers quiet mode and onboarding.*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
 Jaron —
 
 You co-founded **VPL** and drove the vision behind **Body Electric** — and I always make sure
@@ -23,7 +22,7 @@ one running patch you could edit while it ran. That work stuck with me.
 I'd like to put some of that in public, on a **Repo Show** — a live session whose stage is a public
 GitHub repo people can clone, run, and build on.
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 The first episode that wants you is **[Rebounce](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/rebounce/README.md).** I plan to
 **check in the old Bounce source** and invite people to **rewrite it together — by hand and with AI,
@@ -52,3 +51,5 @@ is your call: solo riff, a one-on-one with me and David, or the full Rebounce ja
 No pressure — accepted, delayed, declined, or no reply, all fine.
 
 — Don Hopkins *(the User Interface Flower Child)* 🌀🥽
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

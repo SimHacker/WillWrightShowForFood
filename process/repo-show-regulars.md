@@ -19,6 +19,14 @@ Muppet Show balcony energy — original characters, never Statler/Waldorf names.
 
 Slats (orchestra pit) and Ultimate Machine orbit the bit.
 
+## The Glick Gallery — 🎙️🥪
+
+Labeled-fiction presenter foils — [Don Philahue](../characters/don-philahue/README.md)'s unethical
+Cunk/Glick cousins (Smarmy Glickfeld, Rex Upsell, Paula Gotchya, Vic Rerun). Each personifies an
+interviewing sin the show's standards forbid; Philahue cuts their mic and ejects them, deadpan.
+Guests are in on the bit before any of them enters a segment.
+Spec: [`GLICK-GALLERY.yml`](../characters/menagerie/GLICK-GALLERY.yml)
+
 ## Kinds
 
 | Kind | Home |

@@ -1,0 +1,66 @@
+# Invitation email protocol — sharp invitation.md, fat README
+# Human view: invitation-email.md
+
+meta:
+  id: invitation-email
+  repo_base: https://github.com/SimHacker/WillWrightShowForFood
+  blob_prefix: https://github.com/SimHacker/WillWrightShowForFood/blob/main/
+  tree_prefix: https://github.com/SimHacker/WillWrightShowForFood/tree/main/
+  inspiration:
+    - https://blog.dannycastonguay.com/how-to-write-an-email/
+    - https://news.ycombinator.com/item?id=48847536
+
+layers:
+  email:
+    source: characters/<slug>/invitation.md
+    delivery: "GitHub rendered view → copy → Apple Mail"
+    target_length: one_screen
+  invitation_md:
+    path: characters/<slug>/invitation.md
+    public: true
+    rules: [bluf_first, absolute_urls_only, no_mermaid, no_meta, one_primary_ask]
+  readme_md:
+    path: characters/<slug>/README.md
+    structure: [birds_eye_top, deep_dive_bottom_unlimited]
+  green_room:
+    location: "DonHopkins/projects/willwrightshowforfood/green-room/"
+    never_commit: true
+
+will_line:
+  canonical: "Will Wright is in — he's signed on to do the premiere and more."
+  placement: first_line_of_facts_block
+  budget: one_sentence   # mention is enough
+  bounds:
+    - never_promise_will_in_guest_episode
+    - never_promise_one_on_one_with_will   # goal yes; promise no — limited time, don't wear him out
+    - baseline_time_shifted_videos; one_on_ones_groups_streams_as_they_fit
+  context: "WWSFF = Will's instance of Repo Show format — background, not invitation copy"
+
+invitation_md_must_link:
+  - guest_tree: "characters/<slug>/"
+  - show_seed: "repo-shows/<show>/"
+  - ideas_optional: "characters/<slug>/ideas.md"
+  - co_guests_invited: "characters/<other-slug>/"
+  - portrayal_standards: schemas/portrayal-standards.md
+  - will_premiere: repo-shows/will-wright-premiere/
+
+invitation_md_forbidden:
+  - mermaid
+  - relative_links
+  - private_email_or_phone
+  - process_meta_commentary
+  - full_infodump
+
+refactor_queue_note: |
+  Invitations with gatling-gun lists (e.g. david-levitt) — move body to README § Deep dive;
+  leave BLUF + links in invitation.md before send.
+
+template: ../characters/_TEMPLATE/invitation.md
+flagship_exception: ../characters/will-wright/invitation.md
+lean_example: ../characters/jim-crutchfield/invitation.md
+
+see_also:
+  - portrayal-standards.yml
+  - invitation-workflow.yml
+  - guest-participation-ladder.yml
+  - party-roster.yml

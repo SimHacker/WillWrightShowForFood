@@ -1,45 +1,56 @@
 ---
-status: draft
+
+## status: draft
 character_id: jim-crutchfield
 public: true
 consent: not_yet_asked
 show_seed: repo-shows/jim-crutchfield/
----
 
 # Repo Show invitation — Jim Crutchfield
 
-*Jim may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+*Jim may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers quiet mode and onboarding.*
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 Jim —
 
-I'd love to have you on a **Repo Show** — a live, friendly conversation whose whole stage is a
-public GitHub repo people can clone, run, and build on. The hook is one word from a pitch I just
-wrote a friend: *feedback.* **It's always the feedback.**
+Let's pick up where we left off. I'd love to have you on a **Repo Show** — a friendly recorded
+conversation whose whole stage is this public GitHub repo — because it's finally the right
+instrument for the projects we've been writing to each other about since 2008:
 
-I want to **digress, recurse, and iterate** with you about **video feedback** — point a camera at
-its own screen and watch your *Space-time dynamics* bloom — live on stream, steering it as we talk.
-From there the whole family opens up:
+1. **The director's cut, live.** You wanted to put the narration back on *Space-Time Dynamics in
+  Video Feedback* after the music rights sank the original mix. Let's record the voice-over
+   **live on the show**, over the clean transfer — **we're the MST3K robots.** Kathy's tape still  carries the narration (she was my office mate at Sun — she wrote the NeWS manual I reviewed  and illustrated; small loop, fully closed).
+2. **The CA intro, for real this time.** In December 2013 you offered to co-develop an
+  introduction to CAs and structural complexity, with your grad class as test bunnies. Now:
+   **Norman Margolus has given me permission to turn chapters of *Cellular Automata Machines*
+   into interactive instructional and artistic web apps.** First cut: rewrite my old monolithic
+   CAM6 simulator as modern, modular TypeScript. We brainstorm the designs on air, write them
+   down, check them in — your structural-complexity layer on top of Norman's rules — and your
+   students get **homefun** instead of homework. A thousand flowers bloom from the seeds.
+3. **The 2008 payoff.** You once asked me how to reach Will Wright to show him the CAVE.
+  Eighteen years later, this show is the delayed rendezvous.
 
-- **Edge of chaos** — evolve cellular automata until they actually *compute*; find the sweet spot
-  between frozen and random.
-- **Geometry from a time series** — reconstruct a hidden attractor from a single signal.
-- **Computational mechanics** — ε-machines, and what "intrinsic computation" really means.
+And I'd like to take a quiet moment on air to **remember Ralph** — you knew him from the UCSC
+years, and the 1976 cascades paper he handed your generation deserves telling by someone who was
+there.
 
-I come at this from the toymaker's side: I built a **CAM6** cellular-automata performance platform
-(NeWS + C + a FORTH rule-compiler) and I've spent years on iterated graphical systems and
-live performance graphics. My friend **[Scott Draves](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-draves/README.md)** (Electric
-Sheep) lives in the same feedback family, and **[Norman Margolus](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/norman-margolus/README.md)**
-(the CAM-6 / reversible CA) would make it a proper cellular-automata summit. If a multi-way is fun,
-I'd love that; if not, just you and me and a feedback loop is already a great show.
+**Your links:**
 
-**Format:** live (thinking Twitch), announced ahead, audience follows along in the repo and can
-contribute. Warm and curious, not gotcha-podcast. I run it in Cursor, screen-shared, so people watch
-the ideas become real. **Zero homework — as much *homefun* as you are up to.** I do the setup. What we record and publish is all your
-call.
+- **Our history (the boat, the tape, the offers):** [https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jim-crutchfield/don-and-jim-history.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jim-crutchfield/don-and-jim-history.md)
+- **Your room:** [https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/jim-crutchfield/](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/jim-crutchfield/)
+- **Show seed:** [https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/jim-crutchfield/README.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/jim-crutchfield/README.md)
+- **Conversation hooks:** [https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jim-crutchfield/ideas.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jim-crutchfield/ideas.md)
+- **Abraham → you, the lineage:** [https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jim-crutchfield/abraham-video-feedback-lineage.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jim-crutchfield/abraham-video-feedback-lineage.md)
+- **Norman's room:** [https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/norman-margolus/](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/norman-margolus/)
 
-No pressure — accepted, delayed, declined, or no reply, all honored gracefully.
+**Format:** easiest first — solo videos on your phone or a one-on-one call at your convenience; I
+weave everything in post. Live with the camera pointed at its own monitor is the dream, not the
+requirement. Zero homework — as much homefun as you're up to. What we record and publish is all
+your call.
+
+**Next step:** if any of this sounds fun, reply with a rough week or "later" — interested,
+delayed, declined, or no reply are all honored.
 
 — Don Hopkins *(the User Interface Flower Child)* 🌀🦋
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

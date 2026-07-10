@@ -5,7 +5,7 @@ Dear Ell,
 We talked before — I hope you remember. I'm building the Will Wright Repo Show around the Sims 1
 content-creation stack
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md). I never finished shipping, and **Tiny Life** is the indie project of love that
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.** I never finished shipping, and **Tiny Life** is the indie project of love that
 already does it: export households, write stories on your Tinies, Workshop, C# mods — while EA's
 Legacy Collection removed the Exchange with a bone saw.
 
@@ -28,3 +28,5 @@ Want to pick up the thread?
 
 ↑ [CHARACTER.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ellpeck/CHARACTER.yml) · [Soul City bridge](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ellpeck/bridge/soul-city-bridge.md) ·
 [spec](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml)
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

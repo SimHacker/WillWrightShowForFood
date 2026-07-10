@@ -11,6 +11,12 @@ recollection; Doug's account is quoted from his own site.*
 > through **fresh ears**, warmly, with no ego at stake — because the transformation already won his
 > blessing twenty years ago.
 
+*(Written June 29, 2026 — ten days before Will's July 9 conversation named this exact format.
+Don's guided tour of this document, addressed to Will:
+[`note-to-will-tiger-mountain-tour.md`](note-to-will-tiger-mountain-tour.md).)*
+
+
+
 ## The record
 
 In **Fall 2003**, San Francisco multi-instrumentalist **Doug Hilsinger** re-recorded **Brian Eno's
@@ -47,7 +53,7 @@ From [Doug's account on saucefaucet.com](http://www.saucefaucet.com/dug_notes.ht
 > 'cold experiments.'… 'I am a swan!'… WOW. We had never dreamed that he would be one of the first
 > people to hear it.… Sometimes life works."* — Doug
 
-![Doug Hilsinger's story, from saucefaucet.com](media/doug-story-saucefaucet.png)
+Doug Hilsinger's story, from saucefaucet.com
 
 ## Eno's blessing
 
@@ -60,7 +66,7 @@ He thanked Doug for making *"beautiful music"* out of his *"old experiments,"* *
 notes** for the release, and later told Pitchfork, dryly, *"They aren't bad songs after all."*
 
 🔊 **Eno's actual phone message to Doug:**
-[`audio/…PhoneMessageToDougHilsinger.mp3`](../brian-eno/audio/TakingTigerMountainBrianEnoPhoneMessageToDougHilsinger.mp3)
+`[audio/…PhoneMessageToDougHilsinger.mp3](../brian-eno/audio/TakingTigerMountainBrianEnoPhoneMessageToDougHilsinger.mp3)`
 (also published via [yourmusiclawyer.com](http://yourmusiclawyer.com/queues/2004/brian_eno/index.html)
 and [saucefaucet](http://www.saucefaucet.com/tiger.html)).
 
@@ -82,9 +88,7 @@ the uninitiated (plenty of leather daddies and fetish gear on a crowded night), 
 **warm, inclusive, and completely non-threatening** — an open, diverse community with friendly,
 creative bartenders who welcome anyone in off the street, of any stripe. Warmly recommended. That
 night it happened to be nearly **empty** — which is exactly what gave Don and the bartender,
-**Doug**, the room and the quiet to actually meet and talk. *(Wandering into The Eagle, unprompted,
-as the interesting new place to check out is also about the most low-key, no-big-deal way to be out
-and at ease in the world — earnest, unashamed, matter-of-fact; read into it what you like.)* Don was
+**Doug**, the room and the quiet to actually meet and talk. Don was
 **meeting Doug in person for the first time**, though they'd unknowingly shared the audience at that
 very **Long Now talk** a few days before (Doug, it seems, recognized Don as the guy who'd asked a
 question). They got to talking, hit it off, and landed on **Eno** and the talk.
@@ -104,8 +108,7 @@ have met.** (Don's reliable line back into this circle is **Will** — whom he k
 regularly in the SF Bay Area — and **Scott**, with whom he still collaborates. That's why a
 **reunion** inviting **Brian**, **Will**, and **Doug** is the dream.)
 
-*(Don's personal note about that night — a warm, no-big-deal aside and a hopeful what-if — is
-written directly to Brian in the invitation: [`characters/brian-eno/invitation.md`](../../characters/brian-eno/invitation.md).)*
+*(Don's personal note about that night — a warm, serindipitous aside and a hopeful what-if — is written directly to Brian in the invitation:* `[characters/brian-eno/invitation.md](../../characters/brian-eno/invitation.md)`*.)*
 
 ## Credit where it's due
 
@@ -118,14 +121,16 @@ the whole serendipity.** Thank you. 🕰️
 ## Why it belongs in the show
 
 - **Constraints create freedom** — the "no keyboards" rule is the most Eno-ish, most
-  Oblique-Strategy move imaginable, and it's exactly what gives the cover its warmth and character.
+Oblique-Strategy move imaginable, and it's exactly what gives the cover its warmth and character.
 - **Transformation as homage** — original → tribute → whatever we make next; the recursive move at
-  the heart of the Repo Show, turned into a repeatable **audience activity** ("honor it by
-  transforming it").
+the heart of the Repo Show, turned into a repeatable **audience activity** ("honor it by
+transforming it").
 - **Fresh ears for the maker** — a rare gift to a guest: hear your own decades-old work re-grown by
-  someone who loves it, with the blessing already given.
+someone who loves it, with the blessing already given.
 - **Scenius** — a Bay Area scene (Waycross, the ENORCHESTRA, Caroleen's Mekons ties) doing it for
-  love, not money.
+love, not money.
+
+
 
 ## The segment — even without Doug 🎧
 
@@ -133,13 +138,13 @@ Doug (and Brian) joining live is the dream — but **the segment stands on its o
 Nobody's participation is required except the show's own:
 
 1. **Tell the story** — this page is the script: the self-imposed "no keyboards" rule, the Chinatown
-   Mao postcard, the late-night tracking, the Eagle, the sincerity-all-the-way-down twist.
+  Mao postcard, the late-night tracking, the Eagle, the sincerity-all-the-way-down twist.
 2. **Play Eno's blessing** — his own [phone message](../brian-eno/audio/TakingTigerMountainBrianEnoPhoneMessageToDougHilsinger.mp3)
-   calling it *"beautiful music"* from his *"cold experiments"* (*"I am a swan!"*). It's **published**
+  calling it *"beautiful music"* from his *"cold experiments"* (*"I am a swan!"*). It's **published**
    (yourmusiclawyer.com, saucefaucet) — Eno endorsing a track-for-track, hand-made repossession, in
    his own voice.
 3. **A/B the versions** — play as much as rights allow of **Doug's hand-made track**, then **Eno's
-   1974 original**, side by side — and do it for **several songs** across the album. The comparison
+  1974 original**, side by side — and do it for **several songs** across the album. The comparison
    *is* the thesis: honor by transformation, made audible.
 
 Doug uploaded the whole album himself ([SoundCloud](https://soundcloud.com/doug-hilsinger/sets/brian-enos-taking-tiger),
@@ -152,7 +157,7 @@ wait on a reply.
 tells the Eagle story, a Ronco commercial for Doug's album interrupts (with Eno's phone message as
 the testimonial), the story concludes, all wrapped in the *Empathy* 1MM — built as the **teaser to
 show Brian before contacting him**. See
-[`process/one-minute-movie-sandwich.md`](../../process/one-minute-movie-sandwich.md)
+`[process/one-minute-movie-sandwich.md](../../process/one-minute-movie-sandwich.md)`
 `#first_instance_tiger_mountain`.
 
 ## Questions for Brian — the before/after listening 🎧
@@ -161,20 +166,23 @@ show Brian before contacting him**. See
 versions and let him talk. Offered as prompts, not scripted answers.*
 
 - **A/B, in his own ears.** Play Doug's hand-made take and Brian's **1974 original** back to back —
-  across **several songs**, not just one. Ask him to describe, in **musical *and* emotional** terms:
-  what changed, what surprised him, what Doug **found in the songs that he'd missed or left cold**, and
-  what the warmth/rock-heaviness *does* to material he made machine-tinged on purpose.
+across **several songs**, not just one. Ask him to describe, in **musical *and* emotional** terms:
+what changed, what surprised him, what Doug **found in the songs that he'd missed or left cold**, and
+what the warmth/rock-heaviness *does* to material he made machine-tinged on purpose.
 - **Expand the answering-machine message.** His phone message already says it — *"beautiful music"* from
-  *"cold experiments,"* *"I am a swan!"* — but ask him to **put more words to it**: what, exactly, is
-  beautiful about hearing your own **discarded / abandoned / "cold"** work come back **warm** through
-  someone else's *appreciating, reinterpreting* ears? The specific feeling of seeing work you'd walked
-  away from **valued and transformed** by another person.
+*"cold experiments,"* *"I am a swan!"* — but ask him to **put more words to it**: what, exactly, is
+beautiful about hearing your own **discarded / abandoned / "cold"** work come back **warm** through
+someone else's *appreciating, reinterpreting* ears? The specific feeling of seeing work you'd walked
+away from **valued and transformed** by another person.
 - **The voice.** Don's honest first reaction, not knowing whose record it was: it was **the voice** — and
-  then, underneath it, *Brian's own notes, phrasing, and composure* still showing through Doug's singing.
-  A heavier, rockier reinterpretation that **still carries Brian**. (And the street cred is real: Doug, a
-  **gay bear leather bartender** who worked **The Eagle** in San Francisco.)
+then, underneath it, *Brian's own notes, phrasing, and composure* still showing through Doug's singing.
+A heavier, rockier reinterpretation that **still carries Brian**. (And the street cred is real: Doug, a
+**gay bear leather bartender** who worked **The Eagle** in San Francisco.)
+
+
 
 ### The parallel Don draws — passthrough that preserves intent
+
 This is why the story matters to Don beyond music. It's **exactly what he does with Will's SimCity**:
 faithfully **pass through the original design** into a new interface **without spoiling it** — and, at
 the same time, **change many things in ways that preserve the intent**, adding layers **never originally
@@ -184,8 +192,8 @@ imagined that still fit** (multiplayer **cooperative** play, **voting**, a colla
 the heart of the whole Repo Show. (See the [riff loop](../../repo-shows/ideas/themes/the-riff-loop.yml).)
 
 *(Companion viewing Don recommends: **Bowie's "The Man Who Sold the World"** hits especially hard after
-**_The Nomi Song_**, and pairs with the **Leigh Bowery** documentary — see
-[`../brian-eno/bowie-snl-1979.md`](../brian-eno/bowie-snl-1979.md).)*
+***The Nomi Song***, and pairs with the **Leigh Bowery** documentary — see
+`[../brian-eno/bowie-snl-1979.md](../brian-eno/bowie-snl-1979.md)`.)*
 
 ## Don's wish
 
@@ -198,12 +206,13 @@ you. The door is wide open. 🐅
 
 ## Listen + sources
 
-- **Full album (YouTube):** [playlist](https://www.youtube.com/watch?v=kZ5szyqkAHQ&list=PLED572AC3412407F4) · title track [*Taking Tiger Mountain*](https://www.youtube.com/watch?v=i-cI1o_wBPc)
-- **Full album (SoundCloud, Doug's own upload):** https://soundcloud.com/doug-hilsinger/sets/brian-enos-taking-tiger
+- **Full album (YouTube):** [playlist](https://www.youtube.com/watch?v=kZ5szyqkAHQ&list=PLED572AC3412407F4) · title track *[Taking Tiger Mountain](https://www.youtube.com/watch?v=i-cI1o_wBPc)*
+- **Full album (SoundCloud, Doug's own upload):** [https://soundcloud.com/doug-hilsinger/sets/brian-enos-taking-tiger](https://soundcloud.com/doug-hilsinger/sets/brian-enos-taking-tiger)
 - **Eno's phone message:** [local mp3](../brian-eno/audio/TakingTigerMountainBrianEnoPhoneMessageToDougHilsinger.mp3) · [yourmusiclawyer.com](http://yourmusiclawyer.com/queues/2004/brian_eno/index.html)
-- **Doug's story + liner notes:** http://www.saucefaucet.com/tiger.html · http://www.saucefaucet.com/dug_notes.html · [press bio](http://www.saucefaucet.com/tigerbio.html)
-- **Discogs** (DBK Works #111, "A Modern Revolutionary Peking Opera", 18 May 2004): https://www.discogs.com/release/1949546
-- **AllMusic** (Dave Thompson: *"the most gloriously impertinent record from 2004"*): https://www.allmusic.com/album/brian-enos-taking-tiger-mountain-by-strategy-mw0000469810
-- **Pitchfork** (2004, 8.6): https://pitchfork.com/reviews/albums/3988-taking-tiger-mountain-by-strategy-with-caroleen-beatty/
-- **Eno's original (Wikipedia):** https://en.wikipedia.org/wiki/Taking_Tiger_Mountain_(By_Strategy) — note Eno & Peter Schmidt developed **Oblique Strategies** *during* the 1974 sessions
+- **Doug's story + liner notes:** [http://www.saucefaucet.com/tiger.html](http://www.saucefaucet.com/tiger.html) · [http://www.saucefaucet.com/dug_notes.html](http://www.saucefaucet.com/dug_notes.html) · [press bio](http://www.saucefaucet.com/tigerbio.html)
+- **Discogs** (DBK Works #111, "A Modern Revolutionary Peking Opera", 18 May 2004): [https://www.discogs.com/release/1949546](https://www.discogs.com/release/1949546)
+- **AllMusic** (Dave Thompson: *"the most gloriously impertinent record from 2004"*): [https://www.allmusic.com/album/brian-enos-taking-tiger-mountain-by-strategy-mw0000469810](https://www.allmusic.com/album/brian-enos-taking-tiger-mountain-by-strategy-mw0000469810)
+- **Pitchfork** (2004, 8.6): [https://pitchfork.com/reviews/albums/3988-taking-tiger-mountain-by-strategy-with-caroleen-beatty/](https://pitchfork.com/reviews/albums/3988-taking-tiger-mountain-by-strategy-with-caroleen-beatty/)
+- **Eno's original (Wikipedia):** [https://en.wikipedia.org/wiki/Taking_Tiger_Mountain_(By_Strategy)](https://en.wikipedia.org/wiki/Taking_Tiger_Mountain_(By_Strategy)) — note Eno & Peter Schmidt developed **Oblique Strategies** *during* the 1974 sessions
 - **Beloved by fans:** r/eno threads celebrate both the original and Doug's cover (one fan: *"Doug's take kind of unlocked some of the songs on the original for me"*).
+

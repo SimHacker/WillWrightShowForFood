@@ -51,6 +51,16 @@ cohorts:
       - { slug: doctor-no, signifier: "🧣🔦🚫🤫🌟", role: "No's AI CEO — society patron, NO-AI Tower" }
       - { slug: palm, signifier: "🐒✋🌴🔮💜", role: "Freed Monkey's Paw — philosopher agent" }
 
+  glick_gallery:
+    id: glick-gallery
+    spec: GLICK-GALLERY.yml
+    role: "Labeled-fiction presenter foils — Philahue's unethical Cunk/Glick cousins; each personifies an interviewing sin and gets ejected"
+    roster:
+      - { slug: smarmy-glickfeld, signifier: "🎙️🥪💦⭐", role: "The Sycophant — zero prep, sandwich, wrong credits" }
+      - { slug: rex-upsell, signifier: "💰📈🪙🔔", role: "The Monetizer — every question is a sales funnel" }
+      - { slug: paula-gotchya, signifier: "🕵️📰🪤😱", role: "The Ambush Journalist — manufactured controversy" }
+      - { slug: vic-rerun, signifier: "📼🔁🧛📺", role: "The Nostalgia Vampire — plays the clip again" }
+
 cross_rooms:
   sims: ../sims/
   robots: ../robots/

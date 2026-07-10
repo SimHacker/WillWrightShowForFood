@@ -109,7 +109,20 @@ Realistic gravity, collisions, 3D sound at the company that coined "virtual real
 prerequisites for "good VR"** (reach in 3D · shared reality · physically realistic worlds) are the
 straight line from **VPL → Pantomime's** device-optional AR/VR.
 
-### 6. Computational jazz, Minsky, and a Lisp machine — dear friend, in memoriam
+### 6. Bounce → SimFaux → Faceball — retell the Rush/Jesse/Truth Fly story
+
+The Interval Bounce demo — **Jesse Jackson, Rush Limbaugh, and a house fly** arguing over live TV,
+driven by the synchronized **closed-caption track** — grew a clearly-labeled-fiction mythology in
+Don's LLOOOOMM tomb (the **Truth Fly**, the **Great Transformation**, comment-out-don't-delete).
+Brainstorm with David how to **tell that story again**, reimagined and reimplemented in the
+**[Faceball Construction Kit](../../apps/performance-space/faceball-construction-set.yml)** — whose
+name lunges toward *Facebook* and veers off at the last minute. Bridge demo to show on air:
+**SimFaux** (2006), Don's OpenLaszlo Fox News parody inspired by the Interval work —
+[video](https://www.youtube.com/watch?v=gRodlxUZ9SQ) ·
+[notes](../will-wright/sources/don-youtube-gRodlxUZ9SQ-simfaux/article.md). See the
+[README deep dive](README.md#bounce-reborn--the-mythology-simfaux-and-the-faceball-construction-kit).
+
+### 7. Computational jazz, Minsky, and a Lisp machine — dear friend, in memoriam
 
 David's PhD under **Marvin Minsky** was on **computational jazz / music improvisation**. **Cynthia
 Solomon** has **video of young David at the MIT AI Lab in front of a Lisp machine** demoing that

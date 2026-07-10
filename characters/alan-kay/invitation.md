@@ -11,8 +11,7 @@ format: remote_or_in_person
 # Repo Show invitation — Alan Kay
 
 *Send-ready draft — not yet sent. Alan Kay may edit, decline, delay, or request removal at any time.*  
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
 Alan —
 
 We've been writing for years — **Fabrik** and the intro to **Dan Ingalls**, **PIXIE** and Smalltalk
@@ -22,7 +21,7 @@ note this January. I'd like to turn that thread into a **Repo Show** — a conve
 stage is a public GitHub repo, following through to working code and credited
 ideas in public. **Show, don't tell.**
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 **Remembering Vanessa — with Craig, Dan, and me.**
 
@@ -70,3 +69,5 @@ Browse without a GitHub account — [README](https://github.com/SimHacker/WillWr
 — Don Hopkins *(the User Interface Flower Child)* 🌀
 
 `🕯️ Vanessa + live Smalltalk` · `📚 constructionist microworlds` · `🥧 Fabrik ↔ pie menus` · `🌐 MOOLLM`
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

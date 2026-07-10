@@ -10,8 +10,7 @@ format: live_or_async
 # Repo Show invitation — Antoni Sawicki 🖥️🏙️📟
 
 *Antoni may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
 Antoni —
 
 Well done! I'm also working on something before announcing it publicly, but would love to include you.
@@ -23,7 +22,7 @@ repo: questions, artifacts, code, papers, links to other repos, videos, podcasts
 participate and learn *before* the conversation, follow along live or time-shifted, and keep
 contributing forever after.
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md). I hope for a whole series
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.** I hope for a whole series
 — with him, with other guests, and with tributes to amazing people we've lost, talking with those who
 knew them and showing their work in the repo.
 
@@ -89,3 +88,5 @@ Accepted, delayed, too busy, declined, or no reply — all honored.
 | **Show seed** | [`../../repo-shows/antoni-sawicki-ttycity.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/antoni-sawicki-ttycity.yml) |
 
 — Don
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

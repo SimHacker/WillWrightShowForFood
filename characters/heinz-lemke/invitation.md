@@ -24,9 +24,8 @@ send_batch: pixie-trio-2026
 ```
 
 *Send-ready draft — not yet sent. Heinz U. Lemke may edit, decline, delay, or request removal at any time.*  
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 **Today I'm sending three matching invitations** — yours, **David Rosenthal's**, and **Lars Brinkhoff's** — for **one group episode**. Each letter is written for the person receiving it; all three describe the same show from different angles.
 
@@ -245,3 +244,5 @@ have never heard that radial menus were already on a **PDP-7** in 1969.
 `🥧 PIXIE 1969` · `📽️ Chapman → Bumblebee` · `🖥️ Lars: emulate it` · `🗄️ DSHR: same machine` · `🏥 PIXIE → CARS`
 
 *P.S. — If a shorter phone call first is easier, say the word. David and Lars can join only for their segments if that's less overwhelming.*
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

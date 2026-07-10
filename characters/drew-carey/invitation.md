@@ -8,9 +8,8 @@ show_seed: repo-shows/drew-carey/
 
 # Repo Show invitation — Drew Carey
 
-*Drew Carey may edit, decline, delay, or request removal at any time. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
-
+*Drew Carey may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers quiet mode and onboarding.*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
 ---
 
 ## Invitation
@@ -23,7 +22,7 @@ tell: ideas can become running code and playable Sims moments on stream.
 the craft of **improv**, how an **audience becomes the show**, and (only if you want) an honest
 compare-and-contrast on **AI** after your 2023 radio experiment.
 
-**Will Wright** has already accepted the first invitation — the [premiere show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 **Will Wright** may join for some or all of it — you're both part of the same Sims family album.
 
@@ -59,3 +58,5 @@ without your consent.
 **Accepted, delayed, too busy, declined, or no reply — all honored gracefully.**
 
 — Don Hopkins *(User Interface Flower Child)*
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*
