@@ -37,6 +37,7 @@ Sproull.
 
 ## Repo hooks
 
+- **Rudy Rucker** multiplexed Brain + Anneal + Life into **Eco!** — run in CAM6 beside pure Brain
 - Run in **CAM6** / WebGPU beside **Life** and **Seeds**
 - **Dave Tristram** — perform rule as live visuals
 - **Norman Margolus** CA fest — Silverman rules row on the shelf

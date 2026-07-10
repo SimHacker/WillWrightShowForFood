@@ -29,40 +29,42 @@ one-on-one call, screen share); I weave clips in post. No reflexive **SUBMIT** b
 if you want them.
 
 You're in Don's orbit as a **north-star implementer**: rules you can *see*, languages children can
-*own*, iron you can *revive*. I'd love you on one or more beats below — pick any temperature.
+*own*, iron you can *revive*.
 
-### Discussion topics (mix and match)
+### Discussion topics
 
 1. **Brian's Brain** — you invented the rule; the community named it *Brian's Brain* (you didn't).
    Three states, diagonal waves, spaceships, rakes — run it live beside Conway Life, Seeds,
-   Wireworld. Story of **who gets to name a discovery** vs who invents it.
+   Wireworld. **Rudy Rucker** vertically combined and multiplexed it with Anneal and Life to make
+   **Eco!** — we can demo that in [Don's CAM6 simulator](https://donhopkins.com/home/CAM6/). Story
+   of who gets to **name** a discovery vs who **invents** it.
 2. **PIXIE / PDP-7 literacy** — **Heinz Lemke** still has ~5000 words of 1969 PDP-7 assembler for
    Cambridge **PIXIE** (light pen, interrupts, graph models in 8K words). I'd love your read on
    whether the listing makes sense to someone who's lived on small machines — paired with
    **Lars Brinkhoff**'s emulator work.
-3. **Logo → Scratch → public repo microworlds** — Papert, Resnick, Will, constructionist wager:
-   what survived from Logo, what had to go, what belongs in a forkable show repo today?
+3. **Logo → Scratch → Snap! → public repo microworlds** — Papert, Resnick, Will, and the
+   constructionist wager: what survived from Logo, what had to go, what belongs in a forkable show
+   repo today? Don't forget **Snap!** and **[Brian Harvey](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/brian-harvey/)**
+   and **[Jens Mönig](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/jens-monig/)** —
+   Scratch, Berkeley Logo, and Snap! are one big friendly community, not competing camps. Your
+   Scratch lineage and their [pair show](https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/snap-logo-brian-jens/)
+   are the same church.
 4. **Emulation & preservation** — PDP-1 **Spacewar!** in Java, transistor-level **6502** / **4004**,
    same ethic as reviving dead iron — cousin to Lars's PDP-10/ITS preservation.
 5. **Playful Invention** — Montreal, **Crickets**, **TurtleArt**, tinkertoy tic-tac-toe at MIT —
    playful iron still shipping.
-6. **Cross-guest threads (optional)** — **Norman Margolus** / *Cellular Automata Machines* shelf;
-   **Heinz** (PIXIE author meets CA rule inventor); **Dave Tristram** (Brian's Brain as live visual
-   music). No group scheduling required.
+6. **Cross-guest threads** — **Norman Margolus** / *Cellular Automata Machines* shelf; **Heinz**
+   (PIXIE author meets CA rule inventor); **Dave Tristram** (Brian's Brain as live visual music).
 
-**Your links (absolute — copy into email):**
+I've sketched your [character room](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/brian-silverman/),
+[conversation hooks](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-silverman/ideas.md),
+and [Brian's Brain + naming notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-silverman/sources/brians-brain-and-naming.md).
+The proposed [show seed](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/brian-silverman-ca-logo-pdp7.yml)
+ties to the [PIXIE / pie menus show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/pixie-pie-menus-pdp7.yml)
+and the [Norman Margolus CA fest](https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/norman-margolus/).
+[Browse the repo](https://github.com/SimHacker/WillWrightShowForFood) anytime.
 
-- **Your room:** https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/brian-silverman/
-- **Conversation hooks:** https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-silverman/ideas.md
-- **Brian's Brain + naming:** https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-silverman/sources/brians-brain-and-naming.md
-- **Show seed (CA · Logo · PDP-7):** https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/brian-silverman-ca-logo-pdp7.yml
-- **PIXIE / pie menus show:** https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/pixie-pie-menus-pdp7.yml
-- **CA fest (Margolus shelf):** https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/norman-margolus/
-- **Browse the repo:** https://github.com/SimHacker/WillWrightShowForFood
-- **Portrayal standards (edit/delete anytime):** https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md
-
-**Next step:** reply *yes / later / no / one topic only* — all honored. Fork the repo, run a rule,
-correct us where we're wrong — or stay a silent north star. Zero debt.
+Reply *yes / later / no / one topic only* — all honored.
 
 — Don Hopkins *(User Interface Flower Child)*
 

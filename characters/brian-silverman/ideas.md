@@ -17,10 +17,13 @@
 - Three states: on, dying, off — refractory period as design metaphor
 - Diagonal waves, spaceships, rakes — perform the rule live (CAM6 / WebGPU / Scratch?)
 - Beside **Conway Life**, **Seeds**, **Wireworld** — Silverman rule family tour
+- **Rudy Rucker** multiplexed Brain + Anneal + Life into **Eco!** — [CAM6 demo](https://donhopkins.com/home/CAM6/)
 
-## Logo → Scratch → repo
+## Logo → Scratch → Snap! → repo
 
 - **Constructionist** microworlds — Papert, Resnick, Will Wright, Don's Repo Show wager
+- **Scratch** (you) beside **Snap!** — [Brian Harvey](../brian-harvey/) and [Jens Mönig](../jens-monig/):
+  one big friendly community, not competing camps; [pair show](../../repo-shows/snap-logo-brian-jens/)
 - **Minsky Logo** / **TT2500** — Marvin's affordable Logo machine; online emulator workshops
 - **TurtleArt**, **Crickets** — still building playful iron
 - What would **PIXIE radial menus** look like in a child's microworld today?
@@ -40,6 +43,8 @@
 | **Norman Margolus** | *Cellular Automata Machines* shelf |
 | **Dave Tristram** | Brian's Brain as live visual music |
 | **Henry Minsky** | Logo / Leela / CA orbit — optional duet when schedules align |
+| **Brian Harvey** | Snap! / Logo — Berkeley books, BJC; [pair show with Jens](../../repo-shows/snap-logo-brian-jens/) |
+| **Jens Mönig** | Snap! architect — Morphic.js, Micropolis × Snap! thread |
 | **Will Wright** | Microworlds children own |
 
 ## Infodump topics (Don ↔ Brian)

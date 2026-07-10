@@ -26,7 +26,8 @@ segments:
     ask: "Walk Heinz's PDP-7 listing — light pen, interrupts, graph models in 8K words."
     with: [heinz-lemke, lars-brinkhoff]
   logo_scratch_constructionist:
-    ask: "From Papert turtles to Scratch — what belongs in a public repo microworld?"
+    ask: "Logo → Scratch → Snap! — Papert, Resnick, Brian Harvey, Jens Mönig; one friendly community; what belongs in a forkable show repo?"
+    with: [brian-harvey, jens-monig]
   canada_visit_debrief:
     ask: "Playful Invention — Crickets, TurtleArt, what you're building in Montreal"
     optional_with: [henry-minsky]
