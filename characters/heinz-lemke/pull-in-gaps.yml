@@ -24,7 +24,8 @@ gaps:
       private: DonHopkins/.../electronics-international-1969-04-28-pixie.md
       public: sources/electronics-international-1969-04-28-pixie.md
       source_pdf: "~/Documents/Electronics International-April 1969_1-3.pdf"
-    pull_in: "Snip p158 photo → images/electronics-1969-p158-light-writing.png"
+      p158_photo: media/from-mail/roy-eagleson-identified-heinz-pdp7-light-pen.png
+    pull_in: done  # Roy identified Heinz 10 Jul; image filed from mail
     show_use: "Heinz US-trip + magazine story on air"
 
   heinz_cambridge_word_doc:
@@ -99,10 +100,11 @@ gaps:
 
   roy_identified_heinz_photo_2026:
     what: |
-      Roy Eagleson (10 Jul 2026): "Aha. It's you!" — identifies Heinz in photo from email
-      (image001.png / image.png). Likely Electronics 1969 p158 light-writing shot or related PDP-7 photo.
-    status: gap
-    pull_in: "Extract image001.png from mail; file under heinz-lemke/media/from-mail/ with Roy attribution"
+      Roy Eagleson (10 Jul 2026): "Aha. It's you!" — identifies Heinz at PDP-7 + light pen
+      (image001.png). Matches Electronics 1969 p158 "Light writing" caption.
+    status: received
+    filed: media/from-mail/roy-eagleson-identified-heinz-pdp7-light-pen.png
+    meta: media/from-mail/roy-eagleson-identified-heinz-pdp7-light-pen.yml
     show_use: "Roy as historian connecting textbook, magazine, and living author"
 
   newman_sproull_movable_menu_citation:

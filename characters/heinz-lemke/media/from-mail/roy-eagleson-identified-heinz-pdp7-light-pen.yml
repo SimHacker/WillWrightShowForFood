@@ -1,0 +1,30 @@
+# Heinz Lemke at PDP-7 + light pen — Roy Eagleson identification (10 Jul 2026)
+
+file: roy-eagleson-identified-heinz-pdp7-light-pen.png
+dimensions: "791×478 PNG"
+
+identification:
+  by: Roy Eagleson
+  date: 2026-07-10
+  quote: "Aha. It's you!"
+  mail_attachment: image001.png
+
+subject: Heinz U. Lemke
+not: Andrew Armit  # Armit's Utah Coons-patch work is a separate PDP-7 story (Alan Kay film hunt)
+
+what: |
+  Heinz at Cambridge PIXIE workstation — **DEC PDP-7** (label visible on cabinet), circular CRT
+  with wireframe graphic, **light pen** on screen, toggle-switch control panel, notebooks on desk.
+  Matches *Electronics International* (28 Apr 1969) p.158 caption — "Light writing" / Heinz Lemke
+  developed the command scheme; light-pen-only input.
+
+likely_source:
+  - sources/electronics-international-1969-04-28-pixie.md  # p158 photo
+  - Roy's long-wondered mystery photo from Newman/Sproull thread email
+
+show_use:
+  - "Roy as historian — textbook erasure → living author at the same machine"
+  - On-air with Heinz + Lars emulator segment
+  - Compare Alan Kay light-pen vs RAND tablet beat
+
+thread: sources/2026-07-10-pixie-storyline-thread.md

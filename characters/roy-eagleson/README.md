@@ -90,6 +90,7 @@ PDP-10 love; *The Americans* ARPANET scene going up unlisted for fair-use commen
 | **Sutherland / Sketchpad** | [`../ivan-sutherland/`](../ivan-sutherland/) |
 | **Kelly Booth** (his HCI mentor) | [`../kelly-booth/`](../kelly-booth/) |
 | **10 July thread** (Newman/Sproull, photo) | [`../heinz-lemke/sources/2026-07-10-pixie-storyline-thread.md`](../heinz-lemke/sources/2026-07-10-pixie-storyline-thread.md) |
+| **Photo — Heinz at PDP-7** (Roy: *"Aha. It's you!"*) | [`../heinz-lemke/media/from-mail/roy-eagleson-identified-heinz-pdp7-light-pen.png`](../heinz-lemke/media/from-mail/roy-eagleson-identified-heinz-pdp7-light-pen.png) |
 | **9 July storyline thread** | [`../heinz-lemke/sources/2026-07-09-pixie-storyline-thread.md`](../heinz-lemke/sources/2026-07-09-pixie-storyline-thread.md) |
 | **Wilkes memorial** (Don invited Roy's contributions) | [`../maurice-wilkes/memorial.md`](../maurice-wilkes/memorial.md) |
 | **PIXIE show** | [`../../repo-shows/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7.yml) |

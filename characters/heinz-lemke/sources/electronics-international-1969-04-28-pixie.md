@@ -31,7 +31,7 @@ built graph models interactively before Titan simulation. See [`pixie-source-rec
 > command scheme for the Pixie CRT System. Only the light pen — there are no buttons to push — is
 > used to change designs.
 
-`[IMAGE: electronics-1969-p158-light-writing — snip from PDF when ready]`
+`[IMAGE: electronics-1969-p158-light-writing — filed as media/from-mail/roy-eagleson-identified-heinz-pdp7-light-pen.png]`
 
 ## Architecture (from article)
 

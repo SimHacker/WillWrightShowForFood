@@ -98,10 +98,9 @@ project might not have got many spare CPU cycles.
 
 Roy had always wondered who was pictured in a photo (email attachment **`image001.png`**
  / `image.png`). He now
-recognizes **Heinz** — likely the **Electronics International** p.158 *"light writing"* photo or
-a related PDP-7 shot. See [`electronics-international-1969-04-28-pixie.md`](electronics-international-1969-04-28-pixie.md).
-
-**Pull in:** save attachment from mail → `media/from-mail/` with Roy's identification note.
+recognizes **Heinz** — the **Electronics International** (28 Apr 1969) p.158 *"Light writing"*
+photo: PDP-7 label, circular CRT, light pen on wireframe. Filed:
+[`media/from-mail/roy-eagleson-identified-heinz-pdp7-light-pen.png`](../media/from-mail/roy-eagleson-identified-heinz-pdp7-light-pen.png)
 
 ---
 
@@ -233,7 +232,7 @@ settle how the pen actually worked on the PDP-7.
 |------|-------------|
 | Newman/Sproull **"movable menu"** mislabel | Cite ref 520 on air; link pie-menu genealogy |
 | Roy wants **1968 re-implementation** | Align with Lars emulator + Heinz listing |
-| **Photo ID** — Roy recognizes Heinz | Pull `image.png` into `media/from-mail/` |
+| **Photo ID** — Roy recognizes Heinz | [`media/from-mail/roy-eagleson-identified-heinz-pdp7-light-pen.png`](../media/from-mail/roy-eagleson-identified-heinz-pdp7-light-pen.png) |
 | Buxton **CARS 2009** + Newman meeting | Already in `2008-bill-buxton-pixie-memory-lane.md` |
 | **Weizenbaum** + model science + Nagoya AI slides | Two-episode pitch; pull surgery slides |
 | **Alan Kay** light-pen skepticism | Emulator segment tests pen UX vs tablet |
