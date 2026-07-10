@@ -17,6 +17,7 @@ Legend: invite status (none | stub | draft | send_ready | send_now | finished | 
 | Ted Selker | ted-selker | send_now |
 | David Ungar | david-ungar | send_now |
 | Edd Coates | edd-coates | send_now |
+| **Dan Ancona** | dan-ancona-long-now | **★ Long Now 2006 asker — send_now** |
 | Ben Shneiderman | ben-shneiderman | HyperTIES emulator + CHI'88 |
 | Clint Basinger | clint-basinger | Maxis/Sims fandom bridge |
 

@@ -1,0 +1,61 @@
+# Don Hopkins — witty diatribes (host repertoire)
+# Rants worth a Repo Show beat, a Philahue segue, or a late-night evangelical cold open.
+
+repertoire:
+
+  sub_genius_to_eval_genius_and_submit_buttons:
+    id: sub-eval-submit
+    title: "SubGenius → EvalGenius — and why I hate SUBMIT buttons"
+    register: "Late-night evangelical TV meets HCI heresy"
+    one_liner: |
+      The Church of the SubGenius became the Church of the Eval Genius — SUB ⇒ EVAL at the
+      theology layer. HTML forms never got the memo: they still train you to peck SUBMIT like
+      chickens for dopamine parcels.
+    parallel:
+      subgenius: Church of the SubGenius
+      evalgenius: Church of the Eval Genius
+      slack: Bias
+      shordurpersav: ShorDurPerEval
+      html_form: "<input type=\"submit\" value=\"SUBMIT\" />"
+      preferred: "DECLARE BIAS · EVALUATE · APPLY · RELEASE"
+    thesis: |
+      SubGenius gave us Slack and Short Duration Personal Saviors — pick a messiah for the moment,
+      then let go. EvalGenius upgrades that to declared bias and Short Duration Personal Evaluators:
+      summon a temporary judge, score the claim, archive the evidence, release. Not lifelong
+      devotion. Tactical judgment.
+
+      The frozen HTML SUBMIT button is the Pink Boy interface. It says surrender before you've
+      declared what you're offering. It conditions reflex, not consent. Will Wright Show For Food
+      accepts willing contributions — not Skinner-box compliance. Memorial rooms are invited;
+      they are not "submitted."
+
+      Brian Harvey's loop is EVAL ⇔ APPLY — not grades, evaluations. The button should say what
+      the system actually does: evaluate your input, apply your intent, show you the result.
+      SUBMIT is the Conspiracy's verb. EVALUATE is ours.
+    show_beats:
+      - "Cold open: stained-glass bell curve; lintel reads DECLARE BIAS BEFORE ENTERING"
+      - "Live HTML autopsy — replace SUBMIT with EVALUATE / APPLY / CONTRIBUTE / RELEASE"
+      - "ShorDurPerEval demo: STAR FORTS obsession summoned, scored, archived, released"
+      - "Guest participation ladder: willing contribution vs reflexive pecking"
+      - "Will Roll testimonial when Don won't stop"
+    cross_links:
+      moollm:
+        - ../../../../Leela/git/moollm/designs/eval/CHURCH-OF-THE-EVAL-GENIUS.md
+        - ../../../../Leela/git/moollm/designs/eval/SHORT-DURATION-PERSONAL-EVALUATORS.md
+      wwsff:
+        - ../../process/guest-participation-ladder.md#no-reflexive-submissions
+        - ../../schemas/portrayal-standards.md#subject-rights
+        - ../../repo-shows/infodump.yml
+    tagline: "Fuck 'em if they can't take a score."
+
+  pie_menus:
+    id: pie-menus
+    title: "Pie menus — gestural verbs, not mystery meat"
+    file: pie-menus-chi-88-and-beyond.md
+    one_liner: "If you need a menu, it should be a pie menu."
+
+  send_code_not_commands:
+    id: axis-of-eval
+    title: "Send code, not commands"
+    file: axis-of-eval-send-code-not-commands.md
+    one_liner: "NeWS bet the web later cashed — programs to the glass, not X11 chatter."

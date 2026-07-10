@@ -1,0 +1,83 @@
+# The Americans S01E12 "The Oath" — clip sidecar
+# Pac-Man / Claudia arcade scene — timecodes verified by Don (Jul 2026)
+
+meta:
+  show: The Americans
+  season: 1
+  episode: The Oath
+  episode_no: 12
+  air_date: 2013-04-24
+  episode_setting: "May 1981, Washington D.C."
+  network: FX
+  source_file: /Users/a2deh/GroundUp/WillWrightCodeForFood/videos/The Americans 2013 S01E12 HDTV.XviD-AFG.avi
+  fandom: https://theamericans.fandom.com/wiki/The_Oath
+  branding_ref: process/repo-show-branding.yml#americans_claudia_pacman
+  guest_room: characters/lars-brinkhoff/
+  series_note: "Don — one of the great series."
+
+encode:
+  crf: "20"
+  preset: slow
+  scale: "1280:720:force_original_aspect_ratio=decrease,pad=1280:720:(ow-iw)/2:(oh-ih)/2"
+  fade_in_sec: "0.5"
+  fade_out_sec: "0.5"
+  pad_sec: "1.0"   # extra second each side for YouTube Studio fine-trim; fades sit in the pad
+
+anachronism:
+  episode_date: May 1981
+  note: |
+    Period drama slips — arcade cabinets are wrong for the in-story date.
+    Fandom wiki flags Ms. Pac-Man and Centipede.
+  cabinets:
+    - game: Ms. Pac-Man
+      claudia_plays: true
+      us_release: "February 1982"
+      verdict: anachronistic
+    - game: Centipede
+      position: "cabinet behind Claudia's Ms. Pac-Man — big centipede art on the cabinet side (Don confirmed on frame; initially guessed Galaxian)"
+      us_release: "January 1981"
+      verdict: "borderline — wiki flags it; may have been in limited release by May 1981"
+  ref: https://theamericans.fandom.com/wiki/The_Oath
+
+clips:
+  - id: claudia-pacman-arcade
+    title: "Ominous Pac-Man — Claudia, then Elizabeth's reaction"
+    characters:
+      - "Claudia (Margo Martindale)"
+      - "Elizabeth Jennings (Keri Russell)"
+    timecode_status: verified
+    start: "10:07"
+    end: "12:06"
+    duration_note: |
+      ~1m59s. Arcade meet (Jennifer/Alexandra disguises) through ominous Ms. Pac-Man banter.
+      Includes opening beat of the following scene — Elizabeth does not trust a word
+      "that bitch" says — then cut before the rest of the next scene.
+    output: claudia-pacman-arcade.mp4
+    audio_fade: true
+    captions: captions/claudia-pacman-arcade.srt
+    key_lines:
+      - line: "You're good at games. I'll give you that."
+        speaker: Elizabeth
+        actor: Keri Russell
+        delivery: "Icy contempt — not praise; cold acknowledgment of Claudia's game-playing"
+      - line: "I enjoy the maze part, and the eating-without-eating part. Pac-dots are calorie-free."
+        speaker: Claudia
+        actor: Margo Martindale
+      - line: "The Center wants the meeting with the Colonel to proceed."
+        speaker: Claudia
+      - line: "Don't get your panties in a bunch, Elizabeth. This isn't about you and me."
+        speaker: Claudia
+      - line: "I don't trust a word that bitch says. I mean, who knows what she could be up to."
+        speaker: Elizabeth
+        note: "Trust rupture coda — first domino"
+    cast_note: |
+      Claudia is SUCH a character; Margo SUCH an actor. Keri Russell's spy-mom Elizabeth —
+      contempt, distrust, and game-playing in one breath.
+    narrative_weight: |
+      Pivotal scene. Elizabeth's contempt and distrust here set up and push the first domino
+      in a long tragic chain — Rennhull meet, handler wars, i-told-you-so rights across the
+      series. Bookended oath episode (Nina's KGB oath / Clark-Martha wedding oath).
+    cultural_note: |
+      Margo Martindale — BoJack Horseman "Esteemed Character Actress Margo Martindale"
+      (HN: https://news.ycombinator.com/item?id=42905440). Claudia eats without eating;
+      Elizabeth plays games too. Pairs with Lars / iron / simulation / handler themes.

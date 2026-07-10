@@ -1,0 +1,50 @@
+# Tom Ngo — invitation portrayal. NOT Tom Ngo.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: tom-ngo
+  name: "Tom Ngo"
+  type: invitation
+  signifier: "🔺"
+  status: living
+  field: "Constraint-based animation — Embedded Constraint Graphics (ECG) at Interval Research; example-based direct manipulation"
+  home: characters/tom-ngo/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: not_yet_asked
+  consent: not_yet_asked
+  warm_contact: true   # Interval colleague; in touch since — post-patent-expiry ECG conversations
+
+known_for:
+  - "Embedded Constraint Graphics (ECG) at Interval Research — example poses at simplex vertices; drag features, solve barycentric blend weights (Moore–Penrose pseudoinverse of a Jacobian)"
+  - "Patent US5933150 (filed 1996-08-06, expired ~2016) — clip motion / clip character / clip art as composable components"
+  - "ECG editor behind Golan Levin's Mouther (1996) vector face cartoons"
+
+dons_thread:
+  interval: "Camelot-floor colleague — same era as MediaFlow, Bounce TV bots, Pluggers."
+  patent_expiry_2016: "Don flagged the expiry in the G9.js HN thread (news.ycombinator.com/item?id=12572696); Tom's reply on gluing high-dimensional simplices is quoted in the essay."
+  morph_target_discussions: |
+    Ongoing since the patent expired: Don and Tom have discussed applying ECG to
+    **morph-target-based 3D facial animation** — drag the face on screen, solve the
+    morph-target/blend-shape weights (ARKit ARFaceAnchor coefficients, Blender FaceIt
+    rigs) instead of hand-tuning sliders. Direct design input to the Faceball
+    Construction Set's ecg_blend driver and parameterized soft-body parts.
+
+essay: ../don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md
+fbcs_lineage: "HOMER visual mixing console → NeWS Mona Eyes → Tom Ngo ECG / Mouther → Bounce commentary bots → SimFaux → Squares in a Box panel dummies (apps/performance-space/faceball-construction-set.yml)"
+
+sources:
+  patent: "https://patents.google.com/patent/US5933150"
+  hn: "https://news.ycombinator.com/item?id=12572696"
+  mouther: "https://www.flong.com/archive/projects/mouther/"
+
+see_also:
+  - { path: ../golan-levin/, why: "Mouther — built the vector faces in Tom's ECG editor; dream co-guest pair" }
+  - { path: ../don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md, why: "The full ECG essay — mechanism, patent, HN thread, modern echoes" }
+  - { path: ../../apps/performance-space/faceball-construction-set.yml, why: "ECG is the example-based blend engine for FBCS faces and parameterized parts" }
+  - { path: ../paul-debevec/, why: "Interval-era circle; Rouen Revisited with Golan" }

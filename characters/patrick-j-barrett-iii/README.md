@@ -1,18 +1,49 @@
-# Patrick J. Barrett III 🧩
+# Patrick J. Barrett III 💋🏳️‍🌈
 
-*Invitation portrayal. A respectful, source-grounded sketch — not Patrick Barrett, and not his words.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · consent level 3 · authored by Don Hopkins
+**Original The Sims programmer** who implemented **same-sex romantic interactions** — the
+feature that helped make The Sims the queer microworld a generation grew up inside.
 
-## Who
+**Status:** invitation draft · **Consent:** not_yet_asked · **Show:** [`did-the-sims-make-you-gay`](../../repo-shows/did-the-sims-make-you-gay.yml)
 
-**Patrick J. Barrett III** is a programmer on **The Sims** at Maxis — credited on programming for the
-2000 original and as **lead engineer** on expansions including *The Sims: Hot Date* and *The Sims:
-Vacation*, with engineering work across *House Party*, *Unleashed*, and *The Sims Online*. He worked
-on the Sims' behavior systems (**SimAntics**), and was one of Don's colleagues on the original team.
+## Why invite Patrick
 
-## Why a Repo Show
+Don advocated in **1998 design-doc reviews** for inclusive romance (the prototype slapped
+same-sex kiss attempts). Patrick, hired soon after, implemented social interactions from an
+**older doc that still allowed same-sex unions** — preference emerging from **what you do**, not
+a fixed trait. Will approved. **E3 1999** kiss on stage; EA kept it.
 
-A natural voice for the [Sims team reunion](../../repo-shows/REPO-SHOWS.yml), on Sim behavior and
-SimAntics — how the Sims decided what to do.
+This is the story **from both perspectives, together and integrated** — not Don solo, not press
+recap alone.
 
-Credits: [MobyGames](https://www.mobygames.com/person/70265/patrick-j-barrett-iii/).
+## "Did The Sims make you gay?"
+
+Alexander Avila's video essay ([YouTube](https://www.youtube.com/watch?v=Xi-HWyh0Ybk)) turned the
+long-running player joke into cultural documentation. Alex is **openly trans masc** (he came out as
+a transgender man in June 2023). The **comments are a primary source** —
+1,700+ testimonies of safe-space play, hiding queer households from parents, retrospective
+realization. Already analyzed in MOOLLM:
+
+[`sims-queer-identity-formation.md`](https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md) — themes, clusters, counter-testimonies, one-liners.
+
+**Show beat:** Avila's essay + comment corpus + Patrick and Don on **how the code actually worked**.
+
+## LGBTQ+ solidarity — this IS The Sims audience
+
+Builders, modders, storytellers, creator-network solidarity — trans, queer, nb, ace, bi, lesbian,
+gay, genderfluid, gender-benders of every persuasion. Not a sidebar. See
+[`repo-shows/infodump.yml#solidarity_lexicon`](../../repo-shows/infodump.yml).
+
+## Files
+
+| File | Purpose |
+|------|---------|
+| [`invitation.md`](invitation.md) | Send-ready draft |
+| [`ideas.md`](ideas.md) | Conversation hooks |
+| [`sources/same-sex-relationships-integrated-story.md`](sources/same-sex-relationships-integrated-story.md) | Don + Patrick timeline |
+| [`sources/did-the-sims-make-you-gay-avila.yml`](sources/did-the-sims-make-you-gay-avila.yml) | Essay + comment analysis pointer |
+
+## See also
+
+- [`../don-hopkins/`](../don-hopkins/) — design reviews, Simprov Wedding Playset, inclusivity thesis
+- [`../will-wright/`](../will-wright/) — inclusivity-by-design on Will's page
+- [`../../will-wright/sims-team-steering-committee-playthrough/`](../../will-wright/sims-team-steering-committee-playthrough/) — optional reunion playthrough

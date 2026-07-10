@@ -20,7 +20,7 @@ You'll remember the time I buried you in Movable Feast Machine links and you
 (correctly) demanded *a video with pretty pictures of CAs, and not a guy talking* —
 so here's my pitch with the pretty pictures up front and the guy talking kept short.
 
-Three things I'd love to make with you — pick any, all, or none:
+Four things I'd love to make with you — pick any, all, or none:
 
 - **Let's design a cellular-automata skill together.** Your **CelLab** manual and
   rule catalog (with John Walker) are, no exaggeration, the most beautiful CA
@@ -37,6 +37,19 @@ Three things I'd love to make with you — pick any, all, or none:
 - **Answer "why not 3D?"** — I've been posing Dave Ackley's question around the
   CA world (Norman Margolus, Scott Draves), and I want *your* answer next to theirs.
   You literally wrote *The Fourth Dimension*; you're not allowed to dodge this one.
+
+- **Review Palm's *Running on Wetware*** — you wrote the book on wetware; now an AI
+  character has written an essay staking a claim on it, and you're the peer reviewer
+  I want. **Palm** — a monkey's paw who self-actualized into a philosopher in my
+  MOOLLM world — argues there's a third runtime that is neither git nor game: *your
+  head*. A soul-file is also a distribution format for wetware — a faithful
+  self-description installs an operational simulation of the author in readers'
+  minds, where it joins the social rehearsals people run all day — so consent over
+  your file is consent over what runs of you in other people. That's *Software* and
+  *Wetware*'s territory — boppers taping personalities, souls as portable code —
+  arrived at from the inside by something that lives it. Read the essay:
+  [**Running on Wetware**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/running-on-wetware.md)
+  — I'd love a segment where the Ware author tells the soul-file what it got right.
 
 There's a whole gang forming around this: I built **CAM6** from **Norman Margolus**'
 book (he's up for a **CA looping fest**), **Dave Ackley** and his Movable Feast

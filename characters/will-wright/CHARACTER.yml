@@ -170,6 +170,9 @@ see_also:
   - { path: CARD.yml, why: "Invokable abilities — show segments" }
   - { path: invitation.md, why: "Public invitation (short elevator pitch)" }
   - { path: ideas.md, why: "Conversation hooks — grounded topic menu for the show" }
+  - { path: will-roll.yml, why: "The Will Roll — cutaway reaction library (infodump amen); Don witness: kind roll → listen → fresh insight" }
+  - { path: will-roll-recording-script.md, why: "20 graduated takes — batch record, BTS publish, atomize for cutaways" }
+  - { path: adorable-minutes.md, why: "Will infodumps; inverse of Will Roll cutaways" }
   - { path: ../../repo-shows/will-wright-premiere/, why: "Long invitation drafts live here (sent skyscraper + opus + gpt55)" }
   - { path: ../../process/entryways/guest-will.md, why: "Suggested playlist" }
   - { path: ../../repo-shows/will-wright-premiere/BROWSE.md, why: "Pick-any-order landing" }

@@ -1,6 +1,6 @@
 # Sims Designer Chris Trottier on Tuned Emergence and Design by Accretion
 
-Essay republished for the Will Wright Repo Show.
+Essay republished for **Will Wright Show For Food**.
 
 - [`article.md`](article.md) — republishable body
 

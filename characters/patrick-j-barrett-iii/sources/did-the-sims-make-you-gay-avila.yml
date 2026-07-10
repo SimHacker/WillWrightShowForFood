@@ -1,0 +1,59 @@
+# Did The Sims make you gay? — Alexander Avila + comment corpus
+
+creator:
+  name: Alexander Avila
+  also_known_as: Alex
+  channel: Alexander Avila  # formerly AreTheyGay
+  identity: openly trans masc (transgender man)
+  pronouns: he/him
+  came_out: 2023-06-01
+  came_out_video: https://www.youtube.com/watch?v=a4r0CoXsGmk
+  note: |
+    Publicly out as a transgender man since June 2023 ("I was a transgender child.").
+    The Sims essay (Jan 2023) predates that video; credit and channel name remain Alexander Avila.
+
+video:
+  title: "Did The Sims make you gay? - a video essay."
+  creator: Alexander Avila
+  url: https://www.youtube.com/watch?v=Xi-HWyh0Ybk
+  published: 2023-01-13
+  channel_subscribers: "~607k"
+  views: "415k+ (2023)"
+
+community_joke: |
+  Long-running player meme — affectionate, not diagnostic. KQED, BRICKS, Guardian, and a
+  generation of creators treat The Sims as the microworld where queer identity got rehearsed safely.
+
+comment_analysis:
+  location: |
+    MOOLLM designs/sims/sims-queer-identity-formation.md — section "Community Response: Comment Analysis"
+  url: https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md#community-response-comment-analysis
+  scale: "1,700+ comments; rich qualitative dataset"
+  themes_sample:
+    - "Yes — Sims made me realize I was queer (retrospective recognition)"
+    - "Hiding queer gameplay from parents"
+    - "Safe space before IRL was safe"
+    - "Counter-testimonies — didn't make me gay (still valid)"
+    - "Emotional responses to the video"
+    - "Theory appreciation / meme one-liners"
+    - "Cross-generational patterns"
+  show_use: |
+    Pull representative quotes on air (with permission/fair-use commentary); never mock commenters.
+    Pair with Patrick + Don engine-room segment — **rules of the world** enabled the testimonies.
+
+engine_room:
+  implementer: characters/patrick-j-barrett-iii/
+  advocate: characters/don-hopkins/
+  integrated_story: same-sex-relationships-integrated-story.md
+  design_docs: https://donhopkins.com/home/TheSims/
+
+solidarity:
+  audience: |
+    The Sims audience — builders, modders, storytellers, creator-network solidarity.
+    Trans, queer, nb, ace, bi, lesbian, gay, genderfluid, gender-benders of any persuasion.
+  lexicon: repo-shows/infodump.yml#solidarity_lexicon
+
+related_press:
+  - { title: "A Queer History of The Sims — KQED", url: "https://www.kqed.org/news/12087897/a-queer-history-of-the-sims" }
+  - { title: "The Sims Knew I Was Queer Before I Did — BRICKS", url: "https://bricksmagazine.co.uk/2020/08/27/the-sims-knew-i-was-queer-before-i-did/" }
+  - { title: "How inclusivity saved The Sims — Don (HN harvest)", path: "DonHopkins/characters/don-hopkins/notes/hacker-news/the-sims-inclusivity.yml" }

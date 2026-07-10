@@ -2,7 +2,8 @@
 
 Jesse,
 
-I'm Don Hopkins — Sims tools, Exchange history, Will Wright Repo Show. You said on Tiny Life's site
+I'm Don Hopkins — Sims tools, Exchange history, and now a Repo Show called **Will Wright Show For
+Food**. You said on Tiny Life's site
 what players feel about that game feeling like **The Sims 1** — then you walked away from EA's
 Creator Network when the buyout landed. That combination is exactly the episode I want to build.
 

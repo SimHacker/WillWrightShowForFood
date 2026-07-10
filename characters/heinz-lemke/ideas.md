@@ -48,12 +48,39 @@ Lab culture, leadership, design judgment. Don't let Wiseman collapse into a pape
 PDP-7 + Type 340 display, light pen, Titan satellite link, distributed CAD (Rainbow group).
 
 ### 3. US research-lab trip + *Electronics* magazine (April 1969)
-Who Heinz met, what systems he saw, what crossed the Atlantic both ways. Gilmore sent Don a scan
-of the McGraw-Hill *Electronics* PIXIE article (young Heinz at the PDP-7) — Heinz wanted hi-res.
-**Ask him to tell this story on air.**
+Who Heinz met, what systems he saw, what crossed the Atlantic both ways. **Summer 1969 Greyhound
+tour** — $99 / 3-month ticket; Engelbart at SRI; job offer from W.R. Sutherland at MIT. Full lab
+list: [`sources/heinz-1969-us-lab-tour.md`](sources/heinz-1969-us-lab-tour.md). Gilmore scan of
+*Electronics* PIXIE article — tell this story on air.
+
+### 3b. Andrew Armit — Coons patches on PDP-7 (Alan Kay memory)
+Alan Kay (10 Jul 2026): Armit visited **Utah** same era with **Coons patch** system on PDP-7 —
+parallel to PIXIE, another under-documented Cambridge graphics line. Kay wants film/video found.
+[`../andrew-armit/`](../andrew-armit/)
 
 ### 4. PIXIE → CARS
 Graphical man-machine communication for design → model-guided medicine today.
+
+### 4b. Joe Weizenbaum — 1969 MIT to TU Berlin
+Heinz met Weizenbaum at MIT when presenting PIXIE (1969); Weizenbaum became visiting professor at
+TU Berlin (1979) and spent his last 30 years largely in Germany. Decades of discussions on
+modelling, HCI, and AI — "many of his predictions have become true now." Historic episode: the US
+trip and the Weizenbaum meeting. Conscientious objection to blindly following an AI-dominant world.
+
+### 4c. Model science + AI trustworthiness in surgery
+Heinz's main activity now: raising awareness of AI model trustworthiness. Nagoya CARS sessions on
+Model Guided Medicine and AI in Surgery (Roy Eagleson attended). Heinz asks Don for thoughts on
+**model science** — PIXIE graph models → CARS → contemporary surgical AI.
+
+### 4d. Alan Kay — light pen vs RAND tablet
+Alan Kay (2020): not surprised by PDP-7, surprised by light pen ("fatigued tingling hand… twitch
+the primary button"). Heinz has the actual PDP-7 light-pen driver source. Segment: author vs
+Kay vs Rosenthal on the same hardware.
+
+### 4e. The Lemke constellation
+David Rosenthal's Sun colleague David "Officer" Lemke; Andreas C. Lemke (CHI'90 *Using Critics to
+Empower Users*, NeWS-makers pie-menu question); possible Pomeranian family thread — investigation
+open. Andreas's critics paper is striking foreshadow for MOOLLM.
 
 ### 5. Preservation
 Digitized films, *Flight of the PIXIE*, CHM oral history — honor Wiseman and Hiles through Heinz's voice.

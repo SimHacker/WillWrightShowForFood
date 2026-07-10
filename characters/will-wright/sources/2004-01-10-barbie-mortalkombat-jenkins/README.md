@@ -1,6 +1,6 @@
 # From Barbie to Mortal Kombat: Further Reflections, By Henry Jenkins
 
-Essay republished for the Will Wright Repo Show.
+Essay republished for **Will Wright Show For Food**.
 
 - [`article.md`](article.md) — republishable body
 

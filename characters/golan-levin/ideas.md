@@ -37,6 +37,16 @@ dual interview with Paul Debevec on image-based interactive media
 
 ### 7. Information visualization + critical making as inquiry, not just tooling
 
+### 8. Mouther reborn — ECG, Faceball, and the Tom Ngo pair segment 🔺
+Golan built **Mouther**'s vector faces in **[Tom Ngo](../tom-ngo/README.md)**'s ECG editor at
+Interval — drag the eyes and mouth, solve the barycentric blends. The patent expired ~2016, and
+ECG is now the example-based blend engine in the
+[Faceball Construction Set](../../apps/performance-space/faceball-construction-set.yml) lineage:
+**HOMER → NeWS Mona Eyes → Tom Ngo ECG / Mouther → Bounce commentary bots → SimFaux → Squares in
+a Box panel dummies**. Dream segment: **Golan and Tom together** — the artist and the engine
+builder — reimplementing patent-free ECG live and driving a morph-target 3D face with it
+(the application Don and Tom have been discussing since the patent expired).
+
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)

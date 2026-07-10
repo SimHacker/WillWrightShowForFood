@@ -1,0 +1,82 @@
+# Clip Flow Pipeline — re-runnable dataflow from source video to published network
+#
+# The clip layer of the StoryMaker/ShowMaker substrate (showmaker-network.md,
+# storymaker-stories-and-scenes.yml). Everything we do manually today —
+# scrub, cut, caption, contextualize, upload, playlist, render — modeled as a
+# re-runnable, re-usable, iterable pipeline with YAML in git as the source of truth.
+# Working example: videos/*.clips.yml + videos/extract-clips.sh + videos/the-americans-clips.md
+
+meta:
+  id: clip-flow-pipeline
+  status: working_prototype     # manual pipeline live for The Americans clips; tooling accretes
+  type: [pipeline, dataflow, schema, showmaker]
+  inherits: storymaker-stories-and-scenes.yml   # a clip is a scene card specialization
+
+thesis: |
+  One canonical YAML model per clip drives every stage. Each stage is re-runnable:
+  change a timecode in git, re-run, everything downstream regenerates. The playlist
+  IS the composition until a render exists — and every transcluded clip sends traffic
+  (and ad revenue) to whoever hosts it. Composition-by-reference first, render later.
+
+stages:
+  1_source:
+    what: "Source masters + probe metadata (duration, codec, resolution)."
+    artifact: "*.clips.yml#meta.source_file + source_probe"
+    note: "Masters live outside the repo; sidecars record canonical paths."
+  2_model:
+    what: "Clip cards: id, start/end, characters, key_lines, delivery, narrative_weight, anachronisms."
+    artifact: "videos/<episode>.clips.yml"
+    is_the_source_of_truth: true
+  3_cut:
+    what: "Deterministic extraction — pad for platform trim, fades, encode settings."
+    artifact: "videos/extract-clips.sh → videos/clips/<episode>/<id>.mp4"
+    rerunnable: "Edit YAML, re-run script, clips regenerate."
+  4_caption:
+    what: "Transcribe each clip (Whisper) → SRT sidecars; proofread word-by-word; upload as caption tracks."
+    artifact: "videos/captions/<id>.srt"
+    note: "Also feeds transcripts into context pages and search."
+  5_contextualize:
+    what: "Public md page per batch: commentary, transcript, rights framing, embedded players/thumbnails."
+    artifact: "videos/<batch>.md (e.g. the-americans-clips.md)"
+    fair_use_load_bearing: "The commentary page + overlays ARE the transformative framing."
+  6_publish:
+    what: "Upload to the right channel (see channel_routing), paste URLs back into YAML + md."
+    metadata_injection:
+      - "Title, description with attribution + repo page link"
+      - "Rights note (§ 107 purpose statement)"
+      - "Cards / end screens / link overlays to related clips and long-form"
+      - "Caption track from stage 4"
+  7_compose_by_reference:
+    what: |
+      Playlists sequence clips across MANY accounts — ours, Don's personal, friends'
+      (SimFreaks / SimSlice / Zombie Sims), and other people's public videos.
+      Zero rights risk; traffic and ad revenue flow to each clip's host.
+      Mutual reinforcement: everyone in the network promotes everyone.
+    artifact: "Playlist models in YAML → published YouTube playlists"
+  8_render:
+    what: |
+      High-production long-form renders of proven playlist sequences — interstitial
+      glue, overlays, callouts, commentary. Multiple director's cuts over time
+      (repo-show-format.yml#directors_cuts). Only render what playlists prove works.
+    artifact: "Long-form videos on the show channel"
+    note: "Rendering internalizes traffic that composition-by-reference was exporting — do it when the composition is the product."
+
+channel_routing:
+  owned_100_percent: "Show channel — clean record, monetizable."
+  gray_area_excerpts: "Personal channel — quarantine; playlists point in from the show channel."
+  other_peoples_clips: "Never re-upload; playlist-reference in place."
+
+network_effect: |
+  Until rendered, every composition is a traffic router: views flow to the transcluded
+  clips' hosts. Point at friends' channels and they grow; they point back and we grow.
+  Link overlays + descriptions make the graph navigable in both directions.
+  The ShowMaker graph (showmaker-network.md) rendered into YouTube's link topology.
+
+tooling_roadmap:
+  now: "Sidecar YAML + extract-clips.sh + manual upload + manual playlist"
+  next:
+    - "Playlist model schema (ordered clip refs across accounts) + publisher"
+    - "Caption pipeline: whisper → proofread diff → upload via YouTube API"
+    - "Description/metadata generator from clip YAML (attribution, links, rights note)"
+    - "URL back-writer: paste published IDs into sidecars + context pages"
+  principle: "Sister-script: every tool documented-first, re-runnable, no one-shot hand work we can't repeat."

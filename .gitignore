@@ -15,5 +15,7 @@ dist/
 LaunchSettings.json.user
 appsettings.local.json
 **/catalog.sqlite
+# Rendered excerpt clips (masters stay outside repo)
+videos/clips/
 # Private source digests — NDA / pre-release / correspondence bodies (see portrayal-standards.yml)
 **/sources/private/

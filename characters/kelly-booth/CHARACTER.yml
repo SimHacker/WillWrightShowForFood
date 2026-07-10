@@ -1,4 +1,4 @@
-# Kelly Booth — correspondent portrayal. NOT Kelly Booth.
+# Kellogg S. Booth — correspondent portrayal. NOT Kelly Booth.
 # Standards: ../../schemas/portrayal-standards.md
 
 character:
@@ -7,34 +7,76 @@ character:
   full_name: "Kellogg S. Booth"
   type: correspondent
   signifier: "🎓📽️"
-  status: living
-  field: "Human–computer interaction; computer graphics — University of British Columbia"
+  status: living_emeritus
+  field: "Human–computer interaction; computer graphics; visualization — institution-builder"
   home: characters/kelly-booth/
-  affiliation: "University of British Columbia (UBC), Vancouver"
+  affiliation: "University of British Columbia (Professor Emeritus); formerly University of Waterloo"
+  honors:
+    - "ACM Distinguished Member"
+    - "CHCCS/SCDHM Achievement Award (2008)"
+    - "ACM SIGGRAPH Outstanding Service Award (2010)"
+    - "CHCCS/SCDHM Service Award (2020)"
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
   consent_level: 1
   authored_by: don-hopkins
-  note: "Public-source portrayal only. Newly Cc'd on the PIXIE thread (2026-07-09); not yet contacted. May edit, reduce, or delete anytime."
+  note: "Public-source portrayal only. Cc'd on PIXIE thread 2026-07-09; not yet contacted."
+  subject_rights: correction_edit_or_deletion_anytime
 
 relationship:
   to_project: cc_on_thread
-  to_roy: "Roy Eagleson's friend and mentor; inspired Roy's storytelling approach to HCI lectures"
-  to_show: "On the thread, not yet invited or contacted"
+  to_roy: "Roy Eagleson's friend and mentor; inspired Roy's storytelling HCI lectures"
+  to_show:
+    - repo-shows/pixie-pie-menus-pdp7.yml
+    - "Pie menus / menu-layout experimental lineage (potential)"
+  status: on_thread_not_contacted
 
 bio:
+  born_context: "Palos Verdes HS — science club programming; SAGE field trip (math + psychology teams)"
   summary: |
-    **Kelly Booth** (Kellogg S. Booth) — professor of computer science at the University of
-    British Columbia, in human–computer interaction and computer graphics. Introduced to the
-    project on 2026-07-09 when Roy Eagleson Cc'd him on the PIXIE storyline thread, crediting him
-    as the mentor who shaped Roy's storytelling style in HCI teaching.
+    Kellogg S. Booth (Kelly) — Professor Emeritus, UBC Computer Science. Berkeley Ph.D. in theory;
+    Lawrence Livermore (1968–76); Waterloo faculty (1977–90) where he co-founded Canada's Computer
+    Graphics Laboratory with John Beatty and Richard Bartels; UBC from 1990 — Imager Lab, founding
+    director of MAGIC, NECTAR leadership. Published across theory, graphics, and HCI; mentored 16 Ph.D.
+    and 50+ Master's students. SIGGRAPH co-chair 1983, Chair 1985–89; CHCCS/Graphics Interface
+    president 2002–08; key organizer of Canadian CG/HCI for four decades.
+  waterloo_cgl:
+    joined: 1977
+    cgl_formed: 1979
+    with: [John Beatty, Richard Bartels]
+    source: https://cs.uwaterloo.ca/kiosk/history/cs.htm
+  signature_projects:
+    - "Benesh Movement Notation intelligent editor (Ryman, Beatty) — Royal Academy of Dance"
+    - "Experimental HCI test-beds: menu layout, anti-aliasing, 3D via 2D displays"
+    - "Multitasking/multiprocess interactive systems (1980s)"
+
+career_harvest: sources/career-and-awards.yml
+
+media:
+  portraits:
+    - { path: media/kelly-booth-professional.png, sidecar: media/kelly-booth-professional.yml }
+    - { path: media/kelly-booth-casual.png, sidecar: media/kelly-booth-casual.yml }
 
 sources:
   email: ksbooth@cs.ubc.ca
-  transcript: ../heinz-lemke/sources/2026-07-09-pixie-storyline-thread.md
+  career: sources/career-and-awards.yml
+  thread: ../heinz-lemke/sources/2026-07-09-pixie-storyline-thread.md
+  awards:
+    - https://graphicsinterface.org/awards/chccs-scdhm-achievement/kellogg-booth/
+    - https://graphicsinterface.org/awards/chccs-scdhm-service/kellogg-booth/
+    - https://cs.uwaterloo.ca/kiosk/history/cs.htm
+
+project_fit:
+  pixie: "Roy's storytelling mentor — graphics history pedagogy on the PIXIE thread"
+  pie_menus: "Menu-layout experimental tradition — Canadian HCI lineage"
+  canadian_cg: "CGL founder — links Waterloo animation pipeline to PIXIE recovery show"
+  infodump_parallel: "Benesh notation editor as shape-grammar cousin to star-fort procedural grammar"
 
 see_also:
-  - { path: ../roy-eagleson/, why: "Brought Kelly onto the thread; student who carries his storytelling method" }
+  - { path: README.md, why: "Human portrait — start here" }
+  - { path: sources/career-and-awards.yml, why: "Full harvested facts + source URLs" }
+  - { path: ../roy-eagleson/, why: "Brought Kelly onto the thread" }
   - { path: ../heinz-lemke/, why: "PIXIE thread host" }
-  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "The show this thread feeds" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Primary show this thread feeds" }
+  - { path: ../../repo-shows/ben-and-heinz-pie-menus.yml, why: "Pie menus show cluster" }

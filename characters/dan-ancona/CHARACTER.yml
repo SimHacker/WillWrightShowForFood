@@ -1,0 +1,72 @@
+# Dan Ancona — invitation portrayal. NOT Dan Ancona.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: dan-ancona
+  name: "Dan Ancona"
+  type: invitation
+  signifier: "🗳️🎮"
+  status: living
+  field: "Political organizer, technologist, visualization — democracy tools & strategic research"
+  home: characters/dan-ancona/
+  location: Oakland, California
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2
+  authored_by: don-hopkins
+  note: "Public-source portrayal. Long Now 2006 asker — identified Jul 2026. May edit or delete anytime."
+
+contact:
+  email: dan@simplerevolutions.com
+  alt_email: da@simplerevolutions.com
+  web: https://danancona.com/
+  x: https://x.com/DanAncona
+  substack: https://chartingthewayforward.substack.com/
+  crunchbase: https://www.crunchbase.com/person/dan-ancona
+  linkedin: https://www.linkedin.com/in/danancona
+
+invitation:
+  status: send_now
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/dan-ancona-long-now.yml
+  priority: send_now
+  discovered: 2026-07-10
+
+long_now_2006:
+  event: Playing with Time — Brian Eno + Will Wright
+  date: 2006-06-26
+  clip: https://youtu.be/Dfc-DQorohc?t=3929
+  question: |
+    Open-source SimCity so we can play with the political assumptions embedded in the rules.
+  will_answer: "Very open to the idea"
+  co_card: Mark Live — related Spore / generative politics question (name may be transcript guess)
+  witness: Don Hopkins (audience, not the asker)
+  payoff: Long Now → Gilmore OLPC spark → GPLv3 Micropolis (2008) → MicropolisCore today
+
+bio:
+  summary: |
+    **Dan Ancona** — political organizer and technologist who builds online tools for democracy.
+    Founder & CEO of **Democracy Dashboard**; deep voter research and award-winning Democratic
+    coalition ads; author at [**Charting the Way Forward**](https://chartingthewayforward.substack.com/)
+    (Way to Win). Earlier career: startups and academia with a **visualization** research focus
+    (UCSB Alexandria Digital Library / ADEPT — GIS + spatial simulation, 2002–2004). The 2006 Long
+    Now SimCity question is exactly his lane: **political assumptions in rule-based systems**.
+  oscar: |
+    Extraordinarily large and friendly cat — named in public bios; fair game for a warm P.S.
+
+project_fit:
+  - "Origin asker — TicketPR before TicketPR existed"
+  - "Rules-as-politics ↔ SimHealth / Micropolis / infodump obsession"
+  - "Oakland — face-to-face with Will conceivable (Will invites visitors; his call)"
+  - "Mark Live mystery — Dan may remember who Stewart meant"
+
+see_also:
+  - { path: README.md, why: "Human portrait — start here" }
+  - { path: invitation.md, why: "Send_now invitation" }
+  - { path: ideas.md, why: "Episode hooks" }
+  - { path: ../will-wright/sources/simcity-open-source-saga/long-now-askers-outreach.md, why: "Research dossier + clip" }
+  - { path: ../will-wright/sources/simcity-open-source-saga/README.md, why: "Micropolis saga parent" }
+  - { path: ../../repo-shows/dan-ancona-long-now.yml, why: "Show seed" }
+  - { path: ../../process/ticket-pr.md, why: "Proto–TicketPR origin" }

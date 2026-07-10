@@ -1,0 +1,87 @@
+# The Americans S02E07 "Arpanet" — clip sidecar
+# Source probed: 640×360 XviD, ~41:25, mp3 audio
+
+meta:
+  show: The Americans
+  season: 2
+  episode: Arpanet
+  episode_no: 7
+  air_date: 2014-04-09
+  network: FX
+  source_file: /Users/a2deh/GroundUp/WillWrightCodeForFood/videos/The Americans 2013 S02E07 HDTV.XviD-AFG.avi
+  source_probe:
+    duration_sec: 2485
+    resolution: 640x360
+    video_codec: mpeg4
+    audio_codec: mp3
+  branding_ref: process/repo-show-branding.yml#americans_arpanet_pdp10
+  guest_room: characters/lars-brinkhoff/
+  transcript_draft: characters/lars-brinkhoff/sources/americans-arpanet-transcript.md
+
+# YouTube-friendly re-encode defaults (commentary / fair-use excerpts)
+encode:
+  crf: "20"
+  preset: slow
+  scale: "1280:720:force_original_aspect_ratio=decrease,pad=1280:720:(ow-iw)/2:(oh-ih)/2"
+  fade_in_sec: "0.5"
+  fade_out_sec: "0.5"
+  pad_sec: "1.0"   # extra second each side for YouTube Studio fine-trim; fades sit in the pad
+
+clips:
+  - id: rosenbloom-arpanet-pdp10
+    title: "Thane Rosenbloom explains ARPANET — pan to PDP-10"
+    characters:
+      - "Thane Rosenbloom (Geoffrey Cantor)"
+      - "Philip Jennings (Matthew Rhys)"
+      - "Elizabeth Jennings (Keri Russell)"
+    start: "11:30"
+    end: "14:53"
+    duration_note: "~3m23s — lab tour, IMP analogy, 'like God' line, PDP-10 reveal"
+    output: rosenbloom-arpanet-pdp10.mp4
+    audio_fade: true
+    captions: captions/rosenbloom-arpanet-pdp10.srt   # Whisper draft — proofread against transcript md
+    youtube: null   # paste URL after upload
+    show_use: |
+      Lars Brinkhoff / PDP-10 cold open. Pair with repo-show-branding americans_arpanet_pdp10.
+    key_lines:
+      - "It is, in a manner of speaking, the interstate highway system through which all of information flows."
+      - "It's sort of like God, except without the big beard and flowing white robes."
+
+  - id: oleg-nina-polygraph-1
+    title: "Oleg coaches Nina — polygraph practice (part 1)"
+    characters:
+      - "Oleg Igorevich Burov (Costa Ronin)"
+      - "Nina Sergeevna Krilova (Annet Mahendru)"
+    start: "14:52"
+    end: "16:51"
+    duration_note: "~1m59s"
+    output: oleg-nina-polygraph-1.mp4
+    audio_fade: true
+    captions: captions/oleg-nina-polygraph-1.srt
+    youtube: null
+    actor_note: |
+      Costa Ronin also plays Leonid "Lenya" Polivanov, Soviet governor of Happy Valley on Mars,
+      in For All Mankind season 5 — same actor, different oath.
+
+  - id: oleg-nina-polygraph-2
+    title: "Oleg — 'squeeze your anus' polygraph coaching"
+    characters:
+      - "Oleg Igorevich Burov (Costa Ronin)"
+      - "Nina Sergeevna Krilova (Annet Mahendru)"
+    start: "17:16"
+    end: "17:55"
+    duration_note: "~39s — after interstitial skip in Don's scrub"
+    output: oleg-nina-polygraph-2.mp4
+    audio_fade: true
+    captions: captions/oleg-nina-polygraph-2.srt
+    youtube: null
+
+# Manual ffmpeg (one clip) — accurate seek: -ss after -i
+ffmpeg_examples:
+  rosenbloom: |
+    ffmpeg -y -i "$SOURCE" -ss 11:30 -to 14:53 \
+      -vf "scale=1280:720:force_original_aspect_ratio=decrease,pad=1280:720:(ow-iw)/2:(oh-ih)/2" \
+      -af "afade=t=in:st=0:d=0.5,afade=t=out:st=202.5:d=0.5" \
+      -c:v libx264 -crf 20 -preset slow -pix_fmt yuv420p \
+      -c:a aac -b:a 128k -movflags +faststart \
+      clips/the-americans-s02e07-arpanet/rosenbloom-arpanet-pdp10.mp4

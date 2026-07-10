@@ -1,0 +1,76 @@
+# Don Hopkins ↔ David A. Tristram — public-safe correspondence digest
+# Full Messenger thread: DonHopkins green-room/dave-tristram/ (PRIVATE)
+
+meta:
+  with: dave-tristram
+  curated_by: don-hopkins
+  consent: not_yet_asked
+  span: "mid–late 1980s — ongoing"
+  private_archive: DonHopkins/projects/willwrightshowforfood/green-room/dave-tristram/
+
+gist: |
+  Decades-long friendship from USENIX Monterey 1989 (Panel Library × PSIBER Space Deck) through
+  Raster Masters, shared generative-graphics / CA / feedback obsessions, Adobe R&D beta (~2022), and
+  2025 HN Psychedelic Graphics thread. Async Repo Show invite pending.
+
+relationship:
+  origin: "USENIX Fifth Computer Graphics Workshop, Monterey, 16–17 Nov 1989"
+  don_to_dave:
+    - "Dave sent Panel Library + Electropaint source — Don hacked tree-shaped s-expr viz at UMD"
+    - "Attended Raster Masters performances (Shoreline, Dead shows)"
+    - "Beta-tested Adobe live-painting R&D (~2022)"
+    - "HN Psychedelic Graphics co-commentator (2025)"
+  shared_obsessions:
+    - live_generative_graphics
+    - reaction_diffusion
+    - video_feedback
+    - cellular_automata
+    - midi_reactive_performance
+    - share_the_tape_open_code
+
+threads:
+  usenix_monterey_1989:
+    what: "Met at same workshop — Dave Panel Library, Don PSIBER Space Deck"
+    public: raster-masters-panel-library.md
+
+  umd_electropaint_hack:
+    what: "Recursive s-expr trees in GL — 3D Pseudo Scientific Visualizer"
+    public: ../don-hopkins/visual-programming-excel-and-dimensionality.md
+
+  raster_masters_era:
+    what: "Dead, Shoreline, Hancock, Nash — Onyx live graphics"
+    public: raster-masters-panel-library.md
+
+  hn_psychedelic_graphics_2025:
+    url: "https://news.ycombinator.com/item?id=42804566"
+    what: "Dave on flow-field UV displacement, feedback, restore force; Don on same thread"
+
+  adobe_live_painting_beta:
+    what: "~2022 Feature Camp — liquid simulation filter; clearance required on air"
+    public_stub: sources/live-canvas-effects-stub.md
+    private: green-room/dave-tristram/ + sources/private/
+
+  europe_tour_2025:
+    what: "Dave performing graphics live — Resolume, TouchDesigner"
+    status: ask_dave_for_clips
+
+  daughter_contribution_inquiry:
+    status: private_pending
+    what: |
+      Don will ask Dave privately (Messenger) whether his daughter — electronic musician / YouTube —
+      might contribute. No public name or portrayal until Dave + daughter OK.
+    private: DonHopkins/.../green-room/dave-tristram/outreach-daughter-ask.md
+    rule: do_not_publish_without_joint_consent
+
+show_hooks:
+  - "Electropaint → WebGPU — second port after UMD tree hack"
+  - "Raster Masters redux — forkable repo as the band"
+  - "CAM6 × Dave performance rules — live CA jam"
+  - "CA looping fest co-guest with Margolus, Crutchfield, Draves"
+  - "Musical Gas — granular CA synth beside visual music"
+
+connects_in_repo:
+  - { path: README.md, why: "Public portrayal" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: ../../repo-shows/dave-tristram/, why: "Solo show seed" }
+  - { path: ../../repo-shows/norman-margolus/, why: "CA fest co-guest" }

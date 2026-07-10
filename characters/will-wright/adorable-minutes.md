@@ -53,6 +53,21 @@ First verified jewels: **Oh God cliffhanger** · **SimEarth kids/failure** · **
 
 We could produce short-form videos just like these — async Q&A primers before the long Repo Show episodes.
 
+## The Will Roll (cutaway library)
+
+When **someone else** is infodumping (Don on STAR FORTS, a guest on their SpIn), **Will** supplies
+the cutaway bank — not to shut the speaker down, but to carry the social layer so the sermon never
+apologizes for itself.
+
+Full spec: [`will-roll.yml`](will-roll.yml)
+
+**On-brand (Don, witness):** Years at Maxis and after — Will rolls his eyes, chuckles kindly, listens
+attentively again the millionth time, and **always** has something new and insightful to say back. The
+reaction clips are beats one and two; the insight is beat four. That's why the joke is his kindness.
+
+Show home: [`../../repo-shows/infodump.yml`](../../repo-shows/infodump.yml) · inverse of Care Bears
+corner-at-parties above.
+
 ## Related Will shorts (Don links)
 
 | Title | Link |

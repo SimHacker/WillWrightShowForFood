@@ -59,7 +59,7 @@ soul_city_bridge:
   not: Simopolis
   definition: |
     Soul City — liminal heaven where souls lay over between worlds; soul-file is source of truth;
-    each game re-renders (Will Wright Repo Show invitation: Proxi ⇔ Soul City ⇔ The Sims).
+    each game re-renders (Will Wright Show For Food invitation: Proxi ⇔ Soul City ⇔ The Sims).
   spec: ../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml
   sibling: ../../repo-shows/will-wright-premiere/game-bridge-soul-city-procreation.yml
 

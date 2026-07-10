@@ -2,7 +2,7 @@
 
 *Sniff:* [`CARD.yml`](CARD.yml) · [`GLANCE.yml`](GLANCE.yml)
 
-The single most important seed document for the Will Wright Repo Show — and a
+The single most important seed document for Will Wright Show For Food — and a
 direct artifact of a **forebear** (Terry Winograd's open public Stanford UI
 seminar; see `../../../../process/design-in-public.yml#forebears`).
 

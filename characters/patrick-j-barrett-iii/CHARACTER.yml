@@ -4,41 +4,52 @@
 character:
   id: patrick-j-barrett-iii
   name: "Patrick J. Barrett III"
+  aliases: [Patrick Barrett, Pat Barrett]
   type: invitation
-  signifier: "🧩"
+  signifier: "💋🏳️‍🌈"
   status: living
-  field: "Engineer on The Sims (Maxis) — Sim behavior / SimAntics; lead engineer on several Sims expansions"
+  field: "Original The Sims programmer — same-sex romantic interactions; accidental queer history"
   home: characters/patrick-j-barrett-iii/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 3
+  consent_level: 2
   authored_by: don-hopkins
 
 invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml
+  show_seed: repo-shows/did-the-sims-make-you-gay.yml
+  priority: send_now
+  note: |
+    Don + Patrick integrated episode: how same-sex relationships got programmed, E3 kiss,
+    performative romance model — paired with Alexander Avila essay (he is openly trans masc) + comment corpus (MOOLLM).
 
 bio:
-  summary: "**Patrick J. Barrett III** is a programmer on **The Sims** (Maxis), credited on programming for the 2000 original and as **lead engineer** on expansions including *The Sims: Hot Date* and *The Sims: Vacation*, and engineering across *House Party*, *Unleashed*, and *The Sims Online*. He worked on the Sims' behavior systems (SimAntics). Don's colleague on the original Sims team."
-
-connections:
-  the_sims: "Programmer on The Sims; lead engineer on Hot Date and Vacation; SimAntics / Sim behavior."
-  don: "Don Hopkins's colleague on the original Sims team."
+  summary: |
+    **Patrick J. Barrett III** implemented social interactions on the original **The Sims**
+    (1999–2000). Working from an older design document, he coded **same-sex romantic
+    interactions** — tagging interactions as romantic and letting preference emerge from
+    player-directed behavior rather than fixed personality traits. **E3 1999:** two female Sims
+    kissed during the live demo; EA kept the feature. *"It was a magical moment when my first
+    same-sex Sims couple kissed. I still sometimes wonder how in the world I got away with it."*
+    (New Yorker / Game Developer, 2014). Will Wright approved: glad to see same-sex support back.
 
 show_suggestions:
-  - { seed: ../../repo-shows/REPO-SHOWS.yml#building-the-sims.yml, what: "The Sims team reunion — Sim behavior / SimAntics." }
+  - { seed: ../../repo-shows/did-the-sims-make-you-gay.yml, what: "With Don — integrated implementation story + Avila comments + Sims audience solidarity" }
+  - { seed: ../../will-wright/sims-team-steering-committee-playthrough/, what: "Optional reunion — Jun 1998 steering committee build + Edith/SimAntics" }
 
 sources:
-  wikipedia: null
-  web:
-    - "https://www.mobygames.com/person/70265/patrick-j-barrett-iii/"
-  papers: []
-  blogs: []
+  press:
+    - { title: "The Kiss That Changed Video Games (Simon Parkin)", url: "https://www.newyorker.com/tech/annals-of-technology/the-kiss-that-changed-video-games" }
+    - { title: "How The Sims got same-sex relationships — Game Developer", url: "https://www.gamedeveloper.com/design/the-story-of-how-i-the-sims-i-got-same-sex-relationships---in-1999" }
+    - { title: "Don Hopkins — Sims design doc reviews", url: "https://donhopkins.com/home/TheSims/" }
+  community:
+    - { title: "Did The Sims make you gay? — Alexander Avila (video essay)", url: "https://www.youtube.com/watch?v=Xi-HWyh0Ybk", note: "Creator openly trans masc; he/him; came out June 2023" }
+    - { title: "Comment analysis (MOOLLM)", url: "https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md#community-response-comment-analysis" }
 
 see_also:
-  - { path: ../jamie-doornbos/, why: "Sims behavior / SimAntics" }
-  - { path: ../don-hopkins/, why: "Sims teammate; host" }
-  - { path: ../will-wright/, why: "Created The Sims" }
+  - { path: ../don-hopkins/, why: "Design-doc advocacy; integrated story on air" }
+  - { path: ../will-wright/, why: "Approved social interactions; inclusivity-by-design thread" }
+  - { path: ../../repo-shows/did-the-sims-make-you-gay.yml, why: "Planted show" }

@@ -1,0 +1,72 @@
+# The Will Roll — cutaway reaction library
+# Franchise asset for infodump / Special Interest Theater and any show where someone won't stop talking.
+# Standards: ../../schemas/portrayal-standards.md
+
+library:
+  id: will-roll
+  name: "The Will Roll"
+  role: |
+    Congregation amen — social meta-commentary so the infodumper never has to apologize or break flow.
+    He has heard this before. AGAIN. And again. With kindness.
+
+  provenance:
+    specified_in: repo-shows/infodump.yml#cutaway_library
+    witness: don-hopkins
+    years: "Maxis / The Sims era through decades of work and play"
+    consent: |
+      Will on camera; portrayal standards. He is in on the joke — the joke is his kindness.
+      Not mockery. Documented on-brand behavior from a colleague who lived it.
+
+  on_brand_arc:
+    summary: |
+      A VERY familiar expression from years of working and playing together: Will rolls his eyes,
+      chuckles kindly, then listens attentively again — the millionth time — and always has something
+      new and insightful to respond with.
+    beats:
+      - id: kind_roll
+        what: "Gentle eye-roll — not contempt; 'oh, here we go again'"
+      - id: kind_chuckle
+        what: "Soft laugh with it — affection, not dismissal"
+      - id: attentive_return
+        what: "Back to full listening — he actually wants to hear the rest"
+      - id: fresh_insight
+        what: "Returns with something new — pattern recognition, reframing, a question you didn't ask"
+    don_note: |
+      The cutaway library captures beats 1–2 (and variants) for editing rhythm. Beat 4 is why the
+      joke isn't cruel — he's not tuning out; he's the best audience in the room.
+
+  reaction_cards:
+    common:
+      - gentle_eye_roll
+      - kind_chuckle
+      - patient_nod
+      - slow_blink
+      - imaginary_watch_check
+      - affectionate_head_shake
+    rare:
+      - id: genuine_huh
+        line: "Huh — I didn't know that"
+        deploy: "Sparingly — one per season for contrast; makes the rolls land harder"
+
+  production:
+    batch: "20+ takes in one sitting"
+    atom: "Each reaction is its own clip — mix across episodes forever"
+    recording_script: will-roll-recording-script.md
+    pipeline: |
+      Script → batch record top to bottom → publish medium-length BTS (in-takes, hilarious) →
+      atomize per take for cutaway library. Same content pipeline as shows, games, voice, mocap.
+    bts_publish:
+      working_title: "The Will Roll: Twenty Takes of Kind Eye-Rolling"
+      length: medium
+      what: "Full session — slates, bloopers, rare card — behind the scenes, not just atoms"
+    pairs_with:
+      - adorable-minutes.md
+      - repo-shows/infodump.yml
+      - repo-shows/will-wright-adorable-minutes.yml
+    inverse: |
+      Adorable Minutes: Will infodumps (Care Bears at parties). Infodump show: Don infodumps;
+      Will Roll cutaways. Same kindness, reversed speaker.
+
+  editorial_rule: |
+    Never cut Will Roll to imply boredom or shutdown. Always imply: heard it before → still
+    listening → will surprise you. The rare 'huh' card proves the roll isn't automatic dismissal.

@@ -1,6 +1,6 @@
 # A Proposal to Develop Third Party Content Authoring Tools for The Sims
 
-Essay republished for the Will Wright Repo Show.
+Essay republished for **Will Wright Show For Food**.
 
 - [`article.md`](article.md) — republishable body
 

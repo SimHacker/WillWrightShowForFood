@@ -25,7 +25,9 @@ good investment too. The **Titan** and the **PDP-7 ↔ Titan** link his lab host
 the machine PIXIE ran on.
 
 Roy Eagleson's half-joke — *"does Maurice Wilkes have an avatar in the SIMs
-milieu?"* — is answered here: he does now.
+milieu?"* — is answered here: **not a Sims avatar** (we don't impersonate memorial
+subjects), but a [**memorial room**](memorial.md) open for stories, photos, lecture
+notes, and willing contributions. Heinz's 1967 origin memoir is already linked.
 
 ## Links
 

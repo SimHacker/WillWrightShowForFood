@@ -2,7 +2,8 @@
 
 Kayla,
 
-Don Hopkins — Sims history, Will Wright Repo Show. You had the biggest voice when creators left EA's
+Don Hopkins — Sims history, and now a Repo Show called **Will Wright Show For Food**. You had the
+biggest voice when creators left EA's
 network last fall. You'd worked with EA months before on your pack — then said plainly you couldn't
 stay associated under the new ownership.
 

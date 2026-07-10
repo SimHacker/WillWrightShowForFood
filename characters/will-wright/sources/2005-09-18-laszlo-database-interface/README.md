@@ -1,6 +1,6 @@
 # Laszlo Database Interface
 
-Essay republished for the Will Wright Repo Show.
+Essay republished for **Will Wright Show For Food**.
 
 - [`article.md`](article.md) — republishable body
 

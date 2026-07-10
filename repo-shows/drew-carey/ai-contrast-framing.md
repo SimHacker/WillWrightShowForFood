@@ -1,6 +1,6 @@
 # AI, audience participation, and *Whose Voice Is It Anyway?*
 
-*A note for Drew Carey — from Don Hopkins & the Will Wright Repo Show.*
+*A note for Drew Carey — from Don Hopkins & Will Wright Show For Food.*
 
 *This page is about **you** (public record only — we don't speak as you). Built from your April 2023
 radio experiment, our own TV experiments with Will Wright, and what we think we'd enjoy talking about

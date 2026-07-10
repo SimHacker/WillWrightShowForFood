@@ -1,6 +1,6 @@
 # RugOMatic Documentation and Tutorial: Drag-and-Drop Sims Objects
 
-Essay republished for the Will Wright Repo Show.
+Essay republished for **Will Wright Show For Food**.
 
 - [`article.md`](article.md) — republishable body
 

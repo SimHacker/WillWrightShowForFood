@@ -20,6 +20,12 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/golan-levin/
+  warm_contact: true   # DREAM GUEST — Interval alum Don worked closely with
+
+see_also:
+  - { path: ../tom-ngo/, why: "ECG — the engine Mouther ran on; dream pair segment (engine + artist) reimplementing patent-free ECG live" }
+  - { path: ../paul-debevec/, why: "Rouen Revisited (1996) — dual interview on image-based interactive media" }
+  - { path: ../../apps/performance-space/faceball-construction-set.yml, why: "FBCS lineage node: HOMER → Mona Eyes → ECG/Mouther → Bounce → SimFaux → Squares in a Box" }
 
 bio:
   summary: "**Golan Levin** — Interactive/computational media artist, engineer, and educator (b. 1972, NYC; based in Pittsburgh). Professor of Electronic Art at Carnegie Mellon University (courtesy appointments in Design, Architecture, Computer Science, ETC) and former Director of CMU's Frank-Ratchye STUDIO for Creative Inquiry. MIT Media Lab alum; **Interval Research** colleague of Don Hopkins and Paul Debevec (*Rouen Revisited*; Mouther on Tom Ngo's ECG). Same PARC/Apple/MIT-adjacent circle as Terry Winograd, David Levitt, Marc Davis — Don's Camelot roster, not all overlapping one year."

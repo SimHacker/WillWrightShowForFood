@@ -19,8 +19,12 @@ gaps:
 
   electronics_magazine_1969_pdf:
     what: "McGraw-Hill Electronics (Apr 28 1969) PIXIE article; Gilmore scan"
-    status: gap
-    pull_in: "Re-export from Gmail or locate Gilmore PDF; attachments SAVE-FAILED in temp/HeinzLemke"
+    status: received   # 2026-07-10 from Heinz (PDF + clean MD)
+    filed:
+      private: DonHopkins/.../electronics-international-1969-04-28-pixie.md
+      public: sources/electronics-international-1969-04-28-pixie.md
+      source_pdf: "~/Documents/Electronics International-April 1969_1-3.pdf"
+    pull_in: "Snip p158 photo → images/electronics-1969-p158-light-writing.png"
     show_use: "Heinz US-trip + magazine story on air"
 
   heinz_cambridge_word_doc:
@@ -49,6 +53,23 @@ gaps:
     show_use: "Opening act of the PIXIE interview — how Heinz got to Cambridge in the first place"
     more: "Heinz promised further installments over the coming weeks (Cambridge/TRE storyline)"
 
+  buxton_pixie_letter_2008:
+    what: "Heinz → Bill Buxton PIXIE memory-lane letter (~2008); CARS 2009 invitation; thesis pointers"
+    status: received   # 2026-07-10 email attachment
+    filed:
+      private: DonHopkins/.../2008-bill-buxton-pixie-memory-lane.md
+      public: sources/2008-bill-buxton-pixie-memory-lane.md
+    pull_in: "Snip 4 embedded images from .doc; ask Heinz for PhD thesis scan"
+    show_use: "Buxton/Microsoft thread; extended PIXIE predates Gosling SunDew; PACS lineage"
+
+  heinz_phd_thesis_1972:
+    what: |
+      Lemke (1972) Interactive graphics in an integrated CAD system — Cambridge PhD.
+      Appendix 4 pp 187-209 = PIXIE User Manual; Ch 5 = architecture; fig 9.4 = multi-user PIXIE.
+    status: gap
+    pull_in: "Ask Heinz for scan or Cambridge library retrieval"
+    show_use: "Primary reference for emulator revival + radial menu grammar on air"
+
   heinz_1967_talk_attachment1:
     what: "Attachment 1 — announcement + list of participants for Heinz's 29 June 1967 Cambridge Math Lab talk (Wilkes invited colleagues from across the UK)"
     status: gap
@@ -75,3 +96,52 @@ gaps:
     status: gap
     pull_in: "If Roy is willing, request scans + permission; would enrich the AI-history sidebar"
     show_use: "Cognitive-science lineage visuals (Pylyshyn ← Newell/McCarthy; CIFAR → Hinton)"
+
+  roy_identified_heinz_photo_2026:
+    what: |
+      Roy Eagleson (10 Jul 2026): "Aha. It's you!" — identifies Heinz in photo from email
+      (image.png). Likely Electronics 1969 p158 light-writing shot or related PDP-7 photo.
+    status: gap
+    pull_in: "Extract image.png from mail; file under heinz-lemke/media/from-mail/ with Roy attribution"
+    show_use: "Roy as historian connecting textbook, magazine, and living author"
+
+  newman_sproull_movable_menu_citation:
+    what: |
+      Newman & Sproull *Principles of Interactive Computer Graphics* (~1973) — ref 520 cites PIXIE
+      as "interesting idea" with "movable menu" figure; Roy: should be first radial/pie menu.
+    status: documented
+    pull_in: "Scan ref 520 pages + figure; compare Wiseman radial-menu notes"
+    show_use: "Textbook erasure beat — repo corrects the canon on air"
+    thread: sources/2026-07-10-pixie-storyline-thread.md
+
+  nagoya_ai_surgery_slides_2026:
+    what: "Heinz slides — Model Guided Medicine + AI in Surgery, Nagoya CARS 2026 (German Society of Surgery)"
+    status: gap
+    pull_in: "From Heinz 10 Jul attachment; consent for repo"
+    show_use: "Modern CARS episode — PIXIE → model-guided medicine continuity"
+    thread: sources/2026-07-10-pixie-storyline-thread.md
+
+  heinz_1969_us_trip_agenda:
+    what: |
+      Heinz's summer 1969 US lab-tour agenda (Greyhound $99 / 3-month ticket). Email attachment
+      10 Jul 2026 — lists United Aircraft, MIT/Licklider, Lincoln Lab/Sutherland, Engelbart at SRI,
+      Utah/Evans/Sutherland, and ~15 more stops.
+    status: gap
+    pull_in: "Extract attachment from mail; file under sources/ or media/from-mail/"
+    show_use: "Historic episode — 1969 US trip beat; counter to Newman/Sproull US-only Golden Age"
+    doc: sources/heinz-1969-us-lab-tour.md
+
+  andrew_armit_coons_patch_film:
+    what: |
+      Alan Kay (10 Jul 2026): Andrew Armit visited Utah ~1968–69 with Coons patch interactive system
+      on PDP-7 — "quite impressive." Kay asks Don/Heinz to find movie/video of system working.
+    status: gap
+    pull_in: "Archive sniff — CHM, Utah Evans lab, Cambridge Rainbow papers, Armit publications"
+    show_use: "PDP-7 double feature with PIXIE; Coons patches vs radial menus"
+    doc: ../andrew-armit/sources/alan-kay-utah-coons-patches.md
+
+  pixie_part1_docx_dshr:
+    what: "PIXIE Part 1.docx — attached at end of DSHR/Roy thread forward"
+    status: gap
+    pull_in: "Extract from mail; may overlap 1967-back-to-the-roots or new installment"
+    show_use: "Cambridge/TRE storyline spine"

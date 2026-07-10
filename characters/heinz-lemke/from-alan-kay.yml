@@ -4,6 +4,21 @@ character: heinz-lemke
 kay_hub: ../alan-kay/
 
 kay_says:
+  light_pen_2020:
+    date: "2020-02-18"
+    context: "HN thread on PIXIE film — Don forward in 10 Jul 2026 thread"
+    quote: |
+      Not surprised they used a PDP-7; surprised they used a light pen instead of a RAND tablet
+      (fatigued tingling hand; twitch the primary button rather than pushing down).
+    show_beat: "Kay vs Heinz hardware — Heinz has PDP-7 pen driver source to test on emulator"
+  armit_utah_2026:
+    date: "2026-07-10"
+    context: "PIXIE thread side-note — Andrew Armit at Utah"
+    quote: |
+      Andrew Armit visited Utah for months with Coons patch interactive system on PDP-7 — quite in awe.
+      It would be fun if Don (special nose) or Heinz could sniff out movie/video of Andrew's system working.
+    show_beat: "PDP-7 graphics double feature — PIXIE Cambridge + Armit Coons patches Utah"
+    doc: ../andrew-armit/sources/alan-kay-utah-coons-patches.md
   gist: |
     **PIXIE** preservation thread — Alan forwarded Cambridge colloquia papers (1967, 1970) on Wiseman's
     PIXIE light-pen system; radial menus in PIXIE connect to Don's pie-menu archaeology. Kay engaged on

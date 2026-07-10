@@ -48,7 +48,7 @@ memorial:
   who_can_discuss:   # documented connections only — NOT invitations until they accept
     - { who: heinz-lemke, why: "PhD arranged by Wilkes; first-hand memory of the 1967 talk and the statute story" }
     - { who: david-rosenthal, why: "Cambridge undergrad on the same PDP-7/Titan stack ~1970" }
-    - { who: roy-eagleson, why: "Asked, half-joking, whether Wilkes has a SIMs avatar — teaches this history" }
+    - { who: roy-eagleson, why: "Asked, half-joking, whether Wilkes has a SIMs avatar — teaches this history; Don invited memorial contributions 10 Jul 2026" }
   artifacts:
     - "Heinz Lemke memoir, Back to the Roots (Part 1, 1967) — the statute + PhD story"
     - "Cambridge Computer Laboratory obituary + Turing Award citation"

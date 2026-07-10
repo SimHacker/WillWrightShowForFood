@@ -9,7 +9,7 @@
 | **Character home** | [`characters/palm/`](../../../../characters/palm/README.md) |
 | **MOOLLM soul** | [monkey-palm/](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm) |
 
-This folder is Palm's **TicketPR seat** on the Will Wright Repo Show — questions, planted gag, show-specific overlay. Read [`characters/palm/README.md`](../../../../characters/palm/README.md) before the show.
+This folder is Palm's **TicketPR seat** on Will Wright Show For Food — questions, planted gag, show-specific overlay. Read [`characters/palm/README.md`](../../../../characters/palm/README.md) before the show.
 
 ---
 

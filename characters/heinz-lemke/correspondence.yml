@@ -43,9 +43,9 @@ threads:
   electronics_magazine_1969:
     what: |
       McGraw-Hill Electronics (Apr 28 1969) PIXIE article; Gilmore scan; Heinz photo at PDP-7.
-      Ask Heinz: US research-lab trip story behind the magazine piece.
-    export_msgs: ["msg-384", "msg-385", "msg-393"]
-    pull_in: pull-in-gaps.yml#electronics_magazine_1969_pdf
+      **Received from Heinz 2026-07-10** — PDF + clean MD in private/public archives.
+    doc: sources/electronics-international-1969-04-28-pixie.md
+    pull_in: pull-in-gaps.yml#electronics_magazine_1969_pdf — snip p158 photo
   cars_medicine:
     what: "IFCARS, CARS congress, patient-specific modelling, model-guided medicine"
   cars_2025_berlin:
@@ -114,6 +114,7 @@ threads:
   cambridge_storyline_installments_2026_07_09:
     date: "2026-07-09"
     transcript: sources/2026-07-09-pixie-storyline-thread.md
+    continues: sources/2026-07-10-pixie-storyline-thread.md
     what: |
       Roy Eagleson (9 Jul 11:58) greets Don, jokes "does Maurice Wilkes have an avatar in the
       SIMs milieu?", shares his own operator backstory (Honeywell GE-115 in HS; midnight shift
@@ -133,6 +134,62 @@ threads:
     show_refs:
       - ../roy-eagleson/
       - ../../kelly-booth/
+
+  conscientious_objector_weizenbaum_2026_07_10:
+    date: "2026-07-10"
+    transcript: sources/2026-07-10-pixie-storyline-thread.md
+    what: |
+      Heinz echoes Don's conscientious-objector software-design coinage; main activity now is AI
+      model trustworthiness. Nagoya CARS: Model Guided Medicine + AI in Surgery (Roy attended).
+      Met Joe Weizenbaum at MIT 1969 presenting PIXIE; decades of TU Berlin discussions — "many of
+      his predictions have become true now." Asks Don about "model science." Don proposes two
+      episodes (1969 US/Weizenbaum + modern CARS); Cc Alan Kay on light pen vs RAND tablet.
+    private_archive: DonHopkins/characters/don-hopkins/correspondence/attachments/heinz-lemke/
+    pull_in: pull-in-gaps.yml#nagoya_ai_surgery_slides_2026
+
+  lemke_constellation_2026_07_10:
+    date: "2026-07-10"
+    what: |
+      DSHR asks if Heinz is related to David Lemke (Sun X11). Heinz: unknown; many Pomeranian
+      Lemkes scattered after 1945. Don maps a constellation: David "Officer" Lemke (Sun NeWS, DSHR
+      Usenix co-author), Andreas C. Lemke (U. Colorado — NeWS-makers pie-menu question, CHI'90
+      "Using Critics to Empower Users"), Helmut Lemke (NURNICHTNUR experimental musician). Family
+      connection TBD. Childhood essay private — forward-to-David permission only.
+    private_archive: DonHopkins/.../lemke-constellation.yml
+
+  alan_kay_armit_utah_2026_07_10:
+    date: "2026-07-10"
+    transcript: ../andrew-armit/sources/alan-kay-utah-coons-patches.md
+    what: |
+      Alan Kay side-note on PIXIE thread: Andrew Armit extended visitor at Utah (~1968–69), Coons
+      patch interactive system on PDP-7. Ivan Sutherland period; 4×4 matrix multiplier for HMD /
+      Coons work. Asks Don or Heinz to find film/video — "quite impressive."
+    show_hook: "PDP-7 double feature — PIXIE + Armit; Don's archive nose"
+
+  heinz_us_tour_1969_2026_07_10:
+    date: "2026-07-10"
+    transcript: sources/heinz-1969-us-lab-tour.md
+    what: |
+      Heinz responds to Roy: Cambridge graphics ignored in US; Armit Coons patches second example.
+      Summer 1969 Greyhound tour ($99 / 3 months); Engelbart and many labs; job offer from W.R.
+      Sutherland at MIT. Attachment: agenda (pull in).
+    pull_in: pull-in-gaps.yml#heinz_1969_us_trip_agenda
+
+  pixie_attachments_batch_2026_07_10:
+    date: "2026-07-10"
+    transcript: sources/2026-07-10-pixie-storyline-thread.md
+    what: |
+      Heinz sends Buxton 2008 PIXIE letter + Electronics Apr 1969 article (as Don requested).
+      Buxton met Bill Newman in Cambridge; CARS 2009 keynote. PowerPoint/PhD thesis observation.
+      Don proposes historic US-trip episode + modern CARS episode; Cc Alan Kay (light pen vs RAND
+      tablet); Conscientious Objector club cards.
+    docs:
+      - sources/electronics-international-1969-04-28-pixie.md
+      - sources/2008-bill-buxton-pixie-memory-lane.md
+    private_archive: DonHopkins/.../2026-07-10-pixie-attachments-batch.md
+    pull_in:
+      - pull-in-gaps.yml#heinz_phd_thesis_1972
+      - pull-in-gaps.yml#electronics_magazine_1969_pdf  # p158 image snip
 
 connects_in_repo:
   - { path: CHARACTER.yml, why: "Bio + invitation status" }
@@ -155,6 +212,19 @@ show_hooks:
   - "Kelly Booth (UBC) — Roy's HCI storytelling mentor, on the thread"
   - "Cambridge late 1960s + US research-lab trip"
   - "PIXIE → CARS continuity — graphical interaction to model-guided medicine"
+  - "Joe Weizenbaum — MIT 1969 PIXIE meeting; TU Berlin decades; conscientious objector to AI-dominant world"
+  - "Model science — Heinz asks Don; Nagoya AI-in-surgery slides (pull in)"
+  - "Two-episode pitch: 1969 US trip + modern CARS"
+  - "Electronics Apr 1969 article — received; US lab tour story on air"
+  - "Bill Buxton 2008 letter — PIXIE memory lane, CARS 2009, thesis pointers"
+  - "PhD thesis 1972 — ask Heinz; Appendix 4 = PIXIE User Manual"
+  - "Extended PIXIE (1971) predates Gosling SunDew — hook for Gosling/Rosenthal"
+  - "Alan Kay vs Heinz — light pen vs RAND tablet; Heinz has driver source"
+  - "Lemke constellation — David Officer Lemke (Sun/NeWS), Andreas C. Lemke (CHI'90 critics), family TBD"
   - "CARS 2025 Berlin — game thinking for healthcare interfaces"
   - "Bechtersbohl + Mario Cypko barn video — medicine modelling in the Black Forest"
-  - "CHM oral history — if Heinz is willing"
+  - "Newman/Sproull ref 520 — 'movable menu' vs radial/pie menu (Roy 10 Jul)"
+  - "Roy identifies Heinz in mystery photo — 'Aha. It's you!'"
+  - "Alan Kay — Andrew Armit Coons patches on PDP-7 at Utah; film hunt"
+  - "Heinz 1969 US lab tour — Greyhound $99, Engelbart, full agenda (pull in)"
+  - "1968 PIXIE re-implementation — Roy + Lars mandate"

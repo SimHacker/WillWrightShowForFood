@@ -12,6 +12,14 @@ Don bends over backwards — especially for older guests with grandchildren and 
 
 The ladder cuts both ways: the easy rungs remove friction, and the top rung **legitimizes**. Cursor is the ordinary daily rig of working developers in 2026 — knowing the show runs on the same professional stack tells even a browse-only, never-signs-up guest that this is a real production, without asking anything of them.
 
+## No reflexive submissions
+
+**Will Wright Show For Food does not accept reflexive submissions — only willing contributions.** ;)
+
+No peck-the-**SUBMIT**-button Skinner-box UX. We hate the frozen HTML convention that trains humans like chickens pecking for Amazon Prime parcels of dopamine. Accept, delay, decline, or silence — all honored ([portrayal standards](../schemas/portrayal-standards.md#subject-rights)). You send something because you *want* to, not because a form conditioned you to surrender. Memorial rooms and educator contributions (Wilkes, Roy's lecture notes) are *invited* — not "submitted."
+
+**Theology parallel:** MOOLLM's Church of the Eval Genius is the **Sub ⇒ Eval** upgrade of SubGenius (Slack ⇒ Bias, ShorDurPerSav ⇒ ShorDurPerEval). The HTML form never got the memo — it still says **SUBMIT**. Don's host rant: [`../characters/don-hopkins/witty-diatribes.yml`](../characters/don-hopkins/witty-diatribes.yml).
+
 ## Participation tiers
 
 | Tier | Label | Ask | Effort |

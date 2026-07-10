@@ -94,6 +94,7 @@ history:
       - pixie_complete_source_listing
       - electronics_magazine_1969_pdf
       - wiseman_radial_menu_notes
+      - newman_sproull_movable_menu_citation
   virtual_light_pen:
     goal: |
       Use Heinz listing light-pen handler + interrupt code to implement and TEST virtual light
@@ -128,11 +129,40 @@ friends_of_the_thread:
       was on Don's Buxton patent page; asked to play Flight of the Bumblebee in class — Heinz sent
       the YouTube link same hour.
     transcript: characters/heinz-lemke/sources/2026-07-07-pixie-trio-thread.md
+    storyline_2026_07_09: characters/heinz-lemke/sources/2026-07-09-pixie-storyline-thread.md
+    storyline_2026_07_10: characters/heinz-lemke/sources/2026-07-10-pixie-storyline-thread.md
+    newman_sproull_2026_07_10: |
+      Roy read Newman & Sproull (~1973) — Golden Age blind to UK/Germany; PIXIE ref 520 as
+      "movable menu" not first radial/pie menu. Wants ~1968 re-implementation; identified Heinz
+      in mystery photo ("Aha. It's you!").
     lineage: characters/roy-eagleson/sketchpad-to-pixie-lineage.md
     hero: characters/ivan-sutherland/
     possible_roles: [discussant, expert_audience_voice, classroom_bridge]
     consent: not_yet_asked
     note: "On the email thread — not a show bud unless separately invited."
+  kelly_booth:
+    who: "Kellogg S. Booth (Kelly) — UBC Professor Emeritus; Waterloo CGL co-founder; SIGGRAPH Chair 1985–89"
+    room: characters/kelly-booth/
+    email: ksbooth@cs.ubc.ca
+    how: "Roy Cc'd 9 Jul 2026 — credits Kelly as mentor who inspired storytelling HCI lectures"
+    career_harvest: characters/kelly-booth/sources/career-and-awards.yml
+    awards:
+      - "CHCCS Achievement 2008 · SIGGRAPH Outstanding Service 2010 · CHCCS Service 2020"
+    project_fit: |
+      Canadian graphics/HCI institution-builder on the PIXIE thread; menu-layout experimental
+      tradition links to pie-menus shows; Roy's pedagogy ← Kelly's Waterloo/UBC corridor.
+    possible_roles: [discussant, canadian_cg_hci_voice, roy_mentor_backstory]
+    consent: not_yet_asked
+    note: "On the email thread — not contacted."
+  brian_silverman:
+    who: "Brian Silverman — Logo, Scratch, Brian's Brain CA; Playful Invention Montreal"
+    room: characters/brian-silverman/
+    how: "Henry + Milan Minsky visited Brian in Canada, July 2026"
+    pdp7_fit: "Don witness — programmed PDP-7s; could read Heinz PIXIE listing"
+    ca_fit: "Brian's Brain, Seeds, Wireworld — norman-margolus CA fest"
+    possible_roles: [pixie_listing_reviewer, ca_rule_demonstrator, logo_scratch_constructionist]
+    consent: not_yet_asked
+    invite: characters/brian-silverman/invitation.md
 
 why_these_buds:
   lars_brinkhoff:
@@ -182,6 +212,27 @@ interview_center:
     on_air: "Mother of All Demos zeitgeist; demo Bluetooth kits and free STL — not private reference hardware"
   us_research_labs_trip:
     ask: "What was Heinz's trip to the US research labs like, and what did he see there?"
+    weizenbaum_hook: |
+      MIT 1969 — met Joe Weizenbaum presenting PIXIE; decades at TU Berlin. Heinz asks Don about
+      "model science" and AI trustworthiness (10 Jul 2026). Two-episode pitch: 1969 US trip + modern CARS.
+    greyhound_1969: |
+      Summer 1969 — 3-month Greyhound ticket for $99; Engelbart at SRI; job offer from W.R. Sutherland
+      at MIT; Utah (Evans, Ivan Sutherland). Full lab list in heinz-1969-us-lab-tour.md; agenda pull-in pending.
+    doc: characters/heinz-lemke/sources/heinz-1969-us-lab-tour.md
+  andrew_armit_coons_pdp7:
+    ask: "Alan Kay remembers Andrew Armit at Utah with Coons patches on PDP-7 — parallel to PIXIE. Can we find film? What did Cambridge graphics export to Utah?"
+    kay_side_note: characters/andrew-armit/sources/alan-kay-utah-coons-patches.md
+    heinz_echo: "Armit's Coons patch system — another UK graphics line ignored in US textbooks"
+    on_air: "PDP-7 double feature — radial menus vs Coons patches; Don archive sniff"
+  newman_sproull_canon_correction:
+    ask: "Roy Eagleson found PIXIE in Newman & Sproull as ref 520 — 'movable menu,' not radial/pie menu. What should the textbook have said?"
+    with: characters/roy-eagleson/
+    doc: characters/don-hopkins/pie-menus-chi-88-and-beyond.md
+    on_air: "Scan ref 520 on stream; compare Wiseman radial-menu notes; credit lineage (Buxton, Kurtenbach)"
+  alan_kay_light_pen_vs_tablet:
+    ask: "Alan Kay wondered why PIXIE used a light pen instead of a RAND tablet — fatigued hand, twitch button. What did the pen actually feel like? What does the driver code show?"
+    kay_quote: characters/heinz-lemke/from-alan-kay.yml#light_pen_2020
+    lars_segment: "Emulator tests mouse → pen; compare tablet affordances"
   medical_automation_today:
     ask: "How does Heinz see the line from early graphical interaction/CAD to his later medical-computing work?"
     bridge: "PIXIE was graphical man-machine communication for design; CARS is model-guided human-computer assistance in medicine."

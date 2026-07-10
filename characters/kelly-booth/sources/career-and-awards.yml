@@ -1,0 +1,150 @@
+# Kellogg S. Booth — career, awards, and Canadian graphics/HCI lineage
+# Harvested from public sources (2026-07-10). Standards: ../../../schemas/portrayal-standards.md
+
+subject:
+  id: kelly-booth
+  full_name: "Kellogg S. Booth"
+  also_known_as: ["Kelly Booth", "Kelly"]
+
+education:
+  - degree: B.Sc. Mathematics
+    institution: California Institute of Technology
+    year: 1968
+  - degree: M.A. Computer Science
+    institution: University of California, Berkeley
+    year: 1970
+  - degree: Ph.D. Computer Science
+    institution: University of California, Berkeley
+    year: 1975
+  origin_story: |
+    Palos Verdes High School — programming in a science club; field trip to Systems
+    Development Corporation where he learned half the SAGE developers had math degrees and
+    half psychology — early HCI signal.
+
+employment:
+  - role: Staff member
+    org: Lawrence Livermore National Laboratory
+    years: "1968–1976"
+    note: Early exposure to computer graphics while completing graduate degrees
+  - role: Faculty
+    org: University of Waterloo, Department of Computer Science
+    years: "1977–1990"
+  - role: Professor (now Emeritus)
+    org: University of British Columbia, Department of Computer Science
+    years: "1990–"
+
+waterloo_cgl:
+  summary: |
+    Kelly Booth joined Waterloo CS in 1977; John Beatty in 1978. In 1979 they began a research
+    group in Computer Graphics and Interaction. With Richard Bartels (1981) they formed the
+    Computer Graphics Laboratory (CGL) — one of Canada's first. Marceli Wein was adjunct faculty.
+  source: https://cs.uwaterloo.ca/kiosk/history/cs.htm
+  alumni_note: |
+    CGL graduates include Academy Award winners Rob Krieger and Paul Breslin. Joanne McKinley
+    (Google Waterloo co-site lead) earned her MMath in CGL — user interface became a career theme.
+  profound_impact: https://news.profoundimpact.com/tag/university-of-waterloo/ (Aug 2023 animation spotlight)
+
+ubc_and_magic:
+  imager: |
+    Helped establish the Imager Laboratory for Graphics, Visualization and HCI at UBC with
+    Alain Fournier and others — grew to 10+ faculty.
+  magic:
+    role: Founding director
+    org: MAGIC (Media and Graphics Interdisciplinary Centre)
+    years: "1990–2002"
+    note: Pioneer in HCI in Canada; mentor to large-scale interdisciplinary HCI projects
+  icics: Participated in CFI proposal for ICICS lab space (human-centred computing institute)
+  nectar:
+    role: Associate Director; Acting Director (first half 2006)
+    org: NECTAR (NSERC strategic network on collaboration technologies)
+    years: "2004–2008"
+
+research_arc:
+  early: "Computational complexity and graph theory (Ph.D. and early career)"
+  waterloo_shift: "Graphics rendering; hardware/software support; HCI and visual interfaces"
+  notable_1980s:
+    - "Benesh Movement Notation intelligent editor with Rhonda Ryman and John Beatty — still used by Royal Academy of Dance"
+    - "Multitasking/multiprocess support for interactive programs (Benesh editor, paint programs)"
+    - "Pioneered psychology-style experimental test-beds for menu layout, anti-aliasing, 3D manipulation via 2D displays"
+  1990s: "Collaborative computing — VR/AR, distance collaboration, cooperative interaction"
+  2000s_topics:
+    - affect in physical user interfaces
+    - large-display and multi-display input control
+    - privacy-ware for multi-display environments
+    - structured annotations for collaborative writing
+    - project memory in software development
+    - personalized interfaces for heavily-featured applications
+    - shared input control for children in educational settings
+  publication_scale:
+    refereed: "90+"
+    other_technical: "40+"
+    edited_tutorials: 2
+    phd_mentored: 16
+    masters_supervised: "50+"
+  breadth: "Published in theory, graphics, and HCI — rare triple-field span"
+
+awards:
+  - year: 2008
+    award: CHCCS/SCDHM Achievement Award
+    org: Canadian Human-Computer Communications Society
+    url: https://graphicsinterface.org/awards/chccs-scdhm-achievement/kellogg-booth/
+    citation_summary: |
+      Long-term contributions to computer graphics, visualization, and HCI in Canada;
+      interdisciplinary champion; inspired leadership at institutions shaping Canadian CG/HCI;
+      natural advisor for large-scale research funding decisions.
+  - year: 2010
+    award: ACM SIGGRAPH Outstanding Service Award
+    url: https://www.siggraph.org/ (2010 awards booklet)
+    citation_summary: |
+      Leadership since 1981 ad-hoc committee on conference technical program; co-chair SIGGRAPH
+      1983; SIGGRAPH Chair 1985–1989; guided extraordinary growth; ~500 paper reviews across
+      18+ SIGGRAPH-sponsored conferences over 30 years.
+  - year: 2020
+    award: CHCCS/SCDHM Service Award
+    url: https://graphicsinterface.org/awards/chccs-scdhm-service/kellogg-booth/
+    citation_summary: |
+      Four decades organizing Canadian and international CG/HCI community; Graphics Interface
+      local arrangements 1981; president CHCCS 2002–2008 + six years Past Chair; general co-chair
+      AI/GI/VI 1992 and AI/GI/CRV 2005; chaired awards committee; established Service Award and
+      incorporated Fournier, Buxton, CDMP awards into CHCCS program.
+  - honor: ACM Distinguished Member
+
+conference_service:
+  siggraph:
+    - "Co-chaired 1983 conference"
+    - "SIGGRAPH Chair 1985–1989"
+    - "Program committees: 18+ conferences over ~30 years"
+    - "Involved since late 1970s"
+  graphics_interface:
+    - "Almost single-handedly key organizational force behind Graphics Interface in recent years"
+    - "President, Canadian Human-Computer Communications Society (CHCCS) 2002–2008"
+    - "Local arrangements co-chair CHCCS conference 1981"
+    - "General co-chair AI/GI/VI 1992 (Vancouver)"
+    - "General chair AI/GI/CRV 2005 (Victoria)"
+    - "Program co-chair GI 1998"
+
+project_connections:
+  pixie_thread:
+    how: "Roy Eagleson Cc'd Kelly 9 Jul 2026 — credits him as HCI storytelling mentor"
+    show: ../../../repo-shows/pixie-pie-menus-pdp7.yml
+  why_wwsff:
+    - "Roy teaches graphics history Sketchpad → PIXIE; Kelly shaped Roy's narrative HCI pedagogy"
+    - "Menu layout + experimental HCI — direct lineage to pie menus retrospective and input-language shows"
+    - "Waterloo CGL + Canadian animation pipeline — same ecosystem as Heinz/Lars PIXIE recovery"
+    - "Interdisciplinary institution-builder — model for Repo Show guests who bridge theory, graphics, HCI"
+  potential_beats:
+    - "Benesh editor as shape-grammar / notation system parallel to star-fort grammar"
+    - "SIGGRAPH 1983 co-chair era — when Flight of the PIXIE's world was forming"
+    - "Graphics Interface as Canadian counterpart to evangelical infodump conferences — community amen"
+
+sources:
+  - title: CHCCS Achievement Award 2008
+    url: https://graphicsinterface.org/awards/chccs-scdhm-achievement/kellogg-booth/
+  - title: CHCCS Service Award 2020
+    url: https://graphicsinterface.org/awards/chccs-scdhm-service/kellogg-booth/
+  - title: Waterloo CS history (CGL founding)
+    url: https://cs.uwaterloo.ca/kiosk/history/cs.htm
+  - title: Profound Impact — Canada's Computer Animation Innovations
+    url: https://news.profoundimpact.com/tag/university-of-waterloo/
+  - title: ACM SIGGRAPH 2010 Outstanding Service Award (booklet excerpt)
+    note: User-provided SIGGRAPH awards text

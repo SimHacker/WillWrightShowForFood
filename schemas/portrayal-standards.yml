@@ -45,6 +45,9 @@ subject_rights:
   declines: |
     All responses honored: accepted, delayed, too busy, later, declined, rejected, no reply.
     No pressure. No re-pitch without new reason. Status tracked honestly in invitation.md.
+  no_reflexive_submissions: |
+    Willing contributions only — not reflexive SUBMIT-button compliance. See
+    process/guest-participation-ladder.yml#constitutional_law.no_reflexive_submissions
 
 stealth_mode:
   now: |

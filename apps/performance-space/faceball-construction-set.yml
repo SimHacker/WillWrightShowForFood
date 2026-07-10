@@ -53,8 +53,13 @@ lineage:
     what: |
       **ECG-like cartoon faces** — Tom Ngo's Embedded Constraint Graphics at Interval Research;
       Golan Levin's **Mouther**. Example poses at simplex vertices; drag eyes/mouth → barycentric
-      blend. Patent US5933150 expired ~2016 — free to play with now.
+      blend. Patent US5933150 expired ~2016 — free to play with now. Ongoing Don↔Tom thread:
+      apply ECG to **morph-target 3D facial animation** (ARKit blend shapes, Blender FaceIt) —
+      drag the face, solve the weights. Dream pair segment: Tom (engine) + Golan (artist), live.
     spec: ../../characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md
+    rooms:
+      - ../../characters/tom-ngo/
+      - ../../characters/golan-levin/
   physics_toys:
     what: |
       **The Incredible Machine** / **Incredible Toons** energy — Sanspiel fluids and props;

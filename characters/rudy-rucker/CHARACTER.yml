@@ -25,7 +25,7 @@ relationship:
     Long, funny, affectionate CA correspondence (email; a documented exchange on Don's CAM6 wiki
     where Rudy caught a scan-order-drift bug). Centerpiece: a May 2020 thread that began as
     "History of Logo!" and turned into Don evangelizing Dave Ackley's Movable Feast Machine.
-  to_show: "Dream guest — CA jam, a co-designed MOOLLM CA skill, and a new 80s-infomercial plug for cellular automata"
+  to_show: "Dream guest — CA jam, a co-designed MOOLLM CA skill, a new 80s-infomercial plug for cellular automata, and peer-reviewing Palm's 'Running on Wetware' (he wrote the book on wetware)"
 
 bio:
   summary: |
@@ -57,7 +57,8 @@ sources:
 
 see_also:
   - { path: invitation.md, why: "Warm Repo Show invitation (draft)" }
-  - { path: ideas.md, why: "Show hooks — CA skill, the infomercial plug, why-not-3D, CA jam" }
+  - { path: ideas.md, why: "Show hooks — CA skill, the infomercial plug, why-not-3D, wetware peer review, CA jam" }
+  - { url: "https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/running-on-wetware.md", why: "Palm's essay — the third runtime (neither git nor game: your head); soul-file as wetware distribution format; consent over your file = consent over what runs of you in others. Ware Tetralogy turf reached from the inside — Rudy is the peer reviewer" }
   - { path: ../dave-ackley/ca-correspondence-story.md, why: "The MFM thread Rudy got pulled into — 'pretty pictures, not a guy talking'" }
   - { path: ../norman-margolus/, why: "CA looping fest co-guest" }
   - { path: ../jim-crutchfield/, why: "Chaos / video feedback; CA-art jam" }

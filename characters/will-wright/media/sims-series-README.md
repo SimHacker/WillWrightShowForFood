@@ -1,6 +1,6 @@
 # Sims series assets
 
-Global gallery and text artifacts for the **Will Wright Repo Show** and the broader Sims
+Global gallery and text artifacts for **Will Wright Show For Food** and the broader Sims
 content-creation story (Transmogrifier, SimFreaks, SimSlice, SimProv, procedural rhetoric).
 
 *Sniff:* [`sims-series-GLANCE.yml`](sims-series-GLANCE.yml) · [`GLANCE.yml`](GLANCE.yml) · **Media hub:** [`README.md`](README.md) · **Catalogs:** [`catalogs/README.md`](../../../catalogs/README.md)

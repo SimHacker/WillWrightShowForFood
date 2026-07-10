@@ -1,0 +1,39 @@
+# SHOW SEED — Dan Ancona: the Long Now question that forked SimCity
+# Origin asker — Jun 2006 Playing with Time (Eno + Will)
+
+show:
+  id: dan-ancona-long-now
+  title: "You Asked Will to Open-Source SimCity — It Happened"
+  type: solo_or_reunion
+  host: Don Hopkins
+  guests: ["Dan Ancona"]
+  optional_guests: ["Will Wright (if schedules allow — in person or clip reaction)"]
+  topic: |
+    Dan Ancona's 2006 Long Now written question — open-source SimCity to expose political assumptions
+    in the rules — and the documented lineage to GPLv3 Micropolis and MicropolisCore.
+  status: seed
+  priority: send_now
+
+the_beat:
+  clip: https://youtu.be/Dfc-DQorohc?t=3929
+  date: 2006-06-26
+  witness: Don Hopkins (audience)
+  will_line: "Very open to the idea"
+  payoff_chain: "Long Now → Gilmore OLPC (~Nov 2006) → EA clearance → Micropolis (2008) → MicropolisCore"
+
+episode_beats:
+  - "Cold open: Stewart reads Dan's card; Will answers"
+  - "Dan remembers (or discovers) the fork he helped start"
+  - "Mark Live mystery — transcript fidelity, co-card coordination"
+  - "Rules = politics then and now — ADEPT visualization → democracy tools"
+  - "Live or remote: Micropolis in browser as 'you asked for it' demo"
+  - "Optional Oakland face-to-face — Will joins only if he chooses"
+
+ties_to:
+  - characters/dan-ancona/
+  - characters/will-wright/sources/simcity-open-source-saga/
+  - characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/
+  - process/ticket-pr.md
+  - process/VISION.md
+
+consent: not_yet_asked

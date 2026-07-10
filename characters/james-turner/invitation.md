@@ -2,7 +2,8 @@
 
 James,
 
-Don Hopkins here — I built Transmogrifier-era Sims tools; now the Will Wright Repo Show. Your Tiny
+Don Hopkins here — I built Transmogrifier-era Sims tools; now a Repo Show called **Will Wright
+Show For Food**. Your Tiny
 Life blurb nailed it: *what we know and what we love* — while EA's Legacy Collection removed the
 Exchange and you left the Creator Network. Builders feel that loss differently than streamers.
 

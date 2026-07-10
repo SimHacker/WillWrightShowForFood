@@ -74,6 +74,8 @@ gave rule access; **very open to the idea**.
 | **2006-11-18** | 145 days | Will → Don: "Let me check into it. I support the idea wholeheartedly." |
 | **2006-12-01** | 158 days (~5 mo 5 d) | Don's [pitch letter to Rod Humble](article.md) → clearance arc → **Micropolis** |
 
+**Outreach:** [long-now-askers-outreach.md](long-now-askers-outreach.md) · Dan → [`characters/dan-ancona/`](../../../../dan-ancona/) (**send_now**); Mark Live still unknown.
+
 *Gilmore's email is the outside spark; the Long Now Q&A is the witness beat Don had already heard Will affirm on stage.*
 
 ## Status

@@ -61,6 +61,26 @@ from his **1967 origin story**. Roy also asked, half-joking, *"does Maurice Wilk
 have an avatar in the SIMs milieu?"* See the
 [9 July thread](../heinz-lemke/sources/2026-07-09-pixie-storyline-thread.md).
 
+## 10 July — Newman, Sproull, and the photo
+
+On **10 July 2026** Roy read **Newman & Sproull** and found PIXIE buried at reference **520** as
+an *"interesting idea"* with a **"movable menu"** — not credited as an early **radial / pie menu**
+(cf. Don's Buxton ↔ Kurtenbach commentary). He discovered Heinz had **Buxton as CARS'09 keynote**,
+noted **Ron Baecker** as a 1969 TX-2 contemporary, and called for a **~1968 PIXIE
+re-implementation** (Thompson & Ritchie eating PDP-7 cycles with Unix/C, ha). He then recognized
+**Heinz in a photo** he'd wondered about for years: *"Aha. It's you!"*
+
+Full thread: [**10 July storyline**](../heinz-lemke/sources/2026-07-10-pixie-storyline-thread.md)
+
+## Don welcomes Roy — 10 July 17:59
+
+Don replied directly: **no Wilkes Sims avatar** — a [memorial room](../maurice-wilkes/memorial.md)
+for willing contributions (stories, photos, lecture notes); Roy's Cambridge/TRE storyline request
+is exactly what it's for. Opened [`roy-eagleson/`](.) and pointed to [`kelly-booth/`](../kelly-booth/).
+Rant against reflexive **SUBMIT** buttons (Skinner-box UX; Alan Kay on mediocre defaults).
+PDP-10 love; *The Americans* ARPANET scene going up unlisted for fair-use commentary; Worf
+**DEC-10** pop quiz: [YouTube short](https://www.youtube.com/shorts/Xz-xq-d4jKk).
+
 ## Links
 
 | | |
@@ -69,7 +89,9 @@ have an avatar in the SIMs milieu?"* See the
 | **Email thread** | [`../heinz-lemke/sources/2026-07-07-pixie-trio-thread.md`](../heinz-lemke/sources/2026-07-07-pixie-trio-thread.md) |
 | **Sutherland / Sketchpad** | [`../ivan-sutherland/`](../ivan-sutherland/) |
 | **Kelly Booth** (his HCI mentor) | [`../kelly-booth/`](../kelly-booth/) |
+| **10 July thread** (Newman/Sproull, photo) | [`../heinz-lemke/sources/2026-07-10-pixie-storyline-thread.md`](../heinz-lemke/sources/2026-07-10-pixie-storyline-thread.md) |
 | **9 July storyline thread** | [`../heinz-lemke/sources/2026-07-09-pixie-storyline-thread.md`](../heinz-lemke/sources/2026-07-09-pixie-storyline-thread.md) |
+| **Wilkes memorial** (Don invited Roy's contributions) | [`../maurice-wilkes/memorial.md`](../maurice-wilkes/memorial.md) |
 | **PIXIE show** | [`../../repo-shows/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7.yml) |
 
 [Correspondence digest](correspondence.yml) · [CHARACTER.yml](CHARACTER.yml)

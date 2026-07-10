@@ -1,0 +1,81 @@
+# Brian Silverman — invitation portrayal. NOT Brian Silverman.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: brian-silverman
+  name: "Brian Silverman"
+  type: invitation
+  signifier: "🧠"
+  status: living
+  field: "Logo, Scratch, programmable bricks, cellular automata, emulators — constructionist computing for children"
+  home: characters/brian-silverman/
+  location: "Montreal, Quebec, Canada (Playful Invention Company)"
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  warm_intro: "Henry Minsky + Milan Minsky visited Brian in Canada, July 2026"
+  show_seeds:
+    - repo-shows/pixie-pie-menus-pdp7.yml
+    - repo-shows/norman-margolus/
+    - repo-shows/brian-silverman-ca-logo-pdp7.yml
+
+bio:
+  summary: |
+    **Brian Silverman** is a Canadian computer scientist known for **Logo** dialects (LogoWriter,
+    MicroWorlds, IBM Logo, Apple Logo at **LCSI**), **Scratch** (with Mitchel Resnick), **LEGO
+    programmable bricks** (Media Lab precursor to Mindstorms), and **cellular automata** rules including
+    **Brian's Brain**, **Seeds**, and **Wireworld**. MIT student-era **tinkertoy computer** played
+    tic-tac-toe. Co-founder and president of **Playful Invention Company** (Montreal) — **Crickets**,
+    **TurtleArt**, **Phantom Fish Tank**. Emulator work: **PDP-1 Spacewar!** in Java, transistor-level
+    **6502** and **4004**. Visiting scientist, MIT Media Lab. Don's note (pending Brian's confirmation):
+    **PDP-7** experience relevant to reading **Heinz Lemke's PIXIE** assembler listing.
+  known_for:
+    - "Brian's Brain — three-state CA rule; community named it; inventor did not self-name"
+    - "Seeds, Wireworld — CA rules family"
+    - "Logo — decades of dialects; Papert lineage"
+    - "Scratch — co-developer with Resnick"
+    - "LEGO programmable bricks — Media Lab"
+    - "Playful Invention Company — Montreal"
+    - "Spacewar! Java port via PDP-1 emulator"
+    - "Minsky Logo / TT2500 workshop heritage"
+
+connections:
+  henry_minsky_milan_minsky:
+    what: "Visited Brian in Canada, July 2026 — Leela / Logo / CA orbit"
+    path: ../henry-minsky/
+  heinz_lemke_pixie:
+    what: "Don witness — Brian could understand PDP-7 PIXIE code; PIXIE show guest fit"
+    path: ../heinz-lemke/
+  norman_margolus:
+    what: "CA fest — Brian's Brain beside Margolus/Wolfram/Crutchfield line"
+    path: ../norman-margolus/
+  lars_brinkhoff:
+    what: "Emulator preservation cousin — PDP-7/340, ITS, iron archaeology"
+    path: ../lars-brinkhoff/
+  dave_tristram:
+    what: "Live CA performance graphics — Brian's Brain in performance shaders"
+    path: ../dave-tristram/
+
+sources:
+  wikipedia:
+    - "https://en.wikipedia.org/wiki/Brian_Silverman"
+    - "https://en.wikipedia.org/wiki/Brian%27s_Brain"
+  web:
+    - "https://logo.learningtech.org/brian_silverman/bio.shtml"
+    - "https://el.media.mit.edu/logo-foundation/services/minsky.html"
+    - "https://web.media.mit.edu/~brian/"
+  papers:
+    - "Resnick, Mitchel; Silverman, Brian (1996). Exploring Emergence: The Brain Rules. MIT Media Lab."
+
+see_also:
+  - { path: sources/brians-brain-and-naming.md, why: "Rule + naming story" }
+  - { path: ideas.md, why: "Show hooks" }
+  - { path: ../../repo-shows/brian-silverman-ca-logo-pdp7.yml, why: "Dedicated show seed" }

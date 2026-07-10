@@ -31,8 +31,30 @@ threads:
       Maurice Wilkes SIMs avatar; Cc's his mentor Kelly Booth (UBC).
     show_use: "Sharpens the interview's research spine; classroom mirror of run-the-old-code premise"
 
+  storyline_thread_2026_07_10:
+    transcript: ../heinz-lemke/sources/2026-07-10-pixie-storyline-thread.md
+    what: |
+      Roy on Newman/Sproull textbook — Golden Age blind to UK/Germany; PIXIE ref 520 as "movable
+      menu" not radial/pie menu; Buxton CARS'09 discovery; Ron Baecker TX-2 contemporary; wants
+      1968 PIXIE re-implementation; Bell Labs PDP-7 Unix joke; identifies Heinz in photo ("Aha.
+      It's you!"). Heinz: Buxton 2008 letter + Newman meeting; Weizenbaum/MIT 1969; AI
+      trustworthiness; model science question; Nagoya surgery slides. Alan Kay 2020: light pen vs
+      RAND tablet. Don: conscientious objector coinage; two-episode pitch; Cc Alan on pen drivers.
+    show_use: "Pie-menu canon correction; emulator revival mandate; Weizenbaum two-episode arc"
+
+  don_reply_roy_2026_07_10:
+    date: "2026-07-10 17:59"
+    transcript: ../heinz-lemke/sources/2026-07-10-pixie-storyline-thread.md#don-hopkins--roy-eagleson--10-july-2026-1759
+    what: |
+      Don welcomes Roy. Wilkes: memorial room not Sims avatar; invites Roy's Cambridge/TRE
+      contributions. Policy: willing contributions not reflexive SUBMIT. Points to roy-eagleson
+      and kelly-booth rooms. PDP-10 / Americans ARPANET — unlisted YouTube for fair-use commentary
+      (KL12 fictitious model on props). Worf DEC-10 pop quiz short.
+    show_use: "Educator formally welcomed; Wilkes memorial spine; PDP-10/ARPANET segment with Roy"
+
 connects_in_repo:
   - { path: README.md, why: "Educator room" }
   - { path: sketchpad-to-pixie-lineage.md, why: "Sketchpad → GSP → PIXIE essay" }
   - { path: ../heinz-lemke/correspondence.yml, why: "roy_eagleson_uwo_2026 + cambridge_storyline_installments threads" }
+  - { path: ../maurice-wilkes/, why: "Don invited Roy's Wilkes memorial contributions" }
   - { path: ../kelly-booth/, why: "Roy's HCI storytelling mentor, newly on the thread" }

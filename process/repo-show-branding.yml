@@ -205,13 +205,74 @@ cultural_excerpts:
       - "Thomas Cherryhomes pair episode — emulated × networked retro"
     guest: characters/lars-brinkhoff/
     host_note: upbringing.yml#dc_metro
+    clip_sidecar: videos/the-americans-s02e07-arpanet.clips.yml
+  americans_claudia_pacman:
+    show: The Americans
+    season: 1
+    episode: The Oath
+    episode_no: 12
+    air_date: 2013-04-24
+    character: "Claudia (Margo Martindale) — KGB handler"
+    scene: |
+      Arcade meet disguised as Jennifer/Alexandra (~10:07).
+      Ominous **Ms. Pac-Man** beat — Claudia: calorie-free Pac-dots; Elizabeth: *"You're good at games."*
+      Clip runs through **12:06**, including the first beat of the next scene: Elizabeth doesn't trust
+      a word *that bitch* says — then cut before the rest.
+    dialogue:
+      - "You're good at games. I'll give you that."
+      - "I enjoy the maze part, and the eating-without-eating part. Pac-dots are calorie-free."
+      - "doesn't trust a word that bitch says"
+    theme: |
+      Handler who eats without eating — simulation / performance / calorie-free consumption.
+      Elizabeth's *"You're good at games, I'll give you that"* lands with **icy contempt**, not praise.
+      Trust rupture coda pushes the first domino in a long tragic chain — i-told-you-so rights
+      across the series. Pairs with Lars iron thread and Don's Margo Martindale HN riff.
+    references:
+      - title: "The Americans Wiki — The Oath"
+        url: https://theamericans.fandom.com/wiki/The_Oath
+      - title: "HN — Margo Martindale rap sheet (Don)"
+        url: https://news.ycombinator.com/item?id=42905440
+    use_when:
+      - "Lars / simulation / handler-as-game-player beat"
+      - "Attention atom between ARPANET cold open and Worf Deck Ten"
+    guest: characters/lars-brinkhoff/
+    clip_sidecar: videos/the-americans-s01e12-the-oath.clips.yml
+    timecode_status: verified
+    clip_window: "10:07–12:06"
+    episode_setting: "May 1981 (Washington, D.C.)"
+    anachronism:
+      episode_date: "May 1981"
+      cabinets:
+        - game: Ms. Pac-Man
+          release: "February 1982 (public launch)"
+          status: anachronistic
+        - game: Centipede
+          release: "January 1981"
+          status: "borderline — wiki flags both; Centipede may have been in test/loc by May"
+          note: "Cabinet behind Claudia's Ms. Pac-Man — big centipede art on the side, Don confirmed on frame"
+      source: https://theamericans.fandom.com/wiki/The_Oath
+    delivery:
+      line: "You're good at games. I'll give you that."
+      speaker: Elizabeth Jennings
+      note: "Icy contempt — not a compliment; a cold acknowledgment of Claudia's manipulative skill"
+    narrative_weight: |
+      Pivotal domino. Elizabeth's distrust of Claudia here pushes the long tragic chain —
+      Rennhull meet, handler conflicts, i-told-you-so rights across the series. Oath-themed
+      episode (Nina's loyalty oath bookends Clark/Martha's wedding oath).
+    series_note: "Don — one of the great series."
   warf_deck_ten_pdp10:
     what: |
       **ST:TNG** elevator gag — Don asks Worf: *"What is your favorite 36-bit computer?"* Short
-      clip: Worf answers loudly and clearly: **"Deck Ten!"** (PDP-10 pun). Bridges sci-fi panel
-      to Lars's iron.
+      clip: Worf answers loudly and clearly: **"Deck Ten!"** / **DEC-10** (PDP-10 pun). Bridges
+      sci-fi panel to Lars's iron.
+    youtube: "https://www.youtube.com/shorts/Xz-xq-d4jKk"
+    title: "Worf's Dec-10"
+    uploaded: "2018-12-10"
+    channel: don-hopkins
     setup_question: "Worf, what is your favorite 36-bit computer?"
+    alt_setup: "Worf, what's your favorite 36 bit mainframe?"
     punchline: "Deck Ten!"
+    pronunciation_note: "Sounds like DEC-10 — user voice-to-text alias 'zach mama'"
     guest: characters/lars-brinkhoff/
     sequence: characters/lars-brinkhoff/ideas.md#intro-sequence--get-the-ball-rolling-on-pdp-10
     use_when:

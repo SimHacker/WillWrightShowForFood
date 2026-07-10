@@ -2,6 +2,14 @@
 
 *Hooks Don would love to build on air. Not quotes from guests — Don's proposed topics.*
 
+## Witty diatribes (host repertoire)
+
+| Topic | Hook |
+|-------|------|
+| [`witty-diatribes.yml`](witty-diatribes.yml) → **SubGenius ⇒ EvalGenius & SUBMIT buttons** | MOOLLM theology (SUB ⇒ EVAL) meets the HTML form rant — Skinner-box SUBMIT vs willing EVALUATE/APPLY; pairs with ShorDurPerEval + [`guest-participation-ladder`](../../process/guest-participation-ladder.md#no-reflexive-submissions) |
+| [`pie-menus-chi-88-and-beyond.md`](pie-menus-chi-88-and-beyond.md) | Gestural verbs — see repertoire index in [`witty-diatribes.yml`](witty-diatribes.yml) |
+| [`axis-of-eval-send-code-not-commands.md`](axis-of-eval-send-code-not-commands.md) | NeWS manifesto — send code to the glass |
+
 ## ASAP — credit where due (pie menus)
 
 | Guest | Episode / topic |

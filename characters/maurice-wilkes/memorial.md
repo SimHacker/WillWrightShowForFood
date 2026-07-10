@@ -26,7 +26,8 @@ We remember him by inviting people who knew him or work in his lineage to share
 memories and context — see `CHARACTER.yml` `memorial.who_can_discuss` (documented
 connections only; listing is not an invitation): **Heinz Lemke** (whose PhD Wilkes
 arranged), **David Rosenthal** (Cambridge, same PDP-7/Titan stack ~1970), and
-**Roy Eagleson** (who teaches this history).
+**Roy Eagleson** (who teaches this history; Don invited his Cambridge/TRE storyline
+contributions, 10 July 2026 — **willing contributions**, not reflexive submissions).
 
 **Read:** [Heinz's *Back to the Roots (1967)*](../heinz-lemke/sources/1967-back-to-the-roots-part1.md)
 · [Cambridge Computer Lab obituary](https://www.cl.cam.ac.uk/misc/obituaries/wilkes/)
