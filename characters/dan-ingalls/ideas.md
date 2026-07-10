@@ -40,7 +40,22 @@ Dan hosts 48 years of Smalltalk at CHM. On-air: pick a historical image, change 
 The Fabrik paper Alan forwarded is the anchor. How visual languages teach **time** and **dataflow**
 — relevant to Snap!, SimCity rules, and MOOLLM skill graphs.
 
-### 4. Ink & Switch — Livelymerge, YAML Jazz, and collaboration in the LLM age ★
+### 4. "There shouldn't be one" — Ingalls, Emacs, Cursor, MOOLLM ★
+The Byte 1981 line that keeps resurfacing on HN whenever someone calls Emacs (or a browser, or an agent IDE) an "operating system":
+
+> An operating system is a collection of things that don't fit into a language. There shouldn't be one.
+
+**What Don wants to explore with Dan** — not attribution theater, but whether the *problem statement* still holds:
+
+- **1981:** Smalltalk absorbed filesystem, scheduler, display, debugger into one communicating-objects image — you shouldn't have to leave the model for "OS calls."
+- **2026:** Agent IDEs absorb git, gh, linters, MCP, ssh, session archaeology into one orchestration layer — Charles Choi's [*Emacs, Everything Looks Like a Service*](https://yummymelon.com/notes/devnull/emacs-everything-looks-like-a-service.html) is the Emacs version; Cursor is Don's daily driver (cat still named Emacs).
+- **MOOLLM:** skills, YAML Jazz, cursor-mirror, thoughtful-commitment — the collection of things that don't fit in Python *or* the prompt. [mooco](https://github.com/SimHacker/mooco) as open orchestrator.
+
+Show questions: Did Ingalls mean *erase* the OS boundary or *raise the floor*? Where does Livelymerge/Automerge sit vs git vs "the image"? Does Kell & Pike's 2013 *should there be one?* paper change the answer in the agent era?
+
+Source note: [`sources/design-principles-os-quote.md`](sources/design-principles-os-quote.md) · [Design Principles (HTML)](https://archive.esug.org/HistoricalDocuments/Smalltalk80/DesignPrinciples/DesignPrinciples.html)
+
+### 5. Ink & Switch — Livelymerge, YAML Jazz, and collaboration in the LLM age ★
 **The topic Don most wants to explore with Dan** — what you're building at **Ink & Switch** with
 Alex Warth: **Livelymerge** (Smalltalk-like liveness on **Automerge**, local-first mergeable live
 objects).
@@ -65,20 +80,21 @@ Show question: which state belongs **in Automerge** vs **in-repo** (yaml-jazz + 
 (including LLM agents) merge live *and* publish inspectable artifacts? Trail:
 [`yaml-jazz-collaboration-stack.md`](../../process/trails/yaml-jazz-collaboration-stack.md).
 
-### 5. Live-in-the-browser: Lively → SqueakJS → Caffeine
+### 6. Live-in-the-browser: Lively → SqueakJS → Caffeine
 The arc from Dan's Lively Kernel to **Craig Latta**'s Caffeine (WASM livecoding). **Vanessa
 Freudenberg** memorial segment as the bridge figure.
 
-### 6. BitBlt and the graphics substrate everything sat on
+### 7. BitBlt and the graphics substrate everything sat on
 Why every window system since owes a debt to the BitBlt design — and what that means for
 **browser-native** tool stacks today.
 
-### 7. Squeak as "Smalltalk written in itself"
+### 8. Squeak as "Smalltalk written in itself"
 Bootstrapping, mirrors, and the moral: systems you can **change while they run**. Constructionism
 as engineering discipline, not pedagogy only.
 
 ## Sources (public)
 
+- [`sources/design-principles-os-quote.md`](sources/design-principles-os-quote.md) — **Ingalls OS quote** + MOOLLM/Emacs/Cursor bridge
 - [`correspondence.yml`](correspondence.yml) · [`pie-menus-and-pop-ups.md`](pie-menus-and-pop-ups.md)
 - [`invitation.md`](invitation.md) · Show seed: [`repo-shows/dan-ingalls/`](../../repo-shows/dan-ingalls/)
 - [`media/from-mail/MANIFEST.yml`](media/from-mail/MANIFEST.yml) — Fabrik paper, thread pages

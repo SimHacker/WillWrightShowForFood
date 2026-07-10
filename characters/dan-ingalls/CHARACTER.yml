@@ -33,10 +33,14 @@ sources:
   papers:
     - title: "The Evolution of Smalltalk (HOPL)"
       url: https://smalltalkzoo.thechm.org/papers/EvolutionOfSmalltalk.pdf
+    - title: "Design Principles Behind Smalltalk (Byte, Aug 1981)"
+      url: https://archive.esug.org/HistoricalDocuments/Smalltalk80/DesignPrinciples/DesignPrinciples.html
+      note: "Operating System — there shouldn't be one"
   blogs: []
 
 see_also:
   - { path: ideas.md, why: "Conversation hooks — topic menu for invitation browsing" }
+  - { path: sources/design-principles-os-quote.md, why: "Ingalls OS quote — MOOLLM/Emacs/Cursor discussion prep" }
   - { path: pie-menus-and-pop-ups.md, why: "Show prep — pop-up ↔ pie retrospective" }
   - { path: correspondence.yml, why: "Public-safe thread digest — pie menus, Fabrik, Lively/SqueakJS" }
   - { path: from-alan-kay.yml, why: "What Alan Kay says about Dan — PARC hire, Fabrik, pie menus" }

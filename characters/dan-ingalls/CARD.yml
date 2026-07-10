@@ -17,7 +17,7 @@ card:
   title: Architect of the Living System
   rarity: rare
   signifier: 🪟
-  flavor: An operating system is a collection of things that don't fit into a language. There shouldn't be one. — attributed to Dan Ingalls
+  flavor: An operating system is a collection of things that don't fit into a language. There shouldn't be one. — Dan Ingalls, Design Principles Behind Smalltalk, Byte Aug 1981
 abilities:
 - id: BITBLT
   name: BitBlt

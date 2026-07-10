@@ -10,8 +10,7 @@ format: remote_or_in_person
 
 # Repo Show invitation — Dan Ingalls
 
-*The person portrayed may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers quiet mode and onboarding.*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
+*The person portrayed may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.*
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 Dan —
@@ -56,6 +55,7 @@ liveness? What belongs in Automerge vs git? Trail:
 
 **What I'd love to talk about (your pick, any order)**
 
+- **"There shouldn't be one"** — your Byte 1981 line keeps resurfacing whenever Emacs or an agent IDE gets called an OS. I'd love to ask what you meant then and whether MOOLLM/Cursor/Livelymerge are the same problem in new clothes: things that don't fit in the language, absorbed into a live image instead of a primitive shell. [`sources/design-principles-os-quote.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/dan-ingalls/sources/design-principles-os-quote.md).
 - **Pop-up menus ↔ pie menus** — you invented one cousin; I baked the other. Not a contest — a
   direct-manipulation retrospective with live demos. [`pie-menus-and-pop-ups.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/dan-ingalls/pie-menus-and-pop-ups.md).
 - **The live-object lineage** — BitBlt, Squeak-in-itself, **Fabrik**, the **Lively Kernel**, and
@@ -83,7 +83,7 @@ Browse without a GitHub account — [README](https://github.com/SimHacker/WillWr
 
 — Don Hopkins *(the User Interface Flower Child)* 🌸🌀
 
-`🪟 bitblt everything` · `🕯️ Vanessa + SqueakJS` · `🥧 pie menus are cousins` · `📜 Ink & Switch × YAML Jazz`
+`🪟 bitblt everything` · `🕯️ Vanessa + SqueakJS` · `🥧 pie menus are cousins` · `📜 there shouldn't be one` · `📜 Ink & Switch × YAML Jazz`
 
 *P.S. — The Smalltalk Zoo is the best possible set dressing for this show. If CHM is ever a co-host, even better.*
 
