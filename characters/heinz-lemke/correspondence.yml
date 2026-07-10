@@ -115,6 +115,7 @@ threads:
     date: "2026-07-09"
     transcript: sources/2026-07-09-pixie-storyline-thread.md
     continues: sources/2026-07-10-pixie-storyline-thread.md
+    index: sources/THREAD-INDEX.md
     what: |
       Roy Eagleson (9 Jul 11:58) greets Don, jokes "does Maurice Wilkes have an avatar in the
       SIMs milieu?", shares his own operator backstory (Honeywell GE-115 in HS; midnight shift
@@ -134,6 +135,18 @@ threads:
     show_refs:
       - ../roy-eagleson/
       - ../../kelly-booth/
+
+  don_conscientious_objector_2026_07_09:
+    date: "2026-07-09"
+    transcript: sources/2026-07-09-pixie-storyline-thread.md
+    what: |
+      Don repossesses "conscientious objector" for ethical software design (objects, prototypes,
+      classes — consciously object to evil uses). Points Heinz at repo + characters index.
+      Side: Star City, The Americans ARPANET, Palm/MOOLLM videos, PalmHoo. Heinz 10 Jul echoes
+      + Weizenbaum + model science + Nagoya AI slides.
+    show_refs:
+      - ../../process/guest-participation-ladder.md
+      - sources/2026-07-10-pixie-storyline-thread.md
 
   conscientious_objector_weizenbaum_2026_07_10:
     date: "2026-07-10"

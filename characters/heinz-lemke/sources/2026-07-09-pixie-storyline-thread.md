@@ -68,6 +68,32 @@ supervision through the 1972 thesis.
 
 ---
 
+## Don Hopkins — 9 July 2026, ~16:38 (to Heinz)
+
+Don replies to Heinz's conscientious-objector note (German army, England by choice):
+
+> *"I love and respect that position, and I like the term too, so I 'repossessed' it
+> (like gays have reclaimed 'queer', but reframing … conscientiously objecting as a
+> software development methodology) to mean software designers who are conscientious in
+> how they design their objects, prototypes, and classes, and code. And of course
+> consciously object to it being used for evil, too!"*
+
+Also points Heinz at the growing repo:
+
+- [`characters/heinz-lemke/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/heinz-lemke)
+- [`characters/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters) — *"other people upstairs"*
+
+Side threads: *For All Mankind* spinoff **Star City**; FX **The Americans** (Reagan-era DC);
+[ARPANET episode](https://en.wikipedia.org/wiki/Arpanet_(The_Americans)) — Don got MIT AI Lab
+accounts by asking for Lisp, not murder. Palm Love Wave / MOOLLM marathon reads (YouTube links in
+mail). PalmHoo directory pitch.
+
+**Heinz answers 10 Jul 13:48** — AI model trustworthiness; Nagoya surgery slides; Joe Weizenbaum
+MIT 1969 + TU Berlin decades; asks Don about **model science**. See
+[`2026-07-10-pixie-storyline-thread.md`](2026-07-10-pixie-storyline-thread.md).
+
+---
+
 ## What this adds
 
 - A **new incoming primary source**: Heinz's own 1967 origin story, first
@@ -95,3 +121,4 @@ supervision through the 1972 thesis.
 | PIXIE show | [`../../../repo-shows/pixie-pie-menus-pdp7.yml`](../../../repo-shows/pixie-pie-menus-pdp7.yml) |
 | PIXIE paper (p.465 diagram) | [donhopkins.com/…/PIXIE…pdf](https://www.donhopkins.com/home/documents/PIXIE%20a%20new%20approach%20to%20man-machine%20communication.pdf) |
 | **10 Jul thread** (Newman/Sproull, photo ID, Weizenbaum) | [`2026-07-10-pixie-storyline-thread.md`](2026-07-10-pixie-storyline-thread.md) |
+| **Thread index** (chronological) | [`THREAD-INDEX.md`](THREAD-INDEX.md) |

@@ -25,6 +25,10 @@ The light pen just noticed when the beam passed underneath it. IIRC the display 
 
 David.
 
+**Attachment (forwarded thread end):** `PIXIE Part 1.docx` — may overlap
+[`1967-back-to-the-roots-part1.md`](1967-back-to-the-roots-part1.md) or a new installment.
+See [`../pull-in-gaps.yml`](../pull-in-gaps.yml#pixie_part1_docx_dshr).
+
 ---
 
 ## Heinz U. Lemke — 7 July 2026, 06:42 (from Nagoya / CARS 40th)

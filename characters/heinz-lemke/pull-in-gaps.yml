@@ -100,9 +100,9 @@ gaps:
   roy_identified_heinz_photo_2026:
     what: |
       Roy Eagleson (10 Jul 2026): "Aha. It's you!" — identifies Heinz in photo from email
-      (image.png). Likely Electronics 1969 p158 light-writing shot or related PDP-7 photo.
+      (image001.png / image.png). Likely Electronics 1969 p158 light-writing shot or related PDP-7 photo.
     status: gap
-    pull_in: "Extract image.png from mail; file under heinz-lemke/media/from-mail/ with Roy attribution"
+    pull_in: "Extract image001.png from mail; file under heinz-lemke/media/from-mail/ with Roy attribution"
     show_use: "Roy as historian connecting textbook, magazine, and living author"
 
   newman_sproull_movable_menu_citation:

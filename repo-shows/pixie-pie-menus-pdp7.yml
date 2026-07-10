@@ -227,7 +227,8 @@ interview_center:
   newman_sproull_canon_correction:
     ask: "Roy Eagleson found PIXIE in Newman & Sproull as ref 520 — 'movable menu,' not radial/pie menu. What should the textbook have said?"
     with: characters/roy-eagleson/
-    doc: characters/don-hopkins/pie-menus-chi-88-and-beyond.md
+    doc: characters/heinz-lemke/sources/newman-sproull-ref-520-movable-menu.yml
+    also: characters/don-hopkins/pie-menus-chi-88-and-beyond.md
     on_air: "Scan ref 520 on stream; compare Wiseman radial-menu notes; credit lineage (Buxton, Kurtenbach)"
   alan_kay_light_pen_vs_tablet:
     ask: "Alan Kay wondered why PIXIE used a light pen instead of a RAND tablet — fatigued hand, twitch button. What did the pen actually feel like? What does the driver code show?"

@@ -60,12 +60,18 @@ Roy picks up the **Newman & Sproull** canon after downloading the 600-page book 
 
 Roy quotes the introduction's *Golden Age* claim — by the mid-1960s large graphics projects at
 MIT, GM, Bell Labs, Lockheed — and notes it seems **completely blind** to PIXIE, UK, Germany,
-and everywhere else.
+and everywhere else:
+
+> *"By the mid-1960s, large computer-graphics research projects were underway at MIT, General
+> Motors, Bell Telephone Laboratories, and Lockheed Aircraft; the Golden Age of computer
+> graphics had begun."* [Newman & Sproull, ~1973, p. 7]
 
 Searching again, he finds Heinz at **reference 520** — but the text calls PIXIE only *"an
 interesting idea"* and shows a figure labeled **"movable menu"** rather than identifying it as
 perhaps the **first radial menu** (early **pie menu**), with a pointer to Don's commentary and
 the Buxton ↔ Gord Kurtenbach exchange.
+
+Structured ref: [`newman-sproull-ref-520-movable-menu.yml`](newman-sproull-ref-520-movable-menu.yml)
 
 **Show hook:** textbook erasure → repo correction on air — Wiseman notes, Hopkins pie-menu
 lineage, [`pie-menus-chi-88-and-beyond.md`](../../don-hopkins/pie-menus-chi-88-and-beyond.md).
@@ -90,11 +96,12 @@ project might not have got many spare CPU cycles.
 
 ### Photo identification — *"Aha. It's you!"*
 
-Roy had always wondered who was pictured in a photo (email attachment `image.png`). He now
+Roy had always wondered who was pictured in a photo (email attachment **`image001.png`**
+ / `image.png`). He now
 recognizes **Heinz** — likely the **Electronics International** p.158 *"light writing"* photo or
 a related PDP-7 shot. See [`electronics-international-1969-04-28-pixie.md`](electronics-international-1969-04-28-pixie.md).
 
-**Pull in:** save `image.png` from mail → `media/from-mail/` with Roy's identification note.
+**Pull in:** save attachment from mail → `media/from-mail/` with Roy's identification note.
 
 ---
 

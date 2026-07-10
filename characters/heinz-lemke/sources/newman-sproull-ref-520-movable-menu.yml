@@ -1,0 +1,31 @@
+# Newman & Sproull — PIXIE as ref 520, "movable menu" (Roy Eagleson, 10 Jul 2026)
+
+book:
+  title: Principles of Interactive Computer Graphics
+  authors: [William M. Newman, Robert F. Sproull]
+  circa: "~1973"
+  note: Roy downloaded the ~600-page edition morning of 10 Jul 2026
+
+golden_age_blind_spot:
+  quote: |
+    "By the mid-1960s, large computer-graphics research projects were underway at MIT,
+    General Motors, Bell Telephone Laboratories, and Lockheed Aircraft; the Golden Age
+    of computer graphics had begun."
+  page: 7
+  roy: |
+    Seems completely blind to PIXIE, UK, Germany, and work elsewhere. Searching again finds
+    Heinz at reference 520 — but only as "an interesting idea" with figure "movable menu,"
+    not identified as perhaps the first radial / pie menu.
+
+ref_520:
+  status: documented_not_scanned
+  pull_in: "Scan ref 520 pages + movable-menu figure; compare Wiseman radial-menu notes"
+  show_correction:
+    with: characters/roy-eagleson/
+    doc: characters/don-hopkins/pie-menus-chi-88-and-beyond.md
+    lineage: "Hopkins commentary; Buxton ↔ Gord Kurtenbach exchange"
+  thread: sources/2026-07-10-pixie-storyline-thread.md
+
+related:
+  buxton_tx2: "Buxton web page — MIT Lincoln Lab TX-2 group; Ron Baecker PhD 1969 contemporary"
+  cars_2009: sources/2008-bill-buxton-pixie-memory-lane.md
