@@ -4,21 +4,25 @@ creator:
   name: Alexander Avila
   also_known_as: Alex
   channel: Alexander Avila  # formerly AreTheyGay
+  website: https://www.itsall.gay
   identity: openly trans masc (transgender man)
   pronouns: he/him
   came_out: 2023-06-01
   came_out_video: https://www.youtube.com/watch?v=a4r0CoXsGmk
+  room: characters/alexander-avila/
   note: |
     Publicly out as a transgender man since June 2023 ("I was a transgender child.").
     The Sims essay (Jan 2023) predates that video; credit and channel name remain Alexander Avila.
+    May 2026 essay discloses lived-as-girl until ~15, T from 17. Don Hopkins on Patreon thanks roll.
 
 video:
   title: "Did The Sims make you gay? - a video essay."
   creator: Alexander Avila
   url: https://www.youtube.com/watch?v=Xi-HWyh0Ybk
   published: 2023-01-13
-  channel_subscribers: "~607k"
-  views: "415k+ (2023)"
+  channel_subscribers: "~638k (Jul 2026)"
+  views: "420k+"
+  comments: "1,720+"
 
 community_joke: |
   Long-running player meme — affectionate, not diagnostic. KQED, BRICKS, Guardian, and a
@@ -57,3 +61,13 @@ related_press:
   - { title: "A Queer History of The Sims — KQED", url: "https://www.kqed.org/news/12087897/a-queer-history-of-the-sims" }
   - { title: "The Sims Knew I Was Queer Before I Did — BRICKS", url: "https://bricksmagazine.co.uk/2020/08/27/the-sims-knew-i-was-queer-before-i-did/" }
   - { title: "How inclusivity saved The Sims — Don (HN harvest)", path: "DonHopkins/characters/don-hopkins/notes/hacker-news/the-sims-inclusivity.yml" }
+
+companion_essay:
+  title: "Looksmaxxing and the Rise of Male-to-Male Transsexuals"
+  url: https://www.youtube.com/watch?v=uox4OMC50-4
+  published: 2026-05-27
+  views: "630k+"
+  hook: |
+    Body politics sequel thread — performativity vs gaze-submission; personal transition vs Clavicular.
+    "Trans people transition to live; Clavicular lives for looksmaxxing."
+  filmography: characters/alexander-avila/sources/filmography.yml

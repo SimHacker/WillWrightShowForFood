@@ -5,7 +5,9 @@
 
 Working title borrows Alexander Avila's video essay — the long-running **community joke** that
 became serious cultural documentation. Avila is **openly trans masc** (transgender man; he/him;
-[came out June 2023](https://www.youtube.com/watch?v=a4r0CoXsGmk)).
+[came out June 2023](https://www.youtube.com/watch?v=a4r0CoXsGmk)). His May 2026 companion
+[*Looksmaxxing and the Rise of Male-to-Male Transsexuals*](https://www.youtube.com/watch?v=uox4OMC50-4)
+extends the body/performativity thread — Don appears on the Patreon thanks roll.
 is also a serious question about microworlds and identity.
 
 ## What we'd get into

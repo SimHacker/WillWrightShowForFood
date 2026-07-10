@@ -1,0 +1,53 @@
+# Alexander Avila — flagship video essays (show-relevant subset)
+
+creator:
+  name: Alexander Avila
+  channel: https://www.youtube.com/@alexander_avila
+  website: https://www.itsall.gay
+  patreon: https://www.patreon.com/aretheygay
+  identity: openly trans masc; he/him
+  subscribers: "~638k (Jul 2026)"
+
+videos:
+  did-the-sims-make-you-gay:
+    title: "Did The Sims make you gay? - a video essay."
+    url: https://www.youtube.com/watch?v=Xi-HWyh0Ybk
+    published: 2023-01-13
+    length: "~50m"
+    views: "420,734+"
+    comments: "1,720+"
+    theories: [Butler, Althusser, Foucault, Lacan, Žižek]
+    sims_team_named:
+      - "Patrick J. Barrett — same-sex romance from older design doc; E3 1999 kiss"
+      - "Will Wright — dollhouse → The Sims; suburban satire"
+    closing_line: "When you play The Sims, do you queer The Sims — or does The Sims queer you?"
+    comment_corpus: |
+      MOOLLM designs/sims/sims-queer-identity-formation.md — qualitative analysis of 1,700+ comments.
+      Themes: retrospective queer recognition, hiding from parents, safe microworld, counter-testimonies.
+
+  looksmaxxing-m2m-transsexuals:
+    title: "Looksmaxxing and the Rise of Male-to-Male Transsexuals"
+    url: https://www.youtube.com/watch?v=uox4OMC50-4
+    published: 2026-05-27
+    length: "1:14:45"
+    views: "630,025+"
+    subject: Clavicular (Braden Peters) / looksmaxxing / incel-blackpill pipeline
+    structure: [PAIN, ART, SEX]
+    theories: [Foucault epimeleia heautou, Lacan gaze, neoliberal dating-market, fascist body politics]
+    personal_disclosure: |
+      Lived as a girl until 15; male-maxxing; testosterone from 17; parallels hormone use with
+      Clavicular's DIY pharmacology — distinguishes gender-affirming necessity from looksmaxxing submission.
+    climax: "Trans people transition to live. Clavicular lives for looksmaxxing."
+    patreon_note: "Don Hopkins credited in May 2026 Patreon thanks roll."
+    sims_thread: |
+      Companion to Sims essay — performativity vs essentialism, body as constructed, recognition politics.
+      Optional cross-cut on Patrick Barrett episode.
+
+related_essays:
+  - { title: "I was a transgender child.", url: "https://www.youtube.com/watch?v=a4r0CoXsGmk", published: 2023-06-01 }
+  - { title: "How Conservatives Invented Gender Ideology", url: "https://www.youtube.com/watch?v=QLWKYTxLYT4" }
+  - { title: "How Bisexuality Changed Video Games", url: "https://www.youtube.com/watch?v=Xi-HWyh0Ybk", note: "verilybitchie — related Sims/games queer history lane" }
+
+show_use:
+  patrick_episode: "Fair-use clips + MOOLLM comment themes; invite Alex to bless or correct portrayal"
+  on_air_ethics: "Celebrate work; no mockery of commenters; no outing"

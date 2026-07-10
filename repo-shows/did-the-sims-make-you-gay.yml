@@ -42,10 +42,15 @@ segments:
       - https://www.newyorker.com/tech/annals-of-technology/the-kiss-that-changed-video-games
   avila_comments:
     ask: "What do 1,700+ Avila comments tell us about the microworld Patrick and Don enabled?"
-    creator: "Alexander Avila — openly trans masc; he/him (came out June 2023)"
+    creator: characters/alexander-avila/
     video: https://www.youtube.com/watch?v=Xi-HWyh0Ybk
+    companion: https://www.youtube.com/watch?v=uox4OMC50-4
     analysis: https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md#community-response-comment-analysis
     on_air: "Fair-use commentary; celebrate testimonies; no outing; no mockery"
+  optional_avila_voice:
+    ask: "Warm invite — async reaction or portrayal correction; Patreon connection noted"
+    room: characters/alexander-avila/
+    invitation: characters/alexander-avila/invitation.md
   sims_audience:
     ask: "Builders, modders, storytellers — creator-network solidarity and post-Collection exodus ethic"
     rooms: [characters/plumbella/, characters/lil-simsie/, characters/ellpeck/]
@@ -72,5 +77,6 @@ evidence:
 
 see_also:
   - characters/will-wright/  # inclusivity-by-design
+  - characters/alexander-avila/  # Sims essay + looksmaxxing companion; community voice
   - characters/don-hopkins/career/project-threads.yml  # Sims UI + inclusive relationships
   - documentation/designs/og-cozy-games.md  # MicropolisCore — procedural rhetoric thread

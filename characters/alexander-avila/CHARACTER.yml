@@ -1,0 +1,68 @@
+# Alexander Avila — public portrayal (video essayist). NOT Alexander Avila.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: alexander-avila
+  name: Alexander Avila
+  aliases: [Alex, AreTheyGay]
+  type: community_voice
+  signifier: "🎬🏳️‍⚧️"
+  status: living
+  field: "Video essayist — queer theory, games, manosphere critique; formerly AreTheyGay"
+  home: characters/alexander-avila/
+  web: https://www.itsall.gay
+
+identity:
+  openly: trans masc (transgender man)
+  pronouns: he/him
+  came_out: 2023-06-01
+  came_out_video: https://www.youtube.com/watch?v=a4r0CoXsGmk
+  note: |
+    Lived as a girl until ~15; began male-maxxing; testosterone from age 17 (per May 2026 essay).
+    Channel and published credits remain Alexander Avila.
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  invitation_status: draft
+  consent: not_yet_asked
+
+relationship:
+  kind: community_analyst
+  don_connection: |
+    Patreon supporter roll on "Looksmaxxing and the Rise of Male-to-Male Transsexuals" (May 2026)
+    lists Don Hopkins. Jess Bird research call (Apr 2025): Don named Alex among Sims archivist/community leads.
+
+show_relevance:
+  primary: repo-shows/did-the-sims-make-you-gay.yml
+  role: |
+    Fair-use commentary on Sims essay + comment corpus; optional async reaction or co-analysis.
+    His Sims work already cites Patrick Barrett's implementation and Don's design-doc thread (MOOLLM).
+
+flagship_videos:
+  - id: did-the-sims-make-you-gay
+    title: "Did The Sims make you gay? - a video essay."
+    url: https://www.youtube.com/watch?v=Xi-HWyh0Ybk
+    published: 2023-01-13
+    views: "420k+"
+    comments: "1,720+"
+    show_hook: "Community joke → Butler/Althusser/Lacan procedural rhetoric of queerness in The Sims"
+  - id: looksmaxxing-m2m-transsexuals
+    title: "Looksmaxxing and the Rise of Male-to-Male Transsexuals"
+    url: https://www.youtube.com/watch?v=uox4OMC50-4
+    published: 2026-05-27
+    views: "630k+"
+    show_hook: |
+      Clavicular / incel / black-pill anatomy; closes with personal transition vs looksmaxxing:
+      "Trans people transition to live; Clavicular lives for looksmaxxing."
+
+sources:
+  filmography: sources/filmography.yml
+  sims_analysis: ../patrick-j-barrett-iii/sources/did-the-sims-make-you-gay-avila.yml
+  moollm_comments: https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md
+
+see_also:
+  - { path: ../patrick-j-barrett-iii/, why: "Sims essay names Patrick's same-sex implementation" }
+  - { path: ../don-hopkins/, why: "Design-doc advocacy; Patreon connection" }
+  - { path: ../jess-bird/, why: "Research-call introduction" }

@@ -93,6 +93,7 @@ robots:
 guests:
   alan-kay: { invitation_status: draft, show_seed: repo-shows/alan-kay-microworld.yml, priority: send_after_craig, note: "Microworld + MOOLLM; warmly invited to Vanessa memorial arc with Craig, Dan, Don — remembering-vanessa-freudenberg.yml" }
   andrew-armit: { invitation_status: stub, path: characters/andrew-armit/, note: "Cambridge graphics visitor at Utah ~1968–69 — Coons patches on PDP-7; Alan Kay memory (10 Jul 2026 PIXIE thread); film hunt. Cross-link: heinz-lemke US tour, ivan-sutherland Utah era." }
+  alexander-avila: { invitation_status: draft, path: characters/alexander-avila/, show_seed: repo-shows/did-the-sims-make-you-gay.yml, priority: warm_lead, note: "Video essayist (trans masc); Did The Sims Make You Gay? + Looksmaxxing/M2M transsexuals (May 2026); MOOLLM comment analysis; Patreon credits Don; optional community voice on Patrick episode." }
   arthur-van-hoff: { invitation_status: not_yet_asked }
   audrey-tang: { invitation_status: not_yet_asked, note: "Women & trans pioneers — interview while living: Taiwan Digital Minister, g0v, radical transparency" }
   ben-cerveny: { invitation_status: not_yet_asked, show_seed: repo-shows/ben-cerveny.yml, warm_contact: true, channel: Signal }
