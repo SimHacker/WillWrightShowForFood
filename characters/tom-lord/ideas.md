@@ -47,6 +47,21 @@
 ## Who to invite (documented connections, consent first)
 
 - **Don** — anchor; decades of friendship and argument
+5. **Chapter 1 in a nutshell** — the Buttplug thread: corporate deadpan, Marx, Deldo lineage,
+   "buttplug scripts could be the new emojis." Not shameful. Delightful.
+   [teledildonics-hn-2020.md](teledildonics-hn-2020.md)
+
+6. **The Fall Guys** — fictional draft Tom asked Don to review; copy via Dave Tristram. Awaits Trina.
+   [contributing.md](contributing.md)
+
+7. **Pervert's Guide** — Don introduced W. Watson to Tom; Lacan meets language design.
+   [perverts-guide-introduction.md](perverts-guide-introduction.md)
+
+8. **FSF mail, 1991–92** — "guess where i work" from `lord@gnu.ai.mit.edu` (he'd just abruptly
+   moved from Mountain View to Massachusetts to work with RMS); Don's fork essay returned from
+   CMU; Hal on Solaris.
+   [sources/early-correspondence-1991-1992.md](sources/early-correspondence-1991-1992.md)
+
 - **Trina Pundurs** — Tom's wife, author of his obituary, Don's friend; her blessing shapes
   everything, her participation is welcome at exactly the level she chooses, including none
 - People from the Guile/Cygnus era, the arch community, and Berkeley civic life who knew him —

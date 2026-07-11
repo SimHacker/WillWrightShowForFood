@@ -9,4 +9,9 @@
 - **Hate Man saved his life** — Tom's own 2010 words; the I HATE YOU!!!! remembrance closes the loop
 - Discussant: [Don Hopkins](../don-hopkins/README.md) · family consent first for anything show-bound
 
-Read next: [README](README.md) · [memorial](memorial.md) · [dossier](the-tcl-war-and-guile.md) · [Hate Man remembrance](hate-man-remembrance-hn-2026.md) · [Self/V8 2006](self-v8-tom-lord-2006-hn-2022.md) · [CHARACTER.yml](CHARACTER.yml)
+- **Teledildonics + Marx on HN (2020)** — Buttplug thread; Deldo; qdot spun gold from snark
+- **FSF mail 1991–92** — "guess where i work" from `lord@gnu.ai.mit.edu`; fork essay returned from CMU; Hal on Solaris
+- **The Fall Guys** — unpublished fiction; Dave Tristram; awaits Trina ([contributing.md](contributing.md))
+- **Pervert's Guide** — Don introduced W. Watson to Tom ([perverts-guide-introduction.md](perverts-guide-introduction.md))
+
+Read next: [README](README.md) · [contributing](contributing.md) · [early mail](sources/early-correspondence-1991-1992.md) · [teledildonics](teledildonics-hn-2020.md) · [dossier](the-tcl-war-and-guile.md) · [CHARACTER.yml](CHARACTER.yml)

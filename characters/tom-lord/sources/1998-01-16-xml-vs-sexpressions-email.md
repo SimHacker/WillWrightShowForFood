@@ -12,7 +12,7 @@ parenthesized universal core, Don defending the messy standard that ships. See
 
 **From:** Hopkins, Don
 **Sent:** Friday, January 16, 1998 1:27 AM
-**To:** 'Tom Lord'; rms@gnu.org
+**To:** 'Tom Lord'; `rms@gnu.org`
 **Subject:** RE: markup languages (XML)
 
 > Tom Lord wrote:

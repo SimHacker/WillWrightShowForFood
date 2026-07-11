@@ -7,6 +7,8 @@ mode: represent_and_discuss
 
 # In memoriam — Tom Lord (1966–2022)
 
+*Narrative tribute — not the room index. Front page: [README.md](README.md).*
+
 *Memorial mode: we represent and discuss his work and the stories friends tell; we do not interview him or speak as him.*
 [Memorial standards](../../schemas/portrayal-standards.md#memorial-mode)
 

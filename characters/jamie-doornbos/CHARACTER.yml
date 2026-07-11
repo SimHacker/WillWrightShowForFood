@@ -26,7 +26,8 @@ bio:
 
 connections:
   the_sims: "Lead gameplay engineer on The Sims; central to the SimAntics behavior engine and the motive/AI system."
-  don: "Don Hopkins's colleague on The Sims team at Maxis."
+  will_wright: "Will Wright's faithful mentee and personal programmer through Project X → The Sims (per Don's 2007 LinkedIn rec)."
+  don: "Don Hopkins's colleague on The Sims team at Maxis; game-banter correspondence (e.g. GTA IV May 2008 — private)."
 
 show_suggestions:
   - { seed: ../../repo-shows/REPO-SHOWS.yml#building-the-sims.yml, what: "The Sims team reunion — how the simulation actually worked, from smart objects to autonomy." }

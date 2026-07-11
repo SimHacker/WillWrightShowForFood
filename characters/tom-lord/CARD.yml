@@ -97,6 +97,22 @@ abilities:
   effect: Berkeley Daily Planet, Housing Advisory Commission, climate emergency truth-telling, Writer Coach Connection. The same fire, aimed at the city.
   verifiable: Obituary by Trina Pundurs, Berkeley Daily Planet
   combos_with: []
+- id: TOM-COMMODITY-FETISH
+  name: Chapter 1 in a Nutshell
+  type: instant
+  mana: '{U}{R}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: marxianPun
+    signature: marxianPun(teledildonics) → corporate standup → Capital vol 1
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.9
+  effect: Deadpan product-management questions on Kyle Machulis's Buttplug thread; land on commodity fetishism with a conventional-fetish pun for icing. Deldo lineage. Not shameful.
+  verifiable: teledildonics-hn-2020.md; HN item 23094477; Deldo video D1sXuHnf_lo
+  combos_with:
+  - TOM-TCL-WAR
 invoke_rules:
   consent: memorial
   simulation: false
@@ -110,5 +126,7 @@ see_also:
   why: History dossier
 - path: hate-man-remembrance-hn-2026.md
   why: The I HATE YOU!!!! remembrance — oppositionality as love
-- path: self-v8-tom-lord-2006-hn-2022.md
-  why: The 2006 Self/V8 conversation, moved into this room
+- path: teledildonics-hn-2020.md
+  why: Buttplug thread, Marx, Deldo lineage
+- path: contributing.md
+  why: For Trina — book, archives, how to contribute

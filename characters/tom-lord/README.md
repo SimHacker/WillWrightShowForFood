@@ -1,68 +1,85 @@
 # Tom Lord 🕯️
 
-*In memoriam (1966–2022).* Memorial portrayal — **not** Tom Lord. [Memorial mode](../../schemas/portrayal-standards.md#memorial-mode)
+*In memoriam (1966–2022).* Memorial portrayal — **not** Tom Lord.
+[Memorial mode](../../schemas/portrayal-standards.md#memorial-mode)
 
-**Field:** GEL/Guile creator, GNU arch, the Tcl War, extension language philosophy — Don's close friend and sparring partner for decades
+**Field:** GEL/Guile · GNU arch · the Tcl War · Berkeley — Don's close friend and sparring partner
 
-Tom forked SCM into **GEL** at Cygnus in 1993 and talked RMS into blessing it as the official GNU
-extension language — the project the world knows as **Guile**. He ignited and chronicled the
-**Tcl War of 1994**, wrote its definitive insider history, and would only ever call the famous
-"Why you should not use Tcl" post a semi-prank by "the Scheme underground." In 2001 he built
-**GNU arch** (`tla`), distributed version control years before git. In Berkeley he fought with
-the same intensity for housing and the homeless and the climate. He died suddenly in June 2022,
-and the field is short one fiercely original mind.
+Forked SCM into **GEL** at Cygnus (1993), talked RMS into the official GNU extension language
+(**Guile**). Chronicled the **Tcl War**. Built **GNU arch** (`tla`) before git. Fought housing
+and climate in Berkeley at full strength. Died suddenly June 2022.
 
-## Start here
+**For Trina Pundurs** (Tom's wife, author of [his obituary](https://berkeleydailyplanet.com/issue/2022-06-26/article/49837), Don's friend): this room is yours to steer. Start at **[contributing.md](contributing.md)** — including the unpublished book Don was asked to review, and how to send anything else.
 
-- **[The tribute](memorial.md)** — who he was, what he built, what saved him, how we remember him
-- **[The Hate Man remembrance](hate-man-remembrance-hn-2026.md)** — I HATE YOU!!!! as a love
-  letter; Tom's own 2010 words about Hate Man and the brothers of People's Park saving his life
-- **[The Tcl War and Guile dossier](the-tcl-war-and-guile.md)** — the full sourced history: GEL,
-  the war, the aftermath, the late vindication
+---
 
-## Tom in his own words
+## Directory
 
-The most important shelf in the room. Primary sources, verbatim.
+```
+tom-lord/
+├── README.md                          ← you are here (front page)
+├── GLANCE.md                          quick bullets
+├── CARD.yml                           game-card metadata
+├── CHARACTER.yml                      portrayal rules + sources
+├── contributing.md                    for Trina: drop repo, Fall Guys, how to send material
+├── eulogies.md                        obituaries + HN + LWN when he died
+├── fork-essay-answer.md               Don's 1987 exam, finally answered (explains the joke)
+├── haunts-and-threads.md              mailing lists, LtU, epic threads index
+├── memorial.md                        narrative tribute (not the index)
+├── perverts-guide-introduction.md     Don introduced W. Watson to Tom ;)
+├── the-tcl-war-and-guile.md           sourced dossier: GEL, war, aftermath
+├── teledildonics-hn-2020.md           Buttplug thread, Marx, Deldo lineage ;)
+├── hate-man-remembrance-hn-2026.md    I HATE YOU!!!! as a love letter
+├── self-v8-tom-lord-2006-hn-2022.md   Self, V8, compilability (Don ↔ Tom, 2006)
+├── ideas.md                           show segments (family consent first)
+├── media/
+│   └── 2010-04-hate-man-facebook-exchange.png
+└── sources/
+    ├── 1998-01-16-xml-vs-sexpressions-email.md
+    ├── 2010-04-hate-man-facebook-exchange.md
+    └── early-correspondence-1991-1992.md   FSF years: guess where i work, CAM-PC, fork essay, Hal/Solaris
+```
+
+---
+
+## Read next
+
+| If you want… | Go to |
+|--------------|-------|
+| Tom's FSF years, 1991–92 | [sources/early-correspondence-1991-1992.md](sources/early-correspondence-1991-1992.md) |
+| The fork() essay, answered | [fork-essay-answer.md](fork-essay-answer.md) |
+| Tom's own best writing | [An Account of the Tcl War](https://web.archive.org/web/20110102015130/http://basiscraft.com/0800-0100-the-tcl-war.html) |
+| Pervert's Guide + the introduction Don made | [perverts-guide-introduction.md](perverts-guide-introduction.md) |
+| The full Tcl/Guile history | [the-tcl-war-and-guile.md](the-tcl-war-and-guile.md) |
+| Hate Man saved his life | [sources/2010-04-hate-man-facebook-exchange.md](sources/2010-04-hate-man-facebook-exchange.md) · [hate-man-remembrance-hn-2026.md](hate-man-remembrance-hn-2026.md) |
+| Teledildonics + commodity fetishism | [teledildonics-hn-2020.md](teledildonics-hn-2020.md) |
+| Self, V8, compilability | [self-v8-tom-lord-2006-hn-2022.md](self-v8-tom-lord-2006-hn-2022.md) |
+| XML vs S-expressions, cc RMS | [sources/1998-01-16-xml-vs-sexpressions-email.md](sources/1998-01-16-xml-vs-sexpressions-email.md) |
+| What the world said when he died | [eulogies.md](eulogies.md) |
+| Where he posted; thread index | [haunts-and-threads.md](haunts-and-threads.md) |
+| A narrative tribute | [memorial.md](memorial.md) |
+| Add material / the book | [contributing.md](contributing.md) |
+
+## Tom in his own words (external)
 
 - [An Account of the Tcl War](https://web.archive.org/web/20110102015130/http://basiscraft.com/0800-0100-the-tcl-war.html)
-  — his own published history of free software's formative flamewar: brilliant, funny, hard on
-  himself, and fair even to the people who did him wrong
-- [The Hate Man exchange, April 2010](sources/2010-04-hate-man-facebook-exchange.md) — "Hate man
-  and several of the brothers in the park basically saved my life"; the '83 Massachusetts origin
-  story; Berkeley as a children's book landscape. Original screenshot in [`media/`](media/)
-- [XML vs S-expressions, January 1998](sources/1998-01-16-xml-vs-sexpressions-email.md) — Tom's
-  S-expression manifesto vs Don's XML defense, RMS cc'd. The universal-substrate argument, aimed
-  at documents
-- [Thomas Lord on Lambda the Ultimate](http://lambda-the-ultimate.org/user/3938/track) — years
-  of his programming-language philosophy posts, still there to mine
+- [Lambda the Ultimate — all his posts](http://lambda-the-ultimate.org/user/3938/track)
+- [Obituary by Trina Pundurs](https://berkeleydailyplanet.com/issue/2022-06-26/article/49837)
 
-## Best of, by topic
+## Don's remembrances
 
-| Topic | Read |
-|-------|------|
-| The universal engine (GEL → Guile → Guix) | [dossier](the-tcl-war-and-guile.md) · [guix-devel remembrance](https://lists.gnu.org/r/guix-devel/2022-07/msg00227.html) |
-| The Tcl War | [his account](https://web.archive.org/web/20110102015130/http://basiscraft.com/0800-0100-the-tcl-war.html) · [Vanderburg's flamewar archive](http://vanderburg.org/old_pages/Tcl/war/) · [Don's HN history](../don-hopkins/the-part-where-it-compiles-hn-2026.md) ([live](https://news.ycombinator.com/item?id=48870736)) |
-| Version control before git (GNU arch / tla) | [GNU arch](https://en.wikipedia.org/wiki/GNU_arch) · [LWN remembrance](https://lwn.net/Articles/901807/) |
-| Language design: Self, V8, compilability | [the 2006 conversation](self-v8-tom-lord-2006-hn-2022.md) — two years before V8 existed |
-| Documents and substrates | [XML vs S-expressions, 1998](sources/1998-01-16-xml-vs-sexpressions-email.md) |
-| Berkeley, Hate Man, People's Park | [the 2010 exchange](sources/2010-04-hate-man-facebook-exchange.md) · [the remembrance](hate-man-remembrance-hn-2026.md) · [SF Chronicle Hate Man profile](https://web.archive.org/web/20100413124819/http://www.sfgate.com/cgi-bin/article.cgi?f=/c/a/2010/04/11/BA831COQP3.DTL) |
-| His life, whole | [obituary by Trina Pundurs, Berkeley Daily Planet](https://berkeleydailyplanet.com/issue/2022-06-26/article/49837) · [LtU: Thomas Lord dies at 56](http://lambda-the-ultimate.org/node/5653) |
+- [The Part Where It Compiles](../don-hopkins/the-part-where-it-compiles-hn-2026.md) · [live HN](https://news.ycombinator.com/item?id=48870736)
+- [Hate Man / I HATE YOU!!!!](hate-man-remembrance-hn-2026.md)
 
-More is still being excavated from Don's decades of email archives and posts; documents primarily
-about Tom get moved into this room as they surface, so the light shines on him rather than on the
-people telling the stories.
+More is excavated from Don's archives as it surfaces. Documents primarily about Tom land here so
+the light stays on him.
 
 ## How this room works
 
-**Memorial mode:** we represent and *discuss* him — never interview or speak as him, and invent
-no quotes or inner life. Everything here is built from the documented public record and Don's
-firsthand testimony, clearly marked where it is the source. Family consent guides everything:
-Tom is survived by his wife Trina Pundurs, whose obituary is our primary biographical source,
-and nothing about Tom reaches a show without her blessing.
+**Memorial mode:** represent and discuss — never interview, never speak as him, invent no quotes.
+Built from the public record and Don's firsthand testimony, marked where Don is the source.
 
-*Those who knew Tom — family, friends, colleagues from the Guile and arch and Berkeley years —
-are warmly invited to correct, edit, and add their own memories, documents, and stories, at
-whatever level they choose, including none.*
+**Family:** Trina Pundurs guides anything show-bound. See [contributing.md](contributing.md).
 
-Full source citations in [`CHARACTER.yml`](CHARACTER.yml) · show ideas in [`ideas.md`](ideas.md) ·
-quick orientation in [`GLANCE.md`](GLANCE.md)
+*Those who knew Tom — family, friends, Guile/arch/Berkeley colleagues — are warmly invited to
+correct, edit, and add at whatever level they choose, including none.*

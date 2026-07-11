@@ -4,7 +4,7 @@ character:
   aliases: ["Gumby"]
   type: invitation
   status: living
-  field: "Cygnus Solutions co-founder (BFD, binutils); TLGnet; Leela AI partner"
+  field: "Cygnus Solutions co-founder (BFD, binutils); TLGnet; MIT AI Lab; formerly Leela AI"
   home: characters/david-henkel-wallace/
 
 representation:
@@ -13,17 +13,23 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: draft
+  status: send_ready
   consent: not_yet_asked
-  note: "Leela AI partner — characters/david-henkel-wallace/"
+  document: invitation.md
 
 bio:
-  summary: "**David Henkel-Wallace** (nickname **Gumby**) — co-founded **Cygnus Solutions** (1989) with John Gilmore and Michael Tiemann, the first commercial open-source company; key author of **BFD** (Binary File Descriptor library) and GNU binutils work; **TLGnet** partner with Tom Jennings; MIT AI Lab background; **Partner at Leela AI**. Open Core Summit 2019 talk on Cygnus as original COSS."
+  summary: "**David Henkel-Wallace** (nickname **Gumby**) — co-founded **Cygnus Solutions** (1989) with John Gilmore and Michael Tiemann, the first commercial open-source company; key author of **BFD** (Binary File Descriptor library) and GNU binutils work; **TLGnet** partner with Tom Jennings; MIT AI Lab background (youngest hacker with his own office); Atari Cambridge Research gestural system; formerly at **Leela AI**. Open Core Summit 2019 talk on Cygnus as original COSS."
 
-leela_colleagues:
-  with: ["henry-minsky", "steve-kommrusch", "isabella-struckman", "milan-singh-minsky", "don-hopkins"]
+connections:
+  don: "Old friend — nominated Don for the unix-haters list (1991); decades of public HN sparring; former Leela AI colleague. sources/hn-interactions.md"
 
 see_also:
   - { path: ../tom-jennings/, why: "TLGnet co-founder" }
-  - { path: ../steve-kommrusch/, why: "Leela AI colleague" }
-  - { path: ../henry-minsky/, why: "Leela AI co-founder" }
+  - { path: ../steve-kommrusch/, why: "former Leela AI colleague" }
+  - { path: ../henry-minsky/, why: "Leela AI co-founder (Gumby formerly at Leela)" }
+  - { path: ../don-hopkins/, why: "unix-haters nomination (1991); decades of HN sparring; SubGenius⇒EvalGenius lineage" }
+
+sources:
+  public:
+    - sources/charles-fort-died-too-soon-1988.md
+  private_note: "Full 1988 post + exegesis in DonHopkins green-room/david-henkel-wallace/"

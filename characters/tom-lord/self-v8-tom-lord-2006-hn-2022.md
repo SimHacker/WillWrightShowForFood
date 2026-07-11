@@ -2,7 +2,7 @@
 
 **Thread:** [The influence of Self](https://news.ycombinator.com/item?id=33502897) (Nov 2022).
 
-**Don's comment:** [33527618](https://news.ycombinator.com/item?id=33527618) (4 points) — quoting a message Don wrote to **Tom Lord in 2006**, two years before Lars Bak built V8 at Google, after running into **Dave Ungar** while he was interviewing at Laszlo Systems.
+**Don's comment:** [33527618](https://news.ycombinator.com/item?id=33527618) — quoting a message Don wrote to **Tom Lord in 2006**, two years before Lars Bak built V8 at Google, after running into **Dave Ungar** while he was interviewing at Laszlo Systems.
 
 This is the treasured receipt cited in [The Part Where It Compiles](../don-hopkins/the-part-where-it-compiles-hn-2026.md): JavaScript credits Self for its prototypes while missing everything else the paper was about.
 
@@ -28,10 +28,19 @@ https://en.wikipedia.org/wiki/V8_(JavaScript_engine)
 
 ## Why this one matters
 
-- **Provenance:** written in 2006, before V8 existed. The claim that Self's real contribution was compilability, not prototypes, was made in advance, not in hindsight.
+- **First, the headline:** Self's primary contribution, above all others, is in the name of
+  its seminal paper — [*Self: The Power of Simplicity*](https://bibliography.selflanguage.org/_static/self-power.pdf)
+  (Ungar & Randall Smith, OOPSLA 1987). **SIMPLICITY.** Everything else Self is famous for —
+  the aggressive inlining compiler, polymorphic inline caches, dynamic de-optimization — is a
+  towering contribution *in its own right*, and towers higher because it was achieved **in the
+  face of that first commitment**: making a radically simple language fast is the hard version
+  of the problem. Anybody can make a simple language slow, or a fast language complicated.
+- **Provenance:** written in 2006, before V8 existed. The claim that Self's underappreciated
+  contribution was compilability — not the prototypes JavaScript cribbed — was made in
+  advance, not in hindsight.
 - **The demo beat:** Ungar live-editing the system's multiplication operator and watching factorial (and the whole system) incrementally recompile, with perfect debuggability. The best 30-second summary of Self that exists.
 - **The Ungar retort:** "possible to efficiently compile JavaScript if you were really devious enough" — the exact deviousness V8 later shipped.
-- **The punchline:** the lost art is designing languages so you don't HAVE to be devious to compile them.
+- **The punchline:** the lost art is designing languages so you don't HAVE to be devious to compile them. Simplicity is what makes the deviousness unnecessary.
 
 Note: the 2006 message is preserved verbatim, typos and all ("come up all the brilliant stuff", "was lost of so many"). It's a historical quote; don't clean it.
 

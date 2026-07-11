@@ -38,6 +38,8 @@ A public portrayal **about** a real person — for Repo Show invitations and Rep
 - Private in-jokes unless clearly intended for public portrayal
 - Creepy, stalkery, or overly personal detail
 - Speaking **as** the person without explicit consent
+- **HN point scores in citations** — you can only see your own, they drift, and they're
+  irrelevant. Cite HN comments by id, author, date, and substance; never karma.
 
 ## Subject rights {#subject-rights}
 

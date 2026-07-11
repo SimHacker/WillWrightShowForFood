@@ -10,19 +10,17 @@ timeline:
     what: Don celebrates Peter posting "I've Consed Every Pair" to Medium; HN discussion
   - date: 2025-06-28
     what: |
-      Don emails roll-up of Facebook conversations — HN posts, Pervert's Guide to Computer
-      Programming paper, Sims 4 synthetic vision work, Programming by Demonstration log cleanup,
-      permission request for Peter's AGI book chapter (LLMs beyond "write this essay for me").
-      Offers "Vulcan Screen Meld" Google Meet to demo character creation with publications.
+      Don emails roll-up of Facebook conversations — HN posts (Consed Every Pair song 23036893,
+      Cerf RFC1121 poetry 23031223), Pervert's Guide to Computer Programming paper, Sims 4
+      synthetic vision work for Leela, agents demonstrating chat/gossip protocols, Alan Cypher
+      breaking the frame, Rocky the Pet Rock, McLuhan + Lakoff as constitutional characters,
+      Programming by Demonstration log cleanup. Offers "Vulcan Screen Meld" Google Meet to demo
+      character creation with publications.
   - date: 2026-01-04
     what: |
       Don announces MOOLLM reboot from LLOOOOMM — focused, self-explanatory, portrayal-standards
       fixes for representing real people. Asks Peter to read README + quickstart + PROTOCOLS.yml +
       adventure examples. Link: https://github.com/SimHacker/moollm
-
-book_chapter_offer: |
-  Peter is writing an AI book and offered to include a chapter about Don's work. The Repo Show
-  is the natural other half — recorded conversation usable as source material.
 
 vulcan_screen_meld: |
   Don's name for a collaborative Google Meet screen-share demo: create a Peter character with

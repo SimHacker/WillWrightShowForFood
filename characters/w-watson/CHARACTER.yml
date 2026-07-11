@@ -1,0 +1,67 @@
+# W. Watson — invitation portrayal. NOT W. Watson.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: w-watson
+  name: "W. Watson (Wavell Watson)"
+  type: invitation
+  signifier: "🛋️"
+  status: living
+  field: "Lacanian psychoanalysis of programming languages — The Pervert's Guide to Computer Programming Languages; software ideology; worker co-ops (Vulk)"
+  home: characters/w-watson/
+  aliases: ["Wavell Watson", "W Watson", "Watson"]
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  note: "Public-source portrayal (published paper, talks, HN participation) + Don's 2020 correspondence, paraphrased."
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  likelihood: "warm — 2020 correspondence; standing offer of joint 'Pervert's Guide to Objectology' work; Don introduced him to Tom Lord"
+  contact: "w@vulk.co (2020); verify current"
+
+bio:
+  summary: >
+    **W. Watson** (Wavell Watson) wrote and performed *The Pervert's Guide to Computer
+    Programming Languages* (SXSW 2017, paper via Vulk LLC): Lacanian and Žižekian
+    psychoanalysis applied to why programmers choose languages for irrational libidinal
+    reasons — psychopath languages, obsessional languages, hysterical languages, melancholy
+    languages (Lisp, "a loss of a loss"). Behind the joke title is a serious framework, with
+    heavier siblings: *Four Elements of Software Ideology* and *The Plague of Programming
+    Languages*. He read Lacan so we don't have to ("the most difficult popular philosopher
+    to read"), producing a YouTube book-review series and hand-drawn mind maps. He organizes
+    around worker co-ops (Vulk is one; Austin Software Co-operatives; Loomio for group
+    decisions), and in 2020 he joined the HN discussion of his talk under his own name and
+    answered everything, from journal-publication questions to Erlang's nine nines as sadism.
+
+works:
+  paper: https://s3-us-west-2.amazonaws.com/vulk-blog/ThePervertsGuidetoComputerProgramming-ThePaper.pdf
+  talk: https://www.youtube.com/watch?v=mZyvIHYn2zk
+  slides: https://www.slideshare.net/slideshow/the-perverts-guide-to-computer-programming-languages/64297236
+  four_elements: https://www.linkedin.com/pulse/four-elements-software-ideology-wavell-watson
+  plague: https://s3-us-west-2.amazonaws.com/vulk-blog/ThePlagueofProgrammingLanguages.pdf
+  lacan_reviews: https://www.youtube.com/channel/UCvyxMl4mZaKJJiEFpHGjJNA
+  lacan_mindmaps: http://imgur.com/a/P66uHLb
+  vulk: http://www.vulk.coop
+
+don_connection:
+  - "April 2020: Don found the talk via a Rule 34 query for 'The Pervert's Guide to Objectology' (wishing Žižek would do one), emailed Watson"
+  - "dang liked the video enough to post it to HN himself; Don talked Watson into joining the thread, where he answered questions under his own name"
+  - "Watson's standing offer (April 2020): joint work on 'The Pervert's Guide to Objectology'"
+  - "June 2020: Don introduced Watson to Tom Lord — cc: on the German Stool Hermeneutics email (see ../tom-lord/perverts-guide-introduction.md)"
+
+hn_thread:
+  story: https://news.ycombinator.com/item?id=22910702
+  note: "See sources/hn-thread-2020.md for summary; Deldo video and Zizek sex-toy joke appear in-thread; dang moderates the bottom personally"
+
+see_also:
+  - { path: README.md, why: "Room front page" }
+  - { path: invitation.md, why: "Repo Show invitation draft" }
+  - { path: ideas.md, why: "Episode directions — Objectology at the top" }
+  - { path: sources/hn-thread-2020.md, why: "The 2020 HN discussion, summarized" }
+  - { path: ../tom-lord/perverts-guide-introduction.md, why: "The Tom Lord introduction and why it mattered" }

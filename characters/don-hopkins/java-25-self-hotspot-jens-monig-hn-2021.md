@@ -4,7 +4,7 @@
 
 **Context:** **ChuckMcM** (ex-First Person) described Sun defunding First Person in the Feb '95 budget meeting, then everyone claiming credit overnight once Java hit: "a classic accidental disruption." **patrec** marveled that Sun only profited from Java because a manager was nice enough to let it happen.
 
-**Don's comment:** [25888111](https://news.ycombinator.com/item?id=25888111) (5 points) — the same credit-grabbing pattern hit Self and HotSpot, with receipts, ending in a full conversation with **Jens Mönig** (Snap! author) about Morphic, Self, and irony.
+**Don's comment:** [25888111](https://news.ycombinator.com/item?id=25888111) — the same credit-grabbing pattern hit Self and HotSpot, with receipts, ending in a full conversation with **Jens Mönig** (Snap! author) about Morphic, Self, and irony.
 
 ---
 

@@ -29,7 +29,7 @@ invitation:
 memorial:
   mode: represent_and_discuss
   rule: "Represent and discuss his documented work, his own published writings, and the stories friends tell. Do not interview, do not speak as him, invent no inner life or quotes."
-  family: "Survived by his wife Trina Pundurs (author of his obituary, Don's friend), mother Luanna Pierannunzi, and extended family. Nothing about Tom reaches a show without Trina's blessing."
+  family: "Survived by his wife Trina Pundurs (author of his obituary, Don's friend), mother Luanna Pierannunzi, and extended family. Nothing about Tom reaches a show without Trina's blessing. See contributing.md for the unpublished book and how to send material."
   who_can_discuss:
     - { who: don-hopkins, why: "Close friend; decades of heated arguments about Tcl, Tk, and extension languages; corresponded since at least 1998 (XML vs S-expressions thread with RMS); the 2006 Self/V8 conversation" }
   draw_on_for_shows:
@@ -74,9 +74,15 @@ sources:
     - { path: sources/1998-01-16-xml-vs-sexpressions-email.md, note: "1998 email debate: Tom's S-expression manifesto vs Don's XML defense, cc RMS" }
     - { path: sources/2010-04-hate-man-facebook-exchange.md, note: "Tom in his own words: Hate Man and the brothers of People's Park saved his life; the '83 children's-book origin story; screenshot in media/" }
     - { path: hate-man-remembrance-hn-2026.md, note: "Don's public HN remembrance built on the 2010 exchange: I HATE YOU!!!! as a love letter, ending on the Berkeley cow" }
+    - { path: teledildonics-hn-2020.md, note: "Six HN comments on Buttplug (2020): commodity fetishism, Deldo/Kyle Machulis lineage" }
+    - { path: contributing.md, note: "For Trina: drop repo workflow, The Fall Guys, family archive" }
+    - { path: sources/early-correspondence-1991-1992.md, note: "FSF-era mail: 'guess where i work' from lord@gnu.ai.mit.edu, CAM-PC, fork essay, chord kbd, Hal/Solaris" }
+    - { path: perverts-guide-introduction.md, note: "Don introduced W. Watson to Tom — Lacan, languages, ideology" }
 
 see_also:
-  - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
+  - { path: README.md, why: "Front page — directory listing + read-next index" }
+  - { path: contributing.md, why: "Family contribution — book, archives, Trina's editorial authority" }
+  - { path: memorial.md, why: "Narrative tribute (not the index)" }
   - { path: the-tcl-war-and-guile.md, why: "Deep history dossier — GEL, the war, the aftermath, the vindication" }
   - { path: ../don-hopkins/, why: "Decades of friendship and argument; primary living discussant" }
   - { path: ../../schemas/portrayal-standards.md#memorial-mode, why: "How memorial rooms are handled" }

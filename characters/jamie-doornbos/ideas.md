@@ -25,7 +25,13 @@ Don's proposed Metaweb interview question (Nov 2007) — Sims architecture folkl
 
 → [`sources/2007-metaweb-linkedin-recommendation.md`](sources/2007-metaweb-linkedin-recommendation.md)
 
-### 5. Tom van Dijk — modder who reverse-engineered your SimAntics
+### 5. Correspondence text adventures (GTA IV, May 2008)
+Jamie had just moved to San Francisco — no consoles yet (voltage) — and wrote Don two cents on Jack
+Thompson and corrupt cops in *GTA IV*. Don answered with a play-by-email "text adventure": multiple
+choice at 80 MPH, plus an essay question about drunk-driving mayhem. Gentle memory jog in invitation;
+could demo a repo-native version on air. Satire vs moral panic still plays.
+
+### 6. Tom van Dijk — modder who reverse-engineered your SimAntics
 IFF Pencil author; **Behavior.iff** mystery; EA Legal 2002. NL neighbor (Deventer ↔ Badhoevedorp).
 
 → [`../tom-van-dijk/`](../tom-van-dijk/)

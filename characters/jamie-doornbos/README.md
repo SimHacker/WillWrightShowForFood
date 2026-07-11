@@ -13,6 +13,8 @@ Sims' simulation publicly.
 
 ## Why a Repo Show
 
-Jamie was Don's colleague on The Sims, and few people can explain *how the magic actually worked* —
-how simple rules and advertised affordances produced emergent life — as directly as one of its lead
-engineers. A natural voice for the [Sims team reunion](../../repo-shows/REPO-SHOWS.yml).
+Jamie was Don's colleague on The Sims — Will Wright's long-time mentee through the **Project X**
+years — and few people can explain *how the magic actually worked* as directly as one of its lead
+engineers. Don has praised Jamie publicly (LinkedIn, Metaweb references) and proposed the famous
+**swimming pools: objects or rooms?** interview question. Years after shipping, they were still
+trading game banter by email (GTA IV, 2008). A natural voice for the [Sims team reunion](../../repo-shows/REPO-SHOWS.yml).

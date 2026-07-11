@@ -9,13 +9,8 @@
 | Date | What |
 |------|------|
 | **2020-05-01** | Don celebrates Peter posting "I've Consed Every Pair" to Medium; HN discussion |
-| **2025-06-28** | Don emails roll-up of Facebook conversations — HN posts, Pervert's Guide to Computer Programming paper, Sims 4 synthetic vision work, Programming by Demonstration log cleanup, permission request for Peter's AGI book chapter (LLMs beyond "write this essay for me"). Offers **"Vulcan Screen Meld"** Google Meet to demo character creation with publications. |
+| **2025-06-28** | Don emails roll-up of Facebook conversations — HN posts ([the song](https://news.ycombinator.com/item?id=23036893), [Cerf's RFC1121 poetry](https://news.ycombinator.com/item?id=23031223)), [Pervert's Guide to Computer Programming paper](../../tom-lord/perverts-guide-introduction.md), Sims 4 synthetic vision work for Leela, agents demonstrating chat/gossip protocols, Alan Cypher breaking the frame, Rocky the Pet Rock, McLuhan + Lakoff as constitutional characters, Programming by Demonstration log cleanup. Offers **"Vulcan Screen Meld"** Google Meet to demo character creation with publications. |
 | **2026-01-04** | Don announces MOOLLM reboot from LLOOOOMM — focused, self-explanatory, portrayal-standards fixes for representing real people. Asks Peter to read README + quickstart + PROTOCOLS.yml + adventure examples. [github.com/SimHacker/moollm](https://github.com/SimHacker/moollm) |
-
-## Book chapter offer
-
-Peter is writing an AI book and offered to include a chapter about Don's work. The Repo Show is the
-natural other half — recorded conversation usable as source material.
 
 ## Vulcan Screen Meld
 
@@ -24,7 +19,6 @@ publications and writings, Coffee Talk style — Twitch-adjacent but for researc
 
 ## Show hooks
 
-- **Book chapter + Repo Show** as two halves of the same documentation project.
 - **Vulcan Screen Meld on air** — character creation live with portrayal standards visible.
 - **MOOLLM reboot** as the substrate Peter was asked to read before the worms thread.
 
