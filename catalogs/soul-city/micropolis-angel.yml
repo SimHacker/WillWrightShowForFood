@@ -1,9 +1,12 @@
-# MicropolisAngel — Windows Steam companion for The Sims Legacy Collection
-# Working title was SimAngel — use MicropolisAngel (no "Sim" in product name; EA trademark respect)
+# MicropolisAngel — the Sims 1 Soul Bridge module of SoulAngel (see soul-angel.yml)
+# Name lineage: SimAngel (working title) -> MicropolisAngel (EA TM respect) -> product rebranded
+# SoulAngel 2026-07-11 (Micropolis is licensed; Soul is the family name). This file stays as the
+# Sims-1-specific spec: save bridge, Family Album round-trip, graveyard, Simplifier, catalog crawl.
 # NOT a web wrapper — native helper while you play. Web hub (Soul City) ships FIRST.
 
 id: micropolis-angel
 status: planted
+role: sims1_soul_bridge   # module of soul-angel.yml — universal DVR/album/broadcast engine lives there
 announce: after_web_hub_audience
 parent: CATALOG.yml
 platform: windows

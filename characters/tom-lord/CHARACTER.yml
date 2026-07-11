@@ -1,0 +1,79 @@
+# Tom Lord — memorial portrayal (in memoriam). NOT Tom Lord.
+# Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
+
+character:
+  id: tom-lord
+  name: "Thomas Lord"
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  lived: "1966-04-26 — 2022-06"
+  field: "GEL/Guile creator, GNU arch, the Tcl War, extension language philosophy — Don's close friend and sparring partner for decades"
+  home: characters/tom-lord/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 5
+  authored_by: don-hopkins
+  evidence_note: >
+    Documented public record (obituary, LWN, LtU, GNU project history, Tom's own
+    archived essays) plus Don's firsthand testimony from a decades-long friendship,
+    clearly marked where it is the source. No invented inner life, dialogue, or quotes.
+
+invitation:
+  status: memorial
+  consent: not_yet_asked
+  document: memorial.md
+  note: "deceased (1966–2022) — represent + discuss; invite people who knew him, family consent first"
+
+memorial:
+  mode: represent_and_discuss
+  rule: "Represent and discuss his documented work, his own published writings, and the stories friends tell. Do not interview, do not speak as him, invent no inner life or quotes."
+  family: "Survived by his wife Trina Pundurs (author of his obituary, Don's friend), mother Luanna Pierannunzi, and extended family. Nothing about Tom reaches a show without Trina's blessing."
+  who_can_discuss:
+    - { who: don-hopkins, why: "Close friend; decades of heated arguments about Tcl, Tk, and extension languages; corresponded since at least 1998 (XML vs S-expressions thread with RMS); the 2006 Self/V8 conversation" }
+  draw_on_for_shows:
+    - "**GEL → Guile** — forked Aubrey Jaffer's SCM into an embeddable library at Cygnus in 1993 and talked RMS into blessing it as the official GNU extension language; early maintainer of Guile"
+    - "**The Tcl War (1994)** — his own published account: Sun declaring Tcl 'the ubiquitous scripting language of the Internet,' his Scheme-based GDB GUI skunked by a quick Tcl/Tk one, venting to RMS, and 'Why you should not use Tcl' landing on comp.lang.tcl with deliberately murky authorship — 'a semi-prank by the Scheme underground'"
+    - "**GNU arch (tla)** — started 2001, one of the earliest distributed version control systems, part of GNU in 2003; Canonical's first Bazaar began as a fork of tla; the DVCS argument arch pioneered was later won by git"
+    - "**Andrew Project** at Carnegie Mellon (1987) — where his career began"
+    - "**FSF staff** in the early 1990s, developing for the GNU Project"
+    - "**Nobody stays pure** — even Tom, patron saint of the embeddable Scheme interpreter, compiled the performance-critical parts of his Scheme editor with the Hobbit compiler (his own account)"
+    - "**Universal engine argument** — one Scheme engine executing many surface languages; vindicated decades later by Guile 3.0 under Guix"
+    - "**Berkeley civic life** — Berkeley Daily Planet contributor; appointed to the City Housing Advisory Commission in 2016; after the IPCC SR15 report, a tireless advocate for treating the climate emergency as an actual emergency; Writer Coach Connection volunteer at Longfellow Middle School"
+    - "**People's Park** — a place and a society that held great meaning for him (obituary)"
+
+bio:
+  summary: >
+    **Thomas Lord** (1966–2022) — free software developer, extension language
+    philosopher, and Berkeley housing and climate advocate. Born in Pittsburgh,
+    educated at Johns Hopkins and Carnegie Mellon, he began his career on CMU's
+    Andrew Project in 1987, worked for the FSF in the early 1990s, and at Cygnus
+    in 1993 forked SCM into GEL, the embeddable library RMS blessed as the official
+    GNU extension language — renamed Guile after trademark trouble. His account of
+    the 1994 Tcl War is the definitive insider history of one of free software's
+    formative flamewars. In 2001 he started GNU arch (tla), one of the earliest
+    distributed version control systems. From 2004 he lived in Berkeley, where he
+    threw himself into housing and climate advocacy with the same intensity he
+    brought to language design. He died unexpectedly of a massive brain hemorrhage
+    in June 2022, at 56.
+
+sources:
+  wikipedia: https://en.wikipedia.org/wiki/GNU_arch
+  web:
+    - { url: "https://berkeleydailyplanet.com/issue/2022-06-26/article/49837", note: "Obituary by Trina Pundurs, Berkeley Daily Planet, June 2022" }
+    - { url: "https://lwn.net/Articles/901807/", note: "Tom Lord RIP — LWN, July 2022" }
+    - { url: "http://lambda-the-ultimate.org/node/5653", note: "Thomas Lord, an LtU regular, dies at 56" }
+    - { url: "https://lists.gnu.org/r/guix-devel/2022-07/msg00227.html", note: "guix-devel remembrance — early (or first) maintainer of Guile" }
+    - { url: "https://web.archive.org/web/20110102015130/http://basiscraft.com/0800-0100-the-tcl-war.html", note: "An Account of the Tcl War — Tom's own published history" }
+    - { url: "http://vanderburg.org/old_pages/Tcl/war/", note: "Glenn Vanderburg's archive of the original 1994 flamewar" }
+  don_testimony:
+    - { path: ../don-hopkins/the-part-where-it-compiles-hn-2026.md, note: "HN tribute and Tcl War history, July 2026" }
+    - { path: ../don-hopkins/self-v8-tom-lord-2006-hn-2022.md, note: "2006 conversation with Tom about Self, Ungar, and compilable language design" }
+    - { path: sources/1998-01-16-xml-vs-sexpressions-email.md, note: "1998 email debate: Tom's S-expression manifesto vs Don's XML defense, cc RMS" }
+
+see_also:
+  - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
+  - { path: the-tcl-war-and-guile.md, why: "Deep history dossier — GEL, the war, the aftermath, the vindication" }
+  - { path: ../don-hopkins/, why: "Decades of friendship and argument; primary living discussant" }
+  - { path: ../../schemas/portrayal-standards.md#memorial-mode, why: "How memorial rooms are handled" }

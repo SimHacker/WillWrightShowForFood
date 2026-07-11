@@ -32,7 +32,7 @@ lineage:
       - ../../../../Leela/git/SimObliterator_Suite/vitamoo/vitamoospace/src/lib/server/files-inventory.ts
       - ../../../../Leela/git/SimObliterator_Suite/src/formats/iff/chunks/objd.py
   not_source_of_truth:
-    - "Transmogrifier/SimsObjects.xml — third-party export; useful for diff/comparison only"
+    - "Legacy object catalog seed XML (Transmogrifier-era export) — useful for diff/comparison only"
     - "Any precomputed JSON catalog from unknown provenance"
   authoritative_intake: "Raw .iff / .far / save bytes from user-granted roots (owned install, Downloads, IA snapshot)"
 
@@ -484,8 +484,8 @@ workflows:
       - "Register scan_root → Steam Legacy Collection UserData + ExpansionPaths"
       - "scan_run — classify FAR/IFF, parse OBJD/STR#, set source_kind=base-game|expansion"
       - "Compute fingerprint per object — populate objects table"
-      - "Optional: compare against SimsObjects.xml as validation report only (parse_issues)"
-    never: "INSERT from SimsObjects.xml as primary catalog"
+      - "Optional: compare against legacy catalog seed as validation report only (parse_issues)"
+    never: "INSERT from legacy catalog seed as primary catalog"
 
   dragon_hoard:
     steps:

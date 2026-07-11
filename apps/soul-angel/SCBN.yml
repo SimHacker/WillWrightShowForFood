@@ -1,0 +1,31 @@
+# SCBN — Soul City Broadcast Network
+# The liminal city has a station: TV, radio, magazine.
+
+meta:
+  id: scbn
+  parent: GLANCE.yml
+  product_spec: ../../catalogs/soul-city/soul-angel.yml#broadcast_network
+
+channels:
+  tv:
+    what: "Live Twitch/YouTube gateway, machinima premieres, instant-replay segments, Repo Show simulcast"
+    source: "DVR clips + album sequences + live capture (MicropolisCore/apps/soul-angel/DVR.yml)"
+  radio:
+    what: "Audio-only — narrated albums as podcast episodes; TTS story readings (Simplifier lineage)"
+    source: "Album narration tracks stitched; TTS for text-only albums"
+  magazine:
+    what: "Published albums as web stories — the Sims Exchange revival, cross-game"
+    source: "Album engine publish -> Soul City federation CARD dirs; git-native, attributable, forkable"
+
+station_identity:
+  relation: "Repo Shows are programming; SCBN is the station; SoulAngel is the camera truck"
+  schedule: "Later — channel scheduling and identity get their own file when audience exists"
+
+federation:
+  hub: ../../catalogs/soul-city/CATALOG.yml
+  syndication: "Creator storefronts and community sites as federated nodes (SimFreaks, SimSlice lineage)"
+
+see_also:
+  - README.md   # dev home: MicropolisCore/apps/soul-angel/ (SOUL-ALBUM.yml, DVR.yml)
+  - ../stream-gateway/SPEC.yml
+  - ../../catalogs/soul-city/CATALOG.yml

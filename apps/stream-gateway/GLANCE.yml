@@ -1,10 +1,14 @@
 # stream-gateway — Brain Bus app seed (not shipped)
+# SUBSUMED BY SOULANGEL 2026-07-11: event bus, overlay, and broadcast sinks land in
+# MicropolisCore/apps/soul-angel/ (see ARCHITECTURE.yml#bus there). Specs below stay as
+# design references for that implementation.
 # Parent spec: ../../process/brain-stream.yml
 # App specs (this dir): README.md (overview+research) → SPEC.yml → cursor-tap.yml → overlay-viewer.yml
 
 app:
   id: stream-gateway
   status: spec     # was seed; specs now drafted (see this dir)
+  subsumed_by: MicropolisCore/apps/soul-angel/   # universal tier of SoulAngel
   stack: SvelteKit
   purpose: "SSE/WebSocket brain bus → OBS overlay, Twitch/YouTube chat, /brain page"
 

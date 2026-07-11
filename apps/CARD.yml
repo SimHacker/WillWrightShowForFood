@@ -7,9 +7,20 @@ room:
 
 entries:
   stream-gateway:
-    status: seed
+    status: subsumed   # by soul-angel; specs remain as design references
+    subsumed_by: MicropolisCore/apps/soul-angel/
     glance: stream-gateway/GLANCE.yml
     spec: ../process/BRAIN-STREAM.md
+  soul-angel:
+    status: spec
+    dev_home: MicropolisCore/apps/soul-angel/   # source-available; architecture, schemas, SDK, license
+    glance: soul-angel/GLANCE.yml
+    spec: ../catalogs/soul-city/soul-angel.yml
+    note: "Universal game companion — DVR, Soul Album, broadcast; micropolis-angel = Windows host + Sims 1 bridge"
+  micropolis-angel:
+    status: spec
+    role: sims1_soul_bridge_and_windows_host
+    spec: micropolis-angel/ARCHITECTURE.yml
 
 see_also:
   - README.md

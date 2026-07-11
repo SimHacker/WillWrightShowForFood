@@ -26,7 +26,7 @@ capture_regions:
     parse: "Strip §, commas; integer simoleons"
   catalog_description:
     what: "Multi-line body text in description panel"
-    lineage: "SimplifierDoc.cpp CompileGlyphs + fontBitmap — port as optional native path"
+    lineage: "Simplifier compiled-glyph matcher (SIMSKIT-LINEAGE.yml) — port as optional native path"
   preview_bitmap:
     what: "Catalog icon / 3D preview thumbnail in panel"
     use: "Perceptual hash vs previews table — disambiguate title collisions"

@@ -1,0 +1,94 @@
+# CARD — Tom Lord (memorial tribute portrayal)
+# NOT the person. Memorial mode: celebrate documented work + the stories friends tell.
+# Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: tom-lord
+  name: Tom Lord
+  type:
+  - memorial
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: memorial_skills
+card:
+  name: Tom Lord
+  title: The Scheme Underground
+  rarity: legendary
+  signifier: 🕯️
+  flavor: Nobody stays pure.
+abilities:
+- id: TOM-UNIVERSAL-ENGINE
+  name: Universal Engine
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: universalEngine
+    signature: universalEngine(scheme) → many languages, one substrate
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Fork SCM into GEL, sell RMS on one Scheme engine under all of GNU. Vindicated decades later by Guile 3.0 under Guix.
+  verifiable: GEL/Guile origin; Guile manual history; guix-devel remembrance
+  combos_with:
+  - DON-AXIS-OF-EVAL
+- id: TOM-TCL-WAR
+  name: Account of the Tcl War
+  type: activated
+  mana: '{R}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: tclWar
+    signature: tclWar(usenet) → definitive insider history, murky From line
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Ignite and chronicle free software's formative flamewar. Authorship deliberately murky — a semi-prank by "the Scheme underground."
+  verifiable: Tom's published account (basiscraft.com, archived); Vanderburg's flamewar archive
+  combos_with:
+  - DON-SIMCITY-TCLTK
+- id: TOM-DISTRIBUTED-ARCH
+  name: Tom Lord's Arch
+  type: activated
+  mana: '{G}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: tla
+    signature: tla(cvs) → distributed version control, years before git
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Ship the distributed version control argument in 2001. The argument won completely; the tool got eclipsed. That counts.
+  verifiable: GNU arch (Wikipedia); LWN remembrance
+  combos_with: []
+- id: TOM-FULL-STRENGTH
+  name: Full Strength in Public
+  type: passive
+  mana: '{W}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: civicIntensity
+    signature: civicIntensity(berkeley) → housing, climate, young writers
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Berkeley Daily Planet, Housing Advisory Commission, climate emergency truth-telling, Writer Coach Connection. The same fire, aimed at the city.
+  verifiable: Obituary by Trina Pundurs, Berkeley Daily Planet
+  combos_with: []
+invoke_rules:
+  consent: memorial
+  simulation: false
+  note: "Memorial — celebrate documented work + his own published writings; do not speak as him; Don can remember him; family consent (Trina Pundurs) guides anything show-bound."
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — memorial status, sources
+- path: memorial.md
+  why: Tribute — represent + discuss
+- path: the-tcl-war-and-guile.md
+  why: History dossier

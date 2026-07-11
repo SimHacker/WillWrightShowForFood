@@ -108,11 +108,11 @@ origin story. Archive only.
 
 ## The Sims — development art & tools
 
-![The Sims programmer art / scrapbook screenshot from development](sims-programmer-art-1.png)
+![The Sims programmer art / family album screenshot from development](sims-programmer-art-1.png)
 
-![More The Sims programmer art / scrapbook screenshot](sims-programmer-art-2.png)
+![More The Sims programmer art / family album screenshot](sims-programmer-art-2.png)
 
-Programmer-art / scrapbook screenshots. [`sims-programmer-art-1.png`](sims-programmer-art-1.png) ·
+Programmer-art / family album screenshots. [`sims-programmer-art-1.png`](sims-programmer-art-1.png) ·
 [`sims-programmer-art-2.png`](sims-programmer-art-2.png)
 
 ![Rug-O-Matic samples — Sims floor rugs generated from images (an isometric collage)](rug-o-matic-samples.png)

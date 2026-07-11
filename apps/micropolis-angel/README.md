@@ -11,7 +11,7 @@ Windows-native host for the Sims Legacy Collection companion and the unified str
 | [CATALOG-SCREEN-MATCH.yml](CATALOG-SCREEN-MATCH.yml) | Buy/build OCR → fuzzy GUID match; ambiguous candidate sets |
 | [GUID-ISSUE-HUB.yml](GUID-ISSUE-HUB.yml) | One GitHub issue per GUID; `issue_n` branch artifact tree |
 | [OBJECT-ERROR-TELEMETRY.yml](OBJECT-ERROR-TELEMETRY.yml) | ObjectError parse, consent tiers, creator notify |
-| [SIMSKIT-LINEAGE.yml](SIMSKIT-LINEAGE.yml) | Port map from TheSims/SimsKit + Sim Obliterator credit |
+| [SIMSKIT-LINEAGE.yml](SIMSKIT-LINEAGE.yml) | Capability lineage from Don's 2000s Windows tooling + Sim Obliterator credit |
 | [WINDOWS-DEV-SETUP.md](WINDOWS-DEV-SETUP.md) | **Start here on Legion** — VS, Cursor, first build, phases |
 | [native/README.md](native/README.md) | WinUI solution layout, `dotnet` CLI |
 | [native/MicropolisAngel.sln](native/MicropolisAngel.sln) | Open in Visual Studio 2022 (Windows only) |

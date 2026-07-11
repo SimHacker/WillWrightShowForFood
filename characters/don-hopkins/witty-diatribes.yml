@@ -59,3 +59,20 @@ repertoire:
     title: "Send code, not commands"
     file: axis-of-eval-send-code-not-commands.md
     one_liner: "NeWS bet the web later cashed — programs to the glass, not X11 chatter."
+
+  the_part_where_it_compiles:
+    id: part-where-it-compiles
+    title: "The Part Where It Compiles — Elk, Guile, the Tcl War, and Sun's Karma"
+    file: the-part-where-it-compiles-hn-2026.md
+    register: "Barnstorming historical tour — read aloud with full conviction"
+    one_liner: |
+      Seventy years of Lisp compilation history as one wall of text: interpreted vs compiled
+      was never the choice, batch vs incremental is. Coding agents just want what Lisp hackers
+      always wanted — a fast, honest conversation with a running system.
+    beats:
+      - "SPARC register-window continuation horror (Elk port, firsthand)"
+      - "Tom Lord eulogy — 'Nobody stays pure.'"
+      - "Sun karma: Tcl anointed, Java pivot, JavaScript eats lunch in Self's stolen clothes"
+      - "Mic drop: SBCL's compiler is named Python. 'Theirs emits machine code.'"
+    source: "https://news.ycombinator.com/item?id=48870736"
+    tribute: "Tom Lord (d. 2022) — written to be shareable with his widow"

@@ -42,12 +42,24 @@ steam_community_guides:
     Soul City (web) and Repo Shows. Not a wrapper app; no install required.
   requires: ../get-the-sims-on-steam.md
 
+soul_angel:
+  spec: soul-angel.yml
+  dev_home: MicropolisCore/apps/soul-angel/   # source-available; subsumes stream-gateway
+  summary: |
+    SoulAngel — paid Steam Software, general-purpose game companion (planted — announce after web
+    hub audience). Universal tier: always-on DVR, Soul Album with story cards + voice narration,
+    machinima, OBS/Twitch/YouTube gateway — works on ANY game. Soul Bridge tier: per-game save/album
+    read-write plugins in the web overlay. Windows first, Mac after (universal tier needs no Sims).
+  sims1_bridge: micropolis-angel.yml
+  broadcast: "Soul City Broadcast Network — TV (streams/machinima), radio (narrated albums), magazine (published stories)"
+  not: "Web wrapper; Sim*/Micropolis trademark in product name"
+
 micropolis_angel:
   spec: micropolis-angel.yml
+  role: "Sims 1 Soul Bridge module of SoulAngel"
   summary: |
-    Windows Steam Software companion (planted — announce after web hub audience). Watches over you
-    playing: Simplifier showcase, catalog/install, machinima, OBS/Twitch, Exchange revival gateway.
-  not: "Web wrapper; Mac app; Sim* trademark in product name"
+    The Sims-1-specific bridge: Family Album round-trip while game runs, family file
+    import/export, save parse, graveyard manager, Simplifier showcase, catalog crawl.
   requires: ../get-the-sims-on-steam.md
 
 hosts:

@@ -1,5 +1,8 @@
 # MicropolisAngel — unified Windows native host + stream-gateway
-# One product: Sims companion, graveyard manager, Simplifier, Twitch/YouTube/OBS rig.
+# Product rebranded SoulAngel 2026-07-11 (../../catalogs/soul-city/soul-angel.yml): universal
+# DVR/album/broadcast engine + per-game Soul Bridges. This file = Windows native host + the
+# Sims 1 bridge. Code/dir/solution rename to SoulAngel deferred until first packaging pass.
+# One app: Sims companion, graveyard manager, Simplifier, Twitch/YouTube/OBS rig.
 # Replaces Electron/CEF shell on Windows with WebView2 + WinUI 3 native services.
 
 meta:
@@ -73,7 +76,7 @@ content_platform:
   renderer_roadmap:
     now: "Simplifier-style catalog crawl — scrape preview bitmap when item selected in-game (bootstrap)"
     next: "WebGPU iff object renderer (Transmogrifier/ShowNTell parity in TS/WASM)"
-    then: "Retire scrape for object names/descriptions — IFF + SimsObjects.xml + save parse only"
+    then: "Retire scrape for object names/descriptions — IFF + legacy catalog seed + save parse only"
 
 # WINDOWS DEV STACK (Don's PC refresh)
 dev_stack:
@@ -134,7 +137,7 @@ native_apis:
     bridge: "FileBridge host object — WebView2 exposes read/write UserData paths to TS (with consent UI)"
     parse_in_ts: "Neighborhood, lot, character, object placement — Soul City iff/save reader"
     sqlite_local: "Embedded catalog DB on disk — objects, wallpapers, floors, graveyard, crawl_state"
-    seed: "Regenerate from owned install scan — SimsObjects.xml diff report only, not authoritative import"
+    seed: "Regenerate from owned install scan — legacy catalog seed used for diff report only, not authoritative import"
     watch: "Folder watcher on save dirs + ObjectError_h*.txt when launcher enables debug_objects"
 
 # GRAVEYARD MANAGER — Death, Satan, urns, tombstones
@@ -147,7 +150,7 @@ graveyard_manager:
     npcs: ["The Grim Reaper", "Satan"]
     objects: ["Urn/Tombstone", "Trajicklowna Cloisonne Urn", "Victorian Flower Urn", "Spoooky Tombstone Puzzle"]
     sources:
-      - "TheSims/SimsKit/Transmogrifier/SimsObjects.xml"
+      - "Legacy object catalog seed (see SIMSKIT-LINEAGE.yml)"
       - "Runtime ObjectError logs (NPC Satan, NPC Satan Generator)"
   capabilities:
     enumerate:
@@ -240,10 +243,10 @@ catalog_crawler:
       primary: "OCR catalog panel → fuzzy match installed objects; ambiguous sets for user/AI"
       target: "Zero OCR for static metadata — iff resource strings from install scan"
   simskit_sources:
-    - "TheSims/SimsKit/Simplifier/SimplifierDoc.cpp — UpdateView OCR, GrabClientWindow, inject"
-    - "TheSims/SimsKit/Transmogrifier/SimsObjects.xml — catalog seed"
-    - "TheSims/SimsKit/Transmogrifier/Objectifier.py — batch preview export pattern"
-    - "TheSims/SimsKit/RugOMatic/ShowNTell — ActiveX preview replaced by WebGPU"
+    - "Don's 2000s Windows tooling — capability summary in SIMSKIT-LINEAGE.yml"
+    - "Catalog showcase: pixel-font OCR + click inject (bootstrap crawler pattern)"
+    - "Object tooling: catalog seed XML + COM batch preview export pattern"
+    - "ActiveX object preview — replaced by WebGPU"
 
 # NATIVE ↔ WEB BRIDGE
 bridge:

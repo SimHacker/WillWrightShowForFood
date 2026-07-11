@@ -1,0 +1,28 @@
+# soul-angel — show/community side. DEV HOME MOVED to MicropolisCore/apps/soul-angel/
+# Product spec: ../../catalogs/soul-city/soul-angel.yml
+
+app:
+  id: soul-angel
+  status: spec
+  dev_home: MicropolisCore/apps/soul-angel/   # architecture, soul album schema, bridge SDK, DVR, license
+  purpose: "Always-on DVR + universal Soul Album + machinima/stream studio + per-game Soul Bridges"
+  subsumes: ../stream-gateway/   # brain bus + broadcast sinks fold into the universal tier
+
+tiers:
+  1_universal: "DVR ring buffer, scrub-to-card album, narration, Twitch/OBS — ANY game, zero integration"
+  2_soul_bridge: "Per-game TS plugin in web overlay — save/album read-write (The Sims 1 first)"
+  3_broadcast: "Soul City Broadcast Network — TV / radio / magazine channels"
+
+here:   # what stays in WWSFF (show/community side)
+  overview: README.md
+  network: SCBN.yml   # broadcast channels — TV, radio, magazine
+
+hosts:
+  windows: ../micropolis-angel/ARCHITECTURE.yml   # WinUI 3 + WebView2 host specs + Sims 1 bridge
+  macos: ../stream-gateway/SPEC.yml               # Mac-tier research; port after Windows v1
+
+parent_spec: ../../catalogs/soul-city/soul-angel.yml
+
+ties_to:
+  - ../../catalogs/soul-city/CATALOG.yml
+  - SimHacker/moollm/skills/thoughtful-commitment   # album card = commit; DVR = session transcript

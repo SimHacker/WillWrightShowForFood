@@ -65,8 +65,8 @@ pipeline:
   sqlite_catalog:
     status: spec
     path: "../../apps/micropolis-angel/CATALOG-DB-SCHEMA.yml"
-    regenerate: "Scan owned install + user roots via TypeScript IFF parser — NOT SimsObjects.xml import"
-    compare_only: "TheSims/SimsKit/Transmogrifier/SimsObjects.xml — validation diff, unknown quality"
+    regenerate: "Scan owned install + user roots via TypeScript IFF parser — NOT legacy seed import"
+    compare_only: "Legacy object catalog seed (SIMSKIT-LINEAGE.yml) — validation diff, unknown quality"
     lineage: "Sim Obliterator / vitamoo — full credit in schema doc"
   simplifier_crawl:
     status: spec
