@@ -4,7 +4,9 @@
 
 **Don's comment:** [33527618](https://news.ycombinator.com/item?id=33527618) (4 points) — quoting a message Don wrote to **Tom Lord in 2006**, two years before Lars Bak built V8 at Google, after running into **Dave Ungar** while he was interviewing at Laszlo Systems.
 
-This is the treasured receipt cited in [The Part Where It Compiles](the-part-where-it-compiles-hn-2026.md): JavaScript credits Self for its prototypes while missing everything else the paper was about.
+This is the treasured receipt cited in [The Part Where It Compiles](../don-hopkins/the-part-where-it-compiles-hn-2026.md): JavaScript credits Self for its prototypes while missing everything else the paper was about.
+
+*This document lives in [Tom Lord's memorial room](README.md) because it is primarily about him: his ear was the one Don was bending in 2006, and the conversation is part of his record.*
 
 ---
 
@@ -37,7 +39,8 @@ Note: the 2006 message is preserved verbatim, typos and all ("come up all the br
 
 | File | Why |
 |------|-----|
-| [`the-part-where-it-compiles-hn-2026.md`](the-part-where-it-compiles-hn-2026.md) | Cites this as the treasured receipt in the Self section |
-| [`self-interest-narcissas-mirror-david-ungar.md`](self-interest-narcissas-mirror-david-ungar.md) | Dream Repo Show episode with Ungar |
-| [`java-25-self-hotspot-jens-monig-hn-2021.md`](java-25-self-hotspot-jens-monig-hn-2021.md) | The Lars Bak / HotSpot side of the same story |
-| [`import-self-from-self.md`](import-self-from-self.md) | Self → MOOLLM prototype lineage |
+| [`memorial.md`](memorial.md) | Tom's tribute, which this conversation feeds |
+| [`../don-hopkins/the-part-where-it-compiles-hn-2026.md`](../don-hopkins/the-part-where-it-compiles-hn-2026.md) | Cites this as the treasured receipt in the Self section |
+| [`../don-hopkins/self-interest-narcissas-mirror-david-ungar.md`](../don-hopkins/self-interest-narcissas-mirror-david-ungar.md) | Dream Repo Show episode with Ungar |
+| [`../don-hopkins/java-25-self-hotspot-jens-monig-hn-2021.md`](../don-hopkins/java-25-self-hotspot-jens-monig-hn-2021.md) | The Lars Bak / HotSpot side of the same story |
+| [`../don-hopkins/import-self-from-self.md`](../don-hopkins/import-self-from-self.md) | Self → MOOLLM prototype lineage |

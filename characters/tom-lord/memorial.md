@@ -41,6 +41,16 @@ art of compilable language design in 2006. Tom's body of work and his philosophi
 extension languages, universal engines, and who gets to control the substrate are a rich source
 of wisdom that hardly anybody mines.
 
+Berkeley wasn't just where he lived; by his own account it saved him. In a 2010 conversation
+with Don he wrote that in his darkest days, "Hate man and several of the brothers in the park
+basically saved my life" — Hate Man being Mark Hawthorne, the ex-New York Times reporter monk
+of Telegraph Avenue who wouldn't talk to you until you told him you hated him, being straight
+about the negatives so a real conversation could happen. Tom first heard of him in 1983 in
+Massachusetts, and said arriving in Berkeley was like walking into the landscape of a favorite
+children's book he'd read years before. The full exchange, in his own words:
+
+[Tom and Don on Hate Man, April 2010](sources/2010-04-hate-man-facebook-exchange.md)
+
 In Berkeley, where he settled permanently in 2004, he brought the same fierce, principled
 intensity to civic life: contributing to the Berkeley Daily Planet, serving on the City Housing
 Advisory Commission, advocating for housing and the homeless, and — after reading the IPCC's
@@ -54,10 +64,29 @@ Thomas Lord 1966–2022, obituary by Trina Pundurs, Berkeley Daily Planet:
 
 https://berkeleydailyplanet.com/issue/2022-06-26/article/49837
 
+## Remembrances
+
 We remember him through the people who loved him and argued with him — starting with
-[Don](../don-hopkins/README.md), whose July 2026 Hacker News history of the Tcl War,
-[The Part Where It Compiles](../don-hopkins/the-part-where-it-compiles-hn-2026.md), is
-partly a tribute to Tom.
+[Don](../don-hopkins/README.md), who published two remembrances of Tom on Hacker News in July
+2026, in a thread about Haskell, Lisp, and compilers that Tom would have torn into with relish:
+
+- **The Part Where It Compiles** — the history of Elk, GEL/Guile, and the Tcl War, partly a
+  tribute to Tom. Live comment:
+  [news.ycombinator.com/item?id=48870736](https://news.ycombinator.com/item?id=48870736) ·
+  [our version](../don-hopkins/the-part-where-it-compiles-hn-2026.md)
+- **I HATE YOU!!!!** — the Hate Man remembrance: Tom's own 2010 testimony that Hate Man and the
+  brothers of People's Park saved his life, and the conversation that picked back up sixteen
+  years later on his memorial page.
+  [Our version](hate-man-remembrance-hn-2026.md), built on the
+  [verbatim 2010 exchange](sources/2010-04-hate-man-facebook-exchange.md).
+
+Documents primarily about Tom live here in his room:
+
+- [Self, V8, and the lost art of compilable language design](self-v8-tom-lord-2006-hn-2022.md) —
+  Don's treasured 2006 conversation with Tom, two years before V8
+- [The Tcl War and Guile dossier](the-tcl-war-and-guile.md)
+- [XML vs S-expressions, 1998, cc RMS](sources/1998-01-16-xml-vs-sexpressions-email.md)
+- [Tom and Don on Hate Man, April 2010](sources/2010-04-hate-man-facebook-exchange.md)
 
 We celebrate his documented public work and his own published words; we do not speak as him.
 

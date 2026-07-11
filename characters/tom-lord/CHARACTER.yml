@@ -41,7 +41,7 @@ memorial:
     - "**Nobody stays pure** — even Tom, patron saint of the embeddable Scheme interpreter, compiled the performance-critical parts of his Scheme editor with the Hobbit compiler (his own account)"
     - "**Universal engine argument** — one Scheme engine executing many surface languages; vindicated decades later by Guile 3.0 under Guix"
     - "**Berkeley civic life** — Berkeley Daily Planet contributor; appointed to the City Housing Advisory Commission in 2016; after the IPCC SR15 report, a tireless advocate for treating the climate emergency as an actual emergency; Writer Coach Connection volunteer at Longfellow Middle School"
-    - "**People's Park** — a place and a society that held great meaning for him (obituary)"
+    - "**People's Park** — a place and a society that held great meaning for him (obituary); in his own 2010 words, 'Hate man and several of the brothers in the park basically saved my life' (sources/2010-04-hate-man-facebook-exchange.md)"
 
 bio:
   summary: >
@@ -69,8 +69,10 @@ sources:
     - { url: "http://vanderburg.org/old_pages/Tcl/war/", note: "Glenn Vanderburg's archive of the original 1994 flamewar" }
   don_testimony:
     - { path: ../don-hopkins/the-part-where-it-compiles-hn-2026.md, note: "HN tribute and Tcl War history, July 2026" }
-    - { path: ../don-hopkins/self-v8-tom-lord-2006-hn-2022.md, note: "2006 conversation with Tom about Self, Ungar, and compilable language design" }
+    - { path: self-v8-tom-lord-2006-hn-2022.md, note: "2006 conversation with Tom about Self, Ungar, and compilable language design (moved into this room)" }
     - { path: sources/1998-01-16-xml-vs-sexpressions-email.md, note: "1998 email debate: Tom's S-expression manifesto vs Don's XML defense, cc RMS" }
+    - { path: sources/2010-04-hate-man-facebook-exchange.md, note: "Tom in his own words: Hate Man and the brothers of People's Park saved his life; the '83 children's-book origin story; screenshot in media/" }
+    - { path: hate-man-remembrance-hn-2026.md, note: "Don's public HN remembrance built on the 2010 exchange: I HATE YOU!!!! as a love letter, ending on the Berkeley cow" }
 
 see_also:
   - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }

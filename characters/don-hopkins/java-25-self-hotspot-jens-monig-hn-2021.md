@@ -102,7 +102,7 @@ All those ideas from Self were portable, and migrated out of Self to Java then t
 | File | Why |
 |------|-----|
 | [`the-part-where-it-compiles-hn-2026.md`](the-part-where-it-compiles-hn-2026.md) | The Sun karma section draws on this receipt |
-| [`self-v8-tom-lord-2006-hn-2022.md`](self-v8-tom-lord-2006-hn-2022.md) | The 2006 Tom Lord conversation, same lineage |
+| [`../tom-lord/self-v8-tom-lord-2006-hn-2022.md`](../tom-lord/self-v8-tom-lord-2006-hn-2022.md) | The 2006 Tom Lord conversation, same lineage (in Tom's room) |
 | [`self-interest-narcissas-mirror-david-ungar.md`](self-interest-narcissas-mirror-david-ungar.md) | Dream Repo Show episode with Ungar |
 | [`snap-visual-engines-fundable-goals.md`](snap-visual-engines-fundable-goals.md) | Jens Mönig / Snap! connection |
 | [`kaleida-scriptx-dreamscape-multimedia-lisp-machine.md`](kaleida-scriptx-dreamscape-multimedia-lisp-machine.md) | The Kaleida/ScriptX sinking-language chapter |

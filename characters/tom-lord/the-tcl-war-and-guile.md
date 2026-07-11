@@ -56,10 +56,20 @@ says so plainly.
 
 Don was on all sides at once: he had hacked on **Elk** (Oliver Laumann's Extension Language Kit,
 the other embeddable Scheme, for which Don wrote the SPARC port) before the war, and during it he
-was shipping **SimCity for Unix on Tcl/Tk** — Tk being the draw, Tcl being the reason Tk never
-had to badly reinvent a scripting language. He demoed multiplayer SimCity to Ousterhout in his
-Berkeley office. He and Tom argued about all of it, for decades, the way you can only argue with
-someone who has actually built the thing being argued about.
+was shipping **SimCity for Unix on Tcl/Tk** — Tk being the draw. Don concedes Tom and RMS were
+largely right about Tcl's weaknesses: he pushed Tcl/Tk far beyond their original design,
+fixed multi-head X resource bugs and Tcl UI mouse-tracking for **multiplayer Tk**, and built a
+fully functional coordinating voting collaborative game on top, not just googly eyeballs on two
+screens. His deeper point in the 2026 remembrance: **having an extension language at all** is a
+higher-order design bit than having a *perfect* one, especially for GUI toolkits whose concerns
+overlap extension-language territory (compare Xt intrinsics and X resource stringly-typed
+nano-DSLs for bindings, fonts, colors, state machines, and configuration). Tk stayed simple by
+assuming Tcl at runtime; Python tkinter, Perl Tk, and Ruby tk.rb still embed Tcl and trampoline
+across the boundary rather than replacing it. That design argument connects to Ousterhout's
+system-language vs glue-language dichotomy, one of the Tcl War's lasting literary outputs. He
+demoed multiplayer SimCity to Ousterhout in his Berkeley office. He and Tom argued about all of
+it, for decades, the way you can only argue with someone who has actually built the thing being
+argued about.
 
 The full history, written as a tribute:
 

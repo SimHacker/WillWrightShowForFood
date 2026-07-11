@@ -66,13 +66,29 @@ Elk: The Extension Language Kit, Laumann and Bormann, USENIX Computing Systems, 
 
 https://www.usenix.org/legacy/publications/compsystems/1994/fall_laumann.pdf
 
-I was on all sides of that war at once. Tom and I had heated arguments because I was shipping on the other side: I ported SimCity to Unix with Tcl/Tk, and Tk was the driving factor, not Tcl. But Tk worked so well precisely because a real scripting language was part of its design from day one, so it never had to badly reinvent one, which is Greenspun's Tenth Rule, the curse of every extensible app before and since. I even demoed multiplayer SimCity to Ousterhout in his office at Berkeley. And then Sun, having anointed Tcl the ubiquitous scripting language of the internet, pivoted on a dime to Java, got its lunch eaten by JavaScript, a language whose deepest debt is to Self, which Sun also starved. The Self people who left applied the ideas at Animorphic, got bought back, and built HotSpot. As an OG NeWS developer I know exactly how it feels to be promised the world by Sun and left on the back porch in the rain, so I have nothing but empathy for the Tcl/Tk and Self teams. I've been posting these receipts for a decade:
+I was on all sides of that war at once. Tom and I had heated arguments because I was shipping on the other side: I ported SimCity to Unix with Tcl/Tk, and Tk was the driving factor, not Tcl (and Tcl's weaknesses were real, and Tom and RMS's arguments against it were largely correct: I used Tcl/Tk extensively and pushed them in ways they were not originally designed to be used; multiplayer Tk was a challenge, I had to fix multi-head bugs in X resource management and Tcl UI menu and other mouse-tracking code, and I built a fully functional multiplayer coordinating voting collaborative game on top of it instead of just getting it to draw googly eyeballs on two screens at once; I am painfully aware their arguments are right).
+
+But having an extension language at all is a higher-order bit than having a perfect one, especially when you are designing a GUI toolkit, whose concerns partially overlap those of an extension language. Look at what the X toolkit intrinsics and the toolkits and window managers built on top of them abused X resources for: stringly typed nano-domain-specific languages and semantics and protocols between differently named resources in the same file. Key and mouse bindings, user configuration, fonts and colors and measurements and dimensions and scales, state machines, commands, preconditions, postconditions, parameter bindings, and and and I could go on forever. All of that is what a real extension language is for. Tk worked so well precisely because a real scripting language (no matter how arguably weak) was part of its design from day one, so it never had to badly reinvent one, which is Greenspun's Tenth Rule, the curse of every extensible app before and since.
+
+And the ecosystem kept proving the point: Python's tkinter still embeds a Tcl interpreter with each Tk root, assembles Tcl/Tk command strings, and passes them through _tkinter to be evaluated, and you can register Python functions as Tcl commands and trampoline back across the boundary (the same class of plumbing obsession as SWIG: who owns the glue, and what shape is the trampoline?). Tk never really grew a clean pluggable "bring your own scripting language" extension point; Perl Tk, Ruby's tk.rb, and the rest generally still talk Tcl to the toolkit. The design win is simpler and more Self-like than that: assume a scripting language, any scripting language, is available at runtime, and the toolkit can stay small and SIMPLE.
+
+Which loops back to one of the greatest pieces of language design literature the Tcl War left behind, one that historians and archaeologists will study for centuries: what even counts as a scripting language? Ousterhout's answer was the system-programming-language versus glue-language split, two languages for a large system, typelessness and strings as the uniform wire format between components.
+
+Scripting: Higher-Level Programming for the 21st Century, John Ousterhout, IEEE Computer, 1998:
+
+https://web.stanford.edu/~ouster/cgi-bin/papers/scripting.pdf
+
+I even demoed multiplayer SimCity to Ousterhout in his office at Berkeley.
+
+And then Sun, having hired Ousterhout and his team, then anointed Tcl the ubiquitous scripting language of the internet, pivoted on a dime to Java, got its lunch eaten by JavaScript, a language whose deepest debt is to Self, which Sun also starved. The Self people who left applied the ideas at Animorphic, got bought back, and built HotSpot. As an OG NeWS developer I know exactly how it feels to be promised the world by Sun and left on the back porch in the rain, so I have nothing but empathy for the Tcl/Tk and Self teams. I've been posting these receipts for a decade:
 
 https://news.ycombinator.com/item?id=28669698
 
 https://news.ycombinator.com/item?id=25888450
 
-And the one I treasure, a conversation I had with Tom in 2006, two years before V8, about running into Dave Ungar and the irony that JavaScript credits Self for its prototypes while missing everything else the paper was actually about. It's right there in the title: "Self: The Power of Simplicity." Simplicity first. And behind that, the two hard tricks that made the simplicity affordable: compiling a radically dynamic language to fast native code, and keeping it debuggable at the same time. That last one is the sleeper. Anyone can pick two of simplicity, performance, and debuggability. Self's dynamic deoptimization let you debug fully optimized code as if it were running unoptimized, source-level, mid-flight, and that machinery went straight into HotSpot too. JavaScript took the prototypes, which were the cheap part:
+And the one I treasure, a conversation I had with Tom in 2006, two years before V8, about running into Dave Ungar and the irony that JavaScript credits Self for its prototypes while missing everything else the paper was actually about. It's right there in the title: "Self: The Power of Simplicity." Simplicity first.
+
+And behind that, the two hard tricks that made the simplicity affordable: compiling a radically dynamic language to fast native code, and keeping it debuggable at the same time. That last one is the sleeper. Anyone can pick two of simplicity, performance, and debuggability. Self's dynamic deoptimization let you debug fully optimized code as if it were running unoptimized, source-level, mid-flight, and that machinery went straight into HotSpot too. JavaScript took the prototypes, which were the cheap part:
 
 Self: The Power of Simplicity, Ungar and Smith, OOPSLA 1987:
 
@@ -138,7 +154,7 @@ JavaScript are the proof that the lineage won even where the parentheses lost.
 
 | File | Why |
 |------|-----|
-| [`self-v8-tom-lord-2006-hn-2022.md`](self-v8-tom-lord-2006-hn-2022.md) | The treasured 2006 Tom Lord receipt, preserved in full |
+| [`../tom-lord/self-v8-tom-lord-2006-hn-2022.md`](../tom-lord/self-v8-tom-lord-2006-hn-2022.md) | The treasured 2006 Tom Lord receipt, preserved in full (in Tom's room) |
 | [`java-25-self-hotspot-jens-monig-hn-2021.md`](java-25-self-hotspot-jens-monig-hn-2021.md) | Sun karma receipts: Lars Bak, HotSpot, Ungar, Jens Mönig conversation |
 | [`ai-slop-radar-transdar-hn-2026.md`](ai-slop-radar-transdar-hn-2026.md) | The perfect-radar reply, adjacent to the flag/repost backstory |
 | [`self-interest-narcissas-mirror-david-ungar.md`](self-interest-narcissas-mirror-david-ungar.md) | Ungar/Self connection, the mirror API lineage |

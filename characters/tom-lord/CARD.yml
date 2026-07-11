@@ -66,6 +66,22 @@ abilities:
   effect: Ship the distributed version control argument in 2001. The argument won completely; the tool got eclipsed. That counts.
   verifiable: GNU arch (Wikipedia); LWN remembrance
   combos_with: []
+- id: TOM-I-HATE-YOU
+  name: I Hate You (Love Letter)
+  type: passive
+  mana: '{B}{W}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: oppositionality
+    signature: oppositionality(friendship) → be straight about the negatives, then have a real conversation
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: 'Hate Man and the brothers of People''s Park "basically saved my life" (Tom, 2010). Heated argument as the grammar of love: the argument is the handshake.'
+  verifiable: 2010 Facebook exchange (sources/2010-04-hate-man-facebook-exchange.md, screenshot in media/); SF Chronicle Hate Man profile (archived)
+  combos_with:
+  - TOM-TCL-WAR
 - id: TOM-FULL-STRENGTH
   name: Full Strength in Public
   type: passive
@@ -92,3 +108,7 @@ see_also:
   why: Tribute — represent + discuss
 - path: the-tcl-war-and-guile.md
   why: History dossier
+- path: hate-man-remembrance-hn-2026.md
+  why: The I HATE YOU!!!! remembrance — oppositionality as love
+- path: self-v8-tom-lord-2006-hn-2022.md
+  why: The 2006 Self/V8 conversation, moved into this room

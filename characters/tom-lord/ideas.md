@@ -28,12 +28,21 @@
    the Tcl War, aimed at his city. This segment belongs to the people who shared that work with
    him, if they want it.
 
+6. **I hate you — oppositionality as friendship** — the Hate Man segment. Tom's own 2010 words:
+   "Hate man and several of the brothers in the park basically saved my life." The '83
+   Massachusetts story, Berkeley as a children's book landscape, the circle in Sproul Plaza "all
+   in the name of Hate," and the conversation that picked back up sixteen years later with
+   I HATE YOU!!!! on his memorial page. End on the cow.
+
 ## Anchors and artifacts
 
 - [Tom's Account of the Tcl War](https://web.archive.org/web/20110102015130/http://basiscraft.com/0800-0100-the-tcl-war.html) — the definitive text, in his voice
-- [Don's HN tribute-history](../don-hopkins/the-part-where-it-compiles-hn-2026.md) — the connective narrative
+- [Don's HN tribute-history](../don-hopkins/the-part-where-it-compiles-hn-2026.md) — the connective narrative ([live comment](https://news.ycombinator.com/item?id=48870736))
+- [The Hate Man remembrance](hate-man-remembrance-hn-2026.md) — built on the [2010 exchange](sources/2010-04-hate-man-facebook-exchange.md)
+- [The 2006 Self/V8 conversation](self-v8-tom-lord-2006-hn-2022.md) — compilable language design, two years before V8
 - [The 1998 email](sources/1998-01-16-xml-vs-sexpressions-email.md) — a preserved argument between friends
 - [The dossier](the-tcl-war-and-guile.md) — full sourced timeline
+- [Cows In Berkeley? Moooo](https://www.youtube.com/watch?v=10JSPdTDFsI) — the closing minute
 
 ## Who to invite (documented connections, consent first)
 
