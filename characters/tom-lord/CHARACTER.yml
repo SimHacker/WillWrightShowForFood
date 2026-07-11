@@ -64,6 +64,7 @@ sources:
     - { url: "https://berkeleydailyplanet.com/issue/2022-06-26/article/49837", note: "Obituary by Trina Pundurs, Berkeley Daily Planet, June 2022" }
     - { url: "https://lwn.net/Articles/901807/", note: "Tom Lord RIP — LWN, July 2022" }
     - { url: "http://lambda-the-ultimate.org/node/5653", note: "Thomas Lord, an LtU regular, dies at 56" }
+    - { url: "http://lambda-the-ultimate.org/user/3938/track", note: "Tom's LtU post tracker — years of his programming-language philosophy, in his own words" }
     - { url: "https://lists.gnu.org/r/guix-devel/2022-07/msg00227.html", note: "guix-devel remembrance — early (or first) maintainer of Guile" }
     - { url: "https://web.archive.org/web/20110102015130/http://basiscraft.com/0800-0100-the-tcl-war.html", note: "An Account of the Tcl War — Tom's own published history" }
     - { url: "http://vanderburg.org/old_pages/Tcl/war/", note: "Glenn Vanderburg's archive of the original 1994 flamewar" }
