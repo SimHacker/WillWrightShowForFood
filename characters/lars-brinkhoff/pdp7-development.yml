@@ -5,6 +5,7 @@ meta:
   character: lars-brinkhoff
   show: repo-shows/pixie-pie-menus-pdp7.yml
   updated: "2026-07-03"
+  human_readable: pdp7-development.md
 
 manuals:
   hardware_stack: media/reference/cambridge-pixie-hardware-stack.yml

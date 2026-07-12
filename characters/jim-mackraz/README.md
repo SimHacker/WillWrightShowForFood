@@ -11,5 +11,20 @@ shipped. Don credits him with keeping the team (and Don himself) focused enough 
 
 ## Why a Repo Show
 
-A natural voice for the [Sims team reunion](../../repo-shows/REPO-SHOWS.yml), especially on
-leadership and how an ambitious, chaotic project came together and shipped.
+A natural voice for the [Sims team reunion](../../repo-shows/building-the-sims/), especially on
+leadership, **turd polishing**, and what reached CTG from pool architecture debates.
+
+## Files
+
+| File | Purpose |
+|------|---------|
+| [`invitation.md`](invitation.md) | Send-ready draft |
+| [`ideas.md`](ideas.md) | Conversation hooks |
+| [`../../repo-shows/building-the-sims/team-stories.md`](../../repo-shows/building-the-sims/team-stories.md) | Turd polishing + CTG context |
+| [`CHARACTER.yml`](CHARACTER.yml) | Machine-readable portrayal |
+
+## See also
+
+- [`../jamie-doornbos/`](../jamie-doornbos/) · [`../eric-bowman/`](../eric-bowman/) · [`../patrick-j-barrett-iii/`](../patrick-j-barrett-iii/) — core Sims programmers
+- [`../don-hopkins/`](../don-hopkins/) — Sims teammate; host
+- [`../../will-wright/sims-team-steering-committee-playthrough/`](../../will-wright/sims-team-steering-committee-playthrough/) — optional reunion playthrough

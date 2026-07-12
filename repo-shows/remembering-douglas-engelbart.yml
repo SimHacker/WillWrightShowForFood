@@ -50,6 +50,11 @@ guests:
     connection: "Internet Old Farts Club (2022): fifty-year-old Engelbart mouse photo; donated chord keyset to Stanford Hohbach collection; alerted Don to $54k auction; attended Ted Nelson's Engelbart tribute."
     verified: true
     in_repo: ../characters/dave-maynard/sources/internet-old-farts-mouse-thread-2022.md
+  - name: "David H. Crocker"
+    character: characters/dave-crocker/
+    connection: "Personal NLS learner via brother Steve at ARPA — text interface first, invited to Menlo Park mouse/keypad class. Witness to ARC collaborative tone ('Come on in, the water's fine'). Emulated NLS paragraph model in PL/1 for a student crisis-hotline Counselor's Manual. RFC 733/822 author; NLS-mail → Internet-mail lineage. Facebook Jul 2026 thread with Don on Engelbart article + Ted Nelson tribute room."
+    verified: true
+    in_repo: ../characters/dave-crocker/sources/facebook-engelbart-collaborative-tone-2026.md
   - name: "Bret Victor"
     character: characters/bret-victor/
     connection: "Wrote 'A few words on Doug Engelbart' (2013) — the definitive plea to read Engelbart's INTENT, not his feature list. The conscience of this tribute's framing."
@@ -61,11 +66,13 @@ centerpieces:
   ted_eulogy: "Screen / read from Ted Nelson's CHM eulogy (in repo) — joy and tears at once."
   yoot_engelbart_and_alan: "Yoot interviewed BOTH Doug and Alan in Japan in the early '90s. Revisit his own Engelbart interview on air, and pair Yoot + Alan to revisit the companion Alan Kay interview (also the spine of alan-kay-microworld.yml)."
   engelbart_mouse_and_keyset: "Don + David Maynard — feel the wheels, chord alphabet, Stanford donation, auction economics, 3D-scan reproduction plan. See ../characters/douglas-engelbart/engelbart-mouse-and-keyset.md"
+  nls_text_to_mail_standards: "Dave Crocker — text NLS → Menlo Park class invitation; paragraph model → hotline manual; NLS mail → RFC 733/822 arc. Complements Maynard's hardware beat with augmentation-as-practice."
   bret_reframe: "Open and close on Bret's question — what world was Doug trying to create, and how do WE build it?"
 
 threads:
   - "Augmenting intellect vs. automating it — the through-line to Player-in-the-Middle and the AI manifesto."
   - "Bootstrapping — improving the means of improvement (NLS, the ARC, the unfinished agenda)."
+  - "NLS text interface → mouse class → Internet mail standards — Dave Crocker's lived thread from Doug's lab to RFC 822."
   - "Collective intelligence as the actual goal — what the web got right, what it degraded (cf. the 'LOLCats' critique)."
   - "From NLS to the Dynabook to Dynamicland — Bret's lineage as continuation, not nostalgia."
   - "Show the mouse + chord keyset on air — and the 'democratize the keyset' preservation idea: 3D-scan it, publish free printable + working-replica files (see ../process/crazy-idea-jam.yml#engelbart_keyset_3d_replica)."
@@ -81,6 +88,7 @@ ties_to:
   - ../characters/douglas-engelbart/engelbart-mouse-and-keyset.md
   - ../characters/douglas-engelbart/eulogy-ted-nelson.md
   - ../characters/dave-maynard/
+  - ../characters/dave-crocker/
   - ../characters/don-hopkins/sources/2022-2023-engelbart-mouse-alan-kay.md
   - ../characters/ted-nelson/
   - ../characters/alan-kay/

@@ -84,4 +84,4 @@ line → PIXIE). [**Ivan Sutherland**](../ivan-sutherland/) — hero / north sta
 
 ---
 
-↑ [Heinz's room](README.md) · [correspondence](correspondence.yml) · [show seed](../../repo-shows/pixie-pie-menus-pdp7.yml) · [pull-in gaps](pull-in-gaps.yml)
+↑ [Heinz's room](README.md) · [correspondence](correspondence.md) · [show seed](../../repo-shows/pixie-pie-menus-pdp7.yml) · [pull-in gaps](pull-in-gaps.md)

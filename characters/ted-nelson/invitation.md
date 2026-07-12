@@ -46,8 +46,16 @@ Either shape — or both, or neither — works. **You pick.**
 - **Hypertext as you actually meant it** — Project Xanadu, transclusion, **visible parallel
   connections** instead of one-way jumplinks into the dark, and intertwingularity. (I tried to
   build this whole repo in that spirit — links and transcluded artifacts you can see.)
-- **"Copy-and-paste to an invisible clipboard is evil"** — I completely agree. Is that rant
-  captured on video anywhere, or would you reprise it for the record?
+- **"Copy-and-paste to an invisible clipboard is evil"** — I completely agree. Recordings and
+  transcripts are catalogued in
+  [`sources/invisible-clipboard-rant-catalog.md`](sources/invisible-clipboard-rant-catalog.md)
+  — BayCHI 2021 ([your talk](https://www.youtube.com/watch?v=dOLXLk8TbxQ), introduced by Ted Selker),
+  [Internet Archive *Cut and Paste, 2014*](https://archive.org/details/cutnpaste_201909),
+  scissors demo, Engelbart colloquium (*cram and vomit*), [One-Liners](https://xanadu.com.au/ted/TN/WRITINGS/TCOMPARADIGM/tedCompOneLiners.html).
+  **Would you reprise it for the record?** I'd love **you + David Rosenthal** (he wrote the X11
+  ICCCM) + me — and **Ted Selker** (he hosted that BayCHI night), **Ben Shneiderman** (HyperTIES
+  links), **Brad Myers** (*Pick, Click, Flick!*) welcome if you want a panel.
+  Seed: [`repo-shows/selections-icccm-clipboard.yml`](../../repo-shows/selections-icccm-clipboard.yml).
 - **Computers for Cynics** — live, with whatever updates you'd add.
 - **Remembering Doug.** I only met Doug Engelbart once, and we commiserated about how hard it is to
   get society to accept new ideas — that conversation gave me the resolve to never give up on my

@@ -14,8 +14,9 @@ Eric is an independent artist — go subscribe and follow:
 - 🎮 **Aether HeXXen** (his 'space witch' visual novel): [Steam](https://steamcommunity.com/app/4033750/) · [itch.io](https://irkinteraction.itch.io/aether-hexxen-death-space-requiem-act-1)
 - ☕ **Support / commissions:** [Patreon](https://www.patreon.com/c/irkinteraction) · [Ko-fi](https://ko-fi.com/irkinteraction)
 
-There are easily several Repo Shows' worth of stories here.
+There are easily several Repo Shows' worth of stories here — including **swimming pool** production
+lore (touchy subject in team mythology: ladders, drowning, urn-ring QA saves).
 
-[Invitation](invitation.md) · [Show seed](../../repo-shows/eric-hedman/README.md) · more in [`CHARACTER.yml`](CHARACTER.yml)
+[Invitation](invitation.md) · [Reunion hub](../../repo-shows/building-the-sims/README.md) · [Show seed](../../repo-shows/eric-hedman/README.md) · more in [`CHARACTER.yml`](CHARACTER.yml)
 
 Subject may request correction or removal anytime.

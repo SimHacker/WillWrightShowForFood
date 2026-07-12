@@ -48,6 +48,9 @@ for linked segments if you're willing — or we honor her in the microworld show
   still owes Smalltalk.
 - **Yoot Tower / Alan Kay interview 1993** — transcript cleanup thread; open-source tower revival.
 - **MOOLLM** — directories as rooms; skills as prototypes; `# import self from self` (Ungar lineage).
+- **unnatural-selection** (welcome) — window-system prehistory; icon vs selection nomenclature war;
+  MOOLLM as visible transfer vs invisible clipboard.
+  [`../david-rosenthal/00-START-HERE.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/00-START-HERE.md)
 
 **Format:** Remote is fine — teleintertwingle whenever you like. **Zero homework — as much *homefun* as you are up to.** Warm room.
 

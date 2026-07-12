@@ -51,7 +51,9 @@ orchestration. [`kaleida-scriptx-...`](../don-hopkins/kaleida-scriptx-dreamscape
 
 Self made delegation **fast** — and that lineage runs into the VMs that run the web. Delicious
 irony: JavaScript runs fast today **because of Self's implementation tech** while keeping a
-broken object model. Pairs with [`norman-margolus`](../norman-margolus/) "who JITs the jitter?"
+broken object model — a single prototype chain with **no multiple inheritance**, the central
+Self quality whose fast compilation was the hard problem the PICs solved in the first place.
+Pairs with [`norman-margolus`](../norman-margolus/) "who JITs the jitter?"
 
 ### 6. Stage Magic → GLANCE / CARD / SKILL
 

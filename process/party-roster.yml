@@ -44,12 +44,18 @@ right_away:
     - { id: oliver-steele, show: [repo-shows/oliver-steele/, repo-shows/openlaszlo/], invite: draft, next: "send OpenLaszlo + instance-first" }
 
   sims_team_reunion:
-    - { id: jamie-doornbos, show: building-the-sims, invite: send_ready, send_batch: sims-reunion-2026, next: "batch send w/ reunion — ask swimming pools objects vs rooms" }
+    - { id: jamie-doornbos, show: building-the-sims, invite: send_ready, send_batch: sims-fest-2026, next: "Sims Fest — pool architecture / SimAntics" }
     - { id: tom-van-dijk, show: building-the-sims, invite: draft, contact: [email redacted], location: Deventer, next: "NL meet — IFF Pencil + Behavior.iff + pair Jamie/Heather" }
-    - { id: eric-bowman, show: building-the-sims, invite: send_ready, send_batch: sims-reunion-2026, next: "batch send w/ reunion" }
-    - { id: patrick-j-barrett-iii, show: did-the-sims-make-you-gay, invite: send_now, send_batch: sims-reunion-2026, next: "same-sex romance integrated episode — Avila comments + engine room w/ Don" }
-    - { id: eric-hedman, show: repo-shows/eric-hedman/, invite: send_ready, send_batch: sims-reunion-2026, also: pantomime w/ david-levitt, next: "batch send — Sims + Pantomime three-hander option" }
-    - { id: jerry-martin, show: music-and-theory, invite: send_ready, send_batch: sims-reunion-2026, pair_with: david-levitt, next: "send when Levitt dates — music + theory episode" }
+    - { id: eric-bowman, show: building-the-sims, invite: send_ready, send_batch: sims-fest-2026, next: "Sims Fest — grid + pool layer" }
+    - { id: jim-mackraz, show: building-the-sims, invite: send_ready, send_batch: sims-fest-2026, next: "Sims Fest — CTG + turd polishing" }
+    - { id: patrick-j-barrett-iii, show: did-the-sims-make-you-gay, invite: send_now, send_batch: sims-fest-2026, next: "integrated episode; optional pool-ladder culture beat" }
+    - { id: eric-hedman, show: repo-shows/eric-hedman/, invite: send_ready, send_batch: sims-fest-2026, also: pantomime w/ david-levitt, next: "Sims Fest — object pipeline + pools" }
+    - { id: chris-trottier, show: [building-the-sims, design-by-accretion], invite: draft, send_batch: sims-fest-2026, next: "Sims Fest — design by accretion" }
+    - { id: claire-curtin, show: building-the-sims, invite: draft, send_batch: sims-fest-2026, next: "Sims Fest — Simlish + tone" }
+    - { id: lucy-bradshaw, show: building-the-sims, invite: draft, send_batch: sims-fest-2026, channel: facebook, next: "★ Sims Fest — SVP/GM leadership; invitation ready" }
+    - { id: luc-barthelet, show: [building-the-sims, repo-shows/luc-barthelet-sims-online/], invite: draft, send_batch: sims-fest-2026, next: "Sims Fest + TSO thread" }
+    - { id: jerry-martin, show: music-and-theory, invite: send_ready, send_batch: sims-fest-2026, pair_with: david-levitt, next: "music-and-theory; Sims Fest cameo OK" }
+    - { id: samuel-klein, show: walter-bender-olpc, invite: draft, channel: facebook, next: "OLPC GDC evangelism — pair Walter; invitation ready" }
     - { id: scott-mccloud, show: repo-shows/scott-mccloud/, invite: send_ready, send_batch: sims-reunion-2026, next: "patron saint for reunion" }
 
   interval_reunion:
@@ -104,10 +110,10 @@ right_away:
 
   preservation_archives:
     - { id: phil-salvador, show: repo-shows/phil-salvador-simrefinery/, invite: none, next: "write invitation + love" }
-    - { id: luc-barthelet, show: repo-shows/luc-barthelet-sims-online/, invite: none, next: "write invitation TSO → Micropolis" }
 
   other_party:
     - { id: dave-maynard, show: remembering-douglas-engelbart, invite: draft, next: "Engelbart mouse segment w/ Don — Old Farts Club, Stanford keyset" }
+    - { id: dave-crocker, show: remembering-douglas-engelbart, invite: draft, priority: warm_lead, channel: facebook, next: "Reply on Facebook — NLS text→mail standards; Ted tribute contrast; invitation.md ready" }
     - { id: charchit-goyal, show: none, invite: none, next: "field contact — Wedge AE pie menu beta; Reddit routed to Don Jul 2026" }
     - { id: ken-kahn, show: repo-shows/ken-kahn/, invite: draft, next: "ToonTalk / constructionism" }
     - { id: matthew-sibigtroth, show: repo-shows/matthew-sibigtroth/, invite: draft, next: "flesh show" }

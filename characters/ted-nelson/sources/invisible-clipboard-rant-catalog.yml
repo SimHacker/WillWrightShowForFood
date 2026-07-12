@@ -1,0 +1,94 @@
+# Ted Nelson — invisible clipboard / true cut-and-paste rant catalog
+# Primary sources for Repo Show: selections-icccm-clipboard.yml
+
+meta:
+  character: ted-nelson
+  curated_by: don-hopkins
+  consent: not_yet_asked
+  show: ../../../repo-shows/selections-icccm-clipboard.yml
+  companion: invisible-clipboard-rant-catalog.md
+
+position_summary: |
+  Modern **cut** = hide into invisible buffer; **paste** = plug/blurp from hidey-hole.
+  True cut-and-paste = **parallel visible rearrangement** (Tolstoy's noodles, NY Times paste
+  pots). **Cram and Vomit** (Ctrl+C/V). Alternative: **transclusion** + visible connections.
+
+recordings:
+  baychi_2021:
+    title: "HCI Constructs Then and Now with Ted Nelson"
+    when: "2021-08-10"
+    venue: BayCHI (ACM SIGCHI)
+    urls:
+      - https://www.youtube.com/watch?v=u5NECkdOSqs
+      - https://www.youtube.com/watch?v=dOLXLk8TbxQ
+    event: https://baychi.org/calendar/20210810/
+    host_intro: Ted Selker
+    transcript_digest: 2021-08-10-baychi-hci-constructs-transcript-digest.md
+    show_use: "Flagship — hide/plug, Tesler, scissors, evil construct #1 and #2"
+
+  archive_cut_paste_2014:
+    title: "Cut and Paste, 2014"
+    url: https://archive.org/details/cutnpaste_201909
+    note: "Physical process denied since 1984; Cram and Vomit in item description"
+    doc: archive-cut-and-paste-2014.md
+
+  real_cut_and_paste_youtube:
+    title: "Real cut and paste-- STILL NEEDED BY WRITERS !"
+    url: https://www.youtube.com/watch?v=6_35RDA6r3g
+
+  full_noodle:
+    title: "Doing a FULL NOODLE to rearrange a document"
+    url: https://www.youtube.com/watch?v=RWeY-zGWsbQ
+
+  computers_for_cynics_2:
+    title: "Computers for Cynics 2 - It All Went Wrong at Xerox PARC"
+    url: https://www.youtube.com/watch?v=c6SUOeAqOjU
+
+  engelbart_colloquium_1998:
+    title: "Engelbart Colloquium Session 9 — Ted Nelson"
+    url: https://www.dougengelbart.org/colloquium/session_09/session_09_nelson.html
+    cram_and_vomit: true
+
+  mit_clipboard_video:
+    title: "Clipboard — Cut and Paste (video transcription)"
+    url: https://web.mit.edu/m-i-t/forums/hypertext/paradigms/clipboard.htm
+
+writings:
+  one_liners:
+    urls:
+      - http://hyperland.com/TedCompOneLiners
+      - https://xanadu.com.au/ted/TN/WRITINGS/TCOMPARADIGM/tedCompOneLiners.html
+    excerpt: ted-comp-one-liners-clipboard-excerpt.md
+    wysiwyg_crime: wysiwyg-crime-and-wider-highways.md
+    greatest_atrocity: "greatest atrocity in the computer field — pseudo-clipboard named cut/paste"
+    xwindows: "Mac, PC, or XWindows — ICCCM show bridge"
+
+  xanalogical_structure:
+    url: https://www.xanadu.com.au/ted/XUsurvey/xuDation.html
+
+  npuc_1996:
+    url: https://web.archive.org/web/20061205020749/almaden.ibm.com/almaden/npuc97/1996/tnelson.htm
+
+terminology:
+  hide_and_plug: BayCHI 2021, MIT transcript
+  cram_and_vomit: Engelbart colloquium; Archive.org cutnpaste_201909 description
+  cram_and_bum: NPUC 1996 transcript variant
+  national_socialism: BayCHI — "familiar old words many signs sound okay"
+
+panel_guests_welcome:
+  david_rosenthal: ICCCM author; NeWS; Deskset Lichtenstein PS
+  ted_selker: Hosted BayCHI 2021; NPUC; Ted's friend; considerate computing
+  ben_shneiderman: HyperTIES; light blue links; Jan 2022 Ted Nelson thread
+  brad_myers: Pick Click Flick; All the Widgets; interaction taxonomy vs clipboard
+
+show_beats:
+  - "BayCHI cold open — paste pots → clipboard → Ted Selker intro"
+  - "Archive Cram and Vomit description on screen"
+  - "One-Liners greatest atrocity — DSHR on XWindows"
+  - "Ted reprise scissors on camera"
+  - "Brad/Ben angle — widgets and embedded links vs invisible buffer"
+
+see_also:
+  - ../ideas.md
+  - ../../david-rosenthal/selection-clipboard-lineage.md
+  - ../../../repo-shows/selections-icccm-clipboard.yml

@@ -1,14 +1,15 @@
 ---
 status: draft
 character_id: guest-slug
-public: true
 consent: not_yet_asked
 show_seed: repo-shows/guest-slug/
 ---
 
 # Repo Show invitation — Full Name
 
-*[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — correct, expand, replace, or remove your directory anytime, or take direct edit access; also covers the quiet-mode publication plan and easy onboarding.*
+*Draft — not yet sent.*
+
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — correct, expand, replace, or remove your directory anytime, or take direct edit access; also covers the quiet-mode publication plan and easy onboarding.
 
 **Ask:** I'd like you on a **Repo Show** — a friendly recorded conversation whose stage is this public GitHub repo, carried through to working code and credited ideas in the open.
 

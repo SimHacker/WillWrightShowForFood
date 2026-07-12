@@ -7,18 +7,39 @@ public work and documented connections to this repository. Things Don would love
 
 ## What Eric has done
 
-Eric Bowman is a programmer on the original The Sims team at Maxis, working on core/systems engineering. He and Don later worked together again at TomTom in Amsterdam.
+Eric Bowman ("Bobo") is a programmer on the original The Sims team at Maxis, working on core/systems
+engineering. He and Don later worked together again at TomTom in Amsterdam.
 
 ## The hooks
 
 ### 1. Show seed: `repo-shows/REPO-SHOWS.yml#building-the-sims.yml`
-walk the repo on air and build from the seed.
+Walk the repo on air and build from the reunion seed.
 
-### 2. Programmer on the original The Sims team (Maxis), core systems; lat...
-reunited with Don at TomTom
+### 2. Core systems engineering
+What held the original Sims together under the hood — memory, scheduling, the substrate SimAntics
+and smart objects ran on.
+
+### 3. Swimming pools: objects or rooms?
+Boxers-or-briefs for the world grid — plus **ladder theology** and pool **urn-ring** QA lore.
+
+→ [`../../repo-shows/building-the-sims/swimming-pools-objects-or-rooms.md`](../../repo-shows/building-the-sims/swimming-pools-objects-or-rooms.md)
+
+### 4. The "throbbing brain" UI (not shipped)
+Eric's hand-drawn needs/mood interface prototype — motives as a living organ. Why it didn't ship;
+what it taught the team.
+
+→ [`media.md`](media.md)
+
+### 5. Amsterdam / TomTom reunion
+Second act with Don at TomTom; chance encounter with Tanja Sihvonen writing *Players Unleashed!*
+at the Sound Garden (~2008) — two original Sims programmers, thesis author, none of them knowing.
+
+### 6. Then and now
+What you'd build differently with modern tools — and what you still wouldn't touch.
 
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
 - Show seed: [`repo-shows/REPO-SHOWS.yml#building-the-sims.yml`](../../repo-shows/REPO-SHOWS.yml#building-the-sims.yml)
 - [`CHARACTER.yml`](CHARACTER.yml)
+- [`media.md`](media.md)

@@ -19,7 +19,7 @@ send_batch: interval-reunion-2026
 Rob —
 
 We'd be **delighted** to have you (and **Brenda**, if you're both up for it) on a **Repo Show** — a live
-conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood).
+conversation whose stage is [this public GitHub repository](https://github.com/SimHacker/WillWrightShowForFood).
 **Show, don't tell:** archives, runnable demos, and honest post-mortems on stream.
 
 I was at **Interval** in that same Camelot era — and **Placeholder** still feels like unfinished business

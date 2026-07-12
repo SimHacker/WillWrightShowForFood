@@ -23,7 +23,7 @@ Brinkhoff** (emulation) — Cambridge memory + runnable iron + LOCKSS preservati
 
 **July 2026:** David flagged timezone/grandparent-duty constraints; prefers **PDP-7/340 scope**
 on PIXIE, later history on solo show. Production pivoted to **async 1-on-1** clips — see
-[`correspondence.yml`](correspondence.yml).
+[`correspondence.md`](correspondence.md).
 
 ### 2. Cambridge PDP-7/Titan — same stack as PIXIE
 Undergrad ~1970 on **PDP-7/340 + Titan**; met Neil Wiseman; saw early demos. Don links this to
@@ -35,14 +35,14 @@ PIXIE's distributed CAD and proposed DSHR interview Heinz for CHM
 
 | Question | Source thread |
 |----------|----------------|
-| What carried from Cambridge satellite graphics into networked window systems? | PIXIE show + [`window-systems-lineage.yml`](window-systems-lineage.yml) |
+| What carried from Cambridge satellite graphics into networked window systems? | PIXIE show + [`window-systems-lineage.md`](window-systems-lineage.md) |
 | NeWS vs X11 — what historians should get right | [X at 40](https://blog.dshr.org/2024/07/x-window-system-at-40.html) |
 | Alvey 1985 — Andrew + SunDew + Teitelman retrospective | [Methodology of Window Management](http://www.chilton-computing.org.uk/inf/literature/books/wm/index.htm) |
-| Teitelman — DWIM + NeWS Toolkit | [`../david-rosenthal/window-systems-lineage.yml`](../david-rosenthal/window-systems-lineage.yml) |
+| Teitelman — DWIM + NeWS Toolkit | [`window-systems-lineage.md`](window-systems-lineage.md) |
 | Alan Kay window prehistory | [History of Window Systems](https://blog.dshr.org/2021/03/history-of-window-systems.html) |
 | Don loads pie menus at SIGGRAPH NeWS booth | [Pie Menus](https://blog.dshr.org/2018/05/pie-menus.html) |
 
-Full paper list, blog index, show questions: [`window-systems-lineage.yml`](window-systems-lineage.yml)
+Full paper list, blog index, show questions: [`window-systems-lineage.md`](window-systems-lineage.md)
 
 ### 4. LOCKSS + preservation
 Chapman's film archive + Lars booting emulators — one conversation. *Lots of copies keep stuff safe*
@@ -64,7 +64,7 @@ co-founder/2025 co-awardee **Vicki Reich was Mark Weiser's widow**.
 ### 6. MOOLLM demo + primer readings (July 2026)
 Don sent three [MOOLLM Readings](../../repo-shows/moollm-readings/) — reusable intro/canon for
 Palm, Dasher, Tog, and the yaml jazz microworld. Discussion pack + demo walkthrough:
-[`../../repo-shows/david-rosenthal/discussion-pack.yml`](../../repo-shows/david-rosenthal/discussion-pack.yml)
+[`../../repo-shows/david-rosenthal/discussion-pack.md`](../../repo-shows/david-rosenthal/discussion-pack.md)
 
 | Reading | URL |
 |---------|-----|
@@ -78,9 +78,25 @@ Lem's 2+2=7 machine + [Coprophagia Is Bad For You](https://blog.dshr.org/2026/06
 continued this thread; next day HN's [BioShocking / 2+2=5](https://arstechnica.com/security/2026/06/ai-browsers-can-be-lulled-into-a-dream-world-where-guardrails-no-longer-apply/)
 story — Don corrected the headline number (*"Oh sorry, that was 2+2=7, never mind!"*).
 See [`../don-hopkins/sources/2026-07-06-hn-when-2-plus-2-equals-five.md`](../don-hopkins/sources/2026-07-06-hn-when-2-plus-2-equals-five.md).
-[`literary/`](literary/) and gag [`gods-eat-worshippers`](../../repo-shows/ideas/gags/gods-eat-worshippers.yml).
+[`literary/authority-without-truth.md`](literary/authority-without-truth.md) · [`literary/rautavaaras-case-pkd.md`](literary/rautavaaras-case-pkd.md)
 
-### 8. Slots all the way down — Self ≈ Smalltalk ≈ NeWS `class.ps` ≈ Unix FS (≈ JS, sigh)
+### 8. unnatural-selection — ICCCM, treaty, Alvey table, Ted's clipboard
+Show renamed **`unnatural-selection`**. Ted's anti-clipboard rant meets the **ICCCM author**.
+Primary vs secondary selection, `TARGETS`, `XRotateBuffers`, **XDE** (Xerox Development Environment),
+NFS/NeWS/X11 war, git-visible transfer naming challenge.
+
+| Thread | Source |
+|--------|--------|
+| **Start here (numbered)** | [`00-START-HERE.md`](00-START-HERE.md) |
+| Alvey icon/selection table | [`02-alvey-1985-icon-selection-table.md`](02-alvey-1985-icon-selection-table.md) |
+| ICCCM treaty metaphor | [`03-icccm-the-xwindows-treaty.md`](03-icccm-the-xwindows-treaty.md) |
+| Per-system taxonomy | [`selection-clipboard-lineage.md`](selection-clipboard-lineage.md) |
+| Show seed | [`../../repo-shows/unnatural-selection.yml`](../../repo-shows/unnatural-selection.yml) |
+
+**Calm computing bridge:** Deskset *"shut up and do their job inconspicuously"* pre-echoes Weiser;
+Victoria Reich (LOCKSS) was Mark's widow — raise gently with consent.
+
+### 9. Slots all the way down — Self ≈ Smalltalk ≈ NeWS `class.ps` ≈ Unix FS (≈ JS, sigh)
 How much are **Self**, **NeWS `class.ps`** (object-oriented PostScript), **Smalltalk**, and **Unix
 filesystem trees with shell `$PATH`** all the *same machine* — a namespace of named slots plus a
 lookup rule that delegates to a parent when a name isn't found — with some sub/supersets and some
@@ -94,11 +110,15 @@ concept: [`../../process/artifactory.md`](../../process/artifactory.md)
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
-  - [`correspondence.yml`](correspondence.yml)
+  - [`correspondence.md`](correspondence.md)
 - [`pdp7-cambridge-memories.md`](pdp7-cambridge-memories.md) — [pdp7.html](https://www.abitare.org/~dshr/tmp/pdp7.html) → Hex → Lem → Rautavaara → MOOLLM
 - [`sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md`](sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md) — email thread around the draft
-  - [`literary/`](literary/)
-  - [`window-systems-lineage.yml`](window-systems-lineage.yml)
+  - [`literary/authority-without-truth.md`](literary/authority-without-truth.md)
+  - [`literary/rautavaaras-case-pkd.md`](literary/rautavaaras-case-pkd.md)
+  - [`window-systems-lineage.md`](window-systems-lineage.md)
+  - [`selection-clipboard-lineage.md`](selection-clipboard-lineage.md)
+  - [`sources/conrad-parker-icccm-rant-2001.md`](sources/conrad-parker-icccm-rant-2001.md)
+  - [`sources/1990-10-sun-deskset-flame.md`](sources/1990-10-sun-deskset-flame.md)
 - Show seed: [`repo-shows/david-rosenthal/`](../../repo-shows/david-rosenthal/)
 - [`CHARACTER.yml`](CHARACTER.yml)
 - DSHR blog: https://blog.dshr.org/

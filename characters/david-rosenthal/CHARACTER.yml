@@ -49,18 +49,19 @@ sources:
 
 see_also:
   - { path: GLANCE.yml, why: "Navigation hub" }
-  - { path: window-systems-lineage.yml, why: "PIXIE→Andrew→NeWS→X11 through-line + Alvey papers" }
+  - { path: window-systems-lineage.md, why: "PIXIE→Andrew→NeWS→X11 through-line + Alvey papers" }
   - { path: slots-all-the-way-down.md, why: "Self ≈ Smalltalk ≈ NeWS class.ps ≈ Unix FS (≈ JS) — namespace+delegation equivalence; David's NeWS/PostScript seat; draws in Densmore, Ungar, Ingalls, Gosling" }
-  - { path: correspondence.yml, why: "July 2026 async pivot + MOOLLM demo thread" }
+  - { path: correspondence.md, why: "July 2026 async pivot + MOOLLM demo thread" }
+  - { path: selection-clipboard-lineage.md, why: "unnatural-selection — Ted × DSHR × ICCCM taxonomy" }
   - { path: sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md, why: "Full thread — pdp7.html, Hex, Lem, Coprophagia, Rautavaara, MOOLLM readings" }
-  - { path: ../../repo-shows/david-rosenthal/discussion-pack.yml, why: "July 2026 MOOLLM + literary discussion brief" }
+  - { path: ../../repo-shows/david-rosenthal/discussion-pack.md, why: "July 2026 MOOLLM + literary discussion brief" }
   - { path: ../../repo-shows/moollm-readings/, why: "Primer readings — Palm, Dasher, Tog" }
-  - { path: literary/authority-without-truth.yml, why: "Lem + coprophagia + Hex thread" }
-  - { path: literary/rautavaaras-case-pkd.yml, why: "PKD gods-eat-worshippers — MOOLLM yaml jazz hook" }
+  - { path: literary/authority-without-truth.md, why: "Lem + coprophagia + Hex thread" }
+  - { path: literary/rautavaaras-case-pkd.md, why: "PKD gods-eat-worshippers — MOOLLM yaml jazz hook" }
   - { path: ../mark-weiser/pkd-lem-ai-sf.md, why: "PKD·Lem·AI·SF reading group (lives with Mark's memorial — Ubik→ubicomp seed); David draws in" }
   - { path: ../mark-weiser/pkd-lem-ai-sf.yml, why: "Companion data + claim ledger" }
   - { path: pdp7-cambridge-memories.md, why: "Primary text — Cambridge PDP-7/340 Hex, Titan, CDC 274; source pdp7.html" }
-  - { path: media/pdp7-hex-let-machine-win.yml, why: "Sidecar — let the machine win; Lem 2+2=7 parallel" }
+  - { path: media/pdp7-hex-let-machine-win.md, why: "Sidecar — let the machine win; Lem 2+2=7 parallel" }
   - { path: ../heinz-lemke/invitation.md, why: "Co-guest PIXIE — same PDP-7/Titan ~1970" }
   - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Group show with Heinz + Lars" }
   - { path: ../lars-brinkhoff/, why: "Co-guest — emulation segment" }

@@ -15,7 +15,7 @@ show_seed: repo-shows/drew-carey/
 ## Invitation
 
 We would be honored if you joined a **Repo Show** — a live, improvisational conversation whose
-stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood). Show, don't
+stage is [this public GitHub repository](https://github.com/SimHacker/WillWrightShowForFood). Show, don't
 tell: ideas can become running code and playable Sims moments on stream.
 
 **No homework. No trap. Just a great conversation** — about everything you've done with **The Sims**,

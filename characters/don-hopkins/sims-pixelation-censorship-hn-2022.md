@@ -4,6 +4,8 @@ Don's comments on **Don't use text pixelation to redact sensitive information** 
 
 Thread theme: reversing text pixelation; subpixel rendering leaks structure. Don's top comment pivots to **The Sims 1 censorship** — implementation detail, TSO RNG divergence, maid/plunger bug, SimAntics.
 
+**Reunion hub:** [`../../repo-shows/building-the-sims/pixelation-and-modesty.md`](../../repo-shows/building-the-sims/pixelation-and-modesty.md)
+
 → [`../will-wright/adorable-minutes.md`](../will-wright/adorable-minutes.md) · SimAntics / Edith trail in MicropolisCore docs
 
 ## Don's comments (selected)

@@ -1,5 +1,8 @@
 # David Rosenthal — PDP-7/340 Hex game: "Let the machine win"
 
+meta:
+  human_readable: pdp7-hex-let-machine-win.md
+
 artifact:
   what: "Draft PIXIE-adjacent talk — Cambridge PDP-7 + Type 340 + Titan, Piet Hein Hex"
   author: David S. H. Rosenthal
@@ -32,7 +35,7 @@ lem_parallel:
 
 repo_orbit:
   pixie_show: ../../../repo-shows/pixie-pie-menus-pdp7.yml
-  correspondence: ../correspondence.yml
+  correspondence: ../correspondence.md
   character: ../CHARACTER.yml
 
 note: "Primary source text — not AI generated summary of the draft."

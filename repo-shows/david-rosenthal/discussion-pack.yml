@@ -1,5 +1,5 @@
 # Discussion pack — David S. H. Rosenthal × Don Hopkins (July 2026)
-# Async PIXIE segment + MOOLLM demo + literary canon. Send-ready digest for David.
+# Human-readable: discussion-pack.md
 
 meta:
   for: david-rosenthal
@@ -7,6 +7,7 @@ meta:
   date: "2026-07-03"
   consent: not_yet_asked
   format: async_discussion
+  human_readable: discussion-pack.md
   show: repo-shows/david-rosenthal/
 
 purpose: |
@@ -15,7 +16,7 @@ purpose: |
   backstory for later shows.
 
 logistics:
-  from: correspondence.yml
+  from: ../../characters/david-rosenthal/correspondence.md
   pivot: async_1_on_1
   dshr_constraints:
     - "9 hours from Amsterdam"
@@ -30,7 +31,7 @@ threads:
     draft_url: https://www.abitare.org/~dshr/tmp/pdp7.html
     transcript: ../../characters/david-rosenthal/sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md
     permission: "DSHR approved sending draft to Lars and Heins"
-    artifact: ../../characters/david-rosenthal/media/pdp7-hex-let-machine-win.yml
+    artifact: ../../characters/david-rosenthal/media/pdp7-hex-let-machine-win.md
     gag: ../ideas/gags/let-the-machine-win.yml
     lem_bridge: |
       Stanisław Lem, *The Cyberiad* — Trurl's machine answers 2+2=7, rage-quits truth.
@@ -40,7 +41,7 @@ threads:
     title: "Coprophagia Is Bad For You"
     url: https://blog.dshr.org/2026/06/coprophagia-is-bad-for-you.html
     transcript: ../../characters/david-rosenthal/sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md
-    artifact: ../../characters/david-rosenthal/literary/authority-without-truth.yml
+    artifact: ../../characters/david-rosenthal/literary/authority-without-truth.md
     hook: "Models eating model output until every story stars Elias the lighthouse keeper"
     continued: "2026-07-05 Don ↔ David; HN BioShocking thread 2026-07-06"
 
@@ -54,7 +55,7 @@ threads:
   rautavaaras_case:
     title: "Rautavaara's Case — Philip K. Dick (1980)"
     transcript: ../../characters/david-rosenthal/sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md
-    artifact: ../../characters/david-rosenthal/literary/rautavaaras-case-pkd.yml
+    artifact: ../../characters/david-rosenthal/literary/rautavaaras-case-pkd.md
     gag: ../ideas/gags/gods-eat-worshippers.yml
     moollm_bridge: |
       We, as gods, edit yaml jazz — simulated minds, sacraments inverted. PKD's Approximations
@@ -62,7 +63,7 @@ threads:
 
   moollm_demo:
     title: "MOOLLM — yaml jazz orchestration for Repo Shows"
-    walkthrough: moollm-demo.yml
+    walkthrough: moollm-demo.md
     readings_show: ../moollm-readings/
     pitch: |
       Unholy cross of LambdaMOO and The Sims: filesystem as navigable microworld, skills as
@@ -76,18 +77,18 @@ watch_first:
     - id: palm-love-wave
       title: "✋💜🌊 Palm Love Wave"
       youtube: https://www.youtube.com/watch?v=4GS8Xx0ZTZI
-      file: ../moollm-readings/episodes/palm-love-wave.yml
+      file: ../moollm-readings/episodes/palm-love-wave.md
       introduces: [palm, moollm_microworld, yaml_jazz]
     - id: marathon-turn-7
       title: "Marathon Session Reading, Turn 7 — The Wish is Spoken"
       youtube: https://www.youtube.com/watch?v=T-OIeUSc5vI
-      file: ../moollm-readings/episodes/marathon-turn-7-wish-spoken.yml
+      file: ../moollm-readings/episodes/marathon-turn-7-wish-spoken.md
       setting: "Vondelpark — hippies with guitar in the distance"
       introduces: [palm, marathon_session, adventure_layer]
     - id: dasher-palm-tog
       title: "Dasher, Palm On Being Palm, Tog's Infinite Monkeys"
       youtube: https://www.youtube.com/watch?v=lL2sw2oYU98
-      file: ../moollm-readings/episodes/dasher-palm-tog-monkeys.yml
+      file: ../moollm-readings/episodes/dasher-palm-tog-monkeys.md
       introduces: [dasher, palm_on_being_palm, tog_monkeys]
 
 read_in_repo:
@@ -97,13 +98,14 @@ read_in_repo:
     why: "David MacKay Dasher — deferred deep dive"
   - path: ../moollm-readings/topics/tog-infinite-monkeys.yml
     why: "Tog's essay — deferred"
-  - path: ../../characters/david-rosenthal/window-systems-lineage.yml
+  - path: ../../characters/david-rosenthal/window-systems-lineage.md
     why: "Solo-show paper list and questions"
   - path: ../pixie-pie-menus-pdp7.yml
     why: "Async trio tapestry — DSHR Cambridge segment"
 
 see_also:
   - SHOW.yml
-  - moollm-demo.yml
-  - ../../characters/david-rosenthal/correspondence.yml
+  - discussion-pack.md
+  - moollm-demo.md
+  - ../../characters/david-rosenthal/correspondence.md
   - ../../characters/david-rosenthal/ideas.md

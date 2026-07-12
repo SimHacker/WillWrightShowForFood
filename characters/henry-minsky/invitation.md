@@ -13,7 +13,7 @@ show_seed: repo-shows/henry-minsky/
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 We would respectfully invite **Henry Minsky** to a **Repo Show** — a conversation whose stage is
-[this public repository](https://github.com/SimHacker/WillWrightShowForFood), following through to
+[this public GitHub repository](https://github.com/SimHacker/WillWrightShowForFood), following through to
 working code and credited ideas in public.
 
 **Proposed focus (your pick):**

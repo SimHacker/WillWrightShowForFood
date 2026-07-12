@@ -15,13 +15,17 @@ Exchange revival today.
 
 ## The hooks
 
-### 1. Show seed: `repo-shows/luc-barthelet-sims-online/SHOW.yml`
+### 1. Sims team reunion hub
+[`repo-shows/building-the-sims/`](../../repo-shows/building-the-sims/) — TSO lockstep, pixelation RNG, GM chair.
+
+### 2. Show seed: `repo-shows/luc-barthelet-sims-online/SHOW.yml`
 walk the repo on air and build from the seed.
 
-### 2. GM Maxis; SimShow pre-launch; The Sims Online; interview
+### 3. GM Maxis; SimShow pre-launch; The Sims Online; interview
 TSO → Soul City
 
 ## Sources (public)
 
 - Show seed: [`repo-shows/luc-barthelet-sims-online/SHOW.yml`](../../repo-shows/luc-barthelet-sims-online/SHOW.yml)
+- Reunion hub: [`repo-shows/building-the-sims/`](../../repo-shows/building-the-sims/)
 - [`CHARACTER.yml`](CHARACTER.yml)

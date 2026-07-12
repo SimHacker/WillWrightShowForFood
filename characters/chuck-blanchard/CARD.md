@@ -2,13 +2,9 @@
 
 > **MYTHIC** · Body Electric's lead designer/programmer — the overdue credit buff.
 
-```
-┌──────────────────────────────────────────────┐
-│ 🥽🛠️ CHUCK BLANCHARD            ✦ MYTHIC      │
-│ Body Electric Artificer · Swivel 3D Lead     │
-│ Set: VPL / Rebounce          ·   Living      │
-└──────────────────────────────────────────────┘
-```
+**Chuck Blanchard** · MYTHIC  
+*Body Electric Artificer · Swivel 3D Lead*  
+Set: VPL / Rebounce · Living
 
 **Class:** Body Electric Artificer · **Spec:** Swivel 3D Engineer
 **Alignment:** Neutral Good Overdue Credit

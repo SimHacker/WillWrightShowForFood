@@ -1,30 +1,16 @@
 ---
-status: invited  # sent 2026-07; OOO Black Forest early July
+status: invited
 character_id: heinz-lemke
-public: true
 consent: not_yet_asked
 show_seed: repo-shows/pixie-pie-menus-pdp7.yml
-format: remote_or_in_person
-co_guests: [lars-brinkhoff, david-rosenthal]
-send_batch: pixie-trio-2026
 ---
 
 # Repo Show invitation — Heinz U. Lemke
 
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│ REPO SHOW · MICROPOLIS CLASS · PUBLIC GITHUB STAGE                          │
-│ episode: PIXIE — Pie Menus on the PDP-7 (1969)  ·  type: group            │
-│ guest: Heinz U. Lemke 🥧                                                    │
-│ co-guests: Lars Brinkhoff 🖥️  ·  David S. H. Rosenthal 🗄️                   │
-│ host: Don Hopkins                                                           │
-│ show:  repo-shows/pixie-pie-menus-pdp7.yml                                  │
-│ room:  characters/heinz-lemke/  (+ cambridge-films-flight-of-the-bumblebee) │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
+Sent July 2026 (Heinz was OOO in the Black Forest early that month). Group PIXIE episode with David and Lars — see [correspondence.md](correspondence.md) if production format shifts.
 
-*Send-ready draft — not yet sent. Heinz U. Lemke may edit, decline, delay, or request removal at any time.*  
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — correct, expand, replace, or remove your directory anytime, or take direct edit access; also covers the quiet-mode publication plan and easy onboarding.
+
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 **Today I'm sending three matching invitations** — yours, **David Rosenthal's**, and **Lars Brinkhoff's** — for **one group episode**. Each letter is written for the person receiving it; all three describe the same show from different angles.
@@ -187,8 +173,8 @@ optional solo shows later).
 | **Conversation hooks** | [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/ideas.md) |
 | **Portrait / sources** | [`CHARACTER.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/CHARACTER.yml) · [`GLANCE.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/GLANCE.md) |
 | **Evidence room** | [`cambridge-films-flight-of-the-bumblebee.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md) |
-| **Correspondence digest** | [`correspondence.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/correspondence.yml) |
-| **Pull-in gaps** | [`pull-in-gaps.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/pull-in-gaps.yml) |
+| **Correspondence digest** | [`correspondence.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/correspondence.md) |
+| **Pull-in gaps** | [`pull-in-gaps.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/pull-in-gaps.md) |
 
 ### David S. H. Rosenthal 🗄️
 

@@ -12,7 +12,7 @@ show_seed: repo-shows/arthur-van-hoff/
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
-We would respectfully invite **Arthur van Hoff** to a **Repo Show** — a friendly recorded conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood),
+We would respectfully invite **Arthur van Hoff** to a **Repo Show** — a friendly recorded conversation whose stage is [this public GitHub repository](https://github.com/SimHacker/WillWrightShowForFood),
 following through to working code and credited ideas in public.
 
 **Proposed focus:** NeWS/HyperLook → **Bongo/Castanet** lineage; **IFC vs Bongo** (Don's Interval essay + Arthur's 1997 reply on air); PdB; early Java (compiler-in-Java, AWT, HotJava); Turing Glasgow ↔ Jaunt VR Palo Alto friendship thread; TiVo, Flipboard

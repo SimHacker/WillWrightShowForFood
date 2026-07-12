@@ -1,0 +1,36 @@
+# Kana Ryan — invitation portrayal. NOT Kana Ryan.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: kana-ryan
+  name: "Kana Ryan"
+  type: invitation
+  signifier: "🐈"
+  status: living
+  field: "Executive producer on The Sims (Maxis); 'Big Cat Herder' in Will's team roster"
+  home: characters/kana-ryan/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml
+
+bio:
+  summary: "**Kana Ryan** was executive producer on **The Sims** at Maxis — production and shipping-era management on the team Don worked with."
+
+connections:
+  the_sims: "Executive producer; production desk for ship-era debates."
+  will_roster: "Listed as 'Big Cat Herder' in Will's Sims team media."
+  reunion: "Production angle on pools, censorship tone, QA pathologies — async welcome."
+
+show_suggestions:
+  - { seed: ../../repo-shows/building-the-sims.yml, what: "Sims team reunion — what reached the producer's desk." }
+
+sources:
+  - ../../characters/will-wright/media/sims-series-maxis-people.md

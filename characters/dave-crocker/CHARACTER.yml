@@ -1,0 +1,68 @@
+id: dave-crocker
+name: David H. Crocker
+slug: dave-crocker
+also_known_as: [Dave Crocker, David Crocker]
+role: guest
+status: active
+
+affiliations:
+  - Brandenburg InternetWorking
+  - ARPANET / early Internet email standards (RFC 733, RFC 822)
+  - IEEE Internet Award (2004, with Ray Tomlinson)
+
+tags:
+  - engelbart
+  - nls
+  - arpanet
+  - email
+  - rfc
+  - augmentation
+  - mother-of-all-demos
+
+connections:
+  - don-hopkins
+  - douglas-engelbart
+  - steve-crocker
+  - ted-nelson
+  - ray-tomlinson
+
+show_seeds:
+  - repo-shows/remembering-douglas-engelbart.yml
+
+invitation_status: draft
+
+bio:
+  born: 1949-08-06
+  birthplace: Santa Monica, CA, USA
+  summary: |
+    ARPANET-era network engineer; author of RFC 733 (1977) and RFC 822 (1982) — the standards that
+    still define Internet mail message format. Introduced to ARPANET work at UCLA by his brother
+    Steve Crocker (RFC 1, NWG founder). B.A. Psychology UCLA 1975; RAND "MS" Personal Messaging
+    System; M.A. USC Annenberg 1977; MMDF at University of Delaware 1978–1982. MCI Mail with Vint
+    Cerf; IETF Area Director 1989–1995; Brandenburg InternetWorking principal since 1991. IEEE
+    Internet Award 2004 (with Ray Tomlinson). 45+ RFCs per ETHW.
+  show_angle: |
+    Personal NLS learner (text interface via brother at ARPA → Menlo Park mouse class). Witness to
+    Engelbart ARC collaborative culture. Emulated NLS paragraph model in PL/1 for student crisis
+    hotline Counselor's Manual. NLS-mail-to-RFC-822 lineage. Ted Nelson tribute attendee. Active
+    Facebook warm lead Jul 2026.
+  sources:
+    - https://en.wikipedia.org/wiki/Dave_Crocker_(engineer)
+    - https://ethw.org/David_Crocker
+    - https://www.dcrocker.net/
+    - https://www.rfc-editor.org/rfc/rfc733
+    - https://www.rfc-editor.org/rfc/rfc822
+
+contact:
+  web: https://www.dcrocker.net/
+  facebook: https://www.facebook.com/david.h.crocker
+  wikipedia: https://en.wikipedia.org/wiki/Dave_Crocker_(engineer)
+
+notes: |
+  Brother of Steve Crocker (RFC 1, ARPANET NWG). Introduced to ARPANET work via Steve at UCLA.
+  Author of RFC 733 and RFC 822 (Internet mail format). Early ARPANET email RFC author (1970s).
+  Personal NLS access via brother at ARPA; text-command interface; invited to Menlo Park class
+  for mouse-and-keypad system. Witness to Engelbart ARC collaborative culture ("Come on in,
+  the water's fine"). Emulated NLS paragraph model in PL/1 for student crisis hotline manual.
+  Attended Ted Nelson Engelbart tribute; Facebook Jul 2026 thread with Don on Ted vs Doug tone.
+  Active warm lead — comment_mention on Engelbart Mother of All Demos post.

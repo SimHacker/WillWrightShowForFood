@@ -1,0 +1,44 @@
+# Lucy Bradshaw — invitation portrayal. NOT Lucy Bradshaw.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: lucy-bradshaw
+  name: Lucy Bradshaw
+  type: invitation
+  signifier: "🏙️🎮"
+  status: living
+  field: "Maxis SVP/GM; executive producer The Sims 2, Spore; studio leadership 1997–2015"
+  home: characters/lucy-bradshaw/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  channel: facebook
+  send_batch: sims-fest-2026
+  show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml
+
+bio:
+  summary: |
+    **Lucy Bradshaw** — LucasArts and Activision veteran; joined EA/Maxis 1997 after acquisition.
+    Executive producer **The Sims 2**; VP Production on **Spore** with Will Wright; General Manager
+    then SVP of Maxis (2011–2015). Oversaw Sims, SimCity, and Spore franchises. Psychology B.A.,
+    University of Michigan. Left EA September 2015.
+  sources:
+    - https://en.wikipedia.org/wiki/Lucy_Bradshaw_(game_developer)
+    - https://www.thesimswiki.com/wiki/Lucy_Bradshaw
+
+connections:
+  - will-wright
+  - don-hopkins
+  - chris-trottier
+  - luc-barthelet
+  - jerry-martin
+
+show_suggestions:
+  - { seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml, what: "Sims Fest reunion — studio leadership beat" }
+  - { seed: repo-shows/chaim-gingold/, what: "Spore production era overlap" }

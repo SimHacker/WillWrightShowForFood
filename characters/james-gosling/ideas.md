@@ -34,9 +34,14 @@ Warren invented **DWIM** (*Do What I Mean*) in Interlisp.
 
 | Thread | Link |
 |--------|------|
-| Gosling angle | [`window-systems-lineage.yml`](window-systems-lineage.yml) |
-| Rosenthal + X11/ICCCM | [`../david-rosenthal/window-systems-lineage.yml`](../david-rosenthal/window-systems-lineage.yml) |
+| Gosling angle | [`window-systems-lineage.md`](window-systems-lineage.md) |
+| Rosenthal + X11/ICCCM | [`../david-rosenthal/window-systems-lineage.md`](../david-rosenthal/window-systems-lineage.md) |
 | Proceedings | [Chilton — Methodology of Window Management](http://www.chilton-computing.org.uk/inf/literature/books/wm/index.htm) |
+| unnatural-selection panel | [`../../repo-shows/unnatural-selection.yml`](../../repo-shows/unnatural-selection.yml) · [`../david-rosenthal/02-alvey-1985-icon-selection-table.md`](../david-rosenthal/02-alvey-1985-icon-selection-table.md) |
+
+### 1b. unnatural-selection — co-guest with Rosenthal + Ted Nelson
+Walk the **expandable Alvey table** (icon column vs selection column). SunDew vs ICCCM treaty.
+NFS/NeWS/X11 send-code thread. Individual or group calls; post-production integrate.
 
 ### 2. Show seed: `repo-shows/james-gosling/`
 NeWS → Java; walk the repo on air and build from the seed.
@@ -61,7 +66,7 @@ Rosenthal (Andrew + ICCCM), van Hoff (HyperLook), Densmore — Alvey papers as s
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
-- [`window-systems-lineage.yml`](window-systems-lineage.yml)
+- [`window-systems-lineage.md`](window-systems-lineage.md)
 - Show seed: [`repo-shows/james-gosling/`](../../repo-shows/james-gosling/)
 - [`media/from-mail/MANIFEST.yml`](media/from-mail/MANIFEST.yml) — mail-sourced artifacts
 - [`CHARACTER.yml`](CHARACTER.yml)

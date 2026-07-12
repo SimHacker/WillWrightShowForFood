@@ -1,0 +1,67 @@
+# Marc Thorpe — memorial portrayal (in memoriam). NOT Marc Thorpe.
+# Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
+
+character:
+  id: marc-thorpe
+  name: "Marc Thorpe"
+  full_name: "Marc Allen Thorpe"
+  type: memorial
+  signifier: "🤖🕯️"
+  status: deceased
+  born: "1946-11-09"
+  died: "2023-11-24"
+  field: "Robot Wars founder; ILM effects; Stupid Fun Club conceptual design; art sport"
+  home: characters/marc-thorpe/
+  affiliation: "Berkeley, CA; ILM; Gallium/Stupid Fun Club orbit; EA (2004–2005)"
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md#memorial-mode
+  consent_level: 5_deceased_legacy
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  document: memorial.md
+  note: "Deceased (1946–2023) — represent + discuss; SFC founder/alum memorial"
+
+relationship:
+  to_project: |
+    Invented Robot Wars (1994, Fort Mason SF). Stupid Fun Club partner with Will Wright
+    and Mike Winter. Repo Wars vision continues his gladiatorial-sport + merch model for
+    code resurrection events.
+
+bio:
+  summary: |
+    **Marc Thorpe** created **Robot Wars** — radio-controlled combat as live sport and art
+    installation. ILM/LucasToys veteran; Wired cover (Feb 1994, Jef Raskin) launched the
+    sport. First event competitors included Will Wright (JulieBot), Mark Setrakian, Caleb
+    Cheung, Mike Winter. Later Stupid Fun Club conceptual designer; EA mechanical engineer;
+    BattleBots Hall of Fame 2022.
+
+memorial:
+  mode: represent_and_discuss
+  who_can_discuss:
+    - { who: will-wright, why: "JulieBot at RW94; SFC; Reality Robot psychology experiments" }
+    - { who: mike-winter, why: "RW94 X1; SFC filmmaker; met Marc via Robot Wars" }
+    - { who: don-hopkins, why: "EA orbit; robot-combat meetup media; Repo Wars steward" }
+    - { who: matthew-sibigtroth, why: "SFC alum network; StoryMaker/robot culture" }
+    - { who: jason-shankel, why: "SFC hub; Oakland SFC circle" }
+  artifacts:
+    - "marcthorpe.com Robot Wars history (Wayback)"
+    - "Newsweek 2002 Stupid Fun Club profile"
+    - "r/battlebots AMA 2016"
+    - "Brad Stone Gearheads"
+
+sources:
+  web:
+    - { title: "Wikipedia — Marc Thorpe", url: "https://en.wikipedia.org/wiki/Marc_Thorpe" }
+    - { title: "Lucasfilm — ILM Veteran Marc Thorpe Passes Away", url: "https://www.lucasfilm.com/news/ilm-veteran-marc-thorpe-passes-away/" }
+    - { title: "Robot Wars origin (marcthorpe.com, archived)", url: "https://web.archive.org/web/20241014231522/https://marcthorpe.com/robot-wars/" }
+    - { title: "Newsweek — Will Wright Likes His Stupid Fun", url: "https://www.newsweek.com/will-wright-likes-his-stupid-fun-142425" }
+    - { title: "r/battlebots AMA — marcthorpe", url: "https://www.reddit.com/r/battlebots/comments/52bp0r/im_marc_thorpe_creator_of_robot_wars_ama_one_hour/" }
+
+see_also:
+  - { path: memorial.md, why: "Tribute" }
+  - { path: ../../process/repo-wars.yml, why: "Code-combat successor vision" }
+  - { path: ../will-wright/sources/stupid-fun-club-one-minute-movies/README.md, why: "SFC robot films" }
+  - { path: ../robots/slats/README.md, why: "Servitude/Empathy waiter brain" }

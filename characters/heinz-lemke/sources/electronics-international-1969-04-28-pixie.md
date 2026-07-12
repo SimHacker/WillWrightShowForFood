@@ -46,4 +46,4 @@ built graph models interactively before Titan simulation. See [`pixie-source-rec
 - Pair with [`cambridge-films-flight-of-the-bumblebee.md`](../cambridge-films-flight-of-the-bumblebee.md)
 - Pair with Roy Eagleson's Sketchpad → PIXIE lecture pivot (July 2026)
 
-↑ [`correspondence.yml`](../correspondence.yml) · [`pull-in-gaps.yml`](../pull-in-gaps.yml)
+↑ [`correspondence.md`](../correspondence.md) · [`pull-in-gaps.md`](../pull-in-gaps.md)

@@ -28,6 +28,14 @@ Things I'd love to put on the table (pick any, ignore the rest):
 - **GRAFICA Obscura** — you were doing "research in public" in 1994. What made you open the notebook?
 - **SGI 1983–1999** — Tom and Rocky and Dave and Kurt and Jim and Henry and Mark and Marc; the
   accumulation buffer with Kurt Akeley; Paint By Numbers; texture mapping as *the* drawing primitive.
+- **Skinnyhacking** (awkward, optional, professionals only). Tom Davis outed you on comp.sys.sgi.misc
+  in 1993: you were the **photographer** for the original Skinnyhackers poster — three hackers at
+  terminals, international NO symbol, **"No Skinnyhacking,"** hiding in plain sight on **page 252**
+  of the SIGGRAPH '92 proceedings — the same volume as *"Fast Shadows and Lighting Effects Using
+  Texture Mapping"* (you, Mark Segal, Carl Korobkin, Jim Foran, et al.). I've been citing this lore
+  since [HN 34129571](https://news.ycombinator.com/item?id=34129571) in 2022. If you're willing:
+  five minutes on Showcase, the poster, and whether the mandrill ever stood a chance. If not, we
+  still have ConMan.
 - **Lamina Design** — free-form structures from planar material. Jared Tarbell's Levitated Toy
   Factory mined the same vein; I'd love you two in one segment about computation becoming atoms.
 

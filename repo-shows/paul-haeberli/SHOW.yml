@@ -16,7 +16,8 @@ show:
 why_him:
   conman: "SIGGRAPH 1988 — visual dataflow for interactive graphics; abstract closes with the Repo Show thesis: 'we replace the usual user-machine dialog with a dynamic live performance that is orchestrated by the user.'"
   grafica_obscura: "Unpublished SGI research opened to the web in 1994 — research in public, decades early."
-  sgi: "Feb 1983 – Aug 1999: accumulation buffer (with Kurt Akeley), Paint By Numbers, DynaDraw, texture mapping as fundamental drawing primitive (with Mark Segal)."
+  sgi: "Feb 1983 – Aug 1999: accumulation buffer (with Kurt Akeley), Paint By Numbers, DynaDraw, texture mapping as fundamental drawing primitive (with Mark Segal), Fast Shadows SIGGRAPH '92."
+  skinnyhacking: "Photographer for Skinnyhackers 'No Skinnyhacking' poster; Easter egg on SIGGRAPH '92 proceedings page 252; Showcase lore. Don's HN 34129571 citation."
   lamina: "Lamina Design (2004→) — free-form structures from planar material; kin to Jared Tarbell's Levitated."
   don_thread: "Aug 2010 — Explore 3D app; OpenGL ES advice with code in the email; levCAWorm pointer; 'I want to resurrect that code someday. it would be F.U.N.'"
 
@@ -25,6 +26,7 @@ threads:
   - "GRAFICA Obscura — why he opened the notebook in 1994; what he'd publish now"
   - "Resurrection hour — DynaDraw, Don's text fountain, maybe a ConMan-style panel; old code running again, PRs welcome"
   - "SGI stories — Tom and Rocky and Dave and Kurt and Jim and Henry and Mark and Marc"
+  - "Skinnyhacking — photographer for the poster; SIGGRAPH '92 page 252 Easter egg; Showcase; optional awkward five minutes (professionals only)"
   - "Bits & atoms — Lamina Design with Jared Tarbell"
 
 pairings:

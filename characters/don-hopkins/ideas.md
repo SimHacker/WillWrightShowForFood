@@ -38,6 +38,9 @@
 | [`spore-stats-hn-2023.md`](spore-stats-hn-2023.md) | Spore postmortem + GDC notes repost (HN 36279341) → [`../will-wright/sources/2005-03-11-spore-gdc-future-of-content/`](../will-wright/sources/2005-03-11-spore-gdc-future-of-content/README.md) |
 | [`demoscene-compression-hn-2023.md`](demoscene-compression-hn-2023.md) | Will on demoscene, LLMs/dreams/Dasher (HN 36597460) — compression hub |
 | [`sims-pixelation-censorship-hn-2022.md`](sims-pixelation-censorship-hn-2022.md) | Sims shimmer censorship + SimAntics bugs (HN 30350626) |
+| [`../../repo-shows/building-the-sims/pixelation-and-modesty.md`](../../repo-shows/building-the-sims/pixelation-and-modesty.md) | Reunion hub — modesty bar, maid/plunger, TSO RNG |
+| [`../../repo-shows/building-the-sims/artifacts/INDEX.md`](../../repo-shows/building-the-sims/artifacts/INDEX.md) | **Story cards** — browse on air |
+| [`../../repo-shows/building-the-sims/qa-bug-pile.md`](../../repo-shows/building-the-sims/qa-bug-pile.md) | QA pile — maid island, wallpaper+shed, pool cluster |
 | [`don-will-mining-hub.yml`](don-will-mining-hub.yml) | Don × Will arcs — compression, Spore retrospective, Sims craft, Kaleida, Long Now triangle |
 | [`levity-bounce-space-seed.md`](levity-bounce-space-seed.md) | Bounce @ Levity — patch-cord trail with [`../jaron-lanier/`](../jaron-lanier/README.md) + [`../david-levitt/`](../david-levitt/README.md) |
 | [`../will-wright/adorable-minutes.md`](../will-wright/adorable-minutes.md) | Async one-minute Q&A — [`will-wright-adorable-minutes.yml`](../../repo-shows/will-wright-adorable-minutes.yml) |

@@ -36,6 +36,7 @@ states:
   seed: "A single <name>.yml file = a whole show in miniature. Most entries here are seeds."
   planted: "A <big-endian-name>/ directory cloned from the templates; the seed stays beside it, kept synced (RESEED)."
 planted_shows:
+  building-the-sims/: "★ Group: The Sims team reunion — Will + Jamie + Eric Bowman + Jim + Patrick + Irk + Don. Hub: building-the-sims/README.md. Seed: building-the-sims.yml."
   will-wright/: "★ First planted show. Topic-less kickoff with Will Wright (Will IS the topic; topical shows flow from it). Seed: will-wright-series.yml."
   steve-wozniak/: "Topic-less kickoff with Steve Wozniak. Apple II, 6502, open hardware, and browser-based emulators."
   terry-winograd/: "★ Forebear show. Terry Winograd (the dragon) + the CS547 treasure trove archive. Stands on his shoulders and the shoulders of all his guests (Will 1996, Gosling 1995, Joy Mountford 1994, etc.). Archive recovery, runnable seeds, Repo Show, Connections series. (Pie menus = Don's own thread.)"
@@ -52,7 +53,7 @@ templates:
 
 # CURRENT SEEDS (single files; plant when ready)
 seeds:
-  building-the-sims.yml:        "Group: The Sims team reunion — Will Wright + Jamie Doornbos (lead/SimAntics) + Chris Trottier & Claire Curtin (design) + Eric Bowman + Jim Mackraz + Patrick J. Barrett III + Eric Hedman (animation) + Jerry Martin (music) + Don. How the simulation actually worked."
+  building-the-sims.yml:        "Group: The Sims team reunion — PLANTED → building-the-sims/. Will Wright + Jamie Doornbos (lead/SimAntics) + Chris Trottier & Claire Curtin (design) + Eric Bowman + Jim Mackraz + Patrick J. Barrett III + Eric Hedman (animation) + Jerry Martin (music) + Don. How the simulation actually worked."
   david-ungar/: "★ DREAM GUEST solo: David Ungar — Reflecting on Self: Narcissa's Mirror; Self × MOOLLM; Power of Simplicity; maps/PICs→V8; Conscientious Objectors. Jan 2026 warm correspondence. PLANTED."
   design-by-accretion.yml:      "Solo: Chris Trottier — design by accretion ↔ cauldron. FLAGSHIP."
   music-and-theory.yml:         "Group: David Levitt (MIT PhD on AI music/jazz improvisation under Minsky; Atari Cambridge) + Jerry Martin (The Sims/SimCity 3000 composer) — music + theory."

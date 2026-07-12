@@ -5,7 +5,8 @@ topic:
   id: dasher
   title: "Dasher — David MacKay's predictive text"
   status: introduced_not_exhausted
-  introduced_in: ../episodes/dasher-palm-tog-monkeys.yml
+  human_readable: dasher.md
+  introduced_in: ../episodes/dasher-palm-tog-monkeys.md
 
 who:
   name: David MacKay
@@ -27,5 +28,5 @@ repo_touchpoints:
   - ../../characters/chaim-gingold/media/from-mail/MANIFEST.yml
 
 see_also:
-  - ../episodes/dasher-palm-tog-monkeys.yml
-  - ../intro-canon.yml
+  - ../episodes/dasher-palm-tog-monkeys.md
+  - ../intro-canon.md

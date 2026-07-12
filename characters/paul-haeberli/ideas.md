@@ -29,6 +29,16 @@ accumulation buffer (with Kurt Akeley), Paint By Numbers, texture mapping as fun
 primitive (with Mark Segal), the .rgb image format era, demos and toys. Sixteen years inside the
 machine that made 3D real.
 
+### 4b. Skinnyhacking — SIGGRAPH '92, page 252 (awkward, optional)
+
+Tom Davis, Rocky Rhodes, Scott Carr — the Skinnyhackers. First product: a **"No Skinnyhacking"**
+poster (Paul **photographer**); best-known product: Showcase. Image lives in the SIGGRAPH '92
+proceedings — distorted on the back cover, full version on **page 252** of *Fast Shadows and
+Lighting Effects Using Texture Mapping* (Paul co-author). Don cited the lore on
+[HN 34129571](https://news.ycombinator.com/item?id=34129571).
+
+→ [`sources/skinnyhacking-siggraph-1992.md`](sources/skinnyhacking-siggraph-1992.md)
+
 ### 5. Lamina Design — computation becomes atoms
 Precise free-form structures from planar material (2004→). Pair with
 [Jared Tarbell](../jared-tarbell/README.md) — Levitated's laser-cut computational gems mined the

@@ -1,0 +1,73 @@
+# Proxi pitch parallels — VentureBeat 2025-04-29
+# Source: venturebeat.com/business/gallium-studios-finds-will-wrights-memories-game-proxi-as-hard-to-pitch-as-the-sims
+
+meta:
+  title: "Proxi as hard to pitch as The Sims"
+  author: Dean Takahashi
+  outlet: VentureBeat
+  date: "2025-04-29"
+  url: https://venturebeat.com/business/gallium-studios-finds-will-wrights-memories-game-proxi-as-hard-to-pitch-as-the-sims
+  captured: "2026-07-12"
+  verbatim_status: excerpt_curated
+
+people:
+  will_wright: founder, Gallium Studios
+  lauren_elliott: CEO, Gallium Studios (Carmen Sandiego / Broderbund)
+  don_mattrick: EA studios head; Sims acquisition catalyst
+  larry_probst: EA CEO; due diligence visit
+  peter_levin: Griffin Gaming Partners (photo caption)
+  subutai_ahmad: Numenta; GamesBeat Summit 2024 panel (cross-ref)
+
+sims_origin_beats:
+  - architecture_first: A Pattern Language, smart objects score buildings
+  - people_takeover: messing with people > architecture scoring
+  - simant_distributed_ai: pheromone trails → environment holds intelligence
+  - smart_objects_advertise: refrigerator/toaster attract hungry Sims
+  - focus_group_rejection: mostly male panel wouldn't play
+  - resource_fight: borrowed 4-person core tech group from San Mateo
+  - ea_acquisition: Mattrick — buy for Sims not SimCity; $125M Jul 1997
+  - shipped: Sims Feb 4 2000
+
+don_hopkins_witness:
+  confirmed: "2026-07-12"
+  claim: "Hired Jan 1997 for Sims animation/UI/tools — not borrowed from idle core-tech pool"
+  source: ../../../don-hopkins/sources/sims-origin-core-tech-four-1997.md
+  mattrick_beat: "Don gave Mattrick Understanding Comics during EA due diligence"
+
+proxi_beats:
+  - memory_palace: snow globes, 3D mind map
+  - gen_ai_scenes: text memories → generated explorable scenes
+  - shared_memories: intersections with others; geolocated hometown map
+  - memory_categories: [people, places, time, feelings, things, activities]
+  - mccloud_abstraction: identify-with abstract avatars
+  - lynch_landmarks: 5-10 anchor places per person
+  - threshold_24_then_100: fascinating density curve
+  - heirloom_100_years: long-horizon preservation design
+  - life_trailer: top 10 memories as shareable trailer
+  - numenta_nupic: brain-based AI partner (see subutai-ahmad)
+  - platforms: [PC, PS5, Xbox]
+  - rejected: [blockchain_slow, publisher_20m_gate]
+
+funding_apr_2025:
+  griffin_round: "$6M Aug 2022 — prototype yes, launch/marketing no"
+  runway: team at end of funds; transparent press as last-chance signal
+  publisher_math: ~20M units for greenlight
+  elliott_thesis: marketing spend up; new IP abandoned; AI tools enable small studios
+
+show_connections:
+  - path: ../2025-12-will-wright-dev-diaries/proxi-software-heirloom.yml
+    why: heirloom framing on camera matches article
+  - path: ../2025-12-will-wright-dev-diaries/proxi-minecraft-export.yml
+    why: shipped bridge not in VB piece
+  - path: ../2008-02-10-soul-of-the-sims/README.md
+    why: motives + smart objects substrate
+  - path: ../1996-04-26-winograd-interfacing-to-microworlds/README.md
+    why: Dollhouse / architecture lineage
+  - path: ../../../subutai-ahmad/sources/numenta-proxi-partnership.md
+    why: NuPIC partnership
+  - path: ../../../../repo-shows/will-wright-premiere/game-bridge-proxi-minecraft.yml
+    why: premiere segment bridge
+
+private:
+  note: "Current Gallium runway — DonHopkins green-room only; not in public repo"
+  path: ../../../../../../DonHopkins/projects/willwrightshowforfood/green-room/will-wright/proxi-funding-venturebeat-2025.md

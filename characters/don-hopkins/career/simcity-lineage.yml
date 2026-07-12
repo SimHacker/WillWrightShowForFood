@@ -42,6 +42,9 @@ simcity_lineage:
   - name: The Sims (Maxis)
     era: "1997–2000"
     don_role: "UI, VitaBoy animation, mod tools, SimAntics/Edith advocacy"
+    context: |
+      Hired Jan 1997 for character animation and UI; tools and pipelines once green-lit.
+      Architecture-game → people pivot; SimAnt pheromone/smart-object substrate.
     runs_on: [Windows, Mac]
 
   - name: Columbia / EA educational proposal

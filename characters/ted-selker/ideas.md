@@ -39,6 +39,12 @@ e Don demoed Multiplayer SimCity
 ### 8. NPUC: New Paradigms for Using Computers at IBM Almaden
 free IBM Burger
 
+### 9. Clipboard / cut-and-paste panel with Ted Nelson
+Ted **hosted** Ted at BayCHI Aug 2021 (*HCI Constructs Then and Now*). Natural co-moderator for
+[`../../repo-shows/selections-icccm-clipboard.yml`](../../repo-shows/selections-icccm-clipboard.yml) —
+human-**CONSTRUCT** interaction vs invisible clipboard.
+[`../ted-nelson/sources/2021-08-10-baychi-hci-constructs-transcript-digest.md`](../ted-nelson/sources/2021-08-10-baychi-hci-constructs-transcript-digest.md)
+
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)

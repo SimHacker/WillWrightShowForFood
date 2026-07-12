@@ -8,6 +8,7 @@ meta:
   consent: not_yet_asked
   span: "2026-07 — PIXIE Repo Show invitation response"
   provenance_private: DonHopkins email ([email redacted])
+  human_readable: correspondence.md
 
 gist: |
   Lars replied **yes/later** to the PIXIE trio invitation — interesting, but heading into Swedish
@@ -52,9 +53,10 @@ show_hooks:
   - "Unprepared/rambling segment — Don prods, Lars demonstrates"
 
 connects_in_repo:
+  - { path: correspondence.md, why: "Human-readable digest (this file)" }
   - { path: invitation.md, why: "PIXIE trio invitation (group format superseded by async pivot)" }
   - { path: ideas.md, why: "Emulation + interview hooks" }
   - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Show seed — async production model" }
-  - { path: ../heinz-lemke/correspondence.yml, why: "Trio invitation thread" }
-  - { path: ../david-rosenthal/correspondence.yml, why: "Trio logistics + scope" }
+  - { path: ../heinz-lemke/correspondence.md, why: "Trio invitation thread" }
+  - { path: ../david-rosenthal/correspondence.md, why: "Trio logistics + scope" }
   - { path: ../douglas-engelbart/, why: "Mouse + keyset PDP-10 hook" }

@@ -4,14 +4,10 @@
 > design traditions* (K-line tribute, not impersonation — see `CHARACTER.yml`).
 > Gotta collect 'em all.
 
-```
-┌──────────────────────────────────────────────┐
-│ 👤 WILL WRIGHT                  ✦ LEGENDARY  │
-│ The Simulator · Toymaker of Microworlds      │
-│ Set: Micropolis Founders   ·   Living        │
-│ Alias: "Klapaucius" (Will's longtime handle; Lem's *Cyberiad*) │
-└──────────────────────────────────────────────┘
-```
+**Will Wright** · LEGENDARY  
+*The Simulator · Toymaker of Microworlds*  
+Set: Micropolis Founders · Living  
+Alias: Klapaucius (Will's longtime handle; Lem's *Cyberiad*)
 
 **Class:** Simulation Designer / Toymaker
 **Affiliations:** Maxis · Stupid Fun Club · Syntertainment · Gallium

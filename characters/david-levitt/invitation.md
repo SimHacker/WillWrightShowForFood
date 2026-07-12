@@ -15,7 +15,7 @@ sent_links: true
 *[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — edit, decline, delay, or request removal anytime, or take direct edit access; also covers quiet mode and onboarding.*
 Dear David,
 
-**The ask:** join me for a **Repo Show** — a friendly recorded conversation staged in [this public repository](https://github.com/SimHacker/WillWrightShowForFood), carried through to working code and credited ideas in the open.
+**The ask:** join me for a **Repo Show** — a friendly recorded conversation staged in [this public GitHub repository](https://github.com/SimHacker/WillWrightShowForFood), carried through to working code and credited ideas in the open.
 
 **Facts:** **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.** We spoke by phone **6 July** — this is the durable public version of those links. Your room is live and mostly stub — **please verify and correct everything.**
 

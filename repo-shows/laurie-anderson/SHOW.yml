@@ -16,7 +16,7 @@ show:
 why_her:
   interval_bridge: "Don worked at Interval Research; Laurie built the Talking Stick there — shared-history door, not fan mail."
   instruments: "Tape-bow violin, Talking Stick, Voice of Authority — performance-hacks that turn playback into instruments."
-  medium_kinship: "Spoken-word architecture (*United States I–IV*) meets a show whose stage is a public repo."
+  medium_kinship: "Spoken-word architecture (*United States I–IV*) meets a show whose stage is a public GitHub repo."
 
 dream_segments:
   - "Rebuild the tape-bow idea in the browser — scrub audio with a gesture; audience forks it."

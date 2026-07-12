@@ -44,3 +44,8 @@ ties:
   - ../../process/one-minute-movie-sandwich.yml
   - ../../process/storymaker-stories-and-scenes.yml
   - ../../characters/will-wright/sessions/01-mic-check/SESSION.yml   # the phone frame
+  - ../../characters/will-wright/sources/2025-04-29-venturebeat-proxi-funding-crisis/proxi-pitch-parallels.yml  # Proxi geo memories (press)
+
+ai_reimagining: |
+  2011 geotagged cards + 2026 LLM field narration + Proxi memory snow globes from safari stops.
+  Repo Show audience adds cards via git; map grows city by city.

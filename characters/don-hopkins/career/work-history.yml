@@ -67,6 +67,8 @@ employment_timeline:
     media: ../media/maxis-emeryville/INDEX.yml
     note: |
       Pie menus, VitaBoy, Transmogrifier, OLPC SimCity open source push.
+      Jan 1997: hired for Dollhouse/Sims — character animation, UI, tools (see
+      sources/sims-origin-core-tech-four-1997.md).
       OLPC/Micropolis: Python Sugar adaptor around TCL/Tk SimCity; PyGTK/Pango/Cairo desktop UI
       (see simcity-lineage.yml#implementation).
     micropolis_gallery: ../media/micropolis-gallery/INDEX.yml

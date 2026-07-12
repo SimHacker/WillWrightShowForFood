@@ -4,6 +4,7 @@
 meta:
   thread: authority_without_truth
   span: "2026-07 — Don ↔ DSHR correspondence"
+  human_readable: authority-without-truth.md
 
 lem_cyberiad:
   story: "Trurl's Machine"
@@ -36,7 +37,7 @@ bioshocking_2026:
     same pathology — intelligence without humility. See ../don-hopkins/sources/2026-07-06-hn-when-2-plus-2-equals-five.md
 
 pdp7_hex:
-  artifact: ../media/pdp7-hex-let-machine-win.yml
+  artifact: ../media/pdp7-hex-let-machine-win.md
   punchline: "Let the machine win — Hex cheats if you try to win"
   permission: "DSHR approved sharing draft with Lars and Heins"
 
@@ -46,10 +47,10 @@ moollm_angle: |
   auditable, human-authored structure.
 
 connects:
-  - rautavaaras-case-pkd.yml
+  - rautavaaras-case-pkd.md
   - ../don-hopkins/sources/2026-07-06-hn-when-2-plus-2-equals-five.md
-  - ../../repo-shows/ideas/gags/let-the-machine-win.yml
-  - ../../repo-shows/david-rosenthal/discussion-pack.yml
+  - ../../repo-shows/david-rosenthal/discussion-pack.md
 
 see_also:
-  - ../correspondence.yml
+  - authority-without-truth.md
+  - ../correspondence.md

@@ -6,8 +6,8 @@ may also feed the [PIXIE trio show](../pixie-pie-menus-pdp7.yml).*
 | Artifact | Purpose |
 |----------|---------|
 | [`SHOW.yml`](SHOW.yml) | Show manifest |
-| [`discussion-pack.yml`](discussion-pack.yml) | July 2026 discussion brief — async PIXIE + MOOLLM demo + literary thread |
-| [`moollm-demo.yml`](moollm-demo.yml) | Walkthrough of yaml jazz / MOOLLM for DSHR |
+| [`discussion-pack.md`](discussion-pack.md) | July 2026 discussion brief — async PIXIE + MOOLLM demo + literary thread |
+| [`moollm-demo.md`](moollm-demo.md) | Walkthrough of yaml jazz / MOOLLM for DSHR |
 
 ## Guest room
 
@@ -18,9 +18,9 @@ may also feed the [PIXIE trio show](../pixie-pie-menus-pdp7.yml).*
 Don recorded three [MOOLLM Readings](../moollm-readings/) episodes introducing Palm, Dasher,
 and the microworld behind the text. Start here before the demo:
 
-1. [Palm Love Wave](../moollm-readings/episodes/palm-love-wave.yml) — ✋💜🌊
-2. [Marathon Turn 7](../moollm-readings/episodes/marathon-turn-7-wish-spoken.yml) — Vondelpark
-3. [Dasher + Palm + Tog](../moollm-readings/episodes/dasher-palm-tog-monkeys.yml)
+1. [Palm Love Wave](../moollm-readings/episodes/palm-love-wave.md) — ✋💜🌊
+2. [Marathon Turn 7](../moollm-readings/episodes/marathon-turn-7-wish-spoken.md) — Vondelpark
+3. [Dasher + Palm + Tog](../moollm-readings/episodes/dasher-palm-tog-monkeys.md)
 
 ## Discussion hooks (July 2026)
 

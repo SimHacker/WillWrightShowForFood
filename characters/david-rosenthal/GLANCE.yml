@@ -26,24 +26,25 @@ shows:
   solo: ../../repo-shows/david-rosenthal/
 
 discussion_july_2026:
-  pack: ../../repo-shows/david-rosenthal/discussion-pack.yml
-  moollm_demo: ../../repo-shows/david-rosenthal/moollm-demo.yml
+  pack: ../../repo-shows/david-rosenthal/discussion-pack.md
+  moollm_demo: ../../repo-shows/david-rosenthal/moollm-demo.md
   readings: ../../repo-shows/moollm-readings/
 
 literary:
-  - literary/authority-without-truth.yml
-  - literary/rautavaaras-case-pkd.yml
+  - literary/authority-without-truth.md
+  - literary/rautavaaras-case-pkd.md
   - ../mark-weiser/pkd-lem-ai-sf.md   # reading group lives with Mark's memorial (Ubik→ubicomp seed)
 
 media:
-  - media/pdp7-hex-let-machine-win.yml
+  - media/pdp7-hex-let-machine-win.md
 
 read_order:
   - README.md
-  - correspondence.yml
-  - ../../repo-shows/david-rosenthal/discussion-pack.yml
+  - correspondence.md
+  - ../../repo-shows/david-rosenthal/discussion-pack.md
   - ideas.md
-  - window-systems-lineage.yml
+  - window-systems-lineage.md
+  - selection-clipboard-lineage.md
 
 see_also:
   - { path: invitation.md, why: "PIXIE trio invitation" }

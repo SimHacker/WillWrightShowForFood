@@ -18,7 +18,7 @@ Jerry —
 
 Your **Sims** and **SimCity 3000/4** scores are why those worlds feel like *home* — and your track
 **Chill Resolve** already lives in my Micropolis CA video (it fits perfectly). I'd love a **Repo Show**,
-ideally as part of a **Sims reunion** and/or a **music + theory** episode with **David Levitt**.
+ideally as part of **Sims Fest** and/or a **music + theory** episode with **David Levitt**.
 
 **Threads — your pick:**
 
@@ -33,6 +33,7 @@ No pressure, no homework. Accepted, delayed, declined, or no reply — all honor
 
 | | |
 |---|---|
+| **Sims Fest hub** | [`repo-shows/building-the-sims/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/building-the-sims) |
 | **Music show seed** | [`music-and-theory`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/REPO-SHOWS.yml) |
 | **Your guest page** | [`characters/jerry-martin/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/jerry-martin) |
 

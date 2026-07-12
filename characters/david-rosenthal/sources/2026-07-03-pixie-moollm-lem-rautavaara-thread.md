@@ -72,8 +72,8 @@ The narrator (an Approximation) is genuinely puzzled by the outrage, arguing the
 
 | What | Where |
 |------|-------|
-| PDP-7 Hex draft | [pdp7.html](https://www.abitare.org/~dshr/tmp/pdp7.html) · [`../pdp7-cambridge-memories.md`](../pdp7-cambridge-memories.md) · [`../media/pdp7-hex-let-machine-win.yml`](../media/pdp7-hex-let-machine-win.yml) |
-| Lem + coprophagia | [`../literary/authority-without-truth.yml`](../literary/authority-without-truth.yml) |
-| Rautavaara notes | [`../literary/rautavaaras-case-pkd.yml`](../literary/rautavaaras-case-pkd.yml) |
-| MOOLLM discussion pack | [`../../../repo-shows/david-rosenthal/discussion-pack.yml`](../../../repo-shows/david-rosenthal/discussion-pack.yml) |
+| PDP-7 Hex draft | [pdp7.html](https://www.abitare.org/~dshr/tmp/pdp7.html) · [`../pdp7-cambridge-memories.md`](../pdp7-cambridge-memories.md) · [`../media/pdp7-hex-let-machine-win.md`](../media/pdp7-hex-let-machine-win.md) |
+| Lem + coprophagia | [`../literary/authority-without-truth.md`](../literary/authority-without-truth.md) |
+| Rautavaara notes | [`../literary/rautavaaras-case-pkd.md`](../literary/rautavaaras-case-pkd.md) |
+| MOOLLM discussion pack | [`../../../repo-shows/david-rosenthal/discussion-pack.md`](../../../repo-shows/david-rosenthal/discussion-pack.md) |
 | PKD·Lem·AI reading group | [`../../mark-weiser/pkd-lem-ai-sf.md`](../../mark-weiser/pkd-lem-ai-sf.md) |

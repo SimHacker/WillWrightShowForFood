@@ -98,7 +98,7 @@ MIT 1969 + TU Berlin decades; asks Don about **model science**. See
 
 - A **new incoming primary source**: Heinz's own 1967 origin story, first
   installment of a multi-part Cambridge/TRE memoir (see
-  [`../pull-in-gaps.yml`](../pull-in-gaps.yml)).
+  [`../pull-in-gaps.md`](../pull-in-gaps.md)).
 - Roy sharpens the interview's research spine into named people to cover:
   **Maurice Wilkes, Neil Wiseman, John Hiles, Cheney, Etherton**, the **Rainbow
   Project**, and the **PDP-7 ↔ Titan** link.
@@ -115,7 +115,7 @@ MIT 1969 + TU Berlin decades; asks Don about **model science**. See
 | What | Where |
 |------|-------|
 | 7 July trio thread (source listing + architecture correction) | [`2026-07-07-pixie-trio-thread.md`](2026-07-07-pixie-trio-thread.md) |
-| Assets still to pull in (1967 story, storyline installments, source listing) | [`../pull-in-gaps.yml`](../pull-in-gaps.yml) |
+| Assets still to pull in (1967 story, storyline installments, source listing) | [`../pull-in-gaps.md`](../pull-in-gaps.md) |
 | Roy Eagleson · educator room | [`../../roy-eagleson/`](../../roy-eagleson/) |
 | Kelly Booth · UBC HCI mentor | [`../../kelly-booth/`](../../kelly-booth/) · career: [`career-and-awards.yml`](../../kelly-booth/sources/career-and-awards.yml) |
 | PIXIE show | [`../../../repo-shows/pixie-pie-menus-pdp7.yml`](../../../repo-shows/pixie-pie-menus-pdp7.yml) |

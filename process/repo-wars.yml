@@ -1,0 +1,73 @@
+# Repo Wars — gladiatorial code combat (Marc Thorpe lineage)
+
+# Spiritual successor to Robot Wars: competitors declare rigs, judges score resurrection/
+# translation events — efficiency and cost beside speed and lines of code.
+# Synergy: Repo Show stage ≈ arena; git history ≈ bout tape; merchandising ≈ catalogs/skills.
+
+meta:
+  id: repo-wars
+  status: vision
+  authored_by: don-hopkins
+  dedicated_to: marc-thorpe
+  captured: "2026-07-12"
+  lineage: |
+    Marc Thorpe invented Robot Wars (1994) — strangers build mechanical athletes,
+    sport + art installation + license merch. Repo Wars applies the same social
+    contract to code: AI-assisted programming gladiators on a public GitHub stage.
+
+marc_thorpe_beats:
+  - RC tank + vacuum → chainsaw Wired photo → rules + arena
+  - art_sport: sculpture environment interesting even without fights
+  - first_crowd_roar: Spiny Norman featherweight — proof of sport
+  - will_juliebot: quiet genius in the pit
+  - stupid_fun_club: Reality Robot psychology (Marc + Mike Winter + Will)
+
+repo_show_fit:
+  phase: after_brainstorming
+  flow:
+    - present_old_code_examples_to_build_on
+    - resurrect_and_translate_to_other_languages
+    - compete_with_declared_rigs
+    - judges_score_multiple_dimensions
+  trademark_note: "Repo Show ≈ Robot Wars naming synergy — both arena brands"
+
+scoring_dimensions:
+  - speed
+  - lines_of_code
+  - token_count
+  - cyclomatic_complexity
+  - efficiency
+  - cost
+  - judge_aesthetics
+  - correctness_tests
+
+event_formats:
+  retro_rust_off:
+    blurb: Rust freak AI drag racers reimplement libraries/apps in Rust
+    seed_challenge: |
+      Reverse-engineer Apple ][ Little Computer People 6502 floppy;
+      reimplement in Rust on stream
+  python_wrestling:
+    blurb: Library reimplementation bouts in Python
+  typescript_jousting:
+    blurb: Port races — TypeScript challengers
+  multilingual_code_golf:
+    blurb: Which language solves in fewest lines/tokens/complexity
+  translation_arena:
+    blurb: Same spec, many languages, judges compare craft
+
+production:
+  judges: human_panel_plus_audience_vote
+  contestants_declare:
+    - language_stack
+    - ai_tools_allowed
+    - budget_cap
+    - time_box
+  merch_angle: skills_zip_catalogs_tshirts  # Lars Brinkhoff t-shirt empire as precedent
+
+see_also:
+  - ../characters/marc-thorpe/memorial.md
+  - ../characters/marc-thorpe/ideas.md
+  - ../process/crazy-idea-jam.yml
+  - ../repo-shows/will-wright-premiere/slats-reincarnation.yml
+  - ../characters/lars-brinkhoff/invitation.md  # t-shirts github.com/larsbrinkhoff/t-shirts

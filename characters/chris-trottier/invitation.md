@@ -58,10 +58,18 @@ playlist: short clips before and after, one polished cut when the dust settles.
 
 - **Design by accretion ↔ the cauldron** — how layers accumulate into a coherent whole
 - **Sims content & systems** — decisions that made the world feel alive
-- **A Sims team reunion** — Jamie, Claire, and the rest, with Will as schedules allow
+- **Sims Fest** — Jamie, Claire, Luc, Lucy Bradshaw, and the rest, with Will as schedules allow
+- **Toilet game → tuned emergence** — what finally made it fun (your 2004 essay territory)
+- **Emergent QA comedy** — maid/plunger, pixelation shimmer — design intent vs accidents
 
 No pressure, no homework. Accepted, delayed, declined, or no reply — all honored gracefully.
 
 — Don Hopkins *(User Interface Flower Child)*
+
+| | |
+| --- | --- |
+| **Sims Fest hub** | [`repo-shows/building-the-sims/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/building-the-sims) |
+| **Your guest page** | [`characters/chris-trottier/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/chris-trottier) |
+| **Flagship solo** | [`design-by-accretion`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/design-by-accretion.yml) |
 
 *P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

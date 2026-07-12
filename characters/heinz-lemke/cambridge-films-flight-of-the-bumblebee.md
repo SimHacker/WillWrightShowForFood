@@ -72,7 +72,7 @@ Luxury options Don cites on HN: 342 Symbol Generator, 370 Light Pen, 347 Subrout
 | [38235871](https://news.ycombinator.com/item?id=38235871) | Nov 2023 | GIMP pie menus — distributed PIXIE on PDP-7/Titan |
 | [41168858](https://news.ycombinator.com/item?id=41168858) | Aug 2024 | macOS pie menu — Flight dedication block |
 
-Pull-in gaps (assets not yet in repo): [`pull-in-gaps.yml`](pull-in-gaps.yml)
+Pull-in gaps (assets not yet in repo): [`pull-in-gaps.md`](pull-in-gaps.md)
 
 ## Why this matters for a Repo Show
 

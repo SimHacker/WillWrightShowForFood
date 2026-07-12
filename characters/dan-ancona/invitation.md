@@ -24,7 +24,7 @@ could see and change the **political assumptions in the rules**. Will answered o
 About five months later the OLPC thread cleared EA to release the original SimCity source as
 **GPLv3 Micropolis** (2008). We're porting it to the web
 ([MicropolisCore](https://github.com/SimHacker/MicropolisCore)) and building **Will Wright Show For
-Food** as a Repo Show whose audience questions work like your Long Now card: **attributed, permanent,
+Food** as a Repo Show whose stage is [this public GitHub repository](https://github.com/SimHacker/WillWrightShowForFood) — audience questions work like your Long Now card: **attributed, permanent,
 on the record**.
 
 I spent the last few days on a slightly embarrassing archaeology binge — transcripts, Stewart's

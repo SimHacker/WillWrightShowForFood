@@ -38,7 +38,7 @@ repo_artifacts:
 
 referenced_by:
   - ../intro-canon.yml
-  - ../../repo-shows/david-rosenthal/discussion-pack.yml
+  - ../../repo-shows/david-rosenthal/discussion-pack.md
 
 see_also:
   - palm-love-wave.yml

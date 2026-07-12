@@ -283,6 +283,13 @@ StoryMaker, Edith SimAntics, Unity pie menus — video companions to written sou
 
 ## Correspondence & contemporary threads
 
+**[2025-04-29-venturebeat-proxi-funding-crisis/](2025-04-29-venturebeat-proxi-funding-crisis/README.md)**  
+Dean Takahashi — Proxi as hard to pitch as The Sims; Gallium runway crisis; smart-objects origin;
+Mattrick acquisition anecdote; memory-palace design. Pairs with Dev Diaries + Numenta.
+
+**[2019-10-qgcon-sims-inclusivity-thread/](2019-10-qgcon-sims-inclusivity-thread/README.md)**  
+Don → EA (Lyndsay Pearson, Chloe Dubini) — QGCon 2020 inclusivity paper ask; Mike Duke / Graham Nardone routed. Pairs with [Tanja Sihvonen](../../../tanja-sihvonen/).
+
 **[2022-sims-internet-museum-questions/](2022-sims-internet-museum-questions/README.md)**  
 Fan museum preservation ask — Paulette Dropinsky inbound mail.
 
@@ -374,6 +381,7 @@ CAM-6 pie menus as visual programming — YouTube + essay cross-link.
 | [stupid-fun-club-one-minute-movies](stupid-fun-club-one-minute-movies/README.md) | Servitude & Empathy robots |
 | [2024-building-simcity-chaim-intro](2024-building-simcity-chaim-intro/README.md) | Chaim MIT Press book + Sam Arbesman intro |
 | [2026-07-03-digital-antiquarian-maxis-part1](2026-07-03-digital-antiquarian-maxis-part1/README.md) | Jimmy Maher Maxis history (SimEverything) + HN question-pump thread |
+| [2025-04-29-venturebeat-proxi-funding-crisis](2025-04-29-venturebeat-proxi-funding-crisis/README.md) | VentureBeat — Proxi pitch parallel, Gallium funding (Apr 2025) |
 | [2025-12-will-wright-dev-diaries](2025-12-will-wright-dev-diaries/README.md) | Dev Diaries — Proxi heirloom, Bartle types, identity pronoun surfing, Proxi→Minecraft, software toys |
 | [2013-tale-of-two-simcities](2013-tale-of-two-simcities/README.md) | Charles Normann — EA CEO sign-off inside story |
 | [2019-apple-iigs-simcity-becky-heineman](2019-apple-iigs-simcity-becky-heineman/README.md) | Becky Heineman IIgs source · Phil/Chaim books |

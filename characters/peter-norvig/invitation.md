@@ -21,7 +21,7 @@ conversation into an episode. Or several.**
 The demo: a screen-share where we create a character together, live, from your own publications
 and writings — the Ten Years essay, PAIP, whatever you choose — and watch it hold Coffee Talk
 with the others. You see the portrayal standards, the consent machinery, and the puppetry all the
-way down. Then we talk about whatever it stirs up.
+way down. Then we talk about whatever it stirs up. The whole stage is [this public GitHub repository](https://github.com/SimHacker/WillWrightShowForFood) — artifacts, portrayal standards, consent machinery, all browsable without an account.
 
 **Episode directions, all yours to pick from:**
 

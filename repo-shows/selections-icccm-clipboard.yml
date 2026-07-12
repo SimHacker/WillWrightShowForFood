@@ -1,0 +1,11 @@
+# SHOW alias — selections-icccm-clipboard → unnatural-selection
+# Canonical show file: unnatural-selection.yml
+
+alias_of: unnatural-selection.yml
+show_id: unnatural-selection
+title: "unnatural-selection (formerly selections-icccm-clipboard)"
+
+see:
+  - unnatural-selection.yml
+  - unnatural-selection-panel-invites.md
+  - ../characters/david-rosenthal/00-START-HERE.md

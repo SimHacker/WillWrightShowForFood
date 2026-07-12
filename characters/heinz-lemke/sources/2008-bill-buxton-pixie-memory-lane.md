@@ -49,4 +49,4 @@ metaphor. Met Bill Newman in Cambridge. Buxton spoke at CARS 2009.
 - Buxton knew PIXIE in detail — Don's patent-thread contrast
 - Two-episode pitch: 1969 US + modern CARS
 
-↑ [`correspondence.yml`](../correspondence.yml) · [`cambridge-films-flight-of-the-bumblebee.md`](../cambridge-films-flight-of-the-bumblebee.md)
+↑ [`correspondence.md`](../correspondence.md) · [`cambridge-films-flight-of-the-bumblebee.md`](../cambridge-films-flight-of-the-bumblebee.md)

@@ -5,6 +5,7 @@ meta:
   room: characters/heinz-lemke/
   curated_by: don-hopkins
   consent: not_yet_asked
+  human_readable: pull-in-gaps.md
 
 gaps:
   pixie_complete_source_listing:

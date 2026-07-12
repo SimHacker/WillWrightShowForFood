@@ -30,7 +30,7 @@ recorded_episodes:
 intro_canon: intro-canon.yml
 
 discussion_with:
-  - ../david-rosenthal/discussion-pack.yml
+  - ../david-rosenthal/discussion-pack.md
 
 episodes: episodes.yml
 

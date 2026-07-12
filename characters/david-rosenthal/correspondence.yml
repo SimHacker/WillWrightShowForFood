@@ -1,5 +1,6 @@
 # David S. H. Rosenthal × Don Hopkins — correspondence summary (public-safe)
 # Tight public-safe digest. NOT the full private thread.
+# Human-readable: correspondence.md
 # Standards: ../../schemas/portrayal-standards.md
 
 meta:
@@ -7,6 +8,7 @@ meta:
   curated_by: don-hopkins
   consent: not_yet_asked
   span: "2026-07 — PIXIE invitation, Hex draft, MOOLLM demo readings, Lem/BioShocking HN thread"
+  human_readable: correspondence.md
 
 gist: |
   David finds the trio idea interesting but flagged **logistics**: hard to get everyone online at
@@ -42,25 +44,25 @@ threads:
       - don_0703_2032_rautavaara_moollm
     artifacts:
       - sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md
-      - media/pdp7-hex-let-machine-win.yml
-      - literary/authority-without-truth.yml
-      - literary/rautavaaras-case-pkd.yml
+      - media/pdp7-hex-let-machine-win.md
+      - literary/authority-without-truth.md
+      - literary/rautavaaras-case-pkd.md
   moollm_demo_readings:
     date: "2026-07-03"
     transcript: sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md
     videos:
       - title: "✋💜🌊 Palm Love Wave"
         url: https://www.youtube.com/watch?v=4GS8Xx0ZTZI
-        episode: ../../repo-shows/moollm-readings/episodes/palm-love-wave.yml
+        episode: ../../repo-shows/moollm-readings/episodes/palm-love-wave.md
       - title: "Marathon Session Turn 7 — The Wish is Spoken"
         url: https://www.youtube.com/watch?v=T-OIeUSc5vI
         setting: "Vondelpark — guitar and singing in distance"
-        episode: ../../repo-shows/moollm-readings/episodes/marathon-turn-7-wish-spoken.yml
+        episode: ../../repo-shows/moollm-readings/episodes/marathon-turn-7-wish-spoken.md
       - title: "Dasher, Palm On Being Palm, Tog's Infinite Monkeys"
         url: https://www.youtube.com/watch?v=lL2sw2oYU98
-        episode: ../../repo-shows/moollm-readings/episodes/dasher-palm-tog-monkeys.yml
-    discussion_pack: ../../repo-shows/david-rosenthal/discussion-pack.yml
-    moollm_demo: ../../repo-shows/david-rosenthal/moollm-demo.yml
+        episode: ../../repo-shows/moollm-readings/episodes/dasher-palm-tog-monkeys.md
+    discussion_pack: ../../repo-shows/david-rosenthal/discussion-pack.md
+    moollm_demo: ../../repo-shows/david-rosenthal/moollm-demo.md
   lem_bioshock_hn_2026:
     date: "2026-07-05"
     what: |
@@ -75,7 +77,7 @@ threads:
       quote_closing: "SEVEN. — Trurl's smashed machine, last word"
     artifacts:
       - ../don-hopkins/sources/2026-07-06-hn-when-2-plus-2-equals-five.md
-      - literary/authority-without-truth.yml
+      - literary/authority-without-truth.md
     external:
       ars: https://arstechnica.com/security/2026/06/ai-browsers-can-be-lulled-into-a-dream-world-where-guardrails-no-longer-apply/
       layerx: https://layerxsecurity.com/blog/bioshocking-ai-gaming-the-ai-agents-context/
@@ -120,19 +122,20 @@ show_hooks:
   - "Short async segment — not full NeWS/X11/NVIDIA arc on this show"
   - "LOCKSS + Chapman films + Lars emulation — preservation thread"
   - "CHM oral history interviewer for Heinz — still proposed"
-  - "Solo show later — window-systems-lineage.yml material"
+  - "Solo show later — window-systems-lineage.md material"
   - "MOOLLM demo — watch three readings, then yaml jazz walkthrough"
   - "Literary — Lem 2+2=7, coprophagia, PKD Rautavaara's Case"
 
 connects_in_repo:
+  - { path: correspondence.md, why: "Human-readable digest (this file)" }
   - { path: invitation.md, why: "PIXIE trio invitation" }
-  - { path: window-systems-lineage.yml, why: "Solo-show depth — defer from PIXIE" }
+  - { path: window-systems-lineage.md, why: "Solo-show depth — defer from PIXIE" }
   - { path: ../../repo-shows/david-rosenthal/, why: "NeWS/X11/LOCKSS solo seed + discussion pack" }
-  - { path: ../../repo-shows/david-rosenthal/discussion-pack.yml, why: "July 2026 discussion brief" }
+  - { path: ../../repo-shows/david-rosenthal/discussion-pack.md, why: "July 2026 discussion brief" }
   - { path: ../../repo-shows/moollm-readings/, why: "Primer readings — Palm, Dasher, Tog" }
-  - { path: literary/authority-without-truth.yml, why: "Lem + coprophagia + Hex thread" }
-  - { path: literary/rautavaaras-case-pkd.yml, why: "PKD gods-eat-worshippers" }
+  - { path: literary/authority-without-truth.md, why: "Lem + coprophagia + Hex thread" }
+  - { path: literary/rautavaaras-case-pkd.md, why: "PKD gods-eat-worshippers" }
   - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Async PIXIE tapestry" }
   - { path: ../heinz-lemke/sources/2026-07-07-pixie-trio-thread.md, why: "DSHR terminal reading + Heinz correction" }
-  - { path: ../heinz-lemke/correspondence.yml, why: "Rosenthal same-machine thread" }
-  - { path: ../lars-brinkhoff/correspondence.yml, why: "Emulation segment + async pivot" }
+  - { path: ../heinz-lemke/correspondence.md, why: "Rosenthal same-machine thread" }
+  - { path: ../lars-brinkhoff/correspondence.md, why: "Emulation segment + async pivot" }

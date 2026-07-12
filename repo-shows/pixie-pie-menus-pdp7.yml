@@ -89,7 +89,7 @@ history:
       form originals, and ESPECIALLY source code. Review on air; brainstorm revival designs;
       extend existing emulator (Lars segment).
     transcript: characters/heinz-lemke/sources/2026-07-07-pixie-trio-thread.md
-    pull_in: characters/heinz-lemke/pull-in-gaps.yml
+    pull_in: characters/heinz-lemke/pull-in-gaps.md
     priority:
       - pixie_complete_source_listing
       - electronics_magazine_1969_pdf
@@ -309,7 +309,7 @@ ties_to:
   - characters/lars-brinkhoff/invitation.md
   - characters/david-rosenthal/
   - characters/david-rosenthal/invitation.md
-  - repo-shows/david-rosenthal/discussion-pack.yml
+  - repo-shows/david-rosenthal/discussion-pack.md
   - repo-shows/moollm-readings/
   - repo-shows/lars-brinkhoff/SHOW.yml
   - repo-shows/ben-and-heinz-pie-menus.yml

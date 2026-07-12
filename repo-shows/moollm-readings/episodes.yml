@@ -6,6 +6,7 @@ meta:
   count: 3
   recorded: "2026-07"
   role: primer_and_canon_backstory
+  human_readable: episodes.md
   note: |
     These episodes introduce characters and ideas referenced across Repo Shows. Watch before
     MOOLLM demo discussions. Not substitutes for guest interview shows.
@@ -15,14 +16,14 @@ episodes:
     number: 1
     title: "✋💜🌊 Palm Love Wave"
     youtube_url: https://www.youtube.com/watch?v=4GS8Xx0ZTZI
-    file: episodes/palm-love-wave.yml
+    file: episodes/palm-love-wave.md
     introduces: [palm, moollm, yaml_jazz]
 
   - id: marathon-turn-7-wish-spoken
     number: 2
     title: "Marathon Session Reading, Turn 7 — The Wish is Spoken"
     youtube_url: https://www.youtube.com/watch?v=T-OIeUSc5vI
-    file: episodes/marathon-turn-7-wish-spoken.yml
+    file: episodes/marathon-turn-7-wish-spoken.md
     setting: "Vondelpark, Amsterdam — guitar and singing in the distance"
     introduces: [palm, marathon_session, adventure_layer]
 
@@ -30,14 +31,14 @@ episodes:
     number: 3
     title: "David MacKay's Dasher, Palm On Being Palm, and Tog's Infinite Monkeys"
     youtube_url: https://www.youtube.com/watch?v=lL2sw2oYU98
-    file: episodes/dasher-palm-tog-monkeys.yml
+    file: episodes/dasher-palm-tog-monkeys.md
     introduces: [dasher, palm_on_being_palm, tog_infinite_monkeys]
 
 for_discussion:
-  show: ../david-rosenthal/discussion-pack.yml
+  show: ../david-rosenthal/discussion-pack.md
   guest: david-rosenthal
 
 see_also:
   - SHOW.yml
-  - intro-canon.yml
-  - ../david-rosenthal/moollm-demo.yml
+  - intro-canon.md
+  - ../david-rosenthal/moollm-demo.md

@@ -4,28 +4,29 @@
 meta:
   show: moollm-readings
   role: backstory_index
+  human_readable: intro-canon.md
 
 characters:
   palm:
     signifier: "🐒✋🌴🔮💜"
     room: ../../characters/palm/
     moollm_canonical: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm
-    first_reading: episodes/palm-love-wave.yml
+    first_reading: episodes/palm-love-wave.md
     later_shows: [will-wright/audience/palm]
 
 ideas_deferred:
   dasher:
-    file: topics/dasher.yml
-    introduced_in: episodes/dasher-palm-tog-monkeys.yml
+    file: topics/dasher.md
+    introduced_in: episodes/dasher-palm-tog-monkeys.md
   tog_infinite_monkeys:
-    file: topics/tog-infinite-monkeys.yml
-    introduced_in: episodes/dasher-palm-tog-monkeys.yml
+    file: topics/tog-infinite-monkeys.md
+    introduced_in: episodes/dasher-palm-tog-monkeys.md
 
 discussion_guests:
   david-rosenthal:
-    pack: ../david-rosenthal/discussion-pack.yml
+    pack: ../david-rosenthal/discussion-pack.md
     why: "MOOLLM demo + LOCKSS/preservation + literary authority thread"
 
 see_also:
-  - episodes.yml
+  - episodes.md
   - SHOW.yml

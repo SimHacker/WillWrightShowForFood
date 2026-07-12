@@ -12,7 +12,7 @@ show_seed: repo-shows/stone-librande/
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
-We would respectfully invite **Stone Librande** to a **Repo Show** — a friendly recorded conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood),
+We would respectfully invite **Stone Librande** to a **Repo Show** — a friendly recorded conversation whose stage is [this public GitHub repository](https://github.com/SimHacker/WillWrightShowForFood),
 following through to working code and credited ideas in public.
 
 **Proposed focus:** Game designer — one-page designs

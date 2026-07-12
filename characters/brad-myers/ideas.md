@@ -33,6 +33,11 @@ CHI '90 widget history video; Don's pie menu clips
 guest lectures, Panopto archive
 
 ### 5. Pick, Click, Flick! (ixtbook.com) — the pie menus section
+
+### 5b. Clipboard panel — Ted Nelson cut-and-paste rant × DSHR ICCCM
+Where does **paste** sit in Brad's interaction taxonomy vs Ted's *hide and plug*? Pair *All the
+Widgets* CHI'90 with [`../ted-nelson/sources/invisible-clipboard-rant-catalog.md`](../ted-nelson/sources/invisible-clipboard-rant-catalog.md).
+Show: [`../../repo-shows/selections-icccm-clipboard.yml`](../../repo-shows/selections-icccm-clipboard.yml)
 Brad's interaction-techniques bible — the whole history of how we point, select, and gesture, cataloged the way only Brad catalogs. It includes a **section on pie menus**: Don's own corner of the catalog, written by the historian he already traded 2023 email with about getting pie-vs-marking-menu history and accuracy right. Show beat: open the book to that section on air and let the subject annotate the history live — what the section gets right, what the community still gets wrong, and what belongs in the second edition.
 
 ### 6. Visual programming taxonomy

@@ -1,10 +1,11 @@
 # MOOLLM demo — for David S. H. Rosenthal (and reusable intro)
-# What Don demos when discussing yaml jazz + Repo Show orchestration.
+# Human-readable: moollm-demo.md
 
 meta:
   audience: david-rosenthal
   also: reusable_intro_for_moollm_readings
   moollm_repo: https://github.com/SimHacker/moollm
+  human_readable: moollm-demo.md
 
 elevator: |
   MOOLLM is an LLM operating system / orchestration layer — like LambdaMOO crossed with The Sims.
@@ -32,7 +33,7 @@ demo_flow:
     what: |
       PKD hook: Approximations edit a hallucination. MOOLLM hook: we edit yaml jazz — simulated
       characters, dreams, skills — with ethics and audit trail in git.
-    literary: ../../characters/david-rosenthal/literary/rautavaaras-case-pkd.yml
+    literary: ../../characters/david-rosenthal/literary/rautavaaras-case-pkd.md
 
 reading_links_in_video:
   note: "Don reads generated/scripted text; video description links to repo objects"
@@ -65,5 +66,6 @@ discussion_questions_for_dshr:
   - "Preservation of runnable emulators alongside papers — Lars + Chapman films thread"
 
 see_also:
-  - discussion-pack.yml
+  - discussion-pack.md
+  - moollm-demo.md
   - ../moollm-readings/intro-canon.yml

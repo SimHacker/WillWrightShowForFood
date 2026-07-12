@@ -26,12 +26,15 @@ async_now:
   what: |
     Logistics blocked synchronized PIXIE trio call. DSHR contributes short Cambridge ~1970
     segment to PIXIE tapestry; defers NeWS/X11/NVIDIA/LOCKSS depth here.
-  discussion_pack: discussion-pack.yml
-  moollm_demo: moollm-demo.yml
+  discussion_pack: discussion-pack.md
+  moollm_demo: moollm-demo.md
 
 dream_segments:
   - "Window-system wars — what historians should get right (NeWS vs X11, not a morality play)"
   - "ICCCM and X security — the protocols David actually wrote"
+  - "Selections trio — Ted Nelson invisible-clipboard rant × ICCCM author (../selections-icccm-clipboard.yml)"
+  - "Conrad Parker rant — implementor pain; PRIMARY/SECONDARY/TARGETS — what would you cut?"
+  - "Deskset Lichtenstein PS — calm tools vs whizzy demos (unix-haters leak)"
   - "Andrew at CMU with Gosling — what carried from Cambridge satellite graphics"
   - "Alvey 1985 — Methodology of Window Management retrospective"
   - "LOCKSS + Chapman films + Lars emulation — lots of copies keep PDP-7 display lists safe"
@@ -47,7 +50,7 @@ format:
 ties_to:
   - ../../characters/david-rosenthal/
   - ../../characters/david-rosenthal/invitation.md
-  - ../../characters/david-rosenthal/correspondence.yml
-  - ../../characters/david-rosenthal/window-systems-lineage.yml
+  - ../../characters/david-rosenthal/correspondence.md
+  - ../../characters/david-rosenthal/window-systems-lineage.md
   - ../pixie-pie-menus-pdp7.yml
   - ../moollm-readings/

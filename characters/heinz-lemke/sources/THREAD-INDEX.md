@@ -14,7 +14,7 @@
 
 ## Pull-ins still open
 
-See [`../pull-in-gaps.yml`](../pull-in-gaps.yml): 1969 Greyhound agenda, `image001.png`, Nagoya surgery slides, Newman ref 520 scan, PIXIE Part 1.docx (DSHR attachment), complete source listing.
+See [`../pull-in-gaps.md`](../pull-in-gaps.md): 1969 Greyhound agenda, `image001.png`, Nagoya surgery slides, Newman ref 520 scan, PIXIE Part 1.docx (DSHR attachment), complete source listing.
 
 ## Show
 

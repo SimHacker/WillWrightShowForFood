@@ -39,6 +39,8 @@ sources:
   blogs: []
   in_repo:
     - { path: ../douglas-engelbart/eulogy-ted-nelson.md, why: "Ted's eulogy for Doug — formatted primary source he calls his best writing" }
+    - { path: sources/invisible-clipboard-rant-catalog.md, why: "Clipboard rant — BayCHI 2021, Archive cutnpaste_201909, One-Liners" }
+    - { path: sources/2021-08-10-baychi-hci-constructs-transcript-digest.md, why: "BayCHI HCI Constructs transcript digest" }
 
 eulogy_note: |
   Ted calls his 7-minute eulogy for Doug Engelbart 'my best writing ever' — a love letter, an

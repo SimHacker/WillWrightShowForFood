@@ -5,7 +5,8 @@ topic:
   id: tog-infinite-monkeys
   title: "Tog's The Infinite Number of Monkeys"
   status: introduced_not_exhausted
-  introduced_in: ../episodes/dasher-palm-tog-monkeys.yml
+  human_readable: tog-infinite-monkeys.md
+  introduced_in: ../episodes/dasher-palm-tog-monkeys.md
 
 who:
   name: "Bruce 'Tog' Tognazzini"
@@ -22,6 +23,6 @@ hooks_for_later:
   - "Random generation vs authored microworlds"
 
 see_also:
-  - ../episodes/dasher-palm-tog-monkeys.yml
-  - ../intro-canon.yml
-  - ../../repo-shows/david-rosenthal/window-systems-lineage.yml
+  - ../episodes/dasher-palm-tog-monkeys.md
+  - ../intro-canon.md
+  - ../../characters/david-rosenthal/window-systems-lineage.md

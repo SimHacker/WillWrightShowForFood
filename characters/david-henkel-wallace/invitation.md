@@ -16,7 +16,7 @@ Gumby —
 
 You nominated me for the unix-haters list in 1991 ("a much better ranter than many who DO
 send to it" — still one of my proudest credentials). I'd like to return the favor: I'm
-nominating you for a **Repo Show**. The stage is a public repo; we talk; ideas become
+nominating you for a **Repo Show**. The stage is a public GitHub repo; we talk; ideas become
 runnable artifacts on stream. **Show, don't tell.**
 
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**

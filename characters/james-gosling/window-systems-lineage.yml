@@ -1,12 +1,13 @@
 # Window-systems lineage — Gosling at Alvey 1985 (public sources)
-# Shared workshop arc: ../david-rosenthal/window-systems-lineage.yml
+# Shared workshop arc: ../david-rosenthal/window-systems-lineage.md
 
 meta:
   room: characters/james-gosling/
   curated_by: don-hopkins
   consent: not_yet_asked
   guest: james-gosling
-  shared: ../david-rosenthal/window-systems-lineage.yml
+  shared: ../david-rosenthal/window-systems-lineage.md
+  human_readable: window-systems-lineage.md
 
 through_line: |
   **Andrew (CMU) → SunDew → NeWS** — PostScript-programmable, network-transparent windows.
@@ -17,7 +18,7 @@ through_line: |
   and UK MMI planning.
 
 alvey_workshop_1985:
-  see: ../david-rosenthal/window-systems-lineage.yml#alvey_workshop_1985
+  see: ../david-rosenthal/window-systems-lineage.md#alvey-workshop-1985
   proceedings: http://www.chilton-computing.org.uk/inf/literature/books/wm/index.htm
 
 gosling_papers:
@@ -31,7 +32,7 @@ gosling_papers:
     venue: "Same Alvey workshop; CACM *Andrew* paper (March 1986)"
 
 teitelman_warren:
-  see: ../david-rosenthal/window-systems-lineage.yml#teitelman_warren
+  see: ../david-rosenthal/window-systems-lineage.md#warren-teitelman
   dwim: "Warren Teitelman — invented DWIM (Do What I Mean) in Interlisp; see shared doc"
 
 NeWS_reunion_hooks:
@@ -41,7 +42,7 @@ NeWS_reunion_hooks:
   - "Three-way with Rosenthal — same workshop, two papers, one NeWS future"
 
 see_also:
-  - { path: ../david-rosenthal/window-systems-lineage.yml, why: "Full workshop + DSHR X11/ICCCM arc" }
+  - { path: window-systems-lineage.md, why: "Full workshop + DSHR X11/ICCCM arc" }
   - { path: ../david-rosenthal/, why: "Andrew co-author; NeWS reunion" }
   - { path: ideas.md, why: "Show conversation hooks" }
   - { path: invitation.md, why: "NeWS → Java Repo Show invite" }

@@ -3,7 +3,7 @@
 **Author:** David S. H. Rosenthal  
 **Date:** July 2026 (draft for PIXIE Repo Show)  
 **Source:** [pdp7.html](https://www.abitare.org/~dshr/tmp/pdp7.html)  
-**Permission:** Don may share with Lars and Heinz ([correspondence](correspondence.yml))
+**Permission:** Don may share with Lars and Heinz ([correspondence](correspondence.md))
 
 Same **PDP-7 + Type 340 + Titan** stack as [**PIXIE**](https://www.donhopkins.com/home/documents/PIXIE%20a%20new%20approach%20to%20man-machine%20communication.pdf) (~1969, [Heinz Lemke](../heinz-lemke/README.md)); David was at Cambridge ~1970. Show: [PIXIE trio](../../repo-shows/pixie-pie-menus-pdp7.yml).
 
@@ -31,8 +31,8 @@ But this experience meant that the year we graduated my friend and I were likely
 
 | Thread | Link |
 |--------|------|
-| **Let the machine win** — Hex cheats if you try to win | [literary/authority-without-truth.yml](literary/authority-without-truth.yml) (Lem *Cyberiad* 2+2=7) |
-| Sidecar / structured fields | [media/pdp7-hex-let-machine-win.yml](media/pdp7-hex-let-machine-win.yml) |
+| **Let the machine win** — Hex cheats if you try to win | [literary/authority-without-truth.md](literary/authority-without-truth.md) (Lem *Cyberiad* 2+2=7) |
+| Sidecar / structured fields | [media/pdp7-hex-let-machine-win.md](media/pdp7-hex-let-machine-win.md) |
 | Email thread (Don liked the draft) | [sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md](sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md) |
 | DSHR on PIXIE as “display terminal” (4 Jul) vs Heinz correction | [../heinz-lemke/sources/2026-07-07-pixie-trio-thread.md](../heinz-lemke/sources/2026-07-07-pixie-trio-thread.md) |
 | Three-way 8K squeeze (code / data / 340 display program) | [../heinz-lemke/pixie-source-recovery.md](../heinz-lemke/pixie-source-recovery.md) |

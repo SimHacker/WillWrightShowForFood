@@ -1,4 +1,4 @@
-# Paul Haeberli — invitation portrayal. NOT Paul Haeberli. STUB — enhance later.
+# Paul Haeberli — invitation portrayal. NOT Paul Haeberli.
 # Standards: ../../schemas/portrayal-standards.md
 
 character:
@@ -7,7 +7,6 @@ character:
   type: invitation
   signifier: "🎨🖥️✨"
   status: living
-  stub: true   # seeded fast from email + web; enrich with Don's memories + more Grafica Obscura gems
   field: "Computer graphics research (SGI 1983–1999); visual dataflow programming; image processing; free-form fabrication (Lamina Design)"
   home: characters/paul-haeberli/
 
@@ -46,6 +45,14 @@ bio:
       what: "DynaDraw (1989) — calligraphy with a physically modeled brush (mass, drag, spring)"
     texture_mapping:
       what: "Texture Mapping as a Fundamental Drawing Primitive — 1993, with Mark Segal"
+    fast_shadows_siggraph_1992:
+      what: "Fast Shadows and Lighting Effects Using Texture Mapping — SIGGRAPH 1992, with Mark Segal, Carl Korobkin, Jim Foran, et al."
+      paper: https://dl.acm.org/doi/pdf/10.1145/133994.134071
+      page_252: "Figure 3 hosts the non-distorted Skinnyhacking poster image (proceedings Easter egg)"
+    skinnyhacking:
+      what: "Skinnyhackers group lore — Tom Davis, Rocky Rhodes, Scott Carr; Paul was photographer for 'No Skinnyhacking' poster"
+      showcase: "Showcase was best-known Skinnyhackers product; poster was first"
+      in_repo: sources/skinnyhacking-siggraph-1992.md
     grafica_obscura:
       what: "GRAFICA Obscura — open research notebook, online since 1994"
       url: https://graficaobscura.com/
@@ -65,6 +72,7 @@ why_the_show_cares:
   proto_repo_show: "GRAFICA Obscura = research shared as browsable artifacts, decades before 'build in public'"
   bits_and_atoms: "Lamina ↔ Jared Tarbell's Levitated — planar material, free-form computation"
   resurrection: "'It would be F.U.N.' — reviving old code on air is a core show format"
+  skinnyhacking: "Paul photographed the Skinnyhackers poster; SIGGRAPH '92 page 252 Easter egg — HN 34129571 citation"
 
 contact:
   email: paulhaeberli@gmail.com   # 2010-era; verify
@@ -74,6 +82,8 @@ correspondence: correspondence.yml
 private_archive: DonHopkins/projects/micropolis-moollm/repo-shows/paul-haeberli/
 
 sources:
+  in_repo:
+    - sources/skinnyhacking-siggraph-1992.md
   web:
     - https://graficaobscura.com/
     - https://graficaobscura.com/paul/

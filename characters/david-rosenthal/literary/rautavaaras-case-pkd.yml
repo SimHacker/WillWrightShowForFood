@@ -1,6 +1,9 @@
 # Literary — Philip K. Dick, "Rautavaara's Case" (1980, Omni)
 # Don → DSHR thread: gods eating worshippers; yaml jazz symmetry.
 
+meta:
+  human_readable: rautavaaras-case-pkd.md
+
 story:
   title: "Rautavaara's Case"
   author: Philip K. Dick
@@ -26,13 +29,12 @@ moollm_bridge: |
 don_to_dshr: see transcript — Coprophagia → Rautavaara → yaml jazz / MOOLLM demo hook
 
 connects:
-  - authority-without-truth.yml
-  - ../../mark-weiser/pkd-lem-ai-sf.yml
-  - ../../repo-shows/ideas/gags/gods-eat-worshippers.yml
-  - ../../repo-shows/david-rosenthal/moollm-demo.yml
-  - ../../repo-shows/david-rosenthal/discussion-pack.yml
+  - authority-without-truth.md
+  - ../../mark-weiser/pkd-lem-ai-sf.md
+  - ../../repo-shows/david-rosenthal/moollm-demo.md
+  - ../../repo-shows/david-rosenthal/discussion-pack.md
 
 see_also:
   - sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md
-  - media/pdp7-hex-let-machine-win.yml
-  - ../correspondence.yml
+  - media/pdp7-hex-let-machine-win.md
+  - ../correspondence.md

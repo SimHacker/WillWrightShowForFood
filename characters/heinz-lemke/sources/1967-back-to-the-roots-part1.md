@@ -111,7 +111,7 @@ university-less German mathematician on the strength of one talk.
 |---|---|
 | **9 July storyline thread** (what prompted this) | [`2026-07-09-pixie-storyline-thread.md`](2026-07-09-pixie-storyline-thread.md) |
 | **7 July source-listing thread** | [`2026-07-07-pixie-trio-thread.md`](2026-07-07-pixie-trio-thread.md) |
-| **Still-to-arrive attachments & assets** | [`../pull-in-gaps.yml`](../pull-in-gaps.yml) |
+| **Still-to-arrive attachments & assets** | [`../pull-in-gaps.md`](../pull-in-gaps.md) |
 | **Roy Eagleson** (asked for the storyline) | [`../../roy-eagleson/`](../../roy-eagleson/) |
 | **Ivan Sutherland / Sketchpad** (north star) | [`../../ivan-sutherland/`](../../ivan-sutherland/) |
 | **PIXIE show** | [`../../../repo-shows/pixie-pie-menus-pdp7.yml`](../../../repo-shows/pixie-pie-menus-pdp7.yml) |

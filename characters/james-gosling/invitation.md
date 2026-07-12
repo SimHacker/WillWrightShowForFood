@@ -1,24 +1,16 @@
 ---
 status: draft
 character_id: james-gosling
-public: true
 consent: not_yet_asked
 show_seed: repo-shows/james-gosling/
-format: remote_or_in_person
 ---
 
 # Repo Show invitation — James Gosling
 
-```
-┌──────────────────────────────────────────────────────────────────────────┐
-│ REPO SHOW · MICROPOLIS CLASS · PUBLIC GITHUB STAGE                       │
-│ guest: James Gosling ☕    host: Don Hopkins    consent: not_yet_asked   │
-│ show:  repo-shows/james-gosling/    character: characters/james-gosling/ │
-└──────────────────────────────────────────────────────────────────────────┘
-```
+*Not yet sent. James may edit, decline, delay, or request removal at any time.*
 
-*James Gosling may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers quiet mode and onboarding.*
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
+
 James —
 
 We go back a long way — **Gosling Emacs** at UniPress, **NeWS** at Sun (your 1990 email is still
@@ -48,11 +40,15 @@ Arthur van Hoff, David Rosenthal, Owen Densmore — your pick.
 - **Andrew + Rosenthal** — CMU window system before Sun; bridge to NeWS and later X11/ICCCM world.
 - **Alvey 1985 — Methodology of Window Management** — you and Rosenthal **published and
   participated** (Andrew window manager + **SunDew** papers; **Teitelman's** ten-year
-  retrospective in the same workshop). [`window-systems-lineage.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/james-gosling/window-systems-lineage.yml)
-  · shared with [`../david-rosenthal/window-systems-lineage.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/window-systems-lineage.yml)
+  retrospective in the same workshop). [`window-systems-lineage.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/james-gosling/window-systems-lineage.md)
+  · shared with [`../david-rosenthal/window-systems-lineage.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/window-systems-lineage.md)
+- **unnatural-selection panel** — co-guest with Rosenthal + Ted Nelson: **Alvey icon/selection
+  table** walk, SunDew vs ICCCM, NFS/send-code thread.
+  [`repo-shows/unnatural-selection.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/unnatural-selection.yml)
+  · [`../david-rosenthal/00-START-HERE.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/00-START-HERE.md)
 - **Warren Teitelman** — invented **DWIM** (*Do What I Mean*, Interlisp); Alvey retrospective;
   later managed Sun **NeWS Toolkit** (Don's manager there — pie menus, PizzaTool).
-  [`../david-rosenthal/window-systems-lineage.yml#teitelman_warren`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/window-systems-lineage.yml)
+  [`../david-rosenthal/window-systems-lineage.md#warren-teitelman`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/window-systems-lineage.md#warren-teitelman)
 - **HyperLook + early Java** — Arthur's NeWS HyperCard; you on Java; what survived the transition.
 - **Checked exceptions, reliability, and what you'd change** — design philosophy debated live, not
   as a flame war.
@@ -69,7 +65,7 @@ NeWS reunion can be one long episode or a short series — your call.
 | **Your guest README** | [`characters/james-gosling/README.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/james-gosling/README.md) |
 | **Show seed** (segments · pair w/ van Hoff) | [`repo-shows/james-gosling/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/james-gosling/README.md) |
 | **Conversation hooks** | [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/james-gosling/ideas.md) |
-| **Alvey 1985 — SunDew + Andrew papers** | [`window-systems-lineage.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/james-gosling/window-systems-lineage.yml) |
+| **Alvey 1985 — SunDew + Andrew papers** | [`window-systems-lineage.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/james-gosling/window-systems-lineage.md) |
 | **PDP-8 hotrod photo + sidecar** | [`media/gosling-young-pdp8-hotrod.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/james-gosling/media/gosling-young-pdp8-hotrod.yml) |
 | **NeWS trail** | [`send-code-not-commands`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/trails/send-code-not-commands.md) |
 | **The whole Repo Show project** | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |

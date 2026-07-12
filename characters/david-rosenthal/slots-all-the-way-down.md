@@ -43,11 +43,18 @@ a parent slot); JS kept the idea and added the confusion. **Looking at you, Java
 
 What got lost besides the veneer:
 
+<!-- Editorial standard (Don's ruling, Jul 2026): whenever criticizing JavaScript in relation
+to Self, always mention that JS lacks multiple inheritance — one of Self's central essential
+qualities, and part of what made Self hard to compile fast. -->
 - **Multiple inheritance.** Self objects can have **multiple parent slots** — each a uniquely named
   slot ending in `*`, each pointing at a parent object. Reparent at runtime; assignable slots; no
   special-case syntax. JavaScript gives you **one** prototype chain. Want MI? Factory hacks, mixins,
   `Object.assign`, or pretend interfaces exist elsewhere. **Oops.** (See lineage `(oops)` triple pun —
   JS mistake; Owen's **OOPS** Object Oriented PostScript actually *has* MI on a dict stack.)
+  And MI is not just expressive power — it's one of the things that made Self **hard to compile
+  fast**: method lookup across multiple live, reassignable parents is precisely what the PICs
+  and adaptive inlining had to conquer. JS kept the easy single chain and skipped the hard
+  problem Self had already solved.
 
 - **`this` is dynamic when it should be lexical.** `this` rebinds on every call depending on call site,
   `new`, `bind`, arrow wrappers — dynamic scoping dressed up as an object model. Arrow functions
@@ -779,4 +786,4 @@ the missing names via PR or issue.*
 - **Jonathan Rees, "Rees Re: OO"** ([reesoo.html](https://paulgraham.com/reesoo.html)) — the 9-item à la carte menu; OO as arbitrary subsets
 - **MOOLLM skill protocol** (extends Anthropic Agent Skills): `skills/skill/SKILL.md` — "What We Share with Anthropic" + "MOOLLM's Unique Contributions" §1–10 (the tangible, growing extension list)
 - **MOOLLM Self→prototype implementation**: `skills/skill/delegation-object-protocol.md`, `skill-instantiation-protocol.md`; `kernel/ARCHITECTURE.md`; `kernel/naming/` (K-lines, path variables, constellations); `kernel/DIRECTORY-AS-OBJECT.md`, `kernel/CARDS-AS-OBJECTS.md`, `kernel/SELFISH-COM-IMPLEMENTATION.md`
-- Related here: [`window-systems-lineage.yml`](window-systems-lineage.yml) · [`../../process/artifactory.md`](../../process/artifactory.md) · MOOLLM `artifactory` skill (*Selfish inheritance*)
+- Related here: [`window-systems-lineage.md`](window-systems-lineage.md) · [`../../process/artifactory.md`](../../process/artifactory.md) · MOOLLM `artifactory` skill (*Selfish inheritance*)

@@ -7,7 +7,7 @@
 (1983–1999), GRAFICA Obscura, ConMan, the accumulation buffer, Paint By Numbers, DynaDraw,
 Lamina Design.
 
-**Status:** seed (stub — enhance later) · consent not yet asked · interview planned.
+**Status:** seed · consent not yet asked · interview planned.
 
 ## Dream segments
 
@@ -15,7 +15,8 @@ Lamina Design.
 2. **GRAFICA Obscura** — research in public, 1994.
 3. **Resurrection hour** — DynaDraw, Don's animated text fountain: *"it would be F.U.N."*
 4. **SGI stories** — sixteen years inside the machine that made 3D real.
-5. **Bits & atoms** — Lamina ↔ [Jared Tarbell's Levitated](../jared-tarbell/README.md), free-form structures from planar material.
+5. **Skinnyhacking** (awkward, optional) — Paul photographed the poster; [SIGGRAPH '92 page 252](../../characters/paul-haeberli/sources/skinnyhacking-siggraph-1992.md) Easter egg inside *Fast Shadows and Lighting Effects Using Texture Mapping*; Showcase lore. [HN 34129571](https://news.ycombinator.com/item?id=34129571).
+6. **Bits & atoms** — Lamina ↔ [Jared Tarbell's Levitated](../jared-tarbell/README.md), free-form structures from planar material.
 
 **Seed:** [`SHOW.yml`](SHOW.yml) · **Invitation:** [`invitation.md`](../../characters/paul-haeberli/invitation.md) ·
 **Ideas:** [`ideas.md`](../../characters/paul-haeberli/ideas.md)

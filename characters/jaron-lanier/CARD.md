@@ -2,13 +2,9 @@
 
 > **MYTHIC** · VPL visionary · data dignity · VR as instrument — *not* Body Electric's programmer.
 
-```
-┌──────────────────────────────────────────────┐
-│ 🥽🎼 JARON LANIER               ✦ MYTHIC   │
-│ VR Bard / Data-Dignity Paladin               │
-│ Set: Rebounce · Repo Medium  · Dream guest  │
-└──────────────────────────────────────────────┘
-```
+**Jaron Lanier** · MYTHIC  
+*VR Bard / Data-Dignity Paladin*  
+Set: Rebounce · Repo Medium · Dream guest
 
 ## ⚡ Abilities
 

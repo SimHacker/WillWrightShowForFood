@@ -1,34 +1,16 @@
 ---
-status: invited  # responded interested — async solo/1-on-1
+status: invited
 character_id: david-rosenthal
-public: true
 consent: not_yet_asked
 show_seed: repo-shows/pixie-pie-menus-pdp7.yml
-also_invited: repo-shows/david-rosenthal/
-format: async_one_on_one
-co_guests: [heinz-lemke, lars-brinkhoff]
-send_batch: pixie-trio-2026
-production_note: |
-  Original invitation described one group call. July 2026 logistics → async 1-on-1 recordings;
-  DSHR Cambridge ~1970 on PIXIE; NeWS/X11/LOCKSS depth deferred to solo show. See correspondence.yml.
 ---
 
 # Repo Show invitation — David S. H. Rosenthal
 
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│ REPO SHOW · MICROPOLIS CLASS · PUBLIC GITHUB STAGE                          │
-│ episode: PIXIE — Pie Menus on the PDP-7 (1969)  ·  type: group              │
-│ guest: David S. H. Rosenthal 🗄️                                             │
-│ co-guests: Heinz U. Lemke 🥧  ·  Lars Brinkhoff 🖥️                           │
-│ host: Don Hopkins                                                           │
-│ show:  repo-shows/pixie-pie-menus-pdp7.yml                                  │
-│ room:  characters/david-rosenthal/  (+ heinz-lemke evidence room)           │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
+David responded interested (July 2026). This letter was drafted for a group PIXIE episode with Heinz and Lars; logistics pointed us to async one-on-one recordings instead — [correspondence.md](correspondence.md) has the thread. Your PDP-7/Cambridge ~1970 segment stays on this show; NeWS, X11, and LOCKSS depth can wait for a solo episode later.
 
-*Send-ready draft — not yet sent. David S. H. Rosenthal may edit, decline, delay, or request removal at any time.*  
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — correct, expand, replace, or remove your directory anytime, or take direct edit access; also covers the quiet-mode publication plan and easy onboarding.
+
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 **Today I'm sending three matching invitations** — yours, **Heinz Lemke's**, and **Lars Brinkhoff's** — for **one group episode**. Each letter is written for the person receiving it; all three describe the same show from different angles.
@@ -103,7 +85,7 @@ oral history — if you're both willing — whether on this call or separately.)
   Displays and Unix*); Gosling's **SunDew** (NeWS precursor); **Warren Teitelman's** *Ten Years
   of Window Systems — A Retrospective View* in the same room and proceedings. Working-group
   discussions (architecture, input, redraw) — not just papers on the shelf. Full arc:
-  [`window-systems-lineage.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/window-systems-lineage.yml).
+  [`window-systems-lineage.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/window-systems-lineage.md).
 - **Warren Teitelman** — invented **DWIM** (*Do What I Mean*) in Interlisp; Alvey retrospective;
   later managed Sun **NeWS Toolkit** (**my manager** there — pie menus, PizzaTool).
 - Your **Alan Kay** window-prehistory synthesis (*History of Window Systems* on blog.dshr.org —
@@ -169,8 +151,8 @@ optional solo shows later).
 | **Conversation hooks** | [`../heinz-lemke/ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/ideas.md) |
 | **Portrait / sources** | [`../heinz-lemke/CHARACTER.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/CHARACTER.yml) · [`../heinz-lemke/GLANCE.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/GLANCE.md) |
 | **Evidence room** | [`../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md) |
-| **Correspondence digest** | [`../heinz-lemke/correspondence.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/correspondence.yml) |
-| **Pull-in gaps** | [`../heinz-lemke/pull-in-gaps.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/pull-in-gaps.yml) |
+| **Correspondence digest** | [`../heinz-lemke/correspondence.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/correspondence.md) |
+| **Pull-in gaps** | [`../heinz-lemke/pull-in-gaps.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/pull-in-gaps.md) |
 
 ### David S. H. Rosenthal 🗄️
 

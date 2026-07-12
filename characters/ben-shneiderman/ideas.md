@@ -47,6 +47,11 @@ Nelson: wish he'd link to **practical impact** — fair critique Don forwarded i
 → [`sources/2022-01-13-hyperties-computer-lib.md`](sources/2022-01-13-hyperties-computer-lib.md) ·
 [`../don-hopkins/sources/2020-ted-nelson-klavs-landberg-self-revealing.md`](../don-hopkins/sources/2020-ted-nelson-klavs-landberg-self-revealing.md)
 
+### 3b. Clipboard panel — visible links vs invisible scrap
+Jan 2022 thread on Ted Nelson + HyperTIES lineage. **Embedded light blue links** as partial answer
+to Ted's *hide and plug* — pair with DSHR ICCCM on [`selections-icccm-clipboard.yml`](../../repo-shows/selections-icccm-clipboard.yml).
+[`../ted-nelson/sources/invisible-clipboard-rant-catalog.md`](../ted-nelson/sources/invisible-clipboard-rant-catalog.md)
+
 ### 4. CHI'88 pie menus — Fitts on the command bus
 
 Empirical study in repo (`media/from-mail/paper-callahan-hopkins-pie-menus-chi1988.pdf`). Don credits

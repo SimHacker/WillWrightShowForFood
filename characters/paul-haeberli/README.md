@@ -1,7 +1,7 @@
-# Paul Haeberli 🎨🖥️✨ (a dream guest — stub, enhance enhance enhance)
+# Paul Haeberli 🎨🖥️✨
 
 *Invitation portrayal — **NOT** Paul Haeberli, and not claims about his views. Warm contact of
-Don's; consent not yet asked. This is a **stub** — seeded fast, to be enriched.*
+Don's; consent not yet asked.*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 **Who:** **Paul Haeberli** — computer graphics researcher at **Silicon Graphics from February 1983
@@ -19,6 +19,8 @@ programmers.
 | **[Paint By Numbers](https://history.siggraph.org/learning/paint-by-numbers-abstract-image-representations-by-haeberli/)** (SIGGRAPH 1990) | Abstract impressionist image representations — painting as sampling. |
 | **DynaDraw** (1989, GRAFICA Obscura) | Calligraphy with a physically modeled brush — mass, drag, spring. Still getting reimplemented today. |
 | **Texture Mapping as a Fundamental Drawing Primitive** (1993, with Mark Segal) | The paper that taught everyone textures were for *everything*, not just decals. |
+| **Fast Shadows and Lighting Effects Using Texture Mapping** (SIGGRAPH 1992, with Segal, Korobkin, Foran, et al.) | Serious texture-mapping shadows paper — and **page 252** hides the Skinnyhacking poster Easter egg. Paul was the **photographer**. |
+| **Skinnyhacking** (SGI lore, ~1992) | Tom Davis, Rocky Rhodes, Scott Carr — "No Skinnyhacking" poster; Showcase; proceedings back cover + page 252. See [`sources/skinnyhacking-siggraph-1992.md`](sources/skinnyhacking-siggraph-1992.md). |
 | **Lamina Design** (2004→) | Fabricating **precise free-form structures from planar material** — kin to [Jared Tarbell's](../jared-tarbell/README.md) laser-cut computational gems. |
 
 **The Don thread:** In August 2010 Paul sent Don his iPad app **Explore 3D**, then patiently walked
@@ -42,6 +44,7 @@ public." And Lamina makes him kin to the bits-&-atoms thread.
 | **Invitation** | [`invitation.md`](invitation.md) |
 | **Show ideas** | [`ideas.md`](ideas.md) |
 | **Correspondence (public-safe)** | [`correspondence.yml`](correspondence.yml) |
+| **Sources** | [`sources/skinnyhacking-siggraph-1992.md`](sources/skinnyhacking-siggraph-1992.md) |
 | **Show seed** | [`../../repo-shows/paul-haeberli/`](../../repo-shows/paul-haeberli/README.md) |
 
 ## Sources

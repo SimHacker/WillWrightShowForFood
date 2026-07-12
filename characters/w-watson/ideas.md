@@ -12,7 +12,9 @@ categories as the lens; Don's objectology archive as the material evidence:
 - The Sims' object system — SimAntics, advertisements, the libidinal economy of *literal*
   objects advertising enjoyment to simulated people (this is not even a metaphor)
 - JavaScript's prototype system claiming Self as inspiration while missing the point —
-  the 2006 Tom Lord conversation as read-aloud evidence
+  the simplicity thesis, the compilability, and **multiple inheritance** (Self's multiple
+  parent slots; JS kept one chain) — the 2006 Tom Lord conversation as read-aloud evidence.
+  Lacanian bonus: JS desires Self's *objet petit a* but forecloses the parents.
 
 Live segment: **diagnose the audience.** Chat names a language; Watson charts it; Don supplies
 the archaeology.

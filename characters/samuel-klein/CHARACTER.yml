@@ -1,0 +1,51 @@
+# Samuel J Klein — invitation portrayal. NOT Samuel Klein.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: samuel-klein
+  name: Samuel J Klein
+  also_known_as: [SJ Klein, Samuel Klein, S.J. Klein]
+  type: invitation
+  signifier: "💻🌍"
+  status: living
+  field: "OLPC Director of Content; game-dev evangelist; free knowledge advocate; Wikimedia veteran"
+  home: characters/samuel-klein/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  channel: facebook
+  show_seed: repo-shows/walter-bender-olpc/SHOW.yml
+
+bio:
+  summary: |
+    Engineer and archivist; **Director of Content** for One Laptop per Child. Keynoted Serious Games
+    Summit GDC 2007 ("One Laptop per Child and Serious Games"); rallied game developers toward
+    educational titles for the XO. Don worked with him on **open-sourcing SimCity for OLPC** — GDC
+    booth demo, 2007 EA QA threads. Co-founder Public AI Network, Knowledge Futures Group; former
+    Wikimedia trustee. Walter Bender = Sugar/Stone Soup mastermind; Samuel = game-dev-facing
+    evangelism at GDC (Don's correction, both deserve credit).
+  sources:
+    - https://cyber.harvard.edu/people/sklein
+    - https://www.gamesindustry.biz/director-of-one-laptop-per-child-initiative-to-take-center-stage-at-serious-games-summit-gdc-2007
+
+connections:
+  - don-hopkins
+  - walter-bender
+  - will-wright
+  - nicholas-negroponte
+
+show_suggestions:
+  - { seed: repo-shows/walter-bender-olpc/SHOW.yml, what: "OLPC Stone Soup + SimCity GPL — pair with Walter" }
+  - { seed: characters/will-wright/sources/simcity-open-source-saga/, what: "Micropolis lineage" }
+
+sources:
+  in_repo:
+    - sources/gdc-2007-serious-games-keynote.md
+    - ../will-wright/sources/2007-01-29-olpc-simcity-ea-qa-vm/
+    - ../will-wright/sources/2007-11-02-olpc-simcity-qa-sign-off/

@@ -13,15 +13,8 @@ light. The expression of someone who already knows what the iron can do — the 
 Metadata: [`media/gosling-young-pdp8-hotrod.yml`](media/gosling-young-pdp8-hotrod.yml) ·
 contrast with Cambridge **PDP-7/Titan** PIXIE: [`../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md`](../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md)
 
-```
-    ┌─────────────────────────────────────────────────────────────────┐
-    │  G O S L I N G   E M A C S  ──►  N e W S  ──►  J a v a          │
-    │       │              │                │              │          │
-    │   MockLisp      PostScript         network         behavior     │
-    │   extension     code+graphics      windows         on the       │
-    │   languages     + data             (SunDew)         internet    │
-    └─────────────────────────────────────────────────────────────────┘
-```
+**Lineage:** Gosling Emacs → NeWS → Java  
+MockLisp extension → PostScript code+graphics → network windows (SunDew) → behavior on the internet
 
 *Sniff:* [`CARD.yml`](CARD.yml) · [`GLANCE.yml`](GLANCE.yml) · [`GLANCE.md`](GLANCE.md)
 
@@ -32,7 +25,7 @@ Invitation portrayal — **not** James Gosling. [Standards](../../schemas/portra
 | → | |
 |---|---|
 | **Invitation** | [invitation.md](invitation.md) |
-| **Show prep** | [ideas.md](ideas.md) · [window-systems-lineage.yml](window-systems-lineage.yml) |
+| **Show prep** | [ideas.md](ideas.md) · [window-systems-lineage.md](window-systems-lineage.md) |
 | **Media** | [media/README.md](media/README.md) |
 | **Show seed** | [repo-shows/james-gosling/](../../repo-shows/james-gosling/README.md) |
 
@@ -45,8 +38,8 @@ Invitation portrayal — **not** James Gosling. [Standards](../../schemas/portra
 - **Gosling Emacs** — first Unix Emacs; UniPress ("Evil Software Hoarder Emacs" per RMS → GNU Emacs)
 - **Andrew** window system at CMU — with [**David Rosenthal**](../david-rosenthal/README.md); both
   **published and participated** in the **1985 Alvey *Methodology of Window Management*** workshop
-  ([`window-systems-lineage.yml`](window-systems-lineage.yml) ·
-  [`../david-rosenthal/window-systems-lineage.yml`](../david-rosenthal/window-systems-lineage.yml))
+  ([`window-systems-lineage.md`](window-systems-lineage.md) ·
+  [`../david-rosenthal/window-systems-lineage.md`](../david-rosenthal/window-systems-lineage.md))
 - **NeWS/SunDew** at Sun — PostScript-programmable, network-transparent windows (**send a program,
   not a data structure**); AJAX before AJAX. **Warren Teitelman** — Alvey retrospective author;
   later Don's manager on the **NeWS Toolkit** team at Sun.

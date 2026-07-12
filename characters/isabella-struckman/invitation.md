@@ -15,7 +15,7 @@ show_seed: repo-shows/isabella-struckman/
 Isabella —
 
 I'd love to have you on a **Repo Show** — a conversation whose stage is
-[this public repository](https://github.com/SimHacker/WillWrightShowForFood), where we talk through
+[this public GitHub repository](https://github.com/SimHacker/WillWrightShowForFood), where we talk through
 real work and then build on it in the open (transcripts, notes, and runnable code all free on GitHub).
 
 **You are the topic.** Some threads I'd especially love to get into — your pick:

@@ -18,7 +18,7 @@ pair_with: david-levitt
 Marc —
 
 Your character directory is open. We'd be **delighted** to have you on a **Repo Show** — a live,
-friendly conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood).
+friendly conversation whose stage is [this public GitHub repository](https://github.com/SimHacker/WillWrightShowForFood).
 **Show, don't tell:** ideas become running code, puppets, and playable moments on stream.
 
 **David Levitt** and I would love you in the room — old friends, decades of stories (many from

@@ -1,0 +1,42 @@
+# Amsterdam pub meeting — Tanja Sihvonen
+
+meta:
+  title: "Scholar meets Sims programmers by accident"
+  circa: "~2008"
+  venue: Sound Garden, Amsterdam
+  captured: "2026-07-12"
+  status: don_memory_plus_corroborating_email
+  story_md: amsterdam-pub-meeting.md
+
+venue_detail:
+  name: Sound Garden
+  atmosphere: gezellig; cozy magic village
+  features: [canal garden, dock, arrive by boat, interesting crowd]
+
+people:
+  - tanja-sihvonen  # PhD student, Sims UCC thesis → Players Unleashed!
+  - don-hopkins     # Sims tools, motives, Transmogrifier orbit
+  - eric-bowman     # Sims 1 programmer; later TomTom Amsterdam
+
+story:
+  don_summary: |
+    Casual chat about video games. Tanja mentioned The Sims and her PhD on user-created
+    content. Don and Eric revealed they worked on the original game. Mutual surprise.
+    Offered to answer her research questions.
+
+provenance:
+  - source: don-hopkins email to Lyndsay Pearson (EA), 2019-10-09
+    path: ../../../../DonHopkins/projects/willwrightshowforfood/green-room/don-hopkins/qgcon-2020-inclusivity-paper/email-thread-digest.md
+  - source: tom-van-dijk thread, 2024-06
+    path: ../../../tom-van-dijk/sources/2024-06-van-dijk-sims-modding-reconnect.md
+  - source: phil-salvador email, 2023-02-20
+    note: "Sound Garden version; OAPEN link"
+
+book:
+  title: Players Unleashed!
+  oapen: https://library.oapen.org/handle/20.500.12657/34685
+
+show_use:
+  - tanja-sihvonen invitation cold-open
+  - building-the-sims reunion — scholarship meets builders
+  - contrast with institutional memory loss Don described to EA (2019)

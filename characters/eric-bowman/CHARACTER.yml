@@ -40,6 +40,7 @@ sources:
 
 see_also:
   - { path: media.md, why: "Bobo's 'throbbing brain' Sims UI (not shipped) + Tanja Sihvonen's Players Unleashed" }
+  - { path: ../tanja-sihvonen/README.md, why: "Players Unleashed! scholar; Amsterdam pub" }
   - { path: ../jamie-doornbos/, why: "Sims engineering" }
   - { path: ../don-hopkins/, why: "Sims + TomTom colleague; host" }
   - { path: ../will-wright/, why: "Created The Sims" }

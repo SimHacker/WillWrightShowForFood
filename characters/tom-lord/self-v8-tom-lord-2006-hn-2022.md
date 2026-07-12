@@ -35,6 +35,13 @@ https://en.wikipedia.org/wiki/V8_(JavaScript_engine)
   towering contribution *in its own right*, and towers higher because it was achieved **in the
   face of that first commitment**: making a radically simple language fast is the hard version
   of the problem. Anybody can make a simple language slow, or a fast language complicated.
+- **And what JavaScript left behind:** Self objects have **multiple parent slots** —
+  multiple inheritance, dynamically assignable, no special syntax — another of Self's central,
+  essential qualities, and one of the things that made it *hard to compile fast* (method
+  lookup across several live, reassignable parents is exactly what the PICs and adaptive
+  inlining had to tame). JavaScript took the single prototype chain and skipped MI entirely —
+  so it copied the easy fraction of the object model *and* dodged the hard compilation problem
+  Self had already solved. Details: [slots all the way down](../david-rosenthal/slots-all-the-way-down.md#javascript--self-watered-down).
 - **Provenance:** written in 2006, before V8 existed. The claim that Self's underappreciated
   contribution was compilability — not the prototypes JavaScript cribbed — was made in
   advance, not in hindsight.

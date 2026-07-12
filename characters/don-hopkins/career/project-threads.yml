@@ -20,6 +20,8 @@ threads:
   maxis_sims:
     span: "1997–2000"
     artifacts: [Sims UI, mod tools, SimAntics/Edith advocacy, inclusive relationships]
+    context: hired for animation/UI/tools; architecture → people; smart objects; Mattrick/McCloud
+    witness: ../sources/sims-origin-core-tech-four-1997.md
     merges_with: [simcity_micropolis, stupid_fun_club, repo_show, browser_sims_stack]
 
   stupid_fun_club:

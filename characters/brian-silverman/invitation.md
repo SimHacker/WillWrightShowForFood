@@ -21,7 +21,7 @@ a public GitHub repo and the audience can fork it, run it, and correct us. **Wil
 for the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md)
 and more.
 
-A **Repo Show** is a friendly recorded conversation whose whole stage is that repo: we upload
+A **Repo Show** is a friendly recorded conversation whose whole stage is that public GitHub repo: we upload
 papers, code, films, and show seeds *before* we talk; on air we walk the artifacts, brainstorm
 revivals, and check in what we learned. **Async-first** — record when it suits you (solo clip,
 one-on-one call, screen share); I weave clips in post. No reflexive **SUBMIT** buttons — only

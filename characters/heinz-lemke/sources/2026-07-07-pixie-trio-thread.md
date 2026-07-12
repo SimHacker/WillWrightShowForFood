@@ -27,7 +27,7 @@ David.
 
 **Attachment (forwarded thread end):** `PIXIE Part 1.docx` — may overlap
 [`1967-back-to-the-roots-part1.md`](1967-back-to-the-roots-part1.md) or a new installment.
-See [`../pull-in-gaps.yml`](../pull-in-gaps.yml#pixie_part1_docx_dshr).
+See [`../pull-in-gaps.md`](../pull-in-gaps.md#pixie_part1_docx_dshr).
 
 ---
 
@@ -104,8 +104,8 @@ I can even repurpose the cool Flight of the PIXIE AfterEffects techniques to giv
 |------|-------|
 | Don's async + evidence-room reply (7 Jul 16:34) | this file · [`../../../repo-shows/pixie-pie-menus-pdp7.yml`](../../../repo-shows/pixie-pie-menus-pdp7.yml) |
 | Telecine jiggle house style | [`../../../process/post-production/cambridge-telecine-jiggle.yml`](../../../process/post-production/cambridge-telecine-jiggle.yml) |
-| Virtual light pen / emulator goal | [`../pull-in-gaps.yml`](../pull-in-gaps.yml) · show seed `interview_center.the_source_listing` |
-| Will Wright on thread (Cc) | [`../../will-wright/correspondence.yml`](../../will-wright/correspondence.yml) |
+| Virtual light pen / emulator goal | [`../pull-in-gaps.md`](../pull-in-gaps.md) · show seed `interview_center.the_source_listing` |
+| Will Wright on thread (Cc) | [`../../will-wright/correspondence.md`](../../will-wright/correspondence.md) |
 | Source listing + correction essay | [`../pixie-source-recovery.md`](../pixie-source-recovery.md) |
 | DSHR Hex draft + Lem thread (3 Jul) | [`../../david-rosenthal/sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md`](../../david-rosenthal/sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md) |
 | *Flight of the PIXIE* | [youtube.com/watch?v=jDrqR9XssJI](https://www.youtube.com/watch?v=jDrqR9XssJI) · [`../../will-wright/sources/don-youtube-jDrqR9XssJI-flight-of-pixie/`](../../will-wright/sources/don-youtube-jDrqR9XssJI-flight-of-pixie/) |

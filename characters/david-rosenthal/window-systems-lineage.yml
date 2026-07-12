@@ -6,6 +6,7 @@ meta:
   curated_by: don-hopkins
   consent: not_yet_asked
   guest: david-rosenthal
+  human_readable: window-systems-lineage.md
   show:
     - ../../repo-shows/pixie-pie-menus-pdp7.yml
     - ../../repo-shows/david-rosenthal/
@@ -53,7 +54,7 @@ guest_angles:
       - "A Window Manager for Bitmapped Displays and Unix (with Rosenthal)"
     participated: "Same workshop discussions; SunDew cited in architecture WG as programmable-WM indicator"
     after: "Renamed SunDew → NeWS; Rosenthal joined him at Sun (1985)"
-    page: ../james-gosling/window-systems-lineage.yml
+    page: ../james-gosling/window-systems-lineage.md
   don_hopkins:
     teitelman: |
       **Warren Teitelman** — invented **DWIM** (*Do What I Mean*) in Interlisp; Interlisp-D lineage;
@@ -146,6 +147,13 @@ blog_dshr_org:
       url: https://blog.dshr.org/2024/07/engineering-for-long-term.html
       use: "X11 + NeWS parallel work; vnode/stacking lineage"
 
+selections_clipboard:
+  doc: selection-clipboard-lineage.md
+  show: ../../repo-shows/selections-icccm-clipboard.yml
+  what: |
+    Ted Nelson (anti-invisible-clipboard) × DSHR (ICCCM author). PRIMARY/SECONDARY/CLIPBOARD,
+    Alvey nomenclature fights, per-system taxonomy. Parker 2001 rant + 1990 Deskset flame.
+
 show_questions:
   - "What carried from Cambridge satellite graphics into Andrew/NeWS/X?"
   - "NeWS vs X11 — what do historians get wrong? (You built both.)"
@@ -156,12 +164,17 @@ show_questions:
   - "Warren Teitelman at Alvey vs Warren as Sun NeWS Toolkit manager — Don's side"
   - "Alan Kay's window prehistory — what you'd add from the Andrew/NeWS trenches"
   - "Don loads pie menus at SIGGRAPH — your memory of that demo"
+  - "Ted Nelson vs ICCCM — is PRIMARY selection more visible than invisible clipboard?"
+  - "Conrad Parker rant — fair? What would you delete from ICCCM in 2026?"
+  - "Deskset Lichtenstein PS — still true of modern desktops?"
 
 see_also:
+  - { path: window-systems-lineage.md, why: "Human-readable through-line (this file)" }
   - { path: invitation.md, why: "Invitation — lineage section points here" }
+  - { path: selection-clipboard-lineage.md, why: "Selections/clipboard per-system taxonomy + trio show" }
   - { path: ideas.md, why: "Conversation hooks" }
-  - { path: ../james-gosling/window-systems-lineage.yml, why: "Gosling's Alvey papers + workshop angle" }
+  - { path: ../james-gosling/window-systems-lineage.md, why: "Gosling's Alvey papers + workshop angle" }
   - { path: ../don-hopkins/career/work-history.yml, why: "Sun — NeWS Toolkit under Teitelman" }
   - { path: ../don-hopkins/pie-menus-chi-88-and-beyond.md, why: "Don's side — PIXIE credit, CHI'88" }
-  - { path: ../james-gosling/window-systems-lineage.yml, why: "Gosling SunDew + Andrew at same Alvey workshop" }
+  - { path: ../james-gosling/window-systems-lineage.md, why: "Gosling SunDew + Andrew at same Alvey workshop" }
   - { path: ../heinz-lemke/, why: "PIXIE show co-guest" }

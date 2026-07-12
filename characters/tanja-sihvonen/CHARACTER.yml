@@ -1,0 +1,49 @@
+# Tanja Sihvonen — invitation portrayal. NOT Tanja Sihvonen.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: tanja-sihvonen
+  name: "Tanja Sihvonen"
+  type: invitation
+  signifier: "📚"
+  status: living
+  field: "Game studies — The Sims modding culture; Players Unleashed!"
+  home: characters/tanja-sihvonen/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml
+
+bio:
+  summary: |
+    **Tanja Sihvonen** wrote *Players Unleashed!* (2011) — the scholarly anchor on The Sims
+    modding and player-created content. Met Don Hopkins and Eric Bowman by chance in Amsterdam
+    while researching the thesis.
+
+connections:
+  eric_bowman: "Amsterdam pub meeting — both original Sims programmers"
+  don: "Host; cited her book in QGCon 2019 EA thread"
+  phil_salvador: "Don pointed Phil at the book (2023 mail)"
+
+sources:
+  papers:
+    - title: "Players Unleashed!: Modding The Sims and the Culture of Gaming"
+      year: 2011
+      publisher: Amsterdam University Press
+      open_access: https://library.oapen.org/handle/20.500.12657/34685
+      jstor: https://www.jstor.org/stable/j.ctt46mt37
+  web:
+    - title: "Facebook — hopetaz"
+      url: https://www.facebook.com/hopetaz
+
+see_also:
+  - { path: sources/players-unleashed-2011/README.md, why: "Book index for repo" }
+  - { path: sources/amsterdam-pub-meeting.yml, why: "Pub story provenance" }
+  - { path: ../eric-bowman/media.md, why: "Cross-cite" }

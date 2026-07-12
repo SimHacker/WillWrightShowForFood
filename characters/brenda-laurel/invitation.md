@@ -19,7 +19,7 @@ send_batch: interval-reunion-2026
 Brenda —
 
 We'd be **honored** to have you (and **Rob**, if you're both up for it) on a **Repo Show** — a live,
-friendly conversation whose stage is [this public repository](https://github.com/SimHacker/WillWrightShowForFood).
+friendly conversation whose stage is [this public GitHub repository](https://github.com/SimHacker/WillWrightShowForFood).
 **Show, don't tell:** ideas become running code, archives, and playable moments on stream.
 
 I was at **Interval Research** in the Camelot years — and before I joined **Maxis** for **The Sims**, I

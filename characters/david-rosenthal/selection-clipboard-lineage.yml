@@ -1,0 +1,201 @@
+# Selection, clipboard, and inter-client data — window-system wild west
+# Show hook: Ted Nelson (anti-invisible-clipboard) + DSHR (ICCCM author) + Don (NeWS/TNT trenches)
+# Methodology of Window Management (1985) — even "icon" wasn't standardized yet.
+
+meta:
+  room: characters/david-rosenthal/
+  curated_by: don-hopkins
+  consent: not_yet_asked
+  human_readable: selection-clipboard-lineage.md
+  guests: [ted-nelson, david-rosenthal]
+  show: ../../repo-shows/unnatural-selection.yml
+  alvey_1985: window-systems-lineage.md#alvey-workshop-1985
+
+nomenclature_wild_west:
+  what: |
+    At the **1985 Alvey Methodology of Window Management** workshop, working groups fought over
+    vocabulary — window vs viewport vs panel vs icon vs gadget — before they could agree on
+    architecture. **Teitelman's** retrospective named a dozen systems in one room; each had
+    shipped its own words for the same gestures.
+  teitelman_covers: [Smalltalk, Interlisp-D, Tajo, Cedar Viewers, SunWindows, SunDew]
+  show_beat: "Walk the table: what did each system call an 'icon'? What counted as 'selection'?"
+
+ted_nelson_clipboard:
+  position: |
+    **Copy-and-paste to an invisible clipboard is evil** — Ted's recurring rant (Repo Show
+    invitation hook). Hypertext should show **visible parallel connections** (Xanalinks),
+    transclusion, documents you can see — not shovel bytes into a hidden scrap and hope.
+  catalog: ../../characters/ted-nelson/sources/invisible-clipboard-rant-catalog.yml
+  flagship_video: https://www.youtube.com/watch?v=u5NECkdOSqs
+  scissors_demo: https://www.youtube.com/watch?v=6_35RDA6r3g
+  repo: ../../characters/ted-nelson/invitation.md
+  contrast_mac: "Lisa/Mac scrap — separate from X11 primary selection; Ted + Don align against invisible buffer"
+  show_ask: "Is primary selection (highlight + middle-click) more 'visible' than Ctrl+C clipboard? Or same sin?"
+
+x11_icccm_model:
+  author: David S. H. Rosenthal
+  when: "~1988"
+  doc: "Inter-Client Communication Conventions Manual — Part III of Scheifler & Gettys"
+  why_exists: |
+    X user environment = clients + X server + **window manager**. WM allocates windows;
+    clients must negotiate **cut/paste**, drag-drop hints, session, colormaps, focus —
+    without a kernel message bus. ICCCM is the treaty.
+  selections:
+    PRIMARY:
+      what: "The 'highlighted text' — traditionally mouse-select, middle-click to paste"
+      atom: XA_PRIMARY
+      parker_gripe: "All anyone ever fucking does with the selection is COPY TEXT!!"
+    SECONDARY:
+      what: "Alternate selection — largely unused; modal paste in some toolkits"
+      atom: XA_SECONDARY
+      parker_gripe: "Who the fuck uses the SECONDARY selection?"
+    CLIPBOARD:
+      what: "Explicit copy (Ctrl+C) — persists after source exits if owner saves it"
+      atom: XA_CLIPBOARD
+      note: "Often confused with PRIMARY on modern desktops; freedesktop Clipboards spec layers on top"
+  protocol_pain:
+    - "Everything is **Atoms** (integer names for strings)"
+    - "TARGETS negotiation — request formats before transfer"
+    - "Incremental transfer for large data — property chunks + DELETE_PROPERTY"
+    - "SelectionNotify type vs property type ambiguity (Parker's rant)"
+    - "TIMESTAMP for ordering concurrent selection claims"
+    - "CUT_BUFFER0..7 — original X11 paste (root-window properties); XStoreBuffer/XFetchBuffer; XRotateBuffers rotates slots via RotateProperties"
+  xmu_magic_atoms:
+    what: "Xmu routines query selection owner for HOSTNAME, IP_ADDRESS, USER"
+    parker: "About as reliable as cleaning your motherboard with fried eel"
+  implementor_rant: sources/conrad-parker-icccm-rant-2001.md
+  sun_internal_rant: sources/1990-10-sun-deskset-flame.md
+
+x_rotate_buffers:
+  what: |
+    **XRotateBuffers** — Xlib wrapper for protocol **RotateProperties**. Rotates
+    CUT_BUFFER0..7 property assignments on the root window (n → n+1 mod 8) without copying
+    data. Cut buffers predate PRIMARY/CLIPBOARD; original X11 paste via XStoreBuffer/XFetchBuffer.
+    Obsolete but protocol remains. Not pixmap double-buffering.
+  show_beat: "Sit on it and rotate, Ralf"
+
+systems_taxonomy:
+  # Per-system: selection model, clipboard, drag-drop, notable terms
+  # Status: research notes for on-air correction by guests — not authoritative history
+
+  sketchpad_sutherland_1963:
+    selection: "Light pen + constraints — no clipboard; direct manipulation"
+    term_icon: "N/A — pre-icon vocabulary"
+
+  smalltalk_76_80:
+    selection: "Morph/object selection; inspectors operate on **selected** object; copy often = duplicate object ref"
+    term_icon: "Icons as **Morphs**; windows are morphs too — unified object model"
+    alvey: "Teitelman retrospective anchor"
+
+  interlisp_d:
+    selection: "DWIM on text; window = advice stream; Teitelman client–server windows"
+    term_icon: "D-Lisp windows — see Teitelman Alvey paper"
+    manager: "Warren Teitelman → later Don's manager on NeWS Toolkit"
+
+  cedar_xerox:
+    selection: "Viewers — strongly typed; Cedar language integration"
+    term_icon: "Icons in Cedar/Viewers ecosystem — not Mac icons"
+    alvey: "Named in Teitelman retrospective"
+
+  star_xerox_1981:
+    selection: "Object selection + property sheets; show selection"
+    term_icon: "**Icons** on desktop — document-centric; major influence on Mac"
+    clipboard: "Early office metaphor — copy between apps via system"
+
+  viewpoint_xerox:
+    selection: "Document + icon desktop; Star successor lineage"
+    term_icon: "Desktop **icons** standardized in office metaphor sense"
+
+  tajo_xerox:
+    selection: "Teitelman lists in retrospective — Mesa/Cedar era window experiments"
+    note: "Less documented publicly than Smalltalk/Star"
+
+  andrew_cmu_1983_86:
+    authors: [James Gosling, David S. H. Rosenthal]
+    selection: "Andrew WM + datastream metaphors; distributed computing environment"
+    term_icon: "Andrew **icons** — part of networked file/UI model"
+    paper: "A Window Manager for Bitmapped Displays and Unix (Alvey 1985)"
+    bridge: "DSHR + Gosling before SunDew/NeWS"
+
+  x10_mit_1986:
+    selection: "Early X selection mechanisms — DSHR ported to Sun/1; kludged DEC dependencies"
+    term_icon: "Window vs icon terminology still fluid"
+    bridge: "DSHR maintained Sun port; NeWS 1.0 shipped X10 compatibility layer"
+
+  x11_icccm_1987_88:
+    selection: "PRIMARY/SECONDARY/CLIPBOARD treaty — see x11_icccm_model above"
+    term_icon: "WM_ICON_NAME, WM_HINTS — WM owns decoration; 'icon' = pixmap + mask"
+    author: david-rosenthal
+
+  sunview_sun_1980s:
+    selection: "SunView **selection** + SunWindows — pre-X11 Sun GUI"
+    term_icon: "SunView icons/toolbars — Deskset ancestor"
+    note: "Deskset flame targets OpenWindows Deskset built on XView"
+
+  news_sun_1987:
+    selection: |
+      **PostScript-level** — selections as graphics state + NeWS classes; send code not atoms.
+      Different inter-client story than ICCCM; lost political war to X11.
+    term_icon: "NeWS **icons** via PostScript drawing + window classes"
+    politics: ../../characters/don-hopkins/sources/1991-09-news-tnt-icccm-death-match.md
+    co_author: david-rosenthal
+
+  interviews_stanford_1988:
+    selection: "C++ InterViews — object-oriented widgets; later subset of Motif DNA"
+    term_icon: "InterViews **Glyphs** — 'icon' avoided?"
+    note: "Verify on air — Glyph vs Icon naming"
+
+  motif_xt_1980s_90s:
+    selection: "Xt **selection** APIs wrap ICCCM; XmClipboard_* for CLIPBOARD atom"
+    term_icon: "Motif **icons** in vendor shells"
+    bridge: "Where Parker-era implementors actually touched ICCCM"
+
+  xde_xerox:
+    what: "**Xerox Development Environment** — OS/UI/IDE Star and ViewPoint were developed in"
+    selection: "Star/ViewPoint document + icon model"
+    term_icon: "Desktop document icons — office metaphor"
+    note: "Not 'X Desktop Environment' — confirm on air"
+
+  mac_lisa_1983:
+    selection: "Scrap **clipboard** — invisible buffer Ted hates"
+    term_icon: "**Icons** on desktop — Susan Kare; different lineage than X 'icon'"
+    ted_angle: "Anti-invisible-clipboard rant target"
+
+  cedar_star_viewpoint_line:
+    show_beat: "East coast office metaphor (Star) vs West coast Unix (X) vs Smalltalk objects"
+
+  deskset_calm_computing:
+    dshr: sources/1990-10-sun-deskset-flame.md
+    don: ../../don-hopkins/sources/xbugtool-bug-1059974.md
+    topic: ../../david-rosenthal/05-deskset-weiser-vickie-context.md
+    weiser_bridge: calm computing; Victoria Reich / LOCKSS — ask consent before on-air
+
+classic_flames:
+  conrad_parker_2001:
+    url: https://github.com/porridgewithraisins/x11cp/blob/main/rant
+    role: implementor vs ICCCM
+  david_rosenthal_1990:
+    url: https://www.donhopkins.com/home/catalog/unix-haters/slowlaris/deskset.html
+    role: author vs Deskset whizzy
+  theo_many_eyes:
+    note: "HN sidebar — Theo's ESR/Linus many-eyes takedown; Don's Crispin/Crispin comparison"
+  mark_crispin_emacs:
+    note: "Defaults must not change — parallel 'Grr' tradition"
+
+show_questions:
+  - "Ted — reprise invisible-clipboard rant; is PRIMARY selection any better?"
+  - "DSHR — why PRIMARY and SECONDARY and CLIPBOARD? What would you delete in 2026?"
+  - "What did Andrew do before ICCCM froze the X11 answer?"
+  - "NeWS inter-client — code in flight vs Atom carrier pigeons"
+  - "Alvey 1985 — did the nomenclature working group ever agree on 'icon'?"
+  - "XRotateBuffers — RotateProperties on CUT_BUFFER0..7; cut buffers predate ICCCM selections"
+  - "Deskset Lichtenstein PS — calm computing before Weiser named it?"
+  - "Who still queries TARGETS? Who uses XA_SECONDARY? (Audience poll.)"
+  - "Transclusion vs selection — can a Repo Show demo both in one repo?"
+
+see_also:
+  - { path: window-systems-lineage.md, why: "Andrew → NeWS → X11 arc" }
+  - { path: ideas.md, why: "Hook §9 selections show" }
+  - { path: ../../characters/ted-nelson/ideas.md, why: "Clipboard rant §5" }
+  - { path: ../../repo-shows/unnatural-selection.yml, why: "Show seed (alias selections-icccm-clipboard)" }
+  - { path: ../../characters/don-hopkins/sources/1991-09-news-tnt-icccm-death-match.md, why: "NeWS ICCCM politics" }

@@ -8,6 +8,7 @@ meta:
   consent: not_yet_asked
   span: "~2020–present"
   provenance_private: SimHacker/DonHopkins/characters/don-hopkins/correspondence/heinz-lemke.yml
+  human_readable: correspondence.md
 
 gist: |
   Don found Heinz through Bill Buxton's research trail. Warm, long-running exchange:
@@ -45,7 +46,7 @@ threads:
       McGraw-Hill Electronics (Apr 28 1969) PIXIE article; Gilmore scan; Heinz photo at PDP-7.
       **Received from Heinz 2026-07-10** — PDF + clean MD in private/public archives.
     doc: sources/electronics-international-1969-04-28-pixie.md
-    pull_in: pull-in-gaps.yml#electronics_magazine_1969_pdf — snip p158 photo
+    pull_in: pull-in-gaps.md#electronics_magazine_1969_pdf — snip p158 photo
   cars_medicine:
     what: "IFCARS, CARS congress, patient-specific modelling, model-guided medicine"
   cars_2025_berlin:
@@ -76,7 +77,7 @@ threads:
       diagram. DSHR contributed light-pen interrupt mechanics in the same thread.
     doc: pixie-source-recovery.md
     transcript: sources/2026-07-07-pixie-trio-thread.md
-    pull_in: pull-in-gaps.yml#pixie_complete_source_listing
+    pull_in: pull-in-gaps.md#pixie_complete_source_listing
   roy_eagleson_uwo_2026:
     what: |
       Roy Eagleson (Western University / UWO) — Heinz's friend; teaches history of computer
@@ -95,8 +96,8 @@ threads:
       timezone/grandparent-duty logistics; Lars yes/later (Swedish July offline). Don pivoted to
       async 1-on-1 recordings interlinked in post — intertwingled tapestry, not one live group call.
     docs:
-      - ../lars-brinkhoff/correspondence.yml
-      - ../david-rosenthal/correspondence.yml
+      - ../lars-brinkhoff/correspondence.md
+      - ../david-rosenthal/correspondence.md
       - ../../repo-shows/pixie-pie-menus-pdp7.yml#format
   don_reply_evidence_room_2026_07_07:
     date: "2026-07-07 16:34"
@@ -127,7 +128,7 @@ threads:
       Project, PIXIE, PDP-7 vector display ↔ Titan. Cc's his mentor Kelly Booth (UBC).
       Heinz (14:22) answers by starting to deliver it: attaches his 1967 origin story ("changed
       my life forever some 60 years ago"), first of installments over the coming weeks.
-    pull_in: pull-in-gaps.yml#heinz_1967_origin_story
+    pull_in: pull-in-gaps.md#heinz_1967_origin_story
     received: "sources/1967-back-to-the-roots-part1.md — Heinz's memoir 'Back to the Roots (Part 1, 1967)' arrived 2026-07-09 (.docx). Spy accusation → Wilkes → medieval-statute PhD → Wiseman → 1972 thesis. Private archive in DonHopkins."
     new_people:
       - "Kelly Booth (UBC) — Roy's HCI storytelling mentor; newly Cc'd"
@@ -158,7 +159,7 @@ threads:
       his predictions have become true now." Asks Don about "model science." Don proposes two
       episodes (1969 US/Weizenbaum + modern CARS); Cc Alan Kay on light pen vs RAND tablet.
     private_archive: DonHopkins/characters/don-hopkins/correspondence/attachments/heinz-lemke/
-    pull_in: pull-in-gaps.yml#nagoya_ai_surgery_slides_2026
+    pull_in: pull-in-gaps.md#nagoya_ai_surgery_slides_2026
 
   lemke_constellation_2026_07_10:
     date: "2026-07-10"
@@ -186,7 +187,7 @@ threads:
       Heinz responds to Roy: Cambridge graphics ignored in US; Armit Coons patches second example.
       Summer 1969 Greyhound tour ($99 / 3 months); Engelbart and many labs; job offer from W.R.
       Sutherland at MIT. Attachment: agenda (pull in).
-    pull_in: pull-in-gaps.yml#heinz_1969_us_trip_agenda
+    pull_in: pull-in-gaps.md#heinz_1969_us_trip_agenda
 
   pixie_attachments_batch_2026_07_10:
     date: "2026-07-10"
@@ -201,16 +202,17 @@ threads:
       - sources/2008-bill-buxton-pixie-memory-lane.md
     private_archive: DonHopkins/.../2026-07-10-pixie-attachments-batch.md
     pull_in:
-      - pull-in-gaps.yml#heinz_phd_thesis_1972
-      - pull-in-gaps.yml#electronics_magazine_1969_pdf  # p158 image snip
+      - pull-in-gaps.md#heinz_phd_thesis_1972
+      - pull-in-gaps.md#electronics_magazine_1969_pdf  # p158 image snip
 
 connects_in_repo:
+  - { path: correspondence.md, why: "Human-readable digest (this file)" }
   - { path: CHARACTER.yml, why: "Bio + invitation status" }
   - { path: sources/2026-07-07-pixie-trio-thread.md, why: "Primary source — listing, correction, Roy Eagleson" }
   - { path: ../roy-eagleson/, why: "Educator friend — Sketchpad → PIXIE lecture; see_also sketchpad-to-pixie-lineage.md" }
   - { path: ../ivan-sutherland/, why: "North star — Sketchpad hero room" }
   - { path: cambridge-films-flight-of-the-bumblebee.md, why: "Chapman + Rosenthal + production + HN index" }
-  - { path: pull-in-gaps.yml, why: "Heinz assets to pull in (magazine PDFs, Cambridge doc, Wiseman notes)" }
+  - { path: pull-in-gaps.md, why: "Heinz assets to pull in (magazine PDFs, Cambridge doc, Wiseman notes)" }
   - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "PIXIE show — Heinz + Lars Brinkhoff PDP-7/340 emulation" }
   - { path: ../don-hopkins/pie-menus-chi-88-and-beyond.md, why: "PIXIE credited; Don does not claim invention" }
   - { path: ../lars-brinkhoff/, why: "Co-guest — PDP-7/340 emulation segment" }
