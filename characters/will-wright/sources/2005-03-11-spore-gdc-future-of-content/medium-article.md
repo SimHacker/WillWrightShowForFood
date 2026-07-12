@@ -31,6 +31,8 @@ Games used to be mostly code and very little content, so compression was importa
 
 **Myst** was a very elaborate and beautiful slide show, with a vast amount of data. It looked like they had a great time building this world. Building the world is a fun game in itself.
 
+![Myst island — CD-ROM data-heavy counterexample](images/myst-island-cdrom-slide-show.png)
+
 At the other end of the spectrum from CD-ROMs: **The Demo Scene**. Algorithmic compression of graphics and music.
 
 - Make the editor a toy.
@@ -41,7 +43,11 @@ At the other end of the spectrum from CD-ROMs: **The Demo Scene**. Algorithmic c
 
 **Which Care Bear are you?** Care bears started as greeting cards. Web app categorizes your personality. Each care bear has special abilities. Care bear cousins aren't even bears. Care bears live in "Care a Lot". If they fall out of the clouds, they land in the "Forest of Feelings" (Kingdom of Caring). Forest of Feelings is over the earth. So the Earth must be the **"Kingdom of people who don't give a shit"**.
 
+![Which Care Bear Are You? quiz result — Cheer Bear](images/which-care-bear-are-you-quiz.png)
+
 Lead artist **Ocean Quigley** coined the term **"artist in a box"**.
+
+![Spore Galactic Adventures — creature paint mode (artist in a box)](images/spore-galactic-adventures-artist-in-a-box.png)
 
 Artwork style is somewhere between Pixar / Giger.
 
@@ -270,6 +276,8 @@ Each term of the equation correspond to different power of scale.
 > "Wright linked Drake's equation, which computes the probability of life occurring in the universe, with the long zoom of Eames' Powers of Ten film." — Chaim Gingold, *A Brief History of Spore*
 
 **Will's Secret Diagram of Spore** published in February 2004 Wired. Wired asked for an illustration to print in the magazine, anything he wanted. So he made a diagram of Spore that Wired published, but he didn't tell them what it was. The design docs for Spore have been out in Wired Magazine for a year now.
+
+![Wired Feb 2004 — Will Wright's Grand Unified Theory (secret Spore diagram)](images/wired-2004-spore-secret-diagram.png)
 
 **Bacteria to galactic god.** Replay complete history and future of life. Hard to come up with a catchy marketing line.
 

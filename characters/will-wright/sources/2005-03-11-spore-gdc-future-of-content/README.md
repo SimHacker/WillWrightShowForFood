@@ -90,7 +90,8 @@ Use Don's notes + this video alongside shipped Spore and the [Long Now 2006](../
 
 | File | Role |
 |------|------|
-| [`medium-article.md`](medium-article.md) | Don's GDC notes — Will-reviewed (Medium mirror) |
+| [`medium-article.md`](medium-article.md) | Don's GDC notes — Will-reviewed (Medium mirror + figures) |
+| [`images/`](images/README.md) | Four Medium article illustrations (Myst, Care Bear, artist-in-a-box, Wired diagram) |
 | [`summary.md`](summary.md) | Timestamp index + retrospective frame |
 | [`short-form-clips.yml`](short-form-clips.yml) | Cut candidates — meme tier + flagship beats |
 | [`transcript-cache/`](transcript-cache/README.md) | YouTube auto-captions |
@@ -110,6 +111,17 @@ yt-dlp -f 'bv*+ba/b' --merge-output-format mp4 \
 ```
 
 Same pipeline as Winograd / Long Now: extract → captions → AE finish → publish with `.vtt`.
+
+## Image gallery (Medium article)
+
+| Beat | Figure |
+|------|--------|
+| CD-ROM vs algorithm | [Myst island](images/myst-island-cdrom-slide-show.png) |
+| Ownership / Care Bears | [Which Care Bear Are You?](images/which-care-bear-are-you-quiz.png) |
+| Artist in a box | [Spore Galactic Adventures paint mode](images/spore-galactic-adventures-artist-in-a-box.png) |
+| Secret design doc | [Wired Feb 2004 diagram](images/wired-2004-spore-secret-diagram.png) |
+
+Full index: [`images/README.md`](images/README.md)
 
 ## Navigation
 
