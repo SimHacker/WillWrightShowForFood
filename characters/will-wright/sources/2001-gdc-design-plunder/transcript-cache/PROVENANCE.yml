@@ -1,0 +1,46 @@
+# Provenance — 2001 GDC: Design Plunder
+
+video:
+  id: c91IWh4agzU
+  url: https://www.youtube.com/watch?v=c91IWh4agzU
+  title: "Will Wright's Design Plunder (With Slides)"
+  uploader: Cory Martin
+  upload_date: 2020-07-01
+  views_snapshot: 10069
+  duration: "~1:05"
+  event: Game Developers Conference
+  date: 2001
+  note: Slides composited; official GDC upload is presenter-only
+
+upstream:
+  archive_org:
+    - id: will-wrights-design-plunder-with-slides
+      url: https://archive.org/details/will-wrights-design-plunder-with-slides
+      note: Mirror of Cory Martin composite (MP4)
+  slides_source: Julien Barbe website (per Cory Martin description)
+  gdc_original:
+    channel: GDC Festival of Gaming
+    article: https://www.gamedeveloper.com/design/video-will-wright-s-classic-2001-keynote-on-game-design-inspirations
+    note: Published to GDC YouTube Aug 2017 — no slides in frame
+
+winograd_link:
+  medium_slides: ../1996-04-26-winograd-interfacing-to-microworlds/images/
+  videos_md: ../1996-04-26-winograd-interfacing-to-microworlds/videos.md
+
+canonical:
+  wrap: ../summary.md
+  clips: ../short-form-clips.yml
+  reception: ../youtube-reception.md
+
+reference_cache:
+  directory: .
+  purpose: timestamp verification, clip discovery
+  refresh: |
+    yt-dlp --write-auto-sub --sub-lang en --sub-format vtt --skip-download \
+      --extractor-args "youtube:player_client=android" \
+      -o "youtube-auto-en.%(ext)s" "https://www.youtube.com/watch?v=c91IWh4agzU"
+
+see_also:
+  - ../2005-03-11-spore-gdc-future-of-content/README.md
+  - ../1996-04-26-winograd-interfacing-to-microworlds/README.md
+  - ../2008-02-10-soul-of-the-sims/README.md

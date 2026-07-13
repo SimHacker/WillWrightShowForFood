@@ -1,0 +1,35 @@
+# CARD — 2001 GDC: Design Plunder
+
+id: 2001-gdc-design-plunder
+type: primary_source_video
+guests: [will-wright]
+venue: Game Developers Conference
+
+one_line: |
+  Will's 2001 game-design keynote — plunder chairs, Alexander, Eames, failure states, disease vectors,
+  Japanese gardens, SimFreaks ecology. Cory Martin restored the slides GDC omitted.
+
+video_slides: https://www.youtube.com/watch?v=c91IWh4agzU
+gdc_original:
+  article: https://www.gamedeveloper.com/design/video-will-wright-s-classic-2001-keynote-on-game-design-inspirations
+  channel: GDC Festival of Gaming
+  note: Presenter only — no slides in frame
+archive_org: https://archive.org/details/will-wrights-design-plunder-with-slides
+slides_credit: Julien Barbe website captures; Cory Martin edit Jul 2020
+
+provenance:
+  editor: Cory Martin — slides + presenter composited
+  note: Official GDC upload lacked slides; talk is unreadable without them
+  winograd_link: SimAntics slide images in Don's 1996 Medium article sourced here
+
+interface:
+  summary: summary.md
+  clips: short-form-clips.yml
+  reception: youtube-reception.md
+  transcript_status: youtube_auto_only
+
+pairs_with:
+  - 1996-04-26-winograd-interfacing-to-microworlds
+  - 2005-03-11-spore-gdc-future-of-content
+  - 2008-02-10-soul-of-the-sims
+  - 2004-transmogrifier-documentation-hub

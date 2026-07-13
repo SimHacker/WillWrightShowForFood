@@ -47,6 +47,7 @@ segments:
 
 related:
   - repo-shows/will-wright-premiere/
+  - repo-shows/voystick-pink-trombone/SHOW.yml
   - characters/robots/slats/                       # SFC lineage (Phoneloper sibling)
   - repo-shows/will-wright-premiere/performance-and-culture.yml
   - "DonHopkins seed: projects/micropolis-moollm/repo-shows/phoneloper-speech-synthesis.yml"

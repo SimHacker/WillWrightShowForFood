@@ -9,6 +9,20 @@ artifact:
 urban_safari:
   title_card: urban-safari-title-card.png
   branding: "Stupid Fun Club · StoryMaker · Urban Safari"
+  layar_demo: "https://www.youtube.com/watch?v=Db8KGNoeKHE"
+  storymaker_comprehensive_demo: "https://www.youtube.com/watch?v=_2yEHs_WLzQ"
+  demo_beats:
+    - geotagged Layar AR scenes on Amsterdam map (Layar-focused clips)
+    - storymaker_stack: |
+        Full stack walkthrough in StoryMaker demo (_2yEHs_WLzQ): MediaWiki + Python + Flash;
+        iPhone MapKit; admin CMS; Urban Safari sandbox; voice synth; Unity 3D tree.
+    - facebook_album:
+        video: "https://www.youtube.com/watch?v=_2yEHs_WLzQ&t=742"
+        end: "https://www.youtube.com/watch?v=_2yEHs_WLzQ&t=812"
+        what: |
+          Don exports Urban Safari storyline as Facebook album (~12:22), edits by dragging in
+          Facebook Photos (~12:39), links back to StoryMaker (~12:54), explains round-trip
+          import/replace/update (~13:11–13:32). Live proof for Meta licensing pitch.
 
 screenshots:
   - file: storymaker-canal-scene-dev.png

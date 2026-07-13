@@ -1,7 +1,8 @@
 # Transcript cache — 2005 GDC Spore
 
-YouTube auto-captions for **timestamp verification only**. Canonical talk text lives in
+YouTube auto-captions for **timestamp verification only**. Canonical witness notes:
 [`../medium-article.md`](../medium-article.md) (Don Hopkins, reviewed by Will Wright).
+Navigable digest with `?t=` links: [`../transcript.md`](../transcript.md).
 
 ## Refresh
 

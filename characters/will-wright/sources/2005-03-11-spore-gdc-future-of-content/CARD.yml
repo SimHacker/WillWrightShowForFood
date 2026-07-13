@@ -23,8 +23,10 @@ provenance:
 interface:
   summary: summary.md
   notes: medium-article.md
+  transcript: transcript.md
+  reception: youtube-reception.md
   clips: short-form-clips.yml
-  transcript_status: youtube_auto_only — verify against Don's notes
+  transcript_status: digest_from_youtube_auto — medium-article canonical for quotes
   captions: captions/ · process/post-production/captions.yml
 
 retrospective:
@@ -34,6 +36,7 @@ retrospective:
   hn_witness: hn-witness.yml
 
 pairs_with:
+  - 2001-gdc-design-plunder
   - 2006-06-26-long-now-playing-with-time-eno-wright
   - 1996-04-26-winograd-interfacing-to-microworlds
   - 2004-02-21-chris-trottier-tuned-emergence

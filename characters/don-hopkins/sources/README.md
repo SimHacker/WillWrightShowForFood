@@ -20,6 +20,18 @@ Long-form room doc (Adventure implementation): [`../logo-adventure-c64-terrapin.
 |------|--------|------|
 | [KMP ANIMAL — learned tree](kmp-animal-its.md) | [kmp-animal-its.yml](kmp-animal-its.yml) | ~74 KB communal `*MEMORY*` sexpr — [full dump](kmp-animal-its/animal-database-from-its.lisp.txt); [apology mail](kmp-animal-its/apology-email-1982.txt) |
 
+## VoyStick & voice space (2026 harvest)
+
+| Read | Girder | What |
+|------|--------|------|
+| [VoyStick correspondence lineage](voystick-correspondence-lineage.md) | [voystick-correspondence-lineage.yml](voystick-correspondence-lineage.yml) | 1991–2025 email arc: homomorphic vocoder → imitone → Lindsey vowel space → GuitarPie |
+| [Urban Safari steering / pie / VoyStick](urban-safari-steering-voystar-pie-network.md) | — | eBike ride game, F1/F2 map, steering law |
+| [Usenet matter-product warnings](usenet-matter-product-warnings.md) | — | Physics humor sticker folklore — Don Medium 2018; SWAG only |
+
+**Crazy Idea Jam:** [Voystick](../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick) · [Urban Safari](../../process/crazy-idea-jam.yml#urban_safari_gps_storytelling) · [Urban eBike Safari](../../process/crazy-idea-jam.yml#urban_ebike_safari)
+
+**Show seed:** [Voystick × Pink Trombone](../../repo-shows/voystick-pink-trombone/SHOW.yml) · [Zack Qattan](../../characters/zack-qattan/README.md)
+
 ## Other sources in this folder
 
 | File | Topic |

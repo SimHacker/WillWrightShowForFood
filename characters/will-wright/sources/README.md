@@ -37,7 +37,10 @@ The student question that unspooled a franchise.
 **[2005-03-11-spore-gdc-future-of-content/](2005-03-11-spore-gdc-future-of-content/README.md)**  
 Will **flat-out lied** about the GDC title and debuted **Spore** to developers first (March 11, 2005).
 Don's field notes on [Medium](https://donhopkins.medium.com/the-future-of-content-will-wrights-spore-demo-at-gdc-3-11-2005-9eab0cedc583), reviewed by Will — procedural content, 5000:1 compression, planet buster.
-Retrospective anchor: vision vs shipped Spore. [YouTube remaster](https://www.youtube.com/watch?v=ofA6YWVTURU)
+Retrospective anchor: vision vs shipped Spore. [YouTube remaster](https://www.youtube.com/watch?v=ofA6YWVTURU) · [screen-only Archive.org master](https://archive.org/details/2005-will-wright-keynote-spore-screen-only-2005-03-11)
+
+**[2001-gdc-design-plunder/](2001-gdc-design-plunder/README.md)**  
+Will's **Design Plunder** keynote — chair, failure states, disease vectors, SimFreaks ecology. [Cory Martin + slides](https://www.youtube.com/watch?v=c91IWh4agzU) restores what official GDC omitted. Prequel to Spore content rhetoric.
 
 **[2006-06-26-long-now-playing-with-time-eno-wright/](2006-06-26-long-now-playing-with-time-eno-wright/README.md)**  
 **Brian Eno + Will Wright** at the Long Now Foundation — *Playing with Time*: generative music ×
@@ -313,6 +316,7 @@ CAM-6 pie menus as visual programming — YouTube + essay cross-link.
 | Slug | Title |
 |------|-------|
 | [1996-04-26-winograd-interfacing-to-microworlds](1996-04-26-winograd-interfacing-to-microworlds/README.md) | Designing User Interfaces to Simulation Games (1996 talk + Medium, 167 figures) |
+| [2001-gdc-design-plunder](2001-gdc-design-plunder/README.md) | Design Plunder GDC 2001 — Cory Martin + slides; failure states, SimFreaks |
 | [2005-03-11-spore-gdc-future-of-content](2005-03-11-spore-gdc-future-of-content/README.md) | Spore GDC 2005 — first public reveal; Don's Medium notes |
 | [2006-06-26-long-now-playing-with-time-eno-wright](2006-06-26-long-now-playing-with-time-eno-wright/README.md) | Playing with Time — Eno + Will, Long Now 2006 (Spore demo; Don in audience) |
 | [2018-04-23-sims-crowd-sitter](2018-04-23-sims-crowd-sitter/README.md) | The Sims 1 Crowd Sitter |

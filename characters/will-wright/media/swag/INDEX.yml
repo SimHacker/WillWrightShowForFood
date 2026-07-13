@@ -1,0 +1,26 @@
+# Will Wright — SWAG artifacts (gifts, sticker culture, show merch seeds)
+
+room:
+  id: will-wright-swag
+  parent: ../README.md
+  note: "Will loves industrial-warning / absurd stickers — Howard Penner (art lead) designs packs + broader show art"
+
+art_lead:
+  name: Howard Penner
+  role: "Art lead — swag, generative art, and other visual production"
+  ties: ../../../../characters/howard-penner/README.md
+
+artifacts:
+  - file: sfc-warning-sticker-moving-machinery.png
+    sidecar: sfc-warning-sticker-moving-machinery.yml
+    what: "SFC gift — WARNING moving machinery sticker"
+  - file: ../sims-warning-sticker.png
+    what: "Gag pinch-point hazard — same industrial parody register"
+
+packs:
+  - ../../../../repo-shows/ideas/swag/sfc-sticker-packs.yml
+  - ../../../../repo-shows/ideas/swag/voystick-warning-stickers.yml
+
+see_also:
+  - ../../../../repo-shows/ideas/gags/lightpenisland-net.yml
+  - ../../../../repo-shows/ideas/urban-ebike-safari.yml

@@ -1,6 +1,6 @@
 # Short-form clips — 2005 GDC: The Future of Content (Spore reveal)
 # Timestamps from YouTube remaster transcript — verify on video before publish.
-# Canonical text: medium-article.md (Don's notes) + hand captions when ready.
+# Canonical text: medium-article.md (Don's notes) + transcript.md (timestamp digest)
 
 meta:
   source: 2005-03-11-spore-gdc-future-of-content
@@ -12,8 +12,9 @@ meta:
   witness: Don Hopkins (audience; Medium notes reviewed by Will)
   format: Adorable Minutes / retrospective / HN pump
   captions_policy: ../../../../process/post-production/captions.yml
-  transcript_status: youtube_auto_only
+  transcript_status: digest_from_youtube_auto
   notes: medium-article.md
+  transcript_digest: transcript.md
 
 clips:
   flagship:
@@ -38,6 +39,24 @@ clips:
       youtube: https://youtu.be/ofA6YWVTURU?t=1685
       tags: [compression, procedural, spore]
       pairs_with: seeds-not-forests-compression
+      caption_status: draft
+
+    - id: revisit-weird-outside-the-box
+      title: "Revisit those weird outside-the-box ideas"
+      hook: |
+        THE founding advice — as we were working on this game, the biggest obstacle was making
+        myself believe we could build it; my own imagination was the bottleneck. Once I truly
+        believed, persuading everyone else was easy. Go back and revisit ideas you think could
+        never work — you just never know where they might lead.
+      start_display: "1:00:57"
+      end_display: "1:01:42"
+      start_sec: 3657
+      end_sec: 3702
+      youtube: https://youtu.be/ofA6YWVTURU?t=3657
+      format_tier: jewel
+      show_use: founding_advice
+      witness_echo: Don remembered and applied this decades later — the Spore GDC quote that stuck
+      tags: [will, advice, dreams, imagination, spore]
       caption_status: draft
 
     - id: t-shaped-game-powers-of-ten
@@ -79,20 +98,75 @@ clips:
       caption_status: draft
 
     - id: ford-explorer-creature
-      title: "The Ford Explorer creature"
-      hook: "High center of gravity, tiny legs — takes corners leaning like an SUV. Procedural walking at its funniest."
+      title: "Tweety bird — the Ford Explorer creature"
+      hook: "High center of gravity, tiny legs — takes corners leaning like an SUV. Same script as buttface."
       start_display: "22:15"
-      end_display: "22:35"
+      end_display: "22:39"
       start_sec: 1335
-      end_sec: 1355
+      end_sec: 1359
       youtube: https://youtu.be/ofA6YWVTURU?t=1335
       format_tier: quip
       tags: [spore, creature, meme]
+      parade_index: 2
+      caption_status: draft
+
+    - id: creature-parade-buttface
+      title: "Buttface"
+      hook: "Non-standard leg configuration — still moves smoothly. Nobody knows how buttface is supposed to walk."
+      start_display: "21:48"
+      end_display: "22:14"
+      start_sec: 1308
+      end_sec: 1334
+      youtube: https://youtu.be/ofA6YWVTURU?t=1308
+      format_tier: quip
+      tags: [spore, creature, parade]
+      parade_index: 1
+      caption_status: draft
+
+    - id: creature-parade-hang-dog
+      title: "Hang dog"
+      hook: "Same code, different skeleton — walks cool."
+      start_display: "22:40"
+      end_display: "23:03"
+      start_sec: 1360
+      end_sec: 1383
+      youtube: https://youtu.be/ofA6YWVTURU?t=1360
+      format_tier: quip
+      tags: [spore, creature, parade]
+      parade_index: 3
+      caption_status: draft
+
+    - id: creature-parade-dilemma
+      title: "Dilemma"
+      hook: "Fast walking gait emergent from topology — performance from procedural animation on that skeleton."
+      start_display: "23:04"
+      end_display: "23:29"
+      start_sec: 1384
+      end_sec: 1409
+      youtube: https://youtu.be/ofA6YWVTURU?t=1384
+      format_tier: quip
+      tags: [spore, creature, parade]
+      parade_index: 4
+      caption_status: draft
+
+    - id: care-bears-rant
+      title: "Care Bears rant — but I digress"
+      hook: |
+        Greeting cards → Which Care Bear Are You quiz → Will is Funshine Bear → Care Bear cousins,
+        Care-a-Lot, Forest of Feelings, Kingdom of Caring — Earth is the kingdom of who gives a shit.
+      start_display: "25:20"
+      end_display: "26:34"
+      start_sec: 1520
+      end_sec: 1594
+      youtube: https://youtu.be/ofA6YWVTURU?t=1520
+      format_tier: jewel
+      tags: [will, care-bears, comedy, tangent]
+      segue_out: "Artist in a box — Ocean Quigley"
       caption_status: draft
 
     - id: kingdom-of-people-who-dont-give-a-shit
-      title: "Care Bears — kingdom of people who don't give a shit"
-      hook: "Will's Care Bear geography lesson — Earth is where they send bears on missions."
+      title: "Kingdom of who gives a shit"
+      hook: "Punchline beat inside the Care Bears rant — Earth is where they send bears on missions."
       start_display: "26:04"
       end_display: "26:22"
       start_sec: 1564
@@ -100,6 +174,7 @@ clips:
       youtube: https://youtu.be/ofA6YWVTURU?t=1564
       format_tier: quip
       tags: [will, care-bears, comedy]
+      parent: care-bears-rant
       caption_status: draft
 
     - id: planet-buster-nonviolent-developer
@@ -147,15 +222,92 @@ clips:
       tags: [spore, space, science]
       caption_status: draft
 
+    - id: creative-amplifier-compression
+      title: "Computer as creative amplifier — compression"
+      hook: "The computer is a creative amplifier on what the player did — then compress genotype to phenotype."
+      start_display: "28:03"
+      end_display: "28:35"
+      start_sec: 1683
+      end_sec: 1715
+      youtube: https://youtu.be/ofA6YWVTURU?t=1683
+      tags: [compression, procedural, spore]
+      pairs_with: five-thousand-to-one-compression
+      caption_status: draft
+
+    - id: creature-clipboard-pollination
+      title: "Creature clipboard — pollination"
+      hook: |
+        Async genotype handoff fills your world (Don's label: creature clipboard — copy-paste
+        between players; good for annoying Ted). Creatures sent up, categorized, pulled down as needed.
+      start_display: "29:15"
+      end_display: "30:07"
+      start_sec: 1755
+      end_sec: 1807
+      youtube: https://youtu.be/ofA6YWVTURU?t=1755
+      tags: [spore, exchange, pollination, don-lineage]
+      show_note: creature clipboard — Don's words, not Will's
+      caption_status: draft
+
+    - id: brain-palette-sentient-rts
+      title: "Brain palette → sentient → RTS"
+      hook: "College-savings-account brains; highest level → sentient; game mutates from first-person eater to RTS."
+      start_display: "30:08"
+      end_display: "30:55"
+      start_sec: 1808
+      end_sec: 1855
+      youtube: https://youtu.be/ofA6YWVTURU?t=1808
+      tags: [spore, design, evolution]
+      caption_status: draft
+
+    - id: procedural-dance-applause
+      title: "Procedural dance"
+      hook: "Campfire drum → procedural dance based on your creature skeleton — GDC applause."
+      start_display: "32:12"
+      end_display: "32:25"
+      start_sec: 1932
+      end_sec: 1945
+      youtube: https://youtu.be/ofA6YWVTURU?t=1932
+      format_tier: meme
+      tags: [spore, tribal, procedural]
+      pairs_with: monkeys-with-weapons
+      caption_status: draft
+
+    - id: ufo-moofo-content-tool
+      title: "UFO / MOOFO — content creation tool"
+      hook: |
+        Will: the UFO is a content-creation tool. Show shorthand MOOFO = M-O-O-F-O (like UFO, annoy Ted).
+        Abduction beam collects creatures for your library.
+      start_display: "45:14"
+      end_display: "45:45"
+      start_sec: 2714
+      end_sec: 2745
+      youtube: https://youtu.be/ofA6YWVTURU?t=2714
+      tags: [spore, ufo, content, comedy]
+      show_note: MOOFO — crew nickname for UFO content-creation tier
+      caption_status: draft
+
+    - id: prototyping-a-religion
+      title: "Prototyping has become a religion"
+      hook: "200+ prototypes; many shown over the years without telling you what they were — prototyping as religion."
+      start_display: "1:00:50"
+      end_display: "1:00:57"
+      start_sec: 3650
+      end_sec: 3657
+      youtube: https://youtu.be/ofA6YWVTURU?t=3650
+      tags: [will, prototyping, spore]
+      parent: revisit-weird-outside-the-box
+      caption_status: draft
+
     - id: biggest-bottleneck-imagination
-      title: "The biggest bottleneck was Will's imagination"
-      hook: "Once he believed Spore was buildable, persuading EA was easy — advice to revisit weird ideas."
-      start_display: "1:01:04"
-      end_display: "1:01:36"
-      start_sec: 3664
-      end_sec: 3696
-      youtube: https://youtu.be/ofA6YWVTURU?t=3664
+      title: "Imagination bottleneck — punchline only"
+      hook: "Sub-beat inside revisit-weird-outside-the-box — biggest obstacle was believing it was buildable."
+      start_display: "1:01:08"
+      end_display: "1:01:28"
+      start_sec: 3668
+      end_sec: 3688
+      youtube: https://youtu.be/ofA6YWVTURU?t=3668
       tags: [will, advice, design]
+      parent: revisit-weird-outside-the-box
       caption_status: draft
 
     - id: demo-scene-helsinki
@@ -168,6 +320,24 @@ clips:
       youtube: https://youtu.be/ofA6YWVTURU?t=526
       tags: [demoscene, compression, gdc]
       pairs_with: demoscene-compression-hn-2023
+      caption_status: draft
+
+    - id: microscope-commercial-interruption
+      title: "Will's personal information — late night microscope commercial"
+      hook: |
+        Tangent before the Spore recruit story: telescope vs microscope, eBay stereo low-power
+        buying advice, hand under the lens for an hour — "it's like a religious experience."
+        Perfect faux-infomercial break; "anyway, back to our story" is the return segue.
+      start_display: "11:05"
+      end_display: "11:39"
+      start_sec: 665
+      end_sec: 699
+      youtube: https://youtu.be/ofA6YWVTURU?t=665
+      format_tier: commercial_break
+      show_use: late_night_microscope_commercial
+      ae_overlay: faux_infomercial
+      segue_out: "Anyway, back to our story — we recruited this elite team of developers."
+      tags: [will, tangent, comedy, show-break, microscope]
       caption_status: draft
 
     - id: artist-in-a-box-ocean-quigley
@@ -194,16 +364,30 @@ clips:
       caption_status: draft
 
     - id: carnivorous-care-bear
-      title: "Carnivorous Care Bear"
-      hook: "Will makes a mean carnivore in the creature editor — Care Bears geography meets teeth."
-      start_display: "23:34"
-      end_display: "23:55"
-      start_sec: 1414
-      end_sec: 1435
-      youtube: https://youtu.be/ofA6YWVTURU?t=1414
+      title: "Care bear — mean carnivore"
+      hook: "Will insisted the team build a Care Bear. Same walking script; teeth implied."
+      start_display: "23:30"
+      end_display: "23:49"
+      start_sec: 1410
+      end_sec: 1429
+      youtube: https://youtu.be/ofA6YWVTURU?t=1410
       format_tier: quip
-      tags: [spore, care-bears, creature]
-      pairs_with: kingdom-of-people-who-dont-give-a-shit
+      tags: [spore, care-bears, creature, parade]
+      parade_index: 5
+      pairs_with: care-bears-rant
+      caption_status: draft
+
+    - id: creature-parade-finished
+      title: "Creature parade — finished"
+      hook: "\"Anyway, that's our little evolution game so far\" — end of the GDC creature runway."
+      start_display: "23:50"
+      end_display: "24:01"
+      start_sec: 1430
+      end_sec: 1441
+      youtube: https://youtu.be/ofA6YWVTURU?t=1430
+      format_tier: quip
+      tags: [spore, creature, parade]
+      parade_index: 6
       caption_status: draft
 
     - id: kid-pix-terraforming
@@ -238,6 +422,23 @@ clips:
       youtube: https://youtu.be/ofA6YWVTURU?t=2585
       tags: [design, storytelling, will]
       caption_status: draft
+
+  creature_parade:
+    video: https://www.youtube.com/watch?v=ofA6YWVTURU
+    composite:
+      start_display: "21:48"
+      end_display: "24:01"
+      start_sec: 1308
+      end_sec: 1441
+      youtube: https://youtu.be/ofA6YWVTURU?t=1308
+      note: Full runway — same script animates every creature Will loads
+    clips:
+      - creature-parade-buttface
+      - ford-explorer-creature
+      - creature-parade-hang-dog
+      - creature-parade-dilemma
+      - carnivorous-care-bear
+      - creature-parade-finished
 
   draft:
     - id: drag-corpse-verb

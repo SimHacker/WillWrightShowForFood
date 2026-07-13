@@ -1,0 +1,376 @@
+# Urban eBike Safari — voice-first AI touring companion (product seed)
+# Product layer on Urban Safari LIVE; license don't acquihire (Uncle Milton model).
+# Ray-Ban Meta + handlebar phone + Bosch + Koga + Enviolo + SpeechAnalyzer + hidden story graph.
+
+meta:
+  id: urban-ebike-safari
+  status: seed
+  host: don-hopkins
+  participants: [don-hopkins, will-wright, parker-wright]
+  parent: urban-safari-live.yml
+  format: ../../process/one-minute-movie-sandwich.yml
+
+one_line: |
+  Voice-controlled adventure navigation through a hidden graph of story cards at real-world
+  places — Ray-Bans see and hear, phone shows the route, Bosch moves the bike, LLM translates intent.
+
+elevator: |
+  Urban eBike Safari is DreamScape on wheels, descended through iLoci and Urban Safari: geolocated
+  scene cards, topical link layers, adventure-style voice navigation while riding. Meta Ray-Ban glasses capture POV and handle
+  mic/speakers (prescription lenses, hands on handlebars). Any phone on a handlebar mount is
+  display-only — map, Bosch stats, turn-by-turn. Apple SpeechAnalyzer drives hands-free control.
+  The rider never sees the graph; the LLM interprets natural language, hops virtual focus across
+  nearby POIs and cards, then "set destination" arms Bosch/Apple routing. We already built
+  several versions of this idea (1995 DreamScape → 2008–2011 TomTom/SFC → 2026); 2026 adds on-device speech, vision, and LLM narration.
+
+lineage:
+  note: "Not one prototype — a family of clients on one server idea: rooms that kiss, cards at places, links between cards."
+  chain:
+    - era: "1995"
+      project: DreamScape
+      what: |
+        Kaleida Labs ScriptX @ WWDC — live performance demo without crashing (push-ups were the
+        official penalty). Rooms + objects on an editable map; kiss-to-connect; plug-togetherable
+        parts (Director importer, registration points); switch live between Director authoring and
+        Netscape browsing. Reinventing downloadable plug-in multimedia objects, simulations, and web
+        pages — scriptx: URLs, title containers, programmatic HTML, image maps talking to real programs.
+        "A nurturing environment, not a killer app."
+      video: "https://www.youtube.com/watch?v=5NytloOy7WM"
+      medium: "https://donhopkins.medium.com/1995-apple-world-wide-developers-conference-kaleida-labs-scriptx-dreamscape-demo-17-min-read"
+      room: ../../characters/don-hopkins/kaleida-scriptx-dreamscape-multimedia-lisp-machine.md
+      jam: ../../process/crazy-idea-jam.yml#dreamscape_scriptx
+    - era: "1996"
+      project: MediaFlow
+      what: "Interval — Mac Common Lisp + QuickTime hypermedia streams/dataflow (no pie menus)"
+      room: ../../characters/don-hopkins/mediaflow-design-comments.md
+      jam: ../../process/crazy-idea-jam.yml
+    - { era: "2008", project: iLoci, what: "Method of Loci on iPhone; pie-menu network; kiss-to-connect rooms", video: "https://www.youtube.com/watch?v=03ddG3jWF98" }
+    - { era: "2009", project: Amsterdam Coffeeshops Layar, what: "Every coffeeshop as map layer; spreadsheet database", video: "https://www.youtube.com/watch?v=nG90XG3STz8" }
+    - { era: "2009", project: Bongo Bingo, what: "Foursquare bingo — bike GPS check-ins across coffeeshop card" }
+    - { era: "2010–11", project: StoryMaker, what: "Branching stories; geolocated scenes; Facebook album import/export; iPad MapKit; Unity visualizer; voice-synth reading", video: "https://www.youtube.com/watch?v=_2yEHs_WLzQ" }
+    - era: "2011"
+      project: Urban Safari
+      what: "Layar AR field cards; Facebook album export/edit/import demonstrated on camera in StoryMaker demo"
+      layar_video: "https://www.youtube.com/watch?v=Db8KGNoeKHE"
+      facebook_album_demo: "https://www.youtube.com/watch?v=_2yEHs_WLzQ&t=742"
+      room: ../../characters/don-hopkins/media/storymaker-urban-safari/INDEX.yml
+    - era: "2011–14"
+      project: MediaGraph
+      what: |
+        SFC Unity — songs on roads (drag, kiss to toggle links, sculpt island biomes/continents).
+        Fixed pies for config/preview; editable song graph. Flick-navigate like Mario World cannons.
+        CA biomes at Will's request.
+      demo: "https://donhopkins.medium.com/mediagraph-demo-a7534add63e5"
+      jam: ../../process/crazy-idea-jam.yml#mediagraph
+    - { era: "2025–26", project: Proxi, what: "Memory snow globes at geo stops — press parallel" }
+    - { era: "2026", project: Urban Safari LIVE, what: "Real streets; Parker calls Will; git audience cards", file: urban-safari-live.yml }
+    - { era: "2026+", project: Urban eBike Safari, what: "This doc — eBike + voice + Ray-Ban + LLM narrator" }
+  pivotal_moment: |
+    TomTom trilogy (iLoci + Coffeeshops + Bongo Bingo) matched Will's CurrentTV problems; Don sent
+    demos; Will said leave EA and come back to SFC. iLoci moment again.
+  girder: ../../characters/don-hopkins/career/stupid-fun-club.yml#how_don_rejoined_will
+
+dreamscape_wwdc_1995:
+  what: |
+    DreamScape (Actualized Fantasy Screen Waster) — constructive ScriptX experience: rooms connected
+    in a map, objects with behaviors, smooching UI, astral travel between rooms ("don't lose your head").
+    Live improvisational performance programming art at Apple WWDC May 11 1995 on PowerBook 540c.
+    Demo did not crash; came close ("my demo's falling apart" — elasticity ping-pong, butterfly agent).
+  authoring_and_browsing:
+    director: "Import animations with registration points; Mr Potato Head / Lego robot parts; timeline"
+    netscape: |
+      Dynamically loaded C extension; scriptx: protocol; programmatic HTML collections; room browser
+      with nested outlines; forms edit live simulation (elasticity, gravity); image map clicks hit
+      real objects. Preview engine for multimedia web you generate — link globally, interact locally.
+  web_vision: |
+    Each room a distributable title container; plug-togetherable interactive objects on the web;
+    window-shopping GIF storefronts linking to downloadable ScriptX objects for test drives. Long
+    before modern component web — same itch as Urban Safari cards at POIs and MOOLLM rooms.
+  leads_to: [iLoci, StoryMaker, Urban Safari, MediaGraph, MOOLLM, urban-ebike-safari]
+  quote: "We want to give creative people an environment in which to plant their seeds — fertile ground, instead of a killer app."
+  split_architecture:
+    ray_ban_meta:
+      roles: [capture_pov, open_ear_audio, microphone, prescription_lenses]
+      why: |
+        Will Wright is excited about Ray-Ban Meta glasses — no display, but good earphones, mic,
+        and camera; safe while riding; put your own prescription lenses in. Camera off the phone
+        means any handlebar mount works (display only).
+      will_suggestion: true
+      licensing_target: meta
+    handlebar_phone:
+      roles: [map_display, turn_by_turn, bosch_sdk_ui, optional_android]
+      mount: "Any phone mount — Quad Lock, Bosch, generic; no integrated camera required"
+    bosch:
+      roles: [motor_assist_context, battery, speed, route_to_head_unit]
+      sdk: "Kiox/Nyon — evaluate current Flow SDK vs legacy extensible mount platform Bosch acquihired and killed"
+      note: "Flow is better than the acquired indie app but still sucks; we supply voice + story graph they lack"
+
+field_hardware:
+  note: "What Don actually rides on Amsterdam safaris — authentic endorsement, not aspirational spec."
+  koga:
+    what: "Dutch premium e-bike — Don's safari fleet"
+    why: "Built for daily Dutch urban riding; local brand fits Amsterdam canal-loop demos"
+    site: "https://www.koga.com/"
+  enviolo:
+    what: "Continuously variable transmission (CVT) hub — no discrete gear shifts"
+    why: |
+      Stop-start urban safari: narrate at a canal, roll off without hunting gears. Pairs with Bosch
+      on Koga builds. Hands stay on handlebars; voice UX is not fighting drivetrain.
+    site: "https://www.enviolo.com/"
+  stack: "Koga frame + Bosch motor + Enviolo CVT — field-tested on real safaris"
+  partner_or_ads: |
+    Genuine product love from daily use. Open to co-marketing, sponsored safari episodes, or
+    lightweight ad integration — show the bike as part of the story, not a spec sheet.
+
+dual_location_navigation:
+  what: |
+    Adventure-like navigation through the graph of cards at places ahead of you. Two locations:
+    physical (GPS on bike) and virtual focus (cursor hopping map → nearby POI → cards at POI →
+    links between cards across topical layers). User does not care how it is modeled; LLM hides
+    structure, interprets intent, follows overlaying topical graphs.
+  physical: "GPS truth — bike position on map"
+  virtual_focus: |
+    Hops independently near physical location: scan POIs → load card stack at POI → follow links
+    (person, time, topic layers). Not granular in UX — granular in model only.
+  voice_commands:
+    examples:
+      - "What's near me?"
+      - "Tell me about that canal"
+      - "What did Parker film here?"
+      - "Take me to the next Invader"
+      - "Set destination"
+    set_destination: |
+      Commit virtual focus to navigation target → route via Bosch/Apple. MUCH safer than
+      pinch-zoom or list scroll while riding. Direct manipulation by voice syncs bike location
+      and virtual graph cursor.
+  temporal_abstraction:
+    sutton_one_step_trap: |
+      Rich Sutton (Jul 2024): iterating one-step world models for long horizons compounds error
+      and explodes combinatorially — use options and GVFs instead.
+      http://incompleteideas.net/IncIdeas/OneStepTrap.html · HN 48883415
+    safari_is_options_not_rollout: |
+      Scene cards at POIs = temporally abstract stops. Virtual focus + voice commands ("next Invader",
+      "that canal") = semi-MDP options. "Set destination" commits an endpoint; Bosch turn-by-turn is
+      hierarchical micro-detail filled on demand — not the primary planning model.
+    tyranny_of_the_specific:
+      source: "ssivark @ HN 48883415 — flight legs + 15–18 hours, not every turn to the airport"
+      safari_read: "Voice layer plans story legs; map UI stays zoomed out until rider commits routing"
+    llm_nuance: |
+      HN counter (mxwsn): LLMs can self-correct with more tokens — applies to field narration, not to
+      rehabilitating one-step tile/world-model rollout for navigation.
+    room: ../../characters/don-hopkins/sources/sutton-one-step-trap.md
+    moollm:
+      hub: https://github.com/SimHacker/moollm/blob/main/skills/simulation/ONE-STEP-TRAP.md
+      example: https://github.com/SimHacker/moollm/blob/main/skills/simulation/examples/one-step-trap.yml
+      skills:
+        simulation: "TICK = game turn, not physics integrator"
+        adventure: "GO/LOOK/TAKE = Sutton options on rooms"
+        exit: "Graph edges; guards = option preconditions"
+        time: "Turn ≠ LLM iteration; narrative duration abstracted"
+        memory-palace: "iLoci method of loci — spatial safari graph"
+        simulator-effect: "Implication beats simulation — allied"
+        speech: "Voice commands as option interface; SpeechAnalyzer field STT"
+  parser_lineage: "Logo Adventure (zeroth, REPL-as-parser) → DreamScape → MOOLLM adventure → SpeechAnalyzer voice parser"
+
+steering_pie_ride_game:
+  what: |
+    Continuous two-player game: AI guesses where you're going and suggests places; you pedal through
+    a positional direct-manipulation pie-menu network — skip ahead and around by voice (or VoyStick
+    warble). Handlebar steering IS steering law manifest; pedaling past POIs incrementally reveals
+    focus and locality (LOD). AI remembers, looks up, organizes, projects onto your interests,
+    narrates, answers questions — all while you ride.
+  continuous_game:
+    ai_guesses: "Bearing + speed + ride history → proposed next story leg"
+    ai_suggests: "POIs/cards ranked on interest layers — not generic tourism"
+    rider_moves: [confirm, deflect, voice_skip, voystar_wedge, set_destination]
+    never_pauses: "Running inference duel, not a form or turn-by-turn nag"
+  pie_menu_network:
+    lineage: "iLoci pie-menu network → MediaGraph song+road flick (Mario cannons) → MOOLLM exit graph at POIs"
+    iloci: "https://www.youtube.com/watch?v=03ddG3jWF98"
+    model: "Each POI = hub; wedges = nearby cards + topical links; approach opens menu"
+    positional_dm: "Biking navigates the network physically; virtual focus highlights wedge"
+  steering_law_manifest:
+    handlebars: "Path curvature from wheel angle — steering law"
+    pie_wedges: "Arc gesture to target — same law family as Fitts pie menus (CHI'88)"
+    unified: "One gesture steers Amsterdam AND graph focus"
+    fitts: "Big nearby targets; outdoor = wide sloppy fast warbles without social cost"
+  incremental_revelation:
+    trigger: "Pedal toward and past POIs"
+    lod: "glance → look → examine (adventure pickDescription pattern)"
+    focus_cone: "Bearing + proximity widens/narrows what loads from hidden graph"
+    simulator_effect: "Imply depth; reveal on approach — don't simulate every brick"
+  voystick:
+    what: "VoyStick — pitch=Y, vowel=X homomorphic vocal joystick; primary bike nav for linked card overlay"
+    primary_use: "Hop down pie arcs and between POIs/cards — MediaGraph-style cannon flick, hands on bars"
+    homomorphic: "Computer synthesizes same gesture — sing along, harmonic blend confirms"
+    don_verdict: "Really fun and smooth — best gestural UI I've ever done"
+    pie_navigation_lineage:
+      zeroth: "../../characters/don-hopkins/sources/logo-adventure-c64-terrapin.md — REPL-as-parser, hidden graph"
+      first: "../../characters/don-hopkins/kaleida-scriptx-dreamscape-multimedia-lisp-machine.md — rooms kiss, 1995 WWDC"
+      chain: "Logo Adventure → DreamScape → MediaFlow (Lisp+QT, no pies) → iLoci → MediaGraph (flick) → Urban Safari → Urban eBike Safari"
+    navigation_lineage:
+      mediaflow: "Interval — Mac Common Lisp + QuickTime streams (no pie menus)"
+      pie_flick: "MediaGraph — song+road graph; Mario-cannon flick; iLoci → MediaGraph → Urban Safari"
+      chain: "Logo Adventure → DreamScape → MediaFlow (Lisp+QT, no pies) → iLoci → MediaGraph (flick) → Urban Safari → Urban eBike Safari"
+    vowel_space: "F1/F2 acoustic space (Geoff Lindsey) — not Jones tongue quadrilateral"
+    diphthong_rails: "Front (i,e,ɛ,a) + back (u,o,ɔ,ɑ) — skip central schwa"
+    outdoor: "Outdoor = wide sloppy fast warbles without social cost; pitch+vowel trace steers singing while biking"
+    channels:
+      natural_language:
+        engine: SpeechAnalyzer
+        role: "Commands, questions, tool selection, guess confirm/veto in words"
+        examples: ["What's near me?", "Set destination", "Capture this", "Tell me about that canal"]
+      gestural:
+        engine: Voystick
+        role: "Arc hops along pie wedges; homomorphic confirm; voice-ahead expert path"
+        trace: "continuous pitch + F1/F2 projection"
+    code_switching: |
+      Rider fluidly switches NL ↔ gestural — and combines them. NL selects tools/destinations;
+      gestural executes spatial hops through the linked card overlay. Expert: mostly warble + occasional
+      NL punctuation. Both streams parallel; LLM fuses intent from active channel(s).
+    lineage: voystick-correspondence-lineage.md (1991–2025)
+    guitar_pie: "https://news.ycombinator.com/item?id=45250328 — combine fretboard pies + voice"
+    piecraft: "https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/piecraft/RELATED-PROJECTS.md"
+  ai_memory_loop:
+    - remember — past safaris, linger time, git audience cards
+    - lookup — graph links at approaching POIs
+    - organize — topical layers (Invader, Parker, canal, contributor)
+    - project — rank onto rider interest profile
+    - speak — proximity-triggered narration
+    - answer — questions without stopping or screen touch
+  room: ../../characters/don-hopkins/sources/urban-safari-steering-voystar-pie-network.md
+  moollm: https://github.com/SimHacker/moollm/blob/main/skills/simulation/examples/urban-safari-ride-game.yml
+
+voice_stack:
+  primary: Apple SpeechAnalyzer
+  browser_stt: skills/speech — recognition.js (Web Speech API)
+  native_stt: skills/speech/native — moollm-speech CLI (planned, macOS 26+)
+  voystick: skills/speech/voystick.yml — pitch parallel stream (not in Apple STT)
+  audit: https://github.com/SimHacker/moollm/blob/main/skills/speech/STT-STACK.md
+  fallback: WhisperKit for locales SpeechTranscriber does not cover
+  benchmark: "https://get-inscribe.com/blog/apple-speech-api-benchmark.html"
+  hn_thread: "https://news.ycombinator.com/item?id=48894752"
+  why_on_bike: |
+    Hands on handlebars; ~2% WER clean / ~4.5% noisy on LibriSpeech vs legacy SFSpeechRecognizer;
+    on-device privacy and latency. Field test still needed: windy canal-side ride.
+  implementation_note: |
+    SpeechAnalyzer sessions hang without finalizeAndFinishThroughEndOfInput() — see Inscribe
+    benchmark author (get-inscribe on HN).
+
+llm_layer:
+  roles:
+    - interpret_natural_language_intent
+    - hide_graph_structure_from_rider
+    - field_narration_at_stops
+    - vision_what_am_i_looking_at
+    - caption_captured_scene_cards
+    - memory_snow_globe_export_proxi_parallel
+  capture_loop: |
+    "Capture this" → Ray-Ban or phone photo + GPS + LLM caption → geotagged scene card on map/git
+
+meta_licensing:
+  heritage: |
+    StoryMaker shipped Facebook app with album import/export (scene photos ↔ story cards).
+    Micropolis Facebook app same era. **Don demonstrates album export / edit / import on camera**
+    in the StoryMaker comprehensive demo (not the Layar-only clip):
+    https://www.youtube.com/watch?v=_2yEHs_WLzQ&t=742
+    (~12:22 export → ~12:39 Facebook drag-edit → ~13:11 import round-trip)
+  fresh_audit_2026:
+    status: needed
+    why: "Graph API, Reels, Ray-Ban device SDK evolved; many 2011 endpoints dropped — evaluate before pitch"
+  pitch_angle: |
+    Meta already has the wearable (Ray-Ban). We built the safari layer + social card sync once.
+    License the graph engine and voice adventure navigation — not acquihire. Uncle Milton model:
+    contribute the weird idea; partner ships product with credit.
+  licensing_preferred_over: acquihire
+
+partners:
+  meta:
+    angle: "Ray-Ban capture + voice; resurrect album/social sync on modern APIs; glasses-first safari demo"
+    model: license
+  apple:
+    angle: "SpeechAnalyzer + Vision showcase; phone-as-display; MagSafe mount ecosystem (any mount vendor)"
+    model: co_marketing_or_license
+  bosch:
+    angle: "Companion brain Flow should have — voice, story graph, extensible cards; keep Flow, license engine"
+    model: license
+    anti_pattern: "Acquihire + kill extensible dev platform (indie iPhone mount/browser app → Flow)"
+  koga:
+    angle: |
+      Don rides Koga on Amsterdam safaris — Dutch brand, canal-loop credibility. Co-marketing or
+      sponsored episode: safari as product story (comfort, range, urban daily driver).
+    model: co_marketing_or_sponsorship
+    authentic_use: true
+    site: "https://www.koga.com/"
+  enviolo:
+    angle: |
+      CVT on the same bikes — no gear hunting between story stops; pairs with voice-first UX.
+      "Set destination and roll" without shifting. Co-marketing or ad read on safari clips.
+    model: co_marketing_or_sponsorship
+    authentic_use: true
+    site: "https://www.enviolo.com/"
+  strava:
+    angle: "Segments as story segments; social paths; route export"
+    model: api_integration
+  accessory_makers:
+    angle: "Display-only mounts simplified once camera is on glasses"
+    examples: [Quad Lock, Peak Design, generic]
+
+business_model:
+  uncle_milton: |
+    Will contributed transparent ant medium → Uncle Milton Ant Farm ceiling projector shipped with
+    credit. We contribute Urban Safari graph + voice UX → Bosch/Meta/Apple ship with license fee.
+  not: "Acquihire and disappear (Bosch pattern on indie eBike iPhone mount + browser extensibility)"
+
+mvp_demo:
+  slice: |
+    Amsterdam canal eBike loop on Koga + Enviolo; SpeechAnalyzer voice loop (zero screen touches);
+    Bosch read-only speed/battery/route; voice capture → geotagged card; one playlist export for Will async.
+  field_test: "30-minute ride WER + wind — moat nobody else's benchmark covers"
+  belief_gate: |
+    Same Spore GDC hinge: believe the weird idea is buildable on today's stack; then persuading
+    partners is logistics. revisit-weird-outside-the-box @ https://youtu.be/ofA6YWVTURU?t=3657
+
+competitive_gap:
+  flow_lacks: [voice_first_ux, story_graph, adventure_navigation, audience_card_git_layer]
+  we_have: "Fifteen years of shipped iterations + MOOLLM parser + Repo Show audience model"
+
+swag:
+  will_sticker_culture: "Will loves industrial-warning / absurd stickers — SFC gift seeded packs"
+  art_lead: ../../characters/howard-penner/README.md
+  packs: swag/sfc-sticker-packs.yml
+  voystick_warnings: swag/voystick-warning-stickers.yml
+  seed_art: ../../characters/will-wright/media/swag/sfc-warning-sticker-moving-machinery.png
+  howard_deliverable: "Big WARNING chest-panel tees + kiss-cut carnage sheets — Howard illustrates stick figures"
+  hero_tee: hands-on-handlebars  # HANDS MUST REMAIN ON HANDLEBARS
+  generative: |
+    Howard flagged codebase-posters (https://github.com/unable12/codebase-posters) —
+    paint WillWrightShowForFood / MOOLLM git history as wall art. Every repository has a shape.
+
+ties:
+  - urban-safari-live.yml
+  - ../../characters/don-hopkins/career/stupid-fun-club.yml
+  - ../../characters/don-hopkins/career/lineage.yml
+  - ../../process/crazy-idea-jam.yml#iloci_memory_palace
+  - ../../process/crazy-idea-jam.yml#amsterdam_coffeeshops_app
+  - ../../process/crazy-idea-jam.yml#bongo_bingo
+  - ../../process/crazy-idea-jam.yml#creationtv_storymaker
+  - ../../process/crazy-idea-jam.yml#urban_safari_gps_storytelling
+  - ../../process/crazy-idea-jam.yml#urban_ebike_safari
+  - ../../characters/don-hopkins/mediaflow-design-comments.md
+  - ../../characters/don-hopkins/interval-research-pluggers-and-mediaflow.md
+  - ../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
+  - ../../characters/don-hopkins/media/storymaker-urban-safari/storymaker-urban-safari.yml
+  - ../../repo-shows/ideas/swag/sfc-sticker-packs.yml
+  - ../../repo-shows/ideas/swag/voystick-warning-stickers.yml
+  - ../../repo-shows/ideas/swag/INDEX.yml
+  - ../../characters/will-wright/media/swag/INDEX.yml
+  - ../../characters/will-wright/sources/2025-04-29-venturebeat-proxi-funding-crisis/proxi-pitch-parallels.yml
+  - ../../characters/don-hopkins/kaleida-scriptx-dreamscape-multimedia-lisp-machine.md
+  - ../../process/crazy-idea-jam.yml#dreamscape_scriptx
+  - ../../characters/don-hopkins/sources/sutton-one-step-trap.md
+  - ../../characters/don-hopkins/sources/urban-safari-steering-voystar-pie-network.md
+  - https://github.com/SimHacker/moollm/blob/main/skills/simulation/examples/urban-safari-ride-game.yml
+  - https://github.com/SimHacker/moollm/blob/main/skills/simulation/ONE-STEP-TRAP.md
+  - https://github.com/SimHacker/moollm/blob/main/skills/simulation/examples/one-step-trap.yml
+  - ../../characters/will-wright/sources/2005-03-11-spore-gdc-future-of-content/short-form-clips.yml  # revisit-weird-outside-the-box

@@ -139,6 +139,8 @@ first_instances:
         into all of this. The Phoneloper demo is part of that story and draws
         from Simlish too; so does the Slats loop: speech recognition =>
         synthesis => noise feedback.
+      crazy_idea_jam: crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
+      show: ../repo-shows/voystick-pink-trombone/SHOW.yml
     moderation_and_trust:
       how: |
         The roar format SOLVES most of the user-content curation problem: of

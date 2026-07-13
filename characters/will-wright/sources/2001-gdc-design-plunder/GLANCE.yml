@@ -1,0 +1,43 @@
+# 2001 GDC DESIGN PLUNDER — GLANCE
+
+title: "Design Plunder — Will Wright GDC 2001"
+iconic: "🪑📊 2001"
+description: |
+  Game design keynote as inspiration raid — chair, Alexander, interaction onion, Calvin factor,
+  Sims disease vectors, fitness landscapes, Japanese gardens, fan-site ecology. Cory Martin
+  restored slides the official GDC video omitted.
+
+keywords:
+  - gdc 2001
+  - design plunder
+  - christopher alexander
+  - interaction onion
+  - failure states
+  - calvin syndrome
+  - simfreaks
+  - fitness landscape
+  - japanese gardens
+  - cory martin slides
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  children:
+    - summary.md
+    - short-form-clips.yml
+    - youtube-reception.md
+    - transcript-cache/
+
+structure:
+  video: https://www.youtube.com/watch?v=c91IWh4agzU
+  archive_org: https://archive.org/details/will-wrights-design-plunder-with-slides
+  event: Game Developers Conference
+  date: 2001
+  duration: "~1:05"
+
+see_also:
+  - ../1996-04-26-winograd-interfacing-to-microworlds/README.md
+  - ../2005-03-11-spore-gdc-future-of-content/README.md
+  - ../2008-02-10-soul-of-the-sims/README.md

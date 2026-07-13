@@ -90,6 +90,8 @@ thesis:
     - faceball-construction-set.yml#amplitude_scrub                            # scrub-puppet sibling
     - ../../process/performance-space.yml#audience_chorus                       # the mode this fills
     - ../../repo-shows/phoneloper/SHOW.yml                                      # Don's SFC expressive-speech toy
+    - ../../repo-shows/voystick-pink-trombone/SHOW.yml                          # homomorphic Voystick jam
+    - ../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
     - ../../schemas/language-cow.yml                                            # vocal-tract instruments
 
 # ── Building blocks (public creators — cite & build on, don't replace) ──
@@ -156,6 +158,8 @@ ethics:
   - "Credit the ecosystem (Thapen, Qattan, Batchelor, Moro); build on, don't rebrand."
 
 see_also:
+  - ../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
+  - ../../repo-shows/voystick-pink-trombone/SHOW.yml
   - ../../process/performance-space.yml
   - ../../process/performance-space/README.md
   - ../../repo-shows/phoneloper/SHOW.yml

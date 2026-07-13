@@ -22,6 +22,9 @@ The crazy idea reactor: robo-resurrection, soul bridges, and cells that travel b
 | [**Self × MOOLLM**](../../repo-shows/david-ungar-self-moollm.yml) | Stage Magic, Idea Scavenging — prototypes for the LLM era |
 | [**Will CARD**](../../characters/will-wright/CARD.yml) | Procedural creatures, gallium voxel worlds |
 | [**Yoot Saito**](../../characters/yoot-saito/README.md) | Seaman energy — a creature that insults you on purpose |
+| [**Voystick × Pink Trombone**](../../repo-shows/voystick-pink-trombone/SHOW.yml) | Homomorphic vocal joystick — sing along to confirm; Zack Vocap + Pink Trombone choir |
+| [**Urban eBike Safari**](../../repo-shows/ideas/urban-ebike-safari.yml) | DreamScape on wheels — outdoor Voystick demo on canal loops |
+| [**Pink Trombone Jam**](../../apps/performance-space/pink-trombone-jam.yml) | Four-player vocal-tract chaos — We Are the Weird |
 
 ---
 

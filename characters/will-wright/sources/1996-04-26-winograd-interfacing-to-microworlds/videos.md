@@ -20,5 +20,5 @@ Embedded YouTube videos (and the Google-Drive PDF embed) extracted from the arti
 
 Also linked inline in the article text (not an embed):
 
-- **Will Wright's Design Plunder (With Slides)** — source of the SimAntics slide images
-  <https://www.youtube.com/watch?v=c91IWh4agzU>
+- **Will Wright's Design Plunder (With Slides)** — source of the SimAntics slide images  
+  <https://www.youtube.com/watch?v=c91IWh4agzU> · [source bundle](2001-gdc-design-plunder/README.md)

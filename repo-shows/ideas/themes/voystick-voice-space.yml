@@ -1,0 +1,60 @@
+# Voystick & voice space — cross-show theme
+# The IDEA lives in crazy-idea-jam; stickers are SWAG only.
+
+id: voystick-voice-space
+type: theme
+status: ready
+shows: [will-wright, don-hopkins, drew-carey, all]
+
+thesis: |
+  **VoyStick** — continuous pitch + vowel gesture parallel to speech recognition. Homomorphic
+  bidirectional synthesis: computer sings your gesture back; you confirm by blending. Not a voice
+  clone — an instrument stack (Pink Trombone, Phoneloper, imitone formants).
+
+dual_channel_voice:
+  natural_language: "SpeechAnalyzer — commands, questions, tool names, NL confirm/veto"
+  gestural: "Voystick — pitch+vowel arc hops, pie wedge navigation, homomorphic feedback"
+  code_switching: |
+    Both channels active on Urban Safari. Rider code-switches NL ↔ gestural — selects tools in
+    words, hops cards by warble, or combines both. Expert riders skew gestural; parser fuses intent.
+
+pie_navigation_lineage:
+  zeroth: ../../../characters/don-hopkins/sources/logo-adventure-c64-terrapin.md
+  first: ../../../characters/don-hopkins/kaleida-scriptx-dreamscape-multimedia-lisp-machine.md
+  chain: |
+    Logo Adventure (zeroth) → DreamScape (first) → MediaFlow (Lisp+QT, no pies) → iLoci → MediaGraph (flick) → Urban Safari → Urban eBike Safari
+  pie_flick_from: MediaGraph — Mario-cannon flick on song+road graph (not MediaFlow)
+  outdoor: "Outdoor = wide sloppy fast warbles without social cost; pitch+vowel trace steers singing while biking"
+
+canonical_idea: ../../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
+urban_product: ../urban-ebike-safari.yml
+mediaflow_lineage: ../../../characters/don-hopkins/mediaflow-design-comments.md
+
+stack:
+  analysis: [SpeechAnalyzer words, imitone F1/F2, aubio pitch]
+  synthesis: [Pink Trombone, Flite/Phoneloper]
+  ui: [pie-menu wedges, voice-ahead expert path, GuitarPie fretboard]
+  outdoor: ../../../repo-shows/ideas/urban-ebike-safari.yml
+
+shows_and_activities:
+  - ../../../repo-shows/voystick-pink-trombone/SHOW.yml
+  - ../../../repo-shows/phoneloper/SHOW.yml
+  - ../../../apps/performance-space/pink-trombone-jam.yml
+  - ../../../repo-shows/marc-canter/SHOW.yml
+
+swag_not_idea:
+  note: "ISO hazard tees + Usenet physics labels — merch only"
+  pack: ../swag/voystick-warning-stickers.yml
+
+sources:
+  - ../../../characters/don-hopkins/sources/voystick-correspondence-lineage.md
+  - ../../../characters/don-hopkins/sources/urban-safari-steering-voystar-pie-network.md
+  - ../../../characters/zack-qattan/README.md
+
+moollm:
+  - https://github.com/SimHacker/moollm/blob/main/skills/speech/voystick.yml
+  - https://github.com/SimHacker/moollm/blob/main/skills/speech/platforms/vowel-space.yml
+
+see_also:
+  - ../../../process/CRAZY-IDEA-JAM.md
+  - ../urban-ebike-safari.yml

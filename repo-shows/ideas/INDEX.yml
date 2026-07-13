@@ -115,6 +115,12 @@ themes:
     status: ready
     canonical: ../../schemas/portrayal-standards.yml#simulation
     note: "Impersonation vs simulation — Sims 26-year precedent; AI Pandora's box"
+  - id: voystick-voice-space
+    file: themes/voystick-voice-space.yml
+    shows: [will-wright, all]
+    status: ready
+    canonical: ../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
+    note: "Homomorphic vocal joystick + Pink Trombone — idea in jam; stickers are SWAG only"
 
 shows:
   will-wright:
@@ -132,6 +138,26 @@ shows:
     host: don-hopkins
     status: seed
     note: "2011 StoryMaker Urban Safari performed for real — Don + Parker in Amsterdam; Parker video-calls Will from the street; clips from other European cities join the playlists"
+  urban-ebike-safari:
+    file: urban-ebike-safari.yml
+    host: don-hopkins
+    status: seed
+    note: "Product seed — pie-network ride game + VoyStick; DreamScape→iLoci→Urban Safari; Koga/Enviolo; Howard art lead"
+  sfc-sticker-packs:
+    file: swag/sfc-sticker-packs.yml
+    art_lead: howard-penner
+    status: seed
+    note: "Will's SFC WARNING sticker seed; REVISIT THE IMPOSSIBLE + globe seal packs; codebase-posters generative repo art"
+  voystick-warning-stickers:
+    file: swag/voystick-warning-stickers.yml
+    art_lead: howard-penner
+    status: design_brief
+    note: "SWAG only — ISO hazards + Usenet physics labels; idea is crazy-idea-jam#voystick_homomorphic_vocal_joystick"
+  voystick-pink-trombone-show:
+    file: ../../repo-shows/voystick-pink-trombone/SHOW.yml
+    host: don-hopkins
+    status: seed
+    note: "Zack Qattan + Pink Trombone + homomorphic loop — build-and-jam; private lead"
   kids-city-newspaper:
     file: kids-city-newspaper.yml
     host: don-hopkins

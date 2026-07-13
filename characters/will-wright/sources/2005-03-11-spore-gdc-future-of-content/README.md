@@ -4,6 +4,7 @@
 
 **Video:** [YouTube — ofA6YWVTURU](https://www.youtube.com/watch?v=ofA6YWVTURU) (~1:02, Zeusmonomon remaster)  
 **GDC Vault:** [session 1019981](https://www.gdcvault.com/play/1019981)  
+**Archive.org masters:** [screen-only demo feed](https://archive.org/details/2005-will-wright-keynote-spore-screen-only-2005-03-11) · [audience reaction](https://archive.org/details/2005-gdc-will-wright-spore-demonstration-audience-reaction) · [presenter camera](https://archive.org/details/2005_GDC_-_Will_Wright_SPORE_Reveal_-_Camera_Angle_of_Wright_Only_-_2005-03-11_A) · [official session](https://archive.org/details/GDC2005Wright)  
 **Don's notes:** [Medium, Apr 2018](https://donhopkins.medium.com/the-future-of-content-will-wrights-spore-demo-at-gdc-3-11-2005-9eab0cedc583) · [`medium-article.md`](medium-article.md)  
 **Event:** Game Developers Conference · Moscone Center West · **March 11, 2005**  
 **Witness:** **Don Hopkins in the audience** — notes taken live, later reviewed by Will.
@@ -58,13 +59,15 @@ portable content, unbounded worlds.
 - **Procedural mating** — crowd goes wild; currency = reproduction; brains = college fund.
 - Creature parade: buttface, **Ford Explorer** SUV creature, hang dog, **carnivorous Care Bear**.
 - **Care Bears** digression — greeting cards, cousins, Care-a-Lot; Earth = "kingdom of people who don't give a shit."
-- **Artist in a box** (Ocean Quigley) — Pixar ↔ Giger; **5000:1** decompression.
+- **Artist in a box** (Ocean Quigley) — Pixar ↔ Giger; **creative amplifier** + **5000:1** decompression.
+- **Creature clipboard** (Don's label) — pollination / async genotype handoff between worlds.
 
 ### III — Tribe → space (30:00–55:00)
 
 - Monkeys with weapons; procedural dance; Populous / SimCity / Civ homages — **break the don't-mix-genres rule**.
+- **Brain palette** → sentient → first-person eater mutates to RTS.
 - Player as Lucas/Tolkien/Dr. Seuss — story as side effect.
-- UFO = Swiss army knife; **Mutual of Omaha's Wild Kingdom** → tranquilizer gun from helicopter.
+- **UFO / MOOFO** — content-creation tool; **Mutual of Omaha's Wild Kingdom** → tranquilizer gun from helicopter.
 - Solar system sandboxes; drop abducted creature → **explosive decompression** (no atmosphere).
 - **Kid Pix** terraforming; Genesis device; interstellar drive; **SETI tool** on star map.
 - First contact → planet-buster → *"there goes my reputation as a non-violent game developer."*
@@ -74,8 +77,9 @@ portable content, unbounded worlds.
 - Meta-games (War of the Worlds, Close Encounters, uplift, diplomacy).
 - **T-shaped game** — goal ladder trains editors; space layer = storytelling sandbox.
 - **Powers of Ten** × **Drake's equation** — Wired secret diagram (Feb 2004) published without explanation.
-- **Bacteria to galactic god** — 200+ prototypes; biggest bottleneck was Will's own imagination.
-- Advice: revisit weird ideas; can't talk again until E3.
+- **Bacteria to galactic god** — 200+ prototypes; **prototyping has become a religion**.
+- **THE dream quote** @ [1:00:57](https://youtu.be/ofA6YWVTURU?t=3657) — biggest bottleneck was Will's own imagination; once he believed, persuading EA was easy; revisit weird outside-the-box ideas. Don remembered this advice and applied it decades later.
+- Can't talk again until E3.
 
 ## Retrospective hooks (show mining)
 
@@ -85,12 +89,15 @@ Use Don's notes + this video alongside shipped Spore and the [Long Now 2006](../
 - **Scope cuts** — aquatic stage, city depth, procedural mating minigame, genre-mixing Civ layer.
 - **Prophecy** — "next generation titles incredibly expensive" (2005) → 2024 industry shape.
 - **Compression hub** — still the Repo Show through-line (Micropolis, MOOLLM, generative minutes).
+- **Founding advice** — flagship clip `revisit-weird-outside-the-box` — the Spore GDC close Don carried forward into present work.
 
 ## Files in this folder
 
 | File | Role |
 |------|------|
 | [`medium-article.md`](medium-article.md) | Don's GDC notes — Will-reviewed (Medium mirror + figures) |
+| [`transcript.md`](transcript.md) | Act-indexed digest — YouTube timestamps + deep links |
+| [`youtube-reception.md`](youtube-reception.md) | Remaster comment-thread themes ("what could have been") |
 | [`images/`](images/README.md) | Four Medium article illustrations (Myst, Care Bear, artist-in-a-box, Wired diagram) |
 | [`summary.md`](summary.md) | Timestamp index + retrospective frame |
 | [`short-form-clips.yml`](short-form-clips.yml) | Cut candidates — meme tier + flagship beats |
@@ -111,6 +118,8 @@ yt-dlp -f 'bv*+ba/b' --merge-output-format mp4 \
 ```
 
 Same pipeline as Winograd / Long Now: extract → captions → AE finish → publish with `.vtt`.
+
+For **game footage** clips, prefer the [screen-only Archive.org master](https://archive.org/details/2005-will-wright-keynote-spore-screen-only-2005-03-11) over the Zeusmonomon remaster (projector capture blown out). Use [audience reaction tape](https://archive.org/details/2005-gdc-will-wright-spore-demonstration-audience-reaction) for applause room tone.
 
 ## Image gallery (Medium article)
 

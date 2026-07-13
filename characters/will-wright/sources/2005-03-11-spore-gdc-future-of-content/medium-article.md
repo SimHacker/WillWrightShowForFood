@@ -297,4 +297,4 @@ Advice: If you have a weird idea that's so outside of the box, don't forget it. 
 - [Joystiq interviews Spore's Chaim Gingold and Chris Hecker](https://www.engadget.com/2006-11-16-joystiq-interviews-spores-chaim-gingold-and-chris-he.html)
 - [SPORE's Magic Crayons](https://www.gdcvault.com/play/1019982) — Chaim Gingold, GDC
 
-↑ [`README.md`](README.md) · [`summary.md`](summary.md) · [`short-form-clips.yml`](short-form-clips.yml)
+↑ [`README.md`](README.md) · [`transcript.md`](transcript.md) · [`summary.md`](summary.md) · [`youtube-reception.md`](youtube-reception.md) · [`short-form-clips.yml`](short-form-clips.yml)

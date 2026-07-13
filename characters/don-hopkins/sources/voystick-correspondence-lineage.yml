@@ -1,0 +1,55 @@
+# VoyStick correspondence girder — links episodes without duplicating prose
+
+id: voystick-correspondence-lineage
+read: voystick-correspondence-lineage.md
+span: "1991 homomorphic vocoder email → 2025 GuitarPie+Voystick HN"
+
+episodes:
+  - when: "1991-06"
+    who: [don-hopkins, tara-uiuc]
+    beat: homomorphic vocoder → voystick coinage
+  - when: "1989-09"
+    who: [mark-weiser, jeffrey-siskind]
+    beat: limited phonology — orthogonal to voystick
+  - when: "2000s"
+    who: [don-hopkins]
+    beat: Phoneloper — Flite pitch envelope editor
+  - when: "2013-09"
+    who: [don-hopkins, paul-boersma]
+    beat: Pratt formant tracking; Amsterdam
+  - when: "2019-02"
+    who: [don-hopkins, ben-shneiderman, brad-myers]
+    beat: CMU lecture Voystick + aQuery explanation
+  - when: "2020-03"
+    who: [don-hopkins, james-landay]
+    beat: UW Vocal Joystick — wants bidirectional browser port
+  - when: "2023-04"
+    who: [don-hopkins, evan-balster, zack-qattan]
+    beat: formant vs classifier; diphthong rails; F1/F2
+  - when: "2023-04"
+    who: [don-hopkins, geoff-lindsey]
+    beat: vowel space video — acoustic not tongue chart
+  - when: "2026"
+    who: [don-hopkins]
+    beat: Outdoor = wide sloppy fast warbles, no social cost; pitch+vowel trace steers singing while biking; NL + gestural code-switch
+  - when: "2025-09"
+    who: [don-hopkins, andreas-fender]
+    beat: GuitarPie UIST + Voystick combo HN
+
+correspondents:
+  evan-balster: { org: imitone, focus: [formant_tracker, voice_gender_training] }
+  zack-qattan: { focus: [pink_trombone, vocap, phonts] }
+  james-landay: { paper: "Vocal Joystick UIST 2005" }
+  paul-boersma: { tool: Praat }
+  geoff-lindsey: { video: "https://www.youtube.com/watch?v=FdldD0-kEcc" }
+
+moollm:
+  voystick: skills/speech/voystick.yml
+  vowel_space: skills/speech/platforms/vowel-space.yml
+  urban_ride_game: skills/simulation/examples/urban-safari-ride-game.yml
+
+crazy_idea_jam:
+  voystick: ../../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
+  urban_safari: ../../../process/crazy-idea-jam.yml#urban_safari_gps_storytelling
+  urban_ebike: ../../../process/crazy-idea-jam.yml#urban_ebike_safari
+  show: ../../../repo-shows/voystick-pink-trombone/SHOW.yml

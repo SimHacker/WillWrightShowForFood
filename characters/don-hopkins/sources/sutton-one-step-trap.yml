@@ -1,0 +1,15 @@
+# Sidecar — sutton-one-step-trap.md
+topic:
+  id: sutton-one-step-trap
+  essay: http://incompleteideas.net/IncIdeas/OneStepTrap.html
+  hn_thread: 48883415
+  date: "2024-07-18"
+  cross_links:
+    - ../../../repo-shows/ideas/urban-ebike-safari.yml
+    - urban-safari-steering-voystar-pie-network.md
+    - ../../media/storymaker-urban-safari/storymaker-urban-safari.yml
+  moollm:
+    hub: https://github.com/SimHacker/moollm/blob/main/skills/simulation/ONE-STEP-TRAP.md
+    example: https://github.com/SimHacker/moollm/blob/main/skills/simulation/examples/one-step-trap.yml
+    skills: [simulation, adventure, exit, time, memory-palace, simulator-effect, speech]
+  adjacent_hn: [48894752]

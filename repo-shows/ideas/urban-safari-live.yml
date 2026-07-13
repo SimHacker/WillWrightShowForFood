@@ -36,6 +36,7 @@ parker_clips:
 context: |
   Parker is Will's son, right now planning his European trip; he'll visit Don in
   Amsterdam. The shoot rides an actual visit — the show is the trip, documented.
+  eBike safaris use Don's Koga + Enviolo fleet (see product_layer field_hardware).
 
 ties:
   - ../../characters/don-hopkins/media/storymaker-urban-safari/INDEX.yml
@@ -49,3 +50,5 @@ ties:
 ai_reimagining: |
   2011 geotagged cards + 2026 LLM field narration + Proxi memory snow globes from safari stops.
   Repo Show audience adds cards via git; map grows city by city.
+
+product_layer: urban-ebike-safari.yml

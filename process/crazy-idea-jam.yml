@@ -204,14 +204,155 @@ ideas:
   mediagraph:
     emoji: "🎵🥧"
     blurb: |
-      A Unity3D music-navigation prototype Don built for Will Wright at the Stupid Fun Club:
-      arrange all your songs on a map, connect them with ROADS, and flick down the roads to hop
-      the network. Each song has a pie menu (radius, biome) and its own cellular-automata "biome"
-      that grows and competes with its neighbors (CA at Will's request). It uses one kind of
-      nested hierarchical pie menu to build and edit another kind of geographic networked pie menu
-      — pies as a map/graph, not a tree.
+      Unity3D music-navigation prototype Don built for Will Wright at **Stupid Fun Club** (not Interval):
+      **songs** connected by **roads** on a pan/zoom map — drag songs, sculpt islands and biomes
+      (islands or continents), **kiss** songs together to toggle road connections. Two pie layers:
+      **fixed non-editable pies** for configuring, real-time tracking feedback, and world-effect
+      preview; and the **user-editable** song/road graph itself (pies as map nodes, not a tree).
+      Navigate by **flicking** in the direction you want to go — integrated pie-menu flick tracking
+      on a panning/zooming canvas, like **Super Mario World cannons** (aim and fire to a destination).
+      Each song's biome is cellular automata that grows and competes with neighbors (CA at Will's request).
     video: "https://donhopkins.medium.com/mediagraph-demo-a7534add63e5"
     ties: [../characters/don-hopkins/career/stupid-fun-club.yml]
+
+  urban_safari_gps_storytelling:
+    emoji: "🗺️"
+    blurb: |
+      **Urban Safari** — the geolocated branch of StoryMaker: capture scene cards in the field,
+      follow others' paths through a shared graph at real POIs. Layar AR field demos, Facebook album
+      export/edit/import round-trip, lessons from playtesting StoryMaker on Bar Karma's real audience.
+      Don + Parker performed it in Amsterdam (2011); 2026 carries it as Urban Safari LIVE (Parker
+      video-calls Will from the street) and the eBike product layer.
+    progenitor_of: [urban_ebike_safari]
+    progenitor_chain: [bongo_bingo, creationtv_storymaker, iloci_memory_palace]
+    demo: "https://www.youtube.com/watch?v=Db8KGNoeKHE"
+    room: ../characters/don-hopkins/media/storymaker-urban-safari/INDEX.yml
+    ties:
+      - ../repo-shows/ideas/urban-safari-live.yml
+      - ../characters/don-hopkins/career/stupid-fun-club.yml
+      - crazy-idea-jam.yml#creationtv_storymaker
+
+  urban_ebike_safari:
+    emoji: "🚴🎤"
+    blurb: |
+      **DreamScape on wheels** — voice-first adventure navigation through a hidden story graph while
+      riding a Koga eBike (Bosch motor + Enviolo CVT), Ray-Ban Meta capture, phone-as-display-only,
+      Apple SpeechAnalyzer for words. The rider never sees the graph; the LLM interprets intent and
+      hops virtual focus across POIs. **Voystick is the primary navigation UI on the bike** — not a
+      side demo: warble along pie wedges to hop down arcs and between POIs/cards in the linked overlay,
+      hands on handlebars, open-air gestures. Uncle Milton licensing — contribute graph + voice UX;
+      Meta/Bosch/Apple ship with credit, not acquihire.
+    why_voystick_on_bike: |
+      **Outdoor = wide sloppy fast warbles without social cost.** Continuous pitch+vowel trace steers
+      **singing while biking** — hands on handlebars, no office shame. **Both channels at once**:
+      natural-language voice (SpeechAnalyzer) for commands, questions, tool names; gestural voice
+      (Voystick) for arc hops. Rider **code-switches** fluidly between them — and combines them (say
+      "Invader" while warbling the wedge). Not either/or.
+    pie_navigation_lineage:
+      zeroth: "Terrapin Logo Adventure (C64, age 17) — REPL-as-parser; hidden graph; GO between rooms"
+      first: "DreamScape (1995 WWDC) — rooms kiss to connect; link globally, interact locally"
+      then: [MediaFlow, iLoci, MediaGraph, Urban_Safari, Urban_eBike_Safari]
+      chain: |
+        Logo Adventure (zeroth) → DreamScape (first) → MediaFlow → iLoci → MediaGraph → Urban Safari → Urban eBike Safari
+      mediaflow: "Interval — Mac Common Lisp + QuickTime hypermedia streams/dataflow (no pie menus)"
+      iloci: "pie-menu network — rooms kiss to connect"
+      mediagraph: "SFC Unity — fixed pies for config/preview; editable song+road graph; kiss toggles roads; Mario-cannon flick nav"
+      urban_safari: "cards at POIs — invisible graph overlay"
+      urban_ebike: "Outdoor = wide sloppy fast warbles, no social cost; pitch+vowel trace steers singing while biking"
+    mediaflow_navigation: |
+      Same navigation problem solved at every layer — from Terrapin **Logo Adventure** (zeroth:
+      REPL-as-parser, hidden graph) through **DreamScape** (first: rooms kiss, link globally interact
+      locally) to Interval **MediaFlow** (Mac Common Lisp + QuickTime hypermedia streams — **no pie
+      menus**), **iLoci**, **MediaGraph** (song+road graph with Mario-cannon flick navigation),
+      **Urban Safari** cards at POIs. **Urban eBike Safari** completes it: outdoor = wide sloppy fast
+      warbles without social cost; continuous pitch+vowel trace steers **singing while biking** —
+      Voystick warbles along wedge arcs, hop POI→card, hands on bars. Don: "really fun and smooth —
+      best gestural UI I've ever done."
+    field_hardware: [Koga, Enviolo, Bosch, Ray-Ban Meta]
+    voystick: crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
+    ties:
+      - ../repo-shows/ideas/urban-ebike-safari.yml
+      - ../characters/don-hopkins/sources/urban-safari-steering-voystar-pie-network.md
+      - ../characters/don-hopkins/mediaflow-design-comments.md
+      - ../characters/don-hopkins/interval-research-pluggers-and-mediaflow.md
+      - crazy-idea-jam.yml#urban_safari_gps_storytelling
+      - crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
+      - crazy-idea-jam.yml#iloci_memory_palace
+      - crazy-idea-jam.yml#mediagraph
+      - ../characters/don-hopkins/sources/logo-adventure-c64-terrapin.md
+      - crazy-idea-jam.yml#dreamscape_scriptx
+
+  voystick_homomorphic_vocal_joystick:
+    emoji: "🎙️"
+    blurb: |
+      **VoyStick** — pitch=Y, vowel=X: a parallel gesture channel *below* speech recognition. The
+      computer synthesizes the same vocal gesture it recognizes (**homomorphic** bidirectional loop):
+      you sing along to confirm — harmonic blend = on target, inharmonic clash = off. Coined 1991
+      from Oppenheim DSP homework (inverse telephony problem: track motion in voice space for UI,
+      not reconstruct speech for bandwidth). First apps imagined: trippy paint program, whack-a-mole,
+      blind users, lazy typists. Thirty-five-year arc: Phoneloper pitch envelopes → CMU pie-menu
+      lecture → Evan Balster formant counsel → Geoff Lindsey F1/F2 vowel space → Pink Trombone
+      synthesis → Zack Qattan Vocap/ML → GuitarPie 2025.
+    axes:
+      Y: "pitch (voicebox) — less reliable than vowel (Evan: auto-tune abundance)"
+      X: "vowel — F1/F2 acoustic space; diphthong rails front (i,e,ɛ,a) + back (u,o,ɔ,ɑ); skip schwa"
+      pressure: "lip rounding (minor)"
+      click: "consonant delimiter"
+    homomorphic_stack:
+      analysis: [imitone resonator, aubio YIN, Praat formants]
+      synthesis: [Pink Trombone, Flite/Phoneloper, LPC stub]
+      feedback: "harmonic blend when matched; quiet monotone mode for non-singers (Evan)"
+    pink_trombone: |
+      Neil Thapen's browser vocal-tract toy — synthesis layer for homomorphic feedback. "yeah yeah"
+      = yes, "oy oy" = attention/no (Don → Ben Shneiderman 2019). Zack Qattan: voice→params ML
+      (Vocap, KNN/MFCC classifiers — Evan warns direct F1/F2 beats classifiers), Croquet multiplayer
+      Pink Trombone, MIDI/gamepad control. Repo Show stacks Phoneloper × Pink Trombone × Voystick live.
+    pie_integration: |
+      Steady vowel pops pie menu at voice-space coordinates; each slice label sung as its vocal
+      gesture; **voice ahead** = expert path (mouse-ahead analogue). Urban eBike Safari = **primary
+      use case**: hop down arcs and between POIs/cards in the linked overlay while pedaling — hands
+      stay on handlebars.
+    bike_navigation:
+      what: "Essential navigation for the geolocated card overlay — not speech commands alone"
+      outdoor: "Outdoor = wide sloppy fast warbles without social cost; pitch+vowel trace steers singing while biking"
+      gesture: "Warble along a pie wedge = flick to the next linked node; pitch+vowel trace = arc along the menu"
+      flick_navigation_lineage: |
+        **MediaGraph** (SFC): flick in direction of travel — integrated pie-menu tracking on pan/zoom,
+        Mario World cannon aim-and-fire. iLoci → MediaGraph → Urban Safari card graph — same navigation
+        problem, now outdoors on a bike. (Interval **MediaFlow** = Lisp+QuickTime streams — parallel
+        hypermedia thread, not pie flick.)
+      don_verdict: "Really fun and smooth — best gestural UI I've ever done"
+    dual_channel_voice:
+      natural_language: |
+        SpeechAnalyzer (words): "What's near me?", "Tell me about that canal", "Set destination",
+        "Capture this", tool names, questions, guess confirm/veto in plain speech.
+      gestural: |
+        Voystick (pitch+vowel trace): warble along pie wedge arcs, hop POI→card, homomorphic
+        sing-along confirm, voice-ahead expert path without menu diving.
+      code_switching: |
+        Rider **code-switches** between NL and gestural voice — and **combines** them. Select a tool
+        or operation in natural language; execute spatial navigation gesturally. Expert riders stay
+        mostly in gesture with NL punctuation; novices lean on words until gestures lock in.
+        Both streams run in parallel; the LLM/parser fuses intent from whichever channel is active.
+    extensions:
+      guitar_pie: "Andreas Fender UIST 2025 — fretboard pies + Voystick on the bike"
+      domain_specific_roar: "one-minute-intense.yml — continuous pitch+vowel+timbre as command bus"
+      aquery: "jQuery-for-accessibility overlay — prerequisite in arbitrary apps"
+    not_stickers: "Merch warnings live in repo-shows/ideas/swag/ — this entry is the *idea*"
+    posture: "Flexible working implementation to discover what works — not academic, not startup"
+    lecture: "https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f0600d9d-282e-4b83-a6f4-a9f2003ad407"
+    moollm: https://github.com/SimHacker/moollm/blob/main/skills/speech/voystick.yml
+    ties:
+      - ../characters/don-hopkins/sources/voystick-correspondence-lineage.md
+      - ../repo-shows/voystick-pink-trombone/SHOW.yml
+      - ../apps/performance-space/pink-trombone-jam.yml
+      - ../repo-shows/phoneloper/SHOW.yml
+      - ../repo-shows/ideas/urban-ebike-safari.yml
+      - crazy-idea-jam.yml#phoneloper
+      - crazy-idea-jam.yml#pie_menus_put_out_fires
+      - crazy-idea-jam.yml#urban_ebike_safari
+      - ../characters/don-hopkins/mediaflow-design-comments.md
+      - ../characters/don-hopkins/interval-research-pluggers-and-mediaflow.md
 
   dreamscape_scriptx:
     emoji: "🌀"
@@ -459,6 +600,10 @@ ideas:
       Interview the 'Apex tool makers' at the top of the pyramid: Jeff Adkins, Heather (SimFreaks),
       Steve (SimSlice), the IFFPencil 2 author, and Patrick Barrett III. *(Exact names/credits to
       confirm before publishing.)*
+    warning_stickers_not_the_idea: |
+      ISO hazard tees + Usenet physics product-label slaps are SWAG (Howard illustrates) — see
+      repo-shows/ideas/swag/voystick-warning-stickers.yml. The *ideas* are Voystick + Urban Safari
+      in crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick.
     will_approval: "Uses Will's art — Will has full right of review, refusal, and improvement (that's the great part). Family-friendly WillWrightCodeForFood storefront."
     monetization_is_private: "Revenue / print-vendor / support mechanics live in the PRIVATE strategy (green room: supporters-and-anti-sharecropping), not here."
     ties: [../repo-shows/ideas/gags/lightpenisland-net.yml, showmaker-network.yml]
@@ -473,6 +618,8 @@ graduation:
 
 see_also:
   - { path: cross-links.yml#stupid_fun_forward, why: "The wacky trail that wanders these ideas" }
+  - { path: ../repo-shows/voystick-pink-trombone/SHOW.yml, why: "Voystick × Pink Trombone × Zack Qattan — live homomorphic jam" }
+  - { path: ../characters/don-hopkins/sources/voystick-correspondence-lineage.md, why: "35-year email harvest" }
   - { path: ../repo-shows/will-wright-premiere/slats-reincarnation.yml, why: "RoboResurrection quest in full" }
   - { path: ../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml, why: "Drain Hell soul/zombie bridge" }
   - { path: ../repo-shows/david-ungar-self-moollm.yml, why: "Self × MOOLLM seed" }

@@ -1,0 +1,30 @@
+# Repo Show SWAG room — stickers, tees, generative art seeds
+# Art lead: Howard Penner · Operator: lightpenisland.net
+
+room:
+  id: repo-show-swag
+  parent: ../INDEX.yml
+  art_lead: ../../../characters/howard-penner/README.md
+  note: "Industrial-warning parody + Voystick carnage + Usenet physics labels + SFC globe — Will's sticker culture. Ideas live in crazy-idea-jam; this room is SWAG."
+
+packs:
+  - file: sfc-sticker-packs.yml
+    what: "SFC seed sticker — moving machinery + REVISIT THE IMPOSSIBLE + globe seal"
+  - file: voystick-warning-stickers.yml
+    what: "Voystick / Urban Safari / pie-menu hazard stickers + big warning tee layouts"
+
+seed_art:
+  - ../../../characters/will-wright/media/swag/sfc-warning-sticker-moving-machinery.png
+  - ../../../characters/will-wright/media/swag/sims-warning-sticker.png
+  - ../../../characters/don-hopkins/media/robot-sfc-battlebots/robot-sfc-battlebots-treaded-wheel-warning-sticker.png
+
+merch_formats:
+  - die_cut_sticker_sheets
+  - bumper_slaps
+  - chest_panel_tee  # full ISO triangle + stick figure carnage — Howard layout
+  - laptop_slaps
+  - ebike_helmet_decal
+
+channels:
+  - ../gags/lightpenisland-net.yml
+  - ../urban-ebike-safari.yml#swag

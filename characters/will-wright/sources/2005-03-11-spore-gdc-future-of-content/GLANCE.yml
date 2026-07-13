@@ -28,6 +28,8 @@ navigation:
   children:
     - summary.md
     - medium-article.md
+    - transcript.md
+    - youtube-reception.md
     - short-form-clips.yml
     - transcript-cache/
 
@@ -41,6 +43,7 @@ structure:
   witness: Don Hopkins (audience; notes reviewed by Will Wright)
 
 see_also:
+  - ../2001-gdc-design-plunder/README.md
   - ../2006-06-26-long-now-playing-with-time-eno-wright/README.md
   - ../1996-04-26-winograd-interfacing-to-microworlds/README.md
   - ../2004-02-21-chris-trottier-tuned-emergence/README.md

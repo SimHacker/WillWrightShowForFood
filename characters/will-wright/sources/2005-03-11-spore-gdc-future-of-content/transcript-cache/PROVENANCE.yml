@@ -5,12 +5,48 @@ video:
   url: https://www.youtube.com/watch?v=ofA6YWVTURU
   title: "Will Wright GDC 2005 Spore (The Future of Content) Remastered"
   uploader: Zeusmonomon
+  upload_date: 2020-08-27
   upload_note: "Remaster Aug 2020; projector game footage blown out"
+  views_snapshot: 61659
+  comments_snapshot: 254
   duration: "~1:02"
   event: Game Developers Conference
   date: 2005-03-11
   venue: Moscone Center West, San Francisco
   gdc_vault: https://www.gdcvault.com/play/1019981
+
+upstream:
+  archive_org:
+    collection: GDC Extras Archive
+    uploader: GDC Librarian
+    added: 2014-01-29
+    tapes:
+      - id: 2005-will-wright-keynote-spore-screen-only-2005-03-11
+        url: https://archive.org/details/2005-will-wright-keynote-spore-screen-only-2005-03-11
+        date: 2005-03-11
+        size: 58.2G
+        role: screen_only
+        note: Projector/demo feed — prefer for Spore gameplay extraction (Zeusmonomon remaster game sections blown out)
+      - id: 2005-gdc-will-wright-spore-demonstration-audience-reaction
+        url: https://archive.org/details/2005-gdc-will-wright-spore-demonstration-audience-reaction
+        size: 8.6G
+        role: audience_reaction
+        note: Room + demo angle; applause beats (procedural mating, solar system pull-out)
+      - id: 2005_GDC_-_Will_Wright_SPORE_Reveal_-_Camera_Angle_of_Wright_Only_-_2005-03-11_A
+        url: https://archive.org/details/2005_GDC_-_Will_Wright_SPORE_Reveal_-_Camera_Angle_of_Wright_Only_-_2005-03-11_A
+        role: presenter_only
+        note: Camera on Wright; cited in Zeusmonomon remaster description
+      - id: GDC2005Wright
+        url: https://archive.org/details/GDC2005Wright
+        title: "GDC 2005: Will Wright - The Future of Content"
+        role: official_session
+        note: Full session listing in GDC Extras; sibling to GDC Vault 1019981
+  dead_links:
+    - http://video.google.com/videoplay
+      note: Original Google Video distribution (dead)
+  related_gdc_vault:
+    - title: "SPORE's Magic Crayons — Chaim Gingold"
+      url: https://www.gdcvault.com/play/1019982
 
 witness:
   don_hopkins: audience_member
@@ -31,6 +67,8 @@ witness:
 
 canonical:
   notes: ../medium-article.md
+  digest: ../transcript.md
+  reception: ../youtube-reception.md
   wrap: ../summary.md
 
 reference_cache:
@@ -47,5 +85,6 @@ captions:
 
 see_also:
   - ../2006-06-26-long-now-playing-with-time-eno-wright/README.md
+  - ../2001-gdc-design-plunder/README.md
   - ../1996-04-26-winograd-interfacing-to-microworlds/README.md
   - ../../../../repo-shows/will-wright-premiere/INTRO-NARRATIVE.md

@@ -1,0 +1,19 @@
+# Sidecar — sfc-warning-sticker-moving-machinery.png
+
+artifact:
+  file: sfc-warning-sticker-moving-machinery.png
+  slug: sfc-warning-sticker-moving-machinery
+  room: will-wright-swag
+  what: "ISO-style WARNING sticker — arm vs moving machinery (dark-humor industrial safety parody)"
+  provenance: "Gift from Will Wright at Stupid Fun Club — Will loves stickers like this"
+  era: ~2010s
+  sidecar_of: sfc-warning-sticker-moving-machinery.png
+
+swag:
+  pack: ../../../../repo-shows/ideas/swag/sfc-sticker-packs.yml
+  art_lead: howard-penner
+
+see_also:
+  - INDEX.yml
+  - ../../../../characters/robots/slats/stupid-fun-club-seal-matte.png
+  - ../../../../repo-shows/ideas/urban-ebike-safari.yml

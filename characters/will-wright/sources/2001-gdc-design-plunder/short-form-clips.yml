@@ -1,0 +1,175 @@
+# Short-form clips — 2001 GDC: Design Plunder
+# Timestamps from Cory Martin + slides upload — verify on video before publish.
+
+meta:
+  source: 2001-gdc-design-plunder
+  video_id: c91IWh4agzU
+  video_url: https://www.youtube.com/watch?v=c91IWh4agzU
+  archive_org: https://archive.org/details/will-wrights-design-plunder-with-slides
+  venue: Game Developers Conference
+  date: 2001
+  editor: Cory Martin (slides restored Jul 2020)
+  format: Adorable Minutes / design history / Sims lineage
+
+clips:
+  flagship:
+    - id: failure-repetitive-only
+      title: "Failure is only bad when it's repetitive"
+      hook: "Will's failure-state design rule — variety and explainability matter more than success."
+      start_display: "17:20"
+      end_display: "17:39"
+      start_sec: 1040
+      end_sec: 1059
+      youtube: https://youtu.be/c91IWh4agzU?t=1040
+      tags: [design, sims, will]
+      pairs_with: calvin-syndrome-winograd
+      caption_status: draft
+
+    - id: sims-std-vector
+      title: "The Sims as sexually transmitted disease"
+      hook: "Disease metaphor for viral spread — male hardcore gamers infected girlfriends; first-game enthusiasm exploded lateral spread."
+      start_display: "21:06"
+      end_display: "21:33"
+      start_sec: 1266
+      end_sec: 1293
+      youtube: https://youtu.be/c91IWh4agzU?t=1266
+      format_tier: jewel
+      tags: [sims, marketing, will, comedy]
+      caption_status: draft
+
+    - id: two-processors-imagination
+      title: "80% in the player's head — then reversed"
+      hook: "Early games ran on imagination; modern AAA runs 80% on the computer. Fight to get the head back."
+      start_display: "35:46"
+      end_display: "36:29"
+      start_sec: 2146
+      end_sec: 2189
+      youtube: https://youtu.be/c91IWh4agzU?t=2146
+      tags: [abstraction, design, will]
+      caption_status: draft
+
+    - id: simcity-and-sims-everyone-said-sucked
+      title: "SimCity and The Sims — everyone said they sucked"
+      hook: "Close of Design Plunder — the only two games where the room told Will the idea was horrible."
+      start_display: "1:03:47"
+      end_display: "1:04:27"
+      start_sec: 3827
+      end_sec: 3867
+      youtube: https://youtu.be/c91IWh4agzU?t=3827
+      format_tier: jewel
+      tags: [will, history, determination]
+      caption_status: draft
+
+  verified:
+    - id: jack-london-club
+      title: "Go after inspiration with a club"
+      hook: "Jack London epigraph — between PowerPoint slideshow and low-framerate movie."
+      start_display: "2:08"
+      end_display: "2:43"
+      start_sec: 128
+      end_sec: 163
+      youtube: https://youtu.be/c91IWh4agzU?t=128
+      tags: [gdc, will, opener]
+      caption_status: draft
+
+    - id: interaction-onion
+      title: "Interaction onion — nested feedback cycles"
+      hook: "If the first 10 seconds aren't fun, the 10-minute cycle doesn't matter."
+      start_display: "15:01"
+      end_display: "15:35"
+      start_sec: 901
+      end_sec: 935
+      youtube: https://youtu.be/c91IWh4agzU?t=901
+      tags: [design, feedback, will]
+      caption_status: draft
+
+    - id: calvin-factor-bulldozer
+      title: "Calvin factor — bulldozer before disasters"
+      hook: "Everybody attacks the city with the bulldozer first — feed the subversion."
+      start_display: "18:26"
+      end_display: "18:54"
+      start_sec: 1106
+      end_sec: 1134
+      youtube: https://youtu.be/c91IWh4agzU?t=1106
+      tags: [simcity, calvin, will]
+      pairs_with: ../../1996-04-26-winograd-interfacing-to-microworlds/short-form-clips.yml
+      caption_status: draft
+
+    - id: happiness-landscape-fridge
+      title: "Happiness landscape — hill-climb to the fridge"
+      hook: "Fitness landscape from SimAnt → Sims motives; local maxima collapse when needs met."
+      start_display: "25:48"
+      end_display: "26:24"
+      start_sec: 1548
+      end_sec: 1584
+      youtube: https://youtu.be/c91IWh4agzU?t=1548
+      tags: [sims, ai, design]
+      caption_status: draft
+
+    - id: garden-nothing-left-to-remove
+      title: "Garden not complete until nothing left to remove"
+      hook: "Japanese garden simplicity → Sims UI lost buttons every iteration."
+      start_display: "33:33"
+      end_display: "33:59"
+      start_sec: 2013
+      end_sec: 2039
+      youtube: https://youtu.be/c91IWh4agzU?t=2013
+      tags: [ui, design, will]
+      caption_status: draft
+
+    - id: schwarzenegger-ai-answering-machine
+      title: "Schwarzenegger keyboard — build an AI answering machine"
+      hook: "She never knew it wasn't a person. Will wants that for voicemail. Prophetic 2001 beat."
+      start_display: "38:02"
+      end_display: "40:23"
+      start_sec: 2282
+      end_sec: 2423
+      youtube: https://youtu.be/c91IWh4agzU?t=2282
+      format_tier: meme
+      tags: [ai, comedy, will]
+      caption_status: draft
+
+    - id: armadillo-pad-simfreaks
+      title: "Armadillo pad — SimFreaks fan-site diversity"
+      hook: "600 fan sites, 14 languages — mall of Sims, seven deadly sins, onion parody."
+      start_display: "49:10"
+      end_display: "49:27"
+      start_sec: 2950
+      end_sec: 2967
+      youtube: https://youtu.be/c91IWh4agzU?t=2950
+      tags: [community, simfreaks, don-lineage]
+      caption_status: draft
+
+    - id: truman-show-story-director
+      title: "Truman Show — computer as story director"
+      hook: "Recognize the story in the player's head; NPC ex-girlfriend at the door for dramatic tension."
+      start_display: "1:02:59"
+      end_display: "1:03:22"
+      start_sec: 3779
+      end_sec: 3802
+      youtube: https://youtu.be/c91IWh4agzU?t=3779
+      tags: [story, design, will]
+      caption_status: draft
+
+  draft:
+    - id: game-designer-chairs
+      title: "If game designers made chairs"
+      start_display: "11:02"
+      end_display: "12:17"
+      start_sec: 662
+      end_sec: 737
+      notes: Miyamoto / Carmack / Sid / Molyneux / Will toy-chair
+
+    - id: spontaneous-human-combustion-bug
+      title: "Sims spontaneously burst into flames — users loved the bug"
+      start_display: "18:00"
+      end_display: "18:19"
+      start_sec: 1080
+      end_sec: 1099
+
+    - id: revenge-of-lawn-gnomes
+      title: "Revenge of the lawn gnomes — story exchange"
+      start_display: "54:00"
+      end_display: "54:52"
+      start_sec: 3240
+      end_sec: 3292

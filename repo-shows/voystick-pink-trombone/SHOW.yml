@@ -1,0 +1,64 @@
+# Voystick × Pink Trombone — homomorphic vocal joystick jam (Zack Qattan lead)
+# Build-and-jam show: close the 35-year loop live — analysis → synthesis → pie wedges
+
+show:
+  id: voystick-pink-trombone
+  title: "Voystick × Pink Trombone — Sing Along to Confirm"
+  kind: build-and-jam
+  status: seed
+  host: don-hopkins
+  guests:
+    - zack-qattan          # Pink Trombone ML, Vocap, Croquet multiplayer — private lead; confirm with Don
+    - evan-balster         # imitone formant tracker — optional correspondent
+  crazy_idea_jam: ../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
+
+logline: |
+  Don's **VoyStick** — pitch=Y, vowel=X, homomorphic bidirectional synthesis — meets Neil Thapen's
+  **Pink Trombone** and Zack Qattan's voice→tract ML on air. You warble; the computer sings the same
+  gesture back; harmonic blend means you're on target. Stack Phoneloper pitch envelopes, pie-menu wedge
+  steering, and a four-player Pink Trombone choir. The outdoor payoff: Urban eBike Safari on Amsterdam
+  canals with hands on handlebars.
+
+backstory:
+  lineage: ../../characters/don-hopkins/sources/voystick-correspondence-lineage.md
+  zack_arc: |
+    GDC 2023 Mongolian grill → email with Zack (Pink Trombone Vocap, KNN on MFCC) and Evan Balster
+    (imitone — formants easier than pitch; vocoder traps; quiet monotone mode). Don shared Geoff
+    Lindsey vowel-space video. Zack's public work: voice→params, Collaborative Pink Trombone (Croquet),
+    MIDI/gamepad control, variable tract length.
+  zack_channel: https://www.youtube.com/@ZackQattan
+  pink_trombone: https://dood.al/pinktrombone/
+  consent: "Zack = private outreach lead (pink-trombone-jam.yml). His work is public; invitation not sent."
+
+segments:
+  - id: what_is_voystick
+    topic: "Pitch=Y vowel=X; homomorphic loop; dual-channel voice — NL + gestural, code switching"
+    jam: ../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
+  - id: pink_trombone_stack
+    topic: "Articulatory synthesis — yeah yeah / oy oy; Zack Vocap vs direct F1/F2 (Evan's counsel)"
+    demo: pink-trombone-jam.yml
+  - id: formant_lab
+    topic: "F1/F2 projection, diphthong rails, skip schwa — Lindsey acoustic space not Jones chart"
+    moollm: https://github.com/SimHacker/moollm/blob/main/skills/speech/platforms/vowel-space.yml
+  - id: pie_wedge_steering
+    topic: "Voice-ahead expert path; steady vowel pops pie menu; GuitarPie + Voystick combo"
+    tie: ../../repo-shows/ideas/urban-ebike-safari.yml#steering_pie_ride_game
+  - id: phoneloper_duet
+    topic: "Phoneloper × Pink Trombone — granular moo chorus + vocal-tract jam"
+    show: ../phoneloper/SHOW.yml
+  - id: collaborative_choir
+    topic: "Four-player Croquet Pink Trombone — We Are the Weird anthem energy"
+    activity: ../../apps/performance-space/pink-trombone-jam.yml
+  - id: outdoor_slice
+    topic: "Canal-loop field test — pitch+vowel trace steers singing while biking; SpeechAnalyzer for words"
+    note: "Outdoor = wide sloppy fast warbles, no social cost; MediaGraph cannon-flick on handlebars"
+    product: ../../repo-shows/ideas/urban-ebike-safari.yml
+
+related:
+  - ../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
+  - ../../process/crazy-idea-jam.yml#urban_ebike_safari
+  - ../../apps/performance-space/pink-trombone-jam.yml
+  - ../phoneloper/SHOW.yml
+  - ../marc-canter/SHOW.yml
+  - ../../repo-shows/ideas/urban-ebike-safari.yml
+  - https://github.com/SimHacker/moollm/blob/main/skills/speech/voystick.yml

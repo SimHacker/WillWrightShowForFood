@@ -24,7 +24,7 @@ stupid_fun_club:
         - "CreationTV iPhone prototype → StoryMaker — collaborative branching storytelling for CurrentTV's Bar Karma (first online community-developed network TV series). Demo https://www.youtube.com/watch?v=Nb_-J1lv-B8 · https://en.wikipedia.org/wiki/Bar_Karma"
         - "StoryMaker full stack: MediaWiki front + Python back; Flash client embedded in wiki; geolocated scenes + Google Maps/KML overlays; admin CMS; iPad app (MapKit); Facebook app (album import/export); voice-synth story reading; Unity3D 3D branching-story visualizer"
         - "Urban Safari GPS storytelling — the geolocated branch of StoryMaker"
-        - "MediaGraph music navigation (Unity3D; pie menus + roads + cellular automata, at Will's request). Demo https://donhopkins.medium.com/mediagraph-demo-a7534add63e5"
+        - "MediaGraph music navigation (SFC Unity; songs+roads, fixed pies for config, editable graph, Mario-cannon flick, CA biomes at Will's request). Demo https://donhopkins.medium.com/mediagraph-demo-a7534add63e5"
         - "Several client/server iterations including MediaWiki plugins and a Unity app"
 
   how_don_rejoined_will:
@@ -41,12 +41,15 @@ stupid_fun_club:
     coffeeshops_app_video: "https://www.youtube.com/watch?v=nG90XG3STz8"
     iloci_video: "https://www.youtube.com/watch?v=03ddG3jWF98"
     reincarnate: "Don would love to reincarnate + reinvent the TomTom trilogy — Coffeeshops, BONGO BINGO, iLoci — decades out of date, but a fun idea; all part of the tapestry."
-    lineage: "DreamScape (1995 Kaleida) → iLoci (2008) → Coffeeshops/BONGO BINGO (2009) → StoryMaker/Bar Karma/Urban Safari (2011) → MediaGraph"
+    lineage: "Logo Adventure (zeroth) → DreamScape (first) → iLoci → Coffeeshops/BONGO BINGO → StoryMaker/Bar Karma/Urban Safari → MediaGraph"
     ties:
       - ../../../process/crazy-idea-jam.yml#amsterdam_coffeeshops_app
       - ../../../process/crazy-idea-jam.yml#bongo_bingo
       - ../../../process/crazy-idea-jam.yml#creationtv_storymaker
       - ../../../process/crazy-idea-jam.yml#iloci_memory_palace
+      - ../../../process/crazy-idea-jam.yml#urban_safari_gps_storytelling
+      - ../../../process/crazy-idea-jam.yml#urban_ebike_safari
+      - ../../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
       - work-history.yml      # TomTom 2007–2009 → SFC 2009–2014
     one_minute_movies:
       films:
