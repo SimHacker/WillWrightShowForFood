@@ -5,6 +5,10 @@ character:
   id: ellpeck
   name: "Ell (Ellpeck)"
   also_known_as: [Ellpeck, "Ell of Ellpeck Games"]
+  naming_note: |
+    Goes by **Ell** (presskit: "Ellpeck who usually goes by Ell"). Handle **ellpeck** on
+    Bluesky/Discord; studio **Ellpeck Games**. No legal surname published on games.ellpeck.de
+    presskit — directory id `ellpeck` matches public handle, not "Eli".
   type: invitation
   signifier: "🏡🌱"
   status: living
@@ -37,13 +41,14 @@ bio:
     while EA's Sims 1 Legacy Collection removed the Exchange.
 
   don_connection: |
-    Don quoted Tiny Life on Twitter (now on the game's Praise page). Don reports talking with Ell
-    before — channel and date to recover. Natural Repo Show guest for **Sims ⇔ Soul City ⇔ Tiny Life**:
-    Soul City as liminal waystation (Will's invitation framing), soul-file compiles to Sims 1 content
-    injection — sibling to Soul City procreation bridge.
+    Don praised Tiny Life on Twitter (Apr 2024); quote on [Praise page](https://tinylifegame.com/#reviews).
+    Ell featured it on site + Steam (Apr 2025). Discord thread May 2024–Oct 2025 (Pez de Spencer):
+    Soul City pitch — Ell **"that sounds interesting!"** and *pandoc for life sim characters*.
+    See correspondence.yml.
 
 contact:
   warm_contact: true
+  channel: "Discord (Pez de Spencer) — Don rarely opens; prefer Bluesky or email for invites"
   recover_thread: correspondence.yml
   channels:
     site: https://tinylifegame.com/

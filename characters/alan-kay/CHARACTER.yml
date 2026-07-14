@@ -37,6 +37,9 @@ can_discuss:
   - { who: bill-atkinson, why: "HyperCard co-productization eyewitness" }
   - { who: seymour-papert, why: "Fellow constructionist; Dynabook ↔ Mindstorms" }
   - { who: yoot-saito, why: "Reviewed 1993 interview transcript" }
+  - { who: bonnie-macbird, why: "Wife — 'the amazing Bonnie MacBird'; TRON origin; the London story is theirs jointly" }
+  - { who: ted-nelson, why: "Computer Lib as matchmaker — Intertwingled tribute; see ../ted-nelson/from-alan-kay.yml" }
+  - { who: maurice-wilkes, why: "'A special hero of mine' — Wilkes→PARC lineage; memorial mode; see ../maurice-wilkes/from-alan-kay.yml" }
 
 see_also:
   - { path: moollm-trust-and-teaching-guess.md, why: "Draft artifact — MOOLLM vs Kay on copilots, trust, teaching; lead question for show" }

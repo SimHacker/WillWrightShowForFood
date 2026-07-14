@@ -1,0 +1,64 @@
+# Bonnie MacBird — invitation portrayal. NOT Bonnie MacBird.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: bonnie-macbird
+  name: "Bonnie MacBird"
+  type: invitation
+  signifier: "🖋️"
+  status: living
+  field: "Author/screenwriter — original writer of TRON; Sherlock Holmes Adventures (HarperCollins)"
+  home: characters/bonnie-macbird/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: null   # invite via Alan; she is a guest in her own right, not a plus-one
+
+bio:
+  summary: >
+    **Bonnie MacBird** — "polymath artist" (her site): original writer of TRON (story credit;
+    first drafts; Alan Bradley based on Alan Kay), three Emmys for documentary work, Universal
+    story editor, UCLA Extension screenwriting teacher, and author of six bestselling Sherlock
+    Holmes Adventures for HarperCollins, written in the authentic voice of Doyle's Watson.
+
+books:
+  series: "A Sherlock Holmes Adventure (HarperCollins)"
+  titles:
+    - { n: 1, title: "Art in the Blood", year: 2015 }
+    - { n: 2, title: "Unquiet Spirits", year: 2017 }
+    - { n: 3, title: "The Devil's Due", year: 2019 }
+    - { n: 4, title: "The Three Locks", year: 2021 }
+    - { n: 5, title: "What Child is This?", year: 2022, note: "Christmas novella, illustrated by Frank Cho" }
+    - { n: 6, title: "The Serpent Under", year: 2025, note: "Amazon Editors' Pick; Sunday Times recommended" }
+
+tron:
+  credit: "Story by Steven Lisberger and Bonnie MacBird; screenplay credit to Lisberger after credits dispute"
+  wrote: "First several drafts; developed Tron and Kevin Flynn into narrative roles"
+  alan_bradley: "Created the character based on Alan Kay after the 1979 PARC research interview"
+  alto_first: "Edited the TRON script on a Xerox Alto — first movie script edited with a word processor (her account)"
+  origin: "Found Alan via the Alan Kay article in Ted Nelson's Computer Lib/Dream Machines (1979)"
+  quote: "The marriage turned out better than the movie."
+
+sources:
+  web:
+    - https://macbird.com/
+    - https://mediamikes.com/2011/09/interview-with-trons-bonnie-macbird/
+    - https://www.youtube.com/watch?v=AnrlSqtpOkw   # Intertwingled tribute video with Alan
+    - https://doi.org/10.1007/978-3-319-16925-5_3   # "The Two-Eyed Man" — Nelson festschrift
+    - https://en.wikipedia.org/wiki/Tron_(film)
+    - https://www.quora.com/Why-did-Alan-Kay-move-to-London   # Alan's public answer (London story)
+
+can_discuss:
+  - { who: alan-kay, why: "Husband; TRON technical consultant; the London story is theirs jointly" }
+  - { who: ted-nelson, why: "Computer Lib as matchmaker — the Intertwingled tribute" }
+
+see_also:
+  - { path: ideas.md, why: "Show hooks" }
+  - { path: ../alan-kay/media/quora-recaps/why-alan-kay-moved-to-london.md, why: "The London story, in Alan's public words" }
+  - { path: ../ted-nelson/, why: "The book that introduced them" }

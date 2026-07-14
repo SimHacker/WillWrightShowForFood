@@ -5,7 +5,7 @@
 | Artifact | Where |
 |----------|--------|
 | **Quora corpus map** (~620 answers, themed index) | [`quora-recaps/quora-corpus-2023-index.md`](quora-recaps/quora-corpus-2023-index.md) |
-| **Quora recaps** (17 summaries — see hub) | [`quora-recaps/README.md`](quora-recaps/README.md) |
+| **Quora recaps** (18 summaries — see hub) | [`quora-recaps/README.md`](quora-recaps/README.md) |
 | **Discussions** (third-party debates *about* Alan's ideas) | [`discussions/`](discussions/) — [Malleable Systems](discussions/malleable-systems-systems-vs-data.md) · [HN MVC/Morphic/watchers 2015](discussions/hn-mvc-morphic-watchers-2015.md) |
 | **CS547 — Croquet** (2003-04-25) | [Terry's catalog](../../terry-winograd/media/cs547-ARCHIVE.md) |
 | Yoot × Alan Kay interview | [YootTowerManagement/Yoot_Saito_Alan_Kay_Interview](https://github.com/YootTowerManagement/YootTower/tree/main/Yoot_Saito_Alan_Kay_Interview) |

@@ -1,0 +1,26 @@
+# What Alan Kay says about Ted Nelson — public sources
+
+character: ted-nelson
+kay_hub: ../alan-kay/
+
+kay_says:
+  intertwingled_tribute:
+    date: "2014"
+    context: "Video tribute for Ted's 'Intertwingled' festival (Chapman University); published as 'The Two-Eyed Man' in the Nelson festschrift"
+    source: https://www.youtube.com/watch?v=AnrlSqtpOkw
+    published: https://doi.org/10.1007/978-3-319-16925-5_3
+    gist: |
+      Alan and Bonnie MacBird thank Ted "for his role in us meeting up, falling in love, and
+      getting married": in 1979 Bonnie found Computer Lib/Dream Machines in LA's one computer
+      store while researching TRON, read the Alan Kay article, "went up to Xerox PARC and met
+      the guy." Half-hour interview → hours → technical consultant → marriage. She edited the
+      TRON script on an Alto — first movie script edited with a word processor. "The marriage
+      turned out better than the movie."
+
+show_beats:
+  - "Computer Lib as matchmaker — Ted, Bonnie (../bonnie-macbird/), and Alan in one arc"
+  - "The book was 'the first book in the PARC library' — Whole Earth adjacency"
+
+see_also:
+  - { path: ../bonnie-macbird/, why: "The other half of the story — TRON authorship, six Holmes novels" }
+  - { path: ../alan-kay/media/quora-recaps/why-alan-kay-moved-to-london.md, why: "The marriage's London chapter" }

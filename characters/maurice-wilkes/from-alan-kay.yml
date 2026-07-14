@@ -1,0 +1,34 @@
+# What Alan Kay says about Maurice Wilkes — mail digest + public sources
+
+character: maurice-wilkes
+kay_hub: ../alan-kay/
+
+kay_says:
+  special_hero_2026:
+    date: "2026-07-12"
+    context: "PIXIE thread — public-safe digest, ../alan-kay/correspondence.yml"
+    gist: |
+      Wilkes and Alan became friendly — "he was a special hero of mine" — and there was quite a
+      connection between his legacy and Xerox PARC, mainly through Chuck Thacker.
+  lineage_2026:
+    date: "2026-07-14"
+    context: "Roy Eagleson asked about the Wilkes–PARC connection"
+    gist: |
+      The 60s ARPA twenty-somethings who wound up at PARC "all loved and revered Wilkes, Wheeler,
+      and the rest of the Cambridge crew" — especially the parallel LEO story ("that IMO only the
+      Brits could pull off"), with Wheeler heavily involved in LEO too. The capability thread:
+      B5000 → Butler Lampson's Berkeley OS on the CDC 6400 → Needham/Schroeder protection in
+      Multics → Cambridge capability hardware, with PARC kibitzing, visits, and support — Andrew
+      Herbert (Needham grad student, PARC resident) now directs TNMOC at Bletchley Park, where
+      Alan donated his last Alto for a planned exhibit. Thacker later set up the Cambridge
+      research lab to work with Needham.
+
+show_beats:
+  - "Wilkes → PARC is a lineage, not an anecdote: EDSAC discipline → capabilities → the Alto crowd"
+  - "The Alto goes home to Bletchley — TNMOC exhibit as a live show segment with Andrew Herbert"
+  - "LEO — the catering company that built a computer; Kay's favorite 'only the Brits' story"
+
+see_also:
+  - { path: ../alan-kay/correspondence.yml, why: "Public-safe digest of the 2026-07 thread" }
+  - { path: ../heinz-lemke/from-alan-kay.yml, why: "Same thread — PIXIE/Armit side" }
+  - { path: memorial.md, why: "Memorial room this feeds" }

@@ -61,6 +61,7 @@ the_show_we_dream_of:
 
 connects_in_repo:
   - { path: CHARACTER.yml, why: "Bio + invitation status for Yoot" }
+  - { path: reply-template-yoot-tower-inquiries.md, why: "Copy-paste reply for open-source / iPad progress questions (exemplar: Luke Renner 2026-07-14)" }
   - { path: correspondence.yml, why: "Alan Kay 1993 interview restoration thread" }
   - { path: ../alan-kay/, why: "Interview subject + eulogy voice" }
   - { path: ../ted-nelson/, why: "Engelbart eulogy — the moving YouTube one" }

@@ -1,8 +1,53 @@
-# Correspondence — Ell (Ellpeck)
-# TODO: Don — paste prior conversation thread when recovered from email/DM/Discord.
+# Correspondence — Ell (Ellpeck) — public-safe digest
+# Full thread: DonHopkins/characters/don-hopkins/correspondence/ellpeck.yml (private)
 
 meta:
-  status: placeholder
-  note: "Don reports prior talk — not yet archived in repo"
+  with: ellpeck
+  curated_by: don-hopkins
+  consent: not_yet_asked
+  span: "2024-05 — 2025-10"
+  provenance_private: DonHopkins/characters/don-hopkins/correspondence/ellpeck.yml
+  channel: "Discord (Pez de Spencer ↔ ellpeck)"
 
-threads: []
+gist: |
+  Warm Discord thread. Don archived a Twitter conversation into Discord (May 2024). Ell featured
+  Don's [Twitter praise](https://x.com/xardox/status/1785112477904023674) on the
+  [Tiny Life Praise page](https://tinylifegame.com/#reviews) and Steam (Apr 2025) — apologized
+  for not asking first; Don missed follow-ups (rarely opens Discord). Oct 2025: Don pitched the
+  **Repo Show** and **Soul City** bridge (Sims ⇔ Soul City ⇔ Tiny Life). Ell:
+  **"that sounds interesting!"** — and described the idea as *"pandoc but for life sim
+  characters"* and a *consistent link* rather than a one-off conversion. Engaged positively on
+  family albums, cross-game vacations, and syncing souls in parallel (not Star Trek transporter
+  murder).
+
+threads:
+  - id: praise_featured
+    date: "2025-04-17"
+    summary: |
+      Ell added Don's quote to tinylifegame.com Praise and Steam — attributed "Don Hopkins,
+      Designer on The Sims." Offered to remove if unwanted.
+    sources:
+      - sources/don-praise.yml
+      - https://tinylifegame.com/#reviews
+
+  - id: soul_city_pitch
+    date: "2025-10-20"
+    summary: |
+      Don pitched Repo Show + Soul City. Ell interested; coined pandoc analogy; liked consistent
+      sync model and family-album universal pattern.
+    doc: sources/discord-soul-city-pitch.md
+
+sourced_quotes:
+  ell_pandoc: "so like pandoc but for life sim characters"
+  ell_consistent_link: "oooh okay so it's like a consistent link sort of thing, rather than a one-off conversion"
+  ell_interested: "that sounds interesting!"
+
+connects_in_repo:
+  - { path: invitation.md, why: "Repo Show invite — Soul City bridge" }
+  - { path: bridge/soul-city-bridge.md, why: "Technical narrative Ell responded to" }
+  - { path: sources/don-praise.yml, why: "Quote on Praise page" }
+
+show_hooks:
+  - "Ell coined 'pandoc for life sim characters' — use on air with his OK"
+  - "Design Soul City ⇔ Tiny Life facet export live with Ell"
+  - "Praise page quote read-back — Plumbella + James Turner on same page"

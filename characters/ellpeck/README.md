@@ -15,8 +15,9 @@ Published by **Top Hat Studios**. Hand-drawn pixelart and hand-written code — 
 **Leiss Hoffman**. Safe In Our World partner; pronoun and identity options documented in
 [Tiny Technicalities: The Pronoun Update™](https://tinylifegame.com/).
 
-Don praised the game on Twitter; the quote lives on Ell's [Praise page](https://tinylifegame.com/).
-Don reports a **prior conversation** — recover thread into [`correspondence.yml`](correspondence.yml).
+Don praised the game on [Twitter](https://x.com/xardox/status/1785112477904023674); the quote lives on
+Ell's [Praise page](https://tinylifegame.com/#reviews) (Ell featured it Apr 2025 — with permission
+if Don wants it removed). Discord thread recovered — [`correspondence.yml`](correspondence.yml).
 
 ## Why Ell belongs in the show
 

@@ -18,6 +18,23 @@ gist: |
   transcript, and Don's **MOOLLM** announcement (Jan 2026). Don visited **Qwaq** (the Croquet
   spinoff) with Randy Farmer and Chip Morningstar in 2008 at Alan's invitation.
 
+  **PIXIE thread, July 2026** (Heinz Lemke, Roy Eagleson, Lars Brinkhoff, Will Wright cc'd):
+  Alan recalled **Andrew Armit**'s months-long Utah visit (~1969) with his Coons-patch
+  interactive system on a PDP-7 ("quite in awe"); noted he and **John Warnock** both took PhDs
+  in the summer-'69 graduation. Asked about the **Wilkes–PARC connection** (2026-07-14), he
+  mapped the whole lineage: the ARPA twenty-somethings' reverence for **Wilkes, Wheeler** and
+  the **LEO** story; **Butler Lampson**'s Berkeley capability OS on the unprepared CDC 6400
+  (capabilities invented by the **B5000** folks, "named and not done very well for Multics") as
+  an influence on his thinking about OOP; **Roger Needham** (protection work with **Mike
+  Schroeder**, Butler in the loop), **Don Davies**' independent packet-switching at NPL —
+  "the first real Internet was the connection between NPLnet and ARPAnet"; love for
+  **Strachey, Landin, Michie**; **Chuck Thacker** as Needham fan who later set up the
+  Cambridge research lab; **Andrew Herbert** (Needham grad student, PARC resident, now
+  director of TNMOC at Bletchley Park). Alan **donated his last Alto to TNMOC** for their
+  planned exhibit next year. On London: he forwarded his public Quora answer — Bonnie
+  MacBird's Holmes novels drew them there; "she has now published 6 highly rated and
+  reviewed novels for Harper-Collins" → media/quora-recaps/why-alan-kay-moved-to-london.md
+
 sourced_quotes:
   on_news: "I thought NeWS was 'the right way to go' (except it missed the live system underneath)."
   on_hypercard: "HyperCard is an especially good example of a system that was finished and smoothed and documented beautifully."
@@ -37,3 +54,6 @@ show_hooks:
   - "Pie menus ↔ Fabrik 'swiped pie menus' — direct-manipulation archaeology"
   - "Why NeWS/HyperCard mattered — and what 'the live system underneath' means for MOOLLM"
   - "PIXIE thread 10 Jul 2026 — Andrew Armit Coons patches on PDP-7 at Utah; film hunt for Don"
+  - "Wilkes → PARC capability lineage (14 Jul 2026) — B5000 → Lampson CDC 6400 → Needham/Schroeder → CAP/Thacker Cambridge; Kay's OOP roots in capabilities"
+  - "The Alto goes home — Alan's last Alto donated to TNMOC (Bletchley), Andrew Herbert's planned exhibit"
+  - "Bonnie MacBird segment — Ted Nelson's Computer Lib as matchmaker; TRON; six Holmes novels (../bonnie-macbird/)"

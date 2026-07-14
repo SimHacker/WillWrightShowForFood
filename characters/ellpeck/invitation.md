@@ -2,8 +2,15 @@
 
 Dear Ell,
 
-We talked before — I hope you remember. I'm building a Repo Show called **Will Wright Show For
-Food**, around the Sims 1 content-creation stack.
+We talked before — on Discord, under **Pez de Spencer** — and I owe you an apology for the messages
+I missed. You featured my [Twitter praise](https://x.com/xardox/status/1785112477904023674) on the
+[Tiny Life Praise page](https://tinylifegame.com/#reviews) (thank you — it's an honor, and it's fine
+that you didn't ask first). When I finally caught up in October, I pitched **Soul City** and the
+**Repo Show**; you said **"that sounds interesting!"** and coined the perfect phrase:
+*pandoc but for life sim characters* — a **consistent link**, not a one-off conversion. That's
+exactly the architecture.
+
+I'm building a Repo Show called **Will Wright Show For Food**, around the Sims 1 content-creation stack.
 
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.** I never finished shipping, and **Tiny Life** is the indie project of love that
 already does it: export households, write stories on your Tinies, Workshop, C# mods — while EA's
@@ -26,11 +33,12 @@ Your Praise page already has my sincere quote. Plumbella and James Turner said t
 worried on Bluesky that Paralives would erase Tiny Life — I don't think inspired games zero-sum the
 genre.
 
-Want to pick up the thread?
+Want to pick up the thread? Your export json is already almost a soul-file — let's design the
+facet schema together on air.
 
 — Don
 
-↑ [CHARACTER.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ellpeck/CHARACTER.yml) · [Soul City bridge](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ellpeck/bridge/soul-city-bridge.md) ·
-[spec](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml)
+↑ [CHARACTER.yml](CHARACTER.yml) · [Correspondence](correspondence.yml) · [Soul City bridge](bridge/soul-city-bridge.md) ·
+[spec](../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml)
 
 *P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

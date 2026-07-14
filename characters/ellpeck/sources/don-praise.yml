@@ -1,20 +1,42 @@
 # Don Hopkins quote on Tiny Life Praise page
-# Source: https://tinylifegame.com/ — Praise section (2026-07-08)
+# Sources:
+#   https://tinylifegame.com/#reviews
+#   https://x.com/xardox/status/1785112477904023674 (2024-04-30, @TinyLifeGame @Ellpeck @leissMusic)
 
 meta:
   attributed_to: Don Hopkins
   context: "Designer on The Sims — Twitter (as cited on site)"
-  verify_before_on_air: false
+  tweet_date: "2024-04-30"
+  featured_on_site: "2025-04-17"
+  ell_consent: "Ell featured quote on Praise + Steam; apologized for not asking first; offered to remove — Don OK"
+  verify_before_on_air: reconfirm_with_ell
+
+twitter_thread:
+  original_tweet: https://x.com/xardox/status/1785112477904023674
+  context: "Reply to @nileinnit + @RetroTechDreams — Sim ___ rights quagmire; Don recommends Tiny Life"
+  credits_in_tweet: ["@TinyLifeGame", "@Ellpeck", "@leissMusic"]
+  ell_reply:
+    date: "2024-04-30"
+    from: "@TinyLifeGame"
+    text: "thanks so much for the shoutout!! 😭❤️"
 
 quote_full: |
   An awesome indie game that's a retro pixel graphics deeply moddable modern re-interpretation of
   The Sims 1, but is also highly unique with its own style, and stands on its own, with a
   mesmerizing soundtrack.
 
+quote_on_site: |
+  An awesome indie game that's a retro pixel graphics deeply moddable modern re-interpretation of
+  The Sims 1, but is also highly unique with its own style, and stands on its own, with a
+  mesmerizing soundtrack.
+
+attribution_on_site: "Don Hopkins, Designer on The Sims, Twitter"
+
 use_on_show:
   - Open episode — read back to Ell, then design / build Soul City bridge live
   - Contrast with EA Legacy Collection removing Exchange while Tiny Life ships sharing
 
 see_also:
-  - praise-quotes.md
-  - tinylife-site-snapshot.md
+  - praise-quotes.yml
+  - discord-soul-city-pitch.md
+  - ../correspondence.yml
