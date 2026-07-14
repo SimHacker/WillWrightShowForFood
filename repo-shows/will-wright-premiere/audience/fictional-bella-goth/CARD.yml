@@ -8,7 +8,7 @@ room:
   id: fictional-bella-goth
   name: Bella Goth
   type: [audience_member, fictional_game_character]
-  home: repo-shows/will-wright/audience/fictional-bella-goth/
+  home: repo-shows/will-wright-premiere/audience/fictional-bella-goth/
 
 meta:
   schema: ../../../../schemas/guest-skills-card.yml

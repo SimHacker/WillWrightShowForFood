@@ -61,7 +61,7 @@ audience/<you>/
   images/            # recommended — headshot, avatar (128²), with-will
 ```
 
-See [`images/README.md`](images/README.md). **Examples:** [`../../will-wright/audience/bot-slats/`](../../will-wright/audience/bot-slats/README.md), [`../../will-wright/audience/fictional-bob-newbie/`](../../will-wright/audience/fictional-bob-newbie/README.md).
+See [`images/README.md`](images/README.md). **Examples:** [`../../will-wright-premiere/audience/bot-slats/`](../../will-wright-premiere/audience/bot-slats/README.md), [`../../will-wright-premiere/audience/fictional-bob-newbie/`](../../will-wright-premiere/audience/fictional-bob-newbie/README.md).
 
 Open PR. Guest and curators review. **Master ⇒ PR.**
 

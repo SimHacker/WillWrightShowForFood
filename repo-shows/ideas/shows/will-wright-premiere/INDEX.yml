@@ -1,6 +1,6 @@
-# will-wright content pack — INDEX
+# will-wright-premiere content pack — INDEX
 
-show: ../../../will-wright/SHOW.yml
+show: ../../../will-wright-premiere/SHOW.yml
 
 local:
   - episode-seeds.yml

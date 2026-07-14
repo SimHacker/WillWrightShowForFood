@@ -29,7 +29,7 @@ Portrait, bio, and navigation hub: [**characters/drew-carey/**](../../characters
 
 ## Related
 
-- [Will Wright show](../will-wright/README.md)
+- [Will Wright show](../will-wright-premiere/README.md)
 - [Eric Hedman](../../characters/eric-hedman/README.md) — House Party animation
 - [make-play-tools-show](../ideas/traditions/make-play-tools-show.yml) — develop · play · discuss
 

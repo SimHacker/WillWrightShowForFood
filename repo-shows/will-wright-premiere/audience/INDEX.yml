@@ -1,7 +1,7 @@
-# will-wright show — audience TicketPR index
+# will-wright-premiere show — audience TicketPR index
 # Human: README.md · Fictional policy: FICTIONAL-AUDIENCE.md
 
-show: will-wright
+show: will-wright-premiere
 spec: ../../../process/ticket-pr.yml
 regulars_spec: ../../../process/repo-show-regulars.yml
 template: ../../_TEMPLATE/audience/

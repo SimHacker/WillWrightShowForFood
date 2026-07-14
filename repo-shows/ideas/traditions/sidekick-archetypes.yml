@@ -3,7 +3,7 @@
 id: sidekick-archetypes
 type: tradition
 status: ready
-canonical: ../../will-wright/SEGMENTS.yml#sidekicks
+canonical: ../../will-wright-premiere/SEGMENTS.yml#sidekicks
 
 archetypes:
   band_leader_foil:

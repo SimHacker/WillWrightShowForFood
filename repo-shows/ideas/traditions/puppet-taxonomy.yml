@@ -3,7 +3,7 @@
 id: puppet-taxonomy
 type: tradition
 status: ready
-canonical: ../../will-wright/performance-and-culture.yml#puppet_kinds
+canonical: ../../will-wright-premiere/performance-and-culture.yml#puppet_kinds
 
 kinds:
   face_puppet:
@@ -34,4 +34,4 @@ consent: |
   live, if he wants): ../../../characters/don-hopkins/portrayal/puppet-me-consent.yml
   Guest example / the live ask: ../../../characters/brian-eno/bowie-snl-1979.md
 
-reading: ../../will-wright/performance-and-culture.yml#the_reading
+reading: ../../will-wright-premiere/performance-and-culture.yml#the_reading

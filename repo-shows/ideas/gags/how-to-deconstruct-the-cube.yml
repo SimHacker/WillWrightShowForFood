@@ -78,11 +78,11 @@ show_beats:
 
 ties:
   curiosity_cow_cube: curiosity-cow-cube.yml
-  bogost_show: ../../will-wright/ian-bogost-procedural-rhetoric/SHOW.yml
+  bogost_show: ../../will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml
   moola: ../../process/moola.yml
   morningstar_habitat: "Chip Morningstar & Randy Farmer — Habitat 1986, avatar, First Penguin Award"
 
 see_also:
   - curiosity-cow-cube.yml
-  - ../../will-wright/ian-bogost-procedural-rhetoric/SHOW.yml
+  - ../../will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml
   - ../../characters/will-wright/media/sims-series-procedural-rhetoric-inclusion-agitprop.md

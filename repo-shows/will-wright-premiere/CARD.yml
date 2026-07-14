@@ -7,7 +7,7 @@ room:
   id: will-wright-show
   name: "A Repo Show with Will Wright"
   type: [show, room, flagship, topic_less]
-  home: repo-shows/will-wright/
+  home: repo-shows/will-wright-premiere/
 
 methods:
   RTFR:

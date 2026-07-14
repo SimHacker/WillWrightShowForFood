@@ -25,7 +25,7 @@ crown_jewel_block:
 
 stupid_fun_club:
   theme: ../../themes/stupid-fun-club-robots.yml
-  slats: ../../../will-wright/slats-reincarnation.yml
+  slats: ../../../will-wright-premiere/slats-reincarnation.yml
 
 bumper_gags:
   - ../../gags/pixelized-joint-wedding.yml

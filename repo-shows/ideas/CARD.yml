@@ -20,12 +20,12 @@ methods:
 
 relationships:
   show_proposals: ../INDEX.yml
-  will_episodes: ../will-wright/episodes.yml
-  will_segments: ../will-wright/SEGMENTS.yml
+  will_episodes: ../will-wright-premiere/episodes.yml
+  will_segments: ../will-wright-premiere/SEGMENTS.yml
   live_rigs: ../../process/performance-space/
   forward_reactor: ../../process/crazy-idea-jam.yml
 
 see_also:
   - README.md
   - GLANCE.yml
-  - shows/will-wright/README.md
+  - shows/will-wright-premiere/README.md

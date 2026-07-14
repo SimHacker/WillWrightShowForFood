@@ -12,7 +12,7 @@ characters:
     room: ../../characters/palm/
     moollm_canonical: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm
     first_reading: episodes/palm-love-wave.md
-    later_shows: [will-wright/audience/palm]
+    later_shows: [will-wright-premiere/audience/palm]
 
 ideas_deferred:
   dasher:

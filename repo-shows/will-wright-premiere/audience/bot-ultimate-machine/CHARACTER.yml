@@ -6,7 +6,7 @@ character:
   type: fictional_bot_audience
   real_being: false
   signifier: "🔌"
-  home: repo-shows/will-wright/audience/bot-ultimate-machine/
+  home: repo-shows/will-wright-premiere/audience/bot-ultimate-machine/
 
 character_ref: ../../../../characters/robots/ultimate-machine/CHARACTER.yml
 

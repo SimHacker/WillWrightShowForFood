@@ -47,7 +47,7 @@ reading_links_in_video:
 palm_entry:
   glance: ../../characters/palm/GLANCE.yml
   on_being_palm: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md
-  show_seat: ../will-wright/audience/palm/
+  show_seat: ../will-wright-premiere/audience/palm/
 
 dasher_entry:
   topic: ../moollm-readings/topics/dasher.yml

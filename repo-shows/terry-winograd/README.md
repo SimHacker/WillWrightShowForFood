@@ -13,7 +13,7 @@ now with a git repo as the stage and AI as an optional instrument. This show sta
 explicitly on Terry's shoulders, and on the shoulders of the ~300 guests he hosted.
 
 One of those guests, on **April 26, 1996**, was Will Wright — the talk that drew Don
-Hopkins to Maxis and seeded the flagship [Will Wright show](../will-wright/README.md). That
+Hopkins to Maxis and seeded the flagship [Will Wright show](../will-wright-premiere/README.md). That
 talk is one recording in a catalog of **339**.
 
 ## The treasure trove — lives in Terry's character dir
@@ -63,7 +63,7 @@ The full catalog is a **pleasant surprise** in [`../../characters/terry-winograd
 - [`../../characters/terry-winograd/`](../../characters/terry-winograd/README.md) — portrait + **media/**
 - [`../../characters/terry-winograd/correspondence.yml`](../../characters/terry-winograd/correspondence.yml)
 - [`../../process/trails/cs547-seminar-lineage.md`](../../process/trails/cs547-seminar-lineage.md)
-- [`../will-wright/`](../will-wright/README.md)
+- [`../will-wright-premiere/`](../will-wright-premiere/README.md)
 
 ---
 

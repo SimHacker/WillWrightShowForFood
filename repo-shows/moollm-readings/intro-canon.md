@@ -14,7 +14,7 @@ Machine index: [`intro-canon.yml`](intro-canon.yml)
 | Room | [characters/palm/](../../characters/palm/) |
 | MOOLLM canonical | [monkey-palm example](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm) |
 | First reading | [episodes/palm-love-wave.md](episodes/palm-love-wave.md) |
-| Later shows | will-wright/audience/palm |
+| Later shows | will-wright-premiere/audience/palm |
 
 ---
 

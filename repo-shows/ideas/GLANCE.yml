@@ -9,13 +9,13 @@ buckets:
   themes/: "Substantive threads spanning episodes"
   shows/: "Per-show content packs (will-wright/ flagship)"
 
-flagship: shows/will-wright/
+flagship: shows/will-wright-premiere/
 
 graduation: "idea → segment in SEGMENTS.yml → POC in performance-space → aired clip / harvested episode"
 
 see_also:
   - INDEX.yml
-  - ../will-wright/SEGMENTS.yml
-  - ../will-wright/performance-and-culture.yml
+  - ../will-wright-premiere/SEGMENTS.yml
+  - ../will-wright-premiere/performance-and-culture.yml
   - ../../process/crazy-idea-jam.yml
   - ../../process/performance-space.yml

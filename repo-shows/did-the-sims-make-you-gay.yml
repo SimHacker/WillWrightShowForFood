@@ -56,7 +56,7 @@ segments:
     rooms: [characters/plumbella/, characters/lil-simsie/, characters/ellpeck/]
   optional_reunion:
     ask: "Jun 1998 steering committee build — Edith/SimAntics with Jamie, Bobo, Irk, Patrick, Don, Will?"
-    seed: will-wright/sims-team-steering-committee-playthrough/
+    seed: will-wright-premiere/sims-team-steering-committee-playthrough/
 
 format:
   live: false

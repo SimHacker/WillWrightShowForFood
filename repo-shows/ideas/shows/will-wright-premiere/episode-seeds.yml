@@ -1,13 +1,13 @@
 # Will Wright show — episode & title seeds
-# Harvest-driven: kickoff transcript may supersede. See ../../../will-wright/episodes.yml.
+# Harvest-driven: kickoff transcript may supersede. See ../../../will-wright-premiere/episodes.yml.
 
 kickoff:
   id: will-wright-00-anything
   title: "A Repo Show with Will Wright (anything goes)"
-  canonical: ../../../will-wright/episodes.yml#kickoff
+  canonical: ../../../will-wright-premiere/episodes.yml#kickoff
 
 from_1996_video:
-  canonical: ../../../will-wright/episodes.yml#seeded_by_the_1996_video
+  canonical: ../../../will-wright-premiere/episodes.yml#seeded_by_the_1996_video
   highlights:
     - taken-aback-moment
     - anatomy-of-a-simulation-game
@@ -37,4 +37,4 @@ performance_episodes:
     note: "Audience suggests who falls in love first; live Cupid object — prior art on YouTube."
 
 topical_flows:
-  canonical: ../../../will-wright/episodes.yml#flows_from_it
+  canonical: ../../../will-wright-premiere/episodes.yml#flows_from_it

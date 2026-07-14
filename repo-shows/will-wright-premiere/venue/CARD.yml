@@ -7,7 +7,7 @@ room:
   id: venue
   name: "The Repo Show Theater"
   type: [venue, room_graph]
-  home: repo-shows/will-wright/venue/
+  home: repo-shows/will-wright-premiere/venue/
 
 methods:
   ENTER-LOBBY:

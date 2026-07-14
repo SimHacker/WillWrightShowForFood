@@ -26,7 +26,7 @@ anchor_slats: |
   robopoetry loops — output feeding back as input — and people talk INTO, OVER, AFTER, and BEFORE it
   to steer and mutate the stream. Reincarnate Slats and the loop is live again: banter into it,
   reprogram between passes, interview the result, feed that back. The diff between passes is the drama.
-  see: ../../will-wright/slats-reincarnation.yml     # the_quest.loop + robopoetry_ceremony + speech_feedback_loop
+  see: ../../will-wright-premiere/slats-reincarnation.yml     # the_quest.loop + robopoetry_ceremony + speech_feedback_loop
   brain_stream: ../../../process/brain-stream.yml    # the show's own live thought-loop on the broadcast bus
 
 siblings:
@@ -78,7 +78,7 @@ why_it_matters: |
   RepoShow repossession thesis in motion: stay in the loop, keep your hands on the wheel.
 
 ties:
-  - ../../will-wright/slats-reincarnation.yml
+  - ../../will-wright-premiere/slats-reincarnation.yml
   - ../../../process/brain-stream.yml
   - ../../jeff-adkins/
   - ../../brian-eno/

@@ -38,7 +38,7 @@ what_ai_does_not_do:
   - "Pass simulated characters off as real people without labeling"
 
 voicing:
-  canonical: ../../will-wright/performance-and-culture.yml#voicing
+  canonical: ../../will-wright-premiere/performance-and-culture.yml#voicing
   rule: "PUPPETRY — humans voice character-puppets. No synths, no cloned voices."
   instruments: |
     Pink Trombone, Phoneloper = vocal-tract INSTRUMENTS a person plays live — not a
@@ -73,7 +73,7 @@ see_also:
   - simulating-people.yml
   - ../traditions/puppet-taxonomy.yml
   - ../traditions/honest-fake-call-in.yml
-  - ../../will-wright/SHOW.yml#defense_against_ai_slop
+  - ../../will-wright-premiere/SHOW.yml#defense_against_ai_slop
   - ../../../process/performance-space.yml#ethics
   - ../../../characters/douglas-engelbart/
   - ../../../process/trails/augmentation-and-hypertext.md

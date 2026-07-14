@@ -16,6 +16,6 @@ read_order:
 
 see_also:
   - { path: audience/, why: "Per-character TicketPR template" }
-  - { path: ../will-wright/, why: "Flagship worked example" }
+  - { path: ../will-wright-premiere/, why: "Flagship worked example" }
   - { path: ../../process/FORMAT.md, why: "Canonical format" }
   - { path: ../../skills/repo-show/, why: "Orchestrator skill" }

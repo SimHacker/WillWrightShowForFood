@@ -90,7 +90,7 @@ sub-questions with their own refs and lasers. Unreferenced YAML-only nodes are v
 ## 5. How the PR workflow works (Master ⇒ PR)
 
 1. **Fork** `SimHacker/WillWrightShowForFood` on GitHub.
-2. **Copy** `_TEMPLATE/audience/` (or an example) into `repo-shows/will-wright/audience/<your-handle>/`.
+2. **Copy** `_TEMPLATE/audience/` (or an example) into `repo-shows/will-wright-premiere/audience/<your-handle>/`.
 3. **Fill in** at least `questions.yml`. Personalize the rest.
 4. **Open a Pull Request.** Title it like `TicketPR: <your handle>`.
 5. **Curators review.** Good-faith TicketPRs merge. Will may comment, answer early, or merge his own reply.

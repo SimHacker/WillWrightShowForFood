@@ -38,7 +38,7 @@ MOOLLM is an LLM operating system / orchestration layer — like LambdaMOO cross
 
 - [Palm GLANCE](../../characters/palm/GLANCE.yml)
 - [Palm On Being Palm](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md)
-- [Will Wright audience seat](../will-wright/audience/palm/)
+- [Will Wright audience seat](../will-wright-premiere/audience/palm/)
 
 ---
 

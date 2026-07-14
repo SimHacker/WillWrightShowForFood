@@ -352,7 +352,7 @@ spore_creature_avatars:
   lineage:
     - Will Wright Spore creature editor — cell → parts → behavior
     - repo-shows/will-wright-premiere/game-bridge-sims-spore.yml
-    - characters/will-wright/audience/fictional-spore-creature/
+    - repo-shows/will-wright-premiere/audience/fictional-spore-creature/
   builder:
     base: distinguished_portrait_or_procedural_face
     pop_on:

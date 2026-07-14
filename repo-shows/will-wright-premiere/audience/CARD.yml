@@ -7,7 +7,7 @@ room:
   id: audience
   name: "Will Wright Show Audience"
   type: [audience_collector, ticket_pr]
-  home: repo-shows/will-wright/audience/
+  home: repo-shows/will-wright-premiere/audience/
 
 methods:
   COPY-TEMPLATE:

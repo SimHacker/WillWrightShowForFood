@@ -30,7 +30,7 @@ see_also:
   children:
     - { path: audience/GLANCE.yml, why: "TicketPR template" }
   across:
-    - { path: ../will-wright/GLANCE.yml, why: "Flagship example" }
+    - { path: ../will-wright-premiere/GLANCE.yml, why: "Flagship example" }
     - { path: ../../process/repo-show-format.yml#description_scaffolding, why: "CARD + GLANCE constitution" }
   deep:
     - { path: README.md, why: "Human article" }

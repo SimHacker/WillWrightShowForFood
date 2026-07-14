@@ -12,13 +12,13 @@ best way (people author; AI orchestrates and writes code). [`ideas/traditions/ma
 1. [`GLANCE.yml`](GLANCE.yml)
 2. [`INDEX.yml`](INDEX.yml) — catalog
 3. [`REPO-SHOWS.yml`](REPO-SHOWS.yml) — collection manifest (implicit inheritance)
-4. Flagship: [`will-wright/README.md`](will-wright/README.md) · [**BROWSE**](will-wright/BROWSE.md)
+4. Flagship: [`will-wright-premiere/README.md`](will-wright-premiere/README.md) · [**BROWSE**](will-wright-premiere/BROWSE.md)
 
 ## Planted (directories)
 
 | Show | Start |
 |------|-------|
-| **will-wright/** ★ | 1996 Winograd talk + draft invitation |
+| **will-wright-premiere/** ★ | 1996 Winograd talk — premiere Repo Show |
 | lars-brinkhoff/ | PDP-10 ITS *make it so* |
 | heather-and-steve-alvey/ | Afterlife zombie bridge |
 
@@ -26,7 +26,7 @@ best way (people author; AI orchestrates and writes code). [`ideas/traditions/ma
 
 | Room | Start |
 |------|-------|
-| [**ideas/**](ideas/README.md) | Gags, themes, traditions, per-show content — [`will-wright/` pack](ideas/shows/will-wright/README.md) |
+| [**ideas/**](ideas/README.md) | Gags, themes, traditions, per-show content — [`will-wright-premiere/` pack](ideas/shows/will-wright-premiere/README.md) |
 
 ## Game-show seeds (single files)
 

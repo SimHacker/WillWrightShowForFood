@@ -19,27 +19,27 @@ traditions:
     file: traditions/sidekick-archetypes.yml
     shows: [will-wright]
     status: ready
-    canonical: ../will-wright/SEGMENTS.yml#sidekicks
+    canonical: ../will-wright-premiere/SEGMENTS.yml#sidekicks
   - id: participation-rocky-horror
     file: traditions/participation-rocky-horror.yml
     shows: [will-wright]
     status: ready
-    canonical: ../will-wright/performance-and-culture.yml#rocky_horror_culture
+    canonical: ../will-wright-premiere/performance-and-culture.yml#rocky_horror_culture
   - id: time-shifted-viewing
     file: traditions/time-shifted-viewing.yml
     shows: [will-wright]
     status: ready
-    canonical: ../will-wright/SEGMENTS.yml#time_shifting
+    canonical: ../will-wright-premiere/SEGMENTS.yml#time_shifting
   - id: honest-fake-call-in
     file: traditions/honest-fake-call-in.yml
     shows: [will-wright]
     status: ready
-    canonical: ../will-wright/SEGMENTS.yml#live_call_in
+    canonical: ../will-wright-premiere/SEGMENTS.yml#live_call_in
   - id: puppet-taxonomy
     file: traditions/puppet-taxonomy.yml
     shows: [will-wright]
     status: ready
-    canonical: ../will-wright/performance-and-culture.yml#puppet_kinds
+    canonical: ../will-wright-premiere/performance-and-culture.yml#puppet_kinds
   - id: old-band-reunion
     file: traditions/old-band-reunion.yml
     shows: [all]
@@ -123,9 +123,9 @@ themes:
     note: "Homomorphic vocal joystick + Pink Trombone — idea in jam; stickers are SWAG only"
 
 shows:
-  will-wright:
-    dir: shows/will-wright/
-    index: shows/will-wright/INDEX.yml
+  will-wright-premiere:
+    dir: shows/will-wright-premiere/
+    index: shows/will-wright-premiere/INDEX.yml
     note: "Flagship content pack — episodes, performance bits, audience hooks"
   jsonsters-gallery-lecture:
     file: jsonsters-gallery-lecture.yml

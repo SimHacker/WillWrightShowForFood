@@ -21,9 +21,9 @@ meta:
 #        SEED    = a single <name>.yml file (plant when ready).
 shows:
   planted:
-    will-wright/:              "★ FIRST PLANTED SHOW. Topic-less kickoff (Will IS the topic), centered on the 1996 Winograd video. Holds SHOW.yml + README + invitation.md (draft email) + episodes.yml + suggested-questions.yml + ../../characters/will-wright/sources/ + the Flower-Child icon. Topical shows flow from it. (Seed: will-wright-series.yml.)"
+    will-wright-premiere/:              "★ FIRST PLANTED SHOW. Topic-less kickoff (Will IS the topic), centered on the 1996 Winograd video. Holds SHOW.yml + README + episodes.yml + suggested-questions.yml + ../../characters/will-wright/sources/ + invitation at ../../characters/will-wright/invitation.md + the Flower-Child icon. Topical shows flow from it. (Seed: will-wright-series.yml.)"
     moollm-readings/:          "★ READINGS SHOW. Long-form MOOLLM script readings on YouTube — primes guests on characters, lore, AI, Apple ][ nostalgia, science. Three primer episodes in episodes.yml; distinct from casual interviews and rare live Twitch specials."
-    will-wright/sims-team-steering-committee-playthrough/: "★ PLAY the Jun 1998 steering committee build live with Jamie/Bobo/Irk/Patrick/Don (+ Will?) — Edith + SimAntics reunion. Link IA; do not host binary."
+    will-wright-premiere/sims-team-steering-committee-playthrough/: "★ PLAY the Jun 1998 steering committee build live with Jamie/Bobo/Irk/Patrick/Don (+ Will?) — Edith + SimAntics reunion. Link IA; do not host binary."
     luc-barthelet-sims-online/SHOW.yml: "Luc Barthelet — shipping The Sims, SimShow, The Sims Online → Soul City / Exchange revival."
     phil-salvador-simrefinery/SHOW.yml: "Phil Salvador — SimRefinery archivist; MBS history; finding + playing the lost refinery sim."
     walter-bender-olpc/SHOW.yml: "Walter Bender — OLPC introducing-the-players; Sugar roadmap; Eben Moglen GPL; View Source."
@@ -44,7 +44,7 @@ shows:
     openlaszlo/:                "★ REUNION. OpenLaszlo — David Temkin + Oliver Steele + Henry Minsky + Don. LZX RIA before its time; David AI-revived the Java toolchain; run old LZX apps live. Oliver solo: oliver-steele/ (Instance-First)."
   seeds:
     group:
-      building-the-sims.yml:    "The Sims team reunion: Jamie Doornbos, Eric Bowman, Patrick J. Barrett III, Don (programmers) + Jim Mackraz (manager) + Will. Designers Chris/Claire may join. Flagship episode: will-wright/sims-team-steering-committee-playthrough/ (PLAY the 1998 build)."
+      building-the-sims.yml:    "The Sims team reunion: Jamie Doornbos, Eric Bowman, Patrick J. Barrett III, Don (programmers) + Jim Mackraz (manager) + Will. Designers Chris/Claire may join. Flagship episode: will-wright-premiere/sims-team-steering-committee-playthrough/ (PLAY the 1998 build)."
       music-and-theory.yml:     "David Levitt + Jerry Martin — music and theory."
       will-and-yoot.yml:        "Will Wright + Yoot Saito — whatever they want."
       ben-and-heinz-pie-menus.yml:  "Ben Shneiderman + Heinz U. Lemke — pie menus, HCI, history (1969 PIXIE → CHI '88 → now)."
@@ -85,7 +85,7 @@ shows:
       philip-rosedale-hifi-moollm.yml: "Philip Rosedale — SL now; YAML Jazz + GitHub-as-MMORPG collaboration stack; SL soul import/export; HiFi worklist history; VR DLA jam; Dan comparison."
       design-by-accretion.yml:  "Chris Trottier — 'Design by Accretion' ↔ the cauldron method. FLAGSHIP."
       alan-kay-microworld.yml:  "Repo Show with Alan Kay — microworld-as-medium; warmly invited Vanessa memorial arc w/ Craig + Dan. DREAM GUEST."
-      will-wright-series.yml:   "Will Wright — SERIES seed. PLANTED → will-wright/."
+      will-wright-series.yml:   "Will Wright — SERIES seed. PLANTED → will-wright-premiere/."
       yoot-saito-series.yml:    "Yoot Saito — SERIES; clean-room successor (YOOT BOOT / Building / Seaman) + frontier AI."
       building-simcity-chaim-gingold.yml: "Chaim Gingold — Building SimCity; turn the book's scholarship, diagrams, and reverse diagrams into executable Micropolis artifacts."
       edd-coates/pie-menus-piecraft.yml: "Edd Coates ep.2 — pie/radial menus, ultimate editable pies, PieCraft (see planted edd-coates/)."

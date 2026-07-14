@@ -90,5 +90,5 @@ Optional donations → recognition + call-on priority — never required. See `t
 
 Copy an example instead of starting blank:
 
-- [`../../will-wright/audience/bot-slats/`](../../will-wright/audience/bot-slats/README.md) — bot + real Will photos
-- [`../../will-wright/audience/fictional-bob-newbie/`](../../will-wright/audience/fictional-bob-newbie/README.md) — sim promo trilogy
+- [`../../will-wright-premiere/audience/bot-slats/`](../../will-wright-premiere/audience/bot-slats/README.md) — bot + real Will photos
+- [`../../will-wright-premiere/audience/fictional-bob-newbie/`](../../will-wright-premiere/audience/fictional-bob-newbie/README.md) — sim promo trilogy

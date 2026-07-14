@@ -35,13 +35,13 @@ segments:
   - id: cow_moo_interface
     topic: "Add a Cow Moo modulation interface; hold spacebar → granular real-time chorus of moos"
     ties:
-      - ../will-wright/audience/fictional-cow-plant/
+      - ../will-wright-premiere/audience/fictional-cow-plant/
       - ../../schemas/language-cow.yml
   - id: pink_trombone_duet
     topic: "Vocal-tract jam: Phoneloper × Pink Trombone (dood.al/pinktrombone) — Cow Plant + Broken Robot"
     ties:
       - ../../schemas/language-robot.yml
-      - ../will-wright/performance-and-culture.yml
+      - ../will-wright-premiere/performance-and-culture.yml
   - id: audience_jam
     topic: "Drop the links; audience opens Pink Trombone and plays/sings along live"
 

@@ -7,8 +7,8 @@ Creative inventory for Repo Shows: **formats you reuse**, **bits you perform**, 
 | Room | Role |
 |------|------|
 | [`../INDEX.yml`](../INDEX.yml) | Show *proposals* (guests, bridges, planted dirs) |
-| [`../will-wright/episodes.yml`](../will-wright/episodes.yml) | Will kickoff + candidate episodes (harvest-driven) |
-| [`../will-wright/SEGMENTS.yml`](../will-wright/SEGMENTS.yml) | Will show *flow* (opening, sidekicks, call-in) |
+| [`../will-wright-premiere/episodes.yml`](../will-wright-premiere/episodes.yml) | Will kickoff + candidate episodes (harvest-driven) |
+| [`../will-wright-premiere/SEGMENTS.yml`](../will-wright-premiere/SEGMENTS.yml) | Will show *flow* (opening, sidekicks, call-in) |
 | [`../../process/performance-space/`](../../process/performance-space/) | Live production rig (OBS, toys, POC checklist) |
 | [`../../process/CRAZY-IDEA-JAM.md`](../../process/CRAZY-IDEA-JAM.md) | Forward-tech reactor (bridges, endosymbiosis, hell drain) |
 | **This folder** | Scratchpad + index for **performable content** |
@@ -22,7 +22,7 @@ Creative inventory for Repo Shows: **formats you reuse**, **bits you perform**, 
 | [`traditions/`](traditions/README.md) | Cross-show formats and homages (Foreign Poet, Unnecessary Censorship, sidekick archetypes, Rocky Horror participation) |
 | [`gags/`](gags/README.md) | Specific comedy bits with enough detail to record or rehearse |
 | [`themes/`](themes/README.md) | Substantive threads to revisit across episodes (simulation effect, procedural rhetoric, crown jewel) |
-| [`shows/`](shows/README.md) | Per-show content packs — [`shows/will-wright/`](shows/will-wright/README.md) is the richest |
+| [`shows/`](shows/README.md) | Per-show content packs — [`shows/will-wright-premiere/`](shows/will-wright-premiere/README.md) is the richest |
 
 ## Read order
 
