@@ -143,7 +143,7 @@ Lineage: Logo Adventure (zeroth) → DreamScape (first) → MediaFlow (Lisp+QT, 
 
 Don (2026): *really fun and smooth — best gestural UI I've ever done.*
 
-See [urban-safari-steering-voystar-pie-network.md](urban-safari-steering-voystar-pie-network.md) ·
+See [urban-safari-steering-voystick-pie-network.md](urban-safari-steering-voystick-pie-network.md) ·
 [Crazy Idea Jam Voystick](../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick).
 
 GuitarPie + Voystick (Sep 2025 HN): hardcore cyberpunk grindcore metal indistinguishable from
@@ -155,7 +155,7 @@ Arc de Triomphe energy.
 | Link | |
 |------|--|
 | [voystick-correspondence-lineage.yml](voystick-correspondence-lineage.yml) | Girder index |
-| [urban-safari-steering-voystar-pie-network.md](urban-safari-steering-voystar-pie-network.md) | Field UX |
+| [urban-safari-steering-voystick-pie-network.md](urban-safari-steering-voystick-pie-network.md) | Field UX |
 | [MOOLLM voystick.yml](https://github.com/SimHacker/moollm/blob/main/skills/speech/voystick.yml) | Implementation spec |
 | [gesture-space (Medium)](https://donhopkins.medium.com/gesture-space-842e3cdc7102) | Pie rehearsal theory |
 | [Pie menus retrospective](https://donhopkins.medium.com/pie-menus-936fed383ff1) | Fitts + voystick HN refs |

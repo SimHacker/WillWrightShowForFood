@@ -24,7 +24,7 @@ stupid_fun_club:
         - "CreationTV iPhone prototype → StoryMaker — collaborative branching storytelling for CurrentTV's Bar Karma (first online community-developed network TV series). Demo https://www.youtube.com/watch?v=Nb_-J1lv-B8 · https://en.wikipedia.org/wiki/Bar_Karma"
         - "StoryMaker full stack: MediaWiki front + Python back; Flash client embedded in wiki; geolocated scenes + Google Maps/KML overlays; admin CMS; iPad app (MapKit); Facebook app (album import/export); voice-synth story reading; Unity3D 3D branching-story visualizer"
         - "Urban Safari GPS storytelling — the geolocated branch of StoryMaker"
-        - "MediaGraph music navigation (SFC Unity; songs+roads, fixed pies for config, editable graph, Mario-cannon flick, CA biomes at Will's request). Demo https://donhopkins.medium.com/mediagraph-demo-a7534add63e5"
+        - "MediaGraph music navigation (SFC Unity Jul 2015; songs+roads, per-song pies, kiss-toggle links, flick-on-song Mario-cannon, CA biomes, LOD terrain). YouTube https://www.youtube.com/watch?v=2KfeHNIXYUc · Medium https://donhopkins.medium.com/mediagraph-demo-a7534add63e5"
         - "Several client/server iterations including MediaWiki plugins and a Unity app"
 
   how_don_rejoined_will:

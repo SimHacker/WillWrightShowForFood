@@ -22,7 +22,7 @@ Curated link index from Don's **Unity Engineer - Tools** cover letter (Aug 2023)
 | Demo | Status |
 |------|--------|
 | [Unity3D Pie Menus (sMN1LQ7qx9g)](https://www.youtube.com/watch?v=sMN1LQ7qx9g) | todo_article |
-| [MediaGraph (2KfeHNIXYUc)](https://www.youtube.com/watch?v=2KfeHNIXYUc) | unavailable (yt-dlp empty) |
+| [MediaGraph (2KfeHNIXYUc)](https://www.youtube.com/watch?v=2KfeHNIXYUc) | [don-youtube-2KfeHNIXYUc-mediagraph](../don-youtube-2KfeHNIXYUc-mediagraph/README.md) · [Don source](../../../don-hopkins/sources/mediagraph-sfc-youtube-demo.md) |
 
 ## Post-Maxis contract work (not WWSFF core)
 

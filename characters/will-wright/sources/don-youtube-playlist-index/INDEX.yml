@@ -205,9 +205,11 @@ videos:
 
   - id: 2KfeHNIXYUc
     url: https://www.youtube.com/watch?v=2KfeHNIXYUc
-    title: "(unavailable — yt-dlp empty)"
-    topics: [tools]
-    status: unavailable
+    title: "MediaGraph Music Navigation with Pie Menus Prototype (Stupid Fun Club)"
+    topics: [mediagraph, pie-menus, unity, stupid-fun-club]
+    wwsff: characters/will-wright/sources/don-youtube-2KfeHNIXYUc-mediagraph/
+    don_source: characters/don-hopkins/sources/mediagraph-sfc-youtube-demo.md
+    status: published
 
   - id: Jvi98wVUmQA
     url: https://www.youtube.com/watch?v=Jvi98wVUmQA

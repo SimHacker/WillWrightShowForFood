@@ -24,8 +24,9 @@ Long-form room doc (Adventure implementation): [`../logo-adventure-c64-terrapin.
 
 | Read | Girder | What |
 |------|--------|------|
+| [MediaGraph SFC YouTube demo](mediagraph-sfc-youtube-demo.md) | [mediagraph-sfc-youtube-demo.yml](mediagraph-sfc-youtube-demo.yml) | Jul 2015 Unity — songs, roads, flick nav, CA biomes |
 | [VoyStick correspondence lineage](voystick-correspondence-lineage.md) | [voystick-correspondence-lineage.yml](voystick-correspondence-lineage.yml) | 1991–2025 email arc: homomorphic vocoder → imitone → Lindsey vowel space → GuitarPie |
-| [Urban Safari steering / pie / VoyStick](urban-safari-steering-voystar-pie-network.md) | — | eBike ride game, F1/F2 map, steering law |
+| [Urban Safari steering / pie / VoyStick](urban-safari-steering-voystick-pie-network.md) | — | eBike ride game, F1/F2 map, steering law |
 | [Usenet matter-product warnings](usenet-matter-product-warnings.md) | — | Physics humor sticker folklore — Don Medium 2018; SWAG only |
 
 **Crazy Idea Jam:** [Voystick](../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick) · [Urban Safari](../../process/crazy-idea-jam.yml#urban_safari_gps_storytelling) · [Urban eBike Safari](../../process/crazy-idea-jam.yml#urban_ebike_safari)

@@ -204,16 +204,19 @@ ideas:
   mediagraph:
     emoji: "🎵🥧"
     blurb: |
-      Unity3D music-navigation prototype Don built for Will Wright at **Stupid Fun Club** (not Interval):
-      **songs** connected by **roads** on a pan/zoom map — drag songs, sculpt islands and biomes
-      (islands or continents), **kiss** songs together to toggle road connections. Two pie layers:
-      **fixed non-editable pies** for configuring, real-time tracking feedback, and world-effect
-      preview; and the **user-editable** song/road graph itself (pies as map nodes, not a tree).
-      Navigate by **flicking** in the direction you want to go — integrated pie-menu flick tracking
-      on a panning/zooming canvas, like **Super Mario World cannons** (aim and fire to a destination).
-      Each song's biome is cellular automata that grows and competes with neighbors (CA at Will's request).
-    video: "https://donhopkins.medium.com/mediagraph-demo-a7534add63e5"
-    ties: [../characters/don-hopkins/career/stupid-fun-club.yml]
+      Unity3D music-navigation prototype Don built for Will Wright at **Stupid Fun Club** (Jul 2015
+      demo). **Songs** on a pan/zoom map, **roads** kiss-toggled by drop-on/drop-off. Per-song
+      **pie menus** set radius + **biome** (cellular automata — Life, ice, moon surface; same
+      biomes merge, different compete). **LOD:** flat polygons far, 3D terrain when close/editing
+      (~85 fps with 1–4 live terrains). **Flick:** drag on a song (not empty map) fires you down
+      the road in drag direction — Mario World cannon; cursor stays underneath. Auto-scroll follow
+      or detach. Nested pies: config pies on songs build/edit the geographic song+road graph.
+    video: "https://www.youtube.com/watch?v=2KfeHNIXYUc"
+    medium: "https://donhopkins.medium.com/mediagraph-demo-a7534add63e5"
+    source: ../characters/don-hopkins/sources/mediagraph-sfc-youtube-demo.md
+    ties:
+      - ../characters/don-hopkins/career/stupid-fun-club.yml
+      - ../characters/don-hopkins/sources/mediagraph-sfc-youtube-demo.md
 
   urban_safari_gps_storytelling:
     emoji: "🗺️"
@@ -256,7 +259,7 @@ ideas:
         Logo Adventure (zeroth) → DreamScape (first) → MediaFlow → iLoci → MediaGraph → Urban Safari → Urban eBike Safari
       mediaflow: "Interval — Mac Common Lisp + QuickTime hypermedia streams/dataflow (no pie menus)"
       iloci: "pie-menu network — rooms kiss to connect"
-      mediagraph: "SFC Unity — fixed pies for config/preview; editable song+road graph; kiss toggles roads; Mario-cannon flick nav"
+      mediagraph: "SFC Unity Jul 2015 — per-song pies (radius, CA biome); kiss-toggle roads; flick-on-song Mario-cannon nav; LOD terrain"
       urban_safari: "cards at POIs — invisible graph overlay"
       urban_ebike: "Outdoor = wide sloppy fast warbles, no social cost; pitch+vowel trace steers singing while biking"
     mediaflow_navigation: |
@@ -272,7 +275,7 @@ ideas:
     voystick: crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
     ties:
       - ../repo-shows/ideas/urban-ebike-safari.yml
-      - ../characters/don-hopkins/sources/urban-safari-steering-voystar-pie-network.md
+      - ../characters/don-hopkins/sources/urban-safari-steering-voystick-pie-network.md
       - ../characters/don-hopkins/mediaflow-design-comments.md
       - ../characters/don-hopkins/interval-research-pluggers-and-mediaflow.md
       - crazy-idea-jam.yml#urban_safari_gps_storytelling

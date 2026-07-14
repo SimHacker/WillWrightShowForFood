@@ -67,7 +67,7 @@ Sutton's fix is what MOOLLM adventures already do — documented in the simulati
 
 Parser lineage in product seed explicitly cites MOOLLM adventure → SpeechAnalyzer voice parser.
 
-**Ride game (steering + pie + VoyStick):** [urban-safari-steering-voystar-pie-network.md](urban-safari-steering-voystar-pie-network.md) · [MOOLLM ride-game.yml](https://github.com/SimHacker/moollm/blob/main/skills/simulation/examples/urban-safari-ride-game.yml)
+**Ride game (steering + pie + VoyStick):** [urban-safari-steering-voystick-pie-network.md](urban-safari-steering-voystick-pie-network.md) · [MOOLLM ride-game.yml](https://github.com/SimHacker/moollm/blob/main/skills/simulation/examples/urban-safari-ride-game.yml)
 
 ## Adjacent threads
 
@@ -83,4 +83,4 @@ Parser lineage in product seed explicitly cites MOOLLM adventure → SpeechAnaly
 - [`../../../process/crazy-idea-jam.yml`](../../../process/crazy-idea-jam.yml#iloci_memory_palace)
 - [MOOLLM simulation/ONE-STEP-TRAP.md](https://github.com/SimHacker/moollm/blob/main/skills/simulation/ONE-STEP-TRAP.md)
 - [MOOLLM urban-safari-ride-game.yml](https://github.com/SimHacker/moollm/blob/main/skills/simulation/examples/urban-safari-ride-game.yml)
-- [`urban-safari-steering-voystar-pie-network.md`](urban-safari-steering-voystar-pie-network.md)
+- [`urban-safari-steering-voystick-pie-network.md`](urban-safari-steering-voystick-pie-network.md)

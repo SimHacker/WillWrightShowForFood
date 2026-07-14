@@ -57,10 +57,11 @@ lineage:
     - era: "2011–14"
       project: MediaGraph
       what: |
-        SFC Unity — songs on roads (drag, kiss to toggle links, sculpt island biomes/continents).
-        Fixed pies for config/preview; editable song graph. Flick-navigate like Mario World cannons.
-        CA biomes at Will's request.
+        SFC Unity (YouTube demo Jul 2015) — songs on roads; per-song pies (radius, CA biome);
+        kiss-toggle links; flick-on-song Mario-cannon nav; LOD flat/3D terrain.
+      video: "https://www.youtube.com/watch?v=2KfeHNIXYUc"
       demo: "https://donhopkins.medium.com/mediagraph-demo-a7534add63e5"
+      source: ../../characters/don-hopkins/sources/mediagraph-sfc-youtube-demo.md
       jam: ../../process/crazy-idea-jam.yml#mediagraph
     - { era: "2025–26", project: Proxi, what: "Memory snow globes at geo stops — press parallel" }
     - { era: "2026", project: Urban Safari LIVE, what: "Real streets; Parker calls Will; git audience cards", file: urban-safari-live.yml }
@@ -182,7 +183,7 @@ steering_pie_ride_game:
   continuous_game:
     ai_guesses: "Bearing + speed + ride history → proposed next story leg"
     ai_suggests: "POIs/cards ranked on interest layers — not generic tourism"
-    rider_moves: [confirm, deflect, voice_skip, voystar_wedge, set_destination]
+    rider_moves: [confirm, deflect, voice_skip, voystick_wedge, set_destination]
     never_pauses: "Running inference duel, not a form or turn-by-turn nag"
   pie_menu_network:
     lineage: "iLoci pie-menu network → MediaGraph song+road flick (Mario cannons) → MOOLLM exit graph at POIs"
@@ -238,7 +239,7 @@ steering_pie_ride_game:
     - project — rank onto rider interest profile
     - speak — proximity-triggered narration
     - answer — questions without stopping or screen touch
-  room: ../../characters/don-hopkins/sources/urban-safari-steering-voystar-pie-network.md
+  room: ../../characters/don-hopkins/sources/urban-safari-steering-voystick-pie-network.md
   moollm: https://github.com/SimHacker/moollm/blob/main/skills/simulation/examples/urban-safari-ride-game.yml
 
 voice_stack:
@@ -369,7 +370,7 @@ ties:
   - ../../characters/don-hopkins/kaleida-scriptx-dreamscape-multimedia-lisp-machine.md
   - ../../process/crazy-idea-jam.yml#dreamscape_scriptx
   - ../../characters/don-hopkins/sources/sutton-one-step-trap.md
-  - ../../characters/don-hopkins/sources/urban-safari-steering-voystar-pie-network.md
+  - ../../characters/don-hopkins/sources/urban-safari-steering-voystick-pie-network.md
   - https://github.com/SimHacker/moollm/blob/main/skills/simulation/examples/urban-safari-ride-game.yml
   - https://github.com/SimHacker/moollm/blob/main/skills/simulation/ONE-STEP-TRAP.md
   - https://github.com/SimHacker/moollm/blob/main/skills/simulation/examples/one-step-trap.yml

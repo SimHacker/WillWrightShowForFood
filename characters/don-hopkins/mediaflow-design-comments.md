@@ -55,7 +55,7 @@ Logo Adventure (zeroth)  Terrapin C64 — REPL-as-parser; hidden graph; GO betwe
 DreamScape (first)       1995 WWDC — rooms kiss; link globally, interact locally
 MediaFlow                Interval — Mac Common Lisp + QuickTime streams (no pie menus)
 iLoci                    pie-menu network — rooms kiss to connect
-MediaGraph               SFC Unity — songs+roads; fixed pies for config; editable graph; Mario-cannon flick
+MediaGraph               SFC Unity Jul 2015 — per-song pies; kiss roads; flick-on-song; CA biomes; LOD terrain
 Urban Safari             cards at POIs — invisible graph overlay
 Urban eBike Safari       Outdoor = wide sloppy fast warbles, no social cost; pitch+vowel trace steers singing while biking
 ```
@@ -65,7 +65,7 @@ and cards, hands on handlebars.
 
 Don (2026): *really fun and smooth — best gestural UI I've ever done.*
 
-→ [Urban Safari steering / Voystick](../../sources/urban-safari-steering-voystar-pie-network.md) ·
+→ [Urban Safari steering / Voystick](../../sources/urban-safari-steering-voystick-pie-network.md) ·
 [Crazy Idea Jam — Voystick](../../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick) ·
 [Urban eBike Safari](../../../repo-shows/ideas/urban-ebike-safari.yml)
 

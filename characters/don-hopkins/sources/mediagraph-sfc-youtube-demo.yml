@@ -1,0 +1,24 @@
+id: mediagraph-sfc-youtube-demo
+read: mediagraph-sfc-youtube-demo.md
+when: "2015-07-10"
+who: [don-hopkins, will-wright]
+where: stupid-fun-club
+platform: Unity3D
+video: https://www.youtube.com/watch?v=2KfeHNIXYUc
+medium: https://donhopkins.medium.com/mediagraph-demo-a7534add63e5
+duration: "5:05"
+views_harvest: 820
+
+beats:
+  - songs on map connected by roads
+  - per-song pie menu radius + biome CA
+  - kiss-toggle roads drop-on-drop-off
+  - LOD flat polygons far 3D terrain close
+  - flick-on-song travels down road Mario-cannon
+  - auto-scroll camera follow or detach
+
+ties:
+  - ../../../process/crazy-idea-jam.yml#mediagraph
+  - ../career/stupid-fun-club.yml
+  - urban-safari-steering-voystick-pie-network.md
+  - ../../will-wright/sources/don-youtube-2KfeHNIXYUc-mediagraph/README.md

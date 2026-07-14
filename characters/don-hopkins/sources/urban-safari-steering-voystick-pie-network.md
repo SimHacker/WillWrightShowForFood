@@ -4,6 +4,10 @@ Field UX for [Urban eBike Safari](../../../repo-shows/ideas/urban-ebike-safari.y
 **guess where I'm going** / **suggest places to go** between rider and AI — positional direct
 manipulation through a pie-menu network you navigate by biking, with voice skip-ahead.
 
+**Naming:** *VoyStar* was a filename typo for VoyStick — but a good suggested coinage for **Voystick
++ pie-menu** navigation (warble along wedge stars/rays). Canonical term remains **VoyStick**; VoyStar
+reserved as informal alias for the pie-wedge gestural layer.
+
 ## The continuous game
 
 Two players, never pauses:
@@ -42,11 +46,12 @@ parallel hypermedia thread, not the flick-navigation UI.
 [iLoci](https://www.youtube.com/watch?v=03ddG3jWF98) — pie-menu network editor; rooms kiss to connect
 ([jam](../../../process/crazy-idea-jam.yml#iloci_memory_palace)).
 
-**MediaGraph** (SFC Unity, Will's request) — **songs** on **roads** you drag; sculpt islands/continents
-and biomes; **kiss** songs to toggle road links. **Fixed non-editable pies** for config, tracking
-feedback, world-effect preview; the song/road graph is the **user-editable** pie layer. Navigate by
-**flicking** direction-of-travel on a pan/zoom canvas — integrated pie flick tracking like **Mario
-World cannons** (aim and fire to destination). ([jam](../../../process/crazy-idea-jam.yml#mediagraph)).
+**MediaGraph** (SFC Unity, Jul 2015 — [YouTube demo](mediagraph-sfc-youtube-demo.md)) — **songs**
+on **roads**; drag nodes, edit labels. Per-song **pie menu**: radius + **biome** (CA — Life, ice,
+moon surface; same merge, different compete). **Kiss-toggle roads:** drop on another → link; drop
+again → unlink. **Flick-on-song** (not empty map) travels down the road in drag direction — Mario
+World cannon; pan = left-drag elsewhere. LOD flat polygons far, 3D terrain close (~85 fps, 1–4 live).
+([jam](../../../process/crazy-idea-jam.yml#mediagraph)).
 
 **Urban Safari** — cards at POIs; invisible graph overlay.
 
