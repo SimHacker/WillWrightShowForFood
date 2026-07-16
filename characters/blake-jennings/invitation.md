@@ -29,7 +29,7 @@ I'd love to talk with you about:
   you'd be perfect in the **Soul City ⇔ Tiny Life** bridge conversation (and maybe an Unnecessary
   Analysis on who the real "war criminals" around that community are: the GamerGate Incel Maga Trolls!)
 - Your [WoW essay](https://www.youtube.com/watch?v=OGV5uPmFzrE) / Steve Bannon gold-farming beat —
-  I have a rabbit hole for you if you want it (pull my finger)
+  I have a rabbit hole full of snarky dishing and all the receipts for you if you want it (pull my finger). Hint: The Steve Bannon connection leads to GamerGate and MAGA and Lolita Island. 
 
 Your room is started — please correct anything wrong:
 
