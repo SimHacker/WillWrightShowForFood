@@ -1,0 +1,49 @@
+# Sims / Maxis origin gems — Reddit AMA 2024-11-12
+# Public-safe excerpts; not a full AMA reproduction
+
+meta:
+  title: "Sims origin gems (Reddit AMA)"
+  date: "2024-11-12"
+  url: https://www.reddit.com/r/gaming/comments/1gjk24f/hi_im_will_wright_the_sims_simcity_spore_proxi/
+  captured: "2026-07-16"
+  verbatim_status: excerpt_curated
+
+beats:
+  simcopter_to_simantics:
+    team: four_people_twelve_months
+    chain: visual_programming_for_city_populace → SimAntics object_interactions
+    link: https://simstek.fandom.com/wiki/SimAntics
+
+  simant_smart_objects:
+    model: pheromone_trails_environment_holds_intelligence
+    sims: fridge_bed_tv_advertise_to_needs
+    wilson: Edward O Wilson The Ants
+
+  sims_consumerism:
+    music: bossa_nova_shopping_scenes
+    catalog: advertiser_voice_for_every_chair
+    message: stuff_becomes_time_bombs_slave_to_convenience
+
+  dollhouse_foam_core:
+    resolution: ~one_yard_chair_scale
+    method: atoms_before_bits_every_game
+
+  sim_death_boundary:
+    framing: monty_python_not_torture_sim
+    simcity: bulldozer_as_anthill_poke_then_rebuild
+
+  spore_space_stage:
+    designer: Jenna Chalmers
+    will: one_of_best_designers; space_and_creature_best_parts
+
+  ea_stance:
+    will: not_backseat_driving_ea_today
+    acquisition: EA_saved_sims_when_it_looked_like_failing
+
+show_connections:
+  - path: ../2025-04-29-venturebeat-proxi-funding-crisis/proxi-pitch-parallels.yml
+    why: smart objects + Mattrick parallel
+  - path: ../2008-02-10-soul-of-the-sims/README.md
+    why: Motive.c substrate
+  - path: ../../../don-hopkins/sources/sims-origin-core-tech-four-1997.md
+    why: core-tech group context

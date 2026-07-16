@@ -1,0 +1,73 @@
+# Leo Joskowicz — invitation portrayal. NOT Leo Joskowicz.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: leo-joskowicz
+  name: "Leo Joskowicz"
+  type: invitation
+  signifier: "🏥"
+  status: living
+  field: "Computer-aided surgery, medical image processing, CARS/MICCAI"
+  home: characters/leo-joskowicz/
+  affiliation: |
+    Rachel and Selim Benin School of Computer Science and Engineering, Hebrew University of Jerusalem;
+    Edmond and Lily Safra Center for Brain Sciences (ELSC)
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/pixie-pie-menus-pdp7.yml
+  note: |
+    Cc'd on Heinz 15 Jul 2026 PIXIE thread — proposed CARS 2027 Berlin HCI session (29 Jun) on
+    ELIZA / Weizenbaum HCI line. Met Roy Eagleson at CARS 2026 Nagoya (Heinz). Not yet directly engaged.
+
+relationship:
+  to_project: cars_2027_prospect
+  to_heinz: |
+    Long-standing CARS/MICCAI colleague — Joskowicz on CARS organizing committee (2007–) and program
+    committee (2000–). Heinz (IFCARS/CARS founder) proposes joint HCI session Berlin 2027.
+  to_weizenbaum_line: |
+    Heinz (15 Jul 2026): Joskowicz "studied ELIZA extensively in the earlier part of his career" —
+    **not yet independently verified in public sources**; proposed talk topic for CARS 2027.
+    Verified bridge: Heinz met Weizenbaum at MIT presenting PIXIE (1969); Weizenbaum later visiting
+    professor at TU Berlin; Heinz cites Weizenbaum on human-not-machine as measure (CARS 2024 editorial).
+
+bio:
+  summary: |
+    **Leo Joskowicz** (born 1961) — Mexican–Israeli computer scientist; professor at the **Hebrew
+    University of Jerusalem**; member of **ELSC** (Edmond and Lily Safra Center for Brain Sciences).
+    Founder of the **CASMIP Lab** (Computer-Aided Surgery and Medical Image Processing, 1996).
+    Specializes in medical imaging, surgical navigation, medical robotics, and patient-specific modeling.
+    Former **president of The MICCAI Society** (2019–2022). **IEEE Fellow** (2013) for contributions
+    to computer-assisted surgery and medical image processing. Deep **CARS** involvement — organizing
+    committee member (2007–2026 per CV), program committee (2000–2026); CARS Vice-President, Barcelona 2015.
+  education:
+    - { degree: BSc Computer Science, institution: Technion, year: 1983 }
+    - { degree: MSc, institution: "NYU Courant Institute", advisor: "M. C. Harrison", year: 1984 }
+    - { degree: PhD, institution: "NYU Courant Institute", advisor: Ernest Davis, year: 1988, thesis: "Reasoning about Shape and Kinematic Function in Mechanical Devices" }
+  career:
+    - { when: "1988–1995", where: "IBM T.J. Watson Research Center", role: "Project Leader, Computer-Assisted Surgery" }
+    - { when: "1995–", where: "Hebrew University of Jerusalem", role: "Professor; CASMIP Lab founder/director" }
+    - { when: "2007–", where: ELSC, role: Faculty member }
+
+sources:
+  web:
+    - { title: "Wikipedia — Leo Joskowicz", url: "https://en.wikipedia.org/wiki/Leo_Joskowicz" }
+    - { title: "ELSC faculty page", url: "https://elsc.huji.ac.il/people-directory/faculty-members/leo-joskowicz/" }
+    - { title: "HUJI CS homepage", url: "https://www.cs.huji.ac.il/~josko/" }
+    - { title: "CRIS HUJI profile", url: "https://cris.huji.ac.il/en/persons/leo-joskowicz/" }
+  email:
+    - { title: "Heinz CARS 2027 proposal (Cc)", digest: ../heinz-lemke/sources/2026-07-16-pixie-storyline-thread.md }
+
+see_also:
+  - { path: ../heinz-lemke/, why: "CARS founder; PIXIE thread; proposed Berlin 2027 HCI session" }
+  - { path: ../mario-cypko/, why: "Co-invitee CARS 2027 Human-AI / model-guided medicine beat" }
+  - { path: ../roy-eagleson/, why: "Met at CARS 2026 Nagoya (Heinz)" }
+  - { path: sources/heinz-2026-07-cars2027-eliza-proposal.yml, why: "Heinz attribution + pull-in to verify ELIZA work" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Weizenbaum two-episode arc; CARS 2027 milestone" }

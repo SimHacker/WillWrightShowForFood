@@ -1,0 +1,50 @@
+# Proxi mind world — Breakthrough T1D stream 2024-12
+# Sources: Twitch VOD + PC Gamer 2024-12-17 recap
+
+meta:
+  title: "Proxi mind world (T1D Dev Diaries)"
+  twitch: https://www.twitch.tv/videos/2329386880?collection=iiz1kL3FOxfaUQ
+  pc_gamer: https://www.pcgamer.com/games/life-sim/the-sims-designer-will-wright-is-making-his-next-life-sim-more-personal-by-building-it-with-your-actual-memories-no-game-designer-has-ever-gone-wrong-by-overestimating-the-narcissism-of-their-players/
+  date: "2024-12"
+  captured: "2026-07-16"
+  verbatim_status: excerpt_curated
+
+loop:
+  - player_types_memory
+  - animated_scene_generated
+  - scene_added_to_mind_world_3d
+  - people_become_proxies_to_play_with
+
+hosts:
+  - arielehm
+  - emily_morganti
+
+sims2_parallel:
+  what: Mortimer Goth ghost memory in memories panel
+  why: Sims retained memories as on-ramp to Proxi personal-memory design
+
+quotes:
+  percolating: long_gestating_idea_related_to_sims
+  closer_to_player: continuous_pull_toward_player_identity
+  narcissism_rule: no_designer_went_wrong_overestimating_player_narcissism
+  about_you: more_game_about_you_more_you_like_it
+
+charity:
+  org: Breakthrough T1D Play
+  gamesbeat: https://gamesbeat.com/breakthrough-t1d-play-has-raised-5m-for-diabetes-research/
+  gallium_note: Justin Graham programmer T1D LucasArts Maxis alumni
+
+will_on_stream_pending_transcript:
+  bar_karma_episodes: 13
+  bar_karma_wikipedia: 12
+  gallium_headcount: ~25
+
+show_connections:
+  - path: ../2024-11-12-reddit-ama-proxi/proxi-design-manifesto.yml
+    why: home/shared worlds detail from AMA same month prior
+  - path: ../2025-04-29-venturebeat-proxi-funding-crisis/proxi-pitch-parallels.yml
+    why: memory palace snow globes; charity demo cited in VB
+  - path: ../2025-12-will-wright-dev-diaries/proxi-software-heirloom.yml
+    why: shared family memory worlds
+  - path: ../don-youtube-storymaker-demo/README.md
+    why: Bar Karma lineage

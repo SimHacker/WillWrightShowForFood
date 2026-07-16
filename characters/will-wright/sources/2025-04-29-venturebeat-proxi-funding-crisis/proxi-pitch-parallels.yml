@@ -55,6 +55,10 @@ funding_apr_2025:
   elliott_thesis: marketing spend up; new IP abandoned; AI tools enable small studios
 
 show_connections:
+  - path: ../2024-11-12-reddit-ama-proxi/proxi-design-manifesto.yml
+    why: AMA cited in article; design depth
+  - path: ../2024-12-17-breakthrought1d-proxi-stream/proxi-mind-world.yml
+    why: Dec charity demo
   - path: ../2025-12-will-wright-dev-diaries/proxi-software-heirloom.yml
     why: heirloom framing on camera matches article
   - path: ../2025-12-will-wright-dev-diaries/proxi-minecraft-export.yml

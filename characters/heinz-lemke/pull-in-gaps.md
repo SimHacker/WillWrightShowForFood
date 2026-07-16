@@ -13,9 +13,10 @@ Machine index: [`pull-in-gaps.md`](pull-in-gaps.md) · **Consent:** `not_yet_ask
 
 | Field | Value |
 |-------|-------|
-| Status | offered |
-| Pull in | Heinz preparing copy — receive, scan, file under `media/` with provenance |
-| Show use | Lars assembles/runs against Type 340 manual under SIMH; walk interrupt handler on air |
+| Status | digitization_planned (2026-07-15) |
+| Scale | ~110 A3 pages + 15 RSP pages = **125 pages** |
+| Pull in | Heinz locating local scan shop — receive, file under `media/` with provenance |
+| Show use | Lars assembles/runs against Type 340 manual under SIMH; walk interrupt handler on air; UWO student project; **CARS 2027 Berlin 29 Jun** demo target |
 
 → [pixie-source-recovery.md](pixie-source-recovery.md)
 
@@ -118,7 +119,36 @@ Summer 1969 US lab-tour agenda (Greyhound $99 / 3-month ticket): United Aircraft
 
 Alan Kay (10 Jul 2026): Andrew Armit visited Utah ~1968–69 with Coons patch on PDP-7 — "quite impressive." Find movie/video.
 
+**Update 16 Jul 2026:** Armit confirms **Multipatch film existed**; shown on US CAD tour with **Henri Gouraud**; barn notes from when film was made. ICON film likely also.
+
+| Field | Value |
+|-------|-------|
+| Status | witness_confirmed |
+| Pull in | Armit barn notes; scan if film reel found; ask Gouraud circle |
+| Archive | [../andrew-armit/sources/2026-07-16-armit-archive-manifest.md](../andrew-armit/sources/2026-07-16-armit-archive-manifest.md) |
+
 → [../andrew-armit/sources/alan-kay-utah-coons-patches.md](../andrew-armit/sources/alan-kay-utah-coons-patches.md)
+
+### andrew_armit_barn_archive
+
+Jul 2026 inventory: Multipatch/Multiobject octal listings, PDP-7/340 manuals, Titan extracode, ICON assembler+BCPL, TAG 100K lines, PGM machine+video, VG3400 WCS panel.
+
+| Field | Value |
+|-------|-------|
+| Status | offered (not yet scanned) |
+| Pull in | Coordinate with Heinz Haslingfield visit; prioritize Multipatch + film notes |
+| Doc | [../andrew-armit/sources/2026-07-16-armit-archive-manifest.md](../andrew-armit/sources/2026-07-16-armit-archive-manifest.md) |
+
+### cars_2027_hci_session
+
+CARS Congress Berlin — special HCI session **29 June 2027** (60th anniversary Cambridge PIXIE lecture). Joskowicz (ELIZA), Cypko (Human-AI), Roy's UWO PIXIE re-implementation.
+
+| Field | Value |
+|-------|-------|
+| Status | proposed |
+| Pull in | Session confirmation; Joskowicz ELIZA sources; student project timeline |
+| Characters | [../leo-joskowicz/](../leo-joskowicz/) · [../mario-cypko/](../mario-cypko/) |
+| Thread | [sources/2026-07-16-pixie-storyline-thread.md](sources/2026-07-16-pixie-storyline-thread.md) |
 
 ### pixie_part1_docx_dshr
 

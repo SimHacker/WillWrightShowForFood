@@ -1,0 +1,40 @@
+# ICON @ Lloyd's Register — 3D weekend rewrite
+
+character: andrew-armit
+source: email 2026-07-16 to PIXIE thread
+consent: not_yet_asked
+
+event:
+  when: "~1973-1975 (ICON paper 1975)"
+  where: Lloyd's Register of Shipping (LRS)
+  via: WSEA (Heinz Lemke involvement)
+
+stakes:
+  prior_proposal: 2D system
+  armit_refusal: would not build 2D
+  hardware_requirement:
+    cpu: PDP-11/45
+    display: "Series 3 Vector General"
+
+rewrite:
+  duration: one weekend
+  outcome: fully 3D proposal
+  submission_path: offered via previous consultant
+  consultant_response: declined to make it his
+  presentation: grand meeting — Armit presented directly
+
+quote:
+  text: "You have to understand that while you are paying for it, I am making it for myself."
+  effect: surprise, then management concluded full engagement
+
+collaborators:
+  - heinz-lemke
+
+papers:
+  - "Armit AP, Lemke HU (1975): ICON, The interactive creation of NASTRAN data, CAD Journal Vol 7 No 3"
+  - "Lemke HU, Armit AP (1974): Advanced software techniques in computer graphics, GI 74"
+
+show_hooks:
+  - conscientious-objector energy — building for self while client pays
+  - contrast with textbook "requirements-driven" CAD narrative
+  - pairs with Heinz PIXIE origin (1967) in Cambridge lineage episode

@@ -70,9 +70,36 @@ Roy is on the correspondence thread — see [`../roy-eagleson/`](../roy-eagleson
 room (Sketchpad → [**Geometer's Sketchpad**](https://en.wikipedia.org/wiki/The_Geometer%27s_Sketchpad)
 line → PIXIE). [**Ivan Sutherland**](../ivan-sutherland/) — hero / north star.
 
+## Scale update (15 July 2026)
+
+Heinz to Roy Eagleson: hard copy is **~110 A3 pages** (~40–50 instructions/page) plus **15 pages**
+for the **RSP** data-structure package — **125 pages total**. Local digitization shop being located.
+
+Primary source: [`sources/2026-07-16-pixie-storyline-thread.md`](sources/2026-07-16-pixie-storyline-thread.md).
+
+## CARS 2027 milestone (29 June 2027, Berlin)
+
+Heinz proposes special **HCI session** at CARS Congress — same date as **60th anniversary** of
+first Cambridge Mathematical Laboratory lecture (PIXIE origin):
+
+- UWO students (Roy Eagleson) — PIXIE re-implementation if project proceeds
+- **Leo Joskowicz** — ELIZA / Weizenbaum HCI line
+- **Mario Cypko** — Human–AI model interaction
+
+→ [`../leo-joskowicz/`](../leo-joskowicz/) · [`../mario-cypko/`](../mario-cypko/)
+
+Thesis Appendix 4 (PIXIE User Manual) + 1969 film:
+[pcloud bundle](https://e.pcloud.link/publink/show?code=kZfrboZLdkhmTkNHyFD3D4YsvF18VCDFpq7)
+
+## Andrew Armit parallel archive (16 July 2026)
+
+Same thread: Armit reports **Multipatch** octal listings + PDP-7/340 manuals, **Multiobject** +
+Titan extracode, **ICON** sources, **Multipatch film** (shown with Gouraud on US tour). See
+[`../andrew-armit/sources/2026-07-16-armit-archive-manifest.md`](../andrew-armit/sources/2026-07-16-armit-archive-manifest.md).
+
 ## Next steps
 
-1. Heinz prepares a copy of the listing (his offer — "in due course," no pressure).
+1. Heinz digitizes **125 pages** (in progress, Jul 2026).
 2. Scan/receive → file under `media/` here with provenance — **evidence room before interview**
    (Don 7 Jul 2026: papers, magazine articles, films, **especially source code**).
 3. Lars: assess against Type 340 manual — assemble/run under SIMH; **virtual light pen drivers**

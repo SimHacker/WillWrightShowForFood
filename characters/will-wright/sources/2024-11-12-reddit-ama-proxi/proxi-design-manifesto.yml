@@ -1,0 +1,56 @@
+# Proxi design manifesto — Reddit AMA 2024-11-12
+# Source: r/gaming/comments/1gjk24f — u/Simtasticgallery eight-part answer
+
+meta:
+  title: "Proxi design manifesto (Reddit AMA)"
+  date: "2024-11-12"
+  url: https://www.reddit.com/r/gaming/comments/1gjk24f/hi_im_will_wright_the_sims_simcity_spore_proxi/
+  captured: "2026-07-16"
+  verbatim_status: excerpt_curated
+
+worlds:
+  home_world:
+    private: always
+    use: traumatic_or_sensitive_memories_still_shape_psyche_portrait
+    export: opt_in_only_to_shared_worlds
+  shared_worlds:
+    examples: [grandmother, high_school_cohort, windsurfing_tahiti]
+    model: collaborative_theme_centered_memory_spaces
+    payoff: hear_stories_from_others_you_did_not_know
+
+player_types:
+  creators: build_houses_simcity_networks
+  storytellers: build_then_share_narrative
+  proxi_role: two_way_street_vs_sims_simcity
+
+ai_framing:
+  not: simulate_emotions
+  yes: map_connections_between_memories
+  entity_resolution: [pets, aliases_for_same_person]
+  style_sheets: [film_trailer, romantic_comedy, user_chosen_recuts]
+  lunch_conversation: deconstruct_stories_to_concepts
+
+discovery:
+  threshold: few_dozen_memories
+  effect: subconscious_pattern_insights_emotion_place_person_time
+  tone: not_self_help; fun_game_first
+
+post_launch:
+  vision: disneyland_of_diverse_worlds_for_your_proxi
+  proxi_as_you: memories_shape_actions_in_new_settings
+
+privacy:
+  source: u/Kiwilolo_answer
+  rule: nothing_leaves_home_world_without_explicit_choice
+
+show_connections:
+  - path: ../2024-12-17-breakthrought1d-proxi-stream/proxi-mind-world.yml
+    why: mind world mechanics on charity stream
+  - path: ../2025-12-will-wright-dev-diaries/proxi-software-heirloom.yml
+    why: grandmother shared-memory beat
+  - path: ../2025-12-will-wright-dev-diaries/bartle-player-types.yml
+    why: storyteller/creator split
+  - path: ../2025-04-29-venturebeat-proxi-funding-crisis/proxi-pitch-parallels.yml
+    why: 24/100 memory density; memory categories
+  - path: ../don-youtube-storymaker-demo/README.md
+    why: StoryMaker / Bar Karma / player-as-storyteller lineage

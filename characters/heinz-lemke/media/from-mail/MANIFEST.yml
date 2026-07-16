@@ -2,9 +2,13 @@
 
 character: heinz-lemke
 consent_note: Public respectful portrayal for invitation browsing; subject may request removal
-artifact_count: 6
+artifact_count: 7
 
 artifacts:
+  - file: from-mail/roy-eagleson-identified-heinz-pdp7-light-pen.png
+    kind: photo
+    title: "Heinz Lemke at PDP-7 + light pen (Roy Eagleson ID, Jul 2026)"
+    metadata: roy-eagleson-identified-heinz-pdp7-light-pen.yml
   - file: from-mail/paper-datastructuresforanetworkdesignsystem.pdf
     kind: paper
     title: "paper-datastructuresforanetworkdesignsystem"

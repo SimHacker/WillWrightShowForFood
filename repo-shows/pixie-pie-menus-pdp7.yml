@@ -222,8 +222,13 @@ interview_center:
   andrew_armit_coons_pdp7:
     ask: "Alan Kay remembers Andrew Armit at Utah with Coons patches on PDP-7 — parallel to PIXIE. Can we find film? What did Cambridge graphics export to Utah?"
     kay_side_note: characters/andrew-armit/sources/alan-kay-utah-coons-patches.md
+    barn_archive_2026_07_16: characters/andrew-armit/sources/2026-07-16-armit-archive-manifest.md
+    character: characters/andrew-armit/
+    invitation: characters/andrew-armit/invitation.md
     heinz_echo: "Armit's Coons patch system — another UK graphics line ignored in US textbooks"
-    on_air: "PDP-7 double feature — radial menus vs Coons patches; Don archive sniff"
+    film_update: "Jul 2026 — Armit confirms Multipatch film existed; barn notes; shown with Henri Gouraud on US CAD tour"
+    simulation: "Octal listings + PDP-7/340 manuals — second emulator target beside PIXIE"
+    on_air: "PDP-7 double feature — radial menus vs Coons patches; barn scan party; Alan↔Andrew dedication beat"
   newman_sproull_canon_correction:
     ask: "Roy Eagleson found PIXIE in Newman & Sproull as ref 520 — 'movable menu,' not radial/pie menu. What should the textbook have said?"
     with: characters/roy-eagleson/
@@ -237,6 +242,17 @@ interview_center:
   medical_automation_today:
     ask: "How does Heinz see the line from early graphical interaction/CAD to his later medical-computing work?"
     bridge: "PIXIE was graphical man-machine communication for design; CARS is model-guided human-computer assistance in medicine."
+  cars_2027_berlin_hci:
+    date: 2027-06-29
+    ask: "Can PIXIE re-implementation, ELIZA history, and Human-AI model interaction share one HCI session in Berlin?"
+    participants:
+      roy_uwo: characters/roy-eagleson/sources/2026-07-14-uwo-pixie-reimplementation.md
+      leo_joskowicz: characters/leo-joskowicz/sources/heinz-2026-07-cars2027-eliza-proposal.yml
+      mario_cypko: characters/mario-cypko/sources/model-guided-medicine-cars.md
+    characters:
+      - characters/leo-joskowicz/
+      - characters/mario-cypko/
+    on_air: "60th anniversary Cambridge lecture — emulated PIXIE + Weizenbaum quote + transparent clinical models"
   lars_pdp7_type340_emulation:
     ask: "What did the PDP-7 + Type 340 + light pen actually do — and how do we emulate it faithfully today?"
     with: characters/lars-brinkhoff/

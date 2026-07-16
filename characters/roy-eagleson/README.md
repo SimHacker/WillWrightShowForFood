@@ -72,6 +72,17 @@ re-implementation** (Thompson & Ritchie eating PDP-7 cycles with Unix/C, ha). He
 
 Full thread: [**10 July storyline**](../heinz-lemke/sources/2026-07-10-pixie-storyline-thread.md)
 
+## 14 July — UWO students re-implement PIXIE
+
+Roy confirmed **UWO students** want to re-implement **PIXIE** as an HCI exercise — same pedagogical
+move as Sketchpad (rediscover data structures → OOP), now paired with his **hardware/software
+co-design** course (design ISA + compiler from scratch). Asked Heinz for the PDP-7 assembly.
+
+Heinz (15 Jul): **125 pages** to digitize; points students to thesis Appendix 4 + 1969 film first;
+**CARS 2027 Berlin HCI session, 29 June 2027** as presentation target if they don't give up.
+
+→ [`sources/2026-07-14-uwo-pixie-reimplementation.md`](sources/2026-07-14-uwo-pixie-reimplementation.md)
+
 ## Don welcomes Roy — 10 July 17:59
 
 Don replied directly: **no Wilkes Sims avatar** — a [memorial room](../maurice-wilkes/memorial.md)
@@ -89,7 +100,8 @@ PDP-10 love; *The Americans* ARPANET scene going up unlisted for fair-use commen
 | **Email thread** | [`../heinz-lemke/sources/2026-07-07-pixie-trio-thread.md`](../heinz-lemke/sources/2026-07-07-pixie-trio-thread.md) |
 | **Sutherland / Sketchpad** | [`../ivan-sutherland/`](../ivan-sutherland/) |
 | **Kelly Booth** (his HCI mentor) | [`../kelly-booth/`](../kelly-booth/) |
-| **10 July thread** (Newman/Sproull, photo) | [`../heinz-lemke/sources/2026-07-10-pixie-storyline-thread.md`](../heinz-lemke/sources/2026-07-10-pixie-storyline-thread.md) |
+| **14 Jul — UWO PIXIE project** | [`sources/2026-07-14-uwo-pixie-reimplementation.md`](sources/2026-07-14-uwo-pixie-reimplementation.md) |
+| **16 Jul thread** (125 pages, CARS 2027, Armit archive) | [`../heinz-lemke/sources/2026-07-16-pixie-storyline-thread.md`](../heinz-lemke/sources/2026-07-16-pixie-storyline-thread.md) |
 | **9 July storyline thread** | [`../heinz-lemke/sources/2026-07-09-pixie-storyline-thread.md`](../heinz-lemke/sources/2026-07-09-pixie-storyline-thread.md) |
 | **Photo — Heinz at PDP-7** (Roy: *"Aha. It's you!"*) | [`../heinz-lemke/media/from-mail/roy-eagleson-identified-heinz-pdp7-light-pen.png`](../heinz-lemke/media/from-mail/roy-eagleson-identified-heinz-pdp7-light-pen.png) |
 | **Wilkes memorial** (Don invited Roy's contributions) | [`../maurice-wilkes/memorial.md`](../maurice-wilkes/memorial.md) |

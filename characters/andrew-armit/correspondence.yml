@@ -1,0 +1,38 @@
+# Andrew Armit — correspondence digest (public-safe)
+# Primary PIXIE thread transcripts under heinz-lemke/sources/.
+
+meta:
+  with: andrew-armit
+  curated_by: don-hopkins
+  consent: not_yet_asked
+  span: "2026-07 — PIXIE / Rainbow Repo Show thread (Cc)"
+  contact_public: "http://armit.com/ (site contact form)"
+
+gist: |
+  Cambridge graphics pioneer; Utah PDP-7 visitor (~1968–69). Jul 2026: major barn-archive inventory
+  on thread — octal listings, manuals, films, PGM hardware. Heinz planning visit near Cambridge.
+  Alan Kay mutual praise (16 Jul).
+
+threads:
+  alan_kay_utah_side_note_2026_07_10:
+    transcript: ../heinz-lemke/sources/2026-07-10-pixie-storyline-thread.md
+    digest: sources/alan-kay-utah-coons-patches.md
+    what: |
+      Kay remembers Armit as extended Utah visitor — Coons patches on PDP-7, months-long stay,
+      "quite impressive." Asks Don/Heinz to find film of system working.
+    show_use: "Film hunt segment; PDP-7 double feature with PIXIE"
+
+  barn_archive_manifest_2026_07_16:
+    transcript: ../heinz-lemke/sources/2026-07-16-pixie-storyline-thread.md
+    digest: sources/2026-07-16-armit-archive-manifest.md
+    what: |
+      Full inventory: Multipatch/Multiobject octal + PDP-7/340 manuals; Titan extracode; ICON
+      assembler+BCPL; Multipatch film (Gouraud US tour); TAG 100K lines; PGM machine+video;
+      VG3400 WCS panel. ICON 3D weekend rewrite story. Mutual dedication exchange with Kay.
+    show_use: "Preservation roadmap; simulation targets for Lars + UWO students"
+
+connects_in_repo:
+  - { path: README.md, why: "Character room" }
+  - { path: CHARACTER.yml, why: "Machine-readable bio + invitation" }
+  - { path: ../heinz-lemke/correspondence.yml, why: "PIXIE thread parent" }
+  - { path: ../alan-kay/sources/2026-07-12-wilkes-parc-london.md, why: "Kay on thread same week" }

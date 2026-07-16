@@ -2,6 +2,10 @@
 
 Beats captured from Will on camera — plus filfre / Maxis / Minecraft cluster links.
 
+**Not the same session as** the [Dec 2024 Breakthrough T1D Twitch stream](../2024-12-17-breakthrought1d-proxi-stream/README.md)
+(mind world + PC Gamer recap) or the [Nov 2024 Reddit AMA](../2024-11-12-reddit-ama-proxi/README.md).
+See [Proxi cluster index](../proxi-gallium-public-index.md).
+
 ## Source
 
 | | |

@@ -1,0 +1,46 @@
+# Heinz proposal — CARS 2027 Berlin HCI / ELIZA session
+
+character: leo-joskowicz
+source: heinz-lemke email 2026-07-15
+consent: not_yet_asked
+
+event:
+  congress: CARS 2027
+  city: Berlin
+  date: 2027-06-29
+  session: special HCI session
+  anniversary: 60 years since Heinz first lecture Cambridge Mathematical Laboratory (PIXIE origin)
+
+heinz_proposal:
+  joskowicz_topic: "HCI activities related to Joe Weizenbaum's system ELIZA"
+  joskowicz_attribution: "studied ELIZA extensively in the earlier part of his career"
+  cypko_topic: "Human-AI Model Interaction (Heinz encouraging)"
+  roy_topic: "UWO students PIXIE re-implementation if project proceeds"
+
+verification:
+  eliza_study:
+    status: unverified_publicly
+    note: |
+      No ELIZA/Weizenbaum/NLP entry found in Joskowicz public CV, Wikipedia, or ELSC page as of Jul 2026.
+      Pull-in: ask Joskowicz to cite papers, course notes, or thesis work if presenting.
+  joskowicz_cars_role:
+    status: verified
+    sources:
+      - https://www.cs.huji.ac.il/~josko/publications/joskowicz-leo-cv-full.pdf
+      - https://en.wikipedia.org/wiki/Leo_Joskowicz
+  nagoya_2026:
+    status: heinz_attribution
+    note: "Heinz sure Roy Eagleson met Joskowicz at CARS 2026 Nagoya"
+
+weizenbaum_heinz_bridge:
+  verified:
+    - "Heinz met Weizenbaum at MIT when presenting PIXIE (1969 US tour)"
+    - "Weizenbaum visiting professor TU Berlin; decades in Germany"
+    - "Heinz cites Weizenbaum human-not-machine quote in 2024 MGM editorial (doi:10.1007/s11548-024-03097-z)"
+  show_hook: "1969 PIXIE demo → ELIZA contemporaries → conscientious objector / model science today"
+
+transcript: ../../heinz-lemke/sources/2026-07-16-pixie-storyline-thread.md
+
+see_also:
+  - ../mario-cypko/sources/model-guided-medicine-cars.md
+  - ../../heinz-lemke/pull-in-gaps.md#cars_2027_hci_session

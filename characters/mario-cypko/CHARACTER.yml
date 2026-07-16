@@ -1,0 +1,74 @@
+# Mario A. Cypko — invitation portrayal. NOT Mario A. Cypko.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: mario-cypko
+  name: "Mario A. Cypko"
+  type: invitation
+  signifier: "🧬"
+  status: living
+  field: "Medical AI, model-guided medicine, human–AI model interaction"
+  home: characters/mario-cypko/
+  affiliation: "Hahn-Schickard — Head of Medical AI and Modeling (MedAIM); lecturer, University of Freiburg"
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/pixie-pie-menus-pdp7.yml
+  note: |
+    Heinz collaborator — PhD/diploma supervision; barn patient-modelling video (consent TBD).
+    Cc'd 15 Jul 2026 for CARS 2027 Human-AI session. Active CARS Model-Guided Medicine organizer.
+
+relationship:
+  to_project: cars_2027_prospect
+  to_heinz: |
+    PhD (2017, Leipzig/ICCAS) and diploma thesis supervised by **Heinz U. Lemke** (with Prof. Andreas
+    Dietz, MD). Advocates **Medical Model Science** — term from Lemke. iSMIT Patient Safety Award 2025
+    credited Lemke as pioneer (public LinkedIn post). Patient-modelling video filmed at Heinz's barn
+    (Don/Heinz correspondence — consent not_yet_asked).
+  to_model_guided_medicine: |
+    Lead author/editor with Heinz Lemke and Dirk Wilhelm on Model-Guided Medicine at CARS; co-organizer
+    CARS workshops; head of MedAIM developing transparent clinical models + wearables + LLM-guided
+    knowledge modelling with human-in-the-loop.
+
+bio:
+  summary: |
+    **Dr.-Ing. Mario A. Cypko** — Head of **Medical AI and Modeling (MedAIM)** at **Hahn-Schickard**
+    (Freiburg), lecturer at **University of Freiburg**. PhD in computer-assisted medicine (**University
+    of Leipzig / ICCAS**, 2017) on multidisciplinary oncology decision support using **Bayesian networks**;
+    Springer thesis [9783658325930](https://www.springer.com/de/book/9783658325930). Diploma in computer
+    science (**Freie Universität Berlin**, 2013, medical informatics major, psychology minor). Postdocs:
+    **ESA** Human Research (2017–2019), **German Heart Center Berlin** (2020–2021), **Matters of Activity /
+    FU Berlin HCC** (2021–2023). Research: **Model-Guided Medicine**, transparent clinical AI, digital
+    patient twins, wearable vitals, human-in-the-loop model interaction. CARS organizing/program
+    committee member; initiated **Digital Space Medicine** sessions at CARS with ESA colleagues.
+  projects:
+    - name: KI-Compass
+      role: Scientific lead (per Uni Freiburg press release)
+      focus: "AI-supported follow-up after esophageal cancer; smartwatch + clinical data; explainable digital patient models"
+      url: "https://www.uniklinik-freiburg.de/presse/pressemitteilungen/detailansicht/6855-ki-gestuetzte-nachsorge-nach-krebstherapie-soll-herz-probleme-frueher-zeigen.html"
+
+sources:
+  web:
+    - { title: "mariocypko.com", url: "https://www.mariocypko.com/" }
+    - { title: "About me — mariocypko.com", url: "https://www.mariocypko.com/about-me" }
+    - { title: "FU Berlin HCC former member page", url: "https://www.mi.fu-berlin.de/en/inf/groups/hcc/former-members/cypko.html" }
+    - { title: "ICCAS Leipzig staff archive", url: "https://www.iccas.de/en/mitarbeiter/mario-cypko/" }
+    - { title: "Hahn-Schickard Digital Health Research Night", url: "https://www.hahn-schickard.de/en/digital-health-research-night" }
+    - { title: "PhD thesis (Springer)", url: "https://www.springer.com/de/book/9783658325930" }
+    - { title: "Model guided medicine and the search for truth (Lemke editorial, 2024)", url: "https://doi.org/10.1007/s11548-024-03097-z" }
+  email:
+    - { title: "Heinz CARS 2027 proposal (Cc)", digest: ../heinz-lemke/sources/2026-07-16-pixie-storyline-thread.md }
+
+see_also:
+  - { path: ../heinz-lemke/, why: "PhD supervisor; CARS/IFCARS; barn video; PIXIE→MGM arc" }
+  - { path: ../leo-joskowicz/, why: "Co-invitee CARS 2027 Berlin HCI session" }
+  - { path: sources/mariocypko-com-profile.md, why: "Public web digest" }
+  - { path: sources/model-guided-medicine-cars.md, why: "CARS/MGM publications and roles" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Modern CARS half of PIXIE two-episode pitch" }

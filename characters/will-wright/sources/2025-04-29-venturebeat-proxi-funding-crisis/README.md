@@ -44,7 +44,10 @@ The Sims was — plus Gallium's **runway crisis** and a transparent fundraising 
 
 ## Related
 
-- [Will Wright Dev Diaries (Dec 2025)](../2025-12-will-wright-dev-diaries/README.md) — heirloom, Minecraft export, Bartle types
+- [Reddit AMA (Nov 2024)](../2024-11-12-reddit-ama-proxi/README.md) — design manifesto; VB cites AMA
+- [Breakthrough T1D stream (Dec 2024)](../2024-12-17-breakthrought1d-proxi-stream/README.md) — charity demo cited in article
+- [Will Wright Dev Diaries YouTube (Dec 2025)](../2025-12-will-wright-dev-diaries/README.md) — heirloom, Minecraft export, Bartle types
+- [Proxi cluster index](../proxi-gallium-public-index.md)
 - [Soul of The Sims / Motive.c](../2008-02-10-soul-of-the-sims/README.md) — needs/objects substrate
 - [1996 Winograd / Dollhouse](../1996-04-26-winograd-interfacing-to-microworlds/README.md) — architecture → people pivot
 - [Subutai / Numenta](../../../subutai-ahmad/sources/numenta-proxi-partnership.md)
