@@ -1,11 +1,9 @@
 #!/bin/sh
-# Remove pre-push hook if present. No blocking hooks installed.
+# Point git at the repo's checked-in hooks (.githooks/) so commits and pushes
+# run the same YAML verification as CI. Runs automatically via pnpm prepare.
 set -e
 root="$(cd "$(dirname "$0")/.." && pwd)"
-dest="$root/.git/hooks/pre-push"
-if [ -f "$dest" ]; then
-	rm -f "$dest"
-	echo "Removed pre-push hook."
-else
-	echo "No pre-push hook installed."
-fi
+cd "$root"
+git config core.hooksPath .githooks
+chmod +x .githooks/pre-commit .githooks/pre-push
+echo "Git hooks installed (core.hooksPath = .githooks)."

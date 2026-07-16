@@ -1,0 +1,11 @@
+#!/bin/sh
+# Block commits that would fail CI (PR Checks / verify:yaml).
+set -e
+root="$(git rev-parse --show-toplevel)"
+cd "$root"
+if ! node scripts/verify-yaml.mjs; then
+	echo ""
+	echo "COMMIT BLOCKED: YAML verification failed (same check as CI)."
+	echo "Fix the errors above, then commit again."
+	exit 1
+fi

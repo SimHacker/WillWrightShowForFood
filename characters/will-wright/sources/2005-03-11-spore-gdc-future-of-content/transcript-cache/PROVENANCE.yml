@@ -42,7 +42,7 @@ upstream:
         role: official_session
         note: Full session listing in GDC Extras; sibling to GDC Vault 1019981
   dead_links:
-    - http://video.google.com/videoplay
+    - url: http://video.google.com/videoplay
       note: Original Google Video distribution (dead)
   related_gdc_vault:
     - title: "SPORE's Magic Crayons — Chaim Gingold"

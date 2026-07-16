@@ -9,6 +9,8 @@
 		"test": "pnpm -r --stream --if-present run test",
 		"verify:yaml": "node scripts/verify-yaml.mjs",
 		"verify": "pnpm run verify:yaml",
+		"prepare": "sh scripts/install-git-hooks.sh",
+		"hooks:install": "sh scripts/install-git-hooks.sh",
 		"facades": "node scripts/generate-markup-facades.mjs --force",
 		"facades:check": "node scripts/generate-markup-facades.mjs --check",
 		"scaffold:characters": "node scripts/scaffold-invitation-characters.mjs",

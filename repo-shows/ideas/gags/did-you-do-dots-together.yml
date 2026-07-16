@@ -51,9 +51,9 @@ variations:
   stanford_debt_pivot:
     beat: Guest tries serious answer (Softbank, debt rounds); Glick hears scandal not finance case
   release_valve_headline:
-    beat: Someone reads CNN headline aloud — "DoDots: The Web without a browser" — room exhales
+    beat: 'Someone reads CNN headline aloud — "DoDots: The Web without a browser" — room exhales'
   tomtom_bridge:
-    beat: "And then you hired him? More dots? In Amsterdam?" — second reunion act
+    beat: '"And then you hired him? More dots? In Amsterdam?" — second reunion act'
   flatterbot_crossover:
     beat: Jason credits Bobo for DirectX book → "speaking of Bobo, did you Do Dots Together?"
     parent: ../traditions/flatterbot-2000.yml#signature_beats.directx_bobo_correction

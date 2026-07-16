@@ -23,7 +23,7 @@ with full credit to the people who lived the history. I'd love to interview you 
 
 ## Why you
 
-You've been in my orbit since before most people knew what the web was for.
+We've been in similar orbits since before most people knew what the web was for.
 
 In **1996**, Marc Weber interviewed you and **Tim Pozar** for the Computer History Museum — TLG,
 WAIS, and the Internet Archive while it was still being born. You said you kept the **early WAIS search
