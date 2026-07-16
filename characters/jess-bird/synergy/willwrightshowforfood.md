@@ -16,7 +16,7 @@ Don's position, in one line: he'd rather **Jess do the documenting at TV scale**
 
 - **Subject:** Will Wright, Maxis, The Sims lineage
 - **Ethic:** record people while they're here; honor memorial interviews
-- **Sources:** [Jess's July 2026 note](../sources/2026-07-07-email-excerpt.md) ·  
+- **Sources:** [correspondence timeline](../correspondence.md) ·  
 [Will's source archive](../../will-wright/sources/) ·  
 [the Maxis people roster](../../will-wright/media/sims-series-maxis-people.md)
 

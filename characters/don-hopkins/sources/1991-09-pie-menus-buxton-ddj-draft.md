@@ -25,7 +25,7 @@ Don's reply:
 - Rewriting since original submission; interested in **some form** of DDJ article.
 - Latest code: **~1400 lines** object-oriented **PostScript** for **The NeWS Toolkit (TNT)** on OpenWindows.
 - Techniques on display: event handling, mouse tracking, timers, state machines, **display preemption**, lightweight processes, animation, rubber banding, multiple inheritance.
-- **Videotapes**: pie menus, tab windows, **PizzaTool** — offers copy + in-person walkthrough (415-336-3171 / 415-969-2348).
+- **Videotapes**: pie menus, tab windows, **PizzaTool** — offers copy + in-person walkthrough ([phone redacted] / [phone redacted]).
 
 Valdes (6 Sep): two-article split —
 

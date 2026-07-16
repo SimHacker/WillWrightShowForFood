@@ -40,7 +40,7 @@ This complements the Nov–Dec 2006 timeline in [simcity-open-source-saga](../si
 | **John Gilmore** | OLPC / [email redacted] side of the pitch |
 | **Josh Siegel** | CC on permission thread |
 
-Charles offered follow-up by phone (512-948-5200 in 2013 mail — verify before publish).
+Charles offered follow-up by phone ([phone redacted] in 2013 mail).
 
 ---
 

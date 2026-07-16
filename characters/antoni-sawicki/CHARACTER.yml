@@ -83,7 +83,7 @@ other_projects:
   openttd_nt_risc: "LLM-assisted downgrade of OpenTTD to Visual C 4.0 for Alpha/MIPS/PowerPC"
 
 contact:
-  email: antoni@sawicki.cc
+  # email in DonHopkins green-room/contacts/guest-emails.yml
   channel: "Direct email to Don (warm; Jul 2026 — Antoni initiated)"
   site: https://www.tenox.net/
 

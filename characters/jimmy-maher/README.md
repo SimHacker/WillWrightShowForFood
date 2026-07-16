@@ -35,7 +35,7 @@ He lives with his wife **Dorte** near **Billund, Denmark** (formerly Dallas). Hi
 
 ## Contact (public)
 
-**maher@filfre.net** — parallel collaboration invite queued; no public guest pitch until he opts in.
+Parallel collaboration invite queued; no public guest pitch until he opts in.
 
 ## Browse
 

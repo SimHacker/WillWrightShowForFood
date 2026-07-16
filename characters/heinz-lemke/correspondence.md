@@ -9,7 +9,7 @@ Machine index: [`correspondence.yml`](correspondence.yml) · [Portrayal standard
 
 ## Gist
 
-Don found Heinz through Bill Buxton's research trail. Warm, long-running exchange: PIXIE paper and 1969 film (Cambridge Univ Library digitization via David Chapman); Don's *Flight of the PIXIE* homage edit (Bumblebee score; pie menus as rapid flight); CARS congress and model-guided medicine; Will Wright modelling talk; YouTube captioning workflow; Black Forest farmhouse (Bechtersbohl); Mario Cypko patient-modelling video in the barn.
+Don found Heinz through Bill Buxton's research trail. Warm, long-running exchange: PIXIE paper and 1969 film (Cambridge Univ Library digitization via David Chapman); Don's *Flight of the PIXIE* homage edit (Bumblebee score; pie menus as rapid flight); CARS congress and model-guided medicine; Will Wright modelling talk; YouTube captioning workflow; Black Forest farmhouse; Mario Cypko patient-modelling video in the barn.
 
 CARS 2025 Berlin workshop proposal — game thinking for healthcare interfaces. Don wants CHM oral history for Heinz while first-hand memory remains.
 

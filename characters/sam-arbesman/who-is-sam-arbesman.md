@@ -84,6 +84,6 @@ clips from Will + Chaim; one-on-one or live if scheduling works. Sam suggests ot
 
 ## Contact (public)
 
-- samuel@arbesman.net · speaking@arbesman.net · [arbesman.net](https://arbesman.net/)
+- [arbesman.net](https://arbesman.net/)
 
 ↑ [README](README.md)

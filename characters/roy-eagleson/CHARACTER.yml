@@ -42,7 +42,7 @@ bio:
     Utah genealogy (Kay, Clark, Blinn, Phong, Gouraud, Fuchs, Catmull, Warnock).
 
 sources:
-  email: eagleson@uwo.ca
+  # email in DonHopkins green-room/contacts/guest-emails.yml
   transcript: ../heinz-lemke/sources/2026-07-07-pixie-trio-thread.md
   transcript_2: ../heinz-lemke/sources/2026-07-09-pixie-storyline-thread.md
 

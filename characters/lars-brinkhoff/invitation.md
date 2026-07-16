@@ -101,7 +101,7 @@ stepping stone); capture at least one radial-menu interaction on stream; ship ri
 
 ## Format
 
-Remote is perfect — Gothenburg, Bechtersbohl, Menlo Park, and Amsterdam are all real places on
+Remote is perfect — Gothenburg, Black Forest, Menlo Park, and Amsterdam are all real places on
 the internet. **Heinz** and **David** join as co-guests on the **same call** (or short follow-ups
 if that's easier — your call).
 

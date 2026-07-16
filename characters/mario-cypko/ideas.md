@@ -9,7 +9,7 @@ clinical AI, human-in-the-loop — CARS today.
 
 ## 2. Barn video (consent first)
 
-Patient-modelling footage at Heinz's Bechtersbohl — [`../heinz-lemke/correspondence.yml`](../heinz-lemke/correspondence.yml).
+Patient-modelling footage at Heinz's Black Forest barn — [`../heinz-lemke/correspondence.yml`](../heinz-lemke/correspondence.yml).
 Only on air with Mario + Heinz approval.
 
 ## 3. CARS 2027 Human-AI model interaction

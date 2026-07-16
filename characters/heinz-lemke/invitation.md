@@ -136,7 +136,7 @@ you correct our mental model from the console.
 
 ## Format
 
-Remote is perfect — Bechtersbohl, Gothenburg, Menlo Park, and Amsterdam are all real places on
+Remote is perfect — Black Forest, Gothenburg, Menlo Park, and Amsterdam are all real places on
 the internet. **David** and **Lars** join as co-guests on the **same call** (or short follow-ups
 if that's easier — your call). In-person if I ever get to visit the farmhouse properly.
 

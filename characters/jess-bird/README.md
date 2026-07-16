@@ -40,8 +40,7 @@ SimRefinery work survived on the page.
 | **Tim LeTourneau**      | Interviewed Tim before his passing — Don shares Jess's wish that **Tim's words live on** in the history                                 |
 | **Repo Show curiosity** | July 2026 — browsed [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood); wants to keep things moving together   |
 
-Latest excerpt: [`sources/2026-07-07-email-excerpt.md`](sources/2026-07-07-email-excerpt.md) ·
-full timeline: [**correspondence**](correspondence.md)
+Full timeline: [**correspondence**](correspondence.md)
 
 ## Synergy with this repo
 

@@ -75,7 +75,7 @@ why_the_show_cares:
   skinnyhacking: "Paul photographed the Skinnyhackers poster; SIGGRAPH '92 page 252 Easter egg — HN 34129571 citation"
 
 contact:
-  email: paulhaeberli@gmail.com   # 2010-era; verify
+  # email in DonHopkins green-room/contacts/guest-emails.yml
   channel: "Warm — direct email from Don"
 
 correspondence: correspondence.yml

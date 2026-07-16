@@ -23,7 +23,7 @@ invitation:
   show_seed: repo-shows/pixie-pie-menus-pdp7.yml
   note: |
     On PIXIE thread (Cc Jul 2026); active correspondent — barn archive email 16 Jul 2026.
-    Heinz planning Haslingfield visit. Async solo video fine; pair with Heinz or Alan Kay Utah beat.
+    Async solo video fine; pair with Heinz or Alan Kay Utah beat.
 
 relationship:
   to_project: thread_guest
@@ -43,8 +43,8 @@ bio:
     (~1968–69) with Coons-patch interactive CAD — **Alan Kay** in awe. Author of 20+ academic papers
     and a school mathematics textbook. Later: high-performance **signal amplifiers** (electron microscopy
     backscatter — Leo/Zeiss, KE Developments); **Intellisense** environmental measurement (25+ countries);
-    consumer designs (**CoreStuff**, **TAKT** metronome watch for Parkinson's gait). Autobiography
-    *Mind My Machine*. Lives near Cambridge (Haslingfield area).
+    consumer designs (**CoreStuff**, **TAKT** gait metronome watch). Autobiography
+    *Mind My Machine*. Lives near Cambridge.
   timeline:
     - { when: "1966", what: "Self-built oscilloscope from 50µA meter + surplus 3-inch CRT — used in own construction" }
     - { when: "~1968–69", what: "Utah visitor — Multipatch/Coons patches on PDP-7; US CAD tour with Henri Gouraud" }
@@ -65,7 +65,7 @@ sources:
 
 see_also:
   - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "PDP-7 double feature — PIXIE + Multipatch" }
-  - { path: ../heinz-lemke/, why: "ICON co-author; PDP-7 lab mate; Haslingfield visit planned" }
+  - { path: ../heinz-lemke/, why: "ICON co-author; PDP-7 lab mate" }
   - { path: ../alan-kay/, why: "Utah witness; mutual dedication beat" }
   - { path: ../ivan-sutherland/, why: "Utah lab context during Armit visit" }
   - { path: ../roy-eagleson/, why: "UWO PIXIE re-implementation — parallel educator arc" }

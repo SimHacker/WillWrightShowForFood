@@ -114,7 +114,7 @@ oral history — if you're both willing — whether on this call or separately.)
 
 ## Format
 
-Remote is perfect — Menlo Park, Bechtersbohl, Gothenburg, and Amsterdam are all real places on
+Remote is perfect — Menlo Park, Black Forest, Gothenburg, and Amsterdam are all real places on
 the internet. **Heinz** and **Lars** join as co-guests on the **same call** (or short follow-ups
 if that's easier — your call).
 

@@ -59,7 +59,7 @@ media:
     - { path: media/kelly-booth-casual.png, sidecar: media/kelly-booth-casual.yml }
 
 sources:
-  email: ksbooth@cs.ubc.ca
+  # email in DonHopkins green-room/contacts/guest-emails.yml
   career: sources/career-and-awards.yml
   thread: ../heinz-lemke/sources/2026-07-09-pixie-storyline-thread.md
   awards:

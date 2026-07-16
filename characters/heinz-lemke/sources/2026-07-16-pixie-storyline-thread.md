@@ -118,7 +118,7 @@ rewrote proposal over a weekend to be **fully 3D**; presented at *"grand meeting
 
 Upper management concluded he was fully engaged.
 
-Heinz planning visit — Armit lives **Haslingfield**, near Cambridge.
+Heinz planning a visit near Cambridge when logistics allow.
 
 **Show hook:** Multipatch film hunt now has a witness who says *"there no doubt was one"* + notes
 from when it was made. Alan's Utah awe + Andrew's octal listings = preservation gold rush.

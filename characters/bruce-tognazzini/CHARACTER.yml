@@ -23,7 +23,7 @@ invitation:
   document: invitation.md
   show_seed: repo-shows/ask-tog.yml
   priority: elders_priority   # reach him while we can; he is in his 80s
-  channel: "tog2026@asktog.com (address rotates yearly; tog2023 worked in Nov 2023)"
+  channel: "AskTog public contact form (address rotates yearly) — see green-room/contacts"
 
 bio:
   summary: "**Bruce Tognazzini (Tog)** — Apple employee #66 (1978); founded Apple's Human Interface Group and wrote the original **Apple Human Interface Guidelines** through eight editions over fourteen years. *Tog on Interface* (1992), *Tog on Software Design* (1996). SunSoft **Starfire** future-vision film (1994). Principal, **Nielsen Norman Group** with Jakob Nielsen and Don Norman. Author of **AskTog.com** and the *First Principles of Interaction Design*. Trained stage magician who treats interface design as applied misdirection-in-reverse. Wrote *The Infinite No. of Monkeys* Apple II demo (1979) — which Palm answered in 2026."

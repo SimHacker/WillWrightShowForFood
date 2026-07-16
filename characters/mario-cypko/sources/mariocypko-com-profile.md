@@ -57,7 +57,7 @@ lists Dr. Mario Cypko as Head of Medical AI and Modeling.
 ## Repo-only (consent pending)
 
 Heinz/Don correspondence references a **patient-modelling video** filmed at Heinz's barn in
-Bechtersbohl — not published here until consent confirmed.
+Black Forest barn footage — location detail stays private until consent confirmed.
 
 → [`../heinz-lemke/correspondence.yml`](../../heinz-lemke/correspondence.yml) (`mario_cypko_barn`)
 

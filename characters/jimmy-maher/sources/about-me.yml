@@ -38,7 +38,7 @@ support_model:
   note: Patreon patrons get email notifications of new posts (per filfre comments)
 
 contact:
-  email: maher@filfre.net
+  # email in green-room/contacts
   public_form: filfre.net right-hand gutter / article footers
 
 social:

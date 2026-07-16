@@ -18,8 +18,7 @@ representation:
   note: "Public-source portrayal. Long Now 2006 asker — identified Jul 2026. May edit or delete anytime."
 
 contact:
-  email: dan@simplerevolutions.com
-  alt_email: da@simplerevolutions.com
+  # emails in DonHopkins green-room/contacts/guest-emails.yml
   web: https://danancona.com/
   x: https://x.com/DanAncona
   substack: https://chartingthewayforward.substack.com/

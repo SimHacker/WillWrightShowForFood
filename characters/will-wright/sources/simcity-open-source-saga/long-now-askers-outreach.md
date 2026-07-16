@@ -25,7 +25,7 @@ Stewart Brand (verbatim on recording): *"dan ancona and a mark live"* — two pe
 
 | Channel | Link / address |
 |---------|----------------|
-| Email | [dan@simplerevolutions.com](mailto:dan@simplerevolutions.com) · da@simplerevolutions.com |
+| Email | (DonHopkins green-room/contacts) |
 | Web | [danancona.com](https://danancona.com/) |
 | X | [@DanAncona](https://x.com/DanAncona) |
 | Substack | [chartingthewayforward.substack.com](https://chartingthewayforward.substack.com/) |

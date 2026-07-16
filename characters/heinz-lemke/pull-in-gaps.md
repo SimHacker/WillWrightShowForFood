@@ -136,7 +136,7 @@ Jul 2026 inventory: Multipatch/Multiobject octal listings, PDP-7/340 manuals, Ti
 | Field | Value |
 |-------|-------|
 | Status | offered (not yet scanned) |
-| Pull in | Coordinate with Heinz Haslingfield visit; prioritize Multipatch + film notes |
+| Pull in | Coordinate with Heinz Cambridge-area visit; prioritize Multipatch + film notes |
 | Doc | [../andrew-armit/sources/2026-07-16-armit-archive-manifest.md](../andrew-armit/sources/2026-07-16-armit-archive-manifest.md) |
 
 ### cars_2027_hci_session

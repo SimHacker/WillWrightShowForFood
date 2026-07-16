@@ -16,7 +16,7 @@ representation:
   authored_by: don-hopkins
   note: |
     Public historian — portrayal from filfre.net About Me + public articles/comments only.
-    Contact via maher@filfre.net until he opts into deeper collaboration. No private mail in repo.
+    Contact via public Digital Antiquarian channels until he opts into deeper collaboration. No private mail in repo.
 
 invitation:
   status: not_offered
@@ -58,7 +58,7 @@ sites:
   social: [Bluesky DigiAntiquarian, Mastodon DigiAntiquarian]
 
 contact:
-  email: maher@filfre.net
+  # email in DonHopkins green-room/contacts/guest-emails.yml
   source: https://www.filfre.net/about-me/
 
 synergy:

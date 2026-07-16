@@ -17,7 +17,7 @@ to come.
 
 Second site (2019): **The Analog Antiquarian** — Wonders of the World.
 
-Public email: maher@filfre.net
+Public contact: filfre.net
 
 Full comment thread not archived here — see [`about-me.yml`](about-me.yml) for structured notes
 from the public thread (historian practice, UTDallas, insider corrections).

@@ -34,7 +34,7 @@ lend_each_other:
 
 outreach:
   status: contact_next
-  channel: maher@filfre.net
+  channel: email
   tone: parallel invitation — Jess Bird precedent; Rowan thread as opener
   avoid: public Repo Show guest pitch; deep GitHub link dumps in social until video ships
   bio_source: ../sources/about-me.yml

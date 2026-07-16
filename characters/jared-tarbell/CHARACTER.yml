@@ -62,7 +62,7 @@ media:
   launch_poster: media/levitated-launch-poster-2014.png
 
 contact:
-  email: jtarbell@gmail.com
+  # email in DonHopkins green-room/contacts/guest-emails.yml
   channel: "Warm — direct email from Don; decades of history"
 
 correspondence: correspondence.yml

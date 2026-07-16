@@ -8,7 +8,7 @@ spec, interview plan, and draft invitation.
 
 ## Who
 
-**Antoni Sawicki** — **Tenox** — [antoni@sawicki.cc](mailto:antoni@sawicki.cc) — has been putting
+**Antoni Sawicki** — **Tenox** — has been putting
 software where software was never supposed to go since [tenox.net](https://www.tenox.net/) went up in
 **1994**. VirtuallyFun contributor; [github.com/tenox7](https://github.com/tenox7).
 

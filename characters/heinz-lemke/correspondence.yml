@@ -16,7 +16,7 @@ gist: |
   Don's *Flight of the PIXIE* homage edit (Bumblebee score; pie menus as rapid flight —
   not Don's paper or original film); CARS congress and model-guided medicine; Will Wright
   modelling talk; YouTube captioning workflow for Heinz's conferences; Black Forest farmhouse
-  (Bechtersbohl); Mario Cypko patient-modelling video in the barn. CARS 2025 Berlin workshop
+  (Black Forest); Mario Cypko patient-modelling video in the barn. CARS 2025 Berlin workshop
   proposal on game thinking for healthcare interfaces. Don wants CHM oral history for Heinz
   while first-hand memory remains.
 
@@ -58,7 +58,7 @@ threads:
   youtube_captioning:
     what: "Don's captioning workflow for Heinz's conference videos"
   bechtersbohl:
-    what: "Black Forest farmhouse visits — Bechtersbohl; in-person continuity with correspondence"
+    what: "Black Forest farmhouse visits — in-person continuity with correspondence"
   mario_cypko_barn:
     what: "Mario Cypko patient-modelling video filmed in the barn"
   preservation:
@@ -237,7 +237,7 @@ show_hooks:
   - "Alan Kay vs Heinz — light pen vs RAND tablet; Heinz has driver source"
   - "Lemke constellation — David Officer Lemke (Sun/NeWS), Andreas C. Lemke (CHI'90 critics), family TBD"
   - "CARS 2025 Berlin — game thinking for healthcare interfaces"
-  - "Bechtersbohl + Mario Cypko barn video — medicine modelling in the Black Forest"
+  - "Black Forest barn + Mario Cypko patient-modelling video"
   - "Newman/Sproull ref 520 — 'movable menu' vs radial/pie menu (Roy 10 Jul)"
   - "Roy identifies Heinz in mystery photo — 'Aha. It's you!'"
   - "Alan Kay — Andrew Armit Coons patches on PDP-7 at Utah; film hunt"

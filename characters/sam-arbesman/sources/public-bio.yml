@@ -39,8 +39,8 @@ affiliations:
 origin_story: "HyperCard, Martin Gardner, science fiction, LEGO"
 
 contact:
-  email: samuel@arbesman.net
-  speaking: speaking@arbesman.net
+  web: https://arbesman.net/
+  # emails in DonHopkins green-room/contacts
 
 repo_alignment:
   microcosm: microcosm-maxis-labs.md

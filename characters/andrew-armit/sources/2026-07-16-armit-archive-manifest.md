@@ -109,7 +109,8 @@ Possessions: **writable control store panel** for VG3400, full docs + circuits, 
 
 ## Location / visit
 
-Lives **Haslingfield** (near Cambridge). Heinz planning visit (mentioned 12 Jul).
+Lives near Cambridge. Heinz planning a visit when logistics allow (mentioned 12 Jul).
+# Village-level detail: DonHopkins green-room/locations.yml
 
 ---
 

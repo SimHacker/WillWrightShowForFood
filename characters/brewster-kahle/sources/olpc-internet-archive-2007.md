@@ -14,7 +14,7 @@ Don offered to help Internet Archive OLPC applications. Stated:
 - Ported **X11 SimCity** (Don's early-90s Unix port) to OLPC — playable first cut, attached photo.
 - With **Will Wright** and **John Gilmore**, pursuing EA re-license of original SimCity under **GPL** for OLPC.
 - Planned Sugar integration: Python/SWIG, dbus multiplayer, book mode + game controllers, GTK/Cairo maps, pie menus, journaling/storytelling.
-- Offered Friday visit or phone: (510) 418-4968.
+- Offered Friday visit or phone: [phone redacted].
 
 ## 30 January 2007 — Brewster → Don
 

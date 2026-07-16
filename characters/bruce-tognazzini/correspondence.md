@@ -9,7 +9,7 @@ Public-safe summary of the Bruce "Tog" Tognazzini × Don Hopkins correspondence,
 | **Curated by** | Don Hopkins |
 | **Consent** | not yet asked |
 | **Span** | 2022–2026 |
-| **Channel note** | Tog's asktog.com address rotates yearly (tog2021, tog2023, tog2026…) — old ones bounce |
+| **Channel note** | AskTog public contact rotates yearly — see green-room/contacts |
 
 **The gist.** Warm, practical exchange: the AskTog preservation saga, a Fitts'-Law-and-pie-menus
 running conversation, HN coordination offers, and (2026) Palm the monkey's thank-you letter for

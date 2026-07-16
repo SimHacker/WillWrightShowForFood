@@ -11,7 +11,7 @@ authored by Don Hopkins
 
 **Kellogg S. Booth** (universally **Kelly** in the community) — **Professor Emeritus** of
 Computer Science at the [**University of British Columbia**](https://www.ubc.ca/)
-(`ksbooth@cs.ubc.ca`). Distinguished Member of the ACM. One of the few researchers who has
+Distinguished Member of the ACM. One of the few researchers who has
 published substantively in **theory, computer graphics, and HCI**.
 
 He enters **Will Wright Show For Food** on **9 July 2026** when [Roy Eagleson](../roy-eagleson/README.md)

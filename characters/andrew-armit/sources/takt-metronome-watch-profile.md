@@ -11,15 +11,15 @@
 
 ## What TAKT is
 
-**TAKT** — wrist metronome watch designed by Andrew Armit as an **aid for freezing of gait** in
-some people with **Parkinson's Disease**. Generates an audible tick; user synchronizes steps to
-the beat. **Not a cure** — an aid requiring active participation.
+**TAKT** — wrist metronome watch designed by Andrew Armit as a **gait metronome** — an audible
+tick the wearer can step to. Product site frames it as an aid some people use for **freezing of
+gait**. Generates an audible tick; user synchronizes steps to the beat. **Not a cure** — an aid
+requiring active participation.
 
 ## Design context (from About page)
 
 - Armit reports **~75 years** of design experience (site © 2025); work timeline **1966–present**
-- Parkinson's diagnosed around **age 60**; response has been continued design work — *"preoccupation
-  with new designs"*
+- Continued design work as a lifelong practice — *"preoccupation with new designs"*
 - **AVR** microcontroller family (same family as TAKT firmware)
 - Cambridge, UK — Andrew Armit Designs
 
@@ -51,8 +51,7 @@ graphics and electron-microscopy amplifiers at picoamp scale.
 - Top button: stop; auto-stop ~2 minutes after last press
 - **CR2032** battery; back door rotates 60°
 - Not waterproof; not advised with pacemakers
-- Describes **freezing gait**: inability to step through doorways, constrictions, surface changes
-- Technique: set slow rate; small synchronized steps; lengthen stride between beats to unfrozen
+- Technique: set slow rate; small synchronized steps; lengthen stride between beats
 
 ## Disclaimer (site)
 

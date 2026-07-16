@@ -21,7 +21,7 @@ shared_ground:
     collective discovery. Same lane as Tim LeTourneau and memorial interviews.
     characters/will-wright/sources/2025-12-will-wright-dev-diaries/proxi-software-heirloom.yml
   sources:
-    - ../sources/2026-07-07-email-excerpt.md
+    - ../correspondence.yml
     - ../../will-wright/sources/
     - ../../will-wright/media/sims-series-maxis-people.yml
 

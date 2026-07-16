@@ -14,8 +14,7 @@ visitor at **University of Utah** (~1968–69) — Coons-patch interactive CAD t
 
 Today: [**Andrew Armit Designs**](http://armit.com/) — signal amplifiers, electron microscopy
 hardware, environmental sensors, and consumer products including the [**TAKT**](https://www.takt-metronome-watch.co.uk/)
-metronome watch (Parkinson's gait aid). Autobiography ***Mind My Machine***. Lives near Cambridge
-(Haslingfield area — Heinz planning visit, Jul 2026).
+metronome watch (gait metronome). Autobiography ***Mind My Machine***. Lives near Cambridge.
 
 Public profile digest: [`sources/armit-com-profile.md`](sources/armit-com-profile.md) ·
 [`sources/takt-metronome-watch-profile.md`](sources/takt-metronome-watch-profile.md)

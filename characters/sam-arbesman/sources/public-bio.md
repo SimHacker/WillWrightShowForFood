@@ -58,8 +58,7 @@ Product of **HyperCard**, **Martin Gardner**, science fiction, and **LEGO**.
 
 ## Contact (public)
 
-- samuel@arbesman.net — general, research institutions
-- speaking@arbesman.net — speaking engagements
+- Contact via arbesman.net (addresses in green-room)
 
 ---
 

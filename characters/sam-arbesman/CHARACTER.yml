@@ -17,7 +17,7 @@ representation:
 
 contact:
   channel: email
-  email: samuel@arbesman.net
+  # email in DonHopkins green-room/contacts/guest-emails.yml
   warm_contact: true
   intro_via: chaim-gingold
 

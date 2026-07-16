@@ -1,4 +1,5 @@
-# Jess Bird — correspondence timeline
+# Jess Bird — correspondence timeline (public-safe)
+# Verbatim email excerpts: DonHopkins green-room/jess-bird/
 
 meta:
   character: jess-bird
@@ -12,7 +13,7 @@ milestones:
 
   - date: 2025-04-17
     event: video_call
-    note: Research call — Don shared archivist and community leads (Phil Salvador, Alexander Avila — openly trans masc, Heather/Steve).
+    note: Research call — Don shared archivist and community leads (Phil Salvador, Alexander Avila, Heather/Steve).
 
   - date: 2025-04
     event: source_exchange
@@ -33,5 +34,4 @@ milestones:
 
   - date: 2026-07-07
     event: jess_reply
-    public_excerpt: sources/2026-07-07-email-excerpt.md
     note: Jess curious about the repo; wants to keep collaborating; honored Tim; affirmed recording ethic.

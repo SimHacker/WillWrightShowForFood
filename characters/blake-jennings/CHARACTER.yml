@@ -24,8 +24,8 @@ web:
   twitch: https://www.twitch.tv/jakeblennings
   stream_vod_channel: "@JakeBlenningsLive"
   podcast: "@KeepMeYoungPod"
-  email_public_thread: jakeblennings@gmail.com
-  talent: "Stephanie O'Brien — FWB Talent (stephanie@fwbtalent.com)"
+  talent: "Stephanie O'Brien — FWB Talent"
+  # emails in DonHopkins green-room/contacts/guest-emails.yml
 
 bio:
   summary: |

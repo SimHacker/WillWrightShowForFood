@@ -25,7 +25,7 @@ abilities:
     type: activated
     mana: "{W}{W}"
     effect: "Interview the people who were there — honor memorial footage with care."
-    verifiable: sources/2026-07-07-email-excerpt.md
+    verifiable: correspondence.yml#milestones
   - id: REPO-SYNERGY
     name: Repo Synergy
     type: static

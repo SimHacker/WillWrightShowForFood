@@ -58,7 +58,7 @@ Alan Kay 16 Jul ↔ Andrew's ICON quote — conscientious engagement vs requirem
 - Intellisense multiprocessor + CANBUS (25 countries)
 - 8-channel video mixer amplifier
 - 0.5 pA electron microscopy path
-- TAKT AVR metronome — design as therapy after Parkinson's diagnosis ~60
+- TAKT AVR gait metronome — lifelong design practice meets a concrete wearable aid
 
 Not a pity narrative — Andrew's own site frames *Mind My Machine* as rejoicing in creations.
 
@@ -71,7 +71,7 @@ Andrew archive could supply **second demo** if Multipatch simulates in time.
 
 ## Pull-ins
 
-- Scan Multipatch octal + film notes (Haslingfield visit with Heinz)
+- Scan Multipatch octal + film notes (in-person archive session with Heinz when logistics allow)
 - *Mind My Machine* — excerpt permission?
 - Publications page on armit.com — harvest paper list
 - ICON / TAG papers already cited in CHARACTER.yml

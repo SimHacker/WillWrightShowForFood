@@ -41,8 +41,8 @@ Verbatim from Don Hopkins forwarded-mail archive.
 > Hello, Rod. Thanks for responding and contacting me about this!
 > Will, I really appreciate your support and initiative, and thank you for creating SimCity in the first place, and letting me tinker around with it!
 >
-> My phone number is (510) 418-4968, and I'm in Berkeley.
-> John Gilmore's phone number is (415) 221-6524, and he's in San Francisco.
+> My phone number is [phone redacted], and I'm in Berkeley.
+> John Gilmore's phone number is [phone redacted], and he's in San Francisco.
 >
 > Here are some pictures:
 >
@@ -93,7 +93,7 @@ Verbatim from Don Hopkins forwarded-mail archive.
 
 > Hello Normann. Thanks for your help!
 > John Gilmore is a great person to talk with about it. He can explain everything you need to know.
-> Here's his phone number: (415) 221-6520. His email address is [email redacted].
+> Here's his phone number: [phone redacted]. His email address is [email redacted].
 > We really appreciate you running with this!
 >
 > -Don
