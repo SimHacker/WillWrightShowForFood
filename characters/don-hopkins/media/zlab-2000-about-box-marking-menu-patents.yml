@@ -1,0 +1,53 @@
+# zLab 1.0 About box — in-product marking-menu patent assertion (2000)
+# Screenshot from Alias|Wavefront promotional video (McGuffin upload 2016)
+
+artifact:
+  file: zlab-2000-about-box-marking-menu-patents.png
+  slug: zlab-2000-about-box-marking-menu-patents
+  what: "zLab 1.0 About dialog asserting US patents on Marking Menus — FUD in shipping software"
+
+on_screen:
+  product: "zLab Version 1.0"
+  trademarks: "The Z-rays logo and Z-rays are trademarks of Silicon Graphics, Inc., exclusively used by Alias|Wavefront, a division of Silicon Graphics Limited"
+  address: "210 King Street East, Toronto"
+  copyright: "Copyright (c)2000 Alias|Wavefront"
+  patent_line: "Marking Menus are protected by U.S. Patents #5,689,667 and #5,926,178."
+
+patents_asserted:
+  - number: "US 5,689,667"
+    note: "Kurtenbach — radial + linear overflow combo (primary Alias FUD patent)"
+  - number: "US 5,926,178"
+    title: "Method and system for displaying and controlling menus with radial and linear portions"
+    inventor: "Gordon P. Kurtenbach"
+    assignee_chain: [Silicon Graphics Inc, Alias Systems Corp, Autodesk Inc]
+    priority_date: "1995-06-06"
+    filing_date: "1997-04-01"
+    publication_date: "1999-07-20"
+    note: "Second patent named in the About box; same radial+linear family as 5,689,667"
+
+related_later:
+  - number: "US 6,915,492"
+    note: "Kurtenbach & Fitzmaurice zoned menus — cited in 2008 Autodesk marketing challenge"
+
+provenance:
+  source_video: "https://www.youtube.com/watch?v=dKaXJ14BkjA"
+  source_video_title: "Marking Menus"
+  uploader: michaeljmcguffin
+  uploaded: "2016-11-15"
+  software_era: "~2000 Alias|Wavefront zLab / Z-Ray Menus"
+  captured_by: Don Hopkins
+  captured: "2026-07-16"
+  method: "Screenshot from the Alias promotional footage (About box visible in-product)"
+  private_archive: "DonHopkins characters/don-hopkins/artifacts/marking-menu-videos/"
+
+significance: |
+  In-product patent assertion, year 2000 — not just marketing brochure language.
+  Names BOTH US 5,689,667 and US 5,926,178 while selling "Marking Menus" / Z-Ray.
+  Receipt for the FUD campaign that scared Kinetix/3ds Max and others off pie menus.
+
+see_also:
+  - ../sources/kurtenbach-marking-menu-demo-video-straw-man.md
+  - ../sources/pie-menu-fud-misconceptions.md
+  - ../sources/2008-2023-pixie-buxton-patent-thread.md
+  - ../sources/kurtenbach-sellen-buxton-1993-claims-analysis.md
+  - ../sources/pie-menu-timeline.md

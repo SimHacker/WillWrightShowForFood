@@ -29,10 +29,15 @@ backbone under the retrospective — most dates below are from quoted period ema
 | 1987-01 | Weiser snowed in, hacks pies into SunView for his SDI game |
 | 1987-02→05 | UMD patent office excited; Weiser says delay Usenix abstract; **Don submits anyway (Mar 31), decides May 1987 not to patent** — publishes code and papers instead; "tell him to get stuffed" (Usenix email, Jun 11). Don 2026: "I DO NOT regret that" — the [no-patent dividend](pie-menu-fud-misconceptions.md): Sun, DUX, Maxis, EA, ConnectedTV and beyond, penny-license legal-fee math, advice to students |
 | 1987-05-29 | First NeWS pie menus ("Very nice. Tell Mark." — Callahan) |
+| 1987-06-04 | **`pixie` file written** in the piepaper directory — UMD library call number TA174.I47 1969 Folio, full citation. Second link in the [PIXIE chain of custody](1988-04-10-umd-tech-writing-proposal.md), datestamped at donhopkins.com/home/piepaper/ |
+| 1987-07-01 | **`piemenu.ps` posted to NeWS-makers** — earliest published free-software receipt: announcement names mouse-ahead, "Things to do" comment specifies display suppression, UNRESTRICTED-use license with poem. [The code receipt](1987-07-01-news-pie-menus-source-release.md) |
 | 1987-08 | Terry Higgins' Pastel (National Film Board of Canada) at SIGGRAPH'87 — independent radial menus with click-ahead on SGI |
 | 1987-11-24 | Pies accepted at SIGCHI'88 |
+| 1988-03-23 | `references` file — PIXIE entry "[Referenced in Principles of Interactive Computer Graphics]"; next chain link |
 | 1988-04-10 | **UMD tech-writing proposal** cites Wiseman PIXIE 1969 in its bibliography — alongside three Buxton papers, Engelbart 1967, Newman 1968 — and describes mouse-ahead, muscle memory, and gesture chunking (credited to Buxton 1986). [The citation receipt](1988-04-10-umd-tech-writing-proposal.md) |
 | 1988-05-14 | CHI'88 paper presented |
+| 1988-11-02 | **Weiser email: CACM accepts the "Pies" paper** — "a year and half later!" — wanting a minor rewrite (deemphasize experiment, make it a feature article). Never resubmitted: Weiser at PARC, too much had changed; DDJ Dec 1991 became the definitive publication instead |
+| 1989-02-14 | `piepaper.comments` CACM-draft outline carries the "; pixie reference" TODO — intent to cite PIXIE in the never-finished rewrite, on disk and datestamped |
 
 ## Don's 1990 no-patent explanation (quoted in article)
 
@@ -60,6 +65,28 @@ Direct foil to the Buxton/Alias arc — same era, opposite choice.
   menus' way back when → Hopkins etc does the pie menus version → Kurtenbach etc later adds
   the idea of a vocabulary of marks → Others build on this with Flow menus, Flower menus,
   SHARK…"* And on patents: "we were just following SGI corporate patent policy."
+
+## Dispute arc 1993–2019 (email-dated)
+
+| Date | Event |
+|------|-------|
+| 1993-01 | **Kurtenbach/Sellen/Buxton paper** (Journal HCI) claims marking menus "unique" in easing the novice→expert transition — contradicted by the 1990 email, the 1987 announcement and code, and the DDJ 1991 article. [Claim-by-claim analysis](kurtenbach-sellen-buxton-1993-claims-analysis.md) |
+| 1995 | **US 5,689,667 filed** (Kurtenbach, at SGI/Alias) — radial + linear overflow combo; prior-art passage misdescribes pie menus (selection by location; submenu popup by distance) |
+| 1995-06-06 / 1997-04-01 / 1999-07-20 | **US 5,926,178** (Kurtenbach) — "displaying and controlling menus with radial and linear portions"; priority / filing / issue. Same radial+linear family; later named in the zLab About box with 5,689,667 |
+| ~1997–98 | **GDC trade-show encounter**: Kinetix recites the "patented marking menus" FUD (nobody there had read the patent); Alias salesman blurts "OF COURSE THEY ARE!"; Don phones Buxton from the show floor within the hour; Buxton: "there is no marking menu patent." [The 66-point timeline](2019-02-buxton-apology-demand-gdc-timeline.md) |
+| 2000 | **zLab 1.0 About box** asserts in-product: "Marking Menus are protected by U.S. Patents #5,689,667 and #5,926,178" — [screenshot](../media/zlab-2000-about-box-marking-menu-patents.png) from Alias Z-Ray promo ([dKaXJ14BkjA](https://www.youtube.com/watch?v=dKaXJ14BkjA)) |
+| 2000-07-05 | **Slashdot post** — Don publishes the full FUD story ("a textbook example of successful FUD") in the GUI-research thread; the first public write-up of the GDC encounter |
+| 2001-12 | piemenus.com references page (archived) carries the public warning: "Alias\|Wavefront lawyers will threaten to sue you if you use 'marking menus'… I think their marking menu patent is probably invalid, and they know it" |
+| 2008-05-16→17 | Dave Fleck asks Don for the PIXIE paper ("You have the reference on you web site"); Don forwards to Buxton, who promises to scan and share it |
+| 2008-06-03 | **Buxton's "conversation over" email** — the "not crediting Weisman until you learned about him from us" accusation, "the most fundamental paper in the field," "Over and out forever" |
+| 2008-06-05 | Don answers Buxton's "show me a single patent" challenge with the live Autodesk "Patented marking-menu technology" page and **US 6,915,492** (zoned menu). Buxton: "please stop emailing me" |
+| 2008-07-07 | Buxton's Cambridge PIXIE findings email goes to Kurtenbach, Newman, Lemke, Fleck — **not Don**; Fleck forwards it. The promised copy of the paper never comes |
+| 2018-05-14 | **Plaisant's "mousy" recollection**: marking-menu crew argued "no publication" for mouse-ahead and misinterpreted the separate-window demo as an always-visible menu; she cites HCIL-90-02's verbatim "mouse ahead display suppression" |
+| 2018-05-15→18 | **Kurtenbach exchange**: "Yes, I was aware that pie menus could do mouse-ahead in 1990"; distinction shrinks to the ink trail; "typical pie menus" admitted to be Alias in-house naive reimplementations; "given that Max was the main rival, we didn't want to do them any favors." [The retract-or-clarify thread](2018-05-kurtenbach-retract-or-clarify-exchange.md) |
+| 2018-05-15 | **30 Year Retrospective + FUD and Misconceptions published** on Medium — the 30th anniversary window of the CHI'88 presentation |
+| 2019-02-07→08 | Lecture-prep emails to Brad Myers assemble the full PIXIE chain of custody with donhopkins.com URLs; Weiser's 1988 CACM-acceptance email recovered |
+| 2019-02-09 | **Apology demand to Buxton** (Cc Kurtenbach, Myers, Shneiderman, Callahan) — publication notice cleared with Mike Godwin, explicit release for Kurtenbach, the 66-point GDC timeline. No reply, retraction, or evidence ever came. [The letter](2019-02-buxton-apology-demand-gdc-timeline.md) |
+| 2019-02-11 | **Guest lecture at CMU** — Brad Myers's 05-640 Interaction Techniques class; Pie Menu Timeline published on Medium the same day |
 
 ## Implementation river 1987–2018
 

@@ -48,6 +48,15 @@ The misrepresentation operated at two levels:
 - **US 5,689,667** (Kurtenbach, Alias/SGI, filed 1995, issued Nov 1997): radial + linear
   combo menu. Don's position: the covered technique (linear overflow items) was obvious,
   and the "typical pie menus" framing was false per the above.
+- **US 5,926,178** (Kurtenbach, SGI → Alias → Autodesk; priority 1995-06-06, filed
+  1997-04-01, issued 1999-07-20): "Method and system for displaying and controlling menus
+  with radial and linear portions" — same family. Named alongside 5,689,667 in the
+  **zLab 1.0 About box** (2000): "Marking Menus are protected by U.S. Patents #5,689,667
+  and #5,926,178." Screenshot:
+  [`../media/zlab-2000-about-box-marking-menu-patents.png`](../media/zlab-2000-about-box-marking-menu-patents.png)
+  · [`yml`](../media/zlab-2000-about-box-marking-menu-patents.yml). The patent text itself
+  repeats the straw man: *"Pie menus are typically used in item selection using the
+  location principles of linear menus."*
 - **GDC late '90s**: Kinetix (3D Studio Max) told Don users wanted pie menus but Alias
   "patented marking menus" so they were afraid. Alias booth sales confirmed "of course
   they are!" then weaseled; pointed to Buxton, not Kurtenbach.

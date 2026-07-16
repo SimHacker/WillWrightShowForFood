@@ -6,10 +6,21 @@ Description: "A demonstration of the differences between marking menus, linear m
 menus is shown. Shows the 'marking' property of marking menus and the property of scale
 independence."
 
-**Companion:** the Alias marketing video advertising the patented marking menu software —
-[youtube.com/watch?v=dKaXJ14BkjA](https://www.youtube.com/watch?v=dKaXJ14BkjA) (from Don's
-2023 letter to Brad Myers; see [Buxton thread](2008-2023-pixie-buxton-patent-thread.md)).
-The demo makes the false technical distinction; the ad sells the patent on the strength of it.
+**Companion videos** (GordKurtenbach + Alias footage):
+
+| Video | URL | Role |
+|-------|-----|------|
+| Alias / Z-Ray promo ("Marking Menus", McGuffin upload) | [dKaXJ14BkjA](https://www.youtube.com/watch?v=dKaXJ14BkjA) | Smoking-gun ad; zLab About box asserts patents |
+| Alias short demo (2000 footage) | [wLNPGsKyUls](https://www.youtube.com/watch?v=wLNPGsKyUls) | Same ~2000 Alias software, shorter cut |
+| Marking Menu Versus Linear Menus | [8c58bN6ajJ4](https://www.youtube.com/watch?v=8c58bN6ajJ4) | Kurtenbach comparison demo |
+| Marking Menus in ConEd Example | [BOmb8-pQXwQ](https://www.youtube.com/watch?v=BOmb8-pQXwQ) | Kurtenbach product-example demo |
+
+The straw-man demo makes the false technical distinction; the Alias ad sells the patent on
+the strength of it. **About-box screenshot** (patents #5,689,667 and #5,926,178 named
+in-product):
+[`../media/zlab-2000-about-box-marking-menu-patents.png`](../media/zlab-2000-about-box-marking-menu-patents.png)
+· [`../media/zlab-2000-about-box-marking-menu-patents.yml`](../media/zlab-2000-about-box-marking-menu-patents.yml).
+See also [Buxton thread](2008-2023-pixie-buxton-patent-thread.md).
 
 ## The straw man, in his own words (transcript)
 
@@ -67,4 +78,5 @@ designers, refuted by a class assignment written five years before it was staged
 
 → [`pie-menu-fud-misconceptions.md`](pie-menu-fud-misconceptions.md) ·
 [`kurtenbach-sellen-buxton-1993-claims-analysis.md`](kurtenbach-sellen-buxton-1993-claims-analysis.md) ·
-[`2008-2023-pixie-buxton-patent-thread.md`](2008-2023-pixie-buxton-patent-thread.md)
+[`2008-2023-pixie-buxton-patent-thread.md`](2008-2023-pixie-buxton-patent-thread.md) ·
+[`../media/zlab-2000-about-box-marking-menu-patents.yml`](../media/zlab-2000-about-box-marking-menu-patents.yml)

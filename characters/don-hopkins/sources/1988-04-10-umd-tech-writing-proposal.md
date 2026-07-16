@@ -15,13 +15,24 @@ The bibliography closes with:
 
 ("Lenke" for Lemke — a period typo that itself vouches for hand-typed authenticity.)
 
-**Don knew PIXIE and was citing it in writing by April 1988** — answering the charge, aired
-in Buxton's later pushback on the pie menu history, that Don didn't know about or reference
-PIXIE. Chain of custody: found the reference 2 Dec 1986 (self-email via Newman & Sproull,
-seven months after the independent theta-menu invention) → cited in this April 1988
-bibliography → piemenus.com references page (first entry, archived 2001) → every history
-since. Buxton, by his own 17 May 2008 email, learned of PIXIE the same route (Newman &
-Sproull 1st ed.) and read Wiseman's papers only in 2008.
+**Don knew PIXIE and was citing it in writing by April 1988** — answering Buxton's charge,
+verbatim, from his "conversation over" email of **3 June 2008**:
+
+> And, before taking this holier than thou victimized stance, may I point out that if anyone
+> is at fault for not appropriately crediting others, it is you in your **not crediting
+> Weisman until you learned about him from us**. So please do not lecture me on scholarship.
+
+Both halves false. Chain of custody: found the reference 2 Dec 1986 (self-email via Newman &
+Sproull, seven months after the independent theta-menu invention, full SMTP headers preserved)
+→ `pixie` file, 4 Jun 1987 (UMD library call number TA174.I47 1969 Folio) → `references` file,
+23 Mar 1988 → this April 1988 bibliography → "; pixie reference" TODO in `piepaper.comments`
+for the CACM draft, 14 Feb 1989 → piemenus.com references page (first entry, archived 2001) →
+every history since. All datestamped at
+[donhopkins.com/home/piepaper](https://donhopkins.com/home/piepaper/). Buxton, by his own
+17 May 2008 email, learned of PIXIE the same route (Newman & Sproull 1st ed.) and read
+Wiseman's papers only in 2008 — and Dave Fleck's 16 May 2008 email says in as many words that
+he found the PIXIE reference **on Don's web site**, which Buxton had in hand when he made the
+accusation. Don rebutted with the receipts on 19 May 2018 and 9 Feb 2019; no retraction came.
 
 ## The bibliography's other receipts
 

@@ -46,7 +46,10 @@ Long-form room doc (Adventure implementation): [`../logo-adventure-c64-terrapin.
 | [Why no pie menu patent — Tobias email (2007)](2007-11-11-james-tobias-why-no-pie-menu-patent.md) | Prior art + exploitative UMD patent system; "derivatives of pie menus" framing, 2007 |
 | [Kurtenbach/Sellen/Buxton 1993 claims analysis](kurtenbach-sellen-buxton-1993-claims-analysis.md) | The paper self-refutes: ink trail 1.10 vs 1.10; "unique" = 1990 email minus "like you've talked about" |
 | [UMD proposal, 10 Apr 1988](1988-04-10-umd-tech-writing-proposal.md) | **PIXIE-citation receipt** — Wiseman in the bibliography beside three Buxton papers; mouse-ahead + muscle memory in prose |
-| [Kurtenbach demo video straw man](kurtenbach-marking-menu-demo-video-straw-man.md) | Transcript: "typical" pie menu built to fail at scale; Don's 2013 comment; Alias ad companion link |
+| [Kurtenbach demo video straw man](kurtenbach-marking-menu-demo-video-straw-man.md) | Transcript: "typical" pie menu built to fail at scale; Don's 2013 comment; Alias/ConEd/linear comparison video table; [zLab About-box patents](../media/zlab-2000-about-box-marking-menu-patents.yml) |
+| [NeWS source release, 1 Jul 1987](1987-07-01-news-pie-menus-source-release.md) | **The code receipt** — mouse-ahead in the announcement, display suppression in the "Things to do", UNRESTRICTED license with poem |
+| [Kurtenbach exchange, May 2018](2018-05-kurtenbach-retract-or-clarify-exchange.md) | Admissions on the record: mouse-ahead known in 1990; "typical pie menus" = Alias in-house; "Max was the main rival"; Plaisant's "mousy" explanation |
+| [Apology demand + 66-point GDC timeline, Feb 2019](2019-02-buxton-apology-demand-gdc-timeline.md) | Godwin-cleared publication notice; Kurtenbach released; Buxton challenged for evidence — none ever came; CMU lecture prep receipts |
 
 ## Other sources in this folder
 

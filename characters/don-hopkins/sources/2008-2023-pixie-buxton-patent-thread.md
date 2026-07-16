@@ -27,6 +27,73 @@ and he only went to Wiseman's actual papers in 2008.
 **18 May 2008** — Don thanks him: "I wonder what other kind of stuff the authors of that paper
 did, and what they've done since, having accomplished that work so long ago."
 
+## June 2008 — the blowup: "conversation over"
+
+Between the friendly May exchange and the July Cambridge trip, Don pressed Buxton and
+Kurtenbach on the "Typical Radial Menus" straw man and the Alias FUD (thread Cc'd Ben
+Shneiderman and Ted Selker). **3 June 2008**, Buxton's "conversation over" email delivered
+the accusation, verbatim:
+
+> And, before taking this holier than thou victimized stance, may I point out that if anyone
+> is at fault for not appropriately crediting others, it is you in your **not crediting
+> Weisman until you learned about him from us**. So please do not lecture me on scholarship.
+
+> How ironic: you actually have the nerve to accuse us of not having read your work…
+> and you haven't even read **the most fundamental paper in the field** – that of Weisman.
+> …Over and out forever.
+
+Both claims false on the receipts (Don's Dec 1986 discovery, the 1988 citation, the
+piemenus.com references page Fleck had literally just cited to Don). And "the most
+fundamental paper in the field" was, by Buxton's own July preface, catalogued at Cambridge
+only *recently* and accessible via Newman's personal escort — a privilege test Don could not
+have passed.
+
+**5 June 2008** — Buxton had challenged: "Show me a single patent that we have filed around
+the work on Gord's thesis. You can't because there are none." Don answered with two receipts:
+the **live Autodesk product page** and StudioTools brochure advertising "**Patented
+marking-menu technology**" ([archived](https://web.archive.org/web/20080421172627/http://usa.autodesk.com/adsk/servlet/item?siteID=123112&id=8412490)),
+and **US 6,915,492** (Kurtenbach & Fitzmaurice, "System for accessing a large number of menu
+items using a zoned menu", filed 1998) — a second radial-menu patent beyond US 5,689,667
+(and the About-box pair already included **US 5,926,178**). Either the marketing was lying
+or Buxton was; both couldn't be right. Buxton's reply: "please stop emailing me." The
+marketing copy outlived the exchange and the patents.
+
+### Scholarship / "homework" attack (June 2008) — Buxton's words
+
+Don's contemporaneous gloss: Buxton "accused me of bad scholarship and not doing my
+homework." The verbatim line Don preserved from Buxton's blowup email:
+
+> How ironic: you actually have the nerve to accuse us of not having read your work (which
+> we have, as well as always citing it), and you haven't even read **the most fundamental
+> paper in the field** – that of Weisman. Yet, you still have the balls to make your
+> accusation right after I have agreed to send you a copy. Incredible.
+
+(The literal phrase "check your homework" is Don's paraphrase of this scholarship attack;
+the "most fundamental paper" line is Buxton's.)
+
+### Privilege checklist — Buxton's own July 2008 preface (how *he* got Wiseman)
+
+In the July 2008 "Compiled and transcribed by William Buxton" PIXIE notes preface — the
+same material he emailed Kurtenbach/Newman/Lemke and **not Don** — Buxton listed the
+privileges that made the "fundamental paper" accessible to him:
+
+1. Learned of Wiseman via Newman & Sproull's *Principles of Interactive Computer Graphics*
+2. William Newman told him Wiseman's papers had **recently** been catalogued at Cambridge
+3. Newman spent **an entire morning** ushering him through credentials for the manuscript room
+4. Newman gave him a guided tour of the library
+
+Don's Feb 2019 / May 2018 framing (quoted into the apology-demand letter): Buxton then
+**broke the promise** to send Don the papers, after criticizing Don for not having read
+what required Microsoft airfare, Newman's personal escort, and newly catalogued Cambridge
+access. "Check your privileges, Bill."
+
+### Phone-call line still seeking raw email
+
+Recalled Buxton line from the dispute arc: *"You can't patent things 5 years after
+disclosing them"* — used against Don's concerns while Alias was in fact filing/holding
+radial-menu patents. **Verbatim source email/transcript not yet located in the 2026-07-16
+dump**; file when the raw message is recovered.
+
 ## July 2008 — Buxton's Cambridge visit; promises multiply; Don cut out
 
 **7 Jul 2008** — Buxton email "PIXIE and Radial Menus" → **Kurtenbach, William Newman, Heinz
@@ -81,7 +148,17 @@ demo video and Alias licensing.
 
 Straw-man video (Kurtenbach, "Demo of Marking Menus", posted 2008): https://www.youtube.com/watch?v=dtH9GdFSQaw
 — transcript + rebuttal: [`kurtenbach-marking-menu-demo-video-straw-man.md`](kurtenbach-marking-menu-demo-video-straw-man.md)
-Alias marketing video for the patented marking menus ("smoking gun" — Don): https://www.youtube.com/watch?v=dKaXJ14BkjA
+
+| Companion video | URL |
+|-----------------|-----|
+| Alias / Z-Ray promo + zLab About box ("Marking Menus", McGuffin) | https://www.youtube.com/watch?v=dKaXJ14BkjA |
+| Alias short demo (2000) | https://www.youtube.com/watch?v=wLNPGsKyUls |
+| Marking Menu Versus Linear Menus (Kurtenbach) | https://www.youtube.com/watch?v=8c58bN6ajJ4 |
+| Marking Menus in ConEd Example (Kurtenbach) | https://www.youtube.com/watch?v=BOmb8-pQXwQ |
+
+zLab About-box screenshot (patents #5,689,667 + #5,926,178):
+[`../media/zlab-2000-about-box-marking-menu-patents.png`](../media/zlab-2000-about-box-marking-menu-patents.png)
+· [`yml`](../media/zlab-2000-about-box-marking-menu-patents.yml)
 
 Don now friends with **Heinz Lemke** (PIXIE coauthor); wants CHM interview facilitated.
 
@@ -108,6 +185,7 @@ Fleck, Lars, Roy.
 | Heinz → Buxton 2008 letter | [heinz-lemke media](../../heinz-lemke/media/from-mail/letter-2008-heinz-to-buxton-pixie-memory-lane.doc) |
 | Brad Myers book | https://www.ixtbook.com |
 | Pie menu retrospective | https://medium.com/@donhopkins/pie-menus-936fed383ff1 |
+| zLab About box (patents) | [media/zlab-2000-about-box-marking-menu-patents.png](../media/zlab-2000-about-box-marking-menu-patents.png) |
 
 ---
 

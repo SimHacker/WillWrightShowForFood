@@ -93,9 +93,12 @@ de-credited him.**
 ## Downstream
 
 This paper is the publication leg under patent **US 5,689,667** (filed 1995, granted 1997)
-and the Alias marketing. The escalation pattern: the 1993 paper contains the admissions
-(extension; reselection is the pie menu mechanism; ink trail changed nothing) alongside one
-word of spin; the patent and marketing kept the spin and dropped the admissions —
+and sibling **US 5,926,178** (priority 1995-06-06, filed 1997-04-01, issued 1999-07-20 —
+"radial and linear portions"), plus the Alias marketing. Both patent numbers appear in the
+2000 **zLab About box** ([screenshot](../media/zlab-2000-about-box-marking-menu-patents.png)).
+The escalation pattern: the 1993 paper contains the admissions (extension; reselection is
+the pie menu mechanism; ink trail changed nothing) alongside one word of spin; the patents
+and marketing kept the spin and dropped the admissions —
 [two-level FUD](pie-menu-fud-misconceptions.md).
 
 Funding note: work supported by NSERC, DEC, and **Xerox PARC** — Mark Weiser's employer and
