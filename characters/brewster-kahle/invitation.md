@@ -1,10 +1,12 @@
 ---
-status: draft
+
+## status: draft
+
 character_id: brewster-kahle
 consent: not_yet_asked
 show_seeds:
-  - repo-shows/walter-bender-olpc/SHOW.yml
----
+
+- repo-shows/walter-bender-olpc/SHOW.yml
 
 # Repo Show invitation — Brewster Kahle
 
@@ -21,6 +23,8 @@ with full credit to the people who lived the history. I'd love to interview you 
 
 ---
 
+
+
 ## Why you
 
 We've been in similar orbits since before most people knew what the web was for.
@@ -33,14 +37,14 @@ preservation I've heard:
 
 > *"It's the early dreams that we should be trying to live up to."*
 
-([`sources/chm-1996-early-dreams-clip.md`](sources/chm-1996-early-dreams-clip.md) · [video ~45:35](https://www.youtube.com/watch?v=u2h2LHRFbNA))
+(`[sources/chm-1996-early-dreams-clip.md](sources/chm-1996-early-dreams-clip.md)` · [video ~45:35](https://www.youtube.com/watch?v=u2h2LHRFbNA))
 
 In **2007**, we corresponded about **OLPC**. You wanted books that looked good on the XO — a proper
 **tablet-mode viewer** for Internet Archive's scanned library, not just a JavaScript hack. Your
-[`devel@laptop.org` wishlist](sources/olpc-book-viewer-devel-2007-01-21.md) (100k books, rotated
+`devel@laptop.org` [wishlist](sources/olpc-book-viewer-devel-2007-01-21.md) (100k books, rotated
 one-page-up PDFs, d-pad navigation, streaming before full download, search inside books and across
 the library) is still a readable spec. I offered to help port **SimCity** for the XO; you invited
-me to lunch. That thread is sourced here: [`sources/olpc-internet-archive-2007.md`](sources/olpc-internet-archive-2007.md).
+me to lunch. That thread is sourced here: `[sources/olpc-internet-archive-2007.md](sources/olpc-internet-archive-2007.md)`.
 
 And before WAIS and the Archive — **The Little Garden** — you with **John Gilmore**, **John Romkey**,
 **Steve Crocker**, **Tom Jennings**, and the rest, making bandwidth resalable when the incumbents said
@@ -51,15 +55,19 @@ commons actually got built.
 
 ---
 
+
+
 ## What I'm asking
 
 One or more **recorded conversations** (video call, your schedule, your pace):
 
-| Format | Notes |
-|--------|-------|
-| **Solo with you** | Internet Archive, WAIS, early logs, preservation ethics — your pick of depth |
-| **OLPC / books on the XO** | Your 2007 viewer vision; optional overlap with [`Walter Bender`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/walter-bender/) and [`Samuel Klein`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/samuel-klein/) if you want company on that beat |
-| **The Little Garden** | Optional later episode with **Tom Jennings**, **Tim Pozar**, **David Henkel-Wallace** — only if you want a reunion panel; no pressure to coordinate |
+
+| Format                     | Notes                                                                                                                                                                                                                                                                                                 |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Solo with you**          | Internet Archive, WAIS, early logs, preservation ethics — your pick of depth                                                                                                                                                                                                                          |
+| **OLPC / books on the XO** | Your 2007 viewer vision; optional overlap with `[Walter Bender](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/walter-bender/)` and `[Samuel Klein](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/samuel-klein/)` if you want company on that beat |
+| **The Little Garden**      | Optional later episode with **Tom Jennings**, **Tim Pozar**, **David Henkel-Wallace** — only if you want a reunion panel; no pressure to coordinate                                                                                                                                                   |
+
 
 We can also do **async segments** (you record when convenient; I assemble with sourced clips and repo
 materials) if that's easier than one long live session.
@@ -69,7 +77,11 @@ delete it anytime, or take direct edit access and make it yours.
 
 ---
 
+
+
 ## Topics I'd love to explore — your pick, any order, skip whatever bores you
+
+
 
 ### Early dreams vs what shipped
 
@@ -78,24 +90,29 @@ delete it anytime, or take direct edit access and make it yours.
 - **Ethics of digital librarianship** in WAIS distributions — usage logs and responsibility
 - Ted Nelson's "another piece of Xanadu" note when the Archive launched — and your reply
 
+
+
 ### OLPC and the Internet Archive book viewer
 
 - Books on a laptop meant for children — **Flatland** as demo, flip-book vs proper tablet mode
 - Your January 2007 wishlist: PDF layers (OCR text, JBIG foreground), streaming, library-wide search
 - What happened next — and what you'd still want a reading device to do
-- SimCity on the XO — the GPL relicensing arc that became Micropolis
+- SimCity on the XO — the GPL relicensing arc that became Micropolis, sparked by Long Now Foundation talk with Will Wright and Brian Eno questions from audience
+
+
 
 ### Internet Archive today
 
-- Wayback, Open Library, and partnership work (e.g. Wikimedia link repair — cited in [`CHARACTER.yml`](CHARACTER.yml))
+- Wayback, Open Library, and partnership work (e.g. Wikimedia link repair — cited in `[CHARACTER.yml](CHARACTER.yml)`)
 - Preservation as **keeping early intent alive**, not only frozen HTML
+
+
 
 ### The Soul City tornado — life after archive
 
 EA's old **Sims Exchange** website — where players uploaded save files, houses, families, characters,
 pets, and above all **family albums**: illustrated stories told in captioned screenshots, a machinima
-literary genre in its own right — survives today in the **Wayback Machine**. Millions of players wrote
-those albums; the Archive is where they landed when EA moved on.
+literary genre in its own right — survives today in the **Wayback Machine**. Millions of players wrote those albums; the Archive is where they landed when EA moved on. EA re-released The Sims 1 on Steam, but removed The Sims Exchange, the best part. We can reimagine it!
 
 We're building **Soul City** ([SimHacker/moollm](https://github.com/SimHacker/moollm/tree/main/examples/soul-city)) —
 a place where that content comes back to life: a **Wizard of Oz tornado** that sweeps up the archived
@@ -115,20 +132,26 @@ it alive long enough for someone to build the place it was dreaming of. I'd love
 
 ---
 
+
+
 ## Your links in the repo
 
-| | |
-|--|--|
-| **Your room** | https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/brewster-kahle/ |
-| **Conversation hooks** | https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brewster-kahle/ideas.md |
-| **1996 interview digest** | [`sources/chm-interview-1996.md`](sources/chm-interview-1996.md) |
-| **OLPC 2007 thread** | [`sources/olpc-internet-archive-2007.md`](sources/olpc-internet-archive-2007.md) |
-| **OLPC show (Walter Bender seed)** | [`repo-shows/walter-bender-olpc/SHOW.yml`](../../repo-shows/walter-bender-olpc/SHOW.yml) |
-| **Premiere (Will)** | https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md |
+
+|                                    |                                                                                                                                                                                                                  |
+| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Your room**                      | [https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/brewster-kahle/](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/brewster-kahle/)                               |
+| **Conversation hooks**             | [https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brewster-kahle/ideas.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brewster-kahle/ideas.md)               |
+| **1996 interview digest**          | `[sources/chm-interview-1996.md](sources/chm-interview-1996.md)`                                                                                                                                                 |
+| **OLPC 2007 thread**               | `[sources/olpc-internet-archive-2007.md](sources/olpc-internet-archive-2007.md)`                                                                                                                                 |
+| **OLPC show (Walter Bender seed)** | `[repo-shows/walter-bender-olpc/SHOW.yml](../../repo-shows/walter-bender-olpc/SHOW.yml)`                                                                                                                         |
+| **Premiere (Will)**                | [https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) |
+
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 
 ---
+
+
 
 ## Next step
 
@@ -139,4 +162,4 @@ reply are all honored.
 
 *P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*
 
-↑ [`README.md`](README.md) · [`ideas.md`](ideas.md) · [portrayal standards](../../schemas/portrayal-standards.md)
+↑ `[README.md](README.md)` · `[ideas.md](ideas.md)` · [portrayal standards](../../schemas/portrayal-standards.md)

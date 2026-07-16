@@ -37,6 +37,11 @@ Preservation ethos matches cited sources + Wayback; Wikimedia partnership alread
 
 AskTog living-repo rescue names IA as ally ([`../bruce-tognazzini/sources/asktog-preservation.md`](../bruce-tognazzini/sources/asktog-preservation.md)).
 
+**The Archive and AI** — open question for Brewster: what is IA doing with AI, and what does he
+*want* to do? AI as patron vs. AI as extraction; librarian's-assistant tooling over the collections;
+provenance and citation so models point back to the Archive instead of dissolving it. Soul City
+(section 6) is one working answer — AI resurrecting archived culture with sources attached.
+
 ## 5. Amsterdam / Kennisnet overlap
 
 Dutch public-education hosting of Wikimedia servers during Kennisnet Micropolis years — [`CHARACTER.yml`](CHARACTER.yml#synergies.kennisnet_wikimedia_amsterdam).
