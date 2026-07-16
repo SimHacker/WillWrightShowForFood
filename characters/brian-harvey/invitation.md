@@ -1,13 +1,12 @@
 ---
-
-## status: draft
-
+status: draft
 character_id: brian-harvey
 public: true
 consent: not_yet_asked
 show_seed: repo-shows/snap-logo-brian-jens/
 pair_with: jens-monig
 send_batch: snap-logo-pair-2026
+---
 
 # Repo Show invitation — Brian Harvey 🐢
 

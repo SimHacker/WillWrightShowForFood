@@ -1,12 +1,12 @@
 ---
-
-## status: draft
+status: draft
 character_id: jamie-doornbos
 public: true
 consent: not_yet_asked
 show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml
 send_batch: sims-reunion-2026
 format: remote_or_in_person
+---
 
 # Repo Show invitation — Jamie Doornbos
 

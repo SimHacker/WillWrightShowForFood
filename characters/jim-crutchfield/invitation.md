@@ -1,10 +1,10 @@
 ---
-
-## status: draft
+status: draft
 character_id: jim-crutchfield
 public: true
 consent: not_yet_asked
 show_seed: repo-shows/jim-crutchfield/
+---
 
 # Repo Show invitation — Jim Crutchfield
 

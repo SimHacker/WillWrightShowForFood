@@ -9,7 +9,7 @@
 | ------------------------- | ----------------------------------------------------------------------------- | ------------------------------ |
 | **Early dreams**          | WAIS logs, 1996 crawl, ethics of digital librarianship, Ted Nelson / Xanadu   | Solo                           |
 | **Books on the XO**       | Jan 2007 devel-list viewer spec; Flatland demo; streaming + search            | Walter Bender, Samuel Klein    |
-| **Little Garden reunion** | Resale-friendly ISP; co-op origins; Gilmore prediction                        | Tom Jennings, Tim Pozar, Gumby |
+| **Little Garden reunion** | Resale-friendly ISP; co-op origins; the thousand-ISPs prediction              | Tom Jennings, Tim Pozar, Gumby |
 | **The Soul City tornado** | Sims Exchange in the Wayback Machine → family albums resurrected in Soul City | Will Wright                    |
 
 

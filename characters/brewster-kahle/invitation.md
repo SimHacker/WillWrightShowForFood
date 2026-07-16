@@ -1,12 +1,10 @@
 ---
-
-## status: draft
-
+status: draft
 character_id: brewster-kahle
 consent: not_yet_asked
 show_seeds:
-
-- repo-shows/walter-bender-olpc/SHOW.yml
+  - repo-shows/walter-bender-olpc/SHOW.yml
+---
 
 # Repo Show invitation — Brewster Kahle
 
@@ -16,7 +14,7 @@ show_seeds:
 
 Brewster —
 
-I'm **Don Hopkins**, in Amsterdam. I work with **Will Wright** (SimCity, The Sims) and I'm
+I'm **Don Hopkins**, in Amsterdam. I work with **Will Wright** (SimCity, The Sims, Stupid Fun Club) and I'm
 producing **Will Wright Show for Food** — a **Repo Show**: a friendly recorded conversation whose
 stage and product is a public GitHub repository. Ideas, sources, and working code land in the open,
 with full credit to the people who lived the history. I'd love to interview you for the show.
@@ -46,9 +44,9 @@ one-page-up PDFs, d-pad navigation, streaming before full download, search insid
 the library) is still a readable spec. I offered to help port **SimCity** for the XO; you invited
 me to lunch. That thread is sourced here: [`sources/olpc-internet-archive-2007.md`](sources/olpc-internet-archive-2007.md).
 
-And before WAIS and the Archive — **The Little Garden** — you with **John Gilmore**, **John Romkey**,
-**Steve Crocker**, **Tom Jennings**, and the rest, making bandwidth resalable when the incumbents said
-it couldn't be done.
+And before WAIS and the Archive — **The Little Garden** — you with **John Romkey**, **Steve Crocker**,
+**Tom Jennings**, and the rest, making bandwidth resalable when the incumbents said it couldn't
+be done.
 
 I'd like to record **your** telling of that arc — not mine — for people who care about how the
 commons actually got built.
@@ -126,7 +124,7 @@ it alive long enough for someone to build the place it was dreaming of. I'd love
 ### The Little Garden (optional)
 
 - Co-op origins, resale-friendly ISP model, **Toad Hall** → colo — mostly Tim's 1996 telling; your angle welcome
-- John Gilmore's "three companies this year, a thousand next year" prediction
+- The "three companies this year, a thousand next year" prediction — and how it came true
 
 ---
 

@@ -1,11 +1,11 @@
 ---
-
-## status: accepted
+status: accepted
 accepted: 2026-07
 character_id: jeff-adkins
 public: true
 consent: granted
 show_seed: repo-shows/jeff-adkins/
+---
 
 # Repo Show invitation — Jeff Adkins (SimObliterator) 🪓🧬
 

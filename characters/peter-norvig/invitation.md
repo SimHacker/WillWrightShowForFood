@@ -1,10 +1,10 @@
 ---
-
-## status: draft
+status: draft
 character_id: peter-norvig
 public: true
 consent: warm_lead
 show_seed: repo-shows/peter-norvig/
+---
 
 # Repo Show invitation — Peter Norvig
 

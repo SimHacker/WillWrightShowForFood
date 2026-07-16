@@ -3,7 +3,7 @@
 *Sniff:* [`GLANCE.md`](GLANCE.md) · **Invite:** [`invitation.md`](invitation.md)
 
 **Brewster Kahle** — founder of the **Internet Archive** (1996), **WAIS** pioneer, and early web
-preservationist. Co-founded **The Little Garden (TLG)** ISP in Palo Alto with John Gilmore, John Romkey,
+preservationist. Co-founded **The Little Garden (TLG)** ISP in Palo Alto with John Romkey,
 Steve Crocker, and **Tom Jennings**.
 
 ## Repo Show invitation
