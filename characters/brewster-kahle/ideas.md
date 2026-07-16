@@ -50,8 +50,9 @@ practiced. EA shut it down; the **Wayback Machine** holds what remains.
 **Soul City** ([SimHacker/moollm — examples/soul-city](https://github.com/SimHacker/moollm/tree/main/examples/soul-city))
 is the Wizard of Oz tornado: it sweeps that archived content out of the Wayback Machine and sets it
 down alive — houses rebuilt, families reunited, pets included, album stories readable again as
-literature. Named for Marusek's *The Wedding Album* (1999), where simulated people fight to live in
-"Simopolis."
+literature. And when the tornado sets a house down, well — some obstacles simply end up beneath it,
+striped socks curling. Named for Marusek's *The Wedding Album* (1999), where simulated people fight
+to live in "Simopolis."
 
 Beats for Brewster:
 

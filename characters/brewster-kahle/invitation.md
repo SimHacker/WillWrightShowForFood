@@ -100,8 +100,9 @@ those albums; the Archive is where they landed when EA moved on.
 We're building **Soul City** ([SimHacker/moollm](https://github.com/SimHacker/moollm/tree/main/examples/soul-city)) —
 a place where that content comes back to life: a **Wizard of Oz tornado** that sweeps up the archived
 houses, families, pets, and album stories and sets them down somewhere they can live again, in color.
-The name honors David Marusek's *The Wedding Album* (1999), where simulated people campaign for the
-right to live in a place called "Simopolis."
+And as every tornado from Kansas knows, sometimes a house lands exactly where it needs to — ding dong,
+the content is free. The name honors David Marusek's *The Wedding Album* (1999), where simulated
+people campaign for the right to live in a place called "Simopolis."
 
 This is your "early dreams" line made concrete: the Archive didn't just freeze that content — it kept
 it alive long enough for someone to build the place it was dreaming of. I'd love your telling of what
