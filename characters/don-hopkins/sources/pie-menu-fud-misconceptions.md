@@ -56,6 +56,12 @@ The misrepresentation operated at two levels:
   marketing brochures long after expiry. Radially (pie menu editor for 3ds Max) finally
   shipped January 2018.
 
+**Full claim-by-claim autopsy of the 1993 paper:**
+[`kurtenbach-sellen-buxton-1993-claims-analysis.md`](kurtenbach-sellen-buxton-1993-claims-analysis.md)
+— its own Table 1 shows the ink trail (the sole novel feature) changed nothing: RT 1.10s vs
+1.10s, errors not significantly different, "very few behavioral differences were found
+between the two groups."
+
 ## Receipt: piemenus.com references page (Wayback, Dec 2001)
 
 Don's contemporaneous public warning, archived at
