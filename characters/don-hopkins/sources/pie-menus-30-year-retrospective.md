@@ -38,7 +38,7 @@ in drawing mode) and a free-hand figure copy.
 | Nielsen trip report | confirms 15%; flags many-item and hierarchical caveats |
 | Scientific American 7/97 | Shneiderman: "30 percent faster, half the error rates"; Ted Selker: "We remember angles much better than distances" |
 | Steve Jobs, Educom 1988-10-25 | *"That sucks! That sucks! Wow, that's neat! That sucks!"* — insisted NeXT Step linear menus were best possible |
-| Kurtenbach/Buxton 1993 | otherwise-excellent marking menu paper wrongly implies pies lack mouse-ahead display suppression |
+| Kurtenbach/Sellen/Buxton 1993 | marking menus = pie menus + ink trail (derivative by their own definition); wrongly claims the novice pop-up → expert mark transition as "unique" and implies pies lack mouse-ahead — features Don had explained to Kurtenbach in 1990 and published in 1987/1991 |
 | Kurtenbach/Buxton 1994 | marks on average **3.5× faster** than menu selection; experts still flip back to menus to refresh layout |
 | Gingold *Play Design* thesis | "It is difficult to imagine The Sims without pie menus" — verbs advertised by objects map naturally to radial menus |
 

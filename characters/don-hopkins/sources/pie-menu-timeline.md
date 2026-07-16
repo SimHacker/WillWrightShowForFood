@@ -50,8 +50,11 @@ Direct foil to the Buxton/Alias arc — same era, opposite choice.
 - **1990-11-30**: Kurtenbach (PhD student, Buxton supervising) writes Don; Don: code freely
   redistributable, "the idea is not patented or proprietary… I encourage you to experiment."
 - **1990-12-10**: Kurtenbach describes marking menus — simple directional marks as accelerator
-  glyphs, ink trail, novice→expert transition. The mouse-ahead awareness later contradicted
-  by the patent's claims.
+  glyphs, ink trail, novice→expert transition — explicitly building on pie menus ("expert can
+  mouse ahead like you've talked about but they get an ink trail"). **The receipts**: this
+  exchange, plus Don's published 1987 ;login: summary and 1991 Dr. Dobb's article (mouse-ahead,
+  rehearsal, browsing/reselection all documented), predate the 1993 paper and 1995 patent that
+  claimed those features as marking-menu-unique.
 - **2018-05-16**: Kurtenbach's simplified lineage: *"Neuman etc does the first 'circular
   menus' way back when → Hopkins etc does the pie menus version → Kurtenbach etc later adds
   the idea of a vocabulary of marks → Others build on this with Flow menus, Flower menus,

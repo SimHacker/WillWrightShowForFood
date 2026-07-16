@@ -6,16 +6,41 @@
 Primary source for the marking-menu patent story, with Bill Buxton and Gordon Kurtenbach
 replying **in the comments** — both sides on the record in one document.
 
-## The patent story (Don's account)
+## Marking menus are derivative, not independent
+
+By their own definition (Kurtenbach, Sellen & Buxton 1993), marking menus are **pie menus
+plus an ink trail** — with novice pop-up rehearsal. Not an independent invention: the 1993
+paper cites Hopkins throughout (17× in Kurtenbach's thesis), and Kurtenbach's 1990 letters
+to Don frame the work explicitly as building on pie menus.
+
+The distinguishing features they claimed — mark-ahead, novice→expert rehearsal,
+reselection — **were already pie menu features**, and they knew it. Don had explained
+mouse-ahead, rehearsal, and reselection to Kurtenbach in detail in their 1990
+correspondence (receipts: Don's emails to Gordon + prior published writings — the 1987
+;login: summary and Dr. Dobb's article both describe mouse-ahead and browsing/reselection).
+Kurtenbach's own 1990 reply proves the knowledge: "expert can mouse ahead like you've
+talked about but they get an ink trail." The ink trail was the genuine novelty; the rest
+was repackaging pie menu properties as marking-menu-unique.
+
+## Two-level FUD (Don's account)
+
+The misrepresentation operated at two levels:
+
+1. **To the patent office and research record** — false distinctions in the patent,
+   publications, and demo videos, made knowing they were untrue, to get an illegitimate
+   patent granted:
+   - Claimed pie menus select by *pointing at items* (like linear menus or PIXIE) rather
+     than direction of motion.
+   - Claimed the novice pop-up / expert mark transition as unique to marking menus.
+   - Implied pies lack mouse-ahead display suppression (distance-trigger straw man in the
+     Kurtenbach demo video).
+2. **To customers and competitors** — Alias marketing misrepresented the patent's scope
+   even beyond its already-misleading text: "patented marking menus" implied the whole
+   technique was owned, when the claims covered only the radial/linear overflow combo.
 
 - **US 5,689,667** (Kurtenbach, Alias/SGI, filed 1995, issued Nov 1997): radial + linear
   combo menu. Don's position: the covered technique (linear overflow items) was obvious,
-  and the patent's framing of "typical pie menus" was false in two ways:
-  1. Claimed pie menus select by *pointing at items* (like linear menus or PIXIE) rather
-     than direction of motion.
-  2. Implied pies lack mouse-ahead display suppression — contradicted by Kurtenbach's own
-     1990 email to Don ("expert can mouse ahead like you've talked about but they get an
-     ink trail").
+  and the "typical pie menus" framing was false per the above.
 - **GDC late '90s**: Kinetix (3D Studio Max) told Don users wanted pie menus but Alias
   "patented marking menus" so they were afraid. Alias booth sales confirmed "of course
   they are!" then weaseled; pointed to Buxton, not Kurtenbach.
@@ -67,6 +92,9 @@ larger interface-copyright fight.
 
 ## Show beats
 
+- **Derivative dressed as distinct** — marking menus = pies + ink trail by their own 1993
+  definition; the "unique" features were pie menu features Don explained to Kurtenbach in
+  1990, on the record. Not independent invention; knowing misrepresentation with receipts
 - **Patents vs open microworlds** — the Repo Show repossession thesis in miniature; Don
   chose publication over the UMD patent office in 1987 (see timeline digest) and it worked:
   The Sims shipped free of fear
