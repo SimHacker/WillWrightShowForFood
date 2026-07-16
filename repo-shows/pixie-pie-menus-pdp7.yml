@@ -77,6 +77,10 @@ history:
   flight_of_pixie: "Don's Bumblebee edit — only possible after Chapman published the digitized films."
   youtube: "https://www.youtube.com/watch?v=jDrqR9XssJI"
   evidence_room: characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md
+  don_medium_canon:  # Don's published lineage articles, digested Jul 2026
+    retrospective: characters/don-hopkins/sources/pie-menus-30-year-retrospective.md
+    fud: characters/don-hopkins/sources/pie-menu-fud-misconceptions.md
+    timeline: characters/don-hopkins/sources/pie-menu-timeline.md
   source_listing: |
     RECOVERED (offered 2026-07-07): Heinz holds the COMPLETE PIXIE program — ~5000 words of
     Assembler/Machine code for PDP-7 + DEC 340 Display, covering light pen handling, interrupt

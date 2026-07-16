@@ -33,6 +33,16 @@ Long-form room doc (Adventure implementation): [`../logo-adventure-c64-terrapin.
 
 **Show seed:** [Voystick × Pink Trombone](../../repo-shows/voystick-pink-trombone/SHOW.yml) · [Zack Qattan](../../characters/zack-qattan/README.md)
 
+## Pie menu lineage (Medium canon, ingested Jul 2026)
+
+| Read | What |
+|------|------|
+| [Pie Menus: 30 Year Retrospective](pie-menus-30-year-retrospective.md) | PIXIE anchor, theta-menu origin emails, CHI'88, design principles, Jobs demo |
+| [Pie Menu FUD and Misconceptions](pie-menu-fud-misconceptions.md) | Alias/Buxton patent story + Buxton/Kurtenbach rebuttals in comments; ersatz-pie catalog |
+| [Pie Menu Timeline](pie-menu-timeline.md) | Email-dated 1968–2018 chronology; 1987 no-patent decision; Kurtenbach 1990/2018 letters |
+| [Alan Kay PIXIE thread (2020)](2020-02-alan-kay-pixie-pie-menus-thread.md) | Independent inventions: Fabrik, Etoys halo; Engelbart down-not-across |
+| [PIXIE/Buxton patent roadblock (2008–2023)](2008-2023-pixie-buxton-patent-thread.md) | Fleck → Buxton → Chapman digitization; Brad Myers Ch. 33 |
+
 ## Other sources in this folder
 
 | File | Topic |

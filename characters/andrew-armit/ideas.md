@@ -38,8 +38,12 @@ Pair with [`../lars-brinkhoff/`](../lars-brinkhoff/) emulator work and [`../roy-
 
 ## 3. Cambridge canon correction
 
-Heinz: US textbooks ignored Cambridge graphics. Andrew's Utah visit + Multipatch = parallel evidence
-to PIXIE radial menus — same era, same PDP-7, different continent, same erasure in Newman/Sproull.
+Heinz: US textbooks ignored Cambridge graphics. Andrew's Utah visit + **Multipatch** = parallel evidence
+that **Cambridge PDP-7 interactive graphics** reached Utah while the US canon stayed MIT-centric — **not**
+that Multipatch was a second radial-menu implementation. **Radial/pie menus are PIXIE-specific**
+(Wiseman/Lemke/Hiles). Multipatch is **Coons-patch surface modeling** on the same machine class (Alan Kay,
+Heinz). Same erasure pattern in Newman/Sproull: PIXIE appears as ref 520 *"movable menu"* while p.7
+Golden-Age narrative ignores UK work entirely.
 
 ## 4. The dedicated builder beat
 
