@@ -137,6 +137,36 @@ Opens with the 1989 Apple look-and-feel lawsuit, Gilmore/Stallman's fanged-Apple
 button, and the League for Programming Freedom — situating the patent story inside the
 larger interface-copyright fight.
 
+## The no-patent dividend (Don, 16 Jul 2026)
+
+Don on the May 1987 decision, on the record and unrepentant:
+
+> I DO NOT regret that. It enabled me to use pie menus at Sun, DUX, Maxis, EA, ConnectedTV,
+> and many other companies and projects and proprietary and free open source software, which
+> would not have been possible if UMD patented them. Even if they would license it back to me
+> for one penny — at each of those companies it would have cost tens of thousands just for
+> legal fees to evaluate the patent and pay that one penny, times how many times and different
+> companies I used them at.
+
+The penny-license argument is the sharp end: the license fee is never the cost — the **legal
+evaluation overhead at every employer, every project, forever** is. A patent wouldn't have
+paid Don; it would have taxed him out of his own invention.
+
+**The warning to students** being pushed to patent by their universities:
+
+> Giving it away to everyone is giving it away to yourself. You'll be the expert who knows how
+> to use them best, and bring something useful you can contribute to many other jobs you have
+> in your lifetime, and also open source projects. It will help you much more than the paltry
+> scraps they will give you for filing a patent with the university — or rather a company that
+> handles all the patents for the university, then gives scraps to the uni after taking their
+> professional patent-troll fee, then the university may give some to you, or may not.
+
+**The licensing futility proof:** the Alias/Kurtenbach marking-menu promotional video
+([youtube.com/watch?v=dtH9GdFSQaw](https://www.youtube.com/watch?v=dtH9GdFSQaw)) — which also
+made the false pie menu claims to fluff up the patent — went **nowhere**. Nobody wanted to
+license marking menus. The patent that was worth lying for turned out to be worth nothing;
+meanwhile the unpatented technique shipped in The Sims to tens of millions of people.
+
 ## Show beats
 
 - **Derivative dressed as distinct** — marking menus = pies + ink trail by their own 1993

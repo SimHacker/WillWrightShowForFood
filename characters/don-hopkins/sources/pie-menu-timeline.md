@@ -27,7 +27,7 @@ backbone under the retrospective — most dates below are from quoted period ema
 | 1986-11 | Experiment programmed in FORTH; Callahan runs it |
 | 1986-12-02 | **Don finds the Wiseman PIXIE reference** (via Newman & Sproull) — self-addressed email from crayola.cs.umd.edu, receipt in archive. He then cited PIXIE in the 1988 technical-writing proposal bibliography, the piemenus.com references page, and every history since. (Buxton learned of PIXIE the same route — Newman & Sproull 1st ed — and only read Wiseman's papers in 2008.) |
 | 1987-01 | Weiser snowed in, hacks pies into SunView for his SDI game |
-| 1987-02→05 | UMD patent office excited; Weiser says delay Usenix abstract; **Don submits anyway (Mar 31), decides May 1987 not to patent** — publishes code and papers instead; "tell him to get stuffed" (Usenix email, Jun 11) |
+| 1987-02→05 | UMD patent office excited; Weiser says delay Usenix abstract; **Don submits anyway (Mar 31), decides May 1987 not to patent** — publishes code and papers instead; "tell him to get stuffed" (Usenix email, Jun 11). Don 2026: "I DO NOT regret that" — the [no-patent dividend](pie-menu-fud-misconceptions.md): Sun, DUX, Maxis, EA, ConnectedTV and beyond, penny-license legal-fee math, advice to students |
 | 1987-05-29 | First NeWS pie menus ("Very nice. Tell Mark." — Callahan) |
 | 1987-08 | Terry Higgins' Pastel (National Film Board of Canada) at SIGGRAPH'87 — independent radial menus with click-ahead on SGI |
 | 1987-11-24 | Pies accepted at SIGCHI'88 |
