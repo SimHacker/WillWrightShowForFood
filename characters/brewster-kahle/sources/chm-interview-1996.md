@@ -33,7 +33,7 @@
 
 ## Don's clip note
 
-Brewster segment on **early dreams vs stagnation** — ~45:35 in Don's working notes ([`../README.md`](../README.md)).
+Brewster segment on **early dreams vs stagnation** — ~45:35. Don hand-transcribed it in April 2020 when he discovered the interview: [`chm-1996-early-dreams-clip.md`](chm-1996-early-dreams-clip.md). Discovery thread: [`../../don-hopkins/sources/2020-04-06-flight-of-pixie-chm-tlg-broadcast.md`](../../don-hopkins/sources/2020-04-06-flight-of-pixie-chm-tlg-broadcast.md).
 
 ## Transcript
 

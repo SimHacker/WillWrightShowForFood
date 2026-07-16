@@ -37,6 +37,8 @@ Long-form room doc (Adventure implementation): [`../logo-adventure-c64-terrapin.
 
 | File | Topic |
 |------|-------|
+| [2020-04-06-flight-of-pixie-chm-tlg-broadcast.md](2020-04-06-flight-of-pixie-chm-tlg-broadcast.md) | PIXIE video + CHM 1996 interview discovery; TLG circle broadcast |
+| [2020-04-08-barlow-memorial-hn-chm-pitch.md](2020-04-08-barlow-memorial-hn-chm-pitch.md) | Barlow Zoom memorial; HN queue; Heinz Lemke CHM pitch |
 | [2020-06-swivel3d-forth-jaron.md](2020-06-swivel3d-forth-jaron.md) | Swivel 3D in FORTH |
 | [2026-07-06-hn-when-2-plus-2-equals-five.md](2026-07-06-hn-when-2-plus-2-equals-five.md) | HN compendium style reference |
 | [xbugtool-bug-1059974.md](xbugtool-bug-1059974.md) | Sun XBugTool focus trap; unnatural-selection deskset beat |
