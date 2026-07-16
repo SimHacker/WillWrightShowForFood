@@ -46,6 +46,7 @@ Long-form room doc (Adventure implementation): [`../logo-adventure-c64-terrapin.
 | [Why no pie menu patent — Tobias email (2007)](2007-11-11-james-tobias-why-no-pie-menu-patent.md) | Prior art + exploitative UMD patent system; "derivatives of pie menus" framing, 2007 |
 | [Kurtenbach/Sellen/Buxton 1993 claims analysis](kurtenbach-sellen-buxton-1993-claims-analysis.md) | The paper self-refutes: ink trail 1.10 vs 1.10; "unique" = 1990 email minus "like you've talked about" |
 | [UMD proposal, 10 Apr 1988](1988-04-10-umd-tech-writing-proposal.md) | **PIXIE-citation receipt** — Wiseman in the bibliography beside three Buxton papers; mouse-ahead + muscle memory in prose |
+| [Kurtenbach demo video straw man](kurtenbach-marking-menu-demo-video-straw-man.md) | Transcript: "typical" pie menu built to fail at scale; Don's 2013 comment; Alias ad companion link |
 
 ## Other sources in this folder
 

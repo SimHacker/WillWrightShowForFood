@@ -79,8 +79,9 @@ demo video and Alias licensing.
 > Buxton's broken promises… more than a decade of delay in those important papers and films
 > finally seeing the light of day.
 
-Straw-man video (Kurtenbach): https://www.youtube.com/watch?v=dtH9GdFSQaw
-Alias 2000 Z-Ray: https://www.youtube.com/watch?v=dKaXJ14BkjA
+Straw-man video (Kurtenbach, "Demo of Marking Menus", posted 2008): https://www.youtube.com/watch?v=dtH9GdFSQaw
+— transcript + rebuttal: [`kurtenbach-marking-menu-demo-video-straw-man.md`](kurtenbach-marking-menu-demo-video-straw-man.md)
+Alias marketing video for the patented marking menus ("smoking gun" — Don): https://www.youtube.com/watch?v=dKaXJ14BkjA
 
 Don now friends with **Heinz Lemke** (PIXIE coauthor); wants CHM interview facilitated.
 
