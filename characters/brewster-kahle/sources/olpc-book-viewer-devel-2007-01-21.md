@@ -57,6 +57,5 @@ At that time IA had **~100k books**, scanning **>12k/month**. PDFs and DJVUs sha
 ## Related WWSFF material
 
 - Don → IA OLPC offer (27 Jan) + Brewster lunch reply (30 Jan): [`olpc-internet-archive-2007.md`](olpc-internet-archive-2007.md)
-- [`../../jim-gettys/`](../..//jim-gettys/) — ICCCM / OLPC (if present in INDEX)
 
 ↑ [sources index](README.md)
