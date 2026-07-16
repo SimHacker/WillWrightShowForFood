@@ -77,8 +77,7 @@ voiced and posed live (mic amplitude scrub applies). On-brand and *already shipp
 
 ## Sources (real, public)
 - SimObliterator Suite: https://github.com/DnfJeff/SimObliterator_Suite
-- VitaMoo (WebGL characters — **Don's**, TS reimpl of his own Unity3D C#): https://github.com/DnfJeff/SimObliterator_Suite/tree/main/vitamoo · demo https://vitamoo.space
-  <!-- URL sits under DnfJeff's repo; CONFIRM WITH DON whether VitaMoo needs its own home/attribution. -->
+- VitaMoo (WebGL characters — **Don's**, TS reimpl of his own Unity3D C#): https://github.com/SimHacker/MicropolisCore/tree/main/packages/vitamoo · demo https://vitamoo.space
 - Don's Unity3D C# VitaBoy (translation source): TODO link (zip)
 - Sim Obliterator designs: https://github.com/SimHacker/moollm/tree/main/designs/sim-obliterator
 - Open engines + format wikis: [`catalogs/sims-open-source-and-formats.yml`](../../catalogs/sims-open-source-and-formats.yml)

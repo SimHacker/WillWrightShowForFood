@@ -71,10 +71,8 @@ contact:
 sources:
   github: https://github.com/DnfJeff/SimObliterator_Suite   # Jeff's SimObliterator Suite
   designs: https://github.com/SimHacker/moollm/tree/main/designs/sim-obliterator
-  # VitaMoo is DON's (TS reimpl of his own Unity3D C#). These URLs currently sit under DnfJeff's repo —
-  # CONFIRM WITH DON: is VitaMoo hosted inside Jeff's Suite, or does it need its own home + attribution?
-  vitamoo_FLAG_confirm_owner: https://github.com/DnfJeff/SimObliterator_Suite/tree/main/vitamoo
-  vitamoo_demo_FLAG_confirm_owner: https://vitamoo.space
+  vitamoo_repo: https://github.com/SimHacker/MicropolisCore/tree/main/packages/vitamoo   # Don's VitaMoo
+  vitamoo_demo: https://vitamoo.space
 
 see_also:
   - { path: ideas.md, why: "Conversation hooks — grounded in Jeff's real work + the soul-mover thread" }

@@ -153,7 +153,7 @@ performance_modes:
     emoji: "🧍‍♂️🎮"
     prompt: "Drive a real 3D Sims 1 character LIVE — VitaMoo renders skeleton/mesh/animation in-browser; human voices + controls it."
     inputs: [vitamoo_webgl_character, live_voice, mic_amplitude_scrub, pose_controls]
-    engine: "VitaMoo (Jeff Adkins) — vitamoo.space; already shipped + improving"
+    engine: "VitaMoo (Don Hopkins) — vitamoo.space; already shipped + improving"
     spec: ../repo-shows/ideas/traditions/puppet-taxonomy.yml#kinds.sims_3d_puppet
     note: "3D sibling of face/video puppets — on-brand: our own Sims-1 tooling, real characters on stage."
 

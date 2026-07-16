@@ -55,11 +55,12 @@ palette a student can remix.
   [CAM6 writeup](cam6-cellular-automata-machine.md)
 
 ### 2. VitaMoo — Sims character animation
-[Jeff Adkins](../jeff-adkins/README.md)' **VitaMoo** (WebGL Sims-1 character renderer; IFF/FAR/OBJD
-parsing) driven from **Snap! blocks**: pose, animate, and script Sims characters visually — the soul
-mover made playable.
+**Don Hopkins'** **VitaMoo** (WebGL Sims-1 character renderer; clean-room VitaBoy lineage, TS port of
+Don's Unity3D C#) driven from **Snap! blocks**: pose, animate, and script Sims characters visually —
+the soul mover made playable. Save/object tooling stack inspired by [Jeff Adkins](../jeff-adkins/README.md)'s
+**SimObliterator**.
 - Audience/funders: the huge Sims community + game preservation (VGHF-adjacent); content creators.
-- Ties: [Jeff Adkins](../jeff-adkins/README.md) (accepted guest), Will Wright's data-portability grail.
+- Ties: [Jeff Adkins](../jeff-adkins/README.md) (SimObliterator; accepted guest), Will Wright's data-portability grail.
 
 ### 3. Micropolis — city simulator
 The open-source **Micropolis** (SimCity) engine as **Snap! blocks**: build, zone, and script the
@@ -94,7 +95,7 @@ and rewrite it together (hand + AI), seeded by David, Don, and **Jaron Lanier**.
   seed: [`repo-shows/snap-logo-brian-jens.yml`](../../repo-shows/snap-logo-brian-jens.yml)).
 - **Bounce:** [David Levitt](../david-levitt/README.md) — Hookup/Body Electric/Bounce; TS reincarnation.
 - **CAM6:** [Norman Margolus](../norman-margolus/README.md) — chapter playgrounds (permission granted).
-- **VitaMoo:** [Jeff Adkins](../jeff-adkins/README.md) — Sims character rendering/animation.
+- **VitaMoo:** Don Hopkins — Sims character rendering/animation. **SimObliterator:** Jeff Adkins.
 - **Micropolis / constructionism:** [Will Wright](../will-wright/README.md),
   [Cynthia Solomon](../cynthia-solomon/README.md), [Ken Kahn](../ken-kahn/README.md),
   [Alan Kay](../alan-kay/README.md), Doreen Nelson.

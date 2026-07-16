@@ -24,7 +24,7 @@ dream_segments:
   - "AI-assisted cross-language reverse engineering — analyze, translate, verify, iterate."
   - "The feedback loop as a creative engine: stone soup / cauldron / cellular automata / Wolfram / Eno — AI copying AI copying people, better each pass."
   - "A GitHub-native home for user-created Sims content (SimFreaks, SimSlice, Zombie Sims, Simprov Wedding Playset): catalog, review, patch, file issues on objects, collaborate."
-  - "VitaMoo — Sims skeletons/meshes/animations in the browser (.msh vs .skn)."
+  - "VitaMoo (Don's) — Sims skeletons/meshes/animations in the browser (.msh vs .skn); Jeff's SimObliterator is the save/object layer that feeds it."
 
 full_credit: "Jeff is credited for SimObliterator's influence + code regardless of whether he records anything. TS reimplementation follows repo IP-hygiene + credit rules."
 

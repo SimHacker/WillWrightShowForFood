@@ -31,7 +31,7 @@ Modern tooling path — not retail binaries in git:
 | Tool | URL |
 |------|-----|
 | **SimObliterator Suite** | https://github.com/DnfJeff/SimObliterator_Suite |
-| **VitaMoo** (WebGL characters) | https://github.com/DnfJeff/SimObliterator_Suite/tree/main/vitamoo |
+| **VitaMoo** (WebGL characters — Don Hopkins) | https://github.com/SimHacker/MicropolisCore/tree/main/packages/vitamoo |
 | Live demo | https://vitamoo.space |
 | Sim Obliterator designs | https://github.com/SimHacker/moollm/tree/main/designs/sim-obliterator |
 

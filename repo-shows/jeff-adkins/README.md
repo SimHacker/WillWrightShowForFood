@@ -8,8 +8,9 @@ topic, and the first Will Wright show (the 1996 data-portability holy grail) flo
 ## What this is
 
 A **Repo Show** with **[Jeff Adkins](../../characters/jeff-adkins/README.md)** (GitHub **DnfJeff**),
-creator of **SimObliterator** and **VitaMoo** — the AI-assisted, open tools for reading, writing,
-analyzing, and rendering **The Sims 1** saves, objects, and characters. SimObliterator is a big part
+creator of **SimObliterator** — the AI-assisted, open tools for reading, writing,
+analyzing, and rendering **The Sims 1** saves, objects, and characters. (**VitaMoo**, the in-browser
+character renderer, is **Don Hopkins'** — inspired by Jeff's SimObliterator.) SimObliterator is a big part
 of the substrate under the show's **character import/export** — the **soul mover** — the thing that
 turns Will Wright's 1996 *"data portability is the holy grail"* into a running demo.
 
