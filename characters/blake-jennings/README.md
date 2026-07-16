@@ -3,48 +3,136 @@
 *Portrayal of a real invitee, written by Don — not Blake.*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
-## Who
+**Blake Jennings** ([**@jakeblennings**](https://www.youtube.com/@jakeblennings), ~577k) is the
+voice behind **An Unnecessary Analysis** — long-form forensic comedy about game communities,
+best known for the **"War Crimes of the … Community"** series. He named Don on camera in
+[The War Crimes of the Sims Community](https://youtu.be/zMD44gcSIJw?t=274). He replied that
+middle-school-him playing The Sims never imagined talking to one of the people who built the
+tools — and that he'd love to hear about the project with **Will Wright**.
 
-**Blake Jennings** ([**@jakeblennings**](https://www.youtube.com/@jakeblennings) on YouTube,
-~577k subscribers) makes long-form essays under **An Unnecessary Analysis** — best known for the
-**"War Crimes of the … Community"** series (Stardew Valley, The Sims, and other fandom deep-dives).
-Also streams on [Twitch](https://www.twitch.tv/jakeblennings); podcast **@KeepMeYoungPod**.
+That's the door. Here's what's on the other side.
 
-Talent: **Stephanie O'Brien**, FWB Talent — looped Blake into Don's outreach after Don commented
-on the Sims video.
+---
 
-## Why Blake belongs
+## Will Wright Show For Food — a Repo Show
 
-Blake already did the forensic community work the show needs an audience for: Sims history, EA
-drama, creator ethics — and **named Don on camera** in
-[The War Crimes of the Sims Community](https://www.youtube.com/watch?v=zMD44gcSIJw)
-([t=274](https://youtu.be/zMD44gcSIJw?t=274)). He replied 2026-07-16: wants to hear more about the
-project with Will Wright.
+A blog is a dead text-and-picture show. A podcast is a dead mp3. A YouTube channel is a dead
+mp4 plus a toxic comment section. A **Repo Show** is a live GitHub repository: text, pictures,
+audio, video, *and* a tree of files that can change over time — with branching timelines,
+tagged releases, issues, pull requests, and a place for the audience to hang out **before,
+during, and after** the performance.
 
-Natural fit: explain **Repo Show** as what comes *after* a viral essay — sources, discussions,
-and collaboration that aren't a YouTube comment section — and optionally help him wrap his own
-videos as living repos.
+Git is the trapeze net (full history, nothing lost, safe experiments in parallel universes).
+GitHub is the MMORPG layer: collaboration, reviews, gatekeeping, hanging out. Off the shelf.
+Free. Worldwide industrial scale. Kids who make a GitHub account to join a show learn skills
+that outlast any single video.
 
-**Casting next:** introduce Blake to **[Ell (Ellpeck) / Tiny Life](../ellpeck/)** — Soul City ⇔
-Tiny Life bridge design, and a possible Unnecessary Analysis invert: *"War Crimes of the Tiny
-Life Community"* where the real villains are the trolls/detractors, not the Tinies.
+**Will Wright Show For Food** is the first Repo Show Don is producing — to prove the format and
+evolve the tools so *anyone* (including Blake) can wrap their own videos and games as living
+repos: sources, save files, discussions, not just a description-box full of links.
 
-## Reach
+**Will Wright is in** — signed on for the
+[premiere](../../repo-shows/will-wright-premiere/README.md) and more.
 
-| Channel | Link |
-|---------|------|
-| YouTube | https://www.youtube.com/@jakeblennings |
+---
+
+## The $5-billion question (Stanford, 1996)
+
+Don sat in on Will's talk to Terry Winograd's Stanford UI class — supposed to be postmortems of
+SimEarth, SimAnt, and SimCity 2000. Then a student asked what Will was working on *now*. Will
+was kindly taken aback — *"Oh God…"* — backed up a few steps, and jumped into the deep end.
+
+That answer became **Dollhouse**. Dollhouse became **The Sims**. The franchise later passed
+**$5 billion** in lifetime sales (EA, Oct 2019) — hence the nickname.
+
+**Jump to the moment:** https://youtu.be/nsxoZXaYJSk?t=4099
+
+**Full talk:** [Will Wright — Interfacing to Microworlds (1996-04-26)](https://www.youtube.com/watch?v=nsxoZXaYJSk)
+· [Stanford Archives](https://searchworks.stanford.edu/view/yj113jt5999)
+· [Don's Medium wrap](https://donhopkins.medium.com/designing-user-interfaces-to-simulation-games-bd7a9d81e62d)
+  (notes from the room, Will reviewed; proto–Repo Show: video + transcript + explanation)
+· [Source bundle in this repo](../will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/)
+
+### Money shots
+
+> **Student:** What projects are you working on now, and if you'd rather not talk about that,
+> what projects or models had you considered before that were kind of interesting that you
+> didn't do?
+>
+> **Will Wright:** You mean like what systems have I considered modeling?
+>
+> **Student:** Right. And also what systems are you currently working on, if you can talk about them?
+>
+> **Will Wright:** Oh God… Okay, well one thing we're working on, is a — we've been kind of
+> interested in our company for a long time about the idea of **data portability**.
+
+> Most of the game industry right now is built on kind of the **movie model**. So you spend a
+> lot of money developing one big title, you come out with it, you advertise it, either it goes
+> or it dies, and then you do the next one separate. Except for sequels.
+
+> What we've tried to do… is to build our games more as a **hobby model**. Where people buy and
+> collect things, but they relate to the last things they collected. It's like a **train set**.
+> …Everybody can kind of come into that, take their particular slant on it… I'd like to see the
+> game industry kind of evolve that way, and part of that is I want the games to actually be
+> able to have **persistent data that can move from one game to another**.
+
+> This is a game I call **Dollhouse.** And if this looks familiar, it's because **I've just
+> loaded a SimCity file into here.**
+
+That thesis — data moving between games, the hobby model, not the one-and-done movie model —
+is still the north star. The Repo Show is how we do it in public, across *all* games, not locked
+inside one publisher.
+
+Soon after that talk, Don went to Maxis to work with Will on Dollhouse → The Sims.
+
+---
+
+## Why Blake
+
+Blake already does at essay scale what the show needs: receipts, community ethics, Sims history,
+EA drama — with panache. A viral Unnecessary Analysis *ends* where the comment fight starts. A
+Repo Show is what comes **after**: sources, issues, audience PRs, collaboration that isn't
+landfill.
+
+Natural fits:
+
+1. **Retrofit** — wrap an Unnecessary Analysis video as a living repo (transcript, sources,
+   "what should happen next" threads).
+2. **Will premiere reactor** — unpack the 1996 clip with Don (and maybe Will): the question that
+   unspooled The Sims.
+3. **Meet [Ell / Tiny Life](../ellpeck/)** — Don's bet: Blake will *love*
+   [Tiny Life](https://tinylifegame.com/), the queer indie life-sim that still ships share + story
+   + mods while EA's Legacy Collection removed the Exchange. Stack: **Soul City ⇔ Tiny Life**
+   bridge design ([spec](../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml) ·
+   [bridge doc](../ellpeck/bridge/soul-city-bridge.md)).
+4. **"War Crimes of the Tiny Life Community"** — Unnecessary Analysis invert: the real villains
+   are Gamergate / incel / MAGA trolls and detractors harassing that community — not the Tinies.
+
+---
+
+## Blake's essays (entry points)
+
+| Essay | Link |
+|-------|------|
+| Sims community (Don call-out ~t=274) | https://youtu.be/zMD44gcSIJw?t=274 |
+| Stardew Valley community | https://www.youtube.com/watch?v=UyEPu8v8Lus |
+| World of Warcraft community (Bannon gold-farming beat ~40:04) | https://youtu.be/OGV5uPmFzrE?t=2404 |
+| Channel | https://www.youtube.com/@jakeblennings |
 | Twitch | https://www.twitch.tv/jakeblennings |
-| Sims essay (Don call-out) | https://youtu.be/zMD44gcSIJw?t=274 |
-| Stardew essay | https://www.youtube.com/watch?v=UyEPu8v8Lus |
-| WoW essay (Bannon beat) | https://youtu.be/OGV5uPmFzrE?t=2404 |
 
-## Files
+---
+
+## In this room
 
 | File | What |
 |------|------|
+| [invitation.md](invitation.md) | Guest-facing invite |
+| [ideas.md](ideas.md) | Conversation hooks + show seeds |
 | [CHARACTER.yml](CHARACTER.yml) | Machine-readable portrayal |
-| [invitation.md](invitation.md) | Guest-facing invite draft |
-| [ideas.md](ideas.md) | Conversation hooks |
+| [GLANCE.yml](GLANCE.yml) | One-screen sniff |
 
-↑ [Characters](../) · [Will premiere](../../repo-shows/will-wright-premiere/)
+↑ [Characters](../) · [Will premiere](../../repo-shows/will-wright-premiere/) ·
+[1996 Winograd source](../will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/) ·
+[Ell / Tiny Life](../ellpeck/)
+
+*Quiet mode while invitations go out — please don't share links publicly just yet.*
