@@ -36,14 +36,15 @@ repos: sources, save files, discussions, not just a description-box full of link
 
 ---
 
-## The $5-billion question (Stanford, 1996)
+## The $5-Billion Question (Stanford, 1996)
 
 Don sat in on Will's talk to Terry Winograd's Stanford UI class — supposed to be postmortems of
-SimEarth, SimAnt, and SimCity 2000. Then a student asked what Will was working on *now*. Will
-was kindly taken aback — *"Oh God…"* — backed up a few steps, and jumped into the deep end.
+SimAnt (too simple), SimEarth (too complicated), and SimCity 2000 (just right). 
+Then a student asked what Will was working on *now*. Will was kindly taken aback — *"Oh God…"* — 
+backed up a few steps, and jumped into the deep end.
 
 That answer became **Dollhouse**. Dollhouse became **The Sims**. The franchise later passed
-**$5 billion** in lifetime sales (EA, Oct 2019) — hence the nickname.
+**$5 billion** in lifetime sales (EA, Oct 2019) — hence the nickname "The $5-Billion Question".
 
 **Jump to the moment:** https://youtu.be/nsxoZXaYJSk?t=4099
 
@@ -53,7 +54,7 @@ That answer became **Dollhouse**. Dollhouse became **The Sims**. The franchise l
   (notes from the room, Will reviewed; proto–Repo Show: video + transcript + explanation)
 · [Source bundle in this repo](../will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/)
 
-### Money shots
+### The Money Shots
 
 > **Student:** What projects are you working on now, and if you'd rather not talk about that,
 > what projects or models had you considered before that were kind of interesting that you
@@ -80,7 +81,7 @@ That answer became **Dollhouse**. Dollhouse became **The Sims**. The franchise l
 > loaded a SimCity file into here.**
 
 That thesis — data moving between games, the hobby model, not the one-and-done movie model —
-is still the north star. The Repo Show is how we do it in public, across *all* games, not locked
+is still the North Star. The Repo Show is how we do it in public, across *all* games, not locked
 inside one publisher.
 
 Soon after that talk, Don went to Maxis to work with Will on Dollhouse → The Sims.
@@ -97,7 +98,7 @@ landfill.
 Natural fits:
 
 1. **Retrofit** — wrap an Unnecessary Analysis video as a living repo (transcript, sources,
-   "what should happen next" threads).
+   "what should happen next" threads, mayonaise).
 2. **Will premiere reactor** — unpack the 1996 clip with Don (and maybe Will): the question that
    unspooled The Sims.
 3. **Meet [Ell / Tiny Life](../ellpeck/)** — Don's bet: Blake will *love*
@@ -106,7 +107,7 @@ Natural fits:
    bridge design ([spec](../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml) ·
    [bridge doc](../ellpeck/bridge/soul-city-bridge.md)).
 4. **"War Crimes of the Tiny Life Community"** — Unnecessary Analysis invert: the real villains
-   are Gamergate / incel / MAGA trolls and detractors harassing that community — not the Tinies.
+   are Gamergate / Incel / Kiwi Farms / MAGA trolls and detractors harassing that community — not the Tinies. Ell was never the victim, he was victorious.
 
 ---
 
