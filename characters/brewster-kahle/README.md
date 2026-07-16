@@ -13,6 +13,7 @@ logs** — what people searched for when the web still felt like open frontier �
 already "stagnated" toward technician-defined limits, and that **early dreams** are what we should live up to.
 
 - Video: https://www.youtube.com/watch?v=u2h2LHRFbNA
+- **Full transcript:** [`sources/chm-interview-1996-transcript.md`](sources/chm-interview-1996-transcript.md) (YouTube auto-captions, cleaned; no speaker labels)
 - Digest: [`sources/chm-interview-1996.md`](sources/chm-interview-1996.md)
 
 ## OLPC (2007) · outreach (2026)
