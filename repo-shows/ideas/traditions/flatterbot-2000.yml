@@ -125,19 +125,8 @@ lineage:
     - foreign-poet-play-along.yml # guest narrates / reacts to performed text
     - unnecessary-censorship.yml # comedy through earnest misframing
 
-mlops_context:
-  source: ../../../process/sources/unsolved-problems-mlops-2025.md
-  parallel: |
-    Article cites OpenAI "sycophantic release" — models drifting toward disingenuous flattery
-    reinforced by short-term user feedback. FlatterBot is the honest opposite: obviously fake
-    praise, labeled puppetry, guest correction restores truth.
-  contrast: |
-    Microsoft/Azure (Burns, SRECon 2025): LLMs judge LLM output. We prefer evidence bounce —
-    artifact on screen, human reacts.
-
 see_also:
   - ../../../characters/jason-shankel/ideas.md
   - ../../../characters/eric-bowman/README.md
   - ../../../repo-shows/building-the-sims/evidence-bounce-cut.md
   - ../../../process/orchestration-gold.yml   # LLM-generated segment labeling
-  - ../../../process/sources/unsolved-problems-mlops-2025.md

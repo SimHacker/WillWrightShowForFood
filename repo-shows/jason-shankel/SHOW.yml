@@ -13,7 +13,7 @@ show:
 
 episodes:
   - { id: ai-skills-prototyping, what: "ParticleMan / SimMars / first Spore programmer; MOOLLM skills as modern virtuous cycle; live tiny prototype in repo." }
-  - { id: mlops-vs-repo-show, source: ../../process/sources/unsolved-problems-mlops-2025.md, what: "Murphy & Underwood ACM Queue — what's unsolved in MLOps; contrast git-native show provenance + human authorship vs LLM-judge-LLM and sycophantic drift." }
+  - { id: mlops-vs-repo-show, source: ../../process/sources/unsolved-problems-mlops-2025.md, what: "Murphy & Underwood ACM Queue — what's unsolved in MLOps; contrast git-native show provenance + human authorship vs LLM-judge-LLM." }
   - { id: flatterbot-2000, tradition: ../ideas/traditions/flatterbot-2000.yml, what: "Optional — Pee-wee ventriloquism × Glick; Jason modestly corrects Bobo DirectX book; evidence bounce to AbeBooks cover." }
   - { id: sonoma-teaching-arc, what: "17+ CS Colloquium YouTube sessions — generative storytelling 2009 → monads 2016; what held up." }
   - { id: connected-play-awe, what: "AWE 2013 Syntertainment talk vs today's AR/LLM stack." }

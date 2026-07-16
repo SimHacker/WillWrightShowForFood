@@ -65,26 +65,26 @@ Training fragility to network blips — known mitigations (redundant links, dist
 
 ---
 
-## Repo Show hooks (our counter-narrative — not claims by the authors)
+## Repo Show hooks (process only — not comedy traditions)
 
-| Article pain | Repo Show answer |
-|--------------|------------------|
-| Model versioning opaque | **Git-native show artifacts** — episodes, gags, CHARACTER.yml, sources/ cards are diffable, tagged, reviewable; `orchestration-gold` labels human-reviewed segments. |
-| User-feedback-as-QA | **Human authorship on air** — AI proposes code/orchestration; people dispose; simulated characters labeled (FlatterBot, honest-fake-call-in). |
-| Sycophantic drift | **FlatterBot 2000!** — comedy through *obvious* bad flattery; guest correction beat restores truth (e.g. Bobo DirectX book). |
-| LLM judges LLM | Contrast with **evidence bounce cut** — claim → artifact on screen → human reaction, not automated grader. |
-| Provenance / compliance | **sources/ digests** + `show_ties`; private green-room for consent-sensitive instantiation. |
+| Article pain | Repo Show process answer |
+|--------------|--------------------------|
+| Model versioning opaque | Git-native artifacts — episodes, CHARACTER.yml, `sources/` cards; `orchestration-gold` labels human-reviewed segments. |
+| User-feedback-as-QA | Human authorship on air — AI proposes code/orchestration; people dispose; simulated characters explicitly labeled. |
+| LLM judges LLM | **Evidence bounce cut** — claim → artifact on screen → human reaction (see `building-the-sims/evidence-bounce-cut.md`). |
+| Provenance / compliance | `process/sources/` digests + green-room consent gates for sensitive instantiation. |
 
-**On-air framing (optional):** "The article asks for a better paradigm or a better patch. We're betting git + labeled human performance + visible repo history is the patch for *show* reliability — not foundation-model serving."
+**Scope note:** This digest is about production ML reliability. Comedy traditions (e.g. FlatterBot 2000!) are unrelated — do not cross-wire.
+
+**On-air framing (optional):** Murphy & Underwood ask for a better paradigm or patch for *foundation-model serving*. Our patch for *show* reliability is git + labeled human performance + visible repo history — a different problem domain.
 
 ---
 
-## Episode / tradition ties
+## Episode / process ties
 
-- `repo-shows/jason-shankel/SHOW.yml` — AI + skills episode; reliability vs prototyping virtuous cycle.
-- `repo-shows/ideas/traditions/flatterbot-2000.yml` — sycophancy parody; `don_denial` as anti-sycophant beat.
-- `repo-shows/ideas/traditions/make-play-tools-show.yml` — git history as making-of; discuss beat = people, not model.
+- `repo-shows/jason-shankel/SHOW.yml` — optional `mlops-vs-repo-show` segment (AI + skills context).
+- `repo-shows/ideas/traditions/make-play-tools-show.yml` — git history as making-of.
 - `repo-shows/ideas/themes/human-control-and-authorship.yml` — augmentation not automation.
 - `process/orchestration-gold.yml` — training gold / provenance for routing traces.
 
-↑ [sources index](README.md) · [orchestration-gold](../orchestration-gold.yml) · [flatterbot-2000](../../repo-shows/ideas/traditions/flatterbot-2000.yml)
+↑ [sources index](README.md) · [orchestration-gold](../orchestration-gold.yml)
