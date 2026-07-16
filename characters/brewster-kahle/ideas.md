@@ -9,6 +9,7 @@
 | **Early dreams** | WAIS logs, 1996 crawl, ethics of digital librarianship, Ted Nelson / Xanadu | Solo |
 | **Books on the XO** | Jan 2007 devel-list viewer spec; Flatland demo; streaming + search | Walter Bender, Samuel Klein |
 | **Little Garden reunion** | Resale-friendly ISP; co-op origins; Gilmore prediction | Tom Jennings, Tim Pozar, Gumby |
+| **The Soul City tornado** | Sims Exchange in the Wayback Machine → family albums resurrected in Soul City | Will Wright |
 
 Async segments OK — Brewster records when convenient; Don assembles with sourced clips from [`sources/`](sources/README.md).
 
@@ -39,5 +40,24 @@ AskTog living-repo rescue names IA as ally ([`../bruce-tognazzini/sources/asktog
 ## 5. Amsterdam / Kennisnet overlap
 
 Dutch public-education hosting of Wikimedia servers during Kennisnet Micropolis years — [`CHARACTER.yml`](CHARACTER.yml#synergies.kennisnet_wikimedia_amsterdam).
+
+## 6. The Soul City tornado — Sims Exchange resurrection
+
+EA's **Sims Exchange** let players upload save files, houses, families, characters, pets, and
+**family albums** — captioned-screenshot stories, a machinima literary genre millions of players
+practiced. EA shut it down; the **Wayback Machine** holds what remains.
+
+**Soul City** ([SimHacker/moollm — examples/soul-city](https://github.com/SimHacker/moollm/tree/main/examples/soul-city))
+is the Wizard of Oz tornado: it sweeps that archived content out of the Wayback Machine and sets it
+down alive — houses rebuilt, families reunited, pets included, album stories readable again as
+literature. Named for Marusek's *The Wedding Album* (1999), where simulated people fight to live in
+"Simopolis."
+
+Beats for Brewster:
+
+- **Archive as ark, not amber** — the Exchange content wasn't just preserved, it was kept viable for resurrection; "early dreams" ([`sources/chm-1996-early-dreams-clip.md`](sources/chm-1996-early-dreams-clip.md)) applied to game culture
+- **Family albums as vernacular literature** — what does a library owe a genre nobody thought was one?
+- **Wayback → living world pipeline** — what IA infrastructure (bulk access, CDX, item APIs) makes resurrection projects like this practical
+- Natural crossover with **Will Wright** — the albums were his design's emergent literature
 
 ↑ [`README.md`](README.md)

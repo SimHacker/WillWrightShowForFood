@@ -90,6 +90,23 @@ delete it anytime, or take direct edit access and make it yours.
 - Wayback, Open Library, and partnership work (e.g. Wikimedia link repair — cited in [`CHARACTER.yml`](CHARACTER.yml))
 - Preservation as **keeping early intent alive**, not only frozen HTML
 
+### The Soul City tornado — life after archive
+
+EA's old **Sims Exchange** website — where players uploaded save files, houses, families, characters,
+pets, and above all **family albums**: illustrated stories told in captioned screenshots, a machinima
+literary genre in its own right — survives today in the **Wayback Machine**. Millions of players wrote
+those albums; the Archive is where they landed when EA moved on.
+
+We're building **Soul City** ([SimHacker/moollm](https://github.com/SimHacker/moollm/tree/main/examples/soul-city)) —
+a place where that content comes back to life: a **Wizard of Oz tornado** that sweeps up the archived
+houses, families, pets, and album stories and sets them down somewhere they can live again, in color.
+The name honors David Marusek's *The Wedding Album* (1999), where simulated people campaign for the
+right to live in a place called "Simopolis."
+
+This is your "early dreams" line made concrete: the Archive didn't just freeze that content — it kept
+it alive long enough for someone to build the place it was dreaming of. I'd love your telling of what
+**resurrection** (not just retrieval) from the Archive should look like.
+
 ### The Little Garden (optional)
 
 - Co-op origins, resale-friendly ISP model, **Toad Hall** → colo — mostly Tim's 1996 telling; your angle welcome
