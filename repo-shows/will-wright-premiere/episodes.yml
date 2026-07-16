@@ -24,7 +24,7 @@ flows_from_it:                 # candidate follow-up shows (from will-wright-ser
   - id: with-yoot
     topic: "Will + Yoot Saito, open-ended (see ../will-and-yoot.yml)."
   - id: proxi-sims-bridge
-    topic: "THE data-portability payoff: design a Proxi ⇔ Simopolis ⇔ Sims bridge — the thing Will NAILED in 1996 (moving characters/homes/cities/objects/ideas/memories between universes), finally built, connecting his own games, with a Timothy Leary Mind Mirror personality layer. See ../game-bridge-proxi-sims.yml."
+    topic: "THE data-portability payoff: design a Proxi ⇔ Soul City ⇔ Sims bridge — the thing Will NAILED in 1996 (moving characters/homes/cities/objects/ideas/memories between universes), finally built, connecting his own games, with a Timothy Leary Mind Mirror personality layer. See ../game-bridge-proxi-sims.yml."
 
 seeded_by_the_1996_video:
   source: ../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/

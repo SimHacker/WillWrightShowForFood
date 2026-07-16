@@ -21,7 +21,7 @@ following through to working code and credited ideas in public.
 
 ## Proposed focus
 
-**Worlds that loop** — from Game Neverending and Habitat to browser-native **Simopolis**:
+**Worlds that loop** — from Game Neverending and Habitat to browser-native **Soul City**:
 
 - **Data portability** as Will Wright's explicit 1986 thesis (you thumbs-up'd this as the
   starting point for the first Will episode)

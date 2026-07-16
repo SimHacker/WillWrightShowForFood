@@ -30,7 +30,7 @@ Four jobs the guides cover:
 
 1. **Create · publish · share** — web tools + federated UCC (above)
 2. **Repo Shows channel** — discover and promote Repo Show episodes ([Will Wright flagship](../../repo-shows/will-wright-premiere/), guest network, live/VOD, GitHub, TicketPR)
-3. **Sims & bridges** — show archive for The Sims history + Simopolis bridge episodes (other games)
+3. **Sims & bridges** — show archive for The Sims history + Soul City bridge episodes (other games)
 4. **Requires Sims on Steam** — drives Legacy Collection sales; EA-friendly fan-guide disclaimer
 
 **Distribution (web first, then native companion):**

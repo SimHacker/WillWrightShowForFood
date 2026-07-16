@@ -33,7 +33,7 @@ roster:
 
 soul_stack:
   per_character: CHARACTER.yml
-  upstream: SimHacker/moollm/examples/simopolis/characters/
+  upstream: SimHacker/moollm/examples/soul-city/characters/
   sims_export: EXPORT-SIMS-RELATIONSHIPS.yml
   schema: SCHEMA.yml
 

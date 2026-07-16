@@ -1,7 +1,7 @@
 # MicropolisCore — design docs, packages, code, content
 
 Don's active **open-source SimCity** monorepo — C++ engine → WASM, SvelteKit shell, WebGPU holodeck,
-Simopolis / MOOLLM federation vision. Live: [micropolisweb.com](https://micropolisweb.com).
+Soul City / MOOLLM federation vision. Live: [micropolisweb.com](https://micropolisweb.com).
 
 **Repo:** [github.com/SimHacker/MicropolisCore](https://github.com/SimHacker/MicropolisCore)
 
@@ -14,9 +14,9 @@ Simopolis / MOOLLM federation vision. Live: [micropolisweb.com](https://micropol
 | Doc | Why read it |
 |-----|-------------|
 | [ELEVATOR-PITCH.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/ELEVATOR-PITCH.md) | Micropolis Federation in one page |
-| [characters-as-hydrogen.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/characters-as-hydrogen.md) | Characters as federation atoms — read first for Simopolis |
+| [characters-as-hydrogen.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/characters-as-hydrogen.md) | Characters as federation atoms — read first for Soul City |
 | [simopolis.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/simopolis.md) | Micropolis + The Sims under one umbrella |
-| [moollm-microworld-os.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/moollm-microworld-os.md) | MOOLLM agent layer on Simopolis |
+| [moollm-microworld-os.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/moollm-microworld-os.md) | MOOLLM agent layer on Soul City |
 | [designs/README.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/README.md) | Full design index (60+ notes) |
 | [platform-lineage-index.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/platform-lineage-index.md) | NeWS → OLPC → Wasm/WebGPU eras |
 

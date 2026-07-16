@@ -27,7 +27,7 @@ send **real fans and subscribers** your way.
 **SimCity running inside The Sims**, deeply integrated: a Lilliputian city in the back yard. That's
 Will's 1996 data-portability / games-in-games dream, *actually built*. I want you to walk through how
 it works, and then design — live — how to widen it: real save files, emulators, round-tripping state
-across many games (the Simopolis idea you basically pioneered).
+across many games (the Soul City idea you basically pioneered).
 
 And I want to spotlight the **whole 26 years**: SimSlice + Heather's SimFreaks, the object suites, the
 magnum-opus packs like **Zombie Sims**, your work with **Will at Gallium** — and help more people
@@ -41,7 +41,7 @@ SimShow, Transmogrifier, RugOMatic, body/head/wig editors), optionally AI-orches
 
 | Who | Their angle on this show |
 | --- | --- |
-| **You (Steve)** | **SliceCity** (SimCity inside The Sims), SimSlice, Simopolis, round-tripping saves across games; Gallium with Will |
+| **You (Steve)** | **SliceCity** (SimCity inside The Sims), SimSlice, Soul City, round-tripping saves across games; Gallium with Will |
 | **Heather** | 26 years of SimFreaks — object suites, deep SimAntics, Zombie Sims, community leadership; publishing revival |
 
 Heather is getting her own invitation today — personalized to her, about this same show. No need to
@@ -57,7 +57,7 @@ angles. **Read either or both** before you reply — including how **Heather** d
 
 | Guest | Invitation | Their angle on this show |
 | --- | --- | --- |
-| **Steve Alvey** 🏙️ | [invitation.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/invitation.md) *(this letter)* · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/invitation.md) | SliceCity, Simopolis, save round-tripping, games-in-games |
+| **Steve Alvey** 🏙️ | [invitation.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/invitation.md) *(this letter)* · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/invitation.md) | SliceCity, Soul City, save round-tripping, games-in-games |
 | **Heather Alvey** 🧟 | [invitation.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/invitation.md) | SimFreaks catalog, object suites, Zombie Sims, community, publishing revival |
 
 ---
@@ -68,7 +68,7 @@ angles. **Read either or both** before you reply — including how **Heather** d
 
 | | |
 | --- | --- |
-| **On this show** | SliceCity (SimCity in The Sims); Simopolis; save round-tripping; games-in-games; Gallium with Will |
+| **On this show** | SliceCity (SimCity in The Sims); Soul City; save round-tripping; games-in-games; Gallium with Will |
 | **Invitation** (his view) | [`invitation.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/invitation.md) |
 | **Guest README** | [`README.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/README.md) |
 | **Conversation hooks** | [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/ideas.md) |
@@ -106,6 +106,6 @@ straight to your stores/subscriptions.
 
 — Don Hopkins *(User Interface Flower Child)*
 
-`🏙️ SliceCity` · `🌀 Simopolis round-tripping` · `🧟 Heather: SimFreaks` · `🛍️ send subscribers your way`
+`🏙️ SliceCity` · `🌀 Soul City round-tripping` · `🧟 Heather: SimFreaks` · `🛍️ send subscribers your way`
 
 *P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

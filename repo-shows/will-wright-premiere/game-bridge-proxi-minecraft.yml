@@ -1,11 +1,11 @@
-# Game bridge — Proxi ⇔ Simopolis ⇔ Minecraft
+# Game bridge — Proxi ⇔ Soul City ⇔ Minecraft
 # Will already exported Proxi characters into Minecraft (Dev Diaries Dec 2025) — build FROM that precedent.
 
 meta:
   id: game-bridge-proxi-minecraft
   type: bridge
   status: seed
-  one_line: "Proxi characters already walk in Minecraft — extend the export into Simopolis round-trip and a live Repo Show demo."
+  one_line: "Proxi characters already walk in Minecraft — extend the export into Soul City round-trip and a live Repo Show demo."
 
 thesis: |
   **Minecraft is a major bridge** — not hypothetical. Will Wright said on camera that he **already
@@ -24,12 +24,12 @@ shipped_precedent:
 
 show_beats:
   - "Will demos or explains the export on air — how Proxi souls map to blocks/skins/behaviors"
-  - "Round-trip through Simopolis hub — generic facet store before Minecraft-specific shortcuts"
+  - "Round-trip through Soul City hub — generic facet store before Minecraft-specific shortcuts"
   - "Heirloom Proxi + Minecraft build session — memorialize a person as a shared world family builds"
   - "Bartle types — which Minecraft play styles map to which family memory contributors?"
   - "Identity pronoun surfing — players pop third↔first person when describing play; mark it live in interview quotes"
 
-hub_path: "Proxi ⇔ Simopolis ⇔ Minecraft (⇔ Sims, Stardew, Spore, … via hub)"
+hub_path: "Proxi ⇔ Soul City ⇔ Minecraft (⇔ Sims, Stardew, Spore, … via hub)"
 
 ties:
   - game-bridge-proxi-sims.yml

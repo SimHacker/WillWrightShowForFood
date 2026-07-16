@@ -1,7 +1,7 @@
 # Soul City bridge — Tiny Life ⇔ The Sims
 
 **Soul City** is the liminal heaven where souls lay over between worlds — the waystation in Will's
-Repo Show invitation, not a separate "Simopolis" hub. A **soul-file** carries identity, relationships,
+Repo Show invitation, not a separate "Soul City" hub. A **soul-file** carries identity, relationships,
 story text, and memories; each game **re-renders** it in its own medium (Will's train-set hobby model).
 
 Ell's [**Tiny Life**](https://tinylifegame.com/) already speaks this language:

@@ -24,11 +24,11 @@ See [correspondence.yml](correspondence.yml) · [moollm-lane-neverending-habitat
 
 | Ben's lineage | This repo |
 |---------------|-----------|
-| Game Neverending → Flickr | Simopolis Exchange; social spatial play as infrastructure |
+| Game Neverending → Flickr | Soul City Exchange; social spatial play as infrastructure |
 | Habitat-style shared worlds | [Lane Neverending](moollm-lane-neverending-habitat.yml) — spliceable circular street |
 | Stamen / Planetary — data as instrument | Micropolis zone maps; aggregate ↔ dollhouse zoom |
 | Foundation for Public Code | Player-in-the-middle publish; provenance mandatory; opt-in catalog |
-| Speculative design, nurturing environments | MOOLLM Simopolis; characters-as-hydrogen federation |
+| Speculative design, nurturing environments | MOOLLM Soul City; characters-as-hydrogen federation |
 
 ## The hooks
 
@@ -38,10 +38,10 @@ Will's pre-Dollhouse talk: move **characters and data between worlds**. Ben agre
 episode one with Will. Walk [1996 Winograd video](../will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/)
 + [data-portability crown jewel](../../repo-shows/ideas/themes/data-portability-crown-jewel.yml).
 
-### 2. Simopolis — liminal heaven between game runtimes
+### 2. Soul City — liminal heaven between game runtimes
 
 While uplifted: explore, edit bodies and souls, create/buy/share. [Marusek *Wedding Album*](https://en.wikipedia.org/wiki/The_Wedding_Album_(short_story))
-→ Sims 1 saves from 2001. [simopolis README](https://github.com/SimHacker/moollm/blob/main/examples/simopolis/README.md)
+→ Sims 1 saves from 2001. [Soul City README](https://github.com/SimHacker/moollm/blob/main/examples/soul-city/README.md)
 · [MicropolisCore simopolis.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/simopolis.md).
 
 Show seed: Little Computer Person tours the future inside The Sims.
@@ -82,12 +82,12 @@ deterministic and cheap.
 ### 9. Mind Mirror Apple ][ organelle
 
 Run Timothy Leary's Mind Mirror in a browser emulator; round-trip enriched personality into
-Simopolis; export to other federation peers. [game-bridge-mind-mirror.yml](../../repo-shows/game-bridge-mind-mirror.yml)
+Soul City; export to other federation peers. [game-bridge-mind-mirror.yml](../../repo-shows/game-bridge-mind-mirror.yml)
 
 ### 10. Micropolis Federation naming
 
 MicropolisCity + SoulCity under [Micropolis Public Name License](https://github.com/SimHacker/MicropolisCore/blob/main/MicropolisPublicNameLicense.md).
-Simopolis = umbrella fiction only. Git branch per city save: `MicropolisCity_<save-id>`.
+Soul City = umbrella fiction only. Git branch per city save: `MicropolisCity_<save-id>`.
 
 ## Sources (public)
 

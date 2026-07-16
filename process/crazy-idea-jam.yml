@@ -371,7 +371,7 @@ ideas:
     video: "https://www.youtube.com/watch?v=5NytloOy7WM"
     ties: [../characters/don-hopkins/career/work-history.yml, vision-and-ambition.yml]
 
-  simopolis_soul_bridge_afterlife:
+  soul_bridge_afterlife:
     emoji: "👻"
     blurb: |
       A two-way, round-trippable SOUL LEDGER between LucasArts' Afterlife and The Sims. Souls

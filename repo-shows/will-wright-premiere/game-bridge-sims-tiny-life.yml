@@ -1,6 +1,6 @@
 # Game bridge — The Sims ⇔ Soul City ⇔ Tiny Life
 # Friend project: Ell (Ellpeck) — https://tinylifegame.com/
-# Soul City = liminal waystation (Will invitation). NOT Simopolis.
+# Soul City = liminal waystation (Will invitation). NOT Soul City.
 
 meta:
   id: game-bridge-sims-tiny-life
@@ -17,9 +17,8 @@ soul_city:
   definition: |
     Liminal heaven where souls lay over between worlds — the waystation in Will's Repo Show invitation
     (Proxi ⇔ Soul City ⇔ The Sims). The soul-file travels; each world re-renders in its own medium.
-  not_simopolis: |
-    Guest-facing copy and facet compiler use **Soul City** only. Simopolis is a separate git-hub
-    naming lane elsewhere in the repo — do not conflate in Ell episode materials.
+  naming: |
+    Guest-facing copy and facet compiler use **Soul City** — the hub name across all game bridges.
   sibling: game-bridge-soul-city-procreation.yml
   compiler: Soul events → Sims 1 pure content injection (objects, skins, album pages)
 
@@ -66,7 +65,7 @@ show_beats:
 
 non_goals:
   - Replace Steam Workshop or Ell's Discord community
-  - Use Simopolis in guest-facing bridge copy
+  - Use Soul City in guest-facing bridge copy
   - Imply EA/Tiny Life endorsement without consent
   - Ship bridge without Ell's export format cooperation
 

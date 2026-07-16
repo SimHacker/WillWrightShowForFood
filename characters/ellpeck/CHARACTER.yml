@@ -62,7 +62,7 @@ contact:
 
 soul_city_bridge:
   path: "Sims ⇔ Soul City ⇔ Tiny Life"
-  not: Simopolis
+  not: Soul City
   definition: |
     Soul City — liminal heaven where souls lay over between worlds; soul-file is source of truth;
     each game re-renders (Will Wright Show For Food invitation: Proxi ⇔ Soul City ⇔ The Sims).

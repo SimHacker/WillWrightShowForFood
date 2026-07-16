@@ -126,7 +126,7 @@ virtual_catalogs:
     what: "Steam built-in + expansion objects; killer downloads; Get Cool Stuff — metadata + IA pointers, not binary mirror"
 
   ea_exchange_history:
-    what: "originalsims.com / Exchange saves, family albums, characters — Internet Archive + Simopolis hub"
+    what: "originalsims.com / Exchange saves, family albums, characters — Internet Archive + Soul City hub"
     source: ../../characters/will-wright/sources/2004-01-12-sims-exchange/
     legacy_collection_gap: ../../characters/will-wright/sources/sims1-legacy-collection-exchange-gap/
     status: |
@@ -134,7 +134,7 @@ virtual_catalogs:
       community uses SFS + manual zip. Soul City / Angel = revival infrastructure.
 
   internet_archive_import:
-    working_name: tornado_importer  # IA harvest → Simopolis catalog entries
+    working_name: tornado_importer  # IA harvest → Soul City catalog entries
     what: |
       Pipeline: Wayback / IA collections → normalized CARD records (title, creator, date, IA URL,
       install notes). **Virtual catalog** — pointers and metadata, not unauthorized re-hosting of
@@ -142,7 +142,7 @@ virtual_catalogs:
     status: planned
     sibling: SimObliterator / VitaMoo archive mining notes
 
-  simopolis_hub:
+  soul_city_hub:
     what: "Git-checked-in + web hub for round-trippable saves, albums, cross-game facets"
     architecture: ../../repo-shows/INDEX.yml#bridges_architecture
     distribution: ../soul-city/github-distribution-model.yml
@@ -165,7 +165,7 @@ steam_community_guides:
     repo_shows_channel:
       - "Discover + promote Repo Shows — flagship Will Wright kickoff + guest network"
       - "Live/VOD, GitHub repo browse, TicketPR audience ingress, episode harvest (skills, code, homefun)"
-      - "Sims history + bridge episodes (Simopolis hub → Minecraft, Stardew, Proxi, Spore, Mind Mirror, …)"
+      - "Sims history + bridge episodes (Soul City hub → Minecraft, Stardew, Proxi, Spore, Mind Mirror, …)"
     not: "A game; a warez bundle; implied EA endorsement; a replacement for creator storefronts; an Electron wrapper"
 
   what_to_avoid:

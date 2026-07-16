@@ -258,7 +258,7 @@ trails:
       - { path: ../characters/paul-debevec/, why: "Light Stage; image-based lighting; photogrammetry; virtual production" }
       - { path: ../characters/golan-levin/, why: "Computational media art; audiovisual interfaces; Interval colleague of Don & Debevec" }
       - { path: ../characters/amy-jo-kim/, why: "Game Thinking; Sims social design; pair show with Scott Kim" }
-      - { path: ../characters/ben-cerveny/, why: "Signal 2026-07-03; GNE/Flickr × browser Simopolis; public code × publish gates; data-portability spine for Will ep.1" }
+      - { path: ../characters/ben-cerveny/, why: "Signal 2026-07-03; GNE/Flickr × browser Soul City; public code × publish gates; data-portability spine for Will ep.1" }
 
   maxis_sims_lineage:
     k_line: "SimCity → Dollhouse → The Sims → Spore"

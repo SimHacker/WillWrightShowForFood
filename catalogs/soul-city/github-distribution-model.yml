@@ -42,7 +42,7 @@ repos:
       - characters/ — portrayal rooms; source bundles; correspondence
       - repo-shows/ — episode artifacts, bridge specs, harvested homefun
       - apps/ — MicropolisAngel, stream-gateway pointers
-    role: "Show catalog + Sims object repo + Simopolis hub index"
+    role: "Show catalog + Sims object repo + Soul City hub index"
   moollm:
     url: https://github.com/SimHacker/moollm
     holds:
@@ -78,9 +78,9 @@ soul_city_and_moollm:
     parallel: |
       MOOLLM skills are content the same way Sims objects are — SKILL.md + CARD.yml rooms, forkable,
       attributable. Repo Show harvest merges audience homefun back into skills/ and catalogs/.
-  simopolis_hub:
+  soul_city_hub:
     framing: |
-      Simopolis = git-checked-in hi-fidelity character facets; spokes (Proxi, Minecraft, Stardew, …)
+      Soul City = git-checked-in hi-fidelity character facets; spokes (Proxi, Minecraft, Stardew, …)
       round-trip through hub CARDs. Same distribution model: metadata + payload in repos.
 
 federation_rules:

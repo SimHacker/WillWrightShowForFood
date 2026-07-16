@@ -60,6 +60,6 @@ Pattern: `[../../building-the-sims/evidence-bounce-cut.md](../../building-the-si
 - 10 years online, 7 years to marriage — community courtship at dial-up speed
 - Zombie Sims as the project you still ship *together*
 - Gallium / Proxi — Artist in Residence vs day-to-day; what carried into Soul City?
-- SliceCity today — still the best argument for Simopolis bridges?
+- SliceCity today — still the best argument for Soul City bridges?
 
 ↑ [`../README.md`](../README.md) · [`../../../characters/heather-alvey/`](../../../characters/heather-alvey/) · [`../../../characters/steve-alvey/`](../../../characters/steve-alvey/)

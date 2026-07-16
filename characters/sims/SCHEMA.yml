@@ -6,7 +6,7 @@ schema:
   version: 1
   portrayal: ../../schemas/portrayal-standards.md#simulation.tiers.game_and_fictional
   moollm_upstream:
-    simopolis: SimHacker/moollm/examples/simopolis/characters/
+    soul_city: SimHacker/moollm/examples/soul-city/characters/
     mind_mirror: SimHacker/moollm/skills/mind-mirror/
 
 character_file:

@@ -25,7 +25,7 @@ Whole-career pair show; Afterlife × ZombieSims flagship episode.
 ### 4. Zombie Sims with Heather
 Magnum-opus pack still shipping — the project they build *together* after the fan-site era.
 
-### 5. Soul City + Simopolis bridges
+### 5. Soul City + Soul City bridges
 Round-tripping saves; federated catalogs — [`../../catalogs/soul-city/README.md`](../../catalogs/soul-city/README.md).
 
 ### 6. Gallium / Proxi

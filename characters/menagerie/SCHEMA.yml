@@ -9,7 +9,7 @@ schema:
   moollm_upstream:
     mind_mirror: SimHacker/moollm/skills/mind-mirror/
     sims_stats: SimHacker/moollm/skills/mind-mirror/SIMS-STATS.yml
-    sims_uplift: SimHacker/moollm/examples/simopolis/exchange/templates/SIMS-UPLIFT-SCHEMA.yml
+    sims_uplift: SimHacker/moollm/examples/soul-city/exchange/templates/SIMS-UPLIFT-SCHEMA.yml
 
 character_file:
   required:

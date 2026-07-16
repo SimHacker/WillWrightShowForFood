@@ -25,7 +25,7 @@ jobs:
   catalogs_and_tools:
     - Federated UCC pointers: SimFreaks, SimSlice, SimProv, Zombie Sims, MTS, TSR, SneakySims, Maxis metadata
     - Link to web tools: SimShow, Transmogrifier, RugOMatic, install helpers (Soul City URL)
-    - Virtual catalogs: Exchange history, Internet Archive index → Simopolis
+    - Virtual catalogs: Exchange history, Internet Archive index → Soul City
     - create · publish · share rails — primary CTA is the browser, not a downloaded app
 
   repo_shows_channel:
@@ -42,10 +42,10 @@ jobs:
       - "Audience ingress — TicketPR, play-along clips"
 
   sims_and_bridges:
-    what: Shows and playable demos about The Sims lineage AND Simopolis bridge games.
+    what: Shows and playable demos about The Sims lineage AND Soul City bridge games.
     themes:
       - Sims 1 UCC, SimProv, procedural rhetoric, Exchange revival
-      - Data portability — Simopolis spokes (Minecraft, Stardew, Proxi, Spore, Mind Mirror, …)
+      - Data portability — Soul City spokes (Minecraft, Stardew, Proxi, Spore, Mind Mirror, …)
 
   ea_alignment:
     pitch: |

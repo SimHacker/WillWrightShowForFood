@@ -33,6 +33,6 @@ revival_thesis: |
 show_beats:
   - "Will on Exchange as the durable innovation (HN: creators won)"
   - "Walk through original UCP Internet button + Generate Web Pages hook — then what's missing on Steam"
-  - "Heather/Steve + SimFileShare workflow — what a tray-app / Simopolis hub fixes"
+  - "Heather/Steve + SimFileShare workflow — what a tray-app / Soul City hub fixes"
   - "Creator solidarity post-buyout — why revival must be attribution-first, non-extractive"
   - "Identity pronoun surfing — how players narrate Sims stories (ties Dev Diaries beat)"

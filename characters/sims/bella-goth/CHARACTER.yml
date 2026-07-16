@@ -3,7 +3,7 @@
 
 inherits:
   moollm_skills: [character, mind-mirror]
-  upstream: SimHacker/moollm/examples/simopolis/characters/bella-goth/
+  upstream: SimHacker/moollm/examples/soul-city/characters/bella-goth/
 
 ontology:
   tags: [sim, goth, mystery, missing, iconic, gallery_opening_regular]

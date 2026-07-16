@@ -14,13 +14,13 @@ meta:
 gist: |
   Don moved the last Facebook Messenger thread to **Signal** — Ben already uses Signal
   (cat photos with his mom; main channel to Juho). Active 2026-07-03 thread: Don pitched
-  the **Micropolis / Simopolis** stack — TypeScript in the browser, `packages/sims-io`,
-  player-in-the-middle publish gates, **Head Shop + Wig-O-Matic**, **Simopolis** as liminal
+  the **Micropolis / Soul City** stack — TypeScript in the browser, `packages/sims-io`,
+  player-in-the-middle publish gates, **Head Shop + Wig-O-Matic**, **Soul City** as liminal
   space between game worlds (Marusek *Wedding Album*), and **data portability** as Will's
   explicit 1986 pre-Dollhouse thesis.
 
   Ben **affirmed** the crown-jewel framing: moving characters/data between worlds/games is
-  the big idea; while uplifted in heavenly liminal Simopolis you explore, edit bodies and
+  the big idea; while uplifted in heavenly liminal Soul City you explore, edit bodies and
   souls, create/buy/share. That's the **starting point for the first Will Wright episode**.
   Ben recalled Don's **OpenLaszlo SimProv Wedding Playset + SimFreaks** plumbing (not the
   LLM soul-reading layer). Don is rewriting in clean TypeScript for browser + optional server.
@@ -46,7 +46,7 @@ threads:
     ben_response: thumbs_up
     don_thesis: |
       Will's 1986 talk (before Dollhouse demo): moving data — especially characters — between
-      worlds/games. Simopolis = liminal heaven between runtimes; explore/edit/create/buy/share
+      worlds/games. Soul City = liminal heaven between runtimes; explore/edit/create/buy/share
       while characters are uplifted there.
     show_hook: "Starting point for first Repo Show with Will Wright"
 
@@ -77,10 +77,10 @@ threads:
       future Yoot Tower lots. MicropolisCity + MicropolisHome branding under Micropolis Public
       Name License. Federation peers: Proxi, Stardew, browser emulators (Apple ][ LCP, Wizardry).
 
-  wedding_album_simopolis:
+  wedding_album_soul_city:
     date: "2026-07-03"
     what: |
-      Marusek 1999 *Wedding Album* — Simopolis as safe non-EA-trademark liminal afterlife.
+      Marusek 1999 *Wedding Album* — Soul City as safe non-EA-trademark liminal afterlife.
       Show homage: Little Computer Person tours the future in The Sims. Ben asked simopolis.md
       align with TS rewrite and drop "88 shorts" parade from narrative docs.
 
@@ -88,7 +88,7 @@ threads:
     date: "2026-07-03"
     what: |
       MOOLLM Mind Mirror + browser Apple ][ emulator — download character to virtual floppy,
-      run Mind Mirror, upload enriched YAML back to Simopolis, export to other games.
+      run Mind Mirror, upload enriched YAML back to Soul City, export to other games.
       Separate storage per game representation; nothing lost.
 
   transmogrifier_everything:
@@ -106,7 +106,7 @@ connects_in_repo:
   - { path: ../ken-kahn/, why: "Ken borrowed Don's bike — Amsterdam mobility parallel to Lane Neverending rack" }
 
 show_hooks:
-  - "Game Neverending → Flickr → Simopolis Exchange — social spatial play as public infrastructure"
+  - "Game Neverending → Flickr → Soul City Exchange — social spatial play as public infrastructure"
   - "Public Code × browser-native Micropolis Home — who owns the catalog, who gets credit"
   - "Habitat + GNE spliceable world geometry ↔ Lane Neverending (MOOLLM adventure-4)"
   - "Will 1986 data portability as episode-1 spine — Ben validated on Signal"

@@ -27,7 +27,7 @@ EA's **Legacy Collection** removed the Exchange; **Tiny Life ships what we lost*
 then both left EA's Creator Network after the buyout — with **[Kayla Sims (lilsimsie)](../lilsimsie/)** and others ([registry](../../process/sims-creator-network-exodus.md)). Ell is the indie lane that keeps the hobby-model train set alive.
 
 Repo Show bridge: **`Sims ⇔ Soul City ⇔ Tiny Life`** — Soul City is Will's liminal waystation (soul-file
-travels; each world re-renders). Not Simopolis. Full narrative:
+travels; each world re-renders). Not Soul City. Full narrative:
 [**bridge/soul-city-bridge.md**](bridge/soul-city-bridge.md).
 
 ## Reach Ell

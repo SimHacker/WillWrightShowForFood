@@ -19,7 +19,7 @@ Studios** (the indie studio Will founded with Lauren Elliott, behind the AI life
 ## Why he's here
 
 Two reasons. First, **SliceCity is foundational** to this repo's data-portability dream — the
-[Simopolis](../../repo-shows/INDEX.yml) hub generalizes exactly what Steve already proved works (see
+[Soul City](../../repo-shows/INDEX.yml) hub generalizes exactly what Steve already proved works (see
 [`send-code-not-commands`](../../process/trails/send-code-not-commands.md)). Second, and just as
 important: Steve and Heather are **independent creators** who've paid the mortgage for years on
 **subscriptions, content sales, and side jobs**. A Repo Show should be a **non-extractive lift** —

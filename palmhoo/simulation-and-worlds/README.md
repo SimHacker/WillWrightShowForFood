@@ -23,7 +23,7 @@ including the one you're standing in right now, which simulates itself by being 
 | [**adventure-4**](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4) | The reference world. A pub in Amsterdam with a stage, an arcade, cats, and me behind the stage in a nook. 150+ files of running simulation. |
 | [**room/** (skill)](https://github.com/SimHacker/moollm/tree/main/skills/room) | Directory as activation context — the atom of world-building. Read this and every folder becomes a place. |
 | [**adventure/** (skill)](https://github.com/SimHacker/moollm/tree/main/skills/adventure) | The prototype adventure-4 was cloned from. Instance-first, before we called it that. |
-| [**Simopolis**](https://github.com/SimHacker/moollm/tree/main/examples/simopolis) | A city of Sims-flavored simulation experiments. |
+| [**Soul City**](https://github.com/SimHacker/moollm/tree/main/examples/soul-city) | A city of Sims-flavored simulation experiments. |
 
 ## Micropolis — the city in a bottle
 

@@ -12,7 +12,7 @@ Girder: [`character-endosymbiosis.yml`](character-endosymbiosis.yml) · Architec
 
 Treat each game as a **cell**. Treat each piece of content — a character, a room, an object, a
 story — as something that can **live inside a membrane, cross it, and take up residence somewhere
-else**. Treat **Simopolis** as the shared cytoplasm that all the cells float in and trade through.
+else**. Treat **Soul City** as the shared cytoplasm that all the cells float in and trade through.
 Suddenly "moving a Sim into Stardew" isn't a file conversion — it's **cell biology**.
 
 ## A two-minute biology detour
@@ -38,13 +38,13 @@ Three facts from that world do all the work for us:
 | Biology | Here |
 |---|---|
 | Cell / organelle | A **game** (Sims, Spore, Stardew, Mind Mirror, Afterlife…) |
-| Cytoplasm / host | **Simopolis** — the git-checked-in hub everything floats in and trades through |
+| Cytoplasm / host | **Soul City** — the git-checked-in hub everything floats in and trades through |
 | Organelles, **parallel and nested** | **Sub-directories** — the filesystem *is* the cell; nesting is organelles within organelles |
 | Membrane | Each game's **import/export boundary** — selectively permeable |
 | Molecules / genes | **Characters, rooms, environments, objects, stories** — the content that moves |
 | Diffusion | A trait, mood, relationship, or story beat **bleeding into sibling** content |
 | Selective permeability | Player-defined **constraints, workflows, and transformations** — the channels and pumps |
-| Active transport | **Import/export** — round-tripping content out through Simopolis and into another game |
+| Active transport | **Import/export** — round-tripping content out through Soul City and into another game |
 | Currency exchange | **Schema mapping** between games with different "economies" — the exchange rate |
 
 **Organelles ⇔ sub-directories** is the load-bearing line. A directory is a membrane-bound
@@ -84,7 +84,7 @@ nature, share a medium, and trade across membranes**. That's exactly what we're 
 composed by letting content live in many membranes at once — round-trippable, diffusing, trading —
 the same trick evolution used to put a world inside a cell.
 
-> First make the generic hub and spokes (every game round-trips cleanly with Simopolis). *Then* grow
+> First make the generic hub and spokes (every game round-trips cleanly with Soul City). *Then* grow
 > the shortcuts: direct fast paths and mutual schema recognition between compatible games — the way
 > symbionts, over time, evolve dedicated channels to the partners they trade with most.
 

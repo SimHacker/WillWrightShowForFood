@@ -9,7 +9,7 @@ Machine index: [`willwrightshowforfood.yml`](willwrightshowforfood.yml)
 | GitHub CARD catalogs | Federate Workshop + git mods — traffic to Ell |
 | MOOLLM skills (moollm repo) | Parallel to C# mod API |
 
-Bridge path: **`Sims ⇔ Soul City ⇔ Tiny Life`** — not Simopolis.
+Bridge path: **`Sims ⇔ Soul City ⇔ Tiny Life`** — not Soul City.
 
 Narrative: [bridge/soul-city-bridge.md](../bridge/soul-city-bridge.md)
 

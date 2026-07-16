@@ -42,7 +42,7 @@ future_pools:
     - fictional/velvet-schema/
     - fictional/aurum-interlock/
     - animals/                            # kittens, puppies, monkeys — hold
-  simopolis:
+  soul_city:
     - characters/bella-goth/              # lives in characters/sims/ instead
 
 instances:

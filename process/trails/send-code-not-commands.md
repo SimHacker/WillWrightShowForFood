@@ -5,7 +5,7 @@
 > the target is a window server, a player's imagination, a reader's mind, or another game's save file.
 
 This is the design philosophy Don applies to **writing**, to the **Repo Show** itself, to **character
-modeling**, and to **Simopolis** data portability. It's one idea wearing many hats.
+modeling**, and to **Soul City** data portability. It's one idea wearing many hats.
 
 ## 1. NeWS vs. X11 — the road that turned out right
 
@@ -119,7 +119,7 @@ The Sims pushed it further: downloadable **objects carry their own SimAntics cod
 what they do, so they plug into the running simulation and interoperate. The tour-de-force is **Steve
 Alvey's SimSlice / SliceCity** — a **Lilliputian SimCity that fits in your Sims back yard**, seeded by a
 **power plant orchestrator** that spawns zones, modular airport pieces, planes, skydivers, and ground
-critters in a pageant of interrelated objects ([`catalogs/simslice/ORCHESTRATOR.yml`](../../catalogs/simslice/ORCHESTRATOR.yml)). That's the **shipped precedent** for **Simopolis** data portability
+critters in a pageant of interrelated objects ([`catalogs/simslice/ORCHESTRATOR.yml`](../../catalogs/simslice/ORCHESTRATOR.yml)). That's the **shipped precedent** for **Soul City** data portability
 (link actual save files, run emulators, round-trip state across many games).
 
 - 📁 [`characters/heather-alvey/`](../../characters/heather-alvey/README.md) · 📁 [`repo-shows/heather-and-steve-alvey/`](../../repo-shows/heather-and-steve-alvey/README.md)
@@ -153,7 +153,7 @@ does on purpose, as data structures, what minds do naturally** — which is exac
 | Language | Owen's `class.ps` — objects in pure PostScript |
 | Platform | Warnock's PostScript as a *linguistic motherboard* |
 | Filesystem OOP | Owen/Densmore `class.ps` → patent → Zope CMS/workflows → TurboGears/NQ (still live) → MOOLLM → GitHub MMO → Repo Shows |
-| Games | The Sims objects (SimAntics) + SliceCity nested sims + Simopolis bridges |
+| Games | The Sims objects (SimAntics) + SliceCity nested sims + Soul City bridges |
 | Cognition | Drescher schemas (C→A→R), grounded by LLMs |
 | Writing | a sentence that **runs** in the reader's head and invokes what they know |
 | People | executable character models (SimShneiderman), built with respect |

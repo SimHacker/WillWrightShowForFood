@@ -7,7 +7,7 @@ inherits:
   note: SimHacker/moollm — traits + Leary circumplex condensed
 
 ontology:
-  tags: [menagerie_guest, fictional, lower-chelsea-eight, jsonsters, simopolis_eligible]
+  tags: [menagerie_guest, fictional, lower-chelsea-eight, jsonsters, soul_city_eligible]
   species: human
   nature: fictional_menagerie_guest
   ensemble: ../RELATIONSHIP-MATRIX.yml

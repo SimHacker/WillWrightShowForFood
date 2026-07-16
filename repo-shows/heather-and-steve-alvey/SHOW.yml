@@ -37,7 +37,7 @@ episodes:
   - { id: fan-band-marriage, doc: sources/fan-band-marriage-arc.md, what: "★ Origin story — two fan sites, one marriage, Zombie Sims, Gallium, Soul City; evidence-bounce edit from async interviews." }
   - { id: whole-career, what: "The retrospective + showcase: SliceCity live, the SimFreaks catalog, Zombie Sims, the Gallium/Will chapter, 26 years of craft — and where it goes next." }
   - { id: afterlife-zombie-bridge, doc: afterlife-zombie-bridge.yml, what: "★ FLAGSHIP playful episode — Afterlife 'hell is full' × ZombieSims horde, drain souls by religion into SimFreaks/SimSlice zombie skins; They Are Billions scale." }
-  - { id: data-portability, what: "SliceCity → Simopolis: widen nested games to real save files + emulators across many games (repo-shows/INDEX.yml bridges_architecture)." }
+  - { id: data-portability, what: "SliceCity → Soul City: widen nested games to real save files + emulators across many games (repo-shows/INDEX.yml bridges_architecture)." }
 
 format:
   live: true
@@ -51,5 +51,5 @@ ties_to:
   - ../../characters/don-hopkins/
   - ../../process/trails/send-code-not-commands.md
   - ../../characters/will-wright/media/
-  - ../INDEX.yml          # bridges_architecture (Simopolis; SliceCity precedent)
+  - ../INDEX.yml          # bridges_architecture (Soul City; SliceCity precedent)
   - afterlife-zombie-bridge.yml

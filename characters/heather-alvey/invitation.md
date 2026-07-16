@@ -41,7 +41,7 @@ Transmogrifier, RugOMatic, body/head/wig editors), optionally AI-orchestrated, o
 | Who | Their angle on this show |
 | --- | --- |
 | **You (Heather)** | 26 years of SimFreaks — object suites, deep SimAntics, Zombie Sims, community leadership; publishing revival |
-| **Steve** | **SliceCity** (SimCity inside The Sims), SimSlice, Simopolis, round-tripping saves across games; Gallium with Will |
+| **Steve** | **SliceCity** (SimCity inside The Sims), SimSlice, Soul City, round-tripping saves across games; Gallium with Will |
 
 Steve is getting his own invitation today — personalized to him, about this same show. No need to
 coordinate; I will. **No synchronized sitting required** — two one-on-ones at your own best times,
@@ -57,7 +57,7 @@ angles. **Read either or both** before you reply — including how **Steve** des
 | Guest | Invitation | Their angle on this show |
 | --- | --- | --- |
 | **Heather Alvey** 🧟 | [invitation.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/invitation.md) *(this letter)* · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/invitation.md) | SimFreaks catalog, object suites, Zombie Sims, community, publishing revival |
-| **Steve Alvey** 🏙️ | [invitation.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/invitation.md) | SliceCity, Simopolis, save round-tripping, games-in-games |
+| **Steve Alvey** 🏙️ | [invitation.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/invitation.md) | SliceCity, Soul City, save round-tripping, games-in-games |
 
 ---
 
@@ -77,7 +77,7 @@ angles. **Read either or both** before you reply — including how **Steve** des
 
 | | |
 | --- | --- |
-| **On this show** | SliceCity (SimCity in The Sims); Simopolis; save round-tripping; games-in-games; Gallium with Will |
+| **On this show** | SliceCity (SimCity in The Sims); Soul City; save round-tripping; games-in-games; Gallium with Will |
 | **Invitation** (his view) | [`../steve-alvey/invitation.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/invitation.md) |
 | **Guest README** | [`../steve-alvey/README.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/README.md) |
 | **Conversation hooks** | [`../steve-alvey/ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/ideas.md) |
