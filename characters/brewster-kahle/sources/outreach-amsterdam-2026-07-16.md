@@ -17,6 +17,7 @@
 
 Don invited Brewster to participate in **Will Wright Show for Food** (Repo Show — stage and product is a GitHub repo):
 
+- Full invitation: [`../invitation.md`](../invitation.md)
 - Formats offered: solo video, one-on-one-or-more recorded video, or face-to-face when convenient.
 - Topics named:
   - **OLPC**, eBook reader, open-source SimCity — with Brewster, **Walter Bender**, **Samuel Klein**

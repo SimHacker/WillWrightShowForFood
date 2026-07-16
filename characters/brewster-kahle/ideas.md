@@ -1,10 +1,20 @@
 # Ideas to explore with Brewster Kahle
 
-*Grounded in sourced history — not quotes from Brewster unless cited.*
+*Grounded in sourced history — not quotes from Brewster unless cited. Invitation: [`invitation.md`](invitation.md).*
+
+## 0. Show formats (pick one or combine)
+
+| Episode | Core | Co-guests (optional) |
+|---------|------|----------------------|
+| **Early dreams** | WAIS logs, 1996 crawl, ethics of digital librarianship, Ted Nelson / Xanadu | Solo |
+| **Books on the XO** | Jan 2007 devel-list viewer spec; Flatland demo; streaming + search | Walter Bender, Samuel Klein |
+| **Little Garden reunion** | Resale-friendly ISP; co-op origins; Gilmore prediction | Tom Jennings, Tim Pozar, Gumby |
+
+Async segments OK — Brewster records when convenient; Don assembles with sourced clips from [`sources/`](sources/README.md).
 
 ## 1. Early web dreams vs what shipped
 
-1996 CHM interview ([`sources/chm-interview-1996.md`](sources/chm-interview-1996.md)): WAIS logs, Internet Archive birth, "live up to the first dreams."
+1996 CHM interview ([`sources/chm-interview-1996.md`](sources/chm-interview-1996.md)): WAIS logs, Internet Archive birth, "live up to the first dreams." Don's clip transcript: [`sources/chm-1996-early-dreams-clip.md`](sources/chm-1996-early-dreams-clip.md).
 
 ## 2. OLPC + Internet Archive (2007)
 
