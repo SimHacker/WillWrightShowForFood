@@ -12,7 +12,13 @@ In a Marc Weber interview with Tim Pozar and Brewster (29 October 1996), Brewste
 logs** — what people searched for when the web still felt like open frontier — arguing the medium had
 already "stagnated" toward technician-defined limits, and that **early dreams** are what we should live up to.
 
-- Video: https://www.youtube.com/watch?v=u2h2LHRFbNA (Brewster segment ~45:35 in Don's clip notes)
+- Video: https://www.youtube.com/watch?v=u2h2LHRFbNA
+- Digest: [`sources/chm-interview-1996.md`](sources/chm-interview-1996.md)
+
+## OLPC (2007) · outreach (2026)
+
+- Jan 2007 email — IA OLPC eBook viewer + Don's SimCity-on-XO offer: [`sources/olpc-internet-archive-2007.md`](sources/olpc-internet-archive-2007.md)
+- 16 Jul 2026 — Don (Amsterdam) invited Brewster re Parker Wright visit + Repo Show: [`sources/outreach-amsterdam-2026-07-16.md`](sources/outreach-amsterdam-2026-07-16.md) · [`invitation.md`](invitation.md)
 
 ## Links
 

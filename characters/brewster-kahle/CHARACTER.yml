@@ -15,9 +15,11 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: draft
+  status: sent
+  sent: 2026-07-16
   consent: not_yet_asked
-  document: README.md
+  document: invitation.md
+  outreach: sources/outreach-amsterdam-2026-07-16.md
 
 bio:
   summary: >
@@ -40,8 +42,12 @@ synergies:
     knowledge commons is not a hypothetical; it's recent history with a direct Micropolis overlap.
 
 sources:
+  index: sources/README.md
   video:
-    - { title: "Tim Pozar & Brewster Kahle interview (Marc Weber, 1996)", url: "https://www.youtube.com/watch?v=u2h2LHRFbNA" }
+    - { title: "Tim Pozar & Brewster Kahle interview (Marc Weber, 1996)", url: "https://www.youtube.com/watch?v=u2h2LHRFbNA", digest: sources/chm-interview-1996.md }
+  correspondence:
+    - { title: "OLPC + Internet Archive email (Jan 2007)", digest: sources/olpc-internet-archive-2007.md }
+    - { title: "Outreach — Amsterdam + Parker + Repo Show (16 Jul 2026)", digest: sources/outreach-amsterdam-2026-07-16.md }
   org:
     - { title: "Internet Archive", url: "https://archive.org/" }
     - { title: "Wikimedia + IA: one million broken links fixed (2016)", url: "https://wikimediafoundation.org/news/2016/10/26/internet-archive-broken-links/" }
