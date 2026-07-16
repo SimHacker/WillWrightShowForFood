@@ -66,17 +66,17 @@ That answer became **Dollhouse**. Dollhouse became **The Sims**. The franchise l
 >
 > **Will Wright:** Oh God… Okay, well one thing we're working on, is a — we've been kind of
 > interested in our company for a long time about the idea of **data portability**.
-
+>
 > Most of the game industry right now is built on kind of the **movie model**. So you spend a
 > lot of money developing one big title, you come out with it, you advertise it, either it goes
 > or it dies, and then you do the next one separate. Except for sequels.
-
+>
 > What we've tried to do… is to build our games more as a **hobby model**. Where people buy and
 > collect things, but they relate to the last things they collected. It's like a **train set**.
 > …Everybody can kind of come into that, take their particular slant on it… I'd like to see the
 > game industry kind of evolve that way, and part of that is I want the games to actually be
 > able to have **persistent data that can move from one game to another**.
-
+>
 > This is a game I call **Dollhouse.** And if this looks familiar, it's because **I've just
 > loaded a SimCity file into here.**
 
