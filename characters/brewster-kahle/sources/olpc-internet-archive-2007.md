@@ -23,14 +23,14 @@ Don offered to help Internet Archive OLPC applications. Stated:
 Brewster's OLPC motivation for Internet Archive: **books that look good on the device**.
 
 - They had a **JavaScript hack**; wanted a proper **tablet-mode viewer**.
-- Devel-list post on direction: http://mailman.laptop.org/pipermail/devel/2007-January/003674.html
+- Devel-list post (21 Jan): [`olpc-book-viewer-devel-2007-01-21.md`](olpc-book-viewer-devel-2007-01-21.md) · [Wayback](https://web.archive.org/web/20070228082343/http://mailman.laptop.org/pipermail/devel/2007-January/003674.html)
 - Asked whether Don needed payment or could volunteer.
 - Invited Don to **lunch Friday noon–1**; noted **John** (unspecified — likely John Gilmore) had visited often.
 
-## Show ties (factual)
+## Related
 
+- [`olpc-book-viewer-devel-2007-01-21.md`](olpc-book-viewer-devel-2007-01-21.md) — full wishlist + Flatland example URLs
 - [`../../will-wright/sources/simcity-open-source-saga/`](../../will-wright/sources/simcity-open-source-saga/README.md) — GPL clearance arc
-- [`../../../repo-shows/walter-bender-olpc/SHOW.yml`](../../../repo-shows/walter-bender-olpc/SHOW.yml) — Walter Bender + Samuel Klein OLPC cast
-- [`../../art-medlar/CHARACTER.yml`](../../art-medlar/CHARACTER.yml) — WAIS + early Internet Archive (Art Medlar)
+- [`../../../repo-shows/walter-bender-olpc/SHOW.yml`](../../../repo-shows/walter-bender-olpc/SHOW.yml)
 
 ↑ [sources index](README.md)
