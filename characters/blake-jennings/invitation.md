@@ -27,7 +27,7 @@ I'd love to talk with you about:
   question** that previewed Dollhouse → The Sims
 - Meeting **Ell** ([Tiny Life](https://tinylifegame.com/)) — I think you'll love that game, and
   you'd be perfect in the **Soul City ⇔ Tiny Life** bridge conversation (and maybe an Unnecessary
-  Analysis on who the real "war criminals" around that community are)
+  Analysis on who the real "war criminals" around that community are: the GamerGate Incel Maga Trolls!)
 - Your [WoW essay](https://www.youtube.com/watch?v=OGV5uPmFzrE) / Steve Bannon gold-farming beat —
   I have a rabbit hole for you if you want it (pull my finger)
 
