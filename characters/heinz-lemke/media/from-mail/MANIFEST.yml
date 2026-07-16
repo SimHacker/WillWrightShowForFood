@@ -2,7 +2,7 @@
 
 character: heinz-lemke
 consent_note: Public respectful portrayal for invitation browsing; subject may request removal
-artifact_count: 7
+artifact_count: 12
 
 artifacts:
   - file: from-mail/roy-eagleson-identified-heinz-pdp7-light-pen.png
@@ -27,3 +27,22 @@ artifacts:
   - file: from-mail/paper-wiseman-notes-on-radial-menus-in-pixie.pdf
     kind: paper
     title: "paper-wiseman-notes-on-radial-menus-in-pixie"
+  - file: from-mail/paper-wiseman-page-466.pdf
+    kind: paper
+    title: "Wiseman PIXIE 1969 — page 466 transcription (Buxton 2008 Cambridge visit; via Dave Fleck forward)"
+    provenance: "Don's archive; hosted at donhopkins.com/home/Wiseman%20Page%20466.pdf"
+  - file: from-mail/electronics-international-1969-04-28-pixie-pp158-159.pdf
+    kind: article
+    title: "Electronics International 28 Apr 1969 pp158-159 — PIXIE trade-press piece ('Light writing' photo of Heinz)"
+    source_digest: ../sources/electronics-international-1969-04-28-pixie.md
+  - file: from-mail/letter-2008-heinz-to-buxton-pixie-memory-lane.doc
+    kind: letter
+    title: "Heinz → Bill Buxton memory-lane letter (~2008); CARS 2009 invitation"
+    source_digest: ../sources/2008-bill-buxton-pixie-memory-lane.md
+  - file: from-mail/pixie-history-back-to-the-roots-part1.docx
+    kind: memoir
+    title: "PIXIE History — Back to the Roots, Part 1 (1967) — Heinz memoir installment (DSHR/Roy thread attachment)"
+    source_digest: ../sources/1967-back-to-the-roots-part1.md
+  - file: from-mail/paper-1990-using-critics-chi90.pdf
+    kind: paper
+    title: "Using Critics — CHI'90 paper (from Don's research folder, Jul 2026 PIXIE/pie menu context)"

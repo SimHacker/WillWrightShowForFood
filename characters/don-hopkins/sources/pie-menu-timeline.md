@@ -18,14 +18,14 @@ backbone under the retrospective — most dates below are from quoted period ema
 
 | Date | Event |
 |------|-------|
-| 1986-04-13 | **Theta menus idea** — brainstorm with Mike Gallaher about Emacs UI |
+| 1986-04-13 | **Theta menus idea** — brainstorm with Mike Gallaher about Emacs UI. **Neither knew of PIXIE** — independent invention; Don discovered PIXIE in his own subsequent research and cited it in his paper references |
 | 1986-05-18 | Theta Menus email Don → Weiser (founding document) |
 | 1986-05-19 | Weiser → HCIL: muscle memory "zig-zag-zig-zig-zag" |
 | 1986-05-29 | Shneiderman: "you are on to something… Go to it" |
 | 1986-06 | X10 prototype; then theta-menu uwm window manager (mouse-ahead, display suppression, screen-edge + warp handling already) |
 | 1986-09 | **Mitch Bradley suggests the name "pie menus"**; FORTH-programmable "fuwm"; PostScript pie printer on LaserWriter |
 | 1986-11 | Experiment programmed in FORTH; Callahan runs it |
-| 1986-12-02 | **Don finds the Wiseman PIXIE reference** (via Newman & Sproull) — self-addressed email |
+| 1986-12-02 | **Don finds the Wiseman PIXIE reference** (via Newman & Sproull) — self-addressed email from crayola.cs.umd.edu, receipt in archive. He then cited PIXIE in the 1988 technical-writing proposal bibliography, the piemenus.com references page, and every history since. (Buxton learned of PIXIE the same route — Newman & Sproull 1st ed — and only read Wiseman's papers in 2008.) |
 | 1987-01 | Weiser snowed in, hacks pies into SunView for his SDI game |
 | 1987-02→05 | UMD patent office excited; Weiser says delay Usenix abstract; **Don submits anyway (Mar 31), decides May 1987 not to patent** — publishes code and papers instead; "tell him to get stuffed" (Usenix email, Jun 11) |
 | 1987-05-29 | First NeWS pie menus ("Very nice. Tell Mark." — Callahan) |
@@ -79,6 +79,9 @@ constructionist critique).
 
 - 1986-12-02 self-email finding the PIXIE reference = the moment the lineage became known
   to its own continuation — 17 years before Don and Heinz ever spoke
+- The contrast in prior-art conduct: Don found PIXIE **himself**, seven months after inventing
+  theta menus independently, and put it at the top of his references forever after. The Alias
+  patent filers distorted and buried theirs
 - The not-patenting decision as the conscientious-objector move of 1987 — reads directly
   against Alias 1995 and Buxton FUD; also against Weiser's own patent enthusiasm (Feb 1987)
 - Bartram's hexagonal "stir" menus and Higgins' Pastel — independent-invention cluster

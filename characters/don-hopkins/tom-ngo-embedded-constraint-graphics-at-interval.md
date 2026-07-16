@@ -113,6 +113,32 @@ Don's pick for what to build with a re-implemented ECG (patent's expired — it'
 
 *Status: noted as the design target — not prototyped yet ("hold your horses").*
 
+## 2013 — ECG conscience at Syntertainment
+
+October 2013, Will Wright's Syntertainment: Don pitched a **character designer** for small
+multitouch screens — interpolating between multiple mesh deformations (artist-authored heads,
+noses, hair, expressions), with inverse-kinematics-style solving that turns finger drags
+(multitouch, arbitrary finger count) into blend-weight changes: touch Ernie's head, pull up,
+get Bert. The math is explicitly **interpolating through a simplicial complex** — targets at
+vertices, gateways between simplexes, guarded state machines, easter-egg mazes, springy
+negative-weight squash-and-stretch, "melting" taggable mesh regions.
+
+Then the load-bearing paragraph — Don proactively disclosed the related IP before anyone asked:
+
+> One important issue I have to bring up, is that it's inspired by, but different than, a
+> two-dimensional technique developed by Ton Ngo at Interval Research, which I learned about
+> when I worked there. He has a patent on his technique for 2D graphics, called ECG…
+> Another possibility would be licensing that patent… I am friends with Tom Ngo on facebook.
+> He's a really nice guy, and very brilliant. I won't mention anything to him about it without
+> hearing from you, but if you like we could discuss it with him.
+
+Same conduct as the pie menu story, opposite side of the table: **find the prior art yourself,
+name it, credit it, offer to bring its author in** — the anti-Alias. (Will's team went with a
+genetic exploration approach for the prototype instead; the ECG patent expired ~2016, freeing
+the technique for the Faceball plans above.)
+
+Full thread receipts: private archive, `DonHopkins` repo, correspondence.
+
 ## See also
 
 | Link | Why |

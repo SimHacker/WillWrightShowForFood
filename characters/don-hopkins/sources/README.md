@@ -41,7 +41,9 @@ Long-form room doc (Adventure implementation): [`../logo-adventure-c64-terrapin.
 | [Pie Menu FUD and Misconceptions](pie-menu-fud-misconceptions.md) | Alias/Buxton patent story + Buxton/Kurtenbach rebuttals in comments; ersatz-pie catalog |
 | [Pie Menu Timeline](pie-menu-timeline.md) | Email-dated 1968–2018 chronology; 1987 no-patent decision; Kurtenbach 1990/2018 letters |
 | [Alan Kay PIXIE thread (2020)](2020-02-alan-kay-pixie-pie-menus-thread.md) | Independent inventions: Fabrik, Etoys halo; Engelbart down-not-across |
-| [PIXIE/Buxton patent roadblock (2008–2023)](2008-2023-pixie-buxton-patent-thread.md) | Fleck → Buxton → Chapman digitization; Brad Myers Ch. 33 |
+| [PIXIE/Buxton patent roadblock (2008–2023)](2008-2023-pixie-buxton-patent-thread.md) | Fleck → Buxton → Chapman digitization; 2008 email receipts; show not-invited policy; Brad Myers Ch. 33 |
+| [DDJ 1991: Design & Implementation of Pie Menus](ddj-1991-design-implementation-pie-menus.md) | **The published receipt** — mark-ahead, rehearsal, reselection, display suppression in print, pre-1993 |
+| [Why no pie menu patent — Tobias email (2007)](2007-11-11-james-tobias-why-no-pie-menu-patent.md) | Prior art + exploitative UMD patent system; "derivatives of pie menus" framing, 2007 |
 
 ## Other sources in this folder
 

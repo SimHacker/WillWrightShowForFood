@@ -56,6 +56,44 @@ The misrepresentation operated at two levels:
   marketing brochures long after expiry. Radially (pie menu editor for 3ds Max) finally
   shipped January 2018.
 
+## Receipt: piemenus.com references page (Wayback, Dec 2001)
+
+Don's contemporaneous public warning, archived at
+[web.archive.org (2001)](https://web.archive.org/web/20011211122715/http://www.piemenus.com/piemenu-references.html):
+
+> **NOTE: Alias|Wavefront lawyers will threaten to sue you if you use "marking menus", so use
+> pie menus instead.**
+>
+> "Marking menu" (also known as **"marketing menu"**) is a term that was coined in order to
+> differentiate from pie menus. In their earlier papers, Buxton attempted to define the
+> difference between marking menus and pie menus, but he mistakenly assumed that pie menus did
+> not implement certain techniques that he thought distinguished marking menus. **I've had to
+> explain that pie menus had features like "mouse ahead" or "mark ahead" all along**, and we
+> were just using different words for the same obvious well-known techniques.
+>
+> …it appears to me that they **distorted and concealed relevant prior art from the patent
+> office**. So I think their marking menu patent is probably invalid, **and they know it**.
+> That explains why I was sure they would not sue EA if I used pie menus in The Sims.
+
+Written 17 years before the Medium article — the account has been consistent and public since
+the patent was in force. The same page's reference list opens with PIXIE 1969.
+
+## Publishing the receipts (May 2018 emails)
+
+Before posting the retrospective, Don asked **Mike Godwin** (first EFF staff counsel, ex-Wikimedia
+general counsel) about publishing Kurtenbach's 1990 emails. Godwin: legally probably fine
+(excerpt/paraphrase if worried about copyright); ethically no prohibition; "I'm not big on
+asking permission to publish things I already have. The temptation is for people to say no."
+
+**Ben Shneiderman** (15 May 2018) counseled defining goals, documenting contributions with Brad
+Myers, fixing Wikipedia ("Marking menus combine pie menus with gesture recognition" — Ben
+suggested Don correct it), and: "don't let the bastards get you down… or maybe as Randy Pausch
+once told me: 'When people are arguing over apples and oranges, **bring them a watermelon**.'"
+
+Don's stated goals (15 May 2018, CHI'88 30th anniversary): "get the whole truth out there, well
+documented, with lots of supporting evidence… dispel the myths and false statements that
+[Kurtenbach] and Buxton have used their well funded high profile platform to spread."
+
 ## Buxton's rebuttal (comments, May 20 2018)
 
 - Everything from the U Toronto research (Kurtenbach thesis, papers) was deliberately

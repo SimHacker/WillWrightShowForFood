@@ -168,6 +168,18 @@ friends_of_the_thread:
     consent: not_yet_asked
     invite: characters/brian-silverman/invitation.md
 
+not_invited:
+  bill_buxton:
+    policy: "Not invited to the show or the discussion. Don's call, 16 Jul 2026."
+    why: |
+      No help when it mattered, and a snub after Don did the connecting: Don brought him into
+      the 2008 Fleck PIXIE-paper request; Buxton's Jul 2008 "PIXIE and Radial Menus" results
+      email went to Kurtenbach/Newman/Lemke but not Don (Fleck kindly forwarded). Buxton
+      promised Microsoft-funded film digitization, a maintained web page, and book integration
+      — delivered none. Chapman + Don did the actual work in 2019.
+    receipts: characters/don-hopkins/sources/2008-2023-pixie-buxton-patent-thread.md
+    tone: "Tell the story from the receipts and the people who did the work; no empty chair theater."
+
 why_these_buds:
   lars_brinkhoff:
     preservation: "PDP-10/ITS restoration lead; SIMH toolchain hacker; make-it-so on stream."
