@@ -26,7 +26,6 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/ben-cerveny.yml
-  correspondence: correspondence.yml
 
 bio:
   summary: |

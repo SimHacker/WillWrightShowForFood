@@ -2,7 +2,7 @@
 
 *Conversation hooks for a Repo Show — grounded in Ben's public work and the **2026-07-03 Signal
 thread** with Don. Don's proposed topics; not quotes attributed to Ben unless marked.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · [correspondence.yml](correspondence.yml)
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## What Ben has done
 
@@ -18,7 +18,7 @@ Micropolis stack; Ben **thumbs-up'd** the portability thesis and called it the *
 for the first Will Wright episode**. Ben recalled Don's **OpenLaszlo SimProv / SimFreaks**
 plumbing. Ben flagged narrative docs parading **"88 shorts"** — Don scrubbed that from prose.
 
-See [correspondence.yml](correspondence.yml) · [moollm-lane-neverending-habitat.yml](moollm-lane-neverending-habitat.yml)
+See [moollm-lane-neverending-habitat.yml](moollm-lane-neverending-habitat.yml)
 
 ## Shared ground
 
@@ -92,7 +92,6 @@ Soul City = umbrella fiction only. Git branch per city save: `MicropolisCity_<sa
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
-- [`correspondence.yml`](correspondence.yml)
 - Show seed: [`repo-shows/ben-cerveny.yml`](../../repo-shows/ben-cerveny.yml)
 - [`moollm-lane-neverending-habitat.yml`](moollm-lane-neverending-habitat.yml)
 - [`media/from-mail/MANIFEST.yml`](media/from-mail/MANIFEST.yml) — Yoot/Alan Kay transcript pages (shared thread artifact)

@@ -6,7 +6,7 @@ Invitation portrayal — **not** Ben Cerveny. [Standards](../../schemas/portraya
 
 **Contact:** Signal (warm; moved from Facebook Messenger 2026-07-03)
 
-[Invitation](invitation.md) · [Ideas](ideas.md) · [Correspondence](correspondence.yml) · [Show seed](../../repo-shows/ben-cerveny.yml)
+[Invitation](invitation.md) · [Ideas](ideas.md) · [Show seed](../../repo-shows/ben-cerveny.yml)
 
 **Artifacts:** [artifacts.yml](artifacts.yml) · [Lane Neverending / Habitat](moollm-lane-neverending-habitat.yml) · [mail MANIFEST](media/from-mail/MANIFEST.yml)
 

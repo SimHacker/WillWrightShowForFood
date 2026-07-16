@@ -1,17 +1,10 @@
 # ben-cerveny — discussion artifacts (not mail exports)
 character: ben-cerveny
-artifact_count: 2
+artifact_count: 1
 
 artifacts:
-  - file: correspondence.yml
-    kind: correspondence_summary
-    title: "Signal thread summary (2026-07-03)"
-    channel: Signal
-    date: "2026-07-03"
-    note: "Public-safe digest; full Signal export not checked in"
-
   - file: moollm-lane-neverending-habitat.yml
     kind: cross_reference
     title: "Lane Neverending × Habitat × GNE"
     date: "2026-07-03"
-    note: "MOOLLM adventure-4 pointers shared with Ben on Signal"
+    note: "MOOLLM adventure-4 pointers; Signal digest lives in DonHopkins green-room"
