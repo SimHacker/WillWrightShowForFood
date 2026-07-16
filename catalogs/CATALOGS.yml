@@ -18,7 +18,7 @@ catalogs:
   - id: simfreaks
     path: simfreaks/
     kind: legacy_brand
-    creators: ["Heather Alvey (née Castello)"]
+    creators: ["Heather Alvey (née Castillo)"]
     storefront: https://www.simfreaks.com/
     since: ~1999
 

@@ -97,6 +97,11 @@ scoreboard:
     - "Integration (PR merge)"
     - "Abstraction (skills/ + packages/)"
 
+case_studies:
+  bun_rust_rewrite_2026_07:
+    digest: sources/bun-rust-rewrite-2026-07.md
+    axes: [cost_to_ship, adversarial_ratio, oracle_strength, loop_discipline, merge_confidence]
+
 post_run_analysis:
   when: "After Manual Transmission, Code That Spec, or any ai-off run"
   what: |
@@ -131,6 +136,7 @@ see_also:
   - { path: brain-stream.yml, why: "Live overlay during ai-offs" }
   - { path: model-branching.yml, why: "Fork trajectories — post-run compare" }
   - { path: orchestration-gold.yml, why: "Training gold from real routing traces" }
+  - { path: sources/bun-rust-rewrite-2026-07.md, why: "Industrial-scale adversarial port receipt — Jul 2026" }
   - { path: stick-shift-protocol.yml, why: "Shift = commit — tachometer metaphor" }
   - { path: micropolis-ai-drag-race.yml, why: "Drag race uses ai-offs proof" }
   - { path: homefun-grading.yml, why: "thoughtful-commitment rubric" }

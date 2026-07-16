@@ -21,6 +21,7 @@ best way (people author; AI orchestrates and writes code). [`ideas/traditions/ma
 | **will-wright-premiere/** ★ | 1996 Winograd talk — premiere Repo Show |
 | lars-brinkhoff/ | PDP-10 ITS *make it so* |
 | heather-and-steve-alvey/ | Afterlife zombie bridge |
+| jason-shankel/ | AI + skills; FlatterBot 2000! |
 
 ## Ideas catalog
 

@@ -60,5 +60,7 @@ can_discuss:
 
 see_also:
   - { path: ideas.md, why: "Show hooks" }
+  - { path: ../alan-kay/, why: "Husband; invite via/with Alan; London story joint" }
+  - { path: ../../repo-shows/alan-kay-microworld.yml, why: "Alan Kay show — Bonnie segment natural fit" }
   - { path: ../alan-kay/media/quora-recaps/why-alan-kay-moved-to-london.md, why: "The London story, in Alan's public words" }
   - { path: ../ted-nelson/, why: "The book that introduced them" }

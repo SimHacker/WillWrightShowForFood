@@ -5,7 +5,7 @@ meta:
   with: ellpeck
   curated_by: don-hopkins
   consent: not_yet_asked
-  span: "2024-05 — 2025-10"
+  span: "2024-05 — 2026-07-15"
   provenance_private: DonHopkins/characters/don-hopkins/correspondence/ellpeck.yml
   channel: "Discord (Pez de Spencer ↔ ellpeck)"
 
@@ -18,7 +18,9 @@ gist: |
   **"that sounds interesting!"** — and described the idea as *"pandoc but for life sim
   characters"* and a *consistent link* rather than a one-off conversion. Engaged positively on
   family albums, cross-game vacations, and syncing souls in parallel (not Star Trek transporter
-  murder).
+  murder). Jul 2026: Don shared [Ell's directory](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/ellpeck)
+  + [premiere show](https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/will-wright-premiere)
+  for review; explained TicketPR audience + time-shifted AMA. Ell: **"excited to have a closer look"**.
 
 threads:
   - id: praise_featured
@@ -37,17 +39,30 @@ threads:
       sync model and family-album universal pattern.
     doc: sources/discord-soul-city-pitch.md
 
+  - id: repo_onboarding
+    date: "2026-07-14"
+    summary: |
+      Don sent ellpeck + will-wright + will-wright-premiere URLs; invited portrayal edits; offered
+      GitHub access before repo goes private. Explained TicketPR audience seats (Palm example) and
+      pre-submitted questions for async Will responses. Ell will review tomorrow; excited.
+    doc: sources/discord-repo-onboarding-2026-07.md
+
 sourced_quotes:
   ell_pandoc: "so like pandoc but for life sim characters"
   ell_consistent_link: "oooh okay so it's like a consistent link sort of thing, rather than a one-off conversion"
   ell_interested: "that sounds interesting!"
+  ell_excited_look: "ok! yea im excited to have a closer look"
+  ell_wild: "that is wild hahaha"
 
 connects_in_repo:
   - { path: invitation.md, why: "Repo Show invite — Soul City bridge" }
   - { path: bridge/soul-city-bridge.md, why: "Technical narrative Ell responded to" }
   - { path: sources/don-praise.yml, why: "Quote on Praise page" }
+  - { path: sources/discord-soul-city-pitch.md, why: "Oct 2025 Soul City thread" }
+  - { path: sources/discord-repo-onboarding-2026-07.md, why: "Jul 2026 directory + TicketPR onboarding" }
 
 show_hooks:
   - "Ell coined 'pandoc for life sim characters' — use on air with his OK"
   - "Design Soul City ⇔ Tiny Life facet export live with Ell"
   - "Praise page quote read-back — Plumbella + James Turner on same page"
+  - "Ell may TicketPR an audience seat + pre-submit bridge/schema questions for Will"

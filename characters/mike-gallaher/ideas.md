@@ -11,6 +11,8 @@
 3. **Live adversarial committee** — Maya, Frankie, Joe, Vic, Tammy convene on a real pending
    decision; audience seeds personas and motions via TicketPR; independent evaluator scores.
    The methodology demonstrating itself. → [moollm skills](https://github.com/SimHacker/moollm/tree/main/skills/adversarial-committee)
+   Industrial-scale precedent: Bun Rust port — 1 implementer : 2 reviewers per task,
+   [`process/sources/bun-rust-rewrite-2026-07.md`](../../process/sources/bun-rust-rewrite-2026-07.md).
 
 4. **Stories all the way down** — the essay walked through, with the danger section intact
    ("high-entropy bullshit that happens to be locally plausible") and the defenses: adversarial

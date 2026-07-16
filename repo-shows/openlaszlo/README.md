@@ -20,6 +20,8 @@ with AI, then bring the old **LZX** apps and demos back to life on it, live.
 - **OpenLaszlo / LZX, the road not taken** — declarative XML+JavaScript, reactive, multi-runtime, years before the web reinvented it.
 - **Instance-first & reactive design** (Oliver's ideas) — what modern frameworks rediscovered.
 - **The AI revival** — how the legacy Java toolchain came back; the making-of *is* the content.
+  Sympathetic scale model for Bun's Zig→Rust port — see
+  [`process/sources/bun-rust-rewrite-2026-07.md`](../../process/sources/bun-rust-rewrite-2026-07.md).
 - **Bring the apps back** — run Don's old LZX demos live on the revived toolchain.
 
 See [`SHOW.yml`](SHOW.yml). Consent **not yet asked** for any guest.

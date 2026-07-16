@@ -57,6 +57,21 @@ drew_carey_contrast:
     Drew's own 2023 experiment proved the audience rule we build on. Not an attack — a shared
     lesson from someone who already said "don't do it again" to replacing personality with AI.
 
+bun_rewrite_contrast:
+  digest: ../../../process/sources/bun-rust-rewrite-2026-07.md
+  note: |
+    Jarred Sumner's Rust port — AI as loop engineer + adversarial review harness, human supervisor
+    fixing workflows. Not replacing engineers; replacing *unbounded manual porting*. Theo t3.gg
+    part 1 = pedagogy; Kelley counter-post = what happens when creator fights exit velocity in public.
+
+mlops_reliability_contrast:
+  digest: ../../../process/sources/unsolved-problems-mlops-2025.md
+  note: |
+    Murphy & Underwood (ACM Queue 2025): production ML lacks quality measurement, versioning,
+    and monitoring — user thumbs and LLM-judge-LLM as stopgaps. Repo Show answer: git-native
+    provenance, labeled human performance, evidence bounce (artifact → human reaction), not
+    synthetic personality on air.
+
 umbrella_format:
   canonical: ../traditions/make-play-tools-show.yml
   elevator: "TV show about developing and playing games & tools — AI as best-practice instrument."

@@ -22,8 +22,8 @@ representation:
   consent_level: 1
   authored_by: don-hopkins
   note: |
-    Warm friend — prior Don conversation (recover to correspondence.yml). Praise quote on
-    tinylifegame.com with Don's consent implied by public site citation; re-confirm before filming.
+    Warm friend — Discord Jul 2026: directory shared for portrayal review (edits welcome).
+    Praise quote on tinylifegame.com; re-confirm before filming.
 
 invitation:
   status: draft
@@ -42,13 +42,14 @@ bio:
 
   don_connection: |
     Don praised Tiny Life on Twitter (Apr 2024); quote on [Praise page](https://tinylifegame.com/#reviews).
-    Ell featured it on site + Steam (Apr 2025). Discord thread May 2024–Oct 2025 (Pez de Spencer):
-    Soul City pitch — Ell **"that sounds interesting!"** and *pandoc for life sim characters*.
-    See correspondence.yml.
+    Discord May 2024–Jul 2026 (Pez de Spencer): Soul City pitch — Ell **"that sounds interesting!"**
+    and *pandoc for life sim characters*. Jul 2026: Don shared this directory + premiere show for
+    review; Ell **excited to have a closer look**. See correspondence.yml.
 
 contact:
   warm_contact: true
-  channel: "Discord (Pez de Spencer) — Don rarely opens; prefer Bluesky or email for invites"
+  channel: "Discord (Pez de Spencer) — active Jul 2026; Bluesky for async"
+  portrayal_review: "2026-07-14 — directory URL sent; edits/deletions welcome; GitHub access pending"
   recover_thread: correspondence.yml
   channels:
     site: https://tinylifegame.com/

@@ -7,18 +7,41 @@ public work and documented connections to this repository. Things Don would love
 
 ## What Heather has done
 
-Heather Alvey (née Castello) — founder of SimFreaks, one of the longest-running, most respected Sims custom-content houses (a ~26-year brand): original object suites, sophisticated SimAntics programming, and community leadership. With her husband Steve Alvey (SimSlice / SliceCity — SimCity running *inside* The Sims) she still ships tour-de-force magnum-opus expansion packs like Zombie Sims for The Sims 1. Don's longtime friend and collaborator.
+Heather Alvey (née Castillo) — founder of **SimFreaks**, one of the longest-running Sims custom-content houses (~26 years). Met **Steve Alvey** (SimSlice) through the fan community (SimBabe intro); married; co-ship **Zombie Sims**. **Gallium Studios** / Proxi with Will Wright. Now: **Soul City** publishing with Don.
 
 ## The hooks
 
-### 1. Show seed: `repo-shows/heather-and-steve-alvey/`
-walk the repo on air and build from the seed.
 
-### 2. SimFreaks founder (née Castello)
-~26-year Sims content brand; w/ Steve Alvey (SimSlice/SliceCity); Zombie Sims; worked with Will at Gallium (Proxi); Don's SimProv + Micropolis-publishing collaborator. Independent creator — drive fans/subscriptions.
+
+### 1. Fan band back (and still) together ★
+
+Origin story card: `[../../repo-shows/heather-and-steve-alvey/sources/fan-band-marriage-arc.md](../../repo-shows/heather-and-steve-alvey/sources/fan-band-marriage-arc.md)`  
+Two independent fan sites → marriage → Zombie Sims → Gallium → Soul City. Evidence-bounce edit with Steve's async interviews.
+
+### 2. Show seed: `repo-shows/heather-and-steve-alvey/`
+
+Walk the repo on air — whole-career show + Afterlife × ZombieSims flagship.
+
+### 3. SimFreaks catalog live
+
+EA-recognized site; object suites + SimAntics; drive subscriptions ([simfreaks.com](https://www.simfreaks.com/)).
+
+### 4. Soul City now
+
+Federated **create · publish · share** — `[../../catalogs/soul-city/README.md](../../catalogs/soul-city/README.md)`; first customers for Don's publishing stack.
+
+### 5. SimProv Wedding Playset + Speed Dating with Cupid
+
+Unreleased-era collaboration; Cupid object gag — `[../../repo-shows/ideas/gags/speed-dating-with-cupid.yml](../../repo-shows/ideas/gags/speed-dating-with-cupid.yml)`.
+
+### 6. Gallium / Proxi chapter
+
+Artist in Residence threads ([thealveys.us](https://thealveys.us/), LinkedIn) — what working with Will again meant after decades as fan creators.
 
 ## Sources (public)
 
-- [`invitation.md`](invitation.md)
-- Show seed: [`repo-shows/heather-and-steve-alvey/`](../../repo-shows/heather-and-steve-alvey/)
-- [`CHARACTER.yml`](CHARACTER.yml)
+- `[invitation.md](invitation.md)`
+- Story arc: `[../../repo-shows/heather-and-steve-alvey/sources/fan-band-marriage-arc.md](../../repo-shows/heather-and-steve-alvey/sources/fan-band-marriage-arc.md)`
+- Show seed: `[../../repo-shows/heather-and-steve-alvey/](../../repo-shows/heather-and-steve-alvey/)`
+- `[CHARACTER.yml](CHARACTER.yml)`
+

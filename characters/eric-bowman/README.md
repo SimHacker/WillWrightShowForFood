@@ -6,7 +6,7 @@
 ## Who
 
 **Eric Bowman** is a programmer on the original **The Sims** team at Maxis, working on core/systems
-engineering. He and Don later worked together again at **TomTom** in Amsterdam.
+engineering. Post-Sims: **DoDots** with Jim Mackraz; later **TomTom** Amsterdam (Don recruited Bobo).
 
 ## Why a Repo Show
 
@@ -21,6 +21,7 @@ Amsterdam/TomTom, and how pools fit the lot grid (objects vs rooms vs dedicated 
 | [`invitation.md`](invitation.md) | Send-ready draft |
 | [`ideas.md`](ideas.md) | Conversation hooks |
 | [`media.md`](media.md) | Throbbing brain UI sketches + Tanja Sihvonen reading |
+| [`sources/direct3d-professional-reference.md`](sources/direct3d-professional-reference.md) | Book evidence — cover/listing for bounce cuts |
 | [`CHARACTER.yml`](CHARACTER.yml) | Machine-readable portrayal |
 
 ## See also

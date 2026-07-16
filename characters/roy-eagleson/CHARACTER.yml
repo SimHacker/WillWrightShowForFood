@@ -48,6 +48,8 @@ sources:
 
 see_also:
   - { path: sketchpad-to-pixie-lineage.md, why: "Sketchpad north star → Geometer's Sketchpad → PIXIE in the classroom" }
+  - { path: ideas.md, why: "Educator hooks — Wilkes memorial, Newman ref 520, photo ID" }
+  - { path: ../maurice-wilkes/, why: "Wilkes avatar joke → memorial room; storyline request" }
   - { path: ../kelly-booth/, why: "Roy's HCI storytelling mentor (UBC), newly Cc'd on the thread" }
   - { path: ../heinz-lemke/, why: "PIXIE co-author; source-listing email; Flight of the PIXIE link" }
   - { path: ../ivan-sutherland/, why: "Hero + north star — Sketchpad (1963)" }

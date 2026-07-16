@@ -1,0 +1,91 @@
+# Murphy & Underwood — Unsolved Problems in MLOps (ACM Queue Jul–Aug 2025)
+# Ingested from user-provided full text + DOI
+
+meta:
+  id: unsolved-problems-mlops-2025
+  ingested: 2026-07-15
+  status: digested
+  digest: unsolved-problems-mlops-2025.md
+
+citation:
+  title: "Unsolved Problems in MLOps"
+  authors: [Niall Richard Murphy, Todd Underwood]
+  venue: ACM Queue
+  issue: July–August 2025
+  doi: 10.1145/3762989
+  pdf: https://spawn-queue.acm.org/doi/pdf/10.1145/3762989
+  doi_url: https://doi.org/10.1145/3762989
+
+authors:
+  niall_murphy:
+    role: co_author
+    affiliation: Stanza Systems (CEO/founder)
+    background: ex Amazon, Google, Microsoft Dublin; SRE/ML reliability books
+  todd_underwood:
+    role: co_author
+    affiliation: Anthropic (reliability lead)
+    background: ex OpenAI Research Platform reliability, Google ML SRE; Reliable Machine Learning (O'Reilly 2022)
+
+thesis: |
+  ML systems are non-deterministic and data-driven; classical CI/CD, SLO alerting, canarying,
+  and fast binary rollback do not transfer cleanly. Practitioners lack reliable production quality
+  measurement, versioning, monitoring, cost routing, and leakage/injection controls.
+
+problem_clusters:
+  measuring_quality:
+    unsolved:
+      - bound stochastic model responses for testing
+      - canary quality control across multiple models with stable baseline
+    cited_examples:
+      - { who: Brendan Burns, org: Microsoft Azure, event: SRECon Americas 2025, method: "LLMs judge LLMs + employee thumbs-up" }
+      - { who: OpenAI, what: sycophantic release, issue: overly supportive disingenuous answers reinforced by short-term feedback }
+    what_works_per_article: production user feedback (clicks, thumbs, copy-paste)
+
+  provenance_versioning:
+    unsolved:
+      - widespread tooling + agreed versioning surface
+      - dataset management at scale
+      - provider transparency to API consumers
+    note: same model name may differ by weights, system prompt, safety filters, time
+
+  monitoring_observability:
+    unsolved:
+      - org ownership consensus
+      - best practices for practitioners not monitoring
+      - efficient inspectability without per-weight logging
+    cited_stat:
+      source: "State of Production ML 2024, Institute of Ethical AI & Machine Learning"
+      finding: ~50% do not monitor model performance in production
+      category: observability largest problem category
+
+  efficiency_cost:
+    unsolved:
+      - LLM query cost estimation
+      - load balancing across fine-grained model pools
+      - capacity planning vs model proliferation
+    cited_cost_example: "NVIDIA DGX B200 eight-card ~$500k (2024, per article)"
+
+  security_leakage_injection:
+    unsolved:
+      - safe emission at source while retaining training data
+      - practical universal inbound jailbreak filtering
+    cited_mitigations:
+      - remove secrets from training data (leakage)
+      - defense in depth monitoring + failover (injection)
+      - egress filters; proprietary stacks (Anthropic RSP / ASL-3 mentioned)
+
+not_unsolved_per_article:
+  - training network fragility (known expensive mitigations)
+
+repo_show_counter_narrative:
+  versioning: git-native artifacts + orchestration-gold labeling
+  quality: human authorship on air; evidence bounce cut vs LLM-judge-LLM
+  sycophancy: flatterbot-2000 parody + guest correction beats
+  provenance: process/sources digests + green-room consent gates
+
+show_ties:
+  - ../../repo-shows/jason-shankel/SHOW.yml
+  - ../../repo-shows/ideas/traditions/flatterbot-2000.yml
+  - ../../repo-shows/ideas/traditions/make-play-tools-show.yml
+  - ../../repo-shows/ideas/themes/human-control-and-authorship.yml
+  - ../orchestration-gold.yml

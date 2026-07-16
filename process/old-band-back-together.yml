@@ -38,6 +38,29 @@ bands:
     also: [../repo-shows/REPO-SHOWS.yml#design-by-accretion.yml, ../repo-shows/REPO-SHOWS.yml#music-and-theory.yml]
     characters: [../characters/will-wright/, ../characters/jim-mackraz/, ../characters/jamie-doornbos/, ../characters/eric-bowman/, ../characters/eric-hedman/, ../characters/patrick-j-barrett-iii/, ../characters/chris-trottier/, ../characters/claire-curtin/, ../characters/jerry-martin/]
     don_role: "Sims programmer + teammate"
+    post_sims:
+      dodots:
+        company: "DoDots (~2000) — desktop Web 'dots' without a browser"
+        stanford_case: https://www.gsb.stanford.edu/faculty-research/case-studies/dodots
+        team_claim: "Jim Mackraz + Eric Bowman worked there after Sims — needs_confirmation"
+        show_beat: ../repo-shows/building-the-sims/did-you-do-dots-together.md
+      tomtom:
+        note: "Don recruited Bobo to TomTom Amsterdam — second reunion"
+        show: ../repo-shows/ideas/urban-ebike-safari.yml
+
+  simfreaks_simslice_fan_crew:
+    what: "Fan-site creators who became a marriage — SimFreaks + SimSlice, still shipping together."
+    roll_call: "Heather Alvey (née Castillo) + Steve Alvey"
+    arc: |
+      Independent fan websites → community intro (SimBabe) → married → Zombie Sims together →
+      Gallium/Proxi with Will → Soul City publishing with Don now. The fan-community version of
+      'get the band back together' — never stopped being fans who build.
+    show: ../repo-shows/heather-and-steve-alvey/
+    story_card: ../repo-shows/heather-and-steve-alvey/sources/fan-band-marriage-arc.md
+    characters: [../characters/heather-alvey/, ../characters/steve-alvey/]
+    don_role: "longtime friend; SimProv Wedding Playset; Soul City / Micropolis publishing collaborator"
+    will_bridge: "Both worked at Gallium Studios (Proxi); SliceCity = shipped data-portability precedent"
+    evidence_bounce: ../repo-shows/building-the-sims/evidence-bounce-cut.md
 
   david_levitt_crew:
     what: "Decades of fun work with David Levitt — music, AI, and interactive media ventures."

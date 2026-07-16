@@ -8,7 +8,8 @@ public work and documented connections to this repository. Things Don would love
 ## What Eric has done
 
 Eric Bowman ("Bobo") is a programmer on the original The Sims team at Maxis, working on core/systems
-engineering. He and Don later worked together again at TomTom in Amsterdam.
+engineering. After Sims: **DoDots** with Jim Mackraz (*needs_confirmation*). Don later recruited him to
+**TomTom** Amsterdam.
 
 ## The hooks
 
@@ -31,10 +32,14 @@ what it taught the team.
 → [`media.md`](media.md)
 
 ### 5. Amsterdam / TomTom reunion
-Second act with Don at TomTom; chance encounter with Tanja Sihvonen writing *Players Unleashed!*
-at the Sound Garden (~2008) — two original Sims programmers, thesis author, none of them knowing.
+Second act with Don at TomTom (Don recruited Bobo after DoDots). Chance encounter with Tanja
+Sihvonen writing *Players Unleashed!* at the Sound Garden (~2008).
 
-### 6. Then and now
+### 6. Did you Do Dots Together?
+Awkward Glick question for Jim + Bobo reunion — post-Sims **DoDots** startup sounds scandalous.
+→ [`../../repo-shows/building-the-sims/did-you-do-dots-together.md`](../../repo-shows/building-the-sims/did-you-do-dots-together.md)
+
+### 7. Then and now
 What you'd build differently with modern tools — and what you still wouldn't touch.
 
 ## Sources (public)

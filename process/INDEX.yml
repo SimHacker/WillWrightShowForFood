@@ -103,6 +103,19 @@ challenges:
   markup: challenges/RETROCOMPUTING.md
   umbrella: challenges/retrocomputing-drive.yml
 
+sources:
+  dir: sources/
+  index: sources/README.md
+  bundles:
+    bun-rust-rewrite-2026-07:
+      topic: "Bun Zig→Rust AI port + Kelley response + Theo t3.gg — adversarial review at industrial scale; orchestration-gold case study"
+      yaml: sources/bun-rust-rewrite-2026-07.yml
+      md: sources/bun-rust-rewrite-2026-07.md
+    unsolved-problems-mlops-2025:
+      topic: "Murphy & Underwood ACM Queue — MLOps reliability gaps; git/provenance counter-narrative for Repo Show"
+      yaml: sources/unsolved-problems-mlops-2025.yml
+      md: sources/unsolved-problems-mlops-2025.md
+
 live_and_training:
   brain-stream.yml:
     markup: BRAIN-STREAM.md

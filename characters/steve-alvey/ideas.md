@@ -7,25 +7,34 @@ public work and documented connections to this repository. Things Don would love
 
 ## What Steve has done
 
-Steve Alvey — founder of SimSlice and creator of SliceCity: a Lilliputian SimCity
-that runs *inside* The Sims, deeply integrated, not cosmetic. It's the shipped precedent for
-Will Wright's long-aspired data-portability / games-nested-in-games vision (which Will
-articulated in his 1996 Winograd talk) — years before anyone called it that. A ~26-year
-respected Sims-content brand: programmer, artist, publisher, and community leader. With his wife
-Heather Alvey (née Castello — SimFreaks) he still ships tour-de-force magnum-opus
-expansion packs like Zombie Sims for The Sims 1. He also worked with Will Wright at
-Gallium Studios (Will & Lauren Elliott's studio behind Proxi).
+Steve Alvey — **SimSlice** / **SliceCity** (SimCity running *inside* The Sims): the shipped precedent for Will's nested-games vision. Married to **Heather Alvey** (SimFreaks) after years as parallel fan-site creators. Co-ships **Zombie Sims**. **Gallium / Proxi** with Will. **Soul City** publishing with Don now.
 
 ## The hooks
 
-### 1. Show seed: `repo-shows/heather-and-steve-alvey/`
-walk the repo on air and build from the seed.
+### 1. Fan band back (and still) together ★
+Origin story: [`../../repo-shows/heather-and-steve-alvey/sources/fan-band-marriage-arc.md`](../../repo-shows/heather-and-steve-alvey/sources/fan-band-marriage-arc.md)  
+SimSlice about page timeline: ~10 years online before meeting, ~7 years to marriage ([simslice.com/about](https://www.simslice.com/about/index.shtml)).
 
-### 2. SimSlice / SliceCity
-SimCity running INSIDE The Sims (the shipped precedent for Will's data-portability/nested-games vision); ~26-year Sims content brand; Zombie Sims w/ Heather; worked with Will at Gallium (Proxi); Don's SimProv + Micropolis-publishing collaborator. Independent creator — drive fans/subscriptions.
+### 2. SliceCity — data portability crown jewel
+SimCity in the back yard — Wired-era coverage; Will's 1996 dream actually shipped.  
+→ [`../../repo-shows/ideas/themes/data-portability-crown-jewel.yml`](../../repo-shows/ideas/themes/data-portability-crown-jewel.yml)
+
+### 3. Show seed: `repo-shows/heather-and-steve-alvey/`
+Whole-career pair show; Afterlife × ZombieSims flagship episode.
+
+### 4. Zombie Sims with Heather
+Magnum-opus pack still shipping — the project they build *together* after the fan-site era.
+
+### 5. Soul City + Simopolis bridges
+Round-tripping saves; federated catalogs — [`../../catalogs/soul-city/README.md`](../../catalogs/soul-city/README.md).
+
+### 6. Gallium / Proxi
+What nested-simulation craft meant inside Will's AI life-sim experiment.
 
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
-- Show seed: [`repo-shows/heather-and-steve-alvey/`](../../repo-shows/heather-and-steve-alvey/)
+- Story arc: [`../../repo-shows/heather-and-steve-alvey/sources/fan-band-marriage-arc.md`](../../repo-shows/heather-and-steve-alvey/sources/fan-band-marriage-arc.md)
+- Show seed: [`../../repo-shows/heather-and-steve-alvey/`](../../repo-shows/heather-and-steve-alvey/)
 - [`CHARACTER.yml`](CHARACTER.yml)
+- SliceCity gallery: [`../will-wright/media/sims-simslice-README.md`](../will-wright/media/sims-simslice-README.md)

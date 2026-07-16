@@ -27,6 +27,8 @@ quotes until confirmed live.*
 | The toilet game until tuning made it fun | [`toilet-game-until-tuned.md`](toilet-game-until-tuned.md) | design lore |
 | Eric's throbbing brain needs UI (didn't ship) | [`throbbing-brain-needs-ui.md`](throbbing-brain-needs-ui.md) | prototype |
 | Metaweb 2007: "objects or rooms — and why!" | [`metaweb-2007-pool-interview-question.md`](metaweb-2007-pool-interview-question.md) | origin |
+| Did you Do Dots Together? (Jim + Bobo) | [`../did-you-do-dots-together.md`](../did-you-do-dots-together.md) | reunion gag |
+| Evidence bounce cut (async → Director's Cut) | [`../evidence-bounce-cut.md`](../evidence-bounce-cut.md) | editorial pattern |
 | Modesty bar covers smooth Barbie anatomy | [`modesty-bar-cast-rated.md`](modesty-bar-cast-rated.md) | implementation |
 | Clogged toilet summons maid (no privacy yet) | [`clogged-toilet-summons-maid.md`](clogged-toilet-summons-maid.md) | pre-fix chain |
 | Bathroom privacy blocks the maid | [`bathroom-privacy-blocks-maid.md`](bathroom-privacy-blocks-maid.md) | fix context |

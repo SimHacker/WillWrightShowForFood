@@ -1,1 +1,1 @@
-👤 **Jason Shankel** — Maxis / Stupid Fun Club alumnus and games-AI person; a natural guest for the **AI + skills episode**. StoryMaker / Bar Karma community contributor.
+👤 **Jason Shankel** — Maxis/Spore engineer (ParticleMan, prototypes wiki); SFC/Syntertainment; **17+ Sonoma CS Colloquium talks on YouTube**; AWE 2013 Connected Play; StoryMaker/Bar Karma (*needs_confirmation*). AI + skills episode guest. Talks: [`sources/TALKS-INDEX.md`](sources/TALKS-INDEX.md).

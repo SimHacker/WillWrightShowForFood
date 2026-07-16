@@ -54,6 +54,11 @@ traditions:
     shows: [all]
     status: ready
     note: "Umbrella TV format — develop · play · discuss; Bar Karma lineage"
+  - id: flatterbot-2000
+    file: traditions/flatterbot-2000.yml
+    shows: [all]
+    status: seed
+    note: "FlatterBot 2000! — Pee-wee bad ventriloquism × Jiminy Glick × AI mega-lecture; Don: 'I would never say that.' Founding example: Jason Shankel"
 
 gags:
   - id: pixelized-joint-wedding
@@ -78,6 +83,11 @@ gags:
     shows: [will-wright, heather-and-steve-alvey]
     status: recorded_prior_art
     episode: "Speed Dating with Cupid"
+  - id: did-you-do-dots-together
+    file: gags/did-you-do-dots-together.yml
+    shows: [building-the-sims]
+    status: seed
+    note: "Jim + Bobo reunion — awkward Glick question about post-Sims DoDots startup"
 
 themes:
   - id: simulation-effect

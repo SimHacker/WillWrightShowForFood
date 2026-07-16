@@ -5,7 +5,7 @@
 
 ## Who
 
-**Heather Alvey** (née **Castello**) founded **SimFreaks** — one of the longest-running, most
+**Heather Alvey** (née **Castillo**) founded **SimFreaks** — one of the longest-running, most
 respected **Sims custom-content** houses: a **~26-year** practice of original object suites,
 sophisticated **SimAntics** programming, and community leadership. With her husband **Steve Alvey**
 (**SimSlice / SliceCity** — SimCity running *inside* The Sims) she still ships **tour-de-force

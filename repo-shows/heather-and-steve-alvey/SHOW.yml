@@ -15,11 +15,15 @@ show:
   likelihood: "warm — longtime friends + collaborators (SimProv; Micropolis publishing)"
 
 why_them:
+  fan_band_marriage:
+    story: sources/fan-band-marriage-arc.md
+    beat: "Independent fan sites → married → Zombie Sims → Gallium → Soul City — the community reunion that never stopped"
   simslice_slicecity: "Steve's **SliceCity** — a Lilliputian **SimCity running inside The Sims**, deeply integrated: the shipped precedent for Will Wright's data-portability / games-nested-in-games vision (1996)."
-  simfreaks: "Heather's **SimFreaks** (née Castello) — one of the longest-running, most respected Sims custom-content houses: object suites, deep SimAntics, community leadership."
+  simfreaks: "Heather's **SimFreaks** (née Castillo) — one of the longest-running, most respected Sims custom-content houses: object suites, deep SimAntics, community leadership."
   still_shipping: "Still making tour-de-force magnum-opus expansion packs — e.g. **Zombie Sims** for The Sims 1."
   gallium: "Both worked with **Will Wright at Gallium Studios** (Will & Lauren Elliott's studio; AI life-sim **Proxi**, in Unity)."
   don_history: "Don's longtime friends/collaborators — **SimProv Wedding Playset** (with SimBabes + others); first users of Don's **Micropolis content-management & publishing system**."
+  soul_city_now: "**Soul City** federated publishing (create · publish · share) — catalogs for SimFreaks, SimSlice, SimProv, Zombie Sims; active collaboration with Don."
 
 # THE POINT (say it plainly): these are independent creators who've paid the mortgage for years on
 # subscriptions + content + side jobs. The show is a NON-EXTRACTIVE LIFT — celebrate the work and
@@ -30,6 +34,7 @@ support_them:
   ethos: "Sincere praise that sends people to buy. No extraction, no exploitation — lift."
 
 episodes:
+  - { id: fan-band-marriage, doc: sources/fan-band-marriage-arc.md, what: "★ Origin story — two fan sites, one marriage, Zombie Sims, Gallium, Soul City; evidence-bounce edit from async interviews." }
   - { id: whole-career, what: "The retrospective + showcase: SliceCity live, the SimFreaks catalog, Zombie Sims, the Gallium/Will chapter, 26 years of craft — and where it goes next." }
   - { id: afterlife-zombie-bridge, doc: afterlife-zombie-bridge.yml, what: "★ FLAGSHIP playful episode — Afterlife 'hell is full' × ZombieSims horde, drain souls by religion into SimFreaks/SimSlice zombie skins; They Are Billions scale." }
   - { id: data-portability, what: "SliceCity → Simopolis: widen nested games to real save files + emulators across many games (repo-shows/INDEX.yml bridges_architecture)." }

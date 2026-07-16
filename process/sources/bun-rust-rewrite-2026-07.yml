@@ -1,0 +1,129 @@
+# Bun Zig→Rust rewrite drama — ingested Jul 2026
+# Don flagged as "super interesting and related" — AI orchestration receipts at industrial scale
+
+meta:
+  id: bun-rust-rewrite-2026-07
+  ingested: 2026-07-15
+  flagged_by: don-hopkins
+  status: digested
+  digest: bun-rust-rewrite-2026-07.md
+
+sources:
+  jarred_sumner_blog:
+    title: "Rewriting Bun in Rust"
+    url: https://bun.com/blog/bun-in-rust
+    author: Jarred Sumner
+    date: 2026-07-08
+    role: primary_receipt
+  andrew_kelley_blog:
+    title: "My Thoughts on the Bun Rust Rewrite"
+    url: https://andrewkelley.me/post/my-thoughts-bun-rust-rewrite.html
+    author: Andrew Kelley
+    date: 2026-07-09
+    role: counter_narrative
+  theo_t3_video:
+    title: "Well this really p*ssed me off"
+    url: https://www.youtube.com/watch?v=kAjNWanR3n8
+    channel: Theo - t3.gg
+    published: 2026-07-14
+    length: "1:00:06"
+    role: commentary_and_pedagogy
+
+timeline:
+  - { when: "2021-04", what: "Jarred writes first Zig line; Bun scope explodes from esbuild port" }
+  - { when: "2025-12", what: "Anthropic acquires Bun / Oven" }
+  - { when: "2026-05-03..14", what: "11-day Rust rewrite — 50 workflows, peak 64 Claudes" }
+  - { when: "2026-07-08", what: "Jarred publishes rewrite blog — methodology + stats" }
+  - { when: "2026-07-09", what: "Andrew Kelley response — relationship + code-quality framing" }
+  - { when: "2026-07-14", what: "Theo video — part 1 methodology praise, part 2 Kelley crash-out" }
+
+jarred_claims:
+  scale:
+    zig_loc: 535496
+    commits: 6778
+    peak_claudes: 64
+    workflows: 50
+    duration_days: 11
+    api_cost_usd: 165000
+    human_counterfactual: "3 engineers × ~1 year (frozen feature work)"
+  method:
+    - mechanical_port_not_idiomatic_rewrite
+    - PORTING_md_and_LIFETIMES_tsv_prep
+    - trial_run_3_files_before_1448
+    - one_implementer_two_adversarial_reviewers_split_context
+    - fix_workflow_not_hand_fix_code_on_loop_failure
+    - typescript_test_suite_as_oracle
+    - compiler_errors_as_work_queue
+    - systemd_cgroups_for_leaky_integration_tests
+  outcomes:
+    bugs_fixed_in_zig_still_repro: 128
+    known_regressions_introduced: 19
+    unsafe_pct: 4
+    binary_smaller_pct: "~20 Linux/Windows"
+    perf_gain_pct: "2-5"
+    post_merge: [11_security_review_rounds, 24_7_parser_fuzzing]
+
+kelley_claims:
+  relationship:
+    - beginner_energy_characterization
+    - vc_oven_management_grapevine
+    - zig_foundation_relief_at_rust_rewrite
+    - donation_60k_yr_stopped_after_acquisition
+  technical:
+    - style_guide_vs_language_feature_false_dichotomy
+    - tigerbeetle_put_in_engineering_time_bun_did_not
+    - test_suite_sufficiency_contradiction
+    - lto_available_in_zig_ignored
+    - fuzzing_claimed_absent_on_calls
+    - binary_size_work_belonged_in_zig_codebase
+  reframed_conclusion:
+    - not_primarily_zig_vs_rust_features
+    - diverging_value_systems_and_failed_business_relationship
+    - edited_after_feedback_softened_some_personal_lines
+
+theo_take:
+  part_1:
+    - jarred_blog_is_best_public_writeup_of_agentic_loop_engineering
+    - adversarial_review_with_split_context_is_the_right_pattern
+    - multi_model_reviewers_beat_same_family_reviewers
+    - 165k_vs_never_happening_counterfactual_not_vs_600k_human_year
+    - price_at_intelligence_tier_will_drop
+  part_2:
+    - kelley_post_damages_zig_more_than_bun_rewrite_does
+    - personal_attacks_disguised_as_business_breakup_story
+    - unit_tests_dont_catch_memory_safety_class_bugs
+    - kelley_edits_post_after_pushback
+
+show_ties:
+  orchestration:
+    - ../orchestration-gold.yml
+    - ../manual-transmission.yml
+    - ../ai-offs.yml
+    - ../model-branching.yml
+    - ../stick-shift-protocol.yml
+  formats:
+    - ../repo-wars.yml#translation_arena
+    - ../../repo-shows/openlaszlo/README.md
+    - ../../repo-shows/ideas/themes/human-control-and-authorship.yml
+  moollm_skills:
+    - adversarial-committee
+    - rubric
+    - experiment
+    - cursor-mirror
+    - thoughtful-commitment
+  doctrine:
+    - ../../characters/don-hopkins/import-self-from-self.md
+    - ../../characters/stephen-wolfram/MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md
+
+episode_beats:
+  - "Manual Transmission segment — score Jarred's run: spend CSV fantasy, adversarial ratio, test oracle"
+  - "Adversarial committee live — implementer + 2 reviewers on a micro port (Mike Gallaher personas)"
+  - "Repo Wars translation_arena — Zig→Rust drag race with declared rigs + budget cap"
+  - "OpenLaszlo contrast — smaller AI revival, same 'resurrect with receipts' shape"
+  - "Drew Carey AI contrast — AI backstage crew vs replacing the personality on mic"
+  - "Stick-shift beat — Theo: different model families for reviewer lanes"
+
+see_also:
+  - ../../characters/mike-gallaher/ideas.md
+  - ../../repo-shows/drew-carey/ai-contrast-framing.md
+  - ../../characters/tom-lord/teledildonics-hn-2020.md

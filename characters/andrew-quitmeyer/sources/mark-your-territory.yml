@@ -1,0 +1,39 @@
+# Mark Your Territory — verified source index
+meta:
+  character: andrew-quitmeyer
+  rendered: mark-your-territory.md
+  released: 2011-10-31
+  tei_submission: TEI 2012
+
+project:
+  name: Mark Your Territory
+  tagline: Pee-to-Check-In-to-Foursquare
+  site: http://www.markyourterritory.org/
+  github: https://github.com/quitmeyer/Mark-Your-Territory---Pee-to-Check-In-to-Foursquare
+  stack: [Android ADK, Arduino moisture sensor, Foursquare API]
+
+sources:
+  - url: https://www.quitmeyer.org/updates/mark-your-territory-release/
+    date: 2011-10-31
+    what: official release announcement
+  - url: https://www.youtube.com/watch?v=rRdfeb7vDWg
+    date: 2011-10-31
+    what: explainer video (Digital Naturalism Laboratories)
+  - url: https://www.instructables.com/id/Pee-to-Check-In-to-Foursquare-Mark-Your-Territor/
+    what: featured build guide (blorgggg); contest wins
+  - url: https://popupcity.net/insights/pee-to-check-in-to-foursquare-and-mark-your-territory/
+    date: 2012-12-05
+    what: press recap; Foursquare reaction reported
+
+reception:
+  foursquare:
+    status: reported_by_andrew_via_press
+    quote: "possibly the best API app ever!"
+    source: popupcity 2012
+  don_hopkins_youtube_comment:
+    video: https://www.youtube.com/watch?v=rRdfeb7vDWg
+    text: "Badass. Great idea."
+
+show_mashup:
+  bongo_bingo: ../../../process/crazy-idea-jam.yml#bongo_bingo
+  note: ask Andrew before filming bodily-check-in comedy beat

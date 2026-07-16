@@ -1,0 +1,96 @@
+# Andrew Quitmeyer — invitation portrayal. NOT Andrew.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: andrew-quitmeyer
+  name: "Andrew Quitmeyer"
+  type: invitation
+  signifier: "🌿📍"
+  status: living
+  field: |
+    Stupid Fun Club intern; Georgia Tech (Janet Murray); Digital Naturalism Laboratories;
+    playful ubicomp — Mark Your Territory; field science + hiking hacker
+  home: characters/andrew-quitmeyer/
+  affiliation: "Digital Naturalism Laboratories; Georgia Tech; Stupid Fun Club alumni"
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 1
+  authored_by: don-hopkins
+  note: "Green-room wanted — no outreach sent yet (Jul 2026)"
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/will-wright-premiere/
+  segment: "SFC alumni + ubicomp / constructionism"
+
+bio:
+  summary: |
+    **Andrew Quitmeyer** interned at Will Wright's **Stupid Fun Club**, studied at **Georgia Tech**
+    under **Janet Murray**, and runs **Digital Naturalism Laboratories** — field science and playful
+    ubicomp at the intersection of nature, bodies, and check-in culture. His **Mark Your Territory**
+    project (Foursquare-style territory marking) is the perfect foil for Don's **Bongo Bingo**
+    (bike-around-Amsterdam Foursquare bingo on coffeeshops — the TomTom project that re-hired Don
+    into SFC). He posted the classic **Nancy the Van Seat** SFC video (2011).
+
+sfc:
+  role: intern
+  nancy_van_seat:
+    youtube: https://www.youtube.com/watch?v=fvXG4gQ2FWI
+    posted_by: "Digital Naturalism Laboratories (Andrew Quitmeyer)"
+    date: "2011-08-23"
+    don_commented: true
+  see_also:
+    - ../robots/slats/CHARACTER.yml
+    - ../don-hopkins/career/stupid-fun-club.yml
+
+academic:
+  institution: Georgia Tech
+  advisor: Janet Murray
+  themes: [interactive narrative, digital naturalism, field ubicomp]
+
+sources:
+  web:
+    - url: https://github.com/quitmeyer/Mark-Your-Territory---Pee-to-Check-In-to-Foursquare
+      what: open-source Android ADK + Arduino Foursquare check-in
+    - url: http://www.markyourterritory.org/
+      what: project site
+    - url: https://www.quitmeyer.org/updates/mark-your-territory-release/
+      what: release announcement Oct 31, 2011; TEI 2012 paper prep
+    - url: https://www.youtube.com/watch?v=rRdfeb7vDWg
+      what: explainer video; Don commented "Badass. Great idea."
+    - url: https://www.instructables.com/id/Pee-to-Check-In-to-Foursquare-Mark-Your-Territor/
+      what: featured Instructables build guide
+    - url: https://popupcity.net/insights/pee-to-check-in-to-foursquare-and-mark-your-territory/
+      what: press Dec 2012; Foursquare reaction reported
+
+projects:
+  mark_your_territory:
+    released: 2011-10-31
+    gist: "Pee-to-Check-In-to-Foursquare — Arduino ADK + moisture sensor + embodied Foursquare API"
+    source: sources/mark-your-territory.md
+    index: sources/mark-your-territory.yml
+  bongo_bingo_mashup:
+    don_pitch: |
+      Mash Mark Your Territory with Don's Bongo Bingo — GPS check-ins at coffeeshops while marking
+      territory; Foursquare but pee instead of bong water (on-air comedy beat — ask permission).
+    canonical: ../../../process/crazy-idea-jam.yml#bongo_bingo
+
+contact:
+  warm_contact: false
+  channel: "Green-room FB decode — outreach not sent"
+  green_room: DonHopkins/projects/willwrightshowforfood/green-room/sfc-alumni-wanted.md
+
+show_angles:
+  - "Mark Your Territory × Bongo Bingo — live mashup design (with Andrew's OK)"
+  - "SFC intern stories — Nancy van seat, Slats, Emeryville energy"
+  - "Janet Murray line — interactive narrative meets bodily ubicomp"
+  - "Digital naturalism — constructionism in the field"
+
+see_also:
+  - { path: ../matthew-sibigtroth/, why: "SFC alum — different orbit, same club" }
+  - { path: ../jason-shankel/, why: "SFC hub — 13 mutual FB w/ Andrew" }
+  - { path: ../brenda-laurel/, why: "127 FB mutual — narrative systems" }
+  - { path: ../../process/crazy-idea-jam.yml#bongo_bingo, why: "Don's Foursquare bingo progenitor" }

@@ -17,7 +17,8 @@ Published by **Top Hat Studios**. Hand-drawn pixelart and hand-written code — 
 
 Don praised the game on [Twitter](https://x.com/xardox/status/1785112477904023674); the quote lives on
 Ell's [Praise page](https://tinylifegame.com/#reviews) (Ell featured it Apr 2025 — with permission
-if Don wants it removed). Discord thread recovered — [`correspondence.yml`](correspondence.yml).
+if Don wants it removed). Discord through Jul 2026 — [`correspondence.yml`](correspondence.yml)
+(Don shared this directory Jul 2026 for review; Ell excited to dig in).
 
 ## Why Ell belongs in the show
 

@@ -2,7 +2,7 @@
 
 > Drain Hell — *Afterlife* × ZombieSims, with the **SimFreaks** and **SimSlice** crews.
 
-A group-show seed reuniting **Heather Alvey (SimFreaks**, née Castello**)** and **Steve Alvey
+A group-show seed reuniting **Heather Alvey (SimFreaks**, née Castillo**)** and **Steve Alvey
 (SimSlice / SliceCity** — fan-coded **SimCity running *inside* The Sims**) — partners and longtime
 Sims content creators with **~26-year respected brands** as publishers, artists, programmers, and
 community leaders, still shipping tour-de-force magnum-opus expansion packs like **Zombie Sims**.
@@ -11,7 +11,11 @@ The show's playful hook bridges Maxis's *Afterlife* ("hell is full") to a **Zomb
 subtract damned souls by religion from *Afterlife* saves, spawn zombie waves with interchangeable
 SimFreaks/SimSlice skins, scale toward *They Are Billions* pressure — and play it live.
 
-## The bigger why — Micropolis publishing
+**Origin story:** two independent fan sites (**SimFreaks** + **SimSlice**) → community marriage →
+**Zombie Sims** together → **Gallium / Proxi** with Will → **Soul City** with Don now.
+[`sources/fan-band-marriage-arc.md`](sources/fan-band-marriage-arc.md)
+
+## The bigger why — Soul City publishing
 
 Underneath the fun: Don is building [**Soul City**](../catalogs/soul-city/README.md) — create · publish · share — for the
 Alveys' enormous **artisanal back-catalogs** and current streams (and his own). Federated catalogs:
@@ -31,6 +35,7 @@ worked with **Will Wright at Gallium Studios** (Proxi).
 
 ## In this directory
 
+- [`sources/fan-band-marriage-arc.md`](sources/fan-band-marriage-arc.md) — **fan band back (and still) together** story card (sites → marriage → Zombie Sims → Gallium → Soul City)
 - [`SHOW.yml`](SHOW.yml) — the **whole-career show** about both Alveys and all their projects
   (SimFreaks, SimSlice/SliceCity, Zombie Sims, the Gallium chapter), framed to drive fans + the
   Micropolis publishing system. Episodes listed inside.

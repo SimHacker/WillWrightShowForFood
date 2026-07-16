@@ -7,13 +7,17 @@ character:
   type: invitation
   signifier: "👤"
   status: living
-  field: "Games + AI — Maxis / Stupid Fun Club alumnus; procedural/AI in games"
+  field: "Games + AI — Maxis / Stupid Fun Club alumnus; procedural/AI in games; teacher"
   home: characters/jason-shankel/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
   consent_level: 3
   authored_by: don-hopkins
+  needs_confirmation:
+    - "StoryMaker / Bar Karma User: Jason_Shankel — Don memory + archive; confirm with Jason"
+    - "Current employer title — public bios cite Hover; confirm before citing on air"
+    - "Sonoma colloquium talks marked title_unverified in TALKS-INDEX"
 
 invitation:
   status: draft
@@ -22,11 +26,32 @@ invitation:
   show_seed: repo-shows/jason-shankel/
 
 bio:
-  summary: "**Jason Shankel** — Maxis / Stupid Fun Club alumnus and games-AI person; a natural guest for the **AI + skills episode**. StoryMaker / Bar Karma community contributor."
+  summary: |
+    **Jason Shankel** — Maxis engineer (SimCity, The Sims, Spore); first programmer on Spore;
+    Stupid Fun Club / Syntertainment alumnus. Built **ParticleMan** and [Spore prototypes](http://www.jasonshankel.net/wiki/index.php?title=Spore_Prototypes).
+    Recurring **Sonoma State CS Colloquium** guest lecturer (since 1997) with **17+ YouTube sessions**.
+    StoryMaker / Bar Karma community contributor (needs_confirmation). Natural guest for **AI + skills episode**.
+
+career:
+  - { era: "1994–2008", org: Maxis/EA, role: "Software engineer — SimCity, Sims, Spore; SimMars; ParticleMan" }
+  - { era: "2008–2014", org: "Stupid Fun Club / Syntertainment", role: "Games + AR/mobile experiments with Will Wright orbit" }
+  - { era: "2012", event: "iFest — Prototyping Spore talk" }
+  - { era: "2013", event: "AWE — Syntertainment Connected Play" }
+  - { era: "2016–2017", org: "Wildstop / FableLabs / Roblox", note: "Sonoma talks on VR, monads, gaming life" }
+  - { era: "ongoing", role: "Guest lecturer — Sonoma CS Colloquium" }
 
 sources:
-  wikipedia: null
+  wikipedia: https://en.wikipedia.org/wiki/Development_of_Spore
   web:
-    []
+    - url: https://www.cnet.com/culture/behind-the-prototyping-of-spore/
+      what: first Spore programmer; SimMars → Spore tech
+    - url: http://www.jasonshankel.net/wiki/index.php?title=Spore_Prototypes
+      what: downloadable Spore prototypes
+    - url: https://ifest.us/jason-shankel-prototyping-spore/
+      what: iFest Prototyping Spore recap
+    - url: https://www.youtube.com/watch?v=ztSvzKyVV-4
+      what: AWE 2013 Syntertainment Connected Play
+  talks_index: sources/TALKS-INDEX.yml
+  career_notes: sources/spore-prototyping-career.md
   papers: []
   blogs: []

@@ -51,7 +51,11 @@ wallpaper "all walls" — does the **shed** match?).
 
 → [`../../repo-shows/building-the-sims/qa-bug-pile.md`](../../repo-shows/building-the-sims/qa-bug-pile.md)
 
-### 9. Optional reunion playthrough
+### 9. Did you Do Dots Together?
+Glick-trap question for Jim + Bobo — post-Sims **DoDots** (~2000) sounds worse when you say it slow.
+→ [`../../repo-shows/building-the-sims/did-you-do-dots-together.md`](../../repo-shows/building-the-sims/did-you-do-dots-together.md)
+
+### 10. Optional reunion playthrough
 [`will-wright/sims-team-steering-committee-playthrough/`](../../will-wright/sims-team-steering-committee-playthrough/) — Jun 1998 build, Edith, the steering committee.
 
 ## Sources (public)

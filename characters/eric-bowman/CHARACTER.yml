@@ -26,8 +26,9 @@ bio:
 
 connections:
   the_sims: "Programmer on the original The Sims team (Maxis) — core systems."
-  tomtom: "Reunited with Don at TomTom in Amsterdam."
-  don: "Don Hopkins's colleague on The Sims and later at TomTom."
+  dodots: "Post-Sims startup with Jim Mackraz — needs_confirmation"
+  tomtom: "Don recruited Eric to TomTom Amsterdam after DoDots."
+  don: "Sims colleague; later TomTom reunion host."
 
 show_suggestions:
   - { seed: ../../repo-shows/REPO-SHOWS.yml#building-the-sims.yml, what: "The Sims team reunion — the engineering side." }

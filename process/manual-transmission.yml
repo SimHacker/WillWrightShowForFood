@@ -173,6 +173,7 @@ ties_to:
   - code-that-spec.yml
   - brain-stream.yml
   - model-branching.yml
+  - sources/bun-rust-rewrite-2026-07.yml
   - ../characters/robots/slats/judge-rubric.yml
   - ../rigs/stick-shift-composer-moollm.rig.yml
   - SimHacker/moollm/skills/cursor-mirror

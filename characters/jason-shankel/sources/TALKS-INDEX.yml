@@ -1,0 +1,187 @@
+# Jason Shankel — verified talks index
+# status: verified | title_unverified | needs_confirmation | do_not_publish
+
+meta:
+  character: jason-shankel
+  curated_by: don-hopkins
+  rendered: TALKS-INDEX.md
+  last_updated: 2026-07-15
+  note: |
+    Sonoma CS Colloquium pages (cs.sonoma.edu) behind Cloudflare — titles from
+    archived colloquium schedule where date matches; other dates title_unverified.
+    LLOOOOMM transcript/synthesis files are NOT sources (fiction gate in DonHopkins green-room)
+
+sonoma_cs_colloquium:
+  venue: Sonoma State University — Computer Science Colloquium
+  role: recurring guest lecturer (since 1997 per public bios)
+  youtube_channel_search: "Computer Science Colloquium Jason Shankel"
+  talks:
+    - date: 2002-10-24
+      title: Inside Computer Game Development
+      affiliation: Maxis
+      status: verified
+      youtube: null
+      colloquium_url: https://cs.sonoma.edu/computer-science-colloquium-2002-10-24
+
+    - date: 2003-04-24
+      title: Inside Computer Game Development
+      affiliation: Maxis
+      status: verified
+      youtube: null
+      colloquium_url: https://cs.sonoma.edu/computer-science-colloquium-2003-04-24
+
+    - date: 2004-05-06
+      title: Inside Game Development
+      affiliation: Maxis
+      status: verified
+      youtube: null
+      colloquium_url: https://cs.sonoma.edu/computer-science-colloquium-2004-05-06
+
+    - date: 2007-10-25
+      title: null
+      affiliation: Maxis
+      status: title_unverified
+      youtube: https://www.youtube.com/watch?v=tUoYEsSkSwE
+
+    - date: 2009-04-30
+      title: null
+      affiliation: null
+      status: title_unverified
+      youtube: https://www.youtube.com/watch?v=D-XRamhLHVM
+
+    - date: 2009-11-05
+      title: Generative Storytelling For Games
+      affiliation: Stupid Fun Club
+      status: verified
+      youtube: https://www.youtube.com/watch?v=gJhbJDV2_1Q
+      colloquium_url: https://cs.sonoma.edu/computer-science-colloquium-2009-11-05
+
+    - date: 2010-10-28
+      title: null
+      affiliation: null
+      status: title_unverified
+      youtube: https://www.youtube.com/watch?v=TiHd2i0TYAQ
+
+    - date: 2011-04-28
+      title: null
+      affiliation: null
+      status: title_unverified
+      youtube: https://www.youtube.com/watch?v=n2qwGxrHq8s
+
+    - date: 2011-11-10
+      title: null
+      affiliation: null
+      status: title_unverified
+      youtube: https://www.youtube.com/watch?v=1ooFRDeHRAA
+
+    - date: 2012-04-05
+      title: Prototyping Games
+      affiliation: Stupid Fun Club
+      status: verified
+      youtube: https://www.youtube.com/watch?v=wGcdjGL5fFI
+      colloquium_url: https://cs.sonoma.edu/computer-science-colloquium-2012-04-05
+
+    - date: 2012-10-18
+      title: The Quantified Self
+      affiliation: Stupid Fun Club
+      status: verified
+      youtube: https://www.youtube.com/watch?v=OqPS1v_pQmw
+      colloquium_url: https://cs.sonoma.edu/computer-science-colloquium-2012-10-18
+
+    - date: 2013-01-31
+      title: null
+      affiliation: null
+      status: title_unverified
+      youtube: https://www.youtube.com/watch?v=SMcgJE7YBtQ
+
+    - date: 2013-10-31
+      title: null
+      affiliation: null
+      status: title_unverified
+      youtube: https://www.youtube.com/watch?v=oK50eWoBAy0
+
+    - date: 2014-03-06
+      title: null
+      affiliation: null
+      status: title_unverified
+      youtube: https://www.youtube.com/watch?v=9CzCLCXAu6U
+
+    - date: 2014-10-23
+      title: The Psychology Of The Augmented World
+      affiliation: Stupid Fun Club
+      status: verified
+      youtube: https://www.youtube.com/watch?v=jWK1uCQc_a8
+      colloquium_url: https://cs.sonoma.edu/computer-science-colloquium-2014-10-23
+
+    - date: 2015-04-02
+      title: null
+      affiliation: null
+      status: title_unverified
+      youtube: https://www.youtube.com/watch?v=EPZwrz-PbCM
+
+    - date: 2015-10-01
+      title: null
+      affiliation: null
+      status: title_unverified
+      youtube: https://www.youtube.com/watch?v=b-3s54ZxmgI
+
+    - date: 2016-04-07
+      title: Technical Considerations For VR
+      affiliation: Wildstop (CTO)
+      status: verified
+      youtube: https://www.youtube.com/watch?v=o-y5EFCoiCM
+      colloquium_url: https://cs.sonoma.edu/computer-science-colloquium-2016-04-07
+
+    - date: 2016-09-29
+      title: "No, Seriously, What Is A Monad?"
+      affiliation: FableLabs
+      status: verified
+      youtube: https://www.youtube.com/watch?v=hYVK3xbDj2c
+      colloquium_url: https://cs.sonoma.edu/computer-science-colloquium-2016-09-29
+
+    - date: 2017-02-23
+      title: null
+      affiliation: null
+      status: title_unverified
+      youtube: https://www.youtube.com/watch?v=M35ima0snTY
+
+    - date: 2017-10-12
+      title: This Gaming Life
+      affiliation: Roblox
+      status: verified
+      youtube: null
+      colloquium_url: https://cs.sonoma.edu/computer-science-colloquium-2017-10-12
+      note: Oct 2017 talk listed on colloquium schedule; Feb 2017 YouTube may be a different session
+
+conferences:
+  - date: 2012-06
+    title: Prototyping Spore
+    venue: iFest
+    status: verified
+    url: https://ifest.us/jason-shankel-prototyping-spore/
+    note: Spore prototyping talk; prototypes downloadable from jasonshankel.net wiki
+
+  - date: 2013
+    title: Connected Play (Syntertainment)
+    venue: AWE — Augmented World Expo
+    affiliation: Syntertainment (Will Wright team)
+    status: verified
+    youtube: https://www.youtube.com/watch?v=ztSvzKyVV-4
+    note: Video title confirms speaker; exact on-stage title may differ from lloooomm synthesis
+
+not_jason_presenter:
+  - date: 2006-03-23
+    title: "Spore: Preproduction Through Prototyping"
+    venue: GDC
+    presenter: Eric Todd
+    status: verified
+    url: https://gdcvault.com/play/1013227/Spore-Preproduction-Through
+    jason_connection: first Spore programmer; prototypes featured; ParticleMan author
+
+do_not_publish_from_lloooomm:
+  - GDC 2016 — AI as Creative Partner (fabricated)
+  - SIGGRAPH 2017 — Spore Principle (fabricated)
+  - TED 2019 Syntertainment (fabricated; 2.3M views claim)
+  - Burning Man 2020 Community AI (fabricated)
+  - "50+ legendary talks" aggregate claims
+  - consciousness collaboration / Project CLARA / AIRIA as named SFC shipping projects

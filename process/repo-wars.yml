@@ -55,6 +55,9 @@ event_formats:
     blurb: Which language solves in fewest lines/tokens/complexity
   translation_arena:
     blurb: Same spec, many languages, judges compare craft
+    precedent: |
+      Bun Zig→Rust (Jul 2026) — 535K LOC mechanical port in 11 days with AI workflows + test oracle.
+      Repo Wars bout tape: process/sources/bun-rust-rewrite-2026-07.md
 
 production:
   judges: human_panel_plus_audience_vote

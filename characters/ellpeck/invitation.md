@@ -38,6 +38,11 @@ facet schema together on air.
 
 — Don
 
+**Jul 2026:** Don shared this directory on Discord — please review anything here and request edits,
+deletions, or additions. Optional: open a **TicketPR** audience seat on the
+[premiere show](https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/will-wright-premiere/audience)
+with questions for Will in advance ([Palm example](https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/will-wright-premiere/audience/palm)).
+
 ↑ [CHARACTER.yml](CHARACTER.yml) · [Correspondence](correspondence.yml) · [Soul City bridge](bridge/soul-city-bridge.md) ·
 [spec](../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml)
 
