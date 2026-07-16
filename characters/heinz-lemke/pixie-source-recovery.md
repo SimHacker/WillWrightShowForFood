@@ -97,6 +97,22 @@ Same thread: Armit reports **Multipatch** octal listings + PDP-7/340 manuals, **
 Titan extracode, **ICON** sources, **Multipatch film** (shown with Gouraud on US tour). See
 [`../andrew-armit/sources/2026-07-16-armit-archive-manifest.md`](../andrew-armit/sources/2026-07-16-armit-archive-manifest.md).
 
+## Questions the listing should answer
+
+1. **Lightbutton selection: target area or direction?** The load-bearing lineage distinction
+   (PIXIE = radial *placement*, selection by pointing at the drawn label; pie menus = pure
+   *direction* of gesture) currently rests on the published descriptions — Newman & Sproull's
+   "by pointing at one of them" and Don's retrospective ("apparently target area based").
+   Light-pen physics predicts target-area: the pen fires only when the beam refreshes a drawn
+   point under it, so an unlit wedge can't be selected — but PIXIE's tracking cross makes
+   direction-following at least conceivable. **Verify in the interrupt handler**: does
+   selection trigger on a pen hit during the label's display cycle (target area), or is there
+   any logic comparing tracking-cross motion against the menu center (direction)?
+2. **Menu placement logic** — how the "movable menu" positions relative to the tracking cross;
+   fixed radius? recentering?
+3. **The 3000-word graph model** — data-structure layout for circuits/syntax graphs (RSP
+   package pages).
+
 ## Next steps
 
 1. Heinz digitizes **125 pages** (in progress, Jul 2026).

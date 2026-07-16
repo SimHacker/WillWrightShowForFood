@@ -22,6 +22,16 @@ So Don's own retrospective already draws the line we use in the lineage: PIXIE =
 to the screen edge. Includes Wiseman's notes on radial menus (S/L/F/W-X-Y control lightbuttons
 in drawing mode) and a free-hand figure copy.
 
+**Verification pending against PIXIE source.** "Apparently target area based" is an inference
+from the published descriptions, not yet confirmed in code. The physics supports it: a light
+pen only fires when the CRT beam refreshes a *drawn* point under the tip (David Rosenthal:
+"The light pen just noticed when the beam passed underneath it… you had to figure out what
+you were drawing at that time"), so selecting a lightbutton naturally means the pen hovering
+over its drawn label — a lit target area — not a direction of motion. But PIXIE also had a
+tracking cross, so direction-of-drag logic was at least *possible*. Heinz's 125-page
+assembler listing (light pen handling + interrupt management) should shine the light on it —
+see [PIXIE source recovery](../../heinz-lemke/pixie-source-recovery.md), open question #1.
+
 ## Origin artifacts quoted in full
 
 - **1986-05-18 "Theta Menus" email** Don → Mark Weiser — the founding document, reproduced
