@@ -47,7 +47,7 @@ abilities:
     score_when:
     - trigger: audience_learns_something_true
       weight: 0.85
-  effect: Hack NeWS with Don in the Grasshopper Group (with John Gilmore).
+  effect: Hack NeWS with Don in the Grasshopper Group.
   verifiable: NeWS; Grasshopper Group
   combos_with:
   - DON-PIE-MENU
@@ -63,7 +63,7 @@ abilities:
     score_when:
     - trigger: audience_learns_something_true
       weight: 0.85
-  effect: Manage Gilmore's Linux IPsec project — opportunistic encryption for the net.
+  effect: Manage the FreeS/WAN Linux IPsec project — opportunistic encryption for the net.
   verifiable: FreeS/WAN project management
   combos_with: []
 invoke_rules:

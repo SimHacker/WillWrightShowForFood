@@ -33,7 +33,7 @@
 ## Sun culture artifacts
 
 - Logo: **Vaughan Pratt** original; **Mark Anderson** 45° rotation (not John Gage)
-- Classic Sun visitor stickers; NeWS nostalgia with John Gilmore / Hugh Daniel
+- Classic Sun visitor stickers; NeWS nostalgia with Hugh Daniel and the Grasshopper Group
 - **PSIBER Space Deck** — visual PostScript debugging (Don's paper Bill asked for)
 
 ## Venture lens (light touch)
