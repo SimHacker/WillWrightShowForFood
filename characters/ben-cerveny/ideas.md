@@ -94,5 +94,4 @@ Soul City = umbrella fiction only. Git branch per city save: `MicropolisCity_<sa
 - [`invitation.md`](invitation.md)
 - Show seed: [`repo-shows/ben-cerveny.yml`](../../repo-shows/ben-cerveny.yml)
 - [`moollm-lane-neverending-habitat.yml`](moollm-lane-neverending-habitat.yml)
-- [`media/from-mail/MANIFEST.yml`](media/from-mail/MANIFEST.yml) — Yoot/Alan Kay transcript pages (shared thread artifact)
 - [`CHARACTER.yml`](CHARACTER.yml)

@@ -88,9 +88,9 @@
 
 ---
 
-## E — Empty `from-mail/` dirs (10 characters, `artifact_count: 0`)
+## E — Empty `from-mail/` dirs (9 characters, `artifact_count: 0`)
 
-[brian-harvey](../../../brian-harvey/media/from-mail/) · [jens-monig](../../../jens-monig/media/from-mail/) · [walter-bender](../../../walter-bender/media/from-mail/) · [terry-winograd](../../../terry-winograd/media/from-mail/) · [ted-selker](../../../ted-selker/media/from-mail/) · [sam-arbesman](../../../sam-arbesman/media/from-mail/) · [james-gosling](../../../james-gosling/media/from-mail/) · [douglas-engelbart](../../../douglas-engelbart/media/from-mail/) · [bret-victor](../../../bret-victor/media/from-mail/) · [ben-cerveny](../../../ben-cerveny/media/from-mail/)
+[brian-harvey](../../../brian-harvey/media/from-mail/) · [jens-monig](../../../jens-monig/media/from-mail/) · [walter-bender](../../../walter-bender/media/from-mail/) · [terry-winograd](../../../terry-winograd/media/from-mail/) · [ted-selker](../../../ted-selker/media/from-mail/) · [sam-arbesman](../../../sam-arbesman/media/from-mail/) · [james-gosling](../../../james-gosling/media/from-mail/) · [douglas-engelbart](../../../douglas-engelbart/media/from-mail/) · [bret-victor](../../../bret-victor/media/from-mail/)
 
 | Your call |
 |-----------|
