@@ -74,7 +74,7 @@ To **Alan Kay:** stories about **Wilkes ↔ Xerox PARC** connection? Kay lecture
 **PhD summer '69** — Kay and **John Warnock** graduated end of summer 1969; Kay → Palo Alto /
 Stanford post-doc year (Warnock worked at E&S for a while).
 
-**Lives in London** — health problems; short distances only, **short train rides** OK.
+**Lives in London.**
 
 **Wilkes** — became friendly (*"special hero"*); *"quite a connection between his legacy and Xerox
 PARC (mainly through Chuck Thacker, etc.)."*

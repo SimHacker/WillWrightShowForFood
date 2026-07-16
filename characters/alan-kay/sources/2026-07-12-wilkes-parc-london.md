@@ -26,8 +26,7 @@ Andrew Armit was the Utah visitor Kay remembered — months on PDP-7 Coons patch
 
 ## London today
 
-> *"I live in London — and have health problems — so can only travel for short distances. But can
-> take short train rides."*
+> *"I live in London."*
 
 Roy's Royal Society lecture question: Kay did lecture at Royal Society (October — Roy's date); this
 email doesn't say London move was *because* of Wilkes, only that they became friendly.

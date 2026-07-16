@@ -41,12 +41,6 @@ it, and that we'd rather try to sit it out in London than in LA. This turned out
 choice"). During all this Bonnie wrote her Sherlock Holmes novels for Harper-Collins from the
 flat — five at the time of the answer, **six** as of Alan's 2026 update.
 
-## The health note, in his own words
-
-"Then I wound up getting a very rare and bad kind of cancer, and one of the world's experts
-happens to be in London." Immunotherapy has delayed it: "At my over 80 age, this is a 'cycle
-of life' kind of deal, so I have no complaints."
-
 ## The kicker
 
 "So: **'London' was not a plan, but just gradually happened**, and we are both happy how it

@@ -43,7 +43,7 @@ artifact we bring *back* to Alan and ask "what do you think now?" — run throug
 | [STEPS, Nile, intermodule problem](steps-nile-runnable-math.md) | Kaehler method finder; AM; LINDA; 500 lines vs 100K C++; OMeta POLs | Quora answers (corpus Nov 2023) | summary ✅ |
 | [Xerox PARC myths](xerox-parc-myths-and-exploitation.md) | Laser printer billions; half-way in pieces; predict/invent aphorism origin | Quora answers (corpus Nov 2023) | summary ✅ |
 | [Microworlds — "Sure!" + 10 things](microworlds-sure-and-ten-things-heuristic.md) | Papert libraries; 10 things / 20 examples heuristic; new software world | Quora answers (corpus Nov 2023) | summary ✅ |
-| [Why Alan Kay moved to London](why-alan-kay-moved-to-london.md) | Bonnie MacBird's Holmes novels; Sherlock Holmes Hotel → Marylebone flat with 221B sitting room; "spirit of kindness"; health note; "London was not a plan"; comment gems (TRON, "marriage turned out better than the movie", indefinite leave to remain) | [Quora answer](https://www.quora.com/Why-did-Alan-Kay-move-to-London), forwarded by Alan 2026-07-14 | summary ✅ |
+| [Why Alan Kay moved to London](why-alan-kay-moved-to-london.md) | Bonnie MacBird's Holmes novels; Sherlock Holmes Hotel → Marylebone flat with 221B sitting room; "spirit of kindness"; "London was not a plan"; comment gems (TRON, "marriage turned out better than the movie", indefinite leave to remain) | [Quora answer](https://www.quora.com/Why-did-Alan-Kay-move-to-London), forwarded by Alan 2026-07-14 | summary ✅ |
 
 **Whole-corpus map:** [`quora-corpus-2023-index.md`](quora-corpus-2023-index.md) — a themed, navigable index of
 Alan's full ~620-answer Quora corpus (captured Nov 2023 by natecull, archived at

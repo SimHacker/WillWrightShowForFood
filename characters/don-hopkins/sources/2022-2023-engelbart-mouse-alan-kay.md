@@ -54,9 +54,7 @@ Also: Medium transclusion of Alan's Quora NeWS/Smalltalk answer + Warren Teitelm
 
 ## Jan 2023 — Alan reply
 
-> I'm not in good health at the moment… extra vulnerable to COVID… only working on a few small projects.
-
-> P.S. Don't worry about me — pretty normal "cycle of life" in one's 80s.
+Alan replied (personal asides omitted). Only working on a few small projects at the time.
 
 Don: Covid-safe hacking in Netherlands; paid off evil bank loans + regulator refund (bidet windfall).
 
