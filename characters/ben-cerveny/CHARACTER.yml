@@ -15,12 +15,6 @@ representation:
   consent_level: 2
   authored_by: don-hopkins
 
-contact:
-  channel: Signal
-  warm_contact: true
-  moved_from: Facebook Messenger
-  moved_date: "2026-07-03"
-
 invitation:
   status: draft
   consent: not_yet_asked
@@ -31,9 +25,8 @@ bio:
   summary: |
     **Ben Cerveny** — strategist and designer at games, maps, social platforms, speculative
     design, and civic digital public infrastructure. Game Neverending (→ Flickr), Stamen Design,
-    Planetary (Smithsonian), President of the **Foundation for Public Code** (Amsterdam). Signal
-    correspondent with Don Hopkins (2026-07-03); endorsed data portability as spine for Will Wright
-    kickoff episode.
+    Planetary (Smithsonian), President of the **Foundation for Public Code** (Amsterdam). Natural
+    guest for a data-portability / public-code spine tied to the Will Wright kickoff.
 
 sources:
   wikipedia: null

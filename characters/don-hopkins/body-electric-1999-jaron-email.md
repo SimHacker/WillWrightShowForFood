@@ -24,9 +24,9 @@ Jaron himself makes the point:
 > "The problem was that Chuck Blanchard wasn't credited as the lead designer/programmer of BE/Bounce
 > when David brought the program to Interval. Chuck's name was reduced in stature…"
 
-Per that thread: Chuck lived in San Francisco, had MS, and needed health insurance; Jaron yelled at the
-person who ran Interval over how Chuck was treated, and David was still upset with Jaron for making a
-fuss. **[Confirm on air]** with Chuck and David before airing.
+Personal circumstances that came up in that thread stay private. The public fact that matters
+here is the credit correction Jaron himself wrote. **[Confirm on air]** with Chuck and David
+before airing any Interval-era interpersonal story.
 
 **Also in:** Don's Oct 2022 letter to **Michael McGuffin** — same Jaron quotes curated for the visual-programming lineage essay. [`../michael-mcguffin/sources/2022-10-08-don-visual-programming-letter.md`](../michael-mcguffin/sources/2022-10-08-don-visual-programming-letter.md)
 

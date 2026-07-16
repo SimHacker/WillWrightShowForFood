@@ -2,28 +2,22 @@
 
 meta:
   character: daniel-tupper
+  note: "Verbatim Messenger logs live in DonHopkins green-room only."
 
 threads:
   - id: facebook-messenger-2013
     start: 2013-08-01
     channel: Facebook Messenger
-    public_excerpt: sources/2013-08-01-facebook-messenger-excerpt.md
     beats:
       - date: 2013-08-01
-        topic: first_contact
-        summary: "Friend request accepted; Daniel wants to talk about his game."
-      - date: 2013-08-01
         topic: freeta_pitch
-        summary: "FreeTA — GTA no missions, full NYC; mgismafia.webs.com"
+        summary: "FreeTA — GTA no missions, full NYC"
       - date: 2013-08-01
         topic: engine_advice
         summary: "Don — WebGL/Unity feasible; Daniel wants own engine"
-      - date: 2013-08-01
-        topic: sims_lore
-        summary: "Three stories in Sims 1 or original only?"
       - date: 2013-08-11
         topic: swrs_gaming
         summary: "Studio name SWRSgaming — founders' initials"
 
 ongoing:
-  note: "More than a decade of correspondence since this excerpt — public repo grows as Daniel consents to each artifact."
+  note: "More than a decade of correspondence — public repo grows as Daniel consents to each artifact."

@@ -55,7 +55,7 @@ Jaron's reply highlights:
 - Sun owns VPL/Body Electric; Interval Bounce rights fuzzy — *"let's forget about that"*
 - BE community still building deepest interactive 3D worlds; Alice (CMU) the other contender
 - **Swivel tree vs knowledge base:** *"the virtual world and the knowledge base were the same thing… it's user interface all the way to the bottom!"*
-- **Chuck Blanchard credit:** Interval reduced Chuck's credit when David brought BE; Chuck has MS, needed health insurance; Jaron yelled at Interval leadership; David still mad at Jaron for making a fuss
+- **Chuck Blanchard credit:** Interval reduced Chuck's credit when David brought BE (Jaron's own 1999 note). Interpersonal Interval-era asides stay off-public until Chuck/David clear them.
 
 → Full thread: [`../../don-hopkins/body-electric-1999-jaron-email.md`](../../don-hopkins/body-electric-1999-jaron-email.md)
 

@@ -63,7 +63,6 @@ If nothing here fits right now, say so. The friendship isn't contingent on the s
 | --- | --- |
 | **Character** | [`CHARACTER.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/daniel-tupper/CHARACTER.yml) · [`README.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/daniel-tupper/README.md) |
 | **Projects** | [`projects/freeta.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/daniel-tupper/projects/freeta.yml) · [`projects/swrs-gaming.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/daniel-tupper/projects/swrs-gaming.yml) |
-| **First thread** | [`sources/2013-08-01-facebook-messenger-excerpt.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/daniel-tupper/sources/2013-08-01-facebook-messenger-excerpt.md) |
 | **Hooks** | [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/daniel-tupper/ideas.md) |
 | **Show seed** | [`../../repo-shows/daniel-tupper/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/daniel-tupper) |
 

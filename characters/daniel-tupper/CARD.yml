@@ -19,7 +19,7 @@ abilities:
     type: activated
     mana: "{U}{U}"
     effect: "Commit to building the engine, not just the game — WebGL, Unity, or yours."
-    verifiable: sources/2013-08-01-facebook-messenger-excerpt.md
+    verifiable: projects/freeta.yml
   - id: TMOG-MODERNIZE
     name: TMOG Modernize
     type: activated
@@ -30,7 +30,7 @@ abilities:
     name: Lore Question
     type: static
     effect: "Ask the question that only a decade-deep fan asks — three stories or one?"
-    verifiable: sources/2013-08-01-facebook-messenger-excerpt.md
+    verifiable: projects/freeta.yml
 
 combos_with:
   - path: ../jeff-adkins/CARD.yml

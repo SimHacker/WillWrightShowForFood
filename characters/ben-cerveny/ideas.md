@@ -1,7 +1,7 @@
 # Ideas to explore with Ben Cerveny 👤
 
-*Conversation hooks for a Repo Show — grounded in Ben's public work and the **2026-07-03 Signal
-thread** with Don. Don's proposed topics; not quotes attributed to Ben unless marked.*
+*Conversation hooks for a Repo Show — grounded in Ben's public work. Don's proposed topics; not
+quotes attributed to Ben unless marked.*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## What Ben has done
@@ -9,14 +9,7 @@ thread** with Don. Don's proposed topics; not quotes attributed to Ben unless ma
 Strategist and designer at the intersection of games, maps, social platforms, speculative design,
 and civic digital public infrastructure. Key roles in **Game Neverending** (→ Flickr), **Stamen
 Design**, **Bloom Studio / Planetary** (Smithsonian), and **President of the Foundation for Public
-Code** (Amsterdam). Long friend of Don Hopkins; warm Signal contact.
-
-## What just happened (Signal, 2026-07-03)
-
-Don moved chat off Facebook Messenger. Ben already on Signal. In one thread Don pitched the full
-Micropolis stack; Ben **thumbs-up'd** the portability thesis and called it the **starting point
-for the first Will Wright episode**. Ben recalled Don's **OpenLaszlo SimProv / SimFreaks**
-plumbing. Ben flagged narrative docs parading **"88 shorts"** — Don scrubbed that from prose.
+Code** (Amsterdam). Long friend of Don Hopkins.
 
 See [moollm-lane-neverending-habitat.yml](moollm-lane-neverending-habitat.yml)
 
@@ -32,9 +25,9 @@ See [moollm-lane-neverending-habitat.yml](moollm-lane-neverending-habitat.yml)
 
 ## The hooks
 
-### 1. Data portability — Will's 1986 thesis (Ben-endorsed kickoff spine)
+### 1. Data portability — Will's 1986 thesis (kickoff spine)
 
-Will's pre-Dollhouse talk: move **characters and data between worlds**. Ben agreed this frames
+Will's pre-Dollhouse talk: move **characters and data between worlds**. Natural framing for
 episode one with Will. Walk [1996 Winograd video](../will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/)
 + [data-portability crown jewel](../../repo-shows/ideas/themes/data-portability-crown-jewel.yml).
 
@@ -59,8 +52,8 @@ Sims heads: create, buy, exchange, crush/recycle. Wig-O-Matic wigs import like c
 
 ### 5. OpenLaszlo lineage — what was prototyped vs what's new
 
-Ben remembers SimProv Wedding Playset + SimFreaks web site. Don: plumbing yes; LLM soul-reading
-and Mind Mirror synthesis are new layers.
+Don's earlier **SimProv Wedding Playset + SimFreaks** plumbing vs today's LLM soul-reading and
+Mind Mirror synthesis layers.
 
 ### 6. Lane Neverending ↔ Habitat ↔ GNE
 

@@ -56,7 +56,7 @@ Also: Medium transclusion of Alan's Quora NeWS/Smalltalk answer + Warren Teitelm
 
 Alan replied (personal asides omitted). Only working on a few small projects at the time.
 
-Don: Covid-safe hacking in Netherlands; paid off evil bank loans + regulator refund (bidet windfall).
+Don: hacking in the Netherlands.
 
 ---
 

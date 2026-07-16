@@ -33,8 +33,8 @@ The **train-set hobby model** from 1996: characters, homes, objects, memories mo
 worlds. Build a real **Proxi ⇔ Soul City ⇔ Sims** bridge on stream — the dream, finally running.
 (See [character endosymbiosis](../../process/CHARACTER-ENDOSYMBIOSIS.md) for the deeper frame.)
 
-**External validation:** [Ben Cerveny](../ben-cerveny/) (Signal, 2026-07-03) —
-Game Neverending → Flickr lineage — thumbs-up'd this as the **starting point for episode one**.
+**Related guest:** [Ben Cerveny](../ben-cerveny/) — Game Neverending → Flickr → public-code
+lineage; natural co-thread for this as episode-one spine.
 
 ### 3. Possibility space & the Simulator Effect
 *"The player imagines more than we simulate."* Abstraction, masking, and **Scott McCloud's closure**

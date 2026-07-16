@@ -59,8 +59,6 @@ HN: https://news.ycombinator.com/item?id=17121629 · Video: https://www.youtube.
 5. Original locked safe; reproductions increase documented value of prototype  
 6. Target hype window: **2028** — 60th anniversary of Mother of All Demos  
 
-Alan Kay: low energy / COVID caution (Jan 2023) — no travel; supportive of Don's Netherlands life.
-
 ---
 
 ## Show segments

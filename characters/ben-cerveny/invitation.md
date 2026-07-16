@@ -4,27 +4,21 @@ character_id: ben-cerveny
 public: true
 consent: not_yet_asked
 show_seed: repo-shows/ben-cerveny.yml
-channel: Signal
-warm_contact: true
 ---
 
 # Repo Show invitation — Ben Cerveny
 
 *Ben Cerveny may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers quiet mode and onboarding.*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 We would respectfully invite **Ben Cerveny** to a **Repo Show** — a friendly recorded conversation whose stage is [this public GitHub repository](https://github.com/SimHacker/WillWrightShowForFood),
 following through to working code and credited ideas in public.
 
-**Channel:** We're on **Signal** now (moved off Facebook Messenger, 2026-07-03).
-
 ## Proposed focus
 
 **Worlds that loop** — from Game Neverending and Habitat to browser-native **Soul City**:
 
-- **Data portability** as Will Wright's explicit 1986 thesis (you thumbs-up'd this as the
-  starting point for the first Will episode)
+- **Data portability** as Will Wright's explicit 1986 thesis — a natural starting point for the first Will episode
 - **TypeScript in the browser** — `packages/sims-io`, local-first save uplift, player-controlled
   publish and attribution (your Public Code lens meets recovered Sims Exchange content)
 - **Head Shop + Wig-O-Matic** — craft shops that emit real Sims IFF

@@ -1,1 +1,1 @@
-👤 **Ben Cerveny** — Game Neverending→Flickr; Stamen; **Foundation for Public Code** (Amsterdam). **Signal** warm contact (2026-07-03). Endorsed **data portability** as Will kickoff spine. Show: [`ben-cerveny.yml`](../../repo-shows/ben-cerveny.yml).
+👤 **Ben Cerveny** — Game Neverending→Flickr; Stamen; **Foundation for Public Code** (Amsterdam). Natural guest for **data portability** / public-code spine with Will. Show: [`ben-cerveny.yml`](../../repo-shows/ben-cerveny.yml).

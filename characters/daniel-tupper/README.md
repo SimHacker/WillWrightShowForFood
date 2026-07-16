@@ -7,7 +7,7 @@ shape, delay, or delete any of it.* [Portrayal standards](../../schemas/portraya
 
 **Daniel Tupper** has been talking with Don for **more than a decade** — game dreams, tool dreams,
 Sims lore, studio names, engines, and the long slow work of making things real. First logged thread:
-**August 2013** on Facebook Messenger ([excerpt](sources/2013-08-01-facebook-messenger-excerpt.md)).
+**August 2013**.
 
 ## What he's building in the open
 

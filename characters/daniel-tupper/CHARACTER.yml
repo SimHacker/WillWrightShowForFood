@@ -37,9 +37,8 @@ bio:
     Daniel is another face of Will Wright's **pyramid of players**: fan → builder → tool maker.
 
 correspondence:
-  channel: Facebook Messenger (primary logged thread); ongoing
-  since: "2013-08-01 (first excerpt on file)"
-  public_excerpt: sources/2013-08-01-facebook-messenger-excerpt.md
+  since: "2013-08 (first logged thread)"
+  note: "Verbatim logs in DonHopkins green-room only"
 
 projects:
   - projects/freeta.yml
@@ -59,7 +58,6 @@ contact:
   channel: "Direct + warm, ongoing."
 
 sources:
-  messenger_2013: sources/2013-08-01-facebook-messenger-excerpt.md
   transmogrifier_thread: |
     DonHopkins/characters/don-hopkins/notes/hacker-news/simobliterator-deep-dive.yml
     #transmogrifier_modernization (Daniel offered TMOG → modern code via LLM)

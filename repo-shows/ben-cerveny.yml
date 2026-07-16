@@ -1,5 +1,5 @@
 # SEED — Ben Cerveny: games-to-infrastructure × data portability × public code
-# Warm Signal contact (2026-07-03). Consent not yet asked.
+# Consent not yet asked.
 
 show:
   id: ben-cerveny
@@ -8,8 +8,6 @@ show:
   guest: ben-cerveny
   character: characters/ben-cerveny/
   dream_guest: false
-  warm_contact: true
-  channel: Signal
 
 episode:
   working_title: "Worlds That Loop — GNE, Habitat, and the Browser Soul City"
@@ -17,21 +15,20 @@ episode:
 
 pitch: |
   Ben Cerveny helped build **Game Neverending** (→ Flickr), **Stamen** public map viz, and now
-  leads the **Foundation for Public Code** in Amsterdam. Don's oldest surviving messenger thread
-  moved to **Signal** (2026-07-03). Ben immediately grasped the crown jewel: **moving characters
-  and data between game worlds** — Will's explicit 1986 thesis, now implemented as browser
-  TypeScript (`packages/sims-io`), **Soul City** as liminal uplift space, and **Soul City**
-  craft shops (Head Shop, Wig-O-Matic) with explicit publish/credit gates.
+  leads the **Foundation for Public Code** in Amsterdam. Natural guest for the crown jewel:
+  **moving characters and data between game worlds** — Will's explicit 1986 thesis, now
+  implemented as browser TypeScript (`packages/sims-io`), **Soul City** as liminal uplift space,
+  and craft shops (Head Shop, Wig-O-Matic) with explicit publish/credit gates.
 
   Repo Show: compare **Habitat / GNE spliceable worlds** to MOOLLM **Lane Neverending**; walk
   `packages/sims-io` uplift in the browser; connect **public code** ethics to recovered Sims
-  Exchange content; preview the **Will Wright kickoff** Ben endorsed as episode-one spine.
+  Exchange content; preview the **Will Wright kickoff** as episode-one spine.
 
 topics:
   - "Game Neverending → Flickr → Soul City Exchange — social spatial play as infrastructure"
   - "Foundation for Public Code × Soul City — attribution, provenance, opt-in publish"
   - "Lane Neverending (MOOLLM) ↔ Habitat ↔ GNE — circular streets, splice more segments"
-  - "Will 1986 data portability — Ben validated as first-episode starting point (Signal 2026-07-03)"
+  - "Will 1986 data portability — first-episode starting point"
   - "OpenLaszlo SimProv Wedding Playset + SimFreaks — what was prototyped vs what's new (LLM uplift)"
   - "TypeScript browser stack — sims-io, vitamoo, Transmoogrifier platform modules"
   - "Head Shop + Wig-O-Matic — Sims heads/wigs as IFF craft shops"

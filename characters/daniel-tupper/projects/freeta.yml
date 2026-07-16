@@ -4,31 +4,17 @@ meta:
   id: freeta
   author: daniel-tupper
   status: dream
-  first_pitch: 2013-08-01
-  source: ../sources/2013-08-01-facebook-messenger-excerpt.md
+  first_pitch: 2013-08
 
 pitch: |
   **FreeTA!** — like GTA, but **no missions**: a **full New York City** to roam. Daniel described
-  it to Don in August 2013; early web presence at **mgismafia.webs.com** (mafia/city theme).
-
-don_2013: |
-  "Oh sure you have a lot more leverage as a programmer now than we had years ago when developing
-  the sims! you could do it with webgl, or unity3d -- lots of good approaches!"
-
-daniel_2013: |
-  "cool i wanna make my own engine"
+  the idea to Don in 2013; early web presence at **mgismafia.webs.com** (mafia/city theme). He
+  wanted to make his own engine (WebGL / Unity among the options Don mentioned).
 
 show_use: |
-  Dream-project booth segment — even an unfinished city dream is repo material: design docs,
-  blockout clips, blipverts of one intersection working. Pairs with Micropolis City (GPL-3 SimCity)
-  and Soul City bridges — different scale, same "city as toy" lineage.
-
-spawn_artifacts:
-  - "Design doc grows here as Daniel shares"
-  - "Link to any demo repo when it exists"
-  - "Session beat: Daniel + Don compare FreeTA scale to Micropolis tile scale"
+  Pyramid-of-players beat: fan dream → engine ambition → tool maker. Pair with Jeff Adkins /
+  SimFreaks climbs.
 
 see_also:
-  - ../CHARACTER.yml
-  - ../../will-wright/spawn/daniel-tupper-pyramid-of-players.yml
-  - ../../../repo-shows/daniel-tupper/SHOW.yml
+  - ../correspondence.yml
+  - ../ideas.md

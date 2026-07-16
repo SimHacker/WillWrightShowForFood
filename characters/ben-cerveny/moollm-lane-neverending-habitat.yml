@@ -1,12 +1,9 @@
 # MOOLLM cross-reference — Lane Neverending, Habitat, Game Neverending
-# Don shared with Ben Cerveny (Signal, 2026-07-03) while discussing spliceable worlds.
 # Not in-repo MOOLLM files — pointers only.
 
 meta:
   character: ben-cerveny
   kind: cross_reference
-  date: "2026-07-03"
-  channel: Signal
 
 why_ben_cares: |
   Ben's lineage: **Game Neverending** (social spatial world → Flickr), **Habitat** thinking,
