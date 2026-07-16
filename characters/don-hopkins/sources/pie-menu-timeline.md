@@ -22,7 +22,7 @@ backbone under the retrospective — most dates below are from quoted period ema
 | 1986-05-18 | Theta Menus email Don → Weiser (founding document) |
 | 1986-05-19 | Weiser → HCIL: muscle memory "zig-zag-zig-zig-zag" |
 | 1986-05-29 | Shneiderman: "you are on to something… Go to it" |
-| 1986-06 | X10 prototype; then theta-menu uwm window manager (mouse-ahead, display suppression, screen-edge + warp handling already) |
+| 1986-06 | **X10 prototype** — standalone pie menu, no window manager yet: **mouse-ahead out of the box**. Then theta-menu **uwm window manager**: mouse-ahead **display preemption**, screen-edge handling with **cursor warping**, **nested submenus to any depth**, **browsing and reselection**. All on video (X10 wm demo shown at BayCHI'98); **source survives** in Don's archive. Every feature later claimed as marking-menu-unique was running in 1986, before any publication by anyone |
 | 1986-09 | **Mitch Bradley suggests the name "pie menus"**; FORTH-programmable "fuwm"; PostScript pie printer on LaserWriter |
 | 1986-11 | Experiment programmed in FORTH; Callahan runs it |
 | 1986-12-02 | **Don finds the Wiseman PIXIE reference** (via Newman & Sproull) — self-addressed email from crayola.cs.umd.edu, receipt in archive. He then cited PIXIE in the 1988 technical-writing proposal bibliography, the piemenus.com references page, and every history since. (Buxton learned of PIXIE the same route — Newman & Sproull 1st ed — and only read Wiseman's papers in 2008.) |

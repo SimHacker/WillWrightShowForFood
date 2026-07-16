@@ -41,6 +41,7 @@ print repeatedly before Jan 1993:
 
 | Receipt | Text |
 |---------|------|
+| Jun 1986 X10 code + video | Prototype had **mouse-ahead out of the box**; the uwm version added **display preemption, cursor warping, nested submenus to any depth, browsing and reselection** — implemented before any publication; source survives, demo on video (shown at BayCHI'98) |
 | 1987 ;login: | Directional selection, mouse-ahead |
 | Apr 1988 [UMD proposal](1988-04-10-umd-tech-writing-proposal.md) | "rapidly **mouse ahead** through familiar menus, without having to look at the screen"; muscle memory; chunking credited to Buxton 1986; **PIXIE in the bibliography** |
 | Mar 1988 "How to Choose with Pie Menus" | "If you are fast enough, and release the button before the menu pops up, **you may not even see the menu on the screen**" |

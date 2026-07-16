@@ -20,7 +20,11 @@ correspondence (receipts: Don's emails to Gordon + prior published writings — 
 ;login: summary, the [April 1988 UMD proposal](1988-04-10-umd-tech-writing-proposal.md)
 ("rapidly mouse ahead through familiar menus, without having to look at the screen" — with
 PIXIE in its bibliography and chunking credited to Buxton), and the Dr. Dobb's article, all
-describing mouse-ahead and browsing/reselection).
+describing mouse-ahead and browsing/reselection). And behind the writings, **running code from
+June 1986**: the standalone X10 prototype had mouse-ahead out of the box, and the X10 uwm
+window manager had mouse-ahead display preemption, screen-edge cursor warping, nested submenus
+to any depth, and browsing/reselection — demonstrated on video (BayCHI'98 showed the tape),
+**source still in Don's archive**. Implementation predates every publication in the dispute.
 Kurtenbach's own 1990 reply proves the knowledge: "expert can mouse ahead like you've
 talked about but they get an ink trail." The ink trail was the genuine novelty; the rest
 was repackaging pie menu properties as marking-menu-unique.
