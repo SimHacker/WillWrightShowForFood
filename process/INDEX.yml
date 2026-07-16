@@ -112,7 +112,7 @@ sources:
       yaml: sources/bun-rust-rewrite-2026-07.yml
       md: sources/bun-rust-rewrite-2026-07.md
     unsolved-problems-mlops-2025:
-      topic: "Murphy & Underwood ACM Queue — MLOps reliability gaps; git/provenance counter-narrative for Repo Show"
+      topic: "Murphy & Underwood ACM Queue — unsolved MLOps problems"
       yaml: sources/unsolved-problems-mlops-2025.yml
       md: sources/unsolved-problems-mlops-2025.md
 

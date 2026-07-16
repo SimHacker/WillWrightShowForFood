@@ -10,7 +10,6 @@ Guest: [`characters/jason-shankel/`](../../characters/jason-shankel/README.md) �
 - **17+ Sonoma talks** — [`TALKS-INDEX.md`](../../characters/jason-shankel/sources/TALKS-INDEX.md)
 - **AWE 2013** — Connected Play ([`ztSvzKyVV-4`](https://www.youtube.com/watch?v=ztSvzKyVV-4))
 - **FlatterBot 2000!** — [`../ideas/traditions/flatterbot-2000.yml`](../ideas/traditions/flatterbot-2000.yml); private performance source gated in DonHopkins green room
-- **MLOps reliability contrast** — Murphy & Underwood, ACM Queue Jul–Aug 2025 ([`unsolved-problems-mlops-2025.md`](../../process/sources/unsolved-problems-mlops-2025.md)): what's unsolved in production ML vs git-native show provenance
 
 ## In this directory
 

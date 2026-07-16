@@ -76,16 +76,3 @@ problem_clusters:
 
 not_unsolved_per_article:
   - training network fragility (known expensive mitigations)
-
-repo_show_counter_narrative:
-  versioning: git-native artifacts + orchestration-gold labeling
-  quality: human authorship on air; evidence bounce cut vs LLM-judge-LLM
-  provenance: process/sources digests + green-room consent gates
-  scope: production ML reliability only — not comedy traditions
-
-show_ties:
-  - ../../repo-shows/jason-shankel/SHOW.yml
-  - ../../repo-shows/ideas/traditions/make-play-tools-show.yml
-  - ../../repo-shows/ideas/themes/human-control-and-authorship.yml
-  - ../orchestration-gold.yml
-  - ../../repo-shows/building-the-sims/evidence-bounce-cut.md
