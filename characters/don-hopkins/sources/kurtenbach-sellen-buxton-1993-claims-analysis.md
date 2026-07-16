@@ -42,6 +42,7 @@ print repeatedly before Jan 1993:
 | Receipt | Text |
 |---------|------|
 | 1987 ;login: | Directional selection, mouse-ahead |
+| Apr 1988 [UMD proposal](1988-04-10-umd-tech-writing-proposal.md) | "rapidly **mouse ahead** through familiar menus, without having to look at the screen"; muscle memory; chunking credited to Buxton 1986; **PIXIE in the bibliography** |
 | Mar 1988 "How to Choose with Pie Menus" | "If you are fast enough, and release the button before the menu pops up, **you may not even see the menu on the screen**" |
 | 1989 PSIBER (Usenix) | "**mouse ahead display suppression**" |
 | Dec 1991 DDJ ([digest](ddj-1991-design-implementation-pie-menus.md)) | "mark ahead so fast that the menu doesn't even pop up… **novices soon become experts**, because every time you select from a pie menu, you practice the motion to mark ahead" |

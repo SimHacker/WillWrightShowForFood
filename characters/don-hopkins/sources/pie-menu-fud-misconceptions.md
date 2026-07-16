@@ -17,7 +17,10 @@ The distinguishing features they claimed — mark-ahead, novice→expert rehears
 reselection — **were already pie menu features**, and they knew it. Don had explained
 mouse-ahead, rehearsal, and reselection to Kurtenbach in detail in their 1990
 correspondence (receipts: Don's emails to Gordon + prior published writings — the 1987
-;login: summary and Dr. Dobb's article both describe mouse-ahead and browsing/reselection).
+;login: summary, the [April 1988 UMD proposal](1988-04-10-umd-tech-writing-proposal.md)
+("rapidly mouse ahead through familiar menus, without having to look at the screen" — with
+PIXIE in its bibliography and chunking credited to Buxton), and the Dr. Dobb's article, all
+describing mouse-ahead and browsing/reselection).
 Kurtenbach's own 1990 reply proves the knowledge: "expert can mouse ahead like you've
 talked about but they get an ink trail." The ink trail was the genuine novelty; the rest
 was repackaging pie menu properties as marking-menu-unique.

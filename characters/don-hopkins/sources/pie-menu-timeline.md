@@ -31,6 +31,7 @@ backbone under the retrospective — most dates below are from quoted period ema
 | 1987-05-29 | First NeWS pie menus ("Very nice. Tell Mark." — Callahan) |
 | 1987-08 | Terry Higgins' Pastel (National Film Board of Canada) at SIGGRAPH'87 — independent radial menus with click-ahead on SGI |
 | 1987-11-24 | Pies accepted at SIGCHI'88 |
+| 1988-04-10 | **UMD tech-writing proposal** cites Wiseman PIXIE 1969 in its bibliography — alongside three Buxton papers, Engelbart 1967, Newman 1968 — and describes mouse-ahead, muscle memory, and gesture chunking (credited to Buxton 1986). [The citation receipt](1988-04-10-umd-tech-writing-proposal.md) |
 | 1988-05-14 | CHI'88 paper presented |
 
 ## Don's 1990 no-patent explanation (quoted in article)
