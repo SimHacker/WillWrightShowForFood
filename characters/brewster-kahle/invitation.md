@@ -112,14 +112,12 @@ delete it anytime, or take direct edit access and make it yours.
 
 EA's old **Sims Exchange** website — where players uploaded save files, houses, families, characters,
 pets, and above all **family albums**: illustrated stories told in captioned screenshots, a machinima
-literary genre in its own right — survives today in the **Wayback Machine**. Millions of players wrote those albums; the Archive is where they landed when EA moved on. EA re-released The Sims 1 on Steam, but removed The Sims Exchange, the best part. We can reimagine it!
+literary genre in its own right — survives today in the **Wayback Machine**. Millions of players wrote those albums; the Archive is where they landed when EA moved on. EA re-released The Sims 1 on Steam, but removed The Sims Exchange, the best part. We can reimagine, recreate, and recover it!
 
 We're building **Soul City** ([SimHacker/moollm](https://github.com/SimHacker/moollm/tree/main/examples/soul-city)) —
-a place where that content comes back to life: a **Wizard of Oz tornado** that sweeps up the archived
-houses, families, pets, and album stories and sets them down somewhere they can live again, in color.
-And as every tornado from Kansas knows, sometimes a house lands exactly where it needs to — ding dong,
-the content is free. The name honors David Marusek's *The Wedding Album* (1999), where simulated
-people campaign for the right to live in a place called "Simopolis."
+a place where that content comes back to life: a **Wizard of Oz tornado** that sweeps up the archived houses, families, pets, and album stories and sets them down somewhere they can live again, in color. And as every tornado from Kansas knows, sometimes a house lands exactly where it needs to — ding dong, the witch is dead, and the content is free! Soul City is inspired by David Marusek's
+*The Wedding Album* (1999), where simulated people campaign for the right to live in a place called
+"Simopolis" — we're building that place, under our own name.
 
 This is your "early dreams" line made concrete: the Archive didn't just freeze that content — it kept
 it alive long enough for someone to build the place it was dreaming of. I'd love your telling of what

@@ -56,8 +56,8 @@ practiced. EA shut it down; the **Wayback Machine** holds what remains.
 is the Wizard of Oz tornado: it sweeps that archived content out of the Wayback Machine and sets it
 down alive — houses rebuilt, families reunited, pets included, album stories readable again as
 literature. And when the tornado sets a house down, well — some obstacles simply end up beneath it,
-striped socks curling. Named for Marusek's *The Wedding Album* (1999), where simulated people fight
-to live in "Simopolis."
+striped socks curling. Inspired by Marusek's *The Wedding Album* (1999), where simulated people
+fight to live in "Simopolis" — we're building that place, under our own name.
 
 Beats for Brewster:
 
