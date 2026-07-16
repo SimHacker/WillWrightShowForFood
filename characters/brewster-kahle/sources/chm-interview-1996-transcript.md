@@ -6,6 +6,8 @@
 
 Paragraph breaks on ~2s pauses; light whitespace normalization only. Whisper output otherwise
 verbatim — known mishearings left as-is (e.g. "KE9Q" is Phil Karn's **KA9Q** NOS software).
+A ~40s repetition-loop artifact at ~24:15 was re-transcribed from the same audio with
+`condition_on_previous_text` off and spliced in.
 
 ---
 
@@ -91,15 +93,15 @@ to get information to lots and lots of people if there's an earthquake. And all 
 
 **[23:24]**
 
-about that telebitt trailblazer. We scammed so much equipment out of telebitt. They were the mechanism of wiring up the third world. The PeaceNet is here in the Presidio. Oh, they've moved. They've moved. You know Mitra? PeaceNet moved. PeaceNet used to be down in Palo Alto. Actually, it was Mark Graham who started PeaceNet. That's right. Mitra came in because he was in GreenNet in England. And this is all pre-internet stuff. Right. Because a friend of mine works at PeaceNet, and I've been down to some site, South Market. Well, it's actually over here. It's in the Presidio. Or IGC, whatever it is. PeaceNet. PeaceNet. PeaceNet. PeaceNet. PeaceNet. PeaceNet. PeaceNet. PeaceNet. PeaceNet. PeaceNet. PeaceNet. PeaceNet.
+about that telebitt trailblazer. We scammed so much equipment out of telebitt. They were the mechanism of wiring up the third world. The PeaceNet is here in the Presidio. Oh, they've moved. They've moved. You know Mitra? PeaceNet moved. PeaceNet used to be down in Palo Alto. Actually, it was Mark Graham who started PeaceNet. That's right. Mitra came in because he was in GreenNet in England. And this is all pre-internet stuff. Right. Because a friend of mine works at PeaceNet, and I've been down to some site, South Market. Well, it's actually over here. It's in the Presidio. Or IGC, whatever it is.
 
 **[24:15]**
 
-PeaceNet. PeaceNet. PeaceNet. PeaceNet. PeaceNet. PeaceNet. PeaceNet. PeaceNet. PeaceNet. PeaceNet. PeaceNet. PeaceNet. PeaceNet. PeaceNet. PeaceNet. PeaceNet. PeaceNet. PeaceNet.
+Just turn into a think tank of creative high-tech. This is going to be a university-type atmosphere among people in their 20s and 30s. You're going to just see amazing things flower here, because we've got this place, we've got the goal here, we've got a campus atmosphere in San Francisco. Right now it's fairly difficult, not easy, and so, yeah, we can probably get you a nail very well.
 
 **[24:36]**
 
-PeaceNet. PeaceNet. as is. What does the workstation do? We really wanted to separate out and use the PCs for what they're good for. The web never has. It's used basically as a dumb terminal. We're seeing them incarnated in hardware. It's sort of odd. So the workstations, dynamic folders find information for the user. The idea is dynamic folders are things that find information and put them on your machine for you. Important, right? The web really doesn't work for a lot of users because you have to search for it. And that's just not mainstream. Using information servers, how does it do it? Different interface possibilities you can use. Newspaper format, email format, geographically, books on a shelf. There are a bunch of different ideas on user interface motifs. Netscape has no metaphor. Sure they do. They have the metaphor of an old telecom program. There it is. Advantage in remote versus local filtering. Do you want to do it locally or do you want to do it remotely? What balance do you need between those two? The web doesn't have that stuff. Local caching of documents. How do you go about doing that
+As is. What does the workstation do? We really wanted to separate out and use the PCs for what they're good for. The web never has. It's used basically as a dumb terminal. We're seeing them incarnated in hardware. It's sort of odd. So the workstations, dynamic folders find information for the user. The idea is dynamic folders are things that find information and put them on your machine for you. Important, right? The web really doesn't work for a lot of users because you have to search for it. And that's just not mainstream. Using information servers, how does it do it? Different interface possibilities you can use. Newspaper format, email format, geographically, books on a shelf. There are a bunch of different ideas on user interface motifs. Netscape has no metaphor. Sure they do. They have the metaphor of an old telecom program. There it is. Advantage in remote versus local filtering. Do you want to do it locally or do you want to do it remotely? What balance do you need between those two? The web doesn't have that stuff. Local caching of documents. How do you go about doing that
 
 **[25:54]**
 
