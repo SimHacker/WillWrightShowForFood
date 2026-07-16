@@ -57,8 +57,8 @@ Are **GPU shaders in the browser** the next telescoping step of **send code not 
 
 ## Related
 
-- `[window-systems-lineage.md](window-systems-lineage.md)`
-- `[../james-gosling/window-systems-lineage.md](../james-gosling/window-systems-lineage.md)`
-- `[../../process/trails/send-code-not-commands.md](../../process/trails/send-code-not-commands.md)`
+- [`window-systems-lineage.md`](window-systems-lineage.md)
+- [`../james-gosling/window-systems-lineage.md`](../james-gosling/window-systems-lineage.md)
+- [`../../process/trails/send-code-not-commands.md`](../../process/trails/send-code-not-commands.md)
 
 ↑ [00-START-HERE](00-START-HERE.md)

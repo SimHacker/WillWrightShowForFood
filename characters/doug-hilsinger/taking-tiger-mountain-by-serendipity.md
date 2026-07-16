@@ -66,7 +66,7 @@ He thanked Doug for making *"beautiful music"* out of his *"old experiments,"* *
 notes** for the release, and later told Pitchfork, dryly, *"They aren't bad songs after all."*
 
 🔊 **Eno's actual phone message to Doug:**
-`[audio/…PhoneMessageToDougHilsinger.mp3](../brian-eno/audio/TakingTigerMountainBrianEnoPhoneMessageToDougHilsinger.mp3)`
+[`audio/…PhoneMessageToDougHilsinger.mp3`](../brian-eno/audio/TakingTigerMountainBrianEnoPhoneMessageToDougHilsinger.mp3)
 (also published via [yourmusiclawyer.com](http://yourmusiclawyer.com/queues/2004/brian_eno/index.html)
 and [saucefaucet](http://www.saucefaucet.com/tiger.html)).
 
@@ -108,7 +108,7 @@ have met.** (Don's reliable line back into this circle is **Will** — whom he k
 regularly in the SF Bay Area — and **Scott**, with whom he still collaborates. That's why a
 **reunion** inviting **Brian**, **Will**, and **Doug** is the dream.)
 
-*(Don's personal note about that night — a warm, serindipitous aside and a hopeful what-if — is written directly to Brian in the invitation:* `[characters/brian-eno/invitation.md](../../characters/brian-eno/invitation.md)`*.)*
+*(Don's personal note about that night — a warm, serindipitous aside and a hopeful what-if — is written directly to Brian in the invitation:* [`characters/brian-eno/invitation.md`](../../characters/brian-eno/invitation.md)*.)*
 
 ## Credit where it's due
 
@@ -157,7 +157,7 @@ wait on a reply.
 tells the Eagle story, a Ronco commercial for Doug's album interrupts (with Eno's phone message as
 the testimonial), the story concludes, all wrapped in the *Empathy* 1MM — built as the **teaser to
 show Brian before contacting him**. See
-`[process/one-minute-movie-sandwich.md](../../process/one-minute-movie-sandwich.md)`
+[`process/one-minute-movie-sandwich.md`](../../process/one-minute-movie-sandwich.md)
 `#first_instance_tiger_mountain`.
 
 ## Questions for Brian — the before/after listening 🎧
@@ -193,7 +193,7 @@ the heart of the whole Repo Show. (See the [riff loop](../../repo-shows/ideas/th
 
 *(Companion viewing Don recommends: **Bowie's "The Man Who Sold the World"** hits especially hard after
 ***The Nomi Song***, and pairs with the **Leigh Bowery** documentary — see
-`[../brian-eno/bowie-snl-1979.md](../brian-eno/bowie-snl-1979.md)`.)*
+[`../brian-eno/bowie-snl-1979.md`](../brian-eno/bowie-snl-1979.md).)*
 
 ## Don's wish
 

@@ -182,7 +182,7 @@ Move existing long `invitation.md` bodies here when refactoring (e.g. David Levi
 | Don't | Do instead |
 |-------|------------|
 | Gatling-gun list in `invitation.md` | `README.md` § Deep dive + link "full list here" |
-| Relative `[invitation](invitation.md)` in invite | Absolute blob URL |
+| Relative [`invitation`](invitation.md) in invite | Absolute blob URL |
 | Mermaid flowchart in invite | Prose one-liner or link to `process/VISION.md` |
 | Mansplain their whole career | One shared-alignment sentence + link to sources |
 | "I hope this finds you well" | Delete |

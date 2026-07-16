@@ -1,6 +1,6 @@
 # MVC, Morphic, and "watchers" — Hacker News thread (Jan 2015)
 
-*Guest hub:* `[../../README.md](../../README.md)` · *Media hub:* `[../README.md](../README.md)`
+*Guest hub:* [`../../README.md`](../../README.md) · *Media hub:* [`../README.md`](../README.md)
 
 **Source:** Hacker News discussion on **["Smalltalk MVC Translated to JavaScript"](https://news.ycombinator.com/item?id=8839270)**
 (Jan 2015). [Don Hopkins's comment](https://news.ycombinator.com/item?id=8841428) summarizes a **private email
@@ -10,10 +10,10 @@ exchange with Alan Kay** about MVC, Morphic, projection, and direct manipulation
 **Nature:** Alan's words below are **verbatim quotes from Don's HN comment** (email correspondence, 2015).
 Don's HN text is attributed to Don. Forum reply attributed to **doublec**. Not Quora; not a live interview.
 Credit: **Hacker News**. Governed by
-`[portrayal-standards.md](../../../../schemas/portrayal-standards.md)`.
+[`portrayal-standards.md`](../../../../schemas/portrayal-standards.md).
 
 > **Why it lives here:** complements the Quora MVC origin thread in
-> `[../quora-recaps/oop-messaging-and-what-comes-next.md](../quora-recaps/oop-messaging-and-what-comes-next.md)`
+> [`../quora-recaps/oop-messaging-and-what-comes-next.md`](../quora-recaps/oop-messaging-and-what-comes-next.md)
 > with Kay's **post-PARC** UI philosophy — watchers, view construction, and the unsolved "inverter" problem.
 
 ---
@@ -120,7 +120,7 @@ and what's still missing vs Sketchpad constraints?
 - **Morphic today:** Squeak went Morphic; Self GUI was Morphic — is Morphic still the carrier for watchers,
 or something else in VPRI/STEPS lineage?
 - **Projection vs messaging:** does the Utah "camera on a world" story connect to your later "relational rather
-than message-based" Sketchpad turn? (See `[../quora-recaps/oop-messaging-and-what-comes-next.md](../quora-recaps/oop-messaging-and-what-comes-next.md)`.)
+than message-based" Sketchpad turn? (See [`../quora-recaps/oop-messaging-and-what-comes-next.md`](../quora-recaps/oop-messaging-and-what-comes-next.md).)
 
 ---
 
@@ -131,13 +131,13 @@ than message-based" Sketchpad turn? (See `[../quora-recaps/oop-messaging-and-wha
 
 | Who / what                              | Link                                                                                                                                                                                        |
 | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| MVC origin (Quora)                      | `[../quora-recaps/oop-messaging-and-what-comes-next.md](../quora-recaps/oop-messaging-and-what-comes-next.md)`                                                                              |
-| HyperCard end-user authoring            | `[../quora-recaps/hypercard-personal-computing-breakthrough.md](../quora-recaps/hypercard-personal-computing-breakthrough.md)`                                                              |
-| NeWS / HN (Don)                         | `[../quora-recaps/browsers-documents-news-hypercard-hyperlook.md](../quora-recaps/browsers-documents-news-hypercard-hyperlook.md)`                                                          |
-| David Levitt (Atari Cambridge)          | `[../../../david-levitt/](../../../david-levitt/)` · `[../../../david-levitt/media/from-mail/paper-pantomime-teaser.pdf](../../../david-levitt/media/from-mail/paper-pantomime-teaser.pdf)` |
-| Ben Shneiderman (direct manipulation)   | `[../../../ben-shneiderman/](../../../ben-shneiderman/)`                                                                                                                                    |
-| Dan Ingalls (Smalltalk/Morphic lineage) | `[../../../dan-ingalls/](../../../dan-ingalls/)`                                                                                                                                            |
-| David Ungar (Self/Morphic)              | `[../../../david-ungar/](../../../david-ungar/)`                                                                                                                                            |
-| Terry Winograd (CS547 archive)          | `[../../../terry-winograd/media/cs547-ARCHIVE.md](../../../terry-winograd/media/cs547-ARCHIVE.md)`                                                                                          |
+| MVC origin (Quora)                      | [`../quora-recaps/oop-messaging-and-what-comes-next.md`](../quora-recaps/oop-messaging-and-what-comes-next.md)                                                                              |
+| HyperCard end-user authoring            | [`../quora-recaps/hypercard-personal-computing-breakthrough.md`](../quora-recaps/hypercard-personal-computing-breakthrough.md)                                                              |
+| NeWS / HN (Don)                         | [`../quora-recaps/browsers-documents-news-hypercard-hyperlook.md`](../quora-recaps/browsers-documents-news-hypercard-hyperlook.md)                                                          |
+| David Levitt (Atari Cambridge)          | [`../../../david-levitt/`](../../../david-levitt/) · [`../../../david-levitt/media/from-mail/paper-pantomime-teaser.pdf`](../../../david-levitt/media/from-mail/paper-pantomime-teaser.pdf) |
+| Ben Shneiderman (direct manipulation)   | [`../../../ben-shneiderman/`](../../../ben-shneiderman/)                                                                                                                                    |
+| Dan Ingalls (Smalltalk/Morphic lineage) | [`../../../dan-ingalls/`](../../../dan-ingalls/)                                                                                                                                            |
+| David Ungar (Self/Morphic)              | [`../../../david-ungar/`](../../../david-ungar/)                                                                                                                                            |
+| Terry Winograd (CS547 archive)          | [`../../../terry-winograd/media/cs547-ARCHIVE.md`](../../../terry-winograd/media/cs547-ARCHIVE.md)                                                                                          |
 
 

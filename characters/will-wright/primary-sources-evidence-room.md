@@ -2,7 +2,7 @@
 
 Curated map of **Will Wright** primary sources. **Original
 material** — essays, mail threads, Wayback captures, transcripts — lives in Will Wright's
-**evidence room** under `[sources/](sources/README.md)`.
+**evidence room** under [`sources/`](sources/README.md).
 
 Don Hopkins topic files in [`../don-hopkins/`](../don-hopkins/README.md) cross-link here. For the
 machine-complete slug index, see [Complete slug index](sources/README.md#complete-slug-index)
@@ -12,22 +12,22 @@ in that README.
 
 | Room                             | Link                                                                                                               | Role                                                   |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------ |
-| **Evidence room README**         | `[sources/README.md](sources/README.md)`                 | Navigation spine — start here for any slug             |
-| **Will Wright portrayal**        | `[README.md](README.md)`                                 | Guest hub                                              |
-| **Flagship Repo Show**           | `[../../repo-shows/will-wright-premiere/README.md](../../repo-shows/will-wright-premiere/README.md)`                                 | Episode room — orbits the sources                      |
-| **Terry Winograd CS547 archive** | `[../../characters/terry-winograd/media/cs547-ARCHIVE.md](../../characters/terry-winograd/media/cs547-ARCHIVE.md)` | Full Stanford talk catalog (cross-linked from sources) |
+| **Evidence room README**         | [`sources/README.md`](sources/README.md)                 | Navigation spine — start here for any slug             |
+| **Will Wright portrayal**        | [`README.md`](README.md)                                 | Guest hub                                              |
+| **Flagship Repo Show**           | [`../../repo-shows/will-wright-premiere/README.md`](../../repo-shows/will-wright-premiere/README.md)                                 | Episode room — orbits the sources                      |
+| **Terry Winograd CS547 archive** | [`../../characters/terry-winograd/media/cs547-ARCHIVE.md`](../../characters/terry-winograd/media/cs547-ARCHIVE.md) | Full Stanford talk catalog (cross-linked from sources) |
 
 ## Bouquet → evidence (Don's topic files)
 
 | Don-hopkins topic                                                                                      | Primary sources cluster                                                                                                                                                                                                                                                                                                                                                                                   |
 | ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `[open-sourcing-simcity-for-olpc.md](../don-hopkins/open-sourcing-simcity-for-olpc.md)`                               | [simcity-open-source-saga](sources/simcity-open-source-saga/README.md), [maxis-licenses-chain-of-custody](sources/maxis-licenses-chain-of-custody/README.md), OLPC mail arc (below)                                                                                                                                                             |
-| `[olpc-micropolis-python-pygtk.md](../don-hopkins/olpc-micropolis-python-pygtk.md)`                                   | [2007-11-16-simcity-rules-alan-kay](sources/2007-11-16-simcity-rules-alan-kay/README.md), [2007-11-16-olpc-visual-programming-psiber](sources/2007-11-16-olpc-visual-programming-psiber/README.md), [2006-12-simcity-olpc-introducing-the-players](sources/2006-12-simcity-olpc-introducing-the-players/README.md) |
-| `[the-sims-transmogrifier-mod-tools.md](../don-hopkins/the-sims-transmogrifier-mod-tools.md)`                         | [2004-transmogrifier-documentation-hub](sources/2004-transmogrifier-documentation-hub/README.md) and Transmogrifier cluster (below)                                                                                                                                                                                                                                          |
-| `[stupid-fun-club-empathy-and-servitude.md](../don-hopkins/stupid-fun-club-empathy-and-servitude.md)`                 | [stupid-fun-club-one-minute-movies](sources/stupid-fun-club-one-minute-movies/README.md)                                                                                                                                                                                                                                                                                     |
-| `[yoot-tower-open-source-and-alan-kay-interview.md](../don-hopkins/yoot-tower-open-source-and-alan-kay-interview.md)` | [2024-yoot-tower-open-source](sources/2024-yoot-tower-open-source/README.md)                                                                                                                                                                                                                                                                                                 |
-| `[hyperlook-news-postscript-simcity.md](../don-hopkins/hyperlook-news-postscript-simcity.md)`                         | [multiplayer-simcity-ui-network](sources/multiplayer-simcity-ui-network/README.md), [simcity-unix-rights-history](sources/simcity-unix-rights-history/README.md)                                                                                                                                                                                |
-| `[career/contracts/README.md](../don-hopkins/career/contracts/README.md)`                                             | [maxis-licenses-chain-of-custody](sources/maxis-licenses-chain-of-custody/README.md), [simcity-unix-rights-history](sources/simcity-unix-rights-history/README.md)                                                                                                                                                                              |
+| [`open-sourcing-simcity-for-olpc.md`](../don-hopkins/open-sourcing-simcity-for-olpc.md)                               | [simcity-open-source-saga](sources/simcity-open-source-saga/README.md), [maxis-licenses-chain-of-custody](sources/maxis-licenses-chain-of-custody/README.md), OLPC mail arc (below)                                                                                                                                                             |
+| [`olpc-micropolis-python-pygtk.md`](../don-hopkins/olpc-micropolis-python-pygtk.md)                                   | [2007-11-16-simcity-rules-alan-kay](sources/2007-11-16-simcity-rules-alan-kay/README.md), [2007-11-16-olpc-visual-programming-psiber](sources/2007-11-16-olpc-visual-programming-psiber/README.md), [2006-12-simcity-olpc-introducing-the-players](sources/2006-12-simcity-olpc-introducing-the-players/README.md) |
+| [`the-sims-transmogrifier-mod-tools.md`](../don-hopkins/the-sims-transmogrifier-mod-tools.md)                         | [2004-transmogrifier-documentation-hub](sources/2004-transmogrifier-documentation-hub/README.md) and Transmogrifier cluster (below)                                                                                                                                                                                                                                          |
+| [`stupid-fun-club-empathy-and-servitude.md`](../don-hopkins/stupid-fun-club-empathy-and-servitude.md)                 | [stupid-fun-club-one-minute-movies](sources/stupid-fun-club-one-minute-movies/README.md)                                                                                                                                                                                                                                                                                     |
+| [`yoot-tower-open-source-and-alan-kay-interview.md`](../don-hopkins/yoot-tower-open-source-and-alan-kay-interview.md) | [2024-yoot-tower-open-source](sources/2024-yoot-tower-open-source/README.md)                                                                                                                                                                                                                                                                                                 |
+| [`hyperlook-news-postscript-simcity.md`](../don-hopkins/hyperlook-news-postscript-simcity.md)                         | [multiplayer-simcity-ui-network](sources/multiplayer-simcity-ui-network/README.md), [simcity-unix-rights-history](sources/simcity-unix-rights-history/README.md)                                                                                                                                                                                |
+| [`career/contracts/README.md`](../don-hopkins/career/contracts/README.md)                                             | [maxis-licenses-chain-of-custody](sources/maxis-licenses-chain-of-custody/README.md), [simcity-unix-rights-history](sources/simcity-unix-rights-history/README.md)                                                                                                                                                                              |
 
 ---
 
@@ -138,7 +138,7 @@ in that README.
 | Chris Trottier — tuned emergence        | [2004-02-21-chris-trottier-tuned-emergence](sources/2004-02-21-chris-trottier-tuned-emergence/README.md) |
 | Henry Jenkins — Barbie to Mortal Kombat | [2004-01-10-barbie-mortalkombat-jenkins](sources/2004-01-10-barbie-mortalkombat-jenkins/README.md)       |
 
-Pair Crowd Sitter / Dumbold with live UCC in `[../../catalogs/simprov/](../../catalogs/simprov/README.md)`.
+Pair Crowd Sitter / Dumbold with live UCC in [`../../catalogs/simprov/`](../../catalogs/simprov/README.md).
 
 ---
 
@@ -148,7 +148,7 @@ Pair Crowd Sitter / Dumbold with live UCC in `[../../catalogs/simprov/](../../ca
 | -------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | *Servitude* and *Empathy* robots | [stupid-fun-club-one-minute-movies](sources/stupid-fun-club-one-minute-movies/README.md) |
 
-→ Don's talk distill: `[talks/empathy-and-servitude.yml](../don-hopkins/talks/empathy-and-servitude.yml)` · Sidekick `[../slats/](../slats/)`
+→ Don's talk distill: [`talks/empathy-and-servitude.yml`](../don-hopkins/talks/empathy-and-servitude.yml) · Sidekick [`../slats/`](../slats/)
 
 ---
 
@@ -177,4 +177,4 @@ Pair Crowd Sitter / Dumbold with live UCC in `[../../catalogs/simprov/](../../ca
 
 Spore GDC hand captions · OLPC/Micropolis blog cluster · Transmogrifier 2.0 launch · original Sims site captures · 1996 raw Winograd notes. See [Still to extract](sources/README.md#still-to-extract-or-enrich) in the evidence room README.
 
-→ `[writing/INDEX.yml](../don-hopkins/writing/INDEX.yml)` · `[sync-sources.yml](../don-hopkins/sync-sources.yml)` · `[sources/README.md](sources/README.md)`
+→ [`writing/INDEX.yml`](../don-hopkins/writing/INDEX.yml) · [`sync-sources.yml`](../don-hopkins/sync-sources.yml) · [`sources/README.md`](sources/README.md)

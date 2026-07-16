@@ -32,4 +32,4 @@ LLMs as universal translators, intention compilers, optimizers — describe the 
 
 **Guardrail:** inherit ideas, skills, style — never impersonate the person ([representation-ethics](https://github.com/SimHacker/moollm/tree/main/skills/representation-ethics)).
 
-→ Full yaml: `[career/lineage.yml](career/lineage.yml)` (`import_self_from_self`, `self_pun_stack`) · Trail: `[../../process/trails/send-code-not-commands.md](../../process/trails/send-code-not-commands.md)`
+→ Full yaml: [`career/lineage.yml`](career/lineage.yml) (`import_self_from_self`, `self_pun_stack`) · Trail: [`../../process/trails/send-code-not-commands.md`](../../process/trails/send-code-not-commands.md)

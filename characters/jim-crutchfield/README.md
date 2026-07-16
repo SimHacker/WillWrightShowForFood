@@ -25,7 +25,7 @@ and hidden computation inside any process.
 
 ## Why a Repo Show — picking up where we left off
 
-This isn't a cold call: Don and Jim have **decades of correspondence**, and the show is the instrument the old threads were waiting for — `[don-and-jim-history.md](don-and-jim-history.md)`.
+This isn't a cold call: Don and Jim have **decades of correspondence**, and the show is the instrument the old threads were waiting for — [`don-and-jim-history.md`](don-and-jim-history.md).
 
 - **2008:** Jim asked Don how to reach **Will Wright** to show him his CAVE immersive rig. This Repo Show is the delayed rendezvous.
 - **2013:** the "Powers of Feedback" tape thread — and the **director's cut** project. Jim had to
@@ -66,9 +66,9 @@ published the camera-at-monitor loop as "Simulation of cascades by video feedbac
 **1976**; Jim turned the demo into the formal dynamical-systems treatment. The handoff — and
 Don's own VHS-tape provenance (the tape came from **Kathy Abelson**, Don's office mate at Sun and
 author of the NeWS manual Don reviewed and illustrated) — is written up in
-`[abraham-video-feedback-lineage.md](abraham-video-feedback-lineage.md)`. Ralph died in September
+[`abraham-video-feedback-lineage.md`](abraham-video-feedback-lineage.md). Ralph died in September
 2024; the show carries a **memorial segment** where Jim remembers him —
-`[../ralph-abraham/memorial.md](../ralph-abraham/memorial.md)`.
+[`../ralph-abraham/memorial.md`](../ralph-abraham/memorial.md).
 
 ### The room
 
@@ -79,8 +79,8 @@ reversible CA — and the book behind the playgrounds). All Santa Fe Institute�
 
 ## Browse
 
-- Show seed: `[repo-shows/jim-crutchfield/](../../repo-shows/jim-crutchfield/README.md)`
-- The history: `[don-and-jim-history.md](don-and-jim-history.md)` · The lineage: `[abraham-video-feedback-lineage.md](abraham-video-feedback-lineage.md)`
+- Show seed: [`repo-shows/jim-crutchfield/`](../../repo-shows/jim-crutchfield/README.md)
+- The history: [`don-and-jim-history.md`](don-and-jim-history.md) · The lineage: [`abraham-video-feedback-lineage.md`](abraham-video-feedback-lineage.md)
 - Joint CA show: [Norman Margolus](../norman-margolus/README.md) · Dream co-guest: [Scott Draves](../scott-draves/README.md)
 - Live work / sources: [UC Davis CSC](https://csc.ucdavis.edu/~chaos/) · [Art & Science Laboratory](https://artscilab.com/) · [Wikipedia](https://en.wikipedia.org/wiki/James_P._Crutchfield)
 

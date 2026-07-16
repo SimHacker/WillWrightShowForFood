@@ -15,7 +15,7 @@ Heather Alvey (née Castillo) — founder of **SimFreaks**, one of the longest-r
 
 ### 1. Fan band back (and still) together ★
 
-Origin story card: `[../../repo-shows/heather-and-steve-alvey/sources/fan-band-marriage-arc.md](../../repo-shows/heather-and-steve-alvey/sources/fan-band-marriage-arc.md)`  
+Origin story card: [`../../repo-shows/heather-and-steve-alvey/sources/fan-band-marriage-arc.md`](../../repo-shows/heather-and-steve-alvey/sources/fan-band-marriage-arc.md)  
 Two independent fan sites → marriage → Zombie Sims → Gallium → Soul City. Evidence-bounce edit with Steve's async interviews.
 
 ### 2. Show seed: `repo-shows/heather-and-steve-alvey/`
@@ -28,11 +28,11 @@ EA-recognized site; object suites + SimAntics; drive subscriptions ([simfreaks.c
 
 ### 4. Soul City now
 
-Federated **create · publish · share** — `[../../catalogs/soul-city/README.md](../../catalogs/soul-city/README.md)`; first customers for Don's publishing stack.
+Federated **create · publish · share** — [`../../catalogs/soul-city/README.md`](../../catalogs/soul-city/README.md); first customers for Don's publishing stack.
 
 ### 5. SimProv Wedding Playset + Speed Dating with Cupid
 
-Unreleased-era collaboration; Cupid object gag — `[../../repo-shows/ideas/gags/speed-dating-with-cupid.yml](../../repo-shows/ideas/gags/speed-dating-with-cupid.yml)`.
+Unreleased-era collaboration; Cupid object gag — [`../../repo-shows/ideas/gags/speed-dating-with-cupid.yml`](../../repo-shows/ideas/gags/speed-dating-with-cupid.yml).
 
 ### 6. Gallium / Proxi chapter
 
@@ -40,8 +40,8 @@ Artist in Residence threads ([thealveys.us](https://thealveys.us/), LinkedIn) �
 
 ## Sources (public)
 
-- `[invitation.md](invitation.md)`
-- Story arc: `[../../repo-shows/heather-and-steve-alvey/sources/fan-band-marriage-arc.md](../../repo-shows/heather-and-steve-alvey/sources/fan-band-marriage-arc.md)`
-- Show seed: `[../../repo-shows/heather-and-steve-alvey/](../../repo-shows/heather-and-steve-alvey/)`
-- `[CHARACTER.yml](CHARACTER.yml)`
+- [`invitation.md`](invitation.md)
+- Story arc: [`../../repo-shows/heather-and-steve-alvey/sources/fan-band-marriage-arc.md`](../../repo-shows/heather-and-steve-alvey/sources/fan-band-marriage-arc.md)
+- Show seed: [`../../repo-shows/heather-and-steve-alvey/`](../../repo-shows/heather-and-steve-alvey/)
+- [`CHARACTER.yml`](CHARACTER.yml)
 

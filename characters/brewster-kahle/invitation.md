@@ -37,14 +37,14 @@ preservation I've heard:
 
 > *"It's the early dreams that we should be trying to live up to."*
 
-(`[sources/chm-1996-early-dreams-clip.md](sources/chm-1996-early-dreams-clip.md)` · [video ~45:35](https://www.youtube.com/watch?v=u2h2LHRFbNA))
+([`sources/chm-1996-early-dreams-clip.md`](sources/chm-1996-early-dreams-clip.md) · [video ~45:35](https://www.youtube.com/watch?v=u2h2LHRFbNA))
 
 In **2007**, we corresponded about **OLPC**. You wanted books that looked good on the XO — a proper
 **tablet-mode viewer** for Internet Archive's scanned library, not just a JavaScript hack. Your
 `devel@laptop.org` [wishlist](sources/olpc-book-viewer-devel-2007-01-21.md) (100k books, rotated
 one-page-up PDFs, d-pad navigation, streaming before full download, search inside books and across
 the library) is still a readable spec. I offered to help port **SimCity** for the XO; you invited
-me to lunch. That thread is sourced here: `[sources/olpc-internet-archive-2007.md](sources/olpc-internet-archive-2007.md)`.
+me to lunch. That thread is sourced here: [`sources/olpc-internet-archive-2007.md`](sources/olpc-internet-archive-2007.md).
 
 And before WAIS and the Archive — **The Little Garden** — you with **John Gilmore**, **John Romkey**,
 **Steve Crocker**, **Tom Jennings**, and the rest, making bandwidth resalable when the incumbents said
@@ -65,7 +65,7 @@ One or more **recorded conversations** (video call, your schedule, your pace):
 | Format                     | Notes                                                                                                                                                                                                                                                                                                 |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Solo with you**          | Internet Archive, WAIS, early logs, preservation ethics — your pick of depth                                                                                                                                                                                                                          |
-| **OLPC / books on the XO** | Your 2007 viewer vision; optional overlap with `[Walter Bender](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/walter-bender/)` and `[Samuel Klein](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/samuel-klein/)` if you want company on that beat |
+| **OLPC / books on the XO** | Your 2007 viewer vision; optional overlap with [`Walter Bender`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/walter-bender/) and [`Samuel Klein`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/samuel-klein/) if you want company on that beat |
 | **The Little Garden**      | Optional later episode with **Tom Jennings**, **Tim Pozar**, **David Henkel-Wallace** — only if you want a reunion panel; no pressure to coordinate                                                                                                                                                   |
 
 
@@ -103,7 +103,7 @@ delete it anytime, or take direct edit access and make it yours.
 
 ### Internet Archive today
 
-- Wayback, Open Library, and partnership work (e.g. Wikimedia link repair — cited in `[CHARACTER.yml](CHARACTER.yml)`)
+- Wayback, Open Library, and partnership work (e.g. Wikimedia link repair — cited in [`CHARACTER.yml`](CHARACTER.yml))
 - Preservation as **keeping early intent alive**, not only frozen HTML
 
 
@@ -139,9 +139,9 @@ it alive long enough for someone to build the place it was dreaming of. I'd love
 | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Your room**                      | [https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/brewster-kahle/](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/brewster-kahle/)                               |
 | **Conversation hooks**             | [https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brewster-kahle/ideas.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brewster-kahle/ideas.md)               |
-| **1996 interview digest**          | `[sources/chm-interview-1996.md](sources/chm-interview-1996.md)`                                                                                                                                                 |
-| **OLPC 2007 thread**               | `[sources/olpc-internet-archive-2007.md](sources/olpc-internet-archive-2007.md)`                                                                                                                                 |
-| **OLPC show (Walter Bender seed)** | `[repo-shows/walter-bender-olpc/SHOW.yml](../../repo-shows/walter-bender-olpc/SHOW.yml)`                                                                                                                         |
+| **1996 interview digest**          | [`sources/chm-interview-1996.md`](sources/chm-interview-1996.md)                                                                                                                                                 |
+| **OLPC 2007 thread**               | [`sources/olpc-internet-archive-2007.md`](sources/olpc-internet-archive-2007.md)                                                                                                                                 |
+| **OLPC show (Walter Bender seed)** | [`repo-shows/walter-bender-olpc/SHOW.yml`](../../repo-shows/walter-bender-olpc/SHOW.yml)                                                                                                                         |
 | **Premiere (Will)**                | [https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) |
 
 
@@ -160,4 +160,4 @@ reply are all honored.
 
 *P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*
 
-↑ `[README.md](README.md)` · `[ideas.md](ideas.md)` · [portrayal standards](../../schemas/portrayal-standards.md)
+↑ [`README.md`](README.md) · [`ideas.md`](ideas.md) · [portrayal standards](../../schemas/portrayal-standards.md)

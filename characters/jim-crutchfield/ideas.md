@@ -37,7 +37,7 @@ tracks — and the explanatory narration deserves to go back on. Plan: **record 
 live on the show** over the clean YouTube transfer, MST3K-silhouette style. The narration source
 survives on the tape **Kathy Abelson** gave Don (his office mate at Sun; she wrote the NeWS
 manual Don meticulously reviewed and helped illustrate). Bonus reveal for the credits roll: Jim
-composed ***Rio Chama*** himself. Full story: `[don-and-jim-history.md](don-and-jim-history.md)`.
+composed ***Rio Chama*** himself. Full story: [`don-and-jim-history.md`](don-and-jim-history.md).
 
 ### 3. The CA playground plan — Norman's book, Jim's layer, students' homefun 🌸
 
@@ -58,11 +58,11 @@ chapters of *Cellular Automata Machines* into interactive instructional and arti
 
 ### 4. Don ↔ Jim, 2008–2025 — the correspondence + the boat 🚤
 
-Seventeen years of threads, written up in `[don-and-jim-history.md](don-and-jim-history.md)`:
+Seventeen years of threads, written up in [`don-and-jim-history.md`](don-and-jim-history.md):
 **2008** — Jim asks Don how to reach **Will Wright** to show him the CAVE (the show is the delayed
 rendezvous); **2013** — the "Powers of Feedback" tape thread and the director's-cut project, Don
 posting Jim's film to Will's Facebook; **Dec 2013** — the CA-intro offer; **May 2019** — Amsterdam:
-**Ben Cerveny's canal boat** picnic (photos in `[media/](media/)`), Sims-object-programming demos
+**Ben Cerveny's canal boat** picnic (photos in [`media/`](media/)), Sims-object-programming demos
 at UvA IAS, the **CAM-8-hardware-missing-software** revelation and the 1983 LANL wire-wrap story;
 **2025** — the browser-dynamics reply (Ed Puckett's ODE plotter, the *"wholly unrealized"* plan to
 port the Jupyter class demos — a ready-made show project). Plus the **dripping handrail** paper
@@ -70,8 +70,8 @@ Don loves (Crutchfield & Kaneko 1988) — browser-sim show beat.
 
 **Jan 2025 mail:** Don → Jim citing Psychedelic Graphics HN
 [42804566](https://news.ycombinator.com/item?id=42804566); WebGPU feedback-simulator prompt.
-→ `[sources/2025-01-25-psychedelic-graphics-hn.md](sources/2025-01-25-psychedelic-graphics-hn.md)` ·
-`[../don-hopkins/sources/2025-01-psychedelic-graphics-hn-compendium.md](../don-hopkins/sources/2025-01-psychedelic-graphics-hn-compendium.md)`
+→ [`sources/2025-01-25-psychedelic-graphics-hn.md`](sources/2025-01-25-psychedelic-graphics-hn.md) ·
+[`../don-hopkins/sources/2025-01-psychedelic-graphics-hn-compendium.md`](../don-hopkins/sources/2025-01-psychedelic-graphics-hn-compendium.md)
 
 ### 5. The smoking gun — Abraham → Crutchfield video feedback lineage
 
@@ -80,7 +80,7 @@ UCSC) — the camera-pointed-at-monitor demo as dynamics instrument. Jim's *Phys
 paper turned it into the formal spatiotemporal treatment — cellular automata, morphogenesis,
 spatial complexity. Same campus, one generation apart. Don's own work traces to a **VHS copy of
 Jim's 1984 film** — [now on YouTube](https://www.youtube.com/watch?v=B4Kn3djJMCE). Full writeup +
-show beats: `[abraham-video-feedback-lineage.md](abraham-video-feedback-lineage.md)`. **Spot
+show beats: [`abraham-video-feedback-lineage.md`](abraham-video-feedback-lineage.md). **Spot
 (Scott Draves) should read it** — dream three-way segment.
 
 ### 6. Remembering Ralph Abraham (1936–2024) 🌀
@@ -91,11 +91,11 @@ he's the right person to tell the real stories — phase space made *visible* (*
 Geometry of Behavior*, the Visual Mathematics Library), the 1976 cascades paper, the Santa Cruz
 counterculture, the tabla and the Trialogues. The phase-space-as-possibility-space thread runs
 straight to **Will Wright's** design vocabulary — Will put Abraham on his own look-up list.
-Memorial room: `[../ralph-abraham/memorial.md](../ralph-abraham/memorial.md)`.
+Memorial room: [`../ralph-abraham/memorial.md`](../ralph-abraham/memorial.md).
 
 ### 7. Raster Masters / Dave Tristram crossover
 
-Same HN cluster — Raster Masters, Shoreline SGI rigs, Dead "conferences," Electropaint. Panel Library. Co-guest with `[../dave-tristram/](../dave-tristram/)`.
+Same HN cluster — Raster Masters, Shoreline SGI rigs, Dead "conferences," Electropaint. Panel Library. Co-guest with [`../dave-tristram/`](../dave-tristram/).
 
 ### 8. Art & Science Laboratory — CA as an art medium
 
@@ -110,7 +110,7 @@ At the end of Don's [long-form CAM6 demo made for Norman Margolus](https://www.y
 he turns the CAM6 platform from lab instrument into **narrative art** — painting with overlapping
 cellular automata layers, cells rendered as animated SimCity tiles, telling a story with the rules.
 It's the natural bring-your-own-artwork contribution to an Art & Science conversation with Jim.
-→ `[../norman-margolus/the-cam6-demo-for-norman.md](../norman-margolus/the-cam6-demo-for-norman.md)`
+→ [`../norman-margolus/the-cam6-demo-for-norman.md`](../norman-margolus/the-cam6-demo-for-norman.md)
 
 ### 10. The cellular automatists' rules-and-art jam
 
@@ -123,6 +123,6 @@ Santa Fe Institute is the shared home for all of it. See the
 
 ## Sources (public)
 
-- Show seed: `[repo-shows/jim-crutchfield/](../../repo-shows/jim-crutchfield/)`
-- `[CHARACTER.yml](CHARACTER.yml)` · `[don-and-jim-history.md](don-and-jim-history.md)`
+- Show seed: [`repo-shows/jim-crutchfield/`](../../repo-shows/jim-crutchfield/)
+- [`CHARACTER.yml`](CHARACTER.yml) · [`don-and-jim-history.md`](don-and-jim-history.md)
 

@@ -147,5 +147,5 @@ world. (He'd make a great guest someday — xscreensaver, Mozilla, the DNA Loung
 - Fractal Flame: [https://flam3.com/](https://flam3.com/) · paper: [https://flam3.com/flame.pdf](https://flam3.com/flame.pdf)
 - Papers: NPAR 2006 ([http://draves.org/npar06/npar06draves.pdf](http://draves.org/npar06/npar06draves.pdf)), AOAE 2007 ([http://draves.org/aoae07/draves-aoae07.pdf](http://draves.org/aoae07/draves-aoae07.pdf))
 - Dreams in High Fidelity (MoMA / Google / Adler Planetarium); Infinidream: [https://infinidream.ai/](https://infinidream.ai/) · [https://draves.ai/](https://draves.ai/)
-- Friendship timeline: `[correspondence.yml](correspondence.yml)`
+- Friendship timeline: [`correspondence.yml`](correspondence.yml)
 

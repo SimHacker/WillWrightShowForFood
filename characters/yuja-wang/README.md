@@ -27,7 +27,7 @@ Conference, Southampton), and David Chapman (Cambridge University Library digiti
 **Idea:** PIXIE's radial menus move like a bumblebee — fast, precise, impossible to ignore.
 Yuja's hands supply the tempo.
 
-Structured provenance: `[sources/flight-of-the-pixie-tribute.yml](sources/flight-of-the-pixie-tribute.yml)`
+Structured provenance: [`sources/flight-of-the-pixie-tribute.yml`](sources/flight-of-the-pixie-tribute.yml)
 
 ## Share the tribute (no ask)
 
@@ -60,4 +60,4 @@ Suggested caption hook (optional):
 | Neil E. Wiseman · John O. Hiles                              | PIXIE paper co-authors                           |
 
 
-Verifiable sources in `[CHARACTER.yml](CHARACTER.yml)`. Subject may request correction or removal anytime.
+Verifiable sources in [`CHARACTER.yml`](CHARACTER.yml). Subject may request correction or removal anytime.

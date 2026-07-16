@@ -116,7 +116,7 @@ Drescher's book.
 Leela's frame: **neuro-symbolic AI** — neural perception (powerful, opaque) + symbolic schemas
 (answer *why*). Not either/or. Layered.
 
-Curated live thread (2024–2026): `[schemas-vectors-and-llms.md](schemas-vectors-and-llms.md)` — vectors,
+Curated live thread (2024–2026): [`schemas-vectors-and-llms.md`](schemas-vectors-and-llms.md) — vectors,
 Schema Networks, neural cellular automata, the **200-foot car wash** planning failure, Gary's
 questions back.
 
@@ -130,16 +130,16 @@ Drescher's ideas are not just cited but **runnable**:
 
 | Drescher concept        | MOOLLM skill                                                                                | What it does now                                                                |
 | ----------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| Schema mechanism        | `[schema-mechanism](https://github.com/SimHacker/moollm/tree/main/skills/schema-mechanism)` | Context → Action → Result; marginal attribution; synthetic items                |
-| Build & compose schemas | `[schema-factory](https://github.com/SimHacker/moollm/tree/main/skills/schema-factory)`     | Ingest, lint, compose — Henry's factory pattern as Anthropic/MOOLLM skill       |
-| PLAY → LEARN → LIFT     | `[play-learn-lift](https://github.com/SimHacker/moollm/tree/main/skills/play-learn-lift)`   | Explore → stabilize schemas → publish reusable artifacts                        |
-| Schemapedia             | `[schema](https://github.com/SimHacker/moollm/tree/main/skills/schema)`                     | One registry — Drescher causal units *beside* JSON Schema, frames, K-lines, SQL |
-| Constructionism         | `[constructionism](https://github.com/SimHacker/moollm/tree/main/skills/constructionism)`   | Learn by building microworlds — Papert's room, Drescher's mechanism             |
+| Schema mechanism        | [`schema-mechanism`](https://github.com/SimHacker/moollm/tree/main/skills/schema-mechanism) | Context → Action → Result; marginal attribution; synthetic items                |
+| Build & compose schemas | [`schema-factory`](https://github.com/SimHacker/moollm/tree/main/skills/schema-factory)     | Ingest, lint, compose — Henry's factory pattern as Anthropic/MOOLLM skill       |
+| PLAY → LEARN → LIFT     | [`play-learn-lift`](https://github.com/SimHacker/moollm/tree/main/skills/play-learn-lift)   | Explore → stabilize schemas → publish reusable artifacts                        |
+| Schemapedia             | [`schema`](https://github.com/SimHacker/moollm/tree/main/skills/schema)                     | One registry — Drescher causal units *beside* JSON Schema, frames, K-lines, SQL |
+| Constructionism         | [`constructionism`](https://github.com/SimHacker/moollm/tree/main/skills/constructionism)   | Learn by building microworlds — Papert's room, Drescher's mechanism             |
 
 
 **Why LLMs complete the vision** (MOOLLM's phrase): the Lisp and Python implementations had rigor but
 no semantics. Items were tokens. An LLM trained on the world, people, code, and logic can **ground**
-the symbolic terms in YAML Jazz comments — imagine theories (`[schema-factory](https://github.com/SimHacker/moollm/tree/main/skills/schema-factory)`),
+the symbolic terms in YAML Jazz comments — imagine theories ([`schema-factory`](https://github.com/SimHacker/moollm/tree/main/skills/schema-factory)),
 explain evidence chains, and lift stable patterns into skills **without** losing Drescher's causal
 discipline.
 
@@ -158,7 +158,7 @@ and Will's **soul-files** crossing games.
 4. **Good and Real** — determinism, choice, acausal cooperation — if Gary wants the philosophy turn.
 5. **Leela group episode** — with Henry, Milan, Steve, Isabella, Don and others — neuro-symbolic AI on the whiteboard.
 
-Show seed: `[repo-shows/gary-drescher/](../../repo-shows/gary-drescher/README.md)`
+Show seed: [`repo-shows/gary-drescher/`](../../repo-shows/gary-drescher/README.md)
 
 ---
 
@@ -167,12 +167,12 @@ Show seed: `[repo-shows/gary-drescher/](../../repo-shows/gary-drescher/README.md
 
 |                             |                                                                                                                    |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| **Landing page**            | `[README.md](README.md)`                                                                                           |
-| **Leela thread digest**     | `[schemas-vectors-and-llms.md](schemas-vectors-and-llms.md)`                                                       |
-| **Invitation**              | `[invitation.md](invitation.md)`                                                                                   |
-| **Will Wright**             | `[../will-wright/README.md](../will-wright/README.md)`                                                             |
-| **Marvin Minsky**           | `[../marvin-minsky/README.md](../marvin-minsky/README.md)`                                                         |
-| **Constructionist trail**   | `[../../process/trails/constructionist-lineage.md](../../process/trails/constructionist-lineage.md)`               |
+| **Landing page**            | [`README.md`](README.md)                                                                                           |
+| **Leela thread digest**     | [`schemas-vectors-and-llms.md`](schemas-vectors-and-llms.md)                                                       |
+| **Invitation**              | [`invitation.md`](invitation.md)                                                                                   |
+| **Will Wright**             | [`../will-wright/README.md`](../will-wright/README.md)                                                             |
+| **Marvin Minsky**           | [`../marvin-minsky/README.md`](../marvin-minsky/README.md)                                                         |
+| **Constructionist trail**   | [`../../process/trails/constructionist-lineage.md`](../../process/trails/constructionist-lineage.md)               |
 | **MOOLLM schema-mechanism** | [skills/schema-mechanism/SKILL.md](https://github.com/SimHacker/moollm/blob/main/skills/schema-mechanism/SKILL.md) |
 
 

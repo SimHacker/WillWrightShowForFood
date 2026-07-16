@@ -97,14 +97,14 @@ the [characters catalog](../README.md) (machine registry: [`INDEX.yml`](../INDEX
 
 | Person                    | Room                                                                              | Documentary angle                                                                                                                                |
 | ------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Will Wright**           | `[will-wright/](../will-wright/)`                                                 | Accepted Repo Show guest. His room holds the deepest source archive here.                                                                        |
-| **Don Hopkins**           | `[don-hopkins/](../don-hopkins/)`                                                 | Your host and introduction hub — Maxis tools veteran, publisher of the primary sources.                                                          |
-| **Jeff Adkins**           | `[jeff-adkins/](../jeff-adkins/)`                                                 | Community tool maker, accepted, energetic.                                                                                                       |
-| **Heather & Steve Alvey** | `[heather-alvey/](../heather-alvey/)` · `[steve-alvey/](../steve-alvey/)`         | SimFreaks / SimSlice — community's institutional memory.                                                                                         |
-| **Phil Salvador**         | `[phil-salvador/](../phil-salvador/)`                                             | Game historian, VGHF — the preservation-scholarship voice.                                                                                       |
-| **Jimmy Maher**           | `[jimmy-maher/](../jimmy-maher/)` · [registry](../../process/maxis-history-collaborators.md) | The Digital Antiquarian — Maxis essay series; parallel collaborator (Jess model), not a competing pitch.                                         |
-| **Drew Carey**            | `[drew-carey/](../drew-carey/)`                                                   | Dream guest — he's *in the Sims lore* (House Party, 2000) and a master of the live-audience form.                                                |
-| **Maxis team roster**     | `[sims-series-maxis-people.md](../will-wright/media/sims-series-maxis-people.md)` | Don's epithet roster — Jamie Doornbos, Ocean Quigley, Roxy & Claire, Jim Mackraz, and the rest — with your April 2025 email as the cited source. |
+| **Will Wright**           | [`will-wright/`](../will-wright/)                                                 | Accepted Repo Show guest. His room holds the deepest source archive here.                                                                        |
+| **Don Hopkins**           | [`don-hopkins/`](../don-hopkins/)                                                 | Your host and introduction hub — Maxis tools veteran, publisher of the primary sources.                                                          |
+| **Jeff Adkins**           | [`jeff-adkins/`](../jeff-adkins/)                                                 | Community tool maker, accepted, energetic.                                                                                                       |
+| **Heather & Steve Alvey** | [`heather-alvey/`](../heather-alvey/) · [`steve-alvey/`](../steve-alvey/)         | SimFreaks / SimSlice — community's institutional memory.                                                                                         |
+| **Phil Salvador**         | [`phil-salvador/`](../phil-salvador/)                                             | Game historian, VGHF — the preservation-scholarship voice.                                                                                       |
+| **Jimmy Maher**           | [`jimmy-maher/`](../jimmy-maher/) · [registry](../../process/maxis-history-collaborators.md) | The Digital Antiquarian — Maxis essay series; parallel collaborator (Jess model), not a competing pitch.                                         |
+| **Drew Carey**            | [`drew-carey/`](../drew-carey/)                                                   | Dream guest — he's *in the Sims lore* (House Party, 2000) and a master of the live-audience form.                                                |
+| **Maxis team roster**     | [`sims-series-maxis-people.md`](../will-wright/media/sims-series-maxis-people.md) | Don's epithet roster — Jamie Doornbos, Ocean Quigley, Roxy & Claire, Jim Mackraz, and the rest — with your April 2025 email as the cited source. |
 
 A word on how this repo treats people, because it matters to your compliance folks:
 **[portrayal standards](../../schemas/portrayal-standards.md)** — no impersonation, no invented
@@ -144,7 +144,7 @@ What to ask Don for: introductions, scans, and interview footage as it accumulat
 
 ## Part 5 — Your room, your rules
 
-This directory — `[characters/jess-bird/](README.md)` — is yours to shape:
+This directory — [`characters/jess-bird/`](README.md) — is yours to shape:
 
 - Tell Don what to add, cut, or fix, and it changes same-day; **or**
 - Get a free GitHub account and edit it yourself; **and**

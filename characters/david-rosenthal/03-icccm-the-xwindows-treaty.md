@@ -46,7 +46,7 @@ ICCCM is the **treaty** between hostile sovereigns who must share a desktop.
 | `TARGETS`        | Format negotiation             | SelectionNotify vs property type ambiguity |
 
 
-Implementor rant: `[sources/conrad-parker-icccm-rant-2001.md](sources/conrad-parker-icccm-rant-2001.md)`
+Implementor rant: [`sources/conrad-parker-icccm-rant-2001.md`](sources/conrad-parker-icccm-rant-2001.md)
 
 ---
 
@@ -55,7 +55,7 @@ Implementor rant: `[sources/conrad-parker-icccm-rant-2001.md](sources/conrad-par
 ## NeWS counterfactual
 
 NeWS inter-client = **PostScript programs in flight** — not Atom carrier pigeons. Lost political war
-to X11; DSHR built **both sides**. `[../don-hopkins/sources/1991-09-news-tnt-icccm-death-match.md](../don-hopkins/sources/1991-09-news-tnt-icccm-death-match.md)`
+to X11; DSHR built **both sides**. [`../don-hopkins/sources/1991-09-news-tnt-icccm-death-match.md`](../don-hopkins/sources/1991-09-news-tnt-icccm-death-match.md)
 
 ---
 
