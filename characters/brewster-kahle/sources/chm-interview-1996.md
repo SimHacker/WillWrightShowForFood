@@ -35,4 +35,8 @@
 
 Brewster segment on **early dreams vs stagnation** — ~45:35 in Don's working notes ([`../README.md`](../README.md)).
 
+## Transcript
+
+Full cleaned text: [`chm-interview-1996-transcript.md`](chm-interview-1996-transcript.md)
+
 ↑ [sources index](README.md)
