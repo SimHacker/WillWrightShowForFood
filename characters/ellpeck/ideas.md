@@ -16,4 +16,17 @@
 - Contrast table: Tiny Life sharing vs Legacy Collection gap (reddit + exchange research bundle)
 - Ell on Paralives — Stardew / Harvest Moon genre-lift framing (his Bluesky)
 
-↑ [README](README.md) · [bridge/soul-city-bridge.md](bridge/soul-city-bridge.md)
+## Stack: Blake Jennings
+
+Introduce [Blake Jennings](../blake-jennings/) (*An Unnecessary Analysis* — Sims / Stardew
+"war crimes" essays; named Don on camera; replied yes to WWSFF). Don's casting bet: Blake will
+love Tiny Life and belongs in the **Soul City ⇔ Tiny Life** bridge design talk.
+
+- **Blake + Ell (+ Don)** — Tiny Life walkthrough → soul-file / export schema → bridge
+  architecture on air
+- **"War Crimes of the Tiny Life Community"** — Unnecessary Analysis / Repo Show invert:
+  the real criminals are Gamergate / incel / MAGA trolls and detractors harassing a queer indie
+  life-sim community (stories Blake has seen unfold; Ell has lived). Solidarity framing, not
+  both-sides. Blake's room: [`../blake-jennings/ideas.md`](../blake-jennings/ideas.md)
+
+↑ [README](README.md) · [bridge/soul-city-bridge.md](bridge/soul-city-bridge.md) · [Blake](../blake-jennings/)

@@ -1,0 +1,82 @@
+# Blake Jennings — public portrayal (video essayist). NOT Blake.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: blake-jennings
+  name: Blake Jennings
+  also_known_as: [jakeblennings, Jake Blennings]
+  type: invitation
+  signifier: "🎬⚖️"
+  status: living
+  field: "YouTube essayist — An Unnecessary Analysis; game-community ethics / 'war crimes' series"
+  home: characters/blake-jennings/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 1
+  authored_by: don-hopkins
+  invitation_status: drafting_email
+  consent: replied_interested_2026-07-16
+
+web:
+  youtube: https://www.youtube.com/@jakeblennings
+  youtube_channel_id: UC4qtoriBPg4HZkqUvbIoAWQ
+  twitch: https://www.twitch.tv/jakeblennings
+  stream_vod_channel: "@JakeBlenningsLive"
+  podcast: "@KeepMeYoungPod"
+  email_public_thread: jakeblennings@gmail.com
+  talent: "Stephanie O'Brien — FWB Talent (stephanie@fwbtalent.com)"
+
+bio:
+  summary: |
+    **Blake Jennings** (YouTube **@jakeblennings**, ~577k subscribers as of 2026-07) makes
+    long-form video essays under the banner **An Unnecessary Analysis**. Best known for the
+    **"War Crimes of the … Community"** series — Stardew Valley, The Sims, World of Warcraft /
+    related game communities, Pokémon, Animal Crossing, Zelda, and others — comic forensic
+    deep-dives into fandom ethics, drama, and institutional failure.
+  note: |
+    Don cold-commented the Sims "war crimes" video (call-out at t=274); talent manager Stephanie
+    looped Blake in; Blake replied enthusiastically 2026-07-16. Outreach in flight.
+
+flagship_videos:
+  - id: sims-war-crimes
+    title: "The War Crimes of the Sims Community | An Unnecessary Analysis"
+    url: https://www.youtube.com/watch?v=zMD44gcSIJw
+    note: "Don call-out ~t=274 — the ping that started outreach"
+  - id: stardew-war-crimes
+    title: "The War Crimes of the Stardew Valley Community | An Unnecessary Analysis"
+    url: https://www.youtube.com/watch?v=UyEPu8v8Lus
+  - id: wow-war-crimes
+    title: "The War Crimes of the World of Warcraft Community | An Unnecessary Analysis"
+    url: https://www.youtube.com/watch?v=OGV5uPmFzrE
+    uploaded: "2026-05-15"
+    duration: "48:59"
+    bannon_beat: "https://youtu.be/OGV5uPmFzrE?t=2404"  # ~40:04 — WoW gold farming → "monster he is today"
+    note: |
+      Steve Bannon owned a WoW gold-farming business before Breitbart/politics.
+      Don: "I have other pointed comments… pull my finger."
+
+relationship:
+  kind: community_analyst_invitee
+  don_connection: |
+    Blake named Don in the Sims community war-crimes essay; Don emailed via Stephanie;
+    Blake replied wanting to hear more about the Will Wright project (2026-07-16).
+
+show_relevance:
+  primary: repo-shows/will-wright-premiere/
+  hooks:
+    - "Community ethics essayist who already understands Sims history + named Don on camera"
+    - "Repo Show as the opposite of toxic YouTube comments — living collaboration after the essay"
+    - "Could retro-package Unnecessary Analysis videos as Repo Shows (links, sources, discussions)"
+    - "Stack with Ellpeck / Tiny Life — Soul City bridge + 'war crimes of Tiny Life' invert (trolls = the crime)"
+
+see_also:
+  - README.md
+  - invitation.md
+  - ideas.md
+  - ../ellpeck/
+  - ../ellpeck/bridge/soul-city-bridge.md
+  - ../plumbella/
+  - ../lilsimsie/
+  - ../james-turner/
+  - ../will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
