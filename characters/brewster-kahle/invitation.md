@@ -16,10 +16,11 @@ Brewster —
 
 I'm **Don Hopkins**, in Amsterdam. I work with **Will Wright** (SimCity, The Sims, Stupid Fun Club) and I'm
 producing **Will Wright Show for Food** — a **Repo Show**: a friendly recorded conversation whose
-**stage and product is a public GitHub repository** (not a metaphor — the working tree of sources,
-transcripts, demos, and credited ideas). Think Archive instinct applied to conversation: keep the
-bits alive so people can build on them, not a dead mp4 with a comment fight. Full picture in your
-[`README.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brewster-kahle/README.md#how-github-is-a-stage).
+**stage and product is a public GitHub repository**. Not a new medium — a reframing of git/GitHub
+for audience-participation, time-shifted shows (blogs/podcasts/YouTube are dead files; the repo
+stays alive). Quite literally an **adventure**: **MOOLLM** = LambdaMOO + LLM orchestration — The
+Sims meets a programmable multi-user adventure, represented in the tree. Full picture:
+[`README.md` — How GitHub is a stage](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brewster-kahle/README.md#how-github-is-a-stage--quite-literally-an-adventure).
 I'd love to interview you for the show.
 
 ---

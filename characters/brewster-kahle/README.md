@@ -13,30 +13,39 @@ Steve Crocker, and **Tom Jennings**.
 
 ---
 
-## How GitHub is a stage
+## How GitHub is a stage — quite literally an adventure
 
-A blog is a dead text-and-picture show. A podcast is a dead mp3. A YouTube video is a dead file
-plus a comment fight. The **Internet Archive** already proved the opposite instinct: keep the
-bits *alive* so someone later can build on the early dreams, not only freeze the HTML.
+A blog is a dead text-and-picture show. A podcast is a dead mp3. A YouTube channel is a dead
+mp4 plus a toxic comment section. We're **not inventing a new medium** — we're **reframing an
+existing one** (git + GitHub) for audience-participation, **time-shifted** shows: hang out in
+the tree before, during, and after the performance; ask questions as issues and PRs that don't
+vanish into a chat scroll.
 
-A **Repo Show** applies that instinct to conversation. The stage **is** a public GitHub
-repository — not a metaphor for a venue, the actual working tree:
+The **Internet Archive** already proved the opposite of dead media: keep the bits *alive* so
+someone later can build on the early dreams, not only freeze the HTML. A **Repo Show** applies
+that instinct to conversation. The stage **is** a public GitHub repository — not a metaphor for
+a venue, the actual working tree.
+
+And yes — quite literally it **is** an adventure. **MOOLLM** means **LambdaMOO + LLM
+orchestration**: The Sims meets LambdaMOO (a programmable multi-user adventure), represented
+*in* a GitHub repo. Rooms, characters, props, and shows are files you can walk, fork, and leave
+souvenirs in — same social-spatial instinct as a MOO, same constructionist instinct as The Sims,
+shipped as a living collection instead of a landfill of description-box links.
 
 | Layer | What it does |
 |-------|----------------|
 | **git** | Full history — nothing lost; experiments on branches; tagged releases |
-| **GitHub** | The lobby — issues, pull requests, reviews, hanging out before / during / after |
-| **The show** | Recorded conversation (solo clip, call, or in-person) whose *product* is files in the tree: sources, transcripts, demos, credited ideas |
+| **GitHub** | The lobby / MMORPG layer — issues, pull requests, reviews, hanging out |
+| **MOOLLM** | The adventure — rooms and characters as navigable files; LLM orchestration optional |
+| **The show** | Recorded conversation (solo clip, call, or in-person) whose *product* is files in the tree |
 
-You do **not** need to know git to appear. Easiest path: record a short video when convenient;
-Don places it with sources and credit in your room. Harder paths (live call, multi-guest, face-to-face
-in Amsterdam) when logistics work. Audience questions can arrive as issues and PRs — TicketPRs —
-instead of vanishing into a chat scroll.
+You do **not** need to know git (or MOOs) to appear. Easiest path: record a short video when
+convenient; Don places it with sources and credit in your room. Harder paths (live call,
+multi-guest, face-to-face in Amsterdam) when logistics work.
 
 **Will Wright Show For Food** is the first Repo Show Don is producing with Will — to prove the
-format and leave a living collection, not a landfill of description-box links.
-
-Format deep dive: [`process/FORMAT.md`](../../process/FORMAT.md)
+format. Format deep dive: [`process/FORMAT.md`](../../process/FORMAT.md) · MOOLLM:
+[SimHacker/moollm](https://github.com/SimHacker/moollm)
 
 ---
 
