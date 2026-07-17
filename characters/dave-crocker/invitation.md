@@ -31,6 +31,8 @@ Your Facebook comment is the kind of primary-color memory we want on the record:
 - Brother at **ARPA**; you learned **NLS** on the **text interface** first.
 - ARC monitored access and **invited you to Menlo Park** for the mouse-and-keypad class.
 - The team's tone: **"Come on in, the water's fine."**
+- **Washington Hilton, Fall 1972** — you needed help, only Doug was on the system, he asked
+  *where in the room?* — and he was sitting across from you.
 - The **paragraph-oriented** NLS model — serious enough that you emulated it in **PL/1** for a
   **Counselor's Manual** on a student crisis hotline you ran.
 - And then decades of **RFC 733 / RFC 822** — the mail format arc that still underlies every message

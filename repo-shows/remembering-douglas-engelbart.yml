@@ -52,7 +52,7 @@ guests:
     in_repo: ../characters/dave-maynard/sources/internet-old-farts-mouse-thread-2022.md
   - name: "David H. Crocker"
     character: characters/dave-crocker/
-    connection: "Personal NLS learner via brother Steve at ARPA — text interface first, invited to Menlo Park mouse/keypad class. Witness to ARC collaborative tone ('Come on in, the water's fine'). Emulated NLS paragraph model in PL/1 for a student crisis-hotline Counselor's Manual. RFC 733/822 author; NLS-mail → Internet-mail lineage. Facebook Jul 2026 thread with Don on Engelbart article + Ted Nelson tribute room."
+    connection: "Personal NLS learner via brother Steve at ARPA — text interface first, invited to Menlo Park mouse/keypad class. Witness to ARC collaborative tone ('Come on in, the water's fine'). Washington Hilton Fall 1972 — Doug across the ballroom on text chat. Emulated NLS paragraph model in PL/1 for a student crisis-hotline Counselor's Manual. RFC 733/822 author; NLS-mail → Internet-mail lineage. Facebook Jul 2026 thread with Don rebutting the viral $10k Engelbart piece + Ted Nelson tribute room."
     verified: true
     in_repo: ../characters/dave-crocker/sources/facebook-engelbart-collaborative-tone-2026.md
   - name: "Bret Victor"

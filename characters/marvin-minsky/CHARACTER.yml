@@ -39,6 +39,7 @@ memorial:
     - "Perceptrons (1969, with Papert) — the analysis that reshaped neural-network research"
     - "Frames (1974) and K-lines (1980) — knowledge representation + a theory of memory (K-lines anchor MOOLLM)"
     - "The Society of Mind (1986) — mind as a society of small, mindless agents; and The Emotion Machine (2006)"
+    - "Jokes and their Relation to the Cognitive Unconscious (1980/81) — humor as recognizing cognitive bugs; censors; frame confusion (AI Memo 603)"
     - "Invented the confocal scanning microscope (1957); built early robotic arms; advised on HAL in 2001: A Space Odyssey"
     - "The 'Ultimate Machine' (1952, Bell Labs) — a box whose only function is to switch itself off (Claude Shannon built the first; Arthur C. Clarke called it 'unspeakably sinister'); and the Triadex Muse, an early algorithmic music sequencer (the repo's Ultimate Machine bot mascot grows from this)"
     - "ACM Turing Award (1969); founding member of the MIT Media Lab (1985)"
@@ -63,9 +64,11 @@ sources:
   papers:
     - "K-lines: A Theory of Memory (1980)"
     - "A Framework for Representing Knowledge (1974) — frames"
+    - { title: "Jokes and their Relation to the Cognitive Unconscious (1980/81)", digest: sources/jokes-and-the-cognitive-unconscious.md, canonical: "https://github.com/SimHacker/moollm/blob/main/skills/no-ai-joking/MINSKY-JOKES.md" }
   blogs: []
 
 see_also:
+  - { path: sources/jokes-and-the-cognitive-unconscious.md, why: "Humor as cognitive bug recognition — AI Memo 603" }
   - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
   - { path: ../ultimate-machine/, why: "His 1952 'Ultimate Machine,' now a fictional bot mascot here (never speaks as him)" }
   - { path: ../henry-minsky/, why: "His son — can discuss him on air" }
