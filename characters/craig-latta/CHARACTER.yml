@@ -42,6 +42,7 @@ see_also:
   - { path: keep.md, why: "Keep — reflective agent memory; Craig's Smalltalk whiteroom port" }
   - { path: from-alan-kay.yml, why: "Qwaq 2008 intro via Alan; Vanessa memorial invite" }
   - { path: ../don-hopkins/sources/2011-reddit-mvc-flame-morphic.md, why: "Don MVC flame → Morphic + Kay watchers — Craig show jam" }
+  - { path: ../don-hopkins/sources/2005-2006-whatssa-controller-anyway.md, why: "Baypiggies + lua-l primaries — Morphic, ScriptX services" }
   - { path: ../alan-kay/media/discussions/hn-mvc-morphic-watchers-2015.md, why: "Same Kay email on HN; Morphic vs MVC" }
   - { path: ../alan-kay/people-index.yml, why: "Kay mentions cross-index" }
   - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses — self or assisted contribution" }

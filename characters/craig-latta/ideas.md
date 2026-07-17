@@ -18,12 +18,16 @@ walk the repo on air and build from the seed.
 in-person on-camera; remember Vanessa
 
 ### 3. Morphic vs cargo-cult MVC — Don’s 2011 Reddit flame + Alan Kay
-Harvest: [2011-reddit-mvc-flame-morphic.md](../don-hopkins/sources/2011-reddit-mvc-flame-morphic.md)
+Harvest: [2011-reddit-mvc-flame-morphic.md](../don-hopkins/sources/2011-reddit-mvc-flame-morphic.md) ·
+primaries: [Whatsa Controller Anyway? 2005–06](../don-hopkins/sources/2005-2006-whatssa-controller-anyway.md)
+([Baypiggies Wayback](https://web.archive.org/web/20081027202900/https://deirdre.org/pipermail/baypiggies/2005-April/000918.html) ·
+[lua-l MARC](https://marc.info/?l=lua-l&m=115687537130296))
 
-Don (u/xardox) torching a “MVC for games” tutorial — controllers as Gilbert Gottfried on a date;
+Don (u/xardox) torching a “MVC for games” tutorial — controllers as Gilbert Godfrey on a date;
 view owns drawing *and* reverse-projected input; Smalltalk moved on → **Morphic**. Thread includes
 Alan Kay’s email (cameras/worlds good, machinery bad; **watchers**; unsolved inverter; HyperCard
-construction). Sibling: [HN 2015 Kay/Morphic](../alan-kay/media/discussions/hn-mvc-morphic-watchers-2015.md).
+construction). Roots: NeWS/ScriptX **tracking services**, DreamScape “no controllers.” Sibling:
+[HN 2015 Kay/Morphic](../alan-kay/media/discussions/hn-mvc-morphic-watchers-2015.md).
 
 **Jam with Craig:** what should the audience *see* in Caffeine that MVC tutorials never show? Where
 would a Controller class go on a live page — and why doesn’t it? Kay’s watchers vs Morphic halos.

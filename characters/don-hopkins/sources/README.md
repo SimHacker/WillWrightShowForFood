@@ -6,8 +6,10 @@
 
 | Read | What |
 |------|------|
+| [Whatsa Controller Anyway? (2005–06)](2005-2006-whatssa-controller-anyway.md) | Baypiggies + lua-l primaries — Morphic, NeWS/ScriptX services, DreamScape, Gilbert Godfrey |
 | [2011 Reddit MVC flame → Morphic](2011-reddit-mvc-flame-morphic.md) | u/xardox vs cargo-cult MVC; Kay email; Morphic payoff — Craig Latta show fuel |
 | [Garnet/Laszlo → Svelte × Snap!](micropolis-svelte-snap-constraint-bridge.md) | Constraints + prototypes bridge |
+| [ScriptX DreamScape room essay](../kaleida-scriptx-dreamscape-multimedia-lisp-machine.md) | Kaleida multimedia Lisp machine; WWDC 1995 |
 
 Sibling (same Kay email on HN): [`../../alan-kay/media/discussions/hn-mvc-morphic-watchers-2015.md`](../../alan-kay/media/discussions/hn-mvc-morphic-watchers-2015.md)
 

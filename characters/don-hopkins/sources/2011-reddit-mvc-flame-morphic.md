@@ -8,6 +8,13 @@
 
 **Why harvest:** show fuel for **[Craig Latta](../../craig-latta/)** — Morphic / live objects / Caffeine — and the Alan Kay “watchers” line already mirrored on HN.
 
+**Primary roots (Don quotes these in-thread):**
+
+| Post | Link |
+|------|------|
+| Baypiggies 2005 — *Whatsa Controller Anyway?* (full NeWS/ScriptX/DreamScape) | [`2005-2006-whatssa-controller-anyway.md`](2005-2006-whatssa-controller-anyway.md) · [Wayback](https://web.archive.org/web/20081027202900/https://deirdre.org/pipermail/baypiggies/2005-April/000918.html) |
+| lua-l 2006 — *Re: Lua MVC web framework?* | [MARC](https://marc.info/?l=lua-l&m=115687537130296) · same harvest doc |
+
 **Sibling (same Alan email, HN 2015):** [`../../alan-kay/media/discussions/hn-mvc-morphic-watchers-2015.md`](../../alan-kay/media/discussions/hn-mvc-morphic-watchers-2015.md)
 
 ---
@@ -96,11 +103,11 @@ Same text Don later posted on HN (2015). Verbatim from Don’s Reddit comment:
 
 Long exchange with u/RevoltingX: Rails templates-as-views, “no code in the view,” “controller draws” — Don’s point is exactly that **redefining M/V/C per platform** is the disease. Interactive UI views have drawing *and* input code; Apple’s own `UIView` docs list touch handling; controllers as kitchen sinks are cargo cult. Summarize on air; don’t re-litigate the whole flame war.
 
-Also cited by Don in-thread:
+Also cited by Don in-thread (full harvest):
 
+- [`2005-2006-whatssa-controller-anyway.md`](2005-2006-whatssa-controller-anyway.md) — Baypiggies + [lua-l MARC](https://marc.info/?l=lua-l&m=115687537130296)
 - C2: [WhatsaControllerAnyway](http://c2.com/cgi/wiki?WhatsaControllerAnyway)
-- Lua list 2006-08-29 — Don: “Controllers can be like having Gilbert Godfrey along as a third leg on a date”; Smalltalk moved beyond MVC; Spring IoC / Laszlo binding as alternatives
-- BayPiggies 2005 — “Whatsa Controller Anyway?”
+- ScriptX tracking / DreamScape WWDC — art.net links in the Baypiggies post; room essay [`../kaleida-scriptx-dreamscape-multimedia-lisp-machine.md`](../kaleida-scriptx-dreamscape-multimedia-lisp-machine.md)
 
 ---
 
