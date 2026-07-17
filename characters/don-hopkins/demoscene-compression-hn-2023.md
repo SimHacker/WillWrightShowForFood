@@ -40,3 +40,5 @@ Thread debate: is 64K demo "compression" or procedural synthesis? Don bridges **
 | **Audience** | "Poetry is compression" (ChainOfFools cite in thread) — meme tier? |
 
 Sibling HN archive: Spore stats → [`spore-stats-hn-2023.md`](spore-stats-hn-2023.md).
+
+Sibling (2026): Kevin Kelly latent space as medium → [`sources/2026-07-kevin-kelly-latent-space-as-medium.md`](sources/2026-07-kevin-kelly-latent-space-as-medium.md) · Wolfram mining → [`../stephen-wolfram/sources/2009-mining-computational-universe.md`](../stephen-wolfram/sources/2009-mining-computational-universe.md).

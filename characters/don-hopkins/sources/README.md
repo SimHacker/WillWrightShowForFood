@@ -2,6 +2,14 @@
 
 *Primary sources, HN harvests, and dossiers for the Repo Show room.*
 
+## Compression / latent space (2026 harvest)
+
+| Read | What |
+|------|------|
+| [Kevin Kelly — Latent Space as a New Medium + HN](2026-07-kevin-kelly-latent-space-as-medium.md) | Compression as medium; white-space prospecting; Truthiness caveat; Wolfram bridge |
+| [Demoscene UNESCO — compression as synthesis](../demoscene-compression-hn-2023.md) | Will/Eno/GDC/LLM compression through-line (sibling) |
+| Wolfram — Mining the Computational Universe | [`../../stephen-wolfram/sources/2009-mining-computational-universe.md`](../../stephen-wolfram/sources/2009-mining-computational-universe.md) |
+
 ## UI architecture / Morphic (harvest)
 
 | Read | What |

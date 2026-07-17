@@ -31,7 +31,11 @@ GLANCE→CARD→SKILL→README is multi-resolution coarse-graining of a knowledg
 ### 5. Wolfram Language live
 Run the acronym zoo and the skill tree as substitution systems on air.
 
+### 6. Mining vs latent prospecting
+[Mining the Computational Universe](sources/2009-mining-computational-universe.md) (2009 Azores + 2019 Edge) beside [Kevin Kelly’s latent-space white gaps](../don-hopkins/sources/2026-07-kevin-kelly-latent-space-as-medium.md): same verb, rule-space ore vs semantic-space ore. Pair with Jared Tarbell’s “Mining Computational Gems.”
+
 ## Sources
 
 - [`invitation.md`](invitation.md) · [`MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md`](MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md)
+- [`sources/2009-mining-computational-universe.md`](sources/2009-mining-computational-universe.md)
 - [writings.stephenwolfram.com](https://writings.stephenwolfram.com) · [wolframscience.com/nks](https://www.wolframscience.com/nks/)

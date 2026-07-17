@@ -11,8 +11,9 @@ irreducible microworlds you understand only by living in them.
 
 **The short invite:** [`invitation.md`](invitation.md)
 **The full argument (artifact, linkable):** [`MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md`](MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md)
+**Mining primary:** [`sources/2009-mining-computational-universe.md`](sources/2009-mining-computational-universe.md)
 **Show seed:** [`stephen-wolfram`](../../repo-shows/stephen-wolfram/README.md)
 
-[Invitation](invitation.md) · [Ideas](ideas.md) · [CARD](CARD.yml) · [Artifact](MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md)
+[Invitation](invitation.md) · [Ideas](ideas.md) · [CARD](CARD.yml) · [Artifact](MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md) · [Mining](sources/2009-mining-computational-universe.md)
 
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.
