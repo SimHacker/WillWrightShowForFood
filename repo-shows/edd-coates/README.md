@@ -1,29 +1,38 @@
 # A Repo Show with Edd Coates 🎮
 
-> **The Game UI Database & Ethical AI Archives** — 73k screens, one Guinness World Record, zero AI scraping.
+> **The Game UI Database & Ethical Archives** — Guinness-scale catalog, PadCrafter, *Game UI Bible*,
+> and a second episode that turns GUIDB misses into Gonzo redesign briefs.
 
-**Edd Coates** — UI artist, digital designer, creator of the **[Game UI Database](https://www.gameuidatabase.com/)**
-(Guinness World Record for largest digital archive of video game interfaces). Author of
-*The Game UI Bible* (Lost in Cult, 2026). Creator of **PadCrafter 2.0**. Friend of Don Hopkins.
+**Audience bio (factual):** [`characters/edd-coates/README.md`](../../characters/edd-coates/README.md)
+
+**Edd Coates** — UI artist, digital designer, creator of the
+**[Game UI Database](https://www.gameuidatabase.com/)** (Guinness World Record for largest digital
+archive of videogame interfaces — 42,706 screens as of Nov 2022; archive continued growing;
+GUIDB 2.0 in 2024). Creator of **[PadCrafter](https://www.padcrafter.com/)**. Author of
+*The Game UI Bible* (Lost in Cult, forthcoming). Friend of Don Hopkins.
 
 Two archivists at the same problem from different angles: Edd preserves **screens** with taxonomy
 and curation; Don preserves **executable history** in public repos. Both care about attribution,
-anti-slop, and interfaces as cultural artifacts — not training fodder.
+anti-slop, and interfaces as cultural artifacts.
 
 ## Main episode
 
-- **Building the archive** — lockdown project → industry-standard tool used by AAA studios
-- **Ethical AI data licensing** — the anti-slop defense; Truffle-style paid, opt-in corpora
-- **The Game UI Bible** — 500 pages of UI history in print
-- **Trends across 1,800 games** — what's changing; where pie/radial menus still win
+- **Building the archive** — lockdown → Guinness → GUIDB 2.0; taxonomy that scales
+- **Ethical AI data licensing** — human-first archives; opt-in compensated corpora; Edd’s terms lead
+- **The Game UI Bible** — interactive UI → print
+- **PadCrafter** — control schemes as shared design objects
+- **Trends across 1,000+ games** — where radials/pie menus still win
 
 ## Second episode (same guest)
 
-[`pie-menus-piecraft.yml`](pie-menus-piecraft.yml) — *Pie Menus, Radials, and PieCraft* — browse GUIDB
-for what worked and what sucked; co-design the ultimate user-editable pie; **PieCraft** as UI literacy
-game. See [`pie-menus-discussion-notes.md`](pie-menus-discussion-notes.md).
+[`pie-menus-piecraft.yml`](pie-menus-piecraft.yml) — *Pie Menus, Gonzo UI, and PieCraft*
+
+Browse GUIDB for hits and misses; **rescue clinic** (keep the game’s face, fix the hands);
+Soul City **bridge skins**; ultimate editable pies; PieCraft as UI literacy through play.
+Notes: [`pie-menus-discussion-notes.md`](pie-menus-discussion-notes.md).
 
 See [`SHOW.yml`](SHOW.yml) · [`invitation`](../../characters/edd-coates/invitation.md) ·
-[`suggested-questions.yml`](suggested-questions.yml). Consent **not yet asked**.
+[`ideas.md`](../../characters/edd-coates/ideas.md) · [`suggested-questions.yml`](suggested-questions.yml).
+Consent **not yet asked**.
 
 — Don Hopkins *(User Interface Flower Child)*

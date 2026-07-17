@@ -21,7 +21,7 @@ game_ui_database:
 
 ethical_ai_licensing:
   - id: the-anti-slop-defense
-    q: "Your site explicitly prohibits AI scraping. As an independent archivist, how do you enforce that boundary in practice while keeping the resource open for human designers?"
+    q: "GUIDB is built for working human designers. How do you want AI companies and model trainers to treat a curated archive like yours — and what boundaries matter most to you?"
   - id: the-truffle-model
     q: "If AI companies are starving for high-density, expert-verified data, how can independent creators build ethical licensing models where they actually get paid fairly for their life's work?"
   - id: protecting-curation
@@ -54,6 +54,12 @@ pie_menus_and_piecraft:
     q: "Monster Hunter World's radial menus are praised for high-skill play. What makes them successful in your analysis?"
   - id: what-sucked
     q: "Common failure modes for radial/pie menus — moving targets, too many slices, poor feedback?"
+  - id: reinterpret-bad-uis
+    q: "We're building skinnable Gonzo UI for Soul City bridges — keep each game's visual identity, replace bad gesture chrome with pies and tabbed frames. Pick a GUIDB screen that looks great but feels awful: what would you keep in the costume, and what would you throw out of the hands?"
+  - id: guidb-as-brief
+    q: "If designers used Game UI Database examples as redesign briefs — cite the screen, keep the soul, fix the ergonomics — what metadata or tags would make that workflow easier without turning GUIDB into training scrap?"
+  - id: bridge-skin-glance
+    q: "Imagine Sims, Stardew, and Tiny Life bridge windows open at once, each wearing a skin that evokes its game but all sharing the same pie/tab kernel. What visual cues from your catalog would make those three unmistakable at a glance?"
   - id: ultimate-editable-pies
     q: "Designing the ultimate flexible, user-editable pie menu today — loadouts, sharing, accessibility?"
   - id: piecraft-concept
@@ -62,3 +68,19 @@ pie_menus_and_piecraft:
     q: "Could there be a PieCrafter companion to PadCrafter for building and sharing pie layouts?"
   - id: anti-slop-pies
     q: "Expert-annotated pie examples as ethical licensing corpus — would you want GUIDB examples included under attribution terms?"
+
+pixie_emulators_padcrafter_blinkenlights:
+  - id: tag-pixie
+    q: "If 1969 PIXIE — radial light-pen menus on a Cambridge PDP-7 and Type 340 — were a GUIDB entry, how would you tag it? Screen type, input modality, 'material'?"
+  - id: light-pen-vs-mouse-pies
+    q: "PIXIE pointed at glowing labels with a light pen; modern pies often use mouse-ahead angle-at-release. Same radial idea, different hands — what does your catalog say about point-at vs gesture-through radials?"
+  - id: spacewar-ancestry
+    q: "Looking across GUIDB, where do you still see Spacewar! / blinkenlight / vector-console DNA in modern game HUDs — sparse status, cockpit grammar, diegetic lights?"
+  - id: engelbart-keyset
+    q: "Engelbart's demo used a mouse and a chord keyset together. PadCrafter already charts DualSense and keyboard chords — would an Engelbart keyset template belong in the same tool?"
+  - id: virtual-light-pen
+    q: "We're trying to get PIXIE runnable again via PDP-7 / Type 340 emulation (Lars Brinkhoff). What should a virtual light pen feel like in a 2026 UI — stylus, tracking cross, pie that lights under the pen?"
+  - id: padcrafter-front-panels
+    q: "Wild idea: use PadCrafter to design old-school computer front panels for emulators — toggle switches, blinkenlight registers, RUN/STOP — as shareable URL layouts the way game teams share control schemes. Does that feel like a natural extension or a different product?"
+  - id: emulator-chrome
+    q: "Do you already collect emulator chrome — CRT shaders, pause overlays, front-panel skins — as its own kind of game UI, or is that still a gap in the archive?"

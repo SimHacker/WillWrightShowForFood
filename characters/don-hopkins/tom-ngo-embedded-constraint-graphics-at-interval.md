@@ -147,6 +147,9 @@ Full thread receipts: private archive, `DonHopkins` repo, correspondence.
 | [Breakfast simplex & barycentric UI](breakfast-simplex-barycentric-direct-manipulation.md) | Don's 2025 HN essay — ECG applied to egg/milk/flour space |
 | [Pie menus CHI'88](pie-menus-chi-88-and-beyond.md) | Direct manipulation in practice — radial menus as simplex UI |
 | [Golan Levin](../golan-levin/README.md) | Mouther, computational media at Interval and CMU |
+| [Tom Ngo](../tom-ngo/README.md) | Character room + invite |
+| [Repo Show seed — Tom + Golan ECG/Mouther](../../repo-shows/tom-and-golan-ecg-mouther/) | Pair brainstorm (SVG/Canvas/WebGPU); conversation not code |
+| [Brainstorm heartbeat](../../process/brainstorm-heartbeat.md) | Guests talk designs; others implement |
 | [Direct manipulation trail](../../process/trails/direct-manipulation.md) | Broader Repo Show thread |
 
 *HN primary source:* [news.ycombinator.com/item?id=12572696](https://news.ycombinator.com/item?id=12572696)

@@ -16,9 +16,12 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: not_yet_asked
+  status: draft
   consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/tom-and-golan-ecg-mouther/
   warm_contact: true   # Interval colleague; in touch since — post-patent-expiry ECG conversations
+  note: "Brainstorm heartbeat — conversation not code; pair with Golan on ECG/Mouther"
 
 known_for:
   - "Embedded Constraint Graphics (ECG) at Interval Research — example poses at simplex vertices; drag features, solve barycentric blend weights (Moore–Penrose pseudoinverse of a Jacobian)"
@@ -44,6 +47,11 @@ sources:
   mouther: "https://www.flong.com/archive/projects/mouther/"
 
 see_also:
+  - { path: README.md, why: "Audience-facing bio" }
+  - { path: invitation.md, why: "Guest invite" }
+  - { path: ideas.md, why: "Brainstorm hooks — SVG/Canvas/WebGPU, Mouther recover vs reverse-engineer" }
+  - { path: ../../repo-shows/tom-and-golan-ecg-mouther/, why: "Pair show seed with Golan" }
+  - { path: ../../process/brainstorm-heartbeat.md, why: "Conversation not code — why invites are easy" }
   - { path: ../golan-levin/, why: "Mouther — built the vector faces in Tom's ECG editor; dream co-guest pair" }
   - { path: ../don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md, why: "The full ECG essay — mechanism, patent, HN thread, modern echoes" }
   - { path: ../../apps/performance-space/faceball-construction-set.yml, why: "ECG is the example-based blend engine for FBCS faces and parameterized parts" }

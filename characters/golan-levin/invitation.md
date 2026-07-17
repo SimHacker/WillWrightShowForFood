@@ -3,26 +3,31 @@ status: draft
 character_id: golan-levin
 public: true
 consent: not_yet_asked
-show_seed: repo-shows/golan-levin/
+show_seed: repo-shows/tom-and-golan-ecg-mouther/
+format: remote_or_in_person
+priority: warm_contact
 ---
 
 # Repo Show invitation — Golan Levin
 
-*Golan Levin may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers quiet mode and onboarding.*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
-**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
+*[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — edit, decline, delay, or request removal anytime, or take direct edit access; also covers quiet mode and onboarding.*
 
-We would respectfully invite **Golan Levin** to a **Repo Show** — a friendly recorded conversation whose stage is [this public GitHub repository](https://github.com/SimHacker/WillWrightShowForFood),
-following through to working code and credited ideas in public.
+Golan —
 
-**Proposed focus:** Interactive / computational media art, creative coding, gestural & audiovisual interfaces, generative systems, critical making, art-as-research education
+**The ask is conversation, not code.** Brainstorm designs, tradeoffs, elegant paths — we write them down in the public repo for others to play with. Zero homework; as much *homefun* as you like later. ([Why that works](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/brainstorm-heartbeat.md))
 
-**Materials:** [`repo-shows/golan-levin/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/golan-levin/README.md)
+**Facts:** **Will Wright is in** — [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md). At Interval you (with Malcolm Slaney) made **[Mouther](https://www.flong.com/archive/projects/mouther/)** on **[Tom Ngo](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/tom-ngo/)**’s ECG editor — drag the face, solve the blends. The patent’s expired. I’d love a Repo Show brainstorm: do the cartoons still exist somewhere, or do we reverse-engineer; how would a modern ECG engine look in SVG / Canvas / WebGPU; how that feeds Faceball / morph-target faces. **Nobody has to implement on air.**
 
-Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
+Solo threads welcome too — flong-as-archive, *Code as Creative Medium*, gestural AV, *Rouen Revisited* with [Paul](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/paul-debevec/) if that sparks.
 
-**Your response:** Accepted, delayed, too busy, declined, or no reply — all honored gracefully.
+**Your room:** https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/golan-levin/README.md  
+**Ideas:** https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/golan-levin/ideas.md  
+**Pair seed (Tom + you):** https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/tom-and-golan-ecg-mouther/
 
-— Don Hopkins *(User Interface Flower Child)*
+Yes / later / no — all honored.
 
-*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*
+— Don Hopkins *(the User Interface Flower Child)* 👤🌀
+
+`🎛️ flong` · `👄 Mouther` · `🔺 ECG` · `🧠 brainstorm not code`
+
+*P.S. Quiet mode — please don't share links publicly just yet.*

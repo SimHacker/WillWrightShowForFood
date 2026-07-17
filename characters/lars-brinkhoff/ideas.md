@@ -61,11 +61,23 @@ recordings intercut in post — see [`correspondence.yml`](correspondence.yml).
 | Mouse → light pen | Emulator interpolates modern mouse into pen hits — design interview |
 | Engelbart I/O | How mouse + keyset attached to PDP-10 — compare to Type 340 pen |
 
-Deliverable optional: discuss + document in repo; demo if Lars ships working code before recording.
+Deliverable: jam + notes in the repo. **No code obligation.** Demo only if something already works and Lars feels like showing it.
+
+### 5. AM Radio Simulator beside throttled big iron — **propose to Lars**
+
+Full write-up + video links: [`am-radio-simulator-proposal.md`](am-radio-simulator-proposal.md)
+
+- Emulators **throttled to real time** so compute rate lands where AM RFI used to sing
+- **AM radio simulator** (beeps/boops / Munching Tunes) as a sibling organelle — not an afterthought
+- **[GNU Radio](https://www.gnuradio.org/)** AM TX/RX in software ([tutorial](https://wiki.gnuradio.org/index.php/Simulation_example:_AM_transmitter_and_receiver))
+- A/B with classic demos: [Munching Squares + AM (Wayback)](https://web.archive.org/web/20200419194925/https://www.youtube.com/watch?v=V4oRHv-Svwc) · [Life + AM (Wayback)](https://web.archive.org/web/20200413075431/https://www.youtube.com/watch?v=hB78NXH77s4) · live [Spacewar! / PDP-1](https://www.youtube.com/watch?v=1EWQYAfuMYw)
+- Pair [Edd / PadCrafter blinkenlights](../edd-coates/ideas.md#pixie-pdp-7-light-pens-engelbart-emulators-padcrafter-blinkenlights) — switches that change the tune
 
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
+- [`am-radio-simulator-proposal.md`](am-radio-simulator-proposal.md) — AM radio + throttle + video playlist
 - [`correspondence.yml`](correspondence.yml)
+- [`pdp7-development.md`](pdp7-development.md)
 - Show seed: [`repo-shows/lars-brinkhoff/`](../../repo-shows/lars-brinkhoff/)
 - [`CHARACTER.yml`](CHARACTER.yml)

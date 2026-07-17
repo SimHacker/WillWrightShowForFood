@@ -15,34 +15,39 @@ show:
 
 the_core_idea: |
   Edd Coates built the Guinness World Record-holding Game UI Database — the industry's leading
-  reference tool for game UI/UX (73k+ screens, 1800+ games, used by Insomniac, Arkane, Double Fine,
-  Ubisoft Montreal, and more). His site explicitly bans AI scraping. Don is building the Repo Show
-  to preserve computing history as executable artifacts. Two UI archivists geeking out — and a
-  strategic conversation about how creators protect, monetize, and ethically license their life's
-  work in the LLM era.
+  reference tool for game UI/UX (record: 42,706 screens / 1,013 games as of Nov 2022; archive
+  continued growing through GUIDB 2.0 and beyond; studios Edd lists include Insomniac, Arkane,
+  Double Fine, Ubisoft Montreal). Built for working human designers. Don is building the Repo Show
+  to preserve computing history as executable artifacts. Two UI archivists geeking out — plus how
+  creators protect, monetize, and ethically license curated archives in the LLM era (Edd's terms lead).
 
 why_him:
-  guidb: "Creator of the [Game UI Database](https://www.gameuidatabase.com/) — Guinness World Record (Nov 2022, 42,706+ screens; now 73k+). Game UI Database 2.0 (Aug 2024): video, colour filtering, image inspector."
-  game_ui_bible: "*The Game UI Bible* — 500+ page historical reference, Lost in Cult, 2026."
-  padcrafter: "PadCrafter 2.0 — widely used tool for controller-layout / button UX problems."
+  guidb: "Creator of the [Game UI Database](https://www.gameuidatabase.com/) — Guinness World Record (Nov 2022, 42,706 screens). Game UI Database 2.0 (Aug 2024): video, colour filtering, image inspector."
+  game_ui_bible: "*The Game UI Bible* — 500+ page historical reference, Lost in Cult (forthcoming)."
+  padcrafter: "PadCrafter 2.0 — free controller / KB layout builder (URL share, SVG/PNG export)."
   awards: "Pocket Gamer Best Tools Provider 2021; Game Dev Heroes — Game Design Hero 2021."
-  don_friend: "Friend of Don Hopkins — natural pairing for pie-menu archaeology + ethical corpus strategy."
+  don_friend: "Friend of Don Hopkins — pie-menu archaeology, Gonzo reinterpret, ethical corpus strategy."
 
 threads:
-  - "Pandemic project → Guinness World Record — taxonomy and architecture of 73k screens"
-  - "The anti-slop defense — GUIDB bans AI scraping; opt-in licensing where creators get paid"
+  - "Pandemic project → Guinness World Record → GUIDB 2.0 — taxonomy that scales"
+  - "Ethical archives — human-first design reference; AI training / scrape boundaries; opt-in licensing"
   - "The Game UI Bible — translating interactive screens to print"
-  - "UI trends across 1,800 games — what shifted; where radials/pie menus land today"
+  - "UI trends across 1,000+ games — what shifted; where radials/pie menus land today"
+  - "Reinterpret bad UIs — GUIDB misses as briefs; Gonzo pies/tabs keep the game's face, fix the hands"
   - "Executable archives vs screenshot archives — Repo Show + GUIDB complementarity"
   - "Micropolis / The Sims UI in GUIDB taxonomy — what makes them historically unique"
 
 dream_segments:
   - "Browse GUIDB live — pull up pie/radial standouts and failures side by side."
+  - "Rescue clinic — beautiful-but-painful screen → sketch a Gonzo reinterpret (skin tokens + pie/tab layout)."
+  - "PIXIE cold open — 1969 light-pen radials vs modern GUIDB wheels; then PadCrafter a PDP blinkenlight panel live."
   - "Whiteboard ethical data licensing — Truffle-style expert-verified corpora with attribution."
   - "Map The Sims pie menus into GUIDB categories with Don's firsthand context."
 
 pairings:
-  - { with: pie-menus-piecraft.yml, why: "Second episode — ultimate editable pies + PieCraft UI literacy" }
+  - { with: pie-menus-piecraft.yml, why: "Second episode — GUIDB-guided reinterpret + ultimate editable pies + PieCraft UI literacy" }
+  - { with: pixie-pie-menus-pdp7.yml, why: "PIXIE / PDP-7 / light pen / Lars emulator — Edd as GUIDB + PadCrafter blinkenlights lens" }
+  - { with: remembering-douglas-engelbart.yml, why: "Engelbart mouse + chord keyset ancestry next to PadCrafter chord charts" }
   - { with: pie-menus-retrospective.yml, why: "Don reimplements pies from scratch" }
   - { with: ben-and-heinz-pie-menus.yml, why: "PIXIE → CHI'88 historical spine" }
   - { with: brad-myers-garnet-vpl.yml, why: "CMU pie-menu guest lecture lineage" }

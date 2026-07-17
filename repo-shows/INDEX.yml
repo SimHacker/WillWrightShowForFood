@@ -1,7 +1,8 @@
 # SHOWS — one document per show proposal
 #
-# Each show is a streamed conversation that FOLLOWS THROUGH to implementation
-# (Repo Show methodology). Two axes:
+# Each show is a streamed conversation that FOLLOWS THROUGH — designs land in the
+# repo; implementation is optional *homefun* (guests need not code — brainstorm-heartbeat).
+# Two axes:
 #   solo:  one person × one topic (a person can do SEVERAL shows on different
 #          topics — especially Will Wright).
 #   group: multiple people × one topic.
@@ -14,8 +15,9 @@
 meta:
   status: proposals
   last_reviewed: 2026-06-25
-  standard_shape: "Per episode: (1) explain WHY the design works, (2) implement it from scratch with MOOLLM + Cursor."
+  standard_shape: "Per episode: (1) explain WHY the design works / brainstorm tradeoffs; (2) optional follow-through — guests need not code (../process/brainstorm-heartbeat.yml); audience/Don/homefun may implement with MOOLLM + Cursor."
   github_native: "Each show's durable artifact is a PUBLIC GitHub repo: participants upload + review beforehand, edit live, viewers file HN-style discussion issues in real time. See ../process/design-in-public.yml github_native."
+  brainstorm_heartbeat: ../process/brainstorm-heartbeat.yml
 
 # State: PLANTED = a directory (cloned from templates; seed kept beside + synced).
 #        SEED    = a single <name>.yml file (plant when ready).
@@ -30,7 +32,8 @@ shows:
     steve-wozniak/:            "Topic-less kickoff with Steve Wozniak. Apple II, 6502, open hardware, and browser-based emulators."
     terry-winograd/:           "★ FOREBEAR SHOW. Terry Winograd as the dragon with the treasure trove of videos (CS547 archive). Stands explicitly on Terry's shoulders + the shoulders of all his great guests (Will 1996, Gosling Java 1995, Joy Mountford 1994, Raskin, Norman, etc.). Archive recovery, modern runnable seeds, Repo Show continuation, Connections series spine. (Pie menus = Don's own thread, not Joy Mountford's — corrected.)"
     rebounce/:                 "★ REBOUNCE. Salute to Bounce (né Body Electric): check in Don's original Bounce source, and invite many people to rewrite it — by hand AND with AI, competing + cooperating + exchanging ideas. Seeded by David Levitt + Don's discussions; Jaron Lanier (VPL co-founder & Body Electric visionary — lead designer/programmer was Chuck Blanchard) guest of honor for the origin story. The patch-cord/dataflow half of the Snap! visual-engines vision. History: ../characters/don-hopkins/body-electric-bounce-vr-stack.md."
-    edd-coates/:                "★ Edd Coates — Game UI Database (Guinness); Game UI Bible; ethical AI licensing; friend of Don. Ep.2 pies/PieCraft. send_now."
+    edd-coates/:                "★ Edd Coates — factual README ready; GUIDB Guinness + PadCrafter + Game UI Bible; ep.2 pies/Gonzo/bridge reinterpret. Friend of Don. email soon / send_now."
+    tom-and-golan-ecg-mouther/: "★ PAIR Tom Ngo + Golan Levin — ECG & Mouther brainstorm (SVG/Canvas/WebGPU; recover vs reverse-engineer cartoons). Conversation not code. warm_contact."
     clint-basinger/:        "★ Clint Basinger (LGR) — Maxis/Micropolis/preservation; audience bridge to Sims fandom. send_now. (was lgr/)"
     marc-canter/:              "★ Marc Canter — Director/Macromedia → People Aggregator; puppets + Pink Trombone; three-hander w/ David Levitt. send_ready."
     bret-victor/:               "★ Bret Victor — explorable explanations + Micropolis legibility; Dynamicland honest beat. send_ready."
@@ -128,6 +131,7 @@ shows:
 bridges_architecture:
   hub: "Soul City is the HUB that all bridges lead to — a git-checked-in store holding many facets of each character in high-fidelity, round-trippable data."
   spokes: "Each game bridges to/from Soul City (a spoke). 'Proxi <-> Sims' really means Proxi <-> Soul City <-> Sims; any game-to-game path routes THROUGH the hub. Hub-and-spoke — like flying through Atlanta."
+  bridge_ui_skins: "Gonzo UI is totally skinnable — one skin pack per spoke so bridge chrome matches the game (Sims-evoking first). Multi-bridge sessions stay visually obvious when moving characters/content between worlds. Kernel stays game-agnostic. See MicropolisCore documentation/designs/GONZO-UI-MANIFEST.md."
   player_layer: "At a higher level, players define syncing workflows, constraints, and transformations between games and the hub (and onward to other games)."
   decoupling: "In principle a game need not know about any other game — only how to round-trip its own facets with Soul City. In practice a game MAY look for specific data it recognizes from a compatible game and special-case importing it."
   phasing:
@@ -154,7 +158,7 @@ backlog_ideas:
   - "Alan Kay — microworld-as-medium ('Repo Show with Alan Kay!')."
   - "Ben Shneiderman / Jack Callahan — pie menu origins (direct manipulation)."
   - "Chaim Gingold — Building SimCity as executable scholarship (seed exists: building-simcity-chaim-gingold.yml)."
-  - "Edd Coates — PLANTED → repo-shows/edd-coates/ (Game UI Database + pies/PieCraft). send_now."
+  - "Edd Coates — PLANTED → repo-shows/edd-coates/ (factual README + pies/Gonzo/PieCraft). email soon / send_now."
   - "Brad Myers — Garnet constraints, All the Widgets, VPL taxonomy (seed exists: brad-myers-garnet-vpl.yml; warm CMU history)."
   - "Scott Adams — interactive fiction; mutual seed exchange. PLANTED → repo-shows/scott-adams/ + characters/scott-adams/ (adventure engine → adventure compiler → MOOLLM; adventure + AI)."
   - "Eric Barone (ConcernedApe) — Stardew Valley; solo-dev success + farming-game resonance."

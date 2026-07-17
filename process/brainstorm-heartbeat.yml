@@ -1,0 +1,53 @@
+# BRAINSTORM HEARTBEAT — why guests say yes
+# The Repo Show asks for conversation, not code.
+
+meta:
+  id: brainstorm-heartbeat
+  status: active
+  type: [guest_policy, invitation_hygiene]
+  tagline: "Talk designs. Throw them in the repo. Others play. No coding required."
+
+the_heartbeat: |
+  Guests brainstorm ideas, discuss how they'd go about it, name alternatives,
+  tradeoffs, and elegant solutions — and we throw those designs into the public
+  repo for other people to play with. That is the heart of the show. That is why
+  invitations are easy to accept: we are not asking anyone to implement.
+
+guest_ask:
+  required: [talk, brainstorm, correct_us, point_at_elegant_paths]
+  optional: [homefun_later, ship_code, pair_program, bring_assets]
+  never_required: [implement_before_air, finish_a_prototype, homework]
+
+audience_and_repo:
+  - "Design notes, sketches, tradeoff tables land in the repo during/after the talk"
+  - "Homefun ([homefun-grading.yml](homefun-grading.yml)) — anyone may implement later"
+  - "Originators get credit; implementers get credit; nobody is on the hook to ship"
+
+inherits:
+  guest_prototype: ../characters/will-wright/guest-prototype.yml#respect_time
+  couple_shows: couple-and-solo-shows.yml#guest_prototype
+  line: "No homework — but as much *homefun* as you like."
+
+on_air_shapes:
+  - "Whiteboard alternatives — caricature vs full physics; SVG vs Canvas vs WebGPU"
+  - "Name the elegant solution even if nobody builds it this year"
+  - "Point at prior art and dead ends so others don't repeat them"
+  - "Leave a SETUP.md-shaped breadcrumb for whoever picks it up"
+
+examples:
+  - path: ../characters/lars-brinkhoff/am-radio-simulator-proposal.md
+    note: "Lars need not build AM radio sim — discuss throttle + GNU Radio tradeoffs; others implement"
+  - path: ../repo-shows/tom-and-golan-ecg-mouther/
+    note: "Tom + Golan brainstorm ECG/Mouther reverse-engineer + SVG/Canvas/WebGPU reimplementation paths"
+  - path: ../characters/edd-coates/
+    note: "GUIDB briefs and Gonzo reinterpret — design talk; skins may ship later"
+
+invitation_boilerplate: |
+  **The ask is conversation, not code.** Brainstorm designs, tradeoffs, elegant
+  paths — we write them down in the repo for others to play with. Zero homework;
+  as much *homefun* as you like later. See process/brainstorm-heartbeat.yml.
+
+see_also:
+  - guest-participation-ladder.yml
+  - homefun-grading.yml
+  - ../characters/will-wright/guest-prototype.yml

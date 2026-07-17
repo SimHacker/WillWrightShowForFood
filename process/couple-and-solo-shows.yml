@@ -202,6 +202,7 @@ guest_prototype:
     follows in Cursor time-shifted. Copy `respect_time` + `research_bundle` for anyone else.
 
 see_also:
+  - brainstorm-heartbeat.yml   # talk designs; others implement — why invites are easy
   - ../schemas/portrayal-standards.yml#guest_directory
   - ../characters/INDEX.yml
   - ../repo-shows/moollm-readings/

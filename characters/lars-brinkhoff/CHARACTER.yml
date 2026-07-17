@@ -58,8 +58,10 @@ sources:
   blogs: []
 
 ties_to:
+  - { path: am-radio-simulator-proposal.md, why: "Propose AM radio sim + real-time throttle beside PDP-7/340; munching/Life video playlist" }
   - { path: pdp7-development.md, why: "PDP-7 manuals, macro7/as7, Lars SIMH forks to clone for PIXIE segment" }
   - { path: ../heinz-lemke/, why: "PIXIE show co-guest — PDP-7 + Type 340 emulation segment on pixie-pie-menus-pdp7.yml" }
+  - { path: ../edd-coates/, why: "PadCrafter blinkenlights — sense switches that change Munching Tunes" }
   - ../thomas-cherryhomes/CHARACTER.yml
   - ../../process/pdp10-its-stack.yml
   - ../../process/challenges/pdp10-maclisp-drive.yml

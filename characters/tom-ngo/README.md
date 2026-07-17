@@ -1,43 +1,70 @@
 # Tom Ngo 🔺
 
-*Invitation portrayal — a respectful, source-grounded sketch, not Tom Ngo and not his words.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · consent not yet asked · authored by Don Hopkins
+*Portrayal of a real invitee, written by Don — not Tom.*
+[Portrayal standards](../../schemas/portrayal-standards.md)
 
-## Who
-
-**Tom Ngo** built **Embedded Constraint Graphics (ECG)** at **Interval Research** — a
-constraint-based animation system where example poses live at the vertices of a **simplicial
-complex**: drag the eyes, mouth, or limbs of a drawing the way you naturally want to, and the
-system solves your motion into **barycentric blend weights** (the same linear-algebra family as
-inverse kinematics). You manipulate concrete outcomes; the solver recovers the coordinates.
-Patent [US5933150](https://patents.google.com/patent/US5933150) (filed 1996, expired ~2016 —
-free to reimplement now). **[Golan Levin](../golan-levin/README.md)** used the ECG editor to
-build the vector faces of **[Mouther](https://www.flong.com/archive/projects/mouther/)**.
+**Tom Ngo** built **Embedded Constraint Graphics (ECG)** at **[Interval Research](../don-hopkins/interval-research-pluggers-and-mediaflow.md)** —
+a constraint-based animation system where example poses live at the vertices of a **simplicial
+complex**: drag the eyes, mouth, or limbs the way you naturally want to, and the system solves
+your motion into **barycentric blend weights**. Patent
+[US5933150](https://patents.google.com/patent/US5933150) (filed 1996, expired ~2016 — free to
+reimplement). **[Golan Levin](../golan-levin/)** used the ECG editor to build the vector faces of
+**[Mouther](https://www.flong.com/archive/projects/mouther/)** (with Malcolm Slaney on speech).
 
 > *Gluing high-dimensional simplices at their edges and faces is an extremely general way to
 > represent blending manifolds — in the same way that gluing polygons together has done us so
 > much good in 3D modeling.* — Tom Ngo, to Don, after the patent expired
 
-Full mechanism, patent walkthrough, and the G9.js Hacker News thread:
+*(Hypertext house rule: if we name it, we link it — [Ted Nelson](../ted-nelson/) smiles.)*
+
+---
+
+## Repo Show heartbeat
+
+**The ask is conversation, not code.** Brainstorm how you'd go about a design, the alternatives
+and tradeoffs, the elegant solution — we throw those notes into the public repo for others to
+play with. Zero homework; optional *homefun* later.
+([brainstorm-heartbeat.md](../../process/brainstorm-heartbeat.md) · Will’s
+[guest prototype](../will-wright/guest-prototype.yml))
+
+**[Will Wright](../will-wright/) is in** — [premiere](../../repo-shows/will-wright-premiere/README.md).
+
+---
+
+## Why Tom
+
+Don and Tom were Interval colleagues on the Camelot floor; the conversation never stopped.
+Since the patent expired they've discussed **applying ECG to morph-target 3D facial animation** —
+drag the face, solve blend-shape weights ([ARKit](https://developer.apple.com/documentation/arkit),
+FaceIt, etc.) instead of hand-tuning sliders. That idea loads the
+[Faceball Construction Set](../../apps/performance-space/faceball-construction-set.yml):
+**HOMER → NeWS Mona Eyes → Tom Ngo ECG / Mouther → Bounce → SimFaux → Squares in a Box.**
+
+Dream segment: **[Tom + Golan](../../repo-shows/tom-and-golan-ecg-mouther/)** — engine builder and
+artist — reverse-engineer or recover Mouther cartoons; whiteboard SVG / Canvas / WebGPU ECG paths.
+Nobody ships code on air.
+
+Full mechanism + G9.js HN thread:
 [`tom-ngo-embedded-constraint-graphics-at-interval.md`](../don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md).
 
-## Why a Repo Show
+---
 
-Don and Tom were Interval colleagues on the Camelot floor, and the conversation never stopped:
-since the patent expired they've been discussing **applying ECG to morph-target-based 3D facial
-animation** — drag the face on screen, solve the blend-shape weights (ARKit `ARFaceAnchor`
-coefficients, Blender FaceIt rigs) instead of hand-tuning sliders. That idea is a load-bearing
-part of the [Faceball Construction Set](../../apps/performance-space/faceball-construction-set.yml):
-ECG is the example-based blend engine for its puppet faces and parameterized soft-body parts, in
-the kit's stated lineage — **HOMER → NeWS Mona Eyes → Tom Ngo ECG / Mouther → Bounce commentary
-bots → SimFaux → Squares in a Box panel dummies.**
+## Links
 
-Dream segment: **Tom and Golan together** — the engine builder and the artist who played it —
-reimplementing a patent-free ECG live, then driving a 3D morph-target face with it.
+| What | Link |
+|------|------|
+| [Invitation](invitation.md) | Guest-facing ask |
+| [ideas.md](ideas.md) | Brainstorm hooks |
+| [Pair show — ECG & Mouther](../../repo-shows/tom-and-golan-ecg-mouther/) | With Golan |
+| [ECG essay](../don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md) | Patent + HN |
+| [Patent US5933150](https://patents.google.com/patent/US5933150) | Expired ~2016 |
+| [HN — G9.js / ECG](https://news.ycombinator.com/item?id=12572696) | Don + prior art |
+| [Mouther (flong)](https://www.flong.com/archive/projects/mouther/) | Golan + Slaney + Tom |
+| [Golan Levin](../golan-levin/) | Dream co-guest |
+| [Faceball Construction Set](../../apps/performance-space/faceball-construction-set.yml) | `ecg_blend` |
+| [Breakfast simplex](../don-hopkins/breakfast-simplex-barycentric-direct-manipulation.md) | Barycentric cousin |
+| [Direct manipulation trail](../../process/trails/direct-manipulation.md) | Lineage |
 
-## Browse
+↑ [Characters](../) · [Don Hopkins](../don-hopkins/)
 
-- ECG essay: [`../don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md`](../don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md)
-- Golan Levin / Mouther: [`../golan-levin/`](../golan-levin/README.md)
-- Faceball Construction Set: [`../../apps/performance-space/faceball-construction-set.yml`](../../apps/performance-space/faceball-construction-set.yml)
-- Direct manipulation trail: [`../../process/trails/direct-manipulation.md`](../../process/trails/direct-manipulation.md)
+*Quiet mode while invitations go out — please don't share links publicly just yet.*

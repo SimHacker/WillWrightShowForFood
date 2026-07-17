@@ -17,15 +17,20 @@ Lars replied yes, later — Swedish July vacation (2026). This letter was drafte
 
 Lars —
 
+**No obligation to write any code.** Just jam with us about how it would work — designs,
+tradeoffs, elegant paths. We throw those notes in the public repo for others (or future-you)
+to play with. Zero homework. ([Brainstorm heartbeat](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/brainstorm-heartbeat.md))
+
 You already **made it so** for a generation of hackers — rebuilding **PDP-10/ITS** from source,
 SIMH toolchains, nocrew.org rabbit holes, Emacs history, the MIT AI Lab film threads we traded
 (ITS #1866, Banks CA rule). When **David Chapman** finally got the 1969 **PIXIE** films online,
 my Bumblebee edit became possible — but film archaeology isn't the end state. Someone needs to map
-**PDP-7 + Type 340 + light pen** to emulators we can **boot on stream**. That's you.
+**PDP-7 + Type 340 + light pen** to emulators the world can boot. You've lived that map; we'd love
+to hear you talk through it.
 
 I'd like to invite you to a **Repo Show** — a friendly recorded conversation whose stage is a
-public GitHub repo, recorded as a relaxed video call. **Show, don't tell** — runnable iron on
-screen, forkable rig yaml and **SETUP.md** in the repo when we get there.
+public GitHub repo. **Talk first.** Runnable iron / rig yaml / **SETUP.md** are *homefun* for
+whoever gets excited later — not a condition of saying yes.
 
 **This invitation is for a group episode with Heinz and David** (details below). I still want a
 **separate ITS episode** with you — ideally paired with **Thomas Cherryhomes** (FujiNet,
@@ -43,19 +48,21 @@ same-machine memory ~1970, your emulation segment to make radial menus **runnabl
 | --- | --- |
 | **Heinz U. Lemke** | PIXIE co-author — lived Cambridge, 1969 film, light pen, Titan link, Wiseman & Hiles, CARS arc |
 | **David S. H. Rosenthal** | Same **PDP-7/340 + Titan** ~1970; met Wiseman; PIXIE → Andrew → NeWS → X11; **LOCKSS** preservation |
-| **You (Lars)** | **Type 340** + light pen → SIMH/emulation — make radial menus **runnable on stream** again |
+| **You (Lars)** | **Type 340** + light pen → SIMH/emulation — jam on how radial menus become **runnable again** (code optional) |
 
 Heinz and David are getting their own invitations today — personalized to them, about this same
 conversation. You don't need to coordinate with them; I will. If any of you prefers a shorter
 segment or a follow-up call instead of one long session, that's fine.
 
 **Suggested flow on air:** Heinz's history first → David on the same machine from ~1970 → **your**
-emulation segment → Heinz's CARS bridge → open Q&A. We intercut the 1969 film, the Bumblebee edit,
-and your emulator window when iron boots.
+emulation jam → Heinz's CARS bridge → open Q&A. We intercut the 1969 film and the Bumblebee edit;
+emulator window only if something already boots and you feel like showing it.
 
-**Make-it-so goal for your segment:** boot the closest faithful **PDP-7/340** stack (or honest
-stepping stone); capture at least one radial-menu interaction on stream; ship rig notes in
-[`repo-shows/lars-brinkhoff/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/lars-brinkhoff/README.md) when ready.
+**Make-it-so for your segment (talk, not homework):** walk how a faithful **PDP-7/340** stack
+(or honest stepping stone) *would* work; what already exists vs what's missing; how a radial-menu
+hit would feel on the light pen. Rig notes in
+[`repo-shows/lars-brinkhoff/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/lars-brinkhoff/README.md)
+are optional *homefun* — never a gate.
 
 ---
 
@@ -66,11 +73,15 @@ stepping stone); capture at least one radial-menu interaction on stream; ship ri
 - Walk the [Type 340 Display Programming Manual](http://bitsavers.trailing-edge.com/pdf/dec/graphics/7-13_340_Display_Programming_Manual.pdf) —
   vector refresh, display list, pen hits — in plain language for the audience.
 - **SIMH** / community paths to a bootable PDP-7 with 340 option; what's already there vs what
-  you'd need to build.
-- Living hardware vs emulator — [Munching Squares on PDP-7/340](https://www.youtube.com/watch?v=V4oRHv-Svwc);
+  would still need building — and who might build it (not necessarily you!).
+- Living hardware vs emulator — [Munching Squares on PDP-7/340](https://www.youtube.com/watch?v=V4oRHv-Svwc)
+  ([Wayback](https://web.archive.org/web/20200419194925/https://www.youtube.com/watch?v=V4oRHv-Svwc) if YouTube 404s);
   what transfers to PIXIE-like interaction.
-- **Titan link** as distributed CAD — emulate the graphics satellite first, batch link later?
-- Deliverable: rig yaml + [`SETUP.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/rigs/_TEMPLATE.SETUP.md) forkable from the repo.
+- **New toy — just jam:** [AM radio simulator beside throttled real-time emulators](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/lars-brinkhoff/am-radio-simulator-proposal.md)
+  — how it'd work, tradeoffs, elegant path; GNU Radio / Munching Tunes. **No code from you required**;
+  others may implement later ([heartbeat](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/brainstorm-heartbeat.md)).
+- **Titan link** as distributed CAD — graphics satellite first, batch link later?
+- Optional later *homefun* (anyone): rig yaml + [`SETUP.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/rigs/_TEMPLATE.SETUP.md).
 
 ### Heinz's segment — what you need from the historian
 
@@ -105,8 +116,8 @@ Remote is perfect — Gothenburg, Black Forest, Menlo Park, and Amsterdam are al
 the internet. **Heinz** and **David** join as co-guests on the **same call** (or short follow-ups
 if that's easier — your call).
 
-**Zero homework** before the call — but as much *homefun* as you are up to: if you want to poke
-at PDP-7/340 paths ahead of time, the show seed and Type 340 manual are linked below. Warm room, not gotcha-journalism.
+**Zero homework. Zero coding obligation.** Show up and jam about how it would work. As much
+*homefun* as you want later — never a condition of the invite. Warm room, not gotcha-journalism.
 
 ---
 
@@ -158,7 +169,7 @@ optional solo shows later).
 
 | | |
 | --- | --- |
-| **On this episode** | PDP-7 + Type 340 emulation; Type 340 manual; SIMH; runnable radial menus on stream |
+| **On this episode** | Jam PDP-7 + Type 340 / SIMH paths; Type 340 manual; how radial menus become runnable again (code optional) |
 | **Invitation** (his view) | [`invitation.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/lars-brinkhoff/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/lars-brinkhoff/invitation.md) |
 | **Guest README** | [`README.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/lars-brinkhoff/README.md) |
 | **Conversation hooks** | [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/lars-brinkhoff/ideas.md) |
@@ -186,13 +197,14 @@ Browse without a GitHub account — start at the [README](https://github.com/Sim
 
 **Your response:** yes, later, too busy, or no — all honored gracefully.
 
-You made PDP-10/ITS boot for the rest of us — I'd love to see what you can do with **PDP-7/340**
-while **Heinz** holds the memory and **David** holds the Cambridge ~1970 + lineage thread.
+You made PDP-10/ITS boot for the rest of us — I'd love to **jam with you** about how **PDP-7/340**
+could come back while **Heinz** holds the memory and **David** holds the Cambridge ~1970 + lineage
+thread. Designs in the repo; code optional forever.
 
 — Don Hopkins *(the User Interface Flower Child)* 🥧🌀
 
-`🖥️ emulate PDP-7/340` · `🥧 PIXIE radial menus` · `🗄️ DSHR: same machine` · `📽️ film → runnable iron` · `🕹️ ITS later w/ Thomas`
+`🖥️ jam PDP-7/340` · `🥧 PIXIE radial menus` · `🗄️ DSHR: same machine` · `📽️ film → designs → maybe iron` · `🕹️ ITS later w/ Thomas`
 
-*P.S. — If booting iron before the call is too much scope, walk the manual and a partial rig on air; we can iterate in the repo after.*
+*P.S. — Seriously: no code required. Walk the manual, tell war stories, sketch the elegant path. That's the show.*
 
 *P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

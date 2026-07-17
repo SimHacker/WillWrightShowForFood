@@ -32,3 +32,8 @@ Full shelf (14 PDFs): [`reference/MANIFEST.yml`](reference/MANIFEST.yml)
 [`../../repo-shows/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7.yml)
 
 **TODO:** Lars PDP-7 munching squares source, SIMH rig `SETUP.md`, light-pen emulation design notes.
+
+**AM radio + munching playlist:** [`../am-radio-simulator-proposal.md`](../am-radio-simulator-proposal.md)
+([Munching + AM Wayback](https://web.archive.org/web/20200419194925/https://www.youtube.com/watch?v=V4oRHv-Svwc) ·
+[Life + AM Wayback](https://web.archive.org/web/20200413075431/https://www.youtube.com/watch?v=hB78NXH77s4) ·
+[Spacewar! PDP-1](https://www.youtube.com/watch?v=1EWQYAfuMYw)).

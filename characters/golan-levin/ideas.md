@@ -1,54 +1,52 @@
 # Ideas to explore with Golan Levin 🎛️
 
-*Conversation hooks for a Repo Show — **Don's proposed topics**, each grounded in Golan's
-public work and documented connections to this repository. Things Don would love to follow
-**with** Golan Levin; not quotes, not claims about what they think.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · invitation guest · consent not_yet_asked
+*Don’s proposed topics — not Golan’s words.*
+[Portrayal standards](../../schemas/portrayal-standards.md) · warm contact · consent not_yet_asked
 
-## What Golan has done
+**Heartbeat:** [brainstorm-heartbeat.md](../../process/brainstorm-heartbeat.md) — talk designs; others implement.
 
-Golan Levin — Interactive/computational media artist, engineer, and educator (b. 1972, NYC; based in Pittsburgh). Professor of Electronic Art at Carnegie Mellon University (courtesy appointments in Design, Architecture, Computer Science, ETC) and former Director of CMU's Frank-Ratchye STUDIO for Creative Inquiry. MIT Media Lab alum; **Interval Research** colleague of Don Hopkins and Paul Debevec (*Rouen Revisited*; Mouther on Tom Ngo's ECG). Same Camelot-era circle as Terry Winograd, David Levitt, Marc Davis — Don's roster, not all overlapping one staff year.
+Audience README: [`README.md`](README.md) · Pair: [`tom-and-golan-ecg-mouther`](../../repo-shows/tom-and-golan-ecg-mouther/)
+
+---
 
 ## Shared ground
 
-*Topics that connect Golan Levin's work to this repo — public themes only.*
+- Creative coding / *Code as Creative Medium* as teaching practice (kin to Repo Show *homefun*)
+- Gestural + audiovisual interfaces (AVES, *Messa di Voce*, Manual Input Workstation, …)
+- *Rouen Revisited* (1996) with [Paul Debevec](../paul-debevec/)
+- **[Mouther](https://www.flong.com/archive/projects/mouther/)** on [Tom Ngo](../tom-ngo/)’s [ECG](../don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md)
+- [flong.com](https://flong.com/) as attributed interactive archive
+- LLM-assisted creative coding — taste, not slop
 
-- Creative coding / 'Code as Creative Medium' as a teaching practice (kin to Repo Show)
-- Gestural + audiovisual interfaces (AVES, Messa di Voce, Manual Input Workstation)
-- Rouen Revisited (1996) — dual interview with Paul Debevec on image-based interactive media
-- **Mouther** (1996) — vector faces in Tom Ngo's [**ECG**](../don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md) editor at Interval; drag eyes/mouth, solve barycentric blends
-- flong.com as an archetype of a live, forkable, anti-extraction archive of interactive work
-- LLM-assisted creative coding and generative design
-## The hooks
+---
 
-### 1. Show seed: `repo-shows/golan-levin/`
-walk the repo on air and build from the seed.
+## Mouther + ECG brainstorm (flagship with Tom)
 
-### 2. Creative coding / 'Code as Creative Medium' as a teaching practice (kin to Repo Show)
+**No coding required.** Whiteboard + flong + memory.
 
-### 3. Gestural + audiovisual interfaces (AVES, Messa di Voce, Manual Input Workstation)
+- What still exists — editor files, cartoons, video, stills? Recover vs reverse-engineer?
+- Phoneme → viseme path (Malcolm Slaney) — what to simplify for a 2026 toy
+- Cartoniness as feature — McCloud masking / felt creatures ([Gonzo](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/GONZO-UI-MANIFEST.md))
+- Modern ECG surfaces: **SVG** (teachable) vs **Canvas** (immediate) vs **WebGPU** (Faceball stage)
+- Drive [Faceball](../../apps/performance-space/faceball-construction-set.yml) morph targets by dragging features
+- Pair show: [tom-and-golan-ecg-mouther](../../repo-shows/tom-and-golan-ecg-mouther/)
 
-### 4. Rouen Revisited (1996)
-dual interview with Paul Debevec on image-based interactive media
+## Other hooks
 
-### 5. flong.com as an archetype of a live, forkable, anti-extraction archive of interactive work
+1. flong.com as Repo Show cousin — provenance, anti-extraction, forkable demos
+2. *Code as Creative Medium* ↔ classroom *homefun* ([homefun-grading](../../process/homefun-grading.yml))
+3. Gestural AV lineage → pie menus / Gonzo inhabited chrome
+4. Dual with Paul — *Rouen Revisited* “truly interactive”
+5. Critical making / information visualization as inquiry
 
-### 6. LLM-assisted creative coding and generative design
+## Homefun later (optional)
 
-### 7. Information visualization + critical making as inquiry, not just tooling
+Audience or Don reverse-engineers a tiny Mouther-like face after the talk — credit Golan/Tom/Slaney; link the episode.
 
-### 8. Mouther reborn — ECG, Faceball, and the Tom Ngo pair segment 🔺
-Golan built **Mouther**'s vector faces in **[Tom Ngo](../tom-ngo/README.md)**'s ECG editor at
-Interval — drag the eyes and mouth, solve the barycentric blends. The patent expired ~2016, and
-ECG is now the example-based blend engine in the
-[Faceball Construction Set](../../apps/performance-space/faceball-construction-set.yml) lineage:
-**HOMER → NeWS Mona Eyes → Tom Ngo ECG / Mouther → Bounce commentary bots → SimFaux → Squares in
-a Box panel dummies**. Dream segment: **Golan and Tom together** — the artist and the engine
-builder — reimplementing patent-free ECG live and driving a morph-target 3D face with it
-(the application Don and Tom have been discussing since the patent expired).
+---
 
-## Sources (public)
+## Sources
 
-- [`invitation.md`](invitation.md)
-- Show seed: [`repo-shows/golan-levin/`](../../repo-shows/golan-levin/)
-- [`CHARACTER.yml`](CHARACTER.yml)
+- [`invitation.md`](invitation.md) · [`CHARACTER.yml`](CHARACTER.yml)
+- [flong.com](https://flong.com/) · [Mouther](https://www.flong.com/archive/projects/mouther/)
+- [CMU](https://art.cmu.edu/people/golan-levin/) · [GitHub](https://github.com/golanlevin)

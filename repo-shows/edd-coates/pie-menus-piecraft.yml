@@ -8,19 +8,25 @@ show:
   host: Don Hopkins
   guests: ["Edd Coates"]
   character: characters/edd-coates/
-  topic: "Pie and radial menus across 1800+ games; success and failure cases from GUIDB; designing the ultimate runtime-editable pie; PieCraft as constructionist UI literacy through combat pressure."
+  topic: "Pie and radial menus across 1800+ games; success and failure cases from GUIDB; reinterpreting bad game UIs with Gonzo pies/tabs while keeping each game's face (bridge skins); designing the ultimate runtime-editable pie; PieCraft as constructionist UI literacy through combat pressure."
   status: seed
   parent_show: edd-coates/
   consent: not_yet_asked
 
 the_core_idea: |
-  Edd's Game UI Database is the world's largest curated collection of game interfaces.
-  Don has shipped pie menus since the 1980s (PIXIE prehistory, CHI '88, The Sims, OLPC, MicropolisCore
-  PieCraft). Working session: browse real GUIDB examples, analyze hits and misses, co-design the
-  next generation of flexible user-editable pies — and whether PieCraft can turn players into
-  interface designers through play.
+  Edd's Game UI Database is the world's largest curated collection of game interfaces —
+  the guidance corpus for what shipped, what worked, and what sucked. Don has shipped pie
+  menus since the 1980s (PIXIE prehistory, CHI '88, The Sims, OLPC, MicropolisCore PieCraft)
+  and is building skinnable Gonzo UI for Soul City bridges: same ergonomic hands (pies,
+  tabbed frames, inhabited chrome), costume that matches each game. Working session: browse
+  real GUIDB examples (hits and misses), treat the misses as redesign briefs — keep the
+  game's visual soul, replace bad gesture/chrome with Gonzo — then co-design next-gen
+  editable pies and whether PieCraft turns players into interface designers through play.
 
 candidate_topics:
+  - "GUIDB as design brief library — cite screens live; never scrape for training"
+  - "Reinterpret bad UIs — keep silhouette/palette; swap in pies, tabbed frames, visible state"
+  - "Bridge skins — Sims-evoking first; each Soul City spoke wears its game; multi-bridge glance test"
   - "GUIDB radial taxonomy — how many pie/wheel examples; tags that would help designers"
   - "The Sims pies — landmark case (Don's firsthand)"
   - "Monster Hunter World — high-skill customizable radials"
@@ -29,13 +35,17 @@ candidate_topics:
   - "Ultimate editable pie spec — loadouts, sharing, context overrides, accessibility"
   - "PieCraft — craftable/damageable pies; Fitts's law as gameplay"
   - "PieCrafter companion to PadCrafter?"
-  - "PIXIE (1969) → CHI '88 → now — continuous thread vs reinvention"
+  - "PIXIE (1969) light-pen radials on PDP-7 — continuous thread vs reinvention"
+  - "Spacewar! / blinkenlight DNA in modern GUIDB HUDs"
+  - "Engelbart mouse + chord keyset ↔ PadCrafter chord charts"
+  - "Lars Brinkhoff — PDP-7 emulator, virtual light pen, runnable pies on stream"
+  - "PadCrafter blinkenlight front panels — shareable emulator control schemes"
   - "Expert-annotated pie corpus for ethical licensing"
 
 format:
   live: true
   screen_share_heavy: true
-  notes: "Browse gameuidatabase.com live; whiteboard Target/Pie/Slice/Item model; MicropolisCore piecraft/ docs"
+  notes: "Browse gameuidatabase.com live — pull good/bad pairs per genre; whiteboard Target/Pie/Slice/Item + skin-vs-kernel split; MicropolisCore GONZO-UI-MANIFEST + piecraft/"
 
 ties_to:
   - SHOW.yml
@@ -43,3 +53,4 @@ ties_to:
   - suggested-questions.yml#pie_menus_and_piecraft
   - ../../characters/don-hopkins/pie-menus-chi-88-and-beyond.md
   - https://github.com/SimHacker/MicropolisCore/tree/main/documentation/designs/piecraft
+  - https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/GONZO-UI-MANIFEST.md
