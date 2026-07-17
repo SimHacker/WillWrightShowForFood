@@ -9,9 +9,10 @@ Yoot sent Don a code drop for archival, academic study, and a **modern browser-o
 
 | Resource | Link |
 |----------|------|
-| **Main repo** | [github.com/YootTowerManagement/YootTower](https://github.com/YootTowerManagement/YootTower) |
-| **Management / docs hub** | [github.com/YootTowerManagement/YootTowerManagement](https://github.com/YootTowerManagement/YootTowerManagement) |
+| **Public repo** | [github.com/YootTowerManagement/YootTower](https://github.com/YootTowerManagement/YootTower) |
+| Private management / docs hub | **Do not link** — private repo; not for public WWSFF |
 | WWSFF guest | [`../yoot-saito/`](../yoot-saito/) |
+| Licensing stance (abstract) | [`../yoot-saito/yoot-tower-discussion.yml`](../yoot-saito/yoot-tower-discussion.yml) · [`../yoot-saito/reply-template-yoot-tower-inquiries.md`](../yoot-saito/reply-template-yoot-tower-inquiries.md) |
 | Revival show seed | [`../../repo-shows/yoot-tower-revival/`](../../repo-shows/yoot-tower-revival/) |
 | VGHF source release thread | [`../../characters/will-wright/sources/2024-yoot-tower-open-source/`](../../characters/will-wright/sources/2024-yoot-tower-open-source/README.md) |
 

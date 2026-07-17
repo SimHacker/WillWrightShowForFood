@@ -31,8 +31,8 @@ Don also looping **Rebecca Heineman** for retro port expertise; **browser modern
 
 ## Related videos (email thread)
 
-- [Yoot Tower sequel pitch](https://www.youtube.com/watch?v=CqNECXCd9iU)  
-- [Seaman Nimoy intro](https://www.youtube.com/watch?v=gdIO41Blysg)  
+- [Yoot Tower sequel pitch](https://www.youtube.com/watch?v=CqNECXCd9iU) (LGR — still live)
+- **Seaman videos** — curated diverse shelf (GDC postmortem, intro, day-one, IGN 1999, JP ad, AVGN, Seaman 2, essay): [`../../../yoot-saito/media/seaman-videos.yml`](../../../yoot-saito/media/seaman-videos.yml) · [yoot-saito README table](../../../yoot-saito/README.md#seaman--video-shelf-one-of-each-kind). Dead upload `gdIO41Blysg` (*Nimoy intro — podman birth day*; [HN 39084042](https://news.ycombinator.com/item?id=39084042)) noted there.
 - Open source Yoot Tower discussion: [`re-open-source-yoot-tower.txt`](../../../../DonHopkins/temp/old-email/re-open-source-yoot-tower.txt)
 
 ## Micropolis parallel
@@ -48,6 +48,6 @@ Don shared Chaim Gingold's **Open Sourcing SimCity** excerpt with Yoot as playbo
 
 - [ ] Schedule Yoot + Ben (translator) + Phil + Rebecca call — status since 2024?  
 - [ ] Document license choice when release happens  
-- [ ] Link [`YootTower`](../../../../YootTower/README.md) / [`YootTowerManagement`](../../../../YootTowerManagement/README.md) sibling repos
+- [ ] Public hub: [YootTowerManagement/YootTower](https://github.com/YootTowerManagement/YootTower) — do **not** link the private management sibling from WWSFF
 
 *Phil also on Winograd 1996 talk CC list — same preservation circle.*

@@ -1,0 +1,79 @@
+# Seaman — curated video shelf (diverse kinds; one of each lane)
+# Dead upload gdIO41Blysg (Nimoy podman-birth day) — see will-wright playlist INDEX.
+# Cover still: from-mail/screenshot-seaman_coverart.png
+
+meta:
+  character: yoot-saito
+  topic: seaman
+  curated: 2026-07-17
+  rule: One link per kind — no stack of near-identical intros/gameplays.
+
+videos:
+  - id: j4VSUs9VTvw
+    kind: designer_postmortem
+    title: "Classic Game Postmortem: Seaman (GDC 2017)"
+    url: https://www.youtube.com/watch?v=j4VSUs9VTvw
+    channel: GDC Festival of Gaming
+    why: "Yoot on stage — design history, mic, swim-against-the-stream. Primary show fuel."
+
+  - id: fa7L3rDMkcE
+    kind: intro_title
+    title: "Seaman — Intro & Title Screen (Dreamcast)"
+    url: https://www.youtube.com/watch?v=fa7L3rDMkcE
+    channel: Video Game Intros and Title Screens
+    why: "Clean US boot / title — Nimoy-era chrome without a full playthrough."
+
+  - id: mBThme3hgoo
+    kind: day_one_play
+    title: "Seaman: Day One (Dreamcast)"
+    url: https://www.youtube.com/watch?v=mBThme3hgoo
+    channel: Chilling with Kakujo
+    why: "First-session care loop + narrator — what the pet sim actually feels like."
+
+  - id: eFspPyCqN2s
+    kind: period_gameplay
+    title: "Seaman Dreamcast Gameplay (IGN, 1999-08-12)"
+    url: https://www.youtube.com/watch?v=eFspPyCqN2s
+    channel: IGN
+    why: "Contemporary press capture — how it was shown at launch, not a 2020s longplay."
+
+  - id: yji1W9pkc6I
+    kind: japanese_commercial
+    title: "Seaman Japanese Commercial (1) — Dreamcast"
+    url: https://www.youtube.com/watch?v=yji1W9pkc6I
+    channel: Gary Holbrook (Shawn)
+    why: "JP TV ad energy (Hosokawa narration era) — marketing as found-document mythology."
+
+  - id: -IV8hCvsXy0
+    kind: comedy_review
+    title: "Seaman (Dreamcast) — Angry Video Game Nerd"
+    url: https://www.youtube.com/watch?v=-IV8hCvsXy0
+    channel: Cinemassacre
+    why: "Pop-culture receipt — how the West remembered the weird fish."
+
+  - id: OfPLpm1Rqo4
+    kind: sequel
+    title: "SEAMAN 2 — Intro and Day 1 (Peking Genjin)"
+    url: https://www.youtube.com/watch?v=OfPLpm1Rqo4
+    channel: Happy Gaming House
+    why: "Sequel lane — different creature, same Vivarium DNA; not another DC1 clone."
+
+  - id: u9M6dkIVo-s
+    kind: retrospective_essay
+    title: "Classic But Forgotten Characters: Seaman"
+    url: https://www.youtube.com/watch?v=u9M6dkIVo-s
+    channel: TheShadowParliament
+    why: "Essay/character framing — useful for show cold-open research."
+
+unavailable:
+  - id: gdIO41Blysg
+    title: "Leonard Nimoy intro — day podman will give birth"
+    url: https://www.youtube.com/watch?v=gdIO41Blysg
+    note: "YouTube 404 (2026-07-17). Don HN caption; HN 39084042. Prefer fa7L3rDMkcE + mBThme3hgoo."
+
+see_also:
+  - path: from-mail/screenshot-seaman_coverart.png
+  - path: ../CHARACTER.yml
+  - path: ../../will-wright/sources/2024-yoot-tower-open-source/article.md
+  - url: https://gdcvault.com/play/1024662/Classic-Game-Postmortem-Seaman
+    why: "GDC Vault canonical listing (may require membership)"

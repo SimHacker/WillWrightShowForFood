@@ -178,9 +178,19 @@ videos:
 
   - id: gdIO41Blysg
     url: https://www.youtube.com/watch?v=gdIO41Blysg
-    title: "(Yoot Tower — verify)"
-    topics: [yoot-tower]
-    status: todo
+    title: "Seaman (Dreamcast) — Leonard Nimoy intro on the day podman will give birth"
+    topics: [seaman, yoot-saito, leonard-nimoy]
+    status: unavailable
+    note: >
+      YouTube 404 (2026-07-17). Was never Yoot Tower — Seaman / Nimoy clip Don linked on HN.
+      Substitutes: fa7L3rDMkcE (intro/title), mBThme3hgoo (day one), 2UV91jCGivA (all dialogue pt1).
+      Exact podman-birth day upload not re-found; chase again if a mirror appears.
+    substitutes_shelf: characters/yoot-saito/media/seaman-videos.yml
+    substitutes:
+      - https://www.youtube.com/watch?v=j4VSUs9VTvw
+      - https://www.youtube.com/watch?v=fa7L3rDMkcE
+      - https://www.youtube.com/watch?v=mBThme3hgoo
+      - https://www.youtube.com/watch?v=-IV8hCvsXy0
 
   - id: h3Yrhv33Zb8
     url: https://www.youtube.com/watch?v=h3Yrhv33Zb8

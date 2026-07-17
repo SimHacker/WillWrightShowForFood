@@ -76,9 +76,10 @@ Tower path once Yoot and the lawyers are happy.
 | Topic | Where in repo |
 |-------|----------------|
 | Yoot + Phil Salvador / VGHF thread (Jan 2024) | [will-wright/sources/2024-yoot-tower-open-source/article.md](../will-wright/sources/2024-yoot-tower-open-source/article.md) |
-| Abstract status, no promises | [yoot-tower-discussion.yml](yoot-tower-discussion.yml) |
+| Abstract status, no promises | [yoot-tower-discussion.yml](yoot-tower-discussion.yml) (`yoot_tower_status` — licensing delayed; Nintendo-era materials stay private) |
 | Patrick Hulin SimTower RE | `community_reimplementation` block in same file |
-| Nintendo / Mario Tower licensing sensitivity | [YootTowerManagement Notes](https://github.com/YootTowerManagement/YootTower/tree/main/Notes) |
+| Public Yoot Tower hub (OK to link) | [YootTowerManagement/YootTower](https://github.com/YootTowerManagement/YootTower) |
+| Nintendo / Mario Tower detail | **Not linked from public WWSFF.** Lives only in the private management repo; do not publish paths or deep-links. Paste replies stay abstract (see copy-paste block above). |
 
 ---
 

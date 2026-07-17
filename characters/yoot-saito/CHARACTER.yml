@@ -36,10 +36,12 @@ sources:
     - { title: "The Verge — Yoot Saito interview (Seaman, Odama, The Tower)", url: https://www.theverge.com/2019/9/6/20850674/yoot-saito-interview-seaman-sega-dreamcast-odama }
     - { title: "My Mac — interview with Mr. Yoot Saito (1999, Mac-first dev)", url: https://www.mymac.com/1999/02/the-my-mac-interview-mr-yoot-saito/ }
     - { title: "Yoot Saito × Alan Kay interview (OCR-restored by Don) — companion to his Engelbart interview", url: "https://github.com/YootTowerManagement/YootTower/tree/main/Yoot_Saito_Alan_Kay_Interview" }
+  videos: media/seaman-videos.yml
   papers: []
   blogs: []
 
 see_also:
+  - { path: media/seaman-videos.yml, why: "Curated diverse Seaman YouTube shelf (GDC, intro, day-one, JP ad, AVGN, Seaman 2)" }
   - { path: from-alan-kay.yml, why: "Alan reviewed the 1993 interview transcript; corrections in YootTower" }
   - { path: ../alan-kay/people-index.yml, why: "Kay on people in characters/" }
   - { path: ../alan-kay/media/quora-recaps/, why: "Quora recaps mined for Kay's public portraits of PARC people" }

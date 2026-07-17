@@ -2,15 +2,9 @@
 
 character: yoot-saito
 consent_note: Public respectful portrayal for invitation browsing; subject may request removal
-artifact_count: 3
+artifact_count: 1
 
 artifacts:
-  - file: from-mail/photo-seaman-triptych-small.jpg
-    kind: artifact
-    title: "photo-seaman-triptych-small"
-  - file: from-mail/photo-seaman-triptych-yoot.png
-    kind: artifact
-    title: "photo-seaman-triptych-yoot"
   - file: from-mail/screenshot-seaman_coverart.png
     kind: artifact
     title: "screenshot-seaman_coverart"

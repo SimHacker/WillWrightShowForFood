@@ -1,5 +1,38 @@
 # Part 1 — Spark and Will's support (Nov 2006)
 
+## How this chain actually started — Long Now, not this inbox
+
+These November 2006 emails look like the beginning of open-source SimCity. They aren't.
+The fuse was lit **140 days earlier**, in public, at the Long Now Foundation.
+
+**26 June 2006 — Herbst Theatre, San Francisco.** Brian Eno and Will Wright on stage for
+[*Playing with Time*](https://longnow.org/talks/02006-eno-wright/)
+([video](https://youtu.be/Dfc-DQorohc); open-source Q&A around
+[t=3929](https://youtu.be/Dfc-DQorohc?t=3929)). Stewart Brand reads written audience cards.
+**Dan Ancona** asks Will to open-source **SimCity** so people can play with the political
+assumptions embedded in the rules. **Mark Live** (as Brand read the card — identity still soft)
+asks a related question about **Spore** and generative politics. Don Hopkins is **in the
+audience** — he does *not* ask either question. Full dossier:
+[`../simcity-open-source-saga/long-now-askers-outreach.md`](../simcity-open-source-saga/long-now-askers-outreach.md) ·
+event room: [`../2006-06-26-long-now-playing-with-time-eno-wright/`](../2006-06-26-long-now-playing-with-time-eno-wright/).
+
+After the talk, Will apparently suspected Don (the ask was a common one, and Don was right
+there). Don's denial was deliberate comedy — he already knew, from the 2002 Lucy Bradshaw /
+Columbia NSF false start, that a public “please open SimCity” would put Will on the spot and
+likely go nowhere. The PS in Don's 19 Nov reply below is the written receipt of that joke.
+
+**~13 November 2006 — this thread.** John Gilmore emails Don about **OLPC** (Mary Lou Jepsen's
+$100 laptop): maybe the classic Unix SimCity Don had ported could actually be freed for kids.
+Don forwards to Will — half expecting futility. Will answers: *I support the idea wholeheartedly.*
+That private yes, after the Long Now public ask and Don's prior burned education proposal, is
+what reopens the door. Pitch to Rod Humble follows (1 Dec 2006). EA eventually ships **Micropolis**
+GPLv3 (2008). The Repo Show / MicropolisCore line still runs on that fuse.
+
+**Read order for the saga:** Long Now ask → *this Part 1* → later OLPC/EA negotiation parts in
+this folder → Micropolis release.
+
+---
+
 Verbatim from Don Hopkins forwarded-mail archive. Nested forwards preserved where they carry the original text.
 
 ---
@@ -74,14 +107,12 @@ Verbatim from Don Hopkins forwarded-mail archive. Nested forwards preserved wher
 
 ---
 
-## Show notes — Long Now link
+## Timeline (see introduction)
 
-| Event | Date | Gap |
-|-------|------|-----|
+| Event | Date | Gap from Long Now |
+|-------|------|-------------------|
 | Dan Ancona + Mark Live ask Will to open-source SimCity (Long Now Q&A) | 26 Jun 2006 | — |
 | John Gilmore emails Don about OLPC | ~13 Nov 2006 | **140 days** |
 | Don's pitch letter to Rod Humble | 1 Dec 2006 | **158 days** |
 
-Don was **in the audience** at Long Now. The askers were **Dan Ancona and Mark Live** — not Don, not Gilmore. Don's post-talk denial to Will was deliberate comedy; this email is the written receipt.
-
-See: [`../2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml`](../2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml) (`open-source-simcity-audience-question`).
+Clip tag: [`../2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml`](../2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml) (`open-source-simcity-audience-question`).
