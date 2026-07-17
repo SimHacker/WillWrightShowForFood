@@ -1,6 +1,6 @@
 # SimCity for OLPC — January 2007 status update
 
-*Email from Don Hopkins to Rod Humble, Scott Evans, Charles Normann, and Will Wright — 10 January 2007. Harvest: [`simcity-for-olpc.txt`](../../../../DonHopkins/temp/old-email/simcity-for-olpc.txt).*
+*Email from Don Hopkins to Rod Humble, Scott Evans, Charles Normann, and Will Wright — 10 January 2007.
 
 ---
 

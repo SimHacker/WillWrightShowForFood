@@ -6,7 +6,7 @@
 
 ## The hook
 
-Sibling path: `../DonHopkins/` (same parent as this repo). **WWSFF is live; DonHopkins on hold for projected content** — edit WWSFF, do not backfill source. Primarily one-way export: SELECT → FILTER → AUGMENT → EXPORT → SYNC.
+Sibling path: `private (not in this repo) (same parent as this repo). **WWSFF is live; DonHopkins on hold for projected content** — edit WWSFF, do not backfill source. Primarily one-way export: SELECT → FILTER → AUGMENT → EXPORT → SYNC.
 
 ## Select (cream first)
 
@@ -39,6 +39,5 @@ Tool: manual + `scripts/wwsff-sync.sh` (TODO). Manifest: MANIFEST.yml
 |-------|--------|
 | Email attachment audit | [email-attachment-curation.md](email-attachment-curation.md) |
 | Archive trail | [trails/archive-and-provenance.md](trails/archive-and-provenance.md) |
-| Authoritative plan | DonHopkins/projects/micropolis-moollm/process/wwsff-export-sync.yml |
-
+private green-room note (not in this repo)
 ↑ [process index](README.md) · Girder: `sync-with-donhopkins.yml`

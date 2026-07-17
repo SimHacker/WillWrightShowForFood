@@ -1,6 +1,6 @@
 # Micropolis publishing vision
 
-Extracted from Don Hopkins's working notes (`DonHopkins/temp/big-prompts.txt`, 2026).
+Extracted from Don Hopkins's working notes (private archive (not in this repo), 2026).
 
 **Audience-facing narration:** [INTRO-NARRATIVE.md](../../../repo-shows/will-wright-premiere/INTRO-NARRATIVE.md) — how this vision maps to Micropolis + WillWrightShowForFood Repo Shows, the wedding playset, and preserved agitprop.
 

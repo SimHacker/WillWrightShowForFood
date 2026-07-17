@@ -2,7 +2,7 @@
 
 See **[article.md](article.md)** for harvested thread summary.
 
-**Raw:** [`DonHopkins/temp/old-email/intro.txt`](../../../../DonHopkins/temp/old-email/intro.txt)
+*Private correspondence archive — not published in this repo.*
 
 ---
 

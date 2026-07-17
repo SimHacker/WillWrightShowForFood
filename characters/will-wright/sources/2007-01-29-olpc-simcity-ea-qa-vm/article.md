@@ -1,6 +1,6 @@
 # OLPC SimCity — EA QA, VMware, and Will's internal battle
 
-*Email thread, 29 January 2007. Charles Normann, Don Hopkins, John Gilmore, Will Wright. Harvest: [`simcity-on-olpc---how-can-i-get-a-look-at-it.txt`](../../../../DonHopkins/temp/old-email/simcity-on-olpc---how-can-i-get-a-look-at-it.txt).*
+*Email thread, 29 January 2007. Charles Normann, Don Hopkins, John Gilmore, Will Wright.
 
 ---
 
@@ -33,7 +33,7 @@ Don offered: loan OLPC hardware, on-site EA visit (Redwood Shores or Will's Berk
 
 > I'm currently having a bit of a battle with the **head of EA studios** over getting this signed off on. We just got a **favorable opinion from the head of EA legal** so the battle is starting to trend my way. I think I'll get signoff but it's not guaranteed yet.
 
-**Don to resolve (A5):** name the executive Will refers to — compare with Don's draft in [`untitled.txt`](../../../../DonHopkins/temp/old-email/untitled.txt) ("one executive who was against it, but he changed his mind").
+**Don to resolve (A5):** name the executive Will refers to — compare with Don's draft in *private archive — not in this repo* ("one executive who was against it, but he changed his mind").
 
 ---
 

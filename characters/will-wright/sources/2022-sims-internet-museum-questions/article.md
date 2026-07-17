@@ -1,6 +1,6 @@
 # Questions Regarding The Sims — Sims Internet Museum Project
 
-*Inbound email from Paulette Dropinsky — 23 March 2022. Harvest: [`questions-regarding-the-sims.txt`](../../../../DonHopkins/temp/old-email/questions-regarding-the-sims.txt).*
+*Inbound email from Paulette Dropinsky — 23 March 2022.
 
 ---
 

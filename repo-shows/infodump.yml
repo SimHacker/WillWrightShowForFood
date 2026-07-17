@@ -198,7 +198,7 @@ episodes:
     procedural_generator:
       status: located
       project: voxomatic
-      path: /Users/a2deh/GroundUp/Gallium/git/voxomatic
+      path: private path (not in this repo)
       op: voxcraft/Assets/_Scripts/Vox/OpStarFort.cs
       scene: voxoview/Assets/Scenes/TerrainScene.unity
       doc: characters/don-hopkins/sources/voxomatic-star-fort-generator/README.md

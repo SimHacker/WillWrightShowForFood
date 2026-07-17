@@ -3,7 +3,7 @@
 How David Chapman at Cambridge University Library recovered and digitized the 1969 PIXIE
 films — and why that made Don's *Flight of the PIXIE* edit possible.
 
-*Evidence room note. Primary export:* `DonHopkins/temp/HeinzLemke/messages/` *(msg-403–409, 410, 413–414).*
+*Evidence room note. Primary export:* private archive (not in this repo) *(msg-403–409, 410, 413–414).*
 
 ## The chain
 

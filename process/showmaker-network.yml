@@ -277,5 +277,3 @@ ties_to:
   - ../repo-shows/INDEX.yml
   - ../repo-shows/REPO-SHOWS.yml
   - ../schemas/guest-invitation-status.yml
-  - SimHacker/DonHopkins/projects/micropolis-moollm/process/show-proposal-network.yml
-  - SimHacker/DonHopkins/projects/micropolis-moollm/process/character-endosymbiosis.yml

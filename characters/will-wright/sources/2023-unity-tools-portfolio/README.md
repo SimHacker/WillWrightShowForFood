@@ -2,7 +2,7 @@
 
 Curated link index from Don's **Unity Engineer - Tools** cover letter (Aug 2023) — maps to existing WWSFF YouTube articles and Micropolis sources.
 
-**Raw:** [`DonHopkins/temp/old-email/unity-engineer---tools---don-hopkins.txt`](../../../../DonHopkins/temp/old-email/unity-engineer---tools---don-hopkins.txt)
+*Private correspondence archive — not published in this repo.*
 
 ---
 

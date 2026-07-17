@@ -1,5 +1,5 @@
 # Apple ][ emulator stack — public pointer + show-challenge hook
-# Authoritative layers: SimHacker/DonHopkins/.../apple2-emulator-stack.yml
+# Authoritative layers: SimHacker/"private archive — not in this repo"
 # WWSFF does not duplicate — see process/live-repo.yml
 
 meta:

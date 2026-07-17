@@ -78,7 +78,7 @@ Curated article projection — best hits from Don's Medium harvest.
 
 ## Provenance
 
-50 screenshots recovered from Cursor chat cache (2026-06-29) via `cursor-mirror images`. Staging manifest: `DonHopkins/temp/sims-images-manifest.tsv`.
+50 screenshots recovered from Cursor chat cache (2026-06-29) via `cursor-mirror images`. Staging manifest: private archive (not in this repo).
 
 Classification is a first pass — captions in each theme README can be refined on air.
 

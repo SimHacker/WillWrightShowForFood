@@ -30,7 +30,7 @@ Stupid Fun Club creation. Don commented on the video.
 ## Status
 
 **Not yet invited** — draft [`invitation.md`](invitation.md) ready. On Don's green-room SFC wanted list
-(private: `DonHopkins/.../green-room/sfc-alumni-wanted.md`).
+(private: *(private — not in this repo)*).
 
 ## Reach
 

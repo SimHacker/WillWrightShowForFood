@@ -4,7 +4,7 @@
 
 **Hub:** [`../../README.md`](../../README.md) · **Triage:** [`REVIEW.yml`](REVIEW.yml) · **Manifest:** [`MANIFEST.yml`](MANIFEST.yml)
 
-**Private mail (full threads):** `/Users/a2deh/GroundUp/git/DonHopkins/temp/AlanKay/` (1254 msgs) · digest [`DonHopkins/characters/don-hopkins/correspondence/alan-kay.yml`](file:///Users/a2deh/GroundUp/git/DonHopkins/characters/don-hopkins/correspondence/alan-kay.yml) · tracker [`alan-kay-mail-archive.yml`](file:///Users/a2deh/GroundUp/git/DonHopkins/characters/don-hopkins/outreach/alan-kay-mail-archive.yml)
+*Private mail archive — not published in this repo.*
 
 # Bulk approved 2026-07-06 — see [`REVIEW.yml`](REVIEW.yml)
 

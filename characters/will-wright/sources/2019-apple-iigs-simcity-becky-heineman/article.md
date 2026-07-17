@@ -1,6 +1,6 @@
 # Apple IIgs SimCity — Rebecca Heineman's unreleased source
 
-*Thread Jul 2019 – May 2022: Rebecca Heineman, Don Hopkins, Chaim Gingold, Phil Salvador. Raw: [`re-applegs-sim-city-source.txt`](../../../../DonHopkins/temp/old-email/re-applegs-sim-city-source.txt).*
+*Thread Jul 2019 – May 2022: Rebecca Heineman, Don Hopkins, Chaim Gingold, Phil Salvador. Raw: *private archive — not in this repo*
 
 ---
 

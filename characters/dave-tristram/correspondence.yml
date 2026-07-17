@@ -6,8 +6,7 @@ meta:
   curated_by: don-hopkins
   consent: not_yet_asked
   span: "mid–late 1980s — ongoing"
-  private_archive: DonHopkins/projects/willwrightshowforfood/green-room/dave-tristram/
-
+# private archive — not in this repo
 gist: |
   Decades-long friendship from USENIX Monterey 1989 (Panel Library × PSIBER Space Deck) through
   Raster Masters, shared generative-graphics / CA / feedback obsessions, Adobe R&D beta (~2022), and
@@ -59,7 +58,7 @@ threads:
     what: |
       Don will ask Dave privately (Messenger) whether his daughter — electronic musician / YouTube —
       might contribute. No public name or portrayal until Dave + daughter OK.
-    private: DonHopkins/.../green-room/dave-tristram/outreach-daughter-ask.md
+    private: "private archive — not in this repo"
     rule: do_not_publish_without_joint_consent
 
 show_hooks:

@@ -8,7 +8,7 @@ Working name for the de-brand: **Ground-o-matic** (`vox` → `ground`). The `-o-
 
 | What | Path |
 |------|------|
-| Repo | `/Users/a2deh/GroundUp/Gallium/git/voxomatic` |
+| Repo | `private path (not in this repo) |
 | Star fort op | `voxcraft/Assets/_Scripts/Vox/OpStarFort.cs` (mirror: `voxoview/Assets/Scripts/Scam/Ops/OpStarFort.cs`) |
 | CA pipeline | `Scam` — layered cellular-automata-style terrain ops (`OpBlur`, `OpDLA`, `OpTerraces`, `OpStarFort`, …) |
 | Viewer scene | `voxoview/Assets/Scenes/TerrainScene.unity` |

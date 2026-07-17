@@ -14,8 +14,7 @@
 ## Regenerate ID list
 
 ```bash
-python3 DonHopkins/projects/willwrightshowforfood/tools/extract_youtube_index.py
-```
+private green-room note (not in this repo)```
 
 ## TODO
 

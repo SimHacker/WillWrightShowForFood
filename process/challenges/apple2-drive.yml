@@ -97,4 +97,4 @@ see_also:
   - { path: ../stick-shift-protocol.yml, why: "Host orchestration while target is ][" }
   - { path: ../code-that-spec.yml, why: "Audience chant — spec on declared platform" }
   - { path: https://github.com/Apple2-OSS/apple2js, why: "Reference emulator upstream" }
-  - { path: SimHacker/DonHopkins/projects/micropolis-moollm/process/apple2-emulator-stack.yml, why: "Private monorepo stack lineage" }
+# private archive — not in this repo

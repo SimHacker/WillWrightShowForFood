@@ -13,7 +13,7 @@ source below.
   [*"Alan Kay Quora 2023 11"*](https://archive.org/details/alan-kay-quora-2023-11) — surfaced via the
   [Malleable Systems Forum thread](https://forum.malleable.systems/t/alan-kays-quora-dialogues-and-the-philosophical-dilemma-of-systems-thinking/173)
   (see [`../discussions/malleable-systems-systems-vs-data.md`](../discussions/malleable-systems-systems-vs-data.md)).
-- Don holds a local OCR text of that PDF (`DonHopkins/temp/AlanKeyQuoraArchive.txt`, ~39.7K lines) — **not
+- Don holds a local OCR text of that PDF (private archive (not in this repo), ~39.7K lines) — **not
   republished here**; this file only catalogs it.
 
 > ⚠️ **OCR caveat.** The archive is machine-OCR'd and noisy (e.g. "Baccus"→Backus, "Al"→AI, garbled math,

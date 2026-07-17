@@ -1,6 +1,6 @@
 # Stanford archives — Will Wright lecture recordings (2020 thread)
 
-*May 2020: Chaim Gingold, Henry Lowood, Terry Winograd, Josh Schneider, Don Hopkins. Raw: [`re-httpartnethopkinsdonsimcitywillwrighthtml.txt`](../../../../DonHopkins/temp/old-email/re-httpartnethopkinsdonsimcitywillwrighthtml.txt).*
+*May 2020: Chaim Gingold, Henry Lowood, Terry Winograd, Josh Schneider, Don Hopkins. Raw: *private archive — not in this repo*
 
 ---
 

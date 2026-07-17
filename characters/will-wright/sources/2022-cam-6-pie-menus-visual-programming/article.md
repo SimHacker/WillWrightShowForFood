@@ -83,7 +83,7 @@ Chaim's survey: [Gadget Background Survey (HARC, 2017)](http://chaim.io/download
 
 ## Brad Myers connection
 
-Don cc'd context for McGuffin (Brad Myers' student network): **Pick Click Flick** chapter in *Book on Interaction Techniques* — see [`book-on-interaction-techniques`](../../../../DonHopkins/temp/old-email/book-on-interaction-techniques.txt) thread.
+Don cc'd context for McGuffin (Brad Myers' student network): **Pick Click Flick** chapter in *Book on Interaction Techniques* — see *private archive — not in this repo* thread.
 
 Brad's acronym page: http://www.cs.cmu.edu/~bam/acronyms.html (Don contributed **GLASS**)
 

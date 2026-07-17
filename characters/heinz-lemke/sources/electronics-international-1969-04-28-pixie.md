@@ -11,7 +11,7 @@ Public-safe source summary. Full OCR + image placeholders in private archive.
 | Pages | 158–159 |
 | Credit | Neil Wiseman, Heinz Lemke, John Hiles — Cambridge University Mathematical Laboratory |
 | Provenance | Received from Heinz Lemke via email attachment, 10 July 2026 |
-| Private archive | `DonHopkins/.../heinz-lemke/electronics-international-1969-04-28-pixie.md` |
+| Private archive | *(private — not in this repo)* |
 | Keywords | PIXIE, PDP-7, DEC 340, light pen, CAD, Cambridge, satellite computer |
 
 ## Summary

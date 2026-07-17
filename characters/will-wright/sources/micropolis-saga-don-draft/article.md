@@ -1,6 +1,6 @@
 # Micropolis saga — Don's informal draft
 
-*Harvest from [`untitled.txt`](../../../../DonHopkins/temp/old-email/untitled.txt) in old-email paste dump. **Draft — not canonical.** Don to review, name names, and merge into [simcity-open-source-saga](../simcity-open-source-saga/README.md).*
+*Harvest from *private archive — not in this repo* in old-email paste dump. **Draft — not canonical.** Don to review, name names, and merge into [simcity-open-source-saga](../simcity-open-source-saga/README.md).*
 
 ---
 

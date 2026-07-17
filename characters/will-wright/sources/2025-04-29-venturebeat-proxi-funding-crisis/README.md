@@ -37,8 +37,7 @@ The Sims was — plus Gallium's **runway crisis** and a transparent fundraising 
 
 ## Handle with care
 
-- **Funding / runway** — article is a crisis transparency play (Apr 2025). Treat as **context**, not gossip.
-  Private strategy: [`DonHopkins/.../green-room/will-wright/proxi-funding-venturebeat-2025.md`](../../../../../../DonHopkins/projects/willwrightshowforfood/green-room/will-wright/proxi-funding-venturebeat-2025.md)
+- **Funding / runway** — article is a crisis transparency play (Apr 2025). Treat as **context**, not gossip. Private strategy notes stay out of this public repo.
 - **Lauren Elliott** — CEO; Carmen Sandiego / Broderbund lineage. Potential guest or backstage contact; no cold outreach without Will.
 - **Status unknown (Jul 2026)** — article predates Will accepting Repo Show; verify current Gallium state with Will before on-air.
 

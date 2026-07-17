@@ -66,8 +66,7 @@ contact:
   channel: "Warm — direct email from Don; decades of history"
 
 correspondence: correspondence.yml
-private_archive: DonHopkins/projects/micropolis-moollm/repo-shows/jared-tarbell/   # raw emails; not public
-
+# private archive — not in this repo
 sources:
   web:
     - http://levitated.net/

@@ -22,7 +22,7 @@ gaps:
     what: "McGraw-Hill Electronics (Apr 28 1969) PIXIE article; Gilmore scan"
     status: received   # 2026-07-10 from Heinz (PDF + clean MD)
     filed:
-      private: DonHopkins/.../electronics-international-1969-04-28-pixie.md
+      private: "private archive — not in this repo"
       public: sources/electronics-international-1969-04-28-pixie.md
       source_pdf: "~/Documents/Electronics International-April 1969_1-3.pdf"
       p158_photo: media/from-mail/roy-eagleson-identified-heinz-pdp7-light-pen.png
@@ -59,7 +59,7 @@ gaps:
     what: "Heinz → Bill Buxton PIXIE memory-lane letter (~2008); CARS 2009 invitation; thesis pointers"
     status: received   # 2026-07-10 email attachment
     filed:
-      private: DonHopkins/.../2008-bill-buxton-pixie-memory-lane.md
+      private: "private archive — not in this repo"
       public: sources/2008-bill-buxton-pixie-memory-lane.md
     pull_in: "Snip 4 embedded images from .doc; ask Heinz for PhD thesis scan"
     show_use: "Buxton/Microsoft thread; extended PIXIE predates Gosling SunDew; PACS lineage"

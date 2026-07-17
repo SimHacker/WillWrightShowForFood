@@ -73,7 +73,7 @@ founding_example:
   guest: jason-shankel
   source_fiction: moollm/temp/lloooomm/00-Characters/jason-shankel/mega-lecture-synthesis.md
   source_verified: WillWrightShowForFood/characters/jason-shankel/sources/TALKS-INDEX.md
-  private_gate: DonHopkins/projects/willwrightshowforfood/green-room/jason-shankel/lloooomm-fiction-gate.md
+  private_gate: "private archive — not in this repo"
   sample_mistakes:
     - '"Jars AI founding Unity engineer" (unverified)'
     - '"Clinivise Director 2025" (unverified)'
@@ -103,7 +103,7 @@ signature_beats:
       year: 1997
       coauthors: [Michael Stein, Gregory Pierce]
       fame_level: early reference book, not household famous
-      source: DonHopkins/characters/don-hopkins/people/colleagues/eric-bowman.yml#direct3d_book
+      source: "private archive — not in this repo"
       evidence_card: ../../../characters/eric-bowman/sources/direct3d-professional-reference.md
       listing_cover: https://www.abebooks.com/products/isbn/9781562057251
     guest_room: characters/eric-bowman/

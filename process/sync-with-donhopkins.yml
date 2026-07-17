@@ -1,8 +1,7 @@
 # Sync with DonHopkins private monorepo
 #
 # Sibling path: ../DonHopkins/ (same parent as this repo under ~/GroundUp/git/)
-# Authoritative plan: DonHopkins/projects/micropolis-moollm/process/wwsff-export-sync.yml
-
+# private archive — not in this repo
 sync:
   direction: primarily one_way_export
   live_repo: live-repo.yml

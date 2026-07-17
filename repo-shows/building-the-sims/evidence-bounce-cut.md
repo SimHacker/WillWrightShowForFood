@@ -51,6 +51,6 @@ Book source card (Sims reunion arc): [`../../characters/eric-bowman/sources/dire
 | [`../ideas/traditions/flatterbot-2000.yml`](../ideas/traditions/flatterbot-2000.yml#signature_beats.directx_bobo_correction) | Wrong author → book cover bounce |
 | [`../../process/old-band-back-together.yml`](../../process/old-band-back-together.yml#sims_team) | Multi-guest reunion container |
 
-Private shot list + interview order: `DonHopkins/.../green-room/building-the-sims/evidence-bounce-cut.md`
+Private shot list + interview order: *(private — not in this repo)*
 
 ↑ [artifacts INDEX](artifacts/INDEX.md) · [did-you-do-dots-together.md](did-you-do-dots-together.md)

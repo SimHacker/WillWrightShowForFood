@@ -1,6 +1,6 @@
 # A Tale of Two SimCities — getting EA to sign (Charles Normann, 2013)
 
-*Forwarded thread, Sep 2013 (Don → Phil Salvador, May 2022). Raw: [`fwd-a-tale-of-two-simcities.txt`](../../../../DonHopkins/temp/old-email/fwd-a-tale-of-two-simcities.txt).*
+*Forwarded thread, Sep 2013 (Don → Phil Salvador, May 2022). Raw: *private archive — not in this repo*
 
 Don titled the thread *A Tale of Two SimCities* — "more than two SimCities, actually" — while clearing stories with **Charles Normann** (Chuck), **Will Wright**, **Chaim Gingold**, **John Gilmore**, and **Josh Siegel** ahead of Chaim's oral-history work (later *Building SimCity*, MIT Press 2024).
 

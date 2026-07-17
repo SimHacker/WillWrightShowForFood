@@ -2,8 +2,7 @@
 
 **Curated subset** for the Will Wright Show audience. The full index (369 URLs, all topics, line numbers) lives in the private DonHopkins repo:
 
-`DonHopkins/projects/willwrightshowforfood/research/bibliography/`
-
+private green-room note (not in this repo)
 Not DRY on purpose — each repo gets what fits its context.
 
 ## Browse here (public)
@@ -33,7 +32,7 @@ Not DRY on purpose — each repo gets what fits its context.
 Summaries: **pending** (future phase). Re-project after harvest:
 
 ```bash
-python3 DonHopkins/temp/harvest-google-docs.py
+python3 private archive (not in this repo)
 ```
 
 ## Micropolis product angle

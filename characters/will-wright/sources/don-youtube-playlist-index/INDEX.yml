@@ -1,9 +1,8 @@
 # Don Hopkins YouTube — index from old-email harvest
-# 37 unique watch URLs in DonHopkins/temp/old-email/ (2026-06-29)
-# Regenerate: python3 DonHopkins/projects/willwrightshowforfood/tools/extract_youtube_index.py
-
+# 37 unique watch URLs in private archive (not in this repo) (2026-06-29)
+# private archive — not in this repo
 meta:
-  source: DonHopkins/temp/old-email/
+  source: private archive (not in this repo)
   count: 37
   status: partial
   note: "Titles: TITLES.yml (yt-dlp 2026-06-29) + manual overrides"

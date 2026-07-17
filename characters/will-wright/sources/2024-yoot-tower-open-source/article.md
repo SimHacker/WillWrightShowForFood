@@ -1,6 +1,6 @@
 # Yoot Tower / SimTower — open source via Video Game History Foundation
 
-*Don ↔ Phil Salvador ↔ Yoot Saito, Jan 2024. Raw: [`re-simtower-yoot-tower.txt`](../../../../DonHopkins/temp/old-email/re-simtower-yoot-tower.txt).*
+*Don ↔ Phil Salvador ↔ Yoot Saito, Jan 2024. Private correspondence archive — not published in this repo.*
 
 ---
 
@@ -33,7 +33,7 @@ Don also looping **Rebecca Heineman** for retro port expertise; **browser modern
 
 - **SimTower / Yoot Tower** — LGR first (recommended), then Obscuritory / Mac / JP / audio / endgame: [`../../../yoot-saito/media/simtower-videos.yml`](../../../yoot-saito/media/simtower-videos.yml) · [README table](../../../yoot-saito/README.md#simtower--yoot-tower--video-shelf-lgr-first)
 - **Seaman videos** — curated diverse shelf: [`../../../yoot-saito/media/seaman-videos.yml`](../../../yoot-saito/media/seaman-videos.yml) · [README table](../../../yoot-saito/README.md#seaman--video-shelf-one-of-each-kind). Dead upload `gdIO41Blysg` (*Nimoy intro — podman birth day*; [HN 39084042](https://news.ycombinator.com/item?id=39084042)) noted there.
-- Open source Yoot Tower discussion: [`re-open-source-yoot-tower.txt`](../../../../DonHopkins/temp/old-email/re-open-source-yoot-tower.txt)
+- Open source Yoot Tower discussion: private correspondence archive — not published in this repo.
 
 ## Micropolis parallel
 
@@ -48,6 +48,6 @@ Don shared Chaim Gingold's **Open Sourcing SimCity** excerpt with Yoot as playbo
 
 - [ ] Schedule Yoot + Ben (translator) + Phil + Rebecca call — status since 2024?  
 - [ ] Document license choice when release happens  
-- [ ] Public hub: [YootTowerManagement/YootTower](https://github.com/YootTowerManagement/YootTower) — do **not** link the private management sibling from WWSFF
+- [ ] Public hub: [YootTower README](https://github.com/YootTowerManagement/YootTower/blob/main/README.md) ([org repo](https://github.com/YootTowerManagement/YootTower)) — do **not** link the private management sibling from WWSFF
 
 *Phil also on Winograd 1996 talk CC list — same preservation circle.*

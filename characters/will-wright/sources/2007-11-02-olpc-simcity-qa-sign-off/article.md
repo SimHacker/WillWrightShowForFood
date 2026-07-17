@@ -2,7 +2,7 @@
 
 *Carlos Moreira, EA QA Lead → Charles Normann, John Gilmore, Don Hopkins, Samuel Klein, et al. — Fri 2 Nov 2007.*
 
-**Raw:** [`qa-sign-off-for-simcity-one-laptop-per-child.txt`](../../../../DonHopkins/temp/old-email/qa-sign-off-for-simcity-one-laptop-per-child.txt)
+*Private correspondence archive — not published in this repo.*
 
 ---
 

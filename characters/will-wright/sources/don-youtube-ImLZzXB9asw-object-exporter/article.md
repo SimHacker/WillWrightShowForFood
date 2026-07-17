@@ -33,4 +33,4 @@ https://donhopkins.com/home/archive/maxscript/maxis-maxscript.ms.txt
 - [Tools bundle demo (Transmogrifier + Simplifier)](../don-youtube-imu1v3GecB8-simplifier-tools-demo/README.md)
 - [`../2004-01-08-showntell-activex-preview/`](../2004-01-08-showntell-activex-preview/README.md)
 
-*Harvest: `DonHopkins/temp/old-email/re-promised-links.txt`*
+*

@@ -25,4 +25,4 @@ The Sims "AI" is **SimAntics** — a visual language distributed through objects
 
 ## Status
 
-Draft only — not submitted. Full timeline and citations remain in `DonHopkins/temp/big-prompts.txt` (lines ~115–413).
+Draft only — not submitted. Full timeline and citations remain in private archive (not in this repo) (lines ~115–413).

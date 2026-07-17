@@ -1,6 +1,6 @@
 # Don Hopkins answers — Maxis & The Sims (1997–2000)
 
-*Draft for Don to edit and send to Shamus (ShaMedic). Questions from Oct 2022; **follow-up reminder** Nov 2022 ([`follow-up-reminder.txt`](../../../../DonHopkins/temp/old-email/follow-up-reminder.txt)). Source: [re-questions-about-your-history-with-maxis.txt](../../../../DonHopkins/temp/old-email/re-questions-about-your-history-with-maxis.txt).*
+*Draft for Don to edit and send to Shamus (ShaMedic). Questions from Oct 2022; **follow-up reminder** Nov 2022 (*private archive — not in this repo* Source: *private archive — not in this repo*
 
 **Status:** DRAFT — Don must review before sending or publishing.
 

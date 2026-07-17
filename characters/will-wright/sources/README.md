@@ -435,12 +435,10 @@ CAM-6 pie menus as visual programming — YouTube + essay cross-link.
 - Original Sims site captures (cemetery, dumbold pages)
 - 1996 raw Winograd notes (`.txt` on Don's PC)
 
-Canonical research copies: `DonHopkins/projects/willwrightshowforfood/research/../../characters/will-wright/sources/` (Wayback captures)
-
+private green-room note (not in this repo)
 ---
 
-Regenerate articles: `python3 DonHopkins/projects/willwrightshowforfood/tools/extract_donhopkins_articles.py --force`
-
+private green-room note (not in this repo)
 ---
 
 *Raw directory:* [browse files in this folder](./)

@@ -81,8 +81,7 @@ projects:
 contact:
   warm_contact: false
   channel: "Green-room FB decode — outreach not sent"
-  green_room: DonHopkins/projects/willwrightshowforfood/green-room/sfc-alumni-wanted.md
-
+# private archive — not in this repo
 show_angles:
   - "Mark Your Territory × Bongo Bingo — live mashup design (with Andrew's OK)"
   - "SFC intern stories — Nancy van seat, Slats, Emeryville energy"

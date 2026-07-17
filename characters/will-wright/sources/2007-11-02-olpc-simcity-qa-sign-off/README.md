@@ -2,7 +2,7 @@
 
 Carlos Moreira (EA QA Lead) signs off **SimCity.activity.tgz** + source bundle for One Laptop Per Child.
 
-**Raw:** [`DonHopkins/temp/old-email/qa-sign-off-for-simcity-one-laptop-per-child.txt`](../../../../DonHopkins/temp/old-email/qa-sign-off-for-simcity-one-laptop-per-child.txt)
+*Private correspondence archive — not published in this repo.*
 
 **Related:** [simcity-open-source-saga](../simcity-open-source-saga/README.md)
 

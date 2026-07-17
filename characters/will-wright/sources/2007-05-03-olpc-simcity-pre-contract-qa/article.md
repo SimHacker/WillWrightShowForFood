@@ -1,6 +1,6 @@
 # OLPC SimCity — pre-contract QA plan
 
-*Email from Charles Normann to Don Hopkins — 3 May 2007. Harvest: [`olpc-simcity-qa-version.txt`](../../../../DonHopkins/temp/old-email/olpc-simcity-qa-version.txt).*
+*Email from Charles Normann to Don Hopkins — 3 May 2007.
 
 ---
 
@@ -21,7 +21,7 @@ Chuck is trying to run the build Don had **left with him** at EA.
 
 ## Why this matters for the saga
 
-This email shows EA's process was not "sign contract, then maybe test." Chuck inverted it: **QA findings feed contract stipulations** — the pattern Don later describes in [`untitled.txt`](../../../../DonHopkins/temp/old-email/untitled.txt):
+This email shows EA's process was not "sign contract, then maybe test." Chuck inverted it: **QA findings feed contract stipulations** — the pattern Don later describes in *private archive — not in this repo*
 
 > After EA legal approved, they gave me a list of changes they wanted made, conditions, and a copyright notice and license agreement to put in the code.  
 > …GPL v3, with the stipulation that it could only be called "SimCity" after EA QA tested and approved it.

@@ -61,7 +61,6 @@ the_sims_fan_tools:
     todo: "Locate per-tool agreements if they exist"
 
   - id: transmogrifier-wayback-index
-    file: DonHopkins/projects/willwrightshowforfood/research/../../characters/will-wright/sources/transmogrifier-wayback-INDEX.yml
     status: published
 
 related_articles:

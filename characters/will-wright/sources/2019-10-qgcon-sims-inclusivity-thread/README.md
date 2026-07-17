@@ -4,7 +4,7 @@ Don Hopkins pursued a **QGCon 2020** paper on inclusivity evolution in The Sims.
 EA PR/strategy connected him to studio historians. Paper not completed; thread
 documents Don's ask and named EA contacts.
 
-**Private full digest:** `DonHopkins/.../green-room/don-hopkins/qgcon-2020-inclusivity-paper/`
+**Private full digest:** *(private — not in this repo)*
 
 **Captured:** 2026-07-12
 

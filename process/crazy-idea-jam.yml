@@ -16,8 +16,7 @@ meta:
   human: CRAZY-IDEA-JAM.md
   facade_mode: instance-first
   facade_note: "Hand-authored — edit CRAZY-IDEA-JAM.md; sync this yaml girder"
-  upstream_full: SimHacker/DonHopkins/projects/micropolis-moollm/crystallized/DESIGN-WISDOM.yml
-
+# private archive — not in this repo
 # THE CROWN JEWEL
 ideas:
 
@@ -65,8 +64,7 @@ ideas:
       flow IS the character's evolution.
     archetype_gallery: "The player as gatekeeper-transformer: Maxwell's Daemon, the 'Papers, Please' customs agent (a bridgeable game!), Saint Peter's Gates, Satan's Back Door, the psychopomps at the Bifröst — a person judging what crosses, made into gameplay."
     constitutional: "PITM is our human↔AI manifesto: center PEOPLE, not the machine. Pairs with no-ai-slop (don't let AI hollow out the WORK) and no-ai-soul (don't let AI hollow out the AUTHOR — the soul stays with the people)."
-    upstream: SimHacker/DonHopkins/projects/micropolis-moollm/crystallized/AI-MANIFESTO.yml
-
+# private archive — not in this repo
   import_the_virtue_filter_the_vice:
     emoji: "🧪"
     blurb: |
@@ -628,4 +626,4 @@ see_also:
   - { path: ../repo-shows/david-ungar-self-moollm.yml, why: "Self × MOOLLM seed" }
   - { path: VISION.md, why: "Serious long arc — readable navigation layer" }
   - { path: vision-and-ambition.yml, why: "Yaml girder for the long arc" }
-  - { path: SimHacker/DonHopkins/projects/micropolis-moollm/crystallized/DESIGN-WISDOM.yml, why: "Upstream full principle set (private archive)" }
+# private archive — not in this repo

@@ -6,7 +6,7 @@
 
 ## The hook
 
-Audit 2026-07-07 — public WWSFF only; DonHopkins/temp = source of truth (~5158 .eml). **Decision pending** — pick phase before next bulk export.
+Audit 2026-07-07 — public WWSFF only; private archive (not in this repo) = source of truth (~5158 .eml). **Decision pending** — pick phase before next bulk export.
 
 Naming target: `{date}-{thread-slug}-{kind}-{descriptive-title}.{ext}`
 

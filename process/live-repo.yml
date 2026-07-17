@@ -17,7 +17,6 @@ donhopkins:
     If content has been exported or re-authored in WWSFF, edit WWSFF only.
     Do not backfill DonHopkins to mirror WWSFF. One-way cream export when needed;
     day-to-day work happens in the public bud.
-  sync_plan: DonHopkins/projects/micropolis-moollm/process/wwsff-export-sync.yml
   manifest: ../MANIFEST.yml
 
 wwsff:

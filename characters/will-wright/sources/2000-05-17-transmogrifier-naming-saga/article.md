@@ -60,4 +60,4 @@ Will Wright, Lucy Bradshaw, **Heather Castillo (SimFreaks)**, Chris Baena, Sinji
 - [Tutorial 1: Green Flamingo](../2004-transmogrifier-tutorial-green-flamingo/README.md)  
 - [Glossary](../2004-transmogrifier-glossary/README.md)  
 - [Magic Cookie registry](../2004-transmogrifier-magic-cookie-registry/README.md)  
-- Wayback index: `DonHopkins/projects/willwrightshowforfood/research/../../characters/will-wright/sources/transmogrifier-wayback-INDEX.yml`
+private green-room note (not in this repo)

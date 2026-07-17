@@ -24,8 +24,7 @@ timeline:
       - "levCAWorm pointer — Paul connecting Don to Jared's work, five years into Don + Jared's friendship"
       - "'It would be F.U.N.' — resurrection as a show format"
 
-private_archive: "DonHopkins/projects/micropolis-moollm/repo-shows/paul-haeberli/ (raw thread)"
-
+# private archive — not in this repo
 see_also:
   - { path: CHARACTER.yml, why: "Character card" }
   - { path: ../jared-tarbell/correspondence.yml, why: "The levCAWorm cross-pointer" }

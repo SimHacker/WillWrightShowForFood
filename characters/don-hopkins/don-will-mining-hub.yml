@@ -5,7 +5,7 @@ meta:
   host: don-hopkins
   guest: will-wright
   updated: 2026-07-04
-  prompt_scratch: ../../../../DonHopkins/temp/even-more-prompts.txt
+  prompt_scratch: private archive — not in this repo
 
 arcs:
   compression:

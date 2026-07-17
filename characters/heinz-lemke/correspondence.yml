@@ -169,7 +169,7 @@ threads:
       Usenix co-author), Andreas C. Lemke (U. Colorado — NeWS-makers pie-menu question, CHI'90
       "Using Critics to Empower Users"), Helmut Lemke (NURNICHTNUR experimental musician). Family
       connection TBD. Childhood essay private — forward-to-David permission only.
-    private_archive: DonHopkins/.../lemke-constellation.yml
+    private_archive: "private archive — not in this repo"
 
   alan_kay_armit_utah_2026_07_10:
     date: "2026-07-10"
@@ -200,7 +200,7 @@ threads:
     docs:
       - sources/electronics-international-1969-04-28-pixie.md
       - sources/2008-bill-buxton-pixie-memory-lane.md
-    private_archive: DonHopkins/.../2026-07-10-pixie-attachments-batch.md
+    private_archive: "private archive — not in this repo"
     pull_in:
       - pull-in-gaps.md#heinz_phd_thesis_1972
       - pull-in-gaps.md#electronics_magazine_1969_pdf  # p158 image snip

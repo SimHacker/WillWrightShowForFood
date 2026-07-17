@@ -2,7 +2,7 @@
 
 Don's unsent/plain-language summary of SimCity → OLPC → Micropolis — harvest from paste dump for canonical article expansion.
 
-**Raw:** [`DonHopkins/temp/old-email/untitled.txt`](../../../../DonHopkins/temp/old-email/untitled.txt)
+*Private correspondence archive — not published in this repo.*
 
 **Status:** Don review — especially **name the EA executive** who initially opposed open source.
 

@@ -23,7 +23,6 @@ layers:
     path: characters/<slug>/README.md
     structure: [birds_eye_top, deep_dive_bottom_unlimited]
   green_room:
-    location: "DonHopkins/projects/willwrightshowforfood/green-room/"
     never_commit: true
 
 will_line:

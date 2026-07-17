@@ -38,7 +38,6 @@ heritage:
 authoritative:
   its_restoration: PDP-10/its
   don_notes:
-    - SimHacker/DonHopkins/projects/micropolis-moollm/notes/history-of-logo.txt
     - SimHacker/DonHopkins/characters/margaret-minsky/correspondence/memory-lane-2019.yml
 
 ties:

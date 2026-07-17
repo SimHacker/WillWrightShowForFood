@@ -110,7 +110,7 @@ building_blocks:
     confidence: |
       ~0.9 this is the person Don meant ("the guy who trained a model to map human speech to pink
       trombone parameters"). CONFIRM with Don before treating as settled. Outreach = private
-      green-room (see ../../../DonHopkins/.../green-room). His work is public; inviting him is not.
+      green-room (see ../../../"private archive — not in this repo" His work is public; inviting him is not.
   paul_batchelor:
     what: "Singing synth w/ automatic 3-part harmony (Trio) + voxbox DSP crate — richer voice models."
     urls: [https://pbat.ch/, https://github.com/PaulBatchelor/Trio, https://github.com/PaulBatchelor/voxbox]

@@ -9,7 +9,7 @@ Don's post-Maxis pie menu experiments in **Unity3D** — same radial-menu lineag
 
 ## Context
 
-Listed in Don's Aug 2023 [Unity Engineer cover letter](../../../../DonHopkins/temp/old-email/unity-engineer---tools---don-hopkins.txt) alongside Stupid Fun Club **MediaGraph** and **StoryMaker** demos.
+Listed in Don's Aug 2023 *private archive — not in this repo* alongside Stupid Fun Club **MediaGraph** and **StoryMaker** demos.
 
 Historical thread: [2022-cam-6-pie-menus-visual-programming](../2022-cam-6-pie-menus-visual-programming/article.md) — CHI'88 paper, Steve Jobs NeXT demo, Sims ship decision.
 

@@ -26,7 +26,7 @@ Your brother **Glenn** and I have a parallel thread: his **Distillery**, my NeWS
 4. **Brother counterpoint** — Glenn's partial evaluation vs your archival historian role.
 
 Primary source in our tree (from MOOLLM):  
-`/Users/a2deh/GroundUp/Leela/git/moollm/designs/postscript/BRIAN-REID-POSTSCRIPT-HISTORY.md`
+`private path (not in this repo)
 
 Show plant: `characters/brian-reid/` · `repo-shows/postscript-distillery-to-pdf/`
 

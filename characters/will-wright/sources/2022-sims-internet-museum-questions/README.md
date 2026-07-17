@@ -2,7 +2,7 @@
 
 Paulette Dropinsky (Sims Internet Museum Project) asks Don about steering committee build, EDITH, pre–art-style skins, and cancelled SimsVille.
 
-**Raw:** [`DonHopkins/temp/old-email/questions-regarding-the-sims.txt`](../../../../DonHopkins/temp/old-email/questions-regarding-the-sims.txt)
+*Private correspondence archive — not published in this repo.*
 
 **Related:** [1998 steering committee demo](../1998-06-04-sims-steering-committee-demo/README.md) · [ShaMedic Q&A draft](../2022-shamedic-maxis-history-qa/README.md)
 

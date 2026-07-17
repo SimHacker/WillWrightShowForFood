@@ -1,6 +1,6 @@
 # Building SimCity — Chaim Gingold intro + Sam Arbesman (2024)
 
-*Thread: Chaim → Don, July 2024. Raw: [`intro.txt`](../../../../DonHopkins/temp/old-email/intro.txt), [`exciting-news-my-new-book-building-simcity-launches-soon.txt`](../../../../DonHopkins/temp/old-email/exciting-news-my-new-book-building-simcity-launches-soon.txt).*
+*Thread: Chaim → Don, July 2024. Raw: *private archive — not in this repo* *private archive — not in this repo*
 
 ---
 

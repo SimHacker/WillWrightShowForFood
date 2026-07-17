@@ -54,8 +54,7 @@ timeline:
       LifeStar installation (spherical laser-cut voronoi spacemaker) + limited-edition natural
       wood digital prototypes at the Rail Yards Holiday Market, Albuquerque.
 
-private_archive: "DonHopkins/projects/micropolis-moollm/repo-shows/jared-tarbell/ (raw threads)"
-
+# private archive — not in this repo
 see_also:
   - { path: CHARACTER.yml, why: "Character card" }
   - { path: invitation.md, why: "Memory-jogging invitation built from this timeline" }

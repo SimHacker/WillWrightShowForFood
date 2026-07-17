@@ -53,6 +53,6 @@ Instructables (**blorgggg** = Andrew): Featured; contest wins — Hack It!, Pock
 
 ## Green-room
 
-Private planning: `DonHopkins/.../green-room/sfc-alumni-wanted.md` § Andrew Quitmeyer
+Private planning: *(private — not in this repo)* § Andrew Quitmeyer
 
 ↑ [sources/](README.md) · [ideas.md](../ideas.md)

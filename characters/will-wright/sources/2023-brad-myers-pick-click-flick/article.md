@@ -1,6 +1,6 @@
 # Pick, Click, Flick! — Brad Myers book, Chapter 33 (Don Hopkins)
 
-*Brad A. Myers → Don Hopkins, 16 July 2023. Raw: [`book-on-interaction-techniques.txt`](../../../../DonHopkins/temp/old-email/book-on-interaction-techniques.txt).*
+*Brad A. Myers → Don Hopkins, 16 July 2023. Raw: *private archive — not in this repo*
 
 ---
 

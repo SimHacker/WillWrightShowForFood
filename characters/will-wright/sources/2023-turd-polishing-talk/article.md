@@ -1,6 +1,6 @@
 # Turd polishing — shipping The Sims under EA
 
-*Don Hopkins → Steve Yegge, 11 Aug 2023. Raw: [`the-turd-polishing-talk.txt`](../../../../DonHopkins/temp/old-email/the-turd-polishing-talk.txt).*
+*Don Hopkins → Steve Yegge, 11 Aug 2023. Raw: *private archive — not in this repo*
 
 Don wrote Steve Yegge after hearing him welcome email on Sourcegraph — Don was using **Cody** on a 14,929-line monolith. Subject line: did Steve ever get **the Turd Polishing Talk**?
 

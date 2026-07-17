@@ -62,7 +62,6 @@ phases:
     deliverable: "L0 sector R/W tests; L1 DOS 3.3 catalog; L2 Mind Mirror driver seed"
     stack:
       primary_emulator: apple2js
-      authoritative_layers: SimHacker/DonHopkins/projects/micropolis-moollm/process/apple2-emulator-stack.yml
       fujinet_peer: "Server-side FujiNet-PC — NOT in-browser firmware"
       sidecar_sketch: |
         WebSocket relay ↔ SPoverSLIP/TCP (Apple) or NetSIO/UDP (Atari template)

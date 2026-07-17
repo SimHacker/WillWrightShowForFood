@@ -1,6 +1,6 @@
 # The Sims prototype preservation — E3 1999 music & missing builds
 
-*Email thread: Jerry Martin ↔ Phil Ramsey (philarchiverunlimited) ↔ Don Hopkins, Feb–Mar 2026. Raw: [`re-e3-1999-music.txt`](../../../../DonHopkins/temp/old-email/re-e3-1999-music.txt).*
+*Email thread: Jerry Martin ↔ Phil Ramsey (philarchiverunlimited) ↔ Don Hopkins, Feb–Mar 2026. Raw: *private archive — not in this repo*
 
 ---
 
@@ -43,8 +43,7 @@ Modern tooling path — not retail binaries in git:
 
 Jerry ("Boom Bam Boom") looped Don in when Phil asked about **E3 1999 prototype music**. Don may hold or know of original-era audio not in public protos — check Don archive disks.
 
-Character: [`../../../../jerry-martin/`](../../../../jerry-martin/README.md) (if exists) · epithet in [Jess Bird roster](../../../../DonHopkins/projects/willwrightshowforfood/research/../../characters/will-wright/sources/jess-bird-bbc-email-2025.yml)
-
+Character: [`../../../../jerry-martin/`](../../../../jerry-martin/README.md) (if exists) · epithet in [Jess Bird roster]private green-room note (not in this repo)
 ## Thrift-store provenance guess
 
 Phil Ramsey theorizes Jan 1999 disc + yard-sale PC screenshot = ex-Maxis/EA employee disposing of work copies — same pattern as steering committee leak (kind release vs sold).

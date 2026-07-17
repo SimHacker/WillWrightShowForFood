@@ -35,9 +35,6 @@ instantiation_pattern:
     beat: ../../building-the-sims/did-you-do-dots-together.md
     sources: ../../building-the-sims/sources/dodots-post-sims.md
   private_cast_plans:
-    jim-mackraz: DonHopkins/projects/willwrightshowforfood/green-room/jim-mackraz/did-you-do-dots-together.md
-    eric-bowman: DonHopkins/projects/willwrightshowforfood/green-room/eric-bowman/did-you-do-dots-together.md
-    don-hopkins: DonHopkins/projects/willwrightshowforfood/green-room/don-hopkins/did-you-do-dots-together.md
 
 variations:
   glick_follow_ups:
@@ -65,5 +62,4 @@ variations:
       Founding payoff: FlatterBot credits Jason with DirectX book → cut to listing cover showing Eric Bowman.
     parent: ../../building-the-sims/evidence-bounce-cut.md
     book_evidence: ../../../characters/eric-bowman/sources/direct3d-professional-reference.md
-    private_edit_plan: DonHopkins/projects/willwrightshowforfood/green-room/building-the-sims/evidence-bounce-cut.md
     lineage: ../../../process/repo-show-format.yml#splice_in_reactions

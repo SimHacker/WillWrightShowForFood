@@ -10,7 +10,7 @@ Public-safe summary. Full letter text in private archive.
 | Date | ~2008 |
 | Context | Buxton's dinner invitation prompted a 40-year PIXIE archive review; CARS 2009 Berlin keynote invitation |
 | Provenance | Email attachment from Heinz Lemke, 10 July 2026 |
-| Private archive | `DonHopkins/.../heinz-lemke/2008-bill-buxton-pixie-memory-lane.md` |
+| Private archive | *(private — not in this repo)* |
 | Keywords | PIXIE, Buxton, Bill Newman, PACS, TIMMS, PhD thesis, multi-user workstations, CARS 2009 |
 
 ## Summary

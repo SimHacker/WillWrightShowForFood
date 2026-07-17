@@ -2,7 +2,7 @@
 
 Wayback harvest of Don Hopkins' walkthrough: clone the Pink Flamingo, export BMP sprites, recolor in Photoshop, import, test in buy mode.
 
-**Source:** [Wayback Tutorial 1](https://web.archive.org/web/20050301054832/http://www.thesimstransmogrifier.com/TransmogrifierDocumentation/TransmogrifierTutorial1.htm) · `DonHopkins/temp/big-prompts.txt`
+**Source:** [Wayback Tutorial 1](https://web.archive.org/web/20050301054832/http://www.thesimstransmogrifier.com/TransmogrifierDocumentation/TransmogrifierTutorial1.htm) · private archive (not in this repo)
 
 **Related:** [RugOMatic tutorial](../2004-01-21-rugomatic-tutorial/README.md) · [naming saga](../2000-05-17-transmogrifier-naming-saga/README.md)
 

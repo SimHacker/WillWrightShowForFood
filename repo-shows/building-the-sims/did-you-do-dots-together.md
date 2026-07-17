@@ -43,9 +43,9 @@ Public gag is the **parent**; cast-specific production plans live in the private
 
 | Cast | Private plan |
 |------|----------------|
-| Jim Mackraz | `DonHopkins/.../green-room/jim-mackraz/did-you-do-dots-together.md` |
-| Eric Bowman | `DonHopkins/.../green-room/eric-bowman/did-you-do-dots-together.md` |
-| Don Hopkins (asker) | `DonHopkins/.../green-room/don-hopkins/did-you-do-dots-together.md` |
+| Jim Mackraz | *(private — not in this repo)* |
+| Eric Bowman | *(private — not in this repo)* |
+| Don Hopkins (asker) | *(private — not in this repo)* |
 
 Abstract variations (Glick follow-ups, Kembel-twin confusion, Stanford-debt pivot, TomTom bridge, FlatterBot crossover): [`../../ideas/gags/did-you-do-dots-together.yml`](../../ideas/gags/did-you-do-dots-together.yml#variations)
 

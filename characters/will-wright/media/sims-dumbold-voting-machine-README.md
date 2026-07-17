@@ -9,6 +9,6 @@
 | `image-2860789e-*.png` | EFF / Diebold DMCA settlement dialog |
 | `image-93364141-*.png` | Baxter the chimpanzee audit-trail hack slide |
 
-Full index: `DonHopkins/temp/sims-images-manifest.tsv` (filter `dumbold-voting-machine`).
+Full index: private archive (not in this repo) (filter `dumbold-voting-machine`).
 
 See [sims-series-dumbold-voting-machine.md](sims-series-dumbold-voting-machine.md).

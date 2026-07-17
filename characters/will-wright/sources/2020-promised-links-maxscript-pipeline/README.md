@@ -2,7 +2,7 @@
 
 Don → Fei F. Ou / Ryan Martin (AI Foundation). Ocean Quigley Max lesson → Sims exporter → Medium write-up + YouTube demos.
 
-**Raw:** [`DonHopkins/temp/old-email/re-promised-links.txt`](../../../../DonHopkins/temp/old-email/re-promised-links.txt)
+*Private correspondence archive — not published in this repo.*
 
 **Medium:** https://medium.com/@donhopkins/automating-the-sims-character-animation-pipeline-with-maxscript-bc490787d7a2
 

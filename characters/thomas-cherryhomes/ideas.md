@@ -370,4 +370,4 @@ running disk for a character bridge*, start Phase 2. Phase 3 only after Thomas b
 - Emularity / IA: https://github.com/db48x/emularity · https://blog.archive.org/2016/03/04/saving-500-apple-ii-programs-from-oblivion/
 - AppleWin 1.32: https://github.com/AppleWin/AppleWin · audetto Linux port
 - POM2: https://github.com/habib256/POM2
-- Don Hopkins apple2-emulator-stack: `SimHacker/DonHopkins/.../apple2-emulator-stack.yml`
+- Don Hopkins apple2-emulator-stack: `SimHacker/*(private — not in this repo)*

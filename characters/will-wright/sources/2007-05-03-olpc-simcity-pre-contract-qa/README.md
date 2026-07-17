@@ -2,7 +2,7 @@
 
 Chuck Normann wants EA QA to review the build **before** the open-source contract is written, and produce a change list EA requires for release.
 
-**Raw:** [`DonHopkins/temp/old-email/olpc-simcity-qa-version.txt`](../../../../DonHopkins/temp/old-email/olpc-simcity-qa-version.txt)
+*Private correspondence archive — not published in this repo.*
 
 **Related:** [2007-01-29 EA QA VM setup](../2007-01-29-olpc-simcity-ea-qa-vm/README.md) · [EA↔OLPC contract](../../../../don-hopkins/career/contracts/olpc-ea-contract.pdf)
 

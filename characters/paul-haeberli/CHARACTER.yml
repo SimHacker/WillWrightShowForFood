@@ -79,8 +79,7 @@ contact:
   channel: "Warm — direct email from Don"
 
 correspondence: correspondence.yml
-private_archive: DonHopkins/projects/micropolis-moollm/repo-shows/paul-haeberli/
-
+# private archive — not in this repo
 sources:
   in_repo:
     - sources/skinnyhacking-siggraph-1992.md

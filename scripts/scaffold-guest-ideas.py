@@ -15,7 +15,8 @@ except ImportError:
 ROOT = Path(__file__).resolve().parents[1]
 CHARS = ROOT / "characters"
 INDEX = CHARS / "INDEX.yml"
-DON_CORR = Path("/Users/a2deh/GroundUp/git/DonHopkins/characters/don-hopkins/correspondence")
+# Optional sibling private repo — never hardcode absolute home paths in public tree
+DON_CORR = (ROOT.parent / "DonHopkins" / "characters" / "don-hopkins" / "correspondence")
 SKIP = {"_TEMPLATE", "don-hopkins", "don-philahue", "slats", "ultimate-machine", "palm"}
 
 # WWSFF slug -> DonHopkins correspondence filename

@@ -1,6 +1,6 @@
 # SimCity 3000 scrapped 3D build — preservation hub
 
-*Modama preservation inquiry + Don's Guru doc commentary. Harvest: [DonHopkins/temp/old-email](../../../../DonHopkins/temp/old-email/README.md) (top of dump + HN paste).*
+*Modama preservation inquiry + Don's Guru doc commentary.
 
 ## Story (short)
 

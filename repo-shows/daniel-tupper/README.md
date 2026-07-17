@@ -7,4 +7,4 @@ tool-pipeline ally.
 - Invitation (draft): [`../../characters/daniel-tupper/invitation.md`](../../characters/daniel-tupper/invitation.md)
 - Show spec: [`SHOW.yml`](SHOW.yml)
 
-Private enrichment: `DonHopkins/projects/willwrightshowforfood/green-room/daniel-tupper/`
+private green-room note (not in this repo)

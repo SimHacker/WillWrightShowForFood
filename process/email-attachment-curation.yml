@@ -1,12 +1,12 @@
 # Email attachment curation — scope, dupes, naming, export gate
-# Audit: 2026-07-07 (public WWSFF only; DonHopkins/temp = source of truth, not scanned)
+# Audit: 2026-07-07 (public WWSFF only; private archive (not in this repo) = source of truth, not scanned)
 # Status: decision_pending — pick phase before next bulk export
 
 meta:
   id: email-attachment-curation
   audited: 2026-07-07
   scope: WillWrightShowForFood public only
-  source_of_truth: DonHopkins/temp/  # gitignored; ~5158 .eml; do not bulk-export without Phase C
+  source_of_truth: private archive (not in this repo)  # gitignored; ~5158 .eml; do not bulk-export without Phase C
   related:
     - sync-with-donhopkins.yml
     - live-repo.yml
@@ -68,7 +68,7 @@ phases:
   B_provenance_tool:
     label: "Phase B — thread traceability"
     effort: "~1 day tool + half day apply"
-    depends_on: read-only index from DonHopkins/temp .eml (Message-ID, Date, attachment name)
+    depends_on: read-only index from private archive (not in this repo) .eml (Message-ID, Date, attachment name)
     tasks:
       - backfill source_thread on all manifests
       - optional move to sources/<slug>/attachments/ instead of flat from-mail/

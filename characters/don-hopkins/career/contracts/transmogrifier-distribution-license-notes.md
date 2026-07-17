@@ -7,8 +7,7 @@ Two distinct legal layers:
 
 Summarized from Don's [Transmogrifier Renovation Plan](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/will-wright/sources/2004-02-05-transmogrifier-renovation-plan/article.md) (2004) and Drupal node-17 harvest.
 
-Wayback index: `DonHopkins/projects/willwrightshowforfood/research/../../characters/will-wright/sources/transmogrifier-wayback-INDEX.yml`
-
+private green-room note (not in this repo)
 ---
 
 ## Model

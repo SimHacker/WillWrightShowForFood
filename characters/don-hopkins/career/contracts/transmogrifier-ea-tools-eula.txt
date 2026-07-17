@@ -1,7 +1,7 @@
 # EA TOOLS END USER LICENSE — The Sims Transmogrifier
 # Source: Wayback capture of thesimstransmogrifier.com (Dec 2004)
 # https://web.archive.org/web/20041216085027/http://www.thesimstransmogrifier.com/TransmogrifierDocumentation/TransmogrifierLicense.htm
-# Harvested from DonHopkins/temp/big-prompts.txt (Don's IA cache paste, 2026)
+# Harvested from private archive (not in this repo) (Don's IA cache paste, 2026)
 #
 # NOTE: This is the click-through license shown to *downloaders* of the Tool.
 # Don's separate *distributor* agreement (donhopkins.com only, no CD, no third-party

@@ -1,6 +1,6 @@
 # Automating The Sims animation pipeline — promised links (2020)
 
-*Don Hopkins → AI Foundation (Fei F. Ou, Ryan Martin), Mar 2020. Raw: [`re-promised-links.txt`](../../../../DonHopkins/temp/old-email/re-promised-links.txt).*
+*Don Hopkins → AI Foundation (Fei F. Ou, Ryan Martin), Mar 2020. Raw: *private archive — not in this repo*
 
 Don sent this link bundle while interviewing for AI Foundation character-animation work. It is the best **single index** of Sims 1 content-pipeline demos already in WWSFF.
 

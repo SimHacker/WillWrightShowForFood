@@ -1,6 +1,6 @@
 # Guru's SimCity 3000 3D design document — Don's annotated excerpts
 
-*From Don Hopkins HN comment on [SimCity 3k in 4k](https://www.thran.uk/writ/hdid/2025/12/simcity-3k-in-4k.html), preserved in [old-email.txt](../../../../DonHopkins/temp/old-email.txt).*
+*From Don Hopkins HN comment on [SimCity 3k in 4k](https://www.thran.uk/writ/hdid/2025/12/simcity-3k-in-4k.html), preserved in *private archive — not in this repo*
 
 ## Context
 

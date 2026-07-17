@@ -18,7 +18,7 @@ Yoot sent Don a code drop for archival, academic study, and a **modern browser-o
 
 Don ↔ Yoot ↔ Phil Salvador (Video Game History Foundation) — formal source release discussion, Jan 2024.
 
-**Constructionist thread:** Yoot Tower and Micropolis share Papert/Kay goals — see YootTower README *Constructionist Education* section and Don's HAR 2009 Micropolis lightning talk in that repo.
+**Constructionist thread:** Yoot Tower and Micropolis share Papert/Kay goals — see [YootTower README](https://github.com/YootTowerManagement/YootTower/blob/main/README.md) *Constructionist Education* section and Don's HAR 2009 Micropolis lightning talk in that repo.
 
 ---
 

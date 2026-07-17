@@ -34,6 +34,5 @@ Died 24 November 2023 (Parkinson's). [Wikipedia](https://en.wikipedia.org/wiki/M
 - [Stupid Fun Club one-minute movies](../will-wright/sources/stupid-fun-club-one-minute-movies/README.md)
 - [Slats / ROBORESURRECTION](../../repo-shows/will-wright-premiere/slats-reincarnation.yml)
 - [Matthew Sibigtroth](../matthew-sibigtroth/) — SFC alum (separate track)
-- [Mike Winter](../../../DonHopkins/projects/willwrightshowforfood/green-room/sfc-alumni-wanted.md) — SFC archivist rules
-
+- [Mike Winter]private green-room note (not in this repo)
 ↑ [characters](../README.md) · [Will](../will-wright/README.md)
