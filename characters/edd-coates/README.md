@@ -108,20 +108,21 @@ Personal notes Edd publishes himself (Essex; singer/songwriter outside work) sta
 | #    | Seed                                                                                                                                                                   | One line                                                                                                                                                                                              |
 | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1    | [Show room](../../repo-shows/edd-coates/) · [SHOW.yml](../../repo-shows/edd-coates/SHOW.yml)                                                                           | GUIDB taxonomy at scale; *Game UI Bible*; PadCrafter; ethical licensing / anti-slop                                                                                                                   |
-| 2    | [pie-menus-piecraft.yml](../../repo-shows/edd-coates/pie-menus-piecraft.yml) · [discussion notes](../../repo-shows/edd-coates/pie-menus-discussion-notes.md)           | Live GUIDB browse → pies/radials → **reinterpret bad UIs** with skinnable **[Gonzo UI](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/GONZO-UI-MANIFEST.md)** → PieCraft |
+| 2    | [pie-menus-piecraft.yml](../../repo-shows/edd-coates/pie-menus-piecraft.yml) · [discussion notes](../../repo-shows/edd-coates/pie-menus-discussion-notes.md) · **[Queer Oui for the Straight GUI](../don-hopkins/queer-oui-for-the-straight-gui.md)** | Live GUIDB browse → pies/radials → **[reinterpret bad UIs](../don-hopkins/queer-oui-for-the-straight-gui.md)** with skinnable **[Gonzo UI](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/GONZO-UI-MANIFEST.md)** → [PieCraft](https://github.com/SimHacker/MicropolisCore/tree/main/documentation/designs/piecraft) |
 | 3    | [pixie-pie-menus-pdp7.yml](../../repo-shows/pixie-pie-menus-pdp7.yml) · [ideas § PIXIE…](ideas.md#pixie-pdp-7-light-pens-engelbart-emulators-padcrafter-blinkenlights) | PIXIE / light pen / *Spacewar!* ancestry / [Engelbart](../douglas-engelbart/) keyset / [Lars](../lars-brinkhoff/) PDP-7 emulator / **PadCrafter blinkenlight front panels**                           |
 | Pair | [brad-and-edd-interaction-catalogs](../../repo-shows/brad-and-edd-interaction-catalogs.md) · [yml](../../repo-shows/brad-and-edd-interaction-catalogs.yml)             | GUIDB × [Brad Myers](../brad-myers/) *Pick, Click, Flick!* — two catalogs, different methods                                                                                                           |
 
 
-North star framing: [game-ui-archive.md](game-ui-archive.md) · full hook list: [ideas.md](ideas.md) · questions: [suggested-questions.yml](../../repo-shows/edd-coates/suggested-questions.yml)
+North star framing: [game-ui-archive.md](game-ui-archive.md) · full hook list: [ideas.md](ideas.md) ·
+**[Queer Oui for the Straight GUI](../don-hopkins/queer-oui-for-the-straight-gui.md)** · questions: [suggested-questions.yml](../../repo-shows/edd-coates/suggested-questions.yml) ·
+[heartbeat](../../process/brainstorm-heartbeat.md)
 
 ### The Gonzo / bridge hook (episode 2 spine)
 
 [Soul City](https://github.com/SimHacker/moollm/tree/main/examples/soul-city) bridges characters and content between games ([hub/spoke index](../../repo-shows/INDEX.yml)). Bridge UIs should **look like the game** (skin) while sharing one ergonomic kernel (pies, tabbed frames, inhabited chrome) — see
-[Gonzo UI Manifest](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/GONZO-UI-MANIFEST.md) · [federation peer games](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/federation-peer-games.md) · [nine-slice frames](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/ui-frame-nine-slice.md).
+[Gonzo UI Manifest](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/GONZO-UI-MANIFEST.md) · [federation peer games](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/federation-peer-games.md) · [nine-slice frames](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/ui-frame-nine-slice.md) · [PIE-TAB-WINDOWS](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/notes/PIE-TAB-WINDOWS.md) · [Fitts](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/pie-menus-fitts-law.md).
 
-**Edd’s role in that story:** pull real GUIDB examples as redesign briefs. Keep the costume.
-Replace bad hands. Multi-bridge sessions should read at a glance.
+**Edd’s role in that story:** pull real [GUIDB](https://www.gameuidatabase.com/) examples as redesign briefs ([Queer Oui for the Straight GUI](../don-hopkins/queer-oui-for-the-straight-gui.md) — *Queer Oui* / *SaS→SaaS*). Keep the costume. Replace bad hands. Multi-bridge sessions should read at a glance.
 
 ### PIXIE / emulator / PadCrafter blinkenlights (episode 3 spine)
 
@@ -172,8 +173,9 @@ Replace bad hands. Multi-bridge sessions should read at a glance.
 | File                                     | What                                                                              |
 | ---------------------------------------- | --------------------------------------------------------------------------------- |
 | [invitation.md](invitation.md)           | Guest-facing invite (ready to email)                                              |
-| [ideas.md](ideas.md)                     | Conversation hooks — Gonzo, bridges, reinterpret, PIXIE, PadCrafter blinkenlights |
+| [ideas.md](ideas.md)                     | Conversation hooks — Gonzo, bridges, PIXIE, PadCrafter blinkenlights |
 | [game-ui-archive.md](game-ui-archive.md) | North star — two archivists                                                       |
+| *[Queer Oui…](../don-hopkins/queer-oui-for-the-straight-gui.md)* (Don’s essays) | Rescue clinic — SaS→SaaS; GUIDB → Gonzo whiteboard |
 | [CHARACTER.yml](CHARACTER.yml)           | Machine-readable portrayal                                                        |
 | [CARD.yml](CARD.yml)                     | Show-segment abilities                                                            |
 | [GLANCE.md](GLANCE.md)                   | One-screen sniff                                                                  |

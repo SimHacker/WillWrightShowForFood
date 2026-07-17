@@ -71,12 +71,14 @@ Working document for the PieCraft episode. Screen-sharing, whiteboarding, follow
 - [PIXIE PDP-7 show](../pixie-pie-menus-pdp7.yml) · [Lars room](../../characters/lars-brinkhoff/)
 - [MicropolisCore piecraft/](https://github.com/SimHacker/MicropolisCore/tree/main/documentation/designs/piecraft)
 - [GONZO-UI-MANIFEST.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/GONZO-UI-MANIFEST.md) — bridge skins + reinterpret table
-- Monster Hunter radial guides; Kando (modern open-source pies)
+- **[Queer Oui for the Straight GUI](../../characters/don-hopkins/queer-oui-for-the-straight-gui.md)** — *Queer Oui* / *SaS→SaaS* whiteboard format
+- [PIE-TAB-WINDOWS.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/notes/PIE-TAB-WINDOWS.md) · [Fitts](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/pie-menus-fitts-law.md)
+- Monster Hunter radial guides; [Kando](https://github.com/kando-menu/kando) (modern open-source pies)
 
 ## Desired outcomes
 
-1. Annotated good/bad examples with GUIDB references (redesign briefs, not dunking for sport)
-2. At least one worked example: GUIDB miss → Gonzo reinterpret sketch (skin tokens + pie/tab layout)
+1. Annotated good/bad examples with GUIDB references (redesign briefs, not dunking for sport) — [Queer Oui show etiquette](../../characters/don-hopkins/queer-oui-for-the-straight-gui.md#show-etiquette)
+2. At least one worked example: GUIDB miss → Gonzo reinterpret sketch (skin tokens + pie/tab layout) — [live format](../../characters/don-hopkins/queer-oui-for-the-straight-gui.md#live-format)
 3. Co-designed requirements for next-gen editable pies + per-game skin packs
 4. Taxonomy decision for radial patterns in GUIDB
 5. Warm path to ethical licensing corpus for pie menu history

@@ -4,19 +4,20 @@
 put in Edd's mouth.*
 [Portrayal standards](../../schemas/portrayal-standards.md) · friend · consent not_yet_asked
 
-Audience README: `[README.md](README.md)` · North star: `[game-ui-archive.md](game-ui-archive.md)`
+Audience README: [README.md](README.md) · North star: [game-ui-archive.md](game-ui-archive.md) ·
+Queer Oui: [Queer Oui for the Straight GUI](../don-hopkins/queer-oui-for-the-straight-gui.md)
 
 ---
 
 ## Shows
 
 
-| Episode                                          | Seed                                                                                         |
-| ------------------------------------------------ | -------------------------------------------------------------------------------------------- |
-| **Game UI Database & ethical archives**          | `[repo-shows/edd-coates/](../../repo-shows/edd-coates/)`                                     |
-| **Pie menus, Gonzo, PieCraft**                   | `[pie-menus-piecraft.yml](../../repo-shows/edd-coates/pie-menus-piecraft.yml)`               |
-| **PIXIE / emulators / PadCrafter blinkenlights** | `[pixie-pie-menus-pdp7.yml](../../repo-shows/pixie-pie-menus-pdp7.yml)` (+ hooks below)      |
-| **The Two Catalogs** (pair)                      | `[brad-and-edd-interaction-catalogs](../../repo-shows/brad-and-edd-interaction-catalogs.md)` |
+| Episode | Seed |
+| -------- | ---- |
+| **Game UI Database & ethical archives** | [repo-shows/edd-coates/](../../repo-shows/edd-coates/) · [SHOW.yml](../../repo-shows/edd-coates/SHOW.yml) · [game-ui-archive.md](game-ui-archive.md) |
+| **Pie menus, Gonzo, PieCraft** | [pie-menus-piecraft.yml](../../repo-shows/edd-coates/pie-menus-piecraft.yml) · [discussion notes](../../repo-shows/edd-coates/pie-menus-discussion-notes.md) · [Queer Oui for the Straight GUI](../don-hopkins/queer-oui-for-the-straight-gui.md) |
+| **PIXIE / emulators / PadCrafter blinkenlights** | [pixie-pie-menus-pdp7.yml](../../repo-shows/pixie-pie-menus-pdp7.yml) · [Lars](../lars-brinkhoff/) · [Heinz](../heinz-lemke/) · [Engelbart](../douglas-engelbart/) |
+| **The Two Catalogs** (pair) | [brad-and-edd-interaction-catalogs](../../repo-shows/brad-and-edd-interaction-catalogs.md) · [Brad Myers](../brad-myers/) |
 
 
 ---
@@ -28,17 +29,19 @@ Audience README: `[README.md](README.md)` · North star: `[game-ui-archive.md](g
 Don's working definition (open for Edd to shred):
 
 > UI that reports from **inside** the interaction — subjective, stunt-capable, sincerely weird —
-> classical HCI (visible state, Fitts, reversibility) with **nap left on the felt**. Shop name from
-> The Sims Framework shell (`Gonzo`); method from gonzo journalism; stagecraft from felt creatures.
+> classical HCI (visible state,
+> [Fitts](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/pie-menus-fitts-law.md),
+> reversibility) with **nap left on the felt**. Shop name from The Sims Framework shell (`Gonzo`);
+> method from gonzo journalism; stagecraft from felt creatures.
 > Manifest: [GONZO-UI-MANIFEST.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/GONZO-UI-MANIFEST.md)
 
 Hooks for Edd:
 
-- Pull a GUIDB screen that is *sterile SaaS in a game costume* — what would Gonzo refuse?
+- Pull a [GUIDB](https://www.gameuidatabase.com/) screen that is *sterile SaaS in a game costume* — what would Gonzo refuse? → [Queer Oui for the Straight GUI](../don-hopkins/queer-oui-for-the-straight-gui.md)
 - Pull a GUIDB screen that is *already Gonzo* without knowing it — inhabited chrome, honest errors, stunt affordances
 - Where does “beautiful art + dead hands” show up most in the catalog (inventory? settings? crafting?)?
 - Can “felt creatures” (sparse signals, fat projection) be taught as a reading skill for GUIDB screens?
-- PadCrafter already makes control schemes *legible* — is that Gonzo’s cousin on the input side?
+- [PadCrafter](https://www.padcrafter.com/) already makes control schemes *legible* — is that Gonzo’s cousin on the input side?
 
 ---
 
@@ -46,53 +49,46 @@ Hooks for Edd:
 
 ## Bridge skins — Soul City hub-and-spoke
 
-Soul City is the hub; each game is a spoke. Bridge operator UIs should **match the game at a glance**
+[Soul City](https://github.com/SimHacker/moollm/tree/main/examples/soul-city) is the hub; each game
+is a spoke ([federation peers](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/federation-peer-games.md) ·
+[INDEX bridges](../../repo-shows/INDEX.yml)). Bridge operator UIs should **match the game at a glance**
 when several bridges are open and souls / content move between them.
 
-
-| Layer            | Job                                                                    |
-| ---------------- | ---------------------------------------------------------------------- |
-| **Gonzo kernel** | Pies, tabbed frames, nine-slice frames, DM, a11y — game-agnostic       |
-| **Skin pack**    | Palette, atlas, fonts, cursors, splash voice — game-legible            |
-| **GUIDB brief**  | Cite a real screen as the costume reference (no ripped assets in repo) |
-
+| Layer | Job |
+| ----- | --- |
+| **Gonzo kernel** | [Pies](https://github.com/SimHacker/MicropolisCore/tree/main/documentation/designs/piecraft), [tabbed frames](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/notes/PIE-TAB-WINDOWS.md), [nine-slice](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/ui-frame-nine-slice.md), DM, a11y — game-agnostic ([manifest](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/GONZO-UI-MANIFEST.md)) |
+| **Skin pack** | Palette, atlas, fonts, cursors, splash voice — game-legible |
+| **GUIDB brief** | Cite a real [GUIDB](https://www.gameuidatabase.com/) screen as the costume reference (no ripped assets) — [Queer Oui for the Straight GUI](../don-hopkins/queer-oui-for-the-straight-gui.md) |
 
 Hooks:
 
 - Glance test: Sims + Stardew + Tiny Life windows open — which three cues from GUIDB make them unmistakable?
-- First skin: **Sims-evoking** (not EA assets) — what does Edd’s catalog say “reads as Sims” in 200 ms?
-- Micropolis / city-sim chrome vs life-sim chrome — different silhouette languages?
+- First skin: **Sims-evoking** (not EA assets) — what does Edd’s catalog say “reads as Sims” in 200 ms? ([pie lineage](../don-hopkins/pie-menus-chi-88-and-beyond.md))
+- [Micropolis](https://github.com/SimHacker/MicropolisCore) / city-sim chrome vs life-sim chrome — different silhouette languages?
 - When a character is *in transit* on the hub, what should the UI wear — heavenly host skin or last-game residue?
-- Does PadCrafter’s multi-platform pad metaphor map to multi-bridge chrome (same actions, different faces)?
+- Does [PadCrafter](https://www.padcrafter.com/)’s multi-platform pad metaphor map to multi-bridge chrome (same actions, different faces)?
 
 ---
 
 
 
-## Reinterpret bad UIs (the rescue clinic)
+## Queer Oui for the Straight GUI
 
-"Queer I for the Straight GUI"
+Full write-up (Don’s room): **[queer-oui-for-the-straight-gui.md](../don-hopkins/queer-oui-for-the-straight-gui.md)** · ep.2
+[pie-menus-piecraft.yml](../../repo-shows/edd-coates/pie-menus-piecraft.yml) ·
+[Gonzo](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/GONZO-UI-MANIFEST.md) ·
+[GUIDB](https://www.gameuidatabase.com/) · [Fitts](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/pie-menus-fitts-law.md) ·
+[PieCraft](https://github.com/SimHacker/MicropolisCore/tree/main/documentation/designs/piecraft) ·
+[PIE-TAB-WINDOWS](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/notes/PIE-TAB-WINDOWS.md) ·
+[Soul City](https://github.com/SimHacker/moollm/tree/main/examples/soul-city) ·
+[heartbeat](../../process/brainstorm-heartbeat.md)
 
-Premise: many shipped UIs look distinctive and feel awful. Skinnable Gonzo lets us **keep the face,
-replace the hands**.
-
-Live format: Edd picks a beautiful-but-painful GUIDB screen → whiteboard:
-
-1. What is the **costume**? (palette, panel silhouette, icon grammar, typography)
-2. What are the **hands** doing wrong? (Fitts, modes, moving targets, modal traps, mystery meat)
-3. Gonzo rewrite: pies / tabs / bounce / visible state — same soul, better gesture
-4. Would that redesign still pass as “that game” to a fan in the first second?
-
-Candidate failure families (Edd fills with real citations):
-
-- Mystery-meat radials / wheels with no rehearsal path
-- Inventory grids that fight Fitts and bury costs
-- Modal stacks that trap the world under a dialog
-- Settings walls that hide state the player needs mid-action
-- Controller schemes that assume PC mouse muscle memory (or vice versa)
-- “Calm” chrome that deleted scrollbars and handles
-
-Anti-pattern for the show: dunking for sport. Pattern: **redesign briefs with attribution**.
+Whiteboard: [GUIDB](https://www.gameuidatabase.com/) miss → keep **Soul and Skin** (costume), replace
+the **hands** with Gonzo ([pies](https://github.com/SimHacker/MicropolisCore/tree/main/documentation/designs/piecraft) /
+[tabs](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/notes/PIE-TAB-WINDOWS.md) /
+[Fitts](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/pie-menus-fitts-law.md)).
+Slogans: *"Queer Oui for the Straight GUI"* · *"Put the SaS into SaaS"* (SaS = Soul and Skin).
+No dunking — redesign briefs with attribution.
 
 ---
 

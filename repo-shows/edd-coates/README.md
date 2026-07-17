@@ -27,12 +27,12 @@ anti-slop, and interfaces as cultural artifacts.
 
 [`pie-menus-piecraft.yml`](pie-menus-piecraft.yml) — *Pie Menus, Gonzo UI, and PieCraft*
 
-Browse GUIDB for hits and misses; **rescue clinic** (keep the game’s face, fix the hands);
+Browse [GUIDB](https://www.gameuidatabase.com/) for hits and misses; **[Queer Oui for the Straight GUI](../../characters/don-hopkins/queer-oui-for-the-straight-gui.md)** (keep the game’s face, fix the hands — *Queer Oui* / *SaS→SaaS*);
 Soul City **bridge skins**; ultimate editable pies; PieCraft as UI literacy through play.
 Notes: [`pie-menus-discussion-notes.md`](pie-menus-discussion-notes.md).
 
 See [`SHOW.yml`](SHOW.yml) · [`invitation`](../../characters/edd-coates/invitation.md) ·
-[`ideas.md`](../../characters/edd-coates/ideas.md) · [`suggested-questions.yml`](suggested-questions.yml).
+[`ideas.md`](../../characters/edd-coates/ideas.md) · [`queer-oui-for-the-straight-gui.md`](../../characters/don-hopkins/queer-oui-for-the-straight-gui.md) · [`suggested-questions.yml`](suggested-questions.yml).
 Consent **not yet asked**.
 
 — Don Hopkins *(User Interface Flower Child)*

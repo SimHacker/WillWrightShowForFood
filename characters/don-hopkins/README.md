@@ -60,6 +60,7 @@ Each blurb below is **one beat long** (~24 words). Read in order; each line **op
 | File | What it is | Opens → |
 |------|------------|---------|
 | [`pie-menus-chi-88-and-beyond.md`](pie-menus-chi-88-and-beyond.md) | PIXIE 1969 prehistory — Don studied, evaluated, and shipped at CHI'88; gestural verb-picker for SimCity, Sims, MOOLLM. | [`axis-of-eval-send-code-not-commands.md`](axis-of-eval-send-code-not-commands.md) |
+| [`queer-oui-for-the-straight-gui.md`](queer-oui-for-the-straight-gui.md) | *Queer Oui* / *Put the SaS into SaaS* — Gonzo rescue clinic; keep soul+skin, replace hands; whiteboard with [Edd](../edd-coates/). | [`micropoliscore-design-docs-packages-code-content.md`](micropoliscore-design-docs-packages-code-content.md) |
 | [`portrayal/presentations.yml`](portrayal/presentations.yml) | Verified papers and talks — CHI'88 links, BayCHI, DreamScape WWDC; receipts for everything claimed above. | [`axis-of-eval-send-code-not-commands.md`](axis-of-eval-send-code-not-commands.md) |
 
 ---

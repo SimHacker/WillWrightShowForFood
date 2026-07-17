@@ -60,7 +60,8 @@ sources:
 
 see_also:
   - { path: README.md, why: "Audience-facing factual biography" }
-  - { path: ideas.md, why: "Gonzo, bridges, reinterpret, pies — conversation hooks" }
+  - { path: ideas.md, why: "Gonzo, bridges, pies — conversation hooks" }
+  - { path: ../don-hopkins/queer-oui-for-the-straight-gui.md, why: "Queer Oui / SaS→SaaS — reinterpret bad UIs whiteboard" }
   - { path: game-ui-archive.md, why: "North star — two archivists, ethical licensing, two episodes" }
   - { path: ../../repo-shows/edd-coates/, why: "Planted show" }
   - { path: ../../repo-shows/edd-coates/pie-menus-piecraft.yml, why: "Pie menus + Gonzo + PieCraft episode" }
