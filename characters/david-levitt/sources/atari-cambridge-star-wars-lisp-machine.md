@@ -32,9 +32,14 @@ Visiting ACRC with **Devon McCullough**: a Star Wars cabinet with a **huge bus o
 running to a Lisp Machine. Indelible impression; never got to play that rig. Later owned a Star Wars
 *console* in Mountain View — not the cabinet, not the Lisp Machine.
 
-Public HN: [40261671](https://news.ycombinator.com/item?id=40261671) (Mike Jang / Star Wars cabinet
-memorial thread, May 2024) · earlier memory [18803966](https://news.ycombinator.com/item?id=18803966)
-(2019).
+Public HN: [40261671](https://news.ycombinator.com/item?id=40261671) on the
+[Mike Jang memorial thread](https://news.ycombinator.com/item?id=40260210) (May 2024) · earlier
+memory [18803966](https://news.ycombinator.com/item?id=18803966) (2019).
+
+**Cabinet designer:** [Mike Jang](../../mike-jang/) (Atari coin-op Industrial Design) — Star Wars
+cockpit concepts (hydraulic-ram / Millennium Falcon ramp motifs). Tribute:
+[Arcade Blogger](https://arcadeblogger.com/2024/02/13/ataris-mike-jang/). Same iron, two Ataris:
+coin-op design vs Cambridge Research Lisp hack.
 
 ## Why it matters for Levitt (and the show)
 
@@ -53,14 +58,17 @@ memorial thread, May 2024) · earlier memory [18803966](https://news.ycombinator
 | Bill résumé (archive) | https://web.archive.org/web/20160315014835/https://lisplog.org/resume.html |
 | billstclair.com | https://billstclair.com/ |
 | HN user | https://news.ycombinator.com/user?id=bill-stclair |
-| Mike Jang / Star Wars HN | https://news.ycombinator.com/item?id=40260210 |
+| Mike Jang memorial HN | https://news.ycombinator.com/item?id=40260210 |
+| Don's comment | https://news.ycombinator.com/item?id=40261671 |
 | Arcadeblogger — Mike Jang | https://arcadeblogger.com/2024/02/13/ataris-mike-jang/ |
+| Bill LinkedIn career digest | [`../../bill-st-clair/sources/linkedin-career.md`](../../bill-st-clair/sources/linkedin-career.md) |
 | CHM — Atari Research Lab 1984 PDF | https://tcm.computerhistory.org/CHMfiles/Atari%20Research%20Laboratory,%20Computer%20Image,%201984.pdf |
 | Cynthia Solomon playlist (ACRC demos) | https://www.youtube.com/watch?v=CR2CwKculBU&list=PL850B65ECB565C926&index=4 |
 
 ## Related rooms
 
-- [`../../bill-st-clair/`](../../bill-st-clair/) — primary witness / invitee
+- [`../../mike-jang/`](../../mike-jang/) — memorial; designed the Star Wars cockpit
+- [`../../bill-st-clair/`](../../bill-st-clair/) — primary witness / invitee (re-ROMed that cabinet)
 - [`../../cynthia-solomon/`](../../cynthia-solomon/) — ACRC video archive
 - [`../../margaret-minsky/`](../../margaret-minsky/) — ACRC haptics
 - [`../don-and-david-history.md`](../don-and-david-history.md) — Devon brought Don to Levitt; same Devon visit lore

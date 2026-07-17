@@ -1,0 +1,57 @@
+# Mike Jang — memorial portrayal. NOT Mike Jang.
+# Memorial mode: represent + discuss, never interview.
+# Standards: ../../schemas/portrayal-standards.md#memorial-mode
+
+character:
+  id: mike-jang
+  name: "Mike Jang"
+  also_known_as: ["Michael Jang"]
+  type: memorial
+  signifier: "🕯️🕹️"
+  status: deceased
+  field: "Atari coin-op Industrial Design — Star Wars cockpit, Missile Command, Hard Drivin', RoadBlasters…"
+  home: characters/mike-jang/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 5
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  consent: not_applicable
+  document: memorial.md
+  note: |
+    Deceased (news reported Feb 2024). Represent + discuss documented cabinet design work.
+    Stanford: Michael Jang collection of Atari materials, 1978–1991.
+
+memorial:
+  mode: represent_and_discuss
+  rule: "Represent and discuss his documented work. Do not invent quotes or interview him."
+  who_can_discuss:
+    - { who: bill-st-clair, why: "Used a Star Wars cabinet as Lisp Machine turtle-graphics device at ACRC (different Atari — Cambridge Research; same iconic iron)" }
+    - { who: don-hopkins, why: "Eyewitness ACRC Star Wars↔Lisp Machine; HN memorial thread 40261671" }
+    - { who: cynthia-solomon, why: "ACRC video constellation neighbors the Star Wars iron story" }
+  primary_tribute: "https://arcadeblogger.com/2024/02/13/ataris-mike-jang/"
+  hn_thread: "https://news.ycombinator.com/item?id=40260210"
+
+bio:
+  summary: >
+    **Mike Jang** — long-time Industrial Designer, Atari coin-op division (mid-1970s through 1980s).
+    San Jose State; ergonomics advocate; patents in his name. Cabinets include **Starship 1**,
+    **Missile Command** (prototype → production marquee fix), **Star Wars** cockpit (hydraulic-ram /
+    Millennium Falcon ramp motifs; truss roof), **Hard Drivin'**, **RoadBlasters** (oversaw early
+    Ireland production with Dave Cook), **Stun Runner**, unfinished **Starfighter** (appeared in the
+    film), **Firefox** control panel, **Hydra**, and more. Donated Atari documents to Stanford
+    (*Michael Jang collection of Atari materials, 1978–1991*). Post-Atari: hot-rodding — customized
+    1951 Mercury coupe.
+
+sources:
+  - sources/arcadeblogger-tribute-2024.md
+  - sources/hn-40260210.md
+  - ../david-levitt/sources/atari-cambridge-star-wars-lisp-machine.md
+
+see_also:
+  - memorial.md
+  - ../bill-st-clair/
+  - ../david-levitt/sources/atari-cambridge-star-wars-lisp-machine.md

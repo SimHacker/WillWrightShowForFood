@@ -33,4 +33,7 @@
 
 ## See also
 
-[`../../david-levitt/sources/atari-cambridge-star-wars-lisp-machine.md`](../../david-levitt/sources/atari-cambridge-star-wars-lisp-machine.md)
+- [`../../david-levitt/sources/atari-cambridge-star-wars-lisp-machine.md`](../../david-levitt/sources/atari-cambridge-star-wars-lisp-machine.md)
+- [`linkedin-career.md`](linkedin-career.md)
+- [`../../mike-jang/`](../../mike-jang/) — designed the Star Wars cockpit
+- Don's HN: https://news.ycombinator.com/item?id=40261671
