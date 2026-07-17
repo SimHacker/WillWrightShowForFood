@@ -88,7 +88,9 @@ Whiteboard: [GUIDB](https://www.gameuidatabase.com/) miss → keep **Soul and Sk
 the **hands** with Gonzo ([pies](https://github.com/SimHacker/MicropolisCore/tree/main/documentation/designs/piecraft) /
 [tabs](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/notes/PIE-TAB-WINDOWS.md) /
 [Fitts](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/pie-menus-fitts-law.md)).
-Slogans: *"Queer Oui for the Straight GUI"* · *"Put the SaS into SaaS"* (SaS = Soul and Skin).
+Slogans: *"Queer Oui for the Straight GUI"* · *"Put the SaS into SaaS"* (SaS = Soul and Skin) ·
+*From SAP to Slay* · *CRUD → Stud* · *werk flows* — full pack in
+[Queer Oui](../don-hopkins/queer-oui-for-the-straight-gui.md#slogans).
 No dunking — redesign briefs with attribution.
 
 ---
