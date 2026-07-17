@@ -17,8 +17,15 @@ walk the repo on air and build from the seed.
 ### 2. Haptics (Sandpaper force-feedback), Atari Cambridge / MIT Media Lab...
 aughter of Marvin, sister of Henry; 1993 CS547 talk
 
+### 3. ACRC constellation — Sandpaper labmates + Star Wars turtles
+
+Same Atari Cambridge Research Lab as Cynthia, David Levitt, Alan Kay — and Bill St. Clair's
+confirmed Star Wars cabinet ↔ Lisp Machine turtle-graphics device (May 2024).
+→ [`../david-levitt/sources/atari-cambridge-star-wars-lisp-machine.md`](../david-levitt/sources/atari-cambridge-star-wars-lisp-machine.md)
+
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
 - Show seed: [`repo-shows/margaret-minsky/`](../../repo-shows/margaret-minsky/)
 - [`CHARACTER.yml`](CHARACTER.yml)
+- ACRC Star Wars digest: [`../david-levitt/sources/atari-cambridge-star-wars-lisp-machine.md`](../david-levitt/sources/atari-cambridge-star-wars-lisp-machine.md)

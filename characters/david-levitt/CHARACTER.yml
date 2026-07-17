@@ -71,6 +71,9 @@ sources:
     - "David Levitt, *A Representation of Musical Dialects* (MIT)"
     - "*Machine Models of Music* (MIT Press) — co-edited"
   media_hub: media/README.md
+  atari_cambridge:
+    - sources/atari-cambridge-star-wars-lisp-machine.md
+    - "Bill St. Clair confirmed Star Wars cabinet ↔ Lisp Machine turtle hack (May 2024 email)"
   pending_firsthand:
     - "Cynthia Solomon video: young David at MIT AI Lab / Lisp machine, music-improvisation software"
     - "ConnectedTV XML-based custom-UI editor; IR-code capture + community sharing site"
@@ -93,6 +96,8 @@ see_also:
   - { path: ../marc-canter/, why: "old friends/colleagues (People Aggregator); Macromedia/Director ↔ Bounce/MMP" }
   - { path: ../jerry-martin/, why: "music-and-theory show pairing (Sims/SimCity composer)" }
   - { path: ../marvin-minsky/, why: "PhD advisor — AI music; memorial discussant" }
-  - { path: ../cynthia-solomon/, why: "appears in Cynthia's video trove" }
+  - { path: ../cynthia-solomon/, why: "appears in Cynthia's video trove; ACRC constellation" }
+  - { path: ../bill-st-clair/, why: "ACRC Star Wars↔Lisp Machine witness (May 2024); same lab as David" }
+  - { path: sources/atari-cambridge-star-wars-lisp-machine.md, why: "Confirmed Star Wars cabinet ↔ Lisp Machine at ACRC" }
   - { path: ../don-hopkins/, why: "Pantomime Chief Architect; longtime friend + collaborator" }
   - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

@@ -27,6 +27,13 @@ There's a treasure in **[Cynthia Solomon](../cynthia-solomon/README.md)**'s vide
 in full mad-scientist hair, gleefully demonstrating his PhD project** (under **Marvin Minsky**) on his
 **musical MIDI Lisp machine, improvising ragtime.** *(Cue that clip on the show.)*
 
+Same ACRC / Lisp Machine world, different iron: Don once visited Atari Cambridge with **Devon** and
+saw a **Star Wars arcade cabinet** with a huge bus of ribbon cables into a Lisp Machine. In May 2024
+**[Bill St. Clair](../bill-st-clair/)** confirmed he built that — new ROM turning Star Wars into a
+**turtle-graphics device**, plus a **3D turtle** eye-steering system on the Symbolics. Bill doesn't
+recall David by name (he was only there Q1 1984), but the story belongs in the lab constellation.
+Digest: [`sources/atari-cambridge-star-wars-lisp-machine.md`](sources/atari-cambridge-star-wars-lisp-machine.md).
+
 ### David's Mac apps at MIT — before Body Electric / Bounce
 
 - **Harmony Grid** — David's own Mac app. *(It blows Don's mind; David explains it — this is his to

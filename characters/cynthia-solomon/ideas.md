@@ -17,8 +17,17 @@ walk the repo on air and build from the seed.
 ### 2. Logo co-creator (BBN 1967, with Feurzeig/Papert/Bobrow); MIT Logo c...
 ure; Atari Cambridge children's computer; History of Logo (HOPL 2020); rare video treasure trove (YouTube @cynthiaso); Snap! friend — met Don at Snap!Con Barcelona
 
+### 3. ACRC Lisp Machines — music demos *and* Star Wars turtles
+
+Her playlist already shows Levitt / Kay / Minsky-era demos. Bill St. Clair's confirmed Star Wars
+cabinet ↔ Lisp Machine turtle hack belongs in the same guided screening as "what else was on those
+buses."
+→ [`../david-levitt/sources/atari-cambridge-star-wars-lisp-machine.md`](../david-levitt/sources/atari-cambridge-star-wars-lisp-machine.md)
+· [`../bill-st-clair/`](../bill-st-clair/)
+
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
 - Show seed: [`repo-shows/cynthia-solomon/`](../../repo-shows/cynthia-solomon/)
 - [`CHARACTER.yml`](CHARACTER.yml)
+- ACRC Star Wars digest: [`../david-levitt/sources/atari-cambridge-star-wars-lisp-machine.md`](../david-levitt/sources/atari-cambridge-star-wars-lisp-machine.md)

@@ -14,7 +14,10 @@ them.
 
 In the early 1980s she worked at **Atari Cambridge Research**, exploring a computer designed for
 children: an object-oriented Logo, gestural input, force feedback, and music, with colleagues
-including Alan Kay, Margaret Minsky, and David Levitt.
+including Alan Kay, Margaret Minsky, and David Levitt. Same lab, confirmed separately (May 2024):
+**Bill St. Clair** wired a **Star Wars** arcade cabinet to a **Lisp Machine** as a turtle-graphics
+device — digest:
+[`../david-levitt/sources/atari-cambridge-star-wars-lisp-machine.md`](../david-levitt/sources/atari-cambridge-star-wars-lisp-machine.md).
 
 She wrote *Computer Environments for Children: A Reflection on Theories of Learning and Education*
 (MIT Press, 1986) and co-authored the *History of Logo* (Proc. ACM HOPL, 2020). She received the

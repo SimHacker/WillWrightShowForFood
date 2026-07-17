@@ -1,0 +1,54 @@
+# Bill St. Clair — invitation portrayal. NOT Bill St. Clair.
+# Standards: ../../schemas/portrayal-standards.md
+# Email: DonHopkins green-room/contacts/guest-emails.yml
+
+character:
+  id: bill-st-clair
+  name: "Bill St. Clair"
+  also_known_as: ["William St. Clair", "wwstc"]
+  type: invitation
+  status: living
+  field: "Lisp hacker — Atari Cambridge Star Wars↔Lisp Machine; Thinking Machines; Apple; Digitool; ITA"
+  home: characters/bill-st-clair/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 1
+  authored_by: don-hopkins
+
+invitation:
+  status: warm_lead
+  consent: not_yet_asked
+  channel: email
+  contacted: 2024-05-04
+  replied: 2024-05-05
+  note: |
+    Don emailed May 2024 about Star Wars cabinet; Bill confirmed ROM turtle-graphics hack +
+    3D turtles on Lisp Machine. Does not remember Levitt. Warm archival witness; invite optional.
+
+bio:
+  summary: >
+    **Bill St. Clair** — Lisp hacker. At **Atari Cambridge Research Lab** (Q1 1984) turned the
+    **Star Wars** arcade cabinet into a turtle-graphics device (new ROM; vector persistence ~0.5s)
+    and wrote a **3D turtle** eye-steering system on a **Symbolics Lisp Machine**. Later: Thinking
+    Machines (Connection Machine circuit sim), Apple, Digitool, ITA Software, Closure Associates.
+    Public sites: billstclair.com; HN `bill-stclair`.
+
+web:
+  site: https://billstclair.com/
+  linkedin: https://www.linkedin.com/in/wwstc/
+  hn: https://news.ycombinator.com/user?id=bill-stclair
+  resume_archive: https://web.archive.org/web/20160315014835/https://lisplog.org/resume.html
+
+show_relevance:
+  hooks:
+    - "Primary confirmation of Star Wars cabinet ↔ Lisp Machine at ACRC"
+    - "Segment with Cynthia Solomon video trove + Levitt ACRC constellation"
+    - "Optional: Lisp Machine / arcade hardware resurrection hour"
+
+see_also:
+  - README.md
+  - sources/atari-cambridge-star-wars-email-2024.md
+  - ../david-levitt/sources/atari-cambridge-star-wars-lisp-machine.md
+  - ../cynthia-solomon/
+  - ../david-levitt/

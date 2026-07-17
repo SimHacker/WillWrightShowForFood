@@ -35,9 +35,19 @@ stack, digital-twin 3D models) → ongoing friendship. Full sourced links: [`med
 - **Interval Research** — MediaFlow, Bounce character simulation, and other projects
 - **VPL Research** — the birth of VR; gravity, collisions, 3D sound
 - **AI music / computational jazz** — Minsky-advised; models that *understand* musical dialects
+- **Atari Cambridge** — Cynthia video (David on Lisp Machine) + Bill St. Clair Star Wars↔Lisp
+  Machine turtle hack (same lab constellation)
+  → [`sources/atari-cambridge-star-wars-lisp-machine.md`](sources/atari-cambridge-star-wars-lisp-machine.md)
 - Sourced links for all of the above: [`media/README.md`](media/README.md)
 
 ## The hooks
+
+### 0. Atari Cambridge — Lisp Machine music *and* Star Wars turtles
+
+Cue Cynthia's clip of young David improvising on the MIDI Lisp Machine, then the Bill St. Clair
+confirmation: same lab, Star Wars cabinet as turtle-graphics device. Constructionism meets
+vector-arcade persistence-of-vision.
+→ [`sources/atari-cambridge-star-wars-lisp-machine.md`](sources/atari-cambridge-star-wars-lisp-machine.md)
 
 ### 1. Show seed: `music-and-theory` (with Jerry Martin)
 

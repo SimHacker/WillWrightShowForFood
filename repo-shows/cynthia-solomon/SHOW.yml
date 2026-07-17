@@ -14,13 +14,14 @@ show:
 
 why_her:
   logo_origin: "A founding designer of Logo (BBN, 1967, with Feurzeig, Papert, Bobrow, Grant) and central to the MIT Logo Group from 1969 — the source of turtle graphics and constructionist learning."
-  atari_cambridge: "Atari Cambridge Research (early 1980s): a children's computer with object-oriented Logo, gesture, force feedback, and music."
+  atari_cambridge: "Atari Cambridge Research (early 1980s): a children's computer with object-oriented Logo, gesture, force feedback, and music — plus (confirmed 2024) Bill St. Clair's Star Wars arcade cabinet as Lisp Machine turtle-graphics device."
   the_trove: "Her YouTube channel preserves footage that exists almost nowhere else — Papert, the Minskys, kids at the turtle, the Atari lab. Primary-source history."
 
 dream_segments:
   - "Guided screening: clips from her channel, narrated live — who's in the room, what was really happening."
   - "The birth of Logo: BBN 1967 → MIT Logo Group → the turtle → children as builders of their own understanding."
   - "Atari Cambridge: the children's computer that almost was."
+  - "ACRC Lisp Machines — Levitt musical improv *and* Star Wars↔turtle ROM hack (Bill St. Clair, May 2024)."
   - "Logo → today: the through-line to Snap!, optionally with Brian Harvey and Jens Mönig."
 
 format:
@@ -34,6 +35,9 @@ ties_to:
   - ../../characters/seymour-papert/
   - ../../characters/marvin-minsky/
   - ../../characters/margaret-minsky/
+  - ../../characters/david-levitt/
+  - ../../characters/bill-st-clair/
+  - ../../characters/david-levitt/sources/atari-cambridge-star-wars-lisp-machine.md
   - ../../characters/brian-harvey/
   - ../../characters/jens-monig/
   - ../../process/trails/constructionist-lineage.md

@@ -13,7 +13,9 @@ screening of that trove, narrated by someone who was there.
 - **Guided screening** — clips from her channel, narrated live.
 - **The birth of Logo** — BBN 1967 → the [MIT Logo Group](../../characters/seymour-papert/README.md) → the
   turtle → children as builders of their own understanding.
-- **Atari Cambridge** — the children's computer that almost was.
+- **Atari Cambridge** — the children's computer that almost was; Lisp Machine demos (Levitt music)
+  *and* the confirmed [Star Wars cabinet ↔ turtle ROM hack](../../characters/david-levitt/sources/atari-cambridge-star-wars-lisp-machine.md)
+  ([Bill St. Clair](../../characters/bill-st-clair/)).
 - **Logo → today** — the through-line to **Snap!**, optionally with
   [Brian Harvey](../../characters/brian-harvey/README.md) and [Jens Mönig](../../characters/jens-monig/README.md).
 

@@ -106,10 +106,14 @@ Primary sources: [HN 7262676](https://news.ycombinator.com/item?id=7262676) (Sim
 
 - PhD under **Marvin Minsky** at MIT on **computational jazz / music improvisation**; thesis
   *A Representation of Musical Dialects*; co-edited *Machine Models of Music* (MIT Press).
-- **Cynthia Solomon's video** of young David at the **MIT AI Lab** in front of a **Lisp machine**,
-  demoing his music-improvisation software. *(firsthand — link to be added from Cynthia's video trove;
-  see [`../../cynthia-solomon/`](../../cynthia-solomon/).)*
-- Also **Atari (Cambridge Research)**. *(firsthand)*
+- **Cynthia Solomon's video** of young David at the **MIT AI Lab** / ACRC orbit in front of a
+  **Lisp machine**, demoing his music-improvisation software. *(firsthand — link to be added from
+  Cynthia's video trove; see [`../../cynthia-solomon/`](../../cynthia-solomon/).)*
+- **Atari Cambridge Research** — same lab as Cynthia, Margaret Minsky, Alan Kay, and (confirmed
+  2024) Bill St. Clair's **Star Wars arcade cabinet ↔ Lisp Machine** turtle-graphics hack.
+  Digest: [`../sources/atari-cambridge-star-wars-lisp-machine.md`](../sources/atari-cambridge-star-wars-lisp-machine.md)
+  · Bill's room: [`../../bill-st-clair/`](../../bill-st-clair/). Bill does not remember David by name
+  (short Q1 1984 stint); still places the Lisp Machine + arcade iron in David's ACRC constellation.
 - Memorial thread for **Minsky** — a topic Don wants to explore with David on air
   ([`../../marvin-minsky/`](../../marvin-minsky/)).
 
