@@ -32,7 +32,7 @@ Not DRY on purpose — each repo gets what fits its context.
 Summaries: **pending** (future phase). Re-project after harvest:
 
 ```bash
-python3 private archive (not in this repo)
+# private harvest script — not published in this repo
 ```
 
 ## Micropolis product angle
