@@ -1,0 +1,95 @@
+# SimTower / The Tower / Yoot Tower — curated video shelf
+# Rule: LGR first (deepest recommended); then one of each other kind.
+
+meta:
+  character: yoot-saito
+  topic: simtower
+  curated: 2026-07-17
+  rule: |
+    LGR (Clint Basinger) reviews are the best and deepest — list them first and
+    mark recommended. Then diversify: essay, JP original, Mac, period PC, audio,
+    endgame, sequel-adjacent. No stack of anonymous longplays.
+
+videos:
+  - id: _4ToEDrhxo0
+    kind: lgr_simtower
+    recommended: true
+    rank: 1
+    title: "LGR — SimTower — PC Game Review"
+    url: https://www.youtube.com/watch?v=_4ToEDrhxo0
+    channel: LGR
+    why: "Deepest SimTower watch — start here. Elevators, stars, Tower status, Maxis-era love."
+
+  - id: CqNECXCd9iU
+    kind: lgr_yoot_tower
+    recommended: true
+    rank: 2
+    title: "LGR — Yoot Tower: The Sequel to SimTower"
+    url: https://www.youtube.com/watch?v=CqNECXCd9iU
+    channel: LGR
+    why: "Same depth for the sequel — Tower Kit, JP/US, the zap bug Don still jokes about."
+
+  - id: lY5z-11Ko68
+    kind: essay_obscuritory
+    title: "SimTower: The Vertical Empire — The Obscuritory"
+    url: https://www.youtube.com/watch?v=lY5z-11Ko68
+    channel: The Obscuritory
+    why: "Critical-history essay lane — not a Let's Play."
+
+  - id: d3Rvc0JLb8A
+    kind: retrospective
+    title: "SimTower — The Vertical Empire — A Retrospective"
+    url: https://www.youtube.com/watch?v=d3Rvc0JLb8A
+    channel: Hungry Goriya
+    why: "Affectionate retrospective complementary to LGR's review format."
+
+  - id: TV6GSS8jdOc
+    kind: gaming_history
+    title: "Gaming History: SimTower — “The other-other Sim Game”"
+    url: https://www.youtube.com/watch?v=TV6GSS8jdOc
+    channel: GaminGHD
+    why: "Situates SimTower in the Maxis/Sim* galaxy for newcomers."
+
+  - id: IHVzt5ZSsb8
+    kind: retro_mac
+    title: "SimTower (1994) — Retro Mac Gaming"
+    url: https://www.youtube.com/watch?v=IHVzt5ZSsb8
+    channel: Paul's Crap
+    why: "Mac-native Vertical Empire — OPeNBooK / Mac-first lineage Yoot talks about."
+
+  - id: oLWTf5lf2Ag
+    kind: period_pc_gameplay
+    title: "SimTower gameplay (PC Game, 1994)"
+    url: https://www.youtube.com/watch?v=oLWTf5lf2Ag
+    channel: Squakenet
+    why: "Short period-flavored PC capture — not a 20-hour modern longplay."
+
+  - id: S0kzUaGqq0o
+    kind: audio_culture
+    title: "Sounds o' Sim Tower"
+    url: https://www.youtube.com/watch?v=S0kzUaGqq0o
+    channel: J. J. W. Mezun
+    why: "Soundscape as design — unique lane (elevators, vibes, memory)."
+
+  - id: uAFvtqXAffg
+    kind: japanese_the_tower
+    title: "【ザ・タワー】セコムのCMを流せるビル経営シミュレーション"
+    url: https://www.youtube.com/watch?v=uAFvtqXAffg
+    channel: たこすけチャンネル
+    why: "JP *The Tower* — Secom CM-in-building quirk; original-market flavor."
+
+  - id: 1AFDVDtXS2E
+    kind: endgame_tower_status
+    title: "Sim Tower — 5 Stars — Then TOWER Status"
+    url: https://www.youtube.com/watch?v=1AFDVDtXS2E
+    channel: TexocideT
+    why: "Endgame milestone — what 'Tower' actually means mechanically."
+
+see_also:
+  - path: seaman-videos.yml
+  - path: ../../clint-basinger/
+    why: "LGR guest room — invite path for tower + Maxis bridge"
+  - path: ../reply-template-yoot-tower-inquiries.md
+  - url: https://towers.world
+    why: "Patrick Hulin clean-room SimTower (not a YouTube sub, but the playable peer)"
+  - url: https://github.com/phulin/tower-together

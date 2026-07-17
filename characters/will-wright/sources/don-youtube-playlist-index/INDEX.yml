@@ -201,10 +201,12 @@ videos:
 
   - id: CqNECXCd9iU
     url: https://www.youtube.com/watch?v=CqNECXCd9iU
-    title: "Yoot Tower: The Sequel to SimTower"
-    topics: [yoot-tower]
+    title: "LGR — Yoot Tower: The Sequel to SimTower"
+    topics: [yoot-tower, yoot-saito, clint-basinger]
     wwsff: characters/will-wright/sources/2024-yoot-tower-open-source/
     status: linked
+    note: "Recommended after LGR SimTower — characters/yoot-saito/media/simtower-videos.yml"
+    substitutes_shelf: characters/yoot-saito/media/simtower-videos.yml
 
   - id: sMN1LQ7qx9g
     url: https://www.youtube.com/watch?v=sMN1LQ7qx9g
@@ -255,9 +257,11 @@ videos:
 
   - id: _4ToEDrhxo0
     url: https://www.youtube.com/watch?v=_4ToEDrhxo0
-    title: "(SimTower — verify)"
-    topics: [simtower]
-    status: todo
+    title: "LGR — SimTower — PC Game Review"
+    topics: [simtower, yoot-saito, clint-basinger]
+    status: linked
+    note: "Recommended first — characters/yoot-saito/media/simtower-videos.yml"
+    substitutes_shelf: characters/yoot-saito/media/simtower-videos.yml
 
   - id: SAoOH_VTX6c
     url: https://www.youtube.com/watch?v=SAoOH_VTX6c

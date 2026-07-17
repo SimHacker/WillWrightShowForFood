@@ -24,15 +24,15 @@ Don also looping **Rebecca Heineman** for retro port expertise; **browser modern
 
 | Product | Notes |
 |---------|--------|
-| **SimTower** (US, Maxis publish) | LGR favorite — https://www.youtube.com/watch?v=_4ToEDrhxo0 |
-| **Yoot Tower** | Extended JP/US content |
+| **SimTower** (US, Maxis publish) | **Start with LGR** — shelf: [`../../../yoot-saito/media/simtower-videos.yml`](../../../yoot-saito/media/simtower-videos.yml) |
+| **Yoot Tower** | LGR sequel deep dive in same shelf |
 | Game Boy / Nintendo ports | Advanced codebase vs PC/Mac retail |
 | **Seaman** | Dreamcast — GDC postmortems; Nimoy narrator |
 
 ## Related videos (email thread)
 
-- [Yoot Tower sequel pitch](https://www.youtube.com/watch?v=CqNECXCd9iU) (LGR — still live)
-- **Seaman videos** — curated diverse shelf (GDC postmortem, intro, day-one, IGN 1999, JP ad, AVGN, Seaman 2, essay): [`../../../yoot-saito/media/seaman-videos.yml`](../../../yoot-saito/media/seaman-videos.yml) · [yoot-saito README table](../../../yoot-saito/README.md#seaman--video-shelf-one-of-each-kind). Dead upload `gdIO41Blysg` (*Nimoy intro — podman birth day*; [HN 39084042](https://news.ycombinator.com/item?id=39084042)) noted there.
+- **SimTower / Yoot Tower** — LGR first (recommended), then Obscuritory / Mac / JP / audio / endgame: [`../../../yoot-saito/media/simtower-videos.yml`](../../../yoot-saito/media/simtower-videos.yml) · [README table](../../../yoot-saito/README.md#simtower--yoot-tower--video-shelf-lgr-first)
+- **Seaman videos** — curated diverse shelf: [`../../../yoot-saito/media/seaman-videos.yml`](../../../yoot-saito/media/seaman-videos.yml) · [README table](../../../yoot-saito/README.md#seaman--video-shelf-one-of-each-kind). Dead upload `gdIO41Blysg` (*Nimoy intro — podman birth day*; [HN 39084042](https://news.ycombinator.com/item?id=39084042)) noted there.
 - Open source Yoot Tower discussion: [`re-open-source-yoot-tower.txt`](../../../../DonHopkins/temp/old-email/re-open-source-yoot-tower.txt)
 
 ## Micropolis parallel

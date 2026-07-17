@@ -4,9 +4,26 @@ Invitation portrayal — **not** Yoot Saito. [Standards](../../schemas/portrayal
 
 **Field:** Game designer — The Tower / SimTower, Yoot Tower, Seaman, Odama; founder of OPeNBooK (1993) & Vivarium (1996)
 
-[Invitation](invitation.md) · [Show seed](../../repo-shows/yoot-saito/README.md) · [Correspondence](correspondence.yml) · [Yoot Tower inquiry reply template](reply-template-yoot-tower-inquiries.md) · [Seaman videos](media/seaman-videos.yml)
+[Invitation](invitation.md) · [Show seed](../../repo-shows/yoot-saito/README.md) · [Correspondence](correspondence.yml) · [Yoot Tower inquiry reply template](reply-template-yoot-tower-inquiries.md) · [SimTower videos](media/simtower-videos.yml) · [Seaman videos](media/seaman-videos.yml)
 
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.
+
+## SimTower / Yoot Tower — video shelf (LGR first)
+
+| Kind | Watch |
+|------|--------|
+| **Recommended — LGR SimTower** | [LGR — SimTower PC Game Review](https://www.youtube.com/watch?v=_4ToEDrhxo0) |
+| **Recommended — LGR Yoot Tower** | [LGR — Yoot Tower: The Sequel to SimTower](https://www.youtube.com/watch?v=CqNECXCd9iU) |
+| Essay | [Obscuritory — The Vertical Empire](https://www.youtube.com/watch?v=lY5z-11Ko68) |
+| Retrospective | [Hungry Goriya](https://www.youtube.com/watch?v=d3Rvc0JLb8A) |
+| Gaming history | [“The other-other Sim Game”](https://www.youtube.com/watch?v=TV6GSS8jdOc) |
+| Retro Mac | [Paul's Old Crap — 1994 Mac](https://www.youtube.com/watch?v=IHVzt5ZSsb8) |
+| Period PC | [Squakenet — 1994 gameplay](https://www.youtube.com/watch?v=oLWTf5lf2Ag) |
+| Audio culture | [Sounds o' Sim Tower](https://www.youtube.com/watch?v=S0kzUaGqq0o) |
+| JP *The Tower* | [ザ・タワー / Secom CM](https://www.youtube.com/watch?v=uAFvtqXAffg) |
+| Endgame | [5 Stars → TOWER status](https://www.youtube.com/watch?v=1AFDVDtXS2E) |
+
+Full metadata: [`media/simtower-videos.yml`](media/simtower-videos.yml). Playable clean-room peer: [towers.world](https://towers.world).
 
 ## Seaman — video shelf (one of each kind)
 
