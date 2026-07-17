@@ -7,29 +7,50 @@ The fuse was lit **140 days earlier**, in public, at the Long Now Foundation.
 
 **26 June 2006 — Herbst Theatre, San Francisco.** Brian Eno and Will Wright on stage for
 [*Playing with Time*](https://longnow.org/talks/02006-eno-wright/)
-([video](https://youtu.be/Dfc-DQorohc); open-source Q&A around
-[t=3929](https://youtu.be/Dfc-DQorohc?t=3929)). Stewart Brand reads written audience cards.
-**Dan Ancona** asks Will to open-source **SimCity** so people can play with the political
-assumptions embedded in the rules. **Mark Live** (as Brand read the card — identity still soft)
-asks a related question about **Spore** and generative politics. Don Hopkins is **in the
-audience** — he does *not* ask either question. Full dossier:
-[`../simcity-open-source-saga/long-now-askers-outreach.md`](../simcity-open-source-saga/long-now-askers-outreach.md) ·
-event room: [`../2006-06-26-long-now-playing-with-time-eno-wright/`](../2006-06-26-long-now-playing-with-time-eno-wright/).
+([full video](https://www.youtube.com/watch?v=Dfc-DQorohc);
+[open-source Q&A @ t=3929](https://youtu.be/Dfc-DQorohc?t=3929)). Stewart Brand reads written
+audience cards. **Dan Ancona** asks Will to open-source **SimCity** so people can play with the
+political assumptions embedded in the rules. **Mark Live** (as Brand read the card — identity
+still soft) asks a related question about **Spore** and generative politics. Don Hopkins is
+**in the audience** — he does *not* ask either question.
+
+| Receipt | Where |
+|---------|--------|
+| Event room (summary, captions, transcript cache) | [`../2006-06-26-long-now-playing-with-time-eno-wright/`](../2006-06-26-long-now-playing-with-time-eno-wright/README.md) |
+| Clip card `open-source-simcity-audience-question` | [`../2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml`](../2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml) |
+| Askers dossier (Ancona ID + Mark Live mystery) | [`../simcity-open-source-saga/long-now-askers-outreach.md`](../simcity-open-source-saga/long-now-askers-outreach.md) |
+| Dan Ancona guest room | [`../../../dan-ancona/`](../../../dan-ancona/README.md) |
 
 After the talk, Will apparently suspected Don (the ask was a common one, and Don was right
-there). Don's denial was deliberate comedy — he already knew, from the 2002 Lucy Bradshaw /
-Columbia NSF false start, that a public “please open SimCity” would put Will on the spot and
-likely go nowhere. The PS in Don's 19 Nov reply below is the written receipt of that joke.
+there). Don's denial was deliberate comedy — he already knew, from the **2002 Lucy Bradshaw /
+Columbia NSF false start**, that a public “please open SimCity” would put Will on the spot and
+likely go nowhere.
+
+| Receipt | Where |
+|---------|--------|
+| Don's educational proposal (in-repo MD republish of the Drupal essay) | [`../2004-02-07-educational-multiplayer-simcity-linux/article.md`](../2004-02-07-educational-multiplayer-simcity-linux/article.md) |
+| Same essay on Wayback (`donhopkins.com/drupal/node/24`) | [2011-06-11 archive](https://web.archive.org/web/20110611185928/http://www.donhopkins.com/drupal/node/24) · [2007-05-03 capture](https://web.archive.org/web/20070503055245/http://www.donhopkins.com/drupal/node/24) |
+| Columbia OPTIMUS NSF proposal — digest | [`../../../upmanu-lall/sources/nsf-2002-proposal-digest.md`](../../../upmanu-lall/sources/nsf-2002-proposal-digest.md) |
+| OPTIMUS originals (PDF / DOC) | [`../../../upmanu-lall/media/nsf2002engeduc_final.pdf`](../../../upmanu-lall/media/nsf2002engeduc_final.pdf) · [`nsf2002engeduc-sum_final.pdf`](../../../upmanu-lall/media/nsf2002engeduc-sum_final.pdf) · [`nsf2002engeduc-sum.doc`](../../../upmanu-lall/media/nsf2002engeduc-sum.doc) |
+| Lucy Bradshaw (portrayal room — EA/Maxis education gate) | [`../../../lucy-bradshaw/`](../../../lucy-bradshaw/README.md) |
+| **Written receipt of the Long Now joke** — PS in Don → Will, 19 Nov 2006 | [§ below in this file](#don-hopkins--will-wright-19-nov-2006) |
 
 **~13 November 2006 — this thread.** John Gilmore emails Don about **OLPC** (Mary Lou Jepsen's
 $100 laptop): maybe the classic Unix SimCity Don had ported could actually be freed for kids.
 Don forwards to Will — half expecting futility. Will answers: *I support the idea wholeheartedly.*
 That private yes, after the Long Now public ask and Don's prior burned education proposal, is
-what reopens the door. Pitch to Rod Humble follows (1 Dec 2006). EA eventually ships **Micropolis**
-GPLv3 (2008). The Repo Show / MicropolisCore line still runs on that fuse.
+what reopens the door. Pitch to Rod Humble follows; EA eventually ships **Micropolis** GPLv3
+(2008). The Repo Show / MicropolisCore line still runs on that fuse.
 
-**Read order for the saga:** Long Now ask → *this Part 1* → later OLPC/EA negotiation parts in
-this folder → Micropolis release.
+| Receipt | Where |
+|---------|--------|
+| Thread index (Parts 1–3 + images) | [`README.md`](README.md) |
+| Don → Rod pitch letter (2 Dec 2006) | [`don-pitch-letter-2006-12-02.md`](don-pitch-letter-2006-12-02.md) |
+| EA clearance / DUX contracts (Part 2) | [`02-ea-clearance-dec-2006.md`](02-ea-clearance-dec-2006.md) |
+| OLPC XO / Sugar (Part 3) | [`03-olpc-port-and-sugar-dec-2006.md`](03-olpc-port-and-sugar-dec-2006.md) |
+| Saga narrative timeline | [`../simcity-open-source-saga/`](../simcity-open-source-saga/README.md) |
+
+**Read order:** Long Now clip → *this Part 1* → pitch letter → Parts 2–3 → Micropolis release.
 
 ---
 
@@ -79,7 +100,9 @@ Verbatim from Don Hopkins forwarded-mail archive. Nested forwards preserved wher
 
 ---
 
-## Don Hopkins → Will Wright
+## Don Hopkins → Will Wright (19 Nov 2006)
+
+<a id="don-hopkins--will-wright-19-nov-2006"></a>
 
 **Date:** 19 November 2006, 03:53 GMT+1  
 **Subject:** Re: [Fwd: Sim City in open source for $100 Laptop?]
@@ -104,6 +127,13 @@ Verbatim from Don Hopkins forwarded-mail archive. Nested forwards preserved wher
 > PS: I don't know if you believed me when I told you, but I really am not the person who submitted the question at your talk with Brian Eno, asking if you would make SimCity open source (and John Gilmore didn't ask it either -- I don't know who it was, but it's a common question). If my denial afterwards sounded insincere, that was only for humorous effect. I wouldn't have asked that, because I didn't want to bug you with a question to which I already knew from experience that the answer was no, and that would only put you on the spot in public or make you feel uncomfortable.
 
 *(Will's 18 Nov reply quoted above.)*
+
+**Live links for URLs in this letter (original Drupal node is dead):**
+
+- Proposal body (in-repo): [`../2004-02-07-educational-multiplayer-simcity-linux/article.md`](../2004-02-07-educational-multiplayer-simcity-linux/article.md)
+- Wayback `node/24`: [2011-06-11](https://web.archive.org/web/20110611185928/http://www.donhopkins.com/drupal/node/24)
+- Columbia OPTIMUS NSF PDFs: [`../../../upmanu-lall/media/`](../../../upmanu-lall/media/) · digest [`../../../upmanu-lall/sources/nsf-2002-proposal-digest.md`](../../../upmanu-lall/sources/nsf-2002-proposal-digest.md)
+- Long Now ask (the PS refers to): [YouTube t=3929](https://youtu.be/Dfc-DQorohc?t=3929) · [`../2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml`](../2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml) (`open-source-simcity-audience-question`)
 
 ---
 
