@@ -44,7 +44,8 @@ As I left, she said the ball was in her court, and that she would try to write u
 I don't know why Lucy dropped the ball, cut me off, and never let me know to stop wasting my time. Probably there is some reason it's impossible, but she never told me why. By now of course I have given up my hopes and dreams of an open source educational version of multi player SimCity, and written off all that work as a waste of time. So this whole topic is somewhat depressing.
 
 Educational Multi Player SimCity for Linux Proposal:  
-http://www.donhopkins.com/drupal/node/24
+http://www.donhopkins.com/drupal/node/24  
+*(Drupal dead — use IA: https://web.archive.org/web/20110611185928/http://www.donhopkins.com/drupal/node/24 · Don on HN: https://news.ycombinator.com/item?id=38160682 · in-repo: [`../2004-02-07-educational-multiplayer-simcity-linux/`](../2004-02-07-educational-multiplayer-simcity-linux/README.md))*
 
 -Don
 

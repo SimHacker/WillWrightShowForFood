@@ -29,7 +29,7 @@ likely go nowhere.
 | Receipt | Where |
 |---------|--------|
 | Don's educational proposal (in-repo MD republish of the Drupal essay) | [`../2004-02-07-educational-multiplayer-simcity-linux/article.md`](../2004-02-07-educational-multiplayer-simcity-linux/article.md) |
-| Same essay on Wayback (`donhopkins.com/drupal/node/24`) | [2011-06-11 archive](https://web.archive.org/web/20110611185928/http://www.donhopkins.com/drupal/node/24) · [2007-05-03 capture](https://web.archive.org/web/20070503055245/http://www.donhopkins.com/drupal/node/24) |
+| Same essay — Drupal dead; use IA | [Wayback 2011-06-11](https://web.archive.org/web/20110611185928/http://www.donhopkins.com/drupal/node/24) · Don cited this IA URL on [HN 38160682](https://news.ycombinator.com/item?id=38160682) (2023-11-06) |
 | Columbia OPTIMUS NSF proposal — digest | [`../../../upmanu-lall/sources/nsf-2002-proposal-digest.md`](../../../upmanu-lall/sources/nsf-2002-proposal-digest.md) |
 | OPTIMUS originals (PDF / DOC) | [`../../../upmanu-lall/media/nsf2002engeduc_final.pdf`](../../../upmanu-lall/media/nsf2002engeduc_final.pdf) · [`nsf2002engeduc-sum_final.pdf`](../../../upmanu-lall/media/nsf2002engeduc-sum_final.pdf) · [`nsf2002engeduc-sum.doc`](../../../upmanu-lall/media/nsf2002engeduc-sum.doc) |
 | Lucy Bradshaw (portrayal room — EA/Maxis education gate) | [`../../../lucy-bradshaw/`](../../../lucy-bradshaw/README.md) |
@@ -128,10 +128,10 @@ Verbatim from Don Hopkins forwarded-mail archive. Nested forwards preserved wher
 
 *(Will's 18 Nov reply quoted above.)*
 
-**Live links for URLs in this letter (original Drupal node is dead):**
+**Live links for URLs in this letter** (`http://www.donhopkins.com/drupal/node/24` is dead — keep it only as historical quote text):
 
-- Proposal body (in-repo): [`../2004-02-07-educational-multiplayer-simcity-linux/article.md`](../2004-02-07-educational-multiplayer-simcity-linux/article.md)
-- Wayback `node/24`: [2011-06-11](https://web.archive.org/web/20110611185928/http://www.donhopkins.com/drupal/node/24)
+- **Preferred:** [Internet Archive 2011-06-11](https://web.archive.org/web/20110611185928/http://www.donhopkins.com/drupal/node/24) — same URL Don posted on [HN 38160682](https://news.ycombinator.com/item?id=38160682) (2023-11-06)
+- In-repo republish: [`../2004-02-07-educational-multiplayer-simcity-linux/`](../2004-02-07-educational-multiplayer-simcity-linux/README.md)
 - Columbia OPTIMUS NSF PDFs: [`../../../upmanu-lall/media/`](../../../upmanu-lall/media/) · digest [`../../../upmanu-lall/sources/nsf-2002-proposal-digest.md`](../../../upmanu-lall/sources/nsf-2002-proposal-digest.md)
 - Long Now ask (the PS refers to): [YouTube t=3929](https://youtu.be/Dfc-DQorohc?t=3929) · [`../2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml`](../2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml) (`open-source-simcity-audience-question`)
 

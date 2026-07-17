@@ -20,6 +20,7 @@ anchors:
   will_dev_diaries: https://www.youtube.com/watch?v=u73_yZyuDS0
   long_now_clip: https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml
   proposal_2002_wayback: https://web.archive.org/web/20110611185928/http://www.donhopkins.com/drupal/node/24
+  proposal_2002_in_repo: https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/will-wright/sources/2004-02-07-educational-multiplayer-simcity-linux/README.md
   hn_proposal_context: https://news.ycombinator.com/item?id=38160682
 
 blog_comment:

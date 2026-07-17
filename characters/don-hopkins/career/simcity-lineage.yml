@@ -23,16 +23,24 @@ simcity_lineage:
     era: "1992–1993"
     don_role: "X11 port; pie menus; GIS/ToolTalk integration path"
     runs_on: [X11, TCL/Tk, Sun workstations]
+    note: |
+      art.net hub republished → [`../../will-wright/sources/art-net-simcity-archive/`](../../will-wright/sources/art-net-simcity-archive/README.md)
+      (UnixWorld review, product announcement, demo transcripts, DUX manual, screenshots).
 
   - name: SimCityNet
     era: "1993–1990s"
     don_role: "Cooperative multiplayer SimCity — shared cities, turn/sync model"
     runs_on: [X11 networked Unix]
-    note: "Multiplayer ideas documented in MicropolisCore/notes/MultiPlayerIdeas.txt lineage"
+    note: |
+      InterCHI'93 Interactive Experience proposal (Amsterdam walk-up demo).
+      → [`../../will-wright/sources/1993-interchi-simcitynet-proposal/`](../../will-wright/sources/1993-interchi-simcitynet-proposal/README.md)
+      Archive hub → [`../../will-wright/sources/art-net-simcity-archive/`](../../will-wright/sources/art-net-simcity-archive/README.md)
+      Multiplayer ideas also in MicropolisCore/notes/MultiPlayerIdeas.txt lineage.
     features:
       - Shared city state across clients
       - Voting and community decisions (precursor to MOOLLM session patterns)
       - Newspaper/storytelling hooks planned in design notes
+      - Text / voice / shared cursors ("bridges between players")
 
   - name: SimCity 2000 era
     era: "1990s"

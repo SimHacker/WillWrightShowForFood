@@ -19,20 +19,26 @@ This article focuses on **SimCityNet** and the **planned Laszlo centralized clie
 
 ## SimCityNet — what shipped
 
-Don sold **SimCityNet** commercially (CD-ROM + FTP demo, node-locked or floating network license) after porting Mac SimCity to:
+After porting Mac SimCity to Unix, Don sold **SimCityNet** commercially — almost entirely as **FTP downloads** from UUNET's public FTP tree (`ftp.uu.net:/vendor/dux/SimCity`, courtesy of **Rick Adams**), unlocked over an **800 number by credit-card phone sale**. The download was a fully functional but **time-limited demo** (city melts after ~5 minutes without a key); buyers got a node-locked or floating network license password over the phone. There was **no DUX website** yet — distribution was a **Usenet announcement** with prices, FTP host/directory/filename, and the 800 number. That was still unusual for Unix software, and rarer still for a game.
 
-1. **NeWS / HyperLook** (1993) — pie menus, unlockable demo that "melts" the city
+Secondary channel: some CD distributions (notably **Sun Catalyst** at the Turing Institute — HyperLook and SimCity both went out that way). Mail-order/CD was never the main path; FTP + phone unlock was.
+
+1. **NeWS / HyperLook** (1993) — pie menus; unlockable demo that "melts" the city
 2. **X11 / TCL/Tk** — scriptable, network-aware GUI; multi-platform (Sun, SGI, HP, Linux, NCD X terminals)
 
 Demonstrated at **InterCHI'93** Interactive Experience, Interval "Electric Carnival" / Lollapalooza, and trade shows.
 
-Screenshots (three displays — SGI Indigo, NCD X terminal, Sun):
+Product page (period): [`../art-net-simcity-archive/multiplayer-x11-announcement.md`](../art-net-simcity-archive/multiplayer-x11-announcement.md) · Usenix keynote on the model: [`../art-net-simcity-archive/keynote-toronto-usenix.md`](../art-net-simcity-archive/keynote-toronto-usenix.md)
 
-- http://www.donhopkins.com/home/images/SimCity-Indigo.gif
-- http://www.donhopkins.com/home/images/SimCity-NCD.gif
-- http://www.donhopkins.com/home/images/SimCity-Sun.gif
+Screenshots (three displays — SGI Indigo, NCD X terminal, Sun) — also in-repo:
 
-Paper: [SimCityNet: A Cooperative Multi User City Simulation](http://www.art.net/~hopkins/Don/simcity/simcitynet.html)
+- [`../art-net-simcity-archive/images/SimCity-Indigo.gif`](../art-net-simcity-archive/images/SimCity-Indigo.gif)
+- [`../art-net-simcity-archive/images/SimCity-NCD.gif`](../art-net-simcity-archive/images/SimCity-NCD.gif)
+- [`../art-net-simcity-archive/images/SimCity-Sun.gif`](../art-net-simcity-archive/images/SimCity-Sun.gif)
+
+Multiplayer UI evidence (Talk / vote / chalk): [`../art-net-simcity-archive/images/`](../art-net-simcity-archive/images/README.md)
+
+Paper: [`../1993-interchi-simcitynet-proposal/`](../1993-interchi-simcitynet-proposal/README.md) · archive hub [`../art-net-simcity-archive/`](../art-net-simcity-archive/README.md)
 
 ---
 

@@ -30,6 +30,7 @@ centerpiece by design (see `../../SHOW.yml#topic_less_by_design`).
 - Video: <https://www.youtube.com/watch?v=nsxoZXaYJSk>
 - Stanford: <https://searchworks.stanford.edu/view/yj113jt5999>
 - Medium: <https://donhopkins.medium.com/designing-user-interfaces-to-simulation-games-bd7a9d81e62d>
+- Earlier art.net notes on the same Winograd talk (pre-Medium): [`../art-net-simcity-archive/designing-ui-to-simulation-games.md`](../art-net-simcity-archive/designing-ui-to-simulation-games.md)
 - Use/reproduction: Stanford Archives materials are open for research use and may be used freely for non-commercial purposes with attribution; transcript by Don.
 
 ## The pivotal moment (the one Don flagged)

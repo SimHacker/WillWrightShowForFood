@@ -10,9 +10,11 @@ Don Hopkins worked on cooperative multiplayer SimCity from the early 1990s throu
 
 | Artifact | Path / URL |
 |----------|------------|
+| **InterCHI'93 proposal (primary)** | [`../1993-interchi-simcitynet-proposal/`](../1993-interchi-simcitynet-proposal/README.md) |
+| **art.net SimCity archive** (manual, transcripts, screenshots, announcement) | [`../art-net-simcity-archive/`](../art-net-simcity-archive/README.md) |
 | SimCity lineage (SimCityNet era) | [`characters/don-hopkins/career/simcity-lineage.yml`](../../../../don-hopkins/career/simcity-lineage.yml) |
 | MultiPlayerIdeas lineage | MicropolisCore `notes/MultiPlayerIdeas.txt` (sibling repo) |
-| Educational multiplayer proposal stub | [`../2004-02-07-educational-multiplayer-simcity-linux/`](../2004-02-07-educational-multiplayer-simcity-linux/README.md) |
+| Educational multiplayer proposal | [`../2004-02-07-educational-multiplayer-simcity-linux/`](../2004-02-07-educational-multiplayer-simcity-linux/README.md) |
 | Winograd medium — multiplayer X11 screenshot | [Designing User Interfaces to Simulation Games](https://donhopkins.medium.com/designing-user-interfaces-to-simulation-games-bd7a9d81e62d) — image `031-multiplayer-x11-simcity…` |
 | Ted Selker NPUC demo | Don YouTube / steering-committee adjacent demos |
 | Alan Kay SimCity Rules thread | [`../2007-11-16-simcity-rules-alan-kay/`](../2007-11-16-simcity-rules-alan-kay/README.md) |
@@ -34,7 +36,8 @@ Don Hopkins worked on cooperative multiplayer SimCity from the early 1990s throu
 
 ## Gaps
 
-- [ ] Recover Don's original SimCityNet design notes from archive disks
+- [x] InterCHI'93 proposal in-repo — [`../1993-interchi-simcitynet-proposal/`](../1993-interchi-simcitynet-proposal/README.md)
+- [ ] Recover further SimCityNet design notes from archive disks
 - [ ] Screenshot gallery from Winograd bundle + NeWS/X11 demos
 - [ ] Interview clip: Don + Walter Bender on mesh / Stone Soup
 - [ ] Compare to modern city-builder multiplayer (Cities: Skylines, etc.) — one paragraph, not a survey

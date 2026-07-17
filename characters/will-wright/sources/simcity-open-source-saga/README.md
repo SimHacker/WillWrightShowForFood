@@ -38,6 +38,8 @@ this first, then branch to threads below.
 | [2006-12 introducing the players](../2006-12-simcity-olpc-introducing-the-players/README.md) | Sugar roadmap, cast of characters |
 | [simcity-unix-rights-history](../simcity-unix-rights-history/README.md) | DUX/Maxis contracts, Chuck Normann clearance |
 | [multiplayer-simcity-ui-network](../multiplayer-simcity-ui-network/README.md) | Cooperative UI from same pitch letter |
+| [1993-interchi-simcitynet-proposal](../1993-interchi-simcitynet-proposal/README.md) | InterCHI'93 SimCityNet proposal (primary) |
+| [art-net-simcity-archive](../art-net-simcity-archive/README.md) | Unix manuals, transcripts, screenshots, announcement |
 | [2007-01-10 OLPC status](../2007-01-10-simcity-for-olpc-status/README.md) | Will, DUX contracts, early milestones |
 | [2007-11-02 QA sign-off](../2007-11-02-olpc-simcity-qa-sign-off/README.md) | EA QA milestone |
 | [2013 tale of two SimCities](../2013-tale-of-two-simcities/README.md) | Charles Normann — EA CEO sign-off inside story |

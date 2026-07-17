@@ -5,6 +5,11 @@
 
 *Extracted from Don Hopkins archival prompts (2026-06-29). Republished in [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood).*
 
+**Live external copy:** the Drupal page is gone. Use the Internet Archive:  
+https://web.archive.org/web/20110611185928/http://www.donhopkins.com/drupal/node/24  
+Don linked that IA URL on HN (2023-11-06): https://news.ycombinator.com/item?id=38160682  
+Folder index: [`README.md`](README.md)
+
 ---
 
 Back in March 2002, Maxis told me they were interested in supporting the educational use of products like SimCity. Earlier, I had developed a multi player version of SimCity, which runs on Linux/X11, and was scriptable in TCL. Educators and researchers from Columbia University, MIT, IBM, Xerox and other educational and commercial institutions were excited about gaining access to this version of SimCity, and adapting it to teach and stimulate students' interest in urban planning, computer simulation and game programming.

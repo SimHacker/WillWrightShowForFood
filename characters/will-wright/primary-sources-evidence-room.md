@@ -50,6 +50,8 @@ in that README.
 | Don's informal draft history                        | [micropolis-saga-don-draft](sources/micropolis-saga-don-draft/README.md)                                               |
 | Contracts + GPL Exhibit A                           | [maxis-licenses-chain-of-custody](sources/maxis-licenses-chain-of-custody/README.md)                                   |
 | EA CEO sign-off inside story                        | [2013-tale-of-two-simcities](sources/2013-tale-of-two-simcities/README.md)                                             |
+| SimCityNet InterCHI'93 proposal                     | [1993-interchi-simcitynet-proposal](sources/1993-interchi-simcitynet-proposal/README.md)                               |
+| art.net SimCity archive (Unix / X11 / HyperLook)    | [art-net-simcity-archive](sources/art-net-simcity-archive/README.md)                                                   |
 | SimCityNet / multiplayer UI pitch                   | [multiplayer-simcity-ui-network](sources/multiplayer-simcity-ui-network/README.md)                                     |
 | Python/AMF/Flash/OpenLaszlo centralized multiplayer | [sugar-centralized-multiplayer-laszlo](sources/sugar-centralized-multiplayer-laszlo/README.md)                         |
 | Chaim MIT Press intro thread                        | [2024-building-simcity-chaim-intro](sources/2024-building-simcity-chaim-intro/README.md)                               |

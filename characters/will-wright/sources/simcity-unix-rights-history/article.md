@@ -23,11 +23,13 @@ Both contracts completed without complication. DUX no longer in business; EA hol
 
 ## Two Unix products Don built
 
-1. **HyperNeWS / HyperLook** (NeWS) — Sun-focused; pie menus; 1993 FTP sales  
+1. **HyperNeWS / HyperLook** (NeWS) — Sun-focused; pie menus; 1993 FTP sales (also Sun Catalyst CD with HyperLook runtime)  
    - http://www.donhopkins.com/home/catalog/hyperlook/SimCity.README  
 2. **X11 / TCL/Tk** — scriptable; **multiplayer** vote/build; ported to Sun, SGI, HP, DEC, IBM, NCD, Linux  
-   - http://www.donhopkins.com/home/catalog/simcity/simcity-announcement.html  
-   - Unix World review Apr 1993 p.105; Unix Review **Outstanding Product 1993** p.52
+   - Sold mainly via **UUNET FTP** (`ftp.uu.net:/vendor/dux/SimCity`) + **phone unlock** (Usenet announcement; no web store) — see [`../multiplayer-simcity-ui-network/article.md`](../multiplayer-simcity-ui-network/article.md#simcitynet--what-shipped)
+   - Announcement: [`../art-net-simcity-archive/multiplayer-x11-announcement.md`](../art-net-simcity-archive/multiplayer-x11-announcement.md)
+   - UnixWorld review: [`../art-net-simcity-archive/unixworld-bedlam-in-simcity.md`](../art-net-simcity-archive/unixworld-bedlam-in-simcity.md)
+   - Unix Review **Outstanding Product 1993** p.52
 
 ---
 

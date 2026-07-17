@@ -56,6 +56,8 @@ Verbatim from Don Hopkins forwarded-mail archive.
 > http://www.donhopkins.com/home/images/SimCity-Indigo.gif
 > http://www.donhopkins.com/home/images/SimCity-NCD.gif
 > http://www.donhopkins.com/home/images/SimCity-Sun.gif
+>
+> *(in-repo: [`../art-net-simcity-archive/images/`](../art-net-simcity-archive/images/README.md))*
 
 *(Full pitch letter body — verbatim: [`don-pitch-letter-2006-12-02.md`](don-pitch-letter-2006-12-02.md). Same text repeated in Don's 2 Dec emails to Bill Joy and later forwards.)*
 

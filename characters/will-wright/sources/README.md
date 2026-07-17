@@ -101,6 +101,14 @@ Alan Kay thread on SimCity rules + Don's PSIBER visual programming vision for th
 **[2006-12-simcity-olpc-introducing-the-players/](2006-12-simcity-olpc-introducing-the-players/README.md)**  
 Walter Bender introduces the Sugar roadmap players — context for Micropolis on OLPC.
 
+**[1993-interchi-simcitynet-proposal/](1993-interchi-simcitynet-proposal/README.md)**  
+InterCHI'93 Interactive Experience proposal — cooperative SimCityNet walk-up demo ("bridges between
+dijks / players / brands").
+
+**[art-net-simcity-archive/](art-net-simcity-archive/README.md)**  
+Full republish of Don's art.net SimCity hub — UnixWorld review, X11 announcement, HyperLook/X11 demo
+transcripts, DUX manual, Electric Carnival, screenshots.
+
 **[multiplayer-simcity-ui-network/](multiplayer-simcity-ui-network/README.md)**  
 SimCityNet UI exposition from the 2006 pitch — city branching, friend snapshots, the Facebook-era
 multiplayer dreams in PROGRESS.txt.
@@ -373,6 +381,8 @@ CAM-6 pie menus as visual programming — YouTube + essay cross-link.
 | Slug | Title |
 |------|-------|
 | [2004-02-05-sims-proposals-and-documentation](2004-02-05-sims-proposals-and-documentation/README.md) | Sims proposals hub — SliceCity, TSO, community tools |
+| [1993-interchi-simcitynet-proposal](1993-interchi-simcitynet-proposal/README.md) | SimCityNet — InterCHI'93 Interactive Experience proposal |
+| [art-net-simcity-archive](art-net-simcity-archive/README.md) | art.net SimCity hub — manuals, transcripts, screenshots |
 | [2004-02-07-educational-multiplayer-simcity-linux](2004-02-07-educational-multiplayer-simcity-linux/README.md) | Educational multiplayer SimCity for Linux |
 | [2004-01-10-barbie-mortalkombat-jenkins](2004-01-10-barbie-mortalkombat-jenkins/README.md) | From Barbie to Mortal Kombat (Henry Jenkins) |
 | [2005-09-18-computer-game-design-index](2005-09-18-computer-game-design-index/README.md) | Computer Game Design — topic index |
