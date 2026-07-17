@@ -35,7 +35,7 @@ episode one with Will. Walk [1996 Winograd video](../will-wright/sources/1996-04
 
 While uplifted: explore, edit bodies and souls, create/buy/share. [Marusek *Wedding Album*](https://en.wikipedia.org/wiki/The_Wedding_Album_(short_story))
 → Sims 1 saves from 2001. [Soul City README](https://github.com/SimHacker/moollm/blob/main/examples/soul-city/README.md)
-· [MicropolisCore simopolis.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/simopolis.md).
+· [MicropolisCore soul-city.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/soul-city.md).
 
 Show seed: Little Computer Person tours the future inside The Sims.
 

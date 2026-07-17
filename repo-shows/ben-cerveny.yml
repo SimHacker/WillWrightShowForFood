@@ -46,7 +46,7 @@ ties_to:
   - ../process/crazy-idea-jam.yml
   - SimHacker/moollm/examples/adventure-4/street/lane-neverending
   - SimHacker/moollm/examples/soul-city/README.md
-  - SimHacker/MicropolisCore/documentation/designs/simopolis.md
+  - SimHacker/MicropolisCore/documentation/designs/soul-city.md
   - SimHacker/MicropolisCore/packages/sims-io
 
 invitation_status: not_yet_asked
