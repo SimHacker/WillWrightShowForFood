@@ -2,6 +2,15 @@
 
 *Primary sources, HN harvests, and dossiers for the Repo Show room.*
 
+## UI architecture / Morphic (harvest)
+
+| Read | What |
+|------|------|
+| [2011 Reddit MVC flame → Morphic](2011-reddit-mvc-flame-morphic.md) | u/xardox vs cargo-cult MVC; Kay email; Morphic payoff — Craig Latta show fuel |
+| [Garnet/Laszlo → Svelte × Snap!](micropolis-svelte-snap-constraint-bridge.md) | Constraints + prototypes bridge |
+
+Sibling (same Kay email on HN): [`../../alan-kay/media/discussions/hn-mvc-morphic-watchers-2015.md`](../../alan-kay/media/discussions/hn-mvc-morphic-watchers-2015.md)
+
 ## Logo lineage (2026 harvest)
 
 | Read | Girder | What |

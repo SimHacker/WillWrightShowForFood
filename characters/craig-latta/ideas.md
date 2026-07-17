@@ -17,8 +17,23 @@ walk the repo on air and build from the seed.
 ### 2. Caffeine (SqueakJS+WASM livecoding), Amsterdam
 in-person on-camera; remember Vanessa
 
+### 3. Morphic vs cargo-cult MVC — Don’s 2011 Reddit flame + Alan Kay
+Harvest: [2011-reddit-mvc-flame-morphic.md](../don-hopkins/sources/2011-reddit-mvc-flame-morphic.md)
+
+Don (u/xardox) torching a “MVC for games” tutorial — controllers as Gilbert Gottfried on a date;
+view owns drawing *and* reverse-projected input; Smalltalk moved on → **Morphic**. Thread includes
+Alan Kay’s email (cameras/worlds good, machinery bad; **watchers**; unsolved inverter; HyperCard
+construction). Sibling: [HN 2015 Kay/Morphic](../alan-kay/media/discussions/hn-mvc-morphic-watchers-2015.md).
+
+**Jam with Craig:** what should the audience *see* in Caffeine that MVC tutorials never show? Where
+would a Controller class go on a live page — and why doesn’t it? Kay’s watchers vs Morphic halos.
+Constraints/prototypes (Garnet/Laszlo) vs Morphic stepping. Keep’s graph memory as instance-first
+cousin?
+
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
 - Show seed: [`repo-shows/craig-latta/`](../../repo-shows/craig-latta/)
 - [`CHARACTER.yml`](CHARACTER.yml)
+- Don MVC→Morphic flame: [`../don-hopkins/sources/2011-reddit-mvc-flame-morphic.md`](../don-hopkins/sources/2011-reddit-mvc-flame-morphic.md)
+- Reddit: https://www.reddit.com/r/programming/comments/qs3zp/for_those_starting_with_the_model_view_controller/

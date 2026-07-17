@@ -26,7 +26,7 @@ Don asked Alan about the evolution of **MVC** and **Morphic**, and other importa
 Context Don cited:
 
 - C2 wiki: [WhatsaControllerAnyway](http://c2.com/cgi/wiki?WhatsaControllerAnyway)
-- Reddit thread on MVC for web development (Don's TL;DR: "Fuck MVC!" — two meanings: UI MVC vs web-server MVC)
+- Reddit flame (harvested): [`../../../don-hopkins/sources/2011-reddit-mvc-flame-morphic.md`](../../../don-hopkins/sources/2011-reddit-mvc-flame-morphic.md) — [r/programming qs3zp](https://www.reddit.com/r/programming/comments/qs3zp/for_those_starting_with_the_model_view_controller/) (Don u/xardox; same Kay email; Morphic payoff)
 - Morphic: originally Self, ported to Smalltalk — what makes it unique?
 
 Don's framing: UI MVC is ~32 years old; "nobody can agree on what a controller is" except as a dumping ground
@@ -137,6 +137,7 @@ than message-based" Sketchpad turn? (See [`../quora-recaps/oop-messaging-and-wha
 | David Levitt (Atari Cambridge)          | [`../../../david-levitt/`](../../../david-levitt/) · [`../../../david-levitt/media/from-mail/paper-pantomime-teaser.pdf`](../../../david-levitt/media/from-mail/paper-pantomime-teaser.pdf) |
 | ACRC Star Wars ↔ Lisp Machine           | [`../../../david-levitt/sources/atari-cambridge-star-wars-lisp-machine.md`](../../../david-levitt/sources/atari-cambridge-star-wars-lisp-machine.md) · [`../../../bill-st-clair/`](../../../bill-st-clair/) |
 | Ben Shneiderman (direct manipulation)   | [`../../../ben-shneiderman/`](../../../ben-shneiderman/)                                                                                                                                    |
+| Don Reddit MVC flame (2011)             | [`../../../don-hopkins/sources/2011-reddit-mvc-flame-morphic.md`](../../../don-hopkins/sources/2011-reddit-mvc-flame-morphic.md) · Craig jam: [`../../../craig-latta/ideas.md`](../../../craig-latta/ideas.md) |
 | Dan Ingalls (Smalltalk/Morphic lineage) | [`../../../dan-ingalls/`](../../../dan-ingalls/)                                                                                                                                            |
 | David Ungar (Self/Morphic)              | [`../../../david-ungar/`](../../../david-ungar/)                                                                                                                                            |
 | Terry Winograd (CS547 archive)          | [`../../../terry-winograd/media/cs547-ARCHIVE.md`](../../../terry-winograd/media/cs547-ARCHIVE.md)                                                                                          |

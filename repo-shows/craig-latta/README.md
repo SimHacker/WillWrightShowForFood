@@ -19,6 +19,12 @@ Details: [`characters/craig-latta/keep.md`](../../characters/craig-latta/keep.md
 
 A chance to remember **[Vanessa Freudenberg](../../characters/vanessa-freudenberg/README.md)** (memorial mode — represent + discuss, never speak as her): her **SqueakJS** is the foundation Caffeine stands on, and her sharp **WebAssembly** insights are the thread Craig carried forward.
 
+## Morphic vs MVC (discussion fuel)
+
+Don’s 2011 Reddit flame (u/xardox) + Alan Kay email on watchers / too much machinery — harvested for
+this show: [`characters/don-hopkins/sources/2011-reddit-mvc-flame-morphic.md`](../../characters/don-hopkins/sources/2011-reddit-mvc-flame-morphic.md).
+Hooks in [`characters/craig-latta/ideas.md`](../../characters/craig-latta/ideas.md) §3.
+
 ## Trail
 
 [live_objects](../../process/trails/live-objects.md) — Craig · Dan Ingalls · Vanessa
