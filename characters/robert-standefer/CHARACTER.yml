@@ -1,0 +1,56 @@
+# Robert Standefer — invitation portrayal. NOT Robert Standefer.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: robert-standefer
+  name: "Robert Standefer"
+  type: invitation
+  status: living
+  field: "Principal Program Manager, Copilot Acceleration (Microsoft) — Comic Chat open-source release"
+  home: characters/robert-standefer/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 1
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  channel: hacker_news
+  hn_user: outintospace
+  note: |
+    Warm lead Jul 2026 — announced microsoft/comic-chat with Scott Hanselman; active on HN
+    thread 48936426 as outintospace. Trio with Scott + DJ; LIVE Comic Chat on air.
+
+bio:
+  summary: >
+    **Robert Standefer** — Principal Program Manager on Microsoft's Copilot Acceleration Team
+    (Copilot, Agents & Platform). Over 30+ years spanning software engineering, enterprise
+    architecture, and technology strategy. Made the **Microsoft Comic Chat** open-source release
+    happen (six-year arc), with DJ Kurlander's support; co-announced with Scott Hanselman.
+    Builder who turns ideas into ships — including a Comic Chat–drawn conference talk.
+
+web:
+  github: https://github.com/RobStand
+  blog_bio: https://opensource.microsoft.com/blog/2026/07/16/microsoft-comic-chat-is-now-open-source/
+  comic_talk: https://standefer.com/agent-platform-comic/about.html
+  hn: https://news.ycombinator.com/user?id=outintospace
+
+show_relevance:
+  primary: repo-shows/comic-chat-open-source/
+  hooks:
+    - "Primary agent of the Comic Chat open-source release — six-year story"
+    - "Used Comic Chat itself for agent-platform talk comics"
+    - "GitHub as preservation + experimentation vehicle — Repo Show kinship"
+    - "LIVE Comic Chat with DJ + Scott — panels → show tree"
+
+see_also:
+  - README.md
+  - invitation.md
+  - ideas.md
+  - ../scott-hanselman/
+  - ../dj-kurlander/
+  - ../../repo-shows/comic-chat-open-source/
+  - ../../repo-shows/comic-chat-open-source/live-comic-chat.md

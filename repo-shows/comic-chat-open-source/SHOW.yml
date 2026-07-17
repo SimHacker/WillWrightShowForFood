@@ -1,0 +1,96 @@
+# SHOW — Comic Chat open source + LIVE Comic Chat
+# Guests: DJ Kurlander (creator) · Robert Standefer · Scott Hanselman
+
+show:
+  id: comic-chat-open-source
+  title: "Comic Chat Open Source — Live in the panels"
+  type: trio
+  host: Don Hopkins
+  guests: ["DJ Kurlander", "Robert Standefer", "Scott Hanselman"]
+  topic: >
+    Microsoft Comic Chat is MIT on GitHub. Creator DJ Kurlander joins Robert Standefer and Scott
+    Hanselman (who made the open-source release happen) for a Repo Show — including a LIVE Comic
+    Chat on air: conversation that becomes comic panels, then lands in the show tree.
+  status: seed
+  consent: not_yet_asked
+  interview_planned: true
+  channel_hints: [email, hacker_news, twitter]
+  centerpiece: live-comic-chat.md
+
+why_now:
+  release: "2026-07-16 — microsoft/comic-chat archived as public MIT history + modernization examples"
+  blog: "https://opensource.microsoft.com/blog/2026/07/16/microsoft-comic-chat-is-now-open-source/"
+  github: "https://github.com/microsoft/comic-chat"
+  hn: "https://news.ycombinator.com/item?id=48936426"
+  siggraph_96_press: "https://news.microsoft.com/source/1996/08/06/microsoft-research-displays-latest-innovations-at-siggraph-96/"
+  dj_site: "https://kurlander.net/DJ/Projects/ComicChat/resources"
+
+guests:
+  - name: "DJ Kurlander"
+    character: characters/dj-kurlander/
+    role: "Creator — MSR Comic Chat → product; SIGGRAPH '96; Jim Woodring collaboration"
+    site: https://kurlander.net/DJ/
+  - name: "Robert Standefer"
+    character: characters/robert-standefer/
+    role: "Made the open-source release happen (six-year arc); HN outintospace"
+    github: RobStand
+  - name: "Scott Hanselman"
+    character: characters/scott-hanselman/
+    role: "VP MTS Microsoft/GitHub — co-announced; Hanselminutes"
+    github: shanselman
+
+optional_later:
+  - name: "Tim Skelly / David Salesin / Jim Woodring"
+    why: "Paper co-authors / distinctive character art"
+
+live_comic_chat:
+  plan: live-comic-chat.md
+  summary: >
+    Private IRC channel; modernized or classic Comic Chat clients; emotion-wheel beats;
+    export panels into artifacts/live-session/ as the episode's comic history.
+  cast: [dj-kurlander, robert-standefer, scott-hanselman, don-hopkins]
+
+the_frame:
+  not_nostalgia_only: >
+    Preserve the time capsule — then *run* it. Expert system editorial decisions, live, with
+    the creator in the room.
+  github_as_stage: >
+    They put history on GitHub. We run a talk show whose stage *is* a GitHub repository —
+    and the live comic strip becomes files in that tree.
+  sims_comic_sans: >
+    Comic Chat helped launch Comic Sans; The Sims 1 shipped with Comic Sans and did fine.
+
+threads:
+  - "LIVE Comic Chat — centerpiece (see live-comic-chat.md)"
+  - "Reverse-engineering Jim Woodring — DJ"
+  - "Research → product war stories — MSR to Internet Division"
+  - "Six-year open-source arc — Robert"
+  - "Archive vs product / modernization honesty — Scott + Robert"
+  - "MSN server shutdown + community afterlife"
+  - "What to build next — Discord/Slack/LLM/web — typed into the live comic"
+  - "Repo Show kinship — conversation → panels → git"
+  - "Optional light: Comic Sans / Sims UI font"
+
+pairings:
+  - { with: ../../characters/terry-winograd/, why: "CS547 archive — Kurlander Comic Chat talk 1998-04-03" }
+  - { with: ../../characters/scott-mccloud/, why: "Understanding Comics × automatic comic layout" }
+  - { with: ../../characters/will-wright/, why: "Sims Comic Sans; visual conversation as play" }
+  - { with: ../../repo-shows/brad-myers/, why: "Watch What I Do — Kurlander Chimera/PBD chapters" }
+
+readable:
+  landing: README.md
+  live: live-comic-chat.md
+  dj: ../../characters/dj-kurlander/README.md
+  robert: ../../characters/robert-standefer/README.md
+  scott: ../../characters/scott-hanselman/README.md
+  invitations:
+    - ../../characters/dj-kurlander/invitation.md
+    - ../../characters/robert-standefer/invitation.md
+    - ../../characters/scott-hanselman/invitation.md
+
+sources:
+  - sources/microsoft-opensource-blog-2026-07-16.md
+  - sources/github-microsoft-comic-chat.md
+  - sources/siggraph-96-microsoft-press.md
+  - sources/hn-48936426.md
+  - sources/dj-kurlander-site.md

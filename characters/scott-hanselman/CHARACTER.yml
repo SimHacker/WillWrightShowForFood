@@ -1,0 +1,56 @@
+# Scott Hanselman — invitation portrayal. NOT Scott Hanselman.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: scott-hanselman
+  name: "Scott Hanselman"
+  type: invitation
+  status: living
+  field: "VP, Member of Technical Staff, Microsoft/GitHub — Open Source, Windows, developer education"
+  home: characters/scott-hanselman/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 1
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  channel: twitter_or_email
+  note: |
+    Warm lead Jul 2026 — co-announced microsoft/comic-chat with Robert Standefer.
+    Trio with Robert + DJ Kurlander; LIVE Comic Chat on air.
+
+bio:
+  summary: >
+    **Scott Hanselman** — VP, Member of Technical Staff at Microsoft/GitHub, working on Open Source,
+    Windows, and mentoring early-career engineers in an AI-augmented moment. Programmer, teacher,
+    and speaker for 30+ years (.NET, Azure, Developer Tools). Hosts **Hanselminutes**, blogs at
+    hanselman.com, champions open source, inclusion, and human-centered tech. Co-announced the
+    **Comic Chat** open-source release with Robert Standefer (Jul 2026).
+
+web:
+  github: https://github.com/shanselman
+  site: https://www.hanselman.com/
+  podcast: https://www.hanselminutes.com/
+  twitter: https://twitter.com/shanselman
+  blog_bio: https://opensource.microsoft.com/blog/2026/07/16/microsoft-comic-chat-is-now-open-source/
+
+show_relevance:
+  primary: repo-shows/comic-chat-open-source/
+  hooks:
+    - "Microsoft/GitHub open-source practice — history on GitHub as living archive"
+    - "Modernization + AI as preservation, not only greenfield generation"
+    - "Educator voice — Hanselminutes / mentoring meets Repo Show audience"
+    - "LIVE Comic Chat with DJ + Robert — panels → show tree"
+
+see_also:
+  - README.md
+  - invitation.md
+  - ideas.md
+  - ../robert-standefer/
+  - ../dj-kurlander/
+  - ../../repo-shows/comic-chat-open-source/
+  - ../../repo-shows/comic-chat-open-source/live-comic-chat.md

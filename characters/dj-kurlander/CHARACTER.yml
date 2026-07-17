@@ -1,0 +1,58 @@
+# DJ Kurlander — invitation portrayal. NOT DJ Kurlander.
+# Standards: ../../schemas/portrayal-standards.md
+# Contact: DonHopkins green-room only — no phone/address in this public repo.
+
+character:
+  id: dj-kurlander
+  name: "DJ Kurlander"
+  also_known_as: ["David J. Kurlander", "David Joshua Kurlander", "D.J. Kurlander"]
+  type: invitation
+  status: living
+  field: "Comic Chat creator; MSR → product; Mobile Internet Toolkit; Microsoft Surface GM"
+  home: characters/dj-kurlander/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 1
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  channel: email
+  note: |
+    Creator of Comic Chat. Retired from Microsoft; Seattle. Supportive of OSS release per Robert.
+    Trio show with Robert Standefer + Scott Hanselman; LIVE Comic Chat on air.
+
+bio:
+  summary: >
+    **David Joshua "DJ" Kurlander**, Ph.D. — conceived and led **Comic Chat** (Microsoft Chat)
+    from Microsoft Research (1995) through Internet Division productization (IE3, Windows 98,
+    24 languages). SIGGRAPH '96 paper with Tim Skelly and David Salesin; art collaboration with
+    **Jim Woodring**. Columbia Ph.D. (*Graphical Editing by Example*, Feiner); early MSR UI/graphics;
+    later Product Unit Manager for **Mobile Internet Toolkit** and GM of New Consumer Products /
+    **Microsoft Surface**. Retired; side projects; public site kurlander.net.
+
+web:
+  site: https://kurlander.net/DJ/
+  comic_chat: https://kurlander.net/DJ/Projects/ComicChat/resources
+  # email in DonHopkins green-room/contacts/guest-emails.yml
+
+show_relevance:
+  primary: repo-shows/comic-chat-open-source/
+  hooks:
+    - "Creator — research → product war stories; reverse-engineering Jim Woodring"
+    - "LIVE Comic Chat segment — emotion wheel, panel layout, creator in the room"
+    - "CS547 Winograd talk 1998-04-03 already in terry-winograd archive"
+    - "PBD lineage — Chimera / Watch What I Do (Brad Myers orbit)"
+
+see_also:
+  - README.md
+  - invitation.md
+  - ideas.md
+  - ../robert-standefer/
+  - ../scott-hanselman/
+  - ../terry-winograd/
+  - ../../repo-shows/comic-chat-open-source/
+  - ../../repo-shows/comic-chat-open-source/live-comic-chat.md
