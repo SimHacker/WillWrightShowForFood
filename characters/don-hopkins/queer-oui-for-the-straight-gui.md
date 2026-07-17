@@ -15,11 +15,15 @@
 | Hub | [Soul City](https://github.com/SimHacker/moollm/tree/main/examples/soul-city) · [INDEX bridges](../../repo-shows/INDEX.yml) |
 | Catalog | [Game UI Database](https://www.gameuidatabase.com/) · [PadCrafter](https://www.padcrafter.com/) |
 | Pair | [Brad Myers × Edd](../../repo-shows/brad-and-edd-interaction-catalogs.md) |
+| Jojo quality (sibling) | [Jojo on UI](jojo-on-ui.md) — Joseph Francis; UNIX-HATERS mirror; delightfully queer UI criticism |
 | This room | [Don Hopkins](README.md) · [bouquet](browse-the-bouquet.yml) |
 
 ## Slogans
 
 **"Queer Oui for the Straight GUI"** · **"Put the SaS into SaaS"**
+
+For Jojo-quality UI criticism (POSEUR kits, XYmorph, boraX, XBorges — snow in hell), see sibling
+[Jojo on UI](jojo-on-ui.md) (Joseph Francis; [UNIX-HATERS mirror](https://home.hccnet.nl/j.bus/unix-haters/x-windows/jojo-on-ui.html)).
 
 Phonetic steal from [*Queer Eye for the Straight Guy*](https://en.wikipedia.org/wiki/Queer_Eye_for_the_Straight_Guy) — **oui** is French for *yes*, and also
 [*Oui*](https://en.wikipedia.org/wiki/Oui_(magazine)) (the men’s porno mag, US edition of French
@@ -89,5 +93,5 @@ Anti-pattern: dunking for sport. Pattern: **redesign briefs with attribution** �
 
 ---
 
-↑ [Don’s room](README.md) · [pie lineage](pie-menus-chi-88-and-beyond.md) · [Edd](../edd-coates/) ·
-[show](../../repo-shows/edd-coates/) · [Ted Nelson](../ted-nelson/)
+↑ [Don’s room](README.md) · [Jojo on UI](jojo-on-ui.md) · [pie lineage](pie-menus-chi-88-and-beyond.md) ·
+[Edd](../edd-coates/) · [show](../../repo-shows/edd-coates/) · [Ted Nelson](../ted-nelson/)

@@ -20,6 +20,13 @@ featured_essays:
   - title: "The X Windows Disaster"
     note: "UNIX-HATERS Handbook chapter — Don's critique; pairs with Axis of Eval"
     wwsff: ../axis-of-eval-send-code-not-commands.md
+  - title: "Jojo on UI"
+    note: "Joseph Francis — Jojo-quality UI satire; UNIX-HATERS web mirror; sibling to Queer Oui"
+    wwsff: ../jojo-on-ui.md
+    url: https://home.hccnet.nl/j.bus/unix-haters/x-windows/jojo-on-ui.html
+  - title: "Queer Oui for the Straight GUI"
+    note: "Gonzo rescue clinic — SaS into SaaS; Edd ep.2 whiteboard"
+    wwsff: ../queer-oui-for-the-straight-gui.md
   - title: "The Shape of PSIBER Space"
     note: "NeWS hypermedia navigable space"
   - title: "Designing Pie Menus (Dr. Dobb's)"

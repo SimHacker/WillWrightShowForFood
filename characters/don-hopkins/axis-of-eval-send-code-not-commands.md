@@ -6,6 +6,7 @@ X11-style command chatter. The web proved it with JavaScript, AJAX, and WASM.
 ## The critique and the alternative
 
 - **Critique:** *X-Windows Disaster* chapter, UNIX-HATERS Handbook — what fails and why
+- **Jojo quality:** [Jojo on UI](jojo-on-ui.md) (Joseph Francis) — delightfully queer UI satire from the same UNIX-HATERS pages; sibling to [Queer Oui](queer-oui-for-the-straight-gui.md)
 - **Alternative:** NeWS, Owen Densmore's **OOPS** (`class.ps`), PostScript as linguistic motherboard
 - **Payoff:** MOOLLM extends the filesystem-as-object-store braid → GitHub MMO → Repo Shows
 

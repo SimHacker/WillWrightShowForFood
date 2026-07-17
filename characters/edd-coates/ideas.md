@@ -5,7 +5,8 @@ put in Edd's mouth.*
 [Portrayal standards](../../schemas/portrayal-standards.md) · friend · consent not_yet_asked
 
 Audience README: [README.md](README.md) · North star: [game-ui-archive.md](game-ui-archive.md) ·
-Queer Oui: [Queer Oui for the Straight GUI](../don-hopkins/queer-oui-for-the-straight-gui.md)
+Queer Oui: [Queer Oui for the Straight GUI](../don-hopkins/queer-oui-for-the-straight-gui.md) ·
+Jojo quality: [Jojo on UI](../don-hopkins/jojo-on-ui.md)
 
 ---
 
