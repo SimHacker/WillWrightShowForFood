@@ -64,8 +64,8 @@ why_the_show_cares:
   vr_cinema: "AnywaysVR opens multi-user 360 as a genre"
 
 media:
-  hero: media/tedx-diespace-control-desk-red-suit.png  # desk + stage; red suit = CREW, NOT Keez
-  tedx_pink_suit: media/tedx-amsterdam-pink-suit-pipslab-crew.png  # NOT Keez — unnamed PIPS:lab CREW (same presenter)
+  hero: media/tedx-diespace-control-desk-red-suit.png
+  tedx_pink_suit: media/tedx-amsterdam-pink-suit-pipslab-crew.png
   light_letters: media/tedx-diespace-light-letters-given-names.png
   yes_no_cloud: media/tedx-diespace-yes-no-cloud.png
   ages: media/tedx-diespace-ages-in-light.png

@@ -35,8 +35,8 @@
 
 | File | Moment |
 |------|--------|
-| [`tedx-diespace-control-desk-red-suit.png`](../media/tedx-diespace-control-desk-red-suit.png) | **Room hero** — live control desk + red-suit CREW on TEDx rug (**not Keez**) |
-| [`tedx-amsterdam-pink-suit-pipslab-crew.png`](../media/tedx-amsterdam-pink-suit-pipslab-crew.png) | Close-up of same red/pink-suit CREW (PIPS:lab badge) — **not Keez**; leave unnamed |
+| [`tedx-diespace-control-desk-red-suit.png`](../media/tedx-diespace-control-desk-red-suit.png) | Die Space live control cyberspace decks on stage |
+| [`tedx-amsterdam-pink-suit-pipslab-crew.png`](../media/tedx-amsterdam-pink-suit-pipslab-crew.png) | Pink suit on TEDx stage (PIPS:lab CREW) |
 | [`tedx-diespace-light-letters-given-names.png`](../media/tedx-diespace-light-letters-given-names.png) | Crowd writing name letters |
 | [`tedx-diespace-light-letters-surnames.png`](../media/tedx-diespace-light-letters-surnames.png) | Surname initials in light |
 | [`tedx-diespace-yes-no-lights-audience.png`](../media/tedx-diespace-yes-no-lights-audience.png) | Yes/No forehead lights + 60/40 |

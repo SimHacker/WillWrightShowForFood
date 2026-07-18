@@ -7,9 +7,9 @@
 
 Don’s friend since a **Trouw** performance ~2009. Amsterdam. **Definitely inviting.** Inter Will into Die Space.
 
-![TEDxAmsterdam Die Space — control desk + red suit on stage](media/tedx-diespace-control-desk-red-suit.png)
+![Die Space live control cyberspace decks on stage](media/tedx-diespace-control-desk-red-suit.png)
 
-*Die Space live control desk (left) and TEDx red-rug stage. Red-suit presenter is PIPS:lab CREW — **not Keez**.*
+*Die Space live control cyberspace decks on stage.*
 
 ---
 
