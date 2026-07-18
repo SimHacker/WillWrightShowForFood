@@ -1,5 +1,5 @@
 # SHOW — Keez Duyves / PIPS:lab — Die Space, Lumasol, participation art
-# Definite invite. Warm Amsterdam friendship. Show Will Die Space.
+# Definite invite. Warm Amsterdam friendship. Inter Will into Die Space.
 
 show:
   id: keez-duyves
@@ -32,7 +32,7 @@ threads:
   - "NDSM / Amsterdam inventiveness with Will"
 
 pairings:
-  - { with: ../../characters/will-wright/, why: "Show Will Die Space; Parker NDSM path" }
+  - { with: ../../characters/will-wright/, why: "Inter Will into Die Space; Parker NDSM path" }
   - { with: ../../characters/ben-cerveny/, why: "Amsterdam media / public-code circle" }
   - { with: ../../characters/jared-tarbell/, why: "Amsterdam FITC-era participation / generative kinship" }
   - { with: ../../characters/jaron-lanier/, why: "VR instruments / Rebounce orbit if stacked" }
