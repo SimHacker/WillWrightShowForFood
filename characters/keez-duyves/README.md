@@ -49,7 +49,7 @@ Not the other Amsterdam Keez (Kees Colijn / Arthur’s friend from the ’90s). 
 
 **Then (handmade, already genius):** seat LEDs + camera → names in light; six orchestrated HMDs; Luma2solator live feedback; Jaunt-era dreams of programmable live 360 and rooftop NYE fireworks with shared virtual rockets (and, escalating, Arduino-lit real ones).
 
-**Now (newly cheap / newly weird):** WebXR Anyways-for-N; Repo Show as a living diespace.nl; Mind Mirror + LLM afterlife chat; latent-space pigment beside Lumasol (not instead of shiny LEDs); Gaussian/NeRF capture of a performance volume; Will + Parker in the NDSM lab.
+**Now (newly cheap / newly weird):** WebXR Anyways-for-N; Repo Show as a living diespace.nl; Mind Mirror + LLM afterlife chat; latent-space pigment with Lumasol; Gaussian/NeRF capture of a performance volume; Will + Parker in the NDSM lab.
 
 Full ladder: [`ideas.md`](ideas.md).
 
