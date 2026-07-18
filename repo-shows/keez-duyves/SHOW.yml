@@ -1,0 +1,53 @@
+# SHOW — Keez Duyves / PIPS:lab — Die Space, Lumasol, participation art
+# Definite invite. Warm Amsterdam friendship. Show Will Die Space.
+
+show:
+  id: keez-duyves
+  title: "A Repo Show with Keez Duyves — Die Space & Lights in the Crowd"
+  type: solo_or_with_will
+  host: Don Hopkins
+  guests: ["Keez Duyves"]
+  with: ["Will Wright"]
+  character: characters/keez-duyves/
+  topic: "PIPS:lab participation art — Lumasol/Luma2solator, Die Space afterlife SNS, AnywaysVR; crowd as instrument."
+  status: seed
+  consent: not_yet_asked
+  priority: send_now
+  interview_planned: true
+
+why_him:
+  die_space: "Cleanest Will-facing demo — afterlife social network + TEDx mass light upload"
+  participation: "Works meant for participation not observation — Repo Show audience kinship"
+  friendship: "Long Amsterdam Messenger + studio circle; Parker/NDSM visit path"
+  dutch: "SO DUTCH — inventiveness as texture"
+
+threads:
+  - "TEDxAmsterdam Die Space — walk the upload (names, polls, ages, cloud)"
+  - "Lumasol → Luma2solator — live feedback as the invention"
+  - "AnywaysVR — multi-user 360 cinema; tool wishlist"
+  - "Unity seeds vs Island demo — modular worlds + pie menus in 3D"
+  - "Die Space ↔ Mind Mirror — afterlife chat vs simulated minds"
+  - "NDSM / Amsterdam inventiveness with Will"
+
+pairings:
+  - { with: ../../characters/will-wright/, why: "Show Will Die Space; Parker NDSM path" }
+  - { with: ../../characters/ben-cerveny/, why: "Amsterdam media / public-code circle" }
+  - { with: ../../characters/jared-tarbell/, why: "Amsterdam FITC-era participation / generative kinship" }
+  - { with: ../../characters/jaron-lanier/, why: "VR instruments / Rebounce orbit if stacked" }
+
+readable:
+  landing: ../../characters/keez-duyves/README.md
+  invitation: ../../characters/keez-duyves/invitation.md
+  ideas: ../../characters/keez-duyves/ideas.md
+  tedx: ../../characters/keez-duyves/sources/tedx-amsterdam-2012-diespace.md
+
+media:
+  - ../../characters/keez-duyves/media/tedx-amsterdam-keez-pink-suit-pipslab.png
+  - ../../characters/keez-duyves/media/tedx-diespace-light-letters-given-names.png
+  - ../../characters/keez-duyves/media/tedx-diespace-yes-no-cloud.png
+  - ../../characters/keez-duyves/media/tedx-diespace-ages-in-light.png
+
+ties_to:
+  - ../../characters/keez-duyves/
+  - ../../repo-shows/will-wright-premiere/
+  - https://github.com/SimHacker/moollm/blob/main/skills/mind-mirror/SKILL.md

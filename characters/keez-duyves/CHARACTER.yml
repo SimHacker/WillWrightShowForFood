@@ -1,0 +1,88 @@
+# Keez Duyves — invitation portrayal. NOT Keez Duyves.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: keez-duyves
+  name: "Keez Duyves"
+  type: invitation
+  signifier: "💡📡🪦"
+  status: living
+  beloved: false
+  field: "Interactive multimedia / participation art — PIPS:lab; Lumasol light-writing; Die Space; AnywaysVR; Hybrid Sculptors"
+  home: characters/keez-duyves/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  note: |
+    Warm long Amsterdam friendship (Messenger + studio circle). Keez may correct, reduce,
+    replace, or delete this portrayal anytime. Private addresses and DMs stay out of this repo.
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  priority: send_now
+  warm_contact: true
+  channel: Messenger
+  interview_planned: true
+  include: ["Keez Duyves", "Will Wright"]
+  document: invitation.md
+  show_seed: ../../repo-shows/keez-duyves/
+
+bio:
+  summary: |
+    **Keez Duyves** (b. 1971, Alkmaar) — founder of artist group **PIPS:lab**; Urban Nation
+    calls him master of the impossible, image wizard, media genius, natural-born inventor.
+    Denied early computer games at home, he and his brothers programmed their own; master's
+    *cum laude* in Interactive Multi Media (Utrecht School of the Arts); chose art on purpose.
+    PIPS:lab transforms new media into unexpected media — works for **participation, not just
+    observation**. Signature tech: **Lumasol** light-writing → live-feedback **Luma2solator**
+    (ZKM Karlsruhe among buyers; 500,000+ lightpaintings worldwide). Also Scoretrack,
+    **AnywaysVR**, duo **Hybrid Sculptors** with Thomas Bratzke (ZASD). Flagship show piece for
+    Will: **Die Space** — "the first interactive social network community for people who have
+    already passed away, so you can still chat when you're dead" (TEDxAmsterdam 2012).
+
+friendship_arc:
+  unity_era: "Messenger jam — Unity modularity vs Island demo, pie menus in 3D editor, gaffer-tape vs messaging objects"
+  2017: "AnywaysVR praise — multi-user 360 cinema; Jaunt JS video player design feedback; Waag / World VR Forum threads"
+  2020: "Pie-menu projection-mapping paper + Ted Nelson self-revealing / feedforward-feedback"
+  2024-03: "Don flagged Die Space on HN (item 39814867)"
+  2026: "NDSM / Parker visit path — show Will Die Space; definite Repo Show invite"
+
+why_the_show_cares:
+  will_hook: "Die Space is the cleanest Will-facing demo — afterlife SNS + mass audience light upload"
+  participation: "Live crowd as input device — Lumasol as social instrumentation"
+  dutch_amsterdam: "Amsterdam inventiveness; NDSM studio culture; SO DUTCH"
+  mind_mirror_rhyme: "Die Space afterlife chat ↔ Timothy Leary Mind Mirror personality simulation lineage in MOOLLM"
+  vr_cinema: "AnywaysVR opens multi-user 360 as a genre"
+
+media:
+  tedx_pink_suit: media/tedx-amsterdam-keez-pink-suit-pipslab.png
+  light_letters: media/tedx-diespace-light-letters-given-names.png
+  yes_no_cloud: media/tedx-diespace-yes-no-cloud.png
+  ages: media/tedx-diespace-ages-in-light.png
+
+contact:
+  channel: "Warm — Messenger / Facebook; pipslab.org"
+  # no private phone/address in this public repo
+
+sources:
+  web:
+    - { title: "Urban Nation — Keez Duyves", url: "https://urban-nation.com/artist/keez-duyves/" }
+    - { title: "PIPS:lab", url: "http://www.pipslab.org/" }
+    - { title: "PIPS:lab at TEDxAmsterdam — Die Space", url: "https://www.youtube.com/watch?v=ApyDSq_DbQo" }
+    - { title: "Facebook — Keez Duyves", url: "https://www.facebook.com/keez.duyves" }
+    - { title: "HN — Die Space mention (Don, 2024)", url: "https://news.ycombinator.com/item?id=39814867" }
+  local:
+    - { path: sources/tedx-amsterdam-2012-diespace.md, why: "TEDx talk digest + still index" }
+
+see_also:
+  - { path: invitation.md, why: "Draft invite" }
+  - { path: ideas.md, why: "Show hooks" }
+  - { path: ../../repo-shows/keez-duyves/, why: "Show seed" }
+  - { path: ../will-wright/, why: "Show Will Die Space; Parker / NDSM visit path" }
+  - { path: ../ben-cerveny/, why: "Amsterdam public-code / media circle" }
+  - { path: ../jared-tarbell/, why: "Amsterdam FITC era participation art kinship" }
+  - { path: ../../schemas/portrayal-standards.md, why: "Subject rights" }
