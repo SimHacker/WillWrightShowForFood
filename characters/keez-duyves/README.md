@@ -37,7 +37,7 @@ Not the other Amsterdam Keez (Kees Colijn / Arthur’s friend from the ’90s). 
 | **Lumasol / Luma2solator** | Live light-writing with feedback; 500k+ paintings; ZKM; crowd becomes the instrument |
 | **Anyways** | Synced 360 cinematic for 6 — Don never saw anything like it ([Vimeo](https://vimeo.com/206409021)) |
 | **JS player unfinished business** | 2017: artists who invent original 360 uses need a *programmable* player — WebXR / Repo Show rematch |
-| **Massively multiplayer CV** | Don’s [HN 2024](https://news.ycombinator.com/item?id=39821421) — LEDs then, phone tracking now |
+| **Massively multiplayer CV** | Don’s [HN 2024](https://news.ycombinator.com/item?id=39821421) cited Die Space for a poll-tech thread — LEDs stay on-brand |
 | **Participation not observation** | Urban Nation / PIPS:lab credo since before Trouw |
 | **SO DUTCH** | NDSM studio; Trouw / Canvas recycled newspaper buildings; Parker visit path |
 
@@ -49,7 +49,7 @@ Not the other Amsterdam Keez (Kees Colijn / Arthur’s friend from the ’90s). 
 
 **Then (handmade, already genius):** seat LEDs + camera → names in light; six orchestrated HMDs; Luma2solator live feedback; Jaunt-era dreams of programmable live 360 and rooftop NYE fireworks with shared virtual rockets (and, escalating, Arduino-lit real ones).
 
-**Now (newly cheap / newly weird):** phone-scale mass CV without custom hardware; WebXR Anyways-for-N; Repo Show as a living diespace.nl; Mind Mirror + LLM afterlife chat (ethics on); latent-space pigment for light-paint; Gaussian/NeRF capture of a performance volume; Will + Parker in the NDSM lab.
+**Now (newly cheap / newly weird):** WebXR Anyways-for-N; Repo Show as a living diespace.nl; Mind Mirror + LLM afterlife chat; latent-space pigment beside Lumasol (not instead of shiny LEDs); Gaussian/NeRF capture of a performance volume; Will + Parker in the NDSM lab.
 
 Full ladder: [`ideas.md`](ideas.md).
 

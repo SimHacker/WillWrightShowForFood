@@ -14,7 +14,7 @@
 
 swyx asks how to point a camera at ~500 conference seats and count raised hands for a poll — “massively multiplayer computer vision.” Thread covers YOLO hands, skeleton pose, tiled inference.
 
-## Don’s beats (paraphrase + links)
+## What Don wrote on HN (2024)
 
 **Hands-free poll ([39821576](https://news.ycombinator.com/item?id=39821576)):** Exploit time, like Die Space — but with modern face tracking instead of 2012 LED tracking. Nod = yes, shake = no. Less flamboyant than waving; better for shy/lazy non-raisers (replying to IshKebab’s left/right-hand bias fix).
 
@@ -28,8 +28,12 @@ Videos Don linked in-thread:
 | PIPS:lab at TEDxAmsterdam | https://www.youtube.com/watch?v=ApyDSq_DbQo |
 | PIPS lab Showreel 2017 @ 1:24 | https://youtu.be/FNzTWqraCDU?t=84 |
 
+## Correction (Don, 2026)
+
+Those HN comments were for a *tech* thread about counting raised hands — not instructions for Keez. Don is not qualified to tell him what to do with computer vision as an artist. Making Die Space more high-tech, less retro, less flamboyant, and less on-brand shiny blinking LED lights may be taking it in exactly the wrong direction. The LEDs *are* the shine.
+
 ## Show hooks
 
-- Massively multiplayer CV → Die Space was doing the social UX in 2012 with LEDs; 2024+ can drop LEDs for face/pose.
-- Pair with [TEDx digest](tedx-amsterdam-2012-diespace.md) and Will premiere poll questions.
-- Optional jam: analytic-cubism paint-cam ([ideas.md](../ideas.md) §9).
+- Cite Die Space on HN as proof the social UX already existed in 2012 — not as a mandate to strip the LEDs.
+- Pair with [TEDx digest](tedx-amsterdam-2012-diespace.md).
+- Optional jam: analytic-cubism paint-cam ([ideas.md](../ideas.md)).
