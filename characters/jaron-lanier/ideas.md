@@ -23,6 +23,12 @@ Archived discussion with Don on language design — see [bounce-notes.txt](https
 ### 4. Social media / attention (HN 24265876)
 Separate thread — optional show segment on calm vs addictive design; cross-link [`../mark-weiser/ideas.md`](../mark-weiser/ideas.md).
 
+### 4b. Amsterdam PIPS:lab bridge (2009)
+Don already tried to introduce Jaron to **PIPS:lab** (Keez Duyves et al.) — Quartz Composer
+performance video yearning for a modern **Body Electric**. Receipt:
+[`sources/2009-06-11-don-introduces-pipslab.md`](sources/2009-06-11-don-introduces-pipslab.md) ·
+[`../keez-duyves/`](../keez-duyves/). Optional show beat: live instruments ↔ participation art.
+
 ### 5. VR + input devices as musical instruments, played live *(the dream-guest headline)*
 Jaron is not just a VR pioneer — he's a **performing musician** with one of the world's largest
 collections of **rare/exotic acoustic instruments**, and he has long framed **VR itself as an

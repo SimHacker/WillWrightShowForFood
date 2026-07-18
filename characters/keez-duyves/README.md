@@ -19,6 +19,9 @@ Don’s friend since a **Trouw** performance ~2009. Amsterdam. **Definitely invi
 |------|------|
 | ~2009 | First meet: **PIPS:lab at Trouw**. [Ben Cerveny](../ben-cerveny/) maybe there. |
 | 8 Jun 2009 | Don wrote a friend: Canvas on the **Volkskrant** roof across from Trouw; PIPS:lab’s **10-year** anniversary of weird live video performance art. |
+| 11 Jun 2009 | Don → [Jaron Lanier](../jaron-lanier/): meet PIPS:lab (pipslab.nl); modern Body Electric yearning. |
+| Jul 2011 | dpdk (Rotterdam) 360 stitch/stream freelance → Don names **PIPS:LAB**; Owen already a fan. |
+| (lineage) | Co-founder **Steye Hallema** later Jaunt VR creative director (*Ashes to Ashes*). |
 | 22 Aug 2012 | Earliest Keez-named saved mail — Facebook friends (Pinterest notice). |
 | 2012–13 | Messenger: Unity World-from-data vs Island demo; pie menus in 3D; Keez “a little inbetween gaffertape and messaging objects.” |
 | 7 Mar 2017 | **Anyways** at the **NDSM** lab — six-participant synced 360; Don alone as audience; Keez orchestrated. Next day Don told Arthur (Jaunt) to cultivate artists like Keez on a **JavaScriptable** 360 player. |

@@ -13,6 +13,9 @@ Founder of **PIPS:lab** (Alkmaar → Amsterdam). Lumasol light-writing → **Lum
 |------|------|
 | ~2009 | First meet: **Trouw** PIPS:lab performance (Ben Cerveny maybe there) |
 | 2009-06-08 | Mail: Canvas / Volkskrant roof + PIPS:lab @ Trouw; 10yr anniversary |
+| 2009-06-11 | Don → Jaron: meet PIPS:lab (pipslab.nl); modern Body Electric yearning |
+| 2011-07 | dpdk 360 realtime panorama gig → Don names PIPS:LAB; Owen already a fan |
+| (public) | **Steye Hallema** — PIPS:lab co-founder → Jaunt VR creative director; *Ashes to Ashes* |
 | 2012-08-22 | FB friends (Pinterest notice) |
 | 2012–13 | Unity / pie menus / gaffer-tape Messenger jam |
 | 2017-03-07 | **Anyways** at NDSM lab (Don solo in a 6-person piece); pitched Keez to Arthur for JS 360 player |
@@ -86,6 +89,9 @@ Live self-view vs shutter-after-the-fact. 500k paintings. Kin to projection-mapp
 
 ### 4. Anyways — multi-user 360 (7 Mar 2017 @ NDSM)
 Solo audience in a six-person piece; production/implementation brain-pick; JS-player artist cultivation. https://vimeo.com/206409021
+
+### 4b. Sibling branch — Steye Hallema / cinematic VR intimacy
+PIPS:lab co-founder → Jaunt creative director; *Ashes to Ashes* (urn POV tragicomedy). Craft rhyme with Anyways: **viewer matters** / get close / personal. Public: [WildVreemd](https://wildvreemd.com/projects/ashes-to-ashes) · [MIT OpenDocLab](https://opendoclab.mit.edu/2-11-20-steye-hallema/). Cross: [`../arthur-van-hoff/`](../arthur-van-hoff/) Jaunt CTO era.
 
 ### 5. Trouw first meet + Canvas (2009)
 Performance at Trouw; Canvas hang; 10yr anniversary; Ben Cerveny maybe there. Not Kees Colijn.

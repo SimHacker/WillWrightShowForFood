@@ -43,6 +43,8 @@ Other threads whenever you have appetite — your pick:
 - **VR/input devices as live musical instruments** — your rare-instrument world; a performance thread
   with Brian Eno and Laurie Anderson has been floated.
 - **Data dignity / *Who Owns the Future?*** — how repos, forks, and attribution relate to what you wrote.
+- **Amsterdam PIPS:lab** — back in 2009 I tried to introduce you to those video-performance people
+  (Quartz Composer, yearning for a modern Body Electric). Still want that bridge.
 
 **Format:** live (thinking Twitch), announced ahead, audience can follow along and contribute. Warm
 and curious, not gotcha. **Zero homework** on your side — as much *homefun* as you are up to. I do the setup. What we record and publish

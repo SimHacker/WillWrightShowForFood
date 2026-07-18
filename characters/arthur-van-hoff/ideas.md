@@ -66,6 +66,11 @@ Cross-read: [MediaFlow Bongo §](../don-hopkins/mediaflow-design-comments.md#nam
 
 Not nostalgia — **continuity of collaboration**: HyperLook demos, Interval criticism (loving), later VR player work. What would HyperLook/Bongo look like with **Morphic.js / Snap! / MOOLLM rooms** now?
 
+### 4b. Dutch VR cousins — Keez / PIPS:lab / Steye Hallema
+
+While Arthur was CTO at **Jaunt**, Don was in Amsterdam with **Keez Duyves** (PIPS:lab) — solo run of **Anyways** (six synced HMDs) at NDSM, brain-pick on 360 production, pitch for a **JavaScriptable 360 player** artists could program. PIPS:lab co-founder **Steye Hallema** was Jaunt creative director (*Ashes to Ashes*). Public hooks only — internal Jaunt FYI stays private.
+→ [`../keez-duyves/`](../keez-duyves/) · [WildVreemd — Ashes to Ashes](https://wildvreemd.com/projects/ashes-to-ashes)
+
 ### 5. HyperLook article — hero-image, HyperCard, shaped windows
 
 ### 6. PdB — C-to-PostScript compiler; Axis of Eval

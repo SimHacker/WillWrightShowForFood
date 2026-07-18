@@ -23,6 +23,16 @@ Don’s 1993 / 2000 / 2008 “Kees / kees colijn” friendship (Arthur van Hoff�
 
 Volkskrant / Canvas: **Wibautstraat 150** (now Volkshotel). Trouw was the other old-newspaper club across the way. Mail names the collective; Don’s first meet with Keez = Trouw performance.
 
+### 11 Jun 2009 — Don → Jaron Lanier: meet PIPS:lab
+
+Same Amsterdam week. Don couldn’t attend Jaron’s Grace Cathedral show; wrote that he’d met video performance art geeks on Quartz Composer who yearned for a modern **Body Electric**, and pointed Jaron at **pipslab.nl**.
+→ [`2009-06-jaron-lanier-pipslab-intro.md`](2009-06-jaron-lanier-pipslab-intro.md)
+
+### 22–23 Jul 2011 — Owen van Dijk (dpdk) 360 stitch/stream → PIPS:lab
+
+Rotterdam freelance ask (realtime spherical panorama → ethernet transcoder). Don declined; said it’s the kind of thing **PIPS:LAB** could nail. Owen: loves the collective; had invited them to speak at a conference he organized.
+→ [`2011-07-owen-dpdk-360-pipslab-referral.md`](2011-07-owen-dpdk-360-pipslab-referral.md)
+
 ### 22 Aug 2012 — earliest *saved* Keez-named email (Pinterest)
 
 Automated mail: *“Your Facebook friend Keez Duyves just joined Pinterest.”* FB friends by then; Canvas/PIPS meet already ~3 years prior.
@@ -45,6 +55,12 @@ Don to Arthur van Hoff (Jaunt), 8 Mar 2017: *“Yesterday I met with Keez Duyves
 
 Full Jaunt “Checking in!” mail is private green-room material. Keez paragraph only is show-relevant.
 
+### PIPS:lab → Jaunt (public lineage — Steye Hallema)
+
+**Steye Hallema** (also styled Steve Hallema in some listings) co-founded **PIPS:lab** with Keez Duyves, Daniël van West, and others (NEXT Conference roster). Later **creative director at Jaunt VR**; co-directed the VR tragicomedy ***Ashes to Ashes*** (Submarine / WeMakeVR / Jaunt; Dutch VR Awards Gold; Gouden Kalf nominee). Public bios: [VPRO](https://www.vprobroadcast.com/cfc/speakers/Steye-Hallema.html), [MIT Open Documentary Lab](https://opendoclab.mit.edu/2-11-20-steye-hallema/), [WildVreemd — Ashes to Ashes](https://wildvreemd.com/projects/ashes-to-ashes).
+
+Don’s private green-room holds Jaunt-era FYI digests (not in this repo). Show-safe angle: Dutch participation-video → cinematic VR intimacy craft — Keez **Anyways** and Steye’s Jaunt work as sibling branches.
+
 ### Later Messenger / HN
 
 See [`2024-03-hn-diespace-massively-multiplayer-cv.md`](2024-03-hn-diespace-massively-multiplayer-cv.md) and CHARACTER `friendship_arc`.
@@ -55,6 +71,8 @@ See [`2024-03-hn-diespace-massively-multiplayer-cv.md`](2024-03-hn-diespace-mass
 |------|------|------------|
 | ~2009 | First meet Keez at **Trouw** PIPS:lab performance; Ben Cerveny maybe there | Don memory — ask Keez/Ben |
 | 2009-06-08 | Wrote Paul: Canvas / Volkskrant + PIPS:lab at Trouw; 10yr anniversary | Mail (same scene) |
+| 2009-06-11 | Wrote Jaron: introduce PIPS:lab / pipslab.nl (Body Electric yearning) | Mail |
+| 2011-07-22 | Owen (dpdk) 360 gig; Don → PIPS:LAB referral; Owen loves collective | Mail |
 | 2012-08-22 | Pinterest: “Facebook friend Keez Duyves just joined” | Earliest *saved* Keez-named email |
 | 2012–13 | Unity / pie menus Messenger jam | Messenger |
 | 2017 Mar 7 | Solo Anyways at NDSM lab | Mail to Arthur + Don place memory |
