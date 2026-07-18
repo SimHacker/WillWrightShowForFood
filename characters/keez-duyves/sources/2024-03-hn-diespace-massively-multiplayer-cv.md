@@ -30,7 +30,7 @@ Videos Don linked in-thread:
 
 ## Massively multiplayer computer vision
 
-Die Space *is* that: a roomful of people as simultaneous vision inputs — names and yes/no into a shared cloud. Shiny blinking LEDs are the sensors.
+A roomful of people writing names and answering yes/no with shiny blinking LEDs, tracked by cameras into a shared cloud.
 
 ## Show hooks
 
