@@ -33,8 +33,19 @@ Studio visit path via Parker (Will’s son). Amsterdam inventiveness as show tex
 ### 8. Closing pill
 TEDx closer: not heaven, not hell — diespace.nl. Repo Show punchline / credit slate.
 
+### 9. Analytic-cubism paint-cam (Don jam)
+A video camera with a motion-capture device attached so you can place the video-stream surface frames into 3D space and **paint in 3D with analytic cubism** — Die Space’s “faces + gestures → cloud” move generalized: every frame is a plane you can tilt, stack, and stroke through. Show sketch / instrument idea to jam with Keez (not a claimed PIPS product).
+
+### 10. Massively multiplayer CV (HN 2024)
+Don on raised-hand polls: nod/shake with face tracking; Die Space as the 2012 worked example. Harvest: [`sources/2024-03-hn-diespace-massively-multiplayer-cv.md`](sources/2024-03-hn-diespace-massively-multiplayer-cv.md).
+
+## Credit note
+
+TEDx **pink suit** still = unnamed PIPS:lab CREW presenter — **not Keez**. Don’t caption that face as Keez.
+
 ## Sources
 
 - [`invitation.md`](invitation.md) · [`CHARACTER.yml`](CHARACTER.yml) · [`sources/tedx-amsterdam-2012-diespace.md`](sources/tedx-amsterdam-2012-diespace.md)
-- https://urban-nation.com/artist/keez-duyves/ · http://www.pipslab.org/ · https://www.youtube.com/watch?v=ApyDSq_DbQo
-- HN Die Space: https://news.ycombinator.com/item?id=39814867
+- https://urban-nation.com/artist/keez-duyves/ · http://www.pipslab.org/
+- TEDx: https://www.youtube.com/watch?v=ApyDSq_DbQo · HD: https://www.youtube.com/watch?v=aQz_irTiqGE · Showreel: https://youtu.be/FNzTWqraCDU?t=84
+- HN: https://news.ycombinator.com/item?id=39821421 · [`sources/2024-03-hn-diespace-massively-multiplayer-cv.md`](sources/2024-03-hn-diespace-massively-multiplayer-cv.md)

@@ -27,6 +27,8 @@ threads:
   - "AnywaysVR — multi-user 360 cinema; tool wishlist"
   - "Unity seeds vs Island demo — modular worlds + pie menus in 3D"
   - "Die Space ↔ Mind Mirror — afterlife chat vs simulated minds"
+  - "Massively multiplayer CV — HN 2024 nod/shake polls; LEDs → face tracking"
+  - "Analytic-cubism paint-cam jam — video frames as 3D paint surfaces"
   - "NDSM / Amsterdam inventiveness with Will"
 
 pairings:
@@ -40,9 +42,10 @@ readable:
   invitation: ../../characters/keez-duyves/invitation.md
   ideas: ../../characters/keez-duyves/ideas.md
   tedx: ../../characters/keez-duyves/sources/tedx-amsterdam-2012-diespace.md
+  hn_2024: ../../characters/keez-duyves/sources/2024-03-hn-diespace-massively-multiplayer-cv.md
 
 media:
-  - ../../characters/keez-duyves/media/tedx-amsterdam-keez-pink-suit-pipslab.png
+  - ../../characters/keez-duyves/media/tedx-amsterdam-pink-suit-pipslab-crew.png  # not Keez
   - ../../characters/keez-duyves/media/tedx-diespace-light-letters-given-names.png
   - ../../characters/keez-duyves/media/tedx-diespace-yes-no-cloud.png
   - ../../characters/keez-duyves/media/tedx-diespace-ages-in-light.png

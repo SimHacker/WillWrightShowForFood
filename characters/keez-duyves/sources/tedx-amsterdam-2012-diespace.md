@@ -4,10 +4,13 @@
 
 | Asset | URL |
 |-------|-----|
-| Video | https://www.youtube.com/watch?v=ApyDSq_DbQo |
+| TEDxAmsterdam | https://www.youtube.com/watch?v=ApyDSq_DbQo |
+| Die Space HD | https://www.youtube.com/watch?v=aQz_irTiqGE |
+| Showreel 2017 @ 1:24 | https://youtu.be/FNzTWqraCDU?t=84 |
 | Channel | TEDx Talks — *PIPS: lab at TEDxAmsterdam* (Dec 7, 2012) |
-| Runtime | ~14:48 |
+| Runtime (TEDx) | ~14:48 |
 | Site context | http://www.tedxamsterdam.com/ (talk era) · http://www.pipslab.org/ |
+| Don HN cite (2024) | [`2024-03-hn-diespace-massively-multiplayer-cv.md`](2024-03-hn-diespace-massively-multiplayer-cv.md) |
 
 **Slogan (on-air):** Die Space — the first interactive social network community for people who already have passed away, so you can still chat when you're dead.
 
@@ -32,7 +35,7 @@
 
 | File | Moment |
 |------|--------|
-| [`tedx-amsterdam-keez-pink-suit-pipslab.png`](../media/tedx-amsterdam-keez-pink-suit-pipslab.png) | Keez on TEDx stage, PIPS:lab CREW badge |
+| [`tedx-amsterdam-pink-suit-pipslab-crew.png`](../media/tedx-amsterdam-pink-suit-pipslab-crew.png) | **Pink suit** on TEDx stage (PIPS:lab CREW badge) — **not Keez**; leave unnamed |
 | [`tedx-diespace-control-desk-red-suit.png`](../media/tedx-diespace-control-desk-red-suit.png) | Control desk + performer on red rug |
 | [`tedx-diespace-light-letters-given-names.png`](../media/tedx-diespace-light-letters-given-names.png) | Crowd writing name letters |
 | [`tedx-diespace-light-letters-surnames.png`](../media/tedx-diespace-light-letters-surnames.png) | Surname initials in light |
