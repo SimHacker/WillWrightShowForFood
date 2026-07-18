@@ -60,14 +60,14 @@ Ideas that were *already sketchable* years ago, and what only got easy (or newly
 
 | Idea | Why now |
 |------|---------|
-| **Invisible high-tech polls (HN thread only)** | Don floated face-track nod/shake for *conference poll tech* — not a brief for Keez. Stripping shiny blinking LEDs may be the wrong direction |
+| **Massively multiplayer CV** | Die Space already was — LEDs as theatrical sensors, not a problem to replace with invisible face tracking |
 | **Anyways for N, not 6** | Cheap standalone HMDs / phone WebXR; sync over the public internet; browser as the player Jaunt never shipped to artists |
 | **Repo Show as diespace.nl** | GitHub = living afterlife container — branches, issues, PRs, tagged releases; not a dead mp4 + toxic comments |
 | **Afterlife chat that answers** | Mind Mirror lineage + LLMs — simulated minds beside “chat when you’re dead”; ethics required ([mind-mirror](https://github.com/SimHacker/moollm/blob/main/skills/mind-mirror/SKILL.md)) |
 | **Latent-space light-paint** | Generative models as a new pigment; Lumasol gesture → latent stroke (Kevin Kelly “latent space as medium” rhyme) |
 | **Analytic-cubism paint-cam** | Phone IMU + WebXR: drop every video frame as a plane in 3D and paint through cubist time |
 | **Gaussian splat / NeRF capture** | Capture a Trouw-scale performance volume; walk it later; mash with live audience light |
-| **Massively multiplayer CV as default** | Nod/shake polls, face clouds, ages-in-light — no forehead stickers unless you want the theater |
+| **MMCV with the shine left on** | Nod/shake, face cloud, ages-in-light — forehead LEDs and under-seat lights *are* the brand |
 | **Live fireworks shared world** | WebGPU particles + optional physical ignition; same “simple → reckless” ladder as 2017, but the virtual half is trivial to ship |
 | **Will + Parker at NDSM** | Show Die Space *in the room that built the muscle*; three generations of sim/participation thinking in one visit |
 
@@ -102,8 +102,8 @@ Studio visit path. Optional [Ben Cerveny](../ben-cerveny/) + [Jared Tarbell](../
 ### 9. Analytic-cubism paint-cam (Don jam)
 Motion-tracked camera → video frames as 3D paint planes. Not a claimed PIPS product — jam sketch.
 
-### 10. Massively multiplayer CV (HN 2024 — cite, don’t prescribe)
-Don pointed HN at Die Space as the worked example. Not telling Keez to replace LEDs with invisible CV. [`sources/2024-03-hn-diespace-massively-multiplayer-cv.md`](sources/2024-03-hn-diespace-massively-multiplayer-cv.md)
+### 10. Massively multiplayer computer vision
+Die Space is the worked example — a hall of people as simultaneous vision inputs. Keep the framing; keep the shiny LEDs. [`sources/2024-03-hn-diespace-massively-multiplayer-cv.md`](sources/2024-03-hn-diespace-massively-multiplayer-cv.md)
 
 ### 11. NYE fireworks live + shared virtual rockets (2017 Jaunt ladder)
 Rooftop 360 broadcast → everyone else’s sparklers/rockets on the server → (optional, careful) Arduino real ignition. Ask: what would the 2026 browser version be?

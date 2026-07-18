@@ -28,12 +28,12 @@ Videos Don linked in-thread:
 | PIPS:lab at TEDxAmsterdam | https://www.youtube.com/watch?v=ApyDSq_DbQo |
 | PIPS lab Showreel 2017 @ 1:24 | https://youtu.be/FNzTWqraCDU?t=84 |
 
-## Correction (Don, 2026)
+## Framing
 
-Those HN comments were for a *tech* thread about counting raised hands — not instructions for Keez. Don is not qualified to tell him what to do with computer vision as an artist. Making Die Space more high-tech, less retro, less flamboyant, and less on-brand shiny blinking LED lights may be taking it in exactly the wrong direction. The LEDs *are* the shine.
+**Massively multiplayer computer vision** — keep it. Die Space *is* that: a roomful of people as simultaneous vision inputs, names and yes/no into a shared cloud. Shiny blinking LEDs are the on-brand sensors, not a bug to delete with invisible face tracking. HN face-track comments were for a poll-*tech* thread, not a brief for Keez.
 
 ## Show hooks
 
-- Cite Die Space on HN as proof the social UX already existed in 2012 — not as a mandate to strip the LEDs.
+- Lead with MMCV: Die Space as the 2012 worked example.
 - Pair with [TEDx digest](tedx-amsterdam-2012-diespace.md).
 - Optional jam: analytic-cubism paint-cam ([ideas.md](../ideas.md)).

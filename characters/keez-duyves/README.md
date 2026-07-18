@@ -37,7 +37,7 @@ Not the other Amsterdam Keez (Kees Colijn / Arthur’s friend from the ’90s). 
 | **Lumasol / Luma2solator** | Live light-writing with feedback; 500k+ paintings; ZKM; crowd becomes the instrument |
 | **Anyways** | Synced 360 cinematic for 6 — Don never saw anything like it ([Vimeo](https://vimeo.com/206409021)) |
 | **JS player unfinished business** | 2017: artists who invent original 360 uses need a *programmable* player — WebXR / Repo Show rematch |
-| **Massively multiplayer CV** | Don’s [HN 2024](https://news.ycombinator.com/item?id=39821421) cited Die Space for a poll-tech thread — LEDs stay on-brand |
+| **Massively multiplayer CV** | Die Space *is* that — roomful of LED sensors → shared cloud ([HN 2024](https://news.ycombinator.com/item?id=39821421)) |
 | **Participation not observation** | Urban Nation / PIPS:lab credo since before Trouw |
 | **SO DUTCH** | NDSM studio; Trouw / Canvas recycled newspaper buildings; Parker visit path |
 
