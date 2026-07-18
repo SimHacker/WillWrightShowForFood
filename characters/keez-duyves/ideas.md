@@ -118,7 +118,7 @@ Not heaven, not hell — diespace.nl. Or: not a dead mp4 — a living repo.
 
 ## Credit note
 
-TEDx **pink suit** still = unnamed PIPS:lab CREW presenter — **not Keez**.
+TEDx **red/pink suit** stills (control desk hero + close-up) = unnamed PIPS:lab CREW presenter — **not Keez**.
 
 ## Sources
 

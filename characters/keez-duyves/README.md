@@ -7,9 +7,9 @@
 
 Don’s friend since a **Trouw** performance ~2009. Amsterdam. **Definitely inviting.** Show Will Die Space.
 
-![TEDxAmsterdam Die Space — pink suit (PIPS:lab CREW; not Keez)](media/tedx-amsterdam-pink-suit-pipslab-crew.png)
+![TEDxAmsterdam Die Space — control desk + red suit on stage](media/tedx-diespace-control-desk-red-suit.png)
 
-*On-stage presenter in the pink suit — PIPS:lab CREW badge; **not Keez** (name TBD / leave unnamed).*
+*Die Space live control desk (left) and TEDx red-rug stage. Red-suit presenter is PIPS:lab CREW — **not Keez**.*
 
 ---
 
