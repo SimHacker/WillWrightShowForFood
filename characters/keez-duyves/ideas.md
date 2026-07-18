@@ -60,7 +60,7 @@ Ideas that were *already sketchable* years ago, and what only got easy (or newly
 
 | Idea | Why now |
 |------|---------|
-| **Massively multiplayer CV** | Die Space already was — a hall of LED sensors into a shared cloud |
+| **Massively multiplayer CV** | Hall of shiny LEDs, cameras → shared cloud |
 | **Anyways for N, not 6** | Cheap standalone HMDs / phone WebXR; sync over the public internet; browser as the player Jaunt never shipped to artists |
 | **Repo Show as diespace.nl** | GitHub = living afterlife container — branches, issues, PRs, tagged releases; not a dead mp4 + toxic comments |
 | **Afterlife chat that answers** | Mind Mirror lineage + LLMs — simulated minds beside “chat when you’re dead”; ethics required ([mind-mirror](https://github.com/SimHacker/moollm/blob/main/skills/mind-mirror/SKILL.md)) |
@@ -103,7 +103,7 @@ Studio visit path. Optional [Ben Cerveny](../ben-cerveny/) + [Jared Tarbell](../
 Motion-tracked camera → video frames as 3D paint planes. Not a claimed PIPS product — jam sketch.
 
 ### 10. Massively multiplayer computer vision
-Die Space is the worked example — a hall of people as simultaneous vision inputs, shiny LEDs as sensors. [`sources/2024-03-hn-diespace-massively-multiplayer-cv.md`](sources/2024-03-hn-diespace-massively-multiplayer-cv.md)
+A hall of people writing with shiny LEDs, cameras into a shared cloud. [`sources/2024-03-hn-diespace-massively-multiplayer-cv.md`](sources/2024-03-hn-diespace-massively-multiplayer-cv.md)
 
 ### 11. NYE fireworks live + shared virtual rockets (2017 Jaunt ladder)
 Rooftop 360 broadcast → everyone else’s sparklers/rockets on the server → (optional, careful) Arduino real ignition. Ask: what would the 2026 browser version be?
