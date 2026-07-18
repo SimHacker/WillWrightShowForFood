@@ -55,6 +55,8 @@ Don's naming fix: call it **SimCity 2001**, not 3000.
 
 ---
 
-Full document: https://docs.google.com/document/d/1rnvzKdJp9tyEJwEGxsIjoHnT4Rn7Sn5vkrWYR8HvSqM
+**Full document (Markdown):** [`guru-simcity-3000-requirements-definition.md`](guru-simcity-3000-requirements-definition.md)  
+**Full document (Google Doc source):** https://docs.google.com/document/d/1rnvzKdJp9tyEJwEGxsIjoHnT4Rn7Sn5vkrWYR8HvSqM  
+**Hub:** [`README.md`](README.md)
 
 Preservation contact: Modama ([email redacted]) — video game preservationist, SC3K 3D project.
