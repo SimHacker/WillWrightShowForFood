@@ -5,7 +5,7 @@
 
 **Keez Duyves** ([Urban Nation](https://urban-nation.com/artist/keez-duyves/), [PIPS:lab](http://www.pipslab.org/)) is the Dutch image wizard behind audience-participation light art, multi-user 360 cinema, and **Die Space** — the afterlife social network you join by being dead (and, at TEDxAmsterdam, by writing your name in light).
 
-Don’s friend since a **Trouw** performance ~2009. Amsterdam. **Definitely inviting.** Inter Will into Die Space.
+Don’s friend since a **Trouw** performance ~2009. Amsterdam. **Definitely inviting.** Inter Will Wright into Die Space.
 
 ![Die Space live control cyberspace decks on stage](media/tedx-diespace-control-desk-red-suit.png)
 

@@ -75,7 +75,7 @@ Ideas that were *already sketchable* years ago, and what only got easy (or newly
 
 ## Show hooks (numbered)
 
-### 1. Die Space — inter Will into Die Space
+### 1. Die Space — inter Will Wright into Die Space
 Slogan: interactive SNS for people who already passed away — chat when you're dead. TEDx mass upload: LED → name → forehead polls → ages → diespace cloud. [`sources/tedx-amsterdam-2012-diespace.md`](sources/tedx-amsterdam-2012-diespace.md) · https://www.youtube.com/watch?v=ApyDSq_DbQo
 
 ### 2. Participation, not observation

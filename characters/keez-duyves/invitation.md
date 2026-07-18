@@ -30,7 +30,7 @@ https://vimeo.com/pipslab
 I'm building **Will Wright Show For Food** - a **Repo Show**: the stage is a live GitHub repo (before / during / after), not a dead mp4 on YouTube with a toxic comment section.
 **Will Wright is in - signed on for the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
-I texted **Parker** about visiting you at the **NDSM** studio. I want to **inter Will into Die Space** - TEDxAmsterdam mass upload ([ApyDSq_DbQo](https://www.youtube.com/watch?v=ApyDSq_DbQo)): Lumasol under the seats, names in light, life-after-death poll ~60/40, diespace.nl closer. Also the [HD cut](https://www.youtube.com/watch?v=aQz_irTiqGE).
+I texted **Parker** about visiting you at the **NDSM** studio. I want to **inter Will Wright into Die Space** - TEDxAmsterdam mass upload ([ApyDSq_DbQo](https://www.youtube.com/watch?v=ApyDSq_DbQo)): Lumasol under the seats, names in light, life-after-death poll ~60/40, diespace.nl closer. Also the [HD cut](https://www.youtube.com/watch?v=aQz_irTiqGE).
 
 Topics on the table (more in the ideas file — then vs now):
 
