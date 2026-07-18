@@ -90,8 +90,8 @@ Live self-view vs shutter-after-the-fact. 500k paintings. Kin to projection-mapp
 ### 4. Anyways — multi-user 360 (7 Mar 2017 @ NDSM)
 Solo audience in a six-person piece; production/implementation brain-pick; JS-player artist cultivation. https://vimeo.com/206409021
 
-### 4b. Sibling branch — Steye Hallema / cinematic VR intimacy
-PIPS:lab co-founder → Jaunt creative director; *Ashes to Ashes* (urn POV tragicomedy). Craft rhyme with Anyways: **viewer matters** / get close / personal. Public: [WildVreemd](https://wildvreemd.com/projects/ashes-to-ashes) · [MIT OpenDocLab](https://opendoclab.mit.edu/2-11-20-steye-hallema/). Cross: [`../arthur-van-hoff/`](../arthur-van-hoff/) Jaunt CTO era.
+### 4b. Sibling branch — Steye Hallema / cinematic VR → Smartphone Orchestra
+Full room: [`../steye-hallema/`](../steye-hallema/). PIPS:lab co-founder → Jaunt XR CD → *Ashes to Ashes* / *Imaginary Friend* / *Ancestors* (Gouden Kalf 2025). Craft rhyme: **viewer matters** / audience phones as instrument. Cross: [`../arthur-van-hoff/`](../arthur-van-hoff/) Jaunt CTO era.
 
 ### 5. Trouw first meet + Canvas (2009)
 Performance at Trouw; Canvas hang; 10yr anniversary; Ben Cerveny maybe there. Not Kees Colijn.

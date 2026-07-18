@@ -57,9 +57,9 @@ Full Jaunt “Checking in!” mail is private green-room material. Keez paragrap
 
 ### PIPS:lab → Jaunt (public lineage — Steye Hallema)
 
-**Steye Hallema** (also styled Steve Hallema in some listings) co-founded **PIPS:lab** with Keez Duyves, Daniël van West, and others (NEXT Conference roster). Later **creative director at Jaunt VR**; co-directed the VR tragicomedy ***Ashes to Ashes*** (Submarine / WeMakeVR / Jaunt; Dutch VR Awards Gold; Gouden Kalf nominee). Public bios: [VPRO](https://www.vprobroadcast.com/cfc/speakers/Steye-Hallema.html), [MIT Open Documentary Lab](https://opendoclab.mit.edu/2-11-20-steye-hallema/), [WildVreemd — Ashes to Ashes](https://wildvreemd.com/projects/ashes-to-ashes).
+**Steye Hallema** (also styled Steve Hallema in some listings) co-founded **PIPS:lab** with Keez Duyves, Daniël van West, and others ([NEXT Conference roster](https://nextconf.eu/person/pipslab/)). Later **creative director at Jaunt VR / JauntXR EMEA** (~2016–17); co-directed ***Ashes to Ashes***; now **Smartphone Orchestra** / *Ancestors* (Gouden Kalf Best Digital Culture 2025). Full public room: [`../../steye-hallema/`](../../steye-hallema/).
 
-Don’s private green-room holds Jaunt-era FYI digests (not in this repo). Show-safe angle: Dutch participation-video → cinematic VR intimacy craft — Keez **Anyways** and Steye’s Jaunt work as sibling branches.
+Don’s private green-room holds Jaunt-era FYI digests (not in this repo). Show-safe angle: Dutch participation-video → cinematic VR / phone-orchestra — Keez **Anyways** and Steye as sibling branches.
 
 ### Later Messenger / HN
 

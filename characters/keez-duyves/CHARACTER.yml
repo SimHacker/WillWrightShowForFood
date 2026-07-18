@@ -88,6 +88,7 @@ sources:
     - { title: "Facebook — Keez Duyves", url: "https://www.facebook.com/keez.duyves" }
     - { title: "HN — Die Space / massively multiplayer CV (Don, 2024)", url: "https://news.ycombinator.com/item?id=39821421" }
     - { title: "Canvas / Volkshotel (Wibautstraat 150) — public venue", url: "https://www.volkshotel.nl/en/canvas/" }
+    - { title: "Steye Hallema — sibling PIPS:lab → Jaunt → Smartphone Orchestra", url: "../steye-hallema/" }
   local:
     - { path: sources/friendship-arc-receipts.md, why: "Dated friendship receipts; Canvas 2009; not Kees Colijn" }
     - { path: sources/tedx-amsterdam-2012-diespace.md, why: "TEDx talk digest + still index" }

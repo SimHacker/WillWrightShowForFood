@@ -1,0 +1,68 @@
+# Steye Hallema — invitation portrayal. NOT Steye Hallema.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: steye-hallema
+  name: "Steye Hallema"
+  type: invitation
+  signifier: "📱🪄🎬"
+  status: living
+  beloved: false
+  field: "Immersive storytelling / participation media — PIPS:lab; Jaunt XR; Smartphone Orchestra; cinematic VR"
+  home: characters/steye-hallema/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2
+  authored_by: don-hopkins
+  note: |
+    Public bio room from festival/academy/LinkedIn-public career facts. Steye may correct,
+    reduce, replace, or delete anytime. No private Jaunt FYI dumps here.
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: not_yet_asked
+  consent: not_yet_asked
+  warm_contact: false
+  note: "Warm path via Keez / Amsterdam PIPS:lab circle; definite interest after Keez invite"
+
+bio:
+  summary: |
+    **Steye Hallema** (b. 1976) — composer, director, inventor. Studied Beeld en Geluid at the
+    art academy and Royal Conservatory The Hague. Son of a magician; builds career around
+    creating magic with advanced media so the **audience co-creates** rather than consumes.
+    Co-founder era: **PIPS:lab** (composer/musician/writer/actor, ~1999–2013) with Keez Duyves
+    and others. VPRO Medialab creative lead; **Creative Director, Jaunt VR / JauntXR EMEA**
+    (~2016–2017). Founder / creative director **The Smartphone Orchestra** and WildVreemd;
+    volumetric work with **4DR Studios** (Eindhoven). Filmacademie Artist in Residence (VRAcademy).
+
+works_public:
+  - { title: "Ashes to Ashes", year: 2016, note: "Cinematic VR tragicomedy; Dutch VR Awards Gold; Gouden Kalf Interactive nominee" }
+  - { title: "What do we care4", year: ~2015, note: "360° music video — early hit; UK music-video nomination" }
+  - { title: "Weltatem", note: "Interactive VR opera-game; two Dutch Game Awards" }
+  - { title: "Het Social Sorting Experiment", year: 2019 }
+  - { title: "The Imaginary Friend", year: 2023, note: "VR; Venice premiere; Gouden Kalf Digital Culture nominee; 4DR volumetric" }
+  - { title: "Ancestors", year: "2024–2025", note: "Smartphone Orchestra; Gouden Kalf Best Digital Culture Production 2025; GIFF Future Is Sensible" }
+  - { title: "The Score", note: "Live orchestra + audience phone games influence musicians in real time" }
+
+why_the_show_cares:
+  pips_sibling: "Same PIPS:lab root as Keez — participation not observation, different branch (cinematic VR → phone orchestra)"
+  jaunt_bridge: "Overlaps Arthur van Hoff / Don Jaunt era; Dutch XR craft"
+  audience_as_instrument: "Smartphone Orchestra = crowd phones as the orchestra — rhyme with Die Space mass upload / Lumasol"
+  intimacy_vr: "Public craft thesis: VR strength is personal/intimate presence"
+
+sources:
+  web:
+    - { title: "Nederlands Film Festival — Steye Hallema", url: "https://www.filmfestival.nl/persoon/steye-hallema" }
+    - { title: "Nederlandse Filmacademie — AIR / VRAcademy", url: "https://www.filmacademie.ahk.nl/lectoraat-1/people/profiel/researcher/steye-hallema/" }
+    - { title: "Playgrounds — The Imaginary Friend", url: "https://weareplaygrounds.nl/slot/the-art-department-eindhoven-2024/steye-hallema/" }
+    - { title: "FilmForward — Steye Hallema", url: "https://filmforward.nl/deelnemer/steye-hallema/" }
+    - { title: "WildVreemd — Ashes to Ashes", url: "https://wildvreemd.com/projects/ashes-to-ashes" }
+    - { title: "MIT Open Documentary Lab (2020)", url: "https://opendoclab.mit.edu/2-11-20-steye-hallema/" }
+    - { title: "IMDb", url: "https://www.imdb.com/name/nm8609083/" }
+    - { title: "Instagram @steyehallema", url: "https://www.instagram.com/steyehallema/" }
+
+see_also:
+  - ../keez-duyves/
+  - ../arthur-van-hoff/
+  - ../jaron-lanier/

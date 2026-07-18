@@ -68,8 +68,8 @@ Not nostalgia — **continuity of collaboration**: HyperLook demos, Interval cri
 
 ### 4b. Dutch VR cousins — Keez / PIPS:lab / Steye Hallema
 
-While Arthur was CTO at **Jaunt**, Don was in Amsterdam with **Keez Duyves** (PIPS:lab) — solo run of **Anyways** (six synced HMDs) at NDSM, brain-pick on 360 production, pitch for a **JavaScriptable 360 player** artists could program. PIPS:lab co-founder **Steye Hallema** was Jaunt creative director (*Ashes to Ashes*). Public hooks only — internal Jaunt FYI stays private.
-→ [`../keez-duyves/`](../keez-duyves/) · [WildVreemd — Ashes to Ashes](https://wildvreemd.com/projects/ashes-to-ashes)
+While Arthur was CTO at **Jaunt**, Don was in Amsterdam with **Keez Duyves** (PIPS:lab) — solo run of **Anyways** (six synced HMDs) at NDSM, brain-pick on 360 production, pitch for a **JavaScriptable 360 player** artists could program. PIPS:lab co-founder **Steye Hallema** was Jaunt XR creative director EMEA (*Ashes to Ashes*), now Smartphone Orchestra / *Ancestors*. Public hooks only — internal Jaunt FYI stays private.
+→ [`../keez-duyves/`](../keez-duyves/) · [`../steye-hallema/`](../steye-hallema/)
 
 ### 5. HyperLook article — hero-image, HyperCard, shaped windows
 
