@@ -1,5 +1,7 @@
 # HN — Die Space as massively multiplayer computer vision (2024-03-25)
 
+A roomful of people writing names and answering yes/no with shiny blinking LEDs, tracked by cameras into a shared cloud.
+
 *Don cites PIPS:lab Die Space on a Supervision / raised-hands poll thread.*
 [Portrayal standards](../../../schemas/portrayal-standards.md)
 
@@ -27,10 +29,6 @@ Videos Don linked in-thread:
 | Diespace internet community for the deceased HD | https://www.youtube.com/watch?v=aQz_irTiqGE |
 | PIPS:lab at TEDxAmsterdam | https://www.youtube.com/watch?v=ApyDSq_DbQo |
 | PIPS lab Showreel 2017 @ 1:24 | https://youtu.be/FNzTWqraCDU?t=84 |
-
-## Massively multiplayer computer vision
-
-A roomful of people writing names and answering yes/no with shiny blinking LEDs, tracked by cameras into a shared cloud.
 
 ## Show hooks
 
