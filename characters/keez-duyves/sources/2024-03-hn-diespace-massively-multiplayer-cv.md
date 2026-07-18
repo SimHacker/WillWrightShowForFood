@@ -30,8 +30,4 @@ Videos Don linked in-thread:
 | PIPS:lab at TEDxAmsterdam | https://www.youtube.com/watch?v=ApyDSq_DbQo |
 | PIPS lab Showreel 2017 @ 1:24 | https://youtu.be/FNzTWqraCDU?t=84 |
 
-## Show hooks
-
-- Lead with MMCV: Die Space as the 2012 worked example.
-- Pair with [TEDx digest](tedx-amsterdam-2012-diespace.md).
-- Optional jam: analytic-cubism paint-cam ([ideas.md](../ideas.md)).
+See also [TEDx digest](tedx-amsterdam-2012-diespace.md) · [ideas](../ideas.md).
