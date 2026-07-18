@@ -45,10 +45,15 @@ bio:
     already passed away, so you can still chat when you're dead" (TEDxAmsterdam 2012).
 
 friendship_arc:
+  not_kees_colijn: "1993/2000/2008 Kees Colijn (Arthur's friend) is a DIFFERENT Amsterdam Keez — personal notes only; do not fuse"
+  ~2009: "First meet Keez at Trouw PIPS:lab performance; Ben Cerveny maybe there — verify"
+  2009-06-08: "Mail to Paul Asmuth: Canvas / Volkskrant + PIPS:lab regulars at Trouw; 10yr anniversary"
+  2012-08-22: "Earliest Keez-named saved email — Pinterest: Facebook friend Keez Duyves joined"
   unity_era: "Messenger jam — Unity modularity vs Island demo, pie menus in 3D editor, gaffer-tape vs messaging objects"
-  2017: "AnywaysVR praise — multi-user 360 cinema; Jaunt JS video player design feedback; Waag / World VR Forum threads"
+  2017-03-07: "Anyways at NDSM lab (6-person synced 360; Don solo); already known a while; pitched Keez to Arthur/Jaunt JS player next day"
+  2017_messenger: "Anyways production Qs; Waag / World VR Forum threads"
   2020: "Pie-menu projection-mapping paper + Ted Nelson self-revealing / feedforward-feedback"
-  2024-03: "Don flagged Die Space on HN (item 39814867)"
+  2024-03: "Don flagged Die Space on HN (item 39821421)"
   2026: "NDSM / Parker visit path — show Will Die Space; definite Repo Show invite"
 
 why_the_show_cares:
@@ -72,12 +77,16 @@ sources:
   web:
     - { title: "Urban Nation — Keez Duyves", url: "https://urban-nation.com/artist/keez-duyves/" }
     - { title: "PIPS:lab", url: "http://www.pipslab.org/" }
+    - { title: "Anyways — synced 360 cinematic for 6 (Vimeo)", url: "https://vimeo.com/206409021" }
+    - { title: "PIPS:lab Vimeo", url: "https://vimeo.com/pipslab" }
     - { title: "PIPS:lab at TEDxAmsterdam — Die Space", url: "https://www.youtube.com/watch?v=ApyDSq_DbQo" }
     - { title: "Diespace internet community for the deceased HD", url: "https://www.youtube.com/watch?v=aQz_irTiqGE" }
     - { title: "PIPS lab Showreel 2017 @ 1:24", url: "https://youtu.be/FNzTWqraCDU?t=84" }
     - { title: "Facebook — Keez Duyves", url: "https://www.facebook.com/keez.duyves" }
     - { title: "HN — Die Space / massively multiplayer CV (Don, 2024)", url: "https://news.ycombinator.com/item?id=39821421" }
+    - { title: "Canvas / Volkshotel (Wibautstraat 150) — public venue", url: "https://www.volkshotel.nl/en/canvas/" }
   local:
+    - { path: sources/friendship-arc-receipts.md, why: "Dated friendship receipts; Canvas 2009; not Kees Colijn" }
     - { path: sources/tedx-amsterdam-2012-diespace.md, why: "TEDx talk digest + still index" }
     - { path: sources/2024-03-hn-diespace-massively-multiplayer-cv.md, why: "Don HN comments + video trio" }
 
@@ -86,6 +95,6 @@ see_also:
   - { path: ideas.md, why: "Show hooks" }
   - { path: ../../repo-shows/keez-duyves/, why: "Show seed" }
   - { path: ../will-wright/, why: "Show Will Die Space; Parker / NDSM visit path" }
-  - { path: ../ben-cerveny/, why: "Amsterdam public-code / media circle" }
+  - { path: ../ben-cerveny/, why: "Maybe at Trouw ~2009 first Keez meet; Amsterdam public-code / media circle" }
   - { path: ../jared-tarbell/, why: "Amsterdam FITC era participation art kinship" }
   - { path: ../../schemas/portrayal-standards.md, why: "Subject rights" }
