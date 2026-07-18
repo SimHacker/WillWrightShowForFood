@@ -28,9 +28,9 @@ Videos Don linked in-thread:
 | PIPS:lab at TEDxAmsterdam | https://www.youtube.com/watch?v=ApyDSq_DbQo |
 | PIPS lab Showreel 2017 @ 1:24 | https://youtu.be/FNzTWqraCDU?t=84 |
 
-## Framing
+## Massively multiplayer computer vision
 
-**Massively multiplayer computer vision** — keep it. Die Space *is* that: a roomful of people as simultaneous vision inputs, names and yes/no into a shared cloud. Shiny blinking LEDs are the on-brand sensors, not a bug to delete with invisible face tracking. HN face-track comments were for a poll-*tech* thread, not a brief for Keez.
+Die Space *is* that: a roomful of people as simultaneous vision inputs — names and yes/no into a shared cloud. Shiny blinking LEDs are the sensors.
 
 ## Show hooks
 

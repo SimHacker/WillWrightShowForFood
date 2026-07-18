@@ -38,7 +38,7 @@ Topics on the table (more in the ideas file — then vs now):
 - **Anyways** - how you thought of / produced / implemented the six-headset weave; what a toolchain still doesn't give you
 - **Lumasol → Luma2solator** - live feedback vs shutter-after-the-fact ([Urban Nation](https://urban-nation.com/artist/keez-duyves/))
 - **JS player unfinished business** - 2017 pitch: artists like you need a programmable player. Browser / WebXR / Repo Show as the open rematch?
-- **Then vs now** - seat LEDs + six orchestrated HMDs were already genius (shiny blinking lights stay on-brand — I'm not here to "upgrade" your art with invisible CV). WebXR / living repos / shared fireworks worlds are newly cheap. Also the old Jaunt ladder: rooftop NYE 360 → everyone’s virtual rockets on one server → (careful) real ignition. What would *you* build now?
+- **Then vs now** - seat LEDs + six orchestrated HMDs were already genius; WebXR / living repos / shared fireworks worlds are newly cheap. Also the old Jaunt ladder: rooftop NYE 360 → everyone’s virtual rockets on one server → (careful) real ignition. What would you build *now* that you couldn't ship then?
 - Optional three-hander with **Will** (Ben if the Amsterdam / Trouw stack fits)
 
 Your room is started - correct anything wrong:

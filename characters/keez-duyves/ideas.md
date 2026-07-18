@@ -24,7 +24,7 @@ Full: [`sources/friendship-arc-receipts.md`](sources/friendship-arc-receipts.md)
 
 ## Harvested from Don’s 2017 mail to Arthur (Jaunt)
 
-What Don actually wrote the day after Anyways at NDSM — keep these as show fuel:
+What Don wrote the day after Anyways at NDSM:
 
 1. **Anyways is brilliant on many levels** — synced 360º cinematic VR for 6 participants; Keez orchestrated a solo run so Don could feel the multi-user piece alone. Vimeo: https://vimeo.com/206409021 · https://vimeo.com/pipslab
 2. **Cultivate artists like Keez** on a **JavaScriptable** panoramic / live video player — original uses of 360, not only “watch a sphere.”
