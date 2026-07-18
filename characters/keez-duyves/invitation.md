@@ -19,7 +19,7 @@ Quick receipts, then the ask.
 
 **Mar 2024** - I pointed HN at Die Space on a “count the raised hands in a 500-seat room” thread ([39821421](https://news.ycombinator.com/item?id=39821421)): LEDs → names / forehead yes-no / face cloud. Linked TEDx + the HD cut + showreel @1:24.
 
-I'm building **Will Wright Show For Food** - a **Repo Show**: the stage is a live GitHub repo (before / during / after), not a dead mp4 with a toxic comment section.
+I'm building **Will Wright Show For Food** - a **Repo Show**: the stage is a live GitHub repo (before / during / after), not a dead mp4 on YouTube with a toxic comment section.
 **Will Wright is in - signed on for the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 I texted **Parker** about visiting you at the **NDSM** studio. I want Will to see **Die Space** - TEDxAmsterdam mass upload ([ApyDSq_DbQo](https://www.youtube.com/watch?v=ApyDSq_DbQo)): Lumasol under the seats, names in light, life-after-death poll ~60/40, diespace.nl closer. Also the [HD cut](https://www.youtube.com/watch?v=aQz_irTiqGE).

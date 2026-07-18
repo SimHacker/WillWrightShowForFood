@@ -30,7 +30,7 @@ Don’s friend. Amsterdam. **Definitely inviting.** Show Will Die Space.
 
 ## Will Wright Show For Food — a Repo Show
 
-**Will Wright is in** — signed on for the [premiere](../../repo-shows/will-wright-premiere/README.md) and more. Keez’s room is for a dedicated Repo Show (and a Will-facing Die Space segment): sources, stills, transcript digest, audience PRs — not a dead YouTube comment section.
+**Will Wright is in** — signed on for the [premiere](../../repo-shows/will-wright-premiere/README.md) and more. Keez’s room is for a dedicated Repo Show (and a Will-facing Die Space segment): sources, stills, transcript digest, audience PRs — not a dead mp4 on YouTube with a toxic comment section.
 
 [Invitation](invitation.md) · [Ideas](ideas.md) · [CHARACTER](CHARACTER.yml) · [Show seed](../../repo-shows/keez-duyves/) · [TEDx digest](sources/tedx-amsterdam-2012-diespace.md) · [HN 2024](sources/2024-03-hn-diespace-massively-multiplayer-cv.md)
 

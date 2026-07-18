@@ -15,7 +15,7 @@ named me in it. Middle-school-you playing The Sims meeting one of the people who
 is exactly the kind of recursion this show is for.
 
 I'm building **Will Wright Show For Food** — a **Repo Show**: the stage is a live GitHub repo
-(before / during / after), not a dead mp4 with a toxic comment section.
+(before / during / after), not a dead mp4 on YouTube with a toxic comment section.
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 I'd love to talk with you about:
