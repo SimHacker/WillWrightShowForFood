@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/orchestration-gold.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:a2bfae8ed2b4cf82 -->
+<!-- content-sha256:65eab07187920d72 -->
 
 # Orchestration gold
 
@@ -141,6 +141,15 @@ see stick-shift-protocol.yml#gear_commitment
   - enriched_commit_message
   - optional orchestration-gold appendix in PR or experiment run
   - anonymized aggregate for harvest
+
+## Case Studies
+
+- **bun_rust_rewrite_2026_07:**
+  - what: Jarred Sumner's public receipt bundle — 535K LOC Zig→Rust in 11 days, ~50 workflows,
+1 implementer : 2 adversarial reviewers, TypeScript test oracle, ~$165K API spend.
+Fix-the-loop discipline when agents misbehave. Industrial-scale analog to our harvest shape.
+  - digest: sources/bun-rust-rewrite-2026-07.md
+  - yaml: sources/bun-rust-rewrite-2026-07.yml
 
 ## Bundle Per Run
 

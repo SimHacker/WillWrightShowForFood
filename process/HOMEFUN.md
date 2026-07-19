@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/homefun-grading.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:98a071c8daafd6a3 -->
+<!-- content-sha256:66177305f0b77f64 -->
 
 # Homefun grading
 

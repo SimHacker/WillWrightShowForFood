@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/ai-offs.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:43e8ed5ecee53f1b -->
+<!-- content-sha256:1748e84eb8ab7b23 -->
 
 # AI-offs
 
@@ -128,6 +128,19 @@ No — it's a floor wax!)
   - Integration (PR merge)
   - Abstraction (skills/ + packages/)
 
+## Case Studies
+
+### Bun Rust Rewrite 2026 07
+
+- **digest:** sources/bun-rust-rewrite-2026-07.md
+- **axes:**
+  - cost_to_ship
+  - adversarial_ratio
+  - oracle_strength
+  - loop_discipline
+  - merge_confidence
+
+
 ## Post Run Analysis
 
 - **when:** After Manual Transmission, Code That Spec, or any ai-off run
@@ -167,6 +180,7 @@ transcripts for secrets and sketch before anything goes public or into orchestra
 | [`brain-stream.yml`](brain-stream.yml) | Live overlay during ai-offs |
 | [`model-branching.yml`](model-branching.yml) | Fork trajectories — post-run compare |
 | [`orchestration-gold.yml`](orchestration-gold.yml) | Training gold from real routing traces |
+| [`bun-rust-rewrite-2026-07.md`](sources/bun-rust-rewrite-2026-07.md) | Industrial-scale adversarial port receipt — Jul 2026 |
 | [`stick-shift-protocol.yml`](stick-shift-protocol.yml) | Shift = commit — tachometer metaphor |
 | [`micropolis-ai-drag-race.yml`](micropolis-ai-drag-race.yml) | Drag race uses ai-offs proof |
 | [`homefun-grading.yml`](homefun-grading.yml) | thoughtful-commitment rubric |

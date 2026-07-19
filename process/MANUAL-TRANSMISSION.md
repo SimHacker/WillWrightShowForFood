@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/manual-transmission.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:a7b13ce142352536 -->
+<!-- content-sha256:862f3b6c4dadb541 -->
 
 # Manual Transmission
 
@@ -275,6 +275,7 @@ feed rubric SCORE, experiment COMPARE, and orchestration gold — with secrets s
 | [`code-that-spec.yml`](code-that-spec.yml) |
 | [`brain-stream.yml`](brain-stream.yml) |
 | [`model-branching.yml`](model-branching.yml) |
+| [`sources/bun-rust-rewrite-2026-07.yml`](sources/bun-rust-rewrite-2026-07.yml) |
 | [`../characters/robots/slats/judge-rubric.yml`](../characters/robots/slats/judge-rubric.yml) |
 | [`../rigs/stick-shift-composer-moollm.rig.yml`](../rigs/stick-shift-composer-moollm.rig.yml) |
 | [`SimHacker/moollm/skills/cursor-mirror`](SimHacker/moollm/skills/cursor-mirror) |

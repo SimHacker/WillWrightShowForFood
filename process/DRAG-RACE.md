@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/micropolis-ai-drag-race.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:54169ff327807c05 -->
+<!-- content-sha256:925f61dcfdd090c3 -->
 
 # Micropolis AI Drag Race
 

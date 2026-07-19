@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/challenges/retrocomputing-drive.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:7a842cc0caa1754e -->
+<!-- content-sha256:59fcb7ef99124829 -->
 
 # Retrocomputing Drive
 
