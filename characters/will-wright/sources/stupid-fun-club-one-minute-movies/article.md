@@ -23,13 +23,13 @@ Films never aired due to NBC/SAG rules (real people on camera).
 - Python robot brain + XML dialog  
 - Speech: IBM ViaVoice → Microsoft SAPI → Cepstral voices  
 - Remote web interface for operator control  
-- Lineage: [`characters/don-hopkins/career/stupid-fun-club.yml`](../../../../don-hopkins/career/stupid-fun-club.yml)
+- Lineage: [stupid fun club](../../../../don-hopkins/career/stupid-fun-club.yml)
 
 ## Related
 
 - [Phonoloper](https://www.youtube.com/watch?v=qy5cqV8ypIs) — speech editor (separate from Slats voice)  
-- [StoryMaker demo](https://www.youtube.com/watch?v=_2yEHs_WLzQ) — [`../don-youtube-storymaker-demo/`](../don-youtube-storymaker-demo/README.md)  
+- [StoryMaker demo](https://www.youtube.com/watch?v=_2yEHs_WLzQ) — [don youtube storymaker demo](../don-youtube-storymaker-demo/README.md)  
 - HN: https://news.ycombinator.com/item?id=9104857  
-- Show: [`../../slats-reincarnation/`](../../slats-reincarnation/README.md) · [`characters/robots/slats/one-minute-movies.md`](../../../../slats/one-minute-movies.md)
+- Show: [slats reincarnation](../../slats-reincarnation/README.md) · [one minute movies](../../../../slats/one-minute-movies.md)
 
 *Harvest: re-promised-links.txt · stupid-fun-club.yml*

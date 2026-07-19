@@ -1,13 +1,13 @@
 # Source: Will Wright — "Interfacing to Microworlds" (Winograd seminar, 1996-04-26)
 
-*Sniff:* [`CARD.yml`](CARD.yml) · [`GLANCE.yml`](GLANCE.yml)
+*Sniff:* [CARD.yml](CARD.yml) · [GLANCE.yml](GLANCE.yml)
 
 The single most important seed document for Will Wright Show For Food — and a
 direct artifact of a **forebear** (Terry Winograd's open public Stanford UI
-seminar; see `../../../../process/design-in-public.yml#forebears`).
+seminar; see [design-in-public · forebears](../../../../process/design-in-public.yml#forebears)).
 
-This episode is the preserved centerpiece of the larger **Terry Winograd / CS547 archive** ("the treasure trove"). See the dedicated forebear show
-`../../../terry-winograd/media/` — [`cs547-ARCHIVE.md`](../../../terry-winograd/media/cs547-ARCHIVE.md) / [`cs547-archive.yml`](../../../terry-winograd/media/cs547-archive.yml) hold the **full catalog of 339 talks** (15 with online scans, 25 by people who are WWSFF characters): the shoulders we stand on — Terry as dragon + Will + James Gosling (Java, 1995) + S. Joy Mountford (1994) + [Jef Raskin](../../../jef-raskin/README.md) 🕯️ + Donald Norman + Alan Kay + Ted Selker + Scott Kim + ~290 others.
+This episode is the preserved centerpiece of the larger **Terry Winograd / CS547 archive** ("the treasure trove"). See the dedicated forebear room
+[Terry Winograd media](../../../terry-winograd/media/) — [CS547 archive (md)](../../../terry-winograd/media/cs547-ARCHIVE.md) / [CS547 archive (yml)](../../../terry-winograd/media/cs547-archive.yml) hold the **full catalog of 339 talks** (15 with online scans, 25 by people who are WWSFF characters): the shoulders we stand on — Terry as dragon + Will + James Gosling (Java, 1995) + S. Joy Mountford (1994) + [Jef Raskin](../../../jef-raskin/README.md) 🕯️ + Donald Norman + Alan Kay + Ted Selker + Scott Kim + ~290 others.
 
 ## What this is
 
@@ -21,16 +21,16 @@ transcript, and wrote the Medium article. A **proto-Repo-Show**.
 This was the **first** of Will's CS547 talks, not his only one — he returned on **2003-05-02**
 with **"Games and Simulation"** (CS547 Winograd 5). Both are catalogued in the
 [CS547 archive](../../../terry-winograd/media/cs547-ARCHIVE.md); this 1996 talk remains the show's single
-centerpiece by design (see `../../SHOW.yml#topic_less_by_design`).
+centerpiece by design (see [SHOW.yml · topic_less_by_design](../../../../repo-shows/will-wright-premiere/SHOW.yml#topic_less_by_design)).
 
-- `transcript.md` — Don's hand-perfected transcript with table of contents and section headers.
-- `transcript-summary.md` — same text, plain layout (no navigation).
-- `short-form-clips.yml` / `short-form-clips.md` — Adorable Minutes cut list (YouTube in/out, HN pump).
-- `medium-article.md` — Don's Medium article, woven around the video with slides.
+- [transcript.md](transcript.md) — Don's hand-perfected transcript with table of contents and section headers.
+- [transcript-summary.md](transcript-summary.md) — same text, plain layout (no navigation).
+- [short-form-clips.yml](short-form-clips.yml) / [short-form-clips.md](short-form-clips.md) — Adorable Minutes cut list (YouTube in/out, HN pump).
+- [medium-article.md](medium-article.md) — Don's Medium article, woven around the video with slides.
 - Video: <https://www.youtube.com/watch?v=nsxoZXaYJSk>
 - Stanford: <https://searchworks.stanford.edu/view/yj113jt5999>
 - Medium: <https://donhopkins.medium.com/designing-user-interfaces-to-simulation-games-bd7a9d81e62d>
-- Earlier art.net notes on the same Winograd talk (pre-Medium): [`../art-net-simcity-archive/designing-ui-to-simulation-games.md`](../art-net-simcity-archive/designing-ui-to-simulation-games.md)
+- Earlier art.net notes on the same Winograd talk (pre-Medium): [designing-ui-to-simulation-games](../art-net-simcity-archive/designing-ui-to-simulation-games.md)
 - Use/reproduction: Stanford Archives materials are open for research use and may be used freely for non-commercial purposes with attribution; transcript by Don.
 
 ## The pivotal moment (the one Don flagged)
@@ -53,7 +53,7 @@ epic **Dollhouse** demo. The exact exchange:
 ## Why it's THE seed for the first show (full circle)
 
 This is the talk that sent Don to Maxis to work on The Sims. Doing the **first
-Repo Show with Will** — `../../SHOW.yml` (topic-less kickoff) — closes that loop
+Repo Show with Will** — [SHOW.yml](../../../../repo-shows/will-wright-premiere/SHOW.yml) (topic-less kickoff) — closes that loop
 ~30 years on. The kickoff can literally open by replaying this moment: *the
 question that unspooled The Sims.*
 
@@ -68,7 +68,7 @@ just-right** (SimAnt too easy · SimEarth too complex · SimCity 2000 just right
 — then **pivoted the direction of time** to look *forward* and preview The Sims.
 This show, ~26 years later (The Sims 1 shipped 2000), can finally be the
 long-overdue **post-mortem on The Sims 1** itself. The forward-preview gets its
-backward post-mortem, same two people in the room. (See `../../SHOW.yml#the_arc`.)
+backward post-mortem, same two people in the room. (See [SHOW.yml · the_arc](../../../../repo-shows/will-wright-premiere/SHOW.yml#the_arc).)
 
 ## Threads this ONE talk seeds (show ideas — maybe several)
 
@@ -84,10 +84,10 @@ backward post-mortem, same two people in the room. (See `../../SHOW.yml#the_arc`
 
 ## Image gallery (167 figures)
 
-*Sniff:* [`GLANCE.yml`](GLANCE.yml) · Don's Medium:
+*Sniff:* [GLANCE.yml](GLANCE.yml) · Don's Medium:
 [designing-user-interfaces-to-simulation-games](https://donhopkins.medium.com/designing-user-interfaces-to-simulation-games-bd7a9d81e62d)
 
-Curated entry points — every figure in [`images/`](images/README.md) (article order):
+Curated entry points — every figure in [images/](images/README.md) (article order):
 
 | Theme | Start here | Also |
 |-------|------------|------|
@@ -100,19 +100,19 @@ Curated entry points — every figure in [`images/`](images/README.md) (article 
 | **TSO lore** | [Will's secret home](images/153-casual-nudity-at-will-wright-s-secret-home-in-the-sims-onlin.jpeg) | [UFO lab](images/156-ufological-research-labs-in-the-sims-online.jpeg) |
 | **Steering committee** | [Kissing behavior tree](images/157-early-simantics-behavior-tree-for-kissing-from-the-sims-stee.png) | [1998 demo source](../1998-06-04-sims-steering-committee-demo/README.md) |
 
-**Portrait overlap:** [`../../../media/README.md`](../../../media/README.md) · Soviet hardware → [`russian-space-junk.md`](../../../media/russian-space-junk.md)
+**Portrait overlap:** [Will media hub](../../../media/README.md) · Soviet hardware → [Russian Space Junk](../../../media/russian-space-junk.md)
 
 ## Provenance + ethics
 
 Faithful capture of Will's own words (the heartbeat: source, don't paraphrase).
 Non-commercial use with attribution; attribute Stanford Archives + Don's transcript. Using it in a show =
-within the show's consent flow ([`../../../invitation.md`](../../../invitation.md)).
+within the show's consent flow ([invitation](../../../invitation.md)).
 
 **How it was preserved.** The talk survived as a DVD in Stanford Library's archive of Terry Winograd's
 CS547 collection — listed in the catalog but not yet scanned. At the start of COVID, Don emailed Terry
 about it; once the library reopened, the archivists scanned the DVD and posted it to SearchWorks, where
 Don found it. He mirrored it to YouTube with attributions, proofread the machine-generated transcript,
-and transcluded the transcript + screen snapshots here. The `medium-article.md` layers Don's real-time
+and transcluded the transcript + screen snapshots here. The [medium-article.md](medium-article.md) layers Don's real-time
 notes from the talk (one layer written just after The Sims shipped) — elaborated over the years into the
 published article.
 
@@ -122,7 +122,7 @@ published article.
 
 ## Navigation
 
-↑ [sources](../README.md) · [show](../../../../repo-shows/will-wright-premiere/README.md) · [portrayal](../../../README.md) · [`GLANCE.yml`](GLANCE.yml)
+↑ [sources](../README.md) · [show](../../../../repo-shows/will-wright-premiere/README.md) · [portrayal](../../../README.md) · [GLANCE.yml](GLANCE.yml)
 
 | Sibling | → |
 |---------|---|

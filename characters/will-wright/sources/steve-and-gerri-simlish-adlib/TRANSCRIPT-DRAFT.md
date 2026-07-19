@@ -1,6 +1,6 @@
 # Transcript draft — Stephen Kearin & Gerri Lawlor (Simlish ad-lib session)
 
-**Audio:** [`../../media/steve-and-gerri-simlish-adlib.wav`](../../media/steve-and-gerri-simlish-adlib.wav)  
+**Audio:** [steve and gerri simlish adlib](../../media/steve-and-gerri-simlish-adlib.wav)  
 **Duration:** ~2:31 (150.6 s) · mono · 22050 Hz  
 **Provenance:** [Don Hopkins catalog](https://donhopkins.com/home/catalog/sounds/Steve_And_Gerri.wav) · [HN (May 2022)](https://news.ycombinator.com/item?id=31430802)  
 **Whisper:** `base` → [`steve-and-gerri-simlish-adlib.vtt`](steve-and-gerri-simlish-adlib.vtt)
@@ -103,8 +103,8 @@ From scratchpad attributions. VTT cue boundaries anchor each block; times within
 
 - https://www.youtube.com/watch?v=Y_E6026i9tA
 - https://www.youtube.com/watch?v=FGsbeTV76YI
-- [`schemas/language-simlish.yml`](../../../../schemas/language-simlish.yml)
-- [`process/performance-space/README.md`](../../../../process/performance-space/README.md)
+- [language simlish](../../../../schemas/language-simlish.yml)
+- [performance space](../../../../process/performance-space/README.md)
 
 ---
 

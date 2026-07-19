@@ -98,9 +98,9 @@ Machine-readable metadata: [`SLIDESHOW.yml`](SLIDESHOW.yml)
 
 ## 🔗 Related
 
-- Email thread: [`../README.md`](../README.md)
-- Don's pitch: [`../don-pitch-letter-2006-12-02.md`](../don-pitch-letter-2006-12-02.md)
-- Saga hub: [`../../simcity-open-source-saga/README.md`](../../simcity-open-source-saga/README.md)
+- Email thread: [README](../README.md)
+- Don's pitch: [don pitch letter 2006 12 02](../don-pitch-letter-2006-12-02.md)
+- Saga hub: [simcity open source saga](../../simcity-open-source-saga/README.md)
 - Released as **Micropolis**, Jan 2008
 
 ---

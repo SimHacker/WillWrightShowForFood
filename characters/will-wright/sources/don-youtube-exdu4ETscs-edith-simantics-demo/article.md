@@ -19,7 +19,7 @@ Rare on-camera walkthrough of **Edith** — the SimAntics bytecode editor — pl
 
 ## Related
 
-- [`../multiplayer-simcity-ui-network/article.md`](../multiplayer-simcity-ui-network/article.md) — pie menus for cooperative edit speed  
+- [multiplayer simcity ui network · article](../multiplayer-simcity-ui-network/article.md) — pie menus for cooperative edit speed  
 - Hidden Palace steering committee proto — link only
 
-*Index: [`../don-youtube-playlist-index/INDEX.yml`](../don-youtube-playlist-index/INDEX.yml)*
+*Index: [INDEX](../don-youtube-playlist-index/INDEX.yml)*

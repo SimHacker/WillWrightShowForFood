@@ -5,7 +5,7 @@
 ![The User Interface Flower Child — Don's Sims credits icon](DonHopkinsSimsCreditsIcon.jpg)
 
 **Flower-Child icon** — Don Hopkins's credit image from *The Sims*. Show mascot; cozy psychedelic
-hosting spirit (see [`../README.md`](../README.md)).
+hosting spirit (see [README](../README.md)).
 
 ---
 
@@ -14,10 +14,10 @@ hosting spirit (see [`../README.md`](../README.md)).
 | Gallery | What | Links |
 |---------|------|-------|
 | **Sims series hub** | 50+ screenshots, essays, agitprop | [`sims-series-README.md`](sims-series-README.md) |
-| **Primary sources** | Medium articles + figure mirrors | [`../sources/README.md`](../sources/README.md) |
-| **Will portraits** | Miyamoto demo, promo shots, robots | [`../README.md`](../README.md) (this flat folder) |
-| **1996 centerpiece** | 167-figure Winograd gallery | [`../sources/1996-04-26-winograd-interfacing-to-microworlds/#image-gallery`](../sources/1996-04-26-winograd-interfacing-to-microworlds/README.md#image-gallery) |
-| **Catalogs** | Live content brands | [`../../../catalogs/README.md`](../../../catalogs/README.md) |
+| **Primary sources** | Medium articles + figure mirrors | [sources](../sources/README.md) |
+| **Will portraits** | Miyamoto demo, promo shots, robots | [README](../README.md) (this flat folder) |
+| **1996 centerpiece** | 167-figure Winograd gallery | [1996 04 26 winograd interfacing to microworlds · image gallery](../sources/1996-04-26-winograd-interfacing-to-microworlds/README.md#image-gallery) |
+| **Catalogs** | Live content brands | [catalogs](../../../catalogs/README.md) |
 
 ---
 

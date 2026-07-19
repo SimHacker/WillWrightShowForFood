@@ -2,7 +2,7 @@
 
 Interactive agitprop object — crowds, applause, pie menus. Pairs with [SimProv wedding playset](../../../../catalogs/simprov/README.md) and [Dumbold Voting Machine](../2018-04-24-dumbold-voting-machine/README.md).
 
-*Parent feed:* [`../README.md`](../README.md) · *Essay:* [`../../media/sims-series-procedural-rhetoric-inclusion-agitprop.md`](../../media/sims-series-procedural-rhetoric-inclusion-agitprop.md)
+*Parent feed:* [README](../README.md) · *Essay:* [sims series procedural rhetoric inclusion agitprop](../../media/sims-series-procedural-rhetoric-inclusion-agitprop.md)
 
 - [`medium-article.md`](medium-article.md)
 - Source: <https://donhopkins.medium.com/the-sims-1-crowd-sitter-1f478b645148>

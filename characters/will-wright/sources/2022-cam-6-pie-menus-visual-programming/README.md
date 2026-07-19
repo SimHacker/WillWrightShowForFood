@@ -2,7 +2,7 @@
 
 Long-form letter tying **CAM-6**, **PSIBER**, **Body Electric/Bounce**, **SimAntics**, **Scott Kim Viewpoint**, and **Brad Myers** into one lineage — with links to Don's YouTube demos.
 
-**In-repo source:** [`characters/michael-mcguffin/sources/2022-10-08-don-visual-programming-letter.md`](../../../michael-mcguffin/sources/2022-10-08-don-visual-programming-letter.md)
+**In-repo source:** [2022 10 08 don visual programming letter](../../../michael-mcguffin/sources/2022-10-08-don-visual-programming-letter.md)
 
 **Essay:** [`article.md`](article.md)
 

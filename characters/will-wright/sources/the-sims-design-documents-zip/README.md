@@ -19,7 +19,7 @@ Zip bundle: published on donhopkins.com (exact zip filename to confirm on mount)
 >
 > 1. Add workspace folder: local extract of `TheSimsDesignDocuments` (or sync from server).
 > 2. Inventory: PDFs, `.mbox`/email, `.txt`, internal memos, VM/SimAntics specs.
-> 3. OCR/index what is not already in [`../2008-02-10-soul-of-the-sims/`](../2008-02-10-soul-of-the-sims/README.md).
+> 3. OCR/index what is not already in [2008 02 10 soul of the sims](../2008-02-10-soul-of-the-sims/README.md).
 > 4. Cross-link to Motive.c, inclusivity paper, steering committee, Edith/SimAntics shows.
 > 5. **Also:** harvest old **Outlook `.pst` / Maxis-era email** from Don's PC when ready.
 
@@ -126,7 +126,7 @@ SimTransmogrifierDesign, SimTransmogrifierTODO, TransmogriferRenovationPlan, Qui
 
 ObjectFileFormat, ObjectIFFFileFormat, ObjectList, ResourceEXE, ResourceFileOverview, SimsFileFormat, MasterIDAndSubIndexOverview, MaxisSimRules, HitSystemDesign, HitSoundRevivew
 
-→ Maxis catalog metadata: [catalogs/maxis/](../../../catalogs/maxis/README.md)
+→ Maxis catalog metadata: [maxis](../../../catalogs/maxis/README.md)
 
 ### Shipping / E3 / completion
 

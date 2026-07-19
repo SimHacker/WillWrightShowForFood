@@ -7,6 +7,6 @@
 | `image-82e7a8a6-*.png` | Browse/Examine/Collect UI — "Cool Blue Stuff" collection, room preview |
 | `image-f6ee3adc-*.png` | Admin CMS — collections table, Don Hopkins user #6 |
 
-Direct ancestor of the **Micropolis publishing system** vision. See [../sims-series-micropolis-publishing-vision.md](../sims-series-micropolis-publishing-vision.md).
+Direct ancestor of the **Micropolis publishing system** vision. See [sims series micropolis publishing vision](../sims-series-micropolis-publishing-vision.md).
 
 Cross-link: [Heather Alvey](../../heather-alvey/README.md) (SimFreaks).

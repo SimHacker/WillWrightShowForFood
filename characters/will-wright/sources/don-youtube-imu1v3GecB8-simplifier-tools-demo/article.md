@@ -18,12 +18,12 @@ One-take tour of **The Sims 1** fan-tool era:
 
 **Simplifier** is being reincarnated as an **accessibility-oriented** server-side scrape/inject layer in Soul City / stream-gateway — not a cheat bot:
 
-- Spec: [`../../../../apps/stream-gateway/simplifier.yml`](../../../../apps/stream-gateway/simplifier.yml)
-- Future: native **IFF reader** replaces scrape for object previews ([`../../../catalogs/maxis/`](../../../catalogs/maxis/README.md))
+- Spec: [simplifier](../../../../apps/stream-gateway/simplifier.yml)
+- Future: native **IFF reader** replaces scrape for object previews ([maxis](../../../catalogs/maxis/README.md))
 
-**SliceCity** → [`../../../catalogs/simslice/`](../../../catalogs/simslice/README.md)
+**SliceCity** → [simslice](../../../catalogs/simslice/README.md)
 
-**ShowNTell** → [`../2004-01-08-showntell-activex-preview/`](../2004-01-08-showntell-activex-preview/README.md)
+**ShowNTell** → [2004 01 08 showntell activex preview](../2004-01-08-showntell-activex-preview/README.md)
 
 ## Related videos (same harvest)
 
@@ -36,4 +36,4 @@ One-take tour of **The Sims 1** fan-tool era:
 - [ ] Transcript / chapter timestamps from video
 - [ ] Wire each tool segment to catalog CARD when IFF pipeline lands
 
-*Index: [`../don-youtube-playlist-index/INDEX.yml`](../don-youtube-playlist-index/INDEX.yml)*
+*Index: [INDEX](../don-youtube-playlist-index/INDEX.yml)*

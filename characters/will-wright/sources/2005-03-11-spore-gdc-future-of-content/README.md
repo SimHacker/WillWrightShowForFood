@@ -104,7 +104,7 @@ Use Don's notes + this video alongside shipped Spore and the [Long Now 2006](../
 | [`transcript-cache/`](transcript-cache/README.md) | YouTube auto-captions |
 | [`captions/`](captions/README.md) | Hand captions when ready |
 | [`hn-witness.yml`](hn-witness.yml) | Don's HN comment index — Spore stats, demoscene, pixelation |
-| [`../../../../don-hopkins/don-will-mining-hub.yml`](../../../../don-hopkins/don-will-mining-hub.yml) | Don × Will mining arcs — compression, retrospective, Kaleida |
+| [don will mining hub](../../../../don-hopkins/don-will-mining-hub.yml) | Don × Will mining arcs — compression, retrospective, Kaleida |
 
 ## Production (local)
 

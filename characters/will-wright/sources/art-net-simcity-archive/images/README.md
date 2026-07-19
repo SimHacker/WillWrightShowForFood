@@ -11,7 +11,7 @@
 
 ## Classic art.net GIFs
 
-Downloaded from http://www.art.net/~hopkins/Don/simcity/ (HyperLook GIF from `../hyperlook/`).
+Downloaded from http://www.art.net/~hopkins/Don/simcity/ (HyperLook GIF from [hyperlook](../hyperlook/)).
 
 | File | Original |
 |------|----------|

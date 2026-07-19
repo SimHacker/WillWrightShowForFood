@@ -1,8 +1,8 @@
 # Transcript cache — 2005 GDC Spore
 
 YouTube auto-captions for **timestamp verification only**. Canonical witness notes:
-[`../medium-article.md`](../medium-article.md) (Don Hopkins, reviewed by Will Wright).
-Navigable digest with `?t=` links: [`../transcript.md`](../transcript.md).
+[medium article](../medium-article.md) (Don Hopkins, reviewed by Will Wright).
+Navigable digest with `?t=` links: [transcript](../transcript.md).
 
 ## Refresh
 
@@ -21,4 +21,4 @@ yt-dlp --write-auto-sub --sub-lang en --sub-format vtt --skip-download \
 
 Do not publish auto text without hand-proofread against Don's notes.
 
-↑ [`PROVENANCE.yml`](PROVENANCE.yml) · [`../medium-article.md`](../medium-article.md)
+↑ [`PROVENANCE.yml`](PROVENANCE.yml) · [medium article](../medium-article.md)

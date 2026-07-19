@@ -4,8 +4,8 @@
 
 | Source | Role |
 |--------|------|
-| [`../medium-article.md`](../medium-article.md) | Canonical text (Don's GDC notes, Will-reviewed) |
-| [`../transcript-cache/`](../transcript-cache/README.md) | Timing reference only |
+| [medium article](../medium-article.md) | Canonical text (Don's GDC notes, Will-reviewed) |
+| [transcript cache](../transcript-cache/README.md) | Timing reference only |
 | `captions/<clip_id>.vtt` | Per-clip captions — **clip-relative** times |
 
 ## Priority clips for hand-pass
@@ -20,4 +20,4 @@
 python3 ~/GroundUp/repo-show/scripts/extract-clip.py procedural-mating-applause --source sporegdc2005
 ```
 
-↑ [`../short-form-clips.yml`](../short-form-clips.yml) · [`../../../../process/post-production/captions.yml`](../../../../process/post-production/captions.yml)
+↑ [short form clips](../short-form-clips.yml) · [captions](../../../../process/post-production/captions.yml)

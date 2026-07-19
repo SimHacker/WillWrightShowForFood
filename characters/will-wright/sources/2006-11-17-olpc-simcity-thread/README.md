@@ -4,4 +4,4 @@ Don asks Will about open-sourcing SimCity for the $100 laptop; Will agrees; Don 
 
 | [`email-thread.md`](email-thread.md) | 3 messages |
 
-↑ [`../README.md`](../README.md)
+↑ [README](../README.md)

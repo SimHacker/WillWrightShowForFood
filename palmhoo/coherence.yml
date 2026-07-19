@@ -152,7 +152,7 @@ summaries:
       - https://github.com/SimHacker/MicropolisCore/tree/main/packages
       - https://github.com/SimHacker/MicropolisCore/tree/main/apps
       - https://github.com/SimHacker/moollm/tree/main/kernel
-      - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/infinite-typewriters.yml
+      - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/infinite-typewriters.md
     beat: palm
     last_verified: 2026-07-08
     volatility: high

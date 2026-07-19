@@ -24,15 +24,15 @@ Don also looping **Rebecca Heineman** for retro port expertise; **browser modern
 
 | Product | Notes |
 |---------|--------|
-| **SimTower** (US, Maxis publish) | **Start with LGR** — shelf: [`../../../yoot-saito/media/simtower-videos.yml`](../../../yoot-saito/media/simtower-videos.yml) |
+| **SimTower** (US, Maxis publish) | **Start with LGR** — shelf: [simtower videos](../../../yoot-saito/media/simtower-videos.yml) |
 | **Yoot Tower** | LGR sequel deep dive in same shelf |
 | Game Boy / Nintendo ports | Advanced codebase vs PC/Mac retail |
 | **Seaman** | Dreamcast — GDC postmortems; Nimoy narrator |
 
 ## Related videos (email thread)
 
-- **SimTower / Yoot Tower** — LGR first (recommended), then Obscuritory / Mac / JP / audio / endgame: [`../../../yoot-saito/media/simtower-videos.yml`](../../../yoot-saito/media/simtower-videos.yml) · [README table](../../../yoot-saito/README.md#simtower--yoot-tower--video-shelf-lgr-first)
-- **Seaman videos** — curated diverse shelf: [`../../../yoot-saito/media/seaman-videos.yml`](../../../yoot-saito/media/seaman-videos.yml) · [README table](../../../yoot-saito/README.md#seaman--video-shelf-one-of-each-kind). Dead upload `gdIO41Blysg` (*Nimoy intro — podman birth day*; [HN 39084042](https://news.ycombinator.com/item?id=39084042)) noted there.
+- **SimTower / Yoot Tower** — LGR first (recommended), then Obscuritory / Mac / JP / audio / endgame: [simtower videos](../../../yoot-saito/media/simtower-videos.yml) · [README table](../../../yoot-saito/README.md#simtower--yoot-tower--video-shelf-lgr-first)
+- **Seaman videos** — curated diverse shelf: [seaman videos](../../../yoot-saito/media/seaman-videos.yml) · [README table](../../../yoot-saito/README.md#seaman--video-shelf-one-of-each-kind). Dead upload `gdIO41Blysg` (*Nimoy intro — podman birth day*; [HN 39084042](https://news.ycombinator.com/item?id=39084042)) noted there.
 - Open source Yoot Tower discussion: private correspondence archive — not published in this repo.
 
 ## Micropolis parallel

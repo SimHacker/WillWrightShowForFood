@@ -11,6 +11,7 @@ One file per gag. Enough detail to **record**, **rehearse**, or **pitch** on str
 | broken-robot-servitude | [broken-robot-servitude.yml](broken-robot-servitude.yml) | ready |
 | trot-out-and-vanish | [trot-out-and-vanish.yml](trot-out-and-vanish.yml) | seed |
 | speed-dating-with-cupid | [speed-dating-with-cupid.yml](speed-dating-with-cupid.yml) | recorded — live audience variant |
+| slap-conga | [slap-conga.yml](slap-conga.yml) | seed — Cupid farm → jealousy slap queue; premiere: [simprov-slap-conga.yml](../../will-wright-premiere/simprov-slap-conga.yml) |
 | did-you-do-dots-together | [did-you-do-dots-together.yml](did-you-do-dots-together.yml) | seed — Glick homophone trap; cast plans in green room |
 
 ↑ [ideas/](../README.md)

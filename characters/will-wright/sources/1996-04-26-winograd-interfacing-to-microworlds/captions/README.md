@@ -4,8 +4,8 @@
 
 | Source | Role |
 |--------|------|
-| [`../transcript.md`](../transcript.md) | Authoritative text (Don hand-proofread) |
-| [`../transcript-cache/`](../transcript-cache/README.md) | Timing reference only — do not publish auto text |
+| [transcript](../transcript.md) | Authoritative text (Don hand-proofread) |
+| [transcript cache](../transcript-cache/README.md) | Timing reference only — do not publish auto text |
 | `captions/<clip_id>.vtt` | Per-clip captions — **clip-relative** times (00:00 = clip in-point) |
 
 ## File naming
@@ -33,4 +33,4 @@ python3 ~/GroundUp/repo-show/scripts/extract-clip.py oh-god-cliffhanger-data-por
 
 Git canonical VTT wins over auto-slice. Polish drafts against `transcript.md`, then commit here.
 
-↑ [`../short-form-clips.yml`](../short-form-clips.yml) · [`../../../../process/post-production/captions.yml`](../../../../process/post-production/captions.yml)
+↑ [short form clips](../short-form-clips.yml) · [captions](../../../../process/post-production/captions.yml)

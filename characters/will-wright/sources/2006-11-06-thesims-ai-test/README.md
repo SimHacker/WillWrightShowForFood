@@ -58,13 +58,13 @@ The gap between row 2 and row 3 is the whole show: *why* smart objects + SimAnti
 - [`don-reply-to-mats-knutsen.md`](don-reply-to-mats-knutsen.md) — Don's Sims AI explanation (public excerpt)
 - [`source/`](source/) — Mats's C# source + `.csproj` (no binaries)
 - [`original/thesimsaitest.zip`](original/thesimsaitest.zip) — bit-identical archive from Documents
-- [`characters/mats-knutsen/`](../../../mats-knutsen/CHARACTER.yml) — correspondence portrayal
+- [mats knutsen · CHARACTER](../../../mats-knutsen/CHARACTER.yml) — correspondence portrayal
 
 ## Related
 
 - [Soul of The Sims / Motive.c](../2008-02-10-soul-of-the-sims/README.md)
 - [1998 steering committee demo](../1998-06-04-sims-steering-committee-demo/README.md) — SimAntics on camera
-- [`characters/jamie-doornbos/`](../../../jamie-doornbos/README.md)
+- [jamie doornbos](../../../jamie-doornbos/README.md)
 - [`don-hopkins/sims-pixelation-censorship-hn-2022.md`](../../../don-hopkins/sims-pixelation-censorship-hn-2022.md) — SimAntics war stories
 
 ---

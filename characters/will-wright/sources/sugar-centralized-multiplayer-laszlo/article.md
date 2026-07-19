@@ -1,6 +1,6 @@
 # Sugar OLPC + centralized Laszlo client — exposition
 
-*Two threads: Sugar mesh Micropolis vs Laszlo/AMF centralized web client. See also [`../multiplayer-simcity-ui-network/article.md`](../multiplayer-simcity-ui-network/article.md).*
+*Two threads: Sugar mesh Micropolis vs Laszlo/AMF centralized web client. See also [multiplayer simcity ui network · article](../multiplayer-simcity-ui-network/article.md).*
 
 ---
 
@@ -12,9 +12,9 @@ From big-prompts and OLPC lists: integrate Micropolis with **Sugar** — mesh ne
 
 **Primary sources:**
 
-- [`../simcity-open-source-saga/`](../simcity-open-source-saga/README.md) — Dec 2006 EA negotiation
-- [`../2006-11-13-simcity-olpc-email-thread/`](../2006-11-13-simcity-olpc-email-thread/README.md) — Dec 2006 verbatim mail (Gilmore "introducing the players", B1 laptop, Sugar)
-- [`../../../../repo-shows/walter-bender-olpc.yml`](../../../../repo-shows/walter-bender-olpc.yml)
+- [simcity open source saga](../simcity-open-source-saga/README.md) — Dec 2006 EA negotiation
+- [2006 11 13 simcity olpc email thread](../2006-11-13-simcity-olpc-email-thread/README.md) — Dec 2006 verbatim mail (Gilmore "introducing the players", B1 laptop, Sugar)
+- [walter bender olpc](../../../../repo-shows/walter-bender-olpc.yml)
 
 ---
 
@@ -46,8 +46,8 @@ From [`micropolis/laszlo/micropolis/TODO.txt`](../../../../micropolis/laszlo/mic
 
 Separate but related: **Python/SQLObject/MySQL** CMS for SimFreaks — centralized DB, rich Laszlo field editors.
 
-- [`../2005-09-18-laszlo-database-interface/`](../2005-09-18-laszlo-database-interface/README.md)
-- [`../2005-09-18-simfreaks-content-catalog-laszlo/`](../2005-09-18-simfreaks-content-catalog-laszlo/README.md)
+- [2005 09 18 laszlo database interface](../2005-09-18-laszlo-database-interface/README.md)
+- [2005 09 18 simfreaks content catalog laszlo](../2005-09-18-simfreaks-content-catalog-laszlo/README.md)
 
 **Convergence (2026):** Soul City — git CARD metadata + stream-gateway derived DB + Simplifier live capture.
 

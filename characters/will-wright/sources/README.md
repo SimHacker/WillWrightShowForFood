@@ -5,7 +5,7 @@ threads, Wayback captures. This is the **story we tell in public**: SimCity open
 OLPC, Transmogrifier, The Sims birth, procedural rhetoric, preservation.
 
 **Placement:** Episode-scoped source bundles live here for now; person-owned artifacts prefer
-[`characters/<guest>/media/`](../../README.md) per [`character-colocation.yml`](../../../process/character-colocation.md).
+[README](../../README.md) per [`character-colocation.yml`](../../../process/character-colocation.md).
 Cross-link freely — e.g. Terry's full CS547 catalog is in [`terry-winograd/media/cs547-ARCHIVE.md`](../../../characters/terry-winograd/media/cs547-ARCHIVE.md).
 
 *Sniff:* [`CARD.yml`](CARD.yml) · [`GLANCE.yml`](GLANCE.yml) · *Complete slug index:* [below § Complete slug index](#complete-slug-index)
@@ -225,7 +225,7 @@ Crowd Sitter — Sims applaud or boo as procedural argument about collective beh
 
 **[2018-04-24-dumbold-voting-machine/](2018-04-24-dumbold-voting-machine/README.md)**  
 Dumbold Voting Machine — e-voting satire as Sims object; cheats, bugs, and education pop-ups.
-Pair with the wedding playset in [`../../../catalogs/simprov/`](../../../catalogs/simprov/README.md).
+Pair with the wedding playset in [simprov](../../../catalogs/simprov/README.md).
 
 **[2004-02-21-chris-trottier-tuned-emergence/](2004-02-21-chris-trottier-tuned-emergence/README.md)**  
 Chris Trottier on tuned emergence and design by accretion — SimCity designer voice.

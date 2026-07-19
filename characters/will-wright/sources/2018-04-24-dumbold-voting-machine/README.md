@@ -2,7 +2,7 @@
 
 Institutional farce agitprop — Diebold/EFF dialogs, pie menus, crowds. Opposite pole from [SimProv wedding playset](../../../../catalogs/simprov/README.md).
 
-*Parent feed:* [`../README.md`](../README.md) · *Essay:* [`../../media/sims-series-procedural-rhetoric-inclusion-agitprop.md`](../../media/sims-series-procedural-rhetoric-inclusion-agitprop.md) · *Gallery:* [`../../media/sims-dumbold-voting-machine-README.md`](../../media/sims-dumbold-voting-machine-README.md)
+*Parent feed:* [README](../README.md) · *Essay:* [sims series procedural rhetoric inclusion agitprop](../../media/sims-series-procedural-rhetoric-inclusion-agitprop.md) · *Gallery:* [sims dumbold voting machine README](../../media/sims-dumbold-voting-machine-README.md)
 
 - [`medium-article.md`](medium-article.md)
 - Source: <https://donhopkins.medium.com/dumbold-voting-machine-for-the-sims-1-3e76f394452c>

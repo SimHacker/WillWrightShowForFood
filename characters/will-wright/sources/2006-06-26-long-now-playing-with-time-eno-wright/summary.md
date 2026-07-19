@@ -88,8 +88,8 @@ Eno to Scott Draves's Electric Sheep.
 
 ## Show cross-links
 
-- **Eno simulated opening** — 77 Million Paintings, generative gallery [`../../../../repo-shows/brian-eno/`](../../../../repo-shows/brian-eno/)
-- **Old band back together** — 2006 circle [`../../../../process/old-band-back-together.md`](../../../../process/old-band-back-together.md)
-- **Captions policy** — [`../../../../process/post-production/captions.yml`](../../../../process/post-production/captions.yml)
+- **Eno simulated opening** — 77 Million Paintings, generative gallery [brian eno](../../../../repo-shows/brian-eno/)
+- **Old band back together** — 2006 circle [old band back together](../../../../process/old-band-back-together.md)
+- **Captions policy** — [captions](../../../../process/post-production/captions.yml)
 
 ↑ [`README.md`](README.md) · [`short-form-clips.yml`](short-form-clips.yml)

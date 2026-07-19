@@ -91,4 +91,4 @@ A console section with analog gauges and a large round port — flanked by hand-
 
 ---
 
-See also: [`README.md`](README.md) · [`artwork.md`](artwork.md) · [`../README.md`](../README.md)
+See also: [`README.md`](README.md) · [`artwork.md`](artwork.md) · [README](../README.md)

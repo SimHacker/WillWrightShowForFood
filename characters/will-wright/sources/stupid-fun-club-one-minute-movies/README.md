@@ -4,7 +4,7 @@
 
 SFC robot waiter demos — the origin of **Slats** and the ROBORESURRECTION show segment.
 
-*Parent feed:* [`../README.md`](../README.md) · *Slats portrayal:* [`../../../slats/README.md`](../../../slats/README.md) · *Show segment:* [`../../../../repo-shows/will-wright-premiere/slats-reincarnation.yml`](../../../../repo-shows/will-wright-premiere/slats-reincarnation.yml)
+*Parent feed:* [README](../README.md) · *Slats portrayal:* [slats](../../../slats/README.md) · *Show segment:* [slats reincarnation](../../../../repo-shows/will-wright-premiere/slats-reincarnation.yml)
 
 ## In this directory
 

@@ -96,8 +96,8 @@ family as Eno's observer completing generative work.
 2. **Audience asks open-source SimCity** — [t=3929](https://youtu.be/Dfc-DQorohc?t=3929); Will says he's very open to it. **Six months later** Don's Dec 2006 pitch letter clears Micropolis for OLPC — see [`simcity-open-source-saga`](../simcity-open-source-saga/README.md).
 3. **YouTube** — Don commented (*"Damn I can't wait for spore"*, ~2020).
 4. **After** — Don introduced **Brian Eno** to **Scott Draves**; apartment session with Electric Sheep /
-   Dreams in High Fidelity. See [`../../../scott-draves/correspondence.yml`](../../../scott-draves/correspondence.yml),
-   [`../../../../repo-shows/scott-draves/README.md`](../../../../repo-shows/scott-draves/README.md).
+   Dreams in High Fidelity. See [correspondence](../../../scott-draves/correspondence.yml),
+   [scott draves](../../../../repo-shows/scott-draves/README.md).
 
 ## Files in this folder
 

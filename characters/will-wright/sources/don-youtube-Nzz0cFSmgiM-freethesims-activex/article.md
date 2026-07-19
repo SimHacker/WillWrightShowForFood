@@ -6,7 +6,7 @@ Browser-era **ActiveX** control previewing Sims character animation — ancestor
 
 ## Lineage
 
-ActiveX ShowNTell → [`../2004-01-08-showntell-activex-preview/`](../2004-01-08-showntell-activex-preview/README.md) → Maxis catalog metadata → native IFF previews (planned).
+ActiveX ShowNTell → [2004 01 08 showntell activex preview](../2004-01-08-showntell-activex-preview/README.md) → Maxis catalog metadata → native IFF previews (planned).
 
 ## Related demos
 

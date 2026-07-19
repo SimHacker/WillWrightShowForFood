@@ -43,7 +43,7 @@ Modern tooling path — not retail binaries in git:
 
 Jerry ("Boom Bam Boom") looped Don in when Phil asked about **E3 1999 prototype music**. Don may hold or know of original-era audio not in public protos — check Don archive disks.
 
-Character: [`../../../../jerry-martin/`](../../../../jerry-martin/README.md) (if exists) · epithet in [Jess Bird roster]private green-room note (not in this repo)
+Character: [jerry martin](../../../../jerry-martin/README.md) (if exists) · epithet in [Jess Bird roster]private green-room note (not in this repo)
 ## Thrift-store provenance guess
 
 Phil Ramsey theorizes Jan 1999 disc + yard-sale PC screenshot = ex-Maxis/EA employee disposing of work copies — same pattern as steering committee leak (kind release vs sold).

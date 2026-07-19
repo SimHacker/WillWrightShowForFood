@@ -8,7 +8,7 @@ Extracted from Don Hopkins's working notes (private archive (not in this repo), 
 
 Extend the **SimFreaks / SimProv content platform** into **Soul City** — create · publish · share on federation rails:
 
-- Catalog stubs: [../../../catalogs/](../../../catalogs/README.md) (SimFreaks, SimSlice, SimProv, Zombie Sims + platform)
+- Catalog stubs: [catalogs](../../../catalogs/README.md) (SimFreaks, SimSlice, SimProv, Zombie Sims + platform)
 
 - Sims objects as **explorable reactive content** — pop-up dialogs (title, picture, text, branching buttons), pie menus, and simulation woven together.
 - Enough machinery already existed in Sims 1 for **family album readers**, branching hypertext cards, and composable play-set objects.

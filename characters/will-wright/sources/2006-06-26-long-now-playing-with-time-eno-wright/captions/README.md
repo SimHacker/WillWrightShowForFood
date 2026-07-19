@@ -8,6 +8,6 @@ When Don proofreads:
 2. Run `extract-clip.py` against a local master in `~/GroundUp/repo-show/`.
 3. Upload `.vtt` with every YouTube publish.
 
-Policy: [`../../../../process/post-production/captions.yml`](../../../../process/post-production/captions.yml)
+Policy: [captions](../../../../process/post-production/captions.yml)
 
-↑ [`../short-form-clips.yml`](../short-form-clips.yml)
+↑ [short form clips](../short-form-clips.yml)

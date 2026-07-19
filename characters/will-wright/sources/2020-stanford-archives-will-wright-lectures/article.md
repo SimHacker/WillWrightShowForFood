@@ -6,7 +6,7 @@
 
 ## What triggered the thread
 
-Chaim asked Don about **The Sims materials** at [`../art-net-simcity-archive/designing-ui-to-simulation-games.md`](../art-net-simcity-archive/designing-ui-to-simulation-games.md) (originally `art.net/…/WillWright.html`) and connected:
+Chaim asked Don about **The Sims materials** at [designing ui to simulation games](../art-net-simcity-archive/designing-ui-to-simulation-games.md) (originally `art.net/…/WillWright.html`) and connected:
 
 | Institution | Contact | Interest |
 |-------------|---------|----------|

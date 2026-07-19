@@ -28,17 +28,17 @@ Secondary channel: some CD distributions (notably **Sun Catalyst** at the Turing
 
 Demonstrated at **InterCHI'93** Interactive Experience, Interval "Electric Carnival" / Lollapalooza, and trade shows.
 
-Product page (period): [`../art-net-simcity-archive/multiplayer-x11-announcement.md`](../art-net-simcity-archive/multiplayer-x11-announcement.md) · Usenix keynote on the model: [`../art-net-simcity-archive/keynote-toronto-usenix.md`](../art-net-simcity-archive/keynote-toronto-usenix.md)
+Product page (period): [multiplayer x11 announcement](../art-net-simcity-archive/multiplayer-x11-announcement.md) · Usenix keynote on the model: [keynote toronto usenix](../art-net-simcity-archive/keynote-toronto-usenix.md)
 
 Screenshots (three displays — SGI Indigo, NCD X terminal, Sun) — also in-repo:
 
-- [`../art-net-simcity-archive/images/SimCity-Indigo.gif`](../art-net-simcity-archive/images/SimCity-Indigo.gif)
-- [`../art-net-simcity-archive/images/SimCity-NCD.gif`](../art-net-simcity-archive/images/SimCity-NCD.gif)
-- [`../art-net-simcity-archive/images/SimCity-Sun.gif`](../art-net-simcity-archive/images/SimCity-Sun.gif)
+- [SimCity Indigo](../art-net-simcity-archive/images/SimCity-Indigo.gif)
+- [SimCity NCD](../art-net-simcity-archive/images/SimCity-NCD.gif)
+- [SimCity Sun](../art-net-simcity-archive/images/SimCity-Sun.gif)
 
-Multiplayer UI evidence (Talk / vote / chalk): [`../art-net-simcity-archive/images/`](../art-net-simcity-archive/images/README.md)
+Multiplayer UI evidence (Talk / vote / chalk): [images](../art-net-simcity-archive/images/README.md)
 
-Paper: [`../1993-interchi-simcitynet-proposal/`](../1993-interchi-simcitynet-proposal/README.md) · archive hub [`../art-net-simcity-archive/`](../art-net-simcity-archive/README.md)
+Paper: [1993 interchi simcitynet proposal](../1993-interchi-simcitynet-proposal/README.md) · archive hub [art net simcity archive](../art-net-simcity-archive/README.md)
 
 ---
 
@@ -130,9 +130,9 @@ This is the **centralized server + rich web client** thread — precursor to Sou
 
 ## Related
 
-- [`../simcity-open-source-saga/`](../simcity-open-source-saga/README.md) — OLPC negotiation that contains this letter
-- [`../sugar-centralized-multiplayer-laszlo/`](../sugar-centralized-multiplayer-laszlo/README.md) — Sugar mesh vs Laszlo catalog CMS
-- [`../../../../don-hopkins/career/simcity-lineage.yml`](../../../../don-hopkins/career/simcity-lineage.yml)
+- [simcity open source saga](../simcity-open-source-saga/README.md) — OLPC negotiation that contains this letter
+- [sugar centralized multiplayer laszlo](../sugar-centralized-multiplayer-laszlo/README.md) — Sugar mesh vs Laszlo catalog CMS
+- [simcity lineage](../../../../don-hopkins/career/simcity-lineage.yml)
 - Demo video: https://www.youtube.com/watch?v=8snnqQSI0GE (Python/Flash Micropolis)
 
 **SimCityNet capture:** https://www.youtube.com/watch?v=_fVl4dGwUrA — *Multi Player SimCityNet for X11 on Linux*

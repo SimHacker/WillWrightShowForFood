@@ -5,5 +5,5 @@ Supporting YAML behind [Will Wright](../README.md)'s portrayal (public-source de
 - [`bio.yml`](bio.yml) — structured biography / career facts.
 - [`sources.yml`](sources.yml) — citations and source links.
 
-Governed by [`schemas/portrayal-standards.md`](../../../schemas/portrayal-standards.md).
-See [`../README.md`](../README.md), [`../CHARACTER.yml`](../CHARACTER.yml), and [`../media/`](../media/README.md).
+Governed by [portrayal standards](../../../schemas/portrayal-standards.md).
+See [README](../README.md), [CHARACTER](../CHARACTER.yml), and [media](../media/README.md).

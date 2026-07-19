@@ -45,7 +45,7 @@ rewrites.*
 
 | Entry | Status | 🐒✋ Why you'd look |
 |-------|--------|--------------------|
-| [**The Infinite Typewriters app**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/infinite-typewriters.yml) | dream | The Pinocchio clause: a Dasher implementation with pluggable renderers, headlined by a 3D typewriter whose keys swell and yield. It wants to be a real app; the file says so itself. |
+| [**The Infinite Typewriters**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/infinite-typewriters.md) ([`.yml` skeleton](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/infinite-typewriters.yml)) | dream | Pinocchio clause: Dasher + pluggable renderers; 3D typewriter whose keys swell and yield. |
 | [**Micropolis AI Drag Race**](../../process/DRAG-RACE.md) | design | Competitive AI city-building as a show format — design exists, engine hooks pending. |
 | [**RoboResurrection / Slats**](../../repo-shows/will-wright-premiere/slats-reincarnation.yml) | design | Bringing Will's SFC robot brain back as a show judge. |
 

@@ -38,7 +38,7 @@
 
 ## Revival thread
 
-→ Soul City **homefun** / GPS storytelling / [`process/CRAZY-IDEA-JAM.md`](../../../../process/CRAZY-IDEA-JAM.md)
+→ Soul City **homefun** / GPS storytelling / [CRAZY IDEA JAM](../../../../process/CRAZY-IDEA-JAM.md)
 
 ## Gaps
 
@@ -46,4 +46,4 @@
 - [ ] Matthew Sibigtroth show — original StoryMaker speech AI  
 - [ ] Publish Phonoloper + StoryMaker source from Don archive
 
-*See [`characters/don-hopkins/career/stupid-fun-club.yml`](../../../../don-hopkins/career/stupid-fun-club.yml)*
+*See [stupid fun club](../../../../don-hopkins/career/stupid-fun-club.yml)*

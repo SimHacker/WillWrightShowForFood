@@ -1,6 +1,6 @@
 # CAM-6, pie menus, and the visual programming lineage
 
-*Don Hopkins → Michael McGuffin, 8 Oct 2022. Primary source: [`characters/michael-mcguffin/sources/2022-10-08-don-visual-programming-letter.md`](../../../michael-mcguffin/sources/2022-10-08-don-visual-programming-letter.md).*
+*Don Hopkins → Michael McGuffin, 8 Oct 2022. Primary source: [2022 10 08 don visual programming letter](../../../michael-mcguffin/sources/2022-10-08-don-visual-programming-letter.md).*
 
 Don connects **cellular automata hardware (CAM-6)**, **NeWS/PostScript PSIBER**, **VPL Body Electric → Bounce**, and **The Sims SimAntics** as one thread: making program structure visible and manipulable.
 
@@ -91,7 +91,7 @@ Brad's acronym page: http://www.cs.cmu.edu/~bam/acronyms.html (Don contributed *
 
 ## Show seeds
 
-- **Michael McGuffin** — moderator for VPL definition debate ([`characters/michael-mcguffin/`](../../../michael-mcguffin/))
+- **Michael McGuffin** — moderator for VPL definition debate ([michael mcguffin](../../../michael-mcguffin/))
 - Don + **Brad Myers** + McGuffin — Excel-as-VPL live demo
 - Don + **Henry Minsky** on CAM-6 and CA hardware
 - **Rebounce** — Hookup → Bounce lineage with David Levitt + Jaron

@@ -4,7 +4,7 @@
 
 What Transmogrifier is and is not — scope limits, Edith/SimAntics boundary, unsupported-by-EA policy.
 
-*Parent feed:* [`../README.md`](../README.md) · *Story essay:* [`../../media/sims-series-transmogrifier-story.md`](../../media/sims-series-transmogrifier-story.md) · *Green Flamingo tutorial image:* [1996 gallery](../1996-04-26-winograd-interfacing-to-microworlds/images/133-the-sims-transmogrifier-turial-making-a-green-flamingo.jpeg)
+*Parent feed:* [README](../README.md) · *Story essay:* [sims series transmogrifier story](../../media/sims-series-transmogrifier-story.md) · *Green Flamingo tutorial image:* [1996 gallery](../1996-04-26-winograd-interfacing-to-microworlds/images/133-the-sims-transmogrifier-turial-making-a-green-flamingo.jpeg)
 
 **Source:** [Wayback Documentation index](https://web.archive.org/web/20050226092255/http://www.thesimstransmogrifier.com/TransmogrifierDocumentation/) · private archive (not in this repo)
 

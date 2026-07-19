@@ -19,7 +19,7 @@ and we do not speak as him without consent.
 | Room | → | Why |
 |------|---|-----|
 | **Up** | [characters](../README.md) | Guest registry |
-| **Show** | [will-wright show](../../repo-shows/will-wright-premiere/README.md) | Flagship Repo Show room |
+| **Show** | [Will Wright premiere](../../repo-shows/will-wright-premiere/README.md) | Flagship Repo Show room |
 | **Sources** | [sources](sources/README.md) | Evidence — 1996 centerpiece lives here |
 | **Primary sources map** | [primary-sources-evidence-room.md](primary-sources-evidence-room.md) | Curated slug index + cross-links |
 | **Adorable Minutes** | [adorable-minutes.md](adorable-minutes.md) | 2008 one-minute Q&A format; async show seed |
@@ -35,9 +35,9 @@ and we do not speak as him without consent.
 | If you want… | Go |
 |--------------|-----|
 | **The invitation** (short) | [`invitation.md`](invitation.md) |
-| **The official invitation** (the one Will accepted) | [`repo-shows/will-wright-premiere/invitation.md`](../../repo-shows/will-wright-premiere/invitation.md)  |
+| **The official invitation** (the one Will accepted) | [Premiere invitation](../../repo-shows/will-wright-premiere/invitation.md)  |
 | **Ideas to explore** (conversation hooks) | [`ideas.md`](ideas.md) |
-| **Browse any order** | [`repo-shows/will-wright-premiere/BROWSE.md`](../../repo-shows/will-wright-premiere/BROWSE.md) |
+| **Browse any order** | [BROWSE](../../repo-shows/will-wright-premiere/BROWSE.md) |
 | **Suggested sequence** | [`guest-will playlist`](../../process/entryways/guest-will.md) |
 | **Trading card / abilities** | [`CARD.md`](CARD.md) · [`CARD.yml`](CARD.yml) |
 | **Photos & media** (SimCity/Sims history, robots) | [`media/`](media/README.md) · [`media/GLANCE.yml`](media/GLANCE.yml) |
@@ -56,7 +56,7 @@ Stanford class (the first public **Dollhouse** preview). That talk is why Don we
 **Will Wright Show For Food** is the public apex of a Repo Show invitation: topic-less by design
 (**Will is the topic**), anchored on that 1996 artifact, open to **Proxi**, **Slats**
 RoboResurrection, and whatever threads Will wants to pull. See
-[`repo-shows/will-wright-premiere/README.md`](../../repo-shows/will-wright-premiere/README.md).
+[Will Wright premiere show](../../repo-shows/will-wright-premiere/README.md).
 
 ## What he is known for (verifiable)
 
@@ -86,12 +86,12 @@ These are **about his published work**, not claims about private beliefs:
 
 | Who | Link | Why |
 |-----|------|-----|
-| **Don Hopkins** | [`../don-hopkins/`](../don-hopkins/README.md) | Host; Sims tools, pie menus, modding pipeline |
-| **Chaim Gingold** | [`../chaim-gingold/CARD.yml`](../chaim-gingold/CARD.yml) | *Building SimCity* — simulation loop diagrams |
-| **Stone Librande** | [`../stone-librande/CARD.yml`](../stone-librande/CARD.yml) | One-page design at Maxis |
-| **Terry Winograd** | [`../terry-winograd/CARD.yml`](../terry-winograd/CARD.yml) | 1996 seminar host |
-| **Slats** | [`../slats/CARD.yml`](../slats/CARD.yml) | SFC robot Don programmed — optional show segment |
-| **Seymour Papert · Alan Kay** | [`../seymour-papert/CARD.yml`](../seymour-papert/CARD.yml) · [`../alan-kay/CARD.yml`](../alan-kay/CARD.yml) | Constructionist microworld lineage |
+| **Don Hopkins** | [Don Hopkins](../don-hopkins/README.md) | Host; Sims tools, pie menus, modding pipeline |
+| **Chaim Gingold** | [Chaim Gingold · CARD](../chaim-gingold/CARD.yml) | *Building SimCity* — simulation loop diagrams |
+| **Stone Librande** | [Stone Librande · CARD](../stone-librande/CARD.yml) | One-page design at Maxis |
+| **Terry Winograd** | [Terry Winograd · CARD](../terry-winograd/CARD.yml) | 1996 seminar host |
+| **Slats** | [Slats · CARD](../slats/CARD.yml) | SFC robot Don programmed — optional show segment |
+| **Seymour Papert · Alan Kay** | [Seymour Papert · CARD](../seymour-papert/CARD.yml) · [Alan Kay · CARD](../alan-kay/CARD.yml) | Constructionist microworld lineage |
 
 ## Sims flavor (representational)
 
@@ -124,7 +124,7 @@ This directory is the **guest_will** playlist stop #4. Full museum map: [**ENTRY
 | **Producer** | [playlist](../../process/entryways/producer.md) | Run your own Repo Show — fork the format |
 | **constructionist_lineage** | [trail](../../process/trails/constructionist-lineage.md) | 1996 → this show → Micropolis open lineage |
 
-Your ordered tour: [**guest_will**](../../process/entryways/guest-will.md) — invitation → BROWSE → 1996 → here → CARD → Slats → Don → Vision → browse [`characters/`](../README.md)
+Your ordered tour: [**guest_will**](../../process/entryways/guest-will.md) — invitation → BROWSE → 1996 → here → CARD → Slats → Don → Vision → browse [characters](../README.md)
 
 ---
 

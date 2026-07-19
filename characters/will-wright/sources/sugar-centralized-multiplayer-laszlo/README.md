@@ -8,9 +8,9 @@
 
 | Source | Link |
 |--------|------|
-| Alan Kay thread | [`../2007-11-16-simcity-rules-alan-kay/`](../2007-11-16-simcity-rules-alan-kay/README.md) |
-| Walter Bender show | [`../../../walter-bender-olpc.yml`](../../../walter-bender-olpc.yml) |
-| SimCity open-source saga | [`../simcity-open-source-saga/`](../simcity-open-source-saga/README.md) |
+| Alan Kay thread | [2007 11 16 simcity rules alan kay](../2007-11-16-simcity-rules-alan-kay/README.md) |
+| Walter Bender show | [walter bender olpc](../../../walter-bender-olpc.yml) |
+| SimCity open-source saga | [simcity open source saga](../simcity-open-source-saga/README.md) |
 | big-prompts Sugar quotes | DonHopkins `temp/big-prompts.txt` — "kid-friendly multi-player user interface" |
 
 **Implemented (partial):** TCL/Tk Micropolis on XO; Python/GTK path; community forks — document what shipped vs vision.
@@ -21,10 +21,10 @@
 
 | Source | Path |
 |--------|------|
-| Laszlo database interface | [`../2005-09-18-laszlo-database-interface/`](../2005-09-18-laszlo-database-interface/README.md) |
-| SimFreaks content catalog Laszlo | [`../2005-09-18-simfreaks-content-catalog-laszlo/`](../2005-09-18-simfreaks-content-catalog-laszlo/README.md) |
-| Catalogs hub | [`../../../catalogs/`](../../../catalogs/README.md) |
-| Micropolis publishing vision | [`../../media/sims-series-micropolis-publishing-vision.md`](../../media/sims-series-micropolis-publishing-vision.md) |
+| Laszlo database interface | [2005 09 18 laszlo database interface](../2005-09-18-laszlo-database-interface/README.md) |
+| SimFreaks content catalog Laszlo | [2005 09 18 simfreaks content catalog laszlo](../2005-09-18-simfreaks-content-catalog-laszlo/README.md) |
+| Catalogs hub | [catalogs](../../../catalogs/README.md) |
+| Micropolis publishing vision | [sims series micropolis publishing vision](../../media/sims-series-micropolis-publishing-vision.md) |
 
 **Analysis angles:**
 

@@ -4,7 +4,7 @@ Curated map of **Will Wright** primary sources. **Original
 material** — essays, mail threads, Wayback captures, transcripts — lives in Will Wright's
 **evidence room** under [`sources/`](sources/README.md).
 
-Don Hopkins topic files in [`../don-hopkins/`](../don-hopkins/README.md) cross-link here. For the
+Don Hopkins topic files in [don hopkins](../don-hopkins/README.md) cross-link here. For the
 machine-complete slug index, see [Complete slug index](sources/README.md#complete-slug-index)
 in that README.
 
@@ -14,8 +14,8 @@ in that README.
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------ |
 | **Evidence room README**         | [`sources/README.md`](sources/README.md)                 | Navigation spine — start here for any slug             |
 | **Will Wright portrayal**        | [`README.md`](README.md)                                 | Guest hub                                              |
-| **Flagship Repo Show**           | [`../../repo-shows/will-wright-premiere/README.md`](../../repo-shows/will-wright-premiere/README.md)                                 | Episode room — orbits the sources                      |
-| **Terry Winograd CS547 archive** | [`../../characters/terry-winograd/media/cs547-ARCHIVE.md`](../../characters/terry-winograd/media/cs547-ARCHIVE.md) | Full Stanford talk catalog (cross-linked from sources) |
+| **Flagship Repo Show**           | [will wright premiere](../../repo-shows/will-wright-premiere/README.md)                                 | Episode room — orbits the sources                      |
+| **Terry Winograd CS547 archive** | [cs547 ARCHIVE](../../characters/terry-winograd/media/cs547-ARCHIVE.md) | Full Stanford talk catalog (cross-linked from sources) |
 
 ## Bouquet → evidence (Don's topic files)
 
@@ -140,7 +140,7 @@ in that README.
 | Chris Trottier — tuned emergence        | [2004-02-21-chris-trottier-tuned-emergence](sources/2004-02-21-chris-trottier-tuned-emergence/README.md) |
 | Henry Jenkins — Barbie to Mortal Kombat | [2004-01-10-barbie-mortalkombat-jenkins](sources/2004-01-10-barbie-mortalkombat-jenkins/README.md)       |
 
-Pair Crowd Sitter / Dumbold with live UCC in [`../../catalogs/simprov/`](../../catalogs/simprov/README.md).
+Pair Crowd Sitter / Dumbold with live UCC in [simprov](../../catalogs/simprov/README.md).
 
 ---
 
@@ -150,7 +150,7 @@ Pair Crowd Sitter / Dumbold with live UCC in [`../../catalogs/simprov/`](../../c
 | -------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | *Servitude* and *Empathy* robots | [stupid-fun-club-one-minute-movies](sources/stupid-fun-club-one-minute-movies/README.md) |
 
-→ Don's talk distill: [`talks/empathy-and-servitude.yml`](../don-hopkins/talks/empathy-and-servitude.yml) · Sidekick [`../slats/`](../slats/)
+→ Don's talk distill: [`talks/empathy-and-servitude.yml`](../don-hopkins/talks/empathy-and-servitude.yml) · Sidekick [slats](../slats/)
 
 ---
 

@@ -80,7 +80,7 @@ Don confirms:
 
 Curriculum guide still relevant; Design-Based Learning program at Cal Poly; charter high school won California Golden Bell — SimCity would be "very useful to everyone."
 
-Full invitation portrayal: [`characters/doreen-nelson/`](../../../../characters/doreen-nelson/README.md) · [sourced Dec 2006 response](../../../../characters/doreen-nelson/sources/2006-12-21-olpc-curriculum-guide/olpc-response.md)
+Full invitation portrayal: [doreen nelson](../../../../characters/doreen-nelson/README.md) · [sourced Dec 2006 response](../../../../characters/doreen-nelson/sources/2006-12-21-olpc-curriculum-guide/olpc-response.md)
 
 ---
 

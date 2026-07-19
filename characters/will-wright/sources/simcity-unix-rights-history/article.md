@@ -26,9 +26,9 @@ Both contracts completed without complication. DUX no longer in business; EA hol
 1. **HyperNeWS / HyperLook** (NeWS) — Sun-focused; pie menus; 1993 FTP sales (also Sun Catalyst CD with HyperLook runtime)  
    - http://www.donhopkins.com/home/catalog/hyperlook/SimCity.README  
 2. **X11 / TCL/Tk** — scriptable; **multiplayer** vote/build; ported to Sun, SGI, HP, DEC, IBM, NCD, Linux  
-   - Sold mainly via **UUNET FTP** (`ftp.uu.net:/vendor/dux/SimCity`) + **phone unlock** (Usenet announcement; no web store) — see [`../multiplayer-simcity-ui-network/article.md`](../multiplayer-simcity-ui-network/article.md#simcitynet--what-shipped)
-   - Announcement: [`../art-net-simcity-archive/multiplayer-x11-announcement.md`](../art-net-simcity-archive/multiplayer-x11-announcement.md)
-   - UnixWorld review: [`../art-net-simcity-archive/unixworld-bedlam-in-simcity.md`](../art-net-simcity-archive/unixworld-bedlam-in-simcity.md)
+   - Sold mainly via **UUNET FTP** (`ftp.uu.net:/vendor/dux/SimCity`) + **phone unlock** (Usenet announcement; no web store) — see [multiplayer simcity ui network · article · simcitynet  what shipped](../multiplayer-simcity-ui-network/article.md#simcitynet--what-shipped)
+   - Announcement: [multiplayer x11 announcement](../art-net-simcity-archive/multiplayer-x11-announcement.md)
+   - UnixWorld review: [unixworld bedlam in simcity](../art-net-simcity-archive/unixworld-bedlam-in-simcity.md)
    - Unix Review **Outstanding Product 1993** p.52
 
 ---
@@ -67,12 +67,12 @@ Contract excerpt in thread begins at typed **SOFTWARE LICENSING/DEVELOPMENT AGRE
 
 ## Related
 
-- [`../simcity-open-source-saga/`](../simcity-open-source-saga/README.md) — Gilmore → Will → Rod same month  
-- [`../2006-12-simcity-olpc-introducing-the-players/`](../2006-12-simcity-olpc-introducing-the-players/README.md)  
-- [`../multiplayer-simcity-ui-network/article.md`](../multiplayer-simcity-ui-network/article.md)
+- [simcity open source saga](../simcity-open-source-saga/README.md) — Gilmore → Will → Rod same month  
+- [2006 12 simcity olpc introducing the players](../2006-12-simcity-olpc-introducing-the-players/README.md)  
+- [multiplayer simcity ui network · article](../multiplayer-simcity-ui-network/article.md)
 
 ## Gaps
 
-- [x] DUX contracts — published in [`characters/don-hopkins/career/contracts/`](../../../../don-hopkins/career/contracts/README.md)
+- [x] DUX contracts — published in [contracts](../../../../don-hopkins/career/contracts/README.md)
 - [ ] Exhibit A excerpt article from [`olpc-ea-contract.pdf`](../../../../don-hopkins/career/contracts/olpc-ea-contract.pdf)
 - [ ] Link scanned signatures if Don has cleaner scans than email paste

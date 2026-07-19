@@ -46,8 +46,8 @@ as design tools — why under-simulating (and trusting the player's imagination)
 move as McCloud's **gutter** and Will's **two computers** — sparse explicit frames downloaded into a
 commonsense-saturated audience who **fills the gaps**. LLMs that train on *all the words* automate the wrong
 part. Alan Kay thread:
-[`../alan-kay/media/quora-recaps/lenat-cyc-knowledge-and-slow-thinking.md`](../alan-kay/media/quora-recaps/lenat-cyc-knowledge-and-slow-thinking.md#repo-show-connection--white-space-gutter-two-computers-dons-guess).
-1996 source: [`sources/1996-04-26-winograd-interfacing-to-microworlds/README.md`](sources/1996-04-26-winograd-interfacing-to-microworlds/README.md).
+[Lenat / Cyc — white space, gutter, two computers](../alan-kay/media/quora-recaps/lenat-cyc-knowledge-and-slow-thinking.md#repo-show-connection--white-space-gutter-two-computers-dons-guess).
+1996 source: [Interfacing to Microworlds (Winograd 1996)](sources/1996-04-26-winograd-interfacing-to-microworlds/README.md).
 
 ### 4. Toys, not games — microworlds
 Will's lifelong stance: simulations as **toys and microworlds** without a single win state. The
@@ -74,7 +74,7 @@ federate, plus Spore's own internal cell→creature→tribe→civ→space ladder
 **Heirloom lane (Dec 2025 Dev Diaries):** Will described Proxi as a **software heirloom** —
 memorialize someone (e.g. your grandmother) with family members each contributing stories from
 their own perspective; you discover things you didn't know.
-[`sources/2025-12-will-wright-dev-diaries/proxi-software-heirloom.yml`](sources/2025-12-will-wright-dev-diaries/proxi-software-heirloom.yml)
+[Proxi software heirloom](sources/2025-12-will-wright-dev-diaries/proxi-software-heirloom.yml)
 
 **Portability lane (1996 + Gallium):** What Will is also building — an AI model of a person, the
 über-character that travels through every game you play, picking up abilities, syncing back. The
@@ -82,15 +82,15 @@ their own perspective; you discover things you didn't know.
 
 **Bartle types (same Dev Diaries):** Will **brings up Bartle's player types** — hook for a
 three-way with [Richard Bartle](../../richard-bartle/README.md) (consented audience seat).
-[`bartle-player-types.yml`](sources/2025-12-will-wright-dev-diaries/bartle-player-types.yml)
+[Bartle player types](sources/2025-12-will-wright-dev-diaries/bartle-player-types.yml)
 
 **Identity surfing (same Dev Diaries):** Players describe play by **popping between third and first
 person** — surfing identities mid-story. Ties Proxi heirloom + Bartle + Sims agency.
-[`identity-pronoun-surfing.yml`](sources/2025-12-will-wright-dev-diaries/identity-pronoun-surfing.yml)
+[Identity pronoun surfing](sources/2025-12-will-wright-dev-diaries/identity-pronoun-surfing.yml)
 
 **Minecraft (shipped):** Will **already exported Proxi characters into Minecraft** — major bridge
-spoke, not vapor. [`proxi-minecraft-export.yml`](sources/2025-12-will-wright-dev-diaries/proxi-minecraft-export.yml)
-· [`game-bridge-proxi-minecraft.yml`](../../repo-shows/will-wright-premiere/game-bridge-proxi-minecraft.yml)
+spoke, not vapor. [Proxi Minecraft export](sources/2025-12-will-wright-dev-diaries/proxi-minecraft-export.yml)
+· [game bridge Proxi↔Minecraft](../../repo-shows/will-wright-premiere/game-bridge-proxi-minecraft.yml)
 
 ### 8. Reincarnate Slats — RoboResurrection
 The **Stupid Fun Club** robot brain Don programmed (the One Minute Movies: *Servitude*, *Empathy*).
@@ -109,12 +109,12 @@ Rebuilding Transmogrifier / RugOMatic / WigOMatic as browser-native tools, and b
 
 ### 11. The Adorable Will Wright Minutes
 Revive Will's 2008 one-minute lesson format — async Q&A, HN question pump, Care Bears corner.
-[`adorable-minutes.md`](adorable-minutes.md) · show [`will-wright-adorable-minutes.yml`](../../repo-shows/will-wright-adorable-minutes.yml)
+[Adorable Minutes](adorable-minutes.md) · [show seed](../../repo-shows/will-wright-adorable-minutes.yml)
 
 ### 12. Proto-Dollhouse at Kaleida (before Winograd)
 Will plugged his disk into Don's Mac at Kaleida **years before** the 1996 talk — not the first sighting,
 but the Winograd demo was when progress became unbelievable.
-[`proto-dollhouse-kaleida-visit.md`](proto-dollhouse-kaleida-visit.md)
+[Proto-Dollhouse at Kaleida](proto-dollhouse-kaleida-visit.md)
 
 ### 13. Made-Up Minds — Gary Drescher crossover
 Gary Drescher's pun: minds **made up** constructively (schemas: context → action → result) vs Will's
@@ -128,8 +128,14 @@ distinct; format stack = **James Burke** interpretation + **Philomena Cunk** moc
 **Life on Earth** / Attenborough template. Full research brief:
 [`sources/2026-07-09-will-conversation-notes.md`](sources/2026-07-09-will-conversation-notes.md).
 
+### 15. The Slap Conga (SimProv challenge)
+Cupid-farm a lover stack (Buddha keeps the trap alive), fall in love with a newcomer in front of them,
+survive the jealousy **slap queue** — kiss/Cupid buffs restart the conga until they fall out of love.
+Emergent interpersonal chaos as a scored challenge; same kit as the Wedding Playset / Speed Dating.
+[Premiere doc](../../repo-shows/will-wright-premiere/simprov-slap-conga.yml) · [gag](../../repo-shows/ideas/gags/slap-conga.yml)
+
 ## Sources (real, public)
 - Primary sources map: [`primary-sources-evidence-room.md`](primary-sources-evidence-room.md)
 - 1996 Winograd talk: [source bundle](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) · video https://www.youtube.com/watch?v=nsxoZXaYJSk
 - Long Now *Playing with Time* (Eno + Wright): [source bundle](../../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/README.md) · https://www.youtube.com/watch?v=Dfc-DQorohc
-- Show hub: [`repo-shows/will-wright-premiere/`](../../repo-shows/will-wright-premiere/README.md) · galleries: [`media/`](media/README.md)
+- Show hub: [will wright premiere](../../repo-shows/will-wright-premiere/README.md) · galleries: [`media/`](media/README.md)

@@ -15,14 +15,14 @@ Live simulated **Fox News** parody — pie menus driving talking heads, video mi
 | Era | Tech |
 |-----|------|
 | SimFaux 2006 | OpenLaszlo / Flash |
-| SimFreaks catalog | Laszlo + Python/MySQL — [`../2005-09-18-simfreaks-content-catalog-laszlo/`](../2005-09-18-simfreaks-content-catalog-laszlo/README.md) |
-| Micropolis web | TurboGears + Laszlo + AMF — [`../multiplayer-simcity-ui-network/`](../multiplayer-simcity-ui-network/README.md) |
+| SimFreaks catalog | Laszlo + Python/MySQL — [2005 09 18 simfreaks content catalog laszlo](../2005-09-18-simfreaks-content-catalog-laszlo/README.md) |
+| Micropolis web | TurboGears + Laszlo + AMF — [multiplayer simcity ui network](../multiplayer-simcity-ui-network/README.md) |
 | 2026 | Soul City federation |
 
 ## Related
 
 - [FauxCast on Freedom (2006 essay)](../../../../characters/don-hopkins/media/simfaux/fauxcast-on-freedom.md) — [Wayback](https://web.archive.org/web/20110611164446/http://www.donhopkins.com/drupal/node/121)  
-- [`../sugar-centralized-multiplayer-laszlo/`](../sugar-centralized-multiplayer-laszlo/README.md)  
-- OpenLaszlo reunion show seeds in [`repo-shows/openlaszlo/`](../../../../repo-shows/openlaszlo/README.md)
+- [sugar centralized multiplayer laszlo](../sugar-centralized-multiplayer-laszlo/README.md)  
+- OpenLaszlo reunion show seeds in [openlaszlo](../../../../repo-shows/openlaszlo/README.md)
 
 *Harvest: re-promised-links.txt · INDEX.yml#gRodlxUZ9SQ*

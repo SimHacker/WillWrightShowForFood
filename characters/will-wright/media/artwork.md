@@ -67,4 +67,4 @@ with one pink marker.
 
 ---
 
-See also: [`README.md`](README.md) · [`russian-space-junk.md`](russian-space-junk.md) · [`../README.md`](../README.md)
+See also: [`README.md`](README.md) · [`russian-space-junk.md`](russian-space-junk.md) · [README](../README.md)

@@ -11,8 +11,8 @@ Essay republished for **Will Wright Show For Food**.
 | In-repo body | [`article.md`](article.md) |
 | Wayback (preferred external) | https://web.archive.org/web/20110611185928/http://www.donhopkins.com/drupal/node/24 |
 | Don on HN citing this IA URL (2023-11-06) | https://news.ycombinator.com/item?id=38160682 |
-| Columbia OPTIMUS NSF PDFs (same era) | [`../../../upmanu-lall/media/`](../../../upmanu-lall/media/) · [digest](../../../upmanu-lall/sources/nsf-2002-proposal-digest.md) |
-| Earlier: InterCHI'93 SimCityNet proposal | [`../1993-interchi-simcitynet-proposal/`](../1993-interchi-simcitynet-proposal/README.md) |
+| Columbia OPTIMUS NSF PDFs (same era) | [media](../../../upmanu-lall/media/) · [digest](../../../upmanu-lall/sources/nsf-2002-proposal-digest.md) |
+| Earlier: InterCHI'93 SimCityNet proposal | [1993 interchi simcitynet proposal](../1993-interchi-simcitynet-proposal/README.md) |
 
 ---
 

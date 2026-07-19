@@ -15,9 +15,9 @@ Released **October 2025** — thrift-store find (Seattle area). Includes Edith +
 
 | Build | Date | Link |
 |-------|------|------|
-| Steering committee | 1998-06-04 | [`../1998-06-04-sims-steering-committee-demo/`](../1998-06-04-sims-steering-committee-demo/README.md) |
+| Steering committee | 1998-06-04 | [1998 06 04 sims steering committee demo](../1998-06-04-sims-steering-committee-demo/README.md) |
 | This alpha | 1999-01-06 | Hidden Palace (above) |
-| E3 1999 | — | Missing — [`../2026-e3-1999-prototype-preservation/`](../2026-e3-1999-prototype-preservation/README.md) |
+| E3 1999 | — | Missing — [2026 e3 1999 prototype preservation](../2026-e3-1999-prototype-preservation/README.md) |
 
 ## Notes from preservation mail (2026)
 

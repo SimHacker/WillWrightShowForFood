@@ -23,17 +23,17 @@ Playlist anchor: [The Adorable Will Wright Minutes!](https://www.youtube.com/wat
 Jingle: *"Random facts to make your knowledge grow / timeless wisdom he'll bestow on you."*
 
 **1996 Winograd talk clips** (same short-attention format, mined from the centerpiece video):
-[`sources/1996-04-26-winograd-interfacing-to-microworlds/short-form-clips.md`](sources/1996-04-26-winograd-interfacing-to-microworlds/short-form-clips.md) ·
-[`short-form-clips.yml`](sources/1996-04-26-winograd-interfacing-to-microworlds/short-form-clips.yml)
+[short-form clips](sources/1996-04-26-winograd-interfacing-to-microworlds/short-form-clips.md) ·
+[short-form clips (yml)](sources/1996-04-26-winograd-interfacing-to-microworlds/short-form-clips.yml)
 
-**Production schedule:** [`short-form-production-schedule.md`](sources/1996-04-26-winograd-interfacing-to-microworlds/short-form-production-schedule.md) — jewels + **quips/memes** (5–45s)
+**Production schedule:** [short-form production schedule](sources/1996-04-26-winograd-interfacing-to-microworlds/short-form-production-schedule.md) — jewels + **quips/memes** (5–45s)
 
 First verified jewels: **Oh God cliffhanger** · **SimEarth kids/failure** · **Julie doll + Peanuts full arc** · **Lem / Trurl's knobs**
 
 ## Format for Repo Show / HN pump
 
 - Don collects **viewer questions for Will**; posts Will's replies (async Repo Show pattern)
-- **HN queue:** [`hn-nanna/questions.yml`](../../repo-shows/will-wright-premiere/audience/hn-nanna/questions.yml) — **nanna** (comment `48780477`); [`hn-vor/questions.yml`](../../repo-shows/will-wright-premiere/audience/hn-vor/questions.yml) — **vor_** (comment `48781412`); provenance + route-back via [`question-provenance.yml`](../../schemas/question-provenance.yml) (git → email → Adorable Minute → interview → Twitch → HN reply). Others can amplify on thread or GitHub.
+- **HN queue:** [nanna questions](../../repo-shows/will-wright-premiere/audience/hn-nanna/questions.yml) — **nanna** (comment `48780477`); [vor_ questions](../../repo-shows/will-wright-premiere/audience/hn-vor/questions.yml) — **vor_** (comment `48781412`); provenance + route-back via [question-provenance](../../schemas/question-provenance.yml) (git → email → Adorable Minute → interview → Twitch → HN reply). Others can amplify on thread or GitHub.
 - Produce **short-form videos** in the same spirit — priming the Will question pump before long episodes
 - Will is "especially obsessed with cornering you at a party and telling you all about Care Bears"
 
@@ -65,7 +65,7 @@ Full spec: [`will-roll.yml`](will-roll.yml)
 attentively again the millionth time, and **always** has something new and insightful to say back. The
 reaction clips are beats one and two; the insight is beat four. That's why the joke is his kindness.
 
-Show home: [`../../repo-shows/infodump.yml`](../../repo-shows/infodump.yml) · inverse of Care Bears
+Show home: [infodump](../../repo-shows/infodump.yml) · inverse of Care Bears
 corner-at-parties above.
 
 ## Related Will shorts (Don links)
@@ -75,7 +75,7 @@ corner-at-parties above.
 | Servitude | [NXsUetUzXlg](https://www.youtube.com/watch?v=NXsUetUzXlg) |
 | Empathy | [KXrbqXPnHvE](https://www.youtube.com/watch?v=KXrbqXPnHvE) |
 
-→ Stupid Fun Club: [`../don-hopkins/stupid-fun-club-empathy-and-servitude.md`](../don-hopkins/stupid-fun-club-empathy-and-servitude.md) · sources [`sources/stupid-fun-club-one-minute-movies/`](sources/stupid-fun-club-one-minute-movies/README.md)
+→ Stupid Fun Club: [Empathy and Servitude](../don-hopkins/stupid-fun-club-empathy-and-servitude.md) · [one-minute movies source](sources/stupid-fun-club-one-minute-movies/README.md)
 
 ## Anecdotes to identify (help wanted 🕵️)
 
@@ -91,4 +91,4 @@ corner-at-parties above.
 
 | Show seed | Hook |
 |-----------|------|
-| [`../../repo-shows/will-wright-adorable-minutes.yml`](../../repo-shows/will-wright-adorable-minutes.yml) | Revive the format; async Q&A; Care Bears corner at parties |
+| [will wright adorable minutes](../../repo-shows/will-wright-adorable-minutes.yml) | Revive the format; async Q&A; Care Bears corner at parties |

@@ -1,0 +1,87 @@
+# SimProv Slap Conga — Will Wright premiere challenge segment
+# Live (or async-recorded) relationship-chaos run for the kickoff show.
+
+status: seed
+emoji: "💘👏"
+tagline: "Fall in love with everyone. Get in line."
+
+title: "The Slap Conga"
+subtitle: "A SimProv relationship-chaos challenge"
+gag_spec: ../ideas/gags/slap-conga.yml
+
+what:
+  one_line: |
+    Speedrun poly romance with Cupid (Buddha keeps the trap alive), fall in love with a
+    newcomer in front of your other lovers, then survive the jealousy slap queue — buff with
+    kisses / Cupid, or watch delationships die until nobody cares.
+  why_on_premiere: |
+    Pure Will territory: emergent interpersonal dynamics, advertisement objects (Cupid /
+    Buddha), failure-as-entertainment, and UCC as a medium. Same kit as the Wedding Playset
+    / Speed Dating with Cupid — flipped from romance orchestration into romantic farce.
+  witness: |
+    Don hit this loop once in the wild — lovers lined up and slapped him in sequence. The
+    show stages that emergence as a scored challenge, not a scripted cutscene.
+
+when_on_show:
+  - "Inside the SimProv / procedural-rhetoric block (after or beside Speed Dating with Cupid)"
+  - "Palette cleanser after heavy archive — high visual comedy, low talk prep"
+  - "Optional Will co-op: he calls Cupid targets; Don drives; chat scores the conga"
+  - "Async default: Don records a clean run; Will riffs on the systems in a later reply"
+
+kit:
+  playset: SimProv Wedding Playset
+  objects: [Cupid, Buddha, Crowd Sitter]
+  catalog: ../../catalogs/simprov/README.md
+  prior_segment: ../ideas/gags/speed-dating-with-cupid.yml
+
+challenge_rules:
+  setup: |
+    Pre-invite a crowd onto the lot. Trap / seat them. Buddha + needs loop so the farm
+    doesn't collapse into hunger / bladder tragedy before the romance graph is dense.
+  farm: "Cupid as many Sims as possible, as fast as possible."
+  trigger: "Public fall-in-love / kiss with a *new* person in view of the lover stack."
+  conga: "Do not interrupt the slap queue — length is the score."
+  buff: "After slap(s): kiss or Cupid to restore delationship — queue may reform."
+  drop: "If a lover fully falls out, they skip the line forever (they don't give a shit)."
+  score:
+    primary: consecutive_slaps_in_one_queue
+    secondary: [lovers_in_stack, queues_survived, time_to_first_conga]
+  lose: "Stack collapses, or the lot dies of neglected motives."
+
+audience:
+  prompt: "Who gets Cupid next? Who is the public kiss? Buff or abandon after slap N?"
+  ingress:
+    - Twitch chat vote
+    - TicketPR tagged `slap-conga`
+    - GitHub issue in audience/<user>/
+  narration: ./sims-play-along-narration.yml
+
+will_hooks:
+  - Simulation Effect — shallow slap AI vs deep player narrative about jealousy
+  - Object advertisements — Cupid/Buddha as authored social physics
+  - 1996 hobby model / UCC — players staging ceremonies *and* slap operas with the same kit
+  - Easy failure / hard failure — romantic Calvin Syndrome
+
+naming_note: |
+  Brand: **Slap Conga**. Runner-up for this crowd: **Relationship Stack Overflow**.
+  Cold-open anecdote title (not the brand): "Then They Lined Up to Slap Me."
+  Full alternatives and rationale: ../ideas/gags/slap-conga.yml#alt_titles
+
+pairs_with:
+  - ../ideas/gags/speed-dating-with-cupid.yml
+  - ../ideas/gags/pixelized-joint-wedding.yml
+  - ./ian-bogost-procedural-rhetoric/SHOW.yml
+  - ../../catalogs/simprov/README.md
+  - ./SEGMENTS.yml
+  - ./performance-and-culture.yml
+
+poc:
+  - "[ ] Record one full slap queue (even short) for the premiere reel"
+  - "[ ] Live or async: farm ≥5 → public kiss → count the conga on air"
+  - "[ ] Link finished YouTube clip here when posted"
+
+ties:
+  - ./SHOW.yml
+  - ./SEGMENTS.yml
+  - ../ideas/shows/will-wright-premiere/content-map.yml
+  - ../../characters/will-wright/ideas.md

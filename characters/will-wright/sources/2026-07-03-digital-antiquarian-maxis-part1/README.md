@@ -6,7 +6,7 @@ Will Wright question pump.
 
 - **Article:** [filfre.net — SimEverything](https://www.filfre.net/2026/07/the-life-and-times-of-maxis-part-1-simeverything/)
 - **Archived copy:** [`article.md`](article.md)
-- **Box art (Mac 1989):** [`../../media/simcity-macintosh-front-cover.jpg`](../../media/simcity-macintosh-front-cover.jpg) · [`../../media/simcity-macintosh-front-cover.yml`](../../media/simcity-macintosh-front-cover.yml)
+- **Box art (Mac 1989):** [simcity macintosh front cover](../../media/simcity-macintosh-front-cover.jpg) · [simcity macintosh front cover](../../media/simcity-macintosh-front-cover.yml)
 - **HN thread:** [The Life and Times of Maxis, Part 1: SimEverything](https://news.ycombinator.com/from?site=filfre.net) (95 points, submitted by *doppp*)
 
 ## Why it matters
@@ -43,13 +43,13 @@ Don Hopkins (user **DonHopkins**) posted two comments:
 | **nanna** ([profile](https://news.ycombinator.com/user?id=nanna)) | Ökolopoly influence? Cybernetics / **Wiener**? | [`hn-nanna/questions.yml`](../../../repo-shows/will-wright-premiere/audience/hn-nanna/questions.yml) — git · email · video · interview · Twitch · [HN reply](https://news.ycombinator.com/item?id=48780477) |
 | **vor_** ([profile](https://news.ycombinator.com/user?id=vor_)) | Unexplored frontiers? Science ed for kids? AI + culture? What is he playing? | [`hn-vor/questions.yml`](../../../repo-shows/will-wright-premiere/audience/hn-vor/questions.yml) — git · email · video · interview · Twitch · [HN reply](https://news.ycombinator.com/item?id=48781412) |
 
-Provenance spec: [`../../../schemas/question-provenance.yml`](../../../schemas/question-provenance.yml). Amplify on HN or 👍 GitHub issue once open.
+Provenance spec: [question provenance](../../../schemas/question-provenance.yml). Amplify on HN or 👍 GitHub issue once open.
 
 Community topics worth chasing (potential guests / show tangents):
 
 | HN commenter | Hook |
 |--------------|------|
-| **fallinditch** | **Widget Workshop** (Maxis, 1996) — drag-and-drop "functional cause-and-effect pipelines," Rube Goldberg visual programming. Ties to `../../../don-hopkins/` VPL threads |
+| **fallinditch** | **Widget Workshop** (Maxis, 1996) — drag-and-drop "functional cause-and-effect pipelines," Rube Goldberg visual programming. Ties to [don hopkins](../../../don-hopkins/) VPL threads |
 | **stevekemp** | Digital Antiquarian's **The Incredible Machine** writeup (2018) — sibling to Widget Workshop |
 | **rustcleaner** | Nostalgia for SimCity 2000's **Win32 GDI / simulator feel** vs "PlaySkool" big-button UIs — echoes the ConnectedTV / calm-tech and hardware-UI threads. Also Care Bears "care bros" bit |
 | **hluska** | "SimEarth's manual felt like a PhD program for a kid"; **SimGolf** humor |
@@ -68,18 +68,18 @@ Lauren Elliott / Gallium / Proxi thread, [Will Dev Diaries](https://www.youtube.
 Tease contact + forthcoming video; **no social repo-link campaign until show ships.**
 
 **Parallel historian invite:** [Jimmy Maher](../../../jimmy-maher/README.md) — Jess Bird synergy model.
-Registry: [`process/maxis-history-collaborators.md`](../../../../process/maxis-history-collaborators.md).
+Registry: [maxis history collaborators](../../../../process/maxis-history-collaborators.md).
 
 **Outreach copy (on hold):** [`micropolis-olpc-teaser.yml`](micropolis-olpc-teaser.yml). Primary sources
 in repo for production; not promoted on social yet:
 
-- [`../2006-11-13-simcity-olpc-email-thread/`](../2006-11-13-simcity-olpc-email-thread/README.md)
-- [`../simcity-open-source-saga/`](../simcity-open-source-saga/README.md)
+- [2006 11 13 simcity olpc email thread](../2006-11-13-simcity-olpc-email-thread/README.md)
+- [simcity open source saga](../simcity-open-source-saga/README.md)
 
 ## Related
 
 - [1996-04-26-winograd-interfacing-to-microworlds](../1996-04-26-winograd-interfacing-to-microworlds/README.md) — the Dollhouse seed talk Don linked on HN
-- [../../adorable-minutes.md](../../adorable-minutes.md) — Adorable Will Wright Minutes show
+- [adorable minutes](../../adorable-minutes.md) — Adorable Will Wright Minutes show
 - [Terry Winograd CS547 archive](../../../terry-winograd/media/cs547-ARCHIVE.md)
 - [2013-tale-of-two-simcities](../2013-tale-of-two-simcities/README.md)
 

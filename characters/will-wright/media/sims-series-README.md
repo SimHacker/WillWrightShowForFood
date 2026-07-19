@@ -3,7 +3,7 @@
 Global gallery and text artifacts for **Will Wright Show For Food** and the broader Sims
 content-creation story (Transmogrifier, SimFreaks, SimSlice, SimProv, procedural rhetoric).
 
-*Sniff:* [`sims-series-GLANCE.yml`](sims-series-GLANCE.yml) · [`GLANCE.yml`](GLANCE.yml) · **Media hub:** [`README.md`](README.md) · **Catalogs:** [`catalogs/README.md`](../../../catalogs/README.md)
+*Sniff:* [`sims-series-GLANCE.yml`](sims-series-GLANCE.yml) · [`GLANCE.yml`](GLANCE.yml) · **Media hub:** [`README.md`](README.md) · **Catalogs:** [catalogs](../../../catalogs/README.md)
 
 ## Navigation
 
@@ -13,8 +13,8 @@ content-creation story (Transmogrifier, SimFreaks, SimSlice, SimProv, procedural
 |-------|---|----------------|
 | **Dumbold voting machine** | [gallery](sims-dumbold-voting-machine-README.md) | [2018-04-24](../sources/2018-04-24-dumbold-voting-machine/README.md) |
 | **SimFreaks OpenLaszlo** | [mockups](sims-simfreaks-openlaszlo-catalog-README.md) | [2005 CMS essay](../sources/2005-09-18-simfreaks-content-catalog-laszlo/README.md) |
-| **SimFreaks gameplay** | [in-game shots](sims-simfreaks-content-gameplay-README.md) | [catalogs/simfreaks](../../../catalogs/simfreaks/README.md) |
-| **SimSlice / SliceCity** | [gallery](sims-simslice-README.md) | [catalogs/simslice](../../../catalogs/simslice/README.md) |
+| **SimFreaks gameplay** | [in-game shots](sims-simfreaks-content-gameplay-README.md) | [simfreaks](../../../catalogs/simfreaks/README.md) |
+| **SimSlice / SliceCity** | [gallery](sims-simslice-README.md) | [simslice](../../../catalogs/simslice/README.md) |
 | **SimAntics objects** | [gallery](sims-simantics-objects-README.md) | [transmogrifier hub](../sources/2004-transmogrifier-documentation-hub/README.md) |
 | **People & events** | [photos](sims-people-and-events-README.md) | [maxis-people essay](sims-series-maxis-people.md) |
 | **1996 centerpiece** | [167 figures](../sources/1996-04-26-winograd-interfacing-to-microworlds/README.md#image-gallery) | Winograd talk |
@@ -66,7 +66,7 @@ QGCon paper seed — "How Inclusivity Saved The Sims."
 Archival motivation for family-play content and republishing the wedding kit.
 
 **[sims-series-dumbold-voting-machine.md](sims-series-dumbold-voting-machine.md)**  
-Medium article summary + links to the full source article in [`../sources/`](../sources/README.md).
+Medium article summary + links to the full source article in [sources](../sources/README.md).
 
 **[sims-series-maxis-people.md](sims-series-maxis-people.md)** · **[sims-series-maxis-people.yml](sims-series-maxis-people.yml)**  
 Verified public roster — nicknames, spelling, show cross-links.

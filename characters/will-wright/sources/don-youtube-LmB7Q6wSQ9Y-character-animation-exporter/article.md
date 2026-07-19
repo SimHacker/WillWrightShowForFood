@@ -22,7 +22,7 @@ That same pattern drives Soul City: tools shaped around Heather/Steve's SimFreak
 
 - [Object exporter demo](https://www.youtube.com/watch?v=ImLZzXB9asw)  
 - [Medium article](https://medium.com/@donhopkins/automating-the-sims-character-animation-pipeline-with-maxscript-bc490787d7a2)  
-- [`characters/don-hopkins/`](../../../../don-hopkins/README.md) — animation system credit  
-- Steering committee / Edith: [`../1998-06-04-sims-steering-committee-demo/`](../1998-06-04-sims-steering-committee-demo/README.md)
+- [don hopkins](../../../../don-hopkins/README.md) — animation system credit  
+- Steering committee / Edith: [1998 06 04 sims steering committee demo](../1998-06-04-sims-steering-committee-demo/README.md)
 
 *Harvest: `re-promised-links.txt`*

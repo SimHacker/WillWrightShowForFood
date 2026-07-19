@@ -10,4 +10,4 @@ yt-dlp --write-auto-sub --sub-lang en --sub-format vtt --skip-download \
   -o "youtube-auto-en.%(ext)s" "https://www.youtube.com/watch?v=Dfc-DQorohc"
 ```
 
-↑ [`../summary.md`](../summary.md) · [`../short-form-clips.yml`](../short-form-clips.yml)
+↑ [summary](../summary.md) · [short form clips](../short-form-clips.yml)

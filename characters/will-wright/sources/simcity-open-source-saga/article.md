@@ -48,19 +48,19 @@ Will and Rod's replies show EA leadership treated it as low-risk goodwill. Chuck
 
 ## Links
 
-- SimCityNet InterCHI'93 proposal: [`../1993-interchi-simcitynet-proposal/`](../1993-interchi-simcitynet-proposal/README.md)
-- art.net SimCity archive (manual, transcripts, screenshots, announcement): [`../art-net-simcity-archive/`](../art-net-simcity-archive/README.md)
-- Multiplayer UI exposition: [`../multiplayer-simcity-ui-network/article.md`](../multiplayer-simcity-ui-network/article.md)
+- SimCityNet InterCHI'93 proposal: [1993 interchi simcitynet proposal](../1993-interchi-simcitynet-proposal/README.md)
+- art.net SimCity archive (manual, transcripts, screenshots, announcement): [art net simcity archive](../art-net-simcity-archive/README.md)
+- Multiplayer UI exposition: [multiplayer simcity ui network · article](../multiplayer-simcity-ui-network/article.md)
 - Open-sourcing SimCity (Medium): https://medium.com/@donhopkins/open-sourcing-simcity-58470a275446
 - Chaim Gingold — *Building SimCity* (MIT Press, 2024)
-- Guru / SC3K 3D context (why Maxis needed EA): [`../2026-simcity-3000-3d-preservation/`](../2026-simcity-3000-3d-preservation/README.md)
+- Guru / SC3K 3D context (why Maxis needed EA): [2026 simcity 3000 3d preservation](../2026-simcity-3000-3d-preservation/README.md)
 - Provenance (still live): http://www.art.net/~hopkins/Don/simcity/simcitynet.html
 
 ---
 
 ## Gaps
 
-- [x] DUX/Don + DUX/Maxis contracts — [`characters/don-hopkins/career/contracts/`](../../../../don-hopkins/career/contracts/README.md)
+- [x] DUX/Don + DUX/Maxis contracts — [contracts](../../../../don-hopkins/career/contracts/README.md)
 - [x] EA↔OLPC PDF — `olpc-ea-contract.pdf` in contracts/
 - [x] Transmogrifier **EA Tools EULA** — [`transmogrifier-ea-tools-eula.txt`](../../../../don-hopkins/career/contracts/transmogrifier-ea-tools-eula.txt)
 - [x] Jan–May 2007 OLPC threads → [status](../2007-01-10-simcity-for-olpc-status/README.md) · [QA VM](../2007-01-29-olpc-simcity-ea-qa-vm/README.md) · [pre-contract QA](../2007-05-03-olpc-simcity-pre-contract-qa/README.md)

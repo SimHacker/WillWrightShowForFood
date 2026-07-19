@@ -4,7 +4,7 @@
 
 Will Wright's January 23, 1997 `Motive.c` prototype — the earliest published glimpse of the Sims motive/needs loop.
 
-*Parent feed:* [`../README.md`](../README.md) · *1996 talk thread:* [Winograd centerpiece](../1996-04-26-winograd-interfacing-to-microworlds/README.md) · *Jamie Doornbos show:* [building-the-sims](../../../../repo-shows/building-the-sims/README.md)
+*Parent feed:* [README](../README.md) · *1996 talk thread:* [Winograd centerpiece](../1996-04-26-winograd-interfacing-to-microworlds/README.md) · *Jamie Doornbos show:* [building-the-sims](../../../../repo-shows/building-the-sims/README.md)
 
 ## URLs
 
@@ -40,7 +40,7 @@ Mirrored from [donhopkins.com/home/images/Sims/](https://www.donhopkins.com/home
 - [2006 TheSimsAITest sketch](../2006-11-06-thesims-ai-test/README.md) — outsider C# four-motive decay loop (contrast piece)
 - [1998 steering committee demo](../1998-06-04-sims-steering-committee-demo/README.md) — Edith / SimAntics on camera
 - [1999 alpha prototype](../1999-01-06-sims-alpha-prototype/README.md) — shipped pivot
-- [`characters/jamie-doornbos/`](../../../jamie-doornbos/README.md) — SimAntics architect
+- [jamie doornbos](../../../jamie-doornbos/README.md) — SimAntics architect
 - [Winograd image #157 — kissing tree](../1996-04-26-winograd-interfacing-to-microworlds/images/157-early-simantics-behavior-tree-for-kissing-from-the-sims-stee.png)
 
 ## TODO

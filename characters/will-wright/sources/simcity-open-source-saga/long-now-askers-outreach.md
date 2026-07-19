@@ -17,7 +17,7 @@ Stewart Brand (verbatim on recording): *"dan ancona and a mark live"* — two pe
 
 ## Dan Ancona — identified (high confidence) · **contact now**
 
-**Character room:** [`characters/dan-ancona/`](../../../../dan-ancona/) · **Invitation:** [`invitation.md`](../../../../dan-ancona/invitation.md) · **Show seed:** [`dan-ancona-long-now.yml`](../../../../../../repo-shows/dan-ancona-long-now.yml)
+**Character room:** [dan ancona](../../../../dan-ancona/) · **Invitation:** [`invitation.md`](../../../../dan-ancona/invitation.md) · **Show seed:** [`dan-ancona-long-now.yml`](../../../../../../repo-shows/dan-ancona-long-now.yml)
 
 **Why this is the right Dan:** UCSB **Alexandria Digital Library / ADEPT** researcher (GIS + visualization, 2002–2004); academic email `ancona@alexandria.ucsb.edu` / `da@alexandria.ucsb.edu`. The SimCity question is exactly his lane — **political assumptions in rule-based spatial simulations**.
 
@@ -91,9 +91,9 @@ afterward?
 
 ## Show hooks
 
-- **TicketPR origin story** — proto–TicketPR before git existed ([process/ticket-pr.md](../../../../process/ticket-pr.md))
+- **TicketPR origin story** — proto–TicketPR before git existed ([ticket pr](../../../../process/ticket-pr.md))
 - **Dan guest beat** — GIS visualization → democracy sims → procedural rhetoric (Ian Bogost lane)
-- **Dan Ancona room** — [`characters/dan-ancona/`](../../../../dan-ancona/) · send_now invitation
+- **Dan Ancona room** — [dan ancona](../../../../dan-ancona/) · send_now invitation
 - **Reunion episode** — Dan + Mark (if found) + Don + Will clip reaction — "you asked for it, you got it"
 
 ↑ [simcity-open-source-saga](README.md) · [Long Now source](../2006-06-26-long-now-playing-with-time-eno-wright/README.md)

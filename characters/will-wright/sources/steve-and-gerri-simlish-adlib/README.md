@@ -6,7 +6,7 @@
 The Sims** — the same "Foreign Poet" energy that became **Simlish**. Don Hopkins preserved the
 session as audio on his catalog; this bundle indexes it for the show.
 
-- **Audio (repo):** [`../../media/steve-and-gerri-simlish-adlib.wav`](../../media/steve-and-gerri-simlish-adlib.wav)
+- **Audio (repo):** [steve and gerri simlish adlib](../../media/steve-and-gerri-simlish-adlib.wav)
 - **Original URL:** https://donhopkins.com/home/catalog/sounds/Steve_And_Gerri.wav
 - **HN citation:** [Don Hopkins on NaturalSpeech / TTS thread](https://news.ycombinator.com/item?id=31430802) (May 19, 2022)
 - **Transcript (draft):** [`TRANSCRIPT-DRAFT.md`](TRANSCRIPT-DRAFT.md) — Whisper + human proofread pending
@@ -20,7 +20,7 @@ session as audio on his catalog; this bundle indexes it for the show.
   personality meters, disasters, and bugs as prompts.
 - **Not SimAntics programming** — voice/session artifact, not Edith. Thematic link: objects advertise
   behavior; **voice carries feeling** while icons/thoughts carry legible meaning.
-- **Show segment:** pair with [`schemas/language-simlish.yml`](../../../../schemas/language-simlish.yml),
+- **Show segment:** pair with [language simlish](../../../../schemas/language-simlish.yml),
   Claire Curtin / Jerry Martin guest arcs, [`sims-play-along-narration`](../../../../repo-shows/will-wright-premiere/sims-play-along-narration.yml),
   and the [**Performance Space**](../../../../process/performance-space/README.md) design doc.
 
@@ -42,4 +42,4 @@ character** on air. See [`RULES-AND-ETHICS.md`](../../../../process/RULES-AND-ET
 | [`steve-and-gerri-simlish-adlib.vtt`](steve-and-gerri-simlish-adlib.vtt) | Machine timestamps (Whisper) |
 | [`steve-and-gerri-simlish-adlib.txt`](steve-and-gerri-simlish-adlib.txt) | Raw Whisper text |
 
-Audio lives in [`../../media/steve-and-gerri-simlish-adlib.wav`](../../media/steve-and-gerri-simlish-adlib.wav) per character-colocation.
+Audio lives in [steve and gerri simlish adlib](../../media/steve-and-gerri-simlish-adlib.wav) per character-colocation.

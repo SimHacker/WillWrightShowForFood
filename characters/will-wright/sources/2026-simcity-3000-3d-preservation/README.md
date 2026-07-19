@@ -44,8 +44,8 @@ Full highlight list in [`article.md`](article.md). Whole document in [`guru-simc
 
 ## Related
 
-- [`../simcity-open-source-saga/`](../simcity-open-source-saga/README.md) — EA deal enabled Sims + 2D SC3K
-- [`../../../luc-barthelet/`](../../../luc-barthelet/README.md) — announced 2D pivot to press
+- [simcity open source saga](../simcity-open-source-saga/README.md) — EA deal enabled Sims + 2D SC3K
+- [luc barthelet](../../../luc-barthelet/README.md) — announced 2D pivot to press
 - MicropolisCore — [`simcity-2013-willmott-hopkins-correspondence.md`](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/simcity-2013-willmott-hopkins-correspondence.md) (§4 SC3K / Guru)
 
 ---

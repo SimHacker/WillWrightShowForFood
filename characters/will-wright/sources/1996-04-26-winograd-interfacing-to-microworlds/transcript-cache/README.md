@@ -1,7 +1,7 @@
 # Transcript cache — YouTube auto-captions (reference only)
 
 **Do not quote for the show.** The authoritative transcript is Don's hand-proofread
-[`../transcript.md`](../transcript.md). Use this cache to **verify timestamps**, grep
+[transcript](../transcript.md). Use this cache to **verify timestamps**, grep
 for cut points, and diff against the perfected text.
 
 ## Files
@@ -28,4 +28,4 @@ Then regenerate timeline TSV from JSON3 (see `PROVENANCE.yml` → `regenerate_ti
 Auto-captions garble speaker turns in Q&A (e.g. merge student + Will at ~1:08:33).
 Don's `transcript.md` fixes attribution, spelling, and duplicate-timestamp artifacts.
 
-↑ [`../transcript.md`](../transcript.md) · [`../short-form-clips.yml`](../short-form-clips.yml)
+↑ [transcript](../transcript.md) · [short form clips](../short-form-clips.yml)

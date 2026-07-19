@@ -32,7 +32,7 @@ Apply the **same driver track** to:
 - End credits roll
 
 Result: graphics wobble like **Cambridge University Library telecine** at the head and tail of the
-1969 films — not sharp vector overlays on top. Spec: [`../../../../process/post-production/cambridge-telecine-jiggle.yml`](../../../../process/post-production/cambridge-telecine-jiggle.yml).
+1969 films — not sharp vector overlays on top. Spec: [cambridge telecine jiggle](../../../../process/post-production/cambridge-telecine-jiggle.yml).
 
 ## Not the original film
 
@@ -46,5 +46,5 @@ http://bitsavers.trailing-edge.com/pdf/dec/graphics/7-13_340_Display_Programming
 
 ## Related evidence
 
-- [`../../../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md`](../../../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md)
+- [cambridge films flight of the bumblebee](../../../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md)
 - [`article.md`](article.md)

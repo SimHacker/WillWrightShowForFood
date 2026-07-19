@@ -32,12 +32,12 @@ We sold multi player "SimCityNet" as a commercial product online and by mail ord
 
 DUX handled selling the license keys by credit card over the phone and mail order, and I did all the user interface design, programming, documentation, installation, CD layout, Internet publication, online promotion, demos, etc.
 
-*(2026 clarification — Don: primary channel was UUNET public FTP + phone unlock via 800#, announced on Usenet; no DUX website yet. CD (e.g. Sun Catalyst with HyperLook) was secondary. See [`../multiplayer-simcity-ui-network/article.md`](../multiplayer-simcity-ui-network/article.md#simcitynet--what-shipped).)*
+*(2026 clarification — Don: primary channel was UUNET public FTP + phone unlock via 800#, announced on Usenet; no DUX website yet. CD (e.g. Sun Catalyst with HyperLook) was secondary. See [multiplayer simcity ui network · article · simcitynet  what shipped](../multiplayer-simcity-ui-network/article.md#simcitynet--what-shipped).)*
 I've demonstrated the multi player user interface at various trade shows, academic conferences like SIGCHI InterCHI'93 Interactive Experience, and to the public at Interval Research's "Electric Carnival" at Lollapalooza.
 
 SimCityNet: a Cooperative Multi User City Simulation (InterCHI'93 Interactive Experience Proposal)
 http://www.art.net/~hopkins/Don/simcity/simcitynet.html
-*(in-repo: [`../1993-interchi-simcitynet-proposal/`](../1993-interchi-simcitynet-proposal/README.md) · [`../art-net-simcity-archive/`](../art-net-simcity-archive/README.md))*
+*(in-repo: [1993 interchi simcitynet proposal](../1993-interchi-simcitynet-proposal/README.md) · [art net simcity archive](../art-net-simcity-archive/README.md))*
 
 In 1997, Will invited me to work on The Sims at Maxis with his small team in San Mateo.
 I developed the character animation system, visual programming tools, house editing tools, user interface and pie menus (of course).

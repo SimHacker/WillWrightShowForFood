@@ -49,7 +49,7 @@ rights leader Floyd McKissick built on former plantation land in the seventies, 
 surprisingly funded and Jesse Helms smeared to death. A city built for souls to thrive, foreclosed
 by power — ours is GPL-3, so nobody can foreclose it. *(Vox video link on screen:
 [the whole story](https://www.youtube.com/watch?v=R2karaKGgkk); house rule and history:
-[`../../../../repo-shows/will-wright-premiere/soul-city-namesake.md`](../../../../repo-shows/will-wright-premiere/soul-city-namesake.md).)*
+[soul city namesake](../../../../repo-shows/will-wright-premiere/soul-city-namesake.md).)*
 Characters as
 portable soul-files that travel: a Sim visits, meets a character from another game entirely, and
 what happens there — friendship, genetics, pregnancy — renders back into each home game as plain
@@ -126,7 +126,7 @@ onboarding card: github.com/SimHacker — say hi.)*
 *Production notes: shoot in one take if possible; every section break above is a legal cut point
 and insertion slot (clips of everything named get spliced in later — SimFaux style, driven by the
 YAML metadata). The original layer is the phone call itself — voice only, unrecorded, off the
-record; this script and [`../01-mic-check/PITCH.md`](../01-mic-check/PITCH.md) are its
+record; this script and [PITCH](../01-mic-check/PITCH.md) are its
 reenactments, on camera and on the page. House-style precedent: the CAM6 demo
 (https://www.youtube.com/watch?v=LyLMHxRNuck) — addressed hard-core to Norm Margolus, explained
 for everyone, ending by performing what it explained.*

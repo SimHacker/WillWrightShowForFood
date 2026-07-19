@@ -1,6 +1,6 @@
 # Will Wright — media
 
-*Sniff:* [`GLANCE.yml`](GLANCE.yml) · [`CARD.yml`](CARD.yml) · *Guest hub:* [`../README.md`](../README.md)
+*Sniff:* [`GLANCE.yml`](GLANCE.yml) · [`CARD.yml`](CARD.yml) · *Guest hub:* [README](../README.md)
 
 ## Navigation
 
@@ -64,7 +64,7 @@ projector** (giant ant shadows on your ceiling). Stupid Fun Club badge on box. D
 Don's screenshot gallery: **HyperLook on Sun** · **OLPC XO** · **HAR** constructionist demo ·
 **PacBot** Python plug-in · Dutch **taartmenu** · Facebook app.
 
-[`../../don-hopkins/media/micropolis-gallery/`](../../don-hopkins/media/micropolis-gallery/INDEX.yml)
+[INDEX](../../don-hopkins/media/micropolis-gallery/INDEX.yml)
 
 ![PacBot on road — Micropolis](../../don-hopkins/media/micropolis-gallery/openlaszlo-pacbot-on-road-nl.png)
 
@@ -127,7 +127,7 @@ Gag **warning sticker**. [`sims-warning-sticker.png`](sims-warning-sticker.png)
 
 **Stephen Kearin & Gerri Lawlor** improvising English narration over an early Sims build (~2:31).
 Foreign Poet session that foreshadowed Simlish. Source bundle:
-[`../sources/steve-and-gerri-simlish-adlib/`](../sources/steve-and-gerri-simlish-adlib/README.md) ·
+[steve and gerri simlish adlib](../sources/steve-and-gerri-simlish-adlib/README.md) ·
 [`TRANSCRIPT-DRAFT.md`](../sources/steve-and-gerri-simlish-adlib/TRANSCRIPT-DRAFT.md) (proofread pending)
 
 | File | Notes |
@@ -166,7 +166,7 @@ family (not BattleBots™ TV).
 
 Don's visit to **Ocean Quigley** and others at the **Maxis** office in **Emeryville** — Suite 6,
 Maxis logo on the glass, **SimCity** poster inside. *SIX AM spelled backwards!*
-[`../../don-hopkins/media/maxis-emeryville/maxis-suite-6-door.yml`](../../don-hopkins/media/maxis-emeryville/maxis-suite-6-door.yml)
+[maxis suite 6 door](../../don-hopkins/media/maxis-emeryville/maxis-suite-6-door.yml)
 
 ---
 
@@ -216,7 +216,7 @@ Longer scrolls with many figures — files sit alongside this README:
 
 ---
 
-See also: [`../CHARACTER.yml`](../CHARACTER.yml) · [`../../repo-shows/will-wright-premiere/README.md`](../../repo-shows/will-wright-premiere/README.md)
+See also: [CHARACTER](../CHARACTER.yml) · [will wright premiere](../../repo-shows/will-wright-premiere/README.md)
 
 ---
 

@@ -1,7 +1,7 @@
 # SimCity Manual (DUX Unix / HyperLook edition)
 
 *Source index: [art.net manual/](http://www.art.net/~hopkins/Don/simcity/manual/index.html)*  
-*Hub: [`../README.md`](../README.md)*
+*Hub: [README](../README.md)*
 
 | Chapter | File |
 |---------|------|

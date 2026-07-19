@@ -20,9 +20,9 @@ SimCity on OLPC XO-1 (Dec 2006): **[`images/SLIDESHOW.md`](images/SLIDESHOW.md)*
 
 ## Related
 
-- [`../simcity-open-source-saga/`](../simcity-open-source-saga/README.md) — narrative timeline + pitch excerpts
-- [`../2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml`](../2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml) — `open-source-simcity-audience-question` clip
-- [`../2006-12-simcity-olpc-introducing-the-players/`](../2006-12-simcity-olpc-introducing-the-players/README.md) — curated cast + Sugar roadmap article
+- [simcity open source saga](../simcity-open-source-saga/README.md) — narrative timeline + pitch excerpts
+- [short form clips](../2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml) — `open-source-simcity-audience-question` clip
+- [2006 12 simcity olpc introducing the players](../2006-12-simcity-olpc-introducing-the-players/README.md) — curated cast + Sugar roadmap article
 
 ---
 

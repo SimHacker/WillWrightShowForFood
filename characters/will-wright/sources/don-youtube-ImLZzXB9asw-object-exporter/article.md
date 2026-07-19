@@ -28,9 +28,9 @@ https://donhopkins.com/home/archive/maxscript/maxis-maxscript.ms.txt
 
 ## Related
 
-- [Character animation exporter](https://www.youtube.com/watch?v=LmB7Q6wSQ9Y) — [`../don-youtube-LmB7Q6wSQ9Y-character-animation-exporter/`](../don-youtube-LmB7Q6wSQ9Y-character-animation-exporter/README.md)
+- [Character animation exporter](https://www.youtube.com/watch?v=LmB7Q6wSQ9Y) — [don youtube LmB7Q6wSQ9Y character animation exporter](../don-youtube-LmB7Q6wSQ9Y-character-animation-exporter/README.md)
 - [Medium — Automating The Sims Character Animation Pipeline with MaxScript](https://medium.com/@donhopkins/automating-the-sims-character-animation-pipeline-with-maxscript-bc490787d7a2)
 - [Tools bundle demo (Transmogrifier + Simplifier)](../don-youtube-imu1v3GecB8-simplifier-tools-demo/README.md)
-- [`../2004-01-08-showntell-activex-preview/`](../2004-01-08-showntell-activex-preview/README.md)
+- [2004 01 08 showntell activex preview](../2004-01-08-showntell-activex-preview/README.md)
 
 *

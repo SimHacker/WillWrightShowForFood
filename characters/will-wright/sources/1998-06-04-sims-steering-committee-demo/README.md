@@ -29,7 +29,7 @@ the SimAntics live-programming/debugging environment switched on.**
 ## Relationship to the first show (read this first)
 
 The **1996 Winograd talk remains the single centerpiece** of the kickoff Will show
-(`../1996-04-26-winograd-interfacing-to-microworlds/`) — this demo does **not** displace it. It's a
+([1996 04 26 winograd interfacing to microworlds](../1996-04-26-winograd-interfacing-to-microworlds/)) — this demo does **not** displace it. It's a
 distinct primary source, best used for a **Sims post-mortem / Edith deep-dive** segment: the 1996
 talk *previews* Dollhouse and the advertisement-driven object idea; this 1998 build *shows that idea
 running* in Edith, two years before release.
@@ -94,7 +94,7 @@ Don's own build, his own upload, his own narration — a faithful primary source
 paraphrase). The Edith credits and on-screen text are quoted/cleaned from the video; auto-caption
 garbles (e.g. "James Gore boss" → Jamie Doornbos, "air Bowman" → Eric Bowman, "Jim backrest" → Jim
 Mackraz) are corrected against the known Sims team and the About box. Using it in a show falls within
-the show's consent flow ([`../../../invitation.md`](../../../invitation.md)).
+the show's consent flow ([invitation](../../../invitation.md)).
 
 ## See also
 

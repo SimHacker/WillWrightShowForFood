@@ -1,7 +1,7 @@
 # Pre-show sessions — one-on-one recordings with Will (and friends)
 
 Artifact home for the short, focused recordings: sound checks, discussions, intros,
-chats. [`../videos.yml`](../videos.yml) is the INDEX — names, one-liners, pointers.
+chats. [videos](../videos.yml) is the INDEX — names, one-liners, pointers.
 The RICH CONTENT lives here: each session directory holds its `SESSION.yml` (full
 beats, discussion seeds, takes log, published links) plus transcripts, notes, and
 excerpt manifests as they accumulate.

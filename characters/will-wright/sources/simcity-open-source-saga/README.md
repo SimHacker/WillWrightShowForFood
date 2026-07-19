@@ -1,6 +1,6 @@
 # SimCity open source saga — OLPC primary sources
 
-*Sniff:* [`CARD.yml`](CARD.yml) · [`GLANCE.yml`](GLANCE.yml) · *Parent feed:* [`../README.md`](../README.md) · *License chain:* [`../maxis-licenses-chain-of-custody/`](../maxis-licenses-chain-of-custody/README.md)
+*Sniff:* [`CARD.yml`](CARD.yml) · [`GLANCE.yml`](GLANCE.yml) · *Parent feed:* [README](../README.md) · *License chain:* [maxis licenses chain of custody](../maxis-licenses-chain-of-custody/README.md)
 
 How SimCity became Micropolis — email threads, Don's December 2006 pitch letter, SimCityNet UI
 excerpts, and the cast who made OLPC clearance happen. **Public craft** — the story belongs here.
@@ -22,7 +22,7 @@ this first, then branch to threads below.
 
 ## Verbatim email archive (in-repo, Jul 2026)
 
-**[`../2006-11-13-simcity-olpc-email-thread/`](../2006-11-13-simcity-olpc-email-thread/README.md)** — full Nov–Dec 2006 forwarded-mail thread:
+**[2006 11 13 simcity olpc email thread](../2006-11-13-simcity-olpc-email-thread/README.md)** — full Nov–Dec 2006 forwarded-mail thread:
 
 | Part | Coverage |
 |------|----------|
@@ -76,7 +76,7 @@ gave rule access; **very open to the idea**.
 | **2006-11-18** | 145 days | Will → Don: "Let me check into it. I support the idea wholeheartedly." |
 | **2006-12-01** | 158 days (~5 mo 5 d) | Don's [pitch letter to Rod Humble](article.md) → clearance arc → **Micropolis** |
 
-**Outreach:** [long-now-askers-outreach.md](long-now-askers-outreach.md) · Dan → [`characters/dan-ancona/`](../../../../dan-ancona/) (**send_now**); Mark Live still unknown.
+**Outreach:** [long-now-askers-outreach.md](long-now-askers-outreach.md) · Dan → [dan ancona](../../../../dan-ancona/) (**send_now**); Mark Live still unknown.
 
 *Gilmore's email is the outside spark; the Long Now Q&A is the witness beat Don had already heard Will affirm on stage.*
 

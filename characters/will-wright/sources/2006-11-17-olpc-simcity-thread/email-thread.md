@@ -45,7 +45,7 @@ I don't know why Lucy dropped the ball, cut me off, and never let me know to sto
 
 Educational Multi Player SimCity for Linux Proposal:  
 http://www.donhopkins.com/drupal/node/24  
-*(Drupal dead — use IA: https://web.archive.org/web/20110611185928/http://www.donhopkins.com/drupal/node/24 · Don on HN: https://news.ycombinator.com/item?id=38160682 · in-repo: [`../2004-02-07-educational-multiplayer-simcity-linux/`](../2004-02-07-educational-multiplayer-simcity-linux/README.md))*
+*(Drupal dead — use IA: https://web.archive.org/web/20110611185928/http://www.donhopkins.com/drupal/node/24 · Don on HN: https://news.ycombinator.com/item?id=38160682 · in-repo: [2004 02 07 educational multiplayer simcity linux](../2004-02-07-educational-multiplayer-simcity-linux/README.md))*
 
 -Don
 

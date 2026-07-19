@@ -16,10 +16,10 @@ still soft) asks a related question about **Spore** and generative politics. Don
 
 | Receipt | Where |
 |---------|--------|
-| Event room (summary, captions, transcript cache) | [`../2006-06-26-long-now-playing-with-time-eno-wright/`](../2006-06-26-long-now-playing-with-time-eno-wright/README.md) |
-| Clip card `open-source-simcity-audience-question` | [`../2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml`](../2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml) |
-| Askers dossier (Ancona ID + Mark Live mystery) | [`../simcity-open-source-saga/long-now-askers-outreach.md`](../simcity-open-source-saga/long-now-askers-outreach.md) |
-| Dan Ancona guest room | [`../../../dan-ancona/`](../../../dan-ancona/README.md) |
+| Event room (summary, captions, transcript cache) | [2006 06 26 long now playing with time eno wright](../2006-06-26-long-now-playing-with-time-eno-wright/README.md) |
+| Clip card `open-source-simcity-audience-question` | [short form clips](../2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml) |
+| Askers dossier (Ancona ID + Mark Live mystery) | [long now askers outreach](../simcity-open-source-saga/long-now-askers-outreach.md) |
+| Dan Ancona guest room | [dan ancona](../../../dan-ancona/README.md) |
 
 After the talk, Will apparently suspected Don (the ask was a common one, and Don was right
 there). Don's denial was deliberate comedy — he already knew, from the **2002 Lucy Bradshaw /
@@ -28,11 +28,11 @@ likely go nowhere.
 
 | Receipt | Where |
 |---------|--------|
-| Don's educational proposal (in-repo MD republish of the Drupal essay) | [`../2004-02-07-educational-multiplayer-simcity-linux/article.md`](../2004-02-07-educational-multiplayer-simcity-linux/article.md) |
+| Don's educational proposal (in-repo MD republish of the Drupal essay) | [2004 02 07 educational multiplayer simcity linux · article](../2004-02-07-educational-multiplayer-simcity-linux/article.md) |
 | Same essay — Drupal dead; use IA | [Wayback 2011-06-11](https://web.archive.org/web/20110611185928/http://www.donhopkins.com/drupal/node/24) · Don cited this IA URL on [HN 38160682](https://news.ycombinator.com/item?id=38160682) (2023-11-06) |
-| Columbia OPTIMUS NSF proposal — digest | [`../../../upmanu-lall/sources/nsf-2002-proposal-digest.md`](../../../upmanu-lall/sources/nsf-2002-proposal-digest.md) |
-| OPTIMUS originals (PDF / DOC) | [`../../../upmanu-lall/media/nsf2002engeduc_final.pdf`](../../../upmanu-lall/media/nsf2002engeduc_final.pdf) · [`nsf2002engeduc-sum_final.pdf`](../../../upmanu-lall/media/nsf2002engeduc-sum_final.pdf) · [`nsf2002engeduc-sum.doc`](../../../upmanu-lall/media/nsf2002engeduc-sum.doc) |
-| Lucy Bradshaw (portrayal room — EA/Maxis education gate) | [`../../../lucy-bradshaw/`](../../../lucy-bradshaw/README.md) |
+| Columbia OPTIMUS NSF proposal — digest | [nsf 2002 proposal digest](../../../upmanu-lall/sources/nsf-2002-proposal-digest.md) |
+| OPTIMUS originals (PDF / DOC) | [nsf2002engeduc final](../../../upmanu-lall/media/nsf2002engeduc_final.pdf) · [`nsf2002engeduc-sum_final.pdf`](../../../upmanu-lall/media/nsf2002engeduc-sum_final.pdf) · [`nsf2002engeduc-sum.doc`](../../../upmanu-lall/media/nsf2002engeduc-sum.doc) |
+| Lucy Bradshaw (portrayal room — EA/Maxis education gate) | [lucy bradshaw](../../../lucy-bradshaw/README.md) |
 | **Written receipt of the Long Now joke** — PS in Don → Will, 19 Nov 2006 | [§ below in this file](#don-hopkins--will-wright-19-nov-2006) |
 
 **~13 November 2006 — this thread.** John Gilmore emails Don about **OLPC** (Mary Lou Jepsen's
@@ -48,7 +48,7 @@ what reopens the door. Pitch to Rod Humble follows; EA eventually ships **Microp
 | Don → Rod pitch letter (2 Dec 2006) | [`don-pitch-letter-2006-12-02.md`](don-pitch-letter-2006-12-02.md) |
 | EA clearance / DUX contracts (Part 2) | [`02-ea-clearance-dec-2006.md`](02-ea-clearance-dec-2006.md) |
 | OLPC XO / Sugar (Part 3) | [`03-olpc-port-and-sugar-dec-2006.md`](03-olpc-port-and-sugar-dec-2006.md) |
-| Saga narrative timeline | [`../simcity-open-source-saga/`](../simcity-open-source-saga/README.md) |
+| Saga narrative timeline | [simcity open source saga](../simcity-open-source-saga/README.md) |
 
 **Read order:** Long Now clip → *this Part 1* → pitch letter → Parts 2–3 → Micropolis release.
 
@@ -131,9 +131,9 @@ Verbatim from Don Hopkins forwarded-mail archive. Nested forwards preserved wher
 **Live links for URLs in this letter** (`http://www.donhopkins.com/drupal/node/24` is dead — keep it only as historical quote text):
 
 - **Preferred:** [Internet Archive 2011-06-11](https://web.archive.org/web/20110611185928/http://www.donhopkins.com/drupal/node/24) — same URL Don posted on [HN 38160682](https://news.ycombinator.com/item?id=38160682) (2023-11-06)
-- In-repo republish: [`../2004-02-07-educational-multiplayer-simcity-linux/`](../2004-02-07-educational-multiplayer-simcity-linux/README.md)
-- Columbia OPTIMUS NSF PDFs: [`../../../upmanu-lall/media/`](../../../upmanu-lall/media/) · digest [`../../../upmanu-lall/sources/nsf-2002-proposal-digest.md`](../../../upmanu-lall/sources/nsf-2002-proposal-digest.md)
-- Long Now ask (the PS refers to): [YouTube t=3929](https://youtu.be/Dfc-DQorohc?t=3929) · [`../2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml`](../2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml) (`open-source-simcity-audience-question`)
+- In-repo republish: [2004 02 07 educational multiplayer simcity linux](../2004-02-07-educational-multiplayer-simcity-linux/README.md)
+- Columbia OPTIMUS NSF PDFs: [media](../../../upmanu-lall/media/) · digest [nsf 2002 proposal digest](../../../upmanu-lall/sources/nsf-2002-proposal-digest.md)
+- Long Now ask (the PS refers to): [YouTube t=3929](https://youtu.be/Dfc-DQorohc?t=3929) · [short form clips](../2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml) (`open-source-simcity-audience-question`)
 
 ---
 
@@ -145,4 +145,4 @@ Verbatim from Don Hopkins forwarded-mail archive. Nested forwards preserved wher
 | John Gilmore emails Don about OLPC | ~13 Nov 2006 | **140 days** |
 | Don's pitch letter to Rod Humble | 1 Dec 2006 | **158 days** |
 
-Clip tag: [`../2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml`](../2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml) (`open-source-simcity-audience-question`).
+Clip tag: [short form clips](../2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml) (`open-source-simcity-audience-question`).
