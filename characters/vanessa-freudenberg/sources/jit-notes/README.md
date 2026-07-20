@@ -6,6 +6,8 @@
 Preserved here exactly as she published them, so they survive even if squeak.js.org or the
 GitHub wiki ever goes away. Full thread context in
 [`../hn-thread-2023-croquet-jasmine.md`](../hn-thread-2023-croquet-jasmine.md).
+Essay tying these notes to her broader philosophy:
+[Vanessa's philosophy (MOOLLM)](https://github.com/SimHacker/moollm/blob/main/designs/vanessa-freudenberg-philosophy.md).
 
 ## What these are
 

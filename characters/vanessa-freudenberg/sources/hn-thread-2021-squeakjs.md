@@ -173,4 +173,5 @@ throughout. This is the comment Vanessa replied to.)*
 
 Related sources in this directory: [README.md](README.md) (provenance index),
 [Ingalls-2020-Evolution-of-Smalltalk-Zoo-corrected.pdf](Ingalls-2020-Evolution-of-Smalltalk-Zoo-corrected.pdf)
-(the paper she asked us to cite).
+(the paper she asked us to cite),
+[Vanessa's philosophy (MOOLLM)](https://github.com/SimHacker/moollm/blob/main/designs/vanessa-freudenberg-philosophy.md).
