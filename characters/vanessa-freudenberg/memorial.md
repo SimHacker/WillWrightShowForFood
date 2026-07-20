@@ -27,4 +27,9 @@ and **Don Hopkins** (host). Warm invitations are going out; linked episodes or o
 
 Show arc: [`../../repo-shows/remembering-vanessa-freudenberg.yml`](../../repo-shows/remembering-vanessa-freudenberg.yml)
 
+Technical tribute (target JS not WASM, hybrid GC, Self→V8 lineage, MOOLLM relevance):
+[Vanessa's philosophy (MOOLLM)](https://github.com/SimHacker/moollm/blob/main/designs/vanessa-freudenberg-philosophy.md).
+Prestoration case (memorial edition PDF, provenance, ethics):
+[prestoration/](https://github.com/SimHacker/moollm/tree/main/designs/prestoration).
+
 *This is a collaborative memorial, not a signed work. Those who knew Vanessa — family, friends, and colleagues — are warmly invited to edit, correct, and add their own memories, documents, and stories whenever they're ready.*

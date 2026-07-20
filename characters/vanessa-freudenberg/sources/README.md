@@ -102,6 +102,11 @@ runnable `jit-perf.js` benchFib mockup with its harness page. Context mapping, i
 caching, non-local returns via exceptions, stack capture — the design that became the
 SqueakJS v2 effort.
 
+## Technical tribute & prestoration (MOOLLM)
+
+- [Vanessa's philosophy](https://github.com/SimHacker/moollm/blob/main/designs/vanessa-freudenberg-philosophy.md) — target JavaScript not WebAssembly, hybrid GC, Self→V8 lineage; links memorial edition and all preserved sources above
+- [Prestoration](https://github.com/SimHacker/moollm/tree/main/designs/prestoration) — how the memorial edition PDF was made, with provenance and ethics
+
 ## Where her name is already correct
 
 - [DLS Most Notable Paper Award 2024](https://dynamic-languages-symposium.org/index.html) — credits Vanessa Freudenberg

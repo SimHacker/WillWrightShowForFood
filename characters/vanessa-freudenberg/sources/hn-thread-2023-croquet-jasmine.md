@@ -255,3 +255,4 @@ Don reposted and extended this exchange twice, keeping it in circulation:
 - [`Freudenberg-2014-SqueakJS-memorial-edition.pdf`](Freudenberg-2014-SqueakJS-memorial-edition.pdf) — the paper under discussion
 - [`hn-thread-2021-squeakjs.md`](hn-thread-2021-squeakjs.md) — the 2021 thread where she asked not to be deadnamed
 - [`jit-notes/`](jit-notes/) — the brain dumps she pointed to in this thread
+- [Vanessa's philosophy (MOOLLM)](https://github.com/SimHacker/moollm/blob/main/designs/vanessa-freudenberg-philosophy.md) — essay tying this thread, the paper, and MOOLLM together
