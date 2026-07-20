@@ -79,6 +79,29 @@ a single screenful.
   Reviving Smalltalk-78 papers, because citations follow ACM's uncorrected version of
   record — the same gap the ACM petition (above) would close
 
+## The 2023 Croquet Jasmine thread — her VM philosophy, in her own words
+
+[`hn-thread-2023-croquet-jasmine.md`](hn-thread-2023-croquet-jasmine.md) — the December
+2023 HN exchange between Don and Vanessa on the *Croquet: Live, network-transparent 3D
+gaming* story: her Croquet Jasmine resurrection (the version Alan Kay used for his 2004
+Turing Award lecture), the SqueakJS hybrid GC, why she chose JavaScript over WebAssembly
+("we would lose a lot in readability, flexibility, and to be honest, fun"), Self's dynamic
+deoptimization, and the Lars Bak lineage from Self to V8. Includes the X thread with Dan
+Ingalls's "Yay Vanessa!" and Don's later HN recaps
+([40917424](https://news.ycombinator.com/item?id=40917424),
+[42133745](https://news.ycombinator.com/item?id=42133745)) that kept it circulating.
+
+## Her JIT brain dumps
+
+[`jit-notes/`](jit-notes/) — the "brain dumps and experiments" she pointed to in that
+thread, preserved verbatim: the main performance notes from
+[squeak.js.org/docs/jit.md.html](https://squeak.js.org/docs/jit.md.html) (March 2021,
+updated November 2023) in both original Markdeep and extracted Markdown, the earlier
+[JIT Ideas wiki page](https://github.com/codefrau/SqueakJS/wiki/JIT-Ideas-...), and the
+runnable `jit-perf.js` benchFib mockup with its harness page. Context mapping, inline
+caching, non-local returns via exceptions, stack capture — the design that became the
+SqueakJS v2 effort.
+
 ## Where her name is already correct
 
 - [DLS Most Notable Paper Award 2024](https://dynamic-languages-symposium.org/index.html) — credits Vanessa Freudenberg
