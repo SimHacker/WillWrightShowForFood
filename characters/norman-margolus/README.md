@@ -39,4 +39,4 @@ of chaos and [Scott Draves](../scott-draves/README.md)'s generative art.
 
 - Show seed: [`repo-shows/norman-margolus/`](../../repo-shows/norman-margolus/README.md)
 - Joint CA show: [Jim Crutchfield](../jim-crutchfield/README.md) · Bridge: [Henry Minsky](../henry-minsky/README.md)
-- Sources: [MIT CSAIL page](https://people.csail.mit.edu/nhm/) · [Wikipedia](https://en.wikipedia.org/wiki/Norman_Margolus) · *Cellular Automata Machines* (MIT Press, 1987)
+- Sources: [MIT CSAIL page](https://people.csail.mit.edu/nhm/) · [Wikipedia](https://en.wikipedia.org/wiki/Norman_Margolus) · *Cellular Automata Machines* (MIT Press, 1987) — [full book PDF, shared with Norman's permission](sources/README.md)

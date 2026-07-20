@@ -24,7 +24,10 @@ memorial project:
 
 ### Provenance
 
-- Original: `https://freudenbergs.de/vanessa/publications/Freudenberg-2014-SqueakJS.pdf`
+- Original preserved here unmodified as
+  [`Freudenberg-2014-SqueakJS-original.pdf`](Freudenberg-2014-SqueakJS-original.pdf) —
+  primary source, exactly as she published it at
+  `https://freudenbergs.de/vanessa/publications/Freudenberg-2014-SqueakJS.pdf`
   (site currently unreachable), via the
   [Wayback Machine snapshot of 2025-01-19](https://web.archive.org/web/20250119071632/https://freudenbergs.de/vanessa/publications/Freudenberg-2014-SqueakJS.pdf)
 - Original sha256: `a5a91c1d840a772cad2a49d03c045874ab25e0de15af05b2e873e1ef7ebaf11d`
