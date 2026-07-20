@@ -45,6 +45,32 @@ co-authors — Dan Ingalls, Tim Felgentreff, Tobias Pape, Robert Hirschfeld — 
 people to petition, and the HPI co-authors likely still hold the LaTeX source for a proper
 re-typeset. That would be a fitting, permanent memorial act.
 
+## The paper she asked us to cite — in her own words
+
+[`Ingalls-2020-Evolution-of-Smalltalk-Zoo-corrected.pdf`](Ingalls-2020-Evolution-of-Smalltalk-Zoo-corrected.pdf) —
+Dan Ingalls, ***The Evolution of Smalltalk: From Smalltalk-72 through Squeak*** (HOPL IV, 2020),
+in the **updated Smalltalk Zoo edition** Dan published at
+[smalltalkzoo.thechm.org](https://smalltalkzoo.thechm.org/papers/EvolutionOfSmalltalk.pdf).
+
+In November 2021, Don linked the original HOPL version on Hacker News, and **Vanessa replied
+herself** ([codefrau, HN 29125515](https://news.ycombinator.com/item?id=29125515)):
+
+> Dan published an updated version of that paper here:
+> https://smalltalkzoo.thechm.org/papers/EvolutionOfSmalltalk.pdf
+> Would be great if you could cite that one next time. **The main improvement for me is not
+> being deadnamed.** There are other corrections as well.
+
+This comment is a primary source twice over: it documents the corrected edition, and it
+documents *her own wish*, stated publicly — the wish the memorial edition above carries out
+for the one paper that never got the same treatment.
+
+- Downloaded 2026-07-20; sha256: `c8bbbaa9c96f04c16407bc158af849c41efb80ddfe542ab2e059727f6e4896c6`
+- Verified: the Zoo edition's text credits **Vanessa Freudenberg** throughout — the
+  Smalltalk-78 resurrection, SqueakJS, and the acknowledgments
+- Wrinkle: its **reference list still cites her old name** for the 2014 SqueakJS and
+  Reviving Smalltalk-78 papers, because citations follow ACM's uncorrected version of
+  record — the same gap the ACM petition (above) would close
+
 ## Where her name is already correct
 
 - [DLS Most Notable Paper Award 2024](https://dynamic-languages-symposium.org/index.html) — credits Vanessa Freudenberg
