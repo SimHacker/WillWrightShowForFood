@@ -64,6 +64,14 @@ This comment is a primary source twice over: it documents the corrected edition,
 documents *her own wish*, stated publicly — the wish the memorial edition above carries out
 for the one paper that never got the same treatment.
 
+The **complete thread** — including the two parent comments she was replying to (Don's
+appreciation of her hybrid GC design, quoting her paper at length, and his follow-up quoting
+Appendix A.5 of Dan's original HOPL paper) — is preserved verbatim in
+[`hn-thread-2021-squeakjs.md`](hn-thread-2021-squeakjs.md), with parentage verified against
+the HN API. Notably, the parent comment already called her **Vanessa** nine days before her
+reply, while every link and quotation in it still said "Bert" — the version-of-record gap in
+a single screenful.
+
 - Downloaded 2026-07-20; sha256: `c8bbbaa9c96f04c16407bc158af849c41efb80ddfe542ab2e059727f6e4896c6`
 - Verified: the Zoo edition's text credits **Vanessa Freudenberg** throughout — the
   Smalltalk-78 resurrection, SqueakJS, and the acknowledgments
