@@ -4,7 +4,7 @@
 
 **Field:** Smalltalk in the browser — SqueakJS, Croquet/Multisynq, Etoys, Plopp
 
-[Tribute](memorial.md)
+[Tribute](memorial.md) · [Sources](sources/README.md) — incl. the SqueakJS paper, memorial edition with her correct byline
 
 **Memorial mode:** we represent and *discuss* her — never interview or speak as her. **Warmly invited
 discussants:** [Craig Latta](../craig-latta/README.md) (anchor — Caffeine live), [Dan Ingalls](../dan-ingalls/README.md),
