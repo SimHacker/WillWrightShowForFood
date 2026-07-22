@@ -13,6 +13,17 @@ file in [`jit-notes/`](jit-notes/).
 All comment text is verbatim, fetched from the HN Algolia API on 2026-07-20, with parentage
 verified. Formatting (headers, blockquotes) added for readability; words untouched.
 
+**Link redirects (2026-07-20):** Some URLs in the quotes below no longer resolve.
+Those appear in backticks inside blockquotes so they stay verbatim but do not render as
+broken links. Conspicuous **↪ Redirect** notes immediately after affected comments point
+to the [memorial edition](Freudenberg-2014-SqueakJS-memorial-edition.pdf), preserved
+copies, or Wayback. Full mapping: [sources/README.md — Broken link redirects](README.md#broken-link-redirects-hn-preservation).
+
+**Nested quote attributions (2026-07-20):** When Don (or anyone) embeds a quote inside a
+quote, **↪ Nested quotes** notes after the comment map each nested passage to the exact
+location in our preserved sources — memorial PDF page, [`jit-notes/`](jit-notes/), or
+Ingalls PDF. Verbatim HN text is unchanged; attribution is editorial.
+
 ---
 
 ## The plug
@@ -116,7 +127,7 @@ verified. Formatting (headers, blockquotes) added for readability; words untouch
 > battling it out. (Since you can't enumerate "pointers" with JavaScript references by just
 > incrementing them.)
 >
-> https://freudenbergs.de/bert/publications/Freudenberg-2014-SqueakJS.pdf
+> `https://freudenbergs.de/bert/publications/Freudenberg-2014-SqueakJS.pdf`
 >
 > >The fact that SqueakJS represents Squeak objects as plain JavaScript objects and
 > integrates with the JavaScript garbage collection (GC) allows existing JavaScript code to
@@ -129,6 +140,26 @@ verified. Formatting (headers, blockquotes) added for readability; words untouch
 > use the new reference types for that?
 >
 > https://bytecodealliance.org/articles/reference-types-in-wasmtime
+
+**↪ Redirect (2026-07-20):** Don's paper link (`freudenbergs.de/bert/...`) no longer
+resolves — freudenbergs.de is down. **Read the SqueakJS paper here instead:**
+
+- **[Memorial edition](Freudenberg-2014-SqueakJS-memorial-edition.pdf)** — *Vanessa
+  Freudenberg* on the cover; technical content unchanged
+- **[Original as published](Freudenberg-2014-SqueakJS-original.pdf)** — byte-for-byte
+  from her site before it went offline
+- [Wayback snapshot, 2025-01-19](https://web.archive.org/web/20250119071632/https://freudenbergs.de/vanessa/publications/Freudenberg-2014-SqueakJS.pdf)
+
+**↪ Nested quotes (2026-07-20):** Don [38774059](https://news.ycombinator.com/item?id=38774059)
+opens with his own words, then embeds two passages from **Vanessa Freudenberg et al.**,
+*SqueakJS* (DLS 2014) — both on [memorial edition p. 2](Freudenberg-2014-SqueakJS-memorial-edition.pdf#page=2):
+
+| Nested passage in Don's comment | Location in our cache |
+|--------------------------------|------------------------|
+| "The fact that SqueakJS represents Squeak objects as plain JavaScript objects…" | §1 introduction, [p. 2](Freudenberg-2014-SqueakJS-memorial-edition.pdf#page=2) |
+| "a hybrid garbage collection scheme to allow Squeak object enumeration…" | Contributions list (same page), [p. 2](Freudenberg-2014-SqueakJS-memorial-edition.pdf#page=2) |
+
+The WebAssembly question and bytecodealliance link are Don's own.
 
 ## Her answer — the philosophy, in four paragraphs
 
@@ -147,9 +178,12 @@ verified. Formatting (headers, blockquotes) added for readability; words untouch
 > I'd much rather make the SqueakJS JIT produce code that the JavaScript JIT can optimize
 > well. That would potentially give us more speed than even WASM.
 >
-> Peep my brain dumps and experiments at https://squeak.js.org/docs/jit.md.html
+> Peep my brain dumps and experiments at `https://squeak.js.org/docs/jit.md.html`
 
-*Those brain dumps are preserved in [`jit-notes/`](jit-notes/).*
+**↪ Redirect (2026-07-20):** Vanessa's JIT brain dumps — **preserved in
+[`jit-notes/`](jit-notes/)** (Markdeep, Markdown, perf harness). Live mirror still up at
+[squeak.js.org/docs/jit.md.html](https://squeak.js.org/docs/jit.md.html) as of 2026-07-20;
+the directory copy is the durable target.
 
 **[DonHopkins, 2023-12-26](https://news.ycombinator.com/item?id=38774907):**
 
@@ -183,7 +217,15 @@ verified. Formatting (headers, blockquotes) added for readability; words untouch
 > deliver on such idealistic promises of simplicity and performance, and then oh by the way,
 > you can also debug it too.
 
-**[codefrau (Vanessa Freudenberg), 2023-12-28](https://news.ycombinator.com/item?id=38796924):**
+**↪ Nested quotes (2026-07-20):** Don [38796583](https://news.ycombinator.com/item?id=38796583)
+quotes Vanessa, then responds in his own voice:
+
+| Passage | Author | Location in our cache |
+|---------|--------|------------------------|
+| "Where this scheme gets interesting is when the execution progressed somewhat deep into a nested call chain…" | **Vanessa Freudenberg** | [jit-notes/jit.md — Bi-directional mapping](jit-notes/jit.md#bi-directional-mapping), [line 134](jit-notes/jit.md#L134) (also [jit.md.html](jit-notes/jit.md.html#L135)); brain dump she pointed to at [HN 38774277](https://news.ycombinator.com/item?id=38774277) two days earlier |
+| "This sounds similar to Self's dynamic deoptimization…" through the bibliography link and closing praise | **Don Hopkins** | His commentary; Self paper at [bibliography.selflanguage.org/dynamic-deoptimization.html](https://bibliography.selflanguage.org/dynamic-deoptimization.html) |
+
+**[codefrau (Vanessa Freudenberg), 2023-12-28](https://news.ycombinator.com/item?id=38796924):****
 
 > Absolutely. And you know Lars Bak went from Self to Strongtalk to Sun's Java Hotspot VM to
 > Google's V8 JavaScript engine.

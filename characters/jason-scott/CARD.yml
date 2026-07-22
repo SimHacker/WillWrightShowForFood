@@ -1,0 +1,32 @@
+# CARD — Jason Scott (public portrayal)
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+room:
+  id: jason-scott
+  name: Jason Scott
+  type: [invitation, guest, portrayal]
+card:
+  name: Jason Scott
+  title: Get Lamp / Textfiles Archivist
+  rarity: rare
+  signifier: "🕯💾"
+  flavor: Interview the living makers. Then give the disc away for free.
+abilities:
+  - id: GET-LAMP
+    name: GET LAMP
+    type: activated
+    effect: Oral history of text adventures — Bedquilt, Infocom, hobbyist IF.
+    verifiable: sources/get-lamp.md; http://getlamp.com/
+  - id: FREE-ISO
+    name: Free ISO Blessing
+    type: triggered
+    effect: Physical sold out → Archive download with director’s blessing.
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+  - path: README.md
+  - path: ../mc-frontalot/CARD.yml
+  - path: ../brewster-kahle/CARD.yml

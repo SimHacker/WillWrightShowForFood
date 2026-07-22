@@ -1,0 +1,42 @@
+# CARD — Nick Montfort (public portrayal)
+# NOT Nick Montfort. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: nick-montfort
+  name: Nick Montfort
+  type: [invitation, guest, portrayal]
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+card:
+  name: Nick Montfort
+  title: Riddle Cartographer
+  rarity: uncommon
+  signifier: "📜🗝"
+  flavor: The work asks for an answer — performed as action in a simulated world.
+
+abilities:
+  - id: RIDDLE-MACHINES
+    name: Riddle Machines
+    type: activated
+    effect: Name IF as parser + world model + potential narrative; riddle over novel.
+    verifiable: sources/riddle-machines.md; https://nickm.com/if/riddle_machines.html
+  - id: POTENTIAL-NARRATIVE
+    name: Potential Narrative
+    type: triggered
+    effect: Space of traversals, not one path — maps to Repo Show branches.
+  - id: IF-LINEAGE
+    name: IF Lineage
+    type: triggered
+    effect: Eliza → SHRDLU → Wumpus → Adventure → Zork → Infocom → Comp/Archive.
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - path: README.md
+  - path: ../donald-knuth/CARD.yml
+  - path: ../terry-winograd/CARD.yml

@@ -6,7 +6,7 @@
 
 | Read | What |
 |------|------|
-| [Kevin Kelly — Latent Space as a New Medium + HN](2026-07-kevin-kelly-latent-space-as-medium.md) | Compression as medium; white-space prospecting; Truthiness caveat; Wolfram bridge |
+| [Kevin Kelly — Latent Space as a New Medium + HN](../../kevin-kelly/sources/2026-07-kevin-kelly-latent-space-as-medium.md) | Compression as medium; white-space prospecting; Truthiness caveat; Wolfram bridge |
 | [Demoscene UNESCO — compression as synthesis](../demoscene-compression-hn-2023.md) | Will/Eno/GDC/LLM compression through-line (sibling) |
 | Wolfram — Mining the Computational Universe | [`../../stephen-wolfram/sources/2009-mining-computational-universe.md`](../../stephen-wolfram/sources/2009-mining-computational-universe.md) |
 
@@ -33,11 +33,32 @@ Sibling (same Kay email on HN): [`../../alan-kay/media/discussions/hn-mvc-morphi
 
 Long-form room doc (Adventure implementation): [`../logo-adventure-c64-terrapin.md`](../logo-adventure-c64-terrapin.md)
 
-## ITS games (2026 harvest)
+## Adventure / IF lineage → guest rooms
 
-| Read | Girder | What |
-|------|--------|------|
-| [KMP ANIMAL — learned tree](kmp-animal-its.md) | [kmp-animal-its.yml](kmp-animal-its.yml) | ~74 KB communal `*MEMORY*` sexpr — [full dump](kmp-animal-its/animal-database-from-its.lisp.txt); [apology mail](kmp-animal-its/apology-email-1982.txt) |
+*Person material lives in their directories — not here.*
+
+| Guest | Where |
+|-------|--------|
+| [Donald Knuth](../../donald-knuth/) | [`../../donald-knuth/sources/`](../../donald-knuth/sources/) — `advent.w`, lineage, LP quotes |
+| [Kent Pitman](../../kent-pitman/) | [`../../kent-pitman/sources/`](../../kent-pitman/sources/) — ANIMAL tree |
+| [Terry Winograd](../../terry-winograd/) | SHRDLU hooks in his room (points at Knuth trail) |
+| [Nick Montfort](../../nick-montfort/) | [`../../nick-montfort/sources/riddle-machines.md`](../../nick-montfort/sources/riddle-machines.md) — literary map of IF |
+| [Janet Murray](../../janet-murray/) | [`../../janet-murray/sources/hamlet-on-the-holodeck.md`](../../janet-murray/sources/hamlet-on-the-holodeck.md) — agency / immersion / transformation |
+| [Jason Scott](../../jason-scott/) | [`../../jason-scott/sources/get-lamp.md`](../../jason-scott/sources/get-lamp.md) — *GET LAMP* documentary |
+| [MC Frontalot](../../mc-frontalot/) | Pitch Dark + [*Common Loot*](../../mc-frontalot/sources/common-loot.md) ([play](https://frontalot.com/loot/) · [YT](https://www.youtube.com/watch?v=FqUoW87oytM)) |
+
+## ITS / other guests (moved)
+
+| Was here | Now |
+|----------|-----|
+| KMP ANIMAL | [`../../kent-pitman/sources/kmp-animal-its.md`](../../kent-pitman/sources/kmp-animal-its.md) |
+| Alan Kay pie/PIXIE thread | [`../../alan-kay/sources/2020-02-alan-kay-pixie-pie-menus-thread.md`](../../alan-kay/sources/2020-02-alan-kay-pixie-pie-menus-thread.md) |
+| Ted Nelson self-revealing | [`../../ted-nelson/sources/2020-ted-nelson-klavs-landberg-self-revealing.md`](../../ted-nelson/sources/2020-ted-nelson-klavs-landberg-self-revealing.md) |
+| Jaron Swivel3D | [`../../jaron-lanier/sources/2020-06-swivel3d-forth-jaron.md`](../../jaron-lanier/sources/2020-06-swivel3d-forth-jaron.md) |
+| Engelbart mouse / Kay | [`../../douglas-engelbart/sources/2022-2023-engelbart-mouse-alan-kay.md`](../../douglas-engelbart/sources/2022-2023-engelbart-mouse-alan-kay.md) |
+| Distillery ↔ PDF | [`../../glenn-reid/sources/distillery-pdf-correspondence.md`](../../glenn-reid/sources/distillery-pdf-correspondence.md) |
+| Kevin Kelly latent space | [`../../kevin-kelly/sources/2026-07-kevin-kelly-latent-space-as-medium.md`](../../kevin-kelly/sources/2026-07-kevin-kelly-latent-space-as-medium.md) |
+| Mark Weiser pie tape / stylus | [`../../mark-weiser/sources/1991-03-mark-weiser-pie-menu-tape-stylus.md`](../../mark-weiser/sources/1991-03-mark-weiser-pie-menu-tape-stylus.md) |
 
 ## VoyStick & voice space (2026 harvest)
 
@@ -59,7 +80,7 @@ Long-form room doc (Adventure implementation): [`../logo-adventure-c64-terrapin.
 | [Pie Menus: 30 Year Retrospective](pie-menus-30-year-retrospective.md) | PIXIE anchor, theta-menu origin emails, CHI'88, design principles, Jobs demo |
 | [Pie Menu FUD and Misconceptions](pie-menu-fud-misconceptions.md) | Alias/Buxton patent story + Buxton/Kurtenbach rebuttals in comments; ersatz-pie catalog |
 | [Pie Menu Timeline](pie-menu-timeline.md) | Email-dated 1968–2018 chronology; 1987 no-patent decision; Kurtenbach 1990/2018 letters |
-| [Alan Kay PIXIE thread (2020)](2020-02-alan-kay-pixie-pie-menus-thread.md) | Independent inventions: Fabrik, Etoys halo; Engelbart down-not-across |
+| [Alan Kay PIXIE thread (2020)](../../alan-kay/sources/2020-02-alan-kay-pixie-pie-menus-thread.md) | Independent inventions: Fabrik, Etoys halo; Engelbart down-not-across |
 | [PIXIE/Buxton patent roadblock (2008–2023)](2008-2023-pixie-buxton-patent-thread.md) | Fleck → Buxton → Chapman digitization; 2008 email receipts; show not-invited policy; Brad Myers Ch. 33 |
 | [DDJ 1991: Design & Implementation of Pie Menus](ddj-1991-design-implementation-pie-menus.md) | **The published receipt** — mark-ahead, rehearsal, reselection, display suppression in print, pre-1993 |
 | [Why no pie menu patent — Tobias email (2007)](2007-11-11-james-tobias-why-no-pie-menu-patent.md) | Prior art + exploitative UMD patent system; "derivatives of pie menus" framing, 2007 |
@@ -76,7 +97,6 @@ Long-form room doc (Adventure implementation): [`../logo-adventure-c64-terrapin.
 |------|-------|
 | [2020-04-06-flight-of-pixie-chm-tlg-broadcast.md](2020-04-06-flight-of-pixie-chm-tlg-broadcast.md) | PIXIE video + CHM 1996 interview discovery; TLG circle broadcast |
 | [2020-04-08-barlow-memorial-hn-chm-pitch.md](2020-04-08-barlow-memorial-hn-chm-pitch.md) | Barlow Zoom memorial; HN queue; Heinz Lemke CHM pitch |
-| [2020-06-swivel3d-forth-jaron.md](2020-06-swivel3d-forth-jaron.md) | Swivel 3D in FORTH |
 | [2026-07-06-hn-when-2-plus-2-equals-five.md](2026-07-06-hn-when-2-plus-2-equals-five.md) | HN compendium style reference |
 | [xbugtool-bug-1059974.md](xbugtool-bug-1059974.md) | Sun XBugTool focus trap; unnatural-selection deskset beat |
 | … | See directory listing — HN threads, Body Electric, pie menus, etc. |

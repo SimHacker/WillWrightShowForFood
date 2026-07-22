@@ -6,6 +6,9 @@ Invitation portrayal — **not** Henry Minsky. [Standards](../../schemas/portray
 
 [Invitation](invitation.md) · [Show seed](../../repo-shows/henry-minsky/README.md) · [CARD](CARD.yml)
 
+> "We make money, so you don't have to!"
+> — Henry's proposed slogan for Harvard Business School. (T-shirt quality.)
+
 Co-founder and CTO of **Leela AI**, carrying MIT-AI-Lab ideas into modern visual intelligence;
 earlier a software architect at **Laszlo Systems** (the **OpenLaszlo** declarative rich-internet-app
 framework). Son of **Marvin Minsky** and twin of Juliana — he and his siblings grew up *inside* the

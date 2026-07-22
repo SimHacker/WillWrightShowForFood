@@ -34,5 +34,5 @@ Recommended Markoff's *What the Dormouse Said* — Don cross-linked Jaron Lanier
 ## Cross-links
 
 - [`../douglas-engelbart/engelbart-mouse-and-keyset.md`](../douglas-engelbart/engelbart-mouse-and-keyset.md)
-- [`../don-hopkins/sources/2022-2023-engelbart-mouse-alan-kay.md`](../don-hopkins/sources/2022-2023-engelbart-mouse-alan-kay.md)
+- [`../douglas-engelbart/sources/2022-2023-engelbart-mouse-alan-kay.md`](../douglas-engelbart/sources/2022-2023-engelbart-mouse-alan-kay.md)
 - [`sources/internet-old-farts-mouse-thread-2022.md`](sources/internet-old-farts-mouse-thread-2022.md)

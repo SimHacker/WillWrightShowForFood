@@ -1,0 +1,58 @@
+# Tod Machover — invitation portrayal. NOT Tod Machover.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: tod-machover
+  name: "Tod Machover"
+  type: invitation
+  signifier: "🎼🧠"
+  status: living
+  field: "Composer + inventor — MIT Media Lab Opera of the Future; hyperinstruments; Brain Opera; Death and the Powers; Hyperscore; the Guitar Hero lineage"
+  home: characters/tod-machover/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2
+  authored_by: don-hopkins
+  note: "Host-authored from public sources. He may edit, reduce, or delete anytime."
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: null
+
+bio:
+  summary: "**Tod Machover** (b. 1953) — composer and inventor; professor at the **MIT Media Lab**, where he directs the **Opera of the Future** group. Director of musical research at **IRCAM** in Paris before joining the Media Lab at its founding era; composed **VALIS** (1987, Pompidou commission, after Philip K. Dick). Invented **hyperinstruments** — instruments that amplify expressive intent, including the hypercello built for **Yo-Yo Ma** (1991). His **Brain Opera** (1996) — an audience-participatory opera **inspired by Marvin Minsky's *The Society of Mind*** — was built in the lab next to Minsky's and lives on permanently at the Haus der Musik, Vienna. **Death and the Powers** (2010, libretto by Robert Pinsky; Pulitzer finalist 2012) stages a dying tycoon uploading himself into 'The System' — an opera about premorializing before we had the word. **Hyperscore** lets children compose by drawing. His students **Alex Rigopulos and Eran Egozy** founded Harmonix and made **Guitar Hero** and **Rock Band**. Recent decade: crowd-sourced **City Symphonies** (Toronto, Edinburgh, Perth, Detroit, Philadelphia…)."
+
+connections:
+  minsky: "Brain Opera (1996) explicitly inspired by The Society of Mind; made 'in the lab next to mine' — Marvin Minsky, NYT 1996/97 (the First Wired Family article in this repo's sources); Oliver Steele added the Brain Opera link to Marvin's home page"
+  media_lab: "Opera of the Future group; Media Lab founding era with Negroponte + Minsky"
+  participation: "Brain Opera's audience-as-performer ethos rhymes with PIPS:lab (keez-duyves) and the Repo Show audience-PR model"
+  premorial: "Death and the Powers = the premorializing opera — Simon Powers interring himself in The System while alive; Die Space and RAI territory, on the opera stage in 2010"
+
+show_suggestions:
+  - { seed: ../../repo-shows/remembering-the-constructionists.yml, what: "Minsky memorial — the Brain Opera story: turning Society of Mind into a building full of audience-played instruments" }
+  - { what: "Music-machines ensemble — Machover (hyperinstruments) × David Levitt (computational jazz) × Ray Kurzweil (K250) × Jerry Martin (Sims scores): four answers to 'can machines make music expressive?'" }
+  - { what: "Premorializing double bill — Death and the Powers × Die Space (keez-duyves) × RAI (ray-kurzweil): uploading yourself before you die, as opera, performance art, and product" }
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Tod_Machover"
+  web:
+    - { title: "MIT Media Lab — Opera of the Future (Tod Machover)", url: "https://www.media.mit.edu/groups/opera-of-the-future/overview/" }
+    - { title: "Brain Opera — permanent home at Haus der Musik Vienna", url: "https://www.hausdermusik.com/" }
+    - { title: "NYT 'First Wired Family' (1996/97) — Minsky: 'The Brain Opera project is done in the lab next to mine by Tod Machover'", url: "https://archive.nytimes.com/www.nytimes.com/library/cyber/week/010397minsky.html" }
+  works:
+    - "VALIS (1987, IRCAM/Pompidou — after Philip K. Dick)"
+    - "Hyperinstruments (from 1986); hypercello for Yo-Yo Ma (Begin Again Again…, 1991)"
+    - "Brain Opera (1996) — after Minsky's Society of Mind"
+    - "Death and the Powers (2010; libretto Robert Pinsky; Pulitzer finalist 2012)"
+    - "Hyperscore — graphical composition for children"
+    - "City Symphonies (2013– )"
+
+see_also:
+  - { path: ../marvin-minsky/, why: "🕯️ Brain Opera = Society of Mind, staged; lab-next-door colleague (memorial discussant)" }
+  - { path: ../nicholas-negroponte/, why: "Media Lab founding director" }
+  - { path: ../david-levitt/, why: "AI music lineage — the other Minsky-orbit music thread" }
+  - { path: ../ray-kurzweil/, why: "Music machines — K250 vs hyperinstruments" }
+  - { path: ../keez-duyves/, why: "Audience-as-performer kinship; Death and the Powers × Die Space premorializing" }
+  - { path: ../jerry-martin/, why: "Game music — Guitar Hero lineage conversation" }

@@ -1,0 +1,20 @@
+# Dream show seed — Donald Knuth
+id: donald-knuth
+status: dream
+title: "Literate Adventure — programs as literature, caves as schemas"
+guest: donald-knuth
+channel_if_asked: snail_mail
+format:
+  preferred: [async_solo, short_1on1]
+  avoid: [unsolicited_email, long_webinar]
+hooks:
+  - advent.w CWEB recasting
+  - literate programming × Repo Show / MOOLLM
+  - travel tables / objects / dwarves as founding schema
+materials:
+  - characters/donald-knuth/
+  - characters/donald-knuth/sources/adventure-knuth/
+optional_discussants:
+  - terry-winograd
+  - scott-adams
+  - ted-nelson

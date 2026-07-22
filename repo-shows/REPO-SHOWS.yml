@@ -73,7 +73,7 @@ seeds:
   # Soul City is the git-checked-in hub of hi-fidelity, round-trippable character facets; game-to-game
   # paths route THROUGH it ("fly through Atlanta"). Generic hub/spoke first; later, shortcut
   # optimizations + mutual schema recognition for compatible games. Full note: INDEX.yml#bridges_architecture
-  game-bridge-proxi-sims.yml:   "Will — Proxi ⇔ Soul City ⇔ Sims bridge (data-portability payoff + Mind Mirror layer). NOT YET WRITTEN."
+  game-bridge-proxi-sims.yml:   "Will — Proxi ⇔ Soul City ⇔ Sims bridge (data-portability payoff + Mind Mirror layer). Seed: will-wright-premiere/game-bridge-proxi-sims.yml."
   game-bridge-proxi-minecraft.yml: "Will — Proxi ⇔ Soul City ⇔ Minecraft. SHIPPED: Proxi characters already exported to Minecraft (Dev Diaries 2025)."
   game-bridge-sims-stardew.yml: "Group: Eric Barone — Sims ⇔ Soul City ⇔ Stardew two-way bridge."
   game-bridge-sims-tiny-life.yml: "Ell (Ellpeck) — Sims ⇔ Soul City ⇔ Tiny Life."

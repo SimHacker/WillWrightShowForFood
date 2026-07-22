@@ -38,4 +38,4 @@ Don posted photos of his set (living room table, Netherlands unpack) and shared 
 
 ---
 
-→ [`../ideas.md`](../ideas.md) · [`../../don-hopkins/sources/2022-2023-engelbart-mouse-alan-kay.md`](../../don-hopkins/sources/2022-2023-engelbart-mouse-alan-kay.md)
+→ [`../ideas.md`](../ideas.md) · [`../../douglas-engelbart/sources/2022-2023-engelbart-mouse-alan-kay.md`](../../douglas-engelbart/sources/2022-2023-engelbart-mouse-alan-kay.md)

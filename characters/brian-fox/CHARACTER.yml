@@ -1,0 +1,58 @@
+# Brian Fox — invitation portrayal. NOT Brian Fox.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: brian-fox
+  name: "Brian J. Fox"
+  type: invitation
+  signifier: "🐚$"
+  status: living
+  field: "Author of GNU Bash — first employee of the Free Software Foundation; readline; first US online banking; Universal Access with Henry and Julie Minsky; open-source elections; Orchid"
+  home: characters/brian-fox/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2
+  authored_by: don-hopkins
+  note: "Host-authored from public sources. He may edit, reduce, or delete anytime."
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: null
+
+bio:
+  summary: "**Brian Jhan Fox** (b. 1959, Boston) — the **first employee of the Free Software Foundation** (hired by Richard Stallman, 1985) and original author of **GNU Bash** (announced beta June 1989; primary maintainer to ~1993) — the shell this whole repo runs on. Also wrote **GNU readline and history** (the line-editing under Bash, Python, psql, and a thousand REPLs), GNU Info, Makeinfo, Finger, and Echo, and maintained GNU Emacs for a time. Built the **first interactive online banking software in the US** (Wells Fargo, 1995). Co-founded **Universal Access Inc.** with **Henry and Julie Minsky** — the Meta-HTML company from the NYT 'First Wired Family' article. Created an **open-source election system** (2008) and serves with the National Association of Voting Officials. Co-founded **Orchid Labs** (2017–2024), building a surveillance-resistant internet. Grew up with a BBN-physicist father and a teletype in the basement; brother of jazz pianist-composer **Donal Fox**."
+
+connections:
+  stallman: "FSF employee #1, hired 1985; wrote Bash because the GNU project needed a free sh — the proof that copyleft could staff a movement"
+  minsky_twins: "Universal Access Inc. co-founded with Henry and Julie Minsky; Meta-HTML; the NYT First Wired Family article is the primary source in this repo"
+  marvin: "One hop from Marvin through the twins — the family's startup partner; a Diespace-wing-adjacent voice for the memorial's 'what the kids built' segment"
+  don: "Every Unix pie menu, every SimCity build script, every MOOLLM shell tool in these repos runs through Bash and readline"
+  music: "Brother Donal Fox — jazz/classical composer-pianist; velcro to the show's music-machines thread"
+
+show_suggestions:
+  - { seed: ../../repo-shows/remembering-the-constructionists.yml, what: "Minsky memorial — the co-founder's view of the First Wired Family: what it was like building Meta-HTML with the twins" }
+  - { what: "Shell as stage — Bash and readline as the world's most-used invisible instrument; the Repo Show literally runs on his software" }
+  - { what: "Free software ensemble — RMS (copyleft) × Fox (employee #1) × dhw (Cygnus, making it a business): three chapters of the same movement" }
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Brian_Fox_(computer_programmer)"
+  web:
+    - { title: "Lifehacker — I'm Brian Fox, Author of the Bash Shell (2017)", url: "https://lifehacker.com/im-brian-fox-author-of-the-bash-shell-and-this-is-how-1820510600" }
+    - { title: "Orchid blog — Pioneer Programmer Brian J. Fox on Championing Open Source", url: "https://blog.orchid.com/pioneer-programmer-brian-j-fox-on-championing-open-source/" }
+    - { title: "NYT 'First Wired Family' (1996/97) — Universal Access with Henry + Julie Minsky", url: "https://archive.nytimes.com/www.nytimes.com/library/cyber/week/010397minsky.html" }
+  works:
+    - "GNU Bash (1989); GNU readline + history libraries"
+    - "GNU Info, Makeinfo, Finger, Echo; Emacs maintainership"
+    - "Wells Fargo online banking (1995) — first in the US"
+    - "Universal Access Inc. / Meta-HTML (with Henry + Julie Minsky)"
+    - "Open-source election system (2008); Orchid Labs (2017–2024)"
+
+see_also:
+  - { path: ../richard-stallman/, why: "Hired him as FSF employee #1" }
+  - { path: ../henry-minsky/, why: "Universal Access co-founder" }
+  - { path: ../julie-minsky/, why: "Universal Access co-founder" }
+  - { path: ../david-henkel-wallace/, why: "Free-software-as-business sibling story (Cygnus)" }
+  - { path: ../marvin-minsky/, why: "🕯️ One hop away — the twins' startup partner" }
+  - { path: ../don-hopkins/, why: "Host's entire toolchain runs on Bash + readline" }

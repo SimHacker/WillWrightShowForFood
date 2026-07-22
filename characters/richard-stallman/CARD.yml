@@ -1,0 +1,119 @@
+# CARD — Richard M. Stallman (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: richard-stallman
+  name: Richard M. Stallman
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+card:
+  name: Richard M. Stallman
+  title: GNU · Copyleft · The Last True Hacker
+  rarity: mythic
+  signifier: "🐃"
+  flavor: Free as in freedom — the license is the constitution.
+
+relationships:
+  # kinds may stack — real people relate in multiple ways at once
+  - { with: marvin-minsky, kinds: [lab_hacker, memorial_discussant], why: "MIT AI Lab hacker (1971–1984) — Emacs and the Lisp culture grew in the lab Minsky co-founded" }
+  - { with: don-hopkins, kinds: [copyleft_namer, flame_correspondent, decades_thread], why: "Don's 1984 envelope sticker 'Copyleft (L)' gave RMS the name for copyleft (RMS credits this publicly); later the 1993 'RMS -vs- Doctor' kabuki-west natalism flame + Don's doctor.el reply" }
+  - { with: brian-fox, kinds: [first_hire, gnu_coauthor], why: "Hired Fox as the FSF's first employee (1985) — Bash, readline, Info: the proof copyleft could staff a movement" }
+  - { with: david-henkel-wallace, kinds: [gnu_toolchain_ally, commercialization_counterpart], why: "Gumby co-founded Cygnus — the company that made supporting RMS's GNU toolchain a business (BFD, binutils)" }
+  - { with: kent-pitman, kinds: [lab_hacker_peer, lisp_culture], why: "Same MACLISP/ITS AI Lab culture; Common Lisp standardization era" }
+  - { with: walter-bender, kinds: [olpc_gpl_thread], why: "OLPC Sugar / GPL games thread — free software for children's laptops" }
+  - { with: james-gosling, kinds: [emacs_history_counterpart], why: "Gosling Emacs → GNU Emacs history; Gosling heard the doctor.el story from Don (2026)" }
+  - { with: jamie-zawinski, kinds: [emacs_lineage], why: "Lucid Emacs / XEmacs fork history — the other pole of Emacs governance (no room in repo yet)" }
+
+abilities:
+- id: COPYLEFT
+  name: Copyleft
+  type: activated
+  mana: "{W}{W}{B}"
+  conditions:
+  - segment_topic_in: [gpl, licensing, copyleft, free-software, open-source]
+  advertisement:
+    method: copyleft
+    signature: copyleft(work) → all rights reversed; freedom is heritable
+    score_when:
+    - trigger: don_envelope_sticker_story_on_air
+      weight: 0.95
+    - trigger: license_as_constitution_explained
+      weight: 0.92
+  effect: "Use copyright to guarantee freedom instead of restrict it — the GPL hack. The show holds a primary source: the name came off Don's 1984 envelope sticker."
+  verifiable: "GNU GPL; ../don-hopkins/media/pantomime/copyleft-envelope-1984.yml"
+  combos_with: [SHARE-ALIKE, OPEN-SIMCITY, DON-OPEN-SOURCE-MICROPOLIS]
+- id: GNU-MANIFESTO
+  name: GNU Manifesto
+  type: activated
+  mana: "{W}{W}"
+  conditions:
+  - segment_topic_in: [free-software, gnu, software-freedom, ethics-of-code]
+  advertisement:
+    method: gnuManifesto
+    signature: gnuManifesto(1983) → a complete free OS, announced and then built
+    score_when:
+    - trigger: four_freedoms_stated_plainly
+      weight: 0.9
+  effect: "Announce the whole free operating system in 1983, then spend decades building it — the founding document of software freedom."
+  verifiable: "GNU announcement (net.unix-wizards, 1983); GNU Manifesto (1985); FSF (1985)"
+  combos_with: [STONE-SOUP]
+- id: EMACS
+  name: Emacs
+  type: activated
+  mana: "{U}{U}"
+  conditions:
+  - segment_topic_in: [emacs, lisp, extensible-software, editors]
+  advertisement:
+    method: emacs
+    signature: emacs(editor) → the editor that is also a Lisp machine
+    score_when:
+    - trigger: extensibility_as_freedom_demo
+      weight: 0.9
+  effect: "The extensible, self-documenting editor — TECO macros at the AI Lab to GNU Emacs; user-modifiable software as a way of life."
+  verifiable: "EMACS (1976, with Guy Steele); GNU Emacs (1985)"
+  combos_with: [TEACH-MACLISP, SPECIAL-FORMS-FEXPRS]
+- id: AI-LAB-ETHIC
+  name: AI Lab Hacker Ethic
+  type: activated
+  mana: "{G}"
+  conditions:
+  - segment_topic_in: [mit-ai-lab, hacker-culture, its, passwords, openness]
+  advertisement:
+    method: aiLabEthic
+    signature: aiLabEthic(its) → no passwords, shared source, printed manuals
+    score_when:
+    - trigger: lab_alumni_present_on_air
+      weight: 0.9
+  effect: "First-person AI Lab culture — ITS with no passwords, the printer-driver radicalization story, why the lab's collapse birthed GNU."
+  verifiable: "Hackers (Levy, 1984 — 'the last true hacker'); Free as in Freedom (Williams, 2002)"
+  combos_with: [AI-LAB, ANIMAL-EMOTIONAL-STATE]
+- id: RMS-VS-DOCTOR
+  name: RMS -vs- Doctor
+  type: emote
+  mana: "{R}"
+  conditions:
+  - segment_topic_in: [eliza, doctor-el, flame-wars, usenet-history, humor]
+  advertisement:
+    method: rmsVsDoctor
+    signature: rmsVsDoctor(flame) → doctor.el answers the kabuki-west natalism flame
+    score_when:
+    - trigger: don_tells_the_1993_story
+      weight: 0.9
+  effect: "Emote — the 1993 flame thread where Don answered RMS with Emacs's own doctor.el; ELIZA lineage meets hacker humor."
+  verifiable: "http://www.art.net/studios/hackers/hopkins/Don/text/rms-vs-doctor.html"
+  combos_with: [DOCTOR-ELIZA]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: CHARACTER.yml, why: "Bio girder — invitation status" }
+  - { path: contact-channels.yml, why: "Public contact protocol" }
+  - { path: ../don-hopkins/media/pantomime/copyleft-envelope-1984.yml, why: "Copyleft (L) sticker 1984 — primary source" }
+  - { path: ../david-henkel-wallace/CARD.yml, why: "Cygnus — GNU toolchain as a business" }

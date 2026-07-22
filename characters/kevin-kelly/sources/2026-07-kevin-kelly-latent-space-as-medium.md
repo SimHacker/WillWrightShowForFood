@@ -8,7 +8,7 @@
 |-------|-----|
 | Essay | [Latent Space as a New Medium](https://kevinkelly.substack.com/p/latent-space-as-a-new-medium) — Kevin Kelly, 13 Jul 2026 |
 | HN | [item?id=48896513](https://news.ycombinator.com/item?id=48896513) |
-| Sibling (Don) | [`../demoscene-compression-hn-2023.md`](../demoscene-compression-hn-2023.md) |
+| Sibling (Don) | [`../../don-hopkins/demoscene-compression-hn-2023.md`](../../don-hopkins/demoscene-compression-hn-2023.md) |
 | Sibling (Wolfram) | [`../../stephen-wolfram/sources/2009-mining-computational-universe.md`](../../stephen-wolfram/sources/2009-mining-computational-universe.md) |
 | MOOLLM | `designs/object-system/LATENT-SPACE-INHERITANCE.md` in the moollm checkout (related essay section cites this harvest) |
 

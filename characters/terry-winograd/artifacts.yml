@@ -1,0 +1,38 @@
+# Terry Winograd — show artifacts (public)
+character: terry-winograd
+artifact_count: 4
+
+artifacts:
+  - id: shrdlu-advent-lineage
+    kind: trail
+    title: "ADVENT = SHRDLU inside-out / fancier WUMPUS"
+    file: ../donald-knuth/sources/advent-shrdlu-wumpus-lineage.md
+    url: https://news.ycombinator.com/item?id=45996916
+    note: "Montfort Riddle Machines; show hook § SHRDLU ↔ Adventure"
+
+  - id: knuth-adventure-analysis
+    kind: analysis
+    title: "Knuth literate Adventure — MOOLLM/WWSFF perspective"
+    path: ../donald-knuth/sources/adventure-knuth/
+    cream: ../donald-knuth/sources/adventure-knuth/CREAM.md
+    analysis: ../donald-knuth/sources/adventure-knuth/ANALYSIS.md
+
+  - id: montfort-riddle-machines
+    kind: essay
+    title: "Nick Montfort — Riddle Machines"
+    url: https://nickm.com/if/riddle_machines.html
+    local: ../nick-montfort/sources/riddle-machines.md
+    guest: ../nick-montfort/
+
+  - id: cs547-catalog
+    kind: archive
+    title: "CS547 catalog (339 talks)"
+    path: media/
+    scroll: media/cs547-ARCHIVE.md
+
+see_also:
+  - README.md
+  - invitation.md
+  - ideas.md
+  - ../scott-adams/artifacts.yml
+  - ../brewster-kahle/README.md

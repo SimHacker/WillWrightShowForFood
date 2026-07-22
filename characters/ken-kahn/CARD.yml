@@ -15,10 +15,42 @@ meta:
 card:
   name: Ken Kahn
   title: ToonTalk & AI Blocks
-  rarity: uncommon
+  rarity: rare
   signifier: 🎈
   flavor: Make machine learning legible before the magic wears off.
+
+relationships:
+  # kinds may stack — real people relate in multiple ways at once
+  # Fact-checked: PhD advisor was Carl HEWITT, not Minsky (MIT DSpace 1721.1/16012; Math Genealogy)
+  - { with: marvin-minsky, kinds: [lab_milieu, committee_reported, memorial_discussant], why: "PhD 1979 in the AI Lab Minsky co-directed — advisor Carl Hewitt; Minsky + Papert reported on committee; Logo group member" }
+  - { with: seymour-papert, kinds: [logo_group, constructionist_lineage], why: "🕯️ Joined the Logo group after his master's; taught kids programming; ToonTalk continues the line" }
+  - { with: cynthia-solomon, kinds: [logo_culture_colleague], why: "MIT Logo culture of the 1970s" }
+  - { with: margaret-minsky, kinds: [colleague_flagged_by], why: "Margaret flagged his Snap! AI blocks to colleagues" }
+  - { with: brian-harvey, kinds: [snap_ecosystem_peer], why: "AI blocks extend the Snap! world Brian co-created" }
+  - { with: jens-monig, kinds: [snap_ecosystem_peer], why: "Snap! internals carry his blocks" }
+  - { with: alan-kay, kinds: [milieu, correspondent], why: "from-alan-kay.yml in this room" }
+  - { with: don-hopkins, kinds: [constructionist_ally], why: "Constructionism thread across the show" }
+
 abilities:
+- id: ANI-STORY-ANIMATION
+  name: Ani — Story to Animation (1979)
+  type: legacy
+  mana: '{U}{U}'
+  conditions:
+  - segment_topic_in: [generative-ai, text-to-video, ai-history, actors, creativity-models]
+  advertisement:
+    method: aniStoryAnimation
+    signature: aniStoryAnimation(vagueStory) → film, from suggestions of many knowledge bodies
+    score_when:
+    - trigger: audience_realizes_1979_did_text_to_video
+      weight: 0.96
+    - trigger: society_of_mind_architecture_echo   # many small suggestion-makers, focus-driven
+      weight: 0.9
+  effect: His PhD system made simple animated films from high-level, vague, incomplete story descriptions — collecting suggestions from several bodies of knowledge, implemented in Hewitt's actor model. Text-to-video with provenance, 45 years early; a computational model of creativity.
+  verifiable: "'Creation of Computer Animation from Story Descriptions' (MIT AI Lab TR-540, 1979; advisor Carl Hewitt) — MIT DSpace 1721.1/16012"
+  combos_with:
+  - SOCIETY-OF-MIND
+  - TOONTALK
 - id: TOONTALK
   name: ToonTalk
   type: activated

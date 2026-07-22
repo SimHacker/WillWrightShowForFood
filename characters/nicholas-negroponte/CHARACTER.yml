@@ -1,0 +1,58 @@
+# Nicholas Negroponte — invitation portrayal. NOT Nicholas Negroponte.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: nicholas-negroponte
+  name: "Nicholas Negroponte"
+  type: invitation
+  signifier: "🏛️💾"
+  status: living
+  field: "Architect of the MIT Media Lab — Architecture Machine Group; Being Digital; One Laptop per Child; Wired's founding backer"
+  home: characters/nicholas-negroponte/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2
+  authored_by: don-hopkins
+  note: "Host-authored from public sources. He may edit, reduce, or delete anytime."
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: null
+
+bio:
+  summary: "**Nicholas Negroponte** (b. 1943) — architect by training who founded the **Architecture Machine Group** at MIT (1967), the human–machine-interface lab that grew into the **MIT Media Lab**, which he co-founded with Jerome Wiesner and directed from its 1985 opening. Wrote **Being Digital** (1995) — 'move bits, not atoms' — after years as the back-page columnist and first investor of **Wired**. Founded **One Laptop per Child** (2005), the $100-laptop project chaired with Walter Bender. Was **Margaret Minsky's PhD advisor** (per the HCI Museum's Sandpaper exhibit), and the man who gave Marvin Minsky, Seymour Papert, and Muriel Cooper the institutional roof the Media Lab became. Brother of diplomat John Negroponte."
+  honest_note: "The 2019 MIT Media Lab / Jeffrey Epstein donations scandal is part of his public record: Negroponte said at a lab meeting he had advised taking Epstein's money and 'would do it again.' A portrayal that omits this would be gloss; a show that asked him about institutional ethics directly would be better than one that pretends."
+
+connections:
+  minsky: "Gave Marvin the Media Lab as institutional home (1985); founding-faculty relationship documented everywhere including Stewart Brand's The Media Lab (1987)"
+  margaret: "Margaret Minsky's PhD advisor (MIT PhD 1995, haptics/Sandpaper — HCI Museum credits Negroponte as advisor)"
+  walter_bender: "Longtime deputy; Bender succeeded him as Media Lab director and co-ran OLPC"
+  machover: "Recruited/hosted Opera of the Future at the founding Media Lab"
+  wired: "First investor + back-page columnist of Wired — the magazine that put the First Wired Family (the Minskys) on record"
+
+show_suggestions:
+  - { seed: ../../repo-shows/remembering-the-constructionists.yml, what: "Minsky memorial — the institution-builder's view: what it took to build a roof over Marvin, Seymour, and Muriel" }
+  - { what: "Bits, atoms, and thirty years — Being Digital re-read in 2026: what he got right (streaming, personalization) and wrong (the Daily Me's politics)" }
+  - { what: "OLPC postmortem with Walter Bender — constructionism at scale, what shipped, what broke" }
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Nicholas_Negroponte"
+  web:
+    - { title: "HCI Museum — Minsky Sandpaper exhibit (advisor credit)", url: "https://hcimuseum.com/" }
+    - { title: "Being Digital (1995)", url: "https://en.wikipedia.org/wiki/Being_Digital" }
+    - { title: "One Laptop per Child", url: "https://en.wikipedia.org/wiki/One_Laptop_per_Child" }
+  works:
+    - "The Architecture Machine (1970); Soft Architecture Machines (1975)"
+    - "MIT Media Lab (co-founder/director, 1985)"
+    - "Being Digital (1995)"
+    - "One Laptop per Child (2005)"
+
+see_also:
+  - { path: ../marvin-minsky/, why: "🕯️ Built the lab Marvin lived in — memorial discussant" }
+  - { path: ../margaret-minsky/, why: "Her PhD advisor (Sandpaper haptics thesis)" }
+  - { path: ../walter-bender/, why: "Media Lab succession + OLPC partner" }
+  - { path: ../tod-machover/, why: "Opera of the Future under his founding roof" }
+  - { path: ../alan-kay/, why: "Fellow lab-builder; OLPC collaborator-critic" }
+  - { path: ../kevin-kelly/, why: "Wired constellation" }

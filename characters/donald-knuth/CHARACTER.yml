@@ -1,0 +1,64 @@
+# Donald Knuth — invitation portrayal. NOT Donald Knuth.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: donald-knuth
+  name: "Donald Knuth"
+  type: invitation
+  signifier: "🕸✒️"
+  status: living
+  beloved: true
+  field: "Analysis of algorithms, The Art of Computer Programming, TeX/METAFONT, literate programming (WEB/CWEB), MIX/MMIX"
+  home: characters/donald-knuth/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: dream_guest
+  consent: not_yet_asked
+  document: invitation.md
+  channel: snail_mail
+  channel_note: |
+    Knuth does not answer unsolicited email (except book-error reports).
+    Public contact protocol: https://www-cs-faculty.stanford.edu/~knuth/email.html
+    Any real ask would be a paper letter — this invite is drafted in that form.
+  show_seed: repo-shows/donald-knuth/
+
+bio:
+  summary: |
+    **Donald Ervin Knuth** (b. 1938) — Fletcher Jones Professor of Computer Science, Emeritus, Stanford.
+    Author of *The Art of Computer Programming*; creator of TeX and METAFONT; inventor of literate
+    programming (WEB/CWEB). Among his downloadable CWEB programs is **ADVENT**: Crowther/Woods
+    Adventure Version 1.0 recast so the ur-game can be read as literature about a world model.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Donald_Knuth"
+  web:
+    - { title: "Don Knuth's home page", url: "https://www-cs-faculty.stanford.edu/~knuth/" }
+    - { title: "Knuth versus Email", url: "https://www-cs-faculty.stanford.edu/~knuth/email.html" }
+    - { title: "Downloadable Programs — ADVENT", url: "https://www-cs-faculty.stanford.edu/~knuth/programs.html#advent" }
+    - { title: "Literate Programming (site)", url: "http://literateprogramming.com/" }
+  local:
+    - { path: sources/adventure-knuth/, why: "Local advent.w + MOOLLM/WWSFF analysis" }
+    - { path: sources/literate-programming-site-quotes.md, why: "Knuth literate-programming quotes harvest" }
+    - { path: sources/advent-shrdlu-wumpus-lineage.md, why: "HN / Montfort trail" }
+
+show_suggestions:
+  - "Why Adventure deserved a literate recasting — programs as literature, games as literature"
+  - "Travel tables, props, dwarves: the founding schemas of interactive worlds"
+  - "TANGLE/WEAVE vs Repo Show facades (human order vs machine order)"
+  - "What LLMs change (and don't) about writing for human readers first"
+  - "Optional: TeX, elegance, Pulitzer-for-programs half-joke — only if he wants"
+
+see_also:
+  - { path: invitation.md, why: "Snail-mail draft invitation" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: sources/adventure-knuth/ANALYSIS.md, why: "Mission mapping" }
+  - { path: sources/README.md, why: "Sources index" }
+  - { path: ../nick-montfort/sources/riddle-machines.md, why: "Literary map of IF (Riddle Machines framing)" }
+  - { path: ../terry-winograd/README.md, why: "SHRDLU ↔ Adventure" }
+  - { path: ../scott-adams/README.md, why: "Portable adventure VM lineage" }
+  - { path: ../ted-nelson/README.md, why: "Intertwingled documents / Xanalogical instinct" }

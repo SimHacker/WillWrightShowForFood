@@ -10,4 +10,4 @@ Show: [`../../repo-shows/postscript-distillery-to-pdf/`](../../repo-shows/postsc
 
 Sources:
 - [`sources/2015-01-31-touchtype-vr-correspondence.md`](sources/2015-01-31-touchtype-vr-correspondence.md) — TouchType × VR thread
-- [`../don-hopkins/sources/distillery-pdf-correspondence.md`](../don-hopkins/sources/distillery-pdf-correspondence.md) — Distillery / PDF
+- [`sources/distillery-pdf-correspondence.md`](sources/distillery-pdf-correspondence.md) — Distillery / PDF

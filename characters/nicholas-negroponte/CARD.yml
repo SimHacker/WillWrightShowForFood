@@ -1,0 +1,120 @@
+# CARD — Nicholas Negroponte (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: nicholas-negroponte
+  name: Nicholas Negroponte
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+card:
+  name: Nicholas Negroponte
+  title: Architect of the Media Lab
+  rarity: rare
+  signifier: "🏛️💾"
+  flavor: Move bits, not atoms.
+
+relationships:
+  - { with: marvin-minsky, kinds: [institution_builder_for, founding_faculty_host, memorial_discussant], why: "Co-founded the Media Lab (1985) that became Marvin's institutional home for three decades" }
+  - { with: margaret-minsky, kinds: [phd_advisor], why: "Advisor on her MIT PhD (1995, haptic display / Sandpaper) per the HCI Museum exhibit" }
+  - { with: walter-bender, kinds: [deputy_then_successor, olpc_cofounder], why: "Bender succeeded him as Media Lab director and led OLPC software/Sugar" }
+  - { with: tod-machover, kinds: [founding_roof], why: "Opera of the Future group under the founding Media Lab" }
+  - { with: seymour-papert, kinds: [founding_faculty_host], why: "Papert brought constructionism into the founding Media Lab" }
+  - { with: alan-kay, kinds: [lab_builder_peer, olpc_collaborator], why: "Two lab-builders; Kay was deeply involved in and critical of OLPC" }
+  - { with: kevin-kelly, kinds: [wired_constellation], why: "First investor + back-page columnist of Wired; Kelly its founding editor" }
+  - { with: stewart-brand, kinds: [chronicled_by], why: "Brand's The Media Lab (1987) is the founding-era book" }
+
+abilities:
+- id: ARCHITECTURE-MACHINE
+  name: Architecture Machine
+  type: static
+  mana: "{U}"
+  conditions:
+  - segment_topic_in: [hci-history, media-lab-origins, interfaces]
+  advertisement:
+    method: architectureMachine
+    signature: architectureMachine(1967) → the lab where interfaces became a field
+    score_when:
+    - trigger: hci_prehistory_segment
+      weight: 0.9
+  effect: "The Architecture Machine Group (1967): Put-That-There, Aspen Movie Map, the Dataland era — the direct ancestor of the Media Lab and of half the interface ideas on this show."
+  verifiable: "The Architecture Machine (1970); Soft Architecture Machines (1975); MIT AMG record"
+  combos_with: [SKETCHPAD, HAPTICS]
+- id: MEDIA-LAB-ROOF
+  name: The Media Lab Roof
+  type: activated
+  mana: "{W}{W}"
+  conditions:
+  - segment_topic_in: [institution-building, media-lab, funding, marvin-minsky]
+  advertisement:
+    method: mediaLabRoof
+    signature: mediaLabRoof(minsky, papert, cooper, machover…) → an institution as an instrument
+    score_when:
+    - trigger: minsky_memorial_segment
+      weight: 0.93
+    - trigger: how_labs_get_built_thread
+      weight: 0.9
+  effect: "Built (with Jerome Wiesner) the institution Marvin Minsky lived in for thirty years — demo-or-die culture, corporate consortium funding, and all the ethics questions that model raises. Memorial discussant on what a roof is for."
+  verifiable: "MIT Media Lab founding (1985); Stewart Brand, The Media Lab (1987)"
+  combos_with: [MENTOR-CONSTELLATION, BRAIN-OPERA]
+- id: BEING-DIGITAL
+  name: Being Digital
+  type: activated
+  mana: "{U}{B}"
+  conditions:
+  - segment_topic_in: [predictions, digital-transition, media, daily-me]
+  advertisement:
+    method: beingDigital
+    signature: beingDigital(1995) → re-scored in 2026, hits and misses on the record
+    score_when:
+    - trigger: prediction_scoring_segment
+      weight: 0.92
+  effect: "Bits-not-atoms (1995) re-read thirty years on: streaming, personalization, and the interface agent all landed; the Daily Me's filter-bubble politics landed harder than he hoped. Pairs naturally with Kurzweil's prediction ledger."
+  verifiable: "Being Digital (Knopf, 1995); Wired back-page columns"
+  combos_with: [PREDICTION-LEDGER, OUT-OF-CONTROL]
+- id: OLPC
+  name: One Laptop per Child
+  type: activated
+  mana: "{G}{W}"
+  conditions:
+  - segment_topic_in: [education, constructionism-at-scale, olpc, development]
+  advertisement:
+    method: olpc
+    signature: olpc(hundredDollarLaptop) → constructionism shipped to millions, postmortem included
+    score_when:
+    - trigger: educators_track_segment
+      weight: 0.9
+    - trigger: relationship_matrix_ensemble
+      guests: [nicholas-negroponte, walter-bender, alan-kay]
+      weight: 0.92
+  effect: "The $100 laptop (2005): Papert's constructionism at planetary scale — millions shipped, Sugar built, hard lessons learned. Best played as an honest postmortem with Bender and Kay at the table."
+  verifiable: "OLPC founding (2005); public record of deployments and critiques"
+  combos_with: [LOGO-ORIGIN, AI-BLOCKS]
+- id: INSTITUTIONAL-LEDGER
+  name: Institutional Ledger
+  type: activated
+  mana: "{B}{B}"
+  conditions:
+  - segment_topic_in: [funding-ethics, epstein, institutions, accountability]
+  advertisement:
+    method: institutionalLedger
+    signature: institutionalLedger(money) → where it came from, on the record
+    score_when:
+    - trigger: hard_questions_segment
+      weight: 0.88
+  effect: "The un-glossed ability: the Media Lab's funding model and the 2019 Epstein donations scandal ('I would do it again'). The show's portrayal standards require the record, not the press release — and the best version of this segment is him answering it directly."
+  verifiable: "2019 MIT Media Lab meeting reports (public record)"
+  combos_with: [DATA-DIGNITY-REPO]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: CHARACTER.yml, why: "Bio girder + honest_note" }
+  - { path: ../margaret-minsky/CARD.yml, why: "Advisor credit on HAPTICS" }
+  - { path: ../marvin-minsky/CARD.yml, why: "🕯️ Memorial roof-builder" }

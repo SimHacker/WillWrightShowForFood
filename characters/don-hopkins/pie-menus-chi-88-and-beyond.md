@@ -41,7 +41,7 @@ Primary sources in mail archive: Wiseman notes on radial menus in PIXIE; Cambrid
 
 - CHI'88 paper (linked from [`portrayal/presentations.yml`](portrayal/presentations.yml))
 - Dr. Dobb's Journal — Ray Valdes pitch, draft outline, Buxton 12-item experiment (Sep 1991): [`sources/1991-09-pie-menus-buxton-ddj-draft.md`](sources/1991-09-pie-menus-buxton-ddj-draft.md)
-- Mark Weiser — demo tape, 6×6 alphabetic pies, stylus 26-quadrant hack (Mar 1991): [`sources/1991-03-mark-weiser-pie-menu-tape-stylus.md`](sources/1991-03-mark-weiser-pie-menu-tape-stylus.md)
+- Mark Weiser — demo tape, 6×6 alphabetic pies, stylus 26-quadrant hack (Mar 1991): [`../mark-weiser/sources/1991-03-mark-weiser-pie-menu-tape-stylus.md`](../mark-weiser/sources/1991-03-mark-weiser-pie-menu-tape-stylus.md)
 - [`career/lineage.yml`](career/lineage.yml) — bundle entry + `pie_menus_prehistory`
 - DonHopkins `talks/past/pie-menus-chi88.yml`
 

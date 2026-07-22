@@ -1,0 +1,55 @@
+# MC Frontalot — invitation portrayal. NOT MC Frontalot.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: mc-frontalot
+  name: "MC Frontalot"
+  legal_name: "Damian Hess"
+  type: invitation
+  signifier: "🎙🕯"
+  status: living
+  field: "Nerdcore hip-hop; interactive music videos; Infocom / RPG lyricism"
+  home: characters/mc-frontalot/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  note: "Draft invite ready — Pitch Dark + Common Loot (playable). Not sent."
+
+bio:
+  summary: >
+    **MC Frontalot** (Damian Hess) — nerdcore pioneer. *It Is Pitch Dark* (2007) is the Infocom /
+    Get Lamp anthem (Jason Scott video; Steve Meretzky cameo). *Common Loot* (2026) ships as a
+    playable interactive music video at frontalot.com/loot — song about RPG mechanics from the
+    upcoming album *Counterfeit Wine* (McGwire chorus; Brendan B. Brown guitar).
+
+show_suggestions:
+  - "Cold open: play Common Loot live → Pitch Dark → Get Lamp / Infocom talk"
+  - "Interactive video as potential narrative (Montfort) — why just watch when you can play?"
+  - "Lyric as Infocom citation index (Pitch Dark) + RPG systems satire (Common Loot)"
+  - "Never misunderstood by the NPCs inhabiting Earth — MOOLLM many-voices gag"
+
+sources:
+  web:
+    - { title: "Common Loot (playable)", url: "https://frontalot.com/loot/" }
+    - { title: "Common Loot playthrough (YouTube)", url: "https://www.youtube.com/watch?v=FqUoW87oytM" }
+    - { title: "It Is Pitch Dark (YouTube)", url: "https://www.youtube.com/watch?v=4nigRT2KmCE" }
+    - { title: "frontalot.com", url: "https://frontalot.com/" }
+    - { title: "Bandcamp", url: "https://frontalot.bandcamp.com" }
+  local:
+    - { path: sources/common-loot.md, why: "2026 interactive video" }
+    - { path: sources/it-is-pitch-dark.md, why: "2007 Get Lamp anthem" }
+
+see_also:
+  - { path: invitation.md, why: "Draft invite" }
+  - { path: sources/common-loot.md, why: "Playable 2026 track" }
+  - { path: sources/it-is-pitch-dark.md, why: "Pitch Dark / Get Lamp" }
+  - { path: ../jason-scott/sources/get-lamp.md, why: "Documentary Pitch Dark serves" }
+  - { path: ../nick-montfort/sources/riddle-machines.md, why: "Potential narrative" }
+  - { path: ../scott-adams/README.md, why: "Commercial IF" }

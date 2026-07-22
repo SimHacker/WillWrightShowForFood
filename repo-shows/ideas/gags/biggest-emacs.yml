@@ -1,0 +1,89 @@
+# The Biggest Emacs in the World — publicity stunt / world record attempt
+# "How big an Emacs can we run? Can it edit EVERY FILE IN THE FILE SYSTEM?"
+
+id: biggest-emacs
+type: publicity_stunt
+status: seed
+shows: [richard-stallman, brian-fox]   # emacs-lineage panel; also james-gosling thread
+
+title: "THE BIGGEST EMACS IN THE WORLD!!!"
+alt_titles:
+  - "M-x world-record"                # the command as the brand
+  - "Eight Terabytes And Constantly Swapping"  # the old EMACS backronym, inflated to spec
+  - "C-x C-f /"                       # find-file the universe; for the shirts
+  - "One Buffer Per File, Every File"
+
+why_this_name: |
+  BIGGEST EMACS wins the thumbnail: superlative + monosyllable + the one editor
+  civilians have heard jokes about. "Eight Terabytes And Constantly Swapping" is the
+  insider handshake (EMACS = Eight Megabytes And Constantly Swapping, when eight was
+  a lot) — use it as the subtitle. "C-x C-f /" goes on the shirt.
+
+elevator: |
+  One Emacs. Every file on the filesystem, open in a buffer, at once. Dired on /,
+  TRAMP for the remote planets, a live buffer counter like a telethon tote board.
+  We livestream the climb, crash, bisect, tune the GC, and climb again — speedrun
+  culture applied to a 1976 text editor — and when it stands, we pay Guinness for
+  the category, ON CAMERA, because it's pay for play and everybody knows it, and
+  making THAT the bit is funnier than pretending otherwise.
+
+the_record:
+  categories_to_buy:            # bespoke record consultancy — the fee IS the joke
+    - "Most files simultaneously open in a single text editor"
+    - "Largest total bytes open for editing at once"
+    - "Most buffers in one Emacs session"
+  metrics_board:                # telethon tote board, updated live
+    - buffers_open
+    - total_bytes_buffered
+    - gc_pauses_survived
+    - swap_used               # the constantly-swapping homage line
+  honest_engineering_notes: |
+    64-bit Emacs buffers cap near most-positive-fixnum (~2 exabytes of theory);
+    reality dies much sooner in memory, GC, and redisplay. That gap between theory
+    and death is the SHOW: chunked find-file, buffer lazy-loading, gc-cons-threshold
+    surgery, literal fog-of-war (only illuminate buffers the camera looks at —
+    see moollm HALLS-AND-ROOMS lights/dimmers). Every crash is content. Every
+    workaround is a segment.
+
+guinness_bit:
+  premise: "Pay-for-play, played straight AT the camera."
+  beats:
+    - "Crowdfund the bespoke-category consultancy fee live; tip jar per gigabyte opened."
+    - "Read the invoice aloud in the voice normally reserved for record certificates."
+    - "Frame the certificate next to a printout of the invoice. Equal frames. Same wall."
+    - "If Guinness declines: declare the 'Guinness declined this record' record. Self-certify. Gong."
+  epistemic_note: "Guinness's paid consultancy for bespoke categories is real and documented; the stunt satirizes the economics, not any specific fee we haven't been quoted."
+
+panel: # the Emacs lineage, most of whom are already in this repo
+  - { who: richard-stallman, why: "GNU Emacs; the AI Lab editor culture; will have OPINIONS about what counts as 'one Emacs'" }
+  - { who: brian-fox, why: "Maintained GNU Emacs; FSF employee #1; wrote readline — the small mirror of the big editor" }
+  - { who: james-gosling, why: "Gosling Emacs → GNU Emacs history; heard the doctor.el story from Don" }
+  - { who: "Jamie Zawinski", why: "Lucid Emacs / XEmacs fork pole (no room in repo yet) — governance-war color commentary" }
+  - { who: don-hopkins, why: "Host; ran Emacs on everything; pie menus vs M-x as the eternal input-war gag" }
+
+live_show:
+  cold_open: |
+    Don: "EMACS stood for Eight Megabytes And Constantly Swapping, because eight
+    megabytes was a comical amount of memory. Tonight we find out what's comical now."
+    Cut to the tote board at zero buffers.
+  segments:
+    - "THE CLIMB — dired /, find-file storm, counter spinning; chat picks which directory trees load next (fog of war lifts where the audience looks)"
+    - "M-x doctor ON ITSELF — the doctor consoles Emacs about its memory usage (doctor.el + RMS-vs-Doctor lore from the stallman room)"
+    - "M-x butterfly — xkcd 378 read aloud as liturgy by the Church of the Eval Genius; cosmic rays optional"
+    - "THE WALL — first OOM/GC death; bisect and tune live like a speedrun routing session"
+    - "PANEL — what even IS 'one Emacs'? (RMS rules-lawyer segment we WANT to lose control of)"
+    - "CERTIFICATE + INVOICE — the framing ceremony; Ultimate Machine gongs the stream off"
+  audience:
+    - "Tip jar per gigabyte; donors' filenames get opened on camera (repo-safe files only)"
+    - "TicketPR tag: biggest-emacs; PRs adding files to the record corpus = audience seats"
+
+ties_to:
+  - ../../../characters/richard-stallman/    # EMACS ability, RMS-VS-DOCTOR, copyleft
+  - ../../../characters/brian-fox/           # BASH {0} mana; Emacs maintainership
+  - ../../../characters/james-gosling/       # Emacs history counterpart
+  - ../../../characters/don-hopkins/
+  # moollm resonance: the microworld's dream — every file in the world open at once —
+  # is just MOOLLM with the lights all on. The stunt is the glossary's ROOM entry
+  # performed as vaudeville: dired IS ls, the buffer list IS the palace, and fog of
+  # war is the only reason any of it fits in memory. Also LOAD-BEARING irony:
+  # "biggest Emacs" is a stunt about a system famous for carrying everything.

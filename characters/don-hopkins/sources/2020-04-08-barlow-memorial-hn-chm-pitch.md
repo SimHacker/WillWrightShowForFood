@@ -85,6 +85,6 @@ Full Heinz correspondence: [`../../heinz-lemke/correspondence.md`](../../heinz-l
 
 - [`2020-04-06-flight-of-pixie-chm-tlg-broadcast.md`](2020-04-06-flight-of-pixie-chm-tlg-broadcast.md)
 - [`../../brewster-kahle/sources/chm-1996-early-dreams-clip.md`](../../brewster-kahle/sources/chm-1996-early-dreams-clip.md)
-- [`2020-02-alan-kay-pixie-pie-menus-thread.md`](2020-02-alan-kay-pixie-pie-menus-thread.md)
+- [`../../alan-kay/sources/2020-02-alan-kay-pixie-pie-menus-thread.md`](../../alan-kay/sources/2020-02-alan-kay-pixie-pie-menus-thread.md)
 
 ↑ [`README.md`](README.md)

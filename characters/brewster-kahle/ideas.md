@@ -37,6 +37,11 @@ Tim Pozar's 1996 telling in the CHM video; Tim visited Amsterdam July 2026 ([`so
 
 Preservation ethos matches cited sources + Wayback; Wikimedia partnership already in [`CHARACTER.yml`](CHARACTER.yml#synergies).
 
+**Adventure as early dream:** Crowther/Woods → Knuth CWEB museum piece
+([`../donald-knuth/sources/adventure-knuth/`](../donald-knuth/sources/adventure-knuth/)) — keep the
+*world model* readable. Same instinct as WAIS logs: preserve intent, not only bits.
+[ADVENT ≈ SHRDLU inside-out](../donald-knuth/sources/advent-shrdlu-wumpus-lineage.md).
+
 AskTog living-repo rescue names IA as ally ([`../bruce-tognazzini/sources/asktog-preservation.md`](../bruce-tognazzini/sources/asktog-preservation.md)).
 
 **The Internet Archive and AI** — open question for Brewster: AI is IA spelled backwards, so what is IA doing with AI, and what does he *want* to do? AI as patron vs. AI as extraction; librarian's-assistant tooling over the collections;

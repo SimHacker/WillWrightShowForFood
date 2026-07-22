@@ -26,13 +26,55 @@ memorial:
   mode: represent_and_discuss
   rule: "Represent and discuss his documented work and stories. Do not interview, do not speak as him, invent no inner life, dialogue, or quotes."
   who_can_discuss:
+    # Family
     - { who: henry-minsky, why: "His son — grew up in the AI Lab's children's computer lab; carries Society-of-Mind ideas into Leela AI" }
     - { who: margaret-minsky, why: "His daughter — MIT Media Lab; the first wired family" }
-    - { who: alan-kay, why: "AI/personal-computing peer shaped by the same MIT/ARPA milieu" }
-    - { who: ken-kahn, why: "MIT AI Lab lineage; Logo/ToonTalk constructionism" }
-    - { who: walter-bender, why: "MIT Media Lab; OLPC — carried the lab's learning mission forward" }
-    - { who: don-hopkins, why: "K-lines are a load-bearing concept in MOOLLM/this repo" }
+    - { who: julie-minsky, why: "His daughter — Henry's twin; Universal Access Inc. co-founder (META-HTML, with Henry + Brian Fox); with her, all three children of the first wired family can share the memorial stage" }
+    - { who: oliver-steele, why: "His son-in-law — Laszlo chief architect; instance-first design" }
+    - { who: milan-singh-minsky, why: "His daughter-in-law — Henry's wife; VP Product at Leela AI, where the lab's ideas run in production" }
+    # Thesis students — research and dissertations under Marvin
     - { who: gary-drescher, why: "His PhD student — Made-Up Minds (the schema mechanism); Minsky hailed it as a landmark in learning theory" }
+    - { who: david-levitt, why: "His doctoral student — Sc.D. 1985, 'A Representation for Musical Dialects' (MIT EECS, advisor Marvin Minsky per DSpace); Bell Labs fellowship work with Marvin on AI music; part of the AI Lab improvisation scene around Marvin's Bach-fugue keyboard playing. Don's dear friend + Pantomime collaborator (David founder, Don Chief Architect) — invited 2026-07-06" }
+    # Thesis committee & advised research — shaped by Marvin without being 'his' students
+    - { who: ivan-sutherland, why: "Sketchpad (PhD 1963) — Shannon supervised; Minsky on the committee; thesis acknowledgments credit Shannon + Minsky with giving 'Sketchpad much of its present character'" }
+    - { who: ken-kahn, why: "PhD 1979 at the AI Lab Marvin co-directed ('Creation of Computer Animation from Story Descriptions' — advisor Carl Hewitt, NOT Marvin; Minsky + Papert reported on committee); Logo group; ToonTalk constructionism" }
+    # Students of the milieu, colleagues, and documented friends
+    - { who: ray-kurzweil, why: "Corresponded with Marvin from high school; invited to visit; went to MIT expressly to study with him (B.S. 1970)" }
+    - { who: alan-kay, why: "AI/personal-computing peer shaped by the same MIT/ARPA milieu" }
+    - { who: walter-bender, why: "MIT Media Lab; OLPC — carried the lab's learning mission forward" }
+    - { who: nicholas-negroponte, why: "Co-founded the Media Lab (1985) — built the institutional roof Marvin lived under for three decades; Margaret's PhD advisor" }
+    - { who: tod-machover, why: "Brain Opera (1996) — Society of Mind as audience-participatory opera, 'done in the lab next to mine' (Marvin, NYT First Wired Family)" }
+    - { who: brian-fox, why: "Universal Access Inc. co-founder with Henry + Julie — the wired family's startup partner; witness to what the kids built" }
+    - { who: cynthia-solomon, why: "MIT Logo culture (1970s) + Atari Cambridge Research; her YouTube channel preserves rare footage of Marvin (and Margaret) — a memorial treasure trove" }
+    - { who: stephen-wolfram, why: "'Farewell, Marvin Minsky' (Jan 2016) — met via Feynman in 1979; 35-year friendship; discussed every major project (SMP → Mathematica → NKS → Wolfram|Alpha) with him" }
+    - { who: jaron-lanier, why: "Knew Marvin personally; documented Dormouse thread — Engelbart's challenge to Minsky ('What are you going to do for the people?') in his American Scientist review" }
+    - { who: richard-stallman, why: "MIT AI Lab hacker (1971–1984) — the Emacs/Lisp culture of Marvin's lab" }
+    - { who: kent-pitman, why: "MIT AI Lab — MACLISP/Pitmanual era of the lab's Lisp culture" }
+    - { who: david-henkel-wallace, why: "MIT AI Lab lineage; formerly Leela AI — both ends of the Society-of-Mind pipeline" }
+    - { who: norman-margolus, why: "MIT physics-of-computation / CA community (CAM-6 with Toffoli); close friend of Henry Minsky" }
+    - { who: don-hopkins, why: "K-lines are a load-bearing concept in MOOLLM/this repo" }
+  in_memoriam_peers:
+    # The Diespace wing (h/t PIPS:lab — "the social network for people who already passed away").
+    # Deceased people with memorial rooms in this repo whose work and life BELONG in Marvin's
+    # memorial conversations — who would have been invited to memorialize him were they alive,
+    # and whom we memorialize in the same breath. Represent + discuss; nobody speaks as anybody.
+    - { who: seymour-papert, died: 2016, why: "🕯️ Co-directed the AI Lab; Perceptrons co-author; constructionism — the two are memorialized together in remembering-the-constructionists" }
+    - { who: jean-piaget, died: 1980, why: "🕯️ The constructivist root — Papert worked with Piaget; the lab's learning agenda descends from him" }
+    - { who: douglas-engelbart, died: 2013, why: "🕯️ The great counterpart — augmentation vs AI; his challenge to Marvin ('What are you going to do for the people?') is the Dormouse thread Jaron documented; their debate continues between their memorial rooms" }
+    - { who: ron-reisman, why: "🕯️ Documented video of Marvin flying Ron's NASA Ames flight simulator — an existing memorial pairing in this repo" }
+  peers_without_rooms_yet:
+    # Documented Minsky-orbit dead who deserve rooms — candidates for future memorial mode
+    - { who: "John McCarthy", died: 2011, why: "Co-founded the MIT AI Lab with Marvin (1959); coined 'artificial intelligence'; Dartmouth workshop co-organizer" }
+    - { who: "Claude Shannon", died: 2001, why: "Built Marvin's Ultimate Machine at Bell Labs (1952); co-credited (with Minsky) in Sketchpad's acknowledgments; Dartmouth workshop co-organizer" }
+    - { who: "Ed Fredkin", died: 2023, why: "Triadex Muse co-inventor with Marvin; digital physics; Project MAC — also the CA thread (Margolus, Toffoli)" }
+    - { who: "Push Singh", died: 2006, why: "His doctoral student and closest late-career collaborator — commonsense computing (Open Mind); was to join the MIT Media Lab faculty" }
+    - { who: "Patrick Winston", died: 2019, why: "His PhD student; directed the AI Lab after him (1972–1997); story-understanding lineage" }
+    - { who: "Carl Hewitt", died: 2022, why: "His PhD student (actor model, Planner); advisor of Ken Kahn — the committee-and-milieu thread runs through him" }
+    # NOTE: Gloria Rudisch Minsky (his wife, pediatrician) is LIVING (retired Brookline 2021).
+    # EDITORIAL DECISION (Don, July 2026): no character directory, invitation, or show for Gloria.
+    # We model only the family members we plan to interview or memorialize — not every relation.
+    # Mention her organically (spouse field, bio prose, NYT First Wired Family context) but do
+    # not directly represent her. Do not add her here, to who_can_discuss, or to INDEX.yml.
   draw_on_for_shows:
     - "Co-founding the MIT AI Lab (1959, with John McCarthy) — and co-directing it with Seymour Papert"
     - "SNARC (1951, with Dean Edmonds) — one of the first randomly-wired neural-network learning machines"
@@ -49,7 +91,7 @@ bio:
 
 family:
   spouse: "Gloria Rudisch Minsky, MD"
-  children: ["margaret-minsky (haptics; MIT Media Lab)", "henry-minsky (Leela AI / OpenLaszlo; his twin sister Juliana)", "Juliana 'Julie' Minsky"]
+  children: ["margaret-minsky (haptics; MIT Media Lab)", "henry-minsky (Leela AI / OpenLaszlo; Juliana's twin)", "julie-minsky (Universal Access Inc. co-founder — META-HTML; Henry's twin)"]
 
 sources:
   wikipedia: "https://en.wikipedia.org/wiki/Marvin_Minsky"
@@ -75,6 +117,10 @@ see_also:
   - { path: ../margaret-minsky/, why: "His daughter — can discuss him on air" }
   - { path: ../seymour-papert/, why: "🕯️ Co-director of the AI Lab; Perceptrons co-author; constructionism" }
   - { path: ../gary-drescher/, why: "His PhD student — schema mechanism (Made-Up Minds); the constructivist branch of his lineage, alive at Leela + MOOLLM" }
+  - { path: ../david-levitt/, why: "His doctoral student — AI music Sc.D. (1985); Don's dear friend; memorializing Marvin together is a planned show beat (david-levitt/ideas.md hook 7)" }
+  - { path: ../ray-kurzweil/, why: "Wrote to Marvin from high school → studied with him at MIT; memorial discussant" }
+  - { path: ../ivan-sutherland/, why: "Sketchpad thesis committee — Shannon + Minsky credited in the acknowledgments" }
+  - { path: ../cynthia-solomon/, why: "Her YouTube channel preserves rare Marvin footage — memorial source material" }
   - { path: ../jean-piaget/, why: "🕯️ Constructivism — the developmental root of the lab's learning work" }
   - { path: ../ron-reisman/, why: "🕯️ Flies Ron's Ames flight simulator in documented video — memorial pairing" }
   - { path: ../../process/trails/constructionist-lineage.md, why: "Piaget → Papert → Minsky → the show's learning spine" }

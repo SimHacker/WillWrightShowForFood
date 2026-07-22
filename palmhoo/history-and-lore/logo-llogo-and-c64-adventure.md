@@ -10,7 +10,7 @@ and rescued the lab implementation.*
 | [**CS Logo Style**](../../characters/brian-harvey/sources/computer-science-logo-style.md) | Brian Harvey | Logo as serious CS — procedures, data, recursion, compilers |
 | [**LLogo (MacLISP)**](../../characters/don-hopkins/sources/llogo-maclisp-its.md) · [source](../../characters/don-hopkins/sources/llogo-maclisp-its/llogo.lisp.txt) | Don Hopkins (rescue) | Where Papert's turtle met ITS hardware — parsers, drivers, optional microworlds |
 | [**Logo Adventure (C64)**](../../characters/don-hopkins/sources/logo-adventure-c64-terrapin.md) | Don Hopkins (age 17) | List/functional Logo without graphics; REPL-as-adventure-engine |
-| [**KMP ANIMAL tree**](../../characters/don-hopkins/sources/kmp-animal-its.md) · [sexpr](../../characters/don-hopkins/sources/kmp-animal-its/animal-database-from-its.lisp.txt) | Kent Pitman / MIT-MC players | Communal expert-system database; Don's **A2DEH** tags; foul-language proto-character |
+| [**KMP ANIMAL tree**](../../characters/kent-pitman/sources/kmp-animal-its.md) · [sexpr](../../characters/kent-pitman/sources/kmp-animal-its/animal-database-from-its.lisp.txt) | Kent Pitman / MIT-MC players | Communal expert-system database; Don's **A2DEH** tags; foul-language proto-character |
 
 ## Preservation beat
 

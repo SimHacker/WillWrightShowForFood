@@ -17,6 +17,13 @@ following through to working code and credited ideas in public.
 
 **Proposed focus:** HCI, interaction design, constructionist-adjacent education, Stanford CS547 seminar series, SHRDLU legacy
 
+**SHRDLU ↔ Adventure hook:** interactive fiction as SHRDLU turned inside out (Montfort / HN) —
+blocks-world language mastery vs cave-world exploration; how that maps to today's LLM agents and
+microworlds. Trail:
+[advent-shrdlu-wumpus-lineage.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/donald-knuth/sources/advent-shrdlu-wumpus-lineage.md) ·
+[Knuth Adventure room](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/donald-knuth/sources/adventure-knuth/) ·
+room README § [SHRDLU ↔ Adventure](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/terry-winograd/README.md#shrdlu--adventure-inside-out).
+
 **Materials:** [`repo-shows/terry-winograd/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/terry-winograd/README.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).

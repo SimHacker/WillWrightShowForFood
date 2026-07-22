@@ -45,7 +45,7 @@ Berners-Lee **Spring 1989** cites Hyperties for hot spots + link color. Ben's *E
 Nelson: wish he'd link to **practical impact** — fair critique Don forwarded in Jan 2022.
 
 → [`sources/2022-01-13-hyperties-computer-lib.md`](sources/2022-01-13-hyperties-computer-lib.md) ·
-[`../don-hopkins/sources/2020-ted-nelson-klavs-landberg-self-revealing.md`](../don-hopkins/sources/2020-ted-nelson-klavs-landberg-self-revealing.md)
+[`../ted-nelson/sources/2020-ted-nelson-klavs-landberg-self-revealing.md`](../ted-nelson/sources/2020-ted-nelson-klavs-landberg-self-revealing.md)
 
 ### 3b. Clipboard panel — visible links vs invisible scrap
 Jan 2022 thread on Ted Nelson + HyperTIES lineage. **Embedded light blue links** as partial answer

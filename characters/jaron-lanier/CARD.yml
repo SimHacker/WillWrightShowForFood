@@ -41,6 +41,16 @@ card:
   signifier: "🥽🎼"
   flavor: User interface all the way to the bottom — the virtual world and the knowledge base are the same thing.
 
+relationships:
+  # kinds may stack — real people relate in multiple ways at once
+  - { with: marvin-minsky, kinds: [friend, documented_foil, memorial_discussant], why: "Knew Marvin personally; documented the Dormouse thread — Engelbart's challenge to Minsky ('What are you going to do for the people?') in his American Scientist review" }
+  - { with: ray-kurzweil, kinds: [documented_critic, twin_debate_counterpart], why: "'One Half of a Manifesto' names cybernetic totalism; now RAI vs data dignity is the live round" }
+  - { with: chuck-blanchard, kinds: [vpl_cofounder_colleague, credit_honesty], why: "Body Electric lead programmer credit belongs to Chuck (rebounce origin ensemble)" }
+  - { with: david-levitt, kinds: [vpl_colleague, rights_chain], why: "Hookup Mac rights → Bounce compensation arc" }
+  - { with: brian-eno, kinds: [generative_performance_peer], why: "Rare-instrument / generative music ensemble" }
+  - { with: don-hopkins, kinds: [correspondent_1999, pie_menu_quote], why: "1999 UI-all-the-way-down email; 'the body remembers' quote in Don's pie-menu materials" }
+  - { with: ivan-sutherland, kinds: [vr_lineage], why: "Sword of Damocles (1968) → VPL coining 'virtual reality'" }
+
 abilities:
 - id: COINED-VR
   name: Coined Virtual Reality
@@ -144,6 +154,27 @@ abilities:
   verifiable: Jaron quote in Don's pie-menu materials
   combos_with:
   - DON-PIE-MENU
+
+- id: DORMOUSE-THREAD
+  name: The Dormouse Thread
+  type: triggered
+  mana: "{W}{B}"
+  conditions:
+  - segment_type: memorial
+  - segment_topic_in: [marvin-minsky, engelbart, ai-vs-ia, tech-ethics]
+  advertisement:
+    method: dormouseThread
+    signature: dormouseThread() → Engelbart's challenge to Minsky, told by a friend of both camps
+    score_when:
+    - trigger: ai_vs_augmentation_debate_grounded
+      weight: 0.93
+    - trigger: family_and_students_share_stage
+      weight: 0.88
+  effect: Reaction — memorial discussant who loved Marvin AND documented the hardest question anyone asked him ('What are you going to do for the people?'); keeps the memorial honest, not hagiographic.
+  verifiable: American Scientist review of Markoff's What the Dormouse Said; sources/
+  combos_with:
+  - MENTOR-CONSTELLATION
+  - TWIN-PROVENANCE
 
 compose_with:
   chuck-blanchard: rebounce_origin_ensemble

@@ -64,5 +64,5 @@ Don: hacking in the Netherlands.
 
 - [`../../douglas-engelbart/engelbart-mouse-and-keyset.md`](../../douglas-engelbart/engelbart-mouse-and-keyset.md)
 - [`../../dave-maynard/`](../../dave-maynard/)
-- [`2020-02-alan-kay-pixie-pie-menus-thread.md`](2020-02-alan-kay-pixie-pie-menus-thread.md) — Engelbart down-not-across
+- [`../../alan-kay/sources/2020-02-alan-kay-pixie-pie-menus-thread.md`](../../alan-kay/sources/2020-02-alan-kay-pixie-pie-menus-thread.md) — Engelbart down-not-across
 - [`../../jaron-lanier/sources/2023-01-24-dormouse-engelbart-minsky.md`](../../jaron-lanier/sources/2023-01-24-dormouse-engelbart-minsky.md)

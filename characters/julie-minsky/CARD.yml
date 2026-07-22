@@ -1,0 +1,90 @@
+# CARD — Juliana "Julie" Minsky (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+# Deliberately modest card — public record is thin by her choice; she may expand it anytime.
+
+room:
+  id: julie-minsky
+  name: Juliana Minsky
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+card:
+  name: Juliana Minsky
+  title: Roll 'em · The Other Twin
+  rarity: rare
+  signifier: "🎬"
+  flavor: The most nonverbal of all the Minsky home pages — an enigmatic clock, links at 12, 3, 6 and 9.
+
+relationships:
+  # kinds may stack — real people relate in multiple ways at once
+  - { with: marvin-minsky, kinds: [daughter, lab_child, memorial_discussant], why: "The first wired family — all three children online once the AI Lab joined the ARPAnet" }
+  - { with: henry-minsky, kinds: [twin, business_cofounder], why: "Twins who co-founded Universal Access Inc. (~1994) and braved a coast-to-coast 'meet the Minskys' press blitz (NYT)" }
+  - { with: margaret-minsky, kinds: [sister], why: "First wired family" }
+  - { with: oliver-steele, kinds: [brother_in_law], why: "Margaret's husband" }
+  - { with: milan-singh-minsky, kinds: [sister_in_law], why: "Henry's wife — her early homepage is in the same NYT piece" }
+  - { with: brian-fox, kinds: [business_cofounder], why: "Universal Access Inc. co-founder — GNU Bash author; built META-HTML with the twins" }
+  - { with: richard-stallman, kinds: [gnu_adjacent], why: "Universal Access co-founder Brian Fox wrote GNU Bash — the GNU thread runs through her company" }
+
+abilities:
+- id: META-HTML
+  name: META-HTML
+  type: activated
+  mana: "{U}{G}"
+  conditions:
+  - segment_topic_in: [web-history, scripting-languages, intranets, dotcom-era]
+  advertisement:
+    method: metaHtml
+    signature: metaHtml(1994) → web apps in an HTML-shaped language, pre-dotcom-boom
+    score_when:
+    - trigger: web_application_prehistory_beat
+      weight: 0.9
+  effect: "Co-founded Universal Access Inc. with her twin and two MIT friends (incl. Bash author Brian Fox) — META-HTML, a development environment for Internet/intranet apps, chasing the market Lotus Domino owned. The web-app-language idea, eight years before LZX."
+  verifiable: "NYT 'First Wired Family' (1996/97); MIT AI Lab spinoffs page (per NYT)"
+  combos_with: [LZX-ARCHITECTURE, DECLARATIVE-UI]
+- id: ROLL-EM
+  name: Roll 'em
+  type: static
+  mana: "{1}"
+  conditions:
+  - segment_topic_in: [early-web, personal-homepages, net-culture]
+  advertisement:
+    method: rollEm
+    signature: rollEm(clock) → links at 12, 3, 6 and 9; ingenuity celebrated nonverbally
+    score_when:
+    - trigger: early_web_culture_beat
+      weight: 0.85
+  effect: "Her 1996 homepage aesthetic — an enigmatic clock linking to Japan, the Mystical Smoking Head of 'Bob, and Suck; a networked sketchpad before that was a genre. The playful pole of the family's web presence."
+  verifiable: "NYT 'First Wired Family' (1996/97)"
+  combos_with: []
+- id: FIRST-WIRED-TWIN
+  name: First Wired Family (Twin Seat)
+  type: triggered
+  mana: "{W}"
+  conditions:
+  - segment_type: memorial
+  - segment_topic_in: [marvin-minsky, first-wired-family, ai-lab-childhood]
+  advertisement:
+    method: firstWiredTwin
+    signature: firstWiredTwin(memory) → the third child's vantage, memorial mode
+    score_when:
+    - trigger: family_and_students_share_stage
+      weight: 0.92
+    - trigger: all_three_children_present
+      weight: 0.97
+  effect: "Memorial discussant — completes the family constellation: with Julie present, all three of Marvin's children can share the stage; never speaks as Marvin."
+  verifiable: "../marvin-minsky/CHARACTER.yml memorial.who_can_discuss; NYT 1996/97"
+  combos_with: [MENTOR-CONSTELLATION, WIRED-CHILDHOOD, MEMORY-LANE]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+  minimal_by_design: "Public record is thin by her choice — abilities stay sparse until she co-authors"
+
+see_also:
+  - { path: CHARACTER.yml, why: "Bio girder — invitation status" }
+  - { path: ../henry-minsky/CARD.yml, why: "Twin + co-founder" }
+  - { path: ../marvin-minsky/CARD.yml, why: "🕯️ Memorial — family seat" }

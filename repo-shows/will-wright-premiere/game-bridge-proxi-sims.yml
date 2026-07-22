@@ -1,0 +1,69 @@
+# Game bridge — Proxi ⇔ Soul City ⇔ The Sims
+# Crown-jewel data-portability payoff from Will's 1996 train-set hobby model.
+# Sibling of game-bridge-proxi-minecraft.yml (shipped Proxi→Minecraft precedent).
+
+meta:
+  id: game-bridge-proxi-sims
+  type: bridge
+  status: seed
+  one_line: >
+    Build the Proxi ⇔ Soul City ⇔ Sims bridge on air — characters, homes, objects, memories
+    moving between Will's own universes, with an optional Mind Mirror personality layer.
+
+thesis: |
+  In 1996 Will described the hobby-model dream: move characters / homes / cities / objects /
+  ideas / memories between universes. Soul City is the liminal hub; Proxi and The Sims are
+  the spokes that make the claim undeniable — *his* games talking to each other through a
+  portable soul-file. Minecraft already proves Proxi export ships (Dev Diaries 2025); this
+  bridge closes the loop back to Sims (and SliceCity as nested-sim precedent).
+
+hub_path: "Proxi ⇔ Soul City ⇔ The Sims (⇔ Minecraft, Stardew, Spore, … via hub)"
+
+show_beats:
+  - "1996 Winograd seed — what 'moving between universes' meant then"
+  - "Soul City as layover: soul-file travels; each world re-renders"
+  - "Proxi → Soul City → Sims round-trip demo (even if partial / stubbed)"
+  - "Mind Mirror layer — personality readings ride with the soul (optional organelle)"
+  - "Wig-O-Matic / Head Shop worked example — craft shops emit real Sims IFF"
+  - "Contrast SliceCity (SimCity-in-Sims, Alvey) vs Proxi→Minecraft (Will's own export)"
+
+shipped_precedents:
+  proxi_minecraft:
+    path: game-bridge-proxi-minecraft.yml
+    note: "Will already exported Proxi characters into Minecraft"
+  slicecity:
+    who: Steve Alvey / SimSlice
+    note: "Deep nested SimCity inside The Sims — community data-portability proof"
+
+mind_mirror:
+  optional_layer: true
+  see: |
+    Full emulated-runtime organelle lives in game-bridge-mind-mirror.yml (when written).
+    Here: personality facets travel with the soul-file; no requirement to run Apple ][ on day one.
+
+guests:
+  will_wright: required
+  optional:
+    - heather-alvey
+    - steve-alvey
+    - ben-cerveny
+    - subutai-ahmad
+    - ellpeck
+
+ties:
+  - game-bridge-proxi-minecraft.yml
+  - game-bridge-sims-tiny-life.yml
+  - game-bridge-soul-city-procreation.yml
+  - game-bridge-soul-hydraulics.yml
+  - game-bridge-sims-spore.yml
+  - ../../characters/will-wright/invitation.md
+  - ../../characters/will-wright/ideas.md
+  - ../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
+  - ../../characters/will-wright/sources/2025-12-will-wright-dev-diaries/proxi-minecraft-export.yml
+  - ../../process/character-endosymbiosis.yml
+  - ../INDEX.yml#bridges_architecture
+
+see_also:
+  - SHOW.yml
+  - episodes.yml
+  - ../REPO-SHOWS.yml

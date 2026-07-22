@@ -1,0 +1,55 @@
+# Tip from Howard (r/AfterEffects, Jul 2026) — py-aep
+# Free Python library to read/edit .aep without After Effects installed.
+
+meta:
+  id: py-aep
+  found_by: howard-penner
+  date: 2026-07-19
+  status: evaluate
+  reddit: https://www.reddit.com/r/AfterEffects/comments/1v0krk9/i_made_a_free_python_library_to_edit_aep_files_no/
+  docs: https://forticheprod.github.io/py-aep/
+  repo: https://github.com/forticheprod/py-aep
+  pypi: py-aep
+  version_noted: v0.14.0
+  license: MIT
+  author: Aurore Delaunay (forticheprod / @Pouf)
+
+what: |
+  Parses RIFX/.aep binary; ExtendScript-shaped Python API. Create/modify projects,
+  comps, layers, keyframes, text, shapes, gradients, footage paths, render queue;
+  save a new .aep that opens in AE. CLI tools exist.
+
+install: "pip install py-aep  # or: uv add py-aep"
+
+does:
+  - batch variants of a layer/comp/project from YAML or scripts
+  - rewrite footage paths / rebind layered PSD/AI sources
+  - stamp text + keyframes + render-queue items without launching AE
+  - inspect hub .aeps (AdorableMinutes, Flight of the PIXIE) from CI / agents
+
+does_not:
+  - evaluate expressions
+  - sample images or render pixels (still need AE / AME / aerender for masters)
+  - UI / selection / runtime system state
+  - invent effects not already present in a donor .aep
+
+repo_show_fit:
+  adorable_minutes: process/post-production/adorable-minutes-ae.yml
+  telecine: process/post-production/cambridge-telecine-jiggle.yml
+  private_pipeline: RepoShowPrivate/production/howard-penner/  # AE → Blender overlays
+  wedge_context: characters/charchit-goyal/  # Wedge pie menus *inside* AE — complementary
+
+pipeline_slot: |
+  YAML wave spec → py-aep stamps comps/text/footage/RQ into hub .aep →
+  open in AE (or aerender) for expressions + pixel render → optional ae_to_blender.
+  Howard's "automation of output" = the stamp + RQ setup step, not replacing AE render.
+
+premiere_aside: |
+  OP noted .prproj is gzip+XML; trivial to decompress. Hard part is project graph.
+  Basic reader: https://github.com/sergeiventurinov/PRPROJ-READER — not a priority.
+
+probe: |
+  pip install py-aep
+  # then against local hub:
+  # ~/GroundUp/repo-show/projects/ae/AdorableMinutes-Hub.aep
+  # ~/GroundUp/pixie/Flight of the PIXIE.aep

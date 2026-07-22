@@ -32,7 +32,7 @@ GLANCE→CARD→SKILL→README is multi-resolution coarse-graining of a knowledg
 Run the acronym zoo and the skill tree as substitution systems on air.
 
 ### 6. Mining vs latent prospecting
-[Mining the Computational Universe](sources/2009-mining-computational-universe.md) (2009 Azores + 2019 Edge) beside [Kevin Kelly’s latent-space white gaps](../don-hopkins/sources/2026-07-kevin-kelly-latent-space-as-medium.md): same verb, rule-space ore vs semantic-space ore. Pair with Jared Tarbell’s “Mining Computational Gems.”
+[Mining the Computational Universe](sources/2009-mining-computational-universe.md) (2009 Azores + 2019 Edge) beside [Kevin Kelly’s latent-space white gaps](../kevin-kelly/sources/2026-07-kevin-kelly-latent-space-as-medium.md): same verb, rule-space ore vs semantic-space ore. Pair with Jared Tarbell’s “Mining Computational Gems.”
 
 ## Sources
 

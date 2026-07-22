@@ -1,0 +1,136 @@
+# CARD — Tod Machover (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: tod-machover
+  name: Tod Machover
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+card:
+  name: Tod Machover
+  title: Opera of the Future
+  rarity: rare
+  signifier: "🎼🧠"
+  flavor: An instrument should amplify what you mean, not just what you do.
+
+relationships:
+  # kinds may stack — real people relate in multiple ways at once
+  - { with: marvin-minsky, kinds: [media_lab_colleague, adapted_his_book, lab_next_door, memorial_discussant], why: "Brain Opera (1996) explicitly inspired by The Society of Mind; Marvin in NYT: 'done in the lab next to mine by Tod Machover'" }
+  - { with: nicholas-negroponte, kinds: [media_lab_founding_director], why: "Joined the Media Lab in its founding era; Opera of the Future group" }
+  - { with: oliver-steele, kinds: [homepage_link_story], why: "Oliver added the Brain Opera link to Marvin's home page on his own — 'sometimes they meddle with mine' (NYT)" }
+  - { with: david-levitt, kinds: [ai_music_peer], why: "Two Minsky-orbit answers to expressive machine music — hyperinstruments vs computational jazz" }
+  - { with: ray-kurzweil, kinds: [music_machines_peer], why: "Hyperinstruments vs the K250 — augmenting players vs synthesizing orchestras" }
+  - { with: jerry-martin, kinds: [game_music_bridge], why: "His students Rigopulos + Egozy (Harmonix) made Guitar Hero/Rock Band — games as instruments" }
+  - { with: keez-duyves, kinds: [participation_art_kin, premorial_costar], why: "Brain Opera's audience-as-performer ethos ↔ PIPS:lab; Death and the Powers ↔ Die Space premorializing" }
+  - { with: brian-eno, kinds: [generative_music_peer], why: "Generative/participatory composition worlds" }
+
+abilities:
+- id: HYPERINSTRUMENTS
+  name: Hyperinstruments
+  type: activated
+  mana: "{G}{U}"
+  conditions:
+  - segment_topic_in: [music, instruments, expressive-interfaces, yo-yo-ma]
+  advertisement:
+    method: hyperinstruments
+    signature: hyperinstruments(gesture) → intent amplified, not just captured
+    score_when:
+    - trigger: instrument_not_app_thread
+      weight: 0.92
+  effect: "Instruments that measure expressive intent and amplify it — the hypercello built for Yo-Yo Ma (1991); the design pole for every 'instrument, not app' thread on the show."
+  verifiable: "Hyperinstruments program (MIT Media Lab, from 1986); Begin Again Again… (1991)"
+  combos_with: [VR-AS-INSTRUMENT, BOUNCE]
+- id: BRAIN-OPERA
+  name: Brain Opera
+  type: activated
+  mana: "{U}{W}{G}"
+  conditions:
+  - segment_topic_in: [society-of-mind, participation, marvin-minsky, interactive-music]
+  advertisement:
+    method: brainOpera
+    signature: brainOpera(audience) → Society of Mind as a playable building
+    score_when:
+    - trigger: minsky_memorial_segment
+      weight: 0.95
+    - trigger: audience_becomes_performer
+      weight: 0.93
+  effect: "The Society of Mind staged: an audience-participatory opera of many small musical agents (1996), built in the lab next to Marvin's; permanently installed at Haus der Musik Vienna. Memorial gold — the book turned into a room you can play."
+  verifiable: "Brain Opera (1996); NYT First Wired Family; Haus der Musik"
+  combos_with: [SOCIETY-OF-MIND, MENTOR-CONSTELLATION, ANI-STORY-ANIMATION]
+- id: DEATH-AND-POWERS
+  name: Death and the Powers
+  type: activated
+  mana: "{W}{B}{U}"
+  conditions:
+  - segment_topic_in: [premorializing, uploading, digital-twins, opera, die-space]
+  advertisement:
+    method: deathAndThePowers
+    signature: deathAndThePowers(simonPowers) → a man inters himself in The System, live
+    score_when:
+    - trigger: premorializing_segment
+      weight: 0.96
+    - trigger: relationship_matrix_ensemble
+      guests: [tod-machover, keez-duyves, ray-kurzweil]
+      weight: 0.94
+  effect: "The premorializing opera (2010, libretto Robert Pinsky; Pulitzer finalist): a dying tycoon uploads himself into The System and the stage itself becomes him. The high-culture pole of the Die Space / RAI / premorial triangle."
+  verifiable: "Death and the Powers (premiere Monte Carlo 2010; Pulitzer finalist 2012)"
+  combos_with: [TWIN-PROVENANCE, DIESPACE-WING]
+- id: HYPERSCORE
+  name: Hyperscore
+  type: activated
+  mana: "{G}"
+  conditions:
+  - segment_topic_in: [children-composing, education, constructionism, music-tools]
+  advertisement:
+    method: hyperscore
+    signature: hyperscore(drawing) → children compose real music by sketching
+    score_when:
+    - trigger: educators_track_segment
+      weight: 0.9
+  effect: "Composition for children by drawing lines and colors — constructionism applied to music; the educators-track bridge to the Logo/Snap! world."
+  verifiable: "Hyperscore (Opera of the Future)"
+  combos_with: [LOGO-ORIGIN, AI-BLOCKS]
+- id: GUITAR-HERO-LINEAGE
+  name: Guitar Hero Lineage
+  type: static
+  mana: "{R}"
+  conditions:
+  - segment_topic_in: [game-music, harmonix, rhythm-games]
+  advertisement:
+    method: guitarHeroLineage
+    signature: guitarHeroLineage(students) → Harmonix, Guitar Hero, Rock Band
+    score_when:
+    - trigger: games_as_instruments_thread
+      weight: 0.9
+  effect: "His Media Lab students Alex Rigopulos and Eran Egozy founded Harmonix — Guitar Hero and Rock Band are hyperinstrument ideas that shipped to living rooms."
+  verifiable: "Harmonix founding history (public record)"
+  combos_with: [jerry-martin, will-wright]
+- id: CITY-SYMPHONIES
+  name: City Symphonies
+  type: activated
+  mana: "{W}{G}"
+  conditions:
+  - segment_topic_in: [crowdsourced-art, cities, participation, civic]
+  advertisement:
+    method: citySymphonies
+    signature: citySymphonies(city) → thousands of residents compose their city's sound
+    score_when:
+    - trigger: mass_participation_segment
+      weight: 0.9
+  effect: "Crowd-sourced symphonies composed with whole cities (Toronto, Edinburgh, Perth, Detroit, Philadelphia…) — mass participation as compositional method; SimCity for the ears."
+  verifiable: "City Symphonies project (Opera of the Future, 2013– )"
+  combos_with: [LUMASOL, WILL-POSSIBILITY-SPACE]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: CHARACTER.yml, why: "Bio girder — invitation status" }
+  - { path: ../marvin-minsky/CARD.yml, why: "🕯️ Brain Opera memorial combo" }
+  - { path: ../keez-duyves/CARD.yml, why: "Participation art + premorializing" }

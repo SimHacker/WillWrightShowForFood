@@ -1,0 +1,41 @@
+# Donald Knuth — show artifacts (public)
+character: donald-knuth
+invitation_status: dream_guest
+artifact_count: 5
+
+artifacts:
+  - id: knuth-advent-w
+    kind: source
+    title: "ADVENT in CWEB (Knuth + Woods)"
+    url: https://www-cs-faculty.stanford.edu/~knuth/programs/advent.w.gz
+    local: sources/adventure-knuth/advent.w
+    note: "Primary hook for the dream invite"
+
+  - id: knuth-vs-email
+    kind: protocol
+    title: "Knuth versus Email"
+    url: https://www-cs-faculty.stanford.edu/~knuth/email.html
+    note: "Channel constraint — snail mail only for non-bug topics"
+
+  - id: analysis
+    kind: analysis
+    title: "MOOLLM / WWSFF perspective on advent.w"
+    path: sources/adventure-knuth/ANALYSIS.md
+    cream: sources/adventure-knuth/CREAM.md
+
+  - id: hn-shrdlu
+    kind: thread
+    title: "ADVENT ≈ SHRDLU inside-out"
+    url: https://news.ycombinator.com/item?id=45996916
+    local: sources/advent-shrdlu-wumpus-lineage.md
+
+  - id: literateprogramming-site
+    kind: site
+    title: Literate Programming quotes
+    url: http://literateprogramming.com/
+    local: sources/literate-programming-site-quotes.md
+
+see_also:
+  - invitation.md
+  - ideas.md
+  - ../../repo-shows/donald-knuth/README.md

@@ -16,10 +16,10 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: stub
+  status: draft
   consent: not_yet_asked
-  document: README.md
-  note: "Don: Kent and his :TEACH;LISP helped me learn Lisp on ITS as a high school kid. Expressed MOO interest (HN/Mastodon). Draft outreach in DonHopkins correspondence."
+  document: invitation.md
+  note: "Don: Kent and his :TEACH;LISP helped me learn Lisp on ITS as a high school kid. Expressed MOO interest (HN/Mastodon). Public invitation.md drafted; full private draft in DonHopkins correspondence — not sent."
 
 bio:
   summary: >
@@ -42,11 +42,13 @@ sources:
   web:
     - "HN ELIZA/ANIMAL threads (Don posts)"
   local:
-    - path: ../don-hopkins/sources/kmp-animal-its.md
-      artifact: ../don-hopkins/sources/kmp-animal-its/animal-database-from-its.lisp.txt
+    - path: sources/kmp-animal-its.md
+      artifact: sources/kmp-animal-its/animal-database-from-its.lisp.txt
+      girder: sources/kmp-animal-its.yml
   correspondence:
     - path: ../../../DonHopkins/characters/don-hopkins/correspondence/kent-pitman.yml
 
 see_also:
+  - { path: sources/README.md, why: "ANIMAL tree + apology email" }
   - { path: ../don-hopkins/CARD.yml, why: "Host — ITS tourist, MOOLLM, Micropolis" }
   - { path: ../../process/pdp10-its-stack.yml, why: "MACLISP / ITS stack trail" }

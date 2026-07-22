@@ -24,7 +24,7 @@ Don's pitch (green-room; ask permission before filming):
 | Guest | Why |
 |-------|-----|
 | [Will Wright](../will-wright/) | SFC host; Bongo Bingo → re-hire story |
-| [Janet Murray](https://en.wikipedia.org/wiki/Janet_H._Murray) | Advisor — Hamlet on the Holodeck line (no room yet) |
+| [Janet Murray](../janet-murray/) | Advisor — *Hamlet on the Holodeck* ([framing](../janet-murray/sources/hamlet-on-the-holodeck.md)) |
 | [Brenda Laurel](../brenda-laurel/) | Narrative + computers as theatre orbit |
 | [Matthew Sibigtroth](../matthew-sibigtroth/) | SFC alum — prototyping culture |
 | [Jason Shankel](../jason-shankel/) | SFC hub — mutual FB network |

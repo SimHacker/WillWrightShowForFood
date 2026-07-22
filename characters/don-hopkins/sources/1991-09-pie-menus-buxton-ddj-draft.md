@@ -100,7 +100,7 @@ Geographical navigation: city streets, building halls/rooms, tree branches.
 
 - [`../pie-menus-chi-88-and-beyond.md`](../pie-menus-chi-88-and-beyond.md) — CHI'88 lineage + DDJ primary source slot
 - [`../gesture-space.md`](../gesture-space.md) — spiral staircase / city navigation metaphors
-- [`1991-03-mark-weiser-pie-menu-tape-stylus.md`](1991-03-mark-weiser-pie-menu-tape-stylus.md) — alphabetic pies + demo tape
+- [`../../mark-weiser/sources/1991-03-mark-weiser-pie-menu-tape-stylus.md`](../../mark-weiser/sources/1991-03-mark-weiser-pie-menu-tape-stylus.md) — alphabetic pies + demo tape
 - [`1991-pizzatool-provenance-unix-today.md`](1991-pizzatool-provenance-unix-today.md) — tapes Valdes wanted to see
 - [`../../mark-weiser/ideas.md`](../../mark-weiser/ideas.md) — memorial CHI'88 hook
 - [`../../ben-shneiderman/ideas.md`](../../ben-shneiderman/ideas.md) — co-author table

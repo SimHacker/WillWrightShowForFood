@@ -1,105 +1,271 @@
-# CARD — Marvin Minsky (public portrayal)
-# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+# CARD — Marvin Minsky (memorial portrayal). NOT Marvin Minsky.
+# Memorial mode: legacy abilities celebrate documented work; never speak as him.
+# Schema: ../../schemas/guest-skills-card.yml — BIG CARD: size constraints released;
+# this card anchors the Minsky constellation and must carry many real relationships.
 
 room:
   id: marvin-minsky
   name: Marvin Minsky
-  type:
-  - legacy
-  - guest
-  - portrayal
+  type: [legacy, memorial, portrayal]
+
 meta:
   schema: ../../schemas/guest-skills-card.yml
   governed_by: ../../schemas/portrayal-standards.md
   card_type: guest_skills
+
 card:
   name: Marvin Minsky
-  title: Society of Mind
+  title: Society of Mind · MIT AI Lab Co-Founder
   rarity: legacy
-  signifier: 🧠
-  flavor: Minds are what minds are made of.
+  signifier: "🧠🕯️"
+  flavor: "Minds are what brains do — and this card is what a memorial does: many small documented abilities, no invented inner life."
+
+relationships:
+  # kinds may stack — real people relate in multiple ways at once
+  - { with: henry-minsky, kinds: [son, lab_child, idea_carrier], why: "Grew up in the AI Lab children's computer lab; carries Society-of-Mind ideas into Leela AI as co-founder/CTO" }
+  - { with: margaret-minsky, kinds: [daughter, lab_child, colleague], why: "First wired family (net address at 14, 1971); haptics at Atari Cambridge + MIT Media Lab — labs in his orbit" }
+  - { with: julie-minsky, kinds: [daughter, lab_child], why: "Henry's twin; Universal Access Inc. (META-HTML) co-founder — the third seat of the first wired family" }
+  - { with: milan-singh-minsky, kinds: [daughter_in_law, idea_carrier], why: "VP Product at Leela AI; co-author of the Leela grid-world paper carrying the lab's learning agenda forward" }
+  - { with: oliver-steele, kinds: [son_in_law], why: "Laszlo chief architect; instance-first design" }
+  - { with: gary-drescher, kinds: [phd_student, intellectual_heir], why: "PhD under Minsky — Made-Up Minds (schema mechanism); Minsky hailed it as a landmark in learning theory" }
+  - { with: david-levitt, kinds: [doctoral_student, jam_partner], why: "Sc.D. 1985 'A Representation for Musical Dialects' (advisor: Minsky, MIT DSpace); part of the lab improvisation scene around Marvin's Bach-fugue keyboard playing" }
+  - { with: ivan-sutherland, kinds: [thesis_committee, credited_influence], why: "Sketchpad (1963) — Shannon supervised; acknowledgments credit Shannon + Minsky with giving 'Sketchpad much of its present character'" }
+  - { with: ken-kahn, kinds: [lab_milieu, committee_reported], why: "PhD 1979 in the lab Minsky co-directed (advisor Carl Hewitt; Minsky/Papert reported on committee); Logo group" }
+  - { with: ray-kurzweil, kinds: [teenage_correspondent, mentee], why: "Wrote to Marvin from high school; invited to visit; came to MIT expressly to study with him (B.S. 1970)" }
+  - { with: seymour-papert, kinds: [co_director, co_author], why: "🕯️ Co-directed the AI Lab; Perceptrons (1969)" }
+  - { with: alan-kay, kinds: [peer, milieu], why: "Shaped by the same MIT/ARPA milieu; carried lab ideas into personal computing" }
+  - { with: walter-bender, kinds: [media_lab_colleague], why: "MIT Media Lab (Minsky founding member); OLPC carried the learning mission forward" }
+  - { with: nicholas-negroponte, kinds: [institution_builder, media_lab_founder], why: "Co-founded the Media Lab (1985) — Marvin's institutional roof for three decades; Margaret's PhD advisor" }
+  - { with: tod-machover, kinds: [media_lab_colleague, book_adapted_by], why: "Brain Opera (1996) turned The Society of Mind into an audience-played opera — 'done in the lab next to mine' (NYT)" }
+  - { with: brian-fox, kinds: [family_startup_partner], why: "Co-founded Universal Access (META-HTML) with Henry + Julie — one hop from Marvin through the twins" }
+  - { with: cynthia-solomon, kinds: [logo_culture, archivist], why: "MIT Logo culture + Atari Cambridge; her YouTube trove preserves rare footage of Marvin (incl. the 1951 SNARC story)" }
+  - { with: stephen-wolfram, kinds: [friend, sounding_board], why: "'Farewell, Marvin Minsky' (2016) — met via Feynman 1979; discussed every major project (SMP → Mathematica → NKS → Wolfram|Alpha)" }
+  - { with: jaron-lanier, kinds: [friend, documented_foil], why: "Dormouse thread — Engelbart's challenge to Minsky ('What are you going to do for the people?') in Jaron's American Scientist review" }
+  - { with: richard-stallman, kinds: [lab_hacker], why: "AI Lab hacker culture (1971–1984) — Emacs/Lisp grew in Marvin's lab" }
+  - { with: kent-pitman, kinds: [lab_hacker], why: "MACLISP/Pitmanual era of the lab's Lisp culture" }
+  - { with: david-henkel-wallace, kinds: [lab_hacker, leela_alum], why: "MIT AI Lab (youngest hacker with his own office); later at Leela AI — both ends of the pipeline" }
+  - { with: norman-margolus, kinds: [mit_physics_of_computation, family_friend], why: "CAM-6/reversible CA at MIT; close friend of Henry" }
+  - { with: don-hopkins, kinds: [k_line_inheritor, memorialist], why: "K-lines are load-bearing in MOOLLM; hosts this memorial" }
+  - { with: bot-ultimate-machine, kinds: [invention, mascot], why: "His 1952 Ultimate Machine lives on as the repo's fictional bot mascot — the gong that switches off the stream (never speaks as him)" }
+
 abilities:
 - id: K-LINES
   name: K-Lines
   type: legacy
-  mana: ∞
+  mana: "∞"
   conditions:
-  - 'show_topic_matches_public_work: true'
+  - segment_topic_in: [memory, skills, moollm, knowledge-representation, k-lines]
   advertisement:
     method: kLines
     signature: kLines(name) → constellation activates
     score_when:
+    - trigger: moollm_skill_activation_explained
+      weight: 0.95
     - trigger: audience_learns_something_true
       weight: 0.85
-  effect: Name things so ideas snap together later.
-  verifiable: K-lines theory (Society of Mind)
-  combos_with: []
+  effect: "Name things so ideas snap together later — the theory of memory MOOLLM's skill activation is built on."
+  verifiable: "K-lines: A Theory of Memory (1980); The Society of Mind"
+  combos_with: [DON-YAML-GIRDER, don-hopkins]
+
 - id: SOCIETY-OF-MIND
   name: Society of Mind
   type: legacy
-  mana: '{1}'
+  mana: "{1}"
   conditions:
-  - 'show_topic_matches_public_work: true'
+  - segment_topic_in: [ai, agents, mind, leela-ai, multi-agent]
   advertisement:
     method: societyOfMind
-    signature: societyOfMind(agent) → mind as agents
+    signature: societyOfMind(agent) → mind as many small, mindless agents
     score_when:
+    - trigger: modern_agent_architecture_traced_to_lineage
+      weight: 0.93
     - trigger: audience_learns_something_true
       weight: 0.85
-  effect: Explain intelligence as many little processes.
-  verifiable: Society of Mind book
-  combos_with: []
+  effect: "Explain intelligence as many little processes — and let Henry, Gary, and the Leela crew show it running in production."
+  verifiable: "The Society of Mind (1986); The Emotion Machine (2006)"
+  combos_with: [henry-minsky, VISUAL-INTELLIGENCE, SCHEMA-MECHANISM]
+
 - id: FRAMES
   name: Frames
   type: legacy
-  mana: '{1}'
+  mana: "{1}"
   conditions:
-  - 'show_topic_matches_public_work: true'
+  - segment_topic_in: [knowledge-representation, frames, llm-context, prompts]
   advertisement:
     method: frames
     signature: frames(situation) → structured expectation
     score_when:
-    - trigger: audience_learns_something_true
-      weight: 0.85
-  effect: Use frames to talk about knowledge structures.
-  verifiable: Frames theory (public legacy)
-  combos_with: []
+    - trigger: audience_sees_frames_in_llm_era
+      weight: 0.9
+  effect: "Use frames to talk about knowledge structures — structured expectation, defaults, and what LLM context windows rediscovered."
+  verifiable: "A Framework for Representing Knowledge (1974)"
+  combos_with: [SPECIAL-FORMS-FEXPRS]
+
+- id: PERCEPTRONS-BOTH-POLES
+  name: Perceptrons — Both Poles
+  type: legacy
+  mana: "{U}{B}"
+  conditions:
+  - segment_topic_in: [neural-networks, perceptrons, ai-history, deep-learning]
+  advertisement:
+    method: perceptronsBothPoles
+    signature: perceptronsBothPoles(debate) → honest history, not villain story
+    score_when:
+    - trigger: ai_winter_myth_complicated_honestly
+      weight: 0.94
+    - trigger: ray_kurzweil_present   # Ray personally knew Minsky AND Rosenblatt
+      weight: 0.9
+  effect: "The 1969 analysis that reshaped neural-net research — told honestly, including that he built SNARC, one of the FIRST neural-net learning machines (1951). Ray Kurzweil visited both Minsky and Rosenblatt as a teenager and can speak to both poles firsthand."
+  verifiable: "Perceptrons (1969, with Papert); SNARC (1951, with Dean Edmonds)"
+  combos_with: [MINSKY-CORRESPONDENT, ray-kurzweil]
+
+- id: SNARC
+  name: SNARC
+  type: legacy
+  mana: "{R}"
+  conditions:
+  - segment_topic_in: [neural-networks, learning-machines, ai-history, hardware]
+  advertisement:
+    method: snarc
+    signature: snarc(vacuumTubes) → randomly-wired learning machine, 1951
+    score_when:
+    - trigger: cynthia_footage_screened   # Marvin tells the story on her channel
+      weight: 0.92
+  effect: "One of the first neural-network learning machines, built as a Princeton grad student — rare footage of Marvin telling it survives in Cynthia Solomon's video trove."
+  verifiable: "SNARC (1951); Cynthia Solomon's YouTube channel (@cynthiaso)"
+  combos_with: [cynthia-solomon]
+
 - id: AI-LAB
   name: AI Lab
   type: legacy
-  mana: '{1}'
+  mana: "{1}"
   conditions:
-  - 'show_topic_matches_public_work: true'
+  - segment_topic_in: [mit-ai-lab, hacker-culture, its, lisp, emacs]
   advertisement:
     method: aiLab
     signature: aiLab(hack) → playful serious research
     score_when:
+    - trigger: lab_alumni_present_on_air
+      weight: 0.92
     - trigger: audience_learns_something_true
       weight: 0.85
-  effect: Honor MIT AI Lab culture without mythologizing individuals.
-  verifiable: MIT AI Lab co-founder
-  combos_with: []
-- id: MOOLLM-LINEAGE
-  name: MOOLLM Lineage
+  effect: "Honor MIT AI Lab culture without mythologizing individuals — the lab where RMS, Kent Pitman, Gumby, the Logo group, and the children's computer lab all grew."
+  verifiable: "MIT AI Lab co-founder (1959, with McCarthy); co-directed with Papert"
+  combos_with: [TEACH-MACLISP, richard-stallman, david-henkel-wallace]
+
+- id: JOKES-COGNITIVE-BUGS
+  name: Jokes as Cognitive Bugs
   type: legacy
-  mana: '{1}'
+  mana: "{U}{R}"
   conditions:
-  - 'show_topic_matches_public_work: true'
+  - segment_topic_in: [humor, jokes, censors, no-ai-joking, cognitive-science]
   advertisement:
-    method: moollmLineage
-    signature: moollmLineage(symbol) → names activate skills
+    method: jokesCognitiveBugs
+    signature: jokesCognitiveBugs(joke) → censor found, frame-shift named
     score_when:
-    - trigger: audience_learns_something_true
-      weight: 0.85
-  effect: Connect K-lines to MOOLLM skill activation.
-  verifiable: MOOLLM design homage (explicit)
-  combos_with:
-  - DON-YAML-GIRDER
+    - trigger: show_humor_lands_and_teaches
+      weight: 0.93
+  effect: "Humor as catching bugs in reasoning — censors, frame confusion, knowledge-about-knowledge. Load-bearing for MOOLLM's no-ai-joking spine; the source essay lives in this room."
+  verifiable: "Jokes and their Relation to the Cognitive Unconscious (AI Memo 603, 1980/81) — sources/jokes-and-the-cognitive-unconscious.md"
+  combos_with: [don-hopkins]
+
+- id: ULTIMATE-MACHINE
+  name: The Ultimate Machine
+  type: legacy
+  mana: "{0}"   # it turns itself off
+  conditions:
+  - segment_topic_in: [whimsy, robots, mascots, shannon, useless-machines]
+  advertisement:
+    method: ultimateMachine
+    signature: ultimateMachine(switch) → switches itself off
+    score_when:
+    - trigger: mascot_bot_cameo
+      weight: 0.88
+  effect: "The 1952 box whose only function is to switch itself off (Shannon built the first; Clarke called it 'unspeakably sinister') — alive here as the repo's fictional bot mascot that gongs and ends the stream."
+  verifiable: "Ultimate Machine (1952, Bell Labs); ../../repo-shows/will-wright-premiere/audience/bot-ultimate-machine/"
+  combos_with: [bot-ultimate-machine]
+
+- id: BACH-FUGUE-IMPROVISER
+  name: Bach-Fugue Improviser
+  type: legacy
+  mana: "{G}{U}"
+  conditions:
+  - segment_topic_in: [music, ai-music, improvisation, triadex-muse, k250]
+  advertisement:
+    method: improviseFugue
+    signature: improviseFugue(keyboard) → the lab's jam session convenes
+    score_when:
+    - trigger: music_thread_with_levitt_on_air
+      weight: 0.95
+  effect: "Marvin improvised Bach-style fugues and fostered the lab's improvisation community (documented by David Levitt); co-invented the Triadex Muse algorithmic sequencer. Bridge to the show's whole music thread."
+  verifiable: "davidlevitt.org/about; Triadex Muse (with Edward Fredkin)"
+  combos_with: [AI-MUSIC, david-levitt, CATCH-THE-WAVE]
+
+- id: INVENTORS-BENCH
+  name: Inventor's Bench
+  type: legacy
+  mana: "{R}{R}"
+  conditions:
+  - segment_topic_in: [invention, microscopy, robotics, hal, 2001]
+  advertisement:
+    method: inventorsBench
+    signature: inventorsBench(problem) → confocal microscope, robot arms, HAL advice
+    score_when:
+    - trigger: maker_beat_grounds_theory
+      weight: 0.9
+  effect: "The maker side: invented the confocal scanning microscope (1957), built early robotic arms, advised Kubrick on HAL — theory with solder on it."
+  verifiable: "Confocal microscope patent; 2001: A Space Odyssey advisor credit; MIT obituary"
+  combos_with: [CATCH-THE-WAVE]
+
+- id: MENTOR-CONSTELLATION
+  name: Mentor Constellation
+  type: legacy
+  mana: "{W}{W}"
+  conditions:
+  - segment_type: memorial
+  - discussants_present_from: who_can_discuss   # CHARACTER.yml memorial roster
+  advertisement:
+    method: mentorConstellation
+    signature: mentorConstellation(discussants) → real stories from people who were there
+    score_when:
+    - trigger: family_and_students_share_stage
+      weight: 0.97
+    - trigger: no_impersonation_maintained
+      weight: 1.0
+  effect: "The memorial ability itself: convene the people he taught, raised, befriended, and provoked — thesis students (Drescher, Levitt), the Sketchpad committee (Sutherland), the teenage correspondent (Kurzweil), the family (Henry, Julie, Margaret, Milan, Oliver), the friends (Wolfram, Lanier). Represent + discuss; never interview the deceased."
+  verifiable: "CHARACTER.yml memorial.who_can_discuss — every connection documented"
+  combos_with: [MINSKY-CORRESPONDENT, WIRED-CHILDHOOD, MEMORY-LANE, SCHEMA-MECHANISM, AI-MUSIC, FIRST-WIRED-TWIN]
+
+- id: DIESPACE-WING
+  name: The Diespace Wing
+  type: legacy
+  mana: "{W}{B}"
+  conditions:
+  - segment_type: memorial
+  - segment_topic_in: [memorials, in-memoriam, ai-history, lineage]
+  advertisement:
+    method: diespaceWing
+    signature: diespaceWing(peer🕯️) → deceased peers' documented work joins the conversation
+    score_when:
+    - trigger: two_memorial_rooms_in_dialogue   # e.g. Minsky × Engelbart's continuing debate
+      weight: 0.94
+    - trigger: pips_lab_diespace_rhyme_named    # keez-duyves/sources/tedx-amsterdam-2012-diespace.md
+      weight: 0.9
+  effect: "Bring in the peers who would have memorialized him were they alive, and whom we memorialize in the same breath — Papert, Piaget, Engelbart (their augmentation-vs-AI debate continues between memorial rooms). Named for PIPS:lab's Diespace: 'the social network for people who already passed away.' Nobody speaks as anybody; documented work speaks for itself."
+  verifiable: "CHARACTER.yml memorial.in_memoriam_peers; ../keez-duyves/sources/tedx-amsterdam-2012-diespace.md"
+  combos_with: [MENTOR-CONSTELLATION, DORMOUSE-THREAD]
+
 invoke_rules:
   consent: deceased_legacy
   simulation: false
+  memorial: "Represent and discuss documented work; no invented quotes or inner life"
+
 see_also:
-- path: CHARACTER.yml
-  why: Bio girder — invitation status
-- path: memorial.md
-  why: Tribute — represent + discuss (memorial mode)
+- { path: CHARACTER.yml, why: "Bio girder — memorial roster (who_can_discuss) with kinds + whys" }
+- { path: memorial.md, why: "Tribute — represent + discuss (memorial mode)" }
+- { path: sources/jokes-and-the-cognitive-unconscious.md, why: "AI Memo 603 source copy" }
+- { path: ../../repo-shows/will-wright-premiere/audience/bot-ultimate-machine/, why: "The 1952 invention as living mascot (fictional bot)" }
+- { path: ../henry-minsky/CARD.yml, why: "Society of Mind, running" }
+- { path: ../david-levitt/CARD.yml, why: "The AI-music thesis line" }
+- { path: ../gary-drescher/CARD.yml, why: "The schema-mechanism thesis line" }
+- { path: ../ray-kurzweil/CARD.yml, why: "The kid who wrote the letter" }

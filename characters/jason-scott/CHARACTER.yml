@@ -1,0 +1,50 @@
+# Jason Scott — invitation portrayal. NOT Jason Scott.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: jason-scott
+  name: "Jason Scott"
+  type: invitation
+  signifier: "🕯💾"
+  status: living
+  field: "Computer history / archivist; textfiles.com; GET LAMP; Internet Archive"
+  home: characters/jason-scott/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: stub
+  consent: not_yet_asked
+  document: invitation.md
+  note: "Room seeded for GET LAMP. Natural Brewster / Archive neighbor. Outreach not drafted."
+
+bio:
+  summary: >
+    **Jason Scott** — computer historian and archivist (textfiles.com); director of *GET LAMP*
+    (2010), the definitive oral-history documentary of text adventures / interactive fiction.
+    Also known for Archive Team / Internet Archive work. Shot ~80 IF interviews 2006–2008;
+    physical DVDs sold out — free ISO distribution with his blessing.
+
+show_suggestions:
+  - "GET LAMP as the IF feelie — Bedquilt cave + Infocom disc + Frontalot anthem"
+  - "Archive instinct: sold-out DVD → free IA ISOs (pair with Brewster)"
+  - "Interview ethics / living makers while they can still talk"
+
+sources:
+  web:
+    - { title: "GET LAMP", url: "http://getlamp.com/" }
+    - { title: "textfiles.com", url: "http://textfiles.com/" }
+    - { title: "Wikipedia — Get Lamp", url: "https://en.wikipedia.org/wiki/Get_Lamp" }
+  local:
+    - { path: sources/get-lamp.md, why: "Documentary framing" }
+
+see_also:
+  - { path: sources/get-lamp.md, why: "Primary framing" }
+  - { path: ../mc-frontalot/sources/it-is-pitch-dark.md, why: "Get Lamp music video" }
+  - { path: ../brewster-kahle/README.md, why: "Archive neighbor" }
+  - { path: ../nick-montfort/README.md, why: "IF literary map" }
+  - { path: ../scott-adams/README.md, why: "Commercial IF" }
+  - { path: ../jimmy-maher/README.md, why: "IF / digital history lane" }

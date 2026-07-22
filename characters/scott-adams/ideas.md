@@ -115,6 +115,10 @@ shipped on the C64 Examples disk. Same trick MOOLLM plays with the LLM chat REPL
 **Beat:** Crowther/Woods rooms-and-objects grammar; Infocom's luxury; Scott's **portable VM**;
 Bartle's MUD; Curtis's LambdaMOO; Don's name echo **MOOLLM = MOO + LLM**.
 **Payoff:** MOOLLM skill lineage cites Scott Adams Adventures explicitly.
+HN / Montfort / Knuth trail: [`../donald-knuth/sources/advent-shrdlu-wumpus-lineage.md`](../donald-knuth/sources/advent-shrdlu-wumpus-lineage.md) ·
+Montfort framing: [`../nick-montfort/sources/riddle-machines.md`](../nick-montfort/sources/riddle-machines.md) ·
+GET LAMP: [`../jason-scott/sources/get-lamp.md`](../jason-scott/sources/get-lamp.md) ·
+*It Is Pitch Dark*: [`../mc-frontalot/sources/it-is-pitch-dark.md`](../mc-frontalot/sources/it-is-pitch-dark.md).
 
 ### L3. DreamScape → iLoci → biography rooms 🎙️
 **Beat:** Kaleida ScriptX presentation memory palace (rearrange slides on the map **while presenting**)

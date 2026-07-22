@@ -16,6 +16,21 @@ and Terry were colleagues at **Interval Research**, Terry invited Don to the sem
 **Will Wright** gave his 1996 *"Interfacing to Microworlds"* talk — the Dollhouse preview that sent
 Don to Maxis to work on The Sims.
 
+## SHRDLU ↔ Adventure (inside out)
+
+Terry's **SHRDLU** (1972) — natural-language dialogue over a blocks-world model — is one parent of
+interactive fiction. The other parents are Hunt the Wumpus and Crowther/Woods **Adventure**. HN
+(crediting [Montfort](https://nickm.com/if/riddle_machines.html) · [framing](../nick-montfort/sources/riddle-machines.md)): ADVENT is SHRDLU turned inside
+out (also a fancier WUMPUS) — rich world, thinner language vs rich language, smaller world.
+
+Trail: [`../donald-knuth/sources/advent-shrdlu-wumpus-lineage.md`](../donald-knuth/sources/advent-shrdlu-wumpus-lineage.md) ·
+Knuth's literate Adventure (the world model as readable literature — **he wrote the CWEB**):
+[`../donald-knuth/sources/adventure-knuth/`](../donald-knuth/sources/adventure-knuth/) ·
+[analysis](../donald-knuth/sources/adventure-knuth/ANALYSIS.md) · dream guest [`../donald-knuth/`](../donald-knuth/).
+
+Repo Show / [MOOLLM](https://github.com/SimHacker/moollm) want **both** halves: microworld simulation
+*and* real conversation — Terry's lifelong beat.
+
 ## The treasure trove (start here)
 
 **[`media/`](media/README.md)** holds the full **339-talk CS547 catalog** — spreadsheet mirror, machine

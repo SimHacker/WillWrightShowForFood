@@ -39,7 +39,7 @@ https://www.w3.org/History/1989/proposal.html · https://en.wikipedia.org/wiki/H
 
 **Self-revealing interfaces:** [HN 22176010](https://news.ycombinator.com/item?id=22176010) — Ted Nelson, Klavs Landberg, pie menus lead/follow/get-out-of-the-way.
 
-→ [`../../don-hopkins/sources/2020-ted-nelson-klavs-landberg-self-revealing.md`](../../don-hopkins/sources/2020-ted-nelson-klavs-landberg-self-revealing.md)
+→ [`../../ted-nelson/sources/2020-ted-nelson-klavs-landberg-self-revealing.md`](../../ted-nelson/sources/2020-ted-nelson-klavs-landberg-self-revealing.md)
 
 ---
 

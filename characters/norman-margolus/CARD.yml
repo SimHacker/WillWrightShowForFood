@@ -18,6 +18,16 @@ card:
   rarity: rare
   signifier: 🔲
   flavor: Run the universe forward. Now run it backward — no information lost.
+
+relationships:
+  # kinds may stack — real people relate in multiple ways at once
+  - { with: marvin-minsky, kinds: [mit_physics_of_computation, lab_orbit, memorial_discussant], why: "MIT physics-of-computation / CA community around the lab Minsky co-founded; Minsky was an early cellular-automata theorist himself" }
+  - { with: henry-minsky, kinds: [close_friend], why: "Close friend of Henry Minsky" }
+  - { with: stephen-wolfram, kinds: [ca_community_peer], why: "Cellular automata research community — reversible/block CA vs Rule 30" }
+  - { with: don-hopkins, kinds: [cam6_demo_thread], why: "the-cam6-demo-for-norman.md — Don's CA machine work" }
+  - { with: tommaso-toffoli, kinds: [coauthor, cam_partner], why: "Cellular Automata Machines (MIT Press, 1987); CAM-6 (no room in repo yet)" }
+  - { with: tom-knight, kinds: [flattop_collaborator], why: "'Flattop' billiard-ball CA chip (no room in repo yet)" }
+
 abilities:
 - id: CAM-6
   name: Cellular Automata Machine

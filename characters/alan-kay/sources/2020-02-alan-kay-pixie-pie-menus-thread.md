@@ -44,8 +44,8 @@ Don's retrospective: https://medium.com/@donhopkins/pie-menus-936fed383ff1
 ## Cross-links
 
 - [`../../jaron-lanier/sources/2023-01-24-dormouse-engelbart-minsky.md`](../../jaron-lanier/sources/2023-01-24-dormouse-engelbart-minsky.md) — human-centered design
-- [`2008-2023-pixie-buxton-patent-thread.md`](2008-2023-pixie-buxton-patent-thread.md) — Cambridge librarian David Chapman digitization
-- [`2020-ted-nelson-klavs-landberg-self-revealing.md`](2020-ted-nelson-klavs-landberg-self-revealing.md) — Ted's "self revealing" + pie menu rehearsal
+- [`../../don-hopkins/sources/2008-2023-pixie-buxton-patent-thread.md`](../../don-hopkins/sources/2008-2023-pixie-buxton-patent-thread.md) — Cambridge librarian David Chapman digitization
+- [`../../ted-nelson/sources/2020-ted-nelson-klavs-landberg-self-revealing.md`](../../ted-nelson/sources/2020-ted-nelson-klavs-landberg-self-revealing.md) — Ted's "self revealing" + pie menu rehearsal
 - [`../../chuck-blanchard/sources/2020-02-17-body-electric-dev-system.md`](../../chuck-blanchard/sources/2020-02-17-body-electric-dev-system.md) — Chuck's BE screenshots
 - [`../../alan-kay/`](../../alan-kay/)
 - Brad Myers *Pick, Click, Flick!* Ch. 33 (2019 guest lecture)

@@ -43,7 +43,7 @@ Engelbart 1962: look **down** on display; point **down** not across; light pen o
 
 Golod et al. hand-gesture microinteractions paper + PIXIE 1969 — same design-principles cluster.
 
-→ [`2020-02-alan-kay-pixie-pie-menus-thread.md`](2020-02-alan-kay-pixie-pie-menus-thread.md)
+→ [`../../alan-kay/sources/2020-02-alan-kay-pixie-pie-menus-thread.md`](../../alan-kay/sources/2020-02-alan-kay-pixie-pie-menus-thread.md)
 
 ---
 

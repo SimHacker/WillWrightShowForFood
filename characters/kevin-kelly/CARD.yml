@@ -1,0 +1,41 @@
+# CARD — Kevin Kelly (public portrayal)
+# NOT Kevin Kelly. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: kevin-kelly
+  name: Kevin Kelly
+  type: [invitation, guest, portrayal]
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+card:
+  name: Kevin Kelly
+  title: Latent Space Cartographer
+  rarity: uncommon
+  signifier: "🧭📡"
+  flavor: Prospect the gaps between known islands — invention as navigation.
+
+abilities:
+  - id: LATENT-SPACE-MEDIUM
+    name: Latent Space as Medium
+    type: activated
+    effect: Compression → continuous cultural map; style transfer and counterfactuals as travel.
+    verifiable: sources/2026-07-kevin-kelly-latent-space-as-medium.md
+  - id: WHITE-SPACE-PROSPECT
+    name: White-Space Prospecting
+    type: triggered
+    effect: Invention = finding gaps between known islands in the map.
+  - id: TRUTHINESS-CAVEAT
+    name: Truthiness Caveat
+    type: triggered
+    effect: Corpus density ≠ correspondence; medieval-medicine model still “heals” with bloodletting.
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - path: README.md
+  - path: ../stephen-wolfram/CARD.yml

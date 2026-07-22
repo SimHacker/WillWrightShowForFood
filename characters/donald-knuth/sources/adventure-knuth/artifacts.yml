@@ -1,0 +1,56 @@
+# Knuth literate Adventure — artifact girder
+character_room: don-hopkins
+topic: adventure-knuth-cweb
+consent: public_primary_source
+
+artifacts:
+  - id: knuth-advent-w
+    kind: source
+    title: "ADVENT — Crowther/Woods Adventure 1.0 in CWEB (Knuth)"
+    file: advent.w
+    archive: advent.w.gz
+    url: https://www-cs-faculty.stanford.edu/~knuth/programs/advent.w.gz
+    index: https://www-cs-faculty.stanford.edu/~knuth/programs.html#advent
+    note: "Upstream version note on Knuth page: 05 June 2026; published as Chapter 27 (Knuth Programs blurb)"
+    copyright: "1998 Donald R. Woods and Donald E. Knuth — study copy; do not modify/redistribute as original"
+
+  - id: literateprogramming-adventure-pdf
+    kind: pdf
+    title: "literateprogramming.com adventure.pdf (site artifact)"
+    file: adventure.pdf
+    url: http://literateprogramming.com/adventure.pdf
+    note: "HN WillAdams pointer; currently 2 PDF pages — not the full woven listing. Prefer advent.w."
+
+  - id: literateprogramming-site
+    kind: site
+    title: Literate Programming (quotes + CWEB)
+    url: http://literateprogramming.com/
+    local_quotes: ../literate-programming-site-quotes.md
+
+  - id: hn-advent-shrdlu
+    kind: thread
+    title: "HN — ADVENT as SHRDLU inside-out / fancier WUMPUS"
+    url: https://news.ycombinator.com/item?id=45996916
+    local: ../advent-shrdlu-wumpus-lineage.md
+
+  - id: montfort-riddle-machines
+    kind: essay
+    title: "Nick Montfort — Riddle Machines"
+    url: https://nickm.com/if/riddle_machines.html
+    local: ../../../nick-montfort/sources/riddle-machines.md
+    guest: ../../../nick-montfort/
+
+  - id: analysis
+    kind: analysis
+    title: "MOOLLM / WWSFF perspective"
+    file: ANALYSIS.md
+    cream: CREAM.md
+
+see_also:
+  - ../advent-shrdlu-wumpus-lineage.md
+  - ../logo-adventure-c64-terrapin.md
+  - ../../../terry-winograd/README.md
+  - ../../../scott-adams/artifacts.yml
+  - ../../../brewster-kahle/README.md
+  - ../../../ted-nelson/README.md
+  - https://github.com/SimHacker/moollm/tree/main/skills/adventure

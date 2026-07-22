@@ -118,5 +118,5 @@ constructionist critique).
 
 → [`pie-menus-30-year-retrospective.md`](pie-menus-30-year-retrospective.md) ·
 [`pie-menu-fud-misconceptions.md`](pie-menu-fud-misconceptions.md) ·
-[`2020-02-alan-kay-pixie-pie-menus-thread.md`](2020-02-alan-kay-pixie-pie-menus-thread.md) ·
+[`../../alan-kay/sources/2020-02-alan-kay-pixie-pie-menus-thread.md`](../../alan-kay/sources/2020-02-alan-kay-pixie-pie-menus-thread.md) ·
 [PIXIE show](../../../repo-shows/pixie-pie-menus-pdp7.yml)

@@ -24,6 +24,12 @@ handling interrupts and process switches, the maximum-call-stack-size problem, n
 returns via exceptions, and stack capture/restoration for snapshots — with live runnable
 mockups measuring millions of sends per second.
 
+**Cross-reference:** Don quoted the ["Where this scheme gets interesting…"](jit.md#L134)
+passage from [Bi-directional mapping](jit.md#bi-directional-mapping) on
+[HN 38796583](https://news.ycombinator.com/item?id=38796583) (December 2023), connecting
+it to Self's dynamic deoptimization — see
+[`../hn-thread-2023-croquet-jasmine.md`](../hn-thread-2023-croquet-jasmine.md#self-dynamic-deoptimization-and-the-v8-lineage).
+
 ## Files
 
 | File | What | Source | sha256 |

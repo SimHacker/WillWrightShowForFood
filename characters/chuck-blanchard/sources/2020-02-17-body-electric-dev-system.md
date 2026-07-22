@@ -48,7 +48,7 @@ Classic **live dataflow VPL**: nested DMs, typed wires, 3D preview while patchin
 
 **Jaron (13 Jun 2020, separate thread)** — **Swivel 3D written in FORTH** by "young Harvill"; hard to scale; namespace ran out → lost to other modelers.
 
-→ [`../../don-hopkins/sources/2020-06-swivel3d-forth-jaron.md`](../../don-hopkins/sources/2020-06-swivel3d-forth-jaron.md)
+→ [`../../jaron-lanier/sources/2020-06-swivel3d-forth-jaron.md`](../../jaron-lanier/sources/2020-06-swivel3d-forth-jaron.md)
 
 **Eric Hosick / Ben Shneiderman (2014)** — VPL snapshots page; "All the Widgets for VPLs" idea.
 

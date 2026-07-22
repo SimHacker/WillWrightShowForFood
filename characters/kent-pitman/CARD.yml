@@ -39,6 +39,14 @@ card:
   signifier: "🦥📖"
   flavor: Your ANIMAL had persistent per-user emotional state decades before The Sims.
 
+relationships:
+  # kinds may stack — real people relate in multiple ways at once
+  - { with: marvin-minsky, kinds: [lab_hacker, memorial_discussant], why: "MACLISP/Pitmanual era of the AI Lab's Lisp culture — the lab Minsky co-founded" }
+  - { with: don-hopkins, kinds: [mentor, tutor_over_arpanet, correspondent], why: "Tutored teenage Don in Lisp on ITS (:TEACH;LISP); decades of correspondence; MOO interest" }
+  - { with: richard-stallman, kinds: [lab_lisp_peer], why: "Same ITS/MACLISP culture; Emacs grew from it; Common Lisp standardization era" }
+  - { with: david-henkel-wallace, kinds: [lab_lisp_peer], why: "Overlapping AI Lab Lisp era" }
+  - { with: will-wright, kinds: [proto_sims_precedent], why: "ANIMAL's per-user emotional state — social memory decades before The Sims" }
+
 abilities:
 - id: TEACH-MACLISP
   name: ":TEACH;LISP"

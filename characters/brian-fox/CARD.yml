@@ -1,0 +1,133 @@
+# CARD — Brian J. Fox (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: brian-fox
+  name: Brian J. Fox
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+card:
+  name: Brian J. Fox
+  title: Employee #1 of the Free World
+  rarity: rare
+  signifier: "🐚$"
+  flavor: You are already running my code.
+
+relationships:
+  - { with: richard-stallman, kinds: [hired_by, fsf_employee_1, gnu_coauthor], why: "First paid employee of the FSF (1985); wrote Bash, readline, Info, Makeinfo for the GNU project" }
+  - { with: henry-minsky, kinds: [startup_cofounder], why: "Universal Access Inc. / Meta-HTML — the family company in the NYT First Wired Family article" }
+  - { with: julie-minsky, kinds: [startup_cofounder], why: "Universal Access Inc. — co-founded with both Minsky twins" }
+  - { with: marvin-minsky, kinds: [family_startup_partner, memorial_discussant], why: "One hop from Marvin via the twins; witness to what the wired family built" }
+  - { with: david-henkel-wallace, kinds: [free_software_business_peer], why: "Two answers to 'can free software pay salaries?' — FSF employee #1 vs Cygnus co-founder" }
+  - { with: don-hopkins, kinds: [toolchain_ancestor], why: "The host's whole pipeline — pie menu builds to MOOLLM shells — runs on Bash + readline" }
+  - { with: "Donal Fox", kinds: [sibling], why: "Jazz/classical composer-pianist brother (no room in repo yet) — music-machines velcro" }
+
+abilities:
+- id: BASH
+  name: GNU Bash
+  type: static
+  mana: "{0}"
+  conditions:
+  - always: true   # you are running it right now
+  advertisement:
+    method: bash
+    signature: bash(command) → the substrate of the show itself
+    score_when:
+    - trigger: infrastructure_beneath_segment
+      weight: 0.95
+  effect: "The Bourne-Again Shell (beta June 1989): the default shell of Linux and macOS for decades — the invisible instrument under every demo, build, and repo show. Mana cost zero because it is already in play."
+  verifiable: "GNU Bash announcement (June 1989); maintainership to ~1993 (then Chet Ramey)"
+  combos_with: [EMACS, COPYLEFT, CYGNUS-COSS]
+- id: READLINE
+  name: Readline
+  type: static
+  mana: "{U}"
+  conditions:
+  - segment_topic_in: [repl, interfaces, line-editing, muscle-memory]
+  advertisement:
+    method: readline
+    signature: readline(keystroke) → fifty years of muscle memory, one library
+    score_when:
+    - trigger: invisible_interface_thread
+      weight: 0.9
+  effect: "The line-editing library under Bash, Python, psql, gdb, and a thousand REPLs — arguably the most-used text interface component ever shipped. An interface-history counterpoint to pie menus."
+  verifiable: "GNU readline + history libraries (FSF)"
+  combos_with: [PIE-MENUS]
+- id: FSF-EMPLOYEE-1
+  name: FSF Employee #1
+  type: activated
+  mana: "{W}{R}"
+  conditions:
+  - segment_topic_in: [free-software, fsf-history, gnu, movement-building]
+  advertisement:
+    method: fsfEmployee1
+    signature: fsfEmployee1(1985) → what it took to staff a movement
+    score_when:
+    - trigger: relationship_matrix_ensemble
+      guests: [brian-fox, richard-stallman, david-henkel-wallace]
+      weight: 0.94
+  effect: "Hired by RMS in 1985 as the Free Software Foundation's first employee — the moment copyleft became a payroll. First-person witness to the GNU project's founding years."
+  verifiable: "FSF employment 1985–1993 (public record; Lifehacker interview 2017)"
+  combos_with: [COPYLEFT, GNU-MANIFESTO, AI-LAB-ETHIC]
+- id: META-HTML-COFOUNDER
+  name: Universal Access
+  type: activated
+  mana: "{G}{U}"
+  conditions:
+  - segment_topic_in: [first-wired-family, meta-html, minsky-twins, startups]
+  advertisement:
+    method: universalAccess
+    signature: universalAccess(henry, julie) → the wired family's company, from the inside
+    score_when:
+    - trigger: minsky_memorial_segment
+      weight: 0.9
+    - trigger: relationship_matrix_ensemble
+      guests: [brian-fox, henry-minsky, julie-minsky]
+      weight: 0.93
+  effect: "Co-founded Universal Access Inc. with Henry and Julie Minsky — Meta-HTML, the web-programming language from the NYT First Wired Family article. The memorial's 'what the kids built' segment, told by the third co-founder."
+  verifiable: "NYT First Wired Family (1996/97); Meta-HTML record"
+  combos_with: [META-HTML, SCHEMA-FACTORY, FIRST-WIRED-TWIN]
+- id: FIRST-ONLINE-BANK
+  name: First Online Bank
+  type: activated
+  mana: "{B}{U}"
+  conditions:
+  - segment_topic_in: [fintech-history, trust, internet-firsts]
+  advertisement:
+    method: firstOnlineBank
+    signature: firstOnlineBank(wellsFargo, 1995) → the day money went online and wasn't stolen
+    score_when:
+    - trigger: internet_firsts_segment
+      weight: 0.88
+  effect: "Built the first interactive online banking software in the US (Wells Fargo, 1995) — every other bank waited to see if the money would be stolen; it wasn't."
+  verifiable: "Wells Fargo online banking (1995, public record)"
+  combos_with: [BFD]
+- id: BALLOT-AND-ONION
+  name: Ballots & Onions
+  type: activated
+  mana: "{W}{B}"
+  conditions:
+  - segment_topic_in: [voting, elections, privacy, surveillance, orchid]
+  advertisement:
+    method: ballotsAndOnions
+    signature: ballotsAndOnions(vote, packet) → open code for the two things that must not be tampered with
+    score_when:
+    - trigger: civic_infrastructure_segment
+      weight: 0.9
+  effect: "Open-source election systems (2008, National Association of Voting Officials) and Orchid Labs (2017–2024, surveillance-resistant internet): the late-career pattern — put the most trust-critical infrastructure in the open."
+  verifiable: "Open-source election system (2008); Orchid Labs co-founder"
+  combos_with: [DATA-DIGNITY-REPO, COPYLEFT]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: CHARACTER.yml, why: "Bio girder — invitation status" }
+  - { path: ../richard-stallman/CARD.yml, why: "FSF hiring combo" }
+  - { path: ../julie-minsky/CARD.yml, why: "Universal Access triangle" }

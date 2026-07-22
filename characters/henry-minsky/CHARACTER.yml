@@ -34,6 +34,13 @@ leela_colleagues:
   note: "Don's CURRENT colleagues at Leela AI (showcase present work — not a reunion)."
   with: ["Milan Singh Minsky (VP Product; Henry's wife)", "isabella-struckman (vision-model eval/training)", "Steve Kommrusch", "don-hopkins"]
 
+wit:
+  # Real quotes, relayed by the host — not invented. T-shirt flag is editorial.
+  - quote: "We make money, so you don't have to!"
+    proposed_slogan_for: "Harvard Business School"
+    source: "Henry Minsky, via Don Hopkins — July 2026"
+    tshirt_quality: true   # print it. seriously.
+
 connector:
   role: "A superhero-nexus connector. Henry grew up in and around the MIT AI Lab (Marvin's son) and knows an extraordinary number of brilliant people from that world — a natural bridge both to great Repo Show guests and to opportunities. He's on it."
   see: ../../process/vision-and-ambition.yml   # connectors_and_legacy#brokering (henry_minsky_as_hub)

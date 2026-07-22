@@ -1,0 +1,103 @@
+# Ray Kurzweil — invitation portrayal. NOT Ray Kurzweil (and NOT RAI, his own digital twin).
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: ray-kurzweil
+  name: "Ray Kurzweil"
+  type: invitation
+  signifier: "📈🔮"
+  status: living
+  field: "Inventor + futurist — OCR, reading machines, music synthesis, speech recognition; The Singularity Is Near/Nearer; Law of Accelerating Returns"
+  home: characters/ray-kurzweil/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  twin_disclaimer: >
+    Ray launched his OWN consented digital twin, RAI (Kurzweil Technologies × Praxis AI,
+    UN AI for Good Summit, 2026-07-10). This room is NOT a twin and never speaks as him —
+    it is an invitation portrayal about him. We want the human. RAI is welcome too,
+    clearly labeled, on Ray's terms.
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  channel: facebook
+  channel_note: "Facebook page Ray.Kurzweil.official — Don has mutual friends (Philip van Nedervelde, Anna Nachesa, Nicole Lazzaro, Pooky Amsterdam…); thekurzweillibrary.com contact as fallback"
+  show_seed: repo-shows/ray-kurzweil.yml
+  also: repo-shows/REPO-SHOWS.yml   # marvin-minsky memorial discussant — see memorial_thread
+
+bio:
+  summary: >
+    **Ray Kurzweil** (b. 1948, Queens NYC) — inventor, computer scientist, author, futurist.
+    Built the first **omni-font OCR** system and the **Kurzweil Reading Machine** (1976 — Stevie
+    Wonder was the first production user); founded **Kurzweil Music Systems** with Wonder's
+    encouragement (the **K250**, 1984 — Technical Grammy 2015); pioneered commercial **speech
+    recognition** (Kurzweil Applied Intelligence). Author of *The Age of Intelligent Machines*,
+    *The Age of Spiritual Machines*, *The Singularity Is Near* (2005), *How to Create a Mind*
+    (2012), and *The Singularity Is Nearer* (2024). Proposed the **Law of Accelerating Returns**.
+    **National Medal of Technology** (1999), **Lemelson–MIT Prize** (2001), National Inventors
+    Hall of Fame (2002), Grace Murray Hopper Award (1978). Principal Researcher + AI Visionary
+    at **Google** (hired by Larry Page in 2012 "to bring natural language understanding to
+    Google"). In July 2026 he unveiled **RAI**, his own consented Human-First Digital Twin,
+    at the UN AI for Good Summit — appearing on stage alongside it.
+
+minsky_thread:
+  documented: >
+    As a high-school student Kurzweil corresponded with **Marvin Minsky** and was invited to
+    visit him at MIT; he then attended MIT expressly to study with Minsky (B.S. 1970, computer
+    science and literature). He also visited Frank Rosenblatt at Cornell — he knew BOTH poles
+    of the Perceptrons debate personally. (Wikipedia, sourced.)
+  memorial_invite: >
+    Warmly invited as a discussant for the marvin-minsky memorial — represent + discuss, never
+    interview the deceased. Bridge: Don works at Leela AI with Marvin's son Henry Minsky
+    (co-founder/CTO) and Milan Singh Minsky; Margaret Minsky also in the cast.
+  see: ../marvin-minsky/CHARACTER.yml
+
+rai_twin:
+  what: "RAI — Human-First Digital Twin built from his lifetime writings, interviews, and reasoning; Kurzweil Technologies × Praxis AI joint venture"
+  debut: "2026-07-10 — UN AI for Good Global Summit, Geneva; Ray appeared virtually alongside RAI, moderated by Kenneth Cukier (The Economist)"
+  lineage: "His earlier avatar Ramona (2001, kurzweilai.net; the heroine of his Singularity film) is RAI's ancestor"
+  show_relevance: >
+    The show's portrayal-standards problem is HIS problem too: provenance, consent, governance,
+    not flattening a mind into generic optimism. A conversation about how to represent a real
+    person's ideas — with the person who just shipped his own answer — is a show about the
+    show itself. We still want the human on air; RAI may cameo, clearly labeled, on his terms.
+
+show_suggestions:
+  - "The real one, live: singularity + Law of Accelerating Returns — nonlinear growth from INSIDE the curve (2026 checkpoint on his 1999/2005 predictions, in his own words)"
+  - "Digital twins done right: RAI × MOOLLM portrayal standards — consent, provenance, K-lines vs 3D Digital Brain; Ramona → RAI lineage"
+  - "Remembering Marvin Minsky — with Henry, Margaret, Gary Drescher: the teenager who wrote to Marvin and came to MIT (memorial discussant, not interview)"
+  - "Inventor beats: reading machine (Stevie Wonder), K250, omni-font OCR — timing inventions like surfing ('anticipate and catch the wave')"
+  - "Pattern Recognition Theory of Mind × Society of Mind × Made-Up Minds — the MIT lineage alive at Leela AI"
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Ray_Kurzweil"
+  web:
+    - { title: "The Kurzweil Library", url: "https://www.thekurzweillibrary.com/" }
+    - { title: "The Singularity Is Nearer (book site)", url: "https://thesingularityisnearer.com/" }
+    - { title: "Ray Kurzweil Unveils RAI (PR Newswire, 2026-07-06)", url: "https://www.prnewswire.com/news-releases/ray-kurzweil-unveils-rai-302818934.html" }
+    - { title: "AI for Good 2026 — 'We will not be replaced by AI — we will merge with it'", url: "https://aiforgood.itu.int/ray-kurzweil-at-ai-for-good-global-summit-2026-we-will-not-be-replaced-by-ai-we-will-merge-with-it/" }
+    - { title: "Facebook — Ray.Kurzweil.official", url: "https://www.facebook.com/Ray.Kurzweil.official" }
+  books:
+    - "The Age of Intelligent Machines (1990)"
+    - "The Age of Spiritual Machines (1999)"
+    - "The Singularity Is Near (2005)"
+    - "How to Create a Mind (2012)"
+    - "The Singularity Is Nearer: When We Merge with AI (2024)"
+  papers:
+    - "The Law of Accelerating Returns (2001 essay)"
+
+see_also:
+  - { path: CARD.yml, why: "Invokable abilities for show segments" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: invitation.md, why: "Draft invitation" }
+  - { path: ../marvin-minsky/, why: "🕯️ His mentor — corresponded from high school, studied with him at MIT; memorial discussant invite" }
+  - { path: ../henry-minsky/, why: "Marvin's son — Don's Leela AI colleague; warm bridge + Society-of-Mind-in-modern-AI pairing" }
+  - { path: ../margaret-minsky/, why: "Marvin's daughter — memorial arc" }
+  - { path: ../gary-drescher/, why: "Minsky PhD lineage — Made-Up Minds × Pattern Recognition Theory of Mind" }
+  - { path: ../stephen-wolfram/, why: "Fellow big-picture theorist — accelerating returns × ruliad; natural pairing or foil" }
+  - { path: ../reese-jones/, why: "Singularity University associate founder — documented orbit" }
+  - { path: ../../schemas/portrayal-standards.md, why: "This room is a portrayal, not a twin — the RAI contrast IS the show topic" }

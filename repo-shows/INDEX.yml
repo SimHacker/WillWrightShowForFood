@@ -60,7 +60,7 @@ shows:
       remembering-douglas-engelbart.yml: "★ MEMORIAL TRIBUTE. Remembering Doug Engelbart with Ted Nelson (eulogy — Doug officiated his wedding), Alan Kay (1968-demo lineage), Yoot Saito (1993 anniversary interview), and Bret Victor (author of 'A few words on Doug Engelbart' — read the intent, not the feature list). Memorial mode; consent not_yet_asked."
       remembering-jef-raskin.yml: "★ MEMORIAL SEED for Jef Raskin (d. 2005) only. possible_discussants = documented connections — NOT invitations; consent not_yet_asked for all."
     bridges:   # the data-portability CROWN JEWEL (crystallized/DESIGN-WISDOM)
-      game-bridge-proxi-sims.yml:   "Will — Proxi ⇔ Soul City ⇔ Sims bridge (the crown-jewel payoff; Mind Mirror layer; the Wig-O-Matic worked example). Flows from the Will kickoff. NOT YET WRITTEN."
+      game-bridge-proxi-sims.yml:   "Will — Proxi ⇔ Soul City ⇔ Sims bridge (the crown-jewel payoff; Mind Mirror layer; the Wig-O-Matic worked example). Flows from the Will kickoff. Seed: will-wright-premiere/game-bridge-proxi-sims.yml (pointer at repo-shows/game-bridge-proxi-sims.yml)."
       game-bridge-proxi-minecraft.yml: "Will — Proxi ⇔ Soul City ⇔ Minecraft. SHIPPED PRECEDENT: Will already exported Proxi characters into Minecraft (Dev Diaries Dec 2025). Extend to Soul City round-trip on air."
       game-bridge-sims-stardew.yml: "Eric Barone — Sims ⇔ Soul City ⇔ Stardew two-way bridge (parallel synchronized lives)."
       game-bridge-sims-shattered.yml: "Evan Debenham (00-Evan) — Sims ⇔ Soul City ⇔ Shattered Pixel Dungeon (GPLv3 repo to show; brutal-roguelike contrast world; + the funding model)."
@@ -166,5 +166,6 @@ backlog_ideas:
   - "Steve Wozniak — Apple II, 6502, open hardware, and live floppy-buffer hacking."
   - "More designers of games that resonate with SimCity / The Sims / MOO (open wishlist)."
   - "Stephen Wolfram — cellular automata / computational thinking (a Lex-subject Don would interview)."
+  - "Donald Knuth — DREAM: literate Adventure (advent.w); snail-mail only. Seed: repo-shows/donald-knuth/ + characters/donald-knuth/."
   - "Other Lex-interview subjects Don would love to interview (open wishlist)."
   - "RETRO BRIDGE: Wizardry (1981, Apple ][ UCSD Pascal) — TS Apple ][ disk + UCSD-Pascal-FS libs → edit save files → run in a web Apple ][ emulator. Send Sims to die in the dungeon; regenerate at will. (MODULES sim_obliterator_bridge backlog.)"

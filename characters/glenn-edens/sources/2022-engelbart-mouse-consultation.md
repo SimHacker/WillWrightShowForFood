@@ -5,7 +5,7 @@
 **Date:** 17 December 2022  
 **Subject:** Re: Hi Glenn!
 
-Don reached out for advice on SRI **Engelbart mouse + chord keyset** after discovering possible **~$54k** value (RR Auction). Same mail thread covers Old Farts Club / David Maynard / Mark Lottor provenance — full archive in [`../../don-hopkins/sources/2022-2023-engelbart-mouse-alan-kay.md`](../../don-hopkins/sources/2022-2023-engelbart-mouse-alan-kay.md).
+Don reached out for advice on SRI **Engelbart mouse + chord keyset** after discovering possible **~$54k** value (RR Auction). Same mail thread covers Old Farts Club / David Maynard / Mark Lottor provenance — full archive in [`../../douglas-engelbart/sources/2022-2023-engelbart-mouse-alan-kay.md`](../../douglas-engelbart/sources/2022-2023-engelbart-mouse-alan-kay.md).
 
 ---
 

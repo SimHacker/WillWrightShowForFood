@@ -1,0 +1,101 @@
+# CARD — Ivan Sutherland (hero portrayal — cite, do not impersonate)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: ivan-sutherland
+  name: Ivan Sutherland
+  type: [hero, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+card:
+  name: Ivan Sutherland
+  title: The Sketchpad North Star
+  rarity: mythic
+  signifier: "✏️"
+  flavor: Draw a constraint and the machine keeps it true — 1963.
+
+relationships:
+  # kinds may stack — real people relate in multiple ways at once
+  - { with: marvin-minsky, kinds: [thesis_committee_member_of_his, credited_influence, memorial_discussant], why: "Minsky sat on the Sketchpad committee; acknowledgments credit Shannon + Minsky with giving 'Sketchpad much of its present character'" }
+  - { with: heinz-lemke, kinds: [north_star_for], why: "PIXIE (Cambridge, 1969) — the light-pen era Sketchpad opened, six years on" }
+  - { with: roy-eagleson, kinds: [taught_by_his_work], why: "Teaches graphics history from Sketchpad forward to PIXIE" }
+  - { with: alan-kay, kinds: [inspiration_for], why: "Kay repeatedly cites Sketchpad's constraints and objects as proto-OOP" }
+  - { with: jaron-lanier, kinds: [vr_ancestor], why: "The Sword of Damocles HMD (1968) — VR's hardware ancestor" }
+  - { with: david-rosenthal, kinds: [lineage], why: "PDP-7/340 display-era graphics lineage in the show" }
+
+abilities:
+- id: SKETCHPAD
+  name: Sketchpad
+  type: legacy
+  mana: "{U}{U}{U}"
+  conditions:
+  - segment_topic_in: [graphics, constraints, direct-manipulation, gui-history, cad]
+  advertisement:
+    method: sketchpad
+    signature: sketchpad(lightPen) → constraints, instances, zooming — the GUI before the word
+    score_when:
+    - trigger: audience_sees_1963_do_modern_things
+      weight: 0.95
+  effect: "Light pen + constraints + master/instance drawings on the TX-2 — the textbook GUI before the word GUI; the north star for PIXIE, CAD, and direct manipulation."
+  verifiable: "PhD thesis (MIT, 1963); Turing Award (1988); Kyoto Prize"
+  combos_with: [INVENT-FUTURE]
+- id: CONSTRAINT-KEEPER
+  name: Constraint Keeper
+  type: legacy
+  mana: "{U}"
+  conditions:
+  - segment_topic_in: [constraints, declarative-programming, reactive-ui]
+  advertisement:
+    method: constraintKeeper
+    signature: constraintKeeper(relation) → the machine maintains what you declared
+    score_when:
+    - trigger: declarative_whats_vs_hows_thread
+      weight: 0.9
+  effect: "Declare the relation; the system maintains it — the declarative idea LZX, reactive UI, and spreadsheets keep rediscovering (Kay's 'declarative whats vs hows')."
+  verifiable: "Sketchpad thesis; ../alan-kay/media/quora-recaps/declarative-whats-vs-hows.md"
+  combos_with: [LZX-ARCHITECTURE, INSTANCE-FIRST]
+- id: SWORD-OF-DAMOCLES
+  name: Sword of Damocles
+  type: legacy
+  mana: "{R}{U}"
+  conditions:
+  - segment_topic_in: [vr, hmd, ar, vr-history]
+  advertisement:
+    method: swordOfDamocles
+    signature: swordOfDamocles(headMount) → the first HMD, ceiling-hung
+    score_when:
+    - trigger: vr_lineage_traced_to_source
+      weight: 0.9
+  effect: "The 1968 head-mounted display — VR's hardware origin, two decades before VPL coined the word."
+  verifiable: "'A head-mounted three dimensional display' (AFIPS 1968)"
+  combos_with: [COINED-VR, VPL-VR]
+- id: MINSKY-COMMITTEE-SEAT
+  name: The Committee Seat
+  type: legacy
+  mana: "{W}"
+  conditions:
+  - segment_type: memorial
+  - segment_topic_in: [marvin-minsky, mit-1960s, mentorship]
+  advertisement:
+    method: minskyCommitteeSeat
+    signature: minskyCommitteeSeat() → what good committee advice looked like in 1963
+    score_when:
+    - trigger: family_and_students_share_stage
+      weight: 0.88
+  effect: "Memorial discussant — the other side of the mentorship: what Shannon's and Minsky's 'helpful suggestions at several critical times' did for the most influential thesis in graphics."
+  verifiable: "Sketchpad thesis acknowledgments (UCAM-CL-TR-574)"
+  combos_with: [MENTOR-CONSTELLATION]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+  hero_room: "Citation and lineage room — no interview portrayal implied"
+
+see_also:
+  - { path: CHARACTER.yml, why: "Hero room girder" }
+  - { path: sketchpad-and-descendants.md, why: "Sketchpad → GSP → PIXIE lineage essay" }
+  - { path: ../marvin-minsky/CARD.yml, why: "🕯️ Committee-seat memorial combo" }

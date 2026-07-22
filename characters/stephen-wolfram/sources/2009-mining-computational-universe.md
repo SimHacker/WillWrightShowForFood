@@ -38,7 +38,7 @@ Cited from HN on [Kevin Kelly — Latent Space as a New Medium](https://news.yco
 
 | Sibling | Path |
 |---------|------|
-| KK + HN harvest | [`../../don-hopkins/sources/2026-07-kevin-kelly-latent-space-as-medium.md`](../../don-hopkins/sources/2026-07-kevin-kelly-latent-space-as-medium.md) |
+| KK + HN harvest | [`../../kevin-kelly/sources/2026-07-kevin-kelly-latent-space-as-medium.md`](../../kevin-kelly/sources/2026-07-kevin-kelly-latent-space-as-medium.md) |
 | Show artifact | [`../MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md`](../MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md) |
 | Jared Tarbell show | [`../../../repo-shows/jared-tarbell/`](../../../repo-shows/jared-tarbell/) — “Mining Computational Gems” title rhyme |
 

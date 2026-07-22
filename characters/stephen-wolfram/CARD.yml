@@ -18,6 +18,15 @@ card:
   rarity: rare
   signifier: 🔁
   flavor: Run the simple rule. Discover you cannot shortcut the answer.
+
+relationships:
+  # kinds may stack — real people relate in multiple ways at once
+  - { with: marvin-minsky, kinds: [friend_35_years, sounding_board, memorialist, memorial_discussant], why: "'Farewell, Marvin Minsky' (Jan 2016) — met via Feynman 1979; discussed every major project (SMP → Mathematica → NKS → Wolfram|Alpha) with him" }
+  - { with: ray-kurzweil, kinds: [peer_theorist, foil], why: "Accelerating returns vs computational irreducibility — the two grand theories of progress, one of which disputes prediction itself" }
+  - { with: norman-margolus, kinds: [ca_community_peer], why: "Cellular automata research community — CAM-6/reversible CA vs the Rule 30 program" }
+  - { with: will-wright, kinds: [simulation_peer], why: "Possibility space × run-the-rule — both argue you must simulate to know" }
+  - { with: don-hopkins, kinds: [ca_thread], why: "Don's cellular automata machine work; CAM-6 demo lineage" }
+
 abilities:
 - id: SIMPLE-RULES-COMPLEX-BEHAVIOR
   name: Simple Rules, Complex Behavior
@@ -81,6 +90,25 @@ abilities:
   effect: Turn a hand-wave into a runnable one-liner over the acronym zoo or the skill tree.
   verifiable: Mathematica (1988); Wolfram Language; Wolfram|Alpha
   combos_with: []
+- id: FAREWELL-MARVIN
+  name: Farewell, Marvin Minsky
+  type: triggered
+  mana: '{W}{U}'
+  conditions:
+  - segment_type: memorial
+  - segment_topic_in: [marvin-minsky, ai-history, friendship]
+  advertisement:
+    method: farewellMarvin
+    signature: farewellMarvin(memory) → 35 years of documented conversations, memorial mode
+    score_when:
+    - trigger: family_and_students_share_stage
+      weight: 0.93
+    - trigger: primary_source_essay_cited
+      weight: 0.9
+  effect: Reaction — memorial discussant with a published primary source; he wrote the definitive friend's farewell and discussed every major project with Marvin from 1979 on.
+  verifiable: "'Farewell, Marvin Minsky' (writings.stephenwolfram.com, Jan 2016)"
+  combos_with:
+  - MENTOR-CONSTELLATION
 invoke_rules:
   consent: not_yet_asked
   simulation: false

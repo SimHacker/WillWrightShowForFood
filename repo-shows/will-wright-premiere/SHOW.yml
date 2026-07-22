@@ -135,7 +135,7 @@ relationship:
 
 the_mission_grounded_in_the_invite:
   # The fuller mission the invitation lays out (so the show can stay focused/anything-goes).
-  bridges: "Bridging characters between worlds — Proxi ↔ Sims ↔ Stardew + beyond (data-portability crown jewel + Mind Mirror). See ../game-bridge-proxi-sims.yml, ../game-bridge-sims-stardew.yml."
+  bridges: "Bridging characters between worlds — Proxi ↔ Sims ↔ Stardew + beyond (data-portability crown jewel + Mind Mirror). See game-bridge-proxi-sims.yml, ../game-bridge-sims-stardew.yml."
   web_tools_platform: "Rebuilding the whole Sims content stack (render/read/write/edit/GENERATE) as a web-browser platform for content tools — Transmogrifier/RugOMatic/WigOMatic reborn web-native. = Soul City (MODULES)."
   exchange_revival: "Reviving the Sims EXCHANGE (community save + story sharing) now that Sims 1 is on Steam without it — the piece that made The Sims a medium. (MODULES sims_exchange_revival.)"
   full_circle: "That 1996 talk was a Terry-Winograd public UI seminar (the Repo Show's direct forebear — see ../../process/design-in-public.yml#forebears). Don was in the audience asking Will questions; he later uploaded the video + wrote the transcript + Medium article. Doing the FIRST Repo Show with Will = closing that loop, 30 years on."

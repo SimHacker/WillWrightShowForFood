@@ -18,6 +18,16 @@ card:
   rarity: uncommon
   signifier: 🍲
   flavor: Many contributors, one pot, children eat first.
+
+relationships:
+  # kinds may stack — real people relate in multiple ways at once
+  - { with: marvin-minsky, kinds: [media_lab_colleague, memorial_discussant], why: "MIT Media Lab (Minsky founding faculty); OLPC carried the lab's learning mission forward" }
+  - { with: nicholas-negroponte, kinds: [deputy_then_successor, olpc_cofounder], why: "Succeeded him as Media Lab director; co-led OLPC — the honest-postmortem pairing" }
+  - { with: don-hopkins, kinds: [micropolis_collaborator], why: "OLPC / Micropolis GPL open-sourcing collaboration" }
+  - { with: richard-stallman, kinds: [gpl_thread], why: "OLPC Sugar / GPL games thread" }
+  - { with: cynthia-solomon, kinds: [constructionist_ally], why: "Sugar's constructionism descends from the Logo tradition she co-created" }
+  - { with: alan-kay, kinds: [olpc_ally], why: "OLPC children's machine advocacy" }
+
 abilities:
 - id: STONE-SOUP
   name: Stone Soup

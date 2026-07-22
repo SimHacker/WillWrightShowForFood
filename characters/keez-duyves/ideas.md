@@ -120,11 +120,66 @@ Don’s 2017 pitch to Arthur: Keez-class work needs a player you can *program*, 
 ### 13. Closing pill
 Not heaven, not hell — diespace.nl. Or: not a dead mp4 — a living repo.
 
+### 14. The crank TV — physical inertial scrolling → DOOM SCROLLING → haptic time
+Keez's TV set full of performances with the giant heavy side crank that controlled TIME ITSELF —
+freeze frame, rewind, scrub, spin fast forwards and backwards with the whole arm, the thing phone
+doom scrolling only simulates at the most abstract shallow fingertip level. He invented **physical
+inertial scrolling**. Put the lost souls from Die Space into that TV: **DOOM SCROLLING**. Then the
+escalation (Don, Jul 2026): add a **brake and motor** — second and third order direct manipulation
+with **force feedback**, in the lineage of [Margaret Minsky's Sandpaper](https://interfacemuseum.com/exhibits/minsky-sandpaper/)
+— and you can feel the *texture of time*: grit at the sad parts, velvet at the good parts,
+stick-slip at scene cuts. Natural two-hander segment: **Keez × Margaret Minsky**
+([`../margaret-minsky/`](../margaret-minsky/)). Receipts: [`sources/2026-07-seoul-crank-tv-doom-scrolling.md`](sources/2026-07-seoul-crank-tv-doom-scrolling.md)
+
+### 15. Premorializing — Die Space accepts the living
+> "Blogs are designed to talk to the present, and when you stop posting, they die.
+> Premorializations in Die Space are designed to talk to the future, and when you stop posting,
+> you're there!" — Don, July 2026
+
+ACT UP wrote the present-tense half of that equation on a poster first: **SILENCE = DEATH**
+(Silence=Death Project, 1987, reclaimed pink triangle; adopted by ACT UP) — in a plague the
+government refused to name, not-speaking was literally dying, and the living were being
+memorialized while still in the room. The premorial keeps the militancy and flips the medium:
+the living get the microphone at their own memorial. Speak now; be there later.
+
+And the same year sewed a Die Space before the name: the **AIDS Memorial Quilt** (NAMES
+Project, 1987) *is one* — each panel 3×6 feet, grave-sized on purpose, a plot in a distributed
+cemetery for people the funeral homes refused to bury. Panels made by the living from the
+dead's own record (their clothes, their jokes, their handwriting stitched in); modular blocks
+toured in sections, too big to unfold whole since 1996; append-only, ~50,000 panels and
+counting; now digitized and browsable at [aidsmemorial.org](https://www.aidsmemorial.org).
+Some of the dying sewed their **own** panels — the first premorials, literally. Ask Keez:
+Die Space at two stitches per second — did the Quilt do it first, in fabric?
+
+Die Space's slogan says "for people who already have passed away" — but the TEDx mass upload
+interred a whole *living* audience (names, ages, yes/no souls in light). So: **premorializing** —
+interring someone in Die Space *before* they're dead. WWSFF is doing the same thing from the other
+side: our memorial rooms (Marvin's [Diespace wing](../marvin-minsky/memorial.md)) could be interred
+into Die Space, and our *living* guests are already writing their own rooms — premorials they get
+to argue with. Inter Will Wright into Die Space (hook 1) is a premorial. Ask Keez: is a Repo Show
+character room a Die Space lite account? Cross: Kurzweil's RAI twin
+([`../ray-kurzweil/`](../ray-kurzweil/) TWIN-PROVENANCE) — the consented premorial taken literally.
+
+Sibling coinage, same constellation: **prestoration** (preservation + restoration) — correcting a
+historical record to say what its subject asked, original preserved bit-for-bit beside it — from the
+Vanessa Freudenberg SqueakJS memorial edition
+([moollm/designs/prestoration](https://github.com/SimHacker/moollm/tree/main/designs/prestoration),
+see [`../vanessa-freudenberg/memorial.md`](../vanessa-freudenberg/memorial.md)). Premorializing acts
+on the person before death; prestoration acts on the record after — both let the subject speak for
+their own memorial. Tod Machover's *Death and the Powers* ([`../tod-machover/`](../tod-machover/))
+is the opera of the same move.
+
+### 16. Seoul street CCTV TV — surveillance as street furniture
+His April 2026 Seoul clip: vintage CRT + security camera on a pedestal, passers-by watching
+themselves — a found PIPS:lab piece in the wild. Pairs with participation-not-observation (hook 2):
+the camera watches you, but the crank hands time back.
+
 ---
 
 ## Sources
 
 - [`invitation.md`](invitation.md) · [`CHARACTER.yml`](CHARACTER.yml) · [`sources/friendship-arc-receipts.md`](sources/friendship-arc-receipts.md)
 - [`sources/tedx-amsterdam-2012-diespace.md`](sources/tedx-amsterdam-2012-diespace.md) · [`sources/2024-03-hn-diespace-massively-multiplayer-cv.md`](sources/2024-03-hn-diespace-massively-multiplayer-cv.md)
+- [`sources/2026-07-seoul-crank-tv-doom-scrolling.md`](sources/2026-07-seoul-crank-tv-doom-scrolling.md) — crank TV / doom scrolling / Sandpaper thread
 - https://urban-nation.com/artist/keez-duyves/ · http://www.pipslab.org/
 - Anyways: https://vimeo.com/206409021 · TEDx: https://www.youtube.com/watch?v=ApyDSq_DbQo · HD: https://www.youtube.com/watch?v=aQz_irTiqGE

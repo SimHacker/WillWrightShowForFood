@@ -7,7 +7,7 @@ meta:
   year: 1978
   environment: MIT-MC PDP-10, ITS, MacLISP
   byte_count: 74246
-  repo_path: characters/don-hopkins/sources/kmp-animal-its/animal-database-from-its.lisp.txt
+  repo_path: characters/kent-pitman/sources/kmp-animal-its/animal-database-from-its.lisp.txt
   copied_to_repo: 2026-07-09
   canonical_url: https://www.donhopkins.com/home/code/animal-database-from-its.lisp.txt
   its_mirror_url: https://github.com/PDP-10/its/blob/master/src/games/animal.save
@@ -81,7 +81,7 @@ show_hooks:
   - Communal ITS artifact with Don's A2DEH tags visible in the data
 
 see_also:
-  - characters/don-hopkins/sources/kmp-animal-its.md
+  - characters/kent-pitman/sources/kmp-animal-its.md
   - characters/don-hopkins/correspondence/kent-pitman.yml
   - characters/kent-pitman/CHARACTER.yml
   - DonHopkins/characters/don-hopkins/correspondence/kent-pitman.yml

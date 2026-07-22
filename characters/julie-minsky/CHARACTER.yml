@@ -1,0 +1,49 @@
+# Juliana "Julie" Minsky — invitation portrayal. NOT Julie Minsky.
+# Standards: ../../schemas/portrayal-standards.md
+# Public info is thin by her choice — this room stays small and respectful until she shapes it.
+
+character:
+  id: julie-minsky
+  name: "Juliana Minsky"
+  aliases: [Julie, Julianna]
+  type: invitation
+  signifier: "🎬"   # her homepage was titled "Roll 'em"
+  status: living
+  field: "Universal Access Inc. co-founder (META-HTML, 1994) — VP marketing; the first wired family"
+  home: characters/julie-minsky/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2
+  authored_by: don-hopkins
+  note: "Host-authored from public sources (NYT 1996/97 'First Wired Family'; ACM Turing bio). Deliberately minimal — she may edit, expand, reduce, or delete anytime."
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: null   # invite via Henry (her twin) when the family memorial show firms up
+
+bio:
+  summary: "**Juliana (Julie) Minsky** — daughter of Marvin Minsky and Gloria Rudisch, **twin of Henry Minsky**, sister of Margaret. Grew up in the 'first wired family' (NYT). Co-founded **Universal Access Inc.** (~1994, Santa Barbara) with Henry and two MIT friends, **Michael Fredkin** and **Brian Fox** (GNU Bash author) — VP of marketing for **META-HTML**, a scripting language for building Internet/intranet applications, competing with Lotus Notes Domino. Her 'Roll 'em' homepage was the most playful of the Minsky family pages — an enigmatic clock linking to daily life in Japan, the Mystical Smoking Head of 'Bob, and Suck; it doubled as a networked sketchpad for a postage-stamp wallpaper project."
+
+family:
+  father: "marvin-minsky 🕯️ (memorial)"
+  twin: "henry-minsky — twin brother AND business co-founder"
+  sister: "margaret-minsky"
+  in_laws: ["oliver-steele (Margaret's husband)", "milan-singh-minsky (Henry's wife)"]
+
+show_suggestions:
+  - { seed: ../../repo-shows/remembering-the-constructionists.yml, what: "Family voice in the Marvin memorial — the first wired family, all three children" }
+  - { seed: ../../repo-shows/openlaszlo/, what: "META-HTML prehistory beat — the web-application-language idea, eight years before LZX" }
+
+sources:
+  wikipedia: null
+  web:
+    - { title: "Marvin Minsky and the First Wired Family (NYT, 1996/97) — twins Henry + Juliana; Universal Access Inc.; META-HTML; the 'Roll 'em' homepage", url: "https://archive.nytimes.com/www.nytimes.com/library/cyber/week/010397minsky.html" }
+    - { title: "ACM A.M. Turing Award — Marvin Minsky bio (children: Margaret, Julie, and Henry)", url: "https://amturing.acm.org/award_winners/minsky_7440781.cfm" }
+
+see_also:
+  - { path: ../henry-minsky/, why: "Twin brother + Universal Access co-founder" }
+  - { path: ../margaret-minsky/, why: "Sister — haptics, Memory Lane" }
+  - { path: ../marvin-minsky/, why: "🕯️ Father — memorial (family discussant)" }
+  - { path: ../richard-stallman/, why: "Brian Fox (Bash) co-founded Universal Access — GNU thread" }

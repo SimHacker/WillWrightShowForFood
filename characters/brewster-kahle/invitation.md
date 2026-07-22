@@ -23,6 +23,12 @@ Sims meets a programmable multi-user adventure, represented in the tree. Full pi
 [`README.md` — How GitHub is a stage](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brewster-kahle/README.md#how-github-is-a-stage--quite-literally-an-adventure).
 I'd love to interview you for the show.
 
+**Adventure lineage (optional deep end):** the stage metaphor isn't loose talk — Colossal Cave /
+MOO / MOOLLM share one machinery (rooms, objects, parser). HN quip + Montfort + Knuth's literate
+Adventure: [trail](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/donald-knuth/sources/advent-shrdlu-wumpus-lineage.md) ·
+[Knuth room](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/donald-knuth/sources/adventure-knuth/).
+Preservation angle: early interactive worlds as library material, not only early HTML.
+
 ---
 
 

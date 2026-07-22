@@ -26,7 +26,7 @@ I'd love to get you (and Brian) for a session on the line you've lived better th
 
 We've planted the show here:  
 `characters/glenn-reid/` · `repo-shows/postscript-distillery-to-pdf/`  
-Your correspondence excerpts (with attribution): `characters/don-hopkins/sources/distillery-pdf-correspondence.md`
+Your correspondence excerpts (with attribution): `characters/glenn-reid/sources/distillery-pdf-correspondence.md`
 
 Format is flexible — remote, async repo review, or a short live distill demo. No VR TouchType pitch this time, I promise.
 

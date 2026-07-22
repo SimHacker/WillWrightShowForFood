@@ -45,6 +45,11 @@ segment with Terry's curatorial eye.
 Terry's own AI/HCI lineage (blocks world) ↔ Will's microworld philosophy ↔ modern LLM agents —
 without hype: **what microworlds teach that chatbots don't**.
 
+HN quip (leoc, citing Montfort): ADVENT is SHRDLU turned inside out — also a fancier WUMPUS.
+Trail: [`../donald-knuth/sources/advent-shrdlu-wumpus-lineage.md`](../donald-knuth/sources/advent-shrdlu-wumpus-lineage.md) ·
+Knuth CWEB Adventure (world model as literature): [`../donald-knuth/sources/adventure-knuth/`](../donald-knuth/sources/adventure-knuth/) ·
+[ANALYSIS](../donald-knuth/sources/adventure-knuth/ANALYSIS.md).
+
 ### 6. Constructionist education — Repo Show
 Open tools, explorable rules, credited ideas in public repos. Terry as elder host blessing the
 format — or correcting it.

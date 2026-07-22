@@ -57,6 +57,7 @@ friendship_arc:
   2020: "Pie-menu projection-mapping paper + Ted Nelson self-revealing / feedforward-feedback"
   2024-03: "Don flagged Die Space on HN (item 39821421)"
   2026: "NDSM / Parker visit path — inter Will Wright into Die Space; definite Repo Show invite"
+  2026-07: "Phone number disconnected — Don commented on Keez's April Seoul crank-TV FB post to get his attention: DOOM SCROLLING riff (Die Space souls in the crank TV), physical inertial scrolling credit, Margaret Minsky Sandpaper force-feedback extension. sources/2026-07-seoul-crank-tv-doom-scrolling.md"
 
 why_the_show_cares:
   will_hook: "Die Space is the cleanest Will-facing demo — afterlife SNS + mass audience light upload"
@@ -64,6 +65,8 @@ why_the_show_cares:
   dutch_amsterdam: "Amsterdam inventiveness; NDSM studio culture; SO DUTCH"
   mind_mirror_rhyme: "Die Space afterlife chat ↔ Timothy Leary Mind Mirror personality simulation lineage in MOOLLM"
   vr_cinema: "AnywaysVR opens multi-user 360 as a genre"
+  crank_tv: "The performance TV with the giant side crank that controls TIME ITSELF — physical inertial scrolling before phones flattened it to a fingertip; + brake/motor = haptic time (Margaret Minsky Sandpaper bridge)"
+  premorializing: "Die Space accepts the living (TEDx interred a whole live audience) — premorializing = interment before death; WWSFF memorial rooms could be interred in Die Space, and living guests' rooms are premorials they get to argue with"
 
 media:
   hero: media/tedx-diespace-control-desk-red-suit.png
@@ -75,6 +78,15 @@ media:
 contact:
   channel: "Warm — Messenger / Facebook; pipslab.org"
   # no private phone/address in this public repo
+  status_2026_07: "Old phone number disconnected — attention-getting via FB comments on his Seoul post (worked before)"
+  public_channels:
+    - "Facebook (personal): facebook.com/keez.duyves — Messenger is the proven warm channel"
+    - "Facebook (PIPS:lab page): facebook.com/PIPSlab-91037496588"
+    - "Instagram: @pipslab.official"
+    - "LinkedIn: linkedin.com/in/pips-lab-05218215"
+    - "pipslab.nl — archive site (shows: Wortal Combat, Diespace, Archie and the Bees, Shadows in the Cloud); NOTE pipslab.org appears domain-squatted (Candy Crush spam) as of Jul 2026 — do not point invitations there"
+    - "Vimeo/YouTube: vimeo.com/pipslab · youtube.com/user/PIPSLAB"
+    - "In person: NDSM studio circle (STRAAT Museum is on the same werf) — Parker visit path"
 
 sources:
   web:
@@ -88,17 +100,24 @@ sources:
     - { title: "Facebook — Keez Duyves", url: "https://www.facebook.com/keez.duyves" }
     - { title: "HN — Die Space / massively multiplayer CV (Don, 2024)", url: "https://news.ycombinator.com/item?id=39821421" }
     - { title: "Canvas / Volkshotel (Wibautstraat 150) — public venue", url: "https://www.volkshotel.nl/en/canvas/" }
+    - { title: "PIPS:lab archive site (pipslab.nl) — Wortal Combat, Diespace, Archie and the Bees, Shadows in the Cloud", url: "http://www.pipslab.nl/" }
+    - { title: "STRAAT Museum — street art + graffiti, NDSM-Plein (visit-path anchor)", url: "https://straatmuseum.com/en" }
+    - { title: "HCI Museum — Minsky Sandpaper (the force-feedback lineage for the crank TV riff)", url: "https://interfacemuseum.com/exhibits/minsky-sandpaper/" }
     - { title: "Steye Hallema — sibling PIPS:lab → Jaunt → Smartphone Orchestra", url: "../steye-hallema/" }
   local:
     - { path: sources/friendship-arc-receipts.md, why: "Dated friendship receipts; Canvas 2009; not Kees Colijn" }
     - { path: sources/tedx-amsterdam-2012-diespace.md, why: "TEDx talk digest + still index" }
     - { path: sources/2024-03-hn-diespace-massively-multiplayer-cv.md, why: "Don HN comments + video trio" }
+    - { path: sources/2026-07-seoul-crank-tv-doom-scrolling.md, why: "Crank TV / DOOM SCROLLING / Sandpaper FB thread (Jul 2026) — verbatim comments + stills" }
 
 see_also:
   - { path: invitation.md, why: "Draft invite" }
   - { path: ideas.md, why: "Show hooks" }
   - { path: ../../repo-shows/keez-duyves/, why: "Show seed" }
   - { path: ../will-wright/, why: "Inter Will Wright into Die Space; Parker / NDSM visit path" }
+  - { path: ../margaret-minsky/, why: "Sandpaper force feedback — brake/motor extension of the crank TV; natural two-hander segment" }
+  - { path: ../marvin-minsky/memorial.md, why: "The Diespace wing — WWSFF memorials that could be interred in Die Space" }
+  - { path: ../tod-machover/, why: "Death and the Powers (2010) — the premorializing opera; Brain Opera audience-as-performer kinship with PIPS:lab" }
   - { path: ../ben-cerveny/, why: "Maybe at Trouw ~2009 first Keez meet; Amsterdam public-code / media circle" }
   - { path: ../jared-tarbell/, why: "Amsterdam FITC era participation art kinship" }
   - { path: ../../schemas/portrayal-standards.md, why: "Subject rights" }

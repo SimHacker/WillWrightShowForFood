@@ -1,0 +1,48 @@
+# Kevin Kelly — invitation portrayal. NOT Kevin Kelly.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: kevin-kelly
+  name: "Kevin Kelly"
+  type: invitation
+  signifier: "🧭📡"
+  status: living
+  field: "Wired founding editor; Whole Earth / Cool Tools; Long Now; technology as culture"
+  home: characters/kevin-kelly/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: stub
+  consent: not_yet_asked
+  document: invitation.md
+  note: "Room seeded from Latent Space as a New Medium harvest (Jul 2026). Outreach not drafted."
+
+bio:
+  summary: >
+    **Kevin Kelly** — founding executive editor of *Wired*; Whole Earth Catalog / Cool Tools lineage;
+    Long Now collaborator. Writes about technology as culture and possibility space. 2026 essay
+    *Latent Space as a New Medium* maps compression → continuous cultural map (prospect gaps,
+    style transfer, truthiness caveats) — natural pair with Wolfram “mining” and the demoscene
+    compression through-line Don/Will/Eno already share.
+
+show_suggestions:
+  - "Latent space as medium vs rule-space ore (Wolfram) vs 64K demos — three compressions"
+  - "White-space prospecting: invention as navigating gaps between known islands"
+  - "Truthiness vs truth — when corpus density masquerades as correspondence"
+
+sources:
+  web:
+    - { title: "Latent Space as a New Medium", url: "https://kevinkelly.substack.com/p/latent-space-as-a-new-medium" }
+    - { title: "HN discussion", url: "https://news.ycombinator.com/item?id=48896513" }
+  local:
+    - { path: sources/2026-07-kevin-kelly-latent-space-as-medium.md, why: "Essay + HN harvest + Wolfram bridge" }
+
+see_also:
+  - { path: sources/README.md, why: "Sources index" }
+  - { path: ../stephen-wolfram/sources/2009-mining-computational-universe.md, why: "Mining sibling" }
+  - { path: ../don-hopkins/demoscene-compression-hn-2023.md, why: "Demoscene compression through-line" }
+  - { path: ../brian-eno/README.md, why: "Generative / Long Now neighbor" }

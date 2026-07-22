@@ -56,6 +56,6 @@ http://www.betaarchive.com/forum/viewtopic.php?t=24870
 ## Cross-links
 
 - [`../ideas.md`](../ideas.md) — TouchType hook
-- [`../../don-hopkins/sources/distillery-pdf-correspondence.md`](../../don-hopkins/sources/distillery-pdf-correspondence.md)
+- [`distillery-pdf-correspondence.md`](distillery-pdf-correspondence.md)
 - [`../../david-levitt/`](../../david-levitt/) · [`../../eric-hedman/`](../../eric-hedman/) — Pantomime cc
 - [`../../../repo-shows/postscript-distillery-to-pdf/`](../../../repo-shows/postscript-distillery-to-pdf/) — TouchType segment

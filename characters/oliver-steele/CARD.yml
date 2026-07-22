@@ -18,6 +18,17 @@ card:
   rarity: rare
   signifier: 🧩
   flavor: Reactive, declarative — the ideas the web kept reinventing.
+
+relationships:
+  # kinds may stack — real people relate in multiple ways at once
+  - { with: marvin-minsky, kinds: [father_in_law, memorial_discussant], why: "Married into the first wired family" }
+  - { with: henry-minsky, kinds: [brother_in_law, laszlo_colleague], why: "Laszlo Systems — Oliver chief architect, Henry software architect" }
+  - { with: margaret-minsky, kinds: [spouse, research_coauthor], why: "His wife — AND Sandpaper SIGGRAPH 1990 co-author ('Feeling and Seeing: Issues in Force Display', with Brooks/Ouh-young/Behensky); also helped build Marvin's 1996 home page (NYT)" }
+  - { with: julie-minsky, kinds: [sister_in_law], why: "Minsky family via Margaret" }
+  - { with: milan-singh-minsky, kinds: [family], why: "Minsky family via Henry" }
+  - { with: david-temkin, kinds: [laszlo_founder_colleague], why: "Laszlo Systems founder/CEO/CTO — OpenLaszlo reunion show" }
+  - { with: don-hopkins, kinds: [openlaszlo_orbit], why: "OpenLaszlo reunion cast" }
+
 abilities:
 - id: LZX-ARCHITECTURE
   name: LZX Architecture
@@ -49,7 +60,41 @@ abilities:
       weight: 0.85
   effect: Discuss instance-first development + reactive programming, and what the web reinvented.
   verifiable: Documented in his writing (osteele.com)
-  combos_with: []
+  combos_with:
+  - SLOTS-ALL-THE-WAY-DOWN
+- id: SLOTS-ALL-THE-WAY-DOWN
+  name: Slots All the Way Down
+  type: activated
+  mana: '{U}'
+  conditions:
+  - segment_topic_in: [prototypes, self, instance-first, moollm-objects]
+  advertisement:
+    method: slotsAllTheWayDown
+    signature: slotsAllTheWayDown(prototype) → instance substitution principle
+    score_when:
+    - trigger: david_ungar_self_thread_active
+      weight: 0.9
+  effect: Hold up the prototypes-over-classes pole — Instance Substitution Principle; pairs with David Ungar's Self thread and MOOLLM's prototype objects.
+  verifiable: Instance-First Development (osteele.com); INDEX slots-all-the-way-down pole
+  combos_with:
+  - david-ungar
+- id: MINSKY-TABLE
+  name: At the Minsky Table
+  type: triggered
+  mana: '{W}'
+  conditions:
+  - segment_type: memorial
+  - segment_topic_in: [marvin-minsky, first-wired-family]
+  advertisement:
+    method: minskyTable
+    signature: minskyTable(memory) → son-in-law's vantage, memorial mode
+    score_when:
+    - trigger: family_and_students_share_stage
+      weight: 0.9
+  effect: Family discussant for the Marvin memorial — the household of ideas from a son-in-law's seat; never speaks as Marvin.
+  verifiable: ../marvin-minsky/CHARACTER.yml memorial.who_can_discuss
+  combos_with:
+  - MENTOR-CONSTELLATION
 invoke_rules:
   consent: not_yet_asked
   simulation: false

@@ -1,0 +1,49 @@
+# DONALD KNUTH — GLANCE (nav + metadata SSOT)
+# Interface: CARD.yml · Human prose: GLANCE.md
+
+title: Donald Knuth
+iconic: "🕸✒️ Donald Knuth"
+description: |
+  Stanford emeritus; TAOCP; TeX; literate programming. Dream guest — he recast Adventure
+  in CWEB. Contact only by snail mail per his published protocol. Not asked yet.
+
+keywords:
+  - donald knuth
+  - literate programming
+  - cweb
+  - adventure
+  - tex
+  - art of computer programming
+  - dream guest
+  - snail mail
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  children: []
+  siblings:
+    - ../terry-winograd/
+    - ../scott-adams/
+    - ../ted-nelson/
+    - ../stephen-wolfram/
+
+read_order:
+  - README.md
+  - GLANCE.md
+  - invitation.md
+  - ideas.md
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Character registry" }
+  siblings:
+    - { path: ../terry-winograd/GLANCE.yml, why: "SHRDLU parent of IF" }
+    - { path: ../scott-adams/GLANCE.yml, why: "Adventure engine lineage" }
+  across:
+    - { path: sources/adventure-knuth/README.md, why: "Local advent.w + analysis" }
+    - { path: ../../repo-shows/donald-knuth/README.md, why: "Show seed" }
+  deep:
+    - { path: CHARACTER.yml, why: "Portrayal girder" }
+    - { path: CARD.yml, why: "Guest interface" }

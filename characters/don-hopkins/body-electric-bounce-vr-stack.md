@@ -35,7 +35,7 @@ transform-tree data type**: literally **Swivel 3D save files** — a hierarchy o
 whose parameters were **projected in real time** by the running patch. The save file *was* the
 skeleton; Bounce animated its parameters. Jaron (2020): Swivel 3D was **written in FORTH** by
 "young Harvill" — hard to scale; namespace ran out → lost to other modelers.
-→ [`sources/2020-06-swivel3d-forth-jaron.md`](sources/2020-06-swivel3d-forth-jaron.md)
+→ [`../jaron-lanier/sources/2020-06-swivel3d-forth-jaron.md`](../jaron-lanier/sources/2020-06-swivel3d-forth-jaron.md)
 - **Stereo out over UDP.** **UDP packet modules** streamed the projected transform parameters to
 **two SGI renderers at once — one per eye**, each with a **different perspective**. That's the
 stereo VR view: the patch computes, the packets fly, both eyes render.

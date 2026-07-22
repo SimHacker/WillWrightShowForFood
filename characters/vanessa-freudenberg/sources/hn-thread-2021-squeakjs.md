@@ -7,6 +7,14 @@ deadnamed in citations. Story: [SqueakJS – A Squeak VM in JavaScript
 (`hn.algolia.com/api/v1/items/<id>`) on 2026-07-20; formatting flattened from
 HTML, content unaltered.
 
+**Link redirects (2026-07-20):** Dead URLs in verbatim quotes appear in backticks so they
+do not render as broken links. **↪ Redirect** notes after affected comments point to working
+copies. Full mapping: [sources/README.md — Broken link redirects](README.md#broken-link-redirects-hn-preservation).
+
+**Nested quote attributions (2026-07-20):** **↪ Nested quotes** tables after affected
+comments map embedded passages to [memorial PDF](Freudenberg-2014-SqueakJS-memorial-edition.pdf)
+pages or the [Ingalls Zoo corrected PDF](Ingalls-2020-Evolution-of-Smalltalk-Zoo-corrected.pdf).
+
 The chain of parentage, verified from the API:
 
 | Comment | Author | Date | Parent |
@@ -34,7 +42,7 @@ of record had not.
 >
 > SqueakJS: A Modern and Practical Smalltalk That Runs in Any Browser
 >
-> http://www.freudenbergs.de/bert/publications/Freudenberg-2014-SqueakJS.pdf
+> `http://www.freudenbergs.de/bert/publications/Freudenberg-2014-SqueakJS.pdf`
 >
 > >The fact that SqueakJS represents Squeak objects as plain JavaScript
 > objects and integrates with the JavaScript garbage collection (GC) allows
@@ -100,9 +108,26 @@ of record had not.
 > is removed, and the Squeak object is again garbage collected by the
 > JavaScript GC.
 
+**↪ Redirect (2026-07-20):** Don's paper link (`freudenbergs.de/bert/...`) no longer
+resolves. **Read the SqueakJS paper here instead:**
+
+- **[Memorial edition](Freudenberg-2014-SqueakJS-memorial-edition.pdf)**
+- **[Original as published](Freudenberg-2014-SqueakJS-original.pdf)**
+- [Wayback snapshot, 2025-01-19](https://web.archive.org/web/20250119071632/https://freudenbergs.de/vanessa/publications/Freudenberg-2014-SqueakJS.pdf)
+
+**↪ Nested quotes (2026-07-20):** Don [29019992](https://news.ycombinator.com/item?id=29019992)
+opens with his own praise, then embeds long passages from **Vanessa Freudenberg et al.**,
+*SqueakJS* (DLS 2014):
+
+| Nested passage in Don's comment | Location in our cache |
+|--------------------------------|------------------------|
+| "The fact that SqueakJS represents Squeak objects as plain JavaScript objects…" (full paragraph) | §1 introduction, [memorial p. 2](Freudenberg-2014-SqueakJS-memorial-edition.pdf#page=2) |
+| "[...] a hybrid garbage collection scheme…" | Contributions list, [memorial p. 2](Freudenberg-2014-SqueakJS-memorial-edition.pdf#page=2) |
+| "2.3 Cleaning up Garbage" through weak-reference paragraph | §2.3 *Cleaning up Garbage*, [memorial p. 3](Freudenberg-2014-SqueakJS-memorial-edition.pdf#page=3) |
+
 ## 2. DonHopkins, 2021-10-27 — [29020468](https://news.ycombinator.com/item?id=29020468)
 
-*(The quoted passage is Appendix A.5 of the original HOPL IV edition of Dan
+*(The quoted passage is Appendix A.5 of the **original** HOPL IV edition of Dan
 Ingalls's paper, reproduced verbatim — which is why it says "Bert"
 throughout. This is the comment Vanessa replied to.)*
 
@@ -111,7 +136,7 @@ throughout. This is the comment Vanessa replied to.)*
 > The Evolution of Smalltalk: From Smalltalk-72 through Squeak.
 > DANIEL INGALLS, Independent Consultant, USA
 >
-> http://worrydream.com/refs/Ingalls%20-%20The%20Evolution%20of%20Smalltalk.pdf
+> `http://worrydream.com/refs/Ingalls%20-%20The%20Evolution%20of%20Smalltalk.pdf`
 >
 > >A.5 Squeak
 >
@@ -123,7 +148,7 @@ throughout. This is the comment Vanessa replied to.)*
 > >The germ of the SqueakJS project began not long after I was hired at Sun
 > Microsystems. I felt I should learn Java; casting about for a suitable
 > project, I naturally chose to implement a Squeak VM. This I did; the result
-> still appears to run at http://weather-dimensions.com/Dan/SqueakOnJava.jar.
+> still appears to run at `http://weather-dimensions.com/Dan/SqueakOnJava.jar`.
 >
 > >This VM is known in the Squeak community as "Potato" because of some
 > difficulty clearing names with the trademark people at Sun. Much later,
@@ -145,6 +170,26 @@ throughout. This is the comment Vanessa replied to.)*
 > reliability, and SqueakJS now boasts the ability to run every Squeak image
 > since the first release in 1996. To run the system live, visit this url:
 > https://smalltalkzoo.thechm.org/HOPL-Squeak.html?launch
+
+**↪ Redirect (2026-07-20):** Don linked the **original HOPL edition** of Dan Ingalls's
+paper (the one that deadnames Vanessa in Appendix A.5, quoted above). Vanessa asked people
+to cite the **corrected Smalltalk Zoo edition** instead — see her reply in §3 below.
+Working copies:
+
+- **[Ingalls-2020-Evolution-of-Smalltalk-Zoo-corrected.pdf](Ingalls-2020-Evolution-of-Smalltalk-Zoo-corrected.pdf)** (preserved here)
+- [smalltalkzoo.thechm.org/papers/EvolutionOfSmalltalk.pdf](https://smalltalkzoo.thechm.org/papers/EvolutionOfSmalltalk.pdf) (live)
+
+The Potato JAR URL in the quote is also dead; no replacement known.
+
+**↪ Nested quotes (2026-07-20):** Don [29020468](https://news.ycombinator.com/item?id=29020468)
+quotes **Dan Ingalls**, *The Evolution of Smalltalk* (HOPL IV, 2020) — **original**
+edition (deadnames Vanessa). The blockquote-within-blockquote is **Appendix A.5 Squeak**:
+
+| Nested passage | Author | Location in our cache |
+|----------------|--------|------------------------|
+| Full A.5 block ("Although Squeak is still available…" through HOPL-Squeak launch URL) | **Dan Ingalls** (original HOPL text) | [Ingalls-2020-Evolution-of-Smalltalk-Zoo-corrected.pdf — Appendix A.5](Ingalls-2020-Evolution-of-Smalltalk-Zoo-corrected.pdf#page=87) — **corrected** edition; compare [live Zoo PDF](https://smalltalkzoo.thechm.org/papers/EvolutionOfSmalltalk.pdf#page=87) |
+
+Vanessa asked people to cite the Zoo edition instead — see §3.
 
 ## 3. codefrau (Vanessa Freudenberg), 2021-11-05 — [29125515](https://news.ycombinator.com/item?id=29125515)
 

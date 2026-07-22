@@ -49,7 +49,7 @@ see_also:
   - { path: invitation.md, why: "The short public invitation draft" }
   - { path: MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md, why: "Supporting artifact — the full argument, linkable by URL" }
   - { path: sources/2009-mining-computational-universe.md, why: "Mining thesis primary + KK bridge" }
-  - { path: ../don-hopkins/sources/2026-07-kevin-kelly-latent-space-as-medium.md, why: "KK latent space essay + HN that cites Wolfram mining" }
+  - { path: ../kevin-kelly/sources/2026-07-kevin-kelly-latent-space-as-medium.md, why: "KK latent space essay + HN that cites Wolfram mining" }
   - { path: CARD.yml, why: "Universal CARD — invokable abilities for show segments" }
   - { path: ../../repo-shows/stephen-wolfram/, why: "Show seed" }
   - { path: ../will-wright/, why: "Irreducible microworlds you understand by playing — the deepest bridge" }

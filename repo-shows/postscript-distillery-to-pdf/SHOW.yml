@@ -67,7 +67,7 @@ segments:
 artifacts:
   - characters/glenn-reid/
   - characters/brian-reid/
-  - characters/don-hopkins/sources/distillery-pdf-correspondence.md
+  - characters/glenn-reid/sources/distillery-pdf-correspondence.md
   - characters/don-hopkins/porter-duff-postscript-to-webgpu.md
   - moollm/designs/postscript/BRIAN-REID-POSTSCRIPT-HISTORY.md
   - moollm/designs/postscript/LINGUISTIC-MOTHERBOARD.md

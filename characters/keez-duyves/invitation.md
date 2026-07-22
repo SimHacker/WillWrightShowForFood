@@ -27,6 +27,8 @@ https://vimeo.com/pipslab
 
 **Mar 2024** - I put Die Space on HN for a “count raised hands in a 500-seat room” thread ([39821421](https://news.ycombinator.com/item?id=39821421)): LEDs, names, forehead yes/no, face cloud. TEDx + HD + showreel @1:24.
 
+**Jul 2026** - The phone number I have for you is disconnected, so I'm getting your attention the PIPS:lab way: leaving comments in your light. On your Seoul crank-TV post I remembered your TV set full of performances with the **giant heavy spinning crank that controlled TIME ITSELF** - you invented physical inertial scrolling, with the whole arm, the thing phones only fake at fingertip level. If you put all the lost souls from Die Space into that TV, would that be **DOOM SCROLLING**? And have you considered a **brake and motor** - second and third order direct manipulation with force feedback, like [Margaret Minsky's Sandpaper](https://interfacemuseum.com/exhibits/minsky-sandpaper/)? She has a room here too - feeling the *texture of time* is a segment waiting to happen.
+
 I'm building **Will Wright Show For Food** - a **Repo Show**: the stage is a live GitHub repo (before / during / after), not a dead mp4 on YouTube with a toxic comment section.
 **Will Wright is in - signed on for the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
@@ -39,7 +41,11 @@ Topics on the table (more in the ideas file — then vs now):
 - **Lumasol → Luma2solator** - live feedback vs shutter-after-the-fact ([Urban Nation](https://urban-nation.com/artist/keez-duyves/))
 - **JS player unfinished business** - 2017 pitch: artists like you need a programmable player. Browser / WebXR / Repo Show as the open rematch?
 - **Then vs now** - seat LEDs + six orchestrated HMDs were already genius; WebXR / living repos / shared fireworks worlds are newly cheap. Also the old Jaunt ladder: rooftop NYE 360 → everyone’s virtual rockets on one server → (careful) real ignition. What would you build *now* that you couldn't ship then?
+- **The crank TV, escalated** - doom scrolling the departed; brake + motor + Sandpaper = haptic time. Two-hander with Margaret Minsky?
+- **Premorializing** - Die Space says it's for people who already passed away, but at TEDx you interred a whole *living* audience. So what do we call interring someone *before* they're dead - premorializing? Because that's exactly what this repo does: memorial rooms for the dead (we could inter our whole [Diespace wing](../marvin-minsky/memorial.md) into Die Space), and rooms for the living that they get to argue with. Is a Repo Show character room a Die Space lite account?
 - Optional three-hander with **Will** (Ben if the Amsterdam / Trouw stack fits)
+
+**And the in-person ask:** we're planning a visit to the **[STRAAT Museum](https://straatmuseum.com/en)** at NDSM - come with us! You know that werf better than the museum does. And since STRAAT is more or less **next door to your studio** (if it's still where I remember - correct me if you've moved), I'm cheekily inviting **us to visit you** afterwards: crank TV, prototypes, whatever's on the bench. Coffee's on me either way.
 
 Your room is started - correct anything wrong:
 

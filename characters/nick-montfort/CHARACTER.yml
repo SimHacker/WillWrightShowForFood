@@ -1,0 +1,51 @@
+# Nick Montfort — invitation portrayal. NOT Nick Montfort.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: nick-montfort
+  name: "Nick Montfort"
+  type: invitation
+  signifier: "📜🗝"
+  status: living
+  field: "Interactive fiction / digital literature; Twisty Little Passages; computational poetry"
+  home: characters/nick-montfort/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: stub
+  consent: not_yet_asked
+  document: invitation.md
+  note: "Room seeded for Riddle Machines framing (literary map of IF). Outreach not drafted."
+
+bio:
+  summary: >
+    **Nick Montfort** — MIT digital media scholar; author of *Twisty Little Passages* (2003) and
+    the essay *Riddle Machines* (2007) mapping interactive fiction as parser + world model +
+    potential narrative, with the **riddle** (not the novel) as the better literary relative.
+    His history section is the trail HN cites for Adventure ↔ SHRDLU ↔ Wumpus.
+
+show_suggestions:
+  - "Riddle vs novel — why Repo Show needs input to complete the work"
+  - "Potential narrative = potential repo (with Knuth literate Adventure + Scott portable VM)"
+  - "Literary computing: IF beside hypertext and digital poetry without hierarchy theater"
+
+sources:
+  web:
+    - { title: "Riddle Machines", url: "https://nickm.com/if/riddle_machines.html" }
+    - { title: "nickm.com IF page", url: "https://nickm.com/if/" }
+  local:
+    - { path: sources/riddle-machines.md, why: "Framing cream + show map" }
+  books:
+    - { title: "Twisty Little Passages", year: 2003, note: "MIT Press — riddle argument at book length" }
+
+see_also:
+  - { path: sources/riddle-machines.md, why: "Primary framing doc" }
+  - { path: ../donald-knuth/sources/advent-shrdlu-wumpus-lineage.md, why: "HN citation trail" }
+  - { path: ../terry-winograd/README.md, why: "SHRDLU" }
+  - { path: ../scott-adams/README.md, why: "Commercial / portable IF" }
+  - { path: ../janet-murray/sources/hamlet-on-the-holodeck.md, why: "Holodeck / agency — cited in Riddle Machines" }
+  - { path: ../brewster-kahle/README.md, why: "Preserve interactive worlds" }

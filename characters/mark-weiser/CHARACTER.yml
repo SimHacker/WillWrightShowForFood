@@ -58,6 +58,6 @@ see_also:
   - { path: legacy.yml, why: "Living legacy — Weiser Scholarship honor roll + calm-tech torchbearers + explainer-video citations" }
   - { path: abowd-internet-of-materials.md, why: "Gregory Abowd's 2019 Berkeley talk — Weiser's vision compounding into computational materials" }
   - { path: ../don-hopkins/career/work-history.yml, why: "CHI'88 pie menus — Callahan, Hopkins, Weiser, Shneiderman" }
-  - { path: ../don-hopkins/sources/1991-03-mark-weiser-pie-menu-tape-stylus.md, why: "1991 mail — demo tape, alphabetic pies, stylus experiments" }
+  - { path: ../mark-weiser/sources/1991-03-mark-weiser-pie-menu-tape-stylus.md, why: "1991 mail — demo tape, alphabetic pies, stylus experiments" }
   - { path: ../ben-shneiderman/, why: "Co-author who can discuss him on air" }
   - { path: ../../schemas/portrayal-standards.md#memorial-mode, why: "How memorial guests are handled" }

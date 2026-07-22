@@ -9,4 +9,11 @@
 | [`olpc-book-viewer-devel-2007-01-21.md`](olpc-book-viewer-devel-2007-01-21.md) | Brewster's `devel@laptop.org` book-viewer wishlist (Wayback 003674) |
 | [`outreach-amsterdam-2026-07-16.md`](outreach-amsterdam-2026-07-16.md) | Don → Brewster — Parker visit, Repo Show invite, Amsterdam |
 
+## Related (Don room — adventure / literate programming)
+
+| File | What |
+|------|------|
+| [`../../donald-knuth/sources/adventure-knuth/`](../../donald-knuth/sources/adventure-knuth/) | Knuth CWEB Adventure — local `advent.w` + analysis/cream |
+| [`../../donald-knuth/sources/advent-shrdlu-wumpus-lineage.md`](../../donald-knuth/sources/advent-shrdlu-wumpus-lineage.md) | HN ADVENT ≈ SHRDLU / WUMPUS trail |
+
 ↑ [`../README.md`](../README.md)

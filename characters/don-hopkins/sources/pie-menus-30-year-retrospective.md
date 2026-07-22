@@ -83,5 +83,5 @@ technologies are those that disappear."* Ties the pie menu story to the invisibl
 → [`pie-menu-fud-misconceptions.md`](pie-menu-fud-misconceptions.md) ·
 [`pie-menu-timeline.md`](pie-menu-timeline.md) ·
 [`2008-2023-pixie-buxton-patent-thread.md`](2008-2023-pixie-buxton-patent-thread.md) ·
-[`2020-02-alan-kay-pixie-pie-menus-thread.md`](2020-02-alan-kay-pixie-pie-menus-thread.md) ·
+[`../../alan-kay/sources/2020-02-alan-kay-pixie-pie-menus-thread.md`](../../alan-kay/sources/2020-02-alan-kay-pixie-pie-menus-thread.md) ·
 [PIXIE show](../../../repo-shows/pixie-pie-menus-pdp7.yml)

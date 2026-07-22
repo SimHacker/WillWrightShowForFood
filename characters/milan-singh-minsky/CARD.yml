@@ -1,0 +1,107 @@
+# CARD — Milan Singh Minsky (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: milan-singh-minsky
+  name: Milan Singh Minsky
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+card:
+  name: Milan Singh Minsky
+  title: Product Truth for Visual AI
+  rarity: rare
+  signifier: "🏭👁️"
+  flavor: Research becomes real when a customer can run it.
+
+relationships:
+  # kinds may stack — real people relate in multiple ways at once
+  - { with: henry-minsky, kinds: [spouse, cofounder_colleague, coauthor], why: "Leela AI — Henry co-founder/CTO, Milan VP Product; grid-world paper co-authors (2020)" }
+  - { with: marvin-minsky, kinds: [daughter_in_law, idea_carrier, memorial_discussant], why: "Married into the first wired family; ships the lab's learning agenda as product" }
+  - { with: margaret-minsky, kinds: [sister_in_law], why: "Minsky family" }
+  - { with: oliver-steele, kinds: [family], why: "Minsky family via Henry" }
+  - { with: gary-drescher, kinds: [family_friend, advised_by], why: "Leela adviser and family friend — Made-Up Minds underlies Leela's schema learning" }
+  - { with: don-hopkins, kinds: [colleague], why: "Don's colleague at Leela AI" }
+  - { with: isabella-struckman, kinds: [colleague], why: "Leela vision-model eval/training; shared episode space" }
+  - { with: steve-kommrusch, kinds: [colleague, coauthor], why: "Grid-world paper first author" }
+  - { with: cyrus-shaoul, kinds: [colleague, coauthor], why: "Leela co-founder; grid-world paper" }
+  - { with: art-medlar, kinds: [colleague], why: "Leela AI collaborator" }
+
+abilities:
+- id: PRODUCT-TRUTH
+  name: Product Truth
+  type: activated
+  mana: '{W}{U}'
+  conditions:
+  - segment_topic_in: [ai-product, leela-ai, manufacturing, product-management]
+  advertisement:
+    method: productTruth
+    signature: productTruth(research) → something a factory can actually deploy
+    score_when:
+    - trigger: research_to_product_gap_made_concrete
+      weight: 0.92
+  effect: Turn visual-intelligence research into a product manufacturers run — the discipline of shipping AI that has to work on a real factory floor.
+  verifiable: VP of Product, Leela AI (Boston Globe 2024)
+  combos_with: [VISUAL-INTELLIGENCE]
+- id: GRID-WORLD-PAPER
+  name: Grid-World Learning Paper
+  type: activated
+  mana: '{U}'
+  conditions:
+  - segment_topic_in: [self-supervised-learning, schema-learning, leela-research]
+  advertisement:
+    method: gridWorldPaper
+    signature: gridWorldPaper(leela, dqn) → self-supervised multi-goal comparison
+    score_when:
+    - trigger: drescher_lineage_traced_to_benchmark
+      weight: 0.9
+  effect: Co-author on Leela's self-supervised grid-world learning paper — the Drescher/Society-of-Mind lineage measured against Deep Q Networks.
+  verifiable: "Kommrusch, H. Minsky, M. Minsky, Shaoul — PMLR 131 (2020)"
+  combos_with: [SCHEMA-MECHANISM, SCHEMA-FACTORY]
+- id: COUPLE-SHOW
+  name: Product & Architecture as a Partnership
+  type: activated
+  mana: '{G}{W}'
+  conditions:
+  - show_seed: repo-shows/leela-ai/
+  - co_guest: henry-minsky
+  advertisement:
+    method: coupleShow
+    signature: coupleShow(milan, henry) → how a married product/CTO pair actually decides
+    score_when:
+    - trigger: relationship_matrix_ensemble
+      guests: [milan-singh-minsky, henry-minsky]
+      weight: 0.94
+  effect: The couple episode — product and architecture as a partnership, in the family where 'first wired family' is literal history.
+  verifiable: CHARACTER.yml show_suggestions; ../henry-minsky/CHARACTER.yml
+  combos_with: [VISUAL-INTELLIGENCE, WIRED-CHILDHOOD]
+- id: MINSKY-TABLE-PRESENT
+  name: The Minsky Table, Present Tense
+  type: triggered
+  mana: '{W}'
+  conditions:
+  - segment_type: memorial
+  - segment_topic_in: [marvin-minsky, legacy-in-production]
+  advertisement:
+    method: minskyTablePresent
+    signature: minskyTablePresent() → the legacy as a living company, memorial mode
+    score_when:
+    - trigger: family_and_students_share_stage
+      weight: 0.9
+  effect: Memorial discussant — the daughter-in-law who ships Society-of-Mind-lineage AI as product; the legacy in present tense, never speaking as Marvin.
+  verifiable: ../marvin-minsky/CHARACTER.yml memorial.who_can_discuss
+  combos_with: [MENTOR-CONSTELLATION]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: CHARACTER.yml, why: "Bio girder — invitation status" }
+  - { path: invitation.md, why: "Public invitation document" }
+  - { path: ../henry-minsky/CARD.yml, why: "Spouse + co-founder — couple show" }
+  - { path: ../../repo-shows/leela-ai/, why: "Leela AI group show" }

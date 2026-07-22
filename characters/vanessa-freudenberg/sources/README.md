@@ -107,9 +107,43 @@ SqueakJS v2 effort.
 - [Vanessa's philosophy](https://github.com/SimHacker/moollm/blob/main/designs/vanessa-freudenberg-philosophy.md) — target JavaScript not WebAssembly, hybrid GC, Self→V8 lineage; links memorial edition and all preserved sources above
 - [Prestoration](https://github.com/SimHacker/moollm/tree/main/designs/prestoration) — how the memorial edition PDF was made, with provenance and ethics
 
+## Broken link redirects (HN preservation)
+
+Editorial pass **2026-07-20** on the preserved HN threads. Verbatim comment text is
+unchanged; dead URLs inside blockquotes are wrapped in backticks so GitHub does not
+auto-link them. **↪ Redirect** callouts immediately after affected comments point here.
+
+| URL as posted on HN | Status (2026-07-20) | Read instead |
+|---------------------|---------------------|--------------|
+| `http://www.freudenbergs.de/bert/publications/Freudenberg-2014-SqueakJS.pdf` | Dead (site down) | [Memorial edition](Freudenberg-2014-SqueakJS-memorial-edition.pdf), [original PDF](Freudenberg-2014-SqueakJS-original.pdf), [Wayback](https://web.archive.org/web/20250119071632/https://freudenbergs.de/vanessa/publications/Freudenberg-2014-SqueakJS.pdf) |
+| `https://freudenbergs.de/bert/publications/Freudenberg-2014-SqueakJS.pdf` | Dead (site down) | Same as above |
+| `http://worrydream.com/refs/Ingalls%20-%20The%20Evolution%20of%20Smalltalk.pdf` | Original HOPL (deadnames) | [Zoo corrected PDF](Ingalls-2020-Evolution-of-Smalltalk-Zoo-corrected.pdf), [live Zoo edition](https://smalltalkzoo.thechm.org/papers/EvolutionOfSmalltalk.pdf) |
+| `http://weather-dimensions.com/Dan/SqueakOnJava.jar` | Dead | No replacement known |
+| `https://squeak.js.org/docs/jit.md.html` | Live | [jit-notes/](jit-notes/) (preserved); live mirror optional |
+
+Affected files: [`hn-thread-2021-squeakjs.md`](hn-thread-2021-squeakjs.md),
+[`hn-thread-2023-croquet-jasmine.md`](hn-thread-2023-croquet-jasmine.md).
+
+## Nested quote attributions (HN preservation)
+
+Editorial pass **2026-07-20**. When a preserved HN comment embeds quoted material inside
+its blockquote (`> >…`), **↪ Nested quotes** tables map each passage to a precise location
+in this directory — PDF `#page=` anchors, [`jit-notes/jit.md`](jit-notes/jit.md) `#L` lines,
+or Ingalls appendix pages. Verbatim HN text is unchanged.
+
+| HN comment | Nested content | Cached source |
+|------------|----------------|---------------|
+| Don [38774059](https://news.ycombinator.com/item?id=38774059) (2023 GC/WASM) | Two SqueakJS paper excerpts | [memorial p. 2](Freudenberg-2014-SqueakJS-memorial-edition.pdf#page=2) |
+| Don [38796583](https://news.ycombinator.com/item?id=38796583) (2023 Self/V8) | "Where this scheme gets interesting…" | [jit.md#L134](jit-notes/jit.md#L134) — [Bi-directional mapping](jit-notes/jit.md#bi-directional-mapping) |
+| Don [29019992](https://news.ycombinator.com/item?id=29019992) (2021 GC) | SqueakJS abstract + §2.3 | [memorial p. 2–3](Freudenberg-2014-SqueakJS-memorial-edition.pdf#page=2) |
+| Don [29020468](https://news.ycombinator.com/item?id=29020468) (2021 HOPL) | Ingalls Appendix A.5 | [Ingalls Zoo PDF p. 87](Ingalls-2020-Evolution-of-Smalltalk-Zoo-corrected.pdf#page=87) |
+
+Page numbers verified against the memorial and Zoo PDFs in this directory, 2026-07-20.
+
 ## Where her name is already correct
 
 - [DLS Most Notable Paper Award 2024](https://dynamic-languages-symposium.org/index.html) — credits Vanessa Freudenberg
 - [squeak.js.org](https://squeak.js.org/) — "SqueakJS by Vanessa Freudenberg"
 - [wiki.squeak.org/squeak/5822](http://wiki.squeak.org/squeak/5822) — paper page crediting Vanessa
-- [Her publications page](http://freudenbergs.de/bert/publications/) — "I changed my name … to Vanessa Freudenberg in 2020"
+- Her publications page at `freudenbergs.de/bert/publications/` — site down; her note there
+  ("I changed my name … to Vanessa Freudenberg in 2020") is preserved via [Wayback](https://web.archive.org/web/20250119071632/https://freudenbergs.de/vanessa/publications/Freudenberg-2014-SqueakJS.pdf) context and the memorial edition above

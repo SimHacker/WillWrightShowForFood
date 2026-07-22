@@ -77,7 +77,7 @@ dwell/suppression, the rehearsal transition, and mark-ahead **are** the pie menu
 the addition. "We refer to this as being self-revealing" also reads as coinage — the term is
 on the DDJ 1991 cover treatment ("Fast, Easy, and Self-Revealing"); Ted Nelson credits it to
 Klaus Landberg (Datapoint) before either
-([note](2020-ted-nelson-klavs-landberg-self-revealing.md)).
+([note](../../ted-nelson/sources/2020-ted-nelson-klavs-landberg-self-revealing.md)).
 
 ## The pre-publication rebrand receipt
 

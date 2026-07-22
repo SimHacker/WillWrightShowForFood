@@ -21,7 +21,7 @@ This artifact tracks **living hardware**, **provenance**, and **reproduction** �
 
 | Holder | Story | Source |
 |--------|-------|--------|
-| **Don Hopkins** | Set from **Mark Lottor** (SRI — kept Engelbart's PDP-10 running for NLS demos). Koala sticker; possibly older than RR Auction lot. Stored safe, Netherlands. | [`../don-hopkins/sources/2022-2023-engelbart-mouse-alan-kay.md`](../don-hopkins/sources/2022-2023-engelbart-mouse-alan-kay.md) |
+| **Don Hopkins** | Set from **Mark Lottor** (SRI — kept Engelbart's PDP-10 running for NLS demos). Koala sticker; possibly older than RR Auction lot. Stored safe, Netherlands. | [`sources/2022-2023-engelbart-mouse-alan-kay.md`](sources/2022-2023-engelbart-mouse-alan-kay.md) |
 | **Mark Lottor** | Sold his set **2017 → $8,500 → Paul Allen Museum** (pre-Allen death). Network Wizards; NIC era. | same |
 | **David Maynard** | **50-year-old mouse** photo on Facebook Internet Old Farts Club (2022). Had keyset; **donated to Harold C. Hohbach History of Science & Technology collection**, Stanford. | [`../dave-maynard/`](../dave-maynard/) |
 | **RR Auction** | Mouse + keyset sold **~$54,000** — Maynard alerted Don (2022). | https://www.rrauction.com/auctions/lot-detail/?li=345548606328002 |

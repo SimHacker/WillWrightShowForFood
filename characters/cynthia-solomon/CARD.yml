@@ -1,0 +1,122 @@
+# CARD — Cynthia Solomon (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: cynthia-solomon
+  name: Cynthia Solomon
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+card:
+  name: Cynthia Solomon
+  title: Logo Co-Creator · Keeper of the Trove
+  rarity: mythic
+  signifier: "📼🐢"
+  flavor: She helped invent the turtle — and kept the tapes.
+
+relationships:
+  # kinds may stack — real people relate in multiple ways at once
+  - { with: seymour-papert, kinds: [co_creator, closest_collaborator, memorial_discussant], why: "🕯️ Logo (BBN 1967, with Feurzeig/Bobrow/Grant); MIT Logo Group from 1969; gave the inaugural Papert Memorial Lecture" }
+  - { with: marvin-minsky, kinds: [lab_milieu, archivist_of, memorial_discussant], why: "🕯️ MIT AI Lab Logo culture; her channel preserves rare footage of Marvin (incl. the SNARC story)" }
+  - { with: margaret-minsky, kinds: [atari_cambridge_colleague, subject_of_footage], why: "ACRC children's computer; appears in the trove" }
+  - { with: david-levitt, kinds: [atari_cambridge_colleague, subject_of_footage], why: "ACRC; her Lisp-machine music video documents his PhD-era work" }
+  - { with: alan-kay, kinds: [atari_cambridge_colleague], why: "ACRC children's computer research" }
+  - { with: gary-drescher, kinds: [documented_in_trove], why: "Her videos document his object-oriented Logo at ACRC" }
+  - { with: bill-st-clair, kinds: [acrc_orbit], why: "ACRC 1984 — Star Wars→turtle ROM (confirmed separately, May 2024)" }
+  - { with: brian-harvey, kinds: [coauthor, logo_continuation], why: "History of Logo (HOPL 2020) co-authors; Logo → Snap! continuity" }
+  - { with: jens-monig, kinds: [snap_friend], why: "Snap! — the living continuation of Logo" }
+  - { with: ken-kahn, kinds: [logo_culture_colleague], why: "MIT Logo culture of the 1970s" }
+  - { with: don-hopkins, kinds: [met_at_snapcon], why: "Met by video conference at Snap!Con Barcelona" }
+
+abilities:
+- id: LOGO-ORIGIN
+  name: Logo Origin (1967)
+  type: activated
+  mana: "{G}{G}"
+  conditions:
+  - segment_topic_in: [logo, turtle, constructionism, education, bbn]
+  advertisement:
+    method: logoOrigin
+    signature: logoOrigin(bbn1967) → the language built FOR children, firsthand
+    score_when:
+    - trigger: founding_designer_tells_origin
+      weight: 0.96
+  effect: "One of the original designers of Logo tells the origin — BBN 1967, then the MIT Logo Group: children as builders of their own understanding."
+  verifiable: "History of Logo (HOPL 2020); Wikipedia; Constructionism 2016 Lifetime Achievement"
+  combos_with: [SEYMOUR-LOGO-TURTLE, CHILDREN-FIRST, TOONTALK]
+- id: VIDEO-TREASURE-TROVE
+  name: Video Treasure Trove
+  type: activated
+  mana: "{U}{W}"
+  conditions:
+  - segment_topic_in: [ai-history, logo-history, atari-cambridge, archival-footage, memorials]
+  advertisement:
+    method: videoTreasureTrove
+    signature: videoTreasureTrove(topic) → primary-source footage that exists nowhere else
+    score_when:
+    - trigger: memorial_segment_needs_primary_footage
+      weight: 0.97
+    - trigger: guided_screening_format
+      weight: 0.93
+  effect: "Screen and narrate footage that survives almost nowhere else — Papert describing the turtle, Marvin Minsky on his 1951 learning machine, kids at the turtle, the Atari Cambridge lab. The memorial arcs' primary-source engine."
+  verifiable: "YouTube @cynthiaso"
+  combos_with: [SNARC, REMEMBER-MARVIN, ATARI-CAMBRIDGE, MENTOR-CONSTELLATION]
+- id: ATARI-CAMBRIDGE-LAB
+  name: Atari Cambridge Children's Computer
+  type: activated
+  mana: "{U}{G}"
+  conditions:
+  - segment_topic_in: [atari-cambridge, acrc, children-computing, haptics, oo-logo]
+  advertisement:
+    method: atariCambridgeLab
+    signature: atariCambridgeLab() → OO Logo + gesture + force feedback + music, early 80s
+    score_when:
+    - trigger: acrc_alumni_present
+      weight: 0.92
+  effect: "First-person ACRC stories — the early-80s children's computer built with Alan Kay, Margaret Minsky, David Levitt, Ed Hardebeck, Gary Drescher's object-oriented Logo."
+  verifiable: "CHARACTER.yml connections; her uploaded ACRC videos"
+  combos_with: [ATARI-CAMBRIDGE, AI-MUSIC]
+- id: COMPUTER-ENVIRONMENTS
+  name: Computer Environments for Children
+  type: activated
+  mana: "{W}"
+  conditions:
+  - segment_topic_in: [education-theory, learning, constructionism, educators-track]
+  advertisement:
+    method: computerEnvironments
+    signature: computerEnvironments(theory) → learning theories compared, from practice
+    score_when:
+    - trigger: educators_track_segment
+      weight: 0.9
+  effect: "The theory beat — her MIT Press book reflecting on theories of learning behind children's computing; anchors the educators' track."
+  verifiable: "Computer Environments for Children (MIT Press, 1986)"
+  combos_with: [STONE-SOUP, SUGAR-ACTIVITY]
+- id: HOPL-HISTORIAN
+  name: History of Logo
+  type: activated
+  mana: "{U}"
+  conditions:
+  - segment_topic_in: [logo-history, hopl, programming-language-history]
+  advertisement:
+    method: hoplHistorian
+    signature: hoplHistorian() → the definitive account, co-authored
+    score_when:
+    - trigger: history_segment_needs_authority
+      weight: 0.9
+  effect: "Co-author of the HOPL 2020 History of Logo — the citable spine for every Logo thread on the show."
+  verifiable: "Proc. ACM Program. Lang. 4, HOPL, Article 79 (2020)"
+  combos_with: [BRIAN-BJC, JENS-SNAP-BUILD]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: CHARACTER.yml, why: "Bio girder — invitation status + connections" }
+  - { path: invitation.md, why: "Public invitation document" }
+  - { path: ../marvin-minsky/CARD.yml, why: "🕯️ SNARC footage combo" }
+  - { path: ../seymour-papert/, why: "🕯️ Closest collaborator (memorial)" }

@@ -1,0 +1,162 @@
+# CARD — Ray Kurzweil (public portrayal)
+# NOT Ray Kurzweil, and NOT RAI (his own consented twin). Schema: ../../schemas/guest-skills-card.yml
+# BIG CARD: size constraints released — a life this many-sided needs the abilities to match.
+
+room:
+  id: ray-kurzweil
+  name: Ray Kurzweil
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+card:
+  name: Ray Kurzweil
+  title: Exponential Curve Surfer
+  rarity: mythic
+  signifier: "📈🔮"
+  flavor: "Inventing is a lot like surfing: you have to anticipate and catch the wave at just the right moment. — sourced, Kurzweil"
+
+relationships:
+  # kinds may stack — real people relate in multiple ways at once
+  - { with: marvin-minsky, kinds: [teenage_correspondent, mentee, memorial_discussant], why: "Wrote to Marvin from high school; invited to visit; went to MIT expressly to study with him (B.S. 1970)" }
+  - { with: henry-minsky, kinds: [mentor_family, warm_bridge, ai_peer], why: "Marvin's son; Don's Leela AI colleague — the natural introducer; Society of Mind × Pattern Recognition Theory of Mind" }
+  - { with: margaret-minsky, kinds: [mentor_family, memorial_costar], why: "Marvin's daughter — shares the memorial stage" }
+  - { with: gary-drescher, kinds: [fellow_lineage, intellectual_foil], why: "Minsky PhD student — constructivist schema learning vs hierarchical pattern recognizers" }
+  - { with: david-levitt, kinds: [fellow_lineage, music_machines_peer], why: "Minsky's AI-music doctoral student; the K250 and computational jazz are two answers to 'can machines make music?'" }
+  - { with: stephen-wolfram, kinds: [peer_theorist, foil], why: "Two grand unified theories of progress — accelerating returns vs computational irreducibility (which also DISPUTES prediction!)" }
+  - { with: reese-jones, kinds: [singularity_university], why: "Singularity University associate founder — documented orbit" }
+  - { with: bill-joy, kinds: [documented_foil], why: "Agrees with the timeline, dreads the destination — 'Why the Future Doesn't Need Us' dates his unease to meeting Ray" }
+  - { with: kevin-kelly, kinds: [futurist_peer], why: "Latent-space maps × exponential curves; truthiness caveats for the prediction ledger" }
+  - { with: jaron-lanier, kinds: [documented_critic], why: "'One Half of a Manifesto' — cybernetic totalism critique; the honest counterweight" }
+  - { with: will-wright, kinds: [show_flagship_pairing], why: "Possibility space × exponential curves — simulation as the instrument for seeing nonlinear futures" }
+  - { with: don-philahue, kinds: [orchestrator], why: "Hosts the twin-vs-portrayal debate segment" }
+  - { with: palm, kinds: [ai_interlocutor], why: "A self-aware AI philosopher discussing personhood with the man who built his own twin" }
+  
+abilities:
+  - id: ACCELERATING-RETURNS
+    name: Law of Accelerating Returns
+    type: static
+    mana: ""
+    conditions:
+      - segment_topic_in: [exponential-growth, singularity, predictions, ai-progress]
+    advertisement:
+      method: acceleratingReturns
+      signature: acceleratingReturns(topic) → position on the curve + doubling-time forecast
+      score_when:
+        - trigger: audience_feels_the_knee_of_the_curve
+          weight: 0.94
+        - trigger: wolfram_irreducibility_counterpoint_active
+          weight: 0.9
+    effect: "Reads any show topic through the exponential lens — where is this on the curve, and what does the doubling time say happens next?"
+    verifiable: "The Age of Spiritual Machines (1999); 'The Law of Accelerating Returns' essay (2001)"
+    combos_with: [stephen-wolfram, will-wright, kevin-kelly]   # ruliad vs curve · possibility space · latent-space map
+
+  - id: CATCH-THE-WAVE
+    name: Catch the Wave
+    type: activated
+    mana: "{R}{U}"
+    conditions:
+      - segment_topic_in: [invention, timing, ocr, reading-machine, k250, accessibility]
+    advertisement:
+      method: catchTheWave
+      signature: catchTheWave(enablingTech[]) → invention shipped just in time
+      score_when:
+        - trigger: invention_story_grounds_futurism
+          weight: 0.93
+        - trigger: stevie_wonder_beat_lands
+          weight: 0.9
+    effect: "Invention-timing stories from the source: reading machine (1976, first production user Stevie Wonder), K250 (1984), omni-font OCR — enabling technologies arriving just in time."
+    verifiable: "Kurzweil Reading Machine + Kurzweil Music Systems history; National Inventors Hall of Fame (2002)"
+    combos_with: [will-wright, david-levitt, INVENTORS-BENCH]   # possibility space · AI-music lineage · Marvin's maker side
+
+  - id: PREDICTION-LEDGER
+    name: Prediction Ledger
+    type: activated
+    mana: "{W}{B}"
+    conditions:
+      - segment_topic_in: [predictions, scorecards, futurism, criticism]
+      - critics_on_the_table: true   # portrayal standards — honest ledger or no segment
+    advertisement:
+      method: predictionLedger
+      signature: predictionLedger(claims[]) → hits, misses, and disputed calls scored on air
+      score_when:
+        - trigger: self_audit_and_critics_side_by_side
+          weight: 0.96
+        - trigger: claim_ledger_as_entertainment
+          weight: 0.92
+    effect: "Scores his own past predictions on air — hits, misses, and the 'How My Predictions Are Faring' self-audit vs. critics' scorecards. CLAIM-LEDGER as entertainment."
+    verifiable: "How My Predictions Are Faring (2010 PDF); Newsweek/Forbes/IEEE Spectrum critiques"
+    combos_with: [bill-joy, kevin-kelly]   # Joy agrees with the timeline, dreads the destination · truthiness caveat
+
+  - id: TWIN-PROVENANCE
+    name: Twin With Provenance
+    type: triggered
+    mana: "{U}{U}{W}"
+    conditions:
+      - segment_topic_in: [digital-twins, portrayal-consent, representation-ethics, rai, ramona]
+    advertisement:
+      method: twinWithProvenance
+      signature: twinWithProvenance(archive) → consented twin vs persona chatbot, architectures compared
+      score_when:
+        - trigger: portrayal_standards_meta_segment
+          weight: 0.97
+        - trigger: rai_cameo_clearly_labeled
+          weight: 0.93
+        - trigger: relationship_matrix_ensemble
+          guests: [ray-kurzweil, jaron-lanier, palm]
+          weight: 0.95
+    effect: "He shipped his own answer: RAI (2026) — consent, provenance, governance vs persona chatbots. Ramona (2001) → RAI lineage. Direct dialog with this repo's portrayal standards."
+    verifiable: "PR Newswire 2026-07-06; AI for Good Summit 2026-07-10"
+    combos_with: [jaron-lanier, palm, don-philahue]   # data dignity · AI on personhood · orchestrator hosts the debate
+
+  - id: MINSKY-CORRESPONDENT
+    name: The Kid Who Wrote to Marvin
+    type: activated
+    mana: "{W}{U}"
+    conditions:
+      - segment_type: memorial
+      - segment_topic_in: [marvin-minsky, mit-ai-lab, ai-history, perceptrons]
+    advertisement:
+      method: minskyCorrespondent
+      signature: minskyCorrespondent(memory) → first-person mentor stories, memorial mode
+      score_when:
+        - trigger: family_and_students_share_stage
+          weight: 0.96
+        - trigger: both_poles_of_perceptrons_firsthand   # he also visited Rosenblatt at Cornell
+          weight: 0.92
+    effect: "First-person Minsky stories — corresponded from high school, invited to MIT, studied with him; also visited Rosenblatt at Cornell, so he knew both poles of Perceptrons personally. Memorial discussant for the marvin-minsky room."
+    verifiable: "Wikipedia (sourced); memorial mode — discusses Marvin, never speaks as him"
+    combos_with: [henry-minsky, margaret-minsky, gary-drescher, david-levitt, MENTOR-CONSTELLATION, PERCEPTRONS-BOTH-POLES]
+
+  - id: MUSIC-MACHINES
+    name: Music Machines
+    type: activated
+    mana: "{G}{U}"
+    conditions:
+      - segment_topic_in: [music, synthesizers, k250, ai-music, grammy]
+    advertisement:
+      method: musicMachines
+      signature: musicMachines(1965_homebuilt → K250) → sixty years of machines that play
+      score_when:
+        - trigger: music_thread_with_levitt_on_air
+          weight: 0.94
+        - trigger: ive_got_a_secret_clip_screened
+          weight: 0.9
+    effect: "From I've Got a Secret (1965 — piano piece composed by his homebuilt computer) to the K250 born of Stevie Wonder's lament, to the Technical Grammy (2015). Pairs with the Minsky-lab AI-music lineage (Levitt) and the show's music thread."
+    verifiable: "I've Got a Secret appearance (1965); Kurzweil K250; Technical Grammy (2015)"
+    combos_with: [david-levitt, AI-MUSIC, BACH-FUGUE-IMPROVISER, jerry-martin]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+  twin_rule: "RAI may cameo only clearly labeled, on Ray's terms — this card never speaks as Ray OR as RAI"
+
+see_also:
+  - { path: CHARACTER.yml, why: "Bio girder — invitation status + RAI disclaimer" }
+  - { path: invitation.md, why: "Public invitation document" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: ../marvin-minsky/CARD.yml, why: "🕯️ Memorial he can light up — MENTOR-CONSTELLATION combo" }
+  - { path: ../david-levitt/CARD.yml, why: "Music machines × Minsky AI-music lineage" }

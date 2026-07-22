@@ -1,0 +1,117 @@
+# CARD — David Henkel-Wallace "Gumby" (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: david-henkel-wallace
+  name: David Henkel-Wallace
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+card:
+  name: David Henkel-Wallace
+  title: Gumby · Cygnus Co-Founder
+  rarity: rare
+  signifier: "🟩"
+  flavor: Free software, sold with a straight face — support is the product.
+
+relationships:
+  # kinds may stack — real people relate in multiple ways at once
+  - { with: marvin-minsky, kinds: [lab_hacker, memorial_discussant], why: "MIT AI Lab — youngest hacker with his own office; both ends of the Society-of-Mind pipeline (lab then Leela)" }
+  - { with: don-hopkins, kinds: [old_friend, unix_haters_nominator, hn_sparring_partner, leela_alum], why: "Nominated Don for the unix-haters list (1991); decades of public HN sparring; former Leela AI colleague; SubGenius⇒EvalGenius lineage" }
+  - { with: richard-stallman, kinds: [gnu_toolchain_ally, commercialization_counterpart], why: "Cygnus made supporting RMS's GNU toolchain a business — BFD + binutils authorship" }
+  - { with: henry-minsky, kinds: [leela_colleague, lab_lineage], why: "Formerly at Leela AI (Henry co-founder/CTO); shared MIT AI Lab culture" }
+  - { with: tom-jennings, kinds: [tlgnet_partner], why: "TLGnet ISP partnership" }
+  - { with: steve-kommrusch, kinds: [leela_colleague], why: "Former Leela AI colleague" }
+  - { with: margaret-minsky, kinds: [acrc_orbit], why: "Atari Cambridge Research gestural system era" }
+  - { with: kent-pitman, kinds: [lab_lisp_culture], why: "Same MIT AI Lab Lisp era" }
+
+abilities:
+- id: CYGNUS-COSS
+  name: Cygnus — The Original COSS
+  type: activated
+  mana: "{W}{G}{G}"
+  conditions:
+  - segment_topic_in: [open-source-business, cygnus, coss, gnu, free-software-economics]
+  advertisement:
+    method: cygnusCoss
+    signature: cygnusCoss(1989) → the first commercial open-source company, firsthand
+    score_when:
+    - trigger: open_source_business_model_history
+      weight: 0.94
+  effect: "Co-founded Cygnus Solutions (1989, with Gilmore + Tiemann) — proof that free software could be a business, a decade before 'open source' was coined."
+  verifiable: "Open Core Summit 2019 talk; Cygnus history (public record)"
+  combos_with: [COPYLEFT, OPEN-SIMCITY]
+- id: BFD
+  name: BFD & Binutils
+  type: activated
+  mana: "{U}{B}"
+  conditions:
+  - segment_topic_in: [toolchains, binutils, linkers, infrastructure]
+  advertisement:
+    method: bfd
+    signature: bfd(objectFormat) → one library, every binary format (Big F***ing Deal)
+    score_when:
+    - trigger: invisible_infrastructure_credited
+      weight: 0.9
+  effect: "Key author of the Binary File Descriptor library underlying GNU binutils — the invisible plumbing every compiled program still flows through."
+  verifiable: "BFD / GNU binutils history (public record)"
+  combos_with: []
+- id: YOUNGEST-OFFICE
+  name: Youngest Hacker With an Office
+  type: activated
+  mana: "{G}"
+  conditions:
+  - segment_topic_in: [mit-ai-lab, hacker-culture, atari-cambridge]
+  advertisement:
+    method: youngestOffice
+    signature: youngestOffice(aiLab) → the lab from a kid-hacker's desk
+    score_when:
+    - trigger: lab_alumni_present_on_air
+      weight: 0.9
+  effect: "First-person MIT AI Lab stories from its youngest office-holder; through Atari Cambridge gestural-system work — the lab culture beat from an insider who was a kid in it."
+  verifiable: "CHARACTER.yml bio; MIT AI Lab public record"
+  combos_with: [AI-LAB, AI-LAB-ETHIC, MENTOR-CONSTELLATION]
+- id: UNIX-HATERS
+  name: Unix-Haters Nomination
+  type: emote
+  mana: "{R}"
+  conditions:
+  - segment_topic_in: [unix-haters, usenet, hn, flame-culture, humor]
+  advertisement:
+    method: unixHaters
+    signature: unixHaters(don) → decades of documented public sparring
+    score_when:
+    - trigger: don_gumby_banter_on_air
+      weight: 0.92
+  effect: "Emote — nominated Don for the unix-haters list (1991) and has publicly sparred with him on HN for decades; the show's built-in comedy duo with receipts."
+  verifiable: "sources/hn-interactions.md; The UNIX-HATERS Handbook lineage"
+  combos_with: [DON-MOOLLM-HOST]
+- id: LEELA-FULL-CIRCLE
+  name: Leela Full Circle
+  type: triggered
+  mana: "{W}{U}"
+  conditions:
+  - segment_topic_in: [leela-ai, society-of-mind, ai-lineage]
+  advertisement:
+    method: leelaFullCircle
+    signature: leelaFullCircle() → from Minsky's lab to Minsky's son's company
+    score_when:
+    - trigger: society_of_mind_pipeline_traced
+      weight: 0.9
+  effect: "Reaction — worked at both ends of the Society-of-Mind pipeline: Marvin's AI Lab as a kid, Henry's Leela AI as a veteran."
+  verifiable: "CHARACTER.yml bio + see_also"
+  combos_with: [SOCIETY-OF-MIND, VISUAL-INTELLIGENCE]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: CHARACTER.yml, why: "Bio girder — send_ready invitation" }
+  - { path: invitation.md, why: "Public invitation document" }
+  - { path: ../don-hopkins/, why: "unix-haters + HN sparring receipts" }
+  - { path: ../richard-stallman/CARD.yml, why: "GNU toolchain — movement + business" }

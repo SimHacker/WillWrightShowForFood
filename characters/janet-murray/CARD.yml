@@ -1,0 +1,45 @@
+# CARD — Janet Murray (public portrayal)
+# NOT Janet Murray. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: janet-murray
+  name: Janet Murray
+  type: [invitation, guest, portrayal]
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+card:
+  name: Janet Murray
+  title: Holodeck Narratologist
+  rarity: rare
+  signifier: "🎭🕳"
+  flavor: Agency, immersion, transformation — or it isn't interactive narrative yet.
+
+abilities:
+  - id: HOLODECK-TRIAD
+    name: Agency / Immersion / Transformation
+    type: activated
+    effect: Name the three aesthetic categories that still organize interactive narrative talk.
+    verifiable: sources/hamlet-on-the-holodeck.md
+  - id: PROCEDURAL-AUTHORSHIP
+    name: Procedural Authorship
+    type: triggered
+    effect: Narrative as rule-system the interactor plays — not a fixed script.
+  - id: GITHUB-AS-HOLODECK
+    name: GitHub as Holodeck
+    type: triggered
+    effect: Map issues/branches/PRs to quests/timelines/canon — Repo Show pitch in her vocabulary.
+    conditions:
+      - janet_outreach_status: draft_not_sent
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - path: README.md
+  - path: ../brenda-laurel/CARD.yml
+  - path: ../nick-montfort/CARD.yml
+  - path: ../andrew-quitmeyer/CARD.yml

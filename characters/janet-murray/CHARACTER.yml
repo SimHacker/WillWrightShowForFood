@@ -1,0 +1,63 @@
+# Janet Murray — invitation portrayal. NOT Janet Murray.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: janet-murray
+  name: "Janet H. Murray"
+  type: invitation
+  signifier: "🎭🕳"
+  status: living
+  field: "Interactive narrative; Georgia Tech; Hamlet on the Holodeck; agency / immersion / transformation"
+  home: characters/janet-murray/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  note: >
+    Warm prior: SFC / StoryMaker with her Georgia Tech students (2011); private draft
+    "GitHub as Holodeck" in DonHopkins email-to-janet-murray.md — not sent as Repo Show invite.
+    Quitmeyer is her student. Chaim Gingold committee member.
+
+bio:
+  summary: >
+    **Janet H. Murray** — Georgia Tech professor; author of *Hamlet on the Holodeck: The Future of
+    Narrative in Cyberspace* (Free Press, 1997; later editions). Foundational vocabulary for
+    interactive narrative: **agency, immersion, transformation**. Cited throughout IF / game
+    studies (Montfort *Riddle Machines* among many). Don collaborated with her students via
+    Stupid Fun Club StoryMaker; MOOLLM/Repo Show pitch as practical holodeck threads.
+
+don_connection:
+  sfc_storymaker: "2011 — StoryMaker geo-social narrative engine tested with her interactive narrative students"
+  github_as_holodeck: "Private draft outreach frames GitHub as MMORPG / holodeck (agency not mere branches)"
+  students: "Andrew Quitmeyer (SFC intern → Digital Naturalism); orbit with other GT / SFC collaborators"
+
+show_suggestions:
+  - "Agency / immersion / transformation applied to Repo Show + MOOLLM ensembles"
+  - "GitHub as holodeck — issues, branches, PRs as narrative machinery (with Montfort potential narrative)"
+  - "StoryMaker lineage → field narrative / Quitmeyer / Will SFC"
+
+sources:
+  web:
+    - { title: "Georgia Tech profile", url: "https://lmc.gatech.edu/people/person/janet-murray" }
+    - { title: "Wikipedia", url: "https://en.wikipedia.org/wiki/Janet_H._Murray" }
+    - { title: "New Yorker — Holodeck twenty years later", url: "https://www.newyorker.com/books/second-read/hamlet-on-the-holodeck-twenty-years-later" }
+  books:
+    - { title: "Hamlet on the Holodeck", year: 1997, publisher: "Free Press", note: "Founding interactive-narrative text" }
+  local:
+    - { path: sources/hamlet-on-the-holodeck.md, why: "Framing cream + show map" }
+  correspondence_private:
+    - { path: DonHopkins/characters/don-hopkins/email/email-to-janet-murray.md, why: "Draft GitHub-as-Holodeck outreach — not the public invite body" }
+
+see_also:
+  - { path: sources/hamlet-on-the-holodeck.md, why: "Primary framing" }
+  - { path: ../nick-montfort/sources/riddle-machines.md, why: "Cites Murray; IF literary map" }
+  - { path: ../andrew-quitmeyer/README.md, why: "Her student; SFC intern" }
+  - { path: ../brenda-laurel/README.md, why: "Computers as Theatre neighbor" }
+  - { path: ../chaim-gingold/README.md, why: "PhD committee; Building SimCity" }
+  - { path: ../will-wright/README.md, why: "SFC / Sims procedural narrative orbit" }

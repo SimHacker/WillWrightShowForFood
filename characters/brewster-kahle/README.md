@@ -32,6 +32,14 @@ orchestration**: The Sims meets LambdaMOO (a programmable multi-user adventure),
 souvenirs in — same social-spatial instinct as a MOO, same constructionist instinct as The Sims,
 shipped as a living collection instead of a landfill of description-box links.
 
+The founding schema is Colossal Cave: rooms as a graph, objects with properties, a tiny parser,
+trolls with axes. HN put it sharply — ADVENT is [SHRDLU](../terry-winograd/) turned inside out
+(also a fancier WUMPUS): [trail](../donald-knuth/sources/advent-shrdlu-wumpus-lineage.md). Knuth
+recast Woods's Adventure as a literate CWEB program — documentation containing the world model —
+local study room: [`../donald-knuth/sources/adventure-knuth/`](../donald-knuth/sources/adventure-knuth/)
+([analysis](../donald-knuth/sources/adventure-knuth/ANALYSIS.md) · [cream](../donald-knuth/sources/adventure-knuth/CREAM.md)).
+Internet Archive instinct: keep the early dream *playable* and *readable*, not only frozen.
+
 | Layer | What it does |
 |-------|----------------|
 | **git** | Full history — nothing lost; experiments on branches; tagged releases |

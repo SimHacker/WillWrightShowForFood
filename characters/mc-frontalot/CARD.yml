@@ -1,0 +1,37 @@
+# CARD — MC Frontalot (public portrayal)
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+room:
+  id: mc-frontalot
+  name: MC Frontalot
+  type: [invitation, guest, portrayal]
+card:
+  name: MC Frontalot
+  title: Pitch-Dark / Common-Loot Lyricist
+  rarity: rare
+  signifier: "🎙🕯"
+  flavor: Why just watch when you can play?
+abilities:
+  - id: IT-IS-PITCH-DARK
+    name: It Is Pitch Dark
+    type: activated
+    effect: Infocom citation engine as nerdcore; Get Lamp cold open.
+    verifiable: sources/it-is-pitch-dark.md; https://www.youtube.com/watch?v=4nigRT2KmCE
+  - id: COMMON-LOOT
+    name: Common Loot
+    type: activated
+    effect: Interactive music video — RPG mechanics, multiple endings, playable stage.
+    verifiable: sources/common-loot.md; https://frontalot.com/loot/
+  - id: GRUE-CHORUS
+    name: Grue Chorus
+    type: triggered
+    effect: Instant IF literacy signal for any Adventure/Infocom segment.
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+  - path: README.md
+  - path: invitation.md
+  - path: ../jason-scott/CARD.yml

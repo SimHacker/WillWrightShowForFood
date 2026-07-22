@@ -34,9 +34,26 @@ character_sheet:
 card:
   name: David Levitt
   title: AI Music & VR
-  rarity: uncommon
+  rarity: mythic
   signifier: "🎹"
   flavor: From Minsky's music to VR worlds to reaching into AR — objects made of meaning.
+
+relationships:
+  # kinds may stack — real people relate in multiple ways at once
+  - { with: marvin-minsky, kinds: [doctoral_student, jam_partner, memorial_discussant], why: "Sc.D. 1985 'A Representation for Musical Dialects' (advisor: Marvin Minsky, MIT DSpace); the AI Lab improvisation scene — Marvin improvised Bach fugues, David improvised Fats Waller/Hines/Monk/Tatum" }
+  - { with: don-hopkins, kinds: [dear_friend, cofounder_collaborator, decades_of_projects], why: "Pantomime (David founder, Don Chief Architect); Bounce co-developed; ConnectedTV; Amsterdam-to-Bay-Area friendship — don-and-david-history.md" }
+  - { with: jaron-lanier, kinds: [vpl_colleague, rights_chain], why: "VPL Body Electric era; Hookup Mac rights → Bounce compensation arc (HOOKUP-MAC-RIGHTS)" }
+  - { with: chuck-blanchard, kinds: [vpl_colleague, rebounce_costar], why: "Body Electric lead; Rebounce origin ensemble" }
+  - { with: cynthia-solomon, kinds: [atari_cambridge_colleague, appears_in_her_footage], why: "Atari Cambridge lab; her Lisp-machine music video documents his PhD-era work" }
+  - { with: margaret-minsky, kinds: [atari_cambridge_colleague, mentor_family], why: "Same ACRC lab; Marvin's daughter" }
+  - { with: alan-kay, kinds: [atari_cambridge_colleague], why: "ACRC children's computer research" }
+  - { with: miller-puckette, kinds: [mit_office_mate, patch_cord_lineage], why: "'Music Hacker's Hangout' office; Hookup ancestor of Max/Pd patch-cord languages (Coniglio's history)" }
+  - { with: mark-coniglio, kinds: [credited_by, lineage_historian], why: "Coniglio credits Hookup as the first patch-cord visual language — ancestor of Interactor + Isadora" }
+  - { with: ray-kurzweil, kinds: [music_machines_peer, fellow_minsky_lineage], why: "Two answers to 'can machines make music?' — computational jazz vs the K250; both from Marvin's orbit" }
+  - { with: jerry-martin, kinds: [show_pairing], why: "music-and-theory show — Sims/SC3K composer meets AI-music theorist" }
+  - { with: marc-canter, kinds: [old_friend, show_pairing], why: "Director/Macromedia founder; old friend of Don + David" }
+  - { with: coco-conn, kinds: [sigkids_orbit], why: "Optional SIGKids segment on the music-and-theory show" }
+
 abilities:
 - id: PANTOMIME
   name: Pantomime
@@ -66,8 +83,10 @@ abilities:
     - trigger: audience_learns_something_true
       weight: 0.85
   effect: Generate musical arrangements from a model that understands dialects.
-  verifiable: MIT/Minsky; A Representation of Musical Dialects
-  combos_with: []
+  verifiable: "Sc.D. 1985, MIT EECS — 'A Representation for Musical Dialects', advisor Marvin Minsky (MIT DSpace 1721.1/32123); Machine Models of Music (MIT Press, co-edited with Schwanauer)"
+  combos_with:
+  - BACH-FUGUE-IMPROVISER
+  - MUSIC-MACHINES
 - id: CONNECTEDTV
   name: ConnectedTV
   type: activated
@@ -183,6 +202,28 @@ abilities:
   combos_with:
   - JENS-SNAP-BOUNCE-HALF
   - WILL-DATA-PORTABILITY
+
+- id: REMEMBER-MARVIN
+  name: Remembering Marvin (Mad-Scientist Hair Era)
+  type: triggered
+  mana: "{W}{U}"
+  conditions:
+  - segment_type: memorial
+  - segment_topic_in: [marvin-minsky, ai-music, mit-ai-lab, atari-cambridge]
+  advertisement:
+    method: rememberMarvin
+    signature: rememberMarvin(memory) → thesis-student stories, memorial mode
+    score_when:
+    - trigger: family_and_students_share_stage
+      weight: 0.95
+    - trigger: cynthia_lisp_machine_video_screened   # his PhD-era demo footage survives
+      weight: 0.93
+  effect: Reaction — memorial discussant with the rarest vantage; his doctoral work under Marvin AND period footage of him demonstrating it (Cynthia's Lisp-machine music video). A planned show beat with Don (ideas.md hook 7).
+  verifiable: MIT DSpace 1721.1/32123 (advisor Minsky); Cynthia Solomon's channel; ideas.md
+  combos_with:
+  - MENTOR-CONSTELLATION
+  - BACH-FUGUE-IMPROVISER
+  - VIDEO-TREASURE-TROVE
 
 invoke_rules:
   consent: not_yet_asked

@@ -19,6 +19,17 @@ card:
   signifier: "👤"
   flavor: Minds are built, not filled. — constructivist through-line (Piaget → Drescher → Will → MOOLLM)
 
+relationships:
+  # kinds may stack — real people relate in multiple ways at once
+  - { with: marvin-minsky, kinds: [phd_student, intellectual_heir, memorial_discussant], why: "PhD under Minsky — Made-Up Minds; Minsky hailed the schema mechanism as a landmark in learning theory" }
+  - { with: henry-minsky, kinds: [family_friend, advisee_company, reimplemented_by], why: "Leela adviser; Henry rebuilt the schema mechanism in Python (pyleela.brain)" }
+  - { with: milan-singh-minsky, kinds: [family_friend, advisee_company], why: "Leela adviser; Made-Up Minds underlies Leela's schema learning" }
+  - { with: steve-kommrusch, kinds: [lineage_continued_by], why: "Grid-world paper measures the Drescher lineage against DQN" }
+  - { with: jean-piaget, kinds: [intellectual_ancestor], why: "Schema mechanism computationalizes Piagetian constructivism" }
+  - { with: cynthia-solomon, kinds: [acrc_colleague, documented_in_trove], why: "Her videos document his object-oriented Logo at Atari Cambridge" }
+  - { with: david-levitt, kinds: [fellow_minsky_student], why: "Fellow doctoral student in Marvin's orbit (music vs schemas)" }
+  - { with: ray-kurzweil, kinds: [fellow_lineage, foil], why: "Constructivist schema learning vs hierarchical pattern recognizers" }
+
 abilities:
   - id: SCHEMA-MECHANISM
     name: Schema Mechanism
@@ -57,6 +68,23 @@ abilities:
     effect: Apply the same rigor to determinism, choice, and acausal cooperation.
     verifiable: Good and Real (MIT Press, 2006)
     combos_with: []
+
+  - id: MINSKY-STUDENT
+    name: The Landmark Verdict
+    type: triggered
+    mana: "{W}"
+    conditions:
+      - segment_type: memorial
+      - segment_topic_in: [marvin-minsky, learning-theory, mentorship]
+    advertisement:
+      method: minskyStudent
+      signature: minskyStudent(memory) → advisor stories, memorial mode
+      score_when:
+        - trigger: family_and_students_share_stage
+          weight: 0.92
+    effect: Memorial discussant — the thesis student whose work Minsky hailed as a landmark in learning theory; what advising under Marvin was actually like.
+    verifiable: Made-Up Minds (MIT Press, 1991) — Minsky's assessment; ../marvin-minsky/CHARACTER.yml
+    combos_with: [MENTOR-CONSTELLATION, SCHEMA-FACTORY]
 
 compose_with:
   - will-wright

@@ -94,6 +94,6 @@ not parser variable names. Parser specials are `PRSA`, `PRSO`, `PRSI`.
 
 ## See also
 
-- [Kent Pitman CHARACTER.yml](../../kent-pitman/CHARACTER.yml)
-- [LLogo ITS rescue](llogo-maclisp-its.md) — same lab, same MacLISP era
+- [Kent Pitman CHARACTER.yml](../CHARACTER.yml)
+- [LLogo ITS rescue](../../don-hopkins/sources/llogo-maclisp-its.md) — same lab, same MacLISP era
 - [Palmhoo Logo shelf](../../../palmhoo/history-and-lore/logo-llogo-and-c64-adventure.md)

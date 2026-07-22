@@ -18,6 +18,23 @@ card:
   rarity: rare
   signifier: 🧠
   flavor: Many small agents make a mind — and a manufacturing line legible.
+
+relationships:
+  # kinds may stack — real people relate in multiple ways at once
+  - { with: marvin-minsky, kinds: [father, lab_child, idea_carrier, memorial_discussant], why: "Grew up in the AI Lab children's computer lab; carries Society-of-Mind ideas into Leela AI" }
+  - { with: margaret-minsky, kinds: [sister], why: "First wired family — haptics/Media Lab" }
+  - { with: julie-minsky, kinds: [twin, business_cofounder], why: "Twin sister; co-founded Universal Access Inc. (META-HTML, ~1994, with Michael Fredkin + Brian Fox); coast-to-coast 'meet the Minskys' launch tour" }
+  - { with: brian-fox, kinds: [business_cofounder], why: "Universal Access co-founder — GNU Bash author; the third seat at the META-HTML table" }
+  - { with: milan-singh-minsky, kinds: [spouse, cofounder_colleague, coauthor], why: "VP Product at Leela AI; grid-world paper co-authors (2020)" }
+  - { with: oliver-steele, kinds: [brother_in_law, laszlo_colleague], why: "Laszlo Systems — Henry software architect, Oliver chief architect" }
+  - { with: gary-drescher, kinds: [family_friend, advisor, reimplemented_his_work], why: "Longtime friend (his father's PhD student); Leela adviser; Henry rebuilt the schema mechanism in Python (pyleela.brain)" }
+  - { with: don-hopkins, kinds: [colleague, day_job_collaborator], why: "Don's colleague at Leela AI; 'old band back together'" }
+  - { with: david-henkel-wallace, kinds: [leela_alum, lab_lineage], why: "Gumby formerly at Leela; both from MIT AI Lab culture" }
+  - { with: norman-margolus, kinds: [close_friend], why: "MIT CA/physics-of-computation community" }
+  - { with: ray-kurzweil, kinds: [warm_bridge_target, memorial_costar], why: "Ray was Marvin's teenage correspondent; Henry is the natural introducer for the invite + memorial pairing" }
+  - { with: steve-kommrusch, kinds: [colleague, coauthor], why: "Leela grid-world paper; Piaget-schema learning" }
+  - { with: cyrus-shaoul, kinds: [cofounder, coauthor], why: "Leela AI co-founder; grid-world paper" }
+
 abilities:
 - id: VISUAL-INTELLIGENCE
   name: Visual Intelligence
@@ -80,6 +97,43 @@ abilities:
   verifiable: NYT 'First Wired Family' (1997); Boston Globe (2024)
   combos_with:
   - MEMORY-LANE
+  - MENTOR-CONSTELLATION
+- id: SCHEMA-FACTORY
+  name: Schema Factory (Made-Up Minds, Remade)
+  type: activated
+  mana: '{U}{G}'
+  conditions:
+  - segment_topic_in: [schema-mechanism, drescher, constructivist-learning, pyleela, moollm-skills]
+  advertisement:
+    method: schemaFactory
+    signature: schemaFactory(dreschersBook) → pyleela.brain, running
+    score_when:
+    - trigger: gary_drescher_present
+      weight: 0.95
+    - trigger: moollm_schema_factory_skill_demo
+      weight: 0.9
+  effect: Reimplemented Gary Drescher's schema mechanism in Python (pyleela.brain) — the living substrate for the 'Made-Up Minds, remade' show and MOOLLM's schema-factory skill.
+  verifiable: CHARACTER.yml drescher_thread; ../gary-drescher/made-up-minds.md
+  combos_with:
+  - SCHEMA-MECHANISM
+  - gary-drescher
+- id: CONNECTOR-HUB
+  name: MIT-AI-Lab Nexus
+  type: static
+  mana: ''
+  conditions:
+  - segment_topic_in: [guest-brokering, introductions, mit-lineage]
+  advertisement:
+    method: connectorHub
+    signature: connectorHub(person) → warm introduction from the lab's living network
+    score_when:
+    - trigger: new_guest_bridge_needed
+      weight: 0.9
+  effect: Grew up in and around the AI Lab and knows an extraordinary number of brilliant people from that world — the show's natural bridge to guests (Kurzweil invite, Margolus, Brian Silverman visit) and opportunities.
+  verifiable: CHARACTER.yml connector; ../../process/vision-and-ambition.yml
+  combos_with:
+  - MINSKY-CORRESPONDENT
+  - MENTOR-CONSTELLATION
 invoke_rules:
   consent: not_yet_asked
   simulation: false

@@ -198,6 +198,6 @@ Fleck, Lars, Roy.
 - **Heinz Lemke** — farmhouse visit; CHM oral history
 - **ben-and-heinz-pie-menus** group show seed
 
-→ [`2020-02-alan-kay-pixie-pie-menus-thread.md`](2020-02-alan-kay-pixie-pie-menus-thread.md) ·
+→ [`../../alan-kay/sources/2020-02-alan-kay-pixie-pie-menus-thread.md`](../../alan-kay/sources/2020-02-alan-kay-pixie-pie-menus-thread.md) ·
 [`pie-menu-fud-misconceptions.md`](pie-menu-fud-misconceptions.md) ·
 [`../../ben-shneiderman/`](../../ben-shneiderman/)

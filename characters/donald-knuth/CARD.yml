@@ -1,0 +1,44 @@
+# CARD — Donald Knuth (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: donald-knuth
+  name: Donald Knuth
+  type: [invitation, guest, portrayal]
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+card:
+  name: Donald Knuth
+  title: The Literate Adventurer
+  rarity: mythic
+  signifier: "🕸✒️"
+  flavor: Explain it to a human. Then let the machine tangle the rest.
+abilities:
+  - id: LITERATE-PROGRAMMING
+    name: Literate Programming
+    type: activated
+    advertisement:
+      method: weave
+      signature: "documentation containing code → human order; tangle → machine order"
+    effect: Recenter programming as essay-writing that happens to run.
+    verifiable: Literate Programming (1984); WEB/CWEB
+  - id: ADVENTURE-AS-LITERATURE
+    name: Adventure as Literature
+    type: activated
+    advertisement:
+      method: advent.w
+      signature: "Crowther/Woods Adventure 1.0 recast in CWEB"
+    effect: Museum the founding interactive-world schema as readable sections.
+    verifiable: https://www-cs-faculty.stanford.edu/~knuth/programs.html#advent
+  - id: ELEGANCE
+    name: Elegance
+    type: passive
+    effect: Names, modules, and exposition chosen so structure is visible.
+    verifiable: TAOCP; TeX; public writings on programming style
+combos_with:
+  - terry-winograd # SHRDLU
+  - scott-adams # adventure VM
+  - ted-nelson # intertwingled docs
+  - brewster-kahle # preserve early dreams

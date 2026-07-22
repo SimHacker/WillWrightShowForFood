@@ -15,9 +15,27 @@ meta:
 card:
   name: Margaret Minsky
   title: Haptics & Memory Lane
-  rarity: uncommon
+  rarity: rare
   signifier: 🤲
   flavor: Force feedback remembers; correspondence preserves.
+
+relationships:
+  # kinds may stack — real people relate in multiple ways at once
+  - { with: marvin-minsky, kinds: [father, lab_child, memorial_discussant], why: "First wired family — her own net address at 14 (1971); grew up in the AI Lab" }
+  - { with: henry-minsky, kinds: [brother], why: "Leela AI / OpenLaszlo; the sibling memorial pairing" }
+  - { with: julie-minsky, kinds: [sister], why: "Henry's twin — with her, all three first-wired-family children can share the stage" }
+  - { with: milan-singh-minsky, kinds: [sister_in_law], why: "Henry's wife; Leela AI" }
+  - { with: oliver-steele, kinds: [spouse, research_coauthor], why: "Her husband — AND co-author on the Sandpaper SIGGRAPH 1990 paper ('Feeling and Seeing: Issues in Force Display', 880+ citations); helped build Marvin's 1996 home page (NYT)" }
+  - { with: cynthia-solomon, kinds: [atari_cambridge_colleague, appears_in_her_footage], why: "Atari Cambridge Research children's-computer lab; documented in Cynthia's video trove" }
+  - { with: david-levitt, kinds: [atari_cambridge_colleague], why: "Same Atari Cambridge lab (with Alan Kay, Cynthia)" }
+  - { with: alan-kay, kinds: [atari_cambridge_colleague], why: "Atari Cambridge Research children's computer" }
+  - { with: ken-kahn, kinds: [colleague_flagger], why: "Flagged Ken's Snap! AI blocks to colleagues (SNAP-FLAG)" }
+  - { with: don-hopkins, kinds: [warm_correspondent], why: "2019 Memory Lane emails; 2020 Logo history thread" }
+  - { with: terry-winograd, kinds: [cs547_speaker], why: "1993 CS547 talk — Putting 'Feel' into 'Look and Feel'" }
+  - { with: keez-duyves, kinds: [proposed_pairing], why: "Don's Jul 2026 riff: add brake + motor to Keez's crank TV → Sandpaper-style force feedback on the timeline — feeling the texture of time (keez sources/2026-07-seoul-crank-tv-doom-scrolling.md)" }
+  - { with: "Frederick P. Brooks Jr.", kinds: [unc_host, coauthor], why: "Turing laureate; hosted her as UNC Visiting Scholar; Sandpaper paper co-author (no room in repo yet)" }
+  - { with: nicholas-negroponte, kinds: [phd_advisor], why: "Media Lab co-founder; advised her 1995 PhD" }
+
 abilities:
 - id: HAPTICS
   name: Haptics
@@ -31,9 +49,9 @@ abilities:
     score_when:
     - trigger: audience_learns_something_true
       weight: 0.85
-  effect: Demo force-feedback as HCI not gimmick.
-  verifiable: Atari Cambridge / Media Lab haptics
-  combos_with: []
+  effect: "Demo force-feedback as HCI not gimmick — the Sandpaper system: a 2-DOF force-feedback joystick synthesizing virtual textures (sandpaper, rubber, velvet, corduroy, brushed metal) purely from programmable lateral forces at ~1 kHz. Birth of computational haptics."
+  verifiable: "'Feeling and Seeing: Issues in Force Display' (SIGGRAPH 1990, with Ouh-young, Steele, Brooks, Behensky — 880+ citations); PhD thesis MIT Media Lab 1995 (advisor Negroponte); HCI Museum exhibit — https://interfacemuseum.com/exhibits/minsky-sandpaper/; artifact preserved at King's College London"
+  combos_with: [LZX-ARCHITECTURE]   # co-author Oliver Steele — same hands, haptics then declarative UI
 - id: MEMORY-LANE
   name: Memory Lane
   type: activated
@@ -95,6 +113,25 @@ abilities:
   effect: Preserve memorabilia when scanned — pending donation.
   verifiable: Artifact pending scan (CHARACTER bio)
   combos_with: []
+- id: ATARI-CAMBRIDGE
+  name: Atari Cambridge Children's Computer
+  type: activated
+  mana: '{U}{G}'
+  conditions:
+  - segment_topic_in: [atari-cambridge, acrc, haptics, children-computing, logo]
+  advertisement:
+    method: atariCambridge
+    signature: atariCambridge(lab) → OO Logo, gestural input, force feedback, music
+    score_when:
+    - trigger: cynthia_footage_screened
+      weight: 0.93
+    - trigger: acrc_alumni_present   # Levitt, Bill St. Clair, Cynthia orbit
+      weight: 0.9
+  effect: First-person Atari Cambridge Research stories — the children's computer lab where haptics, object-oriented Logo, and gesture research ran together (with Alan Kay, Cynthia Solomon, David Levitt).
+  verifiable: Cynthia Solomon's video trove (@cynthiaso); CHARACTER bio
+  combos_with:
+  - MENTOR-CONSTELLATION
+  - VIDEO-TREASURE-TROVE
 invoke_rules:
   consent: not_yet_asked
   simulation: false

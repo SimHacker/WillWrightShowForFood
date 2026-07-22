@@ -51,11 +51,13 @@ wave_0_experiment:
 
 pipeline:
   - extract: ~/GroundUp/repo-show/scripts/extract-wave.py
-  - ae_finish: import raw + overlay template per slot
+  - ae_stamp: optional py-aep batch (comps/text/footage/RQ) without launching AE — see characters/howard-penner/sources/py-aep.yml
+  - ae_finish: import raw + overlay template per slot; expressions + pixel render still need AE/aerender
   - captions: sidecar VTT always; optional burn for Shorts
   - publish: video + .vtt to YouTube
 
 see_also:
+  - characters/howard-penner/sources/py-aep.yml
   - characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/short-form-production-schedule.yml
   - characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml
   - repo-shows/will-wright-adorable-minutes.yml

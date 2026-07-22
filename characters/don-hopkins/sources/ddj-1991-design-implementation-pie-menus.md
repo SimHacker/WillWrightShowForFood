@@ -46,7 +46,7 @@ case of a mouse, 'wave ahead' in the case of a dataglove." The Jaron Lanier line
 - Momenta "Command Compass" sidebar (editors): pentop pie menus, "visually faithful
   implementation of pie menus as described in this article"
 - Steve Witham comment (2020): Ted Nelson credits "self-revealing" to Klaus Landberg
-  (Datapoint RMS) — see [`2020-ted-nelson-klavs-landberg-self-revealing.md`](2020-ted-nelson-klavs-landberg-self-revealing.md)
+  (Datapoint RMS) — see [`../../ted-nelson/sources/2020-ted-nelson-klavs-landberg-self-revealing.md`](../../ted-nelson/sources/2020-ted-nelson-klavs-landberg-self-revealing.md)
 
 ## Show use
 

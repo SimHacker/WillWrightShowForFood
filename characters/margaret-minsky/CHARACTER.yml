@@ -40,7 +40,12 @@ sources:
   web:
     - { title: "CS547 — Putting 'Feel' into 'Look and Feel' (1993, Stanford SC1217)", url: "https://searchworks.stanford.edu/view/kk938rh3332" }
     - { title: "Marvin Minsky and the First Wired Family (NYT, 1997)", url: "https://archive.nytimes.com/www.nytimes.com/library/cyber/week/010397minsky.html" }
-  papers: []
+    - { title: "HCI Museum — Minsky Sandpaper exhibit (full technical + lineage writeup; artifact at King's College London; photos by Peter Menzel)", url: "https://interfacemuseum.com/exhibits/minsky-sandpaper/" }
+    - { title: "Margaret Minsky — research page", url: "https://mminsky.com/" }
+  papers:
+    - "Minsky, Ouh-young, Steele, Brooks & Behensky — 'Feeling and Seeing: Issues in Force Display' (SIGGRAPH 24(2), 1990) — 880+ citations; Oliver Steele co-author"
+    - "Minsky — 'Computational Haptics: the Sandpaper System for Synthesizing Texture for a Force-Feedback Display' (PhD thesis, MIT Media Lab, 1995; advisor Nicholas Negroponte)"
+    - "Minsky & Lederman — 'Simulated Haptic Textures: Roughness' (ASME IMECE 1996)"
   blogs: []
 
 see_also:

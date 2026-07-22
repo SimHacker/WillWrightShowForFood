@@ -8,4 +8,6 @@
 
 **Memorial mode:** we represent and *discuss* him — never interview or speak as him. He was a **co-author of the CHI'88 pie-menu paper** (Callahan, Hopkins, Weiser, Shneiderman), so [Don](../don-hopkins/README.md) and [Ben Shneiderman](../ben-shneiderman/README.md) can remember him directly on air. Also: drummer for **Severe Tire Damage**, the first band to play live on the Internet.
 
+**Sources (in this room):** [`sources/1991-03-mark-weiser-pie-menu-tape-stylus.md`](sources/1991-03-mark-weiser-pie-menu-tape-stylus.md) — 1991 demo tape, alphabetic pies, stylus.
+
 Verifiable sources in `CHARACTER.yml`.
