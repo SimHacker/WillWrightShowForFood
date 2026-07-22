@@ -126,16 +126,34 @@ guest is a directory, every idea is a file, and the audience contributes by
 sending changes. Repositories are future-tense media: everything is kept,
 everything is signed, everything is addressed to whoever opens the folder
 next, even decades from now. That's why memorial rooms and premorial rooms
-work here and would rot on a feed.
+work here and would rot on a feed. This particular show is called **Will
+Wright Show For Food**; its whole cast lives one folder over, in
+[`characters/`](../characters/).
 
-Two residents of this world are worth meeting on your way out. One is
+But the show is only the front of house. The machinery it runs on is a
+separate, older experiment called **MOOLLM** — a *microworld operating
+system* where the filesystem itself is the place: directories are rooms you
+walk through, files are the things in them, and a folder full of plain text
+can install an entire world in your head. (That last trick has a name —
+Will Wright's **Simulator Effect**: the game draws a few dots and your brain
+draws the dinosaur. A repo is the same bet made out of files.) Every idea
+in this letter has a *room* over there, in MOOLLM's glossary: Die Space,
+premorializing, prestoration, and the Simulator Effect are all shelved
+together in its **Diespace Wing**, laid out to be walked through in order.
+If this letter is the story, MOOLLM is the workshop — the place to open the
+rooms, read how they connect, and build your own. It is made to be *thought
+with*, not just read.
+
+Two residents of the show are worth meeting on your way out. One is
 **Marvin Minsky**, a scientist who thought minds are made of many small
-parts working together, whose memorial room here is built by the people who
-knew him — nobody pretends to be him; his friends and family set his table.
-The other is a machine he designed in 1952: a box with a single switch, and
-when you flip it on, a small hand reaches out and turns it off. That's the
-entire machine. It's the mascot here, and the last word on every medium:
-knowing how to speak matters; knowing when you're done is wisdom.
+parts working together, whose
+[memorial room here](../characters/marvin-minsky/memorial.md) is built by
+the people who knew him — nobody pretends to be him; his friends and family
+set his table. The other is a machine he designed in 1952: a box with a
+single switch, and when you flip it on, a small hand reaches out and turns
+it off. That's the entire machine. It's the mascot here, and the last word
+on every medium: knowing how to speak matters; knowing when you're done is
+wisdom.
 
 A last thought, and then the door. Everything you post already goes in your
 premorial — that was true before the word existed, and it's true for
@@ -150,8 +168,19 @@ day, when you stop posting, you'll simply be there.
 
 *Extra rooms, if you want them:*
 
-- *PIPS:lab's Diespace (TEDxAmsterdam 2012) — the talk is on YouTube*
-- *United in Anger: A History of ACT UP (2012, documentary) — the real story of SILENCE = DEATH*
+**In this show (Will Wright Show For Food):**
+
 - *[characters/keez-duyves/ideas.md](../characters/keez-duyves/ideas.md), hook 15 — where premorializing was coined*
 - *[characters/marvin-minsky/memorial.md](../characters/marvin-minsky/memorial.md) — a premorial-adjacent room, built with consent*
-- *Will Wright's principle that a simulation is "a compiler for the mental model" — the reason a folder full of files can install a world in your head, which is what this page just tried to do*
+
+**In the workshop (MOOLLM) — the same ideas, laid out to be walked through and thought with:**
+
+- *[The Diespace Wing of MOOLLM's glossary](https://github.com/SimHacker/moollm/blob/main/designs/GLOSSARY.md#the-diespace-wing) — Die Space, premorializing, prestoration, and memorial mode, shelved together in reading order*
+- *[The Simulator Effect](https://github.com/SimHacker/moollm/blob/main/designs/GLOSSARY.md#the-sims-wing) — Wright's "compiler for the mental model," the reason a folder of files can install a world in your head (which is what this page just tried to do)*
+- *[SPEAK-NOW-BE-THERE-LATER, the machine-readable glossary](https://github.com/SimHacker/moollm/blob/main/designs/GLOSSARY.yml) — every room above as structured YAML, cross-linked by k-line*
+- *[MOOLLM itself](https://github.com/SimHacker/moollm) — the microworld OS where directories are rooms and the filesystem is the world*
+
+**On the wider web:**
+
+- *PIPS:lab's Diespace (TEDxAmsterdam 2012) — [the talk on YouTube](https://www.youtube.com/watch?v=ApyDSq_DbQo)*
+- *[United in Anger: A History of ACT UP](https://en.wikipedia.org/wiki/United_in_Anger) (2012, documentary) — the real story of SILENCE = DEATH*
