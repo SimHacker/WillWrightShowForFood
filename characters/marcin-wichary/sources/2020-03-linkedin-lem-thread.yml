@@ -1,0 +1,77 @@
+# LinkedIn thread: Don Hopkins <=> Marcin Wichary, Mar 17–18 2020
+# Source: Don's LinkedIn data export (messages.csv). 16 messages over two days.
+# Quoting policy: Don's side quoted freely (his words, his call). Marcin's side
+# summarized, except the public link he shared. Marcin may edit or remove anything.
+
+thread:
+  subject: "One hundred and thirty-seven seconds"
+  dates: "2020-03-17 to 2020-03-18"
+  messages: 16
+  ends: "Don proposes moving to email or Medium replies; export ends there."
+
+opening:
+  from: don
+  date: 2020-03-17
+  quote: |
+    "That is so cool that you translated one of Stanislaw Lem's stories! And wrote about
+    the translation, too. I have always wanted to ask Michael Kandel how he translated
+    the poetry of the Electric Bard from The First Sally of Cyberiad. Especially the one
+    that is 'A love poem, lyrical, pastoral, and expressed in the language of pure
+    mathematics. Tensor algebra mainly, with a little topology and higher calculus, if
+    need be. But with feeling, you understand, and in the cybernetic spirit.' I'd love
+    to see that poem in the original Polish, even though I don't know that language,
+    just to compare them."
+  links_shared:
+    - "https://www.donhopkins.com/home/catalog/lem/WonderfulPoems.html"
+    - "https://www.donhopkins.com/home/catalog/lem/HorriblePoems.html"
+
+the_gold:
+  from: marcin
+  date: 2020-03-18
+  summary: "Thanked Don for reaching out and reading, and answered THE question with a link to the original Polish Elektrybałt poem."
+  public_link: "http://niniwa22.cba.pl/lem_elektrybalt.htm"
+  why_it_matters: |
+    The exact question this repo has circled ever since — how do you translate the
+    Electronic Bard's poetry? — answered by the one person who has both made a Lem
+    Google Doodle and carried a Lem story across the language border himself.
+
+threads_don_uncorked:   # all quotes are Don's words
+  pacman_reverence:
+    quote: "I watch some of your video talks on youtube, and discovered we both have an obsession with PacMan and other old video games."
+  cooperative_simcity:
+    quote: |
+      "I appreciate your trepidations about changing something as classic as PacMan. I
+      ported SimCity to Unix and made a multi player user interface, and had the same
+      kind of respect and fear of messing up something that was perfect just how it was.
+      ... In the end I made a cooperative instead of a competitive game, since competition
+      would spoil what was great about SimCity. (We're all living in the same city/planet
+      and we have to learn how to get along! That's the more important message than how
+      to win a competitive game of real estate monopoly.)"
+    punchline: "Oh yeah, back to the point: here's SimCity with PacMan!"
+    links:
+      - "Micropolis Online (SimCity) Web Demo — https://www.youtube.com/watch?v=8snnqQSI0GE"
+      - "Multi Player SimCityNet for X11 on Linux — https://www.youtube.com/watch?v=_fVl4dGwUrA"
+      - "Pie menus in SimCity — https://www.youtube.com/watch?v=Jvi98wVUmQA"
+  fonts_and_underlines:
+    quote: "I read some of your other articles about underlining (I am a PostScript programmer and I love text formatting and fonts)."
+  touchtype_and_cursors:
+    quote: |
+      "You might appreciate reading the story about Glenn Reid's awesome NeXT 'Font
+      Appreciation' app called 'TouchType'. Decades later Adobe has finally added
+      something like that (with practically the same name, but no credit to Glenn) to
+      Photoshop! Also I've written some stuff about multiple cursors (which multi player
+      SimCity supported, as well as Google Docs, and Engelbart's NLS)."
+    links:
+      - "https://news.ycombinator.com/item?id=19732283"
+      - "Bret Victor's eulogy of Engelbart — 'separate pointers weren't a feature so much as a symptom' — http://worrydream.com/Engelbart/"
+  lem_translations_press:
+    quote: "Also Lem translation related:"
+    link: "https://www.washingtonpost.com/entertainment/books/stanislaw-lem-has-finally-gotten-the-translations-his-genius-deserves/2020/03/03/3227b18c-5982-11ea-ab68-101ecfec2532_story.html"
+  the_sign_off:
+    quote: "I don't want to spam you, but there's a lot of stuff I'd enjoy discussing with you. Would you like to continue in email, or would you like me to write up some replies to your medium postings? (I use Medium too! ;) )"
+
+ties:
+  - ../../don-hopkins/            # every thread above has a room in his notes
+  - ../../../repo-shows/ideas/    # PacMania, biggest-emacs — adjacent stunts
+  - "moollm designs/COVFEFE-FUTURES.md — the bitic literature project this correspondence prefigures"
+  - "moollm designs/GLOSSARY.md — Electronic Bard, Kandel, and the translation wing"

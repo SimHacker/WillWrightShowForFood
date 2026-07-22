@@ -1,0 +1,87 @@
+# Marcin Wichary — invitation portrayal. NOT Marcin Wichary.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: marcin-wichary
+  name: "Marcin Wichary"
+  type: invitation
+  signifier: "⌨️👾🇵🇱"
+  status: living
+  field: "Designer, writer, engineer; keyboard historian (Shift Happens); Lem translator; Google Doodle author (Pac-Man, Lem)"
+  home: characters/marcin-wichary/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  note: |
+    Warm contact — Don and Marcin corresponded on LinkedIn in March 2020 about his Lem
+    translation, Kandel, Pac-Man, SimCity, and multiple cursors. Marcin may shape, delay,
+    reduce, or delete any of this portrayal at any time, including the correspondence
+    summary. We quote Don's side freely and Marcin's side minimally (one public link he
+    shared) until he reviews.
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  interview_planned: true
+  document: invitation.md
+
+correspondence:
+  mar_2020:
+    note: |
+      16 LinkedIn messages, Mar 17–18, 2020. Don opened under the subject "One hundred and
+      thirty-seven seconds," congratulating Marcin on his Lem translation and asking THE
+      question — how did Michael Kandel translate the Electronic Bard's poetry? Marcin
+      replied with a link to the original Polish Elektrybałt poem. Then Don, uncorked:
+      Pac-Man reverence, cooperative multiplayer SimCity, pie menus, Glenn Reid's TouchType,
+      Engelbart's multiple cursors, the Washington Post on Lem's new translations.
+    source: sources/2020-03-linkedin-lem-thread.yml
+
+bio:
+  summary: |
+    **Marcin Wichary** — designer, writer, and engineer; in his own words, "the person who
+    stumbled upon a magical typewriter museum in Spain, obsessed about underlines while
+    working at Medium, wrote about fonts at Figma, or put Pac-Man on Google's homepage."
+
+    He co-created the **playable Pac-Man Google Doodle** (May 2010, with Ryan Germick) —
+    the first interactive doodle, and possibly the largest single deployment of a video
+    game in history — and the **Stanisław Lem Google Doodle** (November 2011), an
+    interactive mini-game honoring the 60th anniversary of Lem's first published book,
+    drawn in the style of Daniel Mróz's Cyberiad illustrations.
+
+    In 2015 he translated Lem's 1976 short story **"One hundred and thirty-seven
+    seconds"** into English — a tale of news, teletypes, and an IBM computer with
+    unanticipated abilities — and wrote a translator's essay about the two-month process
+    of carrying his childhood author across the language border.
+
+    His book **Shift Happens** (2023) tells 150 years of keyboard history across two
+    volumes and 1,000+ photos, funded by one of Kickstarter's most successful book
+    campaigns. His archive lives at aresluna.org.
+
+why_the_show_cares: |
+  Marcin sits at the exact junction this repo keeps walking: Lem and translation
+  (Kandel, the Electronic Bard, bitic literature), Pac-Man reverence (see the Church of
+  PacMania and the 2010 doodle), the history of input devices (keyboards; Don: pie menus),
+  and writing about technology with love and receipts. The 2020 correspondence is a
+  ready-made show outline — every thread in it grew into a room somewhere in these repos.
+
+contact:
+  channel: "LinkedIn (warm, Mar 2020); Medium; aresluna.org"
+  site: https://aresluna.org/
+
+sources:
+  linkedin_thread: sources/2020-03-linkedin-lem-thread.yml
+  web:
+    - "https://aresluna.org/ — his archive"
+    - "https://aresluna.org/one-hundred-and-thirty-seven-seconds/ — the Lem translation"
+    - "https://mwichary.medium.com/translating-a-stanislaw-lem-story-6c2446632bd8 — the translator's essay"
+    - "https://shifthappens.site/ — the keyboard book"
+    - "https://doodles.google/doodle/30th-anniversary-of-pac-man/ — the Pac-Man doodle"
+    - "https://doodles.google/doodle/60th-anniversary-of-stanislaw-lems-first-book-publication/ — the Lem doodle"
+
+see_also:
+  - { path: README.md, why: "Public-facing overview — point Marcin here" }
+  - { path: invitation.md, why: "Invitation letter" }
+  - { path: sources/2020-03-linkedin-lem-thread.yml, why: "The correspondence, summarized with quotes" }

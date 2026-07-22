@@ -236,6 +236,23 @@ Co-guests: **Scott McCloud** · **Will Wright** · **Ken Kahn** (Cyc comment Kay
 - **Teitelman's DWIM** — should skills/MOOLLM "Do What I Mean" or stay explicit?
 - Is the **Xerox got nothing** myth still blocking funding for PARC-style labs?
 
+## Attribution hunt: who coined the "butterfly" outliner?
+
+*A memory question, not a claim — Don's recollection, flagged as unverified.*
+
+Don recalls first hearing "butterfly" for the two-winged outline view — incoming
+links fanning left, outgoing right — in an **email from Alan saying how much he
+liked it**. The published Butterfly is Mackinlay/Rao/Card's citation browser
+(PARC, CHI '95), and Don's own 2007 OLPC post credits **Steve Strassmann** with
+"butterfly diagrams" in Mac Common Lisp or Dylan
+([source](../will-wright/sources/2007-11-16-olpc-visual-programming-psiber/article.md));
+his MediaFlow design comments call for a general "butterfly editor" instead of a
+tree editor ([source](../don-hopkins/mediaflow-design-comments.md)). Was the
+coiner someone at PARC or MIT? Does Alan remember the email, the term, or the
+tool? (Brian Silverman's room holds the other open flag — a possible
+butterfly-shaped outliner in the Logo world, unverified.) The full lineage lives
+in MOOLLM's [HALLS-AND-ROOMS.md](https://github.com/SimHacker/moollm/blob/main/skills/mind-mirror/HALLS-AND-ROOMS.md).
+
 ## Sources (public)
 
 - [`correspondence.yml`](correspondence.yml) · [`invitation.md`](invitation.md)

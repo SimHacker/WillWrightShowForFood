@@ -51,6 +51,13 @@
 
 - Tinkertoy tic-tac-toe computer at MIT
 - Who gets to **name** a discovery vs who **invents** it
+- The **"butterfly" outliner** attribution hunt (unverified, flagged): a two-winged outline
+  view — incoming links fan left, outgoing right. Did Brian have a butterfly-shaped outliner
+  in the Logo world? Don recalls the term arriving in an email from **Alan Kay** praising it;
+  Don's 2007 OLPC post credits **Steve Strassmann** (Mac Common Lisp/Dylan); the published
+  Butterfly is Mackinlay/Rao/Card (PARC, CHI '95). Lineage flag lives in MOOLLM's
+  [HALLS-AND-ROOMS.md](https://github.com/SimHacker/moollm/blob/main/skills/mind-mirror/HALLS-AND-ROOMS.md);
+  the same question is planted in [Alan Kay's room](../alan-kay/ideas.md).
 - Why almost every Brian's Brain pattern becomes a spaceship
 - Scratch's birth — what survived from Logo, what had to go
 

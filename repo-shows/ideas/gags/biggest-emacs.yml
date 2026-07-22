@@ -54,12 +54,75 @@ guinness_bit:
     - "If Guinness declines: declare the 'Guinness declined this record' record. Self-certify. Gong."
   epistemic_note: "Guinness's paid consultancy for bespoke categories is real and documented; the stunt satirizes the economics, not any specific fee we haven't been quoted."
 
+guinness_research:   # VERIFIED July 2026, from GWR's own pages
+  source:
+    - "https://www.guinnessworldrecords.com/business-marketing-solutions/faqs"
+    - "https://www.guinnessworldrecords.com/contact/application-enquiry"
+  documented_economics:
+    standard_application: "FREE — but only for individuals/small groups whose PRIMARY purpose is personal achievement. (The rules-lawyer segment writes itself: is a livestream with a tip jar 'personal achievement'?)"
+    priority_application: "US $800 (existing title) / $1,000 (new title); UK £500/£650. Buys a 5-working-day response. Available only to Standard applicants."
+    consultancy_trigger: "Businesses, brands, agencies, fundraisers, anyone attempting a record 'to gain fans/supporters' — REQUIRED to use fee-based Consultancy Services, quoted case-by-case against your brief. GWR's own FAQ says applications get REFERRED to consultancy based on 'complexity' or 'potential to require usage of the GWR brand name and assets.'"
+    adjudicator: "An official adjudicator at your event is ONLY available through consultancy."
+    bespoke_titles: "'In-depth record research process' to find/create your category — also consultancy-only."
+  the_catch_22_is_the_bit: |
+    A livestreamed Biggest Emacs attempt with a tip jar and a show brand is, by GWR's
+    own definitions, commercial — so the free route likely gets referred to consultancy
+    the moment they google us. Which is EXACTLY the joke: the show about pay-for-play
+    cannot avoid the pay, and we have their own FAQ on screen while the referral email
+    arrives. Fundraising floor to plan against: $1,000 (priority new-title, if we
+    somehow stay 'personal'); realistic consultancy quote unknown until briefed —
+    read the ACTUAL quote aloud on air, that's the certificate-voice segment.
+  fundraising_plan:
+    floor: "$1,000 — priority new-title application, the 'personal achievement' long shot"
+    ask_edd: "Real number arrives only via a consultancy brief; budget the tip-jar goal AFTER the quote, so the goal thermometer IS the invoice."
+  edd_coates_angle: |
+    Edd Coates (repo-shows/edd-coates/) built the Game UI Database — an enormous,
+    PECULIARLY SPECIFIC collection of game screen snapshots. Peculiarly specific is
+    exactly what bespoke Guinness categories are made of ('largest database of game
+    user-interface screenshots' is a category no one else on Earth could contest).
+    Talk to him about: whether he's explored a GWR category for the collection, what
+    the consultancy process looked like if so, what it would cost, what the evidence
+    rules are — and whether he wants to co-present the Biggest Emacs category
+    application segment as the man who knows what a definitive collection is.
+
 panel: # the Emacs lineage, most of whom are already in this repo
   - { who: richard-stallman, why: "GNU Emacs; the AI Lab editor culture; will have OPINIONS about what counts as 'one Emacs'" }
   - { who: brian-fox, why: "Maintained GNU Emacs; FSF employee #1; wrote readline — the small mirror of the big editor" }
   - { who: james-gosling, why: "Gosling Emacs → GNU Emacs history; heard the doctor.el story from Don" }
   - { who: "Jamie Zawinski", why: "Lucid Emacs / XEmacs fork pole (no room in repo yet) — governance-war color commentary" }
   - { who: don-hopkins, why: "Host; ran Emacs on everything; pie menus vs M-x as the eternal input-war gag" }
+
+training_protocol:   # "Opening different sets of files is like lifting weights!"
+  driver: |
+    Cursor/Fable operates Emacs THROUGH the MOOLLM emacs skill Don built
+    (moollm/skills/emacs — daemon + emacs.py sister script: EVAL sexps with
+    structured results, moo-* intents, named emacsclient targets, emacs:// URLs).
+    The agent probes and drives the editor programmatically, on camera: to qualify
+    for the prize Emacs has to actually DO something and WORK — parse, fontify,
+    respond — not just malloc. Put the skill through its paces; the record attempt
+    doubles as the skill's stress test and demo reel.
+  why_own_source: |
+    Opening /usr/bin is dead weight — binary buffers don't make Emacs THINK.
+    Font-lock, syntax parsing, and mode hooks are the muscles; C and elisp source
+    make them fire. And the poetic maximum: EMACS OPENS ITS OWN SOURCE CODE.
+    More interesting than the Linux kernel (though the kernel is the encore).
+  progressive_overload:   # each set heavier; log reps to the tote board
+    - "SET 1 — warmup: every .el file in lisp/ (the standard library reads itself)"
+    - "SET 2 — its own C core: src/*.c, *.h — the editor holds its own implementation, fontified"
+    - "SET 3 — the whole source tree: every file in the emacs repo, one buffer each"
+    - "SET 4 — the stretch: add the build artifacts — every .o, the libraries, and ITS OWN RUNNING EXECUTABLE opened in hexl-mode (the snake eats its tail in hex)"
+    - "SET 5 — the encore: the GNU/Linux kernel source tree on top, until failure"
+  explosion_metric:   # the rubric of death — need a defined failure line for the record
+    instrumented: [buffers_open, total_bytes_buffered, gc_pause_ms, rss_and_swap, redisplay_latency_ms, time_to_fontify_new_buffer]
+    death_ladder:   # declare WHICH death ends the attempt, in advance, on camera
+      - "WHEEZING — GC pauses exceed 10s; redisplay visibly stutters (attempt continues)"
+      - "SEIZED — Emacs stops responding to emacs.py eval within 60s (attempt continues if it recovers)"
+      - "EXPLODED (official end): OOM-killed, or system freeze requiring intervention, or actual reboot"
+    note: "If the box reboots we wait for it like a gong that rings itself. The death ladder is the 'explosion metric' the record needs — Guinness evidence rules want an objective endpoint; so does comedy."
+  work_proof:   # 'it has to DO something' — periodic proof-of-life tasks between sets
+    - "emacs.py eval: occur across all buffers for a chat-chosen regexp (the regexp tax, paid on camera)"
+    - "M-x doctor session opened IN the loaded session (see segment)"
+    - "Random donor buffer: goto-line, narrow, edit, undo — proving undo history survives"
 
 live_show:
   cold_open: |
