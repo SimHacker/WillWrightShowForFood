@@ -1,6 +1,6 @@
 # Ideas to explore with David Henkel-Wallace
 
-*Conversation hooks — Don's proposed topics from public record. Leela colleague — consent not_yet_asked.*
+*Conversation hooks — Don's proposed topics from public record. Formerly at Leela AI (tenure did not overlap Don's) — consent not_yet_asked.*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## What David has done (public)
@@ -9,7 +9,7 @@
 - **BFD** library (backronym from "Big Fucking Deal"); GNU binutils, embedded toolchain strategy; merged into Red Hat (2000)
 - **TLGnet** — The Little Garden ISP with Tom Jennings, John Romkey, Steve Crocker
 - MIT AI Lab (youngest hacker with his own office); Atari Cambridge Research gestural system
-- Open Core Summit 2019 on original COSS model; formerly at **Leela AI** with Don
+- Open Core Summit 2019 on original COSS model; formerly at **Leela AI**
 
 ## Shared ground in this repo
 

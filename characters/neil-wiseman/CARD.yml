@@ -1,0 +1,92 @@
+# CARD — Neil Wiseman (memorial portrayal). NOT Neil Wiseman.
+
+room:
+  id: neil-wiseman
+  name: Neil Wiseman
+  type: [legacy, memorial, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+card:
+  name: Neil Wiseman
+  title: Rainbow Group · PDP-7↔Titan · PIXIE
+  rarity: legacy
+  signifier: "🕯️🌈"
+  flavor: Probably the world's first distributed system — and the substrate PIXIE ran on.
+
+relationships:
+  - { with: heinz-lemke, kinds: [phd_supervisor, co_author], why: "First lecture 1 Oct 1967; PIXIE (1969) + RAINBOW (1972) lead author with Heinz" }
+  - { with: maurice-wilkes, kinds: [lab_colleague], why: "Cambridge Computer Laboratory — Wilkes head, Wiseman Rainbow Group founder" }
+  - { with: john-hiles, kinds: [co_author], why: "PIXIE + RAINBOW papers" }
+  - { with: andrew-armit, kinds: [cambridge_contemporary], why: "Same PDP-7 era; Multipatch parallel CAD line" }
+  - { with: ivan-sutherland, kinds: [north_star_predecessor], why: "Sketchpad (1963) → PIXIE (1969) — six years, light pen, different lab" }
+  - { with: roy-eagleson, kinds: [teaching_lineage], why: "Roy lectures Cambridge Rainbow / PIXIE story to UWO students" }
+  - { with: david-rosenthal, kinds: [lab_milieu], why: "Same PDP-7/Titan stack ~1970; met Wiseman" }
+  - { with: don-hopkins, kinds: [radial_menu_prior_art], why: "Wiseman Notes on Radial Menus in PIXIE — documented prior art for pie menus" }
+
+places:
+  - { id: cambridge-pdp7-titan, name: "Cambridge PDP-7 + Titan link", thing: "High-speed data-link — early distributed system" }
+  - { id: rainbow-group, name: "Rainbow Group", era: "1965–1995" }
+  - { id: dec340, name: "DEC Type 340 vector display", note: "PIXIE light-pen surface" }
+
+abilities:
+- id: PDP7-TITAN-LINK
+  name: PDP-7 ↔ Titan Link
+  type: legacy
+  mana: "{U}{U}{U}"
+  conditions:
+  - segment_topic_in: [distributed-systems, pdp7, titan, cambridge, pixie]
+  advertisement:
+    method: pdp7TitanLink
+    signature: pdp7TitanLink() → display satellite + compute host
+    score_when:
+    - trigger: pixie_hardware_story
+      weight: 0.93
+  effect: "Wiseman's high-speed link joined PDP-7/340 to Titan — substrate PIXIE and RAINBOW ran on."
+  verifiable: "Cambridge obituary (Peter Robinson); PIXIE paper 1969"
+  combos_with: [PIXIE-RADIAL-MENUS, BOOT-ITS]
+
+- id: RAINBOW-MULTIPURPOSE-CAD
+  name: RAINBOW Multi-Purpose CAD
+  type: legacy
+  mana: "{R}{U}"
+  conditions:
+  - segment_topic_in: [rainbow, cad, cambridge, pixie]
+  advertisement:
+    method: rainbowCad
+    signature: rainbowCad() → PIXIE grew into general CAD
+    score_when:
+    - trigger: heinz_cambridge_storyline
+      weight: 0.88
+  effect: "1972 — RAINBOW extended PIXIE's light-pen interaction into a multi-purpose CAD system."
+  verifiable: "Software — Practice and Experience, 1972"
+  combos_with: [PIXIE-RADIAL-MENUS, ICON-LLOYDS]
+
+- id: RADIAL-MENU-PRIOR-ART
+  name: Radial Menu Prior Art
+  type: triggered
+  mana: "{1}"
+  conditions:
+  - segment_topic_in: [pie-menus, radial-menus, hci]
+  advertisement:
+    method: wisemanRadialNotes
+    signature: wisemanRadialNotes() → pen-following screen menu
+    score_when:
+    - trigger: don_credits_pixie_not_invention
+      weight: 0.9
+  effect: "Pen-following screen menu anticipated pop-up menus; Wiseman notes on PIXIE radial controls."
+  verifiable: "Wiseman radial-menu notes; donhopkins.com/piepaper"
+  combos_with: [PIXIE-RADIAL-MENUS]
+
+invoke_rules:
+  consent: not_applicable_deceased
+  simulation: false
+  hero_room: "Memorial — Heinz and David Rosenthal discuss on air"
+
+see_also:
+  - { path: memorial.md, why: "Memorial protocol" }
+  - { path: ../heinz-lemke/CARD.yml, why: "PIXIE co-author combo" }
+  - { path: ../heinz-lemke/pixie-constellation.yml, why: "Cambridge place graph" }

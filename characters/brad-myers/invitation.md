@@ -31,8 +31,12 @@ stage is a public GitHub repo, following through to working code and credited id
 - **Garnet → Svelte** — KR constraints, prototypes, declare relationships and let the system keep
   them true. Don rode Garnet, OpenLaszlo, TurboGears, and now SvelteKit/MOOLLM — same braid,
   different decades. [`../don-hopkins/garnet-to-svelte-constraint-ui-lineage.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/garnet-to-svelte-constraint-ui-lineage.md)
-- **All the Widgets + pie menus** — your CHI '90 widget history video; my clips in context; what's
-  still missing from the catalog.
+- **Pick, Click, Flick! — the book** — your recently published interaction-techniques bible; walk
+  the taxonomy on air (not only pie menus — your pick of chapters). What belongs in the second
+  edition after forty more years of shipped UI?
+- **All the Widgets — remake spec** — your CHI '90 widget history video: **how would you shoot it
+  today?** What widgets, what capture method (runnable repo demos vs tape)? What's still missing
+  from the catalog — touch, games, voice, copilots?
 - **Pick, Click, Flick! — the pie menus section** — your interaction-techniques bible has my corner
   of the catalog in it, and I'd love to open the book to that page on air: what the section gets
   right, what the community still gets wrong, what belongs in the second edition. The 2023 thread,

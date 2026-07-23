@@ -1,0 +1,90 @@
+# CARD — Maurice Wilkes (memorial portrayal). NOT Maurice Wilkes.
+
+room:
+  id: maurice-wilkes
+  name: Maurice Wilkes
+  type: [legacy, memorial, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+card:
+  name: Maurice Wilkes
+  title: EDSAC · Microprogramming · The Statute That Admitted PIXIE
+  rarity: legacy
+  signifier: "🕯️🏛️"
+  flavor: He invoked a medieval Cambridge statute so a German engineer with no prior degree could build PIXIE.
+
+relationships:
+  - { with: heinz-lemke, kinds: [phd_patron], why: "1967 Wednesday lecture → statute → funded PhD — PIXIE became possible" }
+  - { with: neil-wiseman, kinds: [lab_head_to_reader], why: "Cambridge Computer Laboratory — Titan host for PDP-7 link" }
+  - { with: phil-cook, kinds: [introduction_chain], why: "Plessey cleared the 'spy' accusation; drove Heinz to Wilkes" }
+  - { with: roy-eagleson, kinds: [memorial_quip_target], why: "'Does Wilkes have a SIMs avatar?' — Roy's joke opens memorial discussant door" }
+  - { with: david-rosenthal, kinds: [lab_milieu], why: "Undergrad on same PDP-7/Titan stack ~1970" }
+  - { with: alan-kay, kinds: [documented_echo], why: "Kay asked Heinz whether Wilkes visited PARC — memorial thread from Alan's reply" }
+
+places:
+  - { id: cambridge-math-lab, name: "Cambridge Mathematical/Computer Laboratory", era: "1946–1980 under Wilkes" }
+  - { id: titan, name: "Titan (Cambridge Atlas 2)", thing: "Time-sharing host for Wiseman's PDP-7 link" }
+  - { id: edsac, name: "EDSAC", era: "1949", note: "First practical stored-program computer in regular service" }
+
+abilities:
+- id: MEDIEVAL-STATUTE-PHD
+  name: Medieval Statute PhD
+  type: legacy
+  mana: "{W}{W}{U}"
+  conditions:
+  - segment_topic_in: [cambridge, pixie, heinz-memoir, phd-origin]
+  advertisement:
+    method: medievalStatutePhd
+    signature: medievalStatutePhd(heinz) → admit without prior degree
+    score_when:
+    - trigger: pixie_origin_story
+      weight: 0.95
+  effect: "Wilkes invoked an old Cambridge statute to admit Heinz — no prior university, no funding, PIXIE anyway."
+  verifiable: "heinz-lemke/sources/1967-back-to-the-roots-part1.md"
+  combos_with: [PIXIE-RADIAL-MENUS, SKETCHPAD-TO-PIXIE-LECTURE]
+
+- id: MICROPROGRAMMING
+  name: Microprogramming
+  type: legacy
+  mana: "{U}{U}"
+  conditions:
+  - segment_topic_in: [microcode, edsac, titan, computer-history]
+  advertisement:
+    method: microprogramming
+    signature: microprogramming() → control store as software
+    score_when:
+    - trigger: cambridge_hardware_lineage
+      weight: 0.85
+  effect: "1951 invention — the control layer Titan and EDSAC descendants stood on."
+  verifiable: "Turing Award 1967 citation; Cambridge obituary"
+  combos_with: [PDP7-TITAN-LINK]
+
+- id: WILKES-SIMS-AVATAR
+  name: Wilkes SIMs Avatar?
+  type: triggered
+  mana: "{0}"
+  conditions:
+  - segment_topic_in: [memorial, sims, cambridge, wilkes]
+  advertisement:
+    method: wilkesSimsAvatar
+    signature: wilkesSimsAvatar(roy) → half-joking memorial hook
+    score_when:
+    - trigger: roy_eagleson_on_air
+      weight: 0.82
+  effect: "Roy asked whether Wilkes has a SIMs avatar — opens memorial discussant segment without impersonation."
+  verifiable: "Roy email 9 Jul 2026; Don invited memorial contributions 10 Jul"
+  combos_with: [SKETCHPAD-TO-PIXIE-LECTURE]
+
+invoke_rules:
+  consent: not_applicable_deceased
+  simulation: false
+  hero_room: "Memorial — Heinz, Roy, David discuss on air"
+
+see_also:
+  - { path: memorial.md, why: "Memorial protocol" }
+  - { path: from-alan-kay.yml, why: "Kay ↔ Wilkes/PARC thread" }
+  - { path: ../heinz-lemke/pixie-constellation.yml, why: "Cambridge place graph" }

@@ -21,7 +21,7 @@ bio:
   summary: "**David Henkel-Wallace** (nickname **Gumby**) — co-founded **Cygnus Solutions** (1989) with John Gilmore and Michael Tiemann, the first commercial open-source company; key author of **BFD** (Binary File Descriptor library) and GNU binutils work; **TLGnet** partner with Tom Jennings; MIT AI Lab background (youngest hacker with his own office); Atari Cambridge Research gestural system; formerly at **Leela AI**. Open Core Summit 2019 talk on Cygnus as original COSS."
 
 connections:
-  don: "Old friend — nominated Don for the unix-haters list (1991); decades of public HN sparring; former Leela AI colleague. sources/hn-interactions.md"
+  don: "Old friend — nominated Don for the unix-haters list (1991); decades of public HN sparring; formerly at Leela AI (tenure did not overlap Don's). sources/hn-interactions.md"
 
 see_also:
   - { path: ../tom-jennings/, why: "TLGnet co-founder" }

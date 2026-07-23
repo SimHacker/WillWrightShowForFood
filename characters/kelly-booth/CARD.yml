@@ -1,0 +1,88 @@
+# CARD — Kellogg S. Booth (public portrayal). NOT Kelly Booth.
+
+room:
+  id: kelly-booth
+  name: Kelly Booth
+  type: [correspondent, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+card:
+  name: Kellogg S. Booth
+  title: CGL Founder · SIGGRAPH Chair · Menu Layout Experiments
+  rarity: rare
+  signifier: "🎓📽️"
+  flavor: Roy's storytelling mentor — four decades building Canadian graphics/HCI institutions.
+
+relationships:
+  - { with: roy-eagleson, kinds: [mentor, thread_cc], why: "Roy's HCI storytelling inspiration; Cc'd PIXIE thread 9 Jul 2026" }
+  - { with: heinz-lemke, kinds: [thread_witness], why: "On PIXIE correspondence — graphics history pedagogy context" }
+  - { with: neil-wiseman, kinds: [lineage_echo], why: "Canadian CG/HCI institution-building continues Cambridge→PIXIE teaching arc Roy carries" }
+  - { with: don-hopkins, kinds: [pie_menu_lineage], why: "Menu-layout experimental HCI test-beds — Canadian cousin to pie-menu research" }
+  - { with: ben-shneiderman, kinds: [hci_institution_peer], why: "CHCCS/SCDHM awards; SIGGRAPH service era overlap" }
+
+places:
+  - { id: ubc-imager, name: "UBC Imager Lab / MAGIC", era: "1990+" }
+  - { id: waterloo-cgl, name: "Waterloo Computer Graphics Laboratory", formed: 1979, with: [John Beatty, Richard Bartels] }
+  - { id: sage-field-trip, name: "SAGE field trip — Palos Verdes HS", note: "Science club origin — math + psychology teams" }
+
+abilities:
+- id: CGL-FOUNDER
+  name: CGL Founder
+  type: legacy
+  mana: "{U}{U}"
+  conditions:
+  - segment_topic_in: [canadian-cg, waterloo, graphics-history, animation]
+  advertisement:
+    method: cglFounder
+    signature: cglFounder(waterloo) → Canada's first CG lab
+    score_when:
+    - trigger: pixie_to_north_america_lineage
+      weight: 0.86
+  effect: "1979 Waterloo CGL with Beatty and Bartels — pipeline from Cambridge PIXIE to Canadian graphics pedagogy."
+  verifiable: "sources/career-and-awards.yml; cs.uwaterloo.ca/kiosk/history/cs.htm"
+  combos_with: [SKETCHPAD-TO-PIXIE-LECTURE, PIXIE-REIMPLEMENT-STUDENTS]
+
+- id: MENU-LAYOUT-LAB
+  name: Menu Layout Lab
+  type: triggered
+  mana: "{1}"
+  conditions:
+  - segment_topic_in: [pie-menus, menu-layout, hci, radial-menus]
+  advertisement:
+    method: menuLayoutLab
+    signature: menuLayoutLab(experiment) → empirical menu design
+    score_when:
+    - trigger: don_pie_menu_segment
+      weight: 0.84
+  effect: "1980s experimental HCI test-beds on menu layout — institutional cousin to PIXIE radial menus + Don's pie work."
+  verifiable: "sources/career-and-awards.yml"
+  combos_with: [PIXIE-RADIAL-MENUS, RADIAL-MENU-PRIOR-ART]
+
+- id: SIGGRAPH-SERVICE
+  name: SIGGRAPH Service
+  type: triggered
+  mana: "{W}"
+  conditions:
+  - segment_topic_in: [siggraph, graphics-community, hci]
+  advertisement:
+    method: siggraphService
+    signature: siggraphService() → chair 1985–89; four decades of Canadian CG/HCI
+    score_when:
+    - trigger: graphics_history_audience
+      weight: 0.8
+  effect: "Institution-builder — the community infrastructure Roy's lectures plug into."
+  verifiable: "ACM SIGGRAPH Outstanding Service Award 2010; career-and-awards.yml"
+  combos_with: [CGL-FOUNDER]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: sources/career-and-awards.yml, why: "Full career harvest" }
+  - { path: ../roy-eagleson/CARD.yml, why: "Mentee on thread" }
+  - { path: ../../repo-shows/ben-and-heinz-pie-menus.yml, why: "Pie menus show cluster" }

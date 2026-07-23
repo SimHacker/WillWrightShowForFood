@@ -21,7 +21,7 @@ card:
 relationships:
   # kinds may stack — real people relate in multiple ways at once
   - { with: marvin-minsky, kinds: [lab_hacker, memorial_discussant], why: "MIT AI Lab — youngest hacker with his own office; both ends of the Society-of-Mind pipeline (lab then Leela)" }
-  - { with: don-hopkins, kinds: [old_friend, unix_haters_nominator, hn_sparring_partner, leela_alum], why: "Nominated Don for the unix-haters list (1991); decades of public HN sparring; former Leela AI colleague; SubGenius⇒EvalGenius lineage" }
+  - { with: don-hopkins, kinds: [old_friend, unix_haters_nominator, hn_sparring_partner, leela_alum], why: "Nominated Don for the unix-haters list (1991); decades of public HN sparring; formerly at Leela AI (tenure did not overlap Don's); SubGenius⇒EvalGenius lineage" }
   - { with: richard-stallman, kinds: [gnu_toolchain_ally, commercialization_counterpart], why: "Cygnus made supporting RMS's GNU toolchain a business — BFD + binutils authorship" }
   - { with: henry-minsky, kinds: [leela_colleague, lab_lineage], why: "Formerly at Leela AI (Henry co-founder/CTO); shared MIT AI Lab culture" }
   - { with: tom-jennings, kinds: [tlgnet_partner], why: "TLGnet ISP partnership" }

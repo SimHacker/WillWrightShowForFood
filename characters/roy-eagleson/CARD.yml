@@ -1,0 +1,89 @@
+# CARD — Roy Eagleson (public portrayal). NOT Roy Eagleson.
+
+room:
+  id: roy-eagleson
+  name: Roy Eagleson
+  type: [correspondent, educator, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+card:
+  name: Roy Eagleson
+  title: Sketchpad → PIXIE Lecturer
+  rarity: rare
+  signifier: "🎓"
+  flavor: Re-implement PIXIE in assembly and rediscover objects the hard way — on purpose.
+
+relationships:
+  - { with: heinz-lemke, kinds: [friend, thread_bridge], why: "Nagoya 2026; brought into PIXIE correspondence" }
+  - { with: ivan-sutherland, kinds: [teaches_from], why: "HCI course — Sketchpad north star to PIXIE" }
+  - { with: neil-wiseman, kinds: [lineage_teacher], why: "Cambridge Rainbow / PIXIE story in lectures" }
+  - { with: maurice-wilkes, kinds: [memorial_quip], why: "'Does Wilkes have a SIMs avatar?' — opens memorial discussant door" }
+  - { with: zenon-pylyshyn, kinds: [phd_advisor], why: "UWO PhD; Newell & McCarthy lineage; CIFAR → Hinton" }
+  - { with: kelly-booth, kinds: [mentee_of], why: "HCI storytelling mentor — Cc'd thread 9 Jul 2026" }
+  - { with: alan-kay, kinds: [asks_for_anecdotes], why: "Assembly → message passing lecture; Wilkes↔PARC" }
+  - { with: don-hopkins, kinds: [thread_guest], why: "Pie menus + Hopkins site login-code coincidence 7 Jul" }
+
+places:
+  - { id: uwo, name: "Western University — London, Ontario" }
+  - { id: midnight-shift, name: "Honeywell GE-115 / PDP-10 operator nights", era: "1979–1980s" }
+
+abilities:
+- id: SKETCHPAD-TO-PIXIE-LECTURE
+  name: Sketchpad → PIXIE Lecture
+  type: activated
+  mana: "{U}{U}"
+  conditions:
+  - segment_topic_in: [sketchpad, pixie, hci-teaching, graphics-history]
+  advertisement:
+    method: sketchpadToPixie
+    signature: sketchpadToPixie(lecture) → pivot mid-week when Heinz email lands
+    score_when:
+    - trigger: educator_audience
+      weight: 0.92
+  effect: "7 Jul 2026 — was preparing Sketchpad; incorporated PIXIE + Flight of the Bumblebee same day."
+  verifiable: roy-eagleson/sources/2026-07-14-uwo-pixie-reimplementation.md
+  combos_with: [SKETCHPAD, PIXIE-RADIAL-MENUS]
+
+- id: PIXIE-REIMPLEMENT-STUDENTS
+  name: PIXIE Re-implement (UWO students)
+  type: activated
+  mana: "{R}{R}{U}"
+  conditions:
+  - segment_topic_in: [pdp7, assembly, hci-project, emulator]
+  advertisement:
+    method: pixieReimplementStudents
+    signature: pixieReimplementStudents(course) → objects rediscovered in low-level code
+    score_when:
+    - trigger: cars_2027_berlin_target
+      weight: 0.9
+  effect: "UWO students want PIXIE as HCI exercise — pairs with Roy's hardware/software co-design course."
+  verifiable: 2026-07-14 email; heinz 125-page listing offer
+  combos_with: [PDP7-TITAN-SATELLITE, BOOT-ITS]
+
+- id: ASSEMBLY-MESSAGE-PASSING
+  name: Assembly → Message Passing
+  type: triggered
+  mana: "{U}"
+  conditions:
+  - segment_topic_in: [oop, assembly, message-passing, desktop-metaphor]
+  advertisement:
+    method: assemblyMessagePassing
+    signature: assemblyMessagePassing(PDP) → entities emerge from discipline
+    score_when:
+    - trigger: alan_kay_on_air
+      weight: 0.87
+  effect: "Roy's lecture frame: modular → data-first → entities → messages — don't sell desktop short vs LLMs."
+  verifiable: Jul 2026 Roy email to thread
+  combos_with: [SKETCHPAD, INVENT-FUTURE]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: sketchpad-to-pixie-lineage.md, why: "Teaching arc essay" }
+  - { path: ../heinz-lemke/pixie-constellation.yml, why: "Berlin 2027 student slot" }

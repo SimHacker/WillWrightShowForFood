@@ -30,6 +30,10 @@ Video: TikTok-length or longer; hosted anywhere or stored in card.
 - **StoryMaker demo as playlist:** Modular incrementally-assembled playlist IS a StoryMaker story.
 - **Bar Karma lineage:** SFC iPhone StoryMaker progenitor named on stream.
 
+## 2011 provenance
+
+August–September 2011 email thread (Don Hopkins ↔ Ben Shneiderman): StoryMaker had **geolocation** on server + iOS app; **Janet Murray / GA Tech** student projects; Shneiderman pointed Don to **Ben Bederson's StoryKit** ([Wes Fryer, 2010](https://www.speedofcreativity.org/2010/09/13/publish-student-stories-online-with-artwork-text-and-audio-narration-with-storykit-free/)). Captured in MicropolisCore: [shneiderman-2011-correspondence.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/storymaker/shneiderman-2011-correspondence.md).
+
 ## Deeper links
 
 | Topic | Where |

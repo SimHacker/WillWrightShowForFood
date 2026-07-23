@@ -1,0 +1,73 @@
+# CARD — Mario A. Cypko (public portrayal). NOT Mario A. Cypko.
+
+room:
+  id: mario-cypko
+  name: Mario A. Cypko
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+card:
+  name: Mario A. Cypko
+  title: MedAIM · PIXIE-Inspired Clinical Models
+  rarity: rare
+  signifier: "🧬"
+  flavor: LLM translates — the clinician inspects, corrects, and keeps responsibility.
+
+relationships:
+  - { with: heinz-lemke, kinds: [phd_supervisor, collaborator], why: "Doctoral supervision; Model-Guided Medicine; CARS organizer" }
+  - { with: joe-weizenbaum, kinds: [quotes_ethic], why: "Der Mensch, nicht die Maschine — in MGM editorial line" }
+  - { with: leo-joskowicz, kinds: [cars_2027_ally], why: "Both: dialogue + visual model, not either/or" }
+  - { with: heinz-lemke, kinds: [pixie_inspiration], why: "PIXIE connected digital + manual circuit inspection — clinical graphs today" }
+  - { with: don-hopkins, kinds: [barn_video_tbd], why: "Patient modelling video at Black Forest barn — consent TBD" }
+
+places:
+  - { id: freiburg, name: "Hahn-Schickard — Freiburg" }
+  - { id: black-forest-barn, name: "Heinz's barn — modelling video" }
+  - { id: berlin-2027, name: "CARS 2027 — Human-AI Model Interaction" }
+
+abilities:
+- id: MARIO-HUMAN-AI-MODEL
+  name: Human-AI Model Interaction
+  type: activated
+  mana: "{W}{U}{B}"
+  conditions:
+  - segment_topic_in: [clinical-ai, pgm, llm, model-guided-medicine, cars]
+  advertisement:
+    method: humanAiModelInteraction
+    signature: humanAiModelInteraction(clinician, dashboard) → inspect assumptions + uncertainty
+    score_when:
+    - trigger: pixie_to_clinical_bridge
+      weight: 0.93
+    - trigger: berlin_2027_planning
+      weight: 0.88
+  effect: "Probabilistic graphical models + LLM translation + visual dashboard — conversation alone insufficient."
+  verifiable: Jul 2026 Mario email; model-guided-medicine-cars.md
+  combos_with: [PIXIE-RADIAL-MENUS, COMPUTER-POWER-HUMAN-REASON, HUMAN-BOTTLENECK]
+
+- id: PIXIE-CLINICAL-INSPIRATION
+  name: PIXIE Clinical Inspiration
+  type: triggered
+  mana: "{1}"
+  conditions:
+  - segment_topic_in: [pixie, circuits, clinical-modelling, hci]
+  advertisement:
+    method: pixieClinicalBridge
+    signature: pixieClinicalBridge(heinz) → manual + digital model inspection
+    score_when:
+    - trigger: heinz_on_air
+      weight: 0.86
+  effect: "PIXIE linked familiar circuit drawing to formal models — same move for clinical knowledge graphs."
+  verifiable: Mario email 22 Jul 2026
+  combos_with: [PIXIE-RADIAL-MENUS]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: sources/model-guided-medicine-cars.md, why: "CARS / MGM context" }
+  - { path: ../heinz-lemke/pixie-constellation.yml, why: "Clinical AI thread" }

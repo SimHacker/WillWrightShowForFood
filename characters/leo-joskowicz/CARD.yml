@@ -1,0 +1,71 @@
+# CARD — Leo Joskowicz (public portrayal). NOT Leo Joskowicz.
+
+room:
+  id: leo-joskowicz
+  name: Leo Joskowicz
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+card:
+  name: Leo Joskowicz
+  title: CASMIP · ELIZA Line · Human Bottleneck
+  rarity: rare
+  signifier: "🏥"
+  flavor: Five meals in one day is not a week of learning — the user is still the bottleneck.
+
+relationships:
+  - { with: heinz-lemke, kinds: [cars_colleague, berlin_2027], why: "CARS org/program committees; invited ELIZA/Weizenbaum HCI 29 Jun 2027" }
+  - { with: joe-weizenbaum, kinds: [proposed_memorial_topic], why: "Heinz: studied ELIZA extensively early career (verify on air)" }
+  - { with: mario-cypko, kinds: [thread_ally, cars_2027_panel], why: "Both reject conversation-only AI; Human-AI Model Interaction + ELIZA HCI same Berlin session" }
+  - { with: roy-eagleson, kinds: [met_nagoya], why: "Heinz sure they met CARS 2026 Nagoya" }
+  - { with: kent-pitman, kinds: [eliza_lineage], why: "Same ELIZA→DOCTOR→clinical AI arc" }
+
+places:
+  - { id: elsc-jerusalem, name: "ELSC — Hebrew University" }
+  - { id: casmip, name: "CASMIP Lab" }
+  - { id: berlin-2027, name: "CARS 2027 Berlin", date: "2027-06-29" }
+
+abilities:
+- id: ELIZA-HCI-SESSION
+  name: ELIZA / Weizenbaum HCI
+  type: activated
+  mana: "{W}{U}"
+  conditions:
+  - segment_topic_in: [eliza, weizenbaum, hci, cars, clinical-ai]
+  advertisement:
+    method: elizaHciSession
+    signature: elizaHciSession(cars2027) → Weizenbaum line meets modern LLM hype
+    score_when:
+    - trigger: berlin_2027_planning
+      weight: 0.9
+  effect: "Proposed CARS 2027 talk — bridge 1966 ELIZA to conscientious clinical AI (verify ELIZA study claim)."
+  verifiable: heinz-2026-07-cars2027-eliza-proposal.yml; Jul 2026 thread
+  combos_with: [ELIZA, COMPUTER-POWER-HUMAN-REASON]
+
+- id: HUMAN-BOTTLENECK
+  name: Human Bottleneck
+  type: triggered
+  mana: "{W}"
+  conditions:
+  - segment_topic_in: [generative-ai, education, hci, llm]
+  advertisement:
+    method: humanBottleneck
+    signature: humanBottleneck(exam) → closed-book forces real learning
+    score_when:
+    - trigger: mario_cypko_visual_models_segment
+      weight: 0.88
+  effect: "Jul 2026 — AI lowers UI barrier but not human absorption; agrees conversational AI won't replace graphics."
+  verifiable: Joskowicz email 23 Jul 2026
+  combos_with: [MARIO-HUMAN-AI-MODEL]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: sources/heinz-2026-07-cars2027-eliza-proposal.yml, why: "Invitation provenance" }
+  - { path: ../joe-weizenbaum/CARD.yml, why: "Memorial combo" }

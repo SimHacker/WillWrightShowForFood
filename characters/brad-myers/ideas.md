@@ -26,8 +26,23 @@ walk the repo on air and build from the seed.
 
 ### 2. Garnet: KR constraints, prototypes, PostScript driver, GLASS acronym
 
-### 3. All the Widgets
-CHI '90 widget history video; Don's pie menu clips
+### 3. All the Widgets — how would you remake it today?
+CHI '90 widget history video; Don's pie menu clips. **Central beat:** if Brad shot *All the Widgets*
+today (2026), what would the catalog include — touch, gestures, game UI, AI copilots, radial menus,
+marking menus, voice? What recording method (screen capture, runnable repo demos, MOOLLM skills as
+exhibit entries)? Compare to [Edd Coates](../edd-coates/) GUIDB 2.0 video arc (73k shipped screens).
+Pair seed: [The Two Catalogs](../../repo-shows/brad-and-edd-interaction-catalogs.yml).
+
+### 3b. Pick, Click, Flick! — the book (recent edition)
+Walk the **published book** on air — not just the pie-menu section: taxonomy design, what made the
+cut, what the second edition needs. [ixtbook.com](https://www.ixtbook.com/) · 2023 email thread on
+pie vs marking menu accuracy. Open the book to **p. ~171 territory** (pie menus) and let Brad
+annotate live: what the community still gets wrong.
+
+### 3c. Brad × Edd — literature catalog meets Game UI Database
+Brad catalogs from papers outward; Edd from **73,000+ shipped game screens** inward ([Game UI
+Database](https://www.gameuidatabase.com/), Guinness record; ***The Game UI Bible*** forthcoming).
+Crosswalk radial menus through both. Real-time or **time-shifted notes in the repo** = the episode.
 
 ### 4. CMU 05-640 Interaction Techniques
 guest lectures, Panopto archive

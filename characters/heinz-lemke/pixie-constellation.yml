@@ -1,0 +1,114 @@
+# PIXIE constellation — people, places, things
+
+# Graph of the Jul 2026 thread + show seed. Buxton excluded by policy; Franziska (CARS admin) omitted.
+
+show_seed: ../../repo-shows/pixie-pie-menus-pdp7.yml
+
+places:
+  cambridge_math_lab:
+    name: Cambridge Mathematical Laboratory
+    era: 1967–1972
+    hosts: [maurice-wilkes, neil-wiseman, heinz-lemke, andrew-armit, john-hiles]
+    things: [pdp7, dec340, titan, light_pen, pixie_source_listing]
+    events:
+      - "1967-10-01 — Heinz first lecture; PIXIE origin (60th anniversary target: 2027-06-29 Berlin)"
+      - "1969 — PIXIE paper + film; PDP-7↔Titan link (Wiseman: early distributed system)"
+
+  mit_1969:
+    name: MIT — summer 1969 US tour
+    hosts: [joe-weizenbaum]
+    visitors: [heinz-lemke]
+    things: [pixie_demo, eliza]
+    note: "Greyhound $99 tour — Engelbart, Sutherland, Weizenbaum, many labs"
+
+  mit_ai_its:
+    name: MIT-AI Lab / ITS / PDP-10
+    hosts: [kent-pitman, marvin-minsky]
+    visitors: [don-hopkins]
+    things: [doctor_maclisp, animal, parry_transcript]
+    note: "KMP Weizenbaum class → DOCTOR; Don played ANIMAL, apologized to KMP"
+
+  utah_1968:
+    name: University of Utah — Ivan period
+    hosts: [ivan-sutherland]
+    visitors: [andrew-armit, alan-kay]
+    things: [coons_patches, pdp7_multipatch]
+
+  uwo_london:
+    name: Western University — London, Ontario
+    hosts: [roy-eagleson, zenon-pylyshyn]
+    things: [sketchpad_hci_course, pixie_reimplementation_project]
+    students: "Roy's UWO students — PIXIE HCI re-impl (14 Jul 2026)"
+
+  nagoya_2026:
+    name: CARS 2026 — Nagoya
+    hosts: [heinz-lemke]
+    attendees: [roy-eagleson, leo-joskowicz, mario-cypko]
+    note: "40th CARS anniversary; PIXIE discussed; Roy ↔ Heinz friendship"
+
+  berlin_2027:
+    name: CARS 2027 — Berlin HCI session
+    date: 2027-06-29
+    hosts: [heinz-lemke]
+    proposed:
+      - { who: leo-joskowicz, topic: "ELIZA / Weizenbaum HCI" }
+      - { who: mario-cypko, topic: "Human-AI Model Interaction" }
+      - { who: roy-eagleson, topic: "UWO PIXIE re-implementation (if listing digitized)" }
+
+  black_forest:
+    name: Heinz's farmhouse — Black Forest
+    hosts: [heinz-lemke]
+    things: [pdp7_listing_printouts, barn_archive, mario_patient_modelling_video]
+
+  freiburg_hahn_schickard:
+    name: Hahn-Schickard — Freiburg
+    hosts: [mario-cypko]
+    things: [clinical_pgm_dashboards, llm_model_inspection]
+
+  jerusalem_elsc:
+    name: ELSC — Hebrew University Jerusalem
+    hosts: [leo-joskowicz]
+    things: [casmip_lab, eliza_study_unverified]
+
+threads:
+  eliza_doctor_line:
+    - joe-weizenbaum
+    - kent-pitman
+    - don-hopkins
+    - leo-joskowicz
+    - heinz-lemke
+
+  pixie_cad_line:
+    - ivan-sutherland
+    - neil-wiseman
+    - heinz-lemke
+    - andrew-armit
+    - roy-eagleson
+    - lars-brinkhoff
+    - david-rosenthal
+
+  clinical_ai_line:
+    - heinz-lemke
+    - mario-cypko
+    - joe-weizenbaum
+    - leo-joskowicz
+
+  emulator_revival:
+    - lars-brinkhoff
+    - david-rosenthal
+    - heinz-lemke
+    - don-hopkins
+
+cards:
+  - characters/heinz-lemke/CARD.yml
+  - characters/joe-weizenbaum/CARD.yml
+  - characters/kent-pitman/CARD.yml
+  - characters/ivan-sutherland/CARD.yml
+  - characters/neil-wiseman/CARD.yml
+  - characters/maurice-wilkes/CARD.yml
+  - characters/andrew-armit/CARD.yml
+  - characters/roy-eagleson/CARD.yml
+  - characters/leo-joskowicz/CARD.yml
+  - characters/mario-cypko/CARD.yml
+  - characters/kelly-booth/CARD.yml
+  - characters/lars-brinkhoff/CARD.yml

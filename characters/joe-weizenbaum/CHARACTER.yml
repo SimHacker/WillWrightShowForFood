@@ -1,0 +1,54 @@
+# Joe Weizenbaum — memorial portrayal (in memoriam). NOT Joseph Weizenbaum.
+# Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
+
+character:
+  id: joe-weizenbaum
+  name: "Joseph Weizenbaum"
+  also_known_as: ["Joe Weizenbaum", "José Weizenbaum"]
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  born: "1923-01-08"
+  died: "2008-03-05"
+  field: "ELIZA; Computer Power and Human Reason; AI critic; MIT; TU Berlin"
+  home: characters/joe-weizenbaum/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md#memorial-mode
+  consent_level: 5_deceased_legacy
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  document: memorial.md
+
+relationship:
+  to_project: storyline_figure
+  to_pixie: |
+    Heinz Lemke met Weizenbaum at MIT while presenting PIXIE on the 1969 US tour. Weizenbaum later
+    spent decades in Germany (visiting professor TU Berlin from 1979); Heinz cites his human-not-machine
+    ethic in Model-Guided Medicine editorials. Don's "conscientious objector" coinage (Jul 2026) explicitly
+    honors Weizenbaum's stance against blind AI dominance.
+
+bio:
+  summary: |
+    **Joseph Weizenbaum** (1923–2008) — creator of **ELIZA** (1966) at MIT; author of *Computer Power
+    and Human Reason: From Judgment to Calculation* (1976). Taught **6.031 Intro to Programming** at MIT;
+    **Kent Pitman** was in that course and later wrote **DOCTOR** in MACLISP on ITS. Weizenbaum warned that
+    machines must not become the measure of man — a line Heinz still quotes in CARS work.
+
+memorial:
+  mode: represent_and_discuss
+  who_can_discuss:
+    - { who: heinz-lemke, why: "Met at MIT 1969 presenting PIXIE; decades of TU Berlin discussions" }
+    - { who: kent-pitman, why: "Weizenbaum taught his Lisp class; DOCTOR lineage from ELIZA" }
+    - { who: leo-joskowicz, why: "Heinz proposes ELIZA/Weizenbaum HCI for CARS 2027 Berlin" }
+    - { who: mario-cypko, why: "Quotes Weizenbaum human-not-machine in Model-Guided Medicine" }
+    - { who: don-hopkins, why: "Conscientious objector framing; HN ELIZA/DOCTOR threads" }
+
+see_also:
+  - { path: CARD.yml, why: "Memorial abilities + constellation" }
+  - { path: ../kent-pitman/, why: "DOCTOR student line" }
+  - { path: ../heinz-lemke/, why: "MIT 1969 meeting; model science" }
+  - { path: ../leo-joskowicz/, why: "CARS 2027 ELIZA session" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Two-episode Weizenbaum arc in show seed" }

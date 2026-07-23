@@ -1,0 +1,82 @@
+# SHOW SEED — Richard M. Stallman: ITS, the AI Lab, Remembering Marvin
+# Narrow thesis; async-first; full context in repo; no ambush guests.
+
+show:
+  id: richard-stallman-its-minsky-memorial
+  title: "ITS, MACLISP, and Remembering Marvin — a conversation with Richard M. Stallman"
+  type: solo
+  host: Don Hopkins
+  guests: ["Richard M. Stallman"]
+  character: characters/richard-stallman/
+  topic: |
+    What RMS loved about ITS, TECO, MACLISP, and the open MIT AI Lab community Marvin Minsky
+    catalyzed — tourist policy, shared source, printed manuals — plus copyleft envelope primary
+    sources, optional Emacs history, and a memorial discussant segment on Marvin's humor and
+    cognitive-unconscious paper. Full transcript in repo; no clip-farming.
+  status: seed
+  consent: not_yet_asked
+
+format:
+  async_first: true
+  live_options: [jitsi, bigbluebutton, landline_via_rms_assist]
+  refuses: [zoom, skype, discord, whatsapp, surprise_panel]
+  recording: [webm_vp8_vp9, ogg_vorbis_speex]
+  editorial_veto: guest
+  memorial_mode: |
+    Marvin Minsky discussed, not impersonated. RMS as documented lab peer + memorial discussant.
+
+segments:
+  its_teco_maclisp:
+    title: "ITS · TECO · MACLISP"
+    prompts:
+      - "What did ITS make possible that other systems did not?"
+      - "TECO as cultural substrate — Emacs as consequence."
+      - "MACLISP culture — manuals on the shelf, code on the disk, tourists on the ARPANET."
+
+  tourist_policy:
+    title: "Tourist policy & open community"
+    prompts:
+      - "Marvin's lab as catalytic — what was intentional vs accidental?"
+      - "No passwords, shared source — ethics before GNU had a name."
+    sources:
+      - characters/don-hopkins/ (Medium tourist-policy essay — RMS corrections welcome)
+      - characters/kent-pitman/ (parallel tourist-era witness — separate episode unless RMS approves)
+
+  remembering_marvin:
+    title: "Remembering Marvin Minsky"
+    mode: memorial_discussant
+    prompts:
+      - "Marvin in the lab — not the Wikipedia summary."
+      - "Humor as cognitive bug recognition — Minsky AI Memo 603; RMS's take."
+      - "Jokes in the hall — what outsiders never saw."
+    sources:
+      - characters/marvin-minsky/sources/jokes-and-the-cognitive-unconscious.md
+      - characters/marvin-minsky/memorial.md
+
+  copyleft_envelope:
+    title: "Copyleft envelope — 68000 manual returned"
+    artifacts:
+      - characters/don-hopkins/media/pantomime/copyleft-envelope-1984.yml
+    prompts:
+      - "Borrowing the 68k manual — mailing it back — the sticker."
+      - "Naming copyleft — activism through mail art."
+
+  emacs_optional:
+    title: "Emacs wars (optional — guest-led)"
+    only_if: rms_chooses
+    prompts:
+      - "TECO macros → extensible editor → GNU Emacs."
+      - "1993 doctor.el thread — kabuki-west natalism — if RMS wants the receipts on air."
+      - "Unipress era — only if RMS opens the box."
+    sources:
+      - http://www.art.net/studios/hackers/hopkins/Don/text/rms-vs-doctor.html
+      - characters/james-gosling/media/gosling-hobees-lunch.yml
+
+ties_to:
+  - characters/richard-stallman/contact-channels.yml
+  - characters/marvin-minsky/
+  - characters/kent-pitman/
+  - characters/brian-fox/
+  - repo-shows/remembering-the-constructionists.yml
+
+consent: not_yet_asked

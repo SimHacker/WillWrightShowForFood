@@ -1,0 +1,94 @@
+# CARD — Joseph Weizenbaum (memorial portrayal). NOT Joseph Weizenbaum.
+# Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: joe-weizenbaum
+  name: Joseph Weizenbaum
+  type: [legacy, memorial, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+card:
+  name: Joseph Weizenbaum
+  title: ELIZA · Conscientious Objector to Calculation
+  rarity: legacy
+  signifier: "🕯️💬"
+  flavor: "Der Mensch, nicht die Maschine, ist das Maß! — still the right bottleneck."
+
+relationships:
+  - { with: kent-pitman, kinds: [teacher, eliza_lineage], why: "6.031 at MIT — KMP wrote DOCTOR on ITS after Weizenbaum's ELIZA" }
+  - { with: heinz-lemke, kinds: [met_at_mit_1969, decades_in_germany], why: "PIXIE US tour; TU Berlin visiting professor; model science + AI trust" }
+  - { with: leo-joskowicz, kinds: [cars_2027_topic], why: "Heinz invites ELIZA/Weizenbaum HCI for Berlin 29 Jun 2027" }
+  - { with: mario-cypko, kinds: [quoted_ethic], why: "Human-not-machine quote in Model-Guided Medicine / MGM editorial line" }
+  - { with: don-hopkins, kinds: [conscientious_objector_k_line], why: "Don repossessed 'conscientious objector' for ethical software design (Jul 2026)" }
+  - { with: ivan-sutherland, kinds: [contemporary_hci], why: "Sketchpad (1963) and ELIZA (1966) — same decade, opposite warnings about what computers should become" }
+
+places:
+  - { id: mit-1966, name: "MIT — ELIZA", why: "DOCTOR script; Weizenbaum's secretary ELIZA session" }
+  - { id: mit-1969, name: "MIT — PIXIE visit", why: "Heinz Lemke presenting PIXIE on US Greyhound tour" }
+  - { id: tu-berlin, name: "TU Berlin", why: "Visiting professor from 1979; Heinz's department" }
+  - { id: its-mit-ai, name: "MIT-AI / ITS", why: "KMP's DOCTOR and Don's tourist-era play — same conversational lineage" }
+
+abilities:
+- id: ELIZA
+  name: ELIZA
+  type: legacy
+  mana: "{U}{U}"
+  conditions:
+  - segment_topic_in: [eliza, chatbots, doctor, parry, hci-history]
+  advertisement:
+    method: eliza
+    signature: eliza(pattern) → reflection without understanding
+    score_when:
+    - trigger: audience_sees_first_chatbot_not_llm
+      weight: 0.94
+  effect: "Pattern-matching therapist (1966) — proved people would treat syntax as soul; Weizenbaum was horrified."
+  verifiable: "CACM 1966 (doi:10.1145/365153.365168); elizagen.org"
+  combos_with: [DOCTOR-WEIZENBAUM-CLASS, ANIMAL-EMOTIONAL-STATE]
+
+- id: COMPUTER-POWER-HUMAN-REASON
+  name: Computer Power and Human Reason
+  type: legacy
+  mana: "{W}{W}"
+  conditions:
+  - segment_topic_in: [ai-ethics, conscientious-objector, model-science, cars]
+  advertisement:
+    method: humanNotMachine
+    signature: humanNotMachine() → judgment must not yield to calculation
+    score_when:
+    - trigger: llm_hype_needs_antidote
+      weight: 0.92
+    - trigger: heinz_model_guided_medicine
+      weight: 0.88
+  effect: "Machines compute; humans judge — the ethic Mario and Heinz still cite in clinical AI."
+  verifiable: "Computer Power and Human Reason (1976); Heinz MGM editorial doi:10.1007/s11548-024-03097-z"
+  combos_with: [HEINZ-MODEL-SCIENCE, MARIO-HUMAN-AI-MODEL]
+
+- id: MIT-1969-PIXIE-ENCOUNTER
+  name: MIT 1969 — PIXIE on tour
+  type: triggered
+  mana: "{1}"
+  conditions:
+  - segment_topic_in: [pixie, heinz, us-tour, engelbart]
+  advertisement:
+    method: pixieAtMit
+    signature: pixieAtMit(heinz) → Cambridge meets MIT on the Greyhound summer
+    score_when:
+    - trigger: pixie_lineage_episode
+      weight: 0.9
+  effect: "Heinz met Weizenbaum while showing PIXIE — light-pen CAD and ELIZA ethics in the same American summer."
+  verifiable: heinz-lemke correspondence; electronics-international-1969
+  combos_with: [PIXIE-RADIAL-MENUS, SKETCHPAD-NORTH-STAR]
+
+invoke_rules:
+  consent: not_applicable_deceased
+  simulation: false
+  hero_room: "Memorial — cite documented work; Heinz and KMP discuss on air"
+
+see_also:
+  - { path: memorial.md, why: "Memorial protocol" }
+  - { path: ../kent-pitman/CARD.yml, why: "DOCTOR / Weizenbaum class combo" }
+  - { path: ../heinz-lemke/pixie-constellation.yml, why: "Places + people graph" }

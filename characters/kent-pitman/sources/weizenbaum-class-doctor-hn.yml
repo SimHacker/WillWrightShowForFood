@@ -1,0 +1,56 @@
+# KMP — Weizenbaum class, DOCTOR on ITS, Don's apology (HN receipts)
+
+character: kent-pitman
+sources:
+  - type: hn_don_hopkins
+    items:
+      - id: 38402813
+        url: https://news.ycombinator.com/item?id=38402813
+        note: "KMP papers index; DOCTOR source; ANIMAL Pope foul-language email"
+      - id: 39414536
+        url: https://news.ycombinator.com/item?id=39414536
+        note: "ANIMAL source walkthrough; SEND-MAIL to KMP"
+      - id: 39414609
+        url: https://news.ycombinator.com/item?id=39414609
+        note: "DOCTOR vs PARRY manual typist; RMS vs EMACS DOCTOR"
+      - id: 39762949
+        url: https://news.ycombinator.com/item?id=39762949
+        note: "Elizagen.org — Lars found KMP MACLisp ELIZA; Weizenbaum 6.030 class"
+      - id: 38906177
+        url: https://news.ycombinator.com/item?id=38906177
+        note: "Weizenbaum taught KMP LISP; DOCTOR on ITS"
+      - id: 47017091
+        url: https://news.ycombinator.com/item?id=47017091
+        note: "Guessing Animals + ELIZA lineage pointer"
+  - type: primary
+    items:
+      - path: kmp-animal-its/apology-email-1982.txt
+      - url: https://www.maclisp.info/pitmanual/funnies.html
+        note: "Parrying Programs — DOCTOR vs PARRY; KMP on Weizenbaum class"
+      - url: https://github.com/PDP-10/its/blob/master/src/games/doc.102
+        note: "DOCTOR source on ITS"
+      - url: https://sites.google.com/view/elizagen-org/
+        note: "Elizagen — KMP MACLisp ELIZA (Lars discovery)"
+
+weizenbaum_class:
+  course: "MIT 6.030 Intro to Programming (late 1970s)"
+  teacher: joe-weizenbaum
+  kmp_quote: |
+    I didn't write the original ELIZA program, although my Lisp class was taught by Joseph
+    Weizenbaum, who did. I later wrote a very elaborate program of similar kind, which I just
+    called DOCTOR, in order to play with some of the ideas.
+  elizagen_note: |
+    KMP took Weizenbaum's course where he was introduced to ELIZA; wrote DOCTOR on ITS (MACLisp).
+    Built on Bernie Cosell's BBN-Lisp ELIZA lineage — hack upon hack, proto free software.
+
+don_animal_incident:
+  animal: Pope
+  foul_language: true
+  outcome: "ANIMAL emailed KMP, cc Don; refused play until apology (Jul 1982)"
+  verifiable: sources/kmp-animal-its/apology-email-1982.txt; HN 39414536
+
+show_combos:
+  - joe-weizenbaum/CARD.yml#ELIZA
+  - kent-pitman/CARD.yml#DOCTOR-WEIZENBAUM-CLASS
+  - kent-pitman/CARD.yml#ANIMAL-EMOTIONAL-STATE
+  - heinz-lemke/pixie-constellation.yml#mit_ai_its

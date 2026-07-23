@@ -16,6 +16,8 @@ A show repo owns a fan base — not one episode. Episodes live as `repo-shows/<s
 
 ShowMaker **specializes** StoryMaker — same substrate, show layer added. StoryMaker: directories + files in git (family albums, media on branches). ShowMaker adds `SHOW.yml` show interface — a show is a **graph walk** over StoryMaker content.
 
+**2011 SFC lineage** (MicropolisCore): Don ↔ Ben Shneiderman correspondence documents StoryMaker at deployment — geo server + iPhone/iPad app, Janet Murray / GA Tech student projects, Ben Bederson's **StoryKit** as parallel iOS story tool. Same stack powered **Bar Karma** (broadcast writers' room) and **Urban Safari** (field geo capture). Full thread: [shneiderman-2011-correspondence.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/storymaker/shneiderman-2011-correspondence.md) · [Bar Karma overview](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/bar-karma/overview.md) · [Urban Safari overview](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/urban-safari/overview.md).
+
 ## Hosted video wrapper
 
 A show can **wrap** an existing video you didn't produce — point SHOW.yml at hosted video, add bookmarks/TOC/playlists, play and augment live. Artifacts live in **character** dirs; shows draw on them. Attribution = selfish-inheritance declaration.

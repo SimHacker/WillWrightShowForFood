@@ -75,6 +75,7 @@ project_fit:
 
 see_also:
   - { path: README.md, why: "Human portrait — start here" }
+  - { path: CARD.yml, why: "Heroic abilities + Roy/PIXIE interconnections" }
   - { path: sources/career-and-awards.yml, why: "Full harvested facts + source URLs" }
   - { path: ../roy-eagleson/, why: "Brought Kelly onto the thread" }
   - { path: ../heinz-lemke/, why: "PIXIE thread host" }

@@ -41,11 +41,19 @@ card:
 
 relationships:
   # kinds may stack — real people relate in multiple ways at once
+  - { with: joe-weizenbaum, kinds: [teacher, eliza_lineage], why: "6.030 at MIT — taught KMP; KMP wrote DOCTOR on ITS after ELIZA" }
   - { with: marvin-minsky, kinds: [lab_hacker, memorial_discussant], why: "MACLISP/Pitmanual era of the AI Lab's Lisp culture — the lab Minsky co-founded" }
-  - { with: don-hopkins, kinds: [mentor, tutor_over_arpanet, correspondent], why: "Tutored teenage Don in Lisp on ITS (:TEACH;LISP); decades of correspondence; MOO interest" }
-  - { with: richard-stallman, kinds: [lab_lisp_peer], why: "Same ITS/MACLISP culture; Emacs grew from it; Common Lisp standardization era" }
+  - { with: don-hopkins, kinds: [mentor, tutor_over_arpanet, correspondent, offended_and_apologized], why: ":TEACH;LISP on ITS; ANIMAL Pope incident → apology email 1982; MOO interest; HN ELIZA threads" }
+  - { with: lars-brinkhoff, kinds: [eliza_archaeologist], why: "Lars discovered KMP MACLisp ELIZA for elizagen.org / PDP-10 ITS repo" }
+  - { with: leo-joskowicz, kinds: [cars_2027_eliza_line], why: "Heinz invites Joskowicz ELIZA/Weizenbaum HCI — same conversational lineage" }
+  - { with: heinz-lemke, kinds: [thread_bridge], why: "Weizenbaum met Heinz MIT 1969 PIXIE tour — ethics + ELIZA + PIXIE same summer" }
+  - { with: richard-stallman, kinds: [lab_lisp_peer], why: "Same ITS/MACLISP culture; Emacs DOCTOR vs RMS transcript" }
   - { with: david-henkel-wallace, kinds: [lab_lisp_peer], why: "Overlapping AI Lab Lisp era" }
   - { with: will-wright, kinds: [proto_sims_precedent], why: "ANIMAL's per-user emotional state — social memory decades before The Sims" }
+
+places:
+  - { id: mit-ai-its, name: "MIT-AI / ITS / PDP-10", things: [doctor_maclisp, animal, pitmanual] }
+  - { id: elizagen, name: "elizagen.org", note: "Lars + KMP MACLisp ELIZA preservation" }
 
 abilities:
 - id: TEACH-MACLISP
@@ -109,21 +117,25 @@ abilities:
   combos_with:
   - ALAN-MICROWORLD
 
-- id: DOCTOR-ELIZA
-  name: DOCTOR / ELIZA Lineage
-  type: triggered
-  mana: "{U}"
+- id: DOCTOR-WEIZENBAUM-CLASS
+  name: DOCTOR — Weizenbaum's Student
+  type: legacy
+  mana: "{U}{U}{B}"
   conditions:
-  - segment_topic_in: [eliza, doctor, parry, weizenbaum, chatbots]
+  - segment_topic_in: [eliza, doctor, parry, weizenbaum, chatbots, its, maclisp]
   advertisement:
-    method: doctorEliza
-    signature: doctorEliza() → MIT-AI conversational lineage
+    method: doctorWeizenbaumClass
+    signature: doctorWeizenbaumClass(weizenbaum) → MACLisp DOCTOR on ITS after 6.030
     score_when:
+    - trigger: kmp_guest_episode
+      weight: 0.96
+    - trigger: joe_weizenbaum_memorial
+      weight: 0.94
     - trigger: hn_eliza_thread
-      weight: 0.85
-  effect: Reaction — DOCTOR, ELIZA, PARRY; Kent typed transcripts manually; scale question for LLM era.
-  verifiable: HN threads; public ELIZA history
-  combos_with: []
+      weight: 0.88
+  effect: "Weizenbaum taught KMP's Lisp class; KMP wrote DOCTOR on ITS — 'hack upon hack' after Bernie Cosell's BBN ELIZA. Don played it as ARPANET tourist."
+  verifiable: "sources/weizenbaum-class-doctor-hn.yml; maclisp.info/funnies; elizagen.org; HN 38402813, 39762949"
+  combos_with: [ELIZA, ANIMAL-EMOTIONAL-STATE, COMPUTER-POWER-HUMAN-REASON]
 
 - id: MOO-INTEREST
   name: MOO Interest
@@ -149,4 +161,7 @@ invoke_rules:
 
 see_also:
 - path: README.md
+- path: sources/weizenbaum-class-doctor-hn.yml
+- path: ../joe-weizenbaum/CARD.yml
+- path: ../heinz-lemke/pixie-constellation.yml
 - path: ../don-hopkins/CARD.yml

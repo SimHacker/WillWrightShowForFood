@@ -14,10 +14,24 @@ meta:
   card_type: guest_skills
 card:
   name: Lars Brinkhoff
-  title: Keeper of ITS
+  title: Keeper of ITS · Elizagen Archaeologist
   rarity: rare
   signifier: 🖥️
-  flavor: Make it so — boot the AI Lab on emulated iron.
+  flavor: Make it so — boot the AI Lab on emulated iron; dig up KMP's MACLisp ELIZA for elizagen.org.
+
+relationships:
+  - { with: heinz-lemke, kinds: [co_guest, emulator], why: "PDP-7 light pen + Type 340 — make PIXIE runnable; Jul 2026 thread" }
+  - { with: kent-pitman, kinds: [eliza_archaeologist], why: "Discovered KMP MACLisp ELIZA for elizagen.org (HN 39762949)" }
+  - { with: joe-weizenbaum, kinds: [eliza_lineage], why: "Preservation chain: Weizenbaum ELIZA → KMP DOCTOR → Lars repo" }
+  - { with: don-hopkins, kinds: [its_revival_partner], why: "PDP-10/ITS boot; MACLISP drive invitation; film logo thread" }
+  - { with: david-rosenthal, kinds: [emulator_trio], why: "PDP-7/340 Hex draft; async PIXIE revival co-bud" }
+  - { with: neil-wiseman, kinds: [hardware_revival], why: "Same Cambridge PDP-7 stack Lars helps make runnable" }
+
+places:
+  - { id: pdp10-its-repo, name: "PDP-10/ITS GitHub", url: "https://github.com/PDP-10/its" }
+  - { id: elizagen, name: "elizagen.org", note: "KMP MACLisp ELIZA discovery" }
+  - { id: cambridge-pdp7, name: "Cambridge PDP-7 + DEC 340", thing: "PIXIE emulator target" }
+
 abilities:
 - id: BOOT-ITS
   name: Boot ITS
@@ -96,6 +110,38 @@ abilities:
   verifiable: pdp10-maclisp-drive invitation
   combos_with:
   - WILL-SIMULATE-CITY
+- id: ELIZAGEN-KMP-ELIZA
+  name: Elizagen — KMP ELIZA Discovery
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - segment_topic_in: [eliza, doctor, elizagen, maclisp, its]
+  advertisement:
+    method: elizagenKmpEliza
+    signature: elizagenKmpEliza(repo) → Weizenbaum class → DOCTOR → preserved source
+    score_when:
+    - trigger: hn_eliza_thread
+      weight: 0.92
+    - trigger: kent_pitman_guest_episode
+      weight: 0.9
+  effect: "Lars found KMP's MACLisp ELIZA for elizagen.org — closes the loop from Weizenbaum's class to runnable ITS source."
+  verifiable: "HN 39762949; elizagen.org; ../kent-pitman/sources/weizenbaum-class-doctor-hn.yml"
+  combos_with: [DOCTOR-WEIZENBAUM-CLASS, ELIZA, BOOT-ITS]
+- id: PIXIE-LIGHT-PEN-REVival
+  name: PIXIE Light-Pen Revival
+  type: activated
+  mana: '{R}{U}{U}'
+  conditions:
+  - segment_topic_in: [pixie, light-pen, pdp7, dec340, emulator]
+  advertisement:
+    method: pixieLightPenRevival
+    signature: pixieLightPenRevival(PDP7, listing) → radial menus on emulated iron
+    score_when:
+    - trigger: heinz_listing_delivered
+      weight: 0.94
+  effect: "Boot Cambridge PIXIE on emulated PDP-7/340 — Heinz's ~5000-word listing as show artifact."
+  verifiable: "Jul 2026 thread; david-rosenthal Hex draft; heinz-lemke CARD"
+  combos_with: [PIXIE-RADIAL-MENUS, BOOT-ITS]
 - id: FILM-LOGO-THREAD
   name: Film Logo Thread
   type: activated
@@ -119,3 +165,7 @@ see_also:
   why: Bio girder — invitation status
 - path: invitation.md
   why: Public invitation document
+- path: ../kent-pitman/sources/weizenbaum-class-doctor-hn.yml
+  why: ELIZA discovery receipts
+- path: ../heinz-lemke/pixie-constellation.yml
+  why: Emulator revival thread

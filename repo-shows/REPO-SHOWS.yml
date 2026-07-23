@@ -102,6 +102,7 @@ seeds:
   skill-creation.yml: "Group: Skill Creation — authoring Anthropic + MOOLLM skills as constructionism/PBD for the LLM era. Candidates: Walter Bender, Henry Minsky, Peter Norvig, + people into Claude skills + constructionism (to vet)."
   remembering-douglas-engelbart.yml: "★ Group/memorial: Remembering Doug Engelbart — Ted Nelson + Alan Kay + Yoot Saito + Bret Victor. Read the INTENT, not the feature list. Memorial mode. PLANTED."
   remembering-jef-raskin.yml: "★ Memorial seed for Jef Raskin (d. 2005) only. possible_discussants = connections, not invitations. PLANTED."
+  richard-stallman-its-minsky-memorial.yml: "Solo: RMS — ITS/TECO/MACLISP, tourist policy, remembering Marvin (humor paper), copyleft envelope (68k manual). Async-first; full context anti-misquote. Emacs/Unipress optional."
   remembering-the-constructionists.yml: "★ Group/memorial: Remembering the Constructionists — Piaget → Papert → Minsky (memorial mode); discussants Alan Kay, Walter Bender, Brian Harvey, Cynthia Solomon, Ken Kahn, Jens Mönig, Henry & Margaret Minsky, David Levitt, Gary Drescher, Steve Kommrusch. Minds are built, not filled. PLANTED."
   margaret-minsky/: "Solo: Margaret Minsky — haptics (the Sandpaper force-feedback system), Atari Cambridge / MIT Media Lab, the first wired family. Daughter of Marvin. PLANTED."
   henry-minsky/: "Solo: Henry Minsky — Society of Mind in modern AI (Leela AI), OpenLaszlo declarative UI, skill-authoring as constructionism. Son of Marvin; skill-creation candidate. PLANTED."

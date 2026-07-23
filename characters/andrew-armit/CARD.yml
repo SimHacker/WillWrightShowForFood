@@ -1,0 +1,71 @@
+# CARD — Andrew Armit (public portrayal). NOT Andrew Armit.
+
+room:
+  id: andrew-armit
+  name: Andrew Armit
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+card:
+  name: Andrew Armit
+  title: Multipatch · Utah PDP-7 · ICON
+  rarity: rare
+  signifier: "📐"
+  flavor: Alan Kay in awe — Coons patches on a PDP-7 while Cambridge was ignored in the US canon.
+
+relationships:
+  - { with: heinz-lemke, kinds: [cambridge_peer, co_author], why: "ICON / Lloyd's Register FEM papers 1974–75" }
+  - { with: alan-kay, kinds: [utah_visitor_mutual_respect], why: "Kay Utah grad student awe; Armit remembers Kay the same way" }
+  - { with: ivan-sutherland, kinds: [utah_milieu], why: "Utah graphics era — parallel to PIXIE Cambridge line" }
+  - { with: neil-wiseman, kinds: [cambridge_contemporary], why: "Same lab PDP-7 time-sharing era" }
+  - { with: don-hopkins, kinds: [film_hunt], why: "Don asked to sniff Multipatch movie/video" }
+
+places:
+  - { id: cambridge-pdp7, name: "Cambridge PDP-7 + Titan — Multipatch" }
+  - { id: utah-1968, name: "University of Utah visitor ~1968–69" }
+  - { id: haslingfield, name: "Haslingfield, near Cambridge" }
+
+abilities:
+- id: MULTIPATCH-UTAH
+  name: Multipatch at Utah
+  type: legacy
+  mana: "{U}{U}{U}"
+  conditions:
+  - segment_topic_in: [coons-patches, utah, pdp7, cad, cambridge]
+  advertisement:
+    method: multipatchUtah
+    signature: multipatchUtah(PDP7) → interactive 3D before US textbooks noticed Cambridge
+    score_when:
+    - trigger: alan_kay_anecdote_request
+      weight: 0.91
+  effect: "Extended Utah visitor — Coons-patch CAD on PDP-7; Kay: 'quite impressive.'"
+  verifiable: alan-kay-utah-coons-patches.md; armit.com
+  combos_with: [SKETCHPAD, PIXIE-RADIAL-MENUS]
+
+- id: ICON-LLOYDS
+  name: ICON — Lloyd's Register
+  type: legacy
+  mana: "{R}{U}"
+  conditions:
+  - segment_topic_in: [fem, ships, icon, cambridge-cad]
+  advertisement:
+    method: iconLloyds
+    signature: iconLloyds(nastran) → NASTRAN data creation interactively
+    score_when:
+    - trigger: heinz_cambridge_storyline
+      weight: 0.85
+  effect: "1974–75 papers with Heinz — advanced software techniques in computer graphics."
+  verifiable: Lemke & Armit GI 74; Armit & Lemke CAD Journal 75
+  combos_with: [PIXIE-RADIAL-MENUS]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: invitation.md, why: "Draft invite" }
+  - { path: sources/alan-kay-utah-coons-patches.md, why: "Kay awe receipt" }

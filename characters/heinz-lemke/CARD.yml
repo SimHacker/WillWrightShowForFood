@@ -1,0 +1,118 @@
+# CARD — Heinz U. Lemke (public portrayal). NOT Heinz U. Lemke.
+# Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: heinz-lemke
+  name: Heinz U. Lemke
+  type: [invitation, guest, portrayal, host]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+card:
+  name: Heinz U. Lemke
+  title: PIXIE · Radial Menus · CARS Founder
+  rarity: mythic
+  signifier: "🥧"
+  flavor: Five thousand words of PDP-7 assembler — and the menus were radial before the mouse was cheap.
+
+relationships:
+  - { with: neil-wiseman, kinds: [phd_supervisor, co_author], why: "Rainbow Group; PIXIE + RAINBOW papers; PDP-7↔Titan link" }
+  - { with: maurice-wilkes, kinds: [phd_patron], why: "Wilkes invoked a medieval statute to admit Heinz — PIXIE became possible" }
+  - { with: john-hiles, kinds: [co_author], why: "PIXIE (1969) + RAINBOW (1972)" }
+  - { with: andrew-armit, kinds: [cambridge_peer, co_author], why: "ICON / Lloyd's Register FEM; Cambridge ignored in US canon" }
+  - { with: ivan-sutherland, kinds: [north_star], why: "Sketchpad opened; PIXIE six years later with light pen + radial menus" }
+  - { with: joe-weizenbaum, kinds: [met_1969, ethical_lineage], why: "MIT on US tour; decades TU Berlin; conscientious objector to AI dominance" }
+  - { with: don-hopkins, kinds: [correspondent, co_host], why: "Flight of the PIXIE; CHM pitch; pie-menu credit line; Jul 2026 thread host" }
+  - { with: lars-brinkhoff, kinds: [co_guest, emulator], why: "PDP-7 light pen + Type 340 — make PIXIE runnable" }
+  - { with: david-rosenthal, kinds: [co_guest, cambridge_peer], why: "Same PDP-7/Titan era; Titan-not-terminal correction" }
+  - { with: roy-eagleson, kinds: [friend, educator_bridge], why: "Nagoya 2026; brought Roy into thread; CARS 2027 student PIXIE slot" }
+  - { with: leo-joskowicz, kinds: [cars_colleague, berlin_2027], why: "Invited ELIZA/Weizenbaum HCI session" }
+  - { with: mario-cypko, kinds: [phd_supervisor, collaborator], why: "Model-Guided Medicine; Human-AI at CARS 2027" }
+  - { with: alan-kay, kinds: [thread_guest], why: "Light pen vs RAND tablet; Wilkes↔PARC; Andrew Armit Utah memories" }
+  - { with: will-wright, kinds: [thread_guest], why: "Modelling / CARS game-thinking proposals" }
+
+places:
+  - { id: cambridge-1967, name: "Cambridge Math Lab", event: "First lecture 1 Oct 1967" }
+  - { id: pdp7-office, name: "PDP-7 + DEC 340", thing: "~5000-word listing + light pen drivers" }
+  - { id: nagoya-2026, name: "CARS 40th — Nagoya", date: "2026-07-02..05" }
+  - { id: berlin-2027, name: "CARS 2027 HCI — Berlin", date: "2027-06-29" }
+  - { id: black-forest, name: "Black Forest farmhouse", note: "Memoir installments; barn archives" }
+
+abilities:
+- id: PIXIE-RADIAL-MENUS
+  name: PIXIE Radial Menus
+  type: legacy
+  mana: "{R}{R}{U}"
+  conditions:
+  - segment_topic_in: [pixie, pie-menus, radial-menus, light-pen, hci]
+  advertisement:
+    method: pixieRadialMenus
+    signature: pixieRadialMenus(lightPen, legalActionsOnly) → control lightbuttons around cross
+    score_when:
+    - trigger: audience_sees_first_pie_menus
+      weight: 0.97
+    - trigger: don_credits_without_claiming_invention
+      weight: 0.93
+  effect: "1969 light-pen CAD with radial 'control lightbuttons' — documented prior art Don cites in CHI'88."
+  verifiable: "PIXIE paper 1969; Wiseman radial-menu notes; donhopkins.com/piepaper"
+  combos_with: [SKETCHPAD, DON-PIE-MENUS-CHI88]
+
+- id: PDP7-TITAN-SATELLITE
+  name: PDP-7 ↔ Titan
+  type: legacy
+  mana: "{U}{U}{U}"
+  conditions:
+  - segment_topic_in: [pdp7, distributed-systems, titan, emulator]
+  advertisement:
+    method: pdp7Titan
+    signature: pdp7Titan(interactiveModel) → simulate on Titan, edit on PDP-7
+    score_when:
+    - trigger: david_rosenthal_correction_on_air
+      weight: 0.91
+  effect: "PDP-7 was NOT a dumb terminal — interactive graph models in 8K words, simulation on Titan."
+  verifiable: heinz-lemke Jul 2026 emails; Wiseman obituary 'first distributed system'
+  combos_with: [BOOT-ITS, PRESERVE-CPU]
+
+- id: CARS-FOUNDER
+  name: CARS Founder
+  type: activated
+  mana: "{W}{G}"
+  conditions:
+  - segment_topic_in: [cars, model-guided-medicine, surgery, clinical-ai]
+  advertisement:
+    method: carsFounder
+    signature: carsFounder(congress) → 1800 manuscripts/year + Nagoya→Berlin arc
+    score_when:
+    - trigger: mario_or_leo_clinical_segment
+      weight: 0.88
+  effect: "Four decades of Computer Assisted Radiology and Surgery — bridge from PIXIE to the OR."
+  verifiable: cars-int.org; IJCARS
+  combos_with: [MARIO-HUMAN-AI-MODEL, LEO-ELIZA-HCI]
+
+- id: CONSCIENTIOUS-OBJECTOR
+  name: Conscientious Objector
+  type: triggered
+  mana: "{W}"
+  conditions:
+  - segment_topic_in: [weizenbaum, ai-ethics, model-science]
+  advertisement:
+    method: conscientiousObjector
+    signature: conscientiousObjector() → human not machine is the measure
+    score_when:
+    - trigger: don_k_line_on_air
+      weight: 0.9
+  effect: "Army objector → ethical software objector — Don's coinage honors Weizenbaum's line."
+  verifiable: Jul 2026 correspondence; Weizenbaum 1976
+  combos_with: [COMPUTER-POWER-HUMAN-REASON]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: pixie-constellation.yml, why: "People + places graph" }
+  - { path: CHARACTER.yml, why: "Invitation status" }
+  - { path: ../joe-weizenbaum/CARD.yml, why: "MIT 1969 + ethics combo" }
