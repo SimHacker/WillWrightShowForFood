@@ -1,0 +1,56 @@
+# Cyrus Shaoul — public profile receipts (invitation portrayal)
+# NOT the person. Summarized from public sources; subject may correct.
+
+subject:
+  name: Cyrus Shaoul
+  linkedin: https://www.linkedin.com/in/cyrus-shaoul/
+  site: https://cyrusshaoul.com/
+  leela_team: https://www.leela.ai/
+
+current_role:
+  company: Leela AI
+  title: "Co-Founder, Chief Customer Officer"
+  location: "Somerville, MA (1070 Broadway)"
+  prior_title: "CEO (Jul 2017 – Oct 2025)"
+  co_founders_note: "Leela leadership met as students at MIT (company team page)"
+
+education:
+  - { degree: "BS, Brain and Cognitive Science", school: MIT, years: "1989–1993", note: "Psycholinguistics under Steven Pinker (cyrusshaoul.com)" }
+  - { degree: "MSc, Cognitive Neuroscience", school: University of Alberta, years: "2004–2007" }
+  - { degree: "PhD, Cognitive Psychology / Psycholinguistics", school: University of Alberta, years: "2007–2012", advisor: "Chris Westbury", focus: "mental processing of word n-grams" }
+  - { degree: "Postdoc", school: Universität Tübingen, years: "2012–2015", focus: "quantitative psycholinguistics (Harald Baayen)" }
+
+career_highlights:
+  digital_garage:
+    role: "Co-founder / CTO"
+    years: "1995–2001"
+    note: "Infoseek Japan; dominant search engine at start of Internet age in Japan; IPO"
+    joichi_ito: "Joichi Ito: Cyrus's email to get together got Eccosys started and eventually led to Digital Garage"
+  eccosys:
+    role: "Co-founder"
+    years: "1994–1997"
+    note: "Early Internet technology in Japan; merged with Digital Garage 1997"
+  leela:
+    role: "Co-founder; CEO then CCO"
+    since: "~2017"
+    commercial: "Manufacturing deployments from 2021"
+    product: "Visual intelligence — measurement-based AI vision for shop floor; neuro-symbolic hybrid"
+
+publications:
+  - { title: "The myth of cognitive decline: Non-linear dynamics of lifelong learning", venue: "Topics in Cognitive Science", year: 2014 }
+  - { title: "Formulaic sequences: Do they exist and do they matter?", venue: "Benjamins", year: 2011 }
+  - { title: "Exploring lexical co-occurrence space using HiDEx", venue: "Behavior Research Methods", year: 2010 }
+  - { title: "Self-Supervised Learning for Multi-Goal Grid World", venue: "PMLR 131", year: 2020, authors: "Kommrusch, H. Minsky, M. Minsky, Shaoul" }
+
+open_source:
+  - HiDEx — High Dimensional Explorer (HAL semantic-space tooling)
+  - NDL R package
+
+languages: [English, Japanese, French, Spanish, "German (a little)"]
+
+leela_product_thesis:
+  source: leela.ai team / about pages
+  bullets:
+    - "Visual intelligence without machine data or manual input"
+    - "Deploy quickly; scale across sites; worker privacy safeguards"
+    - "Spot problems early; spread best practices; productivity + safety + quality"

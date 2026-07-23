@@ -5,16 +5,20 @@ character:
   id: cyrus-shaoul
   name: "Cyrus Shaoul"
   type: invitation
-  signifier: "🧩"
+  signifier: "🏭🧠🇯🇵"
   status: living
-  field: "Co-founder, Leela AI; computational learning / psycholinguistics background (to confirm specifics)"
+  field: "Co-founder & Chief Customer Officer, Leela AI — visual intelligence for manufacturing; computational cognitive modeling; Japan internet pioneer (Digital Garage / Eccosys)"
   home: characters/cyrus-shaoul/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent_level: 3
   authored_by: don-hopkins
-  note: "Host-authored from public sources + colleague knowledge (Don's Leela crew). Cyrus may edit, reduce, or delete anytime. Some background flagged to confirm."
+  note: |
+    Colleague portrayal — Don and Cyrus work together at Leela AI. Built from public sources
+    (Leela site, LinkedIn, cyrusshaoul.com, Onlab Resi-Tech interview, publications) plus
+    colleague context. Cyrus may shape, delay, reduce, or delete any of this portrayal at any time.
+  subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
   status: draft
@@ -23,30 +27,104 @@ invitation:
   show_seed: repo-shows/leela-ai/
 
 bio:
-  summary: "**Cyrus Shaoul** — a **co-founder of Leela AI** and co-author on Leela's self-supervised grid-world learning paper (Kommrusch, H. Minsky, M. Minsky, Shaoul, 2020). Background in computational models of learning."
-  facts_to_confirm:
-    - "Exact title/role at Leela AI"
-    - "Prior affiliations + a public link (site / Google Scholar / LinkedIn)"
-    - "Computational-linguistics / learning-model background (confirm before citing specifics)"
+  summary: |
+    **Cyrus Shaoul** — co-founder and **Chief Customer Officer** at **Leela AI** (Somerville, MA),
+    which delivers **visual intelligence** to manufacturers: measurement-based AI vision that
+    reveals what is actually happening on the shop floor without relying on machine data or
+    manual input. Leela's leadership met as MIT students; Cyrus holds a **BS in Brain and
+    Cognitive Science from MIT** (studied psycholinguistics under Steven Pinker) and a **PhD
+    from the University of Alberta** (word n-grams and mental processing, Chris Westbury),
+    with postdoctoral work in quantitative psycholinguistics at **Universität Tübingen**
+    (Harald Baayen).
 
-why_invited:
-  leela_cofounder: "A founder's-eye view of Leela AI — how the visual-intelligence system learns, and the ideas it carries forward."
-  learning_models: "Computational models of learning — a bridge between the Society-of-Mind / schema-learning lineage and modern ML."
+    Before Leela he co-founded **Eccosys** and **Digital Garage** in Japan with Joichi Ito and
+    others — CTO through the Infoseek Japan era to IPO — after an NTT internship on large-scale
+    VR communities and MIT Media Lab / Project Athena work. Author on Leela's self-supervised
+    grid-world learning paper (Kommrusch, H. Minsky, M. Minsky, Shaoul, 2020). Open-source
+    tools include **HiDEx** (High Dimensional Explorer) and the **NDL** R package. Publications
+    include *The myth of cognitive decline* (experience as escalating memory search, not decay)
+    and work on formulaic sequences in language.
+
+    As CCO he is on the factory floor constantly — deployment videos, customer case studies
+    (Schneider Electric distribution center), Axis Communications camera partnerships, and a
+    public voice for **neuro-symbolic AI**, **IA over AI**, and the thesis that **AI-readiness
+    is baloney** — meet manufacturers where they actually are.
+
+roles:
+  leela:
+    title: "Co-Founder, Chief Customer Officer"
+    prior: "CEO, Jul 2017 – Oct 2025"
+    since: "Co-founder, Leela AI (~2017); commercial deployments from 2021"
+  prior:
+    - "CTO, Digital Garage Inc. (1995–2001) — Infoseek Japan; IPO"
+    - "Co-founder, Eccosys Ltd. (1994–1997) — early Internet in Japan; merged into Digital Garage"
+    - "Associate Professor / Senior Academic Researcher, Landmark College (2015–2017)"
+    - "Postdoc, Universität Tübingen (2012–2015) — quantitative psycholinguistics"
+    - "PhD student, University of Alberta (2004–2012)"
+    - "Intern, NTT (1993–1994) — large-scale VR communities"
+    - "UROP, MIT Media Lab Interactive Cinema (Glorianna Davenport)"
+    - "Project Athena Online Consultant (OLC), MIT (1989–1992)"
+
+leela_colleagues:
+  note: "Don's CURRENT colleagues at Leela AI."
+  with: ["henry-minsky (CTO)", "milan-singh-minsky (VP Product)", "steve-kommrusch", "isabella-struckman", "art-medlar", "don-hopkins"]
+
+why_the_show_cares: |
+  Cyrus sits at the junction this repo keeps walking: **cognitive science → shipping AI**
+  (psycholinguistics, n-grams, formulaic sequences → concept-aware video understanding),
+  **Japan internet pioneer → Somerville factory floor**, and **neuro-symbolic hybrid models**
+  in a world drowning in LLM hype. He posts from the bench and the plant — Physical AI with
+  receipts, not slide decks. The CCO who listens on the shop floor is a natural Repo Show guest:
+  the customer voice, the deployment war stories, and the learning-models lineage behind Leela.
+
+public_voice:
+  themes:
+    - "Physical AI / visual intelligence on the shop floor — real industrial AI"
+    - "AI-readiness is pure baloney — meet manufacturers where they are (Automation World / Rick Rider)"
+    - "Neuro-symbolic hybrid since Day 1 at Leela — not LLM-only"
+    - "IA not AI — Intelligence Augmentation (David Tamés)"
+    - "Kaizen culture — Mark Graban; fix the hose on the floor, not just the big-dollar idea"
+    - "MIT 6.004 — engineer with your hands; the real world is messy (JARVIS jet-engine challenge)"
+  partners_mentioned: ["Axis Communications (P-3265)", "Schneider Electric (Athens DC)", "Universal Robots (UR5e at Automate)"]
+
+correspondence_and_contact:
+  linkedin: "https://www.linkedin.com/in/cyrus-shaoul/ — 1st connection with Don; factory-floor and bench videos"
+  site: "https://cyrusshaoul.com/"
+  leela: "https://www.leela.ai/"
 
 show_suggestions:
-  - { seed: ../../repo-shows/leela-ai/, what: "Group — the Leela AI crew showing what they do (with Henry + Milan Minsky, Art Medlar, Steve Kommrusch, Isabella Struckman)" }
-  - { seed: ../../repo-shows/leela-ai/, what: "Solo / 1-on-1 — founding Leela AI + how the system learns" }
+  - { seed: ../../repo-shows/leela-ai/, what: "Group — Leela AI crew show-and-tell (Henry, Milan, Steve, Isabella, Art, Don)" }
+  - { seed: ../../repo-shows/leela-ai/, what: "Solo / 1-on-1 — factory floor to cognitive model: founding Leela, neuro-symbolic AI, and the customer voice" }
+  - { seed: ../../repo-shows/leela-ai/, what: "Duo with Henry — schema learning + deployment: the lab lineage meets the plant" }
 
 sources:
   wikipedia: null
-  web: []       # TODO: add a verified public link (Scholar / site) before citing specifics
+  local:
+    - sources/public-profile.yml
+    - sources/onlab-resi-tech-2021.md
+  web:
+    - "https://www.linkedin.com/in/cyrus-shaoul/"
+    - "https://cyrusshaoul.com/"
+    - "https://www.leela.ai/ — team page (CCO bio)"
+    - "https://onlab.jp/en/onlab-journal/ai-with-concept-awareness-how-leela-ai-lead-the-poc-to-success/ — Onlab Resi-Tech interview (Aug 2021)"
+    - "https://blog.se.com/ — Schneider Electric Leela case study (operational visibility, Athens DC)"
   papers:
     - { title: "Self-Supervised Learning for Multi-Goal Grid World: Comparing Leela and Deep Q Network (PMLR 131, 2020)", authors: "Kommrusch, H. Minsky, M. Minsky, Shaoul" }
-  blogs: []
+    - { title: "The myth of cognitive decline: Non-linear dynamics of lifelong learning", venue: "Topics in Cognitive Science, 2014" }
+    - { title: "Formulaic sequences: Do they exist and do they matter?", venue: "Benjamins, 2011" }
+    - { title: "Exploring lexical co-occurrence space using HiDEx", venue: "Behavior Research Methods, 2010" }
+  open_source:
+    - "HiDEx — High Dimensional Explorer (HAL semantic-space parameter explorer)"
+    - "NDL R package"
 
 see_also:
+  - { path: README.md, why: "Public-facing overview" }
+  - { path: invitation.md, why: "Invitation letter" }
+  - { path: ideas.md, why: "Interview hooks" }
   - { path: CARD.yml, why: "Invokable abilities for show segments" }
-  - { path: ../../repo-shows/leela-ai/, why: "Leela AI group/solo show" }
-  - { path: ../henry-minsky/, why: "Leela AI co-founder/CTO" }
-  - { path: ../milan-singh-minsky/, why: "Leela AI VP Product; grid-world paper co-author" }
+  - { path: ../../repo-shows/leela-ai/, why: "Leela AI group / solo show" }
+  - { path: ../henry-minsky/, why: "Leela co-founder/CTO; grid-world paper co-author" }
+  - { path: ../milan-singh-minsky/, why: "Leela VP Product; grid-world paper co-author" }
+  - { path: ../steve-kommrusch/, why: "Leela Sr AI Scientist; grid-world paper lead author" }
+  - { path: ../gary-drescher/, why: "Leela adviser — schema learning lineage Cyrus carries to customers" }
   - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

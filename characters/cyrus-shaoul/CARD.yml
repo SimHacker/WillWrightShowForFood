@@ -1,0 +1,69 @@
+# CARD — Cyrus Shaoul (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: cyrus-shaoul
+  name: Cyrus Shaoul
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+card:
+  name: Cyrus Shaoul
+  title: Factory Floor Cognitive Scientist
+  rarity: rare
+  signifier: 🏭
+  flavor: Meet manufacturers where they are — relations, not pixels.
+
+relationships:
+  - { with: henry-minsky, kinds: [cofounder, coauthor, colleague], why: "Leela AI; grid-world paper (2020); schema learning + deployment" }
+  - { with: milan-singh-minsky, kinds: [cofounder_colleague, coauthor], why: "Leela VP Product; grid-world paper" }
+  - { with: steve-kommrusch, kinds: [colleague, coauthor], why: "Grid-world paper lead author; verifiable ML" }
+  - { with: don-hopkins, kinds: [colleague, day_job_collaborator], why: "Leela AI colleagues; Don's invitation author" }
+  - { with: joichi-ito, kinds: [cofounder_history], why: "Eccosys → Digital Garage; Ito managed Cyrus at DG" }
+  - { with: gary-drescher, kinds: [company_adviser_lineage], why: "Leela adviser; schema-learning thread Cyrus carries to customers" }
+
+abilities:
+- id: SHOP-FLOOR-VISUAL-INTELLIGENCE
+  name: Shop Floor Visual Intelligence
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: shopFloorVisualIntelligence
+    signature: shopFloorVisualIntelligence(camera, plant) → operational truth
+    score_when:
+    - trigger: audience_sees_real_deployment
+      weight: 0.9
+- id: CONCEPT-AWARE-VIDEO
+  name: Concept-Aware Video (Not Pixels)
+  type: legacy
+  mana: '{U}'
+  conditions:
+  - segment_topic_in: [neuro-symbolic, cognitive-science, learning-models, psycholinguistics]
+  advertisement:
+    method: conceptAwareVideo
+    signature: relations(people, objects, env) → learn fast
+- id: AI-READINESS-BALONEY
+  name: AI-Readiness Is Baloney
+  type: triggered
+  mana: '{U}'
+  conditions:
+  - audience_claims: ["clean your data first", "AI-readiness", "reference architecture"]
+  advertisement:
+    method: meetManufacturersWhereTheyAre
+    signature: visualIntelligence(day1) → clean ops data without the fairy tale
+- id: DIGITAL-GARAGE-ORIGIN
+  name: Digital Garage Origin
+  type: legacy
+  mana: '{U}{U}'
+  conditions:
+  - segment_topic_in: [japan-internet, infoseek, startup-history, eccosys]
+  advertisement:
+    method: digitalGarageArc
+    signature: shibuya → IPO → PhD → Somerville
