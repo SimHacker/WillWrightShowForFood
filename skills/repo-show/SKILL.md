@@ -58,7 +58,7 @@ All clocks write into **one GitHub repo**:
 
 ### Producers + Show Notes (No Agenda mechanics, Repo Show ethics)
 
-**Listeners are Producers** — steal the participation loop from [No Agenda](https://www.noagendashow.net/), reject the conspiracy epistemology. Full spec: [`process/producers-and-show-notes.yml`](../../process/producers-and-show-notes.yml).
+**Listeners are Producers** — steal the participation loop from [No Agenda](https://www.noagendashow.net/); dodge the **charlatan triangle** (No Agenda contrarian deconstruction ↔ [Less Wrong](https://www.lesswrong.com/) rationalist superiority — same smarty-pants shape, different jerseys). Full spec: [`process/producers-and-show-notes.yml`](../../process/producers-and-show-notes.yml).
 
 | No Agenda | Repo Show |
 |-----------|-----------|

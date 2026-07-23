@@ -1,13 +1,14 @@
 # Producers + Show Notes — No Agenda mechanics, Repo Show ethics
 # Girder: repo-show-format.yml#producers | Skill: ../skills/repo-show/SKILL.md
-# Lineage: No Agenda (Adam Curry + John C. Dvorak) — steal the participation loop, reject the epistemology.
+# Lineage: No Agenda (participation loop) — contrast: No Agenda + Less Wrong charlatan cultures.
 
 meta:
   id: producers-and-show-notes
   coined: 2026-07-23
   one_line: |
     Listeners are Producers — clips, corrections, and optional support in git;
-    Show Notes is the newsletter that credits them. Same energy as No Agenda, none of the crazy bullshit.
+    Show Notes is the newsletter that credits them. Steal No Agenda's loop; dodge the
+    charlatan triangle (No Agenda ↔ Less Wrong ↔ smartypants certainty).
 
 lineage:
   no_agenda:
@@ -27,6 +28,39 @@ lineage:
       rule: |
         Repo Show Producers earn credit for **receipts**, not for **plots**.
         Merge to show-notes requires source, scope, and good faith — not 'what they don't want you to know.'
+
+  less_wrong:
+    # The other pole of the charlatan triangle — what Don meant by "pseudo-intellectual clueless smarty-pants"
+    what_they_got_right:
+      - "Actually trying to name biases and update on evidence (early Sequences spirit)"
+      - "Corrections culture — in theory"
+      - "Long-form thinking beats hot takes — in theory"
+    what_we_reject:
+      name: less_wrong_charlatan_mode
+      symptoms:
+        - "'I'm less wrong than you' as identity, not task"
+        - "Bayesian cosplay — confidence without calibration numbers"
+        - "Jargon as status (Sequences vocabulary, karma, 'rationalist')"
+        - "Fake objectivity — Gray Folk in Eval Genius terms"
+        - "Smartest-guy-in-the-room performance without a corrections desk that can fire you"
+      rule: |
+        Repo Show uses **declared bias + receipts**, not **undeclared superiority + vibes**.
+        Church of the Eval Genius grades; Less Wrong cosplayers grade themselves A+.
+
+charlatan_triangle:
+  # No Agenda => Less Wrong — same animal, different team jerseys
+  shared_shape: |
+    High verbal IQ + participatory status game + no institutional guardrails = **charlatans thrive**.
+    Producers (No Agenda) and rationalists (Less Wrong) both reward sounding smart over being correct.
+  poles:
+    no_agenda: "Right-contrarian media deconstruction — 'I see the plot'"
+    less_wrong: "Left-rationalist superiority — 'I see the bias' (yours, not mine)"
+    both: "Smarty-pants epistemology — vocabulary, certainty theater, audience selects for the heel/genius"
+  repo_show_third_way:
+    - "TicketPR + merge = corrections desk with teeth (git history)"
+    - "Declared bias mandatory — Eval Genius, not Gray Folk or Producer-class certainty"
+    - "Producer credit for merged fixes, not for spiciest thread"
+    - "RTFR — the repo is the receipt; talk is cheap until it's a PR"
 
 steal_rename:
   no_agenda: "No Agenda"
@@ -92,6 +126,7 @@ anti_bullshit_gates:
     - "Philahue curates for interesting + verified, not for heat"
   contrast:
     na_reward: "Spiciest deconstruction wins airtime"
+    lw_reward: "Most 'rational' sounding comment wins karma"
     rs_reward: "Best receipt wins merge; spiciest unsubstantiated take wins nothing"
   eval_genius_adjacent: |
     Church of the Eval Genius self-eval program is Y Combinator-sponsored satire.
@@ -109,7 +144,7 @@ integration:
     - "repo-shows/_TEMPLATE/SHOW-NOTES.yml"
     - "repo-shows/_TEMPLATE/show-notes/clips/README.md"
 
-k_lines: [TICKETPR, HOMEFUN, SHOW-NOTES, PRODUCER-RECEIPTS]
+k_lines: [TICKETPR, HOMEFUN, SHOW-NOTES, PRODUCER-RECEIPTS, LESS-WRONG-CHARLATAN, CHARLATAN-TRIANGLE]
 
 see_also:
   repo:
@@ -119,5 +154,6 @@ see_also:
     - ../skills/repo-show/SKILL.md
     - ../characters/don-philahue/
   contrast:
-    - "No Agenda Show — https://www.noagendashow.net/ (lineage, not endorsement)"
-    - "No Agenda Show Notes — https://mailchi.mp/nashownotes (the format we mirror without the culture)"
+    - "No Agenda Show — https://www.noagendashow.net/ (participation loop — steal mechanics, reject epistemology)"
+    - "No Agenda Show Notes — https://mailchi.mp/nashownotes (newsletter format in git)"
+    - "Less Wrong — https://www.lesswrong.com/ (rationalist charlatan pole — reject superiority cosplay; keep falsifiability if earned)"
