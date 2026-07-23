@@ -1,0 +1,44 @@
+# SHOW — Ken Kahn — The Learner's Apprentice (ToonTalk, birds, and the essay the machines argued over)
+# Planted seed. Inherits from the SHOW skill (/skills/repo-show).
+
+show:
+  id: ken-kahn
+  title: "A Repo Show with Ken Kahn — The Learner's Apprentice"
+  type: solo
+  host: Don Hopkins
+  guests: ["Ken Kahn"]
+  with: ["Brian Harvey", "Jens Mönig", "Cynthia Solomon", "Margaret Minsky", "Ted Selker"]   # dream co-guests — Snap! ecosystem + Logo culture + NPUC archive
+  character: characters/ken-kahn/
+  topic: "Fifty years of constructionist AI — from Ani (films from story descriptions, 1979) through ToonTalk's birds and robots to AI blocks for Snap! and co-creating with chatbots — plus the July 2026 machine-written AI-history essay and what an eyewitness adds when the archive is in the weights."
+  status: seed
+  consent: not_yet_asked
+
+why_him:
+  ani_1979: "MIT thesis (advisor Carl Hewitt): animated films from vague story descriptions — text-to-video with provenance, 45 years early, in the actor model."
+  toontalk: "Concurrent constraint programming as a video-game city — robots trained by demonstration, birds carrying messages to nests; the direct inspiration for MOOLLM's proposed Bird IPC skill."
+  ai_blocks: "eCraft2Learn AI blocks for Snap! — speech, ML, pattern recognition, kid-accessible in the browser."
+  learners_apprentice: "The book (The Learner's Apprentice) and its 2026 public demonstrations: English-rules Lemmings, word-age fonts, the unicorn app, NotebookLM artifacts."
+  the_essay: "toontalk.github.io/misc/ai-history-two-claims.html — Claude wrote it, ChatGPT reviewed it, Ken refereed; two AI-history myths examined by the descendants of the field they mythologize. He road-tested this show's production method before we could invite him."
+  npuc: "Shared the Almaden NPUC stage with Don (photo in his room); Ted Selker holds seven years of NPUC tapes."
+
+dream_segments:
+  - "The essay the machines argued over — walk the ChatGPT share link on screen: demanded citations, the page-379 receipt, the spiral neither model could draw."
+  - "Birds for worms — co-design the MOOLLM Bird skill live, credited; ToonTalk's message birds become the repo's IPC wildlife."
+  - "Ani, 1979 — run the generative-AI segment backwards: text-to-video with provenance, in Hewitt's actors."
+  - "Learner's Apprentice live — build something small with a chatbot on air, his method, audience choosing the goal."
+  - "NPUC tape fishing — the Almaden photo, the dating dispute as a historiography miniature, and Ted's archive."
+  - "Perceptrons, corrected in both directions — with the marvin-minsky room open: fixing Minsky's overclaim by attribution, and the myth about his book by chronology."
+
+format:
+  live: true
+  audience_qa: true
+  note: "Warm contact (Amsterdam, ebike lent 2026); consent not yet asked. Solo, or woven with the Snap!/Logo constellation."
+
+ties_to:
+  - ../../characters/ken-kahn/
+  - ../../characters/ken-kahn/ideas.md
+  - ../../characters/ken-kahn/sources/2026-chatbot-experiments.md
+  - ../../characters/ken-kahn/sources/npuc-almaden-panel.md
+  - ../../characters/marvin-minsky/
+  - ../../characters/brian-harvey/
+  - ../../characters/seymour-papert/

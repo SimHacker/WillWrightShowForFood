@@ -1,0 +1,198 @@
+Source URL: https://toontalk.github.io/misc/ai-history-two-claims.html
+Title: Two Stories We Tell About AI's Past
+
+AI HISTORIOGRAPHY · WORKING NOTESJULY 2026
+
+Two claims, examined against the historical record
+
+# The book that killed a field, and the rules that were too brittle
+
+Many popular histories of AI retell two stories: that Minsky and Papert's _Perceptrons_ (1969) got neural-network funding cut — perhaps deliberately — and that the AI it left standing was rule-based, dominant for decades, and doomed by the brittleness of rules until AlexNet arrived. Both stories contain something true. Neither survives contact with the record in its usual form.
+
+ After the cover of _Perceptrons_ (MIT Press, 1969). One of these figures is a single connected curve; the other is two separate curves. Minsky & Papert proved that no diameter-limited perceptron can tell which is which. David Block's reply: neither can you, at a glance — so why treat this as damning for a model of perception? The figures here are constructed identically except for a single break, sized to the ordinary gap between windings, hidden somewhere in one of them.Which is which?  Left: one curve. Right: two — the break sits in the right figure's upper-left windings, about a third of the way out. 
+
+Claim 1 · The funding cut Claim 2 · Brittle rules Why the myths persist Sources 
+
+Claim 1
+
+## Did _Perceptrons_ get neural-network funding cut — and was that the intent?
+
+In 1969 Minsky and Papert published _Perceptrons_, proving that perceptrons couldn't even compute XOR. Funding agencies read it, neural-network research was defunded, and the field died for fifteen years. Some say this was the point: to redirect ARPA money toward symbolic AI.
+
+**Specimens of the genre:** Olazaran catalogues the capsule form — overselling, then the 1969 book, then a near-total shift of funding from neural nets to symbolic AI, then a fifteen-year dry spell (his example is Cruz 1988)O93. Variants open neural-network textbooks of the late 80s and course notes to this day.
+
+### What the book actually argued
+
+The folk version misremembers the mathematics. Minsky and Papert did not "discover" that a single-layer perceptron can't compute XOR — the linear-separability limit was well known, and Rosenblatt himself had catalogued his machine's problems at length in _Principles of Neurodynamics_ (1962), including a fifteen-item list of open problems that put multilayer training and figure–ground separation at the topR62. The book's real content is a set of _scaling_ results about a precisely defined class: single-layer perceptrons whose association units are order-limited or diameter-limited. For such machines they proved that parity requires an association unit that sees the entire retina, and that the order needed for connectedness grows without bound as the retina grows — so the perceptron's virtue, parallel combination of _local_ evidence, cannot survive scaling on these predicates. They also accepted, and praised, Rosenblatt's convergence theoremMP69.
+
+**The XOR shorthand.** XOR is simply the smallest instance of parity. Reducing the book to "perceptrons can't do XOR" turns a theory of what local, parallel evidence-combining can compute into a trivium — and makes the later "but a hidden layer solves XOR!" rebuttal look more decisive than it was. Minsky and Papert knew a network with one hidden layer solves XOR; their skepticism was about _learning_ in multilayer machines, not representation.
+
+On multilayer networks — the thing the field actually needed — the book offers not a proof but a conjecture, flagged as such:
+
+> "…our intuitive judgment that the extension is sterile."Minsky & Papert, Perceptrons (1969), §13.2 — immediately followed by a call to prove or refute the judgment. 
+
+That conjecture aged badly: Werbos described backpropagation in his 1974 thesis, and Rumelhart, Hinton and Williams demonstrated its promise in 1986 — on small problems, but persuasively enough to make it the field's workhorse. It was, though, an honest conjecture about a problem the principal US perceptron groups had already failed to crack — and said so in print (Hawkins's 1961 survey; Nilsson's 1965 _Learning Machines_)O93.
+
+**Not literally everyone failed:** in the USSR, Ivakhnenko's GMDH (1965–71) was training deep polynomial networks layer by layer while the perceptron controversy raged. "The field" in this story means the US perceptron mainstream — a scope worth keeping visible.
+
+Minsky returned to the question of scope a quarter-century later, in his foreword to Siu, Roychowdhury and Kailath's _Discrete Neural Computation_ (1995) — the book he presented as the successor to _Perceptrons_. The standard objection, that the results apply only to two-layer nets and multilayer networks escape them, was in his telling misdirected: _Perceptrons_ almost never asked _competence_ questions (what a network can represent — any Boolean function, given one hidden layer and enough units) but _scalability_ questions under bounded fan-in, where, he claimed, unit and connection counts still tend to grow exponentially, with extra layers shrinking the exponents rather than removing themF95. As a general statement about bounded fan-in that is too strong — with depth unrestricted, fan-in-2 circuits compute parity in linear size — and the hard scaling results of the threshold-circuit literature attach to shallow, restricted network familiesSRK95. But the clarification of scope stands: the 1969 theorems were about resource growth in a constrained class, they were never refuted by multilayer networks, and reading them as claims about what multilayer networks can compute was always a misreading.
+
+### The timeline problem
+
+The strongest evidence against the simple causal story is chronological. Olazaran's sociological reconstruction — built on interviews with Minsky, Widrow, Nilsson, Rosen, Hart, and the ONR program officers who funded Rosenblatt — shows the field's crisis _preceding_ the book:
+
+* 1957–58Rosenblatt's perceptron; ONR press event; the _New York Times_ relays predictions of machines that will walk, talk, and be conscious. The hype is co-produced by the funder's own need for legitimationO93.
+* 1963ARPA begins large-scale funding of symbolic AI labs (Project MAC at MIT, then CMU, Stanford). The funding asymmetry the myth attributes to the book **predates the book by six years**N10.
+* \~1965Minsky & Papert's critical results circulate in draft and are widely knownO93.
+* 1965–66Widrow's Stanford group abandons neural nets after failing to train multilayer madalines — "we tried, and tried, but we never succeeded" — and pivots to adaptive signal processing. SRI's neural-net group, its money running out, pivots to the symbolic Shakey projectO93.
+* 1969_Perceptrons_ is published: in Olazaran's phrase, the final push in a closure already well underway, not its triggerO96.
+* 1969–70The Mansfield Amendment forces defense-funded research toward direct military relevanceFR99.
+* 1971Rosenblatt dies in a sailing accident at 43\. His support had been substantial at the project's peak — a Cornell colleague's tribute, quoted by Olazaran, put it in the hundreds of thousands of dollars a year — but it melted away in the second half of the 1960s: ONR's grants, per its own program officers, sat in the tens of thousands where ARPA funded hundreds of thousands to millions, and he never obtained ARPA-scale backing for a large machine. Having been active in the peace movement during the Korean War, he never held a security clearanceO93.
+* 1970sNeural-style research continues under other names and in other communities: Amari, Grossberg, Kohonen, Anderson, von der Malsburg; Fukushima's neocognitron (1980) is convolutional in all but name; Widrow's LMS quietly conquers telecommunications. The _theory_ line, though, really does go quiet: the Siu–Roychowdhury–Kailath bibliography has almost no 1970s citations beyond Werbos — the drought was real, whatever its causeF95.
+* 1982–88Hopfield (1982), the PDP volumes and backprop (1986), the expanded _Perceptrons_ edition with a rebuttal epilogue, and Papert's _Daedalus_ essay (1988) responding to his casting as villain.
+
+### The intent question — four versions, four verdicts
+
+DOCUMENTED 
+
+**Rivalry and adversarial motive.** The perceptron controversy was heated and personal through the early 60s — Minsky and Rosenblatt clashed on conference platforms — and the fight was partly about money: neural-net groups were seeking funds for bigger machines while symbolic AI was institutionalizing. Minsky told Olazaran that he and Papert set out to work out the theory at precisely the moment neural-net groups were trying to raise money for bigger machines. Papert put it on the record himself:
+
+> "There was some hostility in the energy behind the research reported in _Perceptrons_…"Papert, "One AI or Many?", Daedalus 117(1), 1988 — continuing that part of the drive was that funding and energy were, in their view, being dissipated on misleading connectionist applications. 
+
+JOURNALIST'S GLOSS 
+
+**"Out to kill the perceptron."** Bernstein's 1981 _New Yorker_ profile of Minsky says the pair "set out to kill the perceptron" as a kind of service to the field. It's the most-quoted line in the genre — and it is a profile-writer's paraphrase of Minsky's own framing (establish the limits, stop the waste), not a policy memo.
+
+Bernstein, "A.I.", The New Yorker, Dec 14, 1981.
+
+DENIED BY THE ACCUSED 
+
+**Minsky's own rebuttal, 1995.** In the _Discrete Neural Computation_ foreword Minsky addressed both tales directly. The persuasion story — that gloomy remarks in the book induced a generation to abandon its work — did not, he said, ring true, since nothing motivates scientists like the chance to prove others wrong. As for the funding-plot story, that the theorems were proved to make sponsors take the researchers' money away: "that compliment is too grand to accept! Mathematicians have no such great powers." His own explanations for the quiet decade: the book proved nearly all the easy theorems at once, leaving students nothing to teethe on; the circuit-complexity tools needed for the hard ones didn't mature until the 1980s; and the compute wasn't there.
+
+Minsky, foreword to Siu, Roychowdhury & Kailath (1995). A principal's self-account, written after the revival's accusations — weigh it accordingly. But note that it converges with the timeline evidence rather than contradicting it.
+
+**A pleasing irony** preserved in the same foreword, via Scott Fahlman: the fear that local minima would doom backprop only dissolved when Hinton got the algorithm from Rumelhart and ran it — on a Symbolics Lisp machine. The connectionist revival was bootstrapped on symbolic AI's own hardware.
+
+NOT ESTABLISHED 
+
+**A deliberate funding-diversion plot.** The strong version — the book was engineered to move ARPA money from perceptrons to MIT — has no documentary support. ARPA's concentration on symbolic labs began in 1963; Rosenblatt was never an ARPA client to be defunded; and the drying-up of perceptron money tracked the multilayer-training impasse, the Mansfield reorientation, and Rosenblatt's death at least as closely as it tracked the book. That MIT's AI Lab sought ARPA money (the Minsky–Papert 1971 proposal is on DSpace) is the kernel from which this reading grows, but labs seeking funding is the baseline condition of the field, not evidence of a scheme.
+
+**Complicating the villain casting:** Minsky built one of the first neural-net learning machines (SNARC, 1951), wrote his Princeton thesis on neural nets, and in his 1991 _AI Magazine_ piece — "Logical Versus Analogical, Symbolic Versus Connectionist" — argued that both camps were insufficient alone and the dichotomy itself was the mistake. Whatever the book did, its authors were not lifelong enemies of the idea.
+
+One more turn of the screw, and it is Olazaran's central finding: the "official history" was written _twice_. In the 1970s the winners' version said Rosenblatt oversold, Minsky and Papert proved the approach hopeless, and the field rightly moved on. In the 1980s the revived connectionists needed a different story — a promising field martyred by one book — because a martyrdom implies the field was never refuted, merely suppressed. The claim under examination here is largely the _second_ official history. Both versions compress a multi-causal closure into a morality tale; they just disagree about who wears the black hatO96.
+
+Verdict — Claim 1 
+
+**Partly true, causally inflated, and twice curated.** The book was a real and probably decisive rhetorical instrument in closing the perceptron controversy, and its authors acknowledged adversarial energy and a funding motive. But "the book got funding cut" compresses a closure with at least five causes — the multilayer-training impasse the perceptron groups themselves couldn't solve, ARPA's pre-existing commitment to symbolic labs, the Mansfield Amendment, Rosenblatt's marginal funding position and early death, and the book — into a single act with a single agent.
+
+On intent: hostility and rivalry, yes, by the authors' own admission; a deliberate plan to divert agency money, denied by the accused and not established by anyone else — and the version of history that needs it to be true was itself written by the winners of the next round.
+
+Claim 2
+
+## Was pre-AlexNet AI rule-based — and did it fail because rules are brittle?
+
+Before deep learning, AI meant writing rules by hand. That was the dominant paradigm for fifty years. It failed because logical rules are too brittle and too hard to define — and then AlexNet (2012) showed that learning beats rules.
+
+**Specimens of the genre:** deep-learning explainers routinely describe even the SIFT-and-SVM era of computer vision as having failed because "writing rules for every visual concept" doesn't scale — applying the rules story, without irony, to a feature-engineering-plus-statistical-learning paradigm (one representative example).
+
+Two distinctions do most of the work in what follows, so let them lead. First, "rule-based" has a narrow meaning — production rules and logical inference, the machinery of expert systems — and a broad one: any hand-authored symbolic knowledge, frames and scripts included. On the broad reading the brittleness diagnosis generalizes, as conceded below; on either reading the dominance chronology fails. Second, there were two separate transitions, a quarter-century apart, that the claim fuses into one: hand-authored knowledge gave way to _statistical learning_, field by field, between roughly 1985 and 1995; engineered features gave way to _learned features_ in 2012\. What AlexNet beat was the second incumbent, not the first.
+
+There _was_ a rules era, and it _did_ hit a brittleness wall — but it was one commercially loud phase of a sixty-year field, and it wasn't even the reigning paradigm at the labs the folk story imagines as its headquarters.
+
+### What pre-AlexNet AI actually was: four currents, not one paradigm
+
+Overlapping currents, not sequential eras — which is itself part of the argument.
+
+1956–1969
+
+#### Search and heuristics
+
+Theorem proving, GPS, game trees, means–ends analysis. Samuel's checkers player (1959) was a _learning_ system — machine learning is as old as the field. The era's diagnosed failure was combinatorial explosion, not rule brittleness.
+
+1969–1985
+
+#### Knowledge — plural, and at war with itself
+
+Semantic networks, frames, scripts, production systems, logic programming, procedural knowledge (SHRDLU), blackboards (HEARSAY-II), Marr's mathematical theory of vision. The famous split of the era — neats vs. scruffies — was precisely a fight over whether logic-style rules were an adequate substrate. The scruffies said no.
+
+1975–1990
+
+#### Where the claim is true: expert systems
+
+DENDRAL → MYCIN → R1/XCON; expert-system shells; Lisp machines; Japan's logic-programming Fifth Generation Project; DARPA's Strategic Computing. Through the 1980s, hand-authored rules dominated AI's commercial image and a substantial share of its funding. The knowledge-acquisition bottleneck, maintenance collapse, and the 1987–93 AI winter followed.
+
+1985–2012
+
+#### The statistical turn
+
+HMMs displace knowledge-based speech recognition; Pearl's probabilistic graphical models (1988); the statistical NLP revolution of the 90s; SVMs, boosting, random forests; the connectionist revival itself (a LeNet ConvNet was reading a substantial share of US bank checks by the late 90s); vision as engineered features + learned classifiers — SIFT, HOG, deformable parts models.
+
+### Symbolic AI was never synonymous with rules
+
+Where did rules genuinely reign? Stanford's heuristic-programming line (DENDRAL, MYCIN, Feigenbaum's knowledge-is-power doctrine) and CMU's production-system tradition (Newell's cognitive architectures; XCON was built at CMU for DEC) — the labs the expert-systems industry actually grew from. That concession made, the two labs the popular story treats as symbolic AI's head office — Minsky's MIT and Schank's Yale — were the loudest internal _critics_ of the logic-and-rules program. Minsky's 1974 frames memo includes a sustained attack on the "logistic" approach, arguing that consistent, monotonic deduction is too inflexible to carry commonsense thought — his alternative was stereotyped structures with defaults, a theory of _expectation_, not of inference rulesM74. _The Society of Mind_ (1986) doubled down: intelligence as a rabble of interacting agents, about as far from a rule engine as symbolic theorizing gets. Winograd's SHRDLU embodied meaning procedurally. Marr's vision program was applied mathematics. And by the mid-80s the MIT AI Lab's most provocative line was Brooks's subsumption architecture, which rejected central symbolic representation altogetherBR91.
+
+Yale, under Schank, was if anything more explicitly anti-logic: conceptual dependency, scripts (Schank & Abelson, 1977), MOPs and dynamic memory (1982), and case-based reasoning treated understanding as memory organization and reminding — retrieval and adaptation of rich prior episodes, built in open opposition to rule-and-theorem-proving accounts of cognitionSA77. When Drew McDermott published "A Critique of Pure Reason" (1987), the most quoted takedown of logicism, he wrote it from inside Yale AIMD87. The brittleness critique the folk story attributes to the deep-learning era was a founding commitment of scruffy AI, made in the mid-1970s.
+
+**Who were the neats, then?** The logicist program was real — McCarthy at Stanford, Hayes's naïve physics, Nilsson, Kowalski and the Prolog line in Edinburgh, Marseille and later Japan. The point is not that rules were absent but that "rule-based" names one faction in an ongoing civil war, not the field. And the map is messy everywhere: CMU housed HEARSAY's blackboards, and by the mid-80s, Hinton.
+
+### What AlexNet actually beat
+
+By 2012, the reigning paradigm in computer vision was a decade past any flavor of symbolic AI. The ILSVRC winners immediately before AlexNet were: 2010, NEC/UIUC — SIFT and LBP features, sparse coding, SVMs (28.2% top-5 error); 2011, Xerox Research Centre Europe — compressed Fisher vectors and linear SVMs (25.7%)ILS15. AlexNet's 2012 result — 15.3% top-5 errorKSH12 — was a rout of _hand-engineered features feeding statistical classifiers_ — that is, of one learning paradigm by another. "Learning beats rules" had been settled in speech in the 1980s and in NLP in the 1990s; what 2012 settled was "learned features beat engineered features, given enough data and compute." The popular narrative telescopes these two distinct transitions, twenty-five years apart, into one.
+
+WHAT THE CLAIM GETS RIGHT 
+
+**Brittleness was real, and diagnosed early — from inside.** Hand-authored knowledge did hit a scaling wall: Lighthill's 1973 combinatorial-explosion critique, Feigenbaum's knowledge-acquisition bottleneck, XCON's maintenance collapse, the Fifth Generation's shortfall, the winter. And the insiders saw it coming: the AAAI-84 panel on the "dark ages of AI" — Drew McDermott in the chair, Roger Schank among the panelists — worried publicly that expectations had inflated past what expert systems could deliver, and it is around this discussion that "AI winter" entered circulationDA85. Popular histories add Minsky to the warning party; he issued similar warnings in the period, but he was not on this panel — a small specimen of citation drift about the very episodeC93.
+
+THE HONEST STEELMAN — AND A CAVEAT FOR THE SKEPTIC 
+
+**The wall was wider than rules.** On the broad reading of "rule-based" — hand-authored knowledge structures of any flavor, neat rules or scruffy frames and scripts — the brittleness charge becomes true, and it then applies to MIT frames and Yale scripts as much as to MYCIN's production rules. Scripts didn't transfer; CYC was the heroic attempt to brute-force the commonsense gap and is the exception that measures the problem. Defenders of the scruffy tradition don't get to keep the anti-logic high ground _and_ claim immunity from the brittleness diagnosis. What the broad reading cannot rescue is the chronology: even hand-authored knowledge in the broad sense had ceded the frontier in speech, NLP and vision to statistical learning well over a decade before AlexNet.
+
+WHAT THE CLAIM GETS WRONG 
+
+**Dominance and failure, both overdrawn.** Rules in the narrow sense dominated AI's public face and much of its funding through the 1980s — not sixty years of research, which was contested throughout; from the late 80s onward statistical learning grew increasingly dominant — decisively so in speech, then NLP, then vision. Nor did symbolic techniques "fail" wholesale: SAT/SMT solvers, planners, Deep Blue's search, theorem provers running in chip verification, and knowledge graphs are all descendants that shipped. And brittleness is not proprietary to rules — adversarial examples, distribution shift, and confabulation are the connectionist genre of the same disease: competence that degrades ungracefully at the edges of what was built in.
+
+Verdict — Claim 2 
+
+**A real diagnosis attached to a false history.** Brittleness of hand-coded knowledge is a genuine, well-documented failure mode — first prosecuted from within symbolic AI in the 1970s, and fairly charged against scruffy frames and scripts as well as neat rules. But "rule-based AI was the dominant form of AI before neural networks" mistakes the expert-systems boom for six decades of research, fuses two transitions a quarter-century apart — hand-authored knowledge to statistical learning (c. 1985–95), engineered features to learned features (2012) — and mislabels labs, MIT and Yale above all, whose defining conviction was that rules were not enough.
+
+Synthesis
+
+## Why both myths persist
+
+The two claims fail in the same way, and Olazaran supplies the mechanism: fields write their histories at moments of victory, and rewrite them at the next one. The 1970s official history ("overselling was corrected by proof") served symbolic AI's institutionalization. The 1980s revision ("a book murdered a healthy field") served the connectionist revival, which needed its predecessors suppressed rather than refuted. The current version ("brittle rules ruled until learning arrived") serves the deep-learning era, which gains a sixty-year runway of failure to be the answer to — Cardon, Cointet and Mazières call their history of this last rewrite "Neurons Spike Back" for a reasonCCM18. Each story flatters its teller's present.
+
+Add pedagogical compression — an introductory chapter needs one villain, one dark age, and one clean pivot — and citation drift, in which Bernstein's "set out to kill" hardens from profile color into archival fact, and both myths become self-sustaining. The corrective in each case is the same and is mostly chronological: put the funding decisions, the technical impasses, and the publications on one timeline, and the single-cause versions fall apart on their own.
+
+**A fair question to leave open:** counterfactuals. Would multilayer methods have matured a decade earlier with sustained 1970s funding? Werbos's 1974 thesis suggests the idea was available; Minsky's 1995 foreword argues the complexity theory and the compute were not. The honest answer is that nobody knows — which is itself an argument against the confident causal grammar of both myths.
+
+Sources
+
+## Primary and secondary sources
+
+* \[O93\] Olazaran 1993 — "A Sociological History of the Neural Network Controversy," _Advances in Computers_ 37, 335–425\. Interview-based reconstruction; the backbone of Claim 1 above. PDF
+* \[O96\] Olazaran 1996 — "A Sociological Study of the Official History of the Perceptrons Controversy," _Social Studies of Science_ 26(3), 611–659\. SAGE · JSTOR
+* \[MP69\] Minsky & Papert 1969 / 1988 — _Perceptrons: An Introduction to Computational Geometry_, MIT Press; expanded 1988 edition with prologue and epilogue answering the revival's critics.
+* \[F95\] Minsky 1995 — Foreword to Siu, Roychowdhury & Kailath, _Discrete Neural Computation_. Minsky's fullest retrospective on the quiet decade: the scalability-not-competence clarification, and his rebuttal of both the persuasion tale and the funding-plot tale.
+* \[SRK95\] Siu, Roychowdhury & Kailath 1995 — _Discrete Neural Computation: A Theoretical Foundation_. Prentice Hall. Threshold-circuit complexity as the mathematical continuation of perceptron theory — presented in the foreword as the successor to _Perceptrons_.
+* \[R62\] Rosenblatt 1962 — _Principles of Neurodynamics_. Spartan. See esp. the fifteen open problems, pp. 577–581.
+* \[B70\] Block 1970 — Review of _Perceptrons_, _Information and Control_ 17, 501–522\. The contemporaneous rebuttal, including the connectedness-and-humans argument.
+* \[B81\] Bernstein 1981 — "A.I.," profile of Marvin Minsky, _The New Yorker_, Dec 14, 1981.
+* \[PA88\] Papert 1988 — "One AI or Many?", _Daedalus_ 117(1), 1–14\. JSTOR
+* \[M91\] Minsky 1991 — "Logical Versus Analogical or Symbolic Versus Connectionist or Neat Versus Scruffy," _AI Magazine_ 12(2), 34–51\. AAAI
+* \[M74\] Minsky 1974 — "A Framework for Representing Knowledge," MIT AI Memo 306, incl. the criticism of the logistic approach. DSpace
+* \[SA77\] Schank & Abelson 1977 — _Scripts, Plans, Goals and Understanding_. Erlbaum. Schank 1982, _Dynamic Memory_, for MOPs and the case-based turn.
+* \[MD87\] McDermott 1987 — "A Critique of Pure Reason," _Computational Intelligence_ 3(3), 151–160, with peer commentary.
+* \[BR91\] Brooks 1991 — "Intelligence Without Representation," _Artificial Intelligence_ 47, 139–159.
+* \[L73\] Lighthill 1973 — "Artificial Intelligence: A General Survey," Science Research Council. Note it hit symbolic AI and robotics hardest — the era's funding axes didn't map onto neural-vs-symbolic.
+* \[TN98\] Anderson & Rosenfeld 1998 — _Talking Nets: An Oral History of Neural Networks_. MIT Press. The revival-era participants' accounts, including grant-difficulty testimony for the 1970s.
+* \[PE88\] Pearl 1988 — _Probabilistic Reasoning in Intelligent Systems_. Morgan Kaufmann.
+* \[KSH12\] Krizhevsky, Sutskever & Hinton 2012 — "ImageNet Classification with Deep Convolutional Neural Networks," _NIPS_. Reports 15.3% top-5 test error for the ensemble, vs. 26.2% for the runner-up. PDF
+* \[ILS15\] Russakovsky et al. 2015 — "ImageNet Large Scale Visual Recognition Challenge," _IJCV_; documents the 2010–12 winning methods; scores the 2012 winning submission at 16.4%. arXiv
+* \[CCM18\] Cardon, Cointet & Mazières 2018 — "Neurons Spike Back," _Réseaux_ 211, 173–220\. Bibliometric and sociological history of the connectionist revanche. English version
+* \[DA85\] McDermott, Waldrop, Chandrasekaran, McDermott & Schank 1985 — "The Dark Ages of AI: A Panel Discussion at AAAI-84," _AI Magazine_ 6(3), 122–134\. The winter warnings in their primary form. AAAI
+* \[C93\] Crevier 1993 — _AI: The Tumultuous History of the Search for Artificial Intelligence_. Basic Books. The standard narrative history of the expert-systems boom and bust.
+* \[N10\] Nilsson 2010 — _The Quest for Artificial Intelligence_. Cambridge. Institutional and funding background, including ARPA's 1963 commitments, from a participant.
+* \[FR99\] National Research Council 1999 — _Funding a Revolution: Government Support for Computing Research_. National Academies Press. The authoritative account of federal computing-research funding, including the Mansfield Amendment.
+* Further reading — McCorduck 1979/2004, _Machines Who Think_; Boden 2006, _Mind as Machine_. General histories, read with the sources above as a corrective on both episodes.
+
+ Single-file page, no build step. Compiled July 2026 from the sources above; quotations are brief and attributed. Dotted-underlined terms carry explanations — hover, tap, or tab to them; bracketed superscripts link to sources. Corrections welcome — that is rather the point.

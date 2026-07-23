@@ -68,6 +68,58 @@ trinity is one move in three creatures: Papert's turtle (you ARE the cursor), Ke
 birds (you train the worker; birds carry), MOOLLM's worms (you feed the transformer). See the
 notebook's `turtles` section.
 
+### 8. The essay the machines argued over — AI historiography as a contact sport
+
+Ken's [two-claims essay](https://toontalk.github.io/misc/ai-history-two-claims.html)
+(July 2026) took on the two myths he's disliked for fifty years — *Perceptrons*
+killed neural nets; GOFAI was brittle rules until AlexNet — by having Claude
+write it and ChatGPT review it, ping-ponging critique "until they were happy."
+Full saga in [sources/2026-chatbot-experiments.md](sources/2026-chatbot-experiments.md).
+Segment beats:
+
+- **The witness and the training data.** Ken lived the history (MIT AI Lab,
+  1973 on; Minsky and Papert reported on his committee) and says the result is
+  "better than anything I could have created." What does an eyewitness add
+  when the archive is in the weights? Answer from the transcript: he chose the
+  targets, supplied the sources, and refereed the disagreements — editor-in-
+  chief as the human role.
+- **The models disagreeing is the good part.** Claude demanded a source for
+  ChatGPT's confident claim about which spiral was on which side of the 1969
+  cover; ChatGPT produced a page-379 receipt for the Rosenblatt funding
+  tribute. Adversarial collaboration with citations — the exact production
+  method of this repo, performed by the guest before we could invite him.
+- **The spiral saga.** Neither model could draw the *Perceptrons* cover
+  figure correctly — their "hard" spirals were easy for humans — until
+  ChatGPT identified that the ambiguity must hide in the central
+  entanglement, not the outer windings. The book's unsolvable-for-perceptrons
+  figure, briefly unsolvable for LLMs at the drawing level while they wrote
+  expert prose about its unsolvability. Show the failed spirals on screen.
+- **Minsky, fixed by attribution.** The essay caught Minsky's own 1995
+  bounded-fan-in claim overreaching and pinned it on him with a caveat rather
+  than silently deleting it — the same portrayal ethic as this repo's rooms.
+  Cross-link: the marvin-minsky room; Ken as memorial discussant who
+  corrects the record *in both directions*.
+
+### 9. NPUC — one photograph, eight chairs, thirty years
+
+[The panel photo](sources/npuc-almaden-panel.md): Ken and Don two chairs
+apart at Ted Selker's Almaden workshop; McCarthy, Bobrow, and Lakin in the
+frame, all since gone; the comment thread's own dating dispute (1993 or
+1996?) preserved as a tiny historiography lesson to match hook 8. Ted says
+he has transcriptions, video, and audio of seven years of NPUC — an
+archive-fishing expedition the show should mount. Ken's 1993 talk title,
+"Sketches and Animations as Programs," is his whole career in five words.
+
+### 10. The Learner's Apprentice, live
+
+The book's thesis — anyone can co-create apps, adventures, and stories with
+chatbots — demonstrated with his own artifacts: the word-age font extension,
+the English-rules Lemmings game (Claude implementing, GPT Codex testing),
+the unicorn adventure app built with Gemini for his 5-year-old
+granddaughter. The constructionist arc closes: Logo group, 1975 — ToonTalk,
+1995 — chatbots as the learner's apprentice, 2026. Same thesis, three
+substrates.
+
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)

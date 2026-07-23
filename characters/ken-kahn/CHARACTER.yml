@@ -5,15 +5,20 @@ character:
   id: ken-kahn
   name: "Ken Kahn"
   type: invitation
-  signifier: "👤"
+  signifier: "🎈🐦🌀"
   status: living
-  field: "AI + visual programming for kids — ToonTalk; AI blocks for Snap! (eCraft2Learn)"
+  field: "AI + visual programming for kids — ToonTalk; AI blocks for Snap! (eCraft2Learn); The Learner's Apprentice; AI historiography with the chatbots themselves"
   home: characters/ken-kahn/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
   consent_level: 3
   authored_by: don-hopkins
+  note: |
+    Warm contact — Don and Ken met in Amsterdam (Westerpark; Don lent Ken an ebike,
+    2026) and shared an NPUC stage at IBM Almaden in the 1990s. Ken may shape, delay,
+    reduce, or delete any of this portrayal at any time.
+  subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
   status: draft
@@ -22,11 +27,42 @@ invitation:
   show_seed: repo-shows/ken-kahn/
 
 bio:
-  summary: "**Ken Kahn** — creator of **ToonTalk** (a game-like visual programming world for kids) and the **eCraft2Learn AI blocks** for **Snap!** (speech recognition/synthesis, ML, pattern recognition — in the browser, kid-accessible). An all-around nice, interesting-to-talk-to guy."
+  summary: |
+    **Ken Kahn** — fifty years researching AI, creativity, and education, from his MIT
+    AI Lab PhD (1979, advisor Carl Hewitt; Minsky and Papert reported on his committee;
+    Logo group member) to the present. His thesis system, Ani, made animated films from
+    vague story descriptions — text-to-video with provenance, 45 years early. Creator of
+    **ToonTalk**, the game-like visual programming world where computation is a city,
+    methods are robots trained by demonstration, and messages are carried by birds to
+    nests. Built the **eCraft2Learn AI blocks** for **Snap!** (speech, ML, pattern
+    recognition — in the browser, kid-accessible). Author of **The Learner's
+    Apprentice: AI and the Amplification of Human Creativity** (how anyone can
+    co-create apps, adventures, and stories with chatbots). NPUC speaker (Almaden 1993:
+    "Sketches and Animations as Programs"). Lately publishing a stream of documented
+    chatbot-collaboration experiments, including a machine-written AI-history essay he
+    editor-in-chiefed between Claude and ChatGPT. An all-around nice,
+    interesting-to-talk-to guy.
+
+correspondence_and_contact:
+  amsterdam_2026: "Westerpark meetings; Don lent Ken an ebike for solo rides"
+  npuc: "Shared the Almaden stage — see sources/npuc-almaden-panel.md (photo + dating dispute preserved)"
+  mail: "media/from-mail/ — paper Ken sent"
 
 sources:
   wikipedia: null
+  local:
+    - sources/npuc-almaden-panel.md         # the panel photo, lineup, and the 1993-vs-1996 thread
+    - sources/2026-chatbot-experiments.md   # the AI-history essay saga + the other experiments
+    - media/ai-history-two-claims-snapshot.html  # archived copy of the published essay
+    - from-alan-kay.yml
   web:
-    - https://ecraft2learn.github.io/ai/):
-  papers: []
-  blogs: []
+    - "https://toontalk.github.io/ — ToonTalk (Reborn, in the browser)"
+    - "https://ecraft2learn.github.io/ai/ — AI blocks for Snap!"
+    - "https://toontalk.github.io/misc/ai-history-two-claims.html — the AI-history essay (July 2026)"
+    - "https://docs.google.com/document/d/1SuekouRgA8NrQMOJdmpfowesV4-qTQxmhOe54aTYyw8/edit — the making-of write-up"
+    - "https://chatgpt.com/share/6a5a4d37-3a00-83eb-9814-c46a9e15d9c9 — the ChatGPT review session"
+    - "https://web.archive.org/web/20060210092923/http://www.almaden.ibm.com/almaden/npuc97/1993.htm — NPUC 1993 program"
+  papers:
+    - "'Creation of Computer Animation from Story Descriptions' (MIT AI Lab TR-540, 1979) — MIT DSpace 1721.1/16012"
+  books:
+    - "The Learner's Apprentice: AI and the Amplification of Human Creativity"
