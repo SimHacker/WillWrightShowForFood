@@ -222,6 +222,18 @@ ticket_pr:
   guest_primed: "Guest may plant virtual audience, costumes, running gags — disclosed in audience/; see [PLANTED-AUDIENCE.md](../repo-shows/_TEMPLATE/audience/PLANTED-AUDIENCE.md)"
   moderation: "Curators filter bad-faith; guest may welcome hecklers explicitly"
 
+producers_and_show_notes:
+  spec: "[producers-and-show-notes.yml](producers-and-show-notes.yml)"
+  one_line: "Listeners are Producers — clips, corrections, optional support; SHOW-NOTES.yml is the newsletter in git"
+  lineage: "No Agenda Show Notes format — without producer-epistemology-without-guardrails"
+  paths:
+    show_notes: "repo-shows/<episode-slug>/SHOW-NOTES.yml"
+    clips: "repo-shows/<episode-slug>/show-notes/clips/<username>/clip.yml"
+  template:
+    - "[SHOW-NOTES.yml](../repo-shows/_TEMPLATE/SHOW-NOTES.yml)"
+    - "[show-notes/clips/README.md](../repo-shows/_TEMPLATE/show-notes/clips/README.md)"
+  anti_bullshit: "Source URL required; corrections fix the record; plots without receipts do not merge"
+
 canonical_prose: |
   A Repo Show is announced ahead of time (for example, as a pointer on [Hacker News](https://news.ycombinator.com/)), and the
   show IS this repository. Beforehand you RTFR (read the repo); during the show you follow

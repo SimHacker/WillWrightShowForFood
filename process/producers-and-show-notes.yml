@@ -1,0 +1,123 @@
+# Producers + Show Notes — No Agenda mechanics, Repo Show ethics
+# Girder: repo-show-format.yml#producers | Skill: ../skills/repo-show/SKILL.md
+# Lineage: No Agenda (Adam Curry + John C. Dvorak) — steal the participation loop, reject the epistemology.
+
+meta:
+  id: producers-and-show-notes
+  coined: 2026-07-23
+  one_line: |
+    Listeners are Producers — clips, corrections, and optional support in git;
+    Show Notes is the newsletter that credits them. Same energy as No Agenda, none of the crazy bullshit.
+
+lineage:
+  no_agenda:
+    what_they_got_right:
+      - "Audience = Producers (not passive consumers)"
+      - "Clips, corrections, and on-the-ground receipts fed into the show"
+      - "Show Notes newsletter — digest of episode + producer credits"
+      - "Value for value — optional money, never a paywall on truth"
+      - "Biweekly rhythm; vocabulary; inside jokes that reward participation"
+    what_we_reject:
+      name: producer_epistemology_without_guardrails
+      symptoms:
+        - "Media deconstruction → conspiracy pipeline"
+        - "Status for the spiciest debunk, not the best-sourced fix"
+        - "No corrections desk — audience selects for the heel"
+        - "Smartypants certainty without institutional verify"
+      rule: |
+        Repo Show Producers earn credit for **receipts**, not for **plots**.
+        Merge to show-notes requires source, scope, and good faith — not 'what they don't want you to know.'
+
+steal_rename:
+  no_agenda: "No Agenda"
+  repo_show: "Repo Show / WWSFF"
+  table:
+    - { na: "Producer (listener)", rs: "Producer (TicketPR author + clip/correction contributor)" }
+    - { na: "Clip / jingle / donation", rs: "clip.yml + optional recognition; git PR > email attachment" }
+    - { na: "Correction / 'Executive Producer' segment", rs: "Correction PR merged to repo — fix the record on the record" }
+    - { na: "Value for value ($)", rs: "Optional support — call-on priority, never content gate (see ticket-pr.yml#recognition)" }
+    - { na: "No Agenda Show Notes (newsletter)", rs: "SHOW-NOTES.yml per episode — git SSOT; optional email/RSS mirror" }
+    - { na: "Adam reads your clip on air", rs: "Don Philahue surfaces merged Producer material live" }
+
+producers:
+  definition: |
+    A **Producer** is anyone who merges constructive participation into the show repo:
+    TicketPR (questions, costume, MOOLLM character), clips (sourced artifacts), corrections
+    (factual fixes with citations), homefun (implementation harvest), or show-notes editorial.
+  not_required: "Watch, lurk, HN comment — fine. Producer is opt-in status via merged PR."
+  credit: "SHOW-NOTES.yml producer_credits — GitHub username, PR link, what landed"
+
+show_notes:
+  role: |
+    The **Show Notes** are the episode newsletter — but the canonical copy lives in git, not
+    Mailchimp. Readable digest: what happened, links, producer credits, clips used, corrections
+    applied, open threads. Optional mirror to email/RSS for people who don't RTFR daily.
+  path: "repo-shows/<episode-slug>/SHOW-NOTES.yml"
+  template: "../repo-shows/_TEMPLATE/SHOW-NOTES.yml"
+  publish:
+    ssot: git
+    mirrors: [email, rss, social_thread]
+    timing: "Draft during TEND; finalize at HARVEST after air"
+  sections:
+    - episode_meta
+    - watch_listen
+    - rtfr_trailheads
+    - timeline
+    - producer_credits
+    - clips_used
+    - corrections_merged
+    - homefun_highlighted
+    - open_questions
+    - next_episode
+
+clips:
+  what: "Short artifact the hosts may read, demo, or link — audio/video quote, screenshot, paper, code, HN comment ref"
+  path: "repo-shows/<episode-slug>/show-notes/clips/<github-username>/clip.yml"
+  required_fields: [source_url, context, why_it_matters, license_or_fair_use_note]
+  review: "Producer (Philahue or show producer) merges before air; no clip without source"
+  on_air: "Don Philahue credits Producer by handle when surfacing"
+
+corrections:
+  what: "Fix the record — typo, date, attribution, quote, broken link, 'we said X but receipt says Y'"
+  how: "Normal PR to the file being corrected + line in SHOW-NOTES corrections_merged"
+  required: [what_was_wrong, fix, source_url]
+  tone: "Declared bias welcome; conspiracy theories are not corrections — they're issues to close"
+
+anti_bullshit_gates:
+  # What keeps us No Agenda-shaped without No Agenda-brained
+  merge_policy:
+    - "Source URL or repo path for every clip and correction"
+    - "Scope: what you know vs what you guess — label guesses"
+    - "No 'executive producer' segment for unsourced plots"
+    - "Philahue curates for interesting + verified, not for heat"
+  contrast:
+    na_reward: "Spiciest deconstruction wins airtime"
+    rs_reward: "Best receipt wins merge; spiciest unsubstantiated take wins nothing"
+  eval_genius_adjacent: |
+    Church of the Eval Genius self-eval program is Y Combinator-sponsored satire.
+    Producer corrections are β-reduction with citations — not anonymous λ passed to itself
+    until Demo Day.
+
+integration:
+  existing:
+    - { spec: ticket-pr.yml, role: "Producer seat — questions.yml, audience/ character stack" }
+    - { spec: homefun-grading.yml, role: "Producer artifacts that graduate to packages/skills" }
+    - { character: don-philahue, role: "Harvest HN + issues + TicketPRs + clips; surface on air" }
+    - { skill: repo-show/SKILL.md, role: "TEND → ANNOUNCE → AIR → HARVEST lifecycle" }
+  new_files:
+    - "process/producers-and-show-notes.yml (this file)"
+    - "repo-shows/_TEMPLATE/SHOW-NOTES.yml"
+    - "repo-shows/_TEMPLATE/show-notes/clips/README.md"
+
+k_lines: [TICKETPR, HOMEFUN, SHOW-NOTES, PRODUCER-RECEIPTS]
+
+see_also:
+  repo:
+    - repo-show-format.yml
+    - ticket-pr.yml
+    - homefun-grading.yml
+    - ../skills/repo-show/SKILL.md
+    - ../characters/don-philahue/
+  contrast:
+    - "No Agenda Show — https://www.noagendashow.net/ (lineage, not endorsement)"
+    - "No Agenda Show Notes — https://mailchi.mp/nashownotes (the format we mirror without the culture)"

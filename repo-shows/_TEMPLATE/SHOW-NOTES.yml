@@ -1,0 +1,53 @@
+# SHOW-NOTES — episode digest (Show Notes newsletter in git)
+# Template for repo-shows/<episode-slug>/SHOW-NOTES.yml
+# Spec: ../../process/producers-and-show-notes.yml
+
+episode:
+  id: "<episode-slug>"
+  title: "<Episode title>"
+  aired: null  # ISO date when set
+  guest: []    # character ids
+  repos_featured: []
+
+watch_listen:
+  video: null
+  audio: null
+  hn_announce: null
+
+rtfr_trailheads:
+  - path: SHOW.yml
+    why: "Episode manifest"
+  - path: README.md
+    why: "Human overview"
+
+timeline:
+  # Chronological beats — fill during/after air
+  - { at: null, beat: "Announce / HN pointer" }
+  - { at: null, beat: "Air" }
+  - { at: null, beat: "Harvest" }
+
+producer_credits:
+  # Merged PRs — Producers, not passive listeners
+  # - { who: github-username, pr: "#123", contributed: "TicketPR questions + clip on SimCity GPL" }
+
+clips_used:
+  # Sourced artifacts surfaced on air — must exist under show-notes/clips/
+  # - { who: github-username, file: show-notes/clips/username/clip.yml, used_at: "segment name" }
+
+corrections_merged:
+  # Fix the record on the record
+  # - { pr: "#124", what: "Date on NPUC photo", source: "https://..." }
+
+homefun_highlighted:
+  # Best merged homefun — see homefun-grading.yml
+  # - { who: github-username, pr: "#125", summary: "..." }
+
+open_questions:
+  # Unresolved threads for next episode or audience follow-up
+  # - "..." 
+
+next_episode: null
+
+notes: |
+  Git is SSOT. Optional email/RSS mirror for humans who want the newsletter
+  without cloning. No clip or correction lands here without a merged PR and source.

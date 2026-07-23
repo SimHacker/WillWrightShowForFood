@@ -56,6 +56,20 @@ All clocks write into **one GitHub repo**:
 - **During** — Twitch chat; Don Philahue passes mic; brain-stream overlay ([`process/brain-stream.yml`](../../process/brain-stream.yml))
 - **After** — implementation PRs; transcript; harvest
 
+### Producers + Show Notes (No Agenda mechanics, Repo Show ethics)
+
+**Listeners are Producers** — steal the participation loop from [No Agenda](https://www.noagendashow.net/), reject the conspiracy epistemology. Full spec: [`process/producers-and-show-notes.yml`](../../process/producers-and-show-notes.yml).
+
+| No Agenda | Repo Show |
+|-----------|-----------|
+| Producer sends clip / correction | PR under `show-notes/clips/` or correction PR + citation |
+| Show Notes newsletter | `SHOW-NOTES.yml` per episode — **git is SSOT** |
+| Value for value ($) | Optional recognition — never a content gate |
+
+**Anti-bullshit gate:** merge requires **source URL** and good faith. Receipts win merge; spiciest unsubstantiated take wins nothing. Philahue curates for verified + interesting, not for heat.
+
+Template: [`repo-shows/_TEMPLATE/SHOW-NOTES.yml`](../../repo-shows/_TEMPLATE/SHOW-NOTES.yml) · clips: [`show-notes/clips/README.md`](../../repo-shows/_TEMPLATE/show-notes/clips/README.md)
+
 ### TicketPR — Master ⇒ PR
 
 **TicketPR** is a pun on **TicketMaster**: the toxic **Master** (monopoly gatekeeper) becomes **PR** (pull request — constructive, collaborative, reviewable, **free**). Same joke, opposite ethics.

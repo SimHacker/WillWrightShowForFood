@@ -19,6 +19,7 @@ Your branch, your rig, your guests. Shows inherit SHOW skill; harvested ideas be
 | 5 | [**Plant a show**](../../repo-shows/README.md) | Directory + SHOW.yml + README — INDEX registration |
 | 6 | [**Live repo policy**](../live-repo.yml) | What exports from DonHopkins private — filtered public safe |
 | 7 | [**Guest CARD template**](../../characters/_TEMPLATE/CARD.yml) | Copy for portrayals — abilities + room interface |
+| 8 | [**Producers + Show Notes**](../producers-and-show-notes.yml) | No Agenda participation loop — clips, corrections, SHOW-NOTES.yml — without the crazy bullshit |
 
 ---
 
