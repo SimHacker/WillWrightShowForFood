@@ -22,9 +22,10 @@ before the guest accepts or a stream is scheduled.
 ```
 audience/<you>/
   questions.yml     # required
+  clip.yml          # optional — sourced Producer clip (see clip.md)
 ```
 
-Copy [`questions.yml`](questions.yml).
+Copy [`questions.yml`](questions.yml). Optional clip: [`clip.yml`](clip.yml) · [`clip.md`](clip.md).
 
 ---
 
@@ -81,6 +82,8 @@ Optional donations → recognition + call-on priority — never required. See `t
 | [`CHARACTER.yml`](CHARACTER.yml) | MOOLLM canonical body |
 | [`CARD.yml`](CARD.yml) | Participation abilities |
 | [`questions.yml`](questions.yml) | TicketPR question list |
+| [`clip.yml`](clip.yml) | Optional sourced Producer clip |
+| [`clip.md`](clip.md) | Clip submission guide |
 | [`SIMULATION.yml`](SIMULATION.yml) | During/after show hooks |
 | [`costume.yml`](costume.yml) | Stream identity |
 | [`PLANTED-AUDIENCE.md`](PLANTED-AUDIENCE.md) | Guest-primed plants, running gags, late-night ethics |

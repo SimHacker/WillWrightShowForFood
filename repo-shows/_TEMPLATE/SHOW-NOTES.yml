@@ -31,8 +31,9 @@ producer_credits:
   # - { who: github-username, pr: "#123", contributed: "TicketPR questions + clip on SimCity GPL" }
 
 clips_used:
-  # Sourced artifacts surfaced on air — must exist under show-notes/clips/
-  # - { who: github-username, file: show-notes/clips/username/clip.yml, used_at: "segment name" }
+  # Sourced artifacts surfaced on air — live in Producer's audience/ or character/ dir
+  # - { who: github-username, file: audience/username/clip.yml, used_at: "segment name" }
+  # - { who: character-slug, file: characters/slug/sources/foo.md, used_at: "segment name" }
 
 corrections_merged:
   # Fix the record on the record

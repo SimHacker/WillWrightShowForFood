@@ -153,6 +153,7 @@ directory_layout:
     optional:
       - SIMULATION.yml
       - costume.yml
+      - clip.yml          # sourced Producer clip — see producers-and-show-notes.yml
       - images/
     images:
       recommended: [images/headshot.png, images/avatar.png, images/with-will.png]

@@ -62,13 +62,13 @@ All clocks write into **one GitHub repo**:
 
 | No Agenda | Repo Show |
 |-----------|-----------|
-| Producer sends clip / correction | PR under `show-notes/clips/` or correction PR + citation |
+| Producer sends clip / correction | `audience/<you>/clip.yml` or `characters/<slug>/sources/` — PR + citation |
 | Show Notes newsletter | `SHOW-NOTES.yml` per episode — **git is SSOT** |
 | Value for value ($) | Optional recognition — never a content gate |
 
 **Anti-bullshit gate:** merge requires **source URL** and good faith. Receipts win merge; spiciest unsubstantiated take wins nothing. Philahue curates for verified + interesting, not for heat.
 
-Template: [`repo-shows/_TEMPLATE/SHOW-NOTES.yml`](../../repo-shows/_TEMPLATE/SHOW-NOTES.yml) · clips: [`show-notes/clips/README.md`](../../repo-shows/_TEMPLATE/show-notes/clips/README.md)
+Template: [`repo-shows/_TEMPLATE/SHOW-NOTES.yml`](../../repo-shows/_TEMPLATE/SHOW-NOTES.yml) · clips: [`audience/clip.yml`](../../repo-shows/_TEMPLATE/audience/clip.yml)
 
 ### TicketPR — Master ⇒ PR
 
@@ -79,6 +79,7 @@ Your **free public ticket** to attend live — a PR in the **show's** `audience/
 ```
 repo-shows/<show>/audience/<github-username>/
   questions.yml      # required — TicketPR
+  clip.yml           # optional — sourced Producer clip (see clip.md)
   CHARACTER.yml      # recommended — MOOLLM body
   CARD.yml           # recommended — ASK-QUESTION, WEAR-COSTUME, …
   GLANCE.yml

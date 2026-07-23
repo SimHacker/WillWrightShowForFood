@@ -1,0 +1,17 @@
+# Producer clip — sourced artifact for the show
+# Optional alongside questions.yml in your TicketPR audience/ folder.
+# Spec: ../../../process/producers-and-show-notes.yml · ../../../process/ticket-pr.yml
+
+clip:
+  show: "<show-slug>"
+  github: "@YOUR-GITHUB-USERNAME"
+  title: "Short label for Philahue / SHOW-NOTES"
+  source_url: "https://..."   # required — receipt
+  context: "What this is and where it came from"
+  why_it_matters: "Why the hosts should care on air"
+  license_or_fair_use_note: "Link-only / fair use / your own work / …"
+  used_on_air: false          # set true in SHOW-NOTES when surfaced
+
+# If you have a character room (guest or recurring Producer persona), you may
+# instead place clips under characters/<slug>/sources/ or media/ — same fields,
+# PR from your character dir. Never a separate show-notes/clips/ tree.

@@ -67,7 +67,7 @@ steal_rename:
   repo_show: "Repo Show / WWSFF"
   table:
     - { na: "Producer (listener)", rs: "Producer (TicketPR author + clip/correction contributor)" }
-    - { na: "Clip / jingle / donation", rs: "clip.yml + optional recognition; git PR > email attachment" }
+    - { na: "Clip / jingle / donation", rs: "clip.yml in audience/<you>/ or character/sources/ — PR, not a clips/ graveyard" }
     - { na: "Correction / 'Executive Producer' segment", rs: "Correction PR merged to repo — fix the record on the record" }
     - { na: "Value for value ($)", rs: "Optional support — call-on priority, never content gate (see ticket-pr.yml#recognition)" }
     - { na: "No Agenda Show Notes (newsletter)", rs: "SHOW-NOTES.yml per episode — git SSOT; optional email/RSS mirror" }
@@ -106,10 +106,15 @@ show_notes:
 
 clips:
   what: "Short artifact the hosts may read, demo, or link — audio/video quote, screenshot, paper, code, HN comment ref"
-  path: "repo-shows/<episode-slug>/show-notes/clips/<github-username>/clip.yml"
+  placement: |
+    **No** `show-notes/clips/` tree. Clips go where the Producer already lives:
+    - **Audience Producer (TicketPR):** `repo-shows/<episode-slug>/audience/<github-username>/clip.yml` — PR alongside questions.yml
+    - **Character room:** `characters/<slug>/sources/` or `media/` — if you have a character dir (guest or recurring Producer persona)
+    Colocate with identity; see ticket-pr.yml#where_not and repo-show-format.yml#placement_constitution.
   required_fields: [source_url, context, why_it_matters, license_or_fair_use_note]
+  template: "../repo-shows/_TEMPLATE/audience/clip.yml"
   review: "Producer (Philahue or show producer) merges before air; no clip without source"
-  on_air: "Don Philahue credits Producer by handle when surfacing"
+  on_air: "Don Philahue credits Producer by handle; path cited in SHOW-NOTES clips_used"
 
 corrections:
   what: "Fix the record — typo, date, attribution, quote, broken link, 'we said X but receipt says Y'"
@@ -142,7 +147,8 @@ integration:
   new_files:
     - "process/producers-and-show-notes.yml (this file)"
     - "repo-shows/_TEMPLATE/SHOW-NOTES.yml"
-    - "repo-shows/_TEMPLATE/show-notes/clips/README.md"
+    - "repo-shows/_TEMPLATE/audience/clip.yml"
+    - "repo-shows/_TEMPLATE/audience/clip.md"
 
 k_lines: [TICKETPR, HOMEFUN, SHOW-NOTES, PRODUCER-RECEIPTS, LESS-WRONG-CHARLATAN, CHARLATAN-TRIANGLE]
 

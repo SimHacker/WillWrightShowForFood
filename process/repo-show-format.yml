@@ -228,11 +228,12 @@ producers_and_show_notes:
   lineage: "No Agenda Show Notes format — without producer-epistemology-without-guardrails"
   paths:
     show_notes: "repo-shows/<episode-slug>/SHOW-NOTES.yml"
-    clips: "repo-shows/<episode-slug>/show-notes/clips/<username>/clip.yml"
+    clips_audience: "repo-shows/<episode-slug>/audience/<username>/clip.yml"
+    clips_character: "characters/<slug>/sources/ or media/ (if you have a character room)"
   template:
     - "[SHOW-NOTES.yml](../repo-shows/_TEMPLATE/SHOW-NOTES.yml)"
-    - "[show-notes/clips/README.md](../repo-shows/_TEMPLATE/show-notes/clips/README.md)"
-  anti_bullshit: "Source URL required; corrections fix the record; plots without receipts do not merge"
+    - "[audience/clip.yml](../repo-shows/_TEMPLATE/audience/clip.yml)"
+  anti_bullshit: "Source URL required; no show-notes/clips/ tree — colocate with Producer identity"
 
 canonical_prose: |
   A Repo Show is announced ahead of time (for example, as a pointer on [Hacker News](https://news.ycombinator.com/)), and the

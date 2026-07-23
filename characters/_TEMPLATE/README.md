@@ -7,6 +7,7 @@ as the portrayal grows.
 ## Layout
 
 - **`media/`** — flat room for PDFs, photos, catalogs (see [`will-wright/media/`](../will-wright/media/README.md) and [`../process/character-colocation.md`](../../process/character-colocation.md))
+- **`sources/`** — receipts, links, Producer clips (if you have a character room — see [`producers-and-show-notes.yml`](../../process/producers-and-show-notes.yml))
 - Person stuff stays here even if the guest appears on many shows under `repo-shows/`
 
 ## Character profile README
