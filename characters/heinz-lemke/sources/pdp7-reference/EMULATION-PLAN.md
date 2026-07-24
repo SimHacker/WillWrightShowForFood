@@ -113,6 +113,14 @@ Point stream vs vector stream: start with `ws_display_point` events (universal a
 SIMH display machines); if bandwidth ever matters, add a higher-level tap in `type340.c`
 that streams display words instead — the browser already knows how to execute those.
 
+**The console gets a film-loop skin.** SIMH's teletype device is a character stream with
+CR/LF in it — and the [1969 Cambridge film's closing TTY shot](../2026-07-24-tty-film-loop-titles.md)
+has washed-out paper and a loopable carriage-return segment. So the SvelteKit app renders
+the PDP-7's console *onto the film footage*: characters composite onto the paper as the
+head clacks, CR triggers the filmed carriage return, the page scrolls on LF. A **diegetic
+terminal emulator** — the machine's own 1969 footage as its live display device — usable
+for the PIXIE bench console, PDP-7 UNIX logins, and show titles/credits alike.
+
 ### Names on the table
 
 For the Titan service: **TitanIC** (Titan + integrated circuit; unsinkable; failure modes
